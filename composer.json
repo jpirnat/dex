@@ -1,0 +1,17 @@
+{
+    "name": "jpirnat/trendalyzer",
+    "description": "Pokémon Metagame Trends Analyzer",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jesse Pirnat",
+            "email": "jessepirnat@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jp\\Trendalyzer\\": "src/"
+        }
+    },
+    "require": {}
+}
