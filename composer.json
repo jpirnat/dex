@@ -13,5 +13,10 @@
             "Jp\\Trendalyzer\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "level-2/dice": "^2.0"
+    },
+    "require-dev": {
+        "vlucas/phpdotenv": "^2.4"
+    }
 }

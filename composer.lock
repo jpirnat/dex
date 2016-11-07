@@ -1,0 +1,116 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "14243a1bcaaeb76c8b7e6251983b3b20",
+    "content-hash": "0ad47f3d926270e3b7c44a786be532c4",
+    "packages": [
+        {
+            "name": "level-2/dice",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Level-2/Dice.git",
+                "reference": "fee948c67e8881f081627f6b1791b841d2e5bd0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Level-2/Dice/zipball/fee948c67e8881f081627f6b1791b841d2e5bd0e",
+                "reference": "fee948c67e8881f081627f6b1791b841d2e5bd0e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dice\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Butler",
+                    "email": "tom@r.je"
+                }
+            ],
+            "description": "A minimalist Dependency injection container (DIC) for PHP. Please note: This branch is only compatible with PHP5.6. 5.5, 5.4 and 5.3 compatible version is available as a separate branch on github. ",
+            "homepage": "http://r.je/dice.html",
+            "keywords": [
+                "dependency injection",
+                "dependency injection container",
+                "di",
+                "ioc"
+            ],
+            "time": "2015-12-13 17:24:53"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause-Attribution"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2016-09-01 10:05:43"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "7.0"
+    }
+}
