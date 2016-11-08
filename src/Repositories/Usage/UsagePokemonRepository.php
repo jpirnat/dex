@@ -21,6 +21,37 @@ class UsagePokemonRepository
 	}
 
 	/**
+	 * Does `usage_pokemon` contain any records for the given key?
+	 * (Was the relevant data already imported?)
+	 *
+	 * @param int $year
+	 * @param int $month
+	 * @param int $metagameId
+	 *
+	 * @return bool
+	 */
+	public function exists(
+		int $year,
+		int $month,
+		int $metagameId
+	) : bool {
+		$stmt = $this->db->prepare(
+			'SELECT
+				COUNT(*)
+			FROM `usage`
+			WHERE `year` = :year
+				AND `month` = :month
+				AND `metagame_id` = :metagame_id'
+		);
+		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':metagame_id', $metagameId, PDO::PARAM_INT);
+		$stmt->execute();
+		$count = $stmt->fetchColumn();
+		return $count > 0;
+	}
+
+	/**
 	 * Insert a `usage_pokemon` record.
 	 *
 	 * @param int $year
