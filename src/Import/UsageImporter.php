@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Trendalyzer\Import;
 
+use Exception;
+use Jp\Trendalyzer\Import\Extractors\UsageExtractor;
 use Jp\Trendalyzer\Repositories\PokemonRepository;
 use Jp\Trendalyzer\Repositories\Usage\UsagePokemonRepository;
 use Jp\Trendalyzer\Repositories\Usage\UsageRatedPokemonRepository;
@@ -26,6 +28,9 @@ class UsageImporter
 	/** @var UsageRatedPokemonRepository $usageRatedPokemonRepository */
 	protected $usageRatedPokemonRepository;
 
+	/** @var UsageExtractor $usageExtractor */
+	protected $usageExtractor;
+
 	/**
 	 * Constructor.
 	 *
@@ -34,19 +39,22 @@ class UsageImporter
 	 * @param UsageRatedRepository $usageRatedRepository
 	 * @param UsagePokemonRepository $usagePokemonRepository
 	 * @param UsageRatedPokemonRepository $usageRatedPokemonRepository
+	 * @param UsageExtractor $usageExtractor
 	 */
 	public function __construct(
 		PokemonRepository $pokemonRepository,
 		UsageRepository $usageRepository,
 		UsageRatedRepository $usageRatedRepository,
 		UsagePokemonRepository $usagePokemonRepository,
-		UsageRatedPokemonRepository $usageRatedPokemonRepository
+		UsageRatedPokemonRepository $usageRatedPokemonRepository,
+		UsageExtractor $usageExtractor
 	) {
 		$this->pokemonRepository = $pokemonRepository;
 		$this->usageRepository = $usageRepository;
 		$this->usageRatedRepository = $usageRatedRepository;
 		$this->usagePokemonRepository = $usagePokemonRepository;
 		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
+		$this->usageExtractor = $usageExtractor;
 	}
 
 	/**
@@ -101,6 +109,68 @@ class UsageImporter
 			return;
 		}
 
-		// TODO
+		$line = fgets($line);
+		$totalBattles = $this->usageExtractor->extractTotalBattles($line);
+		if (!$usageExists) {
+			$this->usageRepository->insert(
+				$year,
+				$month,
+				$formatId,
+				$totalBattles
+			);
+		}
+
+		$line = fgets($line);
+		$averageWeightPerTeam = $this->usageExtractor->extractAverageWeightPerTeam($line);
+		if (!$usageRatedExists) {
+			$this->usageRatedRepository->insert(
+				$year,
+				$month,
+				$formatId,
+				$rating,
+				$averageWeightPerTeam
+			);
+		}
+
+		// Ignore the next three lines.
+		fgets($file);
+		fgets($file);
+		fgets($file);
+
+		while ($line = fgets($file)) {
+			try {
+				$usage = $this->usageExtractor->extract($line);
+
+				$pokemonName = $usage->pokemonName();
+				$pokemonId = $this->pokemonRepository->getPokemonId($pokemonName);
+	
+				if (!$usagePokemonExists) {
+					$this->usagePokemonRepository->insert(
+						$year,
+						$month,
+						$formatId,
+						$pokemonId,
+						$usage->raw(),
+						$usage->rawPercent(),
+						$usage->real(),
+						$usage->realPercent()
+					);
+				}
+	
+				if (!$usageRatedPokemonExists) {
+					$this->usageRatedPokemonRepository->insert(
+						$year,
+						$month,
+						$formatId,
+						$rating,
+						$pokemonId,
+						$usage->rank(),
+						$usage->usagePercent()
+					);
+				}
+			} catch (Exception $e) {
+				return;
+			}
+		}
 	}
 }
