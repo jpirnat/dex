@@ -26,14 +26,14 @@ class UsagePokemonRepository
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param int $metagameId
+	 * @param int $formatId
 	 *
 	 * @return bool
 	 */
 	public function exists(
 		int $year,
 		int $month,
-		int $metagameId
+		int $formatId
 	) : bool {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -41,11 +41,11 @@ class UsagePokemonRepository
 			FROM `usage`
 			WHERE `year` = :year
 				AND `month` = :month
-				AND `metagame_id` = :metagame_id'
+				AND `format_id` = :format_id'
 		);
 		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
-		$stmt->bindValue(':metagame_id', $metagameId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
 		return $count > 0;
@@ -56,7 +56,7 @@ class UsagePokemonRepository
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param int $metagameId
+	 * @param int $formatId
 	 * @param int $pokemonId
 	 * @param int $raw
 	 * @param float $rawPercent
@@ -68,7 +68,7 @@ class UsagePokemonRepository
 	public function insert(
 		int $year,
 		int $month,
-		int $metagameId,
+		int $formatId,
 		int $pokemonId,
 		int $raw,
 		float $rawPercent,
@@ -79,7 +79,7 @@ class UsagePokemonRepository
 			'INSERT INTO `usage_pokemon` (
 				`year`,
 				`month`,
-				`metagame_id`,
+				`format_id`,
 				`pokemon_id`,
 				`raw`,
 				`raw_percent`,
@@ -88,7 +88,7 @@ class UsagePokemonRepository
 			) VALUES (
 				:year,
 				:month,
-				:metagame_id,
+				:format_id,
 				:pokemon_id,
 				:raw,
 				:raw_percent,
@@ -98,7 +98,7 @@ class UsagePokemonRepository
 		);
 		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
-		$stmt->bindValue(':metagame_id', $metagameId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
 		$stmt->bindValue(':raw', $raw, PDO::PARAM_INT);
 		$stmt->bindValue(':raw_percent', $rawPercent, PDO::PARAM_STR);

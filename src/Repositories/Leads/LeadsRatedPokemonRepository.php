@@ -25,7 +25,7 @@ class LeadsRatedPokemonRepository
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param int $metagameId
+	 * @param int $formatId
 	 * @param int $rating
 	 * @param int $pokemonId
 	 * @param int $rank
@@ -36,7 +36,7 @@ class LeadsRatedPokemonRepository
 	public function insert(
 		int $year,
 		int $month,
-		int $metagameId,
+		int $formatId,
 		int $rating,
 		int $pokemonId,
 		int $rank,
@@ -46,7 +46,7 @@ class LeadsRatedPokemonRepository
 			'INSERT INTO `leads_rated_pokemon` (
 				`year`,
 				`month`,
-				`metagame_id`,
+				`format_id`,
 				`rating`,
 				`pokemon_id`,
 				`rank`,
@@ -54,7 +54,7 @@ class LeadsRatedPokemonRepository
 			) VALUES (
 				:year,
 				:month,
-				:metagame_id,
+				:format_id,
 				:rating,
 				:pokemon_id,
 				:rank,
@@ -63,7 +63,7 @@ class LeadsRatedPokemonRepository
 		);
 		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
-		$stmt->bindValue(':metagame_id', $metagameId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
 		$stmt->bindValue(':rank', $rank, PDO::PARAM_INT);

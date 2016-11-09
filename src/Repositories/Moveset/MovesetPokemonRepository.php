@@ -25,7 +25,7 @@ class MovesetPokemonRepository
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param int $metagameId
+	 * @param int $formatId
 	 * @param int $pokemonId
 	 * @param int $rawCount
 	 * @param int $viabilityCeiling
@@ -35,7 +35,7 @@ class MovesetPokemonRepository
 	public function insert(
 		int $year,
 		int $month,
-		int $metagameId,
+		int $formatId,
 		int $pokemonId,
 		int $rawCount,
 		int $viabilityCeiling
@@ -44,14 +44,14 @@ class MovesetPokemonRepository
 			'INSERT INTO `moveset_pokemon` (
 				`year`,
 				`month`,
-				`metagame_id`,
+				`format_id`,
 				`pokemon_id`,
 				`raw_count`,
 				`viability_ceiling`
 			) VALUES (
 				:year,
 				:month,
-				:metagame_id,
+				:format_id,
 				:pokemon_id,
 				:raw_count,
 				:viability_ceiling
@@ -59,7 +59,7 @@ class MovesetPokemonRepository
 		);
 		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
-		$stmt->bindValue(':metagame_id', $metagameId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
 		$stmt->bindValue(':raw_count', $rawCount, PDO::PARAM_INT);
 		$stmt->bindValue(':viability_ceiling', $viabilityCeiling, PDO::PARAM_INT);

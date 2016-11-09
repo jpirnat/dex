@@ -25,7 +25,7 @@ class LeadsRepository
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param int $metagameId
+	 * @param int $formatId
 	 * @param int $totalLeads
 	 *
 	 * @return bool
@@ -33,25 +33,25 @@ class LeadsRepository
 	public function insert(
 		int $year,
 		int $month,
-		int $metagameId,
+		int $formatId,
 		int $totalLeads
 	) : bool {
 		$stmt = $this->db->prepare(
 			'INSERT INTO `leads` (
 				`year`,
 				`month`,
-				`metagame_id`,
+				`format_id`,
 				`total_leads`
 			) VALUES (
 				:year,
 				:month,
-				:metagame_id,
+				:format_id,
 				:total_leads
 			)'
 		);
 		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
-		$stmt->bindValue(':metagame_id', $metagameId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->bindValue(':total_leads', $totalLeads, PDO::PARAM_INT);
 		return $stmt->execute();
 	}

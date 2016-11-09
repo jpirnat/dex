@@ -25,7 +25,7 @@ class MovesetRatedSpreadsRepository
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param int $metagameId
+	 * @param int $formatId
 	 * @param int $rating
 	 * @param int $pokemonId
 	 * @param int $natureId
@@ -42,7 +42,7 @@ class MovesetRatedSpreadsRepository
 	public function insert(
 		int $year,
 		int $month,
-		int $metagameId,
+		int $formatId,
 		int $rating,
 		int $pokemonId,
 		int $natureId,
@@ -58,7 +58,7 @@ class MovesetRatedSpreadsRepository
 			'INSERT INTO `moveset_rated_spreads` (
 				`year`,
 				`month`,
-				`metagame_id`,
+				`format_id`,
 				`rating`,
 				`pokemon_id`,
 				`nature_id`,
@@ -72,7 +72,7 @@ class MovesetRatedSpreadsRepository
 			) VALUES (
 				:year,
 				:month,
-				:metagame_id,
+				:format_id,
 				:rating,
 				:pokemon_id,
 				:nature_id,
@@ -87,7 +87,7 @@ class MovesetRatedSpreadsRepository
 		);
 		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
-		$stmt->bindValue(':metagame_id', $metagameId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
 		$stmt->bindValue(':nature_id', $natureId, PDO::PARAM_INT);

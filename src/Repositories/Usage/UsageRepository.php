@@ -26,14 +26,14 @@ class UsageRepository
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param int $metagameId
+	 * @param int $formatId
 	 *
 	 * @return bool
 	 */
 	public function exists(
 		int $year,
 		int $month,
-		int $metagameId
+		int $formatId
 	) : bool {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -41,11 +41,11 @@ class UsageRepository
 			FROM `usage`
 			WHERE `year` = :year
 				AND `month` = :month
-				AND `metagame_id` = :metagame_id'
+				AND `format_id` = :format_id'
 		);
 		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
-		$stmt->bindValue(':metagame_id', $metagameId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
 		return $count > 0;
@@ -56,7 +56,7 @@ class UsageRepository
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param int $metagameId
+	 * @param int $formatId
 	 * @param int $totalBattles
 	 *
 	 * @return bool
@@ -64,25 +64,25 @@ class UsageRepository
 	public function insert(
 		int $year,
 		int $month,
-		int $metagameId,
+		int $formatId,
 		int $totalBattles
 	) : bool {
 		$stmt = $this->db->prepare(
 			'INSERT INTO `usage` (
 				`year`,
 				`month`,
-				`metagame_id`,
+				`format_id`,
 				`total_battles`
 			) VALUES (
 				:year,
 				:month,
-				:metagame_id,
+				:format_id,
 				:total_battles
 			)'
 		);
 		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
-		$stmt->bindValue(':metagame_id', $metagameId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->bindValue(':total_battles', $totalBattles, PDO::PARAM_INT);
 		return $stmt->execute();
 	}

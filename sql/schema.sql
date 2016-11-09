@@ -25,7 +25,7 @@ drop table if exists `usage_rated_pokemon`;
 drop table if exists `usage_pokemon`;
 drop table if exists `usage_rated`;
 drop table if exists `usage`;
-drop table if exists `metagames`;
+drop table if exists `formats`;
 drop table if exists `moves`;
 drop table if exists `natures`;
 drop table if exists `items`;
@@ -120,7 +120,7 @@ unique key (`name`)
 ) engine = InnoDB;
 
 
-create table if not exists `metagames`
+create table if not exists `formats`
 (
 `id` int unsigned not null auto_increment,
 
@@ -137,13 +137,13 @@ unique key (`name`)
 ) engine = InnoDB;
 
 
-/* /stats/year-month/metagame-rating.txt */
+/* /stats/year-month/format-rating.txt */
 
 create table if not exists `usage`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 
 `total_battles` int unsigned not null,
 
@@ -156,9 +156,9 @@ create table if not exists `usage`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`
+	`format_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -168,7 +168,7 @@ create table if not exists `usage_rated`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `rating` int unsigned not null,
 
 `average_weight_per_team` decimal unsigned not null,
@@ -182,10 +182,10 @@ create table if not exists `usage_rated`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`rating`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -195,7 +195,7 @@ create table if not exists `usage_pokemon`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `pokemon_id` int unsigned not null,
 
 `raw` int unsigned not null,
@@ -212,10 +212,10 @@ create table if not exists `usage_pokemon`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`pokemon_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)
@@ -228,7 +228,7 @@ create table if not exists `usage_rated_pokemon`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `rating` int unsigned not null,
 `pokemon_id` int unsigned not null,
 
@@ -244,11 +244,11 @@ create table if not exists `usage_rated_pokemon`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`rating`,
 	`pokemon_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)
@@ -257,13 +257,13 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 ) engine = InnoDB;
 
 
-/* /stats/year-month/leads/metagame-rating.txt */
+/* /stats/year-month/leads/format-rating.txt */
 
 create table if not exists `leads`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 
 `total_leads` int unsigned not null, # `usage`.`total_battles` * 2
 
@@ -276,9 +276,9 @@ create table if not exists `leads`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`
+	`format_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -288,7 +288,7 @@ create table if not exists `leads_pokemon`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `pokemon_id` int unsigned not null,
 
 `raw` int unsigned not null,
@@ -303,10 +303,10 @@ create table if not exists `leads_pokemon`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`pokemon_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)
@@ -319,7 +319,7 @@ create table if not exists `leads_rated_pokemon`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `rating` int unsigned not null,
 `pokemon_id` int unsigned not null,
 
@@ -335,11 +335,11 @@ create table if not exists `leads_rated_pokemon`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`rating`,
 	`pokemon_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)
@@ -348,13 +348,13 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 ) engine = InnoDB;
 
 
-/* /stats/year-month/moveset/metagame-rating.txt */
+/* /stats/year-month/moveset/format-rating.txt */
 
 create table if not exists `moveset_pokemon`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `pokemon_id` int unsigned not null,
 
 `raw_count` int unsigned not null,
@@ -369,10 +369,10 @@ create table if not exists `moveset_pokemon`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`pokemon_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)
@@ -385,7 +385,7 @@ create table if not exists `moveset_rated_pokemon`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `rating` int unsigned not null,
 `pokemon_id` int unsigned not null,
 
@@ -400,11 +400,11 @@ create table if not exists `moveset_rated_pokemon`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`rating`,
 	`pokemon_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)
@@ -417,7 +417,7 @@ create table if not exists `moveset_rated_abilities`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `rating` int unsigned not null,
 `pokemon_id` int unsigned not null,
 `ability_id` int unsigned not null,
@@ -433,12 +433,12 @@ create table if not exists `moveset_rated_abilities`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`rating`,
 	`pokemon_id`,
 	`ability_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)
@@ -454,7 +454,7 @@ create table if not exists `moveset_rated_items`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `rating` int unsigned not null,
 `pokemon_id` int unsigned not null,
 `item_id` int unsigned not null,
@@ -470,12 +470,12 @@ create table if not exists `moveset_rated_items`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`rating`,
 	`pokemon_id`,
 	`item_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)
@@ -491,7 +491,7 @@ create table if not exists `moveset_rated_spreads`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `rating` int unsigned not null,
 `pokemon_id` int unsigned not null,
 
@@ -513,7 +513,7 @@ create table if not exists `moveset_rated_spreads`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`rating`,
 	`pokemon_id`,
 	`nature_id`,
@@ -524,7 +524,7 @@ primary key (
 	`spd`,
 	`spe`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)
@@ -540,7 +540,7 @@ create table if not exists `moveset_rated_moves`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `rating` int unsigned not null,
 `pokemon_id` int unsigned not null,
 `move_id` int unsigned not null,
@@ -556,12 +556,12 @@ create table if not exists `moveset_rated_moves`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`rating`,
 	`pokemon_id`,
 	`move_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)
@@ -577,7 +577,7 @@ create table if not exists `moveset_rated_teammates`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `rating` int unsigned not null,
 `pokemon_id` int unsigned not null,
 `teammate_id` int unsigned not null,
@@ -593,12 +593,12 @@ create table if not exists `moveset_rated_teammates`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`rating`,
 	`pokemon_id`,
 	`teammate_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)
@@ -614,7 +614,7 @@ create table if not exists `moveset_rated_counters`
 (
 `year` int unsigned not null,
 `month` int unsigned not null,
-`metagame_id` int unsigned not null,
+`format_id` int unsigned not null,
 `rating` int unsigned not null,
 `pokemon_id` int unsigned not null,
 `counter_id` int unsigned not null,
@@ -632,12 +632,12 @@ create table if not exists `moveset_rated_counters`
 primary key (
 	`year`,
 	`month`,
-	`metagame_id`,
+	`format_id`,
 	`rating`,
 	`pokemon_id`,
 	`counter_id`
 ),
-foreign key (`metagame_id`) references `metagames` (`id`)
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)

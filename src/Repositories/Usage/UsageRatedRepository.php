@@ -26,7 +26,7 @@ class UsageRatedRepository
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param int $metagameId
+	 * @param int $formatId
 	 * @param int $rating
 	 *
 	 * @return bool
@@ -34,7 +34,7 @@ class UsageRatedRepository
 	public function exists(
 		int $year,
 		int $month,
-		int $metagameId,
+		int $formatId,
 		int $rating
 	) : bool {
 		$stmt = $this->db->prepare(
@@ -43,12 +43,12 @@ class UsageRatedRepository
 			FROM `usage`
 			WHERE `year` = :year
 				AND `month` = :month
-				AND `metagame_id` = :metagame_id
+				AND `format_id` = :format_id
 				AND `rating` = :rating'
 		);
 		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
-		$stmt->bindValue(':metagame_id', $metagameId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
@@ -60,7 +60,7 @@ class UsageRatedRepository
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param int $metagameId
+	 * @param int $formatId
 	 * @param int $rating
 	 * @param float $averageWeightPerTeam
 	 *
@@ -69,7 +69,7 @@ class UsageRatedRepository
 	public function insert(
 		int $year,
 		int $month,
-		int $metagameId,
+		int $formatId,
 		int $rating,
 		float $averageWeightPerTeam
 	) : bool {
@@ -77,20 +77,20 @@ class UsageRatedRepository
 			'INSERT INTO `usage_rated` (
 				`year`,
 				`month`,
-				`metagame_id`,
+				`format_id`,
 				`rating`,
 				`average_weight_per_team`
 			) VALUES (
 				:year,
 				:month,
-				:metagame_id,
+				:format_id,
 				:rating,
 				:average_weight_per_team
 			)'
 		);
 		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
-		$stmt->bindValue(':metagame_id', $metagameId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':average_weight_per_team', $averageWeightPerTeam, PDO::PARAM_STR);
 		return $stmt->execute();

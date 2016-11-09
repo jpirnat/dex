@@ -55,7 +55,7 @@ class UsageImporter
 	 * @param resource $file
 	 * @param int $year
 	 * @param int $month
-	 * @param int $metagameId
+	 * @param int $formatId
 	 * @param int $rating
 	 *
 	 * @return void
@@ -64,29 +64,29 @@ class UsageImporter
 		resource $file,
 		int $year,
 		int $month,
-		int $metagameId,
+		int $formatId,
 		int $rating
 	) {
 		$usageExists = $this->usageRepository->exists(
 			$year,
 			$month,
-			$metagameId
+			$formatId
 		);
 		$usageRatedExists = $this->usageRatedRepository->exists(
 			$year,
 			$month,
-			$metagameId,
+			$formatId,
 			$rating
 		);
 		$usagePokemonExists = $this->usagePokemonRepository->exists(
 			$year,
 			$month,
-			$metagameId
+			$formatId
 		);
 		$usageRatedPokemonExists = $this->usageRatedPokemonRepository->exists(
 			$year,
 			$month,
-			$metagameId,
+			$formatId,
 			$rating
 		);
 

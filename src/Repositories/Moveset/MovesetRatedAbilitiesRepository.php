@@ -25,7 +25,7 @@ class MovesetRatedAbilitiesRepository
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param int $metagameId
+	 * @param int $formatId
 	 * @param int $rating
 	 * @param int $pokemonId
 	 * @param int $abilityId
@@ -36,7 +36,7 @@ class MovesetRatedAbilitiesRepository
 	public function insert(
 		int $year,
 		int $month,
-		int $metagameId,
+		int $formatId,
 		int $rating,
 		int $pokemonId,
 		int $abilityId,
@@ -46,7 +46,7 @@ class MovesetRatedAbilitiesRepository
 			'INSERT INTO `moveset_rated_abilities` (
 				`year`,
 				`month`,
-				`metagame_id`,
+				`format_id`,
 				`rating`,
 				`pokemon_id`,
 				`ability_id`,
@@ -54,7 +54,7 @@ class MovesetRatedAbilitiesRepository
 			) VALUES (
 				:year,
 				:month,
-				:metagame_id,
+				:format_id,
 				:rating,
 				:pokemon_id,
 				:ability_id,
@@ -63,7 +63,7 @@ class MovesetRatedAbilitiesRepository
 		);
 		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
-		$stmt->bindValue(':metagame_id', $metagameId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId, PDO::PARAM_INT);
