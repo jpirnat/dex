@@ -109,6 +109,13 @@ create table if not exists `moves`
 
 `name` varchar(20) not null,
 
+`name` varchar(20) not null,
+`generation` int unsigned not null,
+`level` int unsigned not null,
+`field_size` int unsigned not null,
+`team_size` int unsigned not null,
+`in_battle_team_size` int unsigned not null,
+
 `created_at` timestamp not null
 	default current_timestamp,
 `updated_at` timestamp not null
@@ -134,6 +141,24 @@ create table if not exists `formats`
 
 primary key (`id`),
 unique key (`name`)
+) engine = InnoDB;
+
+
+create table if not exists `smogon_format_names`
+(
+`name` varchar(20) not null,
+`format_id` int unsigned not null,
+
+`created_at` timestamp not null
+	default current_timestamp,
+`updated_at` timestamp not null
+	default current_timestamp
+	on update current_timestamp,
+
+primary key (`name`),
+foreign key (`format_id`) references `formats` (`id`)
+	on delete restrict
+	on update cascade
 ) engine = InnoDB;
 
 
