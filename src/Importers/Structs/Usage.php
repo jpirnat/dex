@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Trendalyzer\Import\Structs;
+namespace Jp\Trendalyzer\Importers\Structs;
 
 class Usage
 {

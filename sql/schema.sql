@@ -25,6 +25,7 @@ drop table if exists `usage_rated_pokemon`;
 drop table if exists `usage_pokemon`;
 drop table if exists `usage_rated`;
 drop table if exists `usage`;
+drop table if exists `smogon_format_names`;
 drop table if exists `formats`;
 drop table if exists `moves`;
 drop table if exists `natures`;
@@ -109,13 +110,6 @@ create table if not exists `moves`
 
 `name` varchar(20) not null,
 
-`name` varchar(20) not null,
-`generation` int unsigned not null,
-`level` int unsigned not null,
-`field_size` int unsigned not null,
-`team_size` int unsigned not null,
-`in_battle_team_size` int unsigned not null,
-
 `created_at` timestamp not null
 	default current_timestamp,
 `updated_at` timestamp not null
@@ -131,7 +125,12 @@ create table if not exists `formats`
 (
 `id` int unsigned not null auto_increment,
 
-`name` varchar(20) not null,
+`name` varchar(30) not null,
+`generation` int unsigned not null,
+`level` int unsigned not null,
+`field_size` int unsigned not null,
+`team_size` int unsigned not null,
+`in_battle_team_size` int unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -680,5 +679,7 @@ TODO:
 - enable nulls in columns that don't have full historic data (e.g., viability ceiling)
 - find out difference between `usage_pokemon`.`raw`and `moveset_pokemon`.`raw_count`
 - find out what the other moveset counters numbers mean, and add them to the schema
+- add `metagame_%` tables of metagame analysis?
+- what was the FU metagame in 2015-01 and 2015-02?
 
 */

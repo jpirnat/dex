@@ -51,5 +51,5 @@ insert into `smogon_format_names` (
 ("vgc2014", 11),
 ("vgc2015", 12),
 ("vgc2016", 13),
-("vgc2017" 14)
+("vgc2017", 14)
 ;

@@ -1,17 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Trendalyzer\Import;
+namespace Jp\Trendalyzer\Importers;
 
 use Exception;
-use Jp\Trendalyzer\Import\Extractors\UsageExtractor;
+use Jp\Trendalyzer\Importers\Extractors\UsageExtractor;
 use Jp\Trendalyzer\Repositories\PokemonRepository;
 use Jp\Trendalyzer\Repositories\Usage\UsagePokemonRepository;
 use Jp\Trendalyzer\Repositories\Usage\UsageRatedPokemonRepository;
 use Jp\Trendalyzer\Repositories\Usage\UsageRatedRepository;
 use Jp\Trendalyzer\Repositories\Usage\UsageRepository;
+use Psr\Http\Message\StreamInterface;
 
-class UsageImporter
+class UsageFileImporter
 {
 	/** @var PokemonRepository $pokemonRepository */
 	protected $pokemonRepository;
@@ -60,7 +61,7 @@ class UsageImporter
 	/**
 	 * Import usage data from the given file.
 	 *
-	 * @param resource $file
+	 * @param StreamInterface $stream
 	 * @param int $year
 	 * @param int $month
 	 * @param int $formatId
@@ -68,8 +69,8 @@ class UsageImporter
 	 *
 	 * @return void
 	 */
-	public function importFile(
-		resource $file,
+	public function import(
+		StreamInterface $stream,
 		int $year,
 		int $month,
 		int $formatId,
@@ -109,7 +110,7 @@ class UsageImporter
 			return;
 		}
 
-		$line = fgets($line);
+		$line = \GuzzleHttp\Psr7\readline($stream);
 		$totalBattles = $this->usageExtractor->extractTotalBattles($line);
 		if (!$usageExists) {
 			$this->usageRepository->insert(
@@ -120,7 +121,7 @@ class UsageImporter
 			);
 		}
 
-		$line = fgets($line);
+		$line = \GuzzleHttp\Psr7\readline($stream);
 		$averageWeightPerTeam = $this->usageExtractor->extractAverageWeightPerTeam($line);
 		if (!$usageRatedExists) {
 			$this->usageRatedRepository->insert(
@@ -133,13 +134,13 @@ class UsageImporter
 		}
 
 		// Ignore the next three lines.
-		fgets($file);
-		fgets($file);
-		fgets($file);
+		\GuzzleHttp\Psr7\readline($stream);
+		\GuzzleHttp\Psr7\readline($stream);
+		\GuzzleHttp\Psr7\readline($stream);
 
-		while ($line = fgets($file)) {
+		while ($line = \GuzzleHttp\Psr7\readline($stream)) {
 			try {
-				$usage = $this->usageExtractor->extract($line);
+				$usage = $this->usageExtractor->extractUsage($line);
 
 				$pokemonName = $usage->pokemonName();
 				$pokemonId = $this->pokemonRepository->getPokemonId($pokemonName);

@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Trendalyzer\Import\Extractors;
+namespace Jp\Trendalyzer\Importers\Extractors;
 
 use Exception;
-use Jp\Trendalyzer\Import\Structs\Usage;
+use Jp\Trendalyzer\Importers\Structs\Usage;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
 
