@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Trendalyzer\Repositories;
 
+use Exception;
 use PDO;
 
 class FormatsRepository

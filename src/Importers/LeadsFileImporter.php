@@ -46,6 +46,11 @@ class LeadsFileImporter
 		int $formatId,
 		int $rating
 	) {
+		// If the file is empty, there's nothing to import.
+		if ($stream->getSize() === 0) {
+			return;
+		}
+
 		// TODO
 	}
 }

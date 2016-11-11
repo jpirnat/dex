@@ -195,7 +195,7 @@ create table if not exists `usage_rated`
 `format_id` int unsigned not null,
 `rating` int unsigned not null,
 
-`average_weight_per_team` decimal unsigned not null,
+`average_weight_per_team` decimal(6, 3) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -223,9 +223,9 @@ create table if not exists `usage_pokemon`
 `pokemon_id` int unsigned not null,
 
 `raw` int unsigned not null,
-`raw_percent` decimal unsigned not null,
+`raw_percent` decimal(6, 3) unsigned not null,
 `real` int unsigned not null,
-`real_percent` decimal unsigned not null,
+`real_percent` decimal(6, 3) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -257,7 +257,7 @@ create table if not exists `usage_rated_pokemon`
 `pokemon_id` int unsigned not null,
 
 `rank` int unsigned not null,
-`usage_percent` decimal unsigned not null,
+`usage_percent` decimal(8, 5) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -316,7 +316,7 @@ create table if not exists `leads_pokemon`
 `pokemon_id` int unsigned not null,
 
 `raw` int unsigned not null,
-`raw_percent` decimal unsigned not null,
+`raw_percent` decimal(6, 3) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -348,7 +348,7 @@ create table if not exists `leads_rated_pokemon`
 `pokemon_id` int unsigned not null,
 
 `rank` int unsigned not null,
-`usage_percent` decimal unsigned not null,
+`usage_percent` decimal(8, 5) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -413,7 +413,7 @@ create table if not exists `moveset_rated_pokemon`
 `rating` int unsigned not null,
 `pokemon_id` int unsigned not null,
 
-`average_weight` decimal unsigned not null,
+`average_weight` decimal(16, 13) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -446,7 +446,7 @@ create table if not exists `moveset_rated_abilities`
 `pokemon_id` int unsigned not null,
 `ability_id` int unsigned not null,
 
-`percent` decimal unsigned not null,
+`percent` decimal(6, 3) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -483,7 +483,7 @@ create table if not exists `moveset_rated_items`
 `pokemon_id` int unsigned not null,
 `item_id` int unsigned not null,
 
-`percent` decimal unsigned not null,
+`percent` decimal(6, 3) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -526,7 +526,7 @@ create table if not exists `moveset_rated_spreads`
 `spa` int unsigned not null,
 `spd` int unsigned not null,
 `spe` int unsigned not null,
-`percent` decimal unsigned not null,
+`percent` decimal(6, 3) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -569,7 +569,7 @@ create table if not exists `moveset_rated_moves`
 `pokemon_id` int unsigned not null,
 `move_id` int unsigned not null,
 
-`percent` decimal unsigned not null,
+`percent` decimal(6, 3) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -606,7 +606,7 @@ create table if not exists `moveset_rated_teammates`
 `pokemon_id` int unsigned not null,
 `teammate_id` int unsigned not null,
 
-`percent` decimal unsigned not null,
+`percent` decimal(6, 3) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -643,9 +643,11 @@ create table if not exists `moveset_rated_counters`
 `pokemon_id` int unsigned not null,
 `counter_id` int unsigned not null,
 
-`percent` decimal unsigned not null,
-`percent_knocked_out` decimal unsigned not null,
-`percent_switched_out` decimal unsigned not null,
+`number1` decimal(6, 3) unsigned not null,
+`number2` decimal(5, 2) unsigned not null,
+`number3` decimal(5, 2) unsigned not null,
+`percent_knocked_out` decimal(4, 1) unsigned not null,
+`percent_switched_out` decimal(4, 1) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,

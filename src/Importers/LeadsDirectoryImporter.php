@@ -58,7 +58,7 @@ class LeadsDirectoryImporter
 		]);
 
 		// Get the HTML of the leads directory page.
-		$html = $client->request('GET', '/')->getBody()->getContents();
+		$html = $client->request('GET', $url)->getBody()->getContents();
 
 		// Create the DOM crawler.
 		$crawler = new Crawler($html, $url);
@@ -81,7 +81,7 @@ class LeadsDirectoryImporter
 			// If the format is known, import the file.
 			if ($this->formatsRepository->hasSmogonFormatName($smogonFormatName)) {
 				// Create a stream to read the leads file.
-				$stream = $client->request('GET', $link)->getBody();
+				$stream = $client->request('GET', $link->getUri())->getBody();
 
 				// Get the format id from the Smogon format name.
 				$formatId = $this->formatsRepository->getFormatId($smogonFormatName);

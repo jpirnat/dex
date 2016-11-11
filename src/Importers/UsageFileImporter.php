@@ -76,6 +76,11 @@ class UsageFileImporter
 		int $formatId,
 		int $rating
 	) {
+		// If the file is empty, there's nothing to import.
+		if ($stream->getSize() === 0) {
+			return;
+		}
+
 		$usageExists = $this->usageRepository->exists(
 			$year,
 			$month,

@@ -37,7 +37,7 @@ class StatsDirectoryImporter
 		]);
 
 		// Get the HTML of the stats directory page.
-		$html = $client->request('GET', '/')->getBody()->getContents();
+		$html = $client->request('GET', $url)->getBody()->getContents();
 
 		// Create the DOM crawler.
 		$crawler = new Crawler($html, $url);

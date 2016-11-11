@@ -21,7 +21,7 @@ class FormatRatingExtractor
 	 */
 	public function extractFormatRating(string $filename) : FormatRating
 	{
-		$pattern = '/([A-Za-z0-9])-(\d+)/';
+		$pattern = '/([A-Za-z0-9]+)-(\d+)/';
 
 		try {
 			$matchResult = Regex::match($pattern, $filename);
@@ -31,7 +31,7 @@ class FormatRatingExtractor
 				(int) $matchResult->group(2)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Filename is invalid.');
+			throw new Exception('Filename is invalid: ' . $filename);
 		}
 	}
 }

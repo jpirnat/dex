@@ -27,11 +27,11 @@ class YearMonthExtractor
 			$matchResult = Regex::match($pattern, $filename);
 
 			return new YearMonth(
-				$matchResult->group(1),
-				$matchResult->group(2)
+				(int) $matchResult->group(1),
+				(int) $matchResult->group(2)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Filename is invalid.');
+			throw new Exception('Filename is invalid: ' . $filename);
 		}
 	}
 }

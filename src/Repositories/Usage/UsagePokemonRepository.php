@@ -38,7 +38,7 @@ class UsagePokemonRepository
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
-			FROM `usage`
+			FROM `usage_pokemon`
 			WHERE `year` = :year
 				AND `month` = :month
 				AND `format_id` = :format_id'

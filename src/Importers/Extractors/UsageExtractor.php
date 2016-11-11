@@ -48,7 +48,7 @@ class UsageExtractor
 
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid.');
+			throw new Exception('Line is invalid: ' . $line);
 		}
 	}
 
@@ -70,7 +70,7 @@ class UsageExtractor
 
 			return (float) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid.');
+			throw new Exception('Line is invalid: ' . $line);
 		}
 	}
 
@@ -109,7 +109,7 @@ class UsageExtractor
 				(float) $matchResult->group(7)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid.');
+			throw new Exception('Line is invalid: ' . $line);
 		}
 	}
 }
