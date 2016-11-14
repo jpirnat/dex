@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace Jp\Trendalyzer\Importers\Extractors;
 
 use Exception;
+use Jp\Trendalyzer\Importers\Structs\Counter;
+use Jp\Trendalyzer\Importers\Structs\NamePercent;
 use Jp\Trendalyzer\Importers\Structs\Spread;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
@@ -41,7 +43,15 @@ class MovesetFileExtractor
 	 */
 	public function extractPokemonName(string $line) : string
 	{
-		// TODO
+		$pattern = '/\|\s*([\w-]+)\s*\|/';
+
+		try {
+			$matchResult = Regex::match($pattern, $line);
+
+			return $matchResult->group(1);
+		} catch (RegexFailed $e) {
+			throw new Exception('Line is invalid: ' . $line);
+		}
 	}
 
 	/**
@@ -121,7 +131,18 @@ class MovesetFileExtractor
 	 */
 	public function extractNamePercent(string $line) : NamePercent
 	{
-		// TODO
+		$pattern = '/(\w[\w -]*?)\s+([\d.]+)%/';
+
+		try {
+			$matchResult = Regex::match($pattern, $line);
+
+			return new NamePercent(
+				$matchResult->group(1),
+				(float) $matchResult->group(2)
+			);
+		} catch (RegexFailed $e) {
+			throw new Exception('Line is invalid: ' . $line);
+		}
 	}
 
 	/**
