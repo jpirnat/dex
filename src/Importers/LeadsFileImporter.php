@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Jp\Trendalyzer\Importers;
 
 use Exception;
-use Jp\Trendalyzer\Importers\Extractors\LeadUsageExtractor;
+use Jp\Trendalyzer\Importers\Extractors\LeadsFileExtractor;
 use Jp\Trendalyzer\Repositories\PokemonRepository;
 use Jp\Trendalyzer\Repositories\Leads\LeadsPokemonRepository;
 use Jp\Trendalyzer\Repositories\Leads\LeadsRatedPokemonRepository;
@@ -25,8 +25,8 @@ class LeadsFileImporter
 	/** @var LeadsRatedPokemonRepository $leadsRatedPokemonRepository */
 	protected $leadsRatedPokemonRepository;
 
-	/** @var LeadUsageExtractor $leadUsageExtractor */
-	protected $leadUsageExtractor;
+	/** @var LeadsFileExtractor $leadsFileExtractor */
+	protected $leadsFileExtractor;
 
 	/**
 	 * Constructor.
@@ -35,20 +35,20 @@ class LeadsFileImporter
 	 * @param LeadsRepository $leadsRepository
 	 * @param LeadsPokemonRepository $leadsPokemonRepository
 	 * @param LeadsRatedPokemonRepository $leadsRatedPokemonRepository
-	 * @param LeadUsageExtractor $leadUsageExtractor
+	 * @param LeadsFileExtractor $leadsFileExtractor
 	 */
 	public function __construct(
 		PokemonRepository $pokemonRepository,
 		LeadsRepository $leadsRepository,
 		LeadsPokemonRepository $leadsPokemonRepository,
 		LeadsRatedPokemonRepository $leadsRatedPokemonRepository,
-		LeadUsageExtractor $leadUsageExtractor
+		LeadsFileExtractor $leadsFileExtractor
 	) {
 		$this->pokemonRepository = $pokemonRepository;
 		$this->leadsRepository = $leadsRepository;
 		$this->leadsPokemonRepository = $leadsPokemonRepository;
 		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
-		$this->leadUsageExtractor = $leadUsageExtractor;
+		$this->leadsFileExtractor = $leadsFileExtractor;
 	}
 
 	/**
@@ -102,7 +102,7 @@ class LeadsFileImporter
 		}
 
 		$line = \GuzzleHttp\Psr7\readline($stream);
-		$totalLeads = $this->leadUsageExtractor->extractTotalLeads($line);
+		$totalLeads = $this->leadsFileExtractor->extractTotalLeads($line);
 		if (!$leadsExists) {
 			$this->leadsRepository->insert(
 				$year,
@@ -119,7 +119,7 @@ class LeadsFileImporter
 
 		while ($line = \GuzzleHttp\Psr7\readline($stream)) {
 			try {
-				$leadUsage = $this->leadUsageExtractor->extractLeadUsage($line);
+				$leadUsage = $this->leadsFileExtractor->extractLeadUsage($line);
 
 				$pokemonName = $leadUsage->pokemonName();
 				$pokemonId = $this->pokemonRepository->getPokemonId($pokemonName);

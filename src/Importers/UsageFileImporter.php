@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Jp\Trendalyzer\Importers;
 
 use Exception;
-use Jp\Trendalyzer\Importers\Extractors\UsageExtractor;
+use Jp\Trendalyzer\Importers\Extractors\UsageFileExtractor;
 use Jp\Trendalyzer\Repositories\PokemonRepository;
 use Jp\Trendalyzer\Repositories\Usage\UsagePokemonRepository;
 use Jp\Trendalyzer\Repositories\Usage\UsageRatedPokemonRepository;
@@ -29,8 +29,8 @@ class UsageFileImporter
 	/** @var UsageRatedPokemonRepository $usageRatedPokemonRepository */
 	protected $usageRatedPokemonRepository;
 
-	/** @var UsageExtractor $usageExtractor */
-	protected $usageExtractor;
+	/** @var UsageFileExtractor $usageFileExtractor */
+	protected $usageFileExtractor;
 
 	/**
 	 * Constructor.
@@ -40,7 +40,7 @@ class UsageFileImporter
 	 * @param UsageRatedRepository $usageRatedRepository
 	 * @param UsagePokemonRepository $usagePokemonRepository
 	 * @param UsageRatedPokemonRepository $usageRatedPokemonRepository
-	 * @param UsageExtractor $usageExtractor
+	 * @param UsageFileExtractor $usageFileExtractor
 	 */
 	public function __construct(
 		PokemonRepository $pokemonRepository,
@@ -48,14 +48,14 @@ class UsageFileImporter
 		UsageRatedRepository $usageRatedRepository,
 		UsagePokemonRepository $usagePokemonRepository,
 		UsageRatedPokemonRepository $usageRatedPokemonRepository,
-		UsageExtractor $usageExtractor
+		UsageFileExtractor $usageFileExtractor
 	) {
 		$this->pokemonRepository = $pokemonRepository;
 		$this->usageRepository = $usageRepository;
 		$this->usageRatedRepository = $usageRatedRepository;
 		$this->usagePokemonRepository = $usagePokemonRepository;
 		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
-		$this->usageExtractor = $usageExtractor;
+		$this->usageFileExtractor = $usageFileExtractor;
 	}
 
 	/**
@@ -116,7 +116,7 @@ class UsageFileImporter
 		}
 
 		$line = \GuzzleHttp\Psr7\readline($stream);
-		$totalBattles = $this->usageExtractor->extractTotalBattles($line);
+		$totalBattles = $this->usageFileExtractor->extractTotalBattles($line);
 		if (!$usageExists) {
 			$this->usageRepository->insert(
 				$year,
@@ -127,7 +127,7 @@ class UsageFileImporter
 		}
 
 		$line = \GuzzleHttp\Psr7\readline($stream);
-		$averageWeightPerTeam = $this->usageExtractor->extractAverageWeightPerTeam($line);
+		$averageWeightPerTeam = $this->usageFileExtractor->extractAverageWeightPerTeam($line);
 		if (!$usageRatedExists) {
 			$this->usageRatedRepository->insert(
 				$year,
@@ -145,7 +145,7 @@ class UsageFileImporter
 
 		while ($line = \GuzzleHttp\Psr7\readline($stream)) {
 			try {
-				$usage = $this->usageExtractor->extractUsage($line);
+				$usage = $this->usageFileExtractor->extractUsage($line);
 
 				$pokemonName = $usage->pokemonName();
 				$pokemonId = $this->pokemonRepository->getPokemonId($pokemonName);

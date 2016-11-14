@@ -8,7 +8,7 @@ use Jp\Trendalyzer\Importers\Structs\LeadUsage;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
 
-class LeadUsageExtractor
+class LeadsFileExtractor
 {
 	/**
 	 * Is this line a separator?
