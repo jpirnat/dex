@@ -29,7 +29,9 @@ class MovesetRatedCountersRepository
 	 * @param int $rating
 	 * @param int $pokemonId
 	 * @param int $counterId
-	 * @param float $percent
+	 * @param float $number1
+	 * @param float $number2
+	 * @param float $number3
 	 * @param float $percentKnockedOut
 	 * @param float $percentSwitchedOut
 	 *
@@ -42,7 +44,9 @@ class MovesetRatedCountersRepository
 		int $rating,
 		int $pokemonId,
 		int $counterId,
-		float $percent,
+		float $number1,
+		float $number2,
+		float $number3,
 		float $percentKnockedOut,
 		float $percentSwitchedOut
 	) : bool {
@@ -54,7 +58,9 @@ class MovesetRatedCountersRepository
 				`rating`,
 				`pokemon_id`,
 				`counter_id`,
-				`percent`,
+				`number1`,
+				`number2`,
+				`number3`,
 				`percent_knocked_out`,
 				`percent_switched_out`
 			) VALUES (
@@ -64,7 +70,9 @@ class MovesetRatedCountersRepository
 				:rating,
 				:pokemon_id,
 				:counter_id,
-				:percent,
+				:number1,
+				:number2,
+				:number3
 				:percent_knocked_out,
 				:percent_switched_out
 			)'
@@ -75,7 +83,9 @@ class MovesetRatedCountersRepository
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
 		$stmt->bindValue(':counter_id', $counterId, PDO::PARAM_INT);
-		$stmt->bindValue(':percent', $percent, PDO::PARAM_STR);
+		$stmt->bindValue(':number1', $number1, PDO::PARAM_STR);
+		$stmt->bindValue(':number2', $number2, PDO::PARAM_STR);
+		$stmt->bindValue(':number3', $number3, PDO::PARAM_STR);
 		$stmt->bindValue(':percent_knocked_out', $percentKnockedOut, PDO::PARAM_STR);
 		$stmt->bindValue(':percent_switched_out', $percentSwitchedOut, PDO::PARAM_STR);
 		return $stmt->execute();

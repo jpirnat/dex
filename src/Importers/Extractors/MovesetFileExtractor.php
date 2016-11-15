@@ -200,7 +200,7 @@ class MovesetFileExtractor
 	{
 		$pattern1 = '/'
 			. '([\w-]+) '    // Pokémon Name
-			. '([\d.]+) '    // Percent
+			. '([\d.]+) '    // number1
 			. '\(([\d.]+)'   // number2
 			. '±([\d.]+)\)/' // number3
 		;
@@ -228,5 +228,26 @@ class MovesetFileExtractor
 				. 'Line 2: ' . $line2
 			);
 		}
+	}
+
+	/**
+	 * Is this line a NamePercent with name "Other"?
+	 *
+	 * @param string $line
+	 *
+	 * @return bool
+	 */
+	public function isOther(string $line) : bool
+	{
+		try {
+			$namePercent = $this->extractNamePercent($line);
+			if ($namePercent->name() === 'Other') {
+				return true;
+			}
+		} catch (Exception $e) {
+			// It must not be a NamePercent.
+		}
+
+		return false;
 	}
 }

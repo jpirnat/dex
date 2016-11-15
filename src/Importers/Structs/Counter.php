@@ -8,8 +8,8 @@ class Counter
 	/** @var string $pokemonName */
 	protected $pokemonName;
 
-	/** @var float $percent */
-	protected $percent;
+	/** @var float $number1 */
+	protected $number1;
 
 	/** @var float $number2 */
 	protected $number2;
@@ -27,7 +27,7 @@ class Counter
 	 * Constructor.
 	 *
 	 * @param string $pokemonName
-	 * @param float $percent
+	 * @param float $number1
 	 * @param float $number2
 	 * @param float $number3
 	 * @param float $percentKnockedOut
@@ -35,14 +35,14 @@ class Counter
 	 */
 	public function __construct(
 		string $pokemonName,
-		float $percent,
+		float $number1,
 		float $number2,
 		float $number3,
 		float $percentKnockedOut,
 		float $percentSwitchedOut
 	) {
 		$this->pokemonName = $pokemonName;
-		$this->percent = $percent;
+		$this->number1 = $number1;
 		$this->number2 = $number2;
 		$this->number3 = $number3;
 		$this->percentKnockedOut = $percentKnockedOut;
@@ -60,13 +60,13 @@ class Counter
 	}
 
 	/**
-	 * Get the percent.
+	 * Get the number1.
 	 *
 	 * @return float
 	 */
-	public function percent() : float
+	public function number1() : float
 	{
-		return $this->percent;
+		return $this->number1;
 	}
 
 	/**

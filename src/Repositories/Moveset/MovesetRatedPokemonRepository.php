@@ -63,7 +63,7 @@ class MovesetRatedPokemonRepository
 	 * @param int $formatId
 	 * @param int $rating
 	 * @param int $pokemonId
-	 * @param int $averageWeight
+	 * @param float $averageWeight
 	 *
 	 * @return bool
 	 */
@@ -73,7 +73,7 @@ class MovesetRatedPokemonRepository
 		int $formatId,
 		int $rating,
 		int $pokemonId,
-		int $averageWeight
+		float $averageWeight
 	) : bool {
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_rated_pokemon` (
