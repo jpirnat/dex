@@ -250,6 +250,10 @@ class MovesetFileImporter
 
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 
+				if ($namePercent->name() === 'Nothing') {
+					continue;
+				}
+
 				$itemName = $namePercent->name();
 				$itemId = $this->itemsRepository->getItemId($itemName);
 
@@ -309,6 +313,10 @@ class MovesetFileImporter
 				}
 
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
+
+				if ($namePercent->name() === 'Nothing') {
+					continue;
+				}
 
 				$moveName = $namePercent->name();
 				$moveId = $this->movesRepository->getMoveId($moveName);

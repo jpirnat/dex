@@ -92,7 +92,7 @@ class MovesetFileExtractor
 		try {
 			$matchResult = Regex::match($pattern, $line);
 
-			return (int) $matchResult->group(1);
+			return (float) $matchResult->group(1);
 		} catch (RegexFailed $e) {
 			throw new Exception('Average weight line is invalid: ' . $line);
 		}
