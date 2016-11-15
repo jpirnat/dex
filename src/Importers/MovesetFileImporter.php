@@ -163,8 +163,11 @@ class MovesetFileImporter
 
 			\GuzzleHttp\Psr7\readline($stream); // Separator.
 			$line = \GuzzleHttp\Psr7\readline($stream);
+			if ($stream->eof()) {
+				break;
+			}
 			$pokemonName = $this->movesetFileExtractor->extractPokemonName($line);
-			$pokemonId = $this->pokemonRepository->getById($pokemonName);
+			$pokemonId = $this->pokemonRepository->getPokemonId($pokemonName);
 			\GuzzleHttp\Psr7\readline($stream); // Separator.
 
 			// BLOCK 2 - General information.
@@ -221,7 +224,7 @@ class MovesetFileImporter
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 
 				$abilityName = $namePercent->name();
-				$abilityId = $this->abilitiesRepository->getById($abilityName);
+				$abilityId = $this->abilitiesRepository->getAbilityId($abilityName);
 
 				if (!$movesetRatedPokemonExists) {
 					$this->movesetRatedAbilitiesRepository->insert(
@@ -248,7 +251,7 @@ class MovesetFileImporter
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 
 				$itemName = $namePercent->name();
-				$itemId = $this->itemsRepository->getById($itemName);
+				$itemId = $this->itemsRepository->getItemId($itemName);
 
 				if (!$movesetRatedPokemonExists) {
 					$this->movesetRatedItemsRepository->insert(
@@ -275,7 +278,7 @@ class MovesetFileImporter
 				$spread = $this->movesetFileExtractor->extractSpread($line);
 
 				$natureName = $spread->natureName();
-				$natureId = $this->itemsRepository->getById($natureName);
+				$natureId = $this->naturesRepository->getNatureId($natureName);
 
 				if (!$movesetRatedPokemonExists) {
 					$this->movesetRatedSpreadsRepository->insert(
@@ -308,7 +311,7 @@ class MovesetFileImporter
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 
 				$moveName = $namePercent->name();
-				$moveId = $this->movesRepository->getById($moveName);
+				$moveId = $this->movesRepository->getMoveId($moveName);
 
 				if (!$movesetRatedPokemonExists) {
 					$this->movesetRatedMovesRepository->insert(
@@ -330,7 +333,7 @@ class MovesetFileImporter
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 
 				$teammateName = $namePercent->name();
-				$teammateId = $this->pokemonRepository->getById($teammateName);
+				$teammateId = $this->pokemonRepository->getPokemonId($teammateName);
 
 				if (!$movesetRatedPokemonExists) {
 					$this->movesetRatedTeammatesRepository->insert(
@@ -353,7 +356,7 @@ class MovesetFileImporter
 				$counter = $this->movesetFileExtractor->extractCounter($line1, $line2);
 
 				$counterName = $counter->pokemonName();
-				$counterId = $this->pokemonRepository->getById($counterName);
+				$counterId = $this->pokemonRepository->getPokemonId($counterName);
 
 				if (!$movesetRatedPokemonExists) {
 					$this->movesetRatedCountersRepository->insert(

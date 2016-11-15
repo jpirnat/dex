@@ -108,7 +108,7 @@ create table if not exists `moves`
 (
 `id` int unsigned not null auto_increment,
 
-`name` varchar(20) not null,
+`name` varchar(30) not null,
 
 `created_at` timestamp not null
 	default current_timestamp,

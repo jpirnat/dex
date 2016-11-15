@@ -60,7 +60,7 @@ class ItemsRepository
 	 *
 	 * @return int
 	 */
-	protected function getItemId(string $name) : int
+	public function getItemId(string $name) : int
 	{
 		if (!isset($this->itemIds[$name])) {
 			$this->itemIds[$name] = $this->insertItem($name);

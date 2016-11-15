@@ -72,7 +72,7 @@ class MovesetRatedCountersRepository
 				:counter_id,
 				:number1,
 				:number2,
-				:number3
+				:number3,
 				:percent_knocked_out,
 				:percent_switched_out
 			)'

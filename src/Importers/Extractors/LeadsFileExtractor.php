@@ -64,11 +64,11 @@ class LeadsFileExtractor
 	public function extractLeadUsage(string $line) : LeadUsage
 	{
 		$pattern = '/\s*\|'
-			. '\s*(\d+)\s*\|'     // Rank
-			. '\s*([\w-]+)\s*\|'  // Pokémon Name
-			. '\s*([\d.]+)%\s*\|' // Usage Percent
-			. '\s*(\d+)\s*\|'     // Raw
-			. '\s*([\d.]+)%\s*\|' // Raw Percent
+			. '\s*(\d+)\s*\|'           // Rank
+			. "\s*(\w[\w '.-]*?)\s*\|"  // Pokémon Name
+			. '\s*([\d.]+)%\s*\|'       // Usage Percent
+			. '\s*(\d+)\s*\|'           // Raw
+			. '\s*([\d.]+)%\s*\|'       // Raw Percent
 			. '\s*/'
 		;
 
