@@ -21,6 +21,41 @@ class MovesetRatedPokemonRepository
 	}
 
 	/**
+	 * Does `moveset_rated_pokemon` contain any records for the given key?
+	 * (Was the relevant data already imported?)
+	 *
+	 * @param int $year
+	 * @param int $month
+	 * @param int $formatId
+	 * @param int $rating
+	 *
+	 * @return bool
+	 */
+	public function exists(
+		int $year,
+		int $month,
+		int $formatId,
+		int $rating
+	) : bool {
+		$stmt = $this->db->prepare(
+			'SELECT
+				COUNT(*)
+			FROM `moveset_rated_pokemon`
+			WHERE `year` = :year
+				AND `month` = :month
+				AND `format_id` = :format_id
+				AND `rating` = :rating'
+		);
+		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->execute();
+		$count = $stmt->fetchColumn();
+		return $count > 0;
+	}
+
+	/**
 	 * Insert a `moveset_rated_pokemon` record.
 	 *
 	 * @param int $year
