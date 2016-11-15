@@ -158,6 +158,219 @@ class MovesetFileImporter
 			return;
 		}
 
-		// TODO
+		while (!$stream->eof()) {
+			// BLOCK 1 - The Pokémon's name.
+
+			\GuzzleHttp\Psr7\readline($stream); // Separator.
+			$line = \GuzzleHttp\Psr7\readline($stream);
+			$pokemonName = $this->movesetFileExtractor->extractPokemonName($line);
+			$pokemonId = $this->pokemonRepository->getById($pokemonName);
+			\GuzzleHttp\Psr7\readline($stream); // Separator.
+
+			// BLOCK 2 - General information.
+
+			$line = \GuzzleHttp\Psr7\readline($stream); // Raw count.
+			$rawCount = $this->movesetFileExtractor->extractRawCount($line);
+
+			$line = \GuzzleHttp\Psr7\readline($stream); // Average weight.
+			$averageWeight = $this->movesetFileExtractor->extractAverageWeight($line);
+
+			$line = \GuzzleHttp\Psr7\readline($stream); // Viability ceiling OR separator.
+			try {
+				$viabilityCeiling = $this->movesetFileExtractor->extractViabilityCeiling($line);
+			} catch (Exception $e) {
+				$viabilityCeiling = 0;
+			}
+
+			if (!$movesetPokemonExists) {
+				$this->movesetPokemonRepository->insert(
+					$year,
+					$month,
+					$formatId,
+					$pokemonId,
+					$rawCount,
+					$viabilityCeiling
+				);
+			}
+
+			if (!$movesetRatedPokemonExists) {
+				$this->movesetRatedPokemonRepository->insert(
+					$year,
+					$month,
+					$formatId,
+					$rating,
+					$pokemonId,
+					$averageWeight
+				);
+			}
+
+			// If the last line was viability ceiling, read and ignore the next line.
+			if ($viabilityCeiling !== null) {
+				\GuzzleHttp\Psr7\readline($stream); // Separator.
+			}
+
+			// BLOCK 3 - Abilities.
+
+			\GuzzleHttp\Psr7\readline($stream); // "Abilities"
+			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+				// Ignore this line if it's an "Other" percent.
+				if ($this->movesetFileExtractor->isOther($line)) {
+					continue;
+				}
+
+				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
+
+				$abilityName = $namePercent->name();
+				$abilityId = $this->abilitiesRepository->getById($abilityName);
+
+				if (!$movesetRatedPokemonExists) {
+					$this->movesetRatedAbilitiesRepository->insert(
+						$year,
+						$month,
+						$formatId,
+						$rating,
+						$pokemonId,
+						$abilityId,
+						$namePercent->percent()
+					);
+				}
+			}
+
+			// BLOCK 4 - Items.
+
+			\GuzzleHttp\Psr7\readline($stream); // "Items"
+			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+				// Ignore this line if it's an "Other" percent.
+				if ($this->movesetFileExtractor->isOther($line)) {
+					continue;
+				}
+
+				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
+
+				$itemName = $namePercent->name();
+				$itemId = $this->itemsRepository->getById($itemName);
+
+				if (!$movesetRatedPokemonExists) {
+					$this->movesetRatedItemsRepository->insert(
+						$year,
+						$month,
+						$formatId,
+						$rating,
+						$pokemonId,
+						$itemId,
+						$namePercent->percent()
+					);
+				}
+			}
+
+			// BLOCK 5 - Spreads.
+
+			\GuzzleHttp\Psr7\readline($stream); // "Spreads"
+			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+				// Ignore this line if it's an "Other" percent.
+				if ($this->movesetFileExtractor->isOther($line)) {
+					continue;
+				}
+
+				$spread = $this->movesetFileExtractor->extractSpread($line);
+
+				$natureName = $spread->natureName();
+				$natureId = $this->itemsRepository->getById($natureName);
+
+				if (!$movesetRatedPokemonExists) {
+					$this->movesetRatedSpreadsRepository->insert(
+						$year,
+						$month,
+						$formatId,
+						$rating,
+						$pokemonId,
+						$natureId,
+						$spread->hp(),
+						$spread->atk(),
+						$spread->def(),
+						$spread->spa(),
+						$spread->spd(),
+						$spread->spe(),
+						$spread->percent()
+					);
+				}
+			}
+
+			// BLOCK 6 - Moves.
+
+			\GuzzleHttp\Psr7\readline($stream); // "Moves"
+			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+				// Ignore this line if it's an "Other" percent.
+				if ($this->movesetFileExtractor->isOther($line)) {
+					continue;
+				}
+
+				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
+
+				$moveName = $namePercent->name();
+				$moveId = $this->movesRepository->getById($moveName);
+
+				if (!$movesetRatedPokemonExists) {
+					$this->movesetRatedMovesRepository->insert(
+						$year,
+						$month,
+						$formatId,
+						$rating,
+						$pokemonId,
+						$moveId,
+						$namePercent->percent()
+					);
+				}
+			}
+
+			// BLOCK 7 - Teammates.
+
+			\GuzzleHttp\Psr7\readline($stream); // "Teammates"
+			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
+
+				$teammateName = $namePercent->name();
+				$teammateId = $this->pokemonRepository->getById($teammateName);
+
+				if (!$movesetRatedPokemonExists) {
+					$this->movesetRatedTeammatesRepository->insert(
+						$year,
+						$month,
+						$formatId,
+						$rating,
+						$pokemonId,
+						$teammateId,
+						$namePercent->percent()
+					);
+				}
+			}
+
+			// BLOCK 8 - Counters
+
+			\GuzzleHttp\Psr7\readline($stream); // "Teammates"
+			while (!$this->movesetFileExtractor->isSeparator($line1 = \GuzzleHttp\Psr7\readline($stream))) {
+				$line2 = \GuzzleHttp\Psr7\readline($stream);
+				$counter = $this->movesetFileExtractor->extractCounter($line1, $line2);
+
+				$counterName = $counter->pokemonName();
+				$counterId = $this->pokemonRepository->getById($counterName);
+
+				if (!$movesetRatedPokemonExists) {
+					$this->movesetRatedCountersRepository->insert(
+						$year,
+						$month,
+						$formatId,
+						$rating,
+						$pokemonId,
+						$counterId,
+						$counter->number1(),
+						$counter->number2(),
+						$counter->number3(),
+						$counter->percentKnockedOut(),
+						$counter->percentSwitchedOut()
+					);
+				}
+			}
+		}
 	}
 }
