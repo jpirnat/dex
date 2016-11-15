@@ -48,7 +48,7 @@ class LeadsFileExtractor
 
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid: ' . $line);
+			throw new Exception('Total leads line is invalid: ' . $line);
 		}
 	}
 
@@ -83,7 +83,7 @@ class LeadsFileExtractor
 				(float) $matchResult->group(5)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid: ' . $line);
+			throw new Exception('Lead usage line is invalid: ' . $line);
 		}
 	}
 }

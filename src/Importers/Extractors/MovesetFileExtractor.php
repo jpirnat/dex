@@ -50,7 +50,7 @@ class MovesetFileExtractor
 
 			return $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid: ' . $line);
+			throw new Exception('Pokémon name line is invalid: ' . $line);
 		}
 	}
 
@@ -72,7 +72,7 @@ class MovesetFileExtractor
 
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid: ' . $line);
+			throw new Exception('Raw count line is invalid: ' . $line);
 		}
 	}
 
@@ -94,7 +94,7 @@ class MovesetFileExtractor
 
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid: ' . $line);
+			throw new Exception('Average weight line is invalid: ' . $line);
 		}
 	}
 
@@ -116,7 +116,7 @@ class MovesetFileExtractor
 
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid: ' . $line);
+			throw new Exception('Viability Ceiling line is invalid: ' . $line);
 		}
 	}
 
@@ -141,7 +141,7 @@ class MovesetFileExtractor
 				(float) $matchResult->group(2)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid: ' . $line);
+			throw new Exception('NamePercent line is invalid: ' . $line);
 		}
 	}
 
@@ -181,7 +181,7 @@ class MovesetFileExtractor
 				(float) $matchResult->group(8)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid: ' . $line);
+			throw new Exception('Spread line is invalid: ' . $line);
 		}
 	}
 
@@ -198,6 +198,35 @@ class MovesetFileExtractor
 	 */
 	public function extractCounterFromLines(string $line1, string $line2) : Counter
 	{
-		// TODO
+		$pattern1 = '/'
+			. '([\w-]+) '    // Pokémon Name
+			. '([\d.]+) '    // Percent
+			. '\(([\d.]+)'   // number2
+			. '±([\d.]+)\)/' // number3
+		;
+		$pattern2 = '/'
+			. '([\d.]+)% KOed \/ '      // Percent Knocked Out
+			. '([\d.]+)% switched out/' // Percent Switched Out
+		;
+
+		try {
+			$matchResult1 = Regex::match($pattern1, $line1);
+			$matchResult2 = Regex::match($pattern2, $line2);
+
+			return new Counter(
+				$matchResult1->group(1),
+				(float) $matchResult1->group(2),
+				(float) $matchResult1->group(3),
+				(float) $matchResult1->group(4),
+				(float) $matchResult2->group(1),
+				(float) $matchResult2->group(2)
+			);
+		} catch (RegexFailed $e) {
+			throw new Exception(
+				'Counter lines are invalid.'
+				. 'Line 1: ' . $line1 . ', '
+				. 'Line 2: ' . $line2
+			);
+		}
 	}
 }

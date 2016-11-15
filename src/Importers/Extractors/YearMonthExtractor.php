@@ -31,7 +31,7 @@ class YearMonthExtractor
 				(int) $matchResult->group(2)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Filename is invalid: ' . $filename);
+			throw new Exception('Filename is invalid for year-month: ' . $filename);
 		}
 	}
 }

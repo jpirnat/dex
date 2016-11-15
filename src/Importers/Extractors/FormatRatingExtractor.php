@@ -31,7 +31,7 @@ class FormatRatingExtractor
 				(int) $matchResult->group(2)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Filename is invalid: ' . $filename);
+			throw new Exception('Filename is invalid for format-rating: ' . $filename);
 		}
 	}
 }

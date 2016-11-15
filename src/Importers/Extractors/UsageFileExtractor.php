@@ -48,7 +48,7 @@ class UsageFileExtractor
 
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid: ' . $line);
+			throw new Exception('Total battles line is invalid: ' . $line);
 		}
 	}
 
@@ -70,7 +70,7 @@ class UsageFileExtractor
 
 			return (float) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid: ' . $line);
+			throw new Exception('Average weight per team line is invalid: ' . $line);
 		}
 	}
 
@@ -109,7 +109,7 @@ class UsageFileExtractor
 				(float) $matchResult->group(7)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Line is invalid: ' . $line);
+			throw new Exception('Usage line is invalid: ' . $line);
 		}
 	}
 }
