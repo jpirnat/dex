@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Trendalyzer\Repositories\Usage;
 
 use PDO;
+use PDOException;
 
 class UsagePokemonRepository
 {
@@ -104,6 +105,11 @@ class UsagePokemonRepository
 		$stmt->bindValue(':raw_percent', $rawPercent, PDO::PARAM_STR);
 		$stmt->bindValue(':real', $real, PDO::PARAM_INT);
 		$stmt->bindValue(':real_percent', $realPercent, PDO::PARAM_STR);
-		return $stmt->execute();
+		try {
+			return $stmt->execute();
+		} catch (PDOException $e) {
+			// A record for this key already exists.
+			return false;
+		}
 	}
 }

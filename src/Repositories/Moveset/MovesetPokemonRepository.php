@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Trendalyzer\Repositories\Moveset;
 
 use PDO;
+use PDOException;
 
 class MovesetPokemonRepository
 {
@@ -71,6 +72,13 @@ class MovesetPokemonRepository
 		int $rawCount,
 		int $viabilityCeiling
 	) : bool {
+		if ($viabilityCeiling !== 0) {
+			$viabilityCeilingType = PDO::PARAM_INT;
+		} else {
+			$viabilityCeiling = null;
+			$viabilityCeilingType = PDO::PARAM_NULL;
+		}
+
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_pokemon` (
 				`year`,
@@ -93,7 +101,12 @@ class MovesetPokemonRepository
 		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
 		$stmt->bindValue(':raw_count', $rawCount, PDO::PARAM_INT);
-		$stmt->bindValue(':viability_ceiling', $viabilityCeiling, PDO::PARAM_INT);
-		return $stmt->execute();
+		$stmt->bindValue(':viability_ceiling', $viabilityCeiling, $viabilityCeilingType);
+		try {
+			return $stmt->execute();
+		} catch (PDOException $e) {
+			// A record for this key already exists.
+			return false;
+		}
 	}
 }

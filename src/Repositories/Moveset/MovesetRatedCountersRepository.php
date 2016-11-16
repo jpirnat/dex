@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Trendalyzer\Repositories\Moveset;
 
 use PDO;
+use PDOException;
 
 class MovesetRatedCountersRepository
 {
@@ -88,6 +89,11 @@ class MovesetRatedCountersRepository
 		$stmt->bindValue(':number3', $number3, PDO::PARAM_STR);
 		$stmt->bindValue(':percent_knocked_out', $percentKnockedOut, PDO::PARAM_STR);
 		$stmt->bindValue(':percent_switched_out', $percentSwitchedOut, PDO::PARAM_STR);
-		return $stmt->execute();
+		try {
+			return $stmt->execute();
+		} catch (PDOException $e) {
+			// A record for this key already exists.
+			return false;
+		}
 	}
 }

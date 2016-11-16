@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Trendalyzer\Repositories\Usage;
 
 use PDO;
+use PDOException;
 
 class UsageRepository
 {
@@ -84,6 +85,11 @@ class UsageRepository
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
 		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->bindValue(':total_battles', $totalBattles, PDO::PARAM_INT);
-		return $stmt->execute();
+		try {
+			return $stmt->execute();
+		} catch (PDOException $e) {
+			// A record for this key already exists.
+			return false;
+		}
 	}
 }

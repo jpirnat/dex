@@ -117,37 +117,33 @@ class LeadsFileImporter
 		\GuzzleHttp\Psr7\readline($stream);
 		\GuzzleHttp\Psr7\readline($stream);
 
-		while ($line = \GuzzleHttp\Psr7\readline($stream)) {
-			try {
-				$leadUsage = $this->leadsFileExtractor->extractLeadUsage($line);
+		while (!$this->leadsFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+			$leadUsage = $this->leadsFileExtractor->extractLeadUsage($line);
 
-				$pokemonName = $leadUsage->pokemonName();
-				$pokemonId = $this->pokemonRepository->getPokemonId($pokemonName);
-	
-				if (!$leadsPokemonExists) {
-					$this->leadsPokemonRepository->insert(
-						$year,
-						$month,
-						$formatId,
-						$pokemonId,
-						$leadUsage->raw(),
-						$leadUsage->rawPercent()
-					);
-				}
-	
-				if (!$leadsRatedPokemonExists) {
-					$this->leadsRatedPokemonRepository->insert(
-						$year,
-						$month,
-						$formatId,
-						$rating,
-						$pokemonId,
-						$leadUsage->rank(),
-						$leadUsage->usagePercent()
-					);
-				}
-			} catch (Exception $e) {
-				return;
+			$pokemonName = $leadUsage->pokemonName();
+			$pokemonId = $this->pokemonRepository->getPokemonId($pokemonName);
+
+			if (!$leadsPokemonExists) {
+				$this->leadsPokemonRepository->insert(
+					$year,
+					$month,
+					$formatId,
+					$pokemonId,
+					$leadUsage->raw(),
+					$leadUsage->rawPercent()
+				);
+			}
+
+			if (!$leadsRatedPokemonExists) {
+				$this->leadsRatedPokemonRepository->insert(
+					$year,
+					$month,
+					$formatId,
+					$rating,
+					$pokemonId,
+					$leadUsage->rank(),
+					$leadUsage->usagePercent()
+				);
 			}
 		}
 	}

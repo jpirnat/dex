@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Trendalyzer\Repositories\Usage;
 
 use PDO;
+use PDOException;
 
 class UsageRatedPokemonRepository
 {
@@ -103,6 +104,11 @@ class UsageRatedPokemonRepository
 		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
 		$stmt->bindValue(':rank', $rank, PDO::PARAM_INT);
 		$stmt->bindValue(':usage_percent', $usagePercent, PDO::PARAM_STR);
-		return $stmt->execute();
+		try {
+			return $stmt->execute();
+		} catch (PDOException $e) {
+			// A record for this key already exists.
+			return false;
+		}
 	}
 }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Trendalyzer\Repositories\Leads;
 
 use PDO;
+use PDOException;
 
 class LeadsPokemonRepository
 {
@@ -94,6 +95,11 @@ class LeadsPokemonRepository
 		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
 		$stmt->bindValue(':raw', $raw, PDO::PARAM_INT);
 		$stmt->bindValue(':raw_percent', $rawPercent, PDO::PARAM_STR);
-		return $stmt->execute();
+		try {
+			return $stmt->execute();
+		} catch (PDOException $e) {
+			// A record for this key already exists.
+			return false;
+		}
 	}
 }

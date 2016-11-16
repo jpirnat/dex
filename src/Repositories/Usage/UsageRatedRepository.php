@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Trendalyzer\Repositories\Usage;
 
 use PDO;
+use PDOException;
 
 class UsageRatedRepository
 {
@@ -93,6 +94,11 @@ class UsageRatedRepository
 		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':average_weight_per_team', $averageWeightPerTeam, PDO::PARAM_STR);
-		return $stmt->execute();
+		try {
+			return $stmt->execute();
+		} catch (PDOException $e) {
+			// A record for this key already exists.
+			return false;
+		}
 	}
 }

@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+use Jp\Trendalyzer\Repositories\AbilitiesRepository;
+use Jp\Trendalyzer\Repositories\ItemsRepository;
+use Jp\Trendalyzer\Repositories\MovesRepository;
+use Jp\Trendalyzer\Repositories\NaturesRepository;
+use Jp\Trendalyzer\Repositories\PokemonRepository;
+
 $dice = new \Dice\Dice();
 
 
@@ -23,6 +29,39 @@ $rule = [
 	],
 ];
 $dice->addRule(PDO::class, $rule);
+
+
+// Repositories
+
+// AbilitiesRepository
+$rule = [
+	'shared' => true,
+];
+$dice->addRule(AbilitiesRepository::class, $rule);
+
+// ItemsRepository
+$rule = [
+	'shared' => true,
+];
+$dice->addRule(ItemsRepository::class, $rule);
+
+// MovesRepository
+$rule = [
+	'shared' => true,
+];
+$dice->addRule(MovesRepository::class, $rule);
+
+// NaturesRepository
+$rule = [
+	'shared' => true,
+];
+$dice->addRule(NaturesRepository::class, $rule);
+
+// PokemonRepository
+$rule = [
+	'shared' => true,
+];
+$dice->addRule(PokemonRepository::class, $rule);
 
 
 return $dice;

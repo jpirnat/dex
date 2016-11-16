@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Trendalyzer\Repositories\Moveset;
 
 use PDO;
+use PDOException;
 
 class MovesetRatedAbilitiesRepository
 {
@@ -68,6 +69,11 @@ class MovesetRatedAbilitiesRepository
 		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId, PDO::PARAM_INT);
 		$stmt->bindValue(':percent', $percent, PDO::PARAM_STR);
-		return $stmt->execute();
+		try {
+			return $stmt->execute();
+		} catch (PDOException $e) {
+			// A record for this key already exists.
+			return false;
+		}
 	}
 }

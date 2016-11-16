@@ -382,7 +382,7 @@ create table if not exists `moveset_pokemon`
 `pokemon_id` int unsigned not null,
 
 `raw_count` int unsigned not null,
-`viability_ceiling` int unsigned not null,
+`viability_ceiling` int unsigned null, # nullable
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -678,10 +678,8 @@ foreign key (`counter_id`) references `pokemon` (`id`)
 /*
 TODO:
 
-- enable nulls in columns that don't have full historic data (e.g., viability ceiling)
 - find out difference between `usage_pokemon`.`raw`and `moveset_pokemon`.`raw_count`
-- find out what the other moveset counters numbers mean, and add them to the schema
+- find out what the other moveset counters numbers mean, and properly name them
 - add `metagame_%` tables of metagame analysis?
-- what was the FU metagame in 2015-01 and 2015-02?
 
 */
