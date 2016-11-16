@@ -164,7 +164,7 @@ class MovesetFileImporter
 			\GuzzleHttp\Psr7\readline($stream); // Separator.
 			$line = \GuzzleHttp\Psr7\readline($stream);
 			if ($stream->eof()) {
-				break;
+				return;
 			}
 			$pokemonName = $this->movesetFileExtractor->extractPokemonName($line);
 			$pokemonId = $this->pokemonRepository->getPokemonId($pokemonName);
@@ -237,6 +237,11 @@ class MovesetFileImporter
 						$namePercent->percent()
 					);
 				}
+
+				// If the file randomly ends here, there's nothing else to do.
+				if ($stream->eof()) {
+					return;
+				}
 			}
 
 			// BLOCK 4 - Items.
@@ -267,6 +272,11 @@ class MovesetFileImporter
 						$itemId,
 						$namePercent->percent()
 					);
+				}
+
+				// If the file randomly ends here, there's nothing else to do.
+				if ($stream->eof()) {
+					return;
 				}
 			}
 
@@ -301,6 +311,11 @@ class MovesetFileImporter
 						$spread->percent()
 					);
 				}
+
+				// If the file randomly ends here, there's nothing else to do.
+				if ($stream->eof()) {
+					return;
+				}
 			}
 
 			// BLOCK 6 - Moves.
@@ -332,6 +347,11 @@ class MovesetFileImporter
 						$namePercent->percent()
 					);
 				}
+
+				// If the file randomly ends here, there's nothing else to do.
+				if ($stream->eof()) {
+					return;
+				}
 			}
 
 			// BLOCK 7 - Teammates.
@@ -353,6 +373,11 @@ class MovesetFileImporter
 						$teammateId,
 						$namePercent->percent()
 					);
+				}
+
+				// If the file randomly ends here, there's nothing else to do.
+				if ($stream->eof()) {
+					return;
 				}
 			}
 

@@ -413,7 +413,7 @@ create table if not exists `moveset_rated_pokemon`
 `rating` int unsigned not null,
 `pokemon_id` int unsigned not null,
 
-`average_weight` decimal(16, 13) unsigned not null,
+`average_weight` decimal(18, 15) unsigned not null,
 
 `created_at` timestamp not null
 	default current_timestamp,
@@ -607,6 +607,7 @@ create table if not exists `moveset_rated_teammates`
 `teammate_id` int unsigned not null,
 
 `percent` decimal(6, 3) unsigned not null,
+# `percent` % of teams that have `pokemon_id` also have `teammate_id`.
 
 `created_at` timestamp not null
 	default current_timestamp,

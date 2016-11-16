@@ -87,7 +87,7 @@ class MovesetFileExtractor
 	 */
 	public function extractAverageWeight(string $line) : float
 	{
-		$pattern = '/Avg. weight: ([\d.]+)/';
+		$pattern = '/Avg\. weight: ([\d.e-]+)/';
 
 		try {
 			$matchResult = Regex::match($pattern, $line);
@@ -131,7 +131,7 @@ class MovesetFileExtractor
 	 */
 	public function extractNamePercent(string $line) : NamePercent
 	{
-		$pattern = "/(\w[\w '.-]*?)\s+\+?([\d.]+)%/";
+		$pattern = "/(\w[\w '.-]*?)\s+([+-]?[\d.]+)%/";
 
 		try {
 			$matchResult = Regex::match($pattern, $line);
