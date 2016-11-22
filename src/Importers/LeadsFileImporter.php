@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Trendalyzer\Importers;
 
-use Exception;
 use Jp\Trendalyzer\Importers\Extractors\LeadsFileExtractor;
 use Jp\Trendalyzer\Repositories\PokemonRepository;
 use Jp\Trendalyzer\Repositories\Leads\LeadsPokemonRepository;
