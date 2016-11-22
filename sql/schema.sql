@@ -123,7 +123,7 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `usage`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 
@@ -142,7 +142,7 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `usage_rated`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
@@ -163,7 +163,7 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `usage_pokemon`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `pokemon_id` smallint unsigned not null,
@@ -190,7 +190,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `usage_rated_pokemon`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
@@ -219,7 +219,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `leads`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 
@@ -238,7 +238,7 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `leads_pokemon`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `pokemon_id` smallint unsigned not null,
@@ -263,7 +263,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `leads_rated_pokemon`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
@@ -292,7 +292,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `moveset_pokemon`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `pokemon_id` smallint unsigned not null,
@@ -317,7 +317,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `moveset_rated_pokemon`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
@@ -343,7 +343,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `moveset_rated_abilities`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
@@ -374,7 +374,7 @@ foreign key (`ability_id`) references `abilities` (`id`)
 
 create table if not exists `moveset_rated_items`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
@@ -405,7 +405,7 @@ foreign key (`item_id`) references `items` (`id`)
 
 create table if not exists `moveset_rated_spreads`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
@@ -448,7 +448,7 @@ foreign key (`nature_id`) references `natures` (`id`)
 
 create table if not exists `moveset_rated_moves`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
@@ -479,7 +479,7 @@ foreign key (`move_id`) references `moves` (`id`)
 
 create table if not exists `moveset_rated_teammates`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
@@ -511,7 +511,7 @@ foreign key (`teammate_id`) references `pokemon` (`id`)
 
 create table if not exists `moveset_rated_counters`
 (
-`year` tinyint not null,
+`year` smallint not null,
 `month` tinyint not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
