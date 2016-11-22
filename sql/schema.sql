@@ -38,15 +38,9 @@ drop table if exists `pokemon`;
 
 create table if not exists `pokemon`
 (
-`id` int unsigned not null auto_increment,
+`id` smallint unsigned not null auto_increment,
 
 `name` varchar(20) not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (`id`),
 unique key (`name`)
@@ -55,15 +49,9 @@ unique key (`name`)
 
 create table if not exists `abilities`
 (
-`id` int unsigned not null auto_increment,
+`id` smallint unsigned not null auto_increment,
 
 `name` varchar(20) not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (`id`),
 unique key (`name`)
@@ -72,15 +60,9 @@ unique key (`name`)
 
 create table if not exists `items`
 (
-`id` int unsigned not null auto_increment,
+`id` smallint unsigned not null auto_increment,
 
 `name` varchar(20) not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (`id`),
 unique key (`name`)
@@ -89,15 +71,9 @@ unique key (`name`)
 
 create table if not exists `natures`
 (
-`id` int unsigned not null auto_increment,
+`id` tinyint unsigned not null auto_increment,
 
 `name` varchar(20) not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (`id`),
 unique key (`name`)
@@ -106,15 +82,9 @@ unique key (`name`)
 
 create table if not exists `moves`
 (
-`id` int unsigned not null auto_increment,
+`id` smallint unsigned not null auto_increment,
 
 `name` varchar(30) not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (`id`),
 unique key (`name`)
@@ -123,20 +93,14 @@ unique key (`name`)
 
 create table if not exists `formats`
 (
-`id` int unsigned not null auto_increment,
+`id` tinyint unsigned not null auto_increment,
 
 `name` varchar(30) not null,
-`generation` int unsigned not null,
-`level` int unsigned not null,
-`field_size` int unsigned not null,
-`team_size` int unsigned not null,
-`in_battle_team_size` int unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
+`generation` tinyint unsigned not null,
+`level` tinyint unsigned not null,
+`field_size` tinyint unsigned not null,
+`team_size` tinyint unsigned not null,
+`in_battle_team_size` tinyint unsigned not null,
 
 primary key (`id`),
 unique key (`name`)
@@ -146,13 +110,7 @@ unique key (`name`)
 create table if not exists `smogon_format_names`
 (
 `name` varchar(20) not null,
-`format_id` int unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
+`format_id` tinyint unsigned not null,
 
 primary key (`name`),
 foreign key (`format_id`) references `formats` (`id`)
@@ -165,17 +123,11 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `usage`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
 
-`total_battles` int unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
+`total_battles` mediumint unsigned not null,
 
 primary key (
 	`year`,
@@ -190,18 +142,12 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `usage_rated`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`rating` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`rating` smallint unsigned not null,
 
 `average_weight_per_team` decimal(6, 3) unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (
 	`year`,
@@ -217,21 +163,15 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `usage_pokemon`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`pokemon_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`pokemon_id` smallint unsigned not null,
 
-`raw` int unsigned not null,
+`raw` mediumint unsigned not null,
 `raw_percent` decimal(6, 3) unsigned not null,
-`real` int unsigned not null,
+`real` mediumint unsigned not null,
 `real_percent` decimal(6, 3) unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (
 	`year`,
@@ -250,20 +190,14 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `usage_rated_pokemon`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`rating` int unsigned not null,
-`pokemon_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`rating` smallint unsigned not null,
+`pokemon_id` smallint unsigned not null,
 
-`rank` int unsigned not null,
+`rank` smallint unsigned not null,
 `usage_percent` decimal(8, 5) unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (
 	`year`,
@@ -285,17 +219,11 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `leads`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
 
-`total_leads` int unsigned not null, # `usage`.`total_battles` * 2
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
+`total_leads` mediumint unsigned not null, # `usage`.`total_battles` * 2
 
 primary key (
 	`year`,
@@ -310,19 +238,13 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `leads_pokemon`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`pokemon_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`pokemon_id` smallint unsigned not null,
 
-`raw` int unsigned not null,
+`raw` mediumint unsigned not null,
 `raw_percent` decimal(6, 3) unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (
 	`year`,
@@ -341,20 +263,14 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `leads_rated_pokemon`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`rating` int unsigned not null,
-`pokemon_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`rating` smallint unsigned not null,
+`pokemon_id` smallint unsigned not null,
 
-`rank` int unsigned not null,
+`rank` smallint unsigned not null,
 `usage_percent` decimal(8, 5) unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (
 	`year`,
@@ -376,19 +292,13 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `moveset_pokemon`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`pokemon_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`pokemon_id` smallint unsigned not null,
 
-`raw_count` int unsigned not null,
-`viability_ceiling` int unsigned null, # nullable
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
+`raw_count` mediumint unsigned not null,
+`viability_ceiling` tinyint unsigned null, # nullable
 
 primary key (
 	`year`,
@@ -407,19 +317,13 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `moveset_rated_pokemon`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`rating` int unsigned not null,
-`pokemon_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`rating` smallint unsigned not null,
+`pokemon_id` smallint unsigned not null,
 
 `average_weight` decimal(18, 15) unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (
 	`year`,
@@ -439,20 +343,14 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `moveset_rated_abilities`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`rating` int unsigned not null,
-`pokemon_id` int unsigned not null,
-`ability_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`rating` smallint unsigned not null,
+`pokemon_id` smallint unsigned not null,
+`ability_id` smallint unsigned not null,
 
 `percent` decimal(6, 3) unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (
 	`year`,
@@ -476,20 +374,14 @@ foreign key (`ability_id`) references `abilities` (`id`)
 
 create table if not exists `moveset_rated_items`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`rating` int unsigned not null,
-`pokemon_id` int unsigned not null,
-`item_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`rating` smallint unsigned not null,
+`pokemon_id` smallint unsigned not null,
+`item_id` smallint unsigned not null,
 
 `percent` decimal(6, 3) unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (
 	`year`,
@@ -513,26 +405,20 @@ foreign key (`item_id`) references `items` (`id`)
 
 create table if not exists `moveset_rated_spreads`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`rating` int unsigned not null,
-`pokemon_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`rating` smallint unsigned not null,
+`pokemon_id` smallint unsigned not null,
 
-`nature_id` int unsigned not null,
-`hp` int unsigned not null,
-`atk` int unsigned not null,
-`def` int unsigned not null,
-`spa` int unsigned not null,
-`spd` int unsigned not null,
-`spe` int unsigned not null,
+`nature_id` tinyint unsigned not null,
+`hp` tinyint unsigned not null,
+`atk` tinyint unsigned not null,
+`def` tinyint unsigned not null,
+`spa` tinyint unsigned not null,
+`spd` tinyint unsigned not null,
+`spe` tinyint unsigned not null,
 `percent` decimal(6, 3) unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (
 	`year`,
@@ -562,20 +448,14 @@ foreign key (`nature_id`) references `natures` (`id`)
 
 create table if not exists `moveset_rated_moves`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`rating` int unsigned not null,
-`pokemon_id` int unsigned not null,
-`move_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`rating` smallint unsigned not null,
+`pokemon_id` smallint unsigned not null,
+`move_id` smallint unsigned not null,
 
 `percent` decimal(6, 3) unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (
 	`year`,
@@ -599,21 +479,15 @@ foreign key (`move_id`) references `moves` (`id`)
 
 create table if not exists `moveset_rated_teammates`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`rating` int unsigned not null,
-`pokemon_id` int unsigned not null,
-`teammate_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`rating` smallint unsigned not null,
+`pokemon_id` smallint unsigned not null,
+`teammate_id` smallint unsigned not null,
 
 `percent` decimal(6, 3) unsigned not null,
 # `percent` % of teams that have `pokemon_id` also have `teammate_id`.
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (
 	`year`,
@@ -637,24 +511,18 @@ foreign key (`teammate_id`) references `pokemon` (`id`)
 
 create table if not exists `moveset_rated_counters`
 (
-`year` int unsigned not null,
-`month` int unsigned not null,
-`format_id` int unsigned not null,
-`rating` int unsigned not null,
-`pokemon_id` int unsigned not null,
-`counter_id` int unsigned not null,
+`year` tinyint not null,
+`month` tinyint not null,
+`format_id` tinyint unsigned not null,
+`rating` smallint unsigned not null,
+`pokemon_id` smallint unsigned not null,
+`counter_id` smallint unsigned not null,
 
 `number1` decimal(6, 3) unsigned not null,
 `number2` decimal(5, 2) unsigned not null,
 `number3` decimal(5, 2) unsigned not null,
 `percent_knocked_out` decimal(4, 1) unsigned not null,
 `percent_switched_out` decimal(4, 1) unsigned not null,
-
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
 
 primary key (
 	`year`,
