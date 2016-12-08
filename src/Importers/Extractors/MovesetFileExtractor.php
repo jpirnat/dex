@@ -43,7 +43,7 @@ class MovesetFileExtractor
 	 */
 	public function extractPokemonName(string $line) : string
 	{
-		$pattern = "/\|\s*(\w[\w '.-]*?)\s*\|/";
+		$pattern = "/\|\s*(\w[\w '.%:-]*?)\s*\|/";
 
 		try {
 			$matchResult = Regex::match($pattern, $line);
@@ -131,7 +131,7 @@ class MovesetFileExtractor
 	 */
 	public function extractNamePercent(string $line) : NamePercent
 	{
-		$pattern = "/(\w[\w '.-]*?)\s+([+-]?[\d.]+)%/";
+		$pattern = "/(\w[\w '.%:-]*?)\s+([+-]?[\d.]+)%/";
 
 		try {
 			$matchResult = Regex::match($pattern, $line);
@@ -199,10 +199,10 @@ class MovesetFileExtractor
 	public function extractCounter(string $line1, string $line2) : Counter
 	{
 		$pattern1 = '/'
-			. "(\w[\w '.-]*?) " // Pokémon Name
-			. '([\d.]+) '       // number1
-			. '\(([\d.]+)'      // number2
-			. '±([\d.]+)\)/'    // number3
+			. "(\w[\w '.%:-]*?) " // Pokémon Name
+			. '([\d.]+) '         // number1
+			. '\(([\d.]+)'        // number2
+			. '±([\d.]+)\)/'      // number3
 		;
 		$pattern2 = '/'
 			. '([\d.]+)% KOed \/ '      // Percent Knocked Out

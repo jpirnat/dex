@@ -86,13 +86,13 @@ class UsageFileExtractor
 	public function extractUsage(string $line) : Usage
 	{
 		$pattern = '/\s*\|'
-			. '\s*(\d+)\s*\|'           // Rank
-			. "\s*(\w[\w '.-]*?)\s*\|"  // Pokémon Name
-			. '\s*([\d.]+)%\s*\|'       // Usage Percent
-			. '\s*(\d+)\s*\|'           // Raw
-			. '\s*([\d.]+)%\s*\|'       // Raw Percent
-			. '\s*([\d.]+)\s*\|'        // Real
-			. '\s*([\d.]+)%\s*\|'       // Real Percent
+			. '\s*(\d+)\s*\|'            // Rank
+			. "\s*(\w[\w '.%:-]*?)\s*\|" // Pokémon Name
+			. '\s*([\d.]+)%\s*\|'        // Usage Percent
+			. '\s*(\d+)\s*\|'            // Raw
+			. '\s*([\d.]+)%\s*\|'        // Raw Percent
+			. '\s*([\d.]+)\s*\|'         // Real
+			. '\s*([\d.]+)%\s*\|'        // Real Percent
 			. '\s*/'
 		;
 
