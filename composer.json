@@ -1,5 +1,5 @@
 {
-    "name": "jpirnat/trendalyzer",
+    "name": "jpirnat/dex",
     "description": "Pokémon Metagame Trends Analyzer",
     "type": "project",
     "authors": [
@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Jp\\Trendalyzer\\": "src/"
+            "Jp\\Dex\\": "src/"
         }
     },
     "require": {
