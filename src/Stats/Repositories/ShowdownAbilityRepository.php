@@ -6,7 +6,7 @@ namespace Jp\Dex\Stats\Repositories;
 use Exception;
 use PDO;
 
-class ShowdownAbilitiesRepository
+class ShowdownAbilityRepository
 {
 	/** @var int[] $abilitiesToImport */
 	protected $abilitiesToImport;

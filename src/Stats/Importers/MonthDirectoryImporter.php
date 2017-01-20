@@ -6,7 +6,7 @@ namespace Jp\Dex\Stats\Importers;
 use GuzzleHttp\Client;
 use Jp\Dex\Stats\Importers\Extractors\FormatRatingExtractor;
 use Jp\Dex\Stats\Importers\Extractors\YearMonthExtractor;
-use Jp\Dex\Stats\Repositories\ShowdownFormatsRepository;
+use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
 use Symfony\Component\DomCrawler\Crawler;
 
 class MonthDirectoryImporter
@@ -26,8 +26,8 @@ class MonthDirectoryImporter
 	/** @var FormatRatingExtractor $formatRatingExtractor */
 	protected $formatRatingExtractor;
 
-	/** @var ShowdownFormatsRepository $showdownFormatsRepository */
-	protected $showdownFormatsRepository;
+	/** @var ShowdownFormatRepository $showdownFormatRepository */
+	protected $showdownFormatRepository;
 
 	/**
 	 * Constructor.
@@ -37,7 +37,7 @@ class MonthDirectoryImporter
 	 * @param MovesetDirectoryImporter $movesetDirectoryImporter
 	 * @param YearMonthExtractor $yearMonthExtractor
 	 * @param FormatRatingExtractor $formatRatingExtractor
-	 * @param ShowdownFormatsRepository $showdownFormatsRepository
+	 * @param ShowdownFormatRepository $showdownFormatRepository
 	 */
 	public function __construct(
 		UsageFileImporter $usageFileImporter,
@@ -45,14 +45,14 @@ class MonthDirectoryImporter
 		MovesetDirectoryImporter $movesetDirectoryImporter,
 		YearMonthExtractor $yearMonthExtractor,
 		FormatRatingExtractor $formatRatingExtractor,
-		ShowdownFormatsRepository $showdownFormatsRepository
+		ShowdownFormatRepository $showdownFormatRepository
 	) {
 		$this->usageFileImporter = $usageFileImporter;
 		$this->leadsDirectoryImporter = $leadsDirectoryImporter;
 		$this->movesetDirectoryImporter = $movesetDirectoryImporter;
 		$this->yearMonthExtractor = $yearMonthExtractor;
 		$this->formatRatingExtractor = $formatRatingExtractor;
-		$this->showdownFormatsRepository = $showdownFormatsRepository;
+		$this->showdownFormatRepository = $showdownFormatRepository;
 	}
 
 	/**
@@ -92,12 +92,12 @@ class MonthDirectoryImporter
 			$rating = $formatRating->rating();
 
 			// If the format is known, import the file.
-			if ($this->showdownFormatsRepository->isImported($showdownFormatName)) {
+			if ($this->showdownFormatRepository->isImported($showdownFormatName)) {
 				// Create a stream to read the usage file.
 				$stream = $client->request('GET', $link->getUri())->getBody();
 
 				// Get the format id from the Pokémon Showdown format name.
-				$formatId = $this->showdownFormatsRepository->getFormatId($showdownFormatName);
+				$formatId = $this->showdownFormatRepository->getFormatId($showdownFormatName);
 
 				// Import the usage file.
 				$this->usageFileImporter->import(

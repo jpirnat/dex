@@ -5,8 +5,8 @@ namespace Jp\Dex\Stats\Importers;
 
 use Exception;
 use Jp\Dex\Stats\Importers\Extractors\MovesetFileExtractor;
-use Jp\Dex\Stats\Repositories\ShowdownAbilitiesRepository;
-use Jp\Dex\Stats\Repositories\ShowdownItemsRepository;
+use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
+use Jp\Dex\Stats\Repositories\ShowdownItemRepository;
 use Jp\Dex\Stats\Repositories\Moveset\MovesetPokemonRepository;
 use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedAbilitiesRepository;
 use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedCountersRepository;
@@ -15,8 +15,8 @@ use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedMovesRepository;
 use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedPokemonRepository;
 use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedSpreadsRepository;
 use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedTeammatesRepository;
-use Jp\Dex\Stats\Repositories\ShowdownMovesRepository;
-use Jp\Dex\Stats\Repositories\ShowdownNaturesRepository;
+use Jp\Dex\Stats\Repositories\ShowdownMoveRepository;
+use Jp\Dex\Stats\Repositories\ShowdownNatureRepository;
 use Jp\Dex\Stats\Repositories\ShowdownPokemonRepository;
 use Psr\Http\Message\StreamInterface;
 
@@ -25,17 +25,17 @@ class MovesetFileImporter
 	/** @var ShowdownPokemonRepository $showdownPokemonRepository */
 	protected $showdownPokemonRepository;
 
-	/** @var ShowdownAbilitiesRepository $showdownAbilitiesRepository */
-	protected $showdownAbilitiesRepository;
+	/** @var ShowdownAbilityRepository $showdownAbilityRepository */
+	protected $showdownAbilityRepository;
 
-	/** @var ShowdownItemsRepository $showdownItemsRepository */
-	protected $showdownItemsRepository;
+	/** @var ShowdownItemRepository $showdownItemRepository */
+	protected $showdownItemRepository;
 
-	/** @var ShowdownNaturesRepository $showdownNaturesRepository */
-	protected $showdownNaturesRepository;
+	/** @var ShowdownNatureRepository $showdownNatureRepository */
+	protected $showdownNatureRepository;
 
-	/** @var ShowdownMovesRepository $showdownMovesRepository */
-	protected $showdownMovesRepository;
+	/** @var ShowdownMoveRepository $showdownMoveRepository */
+	protected $showdownMoveRepository;
 
 	/** @var MovesetPokemonRepository $movesetPokemonRepository */
 	protected $movesetPokemonRepository;
@@ -68,10 +68,10 @@ class MovesetFileImporter
 	 * Constructor.
 	 *
 	 * @param ShowdownPokemonRepository $showdownPokemonRepository
-	 * @param ShowdownAbilitiesRepository $showdownAbilitiesRepository
-	 * @param ShowdownItemsRepository $showdownItemsRepository
-	 * @param ShowdownNaturesRepository $showdownNaturesRepository
-	 * @param ShowdownMovesRepository $showdownMovesRepository
+	 * @param ShowdownAbilityRepository $showdownAbilityRepository
+	 * @param ShowdownItemRepository $showdownItemRepository
+	 * @param ShowdownNatureRepository $showdownNatureRepository
+	 * @param ShowdownMoveRepository $showdownMoveRepository
 	 * @param MovesetPokemonRepository $movesetPokemonRepository
 	 * @param MovesetRatedPokemonRepository $movesetRatedPokemonRepository
 	 * @param MovesetRatedAbilitiesRepository $movesetRatedAbilitiesRepository
@@ -84,10 +84,10 @@ class MovesetFileImporter
 	 */
 	public function __construct(
 		ShowdownPokemonRepository $showdownPokemonRepository,
-		ShowdownAbilitiesRepository $showdownAbilitiesRepository,
-		ShowdownItemsRepository $showdownItemsRepository,
-		ShowdownNaturesRepository $showdownNaturesRepository,
-		ShowdownMovesRepository $showdownMovesRepository,
+		ShowdownAbilityRepository $showdownAbilityRepository,
+		ShowdownItemRepository $showdownItemRepository,
+		ShowdownNatureRepository $showdownNatureRepository,
+		ShowdownMoveRepository $showdownMoveRepository,
 		MovesetPokemonRepository $movesetPokemonRepository,
 		MovesetRatedPokemonRepository $movesetRatedPokemonRepository,
 		MovesetRatedAbilitiesRepository $movesetRatedAbilitiesRepository,
@@ -99,10 +99,10 @@ class MovesetFileImporter
 		MovesetFileExtractor $movesetFileExtractor
 	) {
 		$this->showdownPokemonRepository = $showdownPokemonRepository;
-		$this->showdownAbilitiesRepository = $showdownAbilitiesRepository;
-		$this->showdownItemsRepository = $showdownItemsRepository;
-		$this->showdownNaturesRepository = $showdownNaturesRepository;
-		$this->showdownMovesRepository = $showdownMovesRepository;
+		$this->showdownAbilityRepository = $showdownAbilityRepository;
+		$this->showdownItemRepository = $showdownItemRepository;
+		$this->showdownNatureRepository = $showdownNatureRepository;
+		$this->showdownMoveRepository = $showdownMoveRepository;
 		$this->movesetPokemonRepository = $movesetPokemonRepository;
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
 		$this->movesetRatedAbilitiesRepository = $movesetRatedAbilitiesRepository;
@@ -224,7 +224,7 @@ class MovesetFileImporter
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 
 				$showdownAbilityName = $namePercent->showdownName();
-				$abilityId = $this->showdownAbilitiesRepository->getAbilityId($showdownAbilityName);
+				$abilityId = $this->showdownAbilityRepository->getAbilityId($showdownAbilityName);
 
 				if (!$movesetRatedPokemonExists) {
 					$this->movesetRatedAbilitiesRepository->insert(
@@ -260,7 +260,7 @@ class MovesetFileImporter
 				}
 
 				$showdownItemName = $namePercent->showdownName();
-				$itemId = $this->showdownItemsRepository->getItemId($showdownItemName);
+				$itemId = $this->showdownItemRepository->getItemId($showdownItemName);
 
 				if (!$movesetRatedPokemonExists) {
 					$this->movesetRatedItemsRepository->insert(
@@ -292,7 +292,7 @@ class MovesetFileImporter
 				$spread = $this->movesetFileExtractor->extractSpread($line);
 
 				$showdownNatureName = $spread->showdownNatureName();
-				$natureId = $this->showdownNaturesRepository->getNatureId($showdownNatureName);
+				$natureId = $this->showdownNatureRepository->getNatureId($showdownNatureName);
 
 				if (!$movesetRatedPokemonExists) {
 					$this->movesetRatedSpreadsRepository->insert(
@@ -334,7 +334,7 @@ class MovesetFileImporter
 				}
 
 				$showdownMoveName = $namePercent->showdownName();
-				$moveId = $this->showdownMovesRepository->getMoveId($showdownMoveName);
+				$moveId = $this->showdownMoveRepository->getMoveId($showdownMoveName);
 
 				if (!$movesetRatedPokemonExists) {
 					$this->movesetRatedMovesRepository->insert(

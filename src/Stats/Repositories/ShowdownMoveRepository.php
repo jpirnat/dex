@@ -6,7 +6,7 @@ namespace Jp\Dex\Stats\Repositories;
 use Exception;
 use PDO;
 
-class ShowdownMovesRepository
+class ShowdownMoveRepository
 {
 	/** @var int[] $movesToImport */
 	protected $movesToImport;

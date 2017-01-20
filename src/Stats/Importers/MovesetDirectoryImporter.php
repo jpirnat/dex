@@ -6,7 +6,7 @@ namespace Jp\Dex\Stats\Importers;
 use GuzzleHttp\Client;
 use Jp\Dex\Stats\Importers\Extractors\FormatRatingExtractor;
 use Jp\Dex\Stats\Importers\Extractors\YearMonthExtractor;
-use Jp\Dex\Stats\Repositories\ShowdownFormatsRepository;
+use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
 use Symfony\Component\DomCrawler\Crawler;
 
 class MovesetDirectoryImporter
@@ -20,8 +20,8 @@ class MovesetDirectoryImporter
 	/** @var FormatRatingExtractor $formatRatingExtractor */
 	protected $formatRatingExtractor;
 
-	/** @var ShowdownFormatsRepository $showdownFormatsRepository */
-	protected $showdownFormatsRepository;
+	/** @var ShowdownFormatRepository $showdownFormatRepository */
+	protected $showdownFormatRepository;
 
 	/**
 	 * Constructor.
@@ -29,18 +29,18 @@ class MovesetDirectoryImporter
 	 * @param MovesetFileImporter $movesetFileImporter
 	 * @param YearMonthExtractor $yearMonthExtractor
 	 * @param FormatRatingExtractor $formatRatingExtractor
-	 * @param ShowdownFormatsRepository $showdownFormatsRepository
+	 * @param ShowdownFormatRepository $showdownFormatRepository
 	 */
 	public function __construct(
 		MovesetFileImporter $movesetFileImporter,
 		YearMonthExtractor $yearMonthExtractor,
 		FormatRatingExtractor $formatRatingExtractor,
-		ShowdownFormatsRepository $showdownFormatsRepository
+		ShowdownFormatRepository $showdownFormatRepository
 	) {
 		$this->movesetFileImporter = $movesetFileImporter;
 		$this->yearMonthExtractor = $yearMonthExtractor;
 		$this->formatRatingExtractor = $formatRatingExtractor;
-		$this->showdownFormatsRepository = $showdownFormatsRepository;
+		$this->showdownFormatRepository = $showdownFormatRepository;
 	}
 
 	/**
@@ -79,12 +79,12 @@ class MovesetDirectoryImporter
 			$rating = $formatRating->rating();
 
 			// If the format is known, import the file.
-			if ($this->showdownFormatsRepository->isImported($showdownFormatName)) {
+			if ($this->showdownFormatRepository->isImported($showdownFormatName)) {
 				// Create a stream to read the moveset file.
 				$stream = $client->request('GET', $link->getUri())->getBody();
 
 				// Get the format id from the Pokémon Showdown format name.
-				$formatId = $this->showdownFormatsRepository->getFormatId($showdownFormatName);
+				$formatId = $this->showdownFormatRepository->getFormatId($showdownFormatName);
 
 				// Import the moveset file.
 				$this->movesetFileImporter->import(

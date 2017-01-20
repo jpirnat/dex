@@ -6,7 +6,7 @@ namespace Jp\Dex\Stats\Repositories;
 use Exception;
 use PDO;
 
-class ShowdownFormatsRepository
+class ShowdownFormatRepository
 {
 	/** @var int[] $formatsToImport */
 	protected $formatsToImport;

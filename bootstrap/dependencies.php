@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-use Jp\Trendalyzer\Repositories\AbilitiesRepository;
-use Jp\Trendalyzer\Repositories\ItemsRepository;
-use Jp\Trendalyzer\Repositories\MovesRepository;
-use Jp\Trendalyzer\Repositories\NaturesRepository;
-use Jp\Trendalyzer\Repositories\PokemonRepository;
+use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
+use Jp\Dex\Stats\Repositories\ShowdownItemRepository;
+use Jp\Dex\Stats\Repositories\ShowdownMoveRepository;
+use Jp\Dex\Stats\Repositories\ShowdownNatureRepository;
+use Jp\Dex\Stats\Repositories\ShowdownPokemonRepository;
 
 $dice = new \Dice\Dice();
 
@@ -33,35 +33,35 @@ $dice->addRule(PDO::class, $rule);
 
 // Repositories
 
-// AbilitiesRepository
+// ShowdownAbilityRepository
 $rule = [
 	'shared' => true,
 ];
-$dice->addRule(AbilitiesRepository::class, $rule);
+$dice->addRule(ShowdownAbilityRepository::class, $rule);
 
-// ItemsRepository
+// ShowdownItemRepository
 $rule = [
 	'shared' => true,
 ];
-$dice->addRule(ItemsRepository::class, $rule);
+$dice->addRule(ShowdownItemRepository::class, $rule);
 
-// MovesRepository
+// ShowdownMoveRepository
 $rule = [
 	'shared' => true,
 ];
-$dice->addRule(MovesRepository::class, $rule);
+$dice->addRule(ShowdownMoveRepository::class, $rule);
 
-// NaturesRepository
+// ShowdownNatureRepository
 $rule = [
 	'shared' => true,
 ];
-$dice->addRule(NaturesRepository::class, $rule);
+$dice->addRule(ShowdownNatureRepository::class, $rule);
 
-// PokemonRepository
+// ShowdownPokemonRepository
 $rule = [
 	'shared' => true,
 ];
-$dice->addRule(PokemonRepository::class, $rule);
+$dice->addRule(ShowdownPokemonRepository::class, $rule);
 
 
 return $dice;
