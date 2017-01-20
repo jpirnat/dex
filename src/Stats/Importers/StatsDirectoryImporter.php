@@ -29,7 +29,7 @@ class StatsDirectoryImporter
 	 *
 	 * @return void
 	 */
-	public function import(string $url)
+	public function import(string $url) : void
 	{
 		// Create the HTTP client.
 		$client = new Client([

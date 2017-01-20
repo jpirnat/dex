@@ -67,7 +67,7 @@ class LeadsFileImporter
 		int $month,
 		int $formatId,
 		int $rating
-	) {
+	) : void {
 		// If the file is empty, there's nothing to import.
 		if ($stream->getSize() === 0) {
 			return;
