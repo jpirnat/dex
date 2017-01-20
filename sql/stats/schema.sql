@@ -1,11 +1,10 @@
-create schema if not exists `trendalyzer`
+create schema if not exists `stats`
 	charset utf8mb4
 	collate utf8mb4_unicode_520_ci
 ;
 
 
-use `trendalyzer`;
-
+use `stats`;
 
 /*
 # Dropping tables in backwards chronological order.
@@ -25,70 +24,21 @@ drop table if exists `usage_rated_pokemon`;
 drop table if exists `usage_pokemon`;
 drop table if exists `usage_rated`;
 drop table if exists `usage`;
-drop table if exists `smogon_format_names`;
+drop table if exists `showdown_moves_to_ignore`;
+drop table if exists `showdown_moves_to_import`;
+drop table if exists `showdown_natures_to_ignore`;
+drop table if exists `showdown_natures_to_import`;
+drop table if exists `showdown_items_to_ignore`;
+drop table if exists `showdown_items_to_import`;
+drop table if exists `showdown_abilities_to_ignore`;
+drop table if exists `showdown_abilities_to_import`;
+drop table if exists `showdown_pokemon_to_ignore`;
+drop table if exists `showdown_pokemon_to_import`;
+drop table if exists `showdown_formats_to_ignore`;
+drop table if exists `showdown_formats_to_import`;
 drop table if exists `formats`;
-drop table if exists `moves`;
-drop table if exists `natures`;
-drop table if exists `items`;
-drop table if exists `abilities`;
-drop table if exists `pokemon`;
 
 */
-
-
-create table if not exists `pokemon`
-(
-`id` smallint unsigned not null auto_increment,
-
-`name` varchar(20) not null,
-
-primary key (`id`),
-unique key (`name`)
-) engine = InnoDB;
-
-
-create table if not exists `abilities`
-(
-`id` smallint unsigned not null auto_increment,
-
-`name` varchar(20) not null,
-
-primary key (`id`),
-unique key (`name`)
-) engine = InnoDB;
-
-
-create table if not exists `items`
-(
-`id` smallint unsigned not null auto_increment,
-
-`name` varchar(20) not null,
-
-primary key (`id`),
-unique key (`name`)
-) engine = InnoDB;
-
-
-create table if not exists `natures`
-(
-`id` tinyint unsigned not null auto_increment,
-
-`name` varchar(20) not null,
-
-primary key (`id`),
-unique key (`name`)
-) engine = InnoDB;
-
-
-create table if not exists `moves`
-(
-`id` smallint unsigned not null auto_increment,
-
-`name` varchar(30) not null,
-
-primary key (`id`),
-unique key (`name`)
-) engine = InnoDB;
 
 
 create table if not exists `formats`
@@ -107,9 +57,10 @@ unique key (`name`)
 ) engine = InnoDB;
 
 
-create table if not exists `smogon_format_names`
+create table if not exists `showdown_formats_to_import`
 (
-`name` varchar(20) not null,
+`name` varchar(50) not null,
+
 `format_id` tinyint unsigned not null,
 
 primary key (`name`),
@@ -117,6 +68,150 @@ foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
+
+
+create table if not exists `showdown_formats_to_ignore`
+(
+`name` varchar(50) not null,
+
+`format_id` tinyint unsigned null,
+
+primary key (`name`),
+foreign key (`format_id`) references `formats` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_pokemon_to_import`
+(
+`name` varchar(50) not null
+
+`pokemon_id` smallint unsigned not null,
+
+primary key (`name`),
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_pokemon_to_ignore`
+(
+`name` varchar(50) not null
+
+`pokemon_id` smallint unsigned null,
+
+primary key (`name`),
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_abilities_to_import`
+(
+`name` varchar(50) not null
+
+`ability_id` smallint unsigned not null,
+
+primary key (`name`),
+foreign key (`ability_id`) references `dex`.`abilities` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_abilities_to_ignore`
+(
+`name` varchar(50) not null
+
+`ability_id` smallint unsigned null,
+
+primary key (`name`),
+foreign key (`ability_id`) references `dex`.`abilities` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_items_to_import`
+(
+`name` varchar(50) not null
+
+`item_id` smallint unsigned not null,
+
+primary key (`name`),
+foreign key (`item_id`) references `dex`.`items` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_items_to_ignore`
+(
+`name` varchar(50) not null
+
+`item_id` smallint unsigned null,
+
+primary key (`name`),
+foreign key (`item_id`) references `dex`.`items` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_natures_to_import`
+(
+`name` varchar(50) not null
+
+`nature_id` tinyint unsigned not null,
+
+primary key (`name`),
+foreign key (`nature_id`) references `dex`.`natures` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_natures_to_ignore`
+(
+`name` varchar(50) not null
+
+`nature_id` tinyint unsigned null,
+
+primary key (`name`),
+foreign key (`nature_id`) references `dex`.`natures` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_moves_to_import`
+(
+`name` varchar(50) not null
+
+`move_id` smallint unsigned not null,
+
+primary key (`name`),
+foreign key (`move_id`) references `dex`.`moves` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_moves_to_ignore`
+(
+`name` varchar(50) not null
+
+`move_id` smallint unsigned null,
+
+primary key (`name`),
+foreign key (`move_id`) references `dex`.`moves` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
 
 
 /* /stats/year-month/format-rating.txt */
@@ -182,7 +277,7 @@ primary key (
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -209,10 +304,11 @@ primary key (
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
+
 
 
 /* /stats/year-month/leads/format-rating.txt */
@@ -255,7 +351,7 @@ primary key (
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -282,10 +378,11 @@ primary key (
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
+
 
 
 /* /stats/year-month/moveset/format-rating.txt */
@@ -309,7 +406,7 @@ primary key (
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -335,7 +432,7 @@ primary key (
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -363,10 +460,10 @@ primary key (
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`ability_id`) references `abilities` (`id`)
+foreign key (`ability_id`) references `dex`.`abilities` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -394,10 +491,10 @@ primary key (
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`item_id`) references `items` (`id`)
+foreign key (`item_id`) references `dex`.`items` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -437,10 +534,10 @@ primary key (
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`nature_id`) references `natures` (`id`)
+foreign key (`nature_id`) references `dex`.`natures` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -468,10 +565,10 @@ primary key (
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`move_id`) references `moves` (`id`)
+foreign key (`move_id`) references `dex`.`moves` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -500,10 +597,10 @@ primary key (
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`teammate_id`) references `pokemon` (`id`)
+foreign key (`teammate_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -535,10 +632,10 @@ primary key (
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+foreign key (`pokemon_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`counter_id`) references `pokemon` (`id`)
+foreign key (`counter_id`) references `dex`.`pokemon` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -547,7 +644,7 @@ foreign key (`counter_id`) references `pokemon` (`id`)
 /*
 TODO:
 
-- find out difference between `usage_pokemon`.`raw`and `moveset_pokemon`.`raw_count`
+- find out difference between `usage_pokemon`.`raw` and `moveset_pokemon`.`raw_count`
 - find out what the other moveset counters numbers mean, and properly name them
 - add `metagame_%` tables of metagame analysis?
 
