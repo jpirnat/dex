@@ -82,6 +82,18 @@ class ShowdownAbilityRepository
 	}
 
 	/**
+	 * Add a Pokémon Showdown ability name to the list of unknown abilities.
+	 *
+	 * @param string $showdownAbilityName
+	 *
+	 * @return void
+	 */
+	public function addUnknown(string $showdownAbilityName) : void
+	{
+		$this->unknownAbilities[$showdownAbilityName] = $showdownAbilityName;
+	}
+
+	/**
 	 * Get the ability id of a Pokémon Showdown ability name.
 	 *
 	 * @param string $showdownAbilityName

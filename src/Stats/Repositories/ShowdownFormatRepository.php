@@ -90,7 +90,7 @@ class ShowdownFormatRepository
 	 */
 	public function addUnknown(string $showdownFormatName) : void
 	{
-		$this->unknownFormats[$showdownFormatName] = $$showdownFormatName;
+		$this->unknownFormats[$showdownFormatName] = $showdownFormatName;
 	}
 
 	/**

@@ -82,6 +82,18 @@ class ShowdownPokemonRepository
 	}
 
 	/**
+	 * Add a Pokémon Showdown Pokémon name to the list of unknown Pokémon.
+	 *
+	 * @param string $showdownPokemonName
+	 *
+	 * @return void
+	 */
+	public function addUnknown(string $showdownPokemonName) : void
+	{
+		$this->unknownPokemon[$showdownPokemonName] = $showdownPokemonName;
+	}
+
+	/**
 	 * Get the Pokémon id of a Pokémon Showdown Pokemon name.
 	 *
 	 * @param string $showdownPokemonName

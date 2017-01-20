@@ -82,6 +82,18 @@ class ShowdownNatureRepository
 	}
 
 	/**
+	 * Add a Pokémon Showdown nature name to the list of unknown natures.
+	 *
+	 * @param string $showdownNatureName
+	 *
+	 * @return void
+	 */
+	public function addUnknown(string $showdownNatureName) : void
+	{
+		$this->unknownNatures[$showdownNatureName] = $showdownNatureName;
+	}
+
+	/**
 	 * Get the nature id of a Pokémon Showdown nature name.
 	 *
 	 * @param string $showdownNatureName

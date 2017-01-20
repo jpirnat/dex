@@ -82,6 +82,18 @@ class ShowdownMoveRepository
 	}
 
 	/**
+	 * Add a Pokémon Showdown move name to the list of unknown moves.
+	 *
+	 * @param string $showdownMoveName
+	 *
+	 * @return void
+	 */
+	public function addUnknown(string $showdownMoveName) : void
+	{
+		$this->unknownMoves[$showdownMoveName] = $showdownMoveName;
+	}
+
+	/**
 	 * Get the move id of a Pokémon Showdown move name.
 	 *
 	 * @param string $showdownMoveName
