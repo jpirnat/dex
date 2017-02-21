@@ -27,7 +27,7 @@ foreign key (`form_id`) references `forms` (`id`)
 	on update cascade,
 foreign key (`color_id`) references `colors` (`id`)
 	on delete restrict
-	on update cascade,
+	on update cascade
 ) engine = InnoDB;
 
 

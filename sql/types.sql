@@ -3,37 +3,42 @@ create table if not exists `types`
 `id` tinyint unsigned not null,
 
 `identifier` varchar(8) not null,
+`category_id` tinyint unsigned null, # nullable
+`hidden_power_index` tinyint unsigned null, # nullable
 
 primary key (`id`),
-unique key (`identifier`)
+unique key (`identifier`),
+unique key (`hidden_power_index`)
 ) engine = InnoDB;
 
 
 insert into `types` (
 	`id`,
-	`identifier`
+	`identifier`,
+	`category_id`,
+	`hidden_power_index`
 ) values
-(1, "normal"),
-(2, "fighting"),
-(3, "flying"),
-(4, "poison"),
-(5, "ground"),
-(6, "rock"),
-(7, "bug"),
-(8, "ghost"),
-(9, "steel"),
-(10, "fire"),
-(11, "water"),
-(12, "grass"),
-(13, "electric"),
-(14, "psychic"),
-(15, "ice"),
-(16, "dragon"),
-(17, "dark"),
-(18, "fairy"),
-(101, "bird")
-(102, "unknown")
-(103, "shadow")
+(1, "normal", 1, null),
+(2, "fighting", 1, 0),
+(3, "flying", 1, 1),
+(4, "poison", 1, 2),
+(5, "ground", 1, 3),
+(6, "rock", 1, 4),
+(7, "bug", 1, 5),
+(8, "ghost", 1, 6),
+(9, "steel", 1, 7),
+(10, "fire", 2, 8),
+(11, "water", 2, 9),
+(12, "grass", 2, 10),
+(13, "electric", 2, 11),
+(14, "psychic", 2, 12),
+(15, "ice", 2, 13),
+(16, "dragon", 2, 14),
+(17, "dark", 2, 15),
+(18, "fairy", null, null),
+(101, "bird", 1, null),
+(102, "unknown", null, null),
+(103, "shadow", null, null)
 ;
 
 

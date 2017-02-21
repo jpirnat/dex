@@ -1,4 +1,4 @@
-create table if not exists `versions`
+create table if not exists `catch_rates`
 (
 `version_group_id` tinyint unsigned not null,
 `species_id` smallint unsigned not null,

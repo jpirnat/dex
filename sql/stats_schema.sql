@@ -45,7 +45,7 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `showdown_pokemon_to_import`
 (
-`name` varchar(50) not null
+`name` varchar(50) not null,
 
 `pokemon_id` smallint unsigned not null,
 
@@ -58,7 +58,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `showdown_pokemon_to_ignore`
 (
-`name` varchar(50) not null
+`name` varchar(50) not null,
 
 `pokemon_id` smallint unsigned null,
 
@@ -71,7 +71,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `showdown_abilities_to_import`
 (
-`name` varchar(50) not null
+`name` varchar(50) not null,
 
 `ability_id` smallint unsigned not null,
 
@@ -84,7 +84,7 @@ foreign key (`ability_id`) references `abilities` (`id`)
 
 create table if not exists `showdown_abilities_to_ignore`
 (
-`name` varchar(50) not null
+`name` varchar(50) not null,
 
 `ability_id` smallint unsigned null,
 
@@ -97,7 +97,7 @@ foreign key (`ability_id`) references `abilities` (`id`)
 
 create table if not exists `showdown_items_to_import`
 (
-`name` varchar(50) not null
+`name` varchar(50) not null,
 
 `item_id` smallint unsigned not null,
 
@@ -110,7 +110,7 @@ foreign key (`item_id`) references `items` (`id`)
 
 create table if not exists `showdown_items_to_ignore`
 (
-`name` varchar(50) not null
+`name` varchar(50) not null,
 
 `item_id` smallint unsigned null,
 
@@ -123,7 +123,7 @@ foreign key (`item_id`) references `items` (`id`)
 
 create table if not exists `showdown_natures_to_import`
 (
-`name` varchar(50) not null
+`name` varchar(50) not null,
 
 `nature_id` tinyint unsigned not null,
 
@@ -136,7 +136,7 @@ foreign key (`nature_id`) references `natures` (`id`)
 
 create table if not exists `showdown_natures_to_ignore`
 (
-`name` varchar(50) not null
+`name` varchar(50) not null,
 
 `nature_id` tinyint unsigned null,
 
@@ -149,7 +149,7 @@ foreign key (`nature_id`) references `natures` (`id`)
 
 create table if not exists `showdown_moves_to_import`
 (
-`name` varchar(50) not null
+`name` varchar(50) not null,
 
 `move_id` smallint unsigned not null,
 
@@ -162,7 +162,7 @@ foreign key (`move_id`) references `moves` (`id`)
 
 create table if not exists `showdown_moves_to_ignore`
 (
-`name` varchar(50) not null
+`name` varchar(50) not null,
 
 `move_id` smallint unsigned null,
 

@@ -26,7 +26,7 @@ insert into `categories` (
 ) values
 (1, "physical"),
 (2, "special"),
-(3, "physical")
+(3, "status")
 ;
 
 
@@ -218,10 +218,10 @@ insert into `natures` (
 
 create table if not exists `experience_groups`
 (
-`id` int unsigned not null auto_increment,
+`id` tinyint unsigned not null,
 
 `identifier` varchar(12) not null,
-`introduced_in_generation` int unsigned not null,
+`introduced_in_generation` tinyint unsigned not null,
 
 primary key (`id`),
 unique key (`identifier`),
@@ -253,19 +253,6 @@ source "forms.sql";
 /* TODO: REFACTOR EVERYTHING BELOW THIS LINE */
 
 
-create table if not exists `type_categories`
-(
-`type_id` tinyint unsigned not null,
-`category_id` tinyint unsigned not null,
-
-primary key (`type_id`, `category_id`),
-foreign key `type_id` references `types` (`id`)
-	on delete restrict
-	on update cascade,
-foreign key `category_id` references `categories` (`id`)
-	on delete restrict
-	on update cascade
-) engine = InnoDB;
 
 
 create table if not exists `ev_yields`

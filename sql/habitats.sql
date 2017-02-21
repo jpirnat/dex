@@ -3,7 +3,7 @@ create table if not exists `habitats`
 `id` tinyint unsigned not null,
 
 `identifier` varchar(13) not null,
-`image` varchar(16) not null,
+`image` varchar(17) not null,
 
 primary key (`id`),
 unique key (`identifier`)
@@ -41,7 +41,7 @@ foreign key (`species_id`) references `species` (`id`)
 	on update cascade,
 foreign key (`habitat_id`) references `habitats` (`id`)
 	on delete restrict
-	on update cascade,
+	on update cascade
 ) engine = InnoDB;
 
 

@@ -2,7 +2,7 @@ create table if not exists `item_fling_effects`
 (
 `id` tinyint unsigned not null,
 
-`identifier` varchar(10) not null,
+`identifier` varchar(9) not null,
 
 primary key (`id`),
 unique key (`identifier`)
@@ -11,9 +11,9 @@ unique key (`identifier`)
 
 create table if not exists `items`
 (
-`id` int unsigned not null,
+`id` smallint unsigned not null,
 
-`identifier` varchar(10) not null,
+`identifier` varchar(30) not null,
 `introduced_in_generation` tinyint unsigned not null,
 `item_fling_power` tinyint unsigned null, # nullable
 `item_fling_effect_id` tinyint unsigned null, # nullable
@@ -33,7 +33,7 @@ create table if not exists `item_pockets`
 (
 `id` tinyint unsigned not null,
 
-`identifier` varchar(10) not null,
+`identifier` varchar(12) not null,
 
 primary key (`id`),
 unique key (`identifier`)
@@ -43,7 +43,7 @@ unique key (`identifier`)
 create table if not exists `version_group_items`
 (
 `version_group_id` tinyint unsigned not null,
-`item_id` int unsigned not null,
+`item_id` smallint unsigned not null,
 
 `game_index` smallint unsigned not null,
 `item_pocket_id` tinyint unsigned null, # nullable
@@ -81,7 +81,7 @@ insert into `item_fling_effects` (
 insert into `items` (
 	`id`,
 	`identifier`,
-	`generation`,
+	`introduced_in_generation`,
 	`item_fling_power`,
 	`item_fling_effect_id`
 ) values
@@ -7849,7 +7849,7 @@ insert into `version_group_items` (
 (17, 810, 748, 3),
 (17, 811, 749, 3),
 (17, 812, 750, 3),
-(17, 348, 751, 3),
+(17, 813, 751, 3),
 (17, 814, 752, 1),
 (17, 815, 753, 1),
 (17, 816, 754, 1),
@@ -7869,8 +7869,8 @@ insert into `version_group_items` (
 (17, 830, 768, 1),
 (17, 831, 769, 1),
 (17, 832, 770, 1),
-(17, 348, 771, 3),
-(17, 348, 772, 3),
+(17, 833, 771, 3),
+(17, 834, 772, 3),
 (17, 835, 773, 3),
 (17, 836, 774, 3),
 (17, 837, 775, 3),

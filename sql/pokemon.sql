@@ -1,5 +1,6 @@
-^(\d+)\t([a-z0-9-]+)\t([a-z0-9-]*)\t(\d+)\t(\d+)\t(\d+)\t([0-9.]+)\t([0-9.]+)\t([0-9.]+|null)$
-(\1, "\2", "\3", \4, \5, \6, \7, \8, \9),
+# ^(\d+)\t([a-z0-9-]+)\t([a-z0-9-]*)\t(\d+)\t(\d+)\t(\d+)\t([0-9.]+)\t([0-9.]+)\t([0-9.]+|null)$
+# (\1, "\2", "\3", \4, \5, \6, \7, \8, \9),
+
 
 create table if not exists `pokemon`
 (
@@ -12,7 +13,7 @@ create table if not exists `pokemon`
 `introduced_in_version_group_id` tinyint unsigned not null,
 `height_m` decimal(3, 1) not null,
 `weight_kg` decimal(4, 1) not null,
-`gender_ratio` decimal(3, 1) not null,
+`gender_ratio` decimal(4, 1) null, # nullable
 
 primary key (`id`),
 unique key (`identifier`),
@@ -26,7 +27,7 @@ foreign key (`introduced_in_version_group_id`) references `version_groups` (`id`
 
 
 insert into `pokemon` (
-	`pokemon_id`,
+	`id`,
 	`identifier`,
 	`pokemon_identifier`,
 	`species_id`,
@@ -36,7 +37,6 @@ insert into `pokemon` (
 	`weight_kg`,
 	`gender_ratio`
 ) values
-pokemon_id	identifier	pokemon_identifier	species_id	is_default_pokemon	introduced_in_version_group_id	height_m	weight_kg	gender_ratio
 (1, "bulbasaur", null, 1, 1, 1, 0.7, 6.9, 12.5),
 (2, "ivysaur", null, 2, 1, 1, 1, 13, 12.5),
 (3, "venusaur", null, 3, 1, 1, 2, 100, 12.5),
@@ -993,5 +993,5 @@ pokemon_id	identifier	pokemon_identifier	species_id	is_default_pokemon	introduce
 (10152, "silvally-dragon", "dragon", 773, 0, 17, 2.3, 100.5, null),
 (10153, "silvally-dark", "dark", 773, 0, 17, 2.3, 100.5, null),
 (10154, "silvally-fairy", "fairy", 773, 0, 17, 2.3, 100.5, null),
-(10155, "minior-core", "core", 774, 0, 17, 0.3, 0.3, null),
+(10155, "minior-core", "core", 774, 0, 17, 0.3, 0.3, null)
 ;

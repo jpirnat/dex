@@ -1,9 +1,48 @@
+/*
+TODO:
+Before I add `regions`, I need to figure out whether
+`generations` should keep track of `main_region_id`, or
+`regions` should keep track of `introduced_in_generation`.
+Because I don't want any cyclical references if I can help it.
+*/
+
+
+/*
+create table if not exists `regions`
+(
+`id` tinyint unsigned not null,
+
+`identifier` varchar(6) not null,
+`introduced_in_generation` tinyint unsigned not null,
+
+primary key (`id`),
+foreign key (`introduced_in_generation`) references `generations` (`generation`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+insert into `regions` (
+	`id`,
+	`identifier`
+) values
+(1, "kanto", 1),
+(2, "johto", 2),
+(3, "hoenn", 3),
+(4, "sinnoh", 4),
+(5, "unova", 5),
+(6, "kalos", 6),
+(7, "alola", 7)
+;
+*/
+
+
 create table if not exists `pokedexes`
 (
-`id` tinyint unsigned not null auto_increment,
+`id` tinyint unsigned not null,
 
 `identifier` varchar(15) not null,
-`region_id` tinyint unsigned null, # nullable
+# `region_id` tinyint unsigned null, # nullable
 
 primary key (`id`),
 unique key (`identifier`)

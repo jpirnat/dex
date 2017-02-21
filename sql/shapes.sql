@@ -14,7 +14,7 @@ create table if not exists `shape_icons`
 `generation` tinyint unsigned not null,
 `shape_id` tinyint unsigned not null,
 
-`image` varchar(19) not null,
+`image` varchar(23) not null,
 
 primary key (
 	`generation`,

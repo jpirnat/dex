@@ -6,7 +6,7 @@ create table if not exists `generations`
 (
 `generation` tinyint unsigned not null,
 
-`identifier` varchar(8) not null,
+`identifier` varchar(14) not null,
 
 primary key (`generation`),
 unique key (`identifier`)
@@ -17,7 +17,7 @@ create table if not exists `version_groups`
 (
 `id` tinyint unsigned not null,
 
-`identifier` varchar(16) not null,
+`identifier` varchar(25) not null,
 `generation` tinyint unsigned not null,
 
 primary key (`id`),
@@ -32,7 +32,7 @@ create table if not exists `versions`
 (
 `id` tinyint unsigned not null,
 
-`identifier` varchar(16) not null,
+`identifier` varchar(14) not null,
 `version_group_id` tinyint unsigned not null,
 
 primary key (`id`),
@@ -44,16 +44,16 @@ foreign key (`version_group_id`) references `version_groups` (`id`)
 
 
 insert into `generations` (
-	`id`,
+	`generation`,
 	`identifier`
 ) values
-(1, "Gen 1"),
-(2, "Gen 2"),
-(3, "Gen 3"),
-(4, "Gen 4"),
-(5, "Gen 5"),
-(6, "Gen 6"),
-(7, "Gen 7")
+(1, "generation-i"),
+(2, "generation-ii"),
+(3, "generation-iii"),
+(4, "generation-iv"),
+(5, "generation-v"),
+(6, "generation-vi"),
+(7, "generation-vii")
 ;
 
 
@@ -78,7 +78,7 @@ insert into `version_groups` (
 (14, "black-2-white-2", 5),
 (15, "x-y", 6),
 (16, "omega-ruby-alpha-sapphire", 6),
-(17, "sun-moon", 7)
+(17, "sun-moon", 7),
 (101, "colosseum", 3),
 (102, "xd", 3)
 ;
@@ -88,7 +88,7 @@ insert into `versions` (
 	`id`,
 	`identifier`,
 	`version_group_id`
-)
+) values
 (1, "red-jp", 1),
 (2, "green-jp", 1),
 (3, "blue-jp", 2),
@@ -117,7 +117,7 @@ insert into `versions` (
 (26, "omega-ruby", 16),
 (27, "alpha-sapphire", 16),
 (28, "sun", 17),
-(29, "moon", 17)
+(29, "moon", 17),
 (101, "colosseum", 101),
 (102, "xd", 102)
 ;
