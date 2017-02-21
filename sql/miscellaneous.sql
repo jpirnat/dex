@@ -242,6 +242,11 @@ insert into `experience_groups` (
 ;
 
 
+source "species.sql";
+source "pokemon.sql";
+source "forms.sql";
+
+
 /* TODO: REFACTOR EVERYTHING BELOW THIS LINE */
 
 
