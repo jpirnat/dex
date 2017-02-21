@@ -221,17 +221,20 @@ create table if not exists `experience_groups`
 `id` int unsigned not null auto_increment,
 
 `identifier` varchar(12) not null,
-`generation_id` int unsigned not null,
+`introduced_in_generation` int unsigned not null,
 
 primary key (`id`),
-unique key (`identifier`)
+unique key (`identifier`),
+foreign key (`introduced_in_generation`) references `generations` (`generation`)
+	on delete restrict
+	on update cascade
 ) engine = InnoDB;
 
 
 insert into `experience_groups` (
 	`id`,
 	`identifier`,
-	`generation_id`
+	`introduced_in_generation`
 ) values
 (1, "fast", 1),
 (2, "medium-fast", 1),
@@ -309,7 +312,7 @@ http://iimarck.us/dumps/
 
 create table if not exists `generation_moves`
 (
-`generation_id` tinyint unsigned not null,
+`generation` tinyint unsigned not null,
 `move_id` smallint unsigned not null,
 
 `type_id`
@@ -325,10 +328,10 @@ REORDER THESE COLUMNS APPROPRIATELY:
 `effect_chance`
 
 primary key (
-	`generation_id`,
+	`generation`,
 	`move_id`
 ),
-foreign key (`generation_id`) references `generations` (`id`)
+foreign key (`generation`) references `generations` (`generation`)
 	on delete restrict
 	on update cascade,
 foreign key (`move_id`) references `moves` (`id`)
@@ -339,18 +342,18 @@ foreign key (`move_id`) references `moves` (`id`)
 
 create table if not exists `move_names`
 (
-`generation_id` tinyint unsigned not null,
+`generation` tinyint unsigned not null,
 `move_id` smallint unsigned not null,
 `language_id` tinyint unsigned not null,
 
 `name` varchar(100),
 
 primary key (
-	`generation_id`,
+	`generation`,
 	`move_id`,
 	`language_id`
 ),
-foreign key (`generation_id`) references `generations` (`id`)
+foreign key (`generation`) references `generations` (`generation`)
 	on delete restrict
 	on update cascade,
 foreign key (`move_id`) references `moves` (`id`)

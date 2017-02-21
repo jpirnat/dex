@@ -3,11 +3,11 @@ create table if not exists `moves`
 `id` smallint unsigned not null,
 
 `identifier` varchar(100) not null,
-`generation_id` tinyint unsigned not null,
+`generation` tinyint unsigned not null,
 
 primary key (`id`),
 unique key (`identifier`),
-foreign key (`generation_id`) references `generations` (`id`)
+foreign key (`generation`) references `generations` (`generation`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -16,7 +16,7 @@ foreign key (`generation_id`) references `generations` (`id`)
 insert into `moves` (
 	`id`,
 	`identifier`,
-	`generation_id`
+	`generation`
 ) values
 (1, "pound", 1),
 (2, "karate-chop", 1),

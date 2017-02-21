@@ -3,11 +3,11 @@ create table if not exists `abilities`
 `id` smallint unsigned not null,
 
 `identifier` varchar(16) not null,
-`generation_id` tinyint unsigned not null,
+`introduced_in_generation` tinyint unsigned not null,
 
 primary key (`id`),
 unique key (`identifier`),
-foreign key (`generation_id`) references `generations` (`id`)
+foreign key (`introduced_in_generation`) references `generations` (`generation`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -15,7 +15,7 @@ foreign key (`generation_id`) references `generations` (`id`)
 
 create table if not exists `pokemon_abilities`
 (
-`generation_id` tinyint unsigned not null,
+`generation` tinyint unsigned not null,
 `pokemon_id` smallint unsigned not null,
 `slot` tinyint unsigned not null,
 
@@ -23,11 +23,11 @@ create table if not exists `pokemon_abilities`
 `is_hidden_ability` tinyint unsigned not null,
 
 primary key (
-	`generation_id`,
+	`generation`,
 	`pokemon_id`,
 	`slot`
 ),
-foreign key (`generation_id`) references `generations` (`id`)
+foreign key (`generation`) references `generations` (`generation`)
 	on delete restrict
 	on update cascade,
 foreign key (`pokemon_id`) references `pokemon` (`id`)
@@ -42,7 +42,7 @@ foreign key (`ability_id`) references `abilities` (`id`)
 insert into `abilities` (
 	`id`,
 	`identifier`,
-	`generation_id`
+	`introduced_in_generation`
 ) values
 (1, "stench", 3), 	   
 (2, "drizzle", 3),	   
@@ -280,7 +280,7 @@ insert into `abilities` (
 
 
 insert into `pokemon_abilities` (
-	`generation_id`,
+	`generation`,
 	`pokemon_id`,
 	`slot`,
 	`ability_id`,

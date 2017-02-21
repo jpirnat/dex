@@ -39,18 +39,18 @@ insert into `types` (
 
 create table if not exists `type_charts`
 (
-`generation_id` tinyint unsigned not null,
+`generation` tinyint unsigned not null,
 `attacking_type_id` tinyint unsigned not null,
 `defending_type_id` tinyint unsigned not null,
 
 `factor` decimal(2, 1) unsigned not null,
 
 primary key (
-	`generation_id`,
+	`generation`,
 	`attacking_type_id`,
 	`defending_type_id`
 ),
-foreign key (`generation_id`) references `generations` (`id`)
+foreign key (`generation`) references `generations` (`generation`)
 	on delete restrict
 	on update cascade,
 foreign key (`attacking_type_id`) references `types` (`id`)
@@ -63,7 +63,7 @@ foreign key (`defending_type_id`) references `types` (`id`)
 
 
 insert into `type_charts` (
-	`generation_id`,
+	`generation`,
 	`attacking_type_id`,
 	`defending_type_id`,
 	`factor`

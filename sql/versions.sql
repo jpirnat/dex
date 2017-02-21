@@ -4,11 +4,11 @@ The foundation for nearly everything else.
 
 create table if not exists `generations`
 (
-`id` tinyint unsigned not null,
+`generation` tinyint unsigned not null,
 
 `identifier` varchar(8) not null,
 
-primary key (`id`),
+primary key (`generation`),
 unique key (`identifier`)
 ) engine = InnoDB;
 
@@ -18,11 +18,11 @@ create table if not exists `version_groups`
 `id` tinyint unsigned not null,
 
 `identifier` varchar(16) not null,
-`generation_id` tinyint unsigned not null,
+`generation` tinyint unsigned not null,
 
 primary key (`id`),
 unique key (`identifier`),
-foreign key (`generation_id`) references `generations` (`id`)
+foreign key (`generation`) references `generations` (`generation`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
@@ -60,7 +60,7 @@ insert into `generations` (
 insert into `version_groups` (
 	`id`,
 	`identifier`,
-	`generation_id`
+	`generation`
 ) values
 (1, "red-green", 1),
 (2, "blue", 1),

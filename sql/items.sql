@@ -14,13 +14,13 @@ create table if not exists `items`
 `id` int unsigned not null,
 
 `identifier` varchar(10) not null,
-`generation_id` tinyint unsigned not null,
+`introduced_in_generation` tinyint unsigned not null,
 `item_fling_power` tinyint unsigned null, # nullable
 `item_fling_effect_id` tinyint unsigned null, # nullable
 
 primary key (`id`),
 unique key (`identifier`),
-foreign key (`generation_id`) references `generations` (`id`)
+foreign key (`introduced_in_generation`) references `generations` (`generation`)
 	on delete restrict
 	on update cascade,
 foreign key (`item_fling_effect_id`) references `item_fling_effects` (`id`)
@@ -81,7 +81,7 @@ insert into `item_fling_effects` (
 insert into `items` (
 	`id`,
 	`identifier`,
-	`generation_id`,
+	`generation`,
 	`item_fling_power`,
 	`item_fling_effect_id`
 ) values
