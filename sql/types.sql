@@ -1,3 +1,67 @@
+create table if not exists `types`
+(
+`id` tinyint unsigned not null,
+
+`identifier` varchar(8) not null,
+
+primary key (`id`),
+unique key (`identifier`)
+) engine = InnoDB;
+
+
+insert into `types` (
+	`id`,
+	`identifier`
+) values
+(1, "normal"),
+(2, "fighting"),
+(3, "flying"),
+(4, "poison"),
+(5, "ground"),
+(6, "rock"),
+(7, "bug"),
+(8, "ghost"),
+(9, "steel"),
+(10, "fire"),
+(11, "water"),
+(12, "grass"),
+(13, "electric"),
+(14, "psychic"),
+(15, "ice"),
+(16, "dragon"),
+(17, "dark"),
+(18, "fairy"),
+(101, "bird")
+(102, "unknown")
+(103, "shadow")
+;
+
+
+create table if not exists `type_charts`
+(
+`generation_id` tinyint unsigned not null,
+`attacking_type_id` tinyint unsigned not null,
+`defending_type_id` tinyint unsigned not null,
+
+`factor` decimal(2, 1) unsigned not null,
+
+primary key (
+	`generation_id`,
+	`attacking_type_id`,
+	`defending_type_id`
+),
+foreign key (`generation_id`) references `generations` (`id`)
+	on delete restrict
+	on update cascade,
+foreign key (`attacking_type_id`) references `types` (`id`)
+	on delete restrict
+	on update cascade,
+foreign key (`defending_type_id`) references `types` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
 insert into `type_charts` (
 	`generation_id`,
 	`attacking_type_id`,

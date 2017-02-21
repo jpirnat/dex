@@ -1,3 +1,18 @@
+create table if not exists `moves`
+(
+`id` smallint unsigned not null,
+
+`identifier` varchar(100) not null,
+`generation_id` tinyint unsigned not null,
+
+primary key (`id`),
+unique key (`identifier`),
+foreign key (`generation_id`) references `generations` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
 insert into `moves` (
 	`id`,
 	`identifier`,
