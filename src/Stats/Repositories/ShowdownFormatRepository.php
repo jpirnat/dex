@@ -9,10 +9,10 @@ use PDO;
 class ShowdownFormatRepository
 {
 	/** @var int[] $formatsToImport */
-	protected $formatsToImport;
+	protected $formatsToImport = [];
 
 	/** @var ?int[] $formatsToIgnore */
-	protected $formatsToIgnore;
+	protected $formatsToIgnore = [];
 
 	/** @var string[] $unknownFormats */
 	protected $unknownFormats = [];
@@ -115,5 +115,15 @@ class ShowdownFormatRepository
 		}
 
 		throw new Exception('Format should not be imported: ' . $showdownFormatName);
+	}
+
+	/**
+	 * Get the names of the unknown formats the repository has tracked.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknown() : array
+	{
+		return $this->unknownFormats;
 	}
 }

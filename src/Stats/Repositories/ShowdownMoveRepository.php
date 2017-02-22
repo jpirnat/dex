@@ -9,10 +9,10 @@ use PDO;
 class ShowdownMoveRepository
 {
 	/** @var int[] $movesToImport */
-	protected $movesToImport;
+	protected $movesToImport = [];
 
 	/** @var ?int[] $movesToIgnore */
-	protected $movesToIgnore;
+	protected $movesToIgnore = [];
 
 	/** @var string[] $unknownMoves */
 	protected $unknownMoves = [];
@@ -115,5 +115,15 @@ class ShowdownMoveRepository
 		}
 
 		throw new Exception('Move should not be imported: ' . $showdownMoveName);
+	}
+
+	/**
+	 * Get the names of the unknown moves the repository has tracked.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknown() : array
+	{
+		return $this->unknownMoves;
 	}
 }

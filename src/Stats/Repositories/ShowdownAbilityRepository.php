@@ -9,10 +9,10 @@ use PDO;
 class ShowdownAbilityRepository
 {
 	/** @var int[] $abilitiesToImport */
-	protected $abilitiesToImport;
+	protected $abilitiesToImport = [];
 
 	/** @var ?int[] $abilitiesToIgnore */
-	protected $abilitiesToIgnore;
+	protected $abilitiesToIgnore = [];
 
 	/** @var string[] $unknownAbilities */
 	protected $unknownAbilities = [];
@@ -115,5 +115,15 @@ class ShowdownAbilityRepository
 		}
 
 		throw new Exception('Ability should not be imported: ' . $showdownAbilityName);
+	}
+
+	/**
+	 * Get the names of the unknown abilities the repository has tracked.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknown() : array
+	{
+		return $this->unknownAbilities;
 	}
 }

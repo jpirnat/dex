@@ -9,10 +9,10 @@ use PDO;
 class ShowdownItemRepository
 {
 	/** @var int[] $itemsToImport */
-	protected $itemsToImport;
+	protected $itemsToImport = [];
 
 	/** @var ?int[] $itemsToIgnore */
-	protected $itemsToIgnore;
+	protected $itemsToIgnore = [];
 
 	/** @var string[] $unknownItems */
 	protected $unknownItems = [];
@@ -115,5 +115,15 @@ class ShowdownItemRepository
 		}
 
 		throw new Exception('Item should not be imported: ' . $showdownItemName);
+	}
+
+	/**
+	 * Get the names of the unknown items the repository has tracked.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknown() : array
+	{
+		return $this->unknownItems;
 	}
 }

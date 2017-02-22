@@ -9,10 +9,10 @@ use PDO;
 class ShowdownPokemonRepository
 {
 	/** @var int[] $pokemonToImport */
-	protected $pokemonToImport;
+	protected $pokemonToImport = [];
 
 	/** @var ?int[] $pokemonToIgnore */
-	protected $pokemonToIgnore;
+	protected $pokemonToIgnore = [];
 
 	/** @var string[] $unknownPokemon */
 	protected $unknownPokemon = [];
@@ -115,5 +115,15 @@ class ShowdownPokemonRepository
 		}
 
 		throw new Exception('Pokémon should not be imported: ' . $showdownPokemonName);
+	}
+
+	/**
+	 * Get the names of the unknown Pokémon the repository has tracked.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknown() : array
+	{
+		return $this->unknownPokemon;
 	}
 }

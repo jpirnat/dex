@@ -9,10 +9,10 @@ use PDO;
 class ShowdownNatureRepository
 {
 	/** @var int[] $naturesToImport */
-	protected $naturesToImport;
+	protected $naturesToImport = [];
 
 	/** @var ?int[] $naturesToIgnore */
-	protected $naturesToIgnore;
+	protected $naturesToIgnore = [];
 
 	/** @var string[] $unknownNatures */
 	protected $unknownNatures = [];
@@ -115,5 +115,15 @@ class ShowdownNatureRepository
 		}
 
 		throw new Exception('Nature should not be imported: ' . $showdownNatureName);
+	}
+
+	/**
+	 * Get the names of the unknown natures the repository has tracked.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknown() : array
+	{
+		return $this->unknownNatures;
 	}
 }
