@@ -33,9 +33,9 @@ class HiddenPowerCalculator
 		int $atk,
 		int $def
 	) : int {
-		$index = 4 * $atk % 4 + $def % 4;
+		$hiddenPowerIndex = 4 * $atk % 4 + $def % 4;
 
-		return $this->typeRepository->getByHiddenPowerIndex($index);
+		return $this->typeRepository->getByHiddenPowerIndex($hiddenPowerIndex);
 	}
 
 	/**
@@ -65,15 +65,14 @@ class HiddenPowerCalculator
 		$e = $spa % 2;
 		$f = $spd % 2;
 
-		$index = floor(($a + 2 * $b + 4 * $c + 8 * $d + 16 * $e + 32 * $f) * 15 / 63);
+		$hiddenPowerIndex = floor(($a + 2 * $b + 4 * $c + 8 * $d + 16 * $e + 32 * $f) * 15 / 63);
 
-		return $this->typeRepository->getByHiddenPowerIndex($index);
+		return $this->typeRepository->getByHiddenPowerIndex($hiddenPowerIndex);
 	}
 
 	/**
 	 * Calculate a Pokémon's Hidden Power base power in Generation II.
 	 *
-	 * @param int $hp
 	 * @param int $atk
 	 * @param int $def
 	 * @param int $spe
@@ -82,7 +81,6 @@ class HiddenPowerCalculator
 	 * @return int
 	 */
 	public function power2(
-		int $hp,
 		int $atk,
 		int $def,
 		int $spe,
@@ -94,7 +92,7 @@ class HiddenPowerCalculator
 		$y = $atk < 8 ? 0 : 1;
 		$z = $spc % 4;
 
-		return floor((5 * ($v + 2 * $w + 4 * $x + 8 * $y) + $z) / 2 + 31);
+		return (int) ((5 * ($v + 2 * $w + 4 * $x + 8 * $y) + $z) / 2 + 31);
 	}
 
 	/**
@@ -124,7 +122,7 @@ class HiddenPowerCalculator
 		$y = ($spa % 4 === 2 || $spa % 4 === 3) ? 1 : 0;
 		$z = ($spd % 4 === 2 || $spd % 4 === 3) ? 1 : 0;
 
-		return floor((($u + 2 * $v + 4 * $w + 8 * $x + 16 * $y + 32 * $z) * 40) / 63 + 30);
+		return (int) ((($u + 2 * $v + 4 * $w + 8 * $x + 16 * $y + 32 * $z) * 40) / 63 + 30);
 	}
 
 	/**

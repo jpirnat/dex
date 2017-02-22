@@ -27,16 +27,16 @@ class TypeRepository implements TypeRepositoryInterface
 	 *
 	 * @return Type
 	 */
-	public function getByHiddenPowerIndex(int $index)
+	public function getByHiddenPowerIndex(int $hiddenPowerIndex)
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`type_id`
-			FROM `hidden_power_type_indexes`
-			WHERE `index` = :index
+				`id`
+			FROM `types`
+			WHERE `hidden_power_index` = :hidden_power_index
 			LIMIT 1'
 		);
-		$stmt->bindValue(':index', $index, PDO::PARAM_INT);
+		$stmt->bindValue(':index', $hiddenPowerIndex, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 

@@ -21,6 +21,8 @@ class DamageCalculator
 		$modifier = 1;
 
 		$damage = ((2 * $level + 10) / 250 * ($attack / $defense) * $base + 2) * $modifier;
+
+		return $damage;
 	}
 }
 
