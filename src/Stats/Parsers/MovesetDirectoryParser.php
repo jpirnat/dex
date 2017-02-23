@@ -8,16 +8,10 @@ use Jp\Dex\Stats\Importers\Extractors\FormatRatingExtractor;
 use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
 use Symfony\Component\DomCrawler\Crawler;
 
-class MonthDirectoryParser
+class MovesetDirectoryParser
 {
-	/** @var UsageFileParser $usageFileParser */
-	protected $usageFileParser;
-
-	/** @var LeadsDirectoryParser $leadsDirectoryParser */
-	protected $leadsDirectoryParser;
-
-	/** @var MovesetDirectoryParser $movesetDirectoryParser */
-	protected $movesetDirectoryParser;
+	/** @var MovesetFileParser $movesetFileParser */
+	protected $movesetFileParser;
 
 	/** @var FormatRatingExtractor $formatRatingExtractor */
 	protected $formatRatingExtractor;
@@ -28,28 +22,22 @@ class MonthDirectoryParser
 	/**
 	 * Constructor.
 	 *
-	 * @param UsageFileParser $usageFileParser
-	 * @param LeadsDirectoryParser $leadsDirectoryParser
-	 * @param MovesetDirectoryParser $movesetDirectoryParser
+	 * @param MovesetFileParser $movesetFileParser
 	 * @param FormatRatingExtractor $formatRatingExtractor
 	 * @param ShowdownFormatRepository $showdownFormatRepository
 	 */
 	public function __construct(
-		UsageFileParser $usageFileParser,
-		LeadsDirectoryParser $leadsDirectoryParser,
-		MovesetDirectoryParser $movesetDirectoryParser,
+		MovesetFileParser $movesetFileParser,
 		FormatRatingExtractor $formatRatingExtractor,
 		ShowdownFormatRepository $showdownFormatRepository
 	) {
-		$this->usageFileParser = $usageFileParser;
-		$this->leadsDirectoryParser = $leadsDirectoryParser;
-		$this->movesetDirectoryParser = $movesetDirectoryParser;
+		$this->movesetFileParser = $movesetFileParser;
 		$this->formatRatingExtractor = $formatRatingExtractor;
 		$this->showdownFormatRepository = $showdownFormatRepository;
 	}
 
 	/**
-	 * Parse this month directory for unknown Showdown format names.
+	 * Parse all moveset files in this directory of moveset files.
 	 *
 	 * @param string $url
 	 *
@@ -62,16 +50,15 @@ class MonthDirectoryParser
 			'base_uri' => $url,
 		]);
 
-		// Get the HTML of the month directory page.
+		// Get the HTML of the moveset directory page.
 		$html = $client->request('GET', $url)->getBody()->getContents();
 
 		// Create the DOM crawler.
 		$crawler = new Crawler($html, $url);
 
-		// Get all the links on the month directory page.
+		// Get all the links on the moveset directory page.
 		$links = $crawler->filterXPath('//a[contains(@href, ".txt")]')->links();
 
-		// Parse each usage file link.
 		foreach ($links as $link) {
 			// Get the format and rating from the filename of the link.
 			$filename = pathinfo($link->getUri())['filename'];
@@ -83,17 +70,11 @@ class MonthDirectoryParser
 				$this->showdownFormatRepository->addUnknown($showdownFormatName);
 			}
 
-			// Create a stream to read the usage file.
+			// Create a stream to read the moveset file.
 			$stream = $client->request('GET', $link->getUri())->getBody();
 
-			// Parse the usage file.
-			$this->usageFileParser->parse($stream);
+			// Parse the moveset file.
+			$this->movesetFileParser->parse($stream);
 		}
-
-		// Parse each leads file.
-		$this->leadsDirectoryParser->parse($url . 'leads/');
-
-		// Parse each moveset file.
-		$this->movesetDirectoryParser->parse($url . 'moveset/');
 	}
 }

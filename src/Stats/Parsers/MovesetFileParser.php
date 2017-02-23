@@ -64,9 +64,8 @@ class MovesetFileParser
 	 *
 	 * @return void
 	 */
-	public function parse(
-		StreamInterface $stream
-	) : void {
+	public function parse(StreamInterface $stream) : void
+	{
 		// If the file is empty, there's nothing to parse.
 		if ($stream->getSize() === 0) {
 			return;
@@ -207,56 +206,6 @@ class MovesetFileParser
 				}
 			}
 		}
-	}
-
-	/**
-	 * Return the list of unknown Pokémon.
-	 *
-	 * @return string[]
-	 */
-	public function getUnknownPokemon() : array
-	{
-		return $this->showdownPokemonRepository->getUnknown();
-	}
-
-	/**
-	 * Return the list of unknown abilities.
-	 *
-	 * @return string[]
-	 */
-	public function getUnknownAbilities() : array
-	{
-		return $this->showdownAbilityRepository->getUnknown();
-	}
-
-	/**
-	 * Return the list of unknown items.
-	 *
-	 * @return string[]
-	 */
-	public function getUnknownItems() : array
-	{
-		return $this->showdownItemRepository->getUnknown();
-	}
-
-	/**
-	 * Return the list of unknown natures.
-	 *
-	 * @return string[]
-	 */
-	public function getUnknownNatures() : array
-	{
-		return $this->showdownNatureRepository->getUnknown();
-	}
-
-	/**
-	 * Return the list of unknown moves.
-	 *
-	 * @return string[]
-	 */
-	public function getUnknownMoves() : array
-	{
-		return $this->showdownMoveRepository->getUnknown();
 	}
 }
 

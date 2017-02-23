@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Stats\Importers;
 
-use Exception;
 use Jp\Dex\Stats\Importers\Extractors\MovesetFileExtractor;
 use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
 use Jp\Dex\Stats\Repositories\ShowdownItemRepository;
