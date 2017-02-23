@@ -64,7 +64,7 @@ class ShowdownAbilityRepository
 	 */
 	public function isIgnored(string $showdownAbilityName) : bool
 	{
-		return isset($this->abilitiesToIgnore[$showdownAbilityName]);
+		return array_key_exists($showdownAbilityName, $this->abilitiesToIgnore);
 	}
 
 	/**
@@ -76,8 +76,8 @@ class ShowdownAbilityRepository
 	 */
 	public function isKnown(string $showdownAbilityName) : bool
 	{
-		return isset($this->abilitiesToImport[$showdownAbilityName])
-			|| isset($this->abilitiesToIgnore[$showdownAbilityName])
+		return $this->isImported($showdownAbilityName)
+			|| $this->isIgnored($showdownAbilityName)
 		;
 	}
 

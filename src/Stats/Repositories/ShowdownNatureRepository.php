@@ -64,7 +64,7 @@ class ShowdownNatureRepository
 	 */
 	public function isIgnored(string $showdownNatureName) : bool
 	{
-		return isset($this->naturesToIgnore[$showdownNatureName]);
+		return array_key_exists($showdownNatureName, $this->naturesToIgnore);
 	}
 
 	/**
@@ -76,8 +76,8 @@ class ShowdownNatureRepository
 	 */
 	public function isKnown(string $showdownNatureName) : bool
 	{
-		return isset($this->naturesToImport[$showdownNatureName])
-			|| isset($this->naturesToIgnore[$showdownNatureName])
+		return $this->isImported($showdownNatureName)
+			|| $this->isIgnored($showdownNatureName)
 		;
 	}
 

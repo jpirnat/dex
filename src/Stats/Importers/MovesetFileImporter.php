@@ -179,10 +179,11 @@ class MovesetFileImporter
 			$averageWeight = $this->movesetFileExtractor->extractAverageWeight($line);
 
 			$line = \GuzzleHttp\Psr7\readline($stream); // Viability ceiling OR separator.
-			try {
+			if ($this->movesetFileExtractor->isViabilityCeiling($line)) {
 				$viabilityCeiling = $this->movesetFileExtractor->extractViabilityCeiling($line);
-			} catch (Exception $e) {
-				$viabilityCeiling = 0;
+				\GuzzleHttp\Psr7\readline($stream); // Separator.
+			} else {
+				$viabilityCeiling = null;
 			}
 
 			if (!$movesetPokemonExists) {
@@ -254,10 +255,6 @@ class MovesetFileImporter
 				}
 
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-
-				if ($namePercent->showdownName() === 'Nothing') {
-					continue;
-				}
 
 				$showdownItemName = $namePercent->showdownName();
 				$itemId = $this->showdownItemRepository->getItemId($showdownItemName);

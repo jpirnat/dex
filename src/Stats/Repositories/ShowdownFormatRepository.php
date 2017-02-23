@@ -64,7 +64,7 @@ class ShowdownFormatRepository
 	 */
 	public function isIgnored(string $showdownFormatName) : bool
 	{
-		return isset($this->formatsToIgnore[$showdownFormatName]);
+		return array_key_exists($showdownFormatName, $this->formatsToIgnore);
 	}
 
 	/**
@@ -76,8 +76,8 @@ class ShowdownFormatRepository
 	 */
 	public function isKnown(string $showdownFormatName) : bool
 	{
-		return isset($this->formatsToImport[$showdownFormatName])
-			|| isset($this->formatsToIgnore[$showdownFormatName])
+		return $this->isImported($showdownFormatName)
+			|| $this->isIgnored($showdownFormatName)
 		;
 	}
 

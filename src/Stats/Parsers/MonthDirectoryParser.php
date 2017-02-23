@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Importers;
+namespace Jp\Dex\Stats\Parsers;
 
 use GuzzleHttp\Client;
 use Jp\Dex\Stats\Importers\Extractors\FormatRatingExtractor;
@@ -35,9 +35,9 @@ class MonthDirectoryParser
 	 *
 	 * @param string $url
 	 *
-	 * @return string[]
+	 * @return void
 	 */
-	public function parse(string $url) : array
+	public function parse(string $url) : void
 	{
 		// Create the HTTP client.
 		$client = new Client([
@@ -65,8 +65,15 @@ class MonthDirectoryParser
 				$this->showdownFormatRepository->addUnknown($showdownFormatName);
 			}
 		}
+	}
 
-		// Return the list of unknown formats.
+	/**
+	 * Return the list of unknown formats.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknownFormats() : array
+	{
 		return $this->showdownFormatRepository->getUnknown();
 	}
 }

@@ -64,7 +64,7 @@ class ShowdownPokemonRepository
 	 */
 	public function isIgnored(string $showdownPokemonName) : bool
 	{
-		return isset($this->pokemonToIgnore[$showdownPokemonName]);
+		return array_key_exists($showdownPokemonName, $this->pokemonToIgnore);
 	}
 
 	/**
@@ -76,8 +76,8 @@ class ShowdownPokemonRepository
 	 */
 	public function isKnown(string $showdownPokemonName) : bool
 	{
-		return isset($this->pokemonToImport[$showdownPokemonName])
-			|| isset($this->pokemonToIgnore[$showdownPokemonName])
+		return $this->isImported($showdownPokemonName)
+			|| $this->isIgnored($showdownPokemonName)
 		;
 	}
 

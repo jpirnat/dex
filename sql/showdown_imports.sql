@@ -63,9 +63,19 @@ insert into `showdown_formats_to_import` (
 ("vgc2014", 11),
 ("vgc2015", 12),
 ("vgc2016", 13),
-("vgc2017", 14)
+("gen7vgc2017", 14),
 
-# TODO: add gen 7 format names
+("gen7pokebankanythinggoes", 15),
+("gen7pokebankubers", 16),
+("gen7pokebankou", 17),
+# UU still in beta
+# RU still in beta
+# NU still in beta
+# PU still in beta
+
+("gen7pokebankdoublesubers", 22),
+("gen7pokebankdoublesou", 23)
+# Doubles UU still in beta
 ;
 
 
@@ -113,6 +123,7 @@ insert into `showdown_formats_to_ignore` (
 ("flashclash"),
 ("followtheleader"),
 ("fu"),
+("gen1nobig4ou"),
 ("gen1ou"),
 ("gen1oubeta"),
 ("gen1randombattle"),
@@ -125,10 +136,13 @@ insert into `showdown_formats_to_ignore` (
 ("gen3oubeta"),
 ("gen3ubers"),
 ("gen3ubersbeta"),
+("gen3uu"),
 ("gen4lc"),
+("gen4nu"),
 ("gen4ou"),
 ("gen4ubers"),
 ("gen4uu"),
+("gen5anythinggoes"),
 ("gen5doublesou"),
 ("gen5gbudoubles"),
 ("gen5gbusingles"),
@@ -139,7 +153,57 @@ insert into `showdown_formats_to_ignore` (
 ("gen5smogondoubles"),
 ("gen5ubers"),
 ("gen5uu"),
+("gen6randombattle"),
+("gen71v1"),
+("gen7almostanyability"),
+("gen7almostanyabilitysuspecttest"),
+("gen7alolafriendly"),
+("gen7anythinggoes"),
+("gen7anythinggoesbeta"),
+("gen7balancedhackmons"),
+("gen7balancedhackmonssuspecttest"),
+("gen7battleofalola"),
+("gen7battlespotdoubles"),
+("gen7battlespotsingles"),
+("gen7battlespotspecial1"),
+("gen7battlespotspecial2"),
+("gen7cap"),
+("gen7challengecup"),
+("gen7challengecup1v1"),
+("gen7challengecupbeta"),
+("gen7doublesanythinggoesbeta"),
+("gen7doublesou"),
+("gen7doublesoubeta"),
+("gen7hackmonscup"),
+("gen7lc"),
+("gen7mixandmega"),
+("gen7mixandmegasuspecttest"),
+("gen7monotype"),
+("gen7ou"),
+("gen7oubeta"),
+("gen7ouprebank"),
+("gen7pokbilities"),
+("gen7pokebankag"),
+("gen7pokebankanythinggoesbeta"),
+("gen7pokebankdoublesag"),
+("gen7pokebankdoublesanythinggoesbeta"),
+("gen7pokebankdoublesoubeta"),
+("gen7pokebanklc"),
+("gen7pokebankoubeta"),
+("gen7pokebankoususpecttest"),
+("gen7pokebankuualpha"),
+("gen7prebankou"),
+("gen7randombattle"),
+("gen7randomdoublesbattle"),
+("gen7rualpha"),
+("gen7sketchmons"),
+("gen7sketchmonssuspecttest"),
+("gen7stabmons"),
+("gen7ubers"),
+("gen7uubeta"),
+("gen7vgc2017beta"),
 ("generationshowdown"),
+("giftsofthegods"),
 ("godsandfollowers"),
 ("gottalent"),
 ("hackmons1v1"),
@@ -176,6 +240,7 @@ insert into `showdown_formats_to_ignore` (
 ("randombattle"),
 ("randomdoublesbattle"),
 ("randomtriplesbattle"),
+("returnd"),
 ("rususpecttest"),
 ("sametypestealthrock"),
 ("scrappyskirmish"),
@@ -1158,8 +1223,29 @@ insert into `showdown_pokemon_to_import` (
 insert into `showdown_pokemon_to_ignore` (
 	`name`
 ) values
-/* TODO */
-("")
+("Arghonaut"), # CAP
+("Aurumoth"), # CAP
+("Cawmodore"), # CAP
+("Colossoil"), # CAP
+("Crucibelle-Mega"), # CAP
+("Crucibelle"), # CAP
+("Cyclohm"), # CAP
+("Fidgit"), # CAP
+("Kerfluffle"), # CAP
+("Kitsunoh"), # CAP
+("Krilowatt"), # CAP
+("Malaconda"), # CAP
+("Mollux"), # CAP
+("Naviathan"), # CAP
+("Necturna"), # CAP
+("Plasmanta"), # CAP
+("Pyroak"), # CAP
+("Revenankh"), # CAP
+("Stratagem"), # CAP
+("Syclant"), # CAP
+("Tomohawk"), # CAP
+("Volkraken"), # CAP
+("Voodoom") # CAP
 ;
 
 
@@ -1405,8 +1491,10 @@ insert into `showdown_abilities_to_import` (
 insert into `showdown_abilities_to_ignore` (
 	`name`
 ) values
-/* TODO */
-("")
+("Mountaineer"), # CAP
+("Other"),
+("Persistent"), # CAP
+("Rebound") # CAP
 ;
 
 
@@ -1782,8 +1870,8 @@ insert into `showdown_items_to_import` (
 insert into `showdown_items_to_ignore` (
 	`name`
 ) values
-/* TODO */
-("")
+("Crucibellite"), # CAP
+("Other")
 ;
 
 
@@ -1823,7 +1911,7 @@ insert into `showdown_natures_to_ignore` (
 	`name`
 ) values
 /* TODO */
-("")
+("Other")
 ;
 
 
@@ -2554,6 +2642,8 @@ insert into `showdown_moves_to_import` (
 insert into `showdown_moves_to_ignore` (
 	`name`
 ) values
-/* TODO */
-("")
+("Nothing"),
+("Other"),
+("Paleo Wave"), # CAP
+("Shadow Strike") # CAP
 ;

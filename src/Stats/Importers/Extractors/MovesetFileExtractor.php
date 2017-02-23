@@ -99,6 +99,25 @@ class MovesetFileExtractor
 	}
 
 	/**
+	 * Is this line a Viability Ceiling?
+	 *
+	 * @param string $line
+	 *
+	 * @return bool
+	 */
+	public function isViabilityCeiling(string $line) : bool
+	{
+		try {
+			$this->extractViabilityCeiling($line);
+			return true;
+		} catch (Exception $e) {
+			// It must not be a viability ceiling.
+		}
+	
+		return false;
+	}
+
+	/**
 	 * Extract a Pokémon's viability ceiling from a line in the moveset file.
 	 *
 	 * @param string $line

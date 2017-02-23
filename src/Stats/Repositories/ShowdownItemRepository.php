@@ -64,7 +64,7 @@ class ShowdownItemRepository
 	 */
 	public function isIgnored(string $showdownItemName) : bool
 	{
-		return isset($this->itemsToIgnore[$showdownItemName]);
+		return array_key_exists($showdownItemName, $this->itemsToIgnore);
 	}
 
 	/**
@@ -76,8 +76,8 @@ class ShowdownItemRepository
 	 */
 	public function isKnown(string $showdownItemName) : bool
 	{
-		return isset($this->itemsToImport[$showdownItemName])
-			|| isset($this->itemsToIgnore[$showdownItemName])
+		return $this->isImported($showdownItemName)
+			|| $this->isIgnored($showdownItemName)
 		;
 	}
 
