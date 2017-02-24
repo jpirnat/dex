@@ -48,7 +48,7 @@ class LeadsFileParser
 		\GuzzleHttp\Psr7\readline($stream); // Column headings.
 		\GuzzleHttp\Psr7\readline($stream); // Separator.
 
-		while (!$this->leadsFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+		while ($this->leadsFileExtractor->isLeadUsage($line = \GuzzleHttp\Psr7\readline($stream))) {
 			$leadUsage = $this->leadsFileExtractor->extractLeadUsage($line);
 			$showdownPokemonName = $leadUsage->showdownPokemonName();
 

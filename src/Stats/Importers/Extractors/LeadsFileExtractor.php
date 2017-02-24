@@ -11,26 +11,6 @@ use Spatie\Regex\RegexFailed;
 class LeadsFileExtractor
 {
 	/**
-	 * Is this line a separator?
-	 *
-	 * @param string $line
-	 *
-	 * @return bool
-	 */
-	public function isSeparator(string $line) : bool
-	{
-		$pattern = '/---/';
-
-		try {
-			$matchResult = Regex::match($pattern, $line);
-		} catch (RegexFailed $e) {
-			return false;
-		}
-
-		return $matchResult->hasMatch();
-	}
-
-	/**
 	 * Extract the total leads count from the first line in the leads file.
 	 *
 	 * @param string $line
@@ -50,6 +30,25 @@ class LeadsFileExtractor
 		} catch (RegexFailed $e) {
 			throw new Exception('Total leads line is invalid: ' . $line);
 		}
+	}
+
+	/**
+	 * Is this line a lead usage data line?
+	 *
+	 * @param string $line
+	 *
+	 * @return bool
+	 */
+	public function isLeadUsage(string $line) : bool
+	{
+		try {
+			$this->extractLeadUsage($line);
+			return true;
+		} catch (Exception $e) {
+			// It must not be a lead usage data line.
+		}
+	
+		return false;
 	}
 
 	/**

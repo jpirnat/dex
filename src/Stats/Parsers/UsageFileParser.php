@@ -49,7 +49,7 @@ class UsageFileParser
 		\GuzzleHttp\Psr7\readline($stream); // Column headings.
 		\GuzzleHttp\Psr7\readline($stream); // Separator.
 
-		while (!$this->usageFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+		while ($this->usageFileExtractor->isUsage($line = \GuzzleHttp\Psr7\readline($stream))) {
 			$usage = $this->usageFileExtractor->extractUsage($line);
 			$showdownPokemonName = $usage->showdownPokemonName();
 

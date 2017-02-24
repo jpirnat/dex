@@ -215,15 +215,15 @@ class MovesetFileImporter
 			// BLOCK 3 - Abilities.
 
 			\GuzzleHttp\Psr7\readline($stream); // "Abilities"
-			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
-				// Ignore this line if it's an "Other" percent.
-				if ($this->movesetFileExtractor->isOther($line)) {
+			while ($this->movesetFileExtractor->isNamePercent($line = \GuzzleHttp\Psr7\readline($stream))) {
+				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
+				$showdownAbilityName = $namePercent->showdownName();
+
+				// If this ability is not meant to be imported, skip it.
+				if (!$this->showdownAbilityRepository->isImported($showdownAbilityName)) {
 					continue;
 				}
 
-				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-
-				$showdownAbilityName = $namePercent->showdownName();
 				$abilityId = $this->showdownAbilityRepository->getAbilityId($showdownAbilityName);
 
 				if (!$movesetRatedPokemonExists) {
@@ -247,15 +247,15 @@ class MovesetFileImporter
 			// BLOCK 4 - Items.
 
 			\GuzzleHttp\Psr7\readline($stream); // "Items"
-			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
-				// Ignore this line if it's an "Other" percent.
-				if ($this->movesetFileExtractor->isOther($line)) {
+			while ($this->movesetFileExtractor->isNamePercent($line = \GuzzleHttp\Psr7\readline($stream))) {
+				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
+				$showdownItemName = $namePercent->showdownName();
+
+				// If this item is not meant to be imported, skip it.
+				if (!$this->showdownItemRepository->isImported($showdownItemName)) {
 					continue;
 				}
 
-				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-
-				$showdownItemName = $namePercent->showdownName();
 				$itemId = $this->showdownItemRepository->getItemId($showdownItemName);
 
 				if (!$movesetRatedPokemonExists) {
@@ -280,7 +280,7 @@ class MovesetFileImporter
 
 			\GuzzleHttp\Psr7\readline($stream); // "Spreads"
 			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
-				// Ignore this line if it's an "Other" percent.
+				// If this line is an "Other" percent, skip it.
 				if ($this->movesetFileExtractor->isOther($line)) {
 					continue;
 				}
@@ -317,19 +317,15 @@ class MovesetFileImporter
 			// BLOCK 6 - Moves.
 
 			\GuzzleHttp\Psr7\readline($stream); // "Moves"
-			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
-				// Ignore this line if it's an "Other" percent.
-				if ($this->movesetFileExtractor->isOther($line)) {
-					continue;
-				}
-
+			while ($this->movesetFileExtractor->isNamePercent($line = \GuzzleHttp\Psr7\readline($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
+				$showdownMoveName = $namePercent->showdownName();
 
-				if ($namePercent->showdownName() === 'Nothing') {
+				// If this move is not meant to be imported, skip it.
+				if (!$this->showdownMoveRepository->isImported($showdownMoveName)) {
 					continue;
 				}
 
-				$showdownMoveName = $namePercent->showdownName();
 				$moveId = $this->showdownMoveRepository->getMoveId($showdownMoveName);
 
 				if (!$movesetRatedPokemonExists) {
@@ -353,10 +349,15 @@ class MovesetFileImporter
 			// BLOCK 7 - Teammates.
 
 			\GuzzleHttp\Psr7\readline($stream); // "Teammates"
-			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+			while ($this->movesetFileExtractor->isNamePercent($line = \GuzzleHttp\Psr7\readline($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-
 				$showdownTeammateName = $namePercent->showdownName();
+
+				// If this Pokémon is not meant to be imported, skip it.
+				if (!$this->showdownPokemonRepository->isImported($showdownTeammateName)) {
+					continue;
+				}
+
 				$teammateId = $this->showdownPokemonRepository->getPokemonId($showdownTeammateName);
 
 				if (!$movesetRatedPokemonExists) {
@@ -379,12 +380,17 @@ class MovesetFileImporter
 
 			// BLOCK 8 - Counters
 
-			\GuzzleHttp\Psr7\readline($stream); // "Teammates"
-			while (!$this->movesetFileExtractor->isSeparator($line1 = \GuzzleHttp\Psr7\readline($stream))) {
+			\GuzzleHttp\Psr7\readline($stream); // "Counters"
+			while ($this->movesetFileExtractor->isCounter1($line1 = \GuzzleHttp\Psr7\readline($stream))) {
 				$line2 = \GuzzleHttp\Psr7\readline($stream);
 				$counter = $this->movesetFileExtractor->extractCounter($line1, $line2);
-
 				$showdownCounterName = $counter->showdownPokemonName();
+
+				// If this Pokémon is not meant to be imported, skip it.
+				if (!$this->showdownPokemonRepository->isImported($showdownCounterName)) {
+					continue;
+				}
+
 				$counterId = $this->showdownPokemonRepository->getPokemonId($showdownCounterName);
 
 				if (!$movesetRatedPokemonExists) {

@@ -100,7 +100,7 @@ class MovesetFileParser
 			// BLOCK 3 - Abilities.
 
 			\GuzzleHttp\Psr7\readline($stream); // "Abilities"
-			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+			while ($this->movesetFileExtractor->isNamePercent($line = \GuzzleHttp\Psr7\readline($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownAbilityName = $namePercent->showdownName();
 
@@ -118,7 +118,7 @@ class MovesetFileParser
 			// BLOCK 4 - Items.
 
 			\GuzzleHttp\Psr7\readline($stream); // "Items"
-			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+			while ($this->movesetFileExtractor->isNamePercent($line = \GuzzleHttp\Psr7\readline($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownItemName = $namePercent->showdownName();
 
@@ -137,7 +137,7 @@ class MovesetFileParser
 
 			\GuzzleHttp\Psr7\readline($stream); // "Spreads"
 			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
-				// Ignore this line if it's an "Other" percent.
+				// If this line is an "Other" percent, skip it.
 				if ($this->movesetFileExtractor->isOther($line)) {
 					continue;
 				}
@@ -159,7 +159,7 @@ class MovesetFileParser
 			// BLOCK 6 - Moves.
 
 			\GuzzleHttp\Psr7\readline($stream); // "Moves"
-			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+			while ($this->movesetFileExtractor->isNamePercent($line = \GuzzleHttp\Psr7\readline($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownMoveName = $namePercent->showdownName();
 
@@ -177,7 +177,7 @@ class MovesetFileParser
 			// BLOCK 7 - Teammates.
 
 			\GuzzleHttp\Psr7\readline($stream); // "Teammates"
-			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+			while ($this->movesetFileExtractor->isNamePercent($line = \GuzzleHttp\Psr7\readline($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownTeammateName = $namePercent->showdownName();
 
@@ -194,8 +194,8 @@ class MovesetFileParser
 
 			// BLOCK 8 - Counters.
 
-			\GuzzleHttp\Psr7\readline($stream); // "Teammates"
-			while (!$this->movesetFileExtractor->isSeparator($line1 = \GuzzleHttp\Psr7\readline($stream))) {
+			\GuzzleHttp\Psr7\readline($stream); // "Counters"
+			while ($this->movesetFileExtractor->isCounter1($line1 = \GuzzleHttp\Psr7\readline($stream))) {
 				$line2 = \GuzzleHttp\Psr7\readline($stream);
 				$counter = $this->movesetFileExtractor->extractCounter($line1, $line2);
 				$showdownCounterName = $counter->showdownPokemonName();

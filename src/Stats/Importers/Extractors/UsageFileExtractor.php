@@ -11,26 +11,6 @@ use Spatie\Regex\RegexFailed;
 class UsageFileExtractor
 {
 	/**
-	 * Is this line a separator?
-	 *
-	 * @param string $line
-	 *
-	 * @return bool
-	 */
-	public function isSeparator(string $line) : bool
-	{
-		$pattern = '/---/';
-
-		try {
-			$matchResult = Regex::match($pattern, $line);
-		} catch (RegexFailed $e) {
-			return false;
-		}
-
-		return $matchResult->hasMatch();
-	}
-
-	/**
 	 * Extract the total battles count from the first line in the usage file.
 	 *
 	 * @param string $line
@@ -72,6 +52,25 @@ class UsageFileExtractor
 		} catch (RegexFailed $e) {
 			throw new Exception('Average weight per team line is invalid: ' . $line);
 		}
+	}
+
+	/**
+	 * Is this line a usage data line?
+	 *
+	 * @param string $line
+	 *
+	 * @return bool
+	 */
+	public function isUsage(string $line) : bool
+	{
+		try {
+			$this->extractUsage($line);
+			return true;
+		} catch (Exception $e) {
+			// It must not be a usage data line.
+		}
+	
+		return false;
 	}
 
 	/**

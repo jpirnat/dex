@@ -5,6 +5,8 @@ namespace Jp\Dex\Stats\Importers\Extractors;
 
 use Exception;
 use Jp\Dex\Stats\Importers\Structs\Counter;
+use Jp\Dex\Stats\Importers\Structs\Counter1;
+use Jp\Dex\Stats\Importers\Structs\Counter2;
 use Jp\Dex\Stats\Importers\Structs\NamePercent;
 use Jp\Dex\Stats\Importers\Structs\Spread;
 use Spatie\Regex\Regex;
@@ -140,6 +142,25 @@ class MovesetFileExtractor
 	}
 
 	/**
+	 * Is this line a name and percent?
+	 *
+	 * @param string $line
+	 *
+	 * @return bool
+	 */
+	public function isNamePercent(string $line) : bool
+	{
+		try {
+			$this->extractNamePercent($line);
+			return true;
+		} catch (Exception $e) {
+			// It must not be a name and percent.
+		}
+	
+		return false;
+	}
+
+	/**
 	 * Extract a name and percent from a line in the moveset file.
 	 *
 	 * @param string $line
@@ -205,6 +226,25 @@ class MovesetFileExtractor
 	}
 
 	/**
+	 * Is the line a counter line 1?
+	 *
+	 * @param string $line1
+	 *
+	 * @return bool
+	 */
+	public function isCounter1(string $line1) : bool
+	{
+		try {
+			$this->extractCounter1($line1);
+			return true;
+		} catch (Exception $e) {
+			// It must not be a counter line 1.
+		}
+	
+		return false;
+	}
+
+	/**
 	 * Extract a counter and statistics from lines in the moveset file.
 	 *
 	 * @param string $line1
@@ -217,35 +257,76 @@ class MovesetFileExtractor
 	 */
 	public function extractCounter(string $line1, string $line2) : Counter
 	{
+		$counter1 = $this->extractCounter1($line1);
+		$counter2 = $this->extractCounter2($line2);
+
+		return new Counter(
+			$counter1->showdownPokemonName(),
+			$counter1->number1(),
+			$counter1->number2(),
+			$counter1->number3(),
+			$counter2->percentKnockedOut(),
+			$counter2->percentSwitchedOut()
+		);
+	}
+
+	/**
+	 * Extract a counter's line 1 data from a line in the moveset file.
+	 *
+	 * @param string $line1
+	 *
+	 * @throws Exception if $line1 is invalid
+	 *
+	 * @return Counter1
+	 */
+	protected function extractCounter1(string $line1) : Counter1
+	{
 		$pattern1 = '/'
 			. "(\w[\w '.%:-]*?) " // Pokémon Name
 			. '([\d.]+) '         // number1
 			. '\(([\d.]+)'        // number2
 			. '±([\d.]+)\)/'      // number3
 		;
+
+		try {
+			$matchResult1 = Regex::match($pattern1, $line1);
+
+			return new Counter1(
+				$matchResult1->group(1),
+				(float) $matchResult1->group(2),
+				(float) $matchResult1->group(3),
+				(float) $matchResult1->group(4)
+			);
+		} catch (RegexFailed $e) {
+			throw new Exception('Counter line 1 is invalid: ' . $line1);
+		}
+	}
+
+	/**
+	 * Extract a counter's line 2 data from a line in the moveset file.
+	 *
+	 * @param string $line2
+	 *
+	 * @throws Exception if $line2 is invalid
+	 *
+	 * @return Counter2
+	 */
+	protected function extractCounter2(string $line2) : Counter2
+	{
 		$pattern2 = '/'
 			. '([\d.]+)% KOed \/ '      // Percent Knocked Out
 			. '([\d.]+)% switched out/' // Percent Switched Out
 		;
 
 		try {
-			$matchResult1 = Regex::match($pattern1, $line1);
 			$matchResult2 = Regex::match($pattern2, $line2);
 
-			return new Counter(
-				$matchResult1->group(1),
-				(float) $matchResult1->group(2),
-				(float) $matchResult1->group(3),
-				(float) $matchResult1->group(4),
+			return new Counter2(
 				(float) $matchResult2->group(1),
 				(float) $matchResult2->group(2)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception(
-				'Counter lines are invalid.'
-				. 'Line 1: ' . $line1 . ', '
-				. 'Line 2: ' . $line2
-			);
+			throw new Exception('Counter line 2 is invalid: ' . $line2);
 		}
 	}
 
