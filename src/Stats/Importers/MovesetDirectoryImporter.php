@@ -78,23 +78,25 @@ class MovesetDirectoryImporter
 			$showdownFormatName = $formatRating->showdownFormatName();
 			$rating = $formatRating->rating();
 
-			// If the format is known, import the file.
-			if ($this->showdownFormatRepository->isImported($showdownFormatName)) {
-				// Create a stream to read the moveset file.
-				$stream = $client->request('GET', $link->getUri())->getBody();
-
-				// Get the format id from the Pokémon Showdown format name.
-				$formatId = $this->showdownFormatRepository->getFormatId($showdownFormatName);
-
-				// Import the moveset file.
-				$this->movesetFileImporter->import(
-					$stream,
-					$year,
-					$month,
-					$formatId,
-					$rating
-				);
+			// If this format is not meant to be imported, skip it.
+			if (!$this->showdownFormatRepository->isImported($showdownFormatName)) {
+				continue;
 			}
+
+			// Get the format id from the Pokémon Showdown format name.
+			$formatId = $this->showdownFormatRepository->getFormatId($showdownFormatName);
+
+			// Create a stream to read the moveset file.
+			$stream = $client->request('GET', $link->getUri())->getBody();
+
+			// Import the moveset file.
+			$this->movesetFileImporter->import(
+				$stream,
+				$year,
+				$month,
+				$formatId,
+				$rating
+			);
 		}
 	}
 }

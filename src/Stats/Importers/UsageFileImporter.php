@@ -144,8 +144,13 @@ class UsageFileImporter
 
 		while ($this->usageFileExtractor->isUsage($line = \GuzzleHttp\Psr7\readline($stream))) {
 			$usage = $this->usageFileExtractor->extractUsage($line);
-
 			$showdownPokemonName = $usage->showdownPokemonName();
+
+			// If this Pokémon is not meant to be imported, skip it.
+			if (!$this->showdownPokemonRepository->isImported($showdownCounterName)) {
+				continue;
+			}
+
 			$pokemonId = $this->showdownPokemonRepository->getPokemonId($showdownPokemonName);
 
 			if (!$usagePokemonExists) {

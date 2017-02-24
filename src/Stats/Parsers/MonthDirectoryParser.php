@@ -5,7 +5,12 @@ namespace Jp\Dex\Stats\Parsers;
 
 use GuzzleHttp\Client;
 use Jp\Dex\Stats\Importers\Extractors\FormatRatingExtractor;
+use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
 use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
+use Jp\Dex\Stats\Repositories\ShowdownItemRepository;
+use Jp\Dex\Stats\Repositories\ShowdownMoveRepository;
+use Jp\Dex\Stats\Repositories\ShowdownNatureRepository;
+use Jp\Dex\Stats\Repositories\ShowdownPokemonRepository;
 use Symfony\Component\DomCrawler\Crawler;
 
 class MonthDirectoryParser
@@ -25,6 +30,21 @@ class MonthDirectoryParser
 	/** @var ShowdownFormatRepository $showdownFormatRepository */
 	protected $showdownFormatRepository;
 
+	/** @var ShowdownPokemonRepository $showdownPokemonRepository */
+	protected $showdownPokemonRepository;
+
+	/** @var ShowdownAbilityRepository $showdownAbilityRepository */
+	protected $showdownAbilityRepository;
+
+	/** @var ShowdownItemRepository $showdownItemRepository */
+	protected $showdownItemRepository;
+
+	/** @var ShowdownNatureRepository $showdownNatureRepository */
+	protected $showdownNatureRepository;
+
+	/** @var ShowdownMoveRepository $showdownMoveRepository */
+	protected $showdownMoveRepository;
+
 	/**
 	 * Constructor.
 	 *
@@ -33,19 +53,34 @@ class MonthDirectoryParser
 	 * @param MovesetDirectoryParser $movesetDirectoryParser
 	 * @param FormatRatingExtractor $formatRatingExtractor
 	 * @param ShowdownFormatRepository $showdownFormatRepository
+	 * @param ShowdownPokemonRepository $showdownPokemonRepository
+	 * @param ShowdownAbilityRepository $showdownAbilityRepository
+	 * @param ShowdownItemRepository $showdownItemRepository
+	 * @param ShowdownNatureRepository $showdownNatureRepository
+	 * @param ShowdownMoveRepository $showdownMoveRepository
 	 */
 	public function __construct(
 		UsageFileParser $usageFileParser,
 		LeadsDirectoryParser $leadsDirectoryParser,
 		MovesetDirectoryParser $movesetDirectoryParser,
 		FormatRatingExtractor $formatRatingExtractor,
-		ShowdownFormatRepository $showdownFormatRepository
+		ShowdownFormatRepository $showdownFormatRepository,
+		ShowdownPokemonRepository $showdownPokemonRepository,
+		ShowdownAbilityRepository $showdownAbilityRepository,
+		ShowdownItemRepository $showdownItemRepository,
+		ShowdownNatureRepository $showdownNatureRepository,
+		ShowdownMoveRepository $showdownMoveRepository
 	) {
 		$this->usageFileParser = $usageFileParser;
 		$this->leadsDirectoryParser = $leadsDirectoryParser;
 		$this->movesetDirectoryParser = $movesetDirectoryParser;
 		$this->formatRatingExtractor = $formatRatingExtractor;
 		$this->showdownFormatRepository = $showdownFormatRepository;
+		$this->showdownPokemonRepository = $showdownPokemonRepository;
+		$this->showdownAbilityRepository = $showdownAbilityRepository;
+		$this->showdownItemRepository = $showdownItemRepository;
+		$this->showdownNatureRepository = $showdownNatureRepository;
+		$this->showdownMoveRepository = $showdownMoveRepository;
 	}
 
 	/**
@@ -95,5 +130,65 @@ class MonthDirectoryParser
 
 		// Parse each moveset file.
 		$this->movesetDirectoryParser->parse($url . 'moveset/');
+	}
+
+	/**
+	 * Return the list of unknown formats.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknownFormats() : array
+	{
+		return $this->showdownFormatRepository->getUnknown();
+	}
+
+	/**
+	 * Return the list of unknown Pokémon.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknownPokemon() : array
+	{
+		return $this->showdownPokemonRepository->getUnknown();
+	}
+
+	/**
+	 * Return the list of unknown abilities.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknownAbilities() : array
+	{
+		return $this->showdownAbilityRepository->getUnknown();
+	}
+
+	/**
+	 * Return the list of unknown items.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknownItems() : array
+	{
+		return $this->showdownItemRepository->getUnknown();
+	}
+
+	/**
+	 * Return the list of unknown natures.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknownNatures() : array
+	{
+		return $this->showdownNatureRepository->getUnknown();
+	}
+
+	/**
+	 * Return the list of unknown moves.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknownMoves() : array
+	{
+		return $this->showdownMoveRepository->getUnknown();
 	}
 }

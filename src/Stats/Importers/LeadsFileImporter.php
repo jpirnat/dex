@@ -118,8 +118,13 @@ class LeadsFileImporter
 
 		while ($this->leadsFileExtractor->isLeadUsage($line = \GuzzleHttp\Psr7\readline($stream))) {
 			$leadUsage = $this->leadsFileExtractor->extractLeadUsage($line);
-
 			$showdownPokemonName = $leadUsage->showdownPokemonName();
+
+			// If this Pokémon is not meant to be imported, skip it.
+			if (!$this->showdownPokemonRepository->isImported($showdownCounterName)) {
+				continue;
+			}
+
 			$pokemonId = $this->showdownPokemonRepository->getPokemonId($showdownPokemonName);
 
 			if (!$leadsPokemonExists) {

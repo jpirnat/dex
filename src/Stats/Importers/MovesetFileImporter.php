@@ -166,7 +166,13 @@ class MovesetFileImporter
 				return;
 			}
 			$showdownPokemonName = $this->movesetFileExtractor->extractPokemonName($line);
-			$pokemonId = $this->showdownPokemonRepository->getPokemonId($showdownPokemonName);
+			// If this Pokémon is not meant to be imported, skip it.
+			if ($this->showdownPokemonRepository->isImported($showdownPokemonName)) {
+				$pokemonId = $this->showdownPokemonRepository->getPokemonId($showdownPokemonName);
+				$isPokemonImported = true;
+			} else {
+				$isPokemonImported = false;
+			}
 			\GuzzleHttp\Psr7\readline($stream); // Separator.
 
 			// BLOCK 2 - General information.
@@ -185,7 +191,7 @@ class MovesetFileImporter
 				$viabilityCeiling = null;
 			}
 
-			if (!$movesetPokemonExists) {
+			if ($isPokemonImported && !$movesetPokemonExists) {
 				$this->movesetPokemonRepository->insert(
 					$year,
 					$month,
@@ -196,7 +202,7 @@ class MovesetFileImporter
 				);
 			}
 
-			if (!$movesetRatedPokemonExists) {
+			if ($isPokemonImported && !$movesetRatedPokemonExists) {
 				$this->movesetRatedPokemonRepository->insert(
 					$year,
 					$month,
@@ -226,7 +232,7 @@ class MovesetFileImporter
 
 				$abilityId = $this->showdownAbilityRepository->getAbilityId($showdownAbilityName);
 
-				if (!$movesetRatedPokemonExists) {
+				if ($isPokemonImported && !$movesetRatedPokemonExists) {
 					$this->movesetRatedAbilitiesRepository->insert(
 						$year,
 						$month,
@@ -258,7 +264,7 @@ class MovesetFileImporter
 
 				$itemId = $this->showdownItemRepository->getItemId($showdownItemName);
 
-				if (!$movesetRatedPokemonExists) {
+				if ($isPokemonImported && !$movesetRatedPokemonExists) {
 					$this->movesetRatedItemsRepository->insert(
 						$year,
 						$month,
@@ -286,11 +292,11 @@ class MovesetFileImporter
 				}
 
 				$spread = $this->movesetFileExtractor->extractSpread($line);
-
 				$showdownNatureName = $spread->showdownNatureName();
+
 				$natureId = $this->showdownNatureRepository->getNatureId($showdownNatureName);
 
-				if (!$movesetRatedPokemonExists) {
+				if ($isPokemonImported && !$movesetRatedPokemonExists) {
 					$this->movesetRatedSpreadsRepository->insert(
 						$year,
 						$month,
@@ -328,7 +334,7 @@ class MovesetFileImporter
 
 				$moveId = $this->showdownMoveRepository->getMoveId($showdownMoveName);
 
-				if (!$movesetRatedPokemonExists) {
+				if ($isPokemonImported && !$movesetRatedPokemonExists) {
 					$this->movesetRatedMovesRepository->insert(
 						$year,
 						$month,
@@ -360,7 +366,7 @@ class MovesetFileImporter
 
 				$teammateId = $this->showdownPokemonRepository->getPokemonId($showdownTeammateName);
 
-				if (!$movesetRatedPokemonExists) {
+				if ($isPokemonImported && !$movesetRatedPokemonExists) {
 					$this->movesetRatedTeammatesRepository->insert(
 						$year,
 						$month,
@@ -393,7 +399,7 @@ class MovesetFileImporter
 
 				$counterId = $this->showdownPokemonRepository->getPokemonId($showdownCounterName);
 
-				if (!$movesetRatedPokemonExists) {
+				if ($isPokemonImported && !$movesetRatedPokemonExists) {
 					$this->movesetRatedCountersRepository->insert(
 						$year,
 						$month,
