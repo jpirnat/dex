@@ -60,7 +60,7 @@ class MovesetPokemonRepository
 	 * @param int $formatId
 	 * @param int $pokemonId
 	 * @param int $rawCount
-	 * @param int $viabilityCeiling
+	 * @param int|null $viabilityCeiling
 	 *
 	 * @return bool
 	 */
@@ -70,13 +70,13 @@ class MovesetPokemonRepository
 		int $formatId,
 		int $pokemonId,
 		int $rawCount,
-		int $viabilityCeiling
+		?int $viabilityCeiling
 	) : bool {
-		if ($viabilityCeiling !== 0) {
-			$viabilityCeilingType = PDO::PARAM_INT;
-		} else {
-			$viabilityCeiling = null;
+		if ($viabilityCeiling === null) {
+			// Viability ceiling can be null.
 			$viabilityCeilingType = PDO::PARAM_NULL;
+		} else {
+			$viabilityCeilingType = PDO::PARAM_INT;
 		}
 
 		$stmt = $this->db->prepare(

@@ -171,6 +171,7 @@ class MovesetFileImporter
 				$pokemonId = $this->showdownPokemonRepository->getPokemonId($showdownPokemonName);
 				$isPokemonImported = true;
 			} else {
+				$pokemonId = 0;
 				$isPokemonImported = false;
 			}
 			\GuzzleHttp\Psr7\readline($stream); // Separator.

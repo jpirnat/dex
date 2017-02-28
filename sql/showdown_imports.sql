@@ -360,7 +360,7 @@ insert into `showdown_pokemon_to_import` (
 ("Magnemite", 81),
 ("Magneton", 82),
 ("Farfetch'd", 83),
-("Duduo", 84),
+("Doduo", 84),
 ("Dodrio", 85),
 ("Seel", 86),
 ("Dewgong", 87),
@@ -1143,6 +1143,8 @@ insert into `showdown_pokemon_to_import` (
 ("Lucario-Mega", 10069),
 ("Abomasnow-Mega", 10070),
 ("Arceus-Fairy", 10071),
+("Floette-Eternal", 10072),
+("Floette-Eternal-Flower", 10072),
 ("Meowstic-F", 10073),
 ("Pumpkaboo-Small", 10075),
 ("Pumpkaboo-Large", 10076),
@@ -1152,6 +1154,7 @@ insert into `showdown_pokemon_to_import` (
 ("Gourgeist-Super", 10080),
 ("Beedrill-Mega", 10081),
 ("Pidgeot-Mega", 10082),
+("Pikachu-Cosplay", 10083),
 ("Pikachu-Rock-Star", 10084),
 ("Pikachu-Belle", 10085),
 ("Pikachu-Pop-Star", 10086),
@@ -1196,6 +1199,7 @@ insert into `showdown_pokemon_to_import` (
 ("Marowak-Alola", 10126),
 ("Greninja-Ash", 10127),
 ("Zygarde-10%", 10129),
+("Zygarde-Complete", 10132),
 ("Oricorio-Pom-Pom", 10133),
 ("Oricorio-Pa'u", 10134),
 ("Oricorio-Sensu", 10135),
@@ -1235,6 +1239,9 @@ insert into `showdown_pokemon_to_ignore` (
 ("Kitsunoh"), # CAP
 ("Krilowatt"), # CAP
 ("Malaconda"), # CAP
+("Mimikyu-Busted"), # battle-only form
+("Minior-Meteor"), # alternate form name
+("Missingno."),
 ("Mollux"), # CAP
 ("Naviathan"), # CAP
 ("Necturna"), # CAP
@@ -1245,7 +1252,8 @@ insert into `showdown_pokemon_to_ignore` (
 ("Syclant"), # CAP
 ("Tomohawk"), # CAP
 ("Volkraken"), # CAP
-("Voodoom") # CAP
+("Voodoom"), # CAP
+("Wishiwashi-School") # battle-only form
 ;
 
 
@@ -1494,7 +1502,8 @@ insert into `showdown_abilities_to_ignore` (
 ("Mountaineer"), # CAP
 ("Other"),
 ("Persistent"), # CAP
-("Rebound") # CAP
+("Rebound"), # CAP
+("Struggle")
 ;
 
 
@@ -2642,6 +2651,7 @@ insert into `showdown_moves_to_import` (
 insert into `showdown_moves_to_ignore` (
 	`name`
 ) values
+("000 Volt Thunderbolt"), # broken name
 ("Nothing"),
 ("Other"),
 ("Paleo Wave"), # CAP

@@ -147,7 +147,7 @@ class UsageFileImporter
 			$showdownPokemonName = $usage->showdownPokemonName();
 
 			// If this Pokémon is not meant to be imported, skip it.
-			if (!$this->showdownPokemonRepository->isImported($showdownCounterName)) {
+			if (!$this->showdownPokemonRepository->isImported($showdownPokemonName)) {
 				continue;
 			}
 
