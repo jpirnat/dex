@@ -214,11 +214,6 @@ class MovesetFileImporter
 				);
 			}
 
-			// If the last line was viability ceiling, read and ignore the next line.
-			if ($viabilityCeiling !== null) {
-				\GuzzleHttp\Psr7\readline($stream); // Separator.
-			}
-
 			// BLOCK 3 - Abilities.
 
 			\GuzzleHttp\Psr7\readline($stream); // "Abilities"
