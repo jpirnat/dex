@@ -5,7 +5,7 @@ create table if not exists `formats`
 (
 `id` tinyint unsigned not null auto_increment,
 
-`name` varchar(30) not null,
+`identifier` varchar(20) not null,
 `generation` tinyint unsigned not null,
 `level` tinyint unsigned not null,
 `field_size` tinyint unsigned not null,
@@ -13,7 +13,7 @@ create table if not exists `formats`
 `in_battle_team_size` tinyint unsigned not null,
 
 primary key (`id`),
-unique key (`name`)
+unique key (`identifier`)
 ) engine = InnoDB;
 
 
