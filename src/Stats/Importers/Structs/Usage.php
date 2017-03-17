@@ -46,6 +46,30 @@ class Usage
 		int $real,
 		float $realPercent
 	) {
+		// Clamp usage percent between 0 and 100.
+		if ($usagePercent < 0) {
+			$usagePercent = 0;
+		}
+		if ($usagePercent > 100) {
+			$usagePercent = 100;
+		}
+
+		// Clamp raw percent between 0 and 100.
+		if ($rawPercent < 0) {
+			$rawPercent = 0;
+		}
+		if ($rawPercent > 100) {
+			$rawPercent = 100;
+		}
+
+		// Clamp real percent between 0 and 100.
+		if ($realPercent < 0) {
+			$realPercent = 0;
+		}
+		if ($realPercent > 100) {
+			$realPercent = 100;
+		}
+
 		$this->rank = $rank;
 		$this->showdownPokemonName = $showdownPokemonName;
 		$this->usagePercent = $usagePercent;

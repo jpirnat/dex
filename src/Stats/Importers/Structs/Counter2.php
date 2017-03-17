@@ -21,6 +21,22 @@ class Counter2
 		float $percentKnockedOut,
 		float $percentSwitchedOut
 	) {
+		// Clamp percent knocked out between 0 and 100.
+		if ($percentKnockedOut < 0) {
+			$percentKnockedOut = 0;
+		}
+		if ($percentKnockedOut > 100) {
+			$percentKnockedOut = 100;
+		}
+
+		// Clamp percent switched out between 0 and 100.
+		if ($percentSwitchedOut < 0) {
+			$percentSwitchedOut = 0;
+		}
+		if ($percentSwitchedOut > 100) {
+			$percentSwitchedOut = 100;
+		}
+
 		$this->percentKnockedOut = $percentKnockedOut;
 		$this->percentSwitchedOut = $percentSwitchedOut;
 	}

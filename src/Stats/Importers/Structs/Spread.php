@@ -51,6 +51,14 @@ class Spread
 		int $spe,
 		float $percent
 	) {
+		// Clamp percent between 0 and 100.
+		if ($percent < 0) {
+			$percent = 0;
+		}
+		if ($percent > 100) {
+			$percent = 100;
+		}
+
 		$this->showdownNatureName = $showdownNatureName;
 		$this->hp = $hp;
 		$this->atk = $atk;
