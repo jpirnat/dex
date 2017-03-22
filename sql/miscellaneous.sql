@@ -255,24 +255,6 @@ source "forms.sql";
 
 
 
-create table if not exists `ev_yields`
-(
-`pokemon_id` smallint unsigned not null,
-`stat_id` tinyint unsigned not null,
-
-`value` tinyint unsigned not null,
-
-primary key (
-	`pokemon_id`,
-	`stat_id`
-),
-foreign key (`pokemon_id`) references `pokemon` (`id`)
-	on delete restrict
-	on update cascade,
-foreign key (`stat_id`) references `stats` (`id`)
-	on delete restrict
-	on update cascade
-) engine = InnoDB;
 
 
 /*
