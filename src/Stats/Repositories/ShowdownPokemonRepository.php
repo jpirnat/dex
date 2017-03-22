@@ -64,6 +64,8 @@ class ShowdownPokemonRepository
 	 */
 	public function isIgnored(string $showdownPokemonName) : bool
 	{
+		// We use array_key_exists instead of isset because array_key_exists
+		// returns true for null values, whereas isset would return false.
 		return array_key_exists($showdownPokemonName, $this->pokemonToIgnore);
 	}
 
