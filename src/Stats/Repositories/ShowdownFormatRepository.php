@@ -8,13 +8,28 @@ use PDO;
 
 class ShowdownFormatRepository
 {
-	/** @var int[] $formatsToImport */
+	/**
+	 * Indexed by year, then month, then Showdown format name.
+	 * The value is the format id.
+	 *
+	 * @var int[][][] $formatsToImport
+	 */
 	protected $formatsToImport = [];
 
-	/** @var ?int[] $formatsToIgnore */
+	/**
+	 * Indexed by year, then month, then Showdown format name.
+	 * The value is the format id, or null.
+	 *
+	 * @var ?int[][][]
+	 */
 	protected $formatsToIgnore = [];
 
-	/** @var string[] $unknownFormats */
+	/**
+	 * Indexed by year, then month, then Showdown format name.
+	 * The value is the Showdown format name.
+	 *
+	 * @var string[][][]
+	 */
 	protected $unknownFormats = [];
 
 	/**
@@ -26,94 +41,123 @@ class ShowdownFormatRepository
 	{
 		$stmt = $db->prepare(
 			'SELECT
+				`year`,
+				`month`,
 				`name`,
 				`format_id`
 			FROM `showdown_formats_to_import`'
 		);
 		$stmt->execute();
-		$this->formatsToImport = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$this->formatsToImport
+				[$result['year']]
+				[$result['month']]
+				[$result['name']]
+			= $result['format_id'];
+		}
 
 		$stmt = $db->prepare(
 			'SELECT
+				`year`,
+				`month`,
 				`name`,
 				`format_id`
 			FROM `showdown_formats_to_ignore`'
 		);
 		$stmt->execute();
-		$this->formatsToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$this->formatsToIgnore
+				[$result['year']]
+				[$result['month']]
+				[$result['name']]
+			= $result['format_id'];
+		}
 	}
 
 	/**
 	 * Is the Pokémon Showdown format name known and imported?
 	 *
+	 * @param int $year
+	 * @param int $month
 	 * @param string $showdownFormatName
 	 *
 	 * @return bool
 	 */
-	public function isImported(string $showdownFormatName) : bool
+	public function isImported(int $year, int $month, string $showdownFormatName) : bool
 	{
-		return isset($this->formatsToImport[$showdownFormatName]);
+		return isset($this->formatsToImport[$year][$month][$showdownFormatName]);
 	}
 
 	/**
 	 * Is the Pokémon Showdown format name known and ignored?
 	 *
+	 * @param int $year
+	 * @param int $month
 	 * @param string $showdownFormatName
 	 *
 	 * @return bool
 	 */
-	public function isIgnored(string $showdownFormatName) : bool
+	public function isIgnored(int $year, int $month, string $showdownFormatName) : bool
 	{
 		// We use array_key_exists instead of isset because array_key_exists
 		// returns true for null values, whereas isset would return false.
-		return array_key_exists($showdownFormatName, $this->formatsToIgnore);
+		return
+			isset($this->formatsToIgnore[$year][$month])
+			&& array_key_exists($showdownFormatName, $this->formatsToIgnore[$year][$month])
+		;
 	}
 
 	/**
 	 * Is the Pokémon Showdown format name known?
 	 *
+	 * @param int $year
+	 * @param int $month
 	 * @param string $showdownFormatName
 	 *
 	 * @return bool
 	 */
-	public function isKnown(string $showdownFormatName) : bool
+	public function isKnown(int $year, int $month, string $showdownFormatName) : bool
 	{
-		return $this->isImported($showdownFormatName)
-			|| $this->isIgnored($showdownFormatName)
+		return $this->isImported($year, $month, $showdownFormatName)
+			|| $this->isIgnored($year, $month, $showdownFormatName)
 		;
 	}
 
 	/**
 	 * Add a Pokémon Showdown format name to the list of unknown formats.
 	 *
+	 * @param int $year
+	 * @param int $month
 	 * @param string $showdownFormatName
 	 *
 	 * @return void
 	 */
-	public function addUnknown(string $showdownFormatName) : void
+	public function addUnknown(int $year, int $month, string $showdownFormatName) : void
 	{
-		$this->unknownFormats[$showdownFormatName] = $showdownFormatName;
+		$this->unknownFormats[$year][$month][$showdownFormatName] = $showdownFormatName;
 	}
 
 	/**
 	 * Get the format id of a Pokémon Showdown format name.
 	 *
+	 * @param int $year
+	 * @param int $month
 	 * @param string $showdownFormatName
 	 *
 	 * @throws Exception if $showdownFormatName is not an imported name.
 	 *
 	 * @return int
 	 */
-	public function getFormatId(string $showdownFormatName) : int
+	public function getFormatId(int $year, int $month, string $showdownFormatName) : int
 	{
 		// If the format is imported, return the format id.
-		if ($this->isImported($showdownFormatName)) {
-			return $this->formatsToImport[$showdownFormatName];
+		if ($this->isImported($year, $month, $showdownFormatName)) {
+			return $this->formatsToImport[$year][$month][$showdownFormatName];
 		}
 
 		// If the format is not known, add it to the list of unknown formats.
-		if (!$this->isKnown($showdownFormatName)) {
-			$this->addUnknown($showdownFormatName);
+		if (!$this->isKnown($year, $month, $showdownFormatName)) {
+			$this->addUnknown($year, $month, $showdownFormatName);
 		}
 
 		throw new Exception('Format should not be imported: ' . $showdownFormatName);

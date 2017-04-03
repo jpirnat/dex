@@ -19,11 +19,17 @@ unique key (`identifier`)
 
 create table if not exists `showdown_formats_to_import`
 (
+`year` smallint unsigned not null,
+`month` tinyint unsigned not null,
 `name` varchar(50) not null,
 
 `format_id` tinyint unsigned not null,
 
-primary key (`name`),
+primary key (
+	`year`,
+	`month`,
+	`name`
+),
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade
@@ -32,11 +38,17 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `showdown_formats_to_ignore`
 (
+`year` smallint unsigned not null,
+`month` tinyint unsigned not null,
 `name` varchar(50) not null,
 
-`format_id` tinyint unsigned null,
+`format_id` tinyint unsigned null, # nullable
 
-primary key (`name`),
+primary key (
+	`year`,
+	`month`,
+	`name`
+),
 foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade

@@ -5,6 +5,7 @@ namespace Jp\Dex\Stats\Parsers;
 
 use GuzzleHttp\Client;
 use Jp\Dex\Stats\Importers\Extractors\FormatRatingExtractor;
+use Jp\Dex\Stats\Importers\Extractors\YearMonthExtractor;
 use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -12,6 +13,9 @@ class LeadsDirectoryParser
 {
 	/** @var LeadsFileParser $leadsFileParser */
 	protected $leadsFileParser;
+
+	/** @var YearMonthExtractor $yearMonthExtractor */
+	protected $yearMonthExtractor;
 
 	/** @var FormatRatingExtractor $formatRatingExtractor */
 	protected $formatRatingExtractor;
@@ -23,15 +27,18 @@ class LeadsDirectoryParser
 	 * Constructor.
 	 *
 	 * @param LeadsFileParser $leadsFileParser
+	 * @param YearMonthExtractor $yearMonthExtractor
 	 * @param FormatRatingExtractor $formatRatingExtractor
 	 * @param ShowdownFormatRepository $showdownFormatRepository
 	 */
 	public function __construct(
 		LeadsFileParser $leadsFileParser,
+		YearMonthExtractor $yearMonthExtractor,
 		FormatRatingExtractor $formatRatingExtractor,
 		ShowdownFormatRepository $showdownFormatRepository
 	) {
 		$this->leadsFileParser = $leadsFileParser;
+		$this->yearMonthExtractor = $yearMonthExtractor;
 		$this->formatRatingExtractor = $formatRatingExtractor;
 		$this->showdownFormatRepository = $showdownFormatRepository;
 	}
@@ -59,6 +66,11 @@ class LeadsDirectoryParser
 		// Get all the links on the leads directory page.
 		$links = $crawler->filterXPath('//a[contains(@href, ".txt")]')->links();
 
+		// Get the year and month from the moveset directory url.
+		$yearMonth = $this->yearMonthExtractor->extractYearMonth($url);
+		$year = $yearMonth->year();
+		$month = $yearMonth->month();
+
 		foreach ($links as $link) {
 			// Get the format and rating from the filename of the link.
 			$filename = pathinfo($link->getUri())['filename'];
@@ -66,8 +78,8 @@ class LeadsDirectoryParser
 			$showdownFormatName = $formatRating->showdownFormatName();
 
 			// If the format is unknown, add it to the list of unknown formats.
-			if (!$this->showdownFormatRepository->isKnown($showdownFormatName)) {
-				$this->showdownFormatRepository->addUnknown($showdownFormatName);
+			if (!$this->showdownFormatRepository->isKnown($year, $month, $showdownFormatName)) {
+				$this->showdownFormatRepository->addUnknown($year, $month, $showdownFormatName);
 			}
 
 			// Create a stream to read the moveset file.

@@ -36,7 +36,7 @@ class TypeRepository implements TypeRepositoryInterface
 			WHERE `hidden_power_index` = :hidden_power_index
 			LIMIT 1'
 		);
-		$stmt->bindValue(':index', $hiddenPowerIndex, PDO::PARAM_INT);
+		$stmt->bindValue(':hidden_power_index', $hiddenPowerIndex, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 

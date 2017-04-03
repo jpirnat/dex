@@ -79,12 +79,12 @@ class LeadsDirectoryImporter
 			$rating = $formatRating->rating();
 
 			// If this format is not meant to be imported, skip it.
-			if (!$this->showdownFormatRepository->isImported($showdownFormatName)) {
+			if (!$this->showdownFormatRepository->isImported($year, $month, $showdownFormatName)) {
 				continue;
 			}
 
 			// Get the format id from the Pokémon Showdown format name.
-			$formatId = $this->showdownFormatRepository->getFormatId($showdownFormatName);
+			$formatId = $this->showdownFormatRepository->getFormatId($year, $month, $showdownFormatName);
 
 			// Create a stream to read the leads file.
 			$stream = $client->request('GET', $link->getUri())->getBody();
