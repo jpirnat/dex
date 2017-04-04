@@ -1,14 +1,16 @@
 <?php
 declare(strict_types=1);
 
+use Dice\Dice;
+use Jp\Container\DiceContainer;
 use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
+use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
 use Jp\Dex\Stats\Repositories\ShowdownItemRepository;
 use Jp\Dex\Stats\Repositories\ShowdownMoveRepository;
 use Jp\Dex\Stats\Repositories\ShowdownNatureRepository;
 use Jp\Dex\Stats\Repositories\ShowdownPokemonRepository;
 
-$dice = new \Dice\Dice();
-
+$dice = new Dice();
 
 // PDO
 $host = getenv('DB_HOST');
@@ -32,36 +34,17 @@ $dice->addRule(PDO::class, $rule);
 
 
 // Repositories
-
-// ShowdownAbilityRepository
 $rule = [
 	'shared' => true,
 ];
 $dice->addRule(ShowdownAbilityRepository::class, $rule);
-
-// ShowdownItemRepository
-$rule = [
-	'shared' => true,
-];
+$dice->addRule(ShowdownFormatRepository::class, $rule);
 $dice->addRule(ShowdownItemRepository::class, $rule);
-
-// ShowdownMoveRepository
-$rule = [
-	'shared' => true,
-];
 $dice->addRule(ShowdownMoveRepository::class, $rule);
-
-// ShowdownNatureRepository
-$rule = [
-	'shared' => true,
-];
 $dice->addRule(ShowdownNatureRepository::class, $rule);
-
-// ShowdownPokemonRepository
-$rule = [
-	'shared' => true,
-];
 $dice->addRule(ShowdownPokemonRepository::class, $rule);
 
 
-return $dice;
+$container = new DiceContainer($dice);
+
+return $container;

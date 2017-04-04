@@ -17,7 +17,8 @@
         "level-2/dice": "^2.0",
         "spatie/regex": "^1.1",
         "guzzlehttp/guzzle": "^6.2",
-        "symfony/dom-crawler": "^3.1"
+        "symfony/dom-crawler": "^3.1",
+        "jpirnat/container": "^1.0"
     },
     "require-dev": {
         "vlucas/phpdotenv": "^2.4",

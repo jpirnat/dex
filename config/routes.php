@@ -6,12 +6,11 @@ $routes = [
 
 	// one pokemon in all ratings.
 	['GET', '/api/stats/usage/format/{format_identifier:[-\w]+}/pokemon/{pokemon_identifier:[-\w]+}', [
-		'controllerClass' => TODO::class,
-		'controllerMethod' => 'TODO',
-		'viewClass' => TODO::class,
-		'viewMethod' => 'TODO',
+		'controllerClass' => UsageController::class,
+		'controllerMethod' => 'getUsage',
+		'viewClass' => UsageView::class,
+		'viewMethod' => 'getUsage',
 		'middlewareClasses' => [
-			TODO::class,
 		],
 	]],
 
@@ -22,7 +21,6 @@ $routes = [
 		'viewClass' => TODO::class,
 		'viewMethod' => 'TODO',
 		'middlewareClasses' => [
-			TODO::class,
 		],
 	]],
 
@@ -33,7 +31,6 @@ $routes = [
 		'viewClass' => TODO::class,
 		'viewMethod' => 'TODO',
 		'middlewareClasses' => [
-			TODO::class,
 		],
 	]],
 
@@ -44,7 +41,6 @@ $routes = [
 		'viewClass' => TODO::class,
 		'viewMethod' => 'TODO',
 		'middlewareClasses' => [
-			TODO::class,
 		],
 	]],
 
@@ -55,7 +51,6 @@ $routes = [
 		'viewClass' => TODO::class,
 		'viewMethod' => 'TODO',
 		'middlewareClasses' => [
-			TODO::class,
 		],
 	]],
 
@@ -66,7 +61,6 @@ $routes = [
 		'viewClass' => TODO::class,
 		'viewMethod' => 'TODO',
 		'middlewareClasses' => [
-			TODO::class,
 		],
 	]],
 
@@ -77,7 +71,6 @@ $routes = [
 		'viewClass' => TODO::class,
 		'viewMethod' => 'TODO',
 		'middlewareClasses' => [
-			TODO::class,
 		],
 	]],
 
@@ -88,7 +81,8 @@ $routes = [
 		'viewClass' => TODO::class,
 		'viewMethod' => 'TODO',
 		'middlewareClasses' => [
-			TODO::class,
 		],
 	]],
 ];
+
+return $routes;
