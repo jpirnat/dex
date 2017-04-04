@@ -76,4 +76,68 @@ class MovesetRatedItemsRepository
 			return false;
 		}
 	}
+
+	/**
+	 * Get records by format and rating and Pokémon.
+	 *
+	 * @param int $formatId
+	 * @param int $rating
+	 * @param int $pokemonId
+	 *
+	 * @return array
+	 */
+	public function getByFormatAndRatingAndPokemon(
+		int $formatId,
+		int $rating,
+		int $pokemonId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`year`,
+				`month`,
+				`item_id`,
+				`percent`
+			FROM `moveset_rated_items`
+			WHERE `format_id` = :format_id
+				AND `rating` = :rating
+				AND `pokemon_id` = :pokemon_id'
+		);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	/**
+	 * Get records by format and Pokémon and item.
+	 *
+	 * @param int $formatId
+	 * @param int $pokemonId
+	 * @param int $itemId
+	 *
+	 * @return array
+	 */
+	public function getByFormatAndPokemonAndItem(
+		int $formatId,
+		int $pokemonId,
+		int $itemId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`year`,
+				`month`,
+				`rating`,
+				`percent`
+			FROM `moveset_rated_items`
+			WHERE `format_id` = :format_id
+				AND `pokemon_id` = :pokemon_id
+				AND `item_id` = :item_id'
+		);
+		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
+		$stmt->bindValue(':item_id', $itemId, PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
 }

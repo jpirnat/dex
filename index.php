@@ -24,4 +24,4 @@ if (getenv('ENVIRONMENT') !== 'production') {
 
 
 // Load dependency injection container.
-$dice = require __DIR__ . '/bootstrap/dependencies.php';
+$dice = require __DIR__ . '/config/dependencies.php';
