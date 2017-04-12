@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
+use Jp\Dex\Application\Controllers\LeadsController;
 use Jp\Dex\Application\Controllers\UsageController;
+use Jp\Dex\Presentation\LeadsView;
 use Jp\Dex\Presentation\UsageView;
 
 // Route definitions.
@@ -20,10 +22,10 @@ $routes = [
 
 	// one pokemon in all ratings
 	['GET', '/api/stats/leads/format/{format_identifier:[-\w]+}/pokemon/{pokemon_identifier:[-\w]+}', [
-		'controllerClass' => TODO::class,
-		'controllerMethod' => 'TODO',
-		'viewClass' => TODO::class,
-		'viewMethod' => 'TODO',
+		'controllerClass' => LeadsController::class,
+		'controllerMethod' => 'setUsage',
+		'viewClass' => LeadsView::class,
+		'viewMethod' => 'getUsage',
 		'middlewareClasses' => [
 		],
 	]],

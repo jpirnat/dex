@@ -3,12 +3,15 @@ declare(strict_types=1);
 
 use Dice\Dice;
 use Jp\Container\DiceContainer;
+use Jp\Dex\Application\Models\LeadsModel;
 use Jp\Dex\Application\Models\UsageModel;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Usage\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Usage\UsageRatedPokemonRepositoryInterface;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonRepository;
+use Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository;
 use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
 use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
@@ -49,6 +52,9 @@ $rule = [
 		PokemonRepositoryInterface::class => [
 			'instance' => DatabasePokemonRepository::class
 		],
+		LeadsRatedPokemonRepositoryInterface::class => [
+			'instance' => DatabaseLeadsRatedPokemonRepository::class
+		],
 		UsageRatedPokemonRepositoryInterface::class => [
 			'instance' => DatabaseUsageRatedPokemonRepository::class
 		],
@@ -60,6 +66,7 @@ $container->dice()->addRule('*', $rule);
 $rule = [
 	'shared' => true,
 ];
+$container->dice()->addRule(LeadsModel::class, $rule);
 $container->dice()->addRule(UsageModel::class, $rule);
 
 // Shared repositories

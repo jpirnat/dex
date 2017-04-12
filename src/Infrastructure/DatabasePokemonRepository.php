@@ -59,6 +59,13 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 			throw new Exception('No Pokémon exists with identifier ' . $identifier);
 		}
 
+		if ($result['gender_ratio'] !== null) {
+			$genderRatio = (float) $result['gender_ratio'];
+		} else {
+			// The Pokémon is genderless.
+			$genderRatio = null;
+		}
+
 		$pokemon = new Pokemon(
 			new PokemonId($result['id']),
 			$identifier,
@@ -68,7 +75,7 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 			new VersionGroupId($result['introduced_in_version_group_id']),
 			(float) $result['height_m'],
 			(float) $result['weight_kg'],
-			$result['gender_ratio']
+			$genderRatio
 		);
 
 		return $pokemon;

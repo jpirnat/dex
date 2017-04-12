@@ -6,6 +6,9 @@ namespace Jp\Dex\Stats\Repositories\Leads;
 use PDO;
 use PDOException;
 
+/**
+ * @deprecated
+ */
 class LeadsRatedPokemonRepository
 {
 	/** @var PDO $db */
@@ -110,33 +113,5 @@ class LeadsRatedPokemonRepository
 			// A record for this key already exists.
 			return false;
 		}
-	}
-
-	/**
-	 * Get records by format and Pokémon.
-	 *
-	 * @param FormatId $formatId
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return array
-	 */
-	public function getByFormatAndPokemon(
-		FormatId $formatId,
-		PokemonId $pokemonId
-	) : array {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`year`,
-				`month`,
-				`rating`,
-				`usage_percent`
-			FROM `leads_rated_pokemon`
-			WHERE `format_id` = :format_id
-				AND `pokemon_id` = :pokemon_id'
-		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 }
