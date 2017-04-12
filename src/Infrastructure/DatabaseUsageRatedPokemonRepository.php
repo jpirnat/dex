@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Repositories\Usage;
+namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -114,6 +114,7 @@ class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepository
 				`year`,
 				`month`,
 				`rating`,
+				`rank`,
 				`usage_percent`
 			FROM `usage_rated_pokemon`
 			WHERE `format_id` = :format_id
@@ -133,7 +134,7 @@ class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepository
 				$result['rating'],
 				$pokemonId,
 				$result['rank'],
-				$result['usage_percent']
+				(float) $result['usage_percent']
 			);
 		}
 

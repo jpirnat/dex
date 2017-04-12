@@ -58,7 +58,7 @@ class Pokemon
 		float $weightKg,
 		?float $genderRatio
 	) {
-		$this->pokemonId = $pokemonId;
+		$this->id = $pokemonId;
 		$this->identifier = $identifier;
 		$this->pokemonIdentifier = $pokemonIdentifier;
 		$this->speciesId = $speciesId;

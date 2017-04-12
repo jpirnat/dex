@@ -6,11 +6,12 @@ namespace Jp\Dex\Infrastructure;
 use Exception;
 use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\SpeciesId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-class DatabasePokemonRepository
+class DatabasePokemonRepository implements PokemonRepositoryInterface
 {
 	/** @var PDO $db */
 	protected $db;
@@ -65,8 +66,8 @@ class DatabasePokemonRepository
 			new SpeciesId($result['species_id']),
 			(bool) $result['is_default_pokemon'],
 			new VersionGroupId($result['introduced_in_version_group_id']),
-			$result['height_m'],
-			$result['weight_kg'],
+			(float) $result['height_m'],
+			(float) $result['weight_kg'],
 			$result['gender_ratio']
 		);
 

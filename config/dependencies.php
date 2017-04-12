@@ -3,10 +3,13 @@ declare(strict_types=1);
 
 use Dice\Dice;
 use Jp\Container\DiceContainer;
+use Jp\Dex\Application\Models\UsageModel;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Usage\UsageRatedPokemonRepositoryInterface;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonRepository;
+use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository;
 use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
 use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
 use Jp\Dex\Stats\Repositories\ShowdownItemRepository;
@@ -46,9 +49,18 @@ $rule = [
 		PokemonRepositoryInterface::class => [
 			'instance' => DatabasePokemonRepository::class
 		],
+		UsageRatedPokemonRepositoryInterface::class => [
+			'instance' => DatabaseUsageRatedPokemonRepository::class
+		],
 	],
 ];
 $container->dice()->addRule('*', $rule);
+
+// Models are shared between controllers and views.
+$rule = [
+	'shared' => true,
+];
+$container->dice()->addRule(UsageModel::class, $rule);
 
 // Shared repositories
 $rule = [

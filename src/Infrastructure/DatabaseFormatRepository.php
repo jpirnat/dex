@@ -6,10 +6,11 @@ namespace Jp\Dex\Infrastructure;
 use Exception;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use PDO;
 
-class DatabaseFormatRepository
+class DatabaseFormatRepository implements FormatRepositoryInterface
 {
 	/** @var PDO $db */
 	protected $db;

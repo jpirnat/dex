@@ -1,13 +1,17 @@
 <?php
 declare(strict_types=1);
 
+use Jp\Dex\Application\Controllers\UsageController;
+use Jp\Dex\Presentation\UsageView;
+
+// Route definitions.
 $routes = [
 	// API
 
 	// one pokemon in all ratings.
 	['GET', '/api/stats/usage/format/{format_identifier:[-\w]+}/pokemon/{pokemon_identifier:[-\w]+}', [
 		'controllerClass' => UsageController::class,
-		'controllerMethod' => 'getUsage',
+		'controllerMethod' => 'setUsage',
 		'viewClass' => UsageView::class,
 		'viewMethod' => 'getUsage',
 		'middlewareClasses' => [
@@ -83,6 +87,43 @@ $routes = [
 		'middlewareClasses' => [
 		],
 	]],
+
+
+	['GET', '/404', [
+		'controllerClass' => TODO::class,
+		'controllerMethod' => 'TODO',
+		'viewClass' => TODO::class,
+		'viewMethod' => 'TODO',
+		'middlewareClasses' => [
+		],
+	]],
+
+	['GET', '/405', [
+		'controllerClass' => TODO::class,
+		'controllerMethod' => 'TODO',
+		'viewClass' => TODO::class,
+		'viewMethod' => 'TODO',
+		'middlewareClasses' => [
+		],
+	]],
+
+	['GET', '/error', [
+		'controllerClass' => TODO::class,
+		'controllerMethod' => 'TODO',
+		'viewClass' => TODO::class,
+		'viewMethod' => 'TODO',
+		'middlewareClasses' => [
+		],
+	]],
 ];
 
-return $routes;
+// Route dispatching.
+$routeDispatcher = \FastRoute\simpleDispatcher(
+	function (\FastRoute\RouteCollector $routeCollector) use ($routes) {
+		foreach ($routes as $route) {
+			$routeCollector->addRoute(...$route);
+		}
+	}
+);
+
+return $routeDispatcher;
