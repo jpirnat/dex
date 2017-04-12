@@ -81,16 +81,16 @@ class MovesetRatedMovesRepository
 	/**
 	 * Get records by format and rating and Pokémon.
 	 *
-	 * @param int $formatId
+	 * @param FormatId $formatId
 	 * @param int $rating
-	 * @param int $pokemonId
+	 * @param PokemonId $pokemonId
 	 *
 	 * @return array
 	 */
 	public function getByFormatAndRatingAndPokemon(
-		int $formatId,
+		FormatId $formatId,
 		int $rating,
-		int $pokemonId
+		PokemonId $pokemonId
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -103,9 +103,9 @@ class MovesetRatedMovesRepository
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
@@ -113,16 +113,16 @@ class MovesetRatedMovesRepository
 	/**
 	 * Get records by format and Pokémon and move.
 	 *
-	 * @param int $formatId
-	 * @param int $pokemonId
-	 * @param int $moveId
+	 * @param FormatId $formatId
+	 * @param PokemonId $pokemonId
+	 * @param MoveId $moveId
 	 *
 	 * @return array
 	 */
 	public function getByFormatAndPokemonAndMove(
-		int $formatId,
-		int $pokemonId,
-		int $moveId
+		FormatId $formatId,
+		PokemonId $pokemonId,
+		MoveId $moveId
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -135,9 +135,9 @@ class MovesetRatedMovesRepository
 				AND `pokemon_id` = :pokemon_id
 				AND `move_id` = :move_id'
 		);
-		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}

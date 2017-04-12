@@ -115,14 +115,14 @@ class LeadsRatedPokemonRepository
 	/**
 	 * Get records by format and Pokémon.
 	 *
-	 * @param int $formatId
-	 * @param int $pokemonId
+	 * @param FormatId $formatId
+	 * @param PokemonId $pokemonId
 	 *
 	 * @return array
 	 */
 	public function getByFormatAndPokemon(
-		int $formatId,
-		int $pokemonId
+		FormatId $formatId,
+		PokemonId $pokemonId
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -134,8 +134,8 @@ class LeadsRatedPokemonRepository
 			WHERE `format_id` = :format_id
 				AND `pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
