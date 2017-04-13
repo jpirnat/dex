@@ -6,6 +6,9 @@ namespace Jp\Dex\Stats\Repositories\Moveset;
 use PDO;
 use PDOException;
 
+/**
+ * @deprecated
+ */
 class MovesetRatedAbilitiesRepository
 {
 	/** @var PDO $db */
@@ -75,69 +78,5 @@ class MovesetRatedAbilitiesRepository
 			// A record for this key already exists.
 			return false;
 		}
-	}
-
-	/**
-	 * Get records by format and rating and Pokémon.
-	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return array
-	 */
-	public function getByFormatAndRatingAndPokemon(
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId
-	) : array {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`year`,
-				`month`,
-				`ability_id`,
-				`percent`
-			FROM `moveset_rated_abilities`
-			WHERE `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id'
-		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-		return $stmt->fetchAll(PDO::FETCH_ASSOC);
-	}
-
-	/**
-	 * Get records by format and Pokémon and ability.
-	 *
-	 * @param FormatId $formatId
-	 * @param PokemonId $pokemonId
-	 * @param AbilityId $abilityId
-	 *
-	 * @return array
-	 */
-	public function getByFormatAndPokemonAndAbility(
-		FormatId $formatId,
-		PokemonId $pokemonId,
-		AbilityId $abilityId
-	) : array {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`year`,
-				`month`,
-				`rating`,
-				`percent`
-			FROM `moveset_rated_abilities`
-			WHERE `format_id` = :format_id
-				AND `pokemon_id` = :pokemon_id
-				AND `ability_id` = :ability_id'
-		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 }

@@ -1,9 +1,15 @@
 <?php
 declare(strict_types=1);
 
+use Jp\Dex\Application\Controllers\AbilitiesController;
+use Jp\Dex\Application\Controllers\ItemsController;
 use Jp\Dex\Application\Controllers\LeadsController;
+use Jp\Dex\Application\Controllers\MovesController;
 use Jp\Dex\Application\Controllers\UsageController;
+use Jp\Dex\Presentation\AbilitiesView;
+use Jp\Dex\Presentation\ItemsView;
 use Jp\Dex\Presentation\LeadsView;
+use Jp\Dex\Presentation\MovesView;
 use Jp\Dex\Presentation\UsageView;
 
 // Route definitions.
@@ -32,60 +38,60 @@ $routes = [
 
 	// all abilities in one rating
 	['GET', '/api/stats/abilities/format/{format_identifier:[-\w]+}/rating/{rating:\d+}/pokemon/{pokemon_identifier:[-\w]+}', [
-		'controllerClass' => TODO::class,
-		'controllerMethod' => 'TODO',
-		'viewClass' => TODO::class,
-		'viewMethod' => 'TODO',
+		'controllerClass' => AbilitiesController::class,
+		'controllerMethod' => 'setRatingUsage',
+		'viewClass' => AbilitiesView::class,
+		'viewMethod' => 'getUsage',
 		'middlewareClasses' => [
 		],
 	]],
 
 	// one ability in all ratings
 	['GET', '/api/stats/abilities/format/{format_identifier:[-\w]+}/pokemon/{pokemon_identifier:[-\w]+}/ability/{ability_identifier:[-\w]+}', [
-		'controllerClass' => TODO::class,
-		'controllerMethod' => 'TODO',
-		'viewClass' => TODO::class,
-		'viewMethod' => 'TODO',
+		'controllerClass' => AbilitiesController::class,
+		'controllerMethod' => 'setAbilityUsage',
+		'viewClass' => AbilitiesView::class,
+		'viewMethod' => 'getUsage',
 		'middlewareClasses' => [
 		],
 	]],
 
 	// all items in one rating
 	['GET', '/api/stats/items/format/{format_identifier:[-\w]+}/rating/{rating:\d+}/pokemon/{pokemon_identifier:[-\w]+}', [
-		'controllerClass' => TODO::class,
-		'controllerMethod' => 'TODO',
-		'viewClass' => TODO::class,
-		'viewMethod' => 'TODO',
+		'controllerClass' => ItemsController::class,
+		'controllerMethod' => 'setRatingUsage',
+		'viewClass' => ItemsView::class,
+		'viewMethod' => 'getUsage',
 		'middlewareClasses' => [
 		],
 	]],
 
 	// one item in all ratings
 	['GET', '/api/stats/items/format/{format_identifier:[-\w]+}/pokemon/{pokemon_identifier:[-\w]+}/item/{item_identifier:[-\w]+}', [
-		'controllerClass' => TODO::class,
-		'controllerMethod' => 'TODO',
-		'viewClass' => TODO::class,
-		'viewMethod' => 'TODO',
+		'controllerClass' => ItemsController::class,
+		'controllerMethod' => 'setItemUsage',
+		'viewClass' => ItemsView::class,
+		'viewMethod' => 'getUsage',
 		'middlewareClasses' => [
 		],
 	]],
 
 	// all moves in one rating
 	['GET', '/api/stats/moves/format/{format_identifier:[-\w]+}/rating/{rating:\d+}/pokemon/{pokemon_identifier:[-\w]+}', [
-		'controllerClass' => TODO::class,
-		'controllerMethod' => 'TODO',
-		'viewClass' => TODO::class,
-		'viewMethod' => 'TODO',
+		'controllerClass' => MovesController::class,
+		'controllerMethod' => 'setRatingUsage',
+		'viewClass' => MovesView::class,
+		'viewMethod' => 'getUsage',
 		'middlewareClasses' => [
 		],
 	]],
 
 	// one move in all ratings
-	['GET', '/api/move/items/format/{format_identifier:[-\w]+}/pokemon/{pokemon_identifier:[-\w]+}/move/{move_identifier:[-\w]+}', [
-		'controllerClass' => TODO::class,
-		'controllerMethod' => 'TODO',
-		'viewClass' => TODO::class,
-		'viewMethod' => 'TODO',
+	['GET', '/api/stats/moves/format/{format_identifier:[-\w]+}/pokemon/{pokemon_identifier:[-\w]+}/move/{move_identifier:[-\w]+}', [
+		'controllerClass' => MovesController::class,
+		'controllerMethod' => 'setMoveUsage',
+		'viewClass' => MovesView::class,
+		'viewMethod' => 'getUsage',
 		'middlewareClasses' => [
 		],
 	]],
