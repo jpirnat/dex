@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Usage;
+namespace Jp\Dex\Domain\Stats;
 
-use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
-class MovesetRatedAbility
+class MovesetRatedMove
 {
 	/** @var int $year */
 	protected $year;
@@ -24,8 +24,8 @@ class MovesetRatedAbility
 	/** @var PokemonId $pokemonId */
 	protected $pokemonId;
 
-	/** @var AbilityId $abilityId */
-	protected $abilityId;
+	/** @var MoveId $moveId */
+	protected $moveId;
 
 	/** @var float $percent */
 	protected $percent;
@@ -38,7 +38,7 @@ class MovesetRatedAbility
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
-	 * @param AbilityId $abilityId
+	 * @param MoveId $moveId
 	 * @param float $percent
 	 */
 	public function __construct(
@@ -47,7 +47,7 @@ class MovesetRatedAbility
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		AbilityId $abilityId,
+		MoveId $moveId,
 		float $percent
 	) {
 		// TODO: validation
@@ -57,7 +57,7 @@ class MovesetRatedAbility
 		$this->formatId = $formatId;
 		$this->rating = $rating;
 		$this->pokemonId = $pokemonId;
-		$this->abilityId = $abilityId;
+		$this->moveId = $moveId;
 		$this->percent = $percent;
 	}
 
@@ -113,13 +113,13 @@ class MovesetRatedAbility
 	}
 
 	/**
-	 * Get the ability id.
+	 * Get the move id.
 	 *
-	 * @return AbilityId
+	 * @return MoveId
 	 */
-	public function abilityId() : AbilityId
+	public function moveId() : MoveId
 	{
-		return $this->abilityId;
+		return $this->moveId;
 	}
 
 	/**

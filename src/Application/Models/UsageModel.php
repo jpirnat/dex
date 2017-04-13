@@ -5,8 +5,8 @@ namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Usage\UsageRatedPokemon;
-use Jp\Dex\Domain\Usage\UsageRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\UsageRatedPokemon;
+use Jp\Dex\Domain\Stats\UsageRatedPokemonRepositoryInterface;
 
 class UsageModel
 {

@@ -6,8 +6,8 @@ namespace Jp\Dex\Infrastructure;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Usage\MovesetRatedMove;
-use Jp\Dex\Domain\Usage\MovesetRatedMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\MovesetRatedMove;
+use Jp\Dex\Domain\Stats\MovesetRatedMoveRepositoryInterface;
 use PDO;
 
 class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryInterface

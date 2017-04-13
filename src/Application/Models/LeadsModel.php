@@ -5,8 +5,8 @@ namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Usage\LeadsRatedPokemon;
-use Jp\Dex\Domain\Usage\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\LeadsRatedPokemon;
+use Jp\Dex\Domain\Stats\LeadsRatedPokemonRepositoryInterface;
 
 class LeadsModel
 {

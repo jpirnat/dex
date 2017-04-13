@@ -5,8 +5,8 @@ namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Usage\LeadsRatedPokemon;
-use Jp\Dex\Domain\Usage\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\LeadsRatedPokemon;
+use Jp\Dex\Domain\Stats\LeadsRatedPokemonRepositoryInterface;
 use PDO;
 
 class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepositoryInterface

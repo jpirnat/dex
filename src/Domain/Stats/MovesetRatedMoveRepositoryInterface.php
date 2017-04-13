@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Usage;
+namespace Jp\Dex\Domain\Stats;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Moves\MoveId;
