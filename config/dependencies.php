@@ -7,6 +7,7 @@ use Jp\Dex\Application\Models\AbilitiesModel;
 use Jp\Dex\Application\Models\ItemsModel;
 use Jp\Dex\Application\Models\LeadsModel;
 use Jp\Dex\Application\Models\MovesModel;
+use Jp\Dex\Application\Models\NotFoundModel;
 use Jp\Dex\Application\Models\UsageModel;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
@@ -58,6 +59,33 @@ $rule = [
 ];
 $container->dice()->addRule(PDO::class, $rule);
 
+
+// Twig
+$rule = [
+	'constructParams' => [
+		__DIR__ . '/../resources/templates',
+	],
+	'shared' => true,
+];
+$dice->addRule(Twig_Loader_Filesystem::class, $rule);
+
+$rule = [
+	'substitutions' => [
+		Twig_LoaderInterface::class => [
+			'instance' => Twig_Loader_Filesystem::class
+		],
+	],
+	'shared' => true,
+	'constructParams' => [
+		[
+			'cache' => __DIR__ . '/../resources/templates/cache',
+			'auto_reload' => true,
+		]
+	],
+];
+$dice->addRule(Twig_Environment::class, $rule);
+
+
 // Repositories
 $rule = [
 	'substitutions' => [
@@ -103,6 +131,7 @@ $container->dice()->addRule(AbilitiesModel::class, $rule);
 $container->dice()->addRule(ItemsModel::class, $rule);
 $container->dice()->addRule(LeadsModel::class, $rule);
 $container->dice()->addRule(MovesModel::class, $rule);
+$container->dice()->addRule(NotFoundModel::class, $rule);
 $container->dice()->addRule(UsageModel::class, $rule);
 
 // Shared repositories

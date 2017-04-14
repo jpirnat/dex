@@ -5,11 +5,13 @@ use Jp\Dex\Application\Controllers\AbilitiesController;
 use Jp\Dex\Application\Controllers\ItemsController;
 use Jp\Dex\Application\Controllers\LeadsController;
 use Jp\Dex\Application\Controllers\MovesController;
+use Jp\Dex\Application\Controllers\NotFoundController;
 use Jp\Dex\Application\Controllers\UsageController;
 use Jp\Dex\Presentation\AbilitiesView;
 use Jp\Dex\Presentation\ItemsView;
 use Jp\Dex\Presentation\LeadsView;
 use Jp\Dex\Presentation\MovesView;
+use Jp\Dex\Presentation\NotFoundView;
 use Jp\Dex\Presentation\UsageView;
 
 // Route definitions.
@@ -98,10 +100,10 @@ $routes = [
 
 
 	['GET', '/404', [
-		'controllerClass' => TODO::class,
-		'controllerMethod' => 'TODO',
-		'viewClass' => TODO::class,
-		'viewMethod' => 'TODO',
+		'controllerClass' => NotFoundController::class,
+		'controllerMethod' => 'get404',
+		'viewClass' => NotFoundView::class,
+		'viewMethod' => 'get404',
 		'middlewareClasses' => [
 		],
 	]],

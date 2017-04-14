@@ -3,3 +3,4 @@
 /.env
 /ignore
 /public/images
+/resources/templates/cache

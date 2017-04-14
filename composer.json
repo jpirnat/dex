@@ -21,7 +21,8 @@
         "jpirnat/container": "^1.0",
         "zendframework/zend-diactoros": "^1.4",
         "nikic/fast-route": "^1.2",
-        "jpirnat/middleware": "^2.0"
+        "jpirnat/middleware": "^2.0",
+        "twig/twig": "^2.3"
     },
     "require-dev": {
         "vlucas/phpdotenv": "^2.4",
