@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Calculators;
+namespace Jp\Dex\Domain\Calculators;
 
-use Jp\Dex\TypeRepositoryInterface;
+use Jp\Dex\Domain\Types\Type;
+use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 class HiddenPowerCalculator
 {
@@ -15,9 +16,8 @@ class HiddenPowerCalculator
 	 *
 	 * @param TypeRepositoryInterface $typeRepository
 	 */
-	public function __construct(
-		TypeRepositoryInterface $typeRepository
-	) {
+	public function __construct(TypeRepositoryInterface $typeRepository)
+	{
 		$this->typeRepository = $typeRepository;
 	}
 
@@ -29,17 +29,15 @@ class HiddenPowerCalculator
 	 *
 	 * @return Type
 	 */
-	public function type2(
-		int $atk,
-		int $def
-	) : int {
+	public function type2(int $atk, int $def) : Type
+	{
 		$hiddenPowerIndex = 4 * $atk % 4 + $def % 4;
 
 		return $this->typeRepository->getByHiddenPowerIndex($hiddenPowerIndex);
 	}
 
 	/**
-	 * Calculate a Pokémon's Hidden Power type in Generations III through V.
+	 * Calculate a Pokémon's Hidden Power type in Generations III through VII.
 	 *
 	 * @param int $hp
 	 * @param int $atk
@@ -57,7 +55,7 @@ class HiddenPowerCalculator
 		int $spe,
 		int $spa,
 		int $spd
-	) : int {
+	) : Type {
 		$a = $hp % 2;
 		$b = $atk % 2;
 		$c = $def % 2;
@@ -65,7 +63,7 @@ class HiddenPowerCalculator
 		$e = $spa % 2;
 		$f = $spd % 2;
 
-		$hiddenPowerIndex = floor(($a + 2 * $b + 4 * $c + 8 * $d + 16 * $e + 32 * $f) * 15 / 63);
+		$hiddenPowerIndex = (int) floor(($a + 2 * $b + 4 * $c + 8 * $d + 16 * $e + 32 * $f) * 15 / 63);
 
 		return $this->typeRepository->getByHiddenPowerIndex($hiddenPowerIndex);
 	}

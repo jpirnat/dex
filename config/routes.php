@@ -102,6 +102,21 @@ $routes = [
 	]],
 
 
+
+	['GET', '/', [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'index',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+		],
+	]],
+
+
+
+	// Errors
+
 	['GET', '/404', [
 		'controllerClass' => NotFoundController::class,
 		'controllerMethod' => 'get404',
