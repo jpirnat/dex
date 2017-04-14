@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 use Dice\Dice;
 use Jp\Container\DiceContainer;
+use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Models\AbilitiesModel;
+use Jp\Dex\Application\Models\ErrorModel;
 use Jp\Dex\Application\Models\ItemsModel;
 use Jp\Dex\Application\Models\LeadsModel;
 use Jp\Dex\Application\Models\MovesModel;
@@ -85,6 +87,15 @@ $rule = [
 ];
 $dice->addRule(Twig_Environment::class, $rule);
 
+// Middleware
+$environment = getenv('ENVIRONMENT');
+$rule = [
+	'constructParams' => [
+		$environment,
+	]
+];
+$container->dice()->addRule(HtmlErrorMiddleware::class, $rule);
+
 
 // Repositories
 $rule = [
@@ -128,6 +139,7 @@ $rule = [
 	'shared' => true,
 ];
 $container->dice()->addRule(AbilitiesModel::class, $rule);
+$container->dice()->addRule(ErrorModel::class, $rule);
 $container->dice()->addRule(ItemsModel::class, $rule);
 $container->dice()->addRule(LeadsModel::class, $rule);
 $container->dice()->addRule(MovesModel::class, $rule);

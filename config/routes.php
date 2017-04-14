@@ -2,12 +2,15 @@
 declare(strict_types=1);
 
 use Jp\Dex\Application\Controllers\AbilitiesController;
+use Jp\Dex\Application\Controllers\ErrorController;
 use Jp\Dex\Application\Controllers\ItemsController;
 use Jp\Dex\Application\Controllers\LeadsController;
 use Jp\Dex\Application\Controllers\MovesController;
 use Jp\Dex\Application\Controllers\NotFoundController;
 use Jp\Dex\Application\Controllers\UsageController;
+use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Presentation\AbilitiesView;
+use Jp\Dex\Presentation\ErrorView;
 use Jp\Dex\Presentation\ItemsView;
 use Jp\Dex\Presentation\LeadsView;
 use Jp\Dex\Presentation\MovesView;
@@ -105,23 +108,25 @@ $routes = [
 		'viewClass' => NotFoundView::class,
 		'viewMethod' => 'get404',
 		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
 		],
 	]],
 
 	['GET', '/405', [
-		'controllerClass' => TODO::class,
-		'controllerMethod' => 'TODO',
-		'viewClass' => TODO::class,
-		'viewMethod' => 'TODO',
+		'controllerClass' => ErrorController::class,
+		'controllerMethod' => 'getError',
+		'viewClass' => ErrorView::class,
+		'viewMethod' => 'getError',
 		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
 		],
 	]],
 
 	['GET', '/error', [
-		'controllerClass' => TODO::class,
-		'controllerMethod' => 'TODO',
-		'viewClass' => TODO::class,
-		'viewMethod' => 'TODO',
+		'controllerClass' => ErrorController::class,
+		'controllerMethod' => 'getError',
+		'viewClass' => ErrorView::class,
+		'viewMethod' => 'getError',
 		'middlewareClasses' => [
 		],
 	]],
