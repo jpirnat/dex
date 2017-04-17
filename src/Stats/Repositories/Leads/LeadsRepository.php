@@ -6,6 +6,9 @@ namespace Jp\Dex\Stats\Repositories\Leads;
 use PDO;
 use PDOException;
 
+/**
+ * @deprecated
+ */
 class LeadsRepository
 {
 	/** @var PDO $db */

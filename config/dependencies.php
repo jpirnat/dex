@@ -16,7 +16,9 @@ use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
 use Jp\Dex\Domain\Stats\MovesetRatedAbilityRepositoryInterface;
 use Jp\Dex\Domain\Stats\MovesetRatedItemRepositoryInterface;
 use Jp\Dex\Domain\Stats\MovesetRatedMoveRepositoryInterface;
@@ -27,7 +29,9 @@ use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use Jp\Dex\Infrastructure\DatabaseAbilityRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
 use Jp\Dex\Infrastructure\DatabaseItemRepository;
+use Jp\Dex\Infrastructure\DatabaseLeadsPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository;
+use Jp\Dex\Infrastructure\DatabaseLeadsRepository;
 use Jp\Dex\Infrastructure\DatabaseMoveRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedAbilityRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedItemRepository;
@@ -121,8 +125,14 @@ $rule = [
 		PokemonRepositoryInterface::class => [
 			'instance' => DatabasePokemonRepository::class
 		],
+		LeadsPokemonRepositoryInterface::class => [
+			'instance' => DatabaseLeadsPokemonRepository::class
+		],
 		LeadsRatedPokemonRepositoryInterface::class => [
 			'instance' => DatabaseLeadsRatedPokemonRepository::class
+		],
+		LeadsRepositoryInterface::class => [
+			'instance' => DatabaseLeadsRepository::class
 		],
 		MovesetRatedAbilityRepositoryInterface::class => [
 			'instance' => DatabaseMovesetRatedAbilityRepository::class
