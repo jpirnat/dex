@@ -1,12 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Stats;
+namespace Jp\Dex\Domain\Stats\Usage;
 
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Pokemon\PokemonId;
 
-class LeadsRatedPokemon
+class UsageRated
 {
 	/** @var int $year */
 	protected $year;
@@ -20,14 +19,8 @@ class LeadsRatedPokemon
 	/** @var int $rating */
 	protected $rating;
 
-	/** @var PokemonId $pokemonId */
-	protected $pokemonId;
-
-	/** @var int $rank */
-	protected $rank;
-
-	/** @var float $usagePercent */
-	protected $usagePercent;
+	/** @var float $averageWeightPerTeam */
+	protected $averageWeightPerTeam;
 
 	/**
 	 * Constructor.
@@ -36,18 +29,14 @@ class LeadsRatedPokemon
 	 * @param int $month
 	 * @param FormatId $formatId
 	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param int $rank
-	 * @param float $usagePercent
+	 * @param float $averageWeightPerTeam
 	 */
 	public function __construct(
 		int $year,
 		int $month,
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId,
-		int $rank,
-		float $usagePercent
+		float $averageWeightPerTeam
 	) {
 		// TODO: validation
 
@@ -55,9 +44,7 @@ class LeadsRatedPokemon
 		$this->month = $month;
 		$this->formatId = $formatId;
 		$this->rating = $rating;
-		$this->pokemonId = $pokemonId;
-		$this->rank = $rank;
-		$this->usagePercent = $usagePercent;
+		$this->averageWeightPerTeam = $averageWeightPerTeam;
 	}
 
 	/**
@@ -101,32 +88,12 @@ class LeadsRatedPokemon
 	}
 
 	/**
-	 * Get the Pokémon id.
-	 *
-	 * @return PokemonId
-	 */
-	public function pokemonId() : PokemonId
-	{
-		return $this->pokemonId;
-	}
-
-	/**
-	 * Get the rank.
-	 *
-	 * @return int
-	 */
-	public function rank() : int
-	{
-		return $this->rank;
-	}
-
-	/**
-	 * Get the usage percent.
+	 * Get the average weight per team.
 	 *
 	 * @return float
 	 */
-	public function usagePercent() : float
+	public function averageWeightPerTeam() : float
 	{
-		return $this->usagePercent;
+		return $this->averageWeightPerTeam;
 	}
 }

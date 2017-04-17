@@ -20,7 +20,10 @@ use Jp\Dex\Domain\Stats\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\MovesetRatedAbilityRepositoryInterface;
 use Jp\Dex\Domain\Stats\MovesetRatedItemRepositoryInterface;
 use Jp\Dex\Domain\Stats\MovesetRatedMoveRepositoryInterface;
-use Jp\Dex\Domain\Stats\UsageRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use Jp\Dex\Infrastructure\DatabaseAbilityRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
 use Jp\Dex\Infrastructure\DatabaseItemRepository;
@@ -30,7 +33,10 @@ use Jp\Dex\Infrastructure\DatabaseMovesetRatedAbilityRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedItemRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedMoveRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonRepository;
+use Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository;
+use Jp\Dex\Infrastructure\DatabaseUsageRatedRepository;
+use Jp\Dex\Infrastructure\DatabaseUsageRepository;
 use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
 use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
 use Jp\Dex\Stats\Repositories\ShowdownItemRepository;
@@ -127,8 +133,17 @@ $rule = [
 		MovesetRatedMoveRepositoryInterface::class => [
 			'instance' => DatabaseMovesetRatedMoveRepository::class
 		],
+		UsagePokemonRepositoryInterface::class => [
+			'instance' => DatabaseUsagePokemonRepository::class
+		],
 		UsageRatedPokemonRepositoryInterface::class => [
 			'instance' => DatabaseUsageRatedPokemonRepository::class
+		],
+		UsageRatedRepositoryInterface::class => [
+			'instance' => DatabaseUsageRatedRepository::class
+		],
+		UsageRepositoryInterface::class => [
+			'instance' => DatabaseUsageRepository::class
 		],
 	],
 ];

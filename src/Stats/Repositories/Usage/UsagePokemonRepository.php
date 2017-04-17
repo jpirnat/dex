@@ -6,6 +6,9 @@ namespace Jp\Dex\Stats\Repositories\Usage;
 use PDO;
 use PDOException;
 
+/**
+ * @deprecated
+ */
 class UsagePokemonRepository
 {
 	/** @var PDO $db */

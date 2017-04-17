@@ -1,15 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Repositories\Usage;
+namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Stats\Usage\UsageRated;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 use PDO;
-use PDOException;
 
-/**
- * @deprecated
- */
-class UsageRatedRepository
+class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterface
 {
 	/** @var PDO $db */
 	protected $db;
@@ -25,20 +24,20 @@ class UsageRatedRepository
 	}
 
 	/**
-	 * Does `usage_rated` contain any records for the given key?
-	 * (Was the relevant data already imported?)
+	 * Do any usage rated records exist for this year, month, format, and
+	 * rating?
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param int $formatId
+	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
 	 * @return bool
 	 */
-	public function exists(
+	public function has(
 		int $year,
 		int $month,
-		int $formatId,
+		FormatId $formatId,
 		int $rating
 	) : bool {
 		$stmt = $this->db->prepare(
@@ -60,23 +59,14 @@ class UsageRatedRepository
 	}
 
 	/**
-	 * Insert a `usage_rated` record.
+	 * Save a usage rated record.
 	 *
-	 * @param int $year
-	 * @param int $month
-	 * @param int $formatId
-	 * @param int $rating
-	 * @param float $averageWeightPerTeam
+	 * @param UsageRated $usageRated
 	 *
-	 * @return bool
+	 * @return void
 	 */
-	public function insert(
-		int $year,
-		int $month,
-		int $formatId,
-		int $rating,
-		float $averageWeightPerTeam
-	) : bool {
+	public function save(UsageRated $usageRated) : void
+	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `usage_rated` (
 				`year`,
@@ -92,16 +82,11 @@ class UsageRatedRepository
 				:average_weight_per_team
 			)'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
-		$stmt->bindValue(':format_id', $formatId, PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':average_weight_per_team', $averageWeightPerTeam, PDO::PARAM_STR);
-		try {
-			return $stmt->execute();
-		} catch (PDOException $e) {
-			// A record for this key already exists.
-			return false;
-		}
+		$stmt->bindValue(':year', $usageRated->year(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $usageRated->month(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $usageRated->formatId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $usageRated->rating(), PDO::PARAM_INT);
+		$stmt->bindValue(':average_weight_per_team', $usageRated->averageWeightPerTeam(), PDO::PARAM_STR);
+		$stmt->execute();
 	}
 }
