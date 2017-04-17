@@ -3,17 +3,26 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Stats\Importers;
 
+use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbility;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounter;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMove;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpread;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammate;
 use Jp\Dex\Stats\Importers\Extractors\MovesetFileExtractor;
 use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
 use Jp\Dex\Stats\Repositories\ShowdownItemRepository;
-use Jp\Dex\Stats\Repositories\Moveset\MovesetPokemonRepository;
-use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedAbilitiesRepository;
-use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedCountersRepository;
-use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedItemsRepository;
-use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedMovesRepository;
-use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedPokemonRepository;
-use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedSpreadsRepository;
-use Jp\Dex\Stats\Repositories\Moveset\MovesetRatedTeammatesRepository;
+use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounterRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface;
 use Jp\Dex\Stats\Repositories\ShowdownMoveRepository;
 use Jp\Dex\Stats\Repositories\ShowdownNatureRepository;
 use Jp\Dex\Stats\Repositories\ShowdownPokemonRepository;
@@ -36,29 +45,29 @@ class MovesetFileImporter
 	/** @var ShowdownMoveRepository $showdownMoveRepository */
 	protected $showdownMoveRepository;
 
-	/** @var MovesetPokemonRepository $movesetPokemonRepository */
+	/** @var MovesetPokemonRepositoryInterface $movesetPokemonRepository */
 	protected $movesetPokemonRepository;
 
-	/** @var MovesetRatedPokemonRepository $movesetRatedPokemonRepository */
+	/** @var MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository */
 	protected $movesetRatedPokemonRepository;
 
-	/** @var MovesetRatedAbilitiesRepository $movesetRatedAbilitiesRepository */
-	protected $movesetRatedAbilitiesRepository;
+	/** @var MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository */
+	protected $movesetRatedAbilityRepository;
 
-	/** @var MovesetRatedItemsRepository $movesetRatedItemsRepository */
-	protected $movesetRatedItemsRepository;
+	/** @var MovesetRatedItemRepositoryInterface $movesetRatedItemRepository */
+	protected $movesetRatedItemRepository;
 
-	/** @var MovesetRatedSpreadsRepository $movesetRatedSpreadsRepository */
-	protected $movesetRatedSpreadsRepository;
+	/** @var MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository */
+	protected $movesetRatedSpreadRepository;
 
-	/** @var MovesetRatedMovesRepository $movesetRatedMovesRepository */
-	protected $movesetRatedMovesRepository;
+	/** @var MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository */
+	protected $movesetRatedMoveRepository;
 
-	/** @var MovesetRatedTeammatesRepository $movesetRatedTeammatesRepository */
-	protected $movesetRatedTeammatesRepository;
+	/** @var MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository */
+	protected $movesetRatedTeammateRepository;
 
-	/** @var MovesetRatedCountersRepository $movesetRatedCountersRepository */
-	protected $movesetRatedCountersRepository;
+	/** @var MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository */
+	protected $movesetRatedCounterRepository;
 
 	/** @var MovesetFileExtractor $movesetFileExtractor */
 	protected $movesetFileExtractor;
@@ -71,14 +80,14 @@ class MovesetFileImporter
 	 * @param ShowdownItemRepository $showdownItemRepository
 	 * @param ShowdownNatureRepository $showdownNatureRepository
 	 * @param ShowdownMoveRepository $showdownMoveRepository
-	 * @param MovesetPokemonRepository $movesetPokemonRepository
-	 * @param MovesetRatedPokemonRepository $movesetRatedPokemonRepository
-	 * @param MovesetRatedAbilitiesRepository $movesetRatedAbilitiesRepository
-	 * @param MovesetRatedItemsRepository $movesetRatedItemsRepository
-	 * @param MovesetRatedSpreadsRepository $movesetRatedSpreadsRepository
-	 * @param MovesetRatedMovesRepository $movesetRatedMovesRepository
-	 * @param MovesetRatedTeammatesRepository $movesetRatedTeammatesRepository
-	 * @param MovesetRatedCountersRepository $movesetRatedCountersRepository
+	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
+	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
+	 * @param MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository
+	 * @param MovesetRatedItemRepositoryInterface $movesetRatedItemRepository
+	 * @param MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository
+	 * @param MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository
+	 * @param MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository
+	 * @param MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository
 	 * @param MovesetFileExtractor $movesetFileExtractor
 	 */
 	public function __construct(
@@ -87,14 +96,14 @@ class MovesetFileImporter
 		ShowdownItemRepository $showdownItemRepository,
 		ShowdownNatureRepository $showdownNatureRepository,
 		ShowdownMoveRepository $showdownMoveRepository,
-		MovesetPokemonRepository $movesetPokemonRepository,
-		MovesetRatedPokemonRepository $movesetRatedPokemonRepository,
-		MovesetRatedAbilitiesRepository $movesetRatedAbilitiesRepository,
-		MovesetRatedItemsRepository $movesetRatedItemsRepository,
-		MovesetRatedSpreadsRepository $movesetRatedSpreadsRepository,
-		MovesetRatedMovesRepository $movesetRatedMovesRepository,
-		MovesetRatedTeammatesRepository $movesetRatedTeammatesRepository,
-		MovesetRatedCountersRepository $movesetRatedCountersRepository,
+		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
+		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
+		MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository,
+		MovesetRatedItemRepositoryInterface $movesetRatedItemRepository,
+		MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository,
+		MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository,
+		MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository,
+		MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository,
 		MovesetFileExtractor $movesetFileExtractor
 	) {
 		$this->showdownPokemonRepository = $showdownPokemonRepository;
@@ -104,12 +113,12 @@ class MovesetFileImporter
 		$this->showdownMoveRepository = $showdownMoveRepository;
 		$this->movesetPokemonRepository = $movesetPokemonRepository;
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
-		$this->movesetRatedAbilitiesRepository = $movesetRatedAbilitiesRepository;
-		$this->movesetRatedItemsRepository = $movesetRatedItemsRepository;
-		$this->movesetRatedSpreadsRepository = $movesetRatedSpreadsRepository;
-		$this->movesetRatedMovesRepository = $movesetRatedMovesRepository;
-		$this->movesetRatedTeammatesRepository = $movesetRatedTeammatesRepository;
-		$this->movesetRatedCountersRepository = $movesetRatedCountersRepository;
+		$this->movesetRatedAbilitiesRepository = $movesetRatedAbilityRepository;
+		$this->movesetRatedItemsRepository = $movesetRatedItemRepository;
+		$this->movesetRatedSpreadsRepository = $movesetRatedSpreadRepository;
+		$this->movesetRatedMovesRepository = $movesetRatedMoveRepository;
+		$this->movesetRatedTeammatesRepository = $movesetRatedTeammateRepository;
+		$this->movesetRatedCountersRepository = $movesetRatedCounterRepository;
 		$this->movesetFileExtractor = $movesetFileExtractor;
 	}
 
@@ -119,7 +128,7 @@ class MovesetFileImporter
 	 * @param StreamInterface $stream
 	 * @param int $year
 	 * @param int $month
-	 * @param int $formatId
+	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
 	 * @return void
@@ -128,7 +137,7 @@ class MovesetFileImporter
 		StreamInterface $stream,
 		int $year,
 		int $month,
-		int $formatId,
+		FormatId $formatId,
 		int $rating
 	) : void {
 		// If the file is empty, there's nothing to import.
@@ -136,12 +145,12 @@ class MovesetFileImporter
 			return;
 		}
 
-		$movesetPokemonExists = $this->movesetPokemonRepository->exists(
+		$movesetPokemonExists = $this->movesetPokemonRepository->has(
 			$year,
 			$month,
 			$formatId
 		);
-		$movesetRatedPokemonExists = $this->movesetRatedPokemonRepository->exists(
+		$movesetRatedPokemonExists = $this->movesetRatedPokemonRepository->has(
 			$year,
 			$month,
 			$formatId,
@@ -193,7 +202,7 @@ class MovesetFileImporter
 			}
 
 			if ($isPokemonImported && !$movesetPokemonExists) {
-				$this->movesetPokemonRepository->insert(
+				$movesetPokemon = new MovesetPokemon(
 					$year,
 					$month,
 					$formatId,
@@ -201,10 +210,12 @@ class MovesetFileImporter
 					$rawCount,
 					$viabilityCeiling
 				);
+
+				$this->movesetPokemonRepository->save($movesetPokemon);
 			}
 
 			if ($isPokemonImported && !$movesetRatedPokemonExists) {
-				$this->movesetRatedPokemonRepository->insert(
+				$movesetRatedPokemon = new MovesetRatedPokemon(
 					$year,
 					$month,
 					$formatId,
@@ -212,6 +223,8 @@ class MovesetFileImporter
 					$pokemonId,
 					$averageWeight
 				);
+
+				$this->movesetRatedPokemonRepository->save($movesetRatedPokemon);
 			}
 
 			// BLOCK 3 - Abilities.
@@ -229,7 +242,7 @@ class MovesetFileImporter
 				$abilityId = $this->showdownAbilityRepository->getAbilityId($showdownAbilityName);
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
-					$this->movesetRatedAbilitiesRepository->insert(
+					$movesetRatedAbility = new MovesetRatedAbility(
 						$year,
 						$month,
 						$formatId,
@@ -238,6 +251,8 @@ class MovesetFileImporter
 						$abilityId,
 						$namePercent->percent()
 					);
+
+					$this->movesetRatedAbilityRepository->save($movesetRatedAbility);
 				}
 
 				// If the file randomly ends here, there's nothing else to do.
@@ -261,7 +276,7 @@ class MovesetFileImporter
 				$itemId = $this->showdownItemRepository->getItemId($showdownItemName);
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
-					$this->movesetRatedItemsRepository->insert(
+					$movesetRatedItem = new MovesetRatedItem(
 						$year,
 						$month,
 						$formatId,
@@ -270,6 +285,8 @@ class MovesetFileImporter
 						$itemId,
 						$namePercent->percent()
 					);
+
+					$this->movesetRatedItemRepository->save($movesetRatedItem);
 				}
 
 				// If the file randomly ends here, there's nothing else to do.
@@ -293,7 +310,7 @@ class MovesetFileImporter
 				$natureId = $this->showdownNatureRepository->getNatureId($showdownNatureName);
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
-					$this->movesetRatedSpreadsRepository->insert(
+					$movesetRatedSpread = new MovesetRatedSpread(
 						$year,
 						$month,
 						$formatId,
@@ -308,6 +325,8 @@ class MovesetFileImporter
 						$spread->spe(),
 						$spread->percent()
 					);
+
+					$this->movesetRatedSpreadRepository->save($movesetRatedSpread);
 				}
 
 				// If the file randomly ends here, there's nothing else to do.
@@ -331,7 +350,7 @@ class MovesetFileImporter
 				$moveId = $this->showdownMoveRepository->getMoveId($showdownMoveName);
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
-					$this->movesetRatedMovesRepository->insert(
+					$movesetRatedMove = new MovesetRatedMove(
 						$year,
 						$month,
 						$formatId,
@@ -340,6 +359,8 @@ class MovesetFileImporter
 						$moveId,
 						$namePercent->percent()
 					);
+
+					$this->movesetRatedMoveRepository->save($movesetRatedMove);
 				}
 
 				// If the file randomly ends here, there's nothing else to do.
@@ -363,7 +384,7 @@ class MovesetFileImporter
 				$teammateId = $this->showdownPokemonRepository->getPokemonId($showdownTeammateName);
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
-					$this->movesetRatedTeammatesRepository->insert(
+					$movesetRatedTeammate = new MovesetRatedTeammate(
 						$year,
 						$month,
 						$formatId,
@@ -372,6 +393,8 @@ class MovesetFileImporter
 						$teammateId,
 						$namePercent->percent()
 					);
+
+					$this->movesetRatedTeammateRepository->save($movesetRatedTeammate);
 				}
 
 				// If the file randomly ends here, there's nothing else to do.
@@ -396,7 +419,7 @@ class MovesetFileImporter
 				$counterId = $this->showdownPokemonRepository->getPokemonId($showdownCounterName);
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
-					$this->movesetRatedCountersRepository->insert(
+					$movesetRatedCounter = new MovesetRatedCounter(
 						$year,
 						$month,
 						$formatId,
@@ -409,6 +432,8 @@ class MovesetFileImporter
 						$counter->percentKnockedOut(),
 						$counter->percentSwitchedOut()
 					);
+
+					$this->movesetRatedCounterRepository->save($movesetRatedCounter);
 				}
 			}
 		}

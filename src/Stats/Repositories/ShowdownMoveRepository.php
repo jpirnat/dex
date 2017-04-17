@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Stats\Repositories;
 
 use Exception;
+use Jp\Dex\Domain\Moves\MoveId;
 use PDO;
 
 class ShowdownMoveRepository
@@ -102,13 +103,13 @@ class ShowdownMoveRepository
 	 *
 	 * @throws Exception if $showdownMoveName is not an imported name.
 	 *
-	 * @return int
+	 * @return MoveId
 	 */
-	public function getMoveId(string $showdownMoveName) : int
+	public function getMoveId(string $showdownMoveName) : MoveId
 	{
 		// If the move is imported, return the move id.
 		if ($this->isImported($showdownMoveName)) {
-			return $this->movesToImport[$showdownMoveName];
+			return new MoveId($this->movesToImport[$showdownMoveName]);
 		}
 
 		// If the move is not known, add it to the list of unknown moves.

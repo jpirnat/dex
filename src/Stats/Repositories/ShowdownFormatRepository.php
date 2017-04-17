@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Stats\Repositories;
 
 use Exception;
+use Jp\Dex\Domain\Formats\FormatId;
 use PDO;
 
 class ShowdownFormatRepository
@@ -146,13 +147,13 @@ class ShowdownFormatRepository
 	 *
 	 * @throws Exception if $showdownFormatName is not an imported name.
 	 *
-	 * @return int
+	 * @return FormatId
 	 */
-	public function getFormatId(int $year, int $month, string $showdownFormatName) : int
+	public function getFormatId(int $year, int $month, string $showdownFormatName) : FormatId
 	{
 		// If the format is imported, return the format id.
 		if ($this->isImported($year, $month, $showdownFormatName)) {
-			return $this->formatsToImport[$year][$month][$showdownFormatName];
+			return new FormatId($this->formatsToImport[$year][$month][$showdownFormatName]);
 		}
 
 		// If the format is not known, add it to the list of unknown formats.

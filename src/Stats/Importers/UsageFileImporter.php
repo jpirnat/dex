@@ -3,12 +3,17 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Stats\Importers;
 
+use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Stats\Usage\Usage;
+use Jp\Dex\Domain\Stats\Usage\UsagePokemon;
+use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageRated;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemon;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use Jp\Dex\Stats\Importers\Extractors\UsageFileExtractor;
 use Jp\Dex\Stats\Repositories\ShowdownPokemonRepository;
-use Jp\Dex\Stats\Repositories\Usage\UsagePokemonRepository;
-use Jp\Dex\Stats\Repositories\Usage\UsageRatedPokemonRepository;
-use Jp\Dex\Stats\Repositories\Usage\UsageRatedRepository;
-use Jp\Dex\Stats\Repositories\Usage\UsageRepository;
 use Psr\Http\Message\StreamInterface;
 
 class UsageFileImporter
@@ -16,16 +21,16 @@ class UsageFileImporter
 	/** @var ShowdownPokemonRepository $showdownPokemonRepository */
 	protected $showdownPokemonRepository;
 
-	/** @var UsageRepository $usageRepository */
+	/** @var UsageRepositoryInterface $usageRepository */
 	protected $usageRepository;
 
-	/** @var UsageRatedRepository $usageRatedRepository */
+	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
 	protected $usageRatedRepository;
 
-	/** @var UsagePokemonRepository $usagePokemonRepository */
+	/** @var UsagePokemonRepositoryInterface $usagePokemonRepository */
 	protected $usagePokemonRepository;
 
-	/** @var UsageRatedPokemonRepository $usageRatedPokemonRepository */
+	/** @var UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository */
 	protected $usageRatedPokemonRepository;
 
 	/** @var UsageFileExtractor $usageFileExtractor */
@@ -35,18 +40,18 @@ class UsageFileImporter
 	 * Constructor.
 	 *
 	 * @param ShowdownPokemonRepository $showdownPokemonRepository
-	 * @param UsageRepository $usageRepository
-	 * @param UsageRatedRepository $usageRatedRepository
-	 * @param UsagePokemonRepository $usagePokemonRepository
-	 * @param UsageRatedPokemonRepository $usageRatedPokemonRepository
+	 * @param UsageRepositoryInterface $usageRepository
+	 * @param UsageRatedRepositoryInterface $usageRatedRepository
+	 * @param UsagePokemonRepositoryInterface $usagePokemonRepository
+	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
 	 * @param UsageFileExtractor $usageFileExtractor
 	 */
 	public function __construct(
 		ShowdownPokemonRepository $showdownPokemonRepository,
-		UsageRepository $usageRepository,
-		UsageRatedRepository $usageRatedRepository,
-		UsagePokemonRepository $usagePokemonRepository,
-		UsageRatedPokemonRepository $usageRatedPokemonRepository,
+		UsageRepositoryInterface $usageRepository,
+		UsageRatedRepositoryInterface $usageRatedRepository,
+		UsagePokemonRepositoryInterface $usagePokemonRepository,
+		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
 		UsageFileExtractor $usageFileExtractor
 	) {
 		$this->showdownPokemonRepository = $showdownPokemonRepository;
@@ -63,7 +68,7 @@ class UsageFileImporter
 	 * @param StreamInterface $stream
 	 * @param int $year
 	 * @param int $month
-	 * @param int $formatId
+	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
 	 * @return void
@@ -72,7 +77,7 @@ class UsageFileImporter
 		StreamInterface $stream,
 		int $year,
 		int $month,
-		int $formatId,
+		FormatId $formatId,
 		int $rating
 	) : void {
 		// If the file is empty, there's nothing to import.
@@ -80,23 +85,23 @@ class UsageFileImporter
 			return;
 		}
 
-		$usageExists = $this->usageRepository->exists(
+		$usageExists = $this->usageRepository->has(
 			$year,
 			$month,
 			$formatId
 		);
-		$usageRatedExists = $this->usageRatedRepository->exists(
+		$usageRatedExists = $this->usageRatedRepository->has(
 			$year,
 			$month,
 			$formatId,
 			$rating
 		);
-		$usagePokemonExists = $this->usagePokemonRepository->exists(
+		$usagePokemonExists = $this->usagePokemonRepository->has(
 			$year,
 			$month,
 			$formatId
 		);
-		$usageRatedPokemonExists = $this->usageRatedPokemonRepository->exists(
+		$usageRatedPokemonExists = $this->usageRatedPokemonRepository->has(
 			$year,
 			$month,
 			$formatId,
@@ -117,24 +122,26 @@ class UsageFileImporter
 		$line = \GuzzleHttp\Psr7\readline($stream);
 		$totalBattles = $this->usageFileExtractor->extractTotalBattles($line);
 		if (!$usageExists) {
-			$this->usageRepository->insert(
+			$usage = new Usage(
 				$year,
 				$month,
 				$formatId,
 				$totalBattles
 			);
+			$this->usageRepository->save($usage);
 		}
 
 		$line = \GuzzleHttp\Psr7\readline($stream);
 		$averageWeightPerTeam = $this->usageFileExtractor->extractAverageWeightPerTeam($line);
 		if (!$usageRatedExists) {
-			$this->usageRatedRepository->insert(
+			$usageRated = new UsageRated(
 				$year,
 				$month,
 				$formatId,
 				$rating,
 				$averageWeightPerTeam
 			);
+			$this->usageRatedRepository->save($usageRated);
 		}
 
 		// Ignore the next three lines.
@@ -154,7 +161,7 @@ class UsageFileImporter
 			$pokemonId = $this->showdownPokemonRepository->getPokemonId($showdownPokemonName);
 
 			if (!$usagePokemonExists) {
-				$this->usagePokemonRepository->insert(
+				$usagePokemon = new UsagePokemon(
 					$year,
 					$month,
 					$formatId,
@@ -164,10 +171,11 @@ class UsageFileImporter
 					$usage->real(),
 					$usage->realPercent()
 				);
+				$this->usagePokemonRepository->save($usagePokemon);
 			}
 
 			if (!$usageRatedPokemonExists) {
-				$this->usageRatedPokemonRepository->insert(
+				$usageRatedPokemon = new UsageRatedPokemon(
 					$year,
 					$month,
 					$formatId,
@@ -176,6 +184,7 @@ class UsageFileImporter
 					$usage->rank(),
 					$usage->usagePercent()
 				);
+				$this->usageRatedPokemonRepository->save($usageRatedPokemon);
 			}
 		}
 	}

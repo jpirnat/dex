@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Stats\Repositories;
 
 use Exception;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use PDO;
 
 class ShowdownPokemonRepository
@@ -102,13 +103,13 @@ class ShowdownPokemonRepository
 	 *
 	 * @throws Exception if $showdownPokemonName is not an imported name.
 	 *
-	 * @return int
+	 * @return PokemonId
 	 */
-	public function getPokemonId(string $showdownPokemonName) : int
+	public function getPokemonId(string $showdownPokemonName) : PokemonId
 	{
 		// If the Pokémon is imported, return the Pokémon id.
 		if ($this->isImported($showdownPokemonName)) {
-			return $this->pokemonToImport[$showdownPokemonName];
+			return new PokemonId($this->pokemonToImport[$showdownPokemonName]);
 		}
 
 		// If the Pokémon is not known, add it to the list of unknown Pokémon.

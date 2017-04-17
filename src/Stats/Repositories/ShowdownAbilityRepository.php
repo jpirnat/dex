@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Stats\Repositories;
 
 use Exception;
+use Jp\Dex\Domain\Abilities\AbilityId;
 use PDO;
 
 class ShowdownAbilityRepository
@@ -102,13 +103,13 @@ class ShowdownAbilityRepository
 	 *
 	 * @throws Exception if $showdownAbilityName is not an imported name.
 	 *
-	 * @return int
+	 * @return AbilityId
 	 */
-	public function getAbilityId(string $showdownAbilityName) : int
+	public function getAbilityId(string $showdownAbilityName) : AbilityId
 	{
 		// If the ability is imported, return the ability id.
 		if ($this->isImported($showdownAbilityName)) {
-			return $this->abilitiesToImport[$showdownAbilityName];
+			return new AbilityId($this->abilitiesToImport[$showdownAbilityName]);
 		}
 
 		// If the ability is not known, add it to the list of unknown abilities.

@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Stats\Repositories;
 
 use Exception;
+use Jp\Dex\Domain\Items\ItemId;
 use PDO;
 
 class ShowdownItemRepository
@@ -102,13 +103,13 @@ class ShowdownItemRepository
 	 *
 	 * @throws Exception if $showdownItemName is not an imported name.
 	 *
-	 * @return int
+	 * @return ItemId
 	 */
-	public function getItemId(string $showdownItemName) : int
+	public function getItemId(string $showdownItemName) : ItemId
 	{
 		// If the item is imported, return the item id.
 		if ($this->isImported($showdownItemName)) {
-			return $this->itemsToImport[$showdownItemName];
+			return new ItemId($this->itemsToImport[$showdownItemName]);
 		}
 
 		// If the item is not known, add it to the list of unknown items.
