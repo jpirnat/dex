@@ -1,13 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Stats;
+namespace Jp\Dex\Domain\Stats\Moveset;
 
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
-class MovesetRatedItem
+class MovesetPokemon
 {
 	/** @var int $year */
 	protected $year;
@@ -18,17 +17,14 @@ class MovesetRatedItem
 	/** @var FormatId $formatId */
 	protected $formatId;
 
-	/** @var int $rating */
-	protected $rating;
-
 	/** @var PokemonId $pokemonId */
 	protected $pokemonId;
 
-	/** @var ItemId $itemId */
-	protected $itemId;
+	/** @var int $rawCount */
+	protected $rawCount;
 
-	/** @var float $percent */
-	protected $percent;
+	/** @var int|null $viabilityCeiling */
+	protected $viabilityCeiling;
 
 	/**
 	 * Constructor.
@@ -36,31 +32,27 @@ class MovesetRatedItem
 	 * @param int $year
 	 * @param int $month
 	 * @param FormatId $formatId
-	 * @param int $rating
 	 * @param PokemonId $pokemonId
-	 * @param ItemId $itemId
-	 * @param float $percent
+	 * @param int $rawCount
+	 * @param int|null $viabilityCeiling
 	 */
 	public function __construct(
 		int $year,
 		int $month,
 		FormatId $formatId,
-		int $rating,
 		PokemonId $pokemonId,
-		ItemId $itemId,
-		float $percent
+		int $rawCount,
+		?int $viabilityCeiling
 	) {
 		// TODO: validation
 
 		$this->year = $year;
 		$this->month = $month;
 		$this->formatId = $formatId;
-		$this->rating = $rating;
 		$this->pokemonId = $pokemonId;
-		$this->itemId = $itemId;
-		$this->percent = $percent;
+		$this->rawCount = $rawCount;
+		$this->viabilityCeiling = $viabilityCeiling;
 	}
-
 
 	/**
 	 * Get the year.
@@ -93,16 +85,6 @@ class MovesetRatedItem
 	}
 
 	/**
-	 * Get the rating.
-	 *
-	 * @return int
-	 */
-	public function rating() : int
-	{
-		return $this->rating;
-	}
-
-	/**
 	 * Get the Pokémon id.
 	 *
 	 * @return PokemonId
@@ -113,22 +95,22 @@ class MovesetRatedItem
 	}
 
 	/**
-	 * Get the item id.
+	 * Get the raw count.
 	 *
-	 * @return ItemId
+	 * @return int
 	 */
-	public function itemId() : ItemId
+	public function rawCount() : int
 	{
-		return $this->itemId;
+		return $this->rawCount;
 	}
 
 	/**
-	 * Get the percent.
+	 * Get the viability ceiling.
 	 *
-	 * @return float
+	 * @return int|null
 	 */
-	public function percent() : float
+	public function viabilityCeiling() : ?int
 	{
-		return $this->percent;
+		return $this->viabilityCeiling;
 	}
 }

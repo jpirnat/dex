@@ -6,8 +6,8 @@ namespace Jp\Dex\Application\Models;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\MovesetRatedAbility;
-use Jp\Dex\Domain\Stats\MovesetRatedAbilityRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbility;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface;
 
 class AbilitiesModel
 {

@@ -6,8 +6,8 @@ namespace Jp\Dex\Application\Models;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\MovesetRatedItem;
-use Jp\Dex\Domain\Stats\MovesetRatedItemRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
 
 class ItemsModel
 {

@@ -6,6 +6,9 @@ namespace Jp\Dex\Stats\Repositories\Moveset;
 use PDO;
 use PDOException;
 
+/**
+ * @deprecated
+ */
 class MovesetRatedPokemonRepository
 {
 	/** @var PDO $db */

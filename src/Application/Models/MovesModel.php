@@ -6,8 +6,8 @@ namespace Jp\Dex\Application\Models;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\MovesetRatedMove;
-use Jp\Dex\Domain\Stats\MovesetRatedMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMove;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
 
 class MovesModel
 {

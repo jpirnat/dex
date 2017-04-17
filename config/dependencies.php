@@ -19,9 +19,14 @@ use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
-use Jp\Dex\Domain\Stats\MovesetRatedAbilityRepositoryInterface;
-use Jp\Dex\Domain\Stats\MovesetRatedItemRepositoryInterface;
-use Jp\Dex\Domain\Stats\MovesetRatedMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounterRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
@@ -33,14 +38,19 @@ use Jp\Dex\Infrastructure\DatabaseLeadsPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRepository;
 use Jp\Dex\Infrastructure\DatabaseMoveRepository;
+use Jp\Dex\Infrastructure\DatabaseMovesetPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedAbilityRepository;
+use Jp\Dex\Infrastructure\DatabaseMovesetRatedCounterRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedItemRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedMoveRepository;
+use Jp\Dex\Infrastructure\DatabaseMovesetRatedPokemonRepository;
+use Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRepository;
+use Jp\Dex\Stats\Repositories\Moveset\DatabaseMovesetRatedSpreadRepository;
 use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
 use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
 use Jp\Dex\Stats\Repositories\ShowdownItemRepository;
@@ -134,14 +144,29 @@ $rule = [
 		LeadsRepositoryInterface::class => [
 			'instance' => DatabaseLeadsRepository::class
 		],
+		MovesetPokemonRepositoryInterface::class => [
+			'instance' => DatabaseMovesetPokemonRepository::class
+		],
 		MovesetRatedAbilityRepositoryInterface::class => [
 			'instance' => DatabaseMovesetRatedAbilityRepository::class
+		],
+		MovesetRatedCounterRepositoryInterface::class => [
+			'instance' => DatabaseMovesetRatedCounterRepository::class
 		],
 		MovesetRatedItemRepositoryInterface::class => [
 			'instance' => DatabaseMovesetRatedItemRepository::class
 		],
 		MovesetRatedMoveRepositoryInterface::class => [
 			'instance' => DatabaseMovesetRatedMoveRepository::class
+		],
+		MovesetRatedPokemonRepositoryInterface::class => [
+			'instance' => DatabaseMovesetRatedPokemonRepository::class
+		],
+		MovesetRatedSpreadRepositoryInterface::class => [
+			'instance' => DatabaseMovesetRatedSpreadRepository::class
+		],
+		MovesetRatedTeammateRepositoryInterface::class => [
+			'instance' => DatabaseMovesetRatedTeammateRepository::class
 		],
 		UsagePokemonRepositoryInterface::class => [
 			'instance' => DatabaseUsagePokemonRepository::class
