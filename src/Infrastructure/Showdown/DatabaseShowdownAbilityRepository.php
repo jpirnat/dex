@@ -1,18 +1,19 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Repositories;
+namespace Jp\Dex\Infrastructure\Showdown;
 
 use Exception;
 use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownAbilityRepositoryInterface;
 use PDO;
 
-class ShowdownAbilityRepository
+class DatabaseShowdownAbilityRepository implements ShowdownAbilityRepositoryInterface
 {
-	/** @var int[] $abilitiesToImport */
+	/** @var AbilityId[] $abilitiesToImport */
 	protected $abilitiesToImport = [];
 
-	/** @var ?int[] $abilitiesToIgnore */
+	/** @var ?AbilityId[] $abilitiesToIgnore */
 	protected $abilitiesToIgnore = [];
 
 	/** @var string[] $unknownAbilities */
@@ -32,7 +33,9 @@ class ShowdownAbilityRepository
 			FROM `showdown_abilities_to_import`'
 		);
 		$stmt->execute();
-		$this->abilitiesToImport = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$this->abilitiesToImport[$result['name']] = new AbilityId($result['ability_id']);
+		}
 
 		$stmt = $db->prepare(
 			'SELECT
@@ -41,7 +44,16 @@ class ShowdownAbilityRepository
 			FROM `showdown_abilities_to_ignore`'
 		);
 		$stmt->execute();
-		$this->abilitiesToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			if ($result['ability_id'] !== null) {
+				// The Pokémon Showdown ability name has an ability id.
+				$abilityId = new AbilityId($result['ability_id']);
+			} else {
+				$abilityId = null;
+			}
+
+			$this->abilitiesToIgnore[$result['name']] = $abilityId;
+		}
 	}
 
 	/**
@@ -109,7 +121,7 @@ class ShowdownAbilityRepository
 	{
 		// If the ability is imported, return the ability id.
 		if ($this->isImported($showdownAbilityName)) {
-			return new AbilityId($this->abilitiesToImport[$showdownAbilityName]);
+			return $this->abilitiesToImport[$showdownAbilityName];
 		}
 
 		// If the ability is not known, add it to the list of unknown abilities.

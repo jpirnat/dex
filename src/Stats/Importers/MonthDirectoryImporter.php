@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace Jp\Dex\Stats\Importers;
 
 use GuzzleHttp\Client;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface;
 use Jp\Dex\Stats\Importers\Extractors\FormatRatingExtractor;
 use Jp\Dex\Stats\Importers\Extractors\YearMonthExtractor;
-use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
 use Symfony\Component\DomCrawler\Crawler;
 
 class MonthDirectoryImporter
@@ -26,7 +26,7 @@ class MonthDirectoryImporter
 	/** @var FormatRatingExtractor $formatRatingExtractor */
 	protected $formatRatingExtractor;
 
-	/** @var ShowdownFormatRepository $showdownFormatRepository */
+	/** @var ShowdownFormatRepositoryInterface $showdownFormatRepository */
 	protected $showdownFormatRepository;
 
 	/**
@@ -37,7 +37,7 @@ class MonthDirectoryImporter
 	 * @param MovesetDirectoryImporter $movesetDirectoryImporter
 	 * @param YearMonthExtractor $yearMonthExtractor
 	 * @param FormatRatingExtractor $formatRatingExtractor
-	 * @param ShowdownFormatRepository $showdownFormatRepository
+	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
 	 */
 	public function __construct(
 		UsageFileImporter $usageFileImporter,
@@ -45,7 +45,7 @@ class MonthDirectoryImporter
 		MovesetDirectoryImporter $movesetDirectoryImporter,
 		YearMonthExtractor $yearMonthExtractor,
 		FormatRatingExtractor $formatRatingExtractor,
-		ShowdownFormatRepository $showdownFormatRepository
+		ShowdownFormatRepositoryInterface $showdownFormatRepository
 	) {
 		$this->usageFileImporter = $usageFileImporter;
 		$this->leadsDirectoryImporter = $leadsDirectoryImporter;

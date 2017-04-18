@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Stats\Importers;
 
 use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Usage;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemon;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
@@ -13,12 +14,11 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use Jp\Dex\Stats\Importers\Extractors\UsageFileExtractor;
-use Jp\Dex\Stats\Repositories\ShowdownPokemonRepository;
 use Psr\Http\Message\StreamInterface;
 
 class UsageFileImporter
 {
-	/** @var ShowdownPokemonRepository $showdownPokemonRepository */
+	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
 	protected $showdownPokemonRepository;
 
 	/** @var UsageRepositoryInterface $usageRepository */
@@ -39,7 +39,7 @@ class UsageFileImporter
 	/**
 	 * Constructor.
 	 *
-	 * @param ShowdownPokemonRepository $showdownPokemonRepository
+	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
 	 * @param UsageRepositoryInterface $usageRepository
 	 * @param UsageRatedRepositoryInterface $usageRatedRepository
 	 * @param UsagePokemonRepositoryInterface $usagePokemonRepository
@@ -47,7 +47,7 @@ class UsageFileImporter
 	 * @param UsageFileExtractor $usageFileExtractor
 	 */
 	public function __construct(
-		ShowdownPokemonRepository $showdownPokemonRepository,
+		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
 		UsageRepositoryInterface $usageRepository,
 		UsageRatedRepositoryInterface $usageRatedRepository,
 		UsagePokemonRepositoryInterface $usagePokemonRepository,

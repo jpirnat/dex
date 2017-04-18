@@ -10,13 +10,13 @@ use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemon;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Stats\Importers\Extractors\LeadsFileExtractor;
-use Jp\Dex\Stats\Repositories\ShowdownPokemonRepository;
 use Psr\Http\Message\StreamInterface;
 
 class LeadsFileImporter
 {
-	/** @var ShowdownPokemonRepository $showdownPokemonRepository */
+	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
 	protected $showdownPokemonRepository;
 
 	/** @var LeadsRepositoryInterface $leadsRepository */
@@ -34,14 +34,14 @@ class LeadsFileImporter
 	/**
 	 * Constructor.
 	 *
-	 * @param ShowdownPokemonRepository $showdownPokemonRepository
+	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
 	 * @param LeadsRepositoryInterface $leadsRepository
 	 * @param LeadsPokemonRepositoryInterface $leadsPokemonRepository
 	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
 	 * @param LeadsFileExtractor $leadsFileExtractor
 	 */
 	public function __construct(
-		ShowdownPokemonRepository $showdownPokemonRepository,
+		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
 		LeadsRepositoryInterface $leadsRepository,
 		LeadsPokemonRepositoryInterface $leadsPokemonRepository,
 		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,

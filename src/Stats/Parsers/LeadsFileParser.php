@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Stats\Parsers;
 
+use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Stats\Importers\Extractors\LeadsFileExtractor;
-use Jp\Dex\Stats\Repositories\ShowdownPokemonRepository;
 use Psr\Http\Message\StreamInterface;
 
 class LeadsFileParser
 {
-	/** @var ShowdownPokemonRepository $showdownPokemonRepository */
+	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
 	protected $showdownPokemonRepository;
 
 	/** @var LeadsFileExtractor $leadsFileExtractor */
@@ -18,11 +18,11 @@ class LeadsFileParser
 	/**
 	 * Constructor.
 	 *
-	 * @param ShowdownPokemonRepository $showdownPokemonRepository
+	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
 	 * @param LeadsFileExtractor $leadsFileExtractor
 	 */
 	public function __construct(
-		ShowdownPokemonRepository $showdownPokemonRepository,
+		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
 		LeadsFileExtractor $leadsFileExtractor
 	) {
 		$this->showdownPokemonRepository = $showdownPokemonRepository;

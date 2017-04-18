@@ -1,17 +1,19 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Repositories;
+namespace Jp\Dex\Infrastructure\Showdown;
 
 use Exception;
+use Jp\Dex\Domain\Stats\NatureId;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface;
 use PDO;
 
-class ShowdownNatureRepository
+class DatabaseShowdownNatureRepository implements ShowdownNatureRepositoryInterface
 {
-	/** @var int[] $naturesToImport */
+	/** @var NatureId[] $naturesToImport */
 	protected $naturesToImport = [];
 
-	/** @var ?int[] $naturesToIgnore */
+	/** @var ?NatureId[] $naturesToIgnore */
 	protected $naturesToIgnore = [];
 
 	/** @var string[] $unknownNatures */
@@ -31,7 +33,9 @@ class ShowdownNatureRepository
 			FROM `showdown_natures_to_import`'
 		);
 		$stmt->execute();
-		$this->naturesToImport = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$this->naturesToImport[$result['name']] = new NatureId($result['nature_id']);
+		}
 
 		$stmt = $db->prepare(
 			'SELECT
@@ -40,7 +44,16 @@ class ShowdownNatureRepository
 			FROM `showdown_natures_to_ignore`'
 		);
 		$stmt->execute();
-		$this->naturesToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			if ($result['nature_id'] !== null) {
+				// The Pokémon Showdown nature name has a nature id.
+				$natureId = new NatureId($result['nature_id']);
+			} else {
+				$natureId = null;
+			}
+
+			$this->naturesToIgnore[$result['name']] = $natureId;
+		}
 	}
 
 	/**
@@ -102,9 +115,9 @@ class ShowdownNatureRepository
 	 *
 	 * @throws Exception if $showdownNatureName is not an imported name.
 	 *
-	 * @return int
+	 * @return NatureId
 	 */
-	public function getNatureId(string $showdownNatureName) : int
+	public function getNatureId(string $showdownNatureName) : NatureId
 	{
 		// If the nature is imported, return the nature id.
 		if ($this->isImported($showdownNatureName)) {

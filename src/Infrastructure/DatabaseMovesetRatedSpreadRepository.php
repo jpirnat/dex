@@ -1,10 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Repositories\Moveset;
+namespace Jp\Dex\Domain\Stats\Moveset;
 
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpread;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
 use PDO;
 
 class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRepositoryInterface

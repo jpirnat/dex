@@ -1,13 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Repositories;
+namespace Jp\Dex\Infrastructure\Showdown;
 
 use Exception;
 use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface;
 use PDO;
 
-class ShowdownFormatRepository
+class DatabaseShowdownFormatRepository implements ShowdownFormatRepositoryInterface
 {
 	/**
 	 * Indexed by year, then month, then Showdown format name.
@@ -54,7 +55,7 @@ class ShowdownFormatRepository
 				[$result['year']]
 				[$result['month']]
 				[$result['name']]
-			= $result['format_id'];
+			= new FormatId($result['format_id']);
 		}
 
 		$stmt = $db->prepare(
@@ -67,11 +68,18 @@ class ShowdownFormatRepository
 		);
 		$stmt->execute();
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			if ($result['format_id'] !== null) {
+				// The Pokémon Showdown format name has a format id.
+				$formatId = new FormatId($result['format_id']);
+			} else {
+				$formatId = null;
+			}
+
 			$this->formatsToIgnore
 				[$result['year']]
 				[$result['month']]
 				[$result['name']]
-			= $result['format_id'];
+			= $formatId;
 		}
 	}
 

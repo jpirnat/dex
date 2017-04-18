@@ -4,14 +4,14 @@ declare(strict_types=1);
 namespace Jp\Dex\Stats\Parsers;
 
 use GuzzleHttp\Client;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownAbilityRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownItemRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Stats\Importers\Extractors\FormatRatingExtractor;
 use Jp\Dex\Stats\Importers\Extractors\YearMonthExtractor;
-use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
-use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
-use Jp\Dex\Stats\Repositories\ShowdownItemRepository;
-use Jp\Dex\Stats\Repositories\ShowdownMoveRepository;
-use Jp\Dex\Stats\Repositories\ShowdownNatureRepository;
-use Jp\Dex\Stats\Repositories\ShowdownPokemonRepository;
 use Symfony\Component\DomCrawler\Crawler;
 
 class MonthDirectoryParser
@@ -31,22 +31,22 @@ class MonthDirectoryParser
 	/** @var FormatRatingExtractor $formatRatingExtractor */
 	protected $formatRatingExtractor;
 
-	/** @var ShowdownFormatRepository $showdownFormatRepository */
+	/** @var ShowdownFormatRepositoryInterface $showdownFormatRepository */
 	protected $showdownFormatRepository;
 
-	/** @var ShowdownPokemonRepository $showdownPokemonRepository */
+	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
 	protected $showdownPokemonRepository;
 
-	/** @var ShowdownAbilityRepository $showdownAbilityRepository */
+	/** @var ShowdownAbilityRepositoryInterface $showdownAbilityRepository */
 	protected $showdownAbilityRepository;
 
-	/** @var ShowdownItemRepository $showdownItemRepository */
+	/** @var ShowdownItemRepositoryInterface $showdownItemRepository */
 	protected $showdownItemRepository;
 
-	/** @var ShowdownNatureRepository $showdownNatureRepository */
+	/** @var ShowdownNatureRepositoryInterface $showdownNatureRepository */
 	protected $showdownNatureRepository;
 
-	/** @var ShowdownMoveRepository $showdownMoveRepository */
+	/** @var ShowdownMoveRepositoryInterface $showdownMoveRepository */
 	protected $showdownMoveRepository;
 
 	/**
@@ -57,12 +57,12 @@ class MonthDirectoryParser
 	 * @param MovesetDirectoryParser $movesetDirectoryParser
 	 * @param YearMonthExtractor $yearMonthExtractor
 	 * @param FormatRatingExtractor $formatRatingExtractor
-	 * @param ShowdownFormatRepository $showdownFormatRepository
-	 * @param ShowdownPokemonRepository $showdownPokemonRepository
-	 * @param ShowdownAbilityRepository $showdownAbilityRepository
-	 * @param ShowdownItemRepository $showdownItemRepository
-	 * @param ShowdownNatureRepository $showdownNatureRepository
-	 * @param ShowdownMoveRepository $showdownMoveRepository
+	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
+	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
+	 * @param ShowdownAbilityRepositoryInterface $showdownAbilityRepository
+	 * @param ShowdownItemRepositoryInterface $showdownItemRepository
+	 * @param ShowdownNatureRepositoryInterface $showdownNatureRepository
+	 * @param ShowdownMoveRepositoryInterface $showdownMoveRepository
 	 */
 	public function __construct(
 		UsageFileParser $usageFileParser,
@@ -70,12 +70,12 @@ class MonthDirectoryParser
 		MovesetDirectoryParser $movesetDirectoryParser,
 		YearMonthExtractor $yearMonthExtractor,
 		FormatRatingExtractor $formatRatingExtractor,
-		ShowdownFormatRepository $showdownFormatRepository,
-		ShowdownPokemonRepository $showdownPokemonRepository,
-		ShowdownAbilityRepository $showdownAbilityRepository,
-		ShowdownItemRepository $showdownItemRepository,
-		ShowdownNatureRepository $showdownNatureRepository,
-		ShowdownMoveRepository $showdownMoveRepository
+		ShowdownFormatRepositoryInterface $showdownFormatRepository,
+		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
+		ShowdownAbilityRepositoryInterface $showdownAbilityRepository,
+		ShowdownItemRepositoryInterface $showdownItemRepository,
+		ShowdownNatureRepositoryInterface $showdownNatureRepository,
+		ShowdownMoveRepositoryInterface $showdownMoveRepository
 	) {
 		$this->usageFileParser = $usageFileParser;
 		$this->leadsDirectoryParser = $leadsDirectoryParser;

@@ -5,44 +5,44 @@ namespace Jp\Dex\Stats\Importers;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbility;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounter;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMove;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpread;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammate;
-use Jp\Dex\Stats\Importers\Extractors\MovesetFileExtractor;
-use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
-use Jp\Dex\Stats\Repositories\ShowdownItemRepository;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbility;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounter;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounterRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMove;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpread;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammate;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface;
-use Jp\Dex\Stats\Repositories\ShowdownMoveRepository;
-use Jp\Dex\Stats\Repositories\ShowdownNatureRepository;
-use Jp\Dex\Stats\Repositories\ShowdownPokemonRepository;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownAbilityRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownItemRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
+use Jp\Dex\Stats\Importers\Extractors\MovesetFileExtractor;
 use Psr\Http\Message\StreamInterface;
 
 class MovesetFileImporter
 {
-	/** @var ShowdownPokemonRepository $showdownPokemonRepository */
+	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
 	protected $showdownPokemonRepository;
 
-	/** @var ShowdownAbilityRepository $showdownAbilityRepository */
+	/** @var ShowdownAbilityRepositoryInterface $showdownAbilityRepository */
 	protected $showdownAbilityRepository;
 
-	/** @var ShowdownItemRepository $showdownItemRepository */
+	/** @var ShowdownItemRepositoryInterface $showdownItemRepository */
 	protected $showdownItemRepository;
 
-	/** @var ShowdownNatureRepository $showdownNatureRepository */
+	/** @var ShowdownNatureRepositoryInterface $showdownNatureRepository */
 	protected $showdownNatureRepository;
 
-	/** @var ShowdownMoveRepository $showdownMoveRepository */
+	/** @var ShowdownMoveRepositoryInterface $showdownMoveRepository */
 	protected $showdownMoveRepository;
 
 	/** @var MovesetPokemonRepositoryInterface $movesetPokemonRepository */
@@ -75,11 +75,11 @@ class MovesetFileImporter
 	/**
 	 * Constructor.
 	 *
-	 * @param ShowdownPokemonRepository $showdownPokemonRepository
-	 * @param ShowdownAbilityRepository $showdownAbilityRepository
-	 * @param ShowdownItemRepository $showdownItemRepository
-	 * @param ShowdownNatureRepository $showdownNatureRepository
-	 * @param ShowdownMoveRepository $showdownMoveRepository
+	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
+	 * @param ShowdownAbilityRepositoryInterface $showdownAbilityRepository
+	 * @param ShowdownItemRepositoryInterface $showdownItemRepository
+	 * @param ShowdownNatureRepositoryInterface $showdownNatureRepository
+	 * @param ShowdownMoveRepositoryInterface $showdownMoveRepository
 	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
 	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
 	 * @param MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository
@@ -91,11 +91,11 @@ class MovesetFileImporter
 	 * @param MovesetFileExtractor $movesetFileExtractor
 	 */
 	public function __construct(
-		ShowdownPokemonRepository $showdownPokemonRepository,
-		ShowdownAbilityRepository $showdownAbilityRepository,
-		ShowdownItemRepository $showdownItemRepository,
-		ShowdownNatureRepository $showdownNatureRepository,
-		ShowdownMoveRepository $showdownMoveRepository,
+		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
+		ShowdownAbilityRepositoryInterface $showdownAbilityRepository,
+		ShowdownItemRepositoryInterface $showdownItemRepository,
+		ShowdownNatureRepositoryInterface $showdownNatureRepository,
+		ShowdownMoveRepositoryInterface $showdownMoveRepository,
 		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
 		MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository,

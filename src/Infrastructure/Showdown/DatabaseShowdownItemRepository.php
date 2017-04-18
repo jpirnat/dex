@@ -1,18 +1,19 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Repositories;
+namespace Jp\Dex\Infrastructure\Showdown;
 
 use Exception;
 use Jp\Dex\Domain\Items\ItemId;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownItemRepositoryInterface;
 use PDO;
 
-class ShowdownItemRepository
+class DatabaseShowdownItemRepository implements ShowdownItemRepositoryInterface
 {
-	/** @var int[] $itemsToImport */
+	/** @var ItemId[] $itemsToImport */
 	protected $itemsToImport = [];
 
-	/** @var ?int[] $itemsToIgnore */
+	/** @var ?ItemId[] $itemsToIgnore */
 	protected $itemsToIgnore = [];
 
 	/** @var string[] $unknownItems */
@@ -32,7 +33,9 @@ class ShowdownItemRepository
 			FROM `showdown_items_to_import`'
 		);
 		$stmt->execute();
-		$this->itemsToImport = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$this->itemsToImport[$result['name']] = new ItemId($result['item_id']);
+		}
 
 		$stmt = $db->prepare(
 			'SELECT
@@ -41,7 +44,16 @@ class ShowdownItemRepository
 			FROM `showdown_items_to_ignore`'
 		);
 		$stmt->execute();
-		$this->itemsToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			if ($result['item_id'] !== null) {
+				// The Pokémon Showdown item name has an item id.
+				$itemId = new ItemId($result['item_id']);
+			} else {
+				$itemId = null;
+			}
+
+			$this->itemsToIgnore[$result['name']] = $itemId;
+		}
 	}
 
 	/**
@@ -109,7 +121,7 @@ class ShowdownItemRepository
 	{
 		// If the item is imported, return the item id.
 		if ($this->isImported($showdownItemName)) {
-			return new ItemId($this->itemsToImport[$showdownItemName]);
+			return $this->itemsToImport[$showdownItemName];
 		}
 
 		// If the item is not known, add it to the list of unknown items.

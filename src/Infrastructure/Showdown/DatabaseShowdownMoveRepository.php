@@ -1,18 +1,19 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Repositories;
+namespace Jp\Dex\Infrastructure\Showdown;
 
 use Exception;
 use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface;
 use PDO;
 
-class ShowdownMoveRepository
+class DatabaseShowdownMoveRepository implements ShowdownMoveRepositoryInterface
 {
-	/** @var int[] $movesToImport */
+	/** @var MoveId[] $movesToImport */
 	protected $movesToImport = [];
 
-	/** @var ?int[] $movesToIgnore */
+	/** @var ?MoveId[] $movesToIgnore */
 	protected $movesToIgnore = [];
 
 	/** @var string[] $unknownMoves */
@@ -32,7 +33,9 @@ class ShowdownMoveRepository
 			FROM `showdown_moves_to_import`'
 		);
 		$stmt->execute();
-		$this->movesToImport = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$this->movesToImport[$result['name']] = new MoveId($result['move_id']);
+		}
 
 		$stmt = $db->prepare(
 			'SELECT
@@ -42,6 +45,16 @@ class ShowdownMoveRepository
 		);
 		$stmt->execute();
 		$this->movesToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			if ($result['move_id'] !== null) {
+				// The Pokémon Showdown move name has a move id.
+				$moveId = new MoveId($result['move_id']);
+			} else {
+				$moveId = null;
+			}
+
+			$this->movesToIgnore[$result['name']] = $moveId;
+		}
 	}
 
 	/**
@@ -109,7 +122,7 @@ class ShowdownMoveRepository
 	{
 		// If the move is imported, return the move id.
 		if ($this->isImported($showdownMoveName)) {
-			return new MoveId($this->movesToImport[$showdownMoveName]);
+			return $this->movesToImport[$showdownMoveName];
 		}
 
 		// If the move is not known, add it to the list of unknown moves.

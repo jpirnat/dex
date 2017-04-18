@@ -3,29 +3,29 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Stats\Parsers;
 
+use Jp\Dex\Domain\Stats\Showdown\ShowdownAbilityRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownItemRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Stats\Importers\Extractors\MovesetFileExtractor;
-use Jp\Dex\Stats\Repositories\ShowdownAbilityRepository;
-use Jp\Dex\Stats\Repositories\ShowdownItemRepository;
-use Jp\Dex\Stats\Repositories\ShowdownMoveRepository;
-use Jp\Dex\Stats\Repositories\ShowdownNatureRepository;
-use Jp\Dex\Stats\Repositories\ShowdownPokemonRepository;
 use Psr\Http\Message\StreamInterface;
 
 class MovesetFileParser
 {
-	/** @var ShowdownPokemonRepository $showdownPokemonRepository */
+	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
 	protected $showdownPokemonRepository;
 
-	/** @var ShowdownAbilityRepository $showdownAbilityRepository */
+	/** @var ShowdownAbilityRepositoryInterface $showdownAbilityRepository */
 	protected $showdownAbilityRepository;
 
-	/** @var ShowdownItemRepository $showdownItemRepository */
+	/** @var ShowdownItemRepositoryInterface $showdownItemRepository */
 	protected $showdownItemRepository;
 
-	/** @var ShowdownNatureRepository $showdownNatureRepository */
+	/** @var ShowdownNatureRepositoryInterface $showdownNatureRepository */
 	protected $showdownNatureRepository;
 
-	/** @var ShowdownMoveRepository $showdownMoveRepository */
+	/** @var ShowdownMoveRepositoryInterface $showdownMoveRepository */
 	protected $showdownMoveRepository;
 
 	/** @var MovesetFileExtractor $movesetFileExtractor */
@@ -34,19 +34,19 @@ class MovesetFileParser
 	/**
 	 * Constructor.
 	 *
-	 * @param ShowdownPokemonRepository $showdownPokemonRepository
-	 * @param ShowdownAbilityRepository $showdownAbilityRepository
-	 * @param ShowdownItemRepository $showdownItemRepository
-	 * @param ShowdownNatureRepository $showdownNatureRepository
-	 * @param ShowdownMoveRepository $showdownMoveRepository
+	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
+	 * @param ShowdownAbilityRepositoryInterface $showdownAbilityRepository
+	 * @param ShowdownItemRepositoryInterface $showdownItemRepository
+	 * @param ShowdownNatureRepositoryInterface $showdownNatureRepository
+	 * @param ShowdownMoveRepositoryInterface $showdownMoveRepository
 	 * @param MovesetFileExtractor $movesetFileExtractor
 	 */
 	public function __construct(
-		ShowdownPokemonRepository $showdownPokemonRepository,
-		ShowdownAbilityRepository $showdownAbilityRepository,
-		ShowdownItemRepository $showdownItemRepository,
-		ShowdownNatureRepository $showdownNatureRepository,
-		ShowdownMoveRepository $showdownMoveRepository,
+		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
+		ShowdownAbilityRepositoryInterface $showdownAbilityRepository,
+		ShowdownItemRepositoryInterface $showdownItemRepository,
+		ShowdownNatureRepositoryInterface $showdownNatureRepository,
+		ShowdownMoveRepositoryInterface $showdownMoveRepository,
 		MovesetFileExtractor $movesetFileExtractor
 	) {
 		$this->showdownPokemonRepository = $showdownPokemonRepository;

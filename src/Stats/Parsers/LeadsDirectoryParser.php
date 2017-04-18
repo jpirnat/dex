@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace Jp\Dex\Stats\Parsers;
 
 use GuzzleHttp\Client;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface;
 use Jp\Dex\Stats\Importers\Extractors\FormatRatingExtractor;
 use Jp\Dex\Stats\Importers\Extractors\YearMonthExtractor;
-use Jp\Dex\Stats\Repositories\ShowdownFormatRepository;
 use Symfony\Component\DomCrawler\Crawler;
 
 class LeadsDirectoryParser
@@ -20,7 +20,7 @@ class LeadsDirectoryParser
 	/** @var FormatRatingExtractor $formatRatingExtractor */
 	protected $formatRatingExtractor;
 
-	/** @var ShowdownFormatRepository $showdownFormatRepository */
+	/** @var ShowdownFormatRepositoryInterface $showdownFormatRepository */
 	protected $showdownFormatRepository;
 
 	/**
@@ -29,13 +29,13 @@ class LeadsDirectoryParser
 	 * @param LeadsFileParser $leadsFileParser
 	 * @param YearMonthExtractor $yearMonthExtractor
 	 * @param FormatRatingExtractor $formatRatingExtractor
-	 * @param ShowdownFormatRepository $showdownFormatRepository
+	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
 	 */
 	public function __construct(
 		LeadsFileParser $leadsFileParser,
 		YearMonthExtractor $yearMonthExtractor,
 		FormatRatingExtractor $formatRatingExtractor,
-		ShowdownFormatRepository $showdownFormatRepository
+		ShowdownFormatRepositoryInterface $showdownFormatRepository
 	) {
 		$this->leadsFileParser = $leadsFileParser;
 		$this->yearMonthExtractor = $yearMonthExtractor;

@@ -1,18 +1,19 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Repositories;
+namespace Jp\Dex\Infrastructure\Showdown;
 
 use Exception;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
 use PDO;
 
-class ShowdownPokemonRepository
+class DatabaseShowdownPokemonRepository implements ShowdownPokemonRepositoryInterface
 {
-	/** @var int[] $pokemonToImport */
+	/** @var PokemonId[] $pokemonToImport */
 	protected $pokemonToImport = [];
 
-	/** @var ?int[] $pokemonToIgnore */
+	/** @var ?PokemonId[] $pokemonToIgnore */
 	protected $pokemonToIgnore = [];
 
 	/** @var string[] $unknownPokemon */
@@ -32,7 +33,9 @@ class ShowdownPokemonRepository
 			FROM `showdown_pokemon_to_import`'
 		);
 		$stmt->execute();
-		$this->pokemonToImport = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$this->pokemonToImport[$result['name']] = new PokemonId($result['pokemon_id']);
+		}
 
 		$stmt = $db->prepare(
 			'SELECT
@@ -41,7 +44,16 @@ class ShowdownPokemonRepository
 			FROM `showdown_pokemon_to_ignore`'
 		);
 		$stmt->execute();
-		$this->pokemonToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			if ($result['pokemon_id'] !== null) {
+				// The Pokémon Showdown Pokémon name has a Pokémon id.
+				$pokemonId = new PokemonId($result['pokemon_id']);
+			} else {
+				$pokemonId = null;
+			}
+
+			$this->pokemonToIgnore[$result['name']] = $pokemonId;
+		}
 	}
 
 	/**
@@ -109,7 +121,7 @@ class ShowdownPokemonRepository
 	{
 		// If the Pokémon is imported, return the Pokémon id.
 		if ($this->isImported($showdownPokemonName)) {
-			return new PokemonId($this->pokemonToImport[$showdownPokemonName]);
+			return $this->pokemonToImport[$showdownPokemonName];
 		}
 
 		// If the Pokémon is not known, add it to the list of unknown Pokémon.
