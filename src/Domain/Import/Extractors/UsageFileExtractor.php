@@ -15,7 +15,7 @@ class UsageFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid
+	 * @throws Exception if $line is invalid.
 	 *
 	 * @return int
 	 */
@@ -37,7 +37,7 @@ class UsageFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid
+	 * @throws Exception if $line is invalid.
 	 *
 	 * @return float
 	 */
@@ -78,7 +78,7 @@ class UsageFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid
+	 * @throws Exception if $line is invalid.
 	 *
 	 * @return Usage
 	 */

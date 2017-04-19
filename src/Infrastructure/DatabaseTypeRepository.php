@@ -30,7 +30,7 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 	 *
 	 * @param int $hiddenPowerIndex
 	 *
-	 * @throws Exception if no type exists with this hidden power index
+	 * @throws Exception if no type exists with this hidden power index.
 	 *
 	 * @return Type
 	 */

@@ -39,7 +39,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid
+	 * @throws Exception if $line is invalid.
 	 *
 	 * @return string
 	 */
@@ -61,7 +61,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid
+	 * @throws Exception if $line is invalid.
 	 *
 	 * @return int
 	 */
@@ -83,7 +83,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid
+	 * @throws Exception if $line is invalid.
 	 *
 	 * @return float
 	 */
@@ -124,7 +124,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid
+	 * @throws Exception if $line is invalid.
 	 *
 	 * @return int
 	 */
@@ -165,7 +165,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid
+	 * @throws Exception if $line is invalid.
 	 *
 	 * @return NamePercent
 	 */
@@ -190,7 +190,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid
+	 * @throws Exception if $line is invalid.
 	 *
 	 * @return Spread
 	 */
@@ -250,8 +250,8 @@ class MovesetFileExtractor
 	 * @param string $line1
 	 * @param string $line2
 	 *
-	 * @throws Exception if $line1 is invalid
-	 * @throws Exception if $line2 is invalid
+	 * @throws Exception if $line1 is invalid.
+	 * @throws Exception if $line2 is invalid.
 	 *
 	 * @return Counter
 	 */
@@ -275,7 +275,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line1
 	 *
-	 * @throws Exception if $line1 is invalid
+	 * @throws Exception if $line1 is invalid.
 	 *
 	 * @return Counter1
 	 */
@@ -307,7 +307,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line2
 	 *
-	 * @throws Exception if $line2 is invalid
+	 * @throws Exception if $line2 is invalid.
 	 *
 	 * @return Counter2
 	 */

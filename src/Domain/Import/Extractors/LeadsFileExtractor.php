@@ -15,7 +15,7 @@ class LeadsFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid
+	 * @throws Exception if $line is invalid.
 	 *
 	 * @return int
 	 */
@@ -56,7 +56,7 @@ class LeadsFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid
+	 * @throws Exception if $line is invalid.
 	 *
 	 * @return LeadUsage
 	 */

@@ -16,7 +16,7 @@ class FormatRatingExtractor
 	 *
 	 * @param string $filename
 	 *
-	 * @throws Exception if $filename is invalid
+	 * @throws Exception if $filename is invalid.
 	 *
 	 * @return FormatRating
 	 */

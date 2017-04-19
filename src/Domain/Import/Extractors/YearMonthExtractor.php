@@ -15,7 +15,7 @@ class YearMonthExtractor
 	 *
 	 * @param string $filename
 	 *
-	 * @throws Exception if $filename is invalid
+	 * @throws Exception if $filename is invalid.
 	 *
 	 * @return YearMonth
 	 */
