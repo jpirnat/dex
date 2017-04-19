@@ -64,6 +64,60 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 	}
 
 	/**
+	 * Get moveset rated ability records by year, month, format, rating, and
+	 * Pokémon.
+	 *
+	 * @param int $year
+	 * @param int $month
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return MovesetRatedAbility[]
+	 */
+	public function getByYearAndMonthAndFormatAndRatingAndPokemon(
+		int $year,
+		int $month,
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`ability_id`,
+				`percent`
+			FROM `moveset_rated_abilities`
+			WHERE `year` = :year
+				AND `month` = :month
+				AND `format_id` = :format_id
+				AND `rating` = :rating
+				AND `pokemon_id` = :pokemon_id'
+		);
+		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$movesetRatedAbilities = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$movesetRatedAbilities[] = new MovesetRatedAbility(
+				$year,
+				$month,
+				$formatId,
+				$rating,
+				$pokemonId,
+				new AbilityId($result['ability_id']),
+				(float) $result['percent']
+			);
+		}
+
+		return $movesetRatedAbilities;
+	}
+
+	/**
 	 * Get moveset rated ability records by format and rating and Pokémon.
 	 *
 	 * @param FormatId $formatId

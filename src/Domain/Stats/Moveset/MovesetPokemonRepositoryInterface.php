@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Moveset;
 
+use Exception;
 use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface MovesetPokemonRepositoryInterface
 {
@@ -30,4 +32,24 @@ interface MovesetPokemonRepositoryInterface
 	 * @return void
 	 */
 	public function save(MovesetPokemon $movesetPokemon) : void;
+
+	/**
+	 * Get a moveset Pokémon record by year, month, format, and Pokémon.
+	 *
+	 * @param int $year
+	 * @param int $month
+	 * @param FormatId $formatId
+	 * @param PokemonId $pokemonId
+	 *
+	 * @throws Exception if no moveset Pokémon record exists with this year,
+	 *     month, format, and Pokémon.
+	 *
+	 * @return MovesetPokemon
+	 */
+	public function getByYearAndMonthAndFormatAndPokemon(
+		int $year,
+		int $month,
+		FormatId $formatId,
+		PokemonId $pokemonId
+	) : MovesetPokemon;
 }

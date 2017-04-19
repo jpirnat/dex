@@ -19,6 +19,26 @@ interface MovesetRatedItemRepositoryInterface
 	public function save(MovesetRatedItem $movesetRatedItem) : void;
 
 	/**
+	 * Get moveset rated item records by year, month, format, rating, and
+	 * Pokémon.
+	 *
+	 * @param int $year
+	 * @param int $month
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return MovesetRatedItem[]
+	 */
+	public function getByYearAndMonthAndFormatAndRatingAndPokemon(
+		int $year,
+		int $month,
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId
+	) : array;
+
+	/**
 	 * Get moveset rated item records by format and rating and Pokémon.
 	 *
 	 * @param FormatId $formatId
