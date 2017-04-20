@@ -315,7 +315,7 @@ create table if not exists `move_names`
 `move_id` smallint unsigned not null,
 `language_id` tinyint unsigned not null,
 
-`name` varchar(100),
+`name` varchar(100) not null,
 
 primary key (
 	`generation`,
@@ -362,3 +362,53 @@ foreign key (`z_power_effect_id`) references `z_power_effects` (`id`)
 	on delete restrict
 	on update cascade,
 ) engine = InnoDB;
+
+
+create table if not exists `z_exclusive_moves`
+(
+`pokemon_id` smallint unsigned not null,
+`move_id` smallint unsigned not null,
+`z_crystal_id` smallint unsigned not null,
+`z_move_id` smallint unsigned not null,
+
+primary key (
+	`pokemon_id`,
+	`move_id`,
+	`z_crystal_id`
+),
+foreign key (`pokemon_id`) references `pokemon` (`id`)
+	on delete restrict
+	on update cascade,
+foreign key (`move_id`) references `moves` (`id`)
+	on delete restrict
+	on update cascade,
+foreign key (`z_crystal_id`) references `items` (`id`)
+	on delete restrict
+	on update cascade,
+foreign key (`z_move_id`) references `moves` (`id`)
+	on delete restrict
+	on update cascade,
+) engine = InnoDB;
+
+
+insert into `z_exclusive_moves` (
+	`pokemon_id`,
+	`move_id`,
+	`z_crystal_id`,
+	`z_move_id`
+) values
+(25, 344, 857, 658), # TODO: find out if pikachu-cap can use catastropika as well.
+(724, 662, 861, 695),
+(727, 663, 862, 696),
+(730, 664, 863, 697),
+(785, 717, 864, 698),
+(786, 717, 864, 698),
+(787, 717, 864, 698),
+(788, 717, 864, 698),
+(802, 712, 865, 699),
+(10111, 85, 866, 700),
+(143, 416, 867, 701),
+(133, 387, 868, 702),
+(151, 94, 869, 703),
+(10110, 85, 899, 719)
+;

@@ -1687,7 +1687,6 @@ insert into `showdown_natures_to_import` (
 insert into `showdown_natures_to_ignore` (
 	`name`
 ) values
-/* TODO */
 ("Other")
 ;
 

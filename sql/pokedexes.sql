@@ -1,13 +1,3 @@
-/*
-TODO:
-Before I add `regions`, I need to figure out whether
-`generations` should keep track of `main_region_id`, or
-`regions` should keep track of `introduced_in_generation`.
-Because I don't want any cyclical references if I can help it.
-*/
-
-
-/*
 create table if not exists `regions`
 (
 `id` tinyint unsigned not null,
@@ -24,7 +14,8 @@ foreign key (`introduced_in_generation`) references `generations` (`generation`)
 
 insert into `regions` (
 	`id`,
-	`identifier`
+	`identifier`,
+	`introduced_in_generation`
 ) values
 (1, "kanto", 1),
 (2, "johto", 2),
@@ -34,7 +25,6 @@ insert into `regions` (
 (6, "kalos", 6),
 (7, "alola", 7)
 ;
-*/
 
 
 create table if not exists `pokedexes`
@@ -42,7 +32,7 @@ create table if not exists `pokedexes`
 `id` tinyint unsigned not null,
 
 `identifier` varchar(15) not null,
-# `region_id` tinyint unsigned null, # nullable
+`region_id` tinyint unsigned null, # nullable
 
 primary key (`id`),
 unique key (`identifier`)
@@ -71,26 +61,27 @@ foreign key (`species_id`) references `species` (`id`)
 
 insert into `pokedexes` (
 	`id`,
-	`identifier`
+	`identifier`,
+	`region_id`
 ) values
-(1, "national"),
-(2, "kanto"),
-(3, "new"),
-(4, "good-old-hoenn"),
-(5, "sinnoh"),
-(6, "enhanced-sinnoh"),
-(7, "johto"),
-(8, "unova"),
-(9, "new-unova"),
-(10, "central-kalos"),
-(11, "coastal-kalos"),
-(12, "mountain-kalos"),
-(13, "hoenn"),
-(14, "alola"),
-(15, "melemele"),
-(16, "akala"),
-(17, "ula-ula"),
-(18, "poni")
+(1, "national", null),
+(2, "kanto", 1),
+(3, "new", 2),
+(4, "good-old-hoenn", 3),
+(5, "sinnoh", 4),
+(6, "enhanced-sinnoh", 4),
+(7, "johto", 2),
+(8, "unova", 5),
+(9, "new-unova", 5),
+(10, "central-kalos", 6),
+(11, "coastal-kalos", 6),
+(12, "mountain-kalos", 6),
+(13, "hoenn", 3),
+(14, "alola", 7),
+(15, "melemele", 7),
+(16, "akala", 7),
+(17, "ula-ula", 7),
+(18, "poni", 7)
 ;
 
 

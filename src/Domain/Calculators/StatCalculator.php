@@ -57,12 +57,12 @@ class StatCalculator
 	 * @param int $iv
 	 * @param int $ev
 	 * @param int $level
-	 * @param float $nature
+	 * @param float $natureModifier 1.0, 0.9, or 1.1
 	 *
 	 * @return int
 	 */
-	public function other3(int $base, int $iv, int $ev, int $level, float $nature)
+	public function other3(int $base, int $iv, int $ev, int $level, float $natureModifier)
 	{
-		return floor((floor(((2 * $base + $iv + floor($ev / 4)) * $level) / 100) + 5) * $nature);
+		return floor((floor(((2 * $base + $iv + floor($ev / 4)) * $level) / 100) + 5) * $natureModifier);
 	}
 }
