@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure\Showdown;
 
 use Exception;
-use Jp\Dex\Domain\Stats\NatureId;
+use Jp\Dex\Domain\Natures\NatureId;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface;
 use PDO;
 

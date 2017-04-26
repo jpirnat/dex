@@ -36,9 +36,8 @@ insert into `types` (
 (16, "dragon", 2, 14),
 (17, "dark", 2, 15),
 (18, "fairy", null, null),
-(101, "bird", 1, null),
-(102, "unknown", null, null),
-(103, "shadow", null, null)
+(101, "unknown", null, null),
+(102, "shadow", null, null)
 ;
 
 

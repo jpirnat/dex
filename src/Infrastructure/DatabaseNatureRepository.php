@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use Exception;
-use Jp\Dex\Domain\Stats\Nature;
-use Jp\Dex\Domain\Stats\NatureId;
-use Jp\Dex\Domain\Stats\NatureRepositoryInterface;
+use Jp\Dex\Domain\Natures\Nature;
+use Jp\Dex\Domain\Natures\NatureId;
+use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use PDO;
 

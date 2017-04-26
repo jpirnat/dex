@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Stats\Showdown;
 
 use Exception;
-use Jp\Dex\Domain\Stats\NatureId;
+use Jp\Dex\Domain\Natures\NatureId;
 
 interface ShowdownNatureRepositoryInterface
 {

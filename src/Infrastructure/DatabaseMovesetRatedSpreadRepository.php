@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Stats\Moveset;
 
 use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Natures\NatureId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\NatureId;
 use PDO;
 
 class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRepositoryInterface

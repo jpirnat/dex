@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Stats;
+namespace Jp\Dex\Domain\Natures;
+
+use Jp\Dex\Domain\Stats\StatId;
 
 class Nature
 {
