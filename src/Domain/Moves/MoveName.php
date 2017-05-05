@@ -38,7 +38,7 @@ class MoveName
 	 *
 	 * @return LanguageId
 	 */
-	public function languageId() : LanguageId
+	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
 	}
@@ -48,7 +48,7 @@ class MoveName
 	 *
 	 * @return MoveId
 	 */
-	public function moveId() : MoveId
+	public function getMoveId() : MoveId
 	{
 		return $this->moveId;
 	}
@@ -58,7 +58,7 @@ class MoveName
 	 *
 	 * @return string
 	 */
-	public function name() : string
+	public function getName() : string
 	{
 		return $this->name;
 	}

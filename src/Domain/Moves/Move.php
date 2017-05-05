@@ -38,7 +38,7 @@ class Move
 	 *
 	 * @return MoveId
 	 */
-	public function id() : MoveId
+	public function getId() : MoveId
 	{
 		return $this->id;
 	}
@@ -48,7 +48,7 @@ class Move
 	 *
 	 * @return string
 	 */
-	public function identifier() : string
+	public function getIdentifier() : string
 	{
 		return $this->identifier;
 	}
@@ -58,7 +58,7 @@ class Move
 	 *
 	 * @return Generation
 	 */
-	public function introducedInGeneration() : Generation
+	public function getIntroducedInGeneration() : Generation
 	{
 		return $this->introducedInGeneration;
 	}

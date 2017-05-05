@@ -66,9 +66,9 @@ class AbilitiesModel
 		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
 
 		$this->movesetRatedAbilities = $this->movesetRatedAbilityRepository->getByFormatAndRatingAndPokemon(
-			$format->id(),
+			$format->getId(),
 			$rating,
-			$pokemon->id()
+			$pokemon->getId()
 		);
 	}
 
@@ -92,9 +92,9 @@ class AbilitiesModel
 		$ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
 
 		$this->movesetRatedAbilities = $this->movesetRatedAbilityRepository->getByFormatAndPokemonAndAbility(
-			$format->id(),
-			$pokemon->id(),
-			$ability->id()
+			$format->getId(),
+			$pokemon->getId(),
+			$ability->getId()
 		);
 	}
 

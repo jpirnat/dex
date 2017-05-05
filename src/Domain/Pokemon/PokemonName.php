@@ -38,7 +38,7 @@ class PokemonName
 	 *
 	 * @return LanguageId
 	 */
-	public function languageId() : LanguageId
+	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
 	}
@@ -48,7 +48,7 @@ class PokemonName
 	 *
 	 * @return PokemonId
 	 */
-	public function pokemonId() : PokemonId
+	public function getPokemonId() : PokemonId
 	{
 		return $this->pokemonId;
 	}
@@ -58,7 +58,7 @@ class PokemonName
 	 *
 	 * @return string
 	 */
-	public function name() : string
+	public function getName() : string
 	{
 		return $this->name;
 	}

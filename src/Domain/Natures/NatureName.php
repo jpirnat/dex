@@ -38,7 +38,7 @@ class NatureName
 	 *
 	 * @return LanguageId
 	 */
-	public function languageId() : LanguageId
+	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
 	}
@@ -48,7 +48,7 @@ class NatureName
 	 *
 	 * @return NatureId
 	 */
-	public function natureId() : NatureId
+	public function getNatureId() : NatureId
 	{
 		return $this->natureId;
 	}
@@ -58,7 +58,7 @@ class NatureName
 	 *
 	 * @return string
 	 */
-	public function name() : string
+	public function getName() : string
 	{
 		return $this->name;
 	}

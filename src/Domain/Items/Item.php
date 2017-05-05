@@ -50,7 +50,7 @@ class Item
 	 *
 	 * @return ItemId
 	 */
-	public function id() : ItemId
+	public function getId() : ItemId
 	{
 		return $this->id;
 	}
@@ -60,7 +60,7 @@ class Item
 	 *
 	 * @return string
 	 */
-	public function identifier() : string
+	public function getIdentifier() : string
 	{
 		return $this->identifier;
 	}
@@ -70,7 +70,7 @@ class Item
 	 *
 	 * @return Generation
 	 */
-	public function introducedInGeneration() : Generation
+	public function getIntroducedInGeneration() : Generation
 	{
 		return $this->introducedInGeneration;
 	}
@@ -80,7 +80,7 @@ class Item
 	 *
 	 * @return int|null
 	 */
-	public function itemFlingPower() : ?int
+	public function getItemFlingPower() : ?int
 	{
 		return $this->itemFlingPower;
 	}
@@ -90,7 +90,7 @@ class Item
 	 *
 	 * @return ItemFlingEffectId|null
 	 */
-	public function itemFlingEffectId() : ?ItemFlingEffectId
+	public function getItemFlingEffectId() : ?ItemFlingEffectId
 	{
 		return $this->itemFlingEffectId;
 	}

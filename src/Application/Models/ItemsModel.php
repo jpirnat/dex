@@ -66,9 +66,9 @@ class ItemsModel
 		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
 
 		$this->movesetRatedItems = $this->movesetRatedItemRepository->getByFormatAndRatingAndPokemon(
-			$format->id(),
+			$format->getId(),
 			$rating,
-			$pokemon->id()
+			$pokemon->getId()
 		);
 	}
 
@@ -92,9 +92,9 @@ class ItemsModel
 		$item = $this->itemRepository->getByIdentifier($itemIdentifier);
 
 		$this->movesetRatedItems = $this->movesetRatedItemRepository->getByFormatAndPokemonAndItem(
-			$format->id(),
-			$pokemon->id(),
-			$item->id()
+			$format->getId(),
+			$pokemon->getId(),
+			$item->getId()
 		);
 	}
 

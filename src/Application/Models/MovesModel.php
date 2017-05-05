@@ -66,9 +66,9 @@ class MovesModel
 		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
 
 		$this->movesetRatedMoves = $this->movesetRatedMoveRepository->getByFormatAndRatingAndPokemon(
-			$format->id(),
+			$format->getId(),
 			$rating,
-			$pokemon->id()
+			$pokemon->getId()
 		);
 	}
 
@@ -92,9 +92,9 @@ class MovesModel
 		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
 
 		$this->movesetRatedMoves = $this->movesetRatedMoveRepository->getByFormatAndPokemonAndMove(
-			$format->id(),
-			$pokemon->id(),
-			$move->id()
+			$format->getId(),
+			$pokemon->getId(),
+			$move->getId()
 		);
 	}
 

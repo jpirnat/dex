@@ -55,8 +55,8 @@ class LeadsModel
 		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
 
 		$this->leadsRatedPokemon = $this->leadsRatedPokemonRepository->getByFormatAndPokemon(
-			$format->id(),
-			$pokemon->id()
+			$format->getId(),
+			$pokemon->getId()
 		);
 	}
 

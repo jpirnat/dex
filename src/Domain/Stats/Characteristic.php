@@ -42,7 +42,7 @@ class Characteristic
 	 *
 	 * @return CharacteristicId
 	 */
-	public function id() : CharacteristicId
+	public function getId() : CharacteristicId
 	{
 		return $this->id;
 	}
@@ -52,7 +52,7 @@ class Characteristic
 	 *
 	 * @return string
 	 */
-	public function identifier() : string
+	public function getIdentifier() : string
 	{
 		return $this->identifier;
 	}
@@ -62,7 +62,7 @@ class Characteristic
 	 *
 	 * @return StatId
 	 */
-	public function highestStatId() : StatId
+	public function getHighestStatId() : StatId
 	{
 		return $this->highestStatId;
 	}
@@ -72,7 +72,7 @@ class Characteristic
 	 *
 	 * @return int
 	 */
-	public function ivModFive() : int
+	public function getIvModFive() : int
 	{
 		return $this->ivModFive;
 	}

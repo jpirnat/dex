@@ -38,7 +38,7 @@ class ItemName
 	 *
 	 * @return LanguageId
 	 */
-	public function languageId() : LanguageId
+	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
 	}
@@ -48,7 +48,7 @@ class ItemName
 	 *
 	 * @return ItemId
 	 */
-	public function itemId() : ItemId
+	public function getItemId() : ItemId
 	{
 		return $this->itemId;
 	}
@@ -58,7 +58,7 @@ class ItemName
 	 *
 	 * @return string
 	 */
-	public function name() : string
+	public function getName() : string
 	{
 		return $this->name;
 	}

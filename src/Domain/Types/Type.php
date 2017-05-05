@@ -44,7 +44,7 @@ class Type
 	 *
 	 * @return TypeId
 	 */
-	public function id() : TypeId
+	public function getId() : TypeId
 	{
 		return $this->id;
 	}
@@ -54,7 +54,7 @@ class Type
 	 *
 	 * @return string
 	 */
-	public function identifier() : string
+	public function getIdentifier() : string
 	{
 		return $this->identifier;
 	}
@@ -64,7 +64,7 @@ class Type
 	 *
 	 * @return CategoryId|null
 	 */
-	public function categoryId() : ?CategoryId
+	public function getCategoryId() : ?CategoryId
 	{
 		return $this->categoryId;
 	}
@@ -74,7 +74,7 @@ class Type
 	 *
 	 * @return int|null
 	 */
-	public function hiddenPowerIndex() : ?int
+	public function getHiddenPowerIndex() : ?int
 	{
 		return $this->hiddenPowerIndex;
 	}

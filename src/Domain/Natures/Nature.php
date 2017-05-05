@@ -44,7 +44,7 @@ class Nature
 	 *
 	 * @return NatureId
 	 */
-	public function id() : NatureId
+	public function getId() : NatureId
 	{
 		return $this->id;
 	}
@@ -54,7 +54,7 @@ class Nature
 	 *
 	 * @return string
 	 */
-	public function identifier() : string
+	public function getIdentifier() : string
 	{
 		return $this->identifier;
 	}
@@ -64,7 +64,7 @@ class Nature
 	 *
 	 * @return StatId|null
 	 */
-	public function increasedStatId() : ?StatId
+	public function getIncreasedStatId() : ?StatId
 	{
 		return $this->increasedStatId;
 	}
@@ -74,7 +74,7 @@ class Nature
 	 *
 	 * @return StatId|null
 	 */
-	public function decreasedStatId() : ?StatId
+	public function getDecreasedStatId() : ?StatId
 	{
 		return $this->decreasedStatId;
 	}

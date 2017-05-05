@@ -23,7 +23,7 @@ class Generation
 	 *
 	 * @return int
 	 */
-	public function value() : int
+	public function getValue() : int
 	{
 		return $this->value;
 	}

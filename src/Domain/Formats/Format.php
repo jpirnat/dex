@@ -62,7 +62,7 @@ class Format
 	 *
 	 * @return FormatId
 	 */
-	public function id() : FormatId
+	public function getId() : FormatId
 	{
 		return $this->id;
 	}
@@ -72,7 +72,7 @@ class Format
 	 *
 	 * @return string
 	 */
-	public function identifier() : string
+	public function getIdentifier() : string
 	{
 		return $this->identifier;
 	}
@@ -82,7 +82,7 @@ class Format
 	 *
 	 * @return Generation
 	 */
-	public function generation() : Generation
+	public function getGeneration() : Generation
 	{
 		return $this->generation;
 	}
@@ -92,7 +92,7 @@ class Format
 	 *
 	 * @return int
 	 */
-	public function level() : int
+	public function getLevel() : int
 	{
 		return $this->level;
 	}
@@ -102,7 +102,7 @@ class Format
 	 *
 	 * @return int
 	 */
-	public function fieldSize() : int
+	public function getFieldSize() : int
 	{
 		return $this->fieldSize;
 	}
@@ -112,7 +112,7 @@ class Format
 	 *
 	 * @return int
 	 */
-	public function teamSize() : int
+	public function getTeamSize() : int
 	{
 		return $this->teamSize;
 	}
@@ -122,7 +122,7 @@ class Format
 	 *
 	 * @return int
 	 */
-	public function inBattleTeamSize() : int
+	public function getInBattleTeamSize() : int
 	{
 		return $this->inBattleTeamSize;
 	}

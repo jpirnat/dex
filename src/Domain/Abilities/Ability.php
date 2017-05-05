@@ -38,7 +38,7 @@ class Ability
 	 *
 	 * @return AbilityId
 	 */
-	public function id() : AbilityId
+	public function getId() : AbilityId
 	{
 		return $this->id;
 	}
@@ -48,7 +48,7 @@ class Ability
 	 *
 	 * @return string
 	 */
-	public function identifier() : string
+	public function getIdentifier() : string
 	{
 		return $this->identifier;
 	}
@@ -58,7 +58,7 @@ class Ability
 	 *
 	 * @return Generation
 	 */
-	public function introducedInGeneration() : Generation
+	public function getIntroducedInGeneration() : Generation
 	{
 		return $this->introducedInGeneration;
 	}

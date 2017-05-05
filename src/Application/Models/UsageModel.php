@@ -54,8 +54,8 @@ class UsageModel
 		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
 
 		$this->usageRatedPokemon = $this->usageRatedPokemonRepository->getByFormatAndPokemon(
-			$format->id(),
-			$pokemon->id()
+			$format->getId(),
+			$pokemon->getId()
 		);
 	}
 

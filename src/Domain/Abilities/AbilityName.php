@@ -38,7 +38,7 @@ class AbilityName
 	 *
 	 * @return LanguageId
 	 */
-	public function languageId() : LanguageId
+	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
 	}
@@ -48,7 +48,7 @@ class AbilityName
 	 *
 	 * @return AbilityId
 	 */
-	public function abilityId() : AbilityId
+	public function getAbilityId() : AbilityId
 	{
 		return $this->abilityId;
 	}
@@ -58,7 +58,7 @@ class AbilityName
 	 *
 	 * @return string
 	 */
-	public function name() : string
+	public function getName() : string
 	{
 		return $this->name;
 	}

@@ -74,7 +74,7 @@ class Pokemon
 	 *
 	 * @return PokemonId
 	 */
-	public function id() : PokemonId
+	public function getId() : PokemonId
 	{
 		return $this->id;
 	}
@@ -84,7 +84,7 @@ class Pokemon
 	 *
 	 * @return string
 	 */
-	public function identifier() : string
+	public function getIdentifier() : string
 	{
 		return $this->identifier;
 	}
@@ -94,7 +94,7 @@ class Pokemon
 	 *
 	 * @return string|null
 	 */
-	public function pokemonIdentifier() : ?string
+	public function getPokemonIdentifier() : ?string
 	{
 		return $this->pokemonIdentifier;
 	}
@@ -104,7 +104,7 @@ class Pokemon
 	 *
 	 * @return SpeciesId
 	 */
-	public function speciesId() : SpeciesId
+	public function getSpeciesId() : SpeciesId
 	{
 		return $this->speciesId;
 	}
@@ -124,7 +124,7 @@ class Pokemon
 	 *
 	 * @return VersionGroupId
 	 */
-	public function introducedInVersionGroupId() : VersionGroupId
+	public function getIntroducedInVersionGroupId() : VersionGroupId
 	{
 		return $this->introducedInVersionGroupId;
 	}
@@ -134,7 +134,7 @@ class Pokemon
 	 *
 	 * @return float
 	 */
-	public function heightM() : float
+	public function getHeightM() : float
 	{
 		return $this->heightM;
 	}
@@ -144,7 +144,7 @@ class Pokemon
 	 *
 	 * @return float
 	 */
-	public function weightKg() : float
+	public function getWeightKg() : float
 	{
 		return $this->weightKg;
 	}
@@ -155,7 +155,7 @@ class Pokemon
 	 *
 	 * @return float|null
 	 */
-	public function genderRatio() : ?float
+	public function getGenderRatio() : ?float
 	{
 		return $this->genderRatio;
 	}
