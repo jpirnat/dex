@@ -75,10 +75,10 @@ class DatabaseUsageRepository implements UsageRepositoryInterface
 				:total_battles
 			)'
 		);
-		$stmt->bindValue(':year', $usage->year(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $usage->month(), PDO::PARAM_INT);
-		$stmt->bindValue(':format_id', $usage->formatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':total_battles', $usage->totalBattles(), PDO::PARAM_INT);
+		$stmt->bindValue(':year', $usage->getYear(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $usage->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $usage->getFormatId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':total_battles', $usage->getTotalBattles(), PDO::PARAM_INT);
 		$stmt->execute();
 	}
 }

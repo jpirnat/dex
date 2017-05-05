@@ -59,7 +59,7 @@ class MovesetPokemon
 	 *
 	 * @return int
 	 */
-	public function year() : int
+	public function getYear() : int
 	{
 		return $this->year;
 	}
@@ -69,7 +69,7 @@ class MovesetPokemon
 	 *
 	 * @return int
 	 */
-	public function month() : int
+	public function getMonth() : int
 	{
 		return $this->month;
 	}
@@ -79,7 +79,7 @@ class MovesetPokemon
 	 *
 	 * @return FormatId
 	 */
-	public function formatId() : FormatId
+	public function getFormatId() : FormatId
 	{
 		return $this->formatId;
 	}
@@ -89,7 +89,7 @@ class MovesetPokemon
 	 *
 	 * @return PokemonId
 	 */
-	public function pokemonId() : PokemonId
+	public function getPokemonId() : PokemonId
 	{
 		return $this->pokemonId;
 	}
@@ -99,7 +99,7 @@ class MovesetPokemon
 	 *
 	 * @return int
 	 */
-	public function rawCount() : int
+	public function getRawCount() : int
 	{
 		return $this->rawCount;
 	}
@@ -109,7 +109,7 @@ class MovesetPokemon
 	 *
 	 * @return int|null
 	 */
-	public function viabilityCeiling() : ?int
+	public function getViabilityCeiling() : ?int
 	{
 		return $this->viabilityCeiling;
 	}

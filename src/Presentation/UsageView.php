@@ -36,10 +36,10 @@ class UsageView
 		$data = [];
 		foreach ($usageRatedPokemons as $usageRatedPokemon) {
 			$data[] = [
-				'year' => $usageRatedPokemon->year(),
-				'month' => $usageRatedPokemon->month(),
-				'rating' => $usageRatedPokemon->rating(),
-				'percent' => $usageRatedPokemon->usagePercent(),
+				'year' => $usageRatedPokemon->getYear(),
+				'month' => $usageRatedPokemon->getMonth(),
+				'rating' => $usageRatedPokemon->getRating(),
+				'percent' => $usageRatedPokemon->getUsagePercent(),
 			];
 		}
 

@@ -35,13 +35,13 @@ class AbilitiesView
 		$data = [];
 		foreach ($movesetRatedAbilities as $movesetRatedAbility) {
 			$data[] = [
-				'year' => $movesetRatedAbility->year(),
-				'month' => $movesetRatedAbility->month(),
-				'formatId' => $movesetRatedAbility->formatId()->value(),
-				'rating' => $movesetRatedAbility->rating(),
-				'pokemonId' => $movesetRatedAbility->pokemonId()->value(),
-				'abilityId' => $movesetRatedAbility->abilityId()->value(),
-				'percent' => $movesetRatedAbility->percent(),
+				'year' => $movesetRatedAbility->getYear(),
+				'month' => $movesetRatedAbility->getMonth(),
+				'formatId' => $movesetRatedAbility->getFormatId()->value(),
+				'rating' => $movesetRatedAbility->getRating(),
+				'pokemonId' => $movesetRatedAbility->getPokemonId()->value(),
+				'abilityId' => $movesetRatedAbility->getAbilityId()->value(),
+				'percent' => $movesetRatedAbility->getPercent(),
 			];
 		}
 

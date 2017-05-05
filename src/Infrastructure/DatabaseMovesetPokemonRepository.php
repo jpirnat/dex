@@ -81,12 +81,12 @@ class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterf
 				:viability_ceiling
 			)'
 		);
-		$stmt->bindValue(':year', $movesetPokemon->year(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $movesetPokemon->month(), PDO::PARAM_INT);
-		$stmt->bindValue(':format_id', $movesetPokemon->formatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $movesetPokemon->pokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':raw_count', $movesetPokemon->rawCount(), PDO::PARAM_INT);
-		$stmt->bindValue(':viability_ceiling', $movesetPokemon->viabilityCeiling(), PDO::PARAM_INT);
+		$stmt->bindValue(':year', $movesetPokemon->getYear(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetPokemon->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $movesetPokemon->getFormatId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $movesetPokemon->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':raw_count', $movesetPokemon->getRawCount(), PDO::PARAM_INT);
+		$stmt->bindValue(':viability_ceiling', $movesetPokemon->getViabilityCeiling(), PDO::PARAM_INT);
 		$stmt->execute();
 	}
 

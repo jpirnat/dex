@@ -36,10 +36,10 @@ class LeadsView
 		$data = [];
 		foreach ($leadsRatedPokemons as $leadsRatedPokemon) {
 			$data[] = [
-				'year' => $leadsRatedPokemon->year(),
-				'month' => $leadsRatedPokemon->month(),
-				'rating' => $leadsRatedPokemon->rating(),
-				'percent' => $leadsRatedPokemon->usagePercent(),
+				'year' => $leadsRatedPokemon->getYear(),
+				'month' => $leadsRatedPokemon->getMonth(),
+				'rating' => $leadsRatedPokemon->getRating(),
+				'percent' => $leadsRatedPokemon->getUsagePercent(),
 			];
 		}
 

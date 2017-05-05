@@ -87,13 +87,13 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 				:usage_percent
 			)'
 		);
-		$stmt->bindValue(':year', $leadsRatedPokemon->year(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $leadsRatedPokemon->month(), PDO::PARAM_INT);
-		$stmt->bindValue(':format_id', $leadsRatedPokemon->formatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $leadsRatedPokemon->rating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $leadsRatedPokemon->pokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rank', $leadsRatedPokemon->rank(), PDO::PARAM_INT);
-		$stmt->bindValue(':usage_percent', $leadsRatedPokemon->usagePercent(), PDO::PARAM_STR);
+		$stmt->bindValue(':year', $leadsRatedPokemon->getYear(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $leadsRatedPokemon->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $leadsRatedPokemon->getFormatId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $leadsRatedPokemon->getRating(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $leadsRatedPokemon->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rank', $leadsRatedPokemon->getRank(), PDO::PARAM_INT);
+		$stmt->bindValue(':usage_percent', $leadsRatedPokemon->getUsagePercent(), PDO::PARAM_STR);
 		$stmt->execute();
 	}
 

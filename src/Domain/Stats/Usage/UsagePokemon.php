@@ -71,7 +71,7 @@ class UsagePokemon
 	 *
 	 * @return int
 	 */
-	public function year() : int
+	public function getYear() : int
 	{
 		return $this->year;
 	}
@@ -81,7 +81,7 @@ class UsagePokemon
 	 *
 	 * @return int
 	 */
-	public function month() : int
+	public function getMonth() : int
 	{
 		return $this->month;
 	}
@@ -91,7 +91,7 @@ class UsagePokemon
 	 *
 	 * @return FormatId
 	 */
-	public function formatId() : FormatId
+	public function getFormatId() : FormatId
 	{
 		return $this->formatId;
 	}
@@ -101,7 +101,7 @@ class UsagePokemon
 	 *
 	 * @return PokemonId
 	 */
-	public function pokemonId() : PokemonId
+	public function getPokemonId() : PokemonId
 	{
 		return $this->pokemonId;
 	}
@@ -111,7 +111,7 @@ class UsagePokemon
 	 *
 	 * @return int
 	 */
-	public function raw() : int
+	public function getRaw() : int
 	{
 		return $this->raw;
 	}
@@ -121,7 +121,7 @@ class UsagePokemon
 	 *
 	 * @return float
 	 */
-	public function rawPercent() : float
+	public function getRawPercent() : float
 	{
 		return $this->rawPercent;
 	}
@@ -131,7 +131,7 @@ class UsagePokemon
 	 *
 	 * @return int
 	 */
-	public function real() : int
+	public function getReal() : int
 	{
 		return $this->real;
 	}
@@ -141,7 +141,7 @@ class UsagePokemon
 	 *
 	 * @return float
 	 */
-	public function realPercent() : float
+	public function getRealPercent() : float
 	{
 		return $this->realPercent;
 	}

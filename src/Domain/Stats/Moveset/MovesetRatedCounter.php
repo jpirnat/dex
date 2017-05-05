@@ -89,7 +89,7 @@ class MovesetRatedCounter
 	 *
 	 * @return int
 	 */
-	public function year() : int
+	public function getYear() : int
 	{
 		return $this->year;
 	}
@@ -99,7 +99,7 @@ class MovesetRatedCounter
 	 *
 	 * @return int
 	 */
-	public function month() : int
+	public function getMonth() : int
 	{
 		return $this->month;
 	}
@@ -109,7 +109,7 @@ class MovesetRatedCounter
 	 *
 	 * @return FormatId
 	 */
-	public function formatId() : FormatId
+	public function getFormatId() : FormatId
 	{
 		return $this->formatId;
 	}
@@ -119,7 +119,7 @@ class MovesetRatedCounter
 	 *
 	 * @return int
 	 */
-	public function rating() : int
+	public function getRating() : int
 	{
 		return $this->rating;
 	}
@@ -129,7 +129,7 @@ class MovesetRatedCounter
 	 *
 	 * @return PokemonId
 	 */
-	public function pokemonId() : PokemonId
+	public function getPokemonId() : PokemonId
 	{
 		return $this->pokemonId;
 	}
@@ -139,7 +139,7 @@ class MovesetRatedCounter
 	 *
 	 * @return PokemonId
 	 */
-	public function counterId() : PokemonId
+	public function getCounterId() : PokemonId
 	{
 		return $this->counterId;
 	}
@@ -149,7 +149,7 @@ class MovesetRatedCounter
 	 *
 	 * @return float
 	 */
-	public function number1() : float
+	public function getNumber1() : float
 	{
 		return $this->number1;
 	}
@@ -159,7 +159,7 @@ class MovesetRatedCounter
 	 *
 	 * @return float
 	 */
-	public function number2() : float
+	public function getNumber2() : float
 	{
 		return $this->number2;
 	}
@@ -169,7 +169,7 @@ class MovesetRatedCounter
 	 *
 	 * @return float
 	 */
-	public function number3() : float
+	public function getNumber3() : float
 	{
 		return $this->number3;
 	}
@@ -179,7 +179,7 @@ class MovesetRatedCounter
 	 *
 	 * @return float
 	 */
-	public function percentKnockedOut() : float
+	public function getPercentKnockedOut() : float
 	{
 		return $this->percentKnockedOut;
 	}
@@ -189,7 +189,7 @@ class MovesetRatedCounter
 	 *
 	 * @return float
 	 */
-	public function percentSwitchedOut() : float
+	public function getPercentSwitchedOut() : float
 	{
 		return $this->percentSwitchedOut;
 	}

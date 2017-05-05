@@ -60,17 +60,17 @@ class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterReposi
 				:percent_switched_out
 			)'
 		);
-		$stmt->bindValue(':year', $movesetRatedCounter->year(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $movesetRatedCounter->month(), PDO::PARAM_INT);
-		$stmt->bindValue(':format_id', $movesetRatedCounter->formatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $movesetRatedCounter->rating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $movesetRatedCounter->pokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':counter_id', $movesetRatedCounter->counterId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':number1', $movesetRatedCounter->number1(), PDO::PARAM_STR);
-		$stmt->bindValue(':number2', $movesetRatedCounter->number2(), PDO::PARAM_STR);
-		$stmt->bindValue(':number3', $movesetRatedCounter->number3(), PDO::PARAM_STR);
-		$stmt->bindValue(':percent_knocked_out', $movesetRatedCounter->percentKnockedOut(), PDO::PARAM_STR);
-		$stmt->bindValue(':percent_switched_out', $movesetRatedCounter->percentSwitchedOut(), PDO::PARAM_STR);
+		$stmt->bindValue(':year', $movesetRatedCounter->getYear(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetRatedCounter->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $movesetRatedCounter->getFormatId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $movesetRatedCounter->getRating(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $movesetRatedCounter->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':counter_id', $movesetRatedCounter->getCounterId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':number1', $movesetRatedCounter->getNumber1(), PDO::PARAM_STR);
+		$stmt->bindValue(':number2', $movesetRatedCounter->getNumber2(), PDO::PARAM_STR);
+		$stmt->bindValue(':number3', $movesetRatedCounter->getNumber3(), PDO::PARAM_STR);
+		$stmt->bindValue(':percent_knocked_out', $movesetRatedCounter->getPercentKnockedOut(), PDO::PARAM_STR);
+		$stmt->bindValue(':percent_switched_out', $movesetRatedCounter->getPercentSwitchedOut(), PDO::PARAM_STR);
 		$stmt->execute();
 	}
 

@@ -65,7 +65,7 @@ class LeadsRatedPokemon
 	 *
 	 * @return int
 	 */
-	public function year() : int
+	public function getYear() : int
 	{
 		return $this->year;
 	}
@@ -75,7 +75,7 @@ class LeadsRatedPokemon
 	 *
 	 * @return int
 	 */
-	public function month() : int
+	public function getMonth() : int
 	{
 		return $this->month;
 	}
@@ -85,7 +85,7 @@ class LeadsRatedPokemon
 	 *
 	 * @return FormatId
 	 */
-	public function formatId() : FormatId
+	public function getFormatId() : FormatId
 	{
 		return $this->formatId;
 	}
@@ -95,7 +95,7 @@ class LeadsRatedPokemon
 	 *
 	 * @return int
 	 */
-	public function rating() : int
+	public function getRating() : int
 	{
 		return $this->rating;
 	}
@@ -105,7 +105,7 @@ class LeadsRatedPokemon
 	 *
 	 * @return PokemonId
 	 */
-	public function pokemonId() : PokemonId
+	public function getPokemonId() : PokemonId
 	{
 		return $this->pokemonId;
 	}
@@ -115,7 +115,7 @@ class LeadsRatedPokemon
 	 *
 	 * @return int
 	 */
-	public function rank() : int
+	public function getRank() : int
 	{
 		return $this->rank;
 	}
@@ -125,7 +125,7 @@ class LeadsRatedPokemon
 	 *
 	 * @return float
 	 */
-	public function usagePercent() : float
+	public function getUsagePercent() : float
 	{
 		return $this->usagePercent;
 	}

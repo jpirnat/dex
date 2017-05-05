@@ -102,7 +102,7 @@ class MovesetRatedSpread
 	 *
 	 * @return int
 	 */
-	public function year() : int
+	public function getYear() : int
 	{
 		return $this->year;
 	}
@@ -112,7 +112,7 @@ class MovesetRatedSpread
 	 *
 	 * @return int
 	 */
-	public function month() : int
+	public function getMonth() : int
 	{
 		return $this->month;
 	}
@@ -122,7 +122,7 @@ class MovesetRatedSpread
 	 *
 	 * @return FormatId
 	 */
-	public function formatId() : FormatId
+	public function getFormatId() : FormatId
 	{
 		return $this->formatId;
 	}
@@ -132,7 +132,7 @@ class MovesetRatedSpread
 	 *
 	 * @return int
 	 */
-	public function rating() : int
+	public function getRating() : int
 	{
 		return $this->rating;
 	}
@@ -142,7 +142,7 @@ class MovesetRatedSpread
 	 *
 	 * @return PokemonId
 	 */
-	public function pokemonId() : PokemonId
+	public function getPokemonId() : PokemonId
 	{
 		return $this->pokemonId;
 	}
@@ -152,7 +152,7 @@ class MovesetRatedSpread
 	 *
 	 * @return NatureId
 	 */
-	public function natureId() : NatureId
+	public function getNatureId() : NatureId
 	{
 		return $this->natureId;
 	}
@@ -162,7 +162,7 @@ class MovesetRatedSpread
 	 *
 	 * @return int
 	 */
-	public function hp() : int
+	public function getHpEvs() : int
 	{
 		return $this->hp;
 	}
@@ -172,7 +172,7 @@ class MovesetRatedSpread
 	 *
 	 * @return int
 	 */
-	public function atk() : int
+	public function getAttackEvs() : int
 	{
 		return $this->atk;
 	}
@@ -182,7 +182,7 @@ class MovesetRatedSpread
 	 *
 	 * @return int
 	 */
-	public function def() : int
+	public function getDefenseEvs() : int
 	{
 		return $this->def;
 	}
@@ -192,7 +192,7 @@ class MovesetRatedSpread
 	 *
 	 * @return int
 	 */
-	public function spa() : int
+	public function getSpecialAttackEvs() : int
 	{
 		return $this->spa;
 	}
@@ -202,7 +202,7 @@ class MovesetRatedSpread
 	 *
 	 * @return int
 	 */
-	public function spd() : int
+	public function getSpecialDefenseEvs() : int
 	{
 		return $this->spd;
 	}
@@ -212,7 +212,7 @@ class MovesetRatedSpread
 	 *
 	 * @return int
 	 */
-	public function spe() : int
+	public function getSpeedEvs() : int
 	{
 		return $this->spe;
 	}
@@ -222,7 +222,7 @@ class MovesetRatedSpread
 	 *
 	 * @return float
 	 */
-	public function percent() : float
+	public function getPercent() : float
 	{
 		return $this->percent;
 	}

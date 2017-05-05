@@ -35,13 +35,13 @@ class ItemsView
 		$data = [];
 		foreach ($movesetRatedItems as $movesetRatedItem) {
 			$data[] = [
-				'year' => $movesetRatedItem->year(),
-				'month' => $movesetRatedItem->month(),
-				'formatId' => $movesetRatedItem->formatId()->value(),
-				'rating' => $movesetRatedItem->rating(),
-				'pokemonId' => $movesetRatedItem->pokemonId()->value(),
-				'itemId' => $movesetRatedItem->itemId()->value(),
-				'percent' => $movesetRatedItem->percent(),
+				'year' => $movesetRatedItem->getYear(),
+				'month' => $movesetRatedItem->getMonth(),
+				'formatId' => $movesetRatedItem->getFormatId()->value(),
+				'rating' => $movesetRatedItem->getRating(),
+				'pokemonId' => $movesetRatedItem->getPokemonId()->value(),
+				'itemId' => $movesetRatedItem->getItemId()->value(),
+				'percent' => $movesetRatedItem->getPercent(),
 			];
 		}
 

@@ -59,7 +59,7 @@ class LeadsPokemon
 	 *
 	 * @return int
 	 */
-	public function year() : int
+	public function getYear() : int
 	{
 		return $this->year;
 	}
@@ -69,7 +69,7 @@ class LeadsPokemon
 	 *
 	 * @return int
 	 */
-	public function month() : int
+	public function getMonth() : int
 	{
 		return $this->month;
 	}
@@ -79,7 +79,7 @@ class LeadsPokemon
 	 *
 	 * @return FormatId
 	 */
-	public function formatId() : FormatId
+	public function getFormatId() : FormatId
 	{
 		return $this->formatId;
 	}
@@ -89,7 +89,7 @@ class LeadsPokemon
 	 *
 	 * @return PokemonId
 	 */
-	public function pokemonId() : PokemonId
+	public function getPokemonId() : PokemonId
 	{
 		return $this->pokemonId;
 	}
@@ -99,7 +99,7 @@ class LeadsPokemon
 	 *
 	 * @return int
 	 */
-	public function raw() : int
+	public function getRaw() : int
 	{
 		return $this->raw;
 	}
@@ -109,7 +109,7 @@ class LeadsPokemon
 	 *
 	 * @return float
 	 */
-	public function rawPercent() : float
+	public function getRawPercent() : float
 	{
 		return $this->rawPercent;
 	}

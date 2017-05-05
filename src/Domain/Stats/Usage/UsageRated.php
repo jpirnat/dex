@@ -52,7 +52,7 @@ class UsageRated
 	 *
 	 * @return int
 	 */
-	public function year() : int
+	public function getYear() : int
 	{
 		return $this->year;
 	}
@@ -62,7 +62,7 @@ class UsageRated
 	 *
 	 * @return int
 	 */
-	public function month() : int
+	public function getMonth() : int
 	{
 		return $this->month;
 	}
@@ -72,7 +72,7 @@ class UsageRated
 	 *
 	 * @return FormatId
 	 */
-	public function formatId() : FormatId
+	public function getFormatId() : FormatId
 	{
 		return $this->formatId;
 	}
@@ -82,7 +82,7 @@ class UsageRated
 	 *
 	 * @return int
 	 */
-	public function rating() : int
+	public function getRating() : int
 	{
 		return $this->rating;
 	}
@@ -92,7 +92,7 @@ class UsageRated
 	 *
 	 * @return float
 	 */
-	public function averageWeightPerTeam() : float
+	public function getAverageWeightPerTeam() : float
 	{
 		return $this->averageWeightPerTeam;
 	}

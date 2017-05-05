@@ -82,11 +82,11 @@ class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterface
 				:average_weight_per_team
 			)'
 		);
-		$stmt->bindValue(':year', $usageRated->year(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $usageRated->month(), PDO::PARAM_INT);
-		$stmt->bindValue(':format_id', $usageRated->formatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $usageRated->rating(), PDO::PARAM_INT);
-		$stmt->bindValue(':average_weight_per_team', $usageRated->averageWeightPerTeam(), PDO::PARAM_STR);
+		$stmt->bindValue(':year', $usageRated->getYear(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $usageRated->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $usageRated->getFormatId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $usageRated->getRating(), PDO::PARAM_INT);
+		$stmt->bindValue(':average_weight_per_team', $usageRated->getAverageWeightPerTeam(), PDO::PARAM_STR);
 		$stmt->execute();
 	}
 }

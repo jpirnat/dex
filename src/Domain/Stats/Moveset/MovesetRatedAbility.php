@@ -67,7 +67,7 @@ class MovesetRatedAbility
 	 *
 	 * @return int
 	 */
-	public function year() : int
+	public function getYear() : int
 	{
 		return $this->year;
 	}
@@ -77,7 +77,7 @@ class MovesetRatedAbility
 	 *
 	 * @return int
 	 */
-	public function month() : int
+	public function getMonth() : int
 	{
 		return $this->month;
 	}
@@ -87,7 +87,7 @@ class MovesetRatedAbility
 	 *
 	 * @return FormatId
 	 */
-	public function formatId() : FormatId
+	public function getFormatId() : FormatId
 	{
 		return $this->formatId;
 	}
@@ -97,7 +97,7 @@ class MovesetRatedAbility
 	 *
 	 * @return int
 	 */
-	public function rating() : int
+	public function getRating() : int
 	{
 		return $this->rating;
 	}
@@ -107,7 +107,7 @@ class MovesetRatedAbility
 	 *
 	 * @return PokemonId
 	 */
-	public function pokemonId() : PokemonId
+	public function getPokemonId() : PokemonId
 	{
 		return $this->pokemonId;
 	}
@@ -117,7 +117,7 @@ class MovesetRatedAbility
 	 *
 	 * @return AbilityId
 	 */
-	public function abilityId() : AbilityId
+	public function getAbilityId() : AbilityId
 	{
 		return $this->abilityId;
 	}
@@ -127,7 +127,7 @@ class MovesetRatedAbility
 	 *
 	 * @return float
 	 */
-	public function percent() : float
+	public function getPercent() : float
 	{
 		return $this->percent;
 	}

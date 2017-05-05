@@ -63,19 +63,19 @@ class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadReposito
 				:percent
 			)'
 		);
-		$stmt->bindValue(':year', $movesetRatedSpread->year(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $movesetRatedSpread->month(), PDO::PARAM_INT);
-		$stmt->bindValue(':format_id', $movesetRatedSpread->formatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $movesetRatedSpread->rating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $movesetRatedSpread->pokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':nature_id', $movesetRatedSpread->natureId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':hp', $movesetRatedSpread->hp(), PDO::PARAM_INT);
-		$stmt->bindValue(':atk', $movesetRatedSpread->atk(), PDO::PARAM_INT);
-		$stmt->bindValue(':def', $movesetRatedSpread->def(), PDO::PARAM_INT);
-		$stmt->bindValue(':spa', $movesetRatedSpread->spa(), PDO::PARAM_INT);
-		$stmt->bindValue(':spd', $movesetRatedSpread->spd(), PDO::PARAM_INT);
-		$stmt->bindValue(':spe', $movesetRatedSpread->spe(), PDO::PARAM_INT);
-		$stmt->bindValue(':percent', $movesetRatedSpread->percent(), PDO::PARAM_STR);
+		$stmt->bindValue(':year', $movesetRatedSpread->getYear(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetRatedSpread->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $movesetRatedSpread->getFormatId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $movesetRatedSpread->getRating(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $movesetRatedSpread->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':nature_id', $movesetRatedSpread->getNatureId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':hp', $movesetRatedSpread->getHpEvs(), PDO::PARAM_INT);
+		$stmt->bindValue(':atk', $movesetRatedSpread->getAttackEvs(), PDO::PARAM_INT);
+		$stmt->bindValue(':def', $movesetRatedSpread->getDefenseEvs(), PDO::PARAM_INT);
+		$stmt->bindValue(':spa', $movesetRatedSpread->getSpecialAttackEvs(), PDO::PARAM_INT);
+		$stmt->bindValue(':spd', $movesetRatedSpread->getSpecialDefenseEvs(), PDO::PARAM_INT);
+		$stmt->bindValue(':spe', $movesetRatedSpread->getSpeedEvs(), PDO::PARAM_INT);
+		$stmt->bindValue(':percent', $movesetRatedSpread->getPercent(), PDO::PARAM_STR);
 		$stmt->execute();
 	}
 

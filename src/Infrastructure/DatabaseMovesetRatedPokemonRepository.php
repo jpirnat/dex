@@ -86,12 +86,12 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 				:average_weight
 			)'
 		);
-		$stmt->bindValue(':year', $movesetRatedPokemon->year(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $movesetRatedPokemon->month(), PDO::PARAM_INT);
-		$stmt->bindValue(':format_id', $movesetRatedPokemon->formatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $movesetRatedPokemon->rating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $movesetRatedPokemon->pokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rank', $movesetRatedPokemon->averageWeight(), PDO::PARAM_STR);
+		$stmt->bindValue(':year', $movesetRatedPokemon->getYear(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetRatedPokemon->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $movesetRatedPokemon->getFormatId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $movesetRatedPokemon->getRating(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $movesetRatedPokemon->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rank', $movesetRatedPokemon->getAverageWeight(), PDO::PARAM_STR);
 		$stmt->execute();
 	}
 

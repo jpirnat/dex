@@ -75,10 +75,10 @@ class DatabaseLeadsRepository implements LeadsRepositoryInterface
 				:total_leads
 			)'
 		);
-		$stmt->bindValue(':year', $leads->year(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $leads->month(), PDO::PARAM_INT);
-		$stmt->bindValue(':format_id', $leads->formatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':total_leads', $leads->totalLeads(), PDO::PARAM_INT);
+		$stmt->bindValue(':year', $leads->getYear(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $leads->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $leads->getFormatId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':total_leads', $leads->getTotalLeads(), PDO::PARAM_INT);
 		$stmt->execute();
 	}
 }

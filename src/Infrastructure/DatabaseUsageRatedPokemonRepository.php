@@ -87,13 +87,13 @@ class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepository
 				:usage_percent
 			)'
 		);
-		$stmt->bindValue(':year', $usageRatedPokemon->year(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $usageRatedPokemon->month(), PDO::PARAM_INT);
-		$stmt->bindValue(':format_id', $usageRatedPokemon->formatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $usageRatedPokemon->rating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $usageRatedPokemon->pokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rank', $usageRatedPokemon->rank(), PDO::PARAM_INT);
-		$stmt->bindValue(':usage_percent', $usageRatedPokemon->usagePercent(), PDO::PARAM_STR);
+		$stmt->bindValue(':year', $usageRatedPokemon->getYear(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $usageRatedPokemon->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $usageRatedPokemon->getFormatId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $usageRatedPokemon->getRating(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $usageRatedPokemon->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rank', $usageRatedPokemon->getRank(), PDO::PARAM_INT);
+		$stmt->bindValue(':usage_percent', $usageRatedPokemon->getUsagePercent(), PDO::PARAM_STR);
 		$stmt->execute();
 	}
 

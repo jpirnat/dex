@@ -53,13 +53,13 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 				:percent
 			)'
 		);
-		$stmt->bindValue(':year', $movesetRatedMove->year(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $movesetRatedMove->month(), PDO::PARAM_INT);
-		$stmt->bindValue(':format_id', $movesetRatedMove->formatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $movesetRatedMove->rating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $movesetRatedMove->pokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $movesetRatedMove->moveId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':percent', $movesetRatedMove->percent(), PDO::PARAM_STR);
+		$stmt->bindValue(':year', $movesetRatedMove->getYear(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetRatedMove->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $movesetRatedMove->getFormatId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $movesetRatedMove->getRating(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $movesetRatedMove->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $movesetRatedMove->getMoveId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':percent', $movesetRatedMove->getPercent(), PDO::PARAM_STR);
 		$stmt->execute();
 	}
 

@@ -46,7 +46,7 @@ class Leads
 	 *
 	 * @return int
 	 */
-	public function year() : int
+	public function getYear() : int
 	{
 		return $this->year;
 	}
@@ -56,7 +56,7 @@ class Leads
 	 *
 	 * @return int
 	 */
-	public function month() : int
+	public function getMonth() : int
 	{
 		return $this->month;
 	}
@@ -66,7 +66,7 @@ class Leads
 	 *
 	 * @return FormatId
 	 */
-	public function formatId() : FormatId
+	public function getFormatId() : FormatId
 	{
 		return $this->formatId;
 	}
@@ -76,7 +76,7 @@ class Leads
 	 *
 	 * @return int
 	 */
-	public function totalLeads() : int
+	public function getTotalLeads() : int
 	{
 		return $this->totalLeads;
 	}

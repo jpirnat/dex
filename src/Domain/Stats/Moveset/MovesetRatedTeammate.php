@@ -65,7 +65,7 @@ class MovesetRatedTeammate
 	 *
 	 * @return int
 	 */
-	public function year() : int
+	public function getYear() : int
 	{
 		return $this->year;
 	}
@@ -75,7 +75,7 @@ class MovesetRatedTeammate
 	 *
 	 * @return int
 	 */
-	public function month() : int
+	public function getMonth() : int
 	{
 		return $this->month;
 	}
@@ -85,7 +85,7 @@ class MovesetRatedTeammate
 	 *
 	 * @return FormatId
 	 */
-	public function formatId() : FormatId
+	public function getFormatId() : FormatId
 	{
 		return $this->formatId;
 	}
@@ -95,7 +95,7 @@ class MovesetRatedTeammate
 	 *
 	 * @return int
 	 */
-	public function rating() : int
+	public function getRating() : int
 	{
 		return $this->rating;
 	}
@@ -105,7 +105,7 @@ class MovesetRatedTeammate
 	 *
 	 * @return PokemonId
 	 */
-	public function pokemonId() : PokemonId
+	public function getPokemonId() : PokemonId
 	{
 		return $this->pokemonId;
 	}
@@ -115,7 +115,7 @@ class MovesetRatedTeammate
 	 *
 	 * @return PokemonId
 	 */
-	public function teammateId() : PokemonId
+	public function getTeammateId() : PokemonId
 	{
 		return $this->teammateId;
 	}
@@ -125,7 +125,7 @@ class MovesetRatedTeammate
 	 *
 	 * @return float
 	 */
-	public function percent() : float
+	public function getPercent() : float
 	{
 		return $this->percent;
 	}

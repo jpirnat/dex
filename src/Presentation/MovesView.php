@@ -35,13 +35,13 @@ class MovesView
 		$data = [];
 		foreach ($movesetRatedMoves as $movesetRatedMove) {
 			$data[] = [
-				'year' => $movesetRatedMove->year(),
-				'month' => $movesetRatedMove->month(),
-				'formatId' => $movesetRatedMove->formatId()->value(),
-				'rating' => $movesetRatedMove->rating(),
-				'pokemonId' => $movesetRatedMove->pokemonId()->value(),
-				'moveId' => $movesetRatedMove->moveId()->value(),
-				'percent' => $movesetRatedMove->percent(),
+				'year' => $movesetRatedMove->getYear(),
+				'month' => $movesetRatedMove->getMonth(),
+				'formatId' => $movesetRatedMove->getFormatId()->value(),
+				'rating' => $movesetRatedMove->getRating(),
+				'pokemonId' => $movesetRatedMove->getPokemonId()->value(),
+				'moveId' => $movesetRatedMove->getMoveId()->value(),
+				'percent' => $movesetRatedMove->getPercent(),
 			];
 		}
 

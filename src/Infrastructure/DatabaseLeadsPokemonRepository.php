@@ -79,12 +79,12 @@ class DatabaseLeadsPokemonRepository implements LeadsPokemonRepositoryInterface
 				:raw_percent
 			)'
 		);
-		$stmt->bindValue(':year', $leadsPokemon->year(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $leadsPokemon->month(), PDO::PARAM_INT);
-		$stmt->bindValue(':format_id', $leadsPokemon->formatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $leadsPokemon->pokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':raw', $leadsPokemon->raw(), PDO::PARAM_INT);
-		$stmt->bindValue(':raw_percent', $leadsPokemon->rawPercent(), PDO::PARAM_STR);
+		$stmt->bindValue(':year', $leadsPokemon->getYear(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $leadsPokemon->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $leadsPokemon->getFormatId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $leadsPokemon->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':raw', $leadsPokemon->getRaw(), PDO::PARAM_INT);
+		$stmt->bindValue(':raw_percent', $leadsPokemon->getRawPercent(), PDO::PARAM_STR);
 		$stmt->execute();
 	}
 }
