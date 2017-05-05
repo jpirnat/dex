@@ -8,31 +8,31 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 class Pokemon
 {
 	/** @var PokemonId $pokemonId */
-	protected $id;
+	private $id;
 
 	/** @var string $identifier */
-	protected $identifier;
+	private $identifier;
 
 	/** @var string|null $pokemonIdentifier */
-	protected $pokemonIdentifier;
+	private $pokemonIdentifier;
 
 	/** @var SpeciesId $speciesId */
-	protected $speciesId;
+	private $speciesId;
 
 	/** @var bool $isDefaultPokemon */
-	protected $isDefaultPokemon;
+	private $isDefaultPokemon;
 
 	/** @var VersionGroupId $introducedInVersionGroupId */
-	protected $introducedInVersionGroupId;
+	private $introducedInVersionGroupId;
 
 	/** @var float $heightM */
-	protected $heightM;
+	private $heightM;
 
 	/** @var float $weightKg */
-	protected $weightKg;
+	private $weightKg;
 
 	/** @var float|null $genderRatio */
-	protected $genderRatio;
+	private $genderRatio;
 
 	/**
 	 * Constructor.

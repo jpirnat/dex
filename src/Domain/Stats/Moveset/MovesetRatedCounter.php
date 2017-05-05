@@ -9,37 +9,37 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 class MovesetRatedCounter
 {
 	/** @var int $year */
-	protected $year;
+	private $year;
 
 	/** @var int $month */
-	protected $month;
+	private $month;
 
 	/** @var FormatId $formatId */
-	protected $formatId;
+	private $formatId;
 
 	/** @var int $rating */
-	protected $rating;
+	private $rating;
 
 	/** @var PokemonId $pokemonId */
-	protected $pokemonId;
+	private $pokemonId;
 
 	/** @var PokemonId $counterId */
-	protected $counterId;
+	private $counterId;
 
 	/** @var float $number1 */
-	protected $number1;
+	private $number1;
 
 	/** @var float $number2 */
-	protected $number2;
+	private $number2;
 
 	/** @var float $number3 */
-	protected $number3;
+	private $number3;
 
 	/** @var float $percentKnockedOut */
-	protected $percentKnockedOut;
+	private $percentKnockedOut;
 
 	/** @var float $percentSwitchedOut */
-	protected $percentSwitchedOut;
+	private $percentSwitchedOut;
 
 	/**
 	 * Constructor.

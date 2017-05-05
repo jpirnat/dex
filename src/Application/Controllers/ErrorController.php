@@ -9,7 +9,7 @@ use Psr\Http\Message\ServerRequestInterface;
 class ErrorController
 {
 	/** @var ErrorModel $errorModel */
-	protected $errorModel;
+	private $errorModel;
 
 	/**
 	 * Constructor.

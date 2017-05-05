@@ -8,13 +8,13 @@ use Jp\Dex\Domain\Languages\LanguageId;
 class MoveName
 {
 	/** @var LanguageId $languageId */
-	protected $languageId;
+	private $languageId;
 
 	/** @var MoveId $moveId */
-	protected $moveId;
+	private $moveId;
 
 	/** @var string $name */
-	protected $name;
+	private $name;
 
 	/**
 	 * Constructor.

@@ -14,7 +14,7 @@ use PDO;
 class DatabaseItemRepository implements ItemRepositoryInterface
 {
 	/** @var PDO $db */
-	protected $db;
+	private $db;
 
 	/**
 	 * Constructor.

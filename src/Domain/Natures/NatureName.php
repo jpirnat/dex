@@ -8,13 +8,13 @@ use Jp\Dex\Domain\Languages\LanguageId;
 class NatureName
 {
 	/** @var LanguageId $languageId */
-	protected $languageId;
+	private $languageId;
 
 	/** @var NatureId $natureId */
-	protected $natureId;
+	private $natureId;
 
 	/** @var string $name */
-	protected $name;
+	private $name;
 
 	/**
 	 * Constructor.

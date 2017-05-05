@@ -8,16 +8,16 @@ use Jp\Dex\Domain\Formats\FormatId;
 class Usage
 {
 	/** @var int $year */
-	protected $year;
+	private $year;
 
 	/** @var int $month */
-	protected $month;
+	private $month;
 
 	/** @var FormatId $formatId */
-	protected $formatId;
+	private $formatId;
 
 	/** @var int $totalBattles */
-	protected $totalBattles;
+	private $totalBattles;
 
 	/**
 	 * Constructor.

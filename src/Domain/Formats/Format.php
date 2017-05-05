@@ -8,25 +8,25 @@ use Jp\Dex\Domain\Versions\Generation;
 class Format
 {
 	/** @var FormatId $id */
-	protected $id;
+	private $id;
 
 	/** @var string $identifier */
-	protected $identifier;
+	private $identifier;
 
 	/** @var Generation $generation */
-	protected $generation;
+	private $generation;
 
 	/** @var int $level */
-	protected $level;
+	private $level;
 
 	/** @var int $fieldSize */
-	protected $fieldSize;
+	private $fieldSize;
 
 	/** @var int $teamSize */
-	protected $teamSize;
+	private $teamSize;
 
 	/** @var int $inBattleTeamSize */
-	protected $inBattleTeamSize;
+	private $inBattleTeamSize;
 
 	/**
 	 * Constructor.

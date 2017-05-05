@@ -6,25 +6,25 @@ namespace Jp\Dex\Domain\Import\Structs;
 class Usage
 {
 	/** @var int $rank */
-	protected $rank;
+	private $rank;
 
 	/** @var string $showdownPokemonName */
-	protected $showdownPokemonName;
+	private $showdownPokemonName;
 
 	/** @var float $usagePercent */
-	protected $usagePercent;
+	private $usagePercent;
 
 	/** @var int $raw */
-	protected $raw;
+	private $raw;
 
 	/** @var float $rawPercent */
-	protected $rawPercent;
+	private $rawPercent;
 
 	/** @var int $real */
-	protected $real;
+	private $real;
 
 	/** @var float $realPercent */
-	protected $realPercent;
+	private $realPercent;
 
 	/**
 	 * Constructor.

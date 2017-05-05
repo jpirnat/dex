@@ -8,16 +8,16 @@ use Jp\Dex\Domain\Stats\StatId;
 class Nature
 {
 	/** @var NatureId $id */
-	protected $id;
+	private $id;
 
 	/** @var string $identifier */
-	protected $identifier;
+	private $identifier;
 
 	/** @var StatId|null $increasedStatId */
-	protected $increasedStatId;
+	private $increasedStatId;
 
 	/** @var StatId|null $decreasedStatId */
-	protected $decreasedStatId;
+	private $decreasedStatId;
 
 	/**
 	 * Constructor.

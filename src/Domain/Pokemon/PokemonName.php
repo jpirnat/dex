@@ -8,13 +8,13 @@ use Jp\Dex\Domain\Languages\LanguageId;
 class PokemonName
 {
 	/** @var LanguageId $languageId */
-	protected $languageId;
+	private $languageId;
 
 	/** @var PokemonId $pokemonId */
-	protected $pokemonId;
+	private $pokemonId;
 
 	/** @var string $name */
-	protected $name;
+	private $name;
 
 	/**
 	 * Constructor.

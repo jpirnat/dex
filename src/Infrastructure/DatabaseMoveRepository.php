@@ -13,7 +13,7 @@ use PDO;
 class DatabaseMoveRepository implements MoveRepositoryInterface
 {
 	/** @var PDO $db */
-	protected $db;
+	private $db;
 
 	/**
 	 * Constructor.

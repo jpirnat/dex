@@ -17,37 +17,37 @@ use Symfony\Component\DomCrawler\Crawler;
 class MonthDirectoryParser
 {
 	/** @var UsageFileParser $usageFileParser */
-	protected $usageFileParser;
+	private $usageFileParser;
 
 	/** @var LeadsDirectoryParser $leadsDirectoryParser */
-	protected $leadsDirectoryParser;
+	private $leadsDirectoryParser;
 
 	/** @var MovesetDirectoryParser $movesetDirectoryParser */
-	protected $movesetDirectoryParser;
+	private $movesetDirectoryParser;
 
 	/** @var YearMonthExtractor $yearMonthExtractor */
-	protected $yearMonthExtractor;
+	private $yearMonthExtractor;
 
 	/** @var FormatRatingExtractor $formatRatingExtractor */
-	protected $formatRatingExtractor;
+	private $formatRatingExtractor;
 
 	/** @var ShowdownFormatRepositoryInterface $showdownFormatRepository */
-	protected $showdownFormatRepository;
+	private $showdownFormatRepository;
 
 	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
-	protected $showdownPokemonRepository;
+	private $showdownPokemonRepository;
 
 	/** @var ShowdownAbilityRepositoryInterface $showdownAbilityRepository */
-	protected $showdownAbilityRepository;
+	private $showdownAbilityRepository;
 
 	/** @var ShowdownItemRepositoryInterface $showdownItemRepository */
-	protected $showdownItemRepository;
+	private $showdownItemRepository;
 
 	/** @var ShowdownNatureRepositoryInterface $showdownNatureRepository */
-	protected $showdownNatureRepository;
+	private $showdownNatureRepository;
 
 	/** @var ShowdownMoveRepositoryInterface $showdownMoveRepository */
-	protected $showdownMoveRepository;
+	private $showdownMoveRepository;
 
 	/**
 	 * Constructor.

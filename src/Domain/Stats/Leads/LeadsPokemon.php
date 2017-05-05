@@ -9,22 +9,22 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 class LeadsPokemon
 {
 	/** @var int $year */
-	protected $year;
+	private $year;
 
 	/** @var int $month */
-	protected $month;
+	private $month;
 
 	/** @var FormatId $formatId */
-	protected $formatId;
+	private $formatId;
 
 	/** @var PokemonId $pokemonId */
-	protected $pokemonId;
+	private $pokemonId;
 
 	/** @var int $raw */
-	protected $raw;
+	private $raw;
 
 	/** @var float $rawPercent */
-	protected $rawPercent;
+	private $rawPercent;
 
 	/**
 	 * Constructor.

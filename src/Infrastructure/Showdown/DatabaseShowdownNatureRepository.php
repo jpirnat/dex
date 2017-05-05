@@ -11,13 +11,13 @@ use PDO;
 class DatabaseShowdownNatureRepository implements ShowdownNatureRepositoryInterface
 {
 	/** @var NatureId[] $naturesToImport */
-	protected $naturesToImport = [];
+	private $naturesToImport = [];
 
 	/** @var ?NatureId[] $naturesToIgnore */
-	protected $naturesToIgnore = [];
+	private $naturesToIgnore = [];
 
 	/** @var string[] $unknownNatures */
-	protected $unknownNatures = [];
+	private $unknownNatures = [];
 
 	/**
 	 * Constructor.

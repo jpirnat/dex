@@ -12,19 +12,19 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
 class ItemsModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
-	protected $formatRepository;
+	private $formatRepository;
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
-	protected $pokemonRepository;
+	private $pokemonRepository;
 
 	/** @var ItemRepositoryInterface $itemRepository */
-	protected $itemRepository;
+	private $itemRepository;
 
 	/** @var MovesetRatedItemRepositoryInterface $movesetRatedItemRepository */
-	protected $movesetRatedItemRepository;
+	private $movesetRatedItemRepository;
 
 	/** @var MovesetRatedItem[] $movesetRatedItems */
-	protected $movesetRatedItems = [];
+	private $movesetRatedItems = [];
 
 	/**
 	 * Constructor.

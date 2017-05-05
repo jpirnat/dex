@@ -6,16 +6,16 @@ namespace Jp\Dex\Domain\Import\Structs;
 class Counter1
 {
 	/** @var string $showdownPokemonName */
-	protected $showdownPokemonName;
+	private $showdownPokemonName;
 
 	/** @var float $number1 */
-	protected $number1;
+	private $number1;
 
 	/** @var float $number2 */
-	protected $number2;
+	private $number2;
 
 	/** @var float $number3 */
-	protected $number3;
+	private $number3;
 
 	/**
 	 * Constructor.

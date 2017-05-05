@@ -11,16 +11,16 @@ use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 class LeadsModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
-	protected $formatRepository;
+	private $formatRepository;
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
-	protected $pokemonRepository;
+	private $pokemonRepository;
 
 	/** @var LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository */
-	protected $leadsRatedPokemonRepository;
+	private $leadsRatedPokemonRepository;
 
 	/** @var LeadsRatedPokemon[] $leadsRatedPokemon */
-	protected $leadsRatedPokemon = [];
+	private $leadsRatedPokemon = [];
 
 	/**
 	 * Constructor.

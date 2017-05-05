@@ -9,7 +9,7 @@ use Psr\Http\Message\ServerRequestInterface;
 class NotFoundController
 {
 	/** @var NotFoundModel $notFoundModel */
-	protected $notFoundModel;
+	private $notFoundModel;
 
 	/**
 	 * Constructor.

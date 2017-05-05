@@ -6,16 +6,16 @@ namespace Jp\Dex\Domain\Stats;
 class Characteristic
 {
 	/** @var CharacteristicId $id */
-	protected $id;
+	private $id;
 
 	/** @var string $identifier */
-	protected $identifier;
+	private $identifier;
 
 	/** @var StatId $highestStatId */
-	protected $highestStatId;
+	private $highestStatId;
 
 	/** @var int $ivModFive */
-	protected $ivModFive;
+	private $ivModFive;
 
 	/**
 	 * Constructor.

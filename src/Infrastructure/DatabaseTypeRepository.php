@@ -13,7 +13,7 @@ use PDO;
 class DatabaseTypeRepository implements TypeRepositoryInterface
 {
 	/** @var PDO $db */
-	protected $db;
+	private $db;
 
 	/**
 	 * Constructor.

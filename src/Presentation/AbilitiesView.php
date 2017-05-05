@@ -10,7 +10,7 @@ use Zend\Diactoros\Response\JsonResponse;
 class AbilitiesView
 {
 	/** @var AbilitiesModel $abilitiesModel */
-	protected $abilitiesModel;
+	private $abilitiesModel;
 
 	/**
 	 * Constructor.

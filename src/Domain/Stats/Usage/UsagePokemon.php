@@ -9,28 +9,28 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 class UsagePokemon
 {
 	/** @var int $year */
-	protected $year;
+	private $year;
 
 	/** @var int $month */
-	protected $month;
+	private $month;
 
 	/** @var FormatId $formatId */
-	protected $formatId;
+	private $formatId;
 
 	/** @var PokemonId $pokemonId */
-	protected $pokemonId;
+	private $pokemonId;
 
 	/** @var int $raw */
-	protected $raw;
+	private $raw;
 
 	/** @var float $rawPercent */
-	protected $rawPercent;
+	private $rawPercent;
 
 	/** @var int $real */
-	protected $real;
+	private $real;
 
 	/** @var float $realPercent */
-	protected $realPercent;
+	private $realPercent;
 
 	/**
 	 * Constructor.

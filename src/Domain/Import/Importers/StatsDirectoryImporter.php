@@ -9,7 +9,7 @@ use Symfony\Component\DomCrawler\Crawler;
 class StatsDirectoryImporter
 {
 	/** @var MonthDirectoryImporter $monthDirectoryImporter */
-	protected $monthDirectoryImporter;
+	private $monthDirectoryImporter;
 
 	/**
 	 * Constructor.

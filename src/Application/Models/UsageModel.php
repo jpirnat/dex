@@ -11,16 +11,16 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 class UsageModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
-	protected $formatRepository;
+	private $formatRepository;
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
-	protected $pokemonRepository;
+	private $pokemonRepository;
 
 	/** @var UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository */
-	protected $usageRatedPokemonRepository;
+	private $usageRatedPokemonRepository;
 
 	/** @var UsageRatedPokemon[] $usageRatedPokemon */
-	protected $usageRatedPokemon = [];
+	private $usageRatedPokemon = [];
 
 	/**
 	 * Constructor.

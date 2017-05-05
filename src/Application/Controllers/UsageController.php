@@ -9,7 +9,7 @@ use Psr\Http\Message\ServerRequestInterface;
 class UsageController
 {
 	/** @var UsageModel $usageModel */
-	protected $usageModel;
+	private $usageModel;
 
 	/**
 	 * Constructor.

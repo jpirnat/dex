@@ -8,19 +8,19 @@ use Jp\Dex\Domain\Versions\Generation;
 class Item
 {
 	/** @var ItemId $id */
-	protected $id;
+	private $id;
 
 	/** @var string $identifier */
-	protected $identifier;
+	private $identifier;
 
 	/** @var Generation $introducedInGeneration */
-	protected $introducedInGeneration;
+	private $introducedInGeneration;
 
 	/** @var int|null $itemFlingPower */
-	protected $itemFlingPower;
+	private $itemFlingPower;
 
 	/** @var ItemFlingEffectId|null $itemFlingEffectId */
-	protected $itemFlingEffectId;
+	private $itemFlingEffectId;
 
 	/**
 	 * Constructor.

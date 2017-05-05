@@ -279,7 +279,7 @@ class MovesetFileExtractor
 	 *
 	 * @return Counter1
 	 */
-	protected function extractCounter1(string $line1) : Counter1
+	private function extractCounter1(string $line1) : Counter1
 	{
 		$pattern1 = '/'
 			. "(\w[\w '.%:-]*?) " // Pokémon Name
@@ -311,7 +311,7 @@ class MovesetFileExtractor
 	 *
 	 * @return Counter2
 	 */
-	protected function extractCounter2(string $line2) : Counter2
+	private function extractCounter2(string $line2) : Counter2
 	{
 		$pattern2 = '/'
 			. '([\d.]+)% KOed \/ '      // Percent Knocked Out

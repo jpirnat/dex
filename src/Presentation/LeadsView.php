@@ -10,7 +10,7 @@ use Zend\Diactoros\Response\JsonResponse;
 class LeadsView
 {
 	/** @var LeadsModel $leadsModel */
-	protected $leadsModel;
+	private $leadsModel;
 
 	/**
 	 * Constructor.

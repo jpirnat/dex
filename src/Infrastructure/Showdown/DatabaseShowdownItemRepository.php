@@ -11,13 +11,13 @@ use PDO;
 class DatabaseShowdownItemRepository implements ShowdownItemRepositoryInterface
 {
 	/** @var ItemId[] $itemsToImport */
-	protected $itemsToImport = [];
+	private $itemsToImport = [];
 
 	/** @var ?ItemId[] $itemsToIgnore */
-	protected $itemsToIgnore = [];
+	private $itemsToIgnore = [];
 
 	/** @var string[] $unknownItems */
-	protected $unknownItems = [];
+	private $unknownItems = [];
 
 	/**
 	 * Constructor.

@@ -9,7 +9,7 @@ use Psr\Http\Message\ServerRequestInterface;
 class LeadsController
 {
 	/** @var LeadsModel $leadsModel */
-	protected $leadsModel;
+	private $leadsModel;
 
 	/**
 	 * Constructor.

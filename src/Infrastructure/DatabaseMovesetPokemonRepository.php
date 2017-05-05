@@ -13,7 +13,7 @@ use PDO;
 class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterface
 {
 	/** @var PDO $db */
-	protected $db;
+	private $db;
 
 	/**
 	 * Constructor.

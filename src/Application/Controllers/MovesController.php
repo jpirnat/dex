@@ -9,7 +9,7 @@ use Psr\Http\Message\ServerRequestInterface;
 class MovesController
 {
 	/** @var MovesModel $movesModel */
-	protected $movesModel;
+	private $movesModel;
 
 	/**
 	 * Constructor.

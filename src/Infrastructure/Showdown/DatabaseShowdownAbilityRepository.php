@@ -11,13 +11,13 @@ use PDO;
 class DatabaseShowdownAbilityRepository implements ShowdownAbilityRepositoryInterface
 {
 	/** @var AbilityId[] $abilitiesToImport */
-	protected $abilitiesToImport = [];
+	private $abilitiesToImport = [];
 
 	/** @var ?AbilityId[] $abilitiesToIgnore */
-	protected $abilitiesToIgnore = [];
+	private $abilitiesToIgnore = [];
 
 	/** @var string[] $unknownAbilities */
-	protected $unknownAbilities = [];
+	private $unknownAbilities = [];
 
 	/**
 	 * Constructor.

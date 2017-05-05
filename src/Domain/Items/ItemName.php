@@ -8,13 +8,13 @@ use Jp\Dex\Domain\Languages\LanguageId;
 class ItemName
 {
 	/** @var LanguageId $languageId */
-	protected $languageId;
+	private $languageId;
 
 	/** @var ItemId $itemId */
-	protected $itemId;
+	private $itemId;
 
 	/** @var string $name */
-	protected $name;
+	private $name;
 
 	/**
 	 * Constructor.

@@ -13,7 +13,7 @@ use Zend\Diactoros\Response\RedirectResponse;
 class HtmlErrorMiddleware implements MiddlewareInterface
 {
 	/** @var string $environment */
-	protected $environment;
+	private $environment;
 
 	/**
 	 * Constructor.

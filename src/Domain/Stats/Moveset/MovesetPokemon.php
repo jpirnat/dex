@@ -9,22 +9,22 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 class MovesetPokemon
 {
 	/** @var int $year */
-	protected $year;
+	private $year;
 
 	/** @var int $month */
-	protected $month;
+	private $month;
 
 	/** @var FormatId $formatId */
-	protected $formatId;
+	private $formatId;
 
 	/** @var PokemonId $pokemonId */
-	protected $pokemonId;
+	private $pokemonId;
 
 	/** @var int $rawCount */
-	protected $rawCount;
+	private $rawCount;
 
 	/** @var int|null $viabilityCeiling */
-	protected $viabilityCeiling;
+	private $viabilityCeiling;
 
 	/**
 	 * Constructor.

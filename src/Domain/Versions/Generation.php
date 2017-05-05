@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Versions;
 class Generation
 {
 	/** @var int $value */
-	protected $value;
+	private $value;
 
 	/**
 	 * Constructor.

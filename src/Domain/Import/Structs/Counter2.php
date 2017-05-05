@@ -6,10 +6,10 @@ namespace Jp\Dex\Domain\Import\Structs;
 class Counter2
 {
 	/** @var float $percentKnockedOut */
-	protected $percentKnockedOut;
+	private $percentKnockedOut;
 
 	/** @var float $percentSwitchedOut */
-	protected $percentSwitchedOut;
+	private $percentSwitchedOut;
 
 	/**
 	 * Constructor.

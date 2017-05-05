@@ -6,10 +6,10 @@ namespace Jp\Dex\Domain\Import\Structs;
 class YearMonth
 {
 	/** @var int $year */
-	protected $year;
+	private $year;
 
 	/** @var int $month */
-	protected $month;
+	private $month;
 
 	/**
 	 * Constructor.

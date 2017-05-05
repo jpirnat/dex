@@ -10,7 +10,7 @@ use Zend\Diactoros\Response\JsonResponse;
 class UsageView
 {
 	/** @var UsageModel $usageModel */
-	protected $usageModel;
+	private $usageModel;
 
 	/**
 	 * Constructor.

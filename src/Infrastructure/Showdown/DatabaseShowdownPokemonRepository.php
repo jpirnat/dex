@@ -11,13 +11,13 @@ use PDO;
 class DatabaseShowdownPokemonRepository implements ShowdownPokemonRepositoryInterface
 {
 	/** @var PokemonId[] $pokemonToImport */
-	protected $pokemonToImport = [];
+	private $pokemonToImport = [];
 
 	/** @var ?PokemonId[] $pokemonToIgnore */
-	protected $pokemonToIgnore = [];
+	private $pokemonToIgnore = [];
 
 	/** @var string[] $unknownPokemon */
-	protected $unknownPokemon = [];
+	private $unknownPokemon = [];
 
 	/**
 	 * Constructor.

@@ -12,7 +12,7 @@ use PDO;
 class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepositoryInterface
 {
 	/** @var PDO $db */
-	protected $db;
+	private $db;
 
 	/**
 	 * Constructor.

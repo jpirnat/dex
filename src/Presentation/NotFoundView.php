@@ -11,10 +11,10 @@ use Zend\Diactoros\Response;
 class NotFoundView
 {
 	/** @var Twig_Environment $twig */
-	protected $twig;
+	private $twig;
 
 	/** @var NotFoundModel $notFoundModel */
-	protected $notFoundModel;
+	private $notFoundModel;
 
 	/**
 	 * Constructor.

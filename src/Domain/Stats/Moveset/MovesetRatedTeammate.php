@@ -9,25 +9,25 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 class MovesetRatedTeammate
 {
 	/** @var int $year */
-	protected $year;
+	private $year;
 
 	/** @var int $month */
-	protected $month;
+	private $month;
 
 	/** @var FormatId $formatId */
-	protected $formatId;
+	private $formatId;
 
 	/** @var int $rating */
-	protected $rating;
+	private $rating;
 
 	/** @var PokemonId $pokemonId */
-	protected $pokemonId;
+	private $pokemonId;
 
 	/** @var PokemonId $teammateId */
-	protected $teammateId;
+	private $teammateId;
 
 	/** @var float $percent */
-	protected $percent;
+	private $percent;
 
 	/**
 	 * Constructor.

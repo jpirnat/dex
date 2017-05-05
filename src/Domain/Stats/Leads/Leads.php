@@ -8,16 +8,16 @@ use Jp\Dex\Domain\Formats\FormatId;
 class Leads
 {
 	/** @var int $year */
-	protected $year;
+	private $year;
 
 	/** @var int $month */
-	protected $month;
+	private $month;
 
 	/** @var FormatId $formatId */
-	protected $formatId;
+	private $formatId;
 
 	/** @var int $totalLeads */
-	protected $totalLeads;
+	private $totalLeads;
 
 	/**
 	 * Constructor.

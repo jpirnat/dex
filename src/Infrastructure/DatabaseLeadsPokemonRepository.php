@@ -11,7 +11,7 @@ use PDO;
 class DatabaseLeadsPokemonRepository implements LeadsPokemonRepositoryInterface
 {
 	/** @var PDO $db */
-	protected $db;
+	private $db;
 
 	/**
 	 * Constructor.

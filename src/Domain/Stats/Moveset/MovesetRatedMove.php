@@ -10,25 +10,25 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 class MovesetRatedMove
 {
 	/** @var int $year */
-	protected $year;
+	private $year;
 
 	/** @var int $month */
-	protected $month;
+	private $month;
 
 	/** @var FormatId $formatId */
-	protected $formatId;
+	private $formatId;
 
 	/** @var int $rating */
-	protected $rating;
+	private $rating;
 
 	/** @var PokemonId $pokemonId */
-	protected $pokemonId;
+	private $pokemonId;
 
 	/** @var MoveId $moveId */
-	protected $moveId;
+	private $moveId;
 
 	/** @var float $percent */
-	protected $percent;
+	private $percent;
 
 	/**
 	 * Constructor.

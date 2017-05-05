@@ -8,13 +8,13 @@ use Jp\Dex\Domain\Languages\LanguageId;
 class AbilityName
 {
 	/** @var LanguageId $languageId */
-	protected $languageId;
+	private $languageId;
 
 	/** @var AbilityId $abilityId */
-	protected $abilityId;
+	private $abilityId;
 
 	/** @var string $name */
-	protected $name;
+	private $name;
 
 	/**
 	 * Constructor.

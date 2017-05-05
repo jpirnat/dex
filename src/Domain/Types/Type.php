@@ -8,16 +8,16 @@ use Jp\Dex\Domain\Moves\CategoryId;
 class Type
 {
 	/** @var TypeId $id */
-	protected $id;
+	private $id;
 
 	/** @var string $identifier */
-	protected $identifier;
+	private $identifier;
 
 	/** @var CategoryId|null $categoryId */
-	protected $categoryId;
+	private $categoryId;
 
 	/** @var int|null $hiddenPowerIndex */
-	protected $hiddenPowerIndex;
+	private $hiddenPowerIndex;
 
 	/**
 	 * Constructor.

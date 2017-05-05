@@ -12,19 +12,19 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface;
 class AbilitiesModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
-	protected $formatRepository;
+	private $formatRepository;
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
-	protected $pokemonRepository;
+	private $pokemonRepository;
 
 	/** @var AbilityRepositoryInterface $abilityRepository */
-	protected $abilityRepository;
+	private $abilityRepository;
 
 	/** @var MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository */
-	protected $movesetRatedAbilityRepository;
+	private $movesetRatedAbilityRepository;
 
 	/** @var MovesetRatedAbility[] $movesetRatedAbilities */
-	protected $movesetRatedAbilities = [];
+	private $movesetRatedAbilities = [];
 
 	/**
 	 * Constructor.

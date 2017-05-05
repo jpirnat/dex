@@ -12,19 +12,19 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
 class MovesModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
-	protected $formatRepository;
+	private $formatRepository;
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
-	protected $pokemonRepository;
+	private $pokemonRepository;
 
 	/** @var MoveRepositoryInterface $moveRepository */
-	protected $moveRepository;
+	private $moveRepository;
 
 	/** @var MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository */
-	protected $movesetRatedMoveRepository;
+	private $movesetRatedMoveRepository;
 
 	/** @var MovesetRatedMove[] $movesetRatedMoves */
-	protected $movesetRatedMoves = [];
+	private $movesetRatedMoves = [];
 
 	/**
 	 * Constructor.

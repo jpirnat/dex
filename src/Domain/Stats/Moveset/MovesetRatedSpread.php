@@ -10,43 +10,43 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 class MovesetRatedSpread
 {
 	/** @var int $year */
-	protected $year;
+	private $year;
 
 	/** @var int $month */
-	protected $month;
+	private $month;
 
 	/** @var FormatId $formatId */
-	protected $formatId;
+	private $formatId;
 
 	/** @var int $rating */
-	protected $rating;
+	private $rating;
 
 	/** @var PokemonId $pokemonId */
-	protected $pokemonId;
+	private $pokemonId;
 
 	/** @var NatureId $natureId */
-	protected $natureId;
+	private $natureId;
 
 	/** @var int $hp */
-	protected $hp;
+	private $hp;
 
 	/** @var int $atk */
-	protected $atk;
+	private $atk;
 
 	/** @var int $def */
-	protected $def;
+	private $def;
 
 	/** @var int $spa */
-	protected $spa;
+	private $spa;
 
 	/** @var int $spd */
-	protected $spd;
+	private $spd;
 
 	/** @var int $spe */
-	protected $spe;
+	private $spe;
 
 	/** @var float $percent */
-	protected $percent;
+	private $percent;
 
 	/**
 	 * Constructor.

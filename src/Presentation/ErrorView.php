@@ -11,10 +11,10 @@ use Zend\Diactoros\Response;
 class ErrorView
 {
 	/** @var Twig_Environment $twig */
-	protected $twig;
+	private $twig;
 
 	/** @var ErrorModel $errorModel */
-	protected $errorModel;
+	private $errorModel;
 
 	/**
 	 * Constructor.

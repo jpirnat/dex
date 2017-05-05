@@ -11,7 +11,7 @@ use PDO;
 class DatabaseUsageRepository implements UsageRepositoryInterface
 {
 	/** @var PDO $db */
-	protected $db;
+	private $db;
 
 	/**
 	 * Constructor.

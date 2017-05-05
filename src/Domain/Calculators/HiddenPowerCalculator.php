@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 class HiddenPowerCalculator
 {
 	/** @var TypeRepositoryInterface $typeRepository */
-	protected $typeRepository;
+	private $typeRepository;
 
 	/**
 	 * Constructor.

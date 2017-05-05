@@ -11,13 +11,13 @@ use PDO;
 class DatabaseShowdownMoveRepository implements ShowdownMoveRepositoryInterface
 {
 	/** @var MoveId[] $movesToImport */
-	protected $movesToImport = [];
+	private $movesToImport = [];
 
 	/** @var ?MoveId[] $movesToIgnore */
-	protected $movesToIgnore = [];
+	private $movesToIgnore = [];
 
 	/** @var string[] $unknownMoves */
-	protected $unknownMoves = [];
+	private $unknownMoves = [];
 
 	/**
 	 * Constructor.

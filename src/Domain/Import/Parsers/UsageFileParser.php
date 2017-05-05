@@ -10,10 +10,10 @@ use Psr\Http\Message\StreamInterface;
 class UsageFileParser
 {
 	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
-	protected $showdownPokemonRepository;
+	private $showdownPokemonRepository;
 
 	/** @var UsageFileExtractor $usageFileExtractor */
-	protected $usageFileExtractor;
+	private $usageFileExtractor;
 
 	/**
 	 * Constructor.

@@ -19,22 +19,22 @@ use Psr\Http\Message\StreamInterface;
 class UsageFileImporter
 {
 	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
-	protected $showdownPokemonRepository;
+	private $showdownPokemonRepository;
 
 	/** @var UsageRepositoryInterface $usageRepository */
-	protected $usageRepository;
+	private $usageRepository;
 
 	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
-	protected $usageRatedRepository;
+	private $usageRatedRepository;
 
 	/** @var UsagePokemonRepositoryInterface $usagePokemonRepository */
-	protected $usagePokemonRepository;
+	private $usagePokemonRepository;
 
 	/** @var UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository */
-	protected $usageRatedPokemonRepository;
+	private $usageRatedPokemonRepository;
 
 	/** @var UsageFileExtractor $usageFileExtractor */
-	protected $usageFileExtractor;
+	private $usageFileExtractor;
 
 	/**
 	 * Constructor.

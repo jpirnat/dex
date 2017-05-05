@@ -13,7 +13,7 @@ use PDO;
 class DatabaseNatureRepository implements NatureRepositoryInterface
 {
 	/** @var PDO $db */
-	protected $db;
+	private $db;
 
 	/**
 	 * Constructor.

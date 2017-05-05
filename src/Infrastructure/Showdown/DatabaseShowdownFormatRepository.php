@@ -16,7 +16,7 @@ class DatabaseShowdownFormatRepository implements ShowdownFormatRepositoryInterf
 	 *
 	 * @var int[][][] $formatsToImport
 	 */
-	protected $formatsToImport = [];
+	private $formatsToImport = [];
 
 	/**
 	 * Indexed by year, then month, then Showdown format name.
@@ -24,7 +24,7 @@ class DatabaseShowdownFormatRepository implements ShowdownFormatRepositoryInterf
 	 *
 	 * @var ?int[][][]
 	 */
-	protected $formatsToIgnore = [];
+	private $formatsToIgnore = [];
 
 	/**
 	 * Indexed by year, then month, then Showdown format name.
@@ -32,7 +32,7 @@ class DatabaseShowdownFormatRepository implements ShowdownFormatRepositoryInterf
 	 *
 	 * @var string[][][]
 	 */
-	protected $unknownFormats = [];
+	private $unknownFormats = [];
 
 	/**
 	 * Constructor.

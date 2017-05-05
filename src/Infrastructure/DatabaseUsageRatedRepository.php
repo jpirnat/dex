@@ -11,7 +11,7 @@ use PDO;
 class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterface
 {
 	/** @var PDO $db */
-	protected $db;
+	private $db;
 
 	/**
 	 * Constructor.

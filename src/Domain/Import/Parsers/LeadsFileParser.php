@@ -10,10 +10,10 @@ use Psr\Http\Message\StreamInterface;
 class LeadsFileParser
 {
 	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
-	protected $showdownPokemonRepository;
+	private $showdownPokemonRepository;
 
 	/** @var LeadsFileExtractor $leadsFileExtractor */
-	protected $leadsFileExtractor;
+	private $leadsFileExtractor;
 
 	/**
 	 * Constructor.

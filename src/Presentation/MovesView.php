@@ -10,7 +10,7 @@ use Zend\Diactoros\Response\JsonResponse;
 class MovesView
 {
 	/** @var MovesModel $movesModel */
-	protected $movesModel;
+	private $movesModel;
 
 	/**
 	 * Constructor.

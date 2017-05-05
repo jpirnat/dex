@@ -9,7 +9,7 @@ use Psr\Http\Message\ServerRequestInterface;
 class ItemsController
 {
 	/** @var ItemsModel $itemsModel */
-	protected $itemsModel;
+	private $itemsModel;
 
 	/**
 	 * Constructor.

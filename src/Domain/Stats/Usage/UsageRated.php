@@ -8,19 +8,19 @@ use Jp\Dex\Domain\Formats\FormatId;
 class UsageRated
 {
 	/** @var int $year */
-	protected $year;
+	private $year;
 
 	/** @var int $month */
-	protected $month;
+	private $month;
 
 	/** @var FormatId $formatId */
-	protected $formatId;
+	private $formatId;
 
 	/** @var int $rating */
-	protected $rating;
+	private $rating;
 
 	/** @var float $averageWeightPerTeam */
-	protected $averageWeightPerTeam;
+	private $averageWeightPerTeam;
 
 	/**
 	 * Constructor.

@@ -31,46 +31,46 @@ use Psr\Http\Message\StreamInterface;
 class MovesetFileImporter
 {
 	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
-	protected $showdownPokemonRepository;
+	private $showdownPokemonRepository;
 
 	/** @var ShowdownAbilityRepositoryInterface $showdownAbilityRepository */
-	protected $showdownAbilityRepository;
+	private $showdownAbilityRepository;
 
 	/** @var ShowdownItemRepositoryInterface $showdownItemRepository */
-	protected $showdownItemRepository;
+	private $showdownItemRepository;
 
 	/** @var ShowdownNatureRepositoryInterface $showdownNatureRepository */
-	protected $showdownNatureRepository;
+	private $showdownNatureRepository;
 
 	/** @var ShowdownMoveRepositoryInterface $showdownMoveRepository */
-	protected $showdownMoveRepository;
+	private $showdownMoveRepository;
 
 	/** @var MovesetPokemonRepositoryInterface $movesetPokemonRepository */
-	protected $movesetPokemonRepository;
+	private $movesetPokemonRepository;
 
 	/** @var MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository */
-	protected $movesetRatedPokemonRepository;
+	private $movesetRatedPokemonRepository;
 
 	/** @var MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository */
-	protected $movesetRatedAbilityRepository;
+	private $movesetRatedAbilityRepository;
 
 	/** @var MovesetRatedItemRepositoryInterface $movesetRatedItemRepository */
-	protected $movesetRatedItemRepository;
+	private $movesetRatedItemRepository;
 
 	/** @var MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository */
-	protected $movesetRatedSpreadRepository;
+	private $movesetRatedSpreadRepository;
 
 	/** @var MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository */
-	protected $movesetRatedMoveRepository;
+	private $movesetRatedMoveRepository;
 
 	/** @var MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository */
-	protected $movesetRatedTeammateRepository;
+	private $movesetRatedTeammateRepository;
 
 	/** @var MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository */
-	protected $movesetRatedCounterRepository;
+	private $movesetRatedCounterRepository;
 
 	/** @var MovesetFileExtractor $movesetFileExtractor */
-	protected $movesetFileExtractor;
+	private $movesetFileExtractor;
 
 	/**
 	 * Constructor.

@@ -14,7 +14,7 @@ use PDO;
 class DatabasePokemonRepository implements PokemonRepositoryInterface
 {
 	/** @var PDO $db */
-	protected $db;
+	private $db;
 
 	/**
 	 * Constructor.

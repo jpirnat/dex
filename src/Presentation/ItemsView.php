@@ -10,7 +10,7 @@ use Zend\Diactoros\Response\JsonResponse;
 class ItemsView
 {
 	/** @var ItemsModel $itemsModel */
-	protected $itemsModel;
+	private $itemsModel;
 
 	/**
 	 * Constructor.

@@ -9,7 +9,7 @@ use Psr\Http\Message\ServerRequestInterface;
 class AbilitiesController
 {
 	/** @var AbilitiesModel $abilitiesModel */
-	protected $abilitiesModel;
+	private $abilitiesModel;
 
 	/**
 	 * Constructor.

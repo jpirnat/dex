@@ -8,13 +8,13 @@ use Jp\Dex\Domain\Versions\Generation;
 class Move
 {
 	/** @var MoveId $id */
-	protected $id;
+	private $id;
 
 	/** @var string $identifier */
-	protected $identifier;
+	private $identifier;
 
 	/** @var Generation $introducedInGeneration */
-	protected $introducedInGeneration;
+	private $introducedInGeneration;
 
 	/**
 	 * Constructor.
