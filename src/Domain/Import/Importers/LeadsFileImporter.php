@@ -96,8 +96,7 @@ class LeadsFileImporter
 
 		// If all data in this file has already been imported, there's no need
 		// to import it again. We can quit early.
-		if (
-			$leadsExists
+		if ($leadsExists
 			&& $leadsPokemonExists
 			&& $leadsRatedPokemonExists
 		) {

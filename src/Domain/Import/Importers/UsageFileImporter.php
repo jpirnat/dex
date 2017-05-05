@@ -110,8 +110,7 @@ class UsageFileImporter
 
 		// If all data in this file has already been imported, there's no need
 		// to import it again. We can quit early.
-		if (
-			$usageExists
+		if ($usageExists
 			&& $usageRatedExists
 			&& $usagePokemonExists
 			&& $usageRatedPokemonExists
