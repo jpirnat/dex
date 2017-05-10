@@ -16,21 +16,27 @@ class PokemonName
 	/** @var string $name */
 	private $name;
 
+	/** @var string $category */
+	private $category;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param LanguageId $languageId
 	 * @param PokemonId $pokemonId
 	 * @param string $name
+	 * @param string $category
 	 */
 	public function __construct(
 		LanguageId $languageId,
 		PokemonId $pokemonId,
-		string $name
+		string $name,
+		string $category
 	) {
 		$this->languageId = $languageId;
 		$this->pokemonId = $pokemonId;
 		$this->name = $name;
+		$this->category = $category;
 	}
 
 	/**
@@ -54,12 +60,22 @@ class PokemonName
 	}
 
 	/**
-	 * Get the Pokémon name's name value.
+	 * Get the Pokémon name's name.
 	 *
 	 * @return string
 	 */
 	public function getName() : string
 	{
 		return $this->name;
+	}
+
+	/**
+	 * Get the Pokémon name's category.
+	 *
+	 * @return string
+	 */
+	public function getCategory() : string
+	{
+		return $this->category;
 	}
 }
