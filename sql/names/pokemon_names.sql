@@ -7,8 +7,8 @@ create table if not exists `pokemon_names`
 `category` varchar(21) not null,
 
 primary key (
-	`language_id`
-	`pokemon_id`,
+	`language_id`,
+	`pokemon_id`
 ),
 foreign key (`language_id`) references `languages` (`id`)
 	on delete restrict

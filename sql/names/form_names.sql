@@ -6,8 +6,8 @@ create table if not exists `form_names`
 `name` varchar(20) not null,
 
 primary key (
-	`language_id`
-	`form_id`,
+	`language_id`,
+	`form_id`
 ),
 foreign key (`language_id`) references `languages` (`id`)
 	on delete restrict

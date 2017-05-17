@@ -6,8 +6,8 @@ create table if not exists `move_names`
 `name` varchar(28) not null,
 
 primary key (
-	`language_id`
-	`move_id`,
+	`language_id`,
+	`move_id`
 ),
 foreign key (`language_id`) references `languages` (`id`)
 	on delete restrict

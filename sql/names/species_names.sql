@@ -6,8 +6,8 @@ create table if not exists `species_names`
 `name` varchar(12) not null,
 
 primary key (
-	`language_id`
-	`species_id`,
+	`language_id`,
+	`species_id`
 ),
 foreign key (`language_id`) references `languages` (`id`)
 	on delete restrict
@@ -19,8 +19,8 @@ foreign key (`species_id`) references `species` (`id`)
 
 
 insert into `species_names` (
-	`language_id`
-	`species_id`
+	`language_id`,
+	`species_id`,
 	`name`
 ) values
 (1, 1, "フシギダネ"),
