@@ -113,12 +113,12 @@ class MovesetFileImporter
 		$this->showdownMoveRepository = $showdownMoveRepository;
 		$this->movesetPokemonRepository = $movesetPokemonRepository;
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
-		$this->movesetRatedAbilitiesRepository = $movesetRatedAbilityRepository;
-		$this->movesetRatedItemsRepository = $movesetRatedItemRepository;
-		$this->movesetRatedSpreadsRepository = $movesetRatedSpreadRepository;
-		$this->movesetRatedMovesRepository = $movesetRatedMoveRepository;
-		$this->movesetRatedTeammatesRepository = $movesetRatedTeammateRepository;
-		$this->movesetRatedCountersRepository = $movesetRatedCounterRepository;
+		$this->movesetRatedAbilityRepository = $movesetRatedAbilityRepository;
+		$this->movesetRatedItemRepository = $movesetRatedItemRepository;
+		$this->movesetRatedSpreadRepository = $movesetRatedSpreadRepository;
+		$this->movesetRatedMoveRepository = $movesetRatedMoveRepository;
+		$this->movesetRatedTeammateRepository = $movesetRatedTeammateRepository;
+		$this->movesetRatedCounterRepository = $movesetRatedCounterRepository;
 		$this->movesetFileExtractor = $movesetFileExtractor;
 	}
 

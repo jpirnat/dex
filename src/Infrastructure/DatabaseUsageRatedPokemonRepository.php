@@ -5,6 +5,7 @@ namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Stats\Usage\UsagePokemon;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemon;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use PDO;
@@ -95,6 +96,58 @@ class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepository
 		$stmt->bindValue(':rank', $usageRatedPokemon->getRank(), PDO::PARAM_INT);
 		$stmt->bindValue(':usage_percent', $usageRatedPokemon->getUsagePercent(), PDO::PARAM_STR);
 		$stmt->execute();
+	}
+
+	/**
+	 * Get usage Pokémon records by year and month and format and rating.
+	 * Indexed by Pokémon id value. Use this to recreate a stats usage file,
+	 * such as http://www.smogon.com/stats/2014-11/ou-1695.txt
+	 *
+	 * @param int $year
+	 * @param int $month
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 *
+	 * @return UsagePokemon[]
+	 */
+	public function getByYearAndMonthAndFormatAndRating(
+		int $year,
+		int $month,
+		FormatId $formatId,
+		int $rating
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`pokemon_id`,
+				`rank`,
+				`usage_percent`
+			FROM `usage_rated_pokemon`
+			WHERE `year` = :year
+				AND `month` = :month
+				AND `format_id` = :format_id
+				AND `rating` = :rating'
+		);
+		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->execute();
+
+		$usageRatedPokemon = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$usageRatedPokemon[$result['pokemon_id']] = new UsageRatedPokemon(
+				$year,
+				$month,
+				$formatId,
+				$rating,
+				new PokemonId($result['pokemon_id']),
+				$result['rank'],
+				(float) $result['usage_percent']
+			);
+		}
+
+		return $usageRatedPokemon;
 	}
 
 	/**

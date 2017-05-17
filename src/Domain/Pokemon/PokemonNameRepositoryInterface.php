@@ -22,4 +22,13 @@ interface PokemonNameRepositoryInterface
 		LanguageId $languageId,
 		PokemonId $pokemonId
 	) : PokemonName;
+
+	/**
+	 * Get Pokémon names by language. Indexed by Pokémon id value.
+	 *
+	 * @param LanguageId $languageId
+	 *
+	 * @return PokemonName[]
+	 */
+	public function getByLanguage(LanguageId $languageId) : array;
 }
