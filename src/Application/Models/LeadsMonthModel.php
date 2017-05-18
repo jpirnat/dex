@@ -9,21 +9,21 @@ use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonName;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\UsagePokemon;
-use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemon;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Leads\LeadsPokemon;
+use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemon;
+use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 
-class UsageMonthModel
+class LeadsMonthModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
 
-	/** @var UsagePokemonRepositoryInterface $usagePokemonRepository */
-	private $usagePokemonRepository;
+	/** @var LeadsPokemonRepositoryInterface $leadsPokemonRepository */
+	private $leadsPokemonRepository;
 
-	/** @var UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository */
-	private $usageRatedPokemonRepository;
+	/** @var LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository */
+	private $leadsRatedPokemonRepository;
 
 	/** PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
@@ -43,11 +43,11 @@ class UsageMonthModel
 	/** @var int $rating */
 	private $rating;
 
-	/** @var UsagePokemon[] $usagePokemon */
-	private $usagePokemon = [];
+	/** @var LeadsPokemon[] $leadsPokemon */
+	private $leadsPokemon = [];
 
-	/** @var UsageRatedPokemon[] $usageRatedPokemon */
-	private $usageRatedPokemon = [];
+	/** @var LeadsRatedPokemon[] $leadsRatedPokemon */
+	private $leadsRatedPokemon = [];
 
 	/** @var Pokemon[] $pokemon */
 	private $pokemon = [];
@@ -59,28 +59,28 @@ class UsageMonthModel
 	 * Constructor.
 	 *
 	 * @param FormatRepositoryInterface $formatRepository
-	 * @param UsagePokemonRepositoryInterface $usagePokemonRepository
-	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
+	 * @param LeadsPokemonRepositoryInterface $leadsPokemonRepository
+	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 */
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
-		UsagePokemonRepositoryInterface $usagePokemonRepository,
-		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
+		LeadsPokemonRepositoryInterface $leadsPokemonRepository,
+		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository
 	) {
 		$this->formatRepository = $formatRepository;
-		$this->usagePokemonRepository = $usagePokemonRepository;
-		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
+		$this->leadsPokemonRepository = $leadsPokemonRepository;
+		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 	}
 
 	/**
-	 * Get usage data to recreate a stats usage file, such as
-	 * http://www.smogon.com/stats/2014-11/ou-1695.txt.
+	 * Get leads data to recreate a stats leads file, such as
+	 * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
 	 *
 	 * @param int $year
 	 * @param int $month
@@ -105,15 +105,15 @@ class UsageMonthModel
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
-		// Get usage Pokémon records.
-		$this->usagePokemon = $this->usagePokemonRepository->getByYearAndMonthAndFormat(
+		// Get leads Pokémon records.
+		$this->leadsPokemon = $this->leadsPokemonRepository->getByYearAndMonthAndFormat(
 			$year,
 			$month,
 			$format->getId()
 		);
 
-		// Get usage rated Pokémon records.
-		$this->usageRatedPokemon = $this->usageRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
+		// Get leads rated Pokémon records.
+		$this->leadsRatedPokemon = $this->leadsRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
 			$year,
 			$month,
 			$format->getId(),
@@ -168,23 +168,23 @@ class UsageMonthModel
 	}
 
 	/**
-	 * Get the usage Pokémon records.
+	 * Get the leads Pokémon records.
 	 *
-	 * @return UsagePokemon[]
+	 * @return LeadsPokemon[]
 	 */
-	public function getUsagePokemon() : array
+	public function getLeadsPokemon() : array
 	{
-		return $this->usagePokemon;
+		return $this->leadsPokemon;
 	}
 
 	/**
-	 * Get the usage rated Pokémon records.
+	 * Get the leads rated Pokémon records.
 	 *
-	 * @return UsageRatedPokemon[]
+	 * @return LeadsRatedPokemon[]
 	 */
-	public function getUsageRatedPokemon() : array
+	public function getLeadsRatedPokemon() : array
 	{
-		return $this->usageRatedPokemon;
+		return $this->leadsRatedPokemon;
 	}
 
 	/**

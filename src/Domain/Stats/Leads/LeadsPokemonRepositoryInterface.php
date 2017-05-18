@@ -30,4 +30,21 @@ interface LeadsPokemonRepositoryInterface
 	 * @return void
 	 */
 	public function save(LeadsPokemon $leadsPokemon) : void;
+
+	/**
+	 * Get leads Pokémon records by year and month and format. Indexed by
+	 * Pokémon id value. Use this to recreate a stats leads file, such as
+	 * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
+	 *
+	 * @param int $year
+	 * @param int $month
+	 * @param FormatId $formatId
+	 *
+	 * @return LeadsPokemon[]
+	 */
+	public function getByYearAndMonthAndFormat(
+		int $year,
+		int $month,
+		FormatId $formatId
+	) : array;
 }

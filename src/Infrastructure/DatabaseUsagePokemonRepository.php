@@ -98,7 +98,7 @@ class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 	/**
 	 * Get usage Pokémon records by year and month and format. Indexed by
 	 * Pokémon id value. Use this to recreate a stats usage file, such as
-	 * http://www.smogon.com/stats/2014-11/ou-1695.txt
+	 * http://www.smogon.com/stats/2014-11/ou-1695.txt.
 	 *
 	 * @param int $year
 	 * @param int $month
@@ -128,10 +128,10 @@ class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
-		$usagePokemon = [];
+		$usagePokemons = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$usagePokemon[$result['pokemon_id']] = new UsagePokemon(
+			$usagePokemon = new UsagePokemon(
 				$year,
 				$month,
 				$formatId,
@@ -141,8 +141,10 @@ class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 				$result['real'],
 				(float) $result['real_percent']
 			);
+
+			$usagePokemons[$result['pokemon_id']] = $usagePokemon;
 		}
 
-		return $usagePokemon;
+		return $usagePokemons;
 	}
 }

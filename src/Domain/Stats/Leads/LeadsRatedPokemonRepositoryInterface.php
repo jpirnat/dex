@@ -36,6 +36,25 @@ interface LeadsRatedPokemonRepositoryInterface
 	public function save(LeadsRatedPokemon $leadsRatedPokemon) : void;
 
 	/**
+	 * Get leads rated Pokémon records by year and month and format and rating.
+	 * Indexed by Pokémon id value. Use this to recreate a stats leads file,
+	 * such as http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
+	 *
+	 * @param int $year
+	 * @param int $month
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 *
+	 * @return LeadsRatedPokemon[]
+	 */
+	public function getByYearAndMonthAndFormatAndRating(
+		int $year,
+		int $month,
+		FormatId $formatId,
+		int $rating
+	) : array;
+
+	/**
 	 * Get leads rated Pokémon records by format and Pokémon.
 	 *
 	 * @param FormatId $formatId

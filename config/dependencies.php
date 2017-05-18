@@ -8,6 +8,7 @@ use Jp\Dex\Application\Models\AbilitiesModel;
 use Jp\Dex\Application\Models\ErrorModel;
 use Jp\Dex\Application\Models\ItemsModel;
 use Jp\Dex\Application\Models\LeadsModel;
+use Jp\Dex\Application\Models\LeadsMonthModel;
 use Jp\Dex\Application\Models\MovesModel;
 use Jp\Dex\Application\Models\NotFoundModel;
 use Jp\Dex\Application\Models\UsageModel;
@@ -159,6 +160,7 @@ $container->dice()->addRule(LeadsModel::class, $rule);
 $container->dice()->addRule(MovesModel::class, $rule);
 $container->dice()->addRule(NotFoundModel::class, $rule);
 $container->dice()->addRule(UsageModel::class, $rule);
+$container->dice()->addRule(LeadsMonthModel::class, $rule);
 $container->dice()->addRule(UsageMonthModel::class, $rule);
 
 // Shared repositories

@@ -5,7 +5,6 @@ namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\Usage\UsagePokemon;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemon;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use PDO;
@@ -99,16 +98,16 @@ class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepository
 	}
 
 	/**
-	 * Get usage Pokémon records by year and month and format and rating.
+	 * Get usage rated Pokémon records by year and month and format and rating.
 	 * Indexed by Pokémon id value. Use this to recreate a stats usage file,
-	 * such as http://www.smogon.com/stats/2014-11/ou-1695.txt
+	 * such as http://www.smogon.com/stats/2014-11/ou-1695.txt.
 	 *
 	 * @param int $year
 	 * @param int $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
-	 * @return UsagePokemon[]
+	 * @return UsageRatedPokemon[]
 	 */
 	public function getByYearAndMonthAndFormatAndRating(
 		int $year,
@@ -133,10 +132,10 @@ class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepository
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
 
-		$usageRatedPokemon = [];
+		$usageRatedPokemons = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$usageRatedPokemon[$result['pokemon_id']] = new UsageRatedPokemon(
+			$usageRatedPokemon = new UsageRatedPokemon(
 				$year,
 				$month,
 				$formatId,
@@ -145,9 +144,11 @@ class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepository
 				$result['rank'],
 				(float) $result['usage_percent']
 			);
+
+			$usageRatedPokemons[$result['pokemon_id']] = $usageRatedPokemon;
 		}
 
-		return $usageRatedPokemon;
+		return $usageRatedPokemons;
 	}
 
 	/**
@@ -177,10 +178,10 @@ class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepository
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
-		$usageRatedPokemon = [];
+		$usageRatedPokemons = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$usageRatedPokemon[] = new UsageRatedPokemon(
+			$usageRatedPokemon = new UsageRatedPokemon(
 				$result['year'],
 				$result['month'],
 				$formatId,
@@ -189,8 +190,10 @@ class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepository
 				$result['rank'],
 				(float) $result['usage_percent']
 			);
+
+			$usageRatedPokemons[] = $usageRatedPokemon;
 		}
 
-		return $usageRatedPokemon;
+		return $usageRatedPokemons;
 	}
 }

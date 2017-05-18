@@ -5,6 +5,7 @@ use Jp\Dex\Application\Controllers\AbilitiesController;
 use Jp\Dex\Application\Controllers\ErrorController;
 use Jp\Dex\Application\Controllers\ItemsController;
 use Jp\Dex\Application\Controllers\LeadsController;
+use Jp\Dex\Application\Controllers\LeadsMonthController;
 use Jp\Dex\Application\Controllers\MovesController;
 use Jp\Dex\Application\Controllers\NotFoundController;
 use Jp\Dex\Application\Controllers\UsageController;
@@ -14,11 +15,12 @@ use Jp\Dex\Application\Middleware\LanguageMiddleware;
 use Jp\Dex\Presentation\AbilitiesView;
 use Jp\Dex\Presentation\ErrorView;
 use Jp\Dex\Presentation\ItemsView;
+use Jp\Dex\Presentation\LeadsMonthView;
 use Jp\Dex\Presentation\LeadsView;
 use Jp\Dex\Presentation\MovesView;
 use Jp\Dex\Presentation\NotFoundView;
-use Jp\Dex\Presentation\UsageView;
 use Jp\Dex\Presentation\UsageMonthView;
+use Jp\Dex\Presentation\UsageView;
 
 // Route definitions.
 $routes = [
@@ -123,6 +125,21 @@ $routes = [
 			'controllerClass' => UsageMonthController::class,
 			'controllerMethod' => 'setData',
 			'viewClass' => UsageMonthView::class,
+			'viewMethod' => 'getData',
+			'middlewareClasses' => [
+				HtmlErrorMiddleware::class,
+				LanguageMiddleware::class,
+			],
+		]
+	],
+
+	[
+		'GET',
+		'/stats/leads/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}',
+		[
+			'controllerClass' => LeadsMonthController::class,
+			'controllerMethod' => 'setData',
+			'viewClass' => LeadsMonthView::class,
 			'viewMethod' => 'getData',
 			'middlewareClasses' => [
 				HtmlErrorMiddleware::class,

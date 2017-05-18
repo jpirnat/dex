@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+
+{% block title %}
+	Leads
+{% endblock %}
+
+{% block body %}
+	<table>
+		<thead>
+			<tr>
+				<th>Rank</th>
+				<th>Pokémon</th>
+				<th>Usage %</th>
+				<th>Raw</th>
+				<th>%</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<td>
+			</td>
+			</tr>
+			{% for pokemon in data %}
+				<tr>
+					<td>{{ pokemon.rank|e }}</td>
+					<td>
+						<a href="/stats/moveset/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ pokemon.identifier|e }}">
+							{{ pokemon.name|e }}
+						</a>
+					</td>
+					<td>{{ pokemon.usagePercent|e }}</td>
+					<td>{{ pokemon.raw|e }}</td>
+					<td>{{ pokemon.rawPercent|e }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

@@ -34,7 +34,7 @@ interface UsagePokemonRepositoryInterface
 	/**
 	 * Get usage Pokémon records by year and month and format. Indexed by
 	 * Pokémon id value. Use this to recreate a stats usage file, such as
-	 * http://www.smogon.com/stats/2014-11/ou-1695.txt
+	 * http://www.smogon.com/stats/2014-11/ou-1695.txt.
 	 *
 	 * @param int $year
 	 * @param int $month
