@@ -11,10 +11,12 @@ use Jp\Dex\Application\Models\LeadsModel;
 use Jp\Dex\Application\Models\MovesModel;
 use Jp\Dex\Application\Models\NotFoundModel;
 use Jp\Dex\Application\Models\UsageModel;
+use Jp\Dex\Application\Models\UsageMonthModel;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
@@ -52,6 +54,7 @@ use Jp\Dex\Infrastructure\DatabaseMovesetRatedItemRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedMoveRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository;
+use Jp\Dex\Infrastructure\DatabasePokemonNameRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository;
@@ -120,66 +123,27 @@ $container->dice()->addRule(HtmlErrorMiddleware::class, $rule);
 // Repositories
 $rule = [
 	'substitutions' => [
-		AbilityRepositoryInterface::class => [
-			'instance' => DatabaseAbilityRepository::class
-		],
-		FormatRepositoryInterface::class => [
-			'instance' => DatabaseFormatRepository::class
-		],
-		ItemRepositoryInterface::class => [
-			'instance' => DatabaseItemRepository::class
-		],
-		MoveRepositoryInterface::class => [
-			'instance' => DatabaseMoveRepository::class
-		],
-		PokemonRepositoryInterface::class => [
-			'instance' => DatabasePokemonRepository::class
-		],
-		LeadsPokemonRepositoryInterface::class => [
-			'instance' => DatabaseLeadsPokemonRepository::class
-		],
-		LeadsRatedPokemonRepositoryInterface::class => [
-			'instance' => DatabaseLeadsRatedPokemonRepository::class
-		],
-		LeadsRepositoryInterface::class => [
-			'instance' => DatabaseLeadsRepository::class
-		],
-		MovesetPokemonRepositoryInterface::class => [
-			'instance' => DatabaseMovesetPokemonRepository::class
-		],
-		MovesetRatedAbilityRepositoryInterface::class => [
-			'instance' => DatabaseMovesetRatedAbilityRepository::class
-		],
-		MovesetRatedCounterRepositoryInterface::class => [
-			'instance' => DatabaseMovesetRatedCounterRepository::class
-		],
-		MovesetRatedItemRepositoryInterface::class => [
-			'instance' => DatabaseMovesetRatedItemRepository::class
-		],
-		MovesetRatedMoveRepositoryInterface::class => [
-			'instance' => DatabaseMovesetRatedMoveRepository::class
-		],
-		MovesetRatedPokemonRepositoryInterface::class => [
-			'instance' => DatabaseMovesetRatedPokemonRepository::class
-		],
-		MovesetRatedSpreadRepositoryInterface::class => [
-			'instance' => DatabaseMovesetRatedSpreadRepository::class
-		],
-		MovesetRatedTeammateRepositoryInterface::class => [
-			'instance' => DatabaseMovesetRatedTeammateRepository::class
-		],
-		UsagePokemonRepositoryInterface::class => [
-			'instance' => DatabaseUsagePokemonRepository::class
-		],
-		UsageRatedPokemonRepositoryInterface::class => [
-			'instance' => DatabaseUsageRatedPokemonRepository::class
-		],
-		UsageRatedRepositoryInterface::class => [
-			'instance' => DatabaseUsageRatedRepository::class
-		],
-		UsageRepositoryInterface::class => [
-			'instance' => DatabaseUsageRepository::class
-		],
+		AbilityRepositoryInterface::class => ['instance' => DatabaseAbilityRepository::class],
+		FormatRepositoryInterface::class => ['instance' => DatabaseFormatRepository::class],
+		ItemRepositoryInterface::class => ['instance' => DatabaseItemRepository::class],
+		LeadsPokemonRepositoryInterface::class => ['instance' => DatabaseLeadsPokemonRepository::class],
+		LeadsRatedPokemonRepositoryInterface::class => ['instance' => DatabaseLeadsRatedPokemonRepository::class],
+		LeadsRepositoryInterface::class => ['instance' => DatabaseLeadsRepository::class],
+		MoveRepositoryInterface::class => ['instance' => DatabaseMoveRepository::class],
+		MovesetPokemonRepositoryInterface::class => ['instance' => DatabaseMovesetPokemonRepository::class],
+		MovesetRatedAbilityRepositoryInterface::class => ['instance' => DatabaseMovesetRatedAbilityRepository::class],
+		MovesetRatedCounterRepositoryInterface::class => ['instance' => DatabaseMovesetRatedCounterRepository::class],
+		MovesetRatedItemRepositoryInterface::class => ['instance' => DatabaseMovesetRatedItemRepository::class],
+		MovesetRatedMoveRepositoryInterface::class => ['instance' => DatabaseMovesetRatedMoveRepository::class],
+		MovesetRatedPokemonRepositoryInterface::class => ['instance' => DatabaseMovesetRatedPokemonRepository::class],
+		MovesetRatedSpreadRepositoryInterface::class => ['instance' => DatabaseMovesetRatedSpreadRepository::class],
+		MovesetRatedTeammateRepositoryInterface::class => ['instance' => DatabaseMovesetRatedTeammateRepository::class],
+		PokemonNameRepositoryInterface::class => ['instance' => DatabasePokemonNameRepository::class],
+		PokemonRepositoryInterface::class => ['instance' => DatabasePokemonRepository::class],
+		UsagePokemonRepositoryInterface::class => ['instance' => DatabaseUsagePokemonRepository::class],
+		UsageRatedPokemonRepositoryInterface::class => ['instance' => DatabaseUsageRatedPokemonRepository::class],
+		UsageRatedRepositoryInterface::class => ['instance' => DatabaseUsageRatedRepository::class],
+		UsageRepositoryInterface::class => ['instance' => DatabaseUsageRepository::class],
 	],
 ];
 $container->dice()->addRule('*', $rule);
@@ -195,6 +159,7 @@ $container->dice()->addRule(LeadsModel::class, $rule);
 $container->dice()->addRule(MovesModel::class, $rule);
 $container->dice()->addRule(NotFoundModel::class, $rule);
 $container->dice()->addRule(UsageModel::class, $rule);
+$container->dice()->addRule(UsageMonthModel::class, $rule);
 
 // Shared repositories
 $rule = [

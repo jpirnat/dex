@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+
+{% block title %}
+	Usage
+{% endblock %}
+
+{% block body %}
+	<table>
+		<thead>
+			<tr>
+				<th>Rank</th>
+				<th>Pokémon</th>
+				<th>Usage %</th>
+				<th>Raw</th>
+				<th>%</th>
+				<th>Real</th>
+				<th>%</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<td>
+			</td>
+			</tr>
+			{% for pokemon in data %}
+				<tr>
+					<td>{{ pokemon.rank|e }}</td>
+					<td>{{ pokemon.name|e }}</td>
+					<td>{{ pokemon.usagePercent|e }}</td>
+					<td>{{ pokemon.raw|e }}</td>
+					<td>{{ pokemon.rawPercent|e }}</td>
+					<td>{{ pokemon.real|e }}</td>
+					<td>{{ pokemon.realPercent|e }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
