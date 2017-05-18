@@ -25,7 +25,11 @@
 			{% for pokemon in data %}
 				<tr>
 					<td>{{ pokemon.rank|e }}</td>
-					<td>{{ pokemon.name|e }}</td>
+					<td>
+						<a href="/stats/moveset/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ pokemon.identifier|e }}">
+							{{ pokemon.name|e }}
+						</a>
+					</td>
 					<td>{{ pokemon.usagePercent|e }}</td>
 					<td>{{ pokemon.raw|e }}</td>
 					<td>{{ pokemon.rawPercent|e }}</td>

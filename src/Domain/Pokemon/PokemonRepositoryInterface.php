@@ -17,4 +17,11 @@ interface PokemonRepositoryInterface
 	 * @return Pokemon
 	 */
 	public function getByIdentifier(string $identifier) : Pokemon;
+
+	/**
+	 * Get all Pokémon. Indexed by Pokémon id.
+	 *
+	 * @return Pokemon[]
+	 */
+	public function getAll() : array;
 }

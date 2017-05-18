@@ -41,6 +41,7 @@ class UsageMonthView
 	{
 		$usagePokemons = $this->usageMonthModel->getUsagePokemon();
 		$usageRatedPokemons = $this->usageMonthModel->getUsageRatedPokemon();
+		$pokemons = $this->usageMonthModel->getPokemon();
 		$pokemonNames = $this->usageMonthModel->getPokemonNames();
 
 		// Sort usage rated Pokémon records by rank ascending.
@@ -54,13 +55,15 @@ class UsageMonthView
 		$data = [];
 
 		foreach ($usageRatedPokemons as $pokemonIdValue => $usageRatedPokemon) {
+			$pokemon = $pokemons[$pokemonIdValue];
 			$pokemonName = $pokemonNames[$pokemonIdValue];
 			$usagePokemon = $usagePokemons[$pokemonIdValue];
 			// TODO: Error handling if the key does not exist?
 
 			$data[] = [
 				'rank' => $usageRatedPokemon->getRank(),
-				'pokemonId' => $pokemonIdValue,
+				'id' => $pokemonIdValue,
+				'identifier' => $pokemon->getIdentifier(),
 				'name' => $pokemonName->getName(),
 				'usagePercent' => $usageRatedPokemon->getUsagePercent(),
 				'raw' => $usagePokemon->getRaw(),
@@ -73,6 +76,10 @@ class UsageMonthView
 		$content = $this->twig->render(
 			'usage-month.twig',
 			[
+				'year' => $this->usageMonthModel->getYear(),
+				'month' => $this->usageMonthModel->getMonth(),
+				'formatIdentifier' => $this->usageMonthModel->getFormatIdentifier(),
+				'rating' => $this->usageMonthModel->getRating(),
 				'data' => $data,
 			]
 		);

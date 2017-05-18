@@ -80,4 +80,54 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 
 		return $pokemon;
 	}
+
+	/**
+	 * Get all Pokémon. Indexed by Pokémon id.
+	 *
+	 * @return Pokemon[]
+	 */
+	public function getAll() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`pokemon_identifier`,
+				`species_id`,
+				`is_default_pokemon`,
+				`introduced_in_version_group_id`,
+				`height_m`,
+				`weight_kg`,
+				`gender_ratio`
+			FROM `pokemon`'
+		);
+		$stmt->execute();
+
+		$pokemons = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			if ($result['gender_ratio'] !== null) {
+				$genderRatio = (float) $result['gender_ratio'];
+			} else {
+				// The Pokémon is genderless.
+				$genderRatio = null;
+			}
+
+			$pokemon = new Pokemon(
+				new PokemonId($result['id']),
+				$result['identifier'],
+				$result['pokemon_identifier'],
+				new SpeciesId($result['species_id']),
+				(bool) $result['is_default_pokemon'],
+				new VersionGroupId($result['introduced_in_version_group_id']),
+				(float) $result['height_m'],
+				(float) $result['weight_kg'],
+				$genderRatio
+			);
+
+			$pokemons[$result['id']] = $pokemon;
+		}
+
+		return $pokemons;
+	}
 }

@@ -5,8 +5,10 @@ namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonName;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemon;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemon;
@@ -23,14 +25,32 @@ class UsageMonthModel
 	/** @var UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository */
 	private $usageRatedPokemonRepository;
 
+	/** PokemonRepositoryInterface $pokemonRepository */
+	private $pokemonRepository;
+
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
+
+	/** @var int $year */
+	private $year;
+
+	/** @var int $month */
+	private $month;
+
+	/** @var string $formatIdentifier */
+	private $formatIdentifier;
+
+	/** @var int $rating */
+	private $rating;
 
 	/** @var UsagePokemon[] $usagePokemon */
 	private $usagePokemon = [];
 
 	/** @var UsageRatedPokemon[] $usageRatedPokemon */
 	private $usageRatedPokemon = [];
+
+	/** @var Pokemon[] $pokemon */
+	private $pokemon;
 
 	/** @var PokemonName[] $pokemonNames */
 	private $pokemonNames = [];
@@ -41,17 +61,20 @@ class UsageMonthModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param UsagePokemonRepositoryInterface $usagePokemonRepository
 	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
+	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 */
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
 		UsagePokemonRepositoryInterface $usagePokemonRepository,
 		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
+		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository
 	) {
 		$this->formatRepository = $formatRepository;
 		$this->usagePokemonRepository = $usagePokemonRepository;
 		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
+		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 	}
 
@@ -74,6 +97,11 @@ class UsageMonthModel
 		int $rating,
 		LanguageId $languageId
 	) : void {
+		$this->year = $year;
+		$this->month = $month;
+		$this->formatIdentifier = $formatIdentifier;
+		$this->rating = $rating;
+
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
@@ -92,8 +120,51 @@ class UsageMonthModel
 			$rating
 		);
 
+		// Get Pokémon.
+		$this->pokemon = $this->pokemonRepository->getAll();
+
 		// Get Pokémon names.
 		$this->pokemonNames = $this->pokemonNameRepository->getByLanguage($languageId);
+	}
+
+	/**
+	 * Get the year.
+	 *
+	 * @return int
+	 */
+	public function getYear() : int
+	{
+		return $this->year;
+	}
+
+	/**
+	 * Get the month.
+	 *
+	 * @return int
+	 */
+	public function getMonth() : int
+	{
+		return $this->month;
+	}
+
+	/**
+	 * Get the format identifier.
+	 *
+	 * @return string
+	 */
+	public function getFormatIdentifier() : string
+	{
+		return $this->formatIdentifier;
+	}
+
+	/**
+	 * Get the rating.
+	 *
+	 * @return int
+	 */
+	public function getRating() : int
+	{
+		return $this->rating;
 	}
 
 	/**
@@ -114,6 +185,16 @@ class UsageMonthModel
 	public function getUsageRatedPokemon() : array
 	{
 		return $this->usageRatedPokemon;
+	}
+
+	/**
+	 * Get the Pokémon.
+	 *
+	 * @return Pokemon[]
+	 */
+	public function getPokemon() : array
+	{
+		return $this->pokemon;
 	}
 
 	/**
