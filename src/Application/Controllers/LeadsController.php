@@ -32,8 +32,8 @@ class LeadsController
 	 */
 	public function setUsage(ServerRequestInterface $request) : void
 	{
-		$formatIdentifier = $request->getAttribute('format_identifier');
-		$pokemonIdentifier = $request->getAttribute('pokemon_identifier');
+		$formatIdentifier = $request->getAttribute('formatIdentifier');
+		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 
 		$this->leadsModel->setUsage($formatIdentifier, $pokemonIdentifier);
 	}

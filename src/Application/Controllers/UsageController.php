@@ -32,8 +32,8 @@ class UsageController
 	 */
 	public function setUsage(ServerRequestInterface $request) : void
 	{
-		$formatIdentifier = $request->getAttribute('format_identifier');
-		$pokemonIdentifier = $request->getAttribute('pokemon_identifier');
+		$formatIdentifier = $request->getAttribute('formatIdentifier');
+		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 
 		$this->usageModel->setUsage($formatIdentifier, $pokemonIdentifier);
 	}

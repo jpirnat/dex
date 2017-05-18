@@ -27,7 +27,7 @@ $routes = [
 	// API
 
 	// one pokemon in all ratings.
-	['GET', '/api/stats/usage/format/{format_identifier:[-\w]+}/pokemon/{pokemon_identifier:[-\w]+}', [
+	['GET', '/api/stats/usage/format/{formatIdentifier:[-\w]+}/pokemon/{pokemonIdentifier:[-\w]+}', [
 		'controllerClass' => UsageController::class,
 		'controllerMethod' => 'setUsage',
 		'viewClass' => UsageView::class,
@@ -37,7 +37,7 @@ $routes = [
 	]],
 
 	// one pokemon in all ratings
-	['GET', '/api/stats/leads/format/{format_identifier:[-\w]+}/pokemon/{pokemon_identifier:[-\w]+}', [
+	['GET', '/api/stats/leads/format/{formatIdentifier:[-\w]+}/pokemon/{pokemonIdentifier:[-\w]+}', [
 		'controllerClass' => LeadsController::class,
 		'controllerMethod' => 'setUsage',
 		'viewClass' => LeadsView::class,
@@ -47,7 +47,7 @@ $routes = [
 	]],
 
 	// all abilities in one rating
-	['GET', '/api/stats/abilities/format/{format_identifier:[-\w]+}/rating/{rating:\d+}/pokemon/{pokemon_identifier:[-\w]+}', [
+	['GET', '/api/stats/abilities/format/{formatIdentifier:[-\w]+}/rating/{rating:\d+}/pokemon/{pokemonIdentifier:[-\w]+}', [
 		'controllerClass' => AbilitiesController::class,
 		'controllerMethod' => 'setRatingUsage',
 		'viewClass' => AbilitiesView::class,
@@ -57,7 +57,7 @@ $routes = [
 	]],
 
 	// one ability in all ratings
-	['GET', '/api/stats/abilities/format/{format_identifier:[-\w]+}/pokemon/{pokemon_identifier:[-\w]+}/ability/{ability_identifier:[-\w]+}', [
+	['GET', '/api/stats/abilities/format/{formatIdentifier:[-\w]+}/pokemon/{pokemonIdentifier:[-\w]+}/ability/{ability_identifier:[-\w]+}', [
 		'controllerClass' => AbilitiesController::class,
 		'controllerMethod' => 'setAbilityUsage',
 		'viewClass' => AbilitiesView::class,
@@ -67,7 +67,7 @@ $routes = [
 	]],
 
 	// all items in one rating
-	['GET', '/api/stats/items/format/{format_identifier:[-\w]+}/rating/{rating:\d+}/pokemon/{pokemon_identifier:[-\w]+}', [
+	['GET', '/api/stats/items/format/{formatIdentifier:[-\w]+}/rating/{rating:\d+}/pokemon/{pokemonIdentifier:[-\w]+}', [
 		'controllerClass' => ItemsController::class,
 		'controllerMethod' => 'setRatingUsage',
 		'viewClass' => ItemsView::class,
@@ -77,7 +77,7 @@ $routes = [
 	]],
 
 	// one item in all ratings
-	['GET', '/api/stats/items/format/{format_identifier:[-\w]+}/pokemon/{pokemon_identifier:[-\w]+}/item/{item_identifier:[-\w]+}', [
+	['GET', '/api/stats/items/format/{formatIdentifier:[-\w]+}/pokemon/{pokemonIdentifier:[-\w]+}/item/{item_identifier:[-\w]+}', [
 		'controllerClass' => ItemsController::class,
 		'controllerMethod' => 'setItemUsage',
 		'viewClass' => ItemsView::class,
@@ -87,7 +87,7 @@ $routes = [
 	]],
 
 	// all moves in one rating
-	['GET', '/api/stats/moves/format/{format_identifier:[-\w]+}/rating/{rating:\d+}/pokemon/{pokemon_identifier:[-\w]+}', [
+	['GET', '/api/stats/moves/format/{formatIdentifier:[-\w]+}/rating/{rating:\d+}/pokemon/{pokemonIdentifier:[-\w]+}', [
 		'controllerClass' => MovesController::class,
 		'controllerMethod' => 'setRatingUsage',
 		'viewClass' => MovesView::class,
@@ -97,7 +97,7 @@ $routes = [
 	]],
 
 	// one move in all ratings
-	['GET', '/api/stats/moves/format/{format_identifier:[-\w]+}/pokemon/{pokemon_identifier:[-\w]+}/move/{move_identifier:[-\w]+}', [
+	['GET', '/api/stats/moves/format/{formatIdentifier:[-\w]+}/pokemon/{pokemonIdentifier:[-\w]+}/move/{move_identifier:[-\w]+}', [
 		'controllerClass' => MovesController::class,
 		'controllerMethod' => 'setMoveUsage',
 		'viewClass' => MovesView::class,
@@ -136,6 +136,21 @@ $routes = [
 	[
 		'GET',
 		'/stats/leads/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}',
+		[
+			'controllerClass' => LeadsMonthController::class,
+			'controllerMethod' => 'setData',
+			'viewClass' => LeadsMonthView::class,
+			'viewMethod' => 'getData',
+			'middlewareClasses' => [
+				HtmlErrorMiddleware::class,
+				LanguageMiddleware::class,
+			],
+		]
+	],
+
+	[
+		'GET',
+		'/stats/moveset/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}/{pokemonIdentifier:[-\w]+}',
 		[
 			'controllerClass' => LeadsMonthController::class,
 			'controllerMethod' => 'setData',

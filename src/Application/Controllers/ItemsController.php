@@ -32,9 +32,9 @@ class ItemsController
 	 */
 	public function setRatingUsage(ServerRequestInterface $request) : void
 	{
-		$formatIdentifier = $request->getAttribute('format_identifier');
+		$formatIdentifier = $request->getAttribute('formatIdentifier');
 		$rating = (int) $request->getAttribute('rating');
-		$pokemonIdentifier = $request->getAttribute('pokemon_identifier');
+		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 
 		$this->itemsModel->setRatingUsage(
 			$formatIdentifier,
@@ -53,8 +53,8 @@ class ItemsController
 	 */
 	public function setItemUsage(ServerRequestInterface $request) : void
 	{
-		$formatIdentifier = $request->getAttribute('format_identifier');
-		$pokemonIdentifier = $request->getAttribute('pokemon_identifier');
+		$formatIdentifier = $request->getAttribute('formatIdentifier');
+		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 		$itemIdentifier = $request->getAttribute('item_identifier');
 
 		$this->itemsModel->setItemUsage(

@@ -84,7 +84,6 @@ class LeadsMonthView
 
 		$response = new Response();
 		$response->getBody()->write($content);
-
 		return $response;
 	}
 }

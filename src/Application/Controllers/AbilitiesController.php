@@ -32,9 +32,9 @@ class AbilitiesController
 	 */
 	public function setRatingUsage(ServerRequestInterface $request) : void
 	{
-		$formatIdentifier = $request->getAttribute('format_identifier');
+		$formatIdentifier = $request->getAttribute('formatIdentifier');
 		$rating = (int) $request->getAttribute('rating');
-		$pokemonIdentifier = $request->getAttribute('pokemon_identifier');
+		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 
 		$this->abilitiesModel->setRatingUsage(
 			$formatIdentifier,
@@ -53,8 +53,8 @@ class AbilitiesController
 	 */
 	public function setAbilityUsage(ServerRequestInterface $request) : void
 	{
-		$formatIdentifier = $request->getAttribute('format_identifier');
-		$pokemonIdentifier = $request->getAttribute('pokemon_identifier');
+		$formatIdentifier = $request->getAttribute('formatIdentifier');
+		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 		$abilityIdentifier = $request->getAttribute('ability_identifier');
 
 		$this->abilitiesModel->setAbilityUsage(

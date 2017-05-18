@@ -32,9 +32,9 @@ class MovesController
 	 */
 	public function setRatingUsage(ServerRequestInterface $request) : void
 	{
-		$formatIdentifier = $request->getAttribute('format_identifier');
+		$formatIdentifier = $request->getAttribute('formatIdentifier');
 		$rating = (int) $request->getAttribute('rating');
-		$pokemonIdentifier = $request->getAttribute('pokemon_identifier');
+		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 
 		$this->movesModel->setRatingUsage(
 			$formatIdentifier,
@@ -53,8 +53,8 @@ class MovesController
 	 */
 	public function setMoveUsage(ServerRequestInterface $request) : void
 	{
-		$formatIdentifier = $request->getAttribute('format_identifier');
-		$pokemonIdentifier = $request->getAttribute('pokemon_identifier');
+		$formatIdentifier = $request->getAttribute('formatIdentifier');
+		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 		$moveIdentifier = $request->getAttribute('move_identifier');
 
 		$this->movesModel->setMoveUsage(
