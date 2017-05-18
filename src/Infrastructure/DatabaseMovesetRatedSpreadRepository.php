@@ -1,11 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Stats\Moveset;
+namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Natures\NatureId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpread;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
 use PDO;
 
 class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRepositoryInterface

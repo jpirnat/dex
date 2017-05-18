@@ -75,10 +75,71 @@ class MovesetPokemonMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
+		$languageId = $this->movesetPokemonMonthModel->getLanguageId();
+
+		$movesetPokemon = $this->movesetPokemonMonthModel->getMovesetPokemon();
+		$movesetRatedPokemon = $this->movesetPokemonMonthModel->getMovesetRatedPokemon();
+
+		$movesetRatedAbilities = $this->movesetPokemonMonthModel->getMovesetRatedAbilities();
+		$abilities = [];
+		foreach ($movesetRatedAbilities as $movesetRatedAbility) {
+			$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
+				$languageId,
+				$movesetRatedAbility->getAbilityId()
+			);
+
+			$abilities[] = [
+				'name' => $abilityName->getName(),
+				'percent' => $movesetRatedAbility->getPercent(),
+			];
+		}
+
+/*
+		$movesetRatedItems = $this->movesetPokemonMonthModel->getMovesetRatedItems();
+		$items = [];
+		foreach ($movesetRatedItems as $movesetRatedItem) {
+			$itemName = $this->itemNameRepository->getByLanguageAndItem(
+				$languageId,
+				$movesetRatedItem->getItemId()
+			);
+
+			$items[] = [
+				'name' => $itemName->getName(),
+				'percent' => $movesetRatedItem->getPercent(),
+			];
+		}
+*/
+
+		$movesetRatedMoves = $this->movesetPokemonMonthModel->getMovesetRatedMoves();
+		$moves = [];
+		foreach ($movesetRatedMoves as $movesetRatedMove) {
+			$moveName = $this->moveNameRepository->getByLanguageAndMove(
+				$languageId,
+				$movesetRatedMove->getMoveId()
+			);
+
+			$moves[] = [
+				'name' => $moveName->getName(),
+				'percent' => $movesetRatedMove->getPercent(),
+			];
+		}
+
+		$content = $this->twig->render(
+			'moveset-pokemon-month.twig',
+			[
+				'rawCount' =>$movesetPokemon->getRawCount(),
+				'averageWeight' => $movesetRatedPokemon->getAverageWeight(),
+				'viabilityCeiling' => $movesetPokemon->getViabilityCeiling(),
+				'abilities' => $abilities,
+				// 'items' => $items,
+				'moves' => $moves,
+			]
+		);
+
 		$response = new Response();
-		$response->getBody()->write('');
+		$response->getBody()->write($content);
 		return $response;
 	}
 }
-
-
+// TODO: sort each section by percent.
+// TODO: enable items, once the name data is added.
