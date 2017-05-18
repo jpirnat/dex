@@ -14,15 +14,6 @@ if (getenv('ENVIRONMENT') !== 'production') {
 }
 
 
-// If we're not on production, we're probably writing code or testing it.
-// So, let's give ourselves a prettier debugging suite.
-if (getenv('ENVIRONMENT') !== 'production') {
-	$whoops = new \Whoops\Run;
-	$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-	$whoops->register();
-}
-
-
 // Tell PHP that we're using UTF-8 strings until the end of the script.
 mb_internal_encoding('UTF-8');
 

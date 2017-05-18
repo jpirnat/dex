@@ -1,4 +1,4 @@
-create table if not exists `pokemon_icons`
+create table if not exists `form_icons`
 (
 `generation` tinyint unsigned not null,
 `form_id` smallint unsigned not null,
@@ -23,9 +23,10 @@ foreign key (`form_id`) references `forms` (`id`)
 ) engine = InnoDB;
 
 
-insert into `pokemon_icons` (
+insert into `form_icons` (
 	`generation`,
 	`form_id`,
+	`image`,
 	`is_default`,
 	`is_female`,
 	`is_right`

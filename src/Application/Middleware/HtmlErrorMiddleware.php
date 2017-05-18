@@ -8,6 +8,8 @@ use Interop\Http\ServerMiddleware\MiddlewareInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Throwable;
+use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
 use Zend\Diactoros\Response\RedirectResponse;
 
 class HtmlErrorMiddleware implements MiddlewareInterface
@@ -39,7 +41,8 @@ class HtmlErrorMiddleware implements MiddlewareInterface
 		DelegateInterface $delegate
 	) : ResponseInterface {
 		if ($this->environment === 'production') {
-			// Intercept all errors on production.
+			// In production environments, the user should not see PHP errors.
+			// Instead, redirect them to our error page.
 			try {
 				$response = $delegate->process($request);
 			} catch (Throwable $e) {
@@ -47,7 +50,12 @@ class HtmlErrorMiddleware implements MiddlewareInterface
 				$response = new RedirectResponse('/error');
 			}
 		} else {
-			// Disregard errors in development environment.
+			// In development environments, we want to see the errors. They can
+			// run, but they can't hide!
+			$whoops = new Run();
+			$whoops->pushHandler(new PrettyPageHandler());
+			$whoops->register();
+
 			$response = $delegate->process($request);
 		}
 
