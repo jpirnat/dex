@@ -1125,7 +1125,7 @@ insert into `showdown_abilities_to_import` (
 ("Leaf Guard", 102),
 ("Levitate", 26),
 ("Light Metal", 135),
-("Lightning Rod", 32),
+("Lightning Rod", 31),
 ("Limber", 7),
 ("Liquid Ooze", 64),
 ("Liquid Voice", 204),
