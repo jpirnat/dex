@@ -27,6 +27,63 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 	}
 
 	/**
+	 * Get a Pokémon by its id.
+	 *
+	 * @param PokemonId $pokemonId
+	 *
+	 * @throws Exception if no Pokémon exists with this id.
+	 *
+	 * @return Pokemon
+	 */
+	public function getById(PokemonId $pokemonId) : Pokemon
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`identifier`,
+				`pokemon_identifier`,
+				`species_id`,
+				`is_default_pokemon`,
+				`introduced_in_version_group_id`,
+				`height_m`,
+				`weight_kg`,
+				`gender_ratio`
+			FROM `pokemon`
+			WHERE `id` = :pokemon_id
+			LIMIT 1'
+		);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			throw new Exception(
+				'No Pokémon exists with id ' . $pokemonId->value()
+			);
+		}
+
+		if ($result['gender_ratio'] !== null) {
+			$genderRatio = (float) $result['gender_ratio'];
+		} else {
+			// The Pokémon is genderless.
+			$genderRatio = null;
+		}
+
+		$pokemon = new Pokemon(
+			$pokemonId,
+			$result['identifier'],
+			$result['pokemon_identifier'],
+			new SpeciesId($result['species_id']),
+			(bool) $result['is_default_pokemon'],
+			new VersionGroupId($result['introduced_in_version_group_id']),
+			(float) $result['height_m'],
+			(float) $result['weight_kg'],
+			$genderRatio
+		);
+
+		return $pokemon;
+	}
+
+	/**
 	 * Get a Pokémon by its identifier.
 	 *
 	 * @param string $identifier

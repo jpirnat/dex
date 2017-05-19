@@ -8,6 +8,17 @@ use Exception;
 interface PokemonRepositoryInterface
 {
 	/**
+	 * Get a Pokémon by its id.
+	 *
+	 * @param PokemonId $pokemonId
+	 *
+	 * @throws Exception if no Pokémon exists with this id.
+	 *
+	 * @return Pokemon
+	 */
+	public function getById(PokemonId $pokemonId) : Pokemon;
+
+	/**
 	 * Get a Pokémon by its identifier.
 	 *
 	 * @param string $identifier

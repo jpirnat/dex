@@ -9,6 +9,7 @@ use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbility;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounter;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
@@ -26,6 +27,10 @@ class MovesetPokemonMonthView
 
 	/** @var MovesetPokemonMonthModel $movesetPokemonMonthModel */
 	private $movesetPokemonMonthModel;
+
+
+	/** @var PokemonRepositoryInterface $pokemonRepository */
+	private $pokemonRepository;
 
 
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
@@ -48,6 +53,7 @@ class MovesetPokemonMonthView
 	 *
 	 * @param Twig_Environment $twig
 	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
+	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
 	 * @param ItemNameRepositoryInterface $itemNameRepository
@@ -57,6 +63,7 @@ class MovesetPokemonMonthView
 	public function __construct(
 		Twig_Environment $twig,
 		MovesetPokemonMonthModel $movesetPokemonMonthModel,
+		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
 		ItemNameRepositoryInterface $itemNameRepository,
@@ -65,6 +72,7 @@ class MovesetPokemonMonthView
 	) {
 		$this->twig = $twig;
 		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
+		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
 		$this->itemNameRepository = $itemNameRepository;
@@ -203,7 +211,12 @@ class MovesetPokemonMonthView
 				$movesetRatedTeammate->getTeammateId()
 			);
 
+			$teammatePokemon = $this->pokemonRepository->getById(
+				$movesetRatedTeammate->getTeammateId()
+			);
+
 			$teammates[] = [
+				'identifier' => $teammatePokemon->getIdentifier(),
 				'name' => $teammateName->getName(),
 				'percent' => $movesetRatedTeammate->getPercent(),
 			];
@@ -226,7 +239,12 @@ class MovesetPokemonMonthView
 				$movesetRatedCounter->getCounterId()
 			);
 
+			$counterPokemon = $this->pokemonRepository->getById(
+				$movesetRatedCounter->getCounterId()
+			);
+
 			$counters[] = [
+				'identifier' => $counterPokemon->getIdentifier(),
 				'name' => $counterName->getName(),
 				'number1' => $movesetRatedCounter->getNumber1(),
 				'number2' => $movesetRatedCounter->getNumber2(),
@@ -239,6 +257,11 @@ class MovesetPokemonMonthView
 		$content = $this->twig->render(
 			'moveset-pokemon-month.twig',
 			[
+				'year' => $this->movesetPokemonMonthModel->getYear(),
+				'month' => $this->movesetPokemonMonthModel->getMonth(),
+				'formatIdentifier' => $this->movesetPokemonMonthModel->getFormatIdentifier(),
+				'rating' => $this->movesetPokemonMonthModel->getRating(),
+
 				'rawCount' =>$movesetPokemon->getRawCount(),
 				'averageWeight' => $movesetRatedPokemon->getAverageWeight(),
 				'viabilityCeiling' => $movesetPokemon->getViabilityCeiling(),

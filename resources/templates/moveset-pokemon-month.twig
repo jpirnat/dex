@@ -91,7 +91,11 @@
 		<tbody>
 			{% for teammate in teammates %}
 				<tr>
-					<td>{{ teammate.name|e }}</td>
+					<td>
+						<a href="/stats/moveset/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ teammate.identifier|e }}">
+							{{ teammate.name|e }}
+						</a>
+					</td>
 					<td>{{ teammate.percent|e }}</td>
 				</tr>
 			{% endfor %}
@@ -110,7 +114,11 @@
 		<tbody>
 			{% for counter in counters %}
 				<tr>
-					<td>{{ counter.name|e }}</td>
+					<td>
+						<a href="/stats/moveset/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ counter.identifier|e }}">
+							{{ counter.name|e }}
+						</a>
+					</td>
 					<td>{{ counter.number1|e }}</td>
 					<td>{{ counter.number2|e }}</td>
 					<td>{{ counter.number3|e }}</td>
