@@ -9,6 +9,12 @@ use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbility;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounter;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMove;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpread;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammate;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
 use Zend\Diactoros\Response;
@@ -80,7 +86,16 @@ class MovesetPokemonMonthView
 		$movesetPokemon = $this->movesetPokemonMonthModel->getMovesetPokemon();
 		$movesetRatedPokemon = $this->movesetPokemonMonthModel->getMovesetRatedPokemon();
 
-		$movesetRatedAbilities = $this->movesetPokemonMonthModel->getMovesetRatedAbilities();
+		// Get abilities and sort by percent.
+		$movesetRatedAbilities = $this->movesetPokemonMonthModel->getAbilities();
+		uasort(
+			$movesetRatedAbilities,
+			function (MovesetRatedAbility $a, MovesetRatedAbility $b) {
+				return $b->getPercent() <=> $a->getPercent();
+			}
+		);
+
+		// Get ability names.
 		$abilities = [];
 		foreach ($movesetRatedAbilities as $movesetRatedAbility) {
 			$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
@@ -95,7 +110,16 @@ class MovesetPokemonMonthView
 		}
 
 /*
-		$movesetRatedItems = $this->movesetPokemonMonthModel->getMovesetRatedItems();
+		// Get items and sort by percent.
+		$movesetRatedItems = $this->movesetPokemonMonthModel->getItems();
+		uasort(
+			$movesetRatedItems,
+			function (MovesetRatedItem $a, MovesetRatedItem $b) {
+				return $b->getPercent() <=> $a->getPercent();
+			}
+		);
+
+		// Get item names.
 		$items = [];
 		foreach ($movesetRatedItems as $movesetRatedItem) {
 			$itemName = $this->itemNameRepository->getByLanguageAndItem(
@@ -110,7 +134,45 @@ class MovesetPokemonMonthView
 		}
 */
 
-		$movesetRatedMoves = $this->movesetPokemonMonthModel->getMovesetRatedMoves();
+		// Get spreads and sort by percent.
+		$movesetRatedSpreads = $this->movesetPokemonMonthModel->getSpreads();
+		uasort(
+			$movesetRatedSpreads,
+			function (MovesetRatedSpread $a, MovesetRatedSpread $b) {
+				return $b->getPercent() <=> $a->getPercent();
+			}
+		);
+
+		// Get nature names.
+		$spreads = [];
+		foreach ($movesetRatedSpreads as $movesetRatedSpread) {
+			$natureName = $this->natureNameRepository->getByLanguageAndNature(
+				$languageId,
+				$movesetRatedSpread->getNatureId()
+			);
+
+			$spreads[] = [
+				'natureName' => $natureName->getName(),
+				'hp' => $movesetRatedSpread->getHpEvs(),
+				'atk' => $movesetRatedSpread->getAttackEvs(),
+				'def' => $movesetRatedSpread->getDefenseEvs(),
+				'spa' => $movesetRatedSpread->getSpecialAttackEvs(),
+				'spd' => $movesetRatedSpread->getSpecialDefenseEvs(),
+				'spe' => $movesetRatedSpread->getSpeedEvs(),
+				'percent' => $movesetRatedSpread->getPercent(),
+			];
+		}
+
+		// Get moves and sort by percent.
+		$movesetRatedMoves = $this->movesetPokemonMonthModel->getMoves();
+		uasort(
+			$movesetRatedMoves,
+			function (MovesetRatedMove $a, MovesetRatedMove $b) {
+				return $b->getPercent() <=> $a->getPercent();
+			}
+		);
+
+		// Get move names.
 		$moves = [];
 		foreach ($movesetRatedMoves as $movesetRatedMove) {
 			$moveName = $this->moveNameRepository->getByLanguageAndMove(
@@ -124,6 +186,56 @@ class MovesetPokemonMonthView
 			];
 		}
 
+		// Get teammates and sort by percent.
+		$movesetRatedTeammates = $this->movesetPokemonMonthModel->getTeammates();
+		uasort(
+			$movesetRatedTeammates,
+			function (MovesetRatedTeammate $a, MovesetRatedTeammate $b) {
+				return $b->getPercent() <=> $a->getPercent();
+			}
+		);
+
+		// Get teammate names.
+		$teammates = [];
+		foreach ($movesetRatedTeammates as $movesetRatedTeammate) {
+			$teammateName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+				$languageId,
+				$movesetRatedTeammate->getTeammateId()
+			);
+
+			$teammates[] = [
+				'name' => $teammateName->getName(),
+				'percent' => $movesetRatedTeammate->getPercent(),
+			];
+		}
+
+		// Get counters and sort by percent.
+		$movesetRatedCounters = $this->movesetPokemonMonthModel->getCounters();
+		uasort(
+			$movesetRatedCounters,
+			function (MovesetRatedCounter $a, MovesetRatedCounter $b) {
+				return $b->getNumber1() <=> $a->getNumber1();
+			}
+		);
+
+		// Get counter names.
+		$counters = [];
+		foreach ($movesetRatedCounters as $movesetRatedCounter) {
+			$counterName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+				$languageId,
+				$movesetRatedCounter->getCounterId()
+			);
+
+			$counters[] = [
+				'name' => $counterName->getName(),
+				'number1' => $movesetRatedCounter->getNumber1(),
+				'number2' => $movesetRatedCounter->getNumber2(),
+				'number3' => $movesetRatedCounter->getNumber3(),
+				'percentKnockedOut' => $movesetRatedCounter->getPercentKnockedOut(),
+				'percentSwitchedOut' => $movesetRatedCounter->getPercentSwitchedOut(),
+			];
+		}
+
 		$content = $this->twig->render(
 			'moveset-pokemon-month.twig',
 			[
@@ -132,7 +244,10 @@ class MovesetPokemonMonthView
 				'viabilityCeiling' => $movesetPokemon->getViabilityCeiling(),
 				'abilities' => $abilities,
 				// 'items' => $items,
+				'spreads' => $spreads,
 				'moves' => $moves,
+				'teammates' => $teammates,
+				'counters' => $counters,
 			]
 		);
 
@@ -141,5 +256,4 @@ class MovesetPokemonMonthView
 		return $response;
 	}
 }
-// TODO: sort each section by percent.
 // TODO: enable items, once the name data is added.

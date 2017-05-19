@@ -81,23 +81,23 @@ class MovesetPokemonMonthModel
 	/** @var MovesetRatedPokemon $movesetRatedPokemon */
 	private $movesetRatedPokemon;
 
-	/** @var MovesetRatedAbility[] $movesetRatedAbilities */
-	private $movesetRatedAbilities = [];
+	/** @var MovesetRatedAbility[] $abilities */
+	private $abilities = [];
 
-	/** @var MovesetRatedItem[] $movesetRatedItems */
-	private $movesetRatedItems = [];
+	/** @var MovesetRatedItem[] $items */
+	private $items = [];
 
-	/** @var MovesetRatedSpread[] $movesetRatedSpreads */
-	private $movesetRatedSpreads = [];
+	/** @var MovesetRatedSpread[] $spreads */
+	private $spreads = [];
 
-	/** @var MovesetRatedMove[] $movesetRatedMoves */
-	private $movesetRatedMoves = [];
+	/** @var MovesetRatedMove[] $moves */
+	private $moves = [];
 
-	/** @var MovesetRatedTeammate[] $movesetRatedTeammates */
-	private $movesetRatedTeammates = [];
+	/** @var MovesetRatedTeammate[] $teammates */
+	private $teammates = [];
 
-	/** @var MovesetRatedCounter[] $movesetRatedCounters */
-	private $movesetRatedCounters = [];
+	/** @var MovesetRatedCounter[] $counters */
+	private $counters = [];
 
 	/**
 	 * Constructor.
@@ -190,7 +190,7 @@ class MovesetPokemonMonthModel
 		);
 
 		// Get moveset rated ability records.
-		$this->movesetRatedAbilities = $this->movesetRatedAbilityRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+		$this->abilities = $this->movesetRatedAbilityRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
 			$year,
 			$month,
 			$format->getId(),
@@ -199,7 +199,7 @@ class MovesetPokemonMonthModel
 		);
 
 		// Get moveset rated item records.
-		$this->movesetRatedItems = $this->movesetRatedItemRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+		$this->items = $this->movesetRatedItemRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
 			$year,
 			$month,
 			$format->getId(),
@@ -208,7 +208,7 @@ class MovesetPokemonMonthModel
 		);
 
 		// Get moveset rated spread records.
-		$this->movesetRatedSpreads = $this->movesetRatedSpreadRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+		$this->spreads = $this->movesetRatedSpreadRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
 			$year,
 			$month,
 			$format->getId(),
@@ -217,7 +217,7 @@ class MovesetPokemonMonthModel
 		);
 
 		// Get moveset rated move records.
-		$this->movesetRatedMoves = $this->movesetRatedMoveRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+		$this->moves = $this->movesetRatedMoveRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
 			$year,
 			$month,
 			$format->getId(),
@@ -226,7 +226,7 @@ class MovesetPokemonMonthModel
 		);
 
 		// Get moveset rated teammate records.
-		$this->movesetRatedTeammates = $this->movesetRatedTeammateRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+		$this->teammates = $this->movesetRatedTeammateRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
 			$year,
 			$month,
 			$format->getId(),
@@ -235,7 +235,7 @@ class MovesetPokemonMonthModel
 		);
 
 		// Get moveset rated counter records.
-		$this->movesetRatedCounters = $this->movesetRatedCounterRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+		$this->counters = $this->movesetRatedCounterRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
 			$year,
 			$month,
 			$format->getId(),
@@ -329,9 +329,9 @@ class MovesetPokemonMonthModel
 	 *
 	 * @return MovesetRatedAbility[]
 	 */
-	public function getMovesetRatedAbilities() : array
+	public function getAbilities() : array
 	{
-		return $this->movesetRatedAbilities;
+		return $this->abilities;
 	}
 
 	/**
@@ -339,9 +339,9 @@ class MovesetPokemonMonthModel
 	 *
 	 * @return MovesetRatedItem[]
 	 */
-	public function getMovesetRatedItems() : array
+	public function getItems() : array
 	{
-		return $this->movesetRatedItems;
+		return $this->items;
 	}
 
 	/**
@@ -349,9 +349,9 @@ class MovesetPokemonMonthModel
 	 *
 	 * @return MovesetRatedSpread[]
 	 */
-	public function getMovesetRatedSpreads() : array
+	public function getSpreads() : array
 	{
-		return $this->movesetRatedSpreads;
+		return $this->spreads;
 	}
 
 	/**
@@ -359,9 +359,9 @@ class MovesetPokemonMonthModel
 	 *
 	 * @return MovesetRatedMove[]
 	 */
-	public function getMovesetRatedMoves() : array
+	public function getMoves() : array
 	{
-		return $this->movesetRatedMoves;
+		return $this->moves;
 	}
 
 	/**
@@ -369,9 +369,9 @@ class MovesetPokemonMonthModel
 	 *
 	 * @return MovesetRatedTeammate[]
 	 */
-	public function getMovesetRatedTeammates() : array
+	public function getTeammates() : array
 	{
-		return $this->movesetRatedTeammates;
+		return $this->teammates;
 	}
 
 	/**
@@ -379,8 +379,8 @@ class MovesetPokemonMonthModel
 	 *
 	 * @return MovesetRatedCounter[]
 	 */
-	public function getMovesetRatedCounters() : array
+	public function getCounters() : array
 	{
-		return $this->movesetRatedCounters;
+		return $this->counters;
 	}
 }

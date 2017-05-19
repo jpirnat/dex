@@ -61,7 +61,7 @@
 		<tbody>
 			{% for spread in spreads %}
 				<tr>
-					<td>{{ spread.natureName|e }}/{{ spread.hp|e }}/{{ spread.atk|e }}/{{ spread.def|e }}/{{ spread.spa|e }}/{{ spread.spd|e }}/{{ spread.spe|e }}</td>
+					<td>{{ spread.natureName|e }}:{{ spread.hp|e }}/{{ spread.atk|e }}/{{ spread.def|e }}/{{ spread.spa|e }}/{{ spread.spd|e }}/{{ spread.spe|e }}</td>
 					<td>{{ spread.percent|e }}</td>
 				</tr>
 			{% endfor %}
@@ -101,13 +101,21 @@
 	<table>
 		<thead>
 			<th>Checks and Counters</th>
-			<th>%</th>
+			<th>?</th>
+			<th>?</th>
+			<th>?</th>
+			<th>% KOed</th>
+			<th>% switched out</th>
 		</thead>
 		<tbody>
 			{% for counter in counters %}
 				<tr>
 					<td>{{ counter.name|e }}</td>
-					<td>{{ counter.percent|e }}</td>
+					<td>{{ counter.number1|e }}</td>
+					<td>{{ counter.number2|e }}</td>
+					<td>{{ counter.number3|e }}</td>
+					<td>{{ counter.percentKnockedOut|e }}</td>
+					<td>{{ counter.percentSwitchedOut|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>
