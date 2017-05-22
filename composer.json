@@ -23,7 +23,8 @@
         "nikic/fast-route": "^1.2",
         "jpirnat/middleware": "^2.0",
         "twig/twig": "^2.3",
-        "http-interop/http-middleware": "^0.4.1"
+        "http-interop/http-middleware": "^0.4.1",
+        "dflydev/fig-cookies": "^1.0"
     },
     "require-dev": {
         "vlucas/phpdotenv": "^2.4",

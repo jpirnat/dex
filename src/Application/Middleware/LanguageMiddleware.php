@@ -26,9 +26,9 @@ class LanguageMiddleware implements MiddlewareInterface
 		ServerRequestInterface $request,
 		DelegateInterface $delegate
 	) : ResponseInterface {
-		$language = $request->getCookieParams()['language'] ?? self::DEFAULT_LANGUAGE;
+		$languageId = $request->getCookieParams()['languageId'] ?? self::DEFAULT_LANGUAGE;
 
-		$request = $request->withAttribute('language', $language);
+		$request = $request->withAttribute('languageId', $languageId);
 
 		return $delegate->process($request);
 	}

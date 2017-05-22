@@ -7,6 +7,7 @@ use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Models\AbilitiesModel;
 use Jp\Dex\Application\Models\ErrorModel;
 use Jp\Dex\Application\Models\ItemsModel;
+use Jp\Dex\Application\Models\LanguageModel;
 use Jp\Dex\Application\Models\LeadsModel;
 use Jp\Dex\Application\Models\LeadsMonthModel;
 use Jp\Dex\Application\Models\MovesetPokemonMonthModel;
@@ -19,6 +20,7 @@ use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
+use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
@@ -50,6 +52,7 @@ use Jp\Dex\Infrastructure\DatabaseAbilityRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
 use Jp\Dex\Infrastructure\DatabaseItemNameRepository;
 use Jp\Dex\Infrastructure\DatabaseItemRepository;
+use Jp\Dex\Infrastructure\DatabaseLanguageRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRepository;
@@ -138,6 +141,7 @@ $rule = [
 		FormatRepositoryInterface::class => ['instance' => DatabaseFormatRepository::class],
 		ItemNameRepositoryInterface::class => ['instance' => DatabaseItemNameRepository::class],
 		ItemRepositoryInterface::class => ['instance' => DatabaseItemRepository::class],
+		LanguageRepositoryInterface::class => ['instance' => DatabaseLanguageRepository::class],
 		LeadsPokemonRepositoryInterface::class => ['instance' => DatabaseLeadsPokemonRepository::class],
 		LeadsRatedPokemonRepositoryInterface::class => ['instance' => DatabaseLeadsRatedPokemonRepository::class],
 		LeadsRepositoryInterface::class => ['instance' => DatabaseLeadsRepository::class],
@@ -169,6 +173,7 @@ $rule = [
 $container->dice()->addRule(AbilitiesModel::class, $rule);
 $container->dice()->addRule(ErrorModel::class, $rule);
 $container->dice()->addRule(ItemsModel::class, $rule);
+$container->dice()->addRule(LanguageModel::class, $rule);
 $container->dice()->addRule(LeadsModel::class, $rule);
 $container->dice()->addRule(LeadsMonthModel::class, $rule);
 $container->dice()->addRule(MovesetPokemonMonthModel::class, $rule);

@@ -94,6 +94,11 @@ class MovesetPokemonMonthView
 		$movesetPokemon = $this->movesetPokemonMonthModel->getMovesetPokemon();
 		$movesetRatedPokemon = $this->movesetPokemonMonthModel->getMovesetRatedPokemon();
 
+		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+			$languageId,
+			$movesetPokemon->getPokemonId()
+		);
+
 		// Get abilities and sort by percent.
 		$movesetRatedAbilities = $this->movesetPokemonMonthModel->getAbilities();
 		uasort(
@@ -117,7 +122,6 @@ class MovesetPokemonMonthView
 			];
 		}
 
-/*
 		// Get items and sort by percent.
 		$movesetRatedItems = $this->movesetPokemonMonthModel->getItems();
 		uasort(
@@ -130,17 +134,18 @@ class MovesetPokemonMonthView
 		// Get item names.
 		$items = [];
 		foreach ($movesetRatedItems as $movesetRatedItem) {
+			/*
 			$itemName = $this->itemNameRepository->getByLanguageAndItem(
 				$languageId,
 				$movesetRatedItem->getItemId()
 			);
+			*/
 
 			$items[] = [
-				'name' => $itemName->getName(),
+				'name' => '?', // $itemName->getName(),
 				'percent' => $movesetRatedItem->getPercent(),
 			];
 		}
-*/
 
 		// Get spreads and sort by percent.
 		$movesetRatedSpreads = $this->movesetPokemonMonthModel->getSpreads();
@@ -261,12 +266,12 @@ class MovesetPokemonMonthView
 				'month' => $this->movesetPokemonMonthModel->getMonth(),
 				'formatIdentifier' => $this->movesetPokemonMonthModel->getFormatIdentifier(),
 				'rating' => $this->movesetPokemonMonthModel->getRating(),
-
+				'pokemonName' => $pokemonName->getName(),
 				'rawCount' =>$movesetPokemon->getRawCount(),
 				'averageWeight' => $movesetRatedPokemon->getAverageWeight(),
 				'viabilityCeiling' => $movesetPokemon->getViabilityCeiling(),
 				'abilities' => $abilities,
-				// 'items' => $items,
+				'items' => $items,
 				'spreads' => $spreads,
 				'moves' => $moves,
 				'teammates' => $teammates,

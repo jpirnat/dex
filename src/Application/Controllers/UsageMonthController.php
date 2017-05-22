@@ -36,7 +36,7 @@ class UsageMonthController
 		$month = (int) $request->getAttribute('month');
 		$formatIdentifier = $request->getAttribute('formatIdentifier');
 		$rating = (int) $request->getAttribute('rating');
-		$languageId = new LanguageId((int) $request->getAttribute('language'));
+		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
 		$this->usageMonthModel->setData(
 			$year,
