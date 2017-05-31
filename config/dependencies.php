@@ -73,6 +73,12 @@ use Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRepository;
+use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownAbilityRepository;
+use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownFormatRepository;
+use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownItemRepository;
+use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownMoveRepository;
+use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownNatureRepository;
+use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownPokemonRepository;
 
 $dice = new Dice();
 $container = new DiceContainer($dice);
@@ -158,6 +164,12 @@ $rule = [
 		NatureNameRepositoryInterface::class => ['instance' => DatabaseNatureNameRepository::class],
 		PokemonNameRepositoryInterface::class => ['instance' => DatabasePokemonNameRepository::class],
 		PokemonRepositoryInterface::class => ['instance' => DatabasePokemonRepository::class],
+		ShowdownAbilityRepositoryInterface::class => ['instance' => DatabaseShowdownAbilityRepository::class],
+		ShowdownFormatRepositoryInterface::class => ['instance' => DatabaseShowdownFormatRepository::class],
+		ShowdownItemRepositoryInterface::class => ['instance' => DatabaseShowdownItemRepository::class],
+		ShowdownMoveRepositoryInterface::class => ['instance' => DatabaseShowdownMoveRepository::class],
+		ShowdownNatureRepositoryInterface::class => ['instance' => DatabaseShowdownNatureRepository::class],
+		ShowdownPokemonRepositoryInterface::class => ['instance' => DatabaseShowdownPokemonRepository::class],
 		UsagePokemonRepositoryInterface::class => ['instance' => DatabaseUsagePokemonRepository::class],
 		UsageRatedPokemonRepositoryInterface::class => ['instance' => DatabaseUsageRatedPokemonRepository::class],
 		UsageRatedRepositoryInterface::class => ['instance' => DatabaseUsageRatedRepository::class],

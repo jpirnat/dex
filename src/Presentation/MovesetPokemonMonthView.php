@@ -134,15 +134,13 @@ class MovesetPokemonMonthView
 		// Get item names.
 		$items = [];
 		foreach ($movesetRatedItems as $movesetRatedItem) {
-			/*
 			$itemName = $this->itemNameRepository->getByLanguageAndItem(
 				$languageId,
 				$movesetRatedItem->getItemId()
 			);
-			*/
 
 			$items[] = [
-				'name' => '?', // $itemName->getName(),
+				'name' => $itemName->getName(),
 				'percent' => $movesetRatedItem->getPercent(),
 			];
 		}
@@ -284,4 +282,3 @@ class MovesetPokemonMonthView
 		return $response;
 	}
 }
-// TODO: enable items, once the name data is added.
