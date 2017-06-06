@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Moves\CategoryId;
 use Jp\Dex\Domain\Types\Type;
 use Jp\Dex\Domain\Types\TypeId;
+use Jp\Dex\Domain\Types\TypeNotFoundException;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use PDO;
 
@@ -30,7 +30,8 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 	 *
 	 * @param int $hiddenPowerIndex
 	 *
-	 * @throws Exception if no type exists with this hidden power index.
+	 * @throws TypeNotFoundException if no type exists with this hidden power
+	 *     index.
 	 *
 	 * @return Type
 	 */
@@ -50,7 +51,9 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception('No type exists with hidden power index ' . $hiddenPowerIndex);
+			throw new TypeNotFoundException(
+				'No type exists with hidden power index ' . $hiddenPowerIndex
+			);
 		}
 
 		if ($result['category_id'] !== null) {

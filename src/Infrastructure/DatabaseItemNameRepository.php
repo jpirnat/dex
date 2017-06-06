@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Items\ItemName;
+use Jp\Dex\Domain\Items\ItemNameNotFoundException;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
@@ -31,7 +31,8 @@ class DatabaseItemNameRepository implements ItemNameRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param ItemId $itemId
 	 *
-	 * @throws Exception if no name exists.
+	 * @throws ItemNameNotFoundException if no item name exists for this
+	 *     language and item.
 	 *
 	 * @return ItemName
 	 */
@@ -53,7 +54,7 @@ class DatabaseItemNameRepository implements ItemNameRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception(
+			throw new ItemNameNotFoundException(
 				'No item name exists with language id '
 				. $languageId->value() . ' and item id '
 				. $itemId->value()

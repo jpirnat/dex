@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Extractors;
 
-use Exception;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidAverageWeightPerTeamLineException;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidTotalBattlesLineException;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidUsageLineException;
 use Jp\Dex\Domain\Import\Structs\Usage;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
@@ -15,7 +17,7 @@ class UsageFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid.
+	 * @throws InvalidTotalBattlesLineException if $line is invalid.
 	 *
 	 * @return int
 	 */
@@ -28,7 +30,9 @@ class UsageFileExtractor
 
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Total battles line is invalid: ' . $line);
+			throw new InvalidTotalBattlesLineException(
+				'Total battles line is invalid: ' . $line
+			);
 		}
 	}
 
@@ -37,7 +41,7 @@ class UsageFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid.
+	 * @throws InvalidAverageWeightPerTeamLineException if $line is invalid.
 	 *
 	 * @return float
 	 */
@@ -50,7 +54,9 @@ class UsageFileExtractor
 
 			return (float) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Average weight per team line is invalid: ' . $line);
+			throw new InvalidAverageWeightPerTeamLineException(
+				'Average weight per team line is invalid: ' . $line
+			);
 		}
 	}
 
@@ -66,7 +72,7 @@ class UsageFileExtractor
 		try {
 			$this->extractUsage($line);
 			return true;
-		} catch (Exception $e) {
+		} catch (InvalidUsageLineException $e) {
 			// It must not be a usage data line.
 		}
 	
@@ -78,7 +84,7 @@ class UsageFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid.
+	 * @throws InvalidUsageLineException if $line is invalid.
 	 *
 	 * @return Usage
 	 */
@@ -108,7 +114,9 @@ class UsageFileExtractor
 				(float) $matchResult->group(7)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Usage line is invalid: ' . $line);
+			throw new InvalidUsageLineException(
+				'Usage line is invalid: ' . $line
+			);
 		}
 	}
 }

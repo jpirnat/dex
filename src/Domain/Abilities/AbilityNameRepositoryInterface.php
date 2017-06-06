@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Abilities;
 
-use Exception;
 use Jp\Dex\Domain\Languages\LanguageId;
 
 interface AbilityNameRepositoryInterface
@@ -14,7 +13,8 @@ interface AbilityNameRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param AbilityId $abilityId
 	 *
-	 * @throws Exception if no name exists.
+	 * @throws AbilityNameNotFoundException if no ability name exists for this
+	 *     language and ability
 	 *
 	 * @return AbilityName
 	 */

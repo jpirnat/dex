@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Items;
 
-use Exception;
 use Jp\Dex\Domain\Languages\LanguageId;
 
 interface ItemNameRepositoryInterface
@@ -14,7 +13,8 @@ interface ItemNameRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param ItemId $itemId
 	 *
-	 * @throws Exception if no name exists.
+	 * @throws ItemNameNotFoundException if no item name exists for this
+	 *     language and item.
 	 *
 	 * @return ItemName
 	 */

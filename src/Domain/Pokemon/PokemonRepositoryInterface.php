@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Pokemon;
 
-use Exception;
-
 interface PokemonRepositoryInterface
 {
 	/**
@@ -12,7 +10,7 @@ interface PokemonRepositoryInterface
 	 *
 	 * @param PokemonId $pokemonId
 	 *
-	 * @throws Exception if no Pokémon exists with this id.
+	 * @throws PokemonNotFoundException if no Pokémon exists with this id.
 	 *
 	 * @return Pokemon
 	 */
@@ -23,7 +21,8 @@ interface PokemonRepositoryInterface
 	 *
 	 * @param string $identifier
 	 *
-	 * @throws Exception if no Pokémon exists with this identifier.
+	 * @throws PokemonNotFoundException if no Pokémon exists with this
+	 *     identifier.
 	 *
 	 * @return Pokemon
 	 */

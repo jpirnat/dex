@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Items;
 
-use Exception;
-
 interface ItemRepositoryInterface
 {
 	/**
@@ -12,7 +10,7 @@ interface ItemRepositoryInterface
 	 *
 	 * @param string $identifier
 	 *
-	 * @throws Exception if no item exists with this identifier.
+	 * @throws ItemNotFoundException if no item exists with this identifier.
 	 *
 	 * @return Item
 	 */

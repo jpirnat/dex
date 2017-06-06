@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Items\Item;
 use Jp\Dex\Domain\Items\ItemFlingEffectId;
 use Jp\Dex\Domain\Items\ItemId;
+use Jp\Dex\Domain\Items\ItemNotFoundException;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use PDO;
@@ -27,11 +27,11 @@ class DatabaseItemRepository implements ItemRepositoryInterface
 	}
 
 	/**
-	 * Get an ability by its identifier.
+	 * Get an item by its identifier.
 	 *
 	 * @param string $identifier
 	 *
-	 * @throws Exception if no ability exists with this identifier.
+	 * @throws ItemNotFoundException if no item exists with this identifier.
 	 *
 	 * @return Item
 	 */
@@ -52,7 +52,9 @@ class DatabaseItemRepository implements ItemRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception('No item exists with identifier ' . $identifier);
+			throw new ItemNotFoundException(
+				'No item exists with identifier ' . $identifier
+			);
 		}
 
 		if ($result['item_fling_effect_id'] !== null) {

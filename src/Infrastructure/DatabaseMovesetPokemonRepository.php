@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
+use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonNotFoundException;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
 use PDO;
 
@@ -98,8 +98,8 @@ class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterf
 	 * @param FormatId $formatId
 	 * @param PokemonId $pokemonId
 	 *
-	 * @throws Exception if no moveset Pokémon record exists with this year,
-	 *     month, format, and Pokémon.
+	 * @throws MovesetPokemonNotFoundException if no moveset Pokémon record
+	 *     exists with this year, month, format, and Pokémon.
 	 *
 	 * @return MovesetPokemon
 	 */
@@ -128,7 +128,7 @@ class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterf
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception(
+			throw new MovesetPokemonNotFoundException(
 				'No moveset Pokémon record exists with year ' . $year
 				. ', month ' . $month . ', format id ' . $formatId->value()
 				. ', and Pokémon id ' . $pokemonId->value()

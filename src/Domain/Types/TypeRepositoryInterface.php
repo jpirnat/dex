@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Types;
 
-use Exception;
-
 interface TypeRepositoryInterface
 {
 	/**
@@ -12,7 +10,8 @@ interface TypeRepositoryInterface
 	 *
 	 * @param int $hiddenPowerIndex
 	 *
-	 * @throws Exception if no type exists with this hidden power index.
+	 * @throws TypeNotFoundException if no type exists with this hidden power
+	 *     index.
 	 *
 	 * @return Type
 	 */

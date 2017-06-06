@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Natures;
 
-use Exception;
-
 interface NatureRepositoryInterface
 {
 	/**
@@ -12,7 +10,7 @@ interface NatureRepositoryInterface
 	 *
 	 * @param NatureId $natureId
 	 *
-	 * @throws Exception if no nature exists with this id.
+	 * @throws NatureNotFoundException if no nature exists with this id.
 	 *
 	 * @return Nature
 	 */

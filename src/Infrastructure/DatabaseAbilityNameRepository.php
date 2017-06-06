@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Abilities\AbilityName;
+use Jp\Dex\Domain\Abilities\AbilityNameNotFoundException;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
@@ -31,7 +31,8 @@ class DatabaseAbilityNameRepository implements AbilityNameRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param AbilityId $abilityId
 	 *
-	 * @throws Exception if no name exists.
+	 * @throws AbilityNameNotFoundException if no ability name exists for this
+	 *     language and ability
 	 *
 	 * @return AbilityName
 	 */
@@ -53,7 +54,7 @@ class DatabaseAbilityNameRepository implements AbilityNameRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception(
+			throw new AbilityNameNotFoundException(
 				'No ability name exists with language id '
 				. $languageId->value() . ' and ability id '
 				. $abilityId->value()

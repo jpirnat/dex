@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Abilities\Ability;
 use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Abilities\AbilityNotFoundException;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use PDO;
@@ -30,7 +30,8 @@ class DatabaseAbilityRepository implements AbilityRepositoryInterface
 	 *
 	 * @param string $identifier
 	 *
-	 * @throws Exception if no ability exists with this identifier.
+	 * @throws AbilityNotFoundException if no ability exists with this
+	 *     identifier.
 	 *
 	 * @return Ability
 	 */
@@ -49,7 +50,9 @@ class DatabaseAbilityRepository implements AbilityRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception('No ability exists with identifier ' . $identifier);
+			throw new AbilityNotFoundException(
+				'No ability exists with identifier ' . $identifier
+			);
 		}
 
 		$ability = new Ability(

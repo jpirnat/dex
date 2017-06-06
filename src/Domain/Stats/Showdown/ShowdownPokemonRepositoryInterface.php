@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Showdown;
 
-use Exception;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface ShowdownPokemonRepositoryInterface
@@ -49,7 +48,8 @@ interface ShowdownPokemonRepositoryInterface
 	 *
 	 * @param string $showdownPokemonName
 	 *
-	 * @throws Exception if $showdownPokemonName is not an imported name.
+	 * @throws PokemonNotImportedException if $showdownPokemonName is not an
+	 *     imported Pokémon name.
 	 *
 	 * @return PokemonId
 	 */

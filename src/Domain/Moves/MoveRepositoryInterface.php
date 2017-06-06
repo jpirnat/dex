@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Moves;
 
-use Exception;
-
 interface MoveRepositoryInterface
 {
 	/**
@@ -12,7 +10,7 @@ interface MoveRepositoryInterface
 	 *
 	 * @param string $identifier
 	 *
-	 * @throws Exception if no move exists with this identifier.
+	 * @throws MoveNotFoundException if no move exists with this identifier.
 	 *
 	 * @return Move
 	 */

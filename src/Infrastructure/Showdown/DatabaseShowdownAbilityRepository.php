@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
-use Exception;
 use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Stats\Showdown\AbilityNotImportedException;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownAbilityRepositoryInterface;
 use PDO;
 
@@ -113,7 +113,8 @@ class DatabaseShowdownAbilityRepository implements ShowdownAbilityRepositoryInte
 	 *
 	 * @param string $showdownAbilityName
 	 *
-	 * @throws Exception if $showdownAbilityName is not an imported name.
+	 * @throws AbilityNotImportedException if $showdownAbilityName is not an
+	 *     imported ability name.
 	 *
 	 * @return AbilityId
 	 */
@@ -129,7 +130,9 @@ class DatabaseShowdownAbilityRepository implements ShowdownAbilityRepositoryInte
 			$this->addUnknown($showdownAbilityName);
 		}
 
-		throw new Exception('Ability should not be imported: ' . $showdownAbilityName);
+		throw new AbilityNotImportedException(
+			'Ability should not be imported: ' . $showdownAbilityName
+		);
 	}
 
 	/**

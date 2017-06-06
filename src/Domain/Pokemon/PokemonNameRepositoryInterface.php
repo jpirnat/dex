@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Pokemon;
 
-use Exception;
 use Jp\Dex\Domain\Languages\LanguageId;
 
 interface PokemonNameRepositoryInterface
@@ -14,7 +13,8 @@ interface PokemonNameRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param PokemonId $pokemonId
 	 *
-	 * @throws Exception if no name exists.
+	 * @throws PokemonNameNotFoundException if no Pokémon name exists for this
+	 *     language and Pokémon.
 	 *
 	 * @return PokemonName
 	 */

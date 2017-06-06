@@ -3,7 +3,14 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Extractors;
 
-use Exception;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidAverageWeightLineException;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidCounterLine1Exception;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidCounterLine2Exception;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidNamePercentLineException;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidPokemonNameLineException;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidRawCountLineException;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidSpreadLineException;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidViabilityCeilingLineException;
 use Jp\Dex\Domain\Import\Structs\Counter;
 use Jp\Dex\Domain\Import\Structs\Counter1;
 use Jp\Dex\Domain\Import\Structs\Counter2;
@@ -39,7 +46,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid.
+	 * @throws InvalidPokemonNameLineException if $line is invalid.
 	 *
 	 * @return string
 	 */
@@ -52,7 +59,9 @@ class MovesetFileExtractor
 
 			return $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Pokémon name line is invalid: ' . $line);
+			throw new InvalidPokemonNameLineException(
+				'Pokémon name line is invalid: ' . $line
+			);
 		}
 	}
 
@@ -61,7 +70,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid.
+	 * @throws InvalidRawCountLineException if $line is invalid.
 	 *
 	 * @return int
 	 */
@@ -74,7 +83,9 @@ class MovesetFileExtractor
 
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Raw count line is invalid: ' . $line);
+			throw new InvalidRawCountLineException(
+				'Raw count line is invalid: ' . $line
+			);
 		}
 	}
 
@@ -83,7 +94,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid.
+	 * @throws InvalidAverageWeightLineException if $line is invalid.
 	 *
 	 * @return float
 	 */
@@ -96,7 +107,9 @@ class MovesetFileExtractor
 
 			return (float) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Average weight line is invalid: ' . $line);
+			throw new InvalidAverageWeightLineException(
+				'Average weight line is invalid: ' . $line
+			);
 		}
 	}
 
@@ -112,7 +125,7 @@ class MovesetFileExtractor
 		try {
 			$this->extractViabilityCeiling($line);
 			return true;
-		} catch (Exception $e) {
+		} catch (InvalidViabilityCeilingLineException $e) {
 			// It must not be a viability ceiling.
 		}
 	
@@ -124,7 +137,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid.
+	 * @throws InvalidViabilityCeilingLineException if $line is invalid.
 	 *
 	 * @return int
 	 */
@@ -137,7 +150,9 @@ class MovesetFileExtractor
 
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Viability Ceiling line is invalid: ' . $line);
+			throw new InvalidViabilityCeilingLineException(
+				'Viability Ceiling line is invalid: ' . $line
+			);
 		}
 	}
 
@@ -153,7 +168,7 @@ class MovesetFileExtractor
 		try {
 			$this->extractNamePercent($line);
 			return true;
-		} catch (Exception $e) {
+		} catch (InvalidNamePercentLineException $e) {
 			// It must not be a name and percent.
 		}
 	
@@ -165,7 +180,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid.
+	 * @throws InvalidNamePercentLineException if $line is invalid.
 	 *
 	 * @return NamePercent
 	 */
@@ -181,7 +196,9 @@ class MovesetFileExtractor
 				(float) $matchResult->group(2)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('NamePercent line is invalid: ' . $line);
+			throw new InvalidNamePercentLineException(
+				'NamePercent line is invalid: ' . $line
+			);
 		}
 	}
 
@@ -190,7 +207,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid.
+	 * @throws InvalidSpreadLineException if $line is invalid.
 	 *
 	 * @return Spread
 	 */
@@ -221,7 +238,9 @@ class MovesetFileExtractor
 				(float) $matchResult->group(8)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Spread line is invalid: ' . $line);
+			throw new InvalidSpreadLineException(
+				'Spread line is invalid: ' . $line
+			);
 		}
 	}
 
@@ -237,7 +256,7 @@ class MovesetFileExtractor
 		try {
 			$this->extractCounter1($line1);
 			return true;
-		} catch (Exception $e) {
+		} catch (InvalidCounterLine1Exception $e) {
 			// It must not be a counter line 1.
 		}
 	
@@ -250,8 +269,8 @@ class MovesetFileExtractor
 	 * @param string $line1
 	 * @param string $line2
 	 *
-	 * @throws Exception if $line1 is invalid.
-	 * @throws Exception if $line2 is invalid.
+	 * @throws InvalidCounterLine1Exception if $line1 is invalid.
+	 * @throws InvalidCounterLine2Exception if $line2 is invalid.
 	 *
 	 * @return Counter
 	 */
@@ -275,7 +294,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line1
 	 *
-	 * @throws Exception if $line1 is invalid.
+	 * @throws InvalidCounterLine1Exception if $line1 is invalid.
 	 *
 	 * @return Counter1
 	 */
@@ -298,7 +317,9 @@ class MovesetFileExtractor
 				(float) $matchResult1->group(4)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Counter line 1 is invalid: ' . $line1);
+			throw new InvalidCounterLine1Exception(
+				'Counter line 1 is invalid: ' . $line1
+			);
 		}
 	}
 
@@ -307,7 +328,7 @@ class MovesetFileExtractor
 	 *
 	 * @param string $line2
 	 *
-	 * @throws Exception if $line2 is invalid.
+	 * @throws InvalidCounterLine2Exception if $line2 is invalid.
 	 *
 	 * @return Counter2
 	 */
@@ -326,7 +347,9 @@ class MovesetFileExtractor
 				(float) $matchResult2->group(2)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Counter line 2 is invalid: ' . $line2);
+			throw new InvalidCounterLine2Exception(
+				'Counter line 2 is invalid: ' . $line2
+			);
 		}
 	}
 
@@ -344,7 +367,7 @@ class MovesetFileExtractor
 			if ($namePercent->showdownName() === 'Other') {
 				return true;
 			}
-		} catch (Exception $e) {
+		} catch (InvalidNamePercentLineException $e) {
 			// It must not be a NamePercent.
 		}
 

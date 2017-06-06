@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Formats;
 
-use Exception;
-
 interface FormatRepositoryInterface
 {
 	/**
@@ -12,7 +10,7 @@ interface FormatRepositoryInterface
 	 *
 	 * @param string $identifier
 	 *
-	 * @throws Exception if no format exists with this identifier.
+	 * @throws FormatNotFoundException if no format exists with this identifier.
 	 *
 	 * @return Format
 	 */

@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
-use Exception;
 use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Stats\Showdown\FormatNotImportedException;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface;
 use PDO;
 
@@ -153,7 +153,8 @@ class DatabaseShowdownFormatRepository implements ShowdownFormatRepositoryInterf
 	 * @param int $month
 	 * @param string $showdownFormatName
 	 *
-	 * @throws Exception if $showdownFormatName is not an imported name.
+	 * @throws FormatNotImportedException if $showdownFormatName is not an
+	 *     imported format name.
 	 *
 	 * @return FormatId
 	 */
@@ -169,7 +170,9 @@ class DatabaseShowdownFormatRepository implements ShowdownFormatRepositoryInterf
 			$this->addUnknown($year, $month, $showdownFormatName);
 		}
 
-		throw new Exception('Format should not be imported: ' . $showdownFormatName);
+		throw new FormatNotImportedException(
+			'Format should not be imported: ' . $showdownFormatName
+		);
 	}
 
 	/**

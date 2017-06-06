@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Showdown;
 
-use Exception;
 use Jp\Dex\Domain\Moves\MoveId;
 
 interface ShowdownMoveRepositoryInterface
@@ -49,7 +48,8 @@ interface ShowdownMoveRepositoryInterface
 	 *
 	 * @param string $showdownMoveName
 	 *
-	 * @throws Exception if $showdownMoveName is not an imported name.
+	 * @throws MoveNotImportedException if $showdownMoveName is not an imported
+	 *     move name.
 	 *
 	 * @return MoveId
 	 */

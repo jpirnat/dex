@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Showdown;
 
-use Exception;
 use Jp\Dex\Domain\Abilities\AbilityId;
 
 interface ShowdownAbilityRepositoryInterface
@@ -49,7 +48,8 @@ interface ShowdownAbilityRepositoryInterface
 	 *
 	 * @param string $showdownAbilityName
 	 *
-	 * @throws Exception if $showdownAbilityName is not an imported name.
+	 * @throws AbilityNotImportedException if $showdownAbilityName is not an
+	 *     imported ability name.
 	 *
 	 * @return AbilityId
 	 */

@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Moveset;
 
-use Exception;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
@@ -41,8 +40,8 @@ interface MovesetPokemonRepositoryInterface
 	 * @param FormatId $formatId
 	 * @param PokemonId $pokemonId
 	 *
-	 * @throws Exception if no moveset Pokémon record exists with this year,
-	 *     month, format, and Pokémon.
+	 * @throws MovesetPokemonNotFoundException if no moveset Pokémon record
+	 *     exists with this year, month, format, and Pokémon.
 	 *
 	 * @return MovesetPokemon
 	 */

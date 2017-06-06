@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Formats\FormatNotFoundException;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use PDO;
@@ -30,7 +30,7 @@ class DatabaseFormatRepository implements FormatRepositoryInterface
 	 *
 	 * @param string $identifier
 	 *
-	 * @throws Exception if no format exists with this identifier.
+	 * @throws FormatNotFoundException if no format exists with this identifier.
 	 *
 	 * @return Format
 	 */
@@ -53,7 +53,9 @@ class DatabaseFormatRepository implements FormatRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception('No format exists with identifier ' . $identifier);
+			throw new FormatNotFoundException(
+				'No format exists with identifier ' . $identifier
+			);
 		}
 
 		$format = new Format(

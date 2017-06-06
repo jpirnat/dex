@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Extractors;
 
-use Exception;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidFilenameException;
 use Jp\Dex\Domain\Import\Structs\FormatRating;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
@@ -16,7 +16,7 @@ class FormatRatingExtractor
 	 *
 	 * @param string $filename
 	 *
-	 * @throws Exception if $filename is invalid.
+	 * @throws InvalidFilenameException if $filename is invalid.
 	 *
 	 * @return FormatRating
 	 */
@@ -32,7 +32,9 @@ class FormatRatingExtractor
 				(int) $matchResult->group(2)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Filename is invalid for format-rating: ' . $filename);
+			throw new InvalidFilenameException(
+				'Filename is invalid for format-rating: ' . $filename
+			);
 		}
 	}
 }

@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Showdown;
 
-use Exception;
 use Jp\Dex\Domain\Items\ItemId;
 
 interface ShowdownItemRepositoryInterface
@@ -49,7 +48,8 @@ interface ShowdownItemRepositoryInterface
 	 *
 	 * @param string $showdownItemName
 	 *
-	 * @throws Exception if $showdownItemName is not an imported name.
+	 * @throws ItemNotImportedException if $showdownItemName is not an imported
+	 *     item name.
 	 *
 	 * @return ItemId
 	 */

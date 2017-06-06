@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Natures\Nature;
 use Jp\Dex\Domain\Natures\NatureId;
+use Jp\Dex\Domain\Natures\NatureNotFoundException;
 use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use PDO;
@@ -30,7 +30,7 @@ class DatabaseNatureRepository implements NatureRepositoryInterface
 	 *
 	 * @param NatureId $natureId
 	 *
-	 * @throws Exception if no nature exists with this id.
+	 * @throws NatureNotFoundException if no nature exists with this id.
 	 *
 	 * @return Nature
 	 */
@@ -50,7 +50,9 @@ class DatabaseNatureRepository implements NatureRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception('No nature exists with id ' . $$natureId->value());
+			throw new NatureNotFoundException(
+				'No nature exists with id ' . $$natureId->value()
+			);
 		}
 
 		if ($result['increased_stat_id'] !== null) {

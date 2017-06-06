@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonName;
+use Jp\Dex\Domain\Pokemon\PokemonNameNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use PDO;
 
@@ -31,7 +31,8 @@ class DatabasePokemonNameRepository implements PokemonNameRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param PokemonId $pokemonId
 	 *
-	 * @throws Exception if no name exists.
+	 * @throws PokemonNameNotFoundException if no Pokémon name exists for this
+	 *     language and Pokémon.
 	 *
 	 * @return PokemonName
 	 */
@@ -54,7 +55,7 @@ class DatabasePokemonNameRepository implements PokemonNameRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception(
+			throw new PokemonNameNotFoundException(
 				'No Pokémon name exists with language id '
 				. $languageId->value() . ' and Pokémon id '
 				. $pokemonId->value()

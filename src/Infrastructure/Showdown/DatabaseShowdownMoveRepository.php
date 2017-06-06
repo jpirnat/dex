@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
-use Exception;
 use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Stats\Showdown\MoveNotImportedException;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface;
 use PDO;
 
@@ -114,7 +114,8 @@ class DatabaseShowdownMoveRepository implements ShowdownMoveRepositoryInterface
 	 *
 	 * @param string $showdownMoveName
 	 *
-	 * @throws Exception if $showdownMoveName is not an imported name.
+	 * @throws MoveNotImportedException if $showdownMoveName is not an imported
+	 *     move name.
 	 *
 	 * @return MoveId
 	 */
@@ -130,7 +131,9 @@ class DatabaseShowdownMoveRepository implements ShowdownMoveRepositoryInterface
 			$this->addUnknown($showdownMoveName);
 		}
 
-		throw new Exception('Move should not be imported: ' . $showdownMoveName);
+		throw new MoveNotImportedException(
+			'Move should not be imported: ' . $showdownMoveName
+		);
 	}
 
 	/**

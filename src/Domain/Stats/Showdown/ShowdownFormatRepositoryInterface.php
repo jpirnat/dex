@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Showdown;
 
-use Exception;
 use Jp\Dex\Domain\Formats\FormatId;
 
 interface ShowdownFormatRepositoryInterface
@@ -59,7 +58,8 @@ interface ShowdownFormatRepositoryInterface
 	 * @param int $month
 	 * @param string $showdownFormatName
 	 *
-	 * @throws Exception if $showdownFormatName is not an imported name.
+	 * @throws FormatNotImportedException if $showdownFormatName is not an
+	 *     imported format name.
 	 *
 	 * @return FormatId
 	 */

@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
-use Exception;
 use Jp\Dex\Domain\Items\ItemId;
+use Jp\Dex\Domain\Stats\Showdown\ItemNotImportedException;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownItemRepositoryInterface;
 use PDO;
 
@@ -113,7 +113,8 @@ class DatabaseShowdownItemRepository implements ShowdownItemRepositoryInterface
 	 *
 	 * @param string $showdownItemName
 	 *
-	 * @throws Exception if $showdownItemName is not an imported name.
+	 * @throws ItemNotImportedException if $showdownItemName is not an imported
+	 *     item name.
 	 *
 	 * @return ItemId
 	 */
@@ -129,7 +130,9 @@ class DatabaseShowdownItemRepository implements ShowdownItemRepositoryInterface
 			$this->addUnknown($showdownItemName);
 		}
 
-		throw new Exception('Item should not be imported: ' . $showdownItemName);
+		throw new ItemNotImportedException(
+			'Item should not be imported: ' . $showdownItemName
+		);
 	}
 
 	/**

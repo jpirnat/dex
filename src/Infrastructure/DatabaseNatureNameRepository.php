@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Natures\NatureId;
 use Jp\Dex\Domain\Natures\NatureName;
+use Jp\Dex\Domain\Natures\NatureNameNotFoundException;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
@@ -31,7 +31,8 @@ class DatabaseNatureNameRepository implements NatureNameRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param NatureId $natureId
 	 *
-	 * @throws Exception if no name exists.
+	 * @throws NatureNameNotFoundException if no nature name exists for this
+	 *     language and nature.
 	 *
 	 * @return NatureName
 	 */
@@ -53,7 +54,7 @@ class DatabaseNatureNameRepository implements NatureNameRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception(
+			throw new NatureNameNotFoundException(
 				'No nature name exists with language id '
 				. $languageId->value() . ' and nature id '
 				. $natureId->value()

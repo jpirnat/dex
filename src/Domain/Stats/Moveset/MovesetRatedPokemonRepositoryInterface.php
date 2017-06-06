@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Moveset;
 
-use Exception;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
@@ -46,8 +45,8 @@ interface MovesetRatedPokemonRepositoryInterface
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
-	 * @throws Exception if no moveset rated Pokémon record exists with this
-	 *     year, month, format, rating, and Pokémon.
+	 * @throws MovesetRatedPokemonNotFoundException if no moveset rated Pokémon
+	 *     record exists with this year, month, format, rating, and Pokémon.
 	 *
 	 * @return MovesetRatedPokemon
 	 */

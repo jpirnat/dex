@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
-use Exception;
 use Jp\Dex\Domain\Natures\NatureId;
+use Jp\Dex\Domain\Stats\Showdown\NatureNotImportedException;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface;
 use PDO;
 
@@ -113,7 +113,8 @@ class DatabaseShowdownNatureRepository implements ShowdownNatureRepositoryInterf
 	 *
 	 * @param string $showdownNatureName
 	 *
-	 * @throws Exception if $showdownNatureName is not an imported name.
+	 * @throws NatureNotImportedException if $showdownNatureName is not an
+	 *     imported nature name.
 	 *
 	 * @return NatureId
 	 */
@@ -129,7 +130,9 @@ class DatabaseShowdownNatureRepository implements ShowdownNatureRepositoryInterf
 			$this->addUnknown($showdownNatureName);
 		}
 
-		throw new Exception('Nature should not be imported: ' . $showdownNatureName);
+		throw new NatureNotImportedException(
+			'Nature should not be imported: ' . $showdownNatureName
+		);
 	}
 
 	/**

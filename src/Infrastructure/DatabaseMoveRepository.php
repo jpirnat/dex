@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Moves\Move;
 use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Moves\MoveNotFoundException;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use PDO;
@@ -30,7 +30,7 @@ class DatabaseMoveRepository implements MoveRepositoryInterface
 	 *
 	 * @param string $identifier
 	 *
-	 * @throws Exception if no move exists with this identifier.
+	 * @throws MoveNotFoundException if no move exists with this identifier.
 	 *
 	 * @return Move
 	 */
@@ -49,7 +49,9 @@ class DatabaseMoveRepository implements MoveRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception('No move exists with identifier ' . $identifier);
+			throw new MoveNotFoundException(
+				'No move exists with identifier ' . $identifier
+			);
 		}
 
 		$move = new Move(

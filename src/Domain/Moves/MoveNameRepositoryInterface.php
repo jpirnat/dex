@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Moves;
 
-use Exception;
 use Jp\Dex\Domain\Languages\LanguageId;
 
 interface MoveNameRepositoryInterface
@@ -14,7 +13,8 @@ interface MoveNameRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param MoveId $moveId
 	 *
-	 * @throws Exception if no name exists.
+	 * @throws MoveNameNotFoundException if no move name exists for this
+	 *     language and move.
 	 *
 	 * @return MoveName
 	 */

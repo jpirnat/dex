@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
-use Exception;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Stats\Showdown\PokemonNotImportedException;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
 use PDO;
 
@@ -113,7 +113,8 @@ class DatabaseShowdownPokemonRepository implements ShowdownPokemonRepositoryInte
 	 *
 	 * @param string $showdownPokemonName
 	 *
-	 * @throws Exception if $showdownPokemonName is not an imported name.
+	 * @throws PokemonNotImportedException if $showdownPokemonName is not an
+	 *     imported Pokémon name.
 	 *
 	 * @return PokemonId
 	 */
@@ -129,7 +130,9 @@ class DatabaseShowdownPokemonRepository implements ShowdownPokemonRepositoryInte
 			$this->addUnknown($showdownPokemonName);
 		}
 
-		throw new Exception('Pokémon should not be imported: ' . $showdownPokemonName);
+		throw new PokemonNotImportedException(
+			'Pokémon should not be imported: ' . $showdownPokemonName
+		);
 	}
 
 	/**

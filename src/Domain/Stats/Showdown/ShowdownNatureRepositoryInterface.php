@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Showdown;
 
-use Exception;
 use Jp\Dex\Domain\Natures\NatureId;
 
 interface ShowdownNatureRepositoryInterface
@@ -49,7 +48,8 @@ interface ShowdownNatureRepositoryInterface
 	 *
 	 * @param string $showdownNatureName
 	 *
-	 * @throws Exception if $showdownNatureName is not an imported name.
+	 * @throws NatureNotImportedException if $showdownNatureName is not an
+	 *     imported nature name.
 	 *
 	 * @return NatureId
 	 */

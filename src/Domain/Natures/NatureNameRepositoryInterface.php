@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Natures;
 
-use Exception;
 use Jp\Dex\Domain\Languages\LanguageId;
 
 interface NatureNameRepositoryInterface
@@ -14,7 +13,8 @@ interface NatureNameRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param NatureId $natureId
 	 *
-	 * @throws Exception if no name exists.
+	 * @throws NatureNameNotFoundException if no nature name exists for this
+	 *     language and nature.
 	 *
 	 * @return NatureName
 	 */

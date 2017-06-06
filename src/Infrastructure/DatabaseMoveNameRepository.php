@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveName;
+use Jp\Dex\Domain\Moves\MoveNameNotFoundException;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
@@ -31,7 +31,8 @@ class DatabaseMoveNameRepository implements MoveNameRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param MoveId $moveId
 	 *
-	 * @throws Exception if no name exists.
+	 * @throws MoveNameNotFoundException if no move name exists for this
+	 *     language and move.
 	 *
 	 * @return MoveName
 	 */
@@ -53,7 +54,7 @@ class DatabaseMoveNameRepository implements MoveNameRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception(
+			throw new MoveNameNotFoundException(
 				'No move name exists with language id '
 				. $languageId->value() . ' and move id '
 				. $moveId->value()

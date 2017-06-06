@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Exception;
 use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\SpeciesId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
@@ -31,7 +31,7 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 	 *
 	 * @param PokemonId $pokemonId
 	 *
-	 * @throws Exception if no Pokémon exists with this id.
+	 * @throws PokemonNotFoundException if no Pokémon exists with this id.
 	 *
 	 * @return Pokemon
 	 */
@@ -56,7 +56,7 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception(
+			throw new PokemonNotFoundException(
 				'No Pokémon exists with id ' . $pokemonId->value()
 			);
 		}
@@ -88,7 +88,8 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 	 *
 	 * @param string $identifier
 	 *
-	 * @throws Exception if no Pokémon exists with this identifier.
+	 * @throws PokemonNotFoundException if no Pokémon exists with this
+	 *     identifier.
 	 *
 	 * @return Pokemon
 	 */
@@ -113,7 +114,9 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new Exception('No Pokémon exists with identifier ' . $identifier);
+			throw new PokemonNotFoundException(
+				'No Pokémon exists with identifier ' . $identifier
+			);
 		}
 
 		if ($result['gender_ratio'] !== null) {

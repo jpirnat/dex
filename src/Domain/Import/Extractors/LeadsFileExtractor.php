@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Extractors;
 
-use Exception;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidLeadUsageLineException;
+use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidTotalLeadsLineException;
 use Jp\Dex\Domain\Import\Structs\LeadUsage;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
@@ -15,7 +16,7 @@ class LeadsFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid.
+	 * @throws InvalidTotalLeadsLineException if $line is invalid.
 	 *
 	 * @return int
 	 */
@@ -28,7 +29,9 @@ class LeadsFileExtractor
 
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed $e) {
-			throw new Exception('Total leads line is invalid: ' . $line);
+			throw new InvalidTotalLeadsLineException(
+				'Total leads line is invalid: ' . $line
+			);
 		}
 	}
 
@@ -44,7 +47,7 @@ class LeadsFileExtractor
 		try {
 			$this->extractLeadUsage($line);
 			return true;
-		} catch (Exception $e) {
+		} catch (InvalidLeadUsageLineException $e) {
 			// It must not be a lead usage data line.
 		}
 	
@@ -56,7 +59,7 @@ class LeadsFileExtractor
 	 *
 	 * @param string $line
 	 *
-	 * @throws Exception if $line is invalid.
+	 * @throws InvalidLeadUsageLineException if $line is invalid.
 	 *
 	 * @return LeadUsage
 	 */
@@ -82,7 +85,9 @@ class LeadsFileExtractor
 				(float) $matchResult->group(5)
 			);
 		} catch (RegexFailed $e) {
-			throw new Exception('Lead usage line is invalid: ' . $line);
+			throw new InvalidLeadUsageLineException(
+				'Lead usage line is invalid: ' . $line
+			);
 		}
 	}
 }
