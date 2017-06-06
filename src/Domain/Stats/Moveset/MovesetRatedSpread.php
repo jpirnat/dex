@@ -3,9 +3,15 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Moveset;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Natures\NatureId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidCountException;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidYearException;
 
 class MovesetRatedSpread
 {
@@ -64,6 +70,13 @@ class MovesetRatedSpread
 	 * @param int $spd
 	 * @param int $spe
 	 * @param float $percent
+	 *
+	 * @throws InvalidYearException if $year is invalid.
+	 * @throws InvalidMonthException if $month is invalid.
+	 * @throws InvalidRatingException if $rating is invalid.
+	 * @throws InvalidCountException if $hp, $atk, $def, $spa, $spd, or $spe are
+	 *     invalid.
+	 * @throws InvalidPercentException if $percent is invalid
 	 */
 	public function __construct(
 		int $year,
@@ -80,7 +93,71 @@ class MovesetRatedSpread
 		int $spe,
 		float $percent
 	) {
-		// TODO: validation
+		$today = new DateTime();
+		$currentYear = (int) $today->format('Y');
+		$currentMonth = (int) $today->format('n');
+
+		if ($year < 2014) {
+			throw new InvalidYearException('Invalid year: ' . $year);
+		}
+
+		if ($year > $currentYear) {
+			throw new InvalidYearException(
+				'This year has not happened yet: ' . $year
+			);
+		}
+
+		if ($month < 1 || $month > 12) {
+			throw new InvalidMonthException('Invalid month: ' . $month);
+		}
+
+		if ($year === $currentYear && $month > $currentMonth) {
+			throw new InvalidMonthException(
+				'This month has not happened yet: ' . $month
+			);
+		}
+
+		if ($rating < 0) {
+			throw new InvalidRatingException('Invalid rating: ' . $rating);
+		}
+
+		if ($hp < 0 || $hp > 255) {
+			throw new InvalidCountException('Invalid number of HP EVs: ' . $hp);
+		}
+
+		if ($atk < 0 || $atk > 255) {
+			throw new InvalidCountException(
+				'Invalid number of Attack EVs: ' . $atk
+			);
+		}
+
+		if ($def < 0 || $def > 255) {
+			throw new InvalidCountException(
+				'Invalid number of Defense EVs: ' . $def
+			);
+		}
+
+		if ($spa < 0 || $spa > 255) {
+			throw new InvalidCountException(
+				'Invalid number of Special Attack EVs: ' . $spa
+			);
+		}
+
+		if ($spd < 0 || $spd > 255) {
+			throw new InvalidCountException(
+				'Invalid number of Special Defense EVs: ' . $spd
+			);
+		}
+
+		if ($spe < 0 || $spe > 255) {
+			throw new InvalidCountException(
+				'Invalid number of Speed EVs: ' . $spe
+			);
+		}
+
+		if ($percent < 0 || $percent > 100) {
+			throw new InvalidPercentException('Invalid percent: ' . $percent);
+		}
 
 		$this->year = $year;
 		$this->month = $month;

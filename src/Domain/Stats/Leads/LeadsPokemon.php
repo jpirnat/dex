@@ -3,8 +3,13 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Leads;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidCountException;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidYearException;
 
 class LeadsPokemon
 {
@@ -35,6 +40,11 @@ class LeadsPokemon
 	 * @param PokemonId $pokemonId
 	 * @param int $raw
 	 * @param float $rawPercent
+	 *
+	 * @throws InvalidYearException if $year is invalid.
+	 * @throws InvalidMonthException if $month is invalid.
+	 * @throws InvalidCountException if $raw is invalid.
+	 * @throws InvalidPercentException if $rawPercent is invalid.
 	 */
 	public function __construct(
 		int $year,
@@ -44,7 +54,39 @@ class LeadsPokemon
 		int $raw,
 		float $rawPercent
 	) {
-		// TODO: validation
+		$today = new DateTime();
+		$currentYear = (int) $today->format('Y');
+		$currentMonth = (int) $today->format('n');
+
+		if ($year < 2014) {
+			throw new InvalidYearException('Invalid year: ' . $year);
+		}
+
+		if ($year > $currentYear) {
+			throw new InvalidYearException(
+				'This year has not happened yet: ' . $year
+			);
+		}
+
+		if ($month < 1 || $month > 12) {
+			throw new InvalidMonthException('Invalid month: ' . $month);
+		}
+
+		if ($year === $currentYear && $month > $currentMonth) {
+			throw new InvalidMonthException(
+				'This month has not happened yet: ' . $month
+			);
+		}
+
+		if ($raw < 0) {
+			throw new InvalidCountException('Invalid raw: ' . $raw);
+		}
+
+		if ($rawPercent < 0 || $rawPercent > 100) {
+			throw new InvalidPercentException(
+				'Invalid raw percent: ' . $rawPercent
+			);
+		}
 
 		$this->year = $year;
 		$this->month = $month;

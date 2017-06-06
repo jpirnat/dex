@@ -3,8 +3,14 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Leads;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidRankException;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
+use Jp\Dex\Domain\Stats\Exceptions\InvalidYearException;
 
 class LeadsRatedPokemon
 {
@@ -39,6 +45,12 @@ class LeadsRatedPokemon
 	 * @param PokemonId $pokemonId
 	 * @param int $rank
 	 * @param float $usagePercent
+	 *
+	 * @throws InvalidYearException if $year is invalid.
+	 * @throws InvalidMonthException if $month is invalid.
+	 * @throws InvalidRatingException if $rating is invalid.
+	 * @throws InvalidRankException if $rank is invalid.
+	 * @throws InvalidPercentException if $usagePercent is invalid
 	 */
 	public function __construct(
 		int $year,
@@ -49,7 +61,43 @@ class LeadsRatedPokemon
 		int $rank,
 		float $usagePercent
 	) {
-		// TODO: validation
+		$today = new DateTime();
+		$currentYear = (int) $today->format('Y');
+		$currentMonth = (int) $today->format('n');
+
+		if ($year < 2014) {
+			throw new InvalidYearException('Invalid year: ' . $year);
+		}
+
+		if ($year > $currentYear) {
+			throw new InvalidYearException(
+				'This year has not happened yet: ' . $year
+			);
+		}
+
+		if ($month < 1 || $month > 12) {
+			throw new InvalidMonthException('Invalid month: ' . $month);
+		}
+
+		if ($year === $currentYear && $month > $currentMonth) {
+			throw new InvalidMonthException(
+				'This month has not happened yet: ' . $month
+			);
+		}
+
+		if ($rating < 0) {
+			throw new InvalidRatingException('Invalid rating: ' . $rating);
+		}
+
+		if ($rank < 1) {
+			throw new InvalidRankException('Invalid rank: ' . $rank);
+		}
+
+		if ($usagePercent < 0 || $usagePercent > 100) {
+			throw new InvalidPercentException(
+				'Invalid usage percent: ' . $usagePercent
+			);
+		}
 
 		$this->year = $year;
 		$this->month = $month;

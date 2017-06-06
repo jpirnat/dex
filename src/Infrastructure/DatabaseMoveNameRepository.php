@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveName;
 use Jp\Dex\Domain\Moves\MoveNameNotFoundException;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
-use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
 
 class DatabaseMoveNameRepository implements MoveNameRepositoryInterface

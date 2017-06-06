@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Natures\NatureId;
 use Jp\Dex\Domain\Natures\NatureName;
 use Jp\Dex\Domain\Natures\NatureNameNotFoundException;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
-use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
 
 class DatabaseNatureNameRepository implements NatureNameRepositoryInterface
