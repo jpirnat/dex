@@ -949,6 +949,7 @@ insert into `showdown_pokemon_to_import` (
 ("Hoopa-Unbound", 10107),
 ("Rattata-Alola", 10108),
 ("Raticate-Alola", 10109),
+("Pikachu-Original", 10110),
 ("Raichu-Alola", 10111),
 ("Sandshrew-Alola", 10112),
 ("Sandslash-Alola", 10113),
@@ -965,7 +966,7 @@ insert into `showdown_pokemon_to_import` (
 ("Muk-Alola", 10124),
 ("Exeggutor-Alola", 10125),
 ("Marowak-Alola", 10126),
-("Greninja-Ash", 10127),
+("Greninja-Ash", 10128),
 ("Zygarde-10%", 10129),
 ("Zygarde-Complete", 10132),
 ("Oricorio-Pom-Pom", 10133),
@@ -993,35 +994,56 @@ insert into `showdown_pokemon_to_import` (
 
 
 insert into `showdown_pokemon_to_ignore` (
-	`name`
+	`name`,
+	`pokemon_id`
 ) values
-("Arghonaut"), # CAP
-("Aurumoth"), # CAP
-("Cawmodore"), # CAP
-("Colossoil"), # CAP
-("Crucibelle-Mega"), # CAP
-("Crucibelle"), # CAP
-("Cyclohm"), # CAP
-("Fidgit"), # CAP
-("Kerfluffle"), # CAP
-("Kitsunoh"), # CAP
-("Krilowatt"), # CAP
-("Malaconda"), # CAP
-("Mimikyu-Busted"), # battle-only form
-("Minior-Meteor"), # alternate form name
-("Missingno."),
-("Mollux"), # CAP
-("Naviathan"), # CAP
-("Necturna"), # CAP
-("Plasmanta"), # CAP
-("Pyroak"), # CAP
-("Revenankh"), # CAP
-("Stratagem"), # CAP
-("Syclant"), # CAP
-("Tomohawk"), # CAP
-("Volkraken"), # CAP
-("Voodoom"), # CAP
-("Wishiwashi-School") # battle-only form
+("Argalis", null), # CAP
+("Arghonaut", null), # CAP
+("Aurumoth", null), # CAP
+("Brattler", null), # CAP
+("Breezi", null), # CAP
+("Caimanoe", null), # CAP
+("Cawdet", null), # CAP
+("Cawmodore", null), # CAP
+("Colossoil", null), # CAP
+("Crucibelle-Mega", null), # CAP
+("Crucibelle", null), # CAP
+("Cupra", null), # CAP
+("Cyclohm", null), # CAP
+("Embirch", null), # CAP
+("Fidgit", null), # CAP
+("Flarelm", null), # CAP
+("Floatoy", null), # CAP
+("Kerfluffle", null), # CAP
+("Kitsunoh", null), # CAP
+("Krilowatt", null), # CAP
+("Malaconda", null), # CAP
+("Mimikyu-Busted", 778), # battle-only form
+("Minior-Meteor", 774), # alternate form name
+("Missingno.", null), # The mon. The myth. The legend.
+("Mollux", null), # CAP
+("Naviathan", null), # CAP
+("Necturine", null), # CAP
+("Necturna", null), # CAP
+("Pikachu-Alola", 10110), # alternate form name
+("Pikachu-Hoenn", 10110), # alternate form name
+("Pikachu-Kalos", 10110), # alternate form name
+("Pikachu-Sinnoh", 10110), # alternate form name
+("Pikachu-Unova", 10110), # alternate form name
+("Plasmanta", null), # CAP
+("Pluffle", null), # CAP
+("Pyroak", null), # CAP
+("Revenankh", null), # CAP
+("Scratchet", null), # CAP
+("Snugglow", null), # CAP
+("Stratagem", null), # CAP
+("Syclant", null), # CAP
+("Syclar", null), # CAP
+("Tomohawk", null), # CAP
+("Volkraken", null), # CAP
+("Volkritter", null), # CAP
+("Voodoom", null), # CAP
+("Wishiwashi-School", 10137) # battle-only form
 ;
 
 
