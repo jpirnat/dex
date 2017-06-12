@@ -41,4 +41,14 @@ class StatValueContainer
 
 		return $this->statValues[$statId->value()];
 	}
+
+	/**
+	 * Get all stat values from the container.
+	 *
+	 * @return StatValue[]
+	 */
+	public function getAll() : array
+	{
+		return $this->statValues;
+	}
 }

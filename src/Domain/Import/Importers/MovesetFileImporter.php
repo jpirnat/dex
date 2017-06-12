@@ -26,6 +26,9 @@ use Jp\Dex\Domain\Stats\Showdown\ShowdownItemRepositoryInterface;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\StatId;
+use Jp\Dex\Domain\Stats\StatValue;
+use Jp\Dex\Domain\Stats\StatValueContainer;
 use Psr\Http\Message\StreamInterface;
 
 class MovesetFileImporter
@@ -309,6 +312,14 @@ class MovesetFileImporter
 				$natureId = $this->showdownNatureRepository->getNatureId($showdownNatureName);
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
+					$evSpread = new StatValueContainer();
+					$evSpread->add(new StatValue(new StatId(StatId::HP), $spread->hp()));
+					$evSpread->add(new StatValue(new StatId(StatId::ATTACK), $spread->atk()));
+					$evSpread->add(new StatValue(new StatId(StatId::DEFENSE), $spread->def()));
+					$evSpread->add(new StatValue(new StatId(StatId::SPECIAL_ATTACK), $spread->spa()));
+					$evSpread->add(new StatValue(new StatId(StatId::SPECIAL_DEFENSE), $spread->spd()));
+					$evSpread->add(new StatValue(new StatId(StatId::SPEED), $spread->spe()));
+
 					$movesetRatedSpread = new MovesetRatedSpread(
 						$year,
 						$month,
@@ -316,12 +327,7 @@ class MovesetFileImporter
 						$rating,
 						$pokemonId,
 						$natureId,
-						$spread->hp(),
-						$spread->atk(),
-						$spread->def(),
-						$spread->spa(),
-						$spread->spd(),
-						$spread->spe(),
+						$evSpread,
 						$spread->percent()
 					);
 

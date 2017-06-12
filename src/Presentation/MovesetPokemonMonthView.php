@@ -16,6 +16,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMove;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpread;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammate;
+use Jp\Dex\Domain\Stats\StatId;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
 use Zend\Diactoros\Response;
@@ -162,14 +163,16 @@ class MovesetPokemonMonthView
 				$movesetRatedSpread->getNatureId()
 			);
 
+			$evSpread = $movesetRatedSpread->getEvSpread();
+
 			$spreads[] = [
 				'natureName' => $natureName->getName(),
-				'hp' => $movesetRatedSpread->getHpEvs(),
-				'atk' => $movesetRatedSpread->getAttackEvs(),
-				'def' => $movesetRatedSpread->getDefenseEvs(),
-				'spa' => $movesetRatedSpread->getSpecialAttackEvs(),
-				'spd' => $movesetRatedSpread->getSpecialDefenseEvs(),
-				'spe' => $movesetRatedSpread->getSpeedEvs(),
+				'hp' => $evSpread->get(new StatId(StatId::HP))->getValue(),
+				'atk' => $evSpread->get(new StatId(StatId::ATTACK))->getValue(),
+				'def' => $evSpread->get(new StatId(StatId::DEFENSE))->getValue(),
+				'spa' => $evSpread->get(new StatId(StatId::SPECIAL_ATTACK))->getValue(),
+				'spd' => $evSpread->get(new StatId(StatId::SPECIAL_DEFENSE))->getValue(),
+				'spe' => $evSpread->get(new StatId(StatId::SPEED))->getValue(),
 				'percent' => $movesetRatedSpread->getPercent(),
 			];
 		}
