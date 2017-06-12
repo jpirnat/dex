@@ -371,11 +371,7 @@ create table if not exists `z_exclusive_moves`
 `z_crystal_id` smallint unsigned not null,
 `z_move_id` smallint unsigned not null,
 
-primary key (
-	`pokemon_id`,
-	`move_id`,
-	`z_crystal_id`
-),
+primary key (`pokemon_id`),
 foreign key (`pokemon_id`) references `pokemon` (`id`)
 	on delete restrict
 	on update cascade,
@@ -397,7 +393,7 @@ insert into `z_exclusive_moves` (
 	`z_crystal_id`,
 	`z_move_id`
 ) values
-(25, 344, 857, 658), # TODO: find out if pikachu-cap can use catastropika as well.
+(25, 344, 857, 658),
 (724, 662, 861, 695),
 (727, 663, 862, 696),
 (730, 664, 863, 697),

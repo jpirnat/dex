@@ -3,11 +3,11 @@ create table if not exists `base_experience`
 `generation` tinyint unsigned not null,
 `pokemon_id` smallint unsigned not null,
 
-`base_experience` tinyint unsigned not null,
+`base_experience` smallint unsigned not null,
 
 primary key (
 	`generation`,
-	`pokemon_id`,
+	`pokemon_id`
 ),
 foreign key (`generation`) references `generations` (`generation`)
 	on delete restrict

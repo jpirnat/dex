@@ -1,3 +1,97 @@
+create table if not exists `formats`
+(
+`id` tinyint unsigned not null auto_increment,
+
+`identifier` varchar(20) not null,
+`generation` tinyint unsigned not null,
+`level` tinyint unsigned not null,
+`field_size` tinyint unsigned not null,
+`team_size` tinyint unsigned not null,
+`in_battle_team_size` tinyint unsigned not null,
+
+primary key (`id`),
+unique key (`identifier`)
+) engine = InnoDB;
+
+
+insert into `formats` (
+	`id`,
+	`identifier`,
+	`generation`,
+	`level`,
+	`field_size`,
+	`team_size`,
+	`in_battle_team_size`
+) values
+(1, "gen-6-ag", 6, 100, 1, 6, 6),
+(2, "gen-6-ubers", 6, 100, 1, 6, 6),
+(3, "gen-6-ou", 6, 100, 1, 6, 6),
+(4, "gen-6-uu", 6, 100, 1, 6, 6),
+(5, "gen-6-ru", 6, 100, 1, 6, 6),
+(6, "gen-6-nu", 6, 100, 1, 6, 6),
+(7, "gen-6-pu", 6, 100, 1, 6, 6),
+
+(8, "gen-6-doubles-ubers", 6, 100, 2, 6, 6),
+(9, "gen-6-doubles-ou", 6, 100, 2, 6, 6),
+(10, "gen-6-doubles-uu", 6, 100, 2, 6, 6),
+
+(11, "vgc-2014", 6, 50, 2, 6, 4),
+(12, "vgc-2015", 6, 50, 2, 6, 4),
+(13, "vgc-2016", 6, 50, 2, 6, 4),
+(14, "vgc-2017", 7, 50, 2, 6, 4),
+
+(15, "gen-7-ag", 7, 100, 1, 6, 6),
+(16, "gen-7-ubers", 7, 100, 1, 6, 6),
+(17, "gen-7-ou", 7, 100, 1, 6, 6),
+(18, "gen-7-uu", 7, 100, 1, 6, 6),
+(19, "gen-7-ru", 7, 100, 1, 6, 6),
+(20, "gen-7-nu", 7, 100, 1, 6, 6),
+(21, "gen-7-pu", 7, 100, 1, 6, 6),
+
+(22, "gen-7-doubles-ubers", 7, 100, 2, 6, 6),
+(23, "gen-7-doubles-ou", 7, 100, 2, 6, 6),
+(24, "gen-7-doubles-uu", 7, 100, 2, 6, 6)
+;
+
+
+create table if not exists `showdown_formats_to_import`
+(
+`year` smallint unsigned not null,
+`month` tinyint unsigned not null,
+`name` varchar(50) not null,
+
+`format_id` tinyint unsigned not null,
+
+primary key (
+	`year`,
+	`month`,
+	`name`
+),
+foreign key (`format_id`) references `formats` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_formats_to_ignore`
+(
+`year` smallint unsigned not null,
+`month` tinyint unsigned not null,
+`name` varchar(50) not null,
+
+`format_id` tinyint unsigned null, # nullable
+
+primary key (
+	`year`,
+	`month`,
+	`name`
+),
+foreign key (`format_id`) references `formats` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
 insert into `showdown_formats_to_ignore` (
 	`year`,
 	`month`,
