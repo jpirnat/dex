@@ -91,7 +91,7 @@ class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 		$stmt->bindValue(':raw', $usagePokemon->getRaw(), PDO::PARAM_INT);
 		$stmt->bindValue(':raw_percent', $usagePokemon->getRawPercent(), PDO::PARAM_STR);
 		$stmt->bindValue(':real', $usagePokemon->getReal(), PDO::PARAM_INT);
-		$stmt->bindValue(':reap_percent', $usagePokemon->getRealPercent(), PDO::PARAM_STR);
+		$stmt->bindValue(':real_percent', $usagePokemon->getRealPercent(), PDO::PARAM_STR);
 		$stmt->execute();
 	}
 

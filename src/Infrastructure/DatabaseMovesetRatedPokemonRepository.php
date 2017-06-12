@@ -91,7 +91,7 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 		$stmt->bindValue(':format_id', $movesetRatedPokemon->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $movesetRatedPokemon->getRating(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $movesetRatedPokemon->getPokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rank', $movesetRatedPokemon->getAverageWeight(), PDO::PARAM_STR);
+		$stmt->bindValue(':average_weight', $movesetRatedPokemon->getAverageWeight(), PDO::PARAM_STR);
 		$stmt->execute();
 	}
 

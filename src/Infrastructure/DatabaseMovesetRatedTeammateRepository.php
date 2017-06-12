@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammate;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface;
 use PDO;
+use PDOException;
 
 class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepositoryInterface
 {
@@ -57,9 +58,15 @@ class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepo
 		$stmt->bindValue(':format_id', $movesetRatedTeammate->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $movesetRatedTeammate->getRating(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $movesetRatedTeammate->getPokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':ability_id', $movesetRatedTeammate->getTeammateId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':teammate_id', $movesetRatedTeammate->getTeammateId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':percent', $movesetRatedTeammate->getPercent(), PDO::PARAM_STR);
-		$stmt->execute();
+		try {
+			$stmt->execute();
+		} catch (PDOException $e) {
+			// This record already exists.
+			// Bug fix for http://www.smogon.com/stats/2014-11/moveset/anythinggoes-0.txt
+			// in which Inkay has teammate Abra twice.
+		}
 	}
 
 	/**

@@ -14,7 +14,7 @@ class DatabaseShowdownFormatRepository implements ShowdownFormatRepositoryInterf
 	 * Indexed by year, then month, then Showdown format name.
 	 * The value is the format id.
 	 *
-	 * @var int[][][] $formatsToImport
+	 * @var FormatId[][][] $formatsToImport
 	 */
 	private $formatsToImport = [];
 
@@ -22,7 +22,7 @@ class DatabaseShowdownFormatRepository implements ShowdownFormatRepositoryInterf
 	 * Indexed by year, then month, then Showdown format name.
 	 * The value is the format id, or null.
 	 *
-	 * @var ?int[][][]
+	 * @var ?FormatId[][][]
 	 */
 	private $formatsToIgnore = [];
 
@@ -162,7 +162,7 @@ class DatabaseShowdownFormatRepository implements ShowdownFormatRepositoryInterf
 	{
 		// If the format is imported, return the format id.
 		if ($this->isImported($year, $month, $showdownFormatName)) {
-			return new FormatId($this->formatsToImport[$year][$month][$showdownFormatName]);
+			return $this->formatsToImport[$year][$month][$showdownFormatName];
 		}
 
 		// If the format is not known, add it to the list of unknown formats.
