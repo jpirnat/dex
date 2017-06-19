@@ -34,4 +34,13 @@ interface PokemonRepositoryInterface
 	 * @return Pokemon[]
 	 */
 	public function getAll() : array;
+
+	/**
+	 * Get other Pokémon in the same transformation group as this Pokémon.
+	 *
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return Pokemon[]
+	 */
+	public function getTransformationsOf(PokemonId $pokemonId) : array;
 }

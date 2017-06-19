@@ -190,4 +190,77 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 
 		return $pokemons;
 	}
+
+	/**
+	 * Get other Pokémon in the same transformation group as this Pokémon.
+	 *
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return Pokemon[]
+	 */
+	public function getTransformationsOf(PokemonId $pokemonId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`transformation_group_id`
+			FROM `transformation_group_pokemon`
+			WHERE `pokemon_id` = :pokemon_id
+			LIMIT 1'
+		);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$transformationGroupId = $stmt->fetchColumn();
+
+		if (!$transformationGroupId) {
+			return [];
+		}
+
+		$stmt = $this->db->prepare(
+			'SELECT
+				`p`.`id`,
+				`p`.`identifier`,
+				`p`.`pokemon_identifier`,
+				`p`.`species_id`,
+				`p`.`is_default_pokemon`,
+				`p`.`introduced_in_version_group_id`,
+				`p`.`height_m`,
+				`p`.`weight_kg`,
+				`p`.`gender_ratio`
+			FROM `transformation_group_pokemon` AS `t`
+			INNER JOIN `pokemon` AS `p`
+				ON `t`.`pokemon_id` = `p`.`id`
+			WHERE `t`.`transformation_group_id` = :transformation_group_id
+				AND `t`.`pokemon_id` <> :pokemon_id'
+		);
+		$stmt->bindValue(':transformation_group_id', $transformationGroupId, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$pokemons = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			if ($result['gender_ratio'] !== null) {
+				$genderRatio = (float) $result['gender_ratio'];
+			} else {
+				// The Pokémon is genderless.
+				$genderRatio = null;
+			}
+
+			$pokemon = new Pokemon(
+				new PokemonId($result['id']),
+				$result['identifier'],
+				$result['pokemon_identifier'],
+				new SpeciesId($result['species_id']),
+				(bool) $result['is_default_pokemon'],
+				new VersionGroupId($result['introduced_in_version_group_id']),
+				(float) $result['height_m'],
+				(float) $result['weight_kg'],
+				$genderRatio
+			);
+
+			$pokemons[$result['id']] = $pokemon;
+		}
+
+		return $pokemons;
+	}
 }
