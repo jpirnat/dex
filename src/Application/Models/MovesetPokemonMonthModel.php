@@ -3,9 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
+use Jp\Dex\Domain\Calculators\StatCalculator;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbility;
@@ -18,8 +21,6 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMove;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpread;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammate;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface;
 
@@ -42,9 +43,6 @@ class MovesetPokemonMonthModel
 
 	/** @var MovesetRatedItemRepositoryInterface $movesetRatedItemRepository */
 	private $movesetRatedItemRepository;
-
-	/** @var MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository */
-	private $movesetRatedSpreadRepository;
 
 	/** @var MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository */
 	private $movesetRatedMoveRepository;
@@ -87,9 +85,6 @@ class MovesetPokemonMonthModel
 	/** @var MovesetRatedItem[] $items */
 	private $items = [];
 
-	/** @var MovesetRatedSpread[] $spreads */
-	private $spreads = [];
-
 	/** @var MovesetRatedMove[] $moves */
 	private $moves = [];
 
@@ -108,10 +103,12 @@ class MovesetPokemonMonthModel
 	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
 	 * @param MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository
 	 * @param MovesetRatedItemRepositoryInterface $movesetRatedItemRepository
-	 * @param MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository
 	 * @param MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository
 	 * @param MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository
 	 * @param MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository
+	 * @param BaseStatRepositoryInterface $baseStatRepository
+	 * @param NatureRepositoryInterface $natureRepository
+	 * @param StatCalculator $statCalculator
 	 */
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
@@ -120,10 +117,12 @@ class MovesetPokemonMonthModel
 		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
 		MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository,
 		MovesetRatedItemRepositoryInterface $movesetRatedItemRepository,
-		MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository,
 		MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository,
 		MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository,
-		MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository
+		MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository,
+		BaseStatRepositoryInterface $baseStatRepository,
+		NatureRepositoryInterface $natureRepository,
+		StatCalculator $statCalculator
 	) {
 		$this->formatRepository = $formatRepository;
 		$this->pokemonRepository = $pokemonRepository;
@@ -131,7 +130,6 @@ class MovesetPokemonMonthModel
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
 		$this->movesetRatedAbilityRepository = $movesetRatedAbilityRepository;
 		$this->movesetRatedItemRepository = $movesetRatedItemRepository;
-		$this->movesetRatedSpreadRepository = $movesetRatedSpreadRepository;
 		$this->movesetRatedMoveRepository = $movesetRatedMoveRepository;
 		$this->movesetRatedTeammateRepository = $movesetRatedTeammateRepository;
 		$this->movesetRatedCounterRepository = $movesetRatedCounterRepository;
@@ -200,15 +198,6 @@ class MovesetPokemonMonthModel
 
 		// Get moveset rated item records.
 		$this->items = $this->movesetRatedItemRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
-			$year,
-			$month,
-			$format->getId(),
-			$rating,
-			$pokemon->getId()
-		);
-
-		// Get moveset rated spread records.
-		$this->spreads = $this->movesetRatedSpreadRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
 			$year,
 			$month,
 			$format->getId(),
@@ -342,16 +331,6 @@ class MovesetPokemonMonthModel
 	public function getItems() : array
 	{
 		return $this->items;
-	}
-
-	/**
-	 * Get the moveset rated spread records.
-	 *
-	 * @return MovesetRatedSpread[]
-	 */
-	public function getSpreads() : array
-	{
-		return $this->spreads;
 	}
 
 	/**

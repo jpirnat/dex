@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Natures;
 
-use Jp\Dex\Domain\Stats\StatId;
+use Jp\Dex\Domain\Stats\StatValueContainer;
 
 class Nature
 {
@@ -13,30 +13,24 @@ class Nature
 	/** @var string $identifier */
 	private $identifier;
 
-	/** @var StatId|null $increasedStatId */
-	private $increasedStatId;
-
-	/** @var StatId|null $decreasedStatId */
-	private $decreasedStatId;
+	/** @var StatValueContainer $statModifiers */
+	private $statModifiers;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param NatureId $natureId
 	 * @param string $identifier
-	 * @param StatId|null $increasedStatId
-	 * @param StatId|null $decreasedStatId
+	 * @param StatValueContainer $statModifiers
 	 */
 	public function __construct(
 		NatureId $natureId,
 		string $identifier,
-		?StatId $increasedStatId,
-		?StatId $decreasedStatId
+		StatValueContainer $statModifiers
 	) {
 		$this->id = $natureId;
 		$this->identifier = $identifier;
-		$this->increasedStatId = $increasedStatId;
-		$this->decreasedStatId = $decreasedStatId;
+		$this->statModifiers = $statModifiers;
 	}
 
 	/**
@@ -60,22 +54,12 @@ class Nature
 	}
 
 	/**
-	 * Get the nature's increased stat id.
+	 * Get the nature's stat modifiers.
 	 *
-	 * @return StatId|null
+	 * @return StatValueContainer
 	 */
-	public function getIncreasedStatId() : ?StatId
+	public function getStatModifiers() : StatValueContainer
 	{
-		return $this->increasedStatId;
-	}
-
-	/**
-	 * Get the nature's decreased stat id.
-	 *
-	 * @return StatId|null
-	 */
-	public function getDecreasedStatId() : ?StatId
-	{
-		return $this->decreasedStatId;
+		return $this->statModifiers;
 	}
 }

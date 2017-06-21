@@ -8,16 +8,16 @@ class StatValue
 	/** @var StatId $statId */
 	private $statId;
 
-	/** @var int $value */
+	/** @var float $value */
 	private $value;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param StatId $statId
-	 * @param int $value
+	 * @param float $value
 	 */
-	public function __construct(StatId $statId, int $value)
+	public function __construct(StatId $statId, float $value)
 	{
 		$this->statId = $statId;
 		$this->value = $value;
@@ -36,9 +36,9 @@ class StatValue
 	/**
 	 * Get the value.
 	 *
-	 * @return int
+	 * @return float
 	 */
-	public function getValue() : int
+	public function getValue() : float
 	{
 		return $this->value;
 	}

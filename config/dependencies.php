@@ -11,6 +11,7 @@ use Jp\Dex\Application\Models\LanguageModel;
 use Jp\Dex\Application\Models\LeadsModel;
 use Jp\Dex\Application\Models\LeadsMonthModel;
 use Jp\Dex\Application\Models\MovesetPokemonMonthModel;
+use Jp\Dex\Application\Models\MovesetPokemonMonthSpreadModel;
 use Jp\Dex\Application\Models\MovesModel;
 use Jp\Dex\Application\Models\NotFoundModel;
 use Jp\Dex\Application\Models\UsageModel;
@@ -24,8 +25,10 @@ use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
+use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
@@ -49,6 +52,7 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use Jp\Dex\Infrastructure\DatabaseAbilityNameRepository;
 use Jp\Dex\Infrastructure\DatabaseAbilityRepository;
+use Jp\Dex\Infrastructure\DatabaseBaseStatRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
 use Jp\Dex\Infrastructure\DatabaseItemNameRepository;
 use Jp\Dex\Infrastructure\DatabaseItemRepository;
@@ -67,6 +71,7 @@ use Jp\Dex\Infrastructure\DatabaseMovesetRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedSpreadRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository;
 use Jp\Dex\Infrastructure\DatabaseNatureNameRepository;
+use Jp\Dex\Infrastructure\DatabaseNatureRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonNameRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository;
@@ -144,6 +149,7 @@ $rule = [
 	'substitutions' => [
 		AbilityNameRepositoryInterface::class => ['instance' => DatabaseAbilityNameRepository::class],
 		AbilityRepositoryInterface::class => ['instance' => DatabaseAbilityRepository::class],
+		BaseStatRepositoryInterface::class => ['instance' => DatabaseBaseStatRepository::class],
 		FormatRepositoryInterface::class => ['instance' => DatabaseFormatRepository::class],
 		ItemNameRepositoryInterface::class => ['instance' => DatabaseItemNameRepository::class],
 		ItemRepositoryInterface::class => ['instance' => DatabaseItemRepository::class],
@@ -162,6 +168,7 @@ $rule = [
 		MovesetRatedSpreadRepositoryInterface::class => ['instance' => DatabaseMovesetRatedSpreadRepository::class],
 		MovesetRatedTeammateRepositoryInterface::class => ['instance' => DatabaseMovesetRatedTeammateRepository::class],
 		NatureNameRepositoryInterface::class => ['instance' => DatabaseNatureNameRepository::class],
+		NatureRepositoryInterface::class => ['instance' => DatabaseNatureRepository::class],
 		PokemonNameRepositoryInterface::class => ['instance' => DatabasePokemonNameRepository::class],
 		PokemonRepositoryInterface::class => ['instance' => DatabasePokemonRepository::class],
 		ShowdownAbilityRepositoryInterface::class => ['instance' => DatabaseShowdownAbilityRepository::class],
@@ -189,6 +196,7 @@ $container->dice()->addRule(LanguageModel::class, $rule);
 $container->dice()->addRule(LeadsModel::class, $rule);
 $container->dice()->addRule(LeadsMonthModel::class, $rule);
 $container->dice()->addRule(MovesetPokemonMonthModel::class, $rule);
+$container->dice()->addRule(MovesetPokemonMonthSpreadModel::class, $rule);
 $container->dice()->addRule(MovesModel::class, $rule);
 $container->dice()->addRule(NotFoundModel::class, $rule);
 $container->dice()->addRule(UsageModel::class, $rule);

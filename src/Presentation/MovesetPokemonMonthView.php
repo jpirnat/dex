@@ -4,17 +4,17 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\MovesetPokemonMonthModel;
+use Jp\Dex\Application\Models\MovesetPokemonMonthSpreadModel;
+use Jp\Dex\Application\Models\SpreadData;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
-use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbility;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounter;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMove;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpread;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammate;
 use Jp\Dex\Domain\Stats\StatId;
 use Psr\Http\Message\ResponseInterface;
@@ -29,6 +29,8 @@ class MovesetPokemonMonthView
 	/** @var MovesetPokemonMonthModel $movesetPokemonMonthModel */
 	private $movesetPokemonMonthModel;
 
+	/** @var MovesetPokemonMonthSpreadModel $movesetPokemonMonthSpreadModel */
+	private $movesetPokemonMonthSpreadModel;
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
@@ -43,9 +45,6 @@ class MovesetPokemonMonthView
 	/** @var ItemNameRepositoryInterface $itemNameRepository */
 	private $itemNameRepository;
 
-	/** @var NatureNameRepositoryInterface $natureNameRepository */
-	private $natureNameRepository;
-
 	/** @var MoveNameRepositoryInterface $moveNameRepository */
 	private $moveNameRepository;
 
@@ -54,30 +53,30 @@ class MovesetPokemonMonthView
 	 *
 	 * @param Twig_Environment $twig
 	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
+	 * @param MovesetPokemonMonthSpreadModel $movesetPokemonMonthSpreadModel
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
 	 * @param ItemNameRepositoryInterface $itemNameRepository
-	 * @param NatureNameRepositoryInterface $natureNameRepository
 	 * @param MoveNameRepositoryInterface $moveNameRepository
 	 */
 	public function __construct(
 		Twig_Environment $twig,
 		MovesetPokemonMonthModel $movesetPokemonMonthModel,
+		MovesetPokemonMonthSpreadModel $movesetPokemonMonthSpreadModel,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
 		ItemNameRepositoryInterface $itemNameRepository,
-		NatureNameRepositoryInterface $natureNameRepository,
 		MoveNameRepositoryInterface $moveNameRepository
 	) {
 		$this->twig = $twig;
 		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
+		$this->movesetPokemonMonthSpreadModel = $movesetPokemonMonthSpreadModel;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
 		$this->itemNameRepository = $itemNameRepository;
-		$this->natureNameRepository = $natureNameRepository;
 		$this->moveNameRepository = $moveNameRepository;
 	}
 
@@ -147,33 +146,52 @@ class MovesetPokemonMonthView
 		}
 
 		// Get spreads and sort by percent.
-		$movesetRatedSpreads = $this->movesetPokemonMonthModel->getSpreads();
+		$spreadDatas = $this->movesetPokemonMonthSpreadModel->getSpreadDatas();
 		uasort(
-			$movesetRatedSpreads,
-			function (MovesetRatedSpread $a, MovesetRatedSpread $b) {
+			$spreadDatas,
+			function (SpreadData $a, SpreadData $b) {
 				return $b->getPercent() <=> $a->getPercent();
 			}
 		);
 
 		// Get nature names.
 		$spreads = [];
-		foreach ($movesetRatedSpreads as $movesetRatedSpread) {
-			$natureName = $this->natureNameRepository->getByLanguageAndNature(
-				$languageId,
-				$movesetRatedSpread->getNatureId()
-			);
+		foreach ($spreadDatas as $spreadData) {
+			$natureModifiers = $spreadData->getNatureModifiers();
+			$nature = [
+				'name' => $spreadData->getNatureName(),
+				'atk' => $natureModifiers->get(new StatId(StatId::ATTACK))->getValue(),
+				'def' => $natureModifiers->get(new StatId(StatId::DEFENSE))->getValue(),
+				'spa' => $natureModifiers->get(new StatId(StatId::SPECIAL_ATTACK))->getValue(),
+				'spd' => $natureModifiers->get(new StatId(StatId::SPECIAL_DEFENSE))->getValue(),
+				'spe' => $natureModifiers->get(new StatId(StatId::SPEED))->getValue(),
+			];
 
-			$evSpread = $movesetRatedSpread->getEvSpread();
-
-			$spreads[] = [
-				'natureName' => $natureName->getName(),
+			$evSpread = $spreadData->getEvSpread();
+			$evs = [
 				'hp' => $evSpread->get(new StatId(StatId::HP))->getValue(),
 				'atk' => $evSpread->get(new StatId(StatId::ATTACK))->getValue(),
 				'def' => $evSpread->get(new StatId(StatId::DEFENSE))->getValue(),
 				'spa' => $evSpread->get(new StatId(StatId::SPECIAL_ATTACK))->getValue(),
 				'spd' => $evSpread->get(new StatId(StatId::SPECIAL_DEFENSE))->getValue(),
 				'spe' => $evSpread->get(new StatId(StatId::SPEED))->getValue(),
-				'percent' => $movesetRatedSpread->getPercent(),
+			];
+
+			$statSpread = $spreadData->getStatSpread();
+			$stats = [
+				'hp' => $statSpread->get(new StatId(StatId::HP))->getValue(),
+				'atk' => $statSpread->get(new StatId(StatId::ATTACK))->getValue(),
+				'def' => $statSpread->get(new StatId(StatId::DEFENSE))->getValue(),
+				'spa' => $statSpread->get(new StatId(StatId::SPECIAL_ATTACK))->getValue(),
+				'spd' => $statSpread->get(new StatId(StatId::SPECIAL_DEFENSE))->getValue(),
+				'spe' => $statSpread->get(new StatId(StatId::SPEED))->getValue(),
+			];
+
+			$spreads[] = [
+				'nature' => $nature,
+				'evs' => $evs,
+				'percent' => $spreadData->getPercent(),
+				'stats' => $stats,
 			];
 		}
 

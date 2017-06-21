@@ -32,7 +32,7 @@
 			{% for ability in abilities %}
 				<tr>
 					<td>{{ ability.name|e }}</td>
-					<td>{{ ability.percent|e }}</td>
+					<td>{{ ability.percent|e }}%</td>
 				</tr>
 			{% endfor %}
 		</tbody>
@@ -47,7 +47,7 @@
 			{% for item in items %}
 				<tr>
 					<td>{{ item.name|e }}</td>
-					<td>{{ item.percent|e }}</td>
+					<td>{{ item.percent|e }}%</td>
 				</tr>
 			{% endfor %}
 		</tbody>
@@ -55,14 +55,84 @@
 
 	<table>
 		<thead>
-			<th>Spreads</th>
+			<th>Nature</th>
+			<th>EVs</th>
 			<th>%</th>
+			<th>Stats</th>
 		</thead>
 		<tbody>
 			{% for spread in spreads %}
 				<tr>
-					<td>{{ spread.natureName|e }}:{{ spread.hp|e }}/{{ spread.atk|e }}/{{ spread.def|e }}/{{ spread.spa|e }}/{{ spread.spd|e }}/{{ spread.spe|e }}</td>
-					<td>{{ spread.percent|e }}</td>
+					<td>{{ spread.nature.name|e }}</td>
+					<td>
+						{{ spread.evs.hp|e }}
+						/
+						<span
+							{% if spread.nature.atk > 1 %}
+								class="nature-plus"
+							{% elseif spread.nature.atk < 1 %}
+								class="nature-minus"
+							{% endif %}
+						>
+							{{ spread.evs.atk|e }}
+						</span>
+						/
+						<span
+							{% if spread.nature.def > 1 %}
+								class="nature-plus"
+							{% elseif spread.nature.def < 1 %}
+								class="nature-minus"
+							{% endif %}
+						>
+							{{ spread.evs.def|e }}
+						</span>
+						/
+						<span
+							{% if spread.nature.spa > 1 %}
+								class="nature-plus"
+							{% elseif spread.nature.spa < 1 %}
+								class="nature-minus"
+							{% endif %}
+						>
+							{{ spread.evs.spa|e }}
+						</span>
+						/
+						<span
+							{% if spread.nature.spd > 1 %}
+								class="nature-plus"
+							{% elseif spread.nature.spd < 1 %}
+								class="nature-minus"
+							{% endif %}
+						>
+							{{ spread.evs.spd|e }}
+						</span>
+						/
+						<span
+							{% if spread.nature.spe > 1 %}
+								class="nature-plus"
+							{% elseif spread.nature.spe < 1 %}
+								class="nature-minus"
+							{% endif %}
+						>
+							{{ spread.evs.spe|e }}
+						</span>
+					</td>
+					<td>
+						{{ spread.percent|e }}%
+					</td>
+					<td>
+						{{ spread.stats.hp|e }}
+						/
+						{{ spread.stats.atk|e }}
+						/
+						{{ spread.stats.def|e }}
+						/
+						{{ spread.stats.spa|e }}
+						/
+						{{ spread.stats.spd|e }}
+						/
+						{{ spread.stats.spe|e }}
+					</td>
 				</tr>
 			{% endfor %}
 		</tbody>
@@ -77,7 +147,7 @@
 			{% for move in moves %}
 				<tr>
 					<td>{{ move.name|e }}</td>
-					<td>{{ move.percent|e }}</td>
+					<td>{{ move.percent|e }}%</td>
 				</tr>
 			{% endfor %}
 		</tbody>
@@ -96,7 +166,7 @@
 							{{ teammate.name|e }}
 						</a>
 					</td>
-					<td>{{ teammate.percent|e }}</td>
+					<td>{{ teammate.percent|e }}%</td>
 				</tr>
 			{% endfor %}
 		</tbody>
@@ -122,11 +192,10 @@
 					<td>{{ counter.number1|e }}</td>
 					<td>{{ counter.number2|e }}</td>
 					<td>{{ counter.number3|e }}</td>
-					<td>{{ counter.percentKnockedOut|e }}</td>
-					<td>{{ counter.percentSwitchedOut|e }}</td>
+					<td>{{ counter.percentKnockedOut|e }}%</td>
+					<td>{{ counter.percentSwitchedOut|e }}%</td>
 				</tr>
 			{% endfor %}
 		</tbody>
 	</table>
-
 {% endblock %}

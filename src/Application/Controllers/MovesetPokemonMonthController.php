@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Controllers;
 
 use Jp\Dex\Application\Models\MovesetPokemonMonthModel;
+use Jp\Dex\Application\Models\MovesetPokemonMonthSpreadModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -12,15 +13,21 @@ class MovesetPokemonMonthController
 	/** @var MovesetPokemonMonthModel $movesetPokemonMonthModel */
 	private $movesetPokemonMonthModel;
 
+	/** @var MovesetPokemonMonthSpreadModel $movesetPokemonMonthSpreadModel */
+	private $movesetPokemonMonthSpreadModel;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
+	 * @param MovesetPokemonMonthSpreadModel $movesetPokemonMonthSpreadModel
 	 */
 	public function __construct(
-		MovesetPokemonMonthModel $movesetPokemonMonthModel
+		MovesetPokemonMonthModel $movesetPokemonMonthModel,
+		MovesetPokemonMonthSpreadModel $movesetPokemonMonthSpreadModel
 	) {
 		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
+		$this->movesetPokemonMonthSpreadModel = $movesetPokemonMonthSpreadModel;
 	}
 
 	/**
@@ -42,6 +49,15 @@ class MovesetPokemonMonthController
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
 		$this->movesetPokemonMonthModel->setData(
+			$year,
+			$month,
+			$formatIdentifier,
+			$rating,
+			$pokemonIdentifier,
+			$languageId
+		);
+
+		$this->movesetPokemonMonthSpreadModel->setData(
 			$year,
 			$month,
 			$formatIdentifier,
