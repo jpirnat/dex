@@ -67,55 +67,15 @@
 					<td>
 						{{ spread.evs.hp|e }}
 						/
-						<span
-							{% if spread.nature.atk > 1 %}
-								class="nature-plus"
-							{% elseif spread.nature.atk < 1 %}
-								class="nature-minus"
-							{% endif %}
-						>
-							{{ spread.evs.atk|e }}
-						</span>
+						{{ spread.evs.atk|e }}{{ spread.nature.atk|e }}
 						/
-						<span
-							{% if spread.nature.def > 1 %}
-								class="nature-plus"
-							{% elseif spread.nature.def < 1 %}
-								class="nature-minus"
-							{% endif %}
-						>
-							{{ spread.evs.def|e }}
-						</span>
+						{{ spread.evs.def|e }}{{ spread.nature.def|e }}
 						/
-						<span
-							{% if spread.nature.spa > 1 %}
-								class="nature-plus"
-							{% elseif spread.nature.spa < 1 %}
-								class="nature-minus"
-							{% endif %}
-						>
-							{{ spread.evs.spa|e }}
-						</span>
+						{{ spread.evs.spa|e }}{{ spread.nature.spa|e }}
 						/
-						<span
-							{% if spread.nature.spd > 1 %}
-								class="nature-plus"
-							{% elseif spread.nature.spd < 1 %}
-								class="nature-minus"
-							{% endif %}
-						>
-							{{ spread.evs.spd|e }}
-						</span>
+						{{ spread.evs.spd|e }}{{ spread.nature.spd|e }}
 						/
-						<span
-							{% if spread.nature.spe > 1 %}
-								class="nature-plus"
-							{% elseif spread.nature.spe < 1 %}
-								class="nature-minus"
-							{% endif %}
-						>
-							{{ spread.evs.spe|e }}
-						</span>
+						{{ spread.evs.spe|e }}{{ spread.nature.spe|e }}
 					</td>
 					<td>
 						{{ spread.percent|e }}%

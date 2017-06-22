@@ -154,39 +154,53 @@ class MovesetPokemonMonthView
 			}
 		);
 
-		// Get nature names.
+		// Compile all spread data into the right form..
 		$spreads = [];
+		$statIds = [
+			'hp' =>  new StatId(StatId::HP),
+			'atk' => new StatId(StatId::ATTACK),
+			'def' => new StatId(StatId::DEFENSE),
+			'spa' => new StatId(StatId::SPECIAL_ATTACK),
+			'spd' => new StatId(StatId::SPECIAL_DEFENSE),
+			'spe' => new StatId(StatId::SPEED),
+		];
 		foreach ($spreadDatas as $spreadData) {
+			// Create nature array with nature name and stat modifiers.
 			$natureModifiers = $spreadData->getNatureModifiers();
-			$nature = [
-				'name' => $spreadData->getNatureName(),
-				'atk' => $natureModifiers->get(new StatId(StatId::ATTACK))->getValue(),
-				'def' => $natureModifiers->get(new StatId(StatId::DEFENSE))->getValue(),
-				'spa' => $natureModifiers->get(new StatId(StatId::SPECIAL_ATTACK))->getValue(),
-				'spd' => $natureModifiers->get(new StatId(StatId::SPECIAL_DEFENSE))->getValue(),
-				'spe' => $natureModifiers->get(new StatId(StatId::SPEED))->getValue(),
-			];
+			$nature['name'] = $spreadData->getNatureName();
+			foreach ($statIds as $statAbbr => $statId) {
+				// No natures modify HP.
+				if ($statId->value() === StatId::HP) {
+					continue;
+				}
 
+				$natureModifier = $natureModifiers->get($statId)->getValue();
+				if ($natureModifier > 1) {
+					$natureModifierSign = '+';
+				} elseif ($natureModifier < 1) {
+					$natureModifierSign = '-';
+				} else {
+					$natureModifierSign = '';
+				}
+
+				$nature[$statAbbr] = $natureModifierSign;
+			}
+
+			// Create EVs array with each stat's EV.
 			$evSpread = $spreadData->getEvSpread();
-			$evs = [
-				'hp' => $evSpread->get(new StatId(StatId::HP))->getValue(),
-				'atk' => $evSpread->get(new StatId(StatId::ATTACK))->getValue(),
-				'def' => $evSpread->get(new StatId(StatId::DEFENSE))->getValue(),
-				'spa' => $evSpread->get(new StatId(StatId::SPECIAL_ATTACK))->getValue(),
-				'spd' => $evSpread->get(new StatId(StatId::SPECIAL_DEFENSE))->getValue(),
-				'spe' => $evSpread->get(new StatId(StatId::SPEED))->getValue(),
-			];
+			$evs = [];
+			foreach ($statIds as $statAbbr => $statId) {
+				$evs[$statAbbr] = $evSpread->get($statId)->getValue();
+			}
 
+			// Create stats array with each calculated stat.
 			$statSpread = $spreadData->getStatSpread();
-			$stats = [
-				'hp' => $statSpread->get(new StatId(StatId::HP))->getValue(),
-				'atk' => $statSpread->get(new StatId(StatId::ATTACK))->getValue(),
-				'def' => $statSpread->get(new StatId(StatId::DEFENSE))->getValue(),
-				'spa' => $statSpread->get(new StatId(StatId::SPECIAL_ATTACK))->getValue(),
-				'spd' => $statSpread->get(new StatId(StatId::SPECIAL_DEFENSE))->getValue(),
-				'spe' => $statSpread->get(new StatId(StatId::SPEED))->getValue(),
-			];
+			$stats = [];
+			foreach ($statIds as $statAbbr => $statId) {
+				$stats[$statAbbr] = $statSpread->get($statId)->getValue();
+			}
 
+			// Put it all together!
 			$spreads[] = [
 				'nature' => $nature,
 				'evs' => $evs,
