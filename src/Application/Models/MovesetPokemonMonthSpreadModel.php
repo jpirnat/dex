@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Calculators\StatCalculator;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
-use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
+use Jp\Dex\Domain\Natures\NatureStatModifierRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
@@ -29,8 +29,8 @@ class MovesetPokemonMonthSpreadModel
 	/** @var BaseStatRepositoryInterface $baseStatRepository */
 	private $baseStatRepository;
 
-	/** @var NatureRepositoryInterface $natureRepository */
-	private $natureRepository;
+	/** @var NatureStatModifierRepositoryInterface $natureStatModifierRepository */
+	private $natureStatModifierRepository;
 
 	/** @var NatureNameRepositoryInterface $natureNameRepository */
 	private $natureNameRepository;
@@ -49,7 +49,7 @@ class MovesetPokemonMonthSpreadModel
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository
 	 * @param BaseStatRepositoryInterface $baseStatRepository
-	 * @param NatureRepositoryInterface $natureRepository
+	 * @param NatureStatModifierRepositoryInterface $natureStatModifierRepository
 	 * @param NatureNameRepositoryInterface $natureNameRepository
 	 * @param StatCalculator $statCalculator
 	 */
@@ -58,7 +58,7 @@ class MovesetPokemonMonthSpreadModel
 		PokemonRepositoryInterface $pokemonRepository,
 		MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository,
 		BaseStatRepositoryInterface $baseStatRepository,
-		NatureRepositoryInterface $natureRepository,
+		NatureStatModifierRepositoryInterface $natureStatModifierRepository,
 		NatureNameRepositoryInterface $natureNameRepository,
 		StatCalculator $statCalculator
 	) {
@@ -66,7 +66,7 @@ class MovesetPokemonMonthSpreadModel
 		$this->pokemonRepository = $pokemonRepository;
 		$this->movesetRatedSpreadRepository = $movesetRatedSpreadRepository;
 		$this->baseStatRepository = $baseStatRepository;
-		$this->natureRepository = $natureRepository;
+		$this->natureStatModifierRepository = $natureStatModifierRepository;
 		$this->natureNameRepository = $natureNameRepository;
 		$this->statCalculator = $statCalculator;
 	}
@@ -132,7 +132,7 @@ class MovesetPokemonMonthSpreadModel
 			);
 
 			// Get this spread's nature's stat modifiers.
-			$nature = $this->natureRepository->getById(
+			$natureStatModifiers = $this->natureStatModifierRepository->getByNature(
 				$movesetRatedSpread->getNatureId()
 			);
 
@@ -141,12 +141,12 @@ class MovesetPokemonMonthSpreadModel
 				$ivSpread,
 				$movesetRatedSpread->getEvSpread(),
 				$format->getLevel(),
-				$nature->getStatModifiers()
+				$natureStatModifiers
 			);
 
 			$this->spreadDatas[] = new SpreadData(
 				$natureName->getName(),
-				$nature->getStatModifiers(),
+				$natureStatModifiers,
 				$movesetRatedSpread->getEvSpread(),
 				$movesetRatedSpread->getPercent(),
 				$statSpread

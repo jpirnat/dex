@@ -7,9 +7,6 @@ use Jp\Dex\Domain\Natures\Nature;
 use Jp\Dex\Domain\Natures\NatureId;
 use Jp\Dex\Domain\Natures\NatureNotFoundException;
 use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
-use Jp\Dex\Domain\Stats\StatId;
-use Jp\Dex\Domain\Stats\StatValue;
-use Jp\Dex\Domain\Stats\StatValueContainer;
 use PDO;
 
 class DatabaseNatureRepository implements NatureRepositoryInterface
@@ -40,9 +37,7 @@ class DatabaseNatureRepository implements NatureRepositoryInterface
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`identifier`,
-				`increased_stat_id`,
-				`decreased_stat_id`
+				`identifier`
 			FROM `natures`
 			WHERE `id` = :nature_id
 			LIMIT 1'
@@ -57,24 +52,9 @@ class DatabaseNatureRepository implements NatureRepositoryInterface
 			);
 		}
 
-		$statModifiers = new StatValueContainer();
-		$statModifiers->add(new StatValue(new StatId(StatId::ATTACK), 1));
-		$statModifiers->add(new StatValue(new StatId(StatId::DEFENSE), 1));
-		$statModifiers->add(new StatValue(new StatId(StatId::SPECIAL_ATTACK), 1));
-		$statModifiers->add(new StatValue(new StatId(StatId::SPECIAL_DEFENSE), 1));
-		$statModifiers->add(new StatValue(new StatId(StatId::SPEED), 1));
-		// And then overwrite with the real modifiers.
-		if ($result['increased_stat_id'] !== null) {
-			$statModifiers->add(new StatValue(new StatId($result['increased_stat_id']), 1.1));
-		}
-		if ($result['decreased_stat_id'] !== null) {
-			$statModifiers->add(new StatValue(new StatId($result['decreased_stat_id']), 0.9));
-		}
-
 		$nature = new Nature(
 			$natureId,
-			$result['identifier'],
-			$statModifiers
+			$result['identifier']
 		);
 
 		return $nature;

@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Natures;
 
-use Jp\Dex\Domain\Stats\StatValueContainer;
-
 class Nature
 {
 	/** @var NatureId $id */
@@ -13,24 +11,18 @@ class Nature
 	/** @var string $identifier */
 	private $identifier;
 
-	/** @var StatValueContainer $statModifiers */
-	private $statModifiers;
-
 	/**
 	 * Constructor.
 	 *
 	 * @param NatureId $natureId
 	 * @param string $identifier
-	 * @param StatValueContainer $statModifiers
 	 */
 	public function __construct(
 		NatureId $natureId,
-		string $identifier,
-		StatValueContainer $statModifiers
+		string $identifier
 	) {
 		$this->id = $natureId;
 		$this->identifier = $identifier;
-		$this->statModifiers = $statModifiers;
 	}
 
 	/**
@@ -51,15 +43,5 @@ class Nature
 	public function getIdentifier() : string
 	{
 		return $this->identifier;
-	}
-
-	/**
-	 * Get the nature's stat modifiers.
-	 *
-	 * @return StatValueContainer
-	 */
-	public function getStatModifiers() : StatValueContainer
-	{
-		return $this->statModifiers;
 	}
 }

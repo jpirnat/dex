@@ -163,59 +163,6 @@ insert into `characteristics` (
 ;
 
 
-create table if not exists `natures`
-(
-`id` tinyint unsigned not null,
-
-`identifier` varchar(7) not null,
-`increased_stat_id` tinyint unsigned not null,
-`decreased_stat_id` tinyint unsigned not null,
-
-primary key (`id`),
-unique key (`identifier`),
-foreign key (`increased_stat_id`) references `stats` (`id`)
-	on delete restrict
-	on update cascade,
-foreign key (`decreased_stat_id`) references `stats` (`id`)
-	on delete restrict
-	on update cascade
-) engine = InnoDB;
-
-
-insert into `natures` (
-	`id`,
-	`identifier`,
-	`increased_stat_id`,
-	`decreased_stat_id`
-) values
-(1, "hardy", 2, 2),
-(2, "lonely", 2, 3),
-(3, "brave", 2, 4),
-(4, "adamant", 2, 8),
-(5, "naughty", 2, 9),
-(6, "bold", 3, 2),
-(7, "docile", 3, 3),
-(8, "relaxed", 3, 4),
-(9, "impish", 3, 8),
-(10, "lax", 3, 9),
-(11, "timid", 4, 2),
-(12, "hasty", 4, 3),
-(13, "serious", 4, 4),
-(14, "jolly", 4, 8),
-(15, "naive", 4, 9),
-(16, "modest", 8, 2),
-(17, "mild", 8, 3),
-(18, "quiet", 8, 4),
-(19, "bashful", 8, 8),
-(20, "rash", 8, 9),
-(21, "calm", 9, 2),
-(22, "gentle", 9, 3),
-(23, "sassy", 9, 4),
-(24, "careful", 9, 8),
-(25, "quirky", 9, 9)
-;
-
-
 create table if not exists `experience_groups`
 (
 `id` tinyint unsigned not null,
