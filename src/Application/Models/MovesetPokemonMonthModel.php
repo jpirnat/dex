@@ -3,26 +3,25 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
-use Jp\Dex\Domain\Calculators\StatCalculator;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\AbilityData;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\AbilityModel;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\CounterData;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\CounterModel;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\ItemData;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\ItemModel;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\MoveData;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\MoveModel;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\SpreadData;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\SpreadModel;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\TeammateData;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\TeammateModel;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbility;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounter;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounterRepositoryInterface;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMove;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammate;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface;
 
 class MovesetPokemonMonthModel
 {
@@ -38,20 +37,23 @@ class MovesetPokemonMonthModel
 	/** @var MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository */
 	private $movesetRatedPokemonRepository;
 
-	/** @var MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository */
-	private $movesetRatedAbilityRepository;
+	/** @var AbilityModel $abilityModel */
+	private $abilityModel;
 
-	/** @var MovesetRatedItemRepositoryInterface $movesetRatedItemRepository */
-	private $movesetRatedItemRepository;
+	/** @var ItemModel $itemModel */
+	private $itemModel;
 
-	/** @var MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository */
-	private $movesetRatedMoveRepository;
+	/** @var SpreadModel $spreadModel */
+	private $spreadModel;
 
-	/** @var MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository */
-	private $movesetRatedTeammateRepository;
+	/** @var MoveModel $moveModel */
+	private $moveModel;
 
-	/** @var MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository */
-	private $movesetRatedCounterRepository;
+	/** @var TeammateModel $teammateModel */
+	private $teammateModel;
+
+	/** @var CounterModel $counterModel */
+	private $counterModel;
 
 
 	/** @var int $year */
@@ -79,21 +81,6 @@ class MovesetPokemonMonthModel
 	/** @var MovesetRatedPokemon $movesetRatedPokemon */
 	private $movesetRatedPokemon;
 
-	/** @var MovesetRatedAbility[] $abilities */
-	private $abilities = [];
-
-	/** @var MovesetRatedItem[] $items */
-	private $items = [];
-
-	/** @var MovesetRatedMove[] $moves */
-	private $moves = [];
-
-	/** @var MovesetRatedTeammate[] $teammates */
-	private $teammates = [];
-
-	/** @var MovesetRatedCounter[] $counters */
-	private $counters = [];
-
 	/**
 	 * Constructor.
 	 *
@@ -101,38 +88,35 @@ class MovesetPokemonMonthModel
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
 	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
-	 * @param MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository
-	 * @param MovesetRatedItemRepositoryInterface $movesetRatedItemRepository
-	 * @param MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository
-	 * @param MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository
-	 * @param MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository
-	 * @param BaseStatRepositoryInterface $baseStatRepository
-	 * @param NatureRepositoryInterface $natureRepository
-	 * @param StatCalculator $statCalculator
+	 * @param AbilityModel $abilityModel
+	 * @param ItemModel $itemModel
+	 * @param SpreadModel $spreadModel
+	 * @param MoveModel $moveModel
+	 * @param TeammateModel $teammateModel
+	 * @param CounterModel $counterModel
 	 */
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
-		MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository,
-		MovesetRatedItemRepositoryInterface $movesetRatedItemRepository,
-		MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository,
-		MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository,
-		MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository,
-		BaseStatRepositoryInterface $baseStatRepository,
-		NatureRepositoryInterface $natureRepository,
-		StatCalculator $statCalculator
+		AbilityModel $abilityModel,
+		ItemModel $itemModel,
+		SpreadModel $spreadModel,
+		MoveModel $moveModel,
+		TeammateModel $teammateModel,
+		CounterModel $counterModel
 	) {
 		$this->formatRepository = $formatRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->movesetPokemonRepository = $movesetPokemonRepository;
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
-		$this->movesetRatedAbilityRepository = $movesetRatedAbilityRepository;
-		$this->movesetRatedItemRepository = $movesetRatedItemRepository;
-		$this->movesetRatedMoveRepository = $movesetRatedMoveRepository;
-		$this->movesetRatedTeammateRepository = $movesetRatedTeammateRepository;
-		$this->movesetRatedCounterRepository = $movesetRatedCounterRepository;
+		$this->abilityModel = $abilityModel;
+		$this->itemModel = $itemModel;
+		$this->spreadModel = $spreadModel;
+		$this->moveModel = $moveModel;
+		$this->teammateModel = $teammateModel;
+		$this->counterModel = $counterModel;
 	}
 
 	/**
@@ -187,49 +171,64 @@ class MovesetPokemonMonthModel
 			$pokemon->getId()
 		);
 
-		// Get moveset rated ability records.
-		$this->abilities = $this->movesetRatedAbilityRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+		// Get ability data.
+		$this->abilityModel->setData(
 			$year,
 			$month,
 			$format->getId(),
 			$rating,
-			$pokemon->getId()
+			$pokemon->getId(),
+			$languageId
 		);
 
-		// Get moveset rated item records.
-		$this->items = $this->movesetRatedItemRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+		// Get item data.
+		$this->itemModel->setData(
 			$year,
 			$month,
 			$format->getId(),
 			$rating,
-			$pokemon->getId()
+			$pokemon->getId(),
+			$languageId
 		);
 
-		// Get moveset rated move records.
-		$this->moves = $this->movesetRatedMoveRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+		// Get spread data.
+		$this->spreadModel->setData(
 			$year,
 			$month,
 			$format->getId(),
 			$rating,
-			$pokemon->getId()
+			$pokemon->getId(),
+			$languageId
 		);
 
-		// Get moveset rated teammate records.
-		$this->teammates = $this->movesetRatedTeammateRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+		// Get move data.
+		$this->moveModel->setData(
 			$year,
 			$month,
 			$format->getId(),
 			$rating,
-			$pokemon->getId()
+			$pokemon->getId(),
+			$languageId
 		);
 
-		// Get moveset rated counter records.
-		$this->counters = $this->movesetRatedCounterRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+		// Get teammate data.
+		$this->teammateModel->setData(
 			$year,
 			$month,
 			$format->getId(),
 			$rating,
-			$pokemon->getId()
+			$pokemon->getId(),
+			$languageId
+		);
+
+		// Get counter data.
+		$this->counterModel->setData(
+			$year,
+			$month,
+			$format->getId(),
+			$rating,
+			$pokemon->getId(),
+			$languageId
 		);
 	}
 
@@ -314,52 +313,62 @@ class MovesetPokemonMonthModel
 	}
 
 	/**
-	 * Get the moveset rated ability records.
+	 * Get the ability datas.
 	 *
-	 * @return MovesetRatedAbility[]
+	 * @return AbilityData[]
 	 */
-	public function getAbilities() : array
+	public function getAbilityDatas() : array
 	{
-		return $this->abilities;
+		return $this->abilityModel->getAbilityDatas();
 	}
 
 	/**
-	 * Get the moveset rated item records.
+	 * Get the the item datas.
 	 *
-	 * @return MovesetRatedItem[]
+	 * @return ItemData[]
 	 */
-	public function getItems() : array
+	public function getItemDatas() : array
 	{
-		return $this->items;
+		return $this->itemModel->getItemDatas();
 	}
 
 	/**
-	 * Get the moveset rated move records.
+	 * Get the spread datas.
 	 *
-	 * @return MovesetRatedMove[]
+	 * @return SpreadData[]
 	 */
-	public function getMoves() : array
+	public function getSpreadDatas() : array
 	{
-		return $this->moves;
+		return $this->spreadModel->getSpreadDatas();
 	}
 
 	/**
-	 * Get the moveset rated teammate records.
+	 * Get the move datas.
 	 *
-	 * @return MovesetRatedTeammate[]
+	 * @return MoveData[]
 	 */
-	public function getTeammates() : array
+	public function getMoveDatas() : array
 	{
-		return $this->teammates;
+		return $this->moveModel->getMoveDatas();
 	}
 
 	/**
-	 * Get the moveset rated counter records.
+	 * Get the teammate datas.
 	 *
-	 * @return MovesetRatedCounter[]
+	 * @return TeammateData[]
 	 */
-	public function getCounters() : array
+	public function getTeammateDatas() : array
 	{
-		return $this->counters;
+		return $this->teammateModel->getTeammateDatas();
+	}
+
+	/**
+	 * Get the counter datas.
+	 *
+	 * @return CounterData[]
+	 */
+	public function getCounterDatas() : array
+	{
+		return $this->counterModel->getCounterDatas();
 	}
 }

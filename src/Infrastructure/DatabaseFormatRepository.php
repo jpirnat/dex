@@ -26,6 +26,52 @@ class DatabaseFormatRepository implements FormatRepositoryInterface
 	}
 
 	/**
+	 * Get a format by its id.
+	 *
+	 * @param FormatId $formatId
+	 *
+	 * @throws FormatNotFoundException if no format exists with this id.
+	 *
+	 * @return Format
+	 */
+	public function getById(FormatId $formatId) : Format
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`identifier`,
+				`generation`,
+				`level`,
+				`field_size`,
+				`team_size`,
+				`in_battle_team_size`
+			FROM `formats`
+			WHERE `id` = :format_id
+			LIMIT 1'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_STR);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			throw new FormatNotFoundException(
+				'No format exists with id ' . $formatId->value()
+			);
+		}
+
+		$format = new Format(
+			$formatId,
+			$result['identifier'],
+			new Generation($result['generation']),
+			$result['level'],
+			$result['field_size'],
+			$result['team_size'],
+			$result['in_battle_team_size']
+		);
+
+		return $format;
+	}
+
+	/**
 	 * Get a format by its identifier.
 	 *
 	 * @param string $identifier

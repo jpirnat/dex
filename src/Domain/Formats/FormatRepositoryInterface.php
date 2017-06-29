@@ -6,6 +6,17 @@ namespace Jp\Dex\Domain\Formats;
 interface FormatRepositoryInterface
 {
 	/**
+	 * Get a format by its id.
+	 *
+	 * @param FormatId $formatId
+	 *
+	 * @throws FormatNotFoundException if no format exists with this id.
+	 *
+	 * @return Format
+	 */
+	public function getById(FormatId $formatId) : Format;
+
+	/**
 	 * Get a format by its identifier.
 	 *
 	 * @param string $identifier

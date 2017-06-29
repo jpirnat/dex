@@ -1,27 +1,25 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models;
+namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
 use Jp\Dex\Domain\Calculators\StatCalculator;
+use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureStatModifierRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 
-class MovesetPokemonMonthSpreadModel
+class SpreadModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
-
-	/** @var PokemonRepositoryInterface $pokemonRepository */
-	private $pokemonRepository;
 
 	/** @var MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository */
 	private $movesetRatedSpreadRepository;
@@ -38,7 +36,6 @@ class MovesetPokemonMonthSpreadModel
 	/** @var StatCalculator $statCalculator */
 	private $statCalculator;
 
-
 	/** @var SpreadData[] $spreadDatas */
 	private $spreadDatas = [];
 
@@ -46,7 +43,6 @@ class MovesetPokemonMonthSpreadModel
 	 * Constructor.
 	 *
 	 * @param FormatRepositoryInterface $formatRepository
-	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository
 	 * @param BaseStatRepositoryInterface $baseStatRepository
 	 * @param NatureStatModifierRepositoryInterface $natureStatModifierRepository
@@ -55,7 +51,6 @@ class MovesetPokemonMonthSpreadModel
 	 */
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
-		PokemonRepositoryInterface $pokemonRepository,
 		MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository,
 		BaseStatRepositoryInterface $baseStatRepository,
 		NatureStatModifierRepositoryInterface $natureStatModifierRepository,
@@ -63,7 +58,6 @@ class MovesetPokemonMonthSpreadModel
 		StatCalculator $statCalculator
 	) {
 		$this->formatRepository = $formatRepository;
-		$this->pokemonRepository = $pokemonRepository;
 		$this->movesetRatedSpreadRepository = $movesetRatedSpreadRepository;
 		$this->baseStatRepository = $baseStatRepository;
 		$this->natureStatModifierRepository = $natureStatModifierRepository;
@@ -78,9 +72,9 @@ class MovesetPokemonMonthSpreadModel
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param string $formatIdentifier
+	 * @param FormatId $formatId
 	 * @param int $rating
-	 * @param string $pokemonIdentifier
+	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
 	 *
 	 * @return void
@@ -88,16 +82,13 @@ class MovesetPokemonMonthSpreadModel
 	public function setData(
 		int $year,
 		int $month,
-		string $formatIdentifier,
+		FormatId $formatId,
 		int $rating,
-		string $pokemonIdentifier,
+		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : void {
 		// Get the format.
-		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
-
-		// Get the Pokémon.
-		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
+		$format = $this->formatRepository->getById($formatId);
 
 		// Get moveset rated spread records.
 		$movesetRatedSpreads = $this->movesetRatedSpreadRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
@@ -105,13 +96,13 @@ class MovesetPokemonMonthSpreadModel
 			$month,
 			$format->getId(),
 			$rating,
-			$pokemon->getId()
+			$pokemonId
 		);
 
 		// Get the Pokémon's base stats.
 		$baseStats = $this->baseStatRepository->getByGenerationAndPokemon(
 			$format->getGeneration(),
-			$pokemon->getId()
+			$pokemonId
 		);
 
 		// Assume the Pokémon has perfect IVs.

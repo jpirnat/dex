@@ -3,19 +3,15 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\MovesetPokemonMonth\AbilityData;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\CounterData;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\ItemData;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\MoveData;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\SpreadData;
+use Jp\Dex\Application\Models\MovesetPokemonMonth\TeammateData;
 use Jp\Dex\Application\Models\MovesetPokemonMonthModel;
-use Jp\Dex\Application\Models\MovesetPokemonMonthSpreadModel;
-use Jp\Dex\Application\Models\SpreadData;
-use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
-use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
-use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbility;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounter;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMove;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammate;
 use Jp\Dex\Domain\Stats\StatId;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
@@ -29,9 +25,6 @@ class MovesetPokemonMonthView
 	/** @var MovesetPokemonMonthModel $movesetPokemonMonthModel */
 	private $movesetPokemonMonthModel;
 
-	/** @var MovesetPokemonMonthSpreadModel $movesetPokemonMonthSpreadModel */
-	private $movesetPokemonMonthSpreadModel;
-
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
 
@@ -39,45 +32,24 @@ class MovesetPokemonMonthView
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
 
-	/** @var AbilityNameRepositoryInterface $abilityNameRepository */
-	private $abilityNameRepository;
-
-	/** @var ItemNameRepositoryInterface $itemNameRepository */
-	private $itemNameRepository;
-
-	/** @var MoveNameRepositoryInterface $moveNameRepository */
-	private $moveNameRepository;
-
 	/**
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
 	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
-	 * @param MovesetPokemonMonthSpreadModel $movesetPokemonMonthSpreadModel
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param AbilityNameRepositoryInterface $abilityNameRepository
-	 * @param ItemNameRepositoryInterface $itemNameRepository
-	 * @param MoveNameRepositoryInterface $moveNameRepository
 	 */
 	public function __construct(
 		Twig_Environment $twig,
 		MovesetPokemonMonthModel $movesetPokemonMonthModel,
-		MovesetPokemonMonthSpreadModel $movesetPokemonMonthSpreadModel,
 		PokemonRepositoryInterface $pokemonRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
-		AbilityNameRepositoryInterface $abilityNameRepository,
-		ItemNameRepositoryInterface $itemNameRepository,
-		MoveNameRepositoryInterface $moveNameRepository
+		PokemonNameRepositoryInterface $pokemonNameRepository
 	) {
 		$this->twig = $twig;
 		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
-		$this->movesetPokemonMonthSpreadModel = $movesetPokemonMonthSpreadModel;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->abilityNameRepository = $abilityNameRepository;
-		$this->itemNameRepository = $itemNameRepository;
-		$this->moveNameRepository = $moveNameRepository;
 	}
 
 	/**
@@ -100,53 +72,43 @@ class MovesetPokemonMonthView
 		);
 
 		// Get abilities and sort by percent.
-		$movesetRatedAbilities = $this->movesetPokemonMonthModel->getAbilities();
+		$abilityDatas = $this->movesetPokemonMonthModel->getAbilityDatas();
 		uasort(
-			$movesetRatedAbilities,
-			function (MovesetRatedAbility $a, MovesetRatedAbility $b) {
+			$abilityDatas,
+			function (AbilityData $a, AbilityData $b) {
 				return $b->getPercent() <=> $a->getPercent();
 			}
 		);
 
-		// Get ability names.
+		// Compile all ability data into the right form.
 		$abilities = [];
-		foreach ($movesetRatedAbilities as $movesetRatedAbility) {
-			$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
-				$languageId,
-				$movesetRatedAbility->getAbilityId()
-			);
-
+		foreach ($abilityDatas as $abilityData) {
 			$abilities[] = [
-				'name' => $abilityName->getName(),
-				'percent' => $movesetRatedAbility->getPercent(),
+				'name' => $abilityData->getAbilityName(),
+				'percent' => $abilityData->getPercent(),
 			];
 		}
 
 		// Get items and sort by percent.
-		$movesetRatedItems = $this->movesetPokemonMonthModel->getItems();
+		$itemDatas = $this->movesetPokemonMonthModel->getItemDatas();
 		uasort(
-			$movesetRatedItems,
-			function (MovesetRatedItem $a, MovesetRatedItem $b) {
+			$itemDatas,
+			function (ItemData $a, ItemData $b) {
 				return $b->getPercent() <=> $a->getPercent();
 			}
 		);
 
-		// Get item names.
+		// Compile all item data into the right form.
 		$items = [];
-		foreach ($movesetRatedItems as $movesetRatedItem) {
-			$itemName = $this->itemNameRepository->getByLanguageAndItem(
-				$languageId,
-				$movesetRatedItem->getItemId()
-			);
-
+		foreach ($itemDatas as $itemData) {
 			$items[] = [
-				'name' => $itemName->getName(),
-				'percent' => $movesetRatedItem->getPercent(),
+				'name' => $itemData->getItemName(),
+				'percent' => $itemData->getPercent(),
 			];
 		}
 
 		// Get spreads and sort by percent.
-		$spreadDatas = $this->movesetPokemonMonthSpreadModel->getSpreadDatas();
+		$spreadDatas = $this->movesetPokemonMonthModel->getSpreadDatas();
 		uasort(
 			$spreadDatas,
 			function (SpreadData $a, SpreadData $b) {
@@ -210,85 +172,62 @@ class MovesetPokemonMonthView
 		}
 
 		// Get moves and sort by percent.
-		$movesetRatedMoves = $this->movesetPokemonMonthModel->getMoves();
+		$moveDatas = $this->movesetPokemonMonthModel->getMoveDatas();
 		uasort(
-			$movesetRatedMoves,
-			function (MovesetRatedMove $a, MovesetRatedMove $b) {
+			$moveDatas,
+			function (MoveData $a, MoveData $b) {
 				return $b->getPercent() <=> $a->getPercent();
 			}
 		);
 
-		// Get move names.
+		// Compile all move data into the right form.
 		$moves = [];
-		foreach ($movesetRatedMoves as $movesetRatedMove) {
-			$moveName = $this->moveNameRepository->getByLanguageAndMove(
-				$languageId,
-				$movesetRatedMove->getMoveId()
-			);
-
+		foreach ($moveDatas as $moveData) {
 			$moves[] = [
-				'name' => $moveName->getName(),
-				'percent' => $movesetRatedMove->getPercent(),
+				'name' => $moveData->getMoveName(),
+				'percent' => $moveData->getPercent(),
 			];
 		}
 
 		// Get teammates and sort by percent.
-		$movesetRatedTeammates = $this->movesetPokemonMonthModel->getTeammates();
+		$teammateDatas = $this->movesetPokemonMonthModel->getTeammateDatas();
 		uasort(
-			$movesetRatedTeammates,
-			function (MovesetRatedTeammate $a, MovesetRatedTeammate $b) {
+			$teammateDatas,
+			function (TeammateData $a, TeammateData $b) {
 				return $b->getPercent() <=> $a->getPercent();
 			}
 		);
 
 		// Get teammate names.
 		$teammates = [];
-		foreach ($movesetRatedTeammates as $movesetRatedTeammate) {
-			$teammateName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-				$languageId,
-				$movesetRatedTeammate->getTeammateId()
-			);
-
-			$teammatePokemon = $this->pokemonRepository->getById(
-				$movesetRatedTeammate->getTeammateId()
-			);
-
+		foreach ($teammateDatas as $teammateData) {
 			$teammates[] = [
-				'identifier' => $teammatePokemon->getIdentifier(),
-				'name' => $teammateName->getName(),
-				'percent' => $movesetRatedTeammate->getPercent(),
+				'name' => $teammateData->getPokemonName(),
+				'identifier' => $teammateData->getPokemonIdentifier(),
+				'percent' => $teammateData->getPercent(),
 			];
 		}
 
 		// Get counters and sort by percent.
-		$movesetRatedCounters = $this->movesetPokemonMonthModel->getCounters();
+		$counterDatas = $this->movesetPokemonMonthModel->getCounterDatas();
 		uasort(
-			$movesetRatedCounters,
-			function (MovesetRatedCounter $a, MovesetRatedCounter $b) {
+			$counterDatas,
+			function (CounterData $a, CounterData $b) {
 				return $b->getNumber1() <=> $a->getNumber1();
 			}
 		);
 
-		// Get counter names.
+		// Compile all counter data into the right form.
 		$counters = [];
-		foreach ($movesetRatedCounters as $movesetRatedCounter) {
-			$counterName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-				$languageId,
-				$movesetRatedCounter->getCounterId()
-			);
-
-			$counterPokemon = $this->pokemonRepository->getById(
-				$movesetRatedCounter->getCounterId()
-			);
-
+		foreach ($counterDatas as $counterData) {
 			$counters[] = [
-				'identifier' => $counterPokemon->getIdentifier(),
-				'name' => $counterName->getName(),
-				'number1' => $movesetRatedCounter->getNumber1(),
-				'number2' => $movesetRatedCounter->getNumber2(),
-				'number3' => $movesetRatedCounter->getNumber3(),
-				'percentKnockedOut' => $movesetRatedCounter->getPercentKnockedOut(),
-				'percentSwitchedOut' => $movesetRatedCounter->getPercentSwitchedOut(),
+				'name' => $counterData->getPokemonName(),
+				'identifier' => $counterData->getPokemonIdentifier(),
+				'number1' => $counterData->getNumber1(),
+				'number2' => $counterData->getNumber2(),
+				'number3' => $counterData->getNumber3(),
+				'percentKnockedOut' => $counterData->getPercentKnockedOut(),
+				'percentSwitchedOut' => $counterData->getPercentSwitchedOut(),
 			];
 		}
 
