@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Import\Structs;
+namespace Jp\Dex\Domain;
 
 class YearMonth
 {
@@ -28,7 +28,7 @@ class YearMonth
 	 *
 	 * @return int
 	 */
-	public function year() : int
+	public function getYear() : int
 	{
 		return $this->year;
 	}
@@ -38,7 +38,7 @@ class YearMonth
 	 *
 	 * @return int
 	 */
-	public function month() : int
+	public function getMonth() : int
 	{
 		return $this->month;
 	}

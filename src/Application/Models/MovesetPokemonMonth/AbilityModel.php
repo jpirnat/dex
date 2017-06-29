@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface;
+use Jp\Dex\Domain\YearMonth;
 
 class AbilityModel
 {
@@ -38,8 +39,8 @@ class AbilityModel
 	 * Get moveset data to recreate a stats moveset file, such as
 	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single Pokémon.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param YearMonth $thisMonth
+	 * @param YearMonth $lastMonth
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
@@ -48,17 +49,26 @@ class AbilityModel
 	 * @return void
 	 */
 	public function setData(
-		int $year,
-		int $month,
+		YearMonth $thisMonth,
+		YearMonth $lastMonth,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : void {
-		// Get moveset rated ability records.
+		// Get moveset rated ability records for this month.
 		$movesetRatedAbilities = $this->movesetRatedAbilityRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
-			$year,
-			$month,
+			$thisMonth->getYear(),
+			$thisMonth->getMonth(),
+			$formatId,
+			$rating,
+			$pokemonId
+		);
+
+		// Get moveset rated ability records for last month.
+		$lastMonthAbilities = $this->movesetRatedAbilityRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+			$lastMonth->getYear(),
+			$lastMonth->getMonth(),
 			$formatId,
 			$rating,
 			$pokemonId
@@ -66,15 +76,25 @@ class AbilityModel
 
 		// Get each ability's data.
 		foreach ($movesetRatedAbilities as $movesetRatedAbility) {
+			$abilityId = $movesetRatedAbility->getAbilityId();
+
 			// Get this ability's name.
 			$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
 				$languageId,
-				$movesetRatedAbility->getAbilityId()
+				$abilityId
 			);
+
+			// Get this ability's percent from last month.
+			if (isset($lastMonthAbilities[$abilityId->value()])) {
+				$change = $movesetRatedAbility->getPercent() - $lastMonthAbilities[$abilityId->value()]->getPercent();
+			} else {
+				$change = $movesetRatedAbility->getPercent();
+			}
 
 			$this->abilityDatas[] = new AbilityData(
 				$abilityName->getName(),
-				$movesetRatedAbility->getPercent()
+				$movesetRatedAbility->getPercent(),
+				$change
 			);
 		}
 	}

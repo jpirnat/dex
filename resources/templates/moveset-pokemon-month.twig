@@ -27,12 +27,22 @@
 		<thead>
 			<th>Abilities</th>
 			<th>%</th>
+			<th>Δ</th>
 		</thead>
 		<tbody>
 			{% for ability in abilities %}
 				<tr>
 					<td>{{ ability.name|e }}</td>
 					<td>{{ ability.percent|e }}%</td>
+					<td
+						{% if ability.change > 0%}
+							class="percent-plus"
+						{% elseif ability.change < 0 %}
+							class="percent-minus"
+						{% endif %}
+					>
+						{{ ability.change|e }}%
+					</td>
 				</tr>
 			{% endfor %}
 		</tbody>
@@ -42,12 +52,22 @@
 		<thead>
 			<th>Items</th>
 			<th>%</th>
+			<th>Δ</th>
 		</thead>
 		<tbody>
 			{% for item in items %}
 				<tr>
 					<td>{{ item.name|e }}</td>
 					<td>{{ item.percent|e }}%</td>
+					<td
+						{% if item.change > 0%}
+							class="percent-plus"
+						{% elseif item.change < 0 %}
+							class="percent-minus"
+						{% endif %}
+					>
+						{{ item.change|e }}%
+					</td>
 				</tr>
 			{% endfor %}
 		</tbody>
@@ -102,12 +122,22 @@
 		<thead>
 			<th>Moves</th>
 			<th>%</th>
+			<th>Δ</th>
 		</thead>
 		<tbody>
 			{% for move in moves %}
 				<tr>
 					<td>{{ move.name|e }}</td>
 					<td>{{ move.percent|e }}%</td>
+					<td
+						{% if move.change > 0%}
+							class="percent-plus"
+						{% elseif move.change < 0 %}
+							class="percent-minus"
+						{% endif %}
+					>
+						{{ move.change|e }}%
+					</td>
 				</tr>
 			{% endfor %}
 		</tbody>

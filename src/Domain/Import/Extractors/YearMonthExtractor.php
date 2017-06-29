@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Import\Extractors;
 
 use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidFilenameException;
-use Jp\Dex\Domain\Import\Structs\YearMonth;
+use Jp\Dex\Domain\YearMonth;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
 

@@ -19,7 +19,7 @@ interface MovesetRatedCounterRepositoryInterface
 
 	/**
 	 * Get moveset rated counter records by year, month, format, rating, and
-	 * Pokémon.
+	 * Pokémon. Indexed by counter id value.
 	 *
 	 * @param int $year
 	 * @param int $month

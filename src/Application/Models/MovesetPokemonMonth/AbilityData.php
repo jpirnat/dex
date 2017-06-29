@@ -11,18 +11,24 @@ class AbilityData
 	/** @var float $percent */
 	private $percent;
 
+	/** @var float $change */
+	private $change;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param string $abilityName
 	 * @param float $percent
+	 * @param float $change
 	 */
 	public function __construct(
 		string $abilityName,
-		float $percent
+		float $percent,
+		float $change
 	) {
 		$this->abilityName = $abilityName;
 		$this->percent = $percent;
+		$this->change = $change;
 	}
 
 	/**
@@ -43,5 +49,15 @@ class AbilityData
 	public function getPercent() : float
 	{
 		return $this->percent;
+	}
+
+	/**
+	 * Get the change.
+	 *
+	 * @return float
+	 */
+	public function getChange() : float
+	{
+		return $this->change;
 	}
 }

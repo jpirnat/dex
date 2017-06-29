@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
+use DateInterval;
+use DateTime;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\AbilityData;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\AbilityModel;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\CounterData;
@@ -22,6 +24,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\YearMonth;
 
 class MovesetPokemonMonthModel
 {
@@ -154,6 +157,16 @@ class MovesetPokemonMonthModel
 		// Get the Pokémon.
 		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
 
+		// Calculate the previous month.
+		$thisMonth = new YearMonth($year, $month);
+		$date = new DateTime();
+		$date->setDate($year, $month, 1);
+		$date->sub(new DateInterval('P1M'));
+		$lastMonth = new YearMonth(
+			(int) $date->format('Y'),
+			(int) $date->format('m')
+		);
+
 		// Get the moveset Pokémon record.
 		$this->movesetPokemon = $this->movesetPokemonRepository->getByYearAndMonthAndFormatAndPokemon(
 			$year,
@@ -173,8 +186,8 @@ class MovesetPokemonMonthModel
 
 		// Get ability data.
 		$this->abilityModel->setData(
-			$year,
-			$month,
+			$thisMonth,
+			$lastMonth,
 			$format->getId(),
 			$rating,
 			$pokemon->getId(),
@@ -183,8 +196,8 @@ class MovesetPokemonMonthModel
 
 		// Get item data.
 		$this->itemModel->setData(
-			$year,
-			$month,
+			$thisMonth,
+			$lastMonth,
 			$format->getId(),
 			$rating,
 			$pokemon->getId(),
@@ -203,8 +216,8 @@ class MovesetPokemonMonthModel
 
 		// Get move data.
 		$this->moveModel->setData(
-			$year,
-			$month,
+			$thisMonth,
+			$lastMonth,
 			$format->getId(),
 			$rating,
 			$pokemon->getId(),

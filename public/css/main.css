@@ -7,3 +7,11 @@ html {
 *, *:before, *:after {
 	box-sizing: inherit;
 }
+
+.percent-plus {
+	color: green;
+}
+
+.percent-minus {
+	color: red;
+}

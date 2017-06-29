@@ -65,7 +65,7 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 
 	/**
 	 * Get moveset rated move records by year, month, format, rating, and
-	 * Pokémon.
+	 * Pokémon. Indexed by move id value.
 	 *
 	 * @param int $year
 	 * @param int $month
@@ -103,7 +103,7 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 		$movesetRatedMoves = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedMoves[] = new MovesetRatedMove(
+			$movesetRatedMoves[$result['move_id']] = new MovesetRatedMove(
 				$year,
 				$month,
 				$formatId,

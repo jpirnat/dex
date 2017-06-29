@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
+use Jp\Dex\Domain\YearMonth;
 
 class MoveModel
 {
@@ -38,8 +39,8 @@ class MoveModel
 	 * Get moveset data to recreate a stats moveset file, such as
 	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single Pokémon.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param YearMonth $thisMonth
+	 * @param YearMonth $lastMonth
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
@@ -48,17 +49,26 @@ class MoveModel
 	 * @return void
 	 */
 	public function setData(
-		int $year,
-		int $month,
+		YearMonth $thisMonth,
+		YearMonth $lastMonth,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : void {
-		// Get moveset rated move records.
+		// Get moveset rated move records for this month.
 		$movesetRatedMoves = $this->movesetRatedMoveRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
-			$year,
-			$month,
+			$thisMonth->getYear(),
+			$thisMonth->getMonth(),
+			$formatId,
+			$rating,
+			$pokemonId
+		);
+
+		// Get moveset rated move records for last month.
+		$lastMonthMoves = $this->movesetRatedMoveRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+			$lastMonth->getYear(),
+			$lastMonth->getMonth(),
 			$formatId,
 			$rating,
 			$pokemonId
@@ -66,15 +76,25 @@ class MoveModel
 
 		// Get each move's data.
 		foreach ($movesetRatedMoves as $movesetRatedMove) {
+			$moveId = $movesetRatedMove->getMoveId();
+
 			// Get this move's name.
 			$moveName = $this->moveNameRepository->getByLanguageAndMove(
 				$languageId,
-				$movesetRatedMove->getMoveId()
+				$moveId
 			);
+
+			// Get this move's percent from last month.
+			if (isset($lastMonthMoves[$moveId->value()])) {
+				$change = $movesetRatedMove->getPercent() - $lastMonthMoves[$moveId->value()]->getPercent();
+			} else {
+				$change = $movesetRatedMove->getPercent();
+			}
 
 			$this->moveDatas[] = new MoveData(
 				$moveName->getName(),
-				$movesetRatedMove->getPercent()
+				$movesetRatedMove->getPercent(),
+				$change
 			);
 		}
 	}

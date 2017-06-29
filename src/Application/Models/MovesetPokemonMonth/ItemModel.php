@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
+use Jp\Dex\Domain\YearMonth;
 
 class ItemModel
 {
@@ -38,8 +39,8 @@ class ItemModel
 	 * Get moveset data to recreate a stats moveset file, such as
 	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single Pokémon.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param YearMonth $thisMonth
+	 * @param YearMonth $lastMonth
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
@@ -48,17 +49,26 @@ class ItemModel
 	 * @return void
 	 */
 	public function setData(
-		int $year,
-		int $month,
+		YearMonth $thisMonth,
+		YearMonth $lastMonth,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : void {
-		// Get moveset rated item records.
+		// Get moveset rated item records for this month.
 		$movesetRatedItems = $this->movesetRatedItemRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
-			$year,
-			$month,
+			$thisMonth->getYear(),
+			$thisMonth->getMonth(),
+			$formatId,
+			$rating,
+			$pokemonId
+		);
+
+		// Get moveset rated item records for last month.
+		$lastMonthItems = $this->movesetRatedItemRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+			$lastMonth->getYear(),
+			$lastMonth->getMonth(),
 			$formatId,
 			$rating,
 			$pokemonId
@@ -66,15 +76,25 @@ class ItemModel
 
 		// Get each item's data.
 		foreach ($movesetRatedItems as $movesetRatedItem) {
+			$itemId = $movesetRatedItem->getItemId();
+
 			// Get this item's name.
 			$itemName = $this->itemNameRepository->getByLanguageAndItem(
 				$languageId,
-				$movesetRatedItem->getItemId()
+				$itemId
 			);
+
+			// Get this item's percent from last month.
+			if (isset($lastMonthItems[$itemId->value()])) {
+				$change = $movesetRatedItem->getPercent() - $lastMonthItems[$itemId->value()]->getPercent();
+			} else {
+				$change = $movesetRatedItem->getPercent();
+			}
 
 			$this->itemDatas[] = new ItemData(
 				$itemName->getName(),
-				$movesetRatedItem->getPercent()
+				$movesetRatedItem->getPercent(),
+				$change
 			);
 		}
 	}

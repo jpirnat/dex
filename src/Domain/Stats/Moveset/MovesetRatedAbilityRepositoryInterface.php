@@ -20,7 +20,7 @@ interface MovesetRatedAbilityRepositoryInterface
 
 	/**
 	 * Get moveset rated ability records by year, month, format, rating, and
-	 * Pokémon.
+	 * Pokémon. Indexed by ability id value.
 	 *
 	 * @param int $year
 	 * @param int $month

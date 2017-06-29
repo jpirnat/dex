@@ -80,8 +80,8 @@ class MonthDirectoryImporter
 
 		// Get the year and month from the month directory url.
 		$yearMonth = $this->yearMonthExtractor->extractYearMonth($url);
-		$year = $yearMonth->year();
-		$month = $yearMonth->month();
+		$year = $yearMonth->getYear();
+		$month = $yearMonth->getMonth();
 
 		// Import each usage file.
 		foreach ($links as $link) {

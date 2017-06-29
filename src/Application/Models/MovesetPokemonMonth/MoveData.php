@@ -11,18 +11,24 @@ class MoveData
 	/** @var float $percent */
 	private $percent;
 
+	/** @var float $change */
+	private $change;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param string $moveName
 	 * @param float $percent
+	 * @param float $change
 	 */
 	public function __construct(
 		string $moveName,
-		float $percent
+		float $percent,
+		float $change
 	) {
 		$this->moveName = $moveName;
 		$this->percent = $percent;
+		$this->change = $change;
 	}
 
 	/**
@@ -43,5 +49,15 @@ class MoveData
 	public function getPercent() : float
 	{
 		return $this->percent;
+	}
+
+	/**
+	 * Get the change.
+	 *
+	 * @return float
+	 */
+	public function getChange() : float
+	{
+		return $this->change;
 	}
 }

@@ -19,7 +19,7 @@ interface MovesetRatedTeammateRepositoryInterface
 
 	/**
 	 * Get moveset rated teammate records by year, month, format, rating, and
-	 * Pokémon.
+	 * Pokémon. Indexed by teammate id value.
 	 *
 	 * @param int $year
 	 * @param int $month

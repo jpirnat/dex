@@ -68,8 +68,8 @@ class LeadsDirectoryParser
 
 		// Get the year and month from the moveset directory url.
 		$yearMonth = $this->yearMonthExtractor->extractYearMonth($url);
-		$year = $yearMonth->year();
-		$month = $yearMonth->month();
+		$year = $yearMonth->getYear();
+		$month = $yearMonth->getMonth();
 
 		foreach ($links as $link) {
 			// Get the format and rating from the filename of the link.

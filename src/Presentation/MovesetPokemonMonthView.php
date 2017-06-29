@@ -86,6 +86,7 @@ class MovesetPokemonMonthView
 			$abilities[] = [
 				'name' => $abilityData->getAbilityName(),
 				'percent' => $abilityData->getPercent(),
+				'change' => $abilityData->getChange(),
 			];
 		}
 
@@ -104,6 +105,7 @@ class MovesetPokemonMonthView
 			$items[] = [
 				'name' => $itemData->getItemName(),
 				'percent' => $itemData->getPercent(),
+				'change' => $itemData->getChange(),
 			];
 		}
 
@@ -186,6 +188,7 @@ class MovesetPokemonMonthView
 			$moves[] = [
 				'name' => $moveData->getMoveName(),
 				'percent' => $moveData->getPercent(),
+				'change' => $moveData->getChange(),
 			];
 		}
 

@@ -77,7 +77,7 @@ class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterReposi
 
 	/**
 	 * Get moveset rated counter records by year, month, format, rating, and
-	 * Pokémon.
+	 * Pokémon. Indexed by counter id value.
 	 *
 	 * @param int $year
 	 * @param int $month
@@ -119,7 +119,7 @@ class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterReposi
 		$movesetRatedCounters = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedCounters[] = new MovesetRatedCounter(
+			$movesetRatedCounters[$result['counter_id']] = new MovesetRatedCounter(
 				$year,
 				$month,
 				$formatId,

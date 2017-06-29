@@ -115,8 +115,8 @@ class MonthDirectoryParser
 
 		// Get the year and month from the moveset directory url.
 		$yearMonth = $this->yearMonthExtractor->extractYearMonth($url);
-		$year = $yearMonth->year();
-		$month = $yearMonth->month();
+		$year = $yearMonth->getYear();
+		$month = $yearMonth->getMonth();
 
 		// Parse each usage file link.
 		foreach ($links as $link) {

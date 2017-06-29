@@ -20,7 +20,7 @@ interface MovesetRatedItemRepositoryInterface
 
 	/**
 	 * Get moveset rated item records by year, month, format, rating, and
-	 * Pokémon.
+	 * Pokémon. Indexed by item id value.
 	 *
 	 * @param int $year
 	 * @param int $month

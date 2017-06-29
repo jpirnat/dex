@@ -71,7 +71,7 @@ class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepo
 
 	/**
 	 * Get moveset rated teammate records by year, month, format, rating, and
-	 * Pokémon.
+	 * Pokémon. Indexed by teammate id value.
 	 *
 	 * @param int $year
 	 * @param int $month
@@ -109,7 +109,7 @@ class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepo
 		$movesetRatedTeammates = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedTeammates[] = new MovesetRatedTeammate(
+			$movesetRatedTeammates[$result['teammate_id']] = new MovesetRatedTeammate(
 				$year,
 				$month,
 				$formatId,
