@@ -75,7 +75,7 @@ class MovesetPokemonMonthView
 		$abilityDatas = $this->movesetPokemonMonthModel->getAbilityDatas();
 		uasort(
 			$abilityDatas,
-			function (AbilityData $a, AbilityData $b) {
+			function (AbilityData $a, AbilityData $b) : int {
 				return $b->getPercent() <=> $a->getPercent();
 			}
 		);
@@ -94,7 +94,7 @@ class MovesetPokemonMonthView
 		$itemDatas = $this->movesetPokemonMonthModel->getItemDatas();
 		uasort(
 			$itemDatas,
-			function (ItemData $a, ItemData $b) {
+			function (ItemData $a, ItemData $b) : int {
 				return $b->getPercent() <=> $a->getPercent();
 			}
 		);
@@ -113,7 +113,7 @@ class MovesetPokemonMonthView
 		$spreadDatas = $this->movesetPokemonMonthModel->getSpreadDatas();
 		uasort(
 			$spreadDatas,
-			function (SpreadData $a, SpreadData $b) {
+			function (SpreadData $a, SpreadData $b) : int {
 				return $b->getPercent() <=> $a->getPercent();
 			}
 		);
@@ -177,7 +177,7 @@ class MovesetPokemonMonthView
 		$moveDatas = $this->movesetPokemonMonthModel->getMoveDatas();
 		uasort(
 			$moveDatas,
-			function (MoveData $a, MoveData $b) {
+			function (MoveData $a, MoveData $b) : int {
 				return $b->getPercent() <=> $a->getPercent();
 			}
 		);
@@ -196,7 +196,7 @@ class MovesetPokemonMonthView
 		$teammateDatas = $this->movesetPokemonMonthModel->getTeammateDatas();
 		uasort(
 			$teammateDatas,
-			function (TeammateData $a, TeammateData $b) {
+			function (TeammateData $a, TeammateData $b) : int {
 				return $b->getPercent() <=> $a->getPercent();
 			}
 		);
@@ -215,7 +215,7 @@ class MovesetPokemonMonthView
 		$counterDatas = $this->movesetPokemonMonthModel->getCounterDatas();
 		uasort(
 			$counterDatas,
-			function (CounterData $a, CounterData $b) {
+			function (CounterData $a, CounterData $b) : int {
 				return $b->getNumber1() <=> $a->getNumber1();
 			}
 		);

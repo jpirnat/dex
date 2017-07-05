@@ -11,10 +11,13 @@
 				<th>Rank</th>
 				<th>Pokémon</th>
 				<th>Usage %</th>
+				<th>Usage Δ</th>
 				<th>Raw</th>
 				<th>%</th>
+				<th>Δ</th>
 				<th>Real</th>
 				<th>%</th>
+				<th>Δ</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -27,10 +30,37 @@
 						</a>
 					</td>
 					<td>{{ pokemon.usagePercent|e }}</td>
+					<td
+						{% if pokemon.usageChange > 0%}
+							class="percent-plus"
+						{% elseif pokemon.usageChange < 0 %}
+							class="percent-minus"
+						{% endif %}
+					>
+						{{ pokemon.usageChange|e }}%
+					</td>
 					<td>{{ pokemon.raw|e }}</td>
 					<td>{{ pokemon.rawPercent|e }}</td>
+					<td
+						{% if pokemon.rawChange > 0%}
+							class="percent-plus"
+						{% elseif pokemon.rawChange < 0 %}
+							class="percent-minus"
+						{% endif %}
+					>
+						{{ pokemon.rawChange|e }}%
+					</td>
 					<td>{{ pokemon.real|e }}</td>
 					<td>{{ pokemon.realPercent|e }}</td>
+					<td
+						{% if pokemon.realChange > 0%}
+							class="percent-plus"
+						{% elseif pokemon.realChange < 0 %}
+							class="percent-minus"
+						{% endif %}
+					>
+						{{ pokemon.realChange|e }}%
+					</td>
 				</tr>
 			{% endfor %}
 		</tbody>

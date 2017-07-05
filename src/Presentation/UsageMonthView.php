@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\UsageMonth\UsageData;
 use Jp\Dex\Application\Models\UsageMonthModel;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemon;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
 use Zend\Diactoros\Response;
@@ -39,37 +39,30 @@ class UsageMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$usagePokemons = $this->usageMonthModel->getUsagePokemon();
-		$usageRatedPokemons = $this->usageMonthModel->getUsageRatedPokemon();
-		$pokemons = $this->usageMonthModel->getPokemon();
-		$pokemonNames = $this->usageMonthModel->getPokemonNames();
-
-		// Sort usage rated Pokémon records by rank ascending.
+		// Get usage data and sort by rank.
+		$usageDatas = $this->usageMonthModel->getUsageDatas();
 		uasort(
-			$usageRatedPokemons,
-			function (UsageRatedPokemon $a, UsageRatedPokemon $b) : int {
+			$usageDatas,
+			function (UsageData $a, UsageData $b) : int {
 				return $a->getRank() <=> $b->getRank();
 			}
 		);
 
+		// Compile all usage data into the right form.
 		$data = [];
-
-		foreach ($usageRatedPokemons as $pokemonIdValue => $usageRatedPokemon) {
-			$pokemon = $pokemons[$pokemonIdValue];
-			$pokemonName = $pokemonNames[$pokemonIdValue];
-			$usagePokemon = $usagePokemons[$pokemonIdValue];
-			// TODO: Error handling if the key does not exist?
-
+		foreach ($usageDatas as $usageData) {
 			$data[] = [
-				'rank' => $usageRatedPokemon->getRank(),
-				'id' => $pokemonIdValue,
-				'identifier' => $pokemon->getIdentifier(),
-				'name' => $pokemonName->getName(),
-				'usagePercent' => $usageRatedPokemon->getUsagePercent(),
-				'raw' => $usagePokemon->getRaw(),
-				'rawPercent' => $usagePokemon->getRawPercent(),
-				'real' => $usagePokemon->getReal(),
-				'realPercent' => $usagePokemon->getRealPercent(),
+				'rank' => $usageData->getRank(),
+				'name' => $usageData->getPokemonName(),
+				'identifier' => $usageData->getPokemonIdentifier(),
+				'usagePercent' => $usageData->getUsagePercent(),
+				'usageChange' => $usageData->getUsageChange(),
+				'raw' => $usageData->getRaw(),
+				'rawPercent' => $usageData->getRawPercent(),
+				'rawChange' => $usageData->getRawChange(),
+				'real' => $usageData->getReal(),
+				'realPercent' => $usageData->getRealPercent(),
+				'realChange' => $usageData->getRealChange(),
 			];
 		}
 

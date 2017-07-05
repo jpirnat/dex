@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
-use DateInterval;
-use DateTime;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\AbilityData;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\AbilityModel;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\CounterData;
@@ -33,6 +31,9 @@ class MovesetPokemonMonthModel
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
+
+	/** @var DateHelper $dateHelper */
+	private $dateHelper;
 
 	/** @var MovesetPokemonRepositoryInterface $movesetPokemonRepository */
 	private $movesetPokemonRepository;
@@ -89,6 +90,7 @@ class MovesetPokemonMonthModel
 	 *
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
+	 * @param DateHelper $dateHelper
 	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
 	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
 	 * @param AbilityModel $abilityModel
@@ -101,6 +103,7 @@ class MovesetPokemonMonthModel
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
 		PokemonRepositoryInterface $pokemonRepository,
+		DateHelper $dateHelper,
 		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
 		AbilityModel $abilityModel,
@@ -112,6 +115,7 @@ class MovesetPokemonMonthModel
 	) {
 		$this->formatRepository = $formatRepository;
 		$this->pokemonRepository = $pokemonRepository;
+		$this->dateHelper = $dateHelper;
 		$this->movesetPokemonRepository = $movesetPokemonRepository;
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
 		$this->abilityModel = $abilityModel;
@@ -159,13 +163,7 @@ class MovesetPokemonMonthModel
 
 		// Calculate the previous month.
 		$thisMonth = new YearMonth($year, $month);
-		$date = new DateTime();
-		$date->setDate($year, $month, 1);
-		$date->sub(new DateInterval('P1M'));
-		$lastMonth = new YearMonth(
-			(int) $date->format('Y'),
-			(int) $date->format('m')
-		);
+		$lastMonth = $this->dateHelper->getPreviousMonth($thisMonth);
 
 		// Get the moveset Pokémon record.
 		$this->movesetPokemon = $this->movesetPokemonRepository->getByYearAndMonthAndFormatAndPokemon(
