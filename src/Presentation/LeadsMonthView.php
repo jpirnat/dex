@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\LeadsMonth\LeadsData;
 use Jp\Dex\Application\Models\LeadsMonthModel;
-use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemon;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
 use Zend\Diactoros\Response;
@@ -39,40 +39,32 @@ class LeadsMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$leadsPokemons = $this->leadsMonthModel->getLeadsPokemon();
-		$leadsRatedPokemons = $this->leadsMonthModel->getLeadsRatedPokemon();
-		$pokemons = $this->leadsMonthModel->getPokemon();
-		$pokemonNames = $this->leadsMonthModel->getPokemonNames();
-
-		// Sort leads rated Pokémon records by rank ascending.
+		// Get usage data and sort by rank.
+		$leadsDatas = $this->leadsMonthModel->getLeadsDatas();
 		uasort(
-			$leadsRatedPokemons,
-			function (LeadsRatedPokemon $a, LeadsRatedPokemon $b) : int {
+			$leadsDatas,
+			function (LeadsData $a, LeadsData $b) : int {
 				return $a->getRank() <=> $b->getRank();
 			}
 		);
 
+		// Compile all usage data into the right form.
 		$data = [];
-
-		foreach ($leadsRatedPokemons as $pokemonIdValue => $leadsRatedPokemon) {
-			$pokemon = $pokemons[$pokemonIdValue];
-			$pokemonName = $pokemonNames[$pokemonIdValue];
-			$leadsPokemon = $leadsPokemons[$pokemonIdValue];
-			// TODO: Error handling if the key does not exist?
-
+		foreach ($leadsDatas as $leadsData) {
 			$data[] = [
-				'rank' => $leadsRatedPokemon->getRank(),
-				'id' => $pokemonIdValue,
-				'identifier' => $pokemon->getIdentifier(),
-				'name' => $pokemonName->getName(),
-				'usagePercent' => $leadsRatedPokemon->getUsagePercent(),
-				'raw' => $leadsPokemon->getRaw(),
-				'rawPercent' => $leadsPokemon->getRawPercent(),
+				'rank' => $leadsData->getRank(),
+				'name' => $leadsData->getPokemonName(),
+				'identifier' => $leadsData->getPokemonIdentifier(),
+				'usagePercent' => $leadsData->getUsagePercent(),
+				'usageChange' => $leadsData->getUsageChange(),
+				'raw' => $leadsData->getRaw(),
+				'rawPercent' => $leadsData->getRawPercent(),
+				'rawChange' => $leadsData->getRawChange(),
 			];
 		}
 
 		$content = $this->twig->render(
-			'leads-month.twig',
+			'html/leads-month.twig',
 			[
 				'year' => $this->leadsMonthModel->getYear(),
 				'month' => $this->leadsMonthModel->getMonth(),

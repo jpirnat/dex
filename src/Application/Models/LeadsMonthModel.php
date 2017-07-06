@@ -3,21 +3,22 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
+use Jp\Dex\Application\Models\LeadsMonth\LeadsData;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Pokemon\Pokemon;
-use Jp\Dex\Domain\Pokemon\PokemonName;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Leads\LeadsPokemon;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemon;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\YearMonth;
 
 class LeadsMonthModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
+
+	/** @var DateHelper $dateHelper */
+	private $dateHelper;
 
 	/** @var LeadsPokemonRepositoryInterface $leadsPokemonRepository */
 	private $leadsPokemonRepository;
@@ -43,22 +44,14 @@ class LeadsMonthModel
 	/** @var int $rating */
 	private $rating;
 
-	/** @var LeadsPokemon[] $leadsPokemon */
-	private $leadsPokemon = [];
-
-	/** @var LeadsRatedPokemon[] $leadsRatedPokemon */
-	private $leadsRatedPokemon = [];
-
-	/** @var Pokemon[] $pokemon */
-	private $pokemon = [];
-
-	/** @var PokemonName[] $pokemonNames */
-	private $pokemonNames = [];
+	/** @var LeadsData[] $leadsDatas */
+	private $leadsDatas = [];
 
 	/**
 	 * Constructor.
 	 *
 	 * @param FormatRepositoryInterface $formatRepository
+	 * @param DateHelper $dateHelper
 	 * @param LeadsPokemonRepositoryInterface $leadsPokemonRepository
 	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
@@ -66,12 +59,14 @@ class LeadsMonthModel
 	 */
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
+		DateHelper $dateHelper,
 		LeadsPokemonRepositoryInterface $leadsPokemonRepository,
 		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository
 	) {
 		$this->formatRepository = $formatRepository;
+		$this->dateHelper = $dateHelper;
 		$this->leadsPokemonRepository = $leadsPokemonRepository;
 		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
@@ -105,26 +100,84 @@ class LeadsMonthModel
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
-		// Get leads Pokémon records.
-		$this->leadsPokemon = $this->leadsPokemonRepository->getByYearAndMonthAndFormat(
-			$year,
-			$month,
+		// Calculate the previous month.
+		$thisMonth = new YearMonth($year, $month);
+		$lastMonth = $this->dateHelper->getPreviousMonth($thisMonth);
+
+		// Get leads Pokémon records for this month.
+		$leadsPokemons = $this->leadsPokemonRepository->getByYearAndMonthAndFormat(
+			$thisMonth->getYear(),
+			$thisMonth->getMonth(),
 			$format->getId()
 		);
 
-		// Get leads rated Pokémon records.
-		$this->leadsRatedPokemon = $this->leadsRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
-			$year,
-			$month,
+		// Get leads Pokémon records for last month.
+		$lastMonthLeads = $this->leadsPokemonRepository->getByYearAndMonthAndFormat(
+			$lastMonth->getYear(),
+			$lastMonth->getMonth(),
+			$format->getId()
+		);
+
+		// Get leads rated Pokémon records for this month.
+		$leadsRatedPokemons = $this->leadsRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
+			$thisMonth->getYear(),
+			$thisMonth->getMonth(),
+			$format->getId(),
+			$rating
+		);
+
+		// Get leads rated Pokémon records for last month.
+		$lastMonthRateds = $this->leadsRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
+			$lastMonth->getYear(),
+			$lastMonth->getMonth(),
 			$format->getId(),
 			$rating
 		);
 
 		// Get Pokémon.
-		$this->pokemon = $this->pokemonRepository->getAll();
+		$pokemons = $this->pokemonRepository->getAll();
 
 		// Get Pokémon names.
-		$this->pokemonNames = $this->pokemonNameRepository->getByLanguage($languageId);
+		$pokemonNames = $this->pokemonNameRepository->getByLanguage($languageId);
+
+		// Get each leads record's data.
+		foreach ($leadsRatedPokemons as $leadsRatedPokemon) {
+			$pokemonId = $leadsRatedPokemon->getPokemonId();
+
+			// Get this Pokémon's name.
+			$pokemonName = $pokemonNames[$pokemonId->value()];
+
+			// Get this Pokémon.
+			$pokemon = $pokemons[$pokemonId->value()];
+
+			// Get this Pokémon's non-rated usage record for this month.
+			$leadsPokemon = $leadsPokemons[$pokemonId->value()];
+
+			// Get this Pokémon's change in usage percent since last month.
+			$lastMonthUsagePercent = 0;
+			if (isset($lastMonthRateds[$pokemonId->value()])) {
+				$lastMonthUsagePercent = $lastMonthRateds[$pokemonId->value()]->getUsagePercent();
+			}
+			$usageChange = $leadsRatedPokemon->getUsagePercent() - $lastMonthUsagePercent;
+
+			// Get this Pokémon's change in raw percent since last month.
+			$lastMonthRawPercent = 0;
+			if (isset($lastMonthLeads[$pokemonId->value()])) {
+				$lastMonthRawPercent = $lastMonthLeads[$pokemonId->value()]->getRawPercent();
+			}
+			$rawChange = $leadsPokemon->getRawPercent() - $lastMonthRawPercent;
+
+			$this->leadsDatas[] = new LeadsData(
+				$leadsRatedPokemon->getRank(),
+				$pokemonName->getName(),
+				$pokemon->getIdentifier(),
+				$leadsRatedPokemon->getUsagePercent(),
+				$usageChange,
+				$leadsPokemon->getRaw(),
+				$leadsPokemon->getRawPercent(),
+				$rawChange
+			);
+		}
 	}
 
 	/**
@@ -168,42 +221,12 @@ class LeadsMonthModel
 	}
 
 	/**
-	 * Get the leads Pokémon records.
+	 * Get the leads datas.
 	 *
-	 * @return LeadsPokemon[]
+	 * @return LeadsData[]
 	 */
-	public function getLeadsPokemon() : array
+	public function getLeadsDatas() : array
 	{
-		return $this->leadsPokemon;
-	}
-
-	/**
-	 * Get the leads rated Pokémon records.
-	 *
-	 * @return LeadsRatedPokemon[]
-	 */
-	public function getLeadsRatedPokemon() : array
-	{
-		return $this->leadsRatedPokemon;
-	}
-
-	/**
-	 * Get the Pokémon.
-	 *
-	 * @return Pokemon[]
-	 */
-	public function getPokemon() : array
-	{
-		return $this->pokemon;
-	}
-
-	/**
-	 * Get the Pokémon names.
-	 *
-	 * @return PokemonName[]
-	 */
-	public function getPokemonNames() : array
-	{
-		return $this->pokemonNames;
+		return $this->leadsDatas;
 	}
 }

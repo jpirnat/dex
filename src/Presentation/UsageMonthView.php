@@ -67,7 +67,7 @@ class UsageMonthView
 		}
 
 		$content = $this->twig->render(
-			'usage-month.twig',
+			'html/usage-month.twig',
 			[
 				'year' => $this->usageMonthModel->getYear(),
 				'month' => $this->usageMonthModel->getMonth(),

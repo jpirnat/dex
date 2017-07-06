@@ -235,7 +235,7 @@ class MovesetPokemonMonthView
 		}
 
 		$content = $this->twig->render(
-			'moveset-pokemon-month.twig',
+			'html/moveset-pokemon-month.twig',
 			[
 				'year' => $this->movesetPokemonMonthModel->getYear(),
 				'month' => $this->movesetPokemonMonthModel->getMonth(),

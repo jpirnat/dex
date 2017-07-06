@@ -114,7 +114,7 @@ $container->dice()->addRule(PDO::class, $rule);
 // Twig
 $rule = [
 	'constructParams' => [
-		__DIR__ . '/../resources/templates',
+		__DIR__ . '/../templates',
 	],
 	'shared' => true,
 ];
@@ -129,7 +129,7 @@ $rule = [
 	'shared' => true,
 	'constructParams' => [
 		[
-			'cache' => __DIR__ . '/../resources/templates/cache',
+			'cache' => __DIR__ . '/../templates/cache',
 			'auto_reload' => true,
 		]
 	],
