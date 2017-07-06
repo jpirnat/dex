@@ -1,18 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models;
+namespace Jp\Dex\Application\Models\UsageMonth;
 
-use Jp\Dex\Application\Models\LeadsMonth\LeadsData;
+use Jp\Dex\Application\Models\DateHelper;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\YearMonth;
 
-class LeadsMonthModel
+class UsageMonthModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
@@ -20,11 +20,11 @@ class LeadsMonthModel
 	/** @var DateHelper $dateHelper */
 	private $dateHelper;
 
-	/** @var LeadsPokemonRepositoryInterface $leadsPokemonRepository */
-	private $leadsPokemonRepository;
+	/** @var UsagePokemonRepositoryInterface $usagePokemonRepository */
+	private $usagePokemonRepository;
 
-	/** @var LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository */
-	private $leadsRatedPokemonRepository;
+	/** @var UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository */
+	private $usageRatedPokemonRepository;
 
 	/** PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
@@ -44,38 +44,38 @@ class LeadsMonthModel
 	/** @var int $rating */
 	private $rating;
 
-	/** @var LeadsData[] $leadsDatas */
-	private $leadsDatas = [];
+	/** @var UsageData[] $usageDatas */
+	private $usageDatas = [];
 
 	/**
 	 * Constructor.
 	 *
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param DateHelper $dateHelper
-	 * @param LeadsPokemonRepositoryInterface $leadsPokemonRepository
-	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
+	 * @param UsagePokemonRepositoryInterface $usagePokemonRepository
+	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 */
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
 		DateHelper $dateHelper,
-		LeadsPokemonRepositoryInterface $leadsPokemonRepository,
-		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
+		UsagePokemonRepositoryInterface $usagePokemonRepository,
+		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository
 	) {
 		$this->formatRepository = $formatRepository;
 		$this->dateHelper = $dateHelper;
-		$this->leadsPokemonRepository = $leadsPokemonRepository;
-		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
+		$this->usagePokemonRepository = $usagePokemonRepository;
+		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 	}
 
 	/**
-	 * Get leads data to recreate a stats leads file, such as
-	 * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
+	 * Get usage data to recreate a stats usage file, such as
+	 * http://www.smogon.com/stats/2014-11/ou-1695.txt.
 	 *
 	 * @param int $year
 	 * @param int $month
@@ -104,30 +104,30 @@ class LeadsMonthModel
 		$thisMonth = new YearMonth($year, $month);
 		$lastMonth = $this->dateHelper->getPreviousMonth($thisMonth);
 
-		// Get leads Pokémon records for this month.
-		$leadsPokemons = $this->leadsPokemonRepository->getByYearAndMonthAndFormat(
+		// Get usage Pokémon records for this month.
+		$usagePokemons = $this->usagePokemonRepository->getByYearAndMonthAndFormat(
 			$thisMonth->getYear(),
 			$thisMonth->getMonth(),
 			$format->getId()
 		);
 
-		// Get leads Pokémon records for last month.
-		$lastMonthLeads = $this->leadsPokemonRepository->getByYearAndMonthAndFormat(
+		// Get usage Pokémon records for last month.
+		$lastMonthUsages = $this->usagePokemonRepository->getByYearAndMonthAndFormat(
 			$lastMonth->getYear(),
 			$lastMonth->getMonth(),
 			$format->getId()
 		);
 
-		// Get leads rated Pokémon records for this month.
-		$leadsRatedPokemons = $this->leadsRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
+		// Get usage rated Pokémon records for this month.
+		$usageRatedPokemons = $this->usageRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
 			$thisMonth->getYear(),
 			$thisMonth->getMonth(),
 			$format->getId(),
 			$rating
 		);
 
-		// Get leads rated Pokémon records for last month.
-		$lastMonthRateds = $this->leadsRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
+		// Get usage rated Pokémon records for last month.
+		$lastMonthRateds = $this->usageRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
 			$lastMonth->getYear(),
 			$lastMonth->getMonth(),
 			$format->getId(),
@@ -140,9 +140,9 @@ class LeadsMonthModel
 		// Get Pokémon names.
 		$pokemonNames = $this->pokemonNameRepository->getByLanguage($languageId);
 
-		// Get each leads record's data.
-		foreach ($leadsRatedPokemons as $leadsRatedPokemon) {
-			$pokemonId = $leadsRatedPokemon->getPokemonId();
+		// Get each usage record's data.
+		foreach ($usageRatedPokemons as $usageRatedPokemon) {
+			$pokemonId = $usageRatedPokemon->getPokemonId();
 
 			// Get this Pokémon's name.
 			$pokemonName = $pokemonNames[$pokemonId->value()];
@@ -151,31 +151,37 @@ class LeadsMonthModel
 			$pokemon = $pokemons[$pokemonId->value()];
 
 			// Get this Pokémon's non-rated usage record for this month.
-			$leadsPokemon = $leadsPokemons[$pokemonId->value()];
+			$usagePokemon = $usagePokemons[$pokemonId->value()];
 
 			// Get this Pokémon's change in usage percent since last month.
 			$lastMonthUsagePercent = 0;
 			if (isset($lastMonthRateds[$pokemonId->value()])) {
 				$lastMonthUsagePercent = $lastMonthRateds[$pokemonId->value()]->getUsagePercent();
 			}
-			$usageChange = $leadsRatedPokemon->getUsagePercent() - $lastMonthUsagePercent;
+			$usageChange = $usageRatedPokemon->getUsagePercent() - $lastMonthUsagePercent;
 
-			// Get this Pokémon's change in raw percent since last month.
+			// Get this Pokémon's change in raw percent and real percent since last month.
 			$lastMonthRawPercent = 0;
-			if (isset($lastMonthLeads[$pokemonId->value()])) {
-				$lastMonthRawPercent = $lastMonthLeads[$pokemonId->value()]->getRawPercent();
+			$lastMonthRealPercent = 0;
+			if (isset($lastMonthUsages[$pokemonId->value()])) {
+				$lastMonthRawPercent = $lastMonthUsages[$pokemonId->value()]->getRawPercent();
+				$lastMonthRealPercent = $lastMonthUsages[$pokemonId->value()]->getRealPercent();
 			}
-			$rawChange = $leadsPokemon->getRawPercent() - $lastMonthRawPercent;
+			$rawChange = $usagePokemon->getRawPercent() - $lastMonthRawPercent;
+			$realChange = $usagePokemon->getRealPercent() - $lastMonthRealPercent;
 
-			$this->leadsDatas[] = new LeadsData(
-				$leadsRatedPokemon->getRank(),
+			$this->usageDatas[] = new UsageData(
+				$usageRatedPokemon->getRank(),
 				$pokemonName->getName(),
 				$pokemon->getIdentifier(),
-				$leadsRatedPokemon->getUsagePercent(),
+				$usageRatedPokemon->getUsagePercent(),
 				$usageChange,
-				$leadsPokemon->getRaw(),
-				$leadsPokemon->getRawPercent(),
-				$rawChange
+				$usagePokemon->getRaw(),
+				$usagePokemon->getRawPercent(),
+				$rawChange,
+				$usagePokemon->getReal(),
+				$usagePokemon->getRealPercent(),
+				$realChange
 			);
 		}
 	}
@@ -221,12 +227,12 @@ class LeadsMonthModel
 	}
 
 	/**
-	 * Get the leads datas.
+	 * Get the usage datas.
 	 *
-	 * @return LeadsData[]
+	 * @return UsageData[]
 	 */
-	public function getLeadsDatas() : array
+	public function getUsageDatas() : array
 	{
-		return $this->leadsDatas;
+		return $this->usageDatas;
 	}
 }

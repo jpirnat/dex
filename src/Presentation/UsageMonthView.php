@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\UsageMonth\UsageData;
-use Jp\Dex\Application\Models\UsageMonthModel;
+use Jp\Dex\Application\Models\UsageMonth\UsageMonthModel;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
 use Zend\Diactoros\Response;
