@@ -1459,6 +1459,8 @@ insert into `showdown_items_to_import` (
 ("Dark Memory", 939),
 ("Darkinium Z", 854),
 ("Decidium Z", 861),
+("Deep Sea Scale", 323),
+("Deep Sea Tooth", 322),
 ("DeepSeaScale", 323),
 ("DeepSeaTooth", 322),
 ("Destiny Knot", 442),
