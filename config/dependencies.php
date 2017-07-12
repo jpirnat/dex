@@ -20,6 +20,7 @@ use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
+use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
@@ -56,6 +57,7 @@ use Jp\Dex\Infrastructure\DatabaseBaseStatRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
 use Jp\Dex\Infrastructure\DatabaseItemNameRepository;
 use Jp\Dex\Infrastructure\DatabaseItemRepository;
+use Jp\Dex\Infrastructure\DatabaseLanguageNameRepository;
 use Jp\Dex\Infrastructure\DatabaseLanguageRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository;
@@ -154,6 +156,7 @@ $rule = [
 		FormatRepositoryInterface::class => ['instance' => DatabaseFormatRepository::class],
 		ItemNameRepositoryInterface::class => ['instance' => DatabaseItemNameRepository::class],
 		ItemRepositoryInterface::class => ['instance' => DatabaseItemRepository::class],
+		LanguageNameRepositoryInterface::class => ['instance' => DatabaseLanguageNameRepository::class],
 		LanguageRepositoryInterface::class => ['instance' => DatabaseLanguageRepository::class],
 		LeadsPokemonRepositoryInterface::class => ['instance' => DatabaseLeadsPokemonRepository::class],
 		LeadsRatedPokemonRepositoryInterface::class => ['instance' => DatabaseLeadsRatedPokemonRepository::class],
