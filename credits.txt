@@ -1,0 +1,13 @@
+This list is incomplete, but I am working on backfilling it.
+
+GameFREAK for making these wonderful games
+
+veekun for most of the gen 6 data
+
+bulbapedia for a lot of data
+
+pk3DS for allowing me to extract all the foreign names of things from the XY/ORAS/SM roms
+
+pkparaiso for gen 6 and 7 pokemon sprites
+
+http://upcarchive.playker.info/0/upokecenter/content/main-page.html for move flags for gens 2 through 5
