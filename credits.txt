@@ -11,3 +11,4 @@ pk3DS for allowing me to extract all the foreign names of things from the XY/ORA
 pkparaiso for gen 6 and 7 pokemon sprites
 
 http://upcarchive.playker.info/0/upokecenter/content/main-page.html for move flags for gens 2 through 5
+http://upcarchive.playker.info/0/upokecenter/content/pokemon-colosseum-and-xd-shadow-pokemon-and-shadow-moves.html for XD Shadow move flags
