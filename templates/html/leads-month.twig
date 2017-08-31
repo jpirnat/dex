@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block body %}
-	<table>
 	<div class="month-control">
 		<div class="button prev">
 			<a href="/stats/leads/{{ prevYear|e }}/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
@@ -20,10 +19,11 @@
 		</div>
 	</div>
 
+	<table class="pokemon-list">
 		<thead>
 			<tr>
 				<th>Rank</th>
-				<th>Pokémon</th>
+				<th class="pokemon-name">Pokémon</th>
 				<th>Usage %</th>
 				<th>Usage Δ</th>
 				<th>Raw</th>

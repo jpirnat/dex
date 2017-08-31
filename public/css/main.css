@@ -8,6 +8,13 @@ html {
 	box-sizing: inherit;
 }
 
+body {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+
+
 .month-control {
 	margin: 10px 0;
 }
@@ -42,6 +49,14 @@ html {
 	text-decoration: none;
 	color: black;
 }
+
+
+
+table.pokemon-list th.pokemon-name {
+	width: 100%;
+}
+
+
 .percent-plus {
 	color: green;
 }
