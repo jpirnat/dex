@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Application\Models\UsageMonth\UsageData;
 use Jp\Dex\Application\Models\UsageMonth\UsageMonthModel;
 use Psr\Http\Message\ResponseInterface;
@@ -14,6 +15,9 @@ class UsageMonthView
 	/** @var Twig_Environment $twig */
 	private $twig;
 
+	/** @var DateModel $dateModel */
+	private $dateModel;
+
 	/** @var UsageMonthModel $usageMonthModel */
 	private $usageMonthModel;
 
@@ -21,13 +25,16 @@ class UsageMonthView
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
+	 * @param DateModel $dateModel
 	 * @param UsageMonthModel $usageMonthModel
 	 */
 	public function __construct(
 		Twig_Environment $twig,
+		DateModel $dateModel,
 		UsageMonthModel $usageMonthModel
 	) {
 		$this->twig = $twig;
+		$this->dateModel = $dateModel;
 		$this->usageMonthModel = $usageMonthModel;
 	}
 
@@ -39,6 +46,10 @@ class UsageMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
+		// Get the previous month and the next month.
+		$prevMonth = $this->dateModel->getPrevMonth();
+		$nextMonth = $this->dateModel->getNextMonth();
+
 		// Get usage data and sort by rank.
 		$usageDatas = $this->usageMonthModel->getUsageDatas();
 		uasort(
@@ -69,10 +80,18 @@ class UsageMonthView
 		$content = $this->twig->render(
 			'html/usage-month.twig',
 			[
-				'year' => $this->usageMonthModel->getYear(),
-				'month' => $this->usageMonthModel->getMonth(),
+				// The month control's data.
+				'prevYear' => $prevMonth->getYear(),
+				'prevMonth' => $prevMonth->getMonth(),
+				'nextYear' => $nextMonth->getYear(),
+				'nextMonth' => $nextMonth->getMonth(),
 				'formatIdentifier' => $this->usageMonthModel->getFormatIdentifier(),
 				'rating' => $this->usageMonthModel->getRating(),
+
+				'year' => $this->usageMonthModel->getYear(),
+				'month' => $this->usageMonthModel->getMonth(),
+
+				// The main data.
 				'data' => $data,
 			]
 		);

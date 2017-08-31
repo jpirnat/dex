@@ -5,6 +5,7 @@ use Dice\Dice;
 use Jp\Container\DiceContainer;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Models\AbilitiesModel;
+use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Application\Models\ErrorModel;
 use Jp\Dex\Application\Models\ItemsModel;
 use Jp\Dex\Application\Models\LanguageModel;
@@ -195,6 +196,7 @@ $rule = [
 	'shared' => true,
 ];
 $container->dice()->addRule(AbilitiesModel::class, $rule);
+$container->dice()->addRule(DateModel::class, $rule);
 $container->dice()->addRule(ErrorModel::class, $rule);
 $container->dice()->addRule(ItemsModel::class, $rule);
 $container->dice()->addRule(LanguageModel::class, $rule);

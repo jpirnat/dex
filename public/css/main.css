@@ -8,6 +8,40 @@ html {
 	box-sizing: inherit;
 }
 
+.month-control {
+	margin: 10px 0;
+}
+.month-control::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.month-control .button {
+	display: inline-block;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: #ddd;
+}
+
+.month-control .button:hover {
+	background-color: white;
+}
+
+.month-control .prev {
+	float: left;
+}
+
+.month-control .next {
+	float: right;
+}
+
+.month-control a {
+	display: inline-block;
+	padding: 10px;
+	text-decoration: none;
+	color: black;
+}
 .percent-plus {
 	color: green;
 }

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Application\Models\LeadsMonth\LeadsData;
 use Jp\Dex\Application\Models\LeadsMonth\LeadsMonthModel;
 use Psr\Http\Message\ResponseInterface;
@@ -14,6 +15,9 @@ class LeadsMonthView
 	/** @var Twig_Environment $twig */
 	private $twig;
 
+	/** @var DateModel $dateModel */
+	private $dateModel;
+
 	/** @var LeadsMonthModel $leadsMonthModel */
 	private $leadsMonthModel;
 
@@ -21,13 +25,16 @@ class LeadsMonthView
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
+	 * @param DateModel $dateModel
 	 * @param LeadsMonthModel $leadsMonthModel
 	 */
 	public function __construct(
 		Twig_Environment $twig,
+		DateModel $dateModel,
 		LeadsMonthModel $leadsMonthModel
 	) {
 		$this->twig = $twig;
+		$this->dateModel = $dateModel;
 		$this->leadsMonthModel = $leadsMonthModel;
 	}
 
@@ -39,6 +46,10 @@ class LeadsMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
+		// Get the previous month and the next month.
+		$prevMonth = $this->dateModel->getPrevMonth();
+		$nextMonth = $this->dateModel->getNextMonth();
+
 		// Get usage data and sort by rank.
 		$leadsDatas = $this->leadsMonthModel->getLeadsDatas();
 		uasort(
@@ -66,10 +77,18 @@ class LeadsMonthView
 		$content = $this->twig->render(
 			'html/leads-month.twig',
 			[
-				'year' => $this->leadsMonthModel->getYear(),
-				'month' => $this->leadsMonthModel->getMonth(),
+				// The month control's data.
+				'prevYear' => $prevMonth->getYear(),
+				'prevMonth' => $prevMonth->getMonth(),
+				'nextYear' => $nextMonth->getYear(),
+				'nextMonth' => $nextMonth->getMonth(),
 				'formatIdentifier' => $this->leadsMonthModel->getFormatIdentifier(),
 				'rating' => $this->leadsMonthModel->getRating(),
+
+				'year' => $this->leadsMonthModel->getYear(),
+				'month' => $this->leadsMonthModel->getMonth(),
+
+				// The main data.
 				'data' => $data,
 			]
 		);

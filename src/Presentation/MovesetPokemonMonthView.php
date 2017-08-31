@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\AbilityData;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\CounterData;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\ItemData;
@@ -22,12 +23,15 @@ class MovesetPokemonMonthView
 	/** @var Twig_Environment $twig */
 	private $twig;
 
+	/** @var DateModel $dateModel */
+	private $dateModel;
+
 	/** @var MovesetPokemonMonthModel $movesetPokemonMonthModel */
 	private $movesetPokemonMonthModel;
 
+
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
-
 
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
@@ -36,18 +40,22 @@ class MovesetPokemonMonthView
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
+	 * @param DateModel $dateModel
 	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 */
 	public function __construct(
 		Twig_Environment $twig,
+		DateModel $dateModel,
 		MovesetPokemonMonthModel $movesetPokemonMonthModel,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository
 	) {
 		$this->twig = $twig;
+		$this->dateModel = $dateModel;
 		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
+
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 	}
@@ -61,11 +69,20 @@ class MovesetPokemonMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
+		// Get the previous month and the next month.
+		$prevMonth = $this->dateModel->getPrevMonth();
+		$nextMonth = $this->dateModel->getNextMonth();
+
+
 		$languageId = $this->movesetPokemonMonthModel->getLanguageId();
 
 		$movesetPokemon = $this->movesetPokemonMonthModel->getMovesetPokemon();
 		$movesetRatedPokemon = $this->movesetPokemonMonthModel->getMovesetRatedPokemon();
 
+		// Get the Pokémon and the Pokémon name.
+		$pokemon = $this->pokemonRepository->getById(
+			$movesetPokemon->getPokemonId()
+		);
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
 			$movesetPokemon->getPokemonId()
@@ -237,14 +254,23 @@ class MovesetPokemonMonthView
 		$content = $this->twig->render(
 			'html/moveset-pokemon-month.twig',
 			[
-				'year' => $this->movesetPokemonMonthModel->getYear(),
-				'month' => $this->movesetPokemonMonthModel->getMonth(),
+				// The month control's data.
+				'prevYear' => $prevMonth->getYear(),
+				'prevMonth' => $prevMonth->getMonth(),
+				'nextYear' => $nextMonth->getYear(),
+				'nextMonth' => $nextMonth->getMonth(),
 				'formatIdentifier' => $this->movesetPokemonMonthModel->getFormatIdentifier(),
 				'rating' => $this->movesetPokemonMonthModel->getRating(),
+				'pokemonIdentifier' => $pokemon->getIdentifier(),
+
+				'year' => $this->movesetPokemonMonthModel->getYear(),
+				'month' => $this->movesetPokemonMonthModel->getMonth(),
 				'pokemonName' => $pokemonName->getName(),
 				'rawCount' =>$movesetPokemon->getRawCount(),
 				'averageWeight' => $movesetRatedPokemon->getAverageWeight(),
 				'viabilityCeiling' => $movesetPokemon->getViabilityCeiling(),
+
+				// The main data.
 				'abilities' => $abilities,
 				'items' => $items,
 				'spreads' => $spreads,

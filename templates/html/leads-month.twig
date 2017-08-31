@@ -6,6 +6,20 @@
 
 {% block body %}
 	<table>
+	<div class="month-control">
+		<div class="button prev">
+			<a href="/stats/leads/{{ prevYear|e }}/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
+				Previous Month
+			</a>
+		</div>
+
+		<div class="button next">
+			<a href="/stats/leads/{{ nextYear|e }}/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
+				Next Month
+			</a>
+		</div>
+	</div>
+
 		<thead>
 			<tr>
 				<th>Rank</th>

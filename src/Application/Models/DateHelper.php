@@ -26,4 +26,22 @@ class DateHelper
 			(int) $date->format('m')
 		);
 	}
+
+	/**
+	 * Calculate the next month.
+	 *
+	 * @param YearMonth $thisMonth
+	 *
+	 * @return YearMonth
+	 */
+	public function getNextMonth(YearMonth $thisMonth) : YearMonth
+	{
+		$date = new DateTime();
+		$date->setDate($thisMonth->getYear(), $thisMonth->getMonth(), 1);
+		$date->add(new DateInterval('P1M'));
+		return new YearMonth(
+			(int) $date->format('Y'),
+			(int) $date->format('m')
+		);
+	}
 }

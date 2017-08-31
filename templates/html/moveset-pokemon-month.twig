@@ -5,6 +5,20 @@
 {% endblock %}
 
 {% block body %}
+	<div class="month-control">
+		<div class="button prev">
+			<a href="/stats/moveset/{{ prevYear|e }}/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ pokemonIdentifier|e }}">
+				Previous Month
+			</a>
+		</div>
+
+		<div class="button next">
+			<a href="/stats/moveset/{{ nextYear|e }}/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ pokemonIdentifier|e }}">
+				Next Month
+			</a>
+		</div>
+	</div>
+
 	<div>
 		{{ pokemonName|e }}
 	</div>

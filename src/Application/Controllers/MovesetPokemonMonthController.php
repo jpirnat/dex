@@ -3,23 +3,30 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
+use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\MovesetPokemonMonthModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
 class MovesetPokemonMonthController
 {
+	/** @var DateModel $dateModel */
+	private $dateModel;
+
 	/** @var MovesetPokemonMonthModel $movesetPokemonMonthModel */
 	private $movesetPokemonMonthModel;
 
 	/**
 	 * Constructor.
 	 *
+	 * @param DateModel $dateModel
 	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
 	 */
 	public function __construct(
+		DateModel $dateModel,
 		MovesetPokemonMonthModel $movesetPokemonMonthModel
 	) {
+		$this->dateModel = $dateModel;
 		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
 	}
 
@@ -40,6 +47,8 @@ class MovesetPokemonMonthController
 		$rating = (int) $request->getAttribute('rating');
 		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
+
+		$this->dateModel->setData($year, $month);
 
 		$this->movesetPokemonMonthModel->setData(
 			$year,
