@@ -16,7 +16,8 @@ create table if not exists `categories`
 
 `identifier` varchar(8) not null,
 
-primary key (`id`)
+primary key (`id`),
+unique key (`identifier`)
 ) engine = InnoDB;
 
 
@@ -226,59 +227,6 @@ http://iimarck.us/dumps/
 */
 
 
-create table if not exists `generation_moves`
-(
-`generation` tinyint unsigned not null,
-`move_id` smallint unsigned not null,
-
-`type_id`
-`pp`
-`category_id`
-`power`
-`accuracy`
-`priority`
-
-REORDER THESE COLUMNS APPROPRIATELY:
-`target_id`
-`effect_id`
-`effect_chance`
-
-primary key (
-	`generation`,
-	`move_id`
-),
-foreign key (`generation`) references `generations` (`generation`)
-	on delete restrict
-	on update cascade,
-foreign key (`move_id`) references `moves` (`id`)
-	on delete restrict
-	on update cascade
-) engine = InnoDB;
-
-
-create table if not exists `move_names`
-(
-`generation` tinyint unsigned not null,
-`move_id` smallint unsigned not null,
-`language_id` tinyint unsigned not null,
-
-`name` varchar(100) not null,
-
-primary key (
-	`generation`,
-	`move_id`,
-	`language_id`
-),
-foreign key (`generation`) references `generations` (`generation`)
-	on delete restrict
-	on update cascade,
-foreign key (`move_id`) references `moves` (`id`)
-	on delete restrict
-	on update cascade,
-foreign key (`language_id`) references `languages` (`id`)
-	on delete restrict
-	on update cascade
-) engine = InnoDB;
 
 
 create table if not exists `move_z_moves`
