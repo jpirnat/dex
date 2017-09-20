@@ -1142,7 +1142,7 @@ insert into `showdown_abilities_to_import` (
 	`ability_id`
 ) values
 ("Adaptability", 91),
-("Aerilate", 185),
+("Aerilate", 184),
 ("Aftermath", 106),
 ("Air Lock", 76),
 ("Analytic", 148),
@@ -1266,7 +1266,7 @@ insert into `showdown_abilities_to_import` (
 ("Overcoat", 142),
 ("Overgrow", 65),
 ("Own Tempo", 20),
-("Parental Bond", 184),
+("Parental Bond", 185),
 ("Pickpocket", 124),
 ("Pickup", 53),
 ("Pixilate", 182),
