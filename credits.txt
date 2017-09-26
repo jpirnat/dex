@@ -10,5 +10,11 @@ pk3DS for allowing me to extract all the foreign names of things from the XY/ORA
 
 pkparaiso for gen 6 and 7 pokemon sprites
 
+https://github.com/pret for ripped move data from gens 1 to 3
+https://github.com/PekanMmd/Pokemon-XD-Code for ripped move data from Pokémon XD
+https://projectpokemon.org/rawdb/ for ripped move data from gens 4 to 5
+pk3DS for ripped move data from gens 6 to 7
+
 http://upcarchive.playker.info/0/upokecenter/content/main-page.html for move flags for gens 2 through 5
 http://upcarchive.playker.info/0/upokecenter/content/pokemon-colosseum-and-xd-shadow-pokemon-and-shadow-moves.html for XD Shadow move flags
+
