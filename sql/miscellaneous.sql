@@ -60,55 +60,6 @@ insert into `stats` (
 ;
 
 
-create table if not exists `z_power_effects`
-(
-`id` tinyint unsigned not null,
-
-`identifier` varchar(30) not null,
-
-primary key (`id`),
-unique key (`identifier`)
-) engine = InnoDB;
-
-
-insert into `z_power_effects` (
-	`id`,
-	`identifier`
-) values
-(1, "boosts-critical-hit-ratio"),
-(2, "attack-1"),
-(3, "defense-1"),
-(4, "special-attack-1"),
-(5, "special-defense-1"),
-(6, "speed-1"),
-(7, "accuracy-1"),
-(8, "evasiveness-1"),
-(9, "attack-2"),
-(10, "defense-2"),
-(11, "special-attack-2"),
-(12, "special-defense-2"),
-(13, "speed-2"),
-(14, "accuracy-2"),
-(15, "evasiveness-2"),
-(16, "attack-3"),
-(17, "defense-3"),
-(18, "special-attack-3"),
-(19, "special-defense-3"),
-(20, "speed-3"),
-(21, "accuracy-3"),
-(22, "evasiveness-3"),
-(23, "stats-1"),
-(24, "stats-2"),
-(25, "stats-3"),
-(26, "reset-stats"),
-(27, "restores-hp"),
-(28, "restores-replacement-s-hp"),
-(29, "center-of-attention"),
-(30, "changes-depending-on-the-type"),
-(101, "no-additional-effect")
-;
-
-
 create table if not exists `characteristics`
 (
 `id` tinyint unsigned not null,
@@ -228,35 +179,6 @@ http://iimarck.us/dumps/
 
 
 
-
-create table if not exists `move_z_moves`
-(
-`move_id` smallint unsigned not null,
-
-`z_move_id` tinyint unsigned not null,
-`z_base_power`
-
-primary key (`move_id`),
-foreign key (`move_id`) references `moves` (`id`)
-	on delete restrict
-	on update cascade,
-) engine = InnoDB;
-
-
-create table if not exists `move_z_power_effects`
-(
-`move_id` smallint unsigned not null,
-
-`z_power_effect_id` tinyint unsigned not null,
-
-primary key (`move_id`),
-foreign key (`move_id`) references `moves` (`id`)
-	on delete restrict
-	on update cascade,
-foreign key (`z_power_effect_id`) references `z_power_effects` (`id`)
-	on delete restrict
-	on update cascade,
-) engine = InnoDB;
 
 
 create table if not exists `z_exclusive_moves`

@@ -18,3 +18,5 @@ pk3DS for ripped move data from gens 6 to 7
 http://upcarchive.playker.info/0/upokecenter/content/main-page.html for move flags for gens 2 through 5
 http://upcarchive.playker.info/0/upokecenter/content/pokemon-colosseum-and-xd-shadow-pokemon-and-shadow-moves.html for XD Shadow move flags
 
+Azure Heights for some gen 1 move data
+https://www.math.miami.edu/~jam/azure/attacks/comp/statmods.htm
