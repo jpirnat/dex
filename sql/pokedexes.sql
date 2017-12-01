@@ -6,6 +6,7 @@ create table if not exists `regions`
 `introduced_in_generation` tinyint unsigned not null,
 
 primary key (`id`),
+unique key (`identifier`),
 foreign key (`introduced_in_generation`) references `generations` (`generation`)
 	on delete restrict
 	on update cascade
@@ -35,7 +36,10 @@ create table if not exists `pokedexes`
 `region_id` tinyint unsigned null, # nullable
 
 primary key (`id`),
-unique key (`identifier`)
+unique key (`identifier`),
+foreign key (`region_id`) references `regions` (`id`)
+	on delete restrict
+	on update cascade
 ) engine = InnoDB;
 
 

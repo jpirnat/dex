@@ -144,8 +144,7 @@ insert into `z_power_effects` (
 (27, "restores-hp"),
 (28, "restores-replacement-s-hp"),
 (29, "center-of-attention"),
-(30, "changes-depending-on-the-type"),
-(101, "no-additional-effect")
+(30, "changes-depending-on-the-type")
 ;
 
 

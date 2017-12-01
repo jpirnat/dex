@@ -4,7 +4,8 @@ create table if not exists `colors`
 
 `identifier` varchar(6) not null,
 
-primary key (`id`)
+primary key (`id`),
+unique key (`identifier`)
 ) engine = InnoDB;
 
 

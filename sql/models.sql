@@ -9,12 +9,6 @@ create table if not exists `models`
 `is_attacking` bool not null,
 `image` varchar(50) not null,
 
-`created_at` timestamp not null
-	default current_timestamp,
-`updated_at` timestamp not null
-	default current_timestamp
-	on update current_timestamp,
-
 primary key (`id`),
 foreign key (`form_id`) references `forms` (`id`)
 	on delete restrict

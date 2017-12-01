@@ -10,7 +10,10 @@ create table if not exists `formats`
 `in_battle_team_size` tinyint unsigned not null,
 
 primary key (`id`),
-unique key (`identifier`)
+unique key (`identifier`),
+foreign key (`generation`) references `generations` (`generation`)
+	on delete restrict
+	on update cascade
 ) engine = InnoDB;
 
 
