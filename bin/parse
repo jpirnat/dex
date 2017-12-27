@@ -1,0 +1,93 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+use Jp\Dex\Domain\Import\Parsers\MonthDirectoryParser;
+
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config/environment.php';
+$container = require __DIR__ . '/../config/dependencies.php';
+
+
+// Get year and month from command line arguments; fall back on previous month.
+$options = getopt('', ['year:', 'month:']);
+$parametersAvailable = isset($options['year']) && isset($options['month']);
+
+$date = new DateTime();
+
+if ($parametersAvailable) {
+	$date->setDate((int) $options['year'], (int) $options['month'], 1);
+} else {
+	$thisYear = (int) $date->format('Y');
+	$thisMonth = (int) $date->format('m');
+
+	$date->setDate($thisYear, $thisMonth, 1);
+	$date->modify('-1 month');
+}
+
+$yearMonth = $date->format('Y-m');
+
+
+// Run the parser.
+$start = new DateTime();
+
+$parser = $container->get(MonthDirectoryParser::class);
+$parser->parse("http://www.smogon.com/stats/$yearMonth/");
+
+$formats = $parser->getUnknownFormats();
+$pokemons = $parser->getUnknownPokemon();
+$abilities = $parser->getUnknownAbilities();
+$items = $parser->getUnknownItems();
+$natures = $parser->getUnknownNatures();
+$moves = $parser->getUnknownMoves();
+
+$end = new DateTime();
+
+
+// Display the output.
+$startText = $start->format('Y-m-d H:i:s');
+$endText = $end->format('Y-m-d H:i:s');
+
+echo "Start Time: $startText\n";
+echo "End Time: $endText\n";
+echo "\n";
+
+echo "Formats:\n";
+foreach ($formats as $year => $monthFormats) {
+	foreach ($monthFormats as $month => $formats) {
+		foreach ($formats as $format) {
+			echo "$year-$month: $format\n";
+		}
+	}
+}
+echo "\n";
+
+echo "Pokémon:\n";
+foreach ($pokemons as $pokemon) {
+	echo "$pokemon\n";
+}
+echo "\n";
+
+echo "Abilities:\n";
+foreach ($abilities as $ability) {
+	echo "$ability\n";
+}
+echo "\n";
+
+echo "Items:\n";
+foreach ($items as $item) {
+	echo "$item\n";
+}
+echo "\n";
+
+echo "Natures:\n";
+foreach ($natures as $nature) {
+	echo "$nature\n";
+}
+echo "\n";
+
+echo "Moves:\n";
+foreach ($moves as $move) {
+	echo "$move\n";
+}
+echo "\n";

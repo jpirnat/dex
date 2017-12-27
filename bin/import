@@ -1,0 +1,46 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+use Jp\Dex\Domain\Import\Parsers\MonthDirectoryImporter;
+
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config/environment.php';
+$container = require __DIR__ . '/../config/dependencies.php';
+
+
+// Get year and month from command line arguments; fall back on previous month.
+$options = getopt('', ['year:', 'month:']);
+$parametersAvailable = isset($options['year']) && isset($options['month']);
+
+$date = new DateTime();
+
+if ($parametersAvailable) {
+	$date->setDate((int) $options['year'], (int) $options['month'], 1);
+} else {
+	$thisYear = (int) $date->format('Y');
+	$thisMonth = (int) $date->format('m');
+
+	$date->setDate($thisYear, $thisMonth, 1);
+	$date->modify('-1 month');
+}
+
+$yearMonth = $date->format('Y-m');
+
+
+// Run the importer.
+$start = new DateTime();
+
+$importer = $container->get(MonthDirectoryImporter::class);
+$importer->import("http://www.smogon.com/stats/$yearMonth/");
+
+$end = new DateTime();
+
+
+// Display the output.
+$startText = $start->format('Y-m-d H:i:s');
+$endText = $end->format('Y-m-d H:i:s');
+
+echo "Start Time: $startText\n";
+echo "End Time: $endText\n";
+echo "\n";
