@@ -92,7 +92,9 @@ use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownPokemonRepository;
 $dice = new Dice();
 $container = new DiceContainer($dice);
 
-// PDO
+// Databases
+
+// Main database connection.
 $host = getenv('DB_HOST');
 $port = getenv('DB_PORT');
 $name = getenv('DB_NAME');
@@ -112,7 +114,6 @@ $rule = [
 ];
 $container->dice()->addRule(PDO::class, $rule);
 
-
 // Twig
 $rule = [
 	'constructParams' => [
@@ -120,7 +121,7 @@ $rule = [
 	],
 	'shared' => true,
 ];
-$dice->addRule(Twig_Loader_Filesystem::class, $rule);
+$container->dice()->addRule(Twig_Loader_Filesystem::class, $rule);
 
 $rule = [
 	'substitutions' => [
@@ -136,7 +137,7 @@ $rule = [
 		]
 	],
 ];
-$dice->addRule(Twig_Environment::class, $rule);
+$container->dice()->addRule(Twig_Environment::class, $rule);
 
 // Middleware
 $environment = getenv('ENVIRONMENT');
@@ -150,112 +151,112 @@ $container->dice()->addRule(HtmlErrorMiddleware::class, $rule);
 
 // Interfaces
 $rule = ['instanceOf' => DatabaseAbilityNameRepository::class];
-$dice->addRule(AbilityNameRepositoryInterface::class, $rule);
+$container->dice()->addRule(AbilityNameRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseAbilityRepository::class];
-$dice->addRule(AbilityRepositoryInterface::class, $rule);
+$container->dice()->addRule(AbilityRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseBaseStatRepository::class];
-$dice->addRule(BaseStatRepositoryInterface::class, $rule);
+$container->dice()->addRule(BaseStatRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseFormatRepository::class];
-$dice->addRule(FormatRepositoryInterface::class, $rule);
+$container->dice()->addRule(FormatRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseItemNameRepository::class];
-$dice->addRule(ItemNameRepositoryInterface::class, $rule);
+$container->dice()->addRule(ItemNameRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseItemRepository::class];
-$dice->addRule(ItemRepositoryInterface::class, $rule);
+$container->dice()->addRule(ItemRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseLanguageNameRepository::class];
-$dice->addRule(LanguageNameRepositoryInterface::class, $rule);
+$container->dice()->addRule(LanguageNameRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseLanguageRepository::class];
-$dice->addRule(LanguageRepositoryInterface::class, $rule);
+$container->dice()->addRule(LanguageRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseLeadsPokemonRepository::class];
-$dice->addRule(LeadsPokemonRepositoryInterface::class, $rule);
+$container->dice()->addRule(LeadsPokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseLeadsRatedPokemonRepository::class];
-$dice->addRule(LeadsRatedPokemonRepositoryInterface::class, $rule);
+$container->dice()->addRule(LeadsRatedPokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseLeadsRepository::class];
-$dice->addRule(LeadsRepositoryInterface::class, $rule);
+$container->dice()->addRule(LeadsRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMoveNameRepository::class];
-$dice->addRule(MoveNameRepositoryInterface::class, $rule);
+$container->dice()->addRule(MoveNameRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMoveRepository::class];
-$dice->addRule(MoveRepositoryInterface::class, $rule);
+$container->dice()->addRule(MoveRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMovesetPokemonRepository::class];
-$dice->addRule(MovesetPokemonRepositoryInterface::class, $rule);
+$container->dice()->addRule(MovesetPokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMovesetRatedAbilityRepository::class];
-$dice->addRule(MovesetRatedAbilityRepositoryInterface::class, $rule);
+$container->dice()->addRule(MovesetRatedAbilityRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMovesetRatedCounterRepository::class];
-$dice->addRule(MovesetRatedCounterRepositoryInterface::class, $rule);
+$container->dice()->addRule(MovesetRatedCounterRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMovesetRatedItemRepository::class];
-$dice->addRule(MovesetRatedItemRepositoryInterface::class, $rule);
+$container->dice()->addRule(MovesetRatedItemRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMovesetRatedMoveRepository::class];
-$dice->addRule(MovesetRatedMoveRepositoryInterface::class, $rule);
+$container->dice()->addRule(MovesetRatedMoveRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMovesetRatedPokemonRepository::class];
-$dice->addRule(MovesetRatedPokemonRepositoryInterface::class, $rule);
+$container->dice()->addRule(MovesetRatedPokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMovesetRatedSpreadRepository::class];
-$dice->addRule(MovesetRatedSpreadRepositoryInterface::class, $rule);
+$container->dice()->addRule(MovesetRatedSpreadRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMovesetRatedTeammateRepository::class];
-$dice->addRule(MovesetRatedTeammateRepositoryInterface::class, $rule);
+$container->dice()->addRule(MovesetRatedTeammateRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseNatureNameRepository::class];
-$dice->addRule(NatureNameRepositoryInterface::class, $rule);
+$container->dice()->addRule(NatureNameRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseNatureRepository::class];
-$dice->addRule(NatureRepositoryInterface::class, $rule);
+$container->dice()->addRule(NatureRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseNatureStatModifierRepository::class];
-$dice->addRule(NatureStatModifierRepositoryInterface::class, $rule);
+$container->dice()->addRule(NatureStatModifierRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabasePokemonNameRepository::class];
-$dice->addRule(PokemonNameRepositoryInterface::class, $rule);
+$container->dice()->addRule(PokemonNameRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabasePokemonRepository::class];
-$dice->addRule(PokemonRepositoryInterface::class, $rule);
+$container->dice()->addRule(PokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseShowdownAbilityRepository::class];
-$dice->addRule(ShowdownAbilityRepositoryInterface::class, $rule);
+$container->dice()->addRule(ShowdownAbilityRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseShowdownFormatRepository::class];
-$dice->addRule(ShowdownFormatRepositoryInterface::class, $rule);
+$container->dice()->addRule(ShowdownFormatRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseShowdownItemRepository::class];
-$dice->addRule(ShowdownItemRepositoryInterface::class, $rule);
+$container->dice()->addRule(ShowdownItemRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseShowdownMoveRepository::class];
-$dice->addRule(ShowdownMoveRepositoryInterface::class, $rule);
+$container->dice()->addRule(ShowdownMoveRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseShowdownNatureRepository::class];
-$dice->addRule(ShowdownNatureRepositoryInterface::class, $rule);
+$container->dice()->addRule(ShowdownNatureRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseShowdownPokemonRepository::class];
-$dice->addRule(ShowdownPokemonRepositoryInterface::class, $rule);
+$container->dice()->addRule(ShowdownPokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseUsagePokemonRepository::class];
-$dice->addRule(UsagePokemonRepositoryInterface::class, $rule);
+$container->dice()->addRule(UsagePokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseUsageRatedPokemonRepository::class];
-$dice->addRule(UsageRatedPokemonRepositoryInterface::class, $rule);
+$container->dice()->addRule(UsageRatedPokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseUsageRatedRepository::class];
-$dice->addRule(UsageRatedRepositoryInterface::class, $rule);
+$container->dice()->addRule(UsageRatedRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseUsageRepository::class];
-$dice->addRule(UsageRepositoryInterface::class, $rule);
+$container->dice()->addRule(UsageRepositoryInterface::class, $rule);
 
 
 // Models are shared between controllers and views.

@@ -1,0 +1,168 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config/environment.php';
+$container = require __DIR__ . '/../config/dependencies.php';
+
+// This database connection cannot be instantiated through Dice until Issue #95
+// is fixed in a tagged version. Currently, Dice cannot accept the PDO options
+// array and must use setAttribute calls to set the options. However, the
+// PDO::MYSQL_ATTR_LOCAL_INFILE option must be set at instantiation.
+$host = getenv('DB_HOST');
+$port = getenv('DB_PORT');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASS');
+$database = new PDO(
+	"mysql:host=$host;port=$port;charset=utf8mb4",
+	$user,
+	$pass,
+	[
+		PDO::ATTR_EMULATE_PREPARES => false,
+		PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+		PDO::MYSQL_ATTR_LOCAL_INFILE => true,
+	]
+);
+
+// Create the schema and the tables.
+$database->exec(file_get_contents(__DIR__ . '/../sql/dex_schema.sql'));
+$database->exec(file_get_contents(__DIR__ . '/../sql/stats_schema.sql'));
+
+// Define the order in which table data is imported, so that foreign key
+// constraints don't get in the way.
+// TODO: Move this array elsewhere so it won't need to be duplicated in a
+// hypothetical teardown script.
+$tables = [
+	// Versions
+	'generations',
+	'version_groups',
+	'versions',
+
+	// Languages
+	'languages',
+	'language_names',
+	'version_group_languages',
+
+	// Pokémon
+	'experience_groups',
+	'species',
+	'species_names',
+	'pokemon',
+	'pokemon_names',
+	'forms',
+	'form_names',
+	'models',
+	'form_icons',
+
+	// Abilities
+	'abilities',
+	'ability_names',
+	'pokemon_abilities',
+
+	// Items
+	'item_fling_effects',
+	'items',
+	'item_names',
+	'item_pockets',
+	'version_group_items',
+
+	// Types
+	'categories',
+	'types',
+	'type_names',
+	'type_icons',
+	'type_charts',
+	'pokemon_types',
+
+	// Moves
+	'moves',
+	'move_names',
+	'z_move_names',
+	'qualities',
+	'inflictions',
+	'targets',
+	'z_power_effects',
+	'z_power_effect_names',
+	'generation_moves',
+	'flags',
+	'move_flags',
+	'move_methods',
+	'pokemon_moves',
+	'exclusive_z_moves',
+
+	// Stats
+	'stats',
+	'stat_names',
+	'base_stats',
+	'ev_yields',
+	'move_stat_changes',
+
+	// Characteristics
+	'characteristics',
+	'characteristic_names',
+
+	// Natures
+	'natures',
+	'nature_names',
+	'nature_stat_modifiers',
+
+	// Colors
+	'colors',
+	'form_colors',
+
+	// Egg groups
+	'egg_groups',
+	'pokemon_egg_groups',
+
+	// Habitats
+	'habitats',
+	'species_habitats',
+
+	// Pokédexes
+	'regions',
+	'pokedexes',
+	'pokedex_numbers',
+
+	// Shapes
+	'shapes',
+	'shape_icons',
+	'pokemon_shapes',
+
+	// Miscellaneous
+	'base_experience',
+	'catch_rates',
+	'transformation_groups',
+	'transformation_group_pokemon',
+
+	// Pokémon Showdown identifiers
+	'formats',
+	'showdown_formats_to_import',
+	'showdown_formats_to_ignore',
+	'showdown_pokemon_to_import',
+	'showdown_pokemon_to_ignore',
+	'showdown_abilities_to_import',
+	'showdown_abilities_to_ignore',
+	'showdown_items_to_import',
+	'showdown_items_to_ignore',
+	'showdown_natures_to_import',
+	'showdown_natures_to_ignore',
+	'showdown_moves_to_import',
+	'showdown_moves_to_ignore',
+];
+
+// Import data, one table at a time.
+foreach ($tables as $table) {
+	$file = __DIR__ . "/../data/$table.csv";
+
+	$stmt = $database->exec(
+		"LOAD DATA LOCAL INFILE '$file'
+		INTO TABLE `$table`
+		FIELDS
+			TERMINATED BY ','
+			OPTIONALLY ENCLOSED BY '\"'
+		IGNORE 1 LINES"
+	);
+}
+
+echo "Done!\n";
