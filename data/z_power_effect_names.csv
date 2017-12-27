@@ -1,0 +1,301 @@
+language_id,z_power_effect_id,name
+1,1,Ｚパワーこうか：　こうげき↑
+1,2,Ｚパワーこうか：　こうげき↑↑
+1,3,Ｚパワーこうか：　こうげき↑↑↑
+1,4,Ｚパワーこうか：　ぼうぎょ↑
+1,5,Ｚパワーこうか：　ぼうぎょ↑↑
+1,6,Ｚパワーこうか：　ぼうぎょ↑↑↑
+1,7,Ｚパワーこうか：　とくこう↑
+1,8,Ｚパワーこうか：　とくこう↑↑
+1,9,Ｚパワーこうか：　とくこう↑↑↑
+1,10,Ｚパワーこうか：　とくぼう↑
+1,11,Ｚパワーこうか：　とくぼう↑↑
+1,12,Ｚパワーこうか：　とくぼう↑↑↑
+1,13,Ｚパワーこうか：　すばやさ↑
+1,14,Ｚパワーこうか：　すばやさ↑↑
+1,15,Ｚパワーこうか：　すばやさ↑↑↑
+1,16,Ｚパワーこうか：　めいちゅうりつ↑
+1,17,Ｚパワーこうか：　めいちゅうりつ↑↑
+1,18,Ｚパワーこうか：　めいちゅうりつ↑↑↑
+1,19,Ｚパワーこうか：　かいひりつ↑
+1,20,Ｚパワーこうか：　かいひりつ↑↑
+1,21,Ｚパワーこうか：　かいひりつ↑↑↑
+1,22,Ｚパワーこうか：　のうりょく↑
+1,23,Ｚパワーこうか：　のうりょく↑↑
+1,24,Ｚパワーこうか：　のうりょく↑↑↑
+1,25,Ｚパワーこうか：　きゅうしょアップ
+1,26,Ｚパワーこうか：　のうりょく　リセット
+1,27,Ｚパワーこうか：　じぶん　かいふく
+1,28,Ｚパワーこうか：　いれかえさきかいふく
+1,29,Ｚパワーこうか：　ちゅうもくのまと
+1,30,Ｚパワーこうか：　タイプで　かわる
+2,1,Z-Power Effect: Attack ↑
+2,2,Z-Power Effect: Attack ↑↑
+2,3,Z-Power Effect: Attack ↑↑↑
+2,4,Z-Power Effect: Defense ↑
+2,5,Z-Power Effect: Defense ↑↑
+2,6,Z-Power Effect: Defense ↑↑↑
+2,7,Z-Power Effect: Special Attack ↑
+2,8,Z-Power Effect: Special Attack ↑↑
+2,9,Z-Power Effect: Special Attack ↑↑↑
+2,10,Z-Power Effect: Special Defense ↑
+2,11,Z-Power Effect: Special Defense ↑↑
+2,12,Z-Power Effect: Special Defense ↑↑↑
+2,13,Z-Power Effect: Speed ↑
+2,14,Z-Power Effect: Speed ↑↑
+2,15,Z-Power Effect: Speed ↑↑↑
+2,16,Z-Power Effect: Accuracy ↑
+2,17,Z-Power Effect: Accuracy ↑↑
+2,18,Z-Power Effect: Accuracy ↑↑↑
+2,19,Z-Power Effect: Evasiveness ↑
+2,20,Z-Power Effect: Evasiveness ↑↑
+2,21,Z-Power Effect: Evasiveness ↑↑↑
+2,22,Z-Power Effect: Stats ↑
+2,23,Z-Power Effect: Stats ↑↑
+2,24,Z-Power Effect: Stats ↑↑↑
+2,25,Z-Power Effect: Boosts critical-hit ratio
+2,26,Z-Power Effect: Reset Stats
+2,27,Z-Power Effect: Restores HP
+2,28,Z-Power Effect: Restores replacement’s HP
+2,29,Z-Power Effect: Center of attention
+2,30,Z-Power Effect: Changes depending on the type
+3,1,Force Z : Attaque ↑
+3,2,Force Z : Attaque ↑↑
+3,3,Force Z : Attaque ↑↑↑
+3,4,Force Z : Défense ↑
+3,5,Force Z : Défense ↑↑
+3,6,Force Z : Défense ↑↑↑
+3,7,Force Z : Attaque Spéciale ↑
+3,8,Force Z : Attaque Spéciale ↑↑
+3,9,Force Z : Attaque Spéciale ↑↑↑
+3,10,Force Z : Défense Spéciale ↑
+3,11,Force Z : Défense Spéciale ↑↑
+3,12,Force Z : Défense Spéciale ↑↑↑
+3,13,Force Z : Vitesse ↑
+3,14,Force Z : Vitesse ↑↑
+3,15,Force Z : Vitesse ↑↑↑
+3,16,Force Z : Précision ↑
+3,17,Force Z : Précision ↑↑
+3,18,Force Z : Précision ↑↑↑
+3,19,Force Z : Esquive ↑
+3,20,Force Z : Esquive ↑↑
+3,21,Force Z : Esquive ↑↑↑
+3,22,Force Z : stats ↑
+3,23,Force Z : stats ↑↑
+3,24,Force Z : stats ↑↑↑
+3,25,Force Z : taux de critique ↑
+3,26,Force Z : annule les baisses de stats
+3,27,Force Z : soin du lanceur
+3,28,Force Z : soin du Pokémon entrant sur le terrain
+3,29,Force Z : attire l’attention
+3,30,Force Z : change selon le type
+4,1,Z-Kraft-Bonus: Angriff+
+4,2,Z-Kraft-Bonus: Angriff++
+4,3,Z-Kraft-Bonus: Angriff+++
+4,4,Z-Kraft-Bonus: Verteidigung+
+4,5,Z-Kraft-Bonus: Verteidigung++
+4,6,Z-Kraft-Bonus: Verteidigung+++
+4,7,Z-Kraft-Bonus: Spezial-Angriff+
+4,8,Z-Kraft-Bonus: Spezial-Angriff++
+4,9,Z-Kraft-Bonus: Spezial-Angriff+++
+4,10,Z-Kraft-Bonus: Spezial-Verteidigung+
+4,11,Z-Kraft-Bonus: Spezial-Verteidigung++
+4,12,Z-Kraft-Bonus: Spezial-Verteidigung+++
+4,13,Z-Kraft-Bonus: Initiative+
+4,14,Z-Kraft-Bonus: Initiative++
+4,15,Z-Kraft-Bonus: Initiative+++
+4,16,Z-Kraft-Bonus: Genauigkeit+
+4,17,Z-Kraft-Bonus: Volltrefferquote++
+4,18,Z-Kraft-Bonus: Genauigkeit+++
+4,19,Z-Kraft-Bonus: Fluchtwert+
+4,20,Z-Kraft-Bonus: Fluchtwert++
+4,21,Z-Kraft-Bonus: Fluchtwert+++
+4,22,Z-Kraft-Bonus: Statuswerte+
+4,23,Z-Kraft-Bonus: Statuswerte++
+4,24,Z-Kraft-Bonus: Statuswerte+++
+4,25,Z-Kraft-Bonus: Volltrefferquote+
+4,26,Z-Kraft-Bonus: Negative Statusver. aufgehoben
+4,27,Z-Kraft-Bonus: KP-Regeneration (selbst)
+4,28,Z-Kraft-Bonus: KP-Regeneration (Mitstreiter)
+4,29,Z-Kraft-Bonus: Attacken-Magnet
+4,30,Z-Kraft-Bonus: Variiert je nach Typ
+5,1,Effetto Potere Z: Attacco ↑
+5,2,Effetto Potere Z: Attacco ↑↑
+5,3,Effetto Potere Z: Attacco ↑↑↑
+5,4,Effetto Potere Z: Difesa ↑
+5,5,Effetto Potere Z: Difesa ↑↑
+5,6,Effetto Potere Z: Difesa ↑↑↑
+5,7,Effetto Potere Z: Attacco Speciale ↑
+5,8,Effetto Potere Z: Attacco Speciale ↑↑
+5,9,Effetto Potere Z: Attacco Speciale ↑↑↑
+5,10,Effetto Potere Z: Difesa Speciale ↑
+5,11,Effetto Potere Z: Difesa Speciale ↑↑
+5,12,Effetto Potere Z: Difesa Speciale ↑↑↑
+5,13,Effetto Potere Z: Velocità ↑
+5,14,Effetto Potere Z: Velocità ↑↑
+5,15,Effetto Potere Z: Velocità ↑↑↑
+5,16,Effetto Potere Z: precisione ↑
+5,17,Effetto Potere Z: precisione ↑↑
+5,18,Effetto Potere Z: precisione ↑↑↑
+5,19,Effetto Potere Z: elusione ↑
+5,20,Effetto Potere Z: elusione ↑↑
+5,21,Effetto Potere Z: elusione ↑↑↑
+5,22,Effetto Potere Z: statistiche ↑
+5,23,Effetto Potere Z: statistiche ↑↑
+5,24,Effetto Potere Z: statistiche ↑↑↑
+5,25,Effetto Potere Z: brutti colpi più probabili
+5,26,Effetto Potere Z: ripristina le stat. diminuite
+5,27,Effetto Potere Z: il Pokémon recupera PS
+5,28,Effetto Potere Z: chi entra in campo recupera PS
+5,29,Effetto Potere Z: attira l’attenzione
+5,30,Effetto Potere Z: varia a seconda del tipo
+6,1,Efecto del Poder Z: Ataque ↑
+6,2,Efecto del Poder Z: Ataque ↑↑
+6,3,Efecto del Poder Z: Ataque ↑↑↑
+6,4,Efecto del Poder Z: Defensa ↑
+6,5,Efecto del Poder Z: Defensa ↑↑
+6,6,Efecto del Poder Z: Defensa ↑↑↑
+6,7,Efecto del Poder Z: Ataque Especial ↑
+6,8,Efecto del Poder Z: Ataque Especial ↑↑
+6,9,Efecto del Poder Z: Ataque Especial ↑↑↑
+6,10,Efecto del Poder Z: Defensa Especial ↑
+6,11,Efecto del Poder Z: Defensa Especial ↑↑
+6,12,Efecto del Poder Z: Defensa Especial ↑↑↑
+6,13,Efecto del Poder Z: Velocidad ↑
+6,14,Efecto del Poder Z: Velocidad ↑↑
+6,15,Efecto del Poder Z: Velocidad ↑↑↑
+6,16,Efecto del Poder Z: Precisión ↑
+6,17,Efecto del Poder Z: Precisión ↑↑
+6,18,Efecto del Poder Z: Precisión ↑↑↑
+6,19,Efecto del Poder Z: Evasión ↑
+6,20,Efecto del Poder Z: Evasión ↑↑
+6,21,Efecto del Poder Z: Evasión ↑↑↑
+6,22,Efecto del Poder Z: características ↑
+6,23,Efecto del Poder Z: características ↑↑
+6,24,Efecto del Poder Z: características ↑↑↑
+6,25,Efecto del Poder Z: golpes críticos ↑
+6,26,Efecto del Poder Z: restaura características ↓
+6,27,Efecto del Poder Z: restaura PS del usuario
+6,28,Efecto del Poder Z: restaura PS al relevo
+6,29,Efecto del Poder Z: centra la atención sobre sí
+6,30,Efecto del Poder Z: cambia según el tipo
+7,1,Z파워 효과: 공격↑
+7,2,Z파워 효과: 공격↑↑
+7,3,Z파워 효과: 공격↑↑↑
+7,4,Z파워 효과: 방어↑
+7,5,Z파워 효과: 방어↑↑
+7,6,Z파워 효과: 방어↑↑↑
+7,7,Z파워 효과: 특수공격↑
+7,8,Z파워 효과: 특수공격↑↑
+7,9,Z파워 효과: 특수공격↑↑↑
+7,10,Z파워 효과: 특수방어↑
+7,11,Z파워 효과: 특수방어↑↑
+7,12,Z파워 효과: 특수방어↑↑↑
+7,13,Z파워 효과: 스피드↑
+7,14,Z파워 효과: 스피드↑↑
+7,15,Z파워 효과: 스피드↑↑↑
+7,16,Z파워 효과: 명중률↑
+7,17,Z파워 효과: 명중률↑↑
+7,18,Z파워 효과: 명중률↑↑↑
+7,19,Z파워 효과: 회피율↑
+7,20,Z파워 효과: 회피율↑↑
+7,21,Z파워 효과: 회피율↑↑↑
+7,22,Z파워 효과: 능력↑
+7,23,Z파워 효과: 능력↑↑
+7,24,Z파워 효과: 능력↑↑↑
+7,25,Z파워 효과: 급소↑
+7,26,Z파워 효과: 능력 리셋
+7,27,Z파워 효과: 자신 회복
+7,28,Z파워 효과: 교체 회복
+7,29,Z파워 효과: 주목의 대상
+7,30,Z파워 효과: 타입에 따라 바뀐다
+8,1,Ｚパワー効果：　攻撃↑
+8,2,Ｚパワー効果：　攻撃↑↑
+8,3,Ｚパワー効果：　攻撃↑↑↑
+8,4,Ｚパワー効果：　防御↑
+8,5,Ｚパワー効果：　防御↑↑
+8,6,Ｚパワー効果：　防御↑↑↑
+8,7,Ｚパワー効果：　特攻↑
+8,8,Ｚパワー効果：　特攻↑↑
+8,9,Ｚパワー効果：　特攻↑↑↑
+8,10,Ｚパワー効果：　特防↑
+8,11,Ｚパワー効果：　特防↑↑
+8,12,Ｚパワー効果：　特防↑↑↑
+8,13,Ｚパワー効果：　素早さ↑
+8,14,Ｚパワー効果：　素早さ↑↑
+8,15,Ｚパワー効果：　素早さ↑↑↑
+8,16,Ｚパワー効果：　命中率↑
+8,17,Ｚパワー効果：　命中率↑↑
+8,18,Ｚパワー効果：　命中率↑↑↑
+8,19,Ｚパワー効果：　回避率↑
+8,20,Ｚパワー効果：　回避率↑↑
+8,21,Ｚパワー効果：　回避率↑↑↑
+8,22,Ｚパワー効果：　能力↑
+8,23,Ｚパワー効果：　能力↑↑
+8,24,Ｚパワー効果：　能力↑↑↑
+8,25,Ｚパワー効果：　急所アップ
+8,26,Ｚパワー効果：　能力　リセット
+8,27,Ｚパワー効果：　自分　回復
+8,28,Ｚパワー効果：　入れ替え先　回復
+8,29,Ｚパワー効果：　注目の的
+8,30,Ｚパワー効果：　タイプで　変わる
+9,1,Ｚ力量效果：攻击↑
+9,2,Ｚ力量效果：攻击↑↑
+9,3,Ｚ力量效果：攻击↑↑↑
+9,4,Ｚ力量效果：防御↑
+9,5,Ｚ力量效果：防御↑↑
+9,6,Ｚ力量效果：防御↑↑↑
+9,7,Ｚ力量效果：特攻↑
+9,8,Ｚ力量效果：特攻↑↑
+9,9,Ｚ力量效果：特攻↑↑↑
+9,10,Ｚ力量效果：特防↑
+9,11,Ｚ力量效果：特防↑↑
+9,12,Ｚ力量效果：特防↑↑↑
+9,13,Ｚ力量效果：速度↑
+9,14,Ｚ力量效果：速度↑↑
+9,15,Ｚ力量效果：速度↑↑↑
+9,16,Ｚ力量效果：命中率↑
+9,17,Ｚ力量效果：命中率↑↑
+9,18,Ｚ力量效果：命中率↑↑↑
+9,19,Ｚ力量效果：闪避率↑
+9,20,Ｚ力量效果：闪避率↑↑
+9,21,Ｚ力量效果：闪避率↑↑↑
+9,22,Ｚ力量效果：能力↑
+9,23,Ｚ力量效果：能力↑↑
+9,24,Ｚ力量效果：能力↑↑↑
+9,25,Ｚ力量效果：易中要害
+9,26,Ｚ力量效果：重置能力
+9,27,Ｚ力量效果：回复自己
+9,28,Ｚ力量效果：回复替换出场的宝可梦的ＨＰ
+9,29,Ｚ力量效果：万众瞩目
+9,30,Ｚ力量效果：根据属性的不同而发生变化
+10,1,Ｚ力量效果：攻擊↑
+10,2,Ｚ力量效果：攻擊↑↑
+10,3,Ｚ力量效果：攻擊↑↑↑
+10,4,Ｚ力量效果：防禦↑
+10,5,Ｚ力量效果：防禦↑↑
+10,6,Ｚ力量效果：防禦↑↑↑
+10,7,Ｚ力量效果：特攻↑
+10,8,Ｚ力量效果：特攻↑↑
+10,9,Ｚ力量效果：特攻↑↑↑
+10,10,Ｚ力量效果：特防↑
+10,11,Ｚ力量效果：特防↑↑
+10,12,Ｚ力量效果：特防↑↑↑
+10,13,Ｚ力量效果：速度↑
+10,14,Ｚ力量效果：速度↑↑
+10,15,Ｚ力量效果：速度↑↑↑
+10,16,Ｚ力量效果：命中率↑
+10,17,Ｚ力量效果：命中率↑↑
+10,18,Ｚ力量效果：命中率↑↑↑
+10,19,Ｚ力量效果：閃避率↑
+10,20,Ｚ力量效果：閃避率↑↑
+10,21,Ｚ力量效果：閃避率↑↑↑
+10,22,Ｚ力量效果：能力↑
+10,23,Ｚ力量效果：能力↑↑
+10,24,Ｚ力量效果：能力↑↑↑
+10,25,Ｚ力量效果：易中要害
+10,26,Ｚ力量效果：重置能力
+10,27,Ｚ力量效果：回復自己
+10,28,Ｚ力量效果：回復替換上場的寶可夢的ＨＰ
+10,29,Ｚ力量效果：萬眾矚目
+10,30,Ｚ力量效果：依屬性不同而變化

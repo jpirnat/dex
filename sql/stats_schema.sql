@@ -1,6 +1,193 @@
 use `dex`;
 
 
+create table if not exists `formats`
+(
+`id` tinyint unsigned not null auto_increment,
+
+`identifier` varchar(20) not null,
+`generation` tinyint unsigned not null,
+`level` tinyint unsigned not null,
+`field_size` tinyint unsigned not null,
+`team_size` tinyint unsigned not null,
+`in_battle_team_size` tinyint unsigned not null,
+
+primary key (`id`),
+unique key (`identifier`),
+foreign key (`generation`) references `generations` (`generation`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_formats_to_import`
+(
+`year` smallint unsigned not null,
+`month` tinyint unsigned not null,
+`name` varchar(50) not null,
+
+`format_id` tinyint unsigned not null,
+
+primary key (
+	`year`,
+	`month`,
+	`name`
+),
+foreign key (`format_id`) references `formats` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_formats_to_ignore`
+(
+`year` smallint unsigned not null,
+`month` tinyint unsigned not null,
+`name` varchar(50) not null,
+
+`format_id` tinyint unsigned null, # nullable
+
+primary key (
+	`year`,
+	`month`,
+	`name`
+),
+foreign key (`format_id`) references `formats` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_pokemon_to_import`
+(
+`name` varchar(50) not null,
+
+`pokemon_id` smallint unsigned not null,
+
+primary key (`name`),
+foreign key (`pokemon_id`) references `pokemon` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_pokemon_to_ignore`
+(
+`name` varchar(50) not null,
+
+`pokemon_id` smallint unsigned null, # nullable
+
+primary key (`name`),
+foreign key (`pokemon_id`) references `pokemon` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_abilities_to_import`
+(
+`name` varchar(50) not null,
+
+`ability_id` smallint unsigned not null,
+
+primary key (`name`),
+foreign key (`ability_id`) references `abilities` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_abilities_to_ignore`
+(
+`name` varchar(50) not null,
+
+`ability_id` smallint unsigned null, # nullable
+
+primary key (`name`),
+foreign key (`ability_id`) references `abilities` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_items_to_import`
+(
+`name` varchar(50) not null,
+
+`item_id` smallint unsigned not null,
+
+primary key (`name`),
+foreign key (`item_id`) references `items` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_items_to_ignore`
+(
+`name` varchar(50) not null,
+
+`item_id` smallint unsigned null, # nullable
+
+primary key (`name`),
+foreign key (`item_id`) references `items` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_natures_to_import`
+(
+`name` varchar(50) not null,
+
+`nature_id` tinyint unsigned not null,
+
+primary key (`name`),
+foreign key (`nature_id`) references `natures` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_natures_to_ignore`
+(
+`name` varchar(50) not null,
+
+`nature_id` tinyint unsigned null, # nullable
+
+primary key (`name`),
+foreign key (`nature_id`) references `natures` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_moves_to_import`
+(
+`name` varchar(50) not null,
+
+`move_id` smallint unsigned not null,
+
+primary key (`name`),
+foreign key (`move_id`) references `moves` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `showdown_moves_to_ignore`
+(
+`name` varchar(50) not null,
+
+`move_id` smallint unsigned null, # nullable
+
+primary key (`name`),
+foreign key (`move_id`) references `moves` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
 /* /stats/year-month/format-rating.txt */
 
 create table if not exists `usage`
@@ -430,9 +617,7 @@ foreign key (`counter_id`) references `pokemon` (`id`)
 
 /*
 TODO:
-
 - find out difference between `usage_pokemon`.`raw` and `moveset_pokemon`.`raw_count`
 - find out what the other moveset counters numbers mean, and properly name them
 - add `metagame_%` tables of metagame analysis?
-
 */

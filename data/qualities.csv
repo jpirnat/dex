@@ -1,0 +1,15 @@
+id,identifier
+1,only-damage
+2,no-damage-and-inflict-status
+3,no-damage-and-minus-target-or-plus-user-stat
+4,no-damage-and-heal-user
+5,damage-and-inflict-status
+6,no-damage-and-status-and-plus-target-stat
+7,damage-and-minus-target-stat
+8,damage-and-plus-user-stat
+9,damage-and-absorbs-damage
+10,one-hit-ko
+11,affects-whole-field
+12,affect-one-side-of-the-field
+13,forces-target-to-switch
+14,unique-effect

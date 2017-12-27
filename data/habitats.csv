@@ -1,0 +1,10 @@
+id,identifier,image
+1,grassland,grassland.png
+2,forest,forest.png
+3,waters-edge,waters-edge.png
+4,sea,sea.png
+5,cave,cave.png
+6,mountain,mountain.png
+7,rough-terrain,rough-terrain.png
+8,urban,urban.png
+9,rare,rare.png

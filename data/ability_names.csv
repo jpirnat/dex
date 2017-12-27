@@ -1,0 +1,2331 @@
+language_id,ability_id,name
+1,1,あくしゅう
+1,2,あめふらし
+1,3,かそく
+1,4,カブトアーマー
+1,5,がんじょう
+1,6,しめりけ
+1,7,じゅうなん
+1,8,すながくれ
+1,9,せいでんき
+1,10,ちくでん
+1,11,ちょすい
+1,12,どんかん
+1,13,ノーてんき
+1,14,ふくがん
+1,15,ふみん
+1,16,へんしょく
+1,17,めんえき
+1,18,もらいび
+1,19,りんぷん
+1,20,マイペース
+1,21,きゅうばん
+1,22,いかく
+1,23,かげふみ
+1,24,さめはだ
+1,25,ふしぎなまもり
+1,26,ふゆう
+1,27,ほうし
+1,28,シンクロ
+1,29,クリアボディ
+1,30,しぜんかいふく
+1,31,ひらいしん
+1,32,てんのめぐみ
+1,33,すいすい
+1,34,ようりょくそ
+1,35,はっこう
+1,36,トレース
+1,37,ちからもち
+1,38,どくのトゲ
+1,39,せいしんりょく
+1,40,マグマのよろい
+1,41,みずのベール
+1,42,じりょく
+1,43,ぼうおん
+1,44,あめうけざら
+1,45,すなおこし
+1,46,プレッシャー
+1,47,あついしぼう
+1,48,はやおき
+1,49,ほのおのからだ
+1,50,にげあし
+1,51,するどいめ
+1,52,かいりきバサミ
+1,53,ものひろい
+1,54,なまけ
+1,55,はりきり
+1,56,メロメロボディ
+1,57,プラス
+1,58,マイナス
+1,59,てんきや
+1,60,ねんちゃく
+1,61,だっぴ
+1,62,こんじょう
+1,63,ふしぎなうろこ
+1,64,ヘドロえき
+1,65,しんりょく
+1,66,もうか
+1,67,げきりゅう
+1,68,むしのしらせ
+1,69,いしあたま
+1,70,ひでり
+1,71,ありじごく
+1,72,やるき
+1,73,しろいけむり
+1,74,ヨガパワー
+1,75,シェルアーマー
+1,76,エアロック
+1,77,ちどりあし
+1,78,でんきエンジン
+1,79,とうそうしん
+1,80,ふくつのこころ
+1,81,ゆきがくれ
+1,82,くいしんぼう
+1,83,いかりのつぼ
+1,84,かるわざ
+1,85,たいねつ
+1,86,たんじゅん
+1,87,かんそうはだ
+1,88,ダウンロード
+1,89,てつのこぶし
+1,90,ポイズンヒール
+1,91,てきおうりょく
+1,92,スキルリンク
+1,93,うるおいボディ
+1,94,サンパワー
+1,95,はやあし
+1,96,ノーマルスキン
+1,97,スナイパー
+1,98,マジックガード
+1,99,ノーガード
+1,100,あとだし
+1,101,テクニシャン
+1,102,リーフガード
+1,103,ぶきよう
+1,104,かたやぶり
+1,105,きょううん
+1,106,ゆうばく
+1,107,きけんよち
+1,108,よちむ
+1,109,てんねん
+1,110,いろめがね
+1,111,フィルター
+1,112,スロースタート
+1,113,きもったま
+1,114,よびみず
+1,115,アイスボディ
+1,116,ハードロック
+1,117,ゆきふらし
+1,118,みつあつめ
+1,119,おみとおし
+1,120,すてみ
+1,121,マルチタイプ
+1,122,フラワーギフト
+1,123,ナイトメア
+1,124,わるいてぐせ
+1,125,ちからずく
+1,126,あまのじゃく
+1,127,きんちょうかん
+1,128,まけんき
+1,129,よわき
+1,130,のろわれボディ
+1,131,いやしのこころ
+1,132,フレンドガード
+1,133,くだけるよろい
+1,134,ヘヴィメタル
+1,135,ライトメタル
+1,136,マルチスケイル
+1,137,どくぼうそう
+1,138,ねつぼうそう
+1,139,しゅうかく
+1,140,テレパシー
+1,141,ムラっけ
+1,142,ぼうじん
+1,143,どくしゅ
+1,144,さいせいりょく
+1,145,はとむね
+1,146,すなかき
+1,147,ミラクルスキン
+1,148,アナライズ
+1,149,イリュージョン
+1,150,かわりもの
+1,151,すりぬけ
+1,152,ミイラ
+1,153,じしんかじょう
+1,154,せいぎのこころ
+1,155,びびり
+1,156,マジックミラー
+1,157,そうしょく
+1,158,いたずらごころ
+1,159,すなのちから
+1,160,てつのトゲ
+1,161,ダルマモード
+1,162,しょうりのほし
+1,163,ターボブレイズ
+1,164,テラボルテージ
+1,165,アロマベール
+1,166,フラワーベール
+1,167,ほおぶくろ
+1,168,へんげんじざい
+1,169,ファーコート
+1,170,マジシャン
+1,171,ぼうだん
+1,172,かちき
+1,173,がんじょうあご
+1,174,フリーズスキン
+1,175,スイートベール
+1,176,バトルスイッチ
+1,177,はやてのつばさ
+1,178,メガランチャー
+1,179,くさのけがわ
+1,180,きょうせい
+1,181,かたいツメ
+1,182,フェアリースキン
+1,183,ぬめぬめ
+1,184,スカイスキン
+1,185,おやこあい
+1,186,ダークオーラ
+1,187,フェアリーオーラ
+1,188,オーラブレイク
+1,189,はじまりのうみ
+1,190,おわりのだいち
+1,191,デルタストリーム
+1,192,じきゅうりょく
+1,193,にげごし
+1,194,ききかいひ
+1,195,みずがため
+1,196,ひとでなし
+1,197,リミットシールド
+1,198,はりこみ
+1,199,すいほう
+1,200,はがねつかい
+1,201,ぎゃくじょう
+1,202,ゆきかき
+1,203,えんかく
+1,204,うるおいボイス
+1,205,ヒーリングシフト
+1,206,エレキスキン
+1,207,サーフテール
+1,208,ぎょぐん
+1,209,ばけのかわ
+1,210,きずなへんげ
+1,211,スワームチェンジ
+1,212,ふしょく
+1,213,ぜったいねむり
+1,214,じょおうのいげん
+1,215,とびだすなかみ
+1,216,おどりこ
+1,217,バッテリー
+1,218,もふもふ
+1,219,ビビッドボディ
+1,220,ソウルハート
+1,221,カーリーヘアー
+1,222,レシーバー
+1,223,かがくのちから
+1,224,ビーストブースト
+1,225,ＡＲシステム
+1,226,エレキメイカー
+1,227,サイコメイカー
+1,228,ミストメイカー
+1,229,グラスメイカー
+1,230,メタルプロテクト
+1,231,ファントムガード
+1,232,プリズムアーマー
+1,233,ブレインフォース
+2,1,Stench
+2,2,Drizzle
+2,3,Speed Boost
+2,4,Battle Armor
+2,5,Sturdy
+2,6,Damp
+2,7,Limber
+2,8,Sand Veil
+2,9,Static
+2,10,Volt Absorb
+2,11,Water Absorb
+2,12,Oblivious
+2,13,Cloud Nine
+2,14,Compound Eyes
+2,15,Insomnia
+2,16,Color Change
+2,17,Immunity
+2,18,Flash Fire
+2,19,Shield Dust
+2,20,Own Tempo
+2,21,Suction Cups
+2,22,Intimidate
+2,23,Shadow Tag
+2,24,Rough Skin
+2,25,Wonder Guard
+2,26,Levitate
+2,27,Effect Spore
+2,28,Synchronize
+2,29,Clear Body
+2,30,Natural Cure
+2,31,Lightning Rod
+2,32,Serene Grace
+2,33,Swift Swim
+2,34,Chlorophyll
+2,35,Illuminate
+2,36,Trace
+2,37,Huge Power
+2,38,Poison Point
+2,39,Inner Focus
+2,40,Magma Armor
+2,41,Water Veil
+2,42,Magnet Pull
+2,43,Soundproof
+2,44,Rain Dish
+2,45,Sand Stream
+2,46,Pressure
+2,47,Thick Fat
+2,48,Early Bird
+2,49,Flame Body
+2,50,Run Away
+2,51,Keen Eye
+2,52,Hyper Cutter
+2,53,Pickup
+2,54,Truant
+2,55,Hustle
+2,56,Cute Charm
+2,57,Plus
+2,58,Minus
+2,59,Forecast
+2,60,Sticky Hold
+2,61,Shed Skin
+2,62,Guts
+2,63,Marvel Scale
+2,64,Liquid Ooze
+2,65,Overgrow
+2,66,Blaze
+2,67,Torrent
+2,68,Swarm
+2,69,Rock Head
+2,70,Drought
+2,71,Arena Trap
+2,72,Vital Spirit
+2,73,White Smoke
+2,74,Pure Power
+2,75,Shell Armor
+2,76,Air Lock
+2,77,Tangled Feet
+2,78,Motor Drive
+2,79,Rivalry
+2,80,Steadfast
+2,81,Snow Cloak
+2,82,Gluttony
+2,83,Anger Point
+2,84,Unburden
+2,85,Heatproof
+2,86,Simple
+2,87,Dry Skin
+2,88,Download
+2,89,Iron Fist
+2,90,Poison Heal
+2,91,Adaptability
+2,92,Skill Link
+2,93,Hydration
+2,94,Solar Power
+2,95,Quick Feet
+2,96,Normalize
+2,97,Sniper
+2,98,Magic Guard
+2,99,No Guard
+2,100,Stall
+2,101,Technician
+2,102,Leaf Guard
+2,103,Klutz
+2,104,Mold Breaker
+2,105,Super Luck
+2,106,Aftermath
+2,107,Anticipation
+2,108,Forewarn
+2,109,Unaware
+2,110,Tinted Lens
+2,111,Filter
+2,112,Slow Start
+2,113,Scrappy
+2,114,Storm Drain
+2,115,Ice Body
+2,116,Solid Rock
+2,117,Snow Warning
+2,118,Honey Gather
+2,119,Frisk
+2,120,Reckless
+2,121,Multitype
+2,122,Flower Gift
+2,123,Bad Dreams
+2,124,Pickpocket
+2,125,Sheer Force
+2,126,Contrary
+2,127,Unnerve
+2,128,Defiant
+2,129,Defeatist
+2,130,Cursed Body
+2,131,Healer
+2,132,Friend Guard
+2,133,Weak Armor
+2,134,Heavy Metal
+2,135,Light Metal
+2,136,Multiscale
+2,137,Toxic Boost
+2,138,Flare Boost
+2,139,Harvest
+2,140,Telepathy
+2,141,Moody
+2,142,Overcoat
+2,143,Poison Touch
+2,144,Regenerator
+2,145,Big Pecks
+2,146,Sand Rush
+2,147,Wonder Skin
+2,148,Analytic
+2,149,Illusion
+2,150,Imposter
+2,151,Infiltrator
+2,152,Mummy
+2,153,Moxie
+2,154,Justified
+2,155,Rattled
+2,156,Magic Bounce
+2,157,Sap Sipper
+2,158,Prankster
+2,159,Sand Force
+2,160,Iron Barbs
+2,161,Zen Mode
+2,162,Victory Star
+2,163,Turboblaze
+2,164,Teravolt
+2,165,Aroma Veil
+2,166,Flower Veil
+2,167,Cheek Pouch
+2,168,Protean
+2,169,Fur Coat
+2,170,Magician
+2,171,Bulletproof
+2,172,Competitive
+2,173,Strong Jaw
+2,174,Refrigerate
+2,175,Sweet Veil
+2,176,Stance Change
+2,177,Gale Wings
+2,178,Mega Launcher
+2,179,Grass Pelt
+2,180,Symbiosis
+2,181,Tough Claws
+2,182,Pixilate
+2,183,Gooey
+2,184,Aerilate
+2,185,Parental Bond
+2,186,Dark Aura
+2,187,Fairy Aura
+2,188,Aura Break
+2,189,Primordial Sea
+2,190,Desolate Land
+2,191,Delta Stream
+2,192,Stamina
+2,193,Wimp Out
+2,194,Emergency Exit
+2,195,Water Compaction
+2,196,Merciless
+2,197,Shields Down
+2,198,Stakeout
+2,199,Water Bubble
+2,200,Steelworker
+2,201,Berserk
+2,202,Slush Rush
+2,203,Long Reach
+2,204,Liquid Voice
+2,205,Triage
+2,206,Galvanize
+2,207,Surge Surfer
+2,208,Schooling
+2,209,Disguise
+2,210,Battle Bond
+2,211,Power Construct
+2,212,Corrosion
+2,213,Comatose
+2,214,Queenly Majesty
+2,215,Innards Out
+2,216,Dancer
+2,217,Battery
+2,218,Fluffy
+2,219,Dazzling
+2,220,Soul-Heart
+2,221,Tangling Hair
+2,222,Receiver
+2,223,Power of Alchemy
+2,224,Beast Boost
+2,225,RKS System
+2,226,Electric Surge
+2,227,Psychic Surge
+2,228,Misty Surge
+2,229,Grassy Surge
+2,230,Full Metal Body
+2,231,Shadow Shield
+2,232,Prism Armor
+2,233,Neuroforce
+3,1,Puanteur
+3,2,Crachin
+3,3,Turbo
+3,4,Armurbaston
+3,5,Fermeté
+3,6,Moiteur
+3,7,Échauffement
+3,8,Voile Sable
+3,9,Statik
+3,10,Absorb Volt
+3,11,Absorb Eau
+3,12,Benêt
+3,13,Ciel Gris
+3,14,Œil Composé
+3,15,Insomnia
+3,16,Déguisement
+3,17,Vaccin
+3,18,Torche
+3,19,Écran Poudre
+3,20,Tempo Perso
+3,21,Ventouse
+3,22,Intimidation
+3,23,Marque Ombre
+3,24,Peau Dure
+3,25,Garde Mystik
+3,26,Lévitation
+3,27,Pose Spore
+3,28,Synchro
+3,29,Corps Sain
+3,30,Médic Nature
+3,31,Paratonnerre
+3,32,Sérénité
+3,33,Glissade
+3,34,Chlorophylle
+3,35,Lumiattirance
+3,36,Calque
+3,37,Coloforce
+3,38,Point Poison
+3,39,Attention
+3,40,Armumagma
+3,41,Ignifu-Voile
+3,42,Magnépiège
+3,43,Anti-Bruit
+3,44,Cuvette
+3,45,Sable Volant
+3,46,Pression
+3,47,Isograisse
+3,48,Matinal
+3,49,Corps Ardent
+3,50,Fuite
+3,51,Regard Vif
+3,52,Hyper Cutter
+3,53,Ramassage
+3,54,Absentéisme
+3,55,Agitation
+3,56,Joli Sourire
+3,57,Plus
+3,58,Minus
+3,59,Météo
+3,60,Glue
+3,61,Mue
+3,62,Cran
+3,63,Écaille Spéciale
+3,64,Suintement
+3,65,Engrais
+3,66,Brasier
+3,67,Torrent
+3,68,Essaim
+3,69,Tête de Roc
+3,70,Sécheresse
+3,71,Piège Sable
+3,72,Esprit Vital
+3,73,Écran Fumée
+3,74,Force Pure
+3,75,Coque Armure
+3,76,Air Lock
+3,77,Pieds Confus
+3,78,Motorisé
+3,79,Rivalité
+3,80,Impassible
+3,81,Rideau Neige
+3,82,Gloutonnerie
+3,83,Colérique
+3,84,Délestage
+3,85,Ignifugé
+3,86,Simple
+3,87,Peau Sèche
+3,88,Télécharge
+3,89,Poing de Fer
+3,90,Soin Poison
+3,91,Adaptabilité
+3,92,Multi-Coups
+3,93,Hydratation
+3,94,Force Soleil
+3,95,Pied Véloce
+3,96,Normalise
+3,97,Sniper
+3,98,Garde Magik
+3,99,Annule Garde
+3,100,Frein
+3,101,Technicien
+3,102,Feuille Garde
+3,103,Maladresse
+3,104,Brise Moule
+3,105,Chanceux
+3,106,Boom Final
+3,107,Anticipation
+3,108,Prédiction
+3,109,Inconscient
+3,110,Lentiteintée
+3,111,Filtre
+3,112,Début Calme
+3,113,Querelleur
+3,114,Lavabo
+3,115,Corps Gel
+3,116,Solide Roc
+3,117,Alerte Neige
+3,118,Cherche Miel
+3,119,Fouille
+3,120,Téméraire
+3,121,Multi-Type
+3,122,Don Floral
+3,123,Mauvais Rêve
+3,124,Pickpocket
+3,125,Sans Limite
+3,126,Contestation
+3,127,Tension
+3,128,Acharné
+3,129,Défaitiste
+3,130,Corps Maudit
+3,131,Cœur Soin
+3,132,Garde Amie
+3,133,Armurouillée
+3,134,Heavy Metal
+3,135,Light Metal
+3,136,Multiécaille
+3,137,Rage Poison
+3,138,Rage Brûlure
+3,139,Récolte
+3,140,Télépathe
+3,141,Lunatique
+3,142,Envelocape
+3,143,Toxitouche
+3,144,Régé-Force
+3,145,Cœur de Coq
+3,146,Baigne Sable
+3,147,Peau Miracle
+3,148,Analyste
+3,149,Illusion
+3,150,Imposteur
+3,151,Infiltration
+3,152,Momie
+3,153,Impudence
+3,154,Cœur Noble
+3,155,Phobique
+3,156,Miroir Magik
+3,157,Herbivore
+3,158,Farceur
+3,159,Force Sable
+3,160,Épine de Fer
+3,161,Mode Transe
+3,162,Victorieux
+3,163,TurboBrasier
+3,164,Téra-Voltage
+3,165,Aroma-Voile
+3,166,Flora-Voile
+3,167,Bajoues
+3,168,Protéen
+3,169,Toison Épaisse
+3,170,Magicien
+3,171,Pare-Balles
+3,172,Battant
+3,173,Prognathe
+3,174,Peau Gelée
+3,175,Gluco-Voile
+3,176,Déclic Tactique
+3,177,Ailes Bourrasque
+3,178,Méga Blaster
+3,179,Toison Herbue
+3,180,Symbiose
+3,181,Griffe Dure
+3,182,Peau Féérique
+3,183,Poisseux
+3,184,Peau Céleste
+3,185,Amour Filial
+3,186,Aura Ténébreuse
+3,187,Aura Féérique
+3,188,Aura Inversée
+3,189,Mer Primaire
+3,190,Terre Finale
+3,191,Souffle Delta
+3,192,Endurance
+3,193,Escampette
+3,194,Repli Tactique
+3,195,Sable Humide
+3,196,Cruauté
+3,197,Bouclier-Carcan
+3,198,Filature
+3,199,Aquabulle
+3,200,Expert Acier
+3,201,Dracolère
+3,202,Chasse-Neige
+3,203,Longue Portée
+3,204,Hydrata-Son
+3,205,Prioguérison
+3,206,Peau Électrique
+3,207,Surf Caudal
+3,208,Banc
+3,209,Fantômasque
+3,210,Synergie
+3,211,Rassemblement
+3,212,Corrosion
+3,213,Hypersommeil
+3,214,Prestance Royale
+3,215,Expuls’Organes
+3,216,Danseuse
+3,217,Batterie
+3,218,Boule de Poils
+3,219,Corps Coloré
+3,220,Animacœur
+3,221,Mèche Rebelle
+3,222,Receveur
+3,223,Osmose
+3,224,Boost Chimère
+3,225,Système Alpha
+3,226,Créa-Élec
+3,227,Créa-Psy
+3,228,Créa-Brume
+3,229,Créa-Herbe
+3,230,Métallo-Garde
+3,231,Spectro-Bouclier
+3,232,Prisme-Armure
+3,233,Cérébro-Force
+4,1,Duftnote
+4,2,Niesel
+4,3,Temposchub
+4,4,Kampfpanzer
+4,5,Robustheit
+4,6,Feuchtigkeit
+4,7,Flexibilität
+4,8,Sandschleier
+4,9,Statik
+4,10,Voltabsorber
+4,11,H2O-Absorber
+4,12,Dösigkeit
+4,13,Wolke Sieben
+4,14,Facettenauge
+4,15,Insomnia
+4,16,Farbwechsel
+4,17,Immunität
+4,18,Feuerfänger
+4,19,Puderabwehr
+4,20,Tempomacher
+4,21,Saugnapf
+4,22,Bedroher
+4,23,Wegsperre
+4,24,Rauhaut
+4,25,Wunderwache
+4,26,Schwebe
+4,27,Sporenwirt
+4,28,Synchro
+4,29,Neutraltorso
+4,30,Innere Kraft
+4,31,Blitzfänger
+4,32,Edelmut
+4,33,Wassertempo
+4,34,Chlorophyll
+4,35,Erleuchtung
+4,36,Fährte
+4,37,Kraftkoloss
+4,38,Giftdorn
+4,39,Konzentrator
+4,40,Magmapanzer
+4,41,Aquahülle
+4,42,Magnetfalle
+4,43,Lärmschutz
+4,44,Regengenuss
+4,45,Sandsturm
+4,46,Erzwinger
+4,47,Speckschicht
+4,48,Frühwecker
+4,49,Flammkörper
+4,50,Angsthase
+4,51,Adlerauge
+4,52,Scherenmacht
+4,53,Mitnahme
+4,54,Schnarchnase
+4,55,Übereifer
+4,56,Charmebolzen
+4,57,Plus
+4,58,Minus
+4,59,Prognose
+4,60,Wertehalter
+4,61,Expidermis
+4,62,Adrenalin
+4,63,Notschutz
+4,64,Kloakensoße
+4,65,Notdünger
+4,66,Großbrand
+4,67,Sturzbach
+4,68,Hexaplaga
+4,69,Steinhaupt
+4,70,Dürre
+4,71,Ausweglos
+4,72,Munterkeit
+4,73,Pulverrauch
+4,74,Mentalkraft
+4,75,Panzerhaut
+4,76,Klimaschutz
+4,77,Fußangel
+4,78,Starthilfe
+4,79,Rivalität
+4,80,Felsenfest
+4,81,Schneemantel
+4,82,Völlerei
+4,83,Kurzschluss
+4,84,Entlastung
+4,85,Hitzeschutz
+4,86,Wankelmut
+4,87,Trockenheit
+4,88,Download
+4,89,Eisenfaust
+4,90,Aufheber
+4,91,Anpassung
+4,92,Wertelink
+4,93,Hydration
+4,94,Solarkraft
+4,95,Rasanz
+4,96,Regulierung
+4,97,Superschütze
+4,98,Magieschild
+4,99,Schildlos
+4,100,Zeitspiel
+4,101,Techniker
+4,102,Floraschild
+4,103,Tollpatsch
+4,104,Überbrückung
+4,105,Glückspilz
+4,106,Finalschlag
+4,107,Vorahnung
+4,108,Vorwarnung
+4,109,Unkenntnis
+4,110,Aufwertung
+4,111,Filter
+4,112,Saumselig
+4,113,Rauflust
+4,114,Sturmsog
+4,115,Eishaut
+4,116,Felskern
+4,117,Hagelalarm
+4,118,Honigmaul
+4,119,Schnüffler
+4,120,Achtlos
+4,121,Variabilität
+4,122,Pflanzengabe
+4,123,Alptraum
+4,124,Langfinger
+4,125,Rohe Gewalt
+4,126,Umkehrung
+4,127,Anspannung
+4,128,Siegeswille
+4,129,Schwächling
+4,130,Tastfluch
+4,131,Heilherz
+4,132,Freundeshut
+4,133,Bruchrüstung
+4,134,Schwermetall
+4,135,Leichtmetall
+4,136,Multischuppe
+4,137,Giftwahn
+4,138,Hitzewahn
+4,139,Reiche Ernte
+4,140,Telepathie
+4,141,Gefühlswippe
+4,142,Wetterfest
+4,143,Giftgriff
+4,144,Belebekraft
+4,145,Brustbieter
+4,146,Sandscharrer
+4,147,Wunderhaut
+4,148,Analyse
+4,149,Trugbild
+4,150,Doppelgänger
+4,151,Schwebedurch
+4,152,Mumie
+4,153,Hochmut
+4,154,Redlichkeit
+4,155,Hasenfuß
+4,156,Magiespiegel
+4,157,Vegetarier
+4,158,Strolch
+4,159,Sandgewalt
+4,160,Eisenstachel
+4,161,Trance-Modus
+4,162,Triumphstern
+4,163,Turbobrand
+4,164,Teravolt
+4,165,Dufthülle
+4,166,Blütenhülle
+4,167,Backentaschen
+4,168,Wandlungskunst
+4,169,Fellkleid
+4,170,Zauberer
+4,171,Kugelsicher
+4,172,Unbeugsamkeit
+4,173,Titankiefer
+4,174,Frostschicht
+4,175,Zuckerhülle
+4,176,Taktikwechsel
+4,177,Orkanschwingen
+4,178,Megawumme
+4,179,Pflanzenpelz
+4,180,Nutznießer
+4,181,Krallenwucht
+4,182,Feenschicht
+4,183,Viskosität
+4,184,Zenithaut
+4,185,Familienbande
+4,186,Dunkelaura
+4,187,Feenaura
+4,188,Aura-Umkehr
+4,189,Urmeer
+4,190,Endland
+4,191,Delta-Wind
+4,192,Zähigkeit
+4,193,Reißaus
+4,194,Rückzug
+4,195,Verklumpen
+4,196,Quälerei
+4,197,Limitschild
+4,198,Beschattung
+4,199,Wasserblase
+4,200,Stahlprofi
+4,201,Wutausbruch
+4,202,Schneescharrer
+4,203,Langstrecke
+4,204,Plätscherstimme
+4,205,Heilwandel
+4,206,Elektrohaut
+4,207,Surf-Schweif
+4,208,Fischschwarm
+4,209,Kostümspuk
+4,210,Freundschaftsakt
+4,211,Scharwandel
+4,212,Korrosion
+4,213,Dauerschlaf
+4,214,Majestät
+4,215,Magenkrempler
+4,216,Tänzer
+4,217,Batterie
+4,218,Flauschigkeit
+4,219,Buntkörper
+4,220,Seelenherz
+4,221,Lockenkopf
+4,222,Receiver
+4,223,Chemiekraft
+4,224,Bestien-Boost
+4,225,Alpha-System
+4,226,Elektro-Erzeuger
+4,227,Psycho-Erzeuger
+4,228,Nebel-Erzeuger
+4,229,Gras-Erzeuger
+4,230,Metallprotektor
+4,231,Phantomschutz
+4,232,Prismarüstung
+4,233,Zerebralmacht
+5,1,Tanfo
+5,2,Piovischio
+5,3,Acceleratore
+5,4,Lottascudo
+5,5,Vigore
+5,6,Umidità
+5,7,Scioltezza
+5,8,Sabbiavelo
+5,9,Statico
+5,10,Assorbivolt
+5,11,Assorbacqua
+5,12,Indifferenza
+5,13,Antimeteo
+5,14,Insettocchi
+5,15,Insonnia
+5,16,Cambiacolore
+5,17,Immunità
+5,18,Fuocardore
+5,19,Polvoscudo
+5,20,Mente Locale
+5,21,Ventose
+5,22,Prepotenza
+5,23,Pedinombra
+5,24,Cartavetro
+5,25,Magidifesa
+5,26,Levitazione
+5,27,Spargispora
+5,28,Sincronismo
+5,29,Corpochiaro
+5,30,Alternacura
+5,31,Parafulmine
+5,32,Leggiadro
+5,33,Nuotovelox
+5,34,Clorofilla
+5,35,Risplendi
+5,36,Traccia
+5,37,Macroforza
+5,38,Velenopunto
+5,39,Forza Interiore
+5,40,Magmascudo
+5,41,Idrovelo
+5,42,Magnetismo
+5,43,Antisuono
+5,44,Copripioggia
+5,45,Sabbiafiume
+5,46,Pressione
+5,47,Grassospesso
+5,48,Sveglialampo
+5,49,Corpodifuoco
+5,50,Fugafacile
+5,51,Sguardofermo
+5,52,Ipertaglio
+5,53,Raccolta
+5,54,Pigrone
+5,55,Tuttafretta
+5,56,Incantevole
+5,57,Più
+5,58,Meno
+5,59,Previsioni
+5,60,Antifurto
+5,61,Muta
+5,62,Dentistretti
+5,63,Pelledura
+5,64,Melma
+5,65,Erbaiuto
+5,66,Aiutofuoco
+5,67,Acquaiuto
+5,68,Aiutinsetto
+5,69,Testadura
+5,70,Siccità
+5,71,Trappoarena
+5,72,Spiritovivo
+5,73,Fumochiaro
+5,74,Forzapura
+5,75,Guscioscudo
+5,76,Riparo
+5,77,Intricopiedi
+5,78,Elettrorapid
+5,79,Antagonismo
+5,80,Cuordeciso
+5,81,Mantelneve
+5,82,Voracità
+5,83,Grancollera
+5,84,Agiltecnica
+5,85,Antifuoco
+5,86,Disinvoltura
+5,87,Pellearsa
+5,88,Download
+5,89,Ferropugno
+5,90,Velencura
+5,91,Adattabilità
+5,92,Abillegame
+5,93,Idratazione
+5,94,Solarpotere
+5,95,Piedisvelti
+5,96,Normalità
+5,97,Cecchino
+5,98,Magicscudo
+5,99,Nullodifesa
+5,100,Rallentatore
+5,101,Tecnico
+5,102,Fogliamanto
+5,103,Impaccio
+5,104,Rompiforma
+5,105,Supersorte
+5,106,Scoppio
+5,107,Presagio
+5,108,Premonizione
+5,109,Imprudenza
+5,110,Lentifumé
+5,111,Filtro
+5,112,Lentoinizio
+5,113,Nervisaldi
+5,114,Acquascolo
+5,115,Corpogelo
+5,116,Solidroccia
+5,117,Scendineve
+5,118,Mielincetta
+5,119,Indagine
+5,120,Temerarietà
+5,121,Multitipo
+5,122,Regalfiore
+5,123,Sogniamari
+5,124,Arraffalesto
+5,125,Forzabruta
+5,126,Inversione
+5,127,Agitazione
+5,128,Agonismo
+5,129,Sconforto
+5,130,Corpofunesto
+5,131,Curacuore
+5,132,Amicoscudo
+5,133,Sottilguscio
+5,134,Metalpesante
+5,135,Metalleggero
+5,136,Multisquame
+5,137,Velenimpeto
+5,138,Bruciaimpeto
+5,139,Coglibacche
+5,140,Telepatia
+5,141,Altalena
+5,142,Copricapo
+5,143,Velentocco
+5,144,Rigenergia
+5,145,Pettinfuori
+5,146,Remasabbia
+5,147,Splendicute
+5,148,Ponderazione
+5,149,Illusione
+5,150,Sosia
+5,151,Intrapasso
+5,152,Mummia
+5,153,Arroganza
+5,154,Giustizia
+5,155,Paura
+5,156,Magispecchio
+5,157,Mangiaerba
+5,158,Burla
+5,159,Silicoforza
+5,160,Spineferrate
+5,161,Stato Zen
+5,162,Vittorstella
+5,163,Piroturbina
+5,164,Teravolt
+5,165,Aromavelo
+5,166,Fiorvelo
+5,167,Guancegonfie
+5,168,Mutatipo
+5,169,Foltopelo
+5,170,Prestigiatore
+5,171,Antiproiettile
+5,172,Tenacia
+5,173,Ferromascella
+5,174,Pellegelo
+5,175,Dolcevelo
+5,176,Accendilotta
+5,177,Aliraffica
+5,178,Megalancio
+5,179,Peloderba
+5,180,Simbiosi
+5,181,Unghiedure
+5,182,Pellefolletto
+5,183,Viscosità
+5,184,Pellecielo
+5,185,Amorefiliale
+5,186,Auratetra
+5,187,Aurafolletto
+5,188,Frangiaura
+5,189,Mare Primordiale
+5,190,Terra Estrema
+5,191,Flusso Delta
+5,192,Sopportazione
+5,193,Fuggifuggi
+5,194,Passoindietro
+5,195,Idrorinforzo
+5,196,Spietatezza
+5,197,Scudosoglia
+5,198,Sorveglianza
+5,199,Bolladacqua
+5,200,Tempracciaio
+5,201,Furore
+5,202,Spalaneve
+5,203,Distacco
+5,204,Idrovoce
+5,205,Primacura
+5,206,Pellelettro
+5,207,Codasurf
+5,208,Banco
+5,209,Fantasmanto
+5,210,Morfosintonia
+5,211,Sciamefusione
+5,212,Corrosione
+5,213,Sonno Assoluto
+5,214,Regalità
+5,215,Espellinterno
+5,216,Sincrodanza
+5,217,Batteria
+5,218,Morbidone
+5,219,Corposgargiante
+5,220,Cuoreanima
+5,221,Boccolidoro
+5,222,Ricezione
+5,223,Forza Chimica
+5,224,Ultraboost
+5,225,Sistema Primevo
+5,226,Elettrogenesi
+5,227,Psicogenesi
+5,228,Nebbiogenesi
+5,229,Erbogenesi
+5,230,Metalprotezione
+5,231,Spettroguardia
+5,232,Scudoprisma
+5,233,Cerebroforza
+6,1,Hedor
+6,2,Llovizna
+6,3,Impulso
+6,4,Armadura Batalla
+6,5,Robustez
+6,6,Humedad
+6,7,Flexibilidad
+6,8,Velo Arena
+6,9,Elec. Estática
+6,10,Absorbe Elec
+6,11,Absorbe Agua
+6,12,Despiste
+6,13,Aclimatación
+6,14,Ojo Compuesto
+6,15,Insomnio
+6,16,Cambio Color
+6,17,Inmunidad
+6,18,Absorbe Fuego
+6,19,Polvo Escudo
+6,20,Ritmo Propio
+6,21,Ventosas
+6,22,Intimidación
+6,23,Sombra Trampa
+6,24,Piel Tosca
+6,25,Superguarda
+6,26,Levitación
+6,27,Efecto Espora
+6,28,Sincronía
+6,29,Cuerpo Puro
+6,30,Cura Natural
+6,31,Pararrayos
+6,32,Dicha
+6,33,Nado Rápido
+6,34,Clorofila
+6,35,Iluminación
+6,36,Rastro
+6,37,Potencia
+6,38,Punto Tóxico
+6,39,Foco Interno
+6,40,Escudo Magma
+6,41,Velo Agua
+6,42,Imán
+6,43,Insonorizar
+6,44,Cura Lluvia
+6,45,Chorro Arena
+6,46,Presión
+6,47,Sebo
+6,48,Madrugar
+6,49,Cuerpo Llama
+6,50,Fuga
+6,51,Vista Lince
+6,52,Corte Fuerte
+6,53,Recogida
+6,54,Ausente
+6,55,Entusiasmo
+6,56,Gran Encanto
+6,57,Más
+6,58,Menos
+6,59,Predicción
+6,60,Viscosidad
+6,61,Mudar
+6,62,Agallas
+6,63,Escama Especial
+6,64,Lodo Líquido
+6,65,Espesura
+6,66,Mar Llamas
+6,67,Torrente
+6,68,Enjambre
+6,69,Cabeza Roca
+6,70,Sequía
+6,71,Trampa Arena
+6,72,Espíritu Vital
+6,73,Humo Blanco
+6,74,Energía Pura
+6,75,Caparazón
+6,76,Bucle Aire
+6,77,Tumbos
+6,78,Electromotor
+6,79,Rivalidad
+6,80,Impasible
+6,81,Manto Níveo
+6,82,Gula
+6,83,Irascible
+6,84,Liviano
+6,85,Ignífugo
+6,86,Simple
+6,87,Piel Seca
+6,88,Descarga
+6,89,Puño Férreo
+6,90,Antídoto
+6,91,Adaptable
+6,92,Encadenado
+6,93,Hidratación
+6,94,Poder Solar
+6,95,Pies Rápidos
+6,96,Normalidad
+6,97,Francotirador
+6,98,Muro Mágico
+6,99,Indefenso
+6,100,Rezagado
+6,101,Experto
+6,102,Defensa Hoja
+6,103,Zoquete
+6,104,Rompemoldes
+6,105,Afortunado
+6,106,Resquicio
+6,107,Anticipación
+6,108,Alerta
+6,109,Ignorante
+6,110,Cromolente
+6,111,Filtro
+6,112,Inicio Lento
+6,113,Intrépido
+6,114,Colector
+6,115,Gélido
+6,116,Roca Sólida
+6,117,Nevada
+6,118,Recogemiel
+6,119,Cacheo
+6,120,Audaz
+6,121,Multitipo
+6,122,Don Floral
+6,123,Mal Sueño
+6,124,Hurto
+6,125,Potencia Bruta
+6,126,Respondón
+6,127,Nerviosismo
+6,128,Competitivo
+6,129,Flaqueza
+6,130,Cuerpo Maldito
+6,131,Alma Cura
+6,132,Compiescolta
+6,133,Armadura Frágil
+6,134,Metal Pesado
+6,135,Metal Liviano
+6,136,Compensación
+6,137,Ímpetu Tóxico
+6,138,Ímpetu Ardiente
+6,139,Cosecha
+6,140,Telepatía
+6,141,Veleta
+6,142,Funda
+6,143,Toque Tóxico
+6,144,Regeneración
+6,145,Sacapecho
+6,146,Ímpetu Arena
+6,147,Piel Milagro
+6,148,Cálculo Final
+6,149,Ilusión
+6,150,Impostor
+6,151,Allanamiento
+6,152,Momia
+6,153,Autoestima
+6,154,Justiciero
+6,155,Cobardía
+6,156,Espejo Mágico
+6,157,Herbívoro
+6,158,Bromista
+6,159,Poder Arena
+6,160,Punta Acero
+6,161,Modo Daruma
+6,162,Tinovictoria
+6,163,Turbollama
+6,164,Terravoltaje
+6,165,Velo Aroma
+6,166,Velo Flor
+6,167,Carrillo
+6,168,Mutatipo
+6,169,Pelaje Recio
+6,170,Prestidigitador
+6,171,Antibalas
+6,172,Tenacidad
+6,173,Mandíbula Fuerte
+6,174,Piel Helada
+6,175,Velo Dulce
+6,176,Cambio Táctico
+6,177,Alas Vendaval
+6,178,Megadisparador
+6,179,Manto Frondoso
+6,180,Simbiosis
+6,181,Garra Dura
+6,182,Piel Feérica
+6,183,Baba
+6,184,Piel Celeste
+6,185,Amor Filial
+6,186,Aura Oscura
+6,187,Aura Feérica
+6,188,Rompeaura
+6,189,Mar del Albor
+6,190,Tierra del Ocaso
+6,191,Ráfaga Delta
+6,192,Firmeza
+6,193,Huida
+6,194,Retirada
+6,195,Hidrorrefuerzo
+6,196,Ensañamiento
+6,197,Escudo Limitado
+6,198,Vigilante
+6,199,Pompa
+6,200,Acero Templado
+6,201,Cólera
+6,202,Quitanieves
+6,203,Remoto
+6,204,Voz Fluida
+6,205,Primer Auxilio
+6,206,Piel Eléctrica
+6,207,Cola Surf
+6,208,Banco
+6,209,Disfraz
+6,210,Fuerte Afecto
+6,211,Agrupamiento
+6,212,Corrosión
+6,213,Letargo Perenne
+6,214,Regia Presencia
+6,215,Revés
+6,216,Pareja de Baile
+6,217,Batería
+6,218,Peluche
+6,219,Cuerpo Vívido
+6,220,Coránima
+6,221,Rizos Rebeldes
+6,222,Receptor
+6,223,Reacción Química
+6,224,Ultraimpulso
+6,225,Sistema Alfa
+6,226,Electrogénesis
+6,227,Psicogénesis
+6,228,Nebulogénesis
+6,229,Herbogénesis
+6,230,Guardia Metálica
+6,231,Guardia Espectro
+6,232,Armadura Prisma
+6,233,Fuerza Cerebral
+7,1,악취
+7,2,잔비
+7,3,가속
+7,4,전투무장
+7,5,옹골참
+7,6,습기
+7,7,유연
+7,8,모래숨기
+7,9,정전기
+7,10,축전
+7,11,저수
+7,12,둔감
+7,13,날씨부정
+7,14,복안
+7,15,불면
+7,16,변색
+7,17,면역
+7,18,타오르는불꽃
+7,19,인분
+7,20,마이페이스
+7,21,흡반
+7,22,위협
+7,23,그림자밟기
+7,24,까칠한피부
+7,25,불가사의부적
+7,26,부유
+7,27,포자
+7,28,싱크로
+7,29,클리어바디
+7,30,자연회복
+7,31,피뢰침
+7,32,하늘의은총
+7,33,쓱쓱
+7,34,엽록소
+7,35,발광
+7,36,트레이스
+7,37,천하장사
+7,38,독가시
+7,39,정신력
+7,40,마그마의무장
+7,41,수의베일
+7,42,자력
+7,43,방음
+7,44,젖은접시
+7,45,모래날림
+7,46,프레셔
+7,47,두꺼운지방
+7,48,일찍기상
+7,49,불꽃몸
+7,50,도주
+7,51,날카로운눈
+7,52,괴력집게
+7,53,픽업
+7,54,게으름
+7,55,의욕
+7,56,헤롱헤롱바디
+7,57,플러스
+7,58,마이너스
+7,59,기분파
+7,60,점착
+7,61,탈피
+7,62,근성
+7,63,이상한비늘
+7,64,해감액
+7,65,심록
+7,66,맹화
+7,67,급류
+7,68,벌레의알림
+7,69,돌머리
+7,70,가뭄
+7,71,개미지옥
+7,72,의기양양
+7,73,하얀연기
+7,74,순수한힘
+7,75,조가비갑옷
+7,76,에어록
+7,77,갈지자걸음
+7,78,전기엔진
+7,79,투쟁심
+7,80,불굴의마음
+7,81,눈숨기
+7,82,먹보
+7,83,분노의경혈
+7,84,곡예
+7,85,내열
+7,86,단순
+7,87,건조피부
+7,88,다운로드
+7,89,철주먹
+7,90,포이즌힐
+7,91,적응력
+7,92,스킬링크
+7,93,촉촉바디
+7,94,선파워
+7,95,속보
+7,96,노말스킨
+7,97,스나이퍼
+7,98,매직가드
+7,99,노가드
+7,100,시간벌기
+7,101,테크니션
+7,102,리프가드
+7,103,서투름
+7,104,틀깨기
+7,105,대운
+7,106,유폭
+7,107,위험예지
+7,108,예지몽
+7,109,천진
+7,110,색안경
+7,111,필터
+7,112,슬로스타트
+7,113,배짱
+7,114,마중물
+7,115,아이스바디
+7,116,하드록
+7,117,눈퍼뜨리기
+7,118,꿀모으기
+7,119,통찰
+7,120,이판사판
+7,121,멀티타입
+7,122,플라워기프트
+7,123,나이트메어
+7,124,나쁜손버릇
+7,125,우격다짐
+7,126,심술꾸러기
+7,127,긴장감
+7,128,오기
+7,129,무기력
+7,130,저주받은바디
+7,131,치유의마음
+7,132,프렌드가드
+7,133,깨어진갑옷
+7,134,헤비메탈
+7,135,라이트메탈
+7,136,멀티스케일
+7,137,독폭주
+7,138,열폭주
+7,139,수확
+7,140,텔레파시
+7,141,변덕쟁이
+7,142,방진
+7,143,독수
+7,144,재생력
+7,145,부풀린가슴
+7,146,모래헤치기
+7,147,미라클스킨
+7,148,애널라이즈
+7,149,일루전
+7,150,괴짜
+7,151,틈새포착
+7,152,미라
+7,153,자기과신
+7,154,정의의마음
+7,155,주눅
+7,156,매직미러
+7,157,초식
+7,158,짓궂은마음
+7,159,모래의힘
+7,160,철가시
+7,161,달마모드
+7,162,승리의별
+7,163,터보블레이즈
+7,164,테라볼티지
+7,165,아로마베일
+7,166,플라워베일
+7,167,볼주머니
+7,168,변환자재
+7,169,퍼코트
+7,170,매지션
+7,171,방탄
+7,172,승기
+7,173,옹골찬턱
+7,174,프리즈스킨
+7,175,스위트베일
+7,176,배틀스위치
+7,177,질풍날개
+7,178,메가런처
+7,179,풀모피
+7,180,공생
+7,181,단단한발톱
+7,182,페어리스킨
+7,183,미끈미끈
+7,184,스카이스킨
+7,185,부자유친
+7,186,다크오라
+7,187,페어리오라
+7,188,오라브레이크
+7,189,시작의바다
+7,190,끝의대지
+7,191,델타스트림
+7,192,지구력
+7,193,도망태세
+7,194,위기회피
+7,195,꾸덕꾸덕굳기
+7,196,무도한행동
+7,197,리밋실드
+7,198,잠복
+7,199,수포
+7,200,강철술사
+7,201,발끈
+7,202,눈치우기
+7,203,원격
+7,204,촉촉보이스
+7,205,힐링시프트
+7,206,일렉트릭스킨
+7,207,서핑테일
+7,208,어군
+7,209,탈
+7,210,유대변화
+7,211,스웜체인지
+7,212,부식
+7,213,절대안깸
+7,214,여왕의위엄
+7,215,내용물분출
+7,216,무희
+7,217,배터리
+7,218,복슬복슬
+7,219,비비드바디
+7,220,소울하트
+7,221,컬리헤어
+7,222,리시버
+7,223,과학의힘
+7,224,비스트부스트
+7,225,AR시스템
+7,226,일렉트릭메이커
+7,227,사이코메이커
+7,228,미스트메이커
+7,229,그래스메이커
+7,230,메탈프로텍트
+7,231,스펙터가드
+7,232,프리즘아머
+7,233,브레인포스
+8,1,あくしゅう
+8,2,あめふらし
+8,3,かそく
+8,4,カブトアーマー
+8,5,がんじょう
+8,6,しめりけ
+8,7,じゅうなん
+8,8,すながくれ
+8,9,せいでんき
+8,10,ちくでん
+8,11,ちょすい
+8,12,どんかん
+8,13,ノーてんき
+8,14,ふくがん
+8,15,ふみん
+8,16,へんしょく
+8,17,めんえき
+8,18,もらいび
+8,19,りんぷん
+8,20,マイペース
+8,21,きゅうばん
+8,22,いかく
+8,23,かげふみ
+8,24,さめはだ
+8,25,ふしぎなまもり
+8,26,ふゆう
+8,27,ほうし
+8,28,シンクロ
+8,29,クリアボディ
+8,30,しぜんかいふく
+8,31,ひらいしん
+8,32,てんのめぐみ
+8,33,すいすい
+8,34,ようりょくそ
+8,35,はっこう
+8,36,トレース
+8,37,ちからもち
+8,38,どくのトゲ
+8,39,せいしんりょく
+8,40,マグマのよろい
+8,41,みずのベール
+8,42,じりょく
+8,43,ぼうおん
+8,44,あめうけざら
+8,45,すなおこし
+8,46,プレッシャー
+8,47,あついしぼう
+8,48,はやおき
+8,49,ほのおのからだ
+8,50,にげあし
+8,51,するどいめ
+8,52,かいりきバサミ
+8,53,ものひろい
+8,54,なまけ
+8,55,はりきり
+8,56,メロメロボディ
+8,57,プラス
+8,58,マイナス
+8,59,てんきや
+8,60,ねんちゃく
+8,61,だっぴ
+8,62,こんじょう
+8,63,ふしぎなうろこ
+8,64,ヘドロえき
+8,65,しんりょく
+8,66,もうか
+8,67,げきりゅう
+8,68,むしのしらせ
+8,69,いしあたま
+8,70,ひでり
+8,71,ありじごく
+8,72,やるき
+8,73,しろいけむり
+8,74,ヨガパワー
+8,75,シェルアーマー
+8,76,エアロック
+8,77,ちどりあし
+8,78,でんきエンジン
+8,79,とうそうしん
+8,80,ふくつのこころ
+8,81,ゆきがくれ
+8,82,くいしんぼう
+8,83,いかりのつぼ
+8,84,かるわざ
+8,85,たいねつ
+8,86,たんじゅん
+8,87,かんそうはだ
+8,88,ダウンロード
+8,89,てつのこぶし
+8,90,ポイズンヒール
+8,91,てきおうりょく
+8,92,スキルリンク
+8,93,うるおいボディ
+8,94,サンパワー
+8,95,はやあし
+8,96,ノーマルスキン
+8,97,スナイパー
+8,98,マジックガード
+8,99,ノーガード
+8,100,あとだし
+8,101,テクニシャン
+8,102,リーフガード
+8,103,ぶきよう
+8,104,かたやぶり
+8,105,きょううん
+8,106,ゆうばく
+8,107,きけんよち
+8,108,よちむ
+8,109,てんねん
+8,110,いろめがね
+8,111,フィルター
+8,112,スロースタート
+8,113,きもったま
+8,114,よびみず
+8,115,アイスボディ
+8,116,ハードロック
+8,117,ゆきふらし
+8,118,みつあつめ
+8,119,おみとおし
+8,120,すてみ
+8,121,マルチタイプ
+8,122,フラワーギフト
+8,123,ナイトメア
+8,124,わるいてぐせ
+8,125,ちからずく
+8,126,あまのじゃく
+8,127,きんちょうかん
+8,128,まけんき
+8,129,よわき
+8,130,のろわれボディ
+8,131,いやしのこころ
+8,132,フレンドガード
+8,133,くだけるよろい
+8,134,ヘヴィメタル
+8,135,ライトメタル
+8,136,マルチスケイル
+8,137,どくぼうそう
+8,138,ねつぼうそう
+8,139,しゅうかく
+8,140,テレパシー
+8,141,ムラっけ
+8,142,ぼうじん
+8,143,どくしゅ
+8,144,さいせいりょく
+8,145,はとむね
+8,146,すなかき
+8,147,ミラクルスキン
+8,148,アナライズ
+8,149,イリュージョン
+8,150,かわりもの
+8,151,すりぬけ
+8,152,ミイラ
+8,153,じしんかじょう
+8,154,せいぎのこころ
+8,155,びびり
+8,156,マジックミラー
+8,157,そうしょく
+8,158,いたずらごころ
+8,159,すなのちから
+8,160,てつのトゲ
+8,161,ダルマモード
+8,162,しょうりのほし
+8,163,ターボブレイズ
+8,164,テラボルテージ
+8,165,アロマベール
+8,166,フラワーベール
+8,167,ほおぶくろ
+8,168,へんげんじざい
+8,169,ファーコート
+8,170,マジシャン
+8,171,ぼうだん
+8,172,かちき
+8,173,がんじょうあご
+8,174,フリーズスキン
+8,175,スイートベール
+8,176,バトルスイッチ
+8,177,はやてのつばさ
+8,178,メガランチャー
+8,179,くさのけがわ
+8,180,きょうせい
+8,181,かたいツメ
+8,182,フェアリースキン
+8,183,ぬめぬめ
+8,184,スカイスキン
+8,185,おやこあい
+8,186,ダークオーラ
+8,187,フェアリーオーラ
+8,188,オーラブレイク
+8,189,はじまりのうみ
+8,190,おわりのだいち
+8,191,デルタストリーム
+8,192,じきゅうりょく
+8,193,にげごし
+8,194,ききかいひ
+8,195,みずがため
+8,196,ひとでなし
+8,197,リミットシールド
+8,198,はりこみ
+8,199,すいほう
+8,200,はがねつかい
+8,201,ぎゃくじょう
+8,202,ゆきかき
+8,203,えんかく
+8,204,うるおいボイス
+8,205,ヒーリングシフト
+8,206,エレキスキン
+8,207,サーフテール
+8,208,ぎょぐん
+8,209,ばけのかわ
+8,210,きずなへんげ
+8,211,スワームチェンジ
+8,212,ふしょく
+8,213,ぜったいねむり
+8,214,じょおうのいげん
+8,215,とびだすなかみ
+8,216,おどりこ
+8,217,バッテリー
+8,218,もふもふ
+8,219,ビビッドボディ
+8,220,ソウルハート
+8,221,カーリーヘアー
+8,222,レシーバー
+8,223,かがくのちから
+8,224,ビーストブースト
+8,225,ＡＲシステム
+8,226,エレキメイカー
+8,227,サイコメイカー
+8,228,ミストメイカー
+8,229,グラスメイカー
+8,230,メタルプロテクト
+8,231,ファントムガード
+8,232,プリズムアーマー
+8,233,ブレインフォース
+9,1,恶臭
+9,2,降雨
+9,3,加速
+9,4,战斗盔甲
+9,5,结实
+9,6,湿气
+9,7,柔软
+9,8,沙隐
+9,9,静电
+9,10,蓄电
+9,11,储水
+9,12,迟钝
+9,13,无关天气
+9,14,复眼
+9,15,不眠
+9,16,变色
+9,17,免疫
+9,18,引火
+9,19,鳞粉
+9,20,我行我素
+9,21,吸盘
+9,22,威吓
+9,23,踩影
+9,24,粗糙皮肤
+9,25,神奇守护
+9,26,飘浮
+9,27,孢子
+9,28,同步
+9,29,恒净之躯
+9,30,自然回复
+9,31,避雷针
+9,32,天恩
+9,33,悠游自如
+9,34,叶绿素
+9,35,发光
+9,36,复制
+9,37,大力士
+9,38,毒刺
+9,39,精神力
+9,40,熔岩铠甲
+9,41,水幕
+9,42,磁力
+9,43,隔音
+9,44,雨盘
+9,45,扬沙
+9,46,压迫感
+9,47,厚脂肪
+9,48,早起
+9,49,火焰之躯
+9,50,逃跑
+9,51,锐利目光
+9,52,怪力钳
+9,53,捡拾
+9,54,懒惰
+9,55,活力
+9,56,迷人之躯
+9,57,正电
+9,58,负电
+9,59,阴晴不定
+9,60,黏着
+9,61,蜕皮
+9,62,毅力
+9,63,神奇鳞片
+9,64,污泥浆
+9,65,茂盛
+9,66,猛火
+9,67,激流
+9,68,虫之预感
+9,69,坚硬脑袋
+9,70,日照
+9,71,沙穴
+9,72,干劲
+9,73,白色烟雾
+9,74,瑜伽之力
+9,75,硬壳盔甲
+9,76,气闸
+9,77,蹒跚
+9,78,电气引擎
+9,79,斗争心
+9,80,不屈之心
+9,81,雪隐
+9,82,贪吃鬼
+9,83,愤怒穴位
+9,84,轻装
+9,85,耐热
+9,86,单纯
+9,87,干燥皮肤
+9,88,下载
+9,89,铁拳
+9,90,毒疗
+9,91,适应力
+9,92,连续攻击
+9,93,湿润之躯
+9,94,太阳之力
+9,95,飞毛腿
+9,96,一般皮肤
+9,97,狙击手
+9,98,魔法防守
+9,99,无防守
+9,100,慢出
+9,101,技术高手
+9,102,叶子防守
+9,103,笨拙
+9,104,破格
+9,105,超幸运
+9,106,引爆
+9,107,危险预知
+9,108,预知梦
+9,109,纯朴
+9,110,有色眼镜
+9,111,过滤
+9,112,慢启动
+9,113,胆量
+9,114,引水
+9,115,冰冻之躯
+9,116,坚硬岩石
+9,117,降雪
+9,118,采蜜
+9,119,察觉
+9,120,舍身
+9,121,多属性
+9,122,花之礼
+9,123,梦魇
+9,124,顺手牵羊
+9,125,强行
+9,126,唱反调
+9,127,紧张感
+9,128,不服输
+9,129,软弱
+9,130,诅咒之躯
+9,131,治愈之心
+9,132,友情防守
+9,133,碎裂铠甲
+9,134,重金属
+9,135,轻金属
+9,136,多重鳞片
+9,137,中毒激升
+9,138,受热激升
+9,139,收获
+9,140,心灵感应
+9,141,心情不定
+9,142,防尘
+9,143,毒手
+9,144,再生力
+9,145,健壮胸肌
+9,146,拨沙
+9,147,奇迹皮肤
+9,148,分析
+9,149,幻觉
+9,150,变身者
+9,151,穿透
+9,152,木乃伊
+9,153,自信过度
+9,154,正义之心
+9,155,胆怯
+9,156,魔法镜
+9,157,食草
+9,158,恶作剧之心
+9,159,沙之力
+9,160,铁刺
+9,161,达摩模式
+9,162,胜利之星
+9,163,涡轮火焰
+9,164,兆级电压
+9,165,芳香幕
+9,166,花幕
+9,167,颊囊
+9,168,变幻自如
+9,169,毛皮大衣
+9,170,魔术师
+9,171,防弹
+9,172,好胜
+9,173,强壮之颚
+9,174,冰冻皮肤
+9,175,甜幕
+9,176,战斗切换
+9,177,疾风之翼
+9,178,超级发射器
+9,179,草之毛皮
+9,180,共生
+9,181,硬爪
+9,182,妖精皮肤
+9,183,黏滑
+9,184,飞行皮肤
+9,185,亲子爱
+9,186,暗黑气场
+9,187,妖精气场
+9,188,气场破坏
+9,189,始源之海
+9,190,终结之地
+9,191,德尔塔气流
+9,192,持久力
+9,193,跃跃欲逃
+9,194,危险回避
+9,195,遇水凝固
+9,196,不仁不义
+9,197,界限盾壳
+9,198,蹲守
+9,199,水泡
+9,200,钢能力者
+9,201,怒火冲天
+9,202,拨雪
+9,203,远隔
+9,204,湿润之声
+9,205,先行治疗
+9,206,电气皮肤
+9,207,冲浪之尾
+9,208,鱼群
+9,209,画皮
+9,210,牵绊变身
+9,211,群聚变形
+9,212,腐蚀
+9,213,绝对睡眠
+9,214,女王的威严
+9,215,飞出的内在物
+9,216,舞者
+9,217,蓄电池
+9,218,毛茸茸
+9,219,鲜艳之躯
+9,220,魂心
+9,221,卷发
+9,222,接球手
+9,223,化学之力
+9,224,异兽提升
+9,225,ＡＲ系统
+9,226,电气制造者
+9,227,精神制造者
+9,228,薄雾制造者
+9,229,青草制造者
+9,230,金属防护
+9,231,幻影防守
+9,232,棱镜装甲
+9,233,脑核之力
+10,1,惡臭
+10,2,降雨
+10,3,加速
+10,4,戰鬥盔甲
+10,5,結實
+10,6,濕氣
+10,7,柔軟
+10,8,沙隱
+10,9,靜電
+10,10,蓄電
+10,11,儲水
+10,12,遲鈍
+10,13,無關天氣
+10,14,複眼
+10,15,不眠
+10,16,變色
+10,17,免疫
+10,18,引火
+10,19,鱗粉
+10,20,我行我素
+10,21,吸盤
+10,22,威嚇
+10,23,踩影
+10,24,粗糙皮膚
+10,25,神奇守護
+10,26,飄浮
+10,27,孢子
+10,28,同步
+10,29,恆淨之軀
+10,30,自然回復
+10,31,避雷針
+10,32,天恩
+10,33,悠游自如
+10,34,葉綠素
+10,35,發光
+10,36,複製
+10,37,大力士
+10,38,毒刺
+10,39,精神力
+10,40,熔岩鎧甲
+10,41,水幕
+10,42,磁力
+10,43,隔音
+10,44,雨盤
+10,45,揚沙
+10,46,壓迫感
+10,47,厚脂肪
+10,48,早起
+10,49,火焰之軀
+10,50,逃跑
+10,51,銳利目光
+10,52,怪力鉗
+10,53,撿拾
+10,54,懶惰
+10,55,活力
+10,56,迷人之軀
+10,57,正電
+10,58,負電
+10,59,陰晴不定
+10,60,黏著
+10,61,蛻皮
+10,62,毅力
+10,63,神奇鱗片
+10,64,污泥漿
+10,65,茂盛
+10,66,猛火
+10,67,激流
+10,68,蟲之預感
+10,69,堅硬腦袋
+10,70,日照
+10,71,沙穴
+10,72,幹勁
+10,73,白色煙霧
+10,74,瑜伽之力
+10,75,硬殼盔甲
+10,76,氣閘
+10,77,蹣跚
+10,78,電氣引擎
+10,79,鬥爭心
+10,80,不屈之心
+10,81,雪隱
+10,82,貪吃鬼
+10,83,憤怒穴位
+10,84,輕裝
+10,85,耐熱
+10,86,單純
+10,87,乾燥皮膚
+10,88,下載
+10,89,鐵拳
+10,90,毒療
+10,91,適應力
+10,92,連續攻擊
+10,93,濕潤之軀
+10,94,太陽之力
+10,95,飛毛腿
+10,96,一般皮膚
+10,97,狙擊手
+10,98,魔法防守
+10,99,無防守
+10,100,慢出
+10,101,技術高手
+10,102,葉子防守
+10,103,笨拙
+10,104,破格
+10,105,超幸運
+10,106,引爆
+10,107,危險預知
+10,108,預知夢
+10,109,純樸
+10,110,有色眼鏡
+10,111,過濾
+10,112,慢啟動
+10,113,膽量
+10,114,引水
+10,115,冰凍之軀
+10,116,堅硬岩石
+10,117,降雪
+10,118,採蜜
+10,119,察覺
+10,120,捨身
+10,121,多屬性
+10,122,花之禮
+10,123,夢魘
+10,124,順手牽羊
+10,125,強行
+10,126,唱反調
+10,127,緊張感
+10,128,不服輸
+10,129,軟弱
+10,130,詛咒之軀
+10,131,治癒之心
+10,132,友情防守
+10,133,碎裂鎧甲
+10,134,重金屬
+10,135,輕金屬
+10,136,多重鱗片
+10,137,中毒激升
+10,138,受熱激升
+10,139,收穫
+10,140,心靈感應
+10,141,心情不定
+10,142,防塵
+10,143,毒手
+10,144,再生力
+10,145,健壯胸肌
+10,146,撥沙
+10,147,奇跡皮膚
+10,148,分析
+10,149,幻覺
+10,150,變身者
+10,151,穿透
+10,152,木乃伊
+10,153,自信過度
+10,154,正義之心
+10,155,膽怯
+10,156,魔法鏡
+10,157,食草
+10,158,惡作劇之心
+10,159,沙之力
+10,160,鐵刺
+10,161,達摩模式
+10,162,勝利之星
+10,163,渦輪火焰
+10,164,兆級電壓
+10,165,芳香幕
+10,166,花幕
+10,167,頰囊
+10,168,變幻自如
+10,169,毛皮大衣
+10,170,魔術師
+10,171,防彈
+10,172,好勝
+10,173,強壯之顎
+10,174,冰凍皮膚
+10,175,甜幕
+10,176,戰鬥切換
+10,177,疾風之翼
+10,178,超級發射器
+10,179,草之毛皮
+10,180,共生
+10,181,硬爪
+10,182,妖精皮膚
+10,183,黏滑
+10,184,飛行皮膚
+10,185,親子愛
+10,186,暗黑氣場
+10,187,妖精氣場
+10,188,氣場破壞
+10,189,始源之海
+10,190,終結之地
+10,191,德爾塔氣流
+10,192,持久力
+10,193,躍躍欲逃
+10,194,危險迴避
+10,195,遇水凝固
+10,196,不仁不義
+10,197,界限盾殼
+10,198,監視
+10,199,水泡
+10,200,鋼能力者
+10,201,怒火沖天
+10,202,撥雪
+10,203,遠隔
+10,204,濕潤之聲
+10,205,先行治療
+10,206,電氣皮膚
+10,207,衝浪之尾
+10,208,魚群
+10,209,畫皮
+10,210,牽絆變身
+10,211,群聚變形
+10,212,腐蝕
+10,213,絕對睡眠
+10,214,女王的威嚴
+10,215,飛出的內在物
+10,216,舞者
+10,217,蓄電池
+10,218,毛茸茸
+10,219,鮮艷之軀
+10,220,魂心
+10,221,捲髮
+10,222,接球手
+10,223,化學之力
+10,224,異獸提升
+10,225,ＡＲ系統
+10,226,電氣製造者
+10,227,精神製造者
+10,228,薄霧製造者
+10,229,青草製造者
+10,230,金屬防護
+10,231,幻影防守
+10,232,稜鏡裝甲
+10,233,腦核之力

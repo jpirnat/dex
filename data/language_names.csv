@@ -1,0 +1,101 @@
+in_language_id,named_language_id,name
+1,1,にほんご
+1,2,英語
+1,3,フランス語
+1,4,ドイツ語
+1,5,イタリア語
+1,6,スペイン語
+1,7,韓国語
+1,8,漢字
+1,9,簡体字
+1,10,繁体字
+2,1,Japanese (Hiragana)
+2,2,English
+2,3,French
+2,4,German
+2,5,Italian
+2,6,Spanish
+2,7,Korean
+2,8,Japanese (Kanji)
+2,9,Chinese (Simplified)
+2,10,Chinese (Traditional)
+3,1,Japonais
+3,2,Anglais
+3,3,Français
+3,4,Allemand
+3,5,Italien
+3,6,Espagnol
+3,7,Coréen
+3,8,Kanji
+3,9,Chinois simplifié
+3,10,Chinois traditionnel
+4,1,Japanisch
+4,2,Englisch
+4,3,Französisch
+4,4,Deutsch
+4,5,Italienisch
+4,6,Spanisch
+4,7,Koreanisch
+4,8,Kanji
+4,9,Chinese (Simplified)
+4,10,Chinese (Traditional)
+5,1,Giapponese
+5,2,Inglese
+5,3,Francese
+5,4,Tedesco
+5,5,Italiano
+5,6,Spagnolo
+5,7,Coreano
+5,8,Kanji
+5,9,Cinese semplificato
+5,10,Cinese tradizionale
+6,1,Japonés
+6,2,Inglés
+6,3,Francés
+6,4,Alemán
+6,5,Italiano
+6,6,Español
+6,7,Coreano
+6,8,Kanji
+6,9,Chino simplificado
+6,10,Chino tradicional
+7,1,일본어
+7,2,영어
+7,3,프랑스 국민
+7,4,독일 사람
+7,5,이탈리아 사람
+7,6,스페인 사람
+7,7,한국어
+7,8,일본어 한자
+7,9,중국어 간체
+7,10,중국어 번체
+8,1,にほんご
+8,2,英語
+8,3,フランス語
+8,4,ドイツ語
+8,5,イタリア語
+8,6,スペイン語
+8,7,韓国語
+8,8,漢字
+8,9,簡体字
+8,10,繁体字
+9,1,日本
+9,2,英语
+9,3,法语
+9,4,德语
+9,5,意大利语
+9,6,西班牙语
+9,7,韩语
+9,8,汉字
+9,9,简体中文
+9,10,繁体中文
+10,1,日本
+10,2,英語
+10,3,法語
+10,4,德語
+10,5,意大利語
+10,6,西班牙語
+10,7,韓語
+10,8,漢字
+10,9,簡體中文
+10,10,繁體中文
