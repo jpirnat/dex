@@ -6,12 +6,8 @@ declare(strict_types=1);
 require __DIR__ . '/vendor/autoload.php';
 
 
-// If we're not on production, our environment variables may not be set.
-// In that case, we need to load them into the environment.
-if (getenv('ENVIRONMENT') !== 'production') {
-	$dotenv = new \Dotenv\Dotenv(__DIR__);
-	$dotenv->load();
-}
+// Load environment variables.
+require __DIR__ . '/config/environment.php';
 
 
 // Tell PHP that we're using UTF-8 strings until the end of the script.

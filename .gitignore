@@ -1,6 +1,6 @@
 /vendor/
 /.idea/
-/.env
+.env
 /ignore
 /public/images
 /templates/cache
