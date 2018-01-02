@@ -260,11 +260,10 @@ create table if not exists `form_icons`
 (
 `generation` tinyint unsigned not null,
 `form_id` smallint unsigned not null,
-`image` varchar(50) not null,
-
 `is_female` bool not null,
 `is_right` bool not null,
-`is_default` bool not null,
+
+`image` varchar(50) not null,
 
 primary key (
 	`generation`,
