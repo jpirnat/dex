@@ -39,9 +39,11 @@
 
 	<table>
 		<thead>
-			<th>Abilities</th>
-			<th>%</th>
-			<th>Δ</th>
+			<tr>
+				<th>Abilities</th>
+				<th>%</th>
+				<th>Δ</th>
+			</tr>
 		</thead>
 		<tbody>
 			{% for ability in abilities %}
@@ -64,9 +66,11 @@
 
 	<table>
 		<thead>
-			<th>Items</th>
-			<th>%</th>
-			<th>Δ</th>
+			<tr>
+				<th>Items</th>
+				<th>%</th>
+				<th>Δ</th>
+			</tr>
 		</thead>
 		<tbody>
 			{% for item in items %}
@@ -89,10 +93,12 @@
 
 	<table>
 		<thead>
-			<th>Nature</th>
-			<th>EVs</th>
-			<th>%</th>
-			<th>Stats</th>
+			<tr>
+				<th>Nature</th>
+				<th>EVs</th>
+				<th>%</th>
+				<th>Stats</th>
+			</tr>
 		</thead>
 		<tbody>
 			{% for spread in spreads %}
@@ -134,9 +140,11 @@
 
 	<table>
 		<thead>
-			<th>Moves</th>
-			<th>%</th>
-			<th>Δ</th>
+			<tr>
+				<th>Moves</th>
+				<th>%</th>
+				<th>Δ</th>
+			</tr>
 		</thead>
 		<tbody>
 			{% for move in moves %}
@@ -159,8 +167,10 @@
 
 	<table>
 		<thead>
-			<th>Teammates</th>
-			<th>%</th>
+			<tr>
+				<th>Teammates</th>
+				<th>%</th>
+			</tr>
 		</thead>
 		<tbody>
 			{% for teammate in teammates %}
@@ -178,12 +188,14 @@
 
 	<table>
 		<thead>
-			<th>Checks and Counters</th>
-			<th>?</th>
-			<th>?</th>
-			<th>?</th>
-			<th>% KOed</th>
-			<th>% switched out</th>
+			<tr>
+				<th>Checks and Counters</th>
+				<th>?</th>
+				<th>?</th>
+				<th>?</th>
+				<th>% KOed</th>
+				<th>% switched out</th>
+			</tr>
 		</thead>
 		<tbody>
 			{% for counter in counters %}

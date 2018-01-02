@@ -31,6 +31,7 @@ $yearMonth = $date->format('Y-m');
 // Run the parser.
 $start = new DateTime();
 
+/** @var MonthDirectoryParser $parser */
 $parser = $container->get(MonthDirectoryParser::class);
 $parser->parse("http://www.smogon.com/stats/$yearMonth/");
 
