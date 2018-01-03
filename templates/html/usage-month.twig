@@ -23,6 +23,7 @@
 		<thead>
 			<tr>
 				<th>Rank</th>
+				<th></th>
 				<th class="pokemon-name">Pokémon</th>
 				<th>Usage %</th>
 				<th>Usage Δ</th>
@@ -38,6 +39,9 @@
 			{% for pokemon in data %}
 				<tr>
 					<td>{{ pokemon.rank|e }}</td>
+					<td>
+						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
+					</td>
 					<td>
 						<a href="/stats/moveset/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ pokemon.identifier|e }}">
 							{{ pokemon.name|e }}

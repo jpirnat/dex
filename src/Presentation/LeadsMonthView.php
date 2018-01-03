@@ -66,6 +66,7 @@ class LeadsMonthView
 				'rank' => $leadsData->getRank(),
 				'name' => $leadsData->getPokemonName(),
 				'identifier' => $leadsData->getPokemonIdentifier(),
+				'formIcon' => $leadsData->getFormIcon(),
 				'usagePercent' => $leadsData->getUsagePercent(),
 				'usageChange' => $leadsData->getUsageChange(),
 				'raw' => $leadsData->getRaw(),

@@ -14,6 +14,9 @@ class LeadsData
 	/** @var string $pokemonIdentifier */
 	private $pokemonIdentifier;
 
+	/** @var string $formIcon */
+	private $formIcon;
+
 	/** @var float $usagePercent */
 	private $usagePercent;
 
@@ -35,6 +38,7 @@ class LeadsData
 	 * @param int $rank
 	 * @param string $pokemonName
 	 * @param string $pokemonIdentifier
+	 * @param string $formIcon
 	 * @param float $usagePercent
 	 * @param float $usageChange
 	 * @param int $raw
@@ -45,6 +49,7 @@ class LeadsData
 		int $rank,
 		string $pokemonName,
 		string $pokemonIdentifier,
+		string $formIcon,
 		float $usagePercent,
 		float $usageChange,
 		int $raw,
@@ -54,6 +59,7 @@ class LeadsData
 		$this->rank = $rank;
 		$this->pokemonName = $pokemonName;
 		$this->pokemonIdentifier = $pokemonIdentifier;
+		$this->formIcon = $formIcon;
 		$this->usagePercent = $usagePercent;
 		$this->usageChange = $usageChange;
 		$this->raw = $raw;
@@ -89,6 +95,16 @@ class LeadsData
 	public function getPokemonIdentifier() : string
 	{
 		return $this->pokemonIdentifier;
+	}
+
+	/**
+	 * Get the form icon.
+	 *
+	 * @return string
+	 */
+	public function getFormIcon() : string
+	{
+		return $this->formIcon;
 	}
 
 	/**

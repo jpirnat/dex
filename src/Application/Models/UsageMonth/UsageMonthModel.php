@@ -5,6 +5,7 @@ namespace Jp\Dex\Application\Models\UsageMonth;
 
 use Jp\Dex\Application\Models\DateHelper;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
+use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
@@ -32,6 +33,9 @@ class UsageMonthModel
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
 
+	/** @var FormIconRepositoryInterface $formIconRepository */
+	private $formIconRepository;
+
 	/** @var int $year */
 	private $year;
 
@@ -56,6 +60,7 @@ class UsageMonthModel
 	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
+	 * @param FormIconRepositoryInterface $formIconRepository
 	 */
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
@@ -63,7 +68,8 @@ class UsageMonthModel
 		UsagePokemonRepositoryInterface $usagePokemonRepository,
 		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository
+		PokemonNameRepositoryInterface $pokemonNameRepository,
+		FormIconRepositoryInterface $formIconRepository
 	) {
 		$this->formatRepository = $formatRepository;
 		$this->dateHelper = $dateHelper;
@@ -71,6 +77,7 @@ class UsageMonthModel
 		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
+		$this->formIconRepository = $formIconRepository;
 	}
 
 	/**
@@ -140,6 +147,13 @@ class UsageMonthModel
 		// Get Pokémon names.
 		$pokemonNames = $this->pokemonNameRepository->getByLanguage($languageId);
 
+		// Get form icons.
+		$formIcons = $this->formIconRepository->getByGenerationAndFemaleAndRight(
+			$format->getGeneration(),
+			false,
+			false
+		);
+
 		// Get each usage record's data.
 		foreach ($usageRatedPokemons as $usageRatedPokemon) {
 			$pokemonId = $usageRatedPokemon->getPokemonId();
@@ -149,6 +163,9 @@ class UsageMonthModel
 
 			// Get this Pokémon.
 			$pokemon = $pokemons[$pokemonId->value()];
+
+			// Get this Pokémon's form icon.
+			$formIcon = $formIcons[$pokemonId->value()]; // A Pokémon's default form has Pokémon id === form id.
 
 			// Get this Pokémon's non-rated usage record for this month.
 			$usagePokemon = $usagePokemons[$pokemonId->value()];
@@ -174,6 +191,7 @@ class UsageMonthModel
 				$usageRatedPokemon->getRank(),
 				$pokemonName->getName(),
 				$pokemon->getIdentifier(),
+				$formIcon->getImage(),
 				$usageRatedPokemon->getUsagePercent(),
 				$usageChange,
 				$usagePokemon->getRaw(),

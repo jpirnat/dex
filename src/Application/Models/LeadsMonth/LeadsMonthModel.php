@@ -5,6 +5,7 @@ namespace Jp\Dex\Application\Models\LeadsMonth;
 
 use Jp\Dex\Application\Models\DateHelper;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
+use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
@@ -32,6 +33,9 @@ class LeadsMonthModel
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
 
+	/** @var FormIconRepositoryInterface $formIconRepository */
+	private $formIconRepository;
+
 	/** @var int $year */
 	private $year;
 
@@ -56,6 +60,7 @@ class LeadsMonthModel
 	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
+	 * @param FormIconRepositoryInterface $formIconRepository
 	 */
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
@@ -63,7 +68,8 @@ class LeadsMonthModel
 		LeadsPokemonRepositoryInterface $leadsPokemonRepository,
 		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository
+		PokemonNameRepositoryInterface $pokemonNameRepository,
+		FormIconRepositoryInterface $formIconRepository
 	) {
 		$this->formatRepository = $formatRepository;
 		$this->dateHelper = $dateHelper;
@@ -71,6 +77,7 @@ class LeadsMonthModel
 		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
+		$this->formIconRepository = $formIconRepository;
 	}
 
 	/**
@@ -140,6 +147,13 @@ class LeadsMonthModel
 		// Get Pokémon names.
 		$pokemonNames = $this->pokemonNameRepository->getByLanguage($languageId);
 
+		// Get form icons.
+		$formIcons = $this->formIconRepository->getByGenerationAndFemaleAndRight(
+			$format->getGeneration(),
+			false,
+			false
+		);
+
 		// Get each leads record's data.
 		foreach ($leadsRatedPokemons as $leadsRatedPokemon) {
 			$pokemonId = $leadsRatedPokemon->getPokemonId();
@@ -149,6 +163,9 @@ class LeadsMonthModel
 
 			// Get this Pokémon.
 			$pokemon = $pokemons[$pokemonId->value()];
+
+			// Get this Pokémon's form icon.
+			$formIcon = $formIcons[$pokemonId->value()]; // A Pokémon's default form has Pokémon id === form id.
 
 			// Get this Pokémon's non-rated usage record for this month.
 			$leadsPokemon = $leadsPokemons[$pokemonId->value()];
@@ -171,6 +188,7 @@ class LeadsMonthModel
 				$leadsRatedPokemon->getRank(),
 				$pokemonName->getName(),
 				$pokemon->getIdentifier(),
+				$formIcon->getImage(),
 				$leadsRatedPokemon->getUsagePercent(),
 				$usageChange,
 				$leadsPokemon->getRaw(),

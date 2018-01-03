@@ -66,6 +66,7 @@ class UsageMonthView
 				'rank' => $usageData->getRank(),
 				'name' => $usageData->getPokemonName(),
 				'identifier' => $usageData->getPokemonIdentifier(),
+				'formIcon' => $usageData->getFormIcon(),
 				'usagePercent' => $usageData->getUsagePercent(),
 				'usageChange' => $usageData->getUsageChange(),
 				'raw' => $usageData->getRaw(),
