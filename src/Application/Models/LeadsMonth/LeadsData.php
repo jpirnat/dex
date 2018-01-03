@@ -11,17 +11,20 @@ class LeadsData
 	/** @var string $pokemonName */
 	private $pokemonName;
 
+	/** @var float $usagePercent */
+	private $usagePercent;
+
 	/** @var string $pokemonIdentifier */
 	private $pokemonIdentifier;
 
 	/** @var string $formIcon */
 	private $formIcon;
 
-	/** @var float $usagePercent */
-	private $usagePercent;
+	/** @var float $leadUsagePercent */
+	private $leadUsagePercent;
 
-	/** @var float $usageChange */
-	private $usageChange;
+	/** @var float $leadUsageChange */
+	private $leadUsageChange;
 
 	/** @var int $raw */
 	private $raw;
@@ -37,10 +40,11 @@ class LeadsData
 	 *
 	 * @param int $rank
 	 * @param string $pokemonName
+	 * @param float $usagePercent
 	 * @param string $pokemonIdentifier
 	 * @param string $formIcon
-	 * @param float $usagePercent
-	 * @param float $usageChange
+	 * @param float $leadUsagePercent
+	 * @param float $leadUsageChange
 	 * @param int $raw
 	 * @param float $rawPercent
 	 * @param float $rawChange
@@ -48,20 +52,22 @@ class LeadsData
 	public function __construct(
 		int $rank,
 		string $pokemonName,
+		float $usagePercent,
 		string $pokemonIdentifier,
 		string $formIcon,
-		float $usagePercent,
-		float $usageChange,
+		float $leadUsagePercent,
+		float $leadUsageChange,
 		int $raw,
 		float $rawPercent,
 		float $rawChange
 	) {
 		$this->rank = $rank;
 		$this->pokemonName = $pokemonName;
+		$this->usagePercent = $usagePercent;
 		$this->pokemonIdentifier = $pokemonIdentifier;
 		$this->formIcon = $formIcon;
-		$this->usagePercent = $usagePercent;
-		$this->usageChange = $usageChange;
+		$this->leadUsagePercent = $leadUsagePercent;
+		$this->leadUsageChange = $leadUsageChange;
 		$this->raw = $raw;
 		$this->rawPercent = $rawPercent;
 		$this->rawChange = $rawChange;
@@ -88,6 +94,16 @@ class LeadsData
 	}
 
 	/**
+	 * Get the usage percent.
+	 *
+	 * @return float
+	 */
+	public function getUsagePercent() : float
+	{
+		return $this->usagePercent;
+	}
+
+	/**
 	 * Get the Pokémon identifier.
 	 *
 	 * @return string
@@ -108,23 +124,23 @@ class LeadsData
 	}
 
 	/**
-	 * Get the usage percent.
+	 * Get the lead usage percent.
 	 *
 	 * @return float
 	 */
-	public function getUsagePercent() : float
+	public function getLeadUsagePercent() : float
 	{
-		return $this->usagePercent;
+		return $this->leadUsagePercent;
 	}
 
 	/**
-	 * Get the usage change.
+	 * Get the lead usage change.
 	 *
 	 * @return float
 	 */
-	public function getUsageChange() : float
+	public function getLeadUsageChange() : float
 	{
-		return $this->usageChange;
+		return $this->leadUsageChange;
 	}
 
 	/**

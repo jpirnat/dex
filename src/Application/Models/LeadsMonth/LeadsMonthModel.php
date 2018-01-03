@@ -11,6 +11,7 @@ use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\YearMonth;
 
 class LeadsMonthModel
@@ -29,6 +30,9 @@ class LeadsMonthModel
 
 	/** PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
+
+	/** @var UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository */
+	private $usageRatedPokemonRepository;
 
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
@@ -59,6 +63,7 @@ class LeadsMonthModel
 	 * @param LeadsPokemonRepositoryInterface $leadsPokemonRepository
 	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
+	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param FormIconRepositoryInterface $formIconRepository
 	 */
@@ -68,6 +73,7 @@ class LeadsMonthModel
 		LeadsPokemonRepositoryInterface $leadsPokemonRepository,
 		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
+		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		FormIconRepositoryInterface $formIconRepository
 	) {
@@ -76,6 +82,7 @@ class LeadsMonthModel
 		$this->leadsPokemonRepository = $leadsPokemonRepository;
 		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
+		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->formIconRepository = $formIconRepository;
 	}
@@ -141,6 +148,15 @@ class LeadsMonthModel
 			$rating
 		);
 
+		// Get usage rated Pokémon records for this month (to determine whether
+		// the moveset link should be shown).
+		$usageRatedPokemons = $this->usageRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
+			$thisMonth->getYear(),
+			$thisMonth->getMonth(),
+			$format->getId(),
+			$rating
+		);
+
 		// Get Pokémon.
 		$pokemons = $this->pokemonRepository->getAll();
 
@@ -184,9 +200,13 @@ class LeadsMonthModel
 			}
 			$rawChange = $leadsPokemon->getRawPercent() - $lastMonthRawPercent;
 
+			// Get this Pokémon's rated usage record for this month.
+			$usageRatedPokemon = $usageRatedPokemons[$pokemonId->value()];
+
 			$this->leadsDatas[] = new LeadsData(
 				$leadsRatedPokemon->getRank(),
 				$pokemonName->getName(),
+				$usageRatedPokemon->getUsagePercent(),
 				$pokemon->getIdentifier(),
 				$formIcon->getImage(),
 				$leadsRatedPokemon->getUsagePercent(),

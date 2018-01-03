@@ -65,6 +65,7 @@ class UsageMonthView
 			$data[] = [
 				'rank' => $usageData->getRank(),
 				'name' => $usageData->getPokemonName(),
+				'showMovesetLink' => $usageData->getUsagePercent() >= .01,
 				'identifier' => $usageData->getPokemonIdentifier(),
 				'formIcon' => $usageData->getFormIcon(),
 				'usagePercent' => $usageData->getUsagePercent(),

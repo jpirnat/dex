@@ -43,7 +43,7 @@
 						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
 					</td>
 					<td>
-						{% if pokemon.usagePercent >= 0.01 %}
+						{% if pokemon.showMovesetLink %}
 							<a href="/stats/moveset/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ pokemon.identifier|e }}">
 								{{ pokemon.name|e }}
 							</a>

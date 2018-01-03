@@ -40,10 +40,13 @@
 						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
 					</td>
 					<td>
-						{# TODO: only show link if usage percent (NOT leads usage percent) >= 0.01 #}
-						<a href="/stats/moveset/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ pokemon.identifier|e }}">
+						{% if pokemon.showMovesetLink %}
+							<a href="/stats/moveset/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ pokemon.identifier|e }}">
+								{{ pokemon.name|e }}
+							</a>
+						{% else %}
 							{{ pokemon.name|e }}
-						</a>
+						{% endif %}
 					</td>
 					<td>{{ pokemon.usagePercent|e }}</td>
 					<td
