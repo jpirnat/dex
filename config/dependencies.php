@@ -19,6 +19,7 @@ use Jp\Dex\Application\Models\UsageMonth\UsageMonthModel;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
+use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
@@ -56,6 +57,7 @@ use Jp\Dex\Infrastructure\DatabaseAbilityNameRepository;
 use Jp\Dex\Infrastructure\DatabaseAbilityRepository;
 use Jp\Dex\Infrastructure\DatabaseBaseStatRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
+use Jp\Dex\Infrastructure\DatabaseFormIconRepository;
 use Jp\Dex\Infrastructure\DatabaseItemNameRepository;
 use Jp\Dex\Infrastructure\DatabaseItemRepository;
 use Jp\Dex\Infrastructure\DatabaseLanguageNameRepository;
@@ -161,6 +163,9 @@ $container->dice()->addRule(BaseStatRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseFormatRepository::class];
 $container->dice()->addRule(FormatRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseFormIconRepository::class];
+$container->dice()->addRule(FormIconRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseItemNameRepository::class];
 $container->dice()->addRule(ItemNameRepositoryInterface::class, $rule);
