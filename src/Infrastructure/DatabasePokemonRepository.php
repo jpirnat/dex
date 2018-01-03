@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\SpeciesId;
+use Jp\Dex\Domain\Species\SpeciesId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
