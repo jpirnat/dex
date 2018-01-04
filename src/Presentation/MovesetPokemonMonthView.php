@@ -223,6 +223,7 @@ class MovesetPokemonMonthView
 		foreach ($teammateDatas as $teammateData) {
 			$teammates[] = [
 				'name' => $teammateData->getPokemonName(),
+				'showMovesetLink' => true,
 				'identifier' => $teammateData->getPokemonIdentifier(),
 				'percent' => $teammateData->getPercent(),
 			];
@@ -242,6 +243,7 @@ class MovesetPokemonMonthView
 		foreach ($counterDatas as $counterData) {
 			$counters[] = [
 				'name' => $counterData->getPokemonName(),
+				'showMovesetLink' => true,
 				'identifier' => $counterData->getPokemonIdentifier(),
 				'number1' => $counterData->getNumber1(),
 				'number2' => $counterData->getNumber2(),
@@ -255,8 +257,10 @@ class MovesetPokemonMonthView
 			'html/moveset-pokemon-month.twig',
 			[
 				// The month control's data.
+				'showPrevMonthLink' => true,
 				'prevYear' => $prevMonth->getYear(),
 				'prevMonth' => $prevMonth->getMonth(),
+				'showNextMonthLink' => true,
 				'nextYear' => $nextMonth->getYear(),
 				'nextMonth' => $nextMonth->getMonth(),
 				'formatIdentifier' => $this->movesetPokemonMonthModel->getFormatIdentifier(),

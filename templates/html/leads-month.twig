@@ -6,17 +6,21 @@
 
 {% block body %}
 	<div class="month-control">
-		<div class="button prev">
-			<a href="/stats/leads/{{ prevYear|e }}/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
-				Previous Month
-			</a>
-		</div>
+		{% if showPrevMonthLink %}
+			<div class="button prev">
+				<a href="/stats/leads/{{ prevYear|e }}/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
+					Previous Month
+				</a>
+			</div>
+		{% endif %}
 
-		<div class="button next">
-			<a href="/stats/leads/{{ nextYear|e }}/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
-				Next Month
-			</a>
-		</div>
+		{% if showNextMonthLink %}
+			<div class="button next">
+				<a href="/stats/leads/{{ nextYear|e }}/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
+					Next Month
+				</a>
+			</div>
+		{% endif %}
 	</div>
 
 	<table class="pokemon-list">
