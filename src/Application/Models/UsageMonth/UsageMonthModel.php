@@ -12,7 +12,6 @@ use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
-use Jp\Dex\Domain\YearMonth;
 
 class UsageMonthModel
 {
@@ -71,6 +70,7 @@ class UsageMonthModel
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param FormIconRepositoryInterface $formIconRepository
+	 * @param UsageRatedRepositoryInterface $usageRatedRepository
 	 */
 	public function __construct(
 		DateModel $dateModel,
@@ -119,7 +119,7 @@ class UsageMonthModel
 		// Get the previous month and the next month.
 		$this->dateModel->setData($year, $month);
 		$thisMonth = $this->dateModel->getThisMonth();
-		$lastMonth = $this->dateModel->getPrevMonth();
+		$prevMonth = $this->dateModel->getPrevMonth();
 		$nextMonth = $this->dateModel->getNextMonth();
 
 		// Get the format.
@@ -132,10 +132,10 @@ class UsageMonthModel
 			$format->getId()
 		);
 
-		// Get usage Pokémon records for last month.
-		$lastMonthUsages = $this->usagePokemonRepository->getByYearAndMonthAndFormat(
-			$lastMonth->getYear(),
-			$lastMonth->getMonth(),
+		// Get usage Pokémon records for the previous month.
+		$prevMonthUsages = $this->usagePokemonRepository->getByYearAndMonthAndFormat(
+			$prevMonth->getYear(),
+			$prevMonth->getMonth(),
 			$format->getId()
 		);
 
@@ -147,10 +147,10 @@ class UsageMonthModel
 			$rating
 		);
 
-		// Get usage rated Pokémon records for last month.
-		$lastMonthRateds = $this->usageRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
-			$lastMonth->getYear(),
-			$lastMonth->getMonth(),
+		// Get usage rated Pokémon records for the previous month.
+		$prevMonthRateds = $this->usageRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
+			$prevMonth->getYear(),
+			$prevMonth->getMonth(),
 			$format->getId(),
 			$rating
 		);
@@ -184,22 +184,22 @@ class UsageMonthModel
 			// Get this Pokémon's non-rated usage record for this month.
 			$usagePokemon = $usagePokemons[$pokemonId->value()];
 
-			// Get this Pokémon's change in usage percent since last month.
-			$lastMonthUsagePercent = 0;
-			if (isset($lastMonthRateds[$pokemonId->value()])) {
-				$lastMonthUsagePercent = $lastMonthRateds[$pokemonId->value()]->getUsagePercent();
+			// Get this Pokémon's change in usage percent from the previous month.
+			$prevMonthUsagePercent = 0;
+			if (isset($prevMonthRateds[$pokemonId->value()])) {
+				$prevMonthUsagePercent = $prevMonthRateds[$pokemonId->value()]->getUsagePercent();
 			}
-			$usageChange = $usageRatedPokemon->getUsagePercent() - $lastMonthUsagePercent;
+			$usageChange = $usageRatedPokemon->getUsagePercent() - $prevMonthUsagePercent;
 
-			// Get this Pokémon's change in raw percent and real percent since last month.
-			$lastMonthRawPercent = 0;
-			$lastMonthRealPercent = 0;
-			if (isset($lastMonthUsages[$pokemonId->value()])) {
-				$lastMonthRawPercent = $lastMonthUsages[$pokemonId->value()]->getRawPercent();
-				$lastMonthRealPercent = $lastMonthUsages[$pokemonId->value()]->getRealPercent();
+			// Get this Pokémon's change in raw percent and real percent from the previous month.
+			$prevMonthRawPercent = 0;
+			$prevMonthRealPercent = 0;
+			if (isset($prevMonthUsages[$pokemonId->value()])) {
+				$prevMonthRawPercent = $prevMonthUsages[$pokemonId->value()]->getRawPercent();
+				$prevMonthRealPercent = $prevMonthUsages[$pokemonId->value()]->getRealPercent();
 			}
-			$rawChange = $usagePokemon->getRawPercent() - $lastMonthRawPercent;
-			$realChange = $usagePokemon->getRealPercent() - $lastMonthRealPercent;
+			$rawChange = $usagePokemon->getRawPercent() - $prevMonthRawPercent;
+			$realChange = $usagePokemon->getRealPercent() - $prevMonthRealPercent;
 
 			$this->usageDatas[] = new UsageData(
 				$usageRatedPokemon->getRank(),
@@ -219,8 +219,8 @@ class UsageMonthModel
 
 		// Does usage rated data exist for the previous month?
 		$this->prevMonthDataExists = $this->usageRatedRepository->has(
-			$lastMonth->getYear(),
-			$lastMonth->getMonth(),
+			$prevMonth->getYear(),
+			$prevMonth->getMonth(),
 			$format->getId(),
 			$rating
 		);

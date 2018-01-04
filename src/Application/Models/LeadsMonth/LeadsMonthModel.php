@@ -116,7 +116,7 @@ class LeadsMonthModel
 
 		// Calculate the previous month.
 		$thisMonth = new YearMonth($year, $month);
-		$lastMonth = $this->dateHelper->getPreviousMonth($thisMonth);
+		$prevMonth = $this->dateHelper->getPreviousMonth($thisMonth);
 
 		// Get leads Pokémon records for this month.
 		$leadsPokemons = $this->leadsPokemonRepository->getByYearAndMonthAndFormat(
@@ -125,10 +125,10 @@ class LeadsMonthModel
 			$format->getId()
 		);
 
-		// Get leads Pokémon records for last month.
-		$lastMonthLeads = $this->leadsPokemonRepository->getByYearAndMonthAndFormat(
-			$lastMonth->getYear(),
-			$lastMonth->getMonth(),
+		// Get leads Pokémon records for the previous month.
+		$prevMonthLeads = $this->leadsPokemonRepository->getByYearAndMonthAndFormat(
+			$prevMonth->getYear(),
+			$prevMonth->getMonth(),
 			$format->getId()
 		);
 
@@ -140,10 +140,10 @@ class LeadsMonthModel
 			$rating
 		);
 
-		// Get leads rated Pokémon records for last month.
-		$lastMonthRateds = $this->leadsRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
-			$lastMonth->getYear(),
-			$lastMonth->getMonth(),
+		// Get leads rated Pokémon records for the previous month.
+		$prevMonthRateds = $this->leadsRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
+			$prevMonth->getYear(),
+			$prevMonth->getMonth(),
 			$format->getId(),
 			$rating
 		);
@@ -186,19 +186,19 @@ class LeadsMonthModel
 			// Get this Pokémon's non-rated usage record for this month.
 			$leadsPokemon = $leadsPokemons[$pokemonId->value()];
 
-			// Get this Pokémon's change in usage percent since last month.
-			$lastMonthUsagePercent = 0;
-			if (isset($lastMonthRateds[$pokemonId->value()])) {
-				$lastMonthUsagePercent = $lastMonthRateds[$pokemonId->value()]->getUsagePercent();
+			// Get this Pokémon's change in usage percent from the previous month.
+			$prevMonthUsagePercent = 0;
+			if (isset($prevMonthRateds[$pokemonId->value()])) {
+				$prevMonthUsagePercent = $prevMonthRateds[$pokemonId->value()]->getUsagePercent();
 			}
-			$usageChange = $leadsRatedPokemon->getUsagePercent() - $lastMonthUsagePercent;
+			$usageChange = $leadsRatedPokemon->getUsagePercent() - $prevMonthUsagePercent;
 
-			// Get this Pokémon's change in raw percent since last month.
-			$lastMonthRawPercent = 0;
-			if (isset($lastMonthLeads[$pokemonId->value()])) {
-				$lastMonthRawPercent = $lastMonthLeads[$pokemonId->value()]->getRawPercent();
+			// Get this Pokémon's change in raw percent from the previous month.
+			$prevMonthRawPercent = 0;
+			if (isset($prevMonthLeads[$pokemonId->value()])) {
+				$prevMonthRawPercent = $prevMonthLeads[$pokemonId->value()]->getRawPercent();
 			}
-			$rawChange = $leadsPokemon->getRawPercent() - $lastMonthRawPercent;
+			$rawChange = $leadsPokemon->getRawPercent() - $prevMonthRawPercent;
 
 			// Get this Pokémon's rated usage record for this month.
 			$usageRatedPokemon = $usageRatedPokemons[$pokemonId->value()];

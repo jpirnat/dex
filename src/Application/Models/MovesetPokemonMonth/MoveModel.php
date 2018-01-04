@@ -40,7 +40,7 @@ class MoveModel
 	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single Pokémon.
 	 *
 	 * @param YearMonth $thisMonth
-	 * @param YearMonth $lastMonth
+	 * @param YearMonth $prevMonth
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
@@ -50,7 +50,7 @@ class MoveModel
 	 */
 	public function setData(
 		YearMonth $thisMonth,
-		YearMonth $lastMonth,
+		YearMonth $prevMonth,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
@@ -65,10 +65,10 @@ class MoveModel
 			$pokemonId
 		);
 
-		// Get moveset rated move records for last month.
-		$lastMonthMoves = $this->movesetRatedMoveRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
-			$lastMonth->getYear(),
-			$lastMonth->getMonth(),
+		// Get moveset rated move records for the previous month.
+		$prevMonthMoves = $this->movesetRatedMoveRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
+			$prevMonth->getYear(),
+			$prevMonth->getMonth(),
 			$formatId,
 			$rating,
 			$pokemonId
@@ -84,9 +84,9 @@ class MoveModel
 				$moveId
 			);
 
-			// Get this move's percent from last month.
-			if (isset($lastMonthMoves[$moveId->value()])) {
-				$change = $movesetRatedMove->getPercent() - $lastMonthMoves[$moveId->value()]->getPercent();
+			// Get this move's percent from the previous month.
+			if (isset($prevMonthMoves[$moveId->value()])) {
+				$change = $movesetRatedMove->getPercent() - $prevMonthMoves[$moveId->value()]->getPercent();
 			} else {
 				$change = $movesetRatedMove->getPercent();
 			}

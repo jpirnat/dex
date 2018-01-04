@@ -152,7 +152,7 @@ class MovesetPokemonMonthModel
 
 		// Calculate the previous month.
 		$thisMonth = new YearMonth($year, $month);
-		$lastMonth = $this->dateHelper->getPreviousMonth($thisMonth);
+		$prevMonth = $this->dateHelper->getPreviousMonth($thisMonth);
 
 		// Get the moveset Pokémon record.
 		$this->movesetPokemon = $this->movesetPokemonRepository->getByYearAndMonthAndFormatAndPokemon(
@@ -174,7 +174,7 @@ class MovesetPokemonMonthModel
 		// Get ability data.
 		$this->abilityModel->setData(
 			$thisMonth,
-			$lastMonth,
+			$prevMonth,
 			$format->getId(),
 			$rating,
 			$pokemon->getId(),
@@ -184,7 +184,7 @@ class MovesetPokemonMonthModel
 		// Get item data.
 		$this->itemModel->setData(
 			$thisMonth,
-			$lastMonth,
+			$prevMonth,
 			$format->getId(),
 			$rating,
 			$pokemon->getId(),
@@ -204,7 +204,7 @@ class MovesetPokemonMonthModel
 		// Get move data.
 		$this->moveModel->setData(
 			$thisMonth,
-			$lastMonth,
+			$prevMonth,
 			$format->getId(),
 			$rating,
 			$pokemon->getId(),
