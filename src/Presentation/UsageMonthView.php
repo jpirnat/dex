@@ -83,10 +83,10 @@ class UsageMonthView
 			'html/usage-month.twig',
 			[
 				// The month control's data.
-				'showPrevMonthLink' => true,
+				'showPrevMonthLink' => $this->usageMonthModel->doesPrevMonthDataExist(),
 				'prevYear' => $prevMonth->getYear(),
 				'prevMonth' => $prevMonth->getMonth(),
-				'showNextMonthLink' => true,
+				'showNextMonthLink' => $this->usageMonthModel->doesNextMonthDataExist(),
 				'nextYear' => $nextMonth->getYear(),
 				'nextMonth' => $nextMonth->getMonth(),
 				'formatIdentifier' => $this->usageMonthModel->getFormatIdentifier(),
