@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\AbilityData;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\CounterData;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\ItemData;
@@ -23,9 +22,6 @@ class MovesetPokemonMonthView
 	/** @var Twig_Environment $twig */
 	private $twig;
 
-	/** @var DateModel $dateModel */
-	private $dateModel;
-
 	/** @var MovesetPokemonMonthModel $movesetPokemonMonthModel */
 	private $movesetPokemonMonthModel;
 
@@ -40,20 +36,17 @@ class MovesetPokemonMonthView
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
-	 * @param DateModel $dateModel
 	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 */
 	public function __construct(
 		Twig_Environment $twig,
-		DateModel $dateModel,
 		MovesetPokemonMonthModel $movesetPokemonMonthModel,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository
 	) {
 		$this->twig = $twig;
-		$this->dateModel = $dateModel;
 		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
 
 		$this->pokemonRepository = $pokemonRepository;
@@ -70,8 +63,8 @@ class MovesetPokemonMonthView
 	public function getData() : ResponseInterface
 	{
 		// Get the previous month and the next month.
-		$prevMonth = $this->dateModel->getPrevMonth();
-		$nextMonth = $this->dateModel->getNextMonth();
+		$prevMonth = $this->movesetPokemonMonthModel->getDateModel()->getPrevMonth();
+		$nextMonth = $this->movesetPokemonMonthModel->getDateModel()->getNextMonth();
 
 
 		$languageId = $this->movesetPokemonMonthModel->getLanguageId();

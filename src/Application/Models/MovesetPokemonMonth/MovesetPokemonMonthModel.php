@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
-use Jp\Dex\Application\Models\DateHelper;
+use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
@@ -11,18 +11,17 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
-use Jp\Dex\Domain\YearMonth;
 
 class MovesetPokemonMonthModel
 {
+	/** @var DateModel $dateModel */
+	private $dateModel;
+
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
-
-	/** @var DateHelper $dateHelper */
-	private $dateHelper;
 
 	/** @var MovesetPokemonRepositoryInterface $movesetPokemonRepository */
 	private $movesetPokemonRepository;
@@ -77,9 +76,9 @@ class MovesetPokemonMonthModel
 	/**
 	 * Constructor.
 	 *
+	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param DateHelper $dateHelper
 	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
 	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
 	 * @param AbilityModel $abilityModel
@@ -90,9 +89,9 @@ class MovesetPokemonMonthModel
 	 * @param CounterModel $counterModel
 	 */
 	public function __construct(
+		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		PokemonRepositoryInterface $pokemonRepository,
-		DateHelper $dateHelper,
 		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
 		AbilityModel $abilityModel,
@@ -102,9 +101,9 @@ class MovesetPokemonMonthModel
 		TeammateModel $teammateModel,
 		CounterModel $counterModel
 	) {
+		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->pokemonRepository = $pokemonRepository;
-		$this->dateHelper = $dateHelper;
 		$this->movesetPokemonRepository = $movesetPokemonRepository;
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
 		$this->abilityModel = $abilityModel;
@@ -144,15 +143,17 @@ class MovesetPokemonMonthModel
 		$this->pokemonIdentifier = $pokemonIdentifier;
 		$this->languageId = $languageId;
 
+		// Get the previous month and the next month.
+		$this->dateModel->setData($year, $month);
+		$thisMonth = $this->dateModel->getThisMonth();
+		$prevMonth = $this->dateModel->getPrevMonth();
+		$nextMonth = $this->dateModel->getNextMonth();
+
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
 		// Get the Pokémon.
 		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
-
-		// Calculate the previous month.
-		$thisMonth = new YearMonth($year, $month);
-		$prevMonth = $this->dateHelper->getPreviousMonth($thisMonth);
 
 		// Get the moveset Pokémon record.
 		$this->movesetPokemon = $this->movesetPokemonRepository->getByYearAndMonthAndFormatAndPokemon(
@@ -230,6 +231,16 @@ class MovesetPokemonMonthModel
 			$pokemon->getId(),
 			$languageId
 		);
+	}
+
+	/**
+	 * Get the date model.
+	 *
+	 * @return DateModel
+	 */
+	public function getDateModel() : DateModel
+	{
+		return $this->dateModel;
 	}
 
 	/**

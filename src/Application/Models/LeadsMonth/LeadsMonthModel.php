@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\LeadsMonth;
 
-use Jp\Dex\Application\Models\DateHelper;
+use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -12,15 +12,14 @@ use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
-use Jp\Dex\Domain\YearMonth;
 
 class LeadsMonthModel
 {
+	/** @var DateModel $dateModel */
+	private $dateModel;
+
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
-
-	/** @var DateHelper $dateHelper */
-	private $dateHelper;
 
 	/** @var LeadsPokemonRepositoryInterface $leadsPokemonRepository */
 	private $leadsPokemonRepository;
@@ -58,8 +57,8 @@ class LeadsMonthModel
 	/**
 	 * Constructor.
 	 *
+	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
-	 * @param DateHelper $dateHelper
 	 * @param LeadsPokemonRepositoryInterface $leadsPokemonRepository
 	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
@@ -68,8 +67,8 @@ class LeadsMonthModel
 	 * @param FormIconRepositoryInterface $formIconRepository
 	 */
 	public function __construct(
+		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
-		DateHelper $dateHelper,
 		LeadsPokemonRepositoryInterface $leadsPokemonRepository,
 		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
@@ -77,8 +76,8 @@ class LeadsMonthModel
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		FormIconRepositoryInterface $formIconRepository
 	) {
+		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
-		$this->dateHelper = $dateHelper;
 		$this->leadsPokemonRepository = $leadsPokemonRepository;
 		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
@@ -111,12 +110,14 @@ class LeadsMonthModel
 		$this->formatIdentifier = $formatIdentifier;
 		$this->rating = $rating;
 
+		// Get the previous month and the next month.
+		$this->dateModel->setData($year, $month);
+		$thisMonth = $this->dateModel->getThisMonth();
+		$prevMonth = $this->dateModel->getPrevMonth();
+		$nextMonth = $this->dateModel->getNextMonth();
+
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
-
-		// Calculate the previous month.
-		$thisMonth = new YearMonth($year, $month);
-		$prevMonth = $this->dateHelper->getPreviousMonth($thisMonth);
 
 		// Get leads Pokémon records for this month.
 		$leadsPokemons = $this->leadsPokemonRepository->getByYearAndMonthAndFormat(
@@ -216,6 +217,16 @@ class LeadsMonthModel
 				$rawChange
 			);
 		}
+	}
+
+	/**
+	 * Get the date model.
+	 *
+	 * @return DateModel
+	 */
+	public function getDateModel() : DateModel
+	{
+		return $this->dateModel;
 	}
 
 	/**

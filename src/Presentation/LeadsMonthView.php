@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Application\Models\LeadsMonth\LeadsData;
 use Jp\Dex\Application\Models\LeadsMonth\LeadsMonthModel;
 use Psr\Http\Message\ResponseInterface;
@@ -15,9 +14,6 @@ class LeadsMonthView
 	/** @var Twig_Environment $twig */
 	private $twig;
 
-	/** @var DateModel $dateModel */
-	private $dateModel;
-
 	/** @var LeadsMonthModel $leadsMonthModel */
 	private $leadsMonthModel;
 
@@ -25,16 +21,13 @@ class LeadsMonthView
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
-	 * @param DateModel $dateModel
 	 * @param LeadsMonthModel $leadsMonthModel
 	 */
 	public function __construct(
 		Twig_Environment $twig,
-		DateModel $dateModel,
 		LeadsMonthModel $leadsMonthModel
 	) {
 		$this->twig = $twig;
-		$this->dateModel = $dateModel;
 		$this->leadsMonthModel = $leadsMonthModel;
 	}
 
@@ -47,8 +40,8 @@ class LeadsMonthView
 	public function getData() : ResponseInterface
 	{
 		// Get the previous month and the next month.
-		$prevMonth = $this->dateModel->getPrevMonth();
-		$nextMonth = $this->dateModel->getNextMonth();
+		$prevMonth = $this->leadsMonthModel->getDateModel()->getPrevMonth();
+		$nextMonth = $this->leadsMonthModel->getDateModel()->getNextMonth();
 
 		// Get usage data and sort by rank.
 		$leadsDatas = $this->leadsMonthModel->getLeadsDatas();

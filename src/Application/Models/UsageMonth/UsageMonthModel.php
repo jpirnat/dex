@@ -235,6 +235,16 @@ class UsageMonthModel
 	}
 
 	/**
+	 * Get the date model.
+	 *
+	 * @return DateModel
+	 */
+	public function getDateModel() : DateModel
+	{
+		return $this->dateModel;
+	}
+
+	/**
 	 * Get the year.
 	 *
 	 * @return int
