@@ -24,6 +24,9 @@ class UsageMonthModel
 	/** @var UsagePokemonRepositoryInterface $usagePokemonRepository */
 	private $usagePokemonRepository;
 
+	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
+	private $usageRatedRepository;
+
 	/** @var UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository */
 	private $usageRatedPokemonRepository;
 
@@ -36,8 +39,12 @@ class UsageMonthModel
 	/** @var FormIconRepositoryInterface $formIconRepository */
 	private $formIconRepository;
 
-	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
-	private $usageRatedRepository;
+
+	/** @var bool $prevMonthDataExists */
+	private $prevMonthDataExists;
+
+	/** @var bool $nextMonthDataExists */
+	private $nextMonthDataExists;
 
 	/** @var int $year */
 	private $year;
@@ -54,42 +61,36 @@ class UsageMonthModel
 	/** @var UsageData[] $usageDatas */
 	private $usageDatas = [];
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
 	/**
 	 * Constructor.
 	 *
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param UsagePokemonRepositoryInterface $usagePokemonRepository
+	 * @param UsageRatedRepositoryInterface $usageRatedRepository
 	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param FormIconRepositoryInterface $formIconRepository
-	 * @param UsageRatedRepositoryInterface $usageRatedRepository
 	 */
 	public function __construct(
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		UsagePokemonRepositoryInterface $usagePokemonRepository,
+		UsageRatedRepositoryInterface $usageRatedRepository,
 		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
-		FormIconRepositoryInterface $formIconRepository,
-		UsageRatedRepositoryInterface $usageRatedRepository
+		FormIconRepositoryInterface $formIconRepository
 	) {
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->usagePokemonRepository = $usagePokemonRepository;
+		$this->usageRatedRepository = $usageRatedRepository;
 		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->formIconRepository = $formIconRepository;
-		$this->usageRatedRepository = $usageRatedRepository;
 	}
 
 	/**
@@ -124,6 +125,22 @@ class UsageMonthModel
 
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
+
+		// Does usage rated data exist for the previous month?
+		$this->prevMonthDataExists = $this->usageRatedRepository->has(
+			$prevMonth->getYear(),
+			$prevMonth->getMonth(),
+			$format->getId(),
+			$rating
+		);
+
+		// Does usage rated data exist for the next month?
+		$this->nextMonthDataExists = $this->usageRatedRepository->has(
+			$nextMonth->getYear(),
+			$nextMonth->getMonth(),
+			$format->getId(),
+			$rating
+		);
 
 		// Get usage Pokémon records for this month.
 		$usagePokemons = $this->usagePokemonRepository->getByYearAndMonthAndFormat(
@@ -216,22 +233,26 @@ class UsageMonthModel
 				$realChange
 			);
 		}
+	}
 
-		// Does usage rated data exist for the previous month?
-		$this->prevMonthDataExists = $this->usageRatedRepository->has(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
-			$format->getId(),
-			$rating
-		);
+	/**
+	 * Does usage rated data exist for the previous month?
+	 *
+	 * @return bool
+	 */
+	public function doesPrevMonthDataExist() : bool
+	{
+		return $this->prevMonthDataExists;
+	}
 
-		// Does usage rated data exist for the next month?
-		$this->nextMonthDataExists = $this->usageRatedRepository->has(
-			$nextMonth->getYear(),
-			$nextMonth->getMonth(),
-			$format->getId(),
-			$rating
-		);
+	/**
+	 * Does usage rated data exist for the next month?
+	 *
+	 * @return bool
+	 */
+	public function doesNextMonthDataExist() : bool
+	{
+		return $this->nextMonthDataExists;
 	}
 
 	/**
@@ -292,25 +313,5 @@ class UsageMonthModel
 	public function getUsageDatas() : array
 	{
 		return $this->usageDatas;
-	}
-
-	/**
-	 * Does usage rated data exist for the previous month?
-	 *
-	 * @return bool
-	 */
-	public function doesPrevMonthDataExist() : bool
-	{
-		return $this->prevMonthDataExists;
-	}
-
-	/**
-	 * Does usage rated data exist for the next month?
-	 *
-	 * @return bool
-	 */
-	public function doesNextMonthDataExist() : bool
-	{
-		return $this->nextMonthDataExists;
 	}
 }

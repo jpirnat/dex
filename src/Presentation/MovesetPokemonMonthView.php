@@ -250,10 +250,10 @@ class MovesetPokemonMonthView
 			'html/moveset-pokemon-month.twig',
 			[
 				// The month control's data.
-				'showPrevMonthLink' => true,
+				'showPrevMonthLink' => $this->movesetPokemonMonthModel->doesPrevMonthDataExist(),
 				'prevYear' => $prevMonth->getYear(),
 				'prevMonth' => $prevMonth->getMonth(),
-				'showNextMonthLink' => true,
+				'showNextMonthLink' => $this->movesetPokemonMonthModel->doesNextMonthDataExist(),
 				'nextYear' => $nextMonth->getYear(),
 				'nextMonth' => $nextMonth->getMonth(),
 				'formatIdentifier' => $this->movesetPokemonMonthModel->getFormatIdentifier(),

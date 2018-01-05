@@ -48,6 +48,12 @@ class MovesetPokemonMonthModel
 	private $counterModel;
 
 
+	/** @var bool $prevMonthDataExists */
+	private $prevMonthDataExists;
+
+	/** @var bool $nextMonthDataExists */
+	private $nextMonthDataExists;
+
 	/** @var int $year */
 	private $year;
 
@@ -155,6 +161,22 @@ class MovesetPokemonMonthModel
 		// Get the Pokémon.
 		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
 
+		// Does moveset rated Pokémon data exist for the previous month?
+		$this->prevMonthDataExists = $this->movesetRatedPokemonRepository->has(
+			$prevMonth->getYear(),
+			$prevMonth->getMonth(),
+			$format->getId(),
+			$rating
+		);
+
+		// Does moveset rated Pokémon data exist for the next month?
+		$this->nextMonthDataExists = $this->movesetRatedPokemonRepository->has(
+			$nextMonth->getYear(),
+			$nextMonth->getMonth(),
+			$format->getId(),
+			$rating
+		);
+
 		// Get the moveset Pokémon record.
 		$this->movesetPokemon = $this->movesetPokemonRepository->getByYearAndMonthAndFormatAndPokemon(
 			$year,
@@ -231,6 +253,26 @@ class MovesetPokemonMonthModel
 			$pokemon->getId(),
 			$languageId
 		);
+	}
+
+	/**
+	 * Does usage rated data exist for the previous month?
+	 *
+	 * @return bool
+	 */
+	public function doesPrevMonthDataExist() : bool
+	{
+		return $this->prevMonthDataExists;
+	}
+
+	/**
+	 * Does usage rated data exist for the next month?
+	 *
+	 * @return bool
+	 */
+	public function doesNextMonthDataExist() : bool
+	{
+		return $this->nextMonthDataExists;
 	}
 
 	/**

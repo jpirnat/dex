@@ -73,10 +73,10 @@ class LeadsMonthView
 			'html/leads-month.twig',
 			[
 				// The month control's data.
-				'showPrevMonthLink' => true,
+				'showPrevMonthLink' => $this->leadsMonthModel->doesPrevMonthDataExist(),
 				'prevYear' => $prevMonth->getYear(),
 				'prevMonth' => $prevMonth->getMonth(),
-				'showNextMonthLink' => true,
+				'showNextMonthLink' => $this->leadsMonthModel->doesNextMonthDataExist(),
 				'nextYear' => $nextMonth->getYear(),
 				'nextMonth' => $nextMonth->getMonth(),
 				'formatIdentifier' => $this->leadsMonthModel->getFormatIdentifier(),
