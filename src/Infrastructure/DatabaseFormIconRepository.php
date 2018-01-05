@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\FormIcons\FormIcon;
+use Jp\Dex\Domain\FormIcons\FormIconNotFoundException;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Versions\Generation;
@@ -22,6 +23,62 @@ class DatabaseFormIconRepository implements FormIconRepositoryInterface
 	public function __construct(PDO $db)
 	{
 		$this->db = $db;
+	}
+
+	/**
+	 * Get a form icon by its generation, form, whether it is female, and
+	 * whether it is right.
+	 *
+	 * @param Generation $generation
+	 * @param FormId $formId
+	 * @param bool $isFemale
+	 * @param bool $isRight
+	 *
+	 * @throws FormIconNotFoundException if no form icon exists with this
+	 *     generation, form, female-ness, and right-ness.
+	 *
+	 * @return FormIcon
+	 */
+	public function getByGenerationAndFormAndFemaleAndRight(
+		Generation $generation,
+		FormId $formId,
+		bool $isFemale,
+		bool $isRight
+	) : FormIcon {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`image`
+			FROM `form_icons`
+			WHERE `generation` = :generation
+				AND `form_id` = :form_id
+				AND `is_female` = :is_female
+				AND `is_right` = :is_right'
+		);
+		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':form_id', $formId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':is_female', $isFemale, PDO::PARAM_INT);
+		$stmt->bindValue(':is_right', $isRight, PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			throw new FormIconNotFoundException(
+				'No form icon exists with generation ' . $generation->getValue()
+				. ', form id ' . $formId->value()
+				. ', female-ness ' . ($isFemale ? 'true' : 'false')
+				. ', and right-ness ' . ($isRight ? 'true' : 'false') . '.'
+			);
+		}
+
+		$formIcon = new FormIcon(
+			$generation,
+			$formId,
+			$isFemale,
+			$isRight,
+			$result['image']
+		);
+
+		return $formIcon;
 	}
 
 	/**
@@ -49,8 +106,8 @@ class DatabaseFormIconRepository implements FormIconRepositoryInterface
 				AND `is_right` = :is_right'
 		);
 		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
-		$stmt->bindValue(':is_female', false, PDO::PARAM_INT);
-		$stmt->bindValue(':is_right', false, PDO::PARAM_INT);
+		$stmt->bindValue(':is_female', $isFemale, PDO::PARAM_INT);
+		$stmt->bindValue(':is_right', $isRight, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$formIcons = [];
@@ -59,8 +116,8 @@ class DatabaseFormIconRepository implements FormIconRepositoryInterface
 			$formIcon = new FormIcon(
 				$generation,
 				new FormId($result['form_id']),
-				false,
-				false,
+				$isFemale,
+				$isRight,
 				$result['image']
 			);
 

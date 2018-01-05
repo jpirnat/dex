@@ -218,6 +218,7 @@ class MovesetPokemonMonthView
 				'name' => $teammateData->getPokemonName(),
 				'showMovesetLink' => true,
 				'identifier' => $teammateData->getPokemonIdentifier(),
+				'formIcon' => $teammateData->getFormIcon(),
 				'percent' => $teammateData->getPercent(),
 			];
 		}
@@ -238,6 +239,7 @@ class MovesetPokemonMonthView
 				'name' => $counterData->getPokemonName(),
 				'showMovesetLink' => true,
 				'identifier' => $counterData->getPokemonIdentifier(),
+				'formIcon' => $counterData->getFormIcon(),
 				'number1' => $counterData->getNumber1(),
 				'number2' => $counterData->getNumber2(),
 				'number3' => $counterData->getNumber3(),

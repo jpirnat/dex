@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
-use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Formats\Format;
+use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
+use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
@@ -21,6 +23,9 @@ class TeammateModel
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
 
+	/** @var FormIconRepositoryInterface $formIconRepository */
+	private $formIconRepository;
+
 	/** @var TeammateData[] $teammateDatas */
 	private $teammateDatas = [];
 
@@ -30,15 +35,18 @@ class TeammateModel
 	 * @param MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
+	 * @param FormIconRepositoryInterface $formIconRepository
 	 */
 	public function __construct(
 		MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
-		PokemonRepositoryInterface $pokemonRepository
+		PokemonRepositoryInterface $pokemonRepository,
+		FormIconRepositoryInterface $formIconRepository
 	) {
 		$this->movesetRatedTeammateRepository = $movesetRatedTeammateRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->pokemonRepository = $pokemonRepository;
+		$this->formIconRepository = $formIconRepository;
 	}
 
 	/**
@@ -47,7 +55,7 @@ class TeammateModel
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param FormatId $formatId
+	 * @param Format $format
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
@@ -57,7 +65,7 @@ class TeammateModel
 	public function setData(
 		int $year,
 		int $month,
-		FormatId $formatId,
+		Format $format,
 		int $rating,
 		PokemonId $pokemonId,
 		LanguageId $languageId
@@ -66,7 +74,7 @@ class TeammateModel
 		$movesetRatedTeammates = $this->movesetRatedTeammateRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
 			$year,
 			$month,
-			$formatId,
+			$format->getId(),
 			$rating,
 			$pokemonId
 		);
@@ -84,9 +92,18 @@ class TeammateModel
 				$movesetRatedTeammate->getTeammateId()
 			);
 
+			// Get this teammate's form icon.
+			$formIcon = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
+				$format->getGeneration(),
+				new FormId($pokemon->getId()->value()), // A Pokémon's default form has Pokémon id === form id.
+				false,
+				false
+			);
+
 			$this->teammateDatas[] = new TeammateData(
 				$pokemonName->getName(),
 				$pokemon->getIdentifier(),
+				$formIcon->getImage(),
 				$movesetRatedTeammate->getPercent()
 			);
 		}

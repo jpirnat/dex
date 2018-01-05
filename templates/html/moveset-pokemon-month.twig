@@ -172,6 +172,7 @@
 	<table>
 		<thead>
 			<tr>
+				<th></th>
 				<th>Teammates</th>
 				<th>%</th>
 			</tr>
@@ -179,6 +180,9 @@
 		<tbody>
 			{% for teammate in teammates %}
 				<tr>
+					<td>
+						<img src="/images/pokemon/icons/{{ teammate.formIcon|e }}">
+					</td>
 					<td>
 						{% if teammate.showMovesetLink %}
 							<a href="/stats/moveset/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ teammate.identifier|e }}">
@@ -197,6 +201,7 @@
 	<table>
 		<thead>
 			<tr>
+				<th></th>
 				<th>Checks and Counters</th>
 				<th>?</th>
 				<th>?</th>
@@ -208,6 +213,9 @@
 		<tbody>
 			{% for counter in counters %}
 				<tr>
+					<td>
+						<img src="/images/pokemon/icons/{{ counter.formIcon|e }}">
+					</td>
 					<td>
 						{% if counter.showMovesetLink %}
 							<a href="/stats/moveset/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ counter.identifier|e }}">

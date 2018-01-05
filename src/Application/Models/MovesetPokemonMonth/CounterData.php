@@ -11,6 +11,9 @@ class CounterData
 	/** @var string $pokemonIdentifier */
 	private $pokemonIdentifier;
 
+	/** @var string $formIcon */
+	private $formIcon;
+
 	/** @var float $number1 */
 	private $number1;
 
@@ -31,6 +34,7 @@ class CounterData
 	 *
 	 * @param string $pokemonName
 	 * @param string $pokemonIdentifier
+	 * @param string $formIcon
 	 * @param float $number1
 	 * @param float $number2
 	 * @param float $number3
@@ -40,6 +44,7 @@ class CounterData
 	public function __construct(
 		string $pokemonName,
 		string $pokemonIdentifier,
+		string $formIcon,
 		float $number1,
 		float $number2,
 		float $number3,
@@ -48,6 +53,7 @@ class CounterData
 	) {
 		$this->pokemonName = $pokemonName;
 		$this->pokemonIdentifier = $pokemonIdentifier;
+		$this->formIcon = $formIcon;
 		$this->number1 = $number1;
 		$this->number2 = $number2;
 		$this->number3 = $number3;
@@ -73,6 +79,16 @@ class CounterData
 	public function getPokemonIdentifier() : string
 	{
 		return $this->pokemonIdentifier;
+	}
+
+	/**
+	 * Get the form icon.
+	 *
+	 * @return string
+	 */
+	public function getFormIcon() : string
+	{
+		return $this->formIcon;
 	}
 
 	/**

@@ -238,7 +238,7 @@ class MovesetPokemonMonthModel
 		$this->teammateModel->setData(
 			$year,
 			$month,
-			$format->getId(),
+			$format,
 			$rating,
 			$pokemon->getId(),
 			$languageId
@@ -248,7 +248,7 @@ class MovesetPokemonMonthModel
 		$this->counterModel->setData(
 			$year,
 			$month,
-			$format->getId(),
+			$format,
 			$rating,
 			$pokemon->getId(),
 			$languageId

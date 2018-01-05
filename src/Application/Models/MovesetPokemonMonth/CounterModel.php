@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
-use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Formats\Format;
+use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
+use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
@@ -21,6 +23,9 @@ class CounterModel
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
 
+	/** @var FormIconRepositoryInterface $formIconRepository */
+	private $formIconRepository;
+
 	/** @var CounterData[] $counterDatas */
 	private $counterDatas = [];
 
@@ -30,15 +35,18 @@ class CounterModel
 	 * @param MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
+	 * @param FormIconRepositoryInterface $formIconRepository
 	 */
 	public function __construct(
 		MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
-		PokemonRepositoryInterface $pokemonRepository
+		PokemonRepositoryInterface $pokemonRepository,
+		FormIconRepositoryInterface $formIconRepository
 	) {
 		$this->movesetRatedCounterRepository = $movesetRatedCounterRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->pokemonRepository = $pokemonRepository;
+		$this->formIconRepository = $formIconRepository;
 	}
 
 	/**
@@ -47,7 +55,7 @@ class CounterModel
 	 *
 	 * @param int $year
 	 * @param int $month
-	 * @param FormatId $formatId
+	 * @param Format $format
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
@@ -57,7 +65,7 @@ class CounterModel
 	public function setData(
 		int $year,
 		int $month,
-		FormatId $formatId,
+		Format $format,
 		int $rating,
 		PokemonId $pokemonId,
 		LanguageId $languageId
@@ -66,7 +74,7 @@ class CounterModel
 		$movesetRatedCounters = $this->movesetRatedCounterRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
 			$year,
 			$month,
-			$formatId,
+			$format->getId(),
 			$rating,
 			$pokemonId
 		);
@@ -84,9 +92,18 @@ class CounterModel
 				$movesetRatedCounter->getCounterId()
 			);
 
+			// Get this counter's form icon.
+			$formIcon = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
+				$format->getGeneration(),
+				new FormId($pokemon->getId()->value()), // A Pokémon's default form has Pokémon id === form id.
+				false,
+				false
+			);
+
 			$this->counterDatas[] = new CounterData(
 				$pokemonName->getName(),
 				$pokemon->getIdentifier(),
+				$formIcon->getImage(),
 				$movesetRatedCounter->getNumber1(),
 				$movesetRatedCounter->getNumber2(),
 				$movesetRatedCounter->getNumber3(),

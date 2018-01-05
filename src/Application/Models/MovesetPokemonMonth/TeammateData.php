@@ -11,6 +11,9 @@ class TeammateData
 	/** @var string $pokemonIdentifier */
 	private $pokemonIdentifier;
 
+	/** @var string $formIcon */
+	private $formIcon;
+
 	/** @var float $percent */
 	private $percent;
 
@@ -19,15 +22,18 @@ class TeammateData
 	 *
 	 * @param string $pokemonName
 	 * @param string $pokemonIdentifier
+	 * @param string $formIcon
 	 * @param float $percent
 	 */
 	public function __construct(
 		string $pokemonName,
 		string $pokemonIdentifier,
+		string $formIcon,
 		float $percent
 	) {
 		$this->pokemonName = $pokemonName;
 		$this->pokemonIdentifier = $pokemonIdentifier;
+		$this->formIcon = $formIcon;
 		$this->percent = $percent;
 	}
 
@@ -49,6 +55,16 @@ class TeammateData
 	public function getPokemonIdentifier() : string
 	{
 		return $this->pokemonIdentifier;
+	}
+
+	/**
+	 * Get the form icon.
+	 *
+	 * @return string
+	 */
+	public function getFormIcon() : string
+	{
+		return $this->formIcon;
 	}
 
 	/**
