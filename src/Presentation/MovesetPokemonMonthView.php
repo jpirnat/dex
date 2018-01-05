@@ -216,7 +216,7 @@ class MovesetPokemonMonthView
 		foreach ($teammateDatas as $teammateData) {
 			$teammates[] = [
 				'name' => $teammateData->getPokemonName(),
-				'showMovesetLink' => true,
+				'showMovesetLink' => $teammateData->doesMovesetDataExist(),
 				'identifier' => $teammateData->getPokemonIdentifier(),
 				'formIcon' => $teammateData->getFormIcon(),
 				'percent' => $teammateData->getPercent(),
@@ -237,7 +237,7 @@ class MovesetPokemonMonthView
 		foreach ($counterDatas as $counterData) {
 			$counters[] = [
 				'name' => $counterData->getPokemonName(),
-				'showMovesetLink' => true,
+				'showMovesetLink' => $counterData->doesMovesetDataExist(),
 				'identifier' => $counterData->getPokemonIdentifier(),
 				'formIcon' => $counterData->getFormIcon(),
 				'number1' => $counterData->getNumber1(),

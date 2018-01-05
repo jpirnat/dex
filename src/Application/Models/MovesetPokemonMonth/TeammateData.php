@@ -8,6 +8,9 @@ class TeammateData
 	/** @var string $pokemonName */
 	private $pokemonName;
 
+	/** @var bool $movesetDataExists */
+	private $movesetDataExists;
+
 	/** @var string $pokemonIdentifier */
 	private $pokemonIdentifier;
 
@@ -21,17 +24,20 @@ class TeammateData
 	 * Constructor.
 	 *
 	 * @param string $pokemonName
+	 * @param bool $movesetDataExists
 	 * @param string $pokemonIdentifier
 	 * @param string $formIcon
 	 * @param float $percent
 	 */
 	public function __construct(
 		string $pokemonName,
+		bool $movesetDataExists,
 		string $pokemonIdentifier,
 		string $formIcon,
 		float $percent
 	) {
 		$this->pokemonName = $pokemonName;
+		$this->movesetDataExists = $movesetDataExists;
 		$this->pokemonIdentifier = $pokemonIdentifier;
 		$this->formIcon = $formIcon;
 		$this->percent = $percent;
@@ -45,6 +51,16 @@ class TeammateData
 	public function getPokemonName() : string
 	{
 		return $this->pokemonName;
+	}
+
+	/**
+	 * Get whether moveset data exists.
+	 *
+	 * @return bool
+	 */
+	public function doesMovesetDataExist() : bool
+	{
+		return $this->movesetDataExists;
 	}
 
 	/**

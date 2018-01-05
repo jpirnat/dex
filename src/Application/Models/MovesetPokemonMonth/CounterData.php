@@ -8,6 +8,9 @@ class CounterData
 	/** @var string $pokemonName */
 	private $pokemonName;
 
+	/** @var bool $movesetDataExists */
+	private $movesetDataExists;
+
 	/** @var string $pokemonIdentifier */
 	private $pokemonIdentifier;
 
@@ -33,6 +36,7 @@ class CounterData
 	 * Constructor.
 	 *
 	 * @param string $pokemonName
+	 * @param bool $movesetDataExists
 	 * @param string $pokemonIdentifier
 	 * @param string $formIcon
 	 * @param float $number1
@@ -43,6 +47,7 @@ class CounterData
 	 */
 	public function __construct(
 		string $pokemonName,
+		bool $movesetDataExists,
 		string $pokemonIdentifier,
 		string $formIcon,
 		float $number1,
@@ -52,6 +57,7 @@ class CounterData
 		float $percentSwitchedOut
 	) {
 		$this->pokemonName = $pokemonName;
+		$this->movesetDataExists = $movesetDataExists;
 		$this->pokemonIdentifier = $pokemonIdentifier;
 		$this->formIcon = $formIcon;
 		$this->number1 = $number1;
@@ -69,6 +75,16 @@ class CounterData
 	public function getPokemonName() : string
 	{
 		return $this->pokemonName;
+	}
+
+	/**
+	 * Get whether moveset data exists.
+	 *
+	 * @return bool
+	 */
+	public function doesMovesetDataExist() : bool
+	{
+		return $this->movesetDataExists;
 	}
 
 	/**

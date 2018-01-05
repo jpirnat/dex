@@ -166,7 +166,8 @@ class MovesetPokemonMonthModel
 			$prevMonth->getYear(),
 			$prevMonth->getMonth(),
 			$format->getId(),
-			$rating
+			$rating,
+			$pokemon->getId()
 		);
 
 		// Does moveset rated Pokémon data exist for the next month?
@@ -174,7 +175,8 @@ class MovesetPokemonMonthModel
 			$nextMonth->getYear(),
 			$nextMonth->getMonth(),
 			$format->getId(),
-			$rating
+			$rating,
+			$pokemon->getId()
 		);
 
 		// Get the moveset Pokémon record.

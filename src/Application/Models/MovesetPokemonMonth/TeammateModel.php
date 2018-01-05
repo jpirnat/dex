@@ -10,6 +10,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface;
 
 class TeammateModel
@@ -19,6 +20,9 @@ class TeammateModel
 
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
+
+	/** @var MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository */
+	private $movesetRatedPokemonRepository;
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
@@ -34,17 +38,20 @@ class TeammateModel
 	 *
 	 * @param MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
+	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param FormIconRepositoryInterface $formIconRepository
 	 */
 	public function __construct(
 		MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
+		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		FormIconRepositoryInterface $formIconRepository
 	) {
 		$this->movesetRatedTeammateRepository = $movesetRatedTeammateRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
+		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->formIconRepository = $formIconRepository;
 	}
@@ -87,6 +94,15 @@ class TeammateModel
 				$movesetRatedTeammate->getTeammateId()
 			);
 
+			// Does this teammate have moveset rated Pokémon data?
+			$movesetDataExists = $this->movesetRatedPokemonRepository->has(
+				$year,
+				$month,
+				$format->getId(),
+				$rating,
+				$movesetRatedTeammate->getTeammateId()
+			);
+
 			// Get this teammate's Pokémon data.
 			$pokemon = $this->pokemonRepository->getById(
 				$movesetRatedTeammate->getTeammateId()
@@ -102,6 +118,7 @@ class TeammateModel
 
 			$this->teammateDatas[] = new TeammateData(
 				$pokemonName->getName(),
+				$movesetDataExists,
 				$pokemon->getIdentifier(),
 				$formIcon->getImage(),
 				$movesetRatedTeammate->getPercent()

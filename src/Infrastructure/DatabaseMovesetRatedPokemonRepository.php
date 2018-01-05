@@ -26,6 +26,45 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 	}
 
 	/**
+	 * Does a moveset rated Pokémon record exist for this year, month, format,
+	 * rating, and Pokémon?
+	 *
+	 * @param int $year
+	 * @param int $month
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return bool
+	 */
+	public function has(
+		int $year,
+		int $month,
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId
+	) : bool {
+		$stmt = $this->db->prepare(
+			'SELECT
+				COUNT(*)
+			FROM `moveset_rated_pokemon`
+			WHERE `year` = :year
+				AND `month` = :month
+				AND `format_id` = :format_id
+				AND `rating` = :rating
+				AND `pokemon_id` = :pokemon_id'
+		);
+		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$count = $stmt->fetchColumn();
+		return $count > 0;
+	}
+
+	/**
 	 * Do any moveset rated Pokémon records exist for this year, month, format,
 	 * and rating?
 	 *
@@ -36,7 +75,7 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 	 *
 	 * @return bool
 	 */
-	public function has(
+	public function hasAny(
 		int $year,
 		int $month,
 		FormatId $formatId,

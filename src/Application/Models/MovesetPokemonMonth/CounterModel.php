@@ -11,6 +11,7 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounterRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
 
 class CounterModel
 {
@@ -19,6 +20,9 @@ class CounterModel
 
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
+
+	/** @var MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository */
+	private $movesetRatedPokemonRepository;
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
@@ -34,17 +38,20 @@ class CounterModel
 	 *
 	 * @param MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
+	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param FormIconRepositoryInterface $formIconRepository
 	 */
 	public function __construct(
 		MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
+		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		FormIconRepositoryInterface $formIconRepository
 	) {
 		$this->movesetRatedCounterRepository = $movesetRatedCounterRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
+		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->formIconRepository = $formIconRepository;
 	}
@@ -87,6 +94,15 @@ class CounterModel
 				$movesetRatedCounter->getCounterId()
 			);
 
+			// Does this teammate have moveset rated Pokémon data?
+			$movesetDataExists = $this->movesetRatedPokemonRepository->has(
+				$year,
+				$month,
+				$format->getId(),
+				$rating,
+				$movesetRatedCounter->getCounterId()
+			);
+
 			// Get this counter's Pokémon data.
 			$pokemon = $this->pokemonRepository->getById(
 				$movesetRatedCounter->getCounterId()
@@ -102,6 +118,7 @@ class CounterModel
 
 			$this->counterDatas[] = new CounterData(
 				$pokemonName->getName(),
+				$movesetDataExists,
 				$pokemon->getIdentifier(),
 				$formIcon->getImage(),
 				$movesetRatedCounter->getNumber1(),

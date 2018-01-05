@@ -153,7 +153,7 @@ class MovesetFileImporter
 			$month,
 			$formatId
 		);
-		$movesetRatedPokemonExists = $this->movesetRatedPokemonRepository->has(
+		$movesetRatedPokemonExists = $this->movesetRatedPokemonRepository->hasAny(
 			$year,
 			$month,
 			$formatId,
