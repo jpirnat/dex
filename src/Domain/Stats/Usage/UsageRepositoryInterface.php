@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 interface UsageRepositoryInterface
 {
 	/**
-	 * Do any usage records exist for this year, month, and format?
+	 * Does a usage record exist for this year, month, and format?
 	 *
 	 * @param int $year
 	 * @param int $month

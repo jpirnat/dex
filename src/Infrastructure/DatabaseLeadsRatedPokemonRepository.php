@@ -35,7 +35,7 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 	 *
 	 * @return bool
 	 */
-	public function has(
+	public function hasAny(
 		int $year,
 		int $month,
 		FormatId $formatId,

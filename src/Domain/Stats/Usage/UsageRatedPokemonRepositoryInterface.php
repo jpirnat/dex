@@ -19,7 +19,7 @@ interface UsageRatedPokemonRepositoryInterface
 	 *
 	 * @return bool
 	 */
-	public function has(
+	public function hasAny(
 		int $year,
 		int $month,
 		FormatId $formatId,

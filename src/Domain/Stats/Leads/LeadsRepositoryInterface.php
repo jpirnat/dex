@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 interface LeadsRepositoryInterface
 {
 	/**
-	 * Do any leads records exist for this year, month, and format?
+	 * Does a leads record exist for this year, month, and format?
 	 *
 	 * @param int $year
 	 * @param int $month

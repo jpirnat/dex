@@ -35,7 +35,7 @@ class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepository
 	 *
 	 * @return bool
 	 */
-	public function has(
+	public function hasAny(
 		int $year,
 		int $month,
 		FormatId $formatId,

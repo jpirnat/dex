@@ -96,12 +96,12 @@ class UsageFileImporter
 			$formatId,
 			$rating
 		);
-		$usagePokemonExists = $this->usagePokemonRepository->has(
+		$usagePokemonExists = $this->usagePokemonRepository->hasAny(
 			$year,
 			$month,
 			$formatId
 		);
-		$usageRatedPokemonExists = $this->usageRatedPokemonRepository->has(
+		$usageRatedPokemonExists = $this->usageRatedPokemonRepository->hasAny(
 			$year,
 			$month,
 			$formatId,

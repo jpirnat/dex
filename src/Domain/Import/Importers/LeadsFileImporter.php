@@ -82,12 +82,12 @@ class LeadsFileImporter
 			$month,
 			$formatId
 		);
-		$leadsPokemonExists = $this->leadsPokemonRepository->has(
+		$leadsPokemonExists = $this->leadsPokemonRepository->hasAny(
 			$year,
 			$month,
 			$formatId
 		);
-		$leadsRatedPokemonExists = $this->leadsRatedPokemonRepository->has(
+		$leadsRatedPokemonExists = $this->leadsRatedPokemonRepository->hasAny(
 			$year,
 			$month,
 			$formatId,

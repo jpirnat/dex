@@ -148,7 +148,7 @@ class MovesetFileImporter
 			return;
 		}
 
-		$movesetPokemonExists = $this->movesetPokemonRepository->has(
+		$movesetPokemonExists = $this->movesetPokemonRepository->hasAny(
 			$year,
 			$month,
 			$formatId

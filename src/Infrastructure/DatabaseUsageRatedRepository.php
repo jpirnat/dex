@@ -24,8 +24,7 @@ class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterface
 	}
 
 	/**
-	 * Do any usage rated records exist for this year, month, format, and
-	 * rating?
+	 * Does a usage rated record exist for this year, month, format, and rating?
 	 *
 	 * @param int $year
 	 * @param int $month
