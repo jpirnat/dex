@@ -8,7 +8,7 @@
 	<div class="month-control">
 		{% if showPrevMonthLink %}
 			<div class="button prev">
-				<a href="/stats/move-usage/{{ prevYear|e }}/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{ moveIdentifier|e }}">
+				<a href="/stats/move-usage/{{ prevYear|e }}/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ moveIdentifier|e }}">
 					Previous Month
 				</a>
 			</div>
@@ -16,7 +16,7 @@
 
 		{% if showNextMonthLink %}
 			<div class="button next">
-				<a href="/stats/move-usage/{{ nextYear|e }}/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{ moveIdentifier|e }}">
+				<a href="/stats/move-usage/{{ nextYear|e }}/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ moveIdentifier|e }}">
 					Next Month
 				</a>
 			</div>
@@ -40,13 +40,9 @@
 						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
 					</td>
 					<td>
-						{% if pokemon.showMovesetLink %}
-							<a href="/stats/moveset/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ pokemon.identifier|e }}">
-								{{ pokemon.name|e }}
-							</a>
-						{% else %}
+						<a href="/stats/moveset/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/{{ pokemon.identifier|e }}">
 							{{ pokemon.name|e }}
-						{% endif %}
+						</a>
 					</td>
 					<td>{{ pokemon.pokemonPercent|e }}</td>
 					<td>{{ pokemon.movePercent|e }}</td>

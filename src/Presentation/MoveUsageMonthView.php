@@ -56,7 +56,6 @@ class MoveUsageMonthView
 		foreach ($moveUsageDatas as $moveUsageData) {
 			$data[] = [
 				'name' => $moveUsageData->getPokemonName(),
-				'showMovesetLink' => $moveUsageData->getUsagePercent() >= .01,
 				'identifier' => $moveUsageData->getPokemonIdentifier(),
 				'formIcon' => $moveUsageData->getFormIcon(),
 				'pokemonPercent' => $moveUsageData->getPokemonPercent(),
@@ -77,6 +76,7 @@ class MoveUsageMonthView
 				'nextMonth' => $nextMonth->getMonth(),
 				'formatIdentifier' => $this->moveUsageMonthModel->getFormatIdentifier(),
 				'rating' => $this->moveUsageMonthModel->getRating(),
+				'moveIdentifier' => $this->moveUsageMonthModel->getMoveIdentifier(),
 
 				'year' => $this->moveUsageMonthModel->getYear(),
 				'month' => $this->moveUsageMonthModel->getMonth(),

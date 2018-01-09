@@ -59,6 +59,9 @@ class MoveUsageMonthModel
 	/** @var int $rating */
 	private $rating;
 
+	/** @var string $moveIdentifier */
+	private $moveIdentifier;
+
 	/** @var MoveUsageData[] $moveUsageDatas */
 	private $moveUsageDatas = [];
 
@@ -119,6 +122,7 @@ class MoveUsageMonthModel
 		$this->month = $month;
 		$this->formatIdentifier = $formatIdentifier;
 		$this->rating = $rating;
+		$this->moveIdentifier = $moveIdentifier;
 
 		// Get the previous month and the next month.
 		$this->dateModel->setData($year, $month);
@@ -257,6 +261,16 @@ class MoveUsageMonthModel
 	public function getRating() : int
 	{
 		return $this->rating;
+	}
+
+	/**
+	 * Get the move identifier.
+	 *
+	 * @return string
+	 */
+	public function getMoveIdentifier() : string
+	{
+		return $this->moveIdentifier;
 	}
 
 	/**
