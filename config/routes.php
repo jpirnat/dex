@@ -9,6 +9,7 @@ use Jp\Dex\Application\Controllers\LeadsController;
 use Jp\Dex\Application\Controllers\LeadsMonthController;
 use Jp\Dex\Application\Controllers\MovesController;
 use Jp\Dex\Application\Controllers\MovesetPokemonMonthController;
+use Jp\Dex\Application\Controllers\MoveUsageMonthController;
 use Jp\Dex\Application\Controllers\NotFoundController;
 use Jp\Dex\Application\Controllers\UsageController;
 use Jp\Dex\Application\Controllers\UsageMonthController;
@@ -22,6 +23,7 @@ use Jp\Dex\Presentation\LeadsMonthView;
 use Jp\Dex\Presentation\LeadsView;
 use Jp\Dex\Presentation\MovesetPokemonMonthView;
 use Jp\Dex\Presentation\MovesView;
+use Jp\Dex\Presentation\MoveUsageMonthView;
 use Jp\Dex\Presentation\NotFoundView;
 use Jp\Dex\Presentation\UsageMonthView;
 use Jp\Dex\Presentation\UsageView;
@@ -159,6 +161,21 @@ $routes = [
 			'controllerClass' => MovesetPokemonMonthController::class,
 			'controllerMethod' => 'setData',
 			'viewClass' => MovesetPokemonMonthView::class,
+			'viewMethod' => 'getData',
+			'middlewareClasses' => [
+				HtmlErrorMiddleware::class,
+				LanguageMiddleware::class,
+			],
+		]
+	],
+
+	[
+		'GET',
+		'/stats/move-usage/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}/{moveIdentifier:[-\w]+}',
+		[
+			'controllerClass' => MoveUsageMonthController::class,
+			'controllerMethod' => 'setData',
+			'viewClass' => MoveUsageMonthView::class,
 			'viewMethod' => 'getData',
 			'middlewareClasses' => [
 				HtmlErrorMiddleware::class,
