@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Moves\Move;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveNotFoundException;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 class DatabaseMoveRepository implements MoveRepositoryInterface
@@ -39,7 +39,7 @@ class DatabaseMoveRepository implements MoveRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`id`,
-				`introduced_in_generation`
+				`introduced_in_version_group_id`
 			FROM `moves`
 			WHERE `identifier` = :identifier
 			LIMIT 1'
@@ -57,7 +57,7 @@ class DatabaseMoveRepository implements MoveRepositoryInterface
 		$move = new Move(
 			new MoveId($result['id']),
 			$identifier,
-			new Generation($result['introduced_in_generation'])
+			new VersionGroupId($result['introduced_in_version_group_id'])
 		);
 
 		return $move;

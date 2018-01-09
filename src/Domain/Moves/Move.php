@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Moves;
 
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 class Move
 {
@@ -13,24 +13,24 @@ class Move
 	/** @var string $identifier */
 	private $identifier;
 
-	/** @var Generation $introducedInGeneration */
-	private $introducedInGeneration;
+	/** @var VersionGroupId $introducedInVersionGroupId */
+	private $introducedInVersionGroupId;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param MoveId $moveId
 	 * @param string $identifier
-	 * @param Generation $introducedInGeneration
+	 * @param VersionGroupId $introducedInVersionGroupId
 	 */
 	public function __construct(
 		MoveId $moveId,
 		string $identifier,
-		Generation $introducedInGeneration
+		VersionGroupId $introducedInVersionGroupId
 	) {
 		$this->id = $moveId;
 		$this->identifier = $identifier;
-		$this->introducedInGeneration = $introducedInGeneration;
+		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
 	}
 
 	/**
@@ -56,10 +56,10 @@ class Move
 	/**
 	 * Get the generation this move was introduced in.
 	 *
-	 * @return Generation
+	 * @return VersionGroupId
 	 */
-	public function getIntroducedInGeneration() : Generation
+	public function getIntroducedInGeneration() : VersionGroupId
 	{
-		return $this->introducedInGeneration;
+		return $this->introducedInVersionGroupId;
 	}
 }
