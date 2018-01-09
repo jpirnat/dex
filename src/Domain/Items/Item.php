@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Items;
 
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 class Item
 {
@@ -13,8 +13,8 @@ class Item
 	/** @var string $identifier */
 	private $identifier;
 
-	/** @var Generation $introducedInGeneration */
-	private $introducedInGeneration;
+	/** @var VersionGroupId $introducedInVersionGroupId */
+	private $introducedInVersionGroupId;
 
 	/** @var int|null $itemFlingPower */
 	private $itemFlingPower;
@@ -27,20 +27,20 @@ class Item
 	 *
 	 * @param ItemId $itemId
 	 * @param string $identifier
-	 * @param Generation $introducedInGeneration
+	 * @param VersionGroupId $introducedInVersionGroupId
 	 * @param int|null $itemFlingPower
 	 * @param ItemFlingEffectId|null $itemFlingEffectId
 	 */
 	public function __construct(
 		ItemId $itemId,
 		string $identifier,
-		Generation $introducedInGeneration,
+		VersionGroupId $introducedInVersionGroupId,
 		?int $itemFlingPower,
 		?ItemFlingEffectId $itemFlingEffectId
 	) {
 		$this->id = $itemId;
 		$this->identifier = $identifier;
-		$this->introducedInGeneration = $introducedInGeneration;
+		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
 		$this->itemFlingPower = $itemFlingPower;
 		$this->itemFlingEffectId = $itemFlingEffectId;
 	}
@@ -68,11 +68,11 @@ class Item
 	/**
 	 * Get the generation this item was introduced in.
 	 *
-	 * @return Generation
+	 * @return VersionGroupId
 	 */
-	public function getIntroducedInGeneration() : Generation
+	public function getIntroducedInVersionGroupId() : VersionGroupId
 	{
-		return $this->introducedInGeneration;
+		return $this->introducedInVersionGroupId;
 	}
 
 	/**

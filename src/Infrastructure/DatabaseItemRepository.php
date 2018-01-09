@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Items\ItemFlingEffectId;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Items\ItemNotFoundException;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 class DatabaseItemRepository implements ItemRepositoryInterface
@@ -40,7 +40,7 @@ class DatabaseItemRepository implements ItemRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`id`,
-				`introduced_in_generation`,
+				`introduced_in_version_group_id`,
 				`item_fling_power`,
 				`item_fling_effect_id`
 			FROM `items`
@@ -67,7 +67,7 @@ class DatabaseItemRepository implements ItemRepositoryInterface
 		$item = new Item(
 			new ItemId($result['id']),
 			$identifier,
-			new Generation($result['introduced_in_generation']),
+			new VersionGroupId($result['introduced_in_version_group_id']),
 			$result['item_fling_power'],
 			$itemFlingEffectId
 		);

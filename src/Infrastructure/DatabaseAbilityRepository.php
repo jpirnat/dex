@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Abilities\Ability;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Abilities\AbilityNotFoundException;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 class DatabaseAbilityRepository implements AbilityRepositoryInterface
@@ -40,7 +40,7 @@ class DatabaseAbilityRepository implements AbilityRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`id`,
-				`introduced_in_generation`
+				`introduced_in_version_group_id`
 			FROM `abilities`
 			WHERE `identifier` = :identifier
 			LIMIT 1'
@@ -58,7 +58,7 @@ class DatabaseAbilityRepository implements AbilityRepositoryInterface
 		$ability = new Ability(
 			new AbilityId($result['id']),
 			$identifier,
-			new Generation($result['introduced_in_generation'])
+			new VersionGroupId($result['introduced_in_version_group_id'])
 		);
 
 		return $ability;

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Abilities;
 
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 class Ability
 {
@@ -13,24 +13,24 @@ class Ability
 	/** @var string $identifier */
 	private $identifier;
 
-	/** @var Generation $introducedInGeneration */
-	private $introducedInGeneration;
+	/** @var VersionGroupId $introducedInVersionGroupId */
+	private $introducedInVersionGroupId;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param AbilityId $abilityId
 	 * @param string $identifier
-	 * @param Generation $introducedInGeneration
+	 * @param VersionGroupId $introducedInVersionGroupId
 	 */
 	public function __construct(
 		AbilityId $abilityId,
 		string $identifier,
-		Generation $introducedInGeneration
+		VersionGroupId $introducedInVersionGroupId
 	) {
 		$this->id = $abilityId;
 		$this->identifier = $identifier;
-		$this->introducedInGeneration = $introducedInGeneration;
+		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
 	}
 
 	/**
@@ -56,10 +56,10 @@ class Ability
 	/**
 	 * Get the generation this ability was introduced in.
 	 *
-	 * @return Generation
+	 * @return VersionGroupId
 	 */
-	public function getIntroducedInGeneration() : Generation
+	public function getIntroducedInVersionGroupId() : VersionGroupId
 	{
-		return $this->introducedInGeneration;
+		return $this->introducedInVersionGroupId;
 	}
 }
