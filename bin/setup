@@ -6,24 +6,8 @@ require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config/environment.php';
 $container = require __DIR__ . '/../config/dependencies.php';
 
-// This database connection cannot be instantiated through Dice until Issue #95
-// is fixed in a tagged version. Currently, Dice cannot accept the PDO options
-// array and must use setAttribute calls to set the options. However, the
-// PDO::MYSQL_ATTR_LOCAL_INFILE option must be set at instantiation.
-$host = getenv('DB_HOST');
-$port = getenv('DB_PORT');
-$user = getenv('DB_USER');
-$pass = getenv('DB_PASS');
-$database = new PDO(
-	"mysql:host=$host;port=$port;charset=utf8mb4",
-	$user,
-	$pass,
-	[
-		PDO::ATTR_EMULATE_PREPARES => false,
-		PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-		PDO::MYSQL_ATTR_LOCAL_INFILE => true,
-	]
-);
+// Get the database setup connection.
+$database = $container->get('$dbsetup');
 
 // Create the schema and the tables.
 $database->exec(file_get_contents(__DIR__ . '/../sql/dex_schema.sql'));

@@ -110,14 +110,32 @@ $rule = [
 		"mysql:host=$host;port=$port;dbname=$name;charset=utf8mb4",
 		$user,
 		$pass,
+		[
+			PDO::ATTR_EMULATE_PREPARES => false,
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+		]
 	],
 	'shared' => true,
-	'call' => [
-		['setAttribute', [PDO::ATTR_EMULATE_PREPARES, false]],
-		['setAttribute', [PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION]],
-	],
 ];
 $container->dice()->addRule(PDO::class, $rule);
+
+// Database setup connection.
+$rule = [
+	'instanceOf' => PDO::class,
+	'constructParams' => [
+		"mysql:host=$host;port=$port;charset=utf8mb4",
+		$user,
+		$pass,
+		[
+			PDO::ATTR_EMULATE_PREPARES => false,
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::MYSQL_ATTR_LOCAL_INFILE => true,
+		]
+	],
+	'shared' => true,
+];
+$container->dice()->addRule('$dbsetup', $rule);
+
 
 // Twig
 $rule = [
