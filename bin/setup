@@ -147,6 +147,8 @@ foreach ($tables as $table) {
 			OPTIONALLY ENCLOSED BY '\"'
 		IGNORE 1 LINES"
 	);
+
+	echo "Loaded $table\n";
 }
 
 echo "Done!\n";
