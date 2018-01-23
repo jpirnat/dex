@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "198616ccbd2675eafe4ad17910043aa9",
+    "content-hash": "46072b58a785d718d040f3ce365a1013",
     "packages": [
         {
             "name": "dflydev/fig-cookies",
@@ -241,16 +241,16 @@
         },
         {
             "name": "http-interop/http-factory",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/http-interop/http-factory.git",
-                "reference": "403aec5f2451ff83b5ffffea0bfdb588502add3e"
+                "reference": "c2587cc0a6f74987fefb5b8074acfd32c69a4b0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/http-interop/http-factory/zipball/403aec5f2451ff83b5ffffea0bfdb588502add3e",
-                "reference": "403aec5f2451ff83b5ffffea0bfdb588502add3e",
+                "url": "https://api.github.com/repos/http-interop/http-factory/zipball/c2587cc0a6f74987fefb5b8074acfd32c69a4b0f",
+                "reference": "c2587cc0a6f74987fefb5b8074acfd32c69a4b0f",
                 "shasum": ""
             },
             "require": {
@@ -289,73 +289,20 @@
                 "request",
                 "response"
             ],
-            "time": "2016-11-08T00:10:33+00:00"
-        },
-        {
-            "name": "http-interop/http-middleware",
-            "version": "0.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/http-interop/http-middleware.git",
-                "reference": "9a801fe60e70d5d608b61d56b2dcde29516c81b9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/http-interop/http-middleware/zipball/9a801fe60e70d5d608b61d56b2dcde29516c81b9",
-                "reference": "9a801fe60e70d5d608b61d56b2dcde29516c81b9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "psr/http-message": "^1.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Interop\\Http\\ServerMiddleware\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP server-side middleware",
-            "keywords": [
-                "factory",
-                "http",
-                "middleware",
-                "psr",
-                "psr-17",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "abandoned": "http-interop/http-server-middleware",
-            "time": "2017-01-14T15:23:42+00:00"
+            "time": "2017-03-24T14:48:51+00:00"
         },
         {
             "name": "jpirnat/container",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jpirnat/container.git",
-                "reference": "074823af53eeb8a15a0d095ca9066f96bdc39265"
+                "reference": "bfb9445c2eac6fd099d81313ec7898b84fc47e01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jpirnat/container/zipball/074823af53eeb8a15a0d095ca9066f96bdc39265",
-                "reference": "074823af53eeb8a15a0d095ca9066f96bdc39265",
+                "url": "https://api.github.com/repos/jpirnat/container/zipball/bfb9445c2eac6fd099d81313ec7898b84fc47e01",
+                "reference": "bfb9445c2eac6fd099d81313ec7898b84fc47e01",
                 "shasum": ""
             },
             "require": {
@@ -383,31 +330,32 @@
                 }
             ],
             "description": "PSR-11 wrapper for Dice dependency injection container",
-            "time": "2017-03-23T19:04:06+00:00"
+            "time": "2018-01-23T15:47:24+00:00"
         },
         {
             "name": "jpirnat/middleware",
-            "version": "2.0.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jpirnat/middleware.git",
-                "reference": "e96fc8aff4d15c0988a0d2f9ad2760c84a592b64"
+                "reference": "ea03bc0f9809fd7450eb6299547baa9ae2690713"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jpirnat/middleware/zipball/e96fc8aff4d15c0988a0d2f9ad2760c84a592b64",
-                "reference": "e96fc8aff4d15c0988a0d2f9ad2760c84a592b64",
+                "url": "https://api.github.com/repos/jpirnat/middleware/zipball/ea03bc0f9809fd7450eb6299547baa9ae2690713",
+                "reference": "ea03bc0f9809fd7450eb6299547baa9ae2690713",
                 "shasum": ""
             },
             "require": {
-                "http-interop/http-factory": "^0.2.0",
-                "http-interop/http-middleware": "^0.4.1",
+                "http-interop/http-factory": "^0.3.0",
                 "php": "^7.0",
                 "psr/container": "^1.0",
-                "psr/http-message": "^1.0"
+                "psr/http-message": "^1.0",
+                "psr/http-server-handler": "^1.0",
+                "psr/http-server-middleware": "^1.0"
             },
             "require-dev": {
-                "squizlabs/php_codesniffer": "^2.8"
+                "squizlabs/php_codesniffer": "^3.2"
             },
             "type": "library",
             "autoload": {
@@ -423,7 +371,7 @@
                 }
             ],
             "description": "PSR-15 middleware dispatcher using PSR-11 to retrieve middlewares",
-            "time": "2017-03-27T15:24:57+00:00"
+            "time": "2018-01-23T15:53:26+00:00"
         },
         {
             "name": "level-2/dice",
@@ -612,6 +560,112 @@
                 "response"
             ],
             "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "psr/http-server-handler",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-server-handler.git",
+                "reference": "439d92054dc06097f2406ec074a2627839955a02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-server-handler/zipball/439d92054dc06097f2406ec074a2627839955a02",
+                "reference": "439d92054dc06097f2406ec074a2627839955a02",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP server-side request handler",
+            "keywords": [
+                "handler",
+                "http",
+                "http-interop",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response",
+                "server"
+            ],
+            "time": "2018-01-22T17:04:15+00:00"
+        },
+        {
+            "name": "psr/http-server-middleware",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-server-middleware.git",
+                "reference": "ea17eb1fb2c8df6db919cc578451a8013c6a0ae5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-server-middleware/zipball/ea17eb1fb2c8df6db919cc578451a8013c6a0ae5",
+                "reference": "ea17eb1fb2c8df6db919cc578451a8013c6a0ae5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "psr/http-message": "^1.0",
+                "psr/http-server-handler": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP server-side middleware",
+            "keywords": [
+                "http",
+                "http-interop",
+                "middleware",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2018-01-22T17:08:31+00:00"
         },
         {
             "name": "spatie/regex",
@@ -1115,6 +1169,6 @@
     "platform": [],
     "platform-dev": [],
     "platform-overrides": {
-        "php": "7.1"
+        "php": "7.0"
     }
 }

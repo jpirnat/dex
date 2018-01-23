@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Middleware;
 
-use Interop\Http\ServerMiddleware\DelegateInterface;
-use Interop\Http\ServerMiddleware\MiddlewareInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\MiddlewareInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 use Throwable;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
@@ -32,19 +32,19 @@ class HtmlErrorMiddleware implements MiddlewareInterface
 	 * the Error page.
 	 *
 	 * @param ServerRequestInterface $request
-	 * @param DelegateInterface $delegate
+	 * @param RequestHandlerInterface $handler
 	 *
 	 * @return ResponseInterface
 	 */
 	public function process(
 		ServerRequestInterface $request,
-		DelegateInterface $delegate
+		RequestHandlerInterface $handler
 	) : ResponseInterface {
 		if ($this->environment === 'production') {
 			// In production environments, the user should not see PHP errors.
 			// Instead, redirect them to our error page.
 			try {
-				$response = $delegate->process($request);
+				$response = $handler->handle($request);
 			} catch (Throwable $e) {
 				// TODO: Log the error.
 				$response = new RedirectResponse('/error');
@@ -56,7 +56,7 @@ class HtmlErrorMiddleware implements MiddlewareInterface
 			$whoops->pushHandler(new PrettyPageHandler());
 			$whoops->register();
 
-			$response = $delegate->process($request);
+			$response = $handler->handle($request);
 		}
 
 		return $response;

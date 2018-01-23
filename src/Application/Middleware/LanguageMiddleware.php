@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Middleware;
 
-use Interop\Http\ServerMiddleware\DelegateInterface;
-use Interop\Http\ServerMiddleware\MiddlewareInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\MiddlewareInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 
 class LanguageMiddleware implements MiddlewareInterface
 {
@@ -18,18 +18,18 @@ class LanguageMiddleware implements MiddlewareInterface
 	 * language cookie (if it exists), or the default language.
 	 *
 	 * @param ServerRequestInterface $request
-	 * @param DelegateInterface $delegate
+	 * @param RequestHandlerInterface $handler
 	 *
 	 * @return ResponseInterface
 	 */
 	public function process(
 		ServerRequestInterface $request,
-		DelegateInterface $delegate
+		RequestHandlerInterface $handler
 	) : ResponseInterface {
 		$languageId = $request->getCookieParams()['languageId'] ?? self::DEFAULT_LANGUAGE;
 
 		$request = $request->withAttribute('languageId', $languageId);
 
-		return $delegate->process($request);
+		return $handler->handle($request);
 	}
 }

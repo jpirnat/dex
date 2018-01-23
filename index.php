@@ -80,7 +80,7 @@ if ($routeInfo[0] === \FastRoute\Dispatcher::FOUND) {
 	// Execute the route's application and middleware stack.
 	$middlewareDispatcher = new \Jp\Middleware\Dispatcher($container, $app);
 	$middlewareDispatcher->addMiddlewares($middlewareClasses);
-	$response = $middlewareDispatcher->process($request);
+	$response = $middlewareDispatcher->handle($request);
 } elseif ($routeInfo[0] === \FastRoute\Dispatcher::NOT_FOUND) {
 	$response = new \Zend\Diactoros\Response\RedirectResponse('/404');
 } elseif ($routeInfo[0] === \FastRoute\Dispatcher::METHOD_NOT_ALLOWED) {

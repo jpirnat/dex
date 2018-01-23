@@ -21,9 +21,9 @@
         "jpirnat/container": "^1.0",
         "zendframework/zend-diactoros": "^1.6",
         "nikic/fast-route": "^1.2",
-        "jpirnat/middleware": "^2.0",
+        "jpirnat/middleware": "^3.0",
         "twig/twig": "^2.4",
-        "http-interop/http-middleware": "^0.4.1",
+        "psr/http-server-middleware": "^1.0",
         "dflydev/fig-cookies": "^1.0"
     },
     "require-dev": {
