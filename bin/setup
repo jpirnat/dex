@@ -7,6 +7,7 @@ require __DIR__ . '/../config/environment.php';
 $container = require __DIR__ . '/../config/dependencies.php';
 
 // Get the database setup connection.
+/** @var PDO $database */
 $database = $container->get('$dbsetup');
 
 // Create the schema and the tables.

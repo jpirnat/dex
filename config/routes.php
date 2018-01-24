@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 use Jp\Dex\Application\Controllers\AbilitiesController;
 use Jp\Dex\Application\Controllers\ErrorController;
+use Jp\Dex\Application\Controllers\IndexController;
 use Jp\Dex\Application\Controllers\ItemsController;
 use Jp\Dex\Application\Controllers\LanguageController;
 use Jp\Dex\Application\Controllers\LeadsController;
@@ -17,6 +18,7 @@ use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Middleware\LanguageMiddleware;
 use Jp\Dex\Presentation\AbilitiesView;
 use Jp\Dex\Presentation\ErrorView;
+use Jp\Dex\Presentation\IndexView;
 use Jp\Dex\Presentation\ItemsView;
 use Jp\Dex\Presentation\LanguageView;
 use Jp\Dex\Presentation\LeadsMonthView;
