@@ -15,6 +15,44 @@ body {
 
 
 
+/* /stats */
+
+.stats-year {
+	background-color: #eee;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.stats-months {
+	margin: 5px 0 10px 0;
+	text-align: center;
+}
+
+.stat-month {
+	display: inline-block;
+	margin: 3px;
+}
+
+.stat-month a {
+	text-decoration: none;
+	border: 1px solid black;
+	width: 100px;
+	height: 100px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.stat-month a:hover {
+	background-color: #eee;
+}
+
+
+
 .month-control {
 	margin: 10px 0;
 }

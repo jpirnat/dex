@@ -15,6 +15,7 @@ use Jp\Dex\Application\Models\MovesetPokemonMonth\MovesetPokemonMonthModel;
 use Jp\Dex\Application\Models\MovesModel;
 use Jp\Dex\Application\Models\MoveUsageMonth\MoveUsageMonthModel;
 use Jp\Dex\Application\Models\NotFoundModel;
+use Jp\Dex\Application\Models\StatsIndexModel;
 use Jp\Dex\Application\Models\UsageModel;
 use Jp\Dex\Application\Models\UsageMonth\UsageMonthModel;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
@@ -51,6 +52,7 @@ use Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
@@ -83,6 +85,7 @@ use Jp\Dex\Infrastructure\DatabaseNatureStatModifierRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonNameRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository;
+use Jp\Dex\Infrastructure\DatabaseUsageQueries;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonMoveRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedRepository;
@@ -275,6 +278,9 @@ $container->dice()->addRule(ShowdownPokemonRepositoryInterface::class, $rule);
 $rule = ['instanceOf' => DatabaseUsagePokemonRepository::class];
 $container->dice()->addRule(UsagePokemonRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => DatabaseUsageQueries::class];
+$container->dice()->addRule(UsageQueriesInterface::class, $rule);
+
 $rule = ['instanceOf' => DatabaseUsageRatedPokemonMoveRepository::class];
 $container->dice()->addRule(UsageRatedPokemonMoveRepositoryInterface::class, $rule);
 
@@ -303,6 +309,7 @@ $container->dice()->addRule(MovesetPokemonMonthModel::class, $rule);
 $container->dice()->addRule(MovesModel::class, $rule);
 $container->dice()->addRule(MoveUsageMonthModel::class, $rule);
 $container->dice()->addRule(NotFoundModel::class, $rule);
+$container->dice()->addRule(StatsIndexModel::class, $rule);
 $container->dice()->addRule(UsageModel::class, $rule);
 $container->dice()->addRule(UsageMonthModel::class, $rule);
 
