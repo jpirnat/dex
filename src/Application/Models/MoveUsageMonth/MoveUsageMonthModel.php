@@ -8,6 +8,8 @@ use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Moves\MoveName;
+use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
@@ -24,6 +26,9 @@ class MoveUsageMonthModel
 
 	/** @var MoveRepositoryInterface $moveRepository */
 	private $moveRepository;
+
+	/** @var MoveNameRepositoryInterface $moveNameRepository */
+	private $moveNameRepository;
 
 	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
 	private $usageRatedRepository;
@@ -62,6 +67,9 @@ class MoveUsageMonthModel
 	/** @var string $moveIdentifier */
 	private $moveIdentifier;
 
+	/** @var MoveName $moveName */
+	private $moveName;
+
 	/** @var MoveUsageData[] $moveUsageDatas */
 	private $moveUsageDatas = [];
 
@@ -71,6 +79,7 @@ class MoveUsageMonthModel
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param MoveRepositoryInterface $moveRepository
+	 * @param MoveNameRepositoryInterface $moveNameRepository
 	 * @param UsageRatedRepositoryInterface $usageRatedRepository
 	 * @param UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
@@ -81,6 +90,7 @@ class MoveUsageMonthModel
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		MoveRepositoryInterface $moveRepository,
+		MoveNameRepositoryInterface $moveNameRepository,
 		UsageRatedRepositoryInterface $usageRatedRepository,
 		UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository,
 		PokemonRepositoryInterface $pokemonRepository,
@@ -90,6 +100,7 @@ class MoveUsageMonthModel
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->moveRepository = $moveRepository;
+		$this->moveNameRepository = $moveNameRepository;
 		$this->usageRatedRepository = $usageRatedRepository;
 		$this->usageRatedPokemonMoveRepository = $usageRatedPokemonMoveRepository;
 		$this->pokemonRepository = $pokemonRepository;
@@ -151,6 +162,12 @@ class MoveUsageMonthModel
 
 		// Get the move.
 		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
+
+		// Get the move name.
+		$this->moveName = $this->moveNameRepository->getByLanguageAndMove(
+			$languageId,
+			$move->getId()
+		);
 
 		// Get usage rated Pokémon move records for this month.
 		$usageRatedPokemonMoves = $this->usageRatedPokemonMoveRepository->getByYearAndMonthAndFormatAndRatingAndMove(
@@ -271,6 +288,16 @@ class MoveUsageMonthModel
 	public function getMoveIdentifier() : string
 	{
 		return $this->moveIdentifier;
+	}
+
+	/**
+	 * Get the move name.
+	 *
+	 * @return MoveName
+	 */
+	public function getMoveName() : MoveName
+	{
+		return $this->moveName;
 	}
 
 	/**
