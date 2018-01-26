@@ -75,6 +75,7 @@ class StatsIndexView
 		$content = $this->twig->render(
 			'html/stats-index.twig',
 			[
+				'title' => 'Competitive Pokémon Stats Archive',
 				'breadcrumbs' => $breadcrumbs,
 				'years' => $years,
 			]

@@ -29,7 +29,12 @@ class IndexView
 	 */
 	public function index() : ResponseInterface
 	{
-		$content = $this->twig->render('html/index.twig', []);
+		$content = $this->twig->render(
+			'html/index.twig',
+			[
+				'title' => 'Home',
+			]
+		);
 
 		$response = new Response();
 		$response->getBody()->write($content);

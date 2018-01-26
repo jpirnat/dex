@@ -46,6 +46,7 @@ class ErrorView
 		$content = $this->twig->render(
 			'html/error.twig',
 			[
+				'title' => 'An error has occured!',
 				'breadcrumbs' => $breadcrumbs,
 			]
 		);

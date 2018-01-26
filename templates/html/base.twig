@@ -4,8 +4,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>
-			{% block title %}
-			{% endblock %}
+			{% if title %}
+				Porydex - {{ title|e }}
+			{% else %}
+				Porydex
+			{% endif %}
 		</title>
 		<link href="/css/normalize.css" rel="stylesheet">
 		<link href="/css/main.css" rel="stylesheet">

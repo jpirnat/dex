@@ -95,6 +95,7 @@ class UsageMonthView
 		$content = $this->twig->render(
 			'html/usage-month.twig',
 			[
+				// TODO: title - "Month Year Format usage stats"?
 				'breadcrumbs' => $breadcrumbs,
 
 				// The month control's data.

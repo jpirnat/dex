@@ -46,6 +46,7 @@ class NotFoundView
 		$content = $this->twig->render(
 			'html/404.twig',
 			[
+				'title' => '404 Not Found',
 				'breadcrumbs' => $breadcrumbs,
 			]
 		);

@@ -275,6 +275,7 @@ class MovesetPokemonMonthView
 		$content = $this->twig->render(
 			'html/moveset-pokemon-month.twig',
 			[
+				// TODO: title - "Month Year Format Pokémon usage stats"?
 				'breadcrumbs' => $breadcrumbs,
 
 				// The month control's data.

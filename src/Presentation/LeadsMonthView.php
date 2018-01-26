@@ -96,6 +96,7 @@ class LeadsMonthView
 		$content = $this->twig->render(
 			'html/leads-month.twig',
 			[
+				// TODO: title - "Month Year Format lead usage stats"?
 				'breadcrumbs' => $breadcrumbs,
 
 				// The month control's data.
