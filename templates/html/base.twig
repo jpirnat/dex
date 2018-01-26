@@ -11,6 +11,21 @@
 	</head>
 	<body>
 		<header>
+			{% block nav %}
+				{% if breadcrumbs %}
+					<nav class="breadcrumbs">
+						<ul>
+							{% for breadcrumb in breadcrumbs %}
+								{% if not loop.last %}
+									<li><a href="{{ breadcrumb.url|e }}">{{ breadcrumb.text|e }}</a></li>
+								{% else %}
+									<li><span class="current">{{ breadcrumb.text|e }}</span></li>
+								{% endif %}
+							{% endfor %}
+						</ul>
+					</nav>
+				{% endif %}
+			{% endblock %}
 		</header>
 		<main>
 			{% block body %}
