@@ -140,7 +140,7 @@ $routes = [
 
 	[
 		'GET',
-		'/stats/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}/usage',
+		'/stats/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}',
 		[
 			'controllerClass' => UsageMonthController::class,
 			'controllerMethod' => 'setData',

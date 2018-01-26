@@ -264,7 +264,7 @@ class MovesetPokemonMonthView
 				'text' => 'Formats',
 			],
 			[
-				'url' => "/stats/$year/$month/$formatIdentifier/$rating/usage",
+				'url' => "/stats/$year/$month/$formatIdentifier/$rating",
 				'text' => 'Usage',
 			],
 			[
