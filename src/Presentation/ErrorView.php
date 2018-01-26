@@ -37,7 +37,18 @@ class ErrorView
 	 */
 	public function getError() : ResponseInterface
 	{
-		$content = $this->twig->render('html/error.twig');
+		$breadcrumbs = [
+			[
+				'text' => '???',
+			],
+		];
+
+		$content = $this->twig->render(
+			'html/error.twig',
+			[
+				'breadcrumbs' => $breadcrumbs,
+			]
+		);
 
 		$response = new Response();
 		$response->getBody()->write($content);

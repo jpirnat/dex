@@ -16,6 +16,10 @@
 					<nav class="breadcrumbs">
 						<ul>
 							{% for breadcrumb in breadcrumbs %}
+								{% if loop.first %}
+									<li><a href="/">Home</a></li>
+								{% endif %}
+
 								{% if not loop.last %}
 									<li><a href="{{ breadcrumb.url|e }}">{{ breadcrumb.text|e }}</a></li>
 								{% else %}

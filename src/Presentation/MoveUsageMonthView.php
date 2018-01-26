@@ -38,6 +38,11 @@ class MoveUsageMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
+		$year = $this->moveUsageMonthModel->getYear();
+		$month = $this->moveUsageMonthModel->getMonth();
+		$formatIdentifier = $this->moveUsageMonthModel->getFormatIdentifier();
+		$rating = $this->moveUsageMonthModel->getRating();
+
 		// Get the previous month and the next month.
 		$prevMonth = $this->moveUsageMonthModel->getDateModel()->getPrevMonth();
 		$nextMonth = $this->moveUsageMonthModel->getDateModel()->getNextMonth();
@@ -64,9 +69,30 @@ class MoveUsageMonthView
 			];
 		}
 
+		// Navigation breadcrumbs.
+		$breadcrumbs = [
+			[
+				'url' => '/stats',
+				'text' => 'Stats',
+			],
+			[
+				'url' => "/stats/$year/$month",
+				'text' => 'Formats',
+			],
+			[
+				'url' => "/stats/$year/$month/$formatIdentifier/$rating/usage",
+				'text' => 'Usage',
+			],
+			[
+				'text' => $this->moveUsageMonthModel->getMoveName()->getName(),
+			],
+		];
+
 		$content = $this->twig->render(
 			'html/move-usage-month.twig',
 			[
+				'breadcrumbs' => $breadcrumbs,
+
 				// The month control's data.
 				'showPrevMonthLink' => $this->moveUsageMonthModel->doesPrevMonthDataExist(),
 				'prevYear' => $prevMonth->getYear(),
@@ -74,12 +100,12 @@ class MoveUsageMonthView
 				'showNextMonthLink' => $this->moveUsageMonthModel->doesNextMonthDataExist(),
 				'nextYear' => $nextMonth->getYear(),
 				'nextMonth' => $nextMonth->getMonth(),
-				'formatIdentifier' => $this->moveUsageMonthModel->getFormatIdentifier(),
-				'rating' => $this->moveUsageMonthModel->getRating(),
+				'formatIdentifier' => $formatIdentifier,
+				'rating' => $rating,
 				'moveIdentifier' => $this->moveUsageMonthModel->getMoveIdentifier(),
 
-				'year' => $this->moveUsageMonthModel->getYear(),
-				'month' => $this->moveUsageMonthModel->getMonth(),
+				'year' => $year,
+				'month' => $month,
 
 				// The main data.
 				'data' => $data,

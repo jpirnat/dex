@@ -39,6 +39,11 @@ class LeadsMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
+		$year = $this->leadsMonthModel->getYear();
+		$month = $this->leadsMonthModel->getMonth();
+		$formatIdentifier = $this->leadsMonthModel->getFormatIdentifier();
+		$rating = $this->leadsMonthModel->getRating();
+
 		// Get the previous month and the next month.
 		$prevMonth = $this->leadsMonthModel->getDateModel()->getPrevMonth();
 		$nextMonth = $this->leadsMonthModel->getDateModel()->getNextMonth();
@@ -69,9 +74,30 @@ class LeadsMonthView
 			];
 		}
 
+		// Navigation breadcrumbs.
+		$breadcrumbs = [
+			[
+				'url' => '/stats',
+				'text' => 'Stats',
+			],
+			[
+				'url' => "/stats/$year/$month",
+				'text' => 'Formats',
+			],
+			[
+				'url' => "/stats/$year/$month/$formatIdentifier/$rating/usage",
+				'text' => 'Usage',
+			],
+			[
+				'text' => 'Leads',
+			]
+		];
+
 		$content = $this->twig->render(
 			'html/leads-month.twig',
 			[
+				'breadcrumbs' => $breadcrumbs,
+
 				// The month control's data.
 				'showPrevMonthLink' => $this->leadsMonthModel->doesPrevMonthDataExist(),
 				'prevYear' => $prevMonth->getYear(),
@@ -79,11 +105,11 @@ class LeadsMonthView
 				'showNextMonthLink' => $this->leadsMonthModel->doesNextMonthDataExist(),
 				'nextYear' => $nextMonth->getYear(),
 				'nextMonth' => $nextMonth->getMonth(),
-				'formatIdentifier' => $this->leadsMonthModel->getFormatIdentifier(),
-				'rating' => $this->leadsMonthModel->getRating(),
+				'formatIdentifier' => $formatIdentifier,
+				'rating' => $rating,
 
-				'year' => $this->leadsMonthModel->getYear(),
-				'month' => $this->leadsMonthModel->getMonth(),
+				'year' => $year,
+				'month' => $month,
 
 				// The main data.
 				'data' => $data,

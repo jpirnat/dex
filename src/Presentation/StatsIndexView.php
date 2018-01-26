@@ -65,9 +65,17 @@ class StatsIndexView
 			];
 		}
 
+		// Navigational breadcrumbs.
+		$breadcrumbs = [
+			[
+				'text' => 'Stats',
+			],
+		];
+
 		$content = $this->twig->render(
 			'html/stats-index.twig',
 			[
+				'breadcrumbs' => $breadcrumbs,
 				'years' => $years,
 			]
 		);

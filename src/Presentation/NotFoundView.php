@@ -37,7 +37,18 @@ class NotFoundView
 	 */
 	public function get404() : ResponseInterface
 	{
-		$content = $this->twig->render('html/404.twig');
+		$breadcrumbs = [
+			[
+				'text' => '???',
+			],
+		];
+
+		$content = $this->twig->render(
+			'html/404.twig',
+			[
+				'breadcrumbs' => $breadcrumbs,
+			]
+		);
 
 		$response = new Response();
 		$response->getBody()->write($content);

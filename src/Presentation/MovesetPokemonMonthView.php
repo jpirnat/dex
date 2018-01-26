@@ -62,6 +62,11 @@ class MovesetPokemonMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
+		$year = $this->movesetPokemonMonthModel->getYear();
+		$month = $this->movesetPokemonMonthModel->getMonth();
+		$formatIdentifier = $this->movesetPokemonMonthModel->getFormatIdentifier();
+		$rating = $this->movesetPokemonMonthModel->getRating();
+
 		// Get the previous month and the next month.
 		$prevMonth = $this->movesetPokemonMonthModel->getDateModel()->getPrevMonth();
 		$nextMonth = $this->movesetPokemonMonthModel->getDateModel()->getNextMonth();
@@ -248,9 +253,30 @@ class MovesetPokemonMonthView
 			];
 		}
 
+		// Navigation breadcrumbs.
+		$breadcrumbs = [
+			[
+				'url' => '/stats',
+				'text' => 'Stats',
+			],
+			[
+				'url' => "/stats/$year/$month",
+				'text' => 'Formats',
+			],
+			[
+				'url' => "/stats/$year/$month/$formatIdentifier/$rating/usage",
+				'text' => 'Usage',
+			],
+			[
+				'text' => $pokemonName->getName(),
+			],
+		];
+
 		$content = $this->twig->render(
 			'html/moveset-pokemon-month.twig',
 			[
+				'breadcrumbs' => $breadcrumbs,
+
 				// The month control's data.
 				'showPrevMonthLink' => $this->movesetPokemonMonthModel->doesPrevMonthDataExist(),
 				'prevYear' => $prevMonth->getYear(),
@@ -258,12 +284,12 @@ class MovesetPokemonMonthView
 				'showNextMonthLink' => $this->movesetPokemonMonthModel->doesNextMonthDataExist(),
 				'nextYear' => $nextMonth->getYear(),
 				'nextMonth' => $nextMonth->getMonth(),
-				'formatIdentifier' => $this->movesetPokemonMonthModel->getFormatIdentifier(),
-				'rating' => $this->movesetPokemonMonthModel->getRating(),
+				'formatIdentifier' => $formatIdentifier,
+				'rating' => $rating,
 				'pokemonIdentifier' => $pokemon->getIdentifier(),
 
-				'year' => $this->movesetPokemonMonthModel->getYear(),
-				'month' => $this->movesetPokemonMonthModel->getMonth(),
+				'year' => $year,
+				'month' => $month,
 				'pokemonName' => $pokemonName->getName(),
 				'rawCount' =>$movesetPokemon->getRawCount(),
 				'averageWeight' => $movesetRatedPokemon->getAverageWeight(),
