@@ -1,11 +1,11 @@
-id,identifier
-1,japanese
-2,english
-3,french
-4,german
-5,italian
-6,spanish
-7,korean
-8,japanese-kanji
-9,chinese-simplified
-10,chinese-traditional
+id,identifier,locale,date_format
+1,japanese,ja,yyyy年MM月
+2,english,en,MMMM yyyy
+3,french,fr,MMMM yyyy
+4,german,de,MMMM yyyy
+5,italian,it,MMMM yyyy
+6,spanish,es,MMMM yyyy
+7,korean,ko,yyyy년 MM월
+8,japanese-kanji,ja,yyyy年MM月
+9,chinese-simplified,zh_Hans,yyyy年MM月
+10,chinese-traditional,zh_Hant,yyyy年MM月

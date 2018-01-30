@@ -37,7 +37,9 @@ class DatabaseLanguageRepository implements LanguageRepositoryInterface
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`identifier`
+				`identifier`,
+				`locale`,
+				`date_format`
 			FROM `languages`
 			WHERE `id` = :language_id
 			LIMIT 1'
@@ -54,7 +56,9 @@ class DatabaseLanguageRepository implements LanguageRepositoryInterface
 
 		$language = new Language(
 			$languageId,
-			$result['identifier']
+			$result['identifier'],
+			$result['locale'],
+			$result['date_format']
 		);
 
 		return $language;

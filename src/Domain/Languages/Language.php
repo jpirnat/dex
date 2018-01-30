@@ -11,18 +11,29 @@ class Language
 	/** @var string $identifier */
 	private $identifier;
 
+	/** @var string $locale */
+	private $locale;
+
+	/** @var string $dateFormat */
+
 	/**
 	 * Constructor.
 	 *
 	 * @param LanguageId $languageId
 	 * @param string $identifier
+	 * @param string $locale
+	 * @param string $dateFormat
 	 */
 	public function __construct(
 		LanguageId $languageId,
-		string $identifier
+		string $identifier,
+		string $locale,
+		string $dateFormat
 	) {
 		$this->id = $languageId;
 		$this->identifier = $identifier;
+		$this->locale = $locale;
+		$this->dateFormat = $dateFormat;
 	}
 
 	/**
@@ -43,5 +54,25 @@ class Language
 	public function getIdentifier() : string
 	{
 		return $this->identifier;
+	}
+
+	/**
+	 * Get the language's locale.
+	 *
+	 * @return string
+	 */
+	public function getLocale() : string
+	{
+		return $this->locale;
+	}
+
+	/**
+	 * Get the language's date format.
+	 *
+	 * @return string
+	 */
+	public function getDateFormat() : string
+	{
+		return $this->dateFormat;
 	}
 }
