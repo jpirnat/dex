@@ -25,6 +25,9 @@ class MovesetPokemonMonthView
 	/** @var MovesetPokemonMonthModel $movesetPokemonMonthModel */
 	private $movesetPokemonMonthModel;
 
+	/** @var IntlFormatterFactory $formatterFactory */
+	private $formatterFactory;
+
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
@@ -37,17 +40,20 @@ class MovesetPokemonMonthView
 	 *
 	 * @param Twig_Environment $twig
 	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
+	 * @param IntlFormatterFactory $formatterFactory
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 */
 	public function __construct(
 		Twig_Environment $twig,
 		MovesetPokemonMonthModel $movesetPokemonMonthModel,
+		IntlFormatterFactory $formatterFactory,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository
 	) {
 		$this->twig = $twig;
 		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
+		$this->formatterFactory = $formatterFactory;
 
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
@@ -66,6 +72,10 @@ class MovesetPokemonMonthView
 		$month = $this->movesetPokemonMonthModel->getMonth();
 		$formatIdentifier = $this->movesetPokemonMonthModel->getFormatIdentifier();
 		$rating = $this->movesetPokemonMonthModel->getRating();
+
+		$formatter = $this->formatterFactory->createFor(
+			$this->movesetPokemonMonthModel->getLanguageId()
+		);
 
 		// Get the previous month and the next month.
 		$prevMonth = $this->movesetPokemonMonthModel->getDateModel()->getPrevMonth();
@@ -282,9 +292,11 @@ class MovesetPokemonMonthView
 				'showPrevMonthLink' => $this->movesetPokemonMonthModel->doesPrevMonthDataExist(),
 				'prevYear' => $prevMonth->getYear(),
 				'prevMonth' => $prevMonth->getMonth(),
+				'prevMonthText' => $formatter->formatYearMonth($prevMonth),
 				'showNextMonthLink' => $this->movesetPokemonMonthModel->doesNextMonthDataExist(),
 				'nextYear' => $nextMonth->getYear(),
 				'nextMonth' => $nextMonth->getMonth(),
+				'nextMonthText' => $formatter->formatYearMonth($nextMonth),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
 				'pokemonIdentifier' => $pokemon->getIdentifier(),

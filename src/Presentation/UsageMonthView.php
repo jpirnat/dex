@@ -17,18 +17,24 @@ class UsageMonthView
 	/** @var UsageMonthModel $usageMonthModel */
 	private $usageMonthModel;
 
+	/** @var IntlFormatterFactory $formatterFactory */
+	private $formatterFactory;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
 	 * @param UsageMonthModel $usageMonthModel
+	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		Twig_Environment $twig,
-		UsageMonthModel $usageMonthModel
+		UsageMonthModel $usageMonthModel,
+		IntlFormatterFactory $formatterFactory
 	) {
 		$this->twig = $twig;
 		$this->usageMonthModel = $usageMonthModel;
+		$this->formatterFactory = $formatterFactory;
 	}
 
 	/**
@@ -43,6 +49,10 @@ class UsageMonthView
 		$month = $this->usageMonthModel->getMonth();
 		$formatIdentifier = $this->usageMonthModel->getFormatIdentifier();
 		$rating = $this->usageMonthModel->getRating();
+
+		$formatter = $this->formatterFactory->createFor(
+			$this->usageMonthModel->getLanguageId()
+		);
 
 		// Get the previous month and the next month.
 		$prevMonth = $this->usageMonthModel->getDateModel()->getPrevMonth();
@@ -102,9 +112,11 @@ class UsageMonthView
 				'showPrevMonthLink' => $this->usageMonthModel->doesPrevMonthDataExist(),
 				'prevYear' => $prevMonth->getYear(),
 				'prevMonth' => $prevMonth->getMonth(),
+				'prevMonthText' => $formatter->formatYearMonth($prevMonth),
 				'showNextMonthLink' => $this->usageMonthModel->doesNextMonthDataExist(),
 				'nextYear' => $nextMonth->getYear(),
 				'nextMonth' => $nextMonth->getMonth(),
+				'nextMonthText' => $formatter->formatYearMonth($nextMonth),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
 

@@ -17,18 +17,24 @@ class LeadsMonthView
 	/** @var LeadsMonthModel $leadsMonthModel */
 	private $leadsMonthModel;
 
+	/** @var IntlFormatterFactory $formatterFactory */
+	private $formatterFactory;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
 	 * @param LeadsMonthModel $leadsMonthModel
+	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		Twig_Environment $twig,
-		LeadsMonthModel $leadsMonthModel
+		LeadsMonthModel $leadsMonthModel,
+		IntlFormatterFactory $formatterFactory
 	) {
 		$this->twig = $twig;
 		$this->leadsMonthModel = $leadsMonthModel;
+		$this->formatterFactory = $formatterFactory;
 	}
 
 	/**
@@ -43,6 +49,10 @@ class LeadsMonthView
 		$month = $this->leadsMonthModel->getMonth();
 		$formatIdentifier = $this->leadsMonthModel->getFormatIdentifier();
 		$rating = $this->leadsMonthModel->getRating();
+
+		$formatter = $this->formatterFactory->createFor(
+			$this->leadsMonthModel->getLanguageId()
+		);
 
 		// Get the previous month and the next month.
 		$prevMonth = $this->leadsMonthModel->getDateModel()->getPrevMonth();
@@ -103,9 +113,11 @@ class LeadsMonthView
 				'showPrevMonthLink' => $this->leadsMonthModel->doesPrevMonthDataExist(),
 				'prevYear' => $prevMonth->getYear(),
 				'prevMonth' => $prevMonth->getMonth(),
+				'prevMonthText' => $formatter->formatYearMonth($prevMonth),
 				'showNextMonthLink' => $this->leadsMonthModel->doesNextMonthDataExist(),
 				'nextYear' => $nextMonth->getYear(),
 				'nextMonth' => $nextMonth->getMonth(),
+				'nextMonthText' => $formatter->formatYearMonth($nextMonth),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
 

@@ -67,6 +67,9 @@ class MoveUsageMonthModel
 	/** @var string $moveIdentifier */
 	private $moveIdentifier;
 
+	/** @var LanguageId $languageId */
+	private $languageId;
+
 	/** @var MoveName $moveName */
 	private $moveName;
 
@@ -134,6 +137,7 @@ class MoveUsageMonthModel
 		$this->formatIdentifier = $formatIdentifier;
 		$this->rating = $rating;
 		$this->moveIdentifier = $moveIdentifier;
+		$this->languageId = $languageId;
 
 		// Get the previous month and the next month.
 		$this->dateModel->setData($year, $month);
@@ -288,6 +292,16 @@ class MoveUsageMonthModel
 	public function getMoveIdentifier() : string
 	{
 		return $this->moveIdentifier;
+	}
+
+	/**
+	 * Get the language id.
+	 *
+	 * @return LanguageId
+	 */
+	public function getLanguageId() : LanguageId
+	{
+		return $this->languageId;
 	}
 
 	/**

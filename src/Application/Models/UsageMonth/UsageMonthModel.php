@@ -58,6 +58,9 @@ class UsageMonthModel
 	/** @var int $rating */
 	private $rating;
 
+	/** @var LanguageId $languageId */
+	private $languageId;
+
 	/** @var UsageData[] $usageDatas */
 	private $usageDatas = [];
 
@@ -116,6 +119,7 @@ class UsageMonthModel
 		$this->month = $month;
 		$this->formatIdentifier = $formatIdentifier;
 		$this->rating = $rating;
+		$this->languageId = $languageId;
 
 		// Get the previous month and the next month.
 		$this->dateModel->setData($year, $month);
@@ -303,6 +307,16 @@ class UsageMonthModel
 	public function getRating() : int
 	{
 		return $this->rating;
+	}
+
+	/**
+	 * Get the language id.
+	 *
+	 * @return LanguageId
+	 */
+	public function getLanguageId() : LanguageId
+	{
+		return $this->languageId;
 	}
 
 	/**

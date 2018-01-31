@@ -5,7 +5,7 @@
 		{% if showPrevMonthLink %}
 			<div class="button prev">
 				<a href="/stats/{{ prevYear|e }}/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemonIdentifier|e }}">
-					Previous Month
+					&#9664; {{ prevMonthText|e }}
 				</a>
 			</div>
 		{% endif %}
@@ -13,7 +13,7 @@
 		{% if showNextMonthLink %}
 			<div class="button next">
 				<a href="/stats/{{ nextYear|e }}/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemonIdentifier|e }}">
-					Next Month
+					{{ nextMonthText|e }} &#9654;
 				</a>
 			</div>
 		{% endif %}
