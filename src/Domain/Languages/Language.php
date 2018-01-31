@@ -15,6 +15,7 @@ class Language
 	private $locale;
 
 	/** @var string $dateFormat */
+	private $dateFormat;
 
 	/**
 	 * Constructor.
