@@ -16,18 +16,24 @@ class IntlFormatter
 	/** @var NumberFormatter $numberFormatter */
 	private $numberFormatter;
 
+	/** @var NumberFormatter $percentFormatter */
+	private $percentFormatter;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param IntlDateFormatter $dateFormatter
 	 * @param NumberFormatter $numberFormatter
+	 * @param NumberFormatter $percentFormatter
 	 */
 	public function __construct(
 		IntlDateFormatter $dateFormatter,
-		NumberFormatter $numberFormatter
+		NumberFormatter $numberFormatter,
+		NumberFormatter $percentFormatter
 	) {
 		$this->dateFormatter = $dateFormatter;
 		$this->numberFormatter = $numberFormatter;
+		$this->percentFormatter = $percentFormatter;
 	}
 
 	/**
@@ -54,5 +60,17 @@ class IntlFormatter
 	public function formatNumber(float $number) : string
 	{
 		return $this->numberFormatter->format($number);
+	}
+
+	/**
+	 * Format a percent.
+	 *
+	 * @param float $percent A number between 0 and 100.
+	 *
+	 * @return string
+	 */
+	public function formatPercent(float $percent) : string
+	{
+		return $this->percentFormatter->format($percent / 100);
 	}
 }

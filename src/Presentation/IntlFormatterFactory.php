@@ -47,10 +47,18 @@ class IntlFormatterFactory
 			$language->getLocale(),
 			NumberFormatter::DECIMAL
 		);
+		$numberFormatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 5);
+
+		$percentFormatter = new NumberFormatter(
+			$language->getLocale(),
+			NumberFormatter::PERCENT
+		);
+		$percentFormatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 5);
 
 		return new IntlFormatter(
 			$dateFormatter,
-			$numberFormatter
+			$numberFormatter,
+			$percentFormatter
 		);
 	}
 }
