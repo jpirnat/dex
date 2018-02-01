@@ -49,15 +49,15 @@
 			{% for ability in abilities %}
 				<tr>
 					<td>{{ ability.name|e }}</td>
-					<td>{{ ability.percent|e }}%</td>
+					<td class="number">{{ ability.percent|e }}</td>
 					<td
-						{% if ability.change > 0%}
-							class="percent-plus"
+						{% if ability.change > 0 %}
+							class="number percent-plus"
 						{% elseif ability.change < 0 %}
-							class="percent-minus"
+							class="number percent-minus"
 						{% endif %}
 					>
-						{{ ability.change|e }}%
+						{{ ability.changeText|e }}
 					</td>
 				</tr>
 			{% endfor %}
@@ -76,15 +76,15 @@
 			{% for item in items %}
 				<tr>
 					<td>{{ item.name|e }}</td>
-					<td>{{ item.percent|e }}%</td>
+					<td class="number">{{ item.percent|e }}</td>
 					<td
-						{% if item.change > 0%}
-							class="percent-plus"
+						{% if item.change > 0 %}
+							class="number percent-plus"
 						{% elseif item.change < 0 %}
-							class="percent-minus"
+							class="number percent-minus"
 						{% endif %}
 					>
-						{{ item.change|e }}%
+						{{ item.changeText|e }}
 					</td>
 				</tr>
 			{% endfor %}
@@ -117,8 +117,8 @@
 						/
 						{{ spread.evs.spe|e }}{{ spread.nature.spe|e }}
 					</td>
-					<td>
-						{{ spread.percent|e }}%
+					<td class="number">
+						{{ spread.percent|e }}
 					</td>
 					<td>
 						{{ spread.stats.hp|e }}
@@ -150,15 +150,15 @@
 			{% for move in moves %}
 				<tr>
 					<td>{{ move.name|e }}</td>
-					<td>{{ move.percent|e }}%</td>
+					<td class="number">{{ move.percent|e }}</td>
 					<td
-						{% if move.change > 0%}
-							class="percent-plus"
+						{% if move.change > 0 %}
+							class="number percent-plus"
 						{% elseif move.change < 0 %}
-							class="percent-minus"
+							class="number percent-minus"
 						{% endif %}
 					>
-						{{ move.change|e }}%
+						{{ move.changeText|e }}
 					</td>
 				</tr>
 			{% endfor %}
@@ -188,7 +188,7 @@
 							{{ teammate.name|e }}
 						{% endif %}
 					</td>
-					<td>{{ teammate.percent|e }}%</td>
+					<td class="number">{{ teammate.percent|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>
@@ -221,11 +221,11 @@
 							{{ counter.name|e }}
 						{% endif %}
 					</td>
-					<td>{{ counter.number1|e }}</td>
-					<td>{{ counter.number2|e }}</td>
-					<td>{{ counter.number3|e }}</td>
-					<td>{{ counter.percentKnockedOut|e }}%</td>
-					<td>{{ counter.percentSwitchedOut|e }}%</td>
+					<td class="number">{{ counter.number1|e }}</td>
+					<td class="number">{{ counter.number2|e }}</td>
+					<td class="number">{{ counter.number3|e }}</td>
+					<td class="number">{{ counter.percentKnockedOut|e }}</td>
+					<td class="number">{{ counter.percentSwitchedOut|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>

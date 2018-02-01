@@ -38,7 +38,7 @@
 		<tbody>
 			{% for pokemon in data %}
 				<tr>
-					<td>{{ pokemon.rank|e }}</td>
+					<td class="number">{{ pokemon.rank|e }}</td>
 					<td>
 						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
 					</td>
@@ -51,37 +51,37 @@
 							{{ pokemon.name|e }}
 						{% endif %}
 					</td>
-					<td>{{ pokemon.usagePercent|e }}</td>
+					<td class="number">{{ pokemon.usagePercent|e }}</td>
 					<td
-						{% if pokemon.usageChange > 0%}
-							class="percent-plus"
+						{% if pokemon.usageChange > 0 %}
+							class="number percent-plus"
 						{% elseif pokemon.usageChange < 0 %}
-							class="percent-minus"
+							class="number percent-minus"
 						{% endif %}
 					>
-						{{ pokemon.usageChange|e }}%
+						{{ pokemon.usageChangeText|e }}
 					</td>
-					<td>{{ pokemon.raw|e }}</td>
-					<td>{{ pokemon.rawPercent|e }}</td>
+					<td class="number">{{ pokemon.raw|e }}</td>
+					<td class="number">{{ pokemon.rawPercent|e }}</td>
 					<td
-						{% if pokemon.rawChange > 0%}
-							class="percent-plus"
+						{% if pokemon.rawChange > 0 %}
+							class="number percent-plus"
 						{% elseif pokemon.rawChange < 0 %}
-							class="percent-minus"
+							class="number percent-minus"
 						{% endif %}
 					>
-						{{ pokemon.rawChange|e }}%
+						{{ pokemon.rawChangeText|e }}
 					</td>
-					<td>{{ pokemon.real|e }}</td>
-					<td>{{ pokemon.realPercent|e }}</td>
+					<td class="number">{{ pokemon.real|e }}</td>
+					<td class="number">{{ pokemon.realPercent|e }}</td>
 					<td
-						{% if pokemon.realChange > 0%}
-							class="percent-plus"
+						{% if pokemon.realChange > 0 %}
+							class="number percent-plus"
 						{% elseif pokemon.realChange < 0 %}
-							class="percent-minus"
+							class="number percent-minus"
 						{% endif %}
 					>
-						{{ pokemon.realChange|e }}%
+						{{ pokemon.realChangeText|e }}
 					</td>
 				</tr>
 			{% endfor %}

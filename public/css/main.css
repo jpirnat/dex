@@ -32,7 +32,7 @@ body {
 	display: inline;
 }
 
-.breadcrumbs li+li:before {
+.breadcrumbs li+li::before {
 	content: "\00BB "; /* &raquo; */
 	margin: 0 5px;
 }
@@ -133,6 +133,9 @@ table.pokemon-list th.pokemon-name {
 	width: 100%;
 }
 
+table .number {
+	text-align: right;
+}
 
 .percent-plus {
 	color: green;

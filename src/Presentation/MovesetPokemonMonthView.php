@@ -110,8 +110,9 @@ class MovesetPokemonMonthView
 		foreach ($abilityDatas as $abilityData) {
 			$abilities[] = [
 				'name' => $abilityData->getAbilityName(),
-				'percent' => $abilityData->getPercent(),
+				'percent' => $formatter->formatPercent($abilityData->getPercent()),
 				'change' => $abilityData->getChange(),
+				'changeText' => $formatter->formatPercent($abilityData->getChange()),
 			];
 		}
 
@@ -129,8 +130,9 @@ class MovesetPokemonMonthView
 		foreach ($itemDatas as $itemData) {
 			$items[] = [
 				'name' => $itemData->getItemName(),
-				'percent' => $itemData->getPercent(),
+				'percent' => $formatter->formatPercent($itemData->getPercent()),
 				'change' => $itemData->getChange(),
+				'changeText' => $formatter->formatPercent($itemData->getChange()),
 			];
 		}
 
@@ -193,7 +195,7 @@ class MovesetPokemonMonthView
 			$spreads[] = [
 				'nature' => $nature,
 				'evs' => $evs,
-				'percent' => $spreadData->getPercent(),
+				'percent' => $formatter->formatPercent($spreadData->getPercent()),
 				'stats' => $stats,
 			];
 		}
@@ -212,8 +214,9 @@ class MovesetPokemonMonthView
 		foreach ($moveDatas as $moveData) {
 			$moves[] = [
 				'name' => $moveData->getMoveName(),
-				'percent' => $moveData->getPercent(),
+				'percent' => $formatter->formatPercent($moveData->getPercent()),
 				'change' => $moveData->getChange(),
+				'changeText' => $formatter->formatPercent($moveData->getChange()),
 			];
 		}
 
@@ -234,7 +237,7 @@ class MovesetPokemonMonthView
 				'showMovesetLink' => $teammateData->doesMovesetDataExist(),
 				'identifier' => $teammateData->getPokemonIdentifier(),
 				'formIcon' => $teammateData->getFormIcon(),
-				'percent' => $teammateData->getPercent(),
+				'percent' => $formatter->formatPercent($teammateData->getPercent()),
 			];
 		}
 
@@ -255,11 +258,11 @@ class MovesetPokemonMonthView
 				'showMovesetLink' => $counterData->doesMovesetDataExist(),
 				'identifier' => $counterData->getPokemonIdentifier(),
 				'formIcon' => $counterData->getFormIcon(),
-				'number1' => $counterData->getNumber1(),
-				'number2' => $counterData->getNumber2(),
-				'number3' => $counterData->getNumber3(),
-				'percentKnockedOut' => $counterData->getPercentKnockedOut(),
-				'percentSwitchedOut' => $counterData->getPercentSwitchedOut(),
+				'number1' => $formatter->formatNumber($counterData->getNumber1()),
+				'number2' => $formatter->formatNumber($counterData->getNumber2()),
+				'number3' => $formatter->formatNumber($counterData->getNumber3()),
+				'percentKnockedOut' => $formatter->formatPercent($counterData->getPercentKnockedOut()),
+				'percentSwitchedOut' => $formatter->formatPercent($counterData->getPercentSwitchedOut()),
 			];
 		}
 

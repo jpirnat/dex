@@ -76,14 +76,17 @@ class UsageMonthView
 				'showMovesetLink' => $usageData->getUsagePercent() >= .01,
 				'identifier' => $usageData->getPokemonIdentifier(),
 				'formIcon' => $usageData->getFormIcon(),
-				'usagePercent' => $usageData->getUsagePercent(),
+				'usagePercent' => $formatter->formatPercent($usageData->getUsagePercent()),
 				'usageChange' => $usageData->getUsageChange(),
-				'raw' => $usageData->getRaw(),
-				'rawPercent' => $usageData->getRawPercent(),
+				'usageChangeText' => $formatter->formatPercent($usageData->getUsageChange()),
+				'raw' => $formatter->formatNumber($usageData->getRaw()),
+				'rawPercent' => $formatter->formatPercent($usageData->getRawPercent()),
 				'rawChange' => $usageData->getRawChange(),
-				'real' => $usageData->getReal(),
-				'realPercent' => $usageData->getRealPercent(),
+				'rawChangeText' => $formatter->formatPercent($usageData->getRawChange()),
+				'real' => $formatter->formatNumber($usageData->getReal()),
+				'realPercent' => $formatter->formatPercent($usageData->getRealPercent()),
 				'realChange' => $usageData->getRealChange(),
+				'realChangeText' => $formatter->formatPercent($usageData->getRealChange()),
 			];
 		}
 

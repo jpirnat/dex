@@ -73,9 +73,9 @@ class MoveUsageMonthView
 				'name' => $moveUsageData->getPokemonName(),
 				'identifier' => $moveUsageData->getPokemonIdentifier(),
 				'formIcon' => $moveUsageData->getFormIcon(),
-				'pokemonPercent' => $moveUsageData->getPokemonPercent(),
-				'movePercent' => $moveUsageData->getMovePercent(),
-				'usagePercent' => $moveUsageData->getUsagePercent(),
+				'pokemonPercent' => $formatter->formatPercent($moveUsageData->getPokemonPercent()),
+				'movePercent' => $formatter->formatPercent($moveUsageData->getMovePercent()),
+				'usagePercent' => $formatter->formatPercent($moveUsageData->getUsagePercent()),
 			];
 		}
 

@@ -76,11 +76,13 @@ class LeadsMonthView
 				'showMovesetLink' => $leadsData->getUsagePercent() >= .01,
 				'identifier' => $leadsData->getPokemonIdentifier(),
 				'formIcon' => $leadsData->getFormIcon(),
-				'usagePercent' => $leadsData->getLeadUsagePercent(),
+				'usagePercent' => $formatter->formatPercent($leadsData->getLeadUsagePercent()),
 				'usageChange' => $leadsData->getLeadUsageChange(),
-				'raw' => $leadsData->getRaw(),
-				'rawPercent' => $leadsData->getRawPercent(),
+				'usageChangeText' => $formatter->formatPercent($leadsData->getLeadUsageChange()),
+				'raw' => $formatter->formatNumber($leadsData->getRaw()),
+				'rawPercent' => $formatter->formatPercent($leadsData->getRawPercent()),
 				'rawChange' => $leadsData->getRawChange(),
+				'rawChangeText' => $formatter->formatPercent($leadsData->getRawChange()),
 			];
 		}
 

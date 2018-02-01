@@ -40,9 +40,9 @@
 							{{ pokemon.name|e }}
 						</a>
 					</td>
-					<td>{{ pokemon.pokemonPercent|e }}</td>
-					<td>{{ pokemon.movePercent|e }}</td>
-					<td>{{ pokemon.usagePercent|e }}</td>
+					<td class="number">{{ pokemon.pokemonPercent|e }}</td>
+					<td class="number">{{ pokemon.movePercent|e }}</td>
+					<td class="number">{{ pokemon.usagePercent|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>
