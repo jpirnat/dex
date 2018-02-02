@@ -5,15 +5,17 @@
 		{% if showPrevMonthLink %}
 			<div class="button prev">
 				<a href="/stats/{{ prevYear|e }}/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemonIdentifier|e }}">
-					&#9664; {{ prevMonthText|e }}
+					&#9668; {{ prevMonthText|e }}
 				</a>
 			</div>
 		{% endif %}
 
+		<div class="space"></div>
+
 		{% if showNextMonthLink %}
 			<div class="button next">
 				<a href="/stats/{{ nextYear|e }}/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemonIdentifier|e }}">
-					{{ nextMonthText|e }} &#9654;
+					{{ nextMonthText|e }} &#9658;
 				</a>
 			</div>
 		{% endif %}

@@ -33,7 +33,7 @@ body {
 }
 
 .breadcrumbs li+li::before {
-	content: "\00BB "; /* &raquo; */
+	content: "\00BB"; /* &raquo; */
 	margin: 0 5px;
 }
 
@@ -112,22 +112,26 @@ body {
 
 
 
+/* Month control */
+
 .month-control {
 	margin: 10px 0;
+	display: flex;
+	justify-content: space-between;
 }
-.month-control::after {
-	content: "";
-	display: table;
-	clear: both;
+
+.month-control .space {
+	flex: 1;
 }
 
 .month-control .prev {
-	float: left;
+	order: -1;
 }
 
 .month-control .next {
-	float: right;
+	order: 1;
 }
+
 
 
 table.pokemon-list th.pokemon-name {
