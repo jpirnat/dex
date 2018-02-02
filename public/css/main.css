@@ -54,6 +54,26 @@ body {
 }
 
 
+
+/* Buttons */
+
+.button a {
+	display: inline-block;
+	padding: 10px;
+	color: black;
+	text-decoration: none;
+	background: #ddd;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.button a:hover {
+	background: black;
+	color: white;
+}
+
+
+
 /* /stats */
 
 .stats-year {
@@ -101,17 +121,6 @@ body {
 	clear: both;
 }
 
-.month-control .button {
-	display: inline-block;
-	border: 1px solid black;
-	border-radius: 10px;
-	background-color: #ddd;
-}
-
-.month-control .button:hover {
-	background-color: white;
-}
-
 .month-control .prev {
 	float: left;
 }
@@ -119,14 +128,6 @@ body {
 .month-control .next {
 	float: right;
 }
-
-.month-control a {
-	display: inline-block;
-	padding: 10px;
-	text-decoration: none;
-	color: black;
-}
-
 
 
 table.pokemon-list th.pokemon-name {
