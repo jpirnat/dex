@@ -1,6 +1,26 @@
 {% extends "html/base.twig" %}
 
 {% block body %}
+	<div class="month-control">
+		{% if showPrevMonthLink %}
+			<div class="button prev">
+				<a href="/stats/{{ prevYear|e }}/{{ prevMonth|e }}">
+					&#9668; {{ prevMonthText|e }}
+				</a>
+			</div>
+		{% endif %}
+
+		<div class="space"></div>
+
+		{% if showNextMonthLink %}
+			<div class="button next">
+				<a href="/stats/{{ nextYear|e }}/{{ nextMonth|e }}">
+					{{ nextMonthText|e }} &#9658;
+				</a>
+			</div>
+		{% endif %}
+	</div>
+
 	<table>
 		<thead>
 			<tr>
