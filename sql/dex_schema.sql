@@ -736,7 +736,7 @@ foreign key (`z_power_effect_id`) references `z_power_effects` (`id`)
 
 create table if not exists `flags`
 (
-`id` tinyint unsigned not null auto_increment,
+`id` tinyint unsigned not null,
 
 `identifier` varchar(14) not null,
 `introduced_in_generation` tinyint unsigned not null,

@@ -3,7 +3,7 @@ use `dex`;
 
 create table if not exists `formats`
 (
-`id` tinyint unsigned not null auto_increment,
+`id` tinyint unsigned not null,
 
 `identifier` varchar(20) not null,
 `generation` tinyint unsigned not null,
@@ -15,6 +15,26 @@ create table if not exists `formats`
 primary key (`id`),
 unique key (`identifier`),
 foreign key (`generation`) references `generations` (`generation`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
+create table if not exists `format_names`
+(
+`language_id` tinyint unsigned not null,
+`format_id` tinyint unsigned not null,
+
+`name` varchar(20) not null,
+
+primary key (
+	`language_id`,
+	`format_id`
+),
+foreign key (`language_id`) references `languages` (`id`)
+	on delete restrict
+	on update cascade,
+foreign key (`format_id`) references `formats` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;
