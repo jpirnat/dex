@@ -11,6 +11,7 @@ use Jp\Dex\Application\Models\ItemsModel;
 use Jp\Dex\Application\Models\LanguageModel;
 use Jp\Dex\Application\Models\LeadsModel;
 use Jp\Dex\Application\Models\LeadsMonth\LeadsMonthModel;
+use Jp\Dex\Application\Models\MonthFormats\MonthFormatsModel;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\MovesetPokemonMonthModel;
 use Jp\Dex\Application\Models\MovesModel;
 use Jp\Dex\Application\Models\MoveUsageMonth\MoveUsageMonthModel;
@@ -56,6 +57,7 @@ use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use Jp\Dex\Infrastructure\DatabaseAbilityNameRepository;
@@ -90,6 +92,7 @@ use Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageQueries;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonMoveRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository;
+use Jp\Dex\Infrastructure\DatabaseUsageRatedQueries;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRepository;
 use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownAbilityRepository;
@@ -292,6 +295,9 @@ $container->dice()->addRule(UsageRatedPokemonMoveRepositoryInterface::class, $ru
 $rule = ['instanceOf' => DatabaseUsageRatedPokemonRepository::class];
 $container->dice()->addRule(UsageRatedPokemonRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => DatabaseUsageRatedQueries::class];
+$container->dice()->addRule(UsageRatedQueriesInterface::class, $rule);
+
 $rule = ['instanceOf' => DatabaseUsageRatedRepository::class];
 $container->dice()->addRule(UsageRatedRepositoryInterface::class, $rule);
 
@@ -310,6 +316,7 @@ $container->dice()->addRule(ItemsModel::class, $rule);
 $container->dice()->addRule(LanguageModel::class, $rule);
 $container->dice()->addRule(LeadsModel::class, $rule);
 $container->dice()->addRule(LeadsMonthModel::class, $rule);
+$container->dice()->addRule(MonthFormatsModel::class, $rule);
 $container->dice()->addRule(MovesetPokemonMonthModel::class, $rule);
 $container->dice()->addRule(MovesModel::class, $rule);
 $container->dice()->addRule(MoveUsageMonthModel::class, $rule);

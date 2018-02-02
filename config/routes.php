@@ -8,6 +8,7 @@ use Jp\Dex\Application\Controllers\ItemsController;
 use Jp\Dex\Application\Controllers\LanguageController;
 use Jp\Dex\Application\Controllers\LeadsController;
 use Jp\Dex\Application\Controllers\LeadsMonthController;
+use Jp\Dex\Application\Controllers\MonthFormatsController;
 use Jp\Dex\Application\Controllers\MovesController;
 use Jp\Dex\Application\Controllers\MovesetPokemonMonthController;
 use Jp\Dex\Application\Controllers\MoveUsageMonthController;
@@ -24,6 +25,7 @@ use Jp\Dex\Presentation\ItemsView;
 use Jp\Dex\Presentation\LanguageView;
 use Jp\Dex\Presentation\LeadsMonthView;
 use Jp\Dex\Presentation\LeadsView;
+use Jp\Dex\Presentation\MonthFormatsView;
 use Jp\Dex\Presentation\MovesetPokemonMonthView;
 use Jp\Dex\Presentation\MovesView;
 use Jp\Dex\Presentation\MoveUsageMonthView;
@@ -137,6 +139,21 @@ $routes = [
 			HtmlErrorMiddleware::class,
 		],
 	]],
+
+	[
+		'GET',
+		'/stats/{year:\d+}/{month:\d+}',
+		[
+			'controllerClass' => MonthFormatsController::class,
+			'controllerMethod' => 'index',
+			'viewClass' => MonthFormatsView::class,
+			'viewMethod' => 'index',
+			'middlewareClasses' => [
+				HtmlErrorMiddleware::class,
+				LanguageMiddleware::class,
+			],
+		]
+	],
 
 	[
 		'GET',

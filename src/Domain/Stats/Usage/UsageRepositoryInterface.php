@@ -23,6 +23,19 @@ interface UsageRepositoryInterface
 	) : bool;
 
 	/**
+	 * Do any usage records exist for this year and month?
+	 *
+	 * @param int $year
+	 * @param int $month
+	 *
+	 * @return bool
+	 */
+	public function hasAny(
+		int $year,
+		int $month
+	) : bool;
+
+	/**
 	 * Save a usage record.
 	 *
 	 * @param Usage $usage

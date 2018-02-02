@@ -1,0 +1,29 @@
+{% extends "html/base.twig" %}
+
+{% block body %}
+	<table>
+		<thead>
+			<tr>
+				<th>Format</th>
+				<th>Rating 1</th>
+				<th>Rating 2</th>
+				<th>Rating 3</th>
+				<th>Rating 4</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for format in formats %}
+				<tr>
+					<td>{{ format.name }}</td>
+					{% for rating in format.ratings %}
+						<td>
+							<a href="/stats/{{ year|e }}/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}">
+								{{ rating|e }}
+							</a>
+						</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

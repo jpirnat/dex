@@ -54,6 +54,32 @@ class DatabaseUsageRepository implements UsageRepositoryInterface
 	}
 
 	/**
+	 * Do any usage records exist for this year and month?
+	 *
+	 * @param int $year
+	 * @param int $month
+	 *
+	 * @return bool
+	 */
+	public function hasAny(
+		int $year,
+		int $month
+	) : bool {
+		$stmt = $this->db->prepare(
+			'SELECT
+				COUNT(*)
+			FROM `usage`
+			WHERE `year` = :year
+				AND `month` = :month'
+		);
+		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->execute();
+		$count = $stmt->fetchColumn();
+		return $count > 0;
+	}
+
+	/**
 	 * Save a usage record.
 	 *
 	 * @param Usage $usage
