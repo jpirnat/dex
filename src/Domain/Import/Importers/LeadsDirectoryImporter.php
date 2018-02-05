@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Import\Importers;
 
 use GuzzleHttp\Client;
+use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Import\Extractors\FormatRatingExtractor;
 use Jp\Dex\Domain\Import\Extractors\YearMonthExtractor;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface;
@@ -23,6 +24,9 @@ class LeadsDirectoryImporter
 	/** @var ShowdownFormatRepositoryInterface $showdownFormatRepository */
 	private $showdownFormatRepository;
 
+	/** @var FormatRepositoryInterface $formatRepository */
+	private $formatRepository;
+
 	/**
 	 * Constructor.
 	 *
@@ -30,17 +34,20 @@ class LeadsDirectoryImporter
 	 * @param YearMonthExtractor $yearMonthExtractor
 	 * @param FormatRatingExtractor $formatRatingExtractor
 	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
+	 * @param FormatRepositoryInterface $formatRepository
 	 */
 	public function __construct(
 		LeadsFileImporter $leadsFileImporter,
 		YearMonthExtractor $yearMonthExtractor,
 		FormatRatingExtractor $formatRatingExtractor,
-		ShowdownFormatRepositoryInterface $showdownFormatRepository
+		ShowdownFormatRepositoryInterface $showdownFormatRepository,
+		FormatRepositoryInterface $formatRepository
 	) {
 		$this->leadsFileImporter = $leadsFileImporter;
 		$this->yearMonthExtractor = $yearMonthExtractor;
 		$this->formatRatingExtractor = $formatRatingExtractor;
 		$this->showdownFormatRepository = $showdownFormatRepository;
+		$this->formatRepository = $formatRepository;
 	}
 
 	/**
@@ -85,6 +92,14 @@ class LeadsDirectoryImporter
 
 			// Get the format id from the Pokémon Showdown format name.
 			$formatId = $this->showdownFormatRepository->getFormatId($year, $month, $showdownFormatName);
+
+			// If this is a non-singles format, skip it. As of 2018-02-05, any
+			// leads files that exist for non-singles formats contain incorrect
+			// data.
+			$format = $this->formatRepository->getById($formatId);
+			if ($format->getFieldSize() > 1) {
+				continue;
+			}
 
 			// Create a stream to read the leads file.
 			$stream = $client->request('GET', $link->getUri())->getBody();
