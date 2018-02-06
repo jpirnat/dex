@@ -9,6 +9,7 @@ use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
@@ -30,6 +31,9 @@ class UsageMonthModel
 	/** @var UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository */
 	private $usageRatedPokemonRepository;
 
+	/** @var LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository */
+	private $leadsRatedPokemonRepository;
+
 	/** PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
 
@@ -45,6 +49,9 @@ class UsageMonthModel
 
 	/** @var bool $nextMonthDataExists */
 	private $nextMonthDataExists;
+
+	/** @var bool $leadsDataExists */
+	private $leadsDataExists;
 
 	/** @var int $year */
 	private $year;
@@ -72,6 +79,7 @@ class UsageMonthModel
 	 * @param UsagePokemonRepositoryInterface $usagePokemonRepository
 	 * @param UsageRatedRepositoryInterface $usageRatedRepository
 	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
+	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param FormIconRepositoryInterface $formIconRepository
@@ -82,6 +90,7 @@ class UsageMonthModel
 		UsagePokemonRepositoryInterface $usagePokemonRepository,
 		UsageRatedRepositoryInterface $usageRatedRepository,
 		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
+		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		FormIconRepositoryInterface $formIconRepository
@@ -91,6 +100,7 @@ class UsageMonthModel
 		$this->usagePokemonRepository = $usagePokemonRepository;
 		$this->usageRatedRepository = $usageRatedRepository;
 		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
+		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->formIconRepository = $formIconRepository;
@@ -142,6 +152,14 @@ class UsageMonthModel
 		$this->nextMonthDataExists = $this->usageRatedRepository->has(
 			$nextMonth->getYear(),
 			$nextMonth->getMonth(),
+			$format->getId(),
+			$rating
+		);
+
+		// Does leads rated data exist for this month?
+		$this->leadsDataExists = $this->leadsRatedPokemonRepository->hasAny(
+			$thisMonth->getYear(),
+			$thisMonth->getMonth(),
 			$format->getId(),
 			$rating
 		);
@@ -257,6 +275,16 @@ class UsageMonthModel
 	public function doesNextMonthDataExist() : bool
 	{
 		return $this->nextMonthDataExists;
+	}
+
+	/**
+	 * Does leads rated data exist for this month?
+	 *
+	 * @return bool
+	 */
+	public function doesLeadsDataExist() : bool
+	{
+		return $this->leadsDataExists;
 	}
 
 	/**

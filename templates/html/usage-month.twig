@@ -21,6 +21,14 @@
 		{% endif %}
 	</div>
 
+	<div>
+		{% if showLeadsLink %}
+			<a href="/stats/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/leads">
+				Leads
+			</a>
+		{% endif %}
+	</div>
+
 	<table class="pokemon-list">
 		<thead>
 			<tr>

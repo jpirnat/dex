@@ -120,6 +120,7 @@ class UsageMonthView
 				'nextYear' => $nextMonth->getYear(),
 				'nextMonth' => $nextMonth->getMonth(),
 				'nextMonthText' => $formatter->formatYearMonth($nextMonth),
+				'showLeadsLink' => $this->usageMonthModel->doesLeadsDataExist(),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
 
