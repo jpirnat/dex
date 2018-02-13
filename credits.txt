@@ -11,6 +11,8 @@ pk3DS for allowing me to extract all the foreign names of things from the XY/ORA
 pkparaiso for gen 6 and 7 animated Pokémon models
 BlackShark, parsath, Lessangel, theSLAYER, and projectpokemon.org in general for the USUM animated Pokémon models
 https://projectpokemon.org/home/forums/topic/41471-volunteers-needed-with-cleaning-animated-gifs-for-event-gallery/?page=3
+Kalaxe, Lessangel, and Maxalexanderpi from projectpokemon.org for the SM shiny back animated Pokémon models, shiny Unowns, and various other forms
+https://projectpokemon.org/home/forums/topic/43730-help-removing-background-of-3ds-sprites-are-missing/
 
 https://github.com/pret for ripped move data from gens 1 to 3
 https://github.com/PekanMmd/Pokemon-XD-Code for ripped move data from Pokémon XD
