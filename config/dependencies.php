@@ -28,6 +28,7 @@ use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
+use Jp\Dex\Domain\Models\ModelRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
@@ -73,6 +74,7 @@ use Jp\Dex\Infrastructure\DatabaseLanguageRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRepository;
+use Jp\Dex\Infrastructure\DatabaseModelRepository;
 use Jp\Dex\Infrastructure\DatabaseMoveNameRepository;
 use Jp\Dex\Infrastructure\DatabaseMoveRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetPokemonRepository;
@@ -219,6 +221,9 @@ $container->dice()->addRule(LeadsRatedPokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseLeadsRepository::class];
 $container->dice()->addRule(LeadsRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseModelRepository::class];
+$container->dice()->addRule(ModelRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMoveNameRepository::class];
 $container->dice()->addRule(MoveNameRepositoryInterface::class, $rule);
