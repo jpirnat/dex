@@ -10,8 +10,6 @@ use Jp\Dex\Application\Models\MovesetPokemonMonth\MoveData;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\MovesetPokemonMonthModel;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\SpreadData;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\TeammateData;
-use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
@@ -28,35 +26,21 @@ class MovesetPokemonMonthView
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
 
-
-	/** @var PokemonRepositoryInterface $pokemonRepository */
-	private $pokemonRepository;
-
-	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
-	private $pokemonNameRepository;
-
 	/**
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
 	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
 	 * @param IntlFormatterFactory $formatterFactory
-	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 */
 	public function __construct(
 		Twig_Environment $twig,
 		MovesetPokemonMonthModel $movesetPokemonMonthModel,
-		IntlFormatterFactory $formatterFactory,
-		PokemonRepositoryInterface $pokemonRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository
+		IntlFormatterFactory $formatterFactory
 	) {
 		$this->twig = $twig;
 		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
 		$this->formatterFactory = $formatterFactory;
-
-		$this->pokemonRepository = $pokemonRepository;
-		$this->pokemonNameRepository = $pokemonNameRepository;
 	}
 
 	/**
@@ -82,19 +66,10 @@ class MovesetPokemonMonthView
 		$nextMonth = $this->movesetPokemonMonthModel->getDateModel()->getNextMonth();
 
 
-		$languageId = $this->movesetPokemonMonthModel->getLanguageId();
-
+		$pokemon = $this->movesetPokemonMonthModel->getPokemon();
+		$pokemonName = $this->movesetPokemonMonthModel->getPokemonName();
 		$movesetPokemon = $this->movesetPokemonMonthModel->getMovesetPokemon();
 		$movesetRatedPokemon = $this->movesetPokemonMonthModel->getMovesetRatedPokemon();
-
-		// Get the Pokémon and the Pokémon name.
-		$pokemon = $this->pokemonRepository->getById(
-			$movesetPokemon->getPokemonId()
-		);
-		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-			$languageId,
-			$movesetPokemon->getPokemonId()
-		);
 
 		// Get abilities and sort by percent.
 		$abilityDatas = $this->movesetPokemonMonthModel->getAbilityDatas();
