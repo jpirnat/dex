@@ -65,12 +65,29 @@ class MovesetPokemonMonthView
 		$prevMonth = $this->movesetPokemonMonthModel->getDateModel()->getPrevMonth();
 		$nextMonth = $this->movesetPokemonMonthModel->getDateModel()->getNextMonth();
 
-
 		$pokemon = $this->movesetPokemonMonthModel->getPokemon();
-		$pokemonName = $this->movesetPokemonMonthModel->getPokemonName();
-		$model = $this->movesetPokemonMonthModel->getModel();
 		$movesetPokemon = $this->movesetPokemonMonthModel->getMovesetPokemon();
 		$movesetRatedPokemon = $this->movesetPokemonMonthModel->getMovesetRatedPokemon();
+
+		// Get miscellaneous Pokémon data.
+		$pokemonModel = $this->movesetPokemonMonthModel->getPokemonModel();
+		$pokemonName = $pokemonModel->getPokemonName();
+		$model = $pokemonModel->getModel();
+
+		// Get types.
+		$typeIcons = [];
+		foreach ($pokemonModel->getTypeIcons() as $slot => $typeIcon) {
+			$typeIcons[$slot] = $typeIcon->getImage();
+		}
+
+		// Get base stats.
+		$baseStats = [];
+		foreach ($pokemonModel->getStatDatas() as $statData) {
+			$baseStats[] = [
+				'name' => $statData->getStatName(),
+				'value' => $statData->getBaseStat(),
+			];
+		}
 
 		// Get abilities and sort by percent.
 		$abilityDatas = $this->movesetPokemonMonthModel->getAbilityDatas();
@@ -284,6 +301,8 @@ class MovesetPokemonMonthView
 				'month' => $month,
 				'pokemonName' => $pokemonName->getName(),
 				'model' => $model->getImage(),
+				'typeIcons' => $typeIcons,
+				'baseStats' => $baseStats,
 				'rawCount' =>$movesetPokemon->getRawCount(),
 				'averageWeight' => $movesetRatedPokemon->getAverageWeight(),
 				'viabilityCeiling' => $movesetPokemon->getViabilityCeiling(),

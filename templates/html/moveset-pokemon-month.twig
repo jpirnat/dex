@@ -24,7 +24,22 @@
 	<div>
 		<img src="/images/pokemon/models/{{ model|e }}">
 		{{ pokemonName|e }}
+		{% if typeIcons|length == 1 %}
+			<img src="/images/types/{{ typeIcons[1]|e }}">
+		{% else %}
+			<img src="/images/types/{{ typeIcons[1]|e }}">
+			<img src="/images/types/{{ typeIcons[2]|e }}">
+		{% endif %}
 	</div>
+
+	<table>
+		{% for stat in baseStats %}
+			<tr>
+				<td>{{ stat.name|e }}</td>
+				<td>{{ stat.value|e }}</td>
+			</tr>
+		{% endfor %}
+	</table>
 
 	<div>
 		Raw count: {{ rawCount|e }}

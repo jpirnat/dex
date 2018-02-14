@@ -5,13 +5,8 @@ namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
-use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Models\Model;
-use Jp\Dex\Domain\Models\ModelRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\Pokemon;
-use Jp\Dex\Domain\Pokemon\PokemonName;
-use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
@@ -29,17 +24,14 @@ class MovesetPokemonMonthModel
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
 
-	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
-	private $pokemonNameRepository;
-
-	/** @var ModelRepositoryInterface $modelRepository */
-	private $modelRepository;
-
 	/** @var MovesetPokemonRepositoryInterface $movesetPokemonRepository */
 	private $movesetPokemonRepository;
 
 	/** @var MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository */
 	private $movesetRatedPokemonRepository;
+
+	/** @var PokemonModel $pokemonModel */
+	private $pokemonModel;
 
 	/** @var AbilityModel $abilityModel */
 	private $abilityModel;
@@ -88,12 +80,6 @@ class MovesetPokemonMonthModel
 	/** @var Pokemon $pokemon */
 	private $pokemon;
 
-	/** @var PokemonName $pokemonName */
-	private $pokemonName;
-
-	/** @var Model $model */
-	private $model;
-
 	/** @var MovesetPokemon $movesetPokemon */
 	private $movesetPokemon;
 
@@ -106,10 +92,9 @@ class MovesetPokemonMonthModel
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param ModelRepositoryInterface $modelRepository
 	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
 	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
+	 * @param PokemonModel $pokemonModel
 	 * @param AbilityModel $abilityModel
 	 * @param ItemModel $itemModel
 	 * @param SpreadModel $spreadModel
@@ -121,10 +106,9 @@ class MovesetPokemonMonthModel
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		PokemonRepositoryInterface $pokemonRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
-		ModelRepositoryInterface $modelRepository,
 		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
+		PokemonModel $pokemonModel,
 		AbilityModel $abilityModel,
 		ItemModel $itemModel,
 		SpreadModel $spreadModel,
@@ -135,10 +119,9 @@ class MovesetPokemonMonthModel
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->pokemonRepository = $pokemonRepository;
-		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->modelRepository = $modelRepository;
 		$this->movesetPokemonRepository = $movesetPokemonRepository;
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
+		$this->pokemonModel = $pokemonModel;
 		$this->abilityModel = $abilityModel;
 		$this->itemModel = $itemModel;
 		$this->spreadModel = $spreadModel;
@@ -189,21 +172,6 @@ class MovesetPokemonMonthModel
 		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
 		$this->pokemon = $pokemon;
 
-		// Get the Pokémon's name.
-		$this->pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-			$languageId,
-			$pokemon->getId()
-		);
-
-		// Get the Pokémon's model.
-		$this->model = $this->modelRepository->getByFormAndShinyAndBackAndFemaleAndAttackingIndex(
-			new FormId($pokemon->getId()->value()), // A Pokémon's default form has Pokémon id === form id.
-			false,
-			false,
-			false,
-			0
-		);
-
 		// Does moveset rated Pokémon data exist for the previous month?
 		$this->prevMonthDataExists = $this->movesetRatedPokemonRepository->has(
 			$prevMonth->getYear(),
@@ -237,6 +205,13 @@ class MovesetPokemonMonthModel
 			$format->getId(),
 			$rating,
 			$pokemon->getId()
+		);
+
+		// Get Pokémon data.
+		$this->pokemonModel->setData(
+			$format->getGeneration(),
+			$pokemon->getId(),
+			$languageId
 		);
 
 		// Get ability data.
@@ -401,23 +376,13 @@ class MovesetPokemonMonthModel
 	}
 
 	/**
-	 * Get the Pokémon name.
+	 * Get the Pokémon model.
 	 *
-	 * @return PokemonName
+	 * @return PokemonModel
 	 */
-	public function getPokemonName() : PokemonName
+	public function getPokemonModel() : PokemonModel
 	{
-		return $this->pokemonName;
-	}
-
-	/**
-	 * Get the model.
-	 *
-	 * @return Model
-	 */
-	public function getModel() : Model
-	{
-		return $this->model;
+		return $this->pokemonModel;
 	}
 
 	/**
