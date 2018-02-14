@@ -26,8 +26,7 @@ class DatabaseFormIconRepository implements FormIconRepositoryInterface
 	}
 
 	/**
-	 * Get a form icon by its generation, form, whether it is female, and
-	 * whether it is right.
+	 * Get a form icon by its generation, form, gender, and direction.
 	 *
 	 * @param Generation $generation
 	 * @param FormId $formId
@@ -35,7 +34,7 @@ class DatabaseFormIconRepository implements FormIconRepositoryInterface
 	 * @param bool $isRight
 	 *
 	 * @throws FormIconNotFoundException if no form icon exists with this
-	 *     generation, form, female-ness, and right-ness.
+	 *     generation, form, gender, and direction.
 	 *
 	 * @return FormIcon
 	 */
@@ -52,7 +51,8 @@ class DatabaseFormIconRepository implements FormIconRepositoryInterface
 			WHERE `generation` = :generation
 				AND `form_id` = :form_id
 				AND `is_female` = :is_female
-				AND `is_right` = :is_right'
+				AND `is_right` = :is_right
+			LIMIT 1'
 		);
 		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
 		$stmt->bindValue(':form_id', $formId->value(), PDO::PARAM_INT);
@@ -65,8 +65,8 @@ class DatabaseFormIconRepository implements FormIconRepositoryInterface
 			throw new FormIconNotFoundException(
 				'No form icon exists with generation ' . $generation->getValue()
 				. ', form id ' . $formId->value()
-				. ', female-ness ' . ($isFemale ? 'true' : 'false')
-				. ', and right-ness ' . ($isRight ? 'true' : 'false') . '.'
+				. ', gender ' . ($isFemale ? 'female' : 'male')
+				. ', and direction ' . ($isRight ? 'right' : 'left') . '.'
 			);
 		}
 
@@ -82,8 +82,8 @@ class DatabaseFormIconRepository implements FormIconRepositoryInterface
 	}
 
 	/**
-	 * Get form icons by their generation, whether they are female, and whether
-	 * they are right. Indexed by form id.
+	 * Get form icons by their generation, gender, and direction. Indexed by
+	 * form id.
 	 *
 	 * @param Generation $generation
 	 * @param bool $isFemale

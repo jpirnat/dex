@@ -9,8 +9,7 @@ use Jp\Dex\Domain\Versions\Generation;
 interface FormIconRepositoryInterface
 {
 	/**
-	 * Get a form icon by its generation, form, whether it is female, and
-	 * whether it is right.
+	 * Get a form icon by its generation, form, gender, and direction.
 	 *
 	 * @param Generation $generation
 	 * @param FormId $formId
@@ -18,7 +17,7 @@ interface FormIconRepositoryInterface
 	 * @param bool $isRight
 	 *
 	 * @throws FormIconNotFoundException if no form icon exists with this
-	 *     generation, form, female-ness, and right-ness.
+	 *     generation, form, gender, and direction.
 	 *
 	 * @return FormIcon
 	 */
@@ -30,8 +29,8 @@ interface FormIconRepositoryInterface
 	) : FormIcon;
 
 	/**
-	 * Get form icons by their generation, whether they are female, and whether
-	 * they are right. Indexed by form id.
+	 * Get form icons by their generation, gender, and direction. Indexed by
+	 * form id.
 	 *
 	 * @param Generation $generation
 	 * @param bool $isFemale
