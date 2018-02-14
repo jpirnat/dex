@@ -5,7 +5,10 @@ namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
+use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Models\Model;
+use Jp\Dex\Domain\Models\ModelRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonName;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
@@ -28,6 +31,9 @@ class MovesetPokemonMonthModel
 
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
+
+	/** @var ModelRepositoryInterface $modelRepository */
+	private $modelRepository;
 
 	/** @var MovesetPokemonRepositoryInterface $movesetPokemonRepository */
 	private $movesetPokemonRepository;
@@ -85,6 +91,9 @@ class MovesetPokemonMonthModel
 	/** @var PokemonName $pokemonName */
 	private $pokemonName;
 
+	/** @var Model $model */
+	private $model;
+
 	/** @var MovesetPokemon $movesetPokemon */
 	private $movesetPokemon;
 
@@ -98,6 +107,7 @@ class MovesetPokemonMonthModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
+	 * @param ModelRepositoryInterface $modelRepository
 	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
 	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
 	 * @param AbilityModel $abilityModel
@@ -112,6 +122,7 @@ class MovesetPokemonMonthModel
 		FormatRepositoryInterface $formatRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
+		ModelRepositoryInterface $modelRepository,
 		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
 		AbilityModel $abilityModel,
@@ -125,6 +136,7 @@ class MovesetPokemonMonthModel
 		$this->formatRepository = $formatRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
+		$this->modelRepository = $modelRepository;
 		$this->movesetPokemonRepository = $movesetPokemonRepository;
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
 		$this->abilityModel = $abilityModel;
@@ -181,6 +193,15 @@ class MovesetPokemonMonthModel
 		$this->pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
 			$pokemon->getId()
+		);
+
+		// Get the Pokémon's model.
+		$this->model = $this->modelRepository->getByFormAndShinyAndBackAndFemaleAndAttackingIndex(
+			new FormId($pokemon->getId()->value()), // A Pokémon's default form has Pokémon id === form id.
+			false,
+			false,
+			false,
+			0
 		);
 
 		// Does moveset rated Pokémon data exist for the previous month?
@@ -387,6 +408,16 @@ class MovesetPokemonMonthModel
 	public function getPokemonName() : PokemonName
 	{
 		return $this->pokemonName;
+	}
+
+	/**
+	 * Get the model.
+	 *
+	 * @return Model
+	 */
+	public function getModel() : Model
+	{
+		return $this->model;
 	}
 
 	/**

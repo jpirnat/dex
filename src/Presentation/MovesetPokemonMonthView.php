@@ -68,6 +68,7 @@ class MovesetPokemonMonthView
 
 		$pokemon = $this->movesetPokemonMonthModel->getPokemon();
 		$pokemonName = $this->movesetPokemonMonthModel->getPokemonName();
+		$model = $this->movesetPokemonMonthModel->getModel();
 		$movesetPokemon = $this->movesetPokemonMonthModel->getMovesetPokemon();
 		$movesetRatedPokemon = $this->movesetPokemonMonthModel->getMovesetRatedPokemon();
 
@@ -282,6 +283,7 @@ class MovesetPokemonMonthView
 				'year' => $year,
 				'month' => $month,
 				'pokemonName' => $pokemonName->getName(),
+				'model' => $model->getImage(),
 				'rawCount' =>$movesetPokemon->getRawCount(),
 				'averageWeight' => $movesetRatedPokemon->getAverageWeight(),
 				'viabilityCeiling' => $movesetPokemon->getViabilityCeiling(),
