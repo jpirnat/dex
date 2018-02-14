@@ -21,22 +21,32 @@
 		{% endif %}
 	</div>
 
-	<div>
-		<img src="/images/pokemon/models/{{ model|e }}">
-		{{ pokemonName|e }}
-		{% if typeIcons|length == 1 %}
-			<img src="/images/types/{{ typeIcons[1]|e }}">
-		{% else %}
-			<img src="/images/types/{{ typeIcons[1]|e }}">
-			<img src="/images/types/{{ typeIcons[2]|e }}">
-		{% endif %}
+
+	<div class="pokemon-data">
+		<div>
+			{{ pokemonName|e }}
+		</div>
+		<div>
+			<img src="/images/pokemon/models/{{ model|e }}">
+		</div>
+		<div class="pokemon-types">
+			{% if typeIcons|length == 1 %}
+				<img src="/images/types/{{ typeIcons[1]|e }}">
+			{% else %}
+				<img src="/images/types/{{ typeIcons[1]|e }}">
+				<img src="/images/types/{{ typeIcons[2]|e }}">
+			{% endif %}
+		</div>
 	</div>
 
-	<table>
+	<table class="base-stats">
 		{% for stat in baseStats %}
 			<tr>
-				<td>{{ stat.name|e }}</td>
-				<td>{{ stat.value|e }}</td>
+				<td class="base-stat-name">{{ stat.name|e }}</td>
+				<td class="number">{{ stat.value|e }}</td>
+				<td>
+					<div class="base-stat-bar" style="width: calc({{ stat.value|e }} / 255 * 300px)"></div>
+				</td>
 			</tr>
 		{% endfor %}
 	</table>
@@ -55,7 +65,7 @@
 		</div>
 	{% endif %}
 
-	<table>
+	<table class="stats-list">
 		<thead>
 			<tr>
 				<th>Abilities</th>
@@ -82,7 +92,7 @@
 		</tbody>
 	</table>
 
-	<table>
+	<table class="stats-list">
 		<thead>
 			<tr>
 				<th>Items</th>
@@ -109,7 +119,7 @@
 		</tbody>
 	</table>
 
-	<table>
+	<table class="stats-list">
 		<thead>
 			<tr>
 				<th>Nature</th>
@@ -156,7 +166,7 @@
 		</tbody>
 	</table>
 
-	<table>
+	<table class="stats-list">
 		<thead>
 			<tr>
 				<th>Moves</th>
@@ -183,7 +193,7 @@
 		</tbody>
 	</table>
 
-	<table>
+	<table class="stats-list">
 		<thead>
 			<tr>
 				<th></th>
@@ -212,7 +222,7 @@
 		</tbody>
 	</table>
 
-	<table>
+	<table class="stats-list">
 		<thead>
 			<tr>
 				<th></th>

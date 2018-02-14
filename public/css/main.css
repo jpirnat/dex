@@ -149,3 +149,39 @@ table .number {
 .percent-minus {
 	color: red;
 }
+
+
+.stats-list th,
+.stats-list td {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+/* TODO: make this less general */
+table {
+	table-layout: fixed;
+	border-collapse: collapse;
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+/* Pokémon stats page */
+.pokemon-data {
+	display: inline-block;
+	text-align: center;
+}
+
+.base-stat-name {
+	text-align: right;
+}
+
+.base-stats td {
+	padding: 3px;
+}
+
+.base-stat-bar {
+	display: inline-block;
+	background: blue;
+	height: 15px;
+}
