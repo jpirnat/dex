@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Types;
 
+use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Versions\Generation;
+
 interface TypeRepositoryInterface
 {
 	/**
@@ -16,4 +19,17 @@ interface TypeRepositoryInterface
 	 * @return Type
 	 */
 	public function getByHiddenPowerIndex(int $hiddenPowerIndex) : Type;
+
+	/**
+	 * Get the types of this Pokémon in this generation. Indexed by slot.
+	 *
+	 * @param Generation $generation
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return Type[]
+	 */
+	public function getByGenerationAndPokemon(
+		Generation $generation,
+		PokemonId $pokemonId
+	) : array;
 }
