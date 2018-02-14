@@ -122,6 +122,7 @@ $tables = [
 
 	// Pokémon Showdown identifiers
 	'formats',
+	'format_names',
 	'showdown_formats_to_import',
 	'showdown_formats_to_ignore',
 	'showdown_pokemon_to_import',
