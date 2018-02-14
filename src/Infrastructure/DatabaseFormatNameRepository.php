@@ -40,6 +40,9 @@ class DatabaseFormatNameRepository implements FormatNameRepositoryInterface
 		LanguageId $languageId,
 		FormatId $formatId
 	) : FormatName {
+		// HACK: Format names currently exist only for English.
+		$languageId = new LanguageId(LanguageId::ENGLISH);
+
 		$stmt = $this->db->prepare(
 			'SELECT
 				`name`

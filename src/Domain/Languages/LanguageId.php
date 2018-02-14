@@ -7,4 +7,6 @@ use Jp\Dex\Domain\EntityId;
 
 class LanguageId extends EntityId
 {
+	/** @var int $ENGLISH */
+	public const ENGLISH = 2;
 }
