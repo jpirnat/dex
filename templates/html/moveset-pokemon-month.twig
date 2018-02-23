@@ -65,7 +65,18 @@
 		</div>
 	{% endif %}
 
-	<table class="stats-list">
+	<nav id="quick-links">
+		<ul>
+			<li><a href="#abilities" class="scroll">Abilities</a></li>
+			<li><a href="#items" class="scroll">Items</a></li>
+			<li><a href="#spreads" class="scroll">Spreads</a></li>
+			<li><a href="#moves" class="scroll">Moves</a></li>
+			<li><a href="#teammates" class="scroll">Teammates</a></li>
+			<li><a href="#counters" class="scroll">Counters</a></li>
+		</ul>
+	</nav>
+
+	<table id="abilities" class="moveset-usage">
 		<caption>Abilities</caption>
 		<thead>
 			<tr>
@@ -84,6 +95,8 @@
 							class="number percent-plus"
 						{% elseif ability.change < 0 %}
 							class="number percent-minus"
+						{% else %}
+							class="number"
 						{% endif %}
 					>
 						{{ ability.changeText|e }}
@@ -93,7 +106,7 @@
 		</tbody>
 	</table>
 
-	<table class="stats-list">
+	<table id="items" class="moveset-usage">
 		<caption>Items</caption>
 		<thead>
 			<tr>
@@ -112,6 +125,8 @@
 							class="number percent-plus"
 						{% elseif item.change < 0 %}
 							class="number percent-minus"
+						{% else %}
+							class="number"
 						{% endif %}
 					>
 						{{ item.changeText|e }}
@@ -121,7 +136,7 @@
 		</tbody>
 	</table>
 
-	<table class="stats-list">
+	<table id="spreads" class="moveset-usage">
 		<caption>Spreads</caption>
 		<thead>
 			<tr>
@@ -169,7 +184,7 @@
 		</tbody>
 	</table>
 
-	<table class="stats-list">
+	<table id="moves" class="moveset-usage">
 		<caption>Moves</caption>
 		<thead>
 			<tr>
@@ -188,6 +203,8 @@
 							class="number percent-plus"
 						{% elseif move.change < 0 %}
 							class="number percent-minus"
+						{% else %}
+							class="number"
 						{% endif %}
 					>
 						{{ move.changeText|e }}
@@ -197,7 +214,7 @@
 		</tbody>
 	</table>
 
-	<table class="stats-list">
+	<table id="teammates" class="moveset-usage">
 		<caption>Teammates</caption>
 		<thead>
 			<tr>
@@ -227,7 +244,7 @@
 		</tbody>
 	</table>
 
-	<table class="stats-list">
+	<table id="counters" class="moveset-usage">
 		<caption>Checks and Counters</caption>
 		<thead>
 			<tr>
@@ -264,4 +281,8 @@
 			{% endfor %}
 		</tbody>
 	</table>
+{% endblock %}
+
+{% block scripts %}
+	<script src="/js/main.js"></script>
 {% endblock %}

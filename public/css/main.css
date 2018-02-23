@@ -14,6 +14,25 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+table {
+	table-layout: fixed;
+	border-collapse: collapse;
+	display: inline-table;
+	vertical-align: top;
+}
+
+table .number {
+	text-align: right;
+}
+
+table .percent-plus {
+	color: green;
+}
+
+table .percent-minus {
+	color: red;
+}
+
 
 
 /* Nav breadcrumbs */
@@ -134,44 +153,18 @@ body {
 
 
 
-table.pokemon-list th.pokemon-name {
-	width: 100%;
-}
+/* Pokémon usage tables */
 
-table .number {
-	text-align: right;
-}
-
-.percent-plus {
-	color: green;
-}
-
-.percent-minus {
-	color: red;
-}
-
-.stats-list caption {
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-	padding: 5px;
-	background: #ddd;
-	font-weight: bold;
-}
-
-.stats-list th,
-.stats-list td {
+table.pokemon-usage th,
+table.pokemon-usage td {
 	border: 1px solid black;
 	padding: 5px;
 }
 
-/* TODO: make this less general */
-table {
-	table-layout: fixed;
-	border-collapse: collapse;
-	display: inline-block;
-	vertical-align: top;
+table.pokemon-usage .pokemon-name {
+	width: 100%;
 }
+
 
 
 /* Pokémon stats page */
@@ -192,4 +185,42 @@ table {
 	display: inline-block;
 	background: blue;
 	height: 15px;
+}
+
+
+
+/* Moveset usage tables */
+
+table.moveset-usage {
+	width: 100%;
+	margin: 10px 0;
+}
+
+table.moveset-usage caption {
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	padding: 5px;
+	background: #ddd;
+	font-weight: bold;
+}
+
+table.moveset-usage th,
+table.moveset-usage td {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+
+
+/* Desktop */
+@media (min-width: 600px) {
+	#quick-links {
+		display: none;
+	}
+
+	table.moveset-usage {
+		width: auto;
+		margin: 10px;
+	}
 }
