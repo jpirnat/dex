@@ -150,6 +150,14 @@ table .number {
 	color: red;
 }
 
+.stats-list caption {
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	padding: 5px;
+	background: #ddd;
+	font-weight: bold;
+}
 
 .stats-list th,
 .stats-list td {
