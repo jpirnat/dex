@@ -40,6 +40,24 @@
 			{% endblock %}
 		</main>
 		<footer>
+			&copy; 2017 - {{ currentYear|e }}
+
+			<form>
+				<select name="language">
+					{% for language in languages %}
+						<option
+							value="{{ language.id|e }}"
+							{% if language.id == currentLanguageId %}
+								selected
+							{% endif %}
+						>
+							{{ language.name }}
+						</option>
+					{% endfor %}
+				</select>
+
+				<input type="submit" value="Translate">
+			</form>
 		</footer>
 		{% block scripts %}
 		{% endblock %}
