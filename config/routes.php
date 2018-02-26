@@ -5,7 +5,6 @@ use Jp\Dex\Application\Controllers\AbilitiesController;
 use Jp\Dex\Application\Controllers\ErrorController;
 use Jp\Dex\Application\Controllers\IndexController;
 use Jp\Dex\Application\Controllers\ItemsController;
-use Jp\Dex\Application\Controllers\LanguageController;
 use Jp\Dex\Application\Controllers\LeadsController;
 use Jp\Dex\Application\Controllers\LeadsMonthController;
 use Jp\Dex\Application\Controllers\MonthFormatsController;
@@ -22,7 +21,6 @@ use Jp\Dex\Presentation\AbilitiesView;
 use Jp\Dex\Presentation\ErrorView;
 use Jp\Dex\Presentation\IndexView;
 use Jp\Dex\Presentation\ItemsView;
-use Jp\Dex\Presentation\LanguageView;
 use Jp\Dex\Presentation\LeadsMonthView;
 use Jp\Dex\Presentation\LeadsView;
 use Jp\Dex\Presentation\MonthFormatsView;
@@ -127,6 +125,7 @@ $routes = [
 		'viewMethod' => 'index',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
 		],
 	]],
 
@@ -137,6 +136,7 @@ $routes = [
 		'viewMethod' => 'index',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
 		],
 	]],
 
@@ -217,19 +217,6 @@ $routes = [
 
 
 
-	[
-		'GET',
-		'/language',
-		[
-			'controllerClass' => LanguageController::class,
-			'controllerMethod' => 'setLanguage',
-			'viewClass' => LanguageView::class,
-			'viewMethod' => 'setLanguage',
-			'middlewareClasses' => [
-			],
-		]
-	],
-
 	// Errors
 
 	['GET', '/404', [
@@ -239,6 +226,7 @@ $routes = [
 		'viewMethod' => 'get404',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
 		],
 	]],
 
@@ -249,6 +237,7 @@ $routes = [
 		'viewMethod' => 'getError',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
 		],
 	]],
 
@@ -258,6 +247,7 @@ $routes = [
 		'viewClass' => ErrorView::class,
 		'viewMethod' => 'getError',
 		'middlewareClasses' => [
+			LanguageMiddleware::class,
 		],
 	]],
 ];
