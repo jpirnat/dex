@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\BaseModel;
 use Jp\Dex\Application\Models\UsageMonth\UsageData;
 use Jp\Dex\Application\Models\UsageMonth\UsageMonthModel;
 use Psr\Http\Message\ResponseInterface;
@@ -14,6 +15,9 @@ class UsageMonthView
 	/** @var Twig_Environment $twig */
 	private $twig;
 
+	/** @var BaseView $baseView */
+	private $baseView;
+
 	/** @var UsageMonthModel $usageMonthModel */
 	private $usageMonthModel;
 
@@ -24,15 +28,18 @@ class UsageMonthView
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
+	 * @param BaseView $baseView
 	 * @param UsageMonthModel $usageMonthModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		Twig_Environment $twig,
+		BaseView $baseView,
 		UsageMonthModel $usageMonthModel,
 		IntlFormatterFactory $formatterFactory
 	) {
 		$this->twig = $twig;
+		$this->baseView = $baseView;
 		$this->usageMonthModel = $usageMonthModel;
 		$this->formatterFactory = $formatterFactory;
 	}
@@ -107,7 +114,7 @@ class UsageMonthView
 
 		$content = $this->twig->render(
 			'html/usage-month.twig',
-			[
+			$this->baseView->getBaseVariables() + [
 				// TODO: title - "Month Year Format usage stats"?
 				'breadcrumbs' => $breadcrumbs,
 

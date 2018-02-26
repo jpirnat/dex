@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\BaseModel;
 use Jp\Dex\Application\Models\ErrorModel;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
@@ -13,6 +14,9 @@ class ErrorView
 	/** @var Twig_Environment $twig */
 	private $twig;
 
+	/** @var BaseView $baseView */
+	private $baseView;
+
 	/** @var ErrorModel $errorModel */
 	private $errorModel;
 
@@ -20,13 +24,16 @@ class ErrorView
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
+	 * @param BaseView $baseView
 	 * @param ErrorModel $errorModel
 	 */
 	public function __construct(
 		Twig_Environment $twig,
+		BaseView $baseView,
 		ErrorModel $errorModel
 	) {
 		$this->twig = $twig;
+		$this->baseView = $baseView;
 		$this->errorModel = $errorModel;
 	}
 
@@ -45,7 +52,7 @@ class ErrorView
 
 		$content = $this->twig->render(
 			'html/error.twig',
-			[
+			$this->baseView->getBaseVariables() + [
 				'title' => 'An error has occurred!',
 				'breadcrumbs' => $breadcrumbs,
 			]

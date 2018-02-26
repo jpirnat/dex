@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\BaseModel;
 use Jp\Dex\Application\Models\MoveUsageMonth\MoveUsageData;
 use Jp\Dex\Application\Models\MoveUsageMonth\MoveUsageMonthModel;
 use Psr\Http\Message\ResponseInterface;
@@ -14,6 +15,9 @@ class MoveUsageMonthView
 	/** @var Twig_Environment $twig */
 	private $twig;
 
+	/** @var BaseView $baseView */
+	private $baseView;
+
 	/** @var MoveUsageMonthModel $moveUsageMonthModel */
 	private $moveUsageMonthModel;
 
@@ -24,15 +28,18 @@ class MoveUsageMonthView
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
+	 * @param BaseView $baseView
 	 * @param MoveUsageMonthModel $moveUsageMonthModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		Twig_Environment $twig,
+		BaseView $baseView,
 		IntlFormatterFactory $formatterFactory,
 		MoveUsageMonthModel $moveUsageMonthModel
 	) {
 		$this->twig = $twig;
+		$this->baseView = $baseView;
 		$this->moveUsageMonthModel = $moveUsageMonthModel;
 		$this->formatterFactory = $formatterFactory;
 	}
@@ -100,7 +107,7 @@ class MoveUsageMonthView
 
 		$content = $this->twig->render(
 			'html/move-usage-month.twig',
-			[
+			$this->baseView->getBaseVariables() + [
 				// TODO: title - "Month Year Format Move usage stats"?
 				'breadcrumbs' => $breadcrumbs,
 

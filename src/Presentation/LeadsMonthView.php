@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\BaseModel;
 use Jp\Dex\Application\Models\LeadsMonth\LeadsData;
 use Jp\Dex\Application\Models\LeadsMonth\LeadsMonthModel;
 use Psr\Http\Message\ResponseInterface;
@@ -14,6 +15,9 @@ class LeadsMonthView
 	/** @var Twig_Environment $twig */
 	private $twig;
 
+	/** @var BaseView $baseView */
+	private $baseView;
+
 	/** @var LeadsMonthModel $leadsMonthModel */
 	private $leadsMonthModel;
 
@@ -24,15 +28,18 @@ class LeadsMonthView
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
+	 * @param BaseView $baseView
 	 * @param LeadsMonthModel $leadsMonthModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		Twig_Environment $twig,
+		BaseView $baseView,
 		LeadsMonthModel $leadsMonthModel,
 		IntlFormatterFactory $formatterFactory
 	) {
 		$this->twig = $twig;
+		$this->baseView = $baseView;
 		$this->leadsMonthModel = $leadsMonthModel;
 		$this->formatterFactory = $formatterFactory;
 	}
@@ -107,7 +114,7 @@ class LeadsMonthView
 
 		$content = $this->twig->render(
 			'html/leads-month.twig',
-			[
+			$this->baseView->getBaseVariables() + [
 				// TODO: title - "Month Year Format lead usage stats"?
 				'breadcrumbs' => $breadcrumbs,
 

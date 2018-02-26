@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\BaseModel;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\AbilityData;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\CounterData;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\ItemData;
@@ -20,6 +21,9 @@ class MovesetPokemonMonthView
 	/** @var Twig_Environment $twig */
 	private $twig;
 
+	/** @var BaseView $baseView */
+	private $baseView;
+
 	/** @var MovesetPokemonMonthModel $movesetPokemonMonthModel */
 	private $movesetPokemonMonthModel;
 
@@ -30,15 +34,18 @@ class MovesetPokemonMonthView
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
+	 * @param BaseView $baseView
 	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		Twig_Environment $twig,
+		BaseView $baseView,
 		MovesetPokemonMonthModel $movesetPokemonMonthModel,
 		IntlFormatterFactory $formatterFactory
 	) {
 		$this->twig = $twig;
+		$this->baseView = $baseView;
 		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
 		$this->formatterFactory = $formatterFactory;
 	}
@@ -280,7 +287,7 @@ class MovesetPokemonMonthView
 
 		$content = $this->twig->render(
 			'html/moveset-pokemon-month.twig',
-			[
+			$this->baseView->getBaseVariables() + [
 				// TODO: title - "Month Year Format Pokémon usage stats"?
 				'breadcrumbs' => $breadcrumbs,
 
