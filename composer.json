@@ -29,6 +29,7 @@
     "require-dev": {
         "vlucas/phpdotenv": "^2.4",
         "filp/whoops": "^2.1",
-        "squizlabs/php_codesniffer": "^3.2"
+        "squizlabs/php_codesniffer": "^3.2",
+        "deployer/deployer": "^6.0"
     }
 }
