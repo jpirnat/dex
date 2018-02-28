@@ -9,17 +9,23 @@ use Psr\Http\Message\ServerRequestInterface;
 
 class MovesetPokemonMonthController
 {
+	/** @var BaseController $baseController */
+	private $baseController;
+
 	/** @var MovesetPokemonMonthModel $movesetPokemonMonthModel */
 	private $movesetPokemonMonthModel;
 
 	/**
 	 * Constructor.
 	 *
+	 * @param BaseController $baseController
 	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
 	 */
 	public function __construct(
+		BaseController $baseController,
 		MovesetPokemonMonthModel $movesetPokemonMonthModel
 	) {
+		$this->baseController = $baseController;
 		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
 	}
 
@@ -34,6 +40,8 @@ class MovesetPokemonMonthController
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{
+		$this->baseController->setBaseVariables($request);
+
 		$year = (int) $request->getAttribute('year');
 		$month = (int) $request->getAttribute('month');
 		$formatIdentifier = $request->getAttribute('formatIdentifier');

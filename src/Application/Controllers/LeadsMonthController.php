@@ -9,17 +9,23 @@ use Psr\Http\Message\ServerRequestInterface;
 
 class LeadsMonthController
 {
+	/** @var BaseController $baseController */
+	private $baseController;
+
 	/** @var LeadsMonthModel $leadsMonthModel */
 	private $leadsMonthModel;
 
 	/**
 	 * Constructor.
 	 *
+	 * @param BaseController $baseController
 	 * @param LeadsMonthModel $leadsMonthModel
 	 */
 	public function __construct(
+		BaseController $baseController,
 		LeadsMonthModel $leadsMonthModel
 	) {
+		$this->baseController = $baseController;
 		$this->leadsMonthModel = $leadsMonthModel;
 	}
 
@@ -33,6 +39,8 @@ class LeadsMonthController
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{
+		$this->baseController->setBaseVariables($request);
+
 		$year = (int) $request->getAttribute('year');
 		$month = (int) $request->getAttribute('month');
 		$formatIdentifier = $request->getAttribute('formatIdentifier');

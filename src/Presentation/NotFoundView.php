@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\BaseModel;
 use Jp\Dex\Application\Models\NotFoundModel;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
