@@ -8,17 +8,23 @@ use Psr\Http\Message\ServerRequestInterface;
 
 class NotFoundController
 {
+	/** @var BaseController $baseController */
+	private $baseController;
+
 	/** @var NotFoundModel $notFoundModel */
 	private $notFoundModel;
 
 	/**
 	 * Constructor.
 	 *
+	 * @param BaseController $baseController
 	 * @param NotFoundModel $notFoundModel
 	 */
 	public function __construct(
+		BaseController $baseController,
 		NotFoundModel $notFoundModel
 	) {
+		$this->baseController = $baseController;
 		$this->notFoundModel = $notFoundModel;
 	}
 
@@ -31,5 +37,6 @@ class NotFoundController
 	 */
 	public function get404(ServerRequestInterface $request) : void
 	{
+		$this->baseController->setBaseVariables($request);
 	}
 }

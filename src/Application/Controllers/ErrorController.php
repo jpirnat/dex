@@ -8,17 +8,23 @@ use Psr\Http\Message\ServerRequestInterface;
 
 class ErrorController
 {
+	/** @var BaseController $baseController */
+	private $baseController;
+
 	/** @var ErrorModel $errorModel */
 	private $errorModel;
 
 	/**
 	 * Constructor.
 	 *
+	 * @param BaseController $baseController
 	 * @param ErrorModel $errorModel
 	 */
 	public function __construct(
+		BaseController $baseController,
 		ErrorModel $errorModel
 	) {
+		$this->baseController = $baseController;
 		$this->errorModel = $errorModel;
 	}
 
@@ -31,5 +37,6 @@ class ErrorController
 	 */
 	public function getError(ServerRequestInterface $request) : void
 	{
+		$this->baseController->setBaseVariables($request);
 	}
 }
