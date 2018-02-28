@@ -17,7 +17,7 @@ set('shared_files', []);
 set('shared_dirs', []);
 
 // Writable dirs by web server
-set('writable_dirs', []);
+set('writable_dirs', ['templates/cache']);
 set('allow_anonymous_stats', false);
 
 // Hosts
@@ -48,6 +48,13 @@ task('deploy', [
     'cleanup',
     'success'
 ]);
+
+task('reload:php-fpm', function () {
+    run('sudo /etc/init.d/php7.2-fpm restart');
+});
+
+after('deploy', 'reload:php-fpm');
+after('rollback', 'reload:php-fpm');
 
 // [Optional] If deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
