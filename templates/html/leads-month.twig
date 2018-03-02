@@ -56,6 +56,8 @@
 							class="number percent-plus"
 						{% elseif pokemon.usageChange < 0 %}
 							class="number percent-minus"
+						{% else %}
+							class="number"
 						{% endif %}
 					>
 						{{ pokemon.usageChangeText|e }}
@@ -67,6 +69,8 @@
 							class="number percent-plus"
 						{% elseif pokemon.rawChange < 0 %}
 							class="number percent-minus"
+						{% else %}
+							class="number"
 						{% endif %}
 					>
 						{{ pokemon.rawChangeText|e }}
