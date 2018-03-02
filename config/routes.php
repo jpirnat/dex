@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 use Jp\Dex\Application\Controllers\AbilitiesController;
+use Jp\Dex\Application\Controllers\ChartsController;
 use Jp\Dex\Application\Controllers\ErrorController;
 use Jp\Dex\Application\Controllers\IndexController;
 use Jp\Dex\Application\Controllers\ItemsController;
@@ -18,6 +19,7 @@ use Jp\Dex\Application\Controllers\UsageMonthController;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Middleware\LanguageMiddleware;
 use Jp\Dex\Presentation\AbilitiesView;
+use Jp\Dex\Presentation\ChartsView;
 use Jp\Dex\Presentation\ErrorView;
 use Jp\Dex\Presentation\IndexView;
 use Jp\Dex\Presentation\ItemsView;
@@ -215,6 +217,28 @@ $routes = [
 		]
 	],
 
+	// Charts
+	['GET', '/stats/charts', [
+		'controllerClass' => ChartsController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => ChartsView::class,
+		'viewMethod' => 'index',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['POST', '/stats/charts', [
+		'controllerClass' => ChartsController::class,
+		'controllerMethod' => 'ajax',
+		'viewClass' => ChartsView::class,
+		'viewMethod' => 'ajax',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
 
 
 	// Errors

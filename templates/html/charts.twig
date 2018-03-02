@@ -1,0 +1,128 @@
+{% extends "html/base.twig" %}
+
+{% block body %}
+	<div class="chart-container">
+		<canvas id="chart-canvas"></canvas>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+
+<script>
+let data = {
+	lines: [
+		{
+			type: 'usage',
+			formatId: 17, // Gen 7 OU
+			rating: 1500,
+			pokemonId: 233 // Porygon2
+		},
+		{
+			type: 'lead-usage',
+			formatId: 17, // Gen 7 OU
+			rating: 1500,
+			pokemonId: 233 // Porygon2
+		},
+		{
+			type: 'ability-usage',
+			formatId: 17, // Gen 7 OU
+			rating: 1500,
+			pokemonId: 233, // Porygon2
+			abilityId: 36 // Trace
+		},
+		{
+			type: 'item-usage',
+			formatId: 17, // Gen 7 OU
+			rating: 1500,
+			pokemonId: 233, // Porygon2
+			itemId: 619 // Eviolite
+		},
+		{
+			type: 'move-usage',
+			formatId: 17, // Gen 7 OU
+			rating: 1500,
+			pokemonId: 233, // Porygon2
+			moveId: 433 // Trick Room
+		}
+	]
+};
+
+fetch('/stats/charts', {
+	method: 'POST',
+	body: JSON.stringify(data),
+	headers: new Headers({
+		'Content-Type': 'application/json'
+	})
+})
+.then(response => response.json())
+.then(function(json) {
+	let ctx = document.getElementById('chart-canvas');
+	let chart = new Chart(ctx, {
+		type: 'line',
+		data: {
+			// datasets: json,
+			datasets: [
+				{
+					label: 'First Dataset',
+					data: [
+						{
+							x: 1,
+							y: 1
+						},
+						{
+							x: 2,
+							y: 1
+						},
+						{
+							x: 3,
+							y: 2
+						}
+					]
+				},
+				{
+					label: 'Second Dataset',
+					data: [
+						{
+							x: 2,
+							y: 5
+						},
+						{
+							x: 3,
+							y: 4
+						},
+						{
+							x: 4,
+							y: 3
+						}
+					]
+				}
+			]
+		},
+		options: {
+			title: {
+				display: true,
+				text: 'Chart Title',
+				fontSize: 16
+			},
+			scales: {
+				xAxes: [
+					{
+						type: 'time',
+						time: {
+							unit: 'month'
+						}
+					}
+				]
+			},
+			tooltips: {
+				mode: 'nearest',
+				intersect: false
+				// TODO: title callback?
+			}
+		}
+	})
+});
+</script>
+{% endblock %}

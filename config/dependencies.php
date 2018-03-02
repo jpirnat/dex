@@ -6,6 +6,7 @@ use Jp\Container\DiceContainer;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Models\AbilitiesModel;
 use Jp\Dex\Application\Models\BaseModel;
+use Jp\Dex\Application\Models\ChartsModel;
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Application\Models\ErrorModel;
 use Jp\Dex\Application\Models\ItemsModel;
@@ -331,6 +332,7 @@ $rule = [
 ];
 $container->dice()->addRule(AbilitiesModel::class, $rule);
 $container->dice()->addRule(BaseModel::class, $rule);
+$container->dice()->addRule(ChartsModel::class, $rule);
 $container->dice()->addRule(DateModel::class, $rule);
 $container->dice()->addRule(ErrorModel::class, $rule);
 $container->dice()->addRule(ItemsModel::class, $rule);
