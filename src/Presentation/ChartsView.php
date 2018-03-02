@@ -75,6 +75,51 @@ class ChartsView
 	 */
 	public function ajax() : ResponseInterface
 	{
-		return new JsonResponse([]);
+		$datasets = [
+			[
+				'label' => 'First Dataset',
+				'data' => [
+					['x' => 1, 'y' => 1],
+					['x' => 2, 'y' => 1],
+					['x' => 3, 'y' => 2],
+				],
+			],
+			[
+				'label' => 'Second Dataset',
+				'data' => [
+					['x' => 2, 'y' => 5],
+					['x' => 3, 'y' => 4],
+					['x' => 4, 'y' => 3],
+				],
+			],
+		];
+
+		return new JsonResponse([
+			'type' => 'line',
+			'data' => [
+				'datasets' => $datasets,
+			],
+			'options' => [
+				'title' => [
+					'display' => true,
+					'text' => 'Chart Title TODO',
+					'fontSize' => 16,
+				],
+				'scales' => [
+					'xAxes' => [
+						[
+							'type' => 'time',
+							'time' => [
+								'unit' => 'month',
+							],
+						],
+					],
+				],
+				'tooltips' => [
+					'mode' => 'nearest',
+					'intersect' => false,
+				],
+			],
+		]);
 	}
 }

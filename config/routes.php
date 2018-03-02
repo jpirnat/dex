@@ -17,6 +17,7 @@ use Jp\Dex\Application\Controllers\StatsIndexController;
 use Jp\Dex\Application\Controllers\UsageController;
 use Jp\Dex\Application\Controllers\UsageMonthController;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
+use Jp\Dex\Application\Middleware\JsonRequestMiddleware;
 use Jp\Dex\Application\Middleware\LanguageMiddleware;
 use Jp\Dex\Presentation\AbilitiesView;
 use Jp\Dex\Presentation\ChartsView;
@@ -237,6 +238,7 @@ $routes = [
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
 			LanguageMiddleware::class,
+			JsonRequestMiddleware::class,
 		],
 	]],
 

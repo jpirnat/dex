@@ -49,6 +49,8 @@ class ChartsController
 	 */
 	public function ajax(ServerRequestInterface $request) : void
 	{
-		$this->chartsModel->setData();
+		$lines = $request->getParsedBody()['lines'] ?? [];		
+
+		$this->chartsModel->setData($lines);
 	}
 }
