@@ -39,16 +39,6 @@ use Jp\Dex\Presentation\UsageView;
 $routes = [
 	// API
 
-	// one pokemon in all ratings.
-	['GET', '/api/stats/usage/format/{formatIdentifier:[-\w]+}/pokemon/{pokemonIdentifier:[-\w]+}', [
-		'controllerClass' => UsageController::class,
-		'controllerMethod' => 'setUsage',
-		'viewClass' => UsageView::class,
-		'viewMethod' => 'getUsage',
-		'middlewareClasses' => [
-		],
-	]],
-
 	// one pokemon in all ratings
 	['GET', '/api/stats/leads/format/{formatIdentifier:[-\w]+}/pokemon/{pokemonIdentifier:[-\w]+}', [
 		'controllerClass' => LeadsController::class,

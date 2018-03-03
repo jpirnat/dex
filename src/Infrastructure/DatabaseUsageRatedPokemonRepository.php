@@ -152,29 +152,33 @@ class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepository
 	}
 
 	/**
-	 * Get usage rated Pokémon records by format and Pokémon.
+	 * Get usage rated Pokémon records by their format, rating, and Pokémon.
+	 * Use this to create a trend line for a Pokémon's usage in a format.
 	 *
 	 * @param FormatId $formatId
+	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
 	 * @return UsageRatedPokemon[]
 	 */
-	public function getByFormatAndPokemon(
+	public function getByFormatAndRatingAndPokemon(
 		FormatId $formatId,
+		int $rating,
 		PokemonId $pokemonId
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
 				`year`,
 				`month`,
-				`rating`,
 				`rank`,
 				`usage_percent`
 			FROM `usage_rated_pokemon`
 			WHERE `format_id` = :format_id
+				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -185,7 +189,7 @@ class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepository
 				$result['year'],
 				$result['month'],
 				$formatId,
-				$result['rating'],
+				$rating,
 				$pokemonId,
 				$result['rank'],
 				(float) $result['usage_percent']
