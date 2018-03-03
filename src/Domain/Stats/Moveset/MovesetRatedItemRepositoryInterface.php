@@ -39,31 +39,19 @@ interface MovesetRatedItemRepositoryInterface
 	) : array;
 
 	/**
-	 * Get moveset rated item records by format and rating and Pokémon.
+	 * Get moveset rated item records by their format, rating, Pokémon, and item.
+	 * Use this to create a trend line for a Pokémon's item usage in a format.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return MovesetRatedItem[]
-	 */
-	public function getByFormatAndRatingAndPokemon(
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId
-	) : array;
-
-	/**
-	 * Get moveset rated item records by format and Pokémon and item.
-	 *
-	 * @param FormatId $formatId
 	 * @param PokemonId $pokemonId
 	 * @param ItemId $itemId
 	 *
 	 * @return MovesetRatedItem[]
 	 */
-	public function getByFormatAndPokemonAndItem(
+	public function getByFormatAndRatingAndPokemonAndItem(
 		FormatId $formatId,
+		int $rating,
 		PokemonId $pokemonId,
 		ItemId $itemId
 	) : array;
