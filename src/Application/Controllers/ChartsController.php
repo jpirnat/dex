@@ -51,6 +51,8 @@ class ChartsController
 	{
 		$lines = $request->getParsedBody()['lines'] ?? [];		
 
-		$this->chartsModel->setData($lines);
+		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
+
+		$this->chartsModel->setData($lines, $languageId);
 	}
 }

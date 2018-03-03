@@ -3,13 +3,25 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
+use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Items\ItemId;
+use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Stats\Trends\AbilityUsageTrendGenerator;
+use Jp\Dex\Stats\Trends\ItemUsageTrendGenerator;
+use Jp\Dex\Stats\Trends\LeadUsageTrendGenerator;
+use Jp\Dex\Stats\Trends\MoveUsageTrendGenerator;
+use Jp\Dex\Stats\Trends\UsageTrendGenerator;
+
 class ChartsModel
 {
 	/** @var UsageTrendGenerator $usageTrendGenerator */
 	private $usageTrendGenerator;
 
-	/** @var LeadsUsageTrendGenerator $leadsUsageTrendGenerator */
-	private $leadsUsageTrendGenerator;
+	/** @var LeadUsageTrendGenerator $leadUsageTrendGenerator */
+	private $leadUsageTrendGenerator;
 
 	/** @var AbilityUsageTrendGenerator $abilityUsageTrendGenerator */
 	private $abilityUsageTrendGenerator;
@@ -24,20 +36,20 @@ class ChartsModel
 	 * Constructor.
 	 *
 	 * @param UsageTrendGenerator $usageTrendGenerator
-	 * @param LeadsUsageTrendGenerator $leadsUsageTrendGenerator
+	 * @param LeadUsageTrendGenerator $leadUsageTrendGenerator
 	 * @param AbilityUsageTrendGenerator $abilityUsageTrendGenerator
 	 * @param ItemUsageTrendGenerator $itemUsageTrendGenerator
 	 * @param MoveUsageTrendGenerator $moveUsageTrendGenerator
 	 */
 	public function __construct(
 		UsageTrendGenerator $usageTrendGenerator,
-		LeadsUsageTrendGenerator $leadsUsageTrendGenerator,
+		LeadUsageTrendGenerator $leadUsageTrendGenerator,
 		AbilityUsageTrendGenerator $abilityUsageTrendGenerator,
 		ItemUsageTrendGenerator $itemUsageTrendGenerator,
 		MoveUsageTrendGenerator $moveUsageTrendGenerator
 	) {
 		$this->usageTrendGenerator = $usageTrendGenerator;
-		$this->leadsUsageTrendGenerator = $leadsUsageTrendGenerator;
+		$this->leadUsageTrendGenerator = $leadUsageTrendGenerator;
 		$this->abilityUsageTrendGenerator = $abilityUsageTrendGenerator;
 		$this->itemUsageTrendGenerator = $itemUsageTrendGenerator;
 		$this->moveUsageTrendGenerator = $moveUsageTrendGenerator;
@@ -47,10 +59,11 @@ class ChartsModel
 	 * Set the data for the requested lines to chart.
 	 *
 	 * @param array $lines
+	 * @param LanguageId $languageId
 	 *
 	 * @return void
 	 */
-	public function setData(array $lines) : void
+	public function setData(array $lines, LanguageId $languageId) : void
 	{
 		foreach ($lines as $line) {
 			// Required parameters for every chart type.
@@ -62,13 +75,14 @@ class ChartsModel
 				continue;
 			}
 
-			$formatId = new FormatId($line['formatId']);
+			$type = $line['type'];
+			$formatId = new FormatId((int) $line['formatId']);
 			$rating = $line['rating'];
-			$pokemonId = new PokemonId($line['pokemonId']);
+			$pokemonId = new PokemonId((int) $line['pokemonId']);
 
 			// The current list of accepted chart types.
 			if ($type !== 'usage'
-				&& $type !== 'leads-usage'
+				&& $type !== 'lead-usage'
 				&& $type !== 'ability-usage'
 				&& $type !== 'item-usage'
 				&& $type !== 'move-usage'
@@ -80,15 +94,17 @@ class ChartsModel
 				$trendLine = $this->usageTrendGenerator->generate(
 					$formatId,
 					$rating,
-					$pokemonId
+					$pokemonId,
+					$languageId
 				);
 			}
 
-			if ($type === 'leads-usage') {
-				$trendLine = $this->leadsUsageTrendGenerator->generate(
+			if ($type === 'lead-usage') {
+				$trendLine = $this->leadUsageTrendGenerator->generate(
 					$formatId,
 					$rating,
-					$pokemonId
+					$pokemonId,
+					$languageId
 				);
 			}
 
@@ -97,13 +113,14 @@ class ChartsModel
 					continue;
 				}
 
-				$abilityId = new AbilityId($line['abilityId']);
+				$abilityId = new AbilityId((int) $line['abilityId']);
 
 				$trendLine = $this->abilityUsageTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
-					$abilityId
+					$abilityId,
+					$languageId
 				);
 			}
 
@@ -112,13 +129,14 @@ class ChartsModel
 					continue;
 				}
 
-				$itemId = new ItemId($line['itemId']);
+				$itemId = new ItemId((int) $line['itemId']);
 
 				$trendLine = $this->itemUsageTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
-					$itemId
+					$itemId,
+					$languageId
 				);
 			}
 
@@ -127,13 +145,14 @@ class ChartsModel
 					continue;
 				}
 
-				$moveId = new MoveId($line['moveId']);
+				$moveId = new MoveId((int) $line['moveId']);
 
 				$trendLine = $this->moveUsageTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
-					$moveId
+					$moveId,
+					$languageId
 				);
 			}
 		}
