@@ -118,63 +118,19 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 	}
 
 	/**
-	 * Get moveset rated ability records by format and rating and Pokémon.
+	 * Get moveset rated ability records by their format, rating, Pokémon, and ability.
+	 * Use this to create a trend line for a Pokémon's ability usage in a format.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return MovesetRatedAbility[]
-	 */
-	public function getByFormatAndRatingAndPokemon(
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId
-	) : array {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`year`,
-				`month`,
-				`ability_id`,
-				`percent`
-			FROM `moveset_rated_abilities`
-			WHERE `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id'
-		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$movesetRatedAbilities = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedAbilities[] = new MovesetRatedAbility(
-				$result['year'],
-				$result['month'],
-				$formatId,
-				$rating,
-				$pokemonId,
-				new AbilityId($result['ability_id']),
-				(float) $result['percent']
-			);
-		}
-
-		return $movesetRatedAbilities;
-	}
-
-	/**
-	 * Get moveset rated ability records by format and Pokémon and ability.
-	 *
-	 * @param FormatId $formatId
 	 * @param PokemonId $pokemonId
 	 * @param AbilityId $abilityId
 	 *
 	 * @return MovesetRatedAbility[]
 	 */
-	public function getByFormatAndPokemonAndAbility(
+	public function getByFormatAndRatingAndPokemonAndAbility(
 		FormatId $formatId,
+		int $rating,
 		PokemonId $pokemonId,
 		AbilityId $abilityId
 	) : array {
@@ -182,14 +138,15 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 			'SELECT
 				`year`,
 				`month`,
-				`rating`,
 				`percent`
 			FROM `moveset_rated_abilities`
 			WHERE `format_id` = :format_id
+				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id
 				AND `ability_id` = :ability_id'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -201,7 +158,7 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 				$result['year'],
 				$result['month'],
 				$formatId,
-				$result['rating'],
+				$rating,
 				$pokemonId,
 				$abilityId,
 				(float) $result['percent']

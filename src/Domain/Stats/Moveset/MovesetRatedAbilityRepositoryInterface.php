@@ -39,31 +39,19 @@ interface MovesetRatedAbilityRepositoryInterface
 	) : array;
 
 	/**
-	 * Get moveset rated ability records by format and rating and Pokémon.
+	 * Get moveset rated ability records by their format, rating, Pokémon, and ability.
+	 * Use this to create a trend line for a Pokémon's ability usage in a format.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return MovesetRatedAbility[]
-	 */
-	public function getByFormatAndRatingAndPokemon(
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId
-	) : array;
-
-	/**
-	 * Get moveset rated ability records by format and Pokémon and ability.
-	 *
-	 * @param FormatId $formatId
 	 * @param PokemonId $pokemonId
 	 * @param AbilityId $abilityId
 	 *
 	 * @return MovesetRatedAbility[]
 	 */
-	public function getByFormatAndPokemonAndAbility(
+	public function getByFormatAndRatingAndPokemonAndAbility(
 		FormatId $formatId,
+		int $rating,
 		PokemonId $pokemonId,
 		AbilityId $abilityId
 	) : array;
