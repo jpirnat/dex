@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Controllers;
 
 use Jp\Dex\Application\Models\ChartsModel;
+use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
 class ChartsController

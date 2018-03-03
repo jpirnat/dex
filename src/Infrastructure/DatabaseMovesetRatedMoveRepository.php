@@ -118,63 +118,19 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 	}
 
 	/**
-	 * Get moveset rated move records by format and rating and Pokémon.
+	 * Get moveset rated move records by their format, rating, Pokémon, and move.
+	 * Use this to create a trend line for a Pokémon's move usage in a format.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return MovesetRatedMove[]
-	 */
-	public function getByFormatAndRatingAndPokemon(
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId
-	) : array {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`year`,
-				`month`,
-				`move_id`,
-				`percent`
-			FROM `moveset_rated_moves`
-			WHERE `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id'
-		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$movesetRatedMoves = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedMoves[] = new MovesetRatedMove(
-				$result['year'],
-				$result['month'],
-				$formatId,
-				$rating,
-				$pokemonId,
-				new MoveId($result['move_id']),
-				(float) $result['percent']
-			);
-		}
-
-		return $movesetRatedMoves;
-	}
-
-	/**
-	 * Get moveset rated move records by format and Pokémon and move.
-	 *
-	 * @param FormatId $formatId
 	 * @param PokemonId $pokemonId
 	 * @param MoveId $moveId
 	 *
 	 * @return MovesetRatedMove[]
 	 */
-	public function getByFormatAndPokemonAndMove(
+	public function getByFormatAndRatingAndPokemonAndMove(
 		FormatId $formatId,
+		int $rating,
 		PokemonId $pokemonId,
 		MoveId $moveId
 	) : array {
@@ -182,14 +138,15 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 			'SELECT
 				`year`,
 				`month`,
-				`rating`,
 				`percent`
 			FROM `moveset_rated_moves`
 			WHERE `format_id` = :format_id
+				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id
 				AND `move_id` = :move_id'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -201,7 +158,7 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 				$result['year'],
 				$result['month'],
 				$formatId,
-				$result['rating'],
+				$rating,
 				$pokemonId,
 				$moveId,
 				(float) $result['percent']

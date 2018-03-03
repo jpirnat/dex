@@ -4,21 +4,16 @@ declare(strict_types=1);
 use Dice\Dice;
 use Jp\Container\DiceContainer;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
-use Jp\Dex\Application\Models\AbilitiesModel;
 use Jp\Dex\Application\Models\BaseModel;
 use Jp\Dex\Application\Models\ChartsModel;
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Application\Models\ErrorModel;
-use Jp\Dex\Application\Models\ItemsModel;
-use Jp\Dex\Application\Models\LeadsModel;
 use Jp\Dex\Application\Models\LeadsMonth\LeadsMonthModel;
 use Jp\Dex\Application\Models\MonthFormats\MonthFormatsModel;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\MovesetPokemonMonthModel;
-use Jp\Dex\Application\Models\MovesModel;
 use Jp\Dex\Application\Models\MoveUsageMonth\MoveUsageMonthModel;
 use Jp\Dex\Application\Models\NotFoundModel;
 use Jp\Dex\Application\Models\StatsIndexModel;
-use Jp\Dex\Application\Models\UsageModel;
 use Jp\Dex\Application\Models\UsageMonth\UsageMonthModel;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
@@ -330,21 +325,16 @@ $container->dice()->addRule(UsageRepositoryInterface::class, $rule);
 $rule = [
 	'shared' => true,
 ];
-$container->dice()->addRule(AbilitiesModel::class, $rule);
 $container->dice()->addRule(BaseModel::class, $rule);
 $container->dice()->addRule(ChartsModel::class, $rule);
 $container->dice()->addRule(DateModel::class, $rule);
 $container->dice()->addRule(ErrorModel::class, $rule);
-$container->dice()->addRule(ItemsModel::class, $rule);
-$container->dice()->addRule(LeadsModel::class, $rule);
 $container->dice()->addRule(LeadsMonthModel::class, $rule);
 $container->dice()->addRule(MonthFormatsModel::class, $rule);
 $container->dice()->addRule(MovesetPokemonMonthModel::class, $rule);
-$container->dice()->addRule(MovesModel::class, $rule);
 $container->dice()->addRule(MoveUsageMonthModel::class, $rule);
 $container->dice()->addRule(NotFoundModel::class, $rule);
 $container->dice()->addRule(StatsIndexModel::class, $rule);
-$container->dice()->addRule(UsageModel::class, $rule);
 $container->dice()->addRule(UsageMonthModel::class, $rule);
 
 // Shared repositories
