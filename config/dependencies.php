@@ -6,7 +6,6 @@ use Jp\Container\DiceContainer;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Models\AbilityUsageMonth\AbilityUsageMonthModel;
 use Jp\Dex\Application\Models\BaseModel;
-use Jp\Dex\Application\Models\ChartsModel;
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Application\Models\ErrorModel;
 use Jp\Dex\Application\Models\ItemUsageMonth\ItemUsageMonthModel;
@@ -16,6 +15,7 @@ use Jp\Dex\Application\Models\MovesetPokemonMonth\MovesetPokemonMonthModel;
 use Jp\Dex\Application\Models\MoveUsageMonth\MoveUsageMonthModel;
 use Jp\Dex\Application\Models\NotFoundModel;
 use Jp\Dex\Application\Models\StatsIndexModel;
+use Jp\Dex\Application\Models\TrendChartModel;
 use Jp\Dex\Application\Models\UsageMonth\UsageMonthModel;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
@@ -339,7 +339,6 @@ $rule = [
 ];
 $container->dice()->addRule(AbilityUsageMonthModel::class, $rule);
 $container->dice()->addRule(BaseModel::class, $rule);
-$container->dice()->addRule(ChartsModel::class, $rule);
 $container->dice()->addRule(DateModel::class, $rule);
 $container->dice()->addRule(ErrorModel::class, $rule);
 $container->dice()->addRule(ItemUsageMonthModel::class, $rule);
@@ -349,6 +348,7 @@ $container->dice()->addRule(MovesetPokemonMonthModel::class, $rule);
 $container->dice()->addRule(MoveUsageMonthModel::class, $rule);
 $container->dice()->addRule(NotFoundModel::class, $rule);
 $container->dice()->addRule(StatsIndexModel::class, $rule);
+$container->dice()->addRule(TrendChartModel::class, $rule);
 $container->dice()->addRule(UsageMonthModel::class, $rule);
 
 // Shared repositories

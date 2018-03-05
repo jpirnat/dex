@@ -2,7 +2,6 @@
 declare(strict_types=1);
 
 use Jp\Dex\Application\Controllers\AbilityUsageMonthController;
-use Jp\Dex\Application\Controllers\ChartsController;
 use Jp\Dex\Application\Controllers\ErrorController;
 use Jp\Dex\Application\Controllers\IndexController;
 use Jp\Dex\Application\Controllers\ItemUsageMonthController;
@@ -12,12 +11,12 @@ use Jp\Dex\Application\Controllers\MovesetPokemonMonthController;
 use Jp\Dex\Application\Controllers\MoveUsageMonthController;
 use Jp\Dex\Application\Controllers\NotFoundController;
 use Jp\Dex\Application\Controllers\StatsIndexController;
+use Jp\Dex\Application\Controllers\TrendChartController;
 use Jp\Dex\Application\Controllers\UsageMonthController;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Middleware\JsonRequestMiddleware;
 use Jp\Dex\Application\Middleware\LanguageMiddleware;
 use Jp\Dex\Presentation\AbilityUsageMonthView;
-use Jp\Dex\Presentation\ChartsView;
 use Jp\Dex\Presentation\ErrorView;
 use Jp\Dex\Presentation\IndexView;
 use Jp\Dex\Presentation\ItemUsageMonthView;
@@ -27,6 +26,7 @@ use Jp\Dex\Presentation\MovesetPokemonMonthView;
 use Jp\Dex\Presentation\MoveUsageMonthView;
 use Jp\Dex\Presentation\NotFoundView;
 use Jp\Dex\Presentation\StatsIndexView;
+use Jp\Dex\Presentation\TrendChartView;
 use Jp\Dex\Presentation\UsageMonthView;
 
 // Route definitions.
@@ -159,10 +159,10 @@ $routes = [
 	],
 
 	// Charts
-	['GET', '/stats/charts', [
-		'controllerClass' => ChartsController::class,
+	['GET', '/stats/trends/chart', [
+		'controllerClass' => TrendChartController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => ChartsView::class,
+		'viewClass' => TrendChartView::class,
 		'viewMethod' => 'index',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
@@ -170,10 +170,10 @@ $routes = [
 		],
 	]],
 
-	['POST', '/stats/charts', [
-		'controllerClass' => ChartsController::class,
+	['POST', '/stats/trends/chart', [
+		'controllerClass' => TrendChartController::class,
 		'controllerMethod' => 'ajax',
-		'viewClass' => ChartsView::class,
+		'viewClass' => TrendChartView::class,
 		'viewMethod' => 'ajax',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,

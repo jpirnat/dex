@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\ChartsModel;
+use Jp\Dex\Application\Models\TrendChartModel;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
 use Zend\Diactoros\Response;
 use Zend\Diactoros\Response\JsonResponse;
 
-class ChartsView
+class TrendChartView
 {
 	/** @var Twig_Environment $twig */
 	private $twig;
@@ -17,28 +17,28 @@ class ChartsView
 	/** @var BaseView $baseView */
 	private $baseView;
 
-	/** @var ChartsModel $chartsModel */
-	private $chartsModel;
+	/** @var TrendChartModel $trendChartModel */
+	private $trendChartModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
 	 * @param BaseView $baseView
-	 * @param ChartsModel $chartsModel
+	 * @param TrendChartModel $trendChartModel
 	 */
 	public function __construct(
 		Twig_Environment $twig,
 		BaseView $baseView,
-		ChartsModel $chartsModel
+		TrendChartModel $trendChartModel
 	) {
 		$this->twig = $twig;
 		$this->baseView = $baseView;
-		$this->chartsModel = $chartsModel;
+		$this->trendChartModel = $trendChartModel;
 	}
 
 	/**
-	 * Show the /stats/charts page.
+	 * Show the /stats/trends/chart page.
 	 *
 	 * @return ResponseInterface
 	 */
@@ -51,14 +51,19 @@ class ChartsView
 				'text' => 'Stats',
 			],
 			[
-				'text' => 'Charts',
+				// TODO: url
+				'text' => 'Trends',
+			],
+			[
+				// TODO: text: chart title.
+				'text' => 'Chart',
 			]
 		];
 
 		$content = $this->twig->render(
-			'html/charts.twig',
+			'html/trend-chart.twig',
 			$this->baseView->getBaseVariables() + [
-				'title' => 'Porydex - Stats - Saved Charts',
+				'title' => 'Porydex - Stats - Trends - Chart',
 				'breadcrumbs' => $breadcrumbs,
 			]
 		);
@@ -69,7 +74,7 @@ class ChartsView
 	}
 
 	/**
-	 * Set data for the /stats/charts page.
+	 * Set data for the /stats/trends/chart page.
 	 *
 	 * @return ResponseInterface
 	 */

@@ -3,34 +3,34 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\ChartsModel;
+use Jp\Dex\Application\Models\TrendChartModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class ChartsController
+class TrendChartController
 {
 	/** @var BaseController $baseController */
 	private $baseController;
 
-	/** @var ChartsModel $chartsModel */
-	private $chartsModel;
+	/** @var TrendChartModel $trendChartModel */
+	private $trendChartModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param BaseController $baseController
-	 * @param ChartsModel $chartsModel
+	 * @param TrendChartModel $trendChartModel
 	 */
 	public function __construct(
 		BaseController $baseController,
-		ChartsModel $chartsModel
+		TrendChartModel $trendChartModel
 	) {
 		$this->baseController = $baseController;
-		$this->chartsModel = $chartsModel;
+		$this->trendChartModel = $trendChartModel;
 	}
 
 	/**
-	 * Show the /stats/charts page.
+	 * Show the /stats/trends/chart page.
 	 *
 	 * @param ServerRequestInterface $request
 	 *
@@ -42,7 +42,7 @@ class ChartsController
 	}
 
 	/**
-	 * Set data for the /stats/charts page.
+	 * Set data for the /stats/trends/chart page.
 	 *
 	 * @param ServerRequestInterface $request
 	 *
@@ -54,6 +54,6 @@ class ChartsController
 
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->chartsModel->setData($lines, $languageId);
+		$this->trendChartModel->setData($lines, $languageId);
 	}
 }

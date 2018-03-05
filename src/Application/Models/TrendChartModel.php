@@ -15,13 +15,22 @@ use Jp\Dex\Stats\Trends\LeadUsageTrendGenerator;
 use Jp\Dex\Stats\Trends\MoveUsageTrendGenerator;
 use Jp\Dex\Stats\Trends\UsageTrendGenerator;
 
-class ChartsModel
+class TrendChartModel
 {
 	/** @var UsageTrendGenerator $usageTrendGenerator */
 	private $usageTrendGenerator;
 
 	/** @var LeadUsageTrendGenerator $leadUsageTrendGenerator */
 	private $leadUsageTrendGenerator;
+
+	/** @var MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator */
+	private $movesetAbilityTrendGenerator;
+
+	/** @var MovesetItemTrendGenerator $movesetItemTrendGenerator */
+	private $movesetItemTrendGenerator;
+
+	/** @var MovesetMoveTrendGenerator $movesetMoveTrendGenerator */
+	private $movesetMoveTrendGenerator;
 
 	/** @var AbilityUsageTrendGenerator $abilityUsageTrendGenerator */
 	private $abilityUsageTrendGenerator;
@@ -77,7 +86,7 @@ class ChartsModel
 
 			$type = $line['type'];
 			$formatId = new FormatId((int) $line['formatId']);
-			$rating = $line['rating'];
+			$rating = (int) $line['rating'];
 			$pokemonId = new PokemonId((int) $line['pokemonId']);
 
 			// The current list of accepted chart types.
