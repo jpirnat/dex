@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Stats\Usage;
+namespace Jp\Dex\Domain\Stats\Usage\Derived;
 
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
@@ -16,7 +16,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidYearException;
  * This class holds data derived from the join of a usage rated Pokémon record
  * and a moveset rated move record. The $pokemonPercent property should come
  * from `usage_rated_pokemon`.`usage_percent`. The $movePercent property should
- * come from `moveset_rated_move`.`percent`. The $usagePercent property should
+ * come from `moveset_rated_moves`.`percent`. The $usagePercent property should
  * be those two values multiplied together (and divided by 100 to keep it a
  * percent).
  */

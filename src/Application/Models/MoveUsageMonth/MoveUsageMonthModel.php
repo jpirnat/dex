@@ -13,7 +13,7 @@ use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 
 class MoveUsageMonthModel
