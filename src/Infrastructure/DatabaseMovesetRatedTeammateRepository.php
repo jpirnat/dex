@@ -109,7 +109,7 @@ class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepo
 		$movesetRatedTeammates = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedTeammates[$result['teammate_id']] = new MovesetRatedTeammate(
+			$movesetRatedTeammate = new MovesetRatedTeammate(
 				$year,
 				$month,
 				$formatId,
@@ -118,6 +118,8 @@ class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepo
 				new PokemonId($result['teammate_id']),
 				(float) $result['percent']
 			);
+
+			$movesetRatedTeammates[$result['teammate_id']] = $movesetRatedTeammate;
 		}
 
 		return $movesetRatedTeammates;

@@ -103,7 +103,7 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 		$movesetRatedMoves = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedMoves[$result['move_id']] = new MovesetRatedMove(
+			$movesetRatedMove = new MovesetRatedMove(
 				$year,
 				$month,
 				$formatId,
@@ -112,6 +112,8 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 				new MoveId($result['move_id']),
 				(float) $result['percent']
 			);
+
+			$movesetRatedMoves[$result['move_id']] = $movesetRatedMove;
 		}
 
 		return $movesetRatedMoves;
@@ -158,7 +160,7 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 		$movesetRatedMoves = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedMoves[$result['year']][$result['month']] = new MovesetRatedMove(
+			$movesetRatedMove = new MovesetRatedMove(
 				$result['year'],
 				$result['month'],
 				$formatId,
@@ -167,6 +169,8 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 				$moveId,
 				(float) $result['percent']
 			);
+
+			$movesetRatedMoves[$result['year']][$result['month']] = $movesetRatedMove;
 		}
 
 		return $movesetRatedMoves;

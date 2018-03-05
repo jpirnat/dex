@@ -119,7 +119,7 @@ class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterReposi
 		$movesetRatedCounters = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedCounters[$result['counter_id']] = new MovesetRatedCounter(
+			$movesetRatedCounter = new MovesetRatedCounter(
 				$year,
 				$month,
 				$formatId,
@@ -132,6 +132,8 @@ class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterReposi
 				(float) $result['percent_knocked_out'],
 				(float) $result['percent_switched_out']
 			);
+
+			$movesetRatedCounters[$result['counter_id']] = $movesetRatedCounter;
 		}
 
 		return $movesetRatedCounters;

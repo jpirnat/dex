@@ -73,7 +73,7 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 		$usageRatedPokemonAbilities = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$usageRatedPokemonAbilities[$result['pokemon_id']] = new UsageRatedPokemonAbility(
+			$usageRatedPokemonAbility = new UsageRatedPokemonAbility(
 				$year,
 				$month,
 				$formatId,
@@ -84,6 +84,8 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 				(float) $result['ability_percent'],
 				(float) $result['usage_percent']
 			);
+
+			$usageRatedPokemonAbilities[$result['pokemon_id']] = $usageRatedPokemonAbility;
 		}
 
 		return $usageRatedPokemonAbilities;
@@ -124,8 +126,8 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 				AND `u`.`pokemon_id` = :pokemon_id
 				AND `m`.`ability_id` = :ability_id
 			ORDER BY
-				`u`.`year`,
-				`u`.`month`'
+				`u`.`year` ASC,
+				`u`.`month` ASC'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -136,7 +138,7 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 		$usageRatedPokemonAbilities = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$usageRatedPokemonAbilities[$result['year']][$result['month']] = new UsageRatedPokemonAbility(
+			$usageRatedPokemonAbility = new UsageRatedPokemonAbility(
 				$result['year'],
 				$result['month'],
 				$formatId,
@@ -147,6 +149,8 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 				(float) $result['ability_percent'],
 				(float) $result['usage_percent']
 			);
+
+			$usageRatedPokemonAbilities[$result['year']][$result['month']] = $usageRatedPokemonAbility;
 		}
 
 		return $usageRatedPokemonAbilities;

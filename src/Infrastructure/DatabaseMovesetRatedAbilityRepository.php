@@ -103,7 +103,7 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 		$movesetRatedAbilities = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedAbilities[$result['ability_id']] = new MovesetRatedAbility(
+			$movesetRatedAbility = new MovesetRatedAbility(
 				$year,
 				$month,
 				$formatId,
@@ -112,6 +112,8 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 				new AbilityId($result['ability_id']),
 				(float) $result['percent']
 			);
+
+			$movesetRatedAbilities[$result['ability_id']] = $movesetRatedAbility;
 		}
 
 		return $movesetRatedAbilities;
@@ -120,13 +122,14 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 	/**
 	 * Get moveset rated ability records by their format, rating, Pokémon, and ability.
 	 * Use this to create a trend line for a Pokémon's ability usage in a format.
+	 * Indexed and sorted by year then month.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param AbilityId $abilityId
 	 *
-	 * @return MovesetRatedAbility[]
+	 * @return MovesetRatedAbility[][]
 	 */
 	public function getByFormatAndRatingAndPokemonAndAbility(
 		FormatId $formatId,
@@ -143,7 +146,10 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 			WHERE `format_id` = :format_id
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id
-				AND `ability_id` = :ability_id'
+				AND `ability_id` = :ability_id
+			ORDER BY
+				`year` ASC,
+				`month` ASC'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -154,7 +160,7 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 		$movesetRatedAbilities = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedAbilities[] = new MovesetRatedAbility(
+			$movesetRatedAbility = new MovesetRatedAbility(
 				$result['year'],
 				$result['month'],
 				$formatId,
@@ -163,6 +169,8 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 				$abilityId,
 				(float) $result['percent']
 			);
+
+			$movesetRatedAbilities[$result['year']][$result['month']] = $movesetRatedAbility;
 		}
 
 		return $movesetRatedAbilities;

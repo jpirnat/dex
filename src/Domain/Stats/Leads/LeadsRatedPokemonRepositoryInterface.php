@@ -57,12 +57,13 @@ interface LeadsRatedPokemonRepositoryInterface
 	/**
 	 * Get leads rated Pokémon records by their format, rating, and Pokémon.
 	 * Use this to create a trend line for a Pokémon's lead usage in a format.
+	 * Indexed and sorted by year then month.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
-	 * @return LeadsRatedPokemon[]
+	 * @return LeadsRatedPokemon[][]
 	 */
 	public function getByFormatAndRatingAndPokemon(
 		FormatId $formatId,

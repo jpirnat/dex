@@ -154,12 +154,13 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 	/**
 	 * Get leads rated Pokémon records by their format, rating, and Pokémon.
 	 * Use this to create a trend line for a Pokémon's lead usage in a format.
+	 * Indexed and sorted by year then month.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
-	 * @return LeadsRatedPokemon[]
+	 * @return LeadsRatedPokemon[][]
 	 */
 	public function getByFormatAndRatingAndPokemon(
 		FormatId $formatId,
@@ -175,7 +176,10 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 			FROM `leads_rated_pokemon`
 			WHERE `format_id` = :format_id
 				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id'
+				AND `pokemon_id` = :pokemon_id
+			ORDER BY
+				`year` ASC,
+				`month` ASC'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -195,7 +199,7 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 				(float) $result['usage_percent']
 			);
 
-			$leadsRatedPokemons[] = $leadsRatedPokemon;
+			$leadsRatedPokemons[$result['year']][$result['month']] = $leadsRatedPokemon;
 		}
 
 		return $leadsRatedPokemons;

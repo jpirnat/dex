@@ -103,7 +103,7 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 		$movesetRatedItems = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedItems[$result['item_id']] = new MovesetRatedItem(
+			$movesetRatedItem = new MovesetRatedItem(
 				$year,
 				$month,
 				$formatId,
@@ -112,6 +112,8 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 				new ItemId($result['item_id']),
 				(float) $result['percent']
 			);
+
+			$movesetRatedItems[$result['item_id']] = $movesetRatedItem;
 		}
 
 		return $movesetRatedItems;
@@ -120,13 +122,14 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 	/**
 	 * Get moveset rated item records by their format, rating, Pokémon, and item.
 	 * Use this to create a trend line for a Pokémon's item usage in a format.
+	 * Indexed and sorted by year then month.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param ItemId $itemId
 	 *
-	 * @return MovesetRatedItem[]
+	 * @return MovesetRatedItem[][]
 	 */
 	public function getByFormatAndRatingAndPokemonAndItem(
 		FormatId $formatId,
@@ -143,7 +146,10 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 			WHERE `format_id` = :format_id
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id
-				AND `item_id` = :item_id'
+				AND `item_id` = :item_id
+			ORDER BY
+				`year` ASC,
+				`month` ASC'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -154,7 +160,7 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 		$movesetRatedItems = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedItems[] = new MovesetRatedItem(
+			$movesetRatedItem = new MovesetRatedItem(
 				$result['year'],
 				$result['month'],
 				$formatId,
@@ -163,6 +169,8 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 				$itemId,
 				(float) $result['percent']
 			);
+
+			$movesetRatedItems[$result['year']][$result['month']] = $movesetRatedItem;
 		}
 
 		return $movesetRatedItems;

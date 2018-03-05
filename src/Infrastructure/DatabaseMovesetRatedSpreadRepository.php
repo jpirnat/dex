@@ -140,7 +140,7 @@ class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadReposito
 			$evSpread->add(new StatValue(new StatId(StatId::SPECIAL_DEFENSE), $result['spd']));
 			$evSpread->add(new StatValue(new StatId(StatId::SPEED), $result['spe']));
 
-			$movesetRatedSpreads[] = new MovesetRatedSpread(
+			$movesetRatedSpread = new MovesetRatedSpread(
 				$year,
 				$month,
 				$formatId,
@@ -150,6 +150,8 @@ class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadReposito
 				$evSpread,
 				(float) $result['percent']
 			);
+
+			$movesetRatedSpreads[] = $movesetRatedSpread;
 		}
 
 		return $movesetRatedSpreads;
