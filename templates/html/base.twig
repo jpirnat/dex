@@ -24,7 +24,7 @@
 									<li><a href="/">Home</a></li>
 								{% endif %}
 
-								{% if not loop.last %}
+								{% if breadcrumb.url %}
 									<li><a href="{{ breadcrumb.url|e }}">{{ breadcrumb.text|e }}</a></li>
 								{% else %}
 									<li><span class="current">{{ breadcrumb.text|e }}</span></li>

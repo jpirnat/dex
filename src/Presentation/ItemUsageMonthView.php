@@ -100,6 +100,10 @@ class ItemUsageMonthView
 				'text' => 'Usage',
 			],
 			[
+				// TODO: url
+				'text' => 'Items',
+			],
+			[
 				'text' => $this->itemUsageMonthModel->getItemName()->getName(),
 			],
 		];

@@ -100,6 +100,10 @@ class AbilityUsageMonthView
 				'text' => 'Usage',
 			],
 			[
+				// TODO: url
+				'text' => 'Abilities',
+			],
+			[
 				'text' => $this->abilityUsageMonthModel->getAbilityName()->getName(),
 			],
 		];

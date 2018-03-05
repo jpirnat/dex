@@ -100,6 +100,10 @@ class MoveUsageMonthView
 				'text' => 'Usage',
 			],
 			[
+				// TODO: url
+				'text' => 'Moves',
+			],
+			[
 				'text' => $this->moveUsageMonthModel->getMoveName()->getName(),
 			],
 		];
