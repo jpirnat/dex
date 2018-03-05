@@ -88,4 +88,69 @@ class DatabaseUsageRatedPokemonMoveRepository implements UsageRatedPokemonMoveRe
 
 		return $usageRatedPokemonMoves;
 	}
+
+	/**
+	 * Get usage rated Pokémon move records by their format, rating, Pokémon,
+	 * and move. Use this to create a trend line for the usage of a specific
+	 * Pokémon with a specific move. Indexed and sorted by year then month.
+	 *
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 * @param MoveId $moveId
+	 *
+	 * @return UsageRatedPokemonMove[][]
+	 */
+	public function getByFormatAndRatingAndPokemonAndMove(
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId,
+		MoveId $moveId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`u`.`year`,
+				`u`.`month`,
+				`u`.`usage_percent` AS `pokemon_percent`,
+				`m`.`percent` AS `move_percent`,
+				`u`.`usage_percent` * `m`.`percent` / 100 AS `usage_percent`
+			FROM `usage_rated_pokemon` AS `u`
+			INNER JOIN `moveset_rated_moves` AS `m`
+				ON `u`.`year` = `m`.`year`
+				AND `u`.`month` = `m`.`month`
+				AND `u`.`format_id` = `m`.`format_id`
+				AND `u`.`rating` = `m`.`rating`
+				AND `u`.`pokemon_id` = `m`.`pokemon_id`
+			WHERE `u`.`format_id` = :format_id
+				AND `u`.`rating` = :rating
+				AND `u`.`pokemon_id` = :pokemon_id
+				AND `m`.`move_id` = :move_id
+			ORDER BY
+				`u`.`year`,
+				`u`.`month`'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$usageRatedPokemonMoves = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$usageRatedPokemonMoves[$result['year']][$result['month']] = new UsageRatedPokemonMove(
+				$result['year'],
+				$result['month'],
+				$formatId,
+				$rating,
+				$pokemonId,
+				(float) $result['pokemon_percent'],
+				$moveId,
+				(float) $result['move_percent'],
+				(float) $result['usage_percent']
+			);
+		}
+
+		return $usageRatedPokemonMoves;
+	}
 }

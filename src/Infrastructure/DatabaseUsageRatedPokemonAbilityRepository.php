@@ -88,4 +88,67 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 
 		return $usageRatedPokemonAbilities;
 	}
+
+	/**
+	 * Get usage rated Pokémon ability records by their format, rating, Pokémon,
+	 * and ability. Use this to create a trend line for the usage of a specific
+	 * Pokémon with a specific ability. Indexed and sorted by year then month.
+	 *
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 * @param AbilityId $abilityId
+	 *
+	 * @return UsageRatedPokemonAbility[][]
+	 */
+	public function getByFormatAndRatingAndPokemonAndAbility(
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId,
+		AbilityId $abilityId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`u`.`usage_percent` AS `pokemon_percent`,
+				`m`.`percent` AS `ability_percent`,
+				`u`.`usage_percent` * `m`.`percent` / 100 AS `usage_percent`
+			FROM `usage_rated_pokemon` AS `u`
+			INNER JOIN `moveset_rated_abilities` AS `m`
+				ON `u`.`year` = `m`.`year`
+				AND `u`.`month` = `m`.`month`
+				AND `u`.`format_id` = `m`.`format_id`
+				AND `u`.`rating` = `m`.`rating`
+				AND `u`.`pokemon_id` = `m`.`pokemon_id`
+			WHERE `u`.`format_id` = :format_id
+				AND `u`.`rating` = :rating
+				AND `u`.`pokemon_id` = :pokemon_id
+				AND `m`.`ability_id` = :ability_id
+			ORDER BY
+				`u`.`year`,
+				`u`.`month`'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$usageRatedPokemonAbilities = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$usageRatedPokemonAbilities[$result['year']][$result['month']] = new UsageRatedPokemonAbility(
+				$result['year'],
+				$result['month'],
+				$formatId,
+				$rating,
+				$pokemonId,
+				(float) $result['pokemon_percent'],
+				$abilityId,
+				(float) $result['ability_percent'],
+				(float) $result['usage_percent']
+			);
+		}
+
+		return $usageRatedPokemonAbilities;
+	}
 }

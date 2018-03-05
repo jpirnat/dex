@@ -120,13 +120,14 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 	/**
 	 * Get moveset rated move records by their format, rating, Pokémon, and move.
 	 * Use this to create a trend line for a Pokémon's move usage in a format.
+	 * Indexed and sorted by year then month.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param MoveId $moveId
 	 *
-	 * @return MovesetRatedMove[]
+	 * @return MovesetRatedMove[][]
 	 */
 	public function getByFormatAndRatingAndPokemonAndMove(
 		FormatId $formatId,
@@ -143,7 +144,10 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 			WHERE `format_id` = :format_id
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id
-				AND `move_id` = :move_id'
+				AND `move_id` = :move_id
+			ORDER BY
+				`year` ASC,
+				`month` ASC'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -154,7 +158,7 @@ class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryIn
 		$movesetRatedMoves = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedMoves[] = new MovesetRatedMove(
+			$movesetRatedMoves[$result['year']][$result['month']] = new MovesetRatedMove(
 				$result['year'],
 				$result['month'],
 				$formatId,
