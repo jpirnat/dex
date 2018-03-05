@@ -4,10 +4,12 @@ declare(strict_types=1);
 use Dice\Dice;
 use Jp\Container\DiceContainer;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
+use Jp\Dex\Application\Models\AbilityUsageMonth\AbilityUsageMonthModel;
 use Jp\Dex\Application\Models\BaseModel;
 use Jp\Dex\Application\Models\ChartsModel;
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Application\Models\ErrorModel;
+use Jp\Dex\Application\Models\ItemUsageMonth\ItemUsageMonthModel;
 use Jp\Dex\Application\Models\LeadsMonth\LeadsMonthModel;
 use Jp\Dex\Application\Models\MonthFormats\MonthFormatsModel;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\MovesetPokemonMonthModel;
@@ -335,10 +337,12 @@ $container->dice()->addRule(UsageRepositoryInterface::class, $rule);
 $rule = [
 	'shared' => true,
 ];
+$container->dice()->addRule(AbilityUsageMonthModel::class, $rule);
 $container->dice()->addRule(BaseModel::class, $rule);
 $container->dice()->addRule(ChartsModel::class, $rule);
 $container->dice()->addRule(DateModel::class, $rule);
 $container->dice()->addRule(ErrorModel::class, $rule);
+$container->dice()->addRule(ItemUsageMonthModel::class, $rule);
 $container->dice()->addRule(LeadsMonthModel::class, $rule);
 $container->dice()->addRule(MonthFormatsModel::class, $rule);
 $container->dice()->addRule(MovesetPokemonMonthModel::class, $rule);

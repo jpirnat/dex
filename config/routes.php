@@ -1,9 +1,11 @@
 <?php
 declare(strict_types=1);
 
+use Jp\Dex\Application\Controllers\AbilityUsageMonthController;
 use Jp\Dex\Application\Controllers\ChartsController;
 use Jp\Dex\Application\Controllers\ErrorController;
 use Jp\Dex\Application\Controllers\IndexController;
+use Jp\Dex\Application\Controllers\ItemUsageMonthController;
 use Jp\Dex\Application\Controllers\LeadsMonthController;
 use Jp\Dex\Application\Controllers\MonthFormatsController;
 use Jp\Dex\Application\Controllers\MovesetPokemonMonthController;
@@ -14,9 +16,11 @@ use Jp\Dex\Application\Controllers\UsageMonthController;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Middleware\JsonRequestMiddleware;
 use Jp\Dex\Application\Middleware\LanguageMiddleware;
+use Jp\Dex\Presentation\AbilityUsageMonthView;
 use Jp\Dex\Presentation\ChartsView;
 use Jp\Dex\Presentation\ErrorView;
 use Jp\Dex\Presentation\IndexView;
+use Jp\Dex\Presentation\ItemUsageMonthView;
 use Jp\Dex\Presentation\LeadsMonthView;
 use Jp\Dex\Presentation\MonthFormatsView;
 use Jp\Dex\Presentation\MovesetPokemonMonthView;
@@ -111,7 +115,37 @@ $routes = [
 
 	[
 		'GET',
-		'/stats/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}/move-usage/{moveIdentifier:[-\w]+}',
+		'/stats/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}/abilities/{abilityIdentifier:[-\w]+}',
+		[
+			'controllerClass' => AbilityUsageMonthController::class,
+			'controllerMethod' => 'setData',
+			'viewClass' => AbilityUsageMonthView::class,
+			'viewMethod' => 'getData',
+			'middlewareClasses' => [
+				HtmlErrorMiddleware::class,
+				LanguageMiddleware::class,
+			],
+		]
+	],
+
+	[
+		'GET',
+		'/stats/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}/items/{itemIdentifier:[-\w]+}',
+		[
+			'controllerClass' => ItemUsageMonthController::class,
+			'controllerMethod' => 'setData',
+			'viewClass' => ItemUsageMonthView::class,
+			'viewMethod' => 'getData',
+			'middlewareClasses' => [
+				HtmlErrorMiddleware::class,
+				LanguageMiddleware::class,
+			],
+		]
+	],
+
+	[
+		'GET',
+		'/stats/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}/moves/{moveIdentifier:[-\w]+}',
 		[
 			'controllerClass' => MoveUsageMonthController::class,
 			'controllerMethod' => 'setData',

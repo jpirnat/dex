@@ -1,0 +1,52 @@
+{% extends "html/base.twig" %}
+
+{% block body %}
+	<div class="month-control">
+		{% if showPrevMonthLink %}
+			<div class="button prev">
+				<a href="/stats/{{ prevYear|e }}/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/abilities/{{ abilityIdentifier|e }}">
+					&#9668; {{ prevMonthText|e }}
+				</a>
+			</div>
+		{% endif %}
+
+		<div class="space"></div>
+
+		{% if showNextMonthLink %}
+			<div class="button next">
+				<a href="/stats/{{ nextYear|e }}/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/abilities/{{ abilityIdentifier|e }}">
+					{{ nextMonthText|e }} &#9658;
+				</a>
+			</div>
+		{% endif %}
+	</div>
+
+	<table class="pokemon-usage">
+		<thead>
+			<tr>
+				<th></th>
+				<th class="pokemon-name">Pokémon</th>
+				<th>Pokémon %</th>
+				<th>Ability %</th>
+				<th>Usage %</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for pokemon in data %}
+				<tr>
+					<td>
+						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
+					</td>
+					<td>
+						<a href="/stats/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemon.identifier|e }}">
+							{{ pokemon.name|e }}
+						</a>
+					</td>
+					<td class="number">{{ pokemon.pokemonPercent|e }}</td>
+					<td class="number">{{ pokemon.abilityPercent|e }}</td>
+					<td class="number">{{ pokemon.usagePercent|e }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
