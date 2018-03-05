@@ -51,6 +51,8 @@ use Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonAbilityRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonItemRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
@@ -94,6 +96,8 @@ use Jp\Dex\Infrastructure\DatabaseTypeIconRepository;
 use Jp\Dex\Infrastructure\DatabaseTypeRepository;
 use Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageQueries;
+use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonAbilityRepository;
+use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonItemRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonMoveRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedQueries;
@@ -304,6 +308,12 @@ $container->dice()->addRule(UsagePokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseUsageQueries::class];
 $container->dice()->addRule(UsageQueriesInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseUsageRatedPokemonAbilityRepository::class];
+$container->dice()->addRule(UsageRatedPokemonAbilityRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseUsageRatedPokemonItemRepository::class];
+$container->dice()->addRule(UsageRatedPokemonItemRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseUsageRatedPokemonMoveRepository::class];
 $container->dice()->addRule(UsageRatedPokemonMoveRepositoryInterface::class, $rule);

@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Stats\Trends;
 
-use Jp\Dex\Domain\Items\ItemId;
-use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
+use Jp\Dex\Domain\Items\ItemId;
+use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
