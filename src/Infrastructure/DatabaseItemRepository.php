@@ -27,6 +27,55 @@ class DatabaseItemRepository implements ItemRepositoryInterface
 	}
 
 	/**
+	 * Get an item by its id.
+	 *
+	 * @param ItemId $itemId
+	 *
+	 * @throws ItemNotFoundException if no item exists with this id.
+	 *
+	 * @return Item
+	 */
+	public function getById(ItemId $itemId) : Item
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`identifier`,
+				`introduced_in_version_group_id`,
+				`item_fling_power`,
+				`item_fling_effect_id`
+			FROM `items`
+			WHERE `id` = :item_id
+			LIMIT 1'
+		);
+		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			throw new ItemNotFoundException(
+				'No item exists with id ' . $itemId->value() . '.'
+			);
+		}
+
+		if ($result['item_fling_effect_id'] !== null) {
+			$itemFlingEffectId = new ItemFlingEffectId($result['item_fling_effect_id']);
+		} else {
+			// The item has no fling effect.
+			$itemFlingEffectId = null;
+		}
+
+		$item = new Item(
+			$itemId,
+			$result['identifier'],
+			new VersionGroupId($result['introduced_in_version_group_id']),
+			$result['item_fling_power'],
+			$itemFlingEffectId
+		);
+
+		return $item;
+	}
+
+	/**
 	 * Get an item by its identifier.
 	 *
 	 * @param string $identifier
@@ -53,7 +102,7 @@ class DatabaseItemRepository implements ItemRepositoryInterface
 
 		if (!$result) {
 			throw new ItemNotFoundException(
-				'No item exists with identifier ' . $identifier
+				'No item exists with identifier ' . $identifier . '.'
 			);
 		}
 

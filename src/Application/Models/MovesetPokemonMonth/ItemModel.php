@@ -5,6 +5,7 @@ namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
+use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
@@ -18,6 +19,9 @@ class ItemModel
 	/** @var ItemNameRepositoryInterface $itemNameRepository */
 	private $itemNameRepository;
 
+	/** @var ItemRepositoryInterface $itemRepository */
+	private $itemRepository;
+
 	/** @var ItemData[] $itemDatas */
 	private $itemDatas;
 
@@ -26,13 +30,16 @@ class ItemModel
 	 *
 	 * @param MovesetRatedItemRepositoryInterface $movesetRatedItemRepository
 	 * @param ItemNameRepositoryInterface $itemNameRepository
+	 * @param ItemRepositoryInterface $itemRepository
 	 */
 	public function __construct(
 		MovesetRatedItemRepositoryInterface $movesetRatedItemRepository,
-		ItemNameRepositoryInterface $itemNameRepository
+		ItemNameRepositoryInterface $itemNameRepository,
+		ItemRepositoryInterface $itemRepository
 	) {
 		$this->movesetRatedItemRepository = $movesetRatedItemRepository;
 		$this->itemNameRepository = $itemNameRepository;
+		$this->itemRepository = $itemRepository;
 	}
 
 	/**
@@ -84,6 +91,9 @@ class ItemModel
 				$itemId
 			);
 
+			// Get this item.
+			$item = $this->itemRepository->getById($itemId);
+
 			// Get this item's percent from the previous month.
 			if (isset($prevMonthItems[$itemId->value()])) {
 				$change = $movesetRatedItem->getPercent() - $prevMonthItems[$itemId->value()]->getPercent();
@@ -93,6 +103,7 @@ class ItemModel
 
 			$this->itemDatas[] = new ItemData(
 				$itemName->getName(),
+				$item->getIdentifier(),
 				$movesetRatedItem->getPercent(),
 				$change
 			);

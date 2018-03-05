@@ -88,7 +88,11 @@
 		<tbody>
 			{% for ability in abilities %}
 				<tr>
-					<td>{{ ability.name|e }}</td>
+					<td>
+						<a href="/stats/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/abilities/{{ ability.identifier|e }}">
+							{{ ability.name|e }}
+						</a>
+					</td>
 					<td class="number">{{ ability.percent|e }}</td>
 					<td
 						{% if ability.change > 0 %}
@@ -118,7 +122,11 @@
 		<tbody>
 			{% for item in items %}
 				<tr>
-					<td>{{ item.name|e }}</td>
+					<td>
+						<a href="/stats/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
+							{{ item.name|e }}
+						</a>
+					</td>
 					<td class="number">{{ item.percent|e }}</td>
 					<td
 						{% if item.change > 0 %}
@@ -196,7 +204,11 @@
 		<tbody>
 			{% for move in moves %}
 				<tr>
-					<td>{{ move.name|e }}</td>
+					<td>
+						<a href="/stats/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
+							{{ move.name|e }}
+						</a>
+					</td>
 					<td class="number">{{ move.percent|e }}</td>
 					<td
 						{% if move.change > 0 %}

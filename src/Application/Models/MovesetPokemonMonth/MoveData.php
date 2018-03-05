@@ -8,6 +8,9 @@ class MoveData
 	/** @var string $moveName */
 	private $moveName;
 
+	/** @var string $moveIdentifier */
+	private $moveIdentifier;
+
 	/** @var float $percent */
 	private $percent;
 
@@ -18,15 +21,18 @@ class MoveData
 	 * Constructor.
 	 *
 	 * @param string $moveName
+	 * @param string $moveIdentifier
 	 * @param float $percent
 	 * @param float $change
 	 */
 	public function __construct(
 		string $moveName,
+		string $moveIdentifier,
 		float $percent,
 		float $change
 	) {
 		$this->moveName = $moveName;
+		$this->moveIdentifier = $moveIdentifier;
 		$this->percent = $percent;
 		$this->change = $change;
 	}
@@ -39,6 +45,16 @@ class MoveData
 	public function getMoveName() : string
 	{
 		return $this->moveName;
+	}
+
+	/**
+	 * Get the move identifier.
+	 *
+	 * @return string
+	 */
+	public function getMoveIdentifier() : string
+	{
+		return $this->moveIdentifier;
 	}
 
 	/**

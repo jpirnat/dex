@@ -8,6 +8,9 @@ class AbilityData
 	/** @var string $abilityName */
 	private $abilityName;
 
+	/** @var string $abilityIdentifier */
+	private $abilityIdentifier;
+
 	/** @var float $percent */
 	private $percent;
 
@@ -18,15 +21,18 @@ class AbilityData
 	 * Constructor.
 	 *
 	 * @param string $abilityName
+	 * @param string $abilityIdentifier
 	 * @param float $percent
 	 * @param float $change
 	 */
 	public function __construct(
 		string $abilityName,
+		string $abilityIdentifier,
 		float $percent,
 		float $change
 	) {
 		$this->abilityName = $abilityName;
+		$this->abilityIdentifier = $abilityIdentifier;
 		$this->percent = $percent;
 		$this->change = $change;
 	}
@@ -39,6 +45,16 @@ class AbilityData
 	public function getAbilityName() : string
 	{
 		return $this->abilityName;
+	}
+
+	/**
+	 * Get the ability identifier.
+	 *
+	 * @return string
+	 */
+	public function getAbilityIdentifier() : string
+	{
+		return $this->abilityIdentifier;
 	}
 
 	/**

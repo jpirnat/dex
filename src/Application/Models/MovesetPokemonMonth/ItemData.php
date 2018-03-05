@@ -8,6 +8,9 @@ class ItemData
 	/** @var string $itemName */
 	private $itemName;
 
+	/** @var string $itemIdentifier */
+	private $itemIdentifier;
+
 	/** @var float $percent */
 	private $percent;
 
@@ -18,15 +21,18 @@ class ItemData
 	 * Constructor.
 	 *
 	 * @param string $itemName
+	 * @param string $itemIdentifier
 	 * @param float $percent
 	 * @param float $change
 	 */
 	public function __construct(
 		string $itemName,
+		string $itemIdentifier,
 		float $percent,
 		float $change
 	) {
 		$this->itemName = $itemName;
+		$this->itemIdentifier = $itemIdentifier;
 		$this->percent = $percent;
 		$this->change = $change;
 	}
@@ -39,6 +45,16 @@ class ItemData
 	public function getItemName() : string
 	{
 		return $this->itemName;
+	}
+
+	/**
+	 * Get the item identifier.
+	 *
+	 * @return string
+	 */
+	public function getItemIdentifier() : string
+	{
+		return $this->itemIdentifier;
 	}
 
 	/**

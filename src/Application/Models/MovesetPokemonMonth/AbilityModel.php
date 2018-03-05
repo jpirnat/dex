@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
+use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -18,6 +19,9 @@ class AbilityModel
 	/** @var AbilityNameRepositoryInterface $abilityNameRepository */
 	private $abilityNameRepository;
 
+	/** @var AbilityRepositoryInterface $abilityRepository */
+	private $abilityRepository;
+
 	/** @var AbilityData[] $abilityDatas */
 	private $abilityDatas = [];
 
@@ -26,13 +30,16 @@ class AbilityModel
 	 *
 	 * @param MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
+	 * @param AbilityRepositoryInterface $abilityRepository
 	 */
 	public function __construct(
 		MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository,
-		AbilityNameRepositoryInterface $abilityNameRepository
+		AbilityNameRepositoryInterface $abilityNameRepository,
+		AbilityRepositoryInterface $abilityRepository
 	) {
 		$this->movesetRatedAbilityRepository = $movesetRatedAbilityRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
+		$this->abilityRepository = $abilityRepository;
 	}
 	
 	/**
@@ -84,6 +91,9 @@ class AbilityModel
 				$abilityId
 			);
 
+			// Get this ability.
+			$ability = $this->abilityRepository->getById($abilityId);
+
 			// Get this ability's percent from the previous month.
 			if (isset($prevMonthAbilities[$abilityId->value()])) {
 				$change = $movesetRatedAbility->getPercent() - $prevMonthAbilities[$abilityId->value()]->getPercent();
@@ -93,6 +103,7 @@ class AbilityModel
 
 			$this->abilityDatas[] = new AbilityData(
 				$abilityName->getName(),
+				$ability->getIdentifier(),
 				$movesetRatedAbility->getPercent(),
 				$change
 			);

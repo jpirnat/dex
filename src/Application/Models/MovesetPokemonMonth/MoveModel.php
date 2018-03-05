@@ -6,6 +6,7 @@ namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
+use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
 use Jp\Dex\Domain\YearMonth;
@@ -18,6 +19,9 @@ class MoveModel
 	/** @var MoveNameRepositoryInterface $moveNameRepository */
 	private $moveNameRepository;
 
+	/** @var MoveRepositoryInterface $moveRepository */
+	private $moveRepository;
+
 	/** @var MoveData[] $moveDatas */
 	private $moveDatas = [];
 
@@ -26,13 +30,16 @@ class MoveModel
 	 *
 	 * @param MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository
 	 * @param MoveNameRepositoryInterface $moveNameRepository
+	 * @param MoveRepositoryInterface $moveRepository
 	 */
 	public function __construct(
 		MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository,
-		MoveNameRepositoryInterface $moveNameRepository
+		MoveNameRepositoryInterface $moveNameRepository,
+		MoveRepositoryInterface $moveRepository
 	) {
 		$this->movesetRatedMoveRepository = $movesetRatedMoveRepository;
 		$this->moveNameRepository = $moveNameRepository;
+		$this->moveRepository = $moveRepository;
 	}
 
 	/**
@@ -84,6 +91,9 @@ class MoveModel
 				$moveId
 			);
 
+			// Get this move.
+			$move = $this->moveRepository->getById($moveId);
+
 			// Get this move's percent from the previous month.
 			if (isset($prevMonthMoves[$moveId->value()])) {
 				$change = $movesetRatedMove->getPercent() - $prevMonthMoves[$moveId->value()]->getPercent();
@@ -93,6 +103,7 @@ class MoveModel
 
 			$this->moveDatas[] = new MoveData(
 				$moveName->getName(),
+				$move->getIdentifier(),
 				$movesetRatedMove->getPercent(),
 				$change
 			);

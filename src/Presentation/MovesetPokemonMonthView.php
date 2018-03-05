@@ -109,6 +109,7 @@ class MovesetPokemonMonthView
 		foreach ($abilityDatas as $abilityData) {
 			$abilities[] = [
 				'name' => $abilityData->getAbilityName(),
+				'identifier' => $abilityData->getAbilityIdentifier(),
 				'percent' => $formatter->formatPercent($abilityData->getPercent()),
 				'change' => $abilityData->getChange(),
 				'changeText' => $formatter->formatPercent($abilityData->getChange()),
@@ -129,6 +130,7 @@ class MovesetPokemonMonthView
 		foreach ($itemDatas as $itemData) {
 			$items[] = [
 				'name' => $itemData->getItemName(),
+				'identifier' => $itemData->getItemIdentifier(),
 				'percent' => $formatter->formatPercent($itemData->getPercent()),
 				'change' => $itemData->getChange(),
 				'changeText' => $formatter->formatPercent($itemData->getChange()),
@@ -213,6 +215,7 @@ class MovesetPokemonMonthView
 		foreach ($moveDatas as $moveData) {
 			$moves[] = [
 				'name' => $moveData->getMoveName(),
+				'identifier' => $moveData->getMoveIdentifier(),
 				'percent' => $formatter->formatPercent($moveData->getPercent()),
 				'change' => $moveData->getChange(),
 				'changeText' => $formatter->formatPercent($moveData->getChange()),
