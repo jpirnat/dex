@@ -11,8 +11,9 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidRankException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidYearException;
+use Jp\Dex\Domain\Stats\UsageDataInterface;
 
-class UsageRatedPokemon
+class UsageRatedPokemon implements UsageDataInterface
 {
 	/** @var int $year */
 	private $year;

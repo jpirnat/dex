@@ -11,8 +11,9 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidYearException;
+use Jp\Dex\Domain\Stats\UsageDataInterface;
 
-class MovesetRatedMove
+class MovesetRatedMove implements UsageDataInterface
 {
 	/** @var int $year */
 	private $year;

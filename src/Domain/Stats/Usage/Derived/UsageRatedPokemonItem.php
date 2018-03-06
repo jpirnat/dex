@@ -11,6 +11,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidYearException;
+use Jp\Dex\Domain\Stats\UsageDataInterface;
 
 /**
  * This class holds data derived from the join of a usage rated Pokémon record
@@ -20,7 +21,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidYearException;
  * be those two values multiplied together (and divided by 100 to keep it a
  * percent).
  */
-class UsageRatedPokemonItem
+class UsageRatedPokemonItem implements UsageDataInterface
 {
 	/** @var int $year */
 	private $year;
