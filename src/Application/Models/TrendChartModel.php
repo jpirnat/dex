@@ -9,10 +9,13 @@ use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Stats\Trends\AbilityUsageTrendGenerator;
-use Jp\Dex\Stats\Trends\ItemUsageTrendGenerator;
 use Jp\Dex\Stats\Trends\LeadUsageTrendGenerator;
-use Jp\Dex\Stats\Trends\MoveUsageTrendGenerator;
+use Jp\Dex\Stats\Trends\MovesetAbilityTrendGenerator;
+use Jp\Dex\Stats\Trends\MovesetItemTrendGenerator;
+use Jp\Dex\Stats\Trends\MovesetMoveTrendGenerator;
+use Jp\Dex\Stats\Trends\UsageAbilityTrendGenerator;
+use Jp\Dex\Stats\Trends\UsageItemTrendGenerator;
+use Jp\Dex\Stats\Trends\UsageMoveTrendGenerator;
 use Jp\Dex\Stats\Trends\UsageTrendGenerator;
 
 class TrendChartModel
@@ -32,36 +35,45 @@ class TrendChartModel
 	/** @var MovesetMoveTrendGenerator $movesetMoveTrendGenerator */
 	private $movesetMoveTrendGenerator;
 
-	/** @var AbilityUsageTrendGenerator $abilityUsageTrendGenerator */
-	private $abilityUsageTrendGenerator;
+	/** @var UsageAbilityTrendGenerator $usageAbilityTrendGenerator */
+	private $usageAbilityTrendGenerator;
 
-	/** @var ItemUsageTrendGenerator $itemUsageTrendGenerator */
-	private $itemUsageTrendGenerator;
+	/** @var UsageItemTrendGenerator $usageItemTrendGenerator */
+	private $usageItemTrendGenerator;
 
-	/** @var MoveUsageTrendGenerator $moveUsageTrendGenerator */
-	private $moveUsageTrendGenerator;
+	/** @var UsageMoveTrendGenerator $usageMoveTrendGenerator */
+	private $usageMoveTrendGenerator;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param UsageTrendGenerator $usageTrendGenerator
 	 * @param LeadUsageTrendGenerator $leadUsageTrendGenerator
-	 * @param AbilityUsageTrendGenerator $abilityUsageTrendGenerator
-	 * @param ItemUsageTrendGenerator $itemUsageTrendGenerator
-	 * @param MoveUsageTrendGenerator $moveUsageTrendGenerator
+	 * @param MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator
+	 * @param MovesetItemTrendGenerator $movesetItemTrendGenerator
+	 * @param MovesetMoveTrendGenerator $movesetMoveTrendGenerator
+	 * @param UsageAbilityTrendGenerator $usageAbilityTrendGenerator
+	 * @param UsageItemTrendGenerator $usageItemTrendGenerator
+	 * @param UsageMoveTrendGenerator $usageMoveTrendGenerator
 	 */
 	public function __construct(
 		UsageTrendGenerator $usageTrendGenerator,
 		LeadUsageTrendGenerator $leadUsageTrendGenerator,
-		AbilityUsageTrendGenerator $abilityUsageTrendGenerator,
-		ItemUsageTrendGenerator $itemUsageTrendGenerator,
-		MoveUsageTrendGenerator $moveUsageTrendGenerator
+		MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator,
+		MovesetItemTrendGenerator $movesetItemTrendGenerator,
+		MovesetMoveTrendGenerator $movesetMoveTrendGenerator,
+		UsageAbilityTrendGenerator $usageAbilityTrendGenerator,
+		UsageItemTrendGenerator $usageItemTrendGenerator,
+		UsageMoveTrendGenerator $usageMoveTrendGenerator
 	) {
 		$this->usageTrendGenerator = $usageTrendGenerator;
 		$this->leadUsageTrendGenerator = $leadUsageTrendGenerator;
-		$this->abilityUsageTrendGenerator = $abilityUsageTrendGenerator;
-		$this->itemUsageTrendGenerator = $itemUsageTrendGenerator;
-		$this->moveUsageTrendGenerator = $moveUsageTrendGenerator;
+		$this->movesetAbilityTrendGenerator = $movesetAbilityTrendGenerator;
+		$this->movesetItemTrendGenerator = $movesetItemTrendGenerator;
+		$this->movesetMoveTrendGenerator = $movesetMoveTrendGenerator;
+		$this->usageAbilityTrendGenerator = $usageAbilityTrendGenerator;
+		$this->usageItemTrendGenerator = $usageItemTrendGenerator;
+		$this->usageMoveTrendGenerator = $usageMoveTrendGenerator;
 	}
 
 	/**
@@ -117,14 +129,14 @@ class TrendChartModel
 				);
 			}
 
-			if ($type === 'ability-usage') {
+			if ($type === 'moveset-ability') {
 				if (!isset($line['abilityId'])) {
 					continue;
 				}
 
 				$abilityId = new AbilityId((int) $line['abilityId']);
 
-				$trendLine = $this->abilityUsageTrendGenerator->generate(
+				$trendLine = $this->movesetAbilityTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
@@ -133,14 +145,14 @@ class TrendChartModel
 				);
 			}
 
-			if ($type === 'item-usage') {
+			if ($type === 'moveset-item') {
 				if (!isset($line['itemId'])) {
 					continue;
 				}
 
 				$itemId = new ItemId((int) $line['itemId']);
 
-				$trendLine = $this->itemUsageTrendGenerator->generate(
+				$trendLine = $this->movesetItemTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
@@ -149,14 +161,14 @@ class TrendChartModel
 				);
 			}
 
-			if ($type === 'move-usage') {
+			if ($type === 'moveset-move') {
 				if (!isset($line['moveId'])) {
 					continue;
 				}
 
 				$moveId = new MoveId((int) $line['moveId']);
 
-				$trendLine = $this->moveUsageTrendGenerator->generate(
+				$trendLine = $this->movesetMoveTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,

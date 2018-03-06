@@ -3,19 +3,19 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Stats\Trends;
 
+use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
-use Jp\Dex\Domain\Items\ItemId;
-use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface;
 
-class ItemUsageTrendGenerator
+class MovesetAbilityTrendGenerator
 {
-	/** @var MovesetRatedItemRepositoryInterface $movesetRatedItemRepository */
-	private $movesetRatedItemRepository;
+	/** @var MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository */
+	private $movesetRatedAbilityRepository;
 
 	/** @var FormatNameRepositoryInterface $formatNameRepository */
 	private $formatNameRepository;
@@ -23,58 +23,58 @@ class ItemUsageTrendGenerator
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
 
-	/** @var ItemNameRepositoryInterface $itemNameRepository */
-	private $itemNameRepository;
+	/** @var AbilityNameRepositoryInterface $abilityNameRepository */
+	private $abilityNameRepository;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param MovesetRatedItemRepositoryInterface $movesetRatedItemRepository
+	 * @param MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository
 	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param ItemNameRepositoryInterface $itemNameRepository
+	 * @param AbilityNameRepositoryInterface $abilityNameRepository
 	 */
 	public function __construct(
-		MovesetRatedItemRepositoryInterface $movesetRatedItemRepository,
+		MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository,
 		FormatNameRepositoryInterface $formatNameRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
-		ItemNameRepositoryInterface $itemNameRepository
+		AbilityNameRepositoryInterface $abilityNameRepository
 	) {
-		$this->movesetRatedItemRepository = $movesetRatedItemRepository;
+		$this->movesetRatedAbilityRepository = $movesetRatedAbilityRepository;
 		$this->formatNameRepository = $formatNameRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->itemNameRepository = $itemNameRepository;
+		$this->abilityNameRepository = $abilityNameRepository;
 	}
 
 	/**
-	 * Get the data for an item usage trend line.
+	 * Get the data for a moveset ability trend line.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
-	 * @param ItemId $itemId
+	 * @param AbilityId $abilityId
 	 * @param LanguageId $languageId
 	 *
-	 * @return ItemUsageTrendLine
+	 * @return MovesetAbilityTrendLine
 	 */
 	public function generate(
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		ItemId $itemId,
+		AbilityId $abilityId,
 		LanguageId $languageId
-	) : ItemUsageTrendLine {
+	) : MovesetAbilityTrendLine {
 		// Get the usage data.
-		$movesetRatedItems = $this->movesetRatedItemRepository->getByFormatAndRatingAndPokemonAndItem(
+		$movesetRatedAbilities = $this->movesetRatedAbilityRepository->getByFormatAndRatingAndPokemonAndAbility(
 			$formatId,
 			$rating,
 			$pokemonId,
-			$itemId
+			$abilityId
 		);
 
 		// Get the name data.
 		$formatName = $this->formatNameRepository->getByLanguageAndFormat($languageId, $formatId);
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon($languageId, $pokemonId);
-		$itemName = $this->itemNameRepository->getByLanguageAndItem($languageId, $itemId);
+		$abilityName = $this->abilityNameRepository->getByLanguageAndAbility($languageId, $abilityId);
 	}
 }
