@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Trends;
+namespace Jp\Dex\Domain\Stats\Trends;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
@@ -21,21 +21,27 @@ class LeadUsageTrendGenerator
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
 
+	/** @var TrendPointCalculator $trendPointCalculator */
+	private $trendPointCalculator;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
 	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
+	 * @param TrendPointCalculator $trendPointCalculator
 	 */
 	public function __construct(
 		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
 		FormatNameRepositoryInterface $formatNameRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository
+		PokemonNameRepositoryInterface $pokemonNameRepository,
+		TrendPointCalculator $trendPointCalculator
 	) {
 		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
 		$this->formatNameRepository = $formatNameRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
+		$this->trendPointCalculator = $trendPointCalculator;
 	}
 
 	/**

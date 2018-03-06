@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Trends;
+namespace Jp\Dex\Domain\Stats\Trends;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
@@ -26,6 +26,9 @@ class MovesetItemTrendGenerator
 	/** @var ItemNameRepositoryInterface $itemNameRepository */
 	private $itemNameRepository;
 
+	/** @var TrendPointCalculator $trendPointCalculator */
+	private $trendPointCalculator;
+
 	/**
 	 * Constructor.
 	 *
@@ -33,17 +36,20 @@ class MovesetItemTrendGenerator
 	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param ItemNameRepositoryInterface $itemNameRepository
+	 * @param TrendPointCalculator $trendPointCalculator
 	 */
 	public function __construct(
 		MovesetRatedItemRepositoryInterface $movesetRatedItemRepository,
 		FormatNameRepositoryInterface $formatNameRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
-		ItemNameRepositoryInterface $itemNameRepository
+		ItemNameRepositoryInterface $itemNameRepository,
+		TrendPointCalculator $trendPointCalculator
 	) {
 		$this->movesetRatedItemRepository = $movesetRatedItemRepository;
 		$this->formatNameRepository = $formatNameRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->itemNameRepository = $itemNameRepository;
+		$this->trendPointCalculator = $trendPointCalculator;
 	}
 
 	/**

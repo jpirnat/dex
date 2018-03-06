@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Stats\Trends;
+namespace Jp\Dex\Domain\Stats\Trends;
 
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
@@ -26,6 +26,9 @@ class MovesetAbilityTrendGenerator
 	/** @var AbilityNameRepositoryInterface $abilityNameRepository */
 	private $abilityNameRepository;
 
+	/** @var TrendPointCalculator $trendPointCalculator */
+	private $trendPointCalculator;
+
 	/**
 	 * Constructor.
 	 *
@@ -33,17 +36,20 @@ class MovesetAbilityTrendGenerator
 	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
+	 * @param TrendPointCalculator $trendPointCalculator
 	 */
 	public function __construct(
 		MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository,
 		FormatNameRepositoryInterface $formatNameRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
-		AbilityNameRepositoryInterface $abilityNameRepository
+		AbilityNameRepositoryInterface $abilityNameRepository,
+		TrendPointCalculator $trendPointCalculator
 	) {
 		$this->movesetRatedAbilityRepository = $movesetRatedAbilityRepository;
 		$this->formatNameRepository = $formatNameRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
+		$this->trendPointCalculator = $trendPointCalculator;
 	}
 
 	/**

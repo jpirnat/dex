@@ -9,14 +9,14 @@ use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Stats\Trends\LeadUsageTrendGenerator;
-use Jp\Dex\Stats\Trends\MovesetAbilityTrendGenerator;
-use Jp\Dex\Stats\Trends\MovesetItemTrendGenerator;
-use Jp\Dex\Stats\Trends\MovesetMoveTrendGenerator;
-use Jp\Dex\Stats\Trends\UsageAbilityTrendGenerator;
-use Jp\Dex\Stats\Trends\UsageItemTrendGenerator;
-use Jp\Dex\Stats\Trends\UsageMoveTrendGenerator;
-use Jp\Dex\Stats\Trends\UsageTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\LeadUsageTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\MovesetAbilityTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\MovesetItemTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\MovesetMoveTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\UsageAbilityTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\UsageItemTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\UsageMoveTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\UsageTrendGenerator;
 
 class TrendChartModel
 {
