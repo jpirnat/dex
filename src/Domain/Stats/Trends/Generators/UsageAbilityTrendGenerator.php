@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Stats\Trends;
+namespace Jp\Dex\Domain\Stats\Trends\Generators;
 
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
@@ -10,6 +10,7 @@ use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
+use Jp\Dex\Domain\Stats\Trends\Lines\UsageAbilityTrendLine;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonAbilityRepositoryInterface;
 
 class UsageAbilityTrendGenerator
@@ -70,6 +71,20 @@ class UsageAbilityTrendGenerator
 		AbilityId $abilityId,
 		LanguageId $languageId
 	) : UsageAbilityTrendLine {
+		// Get the name data.
+		$formatName = $this->formatNameRepository->getByLanguageAndFormat(
+			$languageId,
+			$formatId
+		);
+		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+			$languageId,
+			$pokemonId
+		);
+		$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
+			$languageId,
+			$abilityId
+		);
+
 		// Get the usage data.
 		$usageRatedPokemonAbilities = $this->usageRatedPokemonAbilityRepository->getByFormatAndRatingAndPokemonAndAbility(
 			$formatId,
@@ -78,9 +93,19 @@ class UsageAbilityTrendGenerator
 			$abilityId
 		);
 
-		// Get the name data.
-		$formatName = $this->formatNameRepository->getByLanguageAndFormat($languageId, $formatId);
-		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon($languageId, $pokemonId);
-		$abilityName = $this->abilityNameRepository->getByLanguageAndAbility($languageId, $abilityId);
+		// Get the trend points.
+		$trendPoints = $this->trendPointCalculator->getTrendPoints(
+			$usageRatedPokemonAbilities,
+			'getUsagePercent',
+			0
+		);
+
+		return new UsageAbilityTrendLine(
+			$formatName,
+			$rating,
+			$pokemonName,
+			$abilityName,
+			$trendPoints
+		);
 	}
 }

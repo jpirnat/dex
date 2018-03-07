@@ -1,21 +1,20 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Stats\Trends;
+namespace Jp\Dex\Domain\Stats\Trends\Generators;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Moves\MoveId;
-use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Trends\Lines\LeadUsageTrendLine;
 
-class UsageMoveTrendGenerator
+class LeadUsageTrendGenerator
 {
-	/** @var UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository */
-	private $usageRatedPokemonMoveRepository;
+	/** @var LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository */
+	private $leadsRatedPokemonRepository;
 
 	/** @var FormatNameRepositoryInterface $formatNameRepository */
 	private $formatNameRepository;
@@ -23,64 +22,74 @@ class UsageMoveTrendGenerator
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
 
-	/** @var MoveNameRepositoryInterface $moveNameRepository */
-	private $moveNameRepository;
-
 	/** @var TrendPointCalculator $trendPointCalculator */
 	private $trendPointCalculator;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository
+	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
 	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param MoveNameRepositoryInterface $moveNameRepository
 	 * @param TrendPointCalculator $trendPointCalculator
 	 */
 	public function __construct(
-		UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository,
+		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
 		FormatNameRepositoryInterface $formatNameRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
-		MoveNameRepositoryInterface $moveNameRepository,
 		TrendPointCalculator $trendPointCalculator
 	) {
-		$this->usageRatedPokemonMoveRepository = $usageRatedPokemonMoveRepository;
+		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
 		$this->formatNameRepository = $formatNameRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->moveNameRepository = $moveNameRepository;
 		$this->trendPointCalculator = $trendPointCalculator;
 	}
 
 	/**
-	 * Get the data for a usage move trend line.
+	 * Get the data for a lead usage trend line.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
-	 * @param MoveId $moveId
 	 * @param LanguageId $languageId
 	 *
-	 * @return UsageMoveTrendLine
+	 * @return LeadUsageTrendLine
 	 */
 	public function generate(
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		MoveId $moveId,
 		LanguageId $languageId
-	) : UsageMoveTrendLine {
-		// Get the usage data.
-		$usageRatedPokemonMoves = $this->usageRatedPokemonMoveRepository->getByFormatAndRatingAndPokemonAndMove(
-			$formatId,
-			$rating,
-			$pokemonId,
-			$moveId
+	) : LeadUsageTrendLine {
+		// Get the name data.
+		$formatName = $this->formatNameRepository->getByLanguageAndFormat(
+			$languageId,
+			$formatId
+		);
+		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+			$languageId,
+			$pokemonId
 		);
 
-		// Get the name data.
-		$formatName = $this->formatNameRepository->getByLanguageAndFormat($languageId, $formatId);
-		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon($languageId, $pokemonId);
-		$moveName = $this->moveNameRepository->getByLanguageAndMove($languageId, $moveId);
+		// Get the usage data.
+		$leadsRatedPokemons = $this->leadsRatedPokemonRepository->getByFormatAndRatingAndPokemon(
+			$formatId,
+			$rating,
+			$pokemonId
+		);
+
+		// Get the trend points.
+		$trendPoints = $this->trendPointCalculator->getTrendPoints(
+			$leadsRatedPokemons,
+			'getUsagePercent',
+			0
+		);
+
+		return new LeadUsageTrendLine(
+			$formatName,
+			$rating,
+			$pokemonName,
+			$trendPoints
+		);
 	}
 }

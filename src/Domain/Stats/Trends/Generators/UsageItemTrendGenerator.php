@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Stats\Trends;
+namespace Jp\Dex\Domain\Stats\Trends\Generators;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
@@ -10,6 +10,7 @@ use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
+use Jp\Dex\Domain\Stats\Trends\Lines\UsageItemTrendLine;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonItemRepositoryInterface;
 
 class UsageItemTrendGenerator
@@ -70,6 +71,20 @@ class UsageItemTrendGenerator
 		ItemId $itemId,
 		LanguageId $languageId
 	) : UsageItemTrendLine {
+		// Get the name data.
+		$formatName = $this->formatNameRepository->getByLanguageAndFormat(
+			$languageId,
+			$formatId
+		);
+		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+			$languageId,
+			$pokemonId
+		);
+		$itemName = $this->itemNameRepository->getByLanguageAndItem(
+			$languageId,
+			$itemId
+		);
+
 		// Get the usage data.
 		$usageRatedPokemonItems = $this->usageRatedPokemonItemRepository->getByFormatAndRatingAndPokemonAndItem(
 			$formatId,
@@ -78,9 +93,19 @@ class UsageItemTrendGenerator
 			$itemId
 		);
 
-		// Get the name data.
-		$formatName = $this->formatNameRepository->getByLanguageAndFormat($languageId, $formatId);
-		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon($languageId, $pokemonId);
-		$itemName = $this->itemNameRepository->getByLanguageAndItem($languageId, $itemId);
+		// Get the trend points.
+		$trendPoints = $this->trendPointCalculator->getTrendPoints(
+			$usageRatedPokemonItems,
+			'getUsagePercent',
+			0
+		);
+
+		return new UsageItemTrendLine(
+			$formatName,
+			$rating,
+			$pokemonName,
+			$itemName,
+			$trendPoints
+		);
 	}
 }

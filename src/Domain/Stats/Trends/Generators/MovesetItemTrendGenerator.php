@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Stats\Trends;
+namespace Jp\Dex\Domain\Stats\Trends\Generators;
 
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
@@ -11,6 +11,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
+use Jp\Dex\Domain\Stats\Trends\Lines\MovesetItemTrendLine;
 
 class MovesetItemTrendGenerator
 {
@@ -70,6 +71,20 @@ class MovesetItemTrendGenerator
 		ItemId $itemId,
 		LanguageId $languageId
 	) : MovesetItemTrendLine {
+		// Get the name data.
+		$formatName = $this->formatNameRepository->getByLanguageAndFormat(
+			$languageId,
+			$formatId
+		);
+		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+			$languageId,
+			$pokemonId
+		);
+		$itemName = $this->itemNameRepository->getByLanguageAndItem(
+			$languageId,
+			$itemId
+		);
+
 		// Get the usage data.
 		$movesetRatedItems = $this->movesetRatedItemRepository->getByFormatAndRatingAndPokemonAndItem(
 			$formatId,
@@ -78,9 +93,19 @@ class MovesetItemTrendGenerator
 			$itemId
 		);
 
-		// Get the name data.
-		$formatName = $this->formatNameRepository->getByLanguageAndFormat($languageId, $formatId);
-		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon($languageId, $pokemonId);
-		$itemName = $this->itemNameRepository->getByLanguageAndItem($languageId, $itemId);
+		// Get the trend points.
+		$trendPoints = $this->trendPointCalculator->getTrendPoints(
+			$movesetRatedItems,
+			'getPercent',
+			0
+		);
+
+		return new MovesetItemTrendLine(
+			$formatName,
+			$rating,
+			$pokemonName,
+			$itemName,
+			$trendPoints
+		);
 	}
 }
