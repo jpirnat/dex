@@ -62,7 +62,7 @@ class TrendPointCalculator
 	) : array {
 		// Get the first and final dates in the series.
 		$firstDate = $this->getFirstDate($usageDatas);
-		$finalDate = $this->getFinalDate($usageDatas);
+		$finalDate = $this->getFinalDate($usageDatas)->modify('+1 second');
 
 		// Iterate through each month in the series.
 		$period = new DatePeriod($firstDate, new DateInterval('P1M'), $finalDate);

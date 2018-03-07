@@ -9,14 +9,15 @@ use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\Trends\LeadUsageTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\MovesetAbilityTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\MovesetItemTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\MovesetMoveTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\UsageAbilityTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\UsageItemTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\UsageMoveTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\UsageTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\Generators\LeadUsageTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\Generators\MovesetAbilityTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\Generators\MovesetItemTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\Generators\MovesetMoveTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\Generators\UsageAbilityTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\Generators\UsageItemTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\Generators\UsageMoveTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\Generators\UsageTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\Lines\TrendLine;
 
 class TrendChartModel
 {
@@ -43,6 +44,9 @@ class TrendChartModel
 
 	/** @var UsageMoveTrendGenerator $usageMoveTrendGenerator */
 	private $usageMoveTrendGenerator;
+
+	/** @var TrendLine[] $trendLines */
+	private $trendLines = [];
 
 	/**
 	 * Constructor.
@@ -86,6 +90,8 @@ class TrendChartModel
 	 */
 	public function setData(array $lines, LanguageId $languageId) : void
 	{
+		$this->trendLines = [];
+
 		foreach ($lines as $line) {
 			// Required parameters for every chart type.
 			if (!isset($line['type'])
@@ -115,7 +121,7 @@ class TrendChartModel
 			}
 
 			if ($type === 'usage') {
-				$trendLine = $this->usageTrendGenerator->generate(
+				$this->trendLines[] = $this->usageTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
@@ -124,7 +130,7 @@ class TrendChartModel
 			}
 
 			if ($type === 'lead-usage') {
-				$trendLine = $this->leadUsageTrendGenerator->generate(
+				$this->trendLines[] = $this->leadUsageTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
@@ -139,7 +145,7 @@ class TrendChartModel
 
 				$abilityId = new AbilityId((int) $line['abilityId']);
 
-				$trendLine = $this->movesetAbilityTrendGenerator->generate(
+				$this->trendLines[] = $this->movesetAbilityTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
@@ -155,7 +161,7 @@ class TrendChartModel
 
 				$itemId = new ItemId((int) $line['itemId']);
 
-				$trendLine = $this->movesetItemTrendGenerator->generate(
+				$this->trendLines[] = $this->movesetItemTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
@@ -171,7 +177,7 @@ class TrendChartModel
 
 				$moveId = new MoveId((int) $line['moveId']);
 
-				$trendLine = $this->movesetMoveTrendGenerator->generate(
+				$this->trendLines[] = $this->movesetMoveTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
@@ -187,7 +193,7 @@ class TrendChartModel
 
 				$abilityId = new AbilityId((int) $line['abilityId']);
 
-				$trendLine = $this->usageAbilityTrendGenerator->generate(
+				$this->trendLines[] = $this->usageAbilityTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
@@ -203,7 +209,7 @@ class TrendChartModel
 
 				$itemId = new ItemId((int) $line['itemId']);
 
-				$trendLine = $this->usageItemTrendGenerator->generate(
+				$this->trendLines[] = $this->usageItemTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
@@ -219,7 +225,7 @@ class TrendChartModel
 
 				$moveId = new MoveId((int) $line['moveId']);
 
-				$trendLine = $this->usageMoveTrendGenerator->generate(
+				$this->trendLines[] = $this->usageMoveTrendGenerator->generate(
 					$formatId,
 					$rating,
 					$pokemonId,
@@ -228,7 +234,15 @@ class TrendChartModel
 				);
 			}
 		}
+	}
 
-		// Next, put it all together.
+	/**
+	 * Get the trend lines.
+	 *
+	 * @return TrendLine[]
+	 */
+	public function getTrendLines() : array
+	{
+		return $this->trendLines;
 	}
 }

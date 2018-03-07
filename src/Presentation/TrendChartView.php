@@ -80,24 +80,23 @@ class TrendChartView
 	 */
 	public function ajax() : ResponseInterface
 	{
-		$datasets = [
-			[
-				'label' => 'First Dataset',
-				'data' => [
-					['x' => 1, 'y' => 1],
-					['x' => 2, 'y' => 1],
-					['x' => 3, 'y' => 2],
-				],
-			],
-			[
-				'label' => 'Second Dataset',
-				'data' => [
-					['x' => 2, 'y' => 5],
-					['x' => 3, 'y' => 4],
-					['x' => 4, 'y' => 3],
-				],
-			],
-		];
+		$trendLines = $this->trendChartModel->getTrendLines();
+
+		$datasets = [];
+		foreach ($trendLines as $trendLine) {
+			$data = [];
+			foreach ($trendLine->getTrendPoints() as $point) {
+				$data[] = [
+					'x' => $point->getDate()->format('Y-m'),
+					'y' => $point->getValue(),
+				];
+			}
+
+			$datasets[] = [
+				'label' => 'test',
+				'data' => $data,
+			];
+		}
 
 		return new JsonResponse([
 			'type' => 'line',
