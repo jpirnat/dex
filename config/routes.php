@@ -13,6 +13,7 @@ use Jp\Dex\Application\Controllers\NotFoundController;
 use Jp\Dex\Application\Controllers\StatsIndexController;
 use Jp\Dex\Application\Controllers\TrendChartController;
 use Jp\Dex\Application\Controllers\UsageMonthController;
+use Jp\Dex\Application\Middleware\AjaxErrorMiddleware;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Middleware\JsonRequestMiddleware;
 use Jp\Dex\Application\Middleware\LanguageMiddleware;
@@ -176,7 +177,7 @@ $routes = [
 		'viewClass' => TrendChartView::class,
 		'viewMethod' => 'ajax',
 		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
+			AjaxErrorMiddleware::class,
 			LanguageMiddleware::class,
 			JsonRequestMiddleware::class,
 		],

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 use Dice\Dice;
 use Jp\Container\DiceContainer;
+use Jp\Dex\Application\Middleware\AjaxErrorMiddleware;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Models\AbilityUsageMonth\AbilityUsageMonthModel;
 use Jp\Dex\Application\Models\BaseModel;
@@ -187,6 +188,7 @@ $rule = [
 		$environment,
 	]
 ];
+$container->dice()->addRule(AjaxErrorMiddleware::class, $rule);
 $container->dice()->addRule(HtmlErrorMiddleware::class, $rule);
 
 
