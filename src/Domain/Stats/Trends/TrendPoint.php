@@ -26,7 +26,7 @@ class TrendPoint
 	}
 
 	/**
-	 * Get the date.
+	 * Get the trend point's date.
 	 *
 	 * @return DateTime
 	 */
@@ -36,7 +36,7 @@ class TrendPoint
 	}
 
 	/**
-	 * Get the value.
+	 * Get the trend point's value.
 	 *
 	 * @return float
 	 */
