@@ -111,6 +111,8 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
+				`u`.`year`,
+				`u`.`month`,
 				`u`.`usage_percent` AS `pokemon_percent`,
 				`m`.`percent` AS `ability_percent`,
 				`u`.`usage_percent` * `m`.`percent` / 100 AS `usage_percent`

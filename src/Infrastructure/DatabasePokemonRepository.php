@@ -232,7 +232,7 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 			WHERE `t`.`transformation_group_id` = :transformation_group_id
 				AND `t`.`pokemon_id` <> :pokemon_id'
 		);
-		$stmt->bindValue(':transformation_group_id', $transformationGroupId, PDO::PARAM_INT);
+		$stmt->bindValue(':transformation_group_id', $transformationGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
