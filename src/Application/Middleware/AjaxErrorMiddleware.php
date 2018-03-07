@@ -46,7 +46,6 @@ class AjaxErrorMiddleware implements MiddlewareInterface
 			try {
 				$response = $handler->handle($request);
 			} catch (Throwable $e) {
-				// TODO: Log the error.
 				$response = new JsonResponse(['error' => true]);
 			}
 		} else {

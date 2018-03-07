@@ -83,6 +83,7 @@ class TrendChartView
 		$trendLines = $this->trendChartModel->getTrendLines();
 
 		$datasets = [];
+		$index = 0; // Used to determine line color.
 		foreach ($trendLines as $trendLine) {
 			$data = [];
 			foreach ($trendLine->getTrendPoints() as $point) {
@@ -93,9 +94,13 @@ class TrendChartView
 			}
 
 			$datasets[] = [
-				'label' => 'test',
+				'label' => 'TODO',
 				'data' => $data,
+				'borderColor' => $this->getLineColor($index),
+				'fill' => false,
 			];
+
+			$index++;
 		}
 
 		return new JsonResponse([
@@ -125,5 +130,27 @@ class TrendChartView
 				],
 			],
 		]);
+	}
+
+	/**
+	 * Get a color for the line.
+	 *
+	 * @param int $index
+	 *
+	 * @return string
+	 */
+	private function getLineColor(int $index) : string
+	{
+		// These default line colors were taken from the Chart.js documentation
+		// examples: http://www.chartjs.org/samples/latest/utils.js
+		return [
+			'#ff6384', // red: 'rgb(255, 99, 132)',
+			'#ff9f40', // orange: 'rgb(255, 159, 64)',
+			'#ffcd56', // yellow: 'rgb(255, 205, 86)',
+			'#4bc0c0', // green: 'rgb(75, 192, 192)',
+			'#36a2eb', // blue: 'rgb(54, 162, 235)',
+			'#9966ff', // purple: 'rgb(153, 102, 255)',
+			'#c9cbcf', // grey: 'rgb(201, 203, 207)'
+		][$index % 7];
 	}
 }

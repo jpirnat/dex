@@ -46,7 +46,6 @@ class HtmlErrorMiddleware implements MiddlewareInterface
 			try {
 				$response = $handler->handle($request);
 			} catch (Throwable $e) {
-				// TODO: Log the error.
 				$response = new RedirectResponse('/error');
 			}
 		} else {
