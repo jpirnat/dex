@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Stats\Trends\Generators;
 use DateInterval;
 use DatePeriod;
 use DateTime;
-use Jp\Dex\Domain\Stats\Trends\TrendPoint;
+use Jp\Dex\Domain\Stats\Trends\Lines\TrendPoint;
 use Jp\Dex\Domain\Stats\UsageDataInterface;
 
 class TrendPointCalculator

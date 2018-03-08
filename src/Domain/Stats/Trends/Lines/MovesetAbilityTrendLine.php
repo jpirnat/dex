@@ -6,7 +6,6 @@ namespace Jp\Dex\Domain\Stats\Trends\Lines;
 use Jp\Dex\Domain\Abilities\AbilityName;
 use Jp\Dex\Domain\Formats\FormatName;
 use Jp\Dex\Domain\Pokemon\PokemonName;
-use Jp\Dex\Domain\Stats\Trends\TrendPoint;
 
 class MovesetAbilityTrendLine extends TrendLine
 {
