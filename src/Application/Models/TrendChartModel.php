@@ -3,14 +3,14 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
-use Jp\Dex\Domain\Abilities\AbilityId;
-use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Items\ItemId;
+use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
+use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
+use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\Language;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
-use Jp\Dex\Domain\Moves\MoveId;
-use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Trends\Generators\LeadUsageTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Generators\MovesetAbilityTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Generators\MovesetItemTrendGenerator;
@@ -23,6 +23,21 @@ use Jp\Dex\Domain\Stats\Trends\Lines\TrendLine;
 
 class TrendChartModel
 {
+	/** @var FormatRepositoryInterface $formatRepository */
+	private $formatRepository;
+
+	/** @var PokemonRepositoryInterface $pokemonRepository */
+	private $pokemonRepository;
+
+	/** @var AbilityRepositoryInterface $abilityRepository */
+	private $abilityRepository;
+
+	/** @var ItemRepositoryInterface $itemRepository */
+	private $itemRepository;
+
+	/** @var MoveRepositoryInterface $moveRepository */
+	private $moveRepository;
+
 	/** @var UsageTrendGenerator $usageTrendGenerator */
 	private $usageTrendGenerator;
 
@@ -67,6 +82,11 @@ class TrendChartModel
 	/**
 	 * Constructor.
 	 *
+	 * @param FormatRepositoryInterface $formatRepository
+	 * @param PokemonRepositoryInterface $pokemonRepository
+	 * @param AbilityRepositoryInterface $abilityRepository
+	 * @param ItemRepositoryInterface $itemRepository
+	 * @param MoveRepositoryInterface $moveRepository
 	 * @param UsageTrendGenerator $usageTrendGenerator
 	 * @param LeadUsageTrendGenerator $leadUsageTrendGenerator
 	 * @param MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator
@@ -78,6 +98,11 @@ class TrendChartModel
 	 * @param LanguageRepositoryInterface $languageRepository
 	 */
 	public function __construct(
+		FormatRepositoryInterface $formatRepository,
+		PokemonRepositoryInterface $pokemonRepository,
+		AbilityRepositoryInterface $abilityRepository,
+		ItemRepositoryInterface $itemRepository,
+		MoveRepositoryInterface $moveRepository,
 		UsageTrendGenerator $usageTrendGenerator,
 		LeadUsageTrendGenerator $leadUsageTrendGenerator,
 		MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator,
@@ -88,6 +113,11 @@ class TrendChartModel
 		UsageMoveTrendGenerator $usageMoveTrendGenerator,
 		LanguageRepositoryInterface $languageRepository
 	) {
+		$this->formatRepository = $formatRepository;
+		$this->pokemonRepository = $pokemonRepository;
+		$this->abilityRepository = $abilityRepository;
+		$this->itemRepository = $itemRepository;
+		$this->moveRepository = $moveRepository;
 		$this->usageTrendGenerator = $usageTrendGenerator;
 		$this->leadUsageTrendGenerator = $leadUsageTrendGenerator;
 		$this->movesetAbilityTrendGenerator = $movesetAbilityTrendGenerator;
@@ -122,96 +152,96 @@ class TrendChartModel
 		// Create a trend line object from each valid line request.
 		foreach ($validLines as $line) {
 			$type = $line['type'];
-			$formatId = new FormatId((int) $line['formatId']);
+			$format = $this->formatRepository->getByIdentifier($line['format']);
 			$rating = (int) $line['rating'];
-			$pokemonId = new PokemonId((int) $line['pokemonId']);
+			$pokemon = $this->pokemonRepository->getByIdentifier($line['pokemon']);
 
 			if ($type === 'usage') {
 				$this->trendLines[] = $this->usageTrendGenerator->generate(
-					$formatId,
+					$format->getId(),
 					$rating,
-					$pokemonId,
+					$pokemon->getId(),
 					$languageId
 				);
 			}
 
 			if ($type === 'lead-usage') {
 				$this->trendLines[] = $this->leadUsageTrendGenerator->generate(
-					$formatId,
+					$format->getId(),
 					$rating,
-					$pokemonId,
+					$pokemon->getId(),
 					$languageId
 				);
 			}
 
 			if ($type === 'moveset-ability') {
-				$abilityId = new AbilityId((int) $line['abilityId']);
+				$ability = $this->abilityRepository->getByIdentifier($line['ability']);
 
 				$this->trendLines[] = $this->movesetAbilityTrendGenerator->generate(
-					$formatId,
+					$format->getId(),
 					$rating,
-					$pokemonId,
-					$abilityId,
+					$pokemon->getId(),
+					$ability->getId(),
 					$languageId
 				);
 			}
 
 			if ($type === 'moveset-item') {
-				$itemId = new ItemId((int) $line['itemId']);
+				$item = $this->itemRepository->getByIdentifier($line['item']);
 
 				$this->trendLines[] = $this->movesetItemTrendGenerator->generate(
-					$formatId,
+					$format->getId(),
 					$rating,
-					$pokemonId,
-					$itemId,
+					$pokemon->getId(),
+					$item->getId(),
 					$languageId
 				);
 			}
 
 			if ($type === 'moveset-move') {
-				$moveId = new MoveId((int) $line['moveId']);
+				$move = $this->moveRepository->getByIdentifier($line['move']);
 
 				$this->trendLines[] = $this->movesetMoveTrendGenerator->generate(
-					$formatId,
+					$format->getId(),
 					$rating,
-					$pokemonId,
-					$moveId,
+					$pokemon->getId(),
+					$move->getId(),
 					$languageId
 				);
 			}
 
 			if ($type === 'usage-ability') {
-				$abilityId = new AbilityId((int) $line['abilityId']);
+				$ability = $this->abilityRepository->getByIdentifier($line['ability']);
 
 				$this->trendLines[] = $this->usageAbilityTrendGenerator->generate(
-					$formatId,
+					$format->getId(),
 					$rating,
-					$pokemonId,
-					$abilityId,
+					$pokemon->getId(),
+					$ability->getId(),
 					$languageId
 				);
 			}
 
 			if ($type === 'usage-item') {
-				$itemId = new ItemId((int) $line['itemId']);
+				$item = $this->itemRepository->getByIdentifier($line['item']);
 
 				$this->trendLines[] = $this->usageItemTrendGenerator->generate(
-					$formatId,
+					$format->getId(),
 					$rating,
-					$pokemonId,
-					$itemId,
+					$pokemon->getId(),
+					$item->getId(),
 					$languageId
 				);
 			}
 
 			if ($type === 'usage-move') {
-				$moveId = new MoveId((int) $line['moveId']);
+				$move = $this->moveRepository->getByIdentifier($line['move']);
 
 				$this->trendLines[] = $this->usageMoveTrendGenerator->generate(
-					$formatId,
+					$format->getId(),
 					$rating,
-					$pokemonId,
-					$moveId,
+					$pokemon->getId(),
+					$move->getId(),
 					$languageId
 				);
 			}
@@ -233,9 +263,9 @@ class TrendChartModel
 	{
 		// Required parameters for every chart type.
 		if (!isset($line['type'])
-			|| !isset($line['formatId'])
+			|| !isset($line['format'])
 			|| !isset($line['rating'])
-			|| !isset($line['pokemonId'])
+			|| !isset($line['pokemon'])
 		) {
 			return false;
 		}
@@ -256,15 +286,15 @@ class TrendChartModel
 		}
 
 		// Optional parameters for certain chart types.
-		if (($type === 'moveset-ability' || $type === 'usage-ability') && !isset($line['abilityId'])) {
+		if (($type === 'moveset-ability' || $type === 'usage-ability') && !isset($line['ability'])) {
 			return false;
 		}
 
-		if (($type === 'moveset-item' || $type === 'usage-item') && !isset($line['itemId'])) {
+		if (($type === 'moveset-item' || $type === 'usage-item') && !isset($line['item'])) {
 			return false;
 		}
 
-		if (($type === 'moveset-move' || $type === 'usage-move') && !isset($line['moveId'])) {
+		if (($type === 'moveset-move' || $type === 'usage-move') && !isset($line['move'])) {
 			return false;
 		}
 
@@ -282,60 +312,60 @@ class TrendChartModel
 	private function findDifferences(array $lines) : void
 	{
 		$types = [];
-		$formatIds = [];
+		$formats = [];
 		$ratings = [];
-		$pokemonIds = [];
-		$abilityIds = [];
-		$itemIds = [];
-		$moveIds = [];
+		$pokemon = [];
+		$abilities = [];
+		$items = [];
+		$moves = [];
 		$this->similarities = [];
 		$this->differences = [];
 
 		foreach ($lines as $line) {
 			$types[$line['type']] = $line['type'];
-			$formatIds[$line['formatId']] = $line['formatId'];
+			$formats[$line['format']] = $line['format'];
 			$ratings[$line['rating']] = $line['rating'];
-			$pokemonIds[$line['pokemonId']] = $line['pokemonId'];
-			if (isset($line['abilityId'])) {
-				$abilityIds[$line['abilityId']] = $line['abilityId'];
+			$pokemon[$line['pokemon']] = $line['pokemon'];
+			if (isset($line['ability'])) {
+				$abilities[$line['ability']] = $line['ability'];
 			}
-			if (isset($line['itemId'])) {
-				$itemIds[$line['itemId']] = $line['itemId'];
+			if (isset($line['item'])) {
+				$items[$line['item']] = $line['item'];
 			}
-			if (isset($line['moveId'])) {
-				$moveIds[$line['moveId']] = $line['moveId'];
+			if (isset($line['move'])) {
+				$moves[$line['move']] = $line['move'];
 			}
 		}
 
 		if (count($types) === 1) {
 			$this->similarities[] = 'type';
 		}
-		if (count($formatIds) === 1) {
+		if (count($formats) === 1) {
 			$this->similarities[] = 'format';
 		}
 		if (count($ratings) === 1) {
 			$this->similarities[] = 'rating';
 		}
-		if (count($pokemonIds) === 1) {
+		if (count($pokemon) === 1) {
 			$this->similarities[] = 'pokemon';
 		}
-		if (count($abilityIds) + count($itemIds) + count($moveIds) === 1) {
+		if (count($abilities) + count($items) + count($moves) === 1) {
 			$this->similarities[] = 'moveset';
 		}
 
 		if (count($types) > 1) {
 			$this->differences[] = 'type';
 		}
-		if (count($formatIds) > 1) {
+		if (count($formats) > 1) {
 			$this->differences[] = 'format';
 		}
 		if (count($ratings) > 1) {
 			$this->differences[] = 'rating';
 		}
-		if (count($pokemonIds) > 1) {
+		if (count($pokemon) > 1) {
 			$this->differences[] = 'pokemon';
 		}
-		if (count($abilityIds) + count($itemIds) + count($moveIds) > 1) {
+		if (count($abilities) + count($items) + count($moves) > 1) {
 			$this->differences[] = 'moveset';
 		}
 	}

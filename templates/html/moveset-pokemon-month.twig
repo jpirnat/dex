@@ -103,7 +103,9 @@
 							class="number"
 						{% endif %}
 					>
-						{{ ability.changeText|e }}
+						<a class="trend-link" href="/stats/trends/chart?type=moveset-ability&format={{ formatIdentifier|e }}&rating={{ rating|e }}&pokemon={{ pokemonIdentifier|e }}&ability={{ ability.identifier|e }}">
+							{{ ability.changeText|e }}
+						</a>
 					</td>
 				</tr>
 			{% endfor %}
@@ -137,7 +139,9 @@
 							class="number"
 						{% endif %}
 					>
-						{{ item.changeText|e }}
+						<a class="trend-link" href="/stats/trends/chart?type=moveset-item&format={{ formatIdentifier|e }}&rating={{ rating|e }}&pokemon={{ pokemonIdentifier|e }}&item={{ item.identifier|e }}">
+							{{ item.changeText|e }}
+						</a>
 					</td>
 				</tr>
 			{% endfor %}
@@ -219,7 +223,9 @@
 							class="number"
 						{% endif %}
 					>
-						{{ move.changeText|e }}
+						<a class="trend-link" href="/stats/trends/chart?type=moveset-move&format={{ formatIdentifier|e }}&rating={{ rating|e }}&pokemon={{ pokemonIdentifier|e }}&move={{ move.identifier|e }}">
+							{{ move.changeText|e }}
+						</a>
 					</td>
 				</tr>
 			{% endfor %}

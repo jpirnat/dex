@@ -10,7 +10,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Throwable;
 use Whoops\Handler\JsonResponseHandler;
 use Whoops\Run;
-use Zend\Diactoros\Response\RedirectResponse;
+use Zend\Diactoros\Response\JsonResponse;
 
 class AjaxErrorMiddleware implements MiddlewareInterface
 {

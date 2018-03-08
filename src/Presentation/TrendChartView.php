@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\TrendChartModel;
+use Jp\Dex\Domain\Stats\Trends\Lines\LeadUsageTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetAbilityTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetItemTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetMoveTrendLine;
@@ -70,7 +71,7 @@ class TrendChartView
 		$content = $this->twig->render(
 			'html/trend-chart.twig',
 			$this->baseView->getBaseVariables() + [
-				'title' => 'Porydex - Stats - Trends - Chart',
+				'title' => 'Stats - Trends - Chart',
 				'breadcrumbs' => $breadcrumbs,
 			]
 		);
@@ -132,6 +133,13 @@ class TrendChartView
 								],
 							],
 						],
+						'yAxes' => [
+							[
+								'ticks' => [
+									'beginAtZero' => true,
+								],
+							],
+						],
 					],
 					'tooltips' => [
 						'mode' => 'nearest',
@@ -185,8 +193,16 @@ class TrendChartView
 			$titleParts[] = "$pokemonName with $movesetName";
 		} elseif (in_array('pokemon', $similarities)) {
 			$titleParts[] = $pokemonName;
-		} elseif (in_array('moveset', $similarities)) {
+		} elseif (in_array('moveset', $similarities) && in_array('type', $similarities)) {
 			$titleParts[] = $movesetName;
+		}
+
+		if ($trendLine instanceof LeadUsageTrendLine && in_array('type', $similarities)) {
+			$titleParts[] = 'Lead Usage';
+		}
+
+		if ($titleParts === []) {
+			$titleParts[] = 'Usage';
 		}
 
 		return implode(' - ', $titleParts);
@@ -238,6 +254,14 @@ class TrendChartView
 			$labelParts[] = $pokemonName;
 		} elseif (in_array('moveset', $differences)) {
 			$labelParts[] = $movesetName;
+		}
+
+		if ($trendLine instanceof LeadUsageTrendLine) {
+			$labelParts[] = 'Lead Usage';
+		}
+
+		if ($labelParts === []) {
+			$labelParts[] = 'Usage';
 		}
 
 		return implode(' - ', $labelParts);

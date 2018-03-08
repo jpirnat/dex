@@ -178,6 +178,10 @@ table.pokemon-usage .pokemon-name {
 	width: 100%;
 }
 
+.trend-link {
+	color: inherit;
+	text-decoration: inherit;
+}
 
 
 /* Pokémon stats page */

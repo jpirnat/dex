@@ -60,7 +60,9 @@
 							class="number"
 						{% endif %}
 					>
-						{{ pokemon.usageChangeText|e }}
+						<a class="trend-link" href="/stats/trends/chart?type=lead-usage&format={{ formatIdentifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}">
+							{{ pokemon.usageChangeText|e }}
+						</a>
 					</td>
 					<td class="number">{{ pokemon.raw|e }}</td>
 					<td class="number">{{ pokemon.rawPercent|e }}</td>

@@ -12,29 +12,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
 <script>
+let url = new URL(window.location);
+
 let data = {
 	lines: [
 		{
-			type: 'moveset-item',
-			formatId: 17, // Gen 7 OU
-			rating: 1695,
-			pokemonId: 801, // Magearna
-			itemId: 722 // Assault Vest
+			type: url.searchParams.get('type'),
+			format: url.searchParams.get('format'),
+			rating: url.searchParams.get('rating'),
+			pokemon: url.searchParams.get('pokemon'),
+			ability: url.searchParams.get('ability'),
+			item: url.searchParams.get('item'),
+			move: url.searchParams.get('move'),
 		},
-		{
-			type: 'moveset-move',
-			formatId: 17, // Gen 7 OU
-			rating: 1695,
-			pokemonId: 801, // Magearna
-			moveId: 433 // Trick Room
-		},
-		{
-			type: 'moveset-move',
-			formatId: 17, // Gen 7 OU
-			rating: 1695,
-			pokemonId: 801, // Magearna
-			moveId: 508 // Shift Gear
-		}
 	]
 };
 
