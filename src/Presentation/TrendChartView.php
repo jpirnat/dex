@@ -104,29 +104,32 @@ class TrendChartView
 		}
 
 		return new JsonResponse([
-			'type' => 'line',
-			'data' => [
-				'datasets' => $datasets,
-			],
-			'options' => [
-				'title' => [
-					'display' => true,
-					'text' => 'Chart Title TODO',
-					'fontSize' => 16,
+			'locale' => $this->trendChartModel->getLanguage()->getLocale(),
+			'chart' => [
+				'type' => 'line',
+				'data' => [
+					'datasets' => $datasets,
 				],
-				'scales' => [
-					'xAxes' => [
-						[
-							'type' => 'time',
-							'time' => [
-								'unit' => 'month',
+				'options' => [
+					'title' => [
+						'display' => true,
+						'text' => 'Chart Title TODO',
+						'fontSize' => 16,
+					],
+					'scales' => [
+						'xAxes' => [
+							[
+								'type' => 'time',
+								'time' => [
+									'unit' => 'month',
+								],
 							],
 						],
 					],
-				],
-				'tooltips' => [
-					'mode' => 'nearest',
-					'intersect' => false,
+					'tooltips' => [
+						'mode' => 'nearest',
+						'intersect' => false,
+					],
 				],
 			],
 		]);

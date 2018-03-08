@@ -6,7 +6,9 @@ namespace Jp\Dex\Application\Models;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Items\ItemId;
+use Jp\Dex\Domain\Languages\Language;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Trends\Generators\LeadUsageTrendGenerator;
@@ -45,8 +47,16 @@ class TrendChartModel
 	/** @var UsageMoveTrendGenerator $usageMoveTrendGenerator */
 	private $usageMoveTrendGenerator;
 
+	/** @var LanguageRepositoryInterface $languageRepository */
+	private $languageRepository;
+
+
 	/** @var TrendLine[] $trendLines */
 	private $trendLines = [];
+
+	/** @var Language $language */
+	private $language;
+
 
 	/**
 	 * Constructor.
@@ -59,6 +69,7 @@ class TrendChartModel
 	 * @param UsageAbilityTrendGenerator $usageAbilityTrendGenerator
 	 * @param UsageItemTrendGenerator $usageItemTrendGenerator
 	 * @param UsageMoveTrendGenerator $usageMoveTrendGenerator
+	 * @param LanguageRepositoryInterface $languageRepository
 	 */
 	public function __construct(
 		UsageTrendGenerator $usageTrendGenerator,
@@ -68,7 +79,8 @@ class TrendChartModel
 		MovesetMoveTrendGenerator $movesetMoveTrendGenerator,
 		UsageAbilityTrendGenerator $usageAbilityTrendGenerator,
 		UsageItemTrendGenerator $usageItemTrendGenerator,
-		UsageMoveTrendGenerator $usageMoveTrendGenerator
+		UsageMoveTrendGenerator $usageMoveTrendGenerator,
+		LanguageRepositoryInterface $languageRepository
 	) {
 		$this->usageTrendGenerator = $usageTrendGenerator;
 		$this->leadUsageTrendGenerator = $leadUsageTrendGenerator;
@@ -78,6 +90,7 @@ class TrendChartModel
 		$this->usageAbilityTrendGenerator = $usageAbilityTrendGenerator;
 		$this->usageItemTrendGenerator = $usageItemTrendGenerator;
 		$this->usageMoveTrendGenerator = $usageMoveTrendGenerator;
+		$this->languageRepository = $languageRepository;
 	}
 
 	/**
@@ -197,6 +210,8 @@ class TrendChartModel
 				);
 			}
 		}
+
+		$this->language = $this->languageRepository->getById($languageId);
 	}
 
 	/**
@@ -256,5 +271,15 @@ class TrendChartModel
 	public function getTrendLines() : array
 	{
 		return $this->trendLines;
+	}
+
+	/**
+	 * Get the language.
+	 *
+	 * @return Language
+	 */
+	public function getLanguage() : Language
+	{
+		return $this->language;
 	}
 }

@@ -8,7 +8,8 @@
 
 {% block scripts %}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
 <script>
 let data = {
@@ -54,12 +55,14 @@ fetch('/stats/trends/chart', {
 	body: JSON.stringify(data),
 	headers: new Headers({
 		'Content-Type': 'application/json'
-	})
+	}),
+	credentials: 'same-origin' // enables cookies
 })
 .then(response => response.json())
 .then(function(json) {
+	moment.locale(json.locale);
 	let ctx = document.getElementById('chart-canvas');
-	let chart = new Chart(ctx, json);
+	let chart = new Chart(ctx, json.chart);
 });
 </script>
 {% endblock %}
