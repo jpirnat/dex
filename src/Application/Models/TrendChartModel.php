@@ -92,33 +92,20 @@ class TrendChartModel
 	{
 		$this->trendLines = [];
 
+		// Remove lines with invalid data from the... lineup.
+		$validLines = [];
 		foreach ($lines as $line) {
-			// Required parameters for every chart type.
-			if (!isset($line['type'])
-				|| !isset($line['formatId'])
-				|| !isset($line['rating'])
-				|| !isset($line['pokemonId'])
-			) {
-				continue;
+			if ($this->isValid($line)) {
+				$validLines[] = $line;
 			}
+		}
 
+		// Create a trend line object from each valid line request.
+		foreach ($validLines as $line) {
 			$type = $line['type'];
 			$formatId = new FormatId((int) $line['formatId']);
 			$rating = (int) $line['rating'];
 			$pokemonId = new PokemonId((int) $line['pokemonId']);
-
-			// The current list of accepted chart types.
-			if ($type !== 'usage'
-				&& $type !== 'lead-usage'
-				&& $type !== 'moveset-ability'
-				&& $type !== 'moveset-item'
-				&& $type !== 'moveset-move'
-				&& $type !== 'usage-ability'
-				&& $type !== 'usage-item'
-				&& $type !== 'usage-move'
-			) {
-				continue;
-			}
 
 			if ($type === 'usage') {
 				$this->trendLines[] = $this->usageTrendGenerator->generate(
@@ -139,10 +126,6 @@ class TrendChartModel
 			}
 
 			if ($type === 'moveset-ability') {
-				if (!isset($line['abilityId'])) {
-					continue;
-				}
-
 				$abilityId = new AbilityId((int) $line['abilityId']);
 
 				$this->trendLines[] = $this->movesetAbilityTrendGenerator->generate(
@@ -155,10 +138,6 @@ class TrendChartModel
 			}
 
 			if ($type === 'moveset-item') {
-				if (!isset($line['itemId'])) {
-					continue;
-				}
-
 				$itemId = new ItemId((int) $line['itemId']);
 
 				$this->trendLines[] = $this->movesetItemTrendGenerator->generate(
@@ -171,10 +150,6 @@ class TrendChartModel
 			}
 
 			if ($type === 'moveset-move') {
-				if (!isset($line['moveId'])) {
-					continue;
-				}
-
 				$moveId = new MoveId((int) $line['moveId']);
 
 				$this->trendLines[] = $this->movesetMoveTrendGenerator->generate(
@@ -187,10 +162,6 @@ class TrendChartModel
 			}
 
 			if ($type === 'usage-ability') {
-				if (!isset($line['abilityId'])) {
-					continue;
-				}
-
 				$abilityId = new AbilityId((int) $line['abilityId']);
 
 				$this->trendLines[] = $this->usageAbilityTrendGenerator->generate(
@@ -203,10 +174,6 @@ class TrendChartModel
 			}
 
 			if ($type === 'usage-item') {
-				if (!isset($line['itemId'])) {
-					continue;
-				}
-
 				$itemId = new ItemId((int) $line['itemId']);
 
 				$this->trendLines[] = $this->usageItemTrendGenerator->generate(
@@ -219,10 +186,6 @@ class TrendChartModel
 			}
 
 			if ($type === 'usage-move') {
-				if (!isset($line['moveId'])) {
-					continue;
-				}
-
 				$moveId = new MoveId((int) $line['moveId']);
 
 				$this->trendLines[] = $this->usageMoveTrendGenerator->generate(
@@ -234,6 +197,55 @@ class TrendChartModel
 				);
 			}
 		}
+	}
+
+	/**
+	 * Is this line valid?
+	 *
+	 * @param array $line
+	 *
+	 * @return bool
+	 */
+	private function isValid(array $line) : bool
+	{
+		// Required parameters for every chart type.
+		if (!isset($line['type'])
+			|| !isset($line['formatId'])
+			|| !isset($line['rating'])
+			|| !isset($line['pokemonId'])
+		) {
+			return false;
+		}
+
+		$type = $line['type'];
+
+		// The current list of accepted chart types.
+		if ($type !== 'usage'
+			&& $type !== 'lead-usage'
+			&& $type !== 'moveset-ability'
+			&& $type !== 'moveset-item'
+			&& $type !== 'moveset-move'
+			&& $type !== 'usage-ability'
+			&& $type !== 'usage-item'
+			&& $type !== 'usage-move'
+		) {
+			return false;
+		}
+
+		// Optional parameters for certain chart types.
+		if (($type === 'moveset-ability' || $type === 'usage-ability') && !isset($line['abilityId'])) {
+			return false;
+		}
+
+		if (($type === 'moveset-item' || $type === 'usage-item') && !isset($line['itemId'])) {
+			return false;
+		}
+
+		if (($type === 'moveset-move' || $type === 'usage-move') && !isset($line['moveId'])) {
+			return false;
+		}
+
+		return true;
 	}
 
 	/**

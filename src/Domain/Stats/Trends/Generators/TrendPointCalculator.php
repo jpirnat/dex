@@ -21,6 +21,12 @@ class TrendPointCalculator
 	 */
 	private function getFirstDate(array $usageDatas) : DateTime
 	{
+		if ($usageDatas === []) {
+			// TODO: get most recent month for which data exists in this format
+			// (and rating?). Return that month instead.
+			return new DateTime('first day of last month');
+		}
+
 		$firstYear = reset($usageDatas);
 		$usageData = reset($firstYear);
 		$year = $usageData->getYear();
@@ -38,6 +44,12 @@ class TrendPointCalculator
 	 */
 	private function getFinalDate(array $usageDatas) : DateTime
 	{
+		if ($usageDatas === []) {
+			// TODO: get most recent month for which data exists in this format
+			// (and rating?). Return that month instead.
+			return new DateTime('first day of last month');
+		}
+
 		$finalYear = end($usageDatas);
 		$usageData = end($finalYear);
 		$year = $usageData->getYear();
