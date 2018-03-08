@@ -54,6 +54,12 @@ class TrendChartModel
 	/** @var TrendLine[] $trendLines */
 	private $trendLines = [];
 
+	/** @var string[] $similarities */
+	private $similarities = [];
+
+	/** @var string[] $differences */
+	private $differences = [];
+
 	/** @var Language $language */
 	private $language;
 
@@ -211,6 +217,8 @@ class TrendChartModel
 			}
 		}
 
+		$this->findDifferences($lines);
+
 		$this->language = $this->languageRepository->getById($languageId);
 	}
 
@@ -264,6 +272,75 @@ class TrendChartModel
 	}
 
 	/**
+	 * Determine which variables are different across the requested lines, so
+	 * we can dynamically generate the chart title and line labels.
+	 *
+	 * @param array $lines
+	 *
+	 * @return void
+	 */
+	private function findDifferences(array $lines) : void
+	{
+		$types = [];
+		$formatIds = [];
+		$ratings = [];
+		$pokemonIds = [];
+		$abilityIds = [];
+		$itemIds = [];
+		$moveIds = [];
+		$this->similarities = [];
+		$this->differences = [];
+
+		foreach ($lines as $line) {
+			$types[$line['type']] = $line['type'];
+			$formatIds[$line['formatId']] = $line['formatId'];
+			$ratings[$line['rating']] = $line['rating'];
+			$pokemonIds[$line['pokemonId']] = $line['pokemonId'];
+			if (isset($line['abilityId'])) {
+				$abilityIds[$line['abilityId']] = $line['abilityId'];
+			}
+			if (isset($line['itemId'])) {
+				$itemIds[$line['itemId']] = $line['itemId'];
+			}
+			if (isset($line['moveId'])) {
+				$moveIds[$line['moveId']] = $line['moveId'];
+			}
+		}
+
+		if (count($types) === 1) {
+			$this->similarities[] = 'type';
+		}
+		if (count($formatIds) === 1) {
+			$this->similarities[] = 'format';
+		}
+		if (count($ratings) === 1) {
+			$this->similarities[] = 'rating';
+		}
+		if (count($pokemonIds) === 1) {
+			$this->similarities[] = 'pokemon';
+		}
+		if (count($abilityIds) + count($itemIds) + count($moveIds) === 1) {
+			$this->similarities[] = 'moveset';
+		}
+
+		if (count($types) > 1) {
+			$this->differences[] = 'type';
+		}
+		if (count($formatIds) > 1) {
+			$this->differences[] = 'format';
+		}
+		if (count($ratings) > 1) {
+			$this->differences[] = 'rating';
+		}
+		if (count($pokemonIds) > 1) {
+			$this->differences[] = 'pokemon';
+		}
+		if (count($abilityIds) + count($itemIds) + count($moveIds) > 1) {
+			$this->differences[] = 'moveset';
+		}
+	}
+
+	/**
 	 * Get the trend lines.
 	 *
 	 * @return TrendLine[]
@@ -271,6 +348,26 @@ class TrendChartModel
 	public function getTrendLines() : array
 	{
 		return $this->trendLines;
+	}
+
+	/**
+	 * Get the similarities between lines.
+	 *
+	 * @return string[]
+	 */
+	public function getSimilarities() : array
+	{
+		return $this->similarities;
+	}
+
+	/**
+	 * Get the differences between lines.
+	 *
+	 * @return string[]
+	 */
+	public function getDifferences() : array
+	{
+		return $this->differences;
 	}
 
 	/**
