@@ -80,6 +80,7 @@ class UsageTrendGenerator
 
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
+			$formatId,
 			$usageRatedPokemons,
 			'getUsagePercent',
 			0

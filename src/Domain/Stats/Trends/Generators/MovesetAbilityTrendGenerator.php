@@ -95,6 +95,7 @@ class MovesetAbilityTrendGenerator
 
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
+			$formatId,
 			$movesetRatedAbilities,
 			'getPercent',
 			0

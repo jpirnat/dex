@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
 use Jp\Dex\Domain\YearMonth;
 use PDO;
@@ -46,5 +47,71 @@ class DatabaseUsageQueries implements UsageQueriesInterface
 		}
 
 		return $yearMonths;
+	}
+
+	/**
+	 * Get the year/month of the oldest instance of data in this format.
+	 *
+	 * @param FormatId $formatId
+	 *
+	 * @return YearMonth|null
+	 */
+	public function getOldest(FormatId $formatId) : ?YearMonth
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`year`,
+				`month`
+			FROM `usage`
+			WHERE `format_id` = :format_id
+			ORDER BY
+				`year` ASC,
+				`month` ASC
+			LIMIT 1'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			return null;
+		}
+
+		$yearMonth = new YearMonth($result['year'], $result['month']);
+
+		return $yearMonth;
+	}
+
+	/**
+	 * Get the year/month of the newest instance of data in this format.
+	 *
+	 * @param FormatId $formatId
+	 *
+	 * @return YearMonth|null
+	 */
+	public function getNewest(FormatId $formatId) : ?YearMonth
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`year`,
+				`month`
+			FROM `usage`
+			WHERE `format_id` = :format_id
+			ORDER BY
+				`year` DESC,
+				`month` DESC
+			LIMIT 1'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			return null;
+		}
+
+		$yearMonth = new YearMonth($result['year'], $result['month']);
+
+		return $yearMonth;
 	}
 }
