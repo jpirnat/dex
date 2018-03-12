@@ -30,4 +30,18 @@ class UsageTrendLine extends TrendLine
 			$this->addTrendPoint($trendPoint);
 		}
 	}
+
+	/**
+	 * Get the title of a chart that consists of only this trend line.
+	 *
+	 * @return string
+	 */
+	public function getChartTitle() : string
+	{
+		$formatName = $this->formatName->getName();
+		$rating = $this->rating;
+		$pokemonName = $this->pokemonName->getName();
+
+		return "$formatName [$rating] $pokemonName Usage";
+	}
 }

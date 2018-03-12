@@ -39,6 +39,21 @@ class UsageAbilityTrendLine extends TrendLine
 	}
 
 	/**
+	 * Get the title of a chart that consists of only this trend line.
+	 *
+	 * @return string
+	 */
+	public function getChartTitle() : string
+	{
+		$formatName = $this->formatName->getName();
+		$rating = $this->rating;
+		$pokemonName = $this->pokemonName->getName();
+		$abilityName = $this->abilityName->getName();
+
+		return "$formatName [$rating] $pokemonName with $abilityName Usage";
+	}
+
+	/**
 	 * Get the usage ability trend line's ability name.
 	 *
 	 * @return AbilityName

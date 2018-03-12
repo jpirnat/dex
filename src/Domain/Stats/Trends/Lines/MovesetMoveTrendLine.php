@@ -39,6 +39,21 @@ class MovesetMoveTrendLine extends TrendLine
 	}
 
 	/**
+	 * Get the title of a chart that consists of only this trend line.
+	 *
+	 * @return string
+	 */
+	public function getChartTitle() : string
+	{
+		$formatName = $this->formatName->getName();
+		$rating = $this->rating;
+		$pokemonName = $this->pokemonName->getName();
+		$moveName = $this->moveName->getName();
+
+		return "$formatName [$rating] $pokemonName - $moveName Usage";
+	}
+
+	/**
 	 * Get the moveset move trend line's move name.
 	 *
 	 * @return MoveName

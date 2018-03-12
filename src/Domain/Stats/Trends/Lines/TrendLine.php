@@ -33,6 +33,13 @@ abstract class TrendLine
 	}
 
 	/**
+	 * Get the title of a chart that consists of only this trend line.
+	 *
+	 * @return string
+	 */
+	abstract public function getChartTitle() : string;
+
+	/**
 	 * Get the trend line's format name.
 	 *
 	 * @return FormatName

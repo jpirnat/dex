@@ -157,6 +157,12 @@ class TrendChartView
 	 */
 	private function getChartTitle() : string
 	{
+		$trendLines = $this->trendChartModel->getTrendLines();
+		if (count($trendLines) === 1) {
+			// Use the trend line's own chart title rather than generating one ourselves.
+			return $trendLines[0]->getChartTitle();
+		}
+
 		$similarities = $this->trendChartModel->getSimilarities();
 
 		$trendLine = $this->trendChartModel->getTrendLines()[0];
