@@ -40,6 +40,14 @@ abstract class TrendLine
 	abstract public function getChartTitle() : string;
 
 	/**
+	 * Get the trend line's label, for a chart that consists of only this trend
+	 * line.
+	 *
+	 * @return string
+	 */
+	abstract public function getLineLabel() : string;
+
+	/**
 	 * Get the trend line's format name.
 	 *
 	 * @return FormatName

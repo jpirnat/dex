@@ -54,6 +54,17 @@ class UsageAbilityTrendLine extends TrendLine
 	}
 
 	/**
+	 * Get the trend line's label, for a chart that consists of only this trend
+	 * line.
+	 *
+	 * @return string
+	 */
+	public function getLineLabel() : string
+	{
+		return 'Usage';
+	}
+
+	/**
 	 * Get the usage ability trend line's ability name.
 	 *
 	 * @return AbilityName

@@ -44,4 +44,15 @@ class UsageTrendLine extends TrendLine
 
 		return "$formatName [$rating] $pokemonName Usage";
 	}
+
+	/**
+	 * Get the trend line's label, for a chart that consists of only this trend
+	 * line.
+	 *
+	 * @return string
+	 */
+	public function getLineLabel() : string
+	{
+		return 'Usage';
+	}
 }

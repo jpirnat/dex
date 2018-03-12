@@ -54,6 +54,17 @@ class MovesetItemTrendLine extends TrendLine
 	}
 
 	/**
+	 * Get the trend line's label, for a chart that consists of only this trend
+	 * line.
+	 *
+	 * @return string
+	 */
+	public function getLineLabel() : string
+	{
+		return 'Usage';
+	}
+
+	/**
 	 * Get the moveset item trend line's item name.
 	 *
 	 * @return ItemName

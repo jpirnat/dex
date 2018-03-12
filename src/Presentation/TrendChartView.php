@@ -223,6 +223,12 @@ class TrendChartView
 	 */
 	private function getLineLabel(TrendLine $trendLine) : string
 	{
+		$trendLines = $this->trendChartModel->getTrendLines();
+		if (count($trendLines) === 1) {
+			// Use the trend line's own label rather than generating one ourselves.
+			return $trendLine->getLineLabel();
+		}
+
 		$differences = $this->trendChartModel->getDifferences();
 
 		$formatName = $trendLine->getFormatName()->getName();
