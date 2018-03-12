@@ -43,7 +43,8 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 			'SELECT
 				`id`,
 				`identifier`,
-				`category_id`
+				`category_id`,
+				`color_code`
 			FROM `types`
 			WHERE `hidden_power_index` = :hidden_power_index
 			LIMIT 1'
@@ -69,7 +70,8 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 			new TypeId($result['id']),
 			$result['identifier'],
 			$categoryId,
-			$hiddenPowerIndex
+			$hiddenPowerIndex,
+			$result['color_code']
 		);
 
 		return $type;
@@ -93,7 +95,8 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 				`t`.`id`,
 				`t`.`identifier`,
 				`t`.`category_id`,
-				`t`.`hidden_power_index`
+				`t`.`hidden_power_index`,
+				`t`.`color_code`
 			FROM `pokemon_types` AS `pt`
 			INNER JOIN `types` AS `t`
 				ON `pt`.`type_id` = `t`.`id`
@@ -118,7 +121,8 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 				new TypeId($result['id']),
 				$result['identifier'],
 				$categoryId,
-				$result['hidden_power_index']
+				$result['hidden_power_index'],
+				$result['color_code']
 			);
 
 			$types[$result['slot']] = $type;

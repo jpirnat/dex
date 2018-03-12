@@ -19,6 +19,9 @@ class Type
 	/** @var int|null $hiddenPowerIndex */
 	private $hiddenPowerIndex;
 
+	/** @var string $colorCode "#rrggbb" */
+	private $colorCode;
+
 	/**
 	 * Constructor.
 	 *
@@ -26,17 +29,20 @@ class Type
 	 * @param string $identifier
 	 * @param CategoryId|null $categoryId
 	 * @param int|null $hiddenPowerIndex
+	 * @param string $colorCode
 	 */
 	public function __construct(
 		TypeId $typeId,
 		string $identifier,
 		?CategoryId $categoryId,
-		?int $hiddenPowerIndex
+		?int $hiddenPowerIndex,
+		string $colorCode
 	) {
 		$this->id = $typeId;
 		$this->identifier = $identifier;
 		$this->categoryId = $categoryId;
 		$this->hiddenPowerIndex = $hiddenPowerIndex;
+		$this->colorCode = $colorCode;
 	}
 
 	/**
@@ -77,5 +83,15 @@ class Type
 	public function getHiddenPowerIndex() : ?int
 	{
 		return $this->hiddenPowerIndex;
+	}
+
+	/**
+	 * Get the type's color code.
+	 *
+	 * @return string
+	 */
+	public function getColorCode() : string
+	{
+		return $this->colorCode;
 	}
 }

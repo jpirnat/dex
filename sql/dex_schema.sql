@@ -447,6 +447,7 @@ create table if not exists `types`
 `identifier` varchar(8) not null,
 `category_id` tinyint unsigned null, # nullable
 `hidden_power_index` tinyint unsigned null, # nullable
+`color_code` char(7) not null,
 
 primary key (`id`),
 unique key (`identifier`),
