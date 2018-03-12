@@ -75,7 +75,9 @@
 							class="number"
 						{% endif %}
 					>
-						{{ pokemon.rawChangeText|e }}
+						<a class="trend-link" href="/stats/trends/chart?type=lead-usage&format={{ formatIdentifier|e }}&rating=0&pokemon={{ pokemon.identifier|e }}">
+							{{ pokemon.rawChangeText|e }}
+						</a>
 					</td>
 				</tr>
 			{% endfor %}
