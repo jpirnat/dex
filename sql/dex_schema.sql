@@ -686,9 +686,9 @@ create table if not exists `generation_moves`
 `min_hits` tinyint unsigned not null,
 `max_hits` tinyint unsigned not null,
 `infliction_id` tinyint unsigned null, # nullable
-`infliction_percent` tinyint unsigned,
-`min_turns` tinyint unsigned null,
-`max_turns` tinyint unsigned null,
+`infliction_percent` tinyint unsigned not null,
+`min_turns` tinyint unsigned not null,
+`max_turns` tinyint unsigned not null,
 `crit_stage` tinyint unsigned not null,
 `flinch_percent` tinyint unsigned not null,
 `effect` smallint unsigned null,
