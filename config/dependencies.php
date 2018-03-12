@@ -28,6 +28,7 @@ use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use Jp\Dex\Domain\Models\ModelRepositoryInterface;
+use Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
@@ -71,6 +72,7 @@ use Jp\Dex\Infrastructure\DatabaseBaseStatRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatNameRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
 use Jp\Dex\Infrastructure\DatabaseFormIconRepository;
+use Jp\Dex\Infrastructure\DatabaseGenerationMoveRepository;
 use Jp\Dex\Infrastructure\DatabaseItemNameRepository;
 use Jp\Dex\Infrastructure\DatabaseItemRepository;
 use Jp\Dex\Infrastructure\DatabaseLanguageNameRepository;
@@ -210,6 +212,9 @@ $container->dice()->addRule(FormatRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseFormIconRepository::class];
 $container->dice()->addRule(FormIconRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseGenerationMoveRepository::class];
+$container->dice()->addRule(GenerationMoveRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseItemNameRepository::class];
 $container->dice()->addRule(ItemNameRepositoryInterface::class, $rule);
