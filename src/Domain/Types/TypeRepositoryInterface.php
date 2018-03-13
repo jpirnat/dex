@@ -9,6 +9,17 @@ use Jp\Dex\Domain\Versions\Generation;
 interface TypeRepositoryInterface
 {
 	/**
+	 * Get a type by its id.
+	 *
+	 * @param TypeId $typeId
+	 *
+	 * @throws TypeNotFoundException if no type exists with this id.
+	 *
+	 * @return Type
+	 */
+	public function getById(TypeId $typeId) : Type;
+
+	/**
 	 * Get a type by its hidden power index.
 	 *
 	 * @param int $hiddenPowerIndex

@@ -158,7 +158,7 @@ class TrendChartModel
 
 			if ($type === 'usage') {
 				$this->trendLines[] = $this->usageTrendGenerator->generate(
-					$format->getId(),
+					$format,
 					$rating,
 					$pokemon->getId(),
 					$languageId
@@ -167,7 +167,7 @@ class TrendChartModel
 
 			if ($type === 'lead-usage') {
 				$this->trendLines[] = $this->leadUsageTrendGenerator->generate(
-					$format->getId(),
+					$format,
 					$rating,
 					$pokemon->getId(),
 					$languageId
@@ -178,7 +178,7 @@ class TrendChartModel
 				$ability = $this->abilityRepository->getByIdentifier($line['ability']);
 
 				$this->trendLines[] = $this->movesetAbilityTrendGenerator->generate(
-					$format->getId(),
+					$format,
 					$rating,
 					$pokemon->getId(),
 					$ability->getId(),
@@ -190,7 +190,7 @@ class TrendChartModel
 				$item = $this->itemRepository->getByIdentifier($line['item']);
 
 				$this->trendLines[] = $this->movesetItemTrendGenerator->generate(
-					$format->getId(),
+					$format,
 					$rating,
 					$pokemon->getId(),
 					$item->getId(),
@@ -202,7 +202,7 @@ class TrendChartModel
 				$move = $this->moveRepository->getByIdentifier($line['move']);
 
 				$this->trendLines[] = $this->movesetMoveTrendGenerator->generate(
-					$format->getId(),
+					$format,
 					$rating,
 					$pokemon->getId(),
 					$move->getId(),
@@ -214,7 +214,7 @@ class TrendChartModel
 				$ability = $this->abilityRepository->getByIdentifier($line['ability']);
 
 				$this->trendLines[] = $this->usageAbilityTrendGenerator->generate(
-					$format->getId(),
+					$format,
 					$rating,
 					$pokemon->getId(),
 					$ability->getId(),
@@ -226,7 +226,7 @@ class TrendChartModel
 				$item = $this->itemRepository->getByIdentifier($line['item']);
 
 				$this->trendLines[] = $this->usageItemTrendGenerator->generate(
-					$format->getId(),
+					$format,
 					$rating,
 					$pokemon->getId(),
 					$item->getId(),
@@ -238,7 +238,7 @@ class TrendChartModel
 				$move = $this->moveRepository->getByIdentifier($line['move']);
 
 				$this->trendLines[] = $this->usageMoveTrendGenerator->generate(
-					$format->getId(),
+					$format,
 					$rating,
 					$pokemon->getId(),
 					$move->getId(),

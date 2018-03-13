@@ -6,6 +6,7 @@ namespace Jp\Dex\Domain\Stats\Trends\Lines;
 use Jp\Dex\Domain\Abilities\AbilityName;
 use Jp\Dex\Domain\Formats\FormatName;
 use Jp\Dex\Domain\Pokemon\PokemonName;
+use Jp\Dex\Domain\Types\Type;
 
 class UsageAbilityTrendLine extends TrendLine
 {
@@ -19,6 +20,7 @@ class UsageAbilityTrendLine extends TrendLine
 	 * @param int $rating
 	 * @param PokemonName $pokemonName
 	 * @param AbilityName $abilityName
+	 * @param Type $pokemonType
 	 * @param TrendPoint[] $trendPoints
 	 */
 	public function __construct(
@@ -26,12 +28,14 @@ class UsageAbilityTrendLine extends TrendLine
 		int $rating,
 		PokemonName $pokemonName,
 		AbilityName $abilityName,
+		Type $pokemonType,
 		array $trendPoints
 	) {
 		$this->formatName = $formatName;
 		$this->rating = $rating;
 		$this->pokemonName = $pokemonName;
 		$this->abilityName = $abilityName;
+		$this->pokemonType = $pokemonType;
 
 		foreach ($trendPoints as $trendPoint) {
 			$this->addTrendPoint($trendPoint);

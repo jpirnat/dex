@@ -104,7 +104,7 @@ class TrendChartView
 			$datasets[] = [
 				'label' => $this->getLineLabel($trendLine),
 				'data' => $data,
-				'borderColor' => $this->getLineColor($index),
+				'borderColor' => $this->getLineColor($trendLine),
 				'fill' => false,
 			];
 
@@ -282,12 +282,14 @@ class TrendChartView
 	/**
 	 * Get a color for the line.
 	 *
-	 * @param int $index
+	 * @param TrendLine $trendLine
 	 *
 	 * @return string
 	 */
-	private function getLineColor(int $index) : string
+	private function getLineColor(TrendLine $trendLine) : string
 	{
+		return $trendLine->getPokemonType()->getColorCode();
+
 		// These default line colors were taken from the Chart.js documentation
 		// examples: http://www.chartjs.org/samples/latest/utils.js
 		return [

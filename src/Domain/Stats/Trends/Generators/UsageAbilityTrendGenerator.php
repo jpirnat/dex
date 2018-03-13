@@ -5,13 +5,14 @@ namespace Jp\Dex\Domain\Stats\Trends\Generators;
 
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
-use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageAbilityTrendLine;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonAbilityRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 class UsageAbilityTrendGenerator
 {
@@ -27,6 +28,9 @@ class UsageAbilityTrendGenerator
 	/** @var AbilityNameRepositoryInterface $abilityNameRepository */
 	private $abilityNameRepository;
 
+	/** @var TypeRepositoryInterface $typeRepository */
+	private $typeRepository;
+
 	/** @var TrendPointCalculator $trendPointCalculator */
 	private $trendPointCalculator;
 
@@ -37,6 +41,7 @@ class UsageAbilityTrendGenerator
 	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
+	 * @param TypeRepositoryInterface $typeRepository
 	 * @param TrendPointCalculator $trendPointCalculator
 	 */
 	public function __construct(
@@ -44,19 +49,21 @@ class UsageAbilityTrendGenerator
 		FormatNameRepositoryInterface $formatNameRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
+		TypeRepositoryInterface $typeRepository,
 		TrendPointCalculator $trendPointCalculator
 	) {
 		$this->usageRatedPokemonAbilityRepository = $usageRatedPokemonAbilityRepository;
 		$this->formatNameRepository = $formatNameRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
+		$this->typeRepository = $typeRepository;
 		$this->trendPointCalculator = $trendPointCalculator;
 	}
 
 	/**
 	 * Get the data for a usage ability trend line.
 	 *
-	 * @param FormatId $formatId
+	 * @param Format $format
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param AbilityId $abilityId
@@ -65,7 +72,7 @@ class UsageAbilityTrendGenerator
 	 * @return UsageAbilityTrendLine
 	 */
 	public function generate(
-		FormatId $formatId,
+		Format $format,
 		int $rating,
 		PokemonId $pokemonId,
 		AbilityId $abilityId,
@@ -74,7 +81,7 @@ class UsageAbilityTrendGenerator
 		// Get the name data.
 		$formatName = $this->formatNameRepository->getByLanguageAndFormat(
 			$languageId,
-			$formatId
+			$format->getId()
 		);
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
@@ -85,9 +92,16 @@ class UsageAbilityTrendGenerator
 			$abilityId
 		);
 
+		// Get the Pokémon's primary type.
+		$types = $this->typeRepository->getByGenerationAndPokemon(
+			$format->getGeneration(),
+			$pokemonId
+		);
+		$pokemonType = $types[1];
+
 		// Get the usage data.
 		$usageRatedPokemonAbilities = $this->usageRatedPokemonAbilityRepository->getByFormatAndRatingAndPokemonAndAbility(
-			$formatId,
+			$format->getId(),
 			$rating,
 			$pokemonId,
 			$abilityId
@@ -95,7 +109,7 @@ class UsageAbilityTrendGenerator
 
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
-			$formatId,
+			$format->getId(),
 			$usageRatedPokemonAbilities,
 			'getUsagePercent',
 			0
@@ -106,6 +120,7 @@ class UsageAbilityTrendGenerator
 			$rating,
 			$pokemonName,
 			$abilityName,
+			$pokemonType,
 			$trendPoints
 		);
 	}

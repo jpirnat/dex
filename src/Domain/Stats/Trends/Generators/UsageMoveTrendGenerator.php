@@ -3,15 +3,17 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Trends\Generators;
 
-use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageMoveTrendLine;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMoveRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 class UsageMoveTrendGenerator
 {
@@ -27,6 +29,12 @@ class UsageMoveTrendGenerator
 	/** @var MoveNameRepositoryInterface $moveNameRepository */
 	private $moveNameRepository;
 
+	/** @var TypeRepositoryInterface $typeRepository */
+	private $typeRepository;
+
+	/** @var GenerationMoveRepositoryInterface $generationMoveRepository */
+	private $generationMoveRepository;
+
 	/** @var TrendPointCalculator $trendPointCalculator */
 	private $trendPointCalculator;
 
@@ -37,6 +45,8 @@ class UsageMoveTrendGenerator
 	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param MoveNameRepositoryInterface $moveNameRepository
+	 * @param TypeRepositoryInterface $typeRepository
+	 * @param GenerationMoveRepositoryInterface $generationMoveRepository
 	 * @param TrendPointCalculator $trendPointCalculator
 	 */
 	public function __construct(
@@ -44,19 +54,23 @@ class UsageMoveTrendGenerator
 		FormatNameRepositoryInterface $formatNameRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		MoveNameRepositoryInterface $moveNameRepository,
+		TypeRepositoryInterface $typeRepository,
+		GenerationMoveRepositoryInterface $generationMoveRepository,
 		TrendPointCalculator $trendPointCalculator
 	) {
 		$this->usageRatedPokemonMoveRepository = $usageRatedPokemonMoveRepository;
 		$this->formatNameRepository = $formatNameRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->moveNameRepository = $moveNameRepository;
+		$this->typeRepository = $typeRepository;
+		$this->generationMoveRepository = $generationMoveRepository;
 		$this->trendPointCalculator = $trendPointCalculator;
 	}
 
 	/**
 	 * Get the data for a usage move trend line.
 	 *
-	 * @param FormatId $formatId
+	 * @param Format $format
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param MoveId $moveId
@@ -65,7 +79,7 @@ class UsageMoveTrendGenerator
 	 * @return UsageMoveTrendLine
 	 */
 	public function generate(
-		FormatId $formatId,
+		Format $format,
 		int $rating,
 		PokemonId $pokemonId,
 		MoveId $moveId,
@@ -74,7 +88,7 @@ class UsageMoveTrendGenerator
 		// Get the name data.
 		$formatName = $this->formatNameRepository->getByLanguageAndFormat(
 			$languageId,
-			$formatId
+			$format->getId()
 		);
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
@@ -85,9 +99,23 @@ class UsageMoveTrendGenerator
 			$moveId
 		);
 
+		// Get the Pokémon's primary type.
+		$types = $this->typeRepository->getByGenerationAndPokemon(
+			$format->getGeneration(),
+			$pokemonId
+		);
+		$pokemonType = $types[1];
+
+		// Get the move's type.
+		$generationMove = $this->generationMoveRepository->getByGenerationAndMove(
+			$format->getGeneration(),
+			$moveId
+		);
+		$moveType = $this->typeRepository->getById($generationMove->getTypeId());
+
 		// Get the usage data.
 		$usageRatedPokemonMoves = $this->usageRatedPokemonMoveRepository->getByFormatAndRatingAndPokemonAndMove(
-			$formatId,
+			$format->getId(),
 			$rating,
 			$pokemonId,
 			$moveId
@@ -95,7 +123,7 @@ class UsageMoveTrendGenerator
 
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
-			$formatId,
+			$format->getId(),
 			$usageRatedPokemonMoves,
 			'getUsagePercent',
 			0
@@ -106,6 +134,8 @@ class UsageMoveTrendGenerator
 			$rating,
 			$pokemonName,
 			$moveName,
+			$pokemonType,
+			$moveType,
 			$trendPoints
 		);
 	}

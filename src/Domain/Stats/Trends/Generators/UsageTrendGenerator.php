@@ -3,13 +3,14 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Trends\Generators;
 
-use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageTrendLine;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 class UsageTrendGenerator
 {
@@ -22,6 +23,9 @@ class UsageTrendGenerator
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
 
+	/** @var TypeRepositoryInterface $typeRepository */
+	private $typeRepository;
+
 	/** @var TrendPointCalculator $trendPointCalculator */
 	private $trendPointCalculator;
 
@@ -31,24 +35,27 @@ class UsageTrendGenerator
 	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
 	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
+	 * @param TypeRepositoryInterface $typeRepository
 	 * @param TrendPointCalculator $trendPointCalculator
 	 */
 	public function __construct(
 		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
 		FormatNameRepositoryInterface $formatNameRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
+		TypeRepositoryInterface $typeRepository,
 		TrendPointCalculator $trendPointCalculator
 	) {
 		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
 		$this->formatNameRepository = $formatNameRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
+		$this->typeRepository = $typeRepository;
 		$this->trendPointCalculator = $trendPointCalculator;
 	}
 
 	/**
 	 * Get the data for a lead usage trend line.
 	 *
-	 * @param FormatId $formatId
+	 * @param Format $format
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
@@ -56,7 +63,7 @@ class UsageTrendGenerator
 	 * @return UsageTrendLine
 	 */
 	public function generate(
-		FormatId $formatId,
+		Format $format,
 		int $rating,
 		PokemonId $pokemonId,
 		LanguageId $languageId
@@ -64,23 +71,30 @@ class UsageTrendGenerator
 		// Get the name data.
 		$formatName = $this->formatNameRepository->getByLanguageAndFormat(
 			$languageId,
-			$formatId
+			$format->getId()
 		);
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
 			$pokemonId
 		);
 
+		// Get the Pokémon's primary type.
+		$types = $this->typeRepository->getByGenerationAndPokemon(
+			$format->getGeneration(),
+			$pokemonId
+		);
+		$pokemonType = $types[1];
+
 		// Get the usage data.
 		$usageRatedPokemons = $this->usageRatedPokemonRepository->getByFormatAndRatingAndPokemon(
-			$formatId,
+			$format->getId(),
 			$rating,
 			$pokemonId
 		);
 
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
-			$formatId,
+			$format->getId(),
 			$usageRatedPokemons,
 			'getUsagePercent',
 			0
@@ -90,6 +104,7 @@ class UsageTrendGenerator
 			$formatName,
 			$rating,
 			$pokemonName,
+			$pokemonType,
 			$trendPoints
 		);
 	}

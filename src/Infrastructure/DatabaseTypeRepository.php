@@ -28,6 +28,55 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 	}
 
 	/**
+	 * Get a type by its id.
+	 *
+	 * @param TypeId $typeId
+	 *
+	 * @throws TypeNotFoundException if no type exists with this id.
+	 *
+	 * @return Type
+	 */
+	public function getById(TypeId $typeId) : Type
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`identifier`,
+				`category_id`,
+				`hidden_power_index`,
+				`color_code`
+			FROM `types`
+			WHERE `id` = :type_id
+			LIMIT 1'
+		);
+		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			throw new TypeNotFoundException(
+				'No type exists with id ' . $typeId->value() . '.'
+			);
+		}
+
+		if ($result['category_id'] !== null) {
+			// The type had a damage category.
+			$categoryId = new CategoryId($result['category_id']);
+		} else {
+			$categoryId = null;
+		}
+
+		$type = new Type(
+			$typeId,
+			$result['identifier'],
+			$categoryId,
+			$result['hidden_power_index'],
+			$result['color_code']
+		);
+
+		return $type;
+	}
+
+	/**
 	 * Get a type by its hidden power index.
 	 *
 	 * @param int $hiddenPowerIndex

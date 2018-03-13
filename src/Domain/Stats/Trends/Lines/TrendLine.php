@@ -5,6 +5,7 @@ namespace Jp\Dex\Domain\Stats\Trends\Lines;
 
 use Jp\Dex\Domain\Formats\FormatName;
 use Jp\Dex\Domain\Pokemon\PokemonName;
+use Jp\Dex\Domain\Types\Type;
 
 abstract class TrendLine
 {
@@ -16,6 +17,9 @@ abstract class TrendLine
 
 	/** @var PokemonName $pokemonName */
 	protected $pokemonName;
+
+	/** @var Type $pokemonType */
+	protected $pokemonType;
 
 	/** @var TrendPoint[] $trendPoints */
 	protected $trendPoints = [];
@@ -75,6 +79,16 @@ abstract class TrendLine
 	public function getPokemonName() : PokemonName
 	{
 		return $this->pokemonName;
+	}
+
+	/**
+	 * Get the trend line's Pokémon type.
+	 *
+	 * @return Type
+	 */
+	public function getPokemonType() : Type
+	{
+		return $this->pokemonType;
 	}
 
 	/**
