@@ -82,6 +82,8 @@ class AbilityUsageMonthView
 				'pokemonPercent' => $formatter->formatPercent($abilityUsageData->getPokemonPercent()),
 				'abilityPercent' => $formatter->formatPercent($abilityUsageData->getAbilityPercent()),
 				'usagePercent' => $formatter->formatPercent($abilityUsageData->getUsagePercent()),
+				'change' => $abilityUsageData->getChange(),
+				'changeText' => $formatter->formatPercent($abilityUsageData->getChange()),
 			];
 		}
 

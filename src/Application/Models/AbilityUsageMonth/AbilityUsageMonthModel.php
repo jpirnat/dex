@@ -182,6 +182,15 @@ class AbilityUsageMonthModel
 			$ability->getId()
 		);
 
+		// Get usage rated Pokémon ability records for the previous month.
+		$prevMonthPokemonAbilities = $this->usageRatedPokemonAbilityRepository->getByYearAndMonthAndFormatAndRatingAndAbility(
+			$prevMonth->getYear(),
+			$prevMonth->getMonth(),
+			$format->getId(),
+			$rating,
+			$ability->getId()
+		);
+
 		// Get each usage record's data.
 		foreach ($usageRatedPokemonAbilities as $usageRatedPokemonAbility) {
 			$pokemonId = $usageRatedPokemonAbility->getPokemonId();
@@ -203,13 +212,22 @@ class AbilityUsageMonthModel
 				false
 			);
 
+			// Get this usage rated Pokémon ability's change in usage percent
+			// from the previous month.
+			$prevMonthUsagePercent = 0;
+			if (isset($prevMonthPokemonAbilities[$pokemonId->value()])) {
+				$prevMonthUsagePercent = $prevMonthPokemonAbilities[$pokemonId->value()]->getUsagePercent();
+			}
+			$change = $usageRatedPokemonAbility->getUsagePercent() - $prevMonthUsagePercent;
+
 			$this->abilityUsageDatas[] = new AbilityUsageData(
 				$pokemonName->getName(),
 				$pokemon->getIdentifier(),
 				$formIcon->getImage(),
 				$usageRatedPokemonAbility->getPokemonPercent(),
 				$usageRatedPokemonAbility->getAbilityPercent(),
-				$usageRatedPokemonAbility->getUsagePercent()
+				$usageRatedPokemonAbility->getUsagePercent(),
+				$change
 			);
 		}
 	}
