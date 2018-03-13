@@ -182,6 +182,15 @@ class ItemUsageMonthModel
 			$item->getId()
 		);
 
+		// Get usage rated Pokémon item records for the previous month.
+		$prevMonthPokemonItems = $this->usageRatedPokemonItemRepository->getByYearAndMonthAndFormatAndRatingAndItem(
+			$prevMonth->getYear(),
+			$prevMonth->getMonth(),
+			$format->getId(),
+			$rating,
+			$item->getId()
+		);
+
 		// Get each usage record's data.
 		foreach ($usageRatedPokemonItems as $usageRatedPokemonItem) {
 			$pokemonId = $usageRatedPokemonItem->getPokemonId();
@@ -203,13 +212,22 @@ class ItemUsageMonthModel
 				false
 			);
 
+			// Get this usage rated Pokémon item's change in usage percent from
+			// the previous month.
+			$prevMonthUsagePercent = 0;
+			if (isset($prevMonthPokemonItems[$pokemonId->value()])) {
+				$prevMonthUsagePercent = $prevMonthPokemonItems[$pokemonId->value()]->getUsagePercent();
+			}
+			$change = $usageRatedPokemonItem->getUsagePercent() - $prevMonthUsagePercent;
+
 			$this->itemUsageDatas[] = new ItemUsageData(
 				$pokemonName->getName(),
 				$pokemon->getIdentifier(),
 				$formIcon->getImage(),
 				$usageRatedPokemonItem->getPokemonPercent(),
 				$usageRatedPokemonItem->getItemPercent(),
-				$usageRatedPokemonItem->getUsagePercent()
+				$usageRatedPokemonItem->getUsagePercent(),
+				$change
 			);
 		}
 	}

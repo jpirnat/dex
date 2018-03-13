@@ -82,6 +82,8 @@ class ItemUsageMonthView
 				'pokemonPercent' => $formatter->formatPercent($itemUsageData->getPokemonPercent()),
 				'itemPercent' => $formatter->formatPercent($itemUsageData->getItemPercent()),
 				'usagePercent' => $formatter->formatPercent($itemUsageData->getUsagePercent()),
+				'change' => $itemUsageData->getChange(),
+				'changeText' => $formatter->formatPercent($itemUsageData->getChange()),
 			];
 		}
 
