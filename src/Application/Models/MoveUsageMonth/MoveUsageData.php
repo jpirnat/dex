@@ -23,6 +23,9 @@ class MoveUsageData
 	/** @var float $usagePercent */
 	private $usagePercent;
 
+	/** @var float $change */
+	private $change;
+
 	/**
 	 * Constructor.
 	 *
@@ -32,6 +35,7 @@ class MoveUsageData
 	 * @param float $pokemonPercent
 	 * @param float $movePercent
 	 * @param float $usagePercent
+	 * @param float $change
 	 */
 	public function __construct(
 		string $pokemonName,
@@ -39,7 +43,8 @@ class MoveUsageData
 		string $formIcon,
 		float $pokemonPercent,
 		float $movePercent,
-		float $usagePercent
+		float $usagePercent,
+		float $change
 	) {
 		$this->pokemonName = $pokemonName;
 		$this->pokemonIdentifier = $pokemonIdentifier;
@@ -47,6 +52,7 @@ class MoveUsageData
 		$this->pokemonPercent = $pokemonPercent;
 		$this->movePercent = $movePercent;
 		$this->usagePercent = $usagePercent;
+		$this->change = $change;
 	}
 
 	/**
@@ -107,5 +113,15 @@ class MoveUsageData
 	public function getUsagePercent() : float
 	{
 		return $this->usagePercent;
+	}
+
+	/**
+	 * Get the change.
+	 *
+	 * @return float
+	 */
+	public function getChange() : float
+	{
+		return $this->change;
 	}
 }

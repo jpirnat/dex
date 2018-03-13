@@ -182,6 +182,15 @@ class MoveUsageMonthModel
 			$move->getId()
 		);
 
+		// Get usage rated Pokémon move records for the previous month.
+		$prevMonthPokemonMoves = $this->usageRatedPokemonMoveRepository->getByYearAndMonthAndFormatAndRatingAndMove(
+			$prevMonth->getYear(),
+			$prevMonth->getMonth(),
+			$format->getId(),
+			$rating,
+			$move->getId()
+		);
+
 		// Get each usage record's data.
 		foreach ($usageRatedPokemonMoves as $usageRatedPokemonMove) {
 			$pokemonId = $usageRatedPokemonMove->getPokemonId();
@@ -203,13 +212,22 @@ class MoveUsageMonthModel
 				false
 			);
 
+			// Get this usage rated Pokémon move's change in usage percent from
+			// the previous month.
+			$prevMonthUsagePercent = 0;
+			if (isset($prevMonthPokemonMoves[$pokemonId->value()])) {
+				$prevMonthUsagePercent = $prevMonthPokemonMoves[$pokemonId->value()]->getUsagePercent();
+			}
+			$change = $usageRatedPokemonMove->getUsagePercent() - $prevMonthUsagePercent;
+
 			$this->moveUsageDatas[] = new MoveUsageData(
 				$pokemonName->getName(),
 				$pokemon->getIdentifier(),
 				$formIcon->getImage(),
 				$usageRatedPokemonMove->getPokemonPercent(),
 				$usageRatedPokemonMove->getMovePercent(),
-				$usageRatedPokemonMove->getUsagePercent()
+				$usageRatedPokemonMove->getUsagePercent(),
+				$change
 			);
 		}
 	}

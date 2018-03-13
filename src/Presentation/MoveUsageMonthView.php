@@ -82,6 +82,8 @@ class MoveUsageMonthView
 				'pokemonPercent' => $formatter->formatPercent($moveUsageData->getPokemonPercent()),
 				'movePercent' => $formatter->formatPercent($moveUsageData->getMovePercent()),
 				'usagePercent' => $formatter->formatPercent($moveUsageData->getUsagePercent()),
+				'change' => $moveUsageData->getChange(),
+				'changeText' => $formatter->formatPercent($moveUsageData->getChange()),
 			];
 		}
 
