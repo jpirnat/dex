@@ -71,7 +71,7 @@ class UsageMoveTrendLine extends TrendLine
 	 */
 	public function getLineLabel() : string
 	{
-		return 'Usage';
+		return 'Usage %';
 	}
 
 	/**

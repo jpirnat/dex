@@ -57,6 +57,6 @@ class LeadUsageTrendLine extends TrendLine
 	 */
 	public function getLineLabel() : string
 	{
-		return 'Usage';
+		return 'Usage %';
 	}
 }

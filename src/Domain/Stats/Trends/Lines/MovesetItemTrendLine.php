@@ -65,7 +65,7 @@ class MovesetItemTrendLine extends TrendLine
 	 */
 	public function getLineLabel() : string
 	{
-		return 'Usage';
+		return 'Usage %';
 	}
 
 	/**
