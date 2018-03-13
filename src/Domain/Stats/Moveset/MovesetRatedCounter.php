@@ -196,7 +196,9 @@ class MovesetRatedCounter
 	}
 
 	/**
-	 * Get the number1.
+	 * Get the numeric score for the counter. This is calculated by the formula
+	 * (number2 - 4 * number3). According to Antar, it is "an attempt to remove
+	 * bias towards low-probability match ups."
 	 *
 	 * @return float
 	 */
@@ -206,7 +208,9 @@ class MovesetRatedCounter
 	}
 
 	/**
-	 * Get the number2.
+	 * Get the number2. This is the percent of [encounters between the Pokémon
+	 * and the counter that ended in one of them being knocked out or switched
+	 * out] where the Pokémon is the one that was knocked out or switched out.
 	 *
 	 * @return float
 	 */
@@ -216,7 +220,7 @@ class MovesetRatedCounter
 	}
 
 	/**
-	 * Get the number3.
+	 * Get the number3. This is the standard deviation for number2.
 	 *
 	 * @return float
 	 */
