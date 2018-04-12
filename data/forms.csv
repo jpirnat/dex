@@ -967,7 +967,7 @@ id,identifier,form_identifier,pokemon_id,is_default_form,introduced_in_version_g
 10159,silvally-dark,dark,10159,1,17
 10160,silvally-fairy,fairy,10160,1,17
 10161,minior-core-red,core-red,10161,1,17
-10162,mimikyu-totem-disguised,totem,10162,1,17
+10162,mimikyu-totem-disguised,totem-disguised,10162,1,17
 10163,kommo-o-totem,totem,10163,1,17
 10164,marowak-totem,totem,10164,1,18
 10165,ribombee-totem,totem,10165,1,18
