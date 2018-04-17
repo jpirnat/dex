@@ -1186,6 +1186,31 @@ foreign key (`species_id`) references `species` (`id`)
 ) engine = InnoDB;
 
 
+create table if not exists `pokedex_entries`
+(
+`language_id` tinyint unsigned not null,
+`form_id` smallint unsigned not null,
+`version_id` tinyint unsigned not null,
+
+`entry` text not null,
+
+primary key (
+	`language_id`,
+	`form_id`,
+	`version_id`
+),
+foreign key (`language_id`) references `languages` (`id`)
+	on delete restrict
+	on update cascade,
+foreign key (`form_id`) references `forms` (`id`)
+	on delete restrict
+	on update cascade,
+foreign key (`version_id`) references `versions` (`id`)
+	on delete restrict
+	on update cascade
+) engine = InnoDB;
+
+
 create table if not exists `shapes`
 (
 `id` tinyint unsigned not null,
