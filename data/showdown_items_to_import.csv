@@ -5,9 +5,14 @@ Ultra Ball,3
 Great Ball,4
 Poke Ball,5
 Safari Ball,8
+Moon Stone,9
 Old Amber,22
+Fire Stone,23
+Thunder Stone,24
+Water Stone,25
 Dome Fossil,32
 Helix Fossil,33
+Leaf Stone,37
 BrightPowder,127
 Lucky Punch,128
 Metal Powder,129
@@ -58,7 +63,9 @@ Light Ball,208
 Friend Ball,209
 Moon Ball,210
 Love Ball,211
+Sun Stone,214
 Polkadot Bow,215
+Up-Grade,216
 Berry,217
 Gold Berry,218
 Sport Ball,220
@@ -136,6 +143,10 @@ Cherish Ball,376
 Armor Fossil,384
 Skull Fossil,385
 Rare Bone,386
+Shiny Stone,387
+Dusk Stone,388
+Dawn Stone,389
+Oval Stone,390
 Adamant Orb,392
 Lustrous Orb,393
 Occa Berry,406
@@ -213,7 +224,11 @@ Rock Incense,477
 Full Incense,478
 Wave Incense,479
 Rose Incense,480
+Protector,483
 Electirizer,484
+Magmarizer,485
+Dubious Disc,486
+Reaper Cloth,487
 Razor Claw,488
 Razor Fang,489
 Griseous Orb,560
@@ -222,6 +237,7 @@ Douse Drive,600
 Shock Drive,601
 Burn Drive,602
 Chill Drive,603
+Prism Scale,618
 Eviolite,619
 Float Stone,620
 Rocky Helmet,621
@@ -255,6 +271,8 @@ Dream Ball,657
 Weakness Policy,721
 Assault Vest,722
 Pixie Plate,726
+Whipped Dream,728
+Sachet,729
 Luminous Moss,730
 Snowball,731
 Safety Goggles,732
@@ -291,6 +309,8 @@ Latiosite,766
 Roseli Berry,767
 Kee Berry,768
 Maranga Berry,769
+Jaw Fossil,791
+Sail Fossil,792
 Fairy Gem,796
 Swampertite,814
 Sceptilite,815
@@ -339,6 +359,7 @@ Eevium Z,868
 Mewnium Z,869
 Pikashunium Z,899
 Adrenaline Orb,905
+Ice Stone,907
 Beast Ball,909
 Terrain Extender,918
 Protective Pads,919
