@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammate;
@@ -36,7 +37,6 @@ class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepo
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_rated_teammates` (
-				`year`,
 				`month`,
 				`format_id`,
 				`rating`,
@@ -44,7 +44,6 @@ class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepo
 				`teammate_id`,
 				`percent`
 			) VALUES (
-				:year,
 				:month,
 				:format_id,
 				:rating,
@@ -53,8 +52,7 @@ class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepo
 				:percent
 			)'
 		);
-		$stmt->bindValue(':year', $movesetRatedTeammate->getYear(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $movesetRatedTeammate->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetRatedTeammate->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $movesetRatedTeammate->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $movesetRatedTeammate->getRating(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $movesetRatedTeammate->getPokemonId()->value(), PDO::PARAM_INT);
@@ -70,20 +68,18 @@ class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepo
 	}
 
 	/**
-	 * Get moveset rated teammate records by year, month, format, rating, and
-	 * Pokémon. Indexed by teammate id value.
+	 * Get moveset rated teammate records by month, format, rating, and Pokémon.
+	 * Indexed by teammate id value.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
 	 * @return MovesetRatedTeammate[]
 	 */
-	public function getByYearAndMonthAndFormatAndRatingAndPokemon(
-		int $year,
-		int $month,
+	public function getByMonthAndFormatAndRatingAndPokemon(
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId
@@ -93,14 +89,12 @@ class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepo
 				`teammate_id`,
 				`percent`
 			FROM `moveset_rated_teammates`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
@@ -110,7 +104,6 @@ class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepo
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$movesetRatedTeammate = new MovesetRatedTeammate(
-				$year,
 				$month,
 				$formatId,
 				$rating,

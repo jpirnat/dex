@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Moveset;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -19,20 +20,18 @@ interface MovesetRatedMoveRepositoryInterface
 	public function save(MovesetRatedMove $movesetRatedMove) : void;
 
 	/**
-	 * Get moveset rated move records by year, month, format, rating, and
-	 * Pokémon. Indexed by move id value.
+	 * Get moveset rated move records by month, format, rating, and Pokémon.
+	 * Indexed by move id value.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
 	 * @return MovesetRatedMove[]
 	 */
-	public function getByYearAndMonthAndFormatAndRatingAndPokemon(
-		int $year,
-		int $month,
+	public function getByMonthAndFormatAndRatingAndPokemon(
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId
@@ -41,14 +40,14 @@ interface MovesetRatedMoveRepositoryInterface
 	/**
 	 * Get moveset rated move records by their format, rating, Pokémon, and move.
 	 * Use this to create a trend line for a Pokémon's move usage in a format.
-	 * Indexed and sorted by year then month.
+	 * Indexed and sorted by month.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param MoveId $moveId
 	 *
-	 * @return MovesetRatedMove[][]
+	 * @return MovesetRatedMove[]
 	 */
 	public function getByFormatAndRatingAndPokemonAndMove(
 		FormatId $formatId,

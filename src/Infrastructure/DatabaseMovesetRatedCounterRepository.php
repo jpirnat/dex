@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounter;
@@ -35,7 +36,6 @@ class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterReposi
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_rated_counters` (
-				`year`,
 				`month`,
 				`format_id`,
 				`rating`,
@@ -47,7 +47,6 @@ class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterReposi
 				`percent_knocked_out`,
 				`percent_switched_out`
 			) VALUES (
-				:year,
 				:month,
 				:format_id,
 				:rating,
@@ -60,8 +59,7 @@ class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterReposi
 				:percent_switched_out
 			)'
 		);
-		$stmt->bindValue(':year', $movesetRatedCounter->getYear(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $movesetRatedCounter->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetRatedCounter->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $movesetRatedCounter->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $movesetRatedCounter->getRating(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $movesetRatedCounter->getPokemonId()->value(), PDO::PARAM_INT);
@@ -74,22 +72,19 @@ class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterReposi
 		$stmt->execute();
 	}
 
-
 	/**
-	 * Get moveset rated counter records by year, month, format, rating, and
-	 * Pokémon. Indexed by counter id value.
+	 * Get moveset rated counter records by month, format, rating, and Pokémon.
+	 * Indexed by counter id value.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
 	 * @return MovesetRatedCounter[]
 	 */
-	public function getByYearAndMonthAndFormatAndRatingAndPokemon(
-		int $year,
-		int $month,
+	public function getByMonthAndFormatAndRatingAndPokemon(
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId
@@ -103,14 +98,12 @@ class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterReposi
 				`percent_knocked_out`,
 				`percent_switched_out`
 			FROM `moveset_rated_counters`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
@@ -120,7 +113,6 @@ class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterReposi
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$movesetRatedCounter = new MovesetRatedCounter(
-				$year,
 				$month,
 				$formatId,
 				$rating,

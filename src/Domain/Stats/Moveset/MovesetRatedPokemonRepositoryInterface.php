@@ -3,17 +3,17 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Moveset;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface MovesetRatedPokemonRepositoryInterface
 {
 	/**
-	 * Does a moveset rated Pokémon record exist for this year, month, format,
-	 * rating, and Pokémon?
+	 * Does a moveset rated Pokémon record exist for this month, format, rating,
+	 * and Pokémon?
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
@@ -21,30 +21,23 @@ interface MovesetRatedPokemonRepositoryInterface
 	 * @return bool
 	 */
 	public function has(
-		int $year,
-		int $month,
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId
 	) : bool;
 
 	/**
-	 * Do any moveset rated Pokémon records exist for this year, month, format,
-	 * and rating?
+	 * Do any moveset rated Pokémon records exist for this month, format, and
+	 * rating?
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
 	 * @return bool
 	 */
-	public function hasAny(
-		int $year,
-		int $month,
-		FormatId $formatId,
-		int $rating
-	) : bool;
+	public function hasAny(DateTime $month, FormatId $formatId, int $rating) : bool;
 
 	/**
 	 * Save a moveset rated Pokémon record.
@@ -56,23 +49,20 @@ interface MovesetRatedPokemonRepositoryInterface
 	public function save(MovesetRatedPokemon $movesetRatedPokemon) : void;
 
 	/**
-	 * Get a moveset rated Pokémon record by year, month, format, rating, and
-	 * Pokémon.
+	 * Get a moveset rated Pokémon record by month, format, rating, and Pokémon.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
 	 * @throws MovesetRatedPokemonNotFoundException if no moveset rated Pokémon
-	 *     record exists with this year, month, format, rating, and Pokémon.
+	 *     record exists with this month, format, rating, and Pokémon.
 	 *
 	 * @return MovesetRatedPokemon
 	 */
-	public function getByYearAndMonthAndFormatAndRatingAndPokemon(
-		int $year,
-		int $month,
+	public function getByMonthAndFormatAndRatingAndPokemon(
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId

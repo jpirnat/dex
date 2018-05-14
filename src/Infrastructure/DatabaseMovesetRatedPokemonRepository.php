@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
@@ -26,11 +27,10 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 	}
 
 	/**
-	 * Does a moveset rated Pokémon record exist for this year, month, format,
-	 * rating, and Pokémon?
+	 * Does a moveset rated Pokémon record exist for this month, format, rating,
+	 * and Pokémon?
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
@@ -38,8 +38,7 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 	 * @return bool
 	 */
 	public function has(
-		int $year,
-		int $month,
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId
@@ -48,14 +47,12 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 			'SELECT
 				COUNT(*)
 			FROM `moveset_rated_pokemon`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
@@ -65,33 +62,26 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 	}
 
 	/**
-	 * Do any moveset rated Pokémon records exist for this year, month, format,
-	 * and rating?
+	 * Do any moveset rated Pokémon records exist for this month, format, and
+	 * rating?
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
 	 * @return bool
 	 */
-	public function hasAny(
-		int $year,
-		int $month,
-		FormatId $formatId,
-		int $rating
-	) : bool {
+	public function hasAny(DateTime $month, FormatId $formatId, int $rating) : bool
+	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
 			FROM `moveset_rated_pokemon`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id
 				AND `rating` = :rating'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
@@ -110,14 +100,12 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_rated_pokemon` (
-				`year`,
 				`month`,
 				`format_id`,
 				`rating`,
 				`pokemon_id`,
 				`average_weight`
 			) VALUES (
-				:year,
 				:month,
 				:format_id,
 				:rating,
@@ -125,8 +113,7 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 				:average_weight
 			)'
 		);
-		$stmt->bindValue(':year', $movesetRatedPokemon->getYear(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $movesetRatedPokemon->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetRatedPokemon->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $movesetRatedPokemon->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $movesetRatedPokemon->getRating(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $movesetRatedPokemon->getPokemonId()->value(), PDO::PARAM_INT);
@@ -135,23 +122,20 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 	}
 
 	/**
-	 * Get a moveset rated Pokémon record by year, month, format, rating, and
-	 * Pokémon.
+	 * Get a moveset rated Pokémon record by month, format, rating, and Pokémon.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
 	 * @throws MovesetRatedPokemonNotFoundException if no moveset rated Pokémon
-	 *     record exists with this year, month, format, rating, and Pokémon.
+	 *     record exists with this month, format, rating, and Pokémon.
 	 *
 	 * @return MovesetRatedPokemon
 	 */
-	public function getByYearAndMonthAndFormatAndRatingAndPokemon(
-		int $year,
-		int $month,
+	public function getByMonthAndFormatAndRatingAndPokemon(
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId
@@ -160,15 +144,13 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 			'SELECT
 				`average_weight`
 			FROM `moveset_rated_pokemon`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
@@ -177,15 +159,14 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 
 		if (!$result) {
 			throw new MovesetRatedPokemonNotFoundException(
-				'No moveset rated Pokémon record exists with year ' . $year
-				. ', month ' . $month . ', format id ' . $formatId->value()
-				. ', rating ' . $rating . ', and Pokémon id '
-				. $pokemonId->value()
+				'No moveset rated Pokémon record exists with month '
+				. $month->format('Y-m') . ', format id '
+				. $formatId->value() . ', rating ' . $rating
+				. ', and Pokémon id ' . $pokemonId->value()
 			);
 		}
 
 		$movesetRatedPokemon = new MovesetRatedPokemon(
-			$year,
 			$month,
 			$formatId,
 			$rating,

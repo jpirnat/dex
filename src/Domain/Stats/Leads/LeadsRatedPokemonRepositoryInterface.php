@@ -3,28 +3,23 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Leads;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface LeadsRatedPokemonRepositoryInterface
 {
 	/**
-	 * Do any leads rated Pokémon records exist for this year, month, format,
-	 * and rating?
+	 * Do any leads rated Pokémon records exist for this month, format, and
+	 * rating?
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
 	 * @return bool
 	 */
-	public function hasAny(
-		int $year,
-		int $month,
-		FormatId $formatId,
-		int $rating
-	) : bool;
+	public function hasAny(DateTime $month, FormatId $formatId, int $rating) : bool;
 
 	/**
 	 * Save a leads rated Pokémon record.
@@ -36,20 +31,18 @@ interface LeadsRatedPokemonRepositoryInterface
 	public function save(LeadsRatedPokemon $leadsRatedPokemon) : void;
 
 	/**
-	 * Get leads rated Pokémon records by year and month and format and rating.
-	 * Indexed by Pokémon id value. Use this to recreate a stats leads file,
-	 * such as http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
+	 * Get leads rated Pokémon records by month, format, and rating. Indexed by
+	 * Pokémon id value. Use this to recreate a stats leads file, such as
+	 * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
 	 * @return LeadsRatedPokemon[]
 	 */
-	public function getByYearAndMonthAndFormatAndRating(
-		int $year,
-		int $month,
+	public function getByMonthAndFormatAndRating(
+		DateTime $month,
 		FormatId $formatId,
 		int $rating
 	) : array;
@@ -57,13 +50,13 @@ interface LeadsRatedPokemonRepositoryInterface
 	/**
 	 * Get leads rated Pokémon records by their format, rating, and Pokémon.
 	 * Use this to create a trend line for a Pokémon's lead usage in a format.
-	 * Indexed and sorted by year then month.
+	 * Indexed and sorted by month.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
-	 * @return LeadsRatedPokemon[][]
+	 * @return LeadsRatedPokemon[]
 	 */
 	public function getByFormatAndRatingAndPokemon(
 		FormatId $formatId,

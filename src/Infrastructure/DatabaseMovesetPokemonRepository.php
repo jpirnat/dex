@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
@@ -26,29 +27,23 @@ class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterf
 	}
 
 	/**
-	 * Do any moveset Pokémon records exist for this year, month, and format?
+	 * Do any moveset Pokémon records exist for this month and format?
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 *
 	 * @return bool
 	 */
-	public function hasAny(
-		int $year,
-		int $month,
-		FormatId $formatId
-	) : bool {
+	public function hasAny(DateTime $month, FormatId $formatId) : bool
+	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
 			FROM `moveset_pokemon`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
@@ -66,14 +61,12 @@ class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterf
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_pokemon` (
-				`year`,
 				`month`,
 				`format_id`,
 				`pokemon_id`,
 				`raw_count`,
 				`viability_ceiling`
 			) VALUES (
-				:year,
 				:month,
 				:format_id,
 				:pokemon_id,
@@ -81,8 +74,7 @@ class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterf
 				:viability_ceiling
 			)'
 		);
-		$stmt->bindValue(':year', $movesetPokemon->getYear(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $movesetPokemon->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetPokemon->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $movesetPokemon->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $movesetPokemon->getPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':raw_count', $movesetPokemon->getRawCount(), PDO::PARAM_INT);
@@ -91,21 +83,19 @@ class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterf
 	}
 
 	/**
-	 * Get a moveset Pokémon record by year, month, format, and Pokémon.
+	 * Get a moveset Pokémon record by month, format, and Pokémon.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param PokemonId $pokemonId
 	 *
 	 * @throws MovesetPokemonNotFoundException if no moveset Pokémon record
-	 *     exists with this year, month, format, and Pokémon.
+	 *     exists with this month, format, and Pokémon.
 	 *
 	 * @return MovesetPokemon
 	 */
-	public function getByYearAndMonthAndFormatAndPokemon(
-		int $year,
-		int $month,
+	public function getByMonthAndFormatAndPokemon(
+		DateTime $month,
 		FormatId $formatId,
 		PokemonId $pokemonId
 	) : MovesetPokemon {
@@ -114,14 +104,12 @@ class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterf
 				`raw_count`,
 				`viability_ceiling`
 			FROM `moveset_pokemon`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id
 				AND `pokemon_id` = :pokemon_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -129,14 +117,13 @@ class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterf
 
 		if (!$result) {
 			throw new MovesetPokemonNotFoundException(
-				'No moveset Pokémon record exists with year ' . $year
-				. ', month ' . $month . ', format id ' . $formatId->value()
+				'No moveset Pokémon record exists with month '
+				. $month->format('Y-m') . ', format id ' . $formatId->value()
 				. ', and Pokémon id ' . $pokemonId->value()
 			);
 		}
 
 		$movesetPokemon = new MovesetPokemon(
-			$year,
 			$month,
 			$formatId,
 			$pokemonId,

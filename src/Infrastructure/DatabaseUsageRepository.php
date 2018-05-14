@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\Usage;
 use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
@@ -24,29 +25,23 @@ class DatabaseUsageRepository implements UsageRepositoryInterface
 	}
 
 	/**
-	 * Does a usage record exist for this year, month, and format?
+	 * Does a usage record exist for this month and format?
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 *
 	 * @return bool
 	 */
-	public function has(
-		int $year,
-		int $month,
-		FormatId $formatId
-	) : bool {
+	public function has(DateTime $month, FormatId $formatId) : bool
+	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
 			FROM `usage`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
@@ -54,26 +49,21 @@ class DatabaseUsageRepository implements UsageRepositoryInterface
 	}
 
 	/**
-	 * Do any usage records exist for this year and month?
+	 * Do any usage records exist for this month?
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 *
 	 * @return bool
 	 */
-	public function hasAny(
-		int $year,
-		int $month
-	) : bool {
+	public function hasAny(DateTime $month) : bool
+	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
 			FROM `usage`
-			WHERE `year` = :year
-				AND `month` = :month'
+			WHERE `month` = :month'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
 		return $count > 0;
@@ -90,19 +80,16 @@ class DatabaseUsageRepository implements UsageRepositoryInterface
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `usage` (
-				`year`,
 				`month`,
 				`format_id`,
 				`total_battles`
 			) VALUES (
-				:year,
 				:month,
 				:format_id,
 				:total_battles
 			)'
 		);
-		$stmt->bindValue(':year', $usage->getYear(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $usage->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $usage->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $usage->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':total_battles', $usage->getTotalBattles(), PDO::PARAM_INT);
 		$stmt->execute();

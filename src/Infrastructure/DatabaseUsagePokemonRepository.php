@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemon;
@@ -25,29 +26,23 @@ class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 	}
 
 	/**
-	 * Do any usage Pokémon records exist for this year, month, and format?
+	 * Do any usage Pokémon records exist for this month and format?
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 *
 	 * @return bool
 	 */
-	public function hasAny(
-		int $year,
-		int $month,
-		FormatId $formatId
-	) : bool {
+	public function hasAny(DateTime $month, FormatId $formatId) : bool
+	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
 			FROM `usage_pokemon`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
@@ -65,7 +60,6 @@ class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `usage_pokemon` (
-				`year`,
 				`month`,
 				`format_id`,
 				`pokemon_id`,
@@ -74,7 +68,6 @@ class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 				`real`,
 				`real_percent`
 			) VALUES (
-				:year,
 				:month,
 				:format_id,
 				:pokemon_id,
@@ -84,8 +77,7 @@ class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 				:real_percent
 			)'
 		);
-		$stmt->bindValue(':year', $usagePokemon->getYear(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $usagePokemon->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $usagePokemon->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $usagePokemon->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $usagePokemon->getPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':raw', $usagePokemon->getRaw(), PDO::PARAM_INT);
@@ -96,21 +88,17 @@ class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 	}
 
 	/**
-	 * Get usage Pokémon records by year and month and format. Indexed by
-	 * Pokémon id value. Use this to recreate a stats usage file, such as
+	 * Get usage Pokémon records by month and format. Indexed by Pokémon id
+	 * value. Use this to recreate a stats usage file, such as
 	 * http://www.smogon.com/stats/2014-11/ou-1695.txt.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 *
 	 * @return UsagePokemon[]
 	 */
-	public function getByYearAndMonthAndFormat(
-		int $year,
-		int $month,
-		FormatId $formatId
-	) : array {
+	public function getByMonthAndFormat(DateTime $month, FormatId $formatId) : array
+	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				`pokemon_id`,
@@ -119,12 +107,10 @@ class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 				`real`,
 				`real_percent`
 			FROM `usage_pokemon`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -132,7 +118,6 @@ class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$usagePokemon = new UsagePokemon(
-				$year,
 				$month,
 				$formatId,
 				new PokemonId($result['pokemon_id']),

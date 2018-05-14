@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Natures\NatureId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -41,7 +42,6 @@ class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadReposito
 
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_rated_spreads` (
-				`year`,
 				`month`,
 				`format_id`,
 				`rating`,
@@ -55,7 +55,6 @@ class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadReposito
 				`spe`,
 				`percent`
 			) VALUES (
-				:year,
 				:month,
 				:format_id,
 				:rating,
@@ -70,8 +69,7 @@ class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadReposito
 				:percent
 			)'
 		);
-		$stmt->bindValue(':year', $movesetRatedSpread->getYear(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $movesetRatedSpread->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetRatedSpread->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $movesetRatedSpread->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $movesetRatedSpread->getRating(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $movesetRatedSpread->getPokemonId()->value(), PDO::PARAM_INT);
@@ -87,20 +85,17 @@ class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadReposito
 	}
 
 	/**
-	 * Get moveset rated spread records by year, month, format, rating, and
-	 * Pokémon.
+	 * Get moveset rated spread records by month, format, rating, and Pokémon.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
 	 * @return MovesetRatedSpread[]
 	 */
-	public function getByYearAndMonthAndFormatAndRatingAndPokemon(
-		int $year,
-		int $month,
+	public function getByMonthAndFormatAndRatingAndPokemon(
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId
@@ -116,14 +111,12 @@ class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadReposito
 				`spe`,
 				`percent`
 			FROM `moveset_rated_spreads`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
@@ -141,7 +134,6 @@ class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadReposito
 			$evSpread->add(new StatValue(new StatId(StatId::SPEED), $result['spe']));
 
 			$movesetRatedSpread = new MovesetRatedSpread(
-				$year,
 				$month,
 				$formatId,
 				$rating,

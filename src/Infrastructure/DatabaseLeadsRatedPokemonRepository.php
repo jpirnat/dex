@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemon;
@@ -25,32 +26,25 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 	}
 
 	/**
-	 * Do any leads rated Pokémon records exist for this year, month, format,
-	 * and rating?
+	 * Do any leads rated Pokémon records exist for this month, format, and
+	 * rating?
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
 	 * @return bool
 	 */
-	public function hasAny(
-		int $year,
-		int $month,
-		FormatId $formatId,
-		int $rating
-	) : bool {
+	public function hasAny(DateTime $month, FormatId $formatId, int $rating) : bool
+	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
 			FROM `leads_rated_pokemon`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id
 				AND `rating` = :rating'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
 		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -70,7 +64,6 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `leads_rated_pokemon` (
-				`year`,
 				`month`,
 				`format_id`,
 				`rating`,
@@ -78,7 +71,6 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 				`rank`,
 				`usage_percent`
 			) VALUES (
-				:year,
 				:month,
 				:format_id,
 				:rating,
@@ -87,8 +79,7 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 				:usage_percent
 			)'
 		);
-		$stmt->bindValue(':year', $leadsRatedPokemon->getYear(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $leadsRatedPokemon->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $leadsRatedPokemon->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $leadsRatedPokemon->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $leadsRatedPokemon->getRating(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $leadsRatedPokemon->getPokemonId()->value(), PDO::PARAM_INT);
@@ -98,20 +89,18 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 	}
 
 	/**
-	 * Get leads rated Pokémon records by year and month and format and rating.
-	 * Indexed by Pokémon id value. Use this to recreate a stats leads file,
-	 * such as http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
+	 * Get leads rated Pokémon records by month, format, and rating. Indexed by
+	 * Pokémon id value. Use this to recreate a stats leads file, such as
+	 * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
 	 * @return LeadsRatedPokemon[]
 	 */
-	public function getByYearAndMonthAndFormatAndRating(
-		int $year,
-		int $month,
+	public function getByMonthAndFormatAndRating(
+		DateTime $month,
 		FormatId $formatId,
 		int $rating
 	) : array {
@@ -121,13 +110,11 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 				`rank`,
 				`usage_percent`
 			FROM `leads_rated_pokemon`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id
 				AND `rating` = :rating'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
@@ -136,7 +123,6 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$leadsRatedPokemon = new LeadsRatedPokemon(
-				$year,
 				$month,
 				$formatId,
 				$rating,
@@ -154,13 +140,13 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 	/**
 	 * Get leads rated Pokémon records by their format, rating, and Pokémon.
 	 * Use this to create a trend line for a Pokémon's lead usage in a format.
-	 * Indexed and sorted by year then month.
+	 * Indexed and sorted by month.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
-	 * @return LeadsRatedPokemon[][]
+	 * @return LeadsRatedPokemon[]
 	 */
 	public function getByFormatAndRatingAndPokemon(
 		FormatId $formatId,
@@ -169,7 +155,6 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`year`,
 				`month`,
 				`rank`,
 				`usage_percent`
@@ -177,9 +162,7 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 			WHERE `format_id` = :format_id
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id
-			ORDER BY
-				`year` ASC,
-				`month` ASC'
+			ORDER BY `month` ASC'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -190,8 +173,7 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$leadsRatedPokemon = new LeadsRatedPokemon(
-				$result['year'],
-				$result['month'],
+				new DateTime($result['month']),
 				$formatId,
 				$rating,
 				$pokemonId,
@@ -199,7 +181,7 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 				(float) $result['usage_percent']
 			);
 
-			$leadsRatedPokemons[$result['year']][$result['month']] = $leadsRatedPokemon;
+			$leadsRatedPokemons[$result['month']] = $leadsRatedPokemon;
 		}
 
 		return $leadsRatedPokemons;

@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
-use Jp\Dex\Domain\YearMonth;
 use PDO;
 
 class DatabaseUsageQueries implements UsageQueriesInterface
@@ -24,49 +24,45 @@ class DatabaseUsageQueries implements UsageQueriesInterface
 	}
 
 	/**
-	 * Get the year/month combinations that have usage records.
+	 * Get the months that have usage records.
 	 *
-	 * @return YearMonth[]
+	 * @return DateTime[]
 	 */
-	public function getYearMonths() : array
+	public function getMonths() : array
 	{
 		$stmt = $this->db->prepare(
 			'SELECT DISTINCT
-				`year`,
 				`month`
 			FROM `usage`'
 		);
 		$stmt->execute();
 
-		$yearMonths = [];
+		$months = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$yearMonth = new YearMonth($result['year'], $result['month']);
+			$month = new DateTime($result['month']);
 
-			$yearMonths[] = $yearMonth;
+			$months[] = $month;
 		}
 
-		return $yearMonths;
+		return $months;
 	}
 
 	/**
-	 * Get the year/month of the oldest instance of data in this format.
+	 * Get the month of the oldest instance of data in this format.
 	 *
 	 * @param FormatId $formatId
 	 *
-	 * @return YearMonth|null
+	 * @return DateTime|null
 	 */
-	public function getOldest(FormatId $formatId) : ?YearMonth
+	public function getOldest(FormatId $formatId) : ?DateTime
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`year`,
 				`month`
 			FROM `usage`
 			WHERE `format_id` = :format_id
-			ORDER BY
-				`year` ASC,
-				`month` ASC
+			ORDER BY `month` ASC
 			LIMIT 1'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
@@ -77,29 +73,26 @@ class DatabaseUsageQueries implements UsageQueriesInterface
 			return null;
 		}
 
-		$yearMonth = new YearMonth($result['year'], $result['month']);
+		$month = new DateTime($result['month']);
 
-		return $yearMonth;
+		return $month;
 	}
 
 	/**
-	 * Get the year/month of the newest instance of data in this format.
+	 * Get the month of the newest instance of data in this format.
 	 *
 	 * @param FormatId $formatId
 	 *
-	 * @return YearMonth|null
+	 * @return DateTime|null
 	 */
-	public function getNewest(FormatId $formatId) : ?YearMonth
+	public function getNewest(FormatId $formatId) : ?DateTime
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`year`,
 				`month`
 			FROM `usage`
 			WHERE `format_id` = :format_id
-			ORDER BY
-				`year` DESC,
-				`month` DESC
+			ORDER BY `month` DESC
 			LIMIT 1'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
@@ -110,8 +103,8 @@ class DatabaseUsageQueries implements UsageQueriesInterface
 			return null;
 		}
 
-		$yearMonth = new YearMonth($result['year'], $result['month']);
+		$month = new DateTime($result['month']);
 
-		return $yearMonth;
+		return $month;
 	}
 }

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -26,20 +27,18 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 	}
 
 	/**
-	 * Get usage rated Pokémon ability records by their year, month, format,
-	 * rating, and ability. Indexed by Pokémon id value.
+	 * Get usage rated Pokémon ability records by their month, format, rating,
+	 * and ability. Indexed by Pokémon id value.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param AbilityId $abilityId
 	 *
 	 * @return UsageRatedPokemonAbility[]
 	 */
-	public function getByYearAndMonthAndFormatAndRatingAndAbility(
-		int $year,
-		int $month,
+	public function getByMonthAndFormatAndRatingAndAbility(
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		AbilityId $abilityId
@@ -52,19 +51,16 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 				`u`.`usage_percent` * `m`.`percent` / 100 AS `usage_percent`
 			FROM `usage_rated_pokemon` AS `u`
 			INNER JOIN `moveset_rated_abilities` AS `m`
-				ON `u`.`year` = `m`.`year`
-				AND `u`.`month` = `m`.`month`
+				ON `u`.`month` = `m`.`month`
 				AND `u`.`format_id` = `m`.`format_id`
 				AND `u`.`rating` = `m`.`rating`
 				AND `u`.`pokemon_id` = `m`.`pokemon_id`
-			WHERE `u`.`year` = :year
-				AND `u`.`month` = :month
+			WHERE `u`.`month` = :month
 				AND `u`.`format_id` = :format_id
 				AND `u`.`rating` = :rating
 				AND `m`.`ability_id` = :ability_id'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
@@ -74,7 +70,6 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$usageRatedPokemonAbility = new UsageRatedPokemonAbility(
-				$year,
 				$month,
 				$formatId,
 				$rating,
@@ -94,14 +89,14 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 	/**
 	 * Get usage rated Pokémon ability records by their format, rating, Pokémon,
 	 * and ability. Use this to create a trend line for the usage of a specific
-	 * Pokémon with a specific ability. Indexed and sorted by year then month.
+	 * Pokémon with a specific ability. Indexed and sorted by month.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param AbilityId $abilityId
 	 *
-	 * @return UsageRatedPokemonAbility[][]
+	 * @return UsageRatedPokemonAbility[]
 	 */
 	public function getByFormatAndRatingAndPokemonAndAbility(
 		FormatId $formatId,
@@ -111,15 +106,13 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`u`.`year`,
 				`u`.`month`,
 				`u`.`usage_percent` AS `pokemon_percent`,
 				`m`.`percent` AS `ability_percent`,
 				`u`.`usage_percent` * `m`.`percent` / 100 AS `usage_percent`
 			FROM `usage_rated_pokemon` AS `u`
 			INNER JOIN `moveset_rated_abilities` AS `m`
-				ON `u`.`year` = `m`.`year`
-				AND `u`.`month` = `m`.`month`
+				ON `u`.`month` = `m`.`month`
 				AND `u`.`format_id` = `m`.`format_id`
 				AND `u`.`rating` = `m`.`rating`
 				AND `u`.`pokemon_id` = `m`.`pokemon_id`
@@ -127,9 +120,7 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 				AND `u`.`rating` = :rating
 				AND `u`.`pokemon_id` = :pokemon_id
 				AND `m`.`ability_id` = :ability_id
-			ORDER BY
-				`u`.`year` ASC,
-				`u`.`month` ASC'
+			ORDER BY `u`.`month` ASC'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -141,8 +132,7 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$usageRatedPokemonAbility = new UsageRatedPokemonAbility(
-				$result['year'],
-				$result['month'],
+				new DateTime($result['month']),
 				$formatId,
 				$rating,
 				$pokemonId,
@@ -152,7 +142,7 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 				(float) $result['usage_percent']
 			);
 
-			$usageRatedPokemonAbilities[$result['year']][$result['month']] = $usageRatedPokemonAbility;
+			$usageRatedPokemonAbilities[$result['month']] = $usageRatedPokemonAbility;
 		}
 
 		return $usageRatedPokemonAbilities;

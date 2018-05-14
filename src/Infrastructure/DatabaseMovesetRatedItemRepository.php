@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -36,7 +37,6 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_rated_items` (
-				`year`,
 				`month`,
 				`format_id`,
 				`rating`,
@@ -44,7 +44,6 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 				`item_id`,
 				`percent`
 			) VALUES (
-				:year,
 				:month,
 				:format_id,
 				:rating,
@@ -53,8 +52,7 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 				:percent
 			)'
 		);
-		$stmt->bindValue(':year', $movesetRatedItem->getYear(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $movesetRatedItem->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetRatedItem->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $movesetRatedItem->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $movesetRatedItem->getRating(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $movesetRatedItem->getPokemonId()->value(), PDO::PARAM_INT);
@@ -64,20 +62,18 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 	}
 
 	/**
-	 * Get moveset rated item records by year, month, format, rating, and
-	 * Pokémon. Indexed by item id value.
+	 * Get moveset rated item records by month, format, rating, and Pokémon.
+	 * Indexed by item id value.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
 	 * @return MovesetRatedItem[]
 	 */
-	public function getByYearAndMonthAndFormatAndRatingAndPokemon(
-		int $year,
-		int $month,
+	public function getByMonthAndFormatAndRatingAndPokemon(
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId
@@ -87,14 +83,12 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 				`item_id`,
 				`percent`
 			FROM `moveset_rated_items`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
@@ -104,7 +98,6 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$movesetRatedItem = new MovesetRatedItem(
-				$year,
 				$month,
 				$formatId,
 				$rating,
@@ -122,14 +115,14 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 	/**
 	 * Get moveset rated item records by their format, rating, Pokémon, and item.
 	 * Use this to create a trend line for a Pokémon's item usage in a format.
-	 * Indexed and sorted by year then month.
+	 * Indexed and sorted by month.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param ItemId $itemId
 	 *
-	 * @return MovesetRatedItem[][]
+	 * @return MovesetRatedItem[]
 	 */
 	public function getByFormatAndRatingAndPokemonAndItem(
 		FormatId $formatId,
@@ -139,7 +132,6 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`year`,
 				`month`,
 				`percent`
 			FROM `moveset_rated_items`
@@ -147,9 +139,7 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id
 				AND `item_id` = :item_id
-			ORDER BY
-				`year` ASC,
-				`month` ASC'
+			ORDER BY `month` ASC'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -161,8 +151,7 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$movesetRatedItem = new MovesetRatedItem(
-				$result['year'],
-				$result['month'],
+				new DateTime($result['month']),
 				$formatId,
 				$rating,
 				$pokemonId,
@@ -170,7 +159,7 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 				(float) $result['percent']
 			);
 
-			$movesetRatedItems[$result['year']][$result['month']] = $movesetRatedItem;
+			$movesetRatedItems[$result['month']] = $movesetRatedItem;
 		}
 
 		return $movesetRatedItems;

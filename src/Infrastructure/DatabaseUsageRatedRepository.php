@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\UsageRated;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
@@ -24,32 +25,25 @@ class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterface
 	}
 
 	/**
-	 * Does a usage rated record exist for this year, month, format, and rating?
+	 * Does a usage rated record exist for this month, format, and rating?
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
 	 * @return bool
 	 */
-	public function has(
-		int $year,
-		int $month,
-		FormatId $formatId,
-		int $rating
-	) : bool {
+	public function has(DateTime $month, FormatId $formatId, int $rating) : bool
+	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
 			FROM `usage_rated`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id
 				AND `rating` = :rating'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
@@ -68,21 +62,18 @@ class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterface
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `usage_rated` (
-				`year`,
 				`month`,
 				`format_id`,
 				`rating`,
 				`average_weight_per_team`
 			) VALUES (
-				:year,
 				:month,
 				:format_id,
 				:rating,
 				:average_weight_per_team
 			)'
 		);
-		$stmt->bindValue(':year', $usageRated->getYear(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $usageRated->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $usageRated->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $usageRated->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $usageRated->getRating(), PDO::PARAM_INT);
 		$stmt->bindValue(':average_weight_per_team', $usageRated->getAverageWeightPerTeam(), PDO::PARAM_STR);

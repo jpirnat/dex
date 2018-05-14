@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 use PDO;
@@ -23,10 +24,9 @@ class DatabaseUsageRatedQueries implements UsageRatedQueriesInterface
 	}
 
 	/**
-	 * Get the format/rating combinations for this year and month.
+	 * Get the format/rating combinations for this month.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 *
 	 * @return array An array of the form [
 	 *     [
@@ -36,18 +36,16 @@ class DatabaseUsageRatedQueries implements UsageRatedQueriesInterface
 	 *     ...
 	 * ]
 	 */
-	public function getFormatRatings(int $year, int $month) : array
+	public function getFormatRatings(DateTime $month) : array
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				`format_id`,
 				`rating`
 			FROM `usage_rated`
-			WHERE `year` = :year
-				AND `month` = :month'
+			WHERE `month` = :month'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->execute();
 
 		$formatRatings = [];

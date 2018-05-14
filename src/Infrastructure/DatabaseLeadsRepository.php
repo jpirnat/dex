@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Leads\Leads;
 use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
@@ -24,29 +25,23 @@ class DatabaseLeadsRepository implements LeadsRepositoryInterface
 	}
 
 	/**
-	 * Does a leads record exist for this year, month, and format?
+	 * Does a leads record exist for this month and format?
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 *
 	 * @return bool
 	 */
-	public function has(
-		int $year,
-		int $month,
-		FormatId $formatId
-	) : bool {
+	public function has(DateTime $month, FormatId $formatId) : bool
+	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
 			FROM `leads`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
@@ -64,19 +59,16 @@ class DatabaseLeadsRepository implements LeadsRepositoryInterface
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `leads` (
-				`year`,
 				`month`,
 				`format_id`,
 				`total_leads`
 			) VALUES (
-				:year,
 				:month,
 				:format_id,
 				:total_leads
 			)'
 		);
-		$stmt->bindValue(':year', $leads->getYear(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $leads->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $leads->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $leads->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':total_leads', $leads->getTotalLeads(), PDO::PARAM_INT);
 		$stmt->execute();

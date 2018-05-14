@@ -3,13 +3,14 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Usage;
 
+use DateTime;
+
 interface UsageRatedQueriesInterface
 {
 	/**
-	 * Get the format/rating combinations for this year and month.
+	 * Get the format/rating combinations for this month.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 *
 	 * @return array An array of the form [
 	 *     [
@@ -19,5 +20,5 @@ interface UsageRatedQueriesInterface
 	 *     ...
 	 * ]
 	 */
-	public function getFormatRatings(int $year, int $month) : array;
+	public function getFormatRatings(DateTime $month) : array;
 }

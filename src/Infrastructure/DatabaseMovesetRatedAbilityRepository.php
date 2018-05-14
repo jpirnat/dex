@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use DateTime;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -36,7 +37,6 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_rated_abilities` (
-				`year`,
 				`month`,
 				`format_id`,
 				`rating`,
@@ -44,7 +44,6 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 				`ability_id`,
 				`percent`
 			) VALUES (
-				:year,
 				:month,
 				:format_id,
 				:rating,
@@ -53,8 +52,7 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 				:percent
 			)'
 		);
-		$stmt->bindValue(':year', $movesetRatedAbility->getYear(), PDO::PARAM_INT);
-		$stmt->bindValue(':month', $movesetRatedAbility->getMonth(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetRatedAbility->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $movesetRatedAbility->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $movesetRatedAbility->getRating(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $movesetRatedAbility->getPokemonId()->value(), PDO::PARAM_INT);
@@ -64,20 +62,18 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 	}
 
 	/**
-	 * Get moveset rated ability records by year, month, format, rating, and
-	 * Pokémon. Indexed by ability id value.
+	 * Get moveset rated ability records by month, format, rating, and Pokémon.
+	 * Indexed by ability id value.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
 	 * @return MovesetRatedAbility[]
 	 */
-	public function getByYearAndMonthAndFormatAndRatingAndPokemon(
-		int $year,
-		int $month,
+	public function getByMonthAndFormatAndRatingAndPokemon(
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId
@@ -87,14 +83,12 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 				`ability_id`,
 				`percent`
 			FROM `moveset_rated_abilities`
-			WHERE `year` = :year
-				AND `month` = :month
+			WHERE `month` = :month
 				AND `format_id` = :format_id
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':year', $year, PDO::PARAM_INT);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
@@ -104,7 +98,6 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$movesetRatedAbility = new MovesetRatedAbility(
-				$year,
 				$month,
 				$formatId,
 				$rating,
@@ -122,14 +115,14 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 	/**
 	 * Get moveset rated ability records by their format, rating, Pokémon, and ability.
 	 * Use this to create a trend line for a Pokémon's ability usage in a format.
-	 * Indexed and sorted by year then month.
+	 * Indexed and sorted by month.
 	 *
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param AbilityId $abilityId
 	 *
-	 * @return MovesetRatedAbility[][]
+	 * @return MovesetRatedAbility[]
 	 */
 	public function getByFormatAndRatingAndPokemonAndAbility(
 		FormatId $formatId,
@@ -139,7 +132,6 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`year`,
 				`month`,
 				`percent`
 			FROM `moveset_rated_abilities`
@@ -147,9 +139,7 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id
 				AND `ability_id` = :ability_id
-			ORDER BY
-				`year` ASC,
-				`month` ASC'
+			ORDER BY `month` ASC'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -161,8 +151,7 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$movesetRatedAbility = new MovesetRatedAbility(
-				$result['year'],
-				$result['month'],
+				new DateTime($result['month']),
 				$formatId,
 				$rating,
 				$pokemonId,
@@ -170,7 +159,7 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 				(float) $result['percent']
 			);
 
-			$movesetRatedAbilities[$result['year']][$result['month']] = $movesetRatedAbility;
+			$movesetRatedAbilities[$result['month']] = $movesetRatedAbility;
 		}
 
 		return $movesetRatedAbilities;
