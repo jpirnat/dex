@@ -212,14 +212,12 @@ foreign key (`move_id`) references `moves` (`id`)
 
 create table if not exists `usage`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 
 `total_battles` mediumint unsigned not null,
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`
 ),
@@ -231,15 +229,13 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `usage_rated`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
 
 `average_weight_per_team` decimal(6, 3) unsigned not null,
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`rating`
@@ -252,8 +248,7 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `usage_pokemon`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `pokemon_id` smallint unsigned not null,
 
@@ -263,7 +258,6 @@ create table if not exists `usage_pokemon`
 `real_percent` decimal(6, 3) unsigned not null,
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`pokemon_id`
@@ -279,8 +273,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `usage_rated_pokemon`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
 `pokemon_id` smallint unsigned not null,
@@ -289,7 +282,6 @@ create table if not exists `usage_rated_pokemon`
 `usage_percent` decimal(8, 5) unsigned not null,
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`rating`,
@@ -309,14 +301,12 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `leads`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 
 `total_leads` mediumint unsigned not null, # `usage`.`total_battles` * 2
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`
 ),
@@ -328,8 +318,7 @@ foreign key (`format_id`) references `formats` (`id`)
 
 create table if not exists `leads_pokemon`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `pokemon_id` smallint unsigned not null,
 
@@ -337,7 +326,6 @@ create table if not exists `leads_pokemon`
 `raw_percent` decimal(6, 3) unsigned not null,
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`pokemon_id`
@@ -353,8 +341,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `leads_rated_pokemon`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
 `pokemon_id` smallint unsigned not null,
@@ -363,7 +350,6 @@ create table if not exists `leads_rated_pokemon`
 `usage_percent` decimal(8, 5) unsigned not null,
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`rating`,
@@ -383,8 +369,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `moveset_pokemon`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `pokemon_id` smallint unsigned not null,
 
@@ -392,7 +377,6 @@ create table if not exists `moveset_pokemon`
 `viability_ceiling` tinyint unsigned null, # nullable
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`pokemon_id`
@@ -408,8 +392,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `moveset_rated_pokemon`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
 `pokemon_id` smallint unsigned not null,
@@ -417,7 +400,6 @@ create table if not exists `moveset_rated_pokemon`
 `average_weight` decimal(18, 15) unsigned not null,
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`rating`,
@@ -434,8 +416,7 @@ foreign key (`pokemon_id`) references `pokemon` (`id`)
 
 create table if not exists `moveset_rated_abilities`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
 `pokemon_id` smallint unsigned not null,
@@ -444,7 +425,6 @@ create table if not exists `moveset_rated_abilities`
 `percent` decimal(6, 3) unsigned not null,
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`rating`,
@@ -465,8 +445,7 @@ foreign key (`ability_id`) references `abilities` (`id`)
 
 create table if not exists `moveset_rated_items`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
 `pokemon_id` smallint unsigned not null,
@@ -475,7 +454,6 @@ create table if not exists `moveset_rated_items`
 `percent` decimal(6, 3) unsigned not null,
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`rating`,
@@ -496,8 +474,7 @@ foreign key (`item_id`) references `items` (`id`)
 
 create table if not exists `moveset_rated_spreads`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
 `pokemon_id` smallint unsigned not null,
@@ -512,7 +489,6 @@ create table if not exists `moveset_rated_spreads`
 `percent` decimal(6, 3) unsigned not null,
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`rating`,
@@ -539,8 +515,7 @@ foreign key (`nature_id`) references `natures` (`id`)
 
 create table if not exists `moveset_rated_moves`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
 `pokemon_id` smallint unsigned not null,
@@ -549,7 +524,6 @@ create table if not exists `moveset_rated_moves`
 `percent` decimal(6, 3) unsigned not null,
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`rating`,
@@ -570,8 +544,7 @@ foreign key (`move_id`) references `moves` (`id`)
 
 create table if not exists `moveset_rated_teammates`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
 `pokemon_id` smallint unsigned not null,
@@ -581,7 +554,6 @@ create table if not exists `moveset_rated_teammates`
 # `percent` % of teams that have `pokemon_id` also have `teammate_id`.
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`rating`,
@@ -602,8 +574,7 @@ foreign key (`teammate_id`) references `pokemon` (`id`)
 
 create table if not exists `moveset_rated_counters`
 (
-`year` smallint not null,
-`month` tinyint not null,
+`month` date not null,
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
 `pokemon_id` smallint unsigned not null,
@@ -616,7 +587,6 @@ create table if not exists `moveset_rated_counters`
 `percent_switched_out` decimal(4, 1) unsigned not null,
 
 primary key (
-	`year`,
 	`month`,
 	`format_id`,
 	`rating`,
