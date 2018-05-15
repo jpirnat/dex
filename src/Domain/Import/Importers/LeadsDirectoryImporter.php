@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Import\Importers;
 use GuzzleHttp\Client;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Import\Extractors\FormatRatingExtractor;
-use Jp\Dex\Domain\Import\Extractors\YearMonthExtractor;
+use Jp\Dex\Domain\Import\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -15,8 +15,8 @@ class LeadsDirectoryImporter
 	/** @var LeadsFileImporter $leadsFileImporter */
 	private $leadsFileImporter;
 
-	/** @var YearMonthExtractor $yearMonthExtractor */
-	private $yearMonthExtractor;
+	/** @var MonthExtractor $monthExtractor */
+	private $monthExtractor;
 
 	/** @var FormatRatingExtractor $formatRatingExtractor */
 	private $formatRatingExtractor;
@@ -31,20 +31,20 @@ class LeadsDirectoryImporter
 	 * Constructor.
 	 *
 	 * @param LeadsFileImporter $leadsFileImporter
-	 * @param YearMonthExtractor $yearMonthExtractor
+	 * @param MonthExtractor $monthExtractor
 	 * @param FormatRatingExtractor $formatRatingExtractor
 	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
 	 * @param FormatRepositoryInterface $formatRepository
 	 */
 	public function __construct(
 		LeadsFileImporter $leadsFileImporter,
-		YearMonthExtractor $yearMonthExtractor,
+		MonthExtractor $monthExtractor,
 		FormatRatingExtractor $formatRatingExtractor,
 		ShowdownFormatRepositoryInterface $showdownFormatRepository,
 		FormatRepositoryInterface $formatRepository
 	) {
 		$this->leadsFileImporter = $leadsFileImporter;
-		$this->yearMonthExtractor = $yearMonthExtractor;
+		$this->monthExtractor = $monthExtractor;
 		$this->formatRatingExtractor = $formatRatingExtractor;
 		$this->showdownFormatRepository = $showdownFormatRepository;
 		$this->formatRepository = $formatRepository;
@@ -73,10 +73,8 @@ class LeadsDirectoryImporter
 		// Get all the links on the leads directory page.
 		$links = $crawler->filterXPath('//a[contains(@href, ".txt")]')->links();
 
-		// Get the year and month from the leads directory url.
-		$yearMonth = $this->yearMonthExtractor->extractYearMonth($url);
-		$year = $yearMonth->getYear();
-		$month = $yearMonth->getMonth();
+		// Get the month from the leads directory url.
+		$month = $this->monthExtractor->extractMonth($url);
 
 		foreach ($links as $link) {
 			// Get the format and rating from the filename of the link.
@@ -86,12 +84,12 @@ class LeadsDirectoryImporter
 			$rating = $formatRating->rating();
 
 			// If this format is not meant to be imported, skip it.
-			if (!$this->showdownFormatRepository->isImported($year, $month, $showdownFormatName)) {
+			if (!$this->showdownFormatRepository->isImported($month, $showdownFormatName)) {
 				continue;
 			}
 
 			// Get the format id from the Pokémon Showdown format name.
-			$formatId = $this->showdownFormatRepository->getFormatId($year, $month, $showdownFormatName);
+			$formatId = $this->showdownFormatRepository->getFormatId($month, $showdownFormatName);
 
 			// If this is a non-singles format, skip it. As of 2018-02-05, any
 			// leads files that exist for non-singles formats contain incorrect
@@ -107,7 +105,6 @@ class LeadsDirectoryImporter
 			// Import the leads file.
 			$this->leadsFileImporter->import(
 				$stream,
-				$year,
 				$month,
 				$formatId,
 				$rating

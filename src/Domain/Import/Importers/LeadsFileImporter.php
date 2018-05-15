@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Importers;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Import\Extractors\LeadsFileExtractor;
 use Jp\Dex\Domain\Stats\Leads\Leads;
@@ -58,8 +59,7 @@ class LeadsFileImporter
 	 * Import leads data from the given file.
 	 *
 	 * @param StreamInterface $stream
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
@@ -67,8 +67,7 @@ class LeadsFileImporter
 	 */
 	public function import(
 		StreamInterface $stream,
-		int $year,
-		int $month,
+		DateTime $month,
 		FormatId $formatId,
 		int $rating
 	) : void {
@@ -78,17 +77,14 @@ class LeadsFileImporter
 		}
 
 		$leadsExists = $this->leadsRepository->has(
-			$year,
 			$month,
 			$formatId
 		);
 		$leadsPokemonExists = $this->leadsPokemonRepository->hasAny(
-			$year,
 			$month,
 			$formatId
 		);
 		$leadsRatedPokemonExists = $this->leadsRatedPokemonRepository->hasAny(
-			$year,
 			$month,
 			$formatId,
 			$rating
@@ -107,7 +103,6 @@ class LeadsFileImporter
 		$totalLeads = $this->leadsFileExtractor->extractTotalLeads($line);
 		if (!$leadsExists) {
 			$leads = new Leads(
-				$year,
 				$month,
 				$formatId,
 				$totalLeads
@@ -133,7 +128,6 @@ class LeadsFileImporter
 
 			if (!$leadsPokemonExists) {
 				$leadsPokemon = new LeadsPokemon(
-					$year,
 					$month,
 					$formatId,
 					$pokemonId,
@@ -145,7 +139,6 @@ class LeadsFileImporter
 
 			if (!$leadsRatedPokemonExists) {
 				$leadsRatedPokemon = new LeadsRatedPokemon(
-					$year,
 					$month,
 					$formatId,
 					$rating,

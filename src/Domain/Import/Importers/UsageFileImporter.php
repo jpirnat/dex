@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Importers;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Import\Extractors\UsageFileExtractor;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
@@ -66,8 +67,7 @@ class UsageFileImporter
 	 * Import usage data from the given file.
 	 *
 	 * @param StreamInterface $stream
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
@@ -75,8 +75,7 @@ class UsageFileImporter
 	 */
 	public function import(
 		StreamInterface $stream,
-		int $year,
-		int $month,
+		DateTime $month,
 		FormatId $formatId,
 		int $rating
 	) : void {
@@ -86,23 +85,19 @@ class UsageFileImporter
 		}
 
 		$usageExists = $this->usageRepository->has(
-			$year,
 			$month,
 			$formatId
 		);
 		$usageRatedExists = $this->usageRatedRepository->has(
-			$year,
 			$month,
 			$formatId,
 			$rating
 		);
 		$usagePokemonExists = $this->usagePokemonRepository->hasAny(
-			$year,
 			$month,
 			$formatId
 		);
 		$usageRatedPokemonExists = $this->usageRatedPokemonRepository->hasAny(
-			$year,
 			$month,
 			$formatId,
 			$rating
@@ -122,7 +117,6 @@ class UsageFileImporter
 		$totalBattles = $this->usageFileExtractor->extractTotalBattles($line);
 		if (!$usageExists) {
 			$usage = new Usage(
-				$year,
 				$month,
 				$formatId,
 				$totalBattles
@@ -134,7 +128,6 @@ class UsageFileImporter
 		$averageWeightPerTeam = $this->usageFileExtractor->extractAverageWeightPerTeam($line);
 		if (!$usageRatedExists) {
 			$usageRated = new UsageRated(
-				$year,
 				$month,
 				$formatId,
 				$rating,
@@ -161,7 +154,6 @@ class UsageFileImporter
 
 			if (!$usagePokemonExists) {
 				$usagePokemon = new UsagePokemon(
-					$year,
 					$month,
 					$formatId,
 					$pokemonId,
@@ -175,7 +167,6 @@ class UsageFileImporter
 
 			if (!$usageRatedPokemonExists) {
 				$usageRatedPokemon = new UsageRatedPokemon(
-					$year,
 					$month,
 					$formatId,
 					$rating,

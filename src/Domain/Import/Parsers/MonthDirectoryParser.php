@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Import\Parsers;
 
 use GuzzleHttp\Client;
 use Jp\Dex\Domain\Import\Extractors\FormatRatingExtractor;
-use Jp\Dex\Domain\Import\Extractors\YearMonthExtractor;
+use Jp\Dex\Domain\Import\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownAbilityRepositoryInterface;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownItemRepositoryInterface;
@@ -25,8 +25,8 @@ class MonthDirectoryParser
 	/** @var MovesetDirectoryParser $movesetDirectoryParser */
 	private $movesetDirectoryParser;
 
-	/** @var YearMonthExtractor $yearMonthExtractor */
-	private $yearMonthExtractor;
+	/** @var MonthExtractor $monthExtractor */
+	private $monthExtractor;
 
 	/** @var FormatRatingExtractor $formatRatingExtractor */
 	private $formatRatingExtractor;
@@ -55,7 +55,7 @@ class MonthDirectoryParser
 	 * @param UsageFileParser $usageFileParser
 	 * @param LeadsDirectoryParser $leadsDirectoryParser
 	 * @param MovesetDirectoryParser $movesetDirectoryParser
-	 * @param YearMonthExtractor $yearMonthExtractor
+	 * @param MonthExtractor $monthExtractor
 	 * @param FormatRatingExtractor $formatRatingExtractor
 	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
 	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
@@ -68,7 +68,7 @@ class MonthDirectoryParser
 		UsageFileParser $usageFileParser,
 		LeadsDirectoryParser $leadsDirectoryParser,
 		MovesetDirectoryParser $movesetDirectoryParser,
-		YearMonthExtractor $yearMonthExtractor,
+		MonthExtractor $monthExtractor,
 		FormatRatingExtractor $formatRatingExtractor,
 		ShowdownFormatRepositoryInterface $showdownFormatRepository,
 		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
@@ -80,7 +80,7 @@ class MonthDirectoryParser
 		$this->usageFileParser = $usageFileParser;
 		$this->leadsDirectoryParser = $leadsDirectoryParser;
 		$this->movesetDirectoryParser = $movesetDirectoryParser;
-		$this->yearMonthExtractor = $yearMonthExtractor;
+		$this->monthExtractor = $monthExtractor;
 		$this->formatRatingExtractor = $formatRatingExtractor;
 		$this->showdownFormatRepository = $showdownFormatRepository;
 		$this->showdownPokemonRepository = $showdownPokemonRepository;
@@ -113,10 +113,8 @@ class MonthDirectoryParser
 		// Get all the links on the month directory page.
 		$links = $crawler->filterXPath('//a[contains(@href, ".txt")]')->links();
 
-		// Get the year and month from the moveset directory url.
-		$yearMonth = $this->yearMonthExtractor->extractYearMonth($url);
-		$year = $yearMonth->getYear();
-		$month = $yearMonth->getMonth();
+		// Get the month from the month directory url.
+		$month = $this->monthExtractor->extractMonth($url);
 
 		// Parse each usage file link.
 		foreach ($links as $link) {
@@ -126,8 +124,8 @@ class MonthDirectoryParser
 			$showdownFormatName = $formatRating->showdownFormatName();
 
 			// If the format is unknown, add it to the list of unknown formats.
-			if (!$this->showdownFormatRepository->isKnown($year, $month, $showdownFormatName)) {
-				$this->showdownFormatRepository->addUnknown($year, $month, $showdownFormatName);
+			if (!$this->showdownFormatRepository->isKnown($month, $showdownFormatName)) {
+				$this->showdownFormatRepository->addUnknown($month, $showdownFormatName);
 			}
 
 			// Create a stream to read the usage file.

@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Import\Importers;
 
 use GuzzleHttp\Client;
 use Jp\Dex\Domain\Import\Extractors\FormatRatingExtractor;
-use Jp\Dex\Domain\Import\Extractors\YearMonthExtractor;
+use Jp\Dex\Domain\Import\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -20,8 +20,8 @@ class MonthDirectoryImporter
 	/** @var MovesetDirectoryImporter $movesetDirectoryImporter */
 	private $movesetDirectoryImporter;
 
-	/** @var YearMonthExtractor $yearMonthExtractor */
-	private $yearMonthExtractor;
+	/** @var MonthExtractor $monthExtractor */
+	private $monthExtractor;
 
 	/** @var FormatRatingExtractor $formatRatingExtractor */
 	private $formatRatingExtractor;
@@ -35,7 +35,7 @@ class MonthDirectoryImporter
 	 * @param UsageFileImporter $usageFileImporter
 	 * @param LeadsDirectoryImporter $leadsDirectoryImporter
 	 * @param MovesetDirectoryImporter $movesetDirectoryImporter
-	 * @param YearMonthExtractor $yearMonthExtractor
+	 * @param MonthExtractor $monthExtractor
 	 * @param FormatRatingExtractor $formatRatingExtractor
 	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
 	 */
@@ -43,14 +43,14 @@ class MonthDirectoryImporter
 		UsageFileImporter $usageFileImporter,
 		LeadsDirectoryImporter $leadsDirectoryImporter,
 		MovesetDirectoryImporter $movesetDirectoryImporter,
-		YearMonthExtractor $yearMonthExtractor,
+		MonthExtractor $monthExtractor,
 		FormatRatingExtractor $formatRatingExtractor,
 		ShowdownFormatRepositoryInterface $showdownFormatRepository
 	) {
 		$this->usageFileImporter = $usageFileImporter;
 		$this->leadsDirectoryImporter = $leadsDirectoryImporter;
 		$this->movesetDirectoryImporter = $movesetDirectoryImporter;
-		$this->yearMonthExtractor = $yearMonthExtractor;
+		$this->monthExtractor = $monthExtractor;
 		$this->formatRatingExtractor = $formatRatingExtractor;
 		$this->showdownFormatRepository = $showdownFormatRepository;
 	}
@@ -78,10 +78,8 @@ class MonthDirectoryImporter
 		// Get all the links on the month directory page.
 		$links = $crawler->filterXPath('//a[contains(@href, ".txt")]')->links();
 
-		// Get the year and month from the month directory url.
-		$yearMonth = $this->yearMonthExtractor->extractYearMonth($url);
-		$year = $yearMonth->getYear();
-		$month = $yearMonth->getMonth();
+		// Get the month from the month directory url.
+		$month = $this->monthExtractor->extractMonth($url);
 
 		// Import each usage file.
 		foreach ($links as $link) {
@@ -92,12 +90,12 @@ class MonthDirectoryImporter
 			$rating = $formatRating->rating();
 
 			// If this format is not meant to be imported, skip it.
-			if (!$this->showdownFormatRepository->isImported($year, $month, $showdownFormatName)) {
+			if (!$this->showdownFormatRepository->isImported($month, $showdownFormatName)) {
 				continue;
 			}
 
 			// Get the format id from the Pokémon Showdown format name.
-			$formatId = $this->showdownFormatRepository->getFormatId($year, $month, $showdownFormatName);
+			$formatId = $this->showdownFormatRepository->getFormatId($month, $showdownFormatName);
 
 			// Create a stream to read the usage file.
 			$stream = $client->request('GET', $link->getUri())->getBody();
@@ -105,7 +103,6 @@ class MonthDirectoryImporter
 			// Import the usage file.
 			$this->usageFileImporter->import(
 				$stream,
-				$year,
 				$month,
 				$formatId,
 				$rating

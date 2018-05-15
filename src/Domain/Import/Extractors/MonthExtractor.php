@@ -3,33 +3,36 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Extractors;
 
+use DateTime;
 use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidFilenameException;
-use Jp\Dex\Domain\YearMonth;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
 
-class YearMonthExtractor
+class MonthExtractor
 {
 	/**
-	 * Extract a year and month from a stats directory or filename.
+	 * Extract the month from a stats directory or filename.
 	 *
 	 * @param string $filename
 	 *
 	 * @throws InvalidFilenameException if $filename is invalid.
 	 *
-	 * @return YearMonth
+	 * @return DateTime
 	 */
-	public function extractYearMonth(string $filename) : YearMonth
+	public function extractMonth(string $filename) : DateTime
 	{
 		$pattern = '/stats\/(\d+)-(\d+)/';
 
 		try {
 			$matchResult = Regex::match($pattern, $filename);
 
-			return new YearMonth(
+			$month = new DateTime('today');
+			$month->setDate(
 				(int) $matchResult->group(1),
-				(int) $matchResult->group(2)
+				(int) $matchResult->group(2),
+				1
 			);
+			return $month;
 		} catch (RegexFailed $e) {
 			throw new InvalidFilenameException(
 				'Filename is invalid for year-month: ' . $filename

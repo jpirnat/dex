@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Import\Parsers;
 
 use GuzzleHttp\Client;
 use Jp\Dex\Domain\Import\Extractors\FormatRatingExtractor;
-use Jp\Dex\Domain\Import\Extractors\YearMonthExtractor;
+use Jp\Dex\Domain\Import\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -14,8 +14,8 @@ class LeadsDirectoryParser
 	/** @var LeadsFileParser $leadsFileParser */
 	private $leadsFileParser;
 
-	/** @var YearMonthExtractor $yearMonthExtractor */
-	private $yearMonthExtractor;
+	/** @var MonthExtractor $monthExtractor */
+	private $monthExtractor;
 
 	/** @var FormatRatingExtractor $formatRatingExtractor */
 	private $formatRatingExtractor;
@@ -27,18 +27,18 @@ class LeadsDirectoryParser
 	 * Constructor.
 	 *
 	 * @param LeadsFileParser $leadsFileParser
-	 * @param YearMonthExtractor $yearMonthExtractor
+	 * @param MonthExtractor $monthExtractor
 	 * @param FormatRatingExtractor $formatRatingExtractor
 	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
 	 */
 	public function __construct(
 		LeadsFileParser $leadsFileParser,
-		YearMonthExtractor $yearMonthExtractor,
+		MonthExtractor $monthExtractor,
 		FormatRatingExtractor $formatRatingExtractor,
 		ShowdownFormatRepositoryInterface $showdownFormatRepository
 	) {
 		$this->leadsFileParser = $leadsFileParser;
-		$this->yearMonthExtractor = $yearMonthExtractor;
+		$this->monthExtractor = $monthExtractor;
 		$this->formatRatingExtractor = $formatRatingExtractor;
 		$this->showdownFormatRepository = $showdownFormatRepository;
 	}
@@ -66,10 +66,8 @@ class LeadsDirectoryParser
 		// Get all the links on the leads directory page.
 		$links = $crawler->filterXPath('//a[contains(@href, ".txt")]')->links();
 
-		// Get the year and month from the moveset directory url.
-		$yearMonth = $this->yearMonthExtractor->extractYearMonth($url);
-		$year = $yearMonth->getYear();
-		$month = $yearMonth->getMonth();
+		// Get the month from the leads directory url.
+		$month = $this->monthExtractor->extractMonth($url);
 
 		foreach ($links as $link) {
 			// Get the format and rating from the filename of the link.
@@ -78,8 +76,8 @@ class LeadsDirectoryParser
 			$showdownFormatName = $formatRating->showdownFormatName();
 
 			// If the format is unknown, add it to the list of unknown formats.
-			if (!$this->showdownFormatRepository->isKnown($year, $month, $showdownFormatName)) {
-				$this->showdownFormatRepository->addUnknown($year, $month, $showdownFormatName);
+			if (!$this->showdownFormatRepository->isKnown($month, $showdownFormatName)) {
+				$this->showdownFormatRepository->addUnknown($month, $showdownFormatName);
 			}
 
 			// Create a stream to read the moveset file.

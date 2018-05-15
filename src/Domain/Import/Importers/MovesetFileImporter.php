@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Importers;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Import\Extractors\MovesetFileExtractor;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
@@ -129,8 +130,7 @@ class MovesetFileImporter
 	 * Import moveset data from the given file.
 	 *
 	 * @param StreamInterface $stream
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 *
@@ -138,8 +138,7 @@ class MovesetFileImporter
 	 */
 	public function import(
 		StreamInterface $stream,
-		int $year,
-		int $month,
+		DateTime $month,
 		FormatId $formatId,
 		int $rating
 	) : void {
@@ -149,12 +148,10 @@ class MovesetFileImporter
 		}
 
 		$movesetPokemonExists = $this->movesetPokemonRepository->hasAny(
-			$year,
 			$month,
 			$formatId
 		);
 		$movesetRatedPokemonExists = $this->movesetRatedPokemonRepository->hasAny(
-			$year,
 			$month,
 			$formatId,
 			$rating
@@ -205,7 +202,6 @@ class MovesetFileImporter
 
 			if ($isPokemonImported && !$movesetPokemonExists) {
 				$movesetPokemon = new MovesetPokemon(
-					$year,
 					$month,
 					$formatId,
 					$pokemonId,
@@ -218,7 +214,6 @@ class MovesetFileImporter
 
 			if ($isPokemonImported && !$movesetRatedPokemonExists) {
 				$movesetRatedPokemon = new MovesetRatedPokemon(
-					$year,
 					$month,
 					$formatId,
 					$rating,
@@ -245,7 +240,6 @@ class MovesetFileImporter
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
 					$movesetRatedAbility = new MovesetRatedAbility(
-						$year,
 						$month,
 						$formatId,
 						$rating,
@@ -279,7 +273,6 @@ class MovesetFileImporter
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
 					$movesetRatedItem = new MovesetRatedItem(
-						$year,
 						$month,
 						$formatId,
 						$rating,
@@ -321,7 +314,6 @@ class MovesetFileImporter
 					$evSpread->add(new StatValue(new StatId(StatId::SPEED), $spread->spe()));
 
 					$movesetRatedSpread = new MovesetRatedSpread(
-						$year,
 						$month,
 						$formatId,
 						$rating,
@@ -356,7 +348,6 @@ class MovesetFileImporter
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
 					$movesetRatedMove = new MovesetRatedMove(
-						$year,
 						$month,
 						$formatId,
 						$rating,
@@ -390,7 +381,6 @@ class MovesetFileImporter
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
 					$movesetRatedTeammate = new MovesetRatedTeammate(
-						$year,
 						$month,
 						$formatId,
 						$rating,
@@ -425,7 +415,6 @@ class MovesetFileImporter
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
 					$movesetRatedCounter = new MovesetRatedCounter(
-						$year,
 						$month,
 						$formatId,
 						$rating,
