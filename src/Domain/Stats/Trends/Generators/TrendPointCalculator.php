@@ -110,13 +110,12 @@ class TrendPointCalculator
 
 		/** @var DateTime $date */
 		foreach ($period as $date) {
-			$year = (int) $date->format('Y');
-			$month = (int) $date->format('m');
+			$month = $date->format('Y-m-d');
 
 			// Get this month's usage percent, if one exists.
 			$value = $default;
-			if (isset($usageDatas[$year][$month])) {
-				$usageData = $usageDatas[$year][$month];
+			if (isset($usageDatas[$month])) {
+				$usageData = $usageDatas[$month];
 				$value = $usageData->$method();
 			}
 

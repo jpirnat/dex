@@ -53,7 +53,7 @@ class StatsIndexView
 					return $a->format('n') <=> $b->format('n');
 				}
 
-				return $a->format('Y') <=> $b->format('Y');
+				return $b->format('Y') <=> $a->format('Y');
 			}
 		);
 
