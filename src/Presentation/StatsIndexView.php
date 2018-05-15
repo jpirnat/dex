@@ -50,7 +50,7 @@ class StatsIndexView
 			$months,
 			function (DateTime $a, DateTime $b) : int {
 				if ($a->format('Y') === $b->format('Y')) {
-					return $a->format('m') <=> $b->format('m');
+					return $a->format('n') <=> $b->format('n');
 				}
 
 				return $a->format('Y') <=> $b->format('Y');
@@ -64,7 +64,7 @@ class StatsIndexView
 
 			$years[$year]['year'] = $year;
 			$years[$year]['months'][] = [
-				'month' => (int) $month->format('m'),
+				'month' => (int) $month->format('n'),
 				'name' => $month->format('M'),
 			];
 		}

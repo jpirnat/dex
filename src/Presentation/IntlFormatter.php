@@ -5,7 +5,6 @@ namespace Jp\Dex\Presentation;
 
 use DateTime;
 use IntlDateFormatter;
-use Jp\Dex\Domain\YearMonth;
 use NumberFormatter;
 
 class IntlFormatter
@@ -37,17 +36,15 @@ class IntlFormatter
 	}
 
 	/**
-	 * Format a year/month.
+	 * Format a month.
 	 *
-	 * @param YearMonth $yearMonth
+	 * @param DateTime $month
 	 *
 	 * @return string
 	 */
-	public function formatYearMonth(YearMonth $yearMonth) : string
+	public function formatMonth(DateTime $month) : string
 	{
-		$date = new DateTime();
-		$date->setDate($yearMonth->getYear(), $yearMonth->getMonth(), 1);
-		return mb_convert_case($this->dateFormatter->format($date), MB_CASE_TITLE);
+		return mb_convert_case($this->dateFormatter->format($month), MB_CASE_TITLE);
 	}
 
 	/**

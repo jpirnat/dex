@@ -100,13 +100,13 @@ class MonthFormatsView
 
 				// The month control's data.
 				'showPrevMonthLink' => $this->monthFormatsModel->doesPrevMonthDataExist(),
-				'prevYear' => $prevMonth->getYear(),
-				'prevMonth' => $prevMonth->getMonth(),
-				'prevMonthText' => $formatter->formatYearMonth($prevMonth),
+				'prevYear' => $prevMonth->format('Y'),
+				'prevMonth' => $prevMonth->format('n'),
+				'prevMonthText' => $formatter->formatMonth($prevMonth),
 				'showNextMonthLink' => $this->monthFormatsModel->doesNextMonthDataExist(),
-				'nextYear' => $nextMonth->getYear(),
-				'nextMonth' => $nextMonth->getMonth(),
-				'nextMonthText' => $formatter->formatYearMonth($nextMonth),
+				'nextYear' => $nextMonth->format('Y'),
+				'nextMonth' => $nextMonth->format('n'),
+				'nextMonthText' => $formatter->formatMonth($nextMonth),
 
 				'year' => $year,
 				'month' => $month,
