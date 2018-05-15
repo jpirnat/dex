@@ -41,12 +41,10 @@ class MonthFormatsController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$year = (int) $request->getAttribute('year');
-		$month = (int) $request->getAttribute('month');
+		$month = $request->getAttribute('month');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
 		$this->monthFormatsModel->setData(
-			$year,
 			$month,
 			$languageId
 		);

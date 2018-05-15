@@ -4,7 +4,7 @@
 	<div class="month-control">
 		{% if showPrevMonthLink %}
 			<div class="button prev">
-				<a href="/stats/{{ prevYear|e }}/{{ prevMonth|e }}">
+				<a href="/stats/{{ prevMonth|e }}">
 					&#9668; {{ prevMonthText|e }}
 				</a>
 			</div>
@@ -14,7 +14,7 @@
 
 		{% if showNextMonthLink %}
 			<div class="button next">
-				<a href="/stats/{{ nextYear|e }}/{{ nextMonth|e }}">
+				<a href="/stats/{{ nextMonth|e }}">
 					{{ nextMonthText|e }} &#9658;
 				</a>
 			</div>
@@ -37,7 +37,7 @@
 					<td>{{ format.name }}</td>
 					{% for rating in format.ratings %}
 						<td>
-							<a href="/stats/{{ year|e }}/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}">
+							<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}">
 								{{ rating|e }}
 							</a>
 						</td>

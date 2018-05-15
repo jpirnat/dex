@@ -64,7 +64,7 @@ class StatsIndexView
 
 			$years[$year]['year'] = $year;
 			$years[$year]['months'][] = [
-				'month' => (int) $month->format('n'),
+				'month' => $month->format('Y-m'),
 				'name' => $month->format('M'),
 			];
 		}

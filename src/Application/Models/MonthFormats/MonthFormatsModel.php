@@ -35,10 +35,7 @@ class MonthFormatsModel
 	/** @var bool $nextMonthDataExists */
 	private $nextMonthDataExists;
 
-	/** @var int $year */
-	private $year;
-
-	/** @var int $month */
+	/** @var string $month */
 	private $month;
 
 	/** @var LanguageId $languageId */
@@ -74,23 +71,20 @@ class MonthFormatsModel
 	 * Get the formats list to recreate a stats month directory, such as
 	 * http://www.smogon.com/stats/2014-11.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param string $month
 	 * @param LanguageId $languageId
 	 *
 	 * @return void
 	 */
 	public function setData(
-		int $year,
-		int $month,
+		string $month,
 		LanguageId $languageId
 	) : void {
-		$this->year = $year;
 		$this->month = $month;
 		$this->languageId = $languageId;
 
 		// Get the previous month and the next month.
-		$this->dateModel->setData($year, $month);
+		$this->dateModel->setData($month);
 		$thisMonth = $this->dateModel->getThisMonth();
 		$prevMonth = $this->dateModel->getPrevMonth();
 		$nextMonth = $this->dateModel->getNextMonth();
@@ -164,21 +158,11 @@ class MonthFormatsModel
 	}
 
 	/**
-	 * Get the year.
-	 *
-	 * @return int
-	 */
-	public function getYear() : int
-	{
-		return $this->year;
-	}
-
-	/**
 	 * Get the month.
 	 *
-	 * @return int
+	 * @return string
 	 */
-	public function getMonth() : int
+	public function getMonth() : string
 	{
 		return $this->month;
 	}

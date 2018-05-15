@@ -4,7 +4,7 @@
 	<div class="month-control">
 		{% if showPrevMonthLink %}
 			<div class="button prev">
-				<a href="/stats/{{ prevYear|e }}/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemonIdentifier|e }}">
+				<a href="/stats/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemonIdentifier|e }}">
 					&#9668; {{ prevMonthText|e }}
 				</a>
 			</div>
@@ -14,7 +14,7 @@
 
 		{% if showNextMonthLink %}
 			<div class="button next">
-				<a href="/stats/{{ nextYear|e }}/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemonIdentifier|e }}">
+				<a href="/stats/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemonIdentifier|e }}">
 					{{ nextMonthText|e }} &#9658;
 				</a>
 			</div>
@@ -89,7 +89,7 @@
 			{% for ability in abilities %}
 				<tr>
 					<td>
-						<a href="/stats/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/abilities/{{ ability.identifier|e }}">
+						<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/abilities/{{ ability.identifier|e }}">
 							{{ ability.name|e }}
 						</a>
 					</td>
@@ -125,7 +125,7 @@
 			{% for item in items %}
 				<tr>
 					<td>
-						<a href="/stats/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
+						<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
 							{{ item.name|e }}
 						</a>
 					</td>
@@ -209,7 +209,7 @@
 			{% for move in moves %}
 				<tr>
 					<td>
-						<a href="/stats/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
+						<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
 							{{ move.name|e }}
 						</a>
 					</td>
@@ -249,7 +249,7 @@
 					</td>
 					<td>
 						{% if teammate.showMovesetLink %}
-							<a href="/stats/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ teammate.identifier|e }}">
+							<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ teammate.identifier|e }}">
 								{{ teammate.name|e }}
 							</a>
 						{% else %}
@@ -283,7 +283,7 @@
 					</td>
 					<td>
 						{% if counter.showMovesetLink %}
-							<a href="/stats/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ counter.identifier|e }}">
+							<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ counter.identifier|e }}">
 								{{ counter.name|e }}
 							</a>
 						{% else %}

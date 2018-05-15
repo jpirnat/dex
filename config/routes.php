@@ -56,7 +56,7 @@ $routes = [
 
 	[
 		'GET',
-		'/stats/{year:\d+}/{month:\d+}',
+		'/stats/{month:\d{4}-\d{2}}',
 		[
 			'controllerClass' => MonthFormatsController::class,
 			'controllerMethod' => 'index',
@@ -71,7 +71,7 @@ $routes = [
 
 	[
 		'GET',
-		'/stats/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}',
+		'/stats/{month:\d{4}-\d{2}}/{formatIdentifier:[-\w]+}/{rating:\d+}',
 		[
 			'controllerClass' => UsageMonthController::class,
 			'controllerMethod' => 'setData',
@@ -86,7 +86,7 @@ $routes = [
 
 	[
 		'GET',
-		'/stats/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}/leads',
+		'/stats/{month:\d{4}-\d{2}}/{formatIdentifier:[-\w]+}/{rating:\d+}/leads',
 		[
 			'controllerClass' => LeadsMonthController::class,
 			'controllerMethod' => 'setData',
@@ -101,7 +101,7 @@ $routes = [
 
 	[
 		'GET',
-		'/stats/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}/moveset/{pokemonIdentifier:[-\w]+}',
+		'/stats/{month:\d{4}-\d{2}}/{formatIdentifier:[-\w]+}/{rating:\d+}/moveset/{pokemonIdentifier:[-\w]+}',
 		[
 			'controllerClass' => MovesetPokemonMonthController::class,
 			'controllerMethod' => 'setData',
@@ -116,7 +116,7 @@ $routes = [
 
 	[
 		'GET',
-		'/stats/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}/abilities/{abilityIdentifier:[-\w]+}',
+		'/stats/{month:\d{4}-\d{2}}/{formatIdentifier:[-\w]+}/{rating:\d+}/abilities/{abilityIdentifier:[-\w]+}',
 		[
 			'controllerClass' => AbilityUsageMonthController::class,
 			'controllerMethod' => 'setData',
@@ -131,7 +131,7 @@ $routes = [
 
 	[
 		'GET',
-		'/stats/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}/items/{itemIdentifier:[-\w]+}',
+		'/stats/{month:\d{4}-\d{2}}/{formatIdentifier:[-\w]+}/{rating:\d+}/items/{itemIdentifier:[-\w]+}',
 		[
 			'controllerClass' => ItemUsageMonthController::class,
 			'controllerMethod' => 'setData',
@@ -146,7 +146,7 @@ $routes = [
 
 	[
 		'GET',
-		'/stats/{year:\d+}/{month:\d+}/{formatIdentifier:[-\w]+}/{rating:\d+}/moves/{moveIdentifier:[-\w]+}',
+		'/stats/{month:\d{4}-\d{2}}/{formatIdentifier:[-\w]+}/{rating:\d+}/moves/{moveIdentifier:[-\w]+}',
 		[
 			'controllerClass' => MoveUsageMonthController::class,
 			'controllerMethod' => 'setData',

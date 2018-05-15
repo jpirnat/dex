@@ -52,10 +52,7 @@ class MoveUsageMonthModel
 	/** @var bool $nextMonthDataExists */
 	private $nextMonthDataExists;
 
-	/** @var int $year */
-	private $year;
-
-	/** @var int $month */
+	/** @var string $month */
 	private $month;
 
 	/** @var string $formatIdentifier */
@@ -115,8 +112,7 @@ class MoveUsageMonthModel
 	 * Get usage data to recreate a stats usage file, such as
 	 * http://www.smogon.com/stats/2014-11/ou-1695.txt.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param string $month
 	 * @param string $formatIdentifier
 	 * @param int $rating
 	 * @param string $moveIdentifier
@@ -125,14 +121,12 @@ class MoveUsageMonthModel
 	 * @return void
 	 */
 	public function setData(
-		int $year,
-		int $month,
+		string $month,
 		string $formatIdentifier,
 		int $rating,
 		string $moveIdentifier,
 		LanguageId $languageId
 	) : void {
-		$this->year = $year;
 		$this->month = $month;
 		$this->formatIdentifier = $formatIdentifier;
 		$this->rating = $rating;
@@ -140,7 +134,7 @@ class MoveUsageMonthModel
 		$this->languageId = $languageId;
 
 		// Get the previous month and the next month.
-		$this->dateModel->setData($year, $month);
+		$this->dateModel->setData($month);
 		$thisMonth = $this->dateModel->getThisMonth();
 		$prevMonth = $this->dateModel->getPrevMonth();
 		$nextMonth = $this->dateModel->getNextMonth();
@@ -259,21 +253,11 @@ class MoveUsageMonthModel
 	}
 
 	/**
-	 * Get the year.
-	 *
-	 * @return int
-	 */
-	public function getYear() : int
-	{
-		return $this->year;
-	}
-
-	/**
 	 * Get the month.
 	 *
-	 * @return int
+	 * @return string
 	 */
-	public function getMonth() : int
+	public function getMonth() : string
 	{
 		return $this->month;
 	}

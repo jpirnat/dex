@@ -40,15 +40,13 @@ class ItemUsageMonthController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$year = (int) $request->getAttribute('year');
-		$month = (int) $request->getAttribute('month');
+		$month = $request->getAttribute('month');
 		$formatIdentifier = $request->getAttribute('formatIdentifier');
 		$rating = (int) $request->getAttribute('rating');
 		$itemIdentifier = $request->getAttribute('itemIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
 		$this->itemUsageMonthModel->setData(
-			$year,
 			$month,
 			$formatIdentifier,
 			$rating,

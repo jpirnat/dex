@@ -51,7 +51,6 @@ class UsageMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$year = $this->usageMonthModel->getYear();
 		$month = $this->usageMonthModel->getMonth();
 		$formatIdentifier = $this->usageMonthModel->getFormatIdentifier();
 		$rating = $this->usageMonthModel->getRating();
@@ -103,7 +102,7 @@ class UsageMonthView
 				'text' => 'Stats',
 			],
 			[
-				'url' => "/stats/$year/$month",
+				'url' => "/stats/$month",
 				'text' => 'Formats',
 			],
 			[
@@ -119,18 +118,15 @@ class UsageMonthView
 
 				// The month control's data.
 				'showPrevMonthLink' => $this->usageMonthModel->doesPrevMonthDataExist(),
-				'prevYear' => $prevMonth->format('Y'),
-				'prevMonth' => $prevMonth->format('n'),
+				'prevMonth' => $prevMonth->format('Y-m'),
 				'prevMonthText' => $formatter->formatMonth($prevMonth),
 				'showNextMonthLink' => $this->usageMonthModel->doesNextMonthDataExist(),
-				'nextYear' => $nextMonth->format('Y'),
-				'nextMonth' => $nextMonth->format('n'),
+				'nextMonth' => $nextMonth->format('Y-m'),
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
 				'showLeadsLink' => $this->usageMonthModel->doesLeadsDataExist(),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
 
-				'year' => $year,
 				'month' => $month,
 
 				// The main data.

@@ -50,7 +50,6 @@ class AbilityUsageMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$year = $this->abilityUsageMonthModel->getYear();
 		$month = $this->abilityUsageMonthModel->getMonth();
 		$formatIdentifier = $this->abilityUsageMonthModel->getFormatIdentifier();
 		$rating = $this->abilityUsageMonthModel->getRating();
@@ -94,11 +93,11 @@ class AbilityUsageMonthView
 				'text' => 'Stats',
 			],
 			[
-				'url' => "/stats/$year/$month",
+				'url' => "/stats/$month",
 				'text' => 'Formats',
 			],
 			[
-				'url' => "/stats/$year/$month/$formatIdentifier/$rating",
+				'url' => "/stats/$month/$formatIdentifier/$rating",
 				'text' => 'Usage',
 			],
 			[
@@ -118,18 +117,15 @@ class AbilityUsageMonthView
 
 				// The month control's data.
 				'showPrevMonthLink' => $this->abilityUsageMonthModel->doesPrevMonthDataExist(),
-				'prevYear' => $prevMonth->format('Y'),
-				'prevMonth' => $prevMonth->format('n'),
+				'prevMonth' => $prevMonth->format('Y-m'),
 				'prevMonthText' => $formatter->formatMonth($prevMonth),
 				'showNextMonthLink' => $this->abilityUsageMonthModel->doesNextMonthDataExist(),
-				'nextYear' => $nextMonth->format('Y'),
-				'nextMonth' => $nextMonth->format('n'),
+				'nextMonth' => $nextMonth->format('Y-m'),
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
 				'abilityIdentifier' => $this->abilityUsageMonthModel->getAbilityIdentifier(),
 
-				'year' => $year,
 				'month' => $month,
 
 				// The main data.

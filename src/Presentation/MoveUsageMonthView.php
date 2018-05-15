@@ -50,7 +50,6 @@ class MoveUsageMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$year = $this->moveUsageMonthModel->getYear();
 		$month = $this->moveUsageMonthModel->getMonth();
 		$formatIdentifier = $this->moveUsageMonthModel->getFormatIdentifier();
 		$rating = $this->moveUsageMonthModel->getRating();
@@ -94,11 +93,11 @@ class MoveUsageMonthView
 				'text' => 'Stats',
 			],
 			[
-				'url' => "/stats/$year/$month",
+				'url' => "/stats/$month",
 				'text' => 'Formats',
 			],
 			[
-				'url' => "/stats/$year/$month/$formatIdentifier/$rating",
+				'url' => "/stats/$month/$formatIdentifier/$rating",
 				'text' => 'Usage',
 			],
 			[
@@ -118,18 +117,15 @@ class MoveUsageMonthView
 
 				// The month control's data.
 				'showPrevMonthLink' => $this->moveUsageMonthModel->doesPrevMonthDataExist(),
-				'prevYear' => $prevMonth->format('Y'),
-				'prevMonth' => $prevMonth->format('n'),
+				'prevMonth' => $prevMonth->format('Y-m'),
 				'prevMonthText' => $formatter->formatMonth($prevMonth),
 				'showNextMonthLink' => $this->moveUsageMonthModel->doesNextMonthDataExist(),
-				'nextYear' => $nextMonth->format('Y'),
-				'nextMonth' => $nextMonth->format('n'),
+				'nextMonth' => $nextMonth->format('Y-m'),
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
 				'moveIdentifier' => $this->moveUsageMonthModel->getMoveIdentifier(),
 
-				'year' => $year,
 				'month' => $month,
 
 				// The main data.

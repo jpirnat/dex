@@ -51,7 +51,6 @@ class LeadsMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$year = $this->leadsMonthModel->getYear();
 		$month = $this->leadsMonthModel->getMonth();
 		$formatIdentifier = $this->leadsMonthModel->getFormatIdentifier();
 		$rating = $this->leadsMonthModel->getRating();
@@ -99,11 +98,11 @@ class LeadsMonthView
 				'text' => 'Stats',
 			],
 			[
-				'url' => "/stats/$year/$month",
+				'url' => "/stats/$month",
 				'text' => 'Formats',
 			],
 			[
-				'url' => "/stats/$year/$month/$formatIdentifier/$rating",
+				'url' => "/stats/$month/$formatIdentifier/$rating",
 				'text' => 'Usage',
 			],
 			[
@@ -119,17 +118,14 @@ class LeadsMonthView
 
 				// The month control's data.
 				'showPrevMonthLink' => $this->leadsMonthModel->doesPrevMonthDataExist(),
-				'prevYear' => $prevMonth->format('Y'),
-				'prevMonth' => $prevMonth->format('n'),
+				'prevMonth' => $prevMonth->format('Y-m'),
 				'prevMonthText' => $formatter->formatMonth($prevMonth),
 				'showNextMonthLink' => $this->leadsMonthModel->doesNextMonthDataExist(),
-				'nextYear' => $nextMonth->format('Y'),
-				'nextMonth' => $nextMonth->format('n'),
+				'nextMonth' => $nextMonth->format('Y-m'),
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
 
-				'year' => $year,
 				'month' => $month,
 
 				// The main data.

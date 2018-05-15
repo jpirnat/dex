@@ -20,15 +20,13 @@ class DateModel
 	 * Set this month, the previous month, and the next month, calculated from
 	 * the given year and month combination.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param string $month "YYYY-MM"
 	 *
 	 * @return void
 	 */
-	public function setData(int $year, int $month) : void
+	public function setData(string $month) : void
 	{
-		$this->thisMonth = new DateTime('today');
-		$this->thisMonth->setDate($year, $month, 1);
+		$this->thisMonth = new DateTime("$month-01");
 
 		$this->prevMonth = clone $this->thisMonth;
 		$this->prevMonth->modify('-1 month');

@@ -58,7 +58,6 @@ class MovesetPokemonMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$year = $this->movesetPokemonMonthModel->getYear();
 		$month = $this->movesetPokemonMonthModel->getMonth();
 		$formatIdentifier = $this->movesetPokemonMonthModel->getFormatIdentifier();
 		$rating = $this->movesetPokemonMonthModel->getRating();
@@ -275,11 +274,11 @@ class MovesetPokemonMonthView
 				'text' => 'Stats',
 			],
 			[
-				'url' => "/stats/$year/$month",
+				'url' => "/stats/$month",
 				'text' => 'Formats',
 			],
 			[
-				'url' => "/stats/$year/$month/$formatIdentifier/$rating",
+				'url' => "/stats/$month/$formatIdentifier/$rating",
 				'text' => 'Usage',
 			],
 			[
@@ -295,18 +294,15 @@ class MovesetPokemonMonthView
 
 				// The month control's data.
 				'showPrevMonthLink' => $this->movesetPokemonMonthModel->doesPrevMonthDataExist(),
-				'prevYear' => $prevMonth->format('Y'),
-				'prevMonth' => $prevMonth->format('n'),
+				'prevMonth' => $prevMonth->format('Y-m'),
 				'prevMonthText' => $formatter->formatMonth($prevMonth),
 				'showNextMonthLink' => $this->movesetPokemonMonthModel->doesNextMonthDataExist(),
-				'nextYear' => $nextMonth->format('Y'),
-				'nextMonth' => $nextMonth->format('n'),
+				'nextMonth' => $nextMonth->format('Y-m'),
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
 				'pokemonIdentifier' => $pokemon->getIdentifier(),
 
-				'year' => $year,
 				'month' => $month,
 				'pokemonName' => $pokemonName->getName(),
 				'model' => $model->getImage(),

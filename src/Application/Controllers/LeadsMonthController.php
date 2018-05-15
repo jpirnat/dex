@@ -41,14 +41,12 @@ class LeadsMonthController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$year = (int) $request->getAttribute('year');
-		$month = (int) $request->getAttribute('month');
+		$month = $request->getAttribute('month');
 		$formatIdentifier = $request->getAttribute('formatIdentifier');
 		$rating = (int) $request->getAttribute('rating');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
 		$this->leadsMonthModel->setData(
-			$year,
 			$month,
 			$formatIdentifier,
 			$rating,

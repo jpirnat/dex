@@ -51,7 +51,6 @@ class MonthFormatsView
 	 */
 	public function index() : ResponseInterface
 	{
-		$year = $this->monthFormatsModel->getYear();
 		$month = $this->monthFormatsModel->getMonth();
 
 		$formatter = $this->formatterFactory->createFor(
@@ -100,15 +99,12 @@ class MonthFormatsView
 
 				// The month control's data.
 				'showPrevMonthLink' => $this->monthFormatsModel->doesPrevMonthDataExist(),
-				'prevYear' => $prevMonth->format('Y'),
-				'prevMonth' => $prevMonth->format('n'),
+				'prevMonth' => $prevMonth->format('Y-m'),
 				'prevMonthText' => $formatter->formatMonth($prevMonth),
 				'showNextMonthLink' => $this->monthFormatsModel->doesNextMonthDataExist(),
-				'nextYear' => $nextMonth->format('Y'),
-				'nextMonth' => $nextMonth->format('n'),
+				'nextMonth' => $nextMonth->format('Y-m'),
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
 
-				'year' => $year,
 				'month' => $month,
 
 				// The main data.

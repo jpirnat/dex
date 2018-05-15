@@ -40,15 +40,13 @@ class MoveUsageMonthController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$year = (int) $request->getAttribute('year');
-		$month = (int) $request->getAttribute('month');
+		$month = $request->getAttribute('month');
 		$formatIdentifier = $request->getAttribute('formatIdentifier');
 		$rating = (int) $request->getAttribute('rating');
 		$moveIdentifier = $request->getAttribute('moveIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
 		$this->moveUsageMonthModel->setData(
-			$year,
 			$month,
 			$formatIdentifier,
 			$rating,

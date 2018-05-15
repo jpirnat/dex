@@ -4,7 +4,7 @@
 	<div class="month-control">
 		{% if showPrevMonthLink %}
 			<div class="button prev">
-				<a href="/stats/{{ prevYear|e }}/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
+				<a href="/stats/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
 					&#9668; {{ prevMonthText|e }}
 				</a>
 			</div>
@@ -14,7 +14,7 @@
 
 		{% if showNextMonthLink %}
 			<div class="button next">
-				<a href="/stats/{{ nextYear|e }}/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
+				<a href="/stats/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
 					{{ nextMonthText|e }} &#9658;
 				</a>
 			</div>
@@ -23,7 +23,7 @@
 
 	<div>
 		{% if showLeadsLink %}
-			<a href="/stats/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/leads">
+			<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/leads">
 				Leads
 			</a>
 		{% endif %}
@@ -54,7 +54,7 @@
 					</td>
 					<td>
 						{% if pokemon.showMovesetLink %}
-							<a href="/stats/{{ year|e }}/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemon.identifier|e }}">
+							<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemon.identifier|e }}">
 								{{ pokemon.name|e }}
 							</a>
 						{% else %}
