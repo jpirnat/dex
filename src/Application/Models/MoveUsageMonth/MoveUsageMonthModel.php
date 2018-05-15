@@ -150,16 +150,14 @@ class MoveUsageMonthModel
 
 		// Does usage rated data exist for the previous month?
 		$this->prevMonthDataExists = $this->usageRatedRepository->has(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+			$prevMonth,
 			$format->getId(),
 			$rating
 		);
 
 		// Does usage rated data exist for the next month?
 		$this->nextMonthDataExists = $this->usageRatedRepository->has(
-			$nextMonth->getYear(),
-			$nextMonth->getMonth(),
+			$nextMonth,
 			$format->getId(),
 			$rating
 		);
@@ -174,18 +172,16 @@ class MoveUsageMonthModel
 		);
 
 		// Get usage rated Pokémon move records for this month.
-		$usageRatedPokemonMoves = $this->usageRatedPokemonMoveRepository->getByYearAndMonthAndFormatAndRatingAndMove(
-			$thisMonth->getYear(),
-			$thisMonth->getMonth(),
+		$usageRatedPokemonMoves = $this->usageRatedPokemonMoveRepository->getByMonthAndFormatAndRatingAndMove(
+			$thisMonth,
 			$format->getId(),
 			$rating,
 			$move->getId()
 		);
 
 		// Get usage rated Pokémon move records for the previous month.
-		$prevMonthPokemonMoves = $this->usageRatedPokemonMoveRepository->getByYearAndMonthAndFormatAndRatingAndMove(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+		$prevMonthPokemonMoves = $this->usageRatedPokemonMoveRepository->getByMonthAndFormatAndRatingAndMove(
+			$prevMonth,
 			$format->getId(),
 			$rating,
 			$move->getId()

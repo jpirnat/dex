@@ -174,8 +174,7 @@ class MovesetPokemonMonthModel
 
 		// Does moveset rated Pokémon data exist for the previous month?
 		$this->prevMonthDataExists = $this->movesetRatedPokemonRepository->has(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+			$prevMonth,
 			$format->getId(),
 			$rating,
 			$pokemon->getId()
@@ -183,25 +182,22 @@ class MovesetPokemonMonthModel
 
 		// Does moveset rated Pokémon data exist for the next month?
 		$this->nextMonthDataExists = $this->movesetRatedPokemonRepository->has(
-			$nextMonth->getYear(),
-			$nextMonth->getMonth(),
+			$nextMonth,
 			$format->getId(),
 			$rating,
 			$pokemon->getId()
 		);
 
 		// Get the moveset Pokémon record.
-		$this->movesetPokemon = $this->movesetPokemonRepository->getByYearAndMonthAndFormatAndPokemon(
-			$year,
-			$month,
+		$this->movesetPokemon = $this->movesetPokemonRepository->getByMonthAndFormatAndPokemon(
+			$thisMonth,
 			$format->getId(),
 			$pokemon->getId()
 		);
 
 		// Get moveset rated Pokémon record.
-		$this->movesetRatedPokemon = $this->movesetRatedPokemonRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
-			$year,
-			$month,
+		$this->movesetRatedPokemon = $this->movesetRatedPokemonRepository->getByMonthAndFormatAndRatingAndPokemon(
+			$thisMonth,
 			$format->getId(),
 			$rating,
 			$pokemon->getId()
@@ -236,8 +232,7 @@ class MovesetPokemonMonthModel
 
 		// Get spread data.
 		$this->spreadModel->setData(
-			$year,
-			$month,
+			$thisMonth,
 			$format->getId(),
 			$rating,
 			$pokemon->getId(),
@@ -256,8 +251,7 @@ class MovesetPokemonMonthModel
 
 		// Get teammate data.
 		$this->teammateModel->setData(
-			$year,
-			$month,
+			$thisMonth,
 			$format,
 			$rating,
 			$pokemon->getId(),
@@ -266,8 +260,7 @@ class MovesetPokemonMonthModel
 
 		// Get counter data.
 		$this->counterModel->setData(
-			$year,
-			$month,
+			$thisMonth,
 			$format,
 			$rating,
 			$pokemon->getId(),

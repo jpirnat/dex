@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
-use Jp\Dex\Domain\YearMonth;
 
 class ItemModel
 {
@@ -46,8 +46,8 @@ class ItemModel
 	 * Get moveset data to recreate a stats moveset file, such as
 	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single Pokémon.
 	 *
-	 * @param YearMonth $thisMonth
-	 * @param YearMonth $prevMonth
+	 * @param DateTime $thisMonth
+	 * @param DateTime $prevMonth
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
@@ -56,26 +56,24 @@ class ItemModel
 	 * @return void
 	 */
 	public function setData(
-		YearMonth $thisMonth,
-		YearMonth $prevMonth,
+		DateTime $thisMonth,
+		DateTime $prevMonth,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : void {
 		// Get moveset rated item records for this month.
-		$movesetRatedItems = $this->movesetRatedItemRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
-			$thisMonth->getYear(),
-			$thisMonth->getMonth(),
+		$movesetRatedItems = $this->movesetRatedItemRepository->getByMonthAndFormatAndRatingAndPokemon(
+			$thisMonth,
 			$formatId,
 			$rating,
 			$pokemonId
 		);
 
 		// Get moveset rated item records for the previous month.
-		$prevMonthItems = $this->movesetRatedItemRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+		$prevMonthItems = $this->movesetRatedItemRepository->getByMonthAndFormatAndRatingAndPokemon(
+			$prevMonth,
 			$formatId,
 			$rating,
 			$pokemonId

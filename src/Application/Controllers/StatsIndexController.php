@@ -39,6 +39,6 @@ class StatsIndexController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$this->statsIndexModel->setYearMonths();
+		$this->statsIndexModel->setMonths();
 	}
 }

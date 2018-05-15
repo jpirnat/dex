@@ -91,14 +91,12 @@ class MonthFormatsModel
 
 		// Get the previous month and the next month.
 		$this->dateModel->setData($year, $month);
+		$thisMonth = $this->dateModel->getThisMonth();
 		$prevMonth = $this->dateModel->getPrevMonth();
 		$nextMonth = $this->dateModel->getNextMonth();
 
 		// Get the formats/ratings for this month.
-		$formatRatings = $this->usageRatedQueries->getFormatRatings(
-			$year,
-			$month
-		);
+		$formatRatings = $this->usageRatedQueries->getFormatRatings($thisMonth);
 
 		// Re-organize the format/rating data.
 		$formatIds = [];
@@ -129,16 +127,10 @@ class MonthFormatsModel
 		}
 
 		// Does usage data exist for the previous month?
-		$this->prevMonthDataExists = $this->usageRepository->hasAny(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth()
-		);
+		$this->prevMonthDataExists = $this->usageRepository->hasAny($prevMonth);
 
 		// Does usage data exist for the next month?
-		$this->nextMonthDataExists = $this->usageRepository->hasAny(
-			$nextMonth->getYear(),
-			$nextMonth->getMonth()
-		);
+		$this->nextMonthDataExists = $this->usageRepository->hasAny($nextMonth);
 	}
 
 	/**

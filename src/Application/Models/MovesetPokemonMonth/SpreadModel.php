@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
+use DateTime;
 use Jp\Dex\Domain\Calculators\StatCalculator;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
@@ -70,8 +71,7 @@ class SpreadModel
 	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single
 	 * Pokémon.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
@@ -80,8 +80,7 @@ class SpreadModel
 	 * @return void
 	 */
 	public function setData(
-		int $year,
-		int $month,
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
@@ -91,8 +90,7 @@ class SpreadModel
 		$format = $this->formatRepository->getById($formatId);
 
 		// Get moveset rated spread records.
-		$movesetRatedSpreads = $this->movesetRatedSpreadRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
-			$year,
+		$movesetRatedSpreads = $this->movesetRatedSpreadRepository->getByMonthAndFormatAndRatingAndPokemon(
 			$month,
 			$format->getId(),
 			$rating,

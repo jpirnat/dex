@@ -5,7 +5,6 @@ namespace Jp\Dex\Presentation;
 
 use DateTime;
 use Jp\Dex\Application\Models\StatsIndexModel;
-use Jp\Dex\Domain\YearMonth;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
 use Zend\Diactoros\Response;
@@ -45,29 +44,28 @@ class StatsIndexView
 	 */
 	public function index() : ResponseInterface
 	{
-		// Get year/month combinations. Sort by year ascending, month ascending.
-		$yearMonths = $this->statsIndexModel->getYearMonths();
+		// Get months. Sort by year ascending, month ascending.
+		$months = $this->statsIndexModel->getMonths();
 		uasort(
-			$yearMonths,
-			function (YearMonth $a, YearMonth $b) : int {
-				if ($a->getYear() === $b->getYear()) {
-					return $a->getMonth() <=> $b->getMonth();
+			$months,
+			function (DateTime $a, DateTime $b) : int {
+				if ($a->format('Y') === $b->format('Y')) {
+					return $a->format('m') <=> $b->format('m');
 				}
 
-				return $b->getYear() <=> $a->getYear();
+				return $a->format('Y') <=> $b->format('Y');
 			}
 		);
 
 		// Restructure the data for the template.
 		$years = [];
-		foreach ($yearMonths as $yearMonth) {
-			$date = new DateTime();
-			$date->setDate($yearMonth->getYear(), $yearMonth->getMonth(), 1);
+		foreach ($months as $month) {
+			$year = (int) $month->format('Y');
 
-			$years[$yearMonth->getYear()]['year'] = $yearMonth->getYear();
-			$years[$yearMonth->getYear()]['months'][] = [
-				'month' => $yearMonth->getMonth(),
-				'name' => $date->format('M'),
+			$years[$year]['year'] = $year;
+			$years[$year]['months'][] = [
+				'month' => (int) $month->format('m'),
+				'name' => $month->format('M'),
 			];
 		}
 

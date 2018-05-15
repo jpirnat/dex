@@ -142,54 +142,47 @@ class UsageMonthModel
 
 		// Does usage rated data exist for the previous month?
 		$this->prevMonthDataExists = $this->usageRatedRepository->has(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+			$prevMonth,
 			$format->getId(),
 			$rating
 		);
 
 		// Does usage rated data exist for the next month?
 		$this->nextMonthDataExists = $this->usageRatedRepository->has(
-			$nextMonth->getYear(),
-			$nextMonth->getMonth(),
+			$nextMonth,
 			$format->getId(),
 			$rating
 		);
 
 		// Does leads rated data exist for this month?
 		$this->leadsDataExists = $this->leadsRatedPokemonRepository->hasAny(
-			$thisMonth->getYear(),
-			$thisMonth->getMonth(),
+			$thisMonth,
 			$format->getId(),
 			$rating
 		);
 
 		// Get usage Pokémon records for this month.
-		$usagePokemons = $this->usagePokemonRepository->getByYearAndMonthAndFormat(
-			$thisMonth->getYear(),
-			$thisMonth->getMonth(),
+		$usagePokemons = $this->usagePokemonRepository->getByMonthAndFormat(
+			$thisMonth,
 			$format->getId()
 		);
 
 		// Get usage Pokémon records for the previous month.
-		$prevMonthUsages = $this->usagePokemonRepository->getByYearAndMonthAndFormat(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+		$prevMonthUsages = $this->usagePokemonRepository->getByMonthAndFormat(
+			$prevMonth,
 			$format->getId()
 		);
 
 		// Get usage rated Pokémon records for this month.
-		$usageRatedPokemons = $this->usageRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
-			$thisMonth->getYear(),
-			$thisMonth->getMonth(),
+		$usageRatedPokemons = $this->usageRatedPokemonRepository->getByMonthAndFormatAndRating(
+			$thisMonth,
 			$format->getId(),
 			$rating
 		);
 
 		// Get usage rated Pokémon records for the previous month.
-		$prevMonthRateds = $this->usageRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+		$prevMonthRateds = $this->usageRatedPokemonRepository->getByMonthAndFormatAndRating(
+			$prevMonth,
 			$format->getId(),
 			$rating
 		);

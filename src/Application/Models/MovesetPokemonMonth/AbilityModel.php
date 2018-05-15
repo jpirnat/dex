@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
+use DateTime;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface;
-use Jp\Dex\Domain\YearMonth;
 
 class AbilityModel
 {
@@ -46,8 +46,8 @@ class AbilityModel
 	 * Get moveset data to recreate a stats moveset file, such as
 	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single Pokémon.
 	 *
-	 * @param YearMonth $thisMonth
-	 * @param YearMonth $prevMonth
+	 * @param DateTime $thisMonth
+	 * @param DateTime $prevMonth
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
@@ -56,26 +56,24 @@ class AbilityModel
 	 * @return void
 	 */
 	public function setData(
-		YearMonth $thisMonth,
-		YearMonth $prevMonth,
+		DateTime $thisMonth,
+		DateTime $prevMonth,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : void {
 		// Get moveset rated ability records for this month.
-		$movesetRatedAbilities = $this->movesetRatedAbilityRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
-			$thisMonth->getYear(),
-			$thisMonth->getMonth(),
+		$movesetRatedAbilities = $this->movesetRatedAbilityRepository->getByMonthAndFormatAndRatingAndPokemon(
+			$thisMonth,
 			$formatId,
 			$rating,
 			$pokemonId
 		);
 
 		// Get moveset rated ability records for the previous month.
-		$prevMonthAbilities = $this->movesetRatedAbilityRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+		$prevMonthAbilities = $this->movesetRatedAbilityRepository->getByMonthAndFormatAndRatingAndPokemon(
+			$prevMonth,
 			$formatId,
 			$rating,
 			$pokemonId

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Forms\FormId;
@@ -60,8 +61,7 @@ class CounterModel
 	 * Get moveset data to recreate a stats moveset file, such as
 	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single Pokémon.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param Format $format
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
@@ -70,16 +70,14 @@ class CounterModel
 	 * @return void
 	 */
 	public function setData(
-		int $year,
-		int $month,
+		DateTime $month,
 		Format $format,
 		int $rating,
 		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : void {
 		// Get moveset rated move records.
-		$movesetRatedCounters = $this->movesetRatedCounterRepository->getByYearAndMonthAndFormatAndRatingAndPokemon(
-			$year,
+		$movesetRatedCounters = $this->movesetRatedCounterRepository->getByMonthAndFormatAndRatingAndPokemon(
 			$month,
 			$format->getId(),
 			$rating,
@@ -96,7 +94,6 @@ class CounterModel
 
 			// Does this teammate have moveset rated Pokémon data?
 			$movesetDataExists = $this->movesetRatedPokemonRepository->has(
-				$year,
 				$month,
 				$format->getId(),
 				$rating,

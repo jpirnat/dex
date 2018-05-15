@@ -3,16 +3,16 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
+use DateTime;
 use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
-use Jp\Dex\Domain\YearMonth;
 
 class StatsIndexModel
 {
 	/** @var UsageQueriesInterface $usageQueries */
 	private $usageQueries;
 
-	/** @var YearMonth[] $yearMonths */
-	private $yearMonths = [];
+	/** @var DateTime[] $months */
+	private $months = [];
 
 	/**
 	 * Constructor.
@@ -25,22 +25,22 @@ class StatsIndexModel
 	}
 
 	/**
-	 * Set the year/month combinations that have usage data.
+	 * Set the months that have usage data.
 	 *
 	 * @return void
 	 */
-	public function setYearMonths() : void
+	public function setMonths() : void
 	{
-		$this->yearMonths = $this->usageQueries->getYearMonths();
+		$this->months = $this->usageQueries->getMonths();
 	}
 
 	/**
-	 * Get the year/month combinations that have usage data.
+	 * Get the months that have usage data.
 	 *
-	 * @return YearMonth[]
+	 * @return DateTime[]
 	 */
-	public function getYearMonths() : array
+	public function getMonths() : array
 	{
-		return $this->yearMonths;
+		return $this->months;
 	}
 }

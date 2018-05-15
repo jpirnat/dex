@@ -150,16 +150,14 @@ class AbilityUsageMonthModel
 
 		// Does usage rated data exist for the previous month?
 		$this->prevMonthDataExists = $this->usageRatedRepository->has(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+			$prevMonth,
 			$format->getId(),
 			$rating
 		);
 
 		// Does usage rated data exist for the next month?
 		$this->nextMonthDataExists = $this->usageRatedRepository->has(
-			$nextMonth->getYear(),
-			$nextMonth->getMonth(),
+			$nextMonth,
 			$format->getId(),
 			$rating
 		);
@@ -174,18 +172,16 @@ class AbilityUsageMonthModel
 		);
 
 		// Get usage rated Pokémon ability records for this month.
-		$usageRatedPokemonAbilities = $this->usageRatedPokemonAbilityRepository->getByYearAndMonthAndFormatAndRatingAndAbility(
-			$thisMonth->getYear(),
-			$thisMonth->getMonth(),
+		$usageRatedPokemonAbilities = $this->usageRatedPokemonAbilityRepository->getByMonthAndFormatAndRatingAndAbility(
+			$thisMonth,
 			$format->getId(),
 			$rating,
 			$ability->getId()
 		);
 
 		// Get usage rated Pokémon ability records for the previous month.
-		$prevMonthPokemonAbilities = $this->usageRatedPokemonAbilityRepository->getByYearAndMonthAndFormatAndRatingAndAbility(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+		$prevMonthPokemonAbilities = $this->usageRatedPokemonAbilityRepository->getByMonthAndFormatAndRatingAndAbility(
+			$prevMonth,
 			$format->getId(),
 			$rating,
 			$ability->getId()

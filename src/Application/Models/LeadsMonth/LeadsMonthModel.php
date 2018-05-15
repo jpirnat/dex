@@ -139,53 +139,46 @@ class LeadsMonthModel
 
 		// Does leads data exist for the previous month?
 		$this->prevMonthDataExists = $this->leadsRepository->has(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+			$prevMonth,
 			$format->getId()
 		);
 
 		// Does leads data exist for the next month?
 		$this->nextMonthDataExists = $this->leadsRepository->has(
-			$nextMonth->getYear(),
-			$nextMonth->getMonth(),
+			$nextMonth,
 			$format->getId()
 		);
 
 		// Get leads Pokémon records for this month.
-		$leadsPokemons = $this->leadsPokemonRepository->getByYearAndMonthAndFormat(
-			$thisMonth->getYear(),
-			$thisMonth->getMonth(),
+		$leadsPokemons = $this->leadsPokemonRepository->getByMonthAndFormat(
+			$thisMonth,
 			$format->getId()
 		);
 
 		// Get leads Pokémon records for the previous month.
-		$prevMonthLeads = $this->leadsPokemonRepository->getByYearAndMonthAndFormat(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+		$prevMonthLeads = $this->leadsPokemonRepository->getByMonthAndFormat(
+			$prevMonth,
 			$format->getId()
 		);
 
 		// Get leads rated Pokémon records for this month.
-		$leadsRatedPokemons = $this->leadsRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
-			$thisMonth->getYear(),
-			$thisMonth->getMonth(),
+		$leadsRatedPokemons = $this->leadsRatedPokemonRepository->getByMonthAndFormatAndRating(
+			$thisMonth,
 			$format->getId(),
 			$rating
 		);
 
 		// Get leads rated Pokémon records for the previous month.
-		$prevMonthRateds = $this->leadsRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
-			$prevMonth->getYear(),
-			$prevMonth->getMonth(),
+		$prevMonthRateds = $this->leadsRatedPokemonRepository->getByMonthAndFormatAndRating(
+			$prevMonth,
 			$format->getId(),
 			$rating
 		);
 
 		// Get usage rated Pokémon records for this month (to determine whether
 		// the moveset link should be shown).
-		$usageRatedPokemons = $this->usageRatedPokemonRepository->getByYearAndMonthAndFormatAndRating(
-			$thisMonth->getYear(),
-			$thisMonth->getMonth(),
+		$usageRatedPokemons = $this->usageRatedPokemonRepository->getByMonthAndFormatAndRating(
+			$thisMonth,
 			$format->getId(),
 			$rating
 		);
