@@ -9,14 +9,13 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidCountException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
-use Jp\Dex\Domain\Stats\Exceptions\InvalidYearException;
+use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
 class UsagePokemon
 {
-	/** @var int $year */
-	private $year;
+	use ValidateMonthTrait;
 
-	/** @var int $month */
+	/** @var DateTime $month */
 	private $month;
 
 	/** @var FormatId $formatId */
@@ -40,8 +39,7 @@ class UsagePokemon
 	/**
 	 * Constructor.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param PokemonId $pokemonId
 	 * @param int $raw
@@ -49,15 +47,13 @@ class UsagePokemon
 	 * @param int $real
 	 * @param float $realPercent
 	 *
-	 * @throws InvalidYearException if $year is invalid.
 	 * @throws InvalidMonthException if $month is invalid.
 	 * @throws InvalidCountException if $raw is invalid or if $real is invalid.
 	 * @throws InvalidPercentException if $rawPercent is invalid or if
 	 *     $realPercent is invalid.
 	 */
 	public function __construct(
-		int $year,
-		int $month,
+		DateTime $month,
 		FormatId $formatId,
 		PokemonId $pokemonId,
 		int $raw,
@@ -65,29 +61,7 @@ class UsagePokemon
 		int $real,
 		float $realPercent
 	) {
-		$today = new DateTime();
-		$currentYear = (int) $today->format('Y');
-		$currentMonth = (int) $today->format('n');
-
-		if ($year < 2014) {
-			throw new InvalidYearException('Invalid year: ' . $year);
-		}
-
-		if ($year > $currentYear) {
-			throw new InvalidYearException(
-				'This year has not happened yet: ' . $year
-			);
-		}
-
-		if ($month < 1 || $month > 12) {
-			throw new InvalidMonthException('Invalid month: ' . $month);
-		}
-
-		if ($year === $currentYear && $month > $currentMonth) {
-			throw new InvalidMonthException(
-				'This month has not happened yet: ' . $month
-			);
-		}
+		$this->validateMonth($month);
 
 		if ($raw < 0) {
 			throw new InvalidCountException('Invalid raw: ' . $raw);
@@ -109,7 +83,6 @@ class UsagePokemon
 			);
 		}
 
-		$this->year = $year;
 		$this->month = $month;
 		$this->formatId = $formatId;
 		$this->pokemonId = $pokemonId;
@@ -120,21 +93,11 @@ class UsagePokemon
 	}
 
 	/**
-	 * Get the year.
-	 *
-	 * @return int
-	 */
-	public function getYear() : int
-	{
-		return $this->year;
-	}
-
-	/**
 	 * Get the month.
 	 *
-	 * @return int
+	 * @return DateTime
 	 */
-	public function getMonth() : int
+	public function getMonth() : DateTime
 	{
 		return $this->month;
 	}

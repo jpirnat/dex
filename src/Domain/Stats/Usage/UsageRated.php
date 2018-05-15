@@ -8,14 +8,13 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidAverageWeightPerTeamException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
-use Jp\Dex\Domain\Stats\Exceptions\InvalidYearException;
+use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
 class UsageRated
 {
-	/** @var int $year */
-	private $year;
+	use ValidateMonthTrait;
 
-	/** @var int $month */
+	/** @var DateTime $month */
 	private $month;
 
 	/** @var FormatId $formatId */
@@ -30,48 +29,23 @@ class UsageRated
 	/**
 	 * Constructor.
 	 *
-	 * @param int $year
-	 * @param int $month
+	 * @param DateTime $month
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param float $averageWeightPerTeam
 	 *
-	 * @throws InvalidYearException if $year is invalid.
 	 * @throws InvalidMonthException if $month is invalid.
 	 * @throws InvalidRatingException if $rating is invalid.
 	 * @throws InvalidAverageWeightPerTeamException if $averageWeightPerTeam is
 	 *     invalid.
 	 */
 	public function __construct(
-		int $year,
-		int $month,
+		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		float $averageWeightPerTeam
 	) {
-		$today = new DateTime();
-		$currentYear = (int) $today->format('Y');
-		$currentMonth = (int) $today->format('n');
-
-		if ($year < 2014) {
-			throw new InvalidYearException('Invalid year: ' . $year);
-		}
-
-		if ($year > $currentYear) {
-			throw new InvalidYearException(
-				'This year has not happened yet: ' . $year
-			);
-		}
-
-		if ($month < 1 || $month > 12) {
-			throw new InvalidMonthException('Invalid month: ' . $month);
-		}
-
-		if ($year === $currentYear && $month > $currentMonth) {
-			throw new InvalidMonthException(
-				'This month has not happened yet: ' . $month
-			);
-		}
+		$this->validateMonth($month);
 
 		if ($rating < 0) {
 			throw new InvalidRatingException('Invalid rating: ' . $rating);
@@ -83,7 +57,6 @@ class UsageRated
 			);
 		}
 
-		$this->year = $year;
 		$this->month = $month;
 		$this->formatId = $formatId;
 		$this->rating = $rating;
@@ -91,21 +64,11 @@ class UsageRated
 	}
 
 	/**
-	 * Get the year.
-	 *
-	 * @return int
-	 */
-	public function getYear() : int
-	{
-		return $this->year;
-	}
-
-	/**
 	 * Get the month.
 	 *
-	 * @return int
+	 * @return DateTime
 	 */
-	public function getMonth() : int
+	public function getMonth() : DateTime
 	{
 		return $this->month;
 	}

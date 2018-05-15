@@ -40,23 +40,18 @@ class TrendPointCalculator
 		if ($usageDatas === []) {
 			// If there's no usage data for this request, let's default our
 			// trend span to the entire history of the format.
-			$yearMonth = $this->usageQueries->getOldest($formatId);
+			$month = $this->usageQueries->getOldest($formatId);
 
-			if ($yearMonth === null) {
+			if ($month === null) {
 				// If the format has no usage data at all, just do this.
 				return new DateTime('first day of last month');
 			}
 
-			$year = $yearMonth->getYear();
-			$month = $yearMonth->getMonth();
-			return new DateTime("$year-$month");			
+			return $month;
 		}
 
-		$firstYear = reset($usageDatas);
-		$usageData = reset($firstYear);
-		$year = $usageData->getYear();
-		$month = $usageData->getMonth();
-		return new DateTime("$year-$month");
+		$usageData = reset($usageDatas);
+		return $usageData->getMonth();
 	}
 
 	/**
@@ -73,23 +68,18 @@ class TrendPointCalculator
 		if ($usageDatas === []) {
 			// If there's no usage data for this request, let's default our
 			// trend span to the entire history of the format.
-			$yearMonth = $this->usageQueries->getNewest($formatId);
+			$month = $this->usageQueries->getNewest($formatId);
 
-			if ($yearMonth === null) {
+			if ($month === null) {
 				// If the format has no usage data at all, just do this.
 				return new DateTime('first day of last month');
 			}
 
-			$year = $yearMonth->getYear();
-			$month = $yearMonth->getMonth();
-			return new DateTime("$year-$month");			
+			return $month;
 		}
 
-		$finalYear = end($usageDatas);
-		$usageData = end($finalYear);
-		$year = $usageData->getYear();
-		$month = $usageData->getMonth();
-		return new DateTime("$year-$month");
+		$usageData = end($usageDatas);
+		return $usageData->getMonth();
 	}
 
 	/**

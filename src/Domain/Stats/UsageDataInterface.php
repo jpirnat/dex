@@ -3,19 +3,14 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats;
 
+use DateTime;
+
 interface UsageDataInterface
 {
 	/**
-	 * Get the year.
-	 *
-	 * @return int
-	 */
-	public function getYear() : int;
-
-	/**
 	 * Get the month.
 	 *
-	 * @return int
+	 * @return DateTime
 	 */
-	public function getMonth() : int;
+	public function getMonth() : DateTime;
 }
