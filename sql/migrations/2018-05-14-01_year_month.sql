@@ -6,7 +6,7 @@ schema change the project has ever had.
 
 # showdown_formats_to_import
 alter table `showdown_formats_to_import`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `showdown_formats_to_import` set
@@ -23,7 +23,7 @@ add primary key (`month`, `name`)
 
 # showdown_formats_to_ignore
 alter table `showdown_formats_to_ignore`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `showdown_formats_to_ignore` set
@@ -40,7 +40,7 @@ add primary key (`month`, `name`)
 
 # leads
 alter table `leads`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `leads` set
@@ -57,7 +57,7 @@ add primary key (`month`, `format_id`)
 
 # leads_pokemon
 alter table `leads_pokemon`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `leads_pokemon` set
@@ -74,7 +74,7 @@ add primary key (`month`, `format_id`, `pokemon_id`)
 
 # leads_rated_pokemon
 alter table `leads_rated_pokemon`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `leads_rated_pokemon` set
@@ -91,7 +91,7 @@ add primary key (`month`, `format_id`, `rating`, `pokemon_id`)
 
 # moveset_pokemon
 alter table `moveset_pokemon`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `moveset_pokemon` set
@@ -108,7 +108,7 @@ add primary key (`month`, `format_id`, `pokemon_id`)
 
 # moveset_rated_abilities
 alter table `moveset_rated_abilities`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `moveset_rated_abilities` set
@@ -125,7 +125,7 @@ add primary key (`month`, `format_id`, `rating`, `pokemon_id`, `ability_id`)
 
 # moveset_rated_counters
 alter table `moveset_rated_counters`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `moveset_rated_counters` set
@@ -142,7 +142,7 @@ add primary key (`month`, `format_id`, `rating`, `pokemon_id`, `counter_id`)
 
 # moveset_rated_items
 alter table `moveset_rated_items`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `moveset_rated_items` set
@@ -159,7 +159,7 @@ add primary key (`month`, `format_id`, `rating`, `pokemon_id`, `item_id`)
 
 # moveset_rated_moves
 alter table `moveset_rated_moves`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `moveset_rated_moves` set
@@ -176,7 +176,7 @@ add primary key (`month`, `format_id`, `rating`, `pokemon_id`, `move_id`)
 
 # moveset_rated_pokemon
 alter table `moveset_rated_pokemon`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `moveset_rated_pokemon` set
@@ -193,7 +193,7 @@ add primary key (`month`, `format_id`, `rating`, `pokemon_id`)
 
 # moveset_rated_spreads
 alter table `moveset_rated_spreads`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `moveset_rated_spreads` set
@@ -210,7 +210,7 @@ add primary key (`month`, `format_id`, `rating`, `pokemon_id`, `nature_id`, `hp`
 
 # moveset_rated_teammates
 alter table `moveset_rated_teammates`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `moveset_rated_teammates` set
@@ -227,7 +227,7 @@ add primary key (`month`, `format_id`, `rating`, `pokemon_id`, `teammate_id`)
 
 # usage
 alter table `usage`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `usage` set
@@ -244,7 +244,7 @@ add primary key (`month`, `format_id`)
 
 # usage_pokemon
 alter table `usage_pokemon`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `usage_pokemon` set
@@ -261,7 +261,7 @@ add primary key (`month`, `format_id`, `pokemon_id`)
 
 # usage_rated
 alter table `usage_rated`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `usage_rated` set
@@ -278,7 +278,7 @@ add primary key (`month`, `format_id`, `rating`)
 
 # usage_rated_pokemon
 alter table `usage_rated_pokemon`
-add column `ym` date not null first
+add column `ym` date null first
 ;
 
 update `usage_rated_pokemon` set
