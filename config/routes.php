@@ -34,6 +34,10 @@ use Jp\Dex\Presentation\UsageMonthView;
 $month = '{month:\d{4}-\d{2}}';
 $formatIdentifier = '{formatIdentifier:[-\w]+}';
 $rating = '{rating:\d+}';
+$pokemonIdentifier = '{pokemonIdentifier:[-\w]+}';
+$abilityIdentifier = '{abilityIdentifier:[-\w]+}';
+$itemIdentifier = '{itemIdentifier:[-\w]+}';
+$moveIdentifier = '{moveIdentifier:[-\w]+}';
 
 // Route definitions.
 $routes = [
@@ -59,110 +63,82 @@ $routes = [
 		],
 	]],
 
-	[
-		'GET',
-		"/stats/$month",
-		[
-			'controllerClass' => MonthFormatsController::class,
-			'controllerMethod' => 'index',
-			'viewClass' => MonthFormatsView::class,
-			'viewMethod' => 'index',
-			'middlewareClasses' => [
-				HtmlErrorMiddleware::class,
-				LanguageMiddleware::class,
-			],
-		]
-	],
+	['GET', "/stats/$month", [
+		'controllerClass' => MonthFormatsController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => MonthFormatsView::class,
+		'viewMethod' => 'index',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
 
-	[
-		'GET',
-		"/stats/$month/$formatIdentifier/$rating",
-		[
-			'controllerClass' => UsageMonthController::class,
-			'controllerMethod' => 'setData',
-			'viewClass' => UsageMonthView::class,
-			'viewMethod' => 'getData',
-			'middlewareClasses' => [
-				HtmlErrorMiddleware::class,
-				LanguageMiddleware::class,
-			],
-		]
-	],
+	['GET', "/stats/$month/$formatIdentifier/$rating", [
+		'controllerClass' => UsageMonthController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => UsageMonthView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
 
-	[
-		'GET',
-		"/stats/$month/$formatIdentifier/$rating/leads",
-		[
-			'controllerClass' => LeadsMonthController::class,
-			'controllerMethod' => 'setData',
-			'viewClass' => LeadsMonthView::class,
-			'viewMethod' => 'getData',
-			'middlewareClasses' => [
-				HtmlErrorMiddleware::class,
-				LanguageMiddleware::class,
-			],
-		]
-	],
+	['GET', "/stats/$month/$formatIdentifier/$rating/leads", [
+		'controllerClass' => LeadsMonthController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => LeadsMonthView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
 
-	[
-		'GET',
-		"/stats/$month/$formatIdentifier/$rating/moveset/{pokemonIdentifier:[-\w]+}",
-		[
-			'controllerClass' => MovesetPokemonMonthController::class,
-			'controllerMethod' => 'setData',
-			'viewClass' => MovesetPokemonMonthView::class,
-			'viewMethod' => 'getData',
-			'middlewareClasses' => [
-				HtmlErrorMiddleware::class,
-				LanguageMiddleware::class,
-			],
-		]
-	],
+	['GET', "/stats/$month/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
+		'controllerClass' => MovesetPokemonMonthController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => MovesetPokemonMonthView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
 
-	[
-		'GET',
-		"/stats/$month/$formatIdentifier/$rating/abilities/{abilityIdentifier:[-\w]+}",
-		[
-			'controllerClass' => AbilityUsageMonthController::class,
-			'controllerMethod' => 'setData',
-			'viewClass' => AbilityUsageMonthView::class,
-			'viewMethod' => 'getData',
-			'middlewareClasses' => [
-				HtmlErrorMiddleware::class,
-				LanguageMiddleware::class,
-			],
-		]
-	],
+	['GET', "/stats/$month/$formatIdentifier/$rating/abilities/$abilityIdentifier", [
+		'controllerClass' => AbilityUsageMonthController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => AbilityUsageMonthView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
 
-	[
-		'GET',
-		"/stats/$month/$formatIdentifier/$rating/items/{itemIdentifier:[-\w]+}",
-		[
-			'controllerClass' => ItemUsageMonthController::class,
-			'controllerMethod' => 'setData',
-			'viewClass' => ItemUsageMonthView::class,
-			'viewMethod' => 'getData',
-			'middlewareClasses' => [
-				HtmlErrorMiddleware::class,
-				LanguageMiddleware::class,
-			],
-		]
-	],
+	['GET', "/stats/$month/$formatIdentifier/$rating/items/$itemIdentifier", [
+		'controllerClass' => ItemUsageMonthController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => ItemUsageMonthView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
 
-	[
-		'GET',
-		"/stats/$month/$formatIdentifier/$rating/moves/{moveIdentifier:[-\w]+}",
-		[
-			'controllerClass' => MoveUsageMonthController::class,
-			'controllerMethod' => 'setData',
-			'viewClass' => MoveUsageMonthView::class,
-			'viewMethod' => 'getData',
-			'middlewareClasses' => [
-				HtmlErrorMiddleware::class,
-				LanguageMiddleware::class,
-			],
-		]
-	],
+	['GET', "/stats/$month/$formatIdentifier/$rating/moves/$moveIdentifier", [
+		'controllerClass' => MoveUsageMonthController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => MoveUsageMonthView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
 
 	// Charts
 	['GET', '/stats/trends/chart', [

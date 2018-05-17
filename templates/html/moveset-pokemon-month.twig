@@ -4,7 +4,7 @@
 	<div class="month-control">
 		{% if showPrevMonthLink %}
 			<div class="button prev">
-				<a href="/stats/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemonIdentifier|e }}">
+				<a href="/stats/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ pokemonIdentifier|e }}">
 					&#9668; {{ prevMonthText|e }}
 				</a>
 			</div>
@@ -14,7 +14,7 @@
 
 		{% if showNextMonthLink %}
 			<div class="button next">
-				<a href="/stats/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ pokemonIdentifier|e }}">
+				<a href="/stats/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ pokemonIdentifier|e }}">
 					{{ nextMonthText|e }} &#9658;
 				</a>
 			</div>
@@ -249,7 +249,7 @@
 					</td>
 					<td>
 						{% if teammate.showMovesetLink %}
-							<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ teammate.identifier|e }}">
+							<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ teammate.identifier|e }}">
 								{{ teammate.name|e }}
 							</a>
 						{% else %}
@@ -283,7 +283,7 @@
 					</td>
 					<td>
 						{% if counter.showMovesetLink %}
-							<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moveset/{{ counter.identifier|e }}">
+							<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ counter.identifier|e }}">
 								{{ counter.name|e }}
 							</a>
 						{% else %}
