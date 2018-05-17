@@ -14,11 +14,11 @@
         }
     },
     "require": {
-        "level-2/dice": "^2.0",
+        "level-2/dice": "^3.0",
         "spatie/regex": "^1.2",
         "guzzlehttp/guzzle": "^6.3",
         "symfony/dom-crawler": "^4.0",
-        "jpirnat/container": "^1.0",
+        "jpirnat/container": "^2.0",
         "zendframework/zend-diactoros": "^1.6",
         "nikic/fast-route": "^1.2",
         "jpirnat/middleware": "^3.0",

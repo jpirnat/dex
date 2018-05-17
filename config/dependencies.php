@@ -121,8 +121,7 @@ use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownMoveRepository;
 use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownNatureRepository;
 use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownPokemonRepository;
 
-$dice = new Dice();
-$container = new DiceContainer($dice);
+$container = new DiceContainer(new Dice());
 
 // Databases
 
@@ -174,11 +173,6 @@ $rule = [
 $container->dice()->addRule(Twig_Loader_Filesystem::class, $rule);
 
 $rule = [
-	'substitutions' => [
-		Twig_LoaderInterface::class => [
-			'instance' => Twig_Loader_Filesystem::class
-		],
-	],
 	'shared' => true,
 	'constructParams' => [
 		[
@@ -201,6 +195,9 @@ $container->dice()->addRule(HtmlErrorMiddleware::class, $rule);
 
 
 // Interfaces
+$rule = ['instanceOf' => Twig_Loader_Filesystem::class];
+$container->dice()->addRule(Twig_LoaderInterface::class, $rule);
+
 $rule = ['instanceOf' => DatabaseAbilityNameRepository::class];
 $container->dice()->addRule(AbilityNameRepositoryInterface::class, $rule);
 
