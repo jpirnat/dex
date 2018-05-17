@@ -40,6 +40,9 @@ use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounterRepositoryInterface;
@@ -85,6 +88,9 @@ use Jp\Dex\Infrastructure\DatabaseMoveNameRepository;
 use Jp\Dex\Infrastructure\DatabaseMoveRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedAbilityRepository;
+use Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedAbilityRepository;
+use Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedItemRepository;
+use Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedMoveRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedCounterRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedItemRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedMoveRepository;
@@ -251,6 +257,15 @@ $container->dice()->addRule(MovesetPokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMovesetRatedAbilityRepository::class];
 $container->dice()->addRule(MovesetRatedAbilityRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseMovesetRatedAveragedAbilityRepository::class];
+$container->dice()->addRule(MovesetRatedAveragedAbilityRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseMovesetRatedAveragedItemRepository::class];
+$container->dice()->addRule(MovesetRatedAveragedItemRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseMovesetRatedAveragedMoveRepository::class];
+$container->dice()->addRule(MovesetRatedAveragedMoveRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMovesetRatedCounterRepository::class];
 $container->dice()->addRule(MovesetRatedCounterRepositoryInterface::class, $rule);
