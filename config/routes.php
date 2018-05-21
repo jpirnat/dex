@@ -5,13 +5,16 @@ use Jp\Dex\Application\Controllers\AbilityUsageMonthController;
 use Jp\Dex\Application\Controllers\ErrorController;
 use Jp\Dex\Application\Controllers\IndexController;
 use Jp\Dex\Application\Controllers\ItemUsageMonthController;
+use Jp\Dex\Application\Controllers\LeadsAveragedController;
 use Jp\Dex\Application\Controllers\LeadsMonthController;
 use Jp\Dex\Application\Controllers\MonthFormatsController;
+use Jp\Dex\Application\Controllers\MovesetPokemonAveragedController;
 use Jp\Dex\Application\Controllers\MovesetPokemonMonthController;
 use Jp\Dex\Application\Controllers\MoveUsageMonthController;
 use Jp\Dex\Application\Controllers\NotFoundController;
 use Jp\Dex\Application\Controllers\StatsIndexController;
 use Jp\Dex\Application\Controllers\TrendChartController;
+use Jp\Dex\Application\Controllers\UsageAveragedController;
 use Jp\Dex\Application\Controllers\UsageMonthController;
 use Jp\Dex\Application\Middleware\AjaxErrorMiddleware;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
@@ -21,13 +24,16 @@ use Jp\Dex\Presentation\AbilityUsageMonthView;
 use Jp\Dex\Presentation\ErrorView;
 use Jp\Dex\Presentation\IndexView;
 use Jp\Dex\Presentation\ItemUsageMonthView;
+use Jp\Dex\Presentation\LeadsAveragedView;
 use Jp\Dex\Presentation\LeadsMonthView;
 use Jp\Dex\Presentation\MonthFormatsView;
+use Jp\Dex\Presentation\MovesetPokemonAveragedView;
 use Jp\Dex\Presentation\MovesetPokemonMonthView;
 use Jp\Dex\Presentation\MoveUsageMonthView;
 use Jp\Dex\Presentation\NotFoundView;
 use Jp\Dex\Presentation\StatsIndexView;
 use Jp\Dex\Presentation\TrendChartView;
+use Jp\Dex\Presentation\UsageAveragedView;
 use Jp\Dex\Presentation\UsageMonthView;
 
 // Common route parameter definitions.
@@ -38,6 +44,8 @@ $pokemonIdentifier = '{pokemonIdentifier:[-\w]+}';
 $abilityIdentifier = '{abilityIdentifier:[-\w]+}';
 $itemIdentifier = '{itemIdentifier:[-\w]+}';
 $moveIdentifier = '{moveIdentifier:[-\w]+}';
+$start = '{start:\d{4}-\d{2}}';
+$end = '{end:\d{4}-\d{2}}';
 
 // Route definitions.
 $routes = [
@@ -133,6 +141,40 @@ $routes = [
 		'controllerClass' => MoveUsageMonthController::class,
 		'controllerMethod' => 'setData',
 		'viewClass' => MoveUsageMonthView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	// Averaged
+	['GET', "/stats/$start-to-$end/$formatIdentifier/$rating", [
+		'controllerClass' => UsageAveragedController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => UsageAveragedView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/stats/$start-to-$end/$formatIdentifier/$rating/leads", [
+		'controllerClass' => LeadsAveragedController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => LeadsAveragedView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/stats/$start-to-$end/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
+		'controllerClass' => MovesetPokemonAveragedController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => MovesetPokemonAveragedView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,

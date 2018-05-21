@@ -45,7 +45,7 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 				AND `format_id` = :format_id
 				AND `rating` = :rating'
 		);
-		$stmt->bindValue(':month', $month, PDO::PARAM_INT);
+		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
