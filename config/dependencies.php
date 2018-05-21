@@ -58,6 +58,8 @@ use Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonItemRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMoveRepositoryInterface;
@@ -105,8 +107,10 @@ use Jp\Dex\Infrastructure\DatabasePokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseStatNameRepository;
 use Jp\Dex\Infrastructure\DatabaseTypeIconRepository;
 use Jp\Dex\Infrastructure\DatabaseTypeRepository;
+use Jp\Dex\Infrastructure\DatabaseUsageAveragedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageQueries;
+use Jp\Dex\Infrastructure\DatabaseUsageRatedAveragedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonAbilityRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonItemRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonMoveRepository;
@@ -324,11 +328,17 @@ $container->dice()->addRule(TypeIconRepositoryInterface::class, $rule);
 $rule = ['instanceOf' => DatabaseTypeRepository::class];
 $container->dice()->addRule(TypeRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => DatabaseUsageAveragedPokemonRepository::class];
+$container->dice()->addRule(UsageAveragedPokemonRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => DatabaseUsagePokemonRepository::class];
 $container->dice()->addRule(UsagePokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseUsageQueries::class];
 $container->dice()->addRule(UsageQueriesInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseUsageRatedAveragedPokemonRepository::class];
+$container->dice()->addRule(UsageRatedAveragedPokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseUsageRatedPokemonAbilityRepository::class];
 $container->dice()->addRule(UsageRatedPokemonAbilityRepositoryInterface::class, $rule);
