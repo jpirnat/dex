@@ -37,6 +37,8 @@ use Jp\Dex\Domain\Natures\NatureStatModifierRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
+use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
@@ -82,7 +84,9 @@ use Jp\Dex\Infrastructure\DatabaseItemNameRepository;
 use Jp\Dex\Infrastructure\DatabaseItemRepository;
 use Jp\Dex\Infrastructure\DatabaseLanguageNameRepository;
 use Jp\Dex\Infrastructure\DatabaseLanguageRepository;
+use Jp\Dex\Infrastructure\DatabaseLeadsAveragedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsPokemonRepository;
+use Jp\Dex\Infrastructure\DatabaseLeadsRatedAveragedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRepository;
 use Jp\Dex\Infrastructure\DatabaseModelRepository;
@@ -235,8 +239,14 @@ $container->dice()->addRule(LanguageNameRepositoryInterface::class, $rule);
 $rule = ['instanceOf' => DatabaseLanguageRepository::class];
 $container->dice()->addRule(LanguageRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => DatabaseLeadsAveragedPokemonRepository::class];
+$container->dice()->addRule(LeadsAveragedPokemonRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => DatabaseLeadsPokemonRepository::class];
 $container->dice()->addRule(LeadsPokemonRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseLeadsRatedAveragedPokemonRepository::class];
+$container->dice()->addRule(LeadsRatedAveragedPokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseLeadsRatedPokemonRepository::class];
 $container->dice()->addRule(LeadsRatedPokemonRepositoryInterface::class, $rule);
