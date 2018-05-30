@@ -36,7 +36,7 @@ class ItemUsageMonthModel
 	/** @var UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository */
 	private $usageRatedPokemonItemRepository;
 
-	/** PokemonRepositoryInterface $pokemonRepository */
+	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
 
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */

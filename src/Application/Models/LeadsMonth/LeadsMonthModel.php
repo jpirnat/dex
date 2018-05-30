@@ -31,7 +31,7 @@ class LeadsMonthModel
 	/** @var LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository */
 	private $leadsRatedPokemonRepository;
 
-	/** PokemonRepositoryInterface $pokemonRepository */
+	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
 
 	/** @var UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository */
