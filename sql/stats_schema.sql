@@ -1,6 +1,3 @@
-use `dex`;
-
-
 create table if not exists `formats`
 (
 `id` tinyint unsigned not null,

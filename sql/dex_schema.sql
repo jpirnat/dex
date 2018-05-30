@@ -1,12 +1,3 @@
-create schema if not exists `dex`
-	charset utf8mb4
-	collate utf8mb4_unicode_520_ci
-;
-
-
-use `dex`;
-
-
 create table if not exists `generations`
 (
 `generation` tinyint unsigned not null,

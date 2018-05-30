@@ -24,7 +24,7 @@ $file = __DIR__ . "/../data/$table.csv";
 
 $stmt = $database->exec(
 	"LOAD DATA LOCAL INFILE '$file'
-	INTO TABLE `dex`.`$table`
+	INTO TABLE `$table`
 	FIELDS
 		TERMINATED BY ','
 		OPTIONALLY ENCLOSED BY '\"'
