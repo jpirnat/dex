@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Stats\Moveset\Averaged;
+namespace Jp\Dex\Domain\Stats\Usage\Averaged;
 
 use DateTime;
 

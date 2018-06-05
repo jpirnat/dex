@@ -7,9 +7,9 @@ use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\Moveset\Averaged\MonthsCounter;
 use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedMove;
 use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use PDO;
 
 class DatabaseMovesetRatedAveragedMoveRepository implements MovesetRatedAveragedMoveRepositoryInterface

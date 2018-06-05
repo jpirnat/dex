@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemon;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use PDO;
 
 class DatabaseUsageRatedAveragedPokemonRepository implements UsageRatedAveragedPokemonRepositoryInterface
@@ -15,14 +16,19 @@ class DatabaseUsageRatedAveragedPokemonRepository implements UsageRatedAveragedP
 	/** @var PDO $db */
 	private $db;
 
+	/** @var MonthsCounter $monthsCounter */
+	private $monthsCounter;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param PDO $db
+	 * @param MonthsCounter $monthsCounter
 	 */
-	public function __construct(PDO $db)
+	public function __construct(PDO $db, MonthsCounter $monthsCounter)
 	{
 		$this->db = $db;
+		$this->monthsCounter = $monthsCounter;
 	}
 
 	/**
@@ -42,12 +48,14 @@ class DatabaseUsageRatedAveragedPokemonRepository implements UsageRatedAveragedP
 		FormatId $formatId,
 		int $rating
 	) : array {
+		$months = $this->monthsCounter->countMonths($start, $end);
+
 		// TODO: Add rank to query as window function (once we're using a
 		// database that supports window functions).
 		$stmt = $this->db->prepare(
 			'SELECT
 				`pokemon_id`,
-				AVG(`usage_percent`) AS `usage_percent`
+				SUM(`usage_percent`) / :months AS `usage_percent`
 			FROM `usage_rated_pokemon`
 			WHERE `month` BETWEEN :start AND :end
 				AND `format_id` = :format_id
@@ -57,6 +65,7 @@ class DatabaseUsageRatedAveragedPokemonRepository implements UsageRatedAveragedP
 				`usage_percent` DESC,
 				`pokemon_id` ASC'
 		);
+		$stmt->bindValue(':months', $months, PDO::PARAM_INT);
 		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':end', $end->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
@@ -74,7 +83,7 @@ class DatabaseUsageRatedAveragedPokemonRepository implements UsageRatedAveragedP
 				$rating,
 				new PokemonId($result['pokemon_id']),
 				$rank++,
-				$result['usage_percent']
+				(float) $result['usage_percent']
 			);
 
 			$usageRatedAveragedPokemons[$result['pokemon_id']] = $usageRatedAveragedPokemon;

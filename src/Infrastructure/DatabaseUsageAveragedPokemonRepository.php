@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemon;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use PDO;
 
 class DatabaseUsageAveragedPokemonRepository implements UsageAveragedPokemonRepositoryInterface
@@ -15,14 +16,19 @@ class DatabaseUsageAveragedPokemonRepository implements UsageAveragedPokemonRepo
 	/** @var PDO $db */
 	private $db;
 
+	/** @var MonthsCounter $monthsCounter */
+	private $monthsCounter;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param PDO $db
+	 * @param MonthsCounter $monthsCounter
 	 */
-	public function __construct(PDO $db)
+	public function __construct(PDO $db, MonthsCounter $monthsCounter)
 	{
 		$this->db = $db;
+		$this->monthsCounter = $monthsCounter;
 	}
 
 	/**
@@ -40,18 +46,22 @@ class DatabaseUsageAveragedPokemonRepository implements UsageAveragedPokemonRepo
 		DateTime $end,
 		FormatId $formatId
 	) : array {
+		$months = $this->monthsCounter->countMonths($start, $end);
+
 		$stmt = $this->db->prepare(
 			'SELECT
 				`pokemon_id`,
 				SUM(`raw`) AS `raw`,
-				AVG(`raw_percent`) AS `raw_percent`,
+				SUM(`raw_percent`) / :months1 AS `raw_percent`,
 				SUM(`real`) AS `real`,
-				AVG(`real_percent`) AS `real_percent`
+				SUM(`real_percent`) / :months2 AS `real_percent`
 			FROM `usage_pokemon`
 			WHERE `month` BETWEEN :start AND :end
 				AND `format_id` = :format_id
 			GROUP BY `pokemon_id`'
 		);
+		$stmt->bindValue(':months1', $months, PDO::PARAM_INT);
+		$stmt->bindValue(':months2', $months, PDO::PARAM_INT);
 		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':end', $end->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
@@ -65,9 +75,9 @@ class DatabaseUsageAveragedPokemonRepository implements UsageAveragedPokemonRepo
 				$end,
 				$formatId,
 				new PokemonId($result['pokemon_id']),
-				$result['raw'],
+				(int) $result['raw'],
 				(float) $result['raw_percent'],
-				$result['real'],
+				(int) $result['real'],
 				(float) $result['real_percent']
 			);
 
