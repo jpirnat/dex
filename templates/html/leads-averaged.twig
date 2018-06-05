@@ -1,0 +1,38 @@
+{% extends "html/base.twig" %}
+
+{% block body %}
+	<table class="pokemon-usage">
+		<thead>
+			<tr>
+				<th>Rank</th>
+				<th></th>
+				<th class="pokemon-name">Pokémon</th>
+				<th>Usage %</th>
+				<th>Raw</th>
+				<th>%</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for pokemon in data %}
+				<tr>
+					<td class="number">{{ pokemon.rank|e }}</td>
+					<td>
+						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
+					</td>
+					<td>
+						{% if pokemon.showMovesetLink %}
+							<a href="/stats/{{ start|e }}-to-{{ end|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
+								{{ pokemon.name|e }}
+							</a>
+						{% else %}
+							{{ pokemon.name|e }}
+						{% endif %}
+					</td>
+					<td class="number">{{ pokemon.usagePercent|e }}</td>
+					<td class="number">{{ pokemon.raw|e }}</td>
+					<td class="number">{{ pokemon.rawPercent|e }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
