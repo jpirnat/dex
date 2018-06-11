@@ -11,8 +11,8 @@ class LeadsData
 	/** @var string $pokemonName */
 	private $pokemonName;
 
-	// When I figure out how to decide whether a Pokémon's moveset link should
-	// be showed, that dependency will go here.
+	/** @var int $months */
+	private $months;
 
 	/** @var string $pokemonIdentifier */
 	private $pokemonIdentifier;
@@ -34,6 +34,7 @@ class LeadsData
 	 *
 	 * @param int $rank
 	 * @param string $pokemonName
+	 * @param int $months
 	 * @param string $pokemonIdentifier
 	 * @param string $formIcon
 	 * @param float $leadUsagePercent
@@ -43,6 +44,7 @@ class LeadsData
 	public function __construct(
 		int $rank,
 		string $pokemonName,
+		int $months,
 		string $pokemonIdentifier,
 		string $formIcon,
 		float $leadUsagePercent,
@@ -51,6 +53,7 @@ class LeadsData
 	) {
 		$this->rank = $rank;
 		$this->pokemonName = $pokemonName;
+		$this->months = $months;
 		$this->pokemonIdentifier = $pokemonIdentifier;
 		$this->formIcon = $formIcon;
 		$this->leadUsagePercent = $leadUsagePercent;
@@ -76,6 +79,16 @@ class LeadsData
 	public function getPokemonName() : string
 	{
 		return $this->pokemonName;
+	}
+
+	/**
+	 * Get the months.
+	 *
+	 * @return int
+	 */
+	public function getMonths() : int
+	{
+		return $this->months;
 	}
 
 	/**

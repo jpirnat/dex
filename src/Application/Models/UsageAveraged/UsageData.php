@@ -11,6 +11,9 @@ class UsageData
 	/** @var string $pokemonName */
 	private $pokemonName;
 
+	/** @var int $months */
+	private $months;
+
 	/** @var string $pokemonIdentifier */
 	private $pokemonIdentifier;
 
@@ -37,6 +40,7 @@ class UsageData
 	 *
 	 * @param int $rank
 	 * @param string $pokemonName
+	 * @param int $months
 	 * @param string $pokemonIdentifier
 	 * @param string $formIcon
 	 * @param float $usagePercent
@@ -48,6 +52,7 @@ class UsageData
 	public function __construct(
 		int $rank,
 		string $pokemonName,
+		int $months,
 		string $pokemonIdentifier,
 		string $formIcon,
 		float $usagePercent,
@@ -58,6 +63,7 @@ class UsageData
 	) {
 		$this->rank = $rank;
 		$this->pokemonName = $pokemonName;
+		$this->months = $months;
 		$this->pokemonIdentifier = $pokemonIdentifier;
 		$this->formIcon = $formIcon;
 		$this->usagePercent = $usagePercent;
@@ -85,6 +91,16 @@ class UsageData
 	public function getPokemonName() : string
 	{
 		return $this->pokemonName;
+	}
+
+	/**
+	 * Get the months.
+	 *
+	 * @return int
+	 */
+	public function getMonths() : int
+	{
+		return $this->months;
 	}
 
 	/**

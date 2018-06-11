@@ -74,7 +74,7 @@ class LeadsAveragedView
 			$data[] = [
 				'rank' => $leadsData->getRank(),
 				'name' => $leadsData->getPokemonName(),
-				'showMovesetLink' => false,
+				'showMovesetLink' => $leadsData->getMonths() > 0,
 				'identifier' => $leadsData->getPokemonIdentifier(),
 				'formIcon' => $leadsData->getFormIcon(),
 				'usagePercent' => $formatter->formatPercent($leadsData->getLeadUsagePercent()),

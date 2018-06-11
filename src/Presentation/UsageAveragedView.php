@@ -74,7 +74,7 @@ class UsageAveragedView
 			$data[] = [
 				'rank' => $usageData->getRank(),
 				'name' => $usageData->getPokemonName(),
-				'showMovesetLink' => false,
+				'showMovesetLink' => $usageData->getMonths() > 0,
 				'identifier' => $usageData->getPokemonIdentifier(),
 				'formIcon' => $usageData->getFormIcon(),
 				'usagePercent' => $formatter->formatPercent($usageData->getUsagePercent()),

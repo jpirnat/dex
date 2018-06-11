@@ -10,6 +10,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface;
 
@@ -26,6 +27,9 @@ class UsageAveragedModel
 
 	/** @var LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository */
 	private $leadsRatedAveragedPokemonRepository;
+
+	/** @var MonthsCounter $monthsCounter */
+	private $monthsCounter;
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
@@ -65,6 +69,7 @@ class UsageAveragedModel
 	 * @param UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository
 	 * @param UsageRatedAveragedPokemonRepositoryInterface $usageRatedAveragedPokemonRepository
 	 * @param LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository
+	 * @param MonthsCounter $monthsCounter
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param FormIconRepositoryInterface $formIconRepository
@@ -74,6 +79,7 @@ class UsageAveragedModel
 		UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository,
 		UsageRatedAveragedPokemonRepositoryInterface $usageRatedAveragedPokemonRepository,
 		LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
+		MonthsCounter $monthsCounter,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		FormIconRepositoryInterface $formIconRepository
@@ -82,6 +88,7 @@ class UsageAveragedModel
 		$this->usageAveragedPokemonRepository = $usageAveragedPokemonRepository;
 		$this->usageRatedAveragedPokemonRepository = $usageRatedAveragedPokemonRepository;
 		$this->leadsRatedAveragedPokemonRepository = $leadsRatedAveragedPokemonRepository;
+		$this->monthsCounter = $monthsCounter;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->formIconRepository = $formIconRepository;
@@ -141,6 +148,15 @@ class UsageAveragedModel
 			$rating
 		);
 
+		// Get each Pokémon's count of months with moveset data (to determine
+		// whether the moveset link should be shown).
+		$monthCounts = $this->monthsCounter->countMovesetMonthsAll(
+			$start,
+			$end,
+			$format->getId(),
+			$rating
+		);
+
 		// Get Pokémon.
 		$pokemons = $this->pokemonRepository->getAll();
 
@@ -161,6 +177,9 @@ class UsageAveragedModel
 			// Get this Pokémon's name.
 			$pokemonName = $pokemonNames[$pokemonId->value()];
 
+			// Get this Pokémon's number of months of moveset data.
+			$months = $monthCounts[$pokemonId->value()] ?? 0;
+
 			// Get this Pokémon.
 			$pokemon = $pokemons[$pokemonId->value()];
 
@@ -173,6 +192,7 @@ class UsageAveragedModel
 			$this->usageDatas[] = new UsageData(
 				$usageRatedAveragedPokemon->getRank(),
 				$pokemonName->getName(),
+				$months,
 				$pokemon->getIdentifier(),
 				$formIcon->getImage(),
 				$usageRatedAveragedPokemon->getUsagePercent(),
