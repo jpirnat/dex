@@ -54,11 +54,9 @@ echo "End Time: $endText\n";
 echo "\n";
 
 echo "Formats:\n";
-foreach ($formats as $year => $monthFormats) {
-	foreach ($monthFormats as $month => $formats) {
-		foreach ($formats as $format) {
-			echo "$year-$month: $format\n";
-		}
+foreach ($formats as $yearMonth => $monthFormats) {
+	foreach ($monthFormats as $format) {
+		echo "$yearMonth: $format\n";
 	}
 }
 echo "\n";
