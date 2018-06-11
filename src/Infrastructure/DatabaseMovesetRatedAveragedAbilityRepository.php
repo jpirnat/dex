@@ -51,7 +51,13 @@ class DatabaseMovesetRatedAveragedAbilityRepository implements MovesetRatedAvera
 		int $rating,
 		PokemonId $pokemonId
 	) : array {
-		$months = $this->monthsCounter->countMonths($start, $end);
+		$months = $this->monthsCounter->countMovesetMonths(
+			$start,
+			$end,
+			$formatId,
+			$rating,
+			$pokemonId
+		);
 
 		$stmt = $this->db->prepare(
 			'SELECT

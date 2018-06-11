@@ -46,7 +46,7 @@ class DatabaseUsageAveragedPokemonRepository implements UsageAveragedPokemonRepo
 		DateTime $end,
 		FormatId $formatId
 	) : array {
-		$months = $this->monthsCounter->countMonths($start, $end);
+		$months = $this->monthsCounter->countAllMonths($start, $end);
 
 		$stmt = $this->db->prepare(
 			'SELECT

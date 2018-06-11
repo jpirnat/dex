@@ -48,7 +48,7 @@ class DatabaseUsageRatedAveragedPokemonRepository implements UsageRatedAveragedP
 		FormatId $formatId,
 		int $rating
 	) : array {
-		$months = $this->monthsCounter->countMonths($start, $end);
+		$months = $this->monthsCounter->countAllMonths($start, $end);
 
 		// TODO: Add rank to query as window function (once we're using a
 		// database that supports window functions).

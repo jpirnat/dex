@@ -90,6 +90,78 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 	}
 
 	/**
+	 * Count the moveset rated Pokémon records for this start month, end month,
+	 * format, rating, and Pokémon.
+	 *
+	 * @param DateTime $start
+	 * @param DateTime $end
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return int
+	 */
+	public function count(
+		DateTime $start,
+		DateTime $end,
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId
+	) : int {
+		$stmt = $this->db->prepare(
+			'SELECT
+				COUNT(*)
+			FROM `moveset_rated_pokemon`
+			WHERE `month` BETWEEN :start AND :end
+				AND `format_id` = :format_id
+				AND `rating` = :rating
+				AND `pokemon_id` = :pokemon_id'
+		);
+		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':end', $end->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetchColumn();
+	}
+
+	/**
+	 * Count the moveset rated Pokémon records for this start month, end month,
+	 * format, and rating. Indexed by Pokémon id.
+	 *
+	 * @param DateTime $start
+	 * @param DateTime $end
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 *
+	 * @return int[]
+	 */
+	public function countAll(
+		DateTime $start,
+		DateTime $end,
+		FormatId $formatId,
+		int $rating
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`pokemon_id`,
+				COUNT(*)
+			FROM `moveset_rated_pokemon`
+			WHERE `month` BETWEEN :start AND :end
+				AND `format_id` = :format_id
+				AND `rating` = :rating
+			GROUP BY `pokemon_id`'
+		);
+		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':end', $end->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+	}
+
+	/**
 	 * Save a moveset rated Pokémon record.
 	 *
 	 * @param MovesetRatedPokemon $movesetRatedPokemon

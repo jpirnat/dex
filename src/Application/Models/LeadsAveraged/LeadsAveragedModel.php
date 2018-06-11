@@ -11,7 +11,6 @@ use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 
 class LeadsAveragedModel
 {

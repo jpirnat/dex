@@ -40,6 +40,44 @@ interface MovesetRatedPokemonRepositoryInterface
 	public function hasAny(DateTime $month, FormatId $formatId, int $rating) : bool;
 
 	/**
+	 * Count the moveset rated Pokémon records for this start month, end month,
+	 * format, rating, and Pokémon.
+	 *
+	 * @param DateTime $start
+	 * @param DateTime $end
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return int
+	 */
+	public function count(
+		DateTime $start,
+		DateTime $end,
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId
+	) : int;
+
+	/**
+	 * Count the moveset rated Pokémon records for this start month, end month,
+	 * format, and rating. Indexed by Pokémon id.
+	 *
+	 * @param DateTime $start
+	 * @param DateTime $end
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 *
+	 * @return int[]
+	 */
+	public function countAll(
+		DateTime $start,
+		DateTime $end,
+		FormatId $formatId,
+		int $rating
+	) : array;
+
+	/**
 	 * Save a moveset rated Pokémon record.
 	 *
 	 * @param MovesetRatedPokemon $movesetRatedPokemon
