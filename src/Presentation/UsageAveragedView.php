@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\UsageAveraged\UsageData;
 use Jp\Dex\Application\Models\UsageAveraged\UsageAveragedModel;
+use Jp\Dex\Application\Models\UsageAveraged\UsageData;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
 use Zend\Diactoros\Response;

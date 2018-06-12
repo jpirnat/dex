@@ -6,9 +6,9 @@ namespace Jp\Dex\Infrastructure;
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemon;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use PDO;
 
 class DatabaseUsageRatedAveragedPokemonRepository implements UsageRatedAveragedPokemonRepositoryInterface

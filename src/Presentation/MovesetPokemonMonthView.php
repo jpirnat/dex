@@ -61,6 +61,7 @@ class MovesetPokemonMonthView
 		$month = $this->movesetPokemonMonthModel->getMonth();
 		$formatIdentifier = $this->movesetPokemonMonthModel->getFormatIdentifier();
 		$rating = $this->movesetPokemonMonthModel->getRating();
+		$pokemonIdentifier = $this->movesetPokemonMonthModel->getPokemonIdentifier();
 
 		$formatter = $this->formatterFactory->createFor(
 			$this->movesetPokemonMonthModel->getLanguageId()
@@ -70,7 +71,6 @@ class MovesetPokemonMonthView
 		$prevMonth = $this->movesetPokemonMonthModel->getDateModel()->getPrevMonth();
 		$nextMonth = $this->movesetPokemonMonthModel->getDateModel()->getNextMonth();
 
-		$pokemon = $this->movesetPokemonMonthModel->getPokemon();
 		$movesetPokemon = $this->movesetPokemonMonthModel->getMovesetPokemon();
 		$movesetRatedPokemon = $this->movesetPokemonMonthModel->getMovesetRatedPokemon();
 
@@ -301,7 +301,7 @@ class MovesetPokemonMonthView
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
-				'pokemonIdentifier' => $pokemon->getIdentifier(),
+				'pokemonIdentifier' => $pokemonIdentifier,
 
 				'month' => $month,
 				'pokemonName' => $pokemonName->getName(),

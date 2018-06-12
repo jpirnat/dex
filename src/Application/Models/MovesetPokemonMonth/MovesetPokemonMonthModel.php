@@ -6,7 +6,6 @@ namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
@@ -73,9 +72,6 @@ class MovesetPokemonMonthModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
-
-	/** @var Pokemon $pokemon */
-	private $pokemon;
 
 	/** @var MovesetPokemon $movesetPokemon */
 	private $movesetPokemon;
@@ -164,7 +160,6 @@ class MovesetPokemonMonthModel
 
 		// Get the Pokémon.
 		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
-		$this->pokemon = $pokemon;
 
 		// Does moveset rated Pokémon data exist for the previous month?
 		$this->prevMonthDataExists = $this->movesetRatedPokemonRepository->has(
@@ -340,16 +335,6 @@ class MovesetPokemonMonthModel
 	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
-	}
-
-	/**
-	 * Get the Pokémon.
-	 *
-	 * @return Pokemon
-	 */
-	public function getPokemon() : Pokemon
-	{
-		return $this->pokemon;
 	}
 
 	/**

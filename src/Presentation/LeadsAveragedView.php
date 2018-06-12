@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\LeadsAveraged\LeadsData;
 use Jp\Dex\Application\Models\LeadsAveraged\LeadsAveragedModel;
+use Jp\Dex\Application\Models\LeadsAveraged\LeadsData;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
 use Zend\Diactoros\Response;
