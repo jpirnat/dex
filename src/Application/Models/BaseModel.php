@@ -27,7 +27,7 @@ class BaseModel
 	public function __construct(
 		LanguageNameRepositoryInterface $languageNameRepository
 	) {
-		$today = new DateTime();
+		$today = new DateTime('today');
 		$this->currentYear = (int) $today->format('Y');
 
 		$this->languageNames = $languageNameRepository->getInOwnLanguages();

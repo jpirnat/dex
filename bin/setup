@@ -43,11 +43,13 @@ $tables = [
 	// Abilities
 	'abilities',
 	'ability_names',
+	'ability_descriptions',
 	'pokemon_abilities',
 
 	// Items
 	'item_fling_effects',
 	'items',
+	'item_descriptions',
 	'item_names',
 	'item_pockets',
 	'version_group_items',
@@ -63,6 +65,7 @@ $tables = [
 	// Moves
 	'moves',
 	'move_names',
+	'move_descriptions',
 	'z_move_names',
 	'qualities',
 	'inflictions',
