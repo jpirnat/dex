@@ -57,7 +57,7 @@ class DatabaseMoveNameRepository implements MoveNameRepositoryInterface
 			throw new MoveNameNotFoundException(
 				'No move name exists with language id '
 				. $languageId->value() . ' and move id '
-				. $moveId->value()
+				. $moveId->value() . '.'
 			);
 		}
 

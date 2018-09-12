@@ -57,7 +57,7 @@ class DatabaseItemNameRepository implements ItemNameRepositoryInterface
 			throw new ItemNameNotFoundException(
 				'No item name exists with language id '
 				. $languageId->value() . ' and item id '
-				. $itemId->value()
+				. $itemId->value() . '.'
 			);
 		}
 

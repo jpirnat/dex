@@ -32,7 +32,7 @@ class DatabaseAbilityNameRepository implements AbilityNameRepositoryInterface
 	 * @param AbilityId $abilityId
 	 *
 	 * @throws AbilityNameNotFoundException if no ability name exists for this
-	 *     language and ability
+	 *     language and ability.
 	 *
 	 * @return AbilityName
 	 */
@@ -57,7 +57,7 @@ class DatabaseAbilityNameRepository implements AbilityNameRepositoryInterface
 			throw new AbilityNameNotFoundException(
 				'No ability name exists with language id '
 				. $languageId->value() . ' and ability id '
-				. $abilityId->value()
+				. $abilityId->value() . '.'
 			);
 		}
 

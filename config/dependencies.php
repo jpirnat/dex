@@ -21,17 +21,20 @@ use Jp\Dex\Application\Models\StatsIndexModel;
 use Jp\Dex\Application\Models\TrendChartModel;
 use Jp\Dex\Application\Models\UsageAveraged\UsageAveragedModel;
 use Jp\Dex\Application\Models\UsageMonth\UsageMonthModel;
+use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
+use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use Jp\Dex\Domain\Models\ModelRepositoryInterface;
 use Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface;
+use Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
@@ -76,6 +79,7 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
+use Jp\Dex\Infrastructure\DatabaseAbilityDescriptionRepository;
 use Jp\Dex\Infrastructure\DatabaseAbilityNameRepository;
 use Jp\Dex\Infrastructure\DatabaseAbilityRepository;
 use Jp\Dex\Infrastructure\DatabaseBaseStatRepository;
@@ -83,6 +87,7 @@ use Jp\Dex\Infrastructure\DatabaseFormatNameRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
 use Jp\Dex\Infrastructure\DatabaseFormIconRepository;
 use Jp\Dex\Infrastructure\DatabaseGenerationMoveRepository;
+use Jp\Dex\Infrastructure\DatabaseItemDescriptionRepository;
 use Jp\Dex\Infrastructure\DatabaseItemNameRepository;
 use Jp\Dex\Infrastructure\DatabaseItemRepository;
 use Jp\Dex\Infrastructure\DatabaseLanguageNameRepository;
@@ -93,6 +98,7 @@ use Jp\Dex\Infrastructure\DatabaseLeadsRatedAveragedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRepository;
 use Jp\Dex\Infrastructure\DatabaseModelRepository;
+use Jp\Dex\Infrastructure\DatabaseMoveDescriptionRepository;
 use Jp\Dex\Infrastructure\DatabaseMoveNameRepository;
 use Jp\Dex\Infrastructure\DatabaseMoveRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetPokemonRepository;
@@ -209,6 +215,9 @@ $container->dice()->addRule(HtmlErrorMiddleware::class, $rule);
 $rule = ['instanceOf' => Twig_Loader_Filesystem::class];
 $container->dice()->addRule(Twig_LoaderInterface::class, $rule);
 
+$rule = ['instanceOf' => DatabaseAbilityDescriptionRepository::class];
+$container->dice()->addRule(AbilityDescriptionRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => DatabaseAbilityNameRepository::class];
 $container->dice()->addRule(AbilityNameRepositoryInterface::class, $rule);
 
@@ -229,6 +238,9 @@ $container->dice()->addRule(FormIconRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseGenerationMoveRepository::class];
 $container->dice()->addRule(GenerationMoveRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseItemDescriptionRepository::class];
+$container->dice()->addRule(ItemDescriptionRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseItemNameRepository::class];
 $container->dice()->addRule(ItemNameRepositoryInterface::class, $rule);
@@ -259,6 +271,9 @@ $container->dice()->addRule(LeadsRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseModelRepository::class];
 $container->dice()->addRule(ModelRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseMoveDescriptionRepository::class];
+$container->dice()->addRule(MoveDescriptionRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMoveNameRepository::class];
 $container->dice()->addRule(MoveNameRepositoryInterface::class, $rule);

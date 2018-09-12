@@ -14,7 +14,7 @@ interface AbilityNameRepositoryInterface
 	 * @param AbilityId $abilityId
 	 *
 	 * @throws AbilityNameNotFoundException if no ability name exists for this
-	 *     language and ability
+	 *     language and ability.
 	 *
 	 * @return AbilityName
 	 */
