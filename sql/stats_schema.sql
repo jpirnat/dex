@@ -22,7 +22,7 @@ create table if not exists `format_names`
 `language_id` tinyint unsigned not null,
 `format_id` tinyint unsigned not null,
 
-`name` varchar(20) not null,
+`name` varchar(30) not null,
 
 primary key (
 	`language_id`,

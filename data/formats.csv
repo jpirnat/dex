@@ -24,3 +24,6 @@ id,identifier,generation,level,field_size,team_size,in_battle_team_size
 23,gen-7-doubles-ou,7,100,2,6,6
 24,gen-7-doubles-uu,7,100,2,6,6
 25,vgc-2018,7,50,2,6,4
+26,vgc-2019-sun,7,50,2,6,4
+27,vgc-2019-moon,7,50,2,6,4
+28,vgc-2019-ultra,7,50,2,6,4
