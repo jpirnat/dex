@@ -124,7 +124,11 @@ class ItemUsageMonthView
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
-				'itemIdentifier' => $this->itemUsageMonthModel->getItemIdentifier(),
+				'item' => [
+					'identifier' => $this->itemUsageMonthModel->getItemIdentifier(),
+					'name' => $this->itemUsageMonthModel->getItemName()->getName(),
+					'description' => $this->itemUsageMonthModel->getItemDescription()->getDescription(),
+				],
 
 				'month' => $month,
 

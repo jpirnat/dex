@@ -124,7 +124,11 @@ class AbilityUsageMonthView
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
-				'abilityIdentifier' => $this->abilityUsageMonthModel->getAbilityIdentifier(),
+				'ability' => [
+					'identifier' => $this->abilityUsageMonthModel->getAbilityIdentifier(),
+					'name' => $this->abilityUsageMonthModel->getAbilityName()->getName(),
+					'description' => $this->abilityUsageMonthModel->getAbilityDescription()->getDescription(),
+				],
 
 				'month' => $month,
 

@@ -124,7 +124,11 @@ class MoveUsageMonthView
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
-				'moveIdentifier' => $this->moveUsageMonthModel->getMoveIdentifier(),
+				'move' => [
+					'identifier' => $this->moveUsageMonthModel->getMoveIdentifier(),
+					'name' => $this->moveUsageMonthModel->getMoveName()->getName(),
+					'description' => $this->moveUsageMonthModel->getMoveDescription()->getDescription(),
+				],
 
 				'month' => $month,
 

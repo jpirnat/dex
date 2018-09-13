@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\AbilityUsageMonth;
 
 use Jp\Dex\Application\Models\DateModel;
+use Jp\Dex\Domain\Abilities\AbilityDescription;
+use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityName;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
@@ -29,6 +31,9 @@ class AbilityUsageMonthModel
 
 	/** @var AbilityNameRepositoryInterface $abilityNameRepository */
 	private $abilityNameRepository;
+
+	/** @var AbilityDescriptionRepositoryInterface $abilityDescriptionRepository */
+	private $abilityDescriptionRepository;
 
 	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
 	private $usageRatedRepository;
@@ -70,6 +75,9 @@ class AbilityUsageMonthModel
 	/** @var AbilityName $abilityName */
 	private $abilityName;
 
+	/** @var AbilityDescription $abilityDescription */
+	private $abilityDescription;
+
 	/** @var AbilityUsageData[] $abilityUsageDatas */
 	private $abilityUsageDatas = [];
 
@@ -80,6 +88,7 @@ class AbilityUsageMonthModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param AbilityRepositoryInterface $abilityRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
+	 * @param AbilityDescriptionRepositoryInterface $abilityDescriptionRepository
 	 * @param UsageRatedRepositoryInterface $usageRatedRepository
 	 * @param UsageRatedPokemonAbilityRepositoryInterface $usageRatedPokemonAbilityRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
@@ -91,6 +100,7 @@ class AbilityUsageMonthModel
 		FormatRepositoryInterface $formatRepository,
 		AbilityRepositoryInterface $abilityRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
+		AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
 		UsageRatedRepositoryInterface $usageRatedRepository,
 		UsageRatedPokemonAbilityRepositoryInterface $usageRatedPokemonAbilityRepository,
 		PokemonRepositoryInterface $pokemonRepository,
@@ -101,6 +111,7 @@ class AbilityUsageMonthModel
 		$this->formatRepository = $formatRepository;
 		$this->abilityRepository = $abilityRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
+		$this->abilityDescriptionRepository = $abilityDescriptionRepository;
 		$this->usageRatedRepository = $usageRatedRepository;
 		$this->usageRatedPokemonAbilityRepository = $usageRatedPokemonAbilityRepository;
 		$this->pokemonRepository = $pokemonRepository;
@@ -161,6 +172,13 @@ class AbilityUsageMonthModel
 
 		// Get the ability name.
 		$this->abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
+			$languageId,
+			$ability->getId()
+		);
+
+		// Get the ability description.
+		$this->abilityDescription = $this->abilityDescriptionRepository->getByGenerationAndLanguageAndAbility(
+			$format->getGeneration(),
 			$languageId,
 			$ability->getId()
 		);
@@ -310,6 +328,16 @@ class AbilityUsageMonthModel
 	public function getAbilityName() : AbilityName
 	{
 		return $this->abilityName;
+	}
+
+	/**
+	 * Get the ability description.
+	 *
+	 * @return AbilityDescription
+	 */
+	public function getAbilityDescription() : AbilityDescription
+	{
+		return $this->abilityDescription;
 	}
 
 	/**

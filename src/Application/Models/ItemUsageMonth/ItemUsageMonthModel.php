@@ -7,6 +7,8 @@ use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Forms\FormId;
+use Jp\Dex\Domain\Items\ItemDescription;
+use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemName;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
@@ -29,6 +31,9 @@ class ItemUsageMonthModel
 
 	/** @var ItemNameRepositoryInterface $itemNameRepository */
 	private $itemNameRepository;
+
+	/** @var ItemDescriptionRepositoryInterface $itemDescriptionRepository */
+	private $itemDescriptionRepository;
 
 	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
 	private $usageRatedRepository;
@@ -70,6 +75,9 @@ class ItemUsageMonthModel
 	/** @var ItemName $itemName */
 	private $itemName;
 
+	/** @var ItemDescription $itemDescription */
+	private $itemDescription;
+
 	/** @var ItemUsageData[] $itemUsageDatas */
 	private $itemUsageDatas = [];
 
@@ -80,6 +88,7 @@ class ItemUsageMonthModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param ItemRepositoryInterface $itemRepository
 	 * @param ItemNameRepositoryInterface $itemNameRepository
+	 * @param ItemDescriptionRepositoryInterface $itemDescriptionRepository
 	 * @param UsageRatedRepositoryInterface $usageRatedRepository
 	 * @param UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
@@ -91,6 +100,7 @@ class ItemUsageMonthModel
 		FormatRepositoryInterface $formatRepository,
 		ItemRepositoryInterface $itemRepository,
 		ItemNameRepositoryInterface $itemNameRepository,
+		ItemDescriptionRepositoryInterface $itemDescriptionRepository,
 		UsageRatedRepositoryInterface $usageRatedRepository,
 		UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository,
 		PokemonRepositoryInterface $pokemonRepository,
@@ -101,6 +111,7 @@ class ItemUsageMonthModel
 		$this->formatRepository = $formatRepository;
 		$this->itemRepository = $itemRepository;
 		$this->itemNameRepository = $itemNameRepository;
+		$this->itemDescriptionRepository = $itemDescriptionRepository;
 		$this->usageRatedRepository = $usageRatedRepository;
 		$this->usageRatedPokemonItemRepository = $usageRatedPokemonItemRepository;
 		$this->pokemonRepository = $pokemonRepository;
@@ -161,6 +172,13 @@ class ItemUsageMonthModel
 
 		// Get the item name.
 		$this->itemName = $this->itemNameRepository->getByLanguageAndItem(
+			$languageId,
+			$item->getId()
+		);
+
+		// Get the item description.
+		$this->itemDescription = $this->itemDescriptionRepository->getByGenerationAndLanguageAndItem(
+			$format->getGeneration(),
 			$languageId,
 			$item->getId()
 		);
@@ -310,6 +328,16 @@ class ItemUsageMonthModel
 	public function getItemName() : ItemName
 	{
 		return $this->itemName;
+	}
+
+	/**
+	 * Get the item description.
+	 *
+	 * @return ItemDescription
+	 */
+	public function getItemDescription() : ItemDescription
+	{
+		return $this->itemDescription;
 	}
 
 	/**

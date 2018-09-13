@@ -8,6 +8,8 @@ use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Moves\MoveDescription;
+use Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveName;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
@@ -29,6 +31,9 @@ class MoveUsageMonthModel
 
 	/** @var MoveNameRepositoryInterface $moveNameRepository */
 	private $moveNameRepository;
+
+	/** @var MoveDescriptionRepositoryInterface $moveDescriptionRepository */
+	private $moveDescriptionRepository;
 
 	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
 	private $usageRatedRepository;
@@ -70,6 +75,9 @@ class MoveUsageMonthModel
 	/** @var MoveName $moveName */
 	private $moveName;
 
+	/** @var MoveDescription $moveDescription */
+	private $moveDescription;
+
 	/** @var MoveUsageData[] $moveUsageDatas */
 	private $moveUsageDatas = [];
 
@@ -80,6 +88,7 @@ class MoveUsageMonthModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param MoveRepositoryInterface $moveRepository
 	 * @param MoveNameRepositoryInterface $moveNameRepository
+	 * @param MoveDescriptionRepositoryInterface $moveDescriptionRepository
 	 * @param UsageRatedRepositoryInterface $usageRatedRepository
 	 * @param UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
@@ -91,6 +100,7 @@ class MoveUsageMonthModel
 		FormatRepositoryInterface $formatRepository,
 		MoveRepositoryInterface $moveRepository,
 		MoveNameRepositoryInterface $moveNameRepository,
+		MoveDescriptionRepositoryInterface $moveDescriptionRepository,
 		UsageRatedRepositoryInterface $usageRatedRepository,
 		UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository,
 		PokemonRepositoryInterface $pokemonRepository,
@@ -101,6 +111,7 @@ class MoveUsageMonthModel
 		$this->formatRepository = $formatRepository;
 		$this->moveRepository = $moveRepository;
 		$this->moveNameRepository = $moveNameRepository;
+		$this->moveDescriptionRepository = $moveDescriptionRepository;
 		$this->usageRatedRepository = $usageRatedRepository;
 		$this->usageRatedPokemonMoveRepository = $usageRatedPokemonMoveRepository;
 		$this->pokemonRepository = $pokemonRepository;
@@ -161,6 +172,13 @@ class MoveUsageMonthModel
 
 		// Get the move name.
 		$this->moveName = $this->moveNameRepository->getByLanguageAndMove(
+			$languageId,
+			$move->getId()
+		);
+
+		// Get the move description.
+		$this->moveDescription = $this->moveDescriptionRepository->getByGenerationAndLanguageAndMove(
+			$format->getGeneration(),
 			$languageId,
 			$move->getId()
 		);
@@ -310,6 +328,16 @@ class MoveUsageMonthModel
 	public function getMoveName() : MoveName
 	{
 		return $this->moveName;
+	}
+
+	/**
+	 * Get the move description.
+	 *
+	 * @return MoveDescription
+	 */
+	public function getMoveDescription() : MoveDescription
+	{
+		return $this->moveDescription;
 	}
 
 	/**

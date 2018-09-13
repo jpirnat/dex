@@ -4,7 +4,7 @@
 	<div class="month-control">
 		{% if showPrevMonthLink %}
 			<div class="button prev">
-				<a href="/stats/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/abilities/{{ abilityIdentifier|e }}">
+				<a href="/stats/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/abilities/{{ ability.identifier|e }}">
 					&#9668; {{ prevMonthText|e }}
 				</a>
 			</div>
@@ -14,12 +14,14 @@
 
 		{% if showNextMonthLink %}
 			<div class="button next">
-				<a href="/stats/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/abilities/{{ abilityIdentifier|e }}">
+				<a href="/stats/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/abilities/{{ ability.identifier|e }}">
 					{{ nextMonthText|e }} &#9658;
 				</a>
 			</div>
 		{% endif %}
 	</div>
+
+	<p>{{ ability.name|e }}: {{ ability.description|e }}</p>
 
 	<table class="pokemon-usage">
 		<thead>
@@ -55,7 +57,7 @@
 							class="number"
 						{% endif %}
 					>
-						<a class="trend-link" href="/stats/trends/chart?type=usage-ability&format={{ formatIdentifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&ability={{ abilityIdentifier|e }}">
+						<a class="trend-link" href="/stats/trends/chart?type=usage-ability&format={{ formatIdentifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&ability={{ ability.identifier|e }}">
 							{{ pokemon.changeText|e }}
 						</a>
 					</td>
