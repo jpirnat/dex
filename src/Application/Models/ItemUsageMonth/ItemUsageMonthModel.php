@@ -16,6 +16,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonItemRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 
 class ItemUsageMonthModel
@@ -29,14 +30,17 @@ class ItemUsageMonthModel
 	/** @var ItemRepositoryInterface $itemRepository */
 	private $itemRepository;
 
+	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
+	private $usageRatedRepository;
+
+	/** @var RatingQueriesInterface $ratingQueries */
+	private $ratingQueries;
+
 	/** @var ItemNameRepositoryInterface $itemNameRepository */
 	private $itemNameRepository;
 
 	/** @var ItemDescriptionRepositoryInterface $itemDescriptionRepository */
 	private $itemDescriptionRepository;
-
-	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
-	private $usageRatedRepository;
 
 	/** @var UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository */
 	private $usageRatedPokemonItemRepository;
@@ -56,6 +60,9 @@ class ItemUsageMonthModel
 
 	/** @var bool $nextMonthDataExists */
 	private $nextMonthDataExists;
+
+	/** @var int[] $ratings */
+	private $ratings = [];
 
 	/** @var string $month */
 	private $month;
@@ -87,9 +94,10 @@ class ItemUsageMonthModel
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param ItemRepositoryInterface $itemRepository
+	 * @param UsageRatedRepositoryInterface $usageRatedRepository
+	 * @param RatingQueriesInterface $ratingQueries
 	 * @param ItemNameRepositoryInterface $itemNameRepository
 	 * @param ItemDescriptionRepositoryInterface $itemDescriptionRepository
-	 * @param UsageRatedRepositoryInterface $usageRatedRepository
 	 * @param UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
@@ -99,9 +107,10 @@ class ItemUsageMonthModel
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		ItemRepositoryInterface $itemRepository,
+		UsageRatedRepositoryInterface $usageRatedRepository,
+		RatingQueriesInterface $ratingQueries,
 		ItemNameRepositoryInterface $itemNameRepository,
 		ItemDescriptionRepositoryInterface $itemDescriptionRepository,
-		UsageRatedRepositoryInterface $usageRatedRepository,
 		UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
@@ -110,9 +119,10 @@ class ItemUsageMonthModel
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->itemRepository = $itemRepository;
+		$this->usageRatedRepository = $usageRatedRepository;
+		$this->ratingQueries = $ratingQueries;
 		$this->itemNameRepository = $itemNameRepository;
 		$this->itemDescriptionRepository = $itemDescriptionRepository;
-		$this->usageRatedRepository = $usageRatedRepository;
 		$this->usageRatedPokemonItemRepository = $usageRatedPokemonItemRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
@@ -153,6 +163,9 @@ class ItemUsageMonthModel
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
+		// Get the item.
+		$item = $this->itemRepository->getByIdentifier($itemIdentifier);
+
 		// Does usage rated data exist for the previous month?
 		$this->prevMonthDataExists = $this->usageRatedRepository->has(
 			$prevMonth,
@@ -167,8 +180,12 @@ class ItemUsageMonthModel
 			$rating
 		);
 
-		// Get the item.
-		$item = $this->itemRepository->getByIdentifier($itemIdentifier);
+		// Get the ratings for this month.
+		$this->ratings = $this->ratingQueries->getByMonthAndFormatAndItem(
+			$thisMonth,
+			$format->getId(),
+			$item->getId()
+		);
 
 		// Get the item name.
 		$this->itemName = $this->itemNameRepository->getByLanguageAndItem(
@@ -241,36 +258,6 @@ class ItemUsageMonthModel
 	}
 
 	/**
-	 * Does usage rated data exist for the previous month?
-	 *
-	 * @return bool
-	 */
-	public function doesPrevMonthDataExist() : bool
-	{
-		return $this->prevMonthDataExists;
-	}
-
-	/**
-	 * Does usage rated data exist for the next month?
-	 *
-	 * @return bool
-	 */
-	public function doesNextMonthDataExist() : bool
-	{
-		return $this->nextMonthDataExists;
-	}
-
-	/**
-	 * Get the date model.
-	 *
-	 * @return DateModel
-	 */
-	public function getDateModel() : DateModel
-	{
-		return $this->dateModel;
-	}
-
-	/**
 	 * Get the month.
 	 *
 	 * @return string
@@ -318,6 +305,46 @@ class ItemUsageMonthModel
 	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
+	}
+
+	/**
+	 * Get the date model.
+	 *
+	 * @return DateModel
+	 */
+	public function getDateModel() : DateModel
+	{
+		return $this->dateModel;
+	}
+
+	/**
+	 * Does usage rated data exist for the previous month?
+	 *
+	 * @return bool
+	 */
+	public function doesPrevMonthDataExist() : bool
+	{
+		return $this->prevMonthDataExists;
+	}
+
+	/**
+	 * Does usage rated data exist for the next month?
+	 *
+	 * @return bool
+	 */
+	public function doesNextMonthDataExist() : bool
+	{
+		return $this->nextMonthDataExists;
+	}
+
+	/**
+	 * Get the ratings for this month.
+	 *
+	 * @return int[]
+	 */
+	public function getRatings() : array
+	{
+		return $this->ratings;
 	}
 
 	/**

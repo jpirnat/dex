@@ -113,7 +113,10 @@ class LeadsMonthView
 		$content = $this->twig->render(
 			'html/leads-month.twig',
 			$this->baseView->getBaseVariables() + [
-				// TODO: title - "Month Year Format lead usage stats"?
+				'month' => $month,
+				'formatIdentifier' => $formatIdentifier,
+				'rating' => $rating,
+
 				'breadcrumbs' => $breadcrumbs,
 
 				// The month control's data.
@@ -123,10 +126,7 @@ class LeadsMonthView
 				'showNextMonthLink' => $this->leadsMonthModel->doesNextMonthDataExist(),
 				'nextMonth' => $nextMonth->format('Y-m'),
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
-				'formatIdentifier' => $formatIdentifier,
-				'rating' => $rating,
-
-				'month' => $month,
+				'ratings' => $this->leadsMonthModel->getRatings(),
 
 				// The main data.
 				'data' => $data,

@@ -166,6 +166,55 @@ table .percent-minus {
 
 
 
+/* Rating control */
+
+.rating-control {
+	text-align: center;
+	margin: 10px 0;
+}
+
+.rating-control ul::before {
+	content: "Rating:";
+	margin: 0 5px;
+}
+
+.rating-control ul {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	background: #eee;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.rating-control li {
+	display: inline;
+}
+
+.rating-control li+li::before {
+	content: "/";
+	margin: 0 5px;
+}
+
+.rating-control a {
+	display: inline-block;
+	padding: 5px;
+	color: black;
+	text-decoration: none;
+}
+
+.rating-control li:last-child a {
+	border-radius: 0 5px 5px 0;
+}
+
+.rating-control a:hover,
+.rating-control .current {
+	background: black;
+	color: white;
+}
+
+
+
 /* Pokémon usage tables */
 
 table.pokemon-usage th,

@@ -112,7 +112,10 @@ class AbilityUsageMonthView
 		$content = $this->twig->render(
 			'html/ability-usage-month.twig',
 			$this->baseView->getBaseVariables() + [
-				// TODO: title - "Month Year Format Ability usage stats"?
+				'month' => $month,
+				'formatIdentifier' => $formatIdentifier,
+				'rating' => $rating,
+
 				'breadcrumbs' => $breadcrumbs,
 
 				// The month control's data.
@@ -122,15 +125,13 @@ class AbilityUsageMonthView
 				'showNextMonthLink' => $this->abilityUsageMonthModel->doesNextMonthDataExist(),
 				'nextMonth' => $nextMonth->format('Y-m'),
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
-				'formatIdentifier' => $formatIdentifier,
-				'rating' => $rating,
+				'ratings' => $this->abilityUsageMonthModel->getRatings(),
+
 				'ability' => [
 					'identifier' => $this->abilityUsageMonthModel->getAbilityIdentifier(),
 					'name' => $this->abilityUsageMonthModel->getAbilityName()->getName(),
 					'description' => $this->abilityUsageMonthModel->getAbilityDescription()->getDescription(),
 				],
-
-				'month' => $month,
 
 				// The main data.
 				'data' => $data,

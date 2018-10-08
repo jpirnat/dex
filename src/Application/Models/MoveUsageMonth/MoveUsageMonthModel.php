@@ -16,6 +16,7 @@ use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 
 class MoveUsageMonthModel
@@ -29,14 +30,17 @@ class MoveUsageMonthModel
 	/** @var MoveRepositoryInterface $moveRepository */
 	private $moveRepository;
 
+	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
+	private $usageRatedRepository;
+
+	/** @var RatingQueriesInterface $ratingQueries */
+	private $ratingQueries;
+
 	/** @var MoveNameRepositoryInterface $moveNameRepository */
 	private $moveNameRepository;
 
 	/** @var MoveDescriptionRepositoryInterface $moveDescriptionRepository */
 	private $moveDescriptionRepository;
-
-	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
-	private $usageRatedRepository;
 
 	/** @var UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository */
 	private $usageRatedPokemonMoveRepository;
@@ -56,6 +60,9 @@ class MoveUsageMonthModel
 
 	/** @var bool $nextMonthDataExists */
 	private $nextMonthDataExists;
+
+	/** @var int[] $ratings */
+	private $ratings = [];
 
 	/** @var string $month */
 	private $month;
@@ -87,9 +94,10 @@ class MoveUsageMonthModel
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param MoveRepositoryInterface $moveRepository
+	 * @param UsageRatedRepositoryInterface $usageRatedRepository
+	 * @param RatingQueriesInterface $ratingQueries
 	 * @param MoveNameRepositoryInterface $moveNameRepository
 	 * @param MoveDescriptionRepositoryInterface $moveDescriptionRepository
-	 * @param UsageRatedRepositoryInterface $usageRatedRepository
 	 * @param UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
@@ -99,9 +107,10 @@ class MoveUsageMonthModel
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		MoveRepositoryInterface $moveRepository,
+		UsageRatedRepositoryInterface $usageRatedRepository,
+		RatingQueriesInterface $ratingQueries,
 		MoveNameRepositoryInterface $moveNameRepository,
 		MoveDescriptionRepositoryInterface $moveDescriptionRepository,
-		UsageRatedRepositoryInterface $usageRatedRepository,
 		UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
@@ -110,9 +119,10 @@ class MoveUsageMonthModel
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->moveRepository = $moveRepository;
+		$this->usageRatedRepository = $usageRatedRepository;
+		$this->ratingQueries = $ratingQueries;
 		$this->moveNameRepository = $moveNameRepository;
 		$this->moveDescriptionRepository = $moveDescriptionRepository;
-		$this->usageRatedRepository = $usageRatedRepository;
 		$this->usageRatedPokemonMoveRepository = $usageRatedPokemonMoveRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
@@ -153,6 +163,9 @@ class MoveUsageMonthModel
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
+		// Get the move.
+		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
+
 		// Does usage rated data exist for the previous month?
 		$this->prevMonthDataExists = $this->usageRatedRepository->has(
 			$prevMonth,
@@ -167,8 +180,12 @@ class MoveUsageMonthModel
 			$rating
 		);
 
-		// Get the move.
-		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
+		// Get the ratings for this month.
+		$this->ratings = $this->ratingQueries->getByMonthAndFormatAndMove(
+			$thisMonth,
+			$format->getId(),
+			$move->getId()
+		);
 
 		// Get the move name.
 		$this->moveName = $this->moveNameRepository->getByLanguageAndMove(
@@ -241,36 +258,6 @@ class MoveUsageMonthModel
 	}
 
 	/**
-	 * Does usage rated data exist for the previous month?
-	 *
-	 * @return bool
-	 */
-	public function doesPrevMonthDataExist() : bool
-	{
-		return $this->prevMonthDataExists;
-	}
-
-	/**
-	 * Does usage rated data exist for the next month?
-	 *
-	 * @return bool
-	 */
-	public function doesNextMonthDataExist() : bool
-	{
-		return $this->nextMonthDataExists;
-	}
-
-	/**
-	 * Get the date model.
-	 *
-	 * @return DateModel
-	 */
-	public function getDateModel() : DateModel
-	{
-		return $this->dateModel;
-	}
-
-	/**
 	 * Get the month.
 	 *
 	 * @return string
@@ -318,6 +305,46 @@ class MoveUsageMonthModel
 	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
+	}
+
+	/**
+	 * Get the date model.
+	 *
+	 * @return DateModel
+	 */
+	public function getDateModel() : DateModel
+	{
+		return $this->dateModel;
+	}
+
+	/**
+	 * Does usage rated data exist for the previous month?
+	 *
+	 * @return bool
+	 */
+	public function doesPrevMonthDataExist() : bool
+	{
+		return $this->prevMonthDataExists;
+	}
+
+	/**
+	 * Does usage rated data exist for the next month?
+	 *
+	 * @return bool
+	 */
+	public function doesNextMonthDataExist() : bool
+	{
+		return $this->nextMonthDataExists;
+	}
+
+	/**
+	 * Get the ratings for this month.
+	 *
+	 * @return int[]
+	 */
+	public function getRatings() : array
+	{
+		return $this->ratings;
 	}
 
 	/**

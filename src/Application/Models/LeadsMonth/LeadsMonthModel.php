@@ -12,6 +12,7 @@ use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 
 class LeadsMonthModel
@@ -24,6 +25,9 @@ class LeadsMonthModel
 
 	/** @var LeadsRepositoryInterface $leadsRepository */
 	private $leadsRepository;
+
+	/** @var RatingQueriesInterface $ratingQueries */
+	private $ratingQueries;
 
 	/** @var LeadsPokemonRepositoryInterface $leadsPokemonRepository */
 	private $leadsPokemonRepository;
@@ -50,6 +54,9 @@ class LeadsMonthModel
 	/** @var bool $nextMonthDataExists */
 	private $nextMonthDataExists;
 
+	/** @var int[] $ratings */
+	private $ratings = [];
+
 	/** @var string $month */
 	private $month;
 
@@ -71,6 +78,7 @@ class LeadsMonthModel
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param LeadsRepositoryInterface $leadsRepository
+	 * @param RatingQueriesInterface $ratingQueries
 	 * @param LeadsPokemonRepositoryInterface $leadsPokemonRepository
 	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
@@ -82,6 +90,7 @@ class LeadsMonthModel
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		LeadsRepositoryInterface $leadsRepository,
+		RatingQueriesInterface $ratingQueries,
 		LeadsPokemonRepositoryInterface $leadsPokemonRepository,
 		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
@@ -92,6 +101,7 @@ class LeadsMonthModel
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->leadsRepository = $leadsRepository;
+		$this->ratingQueries = $ratingQueries;
 		$this->leadsPokemonRepository = $leadsPokemonRepository;
 		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
@@ -140,6 +150,12 @@ class LeadsMonthModel
 		// Does leads data exist for the next month?
 		$this->nextMonthDataExists = $this->leadsRepository->has(
 			$nextMonth,
+			$format->getId()
+		);
+
+		// Get the ratings for this month.
+		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
+			$thisMonth,
 			$format->getId()
 		);
 
@@ -239,36 +255,6 @@ class LeadsMonthModel
 	}
 
 	/**
-	 * Does leads data exist for the previous month?
-	 *
-	 * @return bool
-	 */
-	public function doesPrevMonthDataExist() : bool
-	{
-		return $this->prevMonthDataExists;
-	}
-
-	/**
-	 * Does leads data exist for the next month?
-	 *
-	 * @return bool
-	 */
-	public function doesNextMonthDataExist() : bool
-	{
-		return $this->nextMonthDataExists;
-	}
-
-	/**
-	 * Get the date model.
-	 *
-	 * @return DateModel
-	 */
-	public function getDateModel() : DateModel
-	{
-		return $this->dateModel;
-	}
-
-	/**
 	 * Get the month.
 	 *
 	 * @return string
@@ -306,6 +292,46 @@ class LeadsMonthModel
 	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
+	}
+
+	/**
+	 * Get the date model.
+	 *
+	 * @return DateModel
+	 */
+	public function getDateModel() : DateModel
+	{
+		return $this->dateModel;
+	}
+
+	/**
+	 * Does leads data exist for the previous month?
+	 *
+	 * @return bool
+	 */
+	public function doesPrevMonthDataExist() : bool
+	{
+		return $this->prevMonthDataExists;
+	}
+
+	/**
+	 * Does leads data exist for the next month?
+	 *
+	 * @return bool
+	 */
+	public function doesNextMonthDataExist() : bool
+	{
+		return $this->nextMonthDataExists;
+	}
+
+	/**
+	 * Get the ratings for this month.
+	 *
+	 * @return int[]
+	 */
+	public function getRatings() : array
+	{
+		return $this->ratings;
 	}
 
 	/**

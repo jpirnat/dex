@@ -289,7 +289,11 @@ class MovesetPokemonMonthView
 		$content = $this->twig->render(
 			'html/moveset-pokemon-month.twig',
 			$this->baseView->getBaseVariables() + [
-				// TODO: title - "Month Year Format Pokémon usage stats"?
+				'month' => $month,
+				'formatIdentifier' => $formatIdentifier,
+				'rating' => $rating,
+				'pokemonIdentifier' => $pokemonIdentifier,
+
 				'breadcrumbs' => $breadcrumbs,
 
 				// The month control's data.
@@ -299,11 +303,8 @@ class MovesetPokemonMonthView
 				'showNextMonthLink' => $this->movesetPokemonMonthModel->doesNextMonthDataExist(),
 				'nextMonth' => $nextMonth->format('Y-m'),
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
-				'formatIdentifier' => $formatIdentifier,
-				'rating' => $rating,
-				'pokemonIdentifier' => $pokemonIdentifier,
+				'ratings' => $this->movesetPokemonMonthModel->getRatings(),
 
-				'month' => $month,
 				'pokemonName' => $pokemonName->getName(),
 				'model' => $model->getImage(),
 				'typeIcons' => $typeIcons,

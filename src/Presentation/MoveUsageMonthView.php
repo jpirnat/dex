@@ -112,7 +112,10 @@ class MoveUsageMonthView
 		$content = $this->twig->render(
 			'html/move-usage-month.twig',
 			$this->baseView->getBaseVariables() + [
-				// TODO: title - "Month Year Format Move usage stats"?
+				'month' => $month,
+				'formatIdentifier' => $formatIdentifier,
+				'rating' => $rating,
+
 				'breadcrumbs' => $breadcrumbs,
 
 				// The month control's data.
@@ -122,15 +125,14 @@ class MoveUsageMonthView
 				'showNextMonthLink' => $this->moveUsageMonthModel->doesNextMonthDataExist(),
 				'nextMonth' => $nextMonth->format('Y-m'),
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
-				'formatIdentifier' => $formatIdentifier,
-				'rating' => $rating,
+				'ratings' => $this->moveUsageMonthModel->getRatings(),
+
 				'move' => [
 					'identifier' => $this->moveUsageMonthModel->getMoveIdentifier(),
 					'name' => $this->moveUsageMonthModel->getMoveName()->getName(),
 					'description' => $this->moveUsageMonthModel->getMoveDescription()->getDescription(),
 				],
 
-				'month' => $month,
 
 				// The main data.
 				'data' => $data,

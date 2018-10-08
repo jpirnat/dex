@@ -112,7 +112,10 @@ class ItemUsageMonthView
 		$content = $this->twig->render(
 			'html/item-usage-month.twig',
 			$this->baseView->getBaseVariables() + [
-				// TODO: title - "Month Year Format Item usage stats"?
+				'month' => $month,
+				'formatIdentifier' => $formatIdentifier,
+				'rating' => $rating,
+
 				'breadcrumbs' => $breadcrumbs,
 
 				// The month control's data.
@@ -122,15 +125,13 @@ class ItemUsageMonthView
 				'showNextMonthLink' => $this->itemUsageMonthModel->doesNextMonthDataExist(),
 				'nextMonth' => $nextMonth->format('Y-m'),
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
-				'formatIdentifier' => $formatIdentifier,
-				'rating' => $rating,
+				'ratings' => $this->itemUsageMonthModel->getRatings(),
+
 				'item' => [
 					'identifier' => $this->itemUsageMonthModel->getItemIdentifier(),
 					'name' => $this->itemUsageMonthModel->getItemName()->getName(),
 					'description' => $this->itemUsageMonthModel->getItemDescription()->getDescription(),
 				],
-
-				'month' => $month,
 
 				// The main data.
 				'data' => $data,

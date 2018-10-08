@@ -113,7 +113,10 @@ class UsageMonthView
 		$content = $this->twig->render(
 			'html/usage-month.twig',
 			$this->baseView->getBaseVariables() + [
-				// TODO: title - "Month Year Format usage stats"?
+				'month' => $month,
+				'formatIdentifier' => $formatIdentifier,
+				'rating' => $rating,
+
 				'breadcrumbs' => $breadcrumbs,
 
 				// The month control's data.
@@ -123,11 +126,9 @@ class UsageMonthView
 				'showNextMonthLink' => $this->usageMonthModel->doesNextMonthDataExist(),
 				'nextMonth' => $nextMonth->format('Y-m'),
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
-				'showLeadsLink' => $this->usageMonthModel->doesLeadsDataExist(),
-				'formatIdentifier' => $formatIdentifier,
-				'rating' => $rating,
+				'ratings' => $this->usageMonthModel->getRatings(),
 
-				'month' => $month,
+				'showLeadsLink' => $this->usageMonthModel->doesLeadsDataExist(),
 
 				// The main data.
 				'data' => $data,

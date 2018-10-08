@@ -10,6 +10,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
@@ -22,11 +23,14 @@ class UsageMonthModel
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
 
-	/** @var UsagePokemonRepositoryInterface $usagePokemonRepository */
-	private $usagePokemonRepository;
-
 	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
 	private $usageRatedRepository;
+
+	/** @var RatingQueriesInterface $ratingQueries */
+	private $ratingQueries;
+
+	/** @var UsagePokemonRepositoryInterface $usagePokemonRepository */
+	private $usagePokemonRepository;
 
 	/** @var UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository */
 	private $usageRatedPokemonRepository;
@@ -49,6 +53,9 @@ class UsageMonthModel
 
 	/** @var bool $nextMonthDataExists */
 	private $nextMonthDataExists;
+
+	/** @var int[] $ratings */
+	private $ratings = [];
 
 	/** @var bool $leadsDataExists */
 	private $leadsDataExists;
@@ -73,8 +80,9 @@ class UsageMonthModel
 	 *
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
-	 * @param UsagePokemonRepositoryInterface $usagePokemonRepository
 	 * @param UsageRatedRepositoryInterface $usageRatedRepository
+	 * @param RatingQueriesInterface $ratingQueries
+	 * @param UsagePokemonRepositoryInterface $usagePokemonRepository
 	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
 	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
@@ -84,8 +92,9 @@ class UsageMonthModel
 	public function __construct(
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
-		UsagePokemonRepositoryInterface $usagePokemonRepository,
 		UsageRatedRepositoryInterface $usageRatedRepository,
+		RatingQueriesInterface $ratingQueries,
+		UsagePokemonRepositoryInterface $usagePokemonRepository,
 		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
 		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
@@ -94,8 +103,9 @@ class UsageMonthModel
 	) {
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
-		$this->usagePokemonRepository = $usagePokemonRepository;
 		$this->usageRatedRepository = $usageRatedRepository;
+		$this->ratingQueries = $ratingQueries;
+		$this->usagePokemonRepository = $usagePokemonRepository;
 		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
 		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
@@ -146,6 +156,12 @@ class UsageMonthModel
 			$nextMonth,
 			$format->getId(),
 			$rating
+		);
+
+		// Get the ratings for this month.
+		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
+			$thisMonth,
+			$format->getId()
 		);
 
 		// Does leads rated data exist for this month?
@@ -245,46 +261,6 @@ class UsageMonthModel
 	}
 
 	/**
-	 * Does usage rated data exist for the previous month?
-	 *
-	 * @return bool
-	 */
-	public function doesPrevMonthDataExist() : bool
-	{
-		return $this->prevMonthDataExists;
-	}
-
-	/**
-	 * Does usage rated data exist for the next month?
-	 *
-	 * @return bool
-	 */
-	public function doesNextMonthDataExist() : bool
-	{
-		return $this->nextMonthDataExists;
-	}
-
-	/**
-	 * Does leads rated data exist for this month?
-	 *
-	 * @return bool
-	 */
-	public function doesLeadsDataExist() : bool
-	{
-		return $this->leadsDataExists;
-	}
-
-	/**
-	 * Get the date model.
-	 *
-	 * @return DateModel
-	 */
-	public function getDateModel() : DateModel
-	{
-		return $this->dateModel;
-	}
-
-	/**
 	 * Get the month.
 	 *
 	 * @return string
@@ -322,6 +298,56 @@ class UsageMonthModel
 	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
+	}
+
+	/**
+	 * Get the date model.
+	 *
+	 * @return DateModel
+	 */
+	public function getDateModel() : DateModel
+	{
+		return $this->dateModel;
+	}
+
+	/**
+	 * Does usage rated data exist for the previous month?
+	 *
+	 * @return bool
+	 */
+	public function doesPrevMonthDataExist() : bool
+	{
+		return $this->prevMonthDataExists;
+	}
+
+	/**
+	 * Does usage rated data exist for the next month?
+	 *
+	 * @return bool
+	 */
+	public function doesNextMonthDataExist() : bool
+	{
+		return $this->nextMonthDataExists;
+	}
+
+	/**
+	 * Get the ratings for this month.
+	 *
+	 * @return int[]
+	 */
+	public function getRatings() : array
+	{
+		return $this->ratings;
+	}
+
+	/**
+	 * Does leads rated data exist for this month?
+	 *
+	 * @return bool
+	 */
+	public function doesLeadsDataExist() : bool
+	{
+		return $this->leadsDataExists;
 	}
 
 	/**

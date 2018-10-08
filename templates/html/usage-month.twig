@@ -21,6 +21,21 @@
 		{% endif %}
 	</div>
 
+	<div class="rating-control">
+		<ul>
+			{% for otherRating in ratings %}
+				<li>
+					<a
+						href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ otherRating|e }}"
+						{% if otherRating == rating %}
+							class="current"
+						{% endif %}
+					>{{ otherRating|e }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+
 	<div>
 		{% if showLeadsLink %}
 			<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/leads">

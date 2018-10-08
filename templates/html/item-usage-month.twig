@@ -21,6 +21,21 @@
 		{% endif %}
 	</div>
 
+	<div class="rating-control">
+		<ul>
+			{% for otherRating in ratings %}
+				<li>
+					<a
+						href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ otherRating|e }}/items/{{ item.identifier|e }}"
+						{% if otherRating == rating %}
+							class="current"
+						{% endif %}
+					>{{ otherRating|e }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+
 	<p>{{ item.name|e }}: {{ item.description|e }}</p>
 
 	<table class="pokemon-usage">
