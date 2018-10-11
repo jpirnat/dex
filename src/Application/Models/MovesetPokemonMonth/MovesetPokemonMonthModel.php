@@ -84,10 +84,10 @@ class MovesetPokemonMonthModel
 	private $languageId;
 
 
-	/** @var MovesetPokemon $movesetPokemon */
+	/** @var MovesetPokemon|null $movesetPokemon */
 	private $movesetPokemon;
 
-	/** @var MovesetRatedPokemon $movesetRatedPokemon */
+	/** @var MovesetRatedPokemon|null $movesetRatedPokemon */
 	private $movesetRatedPokemon;
 
 	/**
@@ -380,9 +380,9 @@ class MovesetPokemonMonthModel
 	/**
 	 * Get the moveset Pokémon record.
 	 *
-	 * @return MovesetPokemon
+	 * @return MovesetPokemon|null
 	 */
-	public function getMovesetPokemon() : MovesetPokemon
+	public function getMovesetPokemon() : ?MovesetPokemon
 	{
 		return $this->movesetPokemon;
 	}
@@ -390,9 +390,9 @@ class MovesetPokemonMonthModel
 	/**
 	 * Get the moveset rated Pokémon record.
 	 *
-	 * @return MovesetRatedPokemon
+	 * @return MovesetRatedPokemon|null
 	 */
-	public function getMovesetRatedPokemon() : MovesetRatedPokemon
+	public function getMovesetRatedPokemon() : ?MovesetRatedPokemon
 	{
 		return $this->movesetRatedPokemon;
 	}

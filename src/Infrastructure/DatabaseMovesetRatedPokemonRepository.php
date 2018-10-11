@@ -7,7 +7,6 @@ use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonNotFoundException;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
 use PDO;
 
@@ -201,17 +200,14 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
-	 * @throws MovesetRatedPokemonNotFoundException if no moveset rated Pokémon
-	 *     record exists with this month, format, rating, and Pokémon.
-	 *
-	 * @return MovesetRatedPokemon
+	 * @return MovesetRatedPokemon|null
 	 */
 	public function getByMonthAndFormatAndRatingAndPokemon(
 		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId
-	) : MovesetRatedPokemon {
+	) : ?MovesetRatedPokemon {
 		$stmt = $this->db->prepare(
 			'SELECT
 				`average_weight`
@@ -230,12 +226,7 @@ class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonReposi
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new MovesetRatedPokemonNotFoundException(
-				'No moveset rated Pokémon record exists with month '
-				. $month->format('Y-m') . ', format id '
-				. $formatId->value() . ', rating ' . $rating
-				. ', and Pokémon id ' . $pokemonId->value()
-			);
+			return null;
 		}
 
 		$movesetRatedPokemon = new MovesetRatedPokemon(

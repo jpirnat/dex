@@ -74,6 +74,16 @@ class MovesetPokemonMonthView
 		$movesetPokemon = $this->movesetPokemonMonthModel->getMovesetPokemon();
 		$movesetRatedPokemon = $this->movesetPokemonMonthModel->getMovesetRatedPokemon();
 
+		$rawCount = $movesetPokemon !== null
+			? $movesetPokemon->getRawCount()
+			: null;
+		$averageWeight = $movesetRatedPokemon !== null
+			? $movesetRatedPokemon->getAverageWeight()
+			: null;
+		$viabilityCeiling = $movesetPokemon !== null
+			? $movesetPokemon->getViabilityCeiling()
+			: null;
+
 		// Get miscellaneous Pokémon data.
 		$pokemonModel = $this->movesetPokemonMonthModel->getPokemonModel();
 		$pokemonName = $pokemonModel->getPokemonName();
@@ -309,9 +319,9 @@ class MovesetPokemonMonthView
 				'model' => $model->getImage(),
 				'typeIcons' => $typeIcons,
 				'baseStats' => $baseStats,
-				'rawCount' =>$movesetPokemon->getRawCount(),
-				'averageWeight' => $movesetRatedPokemon->getAverageWeight(),
-				'viabilityCeiling' => $movesetPokemon->getViabilityCeiling(),
+				'rawCount' =>$rawCount,
+				'averageWeight' => $averageWeight,
+				'viabilityCeiling' => $viabilityCeiling,
 
 				// The main data.
 				'abilities' => $abilities,

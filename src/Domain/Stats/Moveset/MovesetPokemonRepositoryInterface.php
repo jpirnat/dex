@@ -35,14 +35,11 @@ interface MovesetPokemonRepositoryInterface
 	 * @param FormatId $formatId
 	 * @param PokemonId $pokemonId
 	 *
-	 * @throws MovesetPokemonNotFoundException if no moveset Pokémon record
-	 *     exists with this month, format, and Pokémon.
-	 *
-	 * @return MovesetPokemon
+	 * @return MovesetPokemon|null
 	 */
 	public function getByMonthAndFormatAndPokemon(
 		DateTime $month,
 		FormatId $formatId,
 		PokemonId $pokemonId
-	) : MovesetPokemon;
+	) : ?MovesetPokemon;
 }

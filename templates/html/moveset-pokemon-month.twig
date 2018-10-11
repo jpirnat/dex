@@ -65,13 +65,17 @@
 		{% endfor %}
 	</table>
 
-	<div>
-		Raw count: {{ rawCount|e }}
-	</div>
+	{% if rawCount %}
+		<div>
+			Raw count: {{ rawCount|e }}
+		</div>
+	{% endif %}
 
-	<div>
-		Avg. weight: {{ averageWeight|e }}
-	</div>
+	{% if averageWeight %}
+		<div>
+			Avg. weight: {{ averageWeight|e }}
+		</div>
+	{% endif %}
 
 	{% if viabilityCeiling %}
 		<div>

@@ -94,15 +94,12 @@ interface MovesetRatedPokemonRepositoryInterface
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 *
-	 * @throws MovesetRatedPokemonNotFoundException if no moveset rated Pokémon
-	 *     record exists with this month, format, rating, and Pokémon.
-	 *
-	 * @return MovesetRatedPokemon
+	 * @return MovesetRatedPokemon|null
 	 */
 	public function getByMonthAndFormatAndRatingAndPokemon(
 		DateTime $month,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId
-	) : MovesetRatedPokemon;
+	) : ?MovesetRatedPokemon;
 }

@@ -7,7 +7,6 @@ use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
-use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonNotFoundException;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
 use PDO;
 
@@ -89,16 +88,13 @@ class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterf
 	 * @param FormatId $formatId
 	 * @param PokemonId $pokemonId
 	 *
-	 * @throws MovesetPokemonNotFoundException if no moveset Pokémon record
-	 *     exists with this month, format, and Pokémon.
-	 *
-	 * @return MovesetPokemon
+	 * @return MovesetPokemon|null
 	 */
 	public function getByMonthAndFormatAndPokemon(
 		DateTime $month,
 		FormatId $formatId,
 		PokemonId $pokemonId
-	) : MovesetPokemon {
+	) : ?MovesetPokemon {
 		$stmt = $this->db->prepare(
 			'SELECT
 				`raw_count`,
@@ -116,11 +112,7 @@ class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterf
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new MovesetPokemonNotFoundException(
-				'No moveset Pokémon record exists with month '
-				. $month->format('Y-m') . ', format id ' . $formatId->value()
-				. ', and Pokémon id ' . $pokemonId->value()
-			);
+			return null;
 		}
 
 		$movesetPokemon = new MovesetPokemon(

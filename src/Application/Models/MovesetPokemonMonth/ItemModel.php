@@ -23,7 +23,7 @@ class ItemModel
 	private $itemRepository;
 
 	/** @var ItemData[] $itemDatas */
-	private $itemDatas;
+	private $itemDatas = [];
 
 	/**
 	 * Constructor.
