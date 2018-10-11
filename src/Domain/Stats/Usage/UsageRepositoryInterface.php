@@ -19,15 +19,6 @@ interface UsageRepositoryInterface
 	public function has(DateTime $month, FormatId $formatId) : bool;
 
 	/**
-	 * Do any usage records exist for this month?
-	 *
-	 * @param DateTime $month
-	 *
-	 * @return bool
-	 */
-	public function hasAny(DateTime $month) : bool;
-
-	/**
 	 * Save a usage record.
 	 *
 	 * @param Usage $usage

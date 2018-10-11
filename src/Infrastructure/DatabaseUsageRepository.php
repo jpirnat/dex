@@ -49,27 +49,6 @@ class DatabaseUsageRepository implements UsageRepositoryInterface
 	}
 
 	/**
-	 * Do any usage records exist for this month?
-	 *
-	 * @param DateTime $month
-	 *
-	 * @return bool
-	 */
-	public function hasAny(DateTime $month) : bool
-	{
-		$stmt = $this->db->prepare(
-			'SELECT
-				COUNT(*)
-			FROM `usage`
-			WHERE `month` = :month'
-		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->execute();
-		$count = $stmt->fetchColumn();
-		return $count > 0;
-	}
-
-	/**
 	 * Save a usage record.
 	 *
 	 * @param Usage $usage

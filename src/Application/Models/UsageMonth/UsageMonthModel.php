@@ -10,10 +10,10 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 
 class UsageMonthModel
 {
@@ -23,8 +23,8 @@ class UsageMonthModel
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
 
-	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
-	private $usageRatedRepository;
+	/** @var MonthQueriesInterface $monthQueries */
+	private $monthQueries;
 
 	/** @var RatingQueriesInterface $ratingQueries */
 	private $ratingQueries;
@@ -80,7 +80,7 @@ class UsageMonthModel
 	 *
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
-	 * @param UsageRatedRepositoryInterface $usageRatedRepository
+	 * @param MonthQueriesInterface $monthQueries
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param UsagePokemonRepositoryInterface $usagePokemonRepository
 	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
@@ -92,7 +92,7 @@ class UsageMonthModel
 	public function __construct(
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
-		UsageRatedRepositoryInterface $usageRatedRepository,
+		MonthQueriesInterface $monthQueries,
 		RatingQueriesInterface $ratingQueries,
 		UsagePokemonRepositoryInterface $usagePokemonRepository,
 		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
@@ -103,7 +103,7 @@ class UsageMonthModel
 	) {
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
-		$this->usageRatedRepository = $usageRatedRepository;
+		$this->monthQueries = $monthQueries;
 		$this->ratingQueries = $ratingQueries;
 		$this->usagePokemonRepository = $usagePokemonRepository;
 		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
@@ -144,18 +144,16 @@ class UsageMonthModel
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
-		// Does usage rated data exist for the previous month?
-		$this->prevMonthDataExists = $this->usageRatedRepository->has(
+		// Does usage data exist for the previous month?
+		$this->prevMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
 			$prevMonth,
-			$format->getId(),
-			$rating
+			$format->getId()
 		);
 
-		// Does usage rated data exist for the next month?
-		$this->nextMonthDataExists = $this->usageRatedRepository->has(
+		// Does usage data exist for the next month?
+		$this->nextMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
 			$nextMonth,
-			$format->getId(),
-			$rating
+			$format->getId()
 		);
 
 		// Get the ratings for this month.

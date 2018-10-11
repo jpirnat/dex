@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 
@@ -23,8 +23,8 @@ class LeadsMonthModel
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
 
-	/** @var LeadsRepositoryInterface $leadsRepository */
-	private $leadsRepository;
+	/** @var MonthQueriesInterface $monthQueries */
+	private $monthQueries;
 
 	/** @var RatingQueriesInterface $ratingQueries */
 	private $ratingQueries;
@@ -77,7 +77,7 @@ class LeadsMonthModel
 	 *
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
-	 * @param LeadsRepositoryInterface $leadsRepository
+	 * @param MonthQueriesInterface $monthQueries
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param LeadsPokemonRepositoryInterface $leadsPokemonRepository
 	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
@@ -89,7 +89,7 @@ class LeadsMonthModel
 	public function __construct(
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
-		LeadsRepositoryInterface $leadsRepository,
+		MonthQueriesInterface $monthQueries,
 		RatingQueriesInterface $ratingQueries,
 		LeadsPokemonRepositoryInterface $leadsPokemonRepository,
 		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
@@ -100,7 +100,7 @@ class LeadsMonthModel
 	) {
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
-		$this->leadsRepository = $leadsRepository;
+		$this->monthQueries = $monthQueries;
 		$this->ratingQueries = $ratingQueries;
 		$this->leadsPokemonRepository = $leadsPokemonRepository;
 		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
@@ -141,14 +141,14 @@ class LeadsMonthModel
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
-		// Does leads data exist for the previous month?
-		$this->prevMonthDataExists = $this->leadsRepository->has(
+		// Does usage data exist for the previous month?
+		$this->prevMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
 			$prevMonth,
 			$format->getId()
 		);
 
-		// Does leads data exist for the next month?
-		$this->nextMonthDataExists = $this->leadsRepository->has(
+		// Does usage data exist for the next month?
+		$this->nextMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
 			$nextMonth,
 			$format->getId()
 		);

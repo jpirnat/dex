@@ -16,8 +16,8 @@ use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 
 class MoveUsageMonthModel
 {
@@ -30,8 +30,8 @@ class MoveUsageMonthModel
 	/** @var MoveRepositoryInterface $moveRepository */
 	private $moveRepository;
 
-	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
-	private $usageRatedRepository;
+	/** @var MonthQueriesInterface $monthQueries */
+	private $monthQueries;
 
 	/** @var RatingQueriesInterface $ratingQueries */
 	private $ratingQueries;
@@ -94,7 +94,7 @@ class MoveUsageMonthModel
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param MoveRepositoryInterface $moveRepository
-	 * @param UsageRatedRepositoryInterface $usageRatedRepository
+	 * @param MonthQueriesInterface $monthQueries
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param MoveNameRepositoryInterface $moveNameRepository
 	 * @param MoveDescriptionRepositoryInterface $moveDescriptionRepository
@@ -107,7 +107,7 @@ class MoveUsageMonthModel
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		MoveRepositoryInterface $moveRepository,
-		UsageRatedRepositoryInterface $usageRatedRepository,
+		MonthQueriesInterface $monthQueries,
 		RatingQueriesInterface $ratingQueries,
 		MoveNameRepositoryInterface $moveNameRepository,
 		MoveDescriptionRepositoryInterface $moveDescriptionRepository,
@@ -119,7 +119,7 @@ class MoveUsageMonthModel
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->moveRepository = $moveRepository;
-		$this->usageRatedRepository = $usageRatedRepository;
+		$this->monthQueries = $monthQueries;
 		$this->ratingQueries = $ratingQueries;
 		$this->moveNameRepository = $moveNameRepository;
 		$this->moveDescriptionRepository = $moveDescriptionRepository;
@@ -166,18 +166,16 @@ class MoveUsageMonthModel
 		// Get the move.
 		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
 
-		// Does usage rated data exist for the previous month?
-		$this->prevMonthDataExists = $this->usageRatedRepository->has(
+		// Does usage data exist for the previous month?
+		$this->prevMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
 			$prevMonth,
-			$format->getId(),
-			$rating
+			$format->getId()
 		);
 
-		// Does usage rated data exist for the next month?
-		$this->nextMonthDataExists = $this->usageRatedRepository->has(
+		// Does usage data exist for the next month?
+		$this->nextMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
 			$nextMonth,
-			$format->getId(),
-			$rating
+			$format->getId()
 		);
 
 		// Get the ratings for this month.

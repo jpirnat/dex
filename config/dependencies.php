@@ -71,6 +71,7 @@ use Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterf
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonItemRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
@@ -99,6 +100,7 @@ use Jp\Dex\Infrastructure\DatabaseLeadsRatedAveragedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseLeadsRepository;
 use Jp\Dex\Infrastructure\DatabaseModelRepository;
+use Jp\Dex\Infrastructure\DatabaseMonthQueries;
 use Jp\Dex\Infrastructure\DatabaseMoveDescriptionRepository;
 use Jp\Dex\Infrastructure\DatabaseMoveNameRepository;
 use Jp\Dex\Infrastructure\DatabaseMoveRepository;
@@ -273,6 +275,9 @@ $container->dice()->addRule(LeadsRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseModelRepository::class];
 $container->dice()->addRule(ModelRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseMonthQueries::class];
+$container->dice()->addRule(MonthQueriesInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseMoveDescriptionRepository::class];
 $container->dice()->addRule(MoveDescriptionRepositoryInterface::class, $rule);

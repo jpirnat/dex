@@ -16,8 +16,8 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonItemRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 
 class ItemUsageMonthModel
 {
@@ -30,8 +30,8 @@ class ItemUsageMonthModel
 	/** @var ItemRepositoryInterface $itemRepository */
 	private $itemRepository;
 
-	/** @var UsageRatedRepositoryInterface $usageRatedRepository */
-	private $usageRatedRepository;
+	/** @var MonthQueriesInterface $monthQueries */
+	private $monthQueries;
 
 	/** @var RatingQueriesInterface $ratingQueries */
 	private $ratingQueries;
@@ -94,7 +94,7 @@ class ItemUsageMonthModel
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param ItemRepositoryInterface $itemRepository
-	 * @param UsageRatedRepositoryInterface $usageRatedRepository
+	 * @param MonthQueriesInterface $monthQueries
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param ItemNameRepositoryInterface $itemNameRepository
 	 * @param ItemDescriptionRepositoryInterface $itemDescriptionRepository
@@ -107,7 +107,7 @@ class ItemUsageMonthModel
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		ItemRepositoryInterface $itemRepository,
-		UsageRatedRepositoryInterface $usageRatedRepository,
+		MonthQueriesInterface $monthQueries,
 		RatingQueriesInterface $ratingQueries,
 		ItemNameRepositoryInterface $itemNameRepository,
 		ItemDescriptionRepositoryInterface $itemDescriptionRepository,
@@ -119,7 +119,7 @@ class ItemUsageMonthModel
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->itemRepository = $itemRepository;
-		$this->usageRatedRepository = $usageRatedRepository;
+		$this->monthQueries = $monthQueries;
 		$this->ratingQueries = $ratingQueries;
 		$this->itemNameRepository = $itemNameRepository;
 		$this->itemDescriptionRepository = $itemDescriptionRepository;
@@ -166,18 +166,16 @@ class ItemUsageMonthModel
 		// Get the item.
 		$item = $this->itemRepository->getByIdentifier($itemIdentifier);
 
-		// Does usage rated data exist for the previous month?
-		$this->prevMonthDataExists = $this->usageRatedRepository->has(
+		// Does usage data exist for the previous month?
+		$this->prevMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
 			$prevMonth,
-			$format->getId(),
-			$rating
+			$format->getId()
 		);
 
-		// Does usage rated data exist for the next month?
-		$this->nextMonthDataExists = $this->usageRatedRepository->has(
+		// Does usage data exist for the next month?
+		$this->nextMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
 			$nextMonth,
-			$format->getId(),
-			$rating
+			$format->getId()
 		);
 
 		// Get the ratings for this month.
