@@ -39,7 +39,8 @@ class DatabaseMoveRepository implements MoveRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`identifier`,
-				`introduced_in_version_group_id`
+				`introduced_in_version_group_id`,
+				`is_z_move`
 			FROM `moves`
 			WHERE `id` = :move_id
 			LIMIT 1'
@@ -57,7 +58,8 @@ class DatabaseMoveRepository implements MoveRepositoryInterface
 		$move = new Move(
 			$moveId,
 			$result['identifier'],
-			new VersionGroupId($result['introduced_in_version_group_id'])
+			new VersionGroupId($result['introduced_in_version_group_id']),
+			(bool) $result['is_z_move']
 		);
 
 		return $move;
@@ -77,7 +79,8 @@ class DatabaseMoveRepository implements MoveRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`id`,
-				`introduced_in_version_group_id`
+				`introduced_in_version_group_id`,
+				`is_z_move`
 			FROM `moves`
 			WHERE `identifier` = :identifier
 			LIMIT 1'
@@ -95,7 +98,8 @@ class DatabaseMoveRepository implements MoveRepositoryInterface
 		$move = new Move(
 			new MoveId($result['id']),
 			$identifier,
-			new VersionGroupId($result['introduced_in_version_group_id'])
+			new VersionGroupId($result['introduced_in_version_group_id']),
+			(bool) $result['is_z_move']
 		);
 
 		return $move;

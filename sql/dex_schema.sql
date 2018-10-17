@@ -600,6 +600,7 @@ create table if not exists `moves`
 
 `identifier` varchar(100) not null,
 `introduced_in_version_group_id` tinyint unsigned not null,
+`is_z_move` bool not null,
 
 primary key (`id`),
 unique key (`identifier`),

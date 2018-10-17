@@ -16,21 +16,27 @@ class Move
 	/** @var VersionGroupId $introducedInVersionGroupId */
 	private $introducedInVersionGroupId;
 
+	/** @var bool $isZMove */
+	private $isZMove;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param MoveId $moveId
 	 * @param string $identifier
 	 * @param VersionGroupId $introducedInVersionGroupId
+	 * @param bool $isZMove
 	 */
 	public function __construct(
 		MoveId $moveId,
 		string $identifier,
-		VersionGroupId $introducedInVersionGroupId
+		VersionGroupId $introducedInVersionGroupId,
+		bool $isZMove
 	) {
 		$this->id = $moveId;
 		$this->identifier = $identifier;
 		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
+		$this->isZMove = $isZMove;
 	}
 
 	/**
@@ -61,5 +67,15 @@ class Move
 	public function getIntroducedInGeneration() : VersionGroupId
 	{
 		return $this->introducedInVersionGroupId;
+	}
+
+	/**
+	 * Is this move a Z-Move?
+	 *
+	 * @return bool
+	 */
+	public function isZMove() : bool
+	{
+		return $this->isZMove;
 	}
 }
