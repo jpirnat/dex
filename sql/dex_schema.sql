@@ -194,6 +194,7 @@ create table if not exists `forms`
 `pokemon_id` smallint unsigned not null,
 `is_default_form` bool not null,
 `introduced_in_version_group_id` tinyint unsigned not null,
+`is_battle_only` bool not null,
 
 primary key (`id`),
 unique key (`identifier`),
