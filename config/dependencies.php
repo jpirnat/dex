@@ -24,6 +24,7 @@ use Jp\Dex\Application\Models\UsageMonth\UsageMonthModel;
 use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
+use Jp\Dex\Domain\BreedingChains\BreedingChainQueriesInterface;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
@@ -85,6 +86,7 @@ use Jp\Dex\Infrastructure\DatabaseAbilityDescriptionRepository;
 use Jp\Dex\Infrastructure\DatabaseAbilityNameRepository;
 use Jp\Dex\Infrastructure\DatabaseAbilityRepository;
 use Jp\Dex\Infrastructure\DatabaseBaseStatRepository;
+use Jp\Dex\Infrastructure\DatabaseBreedingChainQueries;
 use Jp\Dex\Infrastructure\DatabaseFormatNameRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
 use Jp\Dex\Infrastructure\DatabaseFormIconRepository;
@@ -230,6 +232,9 @@ $container->dice()->addRule(AbilityRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseBaseStatRepository::class];
 $container->dice()->addRule(BaseStatRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseBreedingChainQueries::class];
+$container->dice()->addRule(BreedingChainQueriesInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseFormatNameRepository::class];
 $container->dice()->addRule(FormatNameRepositoryInterface::class, $rule);
