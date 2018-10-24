@@ -27,4 +27,11 @@ interface AbilityRepositoryInterface
 	 * @return Ability
 	 */
 	public function getByIdentifier(string $identifier) : Ability;
+
+	/**
+	 * Get all abilities.
+	 *
+	 * @return Ability[]
+	 */
+	public function getAll() : array;
 }

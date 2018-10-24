@@ -69,4 +69,38 @@ class DatabaseAbilityNameRepository implements AbilityNameRepositoryInterface
 
 		return $abilityName;
 	}
+
+	/**
+	 * Get ability names by language.
+	 *
+	 * @param LanguageId $languageId
+	 *
+	 * @return AbilityName[] Indexed by ability id.
+	 */
+	public function getByLanguage(LanguageId $languageId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`ability_id`,
+				`name`
+			FROM `ability_names`
+			WHERE `language_id` = :language_id'
+		);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$abilityNames = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$abilityName = new AbilityName(
+				$languageId,
+				new AbilityId($result['ability_id']),
+				$result['name']
+			);
+
+			$abilityNames[$result['ability_id']] = $abilityName;
+		}
+
+		return $abilityNames;
+	}
 }

@@ -101,4 +101,35 @@ class DatabaseAbilityRepository implements AbilityRepositoryInterface
 
 		return $ability;
 	}
+
+	/**
+	 * Get all abilities.
+	 *
+	 * @return Ability[]
+	 */
+	public function getAll() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`introduced_in_version_group_id`
+			FROM `abilities`'
+		);
+		$stmt->execute();
+
+		$abilities = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$ability = new Ability(
+				new AbilityId($result['id']),
+				$result['identifier'],
+				new VersionGroupId($result['introduced_in_version_group_id'])
+			);
+
+			$abilities[$result['id']] = $ability;
+		}
+
+		return $abilities;
+	}
 }

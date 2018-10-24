@@ -22,4 +22,13 @@ interface AbilityNameRepositoryInterface
 		LanguageId $languageId,
 		AbilityId $abilityId
 	) : AbilityName;
+
+	/**
+	 * Get ability names by language.
+	 *
+	 * @param LanguageId $languageId
+	 *
+	 * @return AbilityName[] Indexed by ability id.
+	 */
+	public function getByLanguage(LanguageId $languageId) : array;
 }

@@ -76,4 +76,44 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 
 		return $abilityDescription;
 	}
+
+	/**
+	 * Get ability descriptions by generation and language.
+	 *
+	 * @param Generation $generation
+	 * @param LanguageId $languageId
+	 *
+	 * @return AbilityDescription[] Indexed by ability id.
+	 */
+	public function getByGenerationAndLanguage(
+		Generation $generation,
+		LanguageId $languageId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`ability_id`,
+				`description`
+			FROM `ability_descriptions`
+			WHERE `generation` = :generation
+				AND `language_id` = :language_id'
+		);
+		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$abilityDescriptions = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$abilityDescription = new AbilityDescription(
+				$generation,
+				$languageId,
+				new AbilityId($result['ability_id']),
+				$result['description']
+			);
+
+			$abilityDescriptions[$result['ability_id']] = $abilityDescription;
+		}
+
+		return $abilityDescriptions;
+	}
 }
