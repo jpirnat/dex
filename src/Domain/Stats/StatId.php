@@ -19,6 +19,9 @@ class StatId extends EntityId
 	/** @var int $SPEED */
 	public const SPEED = 4;
 
+	/** @var int SPECIAL */
+	public const SPECIAL = 5;
+
 	/** @var int $SPECIAL_ATTACK */
 	public const SPECIAL_ATTACK = 8;
 

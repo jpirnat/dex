@@ -87,8 +87,7 @@ class DatabasePokemonAbilityRepository implements PokemonAbilityRepositoryInterf
 				`is_hidden_ability`
 			FROM `pokemon_abilities`
 			WHERE `generation` = :generation
-				AND `ability_id` = :ability_id
-			ORDER BY `slot` ASC'
+				AND `ability_id` = :ability_id'
 		);
 		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
