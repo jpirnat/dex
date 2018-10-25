@@ -25,6 +25,7 @@ use Jp\Dex\Application\Models\UsageMonth\UsageMonthModel;
 use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
+use Jp\Dex\Domain\Abilities\PokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\BreedingChains\BreedingChainQueriesInterface;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
@@ -82,6 +83,7 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
+use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Infrastructure\DatabaseAbilityDescriptionRepository;
 use Jp\Dex\Infrastructure\DatabaseAbilityNameRepository;
@@ -121,8 +123,10 @@ use Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository;
 use Jp\Dex\Infrastructure\DatabaseNatureNameRepository;
 use Jp\Dex\Infrastructure\DatabaseNatureRepository;
 use Jp\Dex\Infrastructure\DatabaseNatureStatModifierRepository;
+use Jp\Dex\Infrastructure\DatabasePokemonAbilityRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonNameRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonRepository;
+use Jp\Dex\Infrastructure\DatabasePokemonTypeRepository;
 use Jp\Dex\Infrastructure\DatabaseRatingQueries;
 use Jp\Dex\Infrastructure\DatabaseStatNameRepository;
 use Jp\Dex\Infrastructure\DatabaseTypeIconRepository;
@@ -336,11 +340,17 @@ $container->dice()->addRule(NatureRepositoryInterface::class, $rule);
 $rule = ['instanceOf' => DatabaseNatureStatModifierRepository::class];
 $container->dice()->addRule(NatureStatModifierRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => DatabasePokemonAbilityRepository::class];
+$container->dice()->addRule(PokemonAbilityRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => DatabasePokemonNameRepository::class];
 $container->dice()->addRule(PokemonNameRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabasePokemonRepository::class];
 $container->dice()->addRule(PokemonRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabasePokemonTypeRepository::class];
+$container->dice()->addRule(PokemonTypeRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseRatingQueries::class];
 $container->dice()->addRule(RatingQueriesInterface::class, $rule);
