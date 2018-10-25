@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\MonthFormats\FormatData;
 use Jp\Dex\Application\Models\MonthFormats\MonthFormatsModel;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
-use Zend\Diactoros\Response;
+use Zend\Diactoros\Response\HtmlResponse;
 
 class MonthFormatsView
 {
@@ -112,8 +112,6 @@ class MonthFormatsView
 			]
 		);
 
-		$response = new Response();
-		$response->getBody()->write($content);
-		return $response;
+		return new HtmlResponse($content);
 	}
 }

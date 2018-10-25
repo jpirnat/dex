@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\LeadsMonth\LeadsData;
 use Jp\Dex\Application\Models\LeadsMonth\LeadsMonthModel;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
-use Zend\Diactoros\Response;
+use Zend\Diactoros\Response\HtmlResponse;
 
 class LeadsMonthView
 {
@@ -133,8 +133,6 @@ class LeadsMonthView
 			]
 		);
 
-		$response = new Response();
-		$response->getBody()->write($content);
-		return $response;
+		return new HtmlResponse($content);
 	}
 }

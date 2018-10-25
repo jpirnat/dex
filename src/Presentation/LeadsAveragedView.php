@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\LeadsAveraged\LeadsAveragedModel;
 use Jp\Dex\Application\Models\LeadsAveraged\LeadsData;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
-use Zend\Diactoros\Response;
+use Zend\Diactoros\Response\HtmlResponse;
 
 class LeadsAveragedView
 {
@@ -117,8 +117,6 @@ class LeadsAveragedView
 			]
 		);
 
-		$response = new Response();
-		$response->getBody()->write($content);
-		return $response;
+		return new HtmlResponse($content);
 	}
 }

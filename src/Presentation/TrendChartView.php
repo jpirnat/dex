@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Stats\Trends\Lines\UsageItemTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageMoveTrendLine;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
-use Zend\Diactoros\Response;
+use Zend\Diactoros\Response\HtmlResponse;
 use Zend\Diactoros\Response\JsonResponse;
 
 class TrendChartView
@@ -76,9 +76,7 @@ class TrendChartView
 			]
 		);
 
-		$response = new Response();
-		$response->getBody()->write($content);
-		return $response;
+		return new HtmlResponse($content);
 	}
 
 	/**
@@ -292,6 +290,7 @@ class TrendChartView
 
 		// These default line colors were taken from the Chart.js documentation
 		// examples: http://www.chartjs.org/samples/latest/utils.js
+		/*
 		return [
 			'#ff6384', // red: 'rgb(255, 99, 132)',
 			'#ff9f40', // orange: 'rgb(255, 159, 64)',
@@ -301,5 +300,6 @@ class TrendChartView
 			'#9966ff', // purple: 'rgb(153, 102, 255)',
 			'#c9cbcf', // grey: 'rgb(201, 203, 207)'
 		][$index % 7];
+		*/
 	}
 }

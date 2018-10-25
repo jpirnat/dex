@@ -7,7 +7,7 @@ use DateTime;
 use Jp\Dex\Application\Models\StatsIndexModel;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
-use Zend\Diactoros\Response;
+use Zend\Diactoros\Response\HtmlResponse;
 
 class StatsIndexView
 {
@@ -85,8 +85,6 @@ class StatsIndexView
 			]
 		);
 
-		$response = new Response();
-		$response->getBody()->write($content);
-		return $response;
+		return new HtmlResponse($content);
 	}
 }

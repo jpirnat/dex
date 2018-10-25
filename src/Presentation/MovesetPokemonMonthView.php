@@ -13,7 +13,7 @@ use Jp\Dex\Application\Models\MovesetPokemonMonth\TeammateData;
 use Jp\Dex\Domain\Stats\StatId;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
-use Zend\Diactoros\Response;
+use Zend\Diactoros\Response\HtmlResponse;
 
 class MovesetPokemonMonthView
 {
@@ -333,8 +333,6 @@ class MovesetPokemonMonthView
 			]
 		);
 
-		$response = new Response();
-		$response->getBody()->write($content);
-		return $response;
+		return new HtmlResponse($content);
 	}
 }

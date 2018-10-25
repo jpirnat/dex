@@ -6,7 +6,7 @@ namespace Jp\Dex\Presentation;
 use Jp\Dex\Application\Models\NotFoundModel;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
-use Zend\Diactoros\Response;
+use Zend\Diactoros\Response\HtmlResponse;
 
 class NotFoundView
 {
@@ -57,9 +57,6 @@ class NotFoundView
 			]
 		);
 
-		$response = new Response();
-		$response->getBody()->write($content);
-
-		return $response;
+		return new HtmlResponse($content);
 	}
 }

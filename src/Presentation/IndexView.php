@@ -5,7 +5,7 @@ namespace Jp\Dex\Presentation;
 
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
-use Zend\Diactoros\Response;
+use Zend\Diactoros\Response\HtmlResponse;
 
 class IndexView
 {
@@ -41,8 +41,6 @@ class IndexView
 			]
 		);
 
-		$response = new Response();
-		$response->getBody()->write($content);
-		return $response;
+		return new HtmlResponse($content);
 	}
 }

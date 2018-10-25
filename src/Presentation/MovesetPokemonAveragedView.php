@@ -9,7 +9,7 @@ use Jp\Dex\Application\Models\MovesetPokemonAveraged\MoveData;
 use Jp\Dex\Application\Models\MovesetPokemonAveraged\MovesetPokemonAveragedModel;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
-use Zend\Diactoros\Response;
+use Zend\Diactoros\Response\HtmlResponse;
 
 class MovesetPokemonAveragedView
 {
@@ -182,8 +182,6 @@ class MovesetPokemonAveragedView
 			]
 		);
 
-		$response = new Response();
-		$response->getBody()->write($content);
-		return $response;
+		return new HtmlResponse($content);
 	}
 }

@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\AbilityUsageMonth\AbilityUsageData;
 use Jp\Dex\Application\Models\AbilityUsageMonth\AbilityUsageMonthModel;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
-use Zend\Diactoros\Response;
+use Zend\Diactoros\Response\HtmlResponse;
 
 class AbilityUsageMonthView
 {
@@ -138,8 +138,6 @@ class AbilityUsageMonthView
 			]
 		);
 
-		$response = new Response();
-		$response->getBody()->write($content);
-		return $response;
+		return new HtmlResponse($content);
 	}
 }
