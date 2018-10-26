@@ -3,34 +3,34 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\DexAbilitiesModel;
+use Jp\Dex\Application\Models\DexAbilityModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class DexAbilitiesController
+class DexAbilityController
 {
 	/** @var BaseController $baseController */
 	private $baseController;
 
-	/** @var DexAbilitiesModel $dexAbilitiesModel */
-	private $dexAbilitiesModel;
+	/** @var DexAbilityModel $dexAbilityModel */
+	private $dexAbilityModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param BaseController $baseController
-	 * @param DexAbilitiesModel $dexAbilitiesModel
+	 * @param DexAbilityModel $dexAbilityModel
 	 */
 	public function __construct(
 		BaseController $baseController,
-		DexAbilitiesModel $dexAbilitiesModel
+		DexAbilityModel $dexAbilityModel
 	) {
 		$this->baseController = $baseController;
-		$this->dexAbilitiesModel = $dexAbilitiesModel;
+		$this->dexAbilityModel = $dexAbilityModel;
 	}
 
 	/**
-	 * Show the /dex/abilities page.
+	 * Show the /dex/abilities/ability-identifier page.
 	 *
 	 * @param ServerRequestInterface $request
 	 *
@@ -40,8 +40,9 @@ class DexAbilitiesController
 	{
 		$this->baseController->setBaseVariables($request);
 
+		$abilityIdentifier = $request->getAttribute('abilityIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexAbilitiesModel->setData($languageId);
+		$this->dexAbilityModel->setData($abilityIdentifier, $languageId);
 	}
 }

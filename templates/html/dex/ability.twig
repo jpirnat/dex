@@ -1,0 +1,9 @@
+{% extends "html/base.twig" %}
+
+{% import "html/dex/tables.twig" as dexTables %}
+
+{% block body %}
+	<p>{{ ability.name|e }}: {{ ability.description|e }}</p>
+
+	{{ dexTables.pokemonTable(stats, pokemon) }}
+{% endblock %}

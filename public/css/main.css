@@ -28,7 +28,6 @@ footer {
 }
 
 table {
-	table-layout: fixed;
 	border-collapse: collapse;
 	display: inline-table;
 	vertical-align: top;
@@ -102,6 +101,27 @@ table .percent-minus {
 .button a:hover {
 	background: black;
 	color: white;
+}
+
+
+
+/* /dex */
+
+table.dex-pokemon {
+	width: 100%;
+}
+
+table.dex-pokemon th,
+table.dex-pokemon td {
+	border-bottom: 1px solid black;
+}
+
+table.dex-pokemon .types {
+	text-align: center;
+}
+
+table.dex-pokemon .hidden-ability {
+	font-style: italic;
 }
 
 

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 use Jp\Dex\Application\Controllers\AbilityUsageMonthController;
 use Jp\Dex\Application\Controllers\DexAbilitiesController;
+use Jp\Dex\Application\Controllers\DexAbilityController;
 use Jp\Dex\Application\Controllers\ErrorController;
 use Jp\Dex\Application\Controllers\IndexController;
 use Jp\Dex\Application\Controllers\ItemUsageMonthController;
@@ -23,6 +24,7 @@ use Jp\Dex\Application\Middleware\JsonRequestMiddleware;
 use Jp\Dex\Application\Middleware\LanguageMiddleware;
 use Jp\Dex\Presentation\AbilityUsageMonthView;
 use Jp\Dex\Presentation\DexAbilitiesView;
+use Jp\Dex\Presentation\DexAbilityView;
 use Jp\Dex\Presentation\ErrorView;
 use Jp\Dex\Presentation\IndexView;
 use Jp\Dex\Presentation\ItemUsageMonthView;
@@ -66,6 +68,17 @@ $routes = [
 		'controllerClass' => DexAbilitiesController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => DexAbilitiesView::class,
+		'viewMethod' => 'index',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/dex/abilities/$abilityIdentifier", [
+		'controllerClass' => DexAbilityController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => DexAbilityView::class,
 		'viewMethod' => 'index',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,

@@ -51,7 +51,7 @@ class DexAbilitiesModel
 	 */
 	public function setData(LanguageId $languageId) : void
 	{
-		$generation = new Generation(7);
+		$generation = new Generation(7); // TODO
 
 		$abilities = $this->abilityRepository->getAll();
 

@@ -1,0 +1,54 @@
+{% macro pokemonTable(stats, pokemons) %}
+	<table class="dex-pokemon">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Pokémon</th>
+				<th>Types</th>
+				<th>Abilities</th>
+				{% for stat in stats %}
+					<th class="number">{{ stat|e }}</th>
+				{% endfor %}
+			</tr>
+		</thead>
+		<tbody>
+			{% for pokemon in pokemons %}
+				<tr>
+					<td>
+						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
+					</td>
+					<td>
+						<a href="/dex/pokemon/{{ pokemon.identifier|e }}">
+							{{ pokemon.name|e }}
+						</a>
+					</td>
+					<td class="types">
+						{% for type in pokemon.types %}
+							<a href="/dex/types/{{ type.identifier|e }}">
+								<img src="/images/types/{{ type.icon|e }}">
+							</a>
+						{% endfor %}
+					</td>
+					<td>
+						{% for ability in pokemon.abilities %}
+							<div>
+								<a href="/dex/abilities/{{ ability.identifier|e }}"
+									{% if ability.isHiddenAbility %}
+										class="hidden-ability"
+									{% endif %}
+								>
+									{{ ability.name|e }}
+								</a>
+							</div>
+						{% endfor %}
+					</td>
+					{% for baseStat in pokemon.baseStats %}
+						<td class="number">
+							{{ baseStat|e }}
+						</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endmacro %}
