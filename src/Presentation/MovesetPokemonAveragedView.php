@@ -25,6 +25,9 @@ class MovesetPokemonAveragedView
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
 
+	/** @var DexFormatter $dexFormatter */
+	private $dexFormatter;
+
 	/**
 	 * Constructor.
 	 *
@@ -32,17 +35,20 @@ class MovesetPokemonAveragedView
 	 * @param BaseView $baseView
 	 * @param MovesetPokemonAveragedModel $movesetPokemonAveragedModel
 	 * @param IntlFormatterFactory $formatterFactory
+	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
 		Twig_Environment $twig,
 		BaseView $baseView,
 		MovesetPokemonAveragedModel $movesetPokemonAveragedModel,
-		IntlFormatterFactory $formatterFactory
+		IntlFormatterFactory $formatterFactory,
+		DexFormatter $dexFormatter
 	) {
 		$this->twig = $twig;
 		$this->baseView = $baseView;
 		$this->movesetPokemonAveragedModel = $movesetPokemonAveragedModel;
 		$this->formatterFactory = $formatterFactory;
+		$this->dexFormatter = $dexFormatter;
 	}
 
 	/**
@@ -68,12 +74,6 @@ class MovesetPokemonAveragedView
 		$pokemonModel = $this->movesetPokemonAveragedModel->getPokemonModel();
 		$pokemonName = $pokemonModel->getPokemonName();
 		$model = $pokemonModel->getModel();
-
-		// Get types.
-		$typeIcons = [];
-		foreach ($pokemonModel->getTypeIcons() as $slot => $typeIcon) {
-			$typeIcons[$slot] = $typeIcon->getImage();
-		}
 
 		// Get base stats.
 		$baseStats = [];
@@ -172,7 +172,7 @@ class MovesetPokemonAveragedView
 
 				'pokemonName' => $pokemonName->getName(),
 				'model' => $model->getImage(),
-				'typeIcons' => $typeIcons,
+				'types' => $this->dexFormatter->formatDexPokemonTypes($pokemonModel->getTypes()),
 				'baseStats' => $baseStats,
 
 				// The main data.

@@ -44,12 +44,11 @@
 			<img src="/images/pokemon/models/{{ model|e }}">
 		</div>
 		<div class="pokemon-types">
-			{% if typeIcons|length == 1 %}
-				<img src="/images/types/{{ typeIcons[1]|e }}">
-			{% else %}
-				<img src="/images/types/{{ typeIcons[1]|e }}">
-				<img src="/images/types/{{ typeIcons[2]|e }}">
-			{% endif %}
+			{% for type in types %}
+				<a href="/dex/types/{{ type.identifier|e }}">
+					<img src="/images/types/{{ type.icon|e }}">
+				</a>
+			{% endfor %}
 		</div>
 	</div>
 

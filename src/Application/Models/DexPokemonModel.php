@@ -5,7 +5,6 @@ namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Application\Models\Structs\DexPokemon;
 use Jp\Dex\Application\Models\Structs\DexPokemonAbility;
-use Jp\Dex\Application\Models\Structs\DexPokemonType;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Abilities\PokemonAbilityRepositoryInterface;
@@ -17,13 +16,13 @@ use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
-use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
-use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
-use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 
 class DexPokemonModel
 {
+	/** @var DexPokemonTypesModel $dexPokemonTypesModel */
+	private $dexPokemonTypesModel;
+
 	/** @var FormIconRepositoryInterface $formIconRepository */
 	private $formIconRepository;
 
@@ -32,15 +31,6 @@ class DexPokemonModel
 
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
-
-	/** @var PokemonTypeRepositoryInterface $pokemonTypeRepository */
-	private $pokemonTypeRepository;
-
-	/** @var TypeRepositoryInterface $typeRepository */
-	private $typeRepository;
-
-	/** @var TypeIconRepositoryInterface $typeIconRepository */
-	private $typeIconRepository;
 
 	/** @var PokemonAbilityRepositoryInterface $pokemonAbilityRepository */
 	private $pokemonAbilityRepository;
@@ -57,35 +47,29 @@ class DexPokemonModel
 	/**
 	 * Constructor.
 	 *
+	 * @param DexPokemonTypesModel $dexPokemonTypesModel
 	 * @param FormIconRepositoryInterface $formIconRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
-	 * @param TypeRepositoryInterface $typeRepository
-	 * @param TypeIconRepositoryInterface $typeIconRepository
 	 * @param PokemonAbilityRepositoryInterface $pokemonAbilityRepository
 	 * @param AbilityRepositoryInterface $abilityRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
 	 * @param BaseStatRepositoryInterface $baseStatRepository
 	 */
 	public function __construct(
+		DexPokemonTypesModel $dexPokemonTypesModel,
 		FormIconRepositoryInterface $formIconRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
-		PokemonTypeRepositoryInterface $pokemonTypeRepository,
-		TypeRepositoryInterface $typeRepository,
-		TypeIconRepositoryInterface $typeIconRepository,
 		PokemonAbilityRepositoryInterface $pokemonAbilityRepository,
 		AbilityRepositoryInterface $abilityRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
 		BaseStatRepositoryInterface $baseStatRepository
 	) {
+		$this->dexPokemonTypesModel = $dexPokemonTypesModel;
 		$this->formIconRepository = $formIconRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->pokemonTypeRepository = $pokemonTypeRepository;
-		$this->typeRepository = $typeRepository;
-		$this->typeIconRepository = $typeIconRepository;
 		$this->pokemonAbilityRepository = $pokemonAbilityRepository;
 		$this->abilityRepository = $abilityRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
@@ -124,24 +108,11 @@ class DexPokemonModel
 		);
 
 		// Get the Pokémon's types.
-		$pokemonTypes = $this->pokemonTypeRepository->getByGenerationAndPokemon(
+		$types = $this->dexPokemonTypesModel->getDexPokemonTypes(
 			$generation,
-			$pokemonId
+			$pokemonId,
+			$languageId
 		);
-		$types = [];
-		foreach ($pokemonTypes as $pokemonType) {
-			$type = $this->typeRepository->getById($pokemonType->getTypeId());
-			$typeIcon = $this->typeIconRepository->getByGenerationAndLanguageAndType(
-				$generation,
-				$languageId,
-				$type->getId()
-			);
-
-			$types[] = new DexPokemonType(
-				$type->getIdentifier(),
-				$typeIcon->getImage()
-			);
-		}
 
 		// Get the Pokémon's abilities.
 		$pokemonAbilities = $this->pokemonAbilityRepository->getByGenerationAndPokemon(

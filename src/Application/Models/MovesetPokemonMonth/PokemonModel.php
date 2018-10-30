@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
+use Jp\Dex\Application\Models\DexPokemonTypesModel;
+use Jp\Dex\Application\Models\Structs\DexPokemonType;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Models\Model;
@@ -13,24 +15,18 @@ use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
-use Jp\Dex\Domain\TypeIcons\TypeIcon;
-use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
-use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 
 class PokemonModel
 {
+	/** @var DexPokemonTypesModel $dexPokemonTypesModel */
+	private $dexPokemonTypesModel;
+
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
 
 	/** @var ModelRepositoryInterface $modelRepository */
 	private $modelRepository;
-
-	/** @var TypeRepositoryInterface $typeRepository */
-	private $typeRepository;
-
-	/** @var TypeIconRepositoryInterface $typeIconRepository */
-	private $typeIconRepository;
 
 	/** @var BaseStatRepositoryInterface $baseStatRepository */
 	private $baseStatRepository;
@@ -45,8 +41,8 @@ class PokemonModel
 	/** @var Model $model */
 	private $model;
 
-	/** @var TypeIcon[] $typeIcons */
-	private $typeIcons = [];
+	/** @var DexPokemonType[] $types */
+	private $types = [];
 
 	/** @var StatData[] $statDatas */
 	private $statDatas = [];
@@ -54,25 +50,22 @@ class PokemonModel
 	/**
 	 * Constructor.
 	 *
+	 * @param DexPokemonTypesModel $dexPokemonTypesModel
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param ModelRepositoryInterface $modelRepository
-	 * @param TypeRepositoryInterface $typeRepository
-	 * @param TypeIconRepositoryInterface $typeIconRepository
 	 * @param BaseStatRepositoryInterface $baseStatRepository
 	 * @param StatNameRepositoryInterface $statNameRepository
 	 */
 	public function __construct(
+		DexPokemonTypesModel $dexPokemonTypesModel,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		ModelRepositoryInterface $modelRepository,
-		TypeRepositoryInterface $typeRepository,
-		TypeIconRepositoryInterface $typeIconRepository,
 		BaseStatRepositoryInterface $baseStatRepository,
 		StatNameRepositoryInterface $statNameRepository
 	) {
+		$this->dexPokemonTypesModel = $dexPokemonTypesModel;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->modelRepository = $modelRepository;
-		$this->typeRepository = $typeRepository;
-		$this->typeIconRepository = $typeIconRepository;
 		$this->baseStatRepository = $baseStatRepository;
 		$this->statNameRepository = $statNameRepository;
 	}
@@ -107,22 +100,11 @@ class PokemonModel
 		);
 
 		// Get the Pokémon's types.
-		$types = $this->typeRepository->getByGenerationAndPokemon(
+		$this->types = $this->dexPokemonTypesModel->getDexPokemonTypes(
 			$generation,
-			$pokemonId
+			$pokemonId,
+			$languageId
 		);
-
-		// Get the type icons of those types.
-		$this->typeIcons = [];
-		foreach ($types as $slot => $type) {
-			$typeIcon = $this->typeIconRepository->getByGenerationAndLanguageAndType(
-				$generation,
-				$languageId,
-				$type->getId()
-			);
-
-			$this->typeIcons[$slot] = $typeIcon;
-		}
 
 		// Get the Pokémon's base stats.
 		$baseStats = $this->baseStatRepository->getByGenerationAndPokemon(
@@ -172,13 +154,13 @@ class PokemonModel
 	}
 
 	/**
-	 * Get the type icons.
+	 * Get the types.
 	 *
-	 * @return TypeIcon[]
+	 * @return DexPokemonType[]
 	 */
-	public function getTypeIcons() : array
+	public function getTypes() : array
 	{
-		return $this->typeIcons;
+		return $this->types;
 	}
 
 	/**
