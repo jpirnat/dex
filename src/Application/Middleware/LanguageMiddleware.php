@@ -87,7 +87,7 @@ class LanguageMiddleware implements MiddlewareInterface
 		if ($setNewLanguage) {
 			/** @var SetCookie $setCookie */
 			$setCookie = SetCookie::create(self::LANGUAGE_COOKIE);
-			$setCookie = $setCookie->withValue($languageId);
+			$setCookie = $setCookie->withValue((string) $languageId);
 			$setCookie = $setCookie->withExpires(new DateTime('+5 years'));
 			$setCookie = $setCookie->withPath('/');
 			$response = FigResponseCookies::set($response, $setCookie);

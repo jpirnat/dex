@@ -92,5 +92,5 @@ if ($routeInfo[0] === \FastRoute\Dispatcher::FOUND) {
 }
 
 // Emit the response.
-$emitter = new \Zend\Diactoros\Response\SapiEmitter();
+$emitter = new \Zend\HttpHandlerRunner\Emitter\SapiEmitter();
 $emitter->emit($response);
