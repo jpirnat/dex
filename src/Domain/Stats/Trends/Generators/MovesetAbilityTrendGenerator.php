@@ -12,6 +12,7 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetAbilityTrendLine;
+use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 class MovesetAbilityTrendGenerator
@@ -28,6 +29,9 @@ class MovesetAbilityTrendGenerator
 	/** @var AbilityNameRepositoryInterface $abilityNameRepository */
 	private $abilityNameRepository;
 
+	/** @var PokemonTypeRepositoryInterface $pokemonTypeRepository */
+	private $pokemonTypeRepository;
+
 	/** @var TypeRepositoryInterface $typeRepository */
 	private $typeRepository;
 
@@ -41,6 +45,7 @@ class MovesetAbilityTrendGenerator
 	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
+	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
 	 * @param TypeRepositoryInterface $typeRepository
 	 * @param TrendPointCalculator $trendPointCalculator
 	 */
@@ -49,6 +54,7 @@ class MovesetAbilityTrendGenerator
 		FormatNameRepositoryInterface $formatNameRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
+		PokemonTypeRepositoryInterface $pokemonTypeRepository,
 		TypeRepositoryInterface $typeRepository,
 		TrendPointCalculator $trendPointCalculator
 	) {
@@ -56,6 +62,7 @@ class MovesetAbilityTrendGenerator
 		$this->formatNameRepository = $formatNameRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
+		$this->pokemonTypeRepository = $pokemonTypeRepository;
 		$this->typeRepository = $typeRepository;
 		$this->trendPointCalculator = $trendPointCalculator;
 	}
@@ -93,11 +100,11 @@ class MovesetAbilityTrendGenerator
 		);
 
 		// Get the Pokémon's primary type.
-		$types = $this->typeRepository->getByGenerationAndPokemon(
+		$pokemonTypes = $this->pokemonTypeRepository->getByGenerationAndPokemon(
 			$format->getGeneration(),
 			$pokemonId
 		);
-		$pokemonType = $types[1];
+		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());
 
 		// Get the usage data.
 		$movesetRatedAbilities = $this->movesetRatedAbilityRepository->getByFormatAndRatingAndPokemonAndAbility(

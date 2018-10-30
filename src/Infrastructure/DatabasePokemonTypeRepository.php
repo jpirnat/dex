@@ -60,7 +60,7 @@ class DatabasePokemonTypeRepository implements PokemonTypeRepositoryInterface
 				new TypeId($result['type_id'])
 			);
 
-			$pokemonTypes[] = $pokemonType;
+			$pokemonTypes[$result['slot']] = $pokemonType;
 		}
 
 		return $pokemonTypes;

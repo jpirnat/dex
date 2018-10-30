@@ -13,6 +13,7 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetMoveTrendLine;
+use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 class MovesetMoveTrendGenerator
@@ -28,6 +29,9 @@ class MovesetMoveTrendGenerator
 
 	/** @var MoveNameRepositoryInterface $moveNameRepository */
 	private $moveNameRepository;
+
+	/** @var PokemonTypeRepositoryInterface $pokemonTypeRepository */
+	private $pokemonTypeRepository;
 
 	/** @var TypeRepositoryInterface $typeRepository */
 	private $typeRepository;
@@ -45,6 +49,7 @@ class MovesetMoveTrendGenerator
 	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param MoveNameRepositoryInterface $moveNameRepository
+	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
 	 * @param TypeRepositoryInterface $typeRepository
 	 * @param GenerationMoveRepositoryInterface $generationMoveRepository
 	 * @param TrendPointCalculator $trendPointCalculator
@@ -54,6 +59,7 @@ class MovesetMoveTrendGenerator
 		FormatNameRepositoryInterface $formatNameRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		MoveNameRepositoryInterface $moveNameRepository,
+		PokemonTypeRepositoryInterface $pokemonTypeRepository,
 		TypeRepositoryInterface $typeRepository,
 		GenerationMoveRepositoryInterface $generationMoveRepository,
 		TrendPointCalculator $trendPointCalculator
@@ -62,6 +68,7 @@ class MovesetMoveTrendGenerator
 		$this->formatNameRepository = $formatNameRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->moveNameRepository = $moveNameRepository;
+		$this->pokemonTypeRepository = $pokemonTypeRepository;
 		$this->typeRepository = $typeRepository;
 		$this->generationMoveRepository = $generationMoveRepository;
 		$this->trendPointCalculator = $trendPointCalculator;
@@ -100,11 +107,11 @@ class MovesetMoveTrendGenerator
 		);
 
 		// Get the Pokémon's primary type.
-		$types = $this->typeRepository->getByGenerationAndPokemon(
+		$pokemonTypes = $this->pokemonTypeRepository->getByGenerationAndPokemon(
 			$format->getGeneration(),
 			$pokemonId
 		);
-		$pokemonType = $types[1];
+		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());
 
 		// Get the move's type.
 		$generationMove = $this->generationMoveRepository->getByGenerationAndMove(

@@ -3,9 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Types;
 
-use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\Generation;
-
 interface TypeRepositoryInterface
 {
 	/**
@@ -30,22 +27,6 @@ interface TypeRepositoryInterface
 	 * @return Type
 	 */
 	public function getByHiddenPowerIndex(int $hiddenPowerIndex) : Type;
-
-	/**
-	 * Get the types of this Pokémon in this generation.
-	 *
-	 * @param Generation $generation
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return Type[] Indexed by slot.
-	 *
-	 * @deprecated Replace with class PokemonTypeRepositoryInterface method
-	 *     getByGenerationAndPokemon.
-	 */
-	public function getByGenerationAndPokemon(
-		Generation $generation,
-		PokemonId $pokemonId
-	) : array;
 
 	/**
 	 * Get the main types.
