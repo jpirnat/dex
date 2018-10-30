@@ -32,15 +32,25 @@ interface TypeRepositoryInterface
 	public function getByHiddenPowerIndex(int $hiddenPowerIndex) : Type;
 
 	/**
-	 * Get the types of this Pokémon in this generation. Indexed by slot.
+	 * Get the types of this Pokémon in this generation.
 	 *
 	 * @param Generation $generation
 	 * @param PokemonId $pokemonId
 	 *
-	 * @return Type[]
+	 * @return Type[] Indexed by slot.
+	 *
+	 * @deprecated Replace with class PokemonTypeRepositoryInterface method
+	 *     getByGenerationAndPokemon.
 	 */
 	public function getByGenerationAndPokemon(
 		Generation $generation,
 		PokemonId $pokemonId
 	) : array;
+
+	/**
+	 * Get the main types.
+	 *
+	 * @return Type[] Indexed by id.
+	 */
+	public function getMain() : array;
 }

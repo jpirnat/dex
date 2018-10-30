@@ -58,12 +58,9 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 			);
 		}
 
-		if ($result['category_id'] !== null) {
-			// The type had a damage category.
-			$categoryId = new CategoryId($result['category_id']);
-		} else {
-			$categoryId = null;
-		}
+		$categoryId = $result['category_id'] !== null
+			? new CategoryId($result['category_id'])
+			: null;
 
 		$type = new Type(
 			$typeId,
@@ -108,12 +105,9 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 			);
 		}
 
-		if ($result['category_id'] !== null) {
-			// The type had a damage category.
-			$categoryId = new CategoryId($result['category_id']);
-		} else {
-			$categoryId = null;
-		}
+		$categoryId = $result['category_id'] !== null
+			? new CategoryId($result['category_id'])
+			: null;
 
 		$type = new Type(
 			new TypeId($result['id']),
@@ -132,7 +126,10 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 	 * @param Generation $generation
 	 * @param PokemonId $pokemonId
 	 *
-	 * @return Type[]
+	 * @return Type[] Indexed by slot.
+	 *
+	 * @deprecated Replace with class PokemonTypeRepositoryInterface method
+	 *     getByGenerationAndPokemon.
 	 */
 	public function getByGenerationAndPokemon(
 		Generation $generation,
@@ -159,12 +156,9 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 		$types = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			if ($result['category_id'] !== null) {
-				// The type had a damage category.
-				$categoryId = new CategoryId($result['category_id']);
-			} else {
-				$categoryId = null;
-			}
+			$categoryId = $result['category_id'] !== null
+				? new CategoryId($result['category_id'])
+				: null;
 
 			$type = new Type(
 				new TypeId($result['id']),
@@ -175,6 +169,46 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 			);
 
 			$types[$result['slot']] = $type;
+		}
+
+		return $types;
+	}
+
+	/**
+	 * Get the main types.
+	 *
+	 * @return Type[] Indexed by id.
+	 */
+	public function getMain() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`hidden_power_index`,
+				`category_id`,
+				`color_code`
+			FROM `types`
+			WHERE `id` < 100'
+		);
+		$stmt->execute();
+
+		$types = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$categoryId = $result['category_id'] !== null
+				? new CategoryId($result['category_id'])
+				: null;
+
+			$type = new Type(
+				new TypeId($result['id']),
+				$result['identifier'],
+				$categoryId,
+				$result['hidden_power_index'],
+				$result['color_code']
+			);
+
+			$types[$result['id']] = $type;
 		}
 
 		return $types;

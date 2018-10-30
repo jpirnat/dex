@@ -1,0 +1,48 @@
+{% extends "html/base.twig" %}
+
+{% block body %}
+	<table class="type-chart">
+		<colgroup>
+			<col>
+			{% for defendingType in types %}
+				<col class="type-{{ defendingType.identifier|e }}">
+			{% endfor %}
+		</colgroup>
+		<thead>
+			<tr>
+				<td></td>
+				{% for defendingType in types %}
+					<th scope="col">
+						<a href="/dex/types/{{ defendingType.identifier|e }}">
+							<img src="/images/types/{{ defendingType.icon|e }}">
+						</a>
+					</th>
+				{% endfor %}
+			</tr>
+		</thead>
+		<tbody>
+			{% for attackingType in types %}
+				<tr>
+					<th scope="row">
+						<a href="/dex/types/{{ attackingType.identifier|e }}">
+							<img src="/images/types/{{ attackingType.icon|e }}">
+						</a>
+					</th>
+					{% for defendingType in types %}
+						<td
+							{% if factors[attackingType.id][defendingType.id] == 1 %}
+								class="factor neutral"
+							{% elseif factors[attackingType.id][defendingType.id] == 2 %}
+								class="factor super-effective"
+							{% elseif factors[attackingType.id][defendingType.id] == 0.5 %}
+								class="factor not-very-effective"
+							{% elseif factors[attackingType.id][defendingType.id] == 0 %}
+								class="factor no-effect"
+							{% endif %}
+						></td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

@@ -26,4 +26,17 @@ interface TypeIconRepositoryInterface
 		LanguageId $languageId,
 		TypeId $typeId
 	) : TypeIcon;
+
+	/**
+	 * Get type icons by their generation and language.
+	 *
+	 * @param Generation $generation
+	 * @param LanguageId $languageId
+	 *
+	 * @return TypeIcon[] Indexed by type id.
+	 */
+	public function getByGenerationAndLanguage(
+		Generation $generation,
+		LanguageId $languageId
+	) : array;
 }

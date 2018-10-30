@@ -125,6 +125,53 @@ table.dex-pokemon .hidden-ability {
 }
 
 
+/* /dex/types */
+
+.type-chart .factor {
+	text-align: center;
+	border: 1px solid white;
+}
+
+.type-chart .neutral {
+	color: gray;
+}
+
+.type-chart .neutral::before {
+	content: "1";
+}
+
+.type-chart .super-effective {
+	background: green;
+	color: white;
+}
+
+.type-chart .super-effective::before {
+	content: "2";
+}
+
+.type-chart .not-very-effective {
+	background: red;
+	color: white;
+}
+
+.type-chart .not-very-effective::before {
+	content: "\00BD"; /* ½ */
+}
+
+.type-chart .no-effect {
+	background: black;
+	color: white;
+}
+
+.type-chart .no-effect::before {
+	content: "0";
+}
+
+.type-chart tr:hover {
+	background: yellow;
+}
+
+
 
 /* /stats */
 

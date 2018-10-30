@@ -75,4 +75,44 @@ class DatabaseTypeIconRepository implements TypeIconRepositoryInterface
 
 		return $typeIcon;
 	}
+
+	/**
+	 * Get type icons by their generation and language.
+	 *
+	 * @param Generation $generation
+	 * @param LanguageId $languageId
+	 *
+	 * @return TypeIcon[] Indexed by type id.
+	 */
+	public function getByGenerationAndLanguage(
+		Generation $generation,
+		LanguageId $languageId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`type_id`,
+				`image`
+			FROM `type_icons`
+			WHERE `generation` = :generation
+				AND `language_id` = :language_id'
+		);
+		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$typeIcons = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$typeIcon = new TypeIcon(
+				$generation,
+				$languageId,
+				new TypeId($result['type_id']),
+				$result['image']
+			);
+
+			$typeIcons[$result['type_id']] = $typeIcon;
+		}
+
+		return $typeIcons;
+	}
 }

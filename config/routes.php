@@ -4,6 +4,8 @@ declare(strict_types=1);
 use Jp\Dex\Application\Controllers\AbilityUsageMonthController;
 use Jp\Dex\Application\Controllers\DexAbilitiesController;
 use Jp\Dex\Application\Controllers\DexAbilityController;
+use Jp\Dex\Application\Controllers\DexTypeController;
+use Jp\Dex\Application\Controllers\DexTypesController;
 use Jp\Dex\Application\Controllers\ErrorController;
 use Jp\Dex\Application\Controllers\IndexController;
 use Jp\Dex\Application\Controllers\ItemUsageMonthController;
@@ -25,6 +27,8 @@ use Jp\Dex\Application\Middleware\LanguageMiddleware;
 use Jp\Dex\Presentation\AbilityUsageMonthView;
 use Jp\Dex\Presentation\DexAbilitiesView;
 use Jp\Dex\Presentation\DexAbilityView;
+use Jp\Dex\Presentation\DexTypesView;
+use Jp\Dex\Presentation\DexTypeView;
 use Jp\Dex\Presentation\ErrorView;
 use Jp\Dex\Presentation\IndexView;
 use Jp\Dex\Presentation\ItemUsageMonthView;
@@ -48,6 +52,7 @@ $pokemonIdentifier = '{pokemonIdentifier:[-\w]+}';
 $abilityIdentifier = '{abilityIdentifier:[-\w]+}';
 $itemIdentifier = '{itemIdentifier:[-\w]+}';
 $moveIdentifier = '{moveIdentifier:[-\w]+}';
+$typeIdentifier = '{typeIdentifier:[-\w]+}';
 $start = '{start:\d{4}-\d{2}}';
 $end = '{end:\d{4}-\d{2}}';
 
@@ -79,6 +84,28 @@ $routes = [
 		'controllerClass' => DexAbilityController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => DexAbilityView::class,
+		'viewMethod' => 'index',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', '/dex/types', [
+		'controllerClass' => DexTypesController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => DexTypesView::class,
+		'viewMethod' => 'index',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/dex/types/$typeIdentifier", [
+		'controllerClass' => DexTypeController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => DexTypeView::class,
 		'viewMethod' => 'index',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
