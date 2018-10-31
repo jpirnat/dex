@@ -1,10 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models;
+namespace Jp\Dex\Application\Models\Structs;
 
-use Jp\Dex\Application\Models\Structs\DexPokemon;
-use Jp\Dex\Application\Models\Structs\DexPokemonAbility;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Abilities\PokemonAbilityRepositoryInterface;
@@ -18,10 +16,10 @@ use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Versions\Generation;
 
-class DexPokemonModel
+class DexPokemonFactory
 {
-	/** @var DexPokemonTypesModel $dexPokemonTypesModel */
-	private $dexPokemonTypesModel;
+	/** @var DexTypeFactory $dexTypeFactory */
+	private $dexTypeFactory;
 
 	/** @var FormIconRepositoryInterface $formIconRepository */
 	private $formIconRepository;
@@ -47,7 +45,7 @@ class DexPokemonModel
 	/**
 	 * Constructor.
 	 *
-	 * @param DexPokemonTypesModel $dexPokemonTypesModel
+	 * @param DexTypeFactory $dexTypeFactory
 	 * @param FormIconRepositoryInterface $formIconRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
@@ -57,7 +55,7 @@ class DexPokemonModel
 	 * @param BaseStatRepositoryInterface $baseStatRepository
 	 */
 	public function __construct(
-		DexPokemonTypesModel $dexPokemonTypesModel,
+		DexTypeFactory $dexTypeFactory,
 		FormIconRepositoryInterface $formIconRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
@@ -66,7 +64,7 @@ class DexPokemonModel
 		AbilityNameRepositoryInterface $abilityNameRepository,
 		BaseStatRepositoryInterface $baseStatRepository
 	) {
-		$this->dexPokemonTypesModel = $dexPokemonTypesModel;
+		$this->dexTypeFactory = $dexTypeFactory;
 		$this->formIconRepository = $formIconRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
@@ -108,7 +106,7 @@ class DexPokemonModel
 		);
 
 		// Get the Pokémon's types.
-		$types = $this->dexPokemonTypesModel->getDexPokemonTypes(
+		$types = $this->dexTypeFactory->getByPokemon(
 			$generation,
 			$pokemonId,
 			$languageId

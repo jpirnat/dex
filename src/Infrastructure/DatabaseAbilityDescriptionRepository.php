@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Abilities\AbilityDescription;
 use Jp\Dex\Domain\Abilities\AbilityDescriptionNotFoundException;
 use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
+use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\Generation;
 use PDO;

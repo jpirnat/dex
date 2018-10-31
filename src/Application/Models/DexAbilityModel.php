@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Application\Models\Structs\DexPokemon;
+use Jp\Dex\Application\Models\Structs\DexPokemonFactory;
 use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
@@ -13,8 +14,8 @@ use Jp\Dex\Domain\Versions\Generation;
 
 class DexAbilityModel
 {
-	/** @var DexPokemonModel $dexPokemonModel */
-	private $dexPokemonModel;
+	/** @var DexPokemonFactory $dexPokemonFactory */
+	private $dexPokemonFactory;
 
 	/** @var AbilityRepositoryInterface $abilityRepository */
 	private $abilityRepository;
@@ -42,20 +43,20 @@ class DexAbilityModel
 	/**
 	 * Constructor.
 	 *
-	 * @param DexPokemonModel $dexPokemonModel
+	 * @param DexPokemonFactory $dexPokemonFactory
 	 * @param AbilityRepositoryInterface $abilityRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
 	 * @param AbilityDescriptionRepositoryInterface $abilityDescriptionRepository
 	 * @param PokemonAbilityRepositoryInterface $pokemonAbilityRepository
 	 */
 	public function __construct(
-		DexPokemonModel $dexPokemonModel,
+		DexPokemonFactory $dexPokemonFactory,
 		AbilityRepositoryInterface $abilityRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
 		AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
 		PokemonAbilityRepositoryInterface $pokemonAbilityRepository
 	) {
-		$this->dexPokemonModel = $dexPokemonModel;
+		$this->dexPokemonFactory = $dexPokemonFactory;
 		$this->abilityRepository = $abilityRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
 		$this->abilityDescriptionRepository = $abilityDescriptionRepository;
@@ -103,7 +104,7 @@ class DexAbilityModel
 		$this->normalPokemon = [];
 		$this->hiddenPokemon = [];
 		foreach ($pokemonAbilities as $pokemonAbility) {
-			$dexPokemon = $this->dexPokemonModel->getDexPokemon(
+			$dexPokemon = $this->dexPokemonFactory->getDexPokemon(
 				$generation,
 				$pokemonAbility->getPokemonId(),
 				$languageId

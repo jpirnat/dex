@@ -14,7 +14,7 @@ class DexPokemon
 	/** @var string $pokemonName */
 	private $pokemonName;
 
-	/** @var DexPokemonType[] $types */
+	/** @var DexType[] $types */
 	private $types;
 
 	/** @var DexPokemonAbility[] $abilities */
@@ -29,7 +29,7 @@ class DexPokemon
 	 * @param string $formIcon
 	 * @param string $pokemonIdentifier
 	 * @param string $pokemonName
-	 * @param DexPokemonType[] $types
+	 * @param DexType[] $types
 	 * @param DexPokemonAbility[] $abilities
 	 * @param int[] $baseStats
 	 */
@@ -82,7 +82,7 @@ class DexPokemon
 	/**
 	 * Get the types.
 	 *
-	 * @return DexPokemonType[]
+	 * @return DexType[]
 	 */
 	public function getTypes() : array
 	{

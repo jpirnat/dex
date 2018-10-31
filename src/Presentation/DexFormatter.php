@@ -5,7 +5,7 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\Structs\DexPokemon;
 use Jp\Dex\Application\Models\Structs\DexPokemonAbility;
-use Jp\Dex\Application\Models\Structs\DexPokemonType;
+use Jp\Dex\Application\Models\Structs\DexType;
 
 class DexFormatter
 {
@@ -25,7 +25,7 @@ class DexFormatter
 				'formIcon' => $dexPokemon->getFormIcon(),
 				'identifier' => $dexPokemon->getPokemonIdentifier(),
 				'name' => $dexPokemon->getPokemonName(),
-				'types' => $this->formatDexPokemonTypes($dexPokemon->getTypes()),
+				'types' => $this->formatDexTypes($dexPokemon->getTypes()),
 				'abilities' => $this->formatDexPokemonAbilities($dexPokemon->getAbilities()),
 				'baseStats' => $dexPokemon->getBaseStats(),
 			];
@@ -35,24 +35,36 @@ class DexFormatter
 	}
 
 	/**
-	 * Transform an array of dex Pokémon type objects into a renderable data array.
+	 * Transform an array of dex type objects into a renderable data array.
 	 *
-	 * @param DexPokemonType[] $dexPokemonTypes
+	 * @param DexType[] $dexTypes
 	 *
 	 * @return array
 	 */
-	public function formatDexPokemonTypes(array $dexPokemonTypes) : array
+	public function formatDexTypes(array $dexTypes) : array
 	{
 		$types = [];
 
-		foreach ($dexPokemonTypes as $dexPokemonType) {
-			$types[] = [
-				'identifier' => $dexPokemonType->getTypeIdentifier(),
-				'icon' => $dexPokemonType->getTypeIcon(),
-			];
+		foreach ($dexTypes as $dexType) {
+			$types[] = $this->formatDexType($dexType);
 		}
 
 		return $types;
+	}
+
+	/**
+	 * Transform a dex type object into a renderable data array.
+	 *
+	 * @param DexType $dexType
+	 *
+	 * @return array
+	 */
+	public function formatDexType(DexType $dexType) : array
+	{
+		return [
+			'identifier' => $dexType->getTypeIdentifier(),
+			'icon' => $dexType->getTypeIcon(),
+		];
 	}
 
 	/**

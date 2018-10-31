@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Items\ItemDescription;
 use Jp\Dex\Domain\Items\ItemDescriptionNotFoundException;
 use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
+use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\Generation;
 use PDO;

@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
-use Jp\Dex\Application\Models\DexPokemonTypesModel;
-use Jp\Dex\Application\Models\Structs\DexPokemonType;
+use Jp\Dex\Application\Models\Structs\DexType;
+use Jp\Dex\Application\Models\Structs\DexTypeFactory;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Models\Model;
@@ -19,8 +19,8 @@ use Jp\Dex\Domain\Versions\Generation;
 
 class PokemonModel
 {
-	/** @var DexPokemonTypesModel $dexPokemonTypesModel */
-	private $dexPokemonTypesModel;
+	/** @var DexTypeFactory $dexTypeFactory */
+	private $dexTypeFactory;
 
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
@@ -41,7 +41,7 @@ class PokemonModel
 	/** @var Model $model */
 	private $model;
 
-	/** @var DexPokemonType[] $types */
+	/** @var DexType[] $types */
 	private $types = [];
 
 	/** @var StatData[] $statDatas */
@@ -50,20 +50,20 @@ class PokemonModel
 	/**
 	 * Constructor.
 	 *
-	 * @param DexPokemonTypesModel $dexPokemonTypesModel
+	 * @param DexTypeFactory $dexTypeFactory
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param ModelRepositoryInterface $modelRepository
 	 * @param BaseStatRepositoryInterface $baseStatRepository
 	 * @param StatNameRepositoryInterface $statNameRepository
 	 */
 	public function __construct(
-		DexPokemonTypesModel $dexPokemonTypesModel,
+		DexTypeFactory $dexTypeFactory,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		ModelRepositoryInterface $modelRepository,
 		BaseStatRepositoryInterface $baseStatRepository,
 		StatNameRepositoryInterface $statNameRepository
 	) {
-		$this->dexPokemonTypesModel = $dexPokemonTypesModel;
+		$this->dexTypeFactory = $dexTypeFactory;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->modelRepository = $modelRepository;
 		$this->baseStatRepository = $baseStatRepository;
@@ -100,7 +100,7 @@ class PokemonModel
 		);
 
 		// Get the Pokémon's types.
-		$this->types = $this->dexPokemonTypesModel->getDexPokemonTypes(
+		$this->types = $this->dexTypeFactory->getByPokemon(
 			$generation,
 			$pokemonId,
 			$languageId
@@ -156,7 +156,7 @@ class PokemonModel
 	/**
 	 * Get the types.
 	 *
-	 * @return DexPokemonType[]
+	 * @return DexType[]
 	 */
 	public function getTypes() : array
 	{

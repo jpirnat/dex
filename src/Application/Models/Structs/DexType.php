@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\Structs;
 
-class DexPokemonType
+class DexType
 {
 	/** @var string $typeIdentifier */
 	private $typeIdentifier;

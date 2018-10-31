@@ -172,7 +172,7 @@ class MovesetPokemonAveragedView
 
 				'pokemonName' => $pokemonName->getName(),
 				'model' => $model->getImage(),
-				'types' => $this->dexFormatter->formatDexPokemonTypes($pokemonModel->getTypes()),
+				'types' => $this->dexFormatter->formatDexTypes($pokemonModel->getTypes()),
 				'baseStats' => $baseStats,
 
 				// The main data.

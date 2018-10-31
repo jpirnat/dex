@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveDescription;
 use Jp\Dex\Domain\Moves\MoveDescriptionNotFoundException;
 use Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface;
-use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Versions\Generation;
 use PDO;
 

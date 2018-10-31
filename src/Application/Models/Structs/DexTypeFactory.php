@@ -1,9 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models;
+namespace Jp\Dex\Application\Models\Structs;
 
-use Jp\Dex\Application\Models\Structs\DexPokemonType;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
@@ -11,7 +10,7 @@ use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 
-class DexPokemonTypesModel
+class DexTypeFactory
 {
 	/** @var PokemonTypeRepositoryInterface $pokemonTypeRepository */
 	private $pokemonTypeRepository;
@@ -40,15 +39,15 @@ class DexPokemonTypesModel
 	}
 
 	/**
-	 * Get the dex Pokémon types for this Pokémon.
+	 * Get the dex types for this Pokémon.
 	 *
 	 * @param Generation $generation
 	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
 	 *
-	 * @return DexPokemonType[]
+	 * @return DexType[]
 	 */
-	public function getDexPokemonTypes(
+	public function getByPokemon(
 		Generation $generation,
 		PokemonId $pokemonId,
 		LanguageId $languageId
@@ -68,7 +67,7 @@ class DexPokemonTypesModel
 				$type->getId()
 			);
 
-			$types[] = new DexPokemonType(
+			$types[] = new DexType(
 				$type->getIdentifier(),
 				$typeIcon->getImage()
 			);
