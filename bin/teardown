@@ -1,0 +1,30 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config/environment.php';
+$container = require __DIR__ . '/../config/dependencies.php';
+
+/** @var PDO $database */
+$database = $container->get('$dbsetup');
+
+// Drop the stats schema, one table at a time.
+$tables = require __DIR__ . '/../sql/schema/stats/tables.php';
+$tables = array_reverse($tables);
+
+foreach ($tables as $table) {
+	$database->exec("DROP TABLE `$table`");
+	echo "Removed $table\n";
+}
+
+// Drop the dex schema, one table at a time.
+$tables = require __DIR__ . '/../sql/schema/dex/tables.php';
+$tables = array_reverse($tables);
+
+foreach ($tables as $table) {
+	$database->exec("DROP TABLE `$table`");
+	echo "Removed $table\n";
+}
+
+echo "Done!\n";
