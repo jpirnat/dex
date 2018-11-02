@@ -52,7 +52,7 @@ class DatabaseMoveDescriptionRepository implements MoveDescriptionRepositoryInte
 				AND `move_id` = :move_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -61,7 +61,7 @@ class DatabaseMoveDescriptionRepository implements MoveDescriptionRepositoryInte
 		if (!$result) {
 			throw new MoveDescriptionNotFoundException(
 				'No move description exists with generation '
-				. $generation->getValue() . ', language id '
+				. $generation->value() . ', language id '
 				. $languageId->value() . ', and move id ' . $moveId->value()
 				. '.'
 			);

@@ -3,28 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Versions;
 
-class Generation
+use Jp\Dex\Domain\EntityId;
+
+class Generation extends EntityId
 {
-	/** @var int $value */
-	private $value;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param int $value
-	 */
-	public function __construct(int $value)
-	{
-		$this->value = $value;
-	}
-
-	/**
-	 * Get the generation's value.
-	 *
-	 * @return int
-	 */
-	public function getValue() : int
-	{
-		return $this->value;
-	}
 }

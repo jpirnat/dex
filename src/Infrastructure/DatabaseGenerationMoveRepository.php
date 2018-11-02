@@ -76,7 +76,7 @@ class DatabaseGenerationMoveRepository implements GenerationMoveRepositoryInterf
 				AND `move_id` = :move_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -84,7 +84,7 @@ class DatabaseGenerationMoveRepository implements GenerationMoveRepositoryInterf
 		if (!$result) {
 			throw new GenerationMoveNotFoundException(
 				'No generation move exists with generation '
-				. $generation->getValue() . ' and move id ' . $moveId->value()
+				. $generation->value() . ' and move id ' . $moveId->value()
 				. '.'
 			);
 		}

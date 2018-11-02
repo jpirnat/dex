@@ -142,7 +142,7 @@ class DexPokemonFactory
 		$stats[] = $baseStats->get(new StatId(StatId::HP))->getValue();
 		$stats[] = $baseStats->get(new StatId(StatId::ATTACK))->getValue();
 		$stats[] = $baseStats->get(new StatId(StatId::DEFENSE))->getValue();
-		if ($generation->getValue() === 1) {
+		if ($generation->value() === 1) {
 			$stats[] = $baseStats->get(new StatId(StatId::SPECIAL))->getValue();
 		} else {
 			$stats[] = $baseStats->get(new StatId(StatId::SPECIAL_ATTACK))->getValue();

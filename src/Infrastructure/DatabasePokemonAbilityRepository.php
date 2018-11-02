@@ -47,7 +47,7 @@ class DatabasePokemonAbilityRepository implements PokemonAbilityRepositoryInterf
 				AND `pokemon_id` = :pokemon_id
 			ORDER BY `slot` ASC'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -89,7 +89,7 @@ class DatabasePokemonAbilityRepository implements PokemonAbilityRepositoryInterf
 			WHERE `generation` = :generation
 				AND `ability_id` = :ability_id'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 

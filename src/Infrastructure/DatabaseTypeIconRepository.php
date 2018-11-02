@@ -52,7 +52,7 @@ class DatabaseTypeIconRepository implements TypeIconRepositoryInterface
 				AND `type_id` = :type_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -60,7 +60,7 @@ class DatabaseTypeIconRepository implements TypeIconRepositoryInterface
 
 		if (!$result) {
 			throw new TypeIconNotFoundException(
-				'No type icon exists with generation ' . $generation->getValue()
+				'No type icon exists with generation ' . $generation->value()
 				. ', language id ' . $languageId->value()
 				. ', and type id ' . $typeId->value() . '.'
 			);
@@ -96,7 +96,7 @@ class DatabaseTypeIconRepository implements TypeIconRepositoryInterface
 			WHERE `generation` = :generation
 				AND `language_id` = :language_id'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 

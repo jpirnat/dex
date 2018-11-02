@@ -52,7 +52,7 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 				AND `ability_id` = :ability_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -61,7 +61,7 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 		if (!$result) {
 			throw new AbilityDescriptionNotFoundException(
 				'No ability description exists with generation '
-				. $generation->getValue() . ', language id '
+				. $generation->value() . ', language id '
 				. $languageId->value() . ', and ability id '
 				. $abilityId->value() . '.'
 			);
@@ -97,7 +97,7 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 			WHERE `generation` = :generation
 				AND `language_id` = :language_id'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 

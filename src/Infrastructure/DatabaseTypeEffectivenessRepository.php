@@ -41,7 +41,7 @@ class DatabaseTypeEffectivenessRepository implements TypeEffectivenessRepository
 			FROM `type_charts`
 			WHERE `generation` = :generation'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$typeEffectivenesses = [];

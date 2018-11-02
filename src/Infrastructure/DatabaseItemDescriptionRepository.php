@@ -52,7 +52,7 @@ class DatabaseItemDescriptionRepository implements ItemDescriptionRepositoryInte
 				AND `item_id` = :item_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -61,7 +61,7 @@ class DatabaseItemDescriptionRepository implements ItemDescriptionRepositoryInte
 		if (!$result) {
 			throw new ItemDescriptionNotFoundException(
 				'No item description exists with generation '
-				. $generation->getValue() . ', language id '
+				. $generation->value() . ', language id '
 				. $languageId->value() . ', and item id ' . $itemId->value()
 				. '.'
 			);

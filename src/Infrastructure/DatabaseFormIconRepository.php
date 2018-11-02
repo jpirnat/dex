@@ -54,7 +54,7 @@ class DatabaseFormIconRepository implements FormIconRepositoryInterface
 				AND `is_right` = :is_right
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':form_id', $formId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':is_female', $isFemale, PDO::PARAM_INT);
 		$stmt->bindValue(':is_right', $isRight, PDO::PARAM_INT);
@@ -63,7 +63,7 @@ class DatabaseFormIconRepository implements FormIconRepositoryInterface
 
 		if (!$result) {
 			throw new FormIconNotFoundException(
-				'No form icon exists with generation ' . $generation->getValue()
+				'No form icon exists with generation ' . $generation->value()
 				. ', form id ' . $formId->value()
 				. ', gender ' . ($isFemale ? 'female' : 'male')
 				. ', and direction ' . ($isRight ? 'right' : 'left') . '.'
@@ -105,7 +105,7 @@ class DatabaseFormIconRepository implements FormIconRepositoryInterface
 				AND `is_female` = :is_female
 				AND `is_right` = :is_right'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':is_female', $isFemale, PDO::PARAM_INT);
 		$stmt->bindValue(':is_right', $isRight, PDO::PARAM_INT);
 		$stmt->execute();

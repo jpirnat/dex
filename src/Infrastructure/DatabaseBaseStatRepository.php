@@ -46,7 +46,7 @@ class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 			WHERE `generation` = :generation
 				AND `pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':generation', $generation->getValue(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
