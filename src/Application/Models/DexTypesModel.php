@@ -56,7 +56,7 @@ class DexTypesModel
 	{
 		$generation = new Generation(7); // TODO
 
-		$types = $this->typeRepository->getMain();
+		$types = $this->typeRepository->getMainByGeneration($generation);
 
 		$typeIcons = $this->typeIconRepository->getByGenerationAndLanguage(
 			$generation,

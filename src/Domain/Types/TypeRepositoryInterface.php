@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Types;
 
+use Jp\Dex\Domain\Versions\Generation;
+
 interface TypeRepositoryInterface
 {
 	/**
@@ -29,9 +31,11 @@ interface TypeRepositoryInterface
 	public function getByHiddenPowerIndex(int $hiddenPowerIndex) : Type;
 
 	/**
-	 * Get the main types.
+	 * Get the main types available in this generation.
+	 *
+	 * @param Generation $generation
 	 *
 	 * @return Type[] Indexed by id.
 	 */
-	public function getMain() : array;
+	public function getMainByGeneration(Generation $generation) : array;
 }

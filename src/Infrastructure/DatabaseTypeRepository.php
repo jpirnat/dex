@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Types\Type;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Types\TypeNotFoundException;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
+use Jp\Dex\Domain\Versions\Generation;
 use PDO;
 
 class DatabaseTypeRepository implements TypeRepositoryInterface
@@ -39,6 +40,7 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`identifier`,
+				`introduced_in_generation`,
 				`category_id`,
 				`hidden_power_index`,
 				`color_code`
@@ -63,6 +65,7 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 		$type = new Type(
 			$typeId,
 			$result['identifier'],
+			new Generation($result['introduced_in_generation']),
 			$categoryId,
 			$result['hidden_power_index'],
 			$result['color_code']
@@ -87,6 +90,7 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 			'SELECT
 				`id`,
 				`identifier`,
+				`introduced_in_generation`,
 				`category_id`,
 				`color_code`
 			FROM `types`
@@ -110,6 +114,7 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 		$type = new Type(
 			new TypeId($result['id']),
 			$result['identifier'],
+			new Generation($result['introduced_in_generation']),
 			$categoryId,
 			$hiddenPowerIndex,
 			$result['color_code']
@@ -119,22 +124,27 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 	}
 
 	/**
-	 * Get the main types.
+	 * Get the main types available in this generation.
+	 *
+	 * @param Generation $generation
 	 *
 	 * @return Type[] Indexed by id.
 	 */
-	public function getMain() : array
+	public function getMainByGeneration(Generation $generation) : array
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				`id`,
 				`identifier`,
+				`introduced_in_generation`,
 				`hidden_power_index`,
 				`category_id`,
 				`color_code`
 			FROM `types`
-			WHERE `id` < 100'
+			WHERE `id` < 100
+				AND `introduced_in_generation` <= :generation'
 		);
+		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$types = [];
@@ -147,6 +157,7 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 			$type = new Type(
 				new TypeId($result['id']),
 				$result['identifier'],
+				new Generation($result['introduced_in_generation']),
 				$categoryId,
 				$result['hidden_power_index'],
 				$result['color_code']

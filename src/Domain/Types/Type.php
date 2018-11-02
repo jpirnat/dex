@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Types;
 
 use Jp\Dex\Domain\Moves\CategoryId;
+use Jp\Dex\Domain\Versions\Generation;
 
 class Type
 {
@@ -12,6 +13,9 @@ class Type
 
 	/** @var string $identifier */
 	private $identifier;
+
+	/** @var Generation $introducedInGeneration */
+	private $introducedInGeneration;
 
 	/** @var CategoryId|null $categoryId */
 	private $categoryId;
@@ -27,6 +31,7 @@ class Type
 	 *
 	 * @param TypeId $typeId
 	 * @param string $identifier
+	 * @param Generation $introducedInGeneration
 	 * @param CategoryId|null $categoryId
 	 * @param int|null $hiddenPowerIndex
 	 * @param string $colorCode
@@ -34,12 +39,14 @@ class Type
 	public function __construct(
 		TypeId $typeId,
 		string $identifier,
+		Generation $introducedInGeneration,
 		?CategoryId $categoryId,
 		?int $hiddenPowerIndex,
 		string $colorCode
 	) {
 		$this->id = $typeId;
 		$this->identifier = $identifier;
+		$this->introducedInGeneration = $introducedInGeneration;
 		$this->categoryId = $categoryId;
 		$this->hiddenPowerIndex = $hiddenPowerIndex;
 		$this->colorCode = $colorCode;
@@ -63,6 +70,16 @@ class Type
 	public function getIdentifier() : string
 	{
 		return $this->identifier;
+	}
+
+	/**
+	 * Get the generation this type was introduced in.
+	 *
+	 * @return Generation
+	 */
+	public function getIntroducedInGeneration() : Generation
+	{
+		return $this->introducedInGeneration;
 	}
 
 	/**
