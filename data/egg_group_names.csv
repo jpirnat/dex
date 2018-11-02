@@ -1,0 +1,106 @@
+language_id,egg_group_id,name
+1,1,怪獣グループ
+1,2,水中①グループ
+1,3,虫グループ
+1,4,飛行グループ
+1,5,陸上グループ
+1,6,妖精グループ
+1,7,植物グループ
+1,8,人型グループ
+1,9,水中③グループ
+1,10,鉱物グループ
+1,11,不定形グループ
+1,12,水中②グループ
+1,13,メタモングループ
+1,14,ドラゴングループ
+1,15,タマゴ未発見グループ
+2,1,Monster
+2,2,Water 1
+2,3,Bug
+2,4,Flying
+2,5,Field
+2,6,Fairy
+2,7,Grass
+2,8,Human-Like
+2,9,Water 3
+2,10,Mineral
+2,11,Amorphous
+2,12,Water 2
+2,13,Ditto
+2,14,Dragon
+2,15,Undiscovered
+3,1,Monstre
+3,2,Eau 1
+3,3,Insecte
+3,4,Vol
+3,5,Sol
+3,6,Fée
+3,7,Plante
+3,8,Humanoïde
+3,9,Eau 3
+3,10,Minéral
+3,11,Indéterminé
+3,12,Eau 2
+3,13,Métamorph
+3,14,Dragon
+3,15,Pas d'Oeufs
+4,1,Monster
+4,2,Wasser 1
+4,3,Käfer
+4,4,Flug
+4,5,Feld
+4,6,Fee
+4,7,Pflanze
+4,8,Humanotyp
+4,9,Wasser 3
+4,10,Mineral
+4,11,Amorph
+4,12,Wasser 2
+4,13,Ditto
+4,14,Drache
+4,15,Keine Eier
+5,1,Mostro
+5,2,Acqua 1
+5,3,Coleottero
+5,4,Volante
+5,5,Campo
+5,6,Magico
+5,7,Erba
+5,8,Umanoide
+5,9,Acqua 3
+5,10,Minerale
+5,11,Amorfo
+5,12,Acqua 2
+5,13,Ditto
+5,14,Drago
+5,15,Nessun Uovo
+6,1,Monstruo
+6,2,Agua 1
+6,3,Bicho
+6,4,Volador
+6,5,Campo
+6,6,Hada
+6,7,Planta
+6,8,Forma humana
+6,9,Agua 3
+6,10,Mineral
+6,11,Amorfo
+6,12,Agua 2
+6,13,Ditto
+6,14,Dragón
+6,15,No pone Huevos
+7,1,괴수
+7,2,수중1
+7,3,벌레
+7,4,비행
+7,5,육상
+7,6,요정
+7,7,식물
+7,8,인간형
+7,9,수중3
+7,10,광물
+7,11,부정형
+7,12,수중2
+7,13,메타몽
+7,14,드래곤
+7,15,알미발견

@@ -487,12 +487,16 @@ create table if not exists `types`
 `id` tinyint unsigned not null,
 
 `identifier` varchar(8) not null,
+`introduced_in_generation` tinyint unsigned not null,
 `category_id` tinyint unsigned null, # nullable
 `hidden_power_index` tinyint unsigned null, # nullable
 `color_code` char(7) not null,
 
 primary key (`id`),
 unique key (`identifier`),
+foreign key (`introduced_in_generation`) references `generations` (`generation`)
+	on delete restrict
+	on update cascade,
 foreign key (`category_id`) references `categories` (`id`)
 	on delete restrict
 	on update cascade,
@@ -1179,6 +1183,26 @@ create table if not exists `egg_groups`
 
 primary key (`id`),
 unique key (`identifier`)
+) engine = InnoDB;
+
+
+create table if not exists `egg_group_names`
+(
+`language_id` tinyint unsigned not null,
+`egg_group_id` tinyint unsigned not null,
+
+`name` varchar(14) not null,
+
+primary key (
+	`language_id`,
+	`egg_group_id`
+),
+foreign key (`language_id`) references `languages` (`id`)
+	on delete restrict
+	on update cascade,
+foreign key (`egg_group_id`) references `egg_groups` (`id`)
+	on delete restrict
+	on update cascade
 ) engine = InnoDB;
 
 

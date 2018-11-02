@@ -75,6 +75,7 @@ $tables = [
 	'generation_moves',
 	'flags',
 	'move_flags',
+	'technical_machines',
 	'move_methods',
 	'pokemon_moves',
 	'exclusive_z_moves',
@@ -101,6 +102,7 @@ $tables = [
 
 	// Egg groups
 	'egg_groups',
+	'egg_group_names',
 	'pokemon_egg_groups',
 
 	// Habitats
