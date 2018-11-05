@@ -1,4 +1,4 @@
-generation,language_id,type_id,image
+generation_id,language_id,type_id,image
 3,1,1,rs/jpn/normal.png
 3,1,2,rs/jpn/fighting.png
 3,1,3,rs/jpn/flying.png

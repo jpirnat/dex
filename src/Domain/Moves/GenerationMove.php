@@ -8,12 +8,12 @@ use Jp\Dex\Domain\Moves\Qualities\QualityId;
 use Jp\Dex\Domain\Moves\Targets\TargetId;
 use Jp\Dex\Domain\Moves\ZPowerEffects\ZPowerEffectId;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class GenerationMove
 {
-	/** @var Generation $generation */
-	private $generation;
+	/** @var GenerationId $generationId */
+	private $generationId;
 
 	/** @var MoveId $moveId */
 	private $moveId;
@@ -90,7 +90,7 @@ class GenerationMove
 	/**
 	 * Constructor.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param MoveId $moveId
 	 * @param TypeId $typeId
 	 * @param QualityId|null $qualityId
@@ -117,7 +117,7 @@ class GenerationMove
 	 * @param ZPowerEffectId|null $zPowerEffectId
 	 */
 	public function __construct(
-		Generation $generation,
+		GenerationId $generationId,
 		MoveId $moveId,
 		TypeId $typeId,
 		?QualityId $qualityId,
@@ -143,7 +143,7 @@ class GenerationMove
 		?int $zBasePower,
 		?ZPowerEffectId $zPowerEffectId
 	) {
-		$this->generation = $generation;
+		$this->generationId = $generationId;
 		$this->moveId = $moveId;
 		$this->typeId = $typeId;
 		$this->qualityId = $qualityId;
@@ -171,13 +171,13 @@ class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's generation.
+	 * Get the generation move's generation id.
 	 *
-	 * @return Generation
+	 * @return GenerationId
 	 */
-	public function getGeneration() : Generation
+	public function getGenerationId() : GenerationId
 	{
-		return $this->generation;
+		return $this->generationId;
 	}
 
 	/**

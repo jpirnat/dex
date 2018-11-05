@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeEffectivenessRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class DexTypesModel
 {
@@ -54,12 +54,12 @@ class DexTypesModel
 	 */
 	public function setData(LanguageId $languageId) : void
 	{
-		$generation = new Generation(7); // TODO
+		$generationId = new GenerationId(7); // TODO
 
-		$types = $this->typeRepository->getMainByGeneration($generation);
+		$types = $this->typeRepository->getMainByGeneration($generationId);
 
 		$typeIcons = $this->typeIconRepository->getByGenerationAndLanguage(
-			$generation,
+			$generationId,
 			$languageId
 		);
 
@@ -77,7 +77,7 @@ class DexTypesModel
 
 		// Get this generation's type chart.
 		$typeEffectivenesses = $this->typeEffectivenessRepository->getByGeneration(
-			$generation
+			$generationId
 		);
 		$this->factors = [];
 		foreach ($typeEffectivenesses as $typeEffectiveness) {

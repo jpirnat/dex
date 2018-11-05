@@ -99,7 +99,7 @@ class SpreadModel
 
 		// Get the Pokémon's base stats.
 		$baseStats = $this->baseStatRepository->getByGenerationAndPokemon(
-			$format->getGeneration(),
+			$format->getGenerationId(),
 			$pokemonId
 		);
 

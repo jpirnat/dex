@@ -1,15 +1,15 @@
 create table if not exists `shape_icons`
 (
-`generation` tinyint unsigned not null,
+`generation_id` tinyint unsigned not null,
 `shape_id` tinyint unsigned not null,
 
 `image` varchar(23) not null,
 
 primary key (
-	`generation`,
+	`generation_id`,
 	`shape_id`
 ),
-foreign key (`generation`) references `generations` (`generation`)
+foreign key (`generation_id`) references `generations` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`shape_id`) references `shapes` (`id`)

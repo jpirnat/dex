@@ -4,12 +4,12 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Items;
 
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class ItemDescription
 {
-	/** @var Generation $generation */
-	private $generation;
+	/** @var GenerationId $generationId */
+	private $generationId;
 
 	/** @var LanguageId $languageId */
 	private $languageId;
@@ -23,31 +23,31 @@ class ItemDescription
 	/**
 	 * Constructor.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 * @param ItemId $itemId
 	 * @param string $description
 	 */
 	public function __construct(
-		Generation $generation,
+		GenerationId $generationId,
 		LanguageId $languageId,
 		ItemId $itemId,
 		string $description
 	) {
-		$this->generation = $generation;
+		$this->generationId = $generationId;
 		$this->languageId = $languageId;
 		$this->itemId = $itemId;
 		$this->description = $description;
 	}
 
 	/**
-	 * Get the item description's generation.
+	 * Get the item description's generation id.
 	 *
-	 * @return Generation
+	 * @return GenerationId
 	 */
-	public function getGeneration() : Generation
+	public function getGenerationId() : GenerationId
 	{
-		return $this->generation;
+		return $this->generationId;
 	}
 
 	/**

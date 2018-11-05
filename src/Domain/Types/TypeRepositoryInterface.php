@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Types;
 
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 interface TypeRepositoryInterface
 {
@@ -33,9 +33,9 @@ interface TypeRepositoryInterface
 	/**
 	 * Get the main types available in this generation.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 *
 	 * @return Type[] Indexed by id.
 	 */
-	public function getMainByGeneration(Generation $generation) : array;
+	public function getMainByGeneration(GenerationId $generationId) : array;
 }

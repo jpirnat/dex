@@ -1,4 +1,4 @@
-generation,pokemon_id,stat_id,value
+generation_id,pokemon_id,stat_id,value
 1,1,1,45
 1,1,2,49
 1,1,3,49

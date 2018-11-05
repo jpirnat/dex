@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
 class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
@@ -29,13 +29,13 @@ class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	/**
 	 * Get a Pokémon's base stats by generation and Pokémon.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param PokemonId $pokemonId
 	 *
 	 * @return StatValueContainer
 	 */
 	public function getByGenerationAndPokemon(
-		Generation $generation,
+		GenerationId $generationId,
 		PokemonId $pokemonId
 	) : StatValueContainer {
 		$stmt = $this->db->prepare(
@@ -43,10 +43,10 @@ class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 				`stat_id`,
 				`value`
 			FROM `base_stats`
-			WHERE `generation` = :generation
+			WHERE `generation_id` = :generation_id
 				AND `pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 

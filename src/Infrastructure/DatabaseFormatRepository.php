@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatNotFoundException;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
 class DatabaseFormatRepository implements FormatRepositoryInterface
@@ -39,7 +39,7 @@ class DatabaseFormatRepository implements FormatRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`identifier`,
-				`generation`,
+				`generation_id`,
 				`level`,
 				`field_size`,
 				`team_size`,
@@ -61,7 +61,7 @@ class DatabaseFormatRepository implements FormatRepositoryInterface
 		$format = new Format(
 			$formatId,
 			$result['identifier'],
-			new Generation($result['generation']),
+			new GenerationId($result['generation_id']),
 			$result['level'],
 			$result['field_size'],
 			$result['team_size'],
@@ -85,7 +85,7 @@ class DatabaseFormatRepository implements FormatRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`id`,
-				`generation`,
+				`generation_id`,
 				`level`,
 				`field_size`,
 				`team_size`,
@@ -107,7 +107,7 @@ class DatabaseFormatRepository implements FormatRepositoryInterface
 		$format = new Format(
 			new FormatId($result['id']),
 			$identifier,
-			new Generation($result['generation']),
+			new GenerationId($result['generation_id']),
 			$result['level'],
 			$result['field_size'],
 			$result['team_size'],

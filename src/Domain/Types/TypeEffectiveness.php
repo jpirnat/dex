@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Types;
 
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class TypeEffectiveness
 {
-	/** @var Generation $generation */
-	private $generation;
+	/** @var GenerationId $generationId */
+	private $generationId;
 
 	/** @var TypeId $attackingTypeId */
 	private $attackingTypeId;
@@ -22,31 +22,31 @@ class TypeEffectiveness
 	/**
 	 * Constructor.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param TypeId $attackingTypeId
 	 * @param TypeId $defendingTypeId
 	 * @param float $factor
 	 */
 	public function __construct(
-		Generation $generation,
+		GenerationId $generationId,
 		TypeId $attackingTypeId,
 		TypeId $defendingTypeId,
 		float $factor
 	) {
-		$this->generation = $generation;
+		$this->generationId = $generationId;
 		$this->attackingTypeId = $attackingTypeId;
 		$this->defendingTypeId = $defendingTypeId;
 		$this->factor = $factor;
 	}
 
 	/**
-	 * Get the type effectiveness's generation.
+	 * Get the type effectiveness's generation id.
 	 *
-	 * @return Generation
+	 * @return GenerationId
 	 */
-	public function getGeneration() : Generation
+	public function getGenerationId() : GenerationId
 	{
-		return $this->generation;
+		return $this->generationId;
 	}
 
 	/**

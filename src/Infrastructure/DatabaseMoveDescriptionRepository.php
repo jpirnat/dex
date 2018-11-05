@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Moves\MoveDescription;
 use Jp\Dex\Domain\Moves\MoveDescriptionNotFoundException;
 use Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
 class DatabaseMoveDescriptionRepository implements MoveDescriptionRepositoryInterface
@@ -29,7 +29,7 @@ class DatabaseMoveDescriptionRepository implements MoveDescriptionRepositoryInte
 	/**
 	 * Get a move description by generation, language, and move.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 * @param MoveId $moveId
 	 *
@@ -39,7 +39,7 @@ class DatabaseMoveDescriptionRepository implements MoveDescriptionRepositoryInte
 	 * @return MoveDescription
 	 */
 	public function getByGenerationAndLanguageAndMove(
-		Generation $generation,
+		GenerationId $generationId,
 		LanguageId $languageId,
 		MoveId $moveId
 	) : MoveDescription {
@@ -47,12 +47,12 @@ class DatabaseMoveDescriptionRepository implements MoveDescriptionRepositoryInte
 			'SELECT
 				`description`
 			FROM `move_descriptions`
-			WHERE `generation` = :generation
+			WHERE `generation_id` = :generation_id
 				AND `language_id` = :language_id
 				AND `move_id` = :move_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -60,15 +60,15 @@ class DatabaseMoveDescriptionRepository implements MoveDescriptionRepositoryInte
 
 		if (!$result) {
 			throw new MoveDescriptionNotFoundException(
-				'No move description exists with generation '
-				. $generation->value() . ', language id '
+				'No move description exists with generation id '
+				. $generationId->value() . ', language id '
 				. $languageId->value() . ', and move id ' . $moveId->value()
 				. '.'
 			);
 		}
 
 		$moveDescription = new MoveDescription(
-			$generation,
+			$generationId,
 			$languageId,
 			$moveId,
 			$result['description']

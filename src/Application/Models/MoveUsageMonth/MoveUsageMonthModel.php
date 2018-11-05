@@ -193,7 +193,7 @@ class MoveUsageMonthModel
 
 		// Get the move description.
 		$this->moveDescription = $this->moveDescriptionRepository->getByGenerationAndLanguageAndMove(
-			$format->getGeneration(),
+			$format->getGenerationId(),
 			$languageId,
 			$move->getId()
 		);
@@ -229,7 +229,7 @@ class MoveUsageMonthModel
 
 			// Get this Pokémon's form icon.
 			$formIcon = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
-				$format->getGeneration(),
+				$format->getGenerationId(),
 				new FormId($pokemonId->value()), // A Pokémon's default form has Pokémon id === form id.
 				false,
 				false

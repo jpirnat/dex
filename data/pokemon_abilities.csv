@@ -1,4 +1,4 @@
-generation,pokemon_id,slot,ability_id,is_hidden_ability
+generation_id,pokemon_id,slot,ability_id,is_hidden_ability
 3,1,1,65,0
 3,2,1,65,0
 3,3,1,65,0

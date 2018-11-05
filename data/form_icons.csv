@@ -1,4 +1,4 @@
-generation,form_id,is_female,is_right,image
+generation_id,form_id,is_female,is_right,image
 1,1,0,0,rb/plant.gif
 1,2,0,0,rb/plant.gif
 1,3,0,0,rb/plant.gif

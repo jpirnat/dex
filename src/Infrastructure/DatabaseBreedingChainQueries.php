@@ -36,7 +36,7 @@ class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 			INNER JOIN `version_groups` AS `vg`
 				ON `p`.`introduced_in_version_group_id` = `vg`.`id`
 			WHERE `p`.`gender_ratio` = 100
-				AND `vg`.`generation` < 6'
+				AND `vg`.`generation_id` < 6'
 		);
 		return $stmt->fetchAll(PDO::FETCH_COLUMN);
 	}
@@ -165,14 +165,14 @@ class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 				`pm`.`move_method_id` AS `moveMethodId`,
 				`pm`.`level`,
 				`pm`.`sort`,
-				`vg`.`generation`
+				`vg`.`generation_id`
 			FROM `pokemon_moves` AS `pm`
 			INNER JOIN `version_groups` AS `vg`
 				ON `pm`.`version_group_id` = `vg`.`id`
-			WHERE `vg`.`generation` BETWEEN 3 AND
+			WHERE `vg`.`generation_id` BETWEEN 3 AND
 				(
 					SELECT
-						`generation`
+						`generation_id`
 					FROM `version_groups`
 					WHERE `id` = $versionGroupId
 					LIMIT 1
@@ -181,7 +181,7 @@ class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 				AND `pm`.`move_method_id` <> $egg
 				AND `pm`.`pokemon_id` IN ($inSameEggGroup)
 			ORDER BY
-				`generation` DESC,
+				`generation_id` DESC,
 				`version_group_id` DESC"
 		);
 		// Prioritize newer generations, and newer versions within those
@@ -213,14 +213,14 @@ class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 				`pm`.`move_method_id` AS `moveMethodId`,
 				`pm`.`level`,
 				`pm`.`sort`,
-				`vg`.`generation`
+				`vg`.`generation_id`
 			FROM `pokemon_moves` AS `pm`
 			INNER JOIN `version_groups` AS `vg`
 				ON `pm`.`version_group_id` = `vg`.`id`
-			WHERE `vg`.`generation` BETWEEN 3 AND
+			WHERE `vg`.`generation_id` BETWEEN 3 AND
 				(
 					SELECT
-						`generation`
+						`generation_id`
 					FROM `version_groups`
 					WHERE `id` = $versionGroupId
 					LIMIT 1
@@ -229,7 +229,7 @@ class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 				AND `pm`.`move_method_id` = $egg
 				AND `pm`.`pokemon_id` IN ($inOtherEggGroup)
 			ORDER BY
-				`generation` DESC,
+				`generation_id` DESC,
 				`version_group_id` DESC"
 		);
 		// Prioritize newer generations, and newer versions within those

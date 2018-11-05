@@ -1,6 +1,6 @@
 create table if not exists `generation_moves`
 (
-`generation` tinyint unsigned not null,
+`generation_id` tinyint unsigned not null,
 `move_id` smallint unsigned not null,
 
 `type_id` tinyint unsigned not null,
@@ -28,10 +28,10 @@ create table if not exists `generation_moves`
 `z_power_effect_id` tinyint unsigned null, # nullable
 
 primary key (
-	`generation`,
+	`generation_id`,
 	`move_id`
 ),
-foreign key (`generation`) references `generations` (`generation`)
+foreign key (`generation_id`) references `generations` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`move_id`) references `moves` (`id`)

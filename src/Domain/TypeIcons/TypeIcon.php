@@ -5,12 +5,12 @@ namespace Jp\Dex\Domain\TypeIcons;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class TypeIcon
 {
-	/** @var Generation $generation */
-	private $generation;
+	/** @var GenerationId $generationId */
+	private $generationId;
 
 	/** @var LanguageId $languageId */
 	private $languageId;
@@ -24,18 +24,18 @@ class TypeIcon
 	/**
 	 * Constructor.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 * @param TypeId $typeId
 	 * @param string $image
 	 */
 	public function __construct(
-		Generation $generation,
+		GenerationId $generationId,
 		LanguageId $languageId,
 		TypeId $typeId,
 		string $image
 	) {
-		$this->generation = $generation;
+		$this->generationId = $generationId;
 		$this->languageId = $languageId;
 		$this->typeId = $typeId;
 		$this->image = $image;

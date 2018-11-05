@@ -4,14 +4,14 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\FormIcons;
 
 use Jp\Dex\Domain\Forms\FormId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 interface FormIconRepositoryInterface
 {
 	/**
 	 * Get a form icon by its generation, form, gender, and direction.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param FormId $formId
 	 * @param bool $isFemale
 	 * @param bool $isRight
@@ -22,7 +22,7 @@ interface FormIconRepositoryInterface
 	 * @return FormIcon
 	 */
 	public function getByGenerationAndFormAndFemaleAndRight(
-		Generation $generation,
+		GenerationId $generationId,
 		FormId $formId,
 		bool $isFemale,
 		bool $isRight
@@ -32,14 +32,14 @@ interface FormIconRepositoryInterface
 	 * Get form icons by their generation, gender, and direction. Indexed by
 	 * form id.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param bool $isFemale
 	 * @param bool $isRight
 	 *
 	 * @return FormIcon[]
 	 */
 	public function getByGenerationAndFemaleAndRight(
-		Generation $generation,
+		GenerationId $generationId,
 		bool $isFemale,
 		bool $isRight
 	) : array;

@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Items\ItemDescriptionNotFoundException;
 use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
 class DatabaseItemDescriptionRepository implements ItemDescriptionRepositoryInterface
@@ -29,7 +29,7 @@ class DatabaseItemDescriptionRepository implements ItemDescriptionRepositoryInte
 	/**
 	 * Get an item description by generation, language, and item.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 * @param ItemId $itemId
 	 *
@@ -39,7 +39,7 @@ class DatabaseItemDescriptionRepository implements ItemDescriptionRepositoryInte
 	 * @return ItemDescription
 	 */
 	public function getByGenerationAndLanguageAndItem(
-		Generation $generation,
+		GenerationId $generationId,
 		LanguageId $languageId,
 		ItemId $itemId
 	) : ItemDescription {
@@ -47,12 +47,12 @@ class DatabaseItemDescriptionRepository implements ItemDescriptionRepositoryInte
 			'SELECT
 				`description`
 			FROM `item_descriptions`
-			WHERE `generation` = :generation
+			WHERE `generation_id` = :generation_id
 				AND `language_id` = :language_id
 				AND `item_id` = :item_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -60,15 +60,15 @@ class DatabaseItemDescriptionRepository implements ItemDescriptionRepositoryInte
 
 		if (!$result) {
 			throw new ItemDescriptionNotFoundException(
-				'No item description exists with generation '
-				. $generation->value() . ', language id '
+				'No item description exists with generation id '
+				. $generationId->value() . ', language id '
 				. $languageId->value() . ', and item id ' . $itemId->value()
 				. '.'
 			);
 		}
 
 		$itemDescription = new ItemDescription(
-			$generation,
+			$generationId,
 			$languageId,
 			$itemId,
 			$result['description']

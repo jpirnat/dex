@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Abilities\PokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class DexAbilityModel
 {
@@ -75,7 +75,7 @@ class DexAbilityModel
 		string $abilityIdentifier,
 		LanguageId $languageId
 	) : void {
-		$generation = new Generation(7); // TODO
+		$generationId = new GenerationId(7); // TODO
 
 		$ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
 
@@ -85,7 +85,7 @@ class DexAbilityModel
 		);
 
 		$abilityDescription = $this->abilityDescriptionRepository->getByGenerationAndLanguageAndAbility(
-			$generation,
+			$generationId,
 			$languageId,
 			$ability->getId()
 		);
@@ -98,14 +98,14 @@ class DexAbilityModel
 
 		// Get Pokémon with this ability.
 		$pokemonAbilities = $this->pokemonAbilityRepository->getByGenerationAndAbility(
-			$generation,
+			$generationId,
 			$ability->getId()
 		);
 		$this->normalPokemon = [];
 		$this->hiddenPokemon = [];
 		foreach ($pokemonAbilities as $pokemonAbility) {
 			$dexPokemon = $this->dexPokemonFactory->getDexPokemon(
-				$generation,
+				$generationId,
 				$pokemonAbility->getPokemonId(),
 				$languageId
 			);

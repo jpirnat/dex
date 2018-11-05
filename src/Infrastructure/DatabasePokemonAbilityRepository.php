@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Abilities\PokemonAbility;
 use Jp\Dex\Domain\Abilities\PokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
 class DatabasePokemonAbilityRepository implements PokemonAbilityRepositoryInterface
@@ -28,13 +28,13 @@ class DatabasePokemonAbilityRepository implements PokemonAbilityRepositoryInterf
 	/**
 	 * Get a Pokémon's abilities by generation and Pokémon.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param PokemonId $pokemonId
 	 *
 	 * @return PokemonAbility[] Ordered by slot.
 	 */
 	public function getByGenerationAndPokemon(
-		Generation $generation,
+		GenerationId $generationId,
 		PokemonId $pokemonId
 	) : array {
 		$stmt = $this->db->prepare(
@@ -43,11 +43,11 @@ class DatabasePokemonAbilityRepository implements PokemonAbilityRepositoryInterf
 				`ability_id`,
 				`is_hidden_ability`
 			FROM `pokemon_abilities`
-			WHERE `generation` = :generation
+			WHERE `generation_id` = :generation_id
 				AND `pokemon_id` = :pokemon_id
 			ORDER BY `slot` ASC'
 		);
-		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -55,7 +55,7 @@ class DatabasePokemonAbilityRepository implements PokemonAbilityRepositoryInterf
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$pokemonAbility = new PokemonAbility(
-				$generation,
+				$generationId,
 				$pokemonId,
 				$result['slot'],
 				new AbilityId($result['ability_id']),
@@ -71,13 +71,13 @@ class DatabasePokemonAbilityRepository implements PokemonAbilityRepositoryInterf
 	/**
 	 * Get Pokémon abilities by generation and ability.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param AbilityId $abilityId
 	 *
 	 * @return PokemonAbility[]
 	 */
 	public function getByGenerationAndAbility(
-		Generation $generation,
+		GenerationId $generationId,
 		AbilityId $abilityId
 	) : array {
 		$stmt = $this->db->prepare(
@@ -86,10 +86,10 @@ class DatabasePokemonAbilityRepository implements PokemonAbilityRepositoryInterf
 				`slot`,
 				`is_hidden_ability`
 			FROM `pokemon_abilities`
-			WHERE `generation` = :generation
+			WHERE `generation_id` = :generation_id
 				AND `ability_id` = :ability_id'
 		);
-		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -97,7 +97,7 @@ class DatabasePokemonAbilityRepository implements PokemonAbilityRepositoryInterf
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$pokemonAbility = new PokemonAbility(
-				$generation,
+				$generationId,
 				new PokemonId($result['pokemon_id']),
 				$result['slot'],
 				$abilityId,

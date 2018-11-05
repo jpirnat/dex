@@ -114,7 +114,7 @@ class MovesetPokemonAveragedModel
 
 		// Get Pokémon data.
 		$this->pokemonModel->setData(
-			$format->getGeneration(),
+			$format->getGenerationId(),
 			$pokemon->getId(),
 			$languageId
 		);

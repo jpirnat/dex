@@ -108,14 +108,14 @@ class UsageMoveTrendGenerator
 
 		// Get the Pokémon's primary type.
 		$pokemonTypes = $this->pokemonTypeRepository->getByGenerationAndPokemon(
-			$format->getGeneration(),
+			$format->getGenerationId(),
 			$pokemonId
 		);
 		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());
 
 		// Get the move's type.
 		$generationMove = $this->generationMoveRepository->getByGenerationAndMove(
-			$format->getGeneration(),
+			$format->getGenerationId(),
 			$moveId
 		);
 		$moveType = $this->typeRepository->getById($generationMove->getTypeId());

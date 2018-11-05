@@ -15,7 +15,7 @@ use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class PokemonModel
 {
@@ -73,14 +73,14 @@ class PokemonModel
 	/**
 	 * Set miscellaneous data about the Pokémon (name, types, base stats, etc).
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
 	 *
 	 * @return void
 	 */
 	public function setData(
-		Generation $generation,
+		GenerationId $generationId,
 		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : void {
@@ -101,14 +101,14 @@ class PokemonModel
 
 		// Get the Pokémon's types.
 		$this->types = $this->dexTypeFactory->getByPokemon(
-			$generation,
+			$generationId,
 			$pokemonId,
 			$languageId
 		);
 
 		// Get the Pokémon's base stats.
 		$baseStats = $this->baseStatRepository->getByGenerationAndPokemon(
-			$generation,
+			$generationId,
 			$pokemonId
 		);
 

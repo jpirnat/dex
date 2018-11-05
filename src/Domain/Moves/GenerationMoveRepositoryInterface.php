@@ -3,14 +3,14 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Moves;
 
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 interface GenerationMoveRepositoryInterface
 {
 	/**
 	 * Get a generation move by its generation and move.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param MoveId $moveId
 	 *
 	 * @throws GenerationMoveNotFoundException if no generation move exists with
@@ -19,7 +19,7 @@ interface GenerationMoveRepositoryInterface
 	 * @return GenerationMove
 	 */
 	public function getByGenerationAndMove(
-		Generation $generation,
+		GenerationId $generationId,
 		MoveId $moveId
 	) : GenerationMove;
 }

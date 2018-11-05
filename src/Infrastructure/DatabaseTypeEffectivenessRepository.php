@@ -6,7 +6,7 @@ namespace Jp\Dex\Infrastructure;
 use Jp\Dex\Domain\Types\TypeEffectiveness;
 use Jp\Dex\Domain\Types\TypeEffectivenessRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
 class DatabaseTypeEffectivenessRepository implements TypeEffectivenessRepositoryInterface
@@ -27,28 +27,28 @@ class DatabaseTypeEffectivenessRepository implements TypeEffectivenessRepository
 	/**
 	 * Get type effectivenesses by generation.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 *
 	 * @return TypeEffectiveness[]
 	 */
-	public function getByGeneration(Generation $generation) : array
+	public function getByGeneration(GenerationId $generationId) : array
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				`attacking_type_id`,
 				`defending_type_id`,
 				`factor`
-			FROM `type_charts`
-			WHERE `generation` = :generation'
+			FROM `type_effectivenesses`
+			WHERE `generation_id` = :generation_id'
 		);
-		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$typeEffectivenesses = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$typeEffectiveness = new TypeEffectiveness(
-				$generation,
+				$generationId,
 				new TypeId($result['attacking_type_id']),
 				new TypeId($result['defending_type_id']),
 				(float) $result['factor']

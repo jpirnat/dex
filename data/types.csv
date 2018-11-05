@@ -1,4 +1,4 @@
-id,identifier,introduced_in_generation,category_id,hidden_power_index,color_code
+id,identifier,introduced_in_generation_id,category_id,hidden_power_index,color_code
 1,normal,1,1,\N,#a8a878
 2,fighting,1,1,0,#c03028
 3,flying,1,1,1,#a890f0

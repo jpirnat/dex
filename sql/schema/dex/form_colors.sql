@@ -1,15 +1,15 @@
 create table if not exists `form_colors`
 (
-`generation` tinyint unsigned not null,
+`generation_id` tinyint unsigned not null,
 `form_id` smallint unsigned not null,
 
 `color_id` tinyint unsigned not null,
 
 primary key (
-	`generation`,
+	`generation_id`,
 	`form_id`
 ),
-foreign key (`generation`) references `generations` (`generation`)
+foreign key (`generation_id`) references `generations` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`form_id`) references `forms` (`id`)

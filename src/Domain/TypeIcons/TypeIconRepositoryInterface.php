@@ -5,14 +5,14 @@ namespace Jp\Dex\Domain\TypeIcons;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 interface TypeIconRepositoryInterface
 {
 	/**
 	 * Get a type icon by its generation, language, and type.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 * @param TypeId $typeId
 	 *
@@ -22,7 +22,7 @@ interface TypeIconRepositoryInterface
 	 * @return TypeIcon
 	 */
 	public function getByGenerationAndLanguageAndType(
-		Generation $generation,
+		GenerationId $generationId,
 		LanguageId $languageId,
 		TypeId $typeId
 	) : TypeIcon;
@@ -30,13 +30,13 @@ interface TypeIconRepositoryInterface
 	/**
 	 * Get type icons by their generation and language.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 *
 	 * @return TypeIcon[] Indexed by type id.
 	 */
 	public function getByGenerationAndLanguage(
-		Generation $generation,
+		GenerationId $generationId,
 		LanguageId $languageId
 	) : array;
 }

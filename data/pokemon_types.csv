@@ -1,4 +1,4 @@
-generation,pokemon_id,slot,type_id
+generation_id,pokemon_id,slot,type_id
 1,1,1,12
 1,1,2,4
 1,2,1,12

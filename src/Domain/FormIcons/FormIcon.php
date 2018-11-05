@@ -4,12 +4,12 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\FormIcons;
 
 use Jp\Dex\Domain\Forms\FormId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class FormIcon
 {
-	/** @var Generation $generation */
-	private $generation;
+	/** @var GenerationId $generationId */
+	private $generationId;
 
 	/** @var FormId $formId */
 	private $formId;
@@ -26,20 +26,20 @@ class FormIcon
 	/**
 	 * Constructor.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param FormId $formId
 	 * @param bool $isFemale
 	 * @param bool $isRight
 	 * @param string $image
 	 */
 	public function __construct(
-		Generation $generation,
+		GenerationId $generationId,
 		FormId $formId,
 		bool $isFemale,
 		bool $isRight,
 		string $image
 	) {
-		$this->generation = $generation;
+		$this->generationId = $generationId;
 		$this->formId = $formId;
 		$this->isFemale = $isFemale;
 		$this->isRight = $isRight;

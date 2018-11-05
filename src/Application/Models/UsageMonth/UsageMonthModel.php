@@ -203,7 +203,7 @@ class UsageMonthModel
 
 		// Get form icons.
 		$formIcons = $this->formIconRepository->getByGenerationAndFemaleAndRight(
-			$format->getGeneration(),
+			$format->getGenerationId(),
 			false,
 			false
 		);

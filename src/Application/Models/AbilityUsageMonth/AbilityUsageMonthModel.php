@@ -193,7 +193,7 @@ class AbilityUsageMonthModel
 
 		// Get the ability description.
 		$this->abilityDescription = $this->abilityDescriptionRepository->getByGenerationAndLanguageAndAbility(
-			$format->getGeneration(),
+			$format->getGenerationId(),
 			$languageId,
 			$ability->getId()
 		);
@@ -229,7 +229,7 @@ class AbilityUsageMonthModel
 
 			// Get this Pokémon's form icon.
 			$formIcon = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
-				$format->getGeneration(),
+				$format->getGenerationId(),
 				new FormId($pokemonId->value()), // A Pokémon's default form has Pokémon id === form id.
 				false,
 				false

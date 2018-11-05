@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class DexPokemonFactory
 {
@@ -77,20 +77,20 @@ class DexPokemonFactory
 	/**
 	 * Get the dex Pokémon for this Pokémon.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
 	 *
 	 * @return DexPokemon
 	 */
 	public function getDexPokemon(
-		Generation $generation,
+		GenerationId $generationId,
 		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : DexPokemon {
 		// Get the Pokémon's form icon.
 		$formIcon = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
-			$generation,
+			$generationId,
 			new FormId($pokemonId->value()),
 			false,
 			false
@@ -107,14 +107,14 @@ class DexPokemonFactory
 
 		// Get the Pokémon's types.
 		$types = $this->dexTypeFactory->getByPokemon(
-			$generation,
+			$generationId,
 			$pokemonId,
 			$languageId
 		);
 
 		// Get the Pokémon's abilities.
 		$pokemonAbilities = $this->pokemonAbilityRepository->getByGenerationAndPokemon(
-			$generation,
+			$generationId,
 			$pokemonId
 		);
 		$abilities = [];
@@ -134,7 +134,7 @@ class DexPokemonFactory
 
 		// Get the Pokémon's base stats.
 		$baseStats = $this->baseStatRepository->getByGenerationAndPokemon(
-			$generation,
+			$generationId,
 			$pokemonId
 		);
 		$stats = [];
@@ -142,7 +142,7 @@ class DexPokemonFactory
 		$stats[] = $baseStats->get(new StatId(StatId::HP))->getValue();
 		$stats[] = $baseStats->get(new StatId(StatId::ATTACK))->getValue();
 		$stats[] = $baseStats->get(new StatId(StatId::DEFENSE))->getValue();
-		if ($generation->value() === 1) {
+		if ($generationId->value() === 1) {
 			$stats[] = $baseStats->get(new StatId(StatId::SPECIAL))->getValue();
 		} else {
 			$stats[] = $baseStats->get(new StatId(StatId::SPECIAL_ATTACK))->getValue();

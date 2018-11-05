@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Abilities\AbilityDescriptionNotFoundException;
 use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
 class DatabaseAbilityDescriptionRepository implements AbilityDescriptionRepositoryInterface
@@ -29,7 +29,7 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 	/**
 	 * Get an ability description by generation, language, and ability.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 * @param AbilityId $abilityId
 	 *
@@ -39,7 +39,7 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 	 * @return AbilityDescription
 	 */
 	public function getByGenerationAndLanguageAndAbility(
-		Generation $generation,
+		GenerationId $generationId,
 		LanguageId $languageId,
 		AbilityId $abilityId
 	) : AbilityDescription {
@@ -47,12 +47,12 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 			'SELECT
 				`description`
 			FROM `ability_descriptions`
-			WHERE `generation` = :generation
+			WHERE `generation_id` = :generation_id
 				AND `language_id` = :language_id
 				AND `ability_id` = :ability_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -60,15 +60,15 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 
 		if (!$result) {
 			throw new AbilityDescriptionNotFoundException(
-				'No ability description exists with generation '
-				. $generation->value() . ', language id '
+				'No ability description exists with generation id '
+				. $generationId->value() . ', language id '
 				. $languageId->value() . ', and ability id '
 				. $abilityId->value() . '.'
 			);
 		}
 
 		$abilityDescription = new AbilityDescription(
-			$generation,
+			$generationId,
 			$languageId,
 			$abilityId,
 			$result['description']
@@ -80,13 +80,13 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 	/**
 	 * Get ability descriptions by generation and language.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 *
 	 * @return AbilityDescription[] Indexed by ability id.
 	 */
 	public function getByGenerationAndLanguage(
-		Generation $generation,
+		GenerationId $generationId,
 		LanguageId $languageId
 	) : array {
 		$stmt = $this->db->prepare(
@@ -94,10 +94,10 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 				`ability_id`,
 				`description`
 			FROM `ability_descriptions`
-			WHERE `generation` = :generation
+			WHERE `generation_id` = :generation_id
 				AND `language_id` = :language_id'
 		);
-		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -105,7 +105,7 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$abilityDescription = new AbilityDescription(
-				$generation,
+				$generationId,
 				$languageId,
 				new AbilityId($result['ability_id']),
 				$result['description']

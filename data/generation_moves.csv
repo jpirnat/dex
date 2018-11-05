@@ -1,4 +1,4 @@
-generation,move_id,type_id,quality_id,category_id,power,accuracy,pp,priority,min_hits,max_hits,infliction_id,infliction_percent,min_turns,max_turns,crit_stage,flinch_percent,effect,effect_percent,recoil_percent,heal_percent,target_id,z_move_id,z_base_power,z_power_effect
+generation_id,move_id,type_id,quality_id,category_id,power,accuracy,pp,priority,min_hits,max_hits,infliction_id,infliction_percent,min_turns,max_turns,crit_stage,flinch_percent,effect,effect_percent,recoil_percent,heal_percent,target_id,z_move_id,z_base_power,z_power_effect
 1,1,1,\N,1,40,100,35,0,0,0,\N,0,0,0,0,0,0,\N,0,0,1,\N,\N,\N
 1,2,1,\N,1,50,100,25,0,0,0,\N,0,0,0,1,0,0,\N,0,0,1,\N,\N,\N
 1,3,1,\N,1,15,85,10,0,2,5,\N,0,0,0,0,0,29,\N,0,0,1,\N,\N,\N

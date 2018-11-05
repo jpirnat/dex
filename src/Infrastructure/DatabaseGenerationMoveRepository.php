@@ -13,7 +13,7 @@ use Jp\Dex\Domain\Moves\Qualities\QualityId;
 use Jp\Dex\Domain\Moves\Targets\TargetId;
 use Jp\Dex\Domain\Moves\ZPowerEffects\ZPowerEffectId;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
 class DatabaseGenerationMoveRepository implements GenerationMoveRepositoryInterface
@@ -34,7 +34,7 @@ class DatabaseGenerationMoveRepository implements GenerationMoveRepositoryInterf
 	/**
 	 * Get a generation move by its generation and move.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param MoveId $moveId
 	 *
 	 * @throws GenerationMoveNotFoundException if no generation move exists with
@@ -43,7 +43,7 @@ class DatabaseGenerationMoveRepository implements GenerationMoveRepositoryInterf
 	 * @return GenerationMove
 	 */
 	public function getByGenerationAndMove(
-		Generation $generation,
+		GenerationId $generationId,
 		MoveId $moveId
 	) : GenerationMove {
 		$stmt = $this->db->prepare(
@@ -72,53 +72,38 @@ class DatabaseGenerationMoveRepository implements GenerationMoveRepositoryInterf
 				`z_base_power`,
 				`z_power_effect_id`
 			FROM `generation_moves`
-			WHERE `generation` = :generation
+			WHERE `generation_id` = :generation_id
 				AND `move_id` = :move_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation', $generation->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new GenerationMoveNotFoundException(
-				'No generation move exists with generation '
-				. $generation->value() . ' and move id ' . $moveId->value()
+				'No generation move exists with generation id '
+				. $generationId->value() . ' and move id ' . $moveId->value()
 				. '.'
 			);
 		}
 
-		if ($result['quality_id'] !== null) {
-			// The generation move has a quality.
-			$qualityId = new QualityId($result['quality_id']);
-		} else {
-			$qualityId = null;
-		}
-
-		if ($result['infliction_id'] !== null) {
-			// The generation move has an infliction.
-			$inflictionId = new InflictionId($result['infliction_id']);
-		} else {
-			$inflictionId = null;
-		}
-
-		if ($result['z_move_id'] !== null) {
-			// The generation move has a Z-Move.
-			$zMoveId = new MoveId($result['z_move_id']);
-		} else {
-			$zMoveId = null;
-		}
-
-		if ($result['z_power_effect_id'] !== null) {
-			// The generation move has a Z-Power Effect.
-			$zPowerEffectId = new ZPowerEffectId($result['z_power_effect_id']);
-		} else {
-			$zPowerEffectId = null;
-		}
+		$qualityId = $result['quality_id'] !== null
+			? new QualityId($result['quality_id'])
+			: null;
+		$inflictionId = $result['infliction_id'] !== null
+			? new InflictionId($result['infliction_id'])
+			: null;
+		$zMoveId = $result['z_move_id'] !== null
+			? new MoveId($result['z_move_id'])
+			: null;
+		$zPowerEffectId = $result['z_power_effect_id'] !== null
+			? new ZPowerEffectId($result['z_power_effect_id'])
+			: null;
 
 		$generationMove = new GenerationMove(
-			$generation,
+			$generationId,
 			$moveId,
 			new TypeId($result['type_id']),
 			$qualityId,

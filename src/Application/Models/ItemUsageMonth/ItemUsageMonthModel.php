@@ -193,7 +193,7 @@ class ItemUsageMonthModel
 
 		// Get the item description.
 		$this->itemDescription = $this->itemDescriptionRepository->getByGenerationAndLanguageAndItem(
-			$format->getGeneration(),
+			$format->getGenerationId(),
 			$languageId,
 			$item->getId()
 		);
@@ -229,7 +229,7 @@ class ItemUsageMonthModel
 
 			// Get this Pokémon's form icon.
 			$formIcon = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
-				$format->getGeneration(),
+				$format->getGenerationId(),
 				new FormId($pokemonId->value()), // A Pokémon's default form has Pokémon id === form id.
 				false,
 				false

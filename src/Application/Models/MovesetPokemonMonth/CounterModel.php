@@ -107,7 +107,7 @@ class CounterModel
 
 			// Get this counter's form icon.
 			$formIcon = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
-				$format->getGeneration(),
+				$format->getGenerationId(),
 				new FormId($pokemon->getId()->value()), // A Pokémon's default form has Pokémon id === form id.
 				false,
 				false

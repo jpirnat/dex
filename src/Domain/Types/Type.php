@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Types;
 
 use Jp\Dex\Domain\Moves\CategoryId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class Type
 {
@@ -14,8 +14,8 @@ class Type
 	/** @var string $identifier */
 	private $identifier;
 
-	/** @var Generation $introducedInGeneration */
-	private $introducedInGeneration;
+	/** @var GenerationId $introducedInGenerationId */
+	private $introducedInGenerationId;
 
 	/** @var CategoryId|null $categoryId */
 	private $categoryId;
@@ -31,7 +31,7 @@ class Type
 	 *
 	 * @param TypeId $typeId
 	 * @param string $identifier
-	 * @param Generation $introducedInGeneration
+	 * @param GenerationId $introducedInGenerationId
 	 * @param CategoryId|null $categoryId
 	 * @param int|null $hiddenPowerIndex
 	 * @param string $colorCode
@@ -39,14 +39,14 @@ class Type
 	public function __construct(
 		TypeId $typeId,
 		string $identifier,
-		Generation $introducedInGeneration,
+		GenerationId $introducedInGenerationId,
 		?CategoryId $categoryId,
 		?int $hiddenPowerIndex,
 		string $colorCode
 	) {
 		$this->id = $typeId;
 		$this->identifier = $identifier;
-		$this->introducedInGeneration = $introducedInGeneration;
+		$this->introducedInGenerationId = $introducedInGenerationId;
 		$this->categoryId = $categoryId;
 		$this->hiddenPowerIndex = $hiddenPowerIndex;
 		$this->colorCode = $colorCode;
@@ -75,11 +75,11 @@ class Type
 	/**
 	 * Get the generation this type was introduced in.
 	 *
-	 * @return Generation
+	 * @return GenerationId
 	 */
-	public function getIntroducedInGeneration() : Generation
+	public function getIntroducedInGenerationId() : GenerationId
 	{
-		return $this->introducedInGeneration;
+		return $this->introducedInGenerationId;
 	}
 
 	/**

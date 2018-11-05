@@ -101,7 +101,7 @@ class MovesetAbilityTrendGenerator
 
 		// Get the Pokémon's primary type.
 		$pokemonTypes = $this->pokemonTypeRepository->getByGenerationAndPokemon(
-			$format->getGeneration(),
+			$format->getGenerationId(),
 			$pokemonId
 		);
 		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());

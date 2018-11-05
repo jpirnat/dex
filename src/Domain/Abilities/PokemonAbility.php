@@ -4,12 +4,12 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Abilities;
 
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class PokemonAbility
 {
-	/** @var Generation $generation */
-	private $generation;
+	/** @var GenerationId $generationId */
+	private $generationId;
 
 	/** @var PokemonId $pokemonId */
 	private $pokemonId;
@@ -26,20 +26,20 @@ class PokemonAbility
 	/**
 	 * Constructor.
 	 *
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param PokemonId $pokemonId
 	 * @param int $slot
 	 * @param AbilityId $abilityId
 	 * @param bool $isHiddenAbility
 	 */
 	public function __construct(
-		Generation $generation,
+		GenerationId $generationId,
 		PokemonId $pokemonId,
 		int $slot,
 		AbilityId $abilityId,
 		bool $isHiddenAbility
 	) {
-		$this->generation = $generation;
+		$this->generationId = $generationId;
 		$this->pokemonId = $pokemonId;
 		$this->slot = $slot;
 		$this->abilityId = $abilityId;
@@ -47,13 +47,13 @@ class PokemonAbility
 	}
 
 	/**
-	 * Get the Pokémon ability's generation.
+	 * Get the Pokémon ability's generation id.
 	 *
-	 * @return Generation
+	 * @return GenerationId
 	 */
-	public function getGeneration() : Generation
+	public function getGenerationId() : GenerationId
 	{
-		return $this->generation;
+		return $this->generationId;
 	}
 
 	/**

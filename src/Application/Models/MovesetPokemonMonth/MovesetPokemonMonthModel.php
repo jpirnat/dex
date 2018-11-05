@@ -214,7 +214,7 @@ class MovesetPokemonMonthModel
 
 		// Get Pokémon data.
 		$this->pokemonModel->setData(
-			$format->getGeneration(),
+			$format->getGenerationId(),
 			$pokemon->getId(),
 			$languageId
 		);

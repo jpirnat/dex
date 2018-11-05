@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Formats;
 
-use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class Format
 {
@@ -13,8 +13,8 @@ class Format
 	/** @var string $identifier */
 	private $identifier;
 
-	/** @var Generation $generation */
-	private $generation;
+	/** @var GenerationId $generationId */
+	private $generationId;
 
 	/** @var int $level */
 	private $level;
@@ -33,7 +33,7 @@ class Format
 	 *
 	 * @param FormatId $formatId
 	 * @param string $identifier
-	 * @param Generation $generation
+	 * @param GenerationId $generationId
 	 * @param int $level
 	 * @param int $fieldSize
 	 * @param int $teamSize
@@ -42,7 +42,7 @@ class Format
 	public function __construct(
 		FormatId $formatId,
 		string $identifier,
-		Generation $generation,
+		GenerationId $generationId,
 		int $level,
 		int $fieldSize,
 		int $teamSize,
@@ -50,7 +50,7 @@ class Format
 	) {
 		$this->id = $formatId;
 		$this->identifier = $identifier;
-		$this->generation = $generation;
+		$this->generationId = $generationId;
 		$this->level = $level;
 		$this->fieldSize = $fieldSize;
 		$this->teamSize = $teamSize;
@@ -78,13 +78,13 @@ class Format
 	}
 
 	/**
-	 * Get the format's generation.
+	 * Get the format's generation id.
 	 *
-	 * @return Generation
+	 * @return GenerationId
 	 */
-	public function getGeneration() : Generation
+	public function getGenerationId() : GenerationId
 	{
-		return $this->generation;
+		return $this->generationId;
 	}
 
 	/**

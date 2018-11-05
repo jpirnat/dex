@@ -47,7 +47,7 @@ return [
 	'types',
 	'type_names',
 	'type_icons',
-	'type_charts',
+	'type_effectivenesses',
 	'pokemon_types',
 
 	// Moves
