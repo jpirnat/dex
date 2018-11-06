@@ -89,6 +89,7 @@ use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeEffectivenessRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
+use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 use Jp\Dex\Infrastructure\DatabaseAbilityDescriptionRepository;
 use Jp\Dex\Infrastructure\DatabaseAbilityNameRepository;
 use Jp\Dex\Infrastructure\DatabaseAbilityRepository;
@@ -98,6 +99,7 @@ use Jp\Dex\Infrastructure\DatabaseFormatNameRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
 use Jp\Dex\Infrastructure\DatabaseFormIconRepository;
 use Jp\Dex\Infrastructure\DatabaseGenerationMoveRepository;
+use Jp\Dex\Infrastructure\DatabaseGenerationRepository;
 use Jp\Dex\Infrastructure\DatabaseItemDescriptionRepository;
 use Jp\Dex\Infrastructure\DatabaseItemNameRepository;
 use Jp\Dex\Infrastructure\DatabaseItemRepository;
@@ -257,6 +259,9 @@ $container->dice()->addRule(FormIconRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseGenerationMoveRepository::class];
 $container->dice()->addRule(GenerationMoveRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseGenerationRepository::class];
+$container->dice()->addRule(GenerationRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseItemDescriptionRepository::class];
 $container->dice()->addRule(ItemDescriptionRepositoryInterface::class, $rule);
