@@ -50,6 +50,7 @@ $formatIdentifier = '{formatIdentifier:[-\w]+}';
 $rating = '{rating:\d+}';
 $pokemonIdentifier = '{pokemonIdentifier:[-\w]+}';
 $abilityIdentifier = '{abilityIdentifier:[-\w]+}';
+$generationIdentifier = '{generationIdentifier:[-\w]+}';
 $itemIdentifier = '{itemIdentifier:[-\w]+}';
 $moveIdentifier = '{moveIdentifier:[-\w]+}';
 $typeIdentifier = '{typeIdentifier:[-\w]+}';
@@ -69,7 +70,7 @@ $routes = [
 		],
 	]],
 
-	['GET', '/dex/abilities', [
+	['GET', "/dex/$generationIdentifier/abilities", [
 		'controllerClass' => DexAbilitiesController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => DexAbilitiesView::class,
@@ -80,7 +81,7 @@ $routes = [
 		],
 	]],
 
-	['GET', "/dex/abilities/$abilityIdentifier", [
+	['GET', "/dex/$generationIdentifier/abilities/$abilityIdentifier", [
 		'controllerClass' => DexAbilityController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => DexAbilityView::class,
@@ -91,7 +92,7 @@ $routes = [
 		],
 	]],
 
-	['GET', '/dex/types', [
+	['GET', "/dex/$generationIdentifier/types", [
 		'controllerClass' => DexTypesController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => DexTypesView::class,
@@ -102,7 +103,7 @@ $routes = [
 		],
 	]],
 
-	['GET', "/dex/types/$typeIdentifier", [
+	['GET', "/dex/$generationIdentifier/types/$typeIdentifier", [
 		'controllerClass' => DexTypeController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => DexTypeView::class,

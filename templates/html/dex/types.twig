@@ -13,7 +13,7 @@
 				<td></td>
 				{% for defendingType in types %}
 					<th scope="col">
-						<a href="/dex/types/{{ defendingType.identifier|e }}">
+						<a href="/dex/{{ generationIdentifier|e }}/types/{{ defendingType.identifier|e }}">
 							<img src="/images/types/{{ defendingType.icon|e }}">
 						</a>
 					</th>
@@ -24,7 +24,7 @@
 			{% for attackingType in types %}
 				<tr>
 					<th scope="row">
-						<a href="/dex/types/{{ attackingType.identifier|e }}">
+						<a href="/dex/{{ generationIdentifier|e }}/types/{{ attackingType.identifier|e }}">
 							<img src="/images/types/{{ attackingType.icon|e }}">
 						</a>
 					</th>

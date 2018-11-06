@@ -49,6 +49,9 @@ class DexAbilityView
 	 */
 	public function index() : ResponseInterface
 	{
+		$generationModel = $this->dexAbilityModel->getGenerationModel();
+		$generationIdentifier = $generationModel->getGeneration()->getIdentifier();
+
 		$ability = $this->dexAbilityModel->getAbility();
 
 		$normalPokemon = $this->dexAbilityModel->getNormalPokemon();
@@ -64,7 +67,7 @@ class DexAbilityView
 				'text' => 'Dex',
 			],
 			[
-				'url' => '/dex/abilities',
+				'url' => "/dex/$generationIdentifier/abilities",
 				'text' => 'Abilities',
 			],
 			[
@@ -77,6 +80,7 @@ class DexAbilityView
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Abilities - ' . $ability['name'],
 				'breadcrumbs' => $breadcrumbs,
+				'generationIdentifier' => $generationIdentifier,
 				'ability' => $ability,
 				'stats' => ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe', 'BST'],
 				// TODO: Pull these stat names from somewhere else.

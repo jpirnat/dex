@@ -43,6 +43,9 @@ class DexAbilitiesView
 	 */
 	public function index() : ResponseInterface
 	{
+		$generationModel = $this->dexAbilitiesModel->getGenerationModel();
+		$generationIdentifier = $generationModel->getGeneration()->getIdentifier();
+
 		$abilities = $this->dexAbilitiesModel->getAbilities();
 
 		uasort($abilities, function (array $a, array $b) : int {
@@ -64,6 +67,7 @@ class DexAbilitiesView
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Abilities',
 				'breadcrumbs' => $breadcrumbs,
+				'generationIdentifier' => $generationIdentifier,
 				'abilities' => $abilities,
 			]
 		);

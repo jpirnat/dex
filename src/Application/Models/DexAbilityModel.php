@@ -10,10 +10,12 @@ use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Abilities\PokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Versions\GenerationId;
 
 class DexAbilityModel
 {
+	/** @var GenerationModel $generationModel */
+	private $generationModel;
+
 	/** @var DexPokemonFactory $dexPokemonFactory */
 	private $dexPokemonFactory;
 
@@ -43,6 +45,7 @@ class DexAbilityModel
 	/**
 	 * Constructor.
 	 *
+	 * @param GenerationModel $generationModel
 	 * @param DexPokemonFactory $dexPokemonFactory
 	 * @param AbilityRepositoryInterface $abilityRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
@@ -50,12 +53,14 @@ class DexAbilityModel
 	 * @param PokemonAbilityRepositoryInterface $pokemonAbilityRepository
 	 */
 	public function __construct(
+		GenerationModel $generationModel,
 		DexPokemonFactory $dexPokemonFactory,
 		AbilityRepositoryInterface $abilityRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
 		AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
 		PokemonAbilityRepositoryInterface $pokemonAbilityRepository
 	) {
+		$this->generationModel = $generationModel;
 		$this->dexPokemonFactory = $dexPokemonFactory;
 		$this->abilityRepository = $abilityRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
@@ -66,16 +71,18 @@ class DexAbilityModel
 	/**
 	 * Set data for the /dex/abilities/ability-identifier page.
 	 *
+	 * @param string $generationIdentifier
 	 * @param string $abilityIdentifier
 	 * @param LanguageId $languageId
 	 *
 	 * @return void
 	 */
 	public function setData(
+		string $generationIdentifier,
 		string $abilityIdentifier,
 		LanguageId $languageId
 	) : void {
-		$generationId = new GenerationId(7); // TODO
+		$generationId = $this->generationModel->setGeneration($generationIdentifier);
 
 		$ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
 
@@ -116,6 +123,16 @@ class DexAbilityModel
 				$this->hiddenPokemon[] = $dexPokemon;
 			}
 		}
+	}
+
+	/**
+	 * Get the generation model.
+	 *
+	 * @return GenerationModel
+	 */
+	public function getGenerationModel() : GenerationModel
+	{
+		return $this->generationModel;
 	}
 
 	/**

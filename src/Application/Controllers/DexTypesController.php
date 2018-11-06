@@ -40,8 +40,9 @@ class DexTypesController
 	{
 		$this->baseController->setBaseVariables($request);
 
+		$generationIdentifier = $request->getAttribute('generationIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexTypesModel->setData($languageId);
+		$this->dexTypesModel->setData($generationIdentifier, $languageId);
 	}
 }

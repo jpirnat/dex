@@ -40,8 +40,9 @@ class DexAbilitiesController
 	{
 		$this->baseController->setBaseVariables($request);
 
+		$generationIdentifier = $request->getAttribute('generationIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexAbilitiesModel->setData($languageId);
+		$this->dexAbilitiesModel->setData($generationIdentifier, $languageId);
 	}
 }

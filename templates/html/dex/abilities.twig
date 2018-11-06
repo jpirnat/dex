@@ -12,7 +12,7 @@
 			{% for ability in abilities %}
 				<tr>
 					<td>
-						<a href="/dex/abilities/{{ ability.identifier|e }}">
+						<a href="/dex/{{ generationIdentifier|e }}/abilities/{{ ability.identifier|e }}">
 							{{ ability.name|e }}
 						</a>
 					</td>

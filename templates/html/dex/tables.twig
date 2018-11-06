@@ -18,13 +18,13 @@
 						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
 					</td>
 					<td>
-						<a href="/dex/pokemon/{{ pokemon.identifier|e }}">
+						<a href="/dex/{{ generationIdentifier|e }}/pokemon/{{ pokemon.identifier|e }}">
 							{{ pokemon.name|e }}
 						</a>
 					</td>
 					<td class="types">
 						{% for type in pokemon.types %}
-							<a href="/dex/types/{{ type.identifier|e }}">
+							<a href="/dex/{{ generationIdentifier|e }}/types/{{ type.identifier|e }}">
 								<img src="/images/types/{{ type.icon|e }}">
 							</a>
 						{% endfor %}
@@ -32,7 +32,7 @@
 					<td>
 						{% for ability in pokemon.abilities %}
 							<div>
-								<a href="/dex/abilities/{{ ability.identifier|e }}"
+								<a href="/dex/{{ generationIdentifier|e }}/abilities/{{ ability.identifier|e }}"
 									{% if ability.isHiddenAbility %}
 										class="hidden-ability"
 									{% endif %}

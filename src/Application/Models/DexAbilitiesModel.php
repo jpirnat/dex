@@ -7,10 +7,12 @@ use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Versions\GenerationId;
 
 class DexAbilitiesModel
 {
+	/** @var GenerationModel $generationModel */
+	private $generationModel;
+
 	/** @var AbilityRepositoryInterface $abilityRepository */
 	private $abilityRepository;
 
@@ -28,15 +30,18 @@ class DexAbilitiesModel
 	/**
 	 * Constructor.
 	 *
+	 * @param GenerationModel $generationModel
 	 * @param AbilityRepositoryInterface $abilityRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
 	 * @param AbilityDescriptionRepositoryInterface $abilityDescriptionRepository
 	 */
 	public function __construct(
+		GenerationModel $generationModel,
 		AbilityRepositoryInterface $abilityRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
 		AbilityDescriptionRepositoryInterface $abilityDescriptionRepository
 	) {
+		$this->generationModel = $generationModel;
 		$this->abilityRepository = $abilityRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
 		$this->abilityDescriptionRepository = $abilityDescriptionRepository;
@@ -45,13 +50,16 @@ class DexAbilitiesModel
 	/**
 	 * Set data for the /dex/abilities page.
 	 *
+	 * @param string $generationIdentifier
 	 * @param LanguageId $languageId
 	 *
 	 * @return void
 	 */
-	public function setData(LanguageId $languageId) : void
-	{
-		$generationId = new GenerationId(7); // TODO
+	public function setData(
+		string $generationIdentifier,
+		LanguageId $languageId
+	) : void {
+		$generationId = $this->generationModel->setGeneration($generationIdentifier);
 
 		$abilities = $this->abilityRepository->getAll();
 
@@ -76,6 +84,16 @@ class DexAbilitiesModel
 				'description' => $abilityDescription->getDescription(),
 			];
 		}
+	}
+
+	/**
+	 * Get the generation model.
+	 *
+	 * @return GenerationModel
+	 */
+	public function getGenerationModel() : GenerationModel
+	{
+		return $this->generationModel;
 	}
 
 	/**

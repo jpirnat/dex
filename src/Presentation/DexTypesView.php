@@ -43,6 +43,9 @@ class DexTypesView
 	 */
 	public function index() : ResponseInterface
 	{
+		$generationModel = $this->dexTypesModel->getGenerationModel();
+		$generationIdentifier = $generationModel->getGeneration()->getIdentifier();
+
 		$types = $this->dexTypesModel->getTypes();
 		$factors = $this->dexTypesModel->getFactors();
 
@@ -61,6 +64,7 @@ class DexTypesView
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Types',
 				'breadcrumbs' => $breadcrumbs,
+				'generationIdentifier' => $generationIdentifier,
 				'types' => $types,
 				'factors' => $factors,
 			]

@@ -7,10 +7,12 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeEffectivenessRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
-use Jp\Dex\Domain\Versions\GenerationId;
 
 class DexTypesModel
 {
+	/** @var GenerationModel $generationModel */
+	private $generationModel;
+
 	/** @var TypeRepositoryInterface $typeRepository */
 	private $typeRepository;
 
@@ -31,15 +33,18 @@ class DexTypesModel
 	/**
 	 * Constructor.
 	 *
+	 * @param GenerationModel $generationModel
 	 * @param TypeRepositoryInterface $typeRepository
 	 * @param TypeIconRepositoryInterface $typeIconRepository
 	 * @param TypeEffectivenessRepositoryInterface $typeEffectivenessRepository
 	 */
 	public function __construct(
+		GenerationModel $generationModel,
 		TypeRepositoryInterface $typeRepository,
 		TypeIconRepositoryInterface $typeIconRepository,
 		TypeEffectivenessRepositoryInterface $typeEffectivenessRepository
 	) {
+		$this->generationModel = $generationModel;
 		$this->typeRepository = $typeRepository;
 		$this->typeIconRepository = $typeIconRepository;
 		$this->typeEffectivenessRepository = $typeEffectivenessRepository;
@@ -48,13 +53,16 @@ class DexTypesModel
 	/**
 	 * Set data for the /dex/types page.
 	 *
+	 * @param string $generationIdentifier
 	 * @param LanguageId $languageId
 	 *
 	 * @return void
 	 */
-	public function setData(LanguageId $languageId) : void
-	{
-		$generationId = new GenerationId(7); // TODO
+	public function setData(
+		string $generationIdentifier,
+		LanguageId $languageId
+	) : void {
+		$generationId = $this->generationModel->setGeneration($generationIdentifier);
 
 		$types = $this->typeRepository->getMainByGeneration($generationId);
 
@@ -87,6 +95,16 @@ class DexTypesModel
 
 			$this->factors[$attackingTypeId][$defendingTypeId] = $factor;
 		}
+	}
+
+	/**
+	 * Get the generation model.
+	 *
+	 * @return GenerationModel
+	 */
+	public function getGenerationModel() : GenerationModel
+	{
+		return $this->generationModel;
 	}
 
 	/**
