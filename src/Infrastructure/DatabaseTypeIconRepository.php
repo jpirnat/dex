@@ -43,6 +43,10 @@ class DatabaseTypeIconRepository implements TypeIconRepositoryInterface
 		LanguageId $languageId,
 		TypeId $typeId
 	) : TypeIcon {
+		// HACK: Type icons are only guaranteed to exist for every language in
+		// the current generation.
+		$generationId = new GenerationId(GenerationId::CURRENT);
+
 		$stmt = $this->db->prepare(
 			'SELECT
 				`image`
@@ -88,6 +92,10 @@ class DatabaseTypeIconRepository implements TypeIconRepositoryInterface
 		GenerationId $generationId,
 		LanguageId $languageId
 	) : array {
+		// HACK: Type icons are only guaranteed to exist for every language in
+		// the current generation.
+		$generationId = new GenerationId(GenerationId::CURRENT);
+
 		$stmt = $this->db->prepare(
 			'SELECT
 				`type_id`,

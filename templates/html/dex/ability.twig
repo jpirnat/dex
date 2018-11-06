@@ -5,5 +5,5 @@
 {% block body %}
 	<p>{{ ability.name|e }}: {{ ability.description|e }}</p>
 
-	{{ dexTables.pokemonTable(stats, pokemon) }}
+	{{ dexTables.pokemonTable(generationIdentifier, stats, pokemon) }}
 {% endblock %}
