@@ -7,6 +7,7 @@ use Jp\Dex\Domain\Abilities\Ability;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Abilities\AbilityNotFoundException;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
+use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
@@ -103,19 +104,25 @@ class DatabaseAbilityRepository implements AbilityRepositoryInterface
 	}
 
 	/**
-	 * Get all abilities.
+	 * Get abilities in this generation.
 	 *
-	 * @return Ability[]
+	 * @param GenerationId $generationId
+	 *
+	 * @return Ability[] Indexed by id.
 	 */
-	public function getAll() : array
+	public function getByGeneration(GenerationId $generationId) : array
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`id`,
-				`identifier`,
-				`introduced_in_version_group_id`
-			FROM `abilities`'
+				`a`.`id`,
+				`a`.`identifier`,
+				`a`.`introduced_in_version_group_id`
+			FROM `abilities` AS `a`
+			INNER JOIN `version_groups` AS `vg`
+				ON `a`.`introduced_in_version_group_id` = `vg`.`id`
+			WHERE `vg`.`generation_id` <= :generation_id'
 		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$abilities = [];

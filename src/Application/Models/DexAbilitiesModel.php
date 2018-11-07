@@ -61,7 +61,7 @@ class DexAbilitiesModel
 	) : void {
 		$generationId = $this->generationModel->setGeneration($generationIdentifier);
 
-		$abilities = $this->abilityRepository->getAll();
+		$abilities = $this->abilityRepository->getByGeneration($generationId);
 
 		$abilityNames = $this->abilityNameRepository->getByLanguage($languageId);
 
