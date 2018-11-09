@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
-use Jp\Dex\Domain\Natures\NatureStatModifierRepositoryInterface;
+use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
@@ -28,8 +28,8 @@ class SpreadModel
 	/** @var BaseStatRepositoryInterface $baseStatRepository */
 	private $baseStatRepository;
 
-	/** @var NatureStatModifierRepositoryInterface $natureStatModifierRepository */
-	private $natureStatModifierRepository;
+	/** @var NatureRepositoryInterface $natureRepository */
+	private $natureRepository;
 
 	/** @var NatureNameRepositoryInterface $natureNameRepository */
 	private $natureNameRepository;
@@ -46,7 +46,7 @@ class SpreadModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository
 	 * @param BaseStatRepositoryInterface $baseStatRepository
-	 * @param NatureStatModifierRepositoryInterface $natureStatModifierRepository
+	 * @param NatureRepositoryInterface $natureRepository
 	 * @param NatureNameRepositoryInterface $natureNameRepository
 	 * @param StatCalculator $statCalculator
 	 */
@@ -54,14 +54,14 @@ class SpreadModel
 		FormatRepositoryInterface $formatRepository,
 		MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository,
 		BaseStatRepositoryInterface $baseStatRepository,
-		NatureStatModifierRepositoryInterface $natureStatModifierRepository,
+		NatureRepositoryInterface $natureRepository,
 		NatureNameRepositoryInterface $natureNameRepository,
 		StatCalculator $statCalculator
 	) {
 		$this->formatRepository = $formatRepository;
 		$this->movesetRatedSpreadRepository = $movesetRatedSpreadRepository;
 		$this->baseStatRepository = $baseStatRepository;
-		$this->natureStatModifierRepository = $natureStatModifierRepository;
+		$this->natureRepository = $natureRepository;
 		$this->natureNameRepository = $natureNameRepository;
 		$this->statCalculator = $statCalculator;
 	}
@@ -120,8 +120,7 @@ class SpreadModel
 				$movesetRatedSpread->getNatureId()
 			);
 
-			// Get this spread's nature's stat modifiers.
-			$natureStatModifiers = $this->natureStatModifierRepository->getByNature(
+			$nature = $this->natureRepository->getById(
 				$movesetRatedSpread->getNatureId()
 			);
 
@@ -130,12 +129,13 @@ class SpreadModel
 				$ivSpread,
 				$movesetRatedSpread->getEvSpread(),
 				$format->getLevel(),
-				$natureStatModifiers
+				$nature
 			);
 
 			$this->spreadDatas[] = new SpreadData(
 				$natureName->getName(),
-				$natureStatModifiers,
+				$nature->getIncreasedStatId(),
+				$nature->getDecreasedStatId(),
 				$movesetRatedSpread->getEvSpread(),
 				$movesetRatedSpread->getPercent(),
 				$statSpread

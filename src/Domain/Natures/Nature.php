@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Natures;
 
+use Jp\Dex\Domain\Stats\StatId;
+
 class Nature
 {
 	/** @var NatureId $id */
@@ -11,18 +13,30 @@ class Nature
 	/** @var string $identifier */
 	private $identifier;
 
+	/** @var StatId|null $increasedStatId */
+	private $increasedStatId;
+
+	/** @var StatId|null $decreasedStatId */
+	private $decreasedStatId;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param NatureId $natureId
 	 * @param string $identifier
+	 * @param StatId|null $increasedStatId
+	 * @param StatId|null $decreasedStatId
 	 */
 	public function __construct(
 		NatureId $natureId,
-		string $identifier
+		string $identifier,
+		?StatId $increasedStatId,
+		?StatId $decreasedStatId
 	) {
 		$this->id = $natureId;
 		$this->identifier = $identifier;
+		$this->increasedStatId = $increasedStatId;
+		$this->decreasedStatId = $decreasedStatId;
 	}
 
 	/**
@@ -43,5 +57,25 @@ class Nature
 	public function getIdentifier() : string
 	{
 		return $this->identifier;
+	}
+
+	/**
+	 * Get the nature's increased stat id.
+	 *
+	 * @return StatId|null
+	 */
+	public function getIncreasedStatId() : ?StatId
+	{
+		return $this->increasedStatId;
+	}
+
+	/**
+	 * Get the nature's decreased stat id.
+	 *
+	 * @return StatId|null
+	 */
+	public function getDecreasedStatId() : ?StatId
+	{
+		return $this->decreasedStatId;
 	}
 }

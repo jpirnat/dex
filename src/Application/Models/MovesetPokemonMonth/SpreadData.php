@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
 
+use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 
 class SpreadData
@@ -10,8 +11,11 @@ class SpreadData
 	/** @var string $natureName */
 	private $natureName;
 
-	/** @var StatValueContainer $natureModifiers */
-	private $natureModifiers;
+	/** @var StatId|null $increasedStatId */
+	private $increasedStatId;
+
+	/** @var StatId|null $decreasedStatId */
+	private $decreasedStatId;
 
 	/** @var StatValueContainer $evSpread */
 	private $evSpread;
@@ -26,20 +30,23 @@ class SpreadData
 	 * Constructor.
 	 *
 	 * @param string $natureName
-	 * @param StatValueContainer $natureModifiers
+	 * @param StatId|null $increasedStatId
+	 * @param StatId|null $decreasedStatId
 	 * @param StatValueContainer $evSpread
 	 * @param float $percent
 	 * @param StatValueContainer $statSpread
 	 */
 	public function __construct(
 		string $natureName,
-		StatValueContainer $natureModifiers,
+		?StatId $increasedStatId,
+		?StatId $decreasedStatId,
 		StatValueContainer $evSpread,
 		float $percent,
 		StatValueContainer $statSpread
 	) {
 		$this->natureName = $natureName;
-		$this->natureModifiers = $natureModifiers;
+		$this->increasedStatId = $increasedStatId;
+		$this->decreasedStatId = $decreasedStatId;
 		$this->evSpread = $evSpread;
 		$this->percent = $percent;
 		$this->statSpread = $statSpread;
@@ -56,13 +63,23 @@ class SpreadData
 	}
 
 	/**
-	 * Get the nature modifiers.
+	 * Get the nature-increased stat id.
 	 *
-	 * @return StatValueContainer
+	 * @return StatId|null
 	 */
-	public function getNatureModifiers() : StatValueContainer
+	public function getIncreasedStatId() : ?StatId
 	{
-		return $this->natureModifiers;
+		return $this->increasedStatId;
+	}
+
+	/**
+	 * Get the nature-decreased stat id.
+	 *
+	 * @return StatId|null
+	 */
+	public function getDecreasedStatId() : ?StatId
+	{
+		return $this->decreasedStatId;
 	}
 
 	/**

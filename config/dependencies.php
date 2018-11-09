@@ -45,7 +45,6 @@ use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
-use Jp\Dex\Domain\Natures\NatureStatModifierRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
@@ -128,7 +127,6 @@ use Jp\Dex\Infrastructure\DatabaseMovesetRatedSpreadRepository;
 use Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository;
 use Jp\Dex\Infrastructure\DatabaseNatureNameRepository;
 use Jp\Dex\Infrastructure\DatabaseNatureRepository;
-use Jp\Dex\Infrastructure\DatabaseNatureStatModifierRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonAbilityRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonNameRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonRepository;
@@ -346,9 +344,6 @@ $container->dice()->addRule(NatureNameRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseNatureRepository::class];
 $container->dice()->addRule(NatureRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => DatabaseNatureStatModifierRepository::class];
-$container->dice()->addRule(NatureStatModifierRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabasePokemonAbilityRepository::class];
 $container->dice()->addRule(PokemonAbilityRepositoryInterface::class, $rule);

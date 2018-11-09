@@ -82,7 +82,6 @@ return [
 	// Natures
 	'natures',
 	'nature_names',
-	'nature_stat_modifiers',
 
 	// Colors
 	'colors',

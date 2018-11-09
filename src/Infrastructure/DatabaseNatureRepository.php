@@ -7,6 +7,7 @@ use Jp\Dex\Domain\Natures\Nature;
 use Jp\Dex\Domain\Natures\NatureId;
 use Jp\Dex\Domain\Natures\NatureNotFoundException;
 use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
+use Jp\Dex\Domain\Stats\StatId;
 use PDO;
 
 class DatabaseNatureRepository implements NatureRepositoryInterface
@@ -37,7 +38,9 @@ class DatabaseNatureRepository implements NatureRepositoryInterface
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`identifier`
+				`identifier`,
+				`increased_stat_id`,
+				`decreased_stat_id`
 			FROM `natures`
 			WHERE `id` = :nature_id
 			LIMIT 1'
@@ -52,9 +55,18 @@ class DatabaseNatureRepository implements NatureRepositoryInterface
 			);
 		}
 
+		$increasedStatId = $result['increased_stat_id'] !== null
+			? new StatId($result['increased_stat_id'])
+			: null;
+		$decreasedStatId = $result['decreased_stat_id'] !== null
+			? new StatId($result['decreased_stat_id'])
+			: null;
+
 		$nature = new Nature(
 			$natureId,
-			$result['identifier']
+			$result['identifier'],
+			$increasedStatId,
+			$decreasedStatId
 		);
 
 		return $nature;

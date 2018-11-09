@@ -155,7 +155,7 @@ class MovesetPokemonMonthView
 			}
 		);
 
-		// Compile all spread data into the right form..
+		// Compile all spread data into the right form.
 		$spreads = [];
 		$statIds = [
 			'hp' =>  new StatId(StatId::HP),
@@ -167,24 +167,19 @@ class MovesetPokemonMonthView
 		];
 		foreach ($spreadDatas as $spreadData) {
 			// Create nature array with nature name and stat modifiers.
-			$natureModifiers = $spreadData->getNatureModifiers();
-			$nature['name'] = $spreadData->getNatureName();
+			$nature = ['name' => $spreadData->getNatureName()];
+
 			foreach ($statIds as $statAbbr => $statId) {
-				// No natures modify HP.
-				if ($statId->value() === StatId::HP) {
+				$nature[$statAbbr] = ''; // Default.
+				if ($spreadData->getIncreasedStatId() === null) {
 					continue;
 				}
-
-				$natureModifier = $natureModifiers->get($statId)->getValue();
-				if ($natureModifier > 1) {
-					$natureModifierSign = '+';
-				} elseif ($natureModifier < 1) {
-					$natureModifierSign = '-';
-				} else {
-					$natureModifierSign = '';
+				if ($statId->value() === $spreadData->getIncreasedStatId()->value()) {
+					$nature[$statAbbr] = '+';
 				}
-
-				$nature[$statAbbr] = $natureModifierSign;
+				if ($statId->value() === $spreadData->getDecreasedStatId()->value()) {
+					$nature[$statAbbr] = '-';
+				}
 			}
 
 			// Create EVs array with each stat's EV.
