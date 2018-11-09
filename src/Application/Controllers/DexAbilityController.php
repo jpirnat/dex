@@ -30,7 +30,7 @@ class DexAbilityController
 	}
 
 	/**
-	 * Show the /dex/abilities/ability-identifier page.
+	 * Show the dex ability page.
 	 *
 	 * @param ServerRequestInterface $request
 	 *

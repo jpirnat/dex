@@ -40,7 +40,8 @@ class DatabaseNatureRepository implements NatureRepositoryInterface
 			'SELECT
 				`identifier`,
 				`increased_stat_id`,
-				`decreased_stat_id`
+				`decreased_stat_id`,
+				`vc_exp_remainder`
 			FROM `natures`
 			WHERE `id` = :nature_id
 			LIMIT 1'
@@ -66,9 +67,52 @@ class DatabaseNatureRepository implements NatureRepositoryInterface
 			$natureId,
 			$result['identifier'],
 			$increasedStatId,
-			$decreasedStatId
+			$decreasedStatId,
+			$result['vc_exp_remainder']
 		);
 
 		return $nature;
+	}
+
+	/**
+	 * Get all natures.
+	 *
+	 * @return Nature[] Indexed by id.
+	 */
+	public function getAll() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`increased_stat_id`,
+				`decreased_stat_id`,
+				`vc_exp_remainder`
+			FROM `natures`'
+		);
+		$stmt->execute();
+
+		$natures = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$increasedStatId = $result['increased_stat_id'] !== null
+				? new StatId($result['increased_stat_id'])
+				: null;
+			$decreasedStatId = $result['decreased_stat_id'] !== null
+				? new StatId($result['decreased_stat_id'])
+				: null;
+
+			$nature = new Nature(
+				new NatureId($result['id']),
+				$result['identifier'],
+				$increasedStatId,
+				$decreasedStatId,
+				$result['vc_exp_remainder']
+			);
+
+			$natures[$result['id']] = $nature;
+		}
+
+		return $natures;
 	}
 }

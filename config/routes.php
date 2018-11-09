@@ -4,6 +4,7 @@ declare(strict_types=1);
 use Jp\Dex\Application\Controllers\AbilityUsageMonthController;
 use Jp\Dex\Application\Controllers\DexAbilitiesController;
 use Jp\Dex\Application\Controllers\DexAbilityController;
+use Jp\Dex\Application\Controllers\DexNaturesController;
 use Jp\Dex\Application\Controllers\DexTypeController;
 use Jp\Dex\Application\Controllers\DexTypesController;
 use Jp\Dex\Application\Controllers\ErrorController;
@@ -27,6 +28,7 @@ use Jp\Dex\Application\Middleware\LanguageMiddleware;
 use Jp\Dex\Presentation\AbilityUsageMonthView;
 use Jp\Dex\Presentation\DexAbilitiesView;
 use Jp\Dex\Presentation\DexAbilityView;
+use Jp\Dex\Presentation\DexNaturesView;
 use Jp\Dex\Presentation\DexTypesView;
 use Jp\Dex\Presentation\DexTypeView;
 use Jp\Dex\Presentation\ErrorView;
@@ -85,6 +87,17 @@ $routes = [
 		'controllerClass' => DexAbilityController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => DexAbilityView::class,
+		'viewMethod' => 'index',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/dex/$generationIdentifier/natures", [
+		'controllerClass' => DexNaturesController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => DexNaturesView::class,
 		'viewMethod' => 'index',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,

@@ -43,7 +43,7 @@ class DexAbilityView
 	}
 
 	/**
-	 * Show the /dex/abilities/ability-identifier page.
+	 * Show the dex ability page.
 	 *
 	 * @return ResponseInterface
 	 */

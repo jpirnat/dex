@@ -48,7 +48,7 @@ class DexAbilitiesModel
 	}
 
 	/**
-	 * Set data for the /dex/abilities page.
+	 * Set data for the dex abilities page.
 	 *
 	 * @param string $generationIdentifier
 	 * @param LanguageId $languageId

@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\DexAbilitiesModel;
+use Jp\Dex\Application\Models\DexNaturesModel;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Environment;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class DexAbilitiesView
+class DexNaturesView
 {
 	/** @var Twig_Environment $twig */
 	private $twig;
@@ -16,59 +16,50 @@ class DexAbilitiesView
 	/** @var BaseView $baseView */
 	private $baseView;
 
-	/** @var DexAbilitiesModel $dexAbilitiesModel */
-	private $dexAbilitiesModel;
+	/** @var DexNaturesModel $dexNaturesModel */
+	private $dexNaturesModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
 	 * @param BaseView $baseView
-	 * @param DexAbilitiesModel $dexAbilitiesModel
+	 * @param DexNaturesModel $dexNaturesModel
 	 */
 	public function __construct(
 		Twig_Environment $twig,
 		BaseView $baseView,
-		DexAbilitiesModel $dexAbilitiesModel
+		DexNaturesModel $dexNaturesModel
 	) {
 		$this->twig = $twig;
 		$this->baseView = $baseView;
-		$this->dexAbilitiesModel = $dexAbilitiesModel;
+		$this->dexNaturesModel = $dexNaturesModel;
 	}
 
 	/**
-	 * Show the dex abilities page.
+	 * Show the dex natures page.
 	 *
 	 * @return ResponseInterface
 	 */
 	public function index() : ResponseInterface
 	{
-		$generationModel = $this->dexAbilitiesModel->getGenerationModel();
-		$generationIdentifier = $generationModel->getGeneration()->getIdentifier();
-
-		$abilities = $this->dexAbilitiesModel->getAbilities();
-
-		uasort($abilities, function (array $a, array $b) : int {
-			return $a['name'] <=> $b['name'];
-		});
-
 		// Navigational breadcrumbs.
 		$breadcrumbs = [
 			[
 				'text' => 'Dex',
 			],
 			[
-				'text' => 'Abilities',
+				'text' => 'Natures',
 			],
 		];
 
 		$content = $this->twig->render(
-			'html/dex/abilities.twig',
+			'html/dex/natures.twig',
 			$this->baseView->getBaseVariables() + [
-				'title' => 'Abilities',
+				'title' => 'Natures',
 				'breadcrumbs' => $breadcrumbs,
-				'generationIdentifier' => $generationIdentifier,
-				'abilities' => $abilities,
+				'generationIdentifier' => $this->dexNaturesModel->getGenerationIdentifier(),
+				'natures' => $this->dexNaturesModel->getNatures(),
 			]
 		);
 

@@ -69,7 +69,7 @@ class DexAbilityModel
 	}
 
 	/**
-	 * Set data for the /dex/abilities/ability-identifier page.
+	 * Set data for the dex ability page.
 	 *
 	 * @param string $generationIdentifier
 	 * @param string $abilityIdentifier

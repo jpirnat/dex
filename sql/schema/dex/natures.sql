@@ -5,6 +5,7 @@ create table if not exists `natures`
 `identifier` varchar(7) not null,
 `increased_stat_id` tinyint unsigned null, # nullable
 `decreased_stat_id` tinyint unsigned null, # nullable
+`vc_exp_remainder` tinyint unsigned not null,
 
 primary key (`id`),
 unique key (`identifier`),

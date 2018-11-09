@@ -19,6 +19,9 @@ class Nature
 	/** @var StatId|null $decreasedStatId */
 	private $decreasedStatId;
 
+	/** @var int $vcExpRemainder */
+	private $vcExpRemainder;
+
 	/**
 	 * Constructor.
 	 *
@@ -26,17 +29,20 @@ class Nature
 	 * @param string $identifier
 	 * @param StatId|null $increasedStatId
 	 * @param StatId|null $decreasedStatId
+	 * @param int $vcExpRemainder
 	 */
 	public function __construct(
 		NatureId $natureId,
 		string $identifier,
 		?StatId $increasedStatId,
-		?StatId $decreasedStatId
+		?StatId $decreasedStatId,
+		int $vcExpRemainder
 	) {
 		$this->id = $natureId;
 		$this->identifier = $identifier;
 		$this->increasedStatId = $increasedStatId;
 		$this->decreasedStatId = $decreasedStatId;
+		$this->vcExpRemainder = $vcExpRemainder;
 	}
 
 	/**
@@ -77,5 +83,15 @@ class Nature
 	public function getDecreasedStatId() : ?StatId
 	{
 		return $this->decreasedStatId;
+	}
+
+	/**
+	 * Get the nature's Virtual Console experience points remainder.
+	 *
+	 * @return int
+	 */
+	public function getVcExpRemainder() : int
+	{
+		return $this->vcExpRemainder;
 	}
 }

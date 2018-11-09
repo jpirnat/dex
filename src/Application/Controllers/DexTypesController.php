@@ -30,7 +30,7 @@ class DexTypesController
 	}
 
 	/**
-	 * Show the /dex/types page.
+	 * Show the dex types page.
 	 *
 	 * @param ServerRequestInterface $request
 	 *

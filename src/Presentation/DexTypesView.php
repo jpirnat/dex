@@ -37,7 +37,7 @@ class DexTypesView
 	}
 
 	/**
-	 * Show the /dex/types page.
+	 * Show the dex types page.
 	 *
 	 * @return ResponseInterface
 	 */

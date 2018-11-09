@@ -3,34 +3,34 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\DexAbilitiesModel;
+use Jp\Dex\Application\Models\DexNaturesModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class DexAbilitiesController
+class DexNaturesController
 {
 	/** @var BaseController $baseController */
 	private $baseController;
 
-	/** @var DexAbilitiesModel $dexAbilitiesModel */
-	private $dexAbilitiesModel;
+	/** @var DexNaturesModel $dexNaturesModel */
+	private $dexNaturesModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param BaseController $baseController
-	 * @param DexAbilitiesModel $dexAbilitiesModel
+	 * @param DexNaturesModel $dexNaturesModel
 	 */
 	public function __construct(
 		BaseController $baseController,
-		DexAbilitiesModel $dexAbilitiesModel
+		DexNaturesModel $dexNaturesModel
 	) {
 		$this->baseController = $baseController;
-		$this->dexAbilitiesModel = $dexAbilitiesModel;
+		$this->dexNaturesModel = $dexNaturesModel;
 	}
 
 	/**
-	 * Show the dex abilities page.
+	 * Show the dex natures page.
 	 *
 	 * @param ServerRequestInterface $request
 	 *
@@ -43,6 +43,6 @@ class DexAbilitiesController
 		$generationIdentifier = $request->getAttribute('generationIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexAbilitiesModel->setData($generationIdentifier, $languageId);
+		$this->dexNaturesModel->setData($generationIdentifier, $languageId);
 	}
 }

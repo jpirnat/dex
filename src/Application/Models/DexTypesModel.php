@@ -51,7 +51,7 @@ class DexTypesModel
 	}
 
 	/**
-	 * Set data for the /dex/types page.
+	 * Set data for the dex types page.
 	 *
 	 * @param string $generationIdentifier
 	 * @param LanguageId $languageId

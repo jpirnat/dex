@@ -16,21 +16,27 @@ class NatureName
 	/** @var string $name */
 	private $name;
 
+	/** @var string $description */
+	private $description;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param LanguageId $languageId
 	 * @param NatureId $natureId
 	 * @param string $name
+	 * @param string $description
 	 */
 	public function __construct(
 		LanguageId $languageId,
 		NatureId $natureId,
-		string $name
+		string $name,
+		string $description
 	) {
 		$this->languageId = $languageId;
 		$this->natureId = $natureId;
 		$this->name = $name;
+		$this->description = $description;
 	}
 
 	/**
@@ -61,5 +67,15 @@ class NatureName
 	public function getName() : string
 	{
 		return $this->name;
+	}
+
+	/**
+	 * Get the nature name's description.
+	 *
+	 * @return string
+	 */
+	public function getDescription() : string
+	{
+		return $this->description;
 	}
 }

@@ -22,4 +22,13 @@ interface NatureNameRepositoryInterface
 		LanguageId $languageId,
 		NatureId $natureId
 	) : NatureName;
+
+	/**
+	 * Get nature names by language.
+	 *
+	 * @param LanguageId $languageId
+	 *
+	 * @return NatureName[] Indexed by nature id.
+	 */
+	public function getByLanguage(LanguageId $languageId) : array;
 }

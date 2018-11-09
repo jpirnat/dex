@@ -15,4 +15,11 @@ interface NatureRepositoryInterface
 	 * @return Nature
 	 */
 	public function getById(NatureId $natureId) : Nature;
+
+	/**
+	 * Get all natures.
+	 *
+	 * @return Nature[] Indexed by id.
+	 */
+	public function getAll() : array;
 }
