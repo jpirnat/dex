@@ -1,12 +1,12 @@
 {% extends "html/base.twig" %}
 
 {% block body %}
-	<table>
+	<table class="natures">
 		<thead>
 			<tr>
 				<th scope="col">Name</th>
-				<th scope="col">+10%</th>
-				<th scope="col">-10%</th>
+				<th scope="col">Raises</th>
+				<th scope="col">Lowers</th>
 				<th scope="col">VC Exp Remainder</th>
 			</tr>
 		</thead>
@@ -14,9 +14,9 @@
 			{% for nature in natures %}
 				<tr>
 					<td>{{ nature.name|e }}</td>
-					<td>{{ nature.increasedStatName|e }}</td>
-					<td>{{ nature.decreasedStatName|e }}</td>
-					<td>{{ nature.vcExpRemainder|e }}</td>
+					<td {% if nature.increasedStatName == "-" %} class="neutral" {% endif %}>{{ nature.increasedStatName|e }}</td>
+					<td {% if nature.decreasedStatName == "-" %} class="neutral" {% endif %}>{{ nature.decreasedStatName|e }}</td>
+					<td class="number">{{ nature.vcExpRemainder|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>

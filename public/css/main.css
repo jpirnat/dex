@@ -125,6 +125,15 @@ table.dex-pokemon .hidden-ability {
 }
 
 
+
+/* /dex/natures */
+
+table.natures .neutral {
+	text-align: center;
+}
+
+
+
 /* /dex/types */
 
 .type-chart .factor {
