@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Types;
 
-use Jp\Dex\Domain\Moves\CategoryId;
+use Jp\Dex\Domain\Categories\CategoryId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 class Type

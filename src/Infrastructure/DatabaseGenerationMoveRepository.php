@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Moves\CategoryId;
+use Jp\Dex\Domain\Categories\CategoryId;
 use Jp\Dex\Domain\Moves\GenerationMove;
 use Jp\Dex\Domain\Moves\GenerationMoveNotFoundException;
 use Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface;

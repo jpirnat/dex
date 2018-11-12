@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Moves;
 
+use Jp\Dex\Domain\Categories\CategoryId;
 use Jp\Dex\Domain\Moves\Inflictions\InflictionId;
 use Jp\Dex\Domain\Moves\Qualities\QualityId;
 use Jp\Dex\Domain\Moves\Targets\TargetId;

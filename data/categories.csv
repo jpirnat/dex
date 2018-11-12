@@ -1,4 +1,4 @@
-id,identifier
-1,physical
-2,special
-3,status
+id,identifier,image
+1,physical,physical.png
+2,special,special.png
+3,status,status.png
