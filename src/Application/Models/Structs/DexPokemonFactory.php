@@ -160,4 +160,36 @@ class DexPokemonFactory
 			$stats
 		);
 	}
+
+	/**
+	 * Get dex Pokémon by generation and type.
+	 *
+	 * @param GenerationId $generationId
+	 * @param TypeId $typeId
+	 * @param LanguageId $languageId
+	 *
+	 * @return DexPokemon[]
+	 */
+	public function getByGenerationAndType(
+		GenerationId $generationId,
+		TypeId $typeId,
+		LanguageId $languageId
+	) : array {
+		$pokemonTypes = $this->pokemonTypeRepository->getByGenerationAndType(
+			$generationId,
+			$typeId
+		);
+
+		$pokemon = [];
+
+		foreach ($pokemonTypes as $pokemonType) {
+			$pokemon[] = $this->getDexPokemon(
+				$generationId,
+				$pokemonType->getPokemonId(),
+				$languageId
+			);
+		}
+
+		return $pokemon;
+	}
 }

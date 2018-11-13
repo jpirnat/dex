@@ -31,7 +31,7 @@ class DatabasePokemonTypeRepository implements PokemonTypeRepositoryInterface
 	 * @param GenerationId $generationId
 	 * @param PokemonId $pokemonId
 	 *
-	 * @return PokemonType[] Ordered by slot.
+	 * @return PokemonType[] Indexed and ordered by slot.
 	 */
 	public function getByGenerationAndPokemon(
 		GenerationId $generationId,
@@ -61,6 +61,46 @@ class DatabasePokemonTypeRepository implements PokemonTypeRepositoryInterface
 			);
 
 			$pokemonTypes[$result['slot']] = $pokemonType;
+		}
+
+		return $pokemonTypes;
+	}
+
+	/**
+	 * Get Pokémon's types by generation and type.
+	 *
+	 * @param GenerationId $generationId
+	 * @param TypeId $typeId
+	 *
+	 * @return PokemonType[] Indexed by Pokémon id.
+	 */
+	public function getByGenerationAndType(
+		GenerationId $generationId,
+		TypeId $typeId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`pokemon_id`,
+				`slot`
+			FROM `pokemon_types`
+			WHERE `generation_id` = :generation_id
+				AND `type_id` = :type_id'
+		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$pokemonTypes = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$pokemonType = new PokemonType(
+				$generationId,
+				new PokemonId($result['pokemon_id']),
+				$result['slot'],
+				$typeId
+			);
+
+			$pokemonTypes[$result['pokemon_id']] = $pokemonType;
 		}
 
 		return $pokemonTypes;

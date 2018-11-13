@@ -105,7 +105,7 @@ table .percent-minus {
 
 
 
-/* /dex */
+/* dex */
 
 table.dex-pokemon {
 	width: 100%;
@@ -126,15 +126,15 @@ table.dex-pokemon .hidden-ability {
 
 
 
-/* /dex/natures */
+/* dex natures */
 
-table.natures .neutral {
+table.dex-natures .neutral {
 	text-align: center;
 }
 
 
 
-/* /dex/types */
+/* dex types */
 
 .type-chart .factor {
 	text-align: center;

@@ -20,4 +20,17 @@ interface PokemonTypeRepositoryInterface
 		GenerationId $generationId,
 		PokemonId $pokemonId
 	) : array;
+
+	/**
+	 * Get Pokémon's types by generation and type.
+	 *
+	 * @param GenerationId $generationId
+	 * @param TypeId $typeId
+	 *
+	 * @return PokemonType[] Indexed by Pokémon id.
+	 */
+	public function getByGenerationAndType(
+		GenerationId $generationId,
+		TypeId $typeId
+	) : array;
 }
