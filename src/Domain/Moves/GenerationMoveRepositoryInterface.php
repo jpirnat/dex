@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Moves;
 
+use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 interface GenerationMoveRepositoryInterface
@@ -22,4 +23,17 @@ interface GenerationMoveRepositoryInterface
 		GenerationId $generationId,
 		MoveId $moveId
 	) : GenerationMove;
+
+	/**
+	 * Get generation moves by their generation and type.
+	 *
+	 * @param GenerationId $generationId
+	 * @param TypeId $typeId
+	 *
+	 * @return GenerationMove[] Indexed by move id.
+	 */
+	public function getByGenerationAndType(
+		GenerationId $generationId,
+		TypeId $typeId
+	) : array;
 }

@@ -132,4 +132,99 @@ class DatabaseGenerationMoveRepository implements GenerationMoveRepositoryInterf
 
 		return $generationMove;
 	}
+
+	/**
+	 * Get generation moves by their generation and type.
+	 *
+	 * @param GenerationId $generationId
+	 * @param TypeId $typeId
+	 *
+	 * @return GenerationMove[] Indexed by move id.
+	 */
+	public function getByGenerationAndType(
+		GenerationId $generationId,
+		TypeId $typeId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`move_id`,
+				`quality_id`,
+				`category_id`,
+				`power`,
+				`accuracy`,
+				`pp`,
+				`priority`,
+				`min_hits`,
+				`max_hits`,
+				`infliction_id`,
+				`infliction_percent`,
+				`min_turns`,
+				`max_turns`,
+				`crit_stage`,
+				`flinch_percent`,
+				`effect`,
+				`effect_percent`,
+				`recoil_percent`,
+				`heal_percent`,
+				`target_id`,
+				`z_move_id`,
+				`z_base_power`,
+				`z_power_effect_id`
+			FROM `generation_moves`
+			WHERE `generation_id` = :generation_id
+				AND `type_id` = :type_id'
+		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$generationMoves = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$qualityId = $result['quality_id'] !== null
+				? new QualityId($result['quality_id'])
+				: null;
+			$inflictionId = $result['infliction_id'] !== null
+				? new InflictionId($result['infliction_id'])
+				: null;
+			$zMoveId = $result['z_move_id'] !== null
+				? new MoveId($result['z_move_id'])
+				: null;
+			$zPowerEffectId = $result['z_power_effect_id'] !== null
+				? new ZPowerEffectId($result['z_power_effect_id'])
+				: null;
+
+			$generationMove = new GenerationMove(
+				$generationId,
+				new MoveId($result['move_id']),
+				$typeId,
+				$qualityId,
+				new CategoryId($result['category_id']),
+				$result['power'],
+				$result['accuracy'],
+				$result['pp'],
+				$result['priority'],
+				$result['min_hits'],
+				$result['max_hits'],
+				$inflictionId,
+				$result['infliction_percent'],
+				$result['min_turns'],
+				$result['max_turns'],
+				$result['crit_stage'],
+				$result['flinch_percent'],
+				$result['effect'],
+				$result['effect_percent'],
+				$result['recoil_percent'],
+				$result['heal_percent'],
+				new TargetId($result['target_id']),
+				$zMoveId,
+				$result['z_base_power'],
+				$zPowerEffectId
+			);
+
+			$generationMoves[$result['move_id']] = $generationMove;
+		}
+
+		return $generationMoves;
+	}
 }

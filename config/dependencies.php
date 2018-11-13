@@ -49,6 +49,7 @@ use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface;
@@ -131,6 +132,7 @@ use Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository;
 use Jp\Dex\Infrastructure\DatabaseNatureNameRepository;
 use Jp\Dex\Infrastructure\DatabaseNatureRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonAbilityRepository;
+use Jp\Dex\Infrastructure\DatabasePokemonMoveRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonNameRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonTypeRepository;
@@ -353,6 +355,9 @@ $container->dice()->addRule(NatureRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabasePokemonAbilityRepository::class];
 $container->dice()->addRule(PokemonAbilityRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabasePokemonMoveRepository::class];
+$container->dice()->addRule(PokemonMoveRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabasePokemonNameRepository::class];
 $container->dice()->addRule(PokemonNameRepositoryInterface::class, $rule);

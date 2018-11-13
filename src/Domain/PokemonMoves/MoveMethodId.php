@@ -9,4 +9,7 @@ class MoveMethodId extends EntityId
 {
 	/** @var int $EGG */
 	public const EGG = 3;
+
+	/** @var int $SKETCH */
+	public const SKETCH = 4;
 }
