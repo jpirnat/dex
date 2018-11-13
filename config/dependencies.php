@@ -184,6 +184,8 @@ $rule = [
 $container->dice()->addRule(PDO::class, $rule);
 
 // Database setup connection.
+$user = getenv('DB_SETUP_USER');
+$pass = getenv('DB_SETUP_PASS');
 $rule = [
 	'instanceOf' => PDO::class,
 	'constructParams' => [
