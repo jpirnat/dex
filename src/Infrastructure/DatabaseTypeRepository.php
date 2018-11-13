@@ -75,6 +75,54 @@ class DatabaseTypeRepository implements TypeRepositoryInterface
 	}
 
 	/**
+	 * Get a type by its identifier.
+	 *
+	 * @param string $identifier
+	 *
+	 * @throws TypeNotFoundException if no type exists with this identifier.
+	 *
+	 * @return Type
+	 */
+	public function getByIdentifier(string $identifier) : Type
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`introduced_in_generation_id`,
+				`category_id`,
+				`hidden_power_index`,
+				`color_code`
+			FROM `types`
+			WHERE `identifier` = :identifier
+			LIMIT 1'
+		);
+		$stmt->bindValue(':identifier', $identifier, PDO::PARAM_STR);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			throw new TypeNotFoundException(
+				"No type exists with identifier $identifier."
+			);
+		}
+
+		$categoryId = $result['category_id'] !== null
+			? new CategoryId($result['category_id'])
+			: null;
+
+		$type = new Type(
+			new TypeId($result['id']),
+			$identifier,
+			new GenerationId($result['introduced_in_generation_id']),
+			$categoryId,
+			$result['hidden_power_index'],
+			$result['color_code']
+		);
+
+		return $type;
+	}
+
+	/**
 	 * Get a type by its hidden power index.
 	 *
 	 * @param int $hiddenPowerIndex

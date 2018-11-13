@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\Structs\DexMove;
 use Jp\Dex\Application\Models\Structs\DexPokemon;
 use Jp\Dex\Application\Models\Structs\DexPokemonAbility;
 use Jp\Dex\Application\Models\Structs\DexType;
@@ -87,5 +88,33 @@ class DexFormatter
 		}
 
 		return $abilities;
+	}
+
+	/**
+	 * Transform an array of dex move objects into a renderable data array.
+	 *
+	 * @param DexMove[] $dexMoves
+	 *
+	 * @return array
+	 */
+	public function formatDexMoves(array $dexMoves) : array
+	{
+		$moves = [];
+
+		foreach ($dexMoves as $dexMove) {
+			$moves[] = [
+				'identifier' => $dexMove->getMoveIdentifier(),
+				'name' => $dexMove->getMoveName(),
+				'type' => $this->formatDexType($dexMove->getType()),
+				'categoryIcon' => $dexMove->getCategoryIcon(),
+				'pp' => $dexMove->getPP(),
+				'power' => $dexMove->getPower(),
+				'accuracy' => $dexMove->getAccuracy(),
+				'priority' => $dexMove->getPriority(),
+				'description' => $dexMove->getMoveDescription(),
+			];
+		}
+
+		return $moves;
 	}
 }

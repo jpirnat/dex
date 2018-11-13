@@ -19,6 +19,17 @@ interface TypeRepositoryInterface
 	public function getById(TypeId $typeId) : Type;
 
 	/**
+	 * Get a type by its identifier.
+	 *
+	 * @param string $identifier
+	 *
+	 * @throws TypeNotFoundException if no type exists with this identifier.
+	 *
+	 * @return Type
+	 */
+	public function getByIdentifier(string $identifier) : Type;
+
+	/**
 	 * Get a type by its hidden power index.
 	 *
 	 * @param int $hiddenPowerIndex

@@ -1,4 +1,6 @@
-{% macro pokemonTable(generationIdentifier, stats, pokemons) %}
+{% extends "html/base.twig" %}
+
+{% block body %}
 	<table class="dex-pokemon">
 		<thead>
 			<tr>
@@ -51,4 +53,41 @@
 			{% endfor %}
 		</tbody>
 	</table>
-{% endmacro %}
+
+	<table class="dex-moves">
+		<thead>
+			<tr>
+				<th scope="col">Move</th>
+				<th scope="col">Type</th>
+				<th scope="col">Category</th>
+				<th scope="col">PP</th>
+				<th scope="col">Power</th>
+				<th scope="col">Accuracy</th>
+				<th scope="col">Priority</th>
+				<th scope="col" class="description">Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for move in moves %}
+				<tr>
+					<td>
+						<a href="/dex/{{ generationIdentifier|e }}/moves/{{ move.identifier|e }}">
+							{{ move.name|e }}
+						</a>
+					</td>
+					<td>
+						<a href="/dex/{{ generationIdentifier|e }}/types/{{ move.type.identifier|e }}">
+							<img src="/images/types/{{ move.type.icon|e }}">
+						</a>
+					</td>
+					<td><img src="/images/categories/{{ move.categoryIcon|e }}"></td>
+					<td class="number">{{ move.pp|e }}</td>
+					<td class="number">{{ move.power|e }}</td>
+					<td class="number">{{ move.accuracy|e }}</td>
+					<td class="number">{{ move.priority|e }}</td>
+					<td class="description">{{ move.description|e }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

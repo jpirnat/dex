@@ -7,6 +7,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
@@ -39,6 +40,34 @@ class DexTypeFactory
 	}
 
 	/**
+	 * Get the dex type for this type.
+	 *
+	 * @param GenerationId $generationId
+	 * @param TypeId $typeId
+	 * @param LanguageId $languageId
+	 *
+	 * @return DexType
+	 */
+	public function getDexType(
+		GenerationId $generationId,
+		TypeId $typeId,
+		LanguageId $languageId
+	) : DexType {
+		$type = $this->typeRepository->getById($typeId);
+
+		$typeIcon = $this->typeIconRepository->getByGenerationAndLanguageAndType(
+			$generationId,
+			$languageId,
+			$typeId
+		);
+
+		return new DexType(
+			$type->getIdentifier(),
+			$typeIcon->getImage()
+		);
+	}
+
+	/**
 	 * Get the dex types for this Pokémon.
 	 *
 	 * @param GenerationId $generationId
@@ -60,17 +89,7 @@ class DexTypeFactory
 		$types = [];
 
 		foreach ($pokemonTypes as $pokemonType) {
-			$type = $this->typeRepository->getById($pokemonType->getTypeId());
-			$typeIcon = $this->typeIconRepository->getByGenerationAndLanguageAndType(
-				$generationId,
-				$languageId,
-				$type->getId()
-			);
-
-			$types[] = new DexType(
-				$type->getIdentifier(),
-				$typeIcon->getImage()
-			);
+			$types[] = $this->getDexType($generationId, $pokemonType->getTypeId(), $languageId);
 		}
 
 		return $types;

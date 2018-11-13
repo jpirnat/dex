@@ -90,6 +90,7 @@ use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeEffectivenessRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeNameRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 use Jp\Dex\Infrastructure\DatabaseAbilityDescriptionRepository;
@@ -140,6 +141,7 @@ use Jp\Dex\Infrastructure\DatabaseRatingQueries;
 use Jp\Dex\Infrastructure\DatabaseStatNameRepository;
 use Jp\Dex\Infrastructure\DatabaseTypeEffectivenessRepository;
 use Jp\Dex\Infrastructure\DatabaseTypeIconRepository;
+use Jp\Dex\Infrastructure\DatabaseTypeNameRepository;
 use Jp\Dex\Infrastructure\DatabaseTypeRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageAveragedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository;
@@ -399,6 +401,9 @@ $container->dice()->addRule(TypeEffectivenessRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseTypeIconRepository::class];
 $container->dice()->addRule(TypeIconRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseTypeNameRepository::class];
+$container->dice()->addRule(TypeNameRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseTypeRepository::class];
 $container->dice()->addRule(TypeRepositoryInterface::class, $rule);

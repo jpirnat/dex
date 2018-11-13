@@ -14,6 +14,8 @@ use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
+use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 class DexPokemonFactory
@@ -42,6 +44,9 @@ class DexPokemonFactory
 	/** @var BaseStatRepositoryInterface $baseStatRepository */
 	private $baseStatRepository;
 
+	/** @var PokemonTypeRepositoryInterface $pokemonTypeRepository */
+	private $pokemonTypeRepository;
+
 	/**
 	 * Constructor.
 	 *
@@ -53,6 +58,7 @@ class DexPokemonFactory
 	 * @param AbilityRepositoryInterface $abilityRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
 	 * @param BaseStatRepositoryInterface $baseStatRepository
+	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
 	 */
 	public function __construct(
 		DexTypeFactory $dexTypeFactory,
@@ -62,7 +68,8 @@ class DexPokemonFactory
 		PokemonAbilityRepositoryInterface $pokemonAbilityRepository,
 		AbilityRepositoryInterface $abilityRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
-		BaseStatRepositoryInterface $baseStatRepository
+		BaseStatRepositoryInterface $baseStatRepository,
+		PokemonTypeRepositoryInterface $pokemonTypeRepository
 	) {
 		$this->dexTypeFactory = $dexTypeFactory;
 		$this->formIconRepository = $formIconRepository;
@@ -72,6 +79,7 @@ class DexPokemonFactory
 		$this->abilityRepository = $abilityRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
 		$this->baseStatRepository = $baseStatRepository;
+		$this->pokemonTypeRepository = $pokemonTypeRepository;
 	}
 
 	/**

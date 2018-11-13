@@ -125,6 +125,16 @@ table.dex-pokemon .hidden-ability {
 }
 
 
+table.dex-moves .description {
+	width: 50%;
+}
+
+table.dex-moves th,
+table.dex-moves td {
+	border-bottom: 1px solid black;
+}
+
+
 
 /* dex natures */
 
