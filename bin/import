@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Jp\Dex\Domain\Import\Importers\MonthDirectoryImporter;
+use Jp\Dex\Domain\Import\ZygardeFixer;
 
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config/environment.php';
@@ -34,6 +35,10 @@ $start = new DateTime();
 /** @var MonthDirectoryImporter $importer */
 $importer = $container->get(MonthDirectoryImporter::class);
 $importer->import("http://www.smogon.com/stats/$yearMonth/");
+
+/** @var ZygardeFixer $zygardeFixer */
+$zygardeFixer = $container->get(ZygardeFixer::class);
+$zygardeFixer->fixZygarde();
 
 $end = new DateTime();
 
