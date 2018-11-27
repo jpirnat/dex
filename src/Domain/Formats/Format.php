@@ -28,6 +28,9 @@ class Format
 	/** @var int $inBattleTeamSize */
 	private $inBattleTeamSize;
 
+	/** @var string $smogonDexIdentifier */
+	private $smogonDexIdentifier;
+
 	/**
 	 * Constructor.
 	 *
@@ -38,6 +41,7 @@ class Format
 	 * @param int $fieldSize
 	 * @param int $teamSize
 	 * @param int $inBattleTeamSize
+	 * @param string $smogonDexIdentifier
 	 */
 	public function __construct(
 		FormatId $formatId,
@@ -46,7 +50,8 @@ class Format
 		int $level,
 		int $fieldSize,
 		int $teamSize,
-		int $inBattleTeamSize
+		int $inBattleTeamSize,
+		string $smogonDexIdentifier
 	) {
 		$this->id = $formatId;
 		$this->identifier = $identifier;
@@ -55,6 +60,7 @@ class Format
 		$this->fieldSize = $fieldSize;
 		$this->teamSize = $teamSize;
 		$this->inBattleTeamSize = $inBattleTeamSize;
+		$this->smogonDexIdentifier = $smogonDexIdentifier;
 	}
 
 	/**
@@ -125,5 +131,15 @@ class Format
 	public function getInBattleTeamSize() : int
 	{
 		return $this->inBattleTeamSize;
+	}
+
+	/**
+	 * Get the format's Smogon dex identifier.
+	 *
+	 * @return string
+	 */
+	public function getSmogonDexIdentifier() : string
+	{
+		return $this->smogonDexIdentifier;
 	}
 }

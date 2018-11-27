@@ -35,6 +35,9 @@ class Pokemon
 	/** @var float|null $genderRatio */
 	private $genderRatio;
 
+	/** @var string $smogonDexIdentifier */
+	private $smogonDexIdentifier;
+
 	/**
 	 * Constructor.
 	 *
@@ -47,6 +50,7 @@ class Pokemon
 	 * @param float $heightM
 	 * @param float $weightKg
 	 * @param float|null $genderRatio
+	 * @param string $smogonDexIdentifier
 	 */
 	public function __construct(
 		PokemonId $pokemonId,
@@ -57,7 +61,8 @@ class Pokemon
 		VersionGroupId $introducedInVersionGroupId,
 		float $heightM,
 		float $weightKg,
-		?float $genderRatio
+		?float $genderRatio,
+		string $smogonDexIdentifier
 	) {
 		$this->id = $pokemonId;
 		$this->identifier = $identifier;
@@ -68,6 +73,7 @@ class Pokemon
 		$this->heightM = $heightM;
 		$this->weightKg = $weightKg;
 		$this->genderRatio = $genderRatio;
+		$this->smogonDexIdentifier = $smogonDexIdentifier;
 	}
 
 	/**
@@ -159,5 +165,15 @@ class Pokemon
 	public function getGenderRatio() : ?float
 	{
 		return $this->genderRatio;
+	}
+
+	/**
+	 * Get the Pokémon's Smogon dex identifier.
+	 *
+	 * @return string
+	 */
+	public function getSmogonDexIdentifier() : string
+	{
+		return $this->smogonDexIdentifier;
 	}
 }

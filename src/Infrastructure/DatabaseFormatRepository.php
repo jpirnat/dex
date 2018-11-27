@@ -43,7 +43,8 @@ class DatabaseFormatRepository implements FormatRepositoryInterface
 				`level`,
 				`field_size`,
 				`team_size`,
-				`in_battle_team_size`
+				`in_battle_team_size`,
+				`smogon_dex_identifier`
 			FROM `formats`
 			WHERE `id` = :format_id
 			LIMIT 1'
@@ -65,7 +66,8 @@ class DatabaseFormatRepository implements FormatRepositoryInterface
 			$result['level'],
 			$result['field_size'],
 			$result['team_size'],
-			$result['in_battle_team_size']
+			$result['in_battle_team_size'],
+			$result['smogon_dex_identifier']
 		);
 
 		return $format;
@@ -89,7 +91,8 @@ class DatabaseFormatRepository implements FormatRepositoryInterface
 				`level`,
 				`field_size`,
 				`team_size`,
-				`in_battle_team_size`
+				`in_battle_team_size`,
+				`smogon_dex_identifier`
 			FROM `formats`
 			WHERE `identifier` = :identifier
 			LIMIT 1'
@@ -111,7 +114,8 @@ class DatabaseFormatRepository implements FormatRepositoryInterface
 			$result['level'],
 			$result['field_size'],
 			$result['team_size'],
-			$result['in_battle_team_size']
+			$result['in_battle_team_size'],
+			$result['smogon_dex_identifier']
 		);
 
 		return $format;
