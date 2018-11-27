@@ -65,9 +65,11 @@ class MovesetPokemonMonthView
 	public function getData() : ResponseInterface
 	{
 		$month = $this->movesetPokemonMonthModel->getMonth();
-		$formatIdentifier = $this->movesetPokemonMonthModel->getFormatIdentifier();
+		$format = $this->movesetPokemonMonthModel->getFormat();
 		$rating = $this->movesetPokemonMonthModel->getRating();
-		$pokemonIdentifier = $this->movesetPokemonMonthModel->getPokemonIdentifier();
+		$pokemon = $this->movesetPokemonMonthModel->getPokemon();
+
+		$formatIdentifier = $format->getIdentifier();
 
 		$formatter = $this->formatterFactory->createFor(
 			$this->movesetPokemonMonthModel->getLanguageId()
@@ -94,6 +96,7 @@ class MovesetPokemonMonthView
 		$pokemonModel = $this->movesetPokemonMonthModel->getPokemonModel();
 		$pokemonName = $pokemonModel->getPokemonName();
 		$model = $pokemonModel->getModel();
+		$generation = $this->movesetPokemonMonthModel->getGeneration();
 
 		// Get base stats.
 		$baseStats = [];
@@ -295,9 +298,16 @@ class MovesetPokemonMonthView
 			'html/moveset-pokemon-month.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,
-				'formatIdentifier' => $formatIdentifier,
+				'format' => [
+					'identifier' => $format->getIdentifier(),
+					'smogonDexIdentifier' => $format->getSmogonDexIdentifier(),
+				],
 				'rating' => $rating,
-				'pokemonIdentifier' => $pokemonIdentifier,
+				'pokemon' => [
+					'identifier' => $pokemon->getIdentifier(),
+					'name' => $pokemonName->getName(),
+					'smogonDexIdentifier' => $pokemon->getSmogonDexIdentifier(),
+				],
 
 				'breadcrumbs' => $breadcrumbs,
 
@@ -310,10 +320,12 @@ class MovesetPokemonMonthView
 				'nextMonthText' => $formatter->formatMonth($nextMonth),
 				'ratings' => $this->movesetPokemonMonthModel->getRatings(),
 
-				'pokemonName' => $pokemonName->getName(),
 				'model' => $model->getImage(),
 				'types' => $this->dexFormatter->formatDexTypes($pokemonModel->getTypes()),
 				'baseStats' => $baseStats,
+				'generation' => [
+					'identifier' => $generation->getIdentifier(),
+				],
 				'rawCount' =>$rawCount,
 				'averageWeight' => $averageWeight,
 				'viabilityCeiling' => $viabilityCeiling,

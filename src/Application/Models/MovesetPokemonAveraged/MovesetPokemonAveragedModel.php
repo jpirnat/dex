@@ -5,9 +5,13 @@ namespace Jp\Dex\Application\Models\MovesetPokemonAveraged;
 
 use DateTime;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\PokemonModel;
+use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 
 class MovesetPokemonAveragedModel
 {
@@ -16,6 +20,10 @@ class MovesetPokemonAveragedModel
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
+
+	/** @var GenerationRepositoryInterface $generationRepository */
+	private $generationRepository;
+
 
 	/** @var PokemonModel $pokemonModel */
 	private $pokemonModel;
@@ -36,17 +44,20 @@ class MovesetPokemonAveragedModel
 	/** @var string $end */
 	private $end;
 
-	/** @var string $formatIdentifier */
-	private $formatIdentifier;
+	/** @var Format $format */
+	private $format;
 
 	/** @var int $rating */
 	private $rating;
 
-	/** @var string $pokemonIdentifier */
-	private $pokemonIdentifier;
+	/** @var Pokemon $pokemon */
+	private $pokemon;
 
 	/** @var LanguageId $languageId */
 	private $languageId;
+
+	/** @var Generation $generation */
+	private $generation;
 
 
 	/**
@@ -54,6 +65,7 @@ class MovesetPokemonAveragedModel
 	 *
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
+	 * @param GenerationRepositoryInterface $generationRepository
 	 * @param PokemonModel $pokemonModel
 	 * @param AbilityModel $abilityModel
 	 * @param ItemModel $itemModel
@@ -62,6 +74,7 @@ class MovesetPokemonAveragedModel
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
 		PokemonRepositoryInterface $pokemonRepository,
+		GenerationRepositoryInterface $generationRepository,
 		PokemonModel $pokemonModel,
 		AbilityModel $abilityModel,
 		ItemModel $itemModel,
@@ -69,6 +82,7 @@ class MovesetPokemonAveragedModel
 	) {
 		$this->formatRepository = $formatRepository;
 		$this->pokemonRepository = $pokemonRepository;
+		$this->generationRepository = $generationRepository;
 		$this->pokemonModel = $pokemonModel;
 		$this->abilityModel = $abilityModel;
 		$this->itemModel = $itemModel;
@@ -97,9 +111,7 @@ class MovesetPokemonAveragedModel
 	) : void {
 		$this->start = $start;
 		$this->end = $end;
-		$this->formatIdentifier = $formatIdentifier;
 		$this->rating = $rating;
-		$this->pokemonIdentifier = $pokemonIdentifier;
 		$this->languageId = $languageId;
 
 		// Get the start month and end month.
@@ -107,25 +119,30 @@ class MovesetPokemonAveragedModel
 		$end = new DateTime("$end-01");
 
 		// Get the format.
-		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
+		$this->format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
 		// Get the Pokémon.
-		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
+		$this->pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
 
 		// Get Pokémon data.
 		$this->pokemonModel->setData(
-			$format->getGenerationId(),
-			$pokemon->getId(),
+			$this->format->getGenerationId(),
+			$this->pokemon->getId(),
 			$languageId
+		);
+
+		// Get the format's generation.
+		$this->generation = $this->generationRepository->getById(
+			$this->format->getGenerationId()
 		);
 
 		// Get ability data.
 		$this->abilityModel->setData(
 			$start,
 			$end,
-			$format->getId(),
+			$this->format->getId(),
 			$rating,
-			$pokemon->getId(),
+			$this->pokemon->getId(),
 			$languageId
 		);
 
@@ -133,9 +150,9 @@ class MovesetPokemonAveragedModel
 		$this->itemModel->setData(
 			$start,
 			$end,
-			$format->getId(),
+			$this->format->getId(),
 			$rating,
-			$pokemon->getId(),
+			$this->pokemon->getId(),
 			$languageId
 		);
 
@@ -143,9 +160,9 @@ class MovesetPokemonAveragedModel
 		$this->moveModel->setData(
 			$start,
 			$end,
-			$format->getId(),
+			$this->format->getId(),
 			$rating,
-			$pokemon->getId(),
+			$this->pokemon->getId(),
 			$languageId
 		);
 	}
@@ -171,13 +188,13 @@ class MovesetPokemonAveragedModel
 	}
 
 	/**
-	 * Get the format identifier.
+	 * Get the format.
 	 *
-	 * @return string
+	 * @return Format
 	 */
-	public function getFormatIdentifier() : string
+	public function getFormat() : Format
 	{
-		return $this->formatIdentifier;
+		return $this->format;
 	}
 
 	/**
@@ -191,13 +208,13 @@ class MovesetPokemonAveragedModel
 	}
 
 	/**
-	 * Get the Pokémon identifier.
+	 * Get the Pokémon.
 	 *
-	 * @return string
+	 * @return Pokemon
 	 */
-	public function getPokemonIdentifier() : string
+	public function getPokemon() : Pokemon
 	{
-		return $this->pokemonIdentifier;
+		return $this->pokemon;
 	}
 
 	/**
@@ -218,6 +235,16 @@ class MovesetPokemonAveragedModel
 	public function getPokemonModel() : PokemonModel
 	{
 		return $this->pokemonModel;
+	}
+
+	/**
+	 * Get the generation.
+	 *
+	 * @return Generation
+	 */
+	public function getGeneration() : Generation
+	{
+		return $this->generation;
 	}
 
 	/**

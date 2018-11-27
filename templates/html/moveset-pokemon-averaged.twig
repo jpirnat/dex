@@ -3,14 +3,14 @@
 {% block body %}
 	<div class="pokemon-data">
 		<div>
-			{{ pokemonName|e }}
+			{{ pokemon.name|e }}
 		</div>
 		<div>
 			<img src="/images/pokemon/models/{{ model|e }}">
 		</div>
 		<div class="pokemon-types">
 			{% for type in types %}
-				<a href="/dex/types/{{ type.identifier|e }}">
+				<a href="/dex/{{ generation.identifier|e }}/types/{{ type.identifier|e }}">
 					<img src="/images/types/{{ type.icon|e }}">
 				</a>
 			{% endfor %}
@@ -30,6 +30,14 @@
 	</table>
 
 	<div></div>
+
+	{% if format.smogonDexIdentifier and pokemon.smogonDexIdentifier %}
+		<div>
+			<a href="https://www.smogon.com/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.smogonDexIdentifier|e }}/{{ format.smogonDexIdentifier|e }}/">
+				Smogon Analysis
+			</a>
+		</div>
+	{% endif %}
 
 	<nav id="quick-links">
 		<ul>

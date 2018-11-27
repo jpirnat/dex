@@ -62,9 +62,11 @@ class MovesetPokemonAveragedView
 	{
 		$start = $this->movesetPokemonAveragedModel->getStart();
 		$end = $this->movesetPokemonAveragedModel->getEnd();
-		$formatIdentifier = $this->movesetPokemonAveragedModel->getFormatIdentifier();
+		$format = $this->movesetPokemonAveragedModel->getFormat();
 		$rating = $this->movesetPokemonAveragedModel->getRating();
-		$pokemonIdentifier = $this->movesetPokemonAveragedModel->getPokemonIdentifier();
+		$pokemon = $this->movesetPokemonAveragedModel->getPokemon();
+
+		$formatIdentifier = $format->getIdentifier();
 
 		$formatter = $this->formatterFactory->createFor(
 			$this->movesetPokemonAveragedModel->getLanguageId()
@@ -74,6 +76,7 @@ class MovesetPokemonAveragedView
 		$pokemonModel = $this->movesetPokemonAveragedModel->getPokemonModel();
 		$pokemonName = $pokemonModel->getPokemonName();
 		$model = $pokemonModel->getModel();
+		$generation = $this->movesetPokemonAveragedModel->getGeneration();
 
 		// Get base stats.
 		$baseStats = [];
@@ -166,14 +169,23 @@ class MovesetPokemonAveragedView
 
 				'start' => $start,
 				'end' => $end,
-				'formatIdentifier' => $formatIdentifier,
+				'format' => [
+					'identifier' => $format->getIdentifier(),
+					'smogonDexIdentifier' => $format->getSmogonDexIdentifier(),
+				],
 				'rating' => $rating,
-				'pokemonIdentifier' => $pokemonIdentifier,
+				'pokemon' => [
+					'identifier' => $pokemon->getIdentifier(),
+					'name' => $pokemonName->getName(),
+					'smogonDexIdentifier' => $pokemon->getSmogonDexIdentifier(),
+				],
 
-				'pokemonName' => $pokemonName->getName(),
 				'model' => $model->getImage(),
 				'types' => $this->dexFormatter->formatDexTypes($pokemonModel->getTypes()),
 				'baseStats' => $baseStats,
+				'generation' => [
+					'identifier' => $generation->getIdentifier(),
+				],
 
 				// The main data.
 				'abilities' => $abilities,

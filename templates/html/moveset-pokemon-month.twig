@@ -4,7 +4,7 @@
 	<div class="month-control">
 		{% if showPrevMonthLink %}
 			<div class="button prev">
-				<a href="/stats/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ pokemonIdentifier|e }}">
+				<a href="/stats/{{ prevMonth|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
 					&#9668; {{ prevMonthText|e }}
 				</a>
 			</div>
@@ -14,7 +14,7 @@
 
 		{% if showNextMonthLink %}
 			<div class="button next">
-				<a href="/stats/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ pokemonIdentifier|e }}">
+				<a href="/stats/{{ nextMonth|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
 					{{ nextMonthText|e }} &#9658;
 				</a>
 			</div>
@@ -26,7 +26,7 @@
 			{% for otherRating in ratings %}
 				<li>
 					<a
-						href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ otherRating|e }}/pokemon/{{ pokemonIdentifier|e }}"
+						href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ otherRating|e }}/pokemon/{{ pokemon.identifier|e }}"
 						{% if otherRating == rating %}
 							class="current"
 						{% endif %}
@@ -38,14 +38,14 @@
 
 	<div class="pokemon-data">
 		<div>
-			{{ pokemonName|e }}
+			{{ pokemon.name|e }}
 		</div>
 		<div>
 			<img src="/images/pokemon/models/{{ model|e }}">
 		</div>
 		<div class="pokemon-types">
 			{% for type in types %}
-				<a href="/dex/types/{{ type.identifier|e }}">
+				<a href="/dex/{{ generation.identifier|e }}/types/{{ type.identifier|e }}">
 					<img src="/images/types/{{ type.icon|e }}">
 				</a>
 			{% endfor %}
@@ -82,6 +82,14 @@
 		</div>
 	{% endif %}
 
+	{% if format.smogonDexIdentifier and pokemon.smogonDexIdentifier %}
+		<div>
+			<a href="https://www.smogon.com/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.smogonDexIdentifier|e }}/{{ format.smogonDexIdentifier|e }}/">
+				Smogon Analysis
+			</a>
+		</div>
+	{% endif %}
+
 	<nav id="quick-links">
 		<ul>
 			<li><a href="#abilities" class="scroll">Abilities</a></li>
@@ -106,7 +114,7 @@
 			{% for ability in abilities %}
 				<tr>
 					<td>
-						<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/abilities/{{ ability.identifier|e }}">
+						<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/abilities/{{ ability.identifier|e }}">
 							{{ ability.name|e }}
 						</a>
 					</td>
@@ -120,7 +128,7 @@
 							class="number"
 						{% endif %}
 					>
-						<a class="trend-link" href="/stats/trends/chart?type=moveset-ability&format={{ formatIdentifier|e }}&rating={{ rating|e }}&pokemon={{ pokemonIdentifier|e }}&ability={{ ability.identifier|e }}">
+						<a class="trend-link" href="/stats/trends/chart?type=moveset-ability&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&ability={{ ability.identifier|e }}">
 							{{ ability.changeText|e }}
 						</a>
 					</td>
@@ -142,7 +150,7 @@
 			{% for item in items %}
 				<tr>
 					<td>
-						<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
+						<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
 							{{ item.name|e }}
 						</a>
 					</td>
@@ -156,7 +164,7 @@
 							class="number"
 						{% endif %}
 					>
-						<a class="trend-link" href="/stats/trends/chart?type=moveset-item&format={{ formatIdentifier|e }}&rating={{ rating|e }}&pokemon={{ pokemonIdentifier|e }}&item={{ item.identifier|e }}">
+						<a class="trend-link" href="/stats/trends/chart?type=moveset-item&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&item={{ item.identifier|e }}">
 							{{ item.changeText|e }}
 						</a>
 					</td>
@@ -226,7 +234,7 @@
 			{% for move in moves %}
 				<tr>
 					<td>
-						<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
+						<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
 							{{ move.name|e }}
 						</a>
 					</td>
@@ -240,7 +248,7 @@
 							class="number"
 						{% endif %}
 					>
-						<a class="trend-link" href="/stats/trends/chart?type=moveset-move&format={{ formatIdentifier|e }}&rating={{ rating|e }}&pokemon={{ pokemonIdentifier|e }}&move={{ move.identifier|e }}">
+						<a class="trend-link" href="/stats/trends/chart?type=moveset-move&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&move={{ move.identifier|e }}">
 							{{ move.changeText|e }}
 						</a>
 					</td>
@@ -266,7 +274,7 @@
 					</td>
 					<td>
 						{% if teammate.showMovesetLink %}
-							<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ teammate.identifier|e }}">
+							<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ teammate.identifier|e }}">
 								{{ teammate.name|e }}
 							</a>
 						{% else %}
@@ -286,8 +294,8 @@
 				<th></th>
 				<th>Counter</th>
 				<th title="The counter's numeric score, weighted to remove bias towards low-probability matchups (% - 4σ)">S</th>
-				<th title="The percent of encounters where {{ pokemonName|e }} was knocked out or switched out">%</th>
-				<th title="The standard deviation of the percent of encounters where {{ pokemonName|e }} was knocked out or switched out">σ</th>
+				<th title="The percent of encounters where {{ pokemon.name|e }} was knocked out or switched out">%</th>
+				<th title="The standard deviation of the percent of encounters where {{ pokemon.name|e }} was knocked out or switched out">σ</th>
 				<th>% KOed</th>
 				<th>% switched out</th>
 			</tr>
@@ -300,7 +308,7 @@
 					</td>
 					<td>
 						{% if counter.showMovesetLink %}
-							<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ counter.identifier|e }}">
+							<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ counter.identifier|e }}">
 								{{ counter.name|e }}
 							</a>
 						{% else %}
