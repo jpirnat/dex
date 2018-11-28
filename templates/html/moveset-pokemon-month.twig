@@ -64,6 +64,14 @@
 		{% endfor %}
 	</table>
 
+	{% if format.smogonDexIdentifier and pokemon.smogonDexIdentifier %}
+		<div>
+			<a href="https://www.smogon.com/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.smogonDexIdentifier|e }}/{{ format.smogonDexIdentifier|e }}/">
+				Smogon Analysis
+			</a>
+		</div>
+	{% endif %}
+
 	{% if rawCount %}
 		<div>
 			Raw count: {{ rawCount|e }}
@@ -79,14 +87,6 @@
 	{% if viabilityCeiling %}
 		<div>
 			Viability Ceiling: {{ viabilityCeiling|e }}
-		</div>
-	{% endif %}
-
-	{% if format.smogonDexIdentifier and pokemon.smogonDexIdentifier %}
-		<div>
-			<a href="https://www.smogon.com/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.smogonDexIdentifier|e }}/{{ format.smogonDexIdentifier|e }}/">
-				Smogon Analysis
-			</a>
 		</div>
 	{% endif %}
 
