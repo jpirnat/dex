@@ -50,7 +50,7 @@ class LeadsFileExtractor
 		} catch (InvalidLeadUsageLineException $e) {
 			// It must not be a lead usage data line.
 		}
-	
+
 		return false;
 	}
 

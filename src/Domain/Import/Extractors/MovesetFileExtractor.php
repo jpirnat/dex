@@ -128,7 +128,7 @@ class MovesetFileExtractor
 		} catch (InvalidViabilityCeilingLineException $e) {
 			// It must not be a viability ceiling.
 		}
-	
+
 		return false;
 	}
 
@@ -171,7 +171,7 @@ class MovesetFileExtractor
 		} catch (InvalidNamePercentLineException $e) {
 			// It must not be a name and percent.
 		}
-	
+
 		return false;
 	}
 
@@ -259,7 +259,7 @@ class MovesetFileExtractor
 		} catch (InvalidCounterLine1Exception $e) {
 			// It must not be a counter line 1.
 		}
-	
+
 		return false;
 	}
 

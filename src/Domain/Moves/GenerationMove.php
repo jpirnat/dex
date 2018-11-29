@@ -372,7 +372,7 @@ class GenerationMove
 	/**
 	 * Get the generation move's recoil percent, the percent of inflicted damage
 	 * that the user takes back as recoil. Negative for actual recoil moves like
-	 * Double Edge. Positive for moves like Giga Drain, for which the user 
+	 * Double Edge. Positive for moves like Giga Drain, for which the user
 	 * recovers a percent of the inflicted damage.
 	 *
 	 * @return int

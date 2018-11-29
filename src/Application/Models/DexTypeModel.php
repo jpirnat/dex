@@ -95,14 +95,14 @@ class DexTypeModel
 			$type->getId(),
 			$languageId
 		);
-		
+
 		// Get moves with this type.
 		$this->moves = $this->dexMoveFactory->getByGenerationAndType(
 			$generationId,
 			$type->getId(),
 			$languageId
 		);
-	}	
+	}
 
 	/**
 	 * Get the generation model.

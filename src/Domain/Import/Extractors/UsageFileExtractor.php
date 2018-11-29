@@ -75,7 +75,7 @@ class UsageFileExtractor
 		} catch (InvalidUsageLineException $e) {
 			// It must not be a usage data line.
 		}
-	
+
 		return false;
 	}
 

@@ -275,7 +275,7 @@ class TrendChartView
 		}
 
 		return implode(' - ', $labelParts);
-	}	
+	}
 
 	/**
 	 * Get a color for the line.

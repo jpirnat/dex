@@ -95,7 +95,7 @@ class StatCalculator
 		Nature $nature
 	) : StatValueContainer {
 		$statSpread = new StatValueContainer();
-		
+
 		// Calculate HP.
 		$statId = new StatId(StatId::HP);
 		$value = $this->hp3(

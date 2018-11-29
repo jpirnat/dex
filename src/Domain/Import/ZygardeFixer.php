@@ -39,10 +39,10 @@ class ZygardeFixer
 		$tables = [
 			'usage_pokemon',
 			'usage_rated_pokemon',
-		
+
 			'leads_pokemon',
 			'leads_rated_pokemon',
-		
+
 			'moveset_pokemon',
 			'moveset_rated_abilities',
 			'moveset_rated_counters',
