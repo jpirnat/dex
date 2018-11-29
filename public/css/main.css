@@ -107,7 +107,8 @@ table .percent-minus {
 
 /* dex */
 
-table.dex-pokemon {
+table.dex-pokemon,
+table.dex-moves {
 	width: 100%;
 }
 

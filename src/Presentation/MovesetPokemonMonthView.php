@@ -69,8 +69,6 @@ class MovesetPokemonMonthView
 		$rating = $this->movesetPokemonMonthModel->getRating();
 		$pokemon = $this->movesetPokemonMonthModel->getPokemon();
 
-		$formatIdentifier = $format->getIdentifier();
-
 		$formatter = $this->formatterFactory->createFor(
 			$this->movesetPokemonMonthModel->getLanguageId()
 		);
@@ -276,6 +274,7 @@ class MovesetPokemonMonthView
 		}
 
 		// Navigation breadcrumbs.
+		$formatIdentifier = $format->getIdentifier();
 		$breadcrumbs = [
 			[
 				'url' => '/stats',

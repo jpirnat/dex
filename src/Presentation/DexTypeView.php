@@ -50,7 +50,7 @@ class DexTypeView
 	public function index() : ResponseInterface
 	{
 		$generationModel = $this->dexTypeModel->getGenerationModel();
-		$generationIdentifier = $generationModel->getGeneration()->getIdentifier();
+		$generation = $generationModel->getGeneration();
 
 		$type = $this->dexTypeModel->getType();
 		$pokemon = $this->dexTypeModel->getPokemon();
@@ -61,6 +61,7 @@ class DexTypeView
 		// TODO: Sort Pokémon somehow. Add a sort value to class Pokemon?
 
 		// Navigational breadcrumbs.
+		$generationIdentifier = $generation->getIdentifier();
 		$breadcrumbs = [
 			[
 				'text' => 'Dex',
@@ -79,7 +80,10 @@ class DexTypeView
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Types - ' . $type['name'],
 				'breadcrumbs' => $breadcrumbs,
-				'generationIdentifier' => $generationIdentifier,
+				'generation' => [
+					'id' => $generation->getId()->value(),
+					'identifier' => $generation->getIdentifier(),
+				],
 				'stats' => ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe', 'BST'],
 				// TODO: Pull these stat names from somewhere else.
 				'pokemons' => $pokemon,

@@ -76,12 +76,15 @@ class DexAbilitiesModel
 			$abilityId = $ability->getId()->value();
 
 			$abilityName = $abilityNames[$abilityId];
-			$abilityDescription = $abilityDescriptions[$abilityId];
+			$abilityDescription = $abilityDescriptions[$abilityId] ?? null;
+			$abilityDescription = $abilityDescription
+				? $abilityDescription->getDescription()
+				: '-';
 
 			$this->abilities[] = [
 				'identifier' => $ability->getIdentifier(),
 				'name' => $abilityName->getName(),
-				'description' => $abilityDescription->getDescription(),
+				'description' => $abilityDescription,
 			];
 		}
 	}

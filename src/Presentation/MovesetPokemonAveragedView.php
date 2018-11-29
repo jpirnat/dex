@@ -66,8 +66,6 @@ class MovesetPokemonAveragedView
 		$rating = $this->movesetPokemonAveragedModel->getRating();
 		$pokemon = $this->movesetPokemonAveragedModel->getPokemon();
 
-		$formatIdentifier = $format->getIdentifier();
-
 		$formatter = $this->formatterFactory->createFor(
 			$this->movesetPokemonAveragedModel->getLanguageId()
 		);
@@ -145,6 +143,7 @@ class MovesetPokemonAveragedView
 		}
 
 		// Navigation breadcrumbs.
+		$formatIdentifier = $format->getIdentifier();
 		$breadcrumbs = [
 			[
 				'url' => '/stats',

@@ -50,7 +50,7 @@ class DexAbilityView
 	public function index() : ResponseInterface
 	{
 		$generationModel = $this->dexAbilityModel->getGenerationModel();
-		$generationIdentifier = $generationModel->getGeneration()->getIdentifier();
+		$generation = $generationModel->getGeneration();
 
 		$ability = $this->dexAbilityModel->getAbility();
 
@@ -62,6 +62,7 @@ class DexAbilityView
 		// TODO: Sort Pokémon somehow. Add a sort value to class Pokemon?
 
 		// Navigational breadcrumbs.
+		$generationIdentifier = $generation->getIdentifier();
 		$breadcrumbs = [
 			[
 				'text' => 'Dex',
@@ -80,11 +81,14 @@ class DexAbilityView
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Abilities - ' . $ability['name'],
 				'breadcrumbs' => $breadcrumbs,
-				'generationIdentifier' => $generationIdentifier,
+				'generation' => [
+					'id' => $generation->getId()->value(),
+					'identifier' => $generation->getIdentifier(),
+				],
 				'ability' => $ability,
 				'stats' => ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe', 'BST'],
 				// TODO: Pull these stat names from somewhere else.
-				'pokemon' => array_merge($normalPokemon, $hiddenPokemon),
+				'pokemons' => array_merge($normalPokemon, $hiddenPokemon),
 			]
 		);
 

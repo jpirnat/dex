@@ -44,7 +44,7 @@ class DexAbilitiesView
 	public function index() : ResponseInterface
 	{
 		$generationModel = $this->dexAbilitiesModel->getGenerationModel();
-		$generationIdentifier = $generationModel->getGeneration()->getIdentifier();
+		$generation = $generationModel->getGeneration();
 
 		$abilities = $this->dexAbilitiesModel->getAbilities();
 
@@ -67,7 +67,9 @@ class DexAbilitiesView
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Abilities',
 				'breadcrumbs' => $breadcrumbs,
-				'generationIdentifier' => $generationIdentifier,
+				'generation' => [
+					'identifier' => $generation->getIdentifier(),
+				],
 				'abilities' => $abilities,
 			]
 		);

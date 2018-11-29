@@ -7,7 +7,9 @@
 				<th></th>
 				<th scope="col">Pokémon</th>
 				<th scope="col">Types</th>
-				<th scope="col">Abilities</th>
+				{% if generation.id >= 3 %}
+					<th scope="col">Abilities</th>
+				{% endif %}
 				{% for stat in stats %}
 					<th scope="col" class="number">{{ stat|e }}</th>
 				{% endfor %}
@@ -20,30 +22,32 @@
 						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
 					</td>
 					<td>
-						<a href="/dex/{{ generationIdentifier|e }}/pokemon/{{ pokemon.identifier|e }}">
+						<a href="/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.identifier|e }}">
 							{{ pokemon.name|e }}
 						</a>
 					</td>
 					<td class="types">
 						{% for type in pokemon.types %}
-							<a href="/dex/{{ generationIdentifier|e }}/types/{{ type.identifier|e }}">
+							<a href="/dex/{{ generation.identifier|e }}/types/{{ type.identifier|e }}">
 								<img src="/images/types/{{ type.icon|e }}">
 							</a>
 						{% endfor %}
 					</td>
-					<td>
-						{% for ability in pokemon.abilities %}
-							<div>
-								<a href="/dex/{{ generationIdentifier|e }}/abilities/{{ ability.identifier|e }}"
-									{% if ability.isHiddenAbility %}
-										class="hidden-ability"
-									{% endif %}
-								>
-									{{ ability.name|e }}
-								</a>
-							</div>
-						{% endfor %}
-					</td>
+					{% if generation.id >= 3 %}
+						<td>
+							{% for ability in pokemon.abilities %}
+								<div>
+									<a href="/dex/{{ generation.identifier|e }}/abilities/{{ ability.identifier|e }}"
+										{% if ability.isHiddenAbility %}
+											class="hidden-ability"
+										{% endif %}
+									>
+										{{ ability.name|e }}
+									</a>
+								</div>
+							{% endfor %}
+						</td>
+					{% endif %}
 					{% for baseStat in pokemon.baseStats %}
 						<td class="number">
 							{{ baseStat|e }}
@@ -64,19 +68,21 @@
 				<th scope="col">Power</th>
 				<th scope="col">Accuracy</th>
 				<th scope="col">Priority</th>
-				<th scope="col" class="description">Description</th>
+				{% if generation.id >= 3 %}
+					<th scope="col" class="description">Description</th>
+				{% endif %}
 			</tr>
 		</thead>
 		<tbody>
 			{% for move in moves %}
 				<tr>
 					<td>
-						<a href="/dex/{{ generationIdentifier|e }}/moves/{{ move.identifier|e }}">
+						<a href="/dex/{{ generation.identifier|e }}/moves/{{ move.identifier|e }}">
 							{{ move.name|e }}
 						</a>
 					</td>
 					<td>
-						<a href="/dex/{{ generationIdentifier|e }}/types/{{ move.type.identifier|e }}">
+						<a href="/dex/{{ generation.identifier|e }}/types/{{ move.type.identifier|e }}">
 							<img src="/images/types/{{ move.type.icon|e }}">
 						</a>
 					</td>
@@ -85,7 +91,9 @@
 					<td class="number">{{ move.power|e }}</td>
 					<td class="number">{{ move.accuracy|e }}</td>
 					<td class="number">{{ move.priority|e }}</td>
-					<td class="description">{{ move.description|e }}</td>
+					{% if generation.id >= 3 %}
+						<td class="description">{{ move.description|e }}</td>
+					{% endif %}
 				</tr>
 			{% endfor %}
 		</tbody>

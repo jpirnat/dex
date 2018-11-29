@@ -1,9 +1,62 @@
 {% extends "html/base.twig" %}
 
-{% import "html/dex/tables.twig" as dexTables %}
-
 {% block body %}
 	<p>{{ ability.name|e }}: {{ ability.description|e }}</p>
 
-	{{ dexTables.pokemonTable(generationIdentifier, stats, pokemon) }}
+	<table class="dex-pokemon">
+		<thead>
+			<tr>
+				<th></th>
+				<th scope="col">Pokémon</th>
+				<th scope="col">Types</th>
+				{% if generation.id >= 3 %}
+					<th scope="col">Abilities</th>
+				{% endif %}
+				{% for stat in stats %}
+					<th scope="col" class="number">{{ stat|e }}</th>
+				{% endfor %}
+			</tr>
+		</thead>
+		<tbody>
+			{% for pokemon in pokemons %}
+				<tr>
+					<td>
+						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
+					</td>
+					<td>
+						<a href="/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.identifier|e }}">
+							{{ pokemon.name|e }}
+						</a>
+					</td>
+					<td class="types">
+						{% for type in pokemon.types %}
+							<a href="/dex/{{ generation.identifier|e }}/types/{{ type.identifier|e }}">
+								<img src="/images/types/{{ type.icon|e }}">
+							</a>
+						{% endfor %}
+					</td>
+					{% if generation.id >= 3 %}
+						<td>
+							{% for ability in pokemon.abilities %}
+								<div>
+									<a href="/dex/{{ generation.identifier|e }}/abilities/{{ ability.identifier|e }}"
+										{% if ability.isHiddenAbility %}
+											class="hidden-ability"
+										{% endif %}
+									>
+										{{ ability.name|e }}
+									</a>
+								</div>
+							{% endfor %}
+						</td>
+					{% endif %}
+					{% for baseStat in pokemon.baseStats %}
+						<td class="number">
+							{{ baseStat|e }}
+						</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
 {% endblock %}
