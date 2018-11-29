@@ -15,9 +15,6 @@ interface MoveDescriptionRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param MoveId $moveId
 	 *
-	 * @throws MoveDescriptionNotFoundException if no move description exists
-	 *     for this generation, language, and move.
-	 *
 	 * @return MoveDescription
 	 */
 	public function getByGenerationAndLanguageAndMove(

@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Abilities\AbilityDescription;
-use Jp\Dex\Domain\Abilities\AbilityDescriptionNotFoundException;
 use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -33,9 +32,6 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 	 * @param LanguageId $languageId
 	 * @param AbilityId $abilityId
 	 *
-	 * @throws AbilityDescriptionNotFoundException if no ability description
-	 *     exists for this generation, language, and ability.
-	 *
 	 * @return AbilityDescription
 	 */
 	public function getByGenerationAndLanguageAndAbility(
@@ -59,12 +55,7 @@ class DatabaseAbilityDescriptionRepository implements AbilityDescriptionReposito
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new AbilityDescriptionNotFoundException(
-				'No ability description exists with generation id '
-				. $generationId->value() . ', language id '
-				. $languageId->value() . ', and ability id '
-				. $abilityId->value() . '.'
-			);
+			return new AbilityDescription($generationId, $languageId, $abilityId, '');
 		}
 
 		$abilityDescription = new AbilityDescription(

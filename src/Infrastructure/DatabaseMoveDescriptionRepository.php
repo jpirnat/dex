@@ -5,7 +5,6 @@ namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveDescription;
-use Jp\Dex\Domain\Moves\MoveDescriptionNotFoundException;
 use Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Versions\GenerationId;
@@ -33,9 +32,6 @@ class DatabaseMoveDescriptionRepository implements MoveDescriptionRepositoryInte
 	 * @param LanguageId $languageId
 	 * @param MoveId $moveId
 	 *
-	 * @throws MoveDescriptionNotFoundException if no move description exists
-	 *     for this generation, language, and move.
-	 *
 	 * @return MoveDescription
 	 */
 	public function getByGenerationAndLanguageAndMove(
@@ -59,12 +55,7 @@ class DatabaseMoveDescriptionRepository implements MoveDescriptionRepositoryInte
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new MoveDescriptionNotFoundException(
-				'No move description exists with generation id '
-				. $generationId->value() . ', language id '
-				. $languageId->value() . ', and move id ' . $moveId->value()
-				. '.'
-			);
+			return new MoveDescription($generationId, $languageId, $moveId, '');
 		}
 
 		$moveDescription = new MoveDescription(

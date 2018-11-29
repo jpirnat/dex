@@ -15,9 +15,6 @@ interface ItemDescriptionRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param ItemId $itemId
 	 *
-	 * @throws ItemDescriptionNotFoundException if no item description exists
-	 *     for this generation, language, and item.
-	 *
 	 * @return ItemDescription
 	 */
 	public function getByGenerationAndLanguageAndItem(

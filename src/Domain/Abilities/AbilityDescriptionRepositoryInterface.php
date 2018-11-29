@@ -15,9 +15,6 @@ interface AbilityDescriptionRepositoryInterface
 	 * @param LanguageId $languageId
 	 * @param AbilityId $abilityId
 	 *
-	 * @throws AbilityDescriptionNotFoundException if no ability description
-	 *     exists for this generation, language, and ability.
-	 *
 	 * @return AbilityDescription
 	 */
 	public function getByGenerationAndLanguageAndAbility(

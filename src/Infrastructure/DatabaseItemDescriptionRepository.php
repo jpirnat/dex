@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Items\ItemDescription;
-use Jp\Dex\Domain\Items\ItemDescriptionNotFoundException;
 use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -33,9 +32,6 @@ class DatabaseItemDescriptionRepository implements ItemDescriptionRepositoryInte
 	 * @param LanguageId $languageId
 	 * @param ItemId $itemId
 	 *
-	 * @throws ItemDescriptionNotFoundException if no item description exists
-	 *     for this generation, language, and item.
-	 *
 	 * @return ItemDescription
 	 */
 	public function getByGenerationAndLanguageAndItem(
@@ -59,12 +55,7 @@ class DatabaseItemDescriptionRepository implements ItemDescriptionRepositoryInte
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new ItemDescriptionNotFoundException(
-				'No item description exists with generation id '
-				. $generationId->value() . ', language id '
-				. $languageId->value() . ', and item id ' . $itemId->value()
-				. '.'
-			);
+			return new ItemDescription($generationId, $languageId, $itemId, '');
 		}
 
 		$itemDescription = new ItemDescription(
