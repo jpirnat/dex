@@ -134,7 +134,7 @@ class BreedingChainFinder
 			}
 
 			// Before gen 6, only male Pokémon could pass down egg moves.
-			if ($pokemonMove['generation'] < 6
+			if ($pokemonMove['generationId'] < 6
 				&& in_array($pokemonMove['pokemonId'], $this->femaleOnlyPokemonIds)
 			) {
 				continue;
@@ -175,7 +175,7 @@ class BreedingChainFinder
 			}
 
 			// Before gen 6, only male Pokémon could pass down egg moves.
-			if ($pokemonMove['generation'] < 6
+			if ($pokemonMove['generationId'] < 6
 				&& in_array($pokemonMove['pokemonId'], $this->femaleOnlyPokemonIds)
 			) {
 				continue;

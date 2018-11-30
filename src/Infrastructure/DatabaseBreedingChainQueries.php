@@ -165,7 +165,7 @@ class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 				`pm`.`move_method_id` AS `moveMethodId`,
 				`pm`.`level`,
 				`pm`.`sort`,
-				`vg`.`generation_id`
+				`vg`.`generation_id` AS `generationId`
 			FROM `pokemon_moves` AS `pm`
 			INNER JOIN `version_groups` AS `vg`
 				ON `pm`.`version_group_id` = `vg`.`id`
@@ -213,7 +213,7 @@ class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 				`pm`.`move_method_id` AS `moveMethodId`,
 				`pm`.`level`,
 				`pm`.`sort`,
-				`vg`.`generation_id`
+				`vg`.`generation_id` AS `generationId`
 			FROM `pokemon_moves` AS `pm`
 			INNER JOIN `version_groups` AS `vg`
 				ON `pm`.`version_group_id` = `vg`.`id`
