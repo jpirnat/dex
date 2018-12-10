@@ -43,10 +43,6 @@ class DexNaturesView
 	 */
 	public function index() : ResponseInterface
 	{
-		$generationModel = $this->dexNaturesModel->getGenerationModel();
-		$generation = $generationModel->getGeneration();
-		$generationIdentifier = $generation->getIdentifier();
-
 		// Navigational breadcrumbs.
 		$breadcrumbs = [
 			[
@@ -62,9 +58,6 @@ class DexNaturesView
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Natures',
 				'breadcrumbs' => $breadcrumbs,
-				'generation' => [
-					'identifier' => $generation->getIdentifier(),
-				],
 				'natures' => $this->dexNaturesModel->getNatures(),
 			]
 		);

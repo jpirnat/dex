@@ -31,8 +31,10 @@ class TeammateModel
 	/** @var FormIconRepositoryInterface $formIconRepository */
 	private $formIconRepository;
 
+
 	/** @var TeammateData[] $teammateDatas */
 	private $teammateDatas = [];
+
 
 	/**
 	 * Constructor.

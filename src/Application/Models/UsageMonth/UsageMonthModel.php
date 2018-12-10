@@ -48,18 +48,6 @@ class UsageMonthModel
 	private $formIconRepository;
 
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
-	/** @var int[] $ratings */
-	private $ratings = [];
-
-	/** @var bool $leadsDataExists */
-	private $leadsDataExists;
-
 	/** @var string $month */
 	private $month;
 
@@ -72,8 +60,21 @@ class UsageMonthModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
+	/** @var bool $prevMonthDataExists */
+	private $prevMonthDataExists;
+
+	/** @var bool $nextMonthDataExists */
+	private $nextMonthDataExists;
+
+	/** @var int[] $ratings */
+	private $ratings = [];
+
+	/** @var bool $leadsDataExists */
+	private $leadsDataExists;
+
 	/** @var UsageData[] $usageDatas */
 	private $usageDatas = [];
+
 
 	/**
 	 * Constructor.

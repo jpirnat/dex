@@ -104,13 +104,14 @@ class LeadsAveragedView
 		$content = $this->twig->render(
 			'html/leads-averaged.twig',
 			$this->baseView->getBaseVariables() + [
-				'breadcrumbs' => $breadcrumbs,
-
+				'start' => $start,
+				'end' => $end,
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
 
-				'start' => $start,
-				'end' => $end,
+				'breadcrumbs' => $breadcrumbs,
+
+				'ratings' => $this->leadsAveragedModel->getRatings(),
 
 				// The main data.
 				'data' => $data,

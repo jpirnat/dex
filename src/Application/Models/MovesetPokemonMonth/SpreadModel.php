@@ -37,8 +37,10 @@ class SpreadModel
 	/** @var StatCalculator $statCalculator */
 	private $statCalculator;
 
+
 	/** @var SpreadData[] $spreadDatas */
 	private $spreadDatas = [];
+
 
 	/**
 	 * Constructor.

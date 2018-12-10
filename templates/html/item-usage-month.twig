@@ -23,14 +23,14 @@
 
 	<div class="rating-control">
 		<ul>
-			{% for otherRating in ratings %}
+			{% for r in ratings %}
 				<li>
 					<a
-						href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ otherRating|e }}/items/{{ item.identifier|e }}"
-						{% if otherRating == rating %}
+						href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ r|e }}/items/{{ item.identifier|e }}"
+						{% if r == rating %}
 							class="current"
 						{% endif %}
-					>{{ otherRating|e }}</a>
+					>{{ r|e }}</a>
 				</li>
 			{% endfor %}
 		</ul>

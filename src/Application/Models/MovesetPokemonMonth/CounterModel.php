@@ -31,8 +31,10 @@ class CounterModel
 	/** @var FormIconRepositoryInterface $formIconRepository */
 	private $formIconRepository;
 
+
 	/** @var CounterData[] $counterDatas */
 	private $counterDatas = [];
+
 
 	/**
 	 * Constructor.

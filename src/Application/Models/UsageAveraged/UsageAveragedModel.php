@@ -13,11 +13,15 @@ use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterf
 use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
 class UsageAveragedModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
+
+	/** @var RatingQueriesInterface $ratingQueries */
+	private $ratingQueries;
 
 	/** @var UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository */
 	private $usageAveragedPokemonRepository;
@@ -41,9 +45,6 @@ class UsageAveragedModel
 	private $formIconRepository;
 
 
-	/** @var bool $leadsDataExists */
-	private $leadsDataExists;
-
 	/** @var string $start */
 	private $start;
 
@@ -59,13 +60,21 @@ class UsageAveragedModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
+	/** @var int[] $ratings */
+	private $ratings = [];
+
+	/** @var bool $leadsDataExists */
+	private $leadsDataExists;
+
 	/** @var UsageData[] $usageDatas */
 	private $usageDatas = [];
+
 
 	/**
 	 * Constructor.
 	 *
 	 * @param FormatRepositoryInterface $formatRepository
+	 * @param RatingQueriesInterface $ratingQueries
 	 * @param UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository
 	 * @param UsageRatedAveragedPokemonRepositoryInterface $usageRatedAveragedPokemonRepository
 	 * @param LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository
@@ -76,6 +85,7 @@ class UsageAveragedModel
 	 */
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
+		RatingQueriesInterface $ratingQueries,
 		UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository,
 		UsageRatedAveragedPokemonRepositoryInterface $usageRatedAveragedPokemonRepository,
 		LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
@@ -85,6 +95,7 @@ class UsageAveragedModel
 		FormIconRepositoryInterface $formIconRepository
 	) {
 		$this->formatRepository = $formatRepository;
+		$this->ratingQueries = $ratingQueries;
 		$this->usageAveragedPokemonRepository = $usageAveragedPokemonRepository;
 		$this->usageRatedAveragedPokemonRepository = $usageRatedAveragedPokemonRepository;
 		$this->leadsRatedAveragedPokemonRepository = $leadsRatedAveragedPokemonRepository;
@@ -125,7 +136,14 @@ class UsageAveragedModel
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
-		// Does leads rated data exist for this month?
+		// Get the ratings for these months.
+		$this->ratings = $this->ratingQueries->getByMonthsAndFormat(
+			$start,
+			$end,
+			$format->getId()
+		);
+
+		// Does leads rated data exist for these months?
 		$this->leadsDataExists = $this->leadsRatedAveragedPokemonRepository->hasAny(
 			$start,
 			$end,
@@ -133,14 +151,14 @@ class UsageAveragedModel
 			$rating
 		);
 
-		// Get usage Pokémon records for this month.
+		// Get usage Pokémon records for these months.
 		$usageAveragedPokemons = $this->usageAveragedPokemonRepository->getByMonthsAndFormat(
 			$start,
 			$end,
 			$format->getId()
 		);
 
-		// Get usage rated Pokémon records for this month.
+		// Get usage rated Pokémon records for these months.
 		$usageRatedAveragedPokemons = $this->usageRatedAveragedPokemonRepository->getByMonthsAndFormatAndRating(
 			$start,
 			$end,
@@ -186,7 +204,7 @@ class UsageAveragedModel
 			// Get this Pokémon's form icon.
 			$formIcon = $formIcons[$pokemonId->value()]; // A Pokémon's default form has Pokémon id === form id.
 
-			// Get this Pokémon's non-rated usage record for this month.
+			// Get this Pokémon's non-rated usage record for these months.
 			$usageAveragedPokemon = $usageAveragedPokemons[$pokemonId->value()];
 
 			$this->usageDatas[] = new UsageData(
@@ -262,6 +280,16 @@ class UsageAveragedModel
 	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
+	}
+
+	/**
+	 * Get the ratings for these months.
+	 *
+	 * @return int[]
+	 */
+	public function getRatings() : array
+	{
+		return $this->ratings;
 	}
 
 	/**

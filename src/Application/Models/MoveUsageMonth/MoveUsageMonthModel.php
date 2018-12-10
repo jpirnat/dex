@@ -55,15 +55,6 @@ class MoveUsageMonthModel
 	private $formIconRepository;
 
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
-	/** @var int[] $ratings */
-	private $ratings = [];
-
 	/** @var string $month */
 	private $month;
 
@@ -79,6 +70,15 @@ class MoveUsageMonthModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
+	/** @var bool $prevMonthDataExists */
+	private $prevMonthDataExists;
+
+	/** @var bool $nextMonthDataExists */
+	private $nextMonthDataExists;
+
+	/** @var int[] $ratings */
+	private $ratings = [];
+
 	/** @var MoveName $moveName */
 	private $moveName;
 
@@ -87,6 +87,7 @@ class MoveUsageMonthModel
 
 	/** @var MoveUsageData[] $moveUsageDatas */
 	private $moveUsageDatas = [];
+
 
 	/**
 	 * Constructor.
@@ -179,10 +180,9 @@ class MoveUsageMonthModel
 		);
 
 		// Get the ratings for this month.
-		$this->ratings = $this->ratingQueries->getByMonthAndFormatAndMove(
+		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$format->getId(),
-			$move->getId()
+			$format->getId()
 		);
 
 		// Get the move name.

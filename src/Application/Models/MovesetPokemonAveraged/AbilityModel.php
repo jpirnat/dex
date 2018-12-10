@@ -22,8 +22,10 @@ class AbilityModel
 	/** @var AbilityRepositoryInterface $abilityRepository */
 	private $abilityRepository;
 
+
 	/** @var AbilityData[] $abilityDatas */
 	private $abilityDatas = [];
+
 
 	/**
 	 * Constructor.

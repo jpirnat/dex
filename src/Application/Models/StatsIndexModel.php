@@ -11,8 +11,10 @@ class StatsIndexModel
 	/** @var UsageQueriesInterface $usageQueries */
 	private $usageQueries;
 
+
 	/** @var DateTime[] $months */
 	private $months = [];
+
 
 	/**
 	 * Constructor.

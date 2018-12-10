@@ -55,15 +55,6 @@ class ItemUsageMonthModel
 	private $formIconRepository;
 
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
-	/** @var int[] $ratings */
-	private $ratings = [];
-
 	/** @var string $month */
 	private $month;
 
@@ -79,6 +70,15 @@ class ItemUsageMonthModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
+	/** @var bool $prevMonthDataExists */
+	private $prevMonthDataExists;
+
+	/** @var bool $nextMonthDataExists */
+	private $nextMonthDataExists;
+
+	/** @var int[] $ratings */
+	private $ratings = [];
+
 	/** @var ItemName $itemName */
 	private $itemName;
 
@@ -87,6 +87,7 @@ class ItemUsageMonthModel
 
 	/** @var ItemUsageData[] $itemUsageDatas */
 	private $itemUsageDatas = [];
+
 
 	/**
 	 * Constructor.
@@ -179,10 +180,9 @@ class ItemUsageMonthModel
 		);
 
 		// Get the ratings for this month.
-		$this->ratings = $this->ratingQueries->getByMonthAndFormatAndItem(
+		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$format->getId(),
-			$item->getId()
+			$format->getId()
 		);
 
 		// Get the item name.

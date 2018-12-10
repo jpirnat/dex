@@ -55,15 +55,6 @@ class AbilityUsageMonthModel
 	private $formIconRepository;
 
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
-	/** @var int[] $ratings */
-	private $ratings = [];
-
 	/** @var string $month */
 	private $month;
 
@@ -79,6 +70,15 @@ class AbilityUsageMonthModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
+	/** @var bool $prevMonthDataExists */
+	private $prevMonthDataExists;
+
+	/** @var bool $nextMonthDataExists */
+	private $nextMonthDataExists;
+
+	/** @var int[] $ratings */
+	private $ratings = [];
+
 	/** @var AbilityName $abilityName */
 	private $abilityName;
 
@@ -87,6 +87,7 @@ class AbilityUsageMonthModel
 
 	/** @var AbilityUsageData[] $abilityUsageDatas */
 	private $abilityUsageDatas = [];
+
 
 	/**
 	 * Constructor.
@@ -179,10 +180,9 @@ class AbilityUsageMonthModel
 		);
 
 		// Get the ratings for this month.
-		$this->ratings = $this->ratingQueries->getByMonthAndFormatAndAbility(
+		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$format->getId(),
-			$ability->getId()
+			$format->getId()
 		);
 
 		// Get the ability name.

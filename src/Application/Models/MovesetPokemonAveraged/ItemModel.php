@@ -22,8 +22,10 @@ class ItemModel
 	/** @var ItemRepositoryInterface $itemRepository */
 	private $itemRepository;
 
+
 	/** @var ItemData[] $itemDatas */
-	private $itemDatas;
+	private $itemDatas = [];
+
 
 	/**
 	 * Constructor.

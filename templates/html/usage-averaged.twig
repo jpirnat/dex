@@ -1,6 +1,21 @@
 {% extends "html/base.twig" %}
 
 {% block body %}
+	<div class="rating-control">
+		<ul>
+			{% for r in ratings %}
+				<li>
+					<a
+						href="/stats/{{ start|e }}-to-{{ end|e }}/{{ formatIdentifier|e }}/{{ r|e }}"
+						{% if r == rating %}
+							class="current"
+						{% endif %}
+					>{{ r|e }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+
 	<div>
 		{% if showLeadsLink %}
 			<a href="/stats/{{ start|e }}-to-{{ end|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/leads">

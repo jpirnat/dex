@@ -12,11 +12,15 @@ use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
+use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
 class LeadsAveragedModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
+
+	/** @var RatingQueriesInterface $ratingQueries */
+	private $ratingQueries;
 
 	/** @var LeadsAveragedPokemonRepositoryInterface $leadsAveragedPokemonRepository */
 	private $leadsAveragedPokemonRepository;
@@ -52,13 +56,18 @@ class LeadsAveragedModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
+	/** @var int[] $ratings */
+	private $ratings = [];
+
 	/** @var LeadsData[] $leadsDatas */
 	private $leadsDatas = [];
+
 
 	/**
 	 * Constructor.
 	 *
 	 * @param FormatRepositoryInterface $formatRepository
+	 * @param RatingQueriesInterface $ratingQueries
 	 * @param LeadsAveragedPokemonRepositoryInterface $leadsAveragedPokemonRepository
 	 * @param LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository
 	 * @param MonthsCounter $monthsCounter
@@ -68,6 +77,7 @@ class LeadsAveragedModel
 	 */
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
+		RatingQueriesInterface $ratingQueries,
 		LeadsAveragedPokemonRepositoryInterface $leadsAveragedPokemonRepository,
 		LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
 		MonthsCounter $monthsCounter,
@@ -76,6 +86,7 @@ class LeadsAveragedModel
 		FormIconRepositoryInterface $formIconRepository
 	) {
 		$this->formatRepository = $formatRepository;
+		$this->ratingQueries = $ratingQueries;
 		$this->leadsAveragedPokemonRepository = $leadsAveragedPokemonRepository;
 		$this->leadsRatedAveragedPokemonRepository = $leadsRatedAveragedPokemonRepository;
 		$this->monthsCounter = $monthsCounter;
@@ -115,14 +126,21 @@ class LeadsAveragedModel
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
-		// Get leads Pokémon records for this month.
+		// Get the ratings for these months.
+		$this->ratings = $this->ratingQueries->getByMonthsAndFormat(
+			$start,
+			$end,
+			$format->getId()
+		);
+
+		// Get leads Pokémon records for these months.
 		$leadsAveragedPokemons = $this->leadsAveragedPokemonRepository->getByMonthsAndFormat(
 			$start,
 			$end,
 			$format->getId()
 		);
 
-		// Get leads rated Pokémon records for this month.
+		// Get leads rated Pokémon records for these months.
 		$leadsRatedAveragedPokemons = $this->leadsRatedAveragedPokemonRepository->getByMonthsAndFormatAndRating(
 			$start,
 			$end,
@@ -168,7 +186,7 @@ class LeadsAveragedModel
 			// Get this Pokémon's form icon.
 			$formIcon = $formIcons[$pokemonId->value()]; // A Pokémon's default form has Pokémon id === form id.
 
-			// Get this Pokémon's non-rated usage record for this month.
+			// Get this Pokémon's non-rated usage record for these months.
 			$leadsAveragedPokemon = $leadsAveragedPokemons[$pokemonId->value()];
 
 			$this->leadsDatas[] = new LeadsData(
@@ -232,6 +250,16 @@ class LeadsAveragedModel
 	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
+	}
+
+	/**
+	 * Get the ratings for these months.
+	 *
+	 * @return int[]
+	 */
+	public function getRatings() : array
+	{
+		return $this->ratings;
 	}
 
 	/**

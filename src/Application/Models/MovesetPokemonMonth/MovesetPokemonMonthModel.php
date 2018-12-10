@@ -67,15 +67,6 @@ class MovesetPokemonMonthModel
 	private $counterModel;
 
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
-	/** @var int[] $ratings */
-	private $ratings = [];
-
 	/** @var string $month */
 	private $month;
 
@@ -91,6 +82,14 @@ class MovesetPokemonMonthModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
+	/** @var bool $prevMonthDataExists */
+	private $prevMonthDataExists;
+
+	/** @var bool $nextMonthDataExists */
+	private $nextMonthDataExists;
+
+	/** @var int[] $ratings */
+	private $ratings = [];
 
 	/** @var MovesetPokemon|null $movesetPokemon */
 	private $movesetPokemon;
@@ -204,10 +203,9 @@ class MovesetPokemonMonthModel
 		);
 
 		// Get the ratings for this month.
-		$this->ratings = $this->ratingQueries->getByMonthAndFormatAndPokemon(
+		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$this->format->getId(),
-			$this->pokemon->getId()
+			$this->format->getId()
 		);
 
 		// Get Pokémon data.

@@ -164,8 +164,6 @@ class MovesetPokemonAveragedView
 		$content = $this->twig->render(
 			'html/moveset-pokemon-averaged.twig',
 			$this->baseView->getBaseVariables() + [
-				'breadcrumbs' => $breadcrumbs,
-
 				'start' => $start,
 				'end' => $end,
 				'format' => [
@@ -178,6 +176,10 @@ class MovesetPokemonAveragedView
 					'name' => $pokemonName->getName(),
 					'smogonDexIdentifier' => $pokemon->getSmogonDexIdentifier(),
 				],
+
+				'breadcrumbs' => $breadcrumbs,
+
+				'ratings' => $this->movesetPokemonAveragedModel->getRatings(),
 
 				'model' => $model->getImage(),
 				'types' => $this->dexFormatter->formatDexTypes($pokemonModel->getTypes()),

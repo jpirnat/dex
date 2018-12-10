@@ -29,20 +29,21 @@ class MonthFormatsModel
 	private $formatNameRepository;
 
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
 	/** @var string $month */
 	private $month;
 
 	/** @var LanguageId $languageId */
 	private $languageId;
 
+	/** @var bool $prevMonthDataExists */
+	private $prevMonthDataExists;
+
+	/** @var bool $nextMonthDataExists */
+	private $nextMonthDataExists;
+
 	/** @var FormatData[] $formatDatas */
 	private $formatDatas = [];
+
 
 	/**
 	 * Constructor.

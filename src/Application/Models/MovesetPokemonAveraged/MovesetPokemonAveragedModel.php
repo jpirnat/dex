@@ -10,6 +10,7 @@ use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 
@@ -20,6 +21,9 @@ class MovesetPokemonAveragedModel
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
+
+	/** @var RatingQueriesInterface $ratingQueries */
+	private $ratingQueries;
 
 	/** @var GenerationRepositoryInterface $generationRepository */
 	private $generationRepository;
@@ -56,6 +60,9 @@ class MovesetPokemonAveragedModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
+	/** @var int[] $ratings */
+	private $ratings = [];
+
 	/** @var Generation $generation */
 	private $generation;
 
@@ -65,6 +72,7 @@ class MovesetPokemonAveragedModel
 	 *
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
+	 * @param RatingQueriesInterface $ratingQueries
 	 * @param GenerationRepositoryInterface $generationRepository
 	 * @param PokemonModel $pokemonModel
 	 * @param AbilityModel $abilityModel
@@ -74,6 +82,7 @@ class MovesetPokemonAveragedModel
 	public function __construct(
 		FormatRepositoryInterface $formatRepository,
 		PokemonRepositoryInterface $pokemonRepository,
+		RatingQueriesInterface $ratingQueries,
 		GenerationRepositoryInterface $generationRepository,
 		PokemonModel $pokemonModel,
 		AbilityModel $abilityModel,
@@ -82,6 +91,7 @@ class MovesetPokemonAveragedModel
 	) {
 		$this->formatRepository = $formatRepository;
 		$this->pokemonRepository = $pokemonRepository;
+		$this->ratingQueries = $ratingQueries;
 		$this->generationRepository = $generationRepository;
 		$this->pokemonModel = $pokemonModel;
 		$this->abilityModel = $abilityModel;
@@ -123,6 +133,13 @@ class MovesetPokemonAveragedModel
 
 		// Get the Pokémon.
 		$this->pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
+
+		// Get the ratings for these months.
+		$this->ratings = $this->ratingQueries->getByMonthsAndFormat(
+			$start,
+			$end,
+			$this->format->getId()
+		);
 
 		// Get Pokémon data.
 		$this->pokemonModel->setData(
@@ -225,6 +242,16 @@ class MovesetPokemonAveragedModel
 	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
+	}
+
+	/**
+	 * Get the ratings for these months.
+	 *
+	 * @return int[]
+	 */
+	public function getRatings() : array
+	{
+		return $this->ratings;
 	}
 
 	/**

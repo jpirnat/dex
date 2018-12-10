@@ -45,7 +45,6 @@ class DexTypesView
 	{
 		$generationModel = $this->dexTypesModel->getGenerationModel();
 		$generation = $generationModel->getGeneration();
-		$generationIdentifier = $generation->getIdentifier();
 
 		$types = $this->dexTypesModel->getTypes();
 		$factors = $this->dexTypesModel->getFactors();

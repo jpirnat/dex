@@ -22,8 +22,10 @@ class MoveModel
 	/** @var MoveRepositoryInterface $moveRepository */
 	private $moveRepository;
 
+
 	/** @var MoveData[] $moveDatas */
 	private $moveDatas = [];
+
 
 	/**
 	 * Constructor.

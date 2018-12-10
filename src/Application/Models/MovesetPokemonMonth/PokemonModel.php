@@ -47,6 +47,7 @@ class PokemonModel
 	/** @var StatData[] $statDatas */
 	private $statDatas = [];
 
+
 	/**
 	 * Constructor.
 	 *

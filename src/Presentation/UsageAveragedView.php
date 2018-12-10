@@ -102,14 +102,16 @@ class UsageAveragedView
 		$content = $this->twig->render(
 			'html/usage-averaged.twig',
 			$this->baseView->getBaseVariables() + [
-				'breadcrumbs' => $breadcrumbs,
-
-				'showLeadsLink' => $this->usageAveragedModel->doesLeadsDataExist(),
+				'start' => $start,
+				'end' => $end,
 				'formatIdentifier' => $formatIdentifier,
 				'rating' => $rating,
 
-				'start' => $start,
-				'end' => $end,
+				'breadcrumbs' => $breadcrumbs,
+
+				'ratings' => $this->usageAveragedModel->getRatings(),
+
+				'showLeadsLink' => $this->usageAveragedModel->doesLeadsDataExist(),
 
 				// The main data.
 				'data' => $data,
