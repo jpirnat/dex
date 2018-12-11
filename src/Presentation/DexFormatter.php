@@ -26,6 +26,7 @@ class DexFormatter
 		foreach ($generations as $generation) {
 			$g[] = [
 				'identifier' => $generation->getIdentifier(),
+				'name' => mb_strtoupper($generation->getIdentifier()),
 			];
 		}
 
