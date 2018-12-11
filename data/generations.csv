@@ -1,8 +1,8 @@
-id,identifier
-1,rb
-2,gs
-3,rs
-4,dp
-5,bw
-6,xy
-7,sm
+id,identifier,icon
+1,rb,generation-1.png
+2,gs,generation-2.png
+3,rs,generation-3.png
+4,dp,generation-4.png
+5,bw,generation-5.png
+6,xy,generation-6.png
+7,sm,generation-7.png

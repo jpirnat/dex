@@ -11,18 +11,24 @@ class Generation
 	/** @var string $identifier */
 	private $identifier;
 
+	/** @var string $icon */
+	private $icon;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param GenerationId $generationId
 	 * @param string $identifier
+	 * @param string $icon
 	 */
 	public function __construct(
 		GenerationId $generationId,
-		string $identifier
+		string $identifier,
+		string $icon
 	) {
 		$this->id = $generationId;
 		$this->identifier = $identifier;
+		$this->icon = $icon;
 	}
 
 	/**
@@ -43,5 +49,15 @@ class Generation
 	public function getIdentifier() : string
 	{
 		return $this->identifier;
+	}
+
+	/**
+	 * Get the generation's icon.
+	 *
+	 * @return string
+	 */
+	public function getIcon() : string
+	{
+		return $this->icon;
 	}
 }

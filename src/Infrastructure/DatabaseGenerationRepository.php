@@ -37,7 +37,8 @@ class DatabaseGenerationRepository implements GenerationRepositoryInterface
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`identifier`
+				`identifier`,
+				`icon`
 			FROM `generations`
 			WHERE `id` = :generation_id
 			LIMIT 1'
@@ -54,7 +55,8 @@ class DatabaseGenerationRepository implements GenerationRepositoryInterface
 
 		$generation = new Generation(
 			$generationId,
-			$result['identifier']
+			$result['identifier'],
+			$result['icon']
 		);
 
 		return $generation;
@@ -74,7 +76,8 @@ class DatabaseGenerationRepository implements GenerationRepositoryInterface
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`id`
+				`id`,
+				`icon`
 			FROM `generations`
 			WHERE `identifier` = :identifier
 			LIMIT 1'
@@ -91,7 +94,8 @@ class DatabaseGenerationRepository implements GenerationRepositoryInterface
 
 		$generation = new Generation(
 			new GenerationId($result['id']),
-			$identifier
+			$identifier,
+			$result['icon']
 		);
 
 		return $generation;
@@ -109,7 +113,8 @@ class DatabaseGenerationRepository implements GenerationRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`id`,
-				`identifier`
+				`identifier`,
+				`icon`
 			FROM `generations`
 			WHERE `id` >= :generation_id
 			ORDER BY `id` ASC'
@@ -122,7 +127,8 @@ class DatabaseGenerationRepository implements GenerationRepositoryInterface
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$generation = new Generation(
 				new GenerationId($result['id']),
-				$result['identifier']
+				$result['identifier'],
+				$result['icon']
 			);
 
 			$generations[$result['id']] = $generation;

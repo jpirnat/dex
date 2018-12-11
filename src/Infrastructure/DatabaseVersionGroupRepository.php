@@ -40,7 +40,8 @@ class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`identifier`,
-				`generation_id`
+				`generation_id`,
+				`icon`
 			FROM `version_groups`
 			WHERE `id` = :version_group_id
 			LIMIT 1'
@@ -58,7 +59,8 @@ class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 		$versionGroup = new VersionGroup(
 			$versionGroupId,
 			$result['identifier'],
-			new GenerationId($result['generation_id'])
+			new GenerationId($result['generation_id']),
+			$result['icon']
 		);
 
 		return $versionGroup;

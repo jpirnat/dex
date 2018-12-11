@@ -14,21 +14,27 @@ class VersionGroup
 	/** @var GenerationId $generationId */
 	private $generationId;
 
+	/** @var string $icon */
+	private $icon;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param VersionGroupId $versionGroupId
 	 * @param string $identifier
 	 * @param GenerationId $generationId
+	 * @param string $icon
 	 */
 	public function __construct(
 		VersionGroupId $versionGroupId,
 		string $identifier,
-		GenerationId $generationId
+		GenerationId $generationId,
+		string $icon
 	) {
 		$this->id = $versionGroupId;
 		$this->identifier = $identifier;
 		$this->generationId = $generationId;
+		$this->icon = $icon;
 	}
 
 	/**
@@ -59,5 +65,15 @@ class VersionGroup
 	public function getGenerationId() : GenerationId
 	{
 		return $this->generationId;
+	}
+
+	/**
+	 * Get the version group's icon.
+	 *
+	 * @return string
+	 */
+	public function getIcon() : string
+	{
+		return $this->icon;
 	}
 }
