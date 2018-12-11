@@ -7,4 +7,6 @@ use Jp\Dex\Domain\EntityId;
 
 class MoveId extends EntityId
 {
+	/** @var int $SKETCH */
+	public const SKETCH = 166;
 }
