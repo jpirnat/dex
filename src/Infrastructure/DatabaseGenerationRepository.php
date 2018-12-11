@@ -96,4 +96,38 @@ class DatabaseGenerationRepository implements GenerationRepositoryInterface
 
 		return $generation;
 	}
+
+	/**
+	 * Get generations since the given generation, inclusive.
+	 *
+	 * @param GenerationId $generationId
+	 *
+	 * @return Generation[] Indexed by id. Ordered by id.
+	 */
+	public function getSince(GenerationId $generationId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`
+			FROM `generations`
+			WHERE `id` >= :generation_id
+			ORDER BY `id` ASC'
+		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$generations = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$generation = new Generation(
+				new GenerationId($result['id']),
+				$result['identifier']
+			);
+
+			$generations[$result['id']] = $generation;
+		}
+
+		return $generations;
+	}
 }

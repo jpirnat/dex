@@ -60,11 +60,11 @@ class Move
 	}
 
 	/**
-	 * Get the generation this move was introduced in.
+	 * Get the version group this move was introduced in.
 	 *
 	 * @return VersionGroupId
 	 */
-	public function getIntroducedInGeneration() : VersionGroupId
+	public function getIntroducedInVersionGroupId() : VersionGroupId
 	{
 		return $this->introducedInVersionGroupId;
 	}

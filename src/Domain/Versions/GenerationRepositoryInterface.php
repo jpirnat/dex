@@ -27,4 +27,13 @@ interface GenerationRepositoryInterface
 	 * @return Generation
 	 */
 	public function getByIdentifier(string $identifier) : Generation;
+
+	/**
+	 * Get generations since the given generation, inclusive.
+	 *
+	 * @param GenerationId $generationId
+	 *
+	 * @return Generation[] Indexed by id. Ordered by id.
+	 */
+	public function getSince(GenerationId $generationId) : array;
 }
