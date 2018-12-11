@@ -310,13 +310,16 @@ class MovesetPokemonMonthView
 
 				'breadcrumbs' => $breadcrumbs,
 
-				// The month control's data.
-				'showPrevMonthLink' => $this->movesetPokemonMonthModel->doesPrevMonthDataExist(),
-				'prevMonth' => $prevMonth->format('Y-m'),
-				'prevMonthText' => $formatter->formatMonth($prevMonth),
-				'showNextMonthLink' => $this->movesetPokemonMonthModel->doesNextMonthDataExist(),
-				'nextMonth' => $nextMonth->format('Y-m'),
-				'nextMonthText' => $formatter->formatMonth($nextMonth),
+				'prevMonth' => [
+					'show' => $this->movesetPokemonMonthModel->doesPrevMonthDataExist(),
+					'month' => $prevMonth->format('Y-m'),
+					'text' => $formatter->formatMonth($prevMonth),
+				],
+				'nextMonth' => [
+					'show' => $this->movesetPokemonMonthModel->doesNextMonthDataExist(),
+					'month' => $nextMonth->format('Y-m'),
+					'text' => $formatter->formatMonth($nextMonth),
+				],
 				'ratings' => $this->movesetPokemonMonthModel->getRatings(),
 
 				'model' => $model->getImage(),

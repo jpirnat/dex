@@ -2,20 +2,20 @@
 
 {% block body %}
 	<div class="month-control">
-		{% if showPrevMonthLink %}
+		{% if prevMonth.show %}
 			<div class="button prev">
-				<a href="/stats/{{ prevMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
-					&#9668; {{ prevMonthText|e }}
+				<a href="/stats/{{ prevMonth.month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
+					&#9668; {{ prevMonth.text|e }}
 				</a>
 			</div>
 		{% endif %}
 
 		<div class="space"></div>
 
-		{% if showNextMonthLink %}
+		{% if nextMonth.show %}
 			<div class="button next">
-				<a href="/stats/{{ nextMonth|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
-					{{ nextMonthText|e }} &#9658;
+				<a href="/stats/{{ nextMonth.month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
+					{{ nextMonth.text|e }} &#9658;
 				</a>
 			</div>
 		{% endif %}

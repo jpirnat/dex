@@ -118,13 +118,16 @@ class AbilityUsageMonthView
 
 				'breadcrumbs' => $breadcrumbs,
 
-				// The month control's data.
-				'showPrevMonthLink' => $this->abilityUsageMonthModel->doesPrevMonthDataExist(),
-				'prevMonth' => $prevMonth->format('Y-m'),
-				'prevMonthText' => $formatter->formatMonth($prevMonth),
-				'showNextMonthLink' => $this->abilityUsageMonthModel->doesNextMonthDataExist(),
-				'nextMonth' => $nextMonth->format('Y-m'),
-				'nextMonthText' => $formatter->formatMonth($nextMonth),
+				'prevMonth' => [
+					'show' => $this->abilityUsageMonthModel->doesPrevMonthDataExist(),
+					'month' => $prevMonth->format('Y-m'),
+					'text' => $formatter->formatMonth($prevMonth),
+				],
+				'nextMonth' => [
+					'show' => $this->abilityUsageMonthModel->doesNextMonthDataExist(),
+					'month' => $nextMonth->format('Y-m'),
+					'text' => $formatter->formatMonth($nextMonth),
+				],
 				'ratings' => $this->abilityUsageMonthModel->getRatings(),
 
 				'ability' => [

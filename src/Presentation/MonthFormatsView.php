@@ -97,13 +97,16 @@ class MonthFormatsView
 				// TODO: title - "Month Year formats"?
 				'breadcrumbs' => $breadcrumbs,
 
-				// The month control's data.
-				'showPrevMonthLink' => $this->monthFormatsModel->doesPrevMonthDataExist(),
-				'prevMonth' => $prevMonth->format('Y-m'),
-				'prevMonthText' => $formatter->formatMonth($prevMonth),
-				'showNextMonthLink' => $this->monthFormatsModel->doesNextMonthDataExist(),
-				'nextMonth' => $nextMonth->format('Y-m'),
-				'nextMonthText' => $formatter->formatMonth($nextMonth),
+				'prevMonth' => [
+					'show' => $this->monthFormatsModel->doesPrevMonthDataExist(),
+					'month' => $prevMonth->format('Y-m'),
+					'text' => $formatter->formatMonth($prevMonth),
+				],
+				'nextMonth' => [
+					'show' => $this->monthFormatsModel->doesNextMonthDataExist(),
+					'month' => $nextMonth->format('Y-m'),
+					'text' => $formatter->formatMonth($nextMonth),
+				],
 
 				'month' => $month,
 

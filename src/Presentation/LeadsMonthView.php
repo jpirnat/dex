@@ -119,13 +119,16 @@ class LeadsMonthView
 
 				'breadcrumbs' => $breadcrumbs,
 
-				// The month control's data.
-				'showPrevMonthLink' => $this->leadsMonthModel->doesPrevMonthDataExist(),
-				'prevMonth' => $prevMonth->format('Y-m'),
-				'prevMonthText' => $formatter->formatMonth($prevMonth),
-				'showNextMonthLink' => $this->leadsMonthModel->doesNextMonthDataExist(),
-				'nextMonth' => $nextMonth->format('Y-m'),
-				'nextMonthText' => $formatter->formatMonth($nextMonth),
+				'prevMonth' => [
+					'show' => $this->leadsMonthModel->doesPrevMonthDataExist(),
+					'month' => $prevMonth->format('Y-m'),
+					'text' => $formatter->formatMonth($prevMonth),
+				],
+				'nextMonth' => [
+					'show' => $this->leadsMonthModel->doesNextMonthDataExist(),
+					'month' => $nextMonth->format('Y-m'),
+					'text' => $formatter->formatMonth($nextMonth),
+				],
 				'ratings' => $this->leadsMonthModel->getRatings(),
 
 				// The main data.

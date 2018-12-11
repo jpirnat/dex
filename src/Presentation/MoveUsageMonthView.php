@@ -118,13 +118,16 @@ class MoveUsageMonthView
 
 				'breadcrumbs' => $breadcrumbs,
 
-				// The month control's data.
-				'showPrevMonthLink' => $this->moveUsageMonthModel->doesPrevMonthDataExist(),
-				'prevMonth' => $prevMonth->format('Y-m'),
-				'prevMonthText' => $formatter->formatMonth($prevMonth),
-				'showNextMonthLink' => $this->moveUsageMonthModel->doesNextMonthDataExist(),
-				'nextMonth' => $nextMonth->format('Y-m'),
-				'nextMonthText' => $formatter->formatMonth($nextMonth),
+				'prevMonth' => [
+					'show' => $this->moveUsageMonthModel->doesPrevMonthDataExist(),
+					'month' => $prevMonth->format('Y-m'),
+					'text' => $formatter->formatMonth($prevMonth),
+				],
+				'nextMonth' => [
+					'show' => $this->moveUsageMonthModel->doesNextMonthDataExist(),
+					'month' => $nextMonth->format('Y-m'),
+					'text' => $formatter->formatMonth($nextMonth),
+				],
 				'ratings' => $this->moveUsageMonthModel->getRatings(),
 
 				'move' => [
