@@ -20,8 +20,11 @@ if (!isset($argv[1])) {
 
 $table = $argv[1];
 
-$file = __DIR__ . "/../data/$table.csv";
+// Create the table from its schema definition.
+$database->exec(file_get_contents(__DIR__ . "/../sql/schema/dex/$table.sql"));
 
+// Load the table's data from its csv.
+$file = __DIR__ . "/../data/$table.csv";
 $stmt = $database->exec(
 	"LOAD DATA LOCAL INFILE '$file'
 	INTO TABLE `$table`

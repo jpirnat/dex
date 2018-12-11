@@ -38,6 +38,7 @@ use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
+use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use Jp\Dex\Domain\Models\ModelRepositoryInterface;
@@ -140,6 +141,7 @@ use Jp\Dex\Infrastructure\DatabasePokemonRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonTypeRepository;
 use Jp\Dex\Infrastructure\DatabaseRatingQueries;
 use Jp\Dex\Infrastructure\DatabaseStatNameRepository;
+use Jp\Dex\Infrastructure\DatabaseTmRepository;
 use Jp\Dex\Infrastructure\DatabaseTypeEffectivenessRepository;
 use Jp\Dex\Infrastructure\DatabaseTypeIconRepository;
 use Jp\Dex\Infrastructure\DatabaseTypeNameRepository;
@@ -397,6 +399,9 @@ $container->dice()->addRule(ShowdownPokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseStatNameRepository::class];
 $container->dice()->addRule(StatNameRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseTmRepository::class];
+$container->dice()->addRule(TmRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseTypeEffectivenessRepository::class];
 $container->dice()->addRule(TypeEffectivenessRepositoryInterface::class, $rule);
