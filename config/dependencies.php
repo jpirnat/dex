@@ -93,6 +93,7 @@ use Jp\Dex\Domain\Types\TypeEffectivenessRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeNameRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 use Jp\Dex\Infrastructure\DatabaseAbilityDescriptionRepository;
 use Jp\Dex\Infrastructure\DatabaseAbilityNameRepository;
 use Jp\Dex\Infrastructure\DatabaseAbilityRepository;
@@ -154,6 +155,7 @@ use Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedQueries;
 use Jp\Dex\Infrastructure\DatabaseUsageRatedRepository;
 use Jp\Dex\Infrastructure\DatabaseUsageRepository;
+use Jp\Dex\Infrastructure\DatabaseVersionGroupRepository;
 use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownAbilityRepository;
 use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownFormatRepository;
 use Jp\Dex\Infrastructure\Showdown\DatabaseShowdownItemRepository;
@@ -440,6 +442,9 @@ $container->dice()->addRule(UsageRatedRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseUsageRepository::class];
 $container->dice()->addRule(UsageRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseVersionGroupRepository::class];
+$container->dice()->addRule(VersionGroupRepositoryInterface::class, $rule);
 
 
 // Models are shared between controllers and views.
