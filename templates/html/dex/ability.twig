@@ -1,6 +1,20 @@
 {% extends "html/base.twig" %}
 
 {% block body %}
+	<div class="generation-control">
+		<ul>
+			{% for g in generations %}
+				<li>
+					<a href="/dex/{{ g.identifier|e }}/abilities/{{ ability.identifier|e }}"
+						{% if g.identifier == generation.identifier %}
+							class="current"
+						{% endif %}
+					>{{ g.identifier|e }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+
 	<p>{{ ability.name|e }}: {{ ability.description|e }}</p>
 
 	<table class="dex-pokemon">

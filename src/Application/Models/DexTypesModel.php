@@ -7,6 +7,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeEffectivenessRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class DexTypesModel
 {
@@ -63,6 +64,8 @@ class DexTypesModel
 		LanguageId $languageId
 	) : void {
 		$generationId = $this->generationModel->setGeneration($generationIdentifier);
+
+		$this->generationModel->setGensSince(new GenerationId(1));
 
 		$types = $this->typeRepository->getMainByGeneration($generationId);
 

@@ -19,21 +19,27 @@ class DexAbilitiesView
 	/** @var DexAbilitiesModel $dexAbilitiesModel */
 	private $dexAbilitiesModel;
 
+	/** @var DexFormatter $dexFormatter */
+	private $dexFormatter;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
 	 * @param BaseView $baseView
 	 * @param DexAbilitiesModel $dexAbilitiesModel
+	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
 		Twig_Environment $twig,
 		BaseView $baseView,
-		DexAbilitiesModel $dexAbilitiesModel
+		DexAbilitiesModel $dexAbilitiesModel,
+		DexFormatter $dexFormatter
 	) {
 		$this->twig = $twig;
 		$this->baseView = $baseView;
 		$this->dexAbilitiesModel = $dexAbilitiesModel;
+		$this->dexFormatter = $dexFormatter;
 	}
 
 	/**
@@ -45,6 +51,7 @@ class DexAbilitiesView
 	{
 		$generationModel = $this->dexAbilitiesModel->getGenerationModel();
 		$generation = $generationModel->getGeneration();
+		$generations = $generationModel->getGenerations();
 
 		$abilities = $this->dexAbilitiesModel->getAbilities();
 
@@ -65,11 +72,12 @@ class DexAbilitiesView
 		$content = $this->twig->render(
 			'html/dex/abilities.twig',
 			$this->baseView->getBaseVariables() + [
-				'title' => 'Abilities',
-				'breadcrumbs' => $breadcrumbs,
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
+				'title' => 'Abilities',
+				'breadcrumbs' => $breadcrumbs,
+				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'abilities' => $abilities,
 			]
 		);

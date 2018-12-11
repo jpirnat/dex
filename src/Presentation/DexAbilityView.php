@@ -51,6 +51,7 @@ class DexAbilityView
 	{
 		$generationModel = $this->dexAbilityModel->getGenerationModel();
 		$generation = $generationModel->getGeneration();
+		$generations = $generationModel->getGenerations();
 
 		$ability = $this->dexAbilityModel->getAbility();
 
@@ -79,13 +80,14 @@ class DexAbilityView
 		$content = $this->twig->render(
 			'html/dex/ability.twig',
 			$this->baseView->getBaseVariables() + [
-				'title' => 'Abilities - ' . $ability['name'],
-				'breadcrumbs' => $breadcrumbs,
 				'generation' => [
 					'id' => $generation->getId()->value(),
 					'identifier' => $generation->getIdentifier(),
 				],
 				'ability' => $ability,
+				'title' => 'Abilities - ' . $ability['name'],
+				'breadcrumbs' => $breadcrumbs,
+				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'stats' => ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe', 'BST'],
 				// TODO: Pull these stat names from somewhere else.
 				'pokemons' => array_merge($normalPokemon, $hiddenPokemon),

@@ -51,6 +51,7 @@ class DexTypeView
 	{
 		$generationModel = $this->dexTypeModel->getGenerationModel();
 		$generation = $generationModel->getGeneration();
+		$generations = $generationModel->getGenerations();
 
 		$type = $this->dexTypeModel->getType();
 		$pokemon = $this->dexTypeModel->getPokemon();
@@ -78,12 +79,16 @@ class DexTypeView
 		$content = $this->twig->render(
 			'html/dex/type.twig',
 			$this->baseView->getBaseVariables() + [
-				'title' => 'Types - ' . $type['name'],
-				'breadcrumbs' => $breadcrumbs,
 				'generation' => [
 					'id' => $generation->getId()->value(),
 					'identifier' => $generation->getIdentifier(),
 				],
+				'type' => [
+					'identifier' => $type['identifier'],
+				],
+				'title' => 'Types - ' . $type['name'],
+				'breadcrumbs' => $breadcrumbs,
+				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'stats' => ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe', 'BST'],
 				// TODO: Pull these stat names from somewhere else.
 				'pokemons' => $pokemon,

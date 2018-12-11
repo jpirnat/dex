@@ -80,12 +80,15 @@ class DexTypeModel
 
 		$type = $this->typeRepository->getByIdentifier($typeIdentifier);
 
+		$this->generationModel->setGensSince($type->getIntroducedInGenerationId());
+
 		$typeName = $this->typeNameRepository->getByLanguageAndType(
 			$languageId,
 			$type->getId()
 		);
 
 		$this->type = [
+			'identifier' => $type->getIdentifier(),
 			'name' => $typeName->getName(),
 		];
 

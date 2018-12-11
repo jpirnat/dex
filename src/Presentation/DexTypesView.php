@@ -19,21 +19,27 @@ class DexTypesView
 	/** @var DexTypesModel $dexTypesModel */
 	private $dexTypesModel;
 
+	/** @var DexFormatter $dexFormatter */
+	private $dexFormatter;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param Twig_Environment $twig
 	 * @param BaseView $baseView
 	 * @param DexTypesModel $dexTypesModel
+	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
 		Twig_Environment $twig,
 		BaseView $baseView,
-		DexTypesModel $dexTypesModel
+		DexTypesModel $dexTypesModel,
+		DexFormatter $dexFormatter
 	) {
 		$this->twig = $twig;
 		$this->baseView = $baseView;
 		$this->dexTypesModel = $dexTypesModel;
+		$this->dexFormatter = $dexFormatter;
 	}
 
 	/**
@@ -45,6 +51,7 @@ class DexTypesView
 	{
 		$generationModel = $this->dexTypesModel->getGenerationModel();
 		$generation = $generationModel->getGeneration();
+		$generations = $generationModel->getGenerations();
 
 		$types = $this->dexTypesModel->getTypes();
 		$factors = $this->dexTypesModel->getFactors();
@@ -62,11 +69,12 @@ class DexTypesView
 		$content = $this->twig->render(
 			'html/dex/types.twig',
 			$this->baseView->getBaseVariables() + [
-				'title' => 'Types',
-				'breadcrumbs' => $breadcrumbs,
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
+				'title' => 'Types',
+				'breadcrumbs' => $breadcrumbs,
+				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'types' => $types,
 				'factors' => $factors,
 			]

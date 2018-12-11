@@ -1,6 +1,20 @@
 {% extends "html/base.twig" %}
 
 {% block body %}
+	<div class="generation-control">
+		<ul>
+			{% for g in generations %}
+				<li>
+					<a href="/dex/{{ g.identifier|e }}/types"
+						{% if g.identifier == generation.identifier %}
+							class="current"
+						{% endif %}
+					>{{ g.identifier|e }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+
 	<table class="type-chart">
 		<colgroup>
 			<col>

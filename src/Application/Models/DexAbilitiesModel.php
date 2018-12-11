@@ -7,6 +7,7 @@ use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class DexAbilitiesModel
 {
@@ -60,6 +61,8 @@ class DexAbilitiesModel
 		LanguageId $languageId
 	) : void {
 		$generationId = $this->generationModel->setGeneration($generationIdentifier);
+
+		$this->generationModel->setGensSince(new GenerationId(3));
 
 		$abilities = $this->abilityRepository->getByGeneration($generationId);
 

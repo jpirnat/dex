@@ -86,6 +86,8 @@ class DexAbilityModel
 
 		$ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
 
+		$this->generationModel->setGensSinceVg($ability->getIntroducedInVersionGroupId());
+
 		$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
 			$languageId,
 			$ability->getId()
