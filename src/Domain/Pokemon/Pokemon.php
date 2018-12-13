@@ -32,7 +32,7 @@ class Pokemon
 	/** @var float $weightKg */
 	private $weightKg;
 
-	/** @var float|null $genderRatio */
+	/** @var int $genderRatio */
 	private $genderRatio;
 
 	/** @var string $smogonDexIdentifier */
@@ -49,7 +49,7 @@ class Pokemon
 	 * @param VersionGroupId $introducedInVersionGroupId
 	 * @param float $heightM
 	 * @param float $weightKg
-	 * @param float|null $genderRatio
+	 * @param int $genderRatio
 	 * @param string $smogonDexIdentifier
 	 */
 	public function __construct(
@@ -61,7 +61,7 @@ class Pokemon
 		VersionGroupId $introducedInVersionGroupId,
 		float $heightM,
 		float $weightKg,
-		?float $genderRatio,
+		int $genderRatio,
 		string $smogonDexIdentifier
 	) {
 		$this->id = $pokemonId;
@@ -157,12 +157,12 @@ class Pokemon
 	}
 
 	/**
-	 * Get the Pokémon's gender ratio (the percentage that are female, or null
-	 * if the Pokémon is always genderless).
+	 * Get the Pokémon's gender ratio. 0 = 0% female, 1 = 12.5% female, 2 = 25%
+	 * female, and so on. -1 = genderless.
 	 *
-	 * @return float|null
+	 * @return int
 	 */
-	public function getGenderRatio() : ?float
+	public function getGenderRatio() : int
 	{
 		return $this->genderRatio;
 	}

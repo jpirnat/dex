@@ -62,10 +62,6 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 			);
 		}
 
-		$genderRatio = $result['gender_ratio'] !== null
-			? (float) $result['gender_ratio']
-			: null;
-
 		$pokemon = new Pokemon(
 			$pokemonId,
 			$result['identifier'],
@@ -75,7 +71,7 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 			new VersionGroupId($result['introduced_in_version_group_id']),
 			(float) $result['height_m'],
 			(float) $result['weight_kg'],
-			$genderRatio,
+			$result['gender_ratio'],
 			$result['smogon_dex_identifier']
 		);
 
@@ -119,10 +115,6 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 			);
 		}
 
-		$genderRatio = $result['gender_ratio'] !== null
-			? (float) $result['gender_ratio']
-			: null;
-
 		$pokemon = new Pokemon(
 			new PokemonId($result['id']),
 			$identifier,
@@ -132,7 +124,7 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 			new VersionGroupId($result['introduced_in_version_group_id']),
 			(float) $result['height_m'],
 			(float) $result['weight_kg'],
-			$genderRatio,
+			$result['gender_ratio'],
 			$result['smogon_dex_identifier']
 		);
 
@@ -165,10 +157,6 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 		$pokemons = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$genderRatio = $result['gender_ratio'] !== null
-				? (float) $result['gender_ratio']
-				: null;
-
 			$pokemon = new Pokemon(
 				new PokemonId($result['id']),
 				$result['identifier'],
@@ -178,7 +166,7 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 				new VersionGroupId($result['introduced_in_version_group_id']),
 				(float) $result['height_m'],
 				(float) $result['weight_kg'],
-				$genderRatio,
+				$result['gender_ratio'],
 				$result['smogon_dex_identifier']
 			);
 
@@ -237,10 +225,6 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 		$pokemons = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$genderRatio = $result['gender_ratio'] !== null
-				? (float) $result['gender_ratio']
-				: null;
-
 			$pokemon = new Pokemon(
 				new PokemonId($result['id']),
 				$result['identifier'],
@@ -250,7 +234,7 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 				new VersionGroupId($result['introduced_in_version_group_id']),
 				(float) $result['height_m'],
 				(float) $result['weight_kg'],
-				$genderRatio,
+				$result['gender_ratio'],
 				$result['smogon_dex_identifier']
 			);
 

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Items\TechnicalMachine;
 use Jp\Dex\Domain\Items\TmNotFoundException;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
