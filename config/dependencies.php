@@ -32,6 +32,8 @@ use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Abilities\PokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\BreedingChains\BreedingChainQueriesInterface;
 use Jp\Dex\Domain\Categories\CategoryRepositoryInterface;
+use Jp\Dex\Domain\EggGroups\EggGroupNameRepositoryInterface;
+use Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
@@ -101,6 +103,7 @@ use Jp\Dex\Infrastructure\DatabaseAbilityRepository;
 use Jp\Dex\Infrastructure\DatabaseBaseStatRepository;
 use Jp\Dex\Infrastructure\DatabaseBreedingChainQueries;
 use Jp\Dex\Infrastructure\DatabaseCategoryRepository;
+use Jp\Dex\Infrastructure\DatabaseEggGroupNameRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatNameRepository;
 use Jp\Dex\Infrastructure\DatabaseFormatRepository;
 use Jp\Dex\Infrastructure\DatabaseFormIconRepository;
@@ -135,6 +138,7 @@ use Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository;
 use Jp\Dex\Infrastructure\DatabaseNatureNameRepository;
 use Jp\Dex\Infrastructure\DatabaseNatureRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonAbilityRepository;
+use Jp\Dex\Infrastructure\DatabasePokemonEggGroupRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonMoveRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonNameRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonRepository;
@@ -262,6 +266,9 @@ $container->dice()->addRule(BreedingChainQueriesInterface::class, $rule);
 $rule = ['instanceOf' => DatabaseCategoryRepository::class];
 $container->dice()->addRule(CategoryRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => DatabaseEggGroupNameRepository::class];
+$container->dice()->addRule(EggGroupNameRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => DatabaseFormatNameRepository::class];
 $container->dice()->addRule(FormatNameRepositoryInterface::class, $rule);
 
@@ -363,6 +370,9 @@ $container->dice()->addRule(NatureRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabasePokemonAbilityRepository::class];
 $container->dice()->addRule(PokemonAbilityRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabasePokemonEggGroupRepository::class];
+$container->dice()->addRule(PokemonEggGroupRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabasePokemonMoveRepository::class];
 $container->dice()->addRule(PokemonMoveRepositoryInterface::class, $rule);
