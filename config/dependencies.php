@@ -53,6 +53,7 @@ use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
+use Jp\Dex\Domain\Species\SpeciesRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface;
@@ -144,6 +145,7 @@ use Jp\Dex\Infrastructure\DatabasePokemonNameRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonRepository;
 use Jp\Dex\Infrastructure\DatabasePokemonTypeRepository;
 use Jp\Dex\Infrastructure\DatabaseRatingQueries;
+use Jp\Dex\Infrastructure\DatabaseSpeciesRepository;
 use Jp\Dex\Infrastructure\DatabaseStatNameRepository;
 use Jp\Dex\Infrastructure\DatabaseTmRepository;
 use Jp\Dex\Infrastructure\DatabaseTypeEffectivenessRepository;
@@ -406,6 +408,9 @@ $container->dice()->addRule(ShowdownNatureRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseShowdownPokemonRepository::class];
 $container->dice()->addRule(ShowdownPokemonRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => DatabaseSpeciesRepository::class];
+$container->dice()->addRule(SpeciesRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => DatabaseStatNameRepository::class];
 $container->dice()->addRule(StatNameRepositoryInterface::class, $rule);

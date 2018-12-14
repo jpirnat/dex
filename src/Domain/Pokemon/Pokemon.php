@@ -127,7 +127,7 @@ class Pokemon
 	}
 
 	/**
-	 * Get the id of the version group this Pokémon was introduced in.
+	 * Get the version group id this Pokémon was introduced in.
 	 *
 	 * @return VersionGroupId
 	 */
