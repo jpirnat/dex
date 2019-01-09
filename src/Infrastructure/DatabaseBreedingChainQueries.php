@@ -182,11 +182,10 @@ class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 				AND `pm`.`pokemon_id` IN ($inSameEggGroup)
 			ORDER BY
 				`generation_id` DESC,
-				`version_group_id` DESC"
+				`vg`.`breeding_priority` DESC"
 		);
 		// Prioritize newer generations, and newer versions within those
-		// generations. TODO: This will be a problem when Colosseum/XD are
-		// prioritized over the main games.
+		// generations.
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 
@@ -230,11 +229,10 @@ class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 				AND `pm`.`pokemon_id` IN ($inOtherEggGroup)
 			ORDER BY
 				`generation_id` DESC,
-				`version_group_id` DESC"
+				`vg`.`breeding_priority` DESC"
 		);
 		// Prioritize newer generations, and newer versions within those
-		// generations. TODO: This will be a problem when Colosseum/XD are
-		// prioritized over the main games.
+		// generations.
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 }
