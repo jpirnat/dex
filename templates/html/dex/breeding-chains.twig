@@ -1,0 +1,70 @@
+{% extends "html/base.twig" %}
+
+{% block body %}
+	<table id="breeding-chains">
+		{% for chain in chains %}
+			<tbody>
+				<tr>
+					<th colspan="7" id="{{ chain.id|e }}" class="chain-header">
+						{% for pokemon in chain.pokemon %}
+							<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
+							{% if not loop.last %} → {% endif %}
+						{% endfor %}
+					</th>
+				</tr>
+				<tr class="{{ chain.id|e }} hidden">
+					<th></th>
+					<th scope="col">Pokémon</th>
+					<th scope="col">Versions</th>
+					<th scope="col">Egg Groups</th>
+					<th scope="col">Egg Cycles</th>
+					<th scope="col">Gender Ratio</th>
+					<th scope="col">Move Method</th>
+				</tr>
+				{% for pokemon in chain.pokemon %}
+					<tr class="{{ chain.id|e }} hidden">
+						<td><img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}"></td>
+						<td>
+							<a href="/dex/{{ pokemon.generationIdentifier|e }}/pokemon/{{ pokemon.identifier|e }}">
+								{{ pokemon.name|e }}
+							</a>
+						</td>
+						<td class="versions">
+							<img src="/images/versions/{{ pokemon.versionGroupIcon|e }}">
+						</td>
+						<td class="egg-groups">
+							{% for eggGroupName in pokemon.eggGroupNames %}
+								<div>{{ eggGroupName|e }}</div>
+							{% endfor %}
+						</td>
+						<td class="egg-cycles">{{ pokemon.baseEggCycles|e }}</td>
+						<td class="gender-ratio">
+							<img src="/images/gender-ratios/{{ pokemon.genderRatioIcon|e }}">
+						</td>
+						<td>{{ pokemon.moveMethod|e }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		{% endfor %}
+	</table>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function toggleChain(chainId) {
+	Array.from(document.getElementsByClassName(chainId), record => {
+		record.classList.toggle('hidden');
+	});
+}
+
+Array.from(document.getElementsByClassName('chain-header'), header => {
+	header.addEventListener('click', function(event) {
+		toggleChain(header.id);
+	});
+});
+
+if (window.location.hash) {
+	toggleChain(window.location.hash.substring(1));
+}
+</script>
+{% endblock %}

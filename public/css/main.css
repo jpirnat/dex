@@ -45,6 +45,10 @@ table .percent-minus {
 	color: red;
 }
 
+.hidden {
+	display: none;
+}
+
 
 
 /* Nav breadcrumbs */
@@ -238,6 +242,45 @@ table.dex-natures .neutral {
 
 .type-chart tr:hover {
 	background: yellow;
+}
+
+
+
+/* breeding chains */
+
+#breeding-chains {
+	width: 100%;
+}
+
+#breeding-chains tr {
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+}
+
+#breeding-chains .chain-header {
+	border: 2px solid black;
+	cursor: pointer;
+}
+
+#breeding-chains .chain-header img {
+	vertical-align: bottom;
+}
+
+#breeding-chains th,
+#breeding-chains td {
+	height: 40px;
+}
+
+#breeding-chains td {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+#breeding-chains .versions,
+#breeding-chains .egg-groups,
+#breeding-chains .egg-cycles,
+#breeding-chains .gender-ratio {
+	text-align: center;
 }
 
 

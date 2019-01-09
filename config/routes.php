@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 use Jp\Dex\Application\Controllers\AbilityUsageMonthController;
+use Jp\Dex\Application\Controllers\BreedingChainsController;
 use Jp\Dex\Application\Controllers\DexAbilitiesController;
 use Jp\Dex\Application\Controllers\DexAbilityController;
 use Jp\Dex\Application\Controllers\DexNaturesController;
@@ -26,6 +27,7 @@ use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Middleware\JsonRequestMiddleware;
 use Jp\Dex\Application\Middleware\LanguageMiddleware;
 use Jp\Dex\Presentation\AbilityUsageMonthView;
+use Jp\Dex\Presentation\BreedingChainsView;
 use Jp\Dex\Presentation\DexAbilitiesView;
 use Jp\Dex\Presentation\DexAbilityView;
 use Jp\Dex\Presentation\DexNaturesView;
@@ -47,15 +49,16 @@ use Jp\Dex\Presentation\UsageAveragedView;
 use Jp\Dex\Presentation\UsageMonthView;
 
 // Common route parameter definitions.
-$month = '{month:\d{4}-\d{2}}';
-$formatIdentifier = '{formatIdentifier:[-\w]+}';
-$rating = '{rating:\d+}';
-$pokemonIdentifier = '{pokemonIdentifier:[-\w]+}';
 $abilityIdentifier = '{abilityIdentifier:[-\w]+}';
 $generationIdentifier = '{generationIdentifier:[-\w]+}';
 $itemIdentifier = '{itemIdentifier:[-\w]+}';
 $moveIdentifier = '{moveIdentifier:[-\w]+}';
+$pokemonIdentifier = '{pokemonIdentifier:[-\w]+}';
 $typeIdentifier = '{typeIdentifier:[-\w]+}';
+$versionGroupIdentifier = '{versionGroupIdentifier:[-\w]+}';
+$month = '{month:\d{4}-\d{2}}';
+$formatIdentifier = '{formatIdentifier:[-\w]+}';
+$rating = '{rating:\d+}';
 $start = '{start:\d{4}-\d{2}}';
 $end = '{end:\d{4}-\d{2}}';
 
@@ -120,6 +123,17 @@ $routes = [
 		'controllerClass' => DexTypeController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => DexTypeView::class,
+		'viewMethod' => 'index',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/dex/pokemon/$pokemonIdentifier/breeding/$moveIdentifier/$versionGroupIdentifier", [
+		'controllerClass' => BreedingChainsController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => BreedingChainsView::class,
 		'viewMethod' => 'index',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,

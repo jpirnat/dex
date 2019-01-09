@@ -65,4 +65,45 @@ class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 
 		return $versionGroup;
 	}
+
+	/**
+	 * Get a version group by its identifier.
+	 *
+	 * @param string $identifier
+	 *
+	 * @throws VersionGroupNotFoundException if no version group exists with
+	 *     this id.
+	 *
+	 * @return VersionGroup
+	 */
+	public function getByIdentifier(string $identifier) : VersionGroup
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`generation_id`,
+				`icon`
+			FROM `version_groups`
+			WHERE `identifier` = :identifier
+			LIMIT 1'
+		);
+		$stmt->bindValue(':identifier', $identifier, PDO::PARAM_STR);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			throw new VersionGroupNotFoundException(
+				'No version group exists with id ' . $versionGroupId->value() . '.'
+			);
+		}
+
+		$versionGroup = new VersionGroup(
+			new VersionGroupId($result['id']),
+			$identifier,
+			new GenerationId($result['generation_id']),
+			$result['icon']
+		);
+
+		return $versionGroup;
+	}
 }

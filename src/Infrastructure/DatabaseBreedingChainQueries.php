@@ -182,7 +182,7 @@ class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 				AND `pm`.`pokemon_id` IN ($inSameEggGroup)
 			ORDER BY
 				`generation_id` DESC,
-				`vg`.`breeding_priority` DESC"
+				`vg`.`breeding_priority` ASC"
 		);
 		// Prioritize newer generations, and newer versions within those
 		// generations.
@@ -229,7 +229,7 @@ class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 				AND `pm`.`pokemon_id` IN ($inOtherEggGroup)
 			ORDER BY
 				`generation_id` DESC,
-				`vg`.`breeding_priority` DESC"
+				`vg`.`breeding_priority` ASC"
 		);
 		// Prioritize newer generations, and newer versions within those
 		// generations.

@@ -7,6 +7,7 @@ use Jp\Dex\Application\Middleware\AjaxErrorMiddleware;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Models\AbilityUsageMonth\AbilityUsageMonthModel;
 use Jp\Dex\Application\Models\BaseModel;
+use Jp\Dex\Application\Models\BreedingChains\BreedingChainsModel;
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Application\Models\DexAbilitiesModel;
 use Jp\Dex\Application\Models\DexAbilityModel;
@@ -473,6 +474,7 @@ $rule = [
 ];
 $container->dice()->addRule(AbilityUsageMonthModel::class, $rule);
 $container->dice()->addRule(BaseModel::class, $rule);
+$container->dice()->addRule(BreedingChainsModel::class, $rule);
 $container->dice()->addRule(DateModel::class, $rule);
 $container->dice()->addRule(DexAbilitiesModel::class, $rule);
 $container->dice()->addRule(DexAbilityModel::class, $rule);

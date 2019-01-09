@@ -1,6 +1,5 @@
 // When the user clicks an a.scroll anchor, smooth scroll to the destination.
-let anchors = Array.from(document.getElementsByClassName('scroll'));
-anchors.forEach(function(anchor) {
+Array.from(document.getElementsByClassName('scroll'), anchor => {
 	anchor.addEventListener('click', function(event) {
 		event.preventDefault();
 		let targetId = anchor.getAttribute('href').substring(1); // removes '#'
