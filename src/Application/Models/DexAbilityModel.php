@@ -82,7 +82,7 @@ class DexAbilityModel
 		string $abilityIdentifier,
 		LanguageId $languageId
 	) : void {
-		$generationId = $this->generationModel->setGeneration($generationIdentifier);
+		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
 
 		$ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
 

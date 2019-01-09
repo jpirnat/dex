@@ -76,7 +76,7 @@ class DexTypeModel
 		string $typeIdentifier,
 		LanguageId $languageId
 	) : void {
-		$generationId = $this->generationModel->setGeneration($generationIdentifier);
+		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
 
 		$type = $this->typeRepository->getByIdentifier($typeIdentifier);
 

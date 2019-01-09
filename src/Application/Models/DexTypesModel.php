@@ -63,7 +63,7 @@ class DexTypesModel
 		string $generationIdentifier,
 		LanguageId $languageId
 	) : void {
-		$generationId = $this->generationModel->setGeneration($generationIdentifier);
+		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
 
 		$this->generationModel->setGensSince(new GenerationId(1));
 

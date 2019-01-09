@@ -44,16 +44,30 @@ class GenerationModel
 	}
 
 	/**
-	 * Set the generation.
+	 * Set the generation by its id.
 	 *
-	 * @param string $identifier
+	 * @param GenerationId $generationId
 	 *
 	 * @return GenerationId
 	 */
-	public function setGeneration(string $identifier) : GenerationId
+	public function setById(GenerationId $generationId) : GenerationId
+	{
+		$this->generation = $this->generationRepository->getById($generationId);
+
+		return $this->generation->getId();
+	}
+
+	/**
+	 * Set the generation by its identifier.
+	 *
+	 * @param string $generationIdentifier
+	 *
+	 * @return GenerationId
+	 */
+	public function setByIdentifier(string $generationIdentifier) : GenerationId
 	{
 		$this->generation = $this->generationRepository->getByIdentifier(
-			$identifier
+			$generationIdentifier
 		);
 
 		return $this->generation->getId();
