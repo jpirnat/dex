@@ -98,6 +98,7 @@ return [
 
 	// Pokédexes
 	'regions',
+	'region_names',
 	'pokedexes',
 	'pokedex_numbers',
 	'pokedex_entries',
