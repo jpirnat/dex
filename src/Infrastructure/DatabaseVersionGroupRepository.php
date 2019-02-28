@@ -93,7 +93,7 @@ class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 
 		if (!$result) {
 			throw new VersionGroupNotFoundException(
-				'No version group exists with id ' . $versionGroupId->value() . '.'
+				"No version group exists with identifier $identifier."
 			);
 		}
 

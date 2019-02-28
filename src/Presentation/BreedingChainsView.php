@@ -75,6 +75,7 @@ class BreedingChainsView
 		$content = $this->twig->render(
 			'html/dex/breeding-chains.twig',
 			$this->baseView->getBaseVariables() + [
+				'breadcrumbs' => $breadcrumbs,
 				'chains' => $chains,
 			]
 		);

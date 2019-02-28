@@ -145,6 +145,7 @@ class BreedingChainsModel
 			$this->versionGroup->getGenerationId()
 		);
 
+		/** @var PokemonMove[][] $chains */
 		$chains = $this->breedingChainFinder->findChains(
 			$this->pokemon->getId(),
 			$this->move->getId(),
