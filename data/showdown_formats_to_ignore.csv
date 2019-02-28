@@ -1,2379 +1,1854 @@
-month,name,format_id
-2014-11-01,1v1,\N
-2014-11-01,350cup,\N
-2014-11-01,almostanyability,\N
-2014-11-01,battlespotdoubles,\N
-2014-11-01,battlespotsingles,\N
-2014-11-01,battlespotspecial7,\N
-2014-11-01,battlespottriples,\N
-2014-11-01,cap,\N
-2014-11-01,capplasmantaplaytest,\N
-2014-11-01,challengecup,\N
-2014-11-01,challengecup1vs1,\N
-2014-11-01,gen1oubeta,\N
-2014-11-01,gen2oubeta,\N
-2014-11-01,gen3oubeta,\N
-2014-11-01,gen3ubersbeta,\N
-2014-11-01,gen4lc,\N
-2014-11-01,gen4ou,\N
-2014-11-01,gen4ubers,\N
-2014-11-01,gen5gbudoubles,\N
-2014-11-01,gen5gbusingles,\N
-2014-11-01,gen5lc,\N
-2014-11-01,gen5ou,\N
-2014-11-01,gen5ru,\N
-2014-11-01,gen5smogondoubles,\N
-2014-11-01,gen5ubers,\N
-2014-11-01,gen5uu,\N
-2014-11-01,inversebattle,\N
-2014-11-01,lc,\N
-2014-11-01,lcuu,\N
-2014-11-01,monotype,\N
-2014-11-01,randombattle,\N
-2014-11-01,randomdoublesbattle,\N
-2014-11-01,randomtriplesbattle,\N
-2014-11-01,seasonalstrikesback,\N
-2014-11-01,smogontriples,\N
-2014-11-01,stabmons,\N
-2014-11-01,tiershift,\N
-2014-12-01,1v1,\N
-2014-12-01,350cup,\N
-2014-12-01,almostanyability,\N
-2014-12-01,balancedhackmons,\N
-2014-12-01,battleofhoenn,\N
-2014-12-01,battlespotdoubles,\N
-2014-12-01,battlespotsingles,\N
-2014-12-01,battlespotspecial7,\N
-2014-12-01,battlespottriples,\N
-2014-12-01,cap,\N
-2014-12-01,challengecup,\N
-2014-12-01,challengecup1vs1,\N
-2014-12-01,gen1ou,\N
-2014-12-01,gen1oubeta,\N
-2014-12-01,gen2ou,\N
-2014-12-01,gen2oubeta,\N
-2014-12-01,gen3oubeta,\N
-2014-12-01,gen3ubersbeta,\N
-2014-12-01,gen4lc,\N
-2014-12-01,gen4ou,\N
-2014-12-01,gen4ubers,\N
-2014-12-01,gen4uu,\N
-2014-12-01,gen5gbudoubles,\N
-2014-12-01,gen5gbusingles,\N
-2014-12-01,gen5lc,\N
-2014-12-01,gen5nu,\N
-2014-12-01,gen5ou,\N
-2014-12-01,gen5ru,\N
-2014-12-01,gen5smogondoubles,\N
-2014-12-01,gen5ubers,\N
-2014-12-01,gen5uu,\N
-2014-12-01,inversebattle,\N
-2014-12-01,lc,\N
-2014-12-01,lcuu,\N
-2014-12-01,monotype,\N
-2014-12-01,oususpecttest,\N
-2014-12-01,randombattle,\N
-2014-12-01,randomdoublesbattle,\N
-2014-12-01,randomtriplesbattle,\N
-2014-12-01,seasonalsleighshowdown,\N
-2014-12-01,seasonalstrikesback,\N
-2014-12-01,smogondoublessuspecttest,\N
-2014-12-01,smogontriples,\N
-2014-12-01,stabmons,\N
-2014-12-01,statswitch,\N
-2014-12-01,tiershift,\N
-2015-01-01,1v1,\N
-2015-01-01,almostanyability,\N
-2015-01-01,balancedhackmons,\N
-2015-01-01,battleofhoenn,\N
-2015-01-01,battlespotsingles,\N
-2015-01-01,battlespotspecial7,\N
-2015-01-01,battlespotspecial8,\N
-2015-01-01,battlespottriples,\N
-2015-01-01,cap,\N
-2015-01-01,challengecup,\N
-2015-01-01,challengecup1vs1,\N
-2015-01-01,fu,\N
-2015-01-01,gen1ou,\N
-2015-01-01,gen1randombattle,\N
-2015-01-01,gen2ou,\N
-2015-01-01,gen3oubeta,\N
-2015-01-01,gen3ubersbeta,\N
-2015-01-01,gen4lc,\N
-2015-01-01,gen4ou,\N
-2015-01-01,gen4ubers,\N
-2015-01-01,gen4uu,\N
-2015-01-01,gen5gbudoubles,\N
-2015-01-01,gen5gbusingles,\N
-2015-01-01,gen5lc,\N
-2015-01-01,gen5nu,\N
-2015-01-01,gen5ou,\N
-2015-01-01,gen5smogondoubles,\N
-2015-01-01,gen5ubers,\N
-2015-01-01,gen5uu,\N
-2015-01-01,generationshowdown,\N
-2015-01-01,inversebattle,\N
-2015-01-01,lc,\N
-2015-01-01,lcuu,\N
-2015-01-01,monotype,\N
-2015-01-01,oususpecttest,\N
-2015-01-01,randombattle,\N
-2015-01-01,randomdoublesbattle,\N
-2015-01-01,randomtriplesbattle,\N
-2015-01-01,rususpecttest,\N
-2015-01-01,seasonalsleighshowdown,\N
-2015-01-01,seasonalspacetimefuntimes,\N
-2015-01-01,smogontriples,\N
-2015-01-01,stabmons,\N
-2015-01-01,statswitch,\N
-2015-01-01,tiershift,\N
-2015-02-01,1v1,\N
-2015-02-01,almostanyability,\N
-2015-02-01,balancedhackmons,\N
-2015-02-01,battlespotsingles,\N
-2015-02-01,battlespotspecial8,\N
-2015-02-01,battlespottriples,\N
-2015-02-01,cap,\N
-2015-02-01,challengecup,\N
-2015-02-01,challengecup1vs1,\N
-2015-02-01,classichackmons,\N
-2015-02-01,dragoncup,\N
-2015-02-01,enterthedragontype,\N
-2015-02-01,fu,\N
-2015-02-01,gen1ou,\N
-2015-02-01,gen1randombattle,\N
-2015-02-01,gen2ou,\N
-2015-02-01,gen3oubeta,\N
-2015-02-01,gen3ubersbeta,\N
-2015-02-01,gen4lc,\N
-2015-02-01,gen4ou,\N
-2015-02-01,gen4ubers,\N
-2015-02-01,gen4uu,\N
-2015-02-01,gen5gbudoubles,\N
-2015-02-01,gen5gbusingles,\N
-2015-02-01,gen5nu,\N
-2015-02-01,gen5ou,\N
-2015-02-01,gen5ru,\N
-2015-02-01,gen5smogondoubles,\N
-2015-02-01,gen5ubers,\N
-2015-02-01,gen5uu,\N
-2015-02-01,generationshowdown,\N
-2015-02-01,inversebattle,\N
-2015-02-01,lc,\N
-2015-02-01,lcsuspecttest,\N
-2015-02-01,lcuu,\N
-2015-02-01,monotype,\N
-2015-02-01,nususpecttest,\N
-2015-02-01,oususpecttest,\N
-2015-02-01,randombattle,\N
-2015-02-01,randomdoublesbattle,\N
-2015-02-01,randomtriplesbattle,\N
-2015-02-01,rususpecttest,\N
-2015-02-01,seasonalhanvshun,\N
-2015-02-01,seasonalspacetimefuntimes,\N
-2015-02-01,smogontriples,\N
-2015-02-01,stabmons,\N
-2015-02-01,tiershift,\N
-2015-02-01,uususpecttest,\N
-2015-03-01,1v1,\N
-2015-03-01,almostanyability,\N
-2015-03-01,balancedhackmons,\N
-2015-03-01,battlespotsingles,\N
-2015-03-01,battlespotspecial8,\N
-2015-03-01,battlespottriples,\N
-2015-03-01,cap,\N
-2015-03-01,challengecup,\N
-2015-03-01,challengecup1vs1,\N
-2015-03-01,classichackmons,\N
-2015-03-01,enterthedragontype,\N
-2015-03-01,gen1ou,\N
-2015-03-01,gen1randombattle,\N
-2015-03-01,gen2ou,\N
-2015-03-01,gen3ou,\N
-2015-03-01,gen3oubeta,\N
-2015-03-01,gen3ubers,\N
-2015-03-01,gen3ubersbeta,\N
-2015-03-01,gen4ou,\N
-2015-03-01,gen4ubers,\N
-2015-03-01,gen4uu,\N
-2015-03-01,gen5gbudoubles,\N
-2015-03-01,gen5gbusingles,\N
-2015-03-01,gen5lc,\N
-2015-03-01,gen5nu,\N
-2015-03-01,gen5ou,\N
-2015-03-01,gen5ru,\N
-2015-03-01,gen5smogondoubles,\N
-2015-03-01,gen5ubers,\N
-2015-03-01,gen5uu,\N
-2015-03-01,hiddentype,\N
-2015-03-01,inversebattle,\N
-2015-03-01,lc,\N
-2015-03-01,lcsuspecttest,\N
-2015-03-01,lcuu,\N
-2015-03-01,monotype,\N
-2015-03-01,nususpecttest,\N
-2015-03-01,ounomega,\N
-2015-03-01,oususpecttest,\N
-2015-03-01,randombattle,\N
-2015-03-01,randomdoublesbattle,\N
-2015-03-01,randomtriplesbattle,\N
-2015-03-01,rususpecttest,\N
-2015-03-01,seasonalhanvshun,\N
-2015-03-01,seasonalsuperstaffbros,\N
-2015-03-01,smogontriples,\N
-2015-03-01,stabmons,\N
-2015-03-01,tiershift,\N
-2015-03-01,uunoscald,\N
-2015-03-01,uususpecttest,\N
-2015-04-01,1v1,\N
-2015-04-01,almostanyability,\N
-2015-04-01,balancedhackmons,\N
-2015-04-01,battlespotsingles,\N
-2015-04-01,battlespottriples,\N
-2015-04-01,cap,\N
-2015-04-01,challengecup,\N
-2015-04-01,challengecup1vs1,\N
-2015-04-01,finaldestination,\N
-2015-04-01,gen1ou,\N
-2015-04-01,gen1randombattle,\N
-2015-04-01,gen2ou,\N
-2015-04-01,gen3ou,\N
-2015-04-01,gen3ubers,\N
-2015-04-01,gen4ou,\N
-2015-04-01,gen4ubers,\N
-2015-04-01,gen5doublesou,\N
-2015-04-01,gen5gbudoubles,\N
-2015-04-01,gen5gbusingles,\N
-2015-04-01,gen5nu,\N
-2015-04-01,gen5ou,\N
-2015-04-01,gen5smogondoubles,\N
-2015-04-01,gen5ubers,\N
-2015-04-01,gen5uu,\N
-2015-04-01,hiddentype,\N
-2015-04-01,inheritance,\N
-2015-04-01,inversebattle,\N
-2015-04-01,lc,\N
-2015-04-01,lcuu,\N
-2015-04-01,monotype,\N
-2015-04-01,mrboneswildride,\N
-2015-04-01,nususpecttest,\N
-2015-04-01,ounomega,\N
-2015-04-01,oususpecttest,\N
-2015-04-01,randombattle,\N
-2015-04-01,randomdoublesbattle,\N
-2015-04-01,randomtriplesbattle,\N
-2015-04-01,seasonalsuperstaffbros,\N
-2015-04-01,smogondoublessuspecttest,\N
-2015-04-01,smogontriples,\N
-2015-04-01,stabmons,\N
-2015-04-01,tiershift,\N
-2015-04-01,uberssuspecttest,\N
-2015-05-01,1v1,\N
-2015-05-01,2v2doubles,\N
-2015-05-01,almostanyability,\N
-2015-05-01,balancedhackmons,\N
-2015-05-01,battlecup1v1,\N
-2015-05-01,battlefactory,\N
-2015-05-01,battlespotsingles,\N
-2015-05-01,battlespotspecial10,\N
-2015-05-01,battlespottriples,\N
-2015-05-01,cap,\N
-2015-05-01,challengecup,\N
-2015-05-01,challengecup1v1,\N
-2015-05-01,challengecup1vs1,\N
-2015-05-01,doublesoususpecttest,\N
-2015-05-01,gen1ou,\N
-2015-05-01,gen1randombattle,\N
-2015-05-01,gen2ou,\N
-2015-05-01,gen3ou,\N
-2015-05-01,gen3ubers,\N
-2015-05-01,gen4lc,\N
-2015-05-01,gen4ou,\N
-2015-05-01,gen4ubers,\N
-2015-05-01,gen4uu,\N
-2015-05-01,gen5doublesou,\N
-2015-05-01,gen5gbudoubles,\N
-2015-05-01,gen5gbusingles,\N
-2015-05-01,gen5lc,\N
-2015-05-01,gen5nu,\N
-2015-05-01,gen5ou,\N
-2015-05-01,gen5ru,\N
-2015-05-01,gen5ubers,\N
-2015-05-01,gen5uu,\N
-2015-05-01,inheritance,\N
-2015-05-01,inversebattle,\N
-2015-05-01,lc,\N
-2015-05-01,lcuu,\N
-2015-05-01,monotype,\N
-2015-05-01,nususpecttest,\N
-2015-05-01,ounomega,\N
-2015-05-01,oususpecttest,\N
-2015-05-01,pgllittlecup,\N
-2015-05-01,randombattle,\N
-2015-05-01,randomdoublesbattle,\N
-2015-05-01,randomtriplesbattle,\N
-2015-05-01,rususpecttest,\N
-2015-05-01,seasonalsuperstaffbros,\N
-2015-05-01,seasonalyouarenotprepared,\N
-2015-05-01,smogontriples,\N
-2015-05-01,stabmons,\N
-2015-05-01,tiershift,\N
-2015-05-01,uususpecttest,\N
-2015-06-01,1v1,\N
-2015-06-01,2v2doubles,\N
-2015-06-01,almostanyability,\N
-2015-06-01,averagemons,\N
-2015-06-01,balancedhackmons,\N
-2015-06-01,battlecup1v1,\N
-2015-06-01,battlefactory,\N
-2015-06-01,battlespotsingles,\N
-2015-06-01,battlespotspecial10,\N
-2015-06-01,battlespottriples,\N
-2015-06-01,cap,\N
-2015-06-01,capnaviathanplaytest,\N
-2015-06-01,challengecup,\N
-2015-06-01,challengecup1v1,\N
-2015-06-01,doublesoususpecttest,\N
-2015-06-01,gen1ou,\N
-2015-06-01,gen1randombattle,\N
-2015-06-01,gen2ou,\N
-2015-06-01,gen3ou,\N
-2015-06-01,gen3ubers,\N
-2015-06-01,gen4lc,\N
-2015-06-01,gen4ou,\N
-2015-06-01,gen4ubers,\N
-2015-06-01,gen4uu,\N
-2015-06-01,gen5doublesou,\N
-2015-06-01,gen5gbudoubles,\N
-2015-06-01,gen5gbusingles,\N
-2015-06-01,gen5lc,\N
-2015-06-01,gen5nu,\N
-2015-06-01,gen5ou,\N
-2015-06-01,gen5ubers,\N
-2015-06-01,gen5uu,\N
-2015-06-01,hackmonscup,\N
-2015-06-01,inversebattle,\N
-2015-06-01,lc,\N
-2015-06-01,lcuu,\N
-2015-06-01,linked,\N
-2015-06-01,monotype,\N
-2015-06-01,nususpecttest,\N
-2015-06-01,ounomega,\N
-2015-06-01,oususpecttest,\N
-2015-06-01,randombattle,\N
-2015-06-01,randomdoublesbattle,\N
-2015-06-01,randomtriplesbattle,\N
-2015-06-01,rususpecttest,\N
-2015-06-01,seasonalyouarenotprepared,\N
-2015-06-01,smogontriples,\N
-2015-06-01,stabmons,\N
-2015-06-01,tiershift,\N
-2015-06-01,uususpecttest,\N
-2015-07-01,1v1,\N
-2015-07-01,almostanyability,\N
-2015-07-01,averagemons,\N
-2015-07-01,balancedhackmons,\N
-2015-07-01,battlefactory,\N
-2015-07-01,battlespotsingles,\N
-2015-07-01,battlespotspecial10,\N
-2015-07-01,battlespotspecial11,\N
-2015-07-01,battlespottriples,\N
-2015-07-01,cap,\N
-2015-07-01,capnaviathanplaytest,\N
-2015-07-01,challengecup1v1,\N
-2015-07-01,gen1ou,\N
-2015-07-01,gen1randombattle,\N
-2015-07-01,gen2ou,\N
-2015-07-01,gen3ou,\N
-2015-07-01,gen3ubers,\N
-2015-07-01,gen4lc,\N
-2015-07-01,gen4ou,\N
-2015-07-01,gen4ubers,\N
-2015-07-01,gen4uu,\N
-2015-07-01,gen5doublesou,\N
-2015-07-01,gen5lc,\N
-2015-07-01,gen5ou,\N
-2015-07-01,gen5ru,\N
-2015-07-01,gen5ubers,\N
-2015-07-01,gen5uu,\N
-2015-07-01,hackmonscup,\N
-2015-07-01,inversebattle,\N
-2015-07-01,lc,\N
-2015-07-01,lcuu,\N
-2015-07-01,linked,\N
-2015-07-01,mixandmega,\N
-2015-07-01,monotype,\N
-2015-07-01,nususpecttest,\N
-2015-07-01,ounomega,\N
-2015-07-01,proteanpalace,\N
-2015-07-01,randombattle,\N
-2015-07-01,randomdoublesbattle,\N
-2015-07-01,randomtriplesbattle,\N
-2015-07-01,seasonalyouarenotprepared,\N
-2015-07-01,smogontriples,\N
-2015-07-01,stabmons,\N
-2015-07-01,tiershift,\N
-2015-07-01,uususpecttest,\N
-2015-08-01,1v1,\N
-2015-08-01,almostanyability,\N
-2015-08-01,balancedhackmons,\N
-2015-08-01,battlefactory,\N
-2015-08-01,battlespotsingles,\N
-2015-08-01,battlespotspecial11,\N
-2015-08-01,battlespottriples,\N
-2015-08-01,cap,\N
-2015-08-01,challengecup1v1,\N
-2015-08-01,doublesoususpecttest,\N
-2015-08-01,gen1ou,\N
-2015-08-01,gen1randombattle,\N
-2015-08-01,gen2ou,\N
-2015-08-01,gen3ou,\N
-2015-08-01,gen3ubers,\N
-2015-08-01,gen4lc,\N
-2015-08-01,gen4ou,\N
-2015-08-01,gen4ubers,\N
-2015-08-01,gen4uu,\N
-2015-08-01,gen5doublesou,\N
-2015-08-01,gen5lc,\N
-2015-08-01,gen5nu,\N
-2015-08-01,gen5ou,\N
-2015-08-01,gen5ru,\N
-2015-08-01,gen5ubers,\N
-2015-08-01,gen5uu,\N
-2015-08-01,hackmonscup,\N
-2015-08-01,inversebattle,\N
-2015-08-01,lc,\N
-2015-08-01,lcsuspecttest,\N
-2015-08-01,lcuu,\N
-2015-08-01,mixandmega,\N
-2015-08-01,monotype,\N
-2015-08-01,monsjustmons,\N
-2015-08-01,nostatus,\N
-2015-08-01,ounomega,\N
-2015-08-01,pikachucup,\N
-2015-08-01,proteanpalace,\N
-2015-08-01,randombattle,\N
-2015-08-01,randomdoublesbattle,\N
-2015-08-01,randomtriplesbattle,\N
-2015-08-01,seasonalrainbowroad,\N
-2015-08-01,smogontriples,\N
-2015-08-01,stabmons,\N
-2015-08-01,tiershift,\N
-2015-09-01,1v1,\N
-2015-09-01,almostanyability,\N
-2015-09-01,balancedhackmons,\N
-2015-09-01,battlefactory,\N
-2015-09-01,battlespotsingles,\N
-2015-09-01,battlespotspecial11,\N
-2015-09-01,battlespotspecial12,\N
-2015-09-01,battlespottriples,\N
-2015-09-01,cap,\N
-2015-09-01,challengecup1v1,\N
-2015-09-01,gen1ou,\N
-2015-09-01,gen1randombattle,\N
-2015-09-01,gen2ou,\N
-2015-09-01,gen3ou,\N
-2015-09-01,gen3ubers,\N
-2015-09-01,gen4lc,\N
-2015-09-01,gen4ou,\N
-2015-09-01,gen4ubers,\N
-2015-09-01,gen4uu,\N
-2015-09-01,gen5doublesou,\N
-2015-09-01,gen5lc,\N
-2015-09-01,gen5nu,\N
-2015-09-01,gen5ou,\N
-2015-09-01,gen5ru,\N
-2015-09-01,gen5ubers,\N
-2015-09-01,gen5uu,\N
-2015-09-01,hackmons1v1,\N
-2015-09-01,hackmonscup,\N
-2015-09-01,inversebattle,\N
-2015-09-01,lc,\N
-2015-09-01,lcsuspecttest,\N
-2015-09-01,lcuu,\N
-2015-09-01,monotype,\N
-2015-09-01,monsjustmons,\N
-2015-09-01,nostatus,\N
-2015-09-01,ounomega,\N
-2015-09-01,primalbattle,\N
-2015-09-01,randombattle,\N
-2015-09-01,randomdoublesbattle,\N
-2015-09-01,randomtriplesbattle,\N
-2015-09-01,rususpecttest,\N
-2015-09-01,seasonalrainbowroad,\N
-2015-09-01,sketchmons,\N
-2015-09-01,smogontriples,\N
-2015-09-01,stabmons,\N
-2015-09-01,tiershift,\N
-2015-10-01,1v1,\N
-2015-10-01,almostanyability,\N
-2015-10-01,balancedhackmons,\N
-2015-10-01,battlefactory,\N
-2015-10-01,battlespotsingles,\N
-2015-10-01,battlespotspecial12,\N
-2015-10-01,battlespottriples,\N
-2015-10-01,cap,\N
-2015-10-01,challengecup1v1,\N
-2015-10-01,gen1ou,\N
-2015-10-01,gen1randombattle,\N
-2015-10-01,gen2ou,\N
-2015-10-01,gen3ou,\N
-2015-10-01,gen3ubers,\N
-2015-10-01,gen4lc,\N
-2015-10-01,gen4ou,\N
-2015-10-01,gen4ubers,\N
-2015-10-01,gen4uu,\N
-2015-10-01,gen5doublesou,\N
-2015-10-01,gen5lc,\N
-2015-10-01,gen5nu,\N
-2015-10-01,gen5ou,\N
-2015-10-01,gen5ru,\N
-2015-10-01,gen5ubers,\N
-2015-10-01,gen5uu,\N
-2015-10-01,hackmons1v1,\N
-2015-10-01,hackmonscup,\N
-2015-10-01,higheststatmeta,\N
-2015-10-01,inversebattle,\N
-2015-10-01,lc,\N
-2015-10-01,lcuu,\N
-2015-10-01,monotype,\N
-2015-10-01,noguardgalaxy,\N
-2015-10-01,ounomega,\N
-2015-10-01,primalbattle,\N
-2015-10-01,randombattle,\N
-2015-10-01,randomdoublesbattle,\N
-2015-10-01,randomtriplesbattle,\N
-2015-10-01,scrappyskirmish,\N
-2015-10-01,seasonalrainbowroad,\N
-2015-10-01,seasonalspoopyparty,\N
-2015-10-01,sketchmons,\N
-2015-10-01,smogontriples,\N
-2015-10-01,spookycup,\N
-2015-10-01,stabmons,\N
-2015-10-01,tiershift,\N
-2015-11-01,1v1,\N
-2015-11-01,almostanyability,\N
-2015-11-01,balancedhackmons,\N
-2015-11-01,battlefactory,\N
-2015-11-01,battlespotsingles,\N
-2015-11-01,battlespotspecial12,\N
-2015-11-01,battlespotspecial13,\N
-2015-11-01,battlespottriples,\N
-2015-11-01,cap,\N
-2015-11-01,challengecup1v1,\N
-2015-11-01,festivefeud,\N
-2015-11-01,gen1ou,\N
-2015-11-01,gen1randombattle,\N
-2015-11-01,gen2ou,\N
-2015-11-01,gen3ou,\N
-2015-11-01,gen3ubers,\N
-2015-11-01,gen4lc,\N
-2015-11-01,gen4ou,\N
-2015-11-01,gen4ubers,\N
-2015-11-01,gen4uu,\N
-2015-11-01,gen5doublesou,\N
-2015-11-01,gen5lc,\N
-2015-11-01,gen5nu,\N
-2015-11-01,gen5ou,\N
-2015-11-01,gen5ru,\N
-2015-11-01,gen5ubers,\N
-2015-11-01,gen5uu,\N
-2015-11-01,hackmonscup,\N
-2015-11-01,higheststatmeta,\N
-2015-11-01,inheritance,\N
-2015-11-01,inversebattle,\N
-2015-11-01,lc,\N
-2015-11-01,lcuu,\N
-2015-11-01,monotype,\N
-2015-11-01,noguardgalaxy,\N
-2015-11-01,ounomega,\N
-2015-11-01,oususpecttest,\N
-2015-11-01,pususpecttest,\N
-2015-11-01,randombattle,\N
-2015-11-01,randomdoublesbattle,\N
-2015-11-01,randomtriplesbattle,\N
-2015-11-01,rususpecttest,\N
-2015-11-01,sametypestealthrock,\N
-2015-11-01,scrappyskirmish,\N
-2015-11-01,seasonalspoopyparty,\N
-2015-11-01,seasonalsupersquadsmackdown,\N
-2015-11-01,smogontriples,\N
-2015-11-01,stabmons,\N
-2015-11-01,tiershift,\N
-2015-12-01,1v1,\N
-2015-12-01,350cup,\N
-2015-12-01,almostanyability,\N
-2015-12-01,balancedhackmons,\N
-2015-12-01,battlefactory,\N
-2015-12-01,battlespotsingles,\N
-2015-12-01,battlespotspecial13,\N
-2015-12-01,battlespottriples,\N
-2015-12-01,cap,\N
-2015-12-01,challengecup1v1,\N
-2015-12-01,festivefeud,\N
-2015-12-01,gen1ou,\N
-2015-12-01,gen1randombattle,\N
-2015-12-01,gen2ou,\N
-2015-12-01,gen3ou,\N
-2015-12-01,gen3ubers,\N
-2015-12-01,gen4lc,\N
-2015-12-01,gen4ou,\N
-2015-12-01,gen4ubers,\N
-2015-12-01,gen4uu,\N
-2015-12-01,gen5doublesou,\N
-2015-12-01,gen5lc,\N
-2015-12-01,gen5nu,\N
-2015-12-01,gen5ou,\N
-2015-12-01,gen5ru,\N
-2015-12-01,gen5ubers,\N
-2015-12-01,gen5uu,\N
-2015-12-01,hackmonscup,\N
-2015-12-01,inheritance,\N
-2015-12-01,inversebattle,\N
-2015-12-01,lc,\N
-2015-12-01,lcextended,\N
-2015-12-01,lcuu,\N
-2015-12-01,monotype,\N
-2015-12-01,ounomega,\N
-2015-12-01,oususpecttest,\N
-2015-12-01,pususpecttest,\N
-2015-12-01,randombattle,\N
-2015-12-01,randomdoublesbattle,\N
-2015-12-01,randomtriplesbattle,\N
-2015-12-01,rususpecttest,\N
-2015-12-01,sametypestealthrock,\N
-2015-12-01,seasonalsupersquadsmackdown,\N
-2015-12-01,smogontriples,\N
-2015-12-01,stabmons,\N
-2015-12-01,tiershift,\N
-2015-12-01,uususpecttest,\N
-2016-01-01,1v1,\N
-2016-01-01,350cup,\N
-2016-01-01,almostanyability,\N
-2016-01-01,balancedhackmons,\N
-2016-01-01,battlefactory,\N
-2016-01-01,battlespotsingles,\N
-2016-01-01,battlespotspecial13,\N
-2016-01-01,battlespottriples,\N
-2016-01-01,cap,\N
-2016-01-01,capcrucibelleplaytest,\N
-2016-01-01,challengecup1v1,\N
-2016-01-01,gen1ou,\N
-2016-01-01,gen1randombattle,\N
-2016-01-01,gen2ou,\N
-2016-01-01,gen3ou,\N
-2016-01-01,gen3ubers,\N
-2016-01-01,gen4lc,\N
-2016-01-01,gen4ou,\N
-2016-01-01,gen4ubers,\N
-2016-01-01,gen4uu,\N
-2016-01-01,gen5doublesou,\N
-2016-01-01,gen5lc,\N
-2016-01-01,gen5nu,\N
-2016-01-01,gen5ou,\N
-2016-01-01,gen5ru,\N
-2016-01-01,gen5ubers,\N
-2016-01-01,gen5uu,\N
-2016-01-01,godsandfollowers,\N
-2016-01-01,hackmonscup,\N
-2016-01-01,inversebattle,\N
-2016-01-01,lc,\N
-2016-01-01,lcuu,\N
-2016-01-01,monogen,\N
-2016-01-01,monotype,\N
-2016-01-01,ounomega,\N
-2016-01-01,pususpecttest,\N
-2016-01-01,randombattle,\N
-2016-01-01,randomdoublesbattle,\N
-2016-01-01,randomtriplesbattle,\N
-2016-01-01,seasonalpolaropposites,\N
-2016-01-01,smogontriples,\N
-2016-01-01,stabmons,\N
-2016-01-01,tiershift,\N
-2016-02-01,1v1,\N
-2016-02-01,almostanyability,\N
-2016-02-01,balancedhackmons,\N
-2016-02-01,battlefactory,\N
-2016-02-01,battlespotsingles,\N
-2016-02-01,battlespottriples,\N
-2016-02-01,cap,\N
-2016-02-01,capcrucibelleplaytest,\N
-2016-02-01,challengecup1v1,\N
-2016-02-01,gen1ou,\N
-2016-02-01,gen1randombattle,\N
-2016-02-01,gen2ou,\N
-2016-02-01,gen3ou,\N
-2016-02-01,gen3ubers,\N
-2016-02-01,gen4lc,\N
-2016-02-01,gen4ou,\N
-2016-02-01,gen4ubers,\N
-2016-02-01,gen4uu,\N
-2016-02-01,gen5lc,\N
-2016-02-01,gen5nu,\N
-2016-02-01,gen5ou,\N
-2016-02-01,gen5ru,\N
-2016-02-01,gen5ubers,\N
-2016-02-01,gen5uu,\N
-2016-02-01,godsandfollowers,\N
-2016-02-01,hackmonscup,\N
-2016-02-01,inversebattle,\N
-2016-02-01,kantoclassic,\N
-2016-02-01,lc,\N
-2016-02-01,lcuu,\N
-2016-02-01,mixandmega,\N
-2016-02-01,monogen,\N
-2016-02-01,monotype,\N
-2016-02-01,nususpecttest,\N
-2016-02-01,ounomega,\N
-2016-02-01,randombattle,\N
-2016-02-01,randomdoublesbattle,\N
-2016-02-01,randomtriplesbattle,\N
-2016-02-01,rususpecttest,\N
-2016-02-01,seasonalpolaropposites,\N
-2016-02-01,smogontriples,\N
-2016-02-01,stabmons,\N
-2016-02-01,tiershift,\N
-2016-02-01,voltturnmayhem,\N
-2016-03-01,1v1,\N
-2016-03-01,almostanyability,\N
-2016-03-01,balancedhackmons,\N
-2016-03-01,battlefactory,\N
-2016-03-01,battlespotsingles,\N
-2016-03-01,battlespottriples,\N
-2016-03-01,cap,\N
-2016-03-01,challengecup1v1,\N
-2016-03-01,flashclash,\N
-2016-03-01,gen1ou,\N
-2016-03-01,gen1randombattle,\N
-2016-03-01,gen2ou,\N
-2016-03-01,gen3ou,\N
-2016-03-01,gen3ubers,\N
-2016-03-01,gen4lc,\N
-2016-03-01,gen4ou,\N
-2016-03-01,gen4ubers,\N
-2016-03-01,gen4uu,\N
-2016-03-01,gen5lc,\N
-2016-03-01,gen5nu,\N
-2016-03-01,gen5ou,\N
-2016-03-01,gen5ru,\N
-2016-03-01,gen5ubers,\N
-2016-03-01,gen5uu,\N
-2016-03-01,hackmonscup,\N
-2016-03-01,inversebattle,\N
-2016-03-01,kantoclassic,\N
-2016-03-01,lc,\N
-2016-03-01,lcsuspecttest,\N
-2016-03-01,lcuu,\N
-2016-03-01,metagamiate,\N
-2016-03-01,mixandmega,\N
-2016-03-01,monotype,\N
-2016-03-01,nususpecttest,\N
-2016-03-01,ounomega,\N
-2016-03-01,oususpecttest,\N
-2016-03-01,randombattle,\N
-2016-03-01,randomdoublesbattle,\N
-2016-03-01,randomtriplesbattle,\N
-2016-03-01,rususpecttest,\N
-2016-03-01,seasonaldimensiondoom,\N
-2016-03-01,seasonalpolaropposites,\N
-2016-03-01,smogontriples,\N
-2016-03-01,stabmons,\N
-2016-03-01,tiershift,\N
-2016-03-01,unreleasedou,\N
-2016-03-01,voltturnmayhem,\N
-2016-04-01,1v1,\N
-2016-04-01,abilityunity,\N
-2016-04-01,almostanyability,\N
-2016-04-01,balancedhackmons,\N
-2016-04-01,battlefactory,\N
-2016-04-01,battlespotsingles,\N
-2016-04-01,battlespottriples,\N
-2016-04-01,cap,\N
-2016-04-01,challengecup1v1,\N
-2016-04-01,flashclash,\N
-2016-04-01,gen1ou,\N
-2016-04-01,gen1randombattle,\N
-2016-04-01,gen2ou,\N
-2016-04-01,gen3ou,\N
-2016-04-01,gen3ubers,\N
-2016-04-01,gen4lc,\N
-2016-04-01,gen4ou,\N
-2016-04-01,gen4ubers,\N
-2016-04-01,gen4uu,\N
-2016-04-01,gen5lc,\N
-2016-04-01,gen5nu,\N
-2016-04-01,gen5ou,\N
-2016-04-01,gen5ru,\N
-2016-04-01,gen5ubers,\N
-2016-04-01,gen5uu,\N
-2016-04-01,hackmonscup,\N
-2016-04-01,inversebattle,\N
-2016-04-01,lc,\N
-2016-04-01,lcuu,\N
-2016-04-01,megamons,\N
-2016-04-01,metagamiate,\N
-2016-04-01,monotype,\N
-2016-04-01,ounomega,\N
-2016-04-01,oususpecttest,\N
-2016-04-01,randombattle,\N
-2016-04-01,randomdoublesbattle,\N
-2016-04-01,randomtriplesbattle,\N
-2016-04-01,rususpecttest,\N
-2016-04-01,seasonaldimensiondoom,\N
-2016-04-01,smogontriples,\N
-2016-04-01,stabmons,\N
-2016-04-01,tiershift,\N
-2016-04-01,unreleasedou,\N
-2016-05-01,1v1,\N
-2016-05-01,abilityunity,\N
-2016-05-01,almostanyability,\N
-2016-05-01,balancedhackmons,\N
-2016-05-01,battlefactory,\N
-2016-05-01,battlespotsingles,\N
-2016-05-01,battlespottriples,\N
-2016-05-01,cap,\N
-2016-05-01,challengecup1v1,\N
-2016-05-01,extremetiershift,\N
-2016-05-01,flashclash,\N
-2016-05-01,gen1ou,\N
-2016-05-01,gen1randombattle,\N
-2016-05-01,gen2ou,\N
-2016-05-01,gen3ou,\N
-2016-05-01,gen3ubers,\N
-2016-05-01,gen4lc,\N
-2016-05-01,gen4ou,\N
-2016-05-01,gen4ubers,\N
-2016-05-01,gen4uu,\N
-2016-05-01,gen5lc,\N
-2016-05-01,gen5nu,\N
-2016-05-01,gen5ou,\N
-2016-05-01,gen5ru,\N
-2016-05-01,gen5ubers,\N
-2016-05-01,gen5uu,\N
-2016-05-01,hackmonscup,\N
-2016-05-01,inversebattle,\N
-2016-05-01,johtoclassic,\N
-2016-05-01,lc,\N
-2016-05-01,lcuu,\N
-2016-05-01,megamons,\N
-2016-05-01,monotype,\N
-2016-05-01,ounomega,\N
-2016-05-01,randombattle,\N
-2016-05-01,randomdoublesbattle,\N
-2016-05-01,randomtriplesbattle,\N
-2016-05-01,rususpecttest,\N
-2016-05-01,smogontriples,\N
-2016-05-01,stabmons,\N
-2016-05-01,tiershift,\N
-2016-05-01,typereflector,\N
-2016-05-01,uususpecttest,\N
-2016-06-01,1v1,\N
-2016-06-01,almostanyability,\N
-2016-06-01,balancedhackmons,\N
-2016-06-01,battlefactory,\N
-2016-06-01,battlespotsingles,\N
-2016-06-01,battlespottriples,\N
-2016-06-01,cap,\N
-2016-06-01,challengecup1v1,\N
-2016-06-01,custompower,\N
-2016-06-01,doublesoususpecttest,\N
-2016-06-01,extremetiershift,\N
-2016-06-01,gen1ou,\N
-2016-06-01,gen1randombattle,\N
-2016-06-01,gen1uu,\N
-2016-06-01,gen2ou,\N
-2016-06-01,gen3ou,\N
-2016-06-01,gen3ubers,\N
-2016-06-01,gen4lc,\N
-2016-06-01,gen4ou,\N
-2016-06-01,gen4ubers,\N
-2016-06-01,gen4uu,\N
-2016-06-01,gen5doublesou,\N
-2016-06-01,gen5lc,\N
-2016-06-01,gen5nu,\N
-2016-06-01,gen5ou,\N
-2016-06-01,gen5ru,\N
-2016-06-01,gen5ubers,\N
-2016-06-01,gen5uu,\N
-2016-06-01,gottalent,\N
-2016-06-01,hackmonscup,\N
-2016-06-01,inversebattle,\N
-2016-06-01,johtoclassic,\N
-2016-06-01,lc,\N
-2016-06-01,lcsuspecttest,\N
-2016-06-01,lcuu,\N
-2016-06-01,monotype,\N
-2016-06-01,nususpecttest,\N
-2016-06-01,pususpecttest,\N
-2016-06-01,randombattle,\N
-2016-06-01,randomdoublesbattle,\N
-2016-06-01,randomtriplesbattle,\N
-2016-06-01,rususpecttest,\N
-2016-06-01,sinnohclassic,\N
-2016-06-01,smogontriples,\N
-2016-06-01,stabmons,\N
-2016-06-01,tiershift,\N
-2016-06-01,typereflector,\N
-2016-06-01,uususpecttest,\N
-2016-07-01,1v1,\N
-2016-07-01,aaaubers,\N
-2016-07-01,almostanyability,\N
-2016-07-01,balancedhackmons,\N
-2016-07-01,battlefactory,\N
-2016-07-01,battlespotsingles,\N
-2016-07-01,battlespotspecial17,\N
-2016-07-01,battlespottriples,\N
-2016-07-01,cap,\N
-2016-07-01,challengecup1v1,\N
-2016-07-01,custompower,\N
-2016-07-01,enchanteditems,\N
-2016-07-01,gen1ou,\N
-2016-07-01,gen1randombattle,\N
-2016-07-01,gen1uu,\N
-2016-07-01,gen2ou,\N
-2016-07-01,gen3ou,\N
-2016-07-01,gen3ubers,\N
-2016-07-01,gen4lc,\N
-2016-07-01,gen4ou,\N
-2016-07-01,gen4ubers,\N
-2016-07-01,gen4uu,\N
-2016-07-01,gen5doublesou,\N
-2016-07-01,gen5lc,\N
-2016-07-01,gen5nu,\N
-2016-07-01,gen5ou,\N
-2016-07-01,gen5ru,\N
-2016-07-01,gen5ubers,\N
-2016-07-01,gen5uu,\N
-2016-07-01,gottalent,\N
-2016-07-01,hackmonscup,\N
-2016-07-01,inversebattle,\N
-2016-07-01,lc,\N
-2016-07-01,lcsuspecttest,\N
-2016-07-01,lcuu,\N
-2016-07-01,monotype,\N
-2016-07-01,nususpecttest,\N
-2016-07-01,pususpecttest,\N
-2016-07-01,randombattle,\N
-2016-07-01,randomdoublesbattle,\N
-2016-07-01,randomtriplesbattle,\N
-2016-07-01,sinnohclassic,\N
-2016-07-01,smogontriples,\N
-2016-07-01,stabmons,\N
-2016-07-01,tiershift,\N
-2016-07-01,unovaclassic,\N
-2016-07-01,uususpecttest,\N
-2016-08-01,1v1,\N
-2016-08-01,aaaubers,\N
-2016-08-01,almostanyability,\N
-2016-08-01,balancedhackmons,\N
-2016-08-01,battlefactory,\N
-2016-08-01,battlespotsingles,\N
-2016-08-01,battlespotspecial17,\N
-2016-08-01,battlespottriples,\N
-2016-08-01,cap,\N
-2016-08-01,challengecup1v1,\N
-2016-08-01,doublesoususpecttest,\N
-2016-08-01,enchanteditems,\N
-2016-08-01,followtheleader,\N
-2016-08-01,gen1ou,\N
-2016-08-01,gen1randombattle,\N
-2016-08-01,gen1uu,\N
-2016-08-01,gen2ou,\N
-2016-08-01,gen2uu,\N
-2016-08-01,gen3ou,\N
-2016-08-01,gen3ubers,\N
-2016-08-01,gen4lc,\N
-2016-08-01,gen4ou,\N
-2016-08-01,gen4ubers,\N
-2016-08-01,gen4uu,\N
-2016-08-01,gen5doublesou,\N
-2016-08-01,gen5lc,\N
-2016-08-01,gen5nu,\N
-2016-08-01,gen5ou,\N
-2016-08-01,gen5ru,\N
-2016-08-01,gen5ubers,\N
-2016-08-01,gen5uu,\N
-2016-08-01,hackmonscup,\N
-2016-08-01,inversebattle,\N
-2016-08-01,lc,\N
-2016-08-01,lcuu,\N
-2016-08-01,monotype,\N
-2016-08-01,natureswap,\N
-2016-08-01,randombattle,\N
-2016-08-01,randomdoublesbattle,\N
-2016-08-01,randomtriplesbattle,\N
-2016-08-01,smogontriples,\N
-2016-08-01,stabmons,\N
-2016-08-01,tiershift,\N
-2016-08-01,unovaclassic,\N
-2016-09-01,1v1,\N
-2016-09-01,almostanyability,\N
-2016-09-01,balancedhackmons,\N
-2016-09-01,battlefactory,\N
-2016-09-01,battlespotsingles,\N
-2016-09-01,battlespotspecial17,\N
-2016-09-01,battlespottriples,\N
-2016-09-01,bhdoubles,\N
-2016-09-01,cap,\N
-2016-09-01,challengecup1v1,\N
-2016-09-01,doublesoususpecttest,\N
-2016-09-01,followtheleader,\N
-2016-09-01,gen1ou,\N
-2016-09-01,gen1randombattle,\N
-2016-09-01,gen2ou,\N
-2016-09-01,gen2uu,\N
-2016-09-01,gen3nu,\N
-2016-09-01,gen3ou,\N
-2016-09-01,gen3ubers,\N
-2016-09-01,gen4lc,\N
-2016-09-01,gen4ou,\N
-2016-09-01,gen4ubers,\N
-2016-09-01,gen4uu,\N
-2016-09-01,gen5doublesou,\N
-2016-09-01,gen5lc,\N
-2016-09-01,gen5nu,\N
-2016-09-01,gen5ou,\N
-2016-09-01,gen5ru,\N
-2016-09-01,gen5ubers,\N
-2016-09-01,gen5uu,\N
-2016-09-01,hackmonscup,\N
-2016-09-01,inversebattle,\N
-2016-09-01,lc,\N
-2016-09-01,lcuu,\N
-2016-09-01,mixandmega,\N
-2016-09-01,monotype,\N
-2016-09-01,natureswap,\N
-2016-09-01,randombattle,\N
-2016-09-01,randomdoublesbattle,\N
-2016-09-01,randomtriplesbattle,\N
-2016-09-01,rususpecttest,\N
-2016-09-01,smogontriples,\N
-2016-09-01,stabmons,\N
-2016-09-01,tiershift,\N
-2016-09-01,uususpecttest,\N
-2016-10-01,1v1,\N
-2016-10-01,almostanyability,\N
-2016-10-01,balancedhackmons,\N
-2016-10-01,battlefactory,\N
-2016-10-01,battlespotsingles,\N
-2016-10-01,battlespotspecial17,\N
-2016-10-01,battlespottriples,\N
-2016-10-01,bhdoubles,\N
-2016-10-01,cap,\N
-2016-10-01,challengecup1v1,\N
-2016-10-01,gen1ou,\N
-2016-10-01,gen1randombattle,\N
-2016-10-01,gen2ou,\N
-2016-10-01,gen3nu,\N
-2016-10-01,gen3ou,\N
-2016-10-01,gen3ubers,\N
-2016-10-01,gen4lc,\N
-2016-10-01,gen4nu,\N
-2016-10-01,gen4ou,\N
-2016-10-01,gen4ubers,\N
-2016-10-01,gen4uu,\N
-2016-10-01,gen5doublesou,\N
-2016-10-01,gen5lc,\N
-2016-10-01,gen5nu,\N
-2016-10-01,gen5ou,\N
-2016-10-01,gen5ru,\N
-2016-10-01,gen5ubers,\N
-2016-10-01,gen5uu,\N
-2016-10-01,giftsofthegods,\N
-2016-10-01,hackmonscup,\N
-2016-10-01,inversebattle,\N
-2016-10-01,lc,\N
-2016-10-01,lcuu,\N
-2016-10-01,mixandmega,\N
-2016-10-01,monotype,\N
-2016-10-01,oususpecttest,\N
-2016-10-01,randombattle,\N
-2016-10-01,randomdoublesbattle,\N
-2016-10-01,randomtriplesbattle,\N
-2016-10-01,returnd,\N
-2016-10-01,rususpecttest,\N
-2016-10-01,smogontriples,\N
-2016-10-01,stabmons,\N
-2016-10-01,tiershift,\N
-2016-10-01,uususpecttest,\N
-2016-11-01,1v1,\N
-2016-11-01,almostanyability,\N
-2016-11-01,balancedhackmons,\N
-2016-11-01,battlefactory,\N
-2016-11-01,battlespotsingles,\N
-2016-11-01,battlespottriples,\N
-2016-11-01,cap,\N
-2016-11-01,challengecup1v1,\N
-2016-11-01,gen1ou,\N
-2016-11-01,gen1randombattle,\N
-2016-11-01,gen2ou,\N
-2016-11-01,gen3ou,\N
-2016-11-01,gen3ubers,\N
-2016-11-01,gen3uu,\N
-2016-11-01,gen4lc,\N
-2016-11-01,gen4ou,\N
-2016-11-01,gen4ubers,\N
-2016-11-01,gen4uu,\N
-2016-11-01,gen5doublesou,\N
-2016-11-01,gen5lc,\N
-2016-11-01,gen5nu,\N
-2016-11-01,gen5ou,\N
-2016-11-01,gen5ru,\N
-2016-11-01,gen5ubers,\N
-2016-11-01,gen5uu,\N
-2016-11-01,gen7anythinggoes,\N
-2016-11-01,gen7anythinggoesbeta,\N
-2016-11-01,gen7balancedhackmons,\N
-2016-11-01,gen7battlespotdoubles,\N
-2016-11-01,gen7battlespotsingles,\N
-2016-11-01,gen7cap,\N
-2016-11-01,gen7challengecup,\N
-2016-11-01,gen7challengecupbeta,\N
-2016-11-01,gen7doublesanythinggoesbeta,\N
-2016-11-01,gen7doublesou,\N
-2016-11-01,gen7doublesoubeta,\N
-2016-11-01,gen7lc,\N
-2016-11-01,gen7ou,\N
-2016-11-01,gen7oubeta,\N
-2016-11-01,gen7ouprebank,\N
-2016-11-01,gen7pokebankag,\N
-2016-11-01,gen7pokebankanythinggoesbeta,\N
-2016-11-01,gen7pokebankdoublesag,\N
-2016-11-01,gen7pokebankdoublesanythinggoesbeta,\N
-2016-11-01,gen7pokebankdoublesoubeta,\N
-2016-11-01,gen7pokebanklc,\N
-2016-11-01,gen7pokebankoubeta,\N
-2016-11-01,gen7randombattle,\N
-2016-11-01,gen7randomdoublesbattle,\N
-2016-11-01,gen7ubers,\N
-2016-11-01,gen7vgc2017beta,\N
-2016-11-01,hackmonscup,\N
-2016-11-01,inversebattle,\N
-2016-11-01,lc,\N
-2016-11-01,lcuu,\N
-2016-11-01,mixandmega,\N
-2016-11-01,monotype,\N
-2016-11-01,oususpecttest,\N
-2016-11-01,randombattle,\N
-2016-11-01,randomdoublesbattle,\N
-2016-11-01,randomtriplesbattle,\N
-2016-11-01,sketchmons,\N
-2016-11-01,smogontriples,\N
-2016-11-01,stabmons,\N
-2016-11-01,tiershift,\N
-2016-12-01,1v1,\N
-2016-12-01,almostanyability,\N
-2016-12-01,anythinggoes,1
-2016-12-01,balancedhackmons,\N
-2016-12-01,battlefactory,\N
-2016-12-01,battlespotsingles,\N
-2016-12-01,battlespottriples,\N
-2016-12-01,cap,\N
-2016-12-01,challengecup1v1,\N
-2016-12-01,doublesou,9
-2016-12-01,doublesuu,10
-2016-12-01,gen1ou,\N
-2016-12-01,gen1randombattle,\N
-2016-12-01,gen2ou,\N
-2016-12-01,gen3ou,\N
-2016-12-01,gen3ubers,\N
-2016-12-01,gen4lc,\N
-2016-12-01,gen4ou,\N
-2016-12-01,gen4ubers,\N
-2016-12-01,gen4uu,\N
-2016-12-01,gen5anythinggoes,\N
-2016-12-01,gen5doublesou,\N
-2016-12-01,gen5lc,\N
-2016-12-01,gen5nu,\N
-2016-12-01,gen5ou,\N
-2016-12-01,gen5ru,\N
-2016-12-01,gen5ubers,\N
-2016-12-01,gen5uu,\N
-2016-12-01,gen6randombattle,\N
-2016-12-01,gen71v1,\N
-2016-12-01,gen7almostanyability,\N
-2016-12-01,gen7balancedhackmons,\N
-2016-12-01,gen7balancedhackmonssuspecttest,\N
-2016-12-01,gen7battleofalola,\N
-2016-12-01,gen7battlespotdoubles,\N
-2016-12-01,gen7battlespotsingles,\N
-2016-12-01,gen7battlespotspecial1,\N
-2016-12-01,gen7cap,\N
-2016-12-01,gen7challengecup1v1,\N
-2016-12-01,gen7hackmonscup,\N
-2016-12-01,gen7mixandmega,\N
-2016-12-01,gen7mixandmegasuspecttest,\N
-2016-12-01,gen7monotype,\N
-2016-12-01,gen7ou,\N
-2016-12-01,gen7pokebanklc,\N
-2016-12-01,gen7pokebankoususpecttest,\N
-2016-12-01,gen7pokebankuualpha,\N
-2016-12-01,gen7randombattle,\N
-2016-12-01,gen7randomdoublesbattle,\N
-2016-12-01,gen7sketchmons,\N
-2016-12-01,gen7stabmons,\N
-2016-12-01,hackmonscup,\N
-2016-12-01,lc,\N
-2016-12-01,mixandmega,\N
-2016-12-01,monotype,\N
-2016-12-01,nu,6
-2016-12-01,ou,3
-2016-12-01,pu,7
-2016-12-01,pususpecttest,\N
-2016-12-01,randombattle,\N
-2016-12-01,ru,5
-2016-12-01,sketchmons,\N
-2016-12-01,stabmons,\N
-2016-12-01,ubers,2
-2016-12-01,uu,4
-2016-12-01,vgc2015,12
-2016-12-01,vgc2016,13
-2017-01-01,anythinggoes,1
-2017-01-01,battlefactory,\N
-2017-01-01,battlespotsingles,\N
-2017-01-01,battlespottriples,\N
-2017-01-01,doublesou,9
-2017-01-01,doublesuu,10
-2017-01-01,gen1nobig4ou,\N
-2017-01-01,gen1ou,\N
-2017-01-01,gen1randombattle,\N
-2017-01-01,gen2ou,\N
-2017-01-01,gen3ou,\N
-2017-01-01,gen3ubers,\N
-2017-01-01,gen4lc,\N
-2017-01-01,gen4ou,\N
-2017-01-01,gen4ubers,\N
-2017-01-01,gen4uu,\N
-2017-01-01,gen5anythinggoes,\N
-2017-01-01,gen5doublesou,\N
-2017-01-01,gen5lc,\N
-2017-01-01,gen5nu,\N
-2017-01-01,gen5ou,\N
-2017-01-01,gen5ru,\N
-2017-01-01,gen5ubers,\N
-2017-01-01,gen5uu,\N
-2017-01-01,gen6randombattle,\N
-2017-01-01,gen71v1,\N
-2017-01-01,gen7almostanyability,\N
-2017-01-01,gen7almostanyabilitysuspecttest,\N
-2017-01-01,gen7alolafriendly,\N
-2017-01-01,gen7balancedhackmons,\N
-2017-01-01,gen7balancedhackmonssuspecttest,\N
-2017-01-01,gen7battlespotdoubles,\N
-2017-01-01,gen7battlespotsingles,\N
-2017-01-01,gen7battlespotspecial1,\N
-2017-01-01,gen7battlespotspecial2,\N
-2017-01-01,gen7cap,\N
-2017-01-01,gen7challengecup1v1,\N
-2017-01-01,gen7hackmonscup,\N
-2017-01-01,gen7mixandmega,\N
-2017-01-01,gen7monotype,\N
-2017-01-01,gen7pokbilities,\N
-2017-01-01,gen7pokebanklc,\N
-2017-01-01,gen7pokebankoususpecttest,\N
-2017-01-01,gen7prebankou,\N
-2017-01-01,gen7randombattle,\N
-2017-01-01,gen7randomdoublesbattle,\N
-2017-01-01,gen7rualpha,\N
-2017-01-01,gen7sketchmons,\N
-2017-01-01,gen7sketchmonssuspecttest,\N
-2017-01-01,gen7stabmons,\N
-2017-01-01,gen7uubeta,\N
-2017-01-01,lc,\N
-2017-01-01,nu,6
-2017-01-01,ou,3
-2017-01-01,pu,7
-2017-01-01,ru,5
-2017-01-01,ubers,2
-2017-01-01,uu,4
-2017-01-01,vgc2015,12
-2017-01-01,vgc2016,13
-2017-02-01,anythinggoes,1
-2017-02-01,battlefactory,\N
-2017-02-01,battlespotsingles,\N
-2017-02-01,battlespottriples,\N
-2017-02-01,doublesou,9
-2017-02-01,doublesuu,10
-2017-02-01,gen1ou,\N
-2017-02-01,gen1randombattle,\N
-2017-02-01,gen2ou,\N
-2017-02-01,gen3adv200,\N
-2017-02-01,gen3ou,\N
-2017-02-01,gen3ubers,\N
-2017-02-01,gen4lc,\N
-2017-02-01,gen4ou,\N
-2017-02-01,gen4ubers,\N
-2017-02-01,gen4uu,\N
-2017-02-01,gen5doublesou,\N
-2017-02-01,gen5lc,\N
-2017-02-01,gen5nu,\N
-2017-02-01,gen5ou,\N
-2017-02-01,gen5ru,\N
-2017-02-01,gen5ubers,\N
-2017-02-01,gen5uu,\N
-2017-02-01,gen6randombattle,\N
-2017-02-01,gen71v1,\N
-2017-02-01,gen7almostanyability,\N
-2017-02-01,gen7almostanyabilitysuspecttest,\N
-2017-02-01,gen7alolafriendly,\N
-2017-02-01,gen7balancedhackmons,\N
-2017-02-01,gen7balancedhackmonssuspecttest,\N
-2017-02-01,gen7battlespotdoubles,\N
-2017-02-01,gen7battlespotsingles,\N
-2017-02-01,gen7battlespotspecial2,\N
-2017-02-01,gen7cap,\N
-2017-02-01,gen7challengecup1v1,\N
-2017-02-01,gen7hackmonscup,\N
-2017-02-01,gen7inheritance,\N
-2017-02-01,gen7lc,\N
-2017-02-01,gen7mixandmega,\N
-2017-02-01,gen7monotype,\N
-2017-02-01,gen7oususpecttest,\N
-2017-02-01,gen7pokbilities,\N
-2017-02-01,gen7randombattle,\N
-2017-02-01,gen7randomdoublesbattle,\N
-2017-02-01,gen7rualpha,\N
-2017-02-01,gen7sketchmons,\N
-2017-02-01,gen7uubeta,\N
-2017-02-01,lc,\N
-2017-02-01,nu,6
-2017-02-01,ou,3
-2017-02-01,pu,7
-2017-02-01,ru,5
-2017-02-01,ubers,2
-2017-02-01,uu,4
-2017-02-01,vgc2015,12
-2017-02-01,vgc2016,13
-2017-03-01,anythinggoes,1
-2017-03-01,battlefactory,\N
-2017-03-01,battlespotsingles,\N
-2017-03-01,battlespottriples,\N
-2017-03-01,doublesou,9
-2017-03-01,doublesuu,10
-2017-03-01,gen1ou,\N
-2017-03-01,gen2ou,\N
-2017-03-01,gen3ou,\N
-2017-03-01,gen3ubers,\N
-2017-03-01,gen4anythinggoes,\N
-2017-03-01,gen4lc,\N
-2017-03-01,gen4ou,\N
-2017-03-01,gen4ubers,\N
-2017-03-01,gen4uu,\N
-2017-03-01,gen5doublesou,\N
-2017-03-01,gen5lc,\N
-2017-03-01,gen5nu,\N
-2017-03-01,gen5ou,\N
-2017-03-01,gen5ru,\N
-2017-03-01,gen5ubers,\N
-2017-03-01,gen5uu,\N
-2017-03-01,gen71v1,\N
-2017-03-01,gen7almostanyability,\N
-2017-03-01,gen7almostanyabilitysuspecttest,\N
-2017-03-01,gen7balancedhackmons,\N
-2017-03-01,gen7balancedhackmonssuspecttest,\N
-2017-03-01,gen7battlespotdoubles,\N
-2017-03-01,gen7battlespotsingles,\N
-2017-03-01,gen7battlespotspecial2,\N
-2017-03-01,gen7battlespotspecial3,\N
-2017-03-01,gen7cap,\N
-2017-03-01,gen7challengecup1v1,\N
-2017-03-01,gen7doublesoususpecttest,\N
-2017-03-01,gen7fullpotential,\N
-2017-03-01,gen7hackmonscup,\N
-2017-03-01,gen7inheritance,\N
-2017-03-01,gen7kantoxalolaregionalrumble,\N
-2017-03-01,gen7lc,\N
-2017-03-01,gen7lcsuspecttest,\N
-2017-03-01,gen7mixandmega,\N
-2017-03-01,gen7mixandmegasuspecttest,\N
-2017-03-01,gen7monotype,\N
-2017-03-01,gen7oususpecttest,\N
-2017-03-01,gen7rualpha,\N
-2017-03-01,gen7rubeta,\N
-2017-03-01,gen7sketchmons,\N
-2017-03-01,lc,\N
-2017-03-01,nu,6
-2017-03-01,ou,3
-2017-03-01,pu,7
-2017-03-01,ru,5
-2017-03-01,ubers,2
-2017-03-01,uu,4
-2017-03-01,vgc2015,12
-2017-03-01,vgc2016,13
-2017-04-01,anythinggoes,1
-2017-04-01,battlefactory,\N
-2017-04-01,battlespotsingles,\N
-2017-04-01,battlespottriples,\N
-2017-04-01,doublesou,9
-2017-04-01,doublesuu,10
-2017-04-01,gen1ou,\N
-2017-04-01,gen2ou,\N
-2017-04-01,gen2ounosnorlax,\N
-2017-04-01,gen3ou,\N
-2017-04-01,gen3ubers,\N
-2017-04-01,gen4anythinggoes,\N
-2017-04-01,gen4lc,\N
-2017-04-01,gen4ou,\N
-2017-04-01,gen4ubers,\N
-2017-04-01,gen4uu,\N
-2017-04-01,gen5doublesou,\N
-2017-04-01,gen5lc,\N
-2017-04-01,gen5nu,\N
-2017-04-01,gen5ou,\N
-2017-04-01,gen5ru,\N
-2017-04-01,gen5ubers,\N
-2017-04-01,gen5uu,\N
-2017-04-01,gen71v1,\N
-2017-04-01,gen7almostanyability,\N
-2017-04-01,gen7almostanyabilitysuspecttest,\N
-2017-04-01,gen7balancedhackmons,\N
-2017-04-01,gen7battlespotdoubles,\N
-2017-04-01,gen7battlespotsingles,\N
-2017-04-01,gen7battlespotspecial3,\N
-2017-04-01,gen7camomons,\N
-2017-04-01,gen7cap,\N
-2017-04-01,gen7challengecup1v1,\N
-2017-04-01,gen7doublesoususpecttest,\N
-2017-04-01,gen7fullpotential,\N
-2017-04-01,gen7lc,\N
-2017-04-01,gen7mixandmega,\N
-2017-04-01,gen7mixandmegasuspecttest,\N
-2017-04-01,gen7monotype,\N
-2017-04-01,gen7monotypesuspecttest,\N
-2017-04-01,gen7oususpecttest,\N
-2017-04-01,gen7rubeta,\N
-2017-04-01,gen7sketchmons,\N
-2017-04-01,lc,\N
-2017-04-01,nu,6
-2017-04-01,ou,3
-2017-04-01,pu,7
-2017-04-01,ru,5
-2017-04-01,ubers,2
-2017-04-01,uu,4
-2017-04-01,vgc2015,12
-2017-04-01,vgc2016,13
-2017-05-01,anythinggoes,1
-2017-05-01,battlefactory,\N
-2017-05-01,battlespotsingles,\N
-2017-05-01,battlespottriples,\N
-2017-05-01,doublesou,9
-2017-05-01,doublesuu,10
-2017-05-01,gen1ou,\N
-2017-05-01,gen2ou,\N
-2017-05-01,gen2ounosnorlax,\N
-2017-05-01,gen3ou,\N
-2017-05-01,gen3ubers,\N
-2017-05-01,gen4lc,\N
-2017-05-01,gen4ou,\N
-2017-05-01,gen4oulatimence,\N
-2017-05-01,gen4ubers,\N
-2017-05-01,gen4uu,\N
-2017-05-01,gen5doublesou,\N
-2017-05-01,gen5lc,\N
-2017-05-01,gen5nu,\N
-2017-05-01,gen5ou,\N
-2017-05-01,gen5ru,\N
-2017-05-01,gen5ubers,\N
-2017-05-01,gen5uu,\N
-2017-05-01,gen71v1,\N
-2017-05-01,gen71v1suspecttest,\N
-2017-05-01,gen7almostanyability,\N
-2017-05-01,gen7balancedhackmons,\N
-2017-05-01,gen7battlespotdoubles,\N
-2017-05-01,gen7battlespotsingles,\N
-2017-05-01,gen7battlespotspecial3,\N
-2017-05-01,gen7battlespotspecial4,\N
-2017-05-01,gen7bssfactory,\N
-2017-05-01,gen7camomons,\N
-2017-05-01,gen7cap,\N
-2017-05-01,gen7challengecup1v1,\N
-2017-05-01,gen7hackmonscup,\N
-2017-05-01,gen7lastwill,\N
-2017-05-01,gen7lc,\N
-2017-05-01,gen7mixandmega,\N
-2017-05-01,gen7mixandmegasuspecttest,\N
-2017-05-01,gen7monotype,\N
-2017-05-01,gen7monotypesuspecttest,\N
-2017-05-01,gen7nualpha,\N
-2017-05-01,gen7oususpecttest,\N
-2017-05-01,gen7rubeta,\N
-2017-05-01,gen7sketchmons,\N
-2017-05-01,lc,\N
-2017-05-01,nu,6
-2017-05-01,ou,3
-2017-05-01,pu,7
-2017-05-01,ru,5
-2017-05-01,ubers,2
-2017-05-01,uu,4
-2017-05-01,vgc2015,12
-2017-05-01,vgc2016,13
-2017-06-01,anythinggoes,1
-2017-06-01,battlefactory,\N
-2017-06-01,battlespotsingles,\N
-2017-06-01,battlespottriples,\N
-2017-06-01,doublesou,9
-2017-06-01,doublesuu,10
-2017-06-01,gen1ou,\N
-2017-06-01,gen2ou,\N
-2017-06-01,gen3ou,\N
-2017-06-01,gen3ubers,\N
-2017-06-01,gen4lc,\N
-2017-06-01,gen4ou,\N
-2017-06-01,gen4ubers,\N
-2017-06-01,gen4uu,\N
-2017-06-01,gen5doublesou,\N
-2017-06-01,gen5lc,\N
-2017-06-01,gen5nu,\N
-2017-06-01,gen5ou,\N
-2017-06-01,gen5oublind,\N
-2017-06-01,gen5ru,\N
-2017-06-01,gen5ubers,\N
-2017-06-01,gen5uu,\N
-2017-06-01,gen71v1,\N
-2017-06-01,gen7almostanyability,\N
-2017-06-01,gen7balancedhackmons,\N
-2017-06-01,gen7battlespotdoubles,\N
-2017-06-01,gen7battlespotsingles,\N
-2017-06-01,gen7battlespotspecial4,\N
-2017-06-01,gen7bssfactory,\N
-2017-06-01,gen7cap,\N
-2017-06-01,gen7challengecup1v1,\N
-2017-06-01,gen7godlygift,\N
-2017-06-01,gen7hackmonscup,\N
-2017-06-01,gen7lastwill,\N
-2017-06-01,gen7lc,\N
-2017-06-01,gen7mixandmega,\N
-2017-06-01,gen7mixandmegasuspecttest,\N
-2017-06-01,gen7monotype,\N
-2017-06-01,gen7nualpha,\N
-2017-06-01,gen7nubeta,\N
-2017-06-01,gen7rubeta,\N
-2017-06-01,gen7sketchmons,\N
-2017-06-01,gen7tinytourney,\N
-2017-06-01,lc,\N
-2017-06-01,nu,6
-2017-06-01,ou,3
-2017-06-01,pu,7
-2017-06-01,ru,5
-2017-06-01,ubers,2
-2017-06-01,uu,4
-2017-06-01,vgc2015,12
-2017-06-01,vgc2016,13
-2017-07-01,gen1ou,\N
-2017-07-01,gen1oumew,\N
-2017-07-01,gen2ou,\N
-2017-07-01,gen3ou,\N
-2017-07-01,gen3ubers,\N
-2017-07-01,gen4lc,\N
-2017-07-01,gen4ou,\N
-2017-07-01,gen4ubers,\N
-2017-07-01,gen4uu,\N
-2017-07-01,gen5doublesou,\N
-2017-07-01,gen5lc,\N
-2017-07-01,gen5nu,\N
-2017-07-01,gen5ou,\N
-2017-07-01,gen5ru,\N
-2017-07-01,gen5ubers,\N
-2017-07-01,gen5uu,\N
-2017-07-01,gen6anythinggoes,1
-2017-07-01,gen6battlefactory,\N
-2017-07-01,gen6battlespotdoubles,\N
-2017-07-01,gen6battlespotsingles,\N
-2017-07-01,gen6battlespottriples,\N
-2017-07-01,gen6doublesou,9
-2017-07-01,gen6doublesuu,10
-2017-07-01,gen6lc,\N
-2017-07-01,gen6nu,5
-2017-07-01,gen6ou,3
-2017-07-01,gen6pu,7
-2017-07-01,gen6ru,5
-2017-07-01,gen6ubers,2
-2017-07-01,gen6uu,4
-2017-07-01,gen6vgc2016,13
-2017-07-01,gen71v1,\N
-2017-07-01,gen71v1suspecttest,\N
-2017-07-01,gen7almostanyability,\N
-2017-07-01,gen7almostanyabilitysuspecttest,\N
-2017-07-01,gen7balancedhackmons,\N
-2017-07-01,gen7balancedhackmonssuspecttest,\N
-2017-07-01,gen7battlespotdoubles,\N
-2017-07-01,gen7battlespotsingles,\N
-2017-07-01,gen7battlespotspecial4,\N
-2017-07-01,gen7battlespotspecial5,\N
-2017-07-01,gen7bssfactory,\N
-2017-07-01,gen7cap,\N
-2017-07-01,gen7challengecup1v1,\N
-2017-07-01,gen7hackmonscup,\N
-2017-07-01,gen7lc,\N
-2017-07-01,gen7mixandmega,\N
-2017-07-01,gen7monotype,\N
-2017-07-01,gen7monotypesuspecttest,\N
-2017-07-01,gen7nubeta,\N
-2017-07-01,gen7pualpha,\N
-2017-07-01,gen7rususpecttest,\N
-2017-07-01,gen7sketchmons,\N
-2017-07-01,gen7stabmons,\N
-2017-07-01,gen7uususpecttest,\N
-2017-07-01,gen7weaknesscup,\N
-2017-08-01,gen1ou,\N
-2017-08-01,gen1oumew,\N
-2017-08-01,gen2ou,\N
-2017-08-01,gen2stabmons,\N
-2017-08-01,gen3ou,\N
-2017-08-01,gen3ubers,\N
-2017-08-01,gen4lc,\N
-2017-08-01,gen4ou,\N
-2017-08-01,gen4ubers,\N
-2017-08-01,gen4uu,\N
-2017-08-01,gen5doublesou,\N
-2017-08-01,gen5lc,\N
-2017-08-01,gen5nu,\N
-2017-08-01,gen5ou,\N
-2017-08-01,gen5ru,\N
-2017-08-01,gen5ubers,\N
-2017-08-01,gen5uu,\N
-2017-08-01,gen6anythinggoes,1
-2017-08-01,gen6battlefactory,\N
-2017-08-01,gen6battlespotdoubles,\N
-2017-08-01,gen6battlespotsingles,\N
-2017-08-01,gen6battlespottriples,\N
-2017-08-01,gen6doublesou,9
-2017-08-01,gen6lc,\N
-2017-08-01,gen6nu,5
-2017-08-01,gen6ou,3
-2017-08-01,gen6pu,7
-2017-08-01,gen6ru,5
-2017-08-01,gen6ubers,2
-2017-08-01,gen6uu,4
-2017-08-01,gen6vgc2016,13
-2017-08-01,gen71v1,\N
-2017-08-01,gen71v1suspecttest,\N
-2017-08-01,gen72017noholdsbarred,\N
-2017-08-01,gen72v2doubles,\N
-2017-08-01,gen7almostanyability,\N
-2017-08-01,gen7balancedhackmons,\N
-2017-08-01,gen7battlespotdoubles,\N
-2017-08-01,gen7battlespotsingles,\N
-2017-08-01,gen7battlespotspecial5,\N
-2017-08-01,gen7bssfactory,\N
-2017-08-01,gen7cap,\N
-2017-08-01,gen7challengecup1v1,\N
-2017-08-01,gen7doublesoususpecttest,\N
-2017-08-01,gen7hackmonscup,\N
-2017-08-01,gen7lc,\N
-2017-08-01,gen7megamelee,\N
-2017-08-01,gen7mixandmega,\N
-2017-08-01,gen7mixandmegasuspecttest,\N
-2017-08-01,gen7monotype,\N
-2017-08-01,gen7monotypesuspecttest,\N
-2017-08-01,gen7nubeta,\N
-2017-08-01,gen7nususpecttest,\N
-2017-08-01,gen7pualpha,\N
-2017-08-01,gen7pubeta,\N
-2017-08-01,gen7rususpecttest,\N
-2017-08-01,gen7sketchmons,\N
-2017-08-01,gen7stabmons,\N
-2017-08-01,gen7uususpecttest,\N
-2017-09-01,gen1ou,\N
-2017-09-01,gen2ou,\N
-2017-09-01,gen2stabmons,\N
-2017-09-01,gen3bl,\N
-2017-09-01,gen3ou,\N
-2017-09-01,gen3ubers,\N
-2017-09-01,gen4lc,\N
-2017-09-01,gen4ou,\N
-2017-09-01,gen4ubers,\N
-2017-09-01,gen4uu,\N
-2017-09-01,gen5doublesou,\N
-2017-09-01,gen5lc,\N
-2017-09-01,gen5nu,\N
-2017-09-01,gen5ou,\N
-2017-09-01,gen5ru,\N
-2017-09-01,gen5ubers,\N
-2017-09-01,gen5uu,\N
-2017-09-01,gen6anythinggoes,1
-2017-09-01,gen6battlefactory,\N
-2017-09-01,gen6battlespotdoubles,\N
-2017-09-01,gen6battlespotsingles,\N
-2017-09-01,gen6battlespottriples,\N
-2017-09-01,gen6doublesou,9
-2017-09-01,gen6lc,\N
-2017-09-01,gen6nu,5
-2017-09-01,gen6ou,3
-2017-09-01,gen6pu,7
-2017-09-01,gen6ru,5
-2017-09-01,gen6ubers,2
-2017-09-01,gen6uu,4
-2017-09-01,gen6vgc2016,13
-2017-09-01,gen71v1,\N
-2017-09-01,gen72v2doubles,\N
-2017-09-01,gen7almostanyability,\N
-2017-09-01,gen7almostanyabilitysuspecttest,\N
-2017-09-01,gen7balancedhackmons,\N
-2017-09-01,gen7balancedhackmonssuspecttest,\N
-2017-09-01,gen7battlespotdoubles,\N
-2017-09-01,gen7battlespotsingles,\N
-2017-09-01,gen7battlespotspecial5,\N
-2017-09-01,gen7battlespotspecial6,\N
-2017-09-01,gen7bssfactory,\N
-2017-09-01,gen7cap,\N
-2017-09-01,gen7challengecup1v1,\N
-2017-09-01,gen7hackmonscup,\N
-2017-09-01,gen7lc,\N
-2017-09-01,gen7megamelee,\N
-2017-09-01,gen7mixandmega,\N
-2017-09-01,gen7mixandmegasuspecttest,\N
-2017-09-01,gen7monotype,\N
-2017-09-01,gen7nususpecttest,\N
-2017-09-01,gen7oususpecttest,\N
-2017-09-01,gen7pubeta,\N
-2017-09-01,gen7pususpecttest,\N
-2017-09-01,gen7rususpecttest,\N
-2017-09-01,gen7sketchmons,\N
-2017-09-01,gen7tiershift,\N
-2017-09-01,gen7uususpecttest,\N
-2017-10-01,gen1ou,\N
-2017-10-01,gen2ou,\N
-2017-10-01,gen3bl,\N
-2017-10-01,gen3ou,\N
-2017-10-01,gen3ubers,\N
-2017-10-01,gen4doublesou,\N
-2017-10-01,gen4lc,\N
-2017-10-01,gen4ou,\N
-2017-10-01,gen4ubers,\N
-2017-10-01,gen4uu,\N
-2017-10-01,gen5doublesou,\N
-2017-10-01,gen5lc,\N
-2017-10-01,gen5nu,\N
-2017-10-01,gen5ou,\N
-2017-10-01,gen5ru,\N
-2017-10-01,gen5ubers,\N
-2017-10-01,gen5uu,\N
-2017-10-01,gen6anythinggoes,1
-2017-10-01,gen6battlefactory,\N
-2017-10-01,gen6battlespotdoubles,\N
-2017-10-01,gen6battlespotsingles,\N
-2017-10-01,gen6battlespottriples,\N
-2017-10-01,gen6doublesou,9
-2017-10-01,gen6lc,\N
-2017-10-01,gen6nu,5
-2017-10-01,gen6ou,3
-2017-10-01,gen6pu,7
-2017-10-01,gen6ru,5
-2017-10-01,gen6ubers,2
-2017-10-01,gen6uu,4
-2017-10-01,gen6vgc2016,13
-2017-10-01,gen71v1,\N
-2017-10-01,gen71v1suspecttest,\N
-2017-10-01,gen7almostanyability,\N
-2017-10-01,gen7almostanyabilitysuspecttest,\N
-2017-10-01,gen7balancedhackmons,\N
-2017-10-01,gen7battlespotdoubles,\N
-2017-10-01,gen7battlespotsingles,\N
-2017-10-01,gen7battlespotspecial6,\N
-2017-10-01,gen7bssfactory,\N
-2017-10-01,gen7cap,\N
-2017-10-01,gen7challengecup1v1,\N
-2017-10-01,gen7doublesoususpecttest,\N
-2017-10-01,gen7hackmonscup,\N
-2017-10-01,gen7lc,\N
-2017-10-01,gen7mixandmega,\N
-2017-10-01,gen7monotype,\N
-2017-10-01,gen7monotypesuspecttest,\N
-2017-10-01,gen7nususpecttest,\N
-2017-10-01,gen7pususpecttest,\N
-2017-10-01,gen7rususpecttest,\N
-2017-10-01,gen7sketchmons,\N
-2017-10-01,gen7sketchmonssuspecttest,\N
-2017-10-01,gen7tiershift,\N
-2017-10-01,gen7ultimatez,\N
-2017-10-01,gen7uususpecttest,\N
-2017-11-01,gen1ou,\N
-2017-11-01,gen2ou,\N
-2017-11-01,gen3ou,\N
-2017-11-01,gen3ubers,\N
-2017-11-01,gen4doublesou,\N
-2017-11-01,gen4lc,\N
-2017-11-01,gen4ou,\N
-2017-11-01,gen4ubers,\N
-2017-11-01,gen4uu,\N
-2017-11-01,gen5doublesou,\N
-2017-11-01,gen5lc,\N
-2017-11-01,gen5nu,\N
-2017-11-01,gen5ou,\N
-2017-11-01,gen5pu,\N
-2017-11-01,gen5ru,\N
-2017-11-01,gen5ubers,\N
-2017-11-01,gen5uu,\N
-2017-11-01,gen6anythinggoes,1
-2017-11-01,gen6battlefactory,\N
-2017-11-01,gen6battlespotdoubles,\N
-2017-11-01,gen6battlespotsingles,\N
-2017-11-01,gen6battlespottriples,\N
-2017-11-01,gen6doublesou,9
-2017-11-01,gen6lc,\N
-2017-11-01,gen6nu,5
-2017-11-01,gen6ou,3
-2017-11-01,gen6pu,7
-2017-11-01,gen6ru,5
-2017-11-01,gen6ubers,2
-2017-11-01,gen6uu,4
-2017-11-01,gen6vgc2016,13
-2017-11-01,gen71v1,\N
-2017-11-01,gen7almostanyability,\N
-2017-11-01,gen7balancedhackmons,\N
-2017-11-01,gen7battlespotdoubles,\N
-2017-11-01,gen7battlespotsingles,\N
-2017-11-01,gen7battlespotspecial6,\N
-2017-11-01,gen7battlespotspecial7,\N
-2017-11-01,gen7bssfactory,\N
-2017-11-01,gen7camomons,\N
-2017-11-01,gen7cap,\N
-2017-11-01,gen7challengecup1v1,\N
-2017-11-01,gen7doublesoususpecttest,\N
-2017-11-01,gen7dragoncup,\N
-2017-11-01,gen7dualwielding,\N
-2017-11-01,gen7fullpotential,\N
-2017-11-01,gen7hackmonscup,\N
-2017-11-01,gen7johtoxalola,\N
-2017-11-01,gen7lc,\N
-2017-11-01,gen7mixandmega,\N
-2017-11-01,gen7monotype,\N
-2017-11-01,gen7rususpecttest,\N
-2017-11-01,gen7sketchmonssuspecttest,\N
-2017-11-01,gen7ultimatez,\N
-2017-11-01,gen7uususpecttest,\N
-2017-12-01,gen1ou,\N
-2017-12-01,gen1uu,\N
-2017-12-01,gen2ou,\N
-2017-12-01,gen3ou,\N
-2017-12-01,gen3ubers,\N
-2017-12-01,gen4balancedhackmons,\N
-2017-12-01,gen4ou,\N
-2017-12-01,gen4ubers,\N
-2017-12-01,gen4uu,\N
-2017-12-01,gen5doublesou,\N
-2017-12-01,gen5ou,\N
-2017-12-01,gen5pu,\N
-2017-12-01,gen5ubers,\N
-2017-12-01,gen6anythinggoes,1
-2017-12-01,gen6battlefactory,\N
-2017-12-01,gen6battlespottriples,\N
-2017-12-01,gen6doublesou,9
-2017-12-01,gen6ou,3
-2017-12-01,gen6ounoteampreview,\N
-2017-12-01,gen6ubers,2
-2017-12-01,gen6uu,4
-2017-12-01,gen71v1,\N
-2017-12-01,gen71v1suspecttest,\N
-2017-12-01,gen7almostanyability,\N
-2017-12-01,gen7almostanyabilitysuspecttest,\N
-2017-12-01,gen7balancedhackmons,\N
-2017-12-01,gen7battlespotdoubles,\N
-2017-12-01,gen7battlespotsingles,\N
-2017-12-01,gen7battlespotspecial7,\N
-2017-12-01,gen7bssfactory,\N
-2017-12-01,gen7camomons,\N
-2017-12-01,gen7cap,\N
-2017-12-01,gen7challengecup1v1,\N
-2017-12-01,gen7doublesoususpecttest,\N
-2017-12-01,gen7dragoncup,\N
-2017-12-01,gen7dualwielding,\N
-2017-12-01,gen7fullpotential,\N
-2017-12-01,gen7hackmonscup,\N
-2017-12-01,gen7johtoxalola,\N
-2017-12-01,gen7lc,\N
-2017-12-01,gen7mediocremons,\N
-2017-12-01,gen7mixandmega,\N
-2017-12-01,gen7mixandmegasuspecttest,\N
-2017-12-01,gen7monotype,\N
-2017-12-01,gen7monotypesuspecttest,\N
-2017-12-01,gen7nususpecttest,\N
-2017-12-01,gen7partnersincrime,\N
-2017-12-01,gen7stabmons,\N
-2018-01-01,gen1customgame,\N
-2018-01-01,gen1ou,\N
-2018-01-01,gen1stabmons,\N
-2018-01-01,gen1stadium,\N
-2018-01-01,gen1ubers,\N
-2018-01-01,gen1uu,\N
-2018-01-01,gen2ou,\N
-2018-01-01,gen2uu,\N
-2018-01-01,gen3customgame,\N
-2018-01-01,gen3ou,\N
-2018-01-01,gen3ubers,\N
-2018-01-01,gen4balancedhackmons,\N
-2018-01-01,gen4customgame,\N
-2018-01-01,gen4doublesou,\N
-2018-01-01,gen4ou,\N
-2018-01-01,gen4ubers,\N
-2018-01-01,gen5customgame,\N
-2018-01-01,gen5gbudoubles,\N
-2018-01-01,gen5ou,\N
-2018-01-01,gen5ru,\N
-2018-01-01,gen6anythinggoes,1
-2018-01-01,gen6battlefactory,\N
-2018-01-01,gen6battlespotdoubles,\N
-2018-01-01,gen6cap,\N
-2018-01-01,gen6customgame,\N
-2018-01-01,gen6monotype,\N
-2018-01-01,gen6ou,3
-2018-01-01,gen6ounoteampreview,\N
-2018-01-01,gen6ru,5
-2018-01-01,gen6triplescustomgame,\N
-2018-01-01,gen6ubers,2
-2018-01-01,gen6uu,4
-2018-01-01,gen71v1,\N
-2018-01-01,gen71v1suspecttest,\N
-2018-01-01,gen72v2doubles,\N
-2018-01-01,gen7almostanyability,\N
-2018-01-01,gen7almostanyabilitysuspecttest,\N
-2018-01-01,gen7alphabetcup,\N
-2018-01-01,gen7balancedhackmons,\N
-2018-01-01,gen7battlespotdoubles,\N
-2018-01-01,gen7battlespotsingles,\N
-2018-01-01,gen7battlespotspecial7,\N
-2018-01-01,gen7battlespotspecial8,\N
-2018-01-01,gen7bssfactory,\N
-2018-01-01,gen7camomons,\N
-2018-01-01,gen7cap,\N
-2018-01-01,gen7challengecup1v1,\N
-2018-01-01,gen7challengecup2v2,\N
-2018-01-01,gen7customgame,\N
-2018-01-01,gen7doublescustomgame,\N
-2018-01-01,gen7doubleshackmonscup,\N
-2018-01-01,gen7dragoncup,\N
-2018-01-01,gen7hackmonscup,\N
-2018-01-01,gen7inheritance,\N
-2018-01-01,gen7lc,\N
-2018-01-01,gen7mediocremons,\N
-2018-01-01,gen7mixandmega,\N
-2018-01-01,gen7mixandmegasuspecttest,\N
-2018-01-01,gen7monotype,\N
-2018-01-01,gen7nususpecttest,\N
-2018-01-01,gen7partnersincrime,\N
-2018-01-01,gen7rususpecttest,\N
-2018-01-01,gen7stabmons,\N
-2018-01-01,gen7ultrasinnohclassic,\N
-2018-01-01,gen7uususpecttest,\N
-2018-02-01,gen1ou,\N
-2018-02-01,gen2ou,\N
-2018-02-01,gen2ouhoohcelebi,\N
-2018-02-01,gen3ou,\N
-2018-02-01,gen3uu,\N
-2018-02-01,gen4lc,\N
-2018-02-01,gen4ou,\N
-2018-02-01,gen5ou,\N
-2018-02-01,gen6battlefactory,\N
-2018-02-01,gen6ou,3
-2018-02-01,gen71v1,\N
-2018-02-01,gen71v1suspecttest,\N
-2018-02-01,gen7almostanyability,\N
-2018-02-01,gen7alphabetcup,\N
-2018-02-01,gen7balancedhackmons,\N
-2018-02-01,gen7balancedhackmonssuspecttest,\N
-2018-02-01,gen7battlespotdoubles,\N
-2018-02-01,gen7battlespotsingles,\N
-2018-02-01,gen7battlespotspecial8,\N
-2018-02-01,gen7bssfactory,\N
-2018-02-01,gen7camomons,\N
-2018-02-01,gen7cap,\N
-2018-02-01,gen7challengecup1v1,\N
-2018-02-01,gen7doublesoususpecttest,\N
-2018-02-01,gen7hackmonscup,\N
-2018-02-01,gen7inheritance,\N
-2018-02-01,gen7lc,\N
-2018-02-01,gen7middlecup,\N
-2018-02-01,gen7mixandmega,\N
-2018-02-01,gen7mixandmegasuspecttest,\N
-2018-02-01,gen7monotype,\N
-2018-02-01,gen7nususpecttest,\N
-2018-02-01,gen7pususpecttest,\N
-2018-02-01,gen7sharedpower,\N
-2018-02-01,gen7stabmons,\N
-2018-02-01,gen7ultrasinnohclassic,\N
-2018-02-01,gen7uususpecttest,\N
-2018-03-01,gen11v1,\N
-2018-03-01,gen1ou,\N
-2018-03-01,gen1stadium,\N
-2018-03-01,gen2ou,\N
-2018-03-01,gen2ouhoohcelebi,\N
-2018-03-01,gen3ou,\N
-2018-03-01,gen3ounotyranitar,\N
-2018-03-01,gen3ubers,\N
-2018-03-01,gen3uu,\N
-2018-03-01,gen4customgame,\N
-2018-03-01,gen4ou,\N
-2018-03-01,gen4ubers,\N
-2018-03-01,gen4uu,\N
-2018-03-01,gen5customgame,\N
-2018-03-01,gen5doublescustomgame,\N
-2018-03-01,gen5doublesou,\N
-2018-03-01,gen5lc,\N
-2018-03-01,gen5ou,\N
-2018-03-01,gen5ubers,\N
-2018-03-01,gen5uu,\N
-2018-03-01,gen6anythinggoes,1
-2018-03-01,gen6battlefactory,\N
-2018-03-01,gen6battlespotsingles,\N
-2018-03-01,gen6customgame,\N
-2018-03-01,gen6doublescustomgame,\N
-2018-03-01,gen6ou,3
-2018-03-01,gen6ubers,2
-2018-03-01,gen6uu,4
-2018-03-01,gen71v1,\N
-2018-03-01,gen72v2doubles,\N
-2018-03-01,gen7almostanyability,\N
-2018-03-01,gen7balancedhackmons,\N
-2018-03-01,gen7balancedhackmonssuspecttest,\N
-2018-03-01,gen7battlefactory,\N
-2018-03-01,gen7battlespotdoubles,\N
-2018-03-01,gen7battlespotsingles,\N
-2018-03-01,gen7battlespotspecial8,\N
-2018-03-01,gen7battlespotspecial9,\N
-2018-03-01,gen7bssfactory,\N
-2018-03-01,gen7camomons,\N
-2018-03-01,gen7cap,\N
-2018-03-01,gen7caplc,\N
-2018-03-01,gen7challengecup1v1,\N
-2018-03-01,gen7challengecup2v2,\N
-2018-03-01,gen7customgame,\N
-2018-03-01,gen7doublescustomgame,\N
-2018-03-01,gen7doubleshackmonscup,\N
-2018-03-01,gen7doublesoususpecttest,\N
-2018-03-01,gen7hackmonscup,\N
-2018-03-01,gen7lc,\N
-2018-03-01,gen7lcsuspecttest,\N
-2018-03-01,gen7middlecup,\N
-2018-03-01,gen7mixandmega,\N
-2018-03-01,gen7monotype,\N
-2018-03-01,gen7natureswap,\N
-2018-03-01,gen7nususpecttest,\N
-2018-03-01,gen7sharedpower,\N
-2018-03-01,gen7stabmons,\N
-2018-03-01,gen7ultrasinnohclassic,\N
-2018-03-01,gen7uususpecttest,\N
-2018-04-01,gen11v1,\N
-2018-04-01,gen1ou,\N
-2018-04-01,gen2ou,\N
-2018-04-01,gen31v1,\N
-2018-04-01,gen3ou,\N
-2018-04-01,gen3ounotyranitar,\N
-2018-04-01,gen4ou,\N
-2018-04-01,gen4pu,\N
-2018-04-01,gen5customgame,\N
-2018-04-01,gen5ou,\N
-2018-04-01,gen5uu,\N
-2018-04-01,gen6ou,3
-2018-04-01,gen71v1,\N
-2018-04-01,gen72v2doubles,\N
-2018-04-01,gen7350cup,\N
-2018-04-01,gen7almostanyability,\N
-2018-04-01,gen7balancedhackmons,\N
-2018-04-01,gen7battlefactory,\N
-2018-04-01,gen7battlespotdoubles,\N
-2018-04-01,gen7battlespotsingles,\N
-2018-04-01,gen7battlespotspecial9,\N
-2018-04-01,gen7bssfactory,\N
-2018-04-01,gen7camomons,\N
-2018-04-01,gen7cap,\N
-2018-04-01,gen7challengecup1v1,\N
-2018-04-01,gen7customgame,\N
-2018-04-01,gen7doublescustomgame,\N
-2018-04-01,gen7doubleshackmonscup,\N
-2018-04-01,gen7hackmonscup,\N
-2018-04-01,gen7lc,\N
-2018-04-01,gen7linked,\N
-2018-04-01,gen7metronomebattle,\N
-2018-04-01,gen7mixandmega,\N
-2018-04-01,gen7mixandmegasuspecttest,\N
-2018-04-01,gen7monotype,\N
-2018-04-01,gen7natureswap,\N
-2018-04-01,gen7nususpecttest,\N
-2018-04-01,gen7pususpecttest,\N
-2018-04-01,gen7rususpecttest,\N
-2018-04-01,gen7stabmons,\N
-2018-04-01,gen7stabmonssuspecttest,\N
-2018-04-01,gen7ultrakalosclassic,\N
-2018-05-01,gen1ou,\N
-2018-05-01,gen2nu,\N
-2018-05-01,gen2ou,\N
-2018-05-01,gen31v1,\N
-2018-05-01,gen3ou,\N
-2018-05-01,gen4ou,\N
-2018-05-01,gen5lc,\N
-2018-05-01,gen5ou,\N
-2018-05-01,gen6ou,3
-2018-05-01,gen6uu,4
-2018-05-01,gen71v1,\N
-2018-05-01,gen7350cup,\N
-2018-05-01,gen7almostanyability,\N
-2018-05-01,gen7balancedhackmons,\N
-2018-05-01,gen7battlefactory,\N
-2018-05-01,gen7battlespotdoubles,\N
-2018-05-01,gen7battlespotsingles,\N
-2018-05-01,gen7battlespotspecial10,\N
-2018-05-01,gen7battlespotspecial9,\N
-2018-05-01,gen7bssfactory,\N
-2018-05-01,gen7camomons,\N
-2018-05-01,gen7cap,\N
-2018-05-01,gen7challengecup1v1,\N
-2018-05-01,gen7doublesoususpecttest,\N
-2018-05-01,gen7hackmonscup,\N
-2018-05-01,gen7inverse,\N
-2018-05-01,gen7lc,\N
-2018-05-01,gen7linked,\N
-2018-05-01,gen7mixandmega,\N
-2018-05-01,gen7monotype,\N
-2018-05-01,gen7nususpecttest,\N
-2018-05-01,gen7pususpecttest,\N
-2018-05-01,gen7rususpecttest,\N
-2018-05-01,gen7stabmonssuspecttest,\N
-2018-05-01,gen7ultrakalosclassic,\N
-2018-05-01,gen7ultranoholdsbarred,\N
-2018-05-01,gen7zu,\N
-2018-06-01,gen1ou,\N
-2018-06-01,gen1ubers,\N
-2018-06-01,gen2nu,\N
-2018-06-01,gen2ou,\N
-2018-06-01,gen3ou,\N
-2018-06-01,gen4ou,\N
-2018-06-01,gen4outeampreview,\N
-2018-06-01,gen5ou,\N
-2018-06-01,gen6nu,5
-2018-06-01,gen6ou,3
-2018-06-01,gen6uu,4
-2018-06-01,gen71v1,\N
-2018-06-01,gen7almostanyability,\N
-2018-06-01,gen7balancedhackmons,\N
-2018-06-01,gen7battlefactory,\N
-2018-06-01,gen7battlespotdoubles,\N
-2018-06-01,gen7battlespotsingles,\N
-2018-06-01,gen7battlespotspecial10,\N
-2018-06-01,gen7bssfactory,\N
-2018-06-01,gen7camomons,\N
-2018-06-01,gen7cap,\N
-2018-06-01,gen7challengecup1v1,\N
-2018-06-01,gen7hackmonscup,\N
-2018-06-01,gen7inverse,\N
-2018-06-01,gen7lc,\N
-2018-06-01,gen7mixandmega,\N
-2018-06-01,gen7monotype,\N
-2018-06-01,gen7nususpecttest,\N
-2018-06-01,gen7scalemons,\N
-2018-06-01,gen7stabmons,\N
-2018-06-01,gen7suicidecup,\N
-2018-06-01,gen7uberssuspecttest,\N
-2018-06-01,gen7ultranoholdsbarred,\N
-2018-06-01,gen7uususpecttest,\N
-2018-06-01,gen7zu,\N
-2018-07-01,gen1challengecup,\N
-2018-07-01,gen1ou,\N
-2018-07-01,gen1ubers,\N
-2018-07-01,gen2ou,\N
-2018-07-01,gen2ubers,\N
-2018-07-01,gen3ou,\N
-2018-07-01,gen3stabmons,\N
-2018-07-01,gen4ou,\N
-2018-07-01,gen4outeampreview,\N
-2018-07-01,gen5ou,\N
-2018-07-01,gen6ou,3
-2018-07-01,gen71v1,\N
-2018-07-01,gen7almostanyability,\N
-2018-07-01,gen7balancedhackmons,\N
-2018-07-01,gen7balancedhackmonssuspecttest,\N
-2018-07-01,gen7battlefactory,\N
-2018-07-01,gen7battlespotdoubles,\N
-2018-07-01,gen7battlespotsingles,\N
-2018-07-01,gen7battlespotspecial10,\N
-2018-07-01,gen7battlespotspecial11,\N
-2018-07-01,gen7bssfactory,\N
-2018-07-01,gen7cap,\N
-2018-07-01,gen7challengecup1v1,\N
-2018-07-01,gen7hackmonscup,\N
-2018-07-01,gen7lc,\N
-2018-07-01,gen7letsgocup,\N
-2018-07-01,gen7metagamiate,\N
-2018-07-01,gen7mixandmega,\N
-2018-07-01,gen7monotype,\N
-2018-07-01,gen7nususpecttest,\N
-2018-07-01,gen7reversed,\N
-2018-07-01,gen7rususpecttest,\N
-2018-07-01,gen7scalemons,\N
-2018-07-01,gen7stabmons,\N
-2018-07-01,gen7suicidecup,\N
-2018-07-01,gen7uberssuspecttest,\N
-2018-07-01,gen7ultranoholdsbarred,\N
-2018-07-01,gen7zu,\N
-2018-08-01,gen1challengecup,\N
-2018-08-01,gen1ou,\N
-2018-08-01,gen2mediocremons,\N
-2018-08-01,gen2ou,\N
-2018-08-01,gen2ubers,\N
-2018-08-01,gen3ou,\N
-2018-08-01,gen3ubers,\N
-2018-08-01,gen4ou,\N
-2018-08-01,gen5ou,\N
-2018-08-01,gen6mixandmega,\N
-2018-08-01,gen6ou,3
-2018-08-01,gen71v1,\N
-2018-08-01,gen7almostanyability,\N
-2018-08-01,gen7balancedhackmons,\N
-2018-08-01,gen7balancedhackmonssuspecttest,\N
-2018-08-01,gen7battlefactory,\N
-2018-08-01,gen7battlespotdoubles,\N
-2018-08-01,gen7battlespotsingles,\N
-2018-08-01,gen7battlespotspecial11,\N
-2018-08-01,gen7bssfactory,\N
-2018-08-01,gen7cap,\N
-2018-08-01,gen7challengecup1v1,\N
-2018-08-01,gen7hackmonscup,\N
-2018-08-01,gen7lc,\N
-2018-08-01,gen7letsgocup,\N
-2018-08-01,gen7metagamiate,\N
-2018-08-01,gen7mixandmega,\N
-2018-08-01,gen7monotype,\N
-2018-08-01,gen7reversed,\N
-2018-08-01,gen7rususpecttest,\N
-2018-08-01,gen7stabmons,\N
-2018-08-01,gen7tiershift,\N
-2018-08-01,gen7zu,\N
-2018-09-01,gen1ou,\N
-2018-09-01,gen2mediocremons,\N
-2018-09-01,gen2ou,\N
-2018-09-01,gen3ou,\N
-2018-09-01,gen3tiershift,\N
-2018-09-01,gen3ubers,\N
-2018-09-01,gen4ou,\N
-2018-09-01,gen4ubers,\N
-2018-09-01,gen5ou,\N
-2018-09-01,gen61v1,\N
-2018-09-01,gen6mixandmega,\N
-2018-09-01,gen6ou,3
-2018-09-01,gen71v1,\N
-2018-09-01,gen7almostanyability,\N
-2018-09-01,gen7balancedhackmons,\N
-2018-09-01,gen7battlefactory,\N
-2018-09-01,gen7battlespotdoubles,\N
-2018-09-01,gen7battlespotsingles,\N
-2018-09-01,gen7battlespotspecial12,\N
-2018-09-01,gen7benjaminbutterfree,\N
-2018-09-01,gen7bssfactory,\N
-2018-09-01,gen7cap,\N
-2018-09-01,gen7challengecup1v1,\N
-2018-09-01,gen7hackmonscup,\N
-2018-09-01,gen7lc,\N
-2018-09-01,gen7mixandmega,\N
-2018-09-01,gen7monotype,\N
-2018-09-01,gen7partnersincrime,\N
-2018-09-01,gen7sketchmons,\N
-2018-09-01,gen7stabmons,\N
-2018-09-01,gen7tiershift,\N
-2018-09-01,gen7zu,\N
-2018-10-01,gen1ou,\N
-2018-10-01,gen2ou,\N
-2018-10-01,gen3ou,\N
-2018-10-01,gen3tiershift,\N
-2018-10-01,gen4nu,\N
-2018-10-01,gen4ou,\N
-2018-10-01,gen4ubers,\N
-2018-10-01,gen5monotype,\N
-2018-10-01,gen5ou,\N
-2018-10-01,gen5ubers,\N
-2018-10-01,gen61v1,\N
-2018-10-01,gen6ou,3
-2018-10-01,gen71v1,\N
-2018-10-01,gen72v2doubles,\N
-2018-10-01,gen7almostanyability,\N
-2018-10-01,gen7balancedhackmons,\N
-2018-10-01,gen7battlefactory,\N
-2018-10-01,gen7battlespotdoubles,\N
-2018-10-01,gen7battlespotsingles,\N
-2018-10-01,gen7battlespotspecial12,\N
-2018-10-01,gen7bssfactory,\N
-2018-10-01,gen7cap,\N
-2018-10-01,gen7challengecup1v1,\N
-2018-10-01,gen7godsandfollowers,\N
-2018-10-01,gen7hackmonscup,\N
-2018-10-01,gen7lc,\N
-2018-10-01,gen7mixandmega,\N
-2018-10-01,gen7monotype,\N
-2018-10-01,gen7partnersincrime,\N
-2018-10-01,gen7sketchmons,\N
-2018-10-01,gen7stabmons,\N
-2018-10-01,gen7ultraspookycup,\N
-2018-10-01,gen7zu,\N
-2018-11-01,gen1ou,\N
-2018-11-01,gen2nu,\N
-2018-11-01,gen2ou,\N
-2018-11-01,gen3ou,\N
-2018-11-01,gen4ou,\N
-2018-11-01,gen5doublesou,\N
-2018-11-01,gen5ou,\N
-2018-11-01,gen5ubers,\N
-2018-11-01,gen6ou,3
-2018-11-01,gen6ubers,2
-2018-11-01,gen71v1,\N
-2018-11-01,gen72v2doubles,\N
-2018-11-01,gen7almostanyability,\N
-2018-11-01,gen7averagemons,\N
-2018-11-01,gen7balancedhackmons,\N
-2018-11-01,gen7battlefactory,\N
-2018-11-01,gen7battlespotdoubles,\N
-2018-11-01,gen7battlespotsingles,\N
-2018-11-01,gen7battlespotspecial12,\N
-2018-11-01,gen7battlespotspecial13,\N
-2018-11-01,gen7bssfactory,\N
-2018-11-01,gen7cap,\N
-2018-11-01,gen7challengecup1v1,\N
-2018-11-01,gen7fortemons,\N
-2018-11-01,gen7godsandfollowers,\N
-2018-11-01,gen7hackmonscup,\N
-2018-11-01,gen7lc,\N
-2018-11-01,gen7letsgodoublesnorestrictions,\N
-2018-11-01,gen7letsgoou,\N
-2018-11-01,gen7letsgosinglesnorestrictions,\N
-2018-11-01,gen7mixandmega,\N
-2018-11-01,gen7monotype,\N
-2018-11-01,gen7partnersincrime,\N
-2018-11-01,gen7stabmons,\N
-2018-11-01,gen7ultraspookycup,\N
-2018-11-01,gen7zu,\N
-2018-12-01,gen1ou,\N
-2018-12-01,gen1uu,\N
-2018-12-01,gen2nu,\N
-2018-12-01,gen2ou,\N
-2018-12-01,gen3ou,\N
-2018-12-01,gen4ou,\N
-2018-12-01,gen4pu,\N
-2018-12-01,gen5doublesou,\N
-2018-12-01,gen5ou,\N
-2018-12-01,gen6battlefactory,\N
-2018-12-01,gen6ou,3
-2018-12-01,gen6ubers,2
-2018-12-01,gen71v1,\N
-2018-12-01,gen7almostanyability,\N
-2018-12-01,gen7averagemons,\N
-2018-12-01,gen7balancedhackmons,\N
-2018-12-01,gen7battlefactory,\N
-2018-12-01,gen7battlespotdoubles,\N
-2018-12-01,gen7battlespotsingles,\N
-2018-12-01,gen7battlespotspecial13,\N
-2018-12-01,gen7battlespotspecial14,\N
-2018-12-01,gen7bssfactory,\N
-2018-12-01,gen7cap,\N
-2018-12-01,gen7challengecup1v1,\N
-2018-12-01,gen7fortemons,\N
-2018-12-01,gen7hackmonscup,\N
-2018-12-01,gen7inheritance,\N
-2018-12-01,gen7lc,\N
-2018-12-01,gen7letsgodoublesnorestrictions,\N
-2018-12-01,gen7letsgodoublesou,\N
-2018-12-01,gen7letsgohackmons,\N
-2018-12-01,gen7letsgoou,\N
-2018-12-01,gen7letsgosinglesnorestrictions,\N
-2018-12-01,gen7mixandmega,\N
-2018-12-01,gen7monotype,\N
-2018-12-01,gen7partnersincrime,\N
-2018-12-01,gen7stabmons,\N
-2018-12-01,gen7zu,\N
+month,name,format_id,reason
+2014-11-01,1v1,\N,
+2014-11-01,350cup,\N,
+2014-11-01,almostanyability,\N,
+2014-11-01,battlespotdoubles,\N,battle spot
+2014-11-01,battlespotsingles,\N,battle spot
+2014-11-01,battlespotspecial7,\N,battle spot
+2014-11-01,battlespottriples,\N,battle spot
+2014-11-01,cap,\N,cap
+2014-11-01,capplasmantaplaytest,\N,cap
+2014-11-01,challengecup,\N,
+2014-11-01,challengecup1vs1,\N,
+2014-11-01,gen1oubeta,\N,beta
+2014-11-01,gen2oubeta,\N,beta
+2014-11-01,gen3oubeta,\N,beta
+2014-11-01,gen3ubersbeta,\N,beta
+2014-11-01,gen4lc,13,too few battles: 1
+2014-11-01,gen4ubers,10,too few battles: 2
+2014-11-01,gen5gbudoubles,\N,
+2014-11-01,gen5gbusingles,\N,
+2014-11-01,gen5lc,19,too few battles: 1
+2014-11-01,gen5ru,17,too few battles: 0
+2014-11-01,gen5smogondoubles,20,too few battles: 5
+2014-11-01,gen5ubers,14,too few battles: 12
+2014-11-01,gen5uu,16,too few battles: 4
+2014-11-01,inversebattle,\N,
+2014-11-01,lcuu,\N,
+2014-11-01,randombattle,\N,random
+2014-11-01,randomdoublesbattle,\N,random
+2014-11-01,randomtriplesbattle,\N,random
+2014-11-01,seasonalstrikesback,\N,
+2014-11-01,smogontriples,\N,
+2014-11-01,stabmons,\N,
+2014-11-01,tiershift,\N,
+2014-12-01,1v1,\N,
+2014-12-01,350cup,\N,
+2014-12-01,almostanyability,\N,
+2014-12-01,balancedhackmons,\N,
+2014-12-01,battleofhoenn,\N,
+2014-12-01,battlespotdoubles,\N,battle spot
+2014-12-01,battlespotsingles,\N,battle spot
+2014-12-01,battlespotspecial7,\N,battle spot
+2014-12-01,battlespottriples,\N,battle spot
+2014-12-01,cap,\N,cap
+2014-12-01,challengecup,\N,
+2014-12-01,challengecup1vs1,\N,
+2014-12-01,gen1oubeta,\N,beta
+2014-12-01,gen2oubeta,\N,beta
+2014-12-01,gen3oubeta,\N,beta
+2014-12-01,gen3ubersbeta,\N,beta
+2014-12-01,gen4lc,13,too few battles: 1
+2014-12-01,gen4ubers,10,too few battles: 6
+2014-12-01,gen4uu,12,too few battles: 3
+2014-12-01,gen5gbudoubles,\N,
+2014-12-01,gen5gbusingles,\N,
+2014-12-01,gen5lc,19,too few battles: 3
+2014-12-01,gen5nu,18,too few battles: 4
+2014-12-01,gen5ru,17,too few battles: 8
+2014-12-01,gen5smogondoubles,20,too few battles: 5
+2014-12-01,gen5ubers,14,too few battles: 33
+2014-12-01,gen5uu,16,too few battles: 7
+2014-12-01,inversebattle,\N,
+2014-12-01,lcuu,\N,
+2014-12-01,oususpecttest,\N,suspect test
+2014-12-01,randombattle,\N,random
+2014-12-01,randomdoublesbattle,\N,random
+2014-12-01,randomtriplesbattle,\N,random
+2014-12-01,seasonalsleighshowdown,\N,
+2014-12-01,seasonalstrikesback,\N,
+2014-12-01,smogondoublessuspecttest,\N,suspect test
+2014-12-01,smogontriples,\N,
+2014-12-01,stabmons,\N,
+2014-12-01,statswitch,\N,
+2014-12-01,tiershift,\N,
+2015-01-01,1v1,\N,
+2015-01-01,almostanyability,\N,
+2015-01-01,balancedhackmons,\N,
+2015-01-01,battleofhoenn,\N,
+2015-01-01,battlespotsingles,\N,battle spot
+2015-01-01,battlespotspecial7,\N,battle spot
+2015-01-01,battlespotspecial8,\N,battle spot
+2015-01-01,battlespottriples,\N,battle spot
+2015-01-01,cap,\N,cap
+2015-01-01,challengecup,\N,
+2015-01-01,challengecup1vs1,\N,
+2015-01-01,fu,\N,
+2015-01-01,gen1randombattle,\N,random
+2015-01-01,gen3oubeta,\N,beta
+2015-01-01,gen3ubersbeta,\N,beta
+2015-01-01,gen4lc,13,too few battles: 1
+2015-01-01,gen4ubers,10,too few battles: 14
+2015-01-01,gen4uu,12,too few battles: 3
+2015-01-01,gen5gbudoubles,\N,
+2015-01-01,gen5gbusingles,\N,
+2015-01-01,gen5lc,19,too few battles: 0
+2015-01-01,gen5nu,18,too few battles: 0
+2015-01-01,gen5smogondoubles,20,too few battles: 20
+2015-01-01,gen5ubers,14,too few battles: 40
+2015-01-01,gen5uu,16,too few battles: 5
+2015-01-01,generationshowdown,\N,
+2015-01-01,inversebattle,\N,
+2015-01-01,lcuu,\N,
+2015-01-01,oususpecttest,\N,suspect test
+2015-01-01,randombattle,\N,random
+2015-01-01,randomdoublesbattle,\N,random
+2015-01-01,randomtriplesbattle,\N,random
+2015-01-01,rususpecttest,\N,suspect test
+2015-01-01,seasonalsleighshowdown,\N,
+2015-01-01,seasonalspacetimefuntimes,\N,
+2015-01-01,smogontriples,\N,
+2015-01-01,stabmons,\N,
+2015-01-01,statswitch,\N,
+2015-01-01,tiershift,\N,
+2015-02-01,1v1,\N,
+2015-02-01,almostanyability,\N,
+2015-02-01,balancedhackmons,\N,
+2015-02-01,battlespotsingles,\N,battle spot
+2015-02-01,battlespotspecial8,\N,battle spot
+2015-02-01,battlespottriples,\N,battle spot
+2015-02-01,cap,\N,cap
+2015-02-01,challengecup,\N,
+2015-02-01,challengecup1vs1,\N,
+2015-02-01,classichackmons,\N,
+2015-02-01,dragoncup,\N,
+2015-02-01,enterthedragontype,\N,
+2015-02-01,fu,\N,
+2015-02-01,gen1randombattle,\N,random
+2015-02-01,gen3oubeta,\N,beta
+2015-02-01,gen3ubersbeta,\N,beta
+2015-02-01,gen4lc,13,too few battles: 1
+2015-02-01,gen4ubers,10,too few battles: 11
+2015-02-01,gen4uu,12,too few battles: 5
+2015-02-01,gen5gbudoubles,\N,
+2015-02-01,gen5gbusingles,\N,
+2015-02-01,gen5nu,18,too few battles: 2
+2015-02-01,gen5ru,17,too few battles: 9
+2015-02-01,gen5smogondoubles,20,too few battles: 10
+2015-02-01,gen5ubers,14,too few battles: 44
+2015-02-01,gen5uu,16,too few battles: 4
+2015-02-01,generationshowdown,\N,
+2015-02-01,inversebattle,\N,
+2015-02-01,lcsuspecttest,\N,suspect test
+2015-02-01,lcuu,\N,
+2015-02-01,nususpecttest,\N,suspect test
+2015-02-01,oususpecttest,\N,suspect test
+2015-02-01,randombattle,\N,random
+2015-02-01,randomdoublesbattle,\N,random
+2015-02-01,randomtriplesbattle,\N,random
+2015-02-01,rususpecttest,\N,suspect test
+2015-02-01,seasonalhanvshun,\N,
+2015-02-01,seasonalspacetimefuntimes,\N,
+2015-02-01,smogontriples,\N,
+2015-02-01,stabmons,\N,
+2015-02-01,tiershift,\N,
+2015-02-01,uususpecttest,\N,suspect test
+2015-03-01,1v1,\N,
+2015-03-01,almostanyability,\N,
+2015-03-01,balancedhackmons,\N,
+2015-03-01,battlespotsingles,\N,battle spot
+2015-03-01,battlespotspecial8,\N,battle spot
+2015-03-01,battlespottriples,\N,battle spot
+2015-03-01,cap,\N,cap
+2015-03-01,challengecup,\N,
+2015-03-01,challengecup1vs1,\N,
+2015-03-01,classichackmons,\N,
+2015-03-01,enterthedragontype,\N,
+2015-03-01,gen1randombattle,\N,random
+2015-03-01,gen3oubeta,\N,beta
+2015-03-01,gen3ubers,7,too few battles: 9
+2015-03-01,gen3ubersbeta,\N,beta
+2015-03-01,gen4ubers,10,too few battles: 11
+2015-03-01,gen4uu,12,too few battles: 5
+2015-03-01,gen5gbudoubles,\N,
+2015-03-01,gen5gbusingles,\N,
+2015-03-01,gen5lc,19,too few battles: 1
+2015-03-01,gen5nu,18,too few battles: 3
+2015-03-01,gen5ru,17,too few battles: 1
+2015-03-01,gen5smogondoubles,20,too few battles: 25
+2015-03-01,gen5ubers,14,too few battles: 59
+2015-03-01,gen5uu,16,too few battles: 10
+2015-03-01,hiddentype,\N,
+2015-03-01,inversebattle,\N,
+2015-03-01,lcsuspecttest,\N,suspect test
+2015-03-01,lcuu,\N,
+2015-03-01,nususpecttest,\N,suspect test
+2015-03-01,ounomega,\N,
+2015-03-01,oususpecttest,\N,suspect test
+2015-03-01,randombattle,\N,random
+2015-03-01,randomdoublesbattle,\N,random
+2015-03-01,randomtriplesbattle,\N,random
+2015-03-01,rususpecttest,\N,suspect test
+2015-03-01,seasonalhanvshun,\N,
+2015-03-01,seasonalsuperstaffbros,\N,
+2015-03-01,smogontriples,\N,
+2015-03-01,stabmons,\N,
+2015-03-01,tiershift,\N,
+2015-03-01,uunoscald,\N,
+2015-03-01,uususpecttest,\N,suspect test
+2015-04-01,1v1,\N,
+2015-04-01,almostanyability,\N,
+2015-04-01,balancedhackmons,\N,
+2015-04-01,battlespotsingles,\N,battle spot
+2015-04-01,battlespottriples,\N,battle spot
+2015-04-01,cap,\N,cap
+2015-04-01,challengecup,\N,
+2015-04-01,challengecup1vs1,\N,
+2015-04-01,finaldestination,\N,
+2015-04-01,gen1randombattle,\N,random
+2015-04-01,gen3ubers,7,too few battles: 5
+2015-04-01,gen4ubers,10,too few battles: 18
+2015-04-01,gen5doublesou,20,too few battles: 2
+2015-04-01,gen5gbudoubles,\N,
+2015-04-01,gen5gbusingles,\N,
+2015-04-01,gen5nu,18,too few battles: 1
+2015-04-01,gen5smogondoubles,20,
+2015-04-01,gen5ubers,14,too few battles: 34
+2015-04-01,gen5uu,16,too few battles: 1
+2015-04-01,hiddentype,\N,
+2015-04-01,inheritance,\N,
+2015-04-01,inversebattle,\N,
+2015-04-01,lcuu,\N,
+2015-04-01,mrboneswildride,\N,
+2015-04-01,nususpecttest,\N,suspect test
+2015-04-01,ounomega,\N,
+2015-04-01,oususpecttest,\N,suspect test
+2015-04-01,randombattle,\N,random
+2015-04-01,randomdoublesbattle,\N,random
+2015-04-01,randomtriplesbattle,\N,random
+2015-04-01,seasonalsuperstaffbros,\N,
+2015-04-01,smogondoublessuspecttest,\N,suspect test
+2015-04-01,smogontriples,\N,
+2015-04-01,stabmons,\N,
+2015-04-01,tiershift,\N,
+2015-04-01,uberssuspecttest,\N,suspect test
+2015-05-01,1v1,\N,
+2015-05-01,2v2doubles,\N,
+2015-05-01,almostanyability,\N,
+2015-05-01,balancedhackmons,\N,
+2015-05-01,battlecup1v1,\N,
+2015-05-01,battlefactory,\N,
+2015-05-01,battlespotsingles,\N,battle spot
+2015-05-01,battlespotspecial10,\N,battle spot
+2015-05-01,battlespottriples,\N,battle spot
+2015-05-01,cap,\N,cap
+2015-05-01,challengecup,\N,
+2015-05-01,challengecup1v1,\N,
+2015-05-01,challengecup1vs1,\N,
+2015-05-01,doublesoususpecttest,\N,suspect test
+2015-05-01,gen1randombattle,\N,random
+2015-05-01,gen3ubers,7,too few battles: 10
+2015-05-01,gen4lc,13,too few battles: 5
+2015-05-01,gen4ubers,10,too few battles: 9
+2015-05-01,gen4uu,12,too few battles: 4
+2015-05-01,gen5doublesou,20,too few battles: 16
+2015-05-01,gen5gbudoubles,\N,
+2015-05-01,gen5gbusingles,\N,
+2015-05-01,gen5lc,19,too few battles: 2
+2015-05-01,gen5nu,18,too few battles: 2
+2015-05-01,gen5ru,17,too few battles: 4
+2015-05-01,gen5ubers,14,too few battles: 53
+2015-05-01,gen5uu,16,too few battles: 1
+2015-05-01,inheritance,\N,
+2015-05-01,inversebattle,\N,
+2015-05-01,lcuu,\N,
+2015-05-01,nususpecttest,\N,suspect test
+2015-05-01,ounomega,\N,
+2015-05-01,oususpecttest,\N,suspect test
+2015-05-01,pgllittlecup,\N,
+2015-05-01,randombattle,\N,random
+2015-05-01,randomdoublesbattle,\N,random
+2015-05-01,randomtriplesbattle,\N,random
+2015-05-01,rususpecttest,\N,suspect test
+2015-05-01,seasonalsuperstaffbros,\N,
+2015-05-01,seasonalyouarenotprepared,\N,
+2015-05-01,smogontriples,\N,
+2015-05-01,stabmons,\N,
+2015-05-01,tiershift,\N,
+2015-05-01,uususpecttest,\N,suspect test
+2015-06-01,1v1,\N,
+2015-06-01,2v2doubles,\N,
+2015-06-01,almostanyability,\N,
+2015-06-01,averagemons,\N,
+2015-06-01,balancedhackmons,\N,
+2015-06-01,battlecup1v1,\N,
+2015-06-01,battlefactory,\N,
+2015-06-01,battlespotsingles,\N,battle spot
+2015-06-01,battlespotspecial10,\N,battle spot
+2015-06-01,battlespottriples,\N,battle spot
+2015-06-01,cap,\N,cap
+2015-06-01,capnaviathanplaytest,\N,cap
+2015-06-01,challengecup,\N,
+2015-06-01,challengecup1v1,\N,
+2015-06-01,doublesoususpecttest,\N,suspect test
+2015-06-01,gen1randombattle,\N,random
+2015-06-01,gen3ubers,7,too few battles: 19
+2015-06-01,gen4lc,13,too few battles: 7
+2015-06-01,gen4ubers,10,too few battles: 4
+2015-06-01,gen4uu,12,too few battles: 1
+2015-06-01,gen5doublesou,20,too few battles: 25
+2015-06-01,gen5gbudoubles,\N,
+2015-06-01,gen5gbusingles,\N,
+2015-06-01,gen5lc,19,too few battles: 2
+2015-06-01,gen5nu,18,too few battles: 5
+2015-06-01,gen5ubers,14,too few battles: 45
+2015-06-01,gen5uu,16,too few battles: 4
+2015-06-01,hackmonscup,\N,
+2015-06-01,inversebattle,\N,
+2015-06-01,lcuu,\N,
+2015-06-01,linked,\N,
+2015-06-01,nususpecttest,\N,suspect test
+2015-06-01,ounomega,\N,
+2015-06-01,oususpecttest,\N,suspect test
+2015-06-01,randombattle,\N,random
+2015-06-01,randomdoublesbattle,\N,random
+2015-06-01,randomtriplesbattle,\N,random
+2015-06-01,rususpecttest,\N,suspect test
+2015-06-01,seasonalyouarenotprepared,\N,
+2015-06-01,smogontriples,\N,
+2015-06-01,stabmons,\N,
+2015-06-01,tiershift,\N,
+2015-06-01,uususpecttest,\N,suspect test
+2015-07-01,1v1,\N,
+2015-07-01,almostanyability,\N,
+2015-07-01,averagemons,\N,
+2015-07-01,balancedhackmons,\N,
+2015-07-01,battlefactory,\N,
+2015-07-01,battlespotsingles,\N,battle spot
+2015-07-01,battlespotspecial10,\N,battle spot
+2015-07-01,battlespotspecial11,\N,battle spot
+2015-07-01,battlespottriples,\N,battle spot
+2015-07-01,cap,\N,cap
+2015-07-01,capnaviathanplaytest,\N,cap
+2015-07-01,challengecup1v1,\N,
+2015-07-01,gen1randombattle,\N,random
+2015-07-01,gen3ubers,7,too few battles: 18
+2015-07-01,gen4lc,13,too few battles: 7
+2015-07-01,gen4ubers,10,too few battles: 7
+2015-07-01,gen4uu,12,too few battles: 5
+2015-07-01,gen5doublesou,20,too few battles: 7
+2015-07-01,gen5lc,19,too few battles: 11
+2015-07-01,gen5ru,17,too few battles: 1
+2015-07-01,gen5ubers,14,too few battles: 23
+2015-07-01,gen5uu,16,too few battles: 2
+2015-07-01,hackmonscup,\N,
+2015-07-01,inversebattle,\N,
+2015-07-01,lcuu,\N,
+2015-07-01,linked,\N,
+2015-07-01,mixandmega,\N,
+2015-07-01,nususpecttest,\N,suspect test
+2015-07-01,ounomega,\N,
+2015-07-01,proteanpalace,\N,
+2015-07-01,randombattle,\N,random
+2015-07-01,randomdoublesbattle,\N,random
+2015-07-01,randomtriplesbattle,\N,random
+2015-07-01,seasonalyouarenotprepared,\N,
+2015-07-01,smogontriples,\N,
+2015-07-01,stabmons,\N,
+2015-07-01,tiershift,\N,
+2015-07-01,uususpecttest,\N,suspect test
+2015-08-01,1v1,\N,
+2015-08-01,almostanyability,\N,
+2015-08-01,balancedhackmons,\N,
+2015-08-01,battlefactory,\N,
+2015-08-01,battlespotsingles,\N,battle spot
+2015-08-01,battlespotspecial11,\N,battle spot
+2015-08-01,battlespottriples,\N,battle spot
+2015-08-01,cap,\N,cap
+2015-08-01,challengecup1v1,\N,
+2015-08-01,doublesoususpecttest,\N,suspect test
+2015-08-01,gen1randombattle,\N,random
+2015-08-01,gen3ubers,7,too few battles: 33
+2015-08-01,gen4lc,13,too few battles: 2
+2015-08-01,gen4ubers,10,too few battles: 21
+2015-08-01,gen4uu,12,too few battles: 6
+2015-08-01,gen5doublesou,20,too few battles: 22
+2015-08-01,gen5lc,19,too few battles: 2
+2015-08-01,gen5nu,18,too few battles: 1
+2015-08-01,gen5ru,17,too few battles: 1
+2015-08-01,gen5ubers,14,too few battles: 46
+2015-08-01,gen5uu,16,too few battles: 0
+2015-08-01,hackmonscup,\N,
+2015-08-01,inversebattle,\N,
+2015-08-01,lcsuspecttest,\N,suspect test
+2015-08-01,lcuu,\N,
+2015-08-01,mixandmega,\N,
+2015-08-01,monsjustmons,\N,
+2015-08-01,nostatus,\N,
+2015-08-01,ounomega,\N,
+2015-08-01,pikachucup,\N,
+2015-08-01,proteanpalace,\N,
+2015-08-01,randombattle,\N,random
+2015-08-01,randomdoublesbattle,\N,random
+2015-08-01,randomtriplesbattle,\N,random
+2015-08-01,seasonalrainbowroad,\N,
+2015-08-01,smogontriples,\N,
+2015-08-01,stabmons,\N,
+2015-08-01,tiershift,\N,
+2015-09-01,1v1,\N,
+2015-09-01,almostanyability,\N,
+2015-09-01,balancedhackmons,\N,
+2015-09-01,battlefactory,\N,
+2015-09-01,battlespotsingles,\N,battle spot
+2015-09-01,battlespotspecial11,\N,battle spot
+2015-09-01,battlespotspecial12,\N,battle spot
+2015-09-01,battlespottriples,\N,battle spot
+2015-09-01,cap,\N,cap
+2015-09-01,challengecup1v1,\N,
+2015-09-01,gen1randombattle,\N,random
+2015-09-01,gen3ubers,7,too few battles: 30
+2015-09-01,gen4lc,13,too few battles: 6
+2015-09-01,gen4ubers,10,too few battles: 18
+2015-09-01,gen4uu,12,too few battles: 6
+2015-09-01,gen5doublesou,20,too few battles: 12
+2015-09-01,gen5lc,19,too few battles: 2
+2015-09-01,gen5nu,18,too few battles: 4
+2015-09-01,gen5ru,17,too few battles: 0
+2015-09-01,gen5ubers,14,too few battles: 68
+2015-09-01,gen5uu,16,too few battles: 4
+2015-09-01,hackmons1v1,\N,
+2015-09-01,hackmonscup,\N,
+2015-09-01,inversebattle,\N,
+2015-09-01,lcsuspecttest,\N,suspect test
+2015-09-01,lcuu,\N,
+2015-09-01,monsjustmons,\N,
+2015-09-01,nostatus,\N,
+2015-09-01,ounomega,\N,
+2015-09-01,primalbattle,\N,
+2015-09-01,randombattle,\N,random
+2015-09-01,randomdoublesbattle,\N,random
+2015-09-01,randomtriplesbattle,\N,random
+2015-09-01,rususpecttest,\N,suspect test
+2015-09-01,seasonalrainbowroad,\N,
+2015-09-01,sketchmons,\N,
+2015-09-01,smogontriples,\N,
+2015-09-01,stabmons,\N,
+2015-09-01,tiershift,\N,
+2015-10-01,1v1,\N,
+2015-10-01,almostanyability,\N,
+2015-10-01,balancedhackmons,\N,
+2015-10-01,battlefactory,\N,
+2015-10-01,battlespotsingles,\N,battle spot
+2015-10-01,battlespotspecial12,\N,battle spot
+2015-10-01,battlespottriples,\N,battle spot
+2015-10-01,cap,\N,cap
+2015-10-01,challengecup1v1,\N,
+2015-10-01,gen1randombattle,\N,random
+2015-10-01,gen3ubers,7,too few battles: 47
+2015-10-01,gen4lc,13,too few battles: 1
+2015-10-01,gen4ubers,10,too few battles: 19
+2015-10-01,gen4uu,12,too few battles: 14
+2015-10-01,gen5doublesou,20,too few battles: 22
+2015-10-01,gen5lc,19,too few battles: 1
+2015-10-01,gen5nu,18,too few battles: 1
+2015-10-01,gen5ru,17,too few battles: 1
+2015-10-01,gen5ubers,14,too few battles: 93
+2015-10-01,gen5uu,16,too few battles: 7
+2015-10-01,hackmons1v1,\N,
+2015-10-01,hackmonscup,\N,
+2015-10-01,higheststatmeta,\N,
+2015-10-01,inversebattle,\N,
+2015-10-01,lcuu,\N,
+2015-10-01,noguardgalaxy,\N,
+2015-10-01,ounomega,\N,
+2015-10-01,primalbattle,\N,
+2015-10-01,randombattle,\N,random
+2015-10-01,randomdoublesbattle,\N,random
+2015-10-01,randomtriplesbattle,\N,random
+2015-10-01,scrappyskirmish,\N,
+2015-10-01,seasonalrainbowroad,\N,
+2015-10-01,seasonalspoopyparty,\N,
+2015-10-01,sketchmons,\N,
+2015-10-01,smogontriples,\N,
+2015-10-01,spookycup,\N,
+2015-10-01,stabmons,\N,
+2015-10-01,tiershift,\N,
+2015-11-01,1v1,\N,
+2015-11-01,almostanyability,\N,
+2015-11-01,balancedhackmons,\N,
+2015-11-01,battlefactory,\N,
+2015-11-01,battlespotsingles,\N,battle spot
+2015-11-01,battlespotspecial12,\N,battle spot
+2015-11-01,battlespotspecial13,\N,battle spot
+2015-11-01,battlespottriples,\N,battle spot
+2015-11-01,cap,\N,cap
+2015-11-01,challengecup1v1,\N,
+2015-11-01,festivefeud,\N,
+2015-11-01,gen1randombattle,\N,random
+2015-11-01,gen3ubers,7,too few battles: 30
+2015-11-01,gen4lc,13,too few battles: 3
+2015-11-01,gen4ubers,10,too few battles: 31
+2015-11-01,gen4uu,12,too few battles: 24
+2015-11-01,gen5doublesou,20,too few battles: 12
+2015-11-01,gen5lc,19,too few battles: 1
+2015-11-01,gen5nu,18,too few battles: 0
+2015-11-01,gen5ru,17,too few battles: 17
+2015-11-01,gen5ubers,14,too few battles: 61
+2015-11-01,gen5uu,16,too few battles: 8
+2015-11-01,hackmonscup,\N,
+2015-11-01,higheststatmeta,\N,
+2015-11-01,inheritance,\N,
+2015-11-01,inversebattle,\N,
+2015-11-01,lcuu,\N,
+2015-11-01,noguardgalaxy,\N,
+2015-11-01,ounomega,\N,
+2015-11-01,oususpecttest,\N,suspect test
+2015-11-01,pususpecttest,\N,suspect test
+2015-11-01,randombattle,\N,random
+2015-11-01,randomdoublesbattle,\N,random
+2015-11-01,randomtriplesbattle,\N,random
+2015-11-01,rususpecttest,\N,suspect test
+2015-11-01,sametypestealthrock,\N,
+2015-11-01,scrappyskirmish,\N,
+2015-11-01,seasonalspoopyparty,\N,
+2015-11-01,seasonalsupersquadsmackdown,\N,
+2015-11-01,smogontriples,\N,
+2015-11-01,stabmons,\N,
+2015-11-01,tiershift,\N,
+2015-12-01,1v1,\N,
+2015-12-01,350cup,\N,
+2015-12-01,almostanyability,\N,
+2015-12-01,balancedhackmons,\N,
+2015-12-01,battlefactory,\N,
+2015-12-01,battlespotsingles,\N,battle spot
+2015-12-01,battlespotspecial13,\N,battle spot
+2015-12-01,battlespottriples,\N,battle spot
+2015-12-01,cap,\N,cap
+2015-12-01,challengecup1v1,\N,
+2015-12-01,festivefeud,\N,
+2015-12-01,gen1randombattle,\N,random
+2015-12-01,gen3ubers,7,too few battles: 22
+2015-12-01,gen4lc,13,too few battles: 1
+2015-12-01,gen4ubers,10,too few battles: 30
+2015-12-01,gen4uu,12,too few battles: 61
+2015-12-01,gen5doublesou,20,too few battles: 29
+2015-12-01,gen5lc,19,too few battles: 1
+2015-12-01,gen5nu,18,too few battles: 1
+2015-12-01,gen5ru,17,too few battles: 4
+2015-12-01,gen5ubers,14,too few battles: 96
+2015-12-01,gen5uu,16,too few battles: 10
+2015-12-01,hackmonscup,\N,
+2015-12-01,inheritance,\N,
+2015-12-01,inversebattle,\N,
+2015-12-01,lcextended,\N,
+2015-12-01,lcuu,\N,
+2015-12-01,ounomega,\N,
+2015-12-01,oususpecttest,\N,suspect test
+2015-12-01,pususpecttest,\N,suspect test
+2015-12-01,randombattle,\N,random
+2015-12-01,randomdoublesbattle,\N,random
+2015-12-01,randomtriplesbattle,\N,random
+2015-12-01,rususpecttest,\N,suspect test
+2015-12-01,sametypestealthrock,\N,
+2015-12-01,seasonalsupersquadsmackdown,\N,
+2015-12-01,smogontriples,\N,
+2015-12-01,stabmons,\N,
+2015-12-01,tiershift,\N,
+2015-12-01,uususpecttest,\N,suspect test
+2016-01-01,1v1,\N,
+2016-01-01,350cup,\N,
+2016-01-01,almostanyability,\N,
+2016-01-01,balancedhackmons,\N,
+2016-01-01,battlefactory,\N,
+2016-01-01,battlespotsingles,\N,battle spot
+2016-01-01,battlespotspecial13,\N,battle spot
+2016-01-01,battlespottriples,\N,battle spot
+2016-01-01,cap,\N,cap
+2016-01-01,capcrucibelleplaytest,\N,cap
+2016-01-01,challengecup1v1,\N,
+2016-01-01,gen1randombattle,\N,random
+2016-01-01,gen4lc,13,too few battles: 8
+2016-01-01,gen4ubers,10,too few battles: 97
+2016-01-01,gen5doublesou,20,too few battles: 16
+2016-01-01,gen5lc,19,too few battles: 23
+2016-01-01,gen5nu,18,too few battles: 15
+2016-01-01,gen5ru,17,too few battles: 4
+2016-01-01,gen5uu,16,too few battles: 25
+2016-01-01,godsandfollowers,\N,
+2016-01-01,hackmonscup,\N,
+2016-01-01,inversebattle,\N,
+2016-01-01,lcuu,\N,
+2016-01-01,monogen,\N,
+2016-01-01,ounomega,\N,
+2016-01-01,pususpecttest,\N,suspect test
+2016-01-01,randombattle,\N,random
+2016-01-01,randomdoublesbattle,\N,random
+2016-01-01,randomtriplesbattle,\N,random
+2016-01-01,seasonalpolaropposites,\N,
+2016-01-01,smogontriples,\N,
+2016-01-01,stabmons,\N,
+2016-01-01,tiershift,\N,
+2016-02-01,1v1,\N,
+2016-02-01,almostanyability,\N,
+2016-02-01,balancedhackmons,\N,
+2016-02-01,battlefactory,\N,
+2016-02-01,battlespotsingles,\N,battle spot
+2016-02-01,battlespottriples,\N,battle spot
+2016-02-01,cap,\N,cap
+2016-02-01,capcrucibelleplaytest,\N,cap
+2016-02-01,challengecup1v1,\N,
+2016-02-01,gen1randombattle,\N,random
+2016-02-01,gen4lc,13,too few battles: 12
+2016-02-01,gen4ubers,10,too few battles: 93
+2016-02-01,gen4uu,12,too few battles: 65
+2016-02-01,gen5lc,19,too few battles: 2
+2016-02-01,gen5nu,18,too few battles: 10
+2016-02-01,gen5ru,17,too few battles: 2
+2016-02-01,gen5uu,16,too few battles: 29
+2016-02-01,godsandfollowers,\N,
+2016-02-01,hackmonscup,\N,
+2016-02-01,inversebattle,\N,
+2016-02-01,kantoclassic,\N,
+2016-02-01,lcuu,\N,
+2016-02-01,mixandmega,\N,
+2016-02-01,monogen,\N,
+2016-02-01,nususpecttest,\N,suspect test
+2016-02-01,ounomega,\N,
+2016-02-01,randombattle,\N,random
+2016-02-01,randomdoublesbattle,\N,random
+2016-02-01,randomtriplesbattle,\N,random
+2016-02-01,rususpecttest,\N,suspect test
+2016-02-01,seasonalpolaropposites,\N,
+2016-02-01,smogontriples,\N,
+2016-02-01,stabmons,\N,
+2016-02-01,tiershift,\N,
+2016-02-01,voltturnmayhem,\N,
+2016-03-01,1v1,\N,
+2016-03-01,almostanyability,\N,
+2016-03-01,balancedhackmons,\N,
+2016-03-01,battlefactory,\N,
+2016-03-01,battlespotsingles,\N,battle spot
+2016-03-01,battlespottriples,\N,battle spot
+2016-03-01,cap,\N,cap
+2016-03-01,challengecup1v1,\N,
+2016-03-01,flashclash,\N,
+2016-03-01,gen1randombattle,\N,random
+2016-03-01,gen4lc,13,too few battles: 16
+2016-03-01,gen4uu,12,too few battles: 49
+2016-03-01,gen5lc,19,too few battles: 6
+2016-03-01,gen5nu,18,too few battles: 10
+2016-03-01,gen5ru,17,too few battles: 2
+2016-03-01,gen5uu,16,too few battles: 36
+2016-03-01,hackmonscup,\N,
+2016-03-01,inversebattle,\N,
+2016-03-01,kantoclassic,\N,
+2016-03-01,lcsuspecttest,\N,suspect test
+2016-03-01,lcuu,\N,
+2016-03-01,metagamiate,\N,
+2016-03-01,mixandmega,\N,
+2016-03-01,nususpecttest,\N,suspect test
+2016-03-01,ounomega,\N,
+2016-03-01,oususpecttest,\N,suspect test
+2016-03-01,randombattle,\N,random
+2016-03-01,randomdoublesbattle,\N,random
+2016-03-01,randomtriplesbattle,\N,random
+2016-03-01,rususpecttest,\N,suspect test
+2016-03-01,seasonaldimensiondoom,\N,
+2016-03-01,seasonalpolaropposites,\N,
+2016-03-01,smogontriples,\N,
+2016-03-01,stabmons,\N,
+2016-03-01,tiershift,\N,
+2016-03-01,unreleasedou,\N,
+2016-03-01,voltturnmayhem,\N,
+2016-04-01,1v1,\N,
+2016-04-01,abilityunity,\N,
+2016-04-01,almostanyability,\N,
+2016-04-01,balancedhackmons,\N,
+2016-04-01,battlefactory,\N,
+2016-04-01,battlespotsingles,\N,battle spot
+2016-04-01,battlespottriples,\N,battle spot
+2016-04-01,cap,\N,cap
+2016-04-01,challengecup1v1,\N,
+2016-04-01,flashclash,\N,
+2016-04-01,gen1randombattle,\N,random
+2016-04-01,gen4lc,13,too few battles: 10
+2016-04-01,gen4uu,12,too few battles: 15
+2016-04-01,gen5lc,19,too few battles: 16
+2016-04-01,gen5nu,18,too few battles: 8
+2016-04-01,gen5ru,17,too few battles: 10
+2016-04-01,gen5uu,16,too few battles: 18
+2016-04-01,hackmonscup,\N,
+2016-04-01,inversebattle,\N,
+2016-04-01,lcuu,\N,
+2016-04-01,megamons,\N,
+2016-04-01,metagamiate,\N,
+2016-04-01,ounomega,\N,
+2016-04-01,oususpecttest,\N,suspect test
+2016-04-01,randombattle,\N,random
+2016-04-01,randomdoublesbattle,\N,random
+2016-04-01,randomtriplesbattle,\N,random
+2016-04-01,rususpecttest,\N,suspect test
+2016-04-01,seasonaldimensiondoom,\N,
+2016-04-01,smogontriples,\N,
+2016-04-01,stabmons,\N,
+2016-04-01,tiershift,\N,
+2016-04-01,unreleasedou,\N,
+2016-05-01,1v1,\N,
+2016-05-01,abilityunity,\N,
+2016-05-01,almostanyability,\N,
+2016-05-01,balancedhackmons,\N,
+2016-05-01,battlefactory,\N,
+2016-05-01,battlespotsingles,\N,battle spot
+2016-05-01,battlespottriples,\N,battle spot
+2016-05-01,cap,\N,cap
+2016-05-01,challengecup1v1,\N,
+2016-05-01,extremetiershift,\N,
+2016-05-01,flashclash,\N,
+2016-05-01,gen1randombattle,\N,random
+2016-05-01,gen4lc,13,too few battles: 6
+2016-05-01,gen4ubers,10,too few battles: 88
+2016-05-01,gen4uu,12,too few battles: 18
+2016-05-01,gen5lc,19,too few battles: 4
+2016-05-01,gen5nu,18,too few battles: 8
+2016-05-01,gen5ru,17,too few battles: 1
+2016-05-01,gen5uu,16,too few battles: 13
+2016-05-01,hackmonscup,\N,
+2016-05-01,inversebattle,\N,
+2016-05-01,johtoclassic,\N,
+2016-05-01,lcuu,\N,
+2016-05-01,megamons,\N,
+2016-05-01,ounomega,\N,
+2016-05-01,randombattle,\N,random
+2016-05-01,randomdoublesbattle,\N,random
+2016-05-01,randomtriplesbattle,\N,random
+2016-05-01,rususpecttest,\N,suspect test
+2016-05-01,smogontriples,\N,
+2016-05-01,stabmons,\N,
+2016-05-01,tiershift,\N,
+2016-05-01,typereflector,\N,
+2016-05-01,uususpecttest,\N,suspect test
+2016-06-01,1v1,\N,
+2016-06-01,almostanyability,\N,
+2016-06-01,balancedhackmons,\N,
+2016-06-01,battlefactory,\N,
+2016-06-01,battlespotsingles,\N,battle spot
+2016-06-01,battlespottriples,\N,battle spot
+2016-06-01,cap,\N,cap
+2016-06-01,challengecup1v1,\N,
+2016-06-01,custompower,\N,
+2016-06-01,doublesoususpecttest,\N,suspect test
+2016-06-01,extremetiershift,\N,
+2016-06-01,gen1randombattle,\N,random
+2016-06-01,gen4lc,13,too few battles: 7
+2016-06-01,gen4uu,12,too few battles: 57
+2016-06-01,gen5doublesou,20,too few battles: 85
+2016-06-01,gen5lc,19,too few battles: 7
+2016-06-01,gen5nu,18,too few battles: 5
+2016-06-01,gen5ru,17,too few battles: 3
+2016-06-01,gen5uu,16,too few battles: 26
+2016-06-01,gottalent,\N,
+2016-06-01,hackmonscup,\N,
+2016-06-01,inversebattle,\N,
+2016-06-01,johtoclassic,\N,
+2016-06-01,lcsuspecttest,\N,suspect test
+2016-06-01,lcuu,\N,
+2016-06-01,nususpecttest,\N,suspect test
+2016-06-01,pususpecttest,\N,suspect test
+2016-06-01,randombattle,\N,random
+2016-06-01,randomdoublesbattle,\N,random
+2016-06-01,randomtriplesbattle,\N,random
+2016-06-01,rususpecttest,\N,suspect test
+2016-06-01,sinnohclassic,\N,
+2016-06-01,smogontriples,\N,
+2016-06-01,stabmons,\N,
+2016-06-01,tiershift,\N,
+2016-06-01,typereflector,\N,
+2016-06-01,uususpecttest,\N,suspect test
+2016-07-01,1v1,\N,
+2016-07-01,aaaubers,\N,
+2016-07-01,almostanyability,\N,
+2016-07-01,balancedhackmons,\N,
+2016-07-01,battlefactory,\N,
+2016-07-01,battlespotsingles,\N,battle spot
+2016-07-01,battlespotspecial17,\N,battle spot
+2016-07-01,battlespottriples,\N,battle spot
+2016-07-01,cap,\N,cap
+2016-07-01,challengecup1v1,\N,
+2016-07-01,custompower,\N,
+2016-07-01,enchanteditems,\N,
+2016-07-01,gen1randombattle,\N,random
+2016-07-01,gen4lc,13,too few battles: 18
+2016-07-01,gen4uu,12,too few battles: 50
+2016-07-01,gen5doublesou,20,too few battles: 65
+2016-07-01,gen5lc,19,too few battles: 2
+2016-07-01,gen5nu,18,too few battles: 11
+2016-07-01,gen5ru,17,too few battles: 10
+2016-07-01,gen5uu,16,too few battles: 51
+2016-07-01,gottalent,\N,
+2016-07-01,hackmonscup,\N,
+2016-07-01,inversebattle,\N,
+2016-07-01,lcsuspecttest,\N,suspect test
+2016-07-01,lcuu,\N,
+2016-07-01,nususpecttest,\N,suspect test
+2016-07-01,pususpecttest,\N,suspect test
+2016-07-01,randombattle,\N,random
+2016-07-01,randomdoublesbattle,\N,random
+2016-07-01,randomtriplesbattle,\N,random
+2016-07-01,sinnohclassic,\N,
+2016-07-01,smogontriples,\N,
+2016-07-01,stabmons,\N,
+2016-07-01,tiershift,\N,
+2016-07-01,unovaclassic,\N,
+2016-07-01,uususpecttest,\N,suspect test
+2016-08-01,1v1,\N,
+2016-08-01,aaaubers,\N,
+2016-08-01,almostanyability,\N,
+2016-08-01,balancedhackmons,\N,
+2016-08-01,battlefactory,\N,
+2016-08-01,battlespotsingles,\N,battle spot
+2016-08-01,battlespotspecial17,\N,battle spot
+2016-08-01,battlespottriples,\N,battle spot
+2016-08-01,cap,\N,cap
+2016-08-01,challengecup1v1,\N,
+2016-08-01,doublesoususpecttest,\N,suspect test
+2016-08-01,enchanteditems,\N,
+2016-08-01,followtheleader,\N,
+2016-08-01,gen1randombattle,\N,random
+2016-08-01,gen1uu,3,too few battles: 22
+2016-08-01,gen4lc,13,too few battles: 21
+2016-08-01,gen4uu,12,too few battles: 99
+2016-08-01,gen5doublesou,20,too few battles: 76
+2016-08-01,gen5lc,19,too few battles: 13
+2016-08-01,gen5nu,18,too few battles: 43
+2016-08-01,gen5ru,17,too few battles: 15
+2016-08-01,gen5uu,16,too few battles: 60
+2016-08-01,hackmonscup,\N,
+2016-08-01,inversebattle,\N,
+2016-08-01,lcuu,\N,
+2016-08-01,natureswap,\N,
+2016-08-01,randombattle,\N,random
+2016-08-01,randomdoublesbattle,\N,random
+2016-08-01,randomtriplesbattle,\N,random
+2016-08-01,smogontriples,\N,
+2016-08-01,stabmons,\N,
+2016-08-01,tiershift,\N,
+2016-08-01,unovaclassic,\N,
+2016-09-01,1v1,\N,
+2016-09-01,almostanyability,\N,
+2016-09-01,balancedhackmons,\N,
+2016-09-01,battlefactory,\N,
+2016-09-01,battlespotsingles,\N,battle spot
+2016-09-01,battlespotspecial17,\N,battle spot
+2016-09-01,battlespottriples,\N,battle spot
+2016-09-01,bhdoubles,\N,
+2016-09-01,cap,\N,cap
+2016-09-01,challengecup1v1,\N,
+2016-09-01,doublesoususpecttest,\N,suspect test
+2016-09-01,followtheleader,\N,
+2016-09-01,gen1randombattle,\N,random
+2016-09-01,gen2uu,6,too few battles: 13
+2016-09-01,gen3nu,\N,
+2016-09-01,gen4lc,13,too few battles: 48
+2016-09-01,gen4uu,12,too few battles: 84
+2016-09-01,gen5doublesou,20,too few battles: 76
+2016-09-01,gen5lc,19,too few battles: 13
+2016-09-01,gen5nu,18,too few battles: 4
+2016-09-01,gen5ru,17,too few battles: 9
+2016-09-01,gen5uu,16,too few battles: 15
+2016-09-01,hackmonscup,\N,
+2016-09-01,inversebattle,\N,
+2016-09-01,lcuu,\N,
+2016-09-01,mixandmega,\N,
+2016-09-01,natureswap,\N,
+2016-09-01,randombattle,\N,random
+2016-09-01,randomdoublesbattle,\N,random
+2016-09-01,randomtriplesbattle,\N,random
+2016-09-01,rususpecttest,\N,suspect test
+2016-09-01,smogontriples,\N,
+2016-09-01,stabmons,\N,
+2016-09-01,tiershift,\N,
+2016-09-01,uususpecttest,\N,suspect test
+2016-10-01,1v1,\N,
+2016-10-01,almostanyability,\N,
+2016-10-01,balancedhackmons,\N,
+2016-10-01,battlefactory,\N,
+2016-10-01,battlespotsingles,\N,battle spot
+2016-10-01,battlespotspecial17,\N,battle spot
+2016-10-01,battlespottriples,\N,battle spot
+2016-10-01,bhdoubles,\N,
+2016-10-01,cap,\N,cap
+2016-10-01,challengecup1v1,\N,
+2016-10-01,gen1randombattle,\N,random
+2016-10-01,gen3nu,\N,
+2016-10-01,gen4lc,13,too few battles: 10
+2016-10-01,gen4nu,\N,
+2016-10-01,gen4uu,12,too few battles: 66
+2016-10-01,gen5lc,19,too few battles: 30
+2016-10-01,gen5nu,18,too few battles: 2
+2016-10-01,gen5ru,17,too few battles: 1
+2016-10-01,gen5uu,16,too few battles: 16
+2016-10-01,giftsofthegods,\N,
+2016-10-01,hackmonscup,\N,
+2016-10-01,inversebattle,\N,
+2016-10-01,lcuu,\N,
+2016-10-01,mixandmega,\N,
+2016-10-01,oususpecttest,\N,suspect test
+2016-10-01,randombattle,\N,random
+2016-10-01,randomdoublesbattle,\N,random
+2016-10-01,randomtriplesbattle,\N,random
+2016-10-01,returnd,\N,
+2016-10-01,rususpecttest,\N,suspect test
+2016-10-01,smogontriples,\N,
+2016-10-01,stabmons,\N,
+2016-10-01,tiershift,\N,
+2016-10-01,uususpecttest,\N,suspect test
+2016-11-01,1v1,\N,
+2016-11-01,almostanyability,\N,
+2016-11-01,balancedhackmons,\N,
+2016-11-01,battlefactory,\N,
+2016-11-01,battlespotsingles,\N,battle spot
+2016-11-01,battlespottriples,\N,battle spot
+2016-11-01,cap,\N,cap
+2016-11-01,challengecup1v1,\N,
+2016-11-01,gen1randombattle,\N,random
+2016-11-01,gen4lc,13,too few battles: 15
+2016-11-01,gen4uu,12,too few battles: 31
+2016-11-01,gen5doublesou,20,too few battles: 94
+2016-11-01,gen5lc,19,too few battles: 5
+2016-11-01,gen5nu,18,too few battles: 2
+2016-11-01,gen5ru,17,too few battles: 4
+2016-11-01,gen5uu,16,too few battles: 13
+2016-11-01,gen7anythinggoes,\N,prebank
+2016-11-01,gen7anythinggoesbeta,\N,beta
+2016-11-01,gen7balancedhackmons,\N,
+2016-11-01,gen7battlespotdoubles,\N,battle spot
+2016-11-01,gen7battlespotsingles,\N,battle spot
+2016-11-01,gen7cap,\N,cap
+2016-11-01,gen7challengecup,\N,
+2016-11-01,gen7challengecupbeta,\N,beta
+2016-11-01,gen7doublesanythinggoesbeta,\N,beta
+2016-11-01,gen7doublesou,\N,prebank
+2016-11-01,gen7doublesoubeta,\N,beta
+2016-11-01,gen7lc,\N,prebank
+2016-11-01,gen7ou,\N,prebank
+2016-11-01,gen7oubeta,\N,beta
+2016-11-01,gen7ouprebank,\N,prebank
+2016-11-01,gen7pokebankag,36,alternate name
+2016-11-01,gen7pokebankanythinggoesbeta,\N,beta
+2016-11-01,gen7pokebankdoublesag,\N,alternate name
+2016-11-01,gen7pokebankdoublesanythinggoesbeta,\N,beta
+2016-11-01,gen7pokebankdoublesoubeta,\N,beta
+2016-11-01,gen7pokebankoubeta,\N,beta
+2016-11-01,gen7randombattle,\N,random
+2016-11-01,gen7randomdoublesbattle,\N,random
+2016-11-01,gen7ubers,\N,prebank
+2016-11-01,gen7vgc2017beta,\N,beta
+2016-11-01,hackmonscup,\N,
+2016-11-01,inversebattle,\N,
+2016-11-01,lcuu,\N,
+2016-11-01,mixandmega,\N,
+2016-11-01,oususpecttest,\N,suspect test
+2016-11-01,randombattle,\N,random
+2016-11-01,randomdoublesbattle,\N,random
+2016-11-01,randomtriplesbattle,\N,random
+2016-11-01,sketchmons,\N,
+2016-11-01,smogontriples,\N,
+2016-11-01,stabmons,\N,
+2016-11-01,tiershift,\N,
+2016-12-01,1v1,\N,
+2016-12-01,almostanyability,\N,
+2016-12-01,balancedhackmons,\N,
+2016-12-01,battlefactory,\N,
+2016-12-01,battlespotsingles,\N,battle spot
+2016-12-01,battlespottriples,\N,battle spot
+2016-12-01,cap,\N,cap
+2016-12-01,challengecup1v1,\N,
+2016-12-01,gen1randombattle,\N,random
+2016-12-01,gen4lc,13,too few battles: 14
+2016-12-01,gen4uu,12,too few battles: 45
+2016-12-01,gen5anythinggoes,\N,
+2016-12-01,gen5lc,19,too few battles: 1
+2016-12-01,gen5nu,18,too few battles: 4
+2016-12-01,gen5ru,17,too few battles: 1
+2016-12-01,gen5uu,16,too few battles: 19
+2016-12-01,gen6randombattle,\N,random
+2016-12-01,gen71v1,\N,
+2016-12-01,gen7almostanyability,\N,
+2016-12-01,gen7balancedhackmons,\N,
+2016-12-01,gen7balancedhackmonssuspecttest,\N,suspect test
+2016-12-01,gen7battleofalola,\N,
+2016-12-01,gen7battlespotdoubles,\N,battle spot
+2016-12-01,gen7battlespotsingles,\N,battle spot
+2016-12-01,gen7battlespotspecial1,\N,battle spot
+2016-12-01,gen7cap,\N,cap
+2016-12-01,gen7challengecup1v1,\N,
+2016-12-01,gen7hackmonscup,\N,
+2016-12-01,gen7mixandmega,\N,
+2016-12-01,gen7mixandmegasuspecttest,\N,suspect test
+2016-12-01,gen7ou,\N,prebank
+2016-12-01,gen7pokebankoususpecttest,\N,suspect test
+2016-12-01,gen7pokebankuualpha,\N,alpha
+2016-12-01,gen7randombattle,\N,random
+2016-12-01,gen7randomdoublesbattle,\N,random
+2016-12-01,gen7sketchmons,\N,
+2016-12-01,gen7stabmons,\N,
+2016-12-01,hackmonscup,\N,
+2016-12-01,mixandmega,\N,
+2016-12-01,pususpecttest,\N,suspect test
+2016-12-01,randombattle,\N,random
+2016-12-01,sketchmons,\N,
+2016-12-01,stabmons,\N,
+2017-01-01,battlefactory,\N,
+2017-01-01,battlespotsingles,\N,battle spot
+2017-01-01,battlespottriples,\N,battle spot
+2017-01-01,gen1nobig4ou,\N,
+2017-01-01,gen1randombattle,\N,random
+2017-01-01,gen4lc,13,too few battles: 11
+2017-01-01,gen4uu,12,too few battles: 59
+2017-01-01,gen5anythinggoes,\N,
+2017-01-01,gen5lc,19,too few battles: 5
+2017-01-01,gen5nu,18,too few battles: 5
+2017-01-01,gen5ru,17,too few battles: 2
+2017-01-01,gen5uu,16,too few battles: 36
+2017-01-01,gen6randombattle,\N,random
+2017-01-01,gen71v1,\N,
+2017-01-01,gen7almostanyability,\N,
+2017-01-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-01-01,gen7alolafriendly,\N,
+2017-01-01,gen7balancedhackmons,\N,
+2017-01-01,gen7balancedhackmonssuspecttest,\N,suspect test
+2017-01-01,gen7battlespotdoubles,\N,battle spot
+2017-01-01,gen7battlespotsingles,\N,battle spot
+2017-01-01,gen7battlespotspecial1,\N,battle spot
+2017-01-01,gen7battlespotspecial2,\N,battle spot
+2017-01-01,gen7cap,\N,cap
+2017-01-01,gen7challengecup1v1,\N,
+2017-01-01,gen7hackmonscup,\N,
+2017-01-01,gen7mixandmega,\N,
+2017-01-01,gen7pokbilities,\N,
+2017-01-01,gen7pokebankoususpecttest,\N,suspect test
+2017-01-01,gen7prebankou,\N,prebank
+2017-01-01,gen7randombattle,\N,random
+2017-01-01,gen7randomdoublesbattle,\N,random
+2017-01-01,gen7rualpha,\N,alpha
+2017-01-01,gen7sketchmons,\N,
+2017-01-01,gen7sketchmonssuspecttest,\N,suspect test
+2017-01-01,gen7stabmons,\N,
+2017-01-01,gen7ubers,37,alternate name
+2017-01-01,gen7uubeta,\N,beta
+2017-02-01,battlefactory,\N,
+2017-02-01,battlespotsingles,\N,battle spot
+2017-02-01,battlespottriples,\N,battle spot
+2017-02-01,gen1randombattle,\N,random
+2017-02-01,gen3adv200,\N,
+2017-02-01,gen4lc,13,too few battles: 1
+2017-02-01,gen4uu,12,too few battles: 15
+2017-02-01,gen5doublesou,20,too few battles: 48
+2017-02-01,gen5lc,19,too few battles: 1
+2017-02-01,gen5nu,18,too few battles: 2
+2017-02-01,gen5ru,17,too few battles: 0
+2017-02-01,gen5uu,16,too few battles: 15
+2017-02-01,gen6randombattle,\N,random
+2017-02-01,gen71v1,\N,
+2017-02-01,gen7almostanyability,\N,
+2017-02-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-02-01,gen7alolafriendly,\N,
+2017-02-01,gen7balancedhackmons,\N,
+2017-02-01,gen7balancedhackmonssuspecttest,\N,suspect test
+2017-02-01,gen7battlespotdoubles,\N,battle spot
+2017-02-01,gen7battlespotsingles,\N,battle spot
+2017-02-01,gen7battlespotspecial2,\N,battle spot
+2017-02-01,gen7cap,\N,cap
+2017-02-01,gen7challengecup1v1,\N,
+2017-02-01,gen7hackmonscup,\N,
+2017-02-01,gen7inheritance,\N,
+2017-02-01,gen7mixandmega,\N,
+2017-02-01,gen7oususpecttest,\N,suspect test
+2017-02-01,gen7pokbilities,\N,
+2017-02-01,gen7randombattle,\N,random
+2017-02-01,gen7randomdoublesbattle,\N,random
+2017-02-01,gen7rualpha,\N,alpha
+2017-02-01,gen7sketchmons,\N,
+2017-02-01,gen7uubeta,\N,beta
+2017-03-01,battlefactory,\N,
+2017-03-01,battlespotsingles,\N,battle spot
+2017-03-01,battlespottriples,\N,battle spot
+2017-03-01,doublesuu,32,too few battles: 72
+2017-03-01,gen4anythinggoes,\N,
+2017-03-01,gen4lc,13,too few battles: 37
+2017-03-01,gen4uu,12,too few battles: 48
+2017-03-01,gen5doublesou,20,too few battles: 50
+2017-03-01,gen5lc,19,too few battles: 3
+2017-03-01,gen5nu,18,too few battles: 1
+2017-03-01,gen5ru,17,too few battles: 4
+2017-03-01,gen5uu,16,too few battles: 29
+2017-03-01,gen71v1,\N,
+2017-03-01,gen7almostanyability,\N,
+2017-03-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-03-01,gen7balancedhackmons,\N,
+2017-03-01,gen7balancedhackmonssuspecttest,\N,suspect test
+2017-03-01,gen7battlespotdoubles,\N,battle spot
+2017-03-01,gen7battlespotsingles,\N,battle spot
+2017-03-01,gen7battlespotspecial2,\N,battle spot
+2017-03-01,gen7battlespotspecial3,\N,battle spot
+2017-03-01,gen7cap,\N,cap
+2017-03-01,gen7challengecup1v1,\N,
+2017-03-01,gen7doublesoususpecttest,\N,suspect test
+2017-03-01,gen7fullpotential,\N,
+2017-03-01,gen7hackmonscup,\N,
+2017-03-01,gen7inheritance,\N,
+2017-03-01,gen7kantoxalolaregionalrumble,\N,
+2017-03-01,gen7lcsuspecttest,\N,suspect test
+2017-03-01,gen7mixandmega,\N,
+2017-03-01,gen7mixandmegasuspecttest,\N,suspect test
+2017-03-01,gen7oususpecttest,\N,suspect test
+2017-03-01,gen7rualpha,\N,alpha
+2017-03-01,gen7rubeta,\N,beta
+2017-03-01,gen7sketchmons,\N,
+2017-04-01,battlefactory,\N,
+2017-04-01,battlespotsingles,\N,battle spot
+2017-04-01,battlespottriples,\N,battle spot
+2017-04-01,doublesuu,32,too few battles: 24
+2017-04-01,gen2ounosnorlax,\N,
+2017-04-01,gen4anythinggoes,\N,
+2017-04-01,gen4lc,13,too few battles: 15
+2017-04-01,gen4uu,12,too few battles: 20
+2017-04-01,gen5doublesou,20,too few battles: 65
+2017-04-01,gen5lc,19,too few battles: 0
+2017-04-01,gen5nu,18,too few battles: 28
+2017-04-01,gen5ru,17,too few battles: 4
+2017-04-01,gen5uu,16,too few battles: 16
+2017-04-01,gen71v1,\N,
+2017-04-01,gen7almostanyability,\N,
+2017-04-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-04-01,gen7balancedhackmons,\N,
+2017-04-01,gen7battlespotdoubles,\N,battle spot
+2017-04-01,gen7battlespotsingles,\N,battle spot
+2017-04-01,gen7battlespotspecial3,\N,battle spot
+2017-04-01,gen7camomons,\N,
+2017-04-01,gen7cap,\N,cap
+2017-04-01,gen7challengecup1v1,\N,
+2017-04-01,gen7doublesoususpecttest,\N,suspect test
+2017-04-01,gen7fullpotential,\N,
+2017-04-01,gen7mixandmega,\N,
+2017-04-01,gen7mixandmegasuspecttest,\N,suspect test
+2017-04-01,gen7monotypesuspecttest,\N,suspect test
+2017-04-01,gen7oususpecttest,\N,suspect test
+2017-04-01,gen7rubeta,\N,beta
+2017-04-01,gen7sketchmons,\N,
+2017-04-01,lc,28,too few battles: 65
+2017-04-01,vgc2015,34,too few battles: 94
+2017-05-01,battlefactory,\N,
+2017-05-01,battlespotsingles,\N,battle spot
+2017-05-01,battlespottriples,\N,battle spot
+2017-05-01,doublesuu,32,too few battles: 16
+2017-05-01,gen2ounosnorlax,\N,
+2017-05-01,gen4lc,13,too few battles: 5
+2017-05-01,gen4oulatimence,\N,
+2017-05-01,gen4uu,12,too few battles: 37
+2017-05-01,gen5doublesou,20,too few battles: 63
+2017-05-01,gen5lc,19,too few battles: 3
+2017-05-01,gen5nu,18,too few battles: 43
+2017-05-01,gen5ru,17,too few battles: 9
+2017-05-01,gen5uu,16,too few battles: 28
+2017-05-01,gen71v1,\N,
+2017-05-01,gen71v1suspecttest,\N,suspect test
+2017-05-01,gen7almostanyability,\N,
+2017-05-01,gen7balancedhackmons,\N,
+2017-05-01,gen7battlespotdoubles,\N,battle spot
+2017-05-01,gen7battlespotsingles,\N,battle spot
+2017-05-01,gen7battlespotspecial3,\N,battle spot
+2017-05-01,gen7battlespotspecial4,\N,battle spot
+2017-05-01,gen7bssfactory,\N,
+2017-05-01,gen7camomons,\N,
+2017-05-01,gen7cap,\N,cap
+2017-05-01,gen7challengecup1v1,\N,
+2017-05-01,gen7hackmonscup,\N,
+2017-05-01,gen7lastwill,\N,
+2017-05-01,gen7mixandmega,\N,
+2017-05-01,gen7mixandmegasuspecttest,\N,suspect test
+2017-05-01,gen7monotypesuspecttest,\N,suspect test
+2017-05-01,gen7nualpha,\N,alpha
+2017-05-01,gen7oususpecttest,\N,suspect test
+2017-05-01,gen7rubeta,\N,beta
+2017-05-01,gen7sketchmons,\N,
+2017-05-01,lc,28,too few battles: 36
+2017-05-01,vgc2015,34,too few battles: 45
+2017-06-01,battlefactory,\N,
+2017-06-01,battlespotsingles,\N,battle spot
+2017-06-01,battlespottriples,\N,battle spot
+2017-06-01,doublesuu,32,too few battles: 4
+2017-06-01,gen4lc,13,too few battles: 13
+2017-06-01,gen4uu,12,too few battles: 31
+2017-06-01,gen5doublesou,20,too few battles: 47
+2017-06-01,gen5lc,19,too few battles: 9
+2017-06-01,gen5nu,18,too few battles: 1
+2017-06-01,gen5oublind,\N,
+2017-06-01,gen5ru,17,too few battles: 4
+2017-06-01,gen5ubers,14,too few battles: 90
+2017-06-01,gen5uu,16,too few battles: 7
+2017-06-01,gen71v1,\N,
+2017-06-01,gen7almostanyability,\N,
+2017-06-01,gen7balancedhackmons,\N,
+2017-06-01,gen7battlespotdoubles,\N,battle spot
+2017-06-01,gen7battlespotsingles,\N,battle spot
+2017-06-01,gen7battlespotspecial4,\N,battle spot
+2017-06-01,gen7bssfactory,\N,
+2017-06-01,gen7cap,\N,cap
+2017-06-01,gen7challengecup1v1,\N,
+2017-06-01,gen7godlygift,\N,
+2017-06-01,gen7hackmonscup,\N,
+2017-06-01,gen7lastwill,\N,
+2017-06-01,gen7mixandmega,\N,
+2017-06-01,gen7mixandmegasuspecttest,\N,suspect test
+2017-06-01,gen7nualpha,\N,alpha
+2017-06-01,gen7nubeta,\N,beta
+2017-06-01,gen7rubeta,\N,beta
+2017-06-01,gen7sketchmons,\N,
+2017-06-01,gen7tinytourney,\N,
+2017-06-01,lc,28,too few battles: 30
+2017-06-01,nu,26,too few battles: 79
+2017-06-01,ru,25,too few battles: 54
+2017-06-01,vgc2015,34,too few battles: 33
+2017-07-01,gen1oumew,\N,
+2017-07-01,gen4lc,13,too few battles: 4
+2017-07-01,gen4uu,12,too few battles: 40
+2017-07-01,gen5doublesou,20,too few battles: 70
+2017-07-01,gen5lc,19,too few battles: 3
+2017-07-01,gen5nu,18,too few battles: 6
+2017-07-01,gen5ru,17,too few battles: 5
+2017-07-01,gen5uu,16,too few battles: 6
+2017-07-01,gen6battlefactory,\N,
+2017-07-01,gen6battlespotdoubles,\N,battle spot
+2017-07-01,gen6battlespotsingles,\N,battle spot
+2017-07-01,gen6battlespottriples,\N,battle spot
+2017-07-01,gen6doublesuu,32,too few battles: 3
+2017-07-01,gen6lc,28,too few battles: 33
+2017-07-01,gen6nu,26,too few battles: 86
+2017-07-01,gen6ru,25,too few battles: 30
+2017-07-01,gen71v1,\N,
+2017-07-01,gen71v1suspecttest,\N,suspect test
+2017-07-01,gen7almostanyability,\N,
+2017-07-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-07-01,gen7balancedhackmons,\N,
+2017-07-01,gen7balancedhackmonssuspecttest,\N,suspect test
+2017-07-01,gen7battlespotdoubles,\N,battle spot
+2017-07-01,gen7battlespotsingles,\N,battle spot
+2017-07-01,gen7battlespotspecial4,\N,battle spot
+2017-07-01,gen7battlespotspecial5,\N,battle spot
+2017-07-01,gen7bssfactory,\N,
+2017-07-01,gen7cap,\N,cap
+2017-07-01,gen7challengecup1v1,\N,
+2017-07-01,gen7hackmonscup,\N,
+2017-07-01,gen7mixandmega,\N,
+2017-07-01,gen7monotypesuspecttest,\N,suspect test
+2017-07-01,gen7nubeta,\N,beta
+2017-07-01,gen7pualpha,\N,alpha
+2017-07-01,gen7rususpecttest,\N,suspect test
+2017-07-01,gen7sketchmons,\N,
+2017-07-01,gen7stabmons,\N,
+2017-07-01,gen7uususpecttest,\N,suspect test
+2017-07-01,gen7weaknesscup,\N,
+2017-08-01,gen1oumew,\N,
+2017-08-01,gen2stabmons,\N,
+2017-08-01,gen4lc,13,too few battles: 45
+2017-08-01,gen4uu,12,too few battles: 51
+2017-08-01,gen5doublesou,20,too few battles: 52
+2017-08-01,gen5lc,19,too few battles: 1
+2017-08-01,gen5nu,18,too few battles: 2
+2017-08-01,gen5ru,17,too few battles: 8
+2017-08-01,gen5uu,16,too few battles: 9
+2017-08-01,gen6battlefactory,\N,
+2017-08-01,gen6battlespotdoubles,\N,battle spot
+2017-08-01,gen6battlespotsingles,\N,battle spot
+2017-08-01,gen6battlespottriples,\N,battle spot
+2017-08-01,gen6lc,28,too few battles: 12
+2017-08-01,gen6nu,26,too few battles: 46
+2017-08-01,gen6pu,27,too few battles: 20
+2017-08-01,gen6ru,25,too few battles: 38
+2017-08-01,gen71v1,\N,
+2017-08-01,gen71v1suspecttest,\N,suspect test
+2017-08-01,gen72017noholdsbarred,\N,
+2017-08-01,gen72v2doubles,\N,
+2017-08-01,gen7almostanyability,\N,
+2017-08-01,gen7balancedhackmons,\N,
+2017-08-01,gen7battlespotdoubles,\N,battle spot
+2017-08-01,gen7battlespotsingles,\N,battle spot
+2017-08-01,gen7battlespotspecial5,\N,battle spot
+2017-08-01,gen7bssfactory,\N,
+2017-08-01,gen7cap,\N,cap
+2017-08-01,gen7challengecup1v1,\N,
+2017-08-01,gen7doublesoususpecttest,\N,suspect test
+2017-08-01,gen7hackmonscup,\N,
+2017-08-01,gen7megamelee,\N,
+2017-08-01,gen7mixandmega,\N,
+2017-08-01,gen7mixandmegasuspecttest,\N,suspect test
+2017-08-01,gen7monotypesuspecttest,\N,suspect test
+2017-08-01,gen7nubeta,\N,beta
+2017-08-01,gen7nususpecttest,\N,suspect test
+2017-08-01,gen7pualpha,\N,alpha
+2017-08-01,gen7pubeta,\N,beta
+2017-08-01,gen7rususpecttest,\N,suspect test
+2017-08-01,gen7sketchmons,\N,
+2017-08-01,gen7stabmons,\N,
+2017-08-01,gen7uususpecttest,\N,suspect test
+2017-09-01,gen2stabmons,\N,
+2017-09-01,gen3bl,\N,
+2017-09-01,gen4lc,13,too few battles: 20
+2017-09-01,gen4uu,12,too few battles: 16
+2017-09-01,gen5doublesou,20,too few battles: 82
+2017-09-01,gen5lc,19,too few battles: 2
+2017-09-01,gen5nu,18,too few battles: 3
+2017-09-01,gen5ru,17,too few battles: 1
+2017-09-01,gen5uu,16,too few battles: 12
+2017-09-01,gen6battlefactory,\N,
+2017-09-01,gen6battlespotdoubles,\N,battle spot
+2017-09-01,gen6battlespotsingles,\N,battle spot
+2017-09-01,gen6battlespottriples,\N,battle spot
+2017-09-01,gen6lc,28,too few battles: 7
+2017-09-01,gen6nu,26,too few battles: 24
+2017-09-01,gen6pu,27,too few battles: 11
+2017-09-01,gen6ru,25,too few battles: 17
+2017-09-01,gen71v1,\N,
+2017-09-01,gen72v2doubles,\N,
+2017-09-01,gen7almostanyability,\N,
+2017-09-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-09-01,gen7balancedhackmons,\N,
+2017-09-01,gen7balancedhackmonssuspecttest,\N,suspect test
+2017-09-01,gen7battlespotdoubles,\N,battle spot
+2017-09-01,gen7battlespotsingles,\N,battle spot
+2017-09-01,gen7battlespotspecial5,\N,battle spot
+2017-09-01,gen7battlespotspecial6,\N,battle spot
+2017-09-01,gen7bssfactory,\N,
+2017-09-01,gen7cap,\N,cap
+2017-09-01,gen7challengecup1v1,\N,
+2017-09-01,gen7hackmonscup,\N,
+2017-09-01,gen7megamelee,\N,
+2017-09-01,gen7mixandmega,\N,
+2017-09-01,gen7mixandmegasuspecttest,\N,suspect test
+2017-09-01,gen7nususpecttest,\N,suspect test
+2017-09-01,gen7oususpecttest,\N,suspect test
+2017-09-01,gen7pubeta,\N,beta
+2017-09-01,gen7pususpecttest,\N,suspect test
+2017-09-01,gen7rususpecttest,\N,suspect test
+2017-09-01,gen7sketchmons,\N,
+2017-09-01,gen7tiershift,\N,
+2017-09-01,gen7uususpecttest,\N,suspect test
+2017-10-01,gen3bl,\N,
+2017-10-01,gen4doublesou,\N,
+2017-10-01,gen4lc,13,too few battles: 30
+2017-10-01,gen4uu,12,too few battles: 20
+2017-10-01,gen5doublesou,20,too few battles: 33
+2017-10-01,gen5lc,19,too few battles: 5
+2017-10-01,gen5nu,18,too few battles: 6
+2017-10-01,gen5ru,17,too few battles: 2
+2017-10-01,gen5uu,16,too few battles: 12
+2017-10-01,gen6battlefactory,\N,
+2017-10-01,gen6battlespotdoubles,\N,battle spot
+2017-10-01,gen6battlespotsingles,\N,battle spot
+2017-10-01,gen6battlespottriples,\N,battle spot
+2017-10-01,gen6lc,28,too few battles: 8
+2017-10-01,gen6nu,26,too few battles: 16
+2017-10-01,gen6pu,27,too few battles: 5
+2017-10-01,gen6ru,25,too few battles: 7
+2017-10-01,gen71v1,\N,
+2017-10-01,gen71v1suspecttest,\N,suspect test
+2017-10-01,gen7almostanyability,\N,
+2017-10-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-10-01,gen7balancedhackmons,\N,
+2017-10-01,gen7battlespotdoubles,\N,battle spot
+2017-10-01,gen7battlespotsingles,\N,battle spot
+2017-10-01,gen7battlespotspecial6,\N,battle spot
+2017-10-01,gen7bssfactory,\N,
+2017-10-01,gen7cap,\N,cap
+2017-10-01,gen7challengecup1v1,\N,
+2017-10-01,gen7doublesoususpecttest,\N,suspect test
+2017-10-01,gen7hackmonscup,\N,
+2017-10-01,gen7mixandmega,\N,
+2017-10-01,gen7monotypesuspecttest,\N,suspect test
+2017-10-01,gen7nususpecttest,\N,suspect test
+2017-10-01,gen7pususpecttest,\N,suspect test
+2017-10-01,gen7rususpecttest,\N,suspect test
+2017-10-01,gen7sketchmons,\N,
+2017-10-01,gen7sketchmonssuspecttest,\N,suspect test
+2017-10-01,gen7tiershift,\N,
+2017-10-01,gen7ultimatez,\N,
+2017-10-01,gen7uususpecttest,\N,suspect test
+2017-11-01,gen4doublesou,\N,
+2017-11-01,gen4lc,13,too few battles: 7
+2017-11-01,gen4uu,12,too few battles: 9
+2017-11-01,gen5doublesou,20,too few battles: 38
+2017-11-01,gen5lc,19,too few battles: 5
+2017-11-01,gen5nu,18,too few battles: 2
+2017-11-01,gen5pu,\N,
+2017-11-01,gen5ru,17,too few battles: 1
+2017-11-01,gen5uu,16,too few battles: 3
+2017-11-01,gen6battlefactory,\N,
+2017-11-01,gen6battlespotdoubles,\N,battle spot
+2017-11-01,gen6battlespotsingles,\N,battle spot
+2017-11-01,gen6battlespottriples,\N,battle spot
+2017-11-01,gen6lc,28,too few battles: 14
+2017-11-01,gen6nu,26,too few battles: 6
+2017-11-01,gen6pu,27,too few battles: 10
+2017-11-01,gen6ru,25,too few battles: 13
+2017-11-01,gen71v1,\N,
+2017-11-01,gen7almostanyability,\N,
+2017-11-01,gen7balancedhackmons,\N,
+2017-11-01,gen7battlespotdoubles,\N,battle spot
+2017-11-01,gen7battlespotsingles,\N,battle spot
+2017-11-01,gen7battlespotspecial6,\N,battle spot
+2017-11-01,gen7battlespotspecial7,\N,battle spot
+2017-11-01,gen7bssfactory,\N,
+2017-11-01,gen7camomons,\N,
+2017-11-01,gen7cap,\N,cap
+2017-11-01,gen7challengecup1v1,\N,
+2017-11-01,gen7doublesoususpecttest,\N,suspect test
+2017-11-01,gen7dragoncup,\N,
+2017-11-01,gen7dualwielding,\N,
+2017-11-01,gen7fullpotential,\N,
+2017-11-01,gen7hackmonscup,\N,
+2017-11-01,gen7johtoxalola,\N,
+2017-11-01,gen7mixandmega,\N,
+2017-11-01,gen7rususpecttest,\N,suspect test
+2017-11-01,gen7sketchmonssuspecttest,\N,suspect test
+2017-11-01,gen7ultimatez,\N,
+2017-11-01,gen7uususpecttest,\N,suspect test
+2017-12-01,gen3ubers,7,too few battles: 7
+2017-12-01,gen4balancedhackmons,\N,
+2017-12-01,gen4ubers,10,too few battles: 1
+2017-12-01,gen4uu,12,too few battles: 0
+2017-12-01,gen5doublesou,20,too few battles: 1
+2017-12-01,gen5pu,\N,
+2017-12-01,gen5ubers,14,too few battles: 2
+2017-12-01,gen6anythinggoes,21,too few battles: 79
+2017-12-01,gen6battlefactory,\N,
+2017-12-01,gen6battlespottriples,\N,battle spot
+2017-12-01,gen6doublesou,31,too few battles: 11
+2017-12-01,gen6ounoteampreview,\N,
+2017-12-01,gen6ubers,22,too few battles: 48
+2017-12-01,gen6uu,24,too few battles: 6
+2017-12-01,gen71v1,\N,
+2017-12-01,gen71v1suspecttest,\N,suspect test
+2017-12-01,gen7almostanyability,\N,
+2017-12-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-12-01,gen7balancedhackmons,\N,
+2017-12-01,gen7battlespotdoubles,\N,battle spot
+2017-12-01,gen7battlespotsingles,\N,battle spot
+2017-12-01,gen7battlespotspecial7,\N,battle spot
+2017-12-01,gen7bssfactory,\N,
+2017-12-01,gen7camomons,\N,
+2017-12-01,gen7cap,\N,cap
+2017-12-01,gen7challengecup1v1,\N,
+2017-12-01,gen7doublesoususpecttest,\N,suspect test
+2017-12-01,gen7dragoncup,\N,
+2017-12-01,gen7dualwielding,\N,
+2017-12-01,gen7fullpotential,\N,
+2017-12-01,gen7hackmonscup,\N,
+2017-12-01,gen7johtoxalola,\N,
+2017-12-01,gen7mediocremons,\N,
+2017-12-01,gen7mixandmega,\N,
+2017-12-01,gen7mixandmegasuspecttest,\N,suspect test
+2017-12-01,gen7monotypesuspecttest,\N,suspect test
+2017-12-01,gen7nususpecttest,\N,suspect test
+2017-12-01,gen7partnersincrime,\N,
+2017-12-01,gen7stabmons,\N,
+2018-01-01,gen1customgame,\N,
+2018-01-01,gen1stabmons,\N,
+2018-01-01,gen1stadium,\N,
+2018-01-01,gen1ubers,1,too few battles: 0
+2018-01-01,gen1uu,3,too few battles: 18
+2018-01-01,gen3customgame,\N,
+2018-01-01,gen3ubers,7,too few battles: 2
+2018-01-01,gen4balancedhackmons,\N,
+2018-01-01,gen4customgame,\N,
+2018-01-01,gen4doublesou,\N,
+2018-01-01,gen4ubers,10,too few battles: 3
+2018-01-01,gen5customgame,\N,
+2018-01-01,gen5gbudoubles,\N,
+2018-01-01,gen5ru,17,too few battles: 49
+2018-01-01,gen6anythinggoes,21,too few battles: 0
+2018-01-01,gen6battlefactory,\N,
+2018-01-01,gen6battlespotdoubles,\N,battle spot
+2018-01-01,gen6cap,\N,cap
+2018-01-01,gen6customgame,\N,
+2018-01-01,gen6monotype,29,too few battles: 1
+2018-01-01,gen6ounoteampreview,\N,
+2018-01-01,gen6ru,25,too few battles: 0
+2018-01-01,gen6triplescustomgame,\N,
+2018-01-01,gen6ubers,22,too few battles: 1
+2018-01-01,gen6uu,24,too few battles: 0
+2018-01-01,gen71v1,\N,
+2018-01-01,gen71v1suspecttest,\N,suspect test
+2018-01-01,gen72v2doubles,\N,
+2018-01-01,gen7almostanyability,\N,
+2018-01-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2018-01-01,gen7alphabetcup,\N,alpha
+2018-01-01,gen7balancedhackmons,\N,
+2018-01-01,gen7battlespotdoubles,\N,battle spot
+2018-01-01,gen7battlespotsingles,\N,battle spot
+2018-01-01,gen7battlespotspecial7,\N,battle spot
+2018-01-01,gen7battlespotspecial8,\N,battle spot
+2018-01-01,gen7bssfactory,\N,
+2018-01-01,gen7camomons,\N,
+2018-01-01,gen7cap,\N,cap
+2018-01-01,gen7challengecup1v1,\N,
+2018-01-01,gen7challengecup2v2,\N,
+2018-01-01,gen7customgame,\N,
+2018-01-01,gen7doublescustomgame,\N,
+2018-01-01,gen7doubleshackmonscup,\N,
+2018-01-01,gen7dragoncup,\N,
+2018-01-01,gen7hackmonscup,\N,
+2018-01-01,gen7inheritance,\N,
+2018-01-01,gen7mediocremons,\N,
+2018-01-01,gen7mixandmega,\N,
+2018-01-01,gen7mixandmegasuspecttest,\N,suspect test
+2018-01-01,gen7nususpecttest,\N,suspect test
+2018-01-01,gen7partnersincrime,\N,
+2018-01-01,gen7rususpecttest,\N,suspect test
+2018-01-01,gen7stabmons,\N,
+2018-01-01,gen7ultrasinnohclassic,\N,
+2018-01-01,gen7uususpecttest,\N,suspect test
+2018-02-01,gen2ouhoohcelebi,\N,
+2018-02-01,gen4lc,13,too few battles: 47
+2018-02-01,gen6battlefactory,\N,
+2018-02-01,gen71v1,\N,
+2018-02-01,gen71v1suspecttest,\N,suspect test
+2018-02-01,gen7almostanyability,\N,
+2018-02-01,gen7alphabetcup,\N,alpha
+2018-02-01,gen7balancedhackmons,\N,
+2018-02-01,gen7balancedhackmonssuspecttest,\N,suspect test
+2018-02-01,gen7battlespotdoubles,\N,battle spot
+2018-02-01,gen7battlespotsingles,\N,battle spot
+2018-02-01,gen7battlespotspecial8,\N,battle spot
+2018-02-01,gen7bssfactory,\N,
+2018-02-01,gen7camomons,\N,
+2018-02-01,gen7cap,\N,cap
+2018-02-01,gen7challengecup1v1,\N,
+2018-02-01,gen7doublesoususpecttest,\N,suspect test
+2018-02-01,gen7hackmonscup,\N,
+2018-02-01,gen7inheritance,\N,
+2018-02-01,gen7middlecup,\N,
+2018-02-01,gen7mixandmega,\N,
+2018-02-01,gen7mixandmegasuspecttest,\N,suspect test
+2018-02-01,gen7nususpecttest,\N,suspect test
+2018-02-01,gen7pususpecttest,\N,suspect test
+2018-02-01,gen7sharedpower,\N,
+2018-02-01,gen7stabmons,\N,
+2018-02-01,gen7ultrasinnohclassic,\N,
+2018-02-01,gen7uususpecttest,\N,suspect test
+2018-03-01,gen11v1,\N,
+2018-03-01,gen1stadium,\N,
+2018-03-01,gen2ouhoohcelebi,\N,
+2018-03-01,gen3ounotyranitar,\N,
+2018-03-01,gen3ubers,7,too few battles: 2
+2018-03-01,gen3uu,9,too few battles: 3
+2018-03-01,gen4customgame,\N,
+2018-03-01,gen4ubers,10,too few battles: 14
+2018-03-01,gen5customgame,\N,
+2018-03-01,gen5doublescustomgame,\N,
+2018-03-01,gen5doublesou,20,too few battles: 4
+2018-03-01,gen5lc,19,too few battles: 1
+2018-03-01,gen5ubers,14,too few battles: 2
+2018-03-01,gen5uu,16,too few battles: 2
+2018-03-01,gen6anythinggoes,21,too few battles: 0
+2018-03-01,gen6battlefactory,\N,
+2018-03-01,gen6battlespotsingles,\N,battle spot
+2018-03-01,gen6customgame,\N,
+2018-03-01,gen6doublescustomgame,\N,
+2018-03-01,gen6ubers,22,too few battles: 5
+2018-03-01,gen6uu,24,too few battles: 2
+2018-03-01,gen71v1,\N,
+2018-03-01,gen72v2doubles,\N,
+2018-03-01,gen7almostanyability,\N,
+2018-03-01,gen7balancedhackmons,\N,
+2018-03-01,gen7balancedhackmonssuspecttest,\N,suspect test
+2018-03-01,gen7battlefactory,\N,
+2018-03-01,gen7battlespotdoubles,\N,battle spot
+2018-03-01,gen7battlespotsingles,\N,battle spot
+2018-03-01,gen7battlespotspecial8,\N,battle spot
+2018-03-01,gen7battlespotspecial9,\N,battle spot
+2018-03-01,gen7bssfactory,\N,
+2018-03-01,gen7camomons,\N,
+2018-03-01,gen7cap,\N,cap
+2018-03-01,gen7caplc,\N,cap
+2018-03-01,gen7challengecup1v1,\N,
+2018-03-01,gen7challengecup2v2,\N,
+2018-03-01,gen7customgame,\N,
+2018-03-01,gen7doublescustomgame,\N,
+2018-03-01,gen7doubleshackmonscup,\N,
+2018-03-01,gen7doublesoususpecttest,\N,suspect test
+2018-03-01,gen7hackmonscup,\N,
+2018-03-01,gen7lcsuspecttest,\N,suspect test
+2018-03-01,gen7middlecup,\N,
+2018-03-01,gen7mixandmega,\N,
+2018-03-01,gen7natureswap,\N,
+2018-03-01,gen7nususpecttest,\N,suspect test
+2018-03-01,gen7sharedpower,\N,
+2018-03-01,gen7stabmons,\N,
+2018-03-01,gen7ultrasinnohclassic,\N,
+2018-03-01,gen7uususpecttest,\N,suspect test
+2018-04-01,gen11v1,\N,
+2018-04-01,gen31v1,\N,
+2018-04-01,gen3ounotyranitar,\N,
+2018-04-01,gen4pu,\N,
+2018-04-01,gen5customgame,\N,
+2018-04-01,gen71v1,\N,
+2018-04-01,gen72v2doubles,\N,
+2018-04-01,gen7350cup,\N,
+2018-04-01,gen7almostanyability,\N,
+2018-04-01,gen7balancedhackmons,\N,
+2018-04-01,gen7battlefactory,\N,
+2018-04-01,gen7battlespotdoubles,\N,battle spot
+2018-04-01,gen7battlespotsingles,\N,battle spot
+2018-04-01,gen7battlespotspecial9,\N,battle spot
+2018-04-01,gen7bssfactory,\N,
+2018-04-01,gen7camomons,\N,
+2018-04-01,gen7cap,\N,cap
+2018-04-01,gen7challengecup1v1,\N,
+2018-04-01,gen7customgame,\N,
+2018-04-01,gen7doublescustomgame,\N,
+2018-04-01,gen7doubleshackmonscup,\N,
+2018-04-01,gen7hackmonscup,\N,
+2018-04-01,gen7linked,\N,
+2018-04-01,gen7metronomebattle,\N,
+2018-04-01,gen7mixandmega,\N,
+2018-04-01,gen7mixandmegasuspecttest,\N,suspect test
+2018-04-01,gen7natureswap,\N,
+2018-04-01,gen7nususpecttest,\N,suspect test
+2018-04-01,gen7pususpecttest,\N,suspect test
+2018-04-01,gen7rususpecttest,\N,suspect test
+2018-04-01,gen7stabmons,\N,
+2018-04-01,gen7stabmonssuspecttest,\N,suspect test
+2018-04-01,gen7ultrakalosclassic,\N,
+2018-05-01,gen2nu,\N,
+2018-05-01,gen31v1,\N,
+2018-05-01,gen5lc,19,too few battles: 37
+2018-05-01,gen71v1,\N,
+2018-05-01,gen7350cup,\N,
+2018-05-01,gen7almostanyability,\N,
+2018-05-01,gen7balancedhackmons,\N,
+2018-05-01,gen7battlefactory,\N,
+2018-05-01,gen7battlespotdoubles,\N,battle spot
+2018-05-01,gen7battlespotsingles,\N,battle spot
+2018-05-01,gen7battlespotspecial10,\N,battle spot
+2018-05-01,gen7battlespotspecial9,\N,battle spot
+2018-05-01,gen7bssfactory,\N,
+2018-05-01,gen7camomons,\N,
+2018-05-01,gen7cap,\N,cap
+2018-05-01,gen7challengecup1v1,\N,
+2018-05-01,gen7doublesoususpecttest,\N,suspect test
+2018-05-01,gen7hackmonscup,\N,
+2018-05-01,gen7inverse,\N,
+2018-05-01,gen7linked,\N,
+2018-05-01,gen7mixandmega,\N,
+2018-05-01,gen7nususpecttest,\N,suspect test
+2018-05-01,gen7pususpecttest,\N,suspect test
+2018-05-01,gen7rususpecttest,\N,suspect test
+2018-05-01,gen7stabmonssuspecttest,\N,suspect test
+2018-05-01,gen7ultrakalosclassic,\N,
+2018-05-01,gen7ultranoholdsbarred,\N,
+2018-05-01,gen7zu,\N,
+2018-06-01,gen2nu,\N,
+2018-06-01,gen4outeampreview,\N,
+2018-06-01,gen6nu,26,too few battles: 60
+2018-06-01,gen6uu,24,too few battles: 1
+2018-06-01,gen71v1,\N,
+2018-06-01,gen7almostanyability,\N,
+2018-06-01,gen7balancedhackmons,\N,
+2018-06-01,gen7battlefactory,\N,
+2018-06-01,gen7battlespotdoubles,\N,battle spot
+2018-06-01,gen7battlespotsingles,\N,battle spot
+2018-06-01,gen7battlespotspecial10,\N,battle spot
+2018-06-01,gen7bssfactory,\N,
+2018-06-01,gen7camomons,\N,
+2018-06-01,gen7cap,\N,cap
+2018-06-01,gen7challengecup1v1,\N,
+2018-06-01,gen7hackmonscup,\N,
+2018-06-01,gen7inverse,\N,
+2018-06-01,gen7mixandmega,\N,
+2018-06-01,gen7nususpecttest,\N,suspect test
+2018-06-01,gen7scalemons,\N,
+2018-06-01,gen7stabmons,\N,
+2018-06-01,gen7suicidecup,\N,
+2018-06-01,gen7uberssuspecttest,\N,suspect test
+2018-06-01,gen7ultranoholdsbarred,\N,
+2018-06-01,gen7uususpecttest,\N,suspect test
+2018-06-01,gen7zu,\N,
+2018-07-01,gen1challengecup,\N,
+2018-07-01,gen1ubers,1,too few battles: 3
+2018-07-01,gen3stabmons,\N,
+2018-07-01,gen4outeampreview,\N,
+2018-07-01,gen71v1,\N,
+2018-07-01,gen7almostanyability,\N,
+2018-07-01,gen7balancedhackmons,\N,
+2018-07-01,gen7balancedhackmonssuspecttest,\N,suspect test
+2018-07-01,gen7battlefactory,\N,
+2018-07-01,gen7battlespotdoubles,\N,battle spot
+2018-07-01,gen7battlespotsingles,\N,battle spot
+2018-07-01,gen7battlespotspecial10,\N,battle spot
+2018-07-01,gen7battlespotspecial11,\N,battle spot
+2018-07-01,gen7bssfactory,\N,
+2018-07-01,gen7cap,\N,cap
+2018-07-01,gen7challengecup1v1,\N,
+2018-07-01,gen7hackmonscup,\N,
+2018-07-01,gen7letsgocup,\N,
+2018-07-01,gen7metagamiate,\N,
+2018-07-01,gen7mixandmega,\N,
+2018-07-01,gen7nususpecttest,\N,suspect test
+2018-07-01,gen7reversed,\N,
+2018-07-01,gen7rususpecttest,\N,suspect test
+2018-07-01,gen7scalemons,\N,
+2018-07-01,gen7stabmons,\N,
+2018-07-01,gen7suicidecup,\N,
+2018-07-01,gen7uberssuspecttest,\N,suspect test
+2018-07-01,gen7ultranoholdsbarred,\N,
+2018-07-01,gen7zu,\N,
+2018-08-01,gen1challengecup,\N,
+2018-08-01,gen2mediocremons,\N,
+2018-08-01,gen2ubers,4,too few battles: 7
+2018-08-01,gen6mixandmega,\N,
+2018-08-01,gen71v1,\N,
+2018-08-01,gen7almostanyability,\N,
+2018-08-01,gen7balancedhackmons,\N,
+2018-08-01,gen7balancedhackmonssuspecttest,\N,suspect test
+2018-08-01,gen7battlefactory,\N,
+2018-08-01,gen7battlespotdoubles,\N,battle spot
+2018-08-01,gen7battlespotsingles,\N,battle spot
+2018-08-01,gen7battlespotspecial11,\N,battle spot
+2018-08-01,gen7bssfactory,\N,
+2018-08-01,gen7cap,\N,cap
+2018-08-01,gen7challengecup1v1,\N,
+2018-08-01,gen7hackmonscup,\N,
+2018-08-01,gen7letsgocup,\N,
+2018-08-01,gen7metagamiate,\N,
+2018-08-01,gen7mixandmega,\N,
+2018-08-01,gen7reversed,\N,
+2018-08-01,gen7rususpecttest,\N,suspect test
+2018-08-01,gen7stabmons,\N,
+2018-08-01,gen7tiershift,\N,
+2018-08-01,gen7zu,\N,
+2018-09-01,gen2mediocremons,\N,
+2018-09-01,gen3tiershift,\N,
+2018-09-01,gen3ubers,7,too few battles: 5
+2018-09-01,gen61v1,\N,
+2018-09-01,gen6mixandmega,\N,
+2018-09-01,gen71v1,\N,
+2018-09-01,gen7almostanyability,\N,
+2018-09-01,gen7balancedhackmons,\N,
+2018-09-01,gen7battlefactory,\N,
+2018-09-01,gen7battlespotdoubles,\N,battle spot
+2018-09-01,gen7battlespotsingles,\N,battle spot
+2018-09-01,gen7battlespotspecial12,\N,battle spot
+2018-09-01,gen7benjaminbutterfree,\N,
+2018-09-01,gen7bssfactory,\N,
+2018-09-01,gen7cap,\N,cap
+2018-09-01,gen7challengecup1v1,\N,
+2018-09-01,gen7hackmonscup,\N,
+2018-09-01,gen7mixandmega,\N,
+2018-09-01,gen7partnersincrime,\N,
+2018-09-01,gen7sketchmons,\N,
+2018-09-01,gen7stabmons,\N,
+2018-09-01,gen7tiershift,\N,
+2018-09-01,gen7zu,\N,
+2018-10-01,gen3tiershift,\N,
+2018-10-01,gen4nu,\N,
+2018-10-01,gen4ubers,10,too few battles: 11
+2018-10-01,gen5monotype,\N,
+2018-10-01,gen61v1,\N,
+2018-10-01,gen71v1,\N,
+2018-10-01,gen72v2doubles,\N,
+2018-10-01,gen7almostanyability,\N,
+2018-10-01,gen7balancedhackmons,\N,
+2018-10-01,gen7battlefactory,\N,
+2018-10-01,gen7battlespotdoubles,\N,battle spot
+2018-10-01,gen7battlespotsingles,\N,battle spot
+2018-10-01,gen7battlespotspecial12,\N,battle spot
+2018-10-01,gen7bssfactory,\N,
+2018-10-01,gen7cap,\N,cap
+2018-10-01,gen7challengecup1v1,\N,
+2018-10-01,gen7godsandfollowers,\N,
+2018-10-01,gen7hackmonscup,\N,
+2018-10-01,gen7mixandmega,\N,
+2018-10-01,gen7partnersincrime,\N,
+2018-10-01,gen7sketchmons,\N,
+2018-10-01,gen7stabmons,\N,
+2018-10-01,gen7ultraspookycup,\N,
+2018-10-01,gen7zu,\N,
+2018-11-01,gen2nu,\N,
+2018-11-01,gen5doublesou,20,too few battles: 43
+2018-11-01,gen5ubers,14,too few battles: 3
+2018-11-01,gen71v1,\N,
+2018-11-01,gen72v2doubles,\N,
+2018-11-01,gen7almostanyability,\N,
+2018-11-01,gen7averagemons,\N,
+2018-11-01,gen7balancedhackmons,\N,
+2018-11-01,gen7battlefactory,\N,
+2018-11-01,gen7battlespotdoubles,\N,battle spot
+2018-11-01,gen7battlespotsingles,\N,battle spot
+2018-11-01,gen7battlespotspecial12,\N,battle spot
+2018-11-01,gen7battlespotspecial13,\N,battle spot
+2018-11-01,gen7bssfactory,\N,
+2018-11-01,gen7cap,\N,cap
+2018-11-01,gen7challengecup1v1,\N,
+2018-11-01,gen7fortemons,\N,
+2018-11-01,gen7godsandfollowers,\N,
+2018-11-01,gen7hackmonscup,\N,
+2018-11-01,gen7letsgodoublesnorestrictions,\N,
+2018-11-01,gen7letsgoou,\N,
+2018-11-01,gen7letsgosinglesnorestrictions,\N,
+2018-11-01,gen7mixandmega,\N,
+2018-11-01,gen7partnersincrime,\N,
+2018-11-01,gen7stabmons,\N,
+2018-11-01,gen7ultraspookycup,\N,
+2018-11-01,gen7zu,\N,
+2018-12-01,gen2nu,\N,
+2018-12-01,gen4pu,\N,
+2018-12-01,gen5doublesou,20,too few battles: 1
+2018-12-01,gen6battlefactory,\N,
+2018-12-01,gen6ubers,22,too few battles: 16
+2018-12-01,gen71v1,\N,
+2018-12-01,gen7almostanyability,\N,
+2018-12-01,gen7averagemons,\N,
+2018-12-01,gen7balancedhackmons,\N,
+2018-12-01,gen7battlefactory,\N,
+2018-12-01,gen7battlespotdoubles,\N,battle spot
+2018-12-01,gen7battlespotsingles,\N,battle spot
+2018-12-01,gen7battlespotspecial13,\N,battle spot
+2018-12-01,gen7battlespotspecial14,\N,battle spot
+2018-12-01,gen7bssfactory,\N,
+2018-12-01,gen7cap,\N,cap
+2018-12-01,gen7challengecup1v1,\N,
+2018-12-01,gen7fortemons,\N,
+2018-12-01,gen7hackmonscup,\N,
+2018-12-01,gen7inheritance,\N,
+2018-12-01,gen7letsgodoublesnorestrictions,\N,
+2018-12-01,gen7letsgodoublesou,\N,
+2018-12-01,gen7letsgohackmons,\N,
+2018-12-01,gen7letsgoou,\N,
+2018-12-01,gen7letsgosinglesnorestrictions,\N,
+2018-12-01,gen7mixandmega,\N,
+2018-12-01,gen7partnersincrime,\N,
+2018-12-01,gen7stabmons,\N,
+2018-12-01,gen7zu,\N,
+2019-01-01,gen1ounotauros,\N,
+2019-01-01,gen3adv200,\N,
+2019-01-01,gen71v1,\N,
+2019-01-01,gen7almostanyability,\N,
+2019-01-01,gen7balancedhackmons,\N,
+2019-01-01,gen7battlespotdoubles,\N,battle spot
+2019-01-01,gen7battlespotsingles,\N,battle spot
+2019-01-01,gen7battlespotspecial14,\N,battle spot
+2019-01-01,gen7cap,\N,cap
+2019-01-01,gen7inheritance,\N,
+2019-01-01,gen7letsgo1v1,\N,
+2019-01-01,gen7letsgodoublesnorestrictions,\N,
+2019-01-01,gen7letsgodoublesou,\N,
+2019-01-01,gen7letsgohackmons,\N,
+2019-01-01,gen7letsgoou,\N,
+2019-01-01,gen7letsgosinglesnorestrictions,\N,
+2019-01-01,gen7mixandmega,\N,
+2019-01-01,gen7partnersincrime,\N,
+2019-01-01,gen7simplesymphony,\N,
+2019-01-01,gen7sketchmons,\N,
+2019-01-01,gen7stabmons,\N,
+2019-01-01,gen7zu,\N,

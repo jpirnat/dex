@@ -4,6 +4,7 @@ create table if not exists `showdown_formats_to_ignore`
 `name` varchar(50) not null,
 
 `format_id` tinyint unsigned null, # nullable
+`reason` varchar(30) not null,
 
 primary key (
 	`month`,
