@@ -1,29 +1,53 @@
 language_id,format_id,name
-2,1,Gen 6 Anything Goes
-2,2,Gen 6 Ubers
-2,3,Gen 6 OU
-2,4,Gen 6 UU
-2,5,Gen 6 RU
-2,6,Gen 6 NU
-2,7,Gen 6 PU
-2,8,Gen 6 Doubles Ubers
-2,9,Gen 6 Doubles OU
-2,10,Gen 6 Doubles UU
-2,11,VGC 2014
-2,12,VGC 2015
-2,13,VGC 2016
-2,14,VGC 2017
-2,15,Gen 7 Anything Goes
-2,16,Gen 7 Ubers
-2,17,Gen 7 OU
-2,18,Gen 7 UU
-2,19,Gen 7 RU
-2,20,Gen 7 NU
-2,21,Gen 7 PU
-2,22,Gen 7 Doubles Ubers
-2,23,Gen 7 Doubles OU
-2,24,Gen 7 Doubles UU
-2,25,VGC 2018
-2,26,VGC 2019 Sun Series
-2,27,VGC 2019 Moon Series
-2,28,VGC 2019 Ultra Series
+2,1,Gen 1 Ubers
+2,2,Gen 1 OU
+2,3,Gen 1 UU
+2,4,Gen 2 Ubers
+2,5,Gen 2 OU
+2,6,Gen 2 UU
+2,7,Gen 3 Ubers
+2,8,Gen 3 OU
+2,9,Gen 3 UU
+2,10,Gen 4 Ubers
+2,11,Gen 4 OU
+2,12,Gen 4 UU
+2,13,Gen 4 LC
+2,14,Gen 5 Ubers
+2,15,Gen 5 OU
+2,16,Gen 5 UU
+2,17,Gen 5 RU
+2,18,Gen 5 NU
+2,19,Gen 5 LC
+2,20,Gen 5 Doubles OU
+2,21,Gen 6 AG
+2,22,Gen 6 Ubers
+2,23,Gen 6 OU
+2,24,Gen 6 UU
+2,25,Gen 6 RU
+2,26,Gen 6 NU
+2,27,Gen 6 PU
+2,28,Gen 6 LC
+2,29,Gen 6 Monotype
+2,30,Gen 6 Doubles Ubers
+2,31,Gen 6 Doubles OU
+2,32,Gen 6 Doubles UU
+2,33,VGC 2014
+2,34,VGC 2015
+2,35,VGC 2016
+2,36,Gen 7 AG
+2,37,Gen 7 Ubers
+2,38,Gen 7 OU
+2,39,Gen 7 UU
+2,40,Gen 7 RU
+2,41,Gen 7 NU
+2,42,Gen 7 PU
+2,43,Gen 7 LC
+2,44,Gen 7 Monotype
+2,45,Gen 7 Doubles Ubers
+2,46,Gen 7 Doubles OU
+2,47,Gen 7 Doubles UU
+2,48,VGC 2017
+2,49,VGC 2018
+2,50,VGC 2019 Sun Series
+2,51,VGC 2019 Moon Series
+2,52,VGC 2019 Ultra Series
