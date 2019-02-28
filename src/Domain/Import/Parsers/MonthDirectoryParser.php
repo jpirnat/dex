@@ -124,7 +124,11 @@ class MonthDirectoryParser
 			$showdownFormatName = $formatRating->showdownFormatName();
 
 			// If the format is unknown, add it to the list of unknown formats.
-			if (!$this->showdownFormatRepository->isKnown($month, $showdownFormatName)) {
+			$formatUnknown = !$this->showdownFormatRepository->isKnown(
+				$month,
+				$showdownFormatName
+			);
+			if ($formatUnknown) {
 				$this->showdownFormatRepository->addUnknown($month, $showdownFormatName);
 			}
 
@@ -132,7 +136,17 @@ class MonthDirectoryParser
 			$stream = $client->request('GET', $link->getUri())->getBody();
 
 			// Parse the usage file.
-			$this->usageFileParser->parse($stream);
+			$totalBattles = $this->usageFileParser->parse($stream);
+
+			// Keep track of which new formats should be ignored because they
+			// don't have enough battles this month.
+			$tooFewBattles = 0 <= $totalBattles && $totalBattles <= 100;
+			if ($formatUnknown && $tooFewBattles) {
+				$yearMonth = $month->format('Y-m');
+				$format = $formatRating->showdownFormatName();
+				$rating = $formatRating->rating();
+				echo "$yearMonth\t$format\t$rating\ttoo few battles: $totalBattles\n";
+			}
 		}
 
 		// Parse each leads file.

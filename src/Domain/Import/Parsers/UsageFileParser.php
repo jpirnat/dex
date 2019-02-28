@@ -34,16 +34,17 @@ class UsageFileParser
 	 *
 	 * @param StreamInterface $stream
 	 *
-	 * @return void
+	 * @return int Total battles, or -1 if the file is empty.
 	 */
-	public function parse(StreamInterface $stream) : void
+	public function parse(StreamInterface $stream) : int
 	{
 		// If the file is empty, there's nothing to parse.
 		if ($stream->getSize() === 0) {
-			return;
+			return -1;
 		}
 
-		\GuzzleHttp\Psr7\readline($stream); // Total battles.
+		$line = \GuzzleHttp\Psr7\readline($stream); // Total battles.
+		$totalBattles = $this->usageFileExtractor->extractTotalBattles($line);
 		\GuzzleHttp\Psr7\readline($stream); // Average weight per team.
 		\GuzzleHttp\Psr7\readline($stream); // Separator.
 		\GuzzleHttp\Psr7\readline($stream); // Column headings.
@@ -58,5 +59,7 @@ class UsageFileParser
 				$this->showdownPokemonRepository->addUnknown($showdownPokemonName);
 			}
 		}
+
+		return $totalBattles;
 	}
 }
