@@ -806,6 +806,8 @@ id,identifier,pokemon_identifier,species_id,is_default_pokemon,introduced_in_ver
 805,stakataka,,805,1,18,5.5,820,-1,stakataka
 806,blacephalon,,806,1,18,1.8,13,-1,blacephalon
 807,zeraora,,807,1,18,1.5,44.5,-1,zeraora
+808,meltan,,808,1,19,0.2,8,-1,meltan
+809,melmetal,,809,1,19,2.5,800,-1,melmetal
 10001,castform-sunny,sunny,351,0,7,0.3,0.8,4,castform
 10002,castform-rainy,rainy,351,0,7,0.3,0.8,4,castform
 10003,castform-snowy,snowy,351,0,7,0.3,0.8,4,castform
@@ -978,3 +980,5 @@ id,identifier,pokemon_identifier,species_id,is_default_pokemon,introduced_in_ver
 10170,necrozma-dusk-mane,dusk-mane,800,0,18,3.8,460,-1,necrozma-dusk_mane
 10171,necrozma-dawn-wings,dawn-wings,800,0,18,4.2,350,-1,necrozma-dawn_wings
 10172,necrozma-ultra,ultra,800,0,18,7.5,230,-1,necrozma-dusk_mane
+10173,pikachu-partner,partner,25,0,19,0.4,6,4,pikachu-starter
+10174,eevee-partner,partner,133,0,19,0.3,6.5,1,eevee-starter

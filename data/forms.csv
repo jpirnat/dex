@@ -806,6 +806,8 @@ id,identifier,form_identifier,pokemon_id,is_default_form,introduced_in_version_g
 805,stakataka,,805,1,18,0
 806,blacephalon,,806,1,18,0
 807,zeraora,,807,1,18,0
+808,meltan,,808,1,19,0
+809,melmetal,,809,1,19,0
 10001,castform-sunny,sunny,10001,1,7,1
 10002,castform-rainy,rainy,10002,1,7,1
 10003,castform-snowy,snowy,10003,1,7,1
@@ -978,6 +980,8 @@ id,identifier,form_identifier,pokemon_id,is_default_form,introduced_in_version_g
 10170,necrozma-dusk-mane,dusk-mane,10170,1,18,0
 10171,necrozma-dawn-wings,dawn-wings,10171,1,18,0
 10172,necrozma-ultra,ultra,10172,1,18,1
+10173,pikachu-partner,partner,10173,1,19,0
+10174,eevee-partner,partner,10174,1,19,0
 20001,unown-b,b,201,0,5,0
 20002,unown-c,c,201,0,5,0
 20003,unown-d,d,201,0,5,0
