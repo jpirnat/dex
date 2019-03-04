@@ -85,7 +85,6 @@ class LanguageMiddleware implements MiddlewareInterface
 
 		// If the user is requesting to change their language, store it in a cookie.
 		if ($setNewLanguage) {
-			/** @var SetCookie $setCookie */
 			$setCookie = SetCookie::create(self::LANGUAGE_COOKIE);
 			$setCookie = $setCookie->withValue((string) $languageId);
 			$setCookie = $setCookie->withExpires(new DateTime('+5 years'));
