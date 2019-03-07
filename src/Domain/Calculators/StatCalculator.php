@@ -7,9 +7,22 @@ use Jp\Dex\Domain\Natures\Nature;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 class StatCalculator
 {
+	/** @var int $PERFECT_IV_GEN_1 */
+	private const PERFECT_IV_GEN_1 = 15;
+
+	/** @var int $PERFECT_IV_GEN_3 */
+	private const PERFECT_IV_GEN_3 = 31;
+
+	/** @var int $MAX_EV_GEN_1 */
+	private const MAX_EV_GEN_1 = 65535;
+
+	/** @var int $MAX_EV_GEN_3 */
+	private const MAX_EV_GEN_3 = 252;
+
 	/**
 	 * Calculate a Pokémon's HP stat in generations 1 or 2.
 	 *
@@ -153,5 +166,41 @@ class StatCalculator
 		}
 
 		return 1;
+	}
+
+	/**
+	 * Get the perfect IV value for this generation.
+	 *
+	 * @param GenerationId $generationId
+	 *
+	 * @return int
+	 */
+	public function getPerfectIv(GenerationId $generationId) : int
+	{
+		$generation = $generationId->value();
+
+		if ($generation === 1 || $generation === 2) {
+			return self::PERFECT_IV_GEN_1;
+		}
+
+		return self::PERFECT_IV_GEN_3;
+	}
+
+	/**
+	 * Get the max EV value for this generation.
+	 *
+	 * @param GenerationId $generationId
+	 *
+	 * @return int
+	 */
+	public function getMaxEv(GenerationId $generationId) : int
+	{
+		$generation = $generationId->value();
+
+		if ($generation === 1 || $generation === 2) {
+			return self::MAX_EV_GEN_1;
+		}
+
+		return self::MAX_EV_GEN_3;
 	}
 }
