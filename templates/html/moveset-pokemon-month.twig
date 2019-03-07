@@ -186,36 +186,13 @@
 		<tbody>
 			{% for spread in spreads %}
 				<tr>
-					<td>{{ spread.nature.name|e }}</td>
-					<td>
-						{{ spread.evs.hp|e }}
-						/
-						{{ spread.evs.atk|e }}{{ spread.nature.atk|e }}
-						/
-						{{ spread.evs.def|e }}{{ spread.nature.def|e }}
-						/
-						{{ spread.evs.spa|e }}{{ spread.nature.spa|e }}
-						/
-						{{ spread.evs.spd|e }}{{ spread.nature.spd|e }}
-						/
-						{{ spread.evs.spe|e }}{{ spread.nature.spe|e }}
+					<td>{{ spread.nature|e }}</td>
+					<td>{{ spread.evs|e }}</td>
 					</td>
 					<td class="number">
 						{{ spread.percent|e }}
 					</td>
-					<td>
-						{{ spread.stats.hp|e }}
-						/
-						{{ spread.stats.atk|e }}
-						/
-						{{ spread.stats.def|e }}
-						/
-						{{ spread.stats.spa|e }}
-						/
-						{{ spread.stats.spd|e }}
-						/
-						{{ spread.stats.spe|e }}
-					</td>
+					<td>{{ spread.stats|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>

@@ -90,6 +90,7 @@ class SpreadModel
 	) : void {
 		// Get the format.
 		$format = $this->formatRepository->getById($formatId);
+		$generationId = $format->getGenerationId();
 
 		// Get moveset rated spread records.
 		$movesetRatedSpreads = $this->movesetRatedSpreadRepository->getByMonthAndFormatAndRatingAndPokemon(
@@ -101,18 +102,17 @@ class SpreadModel
 
 		// Get the Pokémon's base stats.
 		$baseStats = $this->baseStatRepository->getByGenerationAndPokemon(
-			$format->getGenerationId(),
+			$generationId,
 			$pokemonId
 		);
 
 		// Assume the Pokémon has perfect IVs.
 		$ivSpread = new StatValueContainer();
-		$ivSpread->add(new StatValue(new StatId(StatId::HP), 31));
-		$ivSpread->add(new StatValue(new StatId(StatId::ATTACK), 31));
-		$ivSpread->add(new StatValue(new StatId(StatId::DEFENSE), 31));
-		$ivSpread->add(new StatValue(new StatId(StatId::SPECIAL_ATTACK), 31));
-		$ivSpread->add(new StatValue(new StatId(StatId::SPECIAL_DEFENSE), 31));
-		$ivSpread->add(new StatValue(new StatId(StatId::SPEED), 31));
+		$statIds = StatId::getByGeneration($generationId);
+		$perfectIv = $this->statCalculator->getPerfectIv($generationId);
+		foreach ($statIds as $statId) {
+			$ivSpread->add(new StatValue($statId, $perfectIv));
+		}
 
 		// Calculate the Pokémon's stats for each spread.
 		foreach ($movesetRatedSpreads as $movesetRatedSpread) {
@@ -126,19 +126,47 @@ class SpreadModel
 				$movesetRatedSpread->getNatureId()
 			);
 
-			$statSpread = $this->statCalculator->all3(
-				$baseStats,
-				$ivSpread,
-				$movesetRatedSpread->getEvSpread(),
-				$format->getLevel(),
-				$nature
-			);
+			$evSpread = $movesetRatedSpread->getEvSpread();
+
+			// Get this spread's calculated stats.
+			if ($generationId->value() === 1 || $generationId->value() === 2) {
+				// Pokémon Showdown simplifies the stat formula for gens 1 and 2.
+				// The real formula takes the square root of the EV. So, we need
+				// to give the formula the square of the EV from Showdown.
+				$evSpread = new StatValueContainer();
+				$calcEvSpread = new StatValueContainer();
+				foreach ($statIds as $statId) {
+					// For Special, use what was imported as Special Attack.
+					$actingStatId = $statId->value() !== StatId::SPECIAL
+						? $statId
+						: new StatId(StatId::SPECIAL_ATTACK);
+					$value = $movesetRatedSpread->getEvSpread()->get($actingStatId)->getValue();
+					$evSpread->add(new StatValue($statId, $value));
+					$calcEvSpread->add(new StatValue($statId, $value ** 2));
+				}
+
+				$statSpread = $this->statCalculator->all1(
+					$generationId,
+					$baseStats,
+					$ivSpread,
+					$calcEvSpread,
+					$format->getLevel()
+				);
+			} else {
+				$statSpread = $this->statCalculator->all3(
+					$baseStats,
+					$ivSpread,
+					$evSpread,
+					$format->getLevel(),
+					$nature
+				);
+			}
 
 			$this->spreadDatas[] = new SpreadData(
 				$natureName->getName(),
 				$nature->getIncreasedStatId(),
 				$nature->getDecreasedStatId(),
-				$movesetRatedSpread->getEvSpread(),
+				$evSpread,
 				$movesetRatedSpread->getPercent(),
 				$statSpread
 			);

@@ -158,48 +158,42 @@ class MovesetPokemonMonthView
 
 		// Compile all spread data into the right form.
 		$spreads = [];
-		$statIds = [
-			'hp' =>  new StatId(StatId::HP),
-			'atk' => new StatId(StatId::ATTACK),
-			'def' => new StatId(StatId::DEFENSE),
-			'spa' => new StatId(StatId::SPECIAL_ATTACK),
-			'spd' => new StatId(StatId::SPECIAL_DEFENSE),
-			'spe' => new StatId(StatId::SPEED),
-		];
+		$statIds = StatId::getByGeneration($generation->getId());
 		foreach ($spreadDatas as $spreadData) {
-			// Create nature array with nature name and stat modifiers.
-			$nature = ['name' => $spreadData->getNatureName()];
-
-			foreach ($statIds as $statAbbr => $statId) {
-				$nature[$statAbbr] = ''; // Default.
+			// Create nature array with stat modifiers.
+			$nature = [];
+			foreach ($statIds as $i => $statId) {
+				$nature[$i] = ''; // Default.
 				if ($spreadData->getIncreasedStatId() === null) {
 					continue;
 				}
 				if ($statId->value() === $spreadData->getIncreasedStatId()->value()) {
-					$nature[$statAbbr] = '+';
+					$nature[$i] = '+';
 				}
 				if ($statId->value() === $spreadData->getDecreasedStatId()->value()) {
-					$nature[$statAbbr] = '-';
+					$nature[$i] = '-';
 				}
 			}
 
-			// Create EVs array with each stat's EV.
+			// Create EV spread string.
 			$evSpread = $spreadData->getEvSpread();
 			$evs = [];
-			foreach ($statIds as $statAbbr => $statId) {
-				$evs[$statAbbr] = $evSpread->get($statId)->getValue();
+			foreach ($statIds as $i => $statId) {
+				$evs[] = $evSpread->get($statId)->getValue() . $nature[$i];
 			}
+			$evs = implode(' / ', $evs);
 
-			// Create stats array with each calculated stat.
+			// Create calculated stats string.
 			$statSpread = $spreadData->getStatSpread();
 			$stats = [];
-			foreach ($statIds as $statAbbr => $statId) {
-				$stats[$statAbbr] = $statSpread->get($statId)->getValue();
+			foreach ($statIds as $statId) {
+				$stats[] = $statSpread->get($statId)->getValue();
 			}
+			$stats = implode(' / ', $stats);
 
 			// Put it all together!
 			$spreads[] = [
-				'nature' => $nature,
+				'nature' => $spreadData->getNatureName(),
 				'evs' => $evs,
 				'percent' => $formatter->formatPercent($spreadData->getPercent()),
 				'stats' => $stats,
