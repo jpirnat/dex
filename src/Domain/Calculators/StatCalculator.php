@@ -54,6 +54,52 @@ class StatCalculator
 	}
 
 	/**
+	 * Calculate a Pokémon's stats in generations 1 or 2.
+	 *
+	 * @param GenerationId $generationId
+	 * @param StatValueContainer $baseStats
+	 * @param StatValueContainer $ivSpread
+	 * @param StatValueContainer $evSpread
+	 * @param int $level
+	 *
+	 * @return StatValueContainer
+	 */
+	public function all1(
+		GenerationId $generationId,
+		StatValueContainer $baseStats,
+		StatValueContainer $ivSpread,
+		StatValueContainer $evSpread,
+		int $level
+	) : StatValueContainer {
+		$statSpread = new StatValueContainer();
+
+		$statIds = StatId::getByGeneration($generationId);
+		foreach ($statIds as $statId) {
+			if ($statId->value() === StatId::HP) {
+				// Calculate HP.
+				$value = $this->hp1(
+					(int) $baseStats->get($statId)->getValue(),
+					(int) $ivSpread->get($statId)->getValue(),
+					(int) $evSpread->get($statId)->getValue(),
+					$level
+				);
+				$statSpread->add(new StatValue($statId, $value));
+				continue;
+			}
+
+			$value = $this->other1(
+				(int) $baseStats->get($statId)->getValue(),
+				(int) $ivSpread->get($statId)->getValue(),
+				(int) $evSpread->get($statId)->getValue(),
+				$level
+			);
+			$statSpread->add(new StatValue($statId, $value));
+		}
+
+		return $statSpread;
+	}
+
+	/**
 	 * Calculate a Pokémon's HP stat in generations 3 and above.
 	 *
 	 * @param int $base
@@ -109,35 +155,28 @@ class StatCalculator
 	) : StatValueContainer {
 		$statSpread = new StatValueContainer();
 
-		// Calculate HP.
-		$statId = new StatId(StatId::HP);
-		$value = $this->hp3(
-			(int) $baseStats->get($statId)->getValue(),
-			(int) $ivSpread->get($statId)->getValue(),
-			(int) $evSpread->get($statId)->getValue(),
-			$level
-		);
-		$statSpread->add(new StatValue($statId, $value));
+		$statIds = StatId::getByGeneration(new GenerationId(3));
+		foreach ($statIds as $statId) {
+			if ($statId->value() === StatId::HP) {
+				// Calculate HP.
+				$value = $this->hp3(
+					(int) $baseStats->get($statId)->getValue(),
+					(int) $ivSpread->get($statId)->getValue(),
+					(int) $evSpread->get($statId)->getValue(),
+					$level
+				);
+				$statSpread->add(new StatValue($statId, $value));
+				continue;
+			}
 
-		// Calculate other stats.
-		$otherStatIds = [
-			new StatId(StatId::ATTACK),
-			new StatId(StatId::DEFENSE),
-			new StatId(StatId::SPECIAL_ATTACK),
-			new StatId(StatId::SPECIAL_DEFENSE),
-			new StatId(StatId::SPEED),
-		];
-
-		foreach ($otherStatIds as $otherStatId) {
 			$value = $this->other3(
-				(int) $baseStats->get($otherStatId)->getValue(),
-				(int) $ivSpread->get($otherStatId)->getValue(),
-				(int) $evSpread->get($otherStatId)->getValue(),
+				(int) $baseStats->get($statId)->getValue(),
+				(int) $ivSpread->get($statId)->getValue(),
+				(int) $evSpread->get($statId)->getValue(),
 				$level,
-				$this->getNatureModifier($nature, $otherStatId)
+				$this->getNatureModifier($nature, $statId)
 			);
-
-			$statSpread->add(new StatValue($otherStatId, $value));
+			$statSpread->add(new StatValue($statId, $value));
 		}
 
 		return $statSpread;

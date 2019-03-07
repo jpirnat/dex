@@ -146,17 +146,10 @@ class DexPokemonFactory
 			$pokemonId
 		);
 		$stats = [];
-		// Rely on stats always being in this order.
-		$stats[] = $baseStats->get(new StatId(StatId::HP))->getValue();
-		$stats[] = $baseStats->get(new StatId(StatId::ATTACK))->getValue();
-		$stats[] = $baseStats->get(new StatId(StatId::DEFENSE))->getValue();
-		if ($generationId->value() === 1) {
-			$stats[] = $baseStats->get(new StatId(StatId::SPECIAL))->getValue();
-		} else {
-			$stats[] = $baseStats->get(new StatId(StatId::SPECIAL_ATTACK))->getValue();
-			$stats[] = $baseStats->get(new StatId(StatId::SPECIAL_DEFENSE))->getValue();
+		$statIds = StatId::getByGeneration($generationId);
+		foreach ($statIds as $statId) {
+			$stats[] = $baseStats->get($statId)->getValue();
 		}
-		$stats[] = $baseStats->get(new StatId(StatId::SPEED))->getValue();
 		$stats[] = array_sum($stats); // End with base stat total.
 
 		return new DexPokemon(

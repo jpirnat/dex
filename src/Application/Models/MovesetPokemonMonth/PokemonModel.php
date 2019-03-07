@@ -117,14 +117,7 @@ class PokemonModel
 		$statNames = $this->statNameRepository->getByLanguage($languageId);
 
 		// Put the stat data together.
-		$statIds = [
-			new StatId(StatId::HP),
-			new StatId(StatId::ATTACK),
-			new StatId(StatId::DEFENSE),
-			new StatId(StatId::SPECIAL_ATTACK),
-			new StatId(StatId::SPECIAL_DEFENSE),
-			new StatId(StatId::SPEED),
-		];
+		$statIds = StatId::getByGeneration($generationId);
 		$this->statDatas = [];
 		foreach ($statIds as $statId) {
 			$this->statDatas[] = new StatData(
