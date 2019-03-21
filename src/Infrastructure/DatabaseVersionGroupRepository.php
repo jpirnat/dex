@@ -41,7 +41,8 @@ class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 			'SELECT
 				`identifier`,
 				`generation_id`,
-				`icon`
+				`icon`,
+				`sort`
 			FROM `version_groups`
 			WHERE `id` = :version_group_id
 			LIMIT 1'
@@ -60,7 +61,8 @@ class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 			$versionGroupId,
 			$result['identifier'],
 			new GenerationId($result['generation_id']),
-			$result['icon']
+			$result['icon'],
+			$result['sort']
 		);
 
 		return $versionGroup;
@@ -82,7 +84,8 @@ class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 			'SELECT
 				`id`,
 				`generation_id`,
-				`icon`
+				`icon`,
+				`sort`
 			FROM `version_groups`
 			WHERE `identifier` = :identifier
 			LIMIT 1'
@@ -101,7 +104,8 @@ class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 			new VersionGroupId($result['id']),
 			$identifier,
 			new GenerationId($result['generation_id']),
-			$result['icon']
+			$result['icon'],
+			$result['sort']
 		);
 
 		return $versionGroup;

@@ -17,6 +17,9 @@ class VersionGroup
 	/** @var string $icon */
 	private $icon;
 
+	/** @var int $sort */
+	private $sort;
+
 	/**
 	 * Constructor.
 	 *
@@ -24,17 +27,20 @@ class VersionGroup
 	 * @param string $identifier
 	 * @param GenerationId $generationId
 	 * @param string $icon
+	 * @param int $sort
 	 */
 	public function __construct(
 		VersionGroupId $versionGroupId,
 		string $identifier,
 		GenerationId $generationId,
-		string $icon
+		string $icon,
+		int $sort
 	) {
 		$this->id = $versionGroupId;
 		$this->identifier = $identifier;
 		$this->generationId = $generationId;
 		$this->icon = $icon;
+		$this->sort = $sort;
 	}
 
 	/**
@@ -75,5 +81,15 @@ class VersionGroup
 	public function getIcon() : string
 	{
 		return $this->icon;
+	}
+
+	/**
+	 * Get the version group's sort value.
+	 *
+	 * @return int
+	 */
+	public function getSort() : int
+	{
+		return $this->sort;
 	}
 }
