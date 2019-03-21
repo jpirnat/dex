@@ -8,13 +8,12 @@ use Jp\Dex\Application\Models\MovesetPokemonAveraged\ItemData;
 use Jp\Dex\Application\Models\MovesetPokemonAveraged\MoveData;
 use Jp\Dex\Application\Models\MovesetPokemonAveraged\MovesetPokemonAveragedModel;
 use Psr\Http\Message\ResponseInterface;
-use Twig_Environment;
 use Zend\Diactoros\Response\HtmlResponse;
 
 class MovesetPokemonAveragedView
 {
-	/** @var Twig_Environment $twig */
-	private $twig;
+	/** @var RendererInterface $renderer */
+	private $renderer;
 
 	/** @var BaseView $baseView */
 	private $baseView;
@@ -31,20 +30,20 @@ class MovesetPokemonAveragedView
 	/**
 	 * Constructor.
 	 *
-	 * @param Twig_Environment $twig
+	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
 	 * @param MovesetPokemonAveragedModel $movesetPokemonAveragedModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
-		Twig_Environment $twig,
+		RendererInterface $renderer,
 		BaseView $baseView,
 		MovesetPokemonAveragedModel $movesetPokemonAveragedModel,
 		IntlFormatterFactory $formatterFactory,
 		DexFormatter $dexFormatter
 	) {
-		$this->twig = $twig;
+		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->movesetPokemonAveragedModel = $movesetPokemonAveragedModel;
 		$this->formatterFactory = $formatterFactory;
@@ -161,7 +160,7 @@ class MovesetPokemonAveragedView
 			],
 		];
 
-		$content = $this->twig->render(
+		$content = $this->renderer->render(
 			'html/moveset-pokemon-averaged.twig',
 			$this->baseView->getBaseVariables() + [
 				'start' => $start,

@@ -5,13 +5,12 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\NotFoundModel;
 use Psr\Http\Message\ResponseInterface;
-use Twig_Environment;
 use Zend\Diactoros\Response\HtmlResponse;
 
 class NotFoundView
 {
-	/** @var Twig_Environment $twig */
-	private $twig;
+	/** @var RendererInterface $renderer */
+	private $renderer;
 
 	/** @var BaseView $baseView */
 	private $baseView;
@@ -22,16 +21,16 @@ class NotFoundView
 	/**
 	 * Constructor.
 	 *
-	 * @param Twig_Environment $twig
+	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
 	 * @param NotFoundModel $notFoundModel
 	 */
 	public function __construct(
-		Twig_Environment $twig,
+		RendererInterface $renderer,
 		BaseView $baseView,
 		NotFoundModel $notFoundModel
 	) {
-		$this->twig = $twig;
+		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->notFoundModel = $notFoundModel;
 	}
@@ -49,7 +48,7 @@ class NotFoundView
 			],
 		];
 
-		$content = $this->twig->render(
+		$content = $this->renderer->render(
 			'html/404.twig',
 			$this->baseView->getBaseVariables() + [
 				'title' => '404 Not Found',

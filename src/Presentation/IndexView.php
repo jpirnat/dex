@@ -4,13 +4,12 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Psr\Http\Message\ResponseInterface;
-use Twig_Environment;
 use Zend\Diactoros\Response\HtmlResponse;
 
 class IndexView
 {
-	/** @var Twig_Environment $twig */
-	private $twig;
+	/** @var RendererInterface $renderer */
+	private $renderer;
 
 	/** @var BaseView $baseView */
 	private $baseView;
@@ -18,12 +17,12 @@ class IndexView
 	/**
 	 * Constructor.
 	 *
-	 * @param Twig_Environment $twig
+	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
 	 */
-	public function __construct(Twig_Environment $twig, BaseView $baseView)
+	public function __construct(RendererInterface $renderer, BaseView $baseView)
 	{
-		$this->twig = $twig;
+		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 	}
 
@@ -34,7 +33,7 @@ class IndexView
 	 */
 	public function index() : ResponseInterface
 	{
-		$content = $this->twig->render(
+		$content = $this->renderer->render(
 			'html/index.twig',
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Home',

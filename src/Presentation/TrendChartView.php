@@ -13,14 +13,13 @@ use Jp\Dex\Domain\Stats\Trends\Lines\UsageAbilityTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageItemTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageMoveTrendLine;
 use Psr\Http\Message\ResponseInterface;
-use Twig_Environment;
 use Zend\Diactoros\Response\HtmlResponse;
 use Zend\Diactoros\Response\JsonResponse;
 
 class TrendChartView
 {
-	/** @var Twig_Environment $twig */
-	private $twig;
+	/** @var RendererInterface $renderer */
+	private $renderer;
 
 	/** @var BaseView $baseView */
 	private $baseView;
@@ -31,16 +30,16 @@ class TrendChartView
 	/**
 	 * Constructor.
 	 *
-	 * @param Twig_Environment $twig
+	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
 	 * @param TrendChartModel $trendChartModel
 	 */
 	public function __construct(
-		Twig_Environment $twig,
+		RendererInterface $renderer,
 		BaseView $baseView,
 		TrendChartModel $trendChartModel
 	) {
-		$this->twig = $twig;
+		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->trendChartModel = $trendChartModel;
 	}
@@ -68,7 +67,7 @@ class TrendChartView
 			]
 		];
 
-		$content = $this->twig->render(
+		$content = $this->renderer->render(
 			'html/trend-chart.twig',
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Stats - Trends - Chart',

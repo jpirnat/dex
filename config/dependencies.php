@@ -48,14 +48,17 @@ $rule = [
 $dice = $dice->addRule('$dbsetup', $rule);
 
 
-// Twig
+// Templating
 $rule = [
 	'constructParams' => [
 		__DIR__ . '/../templates',
 	],
 	'shared' => true,
 ];
-$dice = $dice->addRule(Twig_Loader_Filesystem::class, $rule);
+$dice = $dice->addRule(\Twig\Loader\FilesystemLoader::class, $rule);
+
+$rule = ['instanceOf' => \Twig\Loader\FilesystemLoader::class];
+$dice = $dice->addRule(\Twig\Loader\LoaderInterface::class, $rule);
 
 $rule = [
 	'shared' => true,
@@ -66,7 +69,11 @@ $rule = [
 		]
 	],
 ];
-$dice = $dice->addRule(Twig_Environment::class, $rule);
+$dice = $dice->addRule(\Twig\Environment::class, $rule);
+
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\TwigRenderer::class];
+$dice = $dice->addRule(\Jp\Dex\Presentation\RendererInterface::class, $rule);
+
 
 // Middleware
 $environment = getenv('ENVIRONMENT');
@@ -80,9 +87,6 @@ $dice = $dice->addRule(\Jp\Dex\Application\Middleware\HtmlErrorMiddleware::class
 
 
 // Interfaces
-$rule = ['instanceOf' => Twig_Loader_Filesystem::class];
-$dice = $dice->addRule(Twig_LoaderInterface::class, $rule);
-
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseAbilityDescriptionRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface::class, $rule);
 

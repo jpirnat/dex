@@ -5,13 +5,12 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\DexAbilityModel;
 use Psr\Http\Message\ResponseInterface;
-use Twig_Environment;
 use Zend\Diactoros\Response\HtmlResponse;
 
 class DexAbilityView
 {
-	/** @var Twig_Environment $twig */
-	private $twig;
+	/** @var RendererInterface $renderer */
+	private $renderer;
 
 	/** @var BaseView $baseView */
 	private $baseView;
@@ -25,18 +24,18 @@ class DexAbilityView
 	/**
 	 * Constructor.
 	 *
-	 * @param Twig_Environment $twig
+	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
 	 * @param DexAbilityModel $dexAbilityModel
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
-		Twig_Environment $twig,
+		RendererInterface $renderer,
 		BaseView $baseView,
 		DexAbilityModel $dexAbilityModel,
 		DexFormatter $dexFormatter
 	) {
-		$this->twig = $twig;
+		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->dexAbilityModel = $dexAbilityModel;
 		$this->dexFormatter = $dexFormatter;
@@ -77,7 +76,7 @@ class DexAbilityView
 			]
 		];
 
-		$content = $this->twig->render(
+		$content = $this->renderer->render(
 			'html/dex/ability.twig',
 			$this->baseView->getBaseVariables() + [
 				'generation' => [

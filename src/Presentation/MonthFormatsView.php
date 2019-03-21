@@ -6,13 +6,12 @@ namespace Jp\Dex\Presentation;
 use Jp\Dex\Application\Models\MonthFormats\FormatData;
 use Jp\Dex\Application\Models\MonthFormats\MonthFormatsModel;
 use Psr\Http\Message\ResponseInterface;
-use Twig_Environment;
 use Zend\Diactoros\Response\HtmlResponse;
 
 class MonthFormatsView
 {
-	/** @var Twig_Environment $twig */
-	private $twig;
+	/** @var RendererInterface $renderer */
+	private $renderer;
 
 	/** @var BaseView $baseView */
 	private $baseView;
@@ -26,18 +25,18 @@ class MonthFormatsView
 	/**
 	 * Constructor.
 	 *
-	 * @param Twig_Environment $twig
+	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
 	 * @param MonthFormatsModel $monthFormatsModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
-		Twig_Environment $twig,
+		RendererInterface $renderer,
 		BaseView $baseView,
 		MonthFormatsModel $monthFormatsModel,
 		IntlFormatterFactory $formatterFactory
 	) {
-		$this->twig = $twig;
+		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->monthFormatsModel = $monthFormatsModel;
 		$this->formatterFactory = $formatterFactory;
@@ -91,7 +90,7 @@ class MonthFormatsView
 			]
 		];
 
-		$content = $this->twig->render(
+		$content = $this->renderer->render(
 			'html/month-formats.twig',
 			$this->baseView->getBaseVariables() + [
 				// TODO: title - "Month Year formats"?

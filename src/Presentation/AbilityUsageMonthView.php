@@ -6,13 +6,12 @@ namespace Jp\Dex\Presentation;
 use Jp\Dex\Application\Models\AbilityUsageMonth\AbilityUsageData;
 use Jp\Dex\Application\Models\AbilityUsageMonth\AbilityUsageMonthModel;
 use Psr\Http\Message\ResponseInterface;
-use Twig_Environment;
 use Zend\Diactoros\Response\HtmlResponse;
 
 class AbilityUsageMonthView
 {
-	/** @var Twig_Environment $twig */
-	private $twig;
+	/** @var RendererInterface $renderer */
+	private $renderer;
 
 	/** @var BaseView $baseView */
 	private $baseView;
@@ -26,18 +25,18 @@ class AbilityUsageMonthView
 	/**
 	 * Constructor.
 	 *
-	 * @param Twig_Environment $twig
+	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
 	 * @param AbilityUsageMonthModel $abilityUsageMonthModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
-		Twig_Environment $twig,
+		RendererInterface $renderer,
 		BaseView $baseView,
 		IntlFormatterFactory $formatterFactory,
 		AbilityUsageMonthModel $abilityUsageMonthModel
 	) {
-		$this->twig = $twig;
+		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->abilityUsageMonthModel = $abilityUsageMonthModel;
 		$this->formatterFactory = $formatterFactory;
@@ -109,7 +108,7 @@ class AbilityUsageMonthView
 			],
 		];
 
-		$content = $this->twig->render(
+		$content = $this->renderer->render(
 			'html/ability-usage-month.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,

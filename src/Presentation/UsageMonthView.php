@@ -6,13 +6,12 @@ namespace Jp\Dex\Presentation;
 use Jp\Dex\Application\Models\UsageMonth\UsageData;
 use Jp\Dex\Application\Models\UsageMonth\UsageMonthModel;
 use Psr\Http\Message\ResponseInterface;
-use Twig_Environment;
 use Zend\Diactoros\Response\HtmlResponse;
 
 class UsageMonthView
 {
-	/** @var Twig_Environment $twig */
-	private $twig;
+	/** @var RendererInterface $renderer */
+	private $renderer;
 
 	/** @var BaseView $baseView */
 	private $baseView;
@@ -26,18 +25,18 @@ class UsageMonthView
 	/**
 	 * Constructor.
 	 *
-	 * @param Twig_Environment $twig
+	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
 	 * @param UsageMonthModel $usageMonthModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
-		Twig_Environment $twig,
+		RendererInterface $renderer,
 		BaseView $baseView,
 		UsageMonthModel $usageMonthModel,
 		IntlFormatterFactory $formatterFactory
 	) {
-		$this->twig = $twig;
+		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->usageMonthModel = $usageMonthModel;
 		$this->formatterFactory = $formatterFactory;
@@ -110,7 +109,7 @@ class UsageMonthView
 			],
 		];
 
-		$content = $this->twig->render(
+		$content = $this->renderer->render(
 			'html/usage-month.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,

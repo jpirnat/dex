@@ -6,13 +6,12 @@ namespace Jp\Dex\Presentation;
 use DateTime;
 use Jp\Dex\Application\Models\StatsIndexModel;
 use Psr\Http\Message\ResponseInterface;
-use Twig_Environment;
 use Zend\Diactoros\Response\HtmlResponse;
 
 class StatsIndexView
 {
-	/** @var Twig_Environment $twig */
-	private $twig;
+	/** @var RendererInterface $renderer */
+	private $renderer;
 
 	/** @var BaseView $baseView */
 	private $baseView;
@@ -23,16 +22,16 @@ class StatsIndexView
 	/**
 	 * Constructor.
 	 *
-	 * @param Twig_Environment $twig
+	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
 	 * @param StatsIndexModel $statsIndexModel
 	 */
 	public function __construct(
-		Twig_Environment $twig,
+		RendererInterface $renderer,
 		BaseView $baseView,
 		StatsIndexModel $statsIndexModel
 	) {
-		$this->twig = $twig;
+		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->statsIndexModel = $statsIndexModel;
 	}
@@ -76,7 +75,7 @@ class StatsIndexView
 			],
 		];
 
-		$content = $this->twig->render(
+		$content = $this->renderer->render(
 			'html/stats-index.twig',
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Competitive Pokémon Stats Archive',

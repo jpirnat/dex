@@ -12,13 +12,12 @@ use Jp\Dex\Application\Models\MovesetPokemonMonth\SpreadData;
 use Jp\Dex\Application\Models\MovesetPokemonMonth\TeammateData;
 use Jp\Dex\Domain\Stats\StatId;
 use Psr\Http\Message\ResponseInterface;
-use Twig_Environment;
 use Zend\Diactoros\Response\HtmlResponse;
 
 class MovesetPokemonMonthView
 {
-	/** @var Twig_Environment $twig */
-	private $twig;
+	/** @var RendererInterface $renderer */
+	private $renderer;
 
 	/** @var BaseView $baseView */
 	private $baseView;
@@ -35,20 +34,20 @@ class MovesetPokemonMonthView
 	/**
 	 * Constructor.
 	 *
-	 * @param Twig_Environment $twig
+	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
 	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
-		Twig_Environment $twig,
+		RendererInterface $renderer,
 		BaseView $baseView,
 		MovesetPokemonMonthModel $movesetPokemonMonthModel,
 		IntlFormatterFactory $formatterFactory,
 		DexFormatter $dexFormatter
 	) {
-		$this->twig = $twig;
+		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
 		$this->formatterFactory = $formatterFactory;
@@ -287,7 +286,7 @@ class MovesetPokemonMonthView
 			],
 		];
 
-		$content = $this->twig->render(
+		$content = $this->renderer->render(
 			'html/moveset-pokemon-month.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,

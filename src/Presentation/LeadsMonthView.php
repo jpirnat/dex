@@ -6,13 +6,12 @@ namespace Jp\Dex\Presentation;
 use Jp\Dex\Application\Models\LeadsMonth\LeadsData;
 use Jp\Dex\Application\Models\LeadsMonth\LeadsMonthModel;
 use Psr\Http\Message\ResponseInterface;
-use Twig_Environment;
 use Zend\Diactoros\Response\HtmlResponse;
 
 class LeadsMonthView
 {
-	/** @var Twig_Environment $twig */
-	private $twig;
+	/** @var RendererInterface $renderer */
+	private $renderer;
 
 	/** @var BaseView $baseView */
 	private $baseView;
@@ -26,18 +25,18 @@ class LeadsMonthView
 	/**
 	 * Constructor.
 	 *
-	 * @param Twig_Environment $twig
+	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
 	 * @param LeadsMonthModel $leadsMonthModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
-		Twig_Environment $twig,
+		RendererInterface $renderer,
 		BaseView $baseView,
 		LeadsMonthModel $leadsMonthModel,
 		IntlFormatterFactory $formatterFactory
 	) {
-		$this->twig = $twig;
+		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->leadsMonthModel = $leadsMonthModel;
 		$this->formatterFactory = $formatterFactory;
@@ -110,7 +109,7 @@ class LeadsMonthView
 			]
 		];
 
-		$content = $this->twig->render(
+		$content = $this->renderer->render(
 			'html/leads-month.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,
