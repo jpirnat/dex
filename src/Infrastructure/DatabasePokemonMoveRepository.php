@@ -29,12 +29,13 @@ class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterface
 
 	/**
 	 * Get Pokémon moves by Pokémon, in this generation and earlier. Does not
-	 * include moves learned via Sketch.
+	 * include the typed Hidden Powers, or moves learned via Sketch.
 	 *
 	 * @param PokemonId $pokemonId
 	 * @param GenerationId $generationId
 	 *
-	 * @return PokemonMove[]
+	 * @return PokemonMove[] Ordered by level, then sort, for easier parsing by
+	 *     DexPokemonMovesModel.
 	 */
 	public function getByPokemonAndGeneration(
 		PokemonId $pokemonId,
@@ -52,10 +53,16 @@ class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterface
 				ON `pm`.`version_group_id` = `vg`.`id`
 			WHERE `pm`.`pokemon_id` = :pokemon_id
 				AND `vg`.`generation_id` <= :generation_id
-				AND `pm`.`move_method_id` <> :sketch'
+				AND `pm`.`move_id` NOT BETWEEN :hp_begin AND :hp_end
+				AND `pm`.`move_method_id` <> :sketch
+			ORDER BY
+				`pm`.`level` ASC,
+				`pm`.`sort` ASC'
 		);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':hp_begin', MoveId::TYPED_HIDDEN_POWER_BEGIN, PDO::PARAM_INT);
+		$stmt->bindValue(':hp_end', MoveId::TYPED_HIDDEN_POWER_END, PDO::PARAM_INT);
 		$stmt->bindValue(':sketch', MoveMethodId::SKETCH, PDO::PARAM_INT);
 		$stmt->execute();
 

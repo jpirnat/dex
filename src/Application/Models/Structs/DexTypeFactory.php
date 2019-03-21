@@ -94,4 +94,34 @@ class DexTypeFactory
 
 		return $types;
 	}
+
+	/**
+	 * Get all dex types for this generation and language.
+	 *
+	 * @param GenerationId $generationId
+	 * @param LanguageId $languageId
+	 *
+	 * @return DexType[] Indexed by type id.
+	 */
+	public function getAll(GenerationId $generationId, LanguageId $languageId) : array
+	{
+		$types = $this->typeRepository->getMainByGeneration($generationId);
+		$typeIcons = $this->typeIconRepository->getByGenerationAndLanguage(
+			$generationId,
+			$languageId
+		);
+
+		$dexTypes = [];
+
+		foreach ($types as $type) {
+			$typeId = $type->getId()->value();
+
+			$dexTypes[$typeId] = new DexType(
+				$types[$typeId]->getIdentifier(),
+				$typeIcons[$typeId]->getImage()
+			);
+		}
+
+		return $dexTypes;
+	}
 }

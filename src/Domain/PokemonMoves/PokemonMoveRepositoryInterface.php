@@ -10,12 +10,13 @@ interface PokemonMoveRepositoryInterface
 {
 	/**
 	 * Get Pokémon moves by Pokémon, in this generation and earlier. Does not
-	 * include moves learned via Sketch.
+	 * include the typed Hidden Powers, or moves learned via Sketch.
 	 *
 	 * @param PokemonId $pokemonId
 	 * @param GenerationId $generationId
 	 *
-	 * @return PokemonMove[]
+	 * @return PokemonMove[] Ordered by level, then sort, for easier parsing by
+	 *     DexPokemonMovesModel.
 	 */
 	public function getByPokemonAndGeneration(
 		PokemonId $pokemonId,
