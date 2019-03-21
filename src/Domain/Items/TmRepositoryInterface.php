@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Items;
 
 use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface TmRepositoryInterface
@@ -23,4 +24,16 @@ interface TmRepositoryInterface
 		VersionGroupId $versionGroupId,
 		MoveId $moveId
 	) : TechnicalMachine;
+
+	/**
+	 * Get TMs between these two generations, inclusive. This method is used to
+	 * get all potentially relevant TMs for the dex Pokémon page.
+	 *
+	 * @param GenerationId $begin
+	 * @param GenerationId $end
+	 *
+	 * @return TechnicalMachine[][] Indexed first by version group id and then
+	 *     by move id.
+	 */
+	public function getBetween(GenerationId $begin, GenerationId $end) : array;
 }

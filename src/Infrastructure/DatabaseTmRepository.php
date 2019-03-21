@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Items\TechnicalMachine;
 use Jp\Dex\Domain\Items\TmNotFoundException;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
@@ -72,5 +73,50 @@ class DatabaseTmRepository implements TmRepositoryInterface
 		);
 
 		return $tm;
+	}
+
+	/**
+	 * Get TMs between these two generations, inclusive. This method is used to
+	 * get all potentially relevant TMs for the dex Pokémon page.
+	 *
+	 * @param GenerationId $begin
+	 * @param GenerationId $end
+	 *
+	 * @return TechnicalMachine[][] Indexed first by version group id and then
+	 *     by move id.
+	 */
+	public function getBetween(GenerationId $begin, GenerationId $end) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`tm`.`version_group_id`,
+				`tm`.`is_hm`,
+				`tm`.`number`,
+				`tm`.`item_id`,
+				`tm`.`move_id`
+			FROM `technical_machines` AS `tm`
+			INNER JOIN `version_groups` AS `vg`
+				ON `tm`.`version_group_id` = `vg`.`id`
+			WHERE `vg`.`generation_id` BETWEEN :begin AND :end'
+		);
+		$stmt->bindValue(':begin', $begin->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':end', $end->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$tms = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$tm = new TechnicalMachine(
+				new VersionGroupId($result['version_group_id']),
+				(bool) $result['is_hm'],
+				$result['number'],
+				new ItemId($result['item_id']),
+				new MoveId($result['move_id'])
+			);
+
+			$tms[$result['version_group_id']][$result['move_id']] = $tm;
+		}
+
+		return $tms;
 	}
 }

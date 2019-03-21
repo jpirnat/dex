@@ -28,4 +28,15 @@ interface VersionGroupRepositoryInterface
 	 * @return VersionGroup
 	 */
 	public function getByIdentifier(string $identifier) : VersionGroup;
+
+	/**
+	 * Get version groups between these two generations, inclusive. This method
+	 * is used to get all relevant version groups for the dex Pokémon page.
+	 *
+	 * @param GenerationId $begin
+	 * @param GenerationId $end
+	 *
+	 * @return VersionGroup[] Indexed by id, ordered by sort.
+	 */
+	public function getBetween(GenerationId $begin, GenerationId $end) : array;
 }

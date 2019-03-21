@@ -34,7 +34,7 @@
 		<tbody>
 			{% for format in formats %}
 				<tr>
-					<td>{{ format.name }}</td>
+					<td>{{ format.name|e }}</td>
 					{% for rating in format.ratings %}
 						<td>
 							<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}">

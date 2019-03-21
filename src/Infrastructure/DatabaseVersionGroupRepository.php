@@ -110,4 +110,47 @@ class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 
 		return $versionGroup;
 	}
+
+	/**
+	 * Get version groups between these two generations, inclusive. This method
+	 * is used to get all relevant version groups for the dex Pokémon page.
+	 *
+	 * @param GenerationId $begin
+	 * @param GenerationId $end
+	 *
+	 * @return VersionGroup[] Indexed by id, ordered by sort.
+	 */
+	public function getBetween(GenerationId $begin, GenerationId $end) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`icon`,
+				`sort`
+			FROM `version_groups`
+			WHERE `generation_id` BETWEEN :begin AND :end
+			ORDER BY `sort` ASC'
+		);
+		$stmt->bindValue(':begin', $begin->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':end', $end->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['icon'],
+				$result['sort']
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
 }
