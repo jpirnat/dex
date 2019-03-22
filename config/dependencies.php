@@ -321,6 +321,7 @@ $dice = $dice->addRule(\Jp\Dex\Application\Models\DateModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexAbilitiesModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexAbilityModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexNaturesModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\DexPokemon\DexPokemonModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexTypeModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexTypesModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\ErrorModel::class, $rule);

@@ -6,6 +6,7 @@ use Jp\Dex\Application\Controllers\BreedingChainsController;
 use Jp\Dex\Application\Controllers\DexAbilitiesController;
 use Jp\Dex\Application\Controllers\DexAbilityController;
 use Jp\Dex\Application\Controllers\DexNaturesController;
+use Jp\Dex\Application\Controllers\DexPokemonController;
 use Jp\Dex\Application\Controllers\DexTypeController;
 use Jp\Dex\Application\Controllers\DexTypesController;
 use Jp\Dex\Application\Controllers\ErrorController;
@@ -31,6 +32,7 @@ use Jp\Dex\Presentation\BreedingChainsView;
 use Jp\Dex\Presentation\DexAbilitiesView;
 use Jp\Dex\Presentation\DexAbilityView;
 use Jp\Dex\Presentation\DexNaturesView;
+use Jp\Dex\Presentation\DexPokemonView;
 use Jp\Dex\Presentation\DexTypesView;
 use Jp\Dex\Presentation\DexTypeView;
 use Jp\Dex\Presentation\ErrorView;
@@ -101,6 +103,17 @@ $routes = [
 		'controllerClass' => DexNaturesController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => DexNaturesView::class,
+		'viewMethod' => 'index',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/dex/$generationIdentifier/pokemon/$pokemonIdentifier", [
+		'controllerClass' => DexPokemonController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => DexPokemonView::class,
 		'viewMethod' => 'index',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
