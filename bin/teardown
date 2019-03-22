@@ -14,7 +14,7 @@ $tables = require __DIR__ . '/../sql/schema/stats/tables.php';
 $tables = array_reverse($tables);
 
 foreach ($tables as $table) {
-	$database->exec("DROP TABLE `$table`");
+	$database->exec("DROP TABLE IF EXISTS `$table`");
 	echo "Removed $table\n";
 }
 
@@ -23,7 +23,7 @@ $tables = require __DIR__ . '/../sql/schema/dex/tables.php';
 $tables = array_reverse($tables);
 
 foreach ($tables as $table) {
-	$database->exec("DROP TABLE `$table`");
+	$database->exec("DROP TABLE IF EXISTS `$table`");
 	echo "Removed $table\n";
 }
 

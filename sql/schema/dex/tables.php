@@ -65,6 +65,7 @@ return [
 	'move_flags',
 	'technical_machines',
 	'move_methods',
+	'move_method_names',
 	'pokemon_moves',
 	'exclusive_z_moves',
 

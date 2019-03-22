@@ -73,7 +73,7 @@ class Type
 	}
 
 	/**
-	 * Get the generation this type was introduced in.
+	 * Get the generation id this type was introduced in.
 	 *
 	 * @return GenerationId
 	 */

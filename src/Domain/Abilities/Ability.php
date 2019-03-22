@@ -54,7 +54,7 @@ class Ability
 	}
 
 	/**
-	 * Get the generation this ability was introduced in.
+	 * Get the version group id this ability was introduced in.
 	 *
 	 * @return VersionGroupId
 	 */

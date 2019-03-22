@@ -60,7 +60,7 @@ class Move
 	}
 
 	/**
-	 * Get the version group this move was introduced in.
+	 * Get the version group id this move was introduced in.
 	 *
 	 * @return VersionGroupId
 	 */

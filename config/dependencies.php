@@ -162,6 +162,12 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface::class, 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMoveDescriptionRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMoveMethodNameRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMoveMethodRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMoveNameRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Moves\MoveNameRepositoryInterface::class, $rule);
 

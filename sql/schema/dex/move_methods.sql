@@ -4,6 +4,7 @@ create table if not exists `move_methods`
 
 `identifier` varchar(12) not null,
 `introduced_in_generation_id` tinyint unsigned not null,
+`sort` tinyint unsigned not null,
 
 primary key (`id`),
 unique key (`identifier`),

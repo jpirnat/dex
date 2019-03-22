@@ -66,7 +66,7 @@ class Item
 	}
 
 	/**
-	 * Get the generation this item was introduced in.
+	 * Get the version group id this item was introduced in.
 	 *
 	 * @return VersionGroupId
 	 */
