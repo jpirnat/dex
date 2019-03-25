@@ -83,4 +83,54 @@ class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterface
 
 		return $pokemonMoves;
 	}
+
+	/**
+	 * Get Pokémon moves by move, in this generation and earlier. Does not
+	 * include moves learned via Sketch.
+	 *
+	 * @param MoveId $moveId
+	 * @param GenerationId $generationId
+	 *
+	 * @return PokemonMove[]
+	 */
+	public function getByMoveAndGeneration(
+		MoveId $moveId,
+		GenerationId $generationId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`pm`.`pokemon_id`,
+				`pm`.`version_group_id`,
+				`pm`.`move_method_id`,
+				`pm`.`level`,
+				`pm`.`sort`
+			FROM `pokemon_moves` AS `pm`
+			INNER JOIN `version_groups` AS `vg`
+				ON `pm`.`version_group_id` = `vg`.`id`
+			WHERE `pm`.`move_id` = :move_id
+				AND `vg`.`generation_id` <= :generation_id
+				AND `pm`.`move_method_id` <> :sketch'
+		);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':sketch', MoveMethodId::SKETCH, PDO::PARAM_INT);
+		$stmt->execute();
+
+		$pokemonMoves = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$pokemonMove = new PokemonMove(
+				new PokemonId($result['pokemon_id']),
+				new VersionGroupId($result['version_group_id']),
+				$moveId,
+				new MoveMethodId($result['move_method_id']),
+				$result['level'],
+				$result['sort']
+			);
+
+			$pokemonMoves[] = $pokemonMove;
+		}
+
+		return $pokemonMoves;
+	}
 }

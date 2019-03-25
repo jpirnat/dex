@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\PokemonMoves;
 
+use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
@@ -20,6 +21,20 @@ interface PokemonMoveRepositoryInterface
 	 */
 	public function getByPokemonAndGeneration(
 		PokemonId $pokemonId,
+		GenerationId $generationId
+	) : array;
+
+	/**
+	 * Get Pokémon moves by move, in this generation and earlier. Does not
+	 * include moves learned via Sketch.
+	 *
+	 * @param MoveId $moveId
+	 * @param GenerationId $generationId
+	 *
+	 * @return PokemonMove[]
+	 */
+	public function getByMoveAndGeneration(
+		MoveId $moveId,
 		GenerationId $generationId
 	) : array;
 }
