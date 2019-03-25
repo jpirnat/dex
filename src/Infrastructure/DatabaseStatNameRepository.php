@@ -25,18 +25,19 @@ class DatabaseStatNameRepository implements StatNameRepositoryInterface
 	}
 
 	/**
-	 * Get stat names by language. Indexed by stat id.
+	 * Get stat names by language.
 	 *
 	 * @param LanguageId $languageId
 	 *
-	 * @return StatName[]
+	 * @return StatName[] Indexed by stat id.
 	 */
 	public function getByLanguage(LanguageId $languageId) : array
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				`stat_id`,
-				`name`
+				`name`,
+				`abbreviation`
 			FROM `stat_names`
 			WHERE `language_id` = :language_id'
 		);
@@ -49,7 +50,8 @@ class DatabaseStatNameRepository implements StatNameRepositoryInterface
 			$statName = new StatName(
 				$languageId,
 				new StatId($result['stat_id']),
-				$result['name']
+				$result['name'],
+				$result['abbreviation']
 			);
 
 			$statNames[$result['stat_id']] = $statName;

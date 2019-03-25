@@ -38,6 +38,9 @@ class Pokemon
 	/** @var string $smogonDexIdentifier */
 	private $smogonDexIdentifier;
 
+	/** @var int $sort */
+	private $sort;
+
 	/**
 	 * Constructor.
 	 *
@@ -51,6 +54,7 @@ class Pokemon
 	 * @param float $weightKg
 	 * @param int $genderRatio
 	 * @param string $smogonDexIdentifier
+	 * @param int $sort
 	 */
 	public function __construct(
 		PokemonId $pokemonId,
@@ -62,7 +66,8 @@ class Pokemon
 		float $heightM,
 		float $weightKg,
 		int $genderRatio,
-		string $smogonDexIdentifier
+		string $smogonDexIdentifier,
+		int $sort
 	) {
 		$this->id = $pokemonId;
 		$this->identifier = $identifier;
@@ -74,6 +79,7 @@ class Pokemon
 		$this->weightKg = $weightKg;
 		$this->genderRatio = $genderRatio;
 		$this->smogonDexIdentifier = $smogonDexIdentifier;
+		$this->sort = $sort;
 	}
 
 	/**
@@ -175,5 +181,15 @@ class Pokemon
 	public function getSmogonDexIdentifier() : string
 	{
 		return $this->smogonDexIdentifier;
+	}
+
+	/**
+	 * Get the Pokémon's sort value.
+	 *
+	 * @return int
+	 */
+	public function getSort() : int
+	{
+		return $this->sort;
 	}
 }

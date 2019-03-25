@@ -47,7 +47,8 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 				`height_m`,
 				`weight_kg`,
 				`gender_ratio`,
-				`smogon_dex_identifier`
+				`smogon_dex_identifier`,
+				`sort`
 			FROM `pokemon`
 			WHERE `id` = :pokemon_id
 			LIMIT 1'
@@ -72,7 +73,8 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 			(float) $result['height_m'],
 			(float) $result['weight_kg'],
 			$result['gender_ratio'],
-			$result['smogon_dex_identifier']
+			$result['smogon_dex_identifier'],
+			$result['sort']
 		);
 
 		return $pokemon;
@@ -100,7 +102,8 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 				`height_m`,
 				`weight_kg`,
 				`gender_ratio`,
-				`smogon_dex_identifier`
+				`smogon_dex_identifier`,
+				`sort`
 			FROM `pokemon`
 			WHERE `identifier` = :identifier
 			LIMIT 1'
@@ -125,16 +128,17 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 			(float) $result['height_m'],
 			(float) $result['weight_kg'],
 			$result['gender_ratio'],
-			$result['smogon_dex_identifier']
+			$result['smogon_dex_identifier'],
+			$result['sort']
 		);
 
 		return $pokemon;
 	}
 
 	/**
-	 * Get all Pokémon. Indexed by Pokémon id.
+	 * Get all Pokémon.
 	 *
-	 * @return Pokemon[]
+	 * @return Pokemon[] Indexed by id. Ordered by sort value.
 	 */
 	public function getAll() : array
 	{
@@ -149,8 +153,10 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 				`height_m`,
 				`weight_kg`,
 				`gender_ratio`,
-				`smogon_dex_identifier`
-			FROM `pokemon`'
+				`smogon_dex_identifier`,
+				`sort`
+			FROM `pokemon`
+			ORDER BY `sort` ASC'
 		);
 		$stmt->execute();
 
@@ -167,7 +173,8 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 				(float) $result['height_m'],
 				(float) $result['weight_kg'],
 				$result['gender_ratio'],
-				$result['smogon_dex_identifier']
+				$result['smogon_dex_identifier'],
+				$result['sort']
 			);
 
 			$pokemons[$result['id']] = $pokemon;
@@ -181,7 +188,7 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 	 *
 	 * @param PokemonId $pokemonId
 	 *
-	 * @return Pokemon[]
+	 * @return Pokemon[] Indexed by id.
 	 */
 	public function getTransformationsOf(PokemonId $pokemonId) : array
 	{
@@ -211,7 +218,8 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 				`p`.`height_m`,
 				`p`.`weight_kg`,
 				`p`.`gender_ratio`,
-				`p`.`smogon_dex_identifier`
+				`p`.`smogon_dex_identifier`,
+				`p`.`sort`
 			FROM `transformation_group_pokemon` AS `t`
 			INNER JOIN `pokemon` AS `p`
 				ON `t`.`pokemon_id` = `p`.`id`

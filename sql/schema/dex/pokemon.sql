@@ -11,6 +11,7 @@ create table if not exists `pokemon`
 `weight_kg` decimal(4, 1) not null,
 `gender_ratio` tinyint signed not null,
 `smogon_dex_identifier` varchar(20) not null,
+`sort` smallint unsigned not null,
 
 primary key (`id`),
 unique key (`identifier`),

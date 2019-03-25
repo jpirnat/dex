@@ -29,9 +29,9 @@ interface PokemonRepositoryInterface
 	public function getByIdentifier(string $identifier) : Pokemon;
 
 	/**
-	 * Get all Pokémon. Indexed by Pokémon id.
+	 * Get all Pokémon.
 	 *
-	 * @return Pokemon[]
+	 * @return Pokemon[] Indexed by id. Ordered by sort.
 	 */
 	public function getAll() : array;
 
@@ -40,7 +40,7 @@ interface PokemonRepositoryInterface
 	 *
 	 * @param PokemonId $pokemonId
 	 *
-	 * @return Pokemon[]
+	 * @return Pokemon[] Indexed by id.
 	 */
 	public function getTransformationsOf(PokemonId $pokemonId) : array;
 }

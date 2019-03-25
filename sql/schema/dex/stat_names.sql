@@ -4,6 +4,7 @@ create table if not exists `stat_names`
 `stat_id` tinyint unsigned not null,
 
 `name` varchar(11) not null,
+`abbreviation` varchar(3) not null,
 
 primary key (
 	`language_id`,

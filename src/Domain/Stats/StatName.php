@@ -16,21 +16,27 @@ class StatName
 	/** @var string $name */
 	private $name;
 
+	/** @var string $abbreviation */
+	private $abbreviation;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param LanguageId $languageId
 	 * @param StatId $statId
 	 * @param string $name
+	 * @param string $abbreviation
 	 */
 	public function __construct(
 		LanguageId $languageId,
 		StatId $statId,
-		string $name
+		string $name,
+		string $abbreviation
 	) {
 		$this->languageId = $languageId;
 		$this->statId = $statId;
 		$this->name = $name;
+		$this->abbreviation = $abbreviation;
 	}
 
 	/**
@@ -61,5 +67,15 @@ class StatName
 	public function getName() : string
 	{
 		return $this->name;
+	}
+
+	/**
+	 * Get the stat name's abbreviation.
+	 *
+	 * @return string
+	 */
+	public function getAbbreviation() : string
+	{
+		return $this->abbreviation;
 	}
 }

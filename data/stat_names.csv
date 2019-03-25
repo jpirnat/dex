@@ -1,88 +1,88 @@
-language_id,stat_id,name
-1,1,HP
-1,2,こうげき
-1,3,ぼうぎょ
-1,4,すばやさ
-1,5,とくしゅのうりょ
-1,6,めいちゅう
-1,7,かいひ
-1,8,とくこう
-1,9,とくぼう
-2,1,HP
-2,2,Attack
-2,3,Defense
-2,4,Speed
-2,5,Special
-2,6,Accuracy
-2,7,Evasiveness
-2,8,Sp. Atk
-2,9,Sp. Def
-3,1,PV
-3,2,Attaque
-3,3,Défense
-3,4,Vitesse
-3,5,Spécial
-3,6,Précision
-3,7,Esquive
-3,8,Atq. Spé.
-3,9,Déf. Spé.
-4,1,KP
-4,2,Angriff
-4,3,Vert.
-4,4,Initiative
-4,5,Spezial
-4,6,Genauigkeit
-4,7,Fluchtwert
-4,8,Sp.-Ang.
-4,9,Sp.-Vert.
-5,1,PS
-5,2,Attacco
-5,3,Difesa
-5,4,Velocità
-5,5,Speciale
-5,6,Precisione
-5,7,Elusione
-5,8,Att. Sp.
-5,9,Dif. Sp.
-6,1,PS
-6,2,Ataque
-6,3,Defensa
-6,4,Velocidad
-6,5,Especial
-6,6,Precisión
-6,7,Evasión
-6,8,At. Esp.
-6,9,Def. Esp.
-7,1,HP
-7,2,공격
-7,3,방어
-7,4,스피드
-7,6,명중
-7,7,회피
-7,8,특수공격
-7,9,특수방어
-8,1,HP
-8,2,こうげき
-8,3,ぼうぎょ
-8,4,すばやさ
-8,5,とくしゅのうりょ
-8,6,めいちゅう
-8,7,かいひ
-8,8,とくこう
-8,9,とくぼう
-9,1,HP
-9,2,攻击
-9,3,防御
-9,4,速度
-9,6,命中
-9,7,闪避
-9,8,特攻
-9,9,特防
-10,1,HP
-10,2,攻擊
-10,3,防禦
-10,4,速度
-10,6,命中
-10,7,閃避
-10,8,特攻
-10,9,特防
+language_id,stat_id,name,abbreviation
+1,1,HP,HP
+1,2,こうげき,Atk
+1,3,ぼうぎょ,Def
+1,4,すばやさ,Spe
+1,5,とくしゅのうりょ,Spc
+1,6,めいちゅう,Acc
+1,7,かいひ,Eva
+1,8,とくこう,SpA
+1,9,とくぼう,SpD
+2,1,HP,HP
+2,2,Attack,Atk
+2,3,Defense,Def
+2,4,Speed,Spe
+2,5,Special,Spc
+2,6,Accuracy,Acc
+2,7,Evasiveness,Eva
+2,8,Sp. Atk,SpA
+2,9,Sp. Def,SpD
+3,1,PV,HP
+3,2,Attaque,Atk
+3,3,Défense,Def
+3,4,Vitesse,Spe
+3,5,Spécial,Spc
+3,6,Précision,Acc
+3,7,Esquive,Eva
+3,8,Atq. Spé.,SpA
+3,9,Déf. Spé.,SpD
+4,1,KP,HP
+4,2,Angriff,Atk
+4,3,Vert.,Def
+4,4,Initiative,Spe
+4,5,Spezial,Spc
+4,6,Genauigkeit,Acc
+4,7,Fluchtwert,Eva
+4,8,Sp.-Ang.,SpA
+4,9,Sp.-Vert.,SpD
+5,1,PS,HP
+5,2,Attacco,Atk
+5,3,Difesa,Def
+5,4,Velocità,Spe
+5,5,Speciale,Spc
+5,6,Precisione,Acc
+5,7,Elusione,Eva
+5,8,Att. Sp.,SpA
+5,9,Dif. Sp.,SpD
+6,1,PS,HP
+6,2,Ataque,Atk
+6,3,Defensa,Def
+6,4,Velocidad,Spe
+6,5,Especial,Spc
+6,6,Precisión,Acc
+6,7,Evasión,Eva
+6,8,At. Esp.,SpA
+6,9,Def. Esp.,SpD
+7,1,HP,HP
+7,2,공격,Atk
+7,3,방어,Def
+7,4,스피드,Spe
+7,6,명중,Acc
+7,7,회피,Eva
+7,8,특수공격,SpA
+7,9,특수방어,SpD
+8,1,HP,HP
+8,2,こうげき,Atk
+8,3,ぼうぎょ,Def
+8,4,すばやさ,Spe
+8,5,とくしゅのうりょ,Spc
+8,6,めいちゅう,Acc
+8,7,かいひ,Eva
+8,8,とくこう,SpA
+8,9,とくぼう,SpD
+9,1,HP,HP
+9,2,攻击,攻击
+9,3,防御,防御
+9,4,速度,速度
+9,6,命中,命中
+9,7,闪避,闪避
+9,8,特攻,特攻
+9,9,特防,特防
+10,1,HP,HP
+10,2,攻擊,攻擊
+10,3,防禦,防禦
+10,4,速度,速度
+10,6,命中,命中
+10,7,閃避,閃避
+10,8,特攻,特攻
+10,9,特防,特防
