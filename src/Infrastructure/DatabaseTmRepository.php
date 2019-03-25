@@ -76,6 +76,44 @@ class DatabaseTmRepository implements TmRepositoryInterface
 	}
 
 	/**
+	 * Get TMs by their move.
+	 *
+	 * @param MoveId $moveId
+	 *
+	 * @return TechnicalMachine[] Indexed by version group id.
+	 */
+	public function getByMove(MoveId $moveId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`version_group_id`,
+				`is_hm`,
+				`number`,
+				`item_id`
+			FROM `technical_machines`
+			WHERE `move_id` = :move_id'
+		);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$tms = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$tm = new TechnicalMachine(
+				new VersionGroupId($result['version_group_id']),
+				(bool) $result['is_hm'],
+				$result['number'],
+				new ItemId($result['item_id']),
+				$moveId
+			);
+
+			$tms[$result['version_group_id']] = $tm;
+		}
+
+		return $tms;
+	}
+
+	/**
 	 * Get TMs between these two generations, inclusive. This method is used to
 	 * get all potentially relevant TMs for the dex Pokémon page.
 	 *

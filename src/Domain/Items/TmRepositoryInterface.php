@@ -26,6 +26,15 @@ interface TmRepositoryInterface
 	) : TechnicalMachine;
 
 	/**
+	 * Get TMs by their move.
+	 *
+	 * @param MoveId $moveId
+	 *
+	 * @return TechnicalMachine[] Indexed by version group id.
+	 */
+	public function getByMove(MoveId $moveId) : array;
+
+	/**
 	 * Get TMs between these two generations, inclusive. This method is used to
 	 * get all potentially relevant TMs for the dex Pokémon page.
 	 *
