@@ -138,7 +138,7 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 	/**
 	 * Get all Pokémon.
 	 *
-	 * @return Pokemon[] Indexed by id. Ordered by sort value.
+	 * @return Pokemon[] Indexed by id. Ordered by sort.
 	 */
 	public function getAll() : array
 	{

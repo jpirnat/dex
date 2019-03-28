@@ -6,8 +6,11 @@ namespace Jp\Dex\Presentation;
 use Jp\Dex\Application\Models\Structs\DexMove;
 use Jp\Dex\Application\Models\Structs\DexPokemon;
 use Jp\Dex\Application\Models\Structs\DexPokemonAbility;
+use Jp\Dex\Application\Models\Structs\DexPokemonMove;
+use Jp\Dex\Application\Models\Structs\DexPokemonMoveMethod;
 use Jp\Dex\Application\Models\Structs\DexType;
 use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\VersionGroup;
 
 class DexFormatter
 {
@@ -31,6 +34,28 @@ class DexFormatter
 		}
 
 		return $g;
+	}
+
+	/**
+	 * Transform an array of version group objects into a renderable data array.
+	 *
+	 * @param VersionGroup[] $versionGroups
+	 *
+	 * @return array
+	 */
+	public function formatVersionGroups(array $versionGroups) : array
+	{
+		$vg = [];
+
+		foreach ($versionGroups as $versionGroup) {
+			$vg[] = [
+				'id' => $versionGroup->getId()->value(),
+				'identifier' => $versionGroup->getIdentifier(),
+				'icon' => $versionGroup->getIcon(),
+			];
+		}
+
+		return $vg;
 	}
 
 	/**
@@ -140,4 +165,71 @@ class DexFormatter
 
 		return $moves;
 	}
+
+	/**
+	 * Transform an array of dex Pokémon move method objects into a renderable
+	 * data array.
+	 *
+	 * @param DexPokemonMoveMethod[] $dexPokemonMoveMethods
+	 *
+	 * @return array
+	 */
+	public function formatDexPokemonMoveMethods(array $dexPokemonMoveMethods) : array
+	{
+		$methods = [];
+
+		foreach ($dexPokemonMoveMethods as $method) {
+			$methods[] = [
+				'identifier' => $method->getIdentifier(),
+				'name' => $method->getName(),
+				'description' => $method->getDescription(),
+				'moves' => $this->formatDexPokemonMoves($method->getMoves()),
+			];
+		}
+
+		return $methods;
+	}
+
+	/**
+	 * Transform an array of dex Pokémon move objects into a renderable data array.
+	 *
+	 * @param DexPokemonMove[] $dexPokemonMoves
+	 *
+	 * @return array
+	 */
+	public function formatDexPokemonMoves(array $dexPokemonMoves) : array
+	{
+		$moves = [];
+
+		foreach ($dexPokemonMoves as $dexPokemonMove) {
+			$power = $dexPokemonMove->getPower();
+			if ($power === 0) {
+				$power = '&mdash;';
+			}
+			if ($power === 1) {
+				$power = '*';
+			}
+
+			$accuracy = $dexPokemonMove->getAccuracy();
+			if ($accuracy === 101) {
+				$accuracy = '&mdash;';
+			}
+
+			$moves[] = [
+				'versionGroupIds' => $dexPokemonMove->getVersionGroupIds(),
+				'identifier' => $dexPokemonMove->getMoveIdentifier(),
+				'name' => $dexPokemonMove->getMoveName(),
+				'type' => $this->formatDexType($dexPokemonMove->getType()),
+				'categoryIcon' => $dexPokemonMove->getCategoryIcon(),
+				'pp' => $dexPokemonMove->getPP(),
+				'power' => $power,
+				'accuracy' => $accuracy,
+				'description' => $dexPokemonMove->getMoveDescription(),
+			];
+		}
+
+		return $moves;
+	}
+
+	
 }

@@ -320,6 +320,7 @@ $dice = $dice->addRule(\Jp\Dex\Application\Models\BreedingChains\BreedingChainsM
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DateModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexAbilitiesModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexAbilityModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\DexMove\DexMoveModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexNaturesModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexPokemon\DexPokemonModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexTypeModel::class, $rule);

@@ -3,9 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\Structs;
 
-use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
-use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
-use Jp\Dex\Domain\Abilities\PokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -32,14 +29,8 @@ class DexPokemonFactory
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
 
-	/** @var PokemonAbilityRepositoryInterface $pokemonAbilityRepository */
-	private $pokemonAbilityRepository;
-
-	/** @var AbilityRepositoryInterface $abilityRepository */
-	private $abilityRepository;
-
-	/** @var AbilityNameRepositoryInterface $abilityNameRepository */
-	private $abilityNameRepository;
+	/** @var DexPokemonAbilityFactory $dexPokemonAbilityFactory */
+	private $dexPokemonAbilityFactory;
 
 	/** @var BaseStatRepositoryInterface $baseStatRepository */
 	private $baseStatRepository;
@@ -54,9 +45,7 @@ class DexPokemonFactory
 	 * @param FormIconRepositoryInterface $formIconRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param PokemonAbilityRepositoryInterface $pokemonAbilityRepository
-	 * @param AbilityRepositoryInterface $abilityRepository
-	 * @param AbilityNameRepositoryInterface $abilityNameRepository
+	 * @param DexPokemonAbilityFactory $dexPokemonAbilityFactory
 	 * @param BaseStatRepositoryInterface $baseStatRepository
 	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
 	 */
@@ -65,9 +54,7 @@ class DexPokemonFactory
 		FormIconRepositoryInterface $formIconRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
-		PokemonAbilityRepositoryInterface $pokemonAbilityRepository,
-		AbilityRepositoryInterface $abilityRepository,
-		AbilityNameRepositoryInterface $abilityNameRepository,
+		DexPokemonAbilityFactory $dexPokemonAbilityFactory,
 		BaseStatRepositoryInterface $baseStatRepository,
 		PokemonTypeRepositoryInterface $pokemonTypeRepository
 	) {
@@ -75,9 +62,7 @@ class DexPokemonFactory
 		$this->formIconRepository = $formIconRepository;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->pokemonAbilityRepository = $pokemonAbilityRepository;
-		$this->abilityRepository = $abilityRepository;
-		$this->abilityNameRepository = $abilityNameRepository;
+		$this->dexPokemonAbilityFactory = $dexPokemonAbilityFactory;
 		$this->baseStatRepository = $baseStatRepository;
 		$this->pokemonTypeRepository = $pokemonTypeRepository;
 	}
@@ -121,24 +106,11 @@ class DexPokemonFactory
 		);
 
 		// Get the Pokémon's abilities.
-		$pokemonAbilities = $this->pokemonAbilityRepository->getByGenerationAndPokemon(
+		$abilities = $this->dexPokemonAbilityFactory->getByPokemon(
 			$generationId,
-			$pokemonId
+			$pokemonId,
+			$languageId
 		);
-		$abilities = [];
-		foreach ($pokemonAbilities as $pokemonAbility) {
-			$ability = $this->abilityRepository->getById($pokemonAbility->getAbilityId());
-			$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
-				$languageId,
-				$ability->getId()
-			);
-
-			$abilities[] = new DexPokemonAbility(
-				$ability->getIdentifier(),
-				$abilityName->getName(),
-				$pokemonAbility->isHiddenAbility()
-			);
-		}
 
 		// Get the Pokémon's base stats.
 		$baseStats = $this->baseStatRepository->getByGenerationAndPokemon(
