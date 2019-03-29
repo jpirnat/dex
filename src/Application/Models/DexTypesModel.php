@@ -69,10 +69,7 @@ class DexTypesModel
 
 		$types = $this->typeRepository->getMainByGeneration($generationId);
 
-		$typeIcons = $this->typeIconRepository->getByGenerationAndLanguage(
-			$generationId,
-			$languageId
-		);
+		$typeIcons = $this->typeIconRepository->getByLanguage($languageId);
 
 		// Consolidate data for each type.
 		$this->types = [];
@@ -82,7 +79,7 @@ class DexTypesModel
 			$this->types[] = [
 				'id' => $type->getId()->value(),
 				'identifier' => $type->getIdentifier(),
-				'icon' => $typeIcon->getImage(),
+				'icon' => $typeIcon->getIcon(),
 			];
 		}
 

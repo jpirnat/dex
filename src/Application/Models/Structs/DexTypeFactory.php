@@ -42,28 +42,25 @@ class DexTypeFactory
 	/**
 	 * Get the dex type for this type.
 	 *
-	 * @param GenerationId $generationId
 	 * @param TypeId $typeId
 	 * @param LanguageId $languageId
 	 *
 	 * @return DexType
 	 */
 	public function getDexType(
-		GenerationId $generationId,
 		TypeId $typeId,
 		LanguageId $languageId
 	) : DexType {
 		$type = $this->typeRepository->getById($typeId);
 
-		$typeIcon = $this->typeIconRepository->getByGenerationAndLanguageAndType(
-			$generationId,
+		$typeIcon = $this->typeIconRepository->getByLanguageAndType(
 			$languageId,
 			$typeId
 		);
 
 		return new DexType(
 			$type->getIdentifier(),
-			$typeIcon->getImage()
+			$typeIcon->getIcon()
 		);
 	}
 
@@ -89,7 +86,7 @@ class DexTypeFactory
 		$types = [];
 
 		foreach ($pokemonTypes as $pokemonType) {
-			$types[] = $this->getDexType($generationId, $pokemonType->getTypeId(), $languageId);
+			$types[] = $this->getDexType($pokemonType->getTypeId(), $languageId);
 		}
 
 		return $types;
@@ -106,10 +103,7 @@ class DexTypeFactory
 	public function getAll(GenerationId $generationId, LanguageId $languageId) : array
 	{
 		$types = $this->typeRepository->getMainByGeneration($generationId);
-		$typeIcons = $this->typeIconRepository->getByGenerationAndLanguage(
-			$generationId,
-			$languageId
-		);
+		$typeIcons = $this->typeIconRepository->getByLanguage($languageId);
 
 		$dexTypes = [];
 
@@ -118,7 +112,7 @@ class DexTypeFactory
 
 			$dexTypes[$typeId] = new DexType(
 				$types[$typeId]->getIdentifier(),
-				$typeIcons[$typeId]->getImage()
+				$typeIcons[$typeId]->getIcon()
 			);
 		}
 

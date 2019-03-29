@@ -77,7 +77,7 @@ class DexMoveFactory
 			$typeId
 		);
 
-		$type = $this->dexTypeFactory->getDexType($generationId, $typeId, $languageId);
+		$type = $this->dexTypeFactory->getDexType($typeId, $languageId);
 
 		$categories = $this->categoryRepository->getAll();
 

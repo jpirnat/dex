@@ -5,49 +5,62 @@ namespace Jp\Dex\Domain\TypeIcons;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\GenerationId;
 
 class TypeIcon
 {
-	/** @var GenerationId $generationId */
-	private $generationId;
-
 	/** @var LanguageId $languageId */
 	private $languageId;
 
 	/** @var TypeId $typeId */
 	private $typeId;
 
-	/** @var string $image */
-	private $image;
+	/** @var string $icon */
+	private $icon;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 * @param TypeId $typeId
-	 * @param string $image
+	 * @param string $icon
 	 */
 	public function __construct(
-		GenerationId $generationId,
 		LanguageId $languageId,
 		TypeId $typeId,
-		string $image
+		string $icon
 	) {
-		$this->generationId = $generationId;
 		$this->languageId = $languageId;
 		$this->typeId = $typeId;
-		$this->image = $image;
+		$this->icon = $icon;
 	}
 
 	/**
-	 * Get the type icon's image.
+	 * Get the type icon's language id.
+	 *
+	 * @return LanguageId
+	 */
+	public function getLanguageId() : LanguageId
+	{
+		return $this->languageId;
+	}
+
+	/**
+	 * Get the type icon's type id.
+	 *
+	 * @return TypeId
+	 */
+	public function getTypeId() : TypeId
+	{
+		return $this->typeId;
+	}
+
+	/**
+	 * Get the type icon's icon.
 	 *
 	 * @return string
 	 */
-	public function getImage() : string
+	public function getIcon() : string
 	{
-		return $this->image;
+		return $this->icon;
 	}
 }
