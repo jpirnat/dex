@@ -49,4 +49,13 @@ interface TypeRepositoryInterface
 	 * @return Type[] Indexed by id.
 	 */
 	public function getMainByGeneration(GenerationId $generationId) : array;
+
+	/**
+	 * Get the types available in this generation.
+	 *
+	 * @param GenerationId $generationId
+	 *
+	 * @return Type[] Indexed by id.
+	 */
+	public function getByGeneration(GenerationId $generationId) : array;
 }

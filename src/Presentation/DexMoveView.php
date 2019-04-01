@@ -54,6 +54,8 @@ class DexMoveView
 		$generation = $generationModel->getGeneration();
 		$generations = $generationModel->getGenerations();
 
+		$move = $this->dexMoveModel->getMove();
+
 		$versionGroups = $this->dexMoveModel->getVersionGroups();
 		$showAbilities = $generation->getId()->value() >= 3;
 
@@ -81,7 +83,7 @@ class DexMoveView
 			'url' => "/dex/$generationIdentifier/moves",
 			'text' => 'Moves',
 		], [
-			'text' => 'TODO',
+			'text' => $move['name'],
 		]];
 
 		$content = $this->renderer->render(
@@ -93,6 +95,9 @@ class DexMoveView
 				],
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
+				'move' => [
+					'identifier' => $move['identifier'],
+				],
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 				'showAbilities' => $showAbilities,
 				'statAbbreviations' => $statAbbreviations,

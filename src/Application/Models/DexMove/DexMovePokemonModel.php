@@ -184,6 +184,17 @@ class DexMovePokemonModel
 		$pokemonBaseStats = [];
 		$pokemonBaseStatTotals = [];
 		foreach ($pokemonIds as $id => $pokemonId) {
+			$pokemonTypes = $this->pokemonTypeRepository->getByGenerationAndPokemon(
+				$generationId,
+				$pokemonId
+			);
+			if ($pokemonTypes === []) {
+				// This Pokémon that used to exist in an older generation does
+				// not exist in the current generation! (It's probably Spiky-eared
+				// Pichu or ???-type Arceus.)
+				continue;
+			}
+
 			$pokemon[$id] = $this->pokemonRepository->getById($pokemonId);
 			$pokemonIcons[$id] = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
 				$generationId,
@@ -197,10 +208,6 @@ class DexMovePokemonModel
 			);
 
 			// Get the Pokémon's dex types.
-			$pokemonTypes = $this->pokemonTypeRepository->getByGenerationAndPokemon(
-				$generationId,
-				$pokemonId
-			);
 			foreach ($pokemonTypes as $pokemonType) {
 				$typeId = $pokemonType->getTypeId()->value();
 				$pokemonsTypes[$id][] = $dexTypes[$typeId];
@@ -230,6 +237,13 @@ class DexMovePokemonModel
 		$dexMovePokemon = [];
 		foreach ($methodsPokemons as $methodId => $methodPokemons) {
 			foreach ($methodPokemons as $pokemonId => $versionGroupData) {
+				if (!isset($pokemon[$pokemonId])) {
+					// This Pokémon that used to exist in an older generation does
+					// not exist in the current generation! (It's probably Spiky-eared
+					// Pichu or ???-type Arceus.)
+					continue;
+				}
+
 				$dexMovePokemon[$methodId][] = new DexMovePokemon(
 					$versionGroupData,
 					$pokemonIcons[$pokemonId]->getImage(),

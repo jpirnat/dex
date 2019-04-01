@@ -102,7 +102,7 @@ class DexTypeFactory
 	 */
 	public function getAll(GenerationId $generationId, LanguageId $languageId) : array
 	{
-		$types = $this->typeRepository->getMainByGeneration($generationId);
+		$types = $this->typeRepository->getByGeneration($generationId);
 		$typeIcons = $this->typeIconRepository->getByLanguage($languageId);
 
 		$dexTypes = [];

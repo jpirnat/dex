@@ -5,6 +5,7 @@ namespace Jp\Dex\Application\Models\DexMove;
 
 use Jp\Dex\Application\Models\GenerationModel;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
@@ -20,9 +21,15 @@ class DexMoveModel
 	/** @var MoveRepositoryInterface $moveRepository */
 	private $moveRepository;
 
+	/** @var MoveNameRepositoryInterface $moveNameRepository */
+	private $moveNameRepository;
+
 	/** @var VersionGroupRepositoryInterface $vgRepository */
 	private $vgRepository;
 
+
+	/** @var array $move */
+	private $move = [];
 
 	/** @var VersionGroup[] $versionGroups */
 	private $versionGroups = [];
@@ -34,17 +41,20 @@ class DexMoveModel
 	 * @param GenerationModel $generationModel
 	 * @param DexMovePokemonModel $dexMovePokemonModel
 	 * @param MoveRepositoryInterface $moveRepository
+	 * @param MoveNameRepositoryInterface $moveNameRepository
 	 * @param VersionGroupRepositoryInterface $vgRepository
 	 */
 	public function __construct(
 		GenerationModel $generationModel,
 		DexMovePokemonModel $dexMovePokemonModel,
 		MoveRepositoryInterface $moveRepository,
+		MoveNameRepositoryInterface $moveNameRepository,
 		VersionGroupRepositoryInterface $vgRepository
 	) {
 		$this->generationModel = $generationModel;
 		$this->dexMovePokemonModel = $dexMovePokemonModel;
 		$this->moveRepository = $moveRepository;
+		$this->moveNameRepository = $moveNameRepository;
 		$this->vgRepository = $vgRepository;
 	}
 
@@ -68,6 +78,14 @@ class DexMoveModel
 		);
 
 		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
+		$moveName = $this->moveNameRepository->getByLanguageAndMove(
+			$languageId,
+			$move->getId()
+		);
+		$this->move = [
+			'identifier' => $move->getIdentifier(),
+			'name' => $moveName->getName(),
+		];
 
 		// Set generations for the generation control.
 		$introducedInVgId = $move->getIntroducedInVersionGroupId();
@@ -79,6 +97,11 @@ class DexMoveModel
 			$introducedInVg->getGenerationId(),
 			$generationId
 		);
+		// Don't include the Japanese Red/Green and Blue version groups.
+		unset($this->versionGroups[1]);
+		unset($this->versionGroups[2]);
+		// Don't include Let's Go Pikachu/Eevee (yet).
+		unset($this->versionGroups[19]);
 
 		$this->dexMovePokemonModel->setData(
 			$move->getId(),
@@ -106,6 +129,16 @@ class DexMoveModel
 	public function getDexMovePokemonModel() : DexMovePokemonModel
 	{
 		return $this->dexMovePokemonModel;
+	}
+
+	/**
+	 * Get the move.
+	 *
+	 * @return array
+	 */
+	public function getMove() : array
+	{
+		return $this->move;
 	}
 
 	/**

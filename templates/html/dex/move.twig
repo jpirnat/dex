@@ -49,7 +49,9 @@
 						{% for versionGroup in versionGroups %}
 							<td>
 								{% if pokemon.versionGroupData[versionGroup.id] %}
-									{% if method.identifier in ['level-up', 'machine'] %}
+									{% if method.identifier in 'level-up' %}
+										{{ pokemon.versionGroupData[versionGroup.id]|e }}
+									{% elseif method.identifier == 'machine' %}
 										{{ pokemon.versionGroupData[versionGroup.id]|e }}
 									{% elseif method.identifier == 'egg' %}
 										<a href="/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.identifier|e }}/breeding/{{ move.identifier|e }}/{{ versionGroup.identifier|e }}" target="_blank">
