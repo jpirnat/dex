@@ -238,9 +238,8 @@ class DexMovePokemonModel
 		foreach ($methodsPokemons as $methodId => $methodPokemons) {
 			foreach ($methodPokemons as $pokemonId => $versionGroupData) {
 				if (!isset($pokemon[$pokemonId])) {
-					// This Pokémon that used to exist in an older generation does
-					// not exist in the current generation! (It's probably Spiky-eared
-					// Pichu or ???-type Arceus.)
+					// This Pokémon that used to exist in an older generation
+					// does not exist in the current generation!
 					continue;
 				}
 
