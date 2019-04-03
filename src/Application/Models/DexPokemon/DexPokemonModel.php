@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroup;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 class DexPokemonModel
@@ -95,9 +96,14 @@ class DexPokemonModel
 			$introducedInVg->getGenerationId(),
 			$generationId
 		);
-		// Don't include the Japanese Red/Green and Blue version groups.
-		unset($this->versionGroups[1]);
-		unset($this->versionGroups[2]);
+
+		// Use the appropriate set of gen 1 games for the language.
+		if ($languageId->isJapanese()) {
+			unset($this->versionGroups[VersionGroupId::RED_BLUE]);
+		} else {
+			unset($this->versionGroups[VersionGroupId::RED_GREEN]);
+			unset($this->versionGroups[VersionGroupId::BLUE]);
+		}
 		// Don't include Let's Go Pikachu/Eevee (yet).
 		unset($this->versionGroups[19]);
 
