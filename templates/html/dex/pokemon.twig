@@ -19,7 +19,7 @@
 		<thead>
 		</thead>
 		{% for method in methods %}
-			<tbody>
+			<tbody id="{{ method.identifier|e }}-moves">
 				<tr>
 					{% for versionGroup in versionGroups %}
 						<th scope="col"><img src="/images/versions/{{ versionGroup.icon|e }}"></th>

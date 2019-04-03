@@ -43,6 +43,11 @@ class BreedingChainsView
 	 */
 	public function index() : ResponseInterface
 	{
+		$generationModel = $this->breedingChainsModel->getGenerationModel();
+		$generation = $generationModel->getGeneration();
+
+		$pokemon = $this->breedingChainsModel->getPokemon();
+
 		$chainsData = $this->breedingChainsModel->getChains();
 		$chains = [];
 		foreach ($chainsData as $chainId => $chain) {
@@ -68,8 +73,19 @@ class BreedingChainsView
 		}
 
 		// Navigational breadcrumbs.
-		$breadcrumbs = [
-		];
+		$generationIdentifier = $generation->getIdentifier();
+		$pokemonIdentifier = $pokemon['identifier'];
+		$breadcrumbs = [[
+			'text' => 'Dex',
+		], [
+			'text' => 'Pokémon',
+		], [
+			'url' => "/dex/$generationIdentifier/pokemon/$pokemonIdentifier",
+			'text' => $pokemon['name'],
+		], [
+			'url' => "/dex/$generationIdentifier/pokemon/$pokemonIdentifier#egg-moves",
+			'text' => 'Breeding',
+		]];
 
 		$content = $this->renderer->render(
 			'html/dex/breeding-chains.twig',

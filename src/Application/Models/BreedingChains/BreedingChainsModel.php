@@ -10,9 +10,7 @@ use Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Moves\Move;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMove;
@@ -20,7 +18,6 @@ use Jp\Dex\Domain\PokemonMoves\PokemonMoveFormatter;
 use Jp\Dex\Domain\Species\SpeciesRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
-use Jp\Dex\Domain\Versions\VersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 class BreedingChainsModel
@@ -62,14 +59,8 @@ class BreedingChainsModel
 	private $pokemonMoveFormatter;
 
 
-	/** @var Pokemon $pokemon */
+	/** @var array $pokemon */
 	private $pokemon;
-
-	/** @var Move $move */
-	private $move;
-
-	/** @var VersionGroup $versionGroup */
-	private $versionGroup;
 
 	/** @var BreedingChainRecord[][] $chains */
 	private $chains = [];
@@ -122,6 +113,7 @@ class BreedingChainsModel
 	/**
 	 * Set breeding chain data for this Pokémon, move, and version group combination.
 	 *
+	 * @param string $generationIdentifier
 	 * @param string $pokemonIdentifier
 	 * @param string $moveIdentifier
 	 * @param string $versionGroupIdentifier
@@ -130,26 +122,34 @@ class BreedingChainsModel
 	 * @return void
 	 */
 	public function setData(
+		string $generationIdentifier,
 		string $pokemonIdentifier,
 		string $moveIdentifier,
 		string $versionGroupIdentifier,
 		LanguageId $languageId
 	) : void {
-		$this->pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
-		$this->move = $this->moveRepository->getByIdentifier($moveIdentifier);
-		$this->versionGroup = $this->versionGroupRepository->getByIdentifier(
+		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
+
+		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
+		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
+		$versionGroup = $this->versionGroupRepository->getByIdentifier(
 			$versionGroupIdentifier
 		);
 
-		$generationId = $this->generationModel->setById(
-			$this->versionGroup->getGenerationId()
+		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+			$languageId,
+			$pokemon->getId()
 		);
+		$this->pokemon = [
+			'identifier' => $pokemon->getIdentifier(),
+			'name' => $pokemonName->getName(),
+		];
 
 		/** @var PokemonMove[][] $chains */
 		$chains = $this->breedingChainFinder->findChains(
-			$this->pokemon->getId(),
-			$this->move->getId(),
-			$this->versionGroup->getId()
+			$pokemon->getId(),
+			$move->getId(),
+			$versionGroup->getId()
 		);
 
 		$this->chains = [];
@@ -229,6 +229,27 @@ class BreedingChainsModel
 			$pokemon->getGenderRatio() . '.png',
 			$this->pokemonMoveFormatter->format($pokemonMove, $languageId)
 		);
+	}
+
+
+	/**
+	 * Get the generation model.
+	 *
+	 * @return GenerationModel
+	 */
+	public function getGenerationModel() : GenerationModel
+	{
+		return $this->generationModel;
+	}
+
+	/**
+	 * Get the Pokémon.
+	 *
+	 * @return array
+	 */
+	public function getPokemon() : array
+	{
+		return $this->pokemon;
 	}
 
 	/**

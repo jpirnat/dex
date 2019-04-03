@@ -40,12 +40,14 @@ class BreedingChainsController
 	{
 		$this->baseController->setBaseVariables($request);
 
+		$generationIdentifier = $request->getAttribute('generationIdentifier');
 		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 		$moveIdentifier = $request->getAttribute('moveIdentifier');
 		$versionGroupIdentifier = $request->getAttribute('versionGroupIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
 		$this->breedingChainsModel->setData(
+			$generationIdentifier,
 			$pokemonIdentifier,
 			$moveIdentifier,
 			$versionGroupIdentifier,
