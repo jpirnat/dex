@@ -92,8 +92,12 @@
 
 	<nav id="quick-links">
 		<ul>
-			<li><a href="#abilities" class="scroll">Abilities</a></li>
-			<li><a href="#items" class="scroll">Items</a></li>
+			{% if showAbilities %}
+				<li><a href="#abilities" class="scroll">Abilities</a></li>
+			{% endif %}
+			{% if showItems %}
+				<li><a href="#items" class="scroll">Items</a></li>
+			{% endif %}
 			<li><a href="#spreads" class="scroll">Spreads</a></li>
 			<li><a href="#moves" class="scroll">Moves</a></li>
 			<li><a href="#teammates" class="scroll">Teammates</a></li>
@@ -101,77 +105,81 @@
 		</ul>
 	</nav>
 
-	<table id="abilities" class="moveset-usage">
-		<caption>Abilities</caption>
-		<thead>
-			<tr>
-				<th>Ability</th>
-				<th>%</th>
-				<th>Δ</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for ability in abilities %}
+	{% if showAbilities %}
+		<table id="abilities" class="moveset-usage">
+			<caption>Abilities</caption>
+			<thead>
 				<tr>
-					<td>
-						<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/abilities/{{ ability.identifier|e }}">
-							{{ ability.name|e }}
-						</a>
-					</td>
-					<td class="number">{{ ability.percent|e }}</td>
-					<td
-						{% if ability.change > 0 %}
-							class="number percent-plus"
-						{% elseif ability.change < 0 %}
-							class="number percent-minus"
-						{% else %}
-							class="number"
-						{% endif %}
-					>
-						<a class="trend-link" href="/stats/trends/chart?type=moveset-ability&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&ability={{ ability.identifier|e }}">
-							{{ ability.changeText|e }}
-						</a>
-					</td>
+					<th>Ability</th>
+					<th>%</th>
+					<th>Δ</th>
 				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+			</thead>
+			<tbody>
+				{% for ability in abilities %}
+					<tr>
+						<td>
+							<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/abilities/{{ ability.identifier|e }}">
+								{{ ability.name|e }}
+							</a>
+						</td>
+						<td class="number">{{ ability.percent|e }}</td>
+						<td
+							{% if ability.change > 0 %}
+								class="number percent-plus"
+							{% elseif ability.change < 0 %}
+								class="number percent-minus"
+							{% else %}
+								class="number"
+							{% endif %}
+						>
+							<a class="trend-link" href="/stats/trends/chart?type=moveset-ability&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&ability={{ ability.identifier|e }}">
+								{{ ability.changeText|e }}
+							</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% endif %}
 
-	<table id="items" class="moveset-usage">
-		<caption>Items</caption>
-		<thead>
-			<tr>
-				<th>Item</th>
-				<th>%</th>
-				<th>Δ</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for item in items %}
+	{% if showItems %}
+		<table id="items" class="moveset-usage">
+			<caption>Items</caption>
+			<thead>
 				<tr>
-					<td>
-						<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
-							{{ item.name|e }}
-						</a>
-					</td>
-					<td class="number">{{ item.percent|e }}</td>
-					<td
-						{% if item.change > 0 %}
-							class="number percent-plus"
-						{% elseif item.change < 0 %}
-							class="number percent-minus"
-						{% else %}
-							class="number"
-						{% endif %}
-					>
-						<a class="trend-link" href="/stats/trends/chart?type=moveset-item&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&item={{ item.identifier|e }}">
-							{{ item.changeText|e }}
-						</a>
-					</td>
+					<th>Item</th>
+					<th>%</th>
+					<th>Δ</th>
 				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+			</thead>
+			<tbody>
+				{% for item in items %}
+					<tr>
+						<td>
+							<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
+								{{ item.name|e }}
+							</a>
+						</td>
+						<td class="number">{{ item.percent|e }}</td>
+						<td
+							{% if item.change > 0 %}
+								class="number percent-plus"
+							{% elseif item.change < 0 %}
+								class="number percent-minus"
+							{% else %}
+								class="number"
+							{% endif %}
+						>
+							<a class="trend-link" href="/stats/trends/chart?type=moveset-item&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&item={{ item.identifier|e }}">
+								{{ item.changeText|e }}
+							</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% endif %}
 
 	<table id="spreads" class="moveset-usage">
 		<caption>Spreads</caption>

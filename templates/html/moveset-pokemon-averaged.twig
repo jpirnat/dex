@@ -56,47 +56,55 @@
 
 	<nav id="quick-links">
 		<ul>
-			<li><a href="#abilities" class="scroll">Abilities</a></li>
-			<li><a href="#items" class="scroll">Items</a></li>
+			{% if showAbilities %}
+				<li><a href="#abilities" class="scroll">Abilities</a></li>
+			{% endif %}
+			{% if showItems %}
+				<li><a href="#items" class="scroll">Items</a></li>
+			{% endif %}
 			<li><a href="#moves" class="scroll">Moves</a></li>
 		</ul>
 	</nav>
 
-	<table id="abilities" class="moveset-usage">
-		<caption>Abilities</caption>
-		<thead>
-			<tr>
-				<th>Ability</th>
-				<th>%</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for ability in abilities %}
+	{% if showAbilities %}
+		<table id="abilities" class="moveset-usage">
+			<caption>Abilities</caption>
+			<thead>
 				<tr>
-					<td>{{ ability.name|e }}</td>
-					<td class="number">{{ ability.percent|e }}</td>
+					<th>Ability</th>
+					<th>%</th>
 				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+			</thead>
+			<tbody>
+				{% for ability in abilities %}
+					<tr>
+						<td>{{ ability.name|e }}</td>
+						<td class="number">{{ ability.percent|e }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% endif %}
 
-	<table id="items" class="moveset-usage">
-		<caption>Items</caption>
-		<thead>
-			<tr>
-				<th>Item</th>
-				<th>%</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for item in items %}
+	{% if showItems %}
+		<table id="items" class="moveset-usage">
+			<caption>Items</caption>
+			<thead>
 				<tr>
-					<td>{{ item.name|e }}</td>
-					<td class="number">{{ item.percent|e }}</td>
+					<th>Item</th>
+					<th>%</th>
 				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+			</thead>
+			<tbody>
+				{% for item in items %}
+					<tr>
+						<td>{{ item.name|e }}</td>
+						<td class="number">{{ item.percent|e }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% endif %}
 
 	<table id="moves" class="moveset-usage">
 		<caption>Moves</caption>

@@ -326,6 +326,8 @@ class MovesetPokemonMonthView
 				'viabilityCeiling' => $viabilityCeiling,
 
 				// The main data.
+				'showAbilities' => $generation->getId()->value() >= 3,
+				'showItems' => $generation->getId()->value() >= 2,
 				'abilities' => $abilities,
 				'items' => $items,
 				'spreads' => $spreads,
