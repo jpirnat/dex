@@ -156,7 +156,7 @@ $routes = [
 		],
 	]],
 
-	['GET', "/dex/pokemon/$pokemonIdentifier/breeding/$moveIdentifier/$versionGroupIdentifier", [
+	['GET', "/dex/$generationIdentifier/pokemon/$pokemonIdentifier/breeding/$moveIdentifier/$versionGroupIdentifier", [
 		'controllerClass' => BreedingChainsController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => BreedingChainsView::class,
