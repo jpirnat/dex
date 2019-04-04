@@ -158,7 +158,7 @@ class DexPokemonMovesModel
 					$tm = $tms[$vgId][$moveId];
 					$number = $tm->isHm()
 						? 'H' . $tm->getNumber()
-						: str_pad((string) $tm->getNumber(), 2, '0');
+						: str_pad((string) $tm->getNumber(), 2, '0', STR_PAD_LEFT);
 					$methodsMoves[$methodId][$moveId][$vgId] = $number;
 					break;
 				default:
