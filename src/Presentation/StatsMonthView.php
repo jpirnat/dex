@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\MonthFormats\FormatData;
-use Jp\Dex\Application\Models\MonthFormats\MonthFormatsModel;
+use Jp\Dex\Application\Models\StatsMonth\FormatData;
+use Jp\Dex\Application\Models\StatsMonth\StatsMonthModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class MonthFormatsView
+class StatsMonthView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;
@@ -16,8 +16,8 @@ class MonthFormatsView
 	/** @var BaseView $baseView */
 	private $baseView;
 
-	/** @var MonthFormatsModel $monthFormatsModel */
-	private $monthFormatsModel;
+	/** @var StatsMonthModel $statsMonthModel */
+	private $statsMonthModel;
 
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
@@ -27,18 +27,18 @@ class MonthFormatsView
 	 *
 	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
-	 * @param MonthFormatsModel $monthFormatsModel
+	 * @param StatsMonthModel $statsMonthModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
-		MonthFormatsModel $monthFormatsModel,
+		StatsMonthModel $statsMonthModel,
 		IntlFormatterFactory $formatterFactory
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
-		$this->monthFormatsModel = $monthFormatsModel;
+		$this->statsMonthModel = $statsMonthModel;
 		$this->formatterFactory = $formatterFactory;
 	}
 
@@ -50,18 +50,18 @@ class MonthFormatsView
 	 */
 	public function index() : ResponseInterface
 	{
-		$month = $this->monthFormatsModel->getMonth();
+		$month = $this->statsMonthModel->getMonth();
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->monthFormatsModel->getLanguageId()
+			$this->statsMonthModel->getLanguageId()
 		);
 
 		// Get the previous month and the next month.
-		$prevMonth = $this->monthFormatsModel->getDateModel()->getPrevMonth();
-		$nextMonth = $this->monthFormatsModel->getDateModel()->getNextMonth();
+		$prevMonth = $this->statsMonthModel->getDateModel()->getPrevMonth();
+		$nextMonth = $this->statsMonthModel->getDateModel()->getNextMonth();
 
 		// Get format data and sort by name.
-		$formatDatas = $this->monthFormatsModel->getFormatDatas();
+		$formatDatas = $this->statsMonthModel->getFormatDatas();
 		uasort(
 			$formatDatas,
 			function (FormatData $a, FormatData $b) : int {
@@ -97,12 +97,12 @@ class MonthFormatsView
 				'breadcrumbs' => $breadcrumbs,
 
 				'prevMonth' => [
-					'show' => $this->monthFormatsModel->doesPrevMonthDataExist(),
+					'show' => $this->statsMonthModel->doesPrevMonthDataExist(),
 					'month' => $prevMonth->format('Y-m'),
 					'text' => $formatter->formatMonth($prevMonth),
 				],
 				'nextMonth' => [
-					'show' => $this->monthFormatsModel->doesNextMonthDataExist(),
+					'show' => $this->statsMonthModel->doesNextMonthDataExist(),
 					'month' => $nextMonth->format('Y-m'),
 					'text' => $formatter->formatMonth($nextMonth),
 				],

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\MonthFormats;
+namespace Jp\Dex\Application\Models\StatsMonth;
 
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\FormatId;
@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 
-class MonthFormatsModel
+class StatsMonthModel
 {
 	/** @var DateModel $dateModel */
 	private $dateModel;

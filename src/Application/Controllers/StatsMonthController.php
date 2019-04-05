@@ -3,30 +3,30 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\MonthFormats\MonthFormatsModel;
+use Jp\Dex\Application\Models\StatsMonth\StatsMonthModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class MonthFormatsController
+class StatsMonthController
 {
 	/** @var BaseController $baseController */
 	private $baseController;
 
-	/** @var MonthFormatsModel $monthFormatsModel */
-	private $monthFormatsModel;
+	/** @var StatsMonthModel $statsMonthModel */
+	private $statsMonthModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param BaseController $baseController
-	 * @param MonthFormatsModel $monthFormatsModel
+	 * @param StatsMonthModel $statsMonthModel
 	 */
 	public function __construct(
 		BaseController $baseController,
-		MonthFormatsModel $monthFormatsModel
+		StatsMonthModel $statsMonthModel
 	) {
 		$this->baseController = $baseController;
-		$this->monthFormatsModel = $monthFormatsModel;
+		$this->statsMonthModel = $statsMonthModel;
 	}
 
 	/**
@@ -44,7 +44,7 @@ class MonthFormatsController
 		$month = $request->getAttribute('month');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->monthFormatsModel->setData(
+		$this->statsMonthModel->setData(
 			$month,
 			$languageId
 		);

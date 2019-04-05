@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\MonthFormats;
+namespace Jp\Dex\Application\Models\StatsMonth;
 
 class FormatData
 {
@@ -32,7 +32,7 @@ class FormatData
 	}
 
 	/**
-	 * Get the format identifier.
+	 * Get the format's identifier.
 	 *
 	 * @return string
 	 */
@@ -42,7 +42,7 @@ class FormatData
 	}
 
 	/**
-	 * Get the format name.
+	 * Get the format's name.
 	 *
 	 * @return string
 	 */
@@ -52,7 +52,7 @@ class FormatData
 	}
 
 	/**
-	 * Get the ratings.
+	 * Get the format's ratings.
 	 *
 	 * @return int[]
 	 */
