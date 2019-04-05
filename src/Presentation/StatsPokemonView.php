@@ -287,7 +287,7 @@ class StatsPokemonView
 		];
 
 		$content = $this->renderer->render(
-			'html/moveset-pokemon-month.twig',
+			'html/stats/pokemon.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,
 				'format' => [

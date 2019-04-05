@@ -109,7 +109,7 @@ class StatsAbilityView
 		];
 
 		$content = $this->renderer->render(
-			'html/ability-usage-month.twig',
+			'html/stats/ability.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,
 				'formatIdentifier' => $formatIdentifier,

@@ -161,7 +161,7 @@ class StatsAveragedPokemonView
 		];
 
 		$content = $this->renderer->render(
-			'html/moveset-pokemon-averaged.twig',
+			'html/stats/averaged-pokemon.twig',
 			$this->baseView->getBaseVariables() + [
 				'start' => $start,
 				'end' => $end,

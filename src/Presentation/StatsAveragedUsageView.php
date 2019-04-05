@@ -99,7 +99,7 @@ class StatsAveragedUsageView
 		];
 
 		$content = $this->renderer->render(
-			'html/usage-averaged.twig',
+			'html/stats/averaged-usage.twig',
 			$this->baseView->getBaseVariables() + [
 				'start' => $start,
 				'end' => $end,

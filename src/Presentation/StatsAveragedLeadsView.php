@@ -101,7 +101,7 @@ class StatsAveragedLeadsView
 		];
 
 		$content = $this->renderer->render(
-			'html/leads-averaged.twig',
+			'html/stats/averaged-leads.twig',
 			$this->baseView->getBaseVariables() + [
 				'start' => $start,
 				'end' => $end,

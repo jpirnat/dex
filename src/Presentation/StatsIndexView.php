@@ -76,7 +76,7 @@ class StatsIndexView
 		];
 
 		$content = $this->renderer->render(
-			'html/stats-index.twig',
+			'html/stats/index.twig',
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Competitive Pokémon Stats Archive',
 				'breadcrumbs' => $breadcrumbs,

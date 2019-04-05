@@ -109,7 +109,7 @@ class StatsMoveView
 		];
 
 		$content = $this->renderer->render(
-			'html/move-usage-month.twig',
+			'html/stats/move.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,
 				'formatIdentifier' => $formatIdentifier,

@@ -91,7 +91,7 @@ class StatsMonthView
 		];
 
 		$content = $this->renderer->render(
-			'html/month-formats.twig',
+			'html/stats/month.twig',
 			$this->baseView->getBaseVariables() + [
 				// TODO: title - "Month Year formats"?
 				'breadcrumbs' => $breadcrumbs,

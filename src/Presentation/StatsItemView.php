@@ -109,7 +109,7 @@ class StatsItemView
 		];
 
 		$content = $this->renderer->render(
-			'html/item-usage-month.twig',
+			'html/stats/item.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,
 				'formatIdentifier' => $formatIdentifier,

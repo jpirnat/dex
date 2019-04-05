@@ -110,7 +110,7 @@ class StatsLeadsView
 		];
 
 		$content = $this->renderer->render(
-			'html/leads-month.twig',
+			'html/stats/leads.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,
 				'formatIdentifier' => $formatIdentifier,
