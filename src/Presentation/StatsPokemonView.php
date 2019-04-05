@@ -3,18 +3,18 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\MovesetPokemonMonth\AbilityData;
-use Jp\Dex\Application\Models\MovesetPokemonMonth\CounterData;
-use Jp\Dex\Application\Models\MovesetPokemonMonth\ItemData;
-use Jp\Dex\Application\Models\MovesetPokemonMonth\MoveData;
-use Jp\Dex\Application\Models\MovesetPokemonMonth\MovesetPokemonMonthModel;
-use Jp\Dex\Application\Models\MovesetPokemonMonth\SpreadData;
-use Jp\Dex\Application\Models\MovesetPokemonMonth\TeammateData;
+use Jp\Dex\Application\Models\StatsPokemon\AbilityData;
+use Jp\Dex\Application\Models\StatsPokemon\CounterData;
+use Jp\Dex\Application\Models\StatsPokemon\ItemData;
+use Jp\Dex\Application\Models\StatsPokemon\MoveData;
+use Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel;
+use Jp\Dex\Application\Models\StatsPokemon\SpreadData;
+use Jp\Dex\Application\Models\StatsPokemon\TeammateData;
 use Jp\Dex\Domain\Stats\StatId;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class MovesetPokemonMonthView
+class StatsPokemonView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;
@@ -22,8 +22,8 @@ class MovesetPokemonMonthView
 	/** @var BaseView $baseView */
 	private $baseView;
 
-	/** @var MovesetPokemonMonthModel $movesetPokemonMonthModel */
-	private $movesetPokemonMonthModel;
+	/** @var StatsPokemonModel $statsPokemonModel */
+	private $statsPokemonModel;
 
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
@@ -36,20 +36,20 @@ class MovesetPokemonMonthView
 	 *
 	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
-	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
+	 * @param StatsPokemonModel $statsPokemonModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
-		MovesetPokemonMonthModel $movesetPokemonMonthModel,
+		StatsPokemonModel $statsPokemonModel,
 		IntlFormatterFactory $formatterFactory,
 		DexFormatter $dexFormatter
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
-		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
+		$this->statsPokemonModel = $statsPokemonModel;
 		$this->formatterFactory = $formatterFactory;
 		$this->dexFormatter = $dexFormatter;
 	}
@@ -63,21 +63,21 @@ class MovesetPokemonMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$month = $this->movesetPokemonMonthModel->getMonth();
-		$format = $this->movesetPokemonMonthModel->getFormat();
-		$rating = $this->movesetPokemonMonthModel->getRating();
-		$pokemon = $this->movesetPokemonMonthModel->getPokemon();
+		$month = $this->statsPokemonModel->getMonth();
+		$format = $this->statsPokemonModel->getFormat();
+		$rating = $this->statsPokemonModel->getRating();
+		$pokemon = $this->statsPokemonModel->getPokemon();
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->movesetPokemonMonthModel->getLanguageId()
+			$this->statsPokemonModel->getLanguageId()
 		);
 
 		// Get the previous month and the next month.
-		$prevMonth = $this->movesetPokemonMonthModel->getDateModel()->getPrevMonth();
-		$nextMonth = $this->movesetPokemonMonthModel->getDateModel()->getNextMonth();
+		$prevMonth = $this->statsPokemonModel->getDateModel()->getPrevMonth();
+		$nextMonth = $this->statsPokemonModel->getDateModel()->getNextMonth();
 
-		$movesetPokemon = $this->movesetPokemonMonthModel->getMovesetPokemon();
-		$movesetRatedPokemon = $this->movesetPokemonMonthModel->getMovesetRatedPokemon();
+		$movesetPokemon = $this->statsPokemonModel->getMovesetPokemon();
+		$movesetRatedPokemon = $this->statsPokemonModel->getMovesetRatedPokemon();
 
 		$rawCount = $movesetPokemon !== null
 			? $movesetPokemon->getRawCount()
@@ -90,10 +90,10 @@ class MovesetPokemonMonthView
 			: null;
 
 		// Get miscellaneous Pokémon data.
-		$pokemonModel = $this->movesetPokemonMonthModel->getPokemonModel();
+		$pokemonModel = $this->statsPokemonModel->getPokemonModel();
 		$pokemonName = $pokemonModel->getPokemonName();
 		$model = $pokemonModel->getModel();
-		$generation = $this->movesetPokemonMonthModel->getGeneration();
+		$generation = $this->statsPokemonModel->getGeneration();
 
 		// Get base stats.
 		$baseStats = [];
@@ -105,7 +105,7 @@ class MovesetPokemonMonthView
 		}
 
 		// Get abilities and sort by percent.
-		$abilityDatas = $this->movesetPokemonMonthModel->getAbilityDatas();
+		$abilityDatas = $this->statsPokemonModel->getAbilityDatas();
 		uasort(
 			$abilityDatas,
 			function (AbilityData $a, AbilityData $b) : int {
@@ -126,7 +126,7 @@ class MovesetPokemonMonthView
 		}
 
 		// Get items and sort by percent.
-		$itemDatas = $this->movesetPokemonMonthModel->getItemDatas();
+		$itemDatas = $this->statsPokemonModel->getItemDatas();
 		uasort(
 			$itemDatas,
 			function (ItemData $a, ItemData $b) : int {
@@ -147,7 +147,7 @@ class MovesetPokemonMonthView
 		}
 
 		// Get spreads and sort by percent.
-		$spreadDatas = $this->movesetPokemonMonthModel->getSpreadDatas();
+		$spreadDatas = $this->statsPokemonModel->getSpreadDatas();
 		uasort(
 			$spreadDatas,
 			function (SpreadData $a, SpreadData $b) : int {
@@ -200,7 +200,7 @@ class MovesetPokemonMonthView
 		}
 
 		// Get moves and sort by percent.
-		$moveDatas = $this->movesetPokemonMonthModel->getMoveDatas();
+		$moveDatas = $this->statsPokemonModel->getMoveDatas();
 		uasort(
 			$moveDatas,
 			function (MoveData $a, MoveData $b) : int {
@@ -221,7 +221,7 @@ class MovesetPokemonMonthView
 		}
 
 		// Get teammates and sort by percent.
-		$teammateDatas = $this->movesetPokemonMonthModel->getTeammateDatas();
+		$teammateDatas = $this->statsPokemonModel->getTeammateDatas();
 		uasort(
 			$teammateDatas,
 			function (TeammateData $a, TeammateData $b) : int {
@@ -242,7 +242,7 @@ class MovesetPokemonMonthView
 		}
 
 		// Get counters and sort by percent.
-		$counterDatas = $this->movesetPokemonMonthModel->getCounterDatas();
+		$counterDatas = $this->statsPokemonModel->getCounterDatas();
 		uasort(
 			$counterDatas,
 			function (CounterData $a, CounterData $b) : int {
@@ -304,16 +304,16 @@ class MovesetPokemonMonthView
 				'breadcrumbs' => $breadcrumbs,
 
 				'prevMonth' => [
-					'show' => $this->movesetPokemonMonthModel->doesPrevMonthDataExist(),
+					'show' => $this->statsPokemonModel->doesPrevMonthDataExist(),
 					'month' => $prevMonth->format('Y-m'),
 					'text' => $formatter->formatMonth($prevMonth),
 				],
 				'nextMonth' => [
-					'show' => $this->movesetPokemonMonthModel->doesNextMonthDataExist(),
+					'show' => $this->statsPokemonModel->doesNextMonthDataExist(),
 					'month' => $nextMonth->format('Y-m'),
 					'text' => $formatter->formatMonth($nextMonth),
 				],
-				'ratings' => $this->movesetPokemonMonthModel->getRatings(),
+				'ratings' => $this->statsPokemonModel->getRatings(),
 
 				'model' => $model->getImage(),
 				'types' => $this->dexFormatter->formatDexTypes($pokemonModel->getTypes()),

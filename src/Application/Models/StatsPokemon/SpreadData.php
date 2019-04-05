@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
+namespace Jp\Dex\Application\Models\StatsPokemon;
 
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValueContainer;

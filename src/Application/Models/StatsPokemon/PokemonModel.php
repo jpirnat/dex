@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
+namespace Jp\Dex\Application\Models\StatsPokemon;
 
 use Jp\Dex\Application\Models\Structs\DexType;
 use Jp\Dex\Application\Models\Structs\DexTypeFactory;

@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
+namespace Jp\Dex\Application\Models\StatsPokemon;
 
-class MoveData
+class ItemData
 {
-	/** @var string $moveName */
-	private $moveName;
+	/** @var string $itemName */
+	private $itemName;
 
-	/** @var string $moveIdentifier */
-	private $moveIdentifier;
+	/** @var string $itemIdentifier */
+	private $itemIdentifier;
 
 	/** @var float $percent */
 	private $percent;
@@ -20,41 +20,41 @@ class MoveData
 	/**
 	 * Constructor.
 	 *
-	 * @param string $moveName
-	 * @param string $moveIdentifier
+	 * @param string $itemName
+	 * @param string $itemIdentifier
 	 * @param float $percent
 	 * @param float $change
 	 */
 	public function __construct(
-		string $moveName,
-		string $moveIdentifier,
+		string $itemName,
+		string $itemIdentifier,
 		float $percent,
 		float $change
 	) {
-		$this->moveName = $moveName;
-		$this->moveIdentifier = $moveIdentifier;
+		$this->itemName = $itemName;
+		$this->itemIdentifier = $itemIdentifier;
 		$this->percent = $percent;
 		$this->change = $change;
 	}
 
 	/**
-	 * Get the move name.
+	 * Get the item name.
 	 *
 	 * @return string
 	 */
-	public function getMoveName() : string
+	public function getItemName() : string
 	{
-		return $this->moveName;
+		return $this->itemName;
 	}
 
 	/**
-	 * Get the move identifier.
+	 * Get the item identifier.
 	 *
 	 * @return string
 	 */
-	public function getMoveIdentifier() : string
+	public function getItemIdentifier() : string
 	{
-		return $this->moveIdentifier;
+		return $this->itemIdentifier;
 	}
 
 	/**

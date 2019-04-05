@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\MovesetPokemonAveraged;
 
 use DateTime;
-use Jp\Dex\Application\Models\MovesetPokemonMonth\PokemonModel;
+use Jp\Dex\Application\Models\StatsPokemon\PokemonModel;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;

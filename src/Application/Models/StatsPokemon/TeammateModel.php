@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
+namespace Jp\Dex\Application\Models\StatsPokemon;
 
 use DateTime;
 use Jp\Dex\Domain\Formats\Format;
@@ -11,13 +11,13 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounterRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface;
 
-class CounterModel
+class TeammateModel
 {
-	/** @var MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository */
-	private $movesetRatedCounterRepository;
+	/** @var MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository */
+	private $movesetRatedTeammateRepository;
 
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
@@ -32,27 +32,27 @@ class CounterModel
 	private $formIconRepository;
 
 
-	/** @var CounterData[] $counterDatas */
-	private $counterDatas = [];
+	/** @var TeammateData[] $teammateDatas */
+	private $teammateDatas = [];
 
 
 	/**
 	 * Constructor.
 	 *
-	 * @param MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository
+	 * @param MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param FormIconRepositoryInterface $formIconRepository
 	 */
 	public function __construct(
-		MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository,
+		MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
 		PokemonRepositoryInterface $pokemonRepository,
 		FormIconRepositoryInterface $formIconRepository
 	) {
-		$this->movesetRatedCounterRepository = $movesetRatedCounterRepository;
+		$this->movesetRatedTeammateRepository = $movesetRatedTeammateRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
 		$this->pokemonRepository = $pokemonRepository;
@@ -78,20 +78,20 @@ class CounterModel
 		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : void {
-		// Get moveset rated move records.
-		$movesetRatedCounters = $this->movesetRatedCounterRepository->getByMonthAndFormatAndRatingAndPokemon(
+		// Get moveset rated teammate records.
+		$movesetRatedTeammates = $this->movesetRatedTeammateRepository->getByMonthAndFormatAndRatingAndPokemon(
 			$month,
 			$format->getId(),
 			$rating,
 			$pokemonId
 		);
 
-		// Get each counter's data.
-		foreach ($movesetRatedCounters as $movesetRatedCounter) {
-			// Get this counter's name.
+		// Get each teammate's data.
+		foreach ($movesetRatedTeammates as $movesetRatedTeammate) {
+			// Get this teammate's name.
 			$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 				$languageId,
-				$movesetRatedCounter->getCounterId()
+				$movesetRatedTeammate->getTeammateId()
 			);
 
 			// Does this teammate have moveset rated Pokémon data?
@@ -99,15 +99,15 @@ class CounterModel
 				$month,
 				$format->getId(),
 				$rating,
-				$movesetRatedCounter->getCounterId()
+				$movesetRatedTeammate->getTeammateId()
 			);
 
-			// Get this counter's Pokémon data.
+			// Get this teammate's Pokémon data.
 			$pokemon = $this->pokemonRepository->getById(
-				$movesetRatedCounter->getCounterId()
+				$movesetRatedTeammate->getTeammateId()
 			);
 
-			// Get this counter's form icon.
+			// Get this teammate's form icon.
 			$formIcon = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
 				$format->getGenerationId(),
 				new FormId($pokemon->getId()->value()), // A Pokémon's default form has Pokémon id === form id.
@@ -115,27 +115,23 @@ class CounterModel
 				false
 			);
 
-			$this->counterDatas[] = new CounterData(
+			$this->teammateDatas[] = new TeammateData(
 				$pokemonName->getName(),
 				$movesetDataExists,
 				$pokemon->getIdentifier(),
 				$formIcon->getImage(),
-				$movesetRatedCounter->getNumber1(),
-				$movesetRatedCounter->getNumber2(),
-				$movesetRatedCounter->getNumber3(),
-				$movesetRatedCounter->getPercentKnockedOut(),
-				$movesetRatedCounter->getPercentSwitchedOut()
+				$movesetRatedTeammate->getPercent()
 			);
 		}
 	}
 
 	/**
-	 * Get the counter datas.
+	 * Get the teammate datas.
 	 *
-	 * @return CounterData[]
+	 * @return TeammateData[]
 	 */
-	public function getCounterDatas() : array
+	public function getTeammateDatas() : array
 	{
-		return $this->counterDatas;
+		return $this->teammateDatas;
 	}
 }

@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
+namespace Jp\Dex\Application\Models\StatsPokemon;
 
-class AbilityData
+class MoveData
 {
-	/** @var string $abilityName */
-	private $abilityName;
+	/** @var string $moveName */
+	private $moveName;
 
-	/** @var string $abilityIdentifier */
-	private $abilityIdentifier;
+	/** @var string $moveIdentifier */
+	private $moveIdentifier;
 
 	/** @var float $percent */
 	private $percent;
@@ -20,41 +20,41 @@ class AbilityData
 	/**
 	 * Constructor.
 	 *
-	 * @param string $abilityName
-	 * @param string $abilityIdentifier
+	 * @param string $moveName
+	 * @param string $moveIdentifier
 	 * @param float $percent
 	 * @param float $change
 	 */
 	public function __construct(
-		string $abilityName,
-		string $abilityIdentifier,
+		string $moveName,
+		string $moveIdentifier,
 		float $percent,
 		float $change
 	) {
-		$this->abilityName = $abilityName;
-		$this->abilityIdentifier = $abilityIdentifier;
+		$this->moveName = $moveName;
+		$this->moveIdentifier = $moveIdentifier;
 		$this->percent = $percent;
 		$this->change = $change;
 	}
 
 	/**
-	 * Get the ability name.
+	 * Get the move name.
 	 *
 	 * @return string
 	 */
-	public function getAbilityName() : string
+	public function getMoveName() : string
 	{
-		return $this->abilityName;
+		return $this->moveName;
 	}
 
 	/**
-	 * Get the ability identifier.
+	 * Get the move identifier.
 	 *
 	 * @return string
 	 */
-	public function getAbilityIdentifier() : string
+	public function getMoveIdentifier() : string
 	{
-		return $this->abilityIdentifier;
+		return $this->moveIdentifier;
 	}
 
 	/**

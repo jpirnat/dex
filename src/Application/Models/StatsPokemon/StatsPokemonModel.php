@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\MovesetPokemonMonth;
+namespace Jp\Dex\Application\Models\StatsPokemon;
 
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\Format;
@@ -18,7 +18,7 @@ use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 
-class MovesetPokemonMonthModel
+class StatsPokemonModel
 {
 	/** @var DateModel $dateModel */
 	private $dateModel;

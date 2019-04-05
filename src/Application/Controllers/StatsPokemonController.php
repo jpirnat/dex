@@ -3,30 +3,30 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\MovesetPokemonMonth\MovesetPokemonMonthModel;
+use Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class MovesetPokemonMonthController
+class StatsPokemonController
 {
 	/** @var BaseController $baseController */
 	private $baseController;
 
-	/** @var MovesetPokemonMonthModel $movesetPokemonMonthModel */
-	private $movesetPokemonMonthModel;
+	/** @var StatsPokemonModel $statsPokemonModel */
+	private $statsPokemonModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param BaseController $baseController
-	 * @param MovesetPokemonMonthModel $movesetPokemonMonthModel
+	 * @param StatsPokemonModel $statsPokemonModel
 	 */
 	public function __construct(
 		BaseController $baseController,
-		MovesetPokemonMonthModel $movesetPokemonMonthModel
+		StatsPokemonModel $statsPokemonModel
 	) {
 		$this->baseController = $baseController;
-		$this->movesetPokemonMonthModel = $movesetPokemonMonthModel;
+		$this->statsPokemonModel = $statsPokemonModel;
 	}
 
 	/**
@@ -48,7 +48,7 @@ class MovesetPokemonMonthController
 		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->movesetPokemonMonthModel->setData(
+		$this->statsPokemonModel->setData(
 			$month,
 			$formatIdentifier,
 			$rating,
