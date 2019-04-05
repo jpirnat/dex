@@ -6,6 +6,7 @@ namespace Jp\Dex\Application\Models\DexPokemon;
 use Jp\Dex\Application\Models\Structs\DexTypeFactory;
 use Jp\Dex\Domain\Categories\CategoryRepositoryInterface;
 use Jp\Dex\Domain\Items\TechnicalMachine;
+use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\GenerationMoveNotFoundException;
 use Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface;
@@ -17,7 +18,6 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
-use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 class DexPokemonMovesModel

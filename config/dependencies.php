@@ -314,7 +314,6 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface::
 $rule = [
 	'shared' => true,
 ];
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAbility\StatsAbilityModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\BaseModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\BreedingChains\BreedingChainsModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DateModel::class, $rule);
@@ -326,18 +325,19 @@ $dice = $dice->addRule(\Jp\Dex\Application\Models\DexPokemon\DexPokemonModel::cl
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexTypeModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexTypesModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\ErrorModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsItem\StatsItemModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\NotFoundModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAbility\StatsAbilityModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAveragedLeads\StatsAveragedLeadsModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAveragedPokemon\StatsAveragedPokemonModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAveragedUsage\StatsAveragedUsageModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsIndexModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsItem\StatsItemModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsLeads\StatsLeadsModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsMonth\StatsMonthModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAveragedPokemon\StatsAveragedPokemonModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsMove\StatsMoveModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\NotFoundModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsIndexModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\TrendChartModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAveragedUsage\StatsAveragedUsageModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsUsage\StatsUsageModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\TrendChartModel::class, $rule);
 
 // Shared repositories
 $rule = [

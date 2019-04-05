@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\StatsUsage\UsageData;
 use Jp\Dex\Application\Models\StatsUsage\StatsUsageModel;
+use Jp\Dex\Application\Models\StatsUsage\UsageData;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 

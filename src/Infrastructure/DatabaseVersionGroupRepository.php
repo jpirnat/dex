@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
-use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
 class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface

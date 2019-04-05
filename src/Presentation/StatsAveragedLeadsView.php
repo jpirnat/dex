@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\StatsAveragedLeads\StatsAveragedLeadsModel;
 use Jp\Dex\Application\Models\StatsAveragedLeads\LeadsData;
+use Jp\Dex\Application\Models\StatsAveragedLeads\StatsAveragedLeadsModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
