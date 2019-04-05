@@ -18,7 +18,7 @@ use Jp\Dex\Application\Controllers\StatsLeadsController;
 use Jp\Dex\Application\Controllers\StatsMonthController;
 use Jp\Dex\Application\Controllers\MovesetPokemonAveragedController;
 use Jp\Dex\Application\Controllers\StatsPokemonController;
-use Jp\Dex\Application\Controllers\MoveUsageMonthController;
+use Jp\Dex\Application\Controllers\StatsMoveController;
 use Jp\Dex\Application\Controllers\NotFoundController;
 use Jp\Dex\Application\Controllers\StatsIndexController;
 use Jp\Dex\Application\Controllers\TrendChartController;
@@ -45,7 +45,7 @@ use Jp\Dex\Presentation\StatsLeadsView;
 use Jp\Dex\Presentation\StatsMonthView;
 use Jp\Dex\Presentation\MovesetPokemonAveragedView;
 use Jp\Dex\Presentation\StatsPokemonView;
-use Jp\Dex\Presentation\MoveUsageMonthView;
+use Jp\Dex\Presentation\StatsMoveView;
 use Jp\Dex\Presentation\NotFoundView;
 use Jp\Dex\Presentation\StatsIndexView;
 use Jp\Dex\Presentation\TrendChartView;
@@ -245,9 +245,9 @@ $routes = [
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/moves/$moveIdentifier", [
-		'controllerClass' => MoveUsageMonthController::class,
+		'controllerClass' => StatsMoveController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => MoveUsageMonthView::class,
+		'viewClass' => StatsMoveView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,

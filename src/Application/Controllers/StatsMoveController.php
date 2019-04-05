@@ -3,30 +3,30 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\MoveUsageMonth\MoveUsageMonthModel;
+use Jp\Dex\Application\Models\StatsMove\StatsMoveModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class MoveUsageMonthController
+class StatsMoveController
 {
 	/** @var BaseController $baseController */
 	private $baseController;
 
-	/** @var MoveUsageMonthModel $moveUsageMonthModel */
-	private $moveUsageMonthModel;
+	/** @var StatsMoveModel $statsMoveModel */
+	private $statsMoveModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param BaseController $baseController
-	 * @param MoveUsageMonthModel $moveUsageMonthModel
+	 * @param StatsMoveModel $statsMoveModel
 	 */
 	public function __construct(
 		BaseController $baseController,
-		MoveUsageMonthModel $moveUsageMonthModel
+		StatsMoveModel $statsMoveModel
 	) {
 		$this->baseController = $baseController;
-		$this->moveUsageMonthModel = $moveUsageMonthModel;
+		$this->statsMoveModel = $statsMoveModel;
 	}
 
 	/**
@@ -46,7 +46,7 @@ class MoveUsageMonthController
 		$moveIdentifier = $request->getAttribute('moveIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->moveUsageMonthModel->setData(
+		$this->statsMoveModel->setData(
 			$month,
 			$formatIdentifier,
 			$rating,

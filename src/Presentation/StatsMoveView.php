@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\MoveUsageMonth\MoveUsageData;
-use Jp\Dex\Application\Models\MoveUsageMonth\MoveUsageMonthModel;
+use Jp\Dex\Application\Models\StatsMove\MoveUsageData;
+use Jp\Dex\Application\Models\StatsMove\StatsMoveModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class MoveUsageMonthView
+class StatsMoveView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;
@@ -16,8 +16,8 @@ class MoveUsageMonthView
 	/** @var BaseView $baseView */
 	private $baseView;
 
-	/** @var MoveUsageMonthModel $moveUsageMonthModel */
-	private $moveUsageMonthModel;
+	/** @var StatsMoveModel $statsMoveModel */
+	private $statsMoveModel;
 
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
@@ -27,18 +27,18 @@ class MoveUsageMonthView
 	 *
 	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
-	 * @param MoveUsageMonthModel $moveUsageMonthModel
+	 * @param StatsMoveModel $statsMoveModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
 		IntlFormatterFactory $formatterFactory,
-		MoveUsageMonthModel $moveUsageMonthModel
+		StatsMoveModel $statsMoveModel
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
-		$this->moveUsageMonthModel = $moveUsageMonthModel;
+		$this->statsMoveModel = $statsMoveModel;
 		$this->formatterFactory = $formatterFactory;
 	}
 
@@ -49,20 +49,20 @@ class MoveUsageMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$month = $this->moveUsageMonthModel->getMonth();
-		$formatIdentifier = $this->moveUsageMonthModel->getFormatIdentifier();
-		$rating = $this->moveUsageMonthModel->getRating();
+		$month = $this->statsMoveModel->getMonth();
+		$formatIdentifier = $this->statsMoveModel->getFormatIdentifier();
+		$rating = $this->statsMoveModel->getRating();
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->moveUsageMonthModel->getLanguageId()
+			$this->statsMoveModel->getLanguageId()
 		);
 
 		// Get the previous month and the next month.
-		$prevMonth = $this->moveUsageMonthModel->getDateModel()->getPrevMonth();
-		$nextMonth = $this->moveUsageMonthModel->getDateModel()->getNextMonth();
+		$prevMonth = $this->statsMoveModel->getDateModel()->getPrevMonth();
+		$nextMonth = $this->statsMoveModel->getDateModel()->getNextMonth();
 
 		// Get move usage data and sort by usage percent.
-		$moveUsageDatas = $this->moveUsageMonthModel->getMoveUsageDatas();
+		$moveUsageDatas = $this->statsMoveModel->getMoveUsageDatas();
 		uasort(
 			$moveUsageDatas,
 			function (MoveUsageData $a, MoveUsageData $b) : int {
@@ -104,7 +104,7 @@ class MoveUsageMonthView
 				'text' => 'Moves',
 			],
 			[
-				'text' => $this->moveUsageMonthModel->getMoveName()->getName(),
+				'text' => $this->statsMoveModel->getMoveName()->getName(),
 			],
 		];
 
@@ -118,21 +118,21 @@ class MoveUsageMonthView
 				'breadcrumbs' => $breadcrumbs,
 
 				'prevMonth' => [
-					'show' => $this->moveUsageMonthModel->doesPrevMonthDataExist(),
+					'show' => $this->statsMoveModel->doesPrevMonthDataExist(),
 					'month' => $prevMonth->format('Y-m'),
 					'text' => $formatter->formatMonth($prevMonth),
 				],
 				'nextMonth' => [
-					'show' => $this->moveUsageMonthModel->doesNextMonthDataExist(),
+					'show' => $this->statsMoveModel->doesNextMonthDataExist(),
 					'month' => $nextMonth->format('Y-m'),
 					'text' => $formatter->formatMonth($nextMonth),
 				],
-				'ratings' => $this->moveUsageMonthModel->getRatings(),
+				'ratings' => $this->statsMoveModel->getRatings(),
 
 				'move' => [
-					'identifier' => $this->moveUsageMonthModel->getMoveIdentifier(),
-					'name' => $this->moveUsageMonthModel->getMoveName()->getName(),
-					'description' => $this->moveUsageMonthModel->getMoveDescription()->getDescription(),
+					'identifier' => $this->statsMoveModel->getMoveIdentifier(),
+					'name' => $this->statsMoveModel->getMoveName()->getName(),
+					'description' => $this->statsMoveModel->getMoveDescription()->getDescription(),
 				],
 
 
