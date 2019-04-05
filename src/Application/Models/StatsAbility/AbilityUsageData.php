@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\AbilityUsageMonth;
+namespace Jp\Dex\Application\Models\StatsAbility;
 
 class AbilityUsageData
 {

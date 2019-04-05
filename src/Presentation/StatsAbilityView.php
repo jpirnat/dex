@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\AbilityUsageMonth\AbilityUsageData;
-use Jp\Dex\Application\Models\AbilityUsageMonth\AbilityUsageMonthModel;
+use Jp\Dex\Application\Models\StatsAbility\AbilityUsageData;
+use Jp\Dex\Application\Models\StatsAbility\StatsAbilityModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class AbilityUsageMonthView
+class StatsAbilityView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;
@@ -16,8 +16,8 @@ class AbilityUsageMonthView
 	/** @var BaseView $baseView */
 	private $baseView;
 
-	/** @var AbilityUsageMonthModel $abilityUsageMonthModel */
-	private $abilityUsageMonthModel;
+	/** @var StatsAbilityModel $statsAbilityModel */
+	private $statsAbilityModel;
 
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
@@ -27,18 +27,18 @@ class AbilityUsageMonthView
 	 *
 	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
-	 * @param AbilityUsageMonthModel $abilityUsageMonthModel
+	 * @param StatsAbilityModel $statsAbilityModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
 		IntlFormatterFactory $formatterFactory,
-		AbilityUsageMonthModel $abilityUsageMonthModel
+		StatsAbilityModel $statsAbilityModel
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
-		$this->abilityUsageMonthModel = $abilityUsageMonthModel;
+		$this->statsAbilityModel = $statsAbilityModel;
 		$this->formatterFactory = $formatterFactory;
 	}
 
@@ -49,20 +49,20 @@ class AbilityUsageMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$month = $this->abilityUsageMonthModel->getMonth();
-		$formatIdentifier = $this->abilityUsageMonthModel->getFormatIdentifier();
-		$rating = $this->abilityUsageMonthModel->getRating();
+		$month = $this->statsAbilityModel->getMonth();
+		$formatIdentifier = $this->statsAbilityModel->getFormatIdentifier();
+		$rating = $this->statsAbilityModel->getRating();
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->abilityUsageMonthModel->getLanguageId()
+			$this->statsAbilityModel->getLanguageId()
 		);
 
 		// Get the previous month and the next month.
-		$prevMonth = $this->abilityUsageMonthModel->getDateModel()->getPrevMonth();
-		$nextMonth = $this->abilityUsageMonthModel->getDateModel()->getNextMonth();
+		$prevMonth = $this->statsAbilityModel->getDateModel()->getPrevMonth();
+		$nextMonth = $this->statsAbilityModel->getDateModel()->getNextMonth();
 
 		// Get ability usage data and sort by usage percent.
-		$abilityUsageDatas = $this->abilityUsageMonthModel->getAbilityUsageDatas();
+		$abilityUsageDatas = $this->statsAbilityModel->getAbilityUsageDatas();
 		uasort(
 			$abilityUsageDatas,
 			function (AbilityUsageData $a, AbilityUsageData $b) : int {
@@ -104,7 +104,7 @@ class AbilityUsageMonthView
 				'text' => 'Abilities',
 			],
 			[
-				'text' => $this->abilityUsageMonthModel->getAbilityName()->getName(),
+				'text' => $this->statsAbilityModel->getAbilityName()->getName(),
 			],
 		];
 
@@ -118,21 +118,21 @@ class AbilityUsageMonthView
 				'breadcrumbs' => $breadcrumbs,
 
 				'prevMonth' => [
-					'show' => $this->abilityUsageMonthModel->doesPrevMonthDataExist(),
+					'show' => $this->statsAbilityModel->doesPrevMonthDataExist(),
 					'month' => $prevMonth->format('Y-m'),
 					'text' => $formatter->formatMonth($prevMonth),
 				],
 				'nextMonth' => [
-					'show' => $this->abilityUsageMonthModel->doesNextMonthDataExist(),
+					'show' => $this->statsAbilityModel->doesNextMonthDataExist(),
 					'month' => $nextMonth->format('Y-m'),
 					'text' => $formatter->formatMonth($nextMonth),
 				],
-				'ratings' => $this->abilityUsageMonthModel->getRatings(),
+				'ratings' => $this->statsAbilityModel->getRatings(),
 
 				'ability' => [
-					'identifier' => $this->abilityUsageMonthModel->getAbilityIdentifier(),
-					'name' => $this->abilityUsageMonthModel->getAbilityName()->getName(),
-					'description' => $this->abilityUsageMonthModel->getAbilityDescription()->getDescription(),
+					'identifier' => $this->statsAbilityModel->getAbilityIdentifier(),
+					'name' => $this->statsAbilityModel->getAbilityName()->getName(),
+					'description' => $this->statsAbilityModel->getAbilityDescription()->getDescription(),
 				],
 
 				// The main data.

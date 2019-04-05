@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use Jp\Dex\Application\Controllers\AbilityUsageMonthController;
+use Jp\Dex\Application\Controllers\StatsAbilityController;
 use Jp\Dex\Application\Controllers\BreedingChainsController;
 use Jp\Dex\Application\Controllers\DexAbilitiesController;
 use Jp\Dex\Application\Controllers\DexAbilityController;
@@ -28,7 +28,7 @@ use Jp\Dex\Application\Middleware\AjaxErrorMiddleware;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Middleware\JsonRequestMiddleware;
 use Jp\Dex\Application\Middleware\LanguageMiddleware;
-use Jp\Dex\Presentation\AbilityUsageMonthView;
+use Jp\Dex\Presentation\StatsAbilityView;
 use Jp\Dex\Presentation\BreedingChainsView;
 use Jp\Dex\Presentation\DexAbilitiesView;
 use Jp\Dex\Presentation\DexAbilityView;
@@ -223,9 +223,9 @@ $routes = [
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/abilities/$abilityIdentifier", [
-		'controllerClass' => AbilityUsageMonthController::class,
+		'controllerClass' => StatsAbilityController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => AbilityUsageMonthView::class,
+		'viewClass' => StatsAbilityView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,

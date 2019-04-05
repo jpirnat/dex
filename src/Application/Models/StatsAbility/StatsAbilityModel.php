@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\AbilityUsageMonth;
+namespace Jp\Dex\Application\Models\StatsAbility;
 
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Abilities\AbilityDescription;
@@ -19,7 +19,7 @@ use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonAbilityRepositoryInterfac
 use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
-class AbilityUsageMonthModel
+class StatsAbilityModel
 {
 	/** @var DateModel $dateModel */
 	private $dateModel;

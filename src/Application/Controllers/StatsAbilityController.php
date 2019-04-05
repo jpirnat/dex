@@ -3,30 +3,30 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\AbilityUsageMonth\AbilityUsageMonthModel;
+use Jp\Dex\Application\Models\StatsAbility\StatsAbilityModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class AbilityUsageMonthController
+class StatsAbilityController
 {
 	/** @var BaseController $baseController */
 	private $baseController;
 
-	/** @var AbilityUsageMonthModel $abilityUsageMonthModel */
-	private $abilityUsageMonthModel;
+	/** @var StatsAbilityModel $statsAbilityModel */
+	private $statsAbilityModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param BaseController $baseController
-	 * @param AbilityUsageMonthModel $abilityUsageMonthModel
+	 * @param StatsAbilityModel $statsAbilityModel
 	 */
 	public function __construct(
 		BaseController $baseController,
-		AbilityUsageMonthModel $abilityUsageMonthModel
+		StatsAbilityModel $statsAbilityModel
 	) {
 		$this->baseController = $baseController;
-		$this->abilityUsageMonthModel = $abilityUsageMonthModel;
+		$this->statsAbilityModel = $statsAbilityModel;
 	}
 
 	/**
@@ -46,7 +46,7 @@ class AbilityUsageMonthController
 		$abilityIdentifier = $request->getAttribute('abilityIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->abilityUsageMonthModel->setData(
+		$this->statsAbilityModel->setData(
 			$month,
 			$formatIdentifier,
 			$rating,

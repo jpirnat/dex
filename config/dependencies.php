@@ -314,7 +314,7 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface::
 $rule = [
 	'shared' => true,
 ];
-$dice = $dice->addRule(\Jp\Dex\Application\Models\AbilityUsageMonth\AbilityUsageMonthModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAbility\StatsAbilityModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\BaseModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\BreedingChains\BreedingChainsModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DateModel::class, $rule);
