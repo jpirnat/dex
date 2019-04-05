@@ -16,7 +16,7 @@ use Jp\Dex\Application\Controllers\StatsItemController;
 use Jp\Dex\Application\Controllers\StatsAveragedLeadsController;
 use Jp\Dex\Application\Controllers\StatsLeadsController;
 use Jp\Dex\Application\Controllers\StatsMonthController;
-use Jp\Dex\Application\Controllers\MovesetPokemonAveragedController;
+use Jp\Dex\Application\Controllers\StatsAveragedPokemonController;
 use Jp\Dex\Application\Controllers\StatsPokemonController;
 use Jp\Dex\Application\Controllers\StatsMoveController;
 use Jp\Dex\Application\Controllers\NotFoundController;
@@ -43,7 +43,7 @@ use Jp\Dex\Presentation\StatsItemView;
 use Jp\Dex\Presentation\StatsAveragedLeadsView;
 use Jp\Dex\Presentation\StatsLeadsView;
 use Jp\Dex\Presentation\StatsMonthView;
-use Jp\Dex\Presentation\MovesetPokemonAveragedView;
+use Jp\Dex\Presentation\StatsAveragedPokemonView;
 use Jp\Dex\Presentation\StatsPokemonView;
 use Jp\Dex\Presentation\StatsMoveView;
 use Jp\Dex\Presentation\NotFoundView;
@@ -279,9 +279,9 @@ $routes = [
 	]],
 
 	['GET', "/stats/$start-to-$end/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
-		'controllerClass' => MovesetPokemonAveragedController::class,
+		'controllerClass' => StatsAveragedPokemonController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => MovesetPokemonAveragedView::class,
+		'viewClass' => StatsAveragedPokemonView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,

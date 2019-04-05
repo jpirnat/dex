@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\MovesetPokemonAveraged;
+namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
 use DateTime;
 use Jp\Dex\Application\Models\StatsPokemon\PokemonModel;
@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 
-class MovesetPokemonAveragedModel
+class StatsAveragedPokemonModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;

@@ -3,30 +3,30 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\MovesetPokemonAveraged\MovesetPokemonAveragedModel;
+use Jp\Dex\Application\Models\StatsAveragedPokemon\StatsAveragedPokemonModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class MovesetPokemonAveragedController
+class StatsAveragedPokemonController
 {
 	/** @var BaseController $baseController */
 	private $baseController;
 
-	/** @var MovesetPokemonAveragedModel $movesetPokemonAveragedModel */
-	private $movesetPokemonAveragedModel;
+	/** @var StatsAveragedPokemonModel $statsAveragedPokemonModel */
+	private $statsAveragedPokemonModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param BaseController $baseController
-	 * @param MovesetPokemonAveragedModel $movesetPokemonAveragedModel
+	 * @param StatsAveragedPokemonModel $statsAveragedPokemonModel
 	 */
 	public function __construct(
 		BaseController $baseController,
-		MovesetPokemonAveragedModel $movesetPokemonAveragedModel
+		StatsAveragedPokemonModel $statsAveragedPokemonModel
 	) {
 		$this->baseController = $baseController;
-		$this->movesetPokemonAveragedModel = $movesetPokemonAveragedModel;
+		$this->statsAveragedPokemonModel = $statsAveragedPokemonModel;
 	}
 
 	/**
@@ -49,7 +49,7 @@ class MovesetPokemonAveragedController
 		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->movesetPokemonAveragedModel->setData(
+		$this->statsAveragedPokemonModel->setData(
 			$start,
 			$end,
 			$formatIdentifier,

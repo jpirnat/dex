@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\MovesetPokemonAveraged;
+namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;

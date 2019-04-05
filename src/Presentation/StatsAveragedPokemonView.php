@@ -3,14 +3,14 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\MovesetPokemonAveraged\AbilityData;
-use Jp\Dex\Application\Models\MovesetPokemonAveraged\ItemData;
-use Jp\Dex\Application\Models\MovesetPokemonAveraged\MoveData;
-use Jp\Dex\Application\Models\MovesetPokemonAveraged\MovesetPokemonAveragedModel;
+use Jp\Dex\Application\Models\StatsAveragedPokemon\AbilityData;
+use Jp\Dex\Application\Models\StatsAveragedPokemon\ItemData;
+use Jp\Dex\Application\Models\StatsAveragedPokemon\MoveData;
+use Jp\Dex\Application\Models\StatsAveragedPokemon\StatsAveragedPokemonModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class MovesetPokemonAveragedView
+class StatsAveragedPokemonView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;
@@ -18,8 +18,8 @@ class MovesetPokemonAveragedView
 	/** @var BaseView $baseView */
 	private $baseView;
 
-	/** @var MovesetPokemonAveragedModel $movesetPokemonAveragedModel */
-	private $movesetPokemonAveragedModel;
+	/** @var StatsAveragedPokemonModel $statsAveragedPokemonModel */
+	private $statsAveragedPokemonModel;
 
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
@@ -32,20 +32,20 @@ class MovesetPokemonAveragedView
 	 *
 	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
-	 * @param MovesetPokemonAveragedModel $movesetPokemonAveragedModel
+	 * @param StatsAveragedPokemonModel $statsAveragedPokemonModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
-		MovesetPokemonAveragedModel $movesetPokemonAveragedModel,
+		StatsAveragedPokemonModel $statsAveragedPokemonModel,
 		IntlFormatterFactory $formatterFactory,
 		DexFormatter $dexFormatter
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
-		$this->movesetPokemonAveragedModel = $movesetPokemonAveragedModel;
+		$this->statsAveragedPokemonModel = $statsAveragedPokemonModel;
 		$this->formatterFactory = $formatterFactory;
 		$this->dexFormatter = $dexFormatter;
 	}
@@ -59,21 +59,21 @@ class MovesetPokemonAveragedView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$start = $this->movesetPokemonAveragedModel->getStart();
-		$end = $this->movesetPokemonAveragedModel->getEnd();
-		$format = $this->movesetPokemonAveragedModel->getFormat();
-		$rating = $this->movesetPokemonAveragedModel->getRating();
-		$pokemon = $this->movesetPokemonAveragedModel->getPokemon();
+		$start = $this->statsAveragedPokemonModel->getStart();
+		$end = $this->statsAveragedPokemonModel->getEnd();
+		$format = $this->statsAveragedPokemonModel->getFormat();
+		$rating = $this->statsAveragedPokemonModel->getRating();
+		$pokemon = $this->statsAveragedPokemonModel->getPokemon();
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->movesetPokemonAveragedModel->getLanguageId()
+			$this->statsAveragedPokemonModel->getLanguageId()
 		);
 
 		// Get miscellaneous Pokémon data.
-		$pokemonModel = $this->movesetPokemonAveragedModel->getPokemonModel();
+		$pokemonModel = $this->statsAveragedPokemonModel->getPokemonModel();
 		$pokemonName = $pokemonModel->getPokemonName();
 		$model = $pokemonModel->getModel();
-		$generation = $this->movesetPokemonAveragedModel->getGeneration();
+		$generation = $this->statsAveragedPokemonModel->getGeneration();
 
 		// Get base stats.
 		$baseStats = [];
@@ -85,7 +85,7 @@ class MovesetPokemonAveragedView
 		}
 
 		// Get abilities and sort by percent.
-		$abilityDatas = $this->movesetPokemonAveragedModel->getAbilityDatas();
+		$abilityDatas = $this->statsAveragedPokemonModel->getAbilityDatas();
 		uasort(
 			$abilityDatas,
 			function (AbilityData $a, AbilityData $b) : int {
@@ -104,7 +104,7 @@ class MovesetPokemonAveragedView
 		}
 
 		// Get items and sort by percent.
-		$itemDatas = $this->movesetPokemonAveragedModel->getItemDatas();
+		$itemDatas = $this->statsAveragedPokemonModel->getItemDatas();
 		uasort(
 			$itemDatas,
 			function (ItemData $a, ItemData $b) : int {
@@ -123,7 +123,7 @@ class MovesetPokemonAveragedView
 		}
 
 		// Get moves and sort by percent.
-		$moveDatas = $this->movesetPokemonAveragedModel->getMoveDatas();
+		$moveDatas = $this->statsAveragedPokemonModel->getMoveDatas();
 		uasort(
 			$moveDatas,
 			function (MoveData $a, MoveData $b) : int {
@@ -178,7 +178,7 @@ class MovesetPokemonAveragedView
 
 				'breadcrumbs' => $breadcrumbs,
 
-				'ratings' => $this->movesetPokemonAveragedModel->getRatings(),
+				'ratings' => $this->statsAveragedPokemonModel->getRatings(),
 
 				'model' => $model->getImage(),
 				'types' => $this->dexFormatter->formatDexTypes($pokemonModel->getTypes()),
