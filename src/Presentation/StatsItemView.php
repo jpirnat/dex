@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\ItemUsageMonth\ItemUsageData;
-use Jp\Dex\Application\Models\ItemUsageMonth\ItemUsageMonthModel;
+use Jp\Dex\Application\Models\StatsItem\ItemUsageData;
+use Jp\Dex\Application\Models\StatsItem\StatsItemModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class ItemUsageMonthView
+class StatsItemView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;
@@ -16,8 +16,8 @@ class ItemUsageMonthView
 	/** @var BaseView $baseView */
 	private $baseView;
 
-	/** @var ItemUsageMonthModel $itemUsageMonthModel */
-	private $itemUsageMonthModel;
+	/** @var StatsItemModel $statsItemModel */
+	private $statsItemModel;
 
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
@@ -27,18 +27,18 @@ class ItemUsageMonthView
 	 *
 	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
-	 * @param ItemUsageMonthModel $itemUsageMonthModel
+	 * @param StatsItemModel $statsItemModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
 		IntlFormatterFactory $formatterFactory,
-		ItemUsageMonthModel $itemUsageMonthModel
+		StatsItemModel $statsItemModel
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
-		$this->itemUsageMonthModel = $itemUsageMonthModel;
+		$this->statsItemModel = $statsItemModel;
 		$this->formatterFactory = $formatterFactory;
 	}
 
@@ -49,20 +49,20 @@ class ItemUsageMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$month = $this->itemUsageMonthModel->getMonth();
-		$formatIdentifier = $this->itemUsageMonthModel->getFormatIdentifier();
-		$rating = $this->itemUsageMonthModel->getRating();
+		$month = $this->statsItemModel->getMonth();
+		$formatIdentifier = $this->statsItemModel->getFormatIdentifier();
+		$rating = $this->statsItemModel->getRating();
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->itemUsageMonthModel->getLanguageId()
+			$this->statsItemModel->getLanguageId()
 		);
 
 		// Get the previous month and the next month.
-		$prevMonth = $this->itemUsageMonthModel->getDateModel()->getPrevMonth();
-		$nextMonth = $this->itemUsageMonthModel->getDateModel()->getNextMonth();
+		$prevMonth = $this->statsItemModel->getDateModel()->getPrevMonth();
+		$nextMonth = $this->statsItemModel->getDateModel()->getNextMonth();
 
 		// Get item usage data and sort by usage percent.
-		$itemUsageDatas = $this->itemUsageMonthModel->getItemUsageDatas();
+		$itemUsageDatas = $this->statsItemModel->getItemUsageDatas();
 		uasort(
 			$itemUsageDatas,
 			function (ItemUsageData $a, ItemUsageData $b) : int {
@@ -104,7 +104,7 @@ class ItemUsageMonthView
 				'text' => 'Items',
 			],
 			[
-				'text' => $this->itemUsageMonthModel->getItemName()->getName(),
+				'text' => $this->statsItemModel->getItemName()->getName(),
 			],
 		];
 
@@ -118,21 +118,21 @@ class ItemUsageMonthView
 				'breadcrumbs' => $breadcrumbs,
 
 				'prevMonth' => [
-					'show' => $this->itemUsageMonthModel->doesPrevMonthDataExist(),
+					'show' => $this->statsItemModel->doesPrevMonthDataExist(),
 					'month' => $prevMonth->format('Y-m'),
 					'text' => $formatter->formatMonth($prevMonth),
 				],
 				'nextMonth' => [
-					'show' => $this->itemUsageMonthModel->doesNextMonthDataExist(),
+					'show' => $this->statsItemModel->doesNextMonthDataExist(),
 					'month' => $nextMonth->format('Y-m'),
 					'text' => $formatter->formatMonth($nextMonth),
 				],
-				'ratings' => $this->itemUsageMonthModel->getRatings(),
+				'ratings' => $this->statsItemModel->getRatings(),
 
 				'item' => [
-					'identifier' => $this->itemUsageMonthModel->getItemIdentifier(),
-					'name' => $this->itemUsageMonthModel->getItemName()->getName(),
-					'description' => $this->itemUsageMonthModel->getItemDescription()->getDescription(),
+					'identifier' => $this->statsItemModel->getItemIdentifier(),
+					'name' => $this->statsItemModel->getItemName()->getName(),
+					'description' => $this->statsItemModel->getItemDescription()->getDescription(),
 				],
 
 				// The main data.

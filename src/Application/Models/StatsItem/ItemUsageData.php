@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\ItemUsageMonth;
+namespace Jp\Dex\Application\Models\StatsItem;
 
 class ItemUsageData
 {

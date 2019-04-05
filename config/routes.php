@@ -12,7 +12,7 @@ use Jp\Dex\Application\Controllers\DexTypeController;
 use Jp\Dex\Application\Controllers\DexTypesController;
 use Jp\Dex\Application\Controllers\ErrorController;
 use Jp\Dex\Application\Controllers\IndexController;
-use Jp\Dex\Application\Controllers\ItemUsageMonthController;
+use Jp\Dex\Application\Controllers\StatsItemController;
 use Jp\Dex\Application\Controllers\LeadsAveragedController;
 use Jp\Dex\Application\Controllers\StatsLeadsController;
 use Jp\Dex\Application\Controllers\StatsMonthController;
@@ -39,7 +39,7 @@ use Jp\Dex\Presentation\DexTypesView;
 use Jp\Dex\Presentation\DexTypeView;
 use Jp\Dex\Presentation\ErrorView;
 use Jp\Dex\Presentation\IndexView;
-use Jp\Dex\Presentation\ItemUsageMonthView;
+use Jp\Dex\Presentation\StatsItemView;
 use Jp\Dex\Presentation\LeadsAveragedView;
 use Jp\Dex\Presentation\StatsLeadsView;
 use Jp\Dex\Presentation\StatsMonthView;
@@ -234,9 +234,9 @@ $routes = [
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/items/$itemIdentifier", [
-		'controllerClass' => ItemUsageMonthController::class,
+		'controllerClass' => StatsItemController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => ItemUsageMonthView::class,
+		'viewClass' => StatsItemView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
