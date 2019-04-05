@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\UsageAveraged;
+namespace Jp\Dex\Application\Models\StatsAveragedUsage;
 
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
@@ -15,7 +15,7 @@ use Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
-class UsageAveragedModel
+class StatsAveragedUsageModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;

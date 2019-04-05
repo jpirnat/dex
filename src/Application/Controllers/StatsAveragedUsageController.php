@@ -3,27 +3,27 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\UsageAveraged\UsageAveragedModel;
+use Jp\Dex\Application\Models\StatsAveragedUsage\StatsAveragedUsageModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class UsageAveragedController
+class StatsAveragedUsageController
 {
 	/** @var BaseController $baseController */
 	private $baseController;
 
-	/** @var UsageAveragedModel $usageAveragedModel */
+	/** @var StatsAveragedUsageModel $usageAveragedModel */
 	private $usageAveragedModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param BaseController $baseController
-	 * @param UsageAveragedModel $usageAveragedModel
+	 * @param StatsAveragedUsageModel $usageAveragedModel
 	 */
 	public function __construct(
 		BaseController $baseController,
-		UsageAveragedModel $usageAveragedModel
+		StatsAveragedUsageModel $usageAveragedModel
 	) {
 		$this->baseController = $baseController;
 		$this->usageAveragedModel = $usageAveragedModel;

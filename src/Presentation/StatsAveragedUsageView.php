@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\UsageAveraged\UsageAveragedModel;
-use Jp\Dex\Application\Models\UsageAveraged\UsageData;
+use Jp\Dex\Application\Models\StatsAveragedUsage\StatsAveragedUsageModel;
+use Jp\Dex\Application\Models\StatsAveragedUsage\UsageData;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class UsageAveragedView
+class StatsAveragedUsageView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;
@@ -16,8 +16,8 @@ class UsageAveragedView
 	/** @var BaseView $baseView */
 	private $baseView;
 
-	/** @var UsageAveragedModel $usageAveragedModel */
-	private $usageAveragedModel;
+	/** @var StatsAveragedUsageModel $statsAveragedUsageModel */
+	private $statsAveragedUsageModel;
 
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
@@ -27,18 +27,18 @@ class UsageAveragedView
 	 *
 	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
-	 * @param UsageAveragedModel $usageAveragedModel
+	 * @param StatsAveragedUsageModel $statsAveragedUsageModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
-		UsageAveragedModel $usageAveragedModel,
+		StatsAveragedUsageModel $statsAveragedUsageModel,
 		IntlFormatterFactory $formatterFactory
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
-		$this->usageAveragedModel = $usageAveragedModel;
+		$this->statsAveragedUsageModel = $statsAveragedUsageModel;
 		$this->formatterFactory = $formatterFactory;
 	}
 
@@ -49,17 +49,17 @@ class UsageAveragedView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$start = $this->usageAveragedModel->getStart();
-		$end = $this->usageAveragedModel->getEnd();
-		$formatIdentifier = $this->usageAveragedModel->getFormatIdentifier();
-		$rating = $this->usageAveragedModel->getRating();
+		$start = $this->statsAveragedUsageModel->getStart();
+		$end = $this->statsAveragedUsageModel->getEnd();
+		$formatIdentifier = $this->statsAveragedUsageModel->getFormatIdentifier();
+		$rating = $this->statsAveragedUsageModel->getRating();
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->usageAveragedModel->getLanguageId()
+			$this->statsAveragedUsageModel->getLanguageId()
 		);
 
 		// Get usage data and sort by rank.
-		$usageDatas = $this->usageAveragedModel->getUsageDatas();
+		$usageDatas = $this->statsAveragedUsageModel->getUsageDatas();
 		uasort(
 			$usageDatas,
 			function (UsageData $a, UsageData $b) : int {
@@ -108,9 +108,9 @@ class UsageAveragedView
 
 				'breadcrumbs' => $breadcrumbs,
 
-				'ratings' => $this->usageAveragedModel->getRatings(),
+				'ratings' => $this->statsAveragedUsageModel->getRatings(),
 
-				'showLeadsLink' => $this->usageAveragedModel->doesLeadsDataExist(),
+				'showLeadsLink' => $this->statsAveragedUsageModel->doesLeadsDataExist(),
 
 				// The main data.
 				'data' => $data,

@@ -22,7 +22,7 @@ use Jp\Dex\Application\Controllers\StatsMoveController;
 use Jp\Dex\Application\Controllers\NotFoundController;
 use Jp\Dex\Application\Controllers\StatsIndexController;
 use Jp\Dex\Application\Controllers\TrendChartController;
-use Jp\Dex\Application\Controllers\UsageAveragedController;
+use Jp\Dex\Application\Controllers\StatsAveragedUsageController;
 use Jp\Dex\Application\Controllers\StatsUsageController;
 use Jp\Dex\Application\Middleware\AjaxErrorMiddleware;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
@@ -49,7 +49,7 @@ use Jp\Dex\Presentation\StatsMoveView;
 use Jp\Dex\Presentation\NotFoundView;
 use Jp\Dex\Presentation\StatsIndexView;
 use Jp\Dex\Presentation\TrendChartView;
-use Jp\Dex\Presentation\UsageAveragedView;
+use Jp\Dex\Presentation\StatsAveragedUsageView;
 use Jp\Dex\Presentation\StatsUsageView;
 
 // Common route parameter definitions.
@@ -257,9 +257,9 @@ $routes = [
 
 	// Averaged
 	['GET', "/stats/$start-to-$end/$formatIdentifier/$rating", [
-		'controllerClass' => UsageAveragedController::class,
+		'controllerClass' => StatsAveragedUsageController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => UsageAveragedView::class,
+		'viewClass' => StatsAveragedUsageView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
