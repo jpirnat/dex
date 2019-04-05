@@ -23,7 +23,7 @@ use Jp\Dex\Application\Controllers\NotFoundController;
 use Jp\Dex\Application\Controllers\StatsIndexController;
 use Jp\Dex\Application\Controllers\TrendChartController;
 use Jp\Dex\Application\Controllers\UsageAveragedController;
-use Jp\Dex\Application\Controllers\UsageMonthController;
+use Jp\Dex\Application\Controllers\StatsUsageController;
 use Jp\Dex\Application\Middleware\AjaxErrorMiddleware;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Middleware\JsonRequestMiddleware;
@@ -50,7 +50,7 @@ use Jp\Dex\Presentation\NotFoundView;
 use Jp\Dex\Presentation\StatsIndexView;
 use Jp\Dex\Presentation\TrendChartView;
 use Jp\Dex\Presentation\UsageAveragedView;
-use Jp\Dex\Presentation\UsageMonthView;
+use Jp\Dex\Presentation\StatsUsageView;
 
 // Common route parameter definitions.
 $abilityIdentifier = '{abilityIdentifier:[-\w]+}';
@@ -190,9 +190,9 @@ $routes = [
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating", [
-		'controllerClass' => UsageMonthController::class,
+		'controllerClass' => StatsUsageController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => UsageMonthView::class,
+		'viewClass' => StatsUsageView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,

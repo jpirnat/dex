@@ -337,7 +337,7 @@ $dice = $dice->addRule(\Jp\Dex\Application\Models\NotFoundModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsIndexModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\TrendChartModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\UsageAveraged\UsageAveragedModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\UsageMonth\UsageMonthModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsUsage\StatsUsageModel::class, $rule);
 
 // Shared repositories
 $rule = [

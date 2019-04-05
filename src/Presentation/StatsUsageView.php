@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\UsageMonth\UsageData;
-use Jp\Dex\Application\Models\UsageMonth\UsageMonthModel;
+use Jp\Dex\Application\Models\StatsUsage\UsageData;
+use Jp\Dex\Application\Models\StatsUsage\StatsUsageModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class UsageMonthView
+class StatsUsageView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;
@@ -16,8 +16,8 @@ class UsageMonthView
 	/** @var BaseView $baseView */
 	private $baseView;
 
-	/** @var UsageMonthModel $usageMonthModel */
-	private $usageMonthModel;
+	/** @var StatsUsageModel $statsUsageModel */
+	private $statsUsageModel;
 
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
@@ -27,18 +27,18 @@ class UsageMonthView
 	 *
 	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
-	 * @param UsageMonthModel $usageMonthModel
+	 * @param StatsUsageModel $statsUsageModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
-		UsageMonthModel $usageMonthModel,
+		StatsUsageModel $statsUsageModel,
 		IntlFormatterFactory $formatterFactory
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
-		$this->usageMonthModel = $usageMonthModel;
+		$this->statsUsageModel = $statsUsageModel;
 		$this->formatterFactory = $formatterFactory;
 	}
 
@@ -50,20 +50,20 @@ class UsageMonthView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$month = $this->usageMonthModel->getMonth();
-		$formatIdentifier = $this->usageMonthModel->getFormatIdentifier();
-		$rating = $this->usageMonthModel->getRating();
+		$month = $this->statsUsageModel->getMonth();
+		$formatIdentifier = $this->statsUsageModel->getFormatIdentifier();
+		$rating = $this->statsUsageModel->getRating();
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->usageMonthModel->getLanguageId()
+			$this->statsUsageModel->getLanguageId()
 		);
 
 		// Get the previous month and the next month.
-		$prevMonth = $this->usageMonthModel->getDateModel()->getPrevMonth();
-		$nextMonth = $this->usageMonthModel->getDateModel()->getNextMonth();
+		$prevMonth = $this->statsUsageModel->getDateModel()->getPrevMonth();
+		$nextMonth = $this->statsUsageModel->getDateModel()->getNextMonth();
 
 		// Get usage data and sort by rank.
-		$usageDatas = $this->usageMonthModel->getUsageDatas();
+		$usageDatas = $this->statsUsageModel->getUsageDatas();
 		uasort(
 			$usageDatas,
 			function (UsageData $a, UsageData $b) : int {
@@ -119,18 +119,18 @@ class UsageMonthView
 				'breadcrumbs' => $breadcrumbs,
 
 				'prevMonth' => [
-					'show' => $this->usageMonthModel->doesPrevMonthDataExist(),
+					'show' => $this->statsUsageModel->doesPrevMonthDataExist(),
 					'month' => $prevMonth->format('Y-m'),
 					'text' => $formatter->formatMonth($prevMonth),
 				],
 				'nextMonth' => [
-					'show' => $this->usageMonthModel->doesNextMonthDataExist(),
+					'show' => $this->statsUsageModel->doesNextMonthDataExist(),
 					'month' => $nextMonth->format('Y-m'),
 					'text' => $formatter->formatMonth($nextMonth),
 				],
-				'ratings' => $this->usageMonthModel->getRatings(),
+				'ratings' => $this->statsUsageModel->getRatings(),
 
-				'showLeadsLink' => $this->usageMonthModel->doesLeadsDataExist(),
+				'showLeadsLink' => $this->statsUsageModel->doesLeadsDataExist(),
 
 				// The main data.
 				'data' => $data,
