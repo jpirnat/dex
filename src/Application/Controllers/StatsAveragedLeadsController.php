@@ -3,30 +3,30 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\LeadsAveraged\LeadsAveragedModel;
+use Jp\Dex\Application\Models\StatsAveragedLeads\StatsAveragedLeadsModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class LeadsAveragedController
+class StatsAveragedLeadsController
 {
 	/** @var BaseController $baseController */
 	private $baseController;
 
-	/** @var LeadsAveragedModel $leadsAveragedModel */
-	private $leadsAveragedModel;
+	/** @var StatsAveragedLeadsModel $statsAveragedLeadsModel */
+	private $statsAveragedLeadsModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param BaseController $baseController
-	 * @param LeadsAveragedModel $leadsAveragedModel
+	 * @param StatsAveragedLeadsModel $statsAveragedLeadsModel
 	 */
 	public function __construct(
 		BaseController $baseController,
-		LeadsAveragedModel $leadsAveragedModel
+		StatsAveragedLeadsModel $statsAveragedLeadsModel
 	) {
 		$this->baseController = $baseController;
-		$this->leadsAveragedModel = $leadsAveragedModel;
+		$this->statsAveragedLeadsModel = $statsAveragedLeadsModel;
 	}
 
 	/**
@@ -46,7 +46,7 @@ class LeadsAveragedController
 		$rating = (int) $request->getAttribute('rating');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->leadsAveragedModel->setData(
+		$this->statsAveragedLeadsModel->setData(
 			$start,
 			$end,
 			$formatIdentifier,

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\LeadsAveraged;
+namespace Jp\Dex\Application\Models\StatsAveragedLeads;
 
 class LeadsData
 {

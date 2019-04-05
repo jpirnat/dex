@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\LeadsAveraged\LeadsAveragedModel;
-use Jp\Dex\Application\Models\LeadsAveraged\LeadsData;
+use Jp\Dex\Application\Models\StatsAveragedLeads\StatsAveragedLeadsModel;
+use Jp\Dex\Application\Models\StatsAveragedLeads\LeadsData;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class LeadsAveragedView
+class StatsAveragedLeadsView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;
@@ -16,8 +16,8 @@ class LeadsAveragedView
 	/** @var BaseView $baseView */
 	private $baseView;
 
-	/** @var LeadsAveragedModel $leadsAveragedModel */
-	private $leadsAveragedModel;
+	/** @var StatsAveragedLeadsModel $statsAveragedLeadsModel */
+	private $statsAveragedLeadsModel;
 
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
@@ -27,18 +27,18 @@ class LeadsAveragedView
 	 *
 	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
-	 * @param LeadsAveragedModel $leadsAveragedModel
+	 * @param StatsAveragedLeadsModel $statsAveragedLeadsModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
-		LeadsAveragedModel $leadsAveragedModel,
+		StatsAveragedLeadsModel $statsAveragedLeadsModel,
 		IntlFormatterFactory $formatterFactory
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
-		$this->leadsAveragedModel = $leadsAveragedModel;
+		$this->statsAveragedLeadsModel = $statsAveragedLeadsModel;
 		$this->formatterFactory = $formatterFactory;
 	}
 
@@ -49,17 +49,17 @@ class LeadsAveragedView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$start = $this->leadsAveragedModel->getStart();
-		$end = $this->leadsAveragedModel->getEnd();
-		$formatIdentifier = $this->leadsAveragedModel->getFormatIdentifier();
-		$rating = $this->leadsAveragedModel->getRating();
+		$start = $this->statsAveragedLeadsModel->getStart();
+		$end = $this->statsAveragedLeadsModel->getEnd();
+		$formatIdentifier = $this->statsAveragedLeadsModel->getFormatIdentifier();
+		$rating = $this->statsAveragedLeadsModel->getRating();
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->leadsAveragedModel->getLanguageId()
+			$this->statsAveragedLeadsModel->getLanguageId()
 		);
 
 		// Get usage data and sort by rank.
-		$leadsDatas = $this->leadsAveragedModel->getLeadsDatas();
+		$leadsDatas = $this->statsAveragedLeadsModel->getLeadsDatas();
 		uasort(
 			$leadsDatas,
 			function (LeadsData $a, LeadsData $b) : int {
@@ -110,7 +110,7 @@ class LeadsAveragedView
 
 				'breadcrumbs' => $breadcrumbs,
 
-				'ratings' => $this->leadsAveragedModel->getRatings(),
+				'ratings' => $this->statsAveragedLeadsModel->getRatings(),
 
 				// The main data.
 				'data' => $data,

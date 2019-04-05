@@ -13,7 +13,7 @@ use Jp\Dex\Application\Controllers\DexTypesController;
 use Jp\Dex\Application\Controllers\ErrorController;
 use Jp\Dex\Application\Controllers\IndexController;
 use Jp\Dex\Application\Controllers\StatsItemController;
-use Jp\Dex\Application\Controllers\LeadsAveragedController;
+use Jp\Dex\Application\Controllers\StatsAveragedLeadsController;
 use Jp\Dex\Application\Controllers\StatsLeadsController;
 use Jp\Dex\Application\Controllers\StatsMonthController;
 use Jp\Dex\Application\Controllers\MovesetPokemonAveragedController;
@@ -40,7 +40,7 @@ use Jp\Dex\Presentation\DexTypeView;
 use Jp\Dex\Presentation\ErrorView;
 use Jp\Dex\Presentation\IndexView;
 use Jp\Dex\Presentation\StatsItemView;
-use Jp\Dex\Presentation\LeadsAveragedView;
+use Jp\Dex\Presentation\StatsAveragedLeadsView;
 use Jp\Dex\Presentation\StatsLeadsView;
 use Jp\Dex\Presentation\StatsMonthView;
 use Jp\Dex\Presentation\MovesetPokemonAveragedView;
@@ -268,9 +268,9 @@ $routes = [
 	]],
 
 	['GET', "/stats/$start-to-$end/$formatIdentifier/$rating/leads", [
-		'controllerClass' => LeadsAveragedController::class,
+		'controllerClass' => StatsAveragedLeadsController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => LeadsAveragedView::class,
+		'viewClass' => StatsAveragedLeadsView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,

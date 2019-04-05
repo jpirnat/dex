@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\LeadsAveraged;
+namespace Jp\Dex\Application\Models\StatsAveragedLeads;
 
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterf
 use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
-class LeadsAveragedModel
+class StatsAveragedLeadsModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
