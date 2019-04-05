@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\LeadsMonth;
+namespace Jp\Dex\Application\Models\StatsLeads;
 
 class LeadsData
 {

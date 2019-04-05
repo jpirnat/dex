@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\LeadsMonth;
+namespace Jp\Dex\Application\Models\StatsLeads;
 
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
@@ -15,7 +15,7 @@ use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 
-class LeadsMonthModel
+class StatsLeadsModel
 {
 	/** @var DateModel $dateModel */
 	private $dateModel;

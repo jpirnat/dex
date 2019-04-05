@@ -3,30 +3,30 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\LeadsMonth\LeadsMonthModel;
+use Jp\Dex\Application\Models\StatsLeads\StatsLeadsModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class LeadsMonthController
+class StatsLeadsController
 {
 	/** @var BaseController $baseController */
 	private $baseController;
 
-	/** @var LeadsMonthModel $leadsMonthModel */
-	private $leadsMonthModel;
+	/** @var StatsLeadsModel $statsLeadsModel */
+	private $statsLeadsModel;
 
 	/**
 	 * Constructor.
 	 *
 	 * @param BaseController $baseController
-	 * @param LeadsMonthModel $leadsMonthModel
+	 * @param StatsLeadsModel $statsLeadsModel
 	 */
 	public function __construct(
 		BaseController $baseController,
-		LeadsMonthModel $leadsMonthModel
+		StatsLeadsModel $statsLeadsModel
 	) {
 		$this->baseController = $baseController;
-		$this->leadsMonthModel = $leadsMonthModel;
+		$this->statsLeadsModel = $statsLeadsModel;
 	}
 
 	/**
@@ -46,7 +46,7 @@ class LeadsMonthController
 		$rating = (int) $request->getAttribute('rating');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->leadsMonthModel->setData(
+		$this->statsLeadsModel->setData(
 			$month,
 			$formatIdentifier,
 			$rating,
