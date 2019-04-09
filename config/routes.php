@@ -25,6 +25,7 @@ use Jp\Dex\Application\Controllers\StatsPokemonController;
 use Jp\Dex\Application\Controllers\StatsUsageController;
 use Jp\Dex\Application\Controllers\TrendChartController;
 use Jp\Dex\Application\Middleware\AjaxErrorMiddleware;
+use Jp\Dex\Application\Middleware\CurrentStatsMiddleware;
 use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
 use Jp\Dex\Application\Middleware\JsonRequestMiddleware;
 use Jp\Dex\Application\Middleware\LanguageMiddleware;
@@ -197,6 +198,18 @@ $routes = [
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
 			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/stats/current", [
+		'controllerClass' => StatsUsageController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => StatsUsageView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+			CurrentStatsMiddleware::class,
 		],
 	]],
 
