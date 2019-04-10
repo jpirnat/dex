@@ -6,6 +6,7 @@ namespace Jp\Dex\Application\Middleware;
 use DateTime;
 use Dflydev\FigCookies\FigResponseCookies;
 use Dflydev\FigCookies\SetCookie;
+use Jp\Dex\Application\CookieNames;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Languages\LanguageNotFoundException;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
@@ -21,9 +22,6 @@ class LanguageMiddleware implements MiddlewareInterface
 
 	/** @var string $LANGUAGE_PARAMETER */
 	private const LANGUAGE_PARAMETER = 'language';
-
-	/** @var string $LANGUAGE_COOKIE */
-	private const LANGUAGE_COOKIE = 'language';
 
 	/** @var int $DEFAULT_LANGUAGE_ID */
 	private const DEFAULT_LANGUAGE_ID = LanguageId::ENGLISH;
@@ -72,11 +70,11 @@ class LanguageMiddleware implements MiddlewareInterface
 			}
 		}
 
-		// Or, If the request contains a language cookie, use that language.
-		if (!$setNewLanguage && isset($request->getCookieParams()[self::LANGUAGE_COOKIE])) {
+		// Or, if the request contains a language cookie, use that language.
+		if (!$setNewLanguage && isset($request->getCookieParams()[CookieNames::LANGUAGE])) {
 			// If no new language is being set, use the existing language cookie
 			// or the default language.
-			$languageId = $request->getCookieParams()[self::LANGUAGE_COOKIE];
+			$languageId = $request->getCookieParams()[CookieNames::LANGUAGE];
 		}
 
 		$request = $request->withAttribute('languageId', $languageId);
@@ -85,7 +83,7 @@ class LanguageMiddleware implements MiddlewareInterface
 
 		// If the user is requesting to change their language, store it in a cookie.
 		if ($setNewLanguage) {
-			$setCookie = SetCookie::create(self::LANGUAGE_COOKIE);
+			$setCookie = SetCookie::create(CookieNames::LANGUAGE);
 			$setCookie = $setCookie->withValue((string) $languageId);
 			$setCookie = $setCookie->withExpires(new DateTime('+5 years'));
 			$setCookie = $setCookie->withPath('/');
