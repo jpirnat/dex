@@ -3,21 +3,17 @@
 {% block body %}
 	<div class="month-control">
 		{% if prevMonth.show %}
-			<div class="button prev">
-				<a href="/stats/{{ prevMonth.month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
-					&#9668; {{ prevMonth.text|e }}
-				</a>
-			</div>
+			<a class="button prev" href="/stats/{{ prevMonth.month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
+				&#9668; {{ prevMonth.text|e }}
+			</a>
 		{% endif %}
 
 		<div class="space"></div>
 
 		{% if nextMonth.show %}
-			<div class="button next">
-				<a href="/stats/{{ nextMonth.month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
-					{{ nextMonth.text|e }} &#9658;
-				</a>
-			</div>
+			<a class="button next" href="/stats/{{ nextMonth.month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
+				{{ nextMonth.text|e }} &#9658;
+			</a>
 		{% endif %}
 	</div>
 
