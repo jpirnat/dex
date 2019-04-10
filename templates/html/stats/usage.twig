@@ -32,11 +32,17 @@
 		</ul>
 	</div>
 
-	<div>
+	<div class="buttons-control">
 		{% if showLeadsLink %}
-			<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/leads">
+			<a class="button" href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/leads">
 				Leads
 			</a>
+		{% endif %}
+
+		{% if formatIdentifier != myFormat or rating != myRating %}
+			<div id="save-format" class="button" data-format="{{ formatIdentifier|e }}" data-rating="{{ rating|e }}">
+				Save as my default format
+			</div>
 		{% endif %}
 	</div>
 
@@ -118,4 +124,8 @@
 			{% endfor %}
 		</tbody>
 	</table>
+{% endblock %}
+
+{% block scripts %}
+	<script src="/js/main.js"></script>
 {% endblock %}

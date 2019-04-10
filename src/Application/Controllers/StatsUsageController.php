@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
+use Jp\Dex\Application\CookieNames;
 use Jp\Dex\Application\Models\StatsUsage\StatsUsageModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
@@ -46,10 +47,15 @@ class StatsUsageController
 		$rating = (int) $request->getAttribute('rating');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
+		$myFormat = $request->getCookieParams()[CookieNames::FORMAT] ?? '';
+		$myRating = $request->getCookieParams()[CookieNames::RATING] ?? '';
+
 		$this->statsUsageModel->setData(
 			$month,
 			$formatIdentifier,
 			$rating,
+			$myFormat,
+			$myRating,
 			$languageId
 		);
 	}

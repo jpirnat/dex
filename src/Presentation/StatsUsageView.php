@@ -130,6 +130,9 @@ class StatsUsageView
 				],
 				'ratings' => $this->statsUsageModel->getRatings(),
 
+				'myFormat' => $this->statsUsageModel->getMyFormat(),
+				'myRating' => $this->statsUsageModel->getMyRating(),
+
 				'showLeadsLink' => $this->statsUsageModel->doesLeadsDataExist(),
 
 				// The main data.

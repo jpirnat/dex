@@ -93,6 +93,12 @@ table .percent-minus {
 
 /* Buttons */
 
+.buttons-control {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+
 .button {
 	display: inline-block;
 	padding: 10px;
@@ -100,6 +106,7 @@ table .percent-minus {
 	color: black;
 	border: 1px solid black;
 	border-radius: 10px;
+	cursor: pointer;
 }
 
 a.button {

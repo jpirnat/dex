@@ -57,6 +57,12 @@ class StatsUsageModel
 	/** @var int $rating */
 	private $rating;
 
+	/** @var string $myFormat */
+	private $myFormat;
+
+	/** @var string $myRating */
+	private $myRating;
+
 	/** @var LanguageId $languageId */
 	private $languageId;
 
@@ -121,6 +127,8 @@ class StatsUsageModel
 	 * @param string $month
 	 * @param string $formatIdentifier
 	 * @param int $rating
+	 * @param string $myFormat
+	 * @param string $myRating
 	 * @param LanguageId $languageId
 	 *
 	 * @return void
@@ -129,11 +137,15 @@ class StatsUsageModel
 		string $month,
 		string $formatIdentifier,
 		int $rating,
+		string $myFormat,
+		string $myRating,
 		LanguageId $languageId
 	) : void {
 		$this->month = $month;
 		$this->formatIdentifier = $formatIdentifier;
 		$this->rating = $rating;
+		$this->myFormat = $myFormat;
+		$this->myRating = $myRating;
 		$this->languageId = $languageId;
 
 		// Get the previous month and the next month.
@@ -287,6 +299,26 @@ class StatsUsageModel
 	public function getRating() : int
 	{
 		return $this->rating;
+	}
+
+	/**
+	 * Get the user's default format identifier.
+	 *
+	 * @return string
+	 */
+	public function getMyFormat() : string
+	{
+		return $this->myFormat;
+	}
+
+	/**
+	 * Get the user's default rating.
+	 *
+	 * @return string
+	 */
+	public function getMyRating() : string
+	{
+		return $this->myRating;
 	}
 
 	/**
