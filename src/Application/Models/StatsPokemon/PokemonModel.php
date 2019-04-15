@@ -3,46 +3,34 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\StatsPokemon;
 
-use Jp\Dex\Application\Models\Structs\DexType;
-use Jp\Dex\Application\Models\Structs\DexTypeFactory;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Models\Model;
 use Jp\Dex\Domain\Models\ModelRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\DexPokemon;
+use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Pokemon\PokemonName;
-use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 class PokemonModel
 {
-	/** @var DexTypeFactory $dexTypeFactory */
-	private $dexTypeFactory;
-
-	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
-	private $pokemonNameRepository;
+	/** @var DexPokemonRepositoryInterface $dexPokemonRepository */
+	private $dexPokemonRepository;
 
 	/** @var ModelRepositoryInterface $modelRepository */
 	private $modelRepository;
-
-	/** @var BaseStatRepositoryInterface $baseStatRepository */
-	private $baseStatRepository;
 
 	/** @var StatNameRepositoryInterface $statNameRepository */
 	private $statNameRepository;
 
 
-	/** @var PokemonName $pokemon */
-	private $pokemonName;
+	/** @var DexPokemon $pokemon */
+	private $pokemon;
 
 	/** @var Model $model */
 	private $model;
-
-	/** @var DexType[] $types */
-	private $types = [];
 
 	/** @var StatData[] $statDatas */
 	private $statDatas = [];
@@ -51,23 +39,17 @@ class PokemonModel
 	/**
 	 * Constructor.
 	 *
-	 * @param DexTypeFactory $dexTypeFactory
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
+	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
 	 * @param ModelRepositoryInterface $modelRepository
-	 * @param BaseStatRepositoryInterface $baseStatRepository
 	 * @param StatNameRepositoryInterface $statNameRepository
 	 */
 	public function __construct(
-		DexTypeFactory $dexTypeFactory,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
+		DexPokemonRepositoryInterface $dexPokemonRepository,
 		ModelRepositoryInterface $modelRepository,
-		BaseStatRepositoryInterface $baseStatRepository,
 		StatNameRepositoryInterface $statNameRepository
 	) {
-		$this->dexTypeFactory = $dexTypeFactory;
-		$this->pokemonNameRepository = $pokemonNameRepository;
+		$this->dexPokemonRepository = $dexPokemonRepository;
 		$this->modelRepository = $modelRepository;
-		$this->baseStatRepository = $baseStatRepository;
 		$this->statNameRepository = $statNameRepository;
 	}
 
@@ -85,10 +67,10 @@ class PokemonModel
 		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : void {
-		// Get the Pokémon's name.
-		$this->pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-			$languageId,
-			$pokemonId
+		$this->pokemon = $this->dexPokemonRepository->getById(
+			$generationId,
+			$pokemonId,
+			$languageId
 		);
 
 		// Get the Pokémon's model.
@@ -100,41 +82,30 @@ class PokemonModel
 			0
 		);
 
-		// Get the Pokémon's types.
-		$this->types = $this->dexTypeFactory->getByPokemon(
-			$generationId,
-			$pokemonId,
-			$languageId
-		);
-
 		// Get the Pokémon's base stats.
-		$baseStats = $this->baseStatRepository->getByGenerationAndPokemon(
-			$generationId,
-			$pokemonId
-		);
-
-		// Get the stat names.
-		$statNames = $this->statNameRepository->getByLanguage($languageId);
-
-		// Put the stat data together.
 		$statIds = StatId::getByGeneration($generationId);
-		$this->statDatas = [];
+		$statNames = $this->statNameRepository->getByLanguage($languageId);
+		$baseStats = $this->pokemon->getBaseStats();
+		$normalizedStatNames = [];
 		foreach ($statIds as $statId) {
+			$normalizedStatNames[] = $statNames[$statId->value()]->getName();
+		}
+		foreach ($baseStats as $index => $baseStat) {
 			$this->statDatas[] = new StatData(
-				$statNames[$statId->value()]->getName(),
-				(int) $baseStats->get($statId)->getValue()
+				$normalizedStatNames[$index],
+				(int) $baseStat
 			);
 		}
 	}
 
 	/**
-	 * Get the Pokémon name.
+	 * Get the Pokémon.
 	 *
-	 * @return PokemonName
+	 * @return DexPokemon
 	 */
-	public function getPokemonName() : PokemonName
+	public function getPokemon() : DexPokemon
 	{
-		return $this->pokemonName;
+		return $this->pokemon;
 	}
 
 	/**
@@ -145,16 +116,6 @@ class PokemonModel
 	public function getModel() : Model
 	{
 		return $this->model;
-	}
-
-	/**
-	 * Get the types.
-	 *
-	 * @return DexType[]
-	 */
-	public function getTypes() : array
-	{
-		return $this->types;
 	}
 
 	/**

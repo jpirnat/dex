@@ -71,7 +71,7 @@ class StatsAveragedPokemonView
 
 		// Get miscellaneous Pokémon data.
 		$pokemonModel = $this->statsAveragedPokemonModel->getPokemonModel();
-		$pokemonName = $pokemonModel->getPokemonName();
+		$dexPokemon = $pokemonModel->getPokemon();
 		$model = $pokemonModel->getModel();
 		$generation = $this->statsAveragedPokemonModel->getGeneration();
 
@@ -156,7 +156,7 @@ class StatsAveragedPokemonView
 				'text' => 'Usage',
 			],
 			[
-				'text' => $pokemonName->getName(),
+				'text' => $dexPokemon->getName(),
 			],
 		];
 
@@ -171,8 +171,8 @@ class StatsAveragedPokemonView
 				],
 				'rating' => $rating,
 				'pokemon' => [
-					'identifier' => $pokemon->getIdentifier(),
-					'name' => $pokemonName->getName(),
+					'identifier' => $dexPokemon->getIdentifier(),
+					'name' => $dexPokemon->getName(),
 					'smogonDexIdentifier' => $pokemon->getSmogonDexIdentifier(),
 				],
 
@@ -181,7 +181,7 @@ class StatsAveragedPokemonView
 				'ratings' => $this->statsAveragedPokemonModel->getRatings(),
 
 				'model' => $model->getImage(),
-				'types' => $this->dexFormatter->formatDexTypes($pokemonModel->getTypes()),
+				'types' => $this->dexFormatter->formatDexTypes($dexPokemon->getTypes()),
 				'baseStats' => $baseStats,
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),

@@ -6,6 +6,7 @@ namespace Jp\Dex\Infrastructure;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
@@ -75,6 +76,58 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 		);
 
 		return $dexType;
+	}
+
+	/**
+	 * Get the dex types of this Pokémon.
+	 *
+	 * @param GenerationId $generationId
+	 * @param PokemonId $pokemonId
+	 * @param LanguageId $languageId
+	 *
+	 * @return DexType[] Ordered by Pokémon type slot.
+	 */
+	public function getByPokemon(
+		GenerationId $generationId,
+		PokemonId $pokemonId,
+		LanguageId $languageId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`t`.`identifier`,
+				`ti`.`icon`,
+				`tn`.`name`
+			FROM `pokemon_types` AS `pt`
+			INNER JOIN `types` AS `t`
+				ON `pt`.`type_id` = `t`.`id`
+			INNER JOIN `type_icons` AS `ti`
+				ON `pt`.`type_id` = `ti`.`type_id`
+			INNER JOIN `type_names` AS `tn`
+				ON `pt`.`type_id` = `tn`.`type_id`
+				AND `ti`.`language_id` = `tn`.`language_id`
+			WHERE `pt`.`generation_id` = :generation_id
+				AND `pt`.`pokemon_id` = :pokemon_id
+				AND `ti`.`language_id` = :language_id
+			ORDER BY `pt`.`slot` ASC'
+		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$dexTypes = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$dexType = new DexType(
+				$result['identifier'],
+				$result['icon'],
+				$result['name']
+			);
+
+			$dexTypes[] = $dexType;
+		}
+
+		return $dexTypes;
 	}
 
 	/**

@@ -12,6 +12,23 @@ use Jp\Dex\Domain\Versions\GenerationId;
 interface DexPokemonRepositoryInterface
 {
 	/**
+	 * Get a dex Pokémon by its id.
+	 *
+	 * @param GenerationId $generationId
+	 * @param PokemonId $pokemonId
+	 * @param LanguageId $languageId
+	 *
+	 * @throws PokemonNotFoundException if no Pokémon exists with this id.
+	 *
+	 * @return DexPokemon.
+	 */
+	public function getById(
+		GenerationId $generationId,
+		PokemonId $pokemonId,
+		LanguageId $languageId
+	) : DexPokemon;
+
+	/**
 	 * Get all dex Pokémon with this ability.
 	 * This method is used to get data for the dex ability page.
 	 *

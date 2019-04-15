@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Abilities\DexPokemonAbility;
 use Jp\Dex\Domain\Abilities\DexPokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
@@ -25,6 +26,55 @@ class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepository
 	public function __construct(PDO $db)
 	{
 		$this->db = $db;
+	}
+
+	/**
+	 * Get the dex Pokémon abilities of this Pokémon.
+	 *
+	 * @param GenerationId $generationId
+	 * @param PokemonId $pokemonId
+	 * @param LanguageId $languageId
+	 *
+	 * @return DexPokemonAbility[] Ordered by Pokémon ability slot.
+	 */
+	public function getByPokemon(
+		GenerationId $generationId,
+		PokemonId $pokemonId,
+		LanguageId $languageId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`a`.`identifier`,
+				`an`.`name`,
+				`pa`.`is_hidden_ability`
+			FROM `pokemon_abilities` AS `pa`
+			INNER JOIN `abilities` AS `a`
+				ON `pa`.`ability_id` = `a`.`id`
+			INNER JOIN `ability_names` AS `an`
+				ON `pa`.`ability_id` = `an`.`ability_id`
+			WHERE `pa`.`generation_id` = :generation_id
+				AND `pa`.`pokemon_id` = :pokemon_id
+				AND `an`.`language_id` = :language_id
+			ORDER BY `pa`.`slot` ASC'
+		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$dexPokemonAbilities = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$dexPokemonAbility = new DexPokemonAbility(
+				$result['identifier'],
+				$result['name'],
+				(bool) $result['is_hidden_ability']
+			);
+
+			$dexPokemonAbilities[] = $dexPokemonAbility;
+		}
+
+		return $dexPokemonAbilities;
 	}
 
 	/**

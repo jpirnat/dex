@@ -6,11 +6,11 @@ namespace Jp\Dex\Domain\Types;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 interface DexTypeRepositoryInterface
 {
-
 	/**
 	 * Get a dex type by its id.
 	 *
@@ -25,6 +25,21 @@ interface DexTypeRepositoryInterface
 		TypeId $typeId,
 		LanguageId $languageId
 	) : DexType;
+
+	/**
+	 * Get the dex types of this Pokémon.
+	 *
+	 * @param GenerationId $generationId
+	 * @param PokemonId $pokemonId
+	 * @param LanguageId $languageId
+	 *
+	 * @return DexType[] Ordered by Pokémon type slot.
+	 */
+	public function getByPokemon(
+		GenerationId $generationId,
+		PokemonId $pokemonId,
+		LanguageId $languageId
+	) : array;
 
 	/**
 	 * Get all dex types available in this generation.

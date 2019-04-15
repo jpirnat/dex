@@ -5,11 +5,27 @@ namespace Jp\Dex\Domain\Abilities;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 interface DexPokemonAbilityRepositoryInterface
 {
+	/**
+	 * Get the dex Pokémon abilities of this Pokémon.
+	 *
+	 * @param GenerationId $generationId
+	 * @param PokemonId $pokemonId
+	 * @param LanguageId $languageId
+	 *
+	 * @return DexPokemonAbility[] Ordered by Pokémon ability slot.
+	 */
+	public function getByPokemon(
+		GenerationId $generationId,
+		PokemonId $pokemonId,
+		LanguageId $languageId
+	) : array;
+
 	/**
 	 * Get all dex Pokémon abilities had by Pokémon with this ability.
 	 * This method is used to get data for the dex ability page.

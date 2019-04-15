@@ -9,7 +9,10 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
+use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
@@ -47,6 +50,90 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 		$this->dexTypeRepository = $dexTypeRepository;
 		$this->dexPokemonAbilityRepository = $dexPokemonAbilityRepository;
 		$this->baseStatRepository = $baseStatRepository;
+	}
+
+	/**
+	 * Get a dex Pokémon by its id.
+	 *
+	 * @param GenerationId $generationId
+	 * @param PokemonId $pokemonId
+	 * @param LanguageId $languageId
+	 *
+	 * @throws PokemonNotFoundException if no Pokémon exists with this id.
+	 *
+	 * @return DexPokemon.
+	 */
+	public function getById(
+		GenerationId $generationId,
+		PokemonId $pokemonId,
+		LanguageId $languageId
+	) : DexPokemon {
+		$types = $this->dexTypeRepository->getByPokemon(
+			$generationId,
+			$pokemonId,
+			$languageId
+		);
+		$abilities = $this->dexPokemonAbilityRepository->getByPokemon(
+			$generationId,
+			$pokemonId,
+			$languageId
+		);
+		$baseStats = $this->baseStatRepository->getByGenerationAndPokemon(
+			$generationId,
+			$pokemonId
+		);
+
+		// Normalize the base stats.
+		$statIds = StatId::getByGeneration($generationId);
+		$normalized = [];
+		foreach ($statIds as $statId) {
+			$normalized[] = $baseStats->get($statId)->getValue();
+		}
+		$baseStats = $normalized;
+
+		$stmt = $this->db->prepare(
+			'SELECT
+				`p`.`id`,
+				`fi`.`image` AS `icon`,
+				`p`.`identifier`,
+				`pn`.`name`,
+				`p`.`sort`
+			FROM `pokemon` AS `p`
+			INNER JOIN `form_icons` AS `fi`
+				ON `p`.`id` = `fi`.`form_id`
+			INNER JOIN `pokemon_names` AS `pn`
+				ON `p`.`id` = `pn`.`pokemon_id`
+			WHERE `p`.`id` = :pokemon_id
+				AND `fi`.`generation_id` = :generation_id
+				AND `fi`.`is_female` = 0
+				AND `fi`.`is_right` = 0
+				AND `pn`.`language_id` = :language_id
+			LIMIT 1'
+		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			throw new PokemonNotFoundException(
+				'No Pokémon exists with id ' . $pokemonId->value() . '.'
+			);
+		}
+
+		$dexPokemon = new DexPokemon(
+			$result['icon'],
+			$result['identifier'],
+			$result['name'],
+			$types ?? [],
+			$abilities ?? [],
+			$baseStats,
+			(int) array_sum($baseStats),
+			$result['sort']
+		);
+
+		return $dexPokemon;
 	}
 
 	/**
