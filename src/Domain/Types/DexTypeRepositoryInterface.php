@@ -10,6 +10,22 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 interface DexTypeRepositoryInterface
 {
+
+	/**
+	 * Get a dex type by its id.
+	 *
+	 * @param TypeId $typeId
+	 * @param LanguageId $languageId
+	 *
+	 * @throws TypeNotFoundException if no type exists with this id.
+	 *
+	 * @return DexType
+	 */
+	public function getById(
+		TypeId $typeId,
+		LanguageId $languageId
+	) : DexType;
+
 	/**
 	 * Get all dex types available in this generation.
 	 *

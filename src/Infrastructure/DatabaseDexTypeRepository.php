@@ -9,6 +9,7 @@ use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
+use Jp\Dex\Domain\Types\TypeNotFoundException;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
@@ -25,6 +26,55 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	public function __construct(PDO $db)
 	{
 		$this->db = $db;
+	}
+
+	/**
+	 * Get a dex type by its id.
+	 *
+	 * @param TypeId $typeId
+	 * @param LanguageId $languageId
+	 *
+	 * @throws TypeNotFoundException if no type exists with this id.
+	 *
+	 * @return DexType
+	 */
+	public function getById(
+		TypeId $typeId,
+		LanguageId $languageId
+	) : DexType {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`t`.`id`,
+				`t`.`identifier`,
+				`ti`.`icon`,
+				`tn`.`name`
+			FROM `types` AS `t`
+			INNER JOIN `type_icons` AS `ti`
+				ON `t`.`id` = `ti`.`type_id`
+			INNER JOIN `type_names` AS `tn`
+				ON `t`.`id` = `tn`.`type_id`
+				AND `ti`.`language_id` = `tn`.`language_id`
+			WHERE `t`.`id` = :type_id
+				AND `ti`.`language_id` = :language_id'
+		);
+		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			throw new TypeNotFoundException(
+				'No type exists with id ' . $typeId->value() . '.'
+			);
+		}
+
+		$dexType = new DexType(
+			$result['identifier'],
+			$result['icon'],
+			$result['name']
+		);
+
+		return $dexType;
 	}
 
 	/**
@@ -146,7 +196,7 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 			WHERE `generation_id` = :generation_id1
 				AND `pokemon_id` IN (
 					SELECT
-						`pokemon_id`
+						`pm`.`pokemon_id`
 					FROM `pokemon_moves` AS `pm`
 					INNER JOIN `version_groups` AS `vg`
 						ON `pm`.`version_group_id` = `vg`.`id`

@@ -1,15 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\Structs;
+namespace Jp\Dex\Domain\Moves;
+
+use Jp\Dex\Domain\Types\DexType;
 
 class DexMove
 {
-	/** @var string $moveIdentifier */
-	private $moveIdentifier;
+	/** @var string $identifier */
+	private $identifier;
 
-	/** @var string $moveName */
-	private $moveName;
+	/** @var string $name */
+	private $name;
 
 	/** @var DexType $type */
 	private $type;
@@ -26,69 +28,63 @@ class DexMove
 	/** @var int $accuracy */
 	private $accuracy;
 
-	/** @var int $priority */
-	private $priority;
-
-	/** @var string $moveDescription */
-	private $moveDescription;
+	/** @var string $description */
+	private $description;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param string $moveIdentifier
-	 * @param string $moveName
+	 * @param string $identifier
+	 * @param string $name
 	 * @param DexType $type
 	 * @param string $categoryIcon
 	 * @param int $pp
 	 * @param int $power
 	 * @param int $accuracy
-	 * @param int $priority
-	 * @param string $moveDescription
+	 * @param string $description
 	 */
 	public function __construct(
-		string $moveIdentifier,
-		string $moveName,
+		string $identifier,
+		string $name,
 		DexType $type,
 		string $categoryIcon,
 		int $pp,
 		int $power,
 		int $accuracy,
-		int $priority,
-		string $moveDescription
+		string $description
 	) {
-		$this->moveIdentifier = $moveIdentifier;
-		$this->moveName = $moveName;
+		$this->identifier = $identifier;
+		$this->name = $name;
 		$this->type = $type;
 		$this->categoryIcon = $categoryIcon;
 		$this->pp = $pp;
 		$this->power = $power;
 		$this->accuracy = $accuracy;
-		$this->priority = $priority;
-		$this->moveDescription = $moveDescription;
+		$this->description = $description;
 	}
 
 	/**
-	 * Get the move identifier.
+	 * Get the move's identifier.
 	 *
 	 * @return string
 	 */
-	public function getMoveIdentifier() : string
+	public function getIdentifier() : string
 	{
-		return $this->moveIdentifier;
+		return $this->identifier;
 	}
 
 	/**
-	 * Get the move name.
+	 * Get the move's name.
 	 *
 	 * @return string
 	 */
-	public function getMoveName() : string
+	public function getName() : string
 	{
-		return $this->moveName;
+		return $this->name;
 	}
 
 	/**
-	 * Get the type.
+	 * Get the move's type.
 	 *
 	 * @return DexType
 	 */
@@ -98,7 +94,7 @@ class DexMove
 	}
 
 	/**
-	 * Get the category icon.
+	 * Get the move's category icon.
 	 *
 	 * @return string
 	 */
@@ -108,7 +104,7 @@ class DexMove
 	}
 
 	/**
-	 * Get the PP.
+	 * Get the move's PP.
 	 *
 	 * @return int
 	 */
@@ -118,7 +114,7 @@ class DexMove
 	}
 
 	/**
-	 * Get the power.
+	 * Get the move's power.
 	 *
 	 * @return int
 	 */
@@ -128,7 +124,7 @@ class DexMove
 	}
 
 	/**
-	 * Get the accuracy.
+	 * Get the move's accuracy.
 	 *
 	 * @return int
 	 */
@@ -138,22 +134,12 @@ class DexMove
 	}
 
 	/**
-	 * Get the priority.
-	 *
-	 * @return int
-	 */
-	public function getPriority() : int
-	{
-		return $this->priority;
-	}
-
-	/**
-	 * Get the move description.
+	 * Get the move's description.
 	 *
 	 * @return string
 	 */
-	public function getMoveDescription() : string
+	public function getDescription() : string
 	{
-		return $this->moveDescription;
+		return $this->description;
 	}
 }

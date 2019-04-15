@@ -117,7 +117,7 @@ class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepository
 				AND `an`.`language_id` = :language_id
 				AND `pa`.`pokemon_id` IN (
 					SELECT
-						`pokemon_id`
+						`pm`.`pokemon_id`
 					FROM `pokemon_moves` AS `pm`
 					INNER JOIN `version_groups` AS `vg`
 						ON `pm`.`version_group_id` = `vg`.`id`
