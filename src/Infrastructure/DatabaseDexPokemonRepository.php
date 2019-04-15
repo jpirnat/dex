@@ -83,7 +83,8 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 				`p`.`id`,
 				`fi`.`image` AS `icon`,
 				`p`.`identifier`,
-				`pn`.`name`
+				`pn`.`name`,
+				`p`.`sort`
 			FROM `pokemon` AS `p`
 			INNER JOIN `form_icons` AS `fi`
 				ON `p`.`id` = `fi`.`form_id`
@@ -120,7 +121,8 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 				$types[$result['id']] ?? [],
 				$abilities[$result['id']] ?? [],
 				$pokemonBaseStats,
-				(int) array_sum($pokemonBaseStats)
+				(int) array_sum($pokemonBaseStats),
+				$result['sort']
 			);
 
 			$dexPokemons[] = $dexPokemon;
@@ -164,7 +166,8 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 				`p`.`id`,
 				`fi`.`image` AS `icon`,
 				`p`.`identifier`,
-				`pn`.`name`
+				`pn`.`name`,
+				`p`.`sort`
 			FROM `pokemon` AS `p`
 			INNER JOIN `form_icons` AS `fi`
 				ON `p`.`id` = `fi`.`form_id`
@@ -202,7 +205,8 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 				$types[$result['id']] ?? [],
 				$abilities[$result['id']] ?? [],
 				$pokemonBaseStats,
-				(int) array_sum($pokemonBaseStats)
+				(int) array_sum($pokemonBaseStats),
+				$result['sort']
 			);
 
 			$dexPokemons[$result['id']] = $dexPokemon;
@@ -241,7 +245,8 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 				`p`.`id`,
 				`fi`.`image` AS `icon`,
 				`p`.`identifier`,
-				`pn`.`name`
+				`pn`.`name`,
+				`p`.`sort`
 			FROM `pokemon` AS `p`
 			INNER JOIN `form_icons` AS `fi`
 				ON `p`.`id` = `fi`.`form_id`
@@ -269,7 +274,8 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 				$types[$result['id']] ?? [],
 				$abilities[$result['id']] ?? [],
 				$pokemonBaseStats,
-				(int) array_sum($pokemonBaseStats)
+				(int) array_sum($pokemonBaseStats),
+				$result['sort']
 			);
 
 			$dexPokemons[] = $dexPokemon;
@@ -313,7 +319,8 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 				`p`.`id`,
 				`fi`.`image` AS `icon`,
 				`p`.`identifier`,
-				`pn`.`name`
+				`pn`.`name`,
+				`p`.`sort`
 			FROM `pokemon` AS `p`
 			INNER JOIN `form_icons` AS `fi`
 				ON `p`.`id` = `fi`.`form_id`
@@ -350,7 +357,8 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 				$types[$result['id']] ?? [],
 				$abilities[$result['id']] ?? [],
 				$pokemonBaseStats,
-				(int) array_sum($pokemonBaseStats)
+				(int) array_sum($pokemonBaseStats),
+				$result['sort']
 			);
 
 			$dexPokemons[] = $dexPokemon;

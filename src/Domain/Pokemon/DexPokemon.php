@@ -29,6 +29,9 @@ class DexPokemon
 	/** @var int $bst */
 	private $bst;
 
+	/** @var int $sort */
+	private $sort;
+
 	/**
 	 * Constructor.
 	 *
@@ -39,6 +42,7 @@ class DexPokemon
 	 * @param DexPokemonAbility[] $abilities
 	 * @param int[] $baseStats
 	 * @param int $bst
+	 * @param int $sort
 	 */
 	public function __construct(
 		string $icon,
@@ -47,7 +51,8 @@ class DexPokemon
 		array $types,
 		array $abilities,
 		array $baseStats,
-		int $bst
+		int $bst,
+		int $sort
 	) {
 		$this->icon = $icon;
 		$this->identifier = $identifier;
@@ -56,6 +61,7 @@ class DexPokemon
 		$this->abilities = $abilities;
 		$this->baseStats = $baseStats;
 		$this->bst = $bst;
+		$this->sort = $sort;
 	}
 
 	/**
@@ -63,7 +69,7 @@ class DexPokemon
 	 *
 	 * @return string
 	 */
-	public function getFormIcon() : string
+	public function getIcon() : string
 	{
 		return $this->icon;
 	}
@@ -126,5 +132,15 @@ class DexPokemon
 	public function getBst() : int
 	{
 		return $this->bst;
+	}
+
+	/**
+	 * Get the Pokémon's sort value.
+	 *
+	 * @return int
+	 */
+	public function getSort() : int
+	{
+		return $this->sort;
 	}
 }

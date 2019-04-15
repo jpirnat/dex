@@ -36,7 +36,7 @@ class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepository
 	 * @param LanguageId $languageId
 	 *
 	 * @return DexPokemonAbility[][] Outer array indexed by Pokémon id. Inner
-	 *     arrays ordered by Pokémon ability slot.
+	 *     arrays indexed by ability id and ordered by Pokémon ability slot.
 	 */
 	public function getByPokemonAbility(
 		GenerationId $generationId,
@@ -46,6 +46,7 @@ class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepository
 		$stmt = $this->db->prepare(
 			'SELECT
 				`pa`.`pokemon_id`,
+				`pa`.`ability_id`,
 				`a`.`identifier`,
 				`an`.`name`,
 				`pa`.`is_hidden_ability`
@@ -80,7 +81,7 @@ class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepository
 				(bool) $result['is_hidden_ability']
 			);
 
-			$dexPokemonAbilities[$result['pokemon_id']][] = $dexPokemonAbility;
+			$dexPokemonAbilities[$result['pokemon_id']][$result['ability_id']] = $dexPokemonAbility;
 		}
 
 		return $dexPokemonAbilities;

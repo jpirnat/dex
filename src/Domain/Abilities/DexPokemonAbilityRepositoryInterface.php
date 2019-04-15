@@ -19,7 +19,7 @@ interface DexPokemonAbilityRepositoryInterface
 	 * @param LanguageId $languageId
 	 *
 	 * @return DexPokemonAbility[][] Outer array indexed by Pokémon id. Inner
-	 *     arrays ordered by Pokémon ability slot.
+	 *     arrays indexed by ability id and ordered by Pokémon ability slot.
 	 */
 	public function getByPokemonAbility(
 		GenerationId $generationId,

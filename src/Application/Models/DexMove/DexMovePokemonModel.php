@@ -3,23 +3,16 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexMove;
 
-use Jp\Dex\Application\Models\Structs\DexPokemonAbilityFactory;
-use Jp\Dex\Application\Models\Structs\DexTypeFactory;
-use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
-use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
-use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
-use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
-use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 class DexMovePokemonModel
@@ -30,26 +23,8 @@ class DexMovePokemonModel
 	/** @var TmRepositoryInterface $tmRepository */
 	private $tmRepository;
 
-	/** @var DexTypeFactory $dexTypeFactory */
-	private $dexTypeFactory;
-
-	/** @var PokemonRepositoryInterface $pokemonRepository */
-	private $pokemonRepository;
-
-	/** @var FormIconRepositoryInterface $formIconRepository */
-	private $formIconRepository;
-
-	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
-	private $pokemonNameRepository;
-
-	/** @var PokemonTypeRepositoryInterface $pokemonTypeRepository */
-	private $pokemonTypeRepository;
-
-	/** @var DexPokemonAbilityFactory $dexPokemonAbilityFactory */
-	private $dexPokemonAbilityFactory;
-
-	/** @var BaseStatRepositoryInterface $baseStatRepository */
-	private $baseStatRepository;
+	/** @var DexPokemonRepositoryInterface $dexPokemonRepository */
+	private $dexPokemonRepository;
 
 	/** @var MoveMethodRepositoryInterface $moveMethodRepository */
 	private $moveMethodRepository;
@@ -73,13 +48,7 @@ class DexMovePokemonModel
 	 *
 	 * @param PokemonMoveRepositoryInterface $pokemonMoveRepository
 	 * @param TmRepositoryInterface $tmRepository
-	 * @param DexTypeFactory $dexTypeFactory
-	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param FormIconRepositoryInterface $formIconRepository
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
-	 * @param DexPokemonAbilityFactory $dexPokemonAbilityFactory
-	 * @param BaseStatRepositoryInterface $baseStatRepository
+	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
 	 * @param MoveMethodRepositoryInterface $moveMethodRepository
 	 * @param MoveMethodNameRepositoryInterface $moveMethodNameRepository
 	 * @param StatNameRepositoryInterface $statNameRepository
@@ -87,26 +56,14 @@ class DexMovePokemonModel
 	public function __construct(
 		PokemonMoveRepositoryInterface $pokemonMoveRepository,
 		TmRepositoryInterface $tmRepository,
-		DexTypeFactory $dexTypeFactory,
-		PokemonRepositoryInterface $pokemonRepository,
-		FormIconRepositoryInterface $formIconRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
-		PokemonTypeRepositoryInterface $pokemonTypeRepository,
-		DexPokemonAbilityFactory $dexPokemonAbilityFactory,
-		BaseStatRepositoryInterface $baseStatRepository,
+		DexPokemonRepositoryInterface $dexPokemonRepository,
 		MoveMethodRepositoryInterface $moveMethodRepository,
 		MoveMethodNameRepositoryInterface $moveMethodNameRepository,
 		StatNameRepositoryInterface $statNameRepository
 	) {
 		$this->pokemonMoveRepository = $pokemonMoveRepository;
 		$this->tmRepository = $tmRepository;
-		$this->dexTypeFactory = $dexTypeFactory;
-		$this->pokemonRepository = $pokemonRepository;
-		$this->formIconRepository = $formIconRepository;
-		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->pokemonTypeRepository = $pokemonTypeRepository;
-		$this->dexPokemonAbilityFactory = $dexPokemonAbilityFactory;
-		$this->baseStatRepository = $baseStatRepository;
+		$this->dexPokemonRepository = $dexPokemonRepository;
 		$this->moveMethodRepository = $moveMethodRepository;
 		$this->moveMethodNameRepository = $moveMethodNameRepository;
 		$this->statNameRepository = $statNameRepository;
@@ -171,88 +128,35 @@ class DexMovePokemonModel
 			}
 		}
 
-		// Get miscellaneous data to help create the dex move Pokémon records.
-		$dexTypes = $this->dexTypeFactory->getAll($generationId, $languageId);
-		$statIds = StatId::getByGeneration($generationId);
-
 		// Get Pokémon data.
-		$pokemon = [];
-		$pokemonIcons = [];
-		$pokemonNames = [];
-		$pokemonsTypes = [];
-		$pokemonAbilities = [];
-		$pokemonBaseStats = [];
-		$pokemonBaseStatTotals = [];
-		foreach ($pokemonIds as $id => $pokemonId) {
-			$pokemonTypes = $this->pokemonTypeRepository->getByGenerationAndPokemon(
-				$generationId,
-				$pokemonId
-			);
-			if ($pokemonTypes === []) {
-				// This Pokémon that used to exist in an older generation does
-				// not exist in the current generation! (It's probably Spiky-eared
-				// Pichu or ???-type Arceus.)
-				continue;
-			}
-
-			$pokemon[$id] = $this->pokemonRepository->getById($pokemonId);
-			$pokemonIcons[$id] = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
-				$generationId,
-				new FormId($id),
-				false,
-				false
-			);
-			$pokemonNames[$id] = $this->pokemonNameRepository->getByLanguageAndPokemon(
-				$languageId,
-				$pokemonId
-			);
-
-			// Get the Pokémon's dex types.
-			foreach ($pokemonTypes as $pokemonType) {
-				$typeId = $pokemonType->getTypeId()->value();
-				$pokemonsTypes[$id][] = $dexTypes[$typeId];
-			}
-
-			// Get the Pokémon's dex abilities.
-			$pokemonAbilities[$id] = $this->dexPokemonAbilityFactory->getByPokemon(
-				$generationId,
-				$pokemonId,
-				$languageId
-			);
-
-			// Get the Pokémon's base stats.
-			$baseStats = $this->baseStatRepository->getByGenerationAndPokemon(
-				$generationId,
-				$pokemonId
-			);
-			foreach ($statIds as $statId) {
-				$pokemonBaseStats[$id][] = $baseStats->get($statId)->getValue();
-			}
-
-			// Get the Pokémon's base stat total.
-			$pokemonBaseStatTotals[$id] = (int) array_sum($pokemonBaseStats[$id]);
-		}
+		$pokemons = $this->dexPokemonRepository->getWithMove(
+			$generationId,
+			$moveId,
+			$languageId
+		);
 
 		// Compile the dex move Pokémon records.
 		$dexMovePokemon = [];
 		foreach ($methodsPokemons as $methodId => $methodPokemons) {
 			foreach ($methodPokemons as $pokemonId => $versionGroupData) {
-				if (!isset($pokemon[$pokemonId])) {
+				if (!isset($pokemons[$pokemonId])) {
 					// This Pokémon that used to exist in an older generation
 					// does not exist in the current generation!
 					continue;
 				}
 
+				$pokemon = $pokemons[$pokemonId];
+
 				$dexMovePokemon[$methodId][] = new DexMovePokemon(
 					$versionGroupData,
-					$pokemonIcons[$pokemonId]->getImage(),
-					$pokemon[$pokemonId]->getIdentifier(),
-					$pokemonNames[$pokemonId]->getName(),
-					$pokemonsTypes[$pokemonId],
-					$pokemonAbilities[$pokemonId],
-					$pokemonBaseStats[$pokemonId],
-					$pokemonBaseStatTotals[$pokemonId],
-					$pokemon[$pokemonId]->getSort()
+					$pokemon->getIcon(),
+					$pokemon->getIdentifier(),
+					$pokemon->getName(),
+					$pokemon->getTypes(),
+					$pokemon->getAbilities(),
+					$pokemon->getBaseStats(),
+					$pokemon->getBst(),
+					$pokemon->getSort()
 				);
 			}
 		}
@@ -266,6 +170,7 @@ class DexMovePokemonModel
 		// Get stat name abbreviations.
 		$statNames = $this->statNameRepository->getByLanguage($languageId);
 		$this->statAbbreviations = [];
+		$statIds = StatId::getByGeneration($generationId);
 		foreach ($statIds as $statId) {
 			$this->statAbbreviations[] = $statNames[$statId->value()]->getAbbreviation();
 		}

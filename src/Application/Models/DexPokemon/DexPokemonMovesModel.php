@@ -3,16 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexPokemon;
 
-use Jp\Dex\Application\Models\Structs\DexTypeFactory;
-use Jp\Dex\Domain\Categories\CategoryRepositoryInterface;
 use Jp\Dex\Domain\Items\TechnicalMachine;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Moves\GenerationMoveNotFoundException;
-use Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface;
-use Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface;
-use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
-use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
+use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface;
@@ -28,23 +22,8 @@ class DexPokemonMovesModel
 	/** @var TmRepositoryInterface $tmRepository */
 	private $tmRepository;
 
-	/** @var DexTypeFactory $dexTypeFactory */
-	private $dexTypeFactory;
-
-	/** @var CategoryRepositoryInterface $categoryRepository */
-	private $categoryRepository;
-
-	/** @var GenerationMoveRepositoryInterface $generationMoveRepository */
-	private $generationMoveRepository;
-
-	/** @var MoveRepositoryInterface $moveRepository */
-	private $moveRepository;
-
-	/** @var MoveNameRepositoryInterface $moveNameRepository */
-	private $moveNameRepository;
-
-	/** @var MoveDescriptionRepositoryInterface $moveDescriptionRepository */
-	private $moveDescriptionRepository;
+	/** @var DexMoveRepositoryInterface $dexMoveRepository */
+	private $dexMoveRepository;
 
 	/** @var MoveMethodRepositoryInterface $moveMethodRepository */
 	private $moveMethodRepository;
@@ -62,35 +41,20 @@ class DexPokemonMovesModel
 	 *
 	 * @param PokemonMoveRepositoryInterface $pokemonMoveRepository
 	 * @param TmRepositoryInterface $tmRepository
-	 * @param DexTypeFactory $dexTypeFactory
-	 * @param CategoryRepositoryInterface $categoryRepository
-	 * @param GenerationMoveRepositoryInterface $generationMoveRepository
-	 * @param MoveRepositoryInterface $moveRepository
-	 * @param MoveNameRepositoryInterface $moveNameRepository
-	 * @param MoveDescriptionRepositoryInterface $moveDescriptionRepository
+	 * @param DexMoveRepositoryInterface $dexMoveRepository
 	 * @param MoveMethodRepositoryInterface $moveMethodRepository
 	 * @param MoveMethodNameRepositoryInterface $moveMethodNameRepository
 	 */
 	public function __construct(
 		PokemonMoveRepositoryInterface $pokemonMoveRepository,
 		TmRepositoryInterface $tmRepository,
-		DexTypeFactory $dexTypeFactory,
-		CategoryRepositoryInterface $categoryRepository,
-		GenerationMoveRepositoryInterface $generationMoveRepository,
-		MoveRepositoryInterface $moveRepository,
-		MoveNameRepositoryInterface $moveNameRepository,
-		MoveDescriptionRepositoryInterface $moveDescriptionRepository,
+		DexMoveRepositoryInterface $dexMoveRepository,
 		MoveMethodRepositoryInterface $moveMethodRepository,
 		MoveMethodNameRepositoryInterface $moveMethodNameRepository
 	) {
 		$this->pokemonMoveRepository = $pokemonMoveRepository;
 		$this->tmRepository = $tmRepository;
-		$this->dexTypeFactory = $dexTypeFactory;
-		$this->categoryRepository = $categoryRepository;
-		$this->generationMoveRepository = $generationMoveRepository;
-		$this->moveRepository = $moveRepository;
-		$this->moveNameRepository = $moveNameRepository;
-		$this->moveDescriptionRepository = $moveDescriptionRepository;
+		$this->dexMoveRepository = $dexMoveRepository;
 		$this->moveMethodRepository = $moveMethodRepository;
 		$this->moveMethodNameRepository = $moveMethodNameRepository;
 	}
@@ -169,88 +133,58 @@ class DexPokemonMovesModel
 			}
 		}
 
-		// Get miscellaneous data to help create the dex Pokémon move records.
-		$dexTypes = $this->dexTypeFactory->getAll($generationId, $languageId);
-		$categories = $this->categoryRepository->getAll();
-
 		// Get move data.
-		$moves = [];
-		$moveNames = [];
-		$generationMoves = [];
-		$moveDescriptions = [];
-		foreach ($moveIds as $id => $moveId) {
-			try {
-				$generationMove = $this->generationMoveRepository->getByGenerationAndMove(
-					$generationId,
-					$moveId
-				);
-			} catch (GenerationMoveNotFoundException $e) {
-				// This move that the Pokémon could learn in an older generation
-				// does not exist in the current generation! (It's probably a
-				// Shadow move.)
-				continue;
-			}
-			$moves[$id] = $this->moveRepository->getById($moveId);
-			$moveNames[$id] = $this->moveNameRepository->getByLanguageAndMove(
-				$languageId,
-				$moveId
-			);
-			$generationMoves[$id] = $generationMove;
-			$moveDescriptions[$id] = $this->moveDescriptionRepository->getByGenerationAndLanguageAndMove(
-				$generationId,
-				$languageId,
-				$moveId
-			);
-		}
+		$moves = $this->dexMoveRepository->getByPokemon(
+			$generationId,
+			$pokemonId,
+			$languageId
+		);
 
 		// Compile the dex Pokémon move records.
 		$dexPokemonMoves = [];
 		foreach ($levelUpMoves as $moveId => $indexedMoves) {
-			if (!isset($generationMoves[$moveId])) {
+			if (!isset($moves[$moveId])) {
 				// This move that the Pokémon could learn in an older generation
 				// does not exist in the current generation!
 				continue;
 			}
 
-			$generationMove = $generationMoves[$moveId];
-			$typeId = $generationMove->getTypeId()->value();
-			$categoryId = $generationMove->getCategoryId()->value();
+			$move = $moves[$moveId];
+
 			foreach ($indexedMoves as $versionGroupData) {
 				$dexPokemonMoves[MoveMethodId::LEVEL_UP][] = new DexPokemonMove(
 					$versionGroupData,
-					$moves[$moveId]->getIdentifier(),
-					$moveNames[$moveId]->getName(),
-					$dexTypes[$typeId],
-					$categories[$categoryId]->getIcon(),
-					$generationMove->getPP(),
-					$generationMove->getPower(),
-					$generationMove->getAccuracy(),
-					$moveDescriptions[$moveId]->getDescription()
+					$move->getIdentifier(),
+					$move->getName(),
+					$move->getType(),
+					$move->getCategoryIcon(),
+					$move->getPP(),
+					$move->getPower(),
+					$move->getAccuracy(),
+					$move->getDescription()
 				);
 			}
 		}
 		foreach ($methodsMoves as $methodId => $methodMoves) {
 			foreach ($methodMoves as $moveId => $versionGroupData) {
-				if (!isset($generationMoves[$moveId])) {
+				if (!isset($moves[$moveId])) {
 					// This move that the Pokémon could learn in an older
 					// generation does not exist in the current generation!
 					continue;
 				}
 
-				$generationMove = $generationMoves[$moveId];
-				$typeId = $generationMove->getTypeId()->value();
-				$categoryId = $generationMove->getCategoryId()->value();
+				$move = $moves[$moveId];
 
 				$dexPokemonMoves[$methodId][] = new DexPokemonMove(
 					$versionGroupData,
-					$moves[$moveId]->getIdentifier(),
-					$moveNames[$moveId]->getName(),
-					$dexTypes[$typeId],
-					$categories[$categoryId]->getIcon(),
-					$generationMove->getPP(),
-					$generationMove->getPower(),
-					$generationMove->getAccuracy(),
-					$moveDescriptions[$moveId]->getDescription()
+					$move->getIdentifier(),
+					$move->getName(),
+					$move->getType(),
+					$move->getCategoryIcon(),
+					$move->getPP(),
+					$move->getPower(),
+					$move->getAccuracy(),
+					$move->getDescription()
 				);
 			}
 		}

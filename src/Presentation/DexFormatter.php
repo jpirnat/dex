@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\Structs\DexMove;
-use Jp\Dex\Application\Models\Structs\DexPokemon;
-use Jp\Dex\Application\Models\Structs\DexPokemonAbility;
-use Jp\Dex\Application\Models\Structs\DexType;
+use Jp\Dex\Domain\Abilities\DexPokemonAbility;
+use Jp\Dex\Domain\Moves\DexMove;
+use Jp\Dex\Domain\Pokemon\DexPokemon;
+use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\VersionGroup;
 
@@ -69,12 +69,13 @@ class DexFormatter
 
 		foreach ($dexPokemons as $dexPokemon) {
 			$pokemon[] = [
-				'formIcon' => $dexPokemon->getFormIcon(),
-				'identifier' => $dexPokemon->getPokemonIdentifier(),
-				'name' => $dexPokemon->getPokemonName(),
+				'icon' => $dexPokemon->getIcon(),
+				'identifier' => $dexPokemon->getIdentifier(),
+				'name' => $dexPokemon->getName(),
 				'types' => $this->formatDexTypes($dexPokemon->getTypes()),
 				'abilities' => $this->formatDexPokemonAbilities($dexPokemon->getAbilities()),
 				'baseStats' => $dexPokemon->getBaseStats(),
+				'bst' => $dexPokemon->getBst(),
 			];
 		}
 
@@ -109,8 +110,9 @@ class DexFormatter
 	public function formatDexType(DexType $dexType) : array
 	{
 		return [
-			'identifier' => $dexType->getTypeIdentifier(),
-			'icon' => $dexType->getTypeIcon(),
+			'identifier' => $dexType->getIdentifier(),
+			'icon' => $dexType->getIcon(),
+			'name' => $dexType->getName(),
 		];
 	}
 
@@ -127,8 +129,8 @@ class DexFormatter
 
 		foreach ($dexPokemonAbilities as $dexPokemonAbility) {
 			$abilities[] = [
-				'identifier' => $dexPokemonAbility->getAbilityIdentifier(),
-				'name' => $dexPokemonAbility->getAbilityName(),
+				'identifier' => $dexPokemonAbility->getIdentifier(),
+				'name' => $dexPokemonAbility->getName(),
 				'isHiddenAbility' => $dexPokemonAbility->isHiddenAbility(),
 			];
 		}
@@ -149,15 +151,14 @@ class DexFormatter
 
 		foreach ($dexMoves as $dexMove) {
 			$moves[] = [
-				'identifier' => $dexMove->getMoveIdentifier(),
-				'name' => $dexMove->getMoveName(),
+				'identifier' => $dexMove->getIdentifier(),
+				'name' => $dexMove->getName(),
 				'type' => $this->formatDexType($dexMove->getType()),
 				'categoryIcon' => $dexMove->getCategoryIcon(),
 				'pp' => $dexMove->getPP(),
 				'power' => $dexMove->getPower(),
 				'accuracy' => $dexMove->getAccuracy(),
-				'priority' => $dexMove->getPriority(),
-				'description' => $dexMove->getMoveDescription(),
+				'description' => $dexMove->getDescription(),
 			];
 		}
 

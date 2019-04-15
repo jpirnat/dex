@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
-use Jp\Dex\Application\Models\Structs\DexMove;
-use Jp\Dex\Application\Models\Structs\DexMoveFactory;
-use Jp\Dex\Application\Models\Structs\DexPokemon;
-use Jp\Dex\Application\Models\Structs\DexPokemonFactory;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Moves\DexMove;
+use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\DexPokemon;
+use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeNameRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
@@ -22,11 +22,11 @@ class DexTypeModel
 	/** @var TypeNameRepositoryInterface $typeNameRepository */
 	private $typeNameRepository;
 
-	/** @var DexPokemonFactory $dexPokemonFactory */
-	private $dexPokemonFactory;
+	/** @var DexPokemonRepositoryInterface $dexPokemonRepository */
+	private $dexPokemonRepository;
 
-	/** @var DexMoveFactory $dexMoveFactory */
-	private $dexMoveFactory;
+	/** @var DexMoveRepositoryInterface $dexMoveRepository */
+	private $dexMoveRepository;
 
 
 	/** @var array $type */
@@ -45,21 +45,21 @@ class DexTypeModel
 	 * @param GenerationModel $generationModel
 	 * @param TypeRepositoryInterface $typeRepository
 	 * @param TypeNameRepositoryInterface $typeNameRepository
-	 * @param DexPokemonFactory $dexPokemonFactory
-	 * @param DexMoveFactory $dexMoveFactory
+	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
+	 * @param DexMoveRepositoryInterface $dexMoveRepository
 	 */
 	public function __construct(
 		GenerationModel $generationModel,
 		TypeRepositoryInterface $typeRepository,
 		TypeNameRepositoryInterface $typeNameRepository,
-		DexPokemonFactory $dexPokemonFactory,
-		DexMoveFactory $dexMoveFactory
+		DexPokemonRepositoryInterface $dexPokemonRepository,
+		DexMoveRepositoryInterface $dexMoveRepository
 	) {
 		$this->generationModel = $generationModel;
 		$this->typeRepository = $typeRepository;
 		$this->typeNameRepository = $typeNameRepository;
-		$this->dexPokemonFactory = $dexPokemonFactory;
-		$this->dexMoveFactory = $dexMoveFactory;
+		$this->dexPokemonRepository = $dexPokemonRepository;
+		$this->dexMoveRepository = $dexMoveRepository;
 	}
 
 	/**
@@ -93,14 +93,14 @@ class DexTypeModel
 		];
 
 		// Get Pokémon with this type.
-		$this->pokemon = $this->dexPokemonFactory->getByGenerationAndType(
+		$this->pokemon = $this->dexPokemonRepository->getByType(
 			$generationId,
 			$type->getId(),
 			$languageId
 		);
 
 		// Get moves with this type.
-		$this->moves = $this->dexMoveFactory->getByGenerationAndType(
+		$this->moves = $this->dexMoveRepository->getByType(
 			$generationId,
 			$type->getId(),
 			$languageId

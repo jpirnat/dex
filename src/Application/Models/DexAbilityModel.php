@@ -3,21 +3,17 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
-use Jp\Dex\Application\Models\Structs\DexPokemon;
-use Jp\Dex\Application\Models\Structs\DexPokemonFactory;
 use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
-use Jp\Dex\Domain\Abilities\PokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Pokemon\DexPokemon;
+use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 
 class DexAbilityModel
 {
 	/** @var GenerationModel $generationModel */
 	private $generationModel;
-
-	/** @var DexPokemonFactory $dexPokemonFactory */
-	private $dexPokemonFactory;
 
 	/** @var AbilityRepositoryInterface $abilityRepository */
 	private $abilityRepository;
@@ -28,8 +24,8 @@ class DexAbilityModel
 	/** @var AbilityDescriptionRepositoryInterface $abilityDescriptionRepository */
 	private $abilityDescriptionRepository;
 
-	/** @var PokemonAbilityRepositoryInterface $pokemonAbilityRepository */
-	private $pokemonAbilityRepository;
+	/** @var DexPokemonRepositoryInterface $dexPokemonRepository */
+	private $dexPokemonRepository;
 
 
 	/** @var array $ability */
@@ -46,26 +42,23 @@ class DexAbilityModel
 	 * Constructor.
 	 *
 	 * @param GenerationModel $generationModel
-	 * @param DexPokemonFactory $dexPokemonFactory
 	 * @param AbilityRepositoryInterface $abilityRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
 	 * @param AbilityDescriptionRepositoryInterface $abilityDescriptionRepository
-	 * @param PokemonAbilityRepositoryInterface $pokemonAbilityRepository
+	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
 	 */
 	public function __construct(
 		GenerationModel $generationModel,
-		DexPokemonFactory $dexPokemonFactory,
 		AbilityRepositoryInterface $abilityRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
 		AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
-		PokemonAbilityRepositoryInterface $pokemonAbilityRepository
+		DexPokemonRepositoryInterface $dexPokemonRepository
 	) {
 		$this->generationModel = $generationModel;
-		$this->dexPokemonFactory = $dexPokemonFactory;
 		$this->abilityRepository = $abilityRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
 		$this->abilityDescriptionRepository = $abilityDescriptionRepository;
-		$this->pokemonAbilityRepository = $pokemonAbilityRepository;
+		$this->dexPokemonRepository = $dexPokemonRepository;
 	}
 
 	/**
@@ -106,23 +99,19 @@ class DexAbilityModel
 		];
 
 		// Get Pokémon with this ability.
-		$pokemonAbilities = $this->pokemonAbilityRepository->getByGenerationAndAbility(
+		$pokemons = $this->dexPokemonRepository->getWithAbility(
 			$generationId,
-			$ability->getId()
+			$ability->getId(),
+			$languageId
 		);
 		$this->normalPokemon = [];
 		$this->hiddenPokemon = [];
-		foreach ($pokemonAbilities as $pokemonAbility) {
-			$dexPokemon = $this->dexPokemonFactory->getDexPokemon(
-				$generationId,
-				$pokemonAbility->getPokemonId(),
-				$languageId
-			);
-
+		foreach ($pokemons as $pokemon) {
+			$pokemonAbility = $pokemon->getAbilities()[$ability->getId()->value()];
 			if (!$pokemonAbility->isHiddenAbility()) {
-				$this->normalPokemon[] = $dexPokemon;
+				$this->normalPokemon[] = $pokemon;
 			} else {
-				$this->hiddenPokemon[] = $dexPokemon;
+				$this->hiddenPokemon[] = $pokemon;
 			}
 		}
 	}
