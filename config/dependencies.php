@@ -111,6 +111,9 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Moves\DexMoveRepositoryInterface::class, $
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexPokemonAbilityRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Abilities\DexPokemonAbilityRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexPokemonRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexTypeRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Types\DexTypeRepositoryInterface::class, $rule);
 
