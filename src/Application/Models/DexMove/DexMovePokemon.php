@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexMove;
 
-use Jp\Dex\Application\Models\Structs\DexPokemonAbility;
-use Jp\Dex\Application\Models\Structs\DexType;
+use Jp\Dex\Domain\Abilities\DexPokemonAbility;
+use Jp\Dex\Domain\Types\DexType;
 
 class DexMovePokemon
 {

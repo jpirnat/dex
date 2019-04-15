@@ -87,7 +87,7 @@ class DexAbilityView
 				'title' => 'Abilities - ' . $ability['name'],
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
-				'stats' => ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe', 'BST'],
+				'stats' => ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'],
 				// TODO: Pull these stat names from somewhere else.
 				'pokemons' => array_merge($normalPokemon, $hiddenPokemon),
 			]

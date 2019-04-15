@@ -29,6 +29,7 @@
 				{% for stat in stats %}
 					<th scope="col" class="number">{{ stat|e }}</th>
 				{% endfor %}
+				<th scope="col" class="number">BST</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -69,6 +70,7 @@
 							{{ baseStat|e }}
 						</td>
 					{% endfor %}
+					<td class="number">{{ pokemon.bst|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>

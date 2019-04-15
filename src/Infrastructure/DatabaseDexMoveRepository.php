@@ -109,7 +109,7 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
 	 *
-	 * @return DexMove[]
+	 * @return DexMove[] Indexed by move id.
 	 */
 	public function getByPokemon(
 		GenerationId $generationId,
@@ -123,6 +123,7 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 
 		$stmt = $this->db->prepare(
 			'SELECT
+				`m`.`id`,
 				`m`.`identifier`,
 				`mn`.`name`,
 				`gm`.`type_id`,
@@ -174,7 +175,7 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				(string) $result['description']
 			);
 
-			$dexMoves[] = $dexMove;
+			$dexMoves[$result['id']] = $dexMove;
 		}
 
 		return $dexMoves;
