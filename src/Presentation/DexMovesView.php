@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\DexTypeModel;
+use Jp\Dex\Application\Models\DexMovesModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class DexTypeView
+class DexMovesView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;
@@ -15,8 +15,8 @@ class DexTypeView
 	/** @var BaseView $baseView */
 	private $baseView;
 
-	/** @var DexTypeModel $dexTypeModel */
-	private $dexTypeModel;
+	/** @var DexMovesModel $dexMovesModel */
+	private $dexMovesModel;
 
 	/** @var DexFormatter $dexFormatter */
 	private $dexFormatter;
@@ -26,71 +26,54 @@ class DexTypeView
 	 *
 	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
-	 * @param DexTypeModel $dexTypeModel
+	 * @param DexMovesModel $dexMovesModel
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
-		DexTypeModel $dexTypeModel,
+		DexMovesModel $dexMovesModel,
 		DexFormatter $dexFormatter
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
-		$this->dexTypeModel = $dexTypeModel;
+		$this->dexMovesModel = $dexMovesModel;
 		$this->dexFormatter = $dexFormatter;
 	}
 
 	/**
-	 * Show the dex ability page.
+	 * Show the dex moves page.
 	 *
 	 * @return ResponseInterface
 	 */
 	public function index() : ResponseInterface
 	{
-		$generationModel = $this->dexTypeModel->getGenerationModel();
+		$generationModel = $this->dexMovesModel->getGenerationModel();
 		$generation = $generationModel->getGeneration();
 		$generations = $generationModel->getGenerations();
 
-		$type = $this->dexTypeModel->getType();
-		$pokemon = $this->dexTypeModel->getPokemon();
-		$moves = $this->dexTypeModel->getMoves();
+		$moves = $this->dexMovesModel->getMoves();
 
-		$pokemon = $this->dexFormatter->formatDexPokemon($pokemon);
-		$moves = $this->dexFormatter->formatDexMoves($moves);
+		$showMoveDescriptions = $generation->getId()->value() >= 3;
 
 		// Navigational breadcrumbs.
-		$generationIdentifier = $generation->getIdentifier();
-		$breadcrumbs = [
-			[
-				'text' => 'Dex',
-			],
-			[
-				'url' => "/dex/$generationIdentifier/types",
-				'text' => 'Types',
-			],
-			[
-				'text' => $type['name'],
-			]
-		];
+		$breadcrumbs = [[
+			'text' => 'Dex',
+		], [
+			'text' => 'Moves',
+		]];
 
 		$content = $this->renderer->render(
-			'html/dex/type.twig',
+			'html/dex/moves.twig',
 			$this->baseView->getBaseVariables() + [
 				'generation' => [
-					'id' => $generation->getId()->value(),
 					'identifier' => $generation->getIdentifier(),
 				],
-				'type' => [
-					'identifier' => $type['identifier'],
-				],
-				'title' => 'Types - ' . $type['name'],
+				'title' => 'Moves',
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
-				'stats' => ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'],
-				// TODO: Pull these stat names from somewhere else.
-				'pokemons' => $pokemon,
-				'moves' => $moves,
+				'showMoveDescriptions' => $showMoveDescriptions,
+				'moves' => $this->dexFormatter->formatDexMoves($moves),
 			]
 		);
 

@@ -59,7 +59,6 @@ class DexAbilityView
 
 		$normalPokemon = $this->dexFormatter->formatDexPokemon($normalPokemon);
 		$hiddenPokemon = $this->dexFormatter->formatDexPokemon($hiddenPokemon);
-		// TODO: Sort Pokémon somehow. Add a sort value to class Pokemon?
 
 		// Navigational breadcrumbs.
 		$generationIdentifier = $generation->getIdentifier();

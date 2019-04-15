@@ -55,7 +55,7 @@ class BreedingChainsView
 			/** @var BreedingChainRecord $record */
 			foreach ($chain as $record) {
 				$records[] = [
-					'formIcon' => $record->getFormIcon(),
+					'icon' => $record->getFormIcon(),
 					'generationIdentifier' => $record->getGenerationIdentifier(),
 					'identifier' => $record->getPokemonIdentifier(),
 					'name' => $record->getPokemonName(),
