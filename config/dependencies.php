@@ -108,6 +108,9 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Categories\CategoryRepositoryInterface::cl
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexPokemonAbilityRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Abilities\DexPokemonAbilityRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexTypeRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Types\DexTypeRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseEggGroupNameRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\EggGroups\EggGroupNameRepositoryInterface::class, $rule);
 
