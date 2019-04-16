@@ -151,8 +151,9 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 		AbilityId $abilityId,
 		LanguageId $languageId
 	) : array {
-		$types = $this->dexTypeRepository->getByGeneration(
+		$types = $this->dexTypeRepository->getByPokemonAbility(
 			$generationId,
+			$abilityId,
 			$languageId
 		);
 		$abilities = $this->dexPokemonAbilityRepository->getByPokemonAbility(

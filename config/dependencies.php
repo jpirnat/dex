@@ -335,6 +335,7 @@ $dice = $dice->addRule(\Jp\Dex\Application\Models\DexMove\DexMoveModel::class, $
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexMovesModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexNaturesModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexPokemon\DexPokemonModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\DexPokemonsModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexTypeModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\DexTypesModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\ErrorModel::class, $rule);
