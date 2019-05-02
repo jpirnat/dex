@@ -52,6 +52,41 @@ table .percent-minus {
 
 
 
+/* Nav menu */
+
+.menu {
+	background: #eee;
+	border: 1px solid #ddd;
+}
+
+#hamburger-button {
+	display: inline-block;
+	padding: 10px;
+}
+
+.menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+.menu li {
+	display: inline-block;
+}
+
+.menu a {
+	display: inline-block;
+	padding: 10px;
+	color: black;
+	text-decoration: none;
+}
+
+.menu a:hover {
+	background: black;
+	color: white;
+}
+
+
+
 /* Nav breadcrumbs */
 
 .breadcrumbs {
@@ -65,7 +100,7 @@ table .percent-minus {
 }
 
 .breadcrumbs li {
-	display: inline;
+	display: inline-block;
 }
 
 .breadcrumbs li+li::before {
@@ -75,7 +110,7 @@ table .percent-minus {
 
 .breadcrumbs a {
 	display: inline-block;
-	padding: 5px;
+	padding: 10px;
 	color: black;
 	text-decoration: none;
 }
@@ -86,7 +121,8 @@ table .percent-minus {
 }
 
 .breadcrumbs .current {
-	padding: 5px;
+	display: inline-block;
+	padding: 10px;
 }
 
 

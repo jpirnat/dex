@@ -19,6 +19,17 @@
 	<body>
 		<header>
 			{% block nav %}
+				<nav class="menu">
+					<ul>
+						<li><a href="/dex/sm/pokemon">Pokémon</a></li>
+						<li><a href="/dex/sm/moves">Moves</a></li>
+						<li><a href="/dex/sm/types">Types</a></li>
+						<li><a href="/dex/sm/abilities">Abilities</a></li>
+						<li><a href="/dex/sm/natures">Natures</a></li>
+						<li><a href="/stats">Stats</a>
+						<li><a href="/stats/current">Current Stats</a></li>
+					</ul>
+				</nav>
 				{% if breadcrumbs %}
 					<nav class="breadcrumbs">
 						<ul>
