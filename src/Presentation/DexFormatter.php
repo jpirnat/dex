@@ -110,6 +110,7 @@ class DexFormatter
 	public function formatDexType(DexType $dexType) : array
 	{
 		return [
+			'id' => $dexType->getId()->value(),
 			'identifier' => $dexType->getIdentifier(),
 			'icon' => $dexType->getIcon(),
 			'name' => $dexType->getName(),

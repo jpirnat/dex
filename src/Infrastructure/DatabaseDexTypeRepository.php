@@ -45,7 +45,6 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	) : DexType {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`t`.`id`,
 				`t`.`identifier`,
 				`ti`.`icon`,
 				`tn`.`name`
@@ -70,6 +69,7 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 		}
 
 		$dexType = new DexType(
+			$typeId,
 			$result['identifier'],
 			$result['icon'],
 			$result['name']
@@ -94,6 +94,7 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
+				`t`.`id`,
 				`t`.`identifier`,
 				`ti`.`icon`,
 				`tn`.`name`
@@ -119,12 +120,61 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$dexType = new DexType(
+				new TypeId($result['id']),
 				$result['identifier'],
 				$result['icon'],
 				$result['name']
 			);
 
 			$dexTypes[] = $dexType;
+		}
+
+		return $dexTypes;
+	}
+
+	/**
+	 * Get the main dex types available in this generation.
+	 *
+	 * @param GenerationId $generationId
+	 * @param LanguageId $languageId
+	 *
+	 * @return DexType[] Indexed by type id.
+	 */
+	public function getMainByGeneration(
+		GenerationId $generationId,
+		LanguageId $languageId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`t`.`id`,
+				`t`.`identifier`,
+				`ti`.`icon`,
+				`tn`.`name`
+			FROM `types` AS `t`
+			INNER JOIN `type_icons` AS `ti`
+				ON `t`.`id` = `ti`.`type_id`
+			INNER JOIN `type_names` AS `tn`
+				ON `t`.`id` = `tn`.`type_id`
+				AND `ti`.`language_id` = `tn`.`language_id`
+			WHERE `t`.`id` < 100
+				AND `t`.`introduced_in_generation_id` <= :generation_id
+				AND `ti`.`language_id` = :language_id'
+		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$dexTypes = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$dexType = new DexType(
+				new TypeId($result['id']),
+				$result['identifier'],
+				$result['icon'],
+				$result['name']
+			);
+
+			$dexTypes[$result['id']] = $dexType;
 		}
 
 		return $dexTypes;
@@ -165,6 +215,7 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$dexType = new DexType(
+				new TypeId($result['id']),
 				$result['identifier'],
 				$result['icon'],
 				$result['name']

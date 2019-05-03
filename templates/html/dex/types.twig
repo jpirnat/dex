@@ -28,7 +28,7 @@
 				{% for defendingType in types %}
 					<th scope="col">
 						<a href="/dex/{{ generation.identifier|e }}/types/{{ defendingType.identifier|e }}">
-							<img src="/images/types/{{ defendingType.icon|e }}">
+							<img src="/images/types/{{ defendingType.icon|e }}" alt="{{ defendingType.name|e }}">
 						</a>
 					</th>
 				{% endfor %}
@@ -39,7 +39,7 @@
 				<tr>
 					<th scope="row">
 						<a href="/dex/{{ generation.identifier|e }}/types/{{ attackingType.identifier|e }}">
-							<img src="/images/types/{{ attackingType.icon|e }}">
+							<img src="/images/types/{{ attackingType.icon|e }}" alt="{{ attackingType.name|e }}">
 						</a>
 					</th>
 					{% for defendingType in types %}

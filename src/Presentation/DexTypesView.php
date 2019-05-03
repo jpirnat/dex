@@ -74,7 +74,7 @@ class DexTypesView
 				'title' => 'Types',
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
-				'types' => $types,
+				'types' => $this->dexFormatter->formatDexTypes($types),
 				'factors' => $factors,
 			]
 		);

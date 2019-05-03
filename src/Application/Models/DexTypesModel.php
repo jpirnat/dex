@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
+use Jp\Dex\Domain\Types\DexType;
+use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeEffectivenessRepositoryInterface;
-use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 class DexTypesModel
@@ -14,17 +14,14 @@ class DexTypesModel
 	/** @var GenerationModel $generationModel */
 	private $generationModel;
 
-	/** @var TypeRepositoryInterface $typeRepository */
-	private $typeRepository;
-
-	/** @var TypeIconRepositoryInterface $typeIconRepository */
-	private $typeIconRepository;
+	/** @var DexTypeRepositoryInterface $dexTypeRepository */
+	private $dexTypeRepository;
 
 	/** @var TypeEffectivenessRepositoryInterface $typeEffectivenessRepository */
 	private $typeEffectivenessRepository;
 
 
-	/** @var array $types */
+	/** @var DexType[] $types */
 	private $types;
 
 	/** @var int[][] $factors */
@@ -35,19 +32,16 @@ class DexTypesModel
 	 * Constructor.
 	 *
 	 * @param GenerationModel $generationModel
-	 * @param TypeRepositoryInterface $typeRepository
-	 * @param TypeIconRepositoryInterface $typeIconRepository
+	 * @param DexTypeRepositoryInterface $dexTypeRepository
 	 * @param TypeEffectivenessRepositoryInterface $typeEffectivenessRepository
 	 */
 	public function __construct(
 		GenerationModel $generationModel,
-		TypeRepositoryInterface $typeRepository,
-		TypeIconRepositoryInterface $typeIconRepository,
+		DexTypeRepositoryInterface $dexTypeRepository,
 		TypeEffectivenessRepositoryInterface $typeEffectivenessRepository
 	) {
 		$this->generationModel = $generationModel;
-		$this->typeRepository = $typeRepository;
-		$this->typeIconRepository = $typeIconRepository;
+		$this->dexTypeRepository = $dexTypeRepository;
 		$this->typeEffectivenessRepository = $typeEffectivenessRepository;
 	}
 
@@ -67,21 +61,10 @@ class DexTypesModel
 
 		$this->generationModel->setGensSince(new GenerationId(1));
 
-		$types = $this->typeRepository->getMainByGeneration($generationId);
-
-		$typeIcons = $this->typeIconRepository->getByLanguage($languageId);
-
-		// Consolidate data for each type.
-		$this->types = [];
-		foreach ($types as $type) {
-			$typeIcon = $typeIcons[$type->getId()->value()];
-
-			$this->types[] = [
-				'id' => $type->getId()->value(),
-				'identifier' => $type->getIdentifier(),
-				'icon' => $typeIcon->getIcon(),
-			];
-		}
+		$this->types = $this->dexTypeRepository->getMainByGeneration(
+			$generationId,
+			$languageId
+		);
 
 		// Get this generation's type chart.
 		$typeEffectivenesses = $this->typeEffectivenessRepository->getByGeneration(
@@ -110,7 +93,7 @@ class DexTypesModel
 	/**
 	 * Get the types.
 	 *
-	 * @return array
+	 * @return DexType[]
 	 */
 	public function getTypes() : array
 	{

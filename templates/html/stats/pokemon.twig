@@ -42,7 +42,7 @@
 		<div class="pokemon-types">
 			{% for type in types %}
 				<a href="/dex/{{ generation.identifier|e }}/types/{{ type.identifier|e }}">
-					<img src="/images/types/{{ type.icon|e }}">
+					<img src="/images/types/{{ type.icon|e }}" alt="{{ type.name|e }}">
 				</a>
 			{% endfor %}
 		</div>

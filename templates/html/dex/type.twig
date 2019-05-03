@@ -44,7 +44,7 @@
 					<td class="types">
 						{% for type in pokemon.types %}
 							<a href="/dex/{{ generation.identifier|e }}/types/{{ type.identifier|e }}">
-								<img src="/images/types/{{ type.icon|e }}">
+								<img src="/images/types/{{ type.icon|e }}" alt="{{ type.name|e }}">
 							</a>
 						{% endfor %}
 					</td>
@@ -98,7 +98,7 @@
 					</td>
 					<td>
 						<a href="/dex/{{ generation.identifier|e }}/types/{{ move.type.identifier|e }}">
-							<img src="/images/types/{{ move.type.icon|e }}">
+							<img src="/images/types/{{ move.type.icon|e }}" alt="{{ move.type.name|e }}">
 						</a>
 					</td>
 					<td><img src="/images/categories/{{ move.categoryIcon|e }}"></td>

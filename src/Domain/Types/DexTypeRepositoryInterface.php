@@ -42,6 +42,19 @@ interface DexTypeRepositoryInterface
 	) : array;
 
 	/**
+	 * Get the main dex types available in this generation.
+	 *
+	 * @param GenerationId $generationId
+	 * @param LanguageId $languageId
+	 *
+	 * @return DexType[] Indexed by type id.
+	 */
+	public function getMainByGeneration(
+		GenerationId $generationId,
+		LanguageId $languageId
+	) : array;
+
+	/**
 	 * Get all dex types available in this generation.
 	 *
 	 * @param GenerationId $generationId
