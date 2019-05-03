@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexPokemon;
 
+use Jp\Dex\Domain\Categories\DexCategory;
 use Jp\Dex\Domain\Types\DexType;
 
 class DexPokemonMove
@@ -19,8 +20,8 @@ class DexPokemonMove
 	/** @var DexType $type */
 	private $type;
 
-	/** @var string $categoryIcon */
-	private $categoryIcon;
+	/** @var DexCategory $category */
+	private $category;
 
 	/** @var int $pp */
 	private $pp;
@@ -41,7 +42,7 @@ class DexPokemonMove
 	 * @param string $identifier
 	 * @param string $name
 	 * @param DexType $type
-	 * @param string $categoryIcon
+	 * @param DexCategory $category
 	 * @param int $pp
 	 * @param int $power
 	 * @param int $accuracy
@@ -52,7 +53,7 @@ class DexPokemonMove
 		string $identifier,
 		string $name,
 		DexType $type,
-		string $categoryIcon,
+		DexCategory $category,
 		int $pp,
 		int $power,
 		int $accuracy,
@@ -62,7 +63,7 @@ class DexPokemonMove
 		$this->identifier = $identifier;
 		$this->name = $name;
 		$this->type = $type;
-		$this->categoryIcon = $categoryIcon;
+		$this->category = $category;
 		$this->pp = $pp;
 		$this->power = $power;
 		$this->accuracy = $accuracy;
@@ -110,13 +111,13 @@ class DexPokemonMove
 	}
 
 	/**
-	 * Get the move's category icon.
+	 * Get the move's category.
 	 *
-	 * @return string
+	 * @return DexCategory
 	 */
-	public function getCategoryIcon() : string
+	public function getCategory() : DexCategory
 	{
-		return $this->categoryIcon;
+		return $this->category;
 	}
 
 	/**

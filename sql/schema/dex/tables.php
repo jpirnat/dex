@@ -44,6 +44,7 @@ return [
 
 	// Types
 	'categories',
+	'category_names',
 	'types',
 	'type_names',
 	'type_icons',

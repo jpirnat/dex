@@ -101,7 +101,9 @@
 							<img src="/images/types/{{ move.type.icon|e }}" alt="{{ move.type.name|e }}">
 						</a>
 					</td>
-					<td class="category"><img src="/images/categories/{{ move.categoryIcon|e }}"></td>
+					<td class="category">
+						<img src="/images/categories/{{ move.category.icon|e }}" alt="{{ move.category.name|e }}">
+					</td>
 					<td class="number">{{ move.pp|e }}</td>
 					<td class="number">{{ move.power|e }}</td>
 					<td class="number">{{ move.accuracy|e }}</td>

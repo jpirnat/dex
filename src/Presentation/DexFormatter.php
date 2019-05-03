@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Domain\Abilities\DexPokemonAbility;
+use Jp\Dex\Domain\Categories\DexCategory;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Types\DexType;
@@ -118,6 +119,21 @@ class DexFormatter
 	}
 
 	/**
+	 * Transform a dex category object into a renderable data array.
+	 *
+	 * @param DexCategory $dexCategory
+	 *
+	 * @return array
+	 */
+	public function formatDexCategory(DexCategory $dexCategory) : array
+	{
+		return [
+			'icon' => $dexCategory->getIcon(),
+			'name' => $dexCategory->getName(),
+		];
+	}
+
+	/**
 	 * Transform an array of dex Pokémon ability objects into a renderable data array.
 	 *
 	 * @param DexPokemonAbility[] $dexPokemonAbilities
@@ -155,7 +171,7 @@ class DexFormatter
 				'identifier' => $dexMove->getIdentifier(),
 				'name' => $dexMove->getName(),
 				'type' => $this->formatDexType($dexMove->getType()),
-				'categoryIcon' => $dexMove->getCategoryIcon(),
+				'category' => $this->formatDexCategory($dexMove->getCategory()),
 				'pp' => $dexMove->getPP(),
 				'power' => $dexMove->getPower(),
 				'accuracy' => $dexMove->getAccuracy(),

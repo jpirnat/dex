@@ -168,7 +168,7 @@ class DexPokemonView
 				'identifier' => $move->getIdentifier(),
 				'name' => $move->getName(),
 				'type' => $this->dexFormatter->formatDexType($move->getType()),
-				'categoryIcon' => $move->getCategoryIcon(),
+				'category' => $this->dexFormatter->formatDexCategory($move->getCategory()),
 				'pp' => $move->getPP(),
 				'power' => $power,
 				'accuracy' => $accuracy,

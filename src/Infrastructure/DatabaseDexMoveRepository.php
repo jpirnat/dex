@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Categories\DexCategoryRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
@@ -20,18 +21,24 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 	/** @var DexTypeRepositoryInterface $dexTypeRepository */
 	private $dexTypeRepository;
 
+	/** @var DexCategoryRepositoryInterface $dexCategoryRepository */
+	private $dexCategoryRepository;
+
 	/**
 	 * Constructor.
 	 *
 	 * @param PDO $db
 	 * @param DexTypeRepositoryInterface $dexTypeRepository
+	 * @param DexCategoryRepositoryInterface $dexCategoryRepository
 	 */
 	public function __construct(
 		PDO $db,
-		DexTypeRepositoryInterface $dexTypeRepository
+		DexTypeRepositoryInterface $dexTypeRepository,
+		DexCategoryRepositoryInterface $dexCategoryRepository
 	) {
 		$this->db = $db;
 		$this->dexTypeRepository = $dexTypeRepository;
+		$this->dexCategoryRepository = $dexCategoryRepository;
 	}
 
 	/**
@@ -51,13 +58,14 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 			$generationId,
 			$languageId
 		);
+		$dexCategories = $this->dexCategoryRepository->getByLanguage($languageId);
 
 		$stmt = $this->db->prepare(
 			'SELECT
 				`m`.`identifier`,
 				`mn`.`name`,
 				`gm`.`type_id`,
-				`c`.`icon` AS `category_icon`,
+				`gm`.`category_id`,
 				`gm`.`pp`,
 				`gm`.`power`,
 				`gm`.`accuracy`,
@@ -67,8 +75,6 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				ON `m`.`id` = `mn`.`move_id`
 			INNER JOIN `generation_moves` AS `gm`
 				ON `m`.`id` = `gm`.`move_id`
-			INNER JOIN `categories` AS `c`
-				ON `gm`.`category_id` = `c`.`id`
 			LEFT JOIN `move_descriptions` AS `md`
 				ON `gm`.`generation_id` = `md`.`generation_id`
 				AND `mn`.`language_id` = `md`.`language_id`
@@ -88,7 +94,7 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				$result['identifier'],
 				$result['name'],
 				$dexTypes[$result['type_id']],
-				$result['category_icon'],
+				$dexCategories[$result['category_id']],
 				$result['pp'],
 				$result['power'],
 				$result['accuracy'],
@@ -120,6 +126,7 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 			$generationId,
 			$languageId
 		);
+		$dexCategories = $this->dexCategoryRepository->getByLanguage($languageId);
 
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -127,7 +134,7 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				`m`.`identifier`,
 				`mn`.`name`,
 				`gm`.`type_id`,
-				`c`.`icon` AS `category_icon`,
+				`gm`.`category_id`,
 				`gm`.`pp`,
 				`gm`.`power`,
 				`gm`.`accuracy`,
@@ -137,8 +144,6 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				ON `m`.`id` = `mn`.`move_id`
 			INNER JOIN `generation_moves` AS `gm`
 				ON `m`.`id` = `gm`.`move_id`
-			INNER JOIN `categories` AS `c`
-				ON `gm`.`category_id` = `c`.`id`
 			LEFT JOIN `move_descriptions` AS `md`
 				ON `gm`.`generation_id` = `md`.`generation_id`
 				AND `mn`.`language_id` = `md`.`language_id`
@@ -168,7 +173,7 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				$result['identifier'],
 				$result['name'],
 				$dexTypes[$result['type_id']],
-				$result['category_icon'],
+				$dexCategories[$result['category_id']],
 				$result['pp'],
 				$result['power'],
 				$result['accuracy'],
@@ -200,13 +205,14 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 			$typeId,
 			$languageId
 		);
+		$dexCategories = $this->dexCategoryRepository->getByLanguage($languageId);
 
 		$stmt = $this->db->prepare(
 			'SELECT
 				`m`.`identifier`,
 				`mn`.`name`,
 				`gm`.`type_id`,
-				`c`.`icon` AS `category_icon`,
+				`gm`.`category_id`,
 				`gm`.`pp`,
 				`gm`.`power`,
 				`gm`.`accuracy`,
@@ -216,8 +222,6 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				ON `m`.`id` = `mn`.`move_id`
 			INNER JOIN `generation_moves` AS `gm`
 				ON `m`.`id` = `gm`.`move_id`
-			INNER JOIN `categories` AS `c`
-				ON `gm`.`category_id` = `c`.`id`
 			LEFT JOIN `move_descriptions` AS `md`
 				ON `gm`.`generation_id` = `md`.`generation_id`
 				AND `mn`.`language_id` = `md`.`language_id`
@@ -239,7 +243,7 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				$result['identifier'],
 				$result['name'],
 				$dexType,
-				$result['category_icon'],
+				$dexCategories[$result['category_id']],
 				$result['pp'],
 				$result['power'],
 				$result['accuracy'],
