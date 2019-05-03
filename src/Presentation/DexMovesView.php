@@ -52,9 +52,8 @@ class DexMovesView
 		$generation = $generationModel->getGeneration();
 		$generations = $generationModel->getGenerations();
 
-		$moves = $this->dexMovesModel->getMoves();
-
 		$showMoveDescriptions = $generation->getId()->value() >= 3;
+		$moves = $this->dexMovesModel->getMoves();
 
 		// Navigational breadcrumbs.
 		$breadcrumbs = [[

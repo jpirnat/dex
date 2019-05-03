@@ -54,6 +54,7 @@ class DexAbilityView
 
 		$ability = $this->dexAbilityModel->getAbility();
 
+		$showAbilities = $generation->getId()->value() >= 3;
 		$normalPokemon = $this->dexAbilityModel->getNormalPokemon();
 		$hiddenPokemon = $this->dexAbilityModel->getHiddenPokemon();
 
@@ -86,6 +87,7 @@ class DexAbilityView
 				'title' => 'Abilities - ' . $ability['name'],
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
+				'showAbilities' => $showAbilities,
 				'stats' => ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'],
 				// TODO: Pull these stat names from somewhere else.
 				'pokemons' => array_merge($normalPokemon, $hiddenPokemon),

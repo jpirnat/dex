@@ -23,7 +23,7 @@
 				<th></th>
 				<th scope="col">Pokémon</th>
 				<th scope="col">Types</th>
-				{% if generation.id >= 3 %}
+				{% if showAbilities %}
 					<th scope="col">Abilities</th>
 				{% endif %}
 				{% for stat in stats %}
@@ -50,8 +50,8 @@
 							</a>
 						{% endfor %}
 					</td>
-					{% if generation.id >= 3 %}
-						<td>
+					{% if showAbilities %}
+						<td class="dex-pokemon-abilities">
 							{% for ability in pokemon.abilities %}
 								<div>
 									<a href="/dex/{{ generation.identifier|e }}/abilities/{{ ability.identifier|e }}"

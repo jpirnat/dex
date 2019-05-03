@@ -2,7 +2,6 @@
 
 :root {
 	box-sizing: border-box;
-	scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -208,39 +207,64 @@ a.button {
 
 /* dex */
 
-table.dex-pokemon,
-table.dex-moves {
+.dex-pokemon,
+.dex-moves {
 	width: 100%;
 }
 
-table.dex-pokemon th,
-table.dex-pokemon td {
+.dex-pokemon th,
+.dex-pokemon td,
+.dex-moves th,
+.dex-moves td,
+.dex-natures th,
+.dex-natures td {
 	border-bottom: 1px solid black;
+	padding: 5px 0;
 }
 
-table.dex-pokemon .types {
+.dex-pokemon a,
+.dex-moves a {
+	text-decoration: none;
+}
+
+.dex-pokemon a,
+.dex-pokemon a:visited,
+.dex-moves a,
+.dex-moves a:visited {
+	color: blue;
+}
+
+.dex-pokemon a:hover,
+.dex-moves a:hover {
+	color: red;
+}
+
+.dex-pokemon .types {
 	text-align: center;
 }
 
-table.dex-pokemon .hidden-ability {
+.dex-pokemon-abilities {
+	font-size: .8rem;
+}
+
+.dex-pokemon .hidden-ability {
 	font-style: italic;
 }
 
 
-table.dex-moves .description {
-	width: 50%;
+.dex-moves .category {
+	text-align: center;
 }
 
-table.dex-moves th,
-table.dex-moves td {
-	border-bottom: 1px solid black;
+.dex-moves .description {
+	width: 50%;
 }
 
 
 
 /* dex natures */
 
-table.dex-natures .neutral {
+.dex-natures .neutral {
 	text-align: center;
 }
 

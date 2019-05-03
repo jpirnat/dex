@@ -21,7 +21,7 @@
 				<th></th>
 				<th scope="col">Pokémon</th>
 				<th scope="col">Types</th>
-				{% if generation.id >= 3 %}
+				{% if showAbilities %}
 					<th scope="col">Abilities</th>
 				{% endif %}
 				{% for stat in stats %}
@@ -48,8 +48,8 @@
 							</a>
 						{% endfor %}
 					</td>
-					{% if generation.id >= 3 %}
-						<td>
+					{% if showAbilities %}
+						<td class="dex-pokemon-abilities">
 							{% for ability in pokemon.abilities %}
 								<div>
 									<a href="/dex/{{ generation.identifier|e }}/abilities/{{ ability.identifier|e }}"
@@ -83,7 +83,7 @@
 				<th scope="col">PP</th>
 				<th scope="col">Power</th>
 				<th scope="col">Accuracy</th>
-				{% if generation.id >= 3 %}
+				{% if showMoveDescriptions %}
 					<th scope="col" class="description">Description</th>
 				{% endif %}
 			</tr>
@@ -101,11 +101,11 @@
 							<img src="/images/types/{{ move.type.icon|e }}" alt="{{ move.type.name|e }}">
 						</a>
 					</td>
-					<td><img src="/images/categories/{{ move.categoryIcon|e }}"></td>
+					<td class="category"><img src="/images/categories/{{ move.categoryIcon|e }}"></td>
 					<td class="number">{{ move.pp|e }}</td>
 					<td class="number">{{ move.power|e }}</td>
 					<td class="number">{{ move.accuracy|e }}</td>
-					{% if generation.id >= 3 %}
+					{% if showMoveDescriptions %}
 						<td class="description">{{ move.description|e }}</td>
 					{% endif %}
 				</tr>

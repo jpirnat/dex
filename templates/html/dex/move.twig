@@ -79,7 +79,7 @@
 							{% endfor %}
 						</td>
 						{% if showAbilities %}
-							<td>
+							<td class="dex-pokemon-abilities">
 								{% for ability in pokemon.abilities %}
 									<div>
 										<a href="/dex/{{ generation.identifier|e }}/abilities/{{ ability.identifier|e }}"

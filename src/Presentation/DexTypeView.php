@@ -53,11 +53,14 @@ class DexTypeView
 		$generations = $generationModel->getGenerations();
 
 		$type = $this->dexTypeModel->getType();
+		$showAbilities = $generation->getId()->value() >= 3;
 		$pokemon = $this->dexTypeModel->getPokemon();
-		$moves = $this->dexTypeModel->getMoves();
-
 		$pokemon = $this->dexFormatter->formatDexPokemon($pokemon);
+
+		$showMoveDescriptions = $generation->getId()->value() >= 3;
+		$moves = $this->dexTypeModel->getMoves();
 		$moves = $this->dexFormatter->formatDexMoves($moves);
+
 
 		// Navigational breadcrumbs.
 		$generationIdentifier = $generation->getIdentifier();
@@ -87,9 +90,11 @@ class DexTypeView
 				'title' => 'Types - ' . $type['name'],
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
+				'showAbilities' => $showAbilities,
 				'stats' => ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'],
 				// TODO: Pull these stat names from somewhere else.
 				'pokemons' => $pokemon,
+				'showMoveDescriptions' => $showMoveDescriptions,
 				'moves' => $moves,
 			]
 		);
