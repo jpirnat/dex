@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
+use Jp\Dex\Domain\Import\Showdown\NatureNotImportedException;
+use Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureId;
-use Jp\Dex\Domain\Stats\Showdown\NatureNotImportedException;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface;
 use PDO;
 
 class DatabaseShowdownNatureRepository implements ShowdownNatureRepositoryInterface

@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Import\Importers;
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Import\Extractors\UsageFileExtractor;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Usage;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemon;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;

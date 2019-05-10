@@ -250,22 +250,22 @@ $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseRatingQueries::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface::class, $rule);
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownAbilityRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Showdown\ShowdownAbilityRepositoryInterface::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownAbilityRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownFormatRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownItemRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Showdown\ShowdownItemRepositoryInterface::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownMoveRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownMoveRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownNatureRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseSpeciesRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Species\SpeciesRepositoryInterface::class, $rule);
@@ -360,11 +360,11 @@ $dice = $dice->addRule(\Jp\Dex\Application\Models\TrendChartModel::class, $rule)
 $rule = [
 	'shared' => true,
 ];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Showdown\ShowdownAbilityRepositoryInterface::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Showdown\ShowdownItemRepositoryInterface::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownAbilityRepositoryInterface::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownMoveRepositoryInterface::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface::class, $rule);
 
 return new \Jp\Container\DiceContainer($dice);

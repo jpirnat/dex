@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
+use Jp\Dex\Domain\Import\Showdown\MoveNotImportedException;
+use Jp\Dex\Domain\Import\Showdown\ShowdownMoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
-use Jp\Dex\Domain\Stats\Showdown\MoveNotImportedException;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface;
 use PDO;
 
 class DatabaseShowdownMoveRepository implements ShowdownMoveRepositoryInterface

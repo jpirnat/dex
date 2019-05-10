@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
+use Jp\Dex\Domain\Import\Showdown\ItemNotImportedException;
+use Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemId;
-use Jp\Dex\Domain\Stats\Showdown\ItemNotImportedException;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownItemRepositoryInterface;
 use PDO;
 
 class DatabaseShowdownItemRepository implements ShowdownItemRepositoryInterface

@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Import\Parsers;
 
 use Jp\Dex\Domain\Import\Extractors\LeadsFileExtractor;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
 class LeadsFileParser

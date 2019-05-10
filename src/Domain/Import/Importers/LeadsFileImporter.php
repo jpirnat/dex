@@ -6,13 +6,13 @@ namespace Jp\Dex\Domain\Import\Importers;
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Import\Extractors\LeadsFileExtractor;
+use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\Leads;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemon;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemon;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
 class LeadsFileImporter

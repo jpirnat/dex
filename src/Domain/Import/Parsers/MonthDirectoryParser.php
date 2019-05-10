@@ -6,12 +6,12 @@ namespace Jp\Dex\Domain\Import\Parsers;
 use GuzzleHttp\Client;
 use Jp\Dex\Domain\Import\Extractors\FormatRatingExtractor;
 use Jp\Dex\Domain\Import\Extractors\MonthExtractor;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownAbilityRepositoryInterface;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownItemRepositoryInterface;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownMoveRepositoryInterface;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownNatureRepositoryInterface;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownPokemonRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\ShowdownAbilityRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\ShowdownMoveRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
 class MonthDirectoryParser

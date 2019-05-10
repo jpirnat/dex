@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Stats\Showdown;
+namespace Jp\Dex\Domain\Import\Showdown;
 
 use Exception;
 

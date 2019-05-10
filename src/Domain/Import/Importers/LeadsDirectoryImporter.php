@@ -7,7 +7,7 @@ use GuzzleHttp\Client;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Import\Extractors\FormatRatingExtractor;
 use Jp\Dex\Domain\Import\Extractors\MonthExtractor;
-use Jp\Dex\Domain\Stats\Showdown\ShowdownFormatRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
 class LeadsDirectoryImporter
