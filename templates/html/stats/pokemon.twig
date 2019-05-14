@@ -251,16 +251,12 @@
 			{% for teammate in teammates %}
 				<tr>
 					<td>
-						<img src="/images/pokemon/icons/{{ teammate.formIcon|e }}">
+						<img src="/images/pokemon/icons/{{ teammate.icon|e }}">
 					</td>
 					<td>
-						{% if teammate.showMovesetLink %}
-							<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ teammate.identifier|e }}">
-								{{ teammate.name|e }}
-							</a>
-						{% else %}
+						<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ teammate.identifier|e }}">
 							{{ teammate.name|e }}
-						{% endif %}
+						</a>
 					</td>
 					<td class="number">{{ teammate.percent|e }}</td>
 				</tr>
@@ -285,20 +281,16 @@
 			{% for counter in counters %}
 				<tr>
 					<td>
-						<img src="/images/pokemon/icons/{{ counter.formIcon|e }}">
+						<img src="/images/pokemon/icons/{{ counter.icon|e }}">
 					</td>
 					<td>
-						{% if counter.showMovesetLink %}
-							<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ counter.identifier|e }}">
-								{{ counter.name|e }}
-							</a>
-						{% else %}
+						<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ counter.identifier|e }}">
 							{{ counter.name|e }}
-						{% endif %}
+						</a>
 					</td>
-					<td class="number">{{ counter.number1|e }}</td>
-					<td class="number">{{ counter.number2|e }}</td>
-					<td class="number">{{ counter.number3|e }}</td>
+					<td class="number">{{ counter.score|e }}</td>
+					<td class="number">{{ counter.percent|e }}</td>
+					<td class="number">{{ counter.standardDeviation|e }}</td>
 					<td class="number">{{ counter.percentKnockedOut|e }}</td>
 					<td class="number">{{ counter.percentSwitchedOut|e }}</td>
 				</tr>

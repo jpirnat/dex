@@ -4,9 +4,17 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\StatsPokemon;
 
 use Jp\Dex\Application\Models\DateModel;
+use Jp\Dex\Domain\Abilities\StatsPokemonAbility;
+use Jp\Dex\Domain\Abilities\StatsPokemonAbilityRepositoryInterface;
+use Jp\Dex\Domain\Counters\StatsPokemonCounter;
+use Jp\Dex\Domain\Counters\StatsPokemonCounterRepositoryInterface;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
+use Jp\Dex\Domain\Items\StatsPokemonItem;
+use Jp\Dex\Domain\Items\StatsPokemonItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Moves\StatsPokemonMove;
+use Jp\Dex\Domain\Moves\StatsPokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
@@ -15,6 +23,8 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
+use Jp\Dex\Domain\Teammates\StatsPokemonTeammate;
+use Jp\Dex\Domain\Teammates\StatsPokemonTeammateRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 
@@ -48,23 +58,23 @@ class StatsPokemonModel
 	/** @var PokemonModel $pokemonModel */
 	private $pokemonModel;
 
-	/** @var AbilityModel $abilityModel */
-	private $abilityModel;
+	/** @var StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository */
+	private $statsPokemonAbilityRepository;
 
-	/** @var ItemModel $itemModel */
-	private $itemModel;
+	/** @var StatsPokemonItemRepositoryInterface $statsPokemonItemRepository */
+	private $statsPokemonItemRepository;
 
 	/** @var SpreadModel $spreadModel */
 	private $spreadModel;
 
-	/** @var MoveModel $moveModel */
-	private $moveModel;
+	/** @var StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository */
+	private $statsPokemonMoveRepository;
 
-	/** @var TeammateModel $teammateModel */
-	private $teammateModel;
+	/** @var StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository */
+	private $statsPokemonTeammateRepository;
 
-	/** @var CounterModel $counterModel */
-	private $counterModel;
+	/** @var StatsPokemonCounterRepositoryInterface $statsPokemonCounterRepository */
+	private $statsPokemonCounterRepository;
 
 
 	/** @var string $month */
@@ -100,6 +110,21 @@ class StatsPokemonModel
 	/** @var Generation $generation */
 	private $generation;
 
+	/** @var StatsPokemonAbility[] $abilities */
+	private $abilities = [];
+
+	/** @var StatsPokemonItem[] $items */
+	private $items = [];
+
+	/** @var StatsPokemonMove[] $moves */
+	private $moves;
+
+	/** @var StatsPokemonTeammate[] $teammates */
+	private $teammates = [];
+
+	/** @var StatsPokemonCounter[] $counters */
+	private $counters = [];
+
 
 	/**
 	 * Constructor.
@@ -113,12 +138,12 @@ class StatsPokemonModel
 	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
 	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
 	 * @param PokemonModel $pokemonModel
-	 * @param AbilityModel $abilityModel
-	 * @param ItemModel $itemModel
+	 * @param StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository
+	 * @param StatsPokemonItemRepositoryInterface $statsPokemonItemRepository
 	 * @param SpreadModel $spreadModel
-	 * @param MoveModel $moveModel
-	 * @param TeammateModel $teammateModel
-	 * @param CounterModel $counterModel
+	 * @param StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository
+	 * @param StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository
+	 * @param StatsPokemonCounterRepositoryInterface $statsPokemonCounterRepository
 	 */
 	public function __construct(
 		DateModel $dateModel,
@@ -130,12 +155,12 @@ class StatsPokemonModel
 		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
 		PokemonModel $pokemonModel,
-		AbilityModel $abilityModel,
-		ItemModel $itemModel,
+		StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository,
+		StatsPokemonItemRepositoryInterface $statsPokemonItemRepository,
 		SpreadModel $spreadModel,
-		MoveModel $moveModel,
-		TeammateModel $teammateModel,
-		CounterModel $counterModel
+		StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository,
+		StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository,
+		StatsPokemonCounterRepositoryInterface $statsPokemonCounterRepository
 	) {
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
@@ -146,12 +171,12 @@ class StatsPokemonModel
 		$this->movesetPokemonRepository = $movesetPokemonRepository;
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
 		$this->pokemonModel = $pokemonModel;
-		$this->abilityModel = $abilityModel;
-		$this->itemModel = $itemModel;
+		$this->statsPokemonAbilityRepository = $statsPokemonAbilityRepository;
+		$this->statsPokemonItemRepository = $statsPokemonItemRepository;
 		$this->spreadModel = $spreadModel;
-		$this->moveModel = $moveModel;
-		$this->teammateModel = $teammateModel;
-		$this->counterModel = $counterModel;
+		$this->statsPokemonMoveRepository = $statsPokemonMoveRepository;
+		$this->statsPokemonTeammateRepository = $statsPokemonTeammateRepository;
+		$this->statsPokemonCounterRepository = $statsPokemonCounterRepository;
 	}
 
 	/**
@@ -236,7 +261,7 @@ class StatsPokemonModel
 		);
 
 		// Get ability data.
-		$this->abilityModel->setData(
+		$this->abilities = $this->statsPokemonAbilityRepository->getByMonth(
 			$thisMonth,
 			$prevMonth,
 			$this->format->getId(),
@@ -246,7 +271,7 @@ class StatsPokemonModel
 		);
 
 		// Get item data.
-		$this->itemModel->setData(
+		$this->items = $this->statsPokemonItemRepository->getByMonth(
 			$thisMonth,
 			$prevMonth,
 			$this->format->getId(),
@@ -265,7 +290,7 @@ class StatsPokemonModel
 		);
 
 		// Get move data.
-		$this->moveModel->setData(
+		$this->moves = $this->statsPokemonMoveRepository->getByMonth(
 			$thisMonth,
 			$prevMonth,
 			$this->format->getId(),
@@ -275,20 +300,22 @@ class StatsPokemonModel
 		);
 
 		// Get teammate data.
-		$this->teammateModel->setData(
+		$this->teammates = $this->statsPokemonTeammateRepository->getByMonth(
 			$thisMonth,
-			$this->format,
+			$this->format->getId(),
 			$rating,
 			$this->pokemon->getId(),
+			$this->format->getGenerationId(),
 			$languageId
 		);
 
 		// Get counter data.
-		$this->counterModel->setData(
+		$this->counters = $this->statsPokemonCounterRepository->getByMonth(
 			$thisMonth,
-			$this->format,
+			$this->format->getId(),
 			$rating,
 			$this->pokemon->getId(),
+			$this->format->getGenerationId(),
 			$languageId
 		);
 	}
@@ -424,23 +451,23 @@ class StatsPokemonModel
 	}
 
 	/**
-	 * Get the ability datas.
+	 * Get the abilities.
 	 *
-	 * @return AbilityData[]
+	 * @return StatsPokemonAbility[]
 	 */
-	public function getAbilityDatas() : array
+	public function getAbilities() : array
 	{
-		return $this->abilityModel->getAbilityDatas();
+		return $this->abilities;
 	}
 
 	/**
-	 * Get the the item datas.
+	 * Get the items.
 	 *
-	 * @return ItemData[]
+	 * @return StatsPokemonItem[]
 	 */
-	public function getItemDatas() : array
+	public function getItems() : array
 	{
-		return $this->itemModel->getItemDatas();
+		return $this->items;
 	}
 
 	/**
@@ -454,32 +481,32 @@ class StatsPokemonModel
 	}
 
 	/**
-	 * Get the move datas.
+	 * Get the moves.
 	 *
-	 * @return MoveData[]
+	 * @return StatsPokemonMove[]
 	 */
-	public function getMoveDatas() : array
+	public function getMoves() : array
 	{
-		return $this->moveModel->getMoveDatas();
+		return $this->moves;
 	}
 
 	/**
-	 * Get the teammate datas.
+	 * Get the teammates.
 	 *
-	 * @return TeammateData[]
+	 * @return StatsPokemonTeammate[]
 	 */
-	public function getTeammateDatas() : array
+	public function getTeammates() : array
 	{
-		return $this->teammateModel->getTeammateDatas();
+		return $this->teammates;
 	}
 
 	/**
-	 * Get the counter datas.
+	 * Get the counters.
 	 *
-	 * @return CounterData[]
+	 * @return StatsPokemonCounter[]
 	 */
-	public function getCounterDatas() : array
+	public function getCounters() : array
 	{
-		return $this->counterModel->getCounterDatas();
+		return $this->counters;
 	}
 }

@@ -3,13 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\StatsPokemon\AbilityData;
-use Jp\Dex\Application\Models\StatsPokemon\CounterData;
-use Jp\Dex\Application\Models\StatsPokemon\ItemData;
-use Jp\Dex\Application\Models\StatsPokemon\MoveData;
 use Jp\Dex\Application\Models\StatsPokemon\SpreadData;
 use Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel;
-use Jp\Dex\Application\Models\StatsPokemon\TeammateData;
 use Jp\Dex\Domain\Stats\StatId;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
@@ -104,45 +99,29 @@ class StatsPokemonView
 			];
 		}
 
-		// Get abilities and sort by percent.
-		$abilityDatas = $this->statsPokemonModel->getAbilityDatas();
-		uasort(
-			$abilityDatas,
-			function (AbilityData $a, AbilityData $b) : int {
-				return $b->getPercent() <=> $a->getPercent();
-			}
-		);
-
-		// Compile all ability data into the right form.
+		// Get abilities.
+		$abilitiesData = $this->statsPokemonModel->getAbilities();
 		$abilities = [];
-		foreach ($abilityDatas as $abilityData) {
+		foreach ($abilitiesData as $ability) {
 			$abilities[] = [
-				'name' => $abilityData->getAbilityName(),
-				'identifier' => $abilityData->getAbilityIdentifier(),
-				'percent' => $formatter->formatPercent($abilityData->getPercent()),
-				'change' => $abilityData->getChange(),
-				'changeText' => $formatter->formatPercent($abilityData->getChange()),
+				'identifier' => $ability->getIdentifier(),
+				'name' => $ability->getName(),
+				'percent' => $formatter->formatPercent($ability->getPercent()),
+				'change' => $ability->getChange(),
+				'changeText' => $formatter->formatPercent($ability->getChange()),
 			];
 		}
 
-		// Get items and sort by percent.
-		$itemDatas = $this->statsPokemonModel->getItemDatas();
-		uasort(
-			$itemDatas,
-			function (ItemData $a, ItemData $b) : int {
-				return $b->getPercent() <=> $a->getPercent();
-			}
-		);
-
-		// Compile all item data into the right form.
+		// Get items.
+		$itemsData = $this->statsPokemonModel->getItems();
 		$items = [];
-		foreach ($itemDatas as $itemData) {
+		foreach ($itemsData as $item) {
 			$items[] = [
-				'name' => $itemData->getItemName(),
-				'identifier' => $itemData->getItemIdentifier(),
-				'percent' => $formatter->formatPercent($itemData->getPercent()),
-				'change' => $itemData->getChange(),
-				'changeText' => $formatter->formatPercent($itemData->getChange()),
+				'identifier' => $item->getIdentifier(),
+				'name' => $item->getName(),
+				'percent' => $formatter->formatPercent($item->getPercent()),
+				'change' => $item->getChange(),
+				'changeText' => $formatter->formatPercent($item->getChange()),
 			];
 		}
 
@@ -199,70 +178,46 @@ class StatsPokemonView
 			];
 		}
 
-		// Get moves and sort by percent.
-		$moveDatas = $this->statsPokemonModel->getMoveDatas();
-		uasort(
-			$moveDatas,
-			function (MoveData $a, MoveData $b) : int {
-				return $b->getPercent() <=> $a->getPercent();
-			}
-		);
-
-		// Compile all move data into the right form.
+		// Get moves.
+		$movesData = $this->statsPokemonModel->getMoves();
 		$moves = [];
-		foreach ($moveDatas as $moveData) {
+		foreach ($movesData as $move) {
 			$moves[] = [
-				'name' => $moveData->getMoveName(),
-				'identifier' => $moveData->getMoveIdentifier(),
-				'percent' => $formatter->formatPercent($moveData->getPercent()),
-				'change' => $moveData->getChange(),
-				'changeText' => $formatter->formatPercent($moveData->getChange()),
+				'identifier' => $move->getIdentifier(),
+				'name' => $move->getName(),
+				'percent' => $formatter->formatPercent($move->getPercent()),
+				'change' => $move->getChange(),
+				'changeText' => $formatter->formatPercent($move->getChange()),
 			];
 		}
 
-		// Get teammates and sort by percent.
-		$teammateDatas = $this->statsPokemonModel->getTeammateDatas();
-		uasort(
-			$teammateDatas,
-			function (TeammateData $a, TeammateData $b) : int {
-				return $b->getPercent() <=> $a->getPercent();
-			}
-		);
-
-		// Get teammate names.
+		// Get teammates.
+		$teammatesData = $this->statsPokemonModel->getTeammates();
 		$teammates = [];
-		foreach ($teammateDatas as $teammateData) {
+		foreach ($teammatesData as $teammate) {
 			$teammates[] = [
-				'name' => $teammateData->getPokemonName(),
-				'showMovesetLink' => $teammateData->doesMovesetDataExist(),
-				'identifier' => $teammateData->getPokemonIdentifier(),
-				'formIcon' => $teammateData->getFormIcon(),
-				'percent' => $formatter->formatPercent($teammateData->getPercent()),
+				'icon' => $teammate->getIcon(),
+				'showMovesetLink' => true, // TODO
+				'identifier' => $teammate->getIdentifier(),
+				'name' => $teammate->getName(),
+				'percent' => $formatter->formatPercent($teammate->getPercent()),
 			];
 		}
 
-		// Get counters and sort by percent.
-		$counterDatas = $this->statsPokemonModel->getCounterDatas();
-		uasort(
-			$counterDatas,
-			function (CounterData $a, CounterData $b) : int {
-				return $b->getNumber1() <=> $a->getNumber1();
-			}
-		);
-
-		// Compile all counter data into the right form.
+		// Get counters.
+		$countersData = $this->statsPokemonModel->getCounters();
 		$counters = [];
-		foreach ($counterDatas as $counterData) {
+		foreach ($countersData as $counter) {
 			$counters[] = [
-				'name' => $counterData->getPokemonName(),
-				'showMovesetLink' => $counterData->doesMovesetDataExist(),
-				'identifier' => $counterData->getPokemonIdentifier(),
-				'formIcon' => $counterData->getFormIcon(),
-				'number1' => $formatter->formatNumber($counterData->getNumber1()),
-				'number2' => $formatter->formatNumber($counterData->getNumber2()),
-				'number3' => $formatter->formatNumber($counterData->getNumber3()),
-				'percentKnockedOut' => $formatter->formatPercent($counterData->getPercentKnockedOut()),
-				'percentSwitchedOut' => $formatter->formatPercent($counterData->getPercentSwitchedOut()),
+				'icon' => $counter->getIcon(),
+				'showMovesetLink' => true, // TODO
+				'identifier' => $counter->getIdentifier(),
+				'name' => $counter->getName(),
+				'score' => $formatter->formatNumber($counter->getScore()),
+				'percent' => $formatter->formatPercent($counter->getPercent()),
+				'standardDeviation' => $formatter->formatNumber($counter->getStandardDeviation()),
+				'percentKnockedOut' => $formatter->formatPercent($counter->getPercentKnockedOut()),
+				'percentSwitchedOut' => $formatter->formatPercent($counter->getPercentSwitchedOut()),
 			];
 		}
 

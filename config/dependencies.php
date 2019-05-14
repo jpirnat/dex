@@ -273,6 +273,21 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Species\SpeciesRepositoryInterface::class,
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatNameRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Stats\StatNameRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonAbilityRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Abilities\StatsPokemonAbilityRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonCounterRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Counters\StatsPokemonCounterRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonItemRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Items\StatsPokemonItemRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonMoveRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Moves\StatsPokemonMoveRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonTeammateRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Teammates\StatsPokemonTeammateRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseTmRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Items\TmRepositoryInterface::class, $rule);
 
