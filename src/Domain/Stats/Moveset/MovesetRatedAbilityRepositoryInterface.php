@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Moveset;
 
-use DateTime;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -18,24 +17,6 @@ interface MovesetRatedAbilityRepositoryInterface
 	 * @return void
 	 */
 	public function save(MovesetRatedAbility $movesetRatedAbility) : void;
-
-	/**
-	 * Get moveset rated ability records by month, format, rating, and Pokémon.
-	 * Indexed by ability id value.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return MovesetRatedAbility[]
-	 */
-	public function getByMonthAndFormatAndRatingAndPokemon(
-		DateTime $month,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId
-	) : array;
 
 	/**
 	 * Get moveset rated ability records by their format, rating, Pokémon, and ability.

@@ -62,57 +62,6 @@ class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryIn
 	}
 
 	/**
-	 * Get moveset rated item records by month, format, rating, and Pokémon.
-	 * Indexed by item id value.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return MovesetRatedItem[]
-	 */
-	public function getByMonthAndFormatAndRatingAndPokemon(
-		DateTime $month,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId
-	) : array {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`item_id`,
-				`percent`
-			FROM `moveset_rated_items`
-			WHERE `month` = :month
-				AND `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id'
-		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$movesetRatedItems = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedItem = new MovesetRatedItem(
-				$month,
-				$formatId,
-				$rating,
-				$pokemonId,
-				new ItemId($result['item_id']),
-				(float) $result['percent']
-			);
-
-			$movesetRatedItems[$result['item_id']] = $movesetRatedItem;
-		}
-
-		return $movesetRatedItems;
-	}
-
-	/**
 	 * Get moveset rated item records by their format, rating, Pokémon, and item.
 	 * Use this to create a trend line for a Pokémon's item usage in a format.
 	 * Indexed and sorted by month.
