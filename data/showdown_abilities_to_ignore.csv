@@ -1,18 +1,30 @@
 name,ability_id
 Absolite,\N
 Absorb Bulb,\N
+Acid Armor,\N
+Acupressure,\N
 Adrenaline Orb,\N
+After You,\N
 Aggronite,\N
+Agility,\N
 Aguav Berry,\N
 Air Balloon,\N
 Alakazite,\N
 Aloraichium Z,\N
 Altarianite,\N
+Amnesia,\N
 Ampharosite,\N
+Aqua Ring,\N
+Aromatherapy,\N
 Assault Vest,\N
+Attract,\N
 Audinite,\N
 Aurora Veil,\N
+Autotomize,\N
+Baby-Doll Eyes,\N
+Barrier,\N
 Beedrillite,\N
+Belly Drum,\N
 Berry Juice,\N
 Berserk Gene,\N
 Big Root,\N
@@ -22,98 +34,185 @@ Black Sludge,\N
 Blastoisinite,\N
 BrightPowder,\N
 Buginium Z,\N
+Bulk Up,\N
+Calm Mind,\N
 Cameruptite,\N
+Camouflage,\N
+Celebrate,\N
 Charcoal,\N
+Charge,\N
 Charizardite X,\N
 Charizardite Y,\N
+Charm,\N
 Chesto Berry,\N
 Choice Band,\N
 Choice Scarf,\N
 Choice Specs,\N
 Chople Berry,\N
 Coba Berry,\N
+Coil,\N
 Colbur Berry,\N
+Confide,\N
+Confuse Ray,\N
+Conversion,\N
+Conversion 2,\N
+Cosmic Power,\N
+Cotton Guard,\N
+Cotton Spore,\N
+Curse,\N
 Damp Rock,\N
 Darkinium Z,\N
 Decidium Z,\N
 Deep Sea Scale,\N
 Deep Sea Tooth,\N
+Defend Order,\N
+Defense Curl,\N
+Defog,\N
 Diancite,\N
+Disable,\N
 Draco Plate,\N
+Dragon Dance,\N
 Dragon Fang,\N
 Dragonium Z,\N
 Dread Plate,\N
+Eerie Impulse,\N
 Eevium Z,\N
 Eject Button,\N
 Electric Seed,\N
+Electric Terrain,\N
+Electrify,\N
 Electrium Z,\N
+Embargo,\N
+Encore,\N
+Endure,\N
+Entrainment,\N
 Eviolite,\N
 Expert Belt,\N
 Fairium Z,\N
+Fairy Lock,\N
+Fake Tears,\N
+Feather Dance,\N
 Fightinium Z,\N
 Figy Berry,\N
 Firium Z,\N
 Fist Plate,\N
+Flash,\N
 Flyinium Z,\N
 Focus Band,\N
+Focus Energy,\N
 Focus Sash,\N
+Foresight,\N
+Forest's Curse,\N
 Galladite,\N
 Gardevoirite,\N
+Gastro Acid,\N
 Ghostium Z,\N
+Glare,\N
 Grassium Z,\N
+Grassy Terrain,\N
+Gravity,\N
 Grip Claw,\N
 Groundium Z,\N
+Growl,\N
+Growth,\N
+Grudge,\N
+Guard Split,\N
+Guard Swap,\N
 Gyaradosite,\N
+Hail,\N
 Hard Stone,\N
+Haze,\N
+Heal Bell,\N
+Heal Block,\N
+Heal Pulse,\N
+Healing Wish,\N
+Heart Swap,\N
 Heat Rock,\N
 Heracronite,\N
+Hold Hands,\N
+Hone Claws,\N
 Houndoominite,\N
+Howl,\N
 Iapapa Berry,\N
 Ice Memory,\N
 Icicle Plate,\N
 Icium Z,\N
 Icy Rock,\N
+Imprison,\N
+Ingrain,\N
 Insect Plate,\N
+Ion Deluge,\N
 Iron Ball,\N
+Iron Defense,\N
 Kangaskhanite,\N
 Kebia Berry,\N
 Kee Berry,\N
 King's Rock,\N
+King's Shield,\N
 Kommonium Z,\N
 Lagging Tail,\N
+Laser Focus,\N
 Latiasite,\N
 Lax Incense,\N
+Leech Seed,\N
+Leer,\N
 Leftovers,\N
 Liechi Berry,\N
 Life Orb,\N
 Light Ball,\N
 Light Clay,\N
+Light Screen,\N
+Lock-On,\N
 Lopunnite,\N
 Lum Berry,\N
+Lunar Dance,\N
+Magic Coat,\N
+Magic Room,\N
 Magnet,\N
+Magnet Rise,\N
 Mago Berry,\N
 Manectite,\N
 Maranga Berry,\N
 Mawilite,\N
+Me First,\N
 Meadow Plate,\N
 Medichamite,\N
+Meditate,\N
+Memento,\N
 Mental Herb,\N
 Metal Coat,\N
+Metal Sound,\N
 Metronome,\N
 Mewnium Z,\N
+Milk Drink,\N
+Mimic,\N
 Mind Plate,\N
+Mind Reader,\N
+Miracle Eye,\N
 Miracle Seed,\N
+Mirror Move,\N
+Mist,\N
+Misty Terrain,\N
+Moonlight,\N
+Morning Sun,\N
 Mountaineer,\N
+Mud Sport,\N
 Muscle Band,\N
 Mystic Water,\N
+Nasty Plot,\N
 Never-Melt Ice,\N
 No Ability,\N
+Noble Roar,\N
 Normal Gem,\N
 Normalium Z,\N
 Nothing,\N
 Occa Berry,\N
+Odor Sleuth,\N
 Other,\N
+Pain Split,\N
+Parting Shot,\N
 Passho Berry,\N
+Perish Song,\N
 Persistent,\N
 Petaya Berry,\N
 Pidgeotite,\N
@@ -123,61 +222,136 @@ Pinsirite,\N
 Pixie Plate,\N
 Poison Barb,\N
 Poisonium Z,\N
+Powder,\N
 Power Herb,\N
+Power Split,\N
+Power Swap,\N
+Power Trick,\N
 Primarium Z,\N
 Protective Pads,\N
+Psych Up,\N
 Psychic Seed,\N
+Psychic Terrain,\N
 Psychium Z,\N
+Quash,\N
 Quick Claw,\N
 Quick Powder,\N
+Quiver Dance,\N
+Rain Dance,\N
 Razor Claw,\N
 Razor Fang,\N
 Rebound,\N
+Recover,\N
+Recycle,\N
 Red Card,\N
+Reflect,\N
+Reflect Type,\N
+Refresh,\N
+Rest,\N
+Rock Polish,\N
 Rockium Z,\N
 Rocky Helmet,\N
+Role Play,\N
+Roost,\N
 Roseli Berry,\N
+Rototiller,\N
 Sablenite,\N
+Safeguard,\N
 Safety Goggles,\N
 Salac Berry,\N
+Sand Attack,\N
+Sandstorm,\N
+Scary Face,\N
 Sceptilite,\N
 Scope Lens,\N
+Screech,\N
 Sea Incense,\N
 Sharp Beak,\N
 Shed Shell,\N
 Shell Bell,\N
+Shell Smash,\N
+Shift Gear,\N
 Shuca Berry,\N
 Silk Scarf,\N
+Simple Beam,\N
 Sitrus Berry,\N
 Sky Plate,\N
+Slack Off,\N
+Sleep Talk,\N
 Slowbronite,\N
 Smooth Rock,\N
+Snatch,\N
 Snowball,\N
+Soak,\N
 Soft Sand,\N
+Soft-Boiled,\N
 Soul Dew,\N
+Speed Swap,\N
 Spell Tag,\N
+Spikes,\N
+Spite,\N
+Splash,\N
 Splash Plate,\N
 Spooky Plate,\N
 Starf Berry,\N
+Stealth Rock,\N
 Steelium Z,\N
 Steelixite,\N
 Stick,\N
 Sticky Barb,\N
+Sticky Web,\N
+Stockpile,\N
 Stone Plate,\N
+Strength Sap,\N
+String Shot,\N
 Struggle,\N
+Stun Spore,\N
+Substitute,\N
+Sunny Day,\N
+Swagger,\N
+Sweet Kiss,\N
+Sweet Scent,\N
+Switcheroo,\N
+Swords Dance,\N
+Synthesis,\N
+Tail Glow,\N
+Tail Whip,\N
+Tailwind,\N
+Taunt,\N
+Tearful Look,\N
+Teeter Dance,\N
+Telekinesis,\N
 Terrain Extender,\N
 Thick Club,\N
+Thunder Wave,\N
+Tickle,\N
+Topsy-Turvy,\N
+Torment,\N
+Toxic,\N
 Toxic Orb,\N
 Toxic Plate,\N
+Toxic Spikes,\N
+Toxic Thread,\N
+Transform,\N
+Trick,\N
+Trick Room,\N
+Trick-or-Treat,\N
 Twisted Spoon,\N
+Venom Drench,\N
 Venusaurite,\N
 Wacan Berry,\N
+Water Sport,\N
 Waterium Z,\N
 Weakness Policy,\N
 White Herb,\N
 Wide Lens,\N
 Wiki Berry,\N
+Will-O-Wisp,\N
 Wise Glasses,\N
+Wish,\N
+Work Up,\N
+Worry Seed,\N
 Yache Berry,\N
+Yawn,\N
 Zap Plate,\N
 Zoom Lens,\N
