@@ -5,7 +5,6 @@ namespace Jp\Dex\Infrastructure;
 
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemon;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
 use PDO;
@@ -85,51 +84,5 @@ class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 		$stmt->bindValue(':real', $usagePokemon->getReal(), PDO::PARAM_INT);
 		$stmt->bindValue(':real_percent', $usagePokemon->getRealPercent(), PDO::PARAM_STR);
 		$stmt->execute();
-	}
-
-	/**
-	 * Get usage Pokémon records by month and format. Indexed by Pokémon id
-	 * value. Use this to recreate a stats usage file, such as
-	 * http://www.smogon.com/stats/2014-11/ou-1695.txt.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 *
-	 * @return UsagePokemon[]
-	 */
-	public function getByMonthAndFormat(DateTime $month, FormatId $formatId) : array
-	{
-		$stmt = $this->db->prepare(
-			'SELECT
-				`pokemon_id`,
-				`raw`,
-				`raw_percent`,
-				`real`,
-				`real_percent`
-			FROM `usage_pokemon`
-			WHERE `month` = :month
-				AND `format_id` = :format_id'
-		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$usagePokemons = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$usagePokemon = new UsagePokemon(
-				$month,
-				$formatId,
-				new PokemonId($result['pokemon_id']),
-				$result['raw'],
-				(float) $result['raw_percent'],
-				$result['real'],
-				(float) $result['real_percent']
-			);
-
-			$usagePokemons[$result['pokemon_id']] = $usagePokemon;
-		}
-
-		return $usagePokemons;
 	}
 }

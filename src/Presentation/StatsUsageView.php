@@ -3,8 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\StatsUsage\StatsUsageModel;
-use Jp\Dex\Application\Models\StatsUsage\UsageData;
+use Jp\Dex\Application\Models\StatsUsageModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
@@ -62,35 +61,23 @@ class StatsUsageView
 		$prevMonth = $this->statsUsageModel->getDateModel()->getPrevMonth();
 		$nextMonth = $this->statsUsageModel->getDateModel()->getNextMonth();
 
-		// Get usage data and sort by rank.
-		$usageDatas = $this->statsUsageModel->getUsageDatas();
-		uasort(
-			$usageDatas,
-			function (UsageData $a, UsageData $b) : int {
-				return $a->getRank() <=> $b->getRank();
-			}
-		);
-
-		// Compile all usage data into the right form.
-		$data = [];
-		foreach ($usageDatas as $usageData) {
-			$data[] = [
-				'rank' => $usageData->getRank(),
-				'name' => $usageData->getPokemonName(),
-				'showMovesetLink' => $usageData->getUsagePercent() >= .01,
-				'identifier' => $usageData->getPokemonIdentifier(),
-				'formIcon' => $usageData->getFormIcon(),
-				'usagePercent' => $formatter->formatPercent($usageData->getUsagePercent()),
-				'usageChange' => $usageData->getUsageChange(),
-				'usageChangeText' => $formatter->formatPercent($usageData->getUsageChange()),
-				'raw' => $formatter->formatNumber($usageData->getRaw()),
-				'rawPercent' => $formatter->formatPercent($usageData->getRawPercent()),
-				'rawChange' => $usageData->getRawChange(),
-				'rawChangeText' => $formatter->formatPercent($usageData->getRawChange()),
-				'real' => $formatter->formatNumber($usageData->getReal()),
-				'realPercent' => $formatter->formatPercent($usageData->getRealPercent()),
-				'realChange' => $usageData->getRealChange(),
-				'realChangeText' => $formatter->formatPercent($usageData->getRealChange()),
+		// Get Pokémon.
+		$pokemonData = $this->statsUsageModel->getPokemon();
+		$pokemons = [];
+		foreach ($pokemonData as $pokemon) {
+			$pokemons[] = [
+				'rank' => $pokemon->getRank(),
+				'icon' => $pokemon->getIcon(),
+				'showMovesetLink' => $pokemon->getUsagePercent() >= .01,
+				'identifier' => $pokemon->getIdentifier(),
+				'name' => $pokemon->getName(),
+				'usagePercent' => $formatter->formatPercent($pokemon->getUsagePercent()),
+				'usageChange' => $pokemon->getUsageChange(),
+				'usageChangeText' => $formatter->formatPercent($pokemon->getUsageChange()),
+				'raw' => $formatter->formatNumber($pokemon->getRaw()),
+				'rawPercent' => $formatter->formatPercent($pokemon->getRawPercent()),
+				'real' => $formatter->formatNumber($pokemon->getReal()),
+				'realPercent' => $formatter->formatPercent($pokemon->getRealPercent()),
 			];
 		}
 
@@ -136,7 +123,7 @@ class StatsUsageView
 				'showLeadsLink' => $this->statsUsageModel->doesLeadsDataExist(),
 
 				// The main data.
-				'data' => $data,
+				'pokemons' => $pokemons,
 			]
 		);
 

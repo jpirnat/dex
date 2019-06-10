@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpFullyQualifiedNameUsageInspection */
 declare(strict_types=1);
 
 
@@ -273,6 +274,9 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Species\SpeciesRepositoryInterface::class,
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatNameRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Stats\StatNameRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsLeadsPokemonRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Leads\StatsLeadsPokemonRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonAbilityRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Abilities\StatsPokemonAbilityRepositoryInterface::class, $rule);
 
@@ -287,6 +291,9 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Moves\StatsPokemonMoveRepositoryInterface:
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonTeammateRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Teammates\StatsPokemonTeammateRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsUsagePokemonRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseTmRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Items\TmRepositoryInterface::class, $rule);
@@ -368,7 +375,7 @@ $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsLeads\StatsLeadsModel::cl
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsMonth\StatsMonthModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsMove\StatsMoveModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsUsage\StatsUsageModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsUsageModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\TrendChartModel::class, $rule);
 
 // Shared repositories
