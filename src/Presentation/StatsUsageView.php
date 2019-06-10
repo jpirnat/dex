@@ -61,7 +61,7 @@ class StatsUsageView
 		$prevMonth = $this->statsUsageModel->getDateModel()->getPrevMonth();
 		$nextMonth = $this->statsUsageModel->getDateModel()->getNextMonth();
 
-		// Get Pokémon.
+		// Get the Pokémon usage data.
 		$pokemonData = $this->statsUsageModel->getPokemon();
 		$pokemons = [];
 		foreach ($pokemonData as $pokemon) {

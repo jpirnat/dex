@@ -42,15 +42,14 @@
 				<th>Usage Δ</th>
 				<th>Raw</th>
 				<th>%</th>
-				<th>Δ</th>
 			</tr>
 		</thead>
 		<tbody>
-			{% for pokemon in data %}
+			{% for pokemon in pokemons %}
 				<tr>
 					<td class="number">{{ pokemon.rank|e }}</td>
 					<td>
-						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
+						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
 					</td>
 					<td>
 						{% if pokemon.showMovesetLink %}
@@ -77,19 +76,6 @@
 					</td>
 					<td class="number">{{ pokemon.raw|e }}</td>
 					<td class="number">{{ pokemon.rawPercent|e }}</td>
-					<td
-						{% if pokemon.rawChange > 0 %}
-							class="number percent-plus"
-						{% elseif pokemon.rawChange < 0 %}
-							class="number percent-minus"
-						{% else %}
-							class="number"
-						{% endif %}
-					>
-						<a class="trend-link" href="/stats/trends/chart?type=lead-usage&format={{ formatIdentifier|e }}&rating=0&pokemon={{ pokemon.identifier|e }}">
-							{{ pokemon.rawChangeText|e }}
-						</a>
-					</td>
 				</tr>
 			{% endfor %}
 		</tbody>

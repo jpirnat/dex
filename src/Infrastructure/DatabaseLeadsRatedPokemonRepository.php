@@ -89,55 +89,6 @@ class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepository
 	}
 
 	/**
-	 * Get leads rated Pokémon records by month, format, and rating. Indexed by
-	 * Pokémon id value. Use this to recreate a stats leads file, such as
-	 * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
-	 * @return LeadsRatedPokemon[]
-	 */
-	public function getByMonthAndFormatAndRating(
-		DateTime $month,
-		FormatId $formatId,
-		int $rating
-	) : array {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`pokemon_id`,
-				`rank`,
-				`usage_percent`
-			FROM `leads_rated_pokemon`
-			WHERE `month` = :month
-				AND `format_id` = :format_id
-				AND `rating` = :rating'
-		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->execute();
-
-		$leadsRatedPokemons = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$leadsRatedPokemon = new LeadsRatedPokemon(
-				$month,
-				$formatId,
-				$rating,
-				new PokemonId($result['pokemon_id']),
-				$result['rank'],
-				(float) $result['usage_percent']
-			);
-
-			$leadsRatedPokemons[$result['pokemon_id']] = $leadsRatedPokemon;
-		}
-
-		return $leadsRatedPokemons;
-	}
-
-	/**
 	 * Get leads rated Pokémon records by their format, rating, and Pokémon.
 	 * Use this to create a trend line for a Pokémon's lead usage in a format.
 	 * Indexed and sorted by month.

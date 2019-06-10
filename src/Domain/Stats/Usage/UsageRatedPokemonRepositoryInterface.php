@@ -31,23 +31,6 @@ interface UsageRatedPokemonRepositoryInterface
 	public function save(UsageRatedPokemon $usageRatedPokemon) : void;
 
 	/**
-	 * Get usage rated Pokémon records by month, format, and rating. Indexed by
-	 * Pokémon id value. Use this to recreate a stats usage file, such as
-	 * http://www.smogon.com/stats/2014-11/ou-1695.txt.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
-	 * @return UsageRatedPokemon[]
-	 */
-	public function getByMonthAndFormatAndRating(
-		DateTime $month,
-		FormatId $formatId,
-		int $rating
-	) : array;
-
-	/**
 	 * Get usage rated Pokémon records by their format, rating, and Pokémon.
 	 * Use this to create a trend line for a Pokémon's usage in a format.
 	 * Indexed and sorted by month.

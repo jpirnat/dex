@@ -3,8 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\StatsLeads\LeadsData;
-use Jp\Dex\Application\Models\StatsLeads\StatsLeadsModel;
+use Jp\Dex\Application\Models\StatsLeadsModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
@@ -62,31 +61,21 @@ class StatsLeadsView
 		$prevMonth = $this->statsLeadsModel->getDateModel()->getPrevMonth();
 		$nextMonth = $this->statsLeadsModel->getDateModel()->getNextMonth();
 
-		// Get usage data and sort by rank.
-		$leadsDatas = $this->statsLeadsModel->getLeadsDatas();
-		uasort(
-			$leadsDatas,
-			function (LeadsData $a, LeadsData $b) : int {
-				return $a->getRank() <=> $b->getRank();
-			}
-		);
-
-		// Compile all usage data into the right form.
-		$data = [];
-		foreach ($leadsDatas as $leadsData) {
-			$data[] = [
-				'rank' => $leadsData->getRank(),
-				'name' => $leadsData->getPokemonName(),
-				'showMovesetLink' => $leadsData->getUsagePercent() >= .01,
-				'identifier' => $leadsData->getPokemonIdentifier(),
-				'formIcon' => $leadsData->getFormIcon(),
-				'usagePercent' => $formatter->formatPercent($leadsData->getLeadUsagePercent()),
-				'usageChange' => $leadsData->getLeadUsageChange(),
-				'usageChangeText' => $formatter->formatPercent($leadsData->getLeadUsageChange()),
-				'raw' => $formatter->formatNumber($leadsData->getRaw()),
-				'rawPercent' => $formatter->formatPercent($leadsData->getRawPercent()),
-				'rawChange' => $leadsData->getRawChange(),
-				'rawChangeText' => $formatter->formatPercent($leadsData->getRawChange()),
+		// Get the Pokémon usage data.
+		$pokemonData = $this->statsLeadsModel->getPokemon();
+		$pokemons = [];
+		foreach ($pokemonData as $pokemon) {
+			$pokemons[] = [
+				'rank' => $pokemon->getRank(),
+				'icon' => $pokemon->getIcon(),
+				'showMovesetLink' => true, // TODO: $pokemon->getUsagePercent() >= .01,
+				'identifier' => $pokemon->getIdentifier(),
+				'name' => $pokemon->getName(),
+				'usagePercent' => $formatter->formatPercent($pokemon->getUsagePercent()),
+				'usageChange' => $pokemon->getUsageChange(),
+				'usageChangeText' => $formatter->formatPercent($pokemon->getUsageChange()),
+				'raw' => $formatter->formatNumber($pokemon->getRaw()),
+				'rawPercent' => $formatter->formatPercent($pokemon->getRawPercent()),
 			];
 		}
 
@@ -131,7 +120,7 @@ class StatsLeadsView
 				'ratings' => $this->statsLeadsModel->getRatings(),
 
 				// The main data.
-				'data' => $data,
+				'pokemons' => $pokemons,
 			]
 		);
 
