@@ -37,7 +37,7 @@ class DatabaseStatsPokemonCounterRepository implements StatsPokemonCounterReposi
 	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 *
-	 * @return StatsPokemonCounter[]
+	 * @return StatsPokemonCounter[] Ordered by score descending.
 	 */
 	public function getByMonth(
 		DateTime $month,

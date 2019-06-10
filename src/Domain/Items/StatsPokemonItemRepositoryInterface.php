@@ -20,7 +20,7 @@ interface StatsPokemonItemRepositoryInterface
 	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
 	 *
-	 * @return StatsPokemonItem[]
+	 * @return StatsPokemonItem[] Ordered by percent descending.
 	 */
 	public function getByMonth(
 		DateTime $month,

@@ -37,7 +37,7 @@ class DatabaseStatsPokemonTeammateRepository implements StatsPokemonTeammateRepo
 	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 *
-	 * @return StatsPokemonTeammate[]
+	 * @return StatsPokemonTeammate[] Ordered by percent descending.
 	 */
 	public function getByMonth(
 		DateTime $month,

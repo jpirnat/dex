@@ -36,7 +36,7 @@ class DatabaseStatsPokemonAbilityRepository implements StatsPokemonAbilityReposi
 	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
 	 *
-	 * @return StatsPokemonAbility[]
+	 * @return StatsPokemonAbility[] Ordered by percent descending.
 	 */
 	public function getByMonth(
 		DateTime $month,
