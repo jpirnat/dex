@@ -83,7 +83,7 @@ class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepository
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
-			ORDER BY `lrp`.`rank` ASC'
+			ORDER BY `lrp`.`rank`'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':prev_month', $prevMonth, PDO::PARAM_STR);

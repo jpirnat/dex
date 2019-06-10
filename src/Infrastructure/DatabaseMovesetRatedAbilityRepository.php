@@ -88,7 +88,7 @@ class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityReposi
 				AND `rating` = :rating
 				AND `pokemon_id` = :pokemon_id
 				AND `ability_id` = :ability_id
-			ORDER BY `month` ASC'
+			ORDER BY `month`'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);

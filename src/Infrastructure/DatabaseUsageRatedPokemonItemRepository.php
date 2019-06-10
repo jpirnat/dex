@@ -120,7 +120,7 @@ class DatabaseUsageRatedPokemonItemRepository implements UsageRatedPokemonItemRe
 				AND `u`.`rating` = :rating
 				AND `u`.`pokemon_id` = :pokemon_id
 				AND `m`.`item_id` = :item_id
-			ORDER BY `u`.`month` ASC'
+			ORDER BY `u`.`month`'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);

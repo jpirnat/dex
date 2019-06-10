@@ -156,7 +156,7 @@ class DatabasePokemonRepository implements PokemonRepositoryInterface
 				`smogon_dex_identifier`,
 				`sort`
 			FROM `pokemon`
-			ORDER BY `sort` ASC'
+			ORDER BY `sort`'
 		);
 		$stmt->execute();
 

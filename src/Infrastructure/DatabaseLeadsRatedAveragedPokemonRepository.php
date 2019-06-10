@@ -97,7 +97,7 @@ class DatabaseLeadsRatedAveragedPokemonRepository implements LeadsRatedAveragedP
 			GROUP BY `pokemon_id`
 			ORDER BY
 				`usage_percent` DESC,
-				`pokemon_id` ASC'
+				`pokemon_id`'
 		);
 		$stmt->bindValue(':months', $months, PDO::PARAM_INT);
 		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);

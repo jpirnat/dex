@@ -38,7 +38,7 @@ class DatabaseMoveMethodRepository implements MoveMethodRepositoryInterface
 				`introduced_in_generation_id`,
 				`sort`
 			FROM `move_methods`
-			ORDER BY `sort` ASC'
+			ORDER BY `sort`'
 		);
 		$stmt->execute();
 

@@ -62,7 +62,7 @@ class DatabaseUsageQueries implements UsageQueriesInterface
 				`month`
 			FROM `usage`
 			WHERE `format_id` = :format_id
-			ORDER BY `month` ASC
+			ORDER BY `month`
 			LIMIT 1'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);

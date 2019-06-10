@@ -189,7 +189,7 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 					WHERE `generation_id` = :generation_id2
 						AND `ability_id` = :ability_id
 				)
-			ORDER BY `p`.`sort` ASC'
+			ORDER BY `p`.`sort`'
 		);
 		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
@@ -344,7 +344,7 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
-			ORDER BY `p`.`sort` ASC'
+			ORDER BY `p`.`sort`'
 		);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
@@ -425,7 +425,7 @@ class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 					WHERE `generation_id` = :generation_id2
 						AND `type_id` = :type_id
 				)
-			ORDER BY `p`.`sort` ASC'
+			ORDER BY `p`.`sort`'
 		);
 		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);

@@ -81,7 +81,7 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				AND `m`.`id` = `md`.`move_id`
 			WHERE `gm`.`generation_id` = :generation_id
 				AND `mn`.`language_id` = :language_id
-			ORDER BY `mn`.`name` ASC'
+			ORDER BY `mn`.`name`'
 		);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
@@ -229,7 +229,7 @@ class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 			WHERE `gm`.`generation_id` = :generation_id
 				AND `mn`.`language_id` = :language_id
 				AND `gm`.`type_id` = :type_id
-			ORDER BY `mn`.`name` ASC'
+			ORDER BY `mn`.`name`'
 		);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);

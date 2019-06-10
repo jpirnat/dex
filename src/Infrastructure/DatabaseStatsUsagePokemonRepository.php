@@ -85,7 +85,7 @@ class DatabaseStatsUsagePokemonRepository implements StatsUsagePokemonRepository
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
-			ORDER BY `urp`.`rank` ASC'
+			ORDER BY `urp`.`rank`'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':prev_month', $prevMonth, PDO::PARAM_STR);

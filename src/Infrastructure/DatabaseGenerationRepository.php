@@ -117,7 +117,7 @@ class DatabaseGenerationRepository implements GenerationRepositoryInterface
 				`icon`
 			FROM `generations`
 			WHERE `id` >= :generation_id
-			ORDER BY `id` ASC'
+			ORDER BY `id`'
 		);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->execute();

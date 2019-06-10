@@ -131,7 +131,7 @@ class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 				`sort`
 			FROM `version_groups`
 			WHERE `generation_id` BETWEEN :begin AND :end
-			ORDER BY `sort` ASC'
+			ORDER BY `sort`'
 		);
 		$stmt->bindValue(':begin', $begin->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':end', $end->value(), PDO::PARAM_INT);

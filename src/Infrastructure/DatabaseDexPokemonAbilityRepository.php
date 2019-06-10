@@ -55,7 +55,7 @@ class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepository
 			WHERE `pa`.`generation_id` = :generation_id
 				AND `pa`.`pokemon_id` = :pokemon_id
 				AND `an`.`language_id` = :language_id
-			ORDER BY `pa`.`slot` ASC'
+			ORDER BY `pa`.`slot`'
 		);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
@@ -114,7 +114,7 @@ class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepository
 					WHERE `generation_id` = :generation_id2
 						AND `ability_id` = :ability_id
 				)
-			ORDER BY `pa`.`slot` ASC'
+			ORDER BY `pa`.`slot`'
 		);
 		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
@@ -175,7 +175,7 @@ class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepository
 					WHERE `pm`.`move_id` = :move_id
 						AND `vg`.`generation_id` <= :generation_id2
 				)
-			ORDER BY `pa`.`slot` ASC'
+			ORDER BY `pa`.`slot`'
 		);
 		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
@@ -225,7 +225,7 @@ class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepository
 				ON `pa`.`ability_id` = `an`.`ability_id`
 			WHERE `pa`.`generation_id` = :generation_id
 				AND `an`.`language_id` = :language_id
-			ORDER BY `pa`.`slot` ASC'
+			ORDER BY `pa`.`slot`'
 		);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
@@ -282,7 +282,7 @@ class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepository
 					WHERE `generation_id` = :generation_id2
 						AND `type_id` = :type_id
 				)
-			ORDER BY `pa`.`slot` ASC'
+			ORDER BY `pa`.`slot`'
 		);
 		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);

@@ -109,7 +109,7 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 			WHERE `pt`.`generation_id` = :generation_id
 				AND `pt`.`pokemon_id` = :pokemon_id
 				AND `ti`.`language_id` = :language_id
-			ORDER BY `pt`.`slot` ASC'
+			ORDER BY `pt`.`slot`'
 		);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
@@ -258,7 +258,7 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 					WHERE `generation_id` = :generation_id2
 						AND `ability_id` = :ability_id
 				)
-			ORDER BY `slot` ASC'
+			ORDER BY `slot`'
 		);
 		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
@@ -307,7 +307,7 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 					WHERE `pm`.`move_id` = :move_id
 						AND `vg`.`generation_id` <= :generation_id2
 				)
-			ORDER BY `slot` ASC'
+			ORDER BY `slot`'
 		);
 		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
@@ -345,7 +345,7 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 				`type_id`
 			FROM `pokemon_types`
 			WHERE `generation_id` = :generation_id
-			ORDER BY `slot` ASC'
+			ORDER BY `slot`'
 		);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -390,7 +390,7 @@ class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 					WHERE `generation_id` = :generation_id2
 						AND `type_id` = :type_id
 				)
-			ORDER BY `slot` ASC'
+			ORDER BY `slot`'
 		);
 		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
