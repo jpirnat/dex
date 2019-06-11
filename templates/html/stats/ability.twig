@@ -46,10 +46,10 @@
 			</tr>
 		</thead>
 		<tbody>
-			{% for pokemon in data %}
+			{% for pokemon in pokemons %}
 				<tr>
 					<td>
-						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
+						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
 					</td>
 					<td>
 						<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
@@ -60,16 +60,16 @@
 					<td class="number">{{ pokemon.abilityPercent|e }}</td>
 					<td class="number">{{ pokemon.usagePercent|e }}</td>
 					<td
-						{% if pokemon.change > 0 %}
+						{% if pokemon.usageChange > 0 %}
 							class="number percent-plus"
-						{% elseif pokemon.change < 0 %}
+						{% elseif pokemon.usageChange < 0 %}
 							class="number percent-minus"
 						{% else %}
 							class="number"
 						{% endif %}
 					>
 						<a class="trend-link" href="/stats/trends/chart?type=usage-ability&format={{ formatIdentifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&ability={{ ability.identifier|e }}">
-							{{ pokemon.changeText|e }}
+							{{ pokemon.usageChangeText|e }}
 						</a>
 					</td>
 				</tr>

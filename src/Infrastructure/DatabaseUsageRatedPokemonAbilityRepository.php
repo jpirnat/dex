@@ -27,66 +27,6 @@ class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbi
 	}
 
 	/**
-	 * Get usage rated Pokémon ability records by their month, format, rating,
-	 * and ability. Indexed by Pokémon id value.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param AbilityId $abilityId
-	 *
-	 * @return UsageRatedPokemonAbility[]
-	 */
-	public function getByMonthAndFormatAndRatingAndAbility(
-		DateTime $month,
-		FormatId $formatId,
-		int $rating,
-		AbilityId $abilityId
-	) : array {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`u`.`pokemon_id`,
-				`u`.`usage_percent` AS `pokemon_percent`,
-				`m`.`percent` AS `ability_percent`,
-				`u`.`usage_percent` * `m`.`percent` / 100 AS `usage_percent`
-			FROM `usage_rated_pokemon` AS `u`
-			INNER JOIN `moveset_rated_abilities` AS `m`
-				ON `u`.`month` = `m`.`month`
-				AND `u`.`format_id` = `m`.`format_id`
-				AND `u`.`rating` = `m`.`rating`
-				AND `u`.`pokemon_id` = `m`.`pokemon_id`
-			WHERE `u`.`month` = :month
-				AND `u`.`format_id` = :format_id
-				AND `u`.`rating` = :rating
-				AND `m`.`ability_id` = :ability_id'
-		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$usageRatedPokemonAbilities = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$usageRatedPokemonAbility = new UsageRatedPokemonAbility(
-				$month,
-				$formatId,
-				$rating,
-				new PokemonId($result['pokemon_id']),
-				(float) $result['pokemon_percent'],
-				$abilityId,
-				(float) $result['ability_percent'],
-				(float) $result['usage_percent']
-			);
-
-			$usageRatedPokemonAbilities[$result['pokemon_id']] = $usageRatedPokemonAbility;
-		}
-
-		return $usageRatedPokemonAbilities;
-	}
-
-	/**
 	 * Get usage rated Pokémon ability records by their format, rating, Pokémon,
 	 * and ability. Use this to create a trend line for the usage of a specific
 	 * Pokémon with a specific ability. Indexed and sorted by month.

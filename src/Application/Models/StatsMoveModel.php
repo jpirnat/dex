@@ -1,23 +1,19 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\StatsMove;
+namespace Jp\Dex\Application\Models;
 
-use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
-use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
-use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveDescription;
 use Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveName;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
+use Jp\Dex\Domain\Usage\StatsMovePokemon;
+use Jp\Dex\Domain\Usage\StatsMovePokemonRepositoryInterface;
 
 class StatsMoveModel
 {
@@ -42,17 +38,8 @@ class StatsMoveModel
 	/** @var MoveDescriptionRepositoryInterface $moveDescriptionRepository */
 	private $moveDescriptionRepository;
 
-	/** @var UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository */
-	private $usageRatedPokemonMoveRepository;
-
-	/** @var PokemonRepositoryInterface $pokemonRepository */
-	private $pokemonRepository;
-
-	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
-	private $pokemonNameRepository;
-
-	/** @var FormIconRepositoryInterface $formIconRepository */
-	private $formIconRepository;
+	/** @var StatsMovePokemonRepositoryInterface $statsMovePokemonRepository */
+	private $statsMovePokemonRepository;
 
 
 	/** @var string $month */
@@ -85,8 +72,8 @@ class StatsMoveModel
 	/** @var MoveDescription $moveDescription */
 	private $moveDescription;
 
-	/** @var MoveUsageData[] $moveUsageDatas */
-	private $moveUsageDatas = [];
+	/** @var StatsMovePokemon[] $pokemon */
+	private $pokemon = [];
 
 
 	/**
@@ -99,10 +86,7 @@ class StatsMoveModel
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param MoveNameRepositoryInterface $moveNameRepository
 	 * @param MoveDescriptionRepositoryInterface $moveDescriptionRepository
-	 * @param UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository
-	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param FormIconRepositoryInterface $formIconRepository
+	 * @param StatsMovePokemonRepositoryInterface $statsMovePokemonRepository
 	 */
 	public function __construct(
 		DateModel $dateModel,
@@ -112,10 +96,7 @@ class StatsMoveModel
 		RatingQueriesInterface $ratingQueries,
 		MoveNameRepositoryInterface $moveNameRepository,
 		MoveDescriptionRepositoryInterface $moveDescriptionRepository,
-		UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository,
-		PokemonRepositoryInterface $pokemonRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
-		FormIconRepositoryInterface $formIconRepository
+		StatsMovePokemonRepositoryInterface $statsMovePokemonRepository
 	) {
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
@@ -124,10 +105,7 @@ class StatsMoveModel
 		$this->ratingQueries = $ratingQueries;
 		$this->moveNameRepository = $moveNameRepository;
 		$this->moveDescriptionRepository = $moveDescriptionRepository;
-		$this->usageRatedPokemonMoveRepository = $usageRatedPokemonMoveRepository;
-		$this->pokemonRepository = $pokemonRepository;
-		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->formIconRepository = $formIconRepository;
+		$this->statsMovePokemonRepository = $statsMovePokemonRepository;
 	}
 
 	/**
@@ -198,61 +176,16 @@ class StatsMoveModel
 			$move->getId()
 		);
 
-		// Get usage rated Pokémon move records for this month.
-		$usageRatedPokemonMoves = $this->usageRatedPokemonMoveRepository->getByMonthAndFormatAndRatingAndMove(
+		// Get the Pokémon usage data.
+		$this->pokemon = $this->statsMovePokemonRepository->getByMonth(
 			$thisMonth,
-			$format->getId(),
-			$rating,
-			$move->getId()
-		);
-
-		// Get usage rated Pokémon move records for the previous month.
-		$prevMonthPokemonMoves = $this->usageRatedPokemonMoveRepository->getByMonthAndFormatAndRatingAndMove(
 			$prevMonth,
 			$format->getId(),
 			$rating,
-			$move->getId()
+			$move->getId(),
+			$format->getGenerationId(),
+			$languageId
 		);
-
-		// Get each usage record's data.
-		foreach ($usageRatedPokemonMoves as $usageRatedPokemonMove) {
-			$pokemonId = $usageRatedPokemonMove->getPokemonId();
-
-			// Get this Pokémon's name.
-			$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-				$languageId,
-				$pokemonId
-			);
-
-			// Get this Pokémon.
-			$pokemon = $this->pokemonRepository->getById($pokemonId);
-
-			// Get this Pokémon's form icon.
-			$formIcon = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
-				$format->getGenerationId(),
-				new FormId($pokemonId->value()), // A Pokémon's default form has Pokémon id === form id.
-				false,
-				false
-			);
-
-			// Get this usage rated Pokémon move's change in usage percent from
-			// the previous month.
-			$prevMonthUsagePercent = 0;
-			if (isset($prevMonthPokemonMoves[$pokemonId->value()])) {
-				$prevMonthUsagePercent = $prevMonthPokemonMoves[$pokemonId->value()]->getUsagePercent();
-			}
-			$change = $usageRatedPokemonMove->getUsagePercent() - $prevMonthUsagePercent;
-
-			$this->moveUsageDatas[] = new MoveUsageData(
-				$pokemonName->getName(),
-				$pokemon->getIdentifier(),
-				$formIcon->getImage(),
-				$usageRatedPokemonMove->getPokemonPercent(),
-				$usageRatedPokemonMove->getMovePercent(),
-				$usageRatedPokemonMove->getUsagePercent(),
-				$change
-			);
-		}
 	}
 
 	/**
@@ -366,12 +299,12 @@ class StatsMoveModel
 	}
 
 	/**
-	 * Get the move usage datas.
+	 * Get the Pokémon.
 	 *
-	 * @return MoveUsageData[]
+	 * @return StatsMovePokemon[]
 	 */
-	public function getMoveUsageDatas() : array
+	public function getPokemon() : array
 	{
-		return $this->moveUsageDatas;
+		return $this->pokemon;
 	}
 }

@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpFullyQualifiedNameUsageInspection */
 declare(strict_types=1);
 
 use Jp\Dex\Application\Controllers\BreedingChainsController;

@@ -3,8 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\StatsMove\MoveUsageData;
-use Jp\Dex\Application\Models\StatsMove\StatsMoveModel;
+use Jp\Dex\Application\Models\StatsMoveModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
@@ -61,27 +60,19 @@ class StatsMoveView
 		$prevMonth = $this->statsMoveModel->getDateModel()->getPrevMonth();
 		$nextMonth = $this->statsMoveModel->getDateModel()->getNextMonth();
 
-		// Get move usage data and sort by usage percent.
-		$moveUsageDatas = $this->statsMoveModel->getMoveUsageDatas();
-		uasort(
-			$moveUsageDatas,
-			function (MoveUsageData $a, MoveUsageData $b) : int {
-				return $b->getUsagePercent() <=> $a->getUsagePercent();
-			}
-		);
-
-		// Compile all move usage data into the right form.
-		$data = [];
-		foreach ($moveUsageDatas as $moveUsageData) {
-			$data[] = [
-				'name' => $moveUsageData->getPokemonName(),
-				'identifier' => $moveUsageData->getPokemonIdentifier(),
-				'formIcon' => $moveUsageData->getFormIcon(),
-				'pokemonPercent' => $formatter->formatPercent($moveUsageData->getPokemonPercent()),
-				'movePercent' => $formatter->formatPercent($moveUsageData->getMovePercent()),
-				'usagePercent' => $formatter->formatPercent($moveUsageData->getUsagePercent()),
-				'change' => $moveUsageData->getChange(),
-				'changeText' => $formatter->formatPercent($moveUsageData->getChange()),
+		// Get the Pokémon usage data.
+		$pokemonData = $this->statsMoveModel->getPokemon();
+		$pokemons = [];
+		foreach ($pokemonData as $pokemon) {
+			$pokemons[] = [
+				'icon' => $pokemon->getIcon(),
+				'identifier' => $pokemon->getIdentifier(),
+				'name' => $pokemon->getName(),
+				'pokemonPercent' => $formatter->formatPercent($pokemon->getPokemonPercent()),
+				'movePercent' => $formatter->formatPercent($pokemon->getMovePercent()),
+				'usagePercent' => $formatter->formatPercent($pokemon->getUsagePercent()),
+				'usageChange' => $pokemon->getUsageChange(),
+				'usageChangeText' => $formatter->formatPercent($pokemon->getUsageChange()),
 			];
 		}
 
@@ -137,7 +128,7 @@ class StatsMoveView
 
 
 				// The main data.
-				'data' => $data,
+				'pokemons' => $pokemons,
 			]
 		);
 

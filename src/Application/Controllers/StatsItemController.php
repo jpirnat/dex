@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\StatsItem\StatsItemModel;
+use Jp\Dex\Application\Models\StatsItemModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 

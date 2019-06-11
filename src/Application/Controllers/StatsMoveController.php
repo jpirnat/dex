@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\StatsMove\StatsMoveModel;
+use Jp\Dex\Application\Models\StatsMoveModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 

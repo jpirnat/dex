@@ -1,23 +1,19 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\StatsItem;
+namespace Jp\Dex\Application\Models;
 
-use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
-use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
-use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Items\ItemDescription;
 use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemName;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonItemRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
+use Jp\Dex\Domain\Usage\StatsItemPokemon;
+use Jp\Dex\Domain\Usage\StatsItemPokemonRepositoryInterface;
 
 class StatsItemModel
 {
@@ -42,17 +38,8 @@ class StatsItemModel
 	/** @var ItemDescriptionRepositoryInterface $itemDescriptionRepository */
 	private $itemDescriptionRepository;
 
-	/** @var UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository */
-	private $usageRatedPokemonItemRepository;
-
-	/** @var PokemonRepositoryInterface $pokemonRepository */
-	private $pokemonRepository;
-
-	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
-	private $pokemonNameRepository;
-
-	/** @var FormIconRepositoryInterface $formIconRepository */
-	private $formIconRepository;
+	/** @var StatsItemPokemonRepositoryInterface $statsItemPokemonRepository */
+	private $statsItemPokemonRepository;
 
 
 	/** @var string $month */
@@ -85,8 +72,8 @@ class StatsItemModel
 	/** @var ItemDescription $itemDescription */
 	private $itemDescription;
 
-	/** @var ItemUsageData[] $itemUsageDatas */
-	private $itemUsageDatas = [];
+	/** @var StatsItemPokemon[] $pokemon */
+	private $pokemon = [];
 
 
 	/**
@@ -99,10 +86,7 @@ class StatsItemModel
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param ItemNameRepositoryInterface $itemNameRepository
 	 * @param ItemDescriptionRepositoryInterface $itemDescriptionRepository
-	 * @param UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository
-	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param FormIconRepositoryInterface $formIconRepository
+	 * @param StatsItemPokemonRepositoryInterface $statsItemPokemonRepository
 	 */
 	public function __construct(
 		DateModel $dateModel,
@@ -112,10 +96,7 @@ class StatsItemModel
 		RatingQueriesInterface $ratingQueries,
 		ItemNameRepositoryInterface $itemNameRepository,
 		ItemDescriptionRepositoryInterface $itemDescriptionRepository,
-		UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository,
-		PokemonRepositoryInterface $pokemonRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
-		FormIconRepositoryInterface $formIconRepository
+		StatsItemPokemonRepositoryInterface $statsItemPokemonRepository
 	) {
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
@@ -124,10 +105,7 @@ class StatsItemModel
 		$this->ratingQueries = $ratingQueries;
 		$this->itemNameRepository = $itemNameRepository;
 		$this->itemDescriptionRepository = $itemDescriptionRepository;
-		$this->usageRatedPokemonItemRepository = $usageRatedPokemonItemRepository;
-		$this->pokemonRepository = $pokemonRepository;
-		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->formIconRepository = $formIconRepository;
+		$this->statsItemPokemonRepository = $statsItemPokemonRepository;
 	}
 
 	/**
@@ -198,61 +176,16 @@ class StatsItemModel
 			$item->getId()
 		);
 
-		// Get usage rated Pokémon item records for this month.
-		$usageRatedPokemonItems = $this->usageRatedPokemonItemRepository->getByMonthAndFormatAndRatingAndItem(
+		// Get the Pokémon usage data.
+		$this->pokemon = $this->statsItemPokemonRepository->getByMonth(
 			$thisMonth,
-			$format->getId(),
-			$rating,
-			$item->getId()
-		);
-
-		// Get usage rated Pokémon item records for the previous month.
-		$prevMonthPokemonItems = $this->usageRatedPokemonItemRepository->getByMonthAndFormatAndRatingAndItem(
 			$prevMonth,
 			$format->getId(),
 			$rating,
-			$item->getId()
+			$item->getId(),
+			$format->getGenerationId(),
+			$languageId
 		);
-
-		// Get each usage record's data.
-		foreach ($usageRatedPokemonItems as $usageRatedPokemonItem) {
-			$pokemonId = $usageRatedPokemonItem->getPokemonId();
-
-			// Get this Pokémon's name.
-			$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-				$languageId,
-				$pokemonId
-			);
-
-			// Get this Pokémon.
-			$pokemon = $this->pokemonRepository->getById($pokemonId);
-
-			// Get this Pokémon's form icon.
-			$formIcon = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
-				$format->getGenerationId(),
-				new FormId($pokemonId->value()), // A Pokémon's default form has Pokémon id === form id.
-				false,
-				false
-			);
-
-			// Get this usage rated Pokémon item's change in usage percent from
-			// the previous month.
-			$prevMonthUsagePercent = 0;
-			if (isset($prevMonthPokemonItems[$pokemonId->value()])) {
-				$prevMonthUsagePercent = $prevMonthPokemonItems[$pokemonId->value()]->getUsagePercent();
-			}
-			$change = $usageRatedPokemonItem->getUsagePercent() - $prevMonthUsagePercent;
-
-			$this->itemUsageDatas[] = new ItemUsageData(
-				$pokemonName->getName(),
-				$pokemon->getIdentifier(),
-				$formIcon->getImage(),
-				$usageRatedPokemonItem->getPokemonPercent(),
-				$usageRatedPokemonItem->getItemPercent(),
-				$usageRatedPokemonItem->getUsagePercent(),
-				$change
-			);
-		}
 	}
 
 	/**
@@ -366,12 +299,12 @@ class StatsItemModel
 	}
 
 	/**
-	 * Get the item usage datas.
+	 * Get the Pokémon.
 	 *
-	 * @return ItemUsageData[]
+	 * @return StatsItemPokemon[]
 	 */
-	public function getItemUsageDatas() : array
+	public function getPokemon() : array
 	{
-		return $this->itemUsageDatas;
+		return $this->pokemon;
 	}
 }

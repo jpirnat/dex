@@ -1,23 +1,19 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\StatsAbility;
+namespace Jp\Dex\Application\Models;
 
-use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Abilities\AbilityDescription;
 use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityName;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
-use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
-use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
+use Jp\Dex\Domain\Usage\StatsAbilityPokemon;
+use Jp\Dex\Domain\Usage\StatsAbilityPokemonRepositoryInterface;
 
 class StatsAbilityModel
 {
@@ -42,17 +38,8 @@ class StatsAbilityModel
 	/** @var AbilityDescriptionRepositoryInterface $abilityDescriptionRepository */
 	private $abilityDescriptionRepository;
 
-	/** @var UsageRatedPokemonAbilityRepositoryInterface $usageRatedPokemonAbilityRepository */
-	private $usageRatedPokemonAbilityRepository;
-
-	/** @var PokemonRepositoryInterface $pokemonRepository */
-	private $pokemonRepository;
-
-	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
-	private $pokemonNameRepository;
-
-	/** @var FormIconRepositoryInterface $formIconRepository */
-	private $formIconRepository;
+	/** @var StatsAbilityPokemonRepositoryInterface $statsAbilityPokemonRepository */
+	private $statsAbilityPokemonRepository;
 
 
 	/** @var string $month */
@@ -85,8 +72,8 @@ class StatsAbilityModel
 	/** @var AbilityDescription $abilityDescription */
 	private $abilityDescription;
 
-	/** @var AbilityUsageData[] $abilityUsageDatas */
-	private $abilityUsageDatas = [];
+	/** @var StatsAbilityPokemon[] $pokemon */
+	private $pokemon = [];
 
 
 	/**
@@ -99,10 +86,7 @@ class StatsAbilityModel
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
 	 * @param AbilityDescriptionRepositoryInterface $abilityDescriptionRepository
-	 * @param UsageRatedPokemonAbilityRepositoryInterface $usageRatedPokemonAbilityRepository
-	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param FormIconRepositoryInterface $formIconRepository
+	 * @param StatsAbilityPokemonRepositoryInterface $statsAbilityPokemonRepository
 	 */
 	public function __construct(
 		DateModel $dateModel,
@@ -112,10 +96,7 @@ class StatsAbilityModel
 		RatingQueriesInterface $ratingQueries,
 		AbilityNameRepositoryInterface $abilityNameRepository,
 		AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
-		UsageRatedPokemonAbilityRepositoryInterface $usageRatedPokemonAbilityRepository,
-		PokemonRepositoryInterface $pokemonRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
-		FormIconRepositoryInterface $formIconRepository
+		StatsAbilityPokemonRepositoryInterface $statsAbilityPokemonRepository
 	) {
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
@@ -124,10 +105,7 @@ class StatsAbilityModel
 		$this->ratingQueries = $ratingQueries;
 		$this->abilityNameRepository = $abilityNameRepository;
 		$this->abilityDescriptionRepository = $abilityDescriptionRepository;
-		$this->usageRatedPokemonAbilityRepository = $usageRatedPokemonAbilityRepository;
-		$this->pokemonRepository = $pokemonRepository;
-		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->formIconRepository = $formIconRepository;
+		$this->statsAbilityPokemonRepository = $statsAbilityPokemonRepository;
 	}
 
 	/**
@@ -198,61 +176,16 @@ class StatsAbilityModel
 			$ability->getId()
 		);
 
-		// Get usage rated Pokémon ability records for this month.
-		$usageRatedPokemonAbilities = $this->usageRatedPokemonAbilityRepository->getByMonthAndFormatAndRatingAndAbility(
+		// Get the Pokémon usage data.
+		$this->pokemon = $this->statsAbilityPokemonRepository->getByMonth(
 			$thisMonth,
-			$format->getId(),
-			$rating,
-			$ability->getId()
-		);
-
-		// Get usage rated Pokémon ability records for the previous month.
-		$prevMonthPokemonAbilities = $this->usageRatedPokemonAbilityRepository->getByMonthAndFormatAndRatingAndAbility(
 			$prevMonth,
 			$format->getId(),
 			$rating,
-			$ability->getId()
+			$ability->getId(),
+			$format->getGenerationId(),
+			$languageId
 		);
-
-		// Get each usage record's data.
-		foreach ($usageRatedPokemonAbilities as $usageRatedPokemonAbility) {
-			$pokemonId = $usageRatedPokemonAbility->getPokemonId();
-
-			// Get this Pokémon's name.
-			$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-				$languageId,
-				$pokemonId
-			);
-
-			// Get this Pokémon.
-			$pokemon = $this->pokemonRepository->getById($pokemonId);
-
-			// Get this Pokémon's form icon.
-			$formIcon = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
-				$format->getGenerationId(),
-				new FormId($pokemonId->value()), // A Pokémon's default form has Pokémon id === form id.
-				false,
-				false
-			);
-
-			// Get this usage rated Pokémon ability's change in usage percent
-			// from the previous month.
-			$prevMonthUsagePercent = 0;
-			if (isset($prevMonthPokemonAbilities[$pokemonId->value()])) {
-				$prevMonthUsagePercent = $prevMonthPokemonAbilities[$pokemonId->value()]->getUsagePercent();
-			}
-			$change = $usageRatedPokemonAbility->getUsagePercent() - $prevMonthUsagePercent;
-
-			$this->abilityUsageDatas[] = new AbilityUsageData(
-				$pokemonName->getName(),
-				$pokemon->getIdentifier(),
-				$formIcon->getImage(),
-				$usageRatedPokemonAbility->getPokemonPercent(),
-				$usageRatedPokemonAbility->getAbilityPercent(),
-				$usageRatedPokemonAbility->getUsagePercent(),
-				$change
-			);
-		}
 	}
 
 	/**
@@ -366,12 +299,12 @@ class StatsAbilityModel
 	}
 
 	/**
-	 * Get the ability usage datas.
+	 * Get the Pokémon.
 	 *
-	 * @return AbilityUsageData[]
+	 * @return StatsAbilityPokemon[]
 	 */
-	public function getAbilityUsageDatas() : array
+	public function getPokemon() : array
 	{
-		return $this->abilityUsageDatas;
+		return $this->pokemon;
 	}
 }
