@@ -8,16 +8,12 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 
 class StatsMonthModel
 {
 	/** @var DateModel $dateModel */
 	private $dateModel;
-
-	/** @var MonthQueriesInterface $monthQueries */
-	private $monthQueries;
 
 	/** @var UsageRatedQueriesInterface $usageRatedQueries */
 	private $usageRatedQueries;
@@ -35,12 +31,6 @@ class StatsMonthModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
 	/** @var FormatData[] $formatDatas */
 	private $formatDatas = [];
 
@@ -49,20 +39,17 @@ class StatsMonthModel
 	 * Constructor.
 	 *
 	 * @param DateModel $dateModel
-	 * @param MonthQueriesInterface $monthQueries
 	 * @param UsageRatedQueriesInterface $usageRatedQueries
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 */
 	public function __construct(
 		DateModel $dateModel,
-		MonthQueriesInterface $monthQueries,
 		UsageRatedQueriesInterface $usageRatedQueries,
 		FormatRepositoryInterface $formatRepository,
 		FormatNameRepositoryInterface $formatNameRepository
 	) {
 		$this->dateModel = $dateModel;
-		$this->monthQueries = $monthQueries;
 		$this->usageRatedQueries = $usageRatedQueries;
 		$this->formatRepository = $formatRepository;
 		$this->formatNameRepository = $formatNameRepository;
@@ -85,16 +72,8 @@ class StatsMonthModel
 		$this->languageId = $languageId;
 
 		// Get the previous month and the next month.
-		$this->dateModel->setData($month);
+		$this->dateModel->setMonth($month);
 		$thisMonth = $this->dateModel->getThisMonth();
-		$prevMonth = $this->dateModel->getPrevMonth();
-		$nextMonth = $this->dateModel->getNextMonth();
-
-		// Does usage data exist for the previous month?
-		$this->prevMonthDataExists = $this->monthQueries->doesMonthDataExist($prevMonth);
-
-		// Does usage data exist for the next month?
-		$this->nextMonthDataExists = $this->monthQueries->doesMonthDataExist($nextMonth);
 
 		// Get the formats/ratings for this month.
 		$formatRatings = $this->usageRatedQueries->getFormatRatings($thisMonth);
@@ -126,26 +105,6 @@ class StatsMonthModel
 				$ratings[$formatId->value()]
 			);
 		}
-	}
-
-	/**
-	 * Does usage data exist for the previous month?
-	 *
-	 * @return bool
-	 */
-	public function doesPrevMonthDataExist() : bool
-	{
-		return $this->prevMonthDataExists;
-	}
-
-	/**
-	 * Does usage data exist for the next month?
-	 *
-	 * @return bool
-	 */
-	public function doesNextMonthDataExist() : bool
-	{
-		return $this->nextMonthDataExists;
 	}
 
 	/**

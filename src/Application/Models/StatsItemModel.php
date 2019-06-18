@@ -10,7 +10,6 @@ use Jp\Dex\Domain\Items\ItemName;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Usage\StatsItemPokemon;
 use Jp\Dex\Domain\Usage\StatsItemPokemonRepositoryInterface;
@@ -25,9 +24,6 @@ class StatsItemModel
 
 	/** @var ItemRepositoryInterface $itemRepository */
 	private $itemRepository;
-
-	/** @var MonthQueriesInterface $monthQueries */
-	private $monthQueries;
 
 	/** @var RatingQueriesInterface $ratingQueries */
 	private $ratingQueries;
@@ -57,12 +53,6 @@ class StatsItemModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
 	/** @var int[] $ratings */
 	private $ratings = [];
 
@@ -82,7 +72,6 @@ class StatsItemModel
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param ItemRepositoryInterface $itemRepository
-	 * @param MonthQueriesInterface $monthQueries
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param ItemNameRepositoryInterface $itemNameRepository
 	 * @param ItemDescriptionRepositoryInterface $itemDescriptionRepository
@@ -92,7 +81,6 @@ class StatsItemModel
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		ItemRepositoryInterface $itemRepository,
-		MonthQueriesInterface $monthQueries,
 		RatingQueriesInterface $ratingQueries,
 		ItemNameRepositoryInterface $itemNameRepository,
 		ItemDescriptionRepositoryInterface $itemDescriptionRepository,
@@ -101,7 +89,6 @@ class StatsItemModel
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->itemRepository = $itemRepository;
-		$this->monthQueries = $monthQueries;
 		$this->ratingQueries = $ratingQueries;
 		$this->itemNameRepository = $itemNameRepository;
 		$this->itemDescriptionRepository = $itemDescriptionRepository;
@@ -133,29 +120,16 @@ class StatsItemModel
 		$this->itemIdentifier = $itemIdentifier;
 		$this->languageId = $languageId;
 
-		// Get the previous month and the next month.
-		$this->dateModel->setData($month);
-		$thisMonth = $this->dateModel->getThisMonth();
-		$prevMonth = $this->dateModel->getPrevMonth();
-		$nextMonth = $this->dateModel->getNextMonth();
-
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
+		// Get the previous month and the next month.
+		$this->dateModel->setMonthAndFormat($month, $format->getId());
+		$thisMonth = $this->dateModel->getThisMonth();
+		$prevMonth = $this->dateModel->getPrevMonth();
+
 		// Get the item.
 		$item = $this->itemRepository->getByIdentifier($itemIdentifier);
-
-		// Does usage data exist for the previous month?
-		$this->prevMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
-			$prevMonth,
-			$format->getId()
-		);
-
-		// Does usage data exist for the next month?
-		$this->nextMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
-			$nextMonth,
-			$format->getId()
-		);
 
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
@@ -246,26 +220,6 @@ class StatsItemModel
 	public function getDateModel() : DateModel
 	{
 		return $this->dateModel;
-	}
-
-	/**
-	 * Does usage rated data exist for the previous month?
-	 *
-	 * @return bool
-	 */
-	public function doesPrevMonthDataExist() : bool
-	{
-		return $this->prevMonthDataExists;
-	}
-
-	/**
-	 * Does usage rated data exist for the next month?
-	 *
-	 * @return bool
-	 */
-	public function doesNextMonthDataExist() : bool
-	{
-		return $this->nextMonthDataExists;
 	}
 
 	/**

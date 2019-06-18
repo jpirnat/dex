@@ -21,6 +21,9 @@ class StatsAbilityView
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
 
+	/** @var MonthControlFormatter $monthControlFormatter */
+	private $monthControlFormatter;
+
 	/**
 	 * Constructor.
 	 *
@@ -28,17 +31,20 @@ class StatsAbilityView
 	 * @param BaseView $baseView
 	 * @param StatsAbilityModel $statsAbilityModel
 	 * @param IntlFormatterFactory $formatterFactory
+	 * @param MonthControlFormatter $monthControlFormatter
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
+		StatsAbilityModel $statsAbilityModel,
 		IntlFormatterFactory $formatterFactory,
-		StatsAbilityModel $statsAbilityModel
+		MonthControlFormatter $monthControlFormatter
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->statsAbilityModel = $statsAbilityModel;
 		$this->formatterFactory = $formatterFactory;
+		$this->monthControlFormatter = $monthControlFormatter;
 	}
 
 	/**
@@ -108,16 +114,8 @@ class StatsAbilityView
 
 				'breadcrumbs' => $breadcrumbs,
 
-				'prevMonth' => [
-					'show' => $this->statsAbilityModel->doesPrevMonthDataExist(),
-					'month' => $prevMonth->format('Y-m'),
-					'text' => $formatter->formatMonth($prevMonth),
-				],
-				'nextMonth' => [
-					'show' => $this->statsAbilityModel->doesNextMonthDataExist(),
-					'month' => $nextMonth->format('Y-m'),
-					'text' => $formatter->formatMonth($nextMonth),
-				],
+				'prevMonth' => $this->monthControlFormatter->format($prevMonth, $formatter),
+				'nextMonth' => $this->monthControlFormatter->format($nextMonth, $formatter),
 				'ratings' => $this->statsAbilityModel->getRatings(),
 
 				'ability' => [

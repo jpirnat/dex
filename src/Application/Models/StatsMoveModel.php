@@ -10,7 +10,6 @@ use Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveName;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Usage\StatsMovePokemon;
 use Jp\Dex\Domain\Usage\StatsMovePokemonRepositoryInterface;
@@ -25,9 +24,6 @@ class StatsMoveModel
 
 	/** @var MoveRepositoryInterface $moveRepository */
 	private $moveRepository;
-
-	/** @var MonthQueriesInterface $monthQueries */
-	private $monthQueries;
 
 	/** @var RatingQueriesInterface $ratingQueries */
 	private $ratingQueries;
@@ -57,12 +53,6 @@ class StatsMoveModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
 	/** @var int[] $ratings */
 	private $ratings = [];
 
@@ -82,7 +72,6 @@ class StatsMoveModel
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param MoveRepositoryInterface $moveRepository
-	 * @param MonthQueriesInterface $monthQueries
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param MoveNameRepositoryInterface $moveNameRepository
 	 * @param MoveDescriptionRepositoryInterface $moveDescriptionRepository
@@ -92,7 +81,6 @@ class StatsMoveModel
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		MoveRepositoryInterface $moveRepository,
-		MonthQueriesInterface $monthQueries,
 		RatingQueriesInterface $ratingQueries,
 		MoveNameRepositoryInterface $moveNameRepository,
 		MoveDescriptionRepositoryInterface $moveDescriptionRepository,
@@ -101,7 +89,6 @@ class StatsMoveModel
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->moveRepository = $moveRepository;
-		$this->monthQueries = $monthQueries;
 		$this->ratingQueries = $ratingQueries;
 		$this->moveNameRepository = $moveNameRepository;
 		$this->moveDescriptionRepository = $moveDescriptionRepository;
@@ -133,29 +120,16 @@ class StatsMoveModel
 		$this->moveIdentifier = $moveIdentifier;
 		$this->languageId = $languageId;
 
-		// Get the previous month and the next month.
-		$this->dateModel->setData($month);
-		$thisMonth = $this->dateModel->getThisMonth();
-		$prevMonth = $this->dateModel->getPrevMonth();
-		$nextMonth = $this->dateModel->getNextMonth();
-
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
+		// Get the previous month and the next month.
+		$this->dateModel->setMonthAndFormat($month, $format->getId());
+		$thisMonth = $this->dateModel->getThisMonth();
+		$prevMonth = $this->dateModel->getPrevMonth();
+
 		// Get the move.
 		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
-
-		// Does usage data exist for the previous month?
-		$this->prevMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
-			$prevMonth,
-			$format->getId()
-		);
-
-		// Does usage data exist for the next month?
-		$this->nextMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
-			$nextMonth,
-			$format->getId()
-		);
 
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
@@ -246,26 +220,6 @@ class StatsMoveModel
 	public function getDateModel() : DateModel
 	{
 		return $this->dateModel;
-	}
-
-	/**
-	 * Does usage rated data exist for the previous month?
-	 *
-	 * @return bool
-	 */
-	public function doesPrevMonthDataExist() : bool
-	{
-		return $this->prevMonthDataExists;
-	}
-
-	/**
-	 * Does usage rated data exist for the next month?
-	 *
-	 * @return bool
-	 */
-	public function doesNextMonthDataExist() : bool
-	{
-		return $this->nextMonthDataExists;
 	}
 
 	/**

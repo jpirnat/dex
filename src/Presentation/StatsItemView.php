@@ -21,6 +21,9 @@ class StatsItemView
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
 
+	/** @var MonthControlFormatter $monthControlFormatter */
+	private $monthControlFormatter;
+
 	/**
 	 * Constructor.
 	 *
@@ -28,17 +31,20 @@ class StatsItemView
 	 * @param BaseView $baseView
 	 * @param StatsItemModel $statsItemModel
 	 * @param IntlFormatterFactory $formatterFactory
+	 * @param MonthControlFormatter $monthControlFormatter
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
+		StatsItemModel $statsItemModel,
 		IntlFormatterFactory $formatterFactory,
-		StatsItemModel $statsItemModel
+		MonthControlFormatter $monthControlFormatter
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->statsItemModel = $statsItemModel;
 		$this->formatterFactory = $formatterFactory;
+		$this->monthControlFormatter = $monthControlFormatter;
 	}
 
 	/**
@@ -108,16 +114,8 @@ class StatsItemView
 
 				'breadcrumbs' => $breadcrumbs,
 
-				'prevMonth' => [
-					'show' => $this->statsItemModel->doesPrevMonthDataExist(),
-					'month' => $prevMonth->format('Y-m'),
-					'text' => $formatter->formatMonth($prevMonth),
-				],
-				'nextMonth' => [
-					'show' => $this->statsItemModel->doesNextMonthDataExist(),
-					'month' => $nextMonth->format('Y-m'),
-					'text' => $formatter->formatMonth($nextMonth),
-				],
+				'prevMonth' => $this->monthControlFormatter->format($prevMonth, $formatter),
+				'nextMonth' => $this->monthControlFormatter->format($nextMonth, $formatter),
 				'ratings' => $this->statsItemModel->getRatings(),
 
 				'item' => [

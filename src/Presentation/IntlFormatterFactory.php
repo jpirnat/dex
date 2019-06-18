@@ -8,6 +8,11 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use NumberFormatter;
 
+/**
+ * Many view classes have a dependency on IntlFormatter. However, IntlFormatter
+ * has a run-time dependency on LanguageId. So, those view classes use this
+ * factory class as their injected dependency instead.
+ */
 class IntlFormatterFactory
 {
 	/** @var LanguageRepositoryInterface $languageRepository */

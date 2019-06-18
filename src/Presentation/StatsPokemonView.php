@@ -23,6 +23,9 @@ class StatsPokemonView
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
 
+	/** @var MonthControlFormatter $monthControlFormatter */
+	private $monthControlFormatter;
+
 	/** @var DexFormatter $dexFormatter */
 	private $dexFormatter;
 
@@ -33,6 +36,7 @@ class StatsPokemonView
 	 * @param BaseView $baseView
 	 * @param StatsPokemonModel $statsPokemonModel
 	 * @param IntlFormatterFactory $formatterFactory
+	 * @param MonthControlFormatter $monthControlFormatter
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
@@ -40,12 +44,14 @@ class StatsPokemonView
 		BaseView $baseView,
 		StatsPokemonModel $statsPokemonModel,
 		IntlFormatterFactory $formatterFactory,
+		MonthControlFormatter $monthControlFormatter,
 		DexFormatter $dexFormatter
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->statsPokemonModel = $statsPokemonModel;
 		$this->formatterFactory = $formatterFactory;
+		$this->monthControlFormatter = $monthControlFormatter;
 		$this->dexFormatter = $dexFormatter;
 	}
 
@@ -258,16 +264,8 @@ class StatsPokemonView
 
 				'breadcrumbs' => $breadcrumbs,
 
-				'prevMonth' => [
-					'show' => $this->statsPokemonModel->doesPrevMonthDataExist(),
-					'month' => $prevMonth->format('Y-m'),
-					'text' => $formatter->formatMonth($prevMonth),
-				],
-				'nextMonth' => [
-					'show' => $this->statsPokemonModel->doesNextMonthDataExist(),
-					'month' => $nextMonth->format('Y-m'),
-					'text' => $formatter->formatMonth($nextMonth),
-				],
+				'prevMonth' => $this->monthControlFormatter->format($prevMonth, $formatter),
+				'nextMonth' => $this->monthControlFormatter->format($nextMonth, $formatter),
 				'ratings' => $this->statsPokemonModel->getRatings(),
 
 				'model' => $model->getImage(),

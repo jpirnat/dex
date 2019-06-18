@@ -7,7 +7,6 @@ use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Leads\StatsLeadsPokemon;
 use Jp\Dex\Domain\Leads\StatsLeadsPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
 class StatsLeadsModel
@@ -17,9 +16,6 @@ class StatsLeadsModel
 
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
-
-	/** @var MonthQueriesInterface $monthQueries */
-	private $monthQueries;
 
 	/** @var RatingQueriesInterface $ratingQueries */
 	private $ratingQueries;
@@ -40,12 +36,6 @@ class StatsLeadsModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
 	/** @var int[] $ratings */
 	private $ratings = [];
 
@@ -58,20 +48,17 @@ class StatsLeadsModel
 	 *
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
-	 * @param MonthQueriesInterface $monthQueries
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param StatsLeadsPokemonRepositoryInterface $statsLeadsPokemonRepository
 	 */
 	public function __construct(
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
-		MonthQueriesInterface $monthQueries,
 		RatingQueriesInterface $ratingQueries,
 		StatsLeadsPokemonRepositoryInterface $statsLeadsPokemonRepository
 	) {
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
-		$this->monthQueries = $monthQueries;
 		$this->ratingQueries = $ratingQueries;
 		$this->statsLeadsPokemonRepository = $statsLeadsPokemonRepository;
 	}
@@ -98,26 +85,13 @@ class StatsLeadsModel
 		$this->rating = $rating;
 		$this->languageId = $languageId;
 
-		// Get the previous month and the next month.
-		$this->dateModel->setData($month);
-		$thisMonth = $this->dateModel->getThisMonth();
-		$prevMonth = $this->dateModel->getPrevMonth();
-		$nextMonth = $this->dateModel->getNextMonth();
-
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
-		// Does usage data exist for the previous month?
-		$this->prevMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
-			$prevMonth,
-			$format->getId()
-		);
-
-		// Does usage data exist for the next month?
-		$this->nextMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
-			$nextMonth,
-			$format->getId()
-		);
+		// Get the previous month and the next month.
+		$this->dateModel->setMonthAndFormat($month, $format->getId());
+		$thisMonth = $this->dateModel->getThisMonth();
+		$prevMonth = $this->dateModel->getPrevMonth();
 
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
@@ -184,26 +158,6 @@ class StatsLeadsModel
 	public function getDateModel() : DateModel
 	{
 		return $this->dateModel;
-	}
-
-	/**
-	 * Does leads data exist for the previous month?
-	 *
-	 * @return bool
-	 */
-	public function doesPrevMonthDataExist() : bool
-	{
-		return $this->prevMonthDataExists;
-	}
-
-	/**
-	 * Does leads data exist for the next month?
-	 *
-	 * @return bool
-	 */
-	public function doesNextMonthDataExist() : bool
-	{
-		return $this->nextMonthDataExists;
 	}
 
 	/**

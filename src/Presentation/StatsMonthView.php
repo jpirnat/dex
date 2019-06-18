@@ -22,6 +22,9 @@ class StatsMonthView
 	/** @var IntlFormatterFactory $formatterFactory */
 	private $formatterFactory;
 
+	/** @var MonthControlFormatter $monthControlFormatter */
+	private $monthControlFormatter;
+
 	/**
 	 * Constructor.
 	 *
@@ -29,17 +32,20 @@ class StatsMonthView
 	 * @param BaseView $baseView
 	 * @param StatsMonthModel $statsMonthModel
 	 * @param IntlFormatterFactory $formatterFactory
+	 * @param MonthControlFormatter $monthControlFormatter
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
 		StatsMonthModel $statsMonthModel,
-		IntlFormatterFactory $formatterFactory
+		IntlFormatterFactory $formatterFactory,
+		MonthControlFormatter $monthControlFormatter
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->statsMonthModel = $statsMonthModel;
 		$this->formatterFactory = $formatterFactory;
+		$this->monthControlFormatter = $monthControlFormatter;
 	}
 
 	/**
@@ -96,16 +102,8 @@ class StatsMonthView
 				// TODO: title - "Month Year formats"?
 				'breadcrumbs' => $breadcrumbs,
 
-				'prevMonth' => [
-					'show' => $this->statsMonthModel->doesPrevMonthDataExist(),
-					'month' => $prevMonth->format('Y-m'),
-					'text' => $formatter->formatMonth($prevMonth),
-				],
-				'nextMonth' => [
-					'show' => $this->statsMonthModel->doesNextMonthDataExist(),
-					'month' => $nextMonth->format('Y-m'),
-					'text' => $formatter->formatMonth($nextMonth),
-				],
+				'prevMonth' => $this->monthControlFormatter->format($prevMonth, $formatter),
+				'nextMonth' => $this->monthControlFormatter->format($nextMonth, $formatter),
 
 				'month' => $month,
 

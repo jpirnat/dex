@@ -21,7 +21,6 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Teammates\StatsPokemonTeammate;
 use Jp\Dex\Domain\Teammates\StatsPokemonTeammateRepositoryInterface;
@@ -38,9 +37,6 @@ class StatsPokemonModel
 
 	/** @var PokemonRepositoryInterface $pokemonRepository */
 	private $pokemonRepository;
-
-	/** @var MonthQueriesInterface $monthQueries */
-	private $monthQueries;
 
 	/** @var RatingQueriesInterface $ratingQueries */
 	private $ratingQueries;
@@ -92,12 +88,6 @@ class StatsPokemonModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
 	/** @var int[] $ratings */
 	private $ratings = [];
 
@@ -132,7 +122,6 @@ class StatsPokemonModel
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param MonthQueriesInterface $monthQueries
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param GenerationRepositoryInterface $generationRepository
 	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
@@ -149,7 +138,6 @@ class StatsPokemonModel
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		PokemonRepositoryInterface $pokemonRepository,
-		MonthQueriesInterface $monthQueries,
 		RatingQueriesInterface $ratingQueries,
 		GenerationRepositoryInterface $generationRepository,
 		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
@@ -165,7 +153,6 @@ class StatsPokemonModel
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->pokemonRepository = $pokemonRepository;
-		$this->monthQueries = $monthQueries;
 		$this->ratingQueries = $ratingQueries;
 		$this->generationRepository = $generationRepository;
 		$this->movesetPokemonRepository = $movesetPokemonRepository;
@@ -203,29 +190,16 @@ class StatsPokemonModel
 		$this->rating = $rating;
 		$this->languageId = $languageId;
 
-		// Get the previous month and the next month.
-		$this->dateModel->setData($month);
-		$thisMonth = $this->dateModel->getThisMonth();
-		$prevMonth = $this->dateModel->getPrevMonth();
-		$nextMonth = $this->dateModel->getNextMonth();
-
 		// Get the format.
 		$this->format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
+		// Get the previous month and the next month.
+		$this->dateModel->setMonthAndFormat($month, $this->format->getId());
+		$thisMonth = $this->dateModel->getThisMonth();
+		$prevMonth = $this->dateModel->getPrevMonth();
+
 		// Get the Pokémon.
 		$this->pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
-
-		// Does usage data exist for the previous month?
-		$this->prevMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
-			$prevMonth,
-			$this->format->getId()
-		);
-
-		// Does usage data exist for the next month?
-		$this->nextMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
-			$nextMonth,
-			$this->format->getId()
-		);
 
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
@@ -378,26 +352,6 @@ class StatsPokemonModel
 	public function getDateModel() : DateModel
 	{
 		return $this->dateModel;
-	}
-
-	/**
-	 * Does usage rated data exist for the previous month?
-	 *
-	 * @return bool
-	 */
-	public function doesPrevMonthDataExist() : bool
-	{
-		return $this->prevMonthDataExists;
-	}
-
-	/**
-	 * Does usage rated data exist for the next month?
-	 *
-	 * @return bool
-	 */
-	public function doesNextMonthDataExist() : bool
-	{
-		return $this->nextMonthDataExists;
 	}
 
 	/**

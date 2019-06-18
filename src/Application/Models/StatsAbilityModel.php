@@ -10,7 +10,6 @@ use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Usage\StatsAbilityPokemon;
 use Jp\Dex\Domain\Usage\StatsAbilityPokemonRepositoryInterface;
@@ -25,9 +24,6 @@ class StatsAbilityModel
 
 	/** @var AbilityRepositoryInterface $abilityRepository */
 	private $abilityRepository;
-
-	/** @var MonthQueriesInterface $monthQueries */
-	private $monthQueries;
 
 	/** @var RatingQueriesInterface $ratingQueries */
 	private $ratingQueries;
@@ -57,12 +53,6 @@ class StatsAbilityModel
 	/** @var LanguageId $languageId */
 	private $languageId;
 
-	/** @var bool $prevMonthDataExists */
-	private $prevMonthDataExists;
-
-	/** @var bool $nextMonthDataExists */
-	private $nextMonthDataExists;
-
 	/** @var int[] $ratings */
 	private $ratings = [];
 
@@ -82,7 +72,6 @@ class StatsAbilityModel
 	 * @param DateModel $dateModel
 	 * @param FormatRepositoryInterface $formatRepository
 	 * @param AbilityRepositoryInterface $abilityRepository
-	 * @param MonthQueriesInterface $monthQueries
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
 	 * @param AbilityDescriptionRepositoryInterface $abilityDescriptionRepository
@@ -92,7 +81,6 @@ class StatsAbilityModel
 		DateModel $dateModel,
 		FormatRepositoryInterface $formatRepository,
 		AbilityRepositoryInterface $abilityRepository,
-		MonthQueriesInterface $monthQueries,
 		RatingQueriesInterface $ratingQueries,
 		AbilityNameRepositoryInterface $abilityNameRepository,
 		AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
@@ -101,7 +89,6 @@ class StatsAbilityModel
 		$this->dateModel = $dateModel;
 		$this->formatRepository = $formatRepository;
 		$this->abilityRepository = $abilityRepository;
-		$this->monthQueries = $monthQueries;
 		$this->ratingQueries = $ratingQueries;
 		$this->abilityNameRepository = $abilityNameRepository;
 		$this->abilityDescriptionRepository = $abilityDescriptionRepository;
@@ -133,29 +120,16 @@ class StatsAbilityModel
 		$this->abilityIdentifier = $abilityIdentifier;
 		$this->languageId = $languageId;
 
-		// Get the previous month and the next month.
-		$this->dateModel->setData($month);
-		$thisMonth = $this->dateModel->getThisMonth();
-		$prevMonth = $this->dateModel->getPrevMonth();
-		$nextMonth = $this->dateModel->getNextMonth();
-
 		// Get the format.
 		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
+		// Get the previous month and the next month.
+		$this->dateModel->setMonthAndFormat($month, $format->getId());
+		$thisMonth = $this->dateModel->getThisMonth();
+		$prevMonth = $this->dateModel->getPrevMonth();
+
 		// Get the ability.
 		$ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
-
-		// Does usage data exist for the previous month?
-		$this->prevMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
-			$prevMonth,
-			$format->getId()
-		);
-
-		// Does usage data exist for the next month?
-		$this->nextMonthDataExists = $this->monthQueries->doesMonthFormatDataExist(
-			$nextMonth,
-			$format->getId()
-		);
 
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
@@ -246,26 +220,6 @@ class StatsAbilityModel
 	public function getDateModel() : DateModel
 	{
 		return $this->dateModel;
-	}
-
-	/**
-	 * Does usage rated data exist for the previous month?
-	 *
-	 * @return bool
-	 */
-	public function doesPrevMonthDataExist() : bool
-	{
-		return $this->prevMonthDataExists;
-	}
-
-	/**
-	 * Does usage rated data exist for the next month?
-	 *
-	 * @return bool
-	 */
-	public function doesNextMonthDataExist() : bool
-	{
-		return $this->nextMonthDataExists;
 	}
 
 	/**

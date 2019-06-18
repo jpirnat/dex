@@ -2,7 +2,7 @@
 
 {% block body %}
 	<div class="month-control">
-		{% if prevMonth.show %}
+		{% if prevMonth %}
 			<a class="button prev" href="/stats/{{ prevMonth.month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
 				&#9668; {{ prevMonth.text|e }}
 			</a>
@@ -10,7 +10,7 @@
 
 		<div class="space"></div>
 
-		{% if nextMonth.show %}
+		{% if nextMonth %}
 			<a class="button next" href="/stats/{{ nextMonth.month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
 				{{ nextMonth.text|e }} &#9658;
 			</a>
