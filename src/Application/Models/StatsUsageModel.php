@@ -108,7 +108,10 @@ class StatsUsageModel
 		$this->languageId = $languageId;
 
 		// Get the format.
-		$this->format = $this->formatRepository->getByIdentifier($formatIdentifier);
+		$this->format = $this->formatRepository->getByIdentifier(
+			$formatIdentifier,
+			$languageId
+		);
 
 		// Get the previous month and the next month.
 		$this->dateModel->setMonthAndFormat($month, $this->format->getId());

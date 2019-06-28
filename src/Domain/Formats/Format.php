@@ -13,6 +13,9 @@ class Format
 	/** @var string $identifier */
 	private $identifier;
 
+	/** @var string $name */
+	private $name;
+
 	/** @var GenerationId $generationId */
 	private $generationId;
 
@@ -22,12 +25,6 @@ class Format
 	/** @var int $fieldSize */
 	private $fieldSize;
 
-	/** @var int $teamSize */
-	private $teamSize;
-
-	/** @var int $inBattleTeamSize */
-	private $inBattleTeamSize;
-
 	/** @var string $smogonDexIdentifier */
 	private $smogonDexIdentifier;
 
@@ -36,30 +33,27 @@ class Format
 	 *
 	 * @param FormatId $formatId
 	 * @param string $identifier
+	 * @param string $name
 	 * @param GenerationId $generationId
 	 * @param int $level
 	 * @param int $fieldSize
-	 * @param int $teamSize
-	 * @param int $inBattleTeamSize
 	 * @param string $smogonDexIdentifier
 	 */
 	public function __construct(
 		FormatId $formatId,
 		string $identifier,
+		string $name,
 		GenerationId $generationId,
 		int $level,
 		int $fieldSize,
-		int $teamSize,
-		int $inBattleTeamSize,
 		string $smogonDexIdentifier
 	) {
 		$this->id = $formatId;
 		$this->identifier = $identifier;
+		$this->name = $name;
 		$this->generationId = $generationId;
 		$this->level = $level;
 		$this->fieldSize = $fieldSize;
-		$this->teamSize = $teamSize;
-		$this->inBattleTeamSize = $inBattleTeamSize;
 		$this->smogonDexIdentifier = $smogonDexIdentifier;
 	}
 
@@ -81,6 +75,16 @@ class Format
 	public function getIdentifier() : string
 	{
 		return $this->identifier;
+	}
+
+	/**
+	 * Get the format's name.
+	 *
+	 * @return string
+	 */
+	public function getName() : string
+	{
+		return $this->name;
 	}
 
 	/**
@@ -111,26 +115,6 @@ class Format
 	public function getFieldSize() : int
 	{
 		return $this->fieldSize;
-	}
-
-	/**
-	 * Get the format's team size.
-	 *
-	 * @return int
-	 */
-	public function getTeamSize() : int
-	{
-		return $this->teamSize;
-	}
-
-	/**
-	 * Get the format's in-battle team size.
-	 *
-	 * @return int
-	 */
-	public function getInBattleTeamSize() : int
-	{
-		return $this->inBattleTeamSize;
 	}
 
 	/**

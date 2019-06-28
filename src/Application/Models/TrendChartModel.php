@@ -152,7 +152,10 @@ class TrendChartModel
 		// Create a trend line object from each valid line request.
 		foreach ($validLines as $line) {
 			$type = $line['type'];
-			$format = $this->formatRepository->getByIdentifier($line['format']);
+			$format = $this->formatRepository->getByIdentifier(
+				$line['format'],
+				$languageId
+			);
 			$rating = (int) $line['rating'];
 			$pokemon = $this->pokemonRepository->getByIdentifier($line['pokemon']);
 

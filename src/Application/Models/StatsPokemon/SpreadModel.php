@@ -89,7 +89,7 @@ class SpreadModel
 		LanguageId $languageId
 	) : void {
 		// Get the format.
-		$format = $this->formatRepository->getById($formatId);
+		$format = $this->formatRepository->getById($formatId, $languageId);
 		$generationId = $format->getGenerationId();
 
 		// Get moveset rated spread records.

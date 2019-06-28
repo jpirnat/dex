@@ -7,6 +7,7 @@ use DateTime;
 use Jp\Dex\Application\CookieNames;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
+use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -60,11 +61,17 @@ class CurrentStatsMiddleware implements MiddlewareInterface
 		$rating = $cookies[CookieNames::RATING] ?? '';
 
 		if ($formatIdentifier) {
-			$format = $this->formatRepository->getByIdentifier($formatIdentifier);
+			$format = $this->formatRepository->getByIdentifier(
+				$formatIdentifier,
+				new LanguageId(LanguageId::ENGLISH) // The language doesn't matter.
+			);
 		} else {
 			// If the user doesn't have a format cookie, use default format.
 			$formatId = new FormatId(self::DEFAULT_FORMAT_ID);
-			$format = $this->formatRepository->getById($formatId);
+			$format = $this->formatRepository->getById(
+				$formatId,
+				new LanguageId(LanguageId::ENGLISH) // The language doesn't matter.
+			);
 		}
 
 		// If the user doesn't have a rating cookie, use default rating.

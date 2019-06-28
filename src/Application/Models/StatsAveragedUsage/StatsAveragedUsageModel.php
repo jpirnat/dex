@@ -134,7 +134,10 @@ class StatsAveragedUsageModel
 		$end = new DateTime("$end-01");
 
 		// Get the format.
-		$this->format = $this->formatRepository->getByIdentifier($formatIdentifier);
+		$this->format = $this->formatRepository->getByIdentifier(
+			$formatIdentifier,
+			$languageId
+		);
 
 		// Get the ratings for these months.
 		$this->ratings = $this->ratingQueries->getByMonthsAndFormat(

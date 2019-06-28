@@ -85,7 +85,6 @@ class StatsAveragedUsageView
 		}
 
 		// Navigation breadcrumbs.
-		$formatIdentifier = $format->getIdentifier();
 		$breadcrumbs = [
 			[
 				'url' => '/stats',

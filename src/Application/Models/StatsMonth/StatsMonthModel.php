@@ -5,7 +5,6 @@ namespace Jp\Dex\Application\Models\StatsMonth;
 
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
@@ -20,9 +19,6 @@ class StatsMonthModel
 
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;
-
-	/** @var FormatNameRepositoryInterface $formatNameRepository */
-	private $formatNameRepository;
 
 
 	/** @var string $month */
@@ -41,18 +37,15 @@ class StatsMonthModel
 	 * @param DateModel $dateModel
 	 * @param UsageRatedQueriesInterface $usageRatedQueries
 	 * @param FormatRepositoryInterface $formatRepository
-	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 */
 	public function __construct(
 		DateModel $dateModel,
 		UsageRatedQueriesInterface $usageRatedQueries,
-		FormatRepositoryInterface $formatRepository,
-		FormatNameRepositoryInterface $formatNameRepository
+		FormatRepositoryInterface $formatRepository
 	) {
 		$this->dateModel = $dateModel;
 		$this->usageRatedQueries = $usageRatedQueries;
 		$this->formatRepository = $formatRepository;
-		$this->formatNameRepository = $formatNameRepository;
 	}
 
 	/**
@@ -92,16 +85,11 @@ class StatsMonthModel
 
 		// Get additional data for each format.
 		foreach ($formatIds as $formatId) {
-			$format = $this->formatRepository->getById($formatId);
-
-			$formatName = $this->formatNameRepository->getByLanguageAndFormat(
-				$languageId,
-				$formatId
-			);
+			$format = $this->formatRepository->getById($formatId, $languageId);
 
 			$this->formatDatas[] = new FormatData(
 				$format->getIdentifier(),
-				$formatName->getName(),
+				$format->getName(),
 				$ratings[$formatId->value()]
 			);
 		}

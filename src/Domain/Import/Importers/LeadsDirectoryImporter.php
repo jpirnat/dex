@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Import\Extractors\FormatRatingExtractor;
 use Jp\Dex\Domain\Import\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface;
+use Jp\Dex\Domain\Languages\LanguageId;
 use Symfony\Component\DomCrawler\Crawler;
 
 class LeadsDirectoryImporter
@@ -94,7 +95,10 @@ class LeadsDirectoryImporter
 			// If this is a non-singles format, skip it. As of 2018-02-05, any
 			// leads files that exist for non-singles formats contain incorrect
 			// data.
-			$format = $this->formatRepository->getById($formatId);
+			$format = $this->formatRepository->getById(
+				$formatId,
+				new LanguageId(LanguageId::ENGLISH) // The language doesn't matter.
+			);
 			if ($format->getFieldSize() > 1) {
 				continue;
 			}

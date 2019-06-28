@@ -129,7 +129,10 @@ class StatsAveragedPokemonModel
 		$end = new DateTime("$end-01");
 
 		// Get the format.
-		$this->format = $this->formatRepository->getByIdentifier($formatIdentifier);
+		$this->format = $this->formatRepository->getByIdentifier(
+			$formatIdentifier,
+			$languageId
+		);
 
 		// Get the Pokémon.
 		$this->pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
