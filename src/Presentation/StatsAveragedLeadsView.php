@@ -51,7 +51,7 @@ class StatsAveragedLeadsView
 	{
 		$start = $this->statsAveragedLeadsModel->getStart();
 		$end = $this->statsAveragedLeadsModel->getEnd();
-		$formatIdentifier = $this->statsAveragedLeadsModel->getFormatIdentifier();
+		$format = $this->statsAveragedLeadsModel->getFormat();
 		$rating = $this->statsAveragedLeadsModel->getRating();
 
 		$formatter = $this->formatterFactory->createFor(
@@ -83,6 +83,7 @@ class StatsAveragedLeadsView
 		}
 
 		// Navigation breadcrumbs.
+		$formatIdentifier = $format->getIdentifier();
 		$breadcrumbs = [
 			[
 				'url' => '/stats',
@@ -105,7 +106,10 @@ class StatsAveragedLeadsView
 			$this->baseView->getBaseVariables() + [
 				'start' => $start,
 				'end' => $end,
-				'formatIdentifier' => $formatIdentifier,
+				'format' => [
+					'identifier' => $format->getIdentifier(),
+					'name' => $format->getName(),
+				],
 				'rating' => $rating,
 
 				'breadcrumbs' => $breadcrumbs,

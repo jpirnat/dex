@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\StatsAveragedLeads;
 
 use DateTime;
+use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -47,8 +48,8 @@ class StatsAveragedLeadsModel
 	/** @var string $end */
 	private $end;
 
-	/** @var string $formatIdentifier */
-	private $formatIdentifier;
+	/** @var Format $format */
+	private $format;
 
 	/** @var int $rating */
 	private $rating;
@@ -115,7 +116,6 @@ class StatsAveragedLeadsModel
 	) : void {
 		$this->start = $start;
 		$this->end = $end;
-		$this->formatIdentifier = $formatIdentifier;
 		$this->rating = $rating;
 		$this->languageId = $languageId;
 
@@ -124,27 +124,27 @@ class StatsAveragedLeadsModel
 		$end = new DateTime("$end-01");
 
 		// Get the format.
-		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
+		$this->format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
 		// Get the ratings for these months.
 		$this->ratings = $this->ratingQueries->getByMonthsAndFormat(
 			$start,
 			$end,
-			$format->getId()
+			$this->format->getId()
 		);
 
 		// Get leads Pokémon records for these months.
 		$leadsAveragedPokemons = $this->leadsAveragedPokemonRepository->getByMonthsAndFormat(
 			$start,
 			$end,
-			$format->getId()
+			$this->format->getId()
 		);
 
 		// Get leads rated Pokémon records for these months.
 		$leadsRatedAveragedPokemons = $this->leadsRatedAveragedPokemonRepository->getByMonthsAndFormatAndRating(
 			$start,
 			$end,
-			$format->getId(),
+			$this->format->getId(),
 			$rating
 		);
 
@@ -153,7 +153,7 @@ class StatsAveragedLeadsModel
 		$monthCounts = $this->monthsCounter->countMovesetMonthsAll(
 			$start,
 			$end,
-			$format->getId(),
+			$this->format->getId(),
 			$rating
 		);
 
@@ -165,7 +165,7 @@ class StatsAveragedLeadsModel
 
 		// Get form icons.
 		$formIcons = $this->formIconRepository->getByGenerationAndFemaleAndRight(
-			$format->getGenerationId(),
+			$this->format->getGenerationId(),
 			false,
 			false
 		);
@@ -223,13 +223,13 @@ class StatsAveragedLeadsModel
 	}
 
 	/**
-	 * Get the format identifier.
+	 * Get the format.
 	 *
-	 * @return string
+	 * @return Format
 	 */
-	public function getFormatIdentifier() : string
+	public function getFormat() : Format
 	{
-		return $this->formatIdentifier;
+		return $this->format;
 	}
 
 	/**

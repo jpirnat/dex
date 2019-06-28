@@ -3,7 +3,7 @@
 {% block body %}
 	<div class="month-control">
 		{% if prevMonth %}
-			<a class="button prev" href="/stats/{{ prevMonth.month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
+			<a class="button prev" href="/stats/{{ prevMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}">
 				&#9668; {{ prevMonth.text|e }}
 			</a>
 		{% endif %}
@@ -11,7 +11,7 @@
 		<div class="space"></div>
 
 		{% if nextMonth %}
-			<a class="button next" href="/stats/{{ nextMonth.month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}">
+			<a class="button next" href="/stats/{{ nextMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}">
 				{{ nextMonth.text|e }} &#9658;
 			</a>
 		{% endif %}
@@ -22,7 +22,7 @@
 			{% for r in ratings %}
 				<li>
 					<a
-						href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ r|e }}"
+						href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ r|e }}"
 						{% if r == rating %}
 							class="current"
 						{% endif %}
@@ -34,13 +34,19 @@
 
 	<div class="buttons-control">
 		{% if showLeadsLink %}
-			<a class="button" href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/leads">
+			<a class="button" href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/leads">
 				Leads
 			</a>
 		{% endif %}
 
-		{% if formatIdentifier != myFormat or rating != myRating %}
-			<div id="save-format" class="button" data-format="{{ formatIdentifier|e }}" data-rating="{{ rating|e }}">
+		<div class="space"></div>
+
+		{% if format.identifier != myFormat or rating != myRating %}
+			<div id="save-format" class="button"
+				data-format-identifier="{{ format.identifier|e }}"
+				data-format-name="{{ format.name|e }}"
+				data-rating="{{ rating|e }}"
+			>
 				Save as my default format
 			</div>
 		{% endif %}
@@ -69,7 +75,7 @@
 					</td>
 					<td>
 						{% if pokemon.showMovesetLink %}
-							<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
+							<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
 								{{ pokemon.name|e }}
 							</a>
 						{% else %}
@@ -86,7 +92,7 @@
 							class="number"
 						{% endif %}
 					>
-						<a class="trend-link" href="/stats/trends/chart?type=usage&format={{ formatIdentifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}">
+						<a class="trend-link" href="/stats/trends/chart?type=usage&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}">
 							{{ pokemon.usageChangeText|e }}
 						</a>
 					</td>
@@ -102,4 +108,5 @@
 
 {% block scripts %}
 	<script src="/js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 {% endblock %}

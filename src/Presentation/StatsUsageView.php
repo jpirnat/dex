@@ -56,7 +56,7 @@ class StatsUsageView
 	public function getData() : ResponseInterface
 	{
 		$month = $this->statsUsageModel->getMonth();
-		$formatIdentifier = $this->statsUsageModel->getFormatIdentifier();
+		$format = $this->statsUsageModel->getFormat();
 		$rating = $this->statsUsageModel->getRating();
 
 		$formatter = $this->formatterFactory->createFor(
@@ -106,7 +106,10 @@ class StatsUsageView
 			'html/stats/usage.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,
-				'formatIdentifier' => $formatIdentifier,
+				'format' => [
+					'identifier' => $format->getIdentifier(),
+					'name' => $format->getName(),
+				],
 				'rating' => $rating,
 
 				'breadcrumbs' => $breadcrumbs,

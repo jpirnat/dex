@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityName;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
+use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
@@ -41,8 +42,8 @@ class StatsAbilityModel
 	/** @var string $month */
 	private $month;
 
-	/** @var string $formatIdentifier */
-	private $formatIdentifier;
+	/** @var Format $format */
+	private $format;
 
 	/** @var int $rating */
 	private $rating;
@@ -115,16 +116,15 @@ class StatsAbilityModel
 		LanguageId $languageId
 	) : void {
 		$this->month = $month;
-		$this->formatIdentifier = $formatIdentifier;
 		$this->rating = $rating;
 		$this->abilityIdentifier = $abilityIdentifier;
 		$this->languageId = $languageId;
 
 		// Get the format.
-		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
+		$this->format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
 		// Get the previous month and the next month.
-		$this->dateModel->setMonthAndFormat($month, $format->getId());
+		$this->dateModel->setMonthAndFormat($month, $this->format->getId());
 		$thisMonth = $this->dateModel->getThisMonth();
 		$prevMonth = $this->dateModel->getPrevMonth();
 
@@ -134,7 +134,7 @@ class StatsAbilityModel
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$format->getId()
+			$this->format->getId()
 		);
 
 		// Get the ability name.
@@ -145,7 +145,7 @@ class StatsAbilityModel
 
 		// Get the ability description.
 		$this->abilityDescription = $this->abilityDescriptionRepository->getByGenerationAndLanguageAndAbility(
-			$format->getGenerationId(),
+			$this->format->getGenerationId(),
 			$languageId,
 			$ability->getId()
 		);
@@ -154,10 +154,10 @@ class StatsAbilityModel
 		$this->pokemon = $this->statsAbilityPokemonRepository->getByMonth(
 			$thisMonth,
 			$prevMonth,
-			$format->getId(),
+			$this->format->getId(),
 			$rating,
 			$ability->getId(),
-			$format->getGenerationId(),
+			$this->format->getGenerationId(),
 			$languageId
 		);
 	}
@@ -173,13 +173,13 @@ class StatsAbilityModel
 	}
 
 	/**
-	 * Get the format identifier.
+	 * Get the format.
 	 *
-	 * @return string
+	 * @return Format
 	 */
-	public function getFormatIdentifier() : string
+	public function getFormat() : Format
 	{
-		return $this->formatIdentifier;
+		return $this->format;
 	}
 
 	/**

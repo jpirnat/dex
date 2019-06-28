@@ -51,7 +51,7 @@ class StatsAveragedUsageView
 	{
 		$start = $this->statsAveragedUsageModel->getStart();
 		$end = $this->statsAveragedUsageModel->getEnd();
-		$formatIdentifier = $this->statsAveragedUsageModel->getFormatIdentifier();
+		$format = $this->statsAveragedUsageModel->getFormat();
 		$rating = $this->statsAveragedUsageModel->getRating();
 
 		$formatter = $this->formatterFactory->createFor(
@@ -85,6 +85,7 @@ class StatsAveragedUsageView
 		}
 
 		// Navigation breadcrumbs.
+		$formatIdentifier = $format->getIdentifier();
 		$breadcrumbs = [
 			[
 				'url' => '/stats',
@@ -103,7 +104,10 @@ class StatsAveragedUsageView
 			$this->baseView->getBaseVariables() + [
 				'start' => $start,
 				'end' => $end,
-				'formatIdentifier' => $formatIdentifier,
+				'format' => [
+					'identifier' => $format->getIdentifier(),
+					'name' => $format->getName(),
+				],
 				'rating' => $rating,
 
 				'breadcrumbs' => $breadcrumbs,

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
+use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Leads\StatsLeadsPokemon;
@@ -27,8 +28,8 @@ class StatsLeadsModel
 	/** @var string $month */
 	private $month;
 
-	/** @var string $formatIdentifier */
-	private $formatIdentifier;
+	/** @var Format $format */
+	private $format;
 
 	/** @var int $rating */
 	private $rating;
@@ -81,31 +82,30 @@ class StatsLeadsModel
 		LanguageId $languageId
 	) : void {
 		$this->month = $month;
-		$this->formatIdentifier = $formatIdentifier;
 		$this->rating = $rating;
 		$this->languageId = $languageId;
 
 		// Get the format.
-		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
+		$this->format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
 		// Get the previous month and the next month.
-		$this->dateModel->setMonthAndFormat($month, $format->getId());
+		$this->dateModel->setMonthAndFormat($month, $this->format->getId());
 		$thisMonth = $this->dateModel->getThisMonth();
 		$prevMonth = $this->dateModel->getPrevMonth();
 
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$format->getId()
+			$this->format->getId()
 		);
 
 		// Get the Pokémon usage data.
 		$this->pokemon = $this->statsLeadsPokemonRepository->getByMonth(
 			$thisMonth,
 			$prevMonth,
-			$format->getId(),
+			$this->format->getId(),
 			$rating,
-			$format->getGenerationId(),
+			$this->format->getGenerationId(),
 			$languageId
 		);
 	}
@@ -121,13 +121,13 @@ class StatsLeadsModel
 	}
 
 	/**
-	 * Get the format identifier.
+	 * Get the format.
 	 *
-	 * @return string
+	 * @return Format
 	 */
-	public function getFormatIdentifier() : string
+	public function getFormat() : Format
 	{
-		return $this->formatIdentifier;
+		return $this->format;
 	}
 
 	/**

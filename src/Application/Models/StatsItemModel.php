@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
+use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemDescription;
 use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
@@ -41,8 +42,8 @@ class StatsItemModel
 	/** @var string $month */
 	private $month;
 
-	/** @var string $formatIdentifier */
-	private $formatIdentifier;
+	/** @var Format $format */
+	private $format;
 
 	/** @var int $rating */
 	private $rating;
@@ -115,16 +116,15 @@ class StatsItemModel
 		LanguageId $languageId
 	) : void {
 		$this->month = $month;
-		$this->formatIdentifier = $formatIdentifier;
 		$this->rating = $rating;
 		$this->itemIdentifier = $itemIdentifier;
 		$this->languageId = $languageId;
 
 		// Get the format.
-		$format = $this->formatRepository->getByIdentifier($formatIdentifier);
+		$this->format = $this->formatRepository->getByIdentifier($formatIdentifier);
 
 		// Get the previous month and the next month.
-		$this->dateModel->setMonthAndFormat($month, $format->getId());
+		$this->dateModel->setMonthAndFormat($month, $this->format->getId());
 		$thisMonth = $this->dateModel->getThisMonth();
 		$prevMonth = $this->dateModel->getPrevMonth();
 
@@ -134,7 +134,7 @@ class StatsItemModel
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$format->getId()
+			$this->format->getId()
 		);
 
 		// Get the item name.
@@ -145,7 +145,7 @@ class StatsItemModel
 
 		// Get the item description.
 		$this->itemDescription = $this->itemDescriptionRepository->getByGenerationAndLanguageAndItem(
-			$format->getGenerationId(),
+			$this->format->getGenerationId(),
 			$languageId,
 			$item->getId()
 		);
@@ -154,10 +154,10 @@ class StatsItemModel
 		$this->pokemon = $this->statsItemPokemonRepository->getByMonth(
 			$thisMonth,
 			$prevMonth,
-			$format->getId(),
+			$this->format->getId(),
 			$rating,
 			$item->getId(),
-			$format->getGenerationId(),
+			$this->format->getGenerationId(),
 			$languageId
 		);
 	}
@@ -173,13 +173,13 @@ class StatsItemModel
 	}
 
 	/**
-	 * Get the format identifier.
+	 * Get the format.
 	 *
-	 * @return string
+	 * @return Format
 	 */
-	public function getFormatIdentifier() : string
+	public function getFormat() : Format
 	{
-		return $this->formatIdentifier;
+		return $this->format;
 	}
 
 	/**

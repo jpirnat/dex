@@ -56,7 +56,7 @@ class StatsLeadsView
 	public function getData() : ResponseInterface
 	{
 		$month = $this->statsLeadsModel->getMonth();
-		$formatIdentifier = $this->statsLeadsModel->getFormatIdentifier();
+		$format = $this->statsLeadsModel->getFormat();
 		$rating = $this->statsLeadsModel->getRating();
 
 		$formatter = $this->formatterFactory->createFor(
@@ -86,6 +86,7 @@ class StatsLeadsView
 		}
 
 		// Navigation breadcrumbs.
+		$formatIdentifier = $format->getIdentifier();
 		$breadcrumbs = [
 			[
 				'url' => '/stats',
@@ -108,7 +109,10 @@ class StatsLeadsView
 			'html/stats/leads.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,
-				'formatIdentifier' => $formatIdentifier,
+				'format' => [
+					'identifier' => $format->getIdentifier(),
+					'name' => $format->getName(),
+				],
 				'rating' => $rating,
 
 				'breadcrumbs' => $breadcrumbs,

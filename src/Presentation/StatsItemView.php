@@ -55,7 +55,7 @@ class StatsItemView
 	public function getData() : ResponseInterface
 	{
 		$month = $this->statsItemModel->getMonth();
-		$formatIdentifier = $this->statsItemModel->getFormatIdentifier();
+		$format = $this->statsItemModel->getFormat();
 		$rating = $this->statsItemModel->getRating();
 
 		$formatter = $this->formatterFactory->createFor(
@@ -83,6 +83,7 @@ class StatsItemView
 		}
 
 		// Navigation breadcrumbs.
+		$formatIdentifier = $format->getIdentifier();
 		$breadcrumbs = [
 			[
 				'url' => '/stats',
@@ -109,7 +110,10 @@ class StatsItemView
 			'html/stats/item.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,
-				'formatIdentifier' => $formatIdentifier,
+				'format' => [
+					'identifier' => $format->getIdentifier(),
+					'name' => $format->getName(),
+				],
 				'rating' => $rating,
 
 				'breadcrumbs' => $breadcrumbs,

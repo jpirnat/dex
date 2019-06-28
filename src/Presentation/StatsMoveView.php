@@ -55,7 +55,7 @@ class StatsMoveView
 	public function getData() : ResponseInterface
 	{
 		$month = $this->statsMoveModel->getMonth();
-		$formatIdentifier = $this->statsMoveModel->getFormatIdentifier();
+		$format = $this->statsMoveModel->getFormat();
 		$rating = $this->statsMoveModel->getRating();
 
 		$formatter = $this->formatterFactory->createFor(
@@ -83,6 +83,7 @@ class StatsMoveView
 		}
 
 		// Navigation breadcrumbs.
+		$formatIdentifier = $format->getIdentifier();
 		$breadcrumbs = [
 			[
 				'url' => '/stats',
@@ -109,7 +110,10 @@ class StatsMoveView
 			'html/stats/move.twig',
 			$this->baseView->getBaseVariables() + [
 				'month' => $month,
-				'formatIdentifier' => $formatIdentifier,
+				'format' => [
+					'identifier' => $format->getIdentifier(),
+					'name' => $format->getName(),
+				],
 				'rating' => $rating,
 
 				'breadcrumbs' => $breadcrumbs,
