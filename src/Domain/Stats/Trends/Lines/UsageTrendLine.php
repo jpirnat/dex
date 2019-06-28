@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Trends\Lines;
 
-use Jp\Dex\Domain\Formats\FormatName;
 use Jp\Dex\Domain\Pokemon\PokemonName;
 use Jp\Dex\Domain\Types\Type;
 
@@ -12,14 +11,14 @@ class UsageTrendLine extends TrendLine
 	/**
 	 * Constructor.
 	 *
-	 * @param FormatName $formatName
+	 * @param string $formatName
 	 * @param int $rating
 	 * @param PokemonName $pokemonName
 	 * @param Type $pokemonType
 	 * @param TrendPoint[] $trendPoints
 	 */
 	public function __construct(
-		FormatName $formatName,
+		string $formatName,
 		int $rating,
 		PokemonName $pokemonName,
 		Type $pokemonType,
@@ -42,7 +41,7 @@ class UsageTrendLine extends TrendLine
 	 */
 	public function getChartTitle() : string
 	{
-		$formatName = $this->formatName->getName();
+		$formatName = $this->formatName;
 		$rating = $this->rating;
 		$pokemonName = $this->pokemonName->getName();
 

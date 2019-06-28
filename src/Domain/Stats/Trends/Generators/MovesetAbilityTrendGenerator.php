@@ -6,7 +6,6 @@ namespace Jp\Dex\Domain\Stats\Trends\Generators;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Formats\Format;
-use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
@@ -19,9 +18,6 @@ class MovesetAbilityTrendGenerator
 {
 	/** @var MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository */
 	private $movesetRatedAbilityRepository;
-
-	/** @var FormatNameRepositoryInterface $formatNameRepository */
-	private $formatNameRepository;
 
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
@@ -42,7 +38,6 @@ class MovesetAbilityTrendGenerator
 	 * Constructor.
 	 *
 	 * @param MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository
-	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
 	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
@@ -51,7 +46,6 @@ class MovesetAbilityTrendGenerator
 	 */
 	public function __construct(
 		MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository,
-		FormatNameRepositoryInterface $formatNameRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
 		PokemonTypeRepositoryInterface $pokemonTypeRepository,
@@ -59,7 +53,6 @@ class MovesetAbilityTrendGenerator
 		TrendPointCalculator $trendPointCalculator
 	) {
 		$this->movesetRatedAbilityRepository = $movesetRatedAbilityRepository;
-		$this->formatNameRepository = $formatNameRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
 		$this->pokemonTypeRepository = $pokemonTypeRepository;
@@ -86,10 +79,6 @@ class MovesetAbilityTrendGenerator
 		LanguageId $languageId
 	) : MovesetAbilityTrendLine {
 		// Get the name data.
-		$formatName = $this->formatNameRepository->getByLanguageAndFormat(
-			$languageId,
-			$format->getId()
-		);
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
 			$pokemonId
@@ -123,7 +112,7 @@ class MovesetAbilityTrendGenerator
 		);
 
 		return new MovesetAbilityTrendLine(
-			$formatName,
+			$format->getName(),
 			$rating,
 			$pokemonName,
 			$abilityName,

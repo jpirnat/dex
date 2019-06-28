@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Stats\Trends\Generators;
 
 use Jp\Dex\Domain\Formats\Format;
-use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
@@ -17,9 +16,6 @@ class LeadUsageTrendGenerator
 {
 	/** @var LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository */
 	private $leadsRatedPokemonRepository;
-
-	/** @var FormatNameRepositoryInterface $formatNameRepository */
-	private $formatNameRepository;
 
 	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
 	private $pokemonNameRepository;
@@ -37,7 +33,6 @@ class LeadUsageTrendGenerator
 	 * Constructor.
 	 *
 	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
-	 * @param FormatNameRepositoryInterface $formatNameRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
 	 * @param TypeRepositoryInterface $typeRepository
@@ -45,14 +40,12 @@ class LeadUsageTrendGenerator
 	 */
 	public function __construct(
 		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
-		FormatNameRepositoryInterface $formatNameRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		PokemonTypeRepositoryInterface $pokemonTypeRepository,
 		TypeRepositoryInterface $typeRepository,
 		TrendPointCalculator $trendPointCalculator
 	) {
 		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
-		$this->formatNameRepository = $formatNameRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->pokemonTypeRepository = $pokemonTypeRepository;
 		$this->typeRepository = $typeRepository;
@@ -76,10 +69,6 @@ class LeadUsageTrendGenerator
 		LanguageId $languageId
 	) : LeadUsageTrendLine {
 		// Get the name data.
-		$formatName = $this->formatNameRepository->getByLanguageAndFormat(
-			$languageId,
-			$format->getId()
-		);
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
 			$pokemonId
@@ -108,7 +97,7 @@ class LeadUsageTrendGenerator
 		);
 
 		return new LeadUsageTrendLine(
-			$formatName,
+			$format->getName(),
 			$rating,
 			$pokemonName,
 			$pokemonType,

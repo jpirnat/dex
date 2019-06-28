@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Trends\Lines;
 
-use Jp\Dex\Domain\Formats\FormatName;
 use Jp\Dex\Domain\Pokemon\PokemonName;
 use Jp\Dex\Domain\Types\Type;
 
 abstract class TrendLine
 {
-	/** @var FormatName $formatName */
+	/** @var string $formatName */
 	protected $formatName;
 
 	/** @var int $rating */
@@ -54,9 +53,9 @@ abstract class TrendLine
 	/**
 	 * Get the trend line's format name.
 	 *
-	 * @return FormatName
+	 * @return string
 	 */
-	public function getFormatName() : FormatName
+	public function getFormatName() : string
 	{
 		return $this->formatName;
 	}

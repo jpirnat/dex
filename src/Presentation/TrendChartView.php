@@ -163,7 +163,7 @@ class TrendChartView
 		$similarities = $this->trendChartModel->getSimilarities();
 
 		$trendLine = $this->trendChartModel->getTrendLines()[0];
-		$formatName = $trendLine->getFormatName()->getName();
+		$formatName = $trendLine->getFormatName();
 		$rating = (string) $trendLine->getRating();
 		$pokemonName = $trendLine->getPokemonName()->getName();
 		$movesetName = '';
@@ -228,7 +228,7 @@ class TrendChartView
 
 		$differences = $this->trendChartModel->getDifferences();
 
-		$formatName = $trendLine->getFormatName()->getName();
+		$formatName = $trendLine->getFormatName();
 		$rating = (string) $trendLine->getRating();
 		$pokemonName = $trendLine->getPokemonName()->getName();
 		$movesetName = '';
