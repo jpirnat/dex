@@ -881,7 +881,7 @@ month,name,format_id,reason
 2016-10-01,gen1randombattle,\N,random
 2016-10-01,gen3nu,\N,
 2016-10-01,gen4lc,13,too few battles: 10
-2016-10-01,gen4nu,\N,
+2016-10-01,gen4nu,\N,not official
 2016-10-01,gen4uu,12,too few battles: 66
 2016-10-01,gen5lc,19,too few battles: 30
 2016-10-01,gen5nu,18,too few battles: 2
@@ -1751,7 +1751,7 @@ month,name,format_id,reason
 2018-09-01,gen7tiershift,\N,
 2018-09-01,gen7zu,\N,
 2018-10-01,gen3tiershift,\N,
-2018-10-01,gen4nu,\N,
+2018-10-01,gen4nu,\N,not official
 2018-10-01,gen4ubers,10,too few battles: 11
 2018-10-01,gen5monotype,\N,
 2018-10-01,gen61v1,\N,
@@ -1990,15 +1990,15 @@ month,name,format_id,reason
 2019-07-01,gen7zu,\N,
 2019-08-01,gen2oublitz,\N,
 2019-08-01,gen2ubers,4,too few battles: 1
-2019-08-01,gen4nu,\N,
+2019-08-01,gen4nu,\N,not official
 2019-08-01,gen71v1,\N,
 2019-08-01,gen7almostanyability,\N,
 2019-08-01,gen7balancedhackmons,\N,
-2019-08-01,gen7battlespotdoubles,\N,
-2019-08-01,gen7battlespotsingles,\N,
-2019-08-01,gen7battlespotspecial16,\N,
+2019-08-01,gen7battlespotdoubles,\N,battle spot
+2019-08-01,gen7battlespotsingles,\N,battle spot
+2019-08-01,gen7battlespotspecial16,\N,battle spot
 2019-08-01,gen7camomons,\N,
-2019-08-01,gen7cap,\N,
+2019-08-01,gen7cap,\N,cap
 2019-08-01,gen7crossevolution,\N,
 2019-08-01,gen7followtheleader,\N,
 2019-08-01,gen7letsgodoublesou,\N,
@@ -2011,3 +2011,28 @@ month,name,format_id,reason
 2019-08-01,gen7stabmons,\N,
 2019-08-01,gen7tiershift,\N,
 2019-08-01,gen7zu,\N,
+2019-09-01,gen2oublitz,\N,
+2019-09-01,gen3ubers,7,too few battles: 21
+2019-09-01,gen3uubl,\N,
+2019-09-01,gen4nu,\N,not official
+2019-09-01,gen71v1,\N,
+2019-09-01,gen7almostanyability,\N,
+2019-09-01,gen7balancedhackmons,\N,
+2019-09-01,gen7battlespotdoubles,\N,battle spot
+2019-09-01,gen7battlespotsingles,\N,battle spot
+2019-09-01,gen7battlespotspecial17,\N,battle spot
+2019-09-01,gen7camomons,\N,
+2019-09-01,gen7cap,\N,cap
+2019-09-01,gen7crossevolution,\N,
+2019-09-01,gen7letsgodoublesou,\N,
+2019-09-01,gen7letsgoou,\N,
+2019-09-01,gen7linked,\N,
+2019-09-01,gen7megamons,\N,
+2019-09-01,gen7mergemons,\N,
+2019-09-01,gen7mixandmega,\N,
+2019-09-01,gen7oublitz,\N,
+2019-09-01,gen7partnersincrime,\N,
+2019-09-01,gen7stabmons,\N,
+2019-09-01,gen7tiershift,\N,
+2019-09-01,gen7ultrafinal,\N,
+2019-09-01,gen7zu,\N,
