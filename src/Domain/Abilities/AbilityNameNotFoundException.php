@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Abilities;
 
 use Exception;
 
-class AbilityNameNotFoundException extends Exception
+final class AbilityNameNotFoundException extends Exception
 {
 }

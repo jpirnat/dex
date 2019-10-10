@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsAveragedUsage\StatsAveragedUsageModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class StatsAveragedUsageController
+final class StatsAveragedUsageController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

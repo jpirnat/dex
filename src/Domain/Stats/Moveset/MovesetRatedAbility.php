@@ -13,7 +13,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
 use Jp\Dex\Domain\Stats\UsageDataInterface;
 use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
-class MovesetRatedAbility implements UsageDataInterface
+final class MovesetRatedAbility implements UsageDataInterface
 {
 	use ValidateMonthTrait;
 

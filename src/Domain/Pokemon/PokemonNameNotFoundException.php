@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Pokemon;
 
 use Exception;
 
-class PokemonNameNotFoundException extends Exception
+final class PokemonNameNotFoundException extends Exception
 {
 }

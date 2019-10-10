@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Stats;
 
 use Exception;
 
-class StatNotFoundException extends Exception
+final class StatNotFoundException extends Exception
 {
 }

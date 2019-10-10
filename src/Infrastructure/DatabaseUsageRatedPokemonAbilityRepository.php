@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonAbility;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonAbilityRepositoryInterface;
 use PDO;
 
-class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbilityRepositoryInterface
+final class DatabaseUsageRatedPokemonAbilityRepository implements UsageRatedPokemonAbilityRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

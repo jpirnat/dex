@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Stats\Trends\Lines;
 
 use DateTime;
 
-class TrendPoint
+final class TrendPoint
 {
 	/** @var DateTime $date */
 	private $date;

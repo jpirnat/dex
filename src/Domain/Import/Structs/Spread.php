@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Structs;
 
-class Spread
+final class Spread
 {
 	/** @var string $showdownNatureName */
 	private $showdownNatureName;

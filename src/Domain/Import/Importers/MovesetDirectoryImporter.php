@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Import\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
-class MovesetDirectoryImporter
+final class MovesetDirectoryImporter
 {
 	/** @var MovesetFileImporter $movesetFileImporter */
 	private $movesetFileImporter;

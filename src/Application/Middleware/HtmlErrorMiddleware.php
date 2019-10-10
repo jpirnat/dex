@@ -12,7 +12,7 @@ use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
 use Zend\Diactoros\Response\RedirectResponse;
 
-class HtmlErrorMiddleware implements MiddlewareInterface
+final class HtmlErrorMiddleware implements MiddlewareInterface
 {
 	/** @var string $environment */
 	private $environment;

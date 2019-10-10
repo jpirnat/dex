@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsMoveModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class StatsMoveController
+final class StatsMoveController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

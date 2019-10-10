@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Leads;
 
-class StatsLeadsPokemon
+final class StatsLeadsPokemon
 {
 	/** @var int $rank */
 	private $rank;

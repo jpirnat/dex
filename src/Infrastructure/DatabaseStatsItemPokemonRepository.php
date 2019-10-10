@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Usage\StatsItemPokemonRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-class DatabaseStatsItemPokemonRepository implements StatsItemPokemonRepositoryInterface
+final class DatabaseStatsItemPokemonRepository implements StatsItemPokemonRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

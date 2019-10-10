@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Versions;
 
 use Exception;
 
-class VersionGroupNotFoundException extends Exception
+final class VersionGroupNotFoundException extends Exception
 {
 }

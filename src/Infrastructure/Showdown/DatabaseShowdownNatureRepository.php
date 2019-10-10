@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureId;
 use PDO;
 
-class DatabaseShowdownNatureRepository implements ShowdownNatureRepositoryInterface
+final class DatabaseShowdownNatureRepository implements ShowdownNatureRepositoryInterface
 {
 	/** @var NatureId[] $naturesToImport */
 	private $naturesToImport = [];

@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Leads\StatsLeadsPokemon;
 use Jp\Dex\Domain\Leads\StatsLeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
-class StatsLeadsModel
+final class StatsLeadsModel
 {
 	/** @var DateModel $dateModel */
 	private $dateModel;

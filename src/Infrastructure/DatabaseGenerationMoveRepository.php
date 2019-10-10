@@ -16,7 +16,7 @@ use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-class DatabaseGenerationMoveRepository implements GenerationMoveRepositoryInterface
+final class DatabaseGenerationMoveRepository implements GenerationMoveRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

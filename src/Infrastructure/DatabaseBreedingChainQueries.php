@@ -7,7 +7,7 @@ use Jp\Dex\Domain\BreedingChains\BreedingChainQueriesInterface;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
 use PDO;
 
-class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
+final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 {
 	/** @var PDO $db */
 	private $db;

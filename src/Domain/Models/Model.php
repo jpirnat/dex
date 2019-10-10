@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Models;
 
 use Jp\Dex\Domain\Forms\FormId;
 
-class Model
+final class Model
 {
 	/** @var FormId $formId */
 	private $formId;

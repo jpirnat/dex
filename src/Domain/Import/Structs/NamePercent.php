@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Structs;
 
-class NamePercent
+final class NamePercent
 {
 	/** @var string $showdownName */
 	private $showdownName;

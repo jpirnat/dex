@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Stats\Trends\Lines\LeadUsageTrendLine;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
-class LeadUsageTrendGenerator
+final class LeadUsageTrendGenerator
 {
 	/** @var LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository */
 	private $leadsRatedPokemonRepository;

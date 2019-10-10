@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Languages\LanguageName;
 use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
 use PDO;
 
-class DatabaseLanguageNameRepository implements LanguageNameRepositoryInterface
+final class DatabaseLanguageNameRepository implements LanguageNameRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

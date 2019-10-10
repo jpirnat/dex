@@ -7,7 +7,7 @@ use DateTime;
 use IntlDateFormatter;
 use NumberFormatter;
 
-class IntlFormatter
+final class IntlFormatter
 {
 	/** @var IntlDateFormatter $dateFormatter */
 	private $dateFormatter;

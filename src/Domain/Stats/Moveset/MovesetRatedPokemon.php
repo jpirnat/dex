@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
 use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
-class MovesetRatedPokemon
+final class MovesetRatedPokemon
 {
 	use ValidateMonthTrait;
 

@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsLeadsModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class StatsLeadsView
+final class StatsLeadsView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

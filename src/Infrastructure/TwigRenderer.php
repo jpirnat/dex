@@ -6,7 +6,7 @@ namespace Jp\Dex\Infrastructure;
 use Jp\Dex\Presentation\RendererInterface;
 use Twig\Environment;
 
-class TwigRenderer implements RendererInterface
+final class TwigRenderer implements RendererInterface
 {
 	/** @var Environment $twig */
 	private $twig;

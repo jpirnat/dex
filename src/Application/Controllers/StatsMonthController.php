@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsMonth\StatsMonthModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class StatsMonthController
+final class StatsMonthController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

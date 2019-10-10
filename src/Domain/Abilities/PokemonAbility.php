@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Abilities;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class PokemonAbility
+final class PokemonAbility
 {
 	/** @var GenerationId $generationId */
 	private $generationId;

@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 
-class DexAbilityModel
+final class DexAbilityModel
 {
 	/** @var GenerationModel $generationModel */
 	private $generationModel;

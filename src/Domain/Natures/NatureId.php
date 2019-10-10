@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Natures;
 
 use Jp\Dex\Domain\EntityId;
 
-class NatureId extends EntityId
+final class NatureId extends EntityId
 {
 }

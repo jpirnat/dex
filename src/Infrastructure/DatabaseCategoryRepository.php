@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Categories\CategoryId;
 use Jp\Dex\Domain\Categories\CategoryRepositoryInterface;
 use PDO;
 
-class DatabaseCategoryRepository implements CategoryRepositoryInterface
+final class DatabaseCategoryRepository implements CategoryRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

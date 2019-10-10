@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\DexPokemonsModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class DexPokemonsView
+final class DexPokemonsView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

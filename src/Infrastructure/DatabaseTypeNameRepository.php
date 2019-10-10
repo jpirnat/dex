@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Types\TypeNameNotFoundException;
 use Jp\Dex\Domain\Types\TypeNameRepositoryInterface;
 use PDO;
 
-class DatabaseTypeNameRepository implements TypeNameRepositoryInterface
+final class DatabaseTypeNameRepository implements TypeNameRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use PDO;
 
-class DatabaseMonthQueries implements MonthQueriesInterface
+final class DatabaseMonthQueries implements MonthQueriesInterface
 {
 	/** @var PDO $db */
 	private $db;

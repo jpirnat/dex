@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-class DatabaseFormatRepository implements FormatRepositoryInterface
+final class DatabaseFormatRepository implements FormatRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

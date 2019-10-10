@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Languages;
 
 use Jp\Dex\Domain\EntityId;
 
-class LanguageId extends EntityId
+final class LanguageId extends EntityId
 {
 	/** @var int $JAPANESE */
 	public const JAPANESE = 1;

@@ -6,7 +6,7 @@ namespace Jp\Dex\Application\Models\StatsPokemon;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 
-class SpreadData
+final class SpreadData
 {
 	/** @var string $natureName */
 	private $natureName;

@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\TypeIcons;
 
 use Exception;
 
-class TypeIconNotFoundException extends Exception
+final class TypeIconNotFoundException extends Exception
 {
 }

@@ -8,7 +8,7 @@ use Jp\Dex\Application\Models\StatsAveragedLeads\StatsAveragedLeadsModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class StatsAveragedLeadsView
+final class StatsAveragedLeadsView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

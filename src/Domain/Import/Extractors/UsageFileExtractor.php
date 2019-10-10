@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Import\Structs\Usage;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
 
-class UsageFileExtractor
+final class UsageFileExtractor
 {
 	/**
 	 * Extract the total battles count from the first line in the usage file.

@@ -12,7 +12,7 @@ use Whoops\Handler\JsonResponseHandler;
 use Whoops\Run;
 use Zend\Diactoros\Response\JsonResponse;
 
-class AjaxErrorMiddleware implements MiddlewareInterface
+final class AjaxErrorMiddleware implements MiddlewareInterface
 {
 	/** @var string $environment */
 	private $environment;

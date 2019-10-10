@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Structs;
 
-class Counter1
+final class Counter1
 {
 	/** @var string $showdownPokemonName */
 	private $showdownPokemonName;

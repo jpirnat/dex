@@ -6,7 +6,7 @@ namespace Jp\Dex\Presentation;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class IndexView
+final class IndexView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

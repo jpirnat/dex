@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\BreedingChains;
 
-class BreedingChainRecord
+final class BreedingChainRecord
 {
 	/** @var string $formIcon */
 	private $formIcon;

@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Moves\MoveNameNotFoundException;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use PDO;
 
-class DatabaseMoveNameRepository implements MoveNameRepositoryInterface
+final class DatabaseMoveNameRepository implements MoveNameRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

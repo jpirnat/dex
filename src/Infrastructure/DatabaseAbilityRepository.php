@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-class DatabaseAbilityRepository implements AbilityRepositoryInterface
+final class DatabaseAbilityRepository implements AbilityRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

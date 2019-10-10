@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Pokemon\PokemonNameNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use PDO;
 
-class DatabasePokemonNameRepository implements PokemonNameRepositoryInterface
+final class DatabasePokemonNameRepository implements PokemonNameRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

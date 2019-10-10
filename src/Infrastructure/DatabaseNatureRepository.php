@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use PDO;
 
-class DatabaseNatureRepository implements NatureRepositoryInterface
+final class DatabaseNatureRepository implements NatureRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

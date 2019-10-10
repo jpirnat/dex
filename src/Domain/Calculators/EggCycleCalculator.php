@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Calculators;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\GenerationNotFoundException;
 
-class EggCycleCalculator
+final class EggCycleCalculator
 {
 	/**
 	 * Calculate the number of steps it would take for an egg to hatch.

@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Languages\LanguageName;
 use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
 
-class BaseModel
+final class BaseModel
 {
 	/** @var int $currentYear */
 	private $currentYear;

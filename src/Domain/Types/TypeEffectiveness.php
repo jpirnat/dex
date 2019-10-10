@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Types;
 
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class TypeEffectiveness
+final class TypeEffectiveness
 {
 	/** @var GenerationId $generationId */
 	private $generationId;

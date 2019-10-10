@@ -16,7 +16,7 @@ use Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
-class StatsAveragedUsageModel
+final class StatsAveragedUsageModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;

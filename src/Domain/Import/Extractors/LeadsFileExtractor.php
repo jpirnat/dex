@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Import\Structs\LeadUsage;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
 
-class LeadsFileExtractor
+final class LeadsFileExtractor
 {
 	/**
 	 * Extract the total leads count from the first line in the leads file.

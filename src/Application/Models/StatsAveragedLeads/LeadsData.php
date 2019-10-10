@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\StatsAveragedLeads;
 
-class LeadsData
+final class LeadsData
 {
 	/** @var int $rank */
 	private $rank;

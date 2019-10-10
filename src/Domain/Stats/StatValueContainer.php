@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats;
 
-class StatValueContainer
+final class StatValueContainer
 {
 	/** @var StatValue[] $statValues */
 	private $statValues = [];

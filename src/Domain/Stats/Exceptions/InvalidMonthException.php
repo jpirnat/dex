@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Stats\Exceptions;
 
 use Exception;
 
-class InvalidMonthException extends Exception
+final class InvalidMonthException extends Exception
 {
 }

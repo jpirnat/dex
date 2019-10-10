@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Moves\StatsPokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use PDO;
 
-class DatabaseStatsPokemonMoveRepository implements StatsPokemonMoveRepositoryInterface
+final class DatabaseStatsPokemonMoveRepository implements StatsPokemonMoveRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

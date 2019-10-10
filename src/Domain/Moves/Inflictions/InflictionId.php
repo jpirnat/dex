@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Moves\Inflictions;
 
 use Jp\Dex\Domain\EntityId;
 
-class InflictionId extends EntityId
+final class InflictionId extends EntityId
 {
 }

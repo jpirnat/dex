@@ -15,7 +15,7 @@ use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterf
 use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
-class StatsAveragedLeadsModel
+final class StatsAveragedLeadsModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;

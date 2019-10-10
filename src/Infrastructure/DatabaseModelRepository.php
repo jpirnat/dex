@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Models\ModelNotFoundException;
 use Jp\Dex\Domain\Models\ModelRepositoryInterface;
 use PDO;
 
-class DatabaseModelRepository implements ModelRepositoryInterface
+final class DatabaseModelRepository implements ModelRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

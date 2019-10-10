@@ -7,7 +7,7 @@ use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 
-class DateModel
+final class DateModel
 {
 	/** @var MonthQueriesInterface $monthQueries */
 	private $monthQueries;

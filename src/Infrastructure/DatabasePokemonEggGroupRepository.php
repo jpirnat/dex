@@ -9,7 +9,7 @@ use Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use PDO;
 
-class DatabasePokemonEggGroupRepository implements PokemonEggGroupRepositoryInterface
+final class DatabasePokemonEggGroupRepository implements PokemonEggGroupRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

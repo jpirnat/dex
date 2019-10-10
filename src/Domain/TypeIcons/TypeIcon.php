@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\TypeIcons;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Types\TypeId;
 
-class TypeIcon
+final class TypeIcon
 {
 	/** @var LanguageId $languageId */
 	private $languageId;

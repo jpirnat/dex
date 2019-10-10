@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Import\Showdown\AbilityNotImportedException;
 use Jp\Dex\Domain\Import\Showdown\ShowdownAbilityRepositoryInterface;
 use PDO;
 
-class DatabaseShowdownAbilityRepository implements ShowdownAbilityRepositoryInterface
+final class DatabaseShowdownAbilityRepository implements ShowdownAbilityRepositoryInterface
 {
 	/** @var AbilityId[] $abilitiesToImport */
 	private $abilitiesToImport = [];

@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Types;
 use Jp\Dex\Domain\Categories\CategoryId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class Type
+final class Type
 {
 	/** @var TypeId $id */
 	private $id;

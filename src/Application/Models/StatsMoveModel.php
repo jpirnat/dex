@@ -15,7 +15,7 @@ use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Usage\StatsMovePokemon;
 use Jp\Dex\Domain\Usage\StatsMovePokemonRepositoryInterface;
 
-class StatsMoveModel
+final class StatsMoveModel
 {
 	/** @var DateModel $dateModel */
 	private $dateModel;

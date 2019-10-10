@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Stats\Trends\Lines\MovesetItemTrendLine;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
-class MovesetItemTrendGenerator
+final class MovesetItemTrendGenerator
 {
 	/** @var MovesetRatedItemRepositoryInterface $movesetRatedItemRepository */
 	private $movesetRatedItemRepository;

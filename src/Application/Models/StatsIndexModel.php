@@ -6,7 +6,7 @@ namespace Jp\Dex\Application\Models;
 use DateTime;
 use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
 
-class StatsIndexModel
+final class StatsIndexModel
 {
 	/** @var UsageQueriesInterface $usageQueries */
 	private $usageQueries;

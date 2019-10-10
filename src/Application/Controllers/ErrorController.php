@@ -6,7 +6,7 @@ namespace Jp\Dex\Application\Controllers;
 use Jp\Dex\Application\Models\ErrorModel;
 use Psr\Http\Message\ServerRequestInterface;
 
-class ErrorController
+final class ErrorController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Import\Structs\FormatRating;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
 
-class FormatRatingExtractor
+final class FormatRatingExtractor
 {
 	/**
 	 * Extract a Pokémon Showdown format name and rating from a Pokémon Showdown

@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
 
-class DatabaseAbilityNameRepository implements AbilityNameRepositoryInterface
+final class DatabaseAbilityNameRepository implements AbilityNameRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

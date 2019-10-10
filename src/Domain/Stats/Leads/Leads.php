@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidCountException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
-class Leads
+final class Leads
 {
 	use ValidateMonthTrait;
 

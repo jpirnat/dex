@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\EggGroups;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-class EggGroupName
+final class EggGroupName
 {
 	/** @var LanguageId $languageId */
 	private $languageId;

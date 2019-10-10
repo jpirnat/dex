@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Languages;
 
 use Exception;
 
-class LanguageNotFoundException extends Exception
+final class LanguageNotFoundException extends Exception
 {
 }

@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsAbilityModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class StatsAbilityController
+final class StatsAbilityController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

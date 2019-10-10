@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Import\Extractors\Exceptions;
 
 use Exception;
 
-class InvalidAverageWeightLineException extends Exception
+final class InvalidAverageWeightLineException extends Exception
 {
 }

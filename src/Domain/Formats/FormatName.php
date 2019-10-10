@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Formats;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-class FormatName
+final class FormatName
 {
 	/** @var LanguageId $languageId */
 	private $languageId;

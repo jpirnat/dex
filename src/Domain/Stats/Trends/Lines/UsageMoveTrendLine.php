@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Moves\MoveName;
 use Jp\Dex\Domain\Pokemon\PokemonName;
 use Jp\Dex\Domain\Types\Type;
 
-class UsageMoveTrendLine extends TrendLine
+final class UsageMoveTrendLine extends TrendLine
 {
 	/** @var MoveName $moveName */
 	private $moveName;

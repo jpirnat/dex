@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Calculators;
 use Jp\Dex\Domain\Types\Type;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
-class HiddenPowerCalculator
+final class HiddenPowerCalculator
 {
 	/** @var TypeRepositoryInterface $typeRepository */
 	private $typeRepository;

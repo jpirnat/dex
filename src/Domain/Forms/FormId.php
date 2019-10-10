@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Forms;
 
 use Jp\Dex\Domain\EntityId;
 
-class FormId extends EntityId
+final class FormId extends EntityId
 {
 }

@@ -18,7 +18,7 @@ use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
+final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 
-class StatsMonthModel
+final class StatsMonthModel
 {
 	/** @var DateModel $dateModel */
 	private $dateModel;

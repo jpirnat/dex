@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Versions;
 
 use Jp\Dex\Domain\EntityId;
 
-class VersionGroupId extends EntityId
+final class VersionGroupId extends EntityId
 {
 	/** @var int $RED_GREEN */
 	public const RED_GREEN = 1;

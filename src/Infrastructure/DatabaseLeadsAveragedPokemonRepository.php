@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use PDO;
 
-class DatabaseLeadsAveragedPokemonRepository implements LeadsAveragedPokemonRepositoryInterface
+final class DatabaseLeadsAveragedPokemonRepository implements LeadsAveragedPokemonRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

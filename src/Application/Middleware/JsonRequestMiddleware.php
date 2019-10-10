@@ -8,7 +8,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-class JsonRequestMiddleware implements MiddlewareInterface
+final class JsonRequestMiddleware implements MiddlewareInterface
 {
 	/**
 	 * If the request body is JSON, parse it

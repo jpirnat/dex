@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Versions;
 
-class Generation
+final class Generation
 {
 	/** @var GenerationId $id */
 	private $id;

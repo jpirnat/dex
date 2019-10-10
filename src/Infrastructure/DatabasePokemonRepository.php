@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Species\SpeciesId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-class DatabasePokemonRepository implements PokemonRepositoryInterface
+final class DatabasePokemonRepository implements PokemonRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Pokemon;
 
 use Jp\Dex\Domain\EntityId;
 
-class PokemonId extends EntityId
+final class PokemonId extends EntityId
 {
 	/** @var int $ZYGARDE_50_AURA */
 	public const ZYGARDE_50_AURA = 718;

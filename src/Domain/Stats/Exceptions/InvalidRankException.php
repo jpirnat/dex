@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Stats\Exceptions;
 
 use Exception;
 
-class InvalidRankException extends Exception
+final class InvalidRankException extends Exception
 {
 }

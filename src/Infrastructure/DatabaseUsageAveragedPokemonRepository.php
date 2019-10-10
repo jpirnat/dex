@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemon;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface;
 use PDO;
 
-class DatabaseUsageAveragedPokemonRepository implements UsageAveragedPokemonRepositoryInterface
+final class DatabaseUsageAveragedPokemonRepository implements UsageAveragedPokemonRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

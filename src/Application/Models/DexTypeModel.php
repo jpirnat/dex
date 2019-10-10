@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeNameRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
-class DexTypeModel
+final class DexTypeModel
 {
 	/** @var GenerationModel $generationModel */
 	private $generationModel;

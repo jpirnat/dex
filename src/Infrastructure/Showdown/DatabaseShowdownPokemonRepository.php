@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use PDO;
 
-class DatabaseShowdownPokemonRepository implements ShowdownPokemonRepositoryInterface
+final class DatabaseShowdownPokemonRepository implements ShowdownPokemonRepositoryInterface
 {
 	/** @var PokemonId[] $pokemonToImport */
 	private $pokemonToImport = [];

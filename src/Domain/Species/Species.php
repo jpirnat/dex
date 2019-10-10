@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Species;
 
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-class Species
+final class Species
 {
 	/** @var SpeciesId $id */
 	private $id;

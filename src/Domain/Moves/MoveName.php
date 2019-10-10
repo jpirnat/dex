@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Moves;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-class MoveName
+final class MoveName
 {
 	/** @var LanguageId $languageId */
 	private $languageId;

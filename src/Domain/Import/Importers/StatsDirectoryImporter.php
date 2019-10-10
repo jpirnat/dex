@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Import\Importers;
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
 
-class StatsDirectoryImporter
+final class StatsDirectoryImporter
 {
 	/** @var MonthDirectoryImporter $monthDirectoryImporter */
 	private $monthDirectoryImporter;

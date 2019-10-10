@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Stats\Exceptions;
 
 use Exception;
 
-class InvalidTotalBattlesException extends Exception
+final class InvalidTotalBattlesException extends Exception
 {
 }

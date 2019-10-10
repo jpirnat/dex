@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Import\Showdown\FormatNotImportedException;
 use Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface;
 use PDO;
 
-class DatabaseShowdownFormatRepository implements ShowdownFormatRepositoryInterface
+final class DatabaseShowdownFormatRepository implements ShowdownFormatRepositoryInterface
 {
 	/**
 	 * Indexed by month, then Showdown format name.

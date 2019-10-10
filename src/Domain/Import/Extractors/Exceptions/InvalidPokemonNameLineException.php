@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Import\Extractors\Exceptions;
 
 use Exception;
 
-class InvalidPokemonNameLineException extends Exception
+final class InvalidPokemonNameLineException extends Exception
 {
 }

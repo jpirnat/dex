@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Items;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class ItemDescription
+final class ItemDescription
 {
 	/** @var GenerationId $generationId */
 	private $generationId;

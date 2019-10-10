@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Moves;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class MoveDescription
+final class MoveDescription
 {
 	/** @var GenerationId $generationId */
 	private $generationId;

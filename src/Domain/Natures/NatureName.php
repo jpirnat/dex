@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Natures;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-class NatureName
+final class NatureName
 {
 	/** @var LanguageId $languageId */
 	private $languageId;

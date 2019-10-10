@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-class DatabaseTypeRepository implements TypeRepositoryInterface
+final class DatabaseTypeRepository implements TypeRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

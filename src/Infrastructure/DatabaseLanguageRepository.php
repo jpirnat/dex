@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Languages\LanguageNotFoundException;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use PDO;
 
-class DatabaseLanguageRepository implements LanguageRepositoryInterface
+final class DatabaseLanguageRepository implements LanguageRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

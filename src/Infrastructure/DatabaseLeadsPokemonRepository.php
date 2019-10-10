@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\Leads\LeadsPokemon;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use PDO;
 
-class DatabaseLeadsPokemonRepository implements LeadsPokemonRepositoryInterface
+final class DatabaseLeadsPokemonRepository implements LeadsPokemonRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

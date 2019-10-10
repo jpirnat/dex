@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Stats\Exceptions;
 
 use Exception;
 
-class InvalidCountException extends Exception
+final class InvalidCountException extends Exception
 {
 }

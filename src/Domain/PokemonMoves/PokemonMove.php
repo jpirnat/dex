@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-class PokemonMove
+final class PokemonMove
 {
 	/** @var PokemonId $pokemonId */
 	private $pokemonId;

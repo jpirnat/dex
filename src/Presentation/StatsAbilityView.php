@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsAbilityModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class StatsAbilityView
+final class StatsAbilityView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
-class StatsDirectoryParser
+final class StatsDirectoryParser
 {
 	/** @var MonthDirectoryParser $monthDirectoryParser */
 	private $monthDirectoryParser;

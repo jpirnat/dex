@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Import\Showdown;
 
 use Exception;
 
-class ItemNotImportedException extends Exception
+final class ItemNotImportedException extends Exception
 {
 }

@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
-class MovesetRatedSpread
+final class MovesetRatedSpread
 {
 	use ValidateMonthTrait;
 

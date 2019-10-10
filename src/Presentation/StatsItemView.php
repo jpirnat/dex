@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsItemModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class StatsItemView
+final class StatsItemView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

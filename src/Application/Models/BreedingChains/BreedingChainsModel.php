@@ -20,7 +20,7 @@ use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
-class BreedingChainsModel
+final class BreedingChainsModel
 {
 	/** @var GenerationModel $generationModel */
 	private $generationModel;

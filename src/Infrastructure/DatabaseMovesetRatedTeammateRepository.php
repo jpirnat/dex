@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface;
 use PDO;
 use PDOException;
 
-class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepositoryInterface
+final class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

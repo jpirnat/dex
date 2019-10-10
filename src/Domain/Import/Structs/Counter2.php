@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Structs;
 
-class Counter2
+final class Counter2
 {
 	/** @var float $percentKnockedOut */
 	private $percentKnockedOut;

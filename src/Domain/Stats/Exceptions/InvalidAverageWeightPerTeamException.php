@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Stats\Exceptions;
 
 use Exception;
 
-class InvalidAverageWeightPerTeamException extends Exception
+final class InvalidAverageWeightPerTeamException extends Exception
 {
 }

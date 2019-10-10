@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\BreedingChains\BreedingChainsModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class BreedingChainsController
+final class BreedingChainsController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

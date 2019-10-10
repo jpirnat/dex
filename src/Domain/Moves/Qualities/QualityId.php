@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Moves\Qualities;
 
 use Jp\Dex\Domain\EntityId;
 
-class QualityId extends EntityId
+final class QualityId extends EntityId
 {
 }

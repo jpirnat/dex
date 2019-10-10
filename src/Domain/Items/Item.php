@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Items;
 
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-class Item
+final class Item
 {
 	/** @var ItemId $id */
 	private $id;

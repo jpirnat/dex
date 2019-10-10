@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Versions\VersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
-class DexPokemonModel
+final class DexPokemonModel
 {
 	/** @var GenerationModel $generationModel */
 	private $generationModel;

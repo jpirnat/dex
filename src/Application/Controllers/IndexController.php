@@ -5,7 +5,7 @@ namespace Jp\Dex\Application\Controllers;
 
 use Psr\Http\Message\ServerRequestInterface;
 
-class IndexController
+final class IndexController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

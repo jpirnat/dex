@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Natures;
 
 use Exception;
 
-class NatureNameNotFoundException extends Exception
+final class NatureNameNotFoundException extends Exception
 {
 }

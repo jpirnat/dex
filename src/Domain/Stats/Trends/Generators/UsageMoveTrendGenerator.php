@@ -15,7 +15,7 @@ use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
-class UsageMoveTrendGenerator
+final class UsageMoveTrendGenerator
 {
 	/** @var UsageRatedPokemonMoveRepositoryInterface $usageRatedPokemonMoveRepository */
 	private $usageRatedPokemonMoveRepository;

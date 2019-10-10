@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\PokemonMoves;
 
 use Jp\Dex\Domain\EntityId;
 
-class MoveMethodId extends EntityId
+final class MoveMethodId extends EntityId
 {
 	/** @var int $LEVEL_UP */
 	public const LEVEL_UP = 1;

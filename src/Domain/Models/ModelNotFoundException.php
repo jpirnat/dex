@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Models;
 
 use Exception;
 
-class ModelNotFoundException extends Exception
+final class ModelNotFoundException extends Exception
 {
 }

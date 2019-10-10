@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Characteristics;
 
 use Jp\Dex\Domain\Stats\StatId;
 
-class Characteristic
+final class Characteristic
 {
 	/** @var CharacteristicId $id */
 	private $id;

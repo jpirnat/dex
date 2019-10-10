@@ -6,7 +6,7 @@ namespace Jp\Dex\Presentation;
 use Jp\Dex\Application\Models\BaseModel;
 use Jp\Dex\Domain\Languages\LanguageName;
 
-class BaseView
+final class BaseView
 {
 	/** @var BaseModel $baseModel */
 	private $baseModel;

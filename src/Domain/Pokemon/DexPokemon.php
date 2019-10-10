@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Pokemon;
 use Jp\Dex\Domain\Abilities\DexPokemonAbility;
 use Jp\Dex\Domain\Types\DexType;
 
-class DexPokemon
+final class DexPokemon
 {
 	/** @var string $icon */
 	private $icon;

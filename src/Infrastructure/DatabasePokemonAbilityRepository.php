@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-class DatabasePokemonAbilityRepository implements PokemonAbilityRepositoryInterface
+final class DatabasePokemonAbilityRepository implements PokemonAbilityRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
 use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
-class MovesetRatedCounter
+final class MovesetRatedCounter
 {
 	use ValidateMonthTrait;
 

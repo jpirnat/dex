@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Natures;
 
 use Jp\Dex\Domain\Stats\StatId;
 
-class Nature
+final class Nature
 {
 	/** @var NatureId $id */
 	private $id;

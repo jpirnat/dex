@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsMoveModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class StatsMoveView
+final class StatsMoveView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

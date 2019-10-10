@@ -6,7 +6,7 @@ namespace Jp\Dex\Application\Controllers;
 use Jp\Dex\Application\Models\StatsIndexModel;
 use Psr\Http\Message\ServerRequestInterface;
 
-class StatsIndexController
+final class StatsIndexController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

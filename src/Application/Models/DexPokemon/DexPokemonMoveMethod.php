@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexPokemon;
 
-class DexPokemonMoveMethod
+final class DexPokemonMoveMethod
 {
 	/** @var string $identifier */
 	private $identifier;

@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class PokemonModel
+final class PokemonModel
 {
 	/** @var DexPokemonRepositoryInterface $dexPokemonRepository */
 	private $dexPokemonRepository;

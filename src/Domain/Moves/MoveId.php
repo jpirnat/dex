@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Moves;
 
 use Jp\Dex\Domain\EntityId;
 
-class MoveId extends EntityId
+final class MoveId extends EntityId
 {
 	/** @var int $SKETCH */
 	public const SKETCH = 166;

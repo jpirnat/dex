@@ -13,7 +13,7 @@ use Jp\Dex\Domain\PokemonMoves\PokemonMove;
  * that domain-oriented reversal in mind (addParent and getParents instead of
  * addChild and getChildren).
  */
-class BreedingTree
+final class BreedingTree
 {
 	/** @var PokemonMove $value */
 	private $value;

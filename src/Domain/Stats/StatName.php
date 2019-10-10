@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Stats;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-class StatName
+final class StatName
 {
 	/** @var LanguageId $languageId */
 	private $languageId;

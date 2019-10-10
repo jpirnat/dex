@@ -9,7 +9,7 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodName;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface;
 use PDO;
 
-class DatabaseMoveMethodNameRepository implements MoveMethodNameRepositoryInterface
+final class DatabaseMoveMethodNameRepository implements MoveMethodNameRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

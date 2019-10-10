@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
-class MonthDirectoryParser
+final class MonthDirectoryParser
 {
 	/** @var UsageFileParser $usageFileParser */
 	private $usageFileParser;

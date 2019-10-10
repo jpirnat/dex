@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
 use PDO;
 
-class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterface
+final class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

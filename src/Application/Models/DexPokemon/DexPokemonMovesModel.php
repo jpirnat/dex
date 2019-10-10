@@ -14,7 +14,7 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class DexPokemonMovesModel
+final class DexPokemonMovesModel
 {
 	/** @var PokemonMoveRepositoryInterface $pokemonMoveRepository */
 	private $pokemonMoveRepository;

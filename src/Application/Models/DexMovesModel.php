@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class DexMovesModel
+final class DexMovesModel
 {
 	/** @var GenerationModel $generationModel */
 	private $generationModel;

@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Types;
 
 use Jp\Dex\Domain\EntityId;
 
-class TypeId extends EntityId
+final class TypeId extends EntityId
 {
 }

@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-class DatabaseFormIconRepository implements FormIconRepositoryInterface
+final class DatabaseFormIconRepository implements FormIconRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

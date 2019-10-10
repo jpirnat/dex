@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Import\Extractors\Exceptions;
 
 use Exception;
 
-class InvalidTotalLeadsLineException extends Exception
+final class InvalidTotalLeadsLineException extends Exception
 {
 }

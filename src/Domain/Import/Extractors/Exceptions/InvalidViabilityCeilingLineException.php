@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Import\Extractors\Exceptions;
 
 use Exception;
 
-class InvalidViabilityCeilingLineException extends Exception
+final class InvalidViabilityCeilingLineException extends Exception
 {
 }

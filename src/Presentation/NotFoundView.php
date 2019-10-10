@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\NotFoundModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class NotFoundView
+final class NotFoundView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

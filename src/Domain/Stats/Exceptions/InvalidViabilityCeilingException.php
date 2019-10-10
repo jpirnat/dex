@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Stats\Exceptions;
 
 use Exception;
 
-class InvalidViabilityCeilingException extends Exception
+final class InvalidViabilityCeilingException extends Exception
 {
 }

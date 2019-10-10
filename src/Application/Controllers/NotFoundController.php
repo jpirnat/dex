@@ -6,7 +6,7 @@ namespace Jp\Dex\Application\Controllers;
 use Jp\Dex\Application\Models\NotFoundModel;
 use Psr\Http\Message\ServerRequestInterface;
 
-class NotFoundController
+final class NotFoundController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

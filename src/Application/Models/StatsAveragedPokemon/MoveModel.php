@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInterface;
 
-class MoveModel
+final class MoveModel
 {
 	/** @var MovesetRatedAveragedMoveRepositoryInterface $movesetRatedAveragedMoveRepository */
 	private $movesetRatedAveragedMoveRepository;

@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Import\Extractors\Exceptions;
 
 use Exception;
 
-class InvalidFilenameException extends Exception
+final class InvalidFilenameException extends Exception
 {
 }

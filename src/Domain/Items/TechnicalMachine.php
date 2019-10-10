@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Items;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-class TechnicalMachine
+final class TechnicalMachine
 {
 	/** @var VersionGroupId $versionGroupId */
 	private $versionGroupId;

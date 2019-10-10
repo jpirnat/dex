@@ -13,7 +13,7 @@ use NumberFormatter;
  * has a run-time dependency on LanguageId. So, those view classes use this
  * factory class as their injected dependency instead.
  */
-class IntlFormatterFactory
+final class IntlFormatterFactory
 {
 	/** @var LanguageRepositoryInterface $languageRepository */
 	private $languageRepository;

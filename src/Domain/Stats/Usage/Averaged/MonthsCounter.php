@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
 
-class MonthsCounter
+final class MonthsCounter
 {
 	/** @var MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository */
 	private $movesetRatedPokemonRepository;

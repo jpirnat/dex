@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Structs;
 
-class LeadUsage
+final class LeadUsage
 {
 	/** @var int $rank */
 	private $rank;

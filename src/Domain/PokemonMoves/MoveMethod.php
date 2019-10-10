@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\PokemonMoves;
 
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class MoveMethod
+final class MoveMethod
 {
 	/** @var MoveMethodId $id */
 	private $id;

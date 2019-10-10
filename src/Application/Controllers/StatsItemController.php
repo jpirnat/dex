@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsItemModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class StatsItemController
+final class StatsItemController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

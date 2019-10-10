@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Stats\Exceptions;
 
 use Exception;
 
-class InvalidRatingException extends Exception
+final class InvalidRatingException extends Exception
 {
 }

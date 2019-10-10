@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Abilities;
 
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-class Ability
+final class Ability
 {
 	/** @var AbilityId $id */
 	private $id;

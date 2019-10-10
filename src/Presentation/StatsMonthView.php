@@ -8,7 +8,7 @@ use Jp\Dex\Application\Models\StatsMonth\StatsMonthModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class StatsMonthView
+final class StatsMonthView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

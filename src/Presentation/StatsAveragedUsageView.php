@@ -8,7 +8,7 @@ use Jp\Dex\Application\Models\StatsAveragedUsage\UsageData;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class StatsAveragedUsageView
+final class StatsAveragedUsageView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

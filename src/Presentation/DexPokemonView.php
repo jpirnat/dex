@@ -10,7 +10,7 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class DexPokemonView
+final class DexPokemonView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

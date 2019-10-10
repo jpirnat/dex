@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonAbilityRepositoryInterfac
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
-class UsageAbilityTrendGenerator
+final class UsageAbilityTrendGenerator
 {
 	/** @var UsageRatedPokemonAbilityRepositoryInterface $usageRatedPokemonAbilityRepository */
 	private $usageRatedPokemonAbilityRepository;

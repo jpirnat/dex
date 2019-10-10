@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Import\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
-class MonthDirectoryImporter
+final class MonthDirectoryImporter
 {
 	/** @var UsageFileImporter $usageFileImporter */
 	private $usageFileImporter;

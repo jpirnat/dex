@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 use PDO;
 
-class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
+final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

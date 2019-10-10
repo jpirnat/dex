@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\DexTypeModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class DexTypeView
+final class DexTypeView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

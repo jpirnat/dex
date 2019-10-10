@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Formats\FormatNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
 
-class DatabaseFormatNameRepository implements FormatNameRepositoryInterface
+final class DatabaseFormatNameRepository implements FormatNameRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

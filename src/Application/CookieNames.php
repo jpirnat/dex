@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application;
 
-class CookieNames
+final class CookieNames
 {
 	/** @var string $LANGUAGE */
 	public const LANGUAGE = 'language';

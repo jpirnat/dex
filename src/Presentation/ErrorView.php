@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\ErrorModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class ErrorView
+final class ErrorView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

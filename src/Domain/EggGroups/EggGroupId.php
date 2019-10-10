@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\EggGroups;
 
 use Jp\Dex\Domain\EntityId;
 
-class EggGroupId extends EntityId
+final class EggGroupId extends EntityId
 {
 }

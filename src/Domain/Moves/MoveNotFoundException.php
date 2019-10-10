@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Moves;
 
 use Exception;
 
-class MoveNotFoundException extends Exception
+final class MoveNotFoundException extends Exception
 {
 }

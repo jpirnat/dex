@@ -19,7 +19,7 @@ use Jp\Dex\Domain\Import\Structs\Spread;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
 
-class MovesetFileExtractor
+final class MovesetFileExtractor
 {
 	/**
 	 * Is this line a separator?

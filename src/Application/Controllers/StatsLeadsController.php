@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsLeadsModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class StatsLeadsController
+final class StatsLeadsController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

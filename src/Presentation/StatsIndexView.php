@@ -8,7 +8,7 @@ use Jp\Dex\Application\Models\StatsIndexModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class StatsIndexView
+final class StatsIndexView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

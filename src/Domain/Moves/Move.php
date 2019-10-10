@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Moves;
 
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-class Move
+final class Move
 {
 	/** @var MoveId $id */
 	private $id;

@@ -13,7 +13,7 @@ use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
+final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Counters;
 
-class StatsPokemonCounter
+final class StatsPokemonCounter
 {
 	/** @var string $icon */
 	private $icon;

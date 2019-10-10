@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Moves;
 
-class StatsPokemonMove
+final class StatsPokemonMove
 {
 	/** @var string $identifier */
 	private $identifier;

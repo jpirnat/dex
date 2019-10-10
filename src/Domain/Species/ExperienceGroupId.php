@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Species;
 
 use Jp\Dex\Domain\EntityId;
 
-class ExperienceGroupId extends EntityId
+final class ExperienceGroupId extends EntityId
 {
 }

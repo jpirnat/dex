@@ -21,7 +21,7 @@ use Jp\Dex\Domain\Stats\ValidateMonthTrait;
  * be those two values multiplied together (and divided by 100 to keep it a
  * percent).
  */
-class UsageRatedPokemonItem implements UsageDataInterface
+final class UsageRatedPokemonItem implements UsageDataInterface
 {
 	use ValidateMonthTrait;
 

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Versions;
 
-class VersionGroup
+final class VersionGroup
 {
 	/** @var VersionGroupId $id */
 	private $id;

@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Species\SpeciesRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-class DatabaseSpeciesRepository implements SpeciesRepositoryInterface
+final class DatabaseSpeciesRepository implements SpeciesRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

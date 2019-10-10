@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Stats\Exceptions;
 
 use Exception;
 
-class InvalidPercentException extends Exception
+final class InvalidPercentException extends Exception
 {
 }

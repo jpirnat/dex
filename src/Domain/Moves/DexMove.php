@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Moves;
 use Jp\Dex\Domain\Categories\DexCategory;
 use Jp\Dex\Domain\Types\DexType;
 
-class DexMove
+final class DexMove
 {
 	/** @var string $identifier */
 	private $identifier;

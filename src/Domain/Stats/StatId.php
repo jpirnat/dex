@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Stats;
 use Jp\Dex\Domain\EntityId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class StatId extends EntityId
+final class StatId extends EntityId
 {
 	/** @var int $HP */
 	public const HP = 1;

@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\StatName;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use PDO;
 
-class DatabaseStatNameRepository implements StatNameRepositoryInterface
+final class DatabaseStatNameRepository implements StatNameRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

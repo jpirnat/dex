@@ -8,7 +8,7 @@ use Jp\Dex\Application\Models\BreedingChains\BreedingChainsModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class BreedingChainsView
+final class BreedingChainsView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

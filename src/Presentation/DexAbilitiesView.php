@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\DexAbilitiesModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class DexAbilitiesView
+final class DexAbilitiesView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

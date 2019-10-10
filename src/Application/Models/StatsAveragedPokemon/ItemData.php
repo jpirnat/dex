@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
-class ItemData
+final class ItemData
 {
 	/** @var string $itemName */
 	private $itemName;

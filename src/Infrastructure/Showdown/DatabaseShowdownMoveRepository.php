@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownMoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
 use PDO;
 
-class DatabaseShowdownMoveRepository implements ShowdownMoveRepositoryInterface
+final class DatabaseShowdownMoveRepository implements ShowdownMoveRepositoryInterface
 {
 	/** @var MoveId[] $movesToImport */
 	private $movesToImport = [];

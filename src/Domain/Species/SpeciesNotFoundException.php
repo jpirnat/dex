@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Species;
 
 use Exception;
 
-class SpeciesNotFoundException extends Exception
+final class SpeciesNotFoundException extends Exception
 {
 }

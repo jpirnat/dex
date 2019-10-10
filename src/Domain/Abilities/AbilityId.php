@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Abilities;
 
 use Jp\Dex\Domain\EntityId;
 
-class AbilityId extends EntityId
+final class AbilityId extends EntityId
 {
 }

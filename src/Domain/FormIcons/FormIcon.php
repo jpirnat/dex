@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\FormIcons;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class FormIcon
+final class FormIcon
 {
 	/** @var GenerationId $generationId */
 	private $generationId;

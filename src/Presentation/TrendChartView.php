@@ -16,7 +16,7 @@ use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 use Zend\Diactoros\Response\JsonResponse;
 
-class TrendChartView
+final class TrendChartView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

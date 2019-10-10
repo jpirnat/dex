@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidFilenameException;
 use Spatie\Regex\Regex;
 use Spatie\Regex\RegexFailed;
 
-class MonthExtractor
+final class MonthExtractor
 {
 	/**
 	 * Extract the month from a stats directory or filename.

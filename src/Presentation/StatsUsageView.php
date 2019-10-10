@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsUsageModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class StatsUsageView
+final class StatsUsageView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Import\Extractors\Exceptions;
 
 use Exception;
 
-class InvalidCounterLine2Exception extends Exception
+final class InvalidCounterLine2Exception extends Exception
 {
 }

@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
 use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
-class LeadsPokemon
+final class LeadsPokemon
 {
 	use ValidateMonthTrait;
 

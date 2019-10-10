@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Pokemon;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-class PokemonName
+final class PokemonName
 {
 	/** @var LanguageId $languageId */
 	private $languageId;

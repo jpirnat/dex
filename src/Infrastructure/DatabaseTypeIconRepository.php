@@ -10,7 +10,7 @@ use Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
 use PDO;
 
-class DatabaseTypeIconRepository implements TypeIconRepositoryInterface
+final class DatabaseTypeIconRepository implements TypeIconRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Items\ItemName;
 use Jp\Dex\Domain\Pokemon\PokemonName;
 use Jp\Dex\Domain\Types\Type;
 
-class MovesetItemTrendLine extends TrendLine
+final class MovesetItemTrendLine extends TrendLine
 {
 	/** @var ItemName $itemName */
 	private $itemName;

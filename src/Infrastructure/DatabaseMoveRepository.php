@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-class DatabaseMoveRepository implements MoveRepositoryInterface
+final class DatabaseMoveRepository implements MoveRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

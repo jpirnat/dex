@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Abilities;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class AbilityDescription
+final class AbilityDescription
 {
 	/** @var GenerationId $generationId */
 	private $generationId;

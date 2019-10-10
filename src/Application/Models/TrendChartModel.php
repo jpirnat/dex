@@ -21,7 +21,7 @@ use Jp\Dex\Domain\Stats\Trends\Generators\UsageMoveTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Generators\UsageTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Lines\TrendLine;
 
-class TrendChartModel
+final class TrendChartModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;

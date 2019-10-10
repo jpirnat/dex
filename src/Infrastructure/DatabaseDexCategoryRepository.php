@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Categories\DexCategoryRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
 
-class DatabaseDexCategoryRepository implements DexCategoryRepositoryInterface
+final class DatabaseDexCategoryRepository implements DexCategoryRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\DexMovesModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class DexMovesView
+final class DexMovesView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

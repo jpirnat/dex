@@ -15,7 +15,7 @@ use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
-class LeadsFileImporter
+final class LeadsFileImporter
 {
 	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
 	private $showdownPokemonRepository;

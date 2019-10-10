@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Types;
 
 use Exception;
 
-class TypeNameNotFoundException extends Exception
+final class TypeNameNotFoundException extends Exception
 {
 }

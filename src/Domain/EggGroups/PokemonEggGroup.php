@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\EggGroups;
 
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
-class PokemonEggGroup
+final class PokemonEggGroup
 {
 	/** @var PokemonId $pokemonId */
 	private $pokemonId;

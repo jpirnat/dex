@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 
-class DexNaturesModel
+final class DexNaturesModel
 {
 	/** @var NatureRepositoryInterface $natureRepository */
 	private $natureRepository;

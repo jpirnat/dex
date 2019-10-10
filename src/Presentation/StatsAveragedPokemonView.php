@@ -10,7 +10,7 @@ use Jp\Dex\Application\Models\StatsAveragedPokemon\StatsAveragedPokemonModel;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class StatsAveragedPokemonView
+final class StatsAveragedPokemonView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

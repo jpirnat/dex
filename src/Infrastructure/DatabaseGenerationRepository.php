@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Versions\GenerationNotFoundException;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 use PDO;
 
-class DatabaseGenerationRepository implements GenerationRepositoryInterface
+final class DatabaseGenerationRepository implements GenerationRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

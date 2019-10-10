@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Import\Extractors\Exceptions;
 
 use Exception;
 
-class InvalidSpreadLineException extends Exception
+final class InvalidSpreadLineException extends Exception
 {
 }

@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInter
 use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use PDO;
 
-class DatabaseMovesetRatedAveragedItemRepository implements MovesetRatedAveragedItemRepositoryInterface
+final class DatabaseMovesetRatedAveragedItemRepository implements MovesetRatedAveragedItemRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

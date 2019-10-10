@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Import\Extractors\UsageFileExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
-class UsageFileParser
+final class UsageFileParser
 {
 	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
 	private $showdownPokemonRepository;

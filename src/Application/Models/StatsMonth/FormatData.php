@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\StatsMonth;
 
-class FormatData
+final class FormatData
 {
 	/** @var string $formatIdentifier */
 	private $formatIdentifier;

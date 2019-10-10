@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Natures\NatureNameNotFoundException;
 use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
 use PDO;
 
-class DatabaseNatureNameRepository implements NatureNameRepositoryInterface
+final class DatabaseNatureNameRepository implements NatureNameRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

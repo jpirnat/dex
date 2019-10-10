@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Items;
 
 use Jp\Dex\Domain\EntityId;
 
-class ItemFlingEffectId extends EntityId
+final class ItemFlingEffectId extends EntityId
 {
 }

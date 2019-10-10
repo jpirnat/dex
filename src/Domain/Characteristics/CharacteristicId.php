@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Characteristics;
 
 use Jp\Dex\Domain\EntityId;
 
-class CharacteristicId extends EntityId
+final class CharacteristicId extends EntityId
 {
 }

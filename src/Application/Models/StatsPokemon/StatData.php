@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\StatsPokemon;
 
-class StatData
+final class StatData
 {
 	/** @var string $statName */
 	private $statName;

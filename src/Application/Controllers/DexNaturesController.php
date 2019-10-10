@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\DexNaturesModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class DexNaturesController
+final class DexNaturesController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

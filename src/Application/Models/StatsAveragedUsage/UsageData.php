@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\StatsAveragedUsage;
 
-class UsageData
+final class UsageData
 {
 	/** @var int $rank */
 	private $rank;

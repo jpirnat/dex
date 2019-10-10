@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-class DatabaseItemRepository implements ItemRepositoryInterface
+final class DatabaseItemRepository implements ItemRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

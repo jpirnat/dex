@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Import\Extractors\LeadsFileExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
-class LeadsFileParser
+final class LeadsFileParser
 {
 	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
 	private $showdownPokemonRepository;

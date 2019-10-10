@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\BaseModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class BaseController
+final class BaseController
 {
 	/** @var BaseModel $baseModel */
 	private $baseModel;

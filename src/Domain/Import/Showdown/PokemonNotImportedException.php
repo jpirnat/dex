@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Import\Showdown;
 
 use Exception;
 
-class PokemonNotImportedException extends Exception
+final class PokemonNotImportedException extends Exception
 {
 }

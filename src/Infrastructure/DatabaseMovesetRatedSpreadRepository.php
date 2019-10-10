@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 use PDO;
 
-class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRepositoryInterface
+final class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

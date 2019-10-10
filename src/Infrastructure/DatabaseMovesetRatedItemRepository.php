@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
 use PDO;
 
-class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryInterface
+final class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

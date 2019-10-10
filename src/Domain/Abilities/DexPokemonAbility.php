@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Abilities;
 
-class DexPokemonAbility
+final class DexPokemonAbility
 {
 	/** @var string $identifier */
 	private $identifier;

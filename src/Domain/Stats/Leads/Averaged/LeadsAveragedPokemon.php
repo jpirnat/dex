@@ -15,7 +15,7 @@ use Jp\Dex\Domain\Stats\ValidateMonthTrait;
  * This class holds data derived from averaging a Pokémon's leads Pokémon data
  * over a span of multiple months.
  */
-class LeadsAveragedPokemon
+final class LeadsAveragedPokemon
 {
 	use ValidateMonthTrait;
 

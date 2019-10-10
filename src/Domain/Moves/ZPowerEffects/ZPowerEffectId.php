@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Moves\ZPowerEffects;
 
 use Jp\Dex\Domain\EntityId;
 
-class ZPowerEffectId extends EntityId
+final class ZPowerEffectId extends EntityId
 {
 }

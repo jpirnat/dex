@@ -8,7 +8,7 @@ use Jp\Dex\Application\Models\StatsUsageModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class StatsUsageController
+final class StatsUsageController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

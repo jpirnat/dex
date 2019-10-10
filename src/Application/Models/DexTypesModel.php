@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeEffectivenessRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class DexTypesModel
+final class DexTypesModel
 {
 	/** @var GenerationModel $generationModel */
 	private $generationModel;

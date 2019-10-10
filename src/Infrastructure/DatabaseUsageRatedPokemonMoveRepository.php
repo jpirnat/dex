@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMove;
 use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMoveRepositoryInterface;
 use PDO;
 
-class DatabaseUsageRatedPokemonMoveRepository implements UsageRatedPokemonMoveRepositoryInterface
+final class DatabaseUsageRatedPokemonMoveRepository implements UsageRatedPokemonMoveRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

@@ -9,7 +9,7 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
 use Jp\Dex\Domain\PokemonMoves\PokemonMove;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-class BreedingChainFinder
+final class BreedingChainFinder
 {
 	/** @var BreedingChainQueriesInterface $breedingChainQueries */
 	private $breedingChainQueries;

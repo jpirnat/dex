@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 
-class PokemonMoveFormatter
+final class PokemonMoveFormatter
 {
 	/** @var TmRepositoryInterface $tmRepository */
 	private $tmRepository;

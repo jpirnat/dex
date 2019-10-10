@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\StatId;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class StatsPokemonView
+final class StatsPokemonView
 {
 	/** @var RendererInterface $renderer */
 	private $renderer;

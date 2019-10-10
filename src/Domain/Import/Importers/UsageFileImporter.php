@@ -17,7 +17,7 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
-class UsageFileImporter
+final class UsageFileImporter
 {
 	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
 	private $showdownPokemonRepository;

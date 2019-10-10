@@ -32,7 +32,7 @@ use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 use Psr\Http\Message\StreamInterface;
 
-class MovesetFileImporter
+final class MovesetFileImporter
 {
 	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
 	private $showdownPokemonRepository;

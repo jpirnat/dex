@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Categories;
 
-class Category
+final class Category
 {
 	/** @var CategoryId $id */
 	private $id;

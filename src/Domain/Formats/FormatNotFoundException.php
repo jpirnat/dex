@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Formats;
 
 use Exception;
 
-class FormatNotFoundException extends Exception
+final class FormatNotFoundException extends Exception
 {
 }

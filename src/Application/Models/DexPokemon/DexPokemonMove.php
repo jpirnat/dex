@@ -6,7 +6,7 @@ namespace Jp\Dex\Application\Models\DexPokemon;
 use Jp\Dex\Domain\Categories\DexCategory;
 use Jp\Dex\Domain\Types\DexType;
 
-class DexPokemonMove
+final class DexPokemonMove
 {
 	/** @var array $versionGroupData */
 	private $versionGroupData;

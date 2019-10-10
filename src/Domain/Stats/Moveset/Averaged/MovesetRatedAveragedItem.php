@@ -16,7 +16,7 @@ use Jp\Dex\Domain\Stats\ValidateMonthTrait;
  * This class holds data derived from averaging an item's usage percent over a
  * span of multiple months.
  */
-class MovesetRatedAveragedItem
+final class MovesetRatedAveragedItem
 {
 	use ValidateMonthTrait;
 

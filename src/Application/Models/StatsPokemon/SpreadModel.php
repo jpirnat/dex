@@ -17,7 +17,7 @@ use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 
-class SpreadModel
+final class SpreadModel
 {
 	/** @var FormatRepositoryInterface $formatRepository */
 	private $formatRepository;

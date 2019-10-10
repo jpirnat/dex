@@ -13,7 +13,7 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
  * This model is used to determine the generation being queried by the dex,
  * and also to get other generations for navigation purposes.
  */
-class GenerationModel
+final class GenerationModel
 {
 	/** @var GenerationRepositoryInterface $generationRepository */
 	private $generationRepository;

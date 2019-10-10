@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Characteristics;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-class CharacteristicName
+final class CharacteristicName
 {
 	/** @var LanguageId $languageId */
 	private $languageId;

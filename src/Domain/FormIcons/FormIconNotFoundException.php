@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\FormIcons;
 
 use Exception;
 
-class FormIconNotFoundException extends Exception
+final class FormIconNotFoundException extends Exception
 {
 }

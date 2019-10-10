@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-class DatabaseTmRepository implements TmRepositoryInterface
+final class DatabaseTmRepository implements TmRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

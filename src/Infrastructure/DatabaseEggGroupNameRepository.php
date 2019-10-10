@@ -9,7 +9,7 @@ use Jp\Dex\Domain\EggGroups\EggGroupNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
 
-class DatabaseEggGroupNameRepository implements EggGroupNameRepositoryInterface
+final class DatabaseEggGroupNameRepository implements EggGroupNameRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

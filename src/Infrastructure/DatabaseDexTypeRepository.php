@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Types\TypeNotFoundException;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
+final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

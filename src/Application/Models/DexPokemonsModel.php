@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class DexPokemonsModel
+final class DexPokemonsModel
 {
 	/** @var GenerationModel $generationModel */
 	private $generationModel;

@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class StatCalculator
+final class StatCalculator
 {
 	/** @var int $PERFECT_IV_GEN_1 */
 	private const PERFECT_IV_GEN_1 = 15;

@@ -15,7 +15,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-class LanguageMiddleware implements MiddlewareInterface
+final class LanguageMiddleware implements MiddlewareInterface
 {
 	/** @var LanguageRepositoryInterface $languageRepository */
 	private $languageRepository;

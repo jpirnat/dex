@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Trends\Lines\TrendPoint;
 use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
 use Jp\Dex\Domain\Stats\UsageDataInterface;
 
-class TrendPointCalculator
+final class TrendPointCalculator
 {
 	/** @var UsageQueriesInterface $usageQueries */
 	private $usageQueries;

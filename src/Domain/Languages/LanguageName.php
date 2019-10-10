@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Languages;
 
-class LanguageName
+final class LanguageName
 {
 	/** @var LanguageId $inLanguageId */
 	private $inLanguageId;

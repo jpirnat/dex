@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInterface;
 
-class ItemModel
+final class ItemModel
 {
 	/** @var MovesetRatedAveragedItemRepositoryInterface $movesetRatedAveragedItemRepository */
 	private $movesetRatedAveragedItemRepository;

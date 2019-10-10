@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Items;
 
 use Exception;
 
-class TmNotFoundException extends Exception
+final class TmNotFoundException extends Exception
 {
 }

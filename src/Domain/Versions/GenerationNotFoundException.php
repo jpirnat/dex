@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Versions;
 
 use Exception;
 
-class GenerationNotFoundException extends Exception
+final class GenerationNotFoundException extends Exception
 {
 }

@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Categories;
 
 use Jp\Dex\Domain\EntityId;
 
-class CategoryId extends EntityId
+final class CategoryId extends EntityId
 {
 }

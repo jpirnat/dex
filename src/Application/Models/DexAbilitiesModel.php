@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class DexAbilitiesModel
+final class DexAbilitiesModel
 {
 	/** @var GenerationModel $generationModel */
 	private $generationModel;

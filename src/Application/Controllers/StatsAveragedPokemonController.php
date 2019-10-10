@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsAveragedPokemon\StatsAveragedPokemonModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-class StatsAveragedPokemonController
+final class StatsAveragedPokemonController
 {
 	/** @var BaseController $baseController */
 	private $baseController;

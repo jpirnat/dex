@@ -27,7 +27,7 @@ use Jp\Dex\Domain\Teammates\StatsPokemonTeammateRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 
-class StatsPokemonModel
+final class StatsPokemonModel
 {
 	/** @var DateModel $dateModel */
 	private $dateModel;

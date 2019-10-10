@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemId;
 use PDO;
 
-class DatabaseShowdownItemRepository implements ShowdownItemRepositoryInterface
+final class DatabaseShowdownItemRepository implements ShowdownItemRepositoryInterface
 {
 	/** @var ItemId[] $itemsToImport */
 	private $itemsToImport = [];

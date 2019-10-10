@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\VersionGroup;
 
-class DexFormatter
+final class DexFormatter
 {
 	/**
 	 * Transform an array of generation objects into a renderable data array.

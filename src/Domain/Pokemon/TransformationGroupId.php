@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Pokemon;
 
 use Jp\Dex\Domain\EntityId;
 
-class TransformationGroupId extends EntityId
+final class TransformationGroupId extends EntityId
 {
 }

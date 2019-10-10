@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Items;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-class ItemName
+final class ItemName
 {
 	/** @var LanguageId $languageId */
 	private $languageId;

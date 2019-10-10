@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Formats;
 
 use Jp\Dex\Domain\Versions\GenerationId;
 
-class Format
+final class Format
 {
 	/** @var FormatId $id */
 	private $id;

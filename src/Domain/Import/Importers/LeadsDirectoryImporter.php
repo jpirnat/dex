@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Symfony\Component\DomCrawler\Crawler;
 
-class LeadsDirectoryImporter
+final class LeadsDirectoryImporter
 {
 	/** @var LeadsFileImporter $leadsFileImporter */
 	private $leadsFileImporter;

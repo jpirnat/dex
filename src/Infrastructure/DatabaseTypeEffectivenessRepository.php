@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-class DatabaseTypeEffectivenessRepository implements TypeEffectivenessRepositoryInterface
+final class DatabaseTypeEffectivenessRepository implements TypeEffectivenessRepositoryInterface
 {
 	/** @var PDO $db */
 	private $db;

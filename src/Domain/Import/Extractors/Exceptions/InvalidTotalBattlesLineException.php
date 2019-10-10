@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Import\Extractors\Exceptions;
 
 use Exception;
 
-class InvalidTotalBattlesLineException extends Exception
+final class InvalidTotalBattlesLineException extends Exception
 {
 }

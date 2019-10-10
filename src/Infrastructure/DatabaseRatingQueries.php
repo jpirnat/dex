@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use PDO;
 
-class DatabaseRatingQueries implements RatingQueriesInterface
+final class DatabaseRatingQueries implements RatingQueriesInterface
 {
 	/** @var PDO $db */
 	private $db;

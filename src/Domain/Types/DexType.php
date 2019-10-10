@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Types;
 
-class DexType
+final class DexType
 {
 	/** @var TypeId $id */
 	private $id;
