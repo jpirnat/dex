@@ -3,7 +3,7 @@
 {% block body %}
 	<div class="month-control">
 		{% if prevMonth %}
-			<a class="button prev" href="/stats/{{ prevMonth.month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
+			<a class="button prev" href="/stats/{{ prevMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
 				&#9668; {{ prevMonth.text|e }}
 			</a>
 		{% endif %}
@@ -11,7 +11,7 @@
 		<div class="space"></div>
 
 		{% if nextMonth %}
-			<a class="button next" href="/stats/{{ nextMonth.month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
+			<a class="button next" href="/stats/{{ nextMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
 				{{ nextMonth.text|e }} &#9658;
 			</a>
 		{% endif %}
@@ -22,7 +22,7 @@
 			{% for r in ratings %}
 				<li>
 					<a
-						href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ r|e }}/items/{{ item.identifier|e }}"
+						href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ r|e }}/items/{{ item.identifier|e }}"
 						{% if r == rating %}
 							class="current"
 						{% endif %}
@@ -52,7 +52,7 @@
 						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
 					</td>
 					<td>
-						<a href="/stats/{{ month|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
+						<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
 							{{ pokemon.name|e }}
 						</a>
 					</td>
@@ -68,7 +68,7 @@
 							class="number"
 						{% endif %}
 					>
-						<a class="trend-link" href="/stats/trends/chart?type=usage-item&format={{ formatIdentifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&item={{ item.identifier|e }}">
+						<a class="trend-link" href="/stats/trends/chart?type=usage-item&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&item={{ item.identifier|e }}">
 							{{ pokemon.usageChangeText|e }}
 						</a>
 					</td>

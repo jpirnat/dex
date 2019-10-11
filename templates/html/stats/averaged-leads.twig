@@ -6,7 +6,7 @@
 			{% for r in ratings %}
 				<li>
 					<a
-						href="/stats/{{ start|e }}-to-{{ end|e }}/{{ formatIdentifier|e }}/{{ r|e }}/leads"
+						href="/stats/{{ start|e }}-to-{{ end|e }}/{{ format.identifier|e }}/{{ r|e }}/leads"
 						{% if r == rating %}
 							class="current"
 						{% endif %}
@@ -36,7 +36,7 @@
 					</td>
 					<td>
 						{% if pokemon.showMovesetLink %}
-							<a href="/stats/{{ start|e }}-to-{{ end|e }}/{{ formatIdentifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
+							<a href="/stats/{{ start|e }}-to-{{ end|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
 								{{ pokemon.name|e }}
 							</a>
 						{% else %}
