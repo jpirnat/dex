@@ -6,6 +6,9 @@
  */
 declare(strict_types=1);
 
+// For tables whose data is split across multiple import files, the table name
+// should be the key to an array of those file names (excluding file extension).
+
 return [
 	// Versions
 	'generations',
@@ -67,7 +70,15 @@ return [
 	'technical_machines',
 	'move_methods',
 	'move_method_names',
-	'pokemon_moves',
+	'pokemon_moves' => [
+		'pokemon_moves_1',
+		'pokemon_moves_2',
+		'pokemon_moves_3',
+		'pokemon_moves_4',
+		'pokemon_moves_5',
+		'pokemon_moves_6',
+		'pokemon_moves_7',
+	],
 	'exclusive_z_moves',
 
 	// Stats
@@ -103,7 +114,12 @@ return [
 	'region_names',
 	'pokedexes',
 	'pokedex_numbers',
-	'pokedex_entries',
+	'pokedex_entries' => [
+		'pokedex_entries_4',
+		'pokedex_entries_5',
+		'pokedex_entries_6',
+		'pokedex_entries_7',
+	],
 
 	// Shapes
 	'shapes',

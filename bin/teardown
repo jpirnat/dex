@@ -22,7 +22,11 @@ foreach ($tables as $table) {
 $tables = require __DIR__ . '/../sql/schema/dex/tables.php';
 $tables = array_reverse($tables);
 
-foreach ($tables as $table) {
+foreach ($tables as $key => $table) {
+	if (is_string($key)) {
+		$table = $key;
+	}
+
 	$database->exec("DROP TABLE IF EXISTS `$table`");
 	echo "Removed $table\n";
 }

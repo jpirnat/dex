@@ -6,32 +6,47 @@ declare(strict_types=1);
 // the entire database when I just want to add one new table.
 // USAGE: setuptable <tablename>
 
-require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../config/environment.php';
-$container = require __DIR__ . '/../config/dependencies.php';
-
-// Get the database setup connection.
-/** @var PDO $database */
-$database = $container->get('$dbsetup');
-
 if (!isset($argv[1])) {
 	exit;
 }
+
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config/environment.php';
+$container = require __DIR__ . '/../config/dependencies.php';
+$tables = require __DIR__ . '/../sql/schema/dex/tables.php';
+
+function importFile(PDO $database, string $table, string $file) : void
+{
+	$database->exec(
+		"LOAD DATA LOCAL INFILE '$file'
+		INTO TABLE `$table`
+		FIELDS
+			TERMINATED BY ','
+			OPTIONALLY ENCLOSED BY '\"'
+		IGNORE 1 LINES"
+	);
+}
+
+/** @var PDO $database */
+$database = $container->get('$dbsetup');
 
 $table = $argv[1];
 
 // Create the table from its schema definition.
 $database->exec(file_get_contents(__DIR__ . "/../sql/schema/dex/$table.sql"));
 
-// Load the table's data from its csv.
-$file = __DIR__ . "/../data/$table.csv";
-$stmt = $database->exec(
-	"LOAD DATA LOCAL INFILE '$file'
-	INTO TABLE `$table`
-	FIELDS
-		TERMINATED BY ','
-		OPTIONALLY ENCLOSED BY '\"'
-	IGNORE 1 LINES"
-);
+if (isset($tables[$table])) {
+	// This table's data is split across multiple files.
+	$files = $tables[$table];
+	foreach ($files as $file) {
+		$file = __DIR__ . "/../data/$file.csv";
+		importFile($database, $table, $file);
+		echo "Loaded file $file\n";
+	}
+} else {
+	// This table's data is contained within a single file.
+	$file = __DIR__ . "/../data/$table.csv";
+	importFile($database, $table, $file);
+}
 
 echo "Loaded $table\n";
