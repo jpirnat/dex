@@ -40,24 +40,22 @@ final class AjaxErrorMiddleware implements MiddlewareInterface
 		ServerRequestInterface $request,
 		RequestHandlerInterface $handler
 	) : ResponseInterface {
-		if ($this->environment === 'production') {
-			// In production environments, the user should not see PHP errors.
-			// Instead, redirect them to our error page.
-			try {
-				$response = $handler->handle($request);
-			} catch (Throwable $e) {
-				$response = new JsonResponse(['error' => true]);
-			}
-		} else {
+		if ($this->environment !== 'production') {
 			// In development environments, we want to see the errors. They can
 			// run, but they can't hide!
 			$whoops = new Run();
-			$whoops->pushHandler(new JsonResponseHandler());
+			$whoops->prependHandler(new JsonResponseHandler());
 			$whoops->register();
 
-			$response = $handler->handle($request);
+			return $handler->handle($request);;
 		}
 
-		return $response;
+		// In production environments, the user should not see PHP errors.
+		// Instead, redirect them to our error page.
+		try {
+			return $handler->handle($request);
+		} catch (Throwable $e) {
+			return new JsonResponse(['error' => true]);
+		}
 	}
 }
