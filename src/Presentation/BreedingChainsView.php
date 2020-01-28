@@ -5,8 +5,8 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\BreedingChains\BreedingChainRecord;
 use Jp\Dex\Application\Models\BreedingChains\BreedingChainsModel;
+use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
-use Zend\Diactoros\Response\HtmlResponse;
 
 final class BreedingChainsView
 {

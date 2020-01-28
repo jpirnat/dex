@@ -26,7 +26,7 @@ header('X-Content-Type-Options: nosniff');
 
 
 // Create the request.
-$request = \Zend\Diactoros\ServerRequestFactory::fromGlobals(
+$request = \Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 	$_SERVER,
 	$_GET,
 	$_POST,
@@ -82,15 +82,15 @@ if ($routeInfo[0] === \FastRoute\Dispatcher::FOUND) {
 	$middlewareDispatcher->addMiddlewares($middlewareClasses);
 	$response = $middlewareDispatcher->handle($request);
 } elseif ($routeInfo[0] === \FastRoute\Dispatcher::NOT_FOUND) {
-	$response = new \Zend\Diactoros\Response\RedirectResponse('/404');
+	$response = new \LaminasDiactoros\Response\RedirectResponse('/404');
 } elseif ($routeInfo[0] === \FastRoute\Dispatcher::METHOD_NOT_ALLOWED) {
 	$allowedMethods = $routeInfo[1];
-	$response = new \Zend\Diactoros\Response\RedirectResponse('/405');
+	$response = new \LaminasDiactoros\Response\RedirectResponse('/405');
 } else {
 	// This should never happen.
-	$response = new \Zend\Diactoros\Response\RedirectResponse('/');
+	$response = new \LaminasDiactoros\Response\RedirectResponse('/');
 }
 
 // Emit the response.
-$emitter = new \Zend\HttpHandlerRunner\Emitter\SapiEmitter();
+$emitter = new \Laminas\HttpHandlerRunner\Emitter\SapiEmitter();
 $emitter->emit($response);

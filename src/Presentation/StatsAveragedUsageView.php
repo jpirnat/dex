@@ -5,8 +5,8 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\StatsAveragedUsage\StatsAveragedUsageModel;
 use Jp\Dex\Application\Models\StatsAveragedUsage\UsageData;
+use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
-use Zend\Diactoros\Response\HtmlResponse;
 
 final class StatsAveragedUsageView
 {

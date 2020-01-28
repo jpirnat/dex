@@ -6,8 +6,8 @@ namespace Jp\Dex\Presentation;
 use Jp\Dex\Application\Models\StatsPokemon\SpreadData;
 use Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel;
 use Jp\Dex\Domain\Stats\StatId;
+use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
-use Zend\Diactoros\Response\HtmlResponse;
 
 final class StatsPokemonView
 {

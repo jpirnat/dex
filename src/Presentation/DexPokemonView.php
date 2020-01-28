@@ -7,8 +7,8 @@ use Jp\Dex\Application\Models\DexPokemon\DexPokemonModel;
 use Jp\Dex\Application\Models\DexPokemon\DexPokemonMove;
 use Jp\Dex\Application\Models\DexPokemon\DexPokemonMoveMethod;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
+use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
-use Zend\Diactoros\Response\HtmlResponse;
 
 final class DexPokemonView
 {

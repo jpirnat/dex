@@ -5,8 +5,8 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\StatsMonth\FormatData;
 use Jp\Dex\Application\Models\StatsMonth\StatsMonthModel;
+use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
-use Zend\Diactoros\Response\HtmlResponse;
 
 final class StatsMonthView
 {

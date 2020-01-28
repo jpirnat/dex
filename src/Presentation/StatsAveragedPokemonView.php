@@ -7,8 +7,8 @@ use Jp\Dex\Application\Models\StatsAveragedPokemon\AbilityData;
 use Jp\Dex\Application\Models\StatsAveragedPokemon\ItemData;
 use Jp\Dex\Application\Models\StatsAveragedPokemon\MoveData;
 use Jp\Dex\Application\Models\StatsAveragedPokemon\StatsAveragedPokemonModel;
+use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
-use Zend\Diactoros\Response\HtmlResponse;
 
 final class StatsAveragedPokemonView
 {

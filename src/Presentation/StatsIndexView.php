@@ -5,8 +5,8 @@ namespace Jp\Dex\Presentation;
 
 use DateTime;
 use Jp\Dex\Application\Models\StatsIndexModel;
+use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
-use Zend\Diactoros\Response\HtmlResponse;
 
 final class StatsIndexView
 {

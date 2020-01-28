@@ -6,8 +6,8 @@ namespace Jp\Dex\Presentation;
 use Jp\Dex\Application\Models\DexMove\DexMoveModel;
 use Jp\Dex\Application\Models\DexMove\DexMovePokemon;
 use Jp\Dex\Application\Models\DexMove\DexMovePokemonMethod;
+use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
-use Zend\Diactoros\Response\HtmlResponse;
 
 final class DexMoveView
 {
