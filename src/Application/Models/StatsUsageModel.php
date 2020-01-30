@@ -13,48 +13,27 @@ use Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface;
 
 final class StatsUsageModel
 {
-	/** @var DateModel $dateModel */
-	private $dateModel;
-
-	/** @var FormatRepositoryInterface $formatRepository */
-	private $formatRepository;
-
-	/** @var RatingQueriesInterface $ratingQueries */
-	private $ratingQueries;
-
-	/** @var LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository */
-	private $leadsRatedPokemonRepository;
-
-	/** @var StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository */
-	private $statsUsagePokemonRepository;
+	private DateModel $dateModel;
+	private FormatRepositoryInterface $formatRepository;
+	private RatingQueriesInterface $ratingQueries;
+	private LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository;
+	private StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository;
 
 
-	/** @var string $month */
-	private $month;
-
-	/** @var Format $format */
-	private $format;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var string $myFormat */
-	private $myFormat;
-
-	/** @var string $myRating */
-	private $myRating;
-
-	/** @var LanguageId $languageId */
-	private $languageId;
+	private string $month;
+	private Format $format;
+	private int $rating;
+	private string $myFormat;
+	private string $myRating;
+	private LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private $ratings = [];
+	private array $ratings = [];
 
-	/** @var bool $leadsDataExists */
-	private $leadsDataExists;
+	private bool $leadsDataExists;
 
 	/** @var StatsUsagePokemon[] $pokemon */
-	private $pokemon = [];
+	private array $pokemon = [];
 
 
 	/**

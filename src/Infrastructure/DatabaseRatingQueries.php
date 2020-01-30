@@ -10,8 +10,7 @@ use PDO;
 
 final class DatabaseRatingQueries implements RatingQueriesInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

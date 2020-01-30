@@ -25,29 +25,14 @@ final class UsageRatedPokemonItem implements UsageDataInterface
 {
 	use ValidateMonthTrait;
 
-	/** @var DateTime $month */
-	private $month;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var float $pokemonPercent */
-	private $pokemonPercent;
-
-	/** @var ItemId $itemId */
-	private $itemId;
-
-	/** @var float $itemPercent */
-	private $itemPercent;
-
-	/** @var float $usagePercent */
-	private $usagePercent;
+	private DateTime $month;
+	private FormatId $formatId;
+	private int $rating;
+	private PokemonId $pokemonId;
+	private float $pokemonPercent;
+	private ItemId $itemId;
+	private float $itemPercent;
+	private float $usagePercent;
 
 	/**
 	 * Constructor.

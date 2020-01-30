@@ -7,17 +7,10 @@ use Jp\Dex\Domain\Stats\StatId;
 
 final class Characteristic
 {
-	/** @var CharacteristicId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var StatId $highestStatId */
-	private $highestStatId;
-
-	/** @var int $ivModFive */
-	private $ivModFive;
+	private CharacteristicId $id;
+	private string $identifier;
+	private StatId $highestStatId;
+	private int $ivModFive;
 
 	/**
 	 * Constructor.

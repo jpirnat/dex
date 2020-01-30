@@ -12,8 +12,7 @@ use PDO;
 
 final class DatabaseFormatNameRepository implements FormatNameRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

@@ -16,55 +16,28 @@ use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 
 final class StatsAveragedPokemonModel
 {
-	/** @var FormatRepositoryInterface $formatRepository */
-	private $formatRepository;
+	private FormatRepositoryInterface $formatRepository;
+	private PokemonRepositoryInterface $pokemonRepository;
+	private RatingQueriesInterface $ratingQueries;
+	private GenerationRepositoryInterface $generationRepository;
 
-	/** @var PokemonRepositoryInterface $pokemonRepository */
-	private $pokemonRepository;
-
-	/** @var RatingQueriesInterface $ratingQueries */
-	private $ratingQueries;
-
-	/** @var GenerationRepositoryInterface $generationRepository */
-	private $generationRepository;
+	private PokemonModel $pokemonModel;
+	private AbilityModel $abilityModel;
+	private ItemModel $itemModel;
+	private MoveModel $moveModel;
 
 
-	/** @var PokemonModel $pokemonModel */
-	private $pokemonModel;
-
-	/** @var AbilityModel $abilityModel */
-	private $abilityModel;
-
-	/** @var ItemModel $itemModel */
-	private $itemModel;
-
-	/** @var MoveModel $moveModel */
-	private $moveModel;
-
-
-	/** @var string $start */
-	private $start;
-
-	/** @var string $end */
-	private $end;
-
-	/** @var Format $format */
-	private $format;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var Pokemon $pokemon */
-	private $pokemon;
-
-	/** @var LanguageId $languageId */
-	private $languageId;
+	private string $start;
+	private string $end;
+	private Format $format;
+	private int $rating;
+	private Pokemon $pokemon;
+	private LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private $ratings = [];
+	private array $ratings = [];
 
-	/** @var Generation $generation */
-	private $generation;
+	private Generation $generation;
 
 
 	/**

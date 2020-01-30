@@ -7,23 +7,12 @@ use Jp\Dex\Domain\Forms\FormId;
 
 final class Model
 {
-	/** @var FormId $formId */
-	private $formId;
-
-	/** @var bool $isShiny */
-	private $isShiny;
-
-	/** @var bool $isBack */
-	private $isBack;
-
-	/** @var bool $isFemale */
-	private $isFemale;
-
-	/** @var int $attackingIndex */
-	private $attackingIndex;
-
-	/** @var string $image */
-	private $image;
+	private FormId $formId;
+	private bool $isShiny;
+	private bool$isBack;
+	private bool $isFemale;
+	private int $attackingIndex;
+	private string $image;
 
 	/**
 	 * Constructor.

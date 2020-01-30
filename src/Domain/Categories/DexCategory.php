@@ -5,11 +5,8 @@ namespace Jp\Dex\Domain\Categories;
 
 final class DexCategory
 {
-	/** @var string $icon */
-	private $icon;
-
-	/** @var string $name */
-	private $name;
+	private string $icon;
+	private string $name;
 
 	/**
 	 * Constructor.

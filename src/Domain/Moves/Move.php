@@ -7,17 +7,10 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class Move
 {
-	/** @var MoveId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var VersionGroupId $introducedInVersionGroupId */
-	private $introducedInVersionGroupId;
-
-	/** @var bool $isZMove */
-	private $isZMove;
+	private MoveId $id;
+	private string $identifier;
+	private VersionGroupId $introducedInVersionGroupId;
+	private bool $isZMove;
 
 	/**
 	 * Constructor.

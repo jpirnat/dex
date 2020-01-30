@@ -14,8 +14,7 @@ use PDO;
 
 final class DatabaseStatsPokemonCounterRepository implements StatsPokemonCounterRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

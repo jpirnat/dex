@@ -5,14 +5,9 @@ namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
 final class AbilityData
 {
-	/** @var string $abilityName */
-	private $abilityName;
-
-	/** @var string $abilityIdentifier */
-	private $abilityIdentifier;
-
-	/** @var float $percent */
-	private $percent;
+	private string $abilityName;
+	private string $abilityIdentifier;
+	private float $percent;
 
 	/**
 	 * Constructor.

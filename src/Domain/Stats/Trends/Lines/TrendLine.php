@@ -8,20 +8,13 @@ use Jp\Dex\Domain\Types\Type;
 
 abstract class TrendLine
 {
-	/** @var string $formatName */
-	protected $formatName;
-
-	/** @var int $rating */
-	protected $rating;
-
-	/** @var PokemonName $pokemonName */
-	protected $pokemonName;
-
-	/** @var Type $pokemonType */
-	protected $pokemonType;
+	protected string $formatName;
+	protected int $rating;
+	protected PokemonName $pokemonName;
+	protected Type $pokemonType;
 
 	/** @var TrendPoint[] $trendPoints */
-	protected $trendPoints = [];
+	protected array $trendPoints = [];
 
 	/**
 	 * Add a trend point to the trend line.

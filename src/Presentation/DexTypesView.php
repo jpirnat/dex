@@ -9,17 +9,10 @@ use Psr\Http\Message\ResponseInterface;
 
 final class DexTypesView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
-
-	/** @var DexTypesModel $dexTypesModel */
-	private $dexTypesModel;
-
-	/** @var DexFormatter $dexFormatter */
-	private $dexFormatter;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
+	private DexTypesModel $dexTypesModel;
+	private DexFormatter $dexFormatter;
 
 	/**
 	 * Constructor.

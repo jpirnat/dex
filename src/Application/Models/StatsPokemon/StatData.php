@@ -5,11 +5,8 @@ namespace Jp\Dex\Application\Models\StatsPokemon;
 
 final class StatData
 {
-	/** @var string $statName */
-	private $statName;
-
-	/** @var int $baseStat */
-	private $baseStat;
+	private string $statName;
+	private int $baseStat;
 
 	/**
 	 * Constructor.

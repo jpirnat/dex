@@ -9,11 +9,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class TrendChartController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
-
-	/** @var TrendChartModel $trendChartModel */
-	private $trendChartModel;
+	private BaseController $baseController;
+	private TrendChartModel $trendChartModel;
 
 	/**
 	 * Constructor.

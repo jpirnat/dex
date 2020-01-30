@@ -5,29 +5,14 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final class Spread
 {
-	/** @var string $showdownNatureName */
-	private $showdownNatureName;
-
-	/** @var int $hp */
-	private $hp;
-
-	/** @var int $atk */
-	private $atk;
-
-	/** @var int $def */
-	private $def;
-
-	/** @var int $spa */
-	private $spa;
-
-	/** @var int $spd */
-	private $spd;
-
-	/** @var int $spe */
-	private $spe;
-
-	/** @var float $percent */
-	private $percent;
+	private string $showdownNatureName;
+	private int $hp;
+	private int $atk;
+	private int $def;
+	private int $spa;
+	private int $spd;
+	private int $spe;
+	private float $percent;
 
 	/**
 	 * Constructor.

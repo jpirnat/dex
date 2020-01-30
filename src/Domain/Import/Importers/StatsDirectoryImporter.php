@@ -8,8 +8,7 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class StatsDirectoryImporter
 {
-	/** @var MonthDirectoryImporter $monthDirectoryImporter */
-	private $monthDirectoryImporter;
+	private MonthDirectoryImporter $monthDirectoryImporter;
 
 	/**
 	 * Constructor.

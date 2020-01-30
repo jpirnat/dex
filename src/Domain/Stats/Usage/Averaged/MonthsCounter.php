@@ -10,8 +10,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
 
 final class MonthsCounter
 {
-	/** @var MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository */
-	private $movesetRatedPokemonRepository;
+	private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository;
 
 	/**
 	 * Constructor.

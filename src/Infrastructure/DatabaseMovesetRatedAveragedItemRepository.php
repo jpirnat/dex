@@ -14,11 +14,8 @@ use PDO;
 
 final class DatabaseMovesetRatedAveragedItemRepository implements MovesetRatedAveragedItemRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
-
-	/** @var MonthsCounter $monthsCounter */
-	private $monthsCounter;
+	private PDO $db;
+	private MonthsCounter $monthsCounter;
 
 	/**
 	 * Constructor.

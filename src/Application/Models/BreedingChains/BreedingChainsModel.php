@@ -22,48 +22,24 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class BreedingChainsModel
 {
-	/** @var GenerationModel $generationModel */
-	private $generationModel;
-
-	/** @var PokemonRepositoryInterface $pokemonRepository */
-	private $pokemonRepository;
-
-	/** @var MoveRepositoryInterface $moveRepository */
-	private $moveRepository;
-
-	/** @var BreedingChainFinder $breedingChainFinder */
-	private $breedingChainFinder;
-
-	/** @var FormIconRepositoryInterface $formIconRepository */
-	private $formIconRepository;
-
-	/** @var GenerationRepositoryInterface $generationRepository */
-	private $generationRepository;
-
-	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
-	private $pokemonNameRepository;
-
-	/** @var VersionGroupRepositoryInterface $versionGroupRepository */
-	private $versionGroupRepository;
-
-	/** @var PokemonEggGroupRepositoryInterface $pokemonEggGroupRepository */
-	private $pokemonEggGroupRepository;
-
-	/** @var EggGroupNameRepositoryInterface $eggGroupNameRepository */
-	private $eggGroupNameRepository;
-
-	/** @var SpeciesRepositoryInterface $speciesRepository */
-	private $speciesRepository;
-
-	/** @var PokemonMoveFormatter $pokemonMoveFormatter */
-	private $pokemonMoveFormatter;
+	private GenerationModel $generationModel;
+	private PokemonRepositoryInterface $pokemonRepository;
+	private MoveRepositoryInterface $moveRepository;
+	private BreedingChainFinder $breedingChainFinder;
+	private FormIconRepositoryInterface $formIconRepository;
+	private GenerationRepositoryInterface $generationRepository;
+	private PokemonNameRepositoryInterface $pokemonNameRepository;
+	private VersionGroupRepositoryInterface $versionGroupRepository;
+	private PokemonEggGroupRepositoryInterface $pokemonEggGroupRepository;
+	private EggGroupNameRepositoryInterface $eggGroupNameRepository;
+	private SpeciesRepositoryInterface $speciesRepository;
+	private PokemonMoveFormatter $pokemonMoveFormatter;
 
 
-	/** @var array $pokemon */
-	private $pokemon;
+	private array $pokemon = [];
 
 	/** @var BreedingChainRecord[][] $chains */
-	private $chains = [];
+	private array $chains = [];
 
 
 	/**

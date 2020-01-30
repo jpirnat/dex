@@ -13,8 +13,7 @@ use PDO;
 
 final class DatabasePokemonRepository implements PokemonRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

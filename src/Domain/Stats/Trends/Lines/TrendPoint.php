@@ -7,11 +7,8 @@ use DateTime;
 
 final class TrendPoint
 {
-	/** @var DateTime $date */
-	private $date;
-
-	/** @var float $value */
-	private $value;
+	private DateTime $date;
+	private float $value;
 
 	/**
 	 * Constructor.

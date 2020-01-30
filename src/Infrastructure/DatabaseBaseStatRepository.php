@@ -16,8 +16,7 @@ use PDO;
 
 final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

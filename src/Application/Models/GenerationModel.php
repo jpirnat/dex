@@ -15,18 +15,14 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
  */
 final class GenerationModel
 {
-	/** @var GenerationRepositoryInterface $generationRepository */
-	private $generationRepository;
-
-	/** @var VersionGroupRepositoryInterface $versionGroupRepository */
-	private $versionGroupRepository;
+	private GenerationRepositoryInterface $generationRepository;
+	private VersionGroupRepositoryInterface $versionGroupRepository;
 
 
-	/** @var Generation $generation */
-	private $generation;
+	private Generation $generation;
 
 	/** @var Generation[] $generations */
-	private $generations = [];
+	private array $generations = [];
 
 
 	/**

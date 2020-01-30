@@ -11,8 +11,7 @@ use PDO;
 
 final class DatabaseStatNameRepository implements StatNameRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

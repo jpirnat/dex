@@ -5,17 +5,10 @@ namespace Jp\Dex\Domain\Moves;
 
 final class StatsPokemonMove
 {
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string $name */
-	private $name;
-
-	/** @var float $percent */
-	private $percent;
-
-	/** @var float $change */
-	private $change;
+	private string $identifier;
+	private string $name;
+	private float $percent;
+	private float $change;
 
 	/**
 	 * Constructor.

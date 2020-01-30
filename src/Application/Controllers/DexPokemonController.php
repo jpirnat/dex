@@ -9,11 +9,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class DexPokemonController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
-
-	/** @var DexPokemonModel $dexPokemonModel */
-	private $dexPokemonModel;
+	private BaseController $baseController;
+	private DexPokemonModel $dexPokemonModel;
 
 	/**
 	 * Constructor.

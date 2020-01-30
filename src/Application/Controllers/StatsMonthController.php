@@ -9,11 +9,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsMonthController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
-
-	/** @var StatsMonthModel $statsMonthModel */
-	private $statsMonthModel;
+	private BaseController $baseController;
+	private StatsMonthModel $statsMonthModel;
 
 	/**
 	 * Constructor.

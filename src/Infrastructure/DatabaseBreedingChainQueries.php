@@ -9,8 +9,7 @@ use PDO;
 
 final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

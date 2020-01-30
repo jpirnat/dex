@@ -18,14 +18,9 @@ use Psr\Http\Message\ResponseInterface;
 
 final class TrendChartView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
-
-	/** @var TrendChartModel $trendChartModel */
-	private $trendChartModel;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
+	private TrendChartModel $trendChartModel;
 
 	/**
 	 * Constructor.

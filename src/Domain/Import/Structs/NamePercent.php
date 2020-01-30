@@ -5,11 +5,8 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final class NamePercent
 {
-	/** @var string $showdownName */
-	private $showdownName;
-
-	/** @var float $percent */
-	private $percent;
+	private string $showdownName;
+	private float $percent;
 
 	/**
 	 * Constructor.

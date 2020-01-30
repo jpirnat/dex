@@ -11,8 +11,7 @@ use PDO;
 
 final class DatabaseLanguageRepository implements LanguageRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

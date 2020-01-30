@@ -9,11 +9,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class BreedingChainsController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
-
-	/** @var BreedingChainsModel $breedingChainsModel */
-	private $breedingChainsModel;
+	private BaseController $baseController;
+	private BreedingChainsModel $breedingChainsModel;
 
 	/**
 	 * Constructor.

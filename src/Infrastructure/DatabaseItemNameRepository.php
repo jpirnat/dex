@@ -12,8 +12,7 @@ use PDO;
 
 final class DatabaseItemNameRepository implements ItemNameRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

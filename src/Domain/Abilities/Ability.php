@@ -7,14 +7,9 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class Ability
 {
-	/** @var AbilityId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var VersionGroupId $introducedInVersionGroupId */
-	private $introducedInVersionGroupId;
+	private AbilityId $id;
+	private string $identifier;
+	private VersionGroupId $introducedInVersionGroupId;
 
 	/**
 	 * Constructor.

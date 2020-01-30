@@ -10,8 +10,7 @@ use PDOException;
 
 final class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

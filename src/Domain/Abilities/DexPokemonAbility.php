@@ -5,14 +5,9 @@ namespace Jp\Dex\Domain\Abilities;
 
 final class DexPokemonAbility
 {
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string $name */
-	private $name;
-
-	/** @var bool $isHiddenAbility */
-	private $isHiddenAbility;
+	private string $identifier;
+	private string $name;
+	private bool $isHiddenAbility;
 
 	/**
 	 * Constructor.

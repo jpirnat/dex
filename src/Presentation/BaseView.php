@@ -8,8 +8,7 @@ use Jp\Dex\Domain\Languages\LanguageName;
 
 final class BaseView
 {
-	/** @var BaseModel $baseModel */
-	private $baseModel;
+	private BaseModel $baseModel;
 
 	/**
 	 * Constructor.

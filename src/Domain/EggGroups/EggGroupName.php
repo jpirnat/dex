@@ -7,14 +7,9 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class EggGroupName
 {
-	/** @var LanguageId $languageId */
-	private $languageId;
-
-	/** @var EggGroupId $eggGroupId */
-	private $eggGroupId;
-
-	/** @var string $name */
-	private $name;
+	private LanguageId $languageId;
+	private EggGroupId $eggGroupId;
+	private string $name;
 
 	/**
 	 * Constructor.

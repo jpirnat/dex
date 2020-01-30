@@ -8,20 +8,11 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class PokemonAbility
 {
-	/** @var GenerationId $generationId */
-	private $generationId;
-
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var int $slot */
-	private $slot;
-
-	/** @var AbilityId $abilityId */
-	private $abilityId;
-
-	/** @var bool $isHiddenAbility */
-	private $isHiddenAbility;
+	private GenerationId $generationId;
+	private PokemonId $pokemonId;
+	private int $slot;
+	private AbilityId $abilityId;
+	private bool $isHiddenAbility;
 
 	/**
 	 * Constructor.

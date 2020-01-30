@@ -13,18 +13,13 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryIn
 
 final class AbilityModel
 {
-	/** @var MovesetRatedAveragedAbilityRepositoryInterface $movesetRatedAveragedAbilityRepository */
-	private $movesetRatedAveragedAbilityRepository;
-
-	/** @var AbilityNameRepositoryInterface $abilityNameRepository */
-	private $abilityNameRepository;
-
-	/** @var AbilityRepositoryInterface $abilityRepository */
-	private $abilityRepository;
+	private MovesetRatedAveragedAbilityRepositoryInterface $movesetRatedAveragedAbilityRepository;
+	private AbilityNameRepositoryInterface $abilityNameRepository;
+	private AbilityRepositoryInterface $abilityRepository;
 
 
 	/** @var AbilityData[] $abilityDatas */
-	private $abilityDatas = [];
+	private array $abilityDatas = [];
 
 
 	/**

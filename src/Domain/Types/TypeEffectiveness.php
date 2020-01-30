@@ -7,17 +7,10 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class TypeEffectiveness
 {
-	/** @var GenerationId $generationId */
-	private $generationId;
-
-	/** @var TypeId $attackingTypeId */
-	private $attackingTypeId;
-
-	/** @var TypeId $defendingTypeId */
-	private $defendingTypeId;
-
-	/** @var float $factor */
-	private $factor;
+	private GenerationId $generationId;
+	private TypeId $attackingTypeId;
+	private TypeId $defendingTypeId;
+	private float $factor;
 
 	/**
 	 * Constructor.

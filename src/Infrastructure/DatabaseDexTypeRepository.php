@@ -16,8 +16,7 @@ use PDO;
 
 final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

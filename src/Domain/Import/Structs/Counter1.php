@@ -5,17 +5,10 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final class Counter1
 {
-	/** @var string $showdownPokemonName */
-	private $showdownPokemonName;
-
-	/** @var float $number1 */
-	private $number1;
-
-	/** @var float $number2 */
-	private $number2;
-
-	/** @var float $number3 */
-	private $number3;
+	private string $showdownPokemonName;
+	private float $number1;
+	private float $number2;
+	private float $number3;
 
 	/**
 	 * Constructor.

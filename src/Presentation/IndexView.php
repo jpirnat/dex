@@ -8,11 +8,8 @@ use Psr\Http\Message\ResponseInterface;
 
 final class IndexView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
 
 	/**
 	 * Constructor.

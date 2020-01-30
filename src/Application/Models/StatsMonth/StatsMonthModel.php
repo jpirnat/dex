@@ -11,24 +11,16 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 
 final class StatsMonthModel
 {
-	/** @var DateModel $dateModel */
-	private $dateModel;
-
-	/** @var UsageRatedQueriesInterface $usageRatedQueries */
-	private $usageRatedQueries;
-
-	/** @var FormatRepositoryInterface $formatRepository */
-	private $formatRepository;
+	private DateModel $dateModel;
+	private UsageRatedQueriesInterface $usageRatedQueries;
+	private FormatRepositoryInterface $formatRepository;
 
 
-	/** @var string $month */
-	private $month;
-
-	/** @var LanguageId $languageId */
-	private $languageId;
+	private string $month;
+	private LanguageId $languageId;
 
 	/** @var FormatData[] $formatDatas */
-	private $formatDatas = [];
+	private array $formatDatas = [];
 
 
 	/**

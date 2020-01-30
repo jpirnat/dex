@@ -5,17 +5,10 @@ namespace Jp\Dex\Domain\Teammates;
 
 final class StatsPokemonTeammate
 {
-	/** @var string $icon */
-	private $icon;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string $name */
-	private $name;
-
-	/** @var float $percent */
-	private $percent;
+	private string $icon;
+	private string $identifier;
+	private string $name;
+	private float $percent;
 
 	/**
 	 * Constructor.

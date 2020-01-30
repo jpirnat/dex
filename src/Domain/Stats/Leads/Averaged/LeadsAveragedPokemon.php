@@ -19,23 +19,12 @@ final class LeadsAveragedPokemon
 {
 	use ValidateMonthTrait;
 
-	/** @var DateTime $start */
-	private $start;
-
-	/** @var DateTime $end */
-	private $end;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var int $raw */
-	private $raw;
-
-	/** @var float $rawPercent */
-	private $rawPercent;
+	private DateTime $start;
+	private DateTime $end;
+	private FormatId $formatId;
+	private PokemonId $pokemonId;
+	private int $raw;
+	private float $rawPercent;
 
 	/**
 	 * Constructor.

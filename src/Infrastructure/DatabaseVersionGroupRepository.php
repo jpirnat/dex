@@ -12,8 +12,7 @@ use PDO;
 
 final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

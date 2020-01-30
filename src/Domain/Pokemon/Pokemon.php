@@ -8,38 +8,17 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class Pokemon
 {
-	/** @var PokemonId $pokemonId */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string|null $pokemonIdentifier */
-	private $pokemonIdentifier;
-
-	/** @var SpeciesId $speciesId */
-	private $speciesId;
-
-	/** @var bool $isDefaultPokemon */
-	private $isDefaultPokemon;
-
-	/** @var VersionGroupId $introducedInVersionGroupId */
-	private $introducedInVersionGroupId;
-
-	/** @var float $heightM */
-	private $heightM;
-
-	/** @var float $weightKg */
-	private $weightKg;
-
-	/** @var int $genderRatio */
-	private $genderRatio;
-
-	/** @var string $smogonDexIdentifier */
-	private $smogonDexIdentifier;
-
-	/** @var int $sort */
-	private $sort;
+	private PokemonId $id;
+	private string $identifier;
+	private ?string $pokemonIdentifier;
+	private SpeciesId $speciesId;
+	private bool $isDefaultPokemon;
+	private VersionGroupId $introducedInVersionGroupId;
+	private float $heightM;
+	private float $weightKg;
+	private int $genderRatio;
+	private string $smogonDexIdentifier;
+	private int $sort;
 
 	/**
 	 * Constructor.

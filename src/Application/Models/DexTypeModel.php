@@ -13,30 +13,20 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class DexTypeModel
 {
-	/** @var GenerationModel $generationModel */
-	private $generationModel;
-
-	/** @var TypeRepositoryInterface $typeRepository */
-	private $typeRepository;
-
-	/** @var TypeNameRepositoryInterface $typeNameRepository */
-	private $typeNameRepository;
-
-	/** @var DexPokemonRepositoryInterface $dexPokemonRepository */
-	private $dexPokemonRepository;
-
-	/** @var DexMoveRepositoryInterface $dexMoveRepository */
-	private $dexMoveRepository;
+	private GenerationModel $generationModel;
+	private TypeRepositoryInterface $typeRepository;
+	private TypeNameRepositoryInterface $typeNameRepository;
+	private DexPokemonRepositoryInterface $dexPokemonRepository;
+	private DexMoveRepositoryInterface $dexMoveRepository;
 
 
-	/** @var array $type */
-	private $type = [];
+	private array $type = [];
 
 	/** @var DexPokemon[] $pokemon */
-	private $pokemon = [];
+	private array $pokemon = [];
 
 	/** @var DexMove[] $moves */
-	private $moves = [];
+	private array $moves = [];
 
 
 	/**

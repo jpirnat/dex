@@ -14,20 +14,11 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class LeadUsageTrendGenerator
 {
-	/** @var LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository */
-	private $leadsRatedPokemonRepository;
-
-	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
-	private $pokemonNameRepository;
-
-	/** @var PokemonTypeRepositoryInterface $pokemonTypeRepository */
-	private $pokemonTypeRepository;
-
-	/** @var TypeRepositoryInterface $typeRepository */
-	private $typeRepository;
-
-	/** @var TrendPointCalculator $trendPointCalculator */
-	private $trendPointCalculator;
+	private LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository;
+	private PokemonNameRepositoryInterface $pokemonNameRepository;
+	private PokemonTypeRepositoryInterface $pokemonTypeRepository;
+	private TypeRepositoryInterface $typeRepository;
+	private TrendPointCalculator $trendPointCalculator;
 
 	/**
 	 * Constructor.

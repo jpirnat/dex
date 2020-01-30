@@ -10,17 +10,10 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsAveragedUsageView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
-
-	/** @var StatsAveragedUsageModel $statsAveragedUsageModel */
-	private $statsAveragedUsageModel;
-
-	/** @var IntlFormatterFactory $formatterFactory */
-	private $formatterFactory;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
+	private StatsAveragedUsageModel $statsAveragedUsageModel;
+	private IntlFormatterFactory $formatterFactory;
 
 	/**
 	 * Constructor.

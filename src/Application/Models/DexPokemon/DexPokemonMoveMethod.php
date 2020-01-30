@@ -5,17 +5,12 @@ namespace Jp\Dex\Application\Models\DexPokemon;
 
 final class DexPokemonMoveMethod
 {
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string $name */
-	private $name;
-
-	/** @var string $description */
-	private $description;
+	private string $identifier;
+	private string $name;
+	private string $description;
 
 	/** @var DexPokemonMove[] $moves */
-	private $moves;
+	private array $moves;
 
 	/**
 	 * Constructor.

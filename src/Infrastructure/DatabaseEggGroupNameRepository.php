@@ -11,8 +11,7 @@ use PDO;
 
 final class DatabaseEggGroupNameRepository implements EggGroupNameRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

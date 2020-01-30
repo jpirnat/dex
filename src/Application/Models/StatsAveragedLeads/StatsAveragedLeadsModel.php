@@ -17,51 +17,27 @@ use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
 final class StatsAveragedLeadsModel
 {
-	/** @var FormatRepositoryInterface $formatRepository */
-	private $formatRepository;
-
-	/** @var RatingQueriesInterface $ratingQueries */
-	private $ratingQueries;
-
-	/** @var LeadsAveragedPokemonRepositoryInterface $leadsAveragedPokemonRepository */
-	private $leadsAveragedPokemonRepository;
-
-	/** @var LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository */
-	private $leadsRatedAveragedPokemonRepository;
-
-	/** @var MonthsCounter $monthsCounter */
-	private $monthsCounter;
-
-	/** @var PokemonRepositoryInterface $pokemonRepository */
-	private $pokemonRepository;
-
-	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
-	private $pokemonNameRepository;
-
-	/** @var FormIconRepositoryInterface $formIconRepository */
-	private $formIconRepository;
+	private FormatRepositoryInterface $formatRepository;
+	private RatingQueriesInterface $ratingQueries;
+	private LeadsAveragedPokemonRepositoryInterface $leadsAveragedPokemonRepository;
+	private LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository;
+	private MonthsCounter $monthsCounter;
+	private PokemonRepositoryInterface $pokemonRepository;
+	private PokemonNameRepositoryInterface $pokemonNameRepository;
+	private FormIconRepositoryInterface $formIconRepository;
 
 
-	/** @var string $start */
-	private $start;
-
-	/** @var string $end */
-	private $end;
-
-	/** @var Format $format */
-	private $format;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var LanguageId $languageId */
-	private $languageId;
+	private string $start;
+	private string $end;
+	private Format $format;
+	private int $rating;
+	private LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private $ratings = [];
+	private array $ratings = [];
 
 	/** @var LeadsData[] $leadsDatas */
-	private $leadsDatas = [];
+	private array $leadsDatas = [];
 
 
 	/**

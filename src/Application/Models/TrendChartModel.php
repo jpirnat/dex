@@ -23,60 +23,32 @@ use Jp\Dex\Domain\Stats\Trends\Lines\TrendLine;
 
 final class TrendChartModel
 {
-	/** @var FormatRepositoryInterface $formatRepository */
-	private $formatRepository;
-
-	/** @var PokemonRepositoryInterface $pokemonRepository */
-	private $pokemonRepository;
-
-	/** @var AbilityRepositoryInterface $abilityRepository */
-	private $abilityRepository;
-
-	/** @var ItemRepositoryInterface $itemRepository */
-	private $itemRepository;
-
-	/** @var MoveRepositoryInterface $moveRepository */
-	private $moveRepository;
-
-	/** @var UsageTrendGenerator $usageTrendGenerator */
-	private $usageTrendGenerator;
-
-	/** @var LeadUsageTrendGenerator $leadUsageTrendGenerator */
-	private $leadUsageTrendGenerator;
-
-	/** @var MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator */
-	private $movesetAbilityTrendGenerator;
-
-	/** @var MovesetItemTrendGenerator $movesetItemTrendGenerator */
-	private $movesetItemTrendGenerator;
-
-	/** @var MovesetMoveTrendGenerator $movesetMoveTrendGenerator */
-	private $movesetMoveTrendGenerator;
-
-	/** @var UsageAbilityTrendGenerator $usageAbilityTrendGenerator */
-	private $usageAbilityTrendGenerator;
-
-	/** @var UsageItemTrendGenerator $usageItemTrendGenerator */
-	private $usageItemTrendGenerator;
-
-	/** @var UsageMoveTrendGenerator $usageMoveTrendGenerator */
-	private $usageMoveTrendGenerator;
-
-	/** @var LanguageRepositoryInterface $languageRepository */
-	private $languageRepository;
+	private FormatRepositoryInterface $formatRepository;
+	private PokemonRepositoryInterface $pokemonRepository;
+	private AbilityRepositoryInterface $abilityRepository;
+	private ItemRepositoryInterface $itemRepository;
+	private MoveRepositoryInterface $moveRepository;
+	private UsageTrendGenerator $usageTrendGenerator;
+	private LeadUsageTrendGenerator $leadUsageTrendGenerator;
+	private MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator;
+	private MovesetItemTrendGenerator $movesetItemTrendGenerator;
+	private MovesetMoveTrendGenerator $movesetMoveTrendGenerator;
+	private UsageAbilityTrendGenerator $usageAbilityTrendGenerator;
+	private UsageItemTrendGenerator $usageItemTrendGenerator;
+	private UsageMoveTrendGenerator $usageMoveTrendGenerator;
+	private LanguageRepositoryInterface $languageRepository;
 
 
 	/** @var TrendLine[] $trendLines */
-	private $trendLines = [];
+	private array $trendLines = [];
 
 	/** @var string[] $similarities */
-	private $similarities = [];
+	private array $similarities = [];
 
 	/** @var string[] $differences */
-	private $differences = [];
+	private array $differences = [];
 
-	/** @var Language $language */
-	private $language;
+	private Language $language;
 
 
 	/**

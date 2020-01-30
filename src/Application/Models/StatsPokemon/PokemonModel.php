@@ -16,24 +16,16 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class PokemonModel
 {
-	/** @var DexPokemonRepositoryInterface $dexPokemonRepository */
-	private $dexPokemonRepository;
-
-	/** @var ModelRepositoryInterface $modelRepository */
-	private $modelRepository;
-
-	/** @var StatNameRepositoryInterface $statNameRepository */
-	private $statNameRepository;
+	private DexPokemonRepositoryInterface $dexPokemonRepository;
+	private ModelRepositoryInterface $modelRepository;
+	private StatNameRepositoryInterface $statNameRepository;
 
 
-	/** @var DexPokemon $pokemon */
-	private $pokemon;
-
-	/** @var Model $model */
-	private $model;
+	private DexPokemon $pokemon;
+	private Model $model;
 
 	/** @var StatData[] $statDatas */
-	private $statDatas = [];
+	private array $statDatas = [];
 
 
 	/**

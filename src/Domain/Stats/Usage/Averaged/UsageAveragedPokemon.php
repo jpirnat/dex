@@ -19,29 +19,14 @@ final class UsageAveragedPokemon
 {
 	use ValidateMonthTrait;
 
-	/** @var DateTime $start */
-	private $start;
-
-	/** @var DateTime $end */
-	private $end;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var int $raw */
-	private $raw;
-
-	/** @var float $rawPercent */
-	private $rawPercent;
-
-	/** @var int $real */
-	private $real;
-
-	/** @var float $realPercent */
-	private $realPercent;
+	private DateTime $start;
+	private DateTime $end;
+	private FormatId $formatId;
+	private PokemonId $pokemonId;
+	private int $raw;
+	private float $rawPercent;
+	private int $real;
+	private float $realPercent;
 
 	/**
 	 * Constructor.

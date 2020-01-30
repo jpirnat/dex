@@ -8,14 +8,9 @@ use Jp\Dex\Domain\Types\TypeId;
 
 final class TypeIcon
 {
-	/** @var LanguageId $languageId */
-	private $languageId;
-
-	/** @var TypeId $typeId */
-	private $typeId;
-
-	/** @var string $icon */
-	private $icon;
+	private LanguageId $languageId;
+	private TypeId $typeId;
+	private string $icon;
 
 	/**
 	 * Constructor.

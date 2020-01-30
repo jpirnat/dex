@@ -11,18 +11,13 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexTypesModel
 {
-	/** @var GenerationModel $generationModel */
-	private $generationModel;
-
-	/** @var DexTypeRepositoryInterface $dexTypeRepository */
-	private $dexTypeRepository;
-
-	/** @var TypeEffectivenessRepositoryInterface $typeEffectivenessRepository */
-	private $typeEffectivenessRepository;
+	private GenerationModel $generationModel;
+	private DexTypeRepositoryInterface $dexTypeRepository;
+	private TypeEffectivenessRepositoryInterface $typeEffectivenessRepository;
 
 
 	/** @var DexType[] $types */
-	private $types;
+	private $types = [];
 
 	/** @var int[][] $factors */
 	private $factors = [];

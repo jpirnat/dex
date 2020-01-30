@@ -9,11 +9,8 @@ use Psr\Http\Message\StreamInterface;
 
 final class UsageFileParser
 {
-	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
-	private $showdownPokemonRepository;
-
-	/** @var UsageFileExtractor $usageFileExtractor */
-	private $usageFileExtractor;
+	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
+	private UsageFileExtractor $usageFileExtractor;
 
 	/**
 	 * Constructor.

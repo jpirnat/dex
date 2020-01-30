@@ -11,8 +11,7 @@ use PDO;
 
 final class DatabaseLeadsRepository implements LeadsRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

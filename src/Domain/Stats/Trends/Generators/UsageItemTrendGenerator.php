@@ -16,23 +16,12 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class UsageItemTrendGenerator
 {
-	/** @var UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository */
-	private $usageRatedPokemonItemRepository;
-
-	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
-	private $pokemonNameRepository;
-
-	/** @var ItemNameRepositoryInterface $itemNameRepository */
-	private $itemNameRepository;
-
-	/** @var PokemonTypeRepositoryInterface $pokemonTypeRepository */
-	private $pokemonTypeRepository;
-
-	/** @var TypeRepositoryInterface $typeRepository */
-	private $typeRepository;
-
-	/** @var TrendPointCalculator $trendPointCalculator */
-	private $trendPointCalculator;
+	private UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository;
+	private PokemonNameRepositoryInterface $pokemonNameRepository;
+	private ItemNameRepositoryInterface $itemNameRepository;
+	private PokemonTypeRepositoryInterface $pokemonTypeRepository;
+	private TypeRepositoryInterface $typeRepository;
+	private TrendPointCalculator $trendPointCalculator;
 
 	/**
 	 * Constructor.

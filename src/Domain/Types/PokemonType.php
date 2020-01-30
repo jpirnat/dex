@@ -8,17 +8,10 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class PokemonType
 {
-	/** @var GenerationId $generationId */
-	private $generationId;
-
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var int $slot */
-	private $slot;
-
-	/** @var TypeId $typeId */
-	private $typeId;
+	private GenerationId $generationId;
+	private PokemonId $pokemonId;
+	private int $slot;
+	private TypeId $typeId;
 
 	/**
 	 * Constructor.

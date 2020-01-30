@@ -12,8 +12,7 @@ use PDO;
 
 final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

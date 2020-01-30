@@ -16,23 +16,12 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class MovesetItemTrendGenerator
 {
-	/** @var MovesetRatedItemRepositoryInterface $movesetRatedItemRepository */
-	private $movesetRatedItemRepository;
-
-	/** @var PokemonNameRepositoryInterface $pokemonNameRepository */
-	private $pokemonNameRepository;
-
-	/** @var ItemNameRepositoryInterface $itemNameRepository */
-	private $itemNameRepository;
-
-	/** @var PokemonTypeRepositoryInterface $pokemonTypeRepository */
-	private $pokemonTypeRepository;
-
-	/** @var TypeRepositoryInterface $typeRepository */
-	private $typeRepository;
-
-	/** @var TrendPointCalculator $trendPointCalculator */
-	private $trendPointCalculator;
+	private MovesetRatedItemRepositoryInterface $movesetRatedItemRepository;
+	private PokemonNameRepositoryInterface $pokemonNameRepository;
+	private ItemNameRepositoryInterface $itemNameRepository;
+	private PokemonTypeRepositoryInterface $pokemonTypeRepository;
+	private TypeRepositoryInterface $typeRepository;
+	private TrendPointCalculator $trendPointCalculator;
 
 	/**
 	 * Constructor.

@@ -11,17 +11,10 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class MovesetDirectoryImporter
 {
-	/** @var MovesetFileImporter $movesetFileImporter */
-	private $movesetFileImporter;
-
-	/** @var MonthExtractor $monthExtractor */
-	private $monthExtractor;
-
-	/** @var FormatRatingExtractor $formatRatingExtractor */
-	private $formatRatingExtractor;
-
-	/** @var ShowdownFormatRepositoryInterface $showdownFormatRepository */
-	private $showdownFormatRepository;
+	private MovesetFileImporter $movesetFileImporter;
+	private MonthExtractor $monthExtractor;
+	private FormatRatingExtractor $formatRatingExtractor;
+	private ShowdownFormatRepositoryInterface $showdownFormatRepository;
 
 	/**
 	 * Constructor.

@@ -13,8 +13,7 @@ use PDO;
 
 final class DatabaseSpeciesRepository implements SpeciesRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

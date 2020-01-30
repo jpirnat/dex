@@ -9,11 +9,8 @@ use Psr\Http\Message\StreamInterface;
 
 final class LeadsFileParser
 {
-	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
-	private $showdownPokemonRepository;
-
-	/** @var LeadsFileExtractor $leadsFileExtractor */
-	private $leadsFileExtractor;
+	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
+	private LeadsFileExtractor $leadsFileExtractor;
 
 	/**
 	 * Constructor.

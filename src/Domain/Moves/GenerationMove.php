@@ -13,80 +13,31 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class GenerationMove
 {
-	/** @var GenerationId $generationId */
-	private $generationId;
-
-	/** @var MoveId $moveId */
-	private $moveId;
-
-	/** @var TypeId $typeId */
-	private $typeId;
-
-	/** @var QualityId|null $qualityId */
-	private $qualityId;
-
-	/** @var CategoryId $categoryId */
-	private $categoryId;
-
-	/** @var int $power */
-	private $power;
-
-	/** @var int $accuracy */
-	private $accuracy;
-
-	/** @var int $pp */
-	private $pp;
-
-	/** @var int $priority */
-	private $priority;
-
-	/** @var int $minHits */
-	private $minHits;
-
-	/** @var int $maxHits */
-	private $maxHits;
-
-	/** @var InflictionId|null $inflictionId */
-	private $inflictionId;
-
-	/** @var int $inflictionPercent */
-	private $inflictionPercent;
-
-	/** @var int $minTurns */
-	private $minTurns;
-
-	/** @var int $maxTurns */
-	private $maxTurns;
-
-	/** @var int $critStage */
-	private $critStage;
-
-	/** @var int $flinchPercent */
-	private $flinchPercent;
-
-	/** @var int $effect */
-	private $effect;
-
-	/** @var int|null $effectPercent */
-	private $effectPercent;
-
-	/** @var int $recoilPercent */
-	private $recoilPercent;
-
-	/** @var int $healPercent */
-	private $healPercent;
-
-	/** @var TargetId $targetId */
-	private $targetId;
-
-	/** @var MoveId|null $zMoveId */
-	private $zMoveId;
-
-	/** @var int|null $zBasePower */
-	private $zBasePower;
-
-	/** @var ZPowerEffectId|null $zPowerEffectId */
-	private $zPowerEffectId;
+	private GenerationId $generationId;
+	private MoveId $moveId;
+	private TypeId $typeId;
+	private ?QualityId $qualityId;
+	private CategoryId $categoryId;
+	private int $power;
+	private int $accuracy;
+	private int $pp;
+	private int $priority;
+	private int $minHits;
+	private int $maxHits;
+	private ?InflictionId $inflictionId;
+	private int $inflictionPercent;
+	private int $minTurns;
+	private int $maxTurns;
+	private int $critStage;
+	private int $flinchPercent;
+	private int $effect;
+	private ?int $effectPercent;
+	private int $recoilPercent;
+	private int $healPercent;
+	private TargetId $targetId;
+	private ?MoveId $zMoveId;
+	private ?int $zBasePower;
+	private ?ZPowerEffectId $zPowerEffectId;
 
 	/**
 	 * Constructor.

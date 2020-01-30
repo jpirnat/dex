@@ -10,11 +10,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsUsageController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
-
-	/** @var StatsUsageModel $statsUsageModel */
-	private $statsUsageModel;
+	private BaseController $baseController;
+	private StatsUsageModel $statsUsageModel;
 
 	/**
 	 * Constructor.

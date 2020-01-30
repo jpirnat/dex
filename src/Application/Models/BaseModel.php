@@ -10,14 +10,13 @@ use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
 
 final class BaseModel
 {
-	/** @var int $currentYear */
-	private $currentYear;
+	private int $currentYear;
+	private LanguageId $currentLanguageId;
 
-	/** @var LanguageId $currentLanguageId */
-	private $currentLanguageId;
 
 	/** @var LanguageName[] $languageNames */
-	private $languageNames = [];
+	private array $languageNames = [];
+
 
 	/**
 	 * Constructor.

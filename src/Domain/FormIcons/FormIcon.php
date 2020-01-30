@@ -8,20 +8,11 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class FormIcon
 {
-	/** @var GenerationId $generationId */
-	private $generationId;
-
-	/** @var FormId $formId */
-	private $formId;
-
-	/** @var bool $isFemale */
-	private $isFemale;
-
-	/** @var bool $isRight */
-	private $isRight;
-
-	/** @var string $image */
-	private $image;
+	private GenerationId $generationId;
+	private FormId $formId;
+	private bool $isFemale;
+	private bool $isRight;
+	private string $image;
 
 	/**
 	 * Constructor.

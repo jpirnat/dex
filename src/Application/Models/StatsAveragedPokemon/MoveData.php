@@ -5,14 +5,9 @@ namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
 final class MoveData
 {
-	/** @var string $moveName */
-	private $moveName;
-
-	/** @var string $moveIdentifier */
-	private $moveIdentifier;
-
-	/** @var float $percent */
-	private $percent;
+	private string $moveName;
+	private string $moveIdentifier;
+	private float $percent;
 
 	/**
 	 * Constructor.

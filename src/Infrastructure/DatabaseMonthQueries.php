@@ -10,8 +10,7 @@ use PDO;
 
 final class DatabaseMonthQueries implements MonthQueriesInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

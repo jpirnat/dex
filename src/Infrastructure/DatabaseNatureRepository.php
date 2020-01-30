@@ -12,8 +12,7 @@ use PDO;
 
 final class DatabaseNatureRepository implements NatureRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

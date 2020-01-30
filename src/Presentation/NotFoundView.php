@@ -9,14 +9,9 @@ use Psr\Http\Message\ResponseInterface;
 
 final class NotFoundView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
-
-	/** @var NotFoundModel $notFoundModel */
-	private $notFoundModel;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
+	private NotFoundModel $notFoundModel;
 
 	/**
 	 * Constructor.

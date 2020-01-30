@@ -13,23 +13,12 @@ use Psr\Http\Message\StreamInterface;
 
 final class MovesetFileParser
 {
-	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
-	private $showdownPokemonRepository;
-
-	/** @var ShowdownAbilityRepositoryInterface $showdownAbilityRepository */
-	private $showdownAbilityRepository;
-
-	/** @var ShowdownItemRepositoryInterface $showdownItemRepository */
-	private $showdownItemRepository;
-
-	/** @var ShowdownNatureRepositoryInterface $showdownNatureRepository */
-	private $showdownNatureRepository;
-
-	/** @var ShowdownMoveRepositoryInterface $showdownMoveRepository */
-	private $showdownMoveRepository;
-
-	/** @var MovesetFileExtractor $movesetFileExtractor */
-	private $movesetFileExtractor;
+	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
+	private ShowdownAbilityRepositoryInterface $showdownAbilityRepository;
+	private ShowdownItemRepositoryInterface $showdownItemRepository;
+	private ShowdownNatureRepositoryInterface $showdownNatureRepository;
+	private ShowdownMoveRepositoryInterface $showdownMoveRepository;
+	private MovesetFileExtractor $movesetFileExtractor;
 
 	/**
 	 * Constructor.

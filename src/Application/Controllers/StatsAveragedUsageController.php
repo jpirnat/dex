@@ -9,11 +9,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsAveragedUsageController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
-
-	/** @var StatsAveragedUsageModel $usageAveragedModel */
-	private $usageAveragedModel;
+	private BaseController $baseController;
+	private StatsAveragedUsageModel $usageAveragedModel;
 
 	/**
 	 * Constructor.

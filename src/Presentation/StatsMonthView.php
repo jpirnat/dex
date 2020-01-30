@@ -10,20 +10,11 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsMonthView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
-
-	/** @var StatsMonthModel $statsMonthModel */
-	private $statsMonthModel;
-
-	/** @var IntlFormatterFactory $formatterFactory */
-	private $formatterFactory;
-
-	/** @var MonthControlFormatter $monthControlFormatter */
-	private $monthControlFormatter;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
+	private StatsMonthModel $statsMonthModel;
+	private IntlFormatterFactory $formatterFactory;
+	private MonthControlFormatter $monthControlFormatter;
 
 	/**
 	 * Constructor.

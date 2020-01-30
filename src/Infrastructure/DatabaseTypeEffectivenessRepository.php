@@ -11,8 +11,7 @@ use PDO;
 
 final class DatabaseTypeEffectivenessRepository implements TypeEffectivenessRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

@@ -5,17 +5,10 @@ namespace Jp\Dex\Domain\Languages;
 
 final class Language
 {
-	/** @var LanguageId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string $locale */
-	private $locale;
-
-	/** @var string $dateFormat */
-	private $dateFormat;
+	private LanguageId $id;
+	private string $identifier;
+	private string $locale;
+	private string $dateFormat;
 
 	/**
 	 * Constructor.

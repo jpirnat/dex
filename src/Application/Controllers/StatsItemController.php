@@ -9,11 +9,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsItemController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
-
-	/** @var StatsItemModel $statsItemModel */
-	private $statsItemModel;
+	private BaseController $baseController;
+	private StatsItemModel $statsItemModel;
 
 	/**
 	 * Constructor.

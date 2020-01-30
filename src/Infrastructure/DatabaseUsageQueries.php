@@ -10,8 +10,7 @@ use PDO;
 
 final class DatabaseUsageQueries implements UsageQueriesInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

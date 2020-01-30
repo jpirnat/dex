@@ -12,17 +12,10 @@ use Psr\Http\Message\ResponseInterface;
 
 final class DexPokemonView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
-
-	/** @var DexPokemonModel $dexPokemonModel */
-	private $dexPokemonModel;
-
-	/** @var DexFormatter $dexFormatter */
-	private $dexFormatter;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
+	private DexPokemonModel $dexPokemonModel;
+	private DexFormatter $dexFormatter;
 
 	/**
 	 * Constructor.

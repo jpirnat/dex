@@ -15,14 +15,9 @@ use PDO;
 
 final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
-
-	/** @var DexTypeRepositoryInterface $dexTypeRepository */
-	private $dexTypeRepository;
-
-	/** @var DexCategoryRepositoryInterface $dexCategoryRepository */
-	private $dexCategoryRepository;
+	private PDO $db;
+	private DexTypeRepositoryInterface $dexTypeRepository;
+	private DexCategoryRepositoryInterface $dexCategoryRepository;
 
 	/**
 	 * Constructor.

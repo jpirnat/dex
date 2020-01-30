@@ -11,8 +11,7 @@ use PDO;
 
 final class DatabaseGenerationRepository implements GenerationRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

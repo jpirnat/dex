@@ -12,21 +12,16 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexPokemonsModel
 {
-	/** @var GenerationModel $generationModel */
-	private $generationModel;
-
-	/** @var DexPokemonRepositoryInterface $dexPokemonRepository */
-	private $dexPokemonRepository;
-
-	/** @var StatNameRepositoryInterface $statNameRepository */
-	private $statNameRepository;
+	private GenerationModel $generationModel;
+	private DexPokemonRepositoryInterface $dexPokemonRepository;
+	private StatNameRepositoryInterface $statNameRepository;
 
 
 	/** @var string[] $statAbbreviations */
-	private $statAbbreviations = [];
+	private array $statAbbreviations = [];
 
 	/** @var DexPokemon[] $pokemon */
-	private $pokemon = [];
+	private array $pokemon = [];
 
 
 	/**

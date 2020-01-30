@@ -9,8 +9,7 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class BaseController
 {
-	/** @var BaseModel $baseModel */
-	private $baseModel;
+	private BaseModel $baseModel;
 
 	/**
 	 * Constructor.

@@ -11,8 +11,7 @@ use PDO;
 
 final class DatabasePokemonEggGroupRepository implements PokemonEggGroupRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

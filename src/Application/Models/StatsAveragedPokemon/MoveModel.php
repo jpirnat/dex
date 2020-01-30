@@ -13,18 +13,13 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInter
 
 final class MoveModel
 {
-	/** @var MovesetRatedAveragedMoveRepositoryInterface $movesetRatedAveragedMoveRepository */
-	private $movesetRatedAveragedMoveRepository;
-
-	/** @var MoveNameRepositoryInterface $moveNameRepository */
-	private $moveNameRepository;
-
-	/** @var MoveRepositoryInterface $moveRepository */
-	private $moveRepository;
+	private MovesetRatedAveragedMoveRepositoryInterface $movesetRatedAveragedMoveRepository;
+	private MoveNameRepositoryInterface $moveNameRepository;
+	private MoveRepositoryInterface $moveRepository;
 
 
 	/** @var MoveData[] $moveDatas */
-	private $moveDatas = [];
+	private array $moveDatas = [];
 
 
 	/**

@@ -15,11 +15,10 @@ use Jp\Dex\Domain\PokemonMoves\PokemonMove;
  */
 final class BreedingTree
 {
-	/** @var PokemonMove $value */
-	private $value;
+	private PokemonMove $value;
 
 	/** @var BreedingTree[] $parents */
-	private $parents = [];
+	private array $parents = [];
 
 	/**
 	 * Constructor.

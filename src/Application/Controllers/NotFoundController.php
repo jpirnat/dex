@@ -8,11 +8,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class NotFoundController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
-
-	/** @var NotFoundModel $notFoundModel */
-	private $notFoundModel;
+	private BaseController $baseController;
+	private NotFoundModel $notFoundModel;
 
 	/**
 	 * Constructor.

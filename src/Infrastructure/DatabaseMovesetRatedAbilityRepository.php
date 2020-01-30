@@ -13,8 +13,7 @@ use PDO;
 
 final class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbilityRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

@@ -8,12 +8,11 @@ use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
 
 final class StatsIndexModel
 {
-	/** @var UsageQueriesInterface $usageQueries */
-	private $usageQueries;
+	private UsageQueriesInterface $usageQueries;
 
 
 	/** @var DateTime[] $months */
-	private $months = [];
+	private array $months = [];
 
 
 	/**

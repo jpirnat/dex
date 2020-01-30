@@ -9,11 +9,11 @@ use Jp\Dex\Domain\Types\Type;
 
 final class MovesetMoveTrendLine extends TrendLine
 {
-	/** @var MoveName $moveName */
-	private $moveName;
+	/** @var $moveName */
+	private MoveName $moveName;
 
-	/** @var Type $moveType */
-	private $moveType;
+	/** @var $moveType */
+	private Type $moveType;
 
 	/**
 	 * Constructor.

@@ -17,20 +17,11 @@ use Psr\Http\Message\StreamInterface;
 
 final class LeadsFileImporter
 {
-	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
-	private $showdownPokemonRepository;
-
-	/** @var LeadsRepositoryInterface $leadsRepository */
-	private $leadsRepository;
-
-	/** @var LeadsPokemonRepositoryInterface $leadsPokemonRepository */
-	private $leadsPokemonRepository;
-
-	/** @var LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository */
-	private $leadsRatedPokemonRepository;
-
-	/** @var LeadsFileExtractor $leadsFileExtractor */
-	private $leadsFileExtractor;
+	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
+	private LeadsRepositoryInterface $leadsRepository;
+	private LeadsPokemonRepositoryInterface $leadsPokemonRepository;
+	private LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository;
+	private LeadsFileExtractor $leadsFileExtractor;
 
 	/**
 	 * Constructor.

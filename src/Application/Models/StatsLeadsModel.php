@@ -12,36 +12,22 @@ use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
 final class StatsLeadsModel
 {
-	/** @var DateModel $dateModel */
-	private $dateModel;
-
-	/** @var FormatRepositoryInterface $formatRepository */
-	private $formatRepository;
-
-	/** @var RatingQueriesInterface $ratingQueries */
-	private $ratingQueries;
-
-	/** @var StatsLeadsPokemonRepositoryInterface $statsLeadsPokemonRepository */
-	private $statsLeadsPokemonRepository;
+	private DateModel $dateModel;
+	private FormatRepositoryInterface $formatRepository;
+	private RatingQueriesInterface $ratingQueries;
+	private StatsLeadsPokemonRepositoryInterface $statsLeadsPokemonRepository;
 
 
-	/** @var string $month */
-	private $month;
-
-	/** @var Format $format */
-	private $format;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var LanguageId $languageId */
-	private $languageId;
+	private string $month;
+	private Format $format;
+	private int $rating;
+	private LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private $ratings = [];
+	private array $ratings = [];
 
 	/** @var StatsLeadsPokemon[] $pokemon */
-	private $pokemon = [];
+	private array $pokemon = [];
 
 
 	/**

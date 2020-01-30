@@ -16,24 +16,15 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexPokemonMovesModel
 {
-	/** @var PokemonMoveRepositoryInterface $pokemonMoveRepository */
-	private $pokemonMoveRepository;
-
-	/** @var TmRepositoryInterface $tmRepository */
-	private $tmRepository;
-
-	/** @var DexMoveRepositoryInterface $dexMoveRepository */
-	private $dexMoveRepository;
-
-	/** @var MoveMethodRepositoryInterface $moveMethodRepository */
-	private $moveMethodRepository;
-
-	/** @var MoveMethodNameRepositoryInterface $moveMethodNameRepository */
-	private $moveMethodNameRepository;
+	private PokemonMoveRepositoryInterface $pokemonMoveRepository;
+	private TmRepositoryInterface $tmRepository;
+	private DexMoveRepositoryInterface $dexMoveRepository;
+	private MoveMethodRepositoryInterface $moveMethodRepository;
+	private MoveMethodNameRepositoryInterface $moveMethodNameRepository;
 
 
 	/** @var DexPokemonMoveMethod[] $methods */
-	private $methods = [];
+	private array $methods = [];
 
 
 	/**

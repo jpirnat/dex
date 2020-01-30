@@ -14,8 +14,7 @@ use PDO;
 
 final class DatabaseTmRepository implements TmRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

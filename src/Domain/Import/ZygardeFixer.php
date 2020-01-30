@@ -15,8 +15,7 @@ use PDO;
  */
 final class ZygardeFixer
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

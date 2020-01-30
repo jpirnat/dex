@@ -13,14 +13,9 @@ final class Usage
 {
 	use ValidateMonthTrait;
 
-	/** @var DateTime $month */
-	private $month;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var int $totalBattles */
-	private $totalBattles;
+	private DateTime $month;
+	private FormatId $formatId;
+	private int $totalBattles;
 
 	/**
 	 * Constructor.

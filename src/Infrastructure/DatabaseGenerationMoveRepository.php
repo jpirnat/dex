@@ -18,8 +18,7 @@ use PDO;
 
 final class DatabaseGenerationMoveRepository implements GenerationMoveRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

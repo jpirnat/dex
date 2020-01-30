@@ -8,20 +8,11 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class TechnicalMachine
 {
-	/** @var VersionGroupId $versionGroupId */
-	private $versionGroupId;
-
-	/** @var bool $isHm */
-	private $isHm;
-
-	/** @var int $number */
-	private $number;
-
-	/** @var ItemId $itemId */
-	private $itemId;
-
-	/** @var MoveId $moveId */
-	private $moveId;
+	private VersionGroupId $versionGroupId;
+	private bool $isHm;
+	private int $number;
+	private ItemId $itemId;
+	private MoveId $moveId;
 
 	/**
 	 * Constructor.

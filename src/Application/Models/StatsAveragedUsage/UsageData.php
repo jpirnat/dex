@@ -5,35 +5,16 @@ namespace Jp\Dex\Application\Models\StatsAveragedUsage;
 
 final class UsageData
 {
-	/** @var int $rank */
-	private $rank;
-
-	/** @var string $pokemonName */
-	private $pokemonName;
-
-	/** @var int $months */
-	private $months;
-
-	/** @var string $pokemonIdentifier */
-	private $pokemonIdentifier;
-
-	/** @var string $formIcon */
-	private $formIcon;
-
-	/** @var float $usagePercent */
-	private $usagePercent;
-
-	/** @var int $raw */
-	private $raw;
-
-	/** @var float $rawPercent */
-	private $rawPercent;
-
-	/** @var int $real */
-	private $real;
-
-	/** @var float $realPercent */
-	private $realPercent;
+	private int $rank;
+	private string $pokemonName;
+	private int $months;
+	private string $pokemonIdentifier;
+	private string $formIcon;
+	private float $usagePercent;
+	private int $raw;
+	private float $rawPercent;
+	private int $real;
+	private float $realPercent;
 
 	/**
 	 * Constructor.

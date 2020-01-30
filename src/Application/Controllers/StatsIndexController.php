@@ -8,11 +8,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsIndexController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
-
-	/** @var StatsIndexModel $statsIndexModel */
-	private $statsIndexModel;
+	private BaseController $baseController;
+	private StatsIndexModel $statsIndexModel;
 
 	/**
 	 * Constructor.

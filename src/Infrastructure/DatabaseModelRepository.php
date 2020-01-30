@@ -11,8 +11,7 @@ use PDO;
 
 final class DatabaseModelRepository implements ModelRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

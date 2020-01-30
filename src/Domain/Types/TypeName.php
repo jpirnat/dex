@@ -7,14 +7,9 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class TypeName
 {
-	/** @var LanguageId $languageId */
-	private $languageId;
-
-	/** @var TypeId $typeId */
-	private $typeId;
-
-	/** @var string $name */
-	private $name;
+	private LanguageId $languageId;
+	private TypeId $typeId;
+	private string $name;
 
 	/**
 	 * Constructor.

@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Stats;
 final class StatValueContainer
 {
 	/** @var StatValue[] $statValues */
-	private $statValues = [];
+	private array $statValues = [];
 
 	/**
 	 * Add a stat value to the container.

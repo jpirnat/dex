@@ -13,14 +13,9 @@ final class Leads
 {
 	use ValidateMonthTrait;
 
-	/** @var DateTime $month */
-	private $month;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var int $totalLeads */
-	private $totalLeads;
+	private DateTime $month;
+	private FormatId $formatId;
+	private int $totalLeads;
 
 	/**
 	 * Constructor.

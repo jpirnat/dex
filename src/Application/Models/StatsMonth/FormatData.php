@@ -5,14 +5,11 @@ namespace Jp\Dex\Application\Models\StatsMonth;
 
 final class FormatData
 {
-	/** @var string $formatIdentifier */
-	private $formatIdentifier;
-
-	/** @var string $formatName */
-	private $formatName;
+	private string $formatIdentifier;
+	private string $formatName;
 
 	/** @var int[] $ratings */
-	private $ratings = [];
+	private array $ratings = [];
 
 	/**
 	 * Constructor.

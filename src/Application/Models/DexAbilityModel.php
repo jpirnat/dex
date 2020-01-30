@@ -12,30 +12,20 @@ use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 
 final class DexAbilityModel
 {
-	/** @var GenerationModel $generationModel */
-	private $generationModel;
-
-	/** @var AbilityRepositoryInterface $abilityRepository */
-	private $abilityRepository;
-
-	/** @var AbilityNameRepositoryInterface $abilityNameRepository */
-	private $abilityNameRepository;
-
-	/** @var AbilityDescriptionRepositoryInterface $abilityDescriptionRepository */
-	private $abilityDescriptionRepository;
-
-	/** @var DexPokemonRepositoryInterface $dexPokemonRepository */
-	private $dexPokemonRepository;
+	private GenerationModel $generationModel;
+	private AbilityRepositoryInterface $abilityRepository;
+	private AbilityNameRepositoryInterface $abilityNameRepository;
+	private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository;
+	private DexPokemonRepositoryInterface $dexPokemonRepository;
 
 
-	/** @var array $ability */
-	private $ability;
+	private array $ability;
 
 	/** @var DexPokemon[] $normalPokemon */
-	private $normalPokemon;
+	private array $normalPokemon = [];
 
 	/** @var DexPokemon[] $hiddenPokemon */
-	private $hiddenPokemon;
+	private array $hiddenPokemon = [];
 
 
 	/**

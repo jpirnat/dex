@@ -7,17 +7,10 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class NatureName
 {
-	/** @var LanguageId $languageId */
-	private $languageId;
-
-	/** @var NatureId $natureId */
-	private $natureId;
-
-	/** @var string $name */
-	private $name;
-
-	/** @var string $description */
-	private $description;
+	private LanguageId $languageId;
+	private NatureId $natureId;
+	private string $name;
+	private string $description;
 
 	/**
 	 * Constructor.

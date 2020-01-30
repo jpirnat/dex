@@ -9,11 +9,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class DexTypeController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
-
-	/** @var DexTypeModel $dexTypeModel */
-	private $dexTypeModel;
+	private BaseController $baseController;
+	private DexTypeModel $dexTypeModel;
 
 	/**
 	 * Constructor.

@@ -13,8 +13,7 @@ use PDO;
 
 final class DatabaseAbilityRepository implements AbilityRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

@@ -7,20 +7,11 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class Item
 {
-	/** @var ItemId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var VersionGroupId $introducedInVersionGroupId */
-	private $introducedInVersionGroupId;
-
-	/** @var int|null $itemFlingPower */
-	private $itemFlingPower;
-
-	/** @var ItemFlingEffectId|null $itemFlingEffectId */
-	private $itemFlingEffectId;
+	private ItemId $id;
+	private string $identifier;
+	private VersionGroupId $introducedInVersionGroupId;
+	private ?int $itemFlingPower;
+	private ?ItemFlingEffectId $itemFlingEffectId;
 
 	/**
 	 * Constructor.

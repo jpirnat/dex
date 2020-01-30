@@ -9,23 +9,12 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class PokemonMove
 {
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var VersionGroupId $versionGroupId */
-	private $versionGroupId;
-
-	/** @var MoveId $moveId */
-	private $moveId;
-
-	/** @var MoveMethodId $moveMethodId */
-	private $moveMethodId;
-
-	/** @var int $level */
-	private $level;
-
-	/** @var int $sort */
-	private $sort;
+	private PokemonId $pokemonId;
+	private VersionGroupId $versionGroupId;
+	private MoveId $moveId;
+	private MoveMethodId $moveMethodId;
+	private int $level;
+	private int $sort;
 
 	/**
 	 * Constructor.

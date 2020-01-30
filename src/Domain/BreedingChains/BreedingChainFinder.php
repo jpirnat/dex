@@ -11,12 +11,11 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class BreedingChainFinder
 {
-	/** @var BreedingChainQueriesInterface $breedingChainQueries */
-	private $breedingChainQueries;
+	private BreedingChainQueriesInterface $breedingChainQueries;
 
 
 	/** @var int[] $femaleOnlyPokemonIds */
-	private $femaleOnlyPokemonIds = [];
+	private array $femaleOnlyPokemonIds = [];
 
 
 	/**

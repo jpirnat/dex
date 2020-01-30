@@ -10,14 +10,9 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsIndexView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
-
-	/** @var StatsIndexModel $statsIndexModel */
-	private $statsIndexModel;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
+	private StatsIndexModel $statsIndexModel;
 
 	/**
 	 * Constructor.

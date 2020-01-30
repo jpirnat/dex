@@ -11,8 +11,7 @@ use PDO;
 
 final class DatabaseMoveMethodNameRepository implements MoveMethodNameRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

@@ -17,23 +17,12 @@ final class MovesetRatedAbility implements UsageDataInterface
 {
 	use ValidateMonthTrait;
 
-	/** @var DateTime $month */
-	private $month;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var AbilityId $abilityId */
-	private $abilityId;
-
-	/** @var float $percent */
-	private $percent;
+	private DateTime $month;
+	private FormatId $formatId;
+	private int $rating;
+	private PokemonId $pokemonId;
+	private AbilityId $abilityId;
+	private float $percent;
 
 	/**
 	 * Constructor.

@@ -5,14 +5,9 @@ namespace Jp\Dex\Domain\Versions;
 
 final class Generation
 {
-	/** @var GenerationId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string $icon */
-	private $icon;
+	private GenerationId $id;
+	private string $identifier;
+	private string $icon;
 
 	/**
 	 * Constructor.

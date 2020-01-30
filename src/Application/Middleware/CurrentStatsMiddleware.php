@@ -16,11 +16,8 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 final class CurrentStatsMiddleware implements MiddlewareInterface
 {
-	/** @var FormatRepositoryInterface $formatRepository */
-	private $formatRepository;
-
-	/** @var UsageQueriesInterface $usageQueries */
-	private $usageQueries;
+	private FormatRepositoryInterface $formatRepository;
+	private UsageQueriesInterface $usageQueries;
 
 	/** @var int $DEFAULT_FORMAT_ID */
 	private const DEFAULT_FORMAT_ID = FormatId::GEN_7_OU;

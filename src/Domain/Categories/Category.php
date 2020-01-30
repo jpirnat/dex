@@ -5,14 +5,9 @@ namespace Jp\Dex\Domain\Categories;
 
 final class Category
 {
-	/** @var CategoryId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string $icon */
-	private $icon;
+	private CategoryId $id;
+	private string $identifier;
+	private string $icon;
 
 	/**
 	 * Constructor.

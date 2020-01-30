@@ -7,20 +7,11 @@ use Jp\Dex\Domain\Stats\StatId;
 
 final class Nature
 {
-	/** @var NatureId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var StatId|null $increasedStatId */
-	private $increasedStatId;
-
-	/** @var StatId|null $decreasedStatId */
-	private $decreasedStatId;
-
-	/** @var int $vcExpRemainder */
-	private $vcExpRemainder;
+	private NatureId $id;
+	private string $identifier;
+	private ?StatId $increasedStatId;
+	private ?StatId $decreasedStatId;
+	private int $vcExpRemainder;
 
 	/**
 	 * Constructor.

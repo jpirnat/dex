@@ -5,14 +5,9 @@ namespace Jp\Dex\Domain\Languages;
 
 final class LanguageName
 {
-	/** @var LanguageId $inLanguageId */
-	private $inLanguageId;
-
-	/** @var LanguageId $namedLanguageId */
-	private $namedLanguageId;
-
-	/** @var string $name */
-	private $name;
+	private LanguageId $inLanguageId;
+	private LanguageId $namedLanguageId;
+	private string $name;
 
 	/**
 	 * Constructor.

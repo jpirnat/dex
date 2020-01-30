@@ -7,11 +7,8 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 
 final class PokemonEggGroup
 {
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var EggGroupId $eggGroupId */
-	private $eggGroupId;
+	private PokemonId $pokemonId;
+	private EggGroupId $eggGroupId;
 
 	/**
 	 * Constructor.

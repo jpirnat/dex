@@ -8,29 +8,21 @@ use Jp\Dex\Domain\Types\DexType;
 
 final class DexPokemon
 {
-	/** @var string $icon */
-	private $icon;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string $name */
-	private $name;
+	private string $icon;
+	private string $identifier;
+	private string $name;
 
 	/** @var DexType[] $types */
-	private $types;
+	private array $types;
 
 	/** @var DexPokemonAbility[] $abilities */
-	private $abilities;
+	private array $abilities;
 
-	/** @var int $baseStats */
-	private $baseStats;
+	/** @var int[] $baseStats */
+	private array $baseStats;
 
-	/** @var int $bst */
-	private $bst;
-
-	/** @var int $sort */
-	private $sort;
+	private int $bst;
+	private int $sort;
 
 	/**
 	 * Constructor.

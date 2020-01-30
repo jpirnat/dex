@@ -5,11 +5,8 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final class FormatRating
 {
-	/** @var string $showdownFormatName */
-	private $showdownFormatName;
-
-	/** @var int $rating */
-	private $rating;
+	private string $showdownFormatName;
+	private int $rating;
 
 	/**
 	 * Constructor.

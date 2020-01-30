@@ -19,27 +19,16 @@ use Jp\Dex\Domain\Stats\StatValueContainer;
 
 final class SpreadModel
 {
-	/** @var FormatRepositoryInterface $formatRepository */
-	private $formatRepository;
-
-	/** @var MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository */
-	private $movesetRatedSpreadRepository;
-
-	/** @var BaseStatRepositoryInterface $baseStatRepository */
-	private $baseStatRepository;
-
-	/** @var NatureRepositoryInterface $natureRepository */
-	private $natureRepository;
-
-	/** @var NatureNameRepositoryInterface $natureNameRepository */
-	private $natureNameRepository;
-
-	/** @var StatCalculator $statCalculator */
-	private $statCalculator;
+	private FormatRepositoryInterface $formatRepository;
+	private MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository;
+	private BaseStatRepositoryInterface $baseStatRepository;
+	private NatureRepositoryInterface $natureRepository;
+	private NatureNameRepositoryInterface $natureNameRepository;
+	private StatCalculator $statCalculator;
 
 
 	/** @var SpreadData[] $spreadDatas */
-	private $spreadDatas = [];
+	private array $spreadDatas = [];
 
 
 	/**

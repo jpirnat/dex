@@ -15,20 +15,11 @@ final class LeadsPokemon
 {
 	use ValidateMonthTrait;
 
-	/** @var DateTime $month */
-	private $month;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var int $raw */
-	private $raw;
-
-	/** @var float $rawPercent */
-	private $rawPercent;
+	private DateTime $month;
+	private FormatId $formatId;
+	private PokemonId $pokemonId;
+	private int $raw;
+	private float $rawPercent;
 
 	/**
 	 * Constructor.

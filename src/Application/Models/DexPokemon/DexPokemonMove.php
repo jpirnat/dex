@@ -8,32 +8,15 @@ use Jp\Dex\Domain\Types\DexType;
 
 final class DexPokemonMove
 {
-	/** @var array $versionGroupData */
-	private $versionGroupData;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string $name */
-	private $name;
-
-	/** @var DexType $type */
-	private $type;
-
-	/** @var DexCategory $category */
-	private $category;
-
-	/** @var int $pp */
-	private $pp;
-
-	/** @var int $power */
-	private $power;
-
-	/** @var int $accuracy */
-	private $accuracy;
-
-	/** @var string $description */
-	private $description;
+	private array $versionGroupData;
+	private string $identifier;
+	private string $name;
+	private DexType $type;
+	private DexCategory $category;
+	private int $pp;
+	private int $power;
+	private int $accuracy;
+	private string $description;
 
 	/**
 	 * Constructor.

@@ -12,8 +12,7 @@ use PDO;
 
 final class DatabaseFormIconRepository implements FormIconRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

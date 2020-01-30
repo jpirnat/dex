@@ -13,8 +13,7 @@ use PDO;
 
 final class DatabaseFormatRepository implements FormatRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

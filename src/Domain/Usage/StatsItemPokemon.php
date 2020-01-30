@@ -5,26 +5,13 @@ namespace Jp\Dex\Domain\Usage;
 
 final class StatsItemPokemon
 {
-	/** @var string $icon */
-	private $icon;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string $name */
-	private $name;
-
-	/** @var float $pokemonPercent */
-	private $pokemonPercent;
-
-	/** @var float $itemPercent */
-	private $itemPercent;
-
-	/** @var float $usagePercent */
-	private $usagePercent;
-
-	/** @var float $usageChange */
-	private $usageChange;
+	private string $icon;
+	private string $identifier;
+	private string $name;
+	private float $pokemonPercent;
+	private float $itemPercent;
+	private float $usagePercent;
+	private float $usageChange;
 
 	/**
 	 * Constructor.

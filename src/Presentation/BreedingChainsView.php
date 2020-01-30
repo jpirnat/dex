@@ -10,14 +10,9 @@ use Psr\Http\Message\ResponseInterface;
 
 final class BreedingChainsView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
-
-	/** @var BreedingChainsModel $breedingChainsModel */
-	private $breedingChainsModel;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
+	private BreedingChainsModel $breedingChainsModel;
 
 	/**
 	 * Constructor.

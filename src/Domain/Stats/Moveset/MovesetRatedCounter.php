@@ -15,35 +15,16 @@ final class MovesetRatedCounter
 {
 	use ValidateMonthTrait;
 
-	/** @var DateTime $month */
-	private $month;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var PokemonId $counterId */
-	private $counterId;
-
-	/** @var float $number1 */
-	private $number1;
-
-	/** @var float $number2 */
-	private $number2;
-
-	/** @var float $number3 */
-	private $number3;
-
-	/** @var float $percentKnockedOut */
-	private $percentKnockedOut;
-
-	/** @var float $percentSwitchedOut */
-	private $percentSwitchedOut;
+	private DateTime $month;
+	private FormatId $formatId;
+	private int $rating;
+	private PokemonId $pokemonId;
+	private PokemonId $counterId;
+	private float $number1;
+	private float $number2;
+	private float $number3;
+	private float $percentKnockedOut;
+	private float $percentSwitchedOut;
 
 	/**
 	 * Constructor.

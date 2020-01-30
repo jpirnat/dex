@@ -11,17 +11,10 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class LeadsDirectoryParser
 {
-	/** @var LeadsFileParser $leadsFileParser */
-	private $leadsFileParser;
-
-	/** @var MonthExtractor $monthExtractor */
-	private $monthExtractor;
-
-	/** @var FormatRatingExtractor $formatRatingExtractor */
-	private $formatRatingExtractor;
-
-	/** @var ShowdownFormatRepositoryInterface $showdownFormatRepository */
-	private $showdownFormatRepository;
+	private LeadsFileParser $leadsFileParser;
+	private MonthExtractor $monthExtractor;
+	private FormatRatingExtractor $formatRatingExtractor;
+	private ShowdownFormatRepositoryInterface $showdownFormatRepository;
 
 	/**
 	 * Constructor.

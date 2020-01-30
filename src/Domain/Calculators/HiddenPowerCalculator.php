@@ -8,8 +8,7 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class HiddenPowerCalculator
 {
-	/** @var TypeRepositoryInterface $typeRepository */
-	private $typeRepository;
+	private TypeRepositoryInterface $typeRepository;
 
 	/**
 	 * Constructor.

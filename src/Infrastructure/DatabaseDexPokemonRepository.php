@@ -20,17 +20,10 @@ use PDO;
 
 final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
-
-	/** @var DexTypeRepositoryInterface $dexTypeRepository */
-	private $dexTypeRepository;
-
-	/** @var DexPokemonAbilityRepositoryInterface $dexPokemonAbilityRepository */
-	private $dexPokemonAbilityRepository;
-
-	/** @var BaseStatRepositoryInterface $baseStatRepository */
-	private $baseStatRepository;
+	private PDO $db;
+	private DexTypeRepositoryInterface $dexTypeRepository;
+	private DexPokemonAbilityRepositoryInterface $dexPokemonAbilityRepository;
+	private BaseStatRepositoryInterface $baseStatRepository;
 
 	/**
 	 * Constructor.

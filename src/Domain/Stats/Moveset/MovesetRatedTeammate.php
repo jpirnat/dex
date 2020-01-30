@@ -15,23 +15,12 @@ final class MovesetRatedTeammate
 {
 	use ValidateMonthTrait;
 
-	/** @var DateTime $month */
-	private $month;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var PokemonId $teammateId */
-	private $teammateId;
-
-	/** @var float $percent */
-	private $percent;
+	private DateTime $month;
+	private FormatId $formatId;
+	private int $rating;
+	private PokemonId $pokemonId;
+	private PokemonId $teammateId;
+	private float $percent;
 
 	/**
 	 * Constructor.

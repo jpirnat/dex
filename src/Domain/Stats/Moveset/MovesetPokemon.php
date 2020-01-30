@@ -15,20 +15,11 @@ final class MovesetPokemon
 {
 	use ValidateMonthTrait;
 
-	/** @var DateTime $month */
-	private $month;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var int $rawCount */
-	private $rawCount;
-
-	/** @var int|null $viabilityCeiling */
-	private $viabilityCeiling;
+	private DateTime $month;
+	private FormatId $formatId;
+	private PokemonId $pokemonId;
+	private int $rawCount;
+	private ?int $viabilityCeiling;
 
 	/**
 	 * Constructor.

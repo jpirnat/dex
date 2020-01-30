@@ -11,8 +11,7 @@ use PDO;
 
 final class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

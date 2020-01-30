@@ -15,8 +15,7 @@ use PDO;
 
 final class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

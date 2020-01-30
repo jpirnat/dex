@@ -9,8 +9,8 @@ use Jp\Dex\Domain\Types\Type;
 
 final class MovesetAbilityTrendLine extends TrendLine
 {
-	/** @var AbilityName $abilityName */
-	private $abilityName;
+	/** @var $abilityName */
+	private AbilityName $abilityName;
 
 	/**
 	 * Constructor.

@@ -16,38 +16,17 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class MonthDirectoryParser
 {
-	/** @var UsageFileParser $usageFileParser */
-	private $usageFileParser;
-
-	/** @var LeadsDirectoryParser $leadsDirectoryParser */
-	private $leadsDirectoryParser;
-
-	/** @var MovesetDirectoryParser $movesetDirectoryParser */
-	private $movesetDirectoryParser;
-
-	/** @var MonthExtractor $monthExtractor */
-	private $monthExtractor;
-
-	/** @var FormatRatingExtractor $formatRatingExtractor */
-	private $formatRatingExtractor;
-
-	/** @var ShowdownFormatRepositoryInterface $showdownFormatRepository */
-	private $showdownFormatRepository;
-
-	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
-	private $showdownPokemonRepository;
-
-	/** @var ShowdownAbilityRepositoryInterface $showdownAbilityRepository */
-	private $showdownAbilityRepository;
-
-	/** @var ShowdownItemRepositoryInterface $showdownItemRepository */
-	private $showdownItemRepository;
-
-	/** @var ShowdownNatureRepositoryInterface $showdownNatureRepository */
-	private $showdownNatureRepository;
-
-	/** @var ShowdownMoveRepositoryInterface $showdownMoveRepository */
-	private $showdownMoveRepository;
+	private UsageFileParser $usageFileParser;
+	private LeadsDirectoryParser $leadsDirectoryParser;
+	private MovesetDirectoryParser $movesetDirectoryParser;
+	private MonthExtractor $monthExtractor;
+	private FormatRatingExtractor $formatRatingExtractor;
+	private ShowdownFormatRepositoryInterface $showdownFormatRepository;
+	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
+	private ShowdownAbilityRepositoryInterface $showdownAbilityRepository;
+	private ShowdownItemRepositoryInterface $showdownItemRepository;
+	private ShowdownNatureRepositoryInterface $showdownNatureRepository;
+	private ShowdownMoveRepositoryInterface $showdownMoveRepository;
 
 	/**
 	 * Constructor.

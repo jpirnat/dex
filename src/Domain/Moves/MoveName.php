@@ -7,14 +7,9 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class MoveName
 {
-	/** @var LanguageId $languageId */
-	private $languageId;
-
-	/** @var MoveId $moveId */
-	private $moveId;
-
-	/** @var string $name */
-	private $name;
+	private LanguageId $languageId;
+	private MoveId $moveId;
+	private string $name;
 
 	/**
 	 * Constructor.

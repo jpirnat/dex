@@ -8,8 +8,7 @@ use Twig\Environment;
 
 final class TwigRenderer implements RendererInterface
 {
-	/** @var Environment $twig */
-	private $twig;
+	private Environment $twig;
 
 	/**
 	 * Constructor.

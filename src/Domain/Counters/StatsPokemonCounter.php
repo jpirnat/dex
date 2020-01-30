@@ -5,29 +5,14 @@ namespace Jp\Dex\Domain\Counters;
 
 final class StatsPokemonCounter
 {
-	/** @var string $icon */
-	private $icon;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string $name */
-	private $name;
-
-	/** @var float $score */
-	private $score;
-
-	/** @var float $percent */
-	private $percent;
-
-	/** @var float $standardDeviation */
-	private $standardDeviation;
-
-	/** @var float $percentKnockedOut */
-	private $percentKnockedOut;
-
-	/** @var float $percentSwitchedOut */
-	private $percentSwitchedOut;
+	private string $icon;
+	private string $identifier;
+	private string $name;
+	private float $score;
+	private float $percent;
+	private float $standardDeviation;
+	private float $percentKnockedOut;
+	private float $percentSwitchedOut;
 
 	/**
 	 * Constructor.

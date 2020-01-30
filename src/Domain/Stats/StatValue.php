@@ -5,11 +5,8 @@ namespace Jp\Dex\Domain\Stats;
 
 final class StatValue
 {
-	/** @var StatId $statId */
-	private $statId;
-
-	/** @var float $value */
-	private $value;
+	private StatId $statId;
+	private float $value;
 
 	/**
 	 * Constructor.

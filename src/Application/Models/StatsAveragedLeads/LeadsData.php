@@ -5,29 +5,14 @@ namespace Jp\Dex\Application\Models\StatsAveragedLeads;
 
 final class LeadsData
 {
-	/** @var int $rank */
-	private $rank;
-
-	/** @var string $pokemonName */
-	private $pokemonName;
-
-	/** @var int $months */
-	private $months;
-
-	/** @var string $pokemonIdentifier */
-	private $pokemonIdentifier;
-
-	/** @var string $formIcon */
-	private $formIcon;
-
-	/** @var float $leadUsagePercent */
-	private $leadUsagePercent;
-
-	/** @var int $raw */
-	private $raw;
-
-	/** @var float $rawPercent */
-	private $rawPercent;
+	private int $rank;
+	private string $pokemonName;
+	private int $months;
+	private string $pokemonIdentifier;
+	private string $formIcon;
+	private float $leadUsagePercent;
+	private int $raw;
+	private float $rawPercent;
 
 	/**
 	 * Constructor.

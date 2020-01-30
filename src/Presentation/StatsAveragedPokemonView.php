@@ -12,20 +12,11 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsAveragedPokemonView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
-
-	/** @var StatsAveragedPokemonModel $statsAveragedPokemonModel */
-	private $statsAveragedPokemonModel;
-
-	/** @var IntlFormatterFactory $formatterFactory */
-	private $formatterFactory;
-
-	/** @var DexFormatter $dexFormatter */
-	private $dexFormatter;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
+	private StatsAveragedPokemonModel $statsAveragedPokemonModel;
+	private IntlFormatterFactory $formatterFactory;
+	private DexFormatter $dexFormatter;
 
 	/**
 	 * Constructor.

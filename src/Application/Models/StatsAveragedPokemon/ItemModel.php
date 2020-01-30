@@ -13,18 +13,13 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInter
 
 final class ItemModel
 {
-	/** @var MovesetRatedAveragedItemRepositoryInterface $movesetRatedAveragedItemRepository */
-	private $movesetRatedAveragedItemRepository;
-
-	/** @var ItemNameRepositoryInterface $itemNameRepository */
-	private $itemNameRepository;
-
-	/** @var ItemRepositoryInterface $itemRepository */
-	private $itemRepository;
+	private MovesetRatedAveragedItemRepositoryInterface $movesetRatedAveragedItemRepository;
+	private ItemNameRepositoryInterface $itemNameRepository;
+	private ItemRepositoryInterface $itemRepository;
 
 
 	/** @var ItemData[] $itemDatas */
-	private $itemDatas = [];
+	private array $itemDatas = [];
 
 
 	/**

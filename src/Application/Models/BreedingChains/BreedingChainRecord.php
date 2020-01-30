@@ -5,32 +5,18 @@ namespace Jp\Dex\Application\Models\BreedingChains;
 
 final class BreedingChainRecord
 {
-	/** @var string $formIcon */
-	private $formIcon;
-
-	/** @var string $generationIdentifier */
-	private $generationIdentifier;
-
-	/** @var string $pokemonIdentifier */
-	private $pokemonIdentifier;
-
-	/** @var string $pokemonName */
-	private $pokemonName;
-
-	/** @var string $versionGroupIcon */
-	private $versionGroupIcon;
+	private string $formIcon;
+	private string $generationIdentifier;
+	private string $pokemonIdentifier;
+	private string $pokemonName;
+	private string $versionGroupIcon;
 
 	/** @var string[] $eggGroupNames */
-	private $eggGroupNames;
+	private array $eggGroupNames;
 
-	/** @var int $baseEggCycles */
-	private $baseEggCycles;
-
-	/** @var string $genderRatioIcon */
-	private $genderRatioIcon;
-
-	/** @var string $moveMethod */
-	private $moveMethod;
+	private int $baseEggCycles;
+	private string $genderRatioIcon;
+	private string $moveMethod;
 
 	/**
 	 * Constructor.

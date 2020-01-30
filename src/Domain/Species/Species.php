@@ -7,23 +7,12 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class Species
 {
-	/** @var SpeciesId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var VersionGroupId $introducedInVersionGroupId */
-	private $introducedInVersionGroupId;
-
-	/** @var int $baseEggCycles */
-	private $baseEggCycles;
-
-	/** @var int $baseFriendship */
-	private $baseFriendship;
-
-	/** @var ExperienceGroupId $experienceGroupId */
-	private $experienceGroupId;
+	private SpeciesId $id;
+	private string $identifier;
+	private VersionGroupId $introducedInVersionGroupId;
+	private int $baseEggCycles;
+	private int $baseFriendship;
+	private ExperienceGroupId $experienceGroupId;
 
 	/**
 	 * Constructor.

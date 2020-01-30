@@ -13,8 +13,7 @@ use Jp\Dex\Domain\Stats\UsageDataInterface;
 
 final class TrendPointCalculator
 {
-	/** @var UsageQueriesInterface $usageQueries */
-	private $usageQueries;
+	private UsageQueriesInterface $usageQueries;
 
 	/**
 	 * Constructor.

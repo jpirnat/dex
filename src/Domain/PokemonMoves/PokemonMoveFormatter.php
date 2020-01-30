@@ -12,14 +12,9 @@ use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 
 final class PokemonMoveFormatter
 {
-	/** @var TmRepositoryInterface $tmRepository */
-	private $tmRepository;
-
-	/** @var ItemNameRepositoryInterface $itemNameRepository */
-	private $itemNameRepository;
-
-	/** @var MoveNameRepositoryInterface $moveNameRepository */
-	private $moveNameRepository;
+	private TmRepositoryInterface $tmRepository;
+	private ItemNameRepositoryInterface $itemNameRepository;
+	private MoveNameRepositoryInterface $moveNameRepository;
 
 	/**
 	 * Constructor.

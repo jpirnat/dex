@@ -10,21 +10,13 @@ use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 
 final class DexNaturesModel
 {
-	/** @var NatureRepositoryInterface $natureRepository */
-	private $natureRepository;
-
-	/** @var NatureNameRepositoryInterface $natureNameRepository */
-	private $natureNameRepository;
-
-	/** @var StatNameRepositoryInterface $statNameRepository */
-	private $statNameRepository;
+	private NatureRepositoryInterface $natureRepository;
+	private NatureNameRepositoryInterface $natureNameRepository;
+	private StatNameRepositoryInterface $statNameRepository;
 
 
-	/** @var string $generationIdentifier */
-	private $generationIdentifier;
-
-	/** @var array $natures */
-	private $natures = [];
+	private string $generationIdentifier;
+	private array $natures = [];
 
 
 	/**

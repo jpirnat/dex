@@ -8,11 +8,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class ErrorController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
-
-	/** @var ErrorModel $errorModel */
-	private $errorModel;
+	private BaseController $baseController;
+	private ErrorModel $errorModel;
 
 	/**
 	 * Constructor.

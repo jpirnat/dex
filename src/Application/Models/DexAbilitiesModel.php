@@ -11,21 +11,13 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexAbilitiesModel
 {
-	/** @var GenerationModel $generationModel */
-	private $generationModel;
-
-	/** @var AbilityRepositoryInterface $abilityRepository */
-	private $abilityRepository;
-
-	/** @var AbilityNameRepositoryInterface $abilityNameRepository */
-	private $abilityNameRepository;
-
-	/** @var AbilityDescriptionRepositoryInterface $abilityDescriptionRepository */
-	private $abilityDescriptionRepository;
+	private GenerationModel $generationModel;
+	private AbilityRepositoryInterface $abilityRepository;
+	private AbilityNameRepositoryInterface $abilityNameRepository;
+	private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository;
 
 
-	/** @var array $abilities */
-	private $abilities;
+	private array $abilities = [];
 
 
 	/**

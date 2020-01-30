@@ -7,17 +7,10 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class MoveMethod
 {
-	/** @var MoveMethodId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var GenerationId $introducedInGenerationId */
-	private $introducedInGenerationId;
-
-	/** @var int $sort */
-	private $sort;
+	private MoveMethodId $id;
+	private string $identifier;
+	private GenerationId $introducedInGenerationId;
+	private int $sort;
 
 	/**
 	 * Constructor.

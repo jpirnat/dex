@@ -9,20 +9,11 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsItemView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
-
-	/** @var StatsItemModel $statsItemModel */
-	private $statsItemModel;
-
-	/** @var IntlFormatterFactory $formatterFactory */
-	private $formatterFactory;
-
-	/** @var MonthControlFormatter $monthControlFormatter */
-	private $monthControlFormatter;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
+	private StatsItemModel $statsItemModel;
+	private IntlFormatterFactory $formatterFactory;
+	private MonthControlFormatter $monthControlFormatter;
 
 	/**
 	 * Constructor.

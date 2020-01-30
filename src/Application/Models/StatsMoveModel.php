@@ -17,54 +17,29 @@ use Jp\Dex\Domain\Usage\StatsMovePokemonRepositoryInterface;
 
 final class StatsMoveModel
 {
-	/** @var DateModel $dateModel */
-	private $dateModel;
-
-	/** @var FormatRepositoryInterface $formatRepository */
-	private $formatRepository;
-
-	/** @var MoveRepositoryInterface $moveRepository */
-	private $moveRepository;
-
-	/** @var RatingQueriesInterface $ratingQueries */
-	private $ratingQueries;
-
-	/** @var MoveNameRepositoryInterface $moveNameRepository */
-	private $moveNameRepository;
-
-	/** @var MoveDescriptionRepositoryInterface $moveDescriptionRepository */
-	private $moveDescriptionRepository;
-
-	/** @var StatsMovePokemonRepositoryInterface $statsMovePokemonRepository */
-	private $statsMovePokemonRepository;
+	private DateModel $dateModel;
+	private FormatRepositoryInterface $formatRepository;
+	private MoveRepositoryInterface $moveRepository;
+	private RatingQueriesInterface $ratingQueries;
+	private MoveNameRepositoryInterface $moveNameRepository;
+	private MoveDescriptionRepositoryInterface $moveDescriptionRepository;
+	private StatsMovePokemonRepositoryInterface $statsMovePokemonRepository;
 
 
-	/** @var string $month */
-	private $month;
-
-	/** @var Format $format */
-	private $format;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var string $moveIdentifier */
-	private $moveIdentifier;
-
-	/** @var LanguageId $languageId */
-	private $languageId;
+	private string $month;
+	private Format $format;
+	private int $rating;
+	private string $moveIdentifier;
+	private LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private $ratings = [];
+	private array $ratings = [];
 
-	/** @var MoveName $moveName */
-	private $moveName;
-
-	/** @var MoveDescription $moveDescription */
-	private $moveDescription;
+	private MoveName $moveName;
+	private MoveDescription $moveDescription;
 
 	/** @var StatsMovePokemon[] $pokemon */
-	private $pokemon = [];
+	private array $pokemon = [];
 
 
 	/**

@@ -14,26 +14,13 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class StatsDirectoryParser
 {
-	/** @var MonthDirectoryParser $monthDirectoryParser */
-	private $monthDirectoryParser;
-
-	/** @var ShowdownFormatRepositoryInterface $showdownFormatRepository */
-	private $showdownFormatRepository;
-
-	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
-	private $showdownPokemonRepository;
-
-	/** @var ShowdownAbilityRepositoryInterface $showdownAbilityRepository */
-	private $showdownAbilityRepository;
-
-	/** @var ShowdownItemRepositoryInterface $showdownItemRepository */
-	private $showdownItemRepository;
-
-	/** @var ShowdownNatureRepositoryInterface $showdownNatureRepository */
-	private $showdownNatureRepository;
-
-	/** @var ShowdownMoveRepositoryInterface $showdownMoveRepository */
-	private $showdownMoveRepository;
+	private MonthDirectoryParser $monthDirectoryParser;
+	private ShowdownFormatRepositoryInterface $showdownFormatRepository;
+	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
+	private ShowdownAbilityRepositoryInterface $showdownAbilityRepository;
+	private ShowdownItemRepositoryInterface $showdownItemRepository;
+	private ShowdownNatureRepositoryInterface $showdownNatureRepository;
+	private ShowdownMoveRepositoryInterface $showdownMoveRepository;
 
 	/**
 	 * Constructor.

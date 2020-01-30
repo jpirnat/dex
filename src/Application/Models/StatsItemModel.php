@@ -17,54 +17,29 @@ use Jp\Dex\Domain\Usage\StatsItemPokemonRepositoryInterface;
 
 final class StatsItemModel
 {
-	/** @var DateModel $dateModel */
-	private $dateModel;
-
-	/** @var FormatRepositoryInterface $formatRepository */
-	private $formatRepository;
-
-	/** @var ItemRepositoryInterface $itemRepository */
-	private $itemRepository;
-
-	/** @var RatingQueriesInterface $ratingQueries */
-	private $ratingQueries;
-
-	/** @var ItemNameRepositoryInterface $itemNameRepository */
-	private $itemNameRepository;
-
-	/** @var ItemDescriptionRepositoryInterface $itemDescriptionRepository */
-	private $itemDescriptionRepository;
-
-	/** @var StatsItemPokemonRepositoryInterface $statsItemPokemonRepository */
-	private $statsItemPokemonRepository;
+	private DateModel $dateModel;
+	private FormatRepositoryInterface $formatRepository;
+	private ItemRepositoryInterface $itemRepository;
+	private RatingQueriesInterface $ratingQueries;
+	private ItemNameRepositoryInterface $itemNameRepository;
+	private ItemDescriptionRepositoryInterface $itemDescriptionRepository;
+	private StatsItemPokemonRepositoryInterface $statsItemPokemonRepository;
 
 
-	/** @var string $month */
-	private $month;
-
-	/** @var Format $format */
-	private $format;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var string $itemIdentifier */
-	private $itemIdentifier;
-
-	/** @var LanguageId $languageId */
-	private $languageId;
+	private string $month;
+	private Format $format;
+	private int $rating;
+	private string $itemIdentifier;
+	private LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private $ratings = [];
+	private array $ratings = [];
 
-	/** @var ItemName $itemName */
-	private $itemName;
-
-	/** @var ItemDescription $itemDescription */
-	private $itemDescription;
+	private ItemName $itemName;
+	private ItemDescription $itemDescription;
 
 	/** @var StatsItemPokemon[] $pokemon */
-	private $pokemon = [];
+	private array $pokemon = [];
 
 
 	/**

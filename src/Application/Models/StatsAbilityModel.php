@@ -17,54 +17,29 @@ use Jp\Dex\Domain\Usage\StatsAbilityPokemonRepositoryInterface;
 
 final class StatsAbilityModel
 {
-	/** @var DateModel $dateModel */
-	private $dateModel;
-
-	/** @var FormatRepositoryInterface $formatRepository */
-	private $formatRepository;
-
-	/** @var AbilityRepositoryInterface $abilityRepository */
-	private $abilityRepository;
-
-	/** @var RatingQueriesInterface $ratingQueries */
-	private $ratingQueries;
-
-	/** @var AbilityNameRepositoryInterface $abilityNameRepository */
-	private $abilityNameRepository;
-
-	/** @var AbilityDescriptionRepositoryInterface $abilityDescriptionRepository */
-	private $abilityDescriptionRepository;
-
-	/** @var StatsAbilityPokemonRepositoryInterface $statsAbilityPokemonRepository */
-	private $statsAbilityPokemonRepository;
+	private DateModel $dateModel;
+	private FormatRepositoryInterface $formatRepository;
+	private AbilityRepositoryInterface $abilityRepository;
+	private RatingQueriesInterface $ratingQueries;
+	private AbilityNameRepositoryInterface $abilityNameRepository;
+	private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository;
+	private StatsAbilityPokemonRepositoryInterface $statsAbilityPokemonRepository;
 
 
-	/** @var string $month */
-	private $month;
-
-	/** @var Format $format */
-	private $format;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var string $abilityIdentifier */
-	private $abilityIdentifier;
-
-	/** @var LanguageId $languageId */
-	private $languageId;
+	private string $month;
+	private Format $format;
+	private int $rating;
+	private string $abilityIdentifier;
+	private LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private $ratings = [];
+	private array $ratings = [];
 
-	/** @var AbilityName $abilityName */
-	private $abilityName;
-
-	/** @var AbilityDescription $abilityDescription */
-	private $abilityDescription;
+	private AbilityName $abilityName;
+	private AbilityDescription $abilityDescription;
 
 	/** @var StatsAbilityPokemon[] $pokemon */
-	private $pokemon = [];
+	private array $pokemon = [];
 
 
 	/**

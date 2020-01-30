@@ -9,14 +9,9 @@ use NumberFormatter;
 
 final class IntlFormatter
 {
-	/** @var IntlDateFormatter $dateFormatter */
-	private $dateFormatter;
-
-	/** @var NumberFormatter $numberFormatter */
-	private $numberFormatter;
-
-	/** @var NumberFormatter $percentFormatter */
-	private $percentFormatter;
+	private IntlDateFormatter $dateFormatter;
+	private NumberFormatter $numberFormatter;
+	private NumberFormatter $percentFormatter;
 
 	/**
 	 * Constructor.

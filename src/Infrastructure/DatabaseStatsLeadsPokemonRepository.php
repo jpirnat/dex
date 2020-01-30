@@ -13,8 +13,7 @@ use PDO;
 
 final class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

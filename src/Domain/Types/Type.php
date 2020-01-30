@@ -8,23 +8,14 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class Type
 {
-	/** @var TypeId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var GenerationId $introducedInGenerationId */
-	private $introducedInGenerationId;
-
-	/** @var CategoryId|null $categoryId */
-	private $categoryId;
-
-	/** @var int|null $hiddenPowerIndex */
-	private $hiddenPowerIndex;
+	private TypeId $id;
+	private string $identifier;
+	private GenerationId $introducedInGenerationId;
+	private ?CategoryId $categoryId;
+	private ?int $hiddenPowerIndex;
 
 	/** @var string $colorCode "#rrggbb" */
-	private $colorCode;
+	private string $colorCode;
 
 	/**
 	 * Constructor.

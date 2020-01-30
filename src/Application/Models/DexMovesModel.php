@@ -10,15 +10,12 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexMovesModel
 {
-	/** @var GenerationModel $generationModel */
-	private $generationModel;
-
-	/** @var DexMoveRepositoryInterface $dexMoveRepository */
-	private $dexMoveRepository;
+	private GenerationModel $generationModel;
+	private DexMoveRepositoryInterface $dexMoveRepository;
 
 
 	/** @var DexMove[] $moves */
-	private $moves = [];
+	private array $moves = [];
 
 
 	/**

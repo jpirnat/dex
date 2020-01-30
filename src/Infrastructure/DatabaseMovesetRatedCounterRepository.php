@@ -9,8 +9,7 @@ use PDO;
 
 final class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

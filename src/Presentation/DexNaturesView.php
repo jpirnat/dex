@@ -9,14 +9,9 @@ use Psr\Http\Message\ResponseInterface;
 
 final class DexNaturesView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
-
-	/** @var DexNaturesModel $dexNaturesModel */
-	private $dexNaturesModel;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
+	private DexNaturesModel $dexNaturesModel;
 
 	/**
 	 * Constructor.

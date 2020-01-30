@@ -10,8 +10,7 @@ use PDO;
 
 final class DatabaseCategoryRepository implements CategoryRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

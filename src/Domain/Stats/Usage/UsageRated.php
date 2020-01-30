@@ -14,17 +14,10 @@ final class UsageRated
 {
 	use ValidateMonthTrait;
 
-	/** @var DateTime $month */
-	private $month;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var float $averageWeightPerTeam */
-	private $averageWeightPerTeam;
+	private DateTime $month;
+	private FormatId $formatId;
+	private int $rating;
+	private float $averageWeightPerTeam;
 
 	/**
 	 * Constructor.

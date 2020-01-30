@@ -12,8 +12,7 @@ use PDO;
 
 final class DatabaseAbilityDescriptionRepository implements AbilityDescriptionRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

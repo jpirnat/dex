@@ -10,8 +10,7 @@ use PDO;
 
 final class DatabaseLanguageNameRepository implements LanguageNameRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

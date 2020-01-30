@@ -10,8 +10,7 @@ use PDO;
 
 final class DatabaseDexCategoryRepository implements DexCategoryRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

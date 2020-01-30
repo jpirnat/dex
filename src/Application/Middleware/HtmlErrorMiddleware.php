@@ -14,8 +14,7 @@ use Whoops\Run;
 
 final class HtmlErrorMiddleware implements MiddlewareInterface
 {
-	/** @var string $environment */
-	private $environment;
+	private string $environment;
 
 	/**
 	 * Constructor.

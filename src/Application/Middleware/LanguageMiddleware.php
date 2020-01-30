@@ -17,8 +17,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 final class LanguageMiddleware implements MiddlewareInterface
 {
-	/** @var LanguageRepositoryInterface $languageRepository */
-	private $languageRepository;
+	private LanguageRepositoryInterface $languageRepository;
 
 	/** @var string $LANGUAGE_PARAMETER */
 	private const LANGUAGE_PARAMETER = 'language';

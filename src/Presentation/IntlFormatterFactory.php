@@ -15,8 +15,7 @@ use NumberFormatter;
  */
 final class IntlFormatterFactory
 {
-	/** @var LanguageRepositoryInterface $languageRepository */
-	private $languageRepository;
+	private LanguageRepositoryInterface $languageRepository;
 
 	/**
 	 * Constructor.

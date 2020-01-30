@@ -8,17 +8,10 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class AbilityDescription
 {
-	/** @var GenerationId $generationId */
-	private $generationId;
-
-	/** @var LanguageId $languageId */
-	private $languageId;
-
-	/** @var AbilityId $abilityId */
-	private $abilityId;
-
-	/** @var string $description */
-	private $description;
+	private GenerationId $generationId;
+	private LanguageId $languageId;
+	private AbilityId $abilityId;
+	private string $description;
 
 	/**
 	 * Constructor.

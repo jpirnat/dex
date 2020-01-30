@@ -29,91 +29,50 @@ use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 
 final class StatsPokemonModel
 {
-	/** @var DateModel $dateModel */
-	private $dateModel;
+	private DateModel $dateModel;
+	private FormatRepositoryInterface $formatRepository;
+	private PokemonRepositoryInterface $pokemonRepository;
+	private RatingQueriesInterface $ratingQueries;
+	private GenerationRepositoryInterface $generationRepository;
+	private MovesetPokemonRepositoryInterface $movesetPokemonRepository;
+	private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository;
 
-	/** @var FormatRepositoryInterface $formatRepository */
-	private $formatRepository;
-
-	/** @var PokemonRepositoryInterface $pokemonRepository */
-	private $pokemonRepository;
-
-	/** @var RatingQueriesInterface $ratingQueries */
-	private $ratingQueries;
-
-	/** @var GenerationRepositoryInterface $generationRepository */
-	private $generationRepository;
-
-	/** @var MovesetPokemonRepositoryInterface $movesetPokemonRepository */
-	private $movesetPokemonRepository;
-
-	/** @var MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository */
-	private $movesetRatedPokemonRepository;
+	private PokemonModel $pokemonModel;
+	private StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository;
+	private StatsPokemonItemRepositoryInterface $statsPokemonItemRepository;
+	private SpreadModel $spreadModel;
+	private StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository;
+	private StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository;
+	private StatsPokemonCounterRepositoryInterface $statsPokemonCounterRepository;
 
 
-	/** @var PokemonModel $pokemonModel */
-	private $pokemonModel;
-
-	/** @var StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository */
-	private $statsPokemonAbilityRepository;
-
-	/** @var StatsPokemonItemRepositoryInterface $statsPokemonItemRepository */
-	private $statsPokemonItemRepository;
-
-	/** @var SpreadModel $spreadModel */
-	private $spreadModel;
-
-	/** @var StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository */
-	private $statsPokemonMoveRepository;
-
-	/** @var StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository */
-	private $statsPokemonTeammateRepository;
-
-	/** @var StatsPokemonCounterRepositoryInterface $statsPokemonCounterRepository */
-	private $statsPokemonCounterRepository;
-
-
-	/** @var string $month */
-	private $month;
-
-	/** @var Format $format */
-	private $format;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var Pokemon $pokemon */
-	private $pokemon;
-
-	/** @var LanguageId $languageId */
-	private $languageId;
+	private string $month;
+	private Format $format;
+	private int $rating;
+	private Pokemon $pokemon;
+	private LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private $ratings = [];
+	private array $ratings = [];
 
-	/** @var MovesetPokemon|null $movesetPokemon */
-	private $movesetPokemon;
-
-	/** @var MovesetRatedPokemon|null $movesetRatedPokemon */
-	private $movesetRatedPokemon;
-
-	/** @var Generation $generation */
-	private $generation;
+	private ?MovesetPokemon $movesetPokemon;
+	private ?MovesetRatedPokemon $movesetRatedPokemon;
+	private Generation $generation;
 
 	/** @var StatsPokemonAbility[] $abilities */
-	private $abilities = [];
+	private array $abilities = [];
 
 	/** @var StatsPokemonItem[] $items */
-	private $items = [];
+	private array $items = [];
 
 	/** @var StatsPokemonMove[] $moves */
-	private $moves;
+	private array $moves;
 
 	/** @var StatsPokemonTeammate[] $teammates */
-	private $teammates = [];
+	private array $teammates = [];
 
 	/** @var StatsPokemonCounter[] $counters */
-	private $counters = [];
+	private array $counters = [];
 
 
 	/**

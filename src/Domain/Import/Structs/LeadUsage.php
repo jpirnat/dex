@@ -5,20 +5,11 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final class LeadUsage
 {
-	/** @var int $rank */
-	private $rank;
-
-	/** @var string $showdownPokemonName */
-	private $showdownPokemonName;
-
-	/** @var float $usagePercent */
-	private $usagePercent;
-
-	/** @var int $raw */
-	private $raw;
-
-	/** @var float $rawPercent */
-	private $rawPercent;
+	private int $rank;
+	private string $showdownPokemonName;
+	private float $usagePercent;
+	private int $raw;
+	private float $rawPercent;
 
 	/**
 	 * Constructor.

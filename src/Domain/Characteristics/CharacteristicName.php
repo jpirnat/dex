@@ -7,14 +7,9 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class CharacteristicName
 {
-	/** @var LanguageId $languageId */
-	private $languageId;
-
-	/** @var CharacteristicId $characteristicId */
-	private $characteristicId;
-
-	/** @var string $name */
-	private $name;
+	private LanguageId $languageId;
+	private CharacteristicId $characteristicId;
+	private string $name;
 
 	/**
 	 * Constructor.

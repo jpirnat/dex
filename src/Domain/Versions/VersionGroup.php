@@ -5,20 +5,11 @@ namespace Jp\Dex\Domain\Versions;
 
 final class VersionGroup
 {
-	/** @var VersionGroupId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var GenerationId $generationId */
-	private $generationId;
-
-	/** @var string $icon */
-	private $icon;
-
-	/** @var int $sort */
-	private $sort;
+	private VersionGroupId $id;
+	private string $identifier;
+	private GenerationId $generationId;
+	private string $icon;
+	private int $sort;
 
 	/**
 	 * Constructor.

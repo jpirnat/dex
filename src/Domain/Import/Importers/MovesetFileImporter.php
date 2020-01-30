@@ -34,47 +34,20 @@ use Psr\Http\Message\StreamInterface;
 
 final class MovesetFileImporter
 {
-	/** @var ShowdownPokemonRepositoryInterface $showdownPokemonRepository */
-	private $showdownPokemonRepository;
-
-	/** @var ShowdownAbilityRepositoryInterface $showdownAbilityRepository */
-	private $showdownAbilityRepository;
-
-	/** @var ShowdownItemRepositoryInterface $showdownItemRepository */
-	private $showdownItemRepository;
-
-	/** @var ShowdownNatureRepositoryInterface $showdownNatureRepository */
-	private $showdownNatureRepository;
-
-	/** @var ShowdownMoveRepositoryInterface $showdownMoveRepository */
-	private $showdownMoveRepository;
-
-	/** @var MovesetPokemonRepositoryInterface $movesetPokemonRepository */
-	private $movesetPokemonRepository;
-
-	/** @var MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository */
-	private $movesetRatedPokemonRepository;
-
-	/** @var MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository */
-	private $movesetRatedAbilityRepository;
-
-	/** @var MovesetRatedItemRepositoryInterface $movesetRatedItemRepository */
-	private $movesetRatedItemRepository;
-
-	/** @var MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository */
-	private $movesetRatedSpreadRepository;
-
-	/** @var MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository */
-	private $movesetRatedMoveRepository;
-
-	/** @var MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository */
-	private $movesetRatedTeammateRepository;
-
-	/** @var MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository */
-	private $movesetRatedCounterRepository;
-
-	/** @var MovesetFileExtractor $movesetFileExtractor */
-	private $movesetFileExtractor;
+	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
+	private ShowdownAbilityRepositoryInterface $showdownAbilityRepository;
+	private ShowdownItemRepositoryInterface $showdownItemRepository;
+	private ShowdownNatureRepositoryInterface $showdownNatureRepository;
+	private ShowdownMoveRepositoryInterface $showdownMoveRepository;
+	private MovesetPokemonRepositoryInterface $movesetPokemonRepository;
+	private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository;
+	private MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository;
+	private MovesetRatedItemRepositoryInterface $movesetRatedItemRepository;
+	private MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository;
+	private MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository;
+	private MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository;
+	private MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository;
+	private MovesetFileExtractor $movesetFileExtractor;
 
 	/**
 	 * Constructor.

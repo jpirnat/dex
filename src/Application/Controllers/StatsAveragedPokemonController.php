@@ -9,11 +9,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsAveragedPokemonController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
-
-	/** @var StatsAveragedPokemonModel $statsAveragedPokemonModel */
-	private $statsAveragedPokemonModel;
+	private BaseController $baseController;
+	private StatsAveragedPokemonModel $statsAveragedPokemonModel;
 
 	/**
 	 * Constructor.

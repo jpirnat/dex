@@ -7,8 +7,7 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class IndexController
 {
-	/** @var BaseController $baseController */
-	private $baseController;
+	private BaseController $baseController;
 
 	/**
 	 * Constructor.

@@ -7,26 +7,13 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class Format
 {
-	/** @var FormatId $id */
-	private $id;
-
-	/** @var string $identifier */
-	private $identifier;
-
-	/** @var string $name */
-	private $name;
-
-	/** @var GenerationId $generationId */
-	private $generationId;
-
-	/** @var int $level */
-	private $level;
-
-	/** @var int $fieldSize */
-	private $fieldSize;
-
-	/** @var string $smogonDexIdentifier */
-	private $smogonDexIdentifier;
+	private FormatId $id;
+	private string $identifier;
+	private string $name;
+	private GenerationId $generationId;
+	private int $level;
+	private int $fieldSize;
+	private string $smogonDexIdentifier;
 
 	/**
 	 * Constructor.

@@ -7,17 +7,10 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class StatName
 {
-	/** @var LanguageId $languageId */
-	private $languageId;
-
-	/** @var StatId $statId */
-	private $statId;
-
-	/** @var string $name */
-	private $name;
-
-	/** @var string $abbreviation */
-	private $abbreviation;
+	private LanguageId $languageId;
+	private StatId $statId;
+	private string $name;
+	private string $abbreviation;
 
 	/**
 	 * Constructor.

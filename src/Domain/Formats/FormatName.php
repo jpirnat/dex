@@ -7,14 +7,9 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class FormatName
 {
-	/** @var LanguageId $languageId */
-	private $languageId;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var string $name */
-	private $name;
+	private LanguageId $languageId;
+	private FormatId $formatId;
+	private string $name;
 
 	/**
 	 * Constructor.

@@ -12,8 +12,7 @@ use PDO;
 
 final class DatabaseMoveDescriptionRepository implements MoveDescriptionRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

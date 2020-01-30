@@ -5,8 +5,7 @@ namespace Jp\Dex\Domain;
 
 abstract class EntityId
 {
-	/** @var int $id */
-	protected $id;
+	protected int $id;
 
 	/**
 	 * Constructor.

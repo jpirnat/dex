@@ -14,8 +14,7 @@ use PDO;
 
 final class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

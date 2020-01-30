@@ -5,14 +5,9 @@ namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
 final class ItemData
 {
-	/** @var string $itemName */
-	private $itemName;
-
-	/** @var string $itemIdentifier */
-	private $itemIdentifier;
-
-	/** @var float $percent */
-	private $percent;
+	private string $itemName;
+	private string $itemIdentifier;
+	private float $percent;
 
 	/**
 	 * Constructor.

@@ -13,27 +13,18 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class DexMoveModel
 {
-	/** @var GenerationModel $generationModel */
-	private $generationModel;
-
-	/** @var DexMovePokemonModel $dexMovePokemonModel */
-	private $dexMovePokemonModel;
-
-	/** @var MoveRepositoryInterface $moveRepository */
-	private $moveRepository;
-
-	/** @var MoveNameRepositoryInterface $moveNameRepository */
-	private $moveNameRepository;
-
-	/** @var VersionGroupRepositoryInterface $vgRepository */
-	private $vgRepository;
+	private GenerationModel $generationModel;
+	private DexMovePokemonModel $dexMovePokemonModel;
+	private MoveRepositoryInterface $moveRepository;
+	private MoveNameRepositoryInterface $moveNameRepository;
+	private VersionGroupRepositoryInterface $vgRepository;
 
 
 	/** @var array $move */
-	private $move = [];
+	private array $move = [];
 
 	/** @var VersionGroup[] $versionGroups */
-	private $versionGroups = [];
+	private array $versionGroups = [];
 
 
 	/**

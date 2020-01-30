@@ -18,26 +18,13 @@ final class MovesetRatedSpread
 {
 	use ValidateMonthTrait;
 
-	/** @var DateTime $month */
-	private $month;
-
-	/** @var FormatId $formatId */
-	private $formatId;
-
-	/** @var int $rating */
-	private $rating;
-
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var NatureId $natureId */
-	private $natureId;
-
-	/** @var StatValueContainer $evSpread */
-	private $evSpread;
-
-	/** @var float $percent */
-	private $percent;
+	private DateTime $month;
+	private FormatId $formatId;
+	private int $rating;
+	private PokemonId $pokemonId;
+	private NatureId $natureId;
+	private StatValueContainer $evSpread;
+	private float $percent;
 
 	/**
 	 * Constructor.

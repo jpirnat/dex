@@ -7,17 +7,10 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class PokemonName
 {
-	/** @var LanguageId $languageId */
-	private $languageId;
-
-	/** @var PokemonId $pokemonId */
-	private $pokemonId;
-
-	/** @var string $name */
-	private $name;
-
-	/** @var string $category */
-	private $category;
+	private LanguageId $languageId;
+	private PokemonId $pokemonId;
+	private string $name;
+	private string $category;
 
 	/**
 	 * Constructor.

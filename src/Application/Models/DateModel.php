@@ -9,18 +9,12 @@ use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 
 final class DateModel
 {
-	/** @var MonthQueriesInterface $monthQueries */
-	private $monthQueries;
+	private MonthQueriesInterface $monthQueries;
 
 
-	/** @var DateTime $thisMonth */
-	private $thisMonth;
-
-	/** @var DateTime $prevMonth */
-	private $prevMonth;
-
-	/** @var DateTime $nextMonth */
-	private $nextMonth;
+	private DateTime $thisMonth;
+	private ?DateTime $prevMonth;
+	private ?DateTime $nextMonth;
 
 
 	/**

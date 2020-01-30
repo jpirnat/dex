@@ -8,23 +8,12 @@ use Jp\Dex\Domain\Stats\StatValueContainer;
 
 final class SpreadData
 {
-	/** @var string $natureName */
-	private $natureName;
-
-	/** @var StatId|null $increasedStatId */
-	private $increasedStatId;
-
-	/** @var StatId|null $decreasedStatId */
-	private $decreasedStatId;
-
-	/** @var StatValueContainer $evSpread */
-	private $evSpread;
-
-	/** @var float $percent */
-	private $percent;
-
-	/** @var StatValueContainer $statSpread */
-	private $statSpread;
+	private string $natureName;
+	private ?StatId $increasedStatId;
+	private ?StatId $decreasedStatId;
+	private StatValueContainer $evSpread;
+	private float $percent;
+	private StatValueContainer $statSpread;
 
 	/**
 	 * Constructor.

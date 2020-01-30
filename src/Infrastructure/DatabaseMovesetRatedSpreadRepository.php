@@ -16,8 +16,7 @@ use PDO;
 
 final class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
+	private PDO $db;
 
 	/**
 	 * Constructor.

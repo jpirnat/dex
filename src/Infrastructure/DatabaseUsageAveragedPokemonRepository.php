@@ -13,11 +13,8 @@ use PDO;
 
 final class DatabaseUsageAveragedPokemonRepository implements UsageAveragedPokemonRepositoryInterface
 {
-	/** @var PDO $db */
-	private $db;
-
-	/** @var MonthsCounter $monthsCounter */
-	private $monthsCounter;
+	private PDO $db;
+	private MonthsCounter $monthsCounter;
 
 	/**
 	 * Constructor.

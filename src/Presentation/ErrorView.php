@@ -9,14 +9,9 @@ use Psr\Http\Message\ResponseInterface;
 
 final class ErrorView
 {
-	/** @var RendererInterface $renderer */
-	private $renderer;
-
-	/** @var BaseView $baseView */
-	private $baseView;
-
-	/** @var ErrorModel $errorModel */
-	private $errorModel;
+	private RendererInterface $renderer;
+	private BaseView $baseView;
+	private ErrorModel $errorModel;
 
 	/**
 	 * Constructor.
