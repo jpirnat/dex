@@ -50,7 +50,7 @@ task('deploy', [
 ]);
 
 task('reload:php-fpm', function () {
-    run('sudo /etc/init.d/php7.2-fpm restart');
+    run('sudo /etc/init.d/php7.4-fpm restart');
 });
 
 after('deploy', 'reload:php-fpm');
