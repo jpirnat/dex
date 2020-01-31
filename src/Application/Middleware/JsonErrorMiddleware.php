@@ -12,7 +12,7 @@ use Throwable;
 use Whoops\Handler\JsonResponseHandler;
 use Whoops\Run;
 
-final class AjaxErrorMiddleware implements MiddlewareInterface
+final class JsonErrorMiddleware implements MiddlewareInterface
 {
 	private string $environment;
 

@@ -83,7 +83,7 @@ $rule = [
 		$environment,
 	]
 ];
-$dice = $dice->addRule(\Jp\Dex\Application\Middleware\AjaxErrorMiddleware::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Middleware\JsonErrorMiddleware::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Middleware\HtmlErrorMiddleware::class, $rule);
 
 
