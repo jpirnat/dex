@@ -30,6 +30,7 @@ return [
 	'form_names',
 	'models',
 	'form_icons',
+	'version_group_pokemon',
 
 	// Abilities
 	'abilities',
