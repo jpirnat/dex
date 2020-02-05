@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
@@ -67,6 +68,18 @@ final class GenerationModel
 		);
 
 		return $this->generation->getId();
+	}
+
+	/**
+	 * Set the navigable generations to all generations this Pokémon has appeared in.
+	 *
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return void
+	 */
+	public function setWithPokemon(PokemonId $pokemonId) : void
+	{
+		$this->generations = $this->generationRepository->getWithPokemon($pokemonId);
 	}
 
 	/**

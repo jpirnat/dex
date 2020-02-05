@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\GenerationNotFoundException;
@@ -98,6 +99,49 @@ final class DatabaseGenerationRepository implements GenerationRepositoryInterfac
 		);
 
 		return $generation;
+	}
+
+	/**
+	 * Get generations that this Pokémon has appeared in (via version groups).
+	 *
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return Generation[] Indexed by id. Ordered by id.
+	 */
+	public function getWithPokemon(PokemonId $pokemonId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`icon`
+			FROM `generations`
+			WHERE `id` IN (
+				SELECT
+					`vg`.`generation_id`
+				FROM `version_groups` AS `vg`
+				INNER JOIN `version_group_pokemon` AS `p`
+					ON `vg`.`id` = `p`.`version_group_id`
+				WHERE `p`.`pokemon_id` = :pokemon_id
+			)
+			ORDER BY `id`'
+		);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$generations = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$generation = new Generation(
+				new GenerationId($result['id']),
+				$result['identifier'],
+				$result['icon']
+			);
+
+			$generations[$result['id']] = $generation;
+		}
+
+		return $generations;
 	}
 
 	/**

@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Versions;
 
+use Jp\Dex\Domain\Pokemon\PokemonId;
+
 interface GenerationRepositoryInterface
 {
 	/**
@@ -27,6 +29,15 @@ interface GenerationRepositoryInterface
 	 * @return Generation
 	 */
 	public function getByIdentifier(string $identifier) : Generation;
+
+	/**
+	 * Get generations that this Pokémon has appeared in (via version groups).
+	 *
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return Generation[] Indexed by id. Ordered by id.
+	 */
+	public function getWithPokemon(PokemonId $pokemonId) : array;
 
 	/**
 	 * Get generations since the given generation, inclusive.
