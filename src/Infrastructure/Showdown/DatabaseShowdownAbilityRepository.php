@@ -13,7 +13,7 @@ final class DatabaseShowdownAbilityRepository implements ShowdownAbilityReposito
 	/** @var AbilityId[] $abilitiesToImport */
 	private array $abilitiesToImport = [];
 
-	/** @var ?AbilityId[] $abilitiesToIgnore */
+	/** @var array<string, int> $abilitiesToIgnore */
 	private array $abilitiesToIgnore = [];
 
 	/** @var string[] $unknownAbilities */
@@ -40,20 +40,11 @@ final class DatabaseShowdownAbilityRepository implements ShowdownAbilityReposito
 		$stmt = $db->prepare(
 			'SELECT
 				`name`,
-				`ability_id`
+				1
 			FROM `showdown_abilities_to_ignore`'
 		);
 		$stmt->execute();
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			if ($result['ability_id'] !== null) {
-				// The Pokémon Showdown ability name has an ability id.
-				$abilityId = new AbilityId($result['ability_id']);
-			} else {
-				$abilityId = null;
-			}
-
-			$this->abilitiesToIgnore[$result['name']] = $abilityId;
-		}
+		$this->abilitiesToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
 	}
 
 	/**
@@ -77,9 +68,7 @@ final class DatabaseShowdownAbilityRepository implements ShowdownAbilityReposito
 	 */
 	public function isIgnored(string $showdownAbilityName) : bool
 	{
-		// We use array_key_exists instead of isset because array_key_exists
-		// returns true for null values, whereas isset would return false.
-		return array_key_exists($showdownAbilityName, $this->abilitiesToIgnore);
+		return isset($this->abilitiesToIgnore[$showdownAbilityName]);
 	}
 
 	/**

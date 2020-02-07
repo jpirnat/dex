@@ -13,7 +13,7 @@ final class DatabaseShowdownNatureRepository implements ShowdownNatureRepository
 	/** @var NatureId[] $naturesToImport */
 	private array $naturesToImport = [];
 
-	/** @var ?NatureId[] $naturesToIgnore */
+	/** @var array<string, int> $naturesToIgnore */
 	private array $naturesToIgnore = [];
 
 	/** @var string[] $unknownNatures */
@@ -40,20 +40,11 @@ final class DatabaseShowdownNatureRepository implements ShowdownNatureRepository
 		$stmt = $db->prepare(
 			'SELECT
 				`name`,
-				`nature_id`
+				1
 			FROM `showdown_natures_to_ignore`'
 		);
 		$stmt->execute();
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			if ($result['nature_id'] !== null) {
-				// The Pokémon Showdown nature name has a nature id.
-				$natureId = new NatureId($result['nature_id']);
-			} else {
-				$natureId = null;
-			}
-
-			$this->naturesToIgnore[$result['name']] = $natureId;
-		}
+		$this->naturesToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
 	}
 
 	/**
@@ -77,9 +68,7 @@ final class DatabaseShowdownNatureRepository implements ShowdownNatureRepository
 	 */
 	public function isIgnored(string $showdownNatureName) : bool
 	{
-		// We use array_key_exists instead of isset because array_key_exists
-		// returns true for null values, whereas isset would return false.
-		return array_key_exists($showdownNatureName, $this->naturesToIgnore);
+		return isset($this->naturesToIgnore[$showdownNatureName]);
 	}
 
 	/**

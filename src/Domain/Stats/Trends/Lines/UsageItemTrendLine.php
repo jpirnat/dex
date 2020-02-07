@@ -9,7 +9,6 @@ use Jp\Dex\Domain\Types\Type;
 
 final class UsageItemTrendLine extends TrendLine
 {
-	/** @var $itemName */
 	private ItemName $itemName;
 
 	/**

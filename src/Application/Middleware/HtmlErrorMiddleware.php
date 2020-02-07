@@ -46,7 +46,7 @@ final class HtmlErrorMiddleware implements MiddlewareInterface
 			$whoops->prependHandler(new PrettyPageHandler());
 			$whoops->register();
 
-			return $handler->handle($request);;
+			return $handler->handle($request);
 		}
 
 		// In production environments, the user should not see PHP errors.

@@ -13,7 +13,7 @@ final class DatabaseShowdownMoveRepository implements ShowdownMoveRepositoryInte
 	/** @var MoveId[] $movesToImport */
 	private array $movesToImport = [];
 
-	/** @var ?MoveId[] $movesToIgnore */
+	/** @var array<string, int> $movesToIgnore */
 	private array $movesToIgnore = [];
 
 	/** @var string[] $unknownMoves */
@@ -40,21 +40,11 @@ final class DatabaseShowdownMoveRepository implements ShowdownMoveRepositoryInte
 		$stmt = $db->prepare(
 			'SELECT
 				`name`,
-				`move_id`
+				1
 			FROM `showdown_moves_to_ignore`'
 		);
 		$stmt->execute();
 		$this->movesToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			if ($result['move_id'] !== null) {
-				// The Pokémon Showdown move name has a move id.
-				$moveId = new MoveId($result['move_id']);
-			} else {
-				$moveId = null;
-			}
-
-			$this->movesToIgnore[$result['name']] = $moveId;
-		}
 	}
 
 	/**
@@ -78,9 +68,7 @@ final class DatabaseShowdownMoveRepository implements ShowdownMoveRepositoryInte
 	 */
 	public function isIgnored(string $showdownMoveName) : bool
 	{
-		// We use array_key_exists instead of isset because array_key_exists
-		// returns true for null values, whereas isset would return false.
-		return array_key_exists($showdownMoveName, $this->movesToIgnore);
+		return isset($this->movesToIgnore[$showdownMoveName]);
 	}
 
 	/**

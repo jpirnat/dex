@@ -17,10 +17,10 @@ final class DexTypesModel
 
 
 	/** @var DexType[] $types */
-	private $types = [];
+	private array $types = [];
 
 	/** @var int[][] $factors */
-	private $factors = [];
+	private array $factors = [];
 
 
 	/**

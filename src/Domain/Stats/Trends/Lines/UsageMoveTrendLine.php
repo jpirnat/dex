@@ -9,10 +9,7 @@ use Jp\Dex\Domain\Types\Type;
 
 final class UsageMoveTrendLine extends TrendLine
 {
-	/** @var $moveName */
 	private MoveName $moveName;
-
-	/** @var $moveType */
 	private Type $moveType;
 
 	/**

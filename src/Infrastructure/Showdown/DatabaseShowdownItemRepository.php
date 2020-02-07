@@ -13,7 +13,7 @@ final class DatabaseShowdownItemRepository implements ShowdownItemRepositoryInte
 	/** @var ItemId[] $itemsToImport */
 	private array $itemsToImport = [];
 
-	/** @var ?ItemId[] $itemsToIgnore */
+	/** @var array<string, int> $itemsToIgnore */
 	private array $itemsToIgnore = [];
 
 	/** @var string[] $unknownItems */
@@ -40,20 +40,11 @@ final class DatabaseShowdownItemRepository implements ShowdownItemRepositoryInte
 		$stmt = $db->prepare(
 			'SELECT
 				`name`,
-				`item_id`
+				1
 			FROM `showdown_items_to_ignore`'
 		);
 		$stmt->execute();
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			if ($result['item_id'] !== null) {
-				// The Pokémon Showdown item name has an item id.
-				$itemId = new ItemId($result['item_id']);
-			} else {
-				$itemId = null;
-			}
-
-			$this->itemsToIgnore[$result['name']] = $itemId;
-		}
+		$this->itemsToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
 	}
 
 	/**
@@ -77,9 +68,7 @@ final class DatabaseShowdownItemRepository implements ShowdownItemRepositoryInte
 	 */
 	public function isIgnored(string $showdownItemName) : bool
 	{
-		// We use array_key_exists instead of isset because array_key_exists
-		// returns true for null values, whereas isset would return false.
-		return array_key_exists($showdownItemName, $this->itemsToIgnore);
+		return isset($this->itemsToIgnore[$showdownItemName]);
 	}
 
 	/**

@@ -21,9 +21,8 @@ final class DatabaseShowdownFormatRepository implements ShowdownFormatRepository
 
 	/**
 	 * Indexed by month, then Showdown format name.
-	 * The value is the format id, or null.
 	 *
-	 * @var ?FormatId[][]
+	 * @var array<string, array<string, int>>
 	 */
 	private array $formatsToIgnore = [];
 
@@ -60,23 +59,12 @@ final class DatabaseShowdownFormatRepository implements ShowdownFormatRepository
 		$stmt = $db->prepare(
 			'SELECT
 				`month`,
-				`name`,
-				`format_id`
+				`name`
 			FROM `showdown_formats_to_ignore`'
 		);
 		$stmt->execute();
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			if ($result['format_id'] !== null) {
-				// The Pokémon Showdown format name has a format id.
-				$formatId = new FormatId($result['format_id']);
-			} else {
-				$formatId = null;
-			}
-
-			$this->formatsToIgnore
-				[$result['month']]
-				[$result['name']]
-			= $formatId;
+			$this->formatsToIgnore[$result['month']][$result['name']] = 1;
 		}
 	}
 
@@ -103,12 +91,7 @@ final class DatabaseShowdownFormatRepository implements ShowdownFormatRepository
 	 */
 	public function isIgnored(DateTime $month, string $showdownFormatName) : bool
 	{
-		// We use array_key_exists instead of isset because array_key_exists
-		// returns true for null values, whereas isset would return false.
-		return
-			isset($this->formatsToIgnore[$month->format('Y-m-d')])
-			&& array_key_exists($showdownFormatName, $this->formatsToIgnore[$month->format('Y-m-d')])
-		;
+		return isset($this->formatsToIgnore[$month->format('Y-m-d')][$showdownFormatName]);
 	}
 
 	/**

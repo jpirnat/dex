@@ -13,7 +13,7 @@ final class DatabaseShowdownPokemonRepository implements ShowdownPokemonReposito
 	/** @var PokemonId[] $pokemonToImport */
 	private array $pokemonToImport = [];
 
-	/** @var ?PokemonId[] $pokemonToIgnore */
+	/** @var array<string, int> $pokemonToIgnore */
 	private array $pokemonToIgnore = [];
 
 	/** @var string[] $unknownPokemon */
@@ -40,20 +40,11 @@ final class DatabaseShowdownPokemonRepository implements ShowdownPokemonReposito
 		$stmt = $db->prepare(
 			'SELECT
 				`name`,
-				`pokemon_id`
+				1
 			FROM `showdown_pokemon_to_ignore`'
 		);
 		$stmt->execute();
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			if ($result['pokemon_id'] !== null) {
-				// The Pokémon Showdown Pokémon name has a Pokémon id.
-				$pokemonId = new PokemonId($result['pokemon_id']);
-			} else {
-				$pokemonId = null;
-			}
-
-			$this->pokemonToIgnore[$result['name']] = $pokemonId;
-		}
+		$this->pokemonToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
 	}
 
 	/**
@@ -77,9 +68,7 @@ final class DatabaseShowdownPokemonRepository implements ShowdownPokemonReposito
 	 */
 	public function isIgnored(string $showdownPokemonName) : bool
 	{
-		// We use array_key_exists instead of isset because array_key_exists
-		// returns true for null values, whereas isset would return false.
-		return array_key_exists($showdownPokemonName, $this->pokemonToIgnore);
+		return isset($this->pokemonToIgnore[$showdownPokemonName]);
 	}
 
 	/**

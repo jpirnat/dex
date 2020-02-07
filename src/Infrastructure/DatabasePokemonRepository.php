@@ -242,7 +242,8 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 				(float) $result['height_m'],
 				(float) $result['weight_kg'],
 				$result['gender_ratio'],
-				$result['smogon_dex_identifier']
+				$result['smogon_dex_identifier'],
+				$result['sort']
 			);
 
 			$pokemons[$result['id']] = $pokemon;

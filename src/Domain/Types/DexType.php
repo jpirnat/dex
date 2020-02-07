@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Types;
 
 final class DexType
 {
-	private TypeId $typeId;
+	private TypeId $id;
 	private string $identifier;
 	private string $icon;
 	private string $name;
