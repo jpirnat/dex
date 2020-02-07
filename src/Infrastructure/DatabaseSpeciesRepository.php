@@ -41,8 +41,7 @@ final class DatabaseSpeciesRepository implements SpeciesRepositoryInterface
 				`identifier`,
 				`introduced_in_version_group_id`,
 				`base_egg_cycles`,
-				`base_friendship`,
-				`experience_group_id`
+				`base_friendship`
 			FROM `species`
 			WHERE `id` = :species_id
 			LIMIT 1'
@@ -62,8 +61,7 @@ final class DatabaseSpeciesRepository implements SpeciesRepositoryInterface
 			$result['identifier'],
 			new VersionGroupId($result['introduced_in_version_group_id']),
 			$result['base_egg_cycles'],
-			$result['base_friendship'],
-			new ExperienceGroupId($result['experience_group_id'])
+			$result['base_friendship']
 		);
 
 		return $species;

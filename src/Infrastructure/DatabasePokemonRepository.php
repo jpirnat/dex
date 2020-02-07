@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Pokemon\ExperienceGroupId;
 use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
@@ -43,6 +44,7 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 				`species_id`,
 				`is_default_pokemon`,
 				`introduced_in_version_group_id`,
+				`experience_group_id`,
 				`height_m`,
 				`weight_kg`,
 				`gender_ratio`,
@@ -69,6 +71,7 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 			new SpeciesId($result['species_id']),
 			(bool) $result['is_default_pokemon'],
 			new VersionGroupId($result['introduced_in_version_group_id']),
+			new ExperienceGroupId($result['experience_group_id']),
 			(float) $result['height_m'],
 			(float) $result['weight_kg'],
 			$result['gender_ratio'],
@@ -98,6 +101,7 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 				`species_id`,
 				`is_default_pokemon`,
 				`introduced_in_version_group_id`,
+				`experience_group_id`,
 				`height_m`,
 				`weight_kg`,
 				`gender_ratio`,
@@ -124,6 +128,7 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 			new SpeciesId($result['species_id']),
 			(bool) $result['is_default_pokemon'],
 			new VersionGroupId($result['introduced_in_version_group_id']),
+			new ExperienceGroupId($result['experience_group_id']),
 			(float) $result['height_m'],
 			(float) $result['weight_kg'],
 			$result['gender_ratio'],
@@ -149,6 +154,7 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 				`species_id`,
 				`is_default_pokemon`,
 				`introduced_in_version_group_id`,
+				`experience_group_id`,
 				`height_m`,
 				`weight_kg`,
 				`gender_ratio`,
@@ -169,6 +175,7 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 				new SpeciesId($result['species_id']),
 				(bool) $result['is_default_pokemon'],
 				new VersionGroupId($result['introduced_in_version_group_id']),
+				new ExperienceGroupId($result['experience_group_id']),
 				(float) $result['height_m'],
 				(float) $result['weight_kg'],
 				$result['gender_ratio'],
@@ -214,6 +221,7 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 				`p`.`species_id`,
 				`p`.`is_default_pokemon`,
 				`p`.`introduced_in_version_group_id`,
+				`p`.`experience_group_id`,
 				`p`.`height_m`,
 				`p`.`weight_kg`,
 				`p`.`gender_ratio`,
@@ -239,6 +247,7 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 				new SpeciesId($result['species_id']),
 				(bool) $result['is_default_pokemon'],
 				new VersionGroupId($result['introduced_in_version_group_id']),
+				new ExperienceGroupId($result['experience_group_id']),
 				(float) $result['height_m'],
 				(float) $result['weight_kg'],
 				$result['gender_ratio'],

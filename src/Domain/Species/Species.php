@@ -12,7 +12,6 @@ final class Species
 	private VersionGroupId $introducedInVersionGroupId;
 	private int $baseEggCycles;
 	private int $baseFriendship;
-	private ExperienceGroupId $experienceGroupId;
 
 	/**
 	 * Constructor.
@@ -22,22 +21,19 @@ final class Species
 	 * @param VersionGroupId $introducedInVersionGroupId
 	 * @param int $baseEggCycles
 	 * @param int $baseFriendship
-	 * @param ExperienceGroupId $experienceGroupId
 	 */
 	public function __construct(
 		SpeciesId $speciesId,
 		string $identifier,
 		VersionGroupId $introducedInVersionGroupId,
 		int $baseEggCycles,
-		int $baseFriendship,
-		ExperienceGroupId $experienceGroupId
+		int $baseFriendship
 	) {
 		$this->id = $speciesId;
 		$this->identifier = $identifier;
 		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
 		$this->baseEggCycles = $baseEggCycles;
 		$this->baseFriendship = $baseFriendship;
-		$this->experienceGroupId = $experienceGroupId;
 	}
 
 	/**
@@ -88,15 +84,5 @@ final class Species
 	public function getBaseFriendship() : int
 	{
 		return $this->baseFriendship;
-	}
-
-	/**
-	 * Get the species's experience group id.
-	 *
-	 * @return ExperienceGroupId
-	 */
-	public function getExperienceGroupId() : ExperienceGroupId
-	{
-		return $this->experienceGroupId;
 	}
 }

@@ -14,6 +14,7 @@ final class Pokemon
 	private SpeciesId $speciesId;
 	private bool $isDefaultPokemon;
 	private VersionGroupId $introducedInVersionGroupId;
+	private ExperienceGroupId $experienceGroupId;
 	private float $heightM;
 	private float $weightKg;
 	private int $genderRatio;
@@ -29,6 +30,7 @@ final class Pokemon
 	 * @param SpeciesId $speciesId
 	 * @param bool $isDefaultPokemon
 	 * @param VersionGroupId $introducedInVersionGroupId
+	 * @param ExperienceGroupId $experienceGroupId
 	 * @param float $heightM
 	 * @param float $weightKg
 	 * @param int $genderRatio
@@ -42,6 +44,7 @@ final class Pokemon
 		SpeciesId $speciesId,
 		bool $isDefaultPokemon,
 		VersionGroupId $introducedInVersionGroupId,
+		ExperienceGroupId $experienceGroupId,
 		float $heightM,
 		float $weightKg,
 		int $genderRatio,
@@ -54,6 +57,7 @@ final class Pokemon
 		$this->speciesId = $speciesId;
 		$this->isDefaultPokemon = $isDefaultPokemon;
 		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
+		$this->experienceGroupId = $experienceGroupId;
 		$this->heightM = $heightM;
 		$this->weightKg = $weightKg;
 		$this->genderRatio = $genderRatio;
@@ -119,6 +123,16 @@ final class Pokemon
 	public function getIntroducedInVersionGroupId() : VersionGroupId
 	{
 		return $this->introducedInVersionGroupId;
+	}
+
+	/**
+	 * Get the Pokémon's experience group id.
+	 *
+	 * @return ExperienceGroupId
+	 */
+	public function getExperienceGroupId() : ExperienceGroupId
+	{
+		return $this->experienceGroupId;
 	}
 
 	/**

@@ -21,9 +21,9 @@ return [
 	'version_group_languages',
 
 	// Pokémon
-	'experience_groups',
 	'species',
 	'species_names',
+	'experience_groups',
 	'pokemon',
 	'pokemon_names',
 	'forms',
