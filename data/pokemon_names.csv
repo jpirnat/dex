@@ -806,6 +806,8 @@ language_id,pokemon_id,name,category
 1,805,ツンデツンデ,いしがきポケモン
 1,806,ズガドーン,はなびポケモン
 1,807,ゼラオラ,じんらいポケモン
+1,808,メルタン,ナットポケモン
+1,809,メルメタル,ナットポケモン
 1,10001,ポワルン (たいようのすがた),てんきポケモン
 1,10002,ポワルン (あまみずのすがた),てんきポケモン
 1,10003,ポワルン (ゆきぐものすがた),てんきポケモン
@@ -978,6 +980,8 @@ language_id,pokemon_id,name,category
 1,10170,ネクロズマ (たそがれのたてがみ),プリズムポケモン
 1,10171,ネクロズマ (あかつきのつばさ),プリズムポケモン
 1,10172,ウルトラネクロズマ,プリズムポケモン
+1,10173,相棒ピカチュウ,ねずみポケモン
+1,10174,相棒イーブイ,しんかポケモン
 2,1,Bulbasaur,Seed Pokémon
 2,2,Ivysaur,Seed Pokémon
 2,3,Venusaur,Seed Pokémon
@@ -1785,6 +1789,8 @@ language_id,pokemon_id,name,category
 2,805,Stakataka,Rampart Pokémon
 2,806,Blacephalon,Fireworks Pokémon
 2,807,Zeraora,Thunderclap Pokémon
+2,808,Meltan,Hex Nut Pokémon
+2,809,Melmetal,Hex Nut Pokémon
 2,10001,Castform (Sunny Form),Weather Pokémon
 2,10002,Castform (Rainy Form),Weather Pokémon
 2,10003,Castform (Snowy Form),Weather Pokémon
@@ -1893,26 +1899,26 @@ language_id,pokemon_id,name,category
 2,10106,Mega Audino,Hearing Pokémon
 2,10107,Mega Diancie,Jewel Pokémon
 2,10108,Hoopa Unbound,Djinn Pokémon
-2,10109,Rattata (Alola Form),Mouse Pokémon
-2,10110,Raticate (Alola Form),Mouse Pokémon
+2,10109,Alolan Rattata,Mouse Pokémon
+2,10110,Alolan Raticate,Mouse Pokémon
 2,10111,Totem Raticate,Mouse Pokémon
 2,10112,Pikachu (Cap),Mouse Pokémon
-2,10113,Raichu (Alola Form),Mouse Pokémon
-2,10114,Sandshrew (Alola Form),Mouse Pokémon
-2,10115,Sandslash (Alola Form),Mouse Pokémon
-2,10116,Vulpix (Alola Form),Fox Pokémon
-2,10117,Ninetales (Alola Form),Fox Pokémon
-2,10118,Diglett (Alola Form),Mole Pokémon
-2,10119,Dugtrio (Alola Form),Mole Pokémon
-2,10120,Meowth (Alola Form),Scratch Cat Pokémon
-2,10121,Persian (Alola Form),Classy Cat Pokémon
-2,10122,Geodude (Alola Form),Rock Pokémon
-2,10123,Graveler (Alola Form),Rock Pokémon
-2,10124,Golem (Alola Form),Megaton Pokémon
-2,10125,Grimer (Alola Form),Sludge Pokémon
-2,10126,Muk (Alola Form),Sludge Pokémon
-2,10127,Exeggutor (Alola Form),Coconut Pokémon
-2,10128,Marowak (Alola Form),Bone Keeper Pokémon
+2,10113,Alolan Raichu,Mouse Pokémon
+2,10114,Alolan Sandshrew,Mouse Pokémon
+2,10115,Alolan Sandslash,Mouse Pokémon
+2,10116,Alolan Vulpix,Fox Pokémon
+2,10117,Alolan Ninetales,Fox Pokémon
+2,10118,Alolan Diglett,Mole Pokémon
+2,10119,Alolan Dugtrio,Mole Pokémon
+2,10120,Alolan Meowth,Scratch Cat Pokémon
+2,10121,Alolan Persian,Classy Cat Pokémon
+2,10122,Alolan Geodude,Rock Pokémon
+2,10123,Alolan Graveler,Rock Pokémon
+2,10124,Alolan Golem,Megaton Pokémon
+2,10125,Alolan Grimer,Sludge Pokémon
+2,10126,Alolan Muk,Sludge Pokémon
+2,10127,Alolan Exeggutor,Coconut Pokémon
+2,10128,Alolan Marowak,Bone Keeper Pokémon
 2,10129,Greninja (Battle Bond),Ninja Pokémon
 2,10130,Ash-Greninja,Ninja Pokémon
 2,10131,10% Zygarde (Aura Break),Order Pokémon
@@ -1957,6 +1963,8 @@ language_id,pokemon_id,name,category
 2,10170,Necrozma (Dusk Mane),Prism Pokémon
 2,10171,Necrozma (Dawn Wings),Prism Pokémon
 2,10172,Ultra Necrozma,Prism Pokémon
+2,10173,Partner Pikachu,Mouse Pokémon
+2,10174,Partner Eevee,Evolution Pokémon
 3,1,Bulbizarre,Pokémon Graine
 3,2,Herbizarre,Pokémon Graine
 3,3,Florizarre,Pokémon Graine
@@ -2764,6 +2772,8 @@ language_id,pokemon_id,name,category
 3,805,Ama-Ama,Pokémon Muraille
 3,806,Pierroteknik,Pokémon Artificier
 3,807,Zeraora,Pokémon Vif Éclair
+3,808,Meltan,Pokémon Écrou
+3,809,Melmetal,Pokémon Écrou
 3,10001,Morphéo (Forme Solaire),Pokémon Climat
 3,10002,Morphéo (Forme Eau de Pluie),Pokémon Climat
 3,10003,Morphéo (Forme Blizzard),Pokémon Climat
@@ -2936,6 +2946,8 @@ language_id,pokemon_id,name,category
 3,10170,Necrozma (Crinière du Couchant),Pokémon Prisme
 3,10171,Necrozma (Ailes de l’Aurore),Pokémon Prisme
 3,10172,Ultra-Necrozma,Pokémon Prisme
+3,10173,Pikachu partenaire,Pokémon Souris
+3,10174,Évoli partenaire,Pokémon Évolutif
 4,1,Bisasam,Samen
 4,2,Bisaknosp,Samen
 4,3,Bisaflor,Samen
@@ -3743,6 +3755,8 @@ language_id,pokemon_id,name,category
 4,805,Muramura,Steinmauer
 4,806,Kopplosio,Feuerwerk
 4,807,Zeraora,Blitzsturm
+4,808,Meltan,Mutter-Pokémon
+4,809,Melmetal,Mutter-Pokémon
 4,10001,Formeo (Sonnenform),Wetter
 4,10002,Formeo (Regenform),Wetter
 4,10003,Formeo (Schneeform),Wetter
@@ -3915,6 +3929,8 @@ language_id,pokemon_id,name,category
 4,10170,Necrozma (Abendmähne),Prisma
 4,10171,Necrozma (Morgenschwingen),Prisma
 4,10172,Ultra-Necrozma,Prisma
+4,10173,Partner-Pikachu,Maus
+4,10174,Partner-Evoli,Evolution
 5,1,Bulbasaur,Pokémon Seme
 5,2,Ivysaur,Pokémon Seme
 5,3,Venusaur,Pokémon Seme
@@ -4722,6 +4738,8 @@ language_id,pokemon_id,name,category
 5,805,Stakataka,Pokémon Bastione
 5,806,Blacephalon,Pokémon Pirotecnico
 5,807,Zeraora,Pokémon Fulmirapido
+5,808,Meltan,Pokémon Bullone
+5,809,Melmetal,Pokémon Bullone
 5,10001,Castform (Forma Sole),Pokémon Meteo
 5,10002,Castform (Forma Pioggia),Pokémon Meteo
 5,10003,Castform (Forma Nuvola di Neve),Pokémon Meteo
@@ -4894,6 +4912,8 @@ language_id,pokemon_id,name,category
 5,10170,Necrozma (Criniera del Vespro),Pokémon Prisma
 5,10171,Necrozma (Ali dell’Aurora),Pokémon Prisma
 5,10172,UltraNecrozma,Pokémon Prisma
+5,10173,Pikachu compagno,Pokémon Topo
+5,10174,Eevee compagno,Pokémon Evoluzione
 6,1,Bulbasaur,Pokémon Semilla
 6,2,Ivysaur,Pokémon Semilla
 6,3,Venusaur,Pokémon Semilla
@@ -5701,6 +5721,8 @@ language_id,pokemon_id,name,category
 6,805,Stakataka,Pokémon Muro
 6,806,Blacephalon,Pokémon Pirotecnia
 6,807,Zeraora,Pokémon Fulgor
+6,808,Meltan,Pokémon Tuerca
+6,809,Melmetal,Pokémon Tuerca
 6,10001,Castform (Forma Sol),Pokémon Clima
 6,10002,Castform (Forma Lluvia),Pokémon Clima
 6,10003,Castform (Forma Nieve),Pokémon Clima
@@ -5873,6 +5895,8 @@ language_id,pokemon_id,name,category
 6,10170,Necrozma (Melena Crepuscular),Pokémon Prisma
 6,10171,Necrozma (Alas del Alba),Pokémon Prisma
 6,10172,Ultra-Necrozma,Pokémon Prisma
+6,10173,Compañero Pikachu,Pokémon Ratón
+6,10174,Compañero Eevee,Pokémon Evolución
 7,1,이상해씨,씨앗포켓몬
 7,2,이상해풀,씨앗포켓몬
 7,3,이상해꽃,씨앗포켓몬
@@ -6680,6 +6704,8 @@ language_id,pokemon_id,name,category
 7,805,차곡차곡,돌담포켓몬
 7,806,두파팡,불꽃놀이포켓몬
 7,807,제라오라,신뢰포켓몬
+7,808,멜탄,너트포켓몬
+7,809,멜메탈,너트포켓몬
 7,10001,캐스퐁 (태양의 모습),날씨포켓몬
 7,10002,캐스퐁 (빗방울의 모습),날씨포켓몬
 7,10003,캐스퐁 (설운의 모습),날씨포켓몬
@@ -6852,6 +6878,8 @@ language_id,pokemon_id,name,category
 7,10170,네크로즈마 (황혼의 갈기),프리즘포켓몬
 7,10171,네크로즈마 (새벽의 날개),프리즘포켓몬
 7,10172,울트라네크로즈마,프리즘포켓몬
+7,10173,파트너 피카츄,쥐포켓몬
+7,10174,파트너 이브이,진화포켓몬
 8,1,フシギダネ,たねポケモン
 8,2,フシギソウ,たねポケモン
 8,3,フシギバナ,たねポケモン
@@ -7659,6 +7687,8 @@ language_id,pokemon_id,name,category
 8,805,ツンデツンデ,いしがきポケモン
 8,806,ズガドーン,はなびポケモン
 8,807,ゼラオラ,じんらいポケモン
+8,808,メルタン,ナットポケモン
+8,809,メルメタル,ナットポケモン
 8,10001,ポワルン (たいようのすがた),てんきポケモン
 8,10002,ポワルン (あまみずのすがた),てんきポケモン
 8,10003,ポワルン (ゆきぐものすがた),てんきポケモン
@@ -7831,6 +7861,8 @@ language_id,pokemon_id,name,category
 8,10170,ネクロズマ (たそがれのたてがみ),プリズムポケモン
 8,10171,ネクロズマ (あかつきのつばさ),プリズムポケモン
 8,10172,ウルトラネクロズマ,プリズムポケモン
+8,10173,相棒ピカチュウ,ねずみポケモン
+8,10174,相棒イーブイ,しんかポケモン
 9,1,妙蛙种子,种子宝可梦
 9,2,妙蛙草,种子宝可梦
 9,3,妙蛙花,种子宝可梦
@@ -8638,6 +8670,8 @@ language_id,pokemon_id,name,category
 9,805,,石墙宝可梦
 9,806,,烟火宝可梦
 9,807,,奔雷宝可梦
+9,808,美录坦,螺帽宝可梦
+9,809,美录梅塔,螺帽宝可梦
 9,10001,飘浮泡泡 (太阳的样子),天气宝可梦
 9,10002,飘浮泡泡 (雨水的样子),天气宝可梦
 9,10003,飘浮泡泡 (雪云的样子),天气宝可梦
@@ -8810,6 +8844,8 @@ language_id,pokemon_id,name,category
 9,10170,奈克洛兹玛 (黄昏之鬃),棱镜宝可梦
 9,10171,奈克洛兹玛 (拂晓之翼),棱镜宝可梦
 9,10172,究极奈克洛兹玛,棱镜宝可梦
+9,10173,搭档皮卡丘,鼠宝可梦
+9,10174,搭档伊布,进化宝可梦
 10,1,妙蛙種子,種子寶可夢
 10,2,妙蛙草,種子寶可夢
 10,3,妙蛙花,種子寶可夢
@@ -9617,6 +9653,8 @@ language_id,pokemon_id,name,category
 10,805,,石牆寶可夢
 10,806,,煙火寶可夢
 10,807,,奔雷寶可夢
+10,808,美錄坦,螺帽寶可夢
+10,809,美錄梅塔,螺帽寶可夢
 10,10001,飄浮泡泡 (太陽的樣子),天氣寶可夢
 10,10002,飄浮泡泡 (雨水的樣子),天氣寶可夢
 10,10003,飄浮泡泡 (雪雲的樣子),天氣寶可夢
@@ -9789,3 +9827,5 @@ language_id,pokemon_id,name,category
 10,10170,奈克洛茲瑪 (黃昏之鬃),稜鏡寶可夢
 10,10171,奈克洛茲瑪 (拂曉之翼),稜鏡寶可夢
 10,10172,究極奈克洛茲瑪,稜鏡寶可夢
+10,10173,搭檔皮卡丘,鼠寶可夢
+10,10174,搭檔伊布,進化寶可夢
