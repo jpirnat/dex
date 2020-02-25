@@ -5,7 +5,6 @@ create table if not exists `species`
 
 `introduced_in_version_group_id` tinyint unsigned not null,
 `base_egg_cycles` tinyint unsigned not null,
-`base_friendship` tinyint unsigned not null,
 
 primary key (`id`),
 unique key (`identifier`),

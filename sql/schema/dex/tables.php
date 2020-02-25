@@ -129,6 +129,7 @@ return [
 
 	// Miscellaneous
 	'base_experience',
+	'base_friendships',
 	'catch_rates',
 	'transformation_groups',
 	'transformation_group_pokemon',
