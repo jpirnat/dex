@@ -6030,3 +6030,2583 @@ generation_id,language_id,ability_id,description
 7,10,231,ＨＰ全滿時，\n受到的傷害會變少。
 7,10,232,受到效果絕佳的攻擊時，\n可減弱其威力。
 7,10,233,可進一步提升\n效果絕佳招式的威力。
+8,1,1,くさい　においを　はなつことによって\nこうげきした　ときに　あいてを\nひるませることが　ある。
+8,1,2,とうじょう　したときに\nてんきを　あめに　する。
+8,1,3,まいターン　すばやさが　あがる。
+8,1,4,かたい　こうらに　まもられて\nあいての　こうげきが\nきゅうしょに　あたらない。
+8,1,5,あいての　わざを　うけても\nいちげきで　たおされることが　ない。\nいちげきひっさつわざも　きかない。
+8,1,6,あたりを　しめらせることに　よって\nじばく　などの　ばくはつする　わざを\nだれも　つかえなくなる。
+8,1,7,じゅうなんな　からだによって\nまひ　じょうたいに　ならない。
+8,1,8,すなあらしの　とき\nかいひりつが　あがる。
+8,1,9,せいでんきを　からだに　まとい\nさわった　あいてを\nまひさせる　ことがある。
+8,1,10,でんきタイプの　わざを　うけると\nダメージを　うけずに　かいふくする。
+8,1,11,みずタイプの　わざを　うけると\nダメージを　うけずに　かいふくする。
+8,1,12,どんかん　なので\nメロメロや　ちょうはつ　じょうたいに\nならない。
+8,1,13,あらゆる　てんきの　えいきょうが\nなくなって　しまう。
+8,1,14,ふくがんを　もっているため\nわざの　めいちゅうりつが　あがる。
+8,1,15,ねむれない　たいしつ　なので\nねむり　じょうたいに　ならない。
+8,1,16,あいてから　うけた　わざの　タイプに\nじぶんの　タイプが　へんか　する。
+8,1,17,たいないに　めんえきを　もっているため\nどく　じょうたいに　ならない。
+8,1,18,ほのおタイプの　わざを　うけると\nほのおを　もらい　じぶんが　だす\nほのおタイプの　わざが　つよくなる。
+8,1,19,りんぷんに　まもられて\nわざの　ついかこうかを　うけなくなる。
+8,1,20,マイペースなので\nこんらん　じょうたいに　ならない。
+8,1,21,きゅうばんで　じめんに　はりつき\nポケモンを　いれかえさせる\nわざや　どうぐが　きかなくなる。
+8,1,22,とうじょう　したとき　いかくして\nあいてを　いしゅくさせ\nあいての　こうげきを　さげて　しまう。
+8,1,23,あいての　かげを　ふみ\nにげたり　こうたい　できなくする。
+8,1,24,こうげきを　うけたとき\nじぶんに　ふれた　あいてを\nざらざらの　はだで　キズつける。
+8,1,25,こうかばつぐんの　わざしか\nあたらない　ふしぎな　ちから。
+8,1,26,じめんから　うくことによって\nじめんタイプの　わざを　うけない。
+8,1,27,こうげきで　じぶんに　ふれた　あいてを\nどくや　まひや　ねむり　じょうたいに\nする　ことがある。
+8,1,28,じぶんが　なってしまった\nどくや　まひや　やけどを\nあいてに　うつす。
+8,1,29,あいての　わざや　とくせいで\nのうりょくを　さげられない。
+8,1,30,てもちに　ひっこむと\nじょうたい　いじょうが　なおる。
+8,1,31,でんきタイプの　わざを　じぶんに\nよせつけ　ダメージを　うけずに\nとくこうが　あがる。
+8,1,32,てんのめぐみの　おかげで\nわざの　ついかこうかが　でやすい。
+8,1,33,てんきが　あめのとき\nすばやさが　あがる。
+8,1,34,てんきが　はれのとき\nすばやさが　あがる。
+8,1,35,あたりを　あかるくする　ことで\nやせいの　ポケモンに\nそうぐう　しやすくなる。
+8,1,36,とうじょう　したとき\nあいての　とくせいを　トレースして\nおなじ　とくせいに　なる。
+8,1,37,ぶつり　こうげきの\nいりょくが　２ばいに　なる。
+8,1,38,じぶんに　さわった　あいてを\nどく　じょうたいに　する　ことがある。
+8,1,39,きたえられた　せいしんに　よって\nあいての　こうげきに　ひるまない。
+8,1,40,あつい　マグマを　みにまとい\nこおり　じょうたいに　ならない。
+8,1,41,みずのベールを　みにまとい\nやけど　じょうたいに　ならない。
+8,1,42,はがねタイプの　ポケモンを\nじりょくで　ひきつけて\nにげられなくする。
+8,1,43,おとを　しゃだん　することに　よって\nおとの　こうげきを　うけない。
+8,1,44,てんきが　あめのとき\nすこしずつ　ＨＰを　かいふくする。
+8,1,45,とうじょう　したとき\nてんきを　すなあらしに　する。
+8,1,46,プレッシャーを　あたえて\nあいての　つかう　わざの　ＰＰを\nおおく　へらす。
+8,1,47,あつい　しぼうで　まもられているので\nほのおタイプと　こおりタイプの\nわざの　ダメージを　はんげんさせる。
+8,1,48,ねむり　じょうたいに　なっても\n２ばいの　はやさで\nめざめる　ことが　できる。
+8,1,49,じぶんに　さわった　あいてを\nやけど　じょうたいに　する　ことがある。
+8,1,50,やせいの　ポケモンから\nかならず　にげられる。
+8,1,51,するどい　めの　おかげで\nめいちゅうりつを　さげられない。
+8,1,52,ちからじまんの　ハサミを　もっているので\nあいてに　こうげきを　さげられない。
+8,1,53,あいての　つかった　どうぐを\nひろってくることが　ある。\nぼうけんちゅうも　ひろってくる。
+8,1,54,わざを　だすと\nつぎの　ターンは　やすんでしまう。
+8,1,55,じぶんの　こうげきが　たかくなるが\nめいちゅうりつが　さがる。
+8,1,56,じぶんに　さわった　あいてを\nメロメロに　することが　ある。
+8,1,57,プラスか　マイナスの　とくせいを　もつ\nポケモンが　なかまに　いると\nじぶんの　とくこうが　あがる。
+8,1,58,プラスか　マイナスの　とくせいを　もつ\nポケモンが　なかまに　いると\nじぶんの　とくこうが　あがる。
+8,1,59,てんきの　えいきょうを　うけて\nみずタイプ　ほのおタイプ　こおりタイプの\nどれかに　へんかする。
+8,1,60,ねんちゃくしつの　からだに\nどうぐが　くっついているため\nあいてに　どうぐを　うばわれない。
+8,1,61,からだの　かわを　ぬぎすてることで\nじょうたい　いじょうを\nなおすことが　ある。
+8,1,62,じょうたい　いじょうに　なると\nこんじょうを　だして\nこうげきが　あがる。
+8,1,63,じょうたい　いじょうに　なると\nふしぎなうろこが　はんのうして\nぼうぎょが　あがる。
+8,1,64,ヘドロえきを　すいとった　あいては\nきょうれつな　あくしゅうで\nダメージを　うけて　ＨＰを　へらす。
+8,1,65,ＨＰが　へったとき\nくさタイプの　わざの\nいりょくが　あがる。
+8,1,66,ＨＰが　へったとき\nほのおタイプの　わざの\nいりょくが　あがる。
+8,1,67,ＨＰが　へったとき\nみずタイプの　わざの\nいりょくが　あがる。
+8,1,68,ＨＰが　へったとき\nむしタイプの　わざの\nいりょくが　あがる。
+8,1,69,はんどうを　うける　わざを　だしても\nＨＰが　へらない。
+8,1,70,とうじょう　したときに\nてんきを　はれに　する。
+8,1,71,せんとうで　あいてを\nにげられなくする。
+8,1,72,やるきを　だすことに　よって\nねむり　じょうたいに　ならない。
+8,1,73,しろいけむりに　まもられて\nあいてに　のうりょくを　さげられない。
+8,1,74,ヨガの　ちからで\nぶつり　こうげきの　いりょくが\n２ばいに　なる。
+8,1,75,かたい　からに　まもられ\nあいての　こうげきが\nきゅうしょに　あたらない。
+8,1,76,あらゆる　てんきの　えいきょうが\nきえて　しまう。
+8,1,77,こんらん　じょうたいの　ときは\nかいひりつが　アップする。
+8,1,78,でんきタイプの　わざを　うけると\nダメージを　うけずに\nすばやさが　あがる。
+8,1,79,せいべつが　おなじだと\nとうそうしんを　もやして　つよくなる\nせいべつが　ちがうと　よわくなる
+8,1,80,ひるむ　たびに\nふくつのこころを　もやして\nすばやさが　あがる。
+8,1,81,てんきが　あられのとき\nかいひりつが　あがる。
+8,1,82,ＨＰが　すくなくなったら　たべる\nきのみを　ＨＰ　はんぶんの\nときに　たべてしまう。
+8,1,83,きゅうしょに　こうげきが　あたると\nいかりくるって　こうげきりょくが\nさいだいに　なる。
+8,1,84,もっていた　どうぐが　なくなると\nすばやさが　あがる。
+8,1,85,たいねつの　からだに　よって\nほのおタイプの　わざの\nダメージを　はんげんさせる
+8,1,86,のうりょく　へんかが\nいつもの　２ばいに　なる。
+8,1,87,てんきが　あめのときや　みずタイプの\nわざで　ＨＰが　かいふくし　はれのときや\nほのおタイプの　わざで　へってしまう。
+8,1,88,あいての　ぼうぎょと　とくぼうを　くらべて\nひくい　ほうの　のうりょくに　あわせて\nじぶんの　こうげきか　とくこうを　あげる。
+8,1,89,パンチを　つかう　わざの\nいりょくが　あがる。
+8,1,90,どくじょうたいに　なると\nＨＰが　へらずに　ふえていく。
+8,1,91,じぶんと　おなじ　タイプの\nわざの　いりょくが　あがる。
+8,1,92,れんぞくわざを　つかうと　いつも\nさいこう　かいすう　だすことが　できる。
+8,1,93,てんきが　あめのとき\nじょうたい　いじょうが　なおる。
+8,1,94,てんきが　はれると\nとくこうが　あがるが\nまいターン　ＨＰが　へる。
+8,1,95,じょうたい　いじょうに　なると\nすばやさが　あがる。
+8,1,96,どんな　タイプの　わざでも\nすべて　ノーマルタイプに　なる。\nいりょくが　すこし　あがる。
+8,1,97,こうげきを　きゅうしょに　あてると\nいりょくが　さらに　あがる。
+8,1,98,こうげき　いがいでは\nダメージを　うけない。
+8,1,99,ノーガード　せんぽうに　よって\nおたがいの　だす　わざが\nかならず　あたる　ようになる。
+8,1,100,わざを　だす　じゅんばんが\nかならず　さいごに　なる。
+8,1,101,いりょくが　ひくい　わざの\nいりょくを　たかくして　こうげきできる。
+8,1,102,てんきが　はれのときは\nじょうたい　いじょうに　ならない。
+8,1,103,もっている　どうぐを\nつかうことが　できない。
+8,1,104,あいての　とくせいに\nじゃまされる　ことなく　あいてに\nわざを　だすことが　できる。
+8,1,105,きょううんを　もっているため\nあいての　きゅうしょに\nこうげきが　あたりやすい。
+8,1,106,ひんしに　なったとき\nさわった　あいてに\nダメージを　あたえる。
+8,1,107,あいての　もつ　きけんな　わざを\nさっちする　ことができる。
+8,1,108,とうじょう　したとき\nあいての　もつ　わざを\nひとつだけ　よみとる。
+8,1,109,あいての　のうりょくの　へんかを\nむしして　こうげきが　できる。
+8,1,110,こうかが　いまひとつの　わざを\nつうじょうの　いりょくで\nだすことが　できる。
+8,1,111,こうかばつぐんに　なってしまう\nこうげきの　いりょくを\nよわめる　ことが　できる。
+8,1,112,５ターンの　あいだ\nこうげきと　すばやさが\nはんぶんに　なる。
+8,1,113,ゴーストタイプの　ポケモンに\nノーマルタイプと　かくとうタイプの\nわざを　あてることが　できる。
+8,1,114,みずタイプの　わざを　じぶんに　よせつけ\nダメージは　うけずに　とくこうが　あがる。
+8,1,115,てんきが　あられのとき　ＨＰを\nすこしずつ　かいふく　する。
+8,1,116,こうかばつぐんに　なってしまう\nこうげきの　いりょくを\nよわめる　ことが　できる。
+8,1,117,とうじょう　したときに\nてんきを　あられに　する。
+8,1,118,せんとうが　おわったとき\nあまいミツを　ひろうことが　ある。
+8,1,119,とうじょう　したとき\nあいての　もちものを\nみとおすことが　できる。
+8,1,120,はんどうで　ダメージを\nうける　わざの　いりょくが　あがる。
+8,1,121,もっている　プレートや\nＺクリスタルの　タイプによって\nじぶんの　タイプが　かわる。
+8,1,122,てんきが　はれのとき\nじぶんと　みかたの　こうげきと\nとくぼうの　のうりょくが　あがる。
+8,1,123,ねむり　じょうたいの　あいてに\nダメージを　あたえる。
+8,1,124,さわられた　あいての　どうぐを\nぬすんで　しまう。
+8,1,125,わざの　ついか　こうかは　なくなるが\nそのぶん　たかい　いりょくで\nわざを　だすことが　できる。
+8,1,126,のうりょくの　へんかが　ぎゃくてんして\nあがるときに　さがり\nさがるときに　あがる。
+8,1,127,あいてを　きんちょうさせて\nきのみを　たべられなく　させる。
+8,1,128,のうりょくを　さげられると\nこうげきが　ぐーんと　あがる。
+8,1,129,ＨＰが　はんぶんに　なると\nよわきに　なって　こうげきと\nとくこうが　はんげんする。
+8,1,130,こうげきを　うけると　あいての　わざを\nかなしばり　じょうたいに\nすることが　ある。
+8,1,131,じょうたい　いじょうの　みかたを\nたまに　なおしてあげる。
+8,1,132,みかたの　ダメージを\nへらすことが　できる。
+8,1,133,ぶつりわざで　ダメージを　うけると\nぼうぎょが　さがり\nすばやさが　ぐーんと　あがる。
+8,1,134,じぶんの　おもさが\n２ばいに　なる。
+8,1,135,じぶんの　おもさが\nはんぶんに　なる。
+8,1,136,ＨＰが　まんたんの　ときに\nうける　ダメージが　すくなくなる。
+8,1,137,どく　じょうたいに　なったとき\nぶつりわざの　いりょくが　あがる。
+8,1,138,やけど　じょうたいに　なったとき\nとくしゅわざの　いりょくが　あがる。
+8,1,139,つかった　きのみを\nなんかいも　つくりだす。
+8,1,140,みかたの　こうげきを　よみとって\nわざを　かいひする。
+8,1,141,まいターン　のうりょくの　どれかが\nぐーんと　あがって　どれかが　さがる。
+8,1,142,すなあらしや　あられなどの\nダメージを　うけない。\nこなの　わざを　うけない。
+8,1,143,さわる　だけで　あいてを\nどく　じょうたいに　することがある。
+8,1,144,てもちに　ひっこむと\nＨＰが　すこし　かいふくする。
+8,1,145,ぼうぎょを　さげる\nこうかを　うけない。
+8,1,146,てんきが　すなあらし　のとき\nすばやさが　あがる。
+8,1,147,へんかわざを　うけにくい\nからだに　なっている。
+8,1,148,いちばん　さいごに　わざを　だすと\nわざの　いりょくが　あがる。
+8,1,149,てもちの　いちばん　うしろに　いる\nポケモンに　なりきって　とうじょうして\nあいてを　ばかす。
+8,1,150,めのまえの　ポケモンに\nへんしん　してしまう。
+8,1,151,あいての　かべや　みがわりを\nすりぬけて　こうげき　できる
+8,1,152,あいてに　さわられると\nあいてを　ミイラに　してしまう。
+8,1,153,あいてを　たおすと\nじしんが　ついて\nこうげきが　あがる。
+8,1,154,あくタイプの　こうげきを　うけると\nせいぎかんで　こうげきが　あがる。
+8,1,155,あくタイプと　ゴーストタイプと\nむしタイプの　わざを　うけると\nびびって　すばやさが　あがる。
+8,1,156,あいてに　だされた　へんかわざを　うけずに\nそのまま　かえす　ことが　できる。
+8,1,157,くさタイプの　わざを　うけると\nダメージを　うけずに\nこうげきが　あがる。
+8,1,158,へんかわざを　せんせいで\nだすことが　できる。
+8,1,159,てんきが　すなあらしの　とき\nいわタイプと　じめんタイプと\nはがねタイプの　いりょくが　あがる。
+8,1,160,じぶんに　さわった　あいてに\nてつのトゲで　ダメージを　あたえる。
+8,1,161,ＨＰが　はんぶん　いかに　なると\nすがたが　へんかする。
+8,1,162,じぶんや　みかたの\nめいちゅうりつが　あがる。
+8,1,163,あいての　とくせいに　じゃまされず\nあいてに　わざを　だすことが　できる。
+8,1,164,あいての　とくせいに　じゃまされず\nあいてに　わざを　だすことが　できる。
+8,1,165,じぶんと　みかたへの　メンタル\nこうげきを　ふせぐことが　できる。
+8,1,166,みかたの　くさポケモンは\nのうりょくが　さがらず\nじょうたい　いじょうにも　ならない。
+8,1,167,どんな　きのみでも\nたべると　ＨＰも　かいふくする。
+8,1,168,じぶんが　だす　わざと\nおなじ　タイプに　へんかする。
+8,1,169,あいてから　うける　ぶつりわざの\nダメージが　はんぶんに　なる。
+8,1,170,わざを　あてた　あいての\nどうぐを　うばってしまう。
+8,1,171,あいての　たまや　ばくだんなどの\nわざを　ふせぐことが　できる。
+8,1,172,のうりょくを　さげられると\nとくこうが　ぐーんと　あがる。
+8,1,173,あごが　がんじょうで\nかむ　わざの　いりょくが\nたかくなる。
+8,1,174,ノーマルタイプの　わざが\nこおりタイプになる。\nいりょくが　すこし　あがる。
+8,1,175,みかたの　ポケモンは\nねむらなくなる。
+8,1,176,こうげきわざを　だすと　ブレードフォルムに\nわざ　キングシールドを　だすと\nシールドフォルムに　へんかする。
+8,1,177,ＨＰが　まんたん　だと\nひこうタイプの　わざを\nせんせいで　だすことが　できる。
+8,1,178,はどうの　わざの\nいりょくが　たかくなる。
+8,1,179,グラスフィールドのとき\nぼうぎょが　あがる。
+8,1,180,みかたが　どうぐを　つかうと\nじぶんの　もっている　どうぐを\nみかたに　わたす。
+8,1,181,あいてに　せっしょくする　わざの\nいりょくが　たかくなる。
+8,1,182,ノーマルタイプの　わざが\nフェアリータイプになる。\nいりょくが　すこし　あがる。
+8,1,183,こうげきで　じぶんに　ふれた　あいての\nすばやさを　さげる。
+8,1,184,ノーマルタイプの　わざが\nひこうタイプになる。\nいりょくが　すこし　あがる。
+8,1,185,おやこ　２ひきで　２かい\nこうげきする　ことが　できる。
+8,1,186,ぜんいんの　あくタイプの\nわざが　つよくなる。
+8,1,187,ぜんいんの　フェアリータイプの\nわざが　つよくなる。
+8,1,188,オーラの　こうかを　ぎゃくてんさせて\nいりょくを　さげる。
+8,1,189,ほのおタイプの　こうげきを\nうけない　てんきにする。
+8,1,190,みずタイプの　こうげきを\nうけない　てんきにする。
+8,1,191,ひこうタイプの　じゃくてんが\nなくなる　てんきにする。
+8,1,192,こうげきを　うけると\nぼうぎょが　あがる。
+8,1,193,ＨＰが　はんぶんに　なると\nあわてて　にげだして\nてもちに　ひっこんで　しまう。
+8,1,194,ＨＰが　はんぶんに　なると\nきけんを　かいひするため\nてもちに　ひっこんで　しまう。
+8,1,195,みずタイプの　わざを　うけると\nぼうぎょが　ぐーんと　あがる。
+8,1,196,どく　じょうたいの\nあいてを　こうげきすると\nかならず　きゅうしょに　あたる。
+8,1,197,ＨＰが　はんぶんに　なると\nからが　こわれて\nこうげきてきに　なる。
+8,1,198,こうたいで　でてきた　あいてに\n２ばいの　ダメージで　こうげき　できる。
+8,1,199,じぶんに　たいする　ほのおタイプの\nわざの　いりょくを　さげる。\nやけど　しない。
+8,1,200,はがねタイプの　わざの\nいりょくが　あがる。
+8,1,201,あいての　こうげきで\nＨＰが　はんぶんに　なると\nとくこうが　あがる。
+8,1,202,てんきが　あられ　のとき\nすばやさが　あがる。
+8,1,203,すべての　わざを\nあいてに　せっしょく　しないで\nだすことが　できる。
+8,1,204,すべての　おとわざが\nみずタイプに　なる。
+8,1,205,かいふくわざを　せんせいで\nだすことが　できる。
+8,1,206,ノーマルタイプの　わざが\nでんきタイプになる。\nいりょくが　すこし　あがる。
+8,1,207,エレキフィールド　のとき\nすばやさが　２ばいに　なる。
+8,1,208,ＨＰが　おおいときは　むれて　つよくなる。\nＨＰの　のこりが　すくなくなると\nむれは　ちりぢりに　なってしまう。
+8,1,209,からだを　おおう　ばけのかわで\n１かい　こうげきを　ふせぐことが　できる。
+8,1,210,あいてを　たおすと　トレーナーとの\nきずなが　ふかまり　サトシゲッコウガに\nへんげする。みずしゅりけんが　つよくなる。
+8,1,211,ＨＰが　はんぶんに　なると\nセルたちが　おうえんに　かけつけ\nパーフェクトフォルムに　すがたを　かえる。
+8,1,212,はがねタイプや　どくタイプも\nどく　じょうたいに　することが　できる。
+8,1,213,つねに　ゆめうつつの　じょうたいで\nぜったいに　めざめない。\nねむったまま　こうげきが　できる。
+8,1,214,あいてに　いあつかんを　あたえ\nこちらに　むかって　せんせいわざを\nだせない　ようにする。
+8,1,215,あいてに　たおされたとき\nＨＰの　のこりの　ぶんだけ\nあいてに　ダメージを　あたえる。
+8,1,216,だれかが　おどりわざを　つかうと\nじぶんも　それに　つづいて\nおどりわざを　だすことが　できる。
+8,1,217,みかたの　とくしゅわざの\nいりょくを　あげる。
+8,1,218,あいてから　うけた　せっしょくする　わざの\nダメージを　はんげんするが　ほのおタイプの\nわざの　ダメージは　２ばいになる。
+8,1,219,あいてを　びっくり　させて\nこちらに　むかって　せんせいわざを\nだせない　ようにする。
+8,1,220,ポケモンが　ひんしに　なるたびに\nとくこうが　あがる。
+8,1,221,こうげきで　じぶんに　ふれた　あいての\nすばやさを　さげる。
+8,1,222,たおされた　みかたの　とくせいを\nうけついで　おなじ　とくせいに　なる。
+8,1,223,たおされた　みかたの　とくせいを　うけつぎ\nおなじ　とくせいに　かわる。
+8,1,224,あいてを　たおしたとき\nじぶんの　いちばん　たかい\nのうりょくが　あがる。
+8,1,225,もっている　メモリで\nじぶんの　タイプが　かわる。
+8,1,226,とうじょう　したときに\nエレキフィールドを　はりめぐらせる。
+8,1,227,とうじょう　したときに\nサイコフィールドを　はりめぐらせる。
+8,1,228,とうじょう　したときに\nミストフィールドを　はりめぐらせる。
+8,1,229,とうじょう　したときに\nグラスフィールドを　はりめぐらせる。
+8,1,230,あいての　わざや　とくせいで\nのうりょくを　さげられない。
+8,1,231,ＨＰが　まんたんの　ときに\nうける　ダメージが　すくなくなる。
+8,1,232,こうかばつぐんに　なってしまう\nこうげきの　いりょくを\nよわめる　ことが　できる。
+8,1,233,こうかばつぐんの　こうげきで\nいりょくが　さらに　あがる。
+8,1,234,とうじょう　したときに\nこうげきが　あがる。
+8,1,235,とうじょう　したときに\nぼうぎょが　あがる。
+8,1,236,じぶんが　だす　わざと\nおなじ　タイプに　へんかする。
+8,1,237,どうぐを　もっていない　ばあい\n１かいめに　なげて　しっぱい　した\nモンスターボールを　ひろってくる。
+8,1,238,こうげきを　うけると　わたげを　ばらまいて\nじぶんいがいの　ポケモン　すべての\nすばやさを　さげる。
+8,1,239,あいての　わざを　ひきうける\nとくせいや　わざの\nえいきょうを　むし　できる。
+8,1,240,じぶんが　うけた\nのうりょく　ダウンの\nこうか　だけを　はねかえす。
+8,1,241,なみのりか　ダイビングを　すると\nえものを　くわえてくる。　ダメージを\nうけると　えものを　はきだして　こうげき。
+8,1,242,あいての　わざを　ひきうける\nとくせいや　わざの\nえいきょうを　むし　できる。
+8,1,243,みずタイプ　ほのおタイプの\nわざを　うけると\nすばやさが　ぐぐーんと　あがる。
+8,1,244,おとわざの　いりょくが　あがる。\nうけた　おとわざの\nダメージは　はんぶんに　なる。
+8,1,245,こうげきを　うけると\nすなあらしを　おこす。
+8,1,246,こおりのりんぷんに　まもられて\nとくしゅこうげきで　うける\nダメージが　はんげん　する。
+8,1,247,じゅくせい　させることで\nきのみの　こうかが\nばいに　なる。
+8,1,248,ぶつりこうげきは　あたまの　こおりが\nみがわりに　なるが　すがたも　かわる。\nこおりは　あられが　ふると　もとにもどる。
+8,1,249,となりに　いるだけで\nわざの　いりょくが　あがる。
+8,1,250,フィールドの　じょうたいに　あわせて\nポケモンの　タイプが　かわる。
+8,1,251,とうじょう　したときに　てきと　みかたの\nひかりのかべ　リフレクター\nオーロラベールの　こうかが　きえる。
+8,1,252,みかたの　はがねタイプの\nこうげきの　いりょくが　あがる。
+8,1,253,せっしょくする　わざを　うけると\nおたがい　３ターン　たつと　ひんしになる。\nこうたいすると　こうかは　なくなる。
+8,1,254,せっしょくする　わざで\nこうげき　してきた　ポケモンと\nとくせいを　いれかえる。
+8,1,255,こうげきは　あがるが\nさいしょに　えらんだ\nわざしか　だせなくなる。
+8,1,256,かがくへんかガスの　ポケモンが　ばにいると\nすべての　ポケモンの　とくせいの\nこうかが　きえたり　はつどう　しなくなる。
+8,1,257,じぶんも　みかたも\nどくの　じょうたいいじょうを\nうけなくなる。
+8,1,258,ターンの　おわりに　まんぷくもよう\nはらぺこもよう　まんぷくもよう……と\nこうごに　すがたを　かえる。
+8,2,1,"By releasing stench when attacking, this Pokémon\nmay cause the target to flinch."
+8,2,2,The Pokémon makes it rain when it enters a battle.
+8,2,3,Its Speed stat is boosted every turn.
+8,2,4,Hard armor protects the Pokémon from critical hits.
+8,2,5,"It cannot be knocked out with one hit. One-hit KO\nmoves cannot knock it out, either."
+8,2,6,"Prevents the use of explosive moves, such as\nSelf-Destruct, by dampening its surroundings."
+8,2,7,Its limber body protects the Pokémon from paralysis.
+8,2,8,Boosts the Pokémon’s evasiveness in a sandstorm.
+8,2,9,"The Pokémon is charged with static electricity, so\ncontact with it may cause paralysis."
+8,2,10,Restores HP if hit by an Electric-type move instead\nof taking damage.
+8,2,11,Restores HP if hit by a Water-type move instead of\ntaking damage.
+8,2,12,"The Pokémon is oblivious, and that keeps it from\nbeing infatuated or falling for taunts."
+8,2,13,Eliminates the effects of weather.
+8,2,14,The Pokémon’s compound eyes boost its accuracy.
+8,2,15,The Pokémon is suffering from insomnia and cannot\nfall asleep.
+8,2,16,The Pokémon’s type becomes the type of the move\nused on it.
+8,2,17,The immune system of the Pokémon prevents it from\ngetting poisoned.
+8,2,18,Powers up the Pokémon’s Fire-type moves if it’s hit\nby one.
+8,2,19,This Pokémon’s dust blocks the additional effects of\nattacks taken.
+8,2,20,"This Pokémon has its own tempo, and that prevents\nit from becoming confused."
+8,2,21,This Pokémon uses suction cups to stay in one spot\nto negate all moves and items that force\nswitching out.
+8,2,22,"The Pokémon intimidates opposing Pokémon upon\nentering battle, lowering their Attack stat."
+8,2,23,This Pokémon steps on the opposing Pokémon’s\nshadow to prevent it from escaping.
+8,2,24,This Pokémon inflicts damage with its rough skin\nto the attacker on contact.
+8,2,25,Its mysterious power only lets supereffective moves\nhit the Pokémon.
+8,2,26,"By floating in the air, the Pokémon receives full\nimmunity to all Ground-type moves."
+8,2,27,"Contact with the Pokémon may inflict poison, sleep,\nor paralysis on its attacker."
+8,2,28,"The attacker will receive the same status condition if\nit inflicts a burn, poison, or paralysis to the Pokémon."
+8,2,29,Prevents other Pokémon’s moves or Abilities from\nlowering the Pokémon’s stats.
+8,2,30,All status conditions heal when the Pokémon\nswitches out.
+8,2,31,"The Pokémon draws in all Electric-type moves.\nInstead of being hit by Electric-type moves,\nit boosts its Sp. Atk."
+8,2,32,Boosts the likelihood of additional effects occurring\nwhen attacking.
+8,2,33,Boosts the Pokémon’s Speed stat in rain.
+8,2,34,Boosts the Pokémon’s Speed stat in harsh sunlight.
+8,2,35,Raises the likelihood of meeting wild Pokémon by\nilluminating the surroundings.
+8,2,36,"When it enters a battle, the Pokémon copies an\nopposing Pokémon’s Ability."
+8,2,37,Doubles the Pokémon’s Attack stat.
+8,2,38,Contact with the Pokémon may poison the attacker.
+8,2,39,"The Pokémon’s intensely focused, and that protects\nthe Pokémon from flinching."
+8,2,40,"The Pokémon is covered with hot magma, which\nprevents the Pokémon from becoming frozen."
+8,2,41,"The Pokémon is covered with a water veil, which\nprevents the Pokémon from getting a burn."
+8,2,42,Prevents Steel-type Pokémon from escaping using\nits magnetic force.
+8,2,43,Soundproofing gives the Pokémon full\nimmunity to all sound-based moves.
+8,2,44,The Pokémon gradually regains HP in rain.
+8,2,45,The Pokémon summons a sandstorm when it enters\na battle.
+8,2,46,"By putting pressure on the opposing Pokémon, it\nraises their PP usage."
+8,2,47,"The Pokémon is protected by a layer of thick fat,\nwhich halves the damage taken from Fire- and\nIce-type moves."
+8,2,48,The Pokémon awakens from sleep twice as fast\nas other Pokémon.
+8,2,49,Contact with the Pokémon may burn the attacker.
+8,2,50,Enables a sure getaway from wild Pokémon.
+8,2,51,Keen eyes prevent other Pokémon from lowering this\nPokémon’s accuracy.
+8,2,52,The Pokémon’s proud of its powerful pincers. They\nprevent other Pokémon from lowering its Attack stat.
+8,2,53,"The Pokémon may pick up the item an opposing\nPokémon used during a battle. It may pick up items\noutside of battle, too."
+8,2,54,The Pokémon can’t use a move if it had used a move\non the previous turn.
+8,2,55,"Boosts the Attack stat, but lowers accuracy."
+8,2,56,Contact with the Pokémon may cause infatuation.
+8,2,57,Boosts the Sp. Atk stat of the Pokémon if an ally\nwith the Plus or Minus Ability is also in battle.
+8,2,58,Boosts the Sp. Atk stat of the Pokémon if an ally\nwith the Plus or Minus Ability is also in battle.
+8,2,59,"The Pokémon transforms with the weather to change\nits type to Water, Fire, or Ice."
+8,2,60,Items held by the Pokémon are stuck fast and\ncannot be removed by other Pokémon.
+8,2,61,The Pokémon may heal its own status conditions\nby shedding its skin.
+8,2,62,It’s so gutsy that having a status condition boosts\nthe Pokémon’s Attack stat.
+8,2,63,The Pokémon’s marvelous scales boost the Defense\nstat if it has a status condition.
+8,2,64,"The oozed liquid has a strong stench, which damages\nattackers using any draining move."
+8,2,65,Powers up Grass-type moves when the Pokémon’s\nHP is low.
+8,2,66,Powers up Fire-type moves when the Pokémon’s HP\nis low.
+8,2,67,Powers up Water-type moves when the Pokémon’s\nHP is low.
+8,2,68,Powers up Bug-type moves when the Pokémon’s HP\nis low.
+8,2,69,Protects the Pokémon from recoil damage.
+8,2,70,Turns the sunlight harsh when the Pokémon enters\na battle.
+8,2,71,Prevents opposing Pokémon from fleeing.
+8,2,72,"The Pokémon is full of vitality, and that prevents\nit from falling asleep."
+8,2,73,"The Pokémon is protected by its white smoke, which\nprevents other Pokémon from lowering its stats."
+8,2,74,"Using its pure power, the Pokémon doubles its\nAttack stat."
+8,2,75,A hard shell protects the Pokémon from critical hits.
+8,2,76,Eliminates the effects of weather.
+8,2,77,Raises evasiveness if the Pokémon is confused.
+8,2,78,Boosts its Speed stat if hit by an Electric-type move\ninstead of taking damage.
+8,2,79,"Becomes competitive and deals more damage to\nPokémon of the same gender, but deals less to\nPokémon of the opposite gender."
+8,2,80,The Pokémon’s determination boosts the Speed\nstat each time the Pokémon flinches.
+8,2,81,Boosts evasiveness in a hailstorm.
+8,2,82,"Makes the Pokémon eat a held Berry when its HP\ndrops to half or less, which is sooner than usual."
+8,2,83,"The Pokémon is angered when it takes a critical hit,\nand that maxes its Attack stat."
+8,2,84,Boosts the Speed stat if the Pokémon’s held item is\nused or lost.
+8,2,85,The heatproof body of the Pokémon halves the\ndamage from Fire-type moves that hit it.
+8,2,86,The stat changes the Pokémon receives are doubled.
+8,2,87,"Restores HP in rain or when hit by Water-type\nmoves. Reduces HP in harsh sunlight, and increases\nthe damage received from Fire-type moves."
+8,2,88,Compares an opposing Pokémon’s Defense and\nSp. Def stats before raising its own Attack or\nSp. Atk stat—whichever will be more effective.
+8,2,89,Powers up punching moves.
+8,2,90,Restores HP if the Pokémon is poisoned instead of\nlosing HP.
+8,2,91,Powers up moves of the same type as the Pokémon.
+8,2,92,Maximizes the number of times multistrike\nmoves hit.
+8,2,93,Heals status conditions if it’s raining.
+8,2,94,"Boosts the Sp. Atk stat in harsh sunlight, but HP\ndecreases every turn."
+8,2,95,Boosts the Speed stat if the Pokémon has a\nstatus condition.
+8,2,96,All the Pokémon’s moves become Normal type.\nThe power of those moves is boosted a little.
+8,2,97,Powers up moves if they become critical hits\nwhen attacking.
+8,2,98,The Pokémon only takes damage from attacks.
+8,2,99,The Pokémon employs no-guard tactics to ensure\nincoming and outgoing attacks always land.
+8,2,100,The Pokémon moves after all other Pokémon do.
+8,2,101,Powers up the Pokémon’s weaker moves.
+8,2,102,Prevents status conditions in harsh sunlight.
+8,2,103,The Pokémon can’t use any held items.
+8,2,104,Moves can be used on the target regardless of\nits Abilities.
+8,2,105,The Pokémon is so lucky that the critical-hit ratios\nof its moves are boosted.
+8,2,106,Damages the attacker if it contacts the Pokémon\nwith a finishing hit.
+8,2,107,The Pokémon can sense an opposing Pokémon’s\ndangerous moves.
+8,2,108,"When it enters a battle, the Pokémon can tell one of\nthe moves an opposing Pokémon has."
+8,2,109,"When attacking, the Pokémon ignores the target\nPokémon’s stat changes."
+8,2,110,The Pokémon can use “not very effective” moves\nto deal regular damage.
+8,2,111,Reduces the power of supereffective attacks taken.
+8,2,112,"For five turns, the Pokémon’s Attack and Speed\nstats are halved."
+8,2,113,The Pokémon can hit Ghost-type Pokémon with\nNormal- and Fighting-type moves.
+8,2,114,"Draws in all Water-type moves. Instead of being hit\nby Water-type moves, it boosts its Sp. Atk."
+8,2,115,The Pokémon gradually regains HP in a hailstorm.
+8,2,116,Reduces the power of supereffective attacks taken.
+8,2,117,The Pokémon summons a hailstorm when it enters\na battle.
+8,2,118,The Pokémon may gather Honey after a battle.
+8,2,119,"When it enters a battle, the Pokémon can check an\nopposing Pokémon’s held item."
+8,2,120,Powers up moves that have recoil damage.
+8,2,121,Changes the Pokémon’s type to match the Plate or\nZ-Crystal it holds.
+8,2,122,Boosts the Attack and Sp. Def stats of itself\nand allies in harsh sunlight.
+8,2,123,Reduces the HP of sleeping opposing Pokémon.
+8,2,124,Steals an item from an attacker that made\ndirect contact.
+8,2,125,Removes additional effects to increase the power\nof moves when attacking.
+8,2,126,Makes stat changes have an opposite effect.
+8,2,127,Unnerves opposing Pokémon and makes them unable\nto eat Berries.
+8,2,128,Boosts the Pokémon’s Attack stat sharply when its\nstats are lowered.
+8,2,129,Halves the Pokémon’s Attack and Sp. Atk stats\nwhen its HP becomes half or less.
+8,2,130,May disable a move used on the Pokémon.
+8,2,131,Sometimes heals an ally’s status condition.
+8,2,132,Reduces damage done to allies.
+8,2,133,Physical attacks to the Pokémon lower its Defense\nstat but sharply raise its Speed stat.
+8,2,134,Doubles the Pokémon’s weight.
+8,2,135,Halves the Pokémon’s weight.
+8,2,136,Reduces the amount of damage the Pokémon takes\nwhile its HP is full.
+8,2,137,Powers up physical attacks when the Pokémon\nis poisoned.
+8,2,138,Powers up special attacks when the Pokémon\nis burned.
+8,2,139,May create another Berry after one is used.
+8,2,140,Anticipates an ally’s attack and dodges it.
+8,2,141,Raises one stat sharply and lowers another\nevery turn.
+8,2,142,"Protects the Pokémon from things like sand, hail,\nand powder."
+8,2,143,May poison a target when the Pokémon\nmakes contact.
+8,2,144,Restores a little HP when withdrawn from battle.
+8,2,145,Protects the Pokémon from\nDefense-lowering effects.
+8,2,146,Boosts the Pokémon’s Speed stat in a sandstorm.
+8,2,147,Makes status moves more likely to miss.
+8,2,148,Boosts move power when the Pokémon moves last.
+8,2,149,Comes out disguised as the Pokémon in the party’s\nlast spot.
+8,2,150,The Pokémon transforms itself into the Pokémon\nit’s facing.
+8,2,151,"Passes through the opposing Pokémon’s barrier,\nsubstitute, and the like and strikes."
+8,2,152,Contact with the Pokémon changes the attacker’s\nAbility to Mummy.
+8,2,153,"The Pokémon shows moxie, and that boosts the\nAttack stat after knocking out any Pokémon."
+8,2,154,"Being hit by a Dark-type move boosts the Attack\nstat of the Pokémon, for justice."
+8,2,155,"Dark-, Ghost-, and Bug-type moves scare the\nPokémon and boost its Speed stat."
+8,2,156,Reflects status moves instead of getting hit\nby them.
+8,2,157,Boosts the Attack stat if hit by a Grass-type move\ninstead of taking damage.
+8,2,158,Gives priority to a status move.
+8,2,159,"Boosts the power of Rock-, Ground-, and Steel-type\nmoves in a sandstorm."
+8,2,160,Inflicts damage on the attacker upon contact with\niron barbs.
+8,2,161,Changes the Pokémon’s shape when HP is half\nor less.
+8,2,162,Boosts the accuracy of its allies and itself.
+8,2,163,Moves can be used on the target regardless of\nits Abilities.
+8,2,164,Moves can be used on the target regardless of\nits Abilities.
+8,2,165,Protects itself and its allies from attacks that limit\ntheir move choices.
+8,2,166,Ally Grass-type Pokémon are protected from\nstatus conditions and the lowering of their stats.
+8,2,167,Restores HP as well when the Pokémon eats a Berry.
+8,2,168,Changes the Pokémon’s type to the type of the\nmove it’s about to use.
+8,2,169,Halves the damage from physical moves.
+8,2,170,The Pokémon steals the held item of a Pokémon it\nhits with a move.
+8,2,171,Protects the Pokémon from some ball and\nbomb moves.
+8,2,172,Boosts the Sp. Atk stat sharply when a stat\nis lowered.
+8,2,173,The Pokémon’s strong jaw boosts the power of its\nbiting moves.
+8,2,174,Normal-type moves become Ice-type moves.\nThe power of those moves is boosted a little.
+8,2,175,Prevents itself and ally Pokémon from falling asleep.
+8,2,176,The Pokémon changes its form to Blade Forme when\nit uses an attack move and changes to Shield Forme\nwhen it uses King’s Shield.
+8,2,177,Gives priority to Flying-type moves when\nthe Pokémon’s HP is full.
+8,2,178,Powers up aura and pulse moves.
+8,2,179,Boosts the Pokémon’s Defense stat on\nGrassy Terrain.
+8,2,180,The Pokémon passes its item to an ally that has\nused up an item.
+8,2,181,Powers up moves that make direct contact.
+8,2,182,Normal-type moves become Fairy-type moves.\nThe power of those moves is boosted a little.
+8,2,183,Contact with the Pokémon lowers the attacker’s\nSpeed stat.
+8,2,184,Normal-type moves become Flying-type moves.\nThe power of those moves is boosted a little.
+8,2,185,Parent and child each attacks.
+8,2,186,Powers up each Pokémon’s Dark-type moves.
+8,2,187,Powers up each Pokémon’s Fairy-type moves.
+8,2,188,The effects of “Aura” Abilities are reversed\nto lower the power of affected moves.
+8,2,189,The Pokémon changes the weather to nullify\nFire-type attacks.
+8,2,190,The Pokémon changes the weather to nullify\nWater-type attacks.
+8,2,191,The Pokémon changes the weather to eliminate all\nof the Flying type’s weaknesses.
+8,2,192,Boosts the Defense stat when hit by an attack.
+8,2,193,The Pokémon cowardly switches out when its HP\nbecomes half or less.
+8,2,194,"The Pokémon, sensing danger, switches out when its\nHP becomes half or less."
+8,2,195,Boosts the Pokémon’s Defense stat sharply when hit\nby a Water-type move.
+8,2,196,The Pokémon’s attacks become critical hits if the\ntarget is poisoned.
+8,2,197,"When its HP becomes half or less, the Pokémon’s\nshell breaks and it becomes aggressive."
+8,2,198,Doubles the damage dealt to the target’s\nreplacement if the target switches out.
+8,2,199,Lowers the power of Fire-type moves done to the\nPokémon and prevents the Pokémon from getting\na burn.
+8,2,200,Powers up Steel-type moves.
+8,2,201,Boosts the Pokémon’s Sp. Atk stat when it takes\na hit that causes its HP to become half or less.
+8,2,202,Boosts the Pokémon’s Speed stat in a hailstorm.
+8,2,203,The Pokémon uses its moves without making contact\nwith the target.
+8,2,204,All sound-based moves become Water-type moves.
+8,2,205,Gives priority to a healing move.
+8,2,206,Normal-type moves become Electric-type moves.\nThe power of those moves is boosted a little.
+8,2,207,Doubles the Pokémon’s Speed stat on\nElectric Terrain.
+8,2,208,"When it has a lot of HP, the Pokémon forms a\npowerful school. It stops schooling when its HP\nis low."
+8,2,209,"Once per battle, the shroud that covers the\nPokémon can protect it from an attack."
+8,2,210,"Defeating an opposing Pokémon strengthens the\nPokémon’s bond with its Trainer, and it becomes\nAsh-Greninja. Water Shuriken gets more powerful."
+8,2,211,Other Cells gather to aid when its HP becomes\nhalf or less. Then the Pokémon changes\nits form to Complete Forme.
+8,2,212,The Pokémon can poison the target even if it’s\na Steel or Poison type.
+8,2,213,It’s always drowsing and will never wake up.\nIt can attack without waking up.
+8,2,214,"Its majesty pressures the opposing Pokémon,\nmaking it unable to attack using priority moves."
+8,2,215,Damages the attacker landing the finishing hit\nby the amount equal to its last HP.
+8,2,216,"When another Pokémon uses a dance move,\nit can use a dance move following it regardless\nof its Speed."
+8,2,217,Powers up ally Pokémon’s special moves.
+8,2,218,"Halves the damage taken from moves that make\ndirect contact, but doubles that of Fire-type moves."
+8,2,219,"Surprises the opposing Pokémon, making it unable\nto attack using priority moves."
+8,2,220,Boosts its Sp. Atk stat every time a Pokémon faints.
+8,2,221,Contact with the Pokémon lowers the attacker’s\nSpeed stat.
+8,2,222,The Pokémon copies the Ability of a defeated ally.
+8,2,223,The Pokémon copies the Ability of a defeated ally.
+8,2,224,The Pokémon boosts its most proficient stat each\ntime it knocks out a Pokémon.
+8,2,225,Changes the Pokémon’s type to match the\nmemory disc it holds.
+8,2,226,Turns the ground into Electric Terrain when the\nPokémon enters a battle.
+8,2,227,Turns the ground into Psychic Terrain when\nthe Pokémon enters a battle.
+8,2,228,Turns the ground into Misty Terrain when\nthe Pokémon enters a battle.
+8,2,229,Turns the ground into Grassy Terrain when\nthe Pokémon enters a battle.
+8,2,230,Prevents other Pokémon’s moves or Abilities from\nlowering the Pokémon’s stats.
+8,2,231,Reduces the amount of damage the Pokémon takes\nwhile its HP is full.
+8,2,232,Reduces the power of supereffective attacks taken.
+8,2,233,Powers up moves that are super effective.
+8,2,234,Boosts the Pokémon’s Attack stat when the Pokémon\nenters a battle.
+8,2,235,Boosts the Pokémon’s Defense stat when the Pokémon\nenters a battle.
+8,2,236,Changes the Pokémon’s type to the type of the\nmove it’s about to use.
+8,2,237,"If the Pokémon is not holding an item, it will fetch\nthe Poké Ball from the first failed throw\nof the battle."
+8,2,238,"When the Pokémon is hit by an attack, it scatters\ncotton fluff around and lowers the Speed stat of\nall Pokémon except itself."
+8,2,239,Ignores the effects of opposing Pokémon’s Abilities and\nmoves that draw in moves.
+8,2,240,Bounces back only the stat-lowering effects that\nthe Pokémon receives.
+8,2,241,"When the Pokémon uses Surf or Dive, it will come back\nwith prey. When it takes damage, it will spit out the prey\nto attack."
+8,2,242,Ignores the effects of opposing Pokémon’s Abilities and\nmoves that draw in moves.
+8,2,243,Boosts the Pokémon’s Speed stat drastically if hit by a\nFire- or Water-type move.
+8,2,244,Boosts the power of sound-based moves.\nThe Pokémon also takes half the damage from\nthese kinds of moves.
+8,2,245,The Pokémon creates a sandstorm when it’s hit by\nan attack.
+8,2,246,"The Pokémon is protected by ice scales, which halve\nthe damage taken from special moves."
+8,2,247,Ripens Berries and doubles their effect.
+8,2,248,"The Pokémon’s ice head can take a physical attack as\na substitute, but the attack also changes the Pokémon’s\nappearance. The ice will be restored when it hails."
+8,2,249,Just being next to the Pokémon powers up moves.
+8,2,250,Changes the Pokémon’s type depending on the terrain.
+8,2,251,"When the Pokémon enters a battle, the effects of\nLight Screen, Reflect, and Aurora Veil are nullified for\nboth opposing and ally Pokémon."
+8,2,252,Powers up ally Pokémon’s Steel-type moves.
+8,2,253,"When hit by a move that makes direct contact,\nthe Pokémon and the attacker will faint after three turns\nunless they switch out of battle."
+8,2,254,The Pokémon exchanges Abilities with a Pokémon\nthat hits it with a move that makes direct contact.
+8,2,255,Boosts the Pokémon’s Attack stat but only allows\nthe use of the first selected move.
+8,2,256,"If the Pokémon with Neutralizing Gas is in the battle,\nthe effects of all Pokémon’s Abilities will be nullified\nor will not be triggered."
+8,2,257,Protects the Pokémon and its ally Pokémon from\nbeing poisoned.
+8,2,258,"The Pokémon changes its form, alternating between\nits Full Belly Mode and Hangry Mode after the end of\neach turn."
+8,3,1,Le Pokémon émet une odeur si nauséabonde\nqu’il peut effrayer sa cible.
+8,3,2,Le Pokémon invoque la pluie quand il entre au combat.
+8,3,3,La Vitesse du Pokémon augmente à chaque tour.
+8,3,4,Le Pokémon est protégé des coups critiques\npar une solide carapace.
+8,3,5,Le Pokémon encaisse toujours au moins une attaque\ns’il a tous ses PV. Il est également immunisé contre\nles capacités pouvant mettre K.O. en un coup.
+8,3,6,"Le Pokémon augmente l’humidité de l’air,\nce qui empêche tous les Pokémon d’utiliser\ndes capacités explosives telles que Destruction."
+8,3,7,"Le Pokémon s’est suffisamment échauffé,\nce qui l’immunise contre la paralysie."
+8,3,8,Augmente l’Esquive du Pokémon lors des tempêtes\nde sable.
+8,3,9,"Le Pokémon charge son corps en électricité statique,\net tout contact avec lui peut paralyser."
+8,3,10,"Si le Pokémon est touché par une capacité Électrik,\nil ne subit aucun dégât et regagne des PV à la place."
+8,3,11,"Si le Pokémon est touché par une capacité Eau,\nil ne subit aucun dégât et regagne des PV à la place."
+8,3,12,"Le Pokémon est un grand benêt, ce qui l’immunise\ncontre l’attraction ou la provocation."
+8,3,13,Annule tous les effets liés à la météo.
+8,3,14,Les yeux à facettes du Pokémon augmentent\nsa Précision.
+8,3,15,Le Pokémon est incapable de dormir.
+8,3,16,"Lorsque le Pokémon est touché par une capacité,\nil prend le type de celle-ci."
+8,3,17,Le Pokémon est naturellement immunisé\ncontre toute forme de poison.
+8,3,18,"Lorsque le Pokémon est touché par une capacité\nde type Feu, il absorbe la chaleur pour renforcer\nses propres capacités Feu."
+8,3,19,Le Pokémon dispose d’un écran naturel qui le protège\ndes effets additionnels des attaques ennemies.
+8,3,20,"Le Pokémon vit sa vie à son propre rythme,\nce qui l’immunise contre la confusion."
+8,3,21,"Le Pokémon est solidement fixé au sol, ce qui le protège\ndes capacités ou objets qui font changer de Pokémon."
+8,3,22,"Le Pokémon rugit lorsqu’il arrive au combat,\nce qui intimide l’ennemi et baisse son Attaque."
+8,3,23,Empêche les Pokémon ennemis de quitter le combat.
+8,3,24,Blesse l’attaquant lorsque le Pokémon subit\nune attaque directe.
+8,3,25,"Une puissance mystérieuse protège le Pokémon contre\ntoutes les capacités, sauf celles « super efficaces »."
+8,3,26,"Le Pokémon flotte, ce qui l’immunise contre\nles capacités de type Sol."
+8,3,27,"Peut paralyser, empoisonner ou endormir l’attaquant\nlorsque le Pokémon subit une attaque directe."
+8,3,28,"Quand le Pokémon est brûlé, paralysé ou empoisonné\npar un autre Pokémon, il partage ce statut avec celui-ci."
+8,3,29,Empêche les stats du Pokémon de baisser à cause\nd’une capacité ou d’un talent.
+8,3,30,Le Pokémon soigne ses altérations de statut\nen quittant le combat.
+8,3,31,"Le Pokémon détourne sur lui les capacités\nde type Électrik et les neutralise, tout en montant\nson Attaque Spéciale."
+8,3,32,Augmente les chances d’infliger des effets additionnels.
+8,3,33,Augmente la Vitesse du Pokémon s’il pleut.
+8,3,34,Augmente la Vitesse du Pokémon s’il y a du soleil.
+8,3,35,Émet une lumière spécifique qui facilite les rencontres\navec les Pokémon sauvages.
+8,3,36,"Lorsque le Pokémon entre au combat, il calque\nle talent d’un ennemi pour remplacer le sien."
+8,3,37,Double l’Attaque du Pokémon.
+8,3,38,Peut empoisonner l’attaquant lorsque le Pokémon\nsubit une attaque directe.
+8,3,39,Le Pokémon a un mental à toute épreuve qui empêche\nles capacités ennemies de lui faire peur.
+8,3,40,Le magma qui recouvre le corps du Pokémon le protège\ncontre le gel.
+8,3,41,Le voile qui recouvre le Pokémon le protège\ndes brûlures.
+8,3,42,"Attire les Pokémon Acier grâce à un champ magnétique,\nce qui les empêche de fuir."
+8,3,43,Protège le Pokémon de toutes les capacités sonores.
+8,3,44,Le Pokémon récupère progressivement des PV\nlorsqu’il pleut.
+8,3,45,Le Pokémon invoque une tempête de sable\nquand il entre au combat.
+8,3,46,Met la pression à l’ennemi pour le forcer\nà dépenser plus de PP.
+8,3,47,Le Pokémon est protégé par une épaisse couche\nde graisse qui diminue de moitié les dégâts qu’il subit\ndes capacités de types Feu et Glace.
+8,3,48,Le Pokémon se réveille deux fois plus rapidement\nque les autres.
+8,3,49,Peut brûler l’attaquant lorsque le Pokémon subit\nune attaque directe.
+8,3,50,Permet de fuir n’importe quel Pokémon sauvage.
+8,3,51,Les yeux perçants du Pokémon empêchent\nsa Précision de baisser.
+8,3,52,Le Pokémon est armé de lames tranchantes qui font\nsa fierté et empêchent son Attaque de baisser.
+8,3,53,Permet parfois au Pokémon de ramasser les objets\nque ses ennemis ont utilisés. Il lui arrive aussi\nd’en trouver hors des combats.
+8,3,54,"Lorsque le Pokémon utilise une capacité,\nil passe le tour suivant à paresser."
+8,3,55,"Améliore l’Attaque du Pokémon, mais diminue\nla Précision."
+8,3,56,Peut séduire l’attaquant lorsque le Pokémon subit\nune attaque directe.
+8,3,57,L’Attaque Spéciale du Pokémon augmente\nsi un Pokémon allié a le talent Moins ou Plus.
+8,3,58,L’Attaque Spéciale du Pokémon augmente\nsi un Pokémon allié a le talent Moins ou Plus.
+8,3,59,"Le Pokémon prend le type Eau, Feu ou Glace\nen fonction de la météo."
+8,3,60,"Les objets sont collés au corps gluant du Pokémon,\nce qui empêche ses adversaires de les dérober."
+8,3,61,Le Pokémon soigne parfois ses altérations de statut\nen muant.
+8,3,62,Augmente l’Attaque du Pokémon s’il est affecté\npar une altération de statut.
+8,3,63,Les écailles mystérieuses du Pokémon réagissent\naux altérations de statut en augmentant sa Défense.
+8,3,64,Le Pokémon suinte un liquide toxique nauséabond\nqui blesse tous ceux qui tentent de voler ses PV.
+8,3,65,Augmente la puissance des capacités de type Plante\ndu Pokémon quand il a perdu une certaine quantité\nde PV.
+8,3,66,Augmente la puissance des capacités de type Feu\ndu Pokémon quand il a perdu une certaine quantité\nde PV.
+8,3,67,Augmente la puissance des capacités de type Eau\ndu Pokémon quand il a perdu une certaine quantité\nde PV.
+8,3,68,Augmente la puissance des capacités de type Insecte\ndu Pokémon quand il a perdu une certaine quantité\nde PV.
+8,3,69,Le Pokémon peut utiliser des capacités occasionnant\nun contrecoup sans perdre de PV.
+8,3,70,Le soleil se met à briller quand le Pokémon\nentre au combat.
+8,3,71,Empêche l’ennemi de s’enfuir.
+8,3,72,Empêche le Pokémon de s’endormir.
+8,3,73,Un écran de fumée empêche l’ennemi de baisser\nles stats du Pokémon.
+8,3,74,Le Pokémon utilise sa maîtrise du yoga pour doubler\nla puissance de ses capacités physiques.
+8,3,75,Le Pokémon est protégé des coups critiques\npar sa carapace.
+8,3,76,Annule tous les effets de la météo.
+8,3,77,Augmente l’Esquive du Pokémon s’il est confus.
+8,3,78,"Si le Pokémon est touché par une capacité Électrik,\nil ne subit aucun dégât et sa Vitesse augmente."
+8,3,79,"Le Pokémon déteste la concurrence et inflige plus\nde dégâts si l’ennemi est du même sexe. Par contre,\nil en inflige moins si l’ennemi est du sexe opposé."
+8,3,80,Augmente la Vitesse du Pokémon quand il a peur.
+8,3,81,Augmente l’Esquive du Pokémon durant les tempêtes\nde grêle.
+8,3,82,"Si le Pokémon tient une Baie à manger en cas de PV\nbas, il la mange dès qu’il a perdu la moitié de ses PV."
+8,3,83,"Si le Pokémon subit un coup critique, il entre\ndans une colère noire qui augmente son Attaque\nau maximum."
+8,3,84,Augmente la Vitesse du Pokémon s’il perd ou utilise\nl’objet qu’il tenait au début du combat.
+8,3,85,Diminue de moitié les dégâts infligés au Pokémon\npar les capacités de type Feu.
+8,3,86,Les variations de stats sont deux fois plus importantes\npour le Pokémon.
+8,3,87,"Le Pokémon perd des PV quand le soleil brille,\nmais il en regagne lorsqu’il pleut ou s’il est touché par\nune capacité Eau. Il subit aussi plus de dégâts de Feu."
+8,3,88,Le Pokémon compare la Défense et la Défense Spéciale\nde l’adversaire et augmente son Attaque ou son Attaque\nSpéciale en conséquence.
+8,3,89,Augmente la puissance des capacités coups de poing.
+8,3,90,"Quand le Pokémon est empoisonné, il regagne des PV\nau lieu d’en perdre."
+8,3,91,"Quand le Pokémon utilise une capacité du même type\nque lui, le bonus de puissance qu’elle reçoit est encore\nplus important que normalement."
+8,3,92,Les capacités pouvant frapper plusieurs fois frappent\ntoujours le nombre maximal de coups.
+8,3,93,Soigne les altérations de statut du Pokémon\nquand il pleut.
+8,3,94,"Quand le soleil brille, l’Attaque Spéciale du Pokémon\naugmente mais il perd des PV à chaque tour."
+8,3,95,Augmente la Vitesse du Pokémon en cas d’altération\nde statut.
+8,3,96,"Toutes les capacités du Pokémon deviennent\nde type Normal, quel que soit leur type original.\nLeur puissance augmente légèrement."
+8,3,97,"Lorsque le Pokémon porte un coup critique, les dégâts\ninfligés augmentent encore plus que d’habitude."
+8,3,98,Seules les attaques peuvent blesser le Pokémon.
+8,3,99,"Les capacités du Pokémon touchent l’ennemi à coup sûr,\nmais les capacités de l’ennemi le touchent aussi\nà coup sûr."
+8,3,100,Le Pokémon utilise toujours sa capacité en dernier.
+8,3,101,Augmente la puissance des capacités les plus faibles.
+8,3,102,Protège le Pokémon contre les altérations de statut\nquand le soleil brille.
+8,3,103,Le Pokémon ne peut utiliser aucun objet tenu.
+8,3,104,Le Pokémon ignore les talents adverses qui auraient\nun effet sur ses capacités.
+8,3,105,Le Pokémon est tellement chanceux qu’il inflige\nplus fréquemment des coups critiques.
+8,3,106,"Si le Pokémon est mis K.O. par une attaque directe,\nil inflige des dégâts à l’attaquant avant de s’évanouir."
+8,3,107,Le Pokémon devine si l’adversaire connaît une capacité\ndangereuse pour lui.
+8,3,108,Révèle l’une des capacités de l’ennemi\nquand le combat commence.
+8,3,109,"Quand il attaque, le Pokémon ignore les changements\nde stats de l’ennemi."
+8,3,110,Permet à une capacité « pas très efficace » d’infliger\ndes dégâts comme si elle était efficace normalement.
+8,3,111,Réduit les dégâts subis lorsque le Pokémon est touché\npar une capacité super efficace.
+8,3,112,Divise la Vitesse et l’Attaque du Pokémon par deux\npendant les cinq premiers tours du combat.
+8,3,113,Permet aux capacités de type Normal ou Combat\ndu Pokémon de toucher les Pokémon de type Spectre.
+8,3,114,"Le Pokémon détourne sur lui les capacités de type Eau\net les neutralise, tout en montant son Attaque Spéciale."
+8,3,115,Régénère les PV du Pokémon lors des tempêtes de grêle.
+8,3,116,Réduit les dégâts subis lorsque le Pokémon est touché\npar une capacité super efficace.
+8,3,117,Déclenche une tempête de grêle quand le Pokémon\nentre au combat.
+8,3,118,Le Pokémon peut parfois trouver du Miel après\nun combat.
+8,3,119,Permet de connaître l’objet tenu par l’ennemi\nquand le combat commence.
+8,3,120,Augmente la puissance des capacités occasionnant\nun contrecoup.
+8,3,121,Modifie le type du Pokémon en fonction de la plaque\nou du Cristal Z qu’il tient.
+8,3,122,Augmente l’Attaque et la Défense Spéciale du Pokémon\net de ses alliés lorsque le soleil brille.
+8,3,123,Inflige des dégâts aux ennemis endormis.
+8,3,124,Vole l’objet que tient l’attaquant quand le Pokémon\nsubit une attaque directe.
+8,3,125,"Les capacités ayant un effet additionnel le perdent,\nmais leur puissance augmente."
+8,3,126,"Inverse les changements de stats :\nles augmentations de stats se transforment en baisses,\net vice-versa."
+8,3,127,"Fait stresser l’ennemi, ce qui l’empêche de manger\ndes Baies."
+8,3,128,Augmente beaucoup l’Attaque du Pokémon\nquand ses stats baissent.
+8,3,129,"Le Pokémon devient défaitiste quand ses PV tombent\nà la moitié, et son Attaque et son Attaque Spéciale\nsont divisées par deux."
+8,3,130,"Quand le Pokémon est touché par une capacité,\nil inflige parfois Entrave sur celle-ci."
+8,3,131,Soigne parfois une altération de statut d’un allié proche.
+8,3,132,Diminue les dégâts subis par les alliés.
+8,3,133,"Quand le Pokémon est touché par une capacité\nphysique, sa Défense baisse mais sa Vitesse\naugmente beaucoup."
+8,3,134,Double le poids du Pokémon.
+8,3,135,Divise par deux le poids du Pokémon.
+8,3,136,Le Pokémon reçoit moins de dégâts quand ses PV\nsont au maximum.
+8,3,137,Augmente la puissance des capacités physiques\nquand le Pokémon est empoisonné.
+8,3,138,Augmente la puissance des capacités spéciales\nquand le Pokémon est brûlé.
+8,3,139,Permet de réutiliser une même Baie plusieurs fois.
+8,3,140,Le Pokémon anticipe et évite les attaques de ses alliés.
+8,3,141,Augmente beaucoup une stat du Pokémon\net en baisse une autre au hasard à chaque tour.
+8,3,142,"Protège des dégâts occasionnés par les tempêtes\nde sable ou la grêle, et neutralise les attaques à base\nde poudre."
+8,3,143,Peut empoisonner l’ennemi par simple contact.
+8,3,144,Restaure un peu de PV si le Pokémon est retiré\ndu combat.
+8,3,145,Empêche les capacités adverses de baisser la Défense.
+8,3,146,Augmente la Vitesse lors des tempêtes de sable.
+8,3,147,Le Pokémon résiste mieux aux capacités de statut.
+8,3,148,Augmente la puissance des capacités du Pokémon\ns’il attaque en dernier.
+8,3,149,Le Pokémon prend l’apparence du dernier membre\nde l’équipe pour tromper l’adversaire.
+8,3,150,Le Pokémon prend l’apparence du Pokémon adverse.
+8,3,151,Traverse les barrières et les clones de l’ennemi\npour attaquer directement.
+8,3,152,Remplace le talent de l’attaquant par « Momie »\nlorsque le Pokémon subit une attaque directe.
+8,3,153,"Quand le Pokémon met un ennemi K.O.,\nsa confiance en lui ne connaît plus de limite\net son Attaque augmente."
+8,3,154,"Réveille la noblesse du Pokémon lorsqu’il subit\nune capacité de type Ténèbres, ce qui augmente\nson Attaque."
+8,3,155,"Si le Pokémon est touché par une capacité de type\nTénèbres, Spectre ou Insecte, sa phobie se révèle\net sa Vitesse augmente."
+8,3,156,Annule les effets des capacités de statut subies\npar le Pokémon et les retourne à l’envoyeur.
+8,3,157,Annule les attaques de type Plante subies\npar le Pokémon et augmente son Attaque.
+8,3,158,Rend les capacités de statut prioritaires.
+8,3,159,"Augmente la puissance des capacités de types Roche,\nSol et Acier en cas de tempête de sable."
+8,3,160,Inflige des dégâts à l’attaquant lorsque le Pokémon\nsubit une attaque directe.
+8,3,161,"Quand le Pokémon perd la moitié de ses PV,\nil se transforme."
+8,3,162,Augmente la Précision des Pokémon de l’équipe.
+8,3,163,Le Pokémon ignore les talents adverses qui auraient\nun effet sur ses capacités.
+8,3,164,Le Pokémon ignore les talents adverses qui auraient\nun effet sur ses capacités.
+8,3,165,Protège l’équipe des effets limitant le libre arbitre.
+8,3,166,Empêche les alliés de type Plante de subir des baisses\nde stats et des altérations de statut.
+8,3,167,"Restaure des PV lorsque le Pokémon consomme\nune Baie, quelle qu’elle soit."
+8,3,168,Le Pokémon prend le type de la capacité qu’il utilise.
+8,3,169,Divise par deux les dégâts des capacités physiques\nsubies par le Pokémon.
+8,3,170,Les capacités volent aussi l’objet tenu par la cible.
+8,3,171,Protège de certaines capacités lançant des projectiles\ncomme des bombes et des balles.
+8,3,172,Augmente beaucoup l’Attaque Spéciale du Pokémon\nquand ses stats baissent.
+8,3,173,Le Pokémon a une mâchoire robuste qui augmente\nla puissance de ses capacités à base de morsures.
+8,3,174,Les capacités de type Normal deviennent de type Glace.\nLeur puissance augmente légèrement.
+8,3,175,Les Pokémon de l’équipe ne peuvent pas s’endormir.
+8,3,176,"Le Pokémon prend la Forme Assaut lorsqu’il utilise\nune attaque, et la Forme Parade lorsqu’il utilise\nBouclier Royal."
+8,3,177,"Quand les PV du Pokémon sont au maximum,\nses capacités de type Vol sont prioritaires."
+8,3,178,Augmente la puissance de certaines capacités\nde type aura.
+8,3,179,Augmente la Défense du Pokémon si Champ Herbu\nest actif.
+8,3,180,"Quand les alliés utilisent l’objet qu’ils tiennent,\nle Pokémon leur donne l’objet qu’il tient\nen remplacement."
+8,3,181,Augmente la puissance des attaques directes\ndu Pokémon.
+8,3,182,Les capacités de type Normal deviennent de type Fée.\nLeur puissance augmente légèrement.
+8,3,183,Baisse la Vitesse de l’attaquant lorsque le Pokémon\nsubit une attaque directe.
+8,3,184,Les capacités de type Normal deviennent de type Vol.\nLeur puissance augmente légèrement.
+8,3,185,Permet à la mère et à son petit d’attaquer tous les deux\nen même temps.
+8,3,186,Augmente la puissance des attaques de type Ténèbres\nde tous les Pokémon.
+8,3,187,Augmente la puissance des attaques de type Fée\nde tous les Pokémon.
+8,3,188,Inverse l’effet des auras en baissant leur puissance.
+8,3,189,Altère les conditions météo et rend inefficaces\nles attaques de type Feu.
+8,3,190,Altère les conditions météo et rend inefficaces\nles attaques de type Eau.
+8,3,191,Altère les conditions météo et annule les faiblesses\ndu type Vol.
+8,3,192,Augmente la Défense du Pokémon lorsqu’il subit\nune attaque.
+8,3,193,Le Pokémon perd confiance quand ses PV tombent\nà la moitié et s’enfuit dans sa Poké Ball.
+8,3,194,"Le Pokémon évite les situations inutilement\ndangereuses. Quand ses PV tombent à la moitié,\nil se réfugie dans sa Poké Ball."
+8,3,195,Augmente beaucoup la Défense du Pokémon\nquand il subit une capacité de type Eau.
+8,3,196,"Lorsque le Pokémon attaque un adversaire empoisonné,\nle coup sera forcément critique."
+8,3,197,"Lorsque le Pokémon perd la moitié de ses PV,\nson enveloppe se brise, mais son Attaque\net son Attaque Spéciale augmentent."
+8,3,198,"Lorsque le Pokémon attaque une cible qui vient d’entrer\nsur le terrain en remplacement d’un autre Pokémon,\nles dégâts infligés sont doublés."
+8,3,199,Réduit les dégâts des capacités de type Feu subies\npar le Pokémon. Il est également immunisé contre\nles brûlures.
+8,3,200,Augmente la puissance des attaques de type Acier.
+8,3,201,Augmente l’Attaque Spéciale du Pokémon lorsqu’il\ntombe à la moitié de ses PV à cause d’une attaque.
+8,3,202,Augmente la Vitesse du Pokémon quand il grêle.
+8,3,203,Le Pokémon est capable d’utiliser toutes ses capacités\nsans entrer en contact direct avec sa cible.
+8,3,204,Toutes les attaques sonores du Pokémon prennent\nle type Eau.
+8,3,205,Toutes les capacités qui soignent le Pokémon\ndirectement deviennent prioritaires.
+8,3,206,Les capacités de type Normal deviennent de type\nÉlectrik. Leur puissance augmente légèrement.
+8,3,207,La Vitesse du Pokémon est doublée sur\nun Champ Électrifié.
+8,3,208,"Le Pokémon se rassemble avec ses congénères\nquand ses PV sont élevés. Plus ses PV baissent,\nplus le banc s’amenuise."
+8,3,209,Le déguisement qui recouvre le corps du Pokémon\nest capable de le protéger d’une attaque.
+8,3,210,"En battant un ennemi, ce Pokémon renforce ses liens\navec son Dresseur. Il prend alors sa Forme Sacha\net ses Sheauriken gagnent en puissance."
+8,3,211,"Lorsque le Pokémon perd la moitié de ses PV,\nses Cellules se rassemblent pour l’encourager,\nce qui lui permet de prendre sa Forme Parfaite."
+8,3,212,Permet d’empoisonner les Pokémon de type Acier\nou Poison.
+8,3,213,Le Pokémon rêve en permanence et ne se réveille\njamais. Il est capable d’attaquer normalement\ntout en dormant.
+8,3,214,L’adversaire est impressionné par la majesté du Pokémon\net ne peut pas le viser avec une attaque prioritaire.
+8,3,215,Le Pokémon inflige à l’adversaire l’ayant mis K.O.\ndes dégâts égaux au nombre de PV qu’il lui restait\navant le coup de grâce.
+8,3,216,"Si n’importe quel Pokémon utilise une capacité dansante,\nce Pokémon peut se mettre aussi à danser."
+8,3,217,Augmente la puissance des capacités spéciales des alliés.
+8,3,218,"Divise par deux les dégâts des attaques directes\nsubies par le Pokémon, mais double les dégâts\ndes capacités de type Feu."
+8,3,219,L’adversaire est abasourdi par le Pokémon et\nne peut pas le viser avec une capacité prioritaire.
+8,3,220,Augmente l’Attaque Spéciale du Pokémon\nlorsqu’un autre Pokémon est mis K.O.
+8,3,221,Baisse la Vitesse de l’attaquant lorsque le Pokémon\nsubit une attaque directe.
+8,3,222,Le Pokémon reçoit le talent d’un allié mis K.O.
+8,3,223,Le Pokémon acquiert le talent d’un allié mis K.O.
+8,3,224,Augmente la stat la plus élevée du Pokémon\ns’il met K.O. un autre Pokémon pendant son tour.
+8,3,225,Change le type du Pokémon en fonction\nde la ROM équipée.
+8,3,226,Le Pokémon crée un Champ Électrifié au moment\noù il entre au combat.
+8,3,227,Le Pokémon crée un Champ Psychique au moment\noù il entre au combat.
+8,3,228,Le Pokémon crée un Champ Brumeux au moment\noù il entre au combat.
+8,3,229,Le Pokémon crée un Champ Herbu au moment\noù il entre au combat.
+8,3,230,Empêche les stats du Pokémon de baisser à cause\nd’une capacité ou d’un talent.
+8,3,231,Le Pokémon reçoit moins de dégâts quand ses PV\nsont au maximum.
+8,3,232,Réduit les dégâts subis lorsque le Pokémon\nest touché par une capacité super efficace.
+8,3,233,Augmente encore plus les dégâts infligés\npar les attaques super efficaces.
+8,3,234,Augmente l’Attaque du Pokémon quand il entre\nau combat.
+8,3,235,Augmente la Défense du Pokémon quand il entre\nau combat.
+8,3,236,Le Pokémon prend le type de la capacité qu’il utilise.
+8,3,237,"Si le Pokémon ne tient aucun objet, il ramassera\nla Poké Ball lors du premier lancer raté du combat."
+8,3,238,"Quand le Pokémon est touché par une attaque,\nil dissémine des aigrettes qui diminuent la Vitesse\nde tout le monde, sauf la sienne."
+8,3,239,Permet d’ignorer l’effet des capacités\nou des talents qui attirent les capacités.
+8,3,240,Le Pokémon renvoie les effets réducteurs de stats\nqu’il reçoit.
+8,3,241,"Quand le Pokémon utilise Surf ou Plongée, il revient\navec une proie. Lorsqu’il subit des dégâts par la suite,\nil attaque en recrachant sa proie."
+8,3,242,Permet d’ignorer l’effet des capacités ou des talents\nqui attirent les capacités.
+8,3,243,"Lorsque le Pokémon est touché par des capacités\nde type Eau ou Feu, sa Vitesse augmente énormément."
+8,3,244,Augmente la puissance des capacités basées sur le son.\nLe Pokémon ne subit que la moitié des dégâts\nquand il est touché par ce genre de capacités.
+8,3,245,Le Pokémon déclenche une tempête de sable\nquand il subit une attaque.
+8,3,246,Le Pokémon est protégé par des écailles de glace.\nLes dégâts qu’il subit par des capacités spéciales\nsont divisés par deux.
+8,3,247,Le Pokémon fait mûrir la Baie qu’il tient\net double ainsi son effet.
+8,3,248,"Le glaçon sur sa tête encaisse les attaques physiques\nà la place du Pokémon, mais sa destruction modifie\nson apparence. Le glaçon se reforme quand il grêle."
+8,3,249,Augmente la puissance des capacités des Pokémon\nqui se trouvent à proximité.
+8,3,250,Le Pokémon adopte le même type que le terrain\nlorsqu’un champ est actif.
+8,3,251,"Quand le Pokémon entre au combat, les effets\nde Mur Lumière, Protection et Voile Aurore\ndisparaissent pour les alliés comme pour les ennemis."
+8,3,252,Augmente la puissance d’Attaque des capacités\nde type Acier des Pokémon alliés.
+8,3,253,"Lorsque le Pokémon est directement touché par\nune attaque, l’assaillant et lui tomberont K.O. dans trois\ntours, à moins qu’ils ne soient remplacés entre temps."
+8,3,254,"Lorsque le Pokémon est directement touché\npar une attaque, il échange son talent avec celui\nde l’assaillant."
+8,3,255,"Augmente l’Attaque, mais empêche d’utiliser\ntoute autre capacité que celle utilisée en premier\npar le Pokémon."
+8,3,256,"Si un Pokémon avec Gaz Inhibiteur est sur le terrain,\nles effets des talents de tous les autres Pokémon\nsont annulés."
+8,3,257,Protège le Pokémon et ses alliés contre toutes\nles altérations de statut liées à l’empoisonnement.
+8,3,258,"À la fin de chaque tour, le Pokémon alterne\nentre ses formes Mode Rassasié et Mode Affamé."
+8,4,1,Lässt das Ziel beim Angriff eventuell durch Gestank\nzurückschrecken.
+8,4,2,Ruft bei Kampfantritt Regen herbei.
+8,4,3,Erhöht in jeder Runde die Initiative.
+8,4,4,Wehrt gegnerische Volltreffer mit einem harten\nPanzer ab.
+8,4,5,Bietet Schutz gegen K.O.-Attacken. Bei vollen KP\nübersteht das Pokémon auch K.O.-Treffer.
+8,4,6,"Befeuchtet die Umgebung und verhindert so den Einsatz\nvon Attacken wie Finale, die Explosionen auslösen."
+8,4,7,Der flexible Körper des Pokémon schützt es vor\nParalyse.
+8,4,8,Erhöht in Sandstürmen den Ausweichwert.
+8,4,9,Kann bei Berührung durch statisch aufgeladenen Körper\nparalysieren.
+8,4,10,"Treffer durch Elektro-Attacken verursachen keinen\nSchaden, sondern regenerieren stattdessen KP."
+8,4,11,"Treffer durch Wasser-Attacken verursachen keinen\nSchaden, sondern regenerieren stattdessen KP."
+8,4,12,"Das Pokémon ist so apathisch, dass es nicht betört oder\nprovoziert werden kann."
+8,4,13,Hebt alle Wetter-Effekte auf.
+8,4,14,Erhöht die Genauigkeit von Attacken.
+8,4,15,Verhindert Einschlafen.
+8,4,16,Ändert seinen Typ zu dem der Attacke des Angreifers.
+8,4,17,Das starke Immunsystem des Pokémon verhindert\nVergiftungen.
+8,4,18,"Verstärkt Feuer-Attacken, wenn es von Feuer-Attacken\ngetroffen wird."
+8,4,19,Blockiert durch Puder die Zusatzeffekte gegnerischer\nAngriffe.
+8,4,20,Das Pokémon lässt sich nicht aus der Ruhe bringen und\nverhindert so Verwirrung.
+8,4,21,"Blockt Attacken und Items, die Pokémon austauschen,\nindem es sich mit einem Saugnapf am Boden verankert."
+8,4,22,"Senkt den Angriff der Gegner, indem es sie gleich zu\nKampfantritt bedroht und einschüchtert."
+8,4,23,"Hindert Gegner an der Flucht beziehungsweise am\nAuswechseln, indem es ihnen den Weg versperrt."
+8,4,24,Angreifer werden durch die raue Haut des Pokémon\nbei direkten Attacken verletzt.
+8,4,25,"Wundersame Kräfte bewirken, dass nur sehr effektive\nTreffer bei ihm Schaden anrichten."
+8,4,26,Verleiht volle Immunität gegen alle Boden-Attacken\ndurch Schwebezustand.
+8,4,27,"Wird dieses Pokémon durch eine direkte Attacke\nangegriffen, kann das beim Gegner Paralyse,\nVergiftung oder Schlaf auslösen."
+8,4,28,"Erleidet das Pokémon Verbrennungen, Vergiftungen\noder Paralyse, ereilt das jeweilige Statusproblem\nauch den Verursacher."
+8,4,29,Verhindert das Senken der Statuswerte durch Attacken\nund Fähigkeiten von Angreifern.
+8,4,30,"Wird das Pokémon ausgewechselt, werden seine\nStatusprobleme geheilt."
+8,4,31,"Zieht Elektro-Attacken an. Statt durch diese Schaden\nzu nehmen, erhöht es den eigenen Spezial-Angriff."
+8,4,32,"Erhöht die Wahrscheinlichkeit, dass Zusatzeffekte von\nAttacken auftreten."
+8,4,33,Erhöht bei Regen die Initiative.
+8,4,34,Erhöht bei Sonnenschein die Initiative.
+8,4,35,"Erhellt die Umgebung und erhöht dadurch die\nWahrscheinlichkeit, wilden Pokémon zu begegnen."
+8,4,36,Kopiert bei Kampfantritt die Fähigkeit eines Gegners.
+8,4,37,Verdoppelt die Stärke von physischen Attacken.
+8,4,38,Vergiftet den Angreifer bei Berührung eventuell.
+8,4,39,Verhindert durch erhöhte Konzentrationsfähigkeit\nZurückschrecken.
+8,4,40,Dank eines Panzers aus Magma kann dieses Pokémon\nnicht eingefroren werden.
+8,4,41,Verhindert durch eine Hülle aus Wasser Verbrennungen.
+8,4,42,Hindert Stahl-Pokémon durch Magnetismus an der\nFlucht.
+8,4,43,Bietet durch Schalldämmung volle Immunität gegen\nalle Lärm-Attacken.
+8,4,44,Regeneriert bei Regen nach und nach KP.
+8,4,45,Erzeugt bei Kampfantritt Sandstürme.
+8,4,46,"Zwingt Gegner dazu, beim Einsatz von Attacken\nmehr AP zu verbrauchen."
+8,4,47,"Das Pokémon wird von einer dicken Fettschicht\ngeschützt, was den durch Feuer- und Eis-Attacken\nerlittenen Schaden halbiert."
+8,4,48,"Wenn es eingeschlafen ist, kann es doppelt so schnell\nwieder aufwachen wie andere Pokémon."
+8,4,49,Fügt dem Angreifer bei Berührung eventuell\nVerbrennungen zu.
+8,4,50,Die Flucht vor wilden Pokémon gelingt immer.
+8,4,51,"Sein scharfer Blick hindert Angreifer daran,\nseine Genauigkeit zu senken."
+8,4,52,"Hindert Angreifer durch mächtige Scheren daran,\nden Angriffs-Wert zu senken."
+8,4,53,"Hebt gelegentlich von Gegnern benutzte Items auf.\nDies geschieht nicht nur während Kämpfen, sondern\nauch unterwegs."
+8,4,54,Das Pokémon muss nach Einsatz einer Attacke\neine Runde lang aussetzen.
+8,4,55,"Erhöht den Angriffs-Wert, aber senkt die Genauigkeit."
+8,4,56,"Wird dieses Pokémon durch eine direkte Attacke\nangegriffen, verliebt sich der Gegner eventuell in es."
+8,4,57,"Erhöht den Spezial-Angriff, wenn das Pokémon einen\nMitstreiter mit der Fähigkeit Plus oder Minus hat."
+8,4,58,"Erhöht den Spezial-Angriff, wenn das Pokémon einen\nMitstreiter mit der Fähigkeit Plus oder Minus hat."
+8,4,59,"Nimmt je nach Wetter entweder den Typ Wasser, Feuer\noder Eis an."
+8,4,60,"Trägt es ein Item, bleibt dieses an seinem klebrigen\nKörper haften, wodurch Item-Diebstahl verhindert wird."
+8,4,61,"Das Pokémon befreit sich eventuell von\nStatusproblemen, indem es seine Haut abstreift."
+8,4,62,Bei Statusproblemen setzt es Adrenalin frei und\nerhöht so seinen Angriffs-Wert.
+8,4,63,Bei Statusproblemen schützt es sich mit mysteriösen\nSchuppen und erhöht so seine Verteidigung.
+8,4,64,"Angreifer, die durch Saug-Attacken Kloakensoße in\nsich aufgenommen haben, nehmen durch deren\nwiderwärtigen Gestank Schaden."
+8,4,65,"Erhöht die Stärke von Pflanzen-Attacken, wenn die KP\nauf einen gewissen Wert fallen."
+8,4,66,"Erhöht die Stärke von Feuer-Attacken, wenn die KP auf\neinen gewissen Wert fallen."
+8,4,67,"Erhöht die Stärke von Wasser-Attacken, wenn die KP auf\neinen gewissen Wert fallen."
+8,4,68,"Erhöht die Stärke von Käfer-Attacken, wenn die KP auf\neinen gewissen Wert fallen."
+8,4,69,"Verhindert Schaden, der durch Rückstoß entstehen\nwürde."
+8,4,70,Erzeugt bei Kampfantritt gleißendes Sonnenlicht.
+8,4,71,Hindert Gegner im Kampf an der Flucht.
+8,4,72,"Das Pokémon ist so munter, dass es nicht\neinschlafen kann."
+8,4,73,"Indem es sich mit pulvrigem Rauch umhüllt, hindert es\nAngreifer daran, seine Statuswerte zu senken."
+8,4,74,Verdoppelt mit reiner Willenskraft die Stärke seiner\nphysischen Attacken.
+8,4,75,Wehrt gegnerische Volltreffer mit einem harten\nPanzer ab.
+8,4,76,Hebt alle Wetter-Effekte auf.
+8,4,77,"Erhöht den Ausweichwert, wenn das Pokémon\nverwirrt ist."
+8,4,78,"Treffer durch Elektro-Attacken verursachen keinen\nSchaden, sondern geben dem Pokémon eine\nStarthilfe und erhöhen so seine Initiative."
+8,4,79,"Greift es einen Rivalen desselben Geschlechts an,\nwird es stärker. Greift es ein Ziel des anderen\nGeschlechts an, wird es schwächer."
+8,4,80,"Sein eiserner Wille erhöht die Initiative, wann immer\ndas Pokémon zurückschreckt."
+8,4,81,Erhöht bei Hagel den Ausweichwert.
+8,4,82,"Setzt bestimmte Beeren nicht erst in einer Notlage ein,\nsondern bereits dann, wenn seine KP auf die Hälfte des\nMaximalwerts fallen."
+8,4,83,Wird nach Einstecken eines Volltreffers wütend und\nmaximiert dabei seinen Angriffs-Wert.
+8,4,84,"Wenn das von ihm getragene Item verwendet wird\noder verloren geht, erhöht dies seine Initiative."
+8,4,85,Sein Hitze abweisender Körper halbiert den durch\nFeuer-Attacken erlittenen Schaden.
+8,4,86,Verdoppelt die Wirkung eigener Statusveränderungen.
+8,4,87,Bei Sonnenschein verliert das Pokémon KP und der\nSchaden durch Feuer-Attacken steigt. Bei Regen und\nTreffern durch Wasser-Attacken regeneriert es KP.
+8,4,88,"Ist die Spezial-Verteidigung des Gegners höher als\nseine Verteidigung, wird der eigene Spezial-Angriff\nerhöht. Ist die Verteidigung höher, steigt der Angriff."
+8,4,89,"Erhöht die Stärke von Hieb-, Punch-, Faust- und\nSchlag-Attacken."
+8,4,90,"Das Pokémon erleidet keinen Schaden durch Vergiftung,\nsondern regeneriert KP."
+8,4,91,"Erhöht die Stärke von Attacken, die dem Typ des\nPokémon entsprechen."
+8,4,92,Landet mit Serien-Attacken immer die maximale Anzahl\nan Treffern.
+8,4,93,Heilt bei Regen Statusprobleme.
+8,4,94,"Führt bei Sonnenschein in jeder Runde zu KP-Verlusten,\nerhöht aber den Spezial-Angriff."
+8,4,95,Erhöht bei Statusproblemen die Initiative.
+8,4,96,Alle Attacken des Pokémon nehmen den Typ Normal\nan und ihre Stärke erhöht sich ein wenig.
+8,4,97,Erhöht bei Volltreffern die Stärke der Attacke noch\nweiter.
+8,4,98,Das Pokémon nimmt nur durch Offensiv-Attacken\nSchaden.
+8,4,99,Alle Attacken des oder auf das Pokémon gelingen\naufgrund seiner deckungslosen Kampftaktik.
+8,4,100,Handelt auch mit Initiative-Vorteil stets als Letztes.
+8,4,101,Erhöht die Stärke von schwächeren Attacken.
+8,4,102,Verhindert bei Sonnenschein Statusprobleme.
+8,4,103,Das Pokémon kann keine getragenen Items verwenden.
+8,4,104,Attacken können ungeachtet der Fähigkeiten des\nZieles verwendet werden.
+8,4,105,"Großes Glück erhöht die Wahrscheinlichkeit,\neinen Volltreffer zu landen."
+8,4,106,"Wird das Pokémon durch eine direkte Attacke besiegt,\nfügt es dem Angreifer Schaden zu."
+8,4,107,Kann gefährliche gegnerische Attacken erahnen.
+8,4,108,Gibt bei Kampfantritt Auskunft über eine Attacke aus\ndem gegnerischen Repertoire.
+8,4,109,"Greift das Pokémon an, ignoriert es sämtliche\nStatusveränderungen des Zieles."
+8,4,110,"Bewirkt, dass nicht sehr effektive Attacken dem Ziel\ntrotz des Typennachteils normalen Schaden zufügen."
+8,4,111,"Reduziert die Stärke von sehr effektiven Attacken und\nverringert damit den Schaden, den das Pokémon durch\nsie erleidet."
+8,4,112,Halbiert fünf Runden lang den Angriffs-Wert und die\nInitiative des Pokémon.
+8,4,113,"Bewirkt, dass Normal- und Kampf-Attacken auch\nPokémon vom Typ Geist treffen können."
+8,4,114,"Zieht Wasser-Attacken an. Statt durch diese Schaden\nzu nehmen, erhöht es den eigenen Spezial-Angriff."
+8,4,115,Regeneriert bei Hagel nach und nach KP.
+8,4,116,"Reduziert die Stärke von sehr effektiven Attacken und\nverringert damit den Schaden, den das Pokémon durch\nsie erleidet."
+8,4,117,Löst bei Kampfantritt Hagel aus.
+8,4,118,Das Pokémon sammelt nach Kämpfen eventuell\nHonig auf.
+8,4,119,Kann bei Kampfantritt Auskunft über das vom Gegner\ngetragene Item geben.
+8,4,120,Erhöht die Stärke von Attacken mit Rückstoßschaden.
+8,4,121,Das Pokémon passt seinen Typ dem der getragenen\nTafel bzw. des getragenen Z-Kristalls an.
+8,4,122,Erhöht bei Sonnenschein den Angriff und die\nSpezial-Verteidigung aller Team-Pokémon.
+8,4,123,Fügt schlafenden Gegnern Schaden zu.
+8,4,124,Stiehlt das Item des Angreifers bei Berührung.
+8,4,125,"Erhöht die Stärke von Attacken, aber hebt dafür ihre\nZusatzeffekte auf."
+8,4,126,"Statusveränderungen werden umgekehrt: Statuswerte,\ndie eigentlich erhöht werden sollten, sinken und\numgekehrt."
+8,4,127,"Erzeugt bei Gegnern Stress und hindert sie so daran,\nBeeren zu konsumieren."
+8,4,128,"Erhöht den Angriff stark, wenn ein Statuswert\ngesenkt wurde."
+8,4,129,"Fallen seine KP auf die Hälfte des Maximalwerts oder\nweniger, bekommt es Angst. Dadurch wird die Stärke\nseines Angriffs und Spezial-Angriffs halbiert."
+8,4,130,"Blockiert eventuell die Attacke, mit welcher der\nAngreifer es getroffen hat."
+8,4,131,Befreit Mitstreiter gelegentlich von Statusproblemen.
+8,4,132,"Kann den Schaden, den Mitstreiter erleiden, verringern."
+8,4,133,"Senkt bei erlittenem Treffer durch eine physische\nAttacke die Verteidigung des Pokémon, aber erhöht\ndafür seine Initiative stark."
+8,4,134,Verdoppelt das eigene Gewicht.
+8,4,135,Halbiert das eigene Gewicht.
+8,4,136,Verringert den erlittenen Schaden bei vollen KP.
+8,4,137,Erhöht bei Vergiftungen die Stärke von physischen\nAttacken.
+8,4,138,Erhöht bei Verbrennungen die Stärke von\nSpezial-Attacken.
+8,4,139,Dieselbe Beere kann mehrmals verwendet werden.
+8,4,140,Erkennt und pariert Attacken von Mitstreitern.
+8,4,141,Erhöht in jeder Runde aufs Neue einen Statuswert stark\nund senkt einen anderen.
+8,4,142,Nimmt weder durch Wetterlagen wie Sandsturm oder\nHagel noch durch Pulver oder Puder Schaden.
+8,4,143,Kann das Ziel durch bloßes Berühren vergiften.
+8,4,144,"Wird das Pokémon ausgewechselt, regeneriert es eine\nkleine Menge an KP."
+8,4,145,"Hindert Angreifer daran, die Verteidigung des Pokémon\nzu senken."
+8,4,146,Erhöht in Sandstürmen die Initiative.
+8,4,147,Wehrt mit robustem Körper viele Status-Attacken ab.
+8,4,148,"Greift das Pokémon zuletzt an, erhöht sich die Stärke\nder Attacke, die es einsetzt."
+8,4,149,"Führt den Gegner hinters Licht, indem es bei\nKampfantritt die Gestalt des Pokémon an der\nletzten Stelle im Team annimmt."
+8,4,150,Kämpft als Kopie seines Gegenübers.
+8,4,151,Überwindet gegnerische Schilde sowie Delegatoren\nund greift an.
+8,4,152,Überträgt bei Berührung die Fähigkeit Mumie auf den\nAngreifer.
+8,4,153,"Besiegt es ein Pokémon, steigt sein Selbstvertrauen\nund somit auch sein Angriff."
+8,4,154,"Wird es von einer Unlicht-Attacke getroffen, meldet\nsich sein Sinn für Gerechtigkeit zu Wort und sein\nAngriff steigt."
+8,4,155,"Wird es von einer Unlicht-, Geister- oder Käfer-Attacke\ngetroffen, bekommt es Angst und seine Initiative steigt."
+8,4,156,"Lenkt Status-Attacken auf den Angreifer um,\nohne selbst von ihnen getroffen zu werden."
+8,4,157,"Wird es von einer Pflanzen-Attacke getroffen, erleidet\nes keinerlei Schaden und sein Angriff steigt."
+8,4,158,Ermöglicht einen Erstschlag mit Status-Attacken.
+8,4,159,"Erhöht in Sandstürmen die Stärke von Gesteins-,\nBoden- und Stahl-Attacken."
+8,4,160,Fügt dem Angreifer bei Berührung mit eisernen Stacheln\nSchaden zu.
+8,4,161,"Fallen seine KP auf die Hälfte des Maximalwerts oder\nweniger, wechselt es seine Gestalt."
+8,4,162,Erhöht die Genauigkeit aller Team-Pokémon.
+8,4,163,Attacken können ungeachtet der Fähigkeit des Zieles\neingesetzt werden.
+8,4,164,Attacken können ungeachtet der Fähigkeit des Zieles\neingesetzt werden.
+8,4,165,Kann alle Team-Pokémon vor mentalen Angriffen\nschützen.
+8,4,166,Schützt Mitstreiter vom Typ Pflanze vor dem Senken\nihrer Statuswerte sowie vor Statusproblemen.
+8,4,167,Regeneriert beim Konsum von Beeren ungeachtet\nder Beerensorte KP.
+8,4,168,Das Pokémon nimmt bei Einsatz einer Attacke deren\nTyp an.
+8,4,169,"Halbiert den Schaden, den das Pokémon durch\nphysische Attacken erleidet."
+8,4,170,"Trifft das Pokémon ein Ziel mit einer Attacke, kann es\nihm dabei sein Item stehlen."
+8,4,171,"Kann das Pokémon vor geworfenen kugelförmigen\nObjekten, wie zum Beispiel Bomben, schützen."
+8,4,172,"Erhöht den Spezial-Angriff stark, wenn ein Statuswert\ngesenkt wurde."
+8,4,173,Der kräftige Kiefer des Pokémon erhöht die Stärke\nvon Biss-Attacken.
+8,4,174,Attacken vom Typ Normal nehmen den Typ Eis an und\nihre Stärke erhöht sich ein wenig.
+8,4,175,Alle Team-Pokémon können nicht einschlafen.
+8,4,176,"Setzt das Pokémon eine Offensiv-Attacke ein, nimmt\nes die Klingenform an. Setzt es danach die Attacke\nKönigsschild ein, nimmt es die Schildform an."
+8,4,177,Kann bei vollen KP einen Erstschlag mit Flug-Attacken\nermöglichen.
+8,4,178,"Erhöht die Stärke einiger Wellen-, Aura- und\nPuls-Attacken."
+8,4,179,"Erhöht die Verteidigung, wenn Grasfeld aktiv ist."
+8,4,180,"Gibt Mitstreitern, die ihr Item aufgebraucht haben,\nsein eigenes Item."
+8,4,181,Erhöht die Stärke von direkten Attacken.
+8,4,182,Attacken vom Typ Normal nehmen den Typ Fee an und\nihre Stärke erhöht sich ein wenig.
+8,4,183,Senkt bei Berührung im Zuge eines Angriffs die\nInitiative des Angreifers.
+8,4,184,Attacken vom Typ Normal nehmen den Typ Flug an und\nihre Stärke erhöht sich ein wenig.
+8,4,185,Zwei Generationen setzen jeweils ein Mal zum\nAngriff an.
+8,4,186,Erhöht die Stärke aller Attacken des Typs Unlicht.
+8,4,187,Erhöht die Stärke aller Attacken des Typs Fee.
+8,4,188,"Kehrt die Wirkung von Auren um und senkt so die\nStärke bestimmter Attacken, anstatt sie zu erhöhen."
+8,4,189,"Ändert das Wetter, um Feuer-Attacken wirkungslos\nzu machen."
+8,4,190,"Ändert das Wetter, um Wasser-Attacken wirkungslos\nzu machen."
+8,4,191,"Ändert das Wetter, um die Schwächen des Typs Flug\nzu beseitigen."
+8,4,192,"Wird es von einer Attacke getroffen, steigt seine\nVerteidigung."
+8,4,193,"Fallen seine KP auf die Hälfte des Maximalwerts oder\nweniger, zieht es sich ängstlich zurück."
+8,4,194,"Fallen seine KP auf die Hälfte des Maximalwerts oder\nweniger, bringt es sich in Sicherheit."
+8,4,195,"Wird es von einer Wasser-Attacke getroffen, steigt\nseine Verteidigung stark."
+8,4,196,Sorgt bei Angriffen auf vergiftete Ziele für\nVolltreffergarantie.
+8,4,197,"Fallen seine KP auf die Hälfte des Maximalwerts oder\nweniger, zerbricht die Panzerung des Pokémon und es\nwird aggressiver."
+8,4,198,Bewirkt bei Angriffen auf neu eingewechselte Ziele\ndoppelten Schaden.
+8,4,199,Feuer-Attacken fügen dem Pokémon weniger\nSchaden zu. Verhindert Verbrennungen.
+8,4,200,Erhöht die Stärke von Stahl-Attacken.
+8,4,201,"Fallen seine KP nach einem Angriff auf die Hälfte des\nMaximalwerts oder weniger, steigt sein Spezial-Angriff."
+8,4,202,Erhöht bei Hagel die Initiative.
+8,4,203,"Ermöglicht dem Pokémon den Einsatz aller seiner\nAttacken, ohne das Ziel dabei direkt zu berühren."
+8,4,204,"Bewirkt, dass alle Lärm-Attacken des Pokémon den\nTyp Wasser annehmen."
+8,4,205,"Ermöglicht einen Erstschlag mit Attacken, welche die\nKP des Anwenders direkt regenerieren."
+8,4,206,Attacken vom Typ Normal nehmen den Typ Elektro an\nund ihre Stärke erhöht sich ein wenig.
+8,4,207,"Verdoppelt die Initiative, wenn zuvor ein Elektrofeld\nerzeugt wurde."
+8,4,208,"Verfügt es über einen hohen KP-Wert, wird es zu einem\nSchwarm und gewinnt an Stärke. Ist der KP-Wert niedrig,\nlöst sich der Schwarm wieder auf."
+8,4,209,Kann ein Mal pro Kampf mit seinem gruseligen Kostüm\neinen Angriff abwehren.
+8,4,210,"Besiegt es ein Ziel, vertieft dies die Freundschaft zu\nseinem Trainer, wodurch es die Ash-Form annimmt\nund sein Wasser-Shuriken stärker wird."
+8,4,211,"Fallen seine KP auf die Hälfte des Maximalwerts oder\nweniger, eilen ihm weitere Zellen zu Hilfe und es\nnimmt die Optimumform an."
+8,4,212,Kann selbst Pokémon vom Typ Stahl oder Gift vergiften.
+8,4,213,Das Pokémon befindet sich ununterbrochen im\nHalbschlaf und wacht nie vollständig auf. Es kann\njedoch im Schlaf angreifen.
+8,4,214,"Schüchtert Gegner ein und hindert sie so daran,\nErstschlag-Attacken gegen es einzusetzen."
+8,4,215,"Wird es durch eine Attacke besiegt, fügt es dem\nAngreifer Schaden in Höhe des KP-Werts zu,\nden es besaß, bevor es kampfunfähig wurde."
+8,4,216,Kann direkt im Anschluss an die Tanz-Attacke eines\nanderen Pokémon ebenfalls eine solche einsetzen.
+8,4,217,Erhöht die Stärke der Spezial-Attacken seiner\nMitstreiter.
+8,4,218,"Halbiert den Schaden, den es durch direkte Attacken\nnimmt, aber verdoppelt dafür den durch Feuer-Attacken\nerlittenen Schaden."
+8,4,219,"Überrascht Gegner und hindert sie so daran,\nErstschlag-Attacken gegen es einzusetzen."
+8,4,220,"Erhöht jedes Mal, wenn ein Pokémon besiegt wird,\nden eigenen Spezial-Angriff."
+8,4,221,Senkt bei Berührung im Zuge eines Angriffs die\nInitiative des Angreifers.
+8,4,222,"Wird einer seiner Mitstreiter besiegt, erhält es\ndessen Fähigkeit."
+8,4,223,Wechselt seine Fähigkeit zu der eines kampfunfähig\ngewordenen Mitstreiters.
+8,4,224,"Erhöht in jeder Runde, in der es ein anderes Pokémon\nbesiegt, seinen höchsten Statuswert."
+8,4,225,Das Pokémon passt seinen Typ der getragenen Disc an.
+8,4,226,Erzeugt bei Kampfantritt ein Elektrofeld.
+8,4,227,Erzeugt bei Kampfantritt ein Psychofeld.
+8,4,228,Erzeugt bei Kampfantritt ein Nebelfeld.
+8,4,229,Erzeugt bei Kampfantritt ein Grasfeld.
+8,4,230,Verhindert das Senken der Statuswerte durch Attacken\nund Fähigkeiten von Angreifern.
+8,4,231,Verringert den erlittenen Schaden bei vollen KP.
+8,4,232,"Reduziert die Stärke von sehr effektiven Attacken und\nverringert damit den Schaden, den das Pokémon durch\nsie erleidet."
+8,4,233,Erhöht die Stärke von sehr effektiven Attacken.
+8,4,234,Erhöht bei Kampfantritt den Angriff.
+8,4,235,Erhöht bei Kampfantritt die Verteidigung.
+8,4,236,Das Pokémon nimmt bei Einsatz einer Attacke deren\nTyp an.
+8,4,237,"Trägt das Pokémon kein Item bei sich, hebt es den Ball\naus dem ersten gescheiterten Fangversuch des Kampfes\nwieder auf."
+8,4,238,"Wird es von einem Angriff getroffen, verstreut es Teile\nseines Wollflaums, wodurch die Initiative aller anderen\nPokémon sinkt."
+8,4,239,"Ignoriert die Effekte von Fähigkeiten und Attacken\nanderer Pokémon, die Attacken auf sich lenken."
+8,4,240,"Lenkt ausschließlich Effekte, welche die Statuswerte\ndes Pokémon senken würden, auf den Angreifer um."
+8,4,241,"Wenn das Pokémon Surfer oder Taucher einsetzt, fängt\nes sich dabei Beute. Erleidet es anschließend Schaden,\ngreift es an, indem es die Beute wieder ausspuckt."
+8,4,242,"Ignoriert die Effekte von Fähigkeiten und Attacken\nanderer Pokémon, die Attacken auf sich lenken."
+8,4,243,"Wird es von einer Wasser- oder Feuer-Attacke\ngetroffen, steigt seine Initiative drastisch."
+8,4,244,"Erhöht die Stärke von eigenen Lärm-Attacken und\nhalbiert den Schaden, den das Pokémon selbst durch\nLärm-Attacken erleidet."
+8,4,245,"Löst einen Sandsturm aus, wenn das Pokémon von einer\nAttacke erfasst wird."
+8,4,246,"Halbiert mithilfe von schützendem Eisflügelstaub den\nSchaden, den das Pokémon durch Spezial-Attacken\nerleidet."
+8,4,247,"Verdoppelt den Effekt von Beeren, indem es sie\nheranreifen lässt."
+8,4,248,Der Eisblock um seinen Kopf blockt eine physische\nAttacke ab. Dies bewirkt jedoch einen Formwechsel.\nDurch Hagel wird der Eisblock wiederhergestellt.
+8,4,249,Erhöht bei direkt benachbarten Pokémon die Stärke\nvon Attacken.
+8,4,250,Der Typ des Pokémon ändert sich in Abhängigkeit vom\nZustand des Feldes.
+8,4,251,"Hebt bei Kampfantritt die Wirkung von Lichtschild,\nReflektor und Auroraschleier auf Mitstreiter- und\nGegnerseite auf."
+8,4,252,Erhöht die Stärke von Stahl-Attacken auf\nMitstreiterseite.
+8,4,253,"Erleidet es einen Treffer von einer direkten Attacke,\nwird es zusammen mit dem Angreifer nach drei Runden\nbesiegt. Rettung ist durch Austausch möglich."
+8,4,254,"Wird das Pokémon von einer direkten Attacke\ngetroffen, tauscht es seine Fähigkeit mit der des\nAngreifers."
+8,4,255,"Erhöht den Angriff, aber nur die zuerst gewählte\nAttacke kann eingesetzt werden."
+8,4,256,"Solange ein Pokémon mit der Fähigkeit Reaktionsgas\nam Kampf beteiligt ist, werden die Fähigkeiten aller\nanderen Pokémon unterdrückt oder aufgehoben."
+8,4,257,Schützt das Pokémon und seine Mitstreiter vor\nVergiftung.
+8,4,258,Das Pokémon ändert zum Ende jeder Runde seine\nForm und wechselt somit zwischen dem Pappsatt- und\ndem Kohldampfmuster.
+8,5,1,A volte il cattivo odore emesso dal Pokémon\nfa tentennare i nemici quando attacca.
+8,5,2,"Quando il Pokémon entra in campo, attira la pioggia."
+8,5,3,La Velocità aumenta a ogni turno.
+8,5,4,Il Pokémon è protetto da una dura corazza\nche gli evita di subire brutti colpi.
+8,5,5,"Evita che il Pokémon vada KO in un sol colpo se ha\ntutti i PS, e lo rende immune alle mosse che causano\nKO immediato."
+8,5,6,"Aumenta l’umidità circostante, impedendo l’uso\ndi Autodistruzione e di altre mosse esplosive."
+8,5,7,Il corpo flessibile del Pokémon gli impedisce\ndi subire gli effetti della paralisi.
+8,5,8,L’elusione aumenta durante le tempeste di sabbia.
+8,5,9,Il contatto fisico con il corpo percorso\ndall’elettricità statica del Pokémon può\ncausare paralisi.
+8,5,10,"Se il Pokémon viene colpito da una mossa di tipo\nElettro, recupera PS anziché subire danni."
+8,5,11,"Se il Pokémon viene colpito da una mossa di tipo\nAcqua, recupera PS anziché subire danni."
+8,5,12,L’imperturbabilità del Pokémon lo protegge\nda infatuazioni e provocazioni.
+8,5,13,Neutralizza gli effetti di tutte le condizioni\natmosferiche.
+8,5,14,La precisione del Pokémon aumenta grazie ai suoi\nocchi composti.
+8,5,15,Il Pokémon soffre d’insonnia e non può addormentarsi.
+8,5,16,Il Pokémon acquisisce il tipo della mossa subita.
+8,5,17,L’immunità naturale del Pokémon gli impedisce\ndi essere avvelenato.
+8,5,18,"Se il Pokémon subisce una mossa di tipo Fuoco,\nne sfrutta il calore per potenziare le proprie mosse\ndello stesso tipo."
+8,5,19,Il Pokémon è protetto da uno strato di scaglie\nche annulla gli effetti aggiuntivi delle mosse subite.
+8,5,20,Il Pokémon affronta la vita al proprio ritmo e per\nquesto non può essere confuso.
+8,5,21,Il Pokémon resiste a strumenti e mosse che causano\nla sostituzione appiccicandosi al terreno con le ventose.
+8,5,22,"Quando il Pokémon entra in campo, la sua\nprepotenza intimidisce i nemici, riducendone\nl’Attacco."
+8,5,23,Il Pokémon calpesta l’ombra del nemico impedendogli\nla fuga o la sostituzione.
+8,5,24,"Se il Pokémon è colpito da un attacco diretto, grazie\nalla sua pelle ruvida infligge danni a sua volta."
+8,5,25,Un potere misterioso protegge il Pokémon e lo\nrende vulnerabile solo alle mosse superefficaci.
+8,5,26,La capacità di levitare conferisce al Pokémon\nimmunità agli attacchi di tipo Terra.
+8,5,27,"Può causare avvelenamento, paralisi o sonno\na chi manda a segno un attacco diretto."
+8,5,28,"Se un nemico avvelena, paralizza o scotta un\nPokémon con questa abilità, viene colpito dallo\nstesso problema di stato."
+8,5,29,Impedisce la diminuzione delle statistiche causata\nda abilità o mosse di altri Pokémon.
+8,5,30,"Quando il Pokémon viene sostituito, guarisce\ndai problemi di stato."
+8,5,31,Il Pokémon attira e neutralizza le mosse di tipo Elettro\ne fa aumentare il suo Attacco Speciale.
+8,5,32,Rende più probabili gli effetti aggiuntivi delle mosse.
+8,5,33,"Se piove, la Velocità aumenta."
+8,5,34,"Se la luce del sole è intensa, la Velocità aumenta."
+8,5,35,"Illumina tutto intorno, rendendo più probabile\nincontrare Pokémon selvatici."
+8,5,36,"Quando il Pokémon entra in campo, copia l’abilità\ndi un nemico."
+8,5,37,Raddoppia l’Attacco del Pokémon.
+8,5,38,Può avvelenare chi manda a segno un attacco diretto.
+8,5,39,La capacità di concentrazione del Pokémon evita\nche tentenni per gli attacchi del nemico.
+8,5,40,Il magma riveste il corpo del Pokémon\nimpedendogli di venire congelato.
+8,5,41,Un velo d’acqua riveste il corpo del Pokémon\nimpedendogli di venire scottato.
+8,5,42,La carica magnetica attrae i Pokémon di tipo\nAcciaio impedendogli la fuga o la sostituzione.
+8,5,43,Il Pokémon è dotato di una sorta di isolamento\nacustico che lo rende immune alle mosse basate\nsul suono.
+8,5,44,Il Pokémon recupera PS quando piove.
+8,5,45,"Quando il Pokémon entra in campo, scatena\nuna tempesta di sabbia."
+8,5,46,"Il Pokémon mette pressione al nemico, facendogli\nconsumare più PP."
+8,5,47,Il Pokémon è protetto da uno spesso strato\ndi grasso che dimezza il danno causato da\nmosse di tipo Fuoco e Ghiaccio.
+8,5,48,Il Pokémon impiega metà del tempo per risvegliarsi\ndal sonno rispetto agli altri.
+8,5,49,Può scottare chi manda a segno un attacco diretto.
+8,5,50,Garantisce la fuga dai Pokémon selvatici.
+8,5,51,La vista acuta del Pokémon impedisce che la sua\nprecisione diminuisca.
+8,5,52,L’Attacco del Pokémon non può diminuire\ngrazie alla morsa micidiale in cui è in grado\ndi stringere i nemici.
+8,5,53,Il Pokémon può raccogliere lo strumento usato da\nun nemico durante la lotta. A volte potrebbe\nraccogliere strumenti anche fuori dalla lotta.
+8,5,54,"Quando il Pokémon usa una mossa, nel turno\nsuccessivo si riposerà."
+8,5,55,"L’Attacco aumenta, ma la precisione diminuisce."
+8,5,56,Può causare infatuazione a chi manda a segno\nun attacco diretto.
+8,5,57,L’Attacco Speciale aumenta se ci sono alleati con\nl’abilità Meno o Più.
+8,5,58,L’Attacco Speciale aumenta se ci sono alleati con\nl’abilità Meno o Più.
+8,5,59,"Cambia il tipo del Pokémon in Acqua, Fuoco\no Ghiaccio in base alle condizioni atmosferiche."
+8,5,60,Gli strumenti restano appiccicati al corpo adesivo\ndel Pokémon e non possono essere rubati.
+8,5,61,Il Pokémon può guarire dai problemi di stato\nfacendo la muta completa della pelle.
+8,5,62,"Se il Pokémon è affetto da un problema di stato,\ntira fuori la grinta e aumenta il proprio Attacco."
+8,5,63,"Se il Pokémon è affetto da un problema di stato,\nle squame sulla sua pelle si induriscono aumentando\nla sua Difesa."
+8,5,64,"Il Pokémon secerne delle sostanze tossiche.\nSe un nemico manda a segno una mossa che\nassorbe i PS, subisce dei danni."
+8,5,65,"Quando il Pokémon ha pochi PS, la potenza delle\nsue mosse di tipo Erba aumenta."
+8,5,66,"Quando il Pokémon ha pochi PS, la potenza delle\nsue mosse di tipo Fuoco aumenta."
+8,5,67,"Quando il Pokémon ha pochi PS, la potenza delle\nsue mosse di tipo Acqua aumenta."
+8,5,68,"Quando il Pokémon ha pochi PS, la potenza delle\nsue mosse di tipo Coleottero aumenta."
+8,5,69,Protegge il Pokémon dai contraccolpi.
+8,5,70,"Quando il Pokémon entra in campo, la luce solare\ndiventa intensa."
+8,5,71,Impedisce la fuga al nemico.
+8,5,72,Il Pokémon è talmente vivace che non può\naddormentarsi.
+8,5,73,Il Pokémon è protetto da un fumo chiaro che\nimpedisce ai nemici di diminuire le sue statistiche.
+8,5,74,L’Attacco del Pokémon raddoppia grazie\nalla sua padronanza delle tecniche yoga.
+8,5,75,Il Pokémon è protetto da un guscio robusto\nche gli evita di subire brutti colpi.
+8,5,76,Neutralizza gli effetti di tutte le condizioni\natmosferiche.
+8,5,77,"Se il Pokémon è confuso, la sua elusione aumenta."
+8,5,78,"Se il Pokémon viene colpito da una mossa di\ntipo Elettro, la neutralizza e sfrutta la carica\nelettrica per aumentare la propria Velocità."
+8,5,79,"Rende più forti contro nemici dello stesso sesso,\nma più deboli contro nemici di sesso opposto."
+8,5,80,"Se il Pokémon tentenna, il suo animo indomito\nsi risveglia e la sua Velocità aumenta."
+8,5,81,"Se grandina, l’elusione aumenta."
+8,5,82,"Il Pokémon non attende di aver perso molti PS\nper mangiare certe bacche, ma lo fa non appena\ni suoi PS scendono a metà o meno."
+8,5,83,"Se il Pokémon subisce un brutto colpo, monta su\ntutte le furie e il suo Attacco aumenta al massimo."
+8,5,84,"Se il Pokémon usa o perde uno strumento,\nla sua Velocità aumenta."
+8,5,85,Il corpo termoresistente del Pokémon dimezza i danni\nche subisce dalle mosse di tipo Fuoco.
+8,5,86,Raddoppia le modifiche alle statistiche.
+8,5,87,"Il Pokémon recupera PS se piove o se subisce\nmosse di tipo Acqua, ma perde PS con la luce solare\nintensa. Subisce più danni da mosse di tipo Fuoco."
+8,5,88,"Il Pokémon analizza Difesa e Difesa Speciale\ndel nemico e, a seconda di qual è più bassa,\naumenta il proprio Attacco o Attacco Speciale."
+8,5,89,Potenzia le mosse che utilizzano pugni.
+8,5,90,"Se il Pokémon è avvelenato, recupera PS anziché\nperderli."
+8,5,91,Potenzia di molto le mosse dello stesso tipo\ndel Pokémon.
+8,5,92,Le mosse multicolpo mandano a segno sempre\nil massimo dei colpi possibili.
+8,5,93,"Se piove, il Pokémon guarisce dai problemi di stato."
+8,5,94,"Se la luce del sole è intensa, l’Attacco Speciale\naumenta, ma il Pokémon perde PS a ogni turno."
+8,5,95,"Se il Pokémon è affetto da un problema di stato,\nla Velocità aumenta."
+8,5,96,Tutte le mosse del Pokémon diventano di tipo\nNormale e la loro potenza aumenta un po’.
+8,5,97,Aumenta ulteriormente i danni inflitti dai brutti colpi.
+8,5,98,Il Pokémon subisce danni solo dagli attacchi.
+8,5,99,Il Pokémon e chiunque lo attacchi abbassano\nla guardia e le loro mosse vanno sempre a segno.
+8,5,100,Il Pokémon agisce sempre per ultimo.
+8,5,101,Potenzia le mosse più deboli del Pokémon.
+8,5,102,"Se la luce del sole è intensa, evita i problemi\ndi stato."
+8,5,103,Il Pokémon non può usare lo strumento che ha con sé.
+8,5,104,"Quando il Pokémon attacca, ignora l’abilità del\nbersaglio se questa ha effetto sulle mosse."
+8,5,105,L’incredibile fortuna del Pokémon aumenta\nla sua probabilità di infliggere brutti colpi.
+8,5,106,Chi manda KO questo Pokémon con un attacco\ndiretto subisce dei danni.
+8,5,107,Rivela se il nemico ha mosse pericolose.
+8,5,108,"Quando il Pokémon entra in campo, rivela una delle\nmosse del nemico."
+8,5,109,"Quando il Pokémon attacca, ignora le modifiche\nalle statistiche del nemico."
+8,5,110,Permette alle mosse non molto efficaci di infliggere\ndanni normalmente.
+8,5,111,Riduce i danni subiti dalle mosse superefficaci.
+8,5,112,Dimezza per cinque turni l’Attacco e la Velocità.
+8,5,113,Permette di colpire Pokémon di tipo Spettro\ncon mosse di tipo Normale e Lotta.
+8,5,114,Il Pokémon attira e neutralizza le mosse di tipo Acqua\ne fa aumentare il proprio Attacco Speciale.
+8,5,115,"Se grandina, il Pokémon recupera PS."
+8,5,116,Riduce i danni subiti dalle mosse superefficaci.
+8,5,117,"Quando il Pokémon entra in campo, provoca\nuna grandinata."
+8,5,118,Il Pokémon può raccogliere del Miele alla fine\ndella lotta.
+8,5,119,"Quando il Pokémon entra in campo, rivela\nlo strumento del nemico."
+8,5,120,Potenzia le mosse che causano contraccolpo.
+8,5,121,Cambia il tipo del Pokémon a seconda della lastra\no del Cristallo Z che ha con sé.
+8,5,122,"Se la luce del sole è intensa, aumenta l’Attacco\ne la Difesa Speciale del Pokémon e dei suoi alleati."
+8,5,123,Infligge danni ai nemici addormentati.
+8,5,124,"Se il Pokémon viene colpito da un attacco diretto,\nruba lo strumento di chi lo ha attaccato."
+8,5,125,"Aumenta la potenza delle mosse, ma ne annulla\ngli effetti aggiuntivi."
+8,5,126,Le modifiche alle statistiche hanno effetto inverso:\nle statistiche aumentano quando dovrebbero diminuire\ne viceversa.
+8,5,127,Il nemico viene intimidito e non può mangiare\nbacche.
+8,5,128,L’Attacco aumenta di molto quando le statistiche\ndiminuiscono a causa di un nemico.
+8,5,129,"Quando i PS scendono a metà o meno, il Pokémon\nsi scoraggia e l’Attacco e l’Attacco Speciale\nvengono dimezzati."
+8,5,130,Può bloccare la mossa subita dal Pokémon.
+8,5,131,A volte cura i problemi di stato degli alleati.
+8,5,132,I danni inflitti agli alleati del Pokémon\nvengono ridotti.
+8,5,133,"Se il Pokémon subisce danni da mosse fisiche, la Difesa\ndiminuisce e la Velocità aumenta di molto."
+8,5,134,Raddoppia il peso del Pokémon.
+8,5,135,Dimezza il peso del Pokémon.
+8,5,136,"Se i PS sono al massimo, riduce il danno subito."
+8,5,137,"Se il Pokémon è avvelenato, la potenza delle sue mosse\nfisiche aumenta."
+8,5,138,"Se il Pokémon è scottato, la potenza delle sue mosse\nspeciali aumenta."
+8,5,139,Può ricreare una bacca utilizzata.
+8,5,140,Il Pokémon prevede ed evita gli attacchi degli alleati.
+8,5,141,"A ogni turno, aumenta di molto una statistica\ne ne riduce un’altra."
+8,5,142,"Rende immuni ai danni da grandine e tempesta di\nsabbia, alle mosse Spora, Cottonspora, Sonnifero,\nParalizzante e alle mosse “polvere”."
+8,5,143,Il Pokémon può avvelenare il nemico al solo contatto.
+8,5,144,Il Pokémon recupera un po’ di PS quando lascia\nil campo.
+8,5,145,Evita che la Difesa diminuisca.
+8,5,146,"Se c’è una tempeste di sabbia, la Velocità aumenta."
+8,5,147,Il Pokémon resiste più facilmente alle mosse di stato.
+8,5,148,"Se il Pokémon agisce per ultimo, la potenza\ndella mossa aumenta."
+8,5,149,Il Pokémon inganna il nemico entrando in campo\ncon le sembianze dell’ultimo Pokémon della propria\nsquadra.
+8,5,150,Il Pokémon si trasforma nel nemico che ha davanti.
+8,5,151,Il Pokémon attacca evitando le barriere e il sostituto\ndel nemico.
+8,5,152,"Al contatto con il Pokémon, l’abilità del nemico\ndiventa Mummia."
+8,5,153,"Quando manda un nemico KO, il Pokémon si fa\nsicuro di sé e aumenta il proprio Attacco."
+8,5,154,"Quando il Pokémon viene colpito da una mossa\ndi tipo Buio, il suo forte senso di giustizia fa sì\nche l’Attacco aumenti."
+8,5,155,"Le mosse di tipo Buio, Spettro e Coleottero\nspaventano il Pokémon aumentandone la Velocità."
+8,5,156,Il Pokémon respinge al mittente le mosse di stato senza\nsubirne gli effetti.
+8,5,157,"Se il Pokémon viene colpito da una mossa di tipo Erba,\nla neutralizza e aumenta il proprio Attacco."
+8,5,158,Le mosse di stato del Pokémon acquistano\npriorità alta.
+8,5,159,"Potenzia le mosse di tipo Roccia, Terra e Acciaio\ndurante le tempeste di sabbia."
+8,5,160,"Se il Pokémon viene colpito da un attacco diretto,\ninfligge danni a sua volta con le sue spine di ferro."
+8,5,161,Cambia la forma del Pokémon se i PS scendono\na metà o meno.
+8,5,162,Aumenta la precisione di tutta la squadra.
+8,5,163,"Quando il Pokémon attacca, ignora l’abilità del\nbersaglio se questa ha effetto sulle mosse."
+8,5,164,"Quando il Pokémon attacca, ignora l’abilità del\nbersaglio se questa ha effetto sulle mosse."
+8,5,165,Protegge tutta la squadra da effetti che ne limitano\nla libertà di scelta delle mosse.
+8,5,166,Rende gli alleati di tipo Erba immuni alla diminuzione\ndelle statistiche e ai problemi di stato.
+8,5,167,"Quando il Pokémon mangia una bacca, recupera anche\ndei PS."
+8,5,168,Cambia il tipo del Pokémon in quello della mossa\nche usa.
+8,5,169,Dimezza il danno subito dalle mosse fisiche.
+8,5,170,"Quando chi la usa colpisce un Pokémon con una mossa,\ngli ruba lo strumento."
+8,5,171,Protegge da alcune mosse a base di proiettili\ne bombe.
+8,5,172,L’Attacco Speciale aumenta di molto quando le\nstatistiche diminuiscono a causa di un nemico.
+8,5,173,La robusta mascella del Pokémon permette\nmorsi molto potenti.
+8,5,174,Le mosse di tipo Normale diventano di tipo\nGhiaccio e la loro potenza aumenta un po’.
+8,5,175,Rende il Pokémon e i suoi alleati immuni al sonno.
+8,5,176,Assume la Forma Spada se usa una mossa\nd’attacco e la Forma Scudo se usa Scudo Reale.
+8,5,177,"Se il Pokémon ha tutti i PS, le sue mosse\ndi tipo Volante acquistano priorità alta."
+8,5,178,"Potenzia le mosse “pulsar”, Forzasfera\ne Ondasana."
+8,5,179,"In presenza di un Campo Erboso, la Difesa\naumenta."
+8,5,180,"Se un alleato usa uno strumento, il Pokémon\ngli passa il proprio."
+8,5,181,Potenzia le mosse che causano un contatto fisico.
+8,5,182,Le mosse di tipo Normale diventano di tipo Folletto\ne la loro potenza aumenta un po’.
+8,5,183,"Se il Pokémon viene colpito da un attacco diretto,\nla Velocità di chi l’ha colpito diminuisce."
+8,5,184,Le mosse di tipo Normale diventano di tipo Volante\ne la loro potenza aumenta un po’.
+8,5,185,Il Pokémon e il suo piccolo attaccano insieme.
+8,5,186,Potenzia le mosse di tipo Buio di tutti i Pokémon.
+8,5,187,Potenzia le mosse di tipo Folletto di tutti i Pokémon.
+8,5,188,Inverte gli effetti di tutte le aure riducendone\nla potenza.
+8,5,189,Crea un clima che rende inefficaci\ngli attacchi di tipo Fuoco.
+8,5,190,Crea un clima che rende inefficaci\ngli attacchi di tipo Acqua.
+8,5,191,Crea un clima che annulla i punti deboli\ndel tipo Volante.
+8,5,192,"Se il Pokémon subisce un attacco, la sua Difesa\naumenta."
+8,5,193,"Se i PS scendono a metà o meno, il Pokémon\nsi fa prendere dalla paura e abbandona la lotta\nin tutta fretta."
+8,5,194,"Se i PS scendono a metà o meno, il Pokémon\nabbandona la lotta per sfuggire al pericolo."
+8,5,195,"Se il Pokémon subisce una mossa di tipo Acqua,\nla sua Difesa aumenta di molto."
+8,5,196,Gli attacchi sferrati su un bersaglio avvelenato\nproducono sempre brutti colpi.
+8,5,197,"Se i PS scendono a metà o meno, il guscio\nsi rompe e il Pokémon si prepara all’offensiva."
+8,5,198,Raddoppia i danni inflitti a un bersaglio che è\nappena entrato in campo per sostituire un altro\nPokémon.
+8,5,199,Riduce i danni subiti dalle mosse di tipo Fuoco\ne rende immuni alle scottature.
+8,5,200,Aumenta la potenza delle mosse di tipo Acciaio.
+8,5,201,"Se i PS scendono a metà o meno a causa di\nun attacco, l’Attacco Speciale aumenta."
+8,5,202,"Se grandina, la Velocità aumenta."
+8,5,203,Il Pokémon è in grado di usare tutte le sue mosse\nsenza entrare in contatto diretto con il bersaglio.
+8,5,204,Le mosse del Pokémon basate sul suono diventano\ndi tipo Acqua.
+8,5,205,Le mosse che ripristinano direttamente i PS\ndel Pokémon acquistano priorità alta.
+8,5,206,Le mosse di tipo Normale diventano di tipo Elettro\ne la loro potenza aumenta un po’.
+8,5,207,"In presenza di un Campo Elettrico, la Velocità\nraddoppia."
+8,5,208,"Quando ha molti PS, il Pokémon forma un banco\ncon i propri simili e si rafforza.\nQuando ne ha pochi, il banco si disperde."
+8,5,209,Il panno che ricopre il Pokémon lo protegge\nda un singolo attacco.
+8,5,210,"Se il Pokémon manda KO un nemico, il legame con\nl’Allenatore si rafforza, attivando la trasformazione\nin Greninja Forma Ash. Acqualame si potenzia."
+8,5,211,"Se i PS del Pokémon scendono a metà o meno, le\ncellule si raggruppano e gli permettono di assumere\nla Forma Perfetta."
+8,5,212,Il Pokémon è in grado di avvelenare il bersaglio\nanche se questo è di tipo Acciaio o Veleno.
+8,5,213,Il Pokémon si trova in un costante stato di\ndormiveglia che gli impedisce di svegliarsi.\nPuò attaccare anche da addormentato.
+8,5,214,L’aura di regalità del Pokémon impedisce al nemico\ndi attaccarlo con mosse che hanno priorità alta.
+8,5,215,"Se il Pokémon viene mandato KO da un attacco,\ninfligge a chi lo ha sferrato tanti danni quanti\nerano i suoi PS prima di ricevere il colpo."
+8,5,216,Permette al Pokémon di copiare immediatamente\nqualsiasi mossa basata sulla danza usata da un\naltro Pokémon in campo.
+8,5,217,Aumenta la potenza delle mosse speciali\ndegli alleati.
+8,5,218,"Dimezza il danno causato dagli attacchi diretti\ndi un nemico, ma raddoppia quello subito dalle\nmosse di tipo Fuoco."
+8,5,219,Il Pokémon sbalordisce il nemico e non gli permette\ndi attaccarlo con mosse che hanno priorità alta.
+8,5,220,Aumenta l’Attacco Speciale ogni volta che\nun Pokémon va KO.
+8,5,221,"Se il Pokémon viene colpito da un attacco diretto,\nla Velocità di chi l’ha colpito diminuisce."
+8,5,222,Il Pokémon acquisisce l’abilità di un alleato\nandato KO.
+8,5,223,Il Pokémon trasforma la propria abilità in quella\ndi un alleato andato KO.
+8,5,224,"Quando il Pokémon manda KO un altro Pokémon,\naumenta la propria statistica di punta."
+8,5,225,Il tipo del Pokémon cambia in base alla ROM\ninstallata.
+8,5,226,"Quando il Pokémon entra in campo,\nlo trasforma in un Campo Elettrico."
+8,5,227,"Quando il Pokémon entra in campo,\nlo trasforma in un Campo Psichico."
+8,5,228,"Quando il Pokémon entra in campo,\nlo trasforma in un Campo Nebbioso."
+8,5,229,"Quando il Pokémon entra in campo,\nlo trasforma in un Campo Erboso."
+8,5,230,Impedisce la diminuzione delle statistiche causata\nda abilità o mosse di altri Pokémon.
+8,5,231,"Se i PS sono al massimo, riduce il danno subito."
+8,5,232,Riduce i danni subiti dalle mosse superefficaci.
+8,5,233,Potenzia le mosse superefficaci.
+8,5,234,"Quando il Pokémon entra in campo, il suo Attacco\naumenta."
+8,5,235,"Quando il Pokémon entra in campo, la sua Difesa\naumenta."
+8,5,236,Cambia il tipo del Pokémon in quello della mossa\nche usa.
+8,5,237,"Se il Pokémon non ha uno strumento con sé,\nraccoglie la Poké Ball del primo tentativo\ndi cattura fallito."
+8,5,238,"Se il Pokémon subisce un attacco, sparge della lanugine\nche diminuisce la Velocità di tutti i Pokémon in campo\ntranne la sua."
+8,5,239,Permette di ignorare gli effetti di mosse e abilità\nche attirano altre mosse.
+8,5,240,Rimanda al mittente le diminuzioni alle statistiche\nsubite.
+8,5,241,"Quando usa Surf o Sub, il Pokémon cattura una preda.\nSe subisce dei danni, la sputa fuori per attaccare."
+8,5,242,Permette di ignorare gli effetti di mosse e abilità\nche attirano altre mosse.
+8,5,243,"Se il Pokémon viene colpito da una mossa di tipo Acqua\no Fuoco, la sua Velocità aumenta moltissimo."
+8,5,244,"Aumenta la potenza delle mosse basate sul suono.\nInoltre, dimezza i danni subiti dal Pokémon se\nviene colpito da tali mosse."
+8,5,245,"Quando il Pokémon viene colpito da un attacco,\nscatena una tempesta di sabbia."
+8,5,246,"Scaglie di ghiaccio proteggono il Pokémon dalle mosse\nspeciali, dimezzandone i danni subiti."
+8,5,247,Fa maturare le bacche raddoppiandone gli effetti.
+8,5,248,"Grazie al ghiaccio sulla testa, il Pokémon può incassare\ni danni causati da mosse fisiche, ma cambia forma.\nTorna al suo stato originale quando grandina."
+8,5,249,Potenzia le mosse di chi si trova nelle immediate\nvicinanze.
+8,5,250,Il tipo del Pokémon cambia a seconda dello stato\ndel campo.
+8,5,251,"Quando il Pokémon entra in campo, annulla l’effetto\ndi Schermoluce, Riflesso e Velaurora sia per i nemici\nche per gli alleati."
+8,5,252,Potenzia gli attacchi di tipo Acciaio degli alleati.
+8,5,253,"Se il Pokémon viene colpito da un attacco diretto,\ndopo tre turni va KO assieme a chi lo ha attaccato.\nSe uno dei due viene sostituito, non va KO."
+8,5,254,"Se il Pokémon subisce un attacco diretto, scambia\nla sua abilità con quella di chi lo ha colpito."
+8,5,255,Aumenta l’Attacco ma costringe il Pokémon a usare\nsolo la prima mossa selezionata.
+8,5,256,"Se in campo c’è un Pokémon con Gas Reagente,\ngli effetti delle abilità di tutti gli altri Pokémon\nvengono annullati o non si attivano."
+8,5,257,Protegge il Pokémon e gli alleati dai problemi di stato\ncausati dal veleno.
+8,5,258,"Alla fine di ogni turno cambia forma, alternando\ntra Motivo Panciapiena e Motivo Panciavuota."
+8,6,1,Puede amedrentar al rival al atacarlo debido al mal olor\nque emana.
+8,6,2,Hace que llueva al entrar en combate.
+8,6,3,Aumenta su Velocidad en cada turno.
+8,6,4,La robusta coraza que lo protege bloquea los golpes\ncríticos.
+8,6,5,Evita que el rival pueda debilitarlo de un solo golpe\ncuando tiene los PS al máximo.\nTambién evita los movimientos fulminantes.
+8,6,6,"Aumenta la humedad del entorno y evita que se\npuedan utilizar movimientos explosivos, tales como\nAutodestrucción."
+8,6,7,Evita ser paralizado gracias a la flexibilidad de su\ncuerpo.
+8,6,8,Aumenta su Evasión durante las tormentas de arena.
+8,6,9,La electricidad estática que lo envuelve puede paralizar\nal mínimo contacto.
+8,6,10,"Si le alcanza un movimiento de tipo Eléctrico, recupera\nPS en vez de sufrir daño."
+8,6,11,"Si le alcanza un movimiento de tipo Agua, recupera PS\nen vez de sufrir daño."
+8,6,12,Su indiferencia evita que sea provocado o caiga presa\ndel enamoramiento.
+8,6,13,Anula todos los efectos del tiempo atmosférico.
+8,6,14,Aumenta la precisión de sus movimientos.
+8,6,15,Su resistencia al sueño le impide quedarse dormido.
+8,6,16,Adopta el tipo del último movimiento del que es\nblanco.
+8,6,17,Su sistema inmunitario evita el envenenamiento.
+8,6,18,"Si le alcanza algún movimiento de tipo Fuego, potencia\nsus propios movimientos de dicho tipo."
+8,6,19,El polvo de escamas que lo envuelve lo protege de\nlos efectos secundarios de los ataques recibidos.
+8,6,20,"Como le gusta hacer las cosas a su manera, los rivales\nno logran confundirlo."
+8,6,21,"Sus ventosas se aferran al suelo, con lo cual anula\nmovimientos y objetos que fuerzan el relevo."
+8,6,22,Al entrar en combate amilana al rival de tal manera\nque su Ataque disminuye.
+8,6,23,Impide que el enemigo huya o sea cambiado por otro.
+8,6,24,Hiere con su piel áspera al rival que lo ataque con un\nmovimiento de contacto.
+8,6,25,"Gracias a un poder misterioso, solo le hacen daño los\nmovimientos supereficaces."
+8,6,26,Su capacidad de flotar sobre el suelo le proporciona\ninmunidad frente a los movimientos de tipo Tierra.
+8,6,27,"Puede dormir, envenenar o paralizar al Pokémon con\nel que entre en contacto al recibir un ataque."
+8,6,28,"Contagia el envenenamiento, las quemaduras o la\nparálisis al Pokémon que le cause ese estado."
+8,6,29,Evita que bajen sus características a causa de\nmovimientos o habilidades de otros Pokémon.
+8,6,30,Cura sus problemas de estado al cambiarse con otro\nPokémon.
+8,6,31,"Atrae y neutraliza los movimientos de tipo Eléctrico,\nque además le suben el Ataque Especial."
+8,6,32,Aumenta la probabilidad de que los movimientos\ncausen efectos secundarios.
+8,6,33,Sube su Velocidad cuando llueve.
+8,6,34,Sube su Velocidad cuando hace sol.
+8,6,35,Aumenta la probabilidad de encontrar Pokémon al\niluminar el entorno.
+8,6,36,Al entrar en combate copia la habilidad del rival.
+8,6,37,Duplica la potencia de sus ataques físicos.
+8,6,38,Puede envenenar al mínimo contacto.
+8,6,39,"Gracias a su profunda concentración, no se amedrenta\nante los ataques del rival."
+8,6,40,"Gracias al magma candente que lo envuelve, no puede\nser congelado."
+8,6,41,Evita las quemaduras gracias a la capa de agua que\nlo envuelve.
+8,6,42,Su magnetismo atrae a los Pokémon de tipo Acero y\nles impide huir.
+8,6,43,Su aislamiento acústico lo protege de movimientos\nque usan sonido.
+8,6,44,Recupera PS de forma gradual cuando llueve.
+8,6,45,Crea una tormenta de arena al entrar en combate.
+8,6,46,Presiona al rival para que sus PP se acaben antes.
+8,6,47,"Gracias a la gruesa capa de grasa que lo protege,\nreduce a la mitad el daño que recibe de ataques de\ntipo Fuego o Hielo."
+8,6,48,"Si se duerme, tardará la mitad de tiempo en\ndespertarse."
+8,6,49,Puede quemar al mínimo contacto.
+8,6,50,Puede escaparse de todos los Pokémon salvajes.
+8,6,51,Su aguda vista evita que le disminuya la Precisión.
+8,6,52,Evita que el rival le baje el Ataque.
+8,6,53,"Puede recoger objetos que el rival haya usado, o bien\notros que encuentre en plena aventura."
+8,6,54,"Al ejecutar un movimiento, descansará en el turno\nsiguiente."
+8,6,55,"Aumenta su Ataque, pero reduce su Precisión."
+8,6,56,Puede causar enamoramiento al rival que lo toque.
+8,6,57,Potencia su Ataque Especial si un Pokémon aliado tiene\nla habilidad Más o Menos.
+8,6,58,Potencia su Ataque Especial si un Pokémon aliado tiene\nla habilidad Más o Menos.
+8,6,59,"Cambia a tipo Agua, Fuego o Hielo en función del\ntiempo atmosférico."
+8,6,60,"Los objetos se quedan pegados a su cuerpo, por lo que\nno pueden robárselos."
+8,6,61,Puede curar sus problemas de estado al mudar la piel.
+8,6,62,"Si sufre un problema de estado, se viene arriba y\naumenta su Ataque."
+8,6,63,Sube su Defensa si sufre un problema de estado.
+8,6,64,Exuda una sustancia tóxica de intenso hedor que hiere\na quienes intentan drenarle PS.
+8,6,65,Potencia sus movimientos de tipo Planta cuando le\nquedan pocos PS.
+8,6,66,Potencia sus movimientos de tipo Fuego cuando le\nquedan pocos PS.
+8,6,67,Potencia sus movimientos de tipo Agua cuando le\nquedan pocos PS.
+8,6,68,Potencia sus movimientos de tipo Bicho cuando le\nquedan pocos PS.
+8,6,69,No puede dañarse con sus propios movimientos.
+8,6,70,"Cuando entra en combate, el tiempo pasa a ser\nsoleado."
+8,6,71,Evita que el rival huya.
+8,6,72,Su determinación le impide quedarse dormido.
+8,6,73,El humo blanco que lo protege evita que otros Pokémon\nle bajen las características.
+8,6,74,Duplica la potencia de sus ataques físicos gracias al\nyoga.
+8,6,75,La robusta coraza que lo protege bloquea los golpes\ncríticos.
+8,6,76,Neutraliza todos los efectos del tiempo atmosférico.
+8,6,77,Sube su Evasión si está confuso.
+8,6,78,"Si le alcanza un movimiento de tipo Eléctrico, le sube\nla Velocidad en vez de sufrir daño."
+8,6,79,"Si el objetivo es del mismo sexo, su competitividad le\nlleva a infligir más daño. Si es del sexo contrario, en\ncambio, el daño será menor."
+8,6,80,"Cada vez que se amedrenta sube su Velocidad, debido\na su voluntad inquebrantable."
+8,6,81,Sube la Evasión cuando graniza.
+8,6,82,"Cuando sus PS se ven reducidos a la mitad, engulle\nla baya que normalmente solo se comería cuando le\nquedasen pocos PS."
+8,6,83,"Si recibe un golpe crítico, monta en cólera y sube su\nAtaque hasta el máximo."
+8,6,84,Sube su Velocidad si usa o pierde el objeto que lleva.
+8,6,85,"Su cuerpo, resistente al calor, reduce a la mitad el daño\nrecibido por movimientos de tipo Fuego."
+8,6,86,Duplica los cambios en las características.
+8,6,87,"Pierde PS si hace sol y los recupera si llueve o recibe\nun movimiento de tipo Agua. Los movimientos de tipo\nFuego, por su parte, le hacen más daño de lo normal."
+8,6,88,Compara la Defensa y la Defensa Especial del rival\npara ver cuál es inferior y aumenta su propio Ataque\no Ataque Especial según sea lo más eficaz.
+8,6,89,Aumenta la potencia de los puñetazos.
+8,6,90,"Si resulta envenenado, recupera PS en vez de perderlos."
+8,6,91,Potencia aún más los movimientos cuyo tipo coincida\ncon el suyo.
+8,6,92,Ejecuta siempre los movimientos múltiples con el\nnúmero máximo de golpes.
+8,6,93,Cura los problemas de estado si está lloviendo.
+8,6,94,"Si hace sol, aumenta su Ataque Especial, pero pierde PS\nen cada turno."
+8,6,95,Aumenta la Velocidad si sufre problemas de estado.
+8,6,96,Hace que todos sus movimientos se vuelvan de tipo\nNormal y aumenten ligeramente su potencia.
+8,6,97,Potencia los golpes críticos que asesta aún más de lo\nnormal.
+8,6,98,Solo recibe daño de ataques.
+8,6,99,"Al quedar ambos expuestos, tanto sus movimientos\ncomo los del rival acertarán siempre."
+8,6,100,Ejecuta su movimiento tras todos los demás.
+8,6,101,Potencia sus movimientos más débiles.
+8,6,102,Evita los problemas de estado si hace sol.
+8,6,103,No puede usar objetos equipados.
+8,6,104,Las habilidades del objetivo no afectan a los\nmovimientos que emplea.
+8,6,105,Su buena suerte aumenta la probabilidad de asestar\ngolpes críticos.
+8,6,106,Daña al agresor que le ha dado el golpe de gracia con\nun movimiento de contacto.
+8,6,107,Prevé los movimientos peligrosos del rival.
+8,6,108,Indica el movimiento más potente del rival al entrar\nen combate.
+8,6,109,Pasa por alto las mejoras en las características del rival\nal atacar.
+8,6,110,"Potencia los movimientos que no son muy eficaces, que\ninfligen ahora un daño normal."
+8,6,111,Mitiga el daño que le infligen los movimientos\nsupereficaces.
+8,6,112,Baja a la mitad su Ataque y su Velocidad durante cinco\nturnos.
+8,6,113,Puede alcanzar a Pokémon de tipo Fantasma con\nmovimientos de tipo Normal o Lucha.
+8,6,114,"Atrae y neutraliza los movimientos de tipo Agua, que\nademás le suben el Ataque Especial."
+8,6,115,Recupera PS de forma gradual cuando hay tormentas\nde granizo.
+8,6,116,Mitiga el daño que le infligen los movimientos\nsupereficaces.
+8,6,117,Invoca una tormenta de granizo al entrar en combate.
+8,6,118,Puede que encuentre Miel una vez concluido el\ncombate.
+8,6,119,Puede ver el objeto que lleva el rival al entrar en\ncombate.
+8,6,120,Potencia los movimientos que también dañan al usuario.
+8,6,121,Cambia su tipo al de la tabla o al del Cristal Z que\nlleve.
+8,6,122,"Si hace sol, aumenta su Ataque y su Defensa Especial,\nasí como los de sus aliados."
+8,6,123,Inflige daño a cualquier rival que esté dormido.
+8,6,124,"Si el rival usa un movimiento de contacto al atacar,\nle roba el objeto."
+8,6,125,"Sube la potencia de sus movimientos en detrimento\nde los efectos secundarios, que se ven anulados."
+8,6,126,Invierte los cambios en las características: bajan\ncuando les toca subir y suben cuando les toca bajar.
+8,6,127,Pone nervioso al rival y le impide usar bayas.
+8,6,128,Sube mucho su Ataque cuando el rival le baja las\ncaracterísticas.
+8,6,129,Se debilita tanto cuando sus PS se ven reducidos a la\nmitad que su Ataque y su Ataque Especial bajan.
+8,6,130,Puede anular el movimiento usado en su contra.
+8,6,131,A veces cura los problemas de estado de un aliado.
+8,6,132,Reduce el daño que sufren los aliados.
+8,6,133,"Al recibir daño de un ataque físico, le baja la Defensa,\npero le sube mucho la Velocidad."
+8,6,134,Duplica su peso.
+8,6,135,Reduce a la mitad su peso.
+8,6,136,Reduce el daño que sufre si sus PS están al máximo.
+8,6,137,Aumenta la potencia de sus ataques físicos cuando\nestá envenenado.
+8,6,138,Aumenta la potencia de sus ataques especiales cuando\nsufre quemaduras.
+8,6,139,Puede reutilizar varias veces una misma baya.
+8,6,140,Elude los ataques de los aliados durante el combate.
+8,6,141,"Una característica le sube mucho en cada turno, pero\nle baja otra."
+8,6,142,"No le afectan las tormentas de arena, el granizo y los\nmovimientos con polvos."
+8,6,143,Puede envenenar al objetivo con solo tocarlo.
+8,6,144,Recupera unos pocos PS al ser cambiado por otro\nPokémon.
+8,6,145,Impide que el rival le baje la Defensa.
+8,6,146,Aumenta su Velocidad durante las tormentas de arena.
+8,6,147,Presenta una mayor resistencia ante los movimientos de\nestado.
+8,6,148,Aumenta la potencia de su movimiento si es el último\nen atacar.
+8,6,149,Adopta el aspecto del último Pokémon del equipo al\nentrar en combate para desconcertar al rival.
+8,6,150,Se transforma en el Pokémon que tiene enfrente.
+8,6,151,Ataca sorteando la barrera o el sustituto del rival.
+8,6,152,Contagia la habilidad Momia al rival que entre en\ncontacto con él.
+8,6,153,"Al debilitar a un objetivo, su confianza se refuerza\nde tal manera que aumenta su Ataque."
+8,6,154,"Si le alcanza un movimiento de tipo Siniestro, aumenta\nel Ataque debido a su integridad."
+8,6,155,"Si le alcanza un movimiento de tipo Siniestro, Bicho o\nFantasma, el miedo hace que le suba la Velocidad."
+8,6,156,"Puede devolver los movimientos de estado lanzados\npor el rival, sin verse afectado por ellos."
+8,6,157,Neutraliza los movimientos de tipo Planta y sube su\nAtaque.
+8,6,158,Sus movimientos de estado tienen prioridad alta.
+8,6,159,"Potencia los movimientos de tipo Tierra, Acero y Roca\ndurante las tormentas de arena."
+8,6,160,Inflige daño al rival si este le golpea con un movimiento\nde contacto.
+8,6,161,Cambia de forma si sus PS se ven reducidos a la mitad.
+8,6,162,Sube su Precisión y la de sus aliados.
+8,6,163,Las habilidades del objetivo no afectan a los\nmovimientos que emplea.
+8,6,164,Las habilidades del objetivo no afectan a los\nmovimientos que emplea.
+8,6,165,Se protege a sí mismo y a sus aliados de ataques que\nimpiden elegir movimientos.
+8,6,166,Evita que los Pokémon de tipo Planta aliados sufran\nproblemas de estado o que les bajen sus características.
+8,6,167,Recupera PS al comer cualquier baya.
+8,6,168,Cambia su tipo al del movimiento que va a usar.
+8,6,169,Reduce a la mitad el daño que recibe de ataques\nfísicos del rival.
+8,6,170,Roba el objeto del Pokémon al que alcance con un\nmovimiento.
+8,6,171,No le afectan las bombas ni algunos proyectiles.
+8,6,172,Aumenta mucho su Ataque Especial cuando el rival\nle baja cualquiera de sus características.
+8,6,173,Su robusta mandíbula le confiere una mordedura\npotente.
+8,6,174,Convierte los movimientos de tipo Normal en tipo\nHielo y aumenta ligeramente su potencia.
+8,6,175,No cae dormido y evita también que sus aliados se\nduerman.
+8,6,176,"Adopta la Forma Filo al lanzar un ataque, o bien la\nForma Escudo si usa el movimiento Escudo Real."
+8,6,177,Da prioridad a los movimientos de tipo Volador si sus\nPS están al máximo.
+8,6,178,Aumenta la potencia de algunos movimientos de pulsos\ny auras.
+8,6,179,Aumenta su Defensa si hay un campo de hierba en el\nterreno de combate.
+8,6,180,Pasa su objeto a un aliado que ya haya utilizado el suyo.
+8,6,181,Aumenta la potencia de los movimientos de contacto.
+8,6,182,Convierte los movimientos de tipo Normal en tipo Hada\ny aumenta ligeramente su potencia.
+8,6,183,Baja la Velocidad del rival cuando este le ataca con\nun movimiento de contacto.
+8,6,184,Convierte los movimientos de tipo Normal en tipo\nVolador y aumenta ligeramente su potencia.
+8,6,185,Une fuerzas con su cría y ataca dos veces.
+8,6,186,Aumenta la potencia de todos los movimientos de tipo\nSiniestro.
+8,6,187,Aumenta la potencia de todos los movimientos de tipo\nHada.
+8,6,188,"Invierte los efectos de las auras, por lo que baja la\npotencia de ciertos movimientos en vez de subirla."
+8,6,189,Altera el clima para anular los ataques de tipo Fuego.
+8,6,190,Altera el clima para anular los ataques de tipo Agua.
+8,6,191,Altera el clima para anular las vulnerabilidades del tipo\nVolador.
+8,6,192,Aumenta su Defensa al recibir un ataque.
+8,6,193,Se asusta y abandona el terreno de combate cuando\nsus PS se ven reducidos a la mitad.
+8,6,194,Abandona el terreno de combate cuando sus PS se ven\nreducidos a la mitad para evitar males mayores.
+8,6,195,Aumenta mucho su Defensa si le alcanza un movimiento\nde tipo Agua.
+8,6,196,Hace que sus movimientos asesten siempre un golpe\ncrítico si el rival está envenenado.
+8,6,197,Rompe su coraza cuando sus PS se ven reducidos a\nla mitad y adopta una forma ofensiva.
+8,6,198,"Si el objetivo de su ataque es sustituido por otro,\nduplica el daño que infligirá."
+8,6,199,Reduce el daño que le provocan los movimientos de\ntipo Fuego y es inmune a las quemaduras.
+8,6,200,Potencia los movimientos de tipo Acero.
+8,6,201,Aumenta su Ataque Especial si sus PS se ven reducidos\na la mitad debido a algún ataque.
+8,6,202,Aumenta su Velocidad si está granizando.
+8,6,203,Puede usar cualquier movimiento sin entrar en contacto\ncon el rival.
+8,6,204,Hace que todos sus movimientos que usan sonido pasen\na ser de tipo Agua.
+8,6,205,Da prioridad a los movimientos que restauran PS.
+8,6,206,Convierte los movimientos de tipo Normal en tipo\nEléctrico y aumenta ligeramente su potencia.
+8,6,207,Duplica su Velocidad si hay un campo eléctrico en el\nterreno de combate.
+8,6,208,"Forma bancos con sus congéneres cuando tiene muchos\nPS, lo cual le otorga más fuerza. Cuando le quedan\npocos PS, el banco se dispersa."
+8,6,209,Puede eludir un ataque valiéndose de la tela que le\ncubre el cuerpo una vez por combate.
+8,6,210,"Al derrotar a un rival, los vínculos con su Entrenador\nse refuerzan y se convierte en Greninja Ash. Su Shuriken\nde Agua también se ve potenciado."
+8,6,211,"Cuando sus PS se ven reducidos a la mitad, las células\nse reagrupan y adopta su Forma Completa."
+8,6,212,Puede envenenar incluso a rivales de tipo Acero o\nVeneno.
+8,6,213,No despierta jamás de su profundo letargo e incluso\nataca dormido.
+8,6,214,Intimida al objetivo y le impide usar movimientos con\nprioridad.
+8,6,215,"Al caer debilitado, inflige al rival un daño equivalente\na los PS que le quedaran."
+8,6,216,Puede copiar inmediatamente cualquier movimiento\nde baile que haya usado otro Pokémon presente en\nel combate.
+8,6,217,Potencia los ataques especiales de los aliados.
+8,6,218,"Reduce a la mitad el daño provocado por los\nmovimientos de contacto, pero duplica el infligido\npor los de tipo Fuego."
+8,6,219,Desconcierta al rival y le impide utilizar movimientos\ncon prioridad en su contra.
+8,6,220,Aumenta su Ataque Especial cada vez que un Pokémon\ncae debilitado.
+8,6,221,Baja la Velocidad del rival cuando este le ataca con un\nmovimiento de contacto.
+8,6,222,Adquiere la habilidad de un aliado debilitado.
+8,6,223,Reacciona copiando la habilidad de un aliado\ndebilitado.
+8,6,224,"Si derrota a un rival en ese turno, aumenta su\ncaracterística más fuerte."
+8,6,225,Cambia su tipo según el disco que lleve instalado.
+8,6,226,Crea un campo eléctrico al entrar en combate.
+8,6,227,Crea un campo psíquico al entrar en combate.
+8,6,228,Crea un campo de niebla al entrar en combate.
+8,6,229,Crea un campo de hierba al entrar en combate.
+8,6,230,Evita que bajen sus características a causa de\nmovimientos o habilidades de otros Pokémon.
+8,6,231,Reduce el daño que sufre si sus PS están al máximo.
+8,6,232,Mitiga el daño que le infligen los movimientos\nsupereficaces.
+8,6,233,Potencia los ataques supereficaces.
+8,6,234,Aumenta su Ataque al entrar en combate.
+8,6,235,Aumenta su Defensa al entrar en combate.
+8,6,236,Cambia su tipo al del movimiento que va a usar.
+8,6,237,"Si no lleva equipado ningún objeto, recupera la\nPoké Ball del primer intento de captura fallido."
+8,6,238,"Al ser alcanzado por un ataque, suelta una pelusa de\nalgodón que reduce la Velocidad de todos los demás\nPokémon."
+8,6,239,Impide que el rival pueda atraer ataques hacia sí mismo\npor efecto de su habilidad o sus movimientos.
+8,6,240,Refleja los efectos que reducen las características.
+8,6,241,"Tras usar Surf o Buceo, emerge con una presa en la\nboca. Al recibir daño, ataca escupiéndola al rival."
+8,6,242,Impide que el rival pueda atraer ataques hacia sí mismo\npor efecto de su habilidad o sus movimientos.
+8,6,243,"Si le alcanza un movimiento de tipo Fuego o Agua,\nle sube muchísimo la Velocidad."
+8,6,244,Potencia los movimientos que usan sonido y reduce\na la mitad el daño que le infligen dichos movimientos.
+8,6,245,Provoca una tormenta de arena al recibir un ataque.
+8,6,246,Las gélidas escamas que protegen su cuerpo reducen a\nla mitad el daño que le infligen los ataques especiales.
+8,6,247,"Hace madurar las bayas, por lo que duplica sus efectos."
+8,6,248,"Absorbe el daño de un ataque físico con el hielo de\nla cabeza, tras lo cual cambia de forma. El hielo se\nregenerará la próxima vez que granice."
+8,6,249,Potencia los movimientos de los Pokémon adyacentes.
+8,6,250,Cambia su tipo según el campo que haya en el terreno\nde combate.
+8,6,251,"Anula los efectos de Pantalla de Luz, Reflejo y Velo\nAurora tanto de rivales como de aliados al entrar en\ncombate."
+8,6,252,Potencia los movimientos de tipo Acero de los aliados.
+8,6,253,"Si le alcanza un movimiento de contacto, se debilitará\nal cabo de 3 turnos, así como su agresor, a menos que\nabandonen el terreno de combate."
+8,6,254,"Si le alcanza un movimiento de contacto, intercambia\nsu habilidad con la del agresor."
+8,6,255,"Potencia su Ataque, pero solo puede usar el primer\nmovimiento escogido."
+8,6,256,Anula los efectos de las habilidades de los demás\nPokémon presentes mientras esté en el terreno de\ncombate.
+8,6,257,Se protege a sí mismo y a sus aliados del\nenvenenamiento.
+8,6,258,Alterna entre su Forma Saciada y Forma Voraz al final\nde cada turno.
+8,7,1,악취를 풍겨서\n공격했을 때 상대가\n풀죽을 때가 있다.
+8,7,2,등장했을 때\n날씨를 비로 만든다.
+8,7,3,매 턴 스피드가 올라간다.
+8,7,4,단단한 껍질에 보호받아\n상대의 공격이\n급소에 맞지 않는다.
+8,7,5,상대 기술을 받아도\n일격으로 쓰러지지 않는다.\n일격필살 기술도 효과 없다.
+8,7,6,주변을 습하게 함으로써\n자폭 등 폭발하는 기술을\n아무도 못 쓰게 한다.
+8,7,7,유연한 몸으로 인해\n마비 상태가 되지 않는다.
+8,7,8,모래바람일 때\n회피율이 올라간다.
+8,7,9,정전기를 몸에 둘러\n접촉한 상대를\n마비시킬 때가 있다.
+8,7,10,전기타입의 기술을 받으면\n데미지를 받지 않고 회복한다.
+8,7,11,물타입의 기술을 받으면\n데미지를 받지 않고 회복한다.
+8,7,12,둔감해서\n헤롱헤롱이나 도발 상태가\n되지 않는다.
+8,7,13,모든 날씨의 영향이\n없어진다.
+8,7,14,복안을 가지고 있어\n기술의 명중률이 올라간다.
+8,7,15,잠들지 못하는 체질이라\n잠듦 상태가 되지 않는다.
+8,7,16,상대에게 받은 기술의 타입으로\n자신의 타입이 변화한다.
+8,7,17,체내에 면역을 가지고 있어\n독 상태가 되지 않는다.
+8,7,18,불꽃타입의 기술을 받으면\n불꽃을 받아서 자신이 사용하는\n불꽃타입의 기술이 강해진다.
+8,7,19,인분에 보호받아\n기술의 추가 효과를 받지 않게 된다.
+8,7,20,마이페이스라서\n혼란 상태가 되지 않는다.
+8,7,21,흡반으로 지면에 달라붙어\n포켓몬을 교체시키는\n기술이나 도구의 효과를 발휘하지 못하게 한다.
+8,7,22,등장했을 때 위협해서\n상대를 위축시켜\n상대의 공격을 떨어뜨린다.
+8,7,23,상대의 그림자를 밟아\n도망치거나 교체할 수 없게 한다.
+8,7,24,공격을 받았을 때\n자신에게 접촉한 상대를\n까칠까칠한 피부로 상처를 입힌다.
+8,7,25,효과가 굉장한 기술만\n맞는 불가사의한 힘.
+8,7,26,땅에서 뜨는 것으로\n땅타입의 기술을 받지 않는다.
+8,7,27,"공격으로 자신에게 접촉한 상대를\n독이나 마비, 잠듦 상태로\n만들 때가 있다."
+8,7,28,"자신이 걸린\n독이나 마비, 화상을\n상대에게 옮긴다."
+8,7,29,상대 기술이나 특성으로\n능력을 떨어뜨릴 수 없다.
+8,7,30,지닌 포켓몬으로 돌아오면\n상태 이상이 회복된다.
+8,7,31,전기타입의 기술을 자신에게\n끌어모아 데미지를 받지 않고\n특수공격을 올린다.
+8,7,32,하늘의 은총 덕분에\n기술의 추가 효과가 나오기 쉽다.
+8,7,33,비가 오는 날씨일 때\n스피드가 올라간다.
+8,7,34,날씨가 맑을 때\n스피드가 올라간다.
+8,7,35,주변을 밝게 하는 것으로\n야생 포켓몬과\n만나기 쉬워진다.
+8,7,36,등장했을 때\n상대의 특성을 트레이스해서\n같은 특성이 된다.
+8,7,37,물리공격의\n위력이 2배가 된다.
+8,7,38,자신과 접촉한 상대를\n독 상태로 만들 때가 있다.
+8,7,39,단련한 정신으로 인하여\n상대의 공격에 풀죽지 않는다.
+8,7,40,뜨거운 마그마를 몸에 둘러서\n얼음 상태가 되지 않는다.
+8,7,41,물의 베일을 몸에 둘러서\n화상 상태가 되지 않는다.
+8,7,42,강철타입의 포켓몬을\n자력으로 끌어모아\n도망칠 수 없게 한다.
+8,7,43,소리를 차단하는 것으로\n소리 공격을 받지 않는다.
+8,7,44,비가 오는 날씨일 때\n조금씩 HP를 회복한다.
+8,7,45,등장했을 때\n날씨를 모래바람으로 만든다.
+8,7,46,프레셔를 줘서\n상대가 쓰는 기술의 PP를\n많이 줄인다.
+8,7,47,두꺼운 지방으로 보호되고 있어\n불꽃타입과 얼음타입의\n기술의 데미지를 반감시킨다.
+8,7,48,잠듦 상태가 되어도\n2배 스피드로\n깨어날 수 있다.
+8,7,49,자신과 접촉한 상대를\n화상 상태로 만들 때가 있다.
+8,7,50,야생 포켓몬으로부터\n반드시 도망칠 수 있다.
+8,7,51,날카로운 눈 덕분에\n명중률이 떨어지지 않는다.
+8,7,52,힘이 자랑인 집게를 가지고 있어\n상대가 공격을 떨어뜨리지 못한다.
+8,7,53,상대가 사용한 도구를\n주워올 때가 있다.\n모험 중에도 주워온다.
+8,7,54,기술을 사용하면\n다음 턴은 쉰다.
+8,7,55,자신의 공격이 높아지지만\n명중률이 떨어진다.
+8,7,56,자신과 접촉한 상대를\n헤롱헤롱 상태로 만들 때가 있다.
+8,7,57,플러스나 마이너스의 특성을 가진\n포켓몬이 동료에 있으면\n자신의 특수공격이 올라간다.
+8,7,58,플러스나 마이너스의 특성을 가진\n포켓몬이 동료에 있으면\n자신의 특수공격이 올라간다.
+8,7,59,"날씨의 영향을 받아\n물타입, 불꽃타입, 얼음타입 중\n하나로 변화한다."
+8,7,60,점착질의 몸에\n도구가 달라붙어 있어\n상대에게 도구를 뺏기지 않는다.
+8,7,61,몸의 껍질을 벗어 던져\n상태 이상을\n회복할 때가 있다.
+8,7,62,상태 이상이 되면\n근성을 보여서\n공격이 올라간다.
+8,7,63,상태 이상이 되면\n이상한 비늘이 반응해서\n방어가 올라간다.
+8,7,64,해감액을 흡수한 상대는\n강렬한 악취로\n데미지를 받아 HP가 줄어든다.
+8,7,65,HP가 줄었을 때\n풀타입 기술의\n위력이 올라간다.
+8,7,66,HP가 줄었을 때\n불꽃타입 기술의\n위력이 올라간다.
+8,7,67,HP가 줄었을 때\n물타입 기술의\n위력이 올라간다.
+8,7,68,HP가 줄었을 때\n벌레타입 기술의\n위력이 올라간다.
+8,7,69,반동을 받는 기술을 사용해도\nHP가 줄지 않는다.
+8,7,70,등장했을 때\n날씨를 맑음으로 만든다.
+8,7,71,배틀에서 상대를\n도망칠 수 없게 한다.
+8,7,72,의기양양해져서\n잠듦 상태가 되지 않는다.
+8,7,73,하얀 연기의 보호를 받아\n상대가 능력을 떨어뜨릴 수 없다.
+8,7,74,요가의 힘으로\n물리공격의 위력이\n2배가 된다.
+8,7,75,단단한 껍질의 보호를 받아\n상대의 공격이\n급소에 맞지 않는다.
+8,7,76,모든 날씨의 영향이\n없어진다.
+8,7,77,혼란 상태일 때는\n회피율이 올라간다.
+8,7,78,전기타입의 기술을 받으면\n데미지를 받지 않고\n스피드가 올라간다.
+8,7,79,성별이 같으면\n투쟁심을 불태워 강해진다.\n성별이 다르면 약해진다.
+8,7,80,풀죽을 때마다\n불굴의 마음을 불태워\n스피드가 올라간다.
+8,7,81,날씨가 싸라기눈일 때\n회피율이 올라간다.
+8,7,82,HP가 줄어들면 먹을\n나무열매를 HP가\n절반일 때 먹어버린다.
+8,7,83,급소에 공격이 맞으면\n크게 분노해 공격력이\n최대가 된다.
+8,7,84,지니던 도구가 없어지면\n스피드가 올라간다.
+8,7,85,내열인 몸으로 인해\n불꽃타입 공격의\n데미지를 반감한다.
+8,7,86,능력 변화가\n평소의 2배가 된다.
+8,7,87,비가 오는 날씨나 물타입의\n기술로 HP가 회복되고\n맑을 때나 불꽃타입의 기술로는 줄어든다.
+8,7,88,상대의 방어와 특수방어를 비교해서\n낮은 쪽 능력에 맞춰서\n자신의 공격이나 특수공격을 올린다.
+8,7,89,펀치를 사용하는 기술의\n위력이 올라간다.
+8,7,90,독 상태가 되면\nHP가 줄지 않고 증가한다.
+8,7,91,자신과 같은 타입의\n기술 위력이 올라간다.
+8,7,92,연속 기술을 사용하면 항상\n최고 횟수를 사용할 수 있다.
+8,7,93,비가 오는 날씨일 때\n상태 이상이 회복된다.
+8,7,94,날씨가 맑으면\n특수공격이 올라가지만\n매 턴 HP가 줄어든다.
+8,7,95,상태 이상이 되면\n스피드가 올라간다.
+8,7,96,어떤 타입의 기술도\n모두 노말타입이 된다.\n위력이 조금 올라간다.
+8,7,97,공격을 급소에 맞혔을 때\n위력이 더욱 올라간다.
+8,7,98,공격 이외에는\n데미지를 입지 않는다.
+8,7,99,노가드전법에 따라\n서로가 사용하는 기술이\n반드시 맞게 된다.
+8,7,100,기술을 사용하는 순서가\n반드시 마지막이 된다.
+8,7,101,위력이 약한 기술의\n위력을 올려서 공격할 수 있다.
+8,7,102,날씨가 맑을 때는\n상태 이상이 되지 않는다.
+8,7,103,지니고 있는 도구를\n쓸 수 없다.
+8,7,104,상대 특성에\n방해받지 않고 상대에게\n기술을 쓸 수 있다.
+8,7,105,대운을 가지고 있어\n상대의 급소에\n공격이 맞기 쉽다.
+8,7,106,기절했을 때\n접촉한 상대에게\n데미지를 준다.
+8,7,107,상대가 지닌 위험한 기술을\n감지할 수 있다.
+8,7,108,등장했을 때\n상대가 지닌 기술을\n하나만 꿰뚫어본다.
+8,7,109,상대의 능력 변화를\n무시하고 공격할 수 있다.
+8,7,110,효과가 별로인 기술을\n통상의 위력으로\n쓸 수 있다.
+8,7,111,효과가 굉장한\n공격의 위력을\n약하게 만든다.
+8,7,112,5턴 동안\n공격과 스피드가\n절반이 된다.
+8,7,113,고스트타입 포켓몬에게\n노말타입과 격투타입의\n기술을 맞게 한다.
+8,7,114,물타입의 기술을 자신에게 끌어모아\n데미지는 받지 않고 특수공격이 올라간다.
+8,7,115,날씨가 싸라기눈일 때 HP를\n조금씩 회복한다.
+8,7,116,효과가 굉장한\n공격의 위력을\n약하게 만든다.
+8,7,117,등장했을 때\n날씨를 싸라기눈으로 만든다.
+8,7,118,배틀이 끝났을 때\n달콤한꿀을 주울 때가 있다.
+8,7,119,등장했을 때\n상대의 지닌 물건을\n통찰할 수 있다.
+8,7,120,반동 데미지를\n받는 기술의 위력이 올라간다.
+8,7,121,지니고 있는 플레이트나\nZ크리스탈 타입에 따라\n자신의 타입이 바뀐다.
+8,7,122,날씨가 맑을 때\n자신과 같은 편의 공격과\n특수방어의 능력이 올라간다.
+8,7,123,잠듦 상태의 상대에게\n데미지를 준다.
+8,7,124,접촉한 상대의 도구를\n훔친다.
+8,7,125,기술의 추가 효과가 없어지지만\n그만큼 높은 위력으로\n기술을 사용할 수 있다.
+8,7,126,능력의 변화가 역전해서\n올라갈 때 떨어지고\n떨어질 때 올라간다.
+8,7,127,상대를 긴장시켜 나무열매를\n먹지 못하게 한다.
+8,7,128,능력이 떨어지면\n공격이 크게 올라간다.
+8,7,129,HP가 절반이 되면\n무기력해져서 공격과\n특수공격이 반감된다.
+8,7,130,공격을 받으면 상대의 기술을\n사슬묶기 상태로\n만들 때가 있다.
+8,7,131,같은 편의 상태 이상을\n가끔 회복시킨다.
+8,7,132,같은 편의 데미지를\n줄일 수 있다.
+8,7,133,물리 기술로 데미지를 받으면\n방어가 떨어지고\n스피드가 크게 올라간다.
+8,7,134,자신의 무게가\n2배가 된다.
+8,7,135,자신의 무게가\n절반이 된다.
+8,7,136,HP가 꽉 찼을 때\n받는 데미지가 줄어든다.
+8,7,137,독 상태가 되었을 때\n물리 기술의 위력이 올라간다.
+8,7,138,화상 상태가 되었을 때\n특수 기술의 위력이 올라간다.
+8,7,139,사용한 나무열매를\n몇 번이고 만들어 낸다.
+8,7,140,같은 편의 공격의 낌새를 읽고\n기술을 회피한다.
+8,7,141,매 턴 능력 중 하나가\n크게 오르고 하나가 떨어진다.
+8,7,142,모래바람이나 싸라기눈 등의\n데미지를 입지 않는다.\n가루의 기술을 받지 않는다.
+8,7,143,접촉하기만 해도 상대를\n독 상태로 만들 때가 있다.
+8,7,144,지닌 포켓몬으로 돌아오면\nHP를 조금 회복한다.
+8,7,145,방어를 떨어뜨리는\n효과를 받지 않는다.
+8,7,146,날씨가 모래바람일 때\n스피드가 올라간다.
+8,7,147,변화 기술을 받기 어려운\n몸으로 되어 있다.
+8,7,148,제일 마지막에 기술을 쓰면\n기술의 위력이 올라간다.
+8,7,149,지닌 포켓몬 중 제일 뒤에 있는\n포켓몬으로 둔갑하여 나와서\n상대를 속인다.
+8,7,150,눈앞의 포켓몬으로\n변신해버린다.
+8,7,151,상대의 벽이나 대타출동을\n뚫고 공격할 수 있다.
+8,7,152,상대가 접촉하면\n상대를 미라로 만들어버린다.
+8,7,153,상대를 쓰러뜨리면\n자신감이 붙어서\n공격이 올라간다.
+8,7,154,악타입 공격을 받으면\n정의감으로 공격이 올라간다.
+8,7,155,악타입과 고스트타입과\n벌레타입의 기술을 받으면\n주눅이 들어 스피드가 올라간다.
+8,7,156,상대가 쓴 변화 기술을 받지 않고\n그대로 되받아칠 수 있다.
+8,7,157,풀타입 기술을 받으면\n데미지를 입지 않고\n공격이 올라간다.
+8,7,158,변화 기술을 먼저\n쓸 수 있다.
+8,7,159,날씨가 모래바람일 때\n바위타입과 땅타입과\n강철타입의 위력이 올라간다.
+8,7,160,자신과 접촉한 상대에게\n철가시로 데미지를 준다.
+8,7,161,HP가 절반 이하가 되면\n모습이 변화한다.
+8,7,162,자신과 같은 편의\n명중률이 올라간다.
+8,7,163,상대 특성에 방해받지 않고\n상대에게 기술을 쓸 수 있다.
+8,7,164,상대 특성에 방해받지 않고\n상대에게 기술을 쓸 수 있다.
+8,7,165,자신과 같은 편으로 향하는\n멘탈 공격을 막을 수 있다.
+8,7,166,같은 편의 풀타입 포켓몬은\n능력이 떨어지지 않고\n상태 이상도 되지 않는다.
+8,7,167,어떤 나무열매라도\n먹으면 HP도 회복한다.
+8,7,168,자신이 사용한 기술과\n같은 타입으로 변화한다.
+8,7,169,상대로부터 받는 물리 기술의\n데미지가 절반이 된다.
+8,7,170,기술을 맞은 상대의\n도구를 빼앗아 버린다.
+8,7,171,상대 구슬이나 폭탄 등\n기술을 막을 수 있다.
+8,7,172,능력이 떨어지면\n특수공격이 크게 올라간다.
+8,7,173,턱이 튼튼하여\n무는 기술의 위력이\n올라간다.
+8,7,174,노말타입의 기술이\n얼음타입이 된다.\n위력이 조금 올라간다.
+8,7,175,같은 편의 포켓몬이\n잠들지 않게 된다.
+8,7,176,공격 기술을 쓰면 블레이드폼으로\n기술 킹실드를 쓰면\n실드폼으로 변한다.
+8,7,177,HP가 꽉 찼을 때\n비행타입의 기술을\n먼저 쓸 수 있다.
+8,7,178,파동 기술의\n위력이 올라간다.
+8,7,179,그래스필드일 때\n방어가 올라간다.
+8,7,180,같은 편이 도구를 쓰면\n자신이 지니고 있는 도구를\n같은 편에게 건넨다.
+8,7,181,상대에게 접촉하는 기술의\n위력이 올라간다.
+8,7,182,노말타입의 기술이\n페어리타입이 된다.\n위력이 조금 올라간다.
+8,7,183,공격으로 자신과 접촉한 상대의\n스피드를 떨어뜨린다.
+8,7,184,노말타입의 기술이\n비행타입이 된다.\n위력이 조금 올라간다.
+8,7,185,부모와 자식 2마리로 2번\n공격할 수 있다.
+8,7,186,전원의 악타입\n기술이 강해진다.
+8,7,187,전원의 페어리타입\n기술이 강해진다.
+8,7,188,오라의 효과를 역전시켜\n위력을 떨어뜨린다.
+8,7,189,불꽃타입의 공격을\n받지 않는 날씨로 만든다.
+8,7,190,물타입의 공격을\n받지 않는 날씨로 만든다.
+8,7,191,비행타입의 약점이\n없어지는 날씨로 만든다.
+8,7,192,공격을 받으면\n방어가 올라간다.
+8,7,193,HP가 절반이 되면\n황급히 도망쳐서\n지닌 포켓몬으로 돌아간다.
+8,7,194,HP가 절반이 되면\n위험을 회피하기 위해\n지닌 포켓몬으로 돌아간다.
+8,7,195,물타입의 기술을 받으면\n방어가 크게 올라간다.
+8,7,196,독 상태의\n상대를 공격하면\n반드시 급소에 맞는다.
+8,7,197,HP가 절반이 되면\n껍질이 깨져\n공격적으로 된다.
+8,7,198,교체로 나온 상대에게\n2배 데미지로 공격할 수 있다.
+8,7,199,자신을 향하는 불꽃타입\n기술의 위력을 떨어뜨린다.\n화상을 입지 않는다.
+8,7,200,강철타입 기술의\n위력이 올라간다.
+8,7,201,상대의 공격으로\nHP가 절반이 되면\n특수공격이 올라간다.
+8,7,202,날씨가 싸라기눈일 때\n스피드가 올라간다.
+8,7,203,모든 기술을\n상대에게 접촉하지 않고\n사용할 수 있다.
+8,7,204,모든 소리 기술이\n물타입이 된다.
+8,7,205,회복 기술을 먼저\n사용할 수 있다.
+8,7,206,노말타입 기술이\n전기타입이 된다.\n위력이 조금 올라간다.
+8,7,207,일렉트릭필드일 때\n스피드가 2배가 된다.
+8,7,208,HP가 많을 때 무리지어 강해진다.\nHP가 얼마 남지 않으면\n무리는 뿔뿔이 흩어진다.
+8,7,209,몸을 덮는 탈로\n1번 공격을 막을 수 있다.
+8,7,210,상대를 쓰러뜨리면 트레이너와의\n유대감이 깊어져서 지우개굴닌자로\n변한다. 물수리검이 강해진다.
+8,7,211,HP가 절반이 되면\n셀들이 응원하러 달려와\n퍼펙트폼으로 모습이 변한다.
+8,7,212,강철타입이나 독타입도\n독 상태로 만들 수 있다.
+8,7,213,항상 비몽사몽 상태로\n절대 깨지 않는다.\n잠든 상태로 공격할 수 있다.
+8,7,214,상대에게 위압감을 줘서\n이쪽을 향한 선제 기술을\n사용할 수 없게 한다.
+8,7,215,상대가 쓰러뜨렸을 때\nHP의 남은 양만큼\n상대에게 데미지를 준다.
+8,7,216,누군가 춤 기술을 쓰면\n자신도 이어서\n춤 기술을 쓸 수 있다.
+8,7,217,같은 편 특수 기술의\n위력을 올린다.
+8,7,218,상대로부터 받은 접촉하는 기술의\n데미지를 반감시키지만 불꽃타입\n기술의 데미지는 2배가 된다.
+8,7,219,상대를 놀라게 해서\n이쪽을 향한 선제 기술을\n사용할 수 없게 한다.
+8,7,220,포켓몬이 기절할 때마다\n특수공격이 올라간다.
+8,7,221,공격으로 자신과 접촉한 상대의\n스피드를 떨어뜨린다.
+8,7,222,쓰러진 같은 편의 특성을\n이어받아 같은 특성이 된다.
+8,7,223,쓰러진 같은 편의 특성을\n이어받아 같은 특성으로 바뀐다.
+8,7,224,상대를 기절시켰을 때\n자신의 가장 높은\n능력이 올라간다.
+8,7,225,지니고 있는 메모리로\n자신의 타입이 변한다.
+8,7,226,등장했을 때\n일렉트릭필드를 사용한다.
+8,7,227,등장했을 때\n사이코필드를 사용한다.
+8,7,228,등장했을 때\n미스트필드를 사용한다.
+8,7,229,등장했을 때\n그래스필드를 사용한다.
+8,7,230,상대 기술이나 특성으로\n능력을 떨어뜨릴 수 없다.
+8,7,231,HP가 꽉 찼을 때\n받는 데미지가 줄어든다.
+8,7,232,효과가 굉장한\n공격의 위력을\n약하게 만든다.
+8,7,233,효과가 굉장한 공격의\n위력이 더욱 올라간다.
+8,7,234,등장했을 때\n공격이 올라간다.
+8,7,235,등장했을 때\n방어가 올라간다.
+8,7,236,자신이 사용한 기술과\n같은 타입으로 변화한다.
+8,7,237,도구를 지니고 있지 않은 경우\n첫 번째로 던져서 실패한\n몬스터볼을 주워온다.
+8,7,238,공격을 받으면 솜털을 흩뿌려서\n자신을 제외한 모든 포켓몬의\n스피드를 떨어뜨린다.
+8,7,239,상대의 기술을 끌어모으는\n특성이나 기술의\n영향을 받지 않는다.
+8,7,240,자신이 받는\n능력 다운 효과에 한해\n되받아친다.
+8,7,241,파도타기나 다이빙을 쓰면\n먹이를 물어온다. 데미지를\n받으면 먹이를 토해내서 공격한다.
+8,7,242,상대의 기술을 끌어모으는\n특성이나 기술의\n영향을 받지 않는다.
+8,7,243,물타입이나 불꽃타입\n기술을 받으면\n스피드가 매우 크게 올라간다.
+8,7,244,소리 기술의 위력이 올라간다.\n상대로부터 받는 소리 기술의\n데미지는 절반이 된다.
+8,7,245,공격을 받으면\n모래바람을 일으킨다.
+8,7,246,얼음인분의 보호를 받아\n특수공격으로 받는\n데미지가 절반이 된다.
+8,7,247,나무열매를\n숙성시켜서\n효과가 2배가 된다.
+8,7,248,물리공격을 머리의 얼음이\n대신 맞아주지만 모습도 바뀐다.\n얼음은 싸라기눈이 내리면 원래대로 돌아온다.
+8,7,249,옆에 있기만 해도\n기술의 위력이 올라간다.
+8,7,250,필드의 상태에 따라\n포켓몬의 타입이 바뀐다.
+8,7,251,"등장했을 때 상대와 같은 편의\n빛의장막, 리플렉터, 오로라베일의\n효과가 사라진다."
+8,7,252,같은 편의 강철타입\n공격의 위력이 올라간다.
+8,7,253,접촉하는 기술을 받으면\n3턴 후에 양쪽 모두 기절한다.\n교체되면 효과가 없어진다.
+8,7,254,접촉하는 기술로\n공격해온 포켓몬과\n특성을 바꾼다.
+8,7,255,공격이 올라가지만\n처음에 선택한\n기술 외에는 쓸 수 없게 된다.
+8,7,256,화학변화가스를 가진 포켓몬이 배틀에 나와 있으면\n모든 포켓몬이 가진 특성의 효과가\n사라지거나 발동하지 않게 된다.
+8,7,257,자신과 같은 편이\n독의 상태 이상 효과를\n받지 않게 된다.
+8,7,258,"턴이 끝날 때마다 배부른 모양,\n배고픈 모양, 배부른 모양...으로\n번갈아서 모습을 바꾼다."
+8,8,1,臭い　においを　放つことによって\n攻撃した　ときに　相手を\nひるませることが　ある。
+8,8,2,登場　したときに\n天気を　雨に　する。
+8,8,3,毎ターン　素早さが　上がる。
+8,8,4,硬い　甲羅に　守られて\n相手の　攻撃が\n急所に　当たらない。
+8,8,5,相手の　技を　受けても\n一撃で　倒されることが　ない。\n一撃必殺技も　効かない。
+8,8,6,あたりを　湿らせることに　よって\nじばく　などの　爆発する　技を\nだれも　使えなくなる。
+8,8,7,柔軟な　体によって\nまひ状態に　ならない。
+8,8,8,砂あらしの　とき\n回避率が　上がる。
+8,8,9,静電気を　体に　まとい\n触った　相手を\nまひさせる　ことがある。
+8,8,10,でんきタイプの　技を　受けると\nダメージを　受けずに　回復する。
+8,8,11,みずタイプの　技を　受けると\nダメージを　受けずに　回復する。
+8,8,12,鈍感なので\nメロメロや　ちょうはつ状態に\nならない。
+8,8,13,あらゆる　天気の　影響が\nなくなって　しまう。
+8,8,14,複眼を　持っているため\n技の　命中率が　上がる。
+8,8,15,眠れない　体質　なので\nねむり状態に　ならない。
+8,8,16,相手から　受けた　技の　タイプに\n自分の　タイプが　変化　する。
+8,8,17,体内に　免疫を　持っているため\nどく状態に　ならない。
+8,8,18,ほのおタイプの　技を　受けると\n炎を　もらい　自分が　出す\nほのおタイプの　技が　強くなる。
+8,8,19,りんぷんに　守られて\n技の　追加効果を　受けなくなる。
+8,8,20,マイペースなので\nこんらん状態に　ならない。
+8,8,21,吸盤で　地面に　張り付き\nポケモンを　入れ替えさせる\n技や　道具が　効かなくなる。
+8,8,22,登場　したとき　威嚇して\n相手を　萎縮させ\n相手の　攻撃を　下げて　しまう。
+8,8,23,相手の　影を　踏み\n逃げたり　交代　できなくする。
+8,8,24,攻撃を　受けたとき\n自分に　触れた　相手を\nざらざらの　肌で　キズつける。
+8,8,25,効果バツグンの　技しか\n当たらない　不思議な　力。
+8,8,26,地面から　浮くことによって\nじめんタイプの　技を　受けない。
+8,8,27,攻撃で　自分に　触れた　相手を\nどくや　まひや　ねむり状態に\nする　ことがある。
+8,8,28,自分が　なってしまった\nどくや　まひや　やけどを\n相手に　うつす。
+8,8,29,相手の　技や　特性で\n能力を　下げられない。
+8,8,30,手持ちに　ひっこむと\n状態異常が　治る。
+8,8,31,でんきタイプの　技を　自分に\n寄せつけ　ダメージを　受けずに\n特攻が　上がる。
+8,8,32,天の恵みの　おかげで\n技の　追加効果が　でやすい。
+8,8,33,天気が　雨のとき\n素早さが　上がる。
+8,8,34,天気が　晴れのとき\n素早さが　上がる。
+8,8,35,あたりを　明るくする　ことで\n野生の　ポケモンに\n遭遇　しやすくなる。
+8,8,36,登場　したとき\n相手の　特性を　トレースして\n同じ　特性に　なる。
+8,8,37,物理攻撃の\n威力が　２倍になる。
+8,8,38,自分に　触った　相手を\nどく状態に　することがある。
+8,8,39,鍛えられた　精神に　よって\n相手の　攻撃に　ひるまない。
+8,8,40,熱い　マグマを　身にまとい\nこおり状態に　ならない。
+8,8,41,水のベールを　身にまとい\nやけど状態に　ならない。
+8,8,42,はがねタイプの　ポケモンを\n磁力で　引きつけて\n逃げられなくする。
+8,8,43,音を　遮断　することに　よって\n音の　攻撃を　受けない。
+8,8,44,天気が　雨のとき\n少しずつ　ＨＰを　回復する。
+8,8,45,登場　したとき\n天気を　砂あらしにする。
+8,8,46,プレッシャーを　あたえて\n相手の　使う　技の　ＰＰを\n多く　減らす。
+8,8,47,厚い　脂肪で　守られているので\nほのおタイプと　こおりタイプの\n技の　ダメージを　半減させる。
+8,8,48,ねむり状態に　なっても\n２倍の　早さで\n目覚める　ことが　できる。
+8,8,49,自分に　触った　相手を\nやけど状態に　する　ことがある。
+8,8,50,野生の　ポケモンから\n必ず　逃げられる。
+8,8,51,鋭い　目の　おかげで\n命中率を　下げられない。
+8,8,52,力自慢の　ハサミを　持っているので\n相手に　攻撃を　下げられない。
+8,8,53,相手の　使った　道具を\n拾ってくることが　ある。\n冒険中も　拾ってくる。
+8,8,54,技を　出すと\n次の　ターンは　休んでしまう。
+8,8,55,自分の　攻撃が　高くなるが\n命中率が　下がる。
+8,8,56,自分に　触った　相手を\nメロメロに　することが　ある。
+8,8,57,プラスか　マイナスの　特性を　持つ\nポケモンが　仲間に　いると\n自分の　特攻が　上がる。
+8,8,58,プラスか　マイナスの　特性を　持つ\nポケモンが　仲間に　いると\n自分の　特攻が　上がる。
+8,8,59,天気の　影響を　受けて\nみずタイプ　ほのおタイプ　こおりタイプの\nどれかに　変化する。
+8,8,60,粘着質の　体に\n道具が　くっついているため\n相手に　道具を　奪われない。
+8,8,61,体の　皮を　脱ぎ捨てることで\n状態異常を\n治すことが　ある。
+8,8,62,状態異常に　なると\n根性を　だして\n攻撃が　上がる。
+8,8,63,状態異常に　なると\n不思議なウロコが　反応して\n防御が　上がる。
+8,8,64,ヘドロ液を　吸い取った　相手は\n強烈な　悪臭で\nダメージを　受けて　ＨＰを　減らす。
+8,8,65,ＨＰが　減ったとき\nくさタイプの　技の\n威力が　上がる。
+8,8,66,ＨＰが　減ったとき\nほのおタイプの　技の\n威力が　上がる。
+8,8,67,ＨＰが　減ったとき\nみずタイプの　技の\n威力が　上がる。
+8,8,68,ＨＰが　減ったとき\nむしタイプの　技の\n威力が　上がる。
+8,8,69,反動を　受ける　技を　出しても\nＨＰが　減らない。
+8,8,70,登場　したときに\n天気を　晴れに　する。
+8,8,71,戦闘で　相手を\n逃げられなくする。
+8,8,72,やる気を　だすことに　よって\nねむり状態に　ならない。
+8,8,73,白い煙に　守られて\n相手に　能力を　下げられない。
+8,8,74,ヨガの　力で\n物理攻撃の　威力が\n２倍に　なる。
+8,8,75,硬い　殻に　守られ\n相手の　攻撃が\n急所に　当たらない。
+8,8,76,あらゆる　天気の　影響が\n消えて　しまう。
+8,8,77,こんらん状態の　ときは\n回避率が　アップする。
+8,8,78,でんきタイプの　技を　受けると\nダメージを　受けずに\n素早さが　上がる。
+8,8,79,性別が　同じだと\n闘争心を　燃やして　強くなる。\n性別が　違うと　弱くなる。
+8,8,80,ひるむ　たびに\n不屈の心を　燃やして\n素早さが　上がる。
+8,8,81,天気が　あられのとき\n回避率が　上がる。
+8,8,82,ＨＰが　少なくなったら　食べる\nきのみを　ＨＰ　半分の\n時に　食べてしまう。
+8,8,83,急所に　攻撃が　当たると\n怒りくるって　攻撃力が\n最大に　なる。
+8,8,84,持っていた　道具が　なくなると\n素早さが　上がる。
+8,8,85,耐熱の　体に　よって\nほのおタイプの　技の\n威力を　半減させる。
+8,8,86,能力　変化が\nいつもの　２倍に　なる。
+8,8,87,天気が　雨の時や　みずタイプの\n技で　ＨＰが　回復し　はれの時や\nほのおタイプの　技で　減ってしまう。
+8,8,88,相手の　防御と　特防を　くらべて\n低い　ほうの　能力に　あわせて\n自分の　攻撃か　特攻を　上げる。
+8,8,89,パンチを　使う　技の\n威力が　上がる。
+8,8,90,どく状態に　なると\nＨＰが　減らずに　増えていく。
+8,8,91,自分と　おなじ　タイプの\n技の　威力が　上がる。
+8,8,92,連続技を　使うと　いつも\n最高回数　出すことが　できる。
+8,8,93,天気が　雨のとき\n状態異常が　治る。
+8,8,94,天気が　晴れると\n特攻が　上がるが\n毎ターン　ＨＰが　減る。
+8,8,95,状態異常に　なると\n素早さが　上がる。
+8,8,96,どんな　タイプの　技でも\nすべて　ノーマルタイプに　なる。\n威力が　少し　上がる。
+8,8,97,攻撃を　急所に　当てると\n威力が　さらに　上がる。
+8,8,98,攻撃　以外では\nダメージを　受けない。
+8,8,99,ノーガード戦法に　よって\nお互いの　出す　技が\nかならず　当たる　ようになる。
+8,8,100,技を　出す　順番が\nかならず　最後に　なる。
+8,8,101,威力が　低い　技の\n威力を　高くして　攻撃できる。
+8,8,102,天気が　晴れのときは\n状態異常に　ならない。
+8,8,103,持っている　道具を\n使うことが　できない。
+8,8,104,相手の　特性に\nジャマされる　ことなく　相手に\n技を　出すことが　できる。
+8,8,105,強運を　持っているため\n相手の　急所に\n攻撃が　当たりやすい。
+8,8,106,ひんしに　なったとき\n触った　相手に\nダメージを　あたえる。
+8,8,107,相手の　持つ　危険な　技を\n察知する　ことができる。
+8,8,108,登場　したとき\n相手の　持つ　技を\nひとつだけ　読み取る。
+8,8,109,相手の　能力の　変化を\n無視して　攻撃が　できる。
+8,8,110,効果が　いまひとつの　技を\n通常の　威力で\n出すことが　できる。
+8,8,111,効果バツグンに　なってしまう\n攻撃の　威力を\n弱める　ことが　できる。
+8,8,112,５ターンの　あいだ\n攻撃と　素早さが\n半分に　なる。
+8,8,113,ゴーストタイプの　ポケモンに\nノーマルタイプと　かくとうタイプの\n技を　当てることが　できる。
+8,8,114,みずタイプの　技を　自分に　よせつけ\nダメージは　受けずに　特攻が　上がる。
+8,8,115,天気が　あられのとき　ＨＰを\n少しずつ　回復　する。
+8,8,116,効果バツグンに　なってしまう\n攻撃の　威力を\n弱める　ことが　できる。
+8,8,117,登場　したときに\n天気を　あられに　する。
+8,8,118,戦闘が　終わったとき\nあまいミツを　拾うことが　ある。
+8,8,119,登場　したとき\n相手の　持ち物を\n見通すことが　できる。
+8,8,120,反動で　ダメージを\n受ける　技の　威力が　上がる。
+8,8,121,持っている　プレートや\nＺクリスタルの　タイプによって\n自分の　タイプが　変わる。
+8,8,122,天気が　晴れのとき\n自分と　味方の　攻撃と\n特防の　能力が　上がる。
+8,8,123,ねむり状態の　相手に\nダメージを　あたえる。
+8,8,124,触られた　相手の　道具を\n盗んで　しまう。
+8,8,125,技の　追加効果は　なくなるが\nそのぶん　高い　威力で\n技を　出すことが　できる。
+8,8,126,能力の　変化が　逆転して\n上がるときに　下がり\n下がるときに　上がる。
+8,8,127,相手を　緊張させて\nきのみを　食べられなく　させる。
+8,8,128,能力を　下げられると\n攻撃が　ぐーんと　上がる。
+8,8,129,ＨＰが　半分に　なると\n弱気に　なって　攻撃と\n特攻が　半減する。
+8,8,130,攻撃を　受けると　相手の　技を\nかなしばり状態に\nすることが　ある。
+8,8,131,状態異常の　味方を\nたまに　治してあげる。
+8,8,132,味方の　ダメージを\n減らすことが　できる。
+8,8,133,物理技で　ダメージを　受けると\n防御が　下がり\n素早さが　ぐーんと　上がる。
+8,8,134,自分の　重さが\n２倍に　なる。
+8,8,135,自分の　重さが\n半分に　なる。
+8,8,136,ＨＰが　満タンの　ときに\n受ける　ダメージが　少なくなる。
+8,8,137,どく状態に　なったとき\n物理技の　威力が　上がる。
+8,8,138,やけど状態に　なったとき\n特殊技の　威力が　上がる。
+8,8,139,使った　きのみを\n何回も　作りだす。
+8,8,140,味方の　攻撃を　読み取って\n技を　回避する。
+8,8,141,毎ターン　能力の　どれかが\nぐーんと　上がって　どれかが　下がる。
+8,8,142,すなあらしや　あられなどの\nダメージを　受けない。\n粉の　技を　受けない。
+8,8,143,触る　だけで　相手を\nどく　状態に　することがある。
+8,8,144,手持ちに　引っ込むと\nＨＰが　少し　回復する。
+8,8,145,防御を　下げる\n効果を　受けない。
+8,8,146,天気が　すなあらし　のとき\n素早さが　上がる。
+8,8,147,変化技を　受けにくい\n体に　なっている。
+8,8,148,いちばん　最後に　技を　出すと\n技の　威力が　上がる。
+8,8,149,手持ちの　いちばん　うしろに　いる\nポケモンに　なりきって　登場して\n相手を　化かす。
+8,8,150,目の前の　ポケモンに\n変身　してしまう。
+8,8,151,相手の　壁や　身代わりを\nすりぬけて　攻撃　できる
+8,8,152,相手に　触られると\n相手を　ミイラに　してしまう。
+8,8,153,相手を　倒すと\n自信が　ついて\n攻撃が　上がる。
+8,8,154,あくタイプの　攻撃を　受けると\n正義感で　攻撃が　上がる。
+8,8,155,あくタイプと　ゴーストタイプと\nむしタイプの　技を　受けると\nびびって　素早さが　上がる。
+8,8,156,相手に　だされた　変化技を　受けずに\nそのまま　返す　ことが　できる。
+8,8,157,くさタイプの　技を　受けると\nダメージを　受けずに\n攻撃が　上がる。
+8,8,158,変化技を　先制で\n出すことが　できる。
+8,8,159,天気が　すなあらしの　とき\nいわタイプと　じめんタイプと\nはがねタイプの　威力が　上がる。
+8,8,160,自分に　触った　相手に\n鉄のトゲで　ダメージを　あたえる。
+8,8,161,ＨＰが　半分　以下に　なると\n姿が　変化する。
+8,8,162,自分や　味方の\n命中率が　上がる。
+8,8,163,相手の　特性に　ジャマされず\n相手に　技を　出すことが　できる。
+8,8,164,相手の　特性に　ジャマされず\n相手に　技を　出すことが　できる。
+8,8,165,自分と　味方への　メンタル\n攻撃を　防ぐことが　できる。
+8,8,166,味方の　草ポケモンは\n能力が　下がらず\n状態異常にも　ならない。
+8,8,167,どんな　きのみでも\n食べると　ＨＰも　回復する。
+8,8,168,自分が　出す　技と\n同じ　タイプに　変化する。
+8,8,169,相手から　受ける　物理技の\nダメージが　半分に　なる。
+8,8,170,技を　当てた　相手の\n道具を　奪ってしまう。
+8,8,171,相手の　弾や　爆弾などの\n技を　防ぐことが　できる。
+8,8,172,能力を　下げられると\n特攻が　ぐーんと　上がる。
+8,8,173,あごが　頑丈で\n噛む　技の　威力が\n高くなる。
+8,8,174,ノーマルタイプの　技が\nこおりタイプに　なる。\n威力が　少し　上がる。
+8,8,175,味方の　ポケモンは\n眠らなくなる。
+8,8,176,攻撃技を　出すと　ブレードフォルムに\n技　キングシールドを　出すと\nシールドフォルムに　変化する。
+8,8,177,ＨＰが　満タン　だと\nひこうタイプの　技を\n先制で　出すことが　できる。
+8,8,178,波動の　技の\n威力が　高くなる。
+8,8,179,グラスフィールドのとき\n防御が　上がる。
+8,8,180,味方が　道具を　使うと\n自分の　持っている　道具を\n味方に　渡す。
+8,8,181,相手に　接触する　技の\n威力が　高くなる。
+8,8,182,ノーマルタイプの　技が\nフェアリータイプになる。\n威力が　少し　上がる。
+8,8,183,攻撃で　自分に　触れた　相手の\n素早さを　下げる。
+8,8,184,ノーマルタイプの　技が\nひこうタイプになる。\n威力が　少し　上がる。
+8,8,185,親子　２匹で　２回\n攻撃することが　できる。
+8,8,186,全員の　あくタイプの\n技が　強くなる。
+8,8,187,全員の　フェアリータイプの\n技が　強くなる。
+8,8,188,オーラの　効果を　逆転させて\n威力を　下げる。
+8,8,189,ほのおタイプの　攻撃を\n受けない　天気にする。
+8,8,190,みずタイプの　攻撃を\n受けない　天気にする。
+8,8,191,ひこうタイプの　弱点が\nなくなる　天気にする。
+8,8,192,攻撃を　受けると\n防御が　上がる。
+8,8,193,ＨＰが　半分に　なると\nあわてて　逃げ出して\n手持ちに　引っ込んで　しまう。
+8,8,194,ＨＰが　半分に　なると\n危険を　回避するため\n手持ちに　引っ込んで　しまう。
+8,8,195,みずタイプの　技を　受けると\n防御が　ぐーんと　上がる。
+8,8,196,どく状態の\n相手を　攻撃すると\nかならず　急所に　当たる。
+8,8,197,ＨＰが　半分に　なると\n殻が　壊れて\n攻撃的に　なる。
+8,8,198,交代で　出てきた　相手に\n２倍の　ダメージで　攻撃　できる。
+8,8,199,自分に　対する　ほのおタイプの\n技の　威力を　下げる。\nやけど　しない。
+8,8,200,はがねタイプの　技の\n威力が　上がる。
+8,8,201,相手の　攻撃で\nＨＰが　半分に　なると\n特攻が　上がる。
+8,8,202,天気が　あられ　のとき\n素早さが　上がる。
+8,8,203,すべての　技を\n相手に　接触　しないで\n出すことが　できる。
+8,8,204,すべての　音技が\nみずタイプに　なる。
+8,8,205,回復技を　先制で\n出すことが　できる。
+8,8,206,ノーマルタイプの　技が\nでんきタイプになる。\n威力が　少し　上がる。
+8,8,207,エレキフィールド　のとき\n素早さが　２倍に　なる。
+8,8,208,ＨＰが　多いときは　群れて　強くなる。\nＨＰの　残りが　少なくなると\n群れは　散り散りに　なってしまう。
+8,8,209,体を　被う　化けの皮で\n１回　攻撃を　防ぐことが　できる。
+8,8,210,相手を　倒すと　トレーナーとの\nキズナが　深まり　サトシゲッコウガに\n変化する。みずしゅりけんが　強くなる。
+8,8,211,ＨＰが　半分に　なると\nセルたちが　応援に　駆けつけ\nパーフェクトフォルムに　姿を　変える。
+8,8,212,はがねタイプや　どくタイプも\nどく状態に　することが　できる。
+8,8,213,つねに　夢うつつの　状態で\n絶対に　目覚めない。\n眠ったまま　攻撃が　できる。
+8,8,214,相手に　威圧感を　あたえ\nこちらに　むかって　先制技を\n出せない　ようにする。
+8,8,215,相手に　倒されたとき\nＨＰの　残りの　ぶんだけ\n相手に　ダメージを　あたえる。
+8,8,216,だれかが　踊り技を　使うと\n自分も　それに　続いて\n踊り技を　出すことが　できる。
+8,8,217,味方の　特殊技の\n威力を　上げる。
+8,8,218,相手から　受けた　接触する　技の\nダメージを　半減するが　ほのおタイプの\n技の　ダメージは　２倍になる。
+8,8,219,相手を　びっくり　させて\nこちらに　むかって　先制技を\n出せない　ようにする。
+8,8,220,ポケモンが　ひんしに　なるたびに\n特攻が　上がる。
+8,8,221,攻撃で　自分に　触れた　相手の\n素早さを　下げる。
+8,8,222,倒された　味方の　特性を\n受け継いで　同じ　特性に　なる。
+8,8,223,倒された　味方の　特性を　受け継ぎ\n同じ　特性に　変わる。
+8,8,224,相手を　倒したとき\n自分の　いちばん　高い\n能力が　上がる。
+8,8,225,持っている　メモリで\n自分の　タイプが　変わる。
+8,8,226,登場　したときに\nエレキフィールドを　はりめぐらせる。
+8,8,227,登場　したときに\nサイコフィールドを　はりめぐらせる。
+8,8,228,登場　したときに\nミストフィールドを　はりめぐらせる。
+8,8,229,登場　したときに\nグラスフィールドを　はりめぐらせる。
+8,8,230,相手の　技や　特性で\n能力を　下げられない。
+8,8,231,ＨＰが　満タンの　ときに\n受ける　ダメージが　少なくなる。
+8,8,232,効果バツグンに　なってしまう\n攻撃の　威力を\n弱める　ことが　できる。
+8,8,233,効果バツグンの　攻撃で\n威力が　さらに　上がる。
+8,8,234,登場　したときに\n攻撃が　上がる。
+8,8,235,登場　したときに\n防御が　上がる。
+8,8,236,自分が　出す　技と\n同じ　タイプに　変化する。
+8,8,237,道具を　持っていない　場合\n１回目に　投げて　失敗　した\nモンスターボールを　拾ってくる。
+8,8,238,攻撃を　受けると　わたげを　ばらまいて\n自分以外の　ポケモン　すべての\n素早さを　下げる。
+8,8,239,相手の　技を　引き受ける\n特性や　技の\n影響を　無視　できる。
+8,8,240,自分が　受けた\n能力　ダウンの\n効果　だけを　跳ね返す。
+8,8,241,なみのりか　ダイビングを　すると\n獲物を　くわえてくる。　ダメージを\n受けると　獲物を　吐きだして　攻撃。
+8,8,242,相手の　技を　引き受ける\n特性や　技の\n影響を　無視　できる。
+8,8,243,みずタイプ　ほのおタイプの\n技を　受けると\n素早さが　ぐぐーんと　上がる。
+8,8,244,音技の　威力が　上がる。\n受けた　音技の\nダメージは　半分に　なる。
+8,8,245,攻撃を　受けると\n砂あらしを　起こす。
+8,8,246,こおりのりんぷんに　守られて\n特殊攻撃で　受ける\nダメージが　半減　する。
+8,8,247,熟成　させることで\nきのみの　効果が\n倍に　なる。
+8,8,248,物理攻撃は　頭の　氷が\nみがわりに　なるが　姿も　変わる。\n氷は　あられが　降ると　元に戻る。
+8,8,249,隣に　いるだけで\n技の　威力が　上がる。
+8,8,250,フィールドの　状態に　あわせて\nポケモンの　タイプが　変わる。
+8,8,251,登場　したときに　敵と　味方の\nひかりのかべ　リフレクター\nオーロラベールの　効果が　消える。
+8,8,252,味方の　はがねタイプの\n攻撃の　威力が　あがる。
+8,8,253,接触する　技を　受けると\nお互い　３ターン　たつと　ひんしになる。\n交代すると　効果は　なくなる。
+8,8,254,接触する　技で\n攻撃　してきた　ポケモンと\n特性を　入れ替える。
+8,8,255,攻撃は　上がるが\n最初に　選んだ\n技しか　出せなくなる。
+8,8,256,かがくへんかガスの　ポケモンが　場にいると\nすべての　ポケモンの　特性の\n効果が　消えたり　発動　しなくなる。
+8,8,257,自分も　味方も\nどくの　状態異常を\n受けなくなる。
+8,8,258,ターンの　終わりに　まんぷくもよう\nはらぺこもよう　まんぷくもよう……と\n交互に　姿を　変える。
+8,9,1,通过释放臭臭的气味，\n在攻击的时候，\n有时会使对手畏缩。
+8,9,2,出场时，\n会将天气变为下雨。
+8,9,3,每一回合速度会变快。
+8,9,4,被坚硬的甲壳守护着，\n不会被对手的攻击击中要害。
+8,9,5,即使受到对手的招式攻击，\n也不会被一击打倒。\n一击必杀的招式也没有效果。
+8,9,6,通过把周围都弄湿，\n使谁都无法使用自爆等爆炸类的招式。
+8,9,7,因为身体柔软，\n不会变为麻痹状态。
+8,9,8,在沙暴的时候，\n闪避率会提高。
+8,9,9,身上带有静电，\n有时会让接触到的对手麻痹。
+8,9,10,受到电属性的招式攻击时，\n不会受到伤害，而是会回复。
+8,9,11,受到水属性的招式攻击时，\n不会受到伤害，而是会回复。
+8,9,12,因为感觉迟钝，\n不会变为着迷和被挑衅状态。
+8,9,13,任何天气的影响都会消失。
+8,9,14,因为拥有复眼，\n招式的命中率会提高。
+8,9,15,因为有着睡不着的体质，\n所以不会陷入睡眠状态。
+8,9,16,自己的属性会变为\n从对手处所受招式的属性。
+8,9,17,因为体内拥有免疫能力，\n不会变为中毒状态。
+8,9,18,受到火属性的招式攻击时，\n吸收火焰，自己使出的\n火属性招式会变强。
+8,9,19,被鳞粉守护着，\n不会受到招式的追加效果影响。
+8,9,20,因为我行我素，\n不会变为混乱状态。
+8,9,21,用吸盘牢牢贴在地面上，\n让替换宝可梦的招式和道具无效。
+8,9,22,出场时威吓对手，\n让其退缩，\n降低对手的攻击。
+8,9,23,踩住对手的影子\n使其无法逃走或替换。
+8,9,24,受到攻击时，\n用粗糙的皮肤弄伤\n接触到自己的对手。
+8,9,25,不可思议的力量，\n只有效果绝佳的招式才能击中。
+8,9,26,从地面浮起，\n从而不会受到地面属性招式的攻击。
+8,9,27,受到攻击时，\n有时会把接触到自己的对手\n变为中毒、麻痹或睡眠状态。
+8,9,28,将自己的中毒、麻痹\n或灼伤状态传染给对手。
+8,9,29,不会因为对手的招式或特性\n而被降低能力。
+8,9,30,回到同行队伍后，\n异常状态就会被治愈。
+8,9,31,将电属性的招式吸引到自己身上，\n不会受到伤害，而是会提高特攻。
+8,9,32,托天恩的福，\n招式的追加效果容易出现。
+8,9,33,下雨天气时，\n速度会提高。
+8,9,34,晴朗天气时，\n速度会提高。
+8,9,35,通过让周围变亮，\n变得容易遇到野生的宝可梦。
+8,9,36,出场时，复制对手的特性，\n变为与之相同的特性。
+8,9,37,物理攻击的威力会变为２倍。
+8,9,38,有时会让接触到自己的\n对手变为中毒状态。
+8,9,39,拥有经过锻炼的精神，\n而不会因对手的攻击而畏缩。
+8,9,40,将炽热的熔岩覆盖在身上，\n不会变为冰冻状态。
+8,9,41,将水幕裹在身上，\n不会变为灼伤状态。
+8,9,42,用磁力吸住钢属性的宝可梦，\n使其无法逃走。
+8,9,43,通过屏蔽声音，\n不受到声音招式的攻击。
+8,9,44,下雨天气时，\n会缓缓回复ＨＰ。
+8,9,45,出场时，\n会把天气变为沙暴。
+8,9,46,给予对手压迫感，\n大量减少其使用招式的ＰＰ。
+8,9,47,因为被厚厚的脂肪保护着，\n会让火属性和冰属性的招式伤害减半。
+8,9,48,即使变为睡眠状态，\n也能以２倍的速度提早醒来。
+8,9,49,有时会让接触到自己的\n对手变为灼伤状态。
+8,9,50,一定能从野生宝可梦\n那儿逃走。
+8,9,51,多亏了锐利的目光，\n命中率不会被降低。
+8,9,52,因为拥有以力量自豪的钳子，\n不会被对手降低攻击。
+8,9,53,有时会捡来对手用过的道具，\n冒险过程中也会捡到。
+8,9,54,如果使出招式，\n下一回合就会休息。
+8,9,55,自己的攻击变高，\n但命中率会降低。
+8,9,56,有时会让接触到自己的对手着迷。
+8,9,57,出场的伙伴之间\n如果有正电或负电特性的宝可梦，\n自己的特攻会提高。
+8,9,58,出场的伙伴之间\n如果有正电或负电特性的宝可梦，\n自己的特攻会提高。
+8,9,59,受天气的影响，\n会变为水属性、火属性\n或冰属性中的某一个。
+8,9,60,因为道具是粘在黏性身体上的，\n所以不会被对手夺走。
+8,9,61,通过蜕去身上的皮，\n有时会治愈异常状态。
+8,9,62,如果变为异常状态，\n会拿出毅力，\n攻击会提高。
+8,9,63,如果变为异常状态，\n神奇鳞片会发生反应，\n防御会提高。
+8,9,64,吸收了污泥浆的对手\n会因强烈的恶臭\n而受到伤害，减少ＨＰ。
+8,9,65,ＨＰ减少的时候，\n草属性的招式威力会提高。
+8,9,66,ＨＰ减少的时候，\n火属性的招式威力会提高。
+8,9,67,ＨＰ减少的时候，\n水属性的招式威力会提高。
+8,9,68,ＨＰ减少的时候，\n虫属性的招式威力会提高。
+8,9,69,即使使出会受反作用力伤害的招式，\nＨＰ也不会减少。
+8,9,70,出场时，\n会将天气变为晴朗。
+8,9,71,在战斗中让对手无法逃走。
+8,9,72,通过激发出干劲，\n不会变为睡眠状态。
+8,9,73,被白色烟雾保护着，\n不会被对手降低能力。
+8,9,74,因瑜伽的力量，\n物理攻击的威力会变为２倍。
+8,9,75,被坚硬的壳保护着，\n对手的攻击不会击中要害。
+8,9,76,所有天气的影响都会消失。
+8,9,77,在混乱状态时，\n闪避率会提高。
+8,9,78,受到电属性的招式攻击时，\n不会受到伤害，而是速度会提高。
+8,9,79,面对性别相同的对手，\n会燃起斗争心，变得更强。\n而面对性别不同的，则会变弱。
+8,9,80,每次畏缩时，\n不屈之心就会燃起，\n速度也会提高。
+8,9,81,冰雹天气时，\n闪避率会提高。
+8,9,82,原本ＨＰ变得很少时才会吃树果，\n在ＨＰ还有一半时就会把它吃掉。
+8,9,83,要害被击中时，\n会大发雷霆，\n攻击力变为最大。
+8,9,84,失去所持有的道具时，\n速度会提高。
+8,9,85,耐热的体质会\n让火属性的招式威力减半。
+8,9,86,能力变化会变为平时的２倍。
+8,9,87,下雨天气时和受到水属性的招式时，\nＨＰ会回复。晴朗天气时和受到火属性的\n招式时，ＨＰ会减少。
+8,9,88,比较对手的防御和特防，\n根据较低的那项能力\n相应地提高自己的攻击或特攻。
+8,9,89,使用拳类招式的威力会提高。
+8,9,90,变为中毒状态时，\nＨＰ不会减少，反而会增加起来。
+8,9,91,与自身同属性的招式\n威力会提高。
+8,9,92,如果使用连续招式，\n总是能使出最高次数。
+8,9,93,下雨天气时，\n异常状态会治愈。
+8,9,94,晴朗天气时，\n特攻会提高，\n而每回合ＨＰ会减少。
+8,9,95,变为异常状态时，\n速度会提高。
+8,9,96,无论是什么属性的招式，\n全部会变为一般属性。\n威力会少量提高。
+8,9,97,击中要害时，\n威力会变得更强。
+8,9,98,不会受到攻击以外的伤害。
+8,9,99,由于无防守战术，\n双方使出的招式都必定会击中。
+8,9,100,使出招式的顺序\n必定会变为最后。
+8,9,101,攻击时可以将\n低威力招式的威力提高。
+8,9,102,晴朗天气时，\n不会变为异常状态。
+8,9,103,无法使用持有的道具。
+8,9,104,可以不受对手特性的干扰，\n向对手使出招式。
+8,9,105,因为拥有超幸运，\n攻击容易击中对手的要害。
+8,9,106,变为濒死时，\n会对接触到自己的对手造成伤害。
+8,9,107,可以察觉到\n对手拥有的危险招式。
+8,9,108,出场时，\n只读取１个对手拥有的招式。
+8,9,109,可以无视对手能力的变化，\n进行攻击。
+8,9,110,可以将效果不好的招式\n以通常的威力使出。
+8,9,111,受到效果绝佳的攻击时，\n可以减弱其威力。
+8,9,112,在５回合内，\n攻击和速度减半。
+8,9,113,一般属性和格斗属性的招式\n可以击中幽灵属性的宝可梦。
+8,9,114,将水属性的招式引到自己身上，\n不会受到伤害，而是会提高特攻。
+8,9,115,冰雹天气时，\n会缓缓回复ＨＰ。
+8,9,116,受到效果绝佳的攻击时，\n可以减弱其威力。
+8,9,117,出场时，\n会将天气变为冰雹。
+8,9,118,战斗结束时，\n有时候会捡来甜甜蜜。
+8,9,119,出场时，\n可以察觉对手的持有物。
+8,9,120,自己会因反作用力受伤的招式，\n其威力会提高。
+8,9,121,自己的属性会根据持有的石板\n或Ｚ纯晶的属性而改变。
+8,9,122,晴朗天气时，\n自己与同伴的攻击和\n特防能力会提高。
+8,9,123,给予睡眠状态的对手伤害。
+8,9,124,盗取接触到自己的\n对手的道具。
+8,9,125,招式的追加效果消失，\n但因此能以更高的威力使出招式。
+8,9,126,能力的变化发生逆转，\n原本提高时会降低，\n而原本降低时会提高。
+8,9,127,让对手紧张，\n使其无法食用树果。
+8,9,128,能力被降低时，\n攻击会大幅提高。
+8,9,129,ＨＰ减半时，\n会变得软弱，\n攻击和特攻会减半。
+8,9,130,受到攻击时，\n有时会把对手的招式\n变为定身法状态。
+8,9,131,有时会治愈异常状态的同伴。
+8,9,132,可以减少我方的伤害。
+8,9,133,如果因物理招式受到伤害，\n防御会降低，\n速度会大幅提高。
+8,9,134,自身的重量会变为２倍。
+8,9,135,自身的重量会减半。
+8,9,136,ＨＰ全满时，\n受到的伤害会变少。
+8,9,137,变为中毒状态时，\n物理招式的威力会提高。
+8,9,138,变为灼伤状态时，\n特殊招式的威力会提高。
+8,9,139,可以多次制作出\n已被使用掉的树果。
+8,9,140,读取我方的攻击，\n并闪避其招式伤害。
+8,9,141,每一回合，能力中的某项\n会大幅提高，而某项会降低。
+8,9,142,不会受到沙暴或冰雹等的伤害。\n不会受到粉末类招式的攻击。
+8,9,143,只通过接触就有可能\n让对手变为中毒状态。
+8,9,144,退回同行队伍后，\nＨＰ会少量回复。
+8,9,145,不会受到防御降低的效果。
+8,9,146,沙暴天气时，\n速度会提高。
+8,9,147,成为不易受到变化招式\n攻击的身体。
+8,9,148,如果在最后使出招式，\n招式的威力会提高。
+8,9,149,假扮成同行队伍中的\n最后一只宝可梦出场，\n迷惑对手。
+8,9,150,变身为当前面对的宝可梦。
+8,9,151,可以穿透对手的壁障\n或替身进行攻击。
+8,9,152,被对手接触到后，\n会将对手变为木乃伊。
+8,9,153,如果打倒对手，\n就会充满自信，攻击会提高。
+8,9,154,受到恶属性的招式攻击时，\n因为正义感，攻击会提高。
+8,9,155,受到恶属性、幽灵属性\n和虫属性的招式攻击时，\n会因胆怯而速度提高。
+8,9,156,可以不受到由对手使出的\n变化招式影响，并将其反弹。
+8,9,157,受到草属性的招式攻击时，\n不会受到伤害，而是攻击会提高。
+8,9,158,可以率先使出变化招式。
+8,9,159,沙暴天气时，\n岩石属性、地面属性\n和钢属性的招式威力会提高。
+8,9,160,用铁刺给予接触到自己的\n对手伤害。
+8,9,161,ＨＰ变为一半以下时，\n样子会改变。
+8,9,162,自己和同伴的命中率会提高。
+8,9,163,可以不受对手特性的干扰，\n向对手使出招式。
+8,9,164,可以不受对手特性的干扰，\n向对手使出招式。
+8,9,165,可以防住向自己和同伴\n发出的心灵攻击。
+8,9,166,我方的草属性宝可梦\n能力不会降低，\n也不会变为异常状态。
+8,9,167,无论是哪种树果，\n食用后，ＨＰ都会回复。
+8,9,168,变为与自己使出的招式\n相同的属性。
+8,9,169,对手给予的物理招式的\n伤害会减半。
+8,9,170,夺走被自己的招式\n击中的对手的道具。
+8,9,171,可以防住对手的\n球和弹类招式。
+8,9,172,如果能力被降低，\n特攻就会大幅提高。
+8,9,173,因为颚部强壮，\n啃咬类招式的威力会提高。
+8,9,174,一般属性的招式\n会变为冰属性。\n威力会少量提高。
+8,9,175,我方的宝可梦\n不会变为睡眠状态。
+8,9,176,如果使出攻击招式，会变为刀剑形态，\n如果使出招式“王者盾牌”，\n会变为盾牌形态。
+8,9,177,ＨＰ全满时，\n飞行属性的招式可以率先使出。
+8,9,178,波动和波导类招式的\n威力会提高。
+8,9,179,在青草场地时，\n防御会提高。
+8,9,180,同伴使用道具时，\n会把自己持有的道具传递给同伴。
+8,9,181,接触到对手的招式\n威力会提高。
+8,9,182,一般属性的招式\n会变为妖精属性。\n威力会少量提高。
+8,9,183,对于用攻击接触到自己的对手，\n会降低其速度。
+8,9,184,一般属性的招式\n会变为飞行属性。\n威力会少量提高。
+8,9,185,亲子俩可以合计攻击２次。
+8,9,186,全体的恶属性招式变强。
+8,9,187,全体的妖精属性招式变强。
+8,9,188,让气场的效果发生逆转，\n降低威力。
+8,9,189,变为不会受到\n火属性攻击的天气。
+8,9,190,变为不会受到\n水属性攻击的天气。
+8,9,191,变为令飞行属性的弱点\n消失的天气。
+8,9,192,受到攻击时，\n防御会提高。
+8,9,193,ＨＰ变为一半时，\n会慌慌张张逃走，\n退回同行队伍中。
+8,9,194,ＨＰ变为一半时，\n为了回避危险，\n会退回到同行队伍中。
+8,9,195,受到水属性的招式攻击时，\n防御会大幅提高。
+8,9,196,攻击中毒状态的对手时，\n必定会击中要害。
+8,9,197,ＨＰ变为一半时，\n壳会坏掉，变得有攻击性。
+8,9,198,可以对替换出场的对手\n以２倍的伤害进行攻击。
+8,9,199,降低自己受到的火属性\n招式的威力，不会灼伤。
+8,9,200,钢属性的招式威力会提高。
+8,9,201,因对手的攻击\nＨＰ变为一半时，\n特攻会提高。
+8,9,202,冰雹天气时，\n速度会提高。
+8,9,203,可以不接触对手\n就使出所有的招式。
+8,9,204,所有的声音招式\n都变为水属性。
+8,9,205,可以率先使出回复招式。
+8,9,206,一般属性的招式\n会变为电属性。\n威力会少量提高。
+8,9,207,电气场地时，\n速度会变为２倍。
+8,9,208,ＨＰ多的时候会聚起来变强。\nＨＰ剩余量变少时，\n群体会分崩离析。
+8,9,209,通过画皮覆盖住身体，\n可以防住１次攻击。
+8,9,210,打倒对手时，与训练家的牵绊会增强，\n变为小智版甲贺忍蛙。\n飞水手里剑的招式威力会增强。
+8,9,211,ＨＰ变为一半时，\n细胞们会赶来支援，\n变为完全体形态。
+8,9,212,可以使钢属性和毒属性的宝可梦\n也陷入中毒状态。
+8,9,213,总是半梦半醒的状态，\n绝对不会醒来。\n可以就这么睡着进行攻击。
+8,9,214,向对手施加威慑力，\n使其无法对我方使出先制招式。
+8,9,215,被对手打倒的时候，\n会给予对手相当于\nＨＰ剩余量的伤害。
+8,9,216,有谁使出跳舞招式时，\n自己也能就这么接着使出跳舞招式。
+8,9,217,会提高我方的\n特殊招式的威力。
+8,9,218,会将对手所给予的接触类招式的伤害减半，\n但火属性招式的伤害会变为２倍。
+8,9,219,让对手吓一跳，\n使其无法对我方使出先制招式。
+8,9,220,宝可梦每次变为濒死状态时，\n特攻会提高。
+8,9,221,对于用攻击接触到自己的对手，\n会降低其速度。
+8,9,222,继承被打倒的同伴的特性，\n变为相同的特性。
+8,9,223,继承被打倒的同伴的特性，\n变为相同的特性。
+8,9,224,打倒对手的时候，\n自己最高的那项能力会提高。
+8,9,225,根据持有的存储碟，\n自己的属性会改变。
+8,9,226,出场时，\n会布下电气场地。
+8,9,227,出场时，\n会布下精神场地。
+8,9,228,出场时，\n会布下薄雾场地。
+8,9,229,出场时，\n会布下青草场地。
+8,9,230,不会因为对手的招式或特性\n而被降低能力。
+8,9,231,ＨＰ全满时，\n受到的伤害会变少。
+8,9,232,受到效果绝佳的攻击时，\n可以减弱其威力。
+8,9,233,效果绝佳的攻击，\n威力会变得更强。
+8,9,234,出场时，\n攻击会提高。
+8,9,235,出场时，\n防御会提高。
+8,9,236,变为与自己使出的招式\n相同的属性。
+8,9,237,没有携带道具时，\n会拾取第１个投出后\n捕捉失败的精灵球。
+8,9,238,受到攻击后撒下棉絮，\n降低除自己以外的\n所有宝可梦的速度。
+8,9,239,能无视具有吸引\n对手招式效果的\n特性或招式的影响。
+8,9,240,只反弹自己受到的\n能力降低效果。
+8,9,241,冲浪或潜水时会叼来猎物。\n受到伤害时，\n会吐出猎物进行攻击。
+8,9,242,能无视具有吸引\n对手招式效果的\n特性或招式的影响。
+8,9,243,受到水属性或\n火属性的招式攻击时，\n速度会巨幅提高。
+8,9,244,声音招式的威力会提高。\n受到的声音招式伤害会减半。
+8,9,245,受到攻击时，\n会刮起沙暴。
+8,9,246,由于有冰鳞粉的守护，\n受到的特殊攻击伤害会减半。
+8,9,247,使树果成熟，\n效果变为２倍。
+8,9,248,头部的冰会代替自己承受\n物理攻击，但是样子会改变。\n下冰雹时，冰会恢复原状。
+8,9,249,只要处在相邻位置，\n招式的威力就会提高。
+8,9,250,宝可梦的属性会根据\n场地的状态而变化。
+8,9,251,出场时，敌方和我方的光墙、\n反射壁和极光幕的效果会消失。
+8,9,252,我方的钢属性\n攻击威力会提高。
+8,9,253,受到接触类招式攻击时，\n双方都会在３回合后变为濒死状态。\n替换后效果消失。
+8,9,254,与使用接触类招式\n攻击自己的宝可梦互换特性。
+8,9,255,虽然攻击会提高，\n但是只能使出\n一开始所选的招式。
+8,9,256,特性为化学变化气体的宝可梦在场时，\n场上所有宝可梦的\n特性效果都会消失或者无法生效。
+8,9,257,自己和同伴都不会\n陷入中毒的异常状态。
+8,9,258,每回合结束时会在\n满腹花纹与空腹花纹之间\n交替改变样子。
+8,10,1,發出臭氣，\n在攻擊的時候，\n有時會使對手畏縮。
+8,10,2,出場時，\n會將天氣變為下雨。
+8,10,3,每一回合速度會變快。
+8,10,4,被堅硬的甲殼守護著，\n不會被對手的攻擊擊中要害。
+8,10,5,受到對手的招式攻擊時\n不會被一擊打倒。\n一擊必殺的招式也沒有效果。
+8,10,6,透過把周圍都弄濕，\n使誰都無法使用自爆等爆炸類的招式。
+8,10,7,因為身體柔軟，\n不會陷入麻痺狀態。
+8,10,8,在沙暴中\n閃避率會提高。
+8,10,9,身上帶有靜電，\n有時會令接觸到的對手麻痺。
+8,10,10,受到電屬性的招式攻擊時，\n不會受到傷害，而是會回復。
+8,10,11,受到水屬性的招式攻擊時，\n不會受到傷害，而是會回復。
+8,10,12,感覺遲鈍，\n不會陷入著迷和被挑釁狀態。
+8,10,13,任何天氣的影響都會消失。
+8,10,14,因為擁有複眼，\n會提高招式的命中率。
+8,10,15,因為有著睡不著的體質，\n所以不會陷入睡眠狀態。
+8,10,16,自己的屬性會變為\n擊中自己的對手招式的屬性。
+8,10,17,因為體內擁有免疫能力，\n不會陷入中毒狀態。
+8,10,18,受到火屬性的招式攻擊時，\n吸收火焰，讓自己使出的\n火屬性招式變強。
+8,10,19,被鱗粉守護著，\n不會受到招式的追加效果影響。
+8,10,20,因為我行我素，\n不會陷入混亂狀態。
+8,10,21,用吸盤將自己牢牢吸附在地面上，\n讓替換寶可夢的招式和道具失效。
+8,10,22,出場時威嚇對手，\n使其退縮，\n從而降低對手的攻擊。
+8,10,23,踩住對手的影子\n使其無法逃走或替換。
+8,10,24,受到攻擊時，\n用粗糙的皮膚弄傷\n接觸到自己的對手。
+8,10,25,不可思議的力量，\n只有效果絕佳的招式才會擊中自己。
+8,10,26,從地面浮起，\n從而不會受到地面屬性招式的攻擊。
+8,10,27,受到攻擊時，\n有時會讓接觸到自己的對手\n陷入中毒、麻痺或睡眠狀態。
+8,10,28,將自己的中毒、麻痺或\n灼傷狀態傳染給對手。
+8,10,29,不會因對手的招式或特性\n而被降低能力。
+8,10,30,異常狀態會在\n離場後治癒。
+8,10,31,將電屬性的招式吸引到自己身上，\n不但不會受到傷害，反而會提高特攻。
+8,10,32,受到上天保佑，\n容易出現招式的追加效果。
+8,10,33,天氣為下雨時，\n速度會提高。
+8,10,34,天氣為晴朗時，\n速度會提高。
+8,10,35,透過讓周圍變亮，\n變得容易遇見野生的寶可夢。
+8,10,36,出場時，複製對手的特性，\n變為與之相同的特性。
+8,10,37,物理攻擊的威力會變為２倍。
+8,10,38,有時會讓接觸到自己的\n對手陷入中毒狀態。
+8,10,39,靠著經過鍛鍊的精神，\n不會因對手的攻擊而畏縮。
+8,10,40,將熾熱的熔岩覆蓋在身上，\n不會陷入冰凍狀態。
+8,10,41,將水幕裹在身上，\n不會陷入灼傷狀態。
+8,10,42,用磁力吸住鋼屬性的寶可夢，\n使其無法逃走。
+8,10,43,透過遮蔽聲音，\n不受到聲音招式的攻擊。
+8,10,44,天氣為下雨時，\n會漸漸回復ＨＰ。
+8,10,45,出場時，\n會把天氣變為沙暴。
+8,10,46,給予對手壓迫感，\n大量減少其使用招式的ＰＰ。
+8,10,47,被厚厚的脂肪保護著，\n能夠讓火屬性和冰屬性\n招式的傷害減半。
+8,10,48,即使陷入睡眠狀態，\n也能以２倍的速度提早醒來。
+8,10,49,有時會讓接觸到自己的\n對手陷入灼傷狀態。
+8,10,50,一定能從野生寶可夢\n那裡逃走。
+8,10,51,靠著銳利的目光，\n命中率不會被降低。
+8,10,52,因為擁有以力量為傲的鉗子，\n不會被對手降低攻擊。
+8,10,53,有時會撿來對手用過的道具。\n冒險過程中也會撿來。
+8,10,54,如果使出招式，\n下一回合就需要休息。
+8,10,55,自己的攻擊雖會變高，\n但命中率會降低。
+8,10,56,有時會讓接觸到自己的對手\n陷入著迷狀態。
+8,10,57,場上的夥伴之中，\n如果有正電或負電特性的寶可夢，\n自己的特攻會提高。
+8,10,58,場上的夥伴之中，\n如果有正電或負電特性的寶可夢，\n自己的特攻會提高。
+8,10,59,在天氣的影響下，\n會變成水屬性、火屬性\n或冰屬性之中的一種。
+8,10,60,道具會黏在\n具有黏性的身體上，\n不會被對手奪走。
+8,10,61,透過蛻去身上的皮，\n有時會治癒異常狀態。
+8,10,62,陷入異常狀態時，\n會拿出毅力，\n攻擊會提高。
+8,10,63,陷入異常狀態時，\n神奇鱗片會發生反應，\n防禦會提高。
+8,10,64,吸收了污泥漿的對手\n會因為強烈的惡臭而\n使得ＨＰ減少。
+8,10,65,ＨＰ減少的時候，\n草屬性的招式威力會提高。
+8,10,66,ＨＰ減少的時候，\n火屬性的招式威力會提高。
+8,10,67,ＨＰ減少的時候，\n水屬性的招式威力會提高。
+8,10,68,ＨＰ減少的時候，\n蟲屬性的招式威力會提高。
+8,10,69,即使使出會受反作用力傷害的招式，\nＨＰ也不會減少。
+8,10,70,出場時，\n會將天氣變為晴朗。
+8,10,71,在戰鬥中讓對手無法逃走。
+8,10,72,透過激發出幹勁，\n不會陷入睡眠狀態。
+8,10,73,被白色煙霧保護著，\n不會被對手降低能力。
+8,10,74,因瑜伽的力量，\n物理攻擊的威力會變為２倍。
+8,10,75,被堅硬的殼保護著，\n對手的攻擊不會擊中要害。
+8,10,76,所有天氣的影響都會消失。
+8,10,77,陷入混亂狀態時，\n閃避率會提高。
+8,10,78,受到電屬性的招式攻擊時，\n不但不會受到傷害，反而速度會提高。
+8,10,79,面對性別相同的對手，\n會燃起鬥爭心，變得更強。\n面對性別不同的對手時則會變弱。
+8,10,80,每次畏縮時，\n不屈之心就會燃起，\n速度也會提高。
+8,10,81,天氣為冰雹時，\n閃避率會提高。
+8,10,82,原本ＨＰ變得很少時才會吃的樹果，\n在ＨＰ還有一半時就會把它吃掉。
+8,10,83,要害被擊中時會大發雷霆。\n攻擊力會提高到最大。
+8,10,84,失去所持有的道具時，\n速度會提高。
+8,10,85,靠著耐熱的體質，\n讓火屬性的招式威力減半。
+8,10,86,能力變化會變為平時的２倍。
+8,10,87,下雨天氣時和受到水屬性的招式攻擊時，\nＨＰ會回復。晴朗天氣時和受到火屬性的\n招式攻擊時，ＨＰ會減少。
+8,10,88,比較對手的防禦和特防，\n根據較低的那項能力\n相應地提高自己的攻擊或特攻。
+8,10,89,使用到拳頭的招式\n威力會提高。
+8,10,90,陷入中毒狀態時，\nＨＰ不會減少，反而會漸漸增加。
+8,10,91,與自身同屬性的招式\n威力會提高。
+8,10,92,使用連續招式時，\n每回都能以最多次數進行攻擊。
+8,10,93,天氣為下雨時，\n會治癒異常狀態。
+8,10,94,天氣為晴朗時特攻會提高，\n但每回合ＨＰ會減少。
+8,10,95,陷入異常狀態時，\n速度會提高。
+8,10,96,無論是什麼屬性的招式，\n全部都會變為一般屬性。\n威力會少量提高。
+8,10,97,擊中要害時，\n威力會進一步提高。
+8,10,98,不會受到攻擊以外的傷害。
+8,10,99,由於無防守戰術，\n雙方使出的招式都必定會擊中。
+8,10,100,使出招式的順序\n必定會變為最後。
+8,10,101,可讓威力低的招式\n提高威力來進行攻擊。
+8,10,102,天氣為晴朗時，\n不會陷入異常狀態。
+8,10,103,無法使用持有的道具。
+8,10,104,可不受特性影響，\n向對手使出招式。
+8,10,105,因為非常幸運，\n容易擊中對手的要害。
+8,10,106,瀕死時，\n會對接觸到自己的對手造成傷害。
+8,10,107,察覺對手持有的\n危險招式。
+8,10,108,出場時，預見１個\n對手持有的招式。
+8,10,109,可無視對手能力的變化，\n進行攻擊。
+8,10,110,可將效果不好的招式\n以正常的威力使出。
+8,10,111,受到效果絕佳的攻擊時，\n可減弱其威力。
+8,10,112,在５回合內，\n攻擊和速度會減半。
+8,10,113,一般屬性和格鬥屬性的招式\n可擊中幽靈屬性的寶可夢。
+8,10,114,將水屬性的招式引到自己身上，\n不但不會受到傷害，\n反而會提高特攻。
+8,10,115,天氣為冰雹時，\n會漸漸回復ＨＰ。
+8,10,116,受到效果絕佳的攻擊時，\n可減弱其威力。
+8,10,117,出場時，\n會將天氣變為冰雹。
+8,10,118,戰鬥結束時，\n有時候會撿來甜甜蜜。
+8,10,119,出場時，\n可以察覺對手的持有物。
+8,10,120,會讓自己因反作用力而受傷的招式\n威力會提高。
+8,10,121,自己的屬性會依持有的石板\n或Ｚ純晶的屬性而改變。
+8,10,122,天氣為晴朗時，\n自己和同伴的攻擊和\n特防能力會提高。
+8,10,123,給予陷入睡眠狀態的對手傷害。
+8,10,124,盜取接觸到自己的\n對手的道具。
+8,10,125,招式會失去追加效果，\n但可以用更高的威力使出招式。
+8,10,126,能力的變化會逆轉，\n原本提高時會降低，\n原本降低時會提高。
+8,10,127,讓對手感到緊張，\n無法吃樹果。
+8,10,128,能力被降低時，\n攻擊會大幅提高。
+8,10,129,ＨＰ降到一半以下時，\n會變得軟弱而使得\n攻擊和特攻減半。
+8,10,130,受到攻擊時，\n有時會把對手的招式\n變為定身法狀態。
+8,10,131,有時會治癒同伴的異常狀態。
+8,10,132,可以減少我方受到的傷害。
+8,10,133,因物理招式受到傷害時，\n防禦會降低，\n速度會大幅提高。
+8,10,134,自己的重量會變為２倍。
+8,10,135,自己的重量會減半。
+8,10,136,ＨＰ全滿時，\n受到的傷害會變少。
+8,10,137,陷入中毒狀態時，\n物理招式的威力會提高。
+8,10,138,陷入灼傷狀態時，\n特殊招式的威力會提高。
+8,10,139,可多次採收\n已被使用過的樹果。
+8,10,140,預測我方的攻擊，\n並閃避其招式。
+8,10,141,每一回合，能力中的某項\n會大幅提高，相對地某項會降低。
+8,10,142,不會受到沙暴或冰雹等的傷害。\n不會受到粉末類招式的攻擊。
+8,10,143,有時僅是接觸\n就能讓對手中毒。
+8,10,144,退回同行隊伍後，\nＨＰ會少量回復。
+8,10,145,不會受到降低防禦的效果影響。
+8,10,146,天氣為沙暴時，\n速度會提高。
+8,10,147,不易受到變化類招式\n攻擊的身體。
+8,10,148,如果在最後使出招式，\n招式的威力就會變強。
+8,10,149,假扮成同行隊伍中的\n最後一隻寶可夢出場，\n迷惑對手。
+8,10,150,變身為當前面對的寶可夢。
+8,10,151,可穿透對手的屏障\n或替身進行攻擊。
+8,10,152,被對手接觸到時，\n會將對手變成木乃伊。
+8,10,153,如果打倒對手，\n會充滿自信並提高攻擊。
+8,10,154,受到惡屬性的招式攻擊時，\n因為正義感，攻擊會提高。
+8,10,155,受到惡屬性、幽靈屬性\n和蟲屬性的招式攻擊時，\n會因膽怯而使得速度提高。
+8,10,156,可不受到由對手使出的\n變化類招式所影響，並將其反彈。
+8,10,157,受到草屬性的招式攻擊時，\n不但不會受到傷害，反而攻擊會提高。
+8,10,158,可以搶先使出變化類招式。
+8,10,159,天氣為沙暴時，\n岩石屬性、地面屬性\n和鋼屬性招式的威力會提高。
+8,10,160,用鐵刺給予接觸到自己的\n對手傷害。
+8,10,161,ＨＰ變為一半以下時，\n樣子會改變。
+8,10,162,自己和同伴的命中率會提高。
+8,10,163,可以不受對手特性的干擾，\n向對手使出招式。
+8,10,164,可以不受對手特性的干擾，\n向對手使出招式。
+8,10,165,可防住向自己和同伴\n發出的心靈攻擊。
+8,10,166,我方的草屬性寶可夢\n能力不會降低。\n也不會陷入異常狀態。
+8,10,167,無論是哪種樹果，\n吃下去後ＨＰ都會回復。
+8,10,168,變為與自己使出的招式\n相同的屬性。
+8,10,169,對手的物理招式造成的\n傷害會減半。
+8,10,170,奪走被自己招式\n擊中的對手的道具。
+8,10,171,可防住對手的\n球和彈類的招式。
+8,10,172,能力被降低時，\n特攻會大幅提高。
+8,10,173,顎部強壯，\n會提高啃咬類招式的威力。
+8,10,174,一般屬性的招式\n會變為冰屬性。\n威力會少量提高。
+8,10,175,我方的寶可夢\n不會陷入睡眠狀態。
+8,10,176,若使出攻擊招式，會變為刀劍形態，\n若使出招式「王者盾牌」，\n會變為盾牌形態。
+8,10,177,ＨＰ全滿時，\n可以搶先在對手之前\n使出飛行屬性的招式。
+8,10,178,波動和波導類招式的\n威力會提高。
+8,10,179,在青草場地時，\n防禦會提高。
+8,10,180,同伴使用道具時，\n會把自己持有的道具交給同伴。
+8,10,181,接觸到對手的招式\n威力會提高。
+8,10,182,一般屬性的招式\n會變為妖精屬性。\n威力會少量提高。
+8,10,183,對手用攻擊接觸到自己時，\n降低此對手的速度。
+8,10,184,一般屬性的招式\n會變為飛行屬性。\n威力會少量提高。
+8,10,185,親子倆可合計攻擊２次。
+8,10,186,全體的惡屬性招式變強。
+8,10,187,全體的妖精屬性招式變強。
+8,10,188,讓氣場的效果逆轉，\n並降低威力。
+8,10,189,變為讓火屬性攻擊\n失效的天氣。
+8,10,190,變為讓水屬性攻擊\n失效的天氣。
+8,10,191,變為令飛行屬性的弱點\n消失的天氣。
+8,10,192,受到攻擊時，\n防禦會提高。
+8,10,193,ＨＰ變為一半時，\n會慌慌張張逃走，\n退回同行隊伍裡面。
+8,10,194,ＨＰ減到一半時，\n為了避開危險，\n會退回同行隊伍裡面。
+8,10,195,受到水屬性的招式攻擊時，\n防禦會大幅提高。
+8,10,196,攻擊中毒狀態的對手時，\n必定會擊中要害。
+8,10,197,ＨＰ變為一半時，\n殼會壞掉，變得更有攻擊性。
+8,10,198,可以向替換出場的對手\n以２倍的傷害進行攻擊。
+8,10,199,降低自己受到的火屬性\n招式的威力。不會灼傷。
+8,10,200,鋼屬性的招式威力會提高。
+8,10,201,ＨＰ因對手的攻擊\n降到一半時，\n特攻會提高。
+8,10,202,天氣為冰雹時，\n速度會提高。
+8,10,203,可以不接觸對手\n就使出所有的招式。
+8,10,204,所有的聲音招式\n都變為水屬性。
+8,10,205,可以搶先使出回復招式。
+8,10,206,一般屬性的招式\n會變為電屬性。\n威力會少量提高。
+8,10,207,電氣場地時，\n速度會變為２倍。
+8,10,208,ＨＰ多的時候會聚起來變強。\nＨＰ剩餘量變少時，\n群體會分崩離析。
+8,10,209,用畫皮覆蓋住身體，\n可防住１次攻擊。
+8,10,210,打倒對手時，與訓練家的牽絆會加深，\n變化成小智版甲賀忍蛙。\n飛水手裡劍的威力會增強。
+8,10,211,ＨＰ變為一半時，\n細胞們會趕來支援，\n變為完全體形態。
+8,10,212,就算對方是鋼屬性或毒屬性寶可夢，\n也可讓對方陷入中毒狀態。
+8,10,213,總是半夢半醒的狀態，\n絕對不會醒來。\n可在睡著的狀況下進行攻擊。
+8,10,214,向對手施加威懾力，\n使其無法對我方使出先制招式。
+8,10,215,被對手打倒的時候，\n會給予對手相當於\nＨＰ剩餘量的傷害。
+8,10,216,當有誰使出跳舞招式時，\n自己也能接著使出跳舞招式。
+8,10,217,會提高我方的\n特殊招式的威力。
+8,10,218,會將對手所給予的接觸類招式的傷害減半，\n但火屬性招式的傷害會變為２倍。
+8,10,219,讓對手嚇一跳，\n使其無法對我方使出先制招式。
+8,10,220,每當場上有寶可夢\n陷入瀕死狀態時，\n特攻就會提高。
+8,10,221,對手用攻擊接觸到自己時，\n降低此對手的速度。
+8,10,222,繼承被打倒的同伴的特性，\n變為相同的特性。
+8,10,223,繼承被打倒的同伴的特性，\n變為相同的特性。
+8,10,224,打倒對手的時候，\n會提高自己最高的那項能力。
+8,10,225,根據持有的記憶碟，\n自己的屬性會改變。
+8,10,226,出場時，\n會布下電氣場地。
+8,10,227,出場時，\n會布下精神場地。
+8,10,228,出場時，\n會布下薄霧場地。
+8,10,229,出場時，\n會布下青草場地。
+8,10,230,不會因對手的招式或特性\n而被降低能力。
+8,10,231,ＨＰ全滿時，\n受到的傷害會變少。
+8,10,232,受到效果絕佳的攻擊時，\n可減弱其威力。
+8,10,233,可進一步提升\n效果絕佳招式的威力。
+8,10,234,出場時，\n攻擊會提高。
+8,10,235,出場時，\n防禦會提高。
+8,10,236,變為與自己使出的招式\n相同的屬性。
+8,10,237,當寶可夢沒有攜帶道具時，\n會撿回第１個投出後\n捕捉失敗的精靈球。
+8,10,238,受到攻擊時會撒下棉絮，\n降低除自己以外的\n所有寶可夢的速度。
+8,10,239,能無視具有吸引\n對手招式效果的\n特性或招式的影響。
+8,10,240,只反彈自己受到的\n能力降低效果。
+8,10,241,衝浪或潛水時會叼來獵物。\n當受到傷害時，\n會吐出獵物攻擊對手。
+8,10,242,能無視具有吸引\n對手招式效果的\n特性或招式的影響。
+8,10,243,受到水屬性或\n火屬性招式攻擊時，\n速度會極大幅提高。
+8,10,244,聲音招式的威力會提高。\n受到聲音招式的傷害會減半。
+8,10,245,受到攻擊時，\n會刮起沙暴。
+8,10,246,得到冰鱗粉的守護，\n受到的特殊攻擊傷害會減半。
+8,10,247,讓樹果成熟，\n使效果變為２倍。
+8,10,248,頭部的冰會代替自己承受\n物理攻擊，但是樣子會改變。\n下冰雹時，冰會回復原狀。
+8,10,249,只要站在旁邊，\n招式的威力就會提高。
+8,10,250,寶可夢的屬性會隨著\n場地的狀態而改變。
+8,10,251,出場時，敵方和我方的\n光牆、反射壁和極光幕的效果會消失。
+8,10,252,我方的鋼屬性\n攻擊威力會提高。
+8,10,253,在受到接觸類招式攻擊時，\n３個回合後雙方都會陷入瀕死。\n替換寶可夢後效果就會消失。
+8,10,254,與使用接觸類招式\n攻擊自己的寶可夢互換特性。
+8,10,255,攻擊雖然會提高，\n但只能使出\n最初選擇的招式。
+8,10,256,當場上有特性是化學變化氣體的寶可夢時，\n所有寶可夢的特性效果\n都會消失或無法發動。
+8,10,257,自己和我方同伴都不會\n陷入中毒的異常狀態。
+8,10,258,在每個回合結束時，\n會在滿腹花紋和空腹花紋之間\n交替改變樣子。

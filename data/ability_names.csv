@@ -232,6 +232,31 @@ language_id,ability_id,name
 1,231,ファントムガード
 1,232,プリズムアーマー
 1,233,ブレインフォース
+1,234,ふとうのけん
+1,235,ふくつのたて
+1,236,リベロ
+1,237,たまひろい
+1,238,わたげ
+1,239,スクリューおびれ
+1,240,ミラーアーマー
+1,241,うのミサイル
+1,242,すじがねいり
+1,243,じょうききかん
+1,244,パンクロック
+1,245,すなはき
+1,246,こおりのりんぷん
+1,247,じゅくせい
+1,248,アイスフェイス
+1,249,パワースポット
+1,250,ぎたい
+1,251,バリアフリー
+1,252,はがねのせいしん
+1,253,ほろびのボディ
+1,254,さまようたましい
+1,255,ごりむちゅう
+1,256,かがくへんかガス
+1,257,パステルベール
+1,258,はらぺこスイッチ
 2,1,Stench
 2,2,Drizzle
 2,3,Speed Boost
@@ -465,6 +490,31 @@ language_id,ability_id,name
 2,231,Shadow Shield
 2,232,Prism Armor
 2,233,Neuroforce
+2,234,Intrepid Sword
+2,235,Dauntless Shield
+2,236,Libero
+2,237,Ball Fetch
+2,238,Cotton Down
+2,239,Propeller Tail
+2,240,Mirror Armor
+2,241,Gulp Missile
+2,242,Stalwart
+2,243,Steam Engine
+2,244,Punk Rock
+2,245,Sand Spit
+2,246,Ice Scales
+2,247,Ripen
+2,248,Ice Face
+2,249,Power Spot
+2,250,Mimicry
+2,251,Screen Cleaner
+2,252,Steely Spirit
+2,253,Perish Body
+2,254,Wandering Spirit
+2,255,Gorilla Tactics
+2,256,Neutralizing Gas
+2,257,Pastel Veil
+2,258,Hunger Switch
 3,1,Puanteur
 3,2,Crachin
 3,3,Turbo
@@ -474,13 +524,13 @@ language_id,ability_id,name
 3,7,Échauffement
 3,8,Voile Sable
 3,9,Statik
-3,10,Absorb Volt
-3,11,Absorb Eau
+3,10,Absorbe-Volt
+3,11,Absorbe-Eau
 3,12,Benêt
 3,13,Ciel Gris
 3,14,Œil Composé
 3,15,Insomnia
-3,16,Déguisement
+3,16,Homochromie
 3,17,Vaccin
 3,18,Torche
 3,19,Écran Poudre
@@ -522,9 +572,9 @@ language_id,ability_id,name
 3,55,Agitation
 3,56,Joli Sourire
 3,57,Plus
-3,58,Minus
+3,58,Moins
 3,59,Météo
-3,60,Glue
+3,60,Glu
 3,61,Mue
 3,62,Cran
 3,63,Écaille Spéciale
@@ -596,7 +646,7 @@ language_id,ability_id,name
 3,129,Défaitiste
 3,130,Corps Maudit
 3,131,Cœur Soin
-3,132,Garde Amie
+3,132,Garde-Ami
 3,133,Armurouillée
 3,134,Heavy Metal
 3,135,Light Metal
@@ -627,7 +677,7 @@ language_id,ability_id,name
 3,160,Épine de Fer
 3,161,Mode Transe
 3,162,Victorieux
-3,163,TurboBrasier
+3,163,Turbo Brasier
 3,164,Téra-Voltage
 3,165,Aroma-Voile
 3,166,Flora-Voile
@@ -698,6 +748,31 @@ language_id,ability_id,name
 3,231,Spectro-Bouclier
 3,232,Prisme-Armure
 3,233,Cérébro-Force
+3,234,Lame Indomptable
+3,235,Égide Inflexible
+3,236,Libéro
+3,237,Ramasse Ball
+3,238,Effilochage
+3,239,Propulseur
+3,240,Armure Miroir
+3,241,Dégobage
+3,242,Nerfs d’Acier
+3,243,Turbine
+3,244,Punk Rock
+3,245,Expul’Sable
+3,246,Écailles Glacées
+3,247,Mûrissement
+3,248,Tête de Gel
+3,249,Cercle d’Énergie
+3,250,Mimétisme
+3,251,Brise-Barrière
+3,252,Boost Acier
+3,253,Corps Condamné
+3,254,Âme Vagabonde
+3,255,Entêtement
+3,256,Gaz Inhibiteur
+3,257,Voile Pastel
+3,258,Déclic Fringale
 4,1,Duftnote
 4,2,Niesel
 4,3,Temposchub
@@ -733,7 +808,7 @@ language_id,ability_id,name
 4,33,Wassertempo
 4,34,Chlorophyll
 4,35,Erleuchtung
-4,36,Fährte
+4,36,Erfassen
 4,37,Kraftkoloss
 4,38,Giftdorn
 4,39,Konzentrator
@@ -757,7 +832,7 @@ language_id,ability_id,name
 4,57,Plus
 4,58,Minus
 4,59,Prognose
-4,60,Wertehalter
+4,60,Klebekörper
 4,61,Expidermis
 4,62,Adrenalin
 4,63,Notschutz
@@ -839,7 +914,7 @@ language_id,ability_id,name
 4,139,Reiche Ernte
 4,140,Telepathie
 4,141,Gefühlswippe
-4,142,Wetterfest
+4,142,Partikelschutz
 4,143,Giftgriff
 4,144,Belebekraft
 4,145,Brustbieter
@@ -931,6 +1006,31 @@ language_id,ability_id,name
 4,231,Phantomschutz
 4,232,Prismarüstung
 4,233,Zerebralmacht
+4,234,Kühnes Schwert
+4,235,Wackerer Schild
+4,236,Libero
+4,237,Apport
+4,238,Wollflaum
+4,239,Schraubflosse
+4,240,Spiegelrüstung
+4,241,Würggeschoss
+4,242,Stahlrückgrat
+4,243,Dampfantrieb
+4,244,Punk Rock
+4,245,Sandspeier
+4,246,Eisflügelstaub
+4,247,Heranreifen
+4,248,Tiefkühlkopf
+4,249,Kraftquelle
+4,250,Mimese
+4,251,Hemmungslos
+4,252,Stählerner Wille
+4,253,Unheilskörper
+4,254,Rastlose Seele
+4,255,Affenfokus
+4,256,Reaktionsgas
+4,257,Pastellhülle
+4,258,Heißhunger
 5,1,Tanfo
 5,2,Piovischio
 5,3,Acceleratore
@@ -1164,6 +1264,31 @@ language_id,ability_id,name
 5,231,Spettroguardia
 5,232,Scudoprisma
 5,233,Cerebroforza
+5,234,Spada Indomita
+5,235,Scudo Saldo
+5,236,Libero
+5,237,Raccattapalle
+5,238,Lanugine
+5,239,Elicopinna
+5,240,Blindospecchio
+5,241,Inghiottimissile
+5,242,Volontà di Ferro
+5,243,Vapormacchina
+5,244,Punk Rock
+5,245,Sputasabbia
+5,246,Geloscaglie
+5,247,Maturazione
+5,248,Gelofaccia
+5,249,Fonte Energetica
+5,250,Mimetismo
+5,251,Annullabarriere
+5,252,Spiritoferreo
+5,253,Ultimotocco
+5,254,Anima Errante
+5,255,Vigorilla
+5,256,Gas Reagente
+5,257,Pastelvelo
+5,258,Pancialterna
 6,1,Hedor
 6,2,Llovizna
 6,3,Impulso
@@ -1269,7 +1394,7 @@ language_id,ability_id,name
 6,103,Zoquete
 6,104,Rompemoldes
 6,105,Afortunado
-6,106,Resquicio
+6,106,Detonación
 6,107,Anticipación
 6,108,Alerta
 6,109,Ignorante
@@ -1299,7 +1424,7 @@ language_id,ability_id,name
 6,133,Armadura Frágil
 6,134,Metal Pesado
 6,135,Metal Liviano
-6,136,Compensación
+6,136,Multiescamas
 6,137,Ímpetu Tóxico
 6,138,Ímpetu Ardiente
 6,139,Cosecha
@@ -1397,6 +1522,31 @@ language_id,ability_id,name
 6,231,Guardia Espectro
 6,232,Armadura Prisma
 6,233,Fuerza Cerebral
+6,234,Espada Indómita
+6,235,Escudo Recio
+6,236,Líbero
+6,237,Recogebolas
+6,238,Pelusa
+6,239,Hélice Caudal
+6,240,Coraza Reflejo
+6,241,Tragamisil
+6,242,Acérrimo
+6,243,Combustible
+6,244,Punk Rock
+6,245,Expulsarena
+6,246,Escama de Hielo
+6,247,Maduración
+6,248,Cara de Hielo
+6,249,Fuente Energía
+6,250,Mimetismo
+6,251,Antibarrera
+6,252,Alma Acerada
+6,253,Cuerpo Mortal
+6,254,Alma Errante
+6,255,Monotema
+6,256,Gas Reactivo
+6,257,Velo Pastel
+6,258,Mutapetito
 7,1,악취
 7,2,잔비
 7,3,가속
@@ -1630,6 +1780,31 @@ language_id,ability_id,name
 7,231,스펙터가드
 7,232,프리즘아머
 7,233,브레인포스
+7,234,불요의검
+7,235,불굴의방패
+7,236,리베로
+7,237,볼줍기
+7,238,솜털
+7,239,스크루지느러미
+7,240,미러아머
+7,241,그대로꿀꺽미사일
+7,242,굳건한신념
+7,243,증기기관
+7,244,펑크록
+7,245,모래뿜기
+7,246,얼음인분
+7,247,숙성
+7,248,아이스페이스
+7,249,파워스폿
+7,250,의태
+7,251,배리어프리
+7,252,강철정신
+7,253,멸망의바디
+7,254,떠도는영혼
+7,255,무아지경
+7,256,화학변화가스
+7,257,파스텔베일
+7,258,꼬르륵스위치
 8,1,あくしゅう
 8,2,あめふらし
 8,3,かそく
@@ -1863,6 +2038,31 @@ language_id,ability_id,name
 8,231,ファントムガード
 8,232,プリズムアーマー
 8,233,ブレインフォース
+8,234,ふとうのけん
+8,235,ふくつのたて
+8,236,リベロ
+8,237,たまひろい
+8,238,わたげ
+8,239,スクリューおびれ
+8,240,ミラーアーマー
+8,241,うのミサイル
+8,242,すじがねいり
+8,243,じょうききかん
+8,244,パンクロック
+8,245,すなはき
+8,246,こおりのりんぷん
+8,247,じゅくせい
+8,248,アイスフェイス
+8,249,パワースポット
+8,250,ぎたい
+8,251,バリアフリー
+8,252,はがねのせいしん
+8,253,ほろびのボディ
+8,254,さまようたましい
+8,255,ごりむちゅう
+8,256,かがくへんかガス
+8,257,パステルベール
+8,258,はらぺこスイッチ
 9,1,恶臭
 9,2,降雨
 9,3,加速
@@ -2096,6 +2296,31 @@ language_id,ability_id,name
 9,231,幻影防守
 9,232,棱镜装甲
 9,233,脑核之力
+9,234,不挠之剑
+9,235,不屈之盾
+9,236,自由者
+9,237,捡球
+9,238,棉絮
+9,239,螺旋尾鳍
+9,240,镜甲
+9,241,一口导弹
+9,242,坚毅
+9,243,蒸汽机
+9,244,庞克摇滚
+9,245,吐沙
+9,246,冰鳞粉
+9,247,熟成
+9,248,结冻头
+9,249,能量点
+9,250,拟态
+9,251,除障
+9,252,钢之意志
+9,253,灭亡之躯
+9,254,游魂
+9,255,一猩一意
+9,256,化学变化气体
+9,257,粉彩护幕
+9,258,饱了又饿
 10,1,惡臭
 10,2,降雨
 10,3,加速
@@ -2329,3 +2554,28 @@ language_id,ability_id,name
 10,231,幻影防守
 10,232,稜鏡裝甲
 10,233,腦核之力
+10,234,不撓之劍
+10,235,不屈之盾
+10,236,自由者
+10,237,撿球
+10,238,棉絮
+10,239,螺旋尾鰭
+10,240,鏡甲
+10,241,一口飛彈
+10,242,堅毅
+10,243,蒸汽機
+10,244,龐克搖滾
+10,245,吐沙
+10,246,冰鱗粉
+10,247,熟成
+10,248,結凍頭
+10,249,能量點
+10,250,擬態
+10,251,除障
+10,252,鋼之意志
+10,253,滅亡之軀
+10,254,遊魂
+10,255,一猩一意
+10,256,化學變化氣體
+10,257,粉彩護幕
+10,258,飽了又餓
