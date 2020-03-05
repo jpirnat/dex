@@ -978,6 +978,128 @@ language_id,item_id,name
 1,977,ＰＰかいふくポン
 1,978,おうえんポン
 1,979,つかまえポン
+1,980,マチスのサイン
+1,981,ぎんのズリのみ
+1,982,きんのズリのみ
+1,983,ぎんのナナのみ
+1,984,きんのナナのみ
+1,985,ぎんのパイルのみ
+1,986,きんのパイルのみ
+1,987,ひみつのカギ
+1,988,のびたバネ
+1,989,チョークいし
+1,990,ビーだま
+1,991,かたっぽピアス
+1,992,うみべのガラス
+1,993,きんのはっぱ
+1,994,ぎんのはっぱ
+1,995,ピカピカだんご
+1,996,なんごくかいがら
+1,997,このはのおてがみ
+1,998,このはのおてがみ
+1,999,ちいさなはなたば
+1,1000,むしよせコロン
+1,1001,シルバーコロン
+1,1002,ゴールドコロン
+1,1003,ニビあられ
+1,1004,げんきのアメ
+1,1005,ちからのアメ
+1,1006,まもりのアメ
+1,1007,ちしきのアメ
+1,1008,こころのアメ
+1,1009,はやさのアメ
+1,1010,げんきのアメＬ
+1,1011,ちからのアメＬ
+1,1012,まもりのアメＬ
+1,1013,ちしきのアメＬ
+1,1014,こころのアメＬ
+1,1015,はやさのアメＬ
+1,1016,げんきのアメＸＬ
+1,1017,ちからのアメＸＬ
+1,1018,まもりのアメＸＬ
+1,1019,ちしきのアメＸＬ
+1,1020,こころのアメＸＬ
+1,1021,はやさのアメＸＬ
+1,1022,フシギダネのアメ
+1,1023,ヒトカゲのアメ
+1,1024,ゼニガメのアメ
+1,1025,キャタピーのアメ
+1,1026,ビードルのアメ
+1,1027,ポッポのアメ
+1,1028,コラッタのアメ
+1,1029,オニスズメのアメ
+1,1030,アーボのアメ
+1,1031,ピカチュウのアメ
+1,1032,サンドのアメ
+1,1033,ニドラン♀のアメ
+1,1034,ニドラン♂のアメ
+1,1035,ピッピのアメ
+1,1036,ロコンのアメ
+1,1037,プリンのアメ
+1,1038,ズバットのアメ
+1,1039,ナゾノクサのアメ
+1,1040,パラスのアメ
+1,1041,コンパンのアメ
+1,1042,ディグダのアメ
+1,1043,ニャースのアメ
+1,1044,コダックのアメ
+1,1045,マンキーのアメ
+1,1046,ガーディのアメ
+1,1047,ニョロモのアメ
+1,1048,ケーシィのアメ
+1,1049,ワンリキーのアメ
+1,1050,マダツボミのアメ
+1,1051,メノクラゲのアメ
+1,1052,イシツブテのアメ
+1,1053,ポニータのアメ
+1,1054,ヤドンのアメ
+1,1055,コイルのアメ
+1,1056,カモネギのアメ
+1,1057,ドードーのアメ
+1,1058,パウワウのアメ
+1,1059,ベトベターのアメ
+1,1060,シェルダーのアメ
+1,1061,ゴースのアメ
+1,1062,イワークのアメ
+1,1063,スリープのアメ
+1,1064,クラブのアメ
+1,1065,ビリリダマのアメ
+1,1066,タマタマのアメ
+1,1067,カラカラのアメ
+1,1068,サワムラーのアメ
+1,1069,エビワラーのアメ
+1,1070,ベロリンガのアメ
+1,1071,ドガースのアメ
+1,1072,サイホーンのアメ
+1,1073,ラッキーのアメ
+1,1074,モンジャラのアメ
+1,1075,ガルーラのアメ
+1,1076,タッツーのアメ
+1,1077,トサキントのアメ
+1,1078,ヒトデマンのアメ
+1,1079,バリヤードのアメ
+1,1080,ストライクのアメ
+1,1081,ルージュラのアメ
+1,1082,エレブーのアメ
+1,1083,カイロスのアメ
+1,1084,ケンタロスのアメ
+1,1085,コイキングのアメ
+1,1086,ラプラスのアメ
+1,1087,メタモンのアメ
+1,1088,イーブイのアメ
+1,1089,ポリゴンのアメ
+1,1090,オムナイトのアメ
+1,1091,カブトのアメ
+1,1092,プテラのアメ
+1,1093,カビゴンのアメ
+1,1094,フリーザーのアメ
+1,1095,サンダーのアメ
+1,1096,ファイヤーのアメ
+1,1097,ミニリュウのアメ
+1,1098,ミュウツーのアメ
+1,1099,ミュウのアメ
+1,1100,メルタンのアメ
+1,1101,ブーバーのアメ
 1,10001,ろうやのカギ
 1,10002,エレベーターキー
 1,10003,ちいさなせきばん
@@ -2092,6 +2214,128 @@ language_id,item_id,name
 2,977,Roto PP Restore
 2,978,Roto Boost
 2,979,Roto Catch
+2,980,Autograph
+2,981,Silver Razz Berry
+2,982,Golden Razz Berry
+2,983,Silver Nanab Berry
+2,984,Golden Nanab Berry
+2,985,Silver Pinap Berry
+2,986,Golden Pinap Berry
+2,987,Secret Key
+2,988,Stretchy Spring
+2,989,Chalky Stone
+2,990,Marble
+2,991,Lone Earring
+2,992,Beach Glass
+2,993,Gold Leaf
+2,994,Silver Leaf
+2,995,Polished Mud Ball
+2,996,Tropical Shell
+2,997,Leaf Letter
+2,998,Leaf Letter
+2,999,Small Bouquet
+2,1000,Lure
+2,1001,Super Lure
+2,1002,Max Lure
+2,1003,Pewter Crunchies
+2,1004,Health Candy
+2,1005,Mighty Candy
+2,1006,Tough Candy
+2,1007,Smart Candy
+2,1008,Courage Candy
+2,1009,Quick Candy
+2,1010,Health Candy L
+2,1011,Mighty Candy L
+2,1012,Tough Candy L
+2,1013,Smart Candy L
+2,1014,Courage Candy L
+2,1015,Quick Candy L
+2,1016,Health Candy XL
+2,1017,Mighty Candy XL
+2,1018,Tough Candy XL
+2,1019,Smart Candy XL
+2,1020,Courage Candy XL
+2,1021,Quick Candy XL
+2,1022,Bulbasaur Candy
+2,1023,Charmander Candy
+2,1024,Squirtle Candy
+2,1025,Caterpie Candy
+2,1026,Weedle Candy
+2,1027,Pidgey Candy
+2,1028,Rattata Candy
+2,1029,Spearow Candy
+2,1030,Ekans Candy
+2,1031,Pikachu Candy
+2,1032,Sandshrew Candy
+2,1033,Nidoran♀ Candy
+2,1034,Nidoran♂ Candy
+2,1035,Clefairy Candy
+2,1036,Vulpix Candy
+2,1037,Jigglypuff Candy
+2,1038,Zubat Candy
+2,1039,Oddish Candy
+2,1040,Paras Candy
+2,1041,Venonat Candy
+2,1042,Diglett Candy
+2,1043,Meowth Candy
+2,1044,Psyduck Candy
+2,1045,Mankey Candy
+2,1046,Growlithe Candy
+2,1047,Poliwag Candy
+2,1048,Abra Candy
+2,1049,Machop Candy
+2,1050,Bellsprout Candy
+2,1051,Tentacool Candy
+2,1052,Geodude Candy
+2,1053,Ponyta Candy
+2,1054,Slowpoke Candy
+2,1055,Magnemite Candy
+2,1056,Farfetch’d Candy
+2,1057,Doduo Candy
+2,1058,Seel Candy
+2,1059,Grimer Candy
+2,1060,Shellder Candy
+2,1061,Gastly Candy
+2,1062,Onix Candy
+2,1063,Drowzee Candy
+2,1064,Krabby Candy
+2,1065,Voltorb Candy
+2,1066,Exeggcute Candy
+2,1067,Cubone Candy
+2,1068,Hitmonlee Candy
+2,1069,Hitmonchan Candy
+2,1070,Lickitung Candy
+2,1071,Koffing Candy
+2,1072,Rhyhorn Candy
+2,1073,Chansey Candy
+2,1074,Tangela Candy
+2,1075,Kangaskhan Candy
+2,1076,Horsea Candy
+2,1077,Goldeen Candy
+2,1078,Staryu Candy
+2,1079,Mr. Mime Candy
+2,1080,Scyther Candy
+2,1081,Jynx Candy
+2,1082,Electabuzz Candy
+2,1083,Pinsir Candy
+2,1084,Tauros Candy
+2,1085,Magikarp Candy
+2,1086,Lapras Candy
+2,1087,Ditto Candy
+2,1088,Eevee Candy
+2,1089,Porygon Candy
+2,1090,Omanyte Candy
+2,1091,Kabuto Candy
+2,1092,Aerodactyl Candy
+2,1093,Snorlax Candy
+2,1094,Articuno Candy
+2,1095,Zapdos Candy
+2,1096,Moltres Candy
+2,1097,Dratini Candy
+2,1098,Mewtwo Candy
+2,1099,Mew Candy
+2,1100,Meltan Candy
+2,1101,Magmar Candy
 2,10001,Jail Key
 2,10002,Elevator Key
 2,10003,Small Tablet
@@ -3206,6 +3450,128 @@ language_id,item_id,name
 3,977,Moti-Récup’ PP
 3,978,Moti-Soutien
 3,979,Moti-Capture
+3,980,Dédicace de Bob
+3,981,Baie Framby argentée
+3,982,Baie Framby dorée
+3,983,Baie Nanab argentée
+3,984,Baie Nanab dorée
+3,985,Baie Nanana argentée
+3,986,Baie Nanana dorée
+3,987,Clé Secrète
+3,988,Ressort Détendu
+3,989,Craie
+3,990,Bille
+3,991,Boucle d’Oreille
+3,992,Galet de Verre
+3,993,Feuille Dorée
+3,994,Feuille Argentée
+3,995,Boulette de Boue
+3,996,Coquille du Sud
+3,997,Lettre Végétale
+3,998,Lettre Végétale
+3,999,Petit Bouquet
+3,1000,Parfum
+3,1001,Super Parfum
+3,1002,Parfum Max
+3,1003,Crok’Argenta
+3,1004,Bonbon Santé S
+3,1005,Bonbon Force S
+3,1006,Bonbon Armure S
+3,1007,Bonbon Esprit S
+3,1008,Bonbon Mental S
+3,1009,Bonbon Sprint S
+3,1010,Bonbon Santé M
+3,1011,Bonbon Force M
+3,1012,Bonbon Armure M
+3,1013,Bonbon Esprit M
+3,1014,Bonbon Mental M
+3,1015,Bonbon Sprint M
+3,1016,Bonbon Santé L
+3,1017,Bonbon Force L
+3,1018,Bonbon Armure L
+3,1019,Bonbon Esprit L
+3,1020,Bonbon Mental L
+3,1021,Bonbon Sprint L
+3,1022,Bonbon Bulbizarre
+3,1023,Bonbon Salamèche
+3,1024,Bonbon Carapuce
+3,1025,Bonbon Chenipan
+3,1026,Bonbon Aspicot
+3,1027,Bonbon Roucool
+3,1028,Bonbon Rattata
+3,1029,Bonbon Piafabec
+3,1030,Bonbon Abo
+3,1031,Bonbon Pikachu
+3,1032,Bonbon Sabelette
+3,1033,Bonbon Nidoran♀
+3,1034,Bonbon Nidoran♂
+3,1035,Bonbon Mélofée
+3,1036,Bonbon Goupix
+3,1037,Bonbon Rondoudou
+3,1038,Bonbon Nosferapti
+3,1039,Bonbon Mystherbe
+3,1040,Bonbon Paras
+3,1041,Bonbon Mimitoss
+3,1042,Bonbon Taupiqueur
+3,1043,Bonbon Miaouss
+3,1044,Bonbon Psykokwak
+3,1045,Bonbon Férosinge
+3,1046,Bonbon Caninos
+3,1047,Bonbon Ptitard
+3,1048,Bonbon Abra
+3,1049,Bonbon Machoc
+3,1050,Bonbon Chétiflor
+3,1051,Bonbon Tentacool
+3,1052,Bonbon Racaillou
+3,1053,Bonbon Ponyta
+3,1054,Bonbon Ramoloss
+3,1055,Bonbon Magnéti
+3,1056,Bonbon Canarticho
+3,1057,Bonbon Doduo
+3,1058,Bonbon Otaria
+3,1059,Bonbon Tadmorv
+3,1060,Bonbon Kokiyas
+3,1061,Bonbon Fantominus
+3,1062,Bonbon Onix
+3,1063,Bonbon Soporifik
+3,1064,Bonbon Krabby
+3,1065,Bonbon Voltorbe
+3,1066,Bonbon Noeunoeuf
+3,1067,Bonbon Osselait
+3,1068,Bonbon Kicklee
+3,1069,Bonbon Tygnon
+3,1070,Bonbon Excelangue
+3,1071,Bonbon Smogo
+3,1072,Bonbon Rhinocorne
+3,1073,Bonbon Leveinard
+3,1074,Bonbon Saquedeneu
+3,1075,Bonbon Kangourex
+3,1076,Bonbon Hypotrempe
+3,1077,Bonbon Poissirène
+3,1078,Bonbon Stari
+3,1079,Bonbon M. Mime
+3,1080,Bonbon Insécateur
+3,1081,Bonbon Lippoutou
+3,1082,Bonbon Élektek
+3,1083,Bonbon Scarabrute
+3,1084,Bonbon Tauros
+3,1085,Bonbon Magicarpe
+3,1086,Bonbon Lokhlass
+3,1087,Bonbon Métamorph
+3,1088,Bonbon Évoli
+3,1089,Bonbon Porygon
+3,1090,Bonbon Amonita
+3,1091,Bonbon Kabuto
+3,1092,Bonbon Ptéra
+3,1093,Bonbon Ronflex
+3,1094,Bonbon Artikodin
+3,1095,Bonbon Électhor
+3,1096,Bonbon Sulfura
+3,1097,Bonbon Minidraco
+3,1098,Bonbon Mewtwo
+3,1099,Bonbon Mew
+3,1100,Bonbon Meltan
+3,1101,Bonbon Magmar
 3,10001,Cle de la Prison
 3,10002,Cle de l'Ascenseur
 3,10003,Ardoise
@@ -4320,6 +4686,128 @@ language_id,item_id,name
 4,977,AP-Bon
 4,978,Statuswertebon
 4,979,Fangbon
+4,980,Autogramm
+4,981,Silberne Himmihbeere
+4,982,Goldene Himmihbeere
+4,983,Silberne Nanabbeere
+4,984,Goldene Nanabbeere
+4,985,Silberne Sananabeere
+4,986,Goldene Sananabeere
+4,987,Geheimschlüssel
+4,988,Spiralfeder
+4,989,Kreidestein
+4,990,Glasmurmel
+4,991,Ohrring
+4,992,Strandscherbe
+4,993,Goldblatt
+4,994,Silberblatt
+4,995,Glanzkugel
+4,996,Tropenmuschel
+4,997,Blattbrief
+4,998,Blattbrief
+4,999,Ministrauß
+4,1000,Lockparfüm
+4,1001,Super-Lockparfüm
+4,1002,Top-Lockparfüm
+4,1003,Marmoria-Kräcker
+4,1004,Energiebonbon
+4,1005,Stärkebonbon
+4,1006,Robustbonbon
+4,1007,Gripsbonbon
+4,1008,Mentalbonbon
+4,1009,Flottbonbon
+4,1010,Energiebonbon+
+4,1011,Stärkebonbon+
+4,1012,Robustbonbon+
+4,1013,Gripsbonbon+
+4,1014,Mentalbonbon+
+4,1015,Flottbonbon+
+4,1016,Energiebonbon++
+4,1017,Stärkebonbon++
+4,1018,Robustbonbon++
+4,1019,Gripsbonbon++
+4,1020,Mentalbonbon++
+4,1021,Flottbonbon++
+4,1022,Bisasam-Bonbon
+4,1023,Glumanda-Bonbon
+4,1024,Schiggy-Bonbon
+4,1025,Raupy-Bonbon
+4,1026,Hornliu-Bonbon
+4,1027,Taubsi-Bonbon
+4,1028,Rattfratz-Bonbon
+4,1029,Habitak-Bonbon
+4,1030,Rettan-Bonbon
+4,1031,Pikachu-Bonbon
+4,1032,Sandan-Bonbon
+4,1033,Nidoran♀-Bonbon
+4,1034,Nidoran♂-Bonbon
+4,1035,Piepi-Bonbon
+4,1036,Vulpix-Bonbon
+4,1037,Pummeluff-Bonbon
+4,1038,Zubat-Bonbon
+4,1039,Myrapla-Bonbon
+4,1040,Paras-Bonbon
+4,1041,Bluzuk-Bonbon
+4,1042,Digda-Bonbon
+4,1043,Mauzi-Bonbon
+4,1044,Enton-Bonbon
+4,1045,Menki-Bonbon
+4,1046,Fukano-Bonbon
+4,1047,Quapsel-Bonbon
+4,1048,Abra-Bonbon
+4,1049,Machollo-Bonbon
+4,1050,Knofensa-Bonbon
+4,1051,Tentacha-Bonbon
+4,1052,Kleinstein-Bonbon
+4,1053,Ponita-Bonbon
+4,1054,Flegmon-Bonbon
+4,1055,Magnetilo-Bonbon
+4,1056,Porenta-Bonbon
+4,1057,Dodu-Bonbon
+4,1058,Jurob-Bonbon
+4,1059,Sleima-Bonbon
+4,1060,Muschas-Bonbon
+4,1061,Nebulak-Bonbon
+4,1062,Onix-Bonbon
+4,1063,Traumato-Bonbon
+4,1064,Krabby-Bonbon
+4,1065,Voltobal-Bonbon
+4,1066,Owei-Bonbon
+4,1067,Tragosso-Bonbon
+4,1068,Kicklee-Bonbon
+4,1069,Nockchan-Bonbon
+4,1070,Schlurp-Bonbon
+4,1071,Smogon-Bonbon
+4,1072,Rihorn-Bonbon
+4,1073,Chaneira-Bonbon
+4,1074,Tangela-Bonbon
+4,1075,Kangama-Bonbon
+4,1076,Seeper-Bonbon
+4,1077,Goldini-Bonbon
+4,1078,Sterndu-Bonbon
+4,1079,Pantimos-Bonbon
+4,1080,Sichlor-Bonbon
+4,1081,Rossana-Bonbon
+4,1082,Elektek-Bonbon
+4,1083,Pinsir-Bonbon
+4,1084,Tauros-Bonbon
+4,1085,Karpador-Bonbon
+4,1086,Lapras-Bonbon
+4,1087,Ditto-Bonbon
+4,1088,Evoli-Bonbon
+4,1089,Porygon-Bonbon
+4,1090,Amonitas-Bonbon
+4,1091,Kabuto-Bonbon
+4,1092,Aerodactyl-Bonbon
+4,1093,Relaxo-Bonbon
+4,1094,Arktos-Bonbon
+4,1095,Zapdos-Bonbon
+4,1096,Lavados-Bonbon
+4,1097,Dratini-Bonbon
+4,1098,Mewtu-Bonbon
+4,1099,Mew-Bonbon
+4,1100,Meltan-Bonbon
+4,1101,Magmar-Bonbon
 4,10001,Zellenschlüssel
 4,10002,Liftschlüssel
 4,10003,Steintafel
@@ -5434,6 +5922,128 @@ language_id,item_id,name
 5,977,PP’n’roll
 5,978,Stat’n’roll
 5,979,Acchiappa’n’roll
+5,980,Autografo
+5,981,Baccalampon argentata
+5,982,Baccalampon dorata
+5,983,Baccabana argentata
+5,984,Baccabana dorata
+5,985,Baccananas argentata
+5,986,Baccananas dorata
+5,987,Chiave segreta
+5,988,Molla elastica
+5,989,Gessetto
+5,990,Biglia
+5,991,Orecchino
+5,992,Vetro marino
+5,993,Fogliadoro
+5,994,Fogliargento
+5,995,Pallina di fango
+5,996,Tropiconchiglia
+5,997,Foglialettera
+5,998,Foglialettera
+5,999,Bouquet
+5,1000,Profumo invito
+5,1001,Superprofumo
+5,1002,Profumo Max
+5,1003,Plumbeosalatini
+5,1004,Caramella vitalità S
+5,1005,Caramella potenza S
+5,1006,Caramella protezione S
+5,1007,Caramella acume S
+5,1008,Caramella intuito S
+5,1009,Caramella rapidità S
+5,1010,Caramella vitalità M
+5,1011,Caramella potenza M
+5,1012,Caramella protezione M
+5,1013,Caramella acume M
+5,1014,Caramella intuito M
+5,1015,Caramella rapidità M
+5,1016,Caramella vitalità L
+5,1017,Caramella potenza L
+5,1018,Caramella protezione L
+5,1019,Caramella acume L
+5,1020,Caramella intuito L
+5,1021,Caramella rapidità L
+5,1022,Caramella Bulbasaur
+5,1023,Caramella Charmander
+5,1024,Caramella Squirtle
+5,1025,Caramella Caterpie
+5,1026,Caramella Weedle
+5,1027,Caramella Pidgey
+5,1028,Caramella Rattata
+5,1029,Caramella Spearow
+5,1030,Caramella Ekans
+5,1031,Caramella Pikachu
+5,1032,Caramella Sandshrew
+5,1033,Caramella Nidoran♀
+5,1034,Caramella Nidoran♂
+5,1035,Caramella Clefairy
+5,1036,Caramella Vulpix
+5,1037,Caramella Jigglypuff
+5,1038,Caramella Zubat
+5,1039,Caramella Oddish
+5,1040,Caramella Paras
+5,1041,Caramella Venonat
+5,1042,Caramella Diglett
+5,1043,Caramella Meowth
+5,1044,Caramella Psyduck
+5,1045,Caramella Mankey
+5,1046,Caramella Growlithe
+5,1047,Caramella Poliwag
+5,1048,Caramella Abra
+5,1049,Caramella Machop
+5,1050,Caramella Bellsprout
+5,1051,Caramella Tentacool
+5,1052,Caramella Geodude
+5,1053,Caramella Ponyta
+5,1054,Caramella Slowpoke
+5,1055,Caramella Magnemite
+5,1056,Caramella Farfetch’d
+5,1057,Caramella Doduo
+5,1058,Caramella Seel
+5,1059,Caramella Grimer
+5,1060,Caramella Shellder
+5,1061,Caramella Gastly
+5,1062,Caramella Onix
+5,1063,Caramella Drowzee
+5,1064,Caramella Krabby
+5,1065,Caramella Voltorb
+5,1066,Caramella Exeggcute
+5,1067,Caramella Cubone
+5,1068,Caramella Hitmonlee
+5,1069,Caramella Hitmonchan
+5,1070,Caramella Lickitung
+5,1071,Caramella Koffing
+5,1072,Caramella Rhyhorn
+5,1073,Caramella Chansey
+5,1074,Caramella Tangela
+5,1075,Caramella Kangaskhan
+5,1076,Caramella Horsea
+5,1077,Caramella Goldeen
+5,1078,Caramella Staryu
+5,1079,Caramella Mr. Mime
+5,1080,Caramella Scyther
+5,1081,Caramella Jynx
+5,1082,Caramella Electabuzz
+5,1083,Caramella Pinsir
+5,1084,Caramella Tauros
+5,1085,Caramella Magikarp
+5,1086,Caramella Lapras
+5,1087,Caramella Ditto
+5,1088,Caramella Eevee
+5,1089,Caramella Porygon
+5,1090,Caramella Omanyte
+5,1091,Caramella Kabuto
+5,1092,Caramella Aerodactyl
+5,1093,Caramella Snorlax
+5,1094,Caramella Articuno
+5,1095,Caramella Zapdos
+5,1096,Caramella Moltres
+5,1097,Caramella Dratini
+5,1098,Caramella Mewtwo
+5,1099,Caramella Mew
+5,1100,Caramella Meltan
+5,1101,Caramella Magmar
 5,10001,Chiave Celle
 5,10002,Chiave Asc.
 5,10003,Tavola
@@ -6548,6 +7158,128 @@ language_id,item_id,name
 6,977,Cupón PP
 6,978,Cupón Refuerzo
 6,979,Cupón Captura
+6,980,Autógrafo
+6,981,Baya Frambu Plateada
+6,982,Baya Frambu Dorada
+6,983,Baya Latano Plateada
+6,984,Baya Latano Dorada
+6,985,Baya Pinia Plateada
+6,986,Baya Pinia Dorada
+6,987,Llave Secreta
+6,988,Muelle Estirado
+6,989,Tiza
+6,990,Canica
+6,991,Pendiente
+6,992,Cristal Marino
+6,993,Hoja de Oro
+6,994,Hoja de Plata
+6,995,Bola de Arcilla
+6,996,Concha Tropical
+6,997,Hoja Escrita
+6,998,Hoja Escrita
+6,999,Ramo Pequeño
+6,1000,Colonia
+6,1001,Supercolonia
+6,1002,Colonia Máxima
+6,1003,Rokikos
+6,1004,Caramelo Vigor
+6,1005,Caramelo Músculo
+6,1006,Caramelo Aguante
+6,1007,Caramelo Intelecto
+6,1008,Caramelo Mente
+6,1009,Caramelo Ímpetu
+6,1010,Caramelo Vigor +
+6,1011,Caramelo Músculo +
+6,1012,Caramelo Aguante +
+6,1013,Caramelo Intelecto +
+6,1014,Caramelo Mente +
+6,1015,Caramelo Ímpetu +
+6,1016,Caramelo Vigor ++
+6,1017,Caramelo Músculo ++
+6,1018,Caramelo Aguante ++
+6,1019,Caramelo Intelecto ++
+6,1020,Caramelo Mente ++
+6,1021,Caramelo Ímpetu ++
+6,1022,Caramelo Bulbasaur
+6,1023,Caramelo Charmander
+6,1024,Caramelo Squirtle
+6,1025,Caramelo Caterpie
+6,1026,Caramelo Weedle
+6,1027,Caramelo Pidgey
+6,1028,Caramelo Rattata
+6,1029,Caramelo Spearow
+6,1030,Caramelo Ekans
+6,1031,Caramelo Pikachu
+6,1032,Caramelo Sandshrew
+6,1033,Caramelo Nidoran♀
+6,1034,Caramelo Nidoran♂
+6,1035,Caramelo Clefairy
+6,1036,Caramelo Vulpix
+6,1037,Caramelo Jigglypuff
+6,1038,Caramelo Zubat
+6,1039,Caramelo Oddish
+6,1040,Caramelo Paras
+6,1041,Caramelo Venonat
+6,1042,Caramelo Diglett
+6,1043,Caramelo Meowth
+6,1044,Caramelo Psyduck
+6,1045,Caramelo Mankey
+6,1046,Caramelo Growlithe
+6,1047,Caramelo Poliwag
+6,1048,Caramelo Abra
+6,1049,Caramelo Machop
+6,1050,Caramelo Bellsprout
+6,1051,Caramelo Tentacool
+6,1052,Caramelo Geodude
+6,1053,Caramelo Ponyta
+6,1054,Caramelo Slowpoke
+6,1055,Caramelo Magnemite
+6,1056,Caramelo Farfetch’d
+6,1057,Caramelo Doduo
+6,1058,Caramelo Seel
+6,1059,Caramelo Grimer
+6,1060,Caramelo Shellder
+6,1061,Caramelo Gastly
+6,1062,Caramelo Onix
+6,1063,Caramelo Drowzee
+6,1064,Caramelo Krabby
+6,1065,Caramelo Voltorb
+6,1066,Caramelo Exeggcute
+6,1067,Caramelo Cubone
+6,1068,Caramelo Hitmonlee
+6,1069,Caramelo Hitmonchan
+6,1070,Caramelo Lickitung
+6,1071,Caramelo Koffing
+6,1072,Caramelo Rhyhorn
+6,1073,Caramelo Chansey
+6,1074,Caramelo Tangela
+6,1075,Caramelo Kangaskhan
+6,1076,Caramelo Horsea
+6,1077,Caramelo Goldeen
+6,1078,Caramelo Staryu
+6,1079,Caramelo Mr. Mime
+6,1080,Caramelo Scyther
+6,1081,Caramelo Jynx
+6,1082,Caramelo Electabuzz
+6,1083,Caramelo Pinsir
+6,1084,Caramelo Tauros
+6,1085,Caramelo Magikarp
+6,1086,Caramelo Lapras
+6,1087,Caramelo Ditto
+6,1088,Caramelo Eevee
+6,1089,Caramelo Porygon
+6,1090,Caramelo Omanyte
+6,1091,Caramelo Kabuto
+6,1092,Caramelo Aerodactyl
+6,1093,Caramelo Snorlax
+6,1094,Caramelo Articuno
+6,1095,Caramelo Zapdos
+6,1096,Caramelo Moltres
+6,1097,Caramelo Dratini
+6,1098,Caramelo Mewtwo
+6,1099,Caramelo Mew
+6,1100,Caramelo Meltan
+6,1101,Caramelo Magmar
 6,10001,Llave Celdas
 6,10002,Ll. Ascensor
 6,10003,Tablilla
@@ -7632,6 +8364,128 @@ language_id,item_id,name
 7,977,PP회복캡슐토이
 7,978,응원캡슐토이
 7,979,잡기캡슐토이
+7,980,마티스의사인
+7,981,은 라즈열매
+7,982,황금 라즈열매
+7,983,은 나나열매
+7,984,황금 나나열매
+7,985,은 파인열매
+7,986,황금 파인열매
+7,987,비밀의열쇠
+7,988,늘어난용수철
+7,989,초크돌
+7,990,유리구슬
+7,991,한쪽귀고리
+7,992,바닷가유리
+7,993,금빛잎사귀
+7,994,은빛잎사귀
+7,995,반짝반짝경단
+7,996,트로피컬조개껍질
+7,997,나뭇잎편지
+7,998,나뭇잎편지
+7,999,작은꽃다발
+7,1000,벌레유인코롱
+7,1001,실버코롱
+7,1002,골드코롱
+7,1003,회색강정
+7,1004,기력의사탕
+7,1005,힘의사탕
+7,1006,수비의사탕
+7,1007,지식의사탕
+7,1008,마음의사탕
+7,1009,속도의사탕
+7,1010,기력의사탕L
+7,1011,힘의사탕L
+7,1012,수비의사탕L
+7,1013,지식의사탕L
+7,1014,마음의사탕L
+7,1015,속도의사탕L
+7,1016,기력의사탕XL
+7,1017,힘의사탕XL
+7,1018,수비의사탕XL
+7,1019,지식의사탕XL
+7,1020,마음의사탕XL
+7,1021,속도의사탕XL
+7,1022,이상해씨의사탕
+7,1023,파이리의사탕
+7,1024,꼬부기의사탕
+7,1025,캐터피의사탕
+7,1026,뿔충이의사탕
+7,1027,구구의사탕
+7,1028,꼬렛의사탕
+7,1029,깨비참의사탕
+7,1030,아보의사탕
+7,1031,피카츄의사탕
+7,1032,모래두지의사탕
+7,1033,니드런♀의사탕
+7,1034,니드런♂의사탕
+7,1035,삐삐의사탕
+7,1036,식스테일의사탕
+7,1037,푸린의사탕
+7,1038,주뱃의사탕
+7,1039,뚜벅쵸의사탕
+7,1040,파라스의사탕
+7,1041,콘팡의사탕
+7,1042,디그다의사탕
+7,1043,나옹의사탕
+7,1044,고라파덕의사탕
+7,1045,망키의사탕
+7,1046,가디의사탕
+7,1047,발챙이의사탕
+7,1048,캐이시의사탕
+7,1049,알통몬의사탕
+7,1050,모다피의사탕
+7,1051,왕눈해의사탕
+7,1052,꼬마돌의사탕
+7,1053,포니타의사탕
+7,1054,야돈의사탕
+7,1055,코일의사탕
+7,1056,파오리의사탕
+7,1057,두두의사탕
+7,1058,쥬쥬의사탕
+7,1059,질퍽이의사탕
+7,1060,셀러의사탕
+7,1061,고오스의사탕
+7,1062,롱스톤의사탕
+7,1063,슬리프의사탕
+7,1064,크랩의사탕
+7,1065,찌리리공의사탕
+7,1066,아라리의사탕
+7,1067,탕구리의사탕
+7,1068,시라소몬의사탕
+7,1069,홍수몬의사탕
+7,1070,내루미의사탕
+7,1071,또가스의사탕
+7,1072,뿔카노의사탕
+7,1073,럭키의사탕
+7,1074,덩쿠리의사탕
+7,1075,캥카의사탕
+7,1076,쏘드라의사탕
+7,1077,콘치의사탕
+7,1078,별가사리의사탕
+7,1079,마임맨의사탕
+7,1080,스라크의사탕
+7,1081,루주라의사탕
+7,1082,에레브의사탕
+7,1083,쁘사이저의사탕
+7,1084,켄타로스의사탕
+7,1085,잉어킹의사탕
+7,1086,라프라스의사탕
+7,1087,메타몽의사탕
+7,1088,이브이의사탕
+7,1089,폴리곤의사탕
+7,1090,암나이트의사탕
+7,1091,투구의사탕
+7,1092,프테라의사탕
+7,1093,잠만보의사탕
+7,1094,프리져의사탕
+7,1095,썬더의사탕
+7,1096,파이어의사탕
+7,1097,미뇽의사탕
+7,1098,뮤츠의사탕
+7,1099,뮤의사탕
+7,1100,멜탄의사탕
+7,1101,마그마의사탕
 8,1,なし
 8,2,マスターボール
 8,3,ハイパーボール
@@ -8536,6 +9390,128 @@ language_id,item_id,name
 8,977,ＰＰかいふくポン
 8,978,おうえんポン
 8,979,つかまえポン
+8,980,マチスのサイン
+8,981,ぎんのズリのみ
+8,982,きんのズリのみ
+8,983,ぎんのナナのみ
+8,984,きんのナナのみ
+8,985,ぎんのパイルのみ
+8,986,きんのパイルのみ
+8,987,ひみつのカギ
+8,988,のびたバネ
+8,989,チョークいし
+8,990,ビーだま
+8,991,かたっぽピアス
+8,992,うみべのガラス
+8,993,きんのはっぱ
+8,994,ぎんのはっぱ
+8,995,ピカピカだんご
+8,996,なんごくかいがら
+8,997,このはのおてがみ
+8,998,このはのおてがみ
+8,999,ちいさなはなたば
+8,1000,むしよせコロン
+8,1001,シルバーコロン
+8,1002,ゴールドコロン
+8,1003,ニビあられ
+8,1004,げんきのアメ
+8,1005,ちからのアメ
+8,1006,まもりのアメ
+8,1007,ちしきのアメ
+8,1008,こころのアメ
+8,1009,はやさのアメ
+8,1010,げんきのアメＬ
+8,1011,ちからのアメＬ
+8,1012,まもりのアメＬ
+8,1013,ちしきのアメＬ
+8,1014,こころのアメＬ
+8,1015,はやさのアメＬ
+8,1016,げんきのアメＸＬ
+8,1017,ちからのアメＸＬ
+8,1018,まもりのアメＸＬ
+8,1019,ちしきのアメＸＬ
+8,1020,こころのアメＸＬ
+8,1021,はやさのアメＸＬ
+8,1022,フシギダネのアメ
+8,1023,ヒトカゲのアメ
+8,1024,ゼニガメのアメ
+8,1025,キャタピーのアメ
+8,1026,ビードルのアメ
+8,1027,ポッポのアメ
+8,1028,コラッタのアメ
+8,1029,オニスズメのアメ
+8,1030,アーボのアメ
+8,1031,ピカチュウのアメ
+8,1032,サンドのアメ
+8,1033,ニドラン♀のアメ
+8,1034,ニドラン♂のアメ
+8,1035,ピッピのアメ
+8,1036,ロコンのアメ
+8,1037,プリンのアメ
+8,1038,ズバットのアメ
+8,1039,ナゾノクサのアメ
+8,1040,パラスのアメ
+8,1041,コンパンのアメ
+8,1042,ディグダのアメ
+8,1043,ニャースのアメ
+8,1044,コダックのアメ
+8,1045,マンキーのアメ
+8,1046,ガーディのアメ
+8,1047,ニョロモのアメ
+8,1048,ケーシィのアメ
+8,1049,ワンリキーのアメ
+8,1050,マダツボミのアメ
+8,1051,メノクラゲのアメ
+8,1052,イシツブテのアメ
+8,1053,ポニータのアメ
+8,1054,ヤドンのアメ
+8,1055,コイルのアメ
+8,1056,カモネギのアメ
+8,1057,ドードーのアメ
+8,1058,パウワウのアメ
+8,1059,ベトベターのアメ
+8,1060,シェルダーのアメ
+8,1061,ゴースのアメ
+8,1062,イワークのアメ
+8,1063,スリープのアメ
+8,1064,クラブのアメ
+8,1065,ビリリダマのアメ
+8,1066,タマタマのアメ
+8,1067,カラカラのアメ
+8,1068,サワムラーのアメ
+8,1069,エビワラーのアメ
+8,1070,ベロリンガのアメ
+8,1071,ドガースのアメ
+8,1072,サイホーンのアメ
+8,1073,ラッキーのアメ
+8,1074,モンジャラのアメ
+8,1075,ガルーラのアメ
+8,1076,タッツーのアメ
+8,1077,トサキントのアメ
+8,1078,ヒトデマンのアメ
+8,1079,バリヤードのアメ
+8,1080,ストライクのアメ
+8,1081,ルージュラのアメ
+8,1082,エレブーのアメ
+8,1083,カイロスのアメ
+8,1084,ケンタロスのアメ
+8,1085,コイキングのアメ
+8,1086,ラプラスのアメ
+8,1087,メタモンのアメ
+8,1088,イーブイのアメ
+8,1089,ポリゴンのアメ
+8,1090,オムナイトのアメ
+8,1091,カブトのアメ
+8,1092,プテラのアメ
+8,1093,カビゴンのアメ
+8,1094,フリーザーのアメ
+8,1095,サンダーのアメ
+8,1096,ファイヤーのアメ
+8,1097,ミニリュウのアメ
+8,1098,ミュウツーのアメ
+8,1099,ミュウのアメ
+8,1100,メルタンのアメ
+8,1101,ブーバーのアメ
 9,1,无
 9,2,大师球
 9,3,高级球
@@ -9440,6 +10416,128 @@ language_id,item_id,name
 9,977,ＰＰ回复碰碰
 9,978,加油碰碰
 9,979,捕捉碰碰
+9,980,马志士的签名
+9,981,银色蔓莓果
+9,982,金色蔓莓果
+9,983,银色蕉香果
+9,984,金色蕉香果
+9,985,银色凰梨果
+9,986,金色凰梨果
+9,987,秘密钥匙
+9,988,松掉的弹簧
+9,989,粉笔石
+9,990,弹珠
+9,991,一边的耳环
+9,992,海边的玻璃
+9,993,金色叶子
+9,994,银色叶子
+9,995,光滑泥球
+9,996,南国贝壳
+9,997,树叶信
+9,998,树叶信
+9,999,小小花束
+9,1000,引虫香水
+9,1001,白银香水
+9,1002,黄金香水
+9,1003,深灰米果
+9,1004,元气糖果
+9,1005,力量糖果
+9,1006,守护糖果
+9,1007,知识糖果
+9,1008,心灵糖果
+9,1009,敏捷糖果
+9,1010,元气糖果L
+9,1011,力量糖果L
+9,1012,守护糖果L
+9,1013,知识糖果L
+9,1014,心灵糖果L
+9,1015,敏捷糖果L
+9,1016,元气糖果XL
+9,1017,力量糖果XL
+9,1018,守护糖果XL
+9,1019,知识糖果XL
+9,1020,心灵糖果XL
+9,1021,敏捷糖果XL
+9,1022,妙蛙种子的糖果
+9,1023,小火龙的糖果
+9,1024,杰尼龟的糖果
+9,1025,绿毛虫的糖果
+9,1026,独角虫的糖果
+9,1027,波波的糖果
+9,1028,小拉达的糖果
+9,1029,烈雀的糖果
+9,1030,阿柏蛇的糖果
+9,1031,皮卡丘的糖果
+9,1032,穿山鼠的糖果
+9,1033,尼多兰的糖果
+9,1034,尼多朗的糖果
+9,1035,皮皮的糖果
+9,1036,六尾的糖果
+9,1037,胖丁的糖果
+9,1038,超音蝠的糖果
+9,1039,走路草的糖果
+9,1040,派拉斯的糖果
+9,1041,毛球的糖果
+9,1042,地鼠的糖果
+9,1043,喵喵的糖果
+9,1044,可达鸭的糖果
+9,1045,猴怪的糖果
+9,1046,卡蒂狗的糖果
+9,1047,蚊香蝌蚪的糖果
+9,1048,凯西的糖果
+9,1049,腕力的糖果
+9,1050,喇叭芽的糖果
+9,1051,玛瑙水母的糖果
+9,1052,小拳石的糖果
+9,1053,小火马的糖果
+9,1054,呆呆兽的糖果
+9,1055,小磁怪的糖果
+9,1056,大葱鸭的糖果
+9,1057,嘟嘟的糖果
+9,1058,小海狮的糖果
+9,1059,臭泥的糖果
+9,1060,大舌贝的糖果
+9,1061,鬼斯的糖果
+9,1062,大岩蛇的糖果
+9,1063,催眠貘的糖果
+9,1064,大钳蟹的糖果
+9,1065,霹雳电球的糖果
+9,1066,蛋蛋的糖果
+9,1067,卡拉卡拉的糖果
+9,1068,飞腿郎的糖果
+9,1069,快拳郎的糖果
+9,1070,大舌头的糖果
+9,1071,瓦斯弹的糖果
+9,1072,独角犀牛的糖果
+9,1073,吉利蛋的糖果
+9,1074,蔓藤怪的糖果
+9,1075,袋兽的糖果
+9,1076,墨海马的糖果
+9,1077,角金鱼的糖果
+9,1078,海星星的糖果
+9,1079,魔墙人偶的糖果
+9,1080,飞天螳螂的糖果
+9,1081,迷唇姐的糖果
+9,1082,电击兽的糖果
+9,1083,凯罗斯的糖果
+9,1084,肯泰罗的糖果
+9,1085,鲤鱼王的糖果
+9,1086,拉普拉斯的糖果
+9,1087,百变怪的糖果
+9,1088,伊布的糖果
+9,1089,多边兽的糖果
+9,1090,菊石兽的糖果
+9,1091,化石盔的糖果
+9,1092,化石翼龙的糖果
+9,1093,卡比兽的糖果
+9,1094,急冻鸟的糖果
+9,1095,闪电鸟的糖果
+9,1096,火焰鸟的糖果
+9,1097,迷你龙的糖果
+9,1098,超梦的糖果
+9,1099,梦幻的糖果
+9,1100,美录坦的糖果
+9,1101,鸭嘴火兽的糖果
 10,1,無
 10,2,大師球
 10,3,高級球
@@ -10344,3 +11442,125 @@ language_id,item_id,name
 10,977,ＰＰ回復碰碰
 10,978,加油碰碰
 10,979,捕捉碰碰
+10,980,馬志士的簽名
+10,981,銀色蔓莓果
+10,982,金色蔓莓果
+10,983,銀色蕉香果
+10,984,金色蕉香果
+10,985,銀色凰梨果
+10,986,金色凰梨果
+10,987,秘密鑰匙
+10,988,鬆掉的彈簧
+10,989,粉筆石
+10,990,彈珠
+10,991,一邊的耳環
+10,992,海邊的玻璃
+10,993,金色葉子
+10,994,銀色葉子
+10,995,光滑泥球
+10,996,南國貝殼
+10,997,樹葉信
+10,998,樹葉信
+10,999,小小花束
+10,1000,引蟲香水
+10,1001,白銀香水
+10,1002,黃金香水
+10,1003,深灰米果
+10,1004,元氣糖果
+10,1005,力量糖果
+10,1006,守護糖果
+10,1007,知識糖果
+10,1008,心靈糖果
+10,1009,敏捷糖果
+10,1010,元氣糖果L
+10,1011,力量糖果L
+10,1012,守護糖果L
+10,1013,知識糖果L
+10,1014,心靈糖果L
+10,1015,敏捷糖果L
+10,1016,元氣糖果XL
+10,1017,力量糖果XL
+10,1018,守護糖果XL
+10,1019,知識糖果XL
+10,1020,心靈糖果XL
+10,1021,敏捷糖果XL
+10,1022,妙蛙種子的糖果
+10,1023,小火龍的糖果
+10,1024,傑尼龜的糖果
+10,1025,綠毛蟲的糖果
+10,1026,獨角蟲的糖果
+10,1027,波波的糖果
+10,1028,小拉達的糖果
+10,1029,烈雀的糖果
+10,1030,阿柏蛇的糖果
+10,1031,皮卡丘的糖果
+10,1032,穿山鼠的糖果
+10,1033,尼多蘭的糖果
+10,1034,尼多朗的糖果
+10,1035,皮皮的糖果
+10,1036,六尾的糖果
+10,1037,胖丁的糖果
+10,1038,超音蝠的糖果
+10,1039,走路草的糖果
+10,1040,派拉斯的糖果
+10,1041,毛球的糖果
+10,1042,地鼠的糖果
+10,1043,喵喵的糖果
+10,1044,可達鴨的糖果
+10,1045,猴怪的糖果
+10,1046,卡蒂狗的糖果
+10,1047,蚊香蝌蚪的糖果
+10,1048,凱西的糖果
+10,1049,腕力的糖果
+10,1050,喇叭芽的糖果
+10,1051,瑪瑙水母的糖果
+10,1052,小拳石的糖果
+10,1053,小火馬的糖果
+10,1054,呆呆獸的糖果
+10,1055,小磁怪的糖果
+10,1056,大蔥鴨的糖果
+10,1057,嘟嘟的糖果
+10,1058,小海獅的糖果
+10,1059,臭泥的糖果
+10,1060,大舌貝的糖果
+10,1061,鬼斯的糖果
+10,1062,大岩蛇的糖果
+10,1063,催眠貘的糖果
+10,1064,大鉗蟹的糖果
+10,1065,霹靂電球的糖果
+10,1066,蛋蛋的糖果
+10,1067,卡拉卡拉的糖果
+10,1068,飛腿郎的糖果
+10,1069,快拳郎的糖果
+10,1070,大舌頭的糖果
+10,1071,瓦斯彈的糖果
+10,1072,獨角犀牛的糖果
+10,1073,吉利蛋的糖果
+10,1074,蔓藤怪的糖果
+10,1075,袋獸的糖果
+10,1076,墨海馬的糖果
+10,1077,角金魚的糖果
+10,1078,海星星的糖果
+10,1079,魔牆人偶的糖果
+10,1080,飛天螳螂的糖果
+10,1081,迷唇姐的糖果
+10,1082,電擊獸的糖果
+10,1083,凱羅斯的糖果
+10,1084,肯泰羅的糖果
+10,1085,鯉魚王的糖果
+10,1086,拉普拉斯的糖果
+10,1087,百變怪的糖果
+10,1088,伊布的糖果
+10,1089,多邊獸的糖果
+10,1090,菊石獸的糖果
+10,1091,化石盔的糖果
+10,1092,化石翼龍的糖果
+10,1093,卡比獸的糖果
+10,1094,急凍鳥的糖果
+10,1095,閃電鳥的糖果
+10,1096,火焰鳥的糖果
+10,1097,迷你龍的糖果
+10,1098,超夢的糖果
+10,1099,夢幻的糖果
+10,1100,美錄坦的糖果
+10,1101,鴨嘴火獸的糖果

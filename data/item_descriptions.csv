@@ -15511,6 +15511,128 @@ generation_id,language_id,item_id,description
 7,1,977,ロトムパワーの　ひとつ。\nたたかっている　じぶんの　ポケモンの\nＰＰが　すべて　かいふくする。
 7,1,978,ロトムパワーの　ひとつ。\nたたかっている　じぶんの　ポケモンの\nのうりょくが　すべて　あがる。
 7,1,979,ロトムパワーの　ひとつ。　つかうと\nめのまえにいる　やせいポケモンが\nとても　つかまえやすくなる。
+7,1,980,クチバ　ジムリーダー　マチスから\nもらった　サインしきし。\nＧｏｏｄ　Ｌｕｃｋ！と　かかれている。
+7,1,981,ポケモンに　あたえると\nつかまえ　やすくなる　きのみ。
+7,1,982,ポケモンに　あたえると\nかなり　つかまえ　やすくなる　きのみ。
+7,1,983,ポケモンを　つかまえる　ときに\nあたえると　おちつく　きのみ。
+7,1,984,ポケモンを　つかまえる　ときに\nあたえると　かなり　おちつく　きのみ。
+7,1,985,ポケモンに　あたえると\nつかまえた　ときに　どうぐが\nてにはいり　やすくなる　きのみ。
+7,1,986,ポケモンに　あたえると\nつかまえた　ときに　どうぐが\nかなり　てにはいり　やすくなる　きのみ。
+7,1,987,きまった　ばしょで　つかうことで\nとくしゅな　でんきしんごうを　だして\nとびらを　あける　ハイテクな　カギ。
+7,1,988,ほそくて　ちいさい　バネ。\nすっかり　のびきって　つかいみちが\nみつからない。
+7,1,989,みちの　はしっこで　ひろった\nしろっぽい　ちいさな　いし。
+7,1,990,まんまるの　ガラスだま。\nとうめいな　たまの　なかに\nいろガラスの　もようが　みえる。
+7,1,991,だれかが　おとした\nかたっぽ　だけの　ピアス。
+7,1,992,なみに　もまれて　まるくなった\nいろの　ついた　ガラスへん。\nすこし　ざらざら　している。
+7,1,993,きんいろの　ふしぎな　はっぱ。\nこの　はっぱを　つける　きは\nみつかって　いない。
+7,1,994,ぎんいろの　ふしぎな　はっぱ。\nこの　はっぱを　つける　きは\nみつかって　いない。
+7,1,995,じかんを　かけて　みがきあげた\nひょうめんが　ツルツルに　ひかる\nどろで　できた　だんご。
+7,1,996,あたたかい　ちほうの　うみから\nながれついた　かも　しれない\nしろくて　きれいな　かいがら。
+7,1,997,このはで　つくった　てがみ。\nピカチュウの　あしあとで\nなにかが　かかれて　いる。
+7,1,998,このはで　つくった　てがみ。\nイーブイの　あしあとで\nなにかが　かかれて　いる。
+7,1,999,ただ　ひとりの　トレーナーへの\nきもちを　こめて　いっしょうけんめい\nつくった　ささやかな　はなたば。
+7,1,1000,つかうと　すこしの　あいだ\nめずらしい　ポケモンが\nでて　きやすく　なる　こうすい。
+7,1,1001,つかうと　めずらしい　ポケモンが\nでて　きやすく　なる　こうすい。\nむしよせコロンより　ながく　もつ。
+7,1,1002,つかうと　めずらしい　ポケモンが\nでて　きやすく　なる　こうすい。\nシルバーコロンより　ながく　もつ。
+7,1,1003,ニビめいぶつの　あられ。\nポケモン　１ひきの　じょうたいの\nいじょうを　すべて　かいふくする。
+7,1,1004,エネルギーの　つまった　アメ。\nポケモンの　たいりょくを　あげる。
+7,1,1005,エネルギーの　つまった　アメ。\nポケモンの　こうげきを　あげる。
+7,1,1006,エネルギーの　つまった　アメ。\nポケモンの　ぼうぎょを　あげる。
+7,1,1007,エネルギーの　つまった　アメ。\nポケモンの　とくこうを　あげる。
+7,1,1008,エネルギーの　つまった　アメ。\nポケモンの　とくぼうを　あげる。
+7,1,1009,エネルギーの　つまった　アメ。\nポケモンの　すばやさを　あげる。
+7,1,1010,エネルギーの　つまった　おおきい　アメ。\nレベル３０　いじょうの　ポケモンの\nたいりょくを　あげる。
+7,1,1011,エネルギーの　つまった　おおきい　アメ。\nレベル３０　いじょうの　ポケモンの\nこうげきを　あげる。
+7,1,1012,エネルギーの　つまった　おおきい　アメ。\nレベル３０　いじょうの　ポケモンの\nぼうぎょを　あげる。
+7,1,1013,エネルギーの　つまった　おおきい　アメ。\nレベル３０　いじょうの　ポケモンの\nとくこうを　あげる。
+7,1,1014,エネルギーの　つまった　おおきい　アメ。\nレベル３０　いじょうの　ポケモンの\nとくぼうを　あげる。
+7,1,1015,エネルギーの　つまった　おおきい　アメ。\nレベル３０　いじょうの　ポケモンの\nすばやさを　あげる。
+7,1,1016,エネルギーの　つまった　とくだいの　アメ。\nレベル６０　いじょうの　ポケモンの\nたいりょくを　あげる。
+7,1,1017,エネルギーの　つまった　とくだいの　アメ。\nレベル６０　いじょうの　ポケモンの\nこうげきを　あげる。
+7,1,1018,エネルギーの　つまった　とくだいの　アメ。\nレベル６０　いじょうの　ポケモンの\nぼうぎょを　あげる。
+7,1,1019,エネルギーの　つまった　とくだいの　アメ。\nレベル６０　いじょうの　ポケモンの\nとくこうを　あげる。
+7,1,1020,エネルギーの　つまった　とくだいの　アメ。\nレベル６０　いじょうの　ポケモンの\nとくぼうを　あげる。
+7,1,1021,エネルギーの　つまった　とくだいの　アメ。\nレベル６０　いじょうの　ポケモンの\nすばやさを　あげる。
+7,1,1022,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1023,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1024,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1025,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1026,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1027,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1028,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1029,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1030,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1031,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1032,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1033,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1034,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1035,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1036,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1037,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1038,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1039,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1040,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1041,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1042,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1043,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1044,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1045,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1046,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1047,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1048,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1049,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1050,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1051,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1052,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1053,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1054,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1055,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1056,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1057,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1058,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1059,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1060,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1061,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1062,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1063,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1064,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1065,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1066,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1067,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1068,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1069,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1070,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1071,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1072,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1073,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1074,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1075,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1076,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1077,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1078,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1079,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1080,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1081,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1082,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1083,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1084,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1085,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1086,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1087,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1088,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1089,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1090,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1091,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1092,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1093,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1094,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1095,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1096,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1097,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1098,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1099,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1100,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
+7,1,1101,エネルギーの　つまった　アメ。\nとくていの　ポケモンの　のうりょくを\nすべて　あげる。
 7,2,1,???
 7,2,2,"The best Poké Ball with the ultimate level of\nperformance. With it, you will catch any wild\nPokémon without fail."
 7,2,3,An ultra-high-performance Poké Ball that provides\na higher success rate for catching Pokémon than\na Great Ball.
@@ -16409,6 +16531,128 @@ generation_id,language_id,item_id,description
 7,2,977,One of the Rotom Powers.\nIt fully restores the PP of your battling Pokémon.
 7,2,978,One of the Rotom Powers.\nIt raises all stats of your battling Pokémon.
 7,2,979,One of the Rotom Powers.\nIt increases the chance to catch Pokémon\na lot.
+7,2,980,"The autograph you got from the Vermilion City Gym\nLeader, Lt. Surge. He wrote, “Good luck!”"
+7,2,981,A Berry that makes it easier to catch Pokémon when\ngiven to them.
+7,2,982,A Berry that makes it drastically easier to catch\nPokémon when given to them.
+7,2,983,A Berry that calms wild Pokémon you’re trying to catch\nwhen given to them.
+7,2,984,A Berry that calms wild Pokémon you’re trying to catch\ndrastically when given to them.
+7,2,985,A Berry that makes you more likely to get an item when\ngiven to Pokémon you’re trying to catch.
+7,2,986,A Berry that makes you drastically more likely\nto get an item when given to Pokémon you’re\ntrying to catch.
+7,2,987,A high-tech key that has to be used at a specific\nlocation. It emits a special electronic signal to open\na door.
+7,2,988,"A thin small spring. It’s totally stretched out, and\nwhat it’s used for is unknown."
+7,2,989,A small whitish stone picked up at the edge of the road.
+7,2,990,A round glass marble. You can see colored glass\ninside the transparent marble.
+7,2,991,A single earring that somebody dropped.
+7,2,992,A piece of colored glass. Waves have rounded its edges.\nIt’s slightly rough to the touch.
+7,2,993,A mysterious gold leaf. No trees with this leaf have\nbeen found yet.
+7,2,994,A mysterious silver leaf. No trees with this leaf have\nbeen found yet.
+7,2,995,A ball made of mud. It had been polished for such\na long time that the surface is very shiny.
+7,2,996,A beautiful white shell that may have drifted from\na sea in a warm region.
+7,2,997,A letter written on a leaf. Something is written using\nPikachu’s footprints.
+7,2,998,A letter written on a leaf. Something is written using\nEevee’s footprints.
+7,2,999,A small bouquet that was made with heart and soul\nfor a single Trainer.
+7,2,1000,A glass bottle of perfume that makes rare Pokémon\nmore likely to appear.
+7,2,1001,A glass bottle of perfume that makes rare Pokémon\nmore likely to appear. It lasts longer than a Lure.
+7,2,1002,A glass bottle of perfume that makes rare Pokémon\nmore likely to appear. It lasts longer than a Super Lure.
+7,2,1003,Pewter City’s famous crunchy snack. They can be used\nto heal all status conditions of a single Pokémon.
+7,2,1004,"A candy that is packed with energy. When given to\na Pokémon, it will increase that Pokémon’s HP."
+7,2,1005,"A candy that is packed with energy. When given to\na Pokémon, it will increase that Pokémon’s Attack stat."
+7,2,1006,"A candy that is packed with energy. When given to\na Pokémon, it will increase that Pokémon’s Defense stat."
+7,2,1007,"A candy that is packed with energy. When given to\na Pokémon, it will increase that Pokémon’s Sp. Atk stat."
+7,2,1008,"A candy that is packed with energy. When given to\na Pokémon, it will increase that Pokémon’s Sp. Def stat."
+7,2,1009,"A candy that is packed with energy. When given to\na Pokémon, it will increase that Pokémon’s Speed stat."
+7,2,1010,"A big candy that is packed with energy. When given to\na Pokémon at Lv. 30 or higher, it will increase\nthat Pokémon’s HP."
+7,2,1011,"A big candy that is packed with energy. When given to\na Pokémon at Lv. 30 or higher, it will increase that\nPokémon’s Attack stat."
+7,2,1012,"A big candy that is packed with energy. When given to\na Pokémon at Lv. 30 or higher, it will increase\nthat Pokémon’s Defense stat."
+7,2,1013,"A big candy that is packed with energy. When given to\na Pokémon at Lv. 30 or higher, it will increase that\nPokémon’s Sp. Atk stat."
+7,2,1014,"A big candy that is packed with energy. When given to\na Pokémon at Lv. 30 or higher, it will increase that\nPokémon’s Sp. Def stat."
+7,2,1015,"A big candy that is packed with energy. When given to\na Pokémon at Lv. 30 or higher, it will increase that\nPokémon’s Speed stat."
+7,2,1016,"A huge candy that is packed with energy. When given\nto a Pokémon at Lv. 60 or higher, it will increase\nthat Pokémon’s HP."
+7,2,1017,"A huge candy that is packed with energy. When given\nto a Pokémon at Lv. 60 or higher, it will increase that\nPokémon’s Attack stat."
+7,2,1018,"A huge candy that is packed with energy. When given\nto a Pokémon at Lv. 60 or higher, it will increase\nthat Pokémon’s Defense stat."
+7,2,1019,"A huge candy that is packed with energy. When given\nto a Pokémon at Lv. 60 or higher, it will increase that\nPokémon’s Sp. Atk stat."
+7,2,1020,"A huge candy that is packed with energy. When given\nto a Pokémon at Lv. 60 or higher, it will increase that\nPokémon’s Sp. Def stat."
+7,2,1021,"A huge candy that is packed with energy. When given\nto a Pokémon at Lv. 60 or higher, it will increase that\nPokémon’s Speed stat."
+7,2,1022,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1023,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1024,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1025,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1026,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1027,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1028,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1029,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1030,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1031,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1032,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1033,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1034,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1035,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1036,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1037,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1038,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1039,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1040,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1041,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1042,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1043,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1044,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1045,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1046,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1047,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1048,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1049,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1050,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1051,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1052,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1053,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1054,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1055,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1056,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1057,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1058,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1059,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1060,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1061,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1062,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1063,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1064,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1065,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1066,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1067,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1068,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1069,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1070,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1071,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1072,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1073,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1074,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1075,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1076,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1077,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1078,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1079,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1080,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1081,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1082,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1083,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1084,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1085,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1086,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1087,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1088,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1089,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1090,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1091,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1092,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1093,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1094,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1095,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1096,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1097,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1098,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1099,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1100,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
+7,2,1101,"A candy that is packed with energy. When given to\ncertain Pokémon, it will increase all their stats at once."
 7,3,1,???
 7,3,2,Assurément la Ball la plus performante.\nElle permet de capturer à coup sûr un Pokémon\nsauvage.
 7,3,3,Une Ball très performante dont le taux de réussite\nest supérieur à celui de la Super Ball.
@@ -17307,6 +17551,128 @@ generation_id,language_id,item_id,description
 7,3,977,Une des Motism’Auras. Elle permet à vos Pokémon\nen combat de récupérer la totalité de leurs PP.
 7,3,978,Une des Motism’Auras. Elle permet d’augmenter\ntoutes les stats de vos Pokémon en combat.
 7,3,979,Une des Motism’Auras. Elle permet d’attraper\nbeaucoup plus facilement le Pokémon sauvage\nque vous affrontez.
+7,3,980,"C’est un autographe de Major Bob, le Champion\nde l’Arène de Carmin sur Mer ! Il y a écrit « Good luck ! »\ndessus."
+7,3,981,Une Baie à donner à un Pokémon sauvage pour pouvoir\nl’attraper plus facilement.
+7,3,982,Une Baie à donner à un Pokémon sauvage pour pouvoir\nl’attraper beaucoup plus facilement.
+7,3,983,Une Baie à donner à un Pokémon sauvage au moment\nde la capture pour le calmer pendant un instant.
+7,3,984,Une Baie à donner à un Pokémon sauvage au moment\nde la capture pour le calmer durablement.
+7,3,985,Une Baie à donner à un Pokémon sauvage pour avoir\nplus de chances d’obtenir un objet après l’avoir capturé.
+7,3,986,Une Baie à donner à un Pokémon sauvage pour avoir\nbeaucoup plus de chances d’obtenir un objet après\nl’avoir capturé.
+7,3,987,Une clé destinée à une serrure très complexe.\nOuvre une porte en transmettant un signal électrique.
+7,3,988,Un petit ressort fin et complètement distendu.\nNul ne sait à quoi il peut bien servir.
+7,3,989,Une petite pierre blanchâtre trouvée sur le bord\nde la route.
+7,3,990,Une bille de verre transparente avec un motif coloré\nà l’intérieur.
+7,3,991,Une boucle d’oreille perdue par quelqu’un.
+7,3,992,Un morceau de verre coloré arrondi par les vagues.\nSa texture est légèrement rugueuse.
+7,3,993,Une feuille dorée mystérieuse. Elle ne semble\nappartenir à aucun arbre connu.
+7,3,994,Une feuille argentée mystérieuse. Elle ne semble\nappartenir à aucun arbre connu.
+7,3,995,Une boulette de boue si bien polie qu’elle brille\nde mille feux.
+7,3,996,Un joli coquillage blanc. Il a peut-être été porté\npar les vagues depuis une région tropicale.
+7,3,997,Une lettre rédigée sur une feuille d’arbre.\nPikachu semble y avoir écrit quelque chose\navec ses pattes.
+7,3,998,Une lettre rédigée sur une feuille d’arbre.\nÉvoli semble y avoir écrit quelque chose avec ses pattes.
+7,3,999,"Un petit bouquet arrangé avec amour pour\nun[VAR GENDBR(00FF,0B09)] Dresseure Dresseuse vraiment unique."
+7,3,1000,Une substance qui fait apparaître les Pokémon rares\nplus facilement pendant un court moment.
+7,3,1001,Une substance qui fait apparaître les Pokémon rares\nplus facilement pendant une durée plus longue que\nle Parfum.
+7,3,1002,Une substance qui fait apparaître les Pokémon rares\nplus facilement pendant une durée plus longue que\nle Super Parfum.
+7,3,1003,Une spécialité d’Argenta.\nSoigne toutes les altérations de statut d’un Pokémon.
+7,3,1004,Un bonbon plein d’énergie.\nIl augmente les PV d’un Pokémon.
+7,3,1005,Un bonbon plein d’énergie.\nIl augmente l’Attaque d’un Pokémon.
+7,3,1006,Un bonbon plein d’énergie.\nIl augmente la Défense d’un Pokémon.
+7,3,1007,Un bonbon plein d’énergie.\nIl augmente l’Attaque Spéciale d’un Pokémon.
+7,3,1008,Un bonbon plein d’énergie.\nIl augmente la Défense Spéciale d’un Pokémon.
+7,3,1009,Un bonbon plein d’énergie.\nIl augmente la Vitesse d’un Pokémon.
+7,3,1010,Un gros bonbon plein d’énergie.\nIl augmente les PV d’un Pokémon de niveau 30\nou supérieur.
+7,3,1011,Un gros bonbon plein d’énergie.\nIl augmente l’Attaque d’un Pokémon de niveau 30\nou supérieur.
+7,3,1012,Un gros bonbon plein d’énergie.\nIl augmente la Défense d’un Pokémon de niveau 30\nou supérieur.
+7,3,1013,Un gros bonbon plein d’énergie.\nIl augmente l’Attaque Spéciale d’un Pokémon\nde niveau 30 ou supérieur.
+7,3,1014,Un gros bonbon plein d’énergie.\nIl augmente la Défense Spéciale d’un Pokémon\nde niveau 30 ou supérieur.
+7,3,1015,Un gros bonbon plein d’énergie.\nIl augmente la Vitesse d’un Pokémon de niveau 30\nou supérieur.
+7,3,1016,Un énorme bonbon plein d’énergie.\nIl augmente les PV d’un Pokémon de niveau 60\nou supérieur.
+7,3,1017,Un énorme bonbon plein d’énergie.\nIl augmente l’Attaque d’un Pokémon de niveau 60\nou supérieur.
+7,3,1018,Un énorme bonbon plein d’énergie.\nIl augmente la Défense d’un Pokémon de niveau 60\nou supérieur.
+7,3,1019,Un énorme bonbon plein d’énergie.\nIl augmente l’Attaque Spéciale d’un Pokémon\nde niveau 60 ou supérieur.
+7,3,1020,Un énorme bonbon plein d’énergie.\nIl augmente la Défense Spéciale d’un Pokémon\nde niveau 60 ou supérieur.
+7,3,1021,Un énorme bonbon plein d’énergie.\nIl augmente la Vitesse d’un Pokémon de niveau 60\nou supérieur.
+7,3,1022,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1023,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1024,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1025,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1026,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1027,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1028,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1029,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1030,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1031,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1032,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1033,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1034,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1035,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1036,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1037,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1038,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1039,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1040,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1041,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1042,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1043,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1044,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1045,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1046,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1047,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1048,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1049,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1050,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1051,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1052,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1053,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1054,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1055,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1056,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1057,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1058,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1059,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1060,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1061,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1062,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1063,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1064,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1065,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1066,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1067,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1068,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1069,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1070,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1071,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1072,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1073,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1074,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1075,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1076,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1077,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1078,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1079,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1080,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1081,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1082,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1083,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1084,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1085,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1086,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1087,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1088,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1089,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1090,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1091,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1092,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1093,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1094,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1095,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1096,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1097,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1098,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1099,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1100,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
+7,3,1101,Un bonbon plein d’énergie.\nIl augmente toutes les stats d’un certain Pokémon.
 7,4,1,???
 7,4,2,Der beste Ball! Damit fängst du garantiert jedes\nwilde Pokémon.
 7,4,3,Ein Ball mit hoher Erfolgsquote. Dem Superball in\nallen Punkten überlegen.
@@ -18205,6 +18571,128 @@ generation_id,language_id,item_id,description
 7,4,977,"Diese Rotom-Kraft bewirkt, dass im Kampf die AP\nder eigenen Pokémon auf der Mitstreiterseite\nvollständig wiederaufgefüllt werden."
 7,4,978,"Diese Rotom-Kraft bewirkt, dass im Kampf die\nStatuswerte der eigenen Pokémon auf der\nMitstreiterseite erhöht werden."
 7,4,979,"Diese Rotom-Kraft bewirkt, dass wilde Pokémon\nmit höherer Wahrscheinlichkeit gefangen werden."
+7,4,980,"Das ist ein Autogramm von Major Bob,\ndem Arenaleiter von Orania City.\nDarauf steht: „Viel Glück, [VAR GENDBR(00FF,0806,0000)]RekrutRekrutin!“"
+7,4,981,"Gibst du diese Beere einem Pokémon zu essen,\nlässt es sich leichter fangen."
+7,4,982,"Gibst du diese Beere einem Pokémon zu essen,\nlässt es sich viel leichter fangen."
+7,4,983,"Gibst du diese Beere einem Pokémon zu essen,\nwird es während des Fangversuchs ruhiger."
+7,4,984,"Gibst du diese Beere einem Pokémon zu essen,\nwird es während des Fangversuchs viel ruhiger."
+7,4,985,"Gibst du diese Beere einem Pokémon zu essen, wird die\nChance, bei einem erfolgreichen Fangversuch ein Item\nzu erhalten, erhöht."
+7,4,986,"Gibst du diese Beere einem Pokémon zu essen, wird die\nChance, bei einem erfolgreichen Fangversuch ein Item\nzu erhalten, stark erhöht."
+7,4,987,"Ein besonderer Schlüssel, der an einem speziellen\nOrt Türen durch ein elektrisches Signal öffnet."
+7,4,988,"Eine kleine, dünne Feder, die bis zum Äußersten\ngedehnt wurde. Man kann nicht mehr erkennen,\nwofür sie ursprünglich verwendet wurde."
+7,4,989,"Ein kleiner Stein mit weißlicher Färbung, der vom\nStraßenrand aufgehoben wurde."
+7,4,990,"Eine runde, durchsichtige Kugel aus Glas. In ihrer Mitte\nbefinden sich Muster in verschiedensten Farben."
+7,4,991,"Ein einzelner Ohrring, den irgendjemand verloren hat."
+7,4,992,"Ein farbiges Stück Glas, das von den Wellen umspült\nund so abgeschliffen wurde. Es fühlt sich etwas rau an."
+7,4,993,"Ein rätselhaftes Blatt mit goldener Färbung. Bisher hat\nman noch keinen Baum entdeckt, an dem solche Blätter\nwachsen."
+7,4,994,"Ein rätselhaftes Blatt mit silberner Färbung. Bisher hat\nman noch keinen Baum entdeckt, an dem solche Blätter\nwachsen."
+7,4,995,"Eine Kugel aus Schlamm, die so lange Zeit poliert\nwurde, dass ihre Oberfläche nun leuchtend glänzt."
+7,4,996,Eine wunderschöne weiße Muschelschale. Vermutlich\nstammt sie aus dem Meer einer wärmeren Region und\nwurde von der Strömung angespült.
+7,4,997,"Ein Brief, der auf einem Blatt verfasst wurde.\nPikachu scheint mit seinen Pfotenabdrücken\netwas geschrieben zu haben."
+7,4,998,"Ein Brief, der auf einem Blatt verfasst wurde.\nEvoli scheint mit seinen Pfotenabdrücken\netwas geschrieben zu haben."
+7,4,999,"Ein Blumenstrauß, der sorgfältig und mit viel Mühe\nfür einen ganz besonderen Trainer gesteckt wurde."
+7,4,1000,"Ein Parfüm, das für kurze Zeit vermehrt\nseltene Pokémon erscheinen lässt."
+7,4,1001,"Ein Parfüm, das für kurze Zeit vermehrt\nseltene Pokémon erscheinen lässt.\nWirkt länger als das Item Lockparfüm."
+7,4,1002,"Ein Parfüm, das für kurze Zeit vermehrt\nseltene Pokémon erscheinen lässt.\nWirkt länger als das Item Super-Lockparfüm."
+7,4,1003,Eine berühmte Knabberei aus Marmoria City.\nBehebt alle Statusprobleme eines Pokémon.
+7,4,1004,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft die KP eines Pokémon."
+7,4,1005,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft den Angriff eines Pokémon."
+7,4,1006,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft die Verteidigung eines Pokémon."
+7,4,1007,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft den Spezial-Angriff eines Pokémon."
+7,4,1008,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft die Spezial-Verteidigung eines\nPokémon."
+7,4,1009,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft die Initiative eines Pokémon."
+7,4,1010,"Ein großes Bonbon, das voller Energie steckt.\nErhöht dauerhaft die KP eines Pokémon ab Level 30."
+7,4,1011,"Ein großes Bonbon, das voller Energie steckt.\nErhöht dauerhaft den Angriff eines Pokémon ab\nLevel 30."
+7,4,1012,"Ein großes Bonbon, das voller Energie steckt.\nErhöht dauerhaft die Verteidigung eines Pokémon ab\nLevel 30."
+7,4,1013,"Ein großes Bonbon, das voller Energie steckt.\nErhöht dauerhaft den Spezial-Angriff eines Pokémon\nab Level 30."
+7,4,1014,"Ein großes Bonbon, das voller Energie steckt.\nErhöht dauerhaft die Spezial-Verteidigung eines\nPokémon ab Level 30."
+7,4,1015,"Ein großes Bonbon, das voller Energie steckt.\nErhöht dauerhaft die Initiative eines Pokémon ab\nLevel 30."
+7,4,1016,"Ein riesiges Bonbon, das voller Energie steckt.\nErhöht dauerhaft die KP eines Pokémon ab Level 60."
+7,4,1017,"Ein riesiges Bonbon, das voller Energie steckt.\nErhöht dauerhaft den Angriff eines Pokémon ab\nLevel 60."
+7,4,1018,"Ein riesiges Bonbon, das voller Energie steckt.\nErhöht dauerhaft die Verteidigung eines Pokémon ab\nLevel 60."
+7,4,1019,"Ein riesiges Bonbon, das voller Energie steckt.\nErhöht dauerhaft den Spezial-Angriff eines Pokémon\nab Level 60."
+7,4,1020,"Ein riesiges Bonbon, das voller Energie steckt.\nErhöht dauerhaft die Spezial-Verteidigung eines\nPokémon ab Level 60."
+7,4,1021,"Ein riesiges Bonbon, das voller Energie steckt.\nErhöht dauerhaft die Initiative eines Pokémon ab\nLevel 60."
+7,4,1022,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1023,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1024,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1025,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1026,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1027,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1028,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1029,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1030,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1031,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1032,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1033,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1034,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1035,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1036,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1037,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1038,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1039,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1040,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1041,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1042,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1043,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1044,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1045,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1046,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1047,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1048,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1049,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1050,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1051,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1052,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1053,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1054,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1055,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1056,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1057,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1058,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1059,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1060,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1061,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1062,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1063,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1064,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1065,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1066,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1067,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1068,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1069,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1070,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1071,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1072,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1073,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1074,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1075,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1076,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1077,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1078,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1079,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1080,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1081,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1082,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1083,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1084,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1085,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1086,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1087,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1088,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1089,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1090,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1091,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1092,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1093,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1094,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1095,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1096,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1097,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1098,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1099,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1100,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
+7,4,1101,"Ein Bonbon, das voller Energie steckt.\nErhöht dauerhaft sämtliche Statuswerte eines\nbestimmten Pokémon."
 7,5,1,???
 7,5,2,La Poké Ball dalle prestazioni migliori: cattura\nqualsiasi Pokémon selvatico senza mai fallire.
 7,5,3,Poké Ball dalle prestazioni eccellenti: fornisce\nmaggiori probabilità di cattura rispetto alla\nMega Ball.
@@ -19103,6 +19591,128 @@ generation_id,language_id,item_id,description
 7,5,977,Potere Rotom che permette ai propri Pokémon\nimpegnati in una lotta di recuperare tutti i PP.
 7,5,978,Potere Rotom che fa aumentare tutte le statistiche\ndei propri Pokémon impegnati in una lotta.
 7,5,979,Potere Rotom che rende considerevolmente\npiù facile catturare i Pokémon selvatici.
+7,5,980,"È l’autografo di Lt. Surge, il Capopalestra\ndi Aranciopoli. C’è scritto “Good luck!”."
+7,5,981,Bacca che facilita la cattura del Pokémon\nselvatico a cui viene data.
+7,5,982,Bacca che facilita di molto la cattura del Pokémon\nselvatico a cui viene data.
+7,5,983,Bacca che calma il Pokémon selvatico\na cui viene data.
+7,5,984,Bacca che calma molto il Pokémon selvatico\na cui viene data.
+7,5,985,Bacca che rende più facile ottenere strumenti\nquando catturi il Pokémon a cui l’hai data.
+7,5,986,Bacca che rende molto più facile ottenere strumenti\nquando catturi il Pokémon a cui l’hai data.
+7,5,987,Una sofisticata chiave da usare in un determinato\nluogo. Emette un impulso elettrico speciale che\napre una porta.
+7,5,988,Una molla piccola e sottile.\nÈ deformata e ormai inutilizzabile.
+7,5,989,Piccola pietra biancastra raccolta sul ciglio della strada.
+7,5,990,Una biglia di vetro perfettamente rotonda. Al suo\ninterno si vede in trasparenza del vetro colorato.
+7,5,991,"Un orecchino spaiato, perso da qualcuno."
+7,5,992,Un piccolo pezzetto di vetro colorato che è stato\narrotondato dalle onde del mare. È un po’ ruvido\nal tatto.
+7,5,993,Una strana foglia dorata. Nessuno sa da che albero\nprovenga.
+7,5,994,Una strana foglia argentata. Nessuno sa da che albero\nprovenga.
+7,5,995,"Una pallina di fango levigata con cura, tanto che\nla sua superficie è liscia e lucida."
+7,5,996,"Una bellissima conchiglia bianca, forse arrivata dalle\nregioni calde sulla scia delle correnti marine."
+7,5,997,"Una lettera scritta sulla foglia di un albero, dove le\nimpronte di Pikachu sembrano formare delle frasi\ndi senso compiuto."
+7,5,998,"Una lettera scritta sulla foglia di un albero, dove le\nimpronte di Eevee sembrano formare delle frasi\ndi senso compiuto."
+7,5,999,"Un piccolo mazzo di fiori composto con cura\ne amore per un[VAR GENDBR(00FF,0B0A)] Allenator’Allenatrice unic[VAR GENDBR(00FF,0101)]oa al mondo."
+7,5,1000,Profumo che attira Pokémon rari per un po’ di tempo.
+7,5,1001,Profumo che attira Pokémon rari.\nIl suo effetto dura più a lungo di quello\ndel Profumo invito.
+7,5,1002,Profumo che attira Pokémon rari.\nIl suo effetto dura più a lungo di quello\ndel Superprofumo.
+7,5,1003,I salatini tipici di Plumbeopoli. Curano tutti i problemi\ndi stato di un Pokémon.
+7,5,1004,Una caramella piena zeppa di energia.\nAumenta i PS di un Pokémon.
+7,5,1005,Una caramella piena zeppa di energia.\nAumenta l’Attacco di un Pokémon.
+7,5,1006,Una caramella piena zeppa di energia.\nAumenta la Difesa di un Pokémon.
+7,5,1007,Una caramella piena zeppa di energia.\nAumenta l’Attacco Speciale di un Pokémon.
+7,5,1008,Una caramella piena zeppa di energia.\nAumenta la Difesa Speciale di un Pokémon.
+7,5,1009,Una caramella piena zeppa di energia.\nAumenta la Velocità di un Pokémon.
+7,5,1010,Una caramella piena zeppa di energia.\nAumenta i PS di un Pokémon di livello 30\no superiore.
+7,5,1011,Una caramella piena zeppa di energia.\nAumenta l’Attacco di un Pokémon di livello 30\no superiore.
+7,5,1012,Una caramella piena zeppa di energia.\nAumenta la Difesa di un Pokémon di livello 30\no superiore.
+7,5,1013,Una caramella piena zeppa di energia.\nAumenta l’Attacco Speciale di un Pokémon\ndi livello 30 o superiore.
+7,5,1014,Una caramella piena zeppa di energia.\nAumenta la Difesa Speciale di un Pokémon\ndi livello 30 o superiore.
+7,5,1015,Una caramella piena zeppa di energia.\nAumenta la Velocità di un Pokémon di livello 30\no superiore.
+7,5,1016,Una caramella piena zeppa di energia.\nAumenta i PS di un Pokémon di livello 60\no superiore.
+7,5,1017,Una caramella piena zeppa di energia.\nAumenta l’Attacco di un Pokémon di livello 60\no superiore.
+7,5,1018,Una caramella piena zeppa di energia.\nAumenta la Difesa di un Pokémon di livello 60\no superiore.
+7,5,1019,Una caramella piena zeppa di energia.\nAumenta l’Attacco Speciale di un Pokémon\ndi livello 60 o superiore.
+7,5,1020,Una caramella piena zeppa di energia.\nAumenta la Difesa Speciale di un Pokémon\ndi livello 60 o superiore.
+7,5,1021,Una caramella piena zeppa di energia.\nAumenta la Velocità di un Pokémon di livello 60\no superiore.
+7,5,1022,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1023,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1024,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1025,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1026,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1027,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1028,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1029,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1030,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1031,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1032,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1033,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1034,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1035,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1036,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1037,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1038,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1039,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1040,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1041,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1042,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1043,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1044,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1045,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1046,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1047,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1048,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1049,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1050,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1051,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1052,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1053,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1054,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1055,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1056,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1057,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1058,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1059,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1060,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1061,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1062,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1063,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1064,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1065,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1066,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1067,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1068,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1069,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1070,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1071,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1072,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1073,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1074,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1075,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1076,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1077,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1078,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1079,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1080,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1081,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1082,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1083,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1084,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1085,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1086,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1087,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1088,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1089,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1090,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1091,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1092,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1093,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1094,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1095,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1096,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1097,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1098,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1099,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1100,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
+7,5,1101,Una caramella piena zeppa di energia.\nAumenta tutte le statistiche di determinati Pokémon.
 7,6,1,(?)
 7,6,2,La Poké Ball definitiva. Atrapa cualquier Pokémon\nsalvaje y no falla nunca.
 7,6,3,Poké Ball de rendimiento superior. Tiene un índice\nde éxito mayor al de la Super Ball.
@@ -20001,6 +20611,128 @@ generation_id,language_id,item_id,description
 7,6,977,Poder Rotom que restaura todos los PP de los\nPokémon de tu equipo que estén combatiendo.
 7,6,978,Poder Rotom que hace aumentar las características\nde los Pokémon de tu equipo que estén\ncombatiendo.
 7,6,979,Poder Rotom que aumenta mucho la probabilidad\nde capturar al Pokémon salvaje al que te estés\nenfrentando.
+7,6,980,"El autógrafo del Teniente Surge, el Líder de Gimnasio\nde Ciudad Carmín. La dedicatoria reza: ""Good luck!""."
+7,6,981,Una baya que puedes lanzar a un Pokémon salvaje\npara que resulte bastante más fácil capturarlo.
+7,6,982,Una baya que puedes lanzar a un Pokémon salvaje\npara que resulte mucho más fácil capturarlo.
+7,6,983,Una baya que puedes lanzar a un Pokémon salvaje\npara tranquilizarlo bastante.
+7,6,984,Una baya que puedes lanzar a un Pokémon salvaje\npara tranquilizarlo mucho.
+7,6,985,Una baya que puedes lanzar a un Pokémon salvaje\npara aumentar bastante las probabilidades de conseguir\nun objeto tras capturarlo.
+7,6,986,Una baya que puedes lanzar a un Pokémon salvaje\npara aumentar mucho las probabilidades de conseguir\nun objeto tras capturarlo.
+7,6,987,Una llave de alta tecnología que debe usarse en\nun lugar concreto. Emite una señal eléctrica que\nabre una puerta.
+7,6,988,Muelle fino y pequeño. Está algo elongado y se\ndesconoce cuál puede ser su uso.
+7,6,989,Piedra de yeso pequeña y blanquecina encontrada en\nla linde de un camino.
+7,6,990,Esfera de cristal transparente en cuyo interior se pueden\napreciar diferentes colores.
+7,6,991,Un pendiente que se le ha debido de caer a alguien.
+7,6,992,Cristal de colores pulido por la acción erosiva de las\nolas. Al tacto resulta algo áspero.
+7,6,993,Extraña hoja de color dorado. Se desconoce de qué\nárbol procede.
+7,6,994,Extraña hoja de color plateado. Se desconoce de qué\nárbol procede.
+7,6,995,Bola de barro que ha sido pulida durante tanto tiempo\nque su superficie ha quedado lisa y brillante.
+7,6,996,Preciosa concha de color blanco que quizá haya sido\narrastrada por las corrientes marinas desde mares de\nregiones más cálidas.
+7,6,997,Una carta escrita en una hoja. Hay huellas de Pikachu\nestampadas en ella y parecen guardar algún significado.
+7,6,998,Una carta escrita en una hoja. Hay huellas de Eevee\nestampadas en ella y parecen guardar algún significado.
+7,6,999,Pequeño ramo de flores confeccionado con dedicación\ny esmero solo para ti.
+7,6,1000,Colonia que atrae a los Pokémon raros durante un breve\nespacio de tiempo.
+7,6,1001,Colonia que atrae a los Pokémon raros y cuyo efecto\nes algo más duradero que el de la Colonia.
+7,6,1002,Colonia que atrae a los Pokémon raros y cuyo efecto\nes algo más duradero que el de la Supercolonia.
+7,6,1003,Tentempié típico de Ciudad Plateada. Cura todos los\nproblemas de estado de un Pokémon.
+7,6,1004,Caramelo energético que aumenta los PS máximos del\nPokémon.
+7,6,1005,Caramelo energético que aumenta el Ataque del\nPokémon.
+7,6,1006,Caramelo energético que aumenta la Defensa del\nPokémon.
+7,6,1007,Caramelo energético que aumenta el Ataque Especial\ndel Pokémon.
+7,6,1008,Caramelo energético que aumenta la Defensa Especial\ndel Pokémon.
+7,6,1009,Caramelo energético que aumenta la Velocidad del\nPokémon.
+7,6,1010,Caramelo energético grande que aumenta los PS\nmáximos de un Pokémon de Nv. 30 o superior.
+7,6,1011,Caramelo energético grande que aumenta el Ataque de\nun Pokémon de Nv. 30 o superior.
+7,6,1012,Caramelo energético grande que aumenta la Defensa\nde un Pokémon de Nv. 30 o superior.
+7,6,1013,Caramelo energético grande que aumenta el Ataque\nEspecial de un Pokémon de Nv. 30 o superior.
+7,6,1014,Caramelo energético grande que aumenta la Defensa\nEspecial de un Pokémon de Nv. 30 o superior.
+7,6,1015,Caramelo energético grande que aumenta la Velocidad\nde un Pokémon de Nv. 30 o superior.
+7,6,1016,Caramelo energético enorme que aumenta los PS\nmáximos de un Pokémon de Nv. 60 o superior.
+7,6,1017,Caramelo energético enorme que aumenta el Ataque\nde un Pokémon de Nv. 60 o superior.
+7,6,1018,Caramelo energético enorme que aumenta la Defensa\nde un Pokémon de Nv. 60 o superior.
+7,6,1019,Caramelo energético enorme que aumenta el Ataque\nEspecial de un Pokémon de Nv. 60 o superior.
+7,6,1020,Caramelo energético enorme que aumenta la Defensa\nEspecial de un Pokémon de Nv. 60 o superior.
+7,6,1021,Caramelo energético enorme que aumenta la Velocidad\nde un Pokémon de Nv. 60 o superior.
+7,6,1022,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1023,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1024,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1025,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1026,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1027,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1028,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1029,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1030,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1031,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1032,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1033,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1034,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1035,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1036,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1037,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1038,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1039,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1040,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1041,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1042,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1043,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1044,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1045,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1046,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1047,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1048,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1049,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1050,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1051,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1052,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1053,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1054,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1055,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1056,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1057,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1058,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1059,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1060,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1061,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1062,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1063,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1064,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1065,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1066,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1067,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1068,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1069,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1070,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1071,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1072,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1073,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1074,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1075,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1076,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1077,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1078,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1079,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1080,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1081,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1082,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1083,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1084,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1085,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1086,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1087,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1088,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1089,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1090,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1091,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1092,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1093,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1094,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1095,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1096,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1097,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1098,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1099,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
+7,6,1100,Caramelo energético que aumenta todas las\ncaracterísticas de ciertos Pokémon.
+7,6,1101,Caramelo energético que aumenta todas las\ncaracterísticas de cierto Pokémon.
 7,7,1,???
 7,7,2,야생 포켓몬을 반드시\n잡을 수 있는\n최고 성능의 볼.
 7,7,3,수퍼볼보다도 더욱\n포켓몬을 잡기 쉬워진\n매우 성능이 좋은 볼.
@@ -20899,6 +21631,128 @@ generation_id,language_id,item_id,description
 7,7,977,로토무파워 중 하나.\n싸우고 있는 자신의 포켓몬의\nPP가 모두 회복한다.
 7,7,978,로토무파워 중 하나.\n싸우고 있는 자신의 포켓몬의\n능력이 모두 올라간다.
 7,7,979,로토무파워 중 하나. 사용하면\n눈앞에 있는 야생 포켓몬을\n매우 잡기 쉬워진다.
+7,7,980,갈색체육관 관장 마티스에게\n받은 사인이 적힌 종이.\nGood Luck!이라고 써 있다.
+7,7,981,포켓몬에게 주면\n잡기 쉬워지는 나무열매.
+7,7,982,포켓몬에게 주면\n상당히 잡기 쉬워지는 나무열매.
+7,7,983,포켓몬을 잡을 때 주면\n얌전해지는 나무열매.
+7,7,984,포켓몬을 잡을 때 주면\n상당히 얌전해지는 나무열매.
+7,7,985,포켓몬에게 주면\n잡았을 때 도구를 손에 넣기\n쉬워지는 나무열매.
+7,7,986,포켓몬에게 주면\n잡았을 때 도구를 손에 넣기\n상당히 쉬워지는 나무열매.
+7,7,987,정해진 장소에서 쓰는 것으로\n특수한 전기 신호를 내어\n문을 여는 첨단기술의 열쇠.
+7,7,988,가늘고 작은 용수철.\n완전히 늘어나서 어디에\n써야 할지 모르겠다.
+7,7,989,길가 구석에서 주운\n하얗고 작은 돌.
+7,7,990,동글동글한 유리구슬.\n투명한 구슬 안에\n색유리의 무늬가 비친다.
+7,7,991,누군가가 떨어뜨린\n한쪽뿐인 귀고리.
+7,7,992,파도에 깎여 둥글어진\n색이 있는 유리 파편.\n조금 거칠거칠하다.
+7,7,993,금빛의 신비한 나뭇잎.\n이 나뭇잎이 자라는 나무는\n아직 발견되지 않았다.
+7,7,994,은빛의 신비한 나뭇잎.\n이 나뭇잎이 자라는 나무는\n아직 발견되지 않았다.
+7,7,995,시간을 들여 빚어낸\n표면이 반질반질하게 빛나는\n진흙으로 만든 경단.
+7,7,996,따뜻한 지방의 바다에서\n흘러들어 왔을지도 모르는\n하얗고 예쁜 조개껍질.
+7,7,997,나뭇잎으로 만든 편지.\n피카츄의 발자국으로\n무언가가 쓰여 있다.
+7,7,998,나뭇잎으로 만든 편지.\n이브이의 발자국으로\n무언가가 쓰여 있다.
+7,7,999,단 하나뿐인 트레이너를 향한\n마음을 담아 정성껏 만든\n작은 꽃다발.
+7,7,1000,사용하면 잠시 동안\n희귀한 포켓몬이\n나오기 쉬워지는 향수.
+7,7,1001,사용하면 희귀한 포켓몬이\n나오기 쉬워지는 향수.\n벌레유인코롱보다 효과가 오래간다.
+7,7,1002,사용하면 희귀한 포켓몬이\n나오기 쉬워지는 향수.\n실버코롱보다 효과가 오래간다.
+7,7,1003,회색시티의 명물인 강정.\n포켓몬 1마리의 상태 이상을\n모두 회복한다.
+7,7,1004,에너지가 가득한 사탕.\n포켓몬의 HP를 올린다.
+7,7,1005,에너지가 가득한 사탕.\n포켓몬의 공격을 올린다.
+7,7,1006,에너지가 가득한 사탕.\n포켓몬의 방어를 올린다.
+7,7,1007,에너지가 가득한 사탕.\n포켓몬의 특수공격을 올린다.
+7,7,1008,에너지가 가득한 사탕.\n포켓몬의 특수방어를 올린다.
+7,7,1009,에너지가 가득한 사탕.\n포켓몬의 스피드를 올린다.
+7,7,1010,에너지가 가득한 큰 사탕.\n레벨 30 이상인 포켓몬의\nHP를 올린다.
+7,7,1011,에너지가 가득한 큰 사탕.\n레벨 30 이상인 포켓몬의\n공격을 올린다.
+7,7,1012,에너지가 가득한 큰 사탕.\n레벨 30 이상인 포켓몬의\n방어를 올린다.
+7,7,1013,에너지가 가득한 큰 사탕.\n레벨 30 이상인 포켓몬의\n특수공격을 올린다.
+7,7,1014,에너지가 가득한 큰 사탕.\n레벨 30 이상인 포켓몬의\n특수방어를 올린다.
+7,7,1015,에너지가 가득한 큰 사탕.\n레벨 30 이상인 포켓몬의\n스피드를 올린다.
+7,7,1016,에너지가 가득한 매우 큰 사탕.\n레벨 60 이상인 포켓몬의\nHP를 올린다.
+7,7,1017,에너지가 가득한 매우 큰 사탕.\n레벨 60 이상인 포켓몬의\n공격을 올린다.
+7,7,1018,에너지가 가득한 매우 큰 사탕.\n레벨 60 이상인 포켓몬의\n방어를 올린다.
+7,7,1019,에너지가 가득한 매우 큰 사탕.\n레벨 60 이상인 포켓몬의\n특수공격을 올린다.
+7,7,1020,에너지가 가득한 매우 큰 사탕.\n레벨 60 이상인 포켓몬의\n특수방어를 올린다.
+7,7,1021,에너지가 가득한 매우 큰 사탕.\n레벨 60 이상인 포켓몬의\n스피드를 올린다.
+7,7,1022,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1023,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1024,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1025,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1026,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1027,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1028,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1029,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1030,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1031,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1032,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1033,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1034,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1035,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1036,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1037,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1038,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1039,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1040,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1041,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1042,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1043,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1044,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1045,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1046,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1047,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1048,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1049,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1050,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1051,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1052,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1053,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1054,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1055,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1056,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1057,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1058,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1059,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1060,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1061,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1062,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1063,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1064,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1065,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1066,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1067,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1068,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1069,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1070,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1071,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1072,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1073,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1074,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1075,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1076,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1077,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1078,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1079,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1080,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1081,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1082,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1083,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1084,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1085,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1086,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1087,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1088,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1089,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1090,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1091,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1092,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1093,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1094,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1095,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1096,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1097,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1098,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1099,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1100,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
+7,7,1101,에너지가 가득한 사탕.\n특정 포켓몬의\n모든 능력을 올린다.
 7,8,1,？？？
 7,8,2,野生の　ポケモンを　必ず\n捕まえることが　できる\n最高　性能の　ボール。
 7,8,3,スーパーボールよりも　さらに\nポケモンを　捕まえやすくなった\nすごく　性能のいい　ボール。
@@ -21797,6 +22651,128 @@ generation_id,language_id,item_id,description
 7,8,977,ロトムパワーの　ひとつ。\n戦っている　自分の　ポケモンの\nＰＰが　すべて　回復する。
 7,8,978,ロトムパワーの　ひとつ。\n戦っている　自分の　ポケモンの\n能力が　すべて　あがる。
 7,8,979,ロトムパワーの　ひとつ。　使うと\n目の前にいる　野生ポケモンが\nとても　捕まえやすくなる。
+7,8,980,クチバ　ジムリーダー　マチスから\nもらった　サイン色紙。\nＧｏｏｄ　Ｌｕｃｋ！と　書かれている。
+7,8,981,ポケモンに　あたえると\n捕まえ　やすくなる　きのみ。
+7,8,982,ポケモンに　あたえると\nかなり　捕まえ　やすくなる　きのみ。
+7,8,983,ポケモンを　捕まえる　ときに\nあたえると　落ち着く　きのみ。
+7,8,984,ポケモンを　捕まえる　ときに\nあたえると　かなり　落ち着く　きのみ。
+7,8,985,ポケモンに　あたえると\n捕まえた　ときに　道具が\n手にはいり　やすくなる　きのみ。
+7,8,986,ポケモンに　あたえると\n捕まえた　ときに　道具が\nかなり　手にはいり　やすくなる　きのみ。
+7,8,987,決まった　場所で　使うことで\n特殊な　電気信号を　だして\n扉を　開ける　ハイテクな　カギ。
+7,8,988,細くて　小さい　バネ。\nすっかり　伸びきって　使い道が\nみつからない。
+7,8,989,道の　はしっこで　拾った\n白っぽい　小さな　石。
+7,8,990,まんまるの　ガラス玉。\n透明な　玉の　中に\n色ガラスの　模様が　見える。
+7,8,991,だれかが　落とした\n片っぽ　だけの　ピアス。
+7,8,992,波に　もまれて　丸くなった\n色のついた　ガラス片。\n少し　ざらざら　している。
+7,8,993,金色の　不思議な　はっぱ。\nこの　はっぱを　つける　木は\n見つかって　いない。
+7,8,994,銀色の　不思議な　はっぱ。\nこの　はっぱを　つける　木は\n見つかって　いない。
+7,8,995,時間を　かけて　磨きあげた\n表面が　ツルツルに　光る\n泥で　できた　団子。
+7,8,996,あたたかい　地方の　海から\n流れついた　かも　しれない\n白くて　きれいな　貝がら。
+7,8,997,木の葉で　作った　手紙。\nピカチュウの　足あとで\nなにかが　書かれて　いる。
+7,8,998,木の葉で　作った　手紙。\nイーブイの　足あとで\nなにかが　書かれて　いる。
+7,8,999,ただ　ひとりの　トレーナーへの\n気持ちを　こめて　一生懸命\n作った　ささやかな　花束。
+7,8,1000,使うと　少しの　あいだ\n珍しい　ポケモンが\n出て　きやすく　なる　香水。
+7,8,1001,使うと　珍しい　ポケモンが\n出て　きやすく　なる　香水。\nむしよせコロンより　長く　もつ。
+7,8,1002,使うと　珍しい　ポケモンが\n出て　きやすく　なる　香水。\nシルバーコロンより　長く　もつ。
+7,8,1003,ニビ名物の　あられ。\nポケモン　１匹の　状態の\n異常を　すべて　回復する。
+7,8,1004,エネルギーの　つまった　アメ。\nポケモンの　たいりょくを　上げる。
+7,8,1005,エネルギーの　つまった　アメ。\nポケモンの　こうげきを　上げる。
+7,8,1006,エネルギーの　つまった　アメ。\nポケモンの　ぼうぎょを　上げる。
+7,8,1007,エネルギーの　つまった　アメ。\nポケモンの　とくこうを　上げる。
+7,8,1008,エネルギーの　つまった　アメ。\nポケモンの　とくぼうを　上げる。
+7,8,1009,エネルギーの　つまった　アメ。\nポケモンの　すばやさを　上げる。
+7,8,1010,エネルギーの　つまった　大きい　アメ。\nレベル３０　以上の　ポケモンの\nたいりょくを　上げる。
+7,8,1011,エネルギーの　つまった　大きい　アメ。\nレベル３０　以上の　ポケモンの\nこうげきを　上げる。
+7,8,1012,エネルギーの　つまった　大きい　アメ。\nレベル３０　以上の　ポケモンの\nぼうぎょを　上げる。
+7,8,1013,エネルギーの　つまった　大きい　アメ。\nレベル３０　以上の　ポケモンの\nとくこうを　上げる。
+7,8,1014,エネルギーの　つまった　大きい　アメ。\nレベル３０　以上の　ポケモンの\nとくぼうを　上げる。
+7,8,1015,エネルギーの　つまった　大きい　アメ。\nレベル３０　以上の　ポケモンの\nすばやさを　上げる。
+7,8,1016,エネルギーの　つまった　特大の　アメ。\nレベル６０　以上の　ポケモンの\nたいりょくを　上げる。
+7,8,1017,エネルギーの　つまった　特大の　アメ。\nレベル６０　以上の　ポケモンの\nこうげきを　上げる。
+7,8,1018,エネルギーの　つまった　特大の　アメ。\nレベル６０　以上の　ポケモンの\nぼうぎょを　上げる。
+7,8,1019,エネルギーの　つまった　特大の　アメ。\nレベル６０　以上の　ポケモンの\nとくこうを　上げる。
+7,8,1020,エネルギーの　つまった　特大の　アメ。\nレベル６０　以上の　ポケモンの\nとくぼうを　上げる。
+7,8,1021,エネルギーの　つまった　特大の　アメ。\nレベル６０　以上の　ポケモンの\nすばやさを　上げる。
+7,8,1022,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1023,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1024,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1025,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1026,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1027,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1028,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1029,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1030,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1031,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1032,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1033,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1034,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1035,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1036,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1037,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1038,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1039,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1040,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1041,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1042,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1043,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1044,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1045,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1046,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1047,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1048,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1049,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1050,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1051,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1052,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1053,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1054,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1055,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1056,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1057,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1058,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1059,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1060,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1061,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1062,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1063,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1064,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1065,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1066,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1067,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1068,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1069,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1070,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1071,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1072,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1073,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1074,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1075,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1076,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1077,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1078,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1079,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1080,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1081,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1082,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1083,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1084,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1085,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1086,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1087,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1088,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1089,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1090,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1091,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1092,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1093,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1094,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1095,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1096,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1097,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1098,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1099,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1100,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
+7,8,1101,エネルギーの　つまった　アメ。\n特定の　ポケモンの　能力を\nすべて　上げる。
 7,9,1,？？？
 7,9,2,必定能捉到野生宝可梦的，\n性能最好的球。
 7,9,3,比起超级球来\n更容易捉到宝可梦的，\n性能非常不错的球。
@@ -22695,6 +23671,128 @@ generation_id,language_id,item_id,description
 7,9,977,洛托姆之力的一种。\n正在战斗的我方宝可梦的\nＰＰ会全部回复。
 7,9,978,洛托姆之力的一种。\n正在战斗的我方宝可梦的\n所有能力都会提高。
 7,9,979,洛托姆之力的一种。\n使用后，眼前的野生宝可梦\n会变得非常容易捕捉。
+7,9,980,枯叶市道馆馆主马志士\n给你的彩色签名纸。\n上面写着“Good Luck！”。
+7,9,981,把这树果交给宝可梦后，\n宝可梦就会变得容易捕捉。
+7,9,982,把这树果交给宝可梦后，\n宝可梦就会变得十分容易捕捉。
+7,9,983,捕捉宝可梦时，\n把这树果交给宝可梦\n就能平复对方的情绪。
+7,9,984,捕捉宝可梦时，\n把这树果交给宝可梦\n就能有效地平复对方的情绪。
+7,9,985,如果把这树果交给宝可梦，\n那么接下来捉住该宝可梦时，\n会更容易获得道具。
+7,9,986,如果把这树果交给宝可梦，\n那么接下来捉住该宝可梦时，\n会非常容易获得道具。
+7,9,987,在特定的地方使用，\n就会发出特殊电信号\n来开门的高科技钥匙。
+7,9,988,细小的弹簧。\n被拉得太长了，\n不知道能派上什么用。
+7,9,989,路边捡到的\n白白的小石头。
+7,9,990,非常圆润的玻璃球。\n能在透明的球体中\n看见彩色玻璃的花纹。
+7,9,991,某人遗失的单只耳环。
+7,9,992,受到波浪的洗刷从而\n变成圆形的彩色玻璃片。\n表面摸起来有点粗糙不平。
+7,9,993,神奇的金色叶子。\n至今仍未发现能长出\n这种叶子的树木。
+7,9,994,神奇的银色叶子。\n至今仍未发现能长出\n这种叶子的树木。
+7,9,995,用泥土制作的丸子。\n花了大把时间打磨，\n表面油光水滑。
+7,9,996,美丽的白色贝壳。\n或许是从温暖的海域那里\n漂流到这里的。
+7,9,997,以树叶制作的信件。\n上面留有皮卡丘的足迹，\n好像是要表达些什么。
+7,9,998,以树叶制作的信件。\n上面留有伊布的足迹，\n好像是要表达些什么。
+7,9,999,竭尽心力制作的素雅花束。\n里面满满都是对训练家的心意。
+7,9,1000,使用该香水后的一小段时间内，\n稀有宝可梦会更容易出现。
+7,9,1001,使用该香水后，\n稀有宝可梦会更容易出现。\n效果比引虫香水更持久。
+7,9,1002,使用该香水后，\n稀有宝可梦会更容易出现。\n效果比白银香水更持久。
+7,9,1003,深灰特产的糕点。\n能治愈１只宝可梦的\n所有异常状态。
+7,9,1004,充满能量的糖果。\n能提高宝可梦的体力。
+7,9,1005,充满能量的糖果。\n能提高宝可梦的攻击。
+7,9,1006,充满能量的糖果。\n能提高宝可梦的防御。
+7,9,1007,充满能量的糖果。\n能提高宝可梦的特攻。
+7,9,1008,充满能量的糖果。\n能提高宝可梦的特防。
+7,9,1009,充满能量的糖果。\n能提高宝可梦的速度。
+7,9,1010,充满能量的大糖果。\n能让等级30以上的\n宝可梦的体力上升。
+7,9,1011,充满能量的大糖果。\n能让等级30以上的\n宝可梦的攻击上升。
+7,9,1012,充满能量的大糖果。\n能让等级30以上的\n宝可梦的防御上升。
+7,9,1013,充满能量的大糖果。\n能让等级30以上的\n宝可梦的特攻上升。
+7,9,1014,充满能量的大糖果。\n能让等级30以上的\n宝可梦的特防上升。
+7,9,1015,充满能量的大糖果。\n能让等级30以上的\n宝可梦的速度上升。
+7,9,1016,充满能量的超大糖果。\n能让等级60以上的\n宝可梦的体力上升。
+7,9,1017,充满能量的超大糖果。\n能让等级60以上的\n宝可梦的攻击上升。
+7,9,1018,充满能量的超大糖果。\n能让等级60以上的\n宝可梦的防御上升。
+7,9,1019,充满能量的超大糖果。\n能让等级60以上的\n宝可梦的特攻上升。
+7,9,1020,充满能量的超大糖果。\n能让等级60以上的\n宝可梦的特防上升。
+7,9,1021,充满能量的超大糖果。\n能让等级60以上的\n宝可梦的速度上升。
+7,9,1022,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1023,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1024,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1025,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1026,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1027,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1028,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1029,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1030,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1031,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1032,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1033,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1034,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1035,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1036,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1037,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1038,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1039,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1040,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1041,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1042,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1043,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1044,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1045,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1046,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1047,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1048,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1049,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1050,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1051,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1052,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1053,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1054,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1055,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1056,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1057,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1058,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1059,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1060,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1061,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1062,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1063,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1064,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1065,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1066,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1067,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1068,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1069,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1070,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1071,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1072,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1073,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1074,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1075,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1076,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1077,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1078,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1079,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1080,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1081,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1082,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1083,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1084,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1085,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1086,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1087,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1088,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1089,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1090,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1091,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1092,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1093,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1094,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1095,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1096,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1097,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1098,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1099,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1100,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
+7,9,1101,充满能量的糖果。\n能让特定宝可梦的\n所有能力上升。
 7,10,1,？？？
 7,10,2,性能最好的球。\n必定能捉到野生寶可夢。
 7,10,3,性能非常不錯的球。\n比起超級球\n更容易捉到寶可夢。
@@ -23593,3 +24691,125 @@ generation_id,language_id,item_id,description
 7,10,977,洛托姆之力的一種。\n可以回復戰鬥中的\n我方寶可夢所有的ＰＰ。
 7,10,978,洛托姆之力的一種。\n可以提升戰鬥中的\n我方寶可夢的所有能力。
 7,10,979,洛托姆之力的一種。\n使用後，可以讓眼前的\n寶可夢變得非常容易捕捉。
+7,10,980,從枯葉市道館館主馬志士\n手上拿到的簽名板。\n上面寫著「Good Luck！」。
+7,10,981,把這個樹果餵給寶可夢，\n就能讓牠們變得容易捕捉。
+7,10,982,把這個樹果餵給寶可夢，\n就能讓牠們變得十分容易捕捉。
+7,10,983,在捕捉時把這個樹果餵給寶可夢，\n就能讓牠們的情緒穩定下來。
+7,10,984,在捕捉時把這個樹果餵給寶可夢，\n就能讓牠們的情緒大幅穩定下來。
+7,10,985,把這個樹果餵給寶可夢，\n在捕捉成功後，\n會更容易獲得道具。
+7,10,986,把這個樹果餵給寶可夢，\n在捕捉成功後，\n會非常容易獲得道具。
+7,10,987,在特定的地方使用，\n就會發出特殊電子訊號\n來開門的高科技鑰匙。
+7,10,988,細小的彈簧。\n已經完全鬆掉，\n找不到任何用途。
+7,10,989,在路邊撿到的\n白白的小石頭。
+7,10,990,圓滾滾的玻璃彈珠。\n在透明的彈珠中\n能看見彩色玻璃的花紋。
+7,10,991,只有一邊的耳環。\n不知道是誰遺失的。
+7,10,992,受海浪沖刷而變圓的\n彩色玻璃碎片。\n表面有點粗糙。
+7,10,993,不可思議的金色葉子。\n至今還未發現\n長有這種葉子的樹。
+7,10,994,不可思議的銀色葉子。\n至今還未發現\n長有這種葉子的樹。
+7,10,995,花了不少時間\n把表面磨得\n非常光滑的泥球。
+7,10,996,美麗的白色貝殼。\n可能是從溫暖的海域\n漂流過來的。
+7,10,997,用樹葉做的信。\n上面有皮卡丘的腳印。\n好像是想表達些什麼。
+7,10,998,用樹葉做的信。\n上面有伊布的腳印。\n好像是想表達些什麼。
+7,10,999,竭盡心力製作的花束。\n雖然不起眼，但裡頭\n充滿了對訓練家的心意。
+7,10,1000,使用後的一小段期間，\n讓稀有寶可夢變得\n容易出現的香水。
+7,10,1001,使用後，讓稀有寶可夢\n變得容易出現的香水。\n效果比引蟲香水更持久。
+7,10,1002,使用後，讓稀有寶可夢\n變得容易出現的香水。\n效果比白銀香水更持久。
+7,10,1003,深灰市特產的米果。\n能治癒１隻寶可夢的\n所有異常狀態。
+7,10,1004,充滿能量的糖果。\n能提高寶可夢的體力。
+7,10,1005,充滿能量的糖果。\n能提高寶可夢的攻擊。
+7,10,1006,充滿能量的糖果。\n能提高寶可夢的防禦。
+7,10,1007,充滿能量的糖果。\n能提高寶可夢的特攻。
+7,10,1008,充滿能量的糖果。\n能提高寶可夢的特防。
+7,10,1009,充滿能量的糖果。\n能提高寶可夢的速度。
+7,10,1010,充滿能量的大糖果。\n能提高等級在30以上的\n寶可夢的體力。
+7,10,1011,充滿能量的大糖果。\n能提高等級在30以上的\n寶可夢的攻擊。
+7,10,1012,充滿能量的大糖果。\n能提高等級在30以上的\n寶可夢的防禦。
+7,10,1013,充滿能量的大糖果。\n能提高等級在30以上的\n寶可夢的特攻。
+7,10,1014,充滿能量的大糖果。\n能提高等級在30以上的\n寶可夢的特防。
+7,10,1015,充滿能量的大糖果。\n能提高等級在30以上的\n寶可夢的速度。
+7,10,1016,充滿能量的特大糖果。\n能提高等級在60以上的\n寶可夢的體力。
+7,10,1017,充滿能量的特大糖果。\n能提高等級在60以上的\n寶可夢的攻擊。
+7,10,1018,充滿能量的特大糖果。\n能提高等級在60以上的\n寶可夢的防禦。
+7,10,1019,充滿能量的特大糖果。\n能提高等級在60以上的\n寶可夢的特攻。
+7,10,1020,充滿能量的特大糖果。\n能提高等級在60以上的\n寶可夢的特防。
+7,10,1021,充滿能量的特大糖果。\n能提高等級在60以上的\n寶可夢的速度。
+7,10,1022,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1023,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1024,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1025,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1026,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1027,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1028,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1029,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1030,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1031,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1032,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1033,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1034,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1035,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1036,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1037,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1038,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1039,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1040,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1041,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1042,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1043,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1044,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1045,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1046,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1047,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1048,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1049,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1050,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1051,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1052,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1053,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1054,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1055,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1056,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1057,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1058,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1059,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1060,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1061,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1062,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1063,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1064,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1065,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1066,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1067,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1068,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1069,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1070,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1071,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1072,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1073,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1074,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1075,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1076,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1077,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1078,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1079,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1080,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1081,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1082,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1083,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1084,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1085,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1086,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1087,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1088,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1089,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1090,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1091,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1092,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1093,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1094,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1095,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1096,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1097,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1098,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1099,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1100,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。
+7,10,1101,充滿能量的糖果。\n能提高特定寶可夢的\n所有能力。

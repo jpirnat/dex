@@ -13804,6 +13804,20 @@ generation_id,language_id,move_id,description
 7,1,726,Ｚパワーを　えた　ミミッキュが\nぜんりょくで　ぽかぽか　こうげき。
 7,1,727,Ｚパワーを　えた　ルガルガンが\nぜんりょくで　こうげきする。　ついかで\nフィールドじょうたいを　うちけす。
 7,1,728,Ｚパワーを　えた　ジャラランガが\nぜんりょくで　あいてを　こうげきする。\nついかで　じぶんの　のうりょくが　あがる。
+7,1,729,もうスピードの　でんげき　アタック。\nかならず　せんせい　こうげき　できて\nきゅうしょに　あたる。
+7,1,730,おおきな　なみに　でんきを　あびせ\nあいてに　ぶつけて　こうげきする。\nまひ　じょうたいに　することが　ある。
+7,1,731,ふんわりと　うかび　あがり\nいっきに　きゅうこうか　して　こうげき。\nあいてを　ひるませる　ことが　ある。
+7,1,732,ピカチュウの　トレーナーへの　だいすきな\nきもちが　つよいほど　いりょくが　あがる\nでんげき。　かならず　めいちゅうする。
+7,1,733,みずの　かたまりを　ぶつけて　こうげき。\nみずを　すいとり　ダメージの\nはんぶんの　HPを　かいふくする。
+7,1,734,でんきを　とばし　あいてに\nあびせて　こうげきする。　\nあいてを　まひ　じょうたいに　する。
+7,1,735,ほのおを　まとった　からだで\nいきおいよく　あいてに　ぶつかる。\nあいてを　やけど　じょうたいに　する。
+7,1,736,ねんりきを　これでもかと　あびせる。\nあいての　とくしゅこうげきを　よわめる\nふしぎな　かべを　つくりだす。
+7,1,737,わるさを　アピールして　こうげき。\nあいての　ぶつりこうげきを　よわめる\nふしぎな　かべを　つくりだす。
+7,1,738,きょだいな　ツルを　はやし　タネを\nまきちらかして　こうげきする。　タネは\nまいターン　あいての　HPを　すいとる。
+7,1,739,つめたく　こおった　くろいきりの\nけっしょうで　こうげき。　ぜんいんの\nのうりょく　へんかを　もとに　もどす。
+7,1,740,むせかえる　ような　かおりの　たつまきで\nあいてを　つつんで　こうげき。　みかたの\nじょうたい　いじょうを　かいふくする。
+7,1,741,イーブイの　トレーナーへの　だいすきな\nきもちが　つよいほど　いりょくが　あがる\nたいあたり。　かならず　めいちゅうする。
+7,1,742,むねの　ナットを　じくに　かいてんして\n２かい　つづけて　うでを　たたきつける。\nあいてを　ひるませる　ことが　ある。
 7,1,10001,わざを　つかった　ポケモンに　よって\nわざの　タイプが　かわる。
 7,1,10002,わざを　つかった　ポケモンに　よって\nわざの　タイプが　かわる。
 7,1,10003,わざを　つかった　ポケモンに　よって\nわざの　タイプが　かわる。
@@ -14548,6 +14562,20 @@ generation_id,language_id,move_id,description
 7,2,726,"After obtaining Z-Power, the user, Mimikyu,\npunches the target with full force."
 7,2,727,"After obtaining Z-Power, the user, Lycanroc,\nattacks the target with full force. This move negates\nthe effect on the battlefield."
 7,2,728,"After obtaining Z-Power, the user, Kommo-o,\nattacks the opposing Pokémon with full force. This\nmove boosts the user’s stats."
+7,2,729,The user attacks the target with bursts of electricity\nat high speed. This move always goes first and results\nin a critical hit.
+7,2,730,The user charges a huge wave with electricity and\nhits the opposing Pokémon with the wave. This may\nalso leave the opposing Pokémon with paralysis.
+7,2,731,"The user floats in the air, and then dives at a steep\nangle to attack the target. This may also make the\ntarget flinch."
+7,2,732,"The more Pikachu loves its Trainer, the greater the\nmove’s power. It never misses."
+7,2,733,The user attacks by shooting water bubbles at the\ntarget. It then absorbs water and restores its HP by half\nthe damage taken by the target.
+7,2,734,The user shoots a jolt of electricity to attack the target.\nThis also leaves the target with paralysis.
+7,2,735,The user cloaks itself in fire and charges at the target.\nThis also leaves the target with a burn.
+7,2,736,The user bombards the target with telekinetic force.\nA wondrous wall of light is put up to weaken the power\nof the opposing Pokémon’s special moves.
+7,2,737,The user acts bad and attacks the target.\nA wondrous wall of light is put up to weaken the power\nof the opposing Pokémon’s physical moves.
+7,2,738,The user grows a gigantic stalk that scatters seeds\nto attack the target. The seeds drain the target’s\nHP every turn.
+7,2,739,The user attacks with a crystal made of cold frozen\nhaze. It eliminates every stat change among all the\nPokémon engaged in battle.
+7,2,740,The user attacks the target by wrapping it with\na whirlwind of an overpowering scent. This also\nheals all status conditions of the user’s party.
+7,2,741,"The more Eevee loves its Trainer, the greater the\nmove’s power. It never misses."
+7,2,742,"The user rotates, centering the hex nut in its chest,\nand then strikes with its arms twice in a row. This may\nalso make the target flinch."
 7,2,10001,A unique attack that varies in type depending on the\nPokémon using it.
 7,2,10002,A unique attack that varies in type depending on the\nPokémon using it.
 7,2,10003,A unique attack that varies in type depending on the\nPokémon using it.
@@ -15292,6 +15320,20 @@ generation_id,language_id,move_id,description
 7,3,726,"Mimiqui concentre toute la Force Z dans son corps,\net attaque dans le plus grand fracas!"
 7,3,727,Lougaroc utilise la Force Z pour attaquer la cible\nde toutes ses forces.\nEfface aussi tout Champ existant.
 7,3,728,Ékaïser utilise la Force Z pour frapper l’ennemi\nde toutes ses forces. Augmente aussi ses stats.
+7,3,729,Une attaque électrique rapide comme l’éclair qui inflige\nun coup critique à coup sûr. Frappe en priorité.
+7,3,730,Pikachu frappe l’adversaire avec une vague géante\nchargée d’électricité. Peut aussi paralyser l’ennemi.
+7,3,731,Pikachu prend de la hauteur avant de fondre sur\nson adversaire. Peut aussi apeurer l’ennemi.
+7,3,732,Une attaque électrique dont la puissance est\nproportionnelle à l’amour que Pikachu vous porte.\nTouche à coup sûr.
+7,3,733,Évoli frappe l’adversaire avec des bulles d’eau qu’il\nabsorbe ensuite pour récupérer un nombre de PV égal\nà la moitié des dégâts infligés à l’ennemi.
+7,3,734,Une attaque qui foudroie et paralyse l’adversaire.
+7,3,735,Évoli s’embrase et percute violemment l’adversaire.\nBrûle aussi l’ennemi.
+7,3,736,Évoli submerge l’adversaire sous un flot d’ondes\npsychiques et crée un mur fabuleux qui réduit les\ndégâts causés par les attaques spéciales de l’ennemi.
+7,3,737,Évoli fait appel à son côté sombre pour attaquer\nl’adversaire et créer un mur fabuleux qui réduit les\ndégâts causés par les attaques physiques de l’ennemi.
+7,3,738,Une liane géante surgit du sol et bombarde l’adversaire\nde graines qui lui dérobent des PV à chaque tour.\nCes PV sont ensuite absorbés par Évoli.
+7,3,739,Évoli frappe l’adversaire avec un cristal de buée noire\ngelée. Annule les changements de stats de tous les\nPokémon au combat.
+7,3,740,Une attaque qui enserre l’adversaire dans un tourbillon\nde senteurs oppressantes. Guérit toutes les altérations\nde statut de l’équipe.
+7,3,741,Une charge dont la puissance est proportionnelle\nà l’amour qu’Évoli vous porte. Touche à coup sûr.
+7,3,742,Le lanceur fait pivoter l’écrou de sa poitrine deux fois\nd’affilée pour frapper l’adversaire avec ses bras.\nPeut apeurer l’ennemi.
 7,3,10001,Attaque dont le type dépend du Pokémon\nqui l’utilise.
 7,3,10002,Attaque dont le type dépend du Pokémon\nqui l’utilise.
 7,3,10003,Attaque dont le type dépend du Pokémon\nqui l’utilise.
@@ -16036,6 +16078,20 @@ generation_id,language_id,move_id,description
 7,4,726,Mimigma greift das Ziel mithilfe von Z-Kraft mit voller\nWucht und viel Liebe an.
 7,4,727,"Wolwerock greift das Ziel mithilfe von Z-Kraft mit\nvoller Wucht an. Herrschen besondere Feldeffekte,\nwerden diese zusätzlich neutralisiert."
 7,4,728,Grandiras greift Gegner mithilfe von Z-Kraft\nmit voller Wucht an. Zusätzlich werden seine\nStatuswerte erhöht.
+7,4,729,Ein stürmischer Blitz-Angriff mit hoher Erstschlag- und\nVolltrefferquote.
+7,4,730,"Pikachu greift das Ziel mit einer großen, elektrisch\naufgeladenen Welle an. Das Ziel wird eventuell\nparalysiert."
+7,4,731,Pikachu schwebt nach oben und stürzt dann unvermittelt\nauf das Ziel herab. Das Ziel schreckt eventuell zurück.
+7,4,732,"Je größer Pikachus Vertrauen zu seinem Trainer ist,\ndesto stärker fällt dieser Angriff aus. Diese Attacke\ntrifft immer."
+7,4,733,Evoli greift mit Wasserblasen an. Evolis KP werden\num die Hälfte des vom Wasser angerichteten Schadens\ngeheilt.
+7,4,734,"Evoli greift das Ziel mit Elektrizität an, wodurch dieses\nparalysiert wird."
+7,4,735,"Evoli hüllt sich in Flammen und stürzt sich beherzt auf\ndas Ziel, welches dadurch Verbrennungen erleidet."
+7,4,736,"Evoli greift das Ziel gnadenlos mit telekinetischer\nEnergie an. Dabei wird eine geheimnisvolle Wand\nerzeugt, die Spezial-Attacken des Ziels abschwächt."
+7,4,737,"Evoli zeigt sich von seiner dunklen Seite und greift an.\nDabei wird eine geheimnisvolle Wand erzeugt, die\nphysische Attacken des Ziels abschwächt."
+7,4,738,"Evoli lässt eine riesige Ranke wachsen, von der Samen\nherabfallen, die dem Ziel schaden und ihm in jeder\nRunde KP absaugen."
+7,4,739,Evoli greift mit einem schwarzen Kristall aus gefrorenem\nNebel an. Die Statusveränderungen aller am Kampf\nbeteiligten Pokémon werden zurückgesetzt.
+7,4,740,"Evoli greift an, indem es das Ziel in einen nahezu\nerstickend wohlriechenden Wirbelwind hüllt. Das Team\ndes Anwenders wird von Statusproblemen geheilt."
+7,4,741,"Je größer Evolis Vertrauen zu seinem Trainer ist,\ndesto stärker fällt dieser Angriff aus. Diese Attacke\ntrifft immer."
+7,4,742,Der Anwender rotiert um die Schraubenmutter in seinem\nBrustkorb und schlägt zweimal hintereinander mit den\nArmen zu. Das Ziel schreckt eventuell zurück.
 7,4,10001,Wirkung und Typ der Attacke hängen vom\nAnwender ab.
 7,4,10002,Wirkung und Typ der Attacke hängen vom\nAnwender ab.
 7,4,10003,Wirkung und Typ der Attacke hängen vom\nAnwender ab.
@@ -16780,6 +16836,20 @@ generation_id,language_id,move_id,description
 7,5,726,"Grazie al Potere Z, Mimikyu fa appello a tutte le sue\nforze e attacca il bersaglio tempestandolo di colpi."
 7,5,727,"Grazie al Potere Z, Lycanroc attacca il bersaglio con\ntutta la sua forza. Questa mossa annulla anche\ngli eventuali campi attivi."
 7,5,728,"Grazie al Potere Z, Kommo-o attacca i nemici con\ntutta la sua forza. Inoltre, aumenta le proprie\nstatistiche."
+7,5,729,Un attacco elettrico ad altissima velocità.\nQuesta mossa ha priorità alta e infligge\nsicuramente un brutto colpo.
+7,5,730,Colpisce il bersaglio con un’enorme onda caricata\ndi elettricità che può anche paralizzarlo.
+7,5,731,Chi la usa si libra in aria per poi piombare addosso\nal bersaglio. Può anche far tentennare il Pokémon\ncolpito.
+7,5,732,Questa mossa infallibile diventa più potente\ncon il rafforzarsi del rapporto tra Pikachu e l’Allenatore.
+7,5,733,"Chi la usa colpisce il bersaglio con una raffica di bolle,\nper poi assorbirle e recuperare una quantità di PS\npari alla metà del danno inferto."
+7,5,734,Colpisce il bersaglio con una scarica elettrica\nche lo paralizza.
+7,5,735,"Chi la usa viene avvolto dalle fiamme e colpisce\nil bersaglio con forza, scottandolo."
+7,5,736,Colpisce il bersaglio ripetutamente con onde di forza\npsicocinetica e innalza una barriera fantastica che\nriduce i danni degli attacchi speciali nemici.
+7,5,737,"Chi la usa scatena l’oscurità che ha dentro, colpendo\nil bersaglio e innalzando una barriera fantastica che\nriduce i danni degli attacchi fisici nemici."
+7,5,738,Fa crescere un’enorme pianta che colpisce il bersaglio\ncon una pioggia di semi. Questi sottraggono\nPS a ogni turno permettendo a chi la usa di curarsi.
+7,5,739,"Chi la usa attacca il bersaglio con un cristallo formato\nda una nube nera congelata, che annulla ogni modifica\nalle statistiche di tutti i Pokémon."
+7,5,740,Chi la usa attacca il bersaglio avvolgendolo in\nun turbine di profumi soffocanti e cura\ni problemi di stato propri e degli alleati.
+7,5,741,Questa mossa infallibile diventa più potente\ncon il rafforzarsi del rapporto tra Eevee e l’Allenatore.
+7,5,742,Chi la usa attacca il bersaglio due volte ruotando su se\nstesso e colpendolo con le braccia. Può anche farlo\ntentennare.
 7,5,10001,Mossa singolare che cambia tipo a seconda\ndel Pokémon che la usa.
 7,5,10002,Mossa singolare che cambia tipo a seconda\ndel Pokémon che la usa.
 7,5,10003,Mossa singolare che cambia tipo a seconda\ndel Pokémon che la usa.
@@ -17524,6 +17594,20 @@ generation_id,language_id,move_id,description
 7,6,726,Mimikyu ataca con toda su fuerza tras imbuirse del\nPoder Z y asesta una lluvia de golpes.
 7,6,727,Lycanroc ataca con toda su fuerza tras imbuirse del\nPoder Z y neutraliza el campo que esté activo.
 7,6,728,"Kommo-o ataca con toda su fuerza al objetivo tras\nimbuirse del Poder Z. Además, potencia sus propias\ncaracterísticas."
+7,6,729,Ataque eléctrico a la velocidad del rayo. Este\nmovimiento tiene prioridad alta y propina golpes\ncríticos.
+7,6,730,"Golpea al adversario con una ola gigante electrificada,\nque también puede paralizarlo."
+7,6,731,"El usuario se suspende en el aire para, a continuación,\nabalanzarse súbitamente sobre el rival. Puede hacer\nretroceder al objetivo."
+7,6,732,Lanza una descarga eléctrica infalible que resulta más\npotente cuanto mayor es el cariño que siente Pikachu\nhacia su Entrenador.
+7,6,733,Ataca lanzando proyectiles de agua y recupera una\ncantidad de PS equivalente a la mitad del daño\ncausado.
+7,6,734,Lanza una potente descarga eléctrica sobre el rival y\nlo deja paralizado.
+7,6,735,"Tras envolver su cuerpo en llamas, el usuario arrolla con\nfuerza al rival y le provoca quemaduras."
+7,6,736,Envuelve al rival con ondas psíquicas y alza un extraño\nmuro que debilita los ataques especiales del adversario.
+7,6,737,Lanza un ataque haciendo gala de su faceta más umbría\ny alza un extraño muro que mitiga los ataques físicos\ndel adversario.
+7,6,738,Hace brotar un tallo gigante que bombardea al rival\ncon unas semillas que le drenan PS en cada turno.
+7,6,739,Ataca al rival con negros cristales de niebla congelada.\nRevierte los cambios en las características de todos los\nPokémon presentes.
+7,6,740,Ataca al rival envolviéndolo en un remolino de aroma\nasfixiante. Cura a los aliados de cualquier problema de\nestado.
+7,6,741,Un placaje infalible que resulta más potente cuanto\nmayor es el cariño que siente Eevee hacia su\nEntrenador.
+7,6,742,"Usando la tuerca del pecho como eje, el usuario gira\nsobre sí mismo y golpea con los brazos dos veces\nseguidas. Puede hacer retroceder al rival."
 7,6,10001,Movimiento cuyo tipo varía en función del Pokémon \nque lo usa.
 7,6,10002,Movimiento cuyo tipo varía en función del Pokémon \nque lo usa.
 7,6,10003,Movimiento cuyo tipo varía en función del Pokémon \nque lo usa.
@@ -18268,6 +18352,20 @@ generation_id,language_id,move_id,description
 7,7,726,Z파워를 얻은 따라큐가\n전력으로 투닥투닥 공격한다.
 7,7,727,Z파워를 얻은 루가루암이\n전력으로 공격한다. 추가로\n필드 상태를 없앤다.
 7,7,728,Z파워를 얻은 짜랑고우거가\n전력으로 상대를 공격한다.\n추가로 자신의 능력이 올라간다.
+7,7,729,맹렬한 속도의 전격 공격.\n반드시 선제공격할 수 있고\n급소에 맞는다.
+7,7,730,커다란 파도에 전기를 날리고\n상대에게 부딪쳐서 공격한다.\n마비 상태로 만들 때가 있다.
+7,7,731,두둥실 떠오른 다음\n단숨에 급강하해서 공격한다.\n상대를 풀죽게 만들 때가 있다.
+7,7,732,트레이너를 좋아하는 피카츄의\n마음이 강할수록 위력이 올라가는\n전격. 반드시 명중한다.
+7,7,733,물덩어리를 부딪쳐서 공격한다.\n물을 흡수하여 데미지의\n절반만큼 HP를 회복한다.
+7,7,734,전기를 상대에게\n날려서 공격한다.\n상대를 마비 상태로 만든다.
+7,7,735,불꽃을 두른 몸으로\n기세 좋게 상대에게 부딪친다.\n상대를 화상 상태로 만든다.
+7,7,736,염동력을 한가득 날린다.\n상대의 특수공격을 약하게 만드는\n이상한 장막을 만든다.
+7,7,737,악함을 어필해서 공격한다.\n상대의 물리공격을 약하게 만드는\n이상한 장막을 만든다.
+7,7,738,거대한 덩굴을 자라게 하고\n씨를 흩뿌려서 공격한다. 씨는\n매 턴 상대의 HP를 흡수한다.
+7,7,739,차갑게 얼어붙은 흑안개의\n결정으로 공격한다. 전원의\n능력 변화를 원래대로 돌린다.
+7,7,740,숨 막힐 듯 진한 향기의 회오리로\n상대를 휘감아 공격한다.\n같은 편의 상태 이상을 회복한다.
+7,7,741,트레이너를 좋아하는 이브이의\n마음이 강할수록 위력이 올라가는\n몸통박치기. 반드시 명중한다.
+7,7,742,가슴의 너트를 축으로 회전시켜\n2번 연속 팔로 힘껏 친다.\n상대를 풀죽게 만들 때가 있다.
 7,7,10001,기술을 쓴 포켓몬에 따라\n기술의 타입이 바뀐다.
 7,7,10002,기술을 쓴 포켓몬에 따라\n기술의 타입이 바뀐다.
 7,7,10003,기술을 쓴 포켓몬에 따라\n기술의 타입이 바뀐다.
@@ -19012,6 +19110,20 @@ generation_id,language_id,move_id,description
 7,8,726,Ｚパワーを　得た　ミミッキュが\n全力で　ぽかぽか　攻撃。
 7,8,727,Ｚパワーを　得た　ルガルガンが\n全力で　攻撃する。　追加で\nフィールド状態を　打ち消す。
 7,8,728,Ｚパワーを　得た　ジャラランガが\n全力で　相手を　攻撃する。\n追加で　自分の　能力が　上がる。
+7,8,729,猛スピードの　電撃　アタック。\n必ず　先制攻撃　できて\n急所に　あたる。
+7,8,730,大きな　波に　電気を　あびせ\n相手に　ぶつけて　攻撃する。\nまひ状態に　することが　ある。
+7,8,731,ふんわりと　浮かび　あがり\n一気に　急降下して　攻撃。\n相手を　ひるませることが　ある。
+7,8,732,ピカチュウの　トレーナーへの　大好きな\n気持ちが　強いほど　威力が\nあがる　電撃。　必ず　命中する。
+7,8,733,水のかたまりを　ぶつけて　攻撃。\n水を　吸いとり　ダメージの\n半分の　HPを　回復する。
+7,8,734,電気を　飛ばし　相手に\nあびせて　攻撃する。　\n相手を　まひ状態に　する。
+7,8,735,炎を　まとった　体で\n勢いよく　相手に　ぶつかる。\n相手を　やけど状態に　する。
+7,8,736,念力を　これでもかと　あびせる。\n相手の　特殊攻撃を　弱める\n不思議な　かべを　つくりだす。
+7,8,737,わるさを　アピールして　攻撃。\n相手の　物理攻撃を　弱める\n不思議な　かべを　つくりだす。
+7,8,738,巨大な　ツルを　生やし　タネを\n撒きちらかして　攻撃する。　タネは\n毎ターン　相手の　HPを　吸いとる。
+7,8,739,冷たく　凍った　くろいきりの\n結晶で　攻撃。　全員の\n能力変化を　もとに　もどす。
+7,8,740,むせかえる　ような　香りの　竜巻で\n相手を　つつんで　攻撃。　味方の\n状態異常を　回復する。
+7,8,741,イーブイの　トレーナーへの　大好きな\n気持ちが　強いほど　威力が　あがる\n体当たり。　必ず　命中する。
+7,8,742,胸の　ナットを　軸に　回転して\n２回　続けて　うでを　たたきつける。\n相手を　ひるませる　ことが　ある。
 7,8,10001,技を　使った　ポケモンに　よって\n技の　タイプが　変わる。
 7,8,10002,技を　使った　ポケモンに　よって\n技の　タイプが　変わる。
 7,8,10003,技を　使った　ポケモンに　よって\n技の　タイプが　変わる。
@@ -19756,6 +19868,20 @@ generation_id,language_id,move_id,description
 7,9,726,得到Ｚ力量的谜拟Ｑ\n将全力进行乱揍攻击。
 7,9,727,得到Ｚ力量的鬃岩狼人\n将全力进行攻击。\n而且会消除场地状态。
 7,9,728,得到Ｚ力量的杖尾鳞甲龙\n将全力攻击对手。\n并且自己的能力会提高。
+7,9,729,迅猛无比的电击。\n必定能够先制攻击，\n击中对方的要害。
+7,9,730,往巨浪中注入电能后\n冲撞对手进行攻击。\n有时会让对手陷入麻痹状态。
+7,9,731,轻飘飘地浮起来后，\n再猛地俯冲下去进行攻击。\n有时会使对手畏缩。
+7,9,732,皮卡丘越喜欢训练家，\n电击的威力就越强。\n攻击必定会命中。
+7,9,733,投掷水球进行攻击。\n吸水后能回复等同于\n造成的伤害一半的HP。
+7,9,734,放出电击攻击对手。\n让对手陷入麻痹状态。
+7,9,735,用燃起大火的身体\n猛烈地冲撞对手。\n让对手陷入灼伤状态。
+7,9,736,利用念力强攻，粉碎对方信心。\n制造一道能减弱对手\n特殊攻击的神奇墙壁。
+7,9,737,恶行恶相地进行攻击。\n制造一道能减弱对手\n物理攻击的神奇墙壁。
+7,9,738,长出巨大的藤蔓，\n播撒种子进行攻击。\n种子每回合都会吸取对手的HP。
+7,9,739,利用冰冷的黑雾结晶进行攻击。\n使全体宝可梦的能力变回原点。
+7,9,740,利用芬芳刺鼻的龙卷风吞噬对方。\n能治愈我方宝可梦的异常状态。
+7,9,741,伊布越喜欢训练家，\n冲撞的威力就越强。\n攻击必定会命中。
+7,9,742,以胸口的螺帽为中心旋转，\n并连续２次挥动手臂打击对手。\n有时会使对手畏缩。
 7,9,10001,招式的属性会随着\n使用此招式的宝可梦而改变。
 7,9,10002,招式的属性会随着\n使用此招式的宝可梦而改变。
 7,9,10003,招式的属性会随着\n使用此招式的宝可梦而改变。
@@ -20500,6 +20626,20 @@ generation_id,language_id,move_id,description
 7,10,726,獲得Ｚ力量的謎擬Ｑ\n將會以全力進行亂揍攻擊。
 7,10,727,獲得Ｚ力量的鬃岩狼人\n將會以全力進行攻擊，\n並消除場地的狀態。
 7,10,728,獲得Ｚ力量的杖尾鱗甲龍\n將會以全力攻擊對手，\n並提升自己的能力。
+7,10,729,迅猛無比的電擊。\n必定能夠發動先制攻擊，\n擊中對手要害。
+7,10,730,在巨浪中注入電力，\n撞向對手進行攻擊。\n有時會讓對手陷入麻痺狀態。
+7,10,731,輕飄飄地浮起，\n然後急速墜落，進行攻擊。\n有時會讓對手畏縮。
+7,10,732,皮卡丘越喜歡訓練家，\n威力就越強大的電擊。\n攻擊必定會命中。
+7,10,733,投擲水球進行攻擊。\n攻擊後吸水並回復\n給予對手傷害的一半HP。
+7,10,734,發出電擊攻擊對手。\n讓對手陷入麻痺狀態。
+7,10,735,用纏繞著火焰的身體\n猛烈地衝撞對手，\n讓對手陷入灼傷狀態。
+7,10,736,用極大量的念力攻擊對手，\n造出一道能夠減弱對手\n特殊攻擊的神奇牆壁。
+7,10,737,惡形惡狀地進行攻擊，\n造出一道能夠減弱對手\n物理攻擊的神奇牆壁。
+7,10,738,長出巨大的藤蔓，\n散播種子進行攻擊。\n種子每回合都會吸取對手的HP。
+7,10,739,用冰凍的黑霧結晶進行攻擊，\n讓全體寶可夢的能力變化\n回到初始狀態。
+7,10,740,用帶著嗆鼻香氣的龍捲風\n包圍對手，進行攻擊，\n並治癒我方寶可夢的異常狀態。
+7,10,741,伊布越喜歡訓練家，\n威力就越強大的衝撞。\n攻擊必定會命中。
+7,10,742,以胸口的螺帽為軸心旋轉，\n連續２次揮動手臂痛擊對手。\n有時會使對手畏縮。
 7,10,10001,招式的屬性會隨著\n使用此招式的寶可夢而改變。
 7,10,10002,招式的屬性會隨著\n使用此招式的寶可夢而改變。
 7,10,10003,招式的屬性會隨著\n使用此招式的寶可夢而改變。
