@@ -4001,6 +4001,8 @@ generation_id,form_id,is_female,is_right,image
 7,806,0,0,xy/blacephalon.png
 7,806,0,1,xy/right/blacephalon.png
 7,807,0,0,xy/zeraora.png
+7,808,0,0,swsh/meltan.png
+7,809,0,0,swsh/melmetal.png
 7,10001,0,0,xy/castform-sunny.png
 7,10002,0,0,xy/castform-rainy.png
 7,10003,0,0,xy/castform-snowy.png
@@ -4184,6 +4186,8 @@ generation_id,form_id,is_female,is_right,image
 7,10171,0,1,xy/right/necrozma-dawn-wings.png
 7,10172,0,0,xy/necrozma-ultra.png
 7,10172,0,1,xy/right/necrozma-ultra.png
+7,10173,0,0,swsh/pikachu-partner.png
+7,10174,0,0,swsh/eevee-partner.png
 7,20001,0,0,xy/unown-b.png
 7,20001,0,1,xy/right/unown-b.png
 7,20002,0,0,xy/unown-c.png
