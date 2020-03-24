@@ -31,7 +31,6 @@ generation_id,language_id,item_id,description
 4,1,31,エネルギーの　つまった　アメ。\nあたえると　ポケモン　１ひきの\nレベルが　１だけ　あがる。
 4,1,32,おおむかし　うみに　すんでいた\nこだい　ポケモンの　カセキ。\nこうらの　いちぶ　らしい。
 4,1,33,おおむかし　うみに　すんでいた\nこだい　ポケモンの　カセキ。\nかいがらの　いちぶ　らしい。
-4,1,34,きまった　ばしょで　つかうことで\nとくしゅな　でんきしんごうを　だして\nとびらを　あける　ハイテクな　カギ。
 4,1,36,せんとうちゅうの　ポケモンの\nめいちゅうを　あげる　どうぐ。\nひっこめると　もとに　もどる。
 4,1,37,ある　とくていの　ポケモンを\nしんかさせる　ふしぎな　いし。\nはっぱの　もようが　ある。
 4,1,39,キラキラと　きんいろに　ひかる\nじゅんきん　せいの　たま。\nショップで　たかく　うれる。
@@ -513,6 +512,7 @@ generation_id,language_id,item_id,description
 4,1,597,ホウエンちほうの　でんせつと\nふかい　かかわりが　あると　いわれる\nみどりいろに　かがやく　たま。
 4,1,598,とくしゅな　カギで　あけられる\nがんじょうな　カプセル。\n
 4,1,599,じめんから　ほりだされた\nすいしょうだま。いわと　つちで\nおおわれているが　とても　きれい。
+4,1,987,きまった　ばしょで　つかうことで\nとくしゅな　でんきしんごうを　だして\nとびらを　あける　ハイテクな　カギ。
 4,2,1,???
 4,2,2,The best Ball with the ultimate level of\nperformance. It will catch any wild\nPokémon without fail.
 4,2,3,An ultra-performance Ball that\nprovides a higher Pokémon catch rate\nthan a Great Ball.
@@ -545,7 +545,6 @@ generation_id,language_id,item_id,description
 4,2,31,A candy that is packed with energy.\nIt raises the level of a single Pokémon\nby one.
 4,2,32,A fossil of an ancient Pokémon that\nlived in the sea. It appears to be\npart of a shell.
 4,2,33,A fossil of an ancient Pokémon that\nlived in the sea. It appears to be\npart of a seashell.
-4,2,34,A high-tech key that has to be used at\na specific location. It emits a special\nelectric signal to open a door.
 4,2,36,An item that raises the accuracy\nof a Pokémon in battle. It wears off if\nthe Pokémon is withdrawn.
 4,2,37,A peculiar stone that makes certain\nspecies of Pokémon evolve.\nIt has a leaf pattern.
 4,2,39,A nugget of pure gold that gives off a\nlustrous gleam. It can be sold at a\nhigh price to shops.
@@ -1027,6 +1026,7 @@ generation_id,language_id,item_id,description
 4,2,597,A shiny green orb that is said to have\na legend and has a deep connection with\nthe Hoenn region.
 4,2,598,A sturdy Capsule that can only be\nopened with a special key.
 4,2,599,A crystal ball that was excavated from\nthe ground. A very beautiful stone that\nis covered with bits of rock and earth.
+4,2,987,A high-tech key that has to be used at\na specific location. It emits a special\nelectric signal to open a door.
 4,3,1,???
 4,3,2,Assurément la Ball la plus performante.\nElle permet de capturer à coup sûr un\nPokémon sauvage.
 4,3,3,Une Ball ultraperformante dont le taux\nde réussite est supérieur à celui de la\nSuper Ball.
@@ -1059,7 +1059,6 @@ generation_id,language_id,item_id,description
 4,3,31,Un bonbon plein d’énergie.\nIl permet à un Pokémon de gagner\nun niveau d’expérience.
 4,3,32,Fossile d’un ancien Pokémon aquatique.\nOn dirait un morceau de carapace.
 4,3,33,Fossile d’un ancien Pokémon aquatique.\nOn dirait un morceau de coquillage.
-4,3,34,Clé destinée à une serrure très\ncomplexe. Ouvre une porte en\ntransmettant un signal électrique.
 4,3,36,Monte la précision d’un Pokémon pendant\nun combat. L’effet s’estompe si le\nPokémon se retire.
 4,3,37,Une pierre étrange qui fait évoluer\ncertaines espèces de Pokémon.\nUne feuille est dessinée dessus.
 4,3,39,Pépite d’or pur qui brille\nmagnifiquement. Peut être vendue à bon\nprix aux magasins.
@@ -1541,6 +1540,7 @@ generation_id,language_id,item_id,description
 4,3,597,Un orbe viride dont on dit qu’il a\nun lien très étroit avec les légendes\nde Hoenn.
 4,3,598,Un écrin résistant qui ne s’ouvre\nqu’avec une clé spéciale.
 4,3,599,Un orbe cristallin fraîchement déterré.\nIl est encore pris dans une gangue de\nterre et de roche.
+4,3,987,Clé destinée à une serrure très\ncomplexe. Ouvre une porte en\ntransmettant un signal électrique.
 4,4,1,???
 4,4,2,Der beste Ball!\nDamit fängst du garantiert\njedes wilde Pokémon.
 4,4,3,Ein Ball mit hoher Erfolgsquote.\nDem Superball in allen\nPunkten überlegen.
@@ -1573,7 +1573,6 @@ generation_id,language_id,item_id,description
 4,4,31,"Ein energiereiches Bonbon, das\nden Level eines Pokémon dauerhaft\num eins anhebt."
 4,4,32,"Ein Fossil eines antiken Pokémon,\ndas am Meeresgrund lebte. Es sieht\nwie das Stück einer Muschel aus."
 4,4,33,"Ein Fossil eines antiken Pokémon,\ndas am Meeresgrund lebte. Es sieht\nwie ein Muschelstück aus."
-4,4,34,"Ein besonderer Schlüssel, der an einem\nspeziellen Ort verwendet werden muss.\nÖffnet Türen durch ein elektr. Signal."
 4,4,36,Hebt die Genauigkeit eines Pokémon\nim Kampf. Die Wirkung wird mit dem\nTausch des Pokémon beendet.
 4,4,37,Dieser spezielle Stein löst bei\nbestimmten Pokémon die Entwicklung\naus. Er hat ein Blattmuster.
 4,4,39,"Ein Nugget aus purem Gold, das\neinen schimmernden Glanz besitzt. \nEs ist von großem Wert."
@@ -2055,6 +2054,7 @@ generation_id,language_id,item_id,description
 4,4,597,"Eine grün schimmernde Kugel,\nvon der in den Legenden der\nHoenn-Region berichtet wird."
 4,4,598,"Eine äußerst robuste Kapsel,\ndie sich nur mithilfe eines\nganz speziellen Schlüssels öffnet."
 4,4,599,"Eine kristallene Kugel, die aus der Erde\ngeborgen wurde. Schmutz und Gestein\nkonnten ihrer Schönheit nichts anhaben."
+4,4,987,"Ein besonderer Schlüssel, der an einem\nspeziellen Ort verwendet werden muss.\nÖffnet Türen durch ein elektr. Signal."
 4,5,1,???
 4,5,2,La Ball dalle prestazioni migliori:\ncattura qualsiasi Pokémon\nselvatico senza mai fallire.
 4,5,3,Ball dalle prestazioni eccellenti:\nfornisce maggiori probabilità di\ncattura rispetto alla Mega Ball.
@@ -2087,7 +2087,6 @@ generation_id,language_id,item_id,description
 4,5,31,Caramella altamente energetica.\nFa salire un Pokémon di un livello.
 4,5,32,Fossile di un Pokémon antico che\nviveva in mare. Sembra essere\nparte di una corazza.
 4,5,33,Fossile di un Pokémon antico che\nviveva in mare. Sembra essere\nparte di una conchiglia.
-4,5,34,Una sofisticata chiave da usare in un\ndeterminato luogo. Emette un impulso\nelettrico speciale per aprire una porta.
 4,5,36,Aumenta la precisione di un Pokémon\nin una lotta. L’effetto svanisce se\nil Pokémon è sostituito.
 4,5,37,Pietra particolare che fa evolvere\ndeterminate specie di Pokémon. Sopra\nvi appare l’immagine di una foglia.
 4,5,39,Pepita d’oro puro dal luccichio\nsfavillante. Si può vendere\na caro prezzo ai negozi.
@@ -2569,6 +2568,7 @@ generation_id,language_id,item_id,description
 4,5,597,"Sfera con riflessi verdi, che pare\nabbia un profondo legame con le\nleggende della regione di Hoenn."
 4,5,598,Scrigno blindato che si apre\nsolo con una chiave speciale.
 4,5,599,Cristallo appena scavato.\nBellissimo malgrado sia ancora ricoperto\ndi frammenti di roccia e terra.
+4,5,987,Una sofisticata chiave da usare in un\ndeterminato luogo. Emette un impulso\nelettrico speciale per aprire una porta.
 4,6,1,(?)
 4,6,2,La Poké Ball definitiva. Atrapa\ncualquier Pokémon salvaje\ny no falla nunca.
 4,6,3,Poké Ball de rendimiento superior.\nTiene más índice de éxito que\nla Superball.
@@ -2601,7 +2601,6 @@ generation_id,language_id,item_id,description
 4,6,31,Caramelo energético que sube\na un Pokémon de nivel.
 4,6,32,Fósil de un Pokémon ancestral\nque vivió en el fondo del mar.\nParece ser un fragmento de concha.
 4,6,33,Fósil de un Pokémon ancestral que\nvivió en el fondo del mar. Parece ser\nun fragmento de concha marina.
-4,6,34,Una llave de alta tecnología que debe\nusarse en un lugar concreto. Emite una\nseñal eléctrica que abre una puerta.
 4,6,36,"Aumenta la precisión de los ataques\nen combate. Al cambiar de Pokémon,\nel efecto desaparece."
 4,6,37,Curiosa piedra que hace evolucionar\na determinadas especies de Pokémon.\nTiene dibujada una hoja.
 4,6,39,Pepita de oro puro que desprende\nun brillo espectacular. Puede venderse\nmuy cara en las tiendas.
@@ -3083,6 +3082,7 @@ generation_id,language_id,item_id,description
 4,6,597,Esfera glauca de la que se dice que\nguarda una estrecha relación con las\nleyendas de Hoenn.
 4,6,598,Una Cápsula resistente que solo puede\nabrirse con una llave especial.
 4,6,599,"Esfera cristalina encontrada bajo\ntierra. A pesar de estar cubierta de\nroca y tierra, su belleza es increíble."
+4,6,987,Una llave de alta tecnología que debe\nusarse en un lugar concreto. Emite una\nseñal eléctrica que abre una puerta.
 4,7,1,???
 4,7,2,야생 포켓몬을 반드시\n잡을 수 있는\n최고 성능의 볼.
 4,7,3,수퍼볼보다도 더욱\n포켓몬을 잡기 쉬워진\n매우 성능이 좋은 볼.
@@ -3115,7 +3115,6 @@ generation_id,language_id,item_id,description
 4,7,31,에너지가 가득한 사탕.\n먹이면 포켓몬 1마리의\n레벨이 1만큼 올라간다.
 4,7,32,오랜 옛날 바다에 살았던\n고대 포켓몬의 화석.\n등 껍질의 일부인 듯하다.
 4,7,33,오랜 옛날 바다에 살았던\n고대 포켓몬의 화석.\n조개껍질의 일부인 듯하다.
-4,7,34,정해진 장소에서 쓰는 것으로\n특수한 전기 신호를 내어\n문을 여는 첨단기술의 열쇠.
 4,7,36,배틀 중인 포켓몬의 명중률을 올리는\n도구. 포켓몬을 볼에 넣어버리면\n원래대로 되돌아간다.
 4,7,37,어느 특정한 포켓몬을\n진화시키는 이상한 돌.\n잎사귀 무늬가 있다.
 4,7,39,금색으로 반짝반짝 빛나는\n순금으로 만들어진 구슬.\n상점에서 비싸게 팔린다.
@@ -3597,6 +3596,7 @@ generation_id,language_id,item_id,description
 4,7,597,호연지방의 전설과\n깊은 연관이 있다고 전해지는\n초록색으로 빛나는 구슬.
 4,7,598,특수한 열쇠로 열 수 있는\n튼튼한 캡슐.\n
 4,7,599,땅에서 파 올린\n수정구슬. 바위랑 흙으로\n뒤덮여 있지만 매우 아름답다.
+4,7,987,정해진 장소에서 쓰는 것으로\n특수한 전기 신호를 내어\n문을 여는 첨단기술의 열쇠.
 5,1,1,？？？
 5,1,2,やせいの　ポケモンを　かならず\nつかまえることが　できる\nさいこう　せいのうの　ボール。
 5,1,3,スーパーボールよりも　さらに\nポケモンを　つかまえやすくなった\nすごく　せいのうのいい　ボール。
@@ -3629,7 +3629,6 @@ generation_id,language_id,item_id,description
 5,1,31,エネルギーの　つまった　アメ。\nあたえると　ポケモン　１ひきの\nレベルが　１だけ　あがる。
 5,1,32,おおむかし　うみに　すんでいた\nこだい　ポケモンの　カセキ。\nこうらの　いちぶ　らしい。
 5,1,33,おおむかし　うみに　すんでいた\nこだい　ポケモンの　カセキ。\nかいがらの　いちぶ　らしい。
-5,1,34,きまった　ばしょで　つかうことで\nとくしゅな　でんきしんごうを　だして\nとびらを　あける　ハイテクな　カギ。
 5,1,36,せんとうちゅうの　ポケモンの\nめいちゅうを　あげる　どうぐ。\nひっこめると　もとに　もどる。
 5,1,37,ある　とくていの　ポケモンを\nしんかさせる　ふしぎな　いし。\nはっぱの　もようが　ある。
 5,1,39,キラキラと　きんいろに　ひかる\nじゅんきん　せいの　たま。\nショップで　たかく　うれる。
@@ -4217,6 +4216,7 @@ generation_id,language_id,item_id,description
 5,1,717,ライモンシティの　ゆうえんちで\nひろった　ライブキャスター。\nおとしぬしは　おとこのこ　らしい。
 5,1,718,ライモンシティの　ゆうえんちで\nひろった　ライブキャスター。\nおとしぬしは　おんなのこ　らしい。
 5,1,719,しんじつを　うつしだすことで\nポケモンを　ほんらいの　すがたに\nかえてしまう　ふしぎな　かがみ。
+5,1,987,きまった　ばしょで　つかうことで\nとくしゅな　でんきしんごうを　だして\nとびらを　あける　ハイテクな　カギ。
 5,2,1,???
 5,2,2,The best Ball with the ultimate level of\nperformance. It will catch any wild\nPokémon without fail.
 5,2,3,An ultra-performance Ball that\nprovides a higher Pokémon catch rate\nthan a Great Ball.
@@ -4249,7 +4249,6 @@ generation_id,language_id,item_id,description
 5,2,31,A candy that is packed with energy.\nIt raises the level of a single Pokémon\nby one.
 5,2,32,A fossil of an ancient Pokémon that\nlived in the sea. It appears to be\npart of a shell.
 5,2,33,A fossil of an ancient Pokémon that\nlived in the sea. It appears to be\npart of a seashell.
-5,2,34,A high-tech key that has to be used at\na specific location. It emits a special\nelectric signal to open a door.
 5,2,36,An item that raises the accuracy\nof a Pokémon in battle. It wears off if\nthe Pokémon is withdrawn.
 5,2,37,A peculiar stone that makes certain\nspecies of Pokémon evolve.\nIt has a leaf pattern.
 5,2,39,A nugget of pure gold that gives off a\nlustrous gleam. It can be sold at a\nhigh price to shops.
@@ -4837,6 +4836,7 @@ generation_id,language_id,item_id,description
 5,2,717,The Xtransceiver found at the\nNimbasa City amusement park.\nIt seems it belongs to a boy.
 5,2,718,The Xtransceiver found at the\nNimbasa City amusement park.\nIt seems it belongs to a girl.
 5,2,719,A glass that reveals the truth.\nIt is a mysterious glass that returns\na Pokémon back to its original shape.
+5,2,987,A high-tech key that has to be used at\na specific location. It emits a special\nelectric signal to open a door.
 5,3,1,???
 5,3,2,Assurément la Ball la plus performante.\nElle permet de capturer à coup sûr un\nPokémon sauvage.
 5,3,3,Une Ball ultraperformante dont le taux\nde réussite est supérieur à celui de la\nSuper Ball.
@@ -4869,7 +4869,6 @@ generation_id,language_id,item_id,description
 5,3,31,Un bonbon plein d'énergie.\nIl permet à un Pokémon de gagner\nun niveau d'expérience.
 5,3,32,Fossile d'un ancien Pokémon aquatique.\nOn dirait un morceau de carapace.
 5,3,33,Fossile d'un ancien Pokémon aquatique.\nOn dirait un morceau de coquillage.
-5,3,34,Clé destinée à une serrure très\ncomplexe. Ouvre une porte en\ntransmettant un signal électrique.
 5,3,36,Monte la Précision pendant un combat.\nL'effet s'estompe si le Pokémon se\nretire.
 5,3,37,Une pierre étrange qui fait évoluer\ncertaines espèces de Pokémon.\nUne feuille est dessinée dessus.
 5,3,39,Pépite d'or pur qui brille\nmagnifiquement. Peut être vendue\nà bon prix aux magasins.
@@ -5457,6 +5456,7 @@ generation_id,language_id,item_id,description
 5,3,717,Un Vokit trouvé au parc\nd'attractions de Méanville.\nC'est un modèle pour garçons.
 5,3,718,Un Vokit trouvé au parc\nd'attractions de Méanville.\nC'est un modèle pour filles.
 5,3,719,"Un mystérieux miroir qui, en reflétant\nla vérité, permet de redonner à un\nPokémon sa forme originelle."
+5,3,987,Clé destinée à une serrure très\ncomplexe. Ouvre une porte en\ntransmettant un signal électrique.
 5,4,1,???
 5,4,2,Der beste Ball!\nDamit fängst du garantiert\njedes wilde Pokémon.
 5,4,3,Ein Ball mit hoher Erfolgsquote.\nDem Superball in allen\nPunkten überlegen.
@@ -5489,7 +5489,6 @@ generation_id,language_id,item_id,description
 5,4,31,"Ein energiereiches Bonbon, das\nden Level eines Pokémon dauerhaft\num eins erhöht."
 5,4,32,"Das Fossil eines uralten Pokémon,\ndas in der Tiefsee lebte. Es sieht\nwie das Stück einer Muschel aus."
 5,4,33,"Das Fossil eines uralten Pokémon,\ndas in der Tiefsee lebte. Es sieht\nwie ein Muschelstück aus."
-5,4,34,"Ein besonderer Schlüssel, der an\neinem speziellen Ort Türen durch\nein elektrisches Signal öffnet."
 5,4,36,Hebt die Genauigkeit eines Pokémon\nim Kampf. Die Wirkung wird mit dem\nAustausch des Pokémon beendet.
 5,4,37,Dieser spezielle Stein löst bei\nbestimmten Pokémon die Entwicklung\naus. Er hat ein Blattmuster.
 5,4,39,"Ein Nugget aus purem Gold, das\neinen schimmernden Glanz besitzt.\nEs ist von großem Wert."
@@ -6077,6 +6076,7 @@ generation_id,language_id,item_id,description
 5,4,717,"Ein Viso-Caster, der im Vergnügungspark\nvon Rayono City gefunden wurde.\nEr scheint einem Jungen zu gehören."
 5,4,718,"Ein Viso-Caster, der im Vergnügungspark\nvon Rayono City gefunden wurde.\nEr scheint einem Mädchen zu gehören."
 5,4,719,"Ein mysteriöser Spiegel, der Pokémon\nin ihre eigentliche Form verwandelt,\nindem er die Wahrheit widerspiegelt."
+5,4,987,"Ein besonderer Schlüssel, der an\neinem speziellen Ort Türen durch\nein elektrisches Signal öffnet."
 5,5,1,???
 5,5,2,La Ball dalle prestazioni migliori:\ncattura qualsiasi Pokémon selvatico\nsenza mai fallire.
 5,5,3,Ball dalle prestazioni eccellenti:\nfornisce maggiori probabilità di\ncattura rispetto alla Mega Ball.
@@ -6109,7 +6109,6 @@ generation_id,language_id,item_id,description
 5,5,31,Caramella altamente energetica.\nFa salire un Pokémon di un livello.
 5,5,32,Fossile di un Pokémon antico che\nviveva in mare. Sembra essere\nparte di una corazza.
 5,5,33,Fossile di un Pokémon antico che\nviveva in mare. Sembra essere\nparte di una conchiglia.
-5,5,34,Una sofisticata chiave da usare in un\ndeterminato luogo. Emette un impulso\nelettrico speciale per aprire una porta.
 5,5,36,Aumenta la precisione di un Pokémon\nin una lotta. L'effetto svanisce se\nil Pokémon è sostituito.
 5,5,37,Pietra particolare che fa evolvere\ndeterminate specie di Pokémon.\nRiporta l'immagine di una foglia.
 5,5,39,Pepita d'oro puro dal luccichio\nsfavillante. Si può vendere a un prezzo\npiuttosto alto nei negozi.
@@ -6697,6 +6696,7 @@ generation_id,language_id,item_id,description
 5,5,717,Interpoké rinvenuto nel parco giochi\ndi Sciroccopoli. Pare che appartenga\na un ragazzo.
 5,5,718,Interpoké rinvenuto nel parco giochi\ndi Sciroccopoli. Pare che appartenga\na una ragazza.
 5,5,719,"Specchio misterioso che, riflettendo\nla verità, fa riacquistare ai Pokémon\nla loro forma originaria."
+5,5,987,Una sofisticata chiave da usare in un\ndeterminato luogo. Emette un impulso\nelettrico speciale per aprire una porta.
 5,6,1,???
 5,6,2,La Poké Ball definitiva. Atrapa\ncualquier Pokémon salvaje y no\nfalla nunca.
 5,6,3,Poké Ball de rendimiento superior.\nTiene un índice de éxito mayor\nal de la Superball.
@@ -6729,7 +6729,6 @@ generation_id,language_id,item_id,description
 5,6,31,Caramelo energético que sube\na un Pokémon de nivel.
 5,6,32,Fósil de un Pokémon ancestral\nque vivió en el fondo del mar.\nParece ser un fragmento de concha.
 5,6,33,Fósil de un Pokémon ancestral que\nvivió en el fondo del mar. Parece ser\nun fragmento de concha marina.
-5,6,34,Una llave de alta tecnología que debe\nusarse en un lugar concreto. Emite una\nseñal eléctrica que abre una puerta.
 5,6,36,"Aumenta la Precisión de los ataques\nen combate. Al cambiar de Pokémon,\nel efecto desaparece."
 5,6,37,Curiosa piedra que hace evolucionar\na determinadas especies de Pokémon.\nTiene grabada una hoja.
 5,6,39,Pepita de oro puro que desprende\nun brillo espectacular. Puede venderse\nmuy cara en las tiendas.
@@ -7317,6 +7316,7 @@ generation_id,language_id,item_id,description
 5,6,717,Videomisor encontrado en el parque de\natracciones de Ciudad Mayólica.\nParece que pertenece a un chico.
 5,6,718,Videomisor encontrado en el parque de\natracciones de Ciudad Mayólica.\nParece que pertenece a una chica.
 5,6,719,Espejo misterioso que refleja la verdad\ny devuelve los Pokémon a su forma\noriginal.
+5,6,987,Una llave de alta tecnología que debe\nusarse en un lugar concreto. Emite una\nseñal eléctrica que abre una puerta.
 5,7,1,???
 5,7,2,야생 포켓몬을 반드시\n잡을 수 있는\n최고 성능의 볼.
 5,7,3,수퍼볼보다도 더욱\n포켓몬을 잡기 쉬워진\n매우 성능이 좋은 볼.
@@ -7349,7 +7349,6 @@ generation_id,language_id,item_id,description
 5,7,31,에너지가 가득한 사탕.\n먹이면 포켓몬 1마리의\n레벨이 1만큼 올라간다.
 5,7,32,오랜 옛날 바다에 살았던\n고대 포켓몬의 화석.\n등 껍질의 일부인 듯하다.
 5,7,33,오랜 옛날 바다에 살았던\n고대 포켓몬의 화석.\n조개껍질의 일부인 듯하다.
-5,7,34,정해진 장소에서 쓰는 것으로\n특수한 전기 신호를 내어\n문을 여는 첨단기술의 열쇠.
 5,7,36,배틀 중인 포켓몬의 명중률을 올리는\n도구. 포켓몬을 볼에 넣어버리면\n원래대로 되돌아간다.
 5,7,37,어느 특정한 포켓몬을\n진화시키는 이상한 돌.\n잎사귀 무늬가 있다.
 5,7,39,금색으로 반짝반짝 빛나는\n순금으로 만들어진 구슬.\n상점에서 비싸게 팔린다.
@@ -7937,6 +7936,7 @@ generation_id,language_id,item_id,description
 5,7,717,뇌문시티의 유원지에서\n주운 라이브캐스터.\n잃어버린 사람은 남자인 것 같다.
 5,7,718,뇌문시티의 유원지에서\n주운 라이브캐스터.\n잃어버린 사람은 여자인 것 같다.
 5,7,719,진실을 비춰줌으로\n포켓몬을 본래의 모습으로\n바꿔버리는 이상한 거울.
+5,7,987,정해진 장소에서 쓰는 것으로\n특수한 전기 신호를 내어\n문을 여는 첨단기술의 열쇠.
 5,8,1,？？？
 5,8,2,野生の　ポケモンを　必ず\n捕まえることが　できる\n最高　性能の　ボール。
 5,8,3,スーパーボールよりも　さらに\nポケモンを　捕まえやすくなった\nすごく　性能のいい　ボール。
@@ -7969,7 +7969,6 @@ generation_id,language_id,item_id,description
 5,8,31,エネルギーの　つまった　アメ。\nあたえると　ポケモン　１匹の\nレベルが　１だけ　あがる。
 5,8,32,大昔　海に　すんでいた\n古代ポケモンの　カセキ。\nこうらの　一部らしい。
 5,8,33,大昔　海に　すんでいた\n古代ポケモンの　カセキ。\n貝殻の　一部らしい。
-5,8,34,決まった　場所で　使うことで\n特殊な　電気信号を　だして\n扉を　開ける　ハイテクな　カギ。
 5,8,36,戦闘中の　ポケモンの\n命中を　あげる　道具。\nひっこめると　元に　戻る。
 5,8,37,ある　特定の　ポケモンを\n進化させる　不思議な　石。\nはっぱの　模様が　ある。
 5,8,39,キラキラと　金色に　光る\n純金製の　玉。\nショップで　高く　売れる。
@@ -8557,6 +8556,7 @@ generation_id,language_id,item_id,description
 5,8,717,ライモンシティの　遊園地で\n拾った　ライブキャスター。\n落とし主は　男の子らしい。
 5,8,718,ライモンシティの　遊園地で\n拾った　ライブキャスター。\n落とし主は　女の子らしい。
 5,8,719,真実を　映しだすことで\nポケモンを　本来の　姿に\n変えてしまう　不思議な　鏡。
+5,8,987,決まった　場所で　使うことで\n特殊な　電気信号を　だして\n扉を　開ける　ハイテクな　カギ。
 6,1,1,？？？
 6,1,2,やせいの　ポケモンを　かならず\nつかまえることが　できる\nさいこう　せいのうの　ボール。
 6,1,3,スーパーボールよりも　さらに\nポケモンを　つかまえやすくなった\nすごく　せいのうのいい　ボール。
@@ -8589,7 +8589,6 @@ generation_id,language_id,item_id,description
 6,1,31,エネルギーの　つまった　アメ。\nあたえると　ポケモン　１ひきの\nレベルが　１だけ　あがる。
 6,1,32,おおむかし　うみに　すんでいた\nこだい　ポケモンの　カセキ。\nこうらの　いちぶ　らしい。
 6,1,33,おおむかし　うみに　すんでいた\nこだい　ポケモンの　カセキ。\nかいがらの　いちぶ　らしい。
-6,1,34,きまった　ばしょで　つかうことで\nとくしゅな　でんきしんごうを　だして\nとびらを　あける　ハイテクな　カギ。
 6,1,36,せんとうちゅうの　ポケモンの\nめいちゅうを　あげる　どうぐ。\nひっこめると　もとに　もどる。
 6,1,37,ある　とくていの　ポケモンを\nしんかさせる　ふしぎな　いし。\nはっぱの　もようが　ある。
 6,1,39,キラキラと　きんいろに　ひかる\nじゅんきん　せいの　たま。\nショップで　たかく　うれる。
@@ -9314,6 +9313,7 @@ generation_id,language_id,item_id,description
 6,1,835,ポケモンを　メガシンカさせる\nみちのパワーを　ひめた　いし。\nトレーナーが　みにつける。
 6,1,836,いしのどうくつに　おちていた\nいんせきのかけらの　ひとつ。\nふれると　ほのかに　あたたかい。
 6,1,837,どこに　いても\nラティオスや　ラティアスを\nよびよせることが　できる　ふえ。
+6,1,987,きまった　ばしょで　つかうことで\nとくしゅな　でんきしんごうを　だして\nとびらを　あける　ハイテクな　カギ。
 6,2,1,???
 6,2,2,"The best Poké Ball with the ultimate\nlevel of performance. With it, you will\ncatch any wild Pokémon without fail."
 6,2,3,An ultra-high-performance Poké Ball\nthat provides a higher success rate for\ncatching Pokémon than a Great Ball.
@@ -9346,7 +9346,6 @@ generation_id,language_id,item_id,description
 6,2,31,"A candy that is packed with energy.\nWhen consumed, it will instantly raise\nthe level of a single Pokémon by one."
 6,2,32,A fossil from a prehistoric Pokémon\nthat once lived in the sea. It could\nbe a shell or carapace.
 6,2,33,A fossil from a prehistoric Pokémon\nthat once lived in the sea. It might be\na piece of a seashell.
-6,2,34,A high-tech key that has to be used at\na specific location. It emits a special\nelectronic signal to open a door.
 6,2,36,An item that boosts the accuracy of\na Pokémon during a battle. It wears\noff once the Pokémon is withdrawn.
 6,2,37,A peculiar stone that can make\ncertain species of Pokémon evolve.\nIt has an unmistakable leaf pattern.
 6,2,39,A nugget of the purest gold that gives\noff a lustrous gleam in direct light.\nIt can be sold at a high price to shops.
@@ -10071,6 +10070,7 @@ generation_id,language_id,item_id,description
 6,2,835,A stone of unexplained power\nthat makes Pokémon Mega Evolve.
 6,2,836,One of the fragments of a Meteorite from\nGranite Cave. It’s faintly warm to the touch.
 6,2,837,A flute that can be used to summon\nLatios or Latias no matter where you are.
+6,2,987,A high-tech key that has to be used at\na specific location. It emits a special\nelectronic signal to open a door.
 6,3,1,???
 6,3,2,Assurément la Ball la plus performante.\nElle permet de capturer à coup sûr un Pokémon\nsauvage.
 6,3,3,Une Ball ultraperformante dont le taux de\nréussite est supérieur à celui de la Super Ball.
@@ -10103,7 +10103,6 @@ generation_id,language_id,item_id,description
 6,3,31,Un bonbon plein d’énergie.\nIl permet à un Pokémon de gagner un niveau\nd’expérience.
 6,3,32,Le fossile d’un ancien Pokémon aquatique.\nOn dirait un morceau de carapace.
 6,3,33,Le fossile d’un ancien Pokémon aquatique.\nOn dirait un morceau de coquillage.
-6,3,34,Une clé destinée à une serrure très complexe.\nOuvre une porte en transmettant un signal\nélectrique.
 6,3,36,Augmente la Précision pendant un combat.\nL’effet disparaît si le Pokémon se retire.
 6,3,37,Une pierre étrange qui fait évoluer certaines\nespèces de Pokémon. Une feuille est dessinée\ndessus.
 6,3,39,Une pépite d’or pur qui brille d’un éclat\nmagnifique. Peut être vendue à bon prix\naux magasins.
@@ -10828,6 +10827,7 @@ generation_id,language_id,item_id,description
 6,3,835,Une pierre aux pouvoirs mystérieux permettant à\nun Pokémon de méga-évoluer.\nCette pierre doit être tenue par le Dresseur.
 6,3,836,L’un des fragments de météorite tombés dans\nla Grotte Granite. Il est légèrement tiède\nau toucher.
 6,3,837,Une flûte capable d’appeler Latios ou Latias\noù que l’on soit.
+6,3,987,Une clé destinée à une serrure très complexe.\nOuvre une porte en transmettant un signal\nélectrique.
 6,4,1,???
 6,4,2,Der beste Ball! Damit fängst du garantiert jedes\nwilde Pokémon.
 6,4,3,Ein Ball mit hoher Erfolgsquote. Dem Superball in\nallen Punkten überlegen.
@@ -10860,7 +10860,6 @@ generation_id,language_id,item_id,description
 6,4,31,"Ein energiereiches Bonbon, das den Level\neines Pokémon dauerhaft um 1 erhöht."
 6,4,32,"Das Fossil eines uralten Pokémon, das in der\nTiefsee lebte. Es sieht wie eine Muschelschale\noder ein Rückenschild aus."
 6,4,33,"Das Fossil eines uralten Pokémon, das in der\nTiefsee lebte. Es ähnelt einer Muschelschale."
-6,4,34,"Ein besonderer Schlüssel, der an einem speziellen\nOrt Türen durch ein elektrisches Signal öffnet."
 6,4,36,Hebt die Genauigkeit eines Pokémon im Kampf.\nDie Wirkung wird mit dem Austausch des\nPokémon beendet.
 6,4,37,Dieser spezielle Stein löst bei bestimmten\nPokémon die Entwicklung aus. Er hat ein\nBlattmuster.
 6,4,39,"Ein Nugget aus purem Gold, das einen\nschimmernden Glanz besitzt. Es ist\nvon großem Wert."
@@ -11585,6 +11584,7 @@ generation_id,language_id,item_id,description
 6,4,835,"Ein Stein mit unbekannten Kräften, der bei\nPokémon eine Mega-Entwicklung auslöst.\nTrainer tragen ihn am Körper."
 6,4,836,"Eines der Meteoritenstücke aus der Granithöhle.\nWenn man es berührt, wird es ein bisschen warm."
 6,4,837,"Eine Flöte, mit der man Latios oder Latias\nherbeirufen kann, egal wo sie sich gerade\nbefinden."
+6,4,987,"Ein besonderer Schlüssel, der an einem speziellen\nOrt Türen durch ein elektrisches Signal öffnet."
 6,5,1,???
 6,5,2,La Poké Ball dalle prestazioni migliori:\ncattura qualsiasi Pokémon selvatico senza\nmai fallire.
 6,5,3,Poké Ball dalle prestazioni eccellenti:\nfornisce maggiori probabilità di cattura rispetto\nalla Mega Ball.
@@ -11617,7 +11617,6 @@ generation_id,language_id,item_id,description
 6,5,31,Caramella altamente energetica.\nFa salire un Pokémon di un livello.
 6,5,32,Fossile di un Pokémon preistorico che viveva in\nmare. Sembra essere parte di una corazza.
 6,5,33,Fossile di un Pokémon preistorico che viveva in\nmare. Sembra essere parte di una conchiglia.
-6,5,34,Una sofisticata chiave da usare in un determinato\nluogo. Emette un impulso elettrico speciale che\napre una porta.
 6,5,36,Aumenta la precisione di un Pokémon in una\nlotta. L’effetto svanisce se il Pokémon\nè sostituito.
 6,5,37,Pietra particolare che fa evolvere determinate\nspecie di Pokémon. Riporta l’immagine\ndi una foglia.
 6,5,39,Pepita d’oro puro dal luccichio sfavillante.\nSi può vendere a un prezzo piuttosto alto\nnei negozi.
@@ -12342,6 +12341,7 @@ generation_id,language_id,item_id,description
 6,5,835,"Pietra dotata di un misterioso potere.\nSe tenuta da un Allenatore, può innescare\nla megaevoluzione di alcuni Pokémon."
 6,5,836,"Frammento di meteorite trovato nella Grotta\nPietrosa. Toccandolo, si avverte un certo calore."
 6,5,837,Suonando questo flauto è possibile richiamare\nLatios o Latias ovunque ci si trovi.
+6,5,987,Una sofisticata chiave da usare in un determinato\nluogo. Emette un impulso elettrico speciale che\napre una porta.
 6,6,1,(?)
 6,6,2,La Poké Ball definitiva. Atrapa cualquier Pokémon\nsalvaje y no falla nunca.
 6,6,3,Poké Ball de rendimiento superior. Tiene un\níndice de éxito mayor al de la Super Ball.
@@ -12374,7 +12374,6 @@ generation_id,language_id,item_id,description
 6,6,31,Caramelo energético que sube a un Pokémon de\nnivel.
 6,6,32,Fósil de un Pokémon ancestral que vivió en el\nfondo del mar. Parece ser un fragmento de\nconcha.
 6,6,33,Fósil de un Pokémon ancestral que vivió en el\nfondo del mar. Parece ser un fragmento de\nconcha marina.
-6,6,34,Una llave de alta tecnología que debe usarse en\nun lugar concreto. Emite una señal eléctrica que\nabre una puerta.
 6,6,36,"Aumenta la Precisión de los ataques en combate.\nAl cambiar de Pokémon, el efecto desaparece."
 6,6,37,Curiosa piedra que hace evolucionar a\ndeterminadas especies de Pokémon. Tiene\ngrabada una hoja.
 6,6,39,Pepita de oro puro que desprende un brillo\nespectacular. Puede venderse muy cara en las\ntiendas.
@@ -13099,6 +13098,7 @@ generation_id,language_id,item_id,description
 6,6,835,"Piedra portadora de singulares poderes que\npermite megaevolucionar a un Pokémon.\nPara ello, ha de llevarla consigo un Entrenador."
 6,6,836,Trozo de meteorito encontrado en el suelo de la\nCueva Granito. Es ligeramente cálido al tacto.
 6,6,837,Flauta capaz de invocar a Latios o Latias en\ncualquier lugar.
+6,6,987,Una llave de alta tecnología que debe usarse en\nun lugar concreto. Emite una señal eléctrica que\nabre una puerta.
 6,7,1,???
 6,7,2,야생 포켓몬을 반드시\n잡을 수 있는\n최고 성능의 볼.
 6,7,3,수퍼볼보다도 더욱\n포켓몬을 잡기 쉬워진\n매우 성능이 좋은 볼.
@@ -13131,7 +13131,6 @@ generation_id,language_id,item_id,description
 6,7,31,에너지가 가득한 사탕.\n먹이면 포켓몬 1마리의\n레벨이 1만큼 올라간다.
 6,7,32,오랜 옛날 바다에 살았던\n고대 포켓몬의 화석.\n등껍질의 일부인 듯하다.
 6,7,33,오랜 옛날 바다에 살았던\n고대 포켓몬의 화석.\n조개껍질의 일부인 듯하다.
-6,7,34,정해진 장소에서 쓰는 것으로\n특수한 전기 신호를 내어\n문을 여는 첨단기술의 열쇠.
 6,7,36,배틀 중인 포켓몬의 명중률을 올리는\n도구. 포켓몬을 볼에 넣어버리면\n원래대로 되돌아간다.
 6,7,37,어느 특정 포켓몬을\n진화시키는 이상한 돌.\n잎사귀 무늬가 있다.
 6,7,39,금색으로 반짝반짝 빛나는\n순금으로 만들어진 구슬.\n상점에서 비싸게 팔린다.
@@ -13856,6 +13855,7 @@ generation_id,language_id,item_id,description
 6,7,835,포켓몬을 메가진화시키는\n미지의 힘을 가진 돌.\n트레이너가 몸에 착용한다.
 6,7,836,바위 동굴에 떨어진\n운석조각 중의 하나.\n만지면 은근히 따뜻하다.
 6,7,837,어디에 있든지\n라티오스나 라티아스를\n부를 수 있는 피리.
+6,7,987,정해진 장소에서 쓰는 것으로\n특수한 전기 신호를 내어\n문을 여는 첨단기술의 열쇠.
 6,8,1,？？？
 6,8,2,野生の　ポケモンを　必ず\n捕まえることが　できる\n最高　性能の　ボール。
 6,8,3,スーパーボールよりも　さらに\nポケモンを　捕まえやすくなった\nすごく　性能のいい　ボール。
@@ -13888,7 +13888,6 @@ generation_id,language_id,item_id,description
 6,8,31,エネルギーの　つまった　アメ。\nあたえると　ポケモン　１匹の\nレベルが　１だけ　あがる。
 6,8,32,大昔　海に　すんでいた\n古代ポケモンの　カセキ。\nこうらの　一部らしい。
 6,8,33,大昔　海に　すんでいた\n古代ポケモンの　カセキ。\n貝殻の　一部らしい。
-6,8,34,決まった　場所で　使うことで\n特殊な　電気信号を　だして\n扉を　開ける　ハイテクな　カギ。
 6,8,36,戦闘中の　ポケモンの\n命中を　あげる　道具。\nひっこめると　元に　戻る。
 6,8,37,ある　特定の　ポケモンを\n進化させる　不思議な　石。\nはっぱの　模様が　ある。
 6,8,39,キラキラと　金色に　光る\n純金製の　玉。\nショップで　高く　売れる。
@@ -14613,6 +14612,7 @@ generation_id,language_id,item_id,description
 6,8,835,ポケモンを　メガシンカさせる\nみちのパワーを　ひめた　いし。\nトレーナーが　みにつける。
 6,8,836,石の洞窟に　落ちていた\nいんせきのかけらの　ひとつ。\n触れると　ほのかに　暖かい。
 6,8,837,どこに　いても\nラティオスや　ラティアスを\n呼び寄せることが　できる　笛。
+6,8,987,決まった　場所で　使うことで\n特殊な　電気信号を　だして\n扉を　開ける　ハイテクな　カギ。
 7,1,1,？？？
 7,1,2,やせいの　ポケモンを　かならず\nつかまえることが　できる\nさいこう　せいのうの　ボール。
 7,1,3,スーパーボールよりも　さらに\nポケモンを　つかまえやすくなった\nすごく　せいのうのいい　ボール。
@@ -14645,7 +14645,7 @@ generation_id,language_id,item_id,description
 7,1,31,エネルギーの　つまった　アメ。\nあたえると　ポケモン　１ひきの\nレベルが　１だけ　あがる。
 7,1,32,おおむかし　うみに　すんでいた\nこだい　ポケモンの　カセキ。\nこうらの　いちぶ　らしい。
 7,1,33,おおむかし　うみに　すんでいた\nこだい　ポケモンの　カセキ。\nかいがらの　いちぶ　らしい。
-7,1,34,きまった　ばしょで　つかうことで\nとくしゅな　でんきしんごうを　だして\nとびらを　あける　ハイテクな　カギ。
+7,1,34,グレンじま　ポケモンジムの\nいりぐちを　あける　カギ。\nあかく　そうしょく　してある。
 7,1,36,せんとうちゅうの　ポケモンの\nめいちゅうを　おおきく　あげる　どうぐ。\nひっこめると　もとに　もどる。
 7,1,37,ある　とくていの　ポケモンを\nしんかさせる　ふしぎな　いし。\nはっぱの　もようが　ある。
 7,1,39,キラキラと　きんいろに　ひかる\nじゅんきん　せいの　たま。\nショップで　たかく　うれる。
@@ -15665,7 +15665,7 @@ generation_id,language_id,item_id,description
 7,2,31,"A candy that is packed with energy. When\nconsumed, it will instantly raise the level of a single\nPokémon by one."
 7,2,32,A fossil from a prehistoric Pokémon that once lived\nin the sea. It could be a shell or carapace.
 7,2,33,A fossil from a prehistoric Pokémon that once lived\nin the sea. It might be a piece of a seashell.
-7,2,34,A high-tech key that has to be used at a specific\nlocation. It emits a special electronic signal to open\na door.
+7,2,34,The key that unlocks the front door of\nthe Pokémon Gym on Cinnabar Island.\nIt has a red decoration.
 7,2,36,An item that sharply boosts the accuracy of a\nPokémon during a battle. It wears off once the\nPokémon is withdrawn.
 7,2,37,A peculiar stone that can make certain species of\nPokémon evolve. It has an unmistakable\nleaf pattern.
 7,2,39,A nugget of the purest gold that gives off a\nlustrous gleam in direct light. It can be sold at a\nhigh price to shops.
@@ -16685,7 +16685,7 @@ generation_id,language_id,item_id,description
 7,3,31,Un bonbon plein d’énergie.\nIl permet à un Pokémon de monter d’un niveau.
 7,3,32,Le fossile d’un ancien Pokémon aquatique.\nOn dirait un morceau de carapace.
 7,3,33,Le fossile d’un ancien Pokémon aquatique.\nOn dirait un morceau de coquillage.
-7,3,34,Une clé destinée à une serrure très complexe.\nOuvre une porte en transmettant un signal\nélectrique.
+7,3,34,La clé de la porte de l’Arène de Cramois’Île.\nElle est décorée en rouge.
 7,3,36,Augmente beaucoup la Précision pendant un\ncombat. L’effet disparaît si le Pokémon est retiré.
 7,3,37,Une pierre étrange qui fait évoluer certaines\nespèces de Pokémon. Une feuille est dessinée\ndessus.
 7,3,39,Une pépite d’or pur qui brille d’un éclat\nmagnifique. Peut être vendue à bon prix\naux magasins.
@@ -17705,7 +17705,7 @@ generation_id,language_id,item_id,description
 7,4,31,"Ein energiereiches Bonbon, das den Level\neines Pokémon dauerhaft um 1 erhöht."
 7,4,32,"Das Fossil eines uralten Pokémon, das in der\nTiefsee lebte. Es sieht wie eine Muschelschale\noder ein Rückenschild aus."
 7,4,33,"Das Fossil eines uralten Pokémon, das in der\nTiefsee lebte. Es ähnelt einer Muschelschale."
-7,4,34,"Ein besonderer Schlüssel, der an einem speziellen\nOrt Türen durch ein elektrisches Signal öffnet."
+7,4,34,Der Schlüssel zur Arena der Zinnoberinsel.\nEr ist mit einer roten Verzierung versehen.
 7,4,36,Hebt die Genauigkeit eines Pokémon im Kampf\nstark an. Die Wirkung wird mit dem Austausch\ndes Pokémon beendet.
 7,4,37,Dieser spezielle Stein löst bei bestimmten Pokémon\ndie Entwicklung aus. Er hat ein Blattmuster.
 7,4,39,"Ein Nugget aus purem Gold, das einen\nschimmernden Glanz besitzt. Es ist von\ngroßem Wert."
@@ -18725,7 +18725,7 @@ generation_id,language_id,item_id,description
 7,5,31,Caramella altamente energetica.\nFa salire un Pokémon di un livello.
 7,5,32,Fossile di un Pokémon preistorico che viveva in\nmare. Sembra essere parte di una corazza.
 7,5,33,Fossile di un Pokémon preistorico che viveva in\nmare. Sembra essere parte di una conchiglia.
-7,5,34,Una sofisticata chiave da usare in un determinato\nluogo. Emette un impulso elettrico speciale che\napre una porta.
+7,5,34,Chiave della Palestra dell’Isola Cannella.\nÈ ornata da graziose decorazioni rosse.
 7,5,36,Aumenta di molto la precisione di un Pokémon\nin una lotta. L’effetto svanisce se il Pokémon\nè sostituito.
 7,5,37,Pietra particolare che fa evolvere determinate\nspecie di Pokémon. Riporta l’immagine di una foglia.
 7,5,39,Pepita d’oro puro dal luccichio sfavillante.\nSi può vendere a un prezzo piuttosto alto\nnei negozi.
@@ -19745,7 +19745,7 @@ generation_id,language_id,item_id,description
 7,6,31,Caramelo energético que sube a un Pokémon de\nnivel.
 7,6,32,Fósil de un Pokémon prehistórico que vivía en el\nfondo del mar. Parece ser un fragmento de\ncaparazón.
 7,6,33,Fósil de un Pokémon prehistórico que vivía en el\nfondo del mar. Parece ser un fragmento de concha\nmarina.
-7,6,34,Una llave de alta tecnología que debe usarse en\nun lugar concreto. Emite una señal eléctrica que\nabre una puerta.
+7,6,34,Llave que abre las puertas del Gimnasio de Isla Canela.\nEn su diseño predomina el color rojo.
 7,6,36,"Aumenta mucho la Precisión en combate. Al cambiar\nde Pokémon, el efecto desaparece."
 7,6,37,Curiosa piedra que hace evolucionar a\ndeterminadas especies de Pokémon.\nTiene grabada una hoja.
 7,6,39,Pepita de oro puro que desprende un brillo\nespectacular. Puede venderse a un precio muy\nalto en las tiendas.
@@ -20765,7 +20765,7 @@ generation_id,language_id,item_id,description
 7,7,31,에너지가 가득한 사탕.\n먹이면 포켓몬 1마리의\n레벨이 1만큼 올라간다.
 7,7,32,오랜 옛날 바다에 살았던\n고대 포켓몬의 화석.\n등껍질의 일부인 듯하다.
 7,7,33,오랜 옛날 바다에 살았던\n고대 포켓몬의 화석.\n조개껍질의 일부인 듯하다.
-7,7,34,정해진 장소에서 쓰는 것으로\n특수한 전기 신호를 내어\n문을 여는 첨단기술의 열쇠.
+7,7,34,홍련섬 포켓몬체육관의\n입구를 여는 열쇠.\n빨갛게 장식되어 있다.
 7,7,36,배틀 중인 포켓몬의 명중률을 크게 올리는\n도구. 포켓몬을 볼에 넣어버리면\n원래대로 되돌아간다.
 7,7,37,어느 특정 포켓몬을\n진화시키는 이상한 돌.\n잎사귀 무늬가 있다.
 7,7,39,금색으로 반짝반짝 빛나는\n순금으로 만들어진 구슬.\n상점에서 비싸게 팔린다.
@@ -21785,7 +21785,7 @@ generation_id,language_id,item_id,description
 7,8,31,エネルギーの　つまった　アメ。\nあたえると　ポケモン　１匹の\nレベルが　１だけ　あがる。
 7,8,32,大昔　海に　すんでいた\n古代ポケモンの　カセキ。\nこうらの　一部らしい。
 7,8,33,大昔　海に　すんでいた\n古代ポケモンの　カセキ。\n貝殻の　一部らしい。
-7,8,34,決まった　場所で　使うことで\n特殊な　電気信号を　だして\n扉を　開ける　ハイテクな　カギ。
+7,8,34,グレン島　ポケモンジムの\n入り口を　開ける　カギ。\n赤く　装飾　してある。
 7,8,36,戦闘中の　ポケモンの\n命中を　大きく　あげる　道具。\nひっこめると　元に　戻る。
 7,8,37,ある　特定の　ポケモンを\n進化させる　不思議な　石。\nはっぱの　模様が　ある。
 7,8,39,キラキラと　金色に　光る\n純金製の　玉。\nショップで　高く　売れる。
@@ -22805,7 +22805,7 @@ generation_id,language_id,item_id,description
 7,9,31,充满能量的糖果。\n将它交给宝可梦后，\n１只宝可梦的等级仅会提高１。
 7,9,32,很久以前栖息在海里的\n古代宝可梦的化石。\n好像是甲壳的一部分。
 7,9,33,很久以前栖息在海里的\n古代宝可梦的化石。\n好像是贝壳的一部分。
-7,9,34,在特定的地方使用，\n就会发出特殊电信号\n来开门的高科技钥匙。
+7,9,34,能打开红莲岛上那座\n宝可梦道馆的钥匙。\n周身都以红色装饰。
 7,9,36,大幅提高战斗中\n宝可梦命中的道具。\n离场后，效果便会消失。
 7,9,37,能让某些特定宝可梦\n进化的神奇石头。\n有着叶子般的花纹。
 7,9,39,闪着金光，\n以纯金制成的珠子。\n可以在商店高价出售。
@@ -23825,7 +23825,7 @@ generation_id,language_id,item_id,description
 7,10,31,充滿能量的糖果。\n餵給寶可夢後，\n能讓寶可夢的等級提高１級。
 7,10,32,很久以前棲息在海裡的\n古代寶可夢的化石。\n好像是甲殼的一部分。
 7,10,33,很久以前棲息在海裡的\n古代寶可夢的化石。\n好像是貝殼的一部分。
-7,10,34,在特定的地方使用，\n就會發出特殊電子訊號\n來開門的高科技鑰匙。
+7,10,34,能打開紅蓮島上的\n寶可夢道館入口的鑰匙。\n上面有紅色的裝飾。
 7,10,36,大大提高戰鬥中\n寶可夢命中的道具。\n離場後，效果便會消失。
 7,10,37,能讓特定寶可夢\n進化的神奇石頭。\n上面有著葉子花紋。
 7,10,39,閃著金光的\n純金製珠子。\n可以在商店高價出售。
