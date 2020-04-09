@@ -60,6 +60,7 @@ return [
 	'move_names',
 	'move_descriptions',
 	'z_move_names',
+	'version_group_moves',
 	'qualities',
 	'inflictions',
 	'targets',

@@ -7,6 +7,7 @@ use Jp\Dex\Domain\EggGroups\EggGroupId;
 use Jp\Dex\Domain\EggGroups\PokemonEggGroup;
 use Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
 final class DatabasePokemonEggGroupRepository implements PokemonEggGroupRepositoryInterface
@@ -26,18 +27,21 @@ final class DatabasePokemonEggGroupRepository implements PokemonEggGroupReposito
 	/**
 	 * Get Pokémon egg groups by Pokémon.
 	 *
+	 * @param GenerationId $generationId
 	 * @param PokemonId $pokemonId
 	 *
 	 * @return PokemonEggGroup[] Indexed by egg group id.
 	 */
-	public function getByPokemon(PokemonId $pokemonId) : array
+	public function getByPokemon(GenerationId $generationId, PokemonId $pokemonId) : array
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
 				`egg_group_id`
 			FROM `pokemon_egg_groups`
-			WHERE `pokemon_id` = :pokemon_id'
+			WHERE `generation_id` = :generation_id
+				AND `pokemon_id` = :pokemon_id'
 		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 

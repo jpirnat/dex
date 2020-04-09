@@ -182,6 +182,7 @@ final class BreedingChainsModel
 
 		$eggGroupNames = [];
 		$pokemonEggGroups = $this->pokemonEggGroupRepository->getByPokemon(
+			$generationId,
 			$pokemonId
 		);
 		foreach ($pokemonEggGroups as $pokemonEggGroup) {
