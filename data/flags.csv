@@ -14,7 +14,8 @@ id,identifier,introduced_in_generation_id
 13,defrost,5
 14,distance,5
 15,heal,5
-16,authentic,5
-17,non-sky,6
+16,ignores-substitute,5
+17,fails-in-sky-battles,6
 18,ally-animation,6
 19,dance,7
+20,metronome,8
