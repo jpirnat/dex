@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Versions;
 
+use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface VersionGroupRepositoryInterface
@@ -33,7 +34,8 @@ interface VersionGroupRepositoryInterface
 
 	/**
 	 * Get version groups that this Pokémon has appeared in, up to a certain
-	 * generation.
+	 * generation. This method is used to get all relevant version groups for
+	 * the dex Pokémon page.
 	 *
 	 * @param PokemonId $pokemonId
 	 * @param GenerationId $end
@@ -41,6 +43,18 @@ interface VersionGroupRepositoryInterface
 	 * @return VersionGroup[] Indexed by id, ordered by sort.
 	 */
 	public function getWithPokemon(PokemonId $pokemonId, GenerationId $end) : array;
+
+	/**
+	 * Get version groups that this move has appeared in, up to a certain
+	 * generation. This method is used to get all relevant version groups for
+	 * the dex move page.
+	 *
+	 * @param MoveId $moveId
+	 * @param GenerationId $end
+	 *
+	 * @return VersionGroup[] Indexed by id, ordered by sort.
+	 */
+	public function getWithMove(MoveId $moveId, GenerationId $end) : array;
 
 	/**
 	 * Get version groups between these two generations, inclusive. This method

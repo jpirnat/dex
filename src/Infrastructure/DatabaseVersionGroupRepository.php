@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroup;
@@ -141,6 +142,56 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 			ORDER BY `sort`'
 		);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':end', $end->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['icon'],
+				$result['sort']
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
+	 * Get version groups that this move has appeared in, up to a certain
+	 * generation. This method is used to get all relevant version groups for
+	 * the dex move page.
+	 *
+	 * @param MoveId $moveId
+	 * @param GenerationId $end
+	 *
+	 * @return VersionGroup[] Indexed by id, ordered by sort.
+	 */
+	public function getWithMove(MoveId $moveId, GenerationId $end) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`icon`,
+				`sort`
+			FROM `version_groups`
+			WHERE `id` IN (
+				SELECT
+					`version_group_id`
+				FROM `version_group_moves`
+				WHERE `move_id` = :move_id
+			)
+			AND `generation_id` <= :end
+			ORDER BY `sort`'
+		);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':end', $end->value(), PDO::PARAM_INT);
 		$stmt->execute();
 

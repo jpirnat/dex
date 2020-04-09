@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationId;
@@ -127,6 +128,49 @@ final class DatabaseGenerationRepository implements GenerationRepositoryInterfac
 			ORDER BY `id`'
 		);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$generations = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$generation = new Generation(
+				new GenerationId($result['id']),
+				$result['identifier'],
+				$result['icon']
+			);
+
+			$generations[$result['id']] = $generation;
+		}
+
+		return $generations;
+	}
+
+	/**
+	 * Get generations that this move has appeared in (via version groups).
+	 *
+	 * @param MoveId $moveId
+	 *
+	 * @return Generation[] Indexed by id. Ordered by id.
+	 */
+	public function getWithMove(MoveId $moveId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`icon`
+			FROM `generations`
+			WHERE `id` IN (
+				SELECT
+					`vg`.`generation_id`
+				FROM `version_groups` AS `vg`
+				INNER JOIN `version_group_moves` AS `m`
+					ON `vg`.`id` = `m`.`version_group_id`
+				WHERE `m`.`move_id` = :move_id
+			)
+			ORDER BY `id`'
+		);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$generations = [];

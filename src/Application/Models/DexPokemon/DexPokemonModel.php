@@ -77,7 +77,6 @@ final class DexPokemonModel
 		];
 
 		// Set generations for the generation control.
-		$introducedInVgId = $pokemon->getIntroducedInVersionGroupId();
 		$this->generationModel->setWithPokemon($pokemon->getId());
 
 		// Get the version groups this Pokémon has appeared in.
@@ -94,6 +93,7 @@ final class DexPokemonModel
 			unset($this->versionGroups[VersionGroupId::BLUE]);
 		}
 
+		$introducedInVgId = $pokemon->getIntroducedInVersionGroupId();
 		$introducedInVg = $this->vgRepository->getById($introducedInVgId);
 		$this->dexPokemonMovesModel->setData(
 			$pokemon->getId(),

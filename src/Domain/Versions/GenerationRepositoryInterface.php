@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Versions;
 
+use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface GenerationRepositoryInterface
@@ -38,6 +39,15 @@ interface GenerationRepositoryInterface
 	 * @return Generation[] Indexed by id. Ordered by id.
 	 */
 	public function getWithPokemon(PokemonId $pokemonId) : array;
+
+	/**
+	 * Get generations that this move has appeared in (via version groups).
+	 *
+	 * @param MoveId $moveId
+	 *
+	 * @return Generation[] Indexed by id. Ordered by id.
+	 */
+	public function getWithMove(MoveId $moveId) : array;
 
 	/**
 	 * Get generations since the given generation, inclusive.

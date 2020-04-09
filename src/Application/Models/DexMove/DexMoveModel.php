@@ -80,13 +80,11 @@ final class DexMoveModel
 		];
 
 		// Set generations for the generation control.
-		$introducedInVgId = $move->getIntroducedInVersionGroupId();
-		$this->generationModel->setGensSinceVg($introducedInVgId);
+		$this->generationModel->setWithMove($move->getId());
 
-		// Get the version groups since this move was introduced.
-		$introducedInVg = $this->vgRepository->getById($introducedInVgId);
-		$this->versionGroups = $this->vgRepository->getBetween(
-			$introducedInVg->getGenerationId(),
+		// Get the version groups this move has appeared in.
+		$this->versionGroups = $this->vgRepository->getWithMove(
+			$move->getId(),
 			$generationId
 		);
 
@@ -97,8 +95,6 @@ final class DexMoveModel
 			unset($this->versionGroups[VersionGroupId::RED_GREEN]);
 			unset($this->versionGroups[VersionGroupId::BLUE]);
 		}
-		// Don't include Let's Go Pikachu/Eevee (yet).
-		unset($this->versionGroups[19]);
 
 		$this->dexMovePokemonModel->setData(
 			$move->getId(),
