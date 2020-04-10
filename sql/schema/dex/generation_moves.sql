@@ -26,6 +26,8 @@ create table if not exists `generation_moves`
 `z_move_id` smallint unsigned null, # nullable
 `z_base_power` tinyint unsigned null, # nullable
 `z_power_effect_id` tinyint unsigned null, # nullable
+`max_move_id` smallint unsigned null, # nullable
+`max_power` tinyint unsigned null, # nullable
 
 primary key (
 	`generation_id`,
@@ -56,6 +58,9 @@ foreign key (`z_move_id`) references `moves` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`z_power_effect_id`) references `z_power_effects` (`id`)
+	on delete restrict
+	on update cascade,
+foreign key (`max_move_id`) references `moves` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;

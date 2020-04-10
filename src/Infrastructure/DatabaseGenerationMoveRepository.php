@@ -69,7 +69,9 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 				`target_id`,
 				`z_move_id`,
 				`z_base_power`,
-				`z_power_effect_id`
+				`z_power_effect_id`,
+				`max_move_id`,
+				`max_power`
 			FROM `generation_moves`
 			WHERE `generation_id` = :generation_id
 				AND `move_id` = :move_id
@@ -100,6 +102,9 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 		$zPowerEffectId = $result['z_power_effect_id'] !== null
 			? new ZPowerEffectId($result['z_power_effect_id'])
 			: null;
+		$maxMoveId = $result['max_move_id'] !== null
+			? new MoveId($result['max_move_id'])
+			: null;
 
 		$generationMove = new GenerationMove(
 			$generationId,
@@ -126,7 +131,9 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 			new TargetId($result['target_id']),
 			$zMoveId,
 			$result['z_base_power'],
-			$zPowerEffectId
+			$zPowerEffectId,
+			$maxMoveId,
+			$result['max_power']
 		);
 
 		return $generationMove;
@@ -168,7 +175,9 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 				`target_id`,
 				`z_move_id`,
 				`z_base_power`,
-				`z_power_effect_id`
+				`z_power_effect_id`,
+				`max_move_id`,
+				`max_power`
 			FROM `generation_moves`
 			WHERE `generation_id` = :generation_id
 				AND `type_id` = :type_id'
@@ -191,6 +200,9 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 				: null;
 			$zPowerEffectId = $result['z_power_effect_id'] !== null
 				? new ZPowerEffectId($result['z_power_effect_id'])
+				: null;
+			$maxMoveId = $result['max_move_id'] !== null
+				? new MoveId($result['max_move_id'])
 				: null;
 
 			$generationMove = new GenerationMove(
@@ -218,7 +230,9 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 				new TargetId($result['target_id']),
 				$zMoveId,
 				$result['z_base_power'],
-				$zPowerEffectId
+				$zPowerEffectId,
+				$maxMoveId,
+				$result['max_power']
 			);
 
 			$generationMoves[$result['move_id']] = $generationMove;
