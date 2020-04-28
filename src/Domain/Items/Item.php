@@ -10,8 +10,6 @@ final class Item
 	private ItemId $id;
 	private string $identifier;
 	private VersionGroupId $introducedInVersionGroupId;
-	private ?int $itemFlingPower;
-	private ?ItemFlingEffectId $itemFlingEffectId;
 
 	/**
 	 * Constructor.
@@ -19,21 +17,15 @@ final class Item
 	 * @param ItemId $itemId
 	 * @param string $identifier
 	 * @param VersionGroupId $introducedInVersionGroupId
-	 * @param int|null $itemFlingPower
-	 * @param ItemFlingEffectId|null $itemFlingEffectId
 	 */
 	public function __construct(
 		ItemId $itemId,
 		string $identifier,
-		VersionGroupId $introducedInVersionGroupId,
-		?int $itemFlingPower,
-		?ItemFlingEffectId $itemFlingEffectId
+		VersionGroupId $introducedInVersionGroupId
 	) {
 		$this->id = $itemId;
 		$this->identifier = $identifier;
 		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
-		$this->itemFlingPower = $itemFlingPower;
-		$this->itemFlingEffectId = $itemFlingEffectId;
 	}
 
 	/**
@@ -64,25 +56,5 @@ final class Item
 	public function getIntroducedInVersionGroupId() : VersionGroupId
 	{
 		return $this->introducedInVersionGroupId;
-	}
-
-	/**
-	 * Get the item's fling power.
-	 *
-	 * @return int|null
-	 */
-	public function getItemFlingPower() : ?int
-	{
-		return $this->itemFlingPower;
-	}
-
-	/**
-	 * Get the item's fling effect id.
-	 *
-	 * @return ItemFlingEffectId|null
-	 */
-	public function getItemFlingEffectId() : ?ItemFlingEffectId
-	{
-		return $this->itemFlingEffectId;
 	}
 }

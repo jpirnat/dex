@@ -5,6 +5,8 @@ create table if not exists `version_group_items`
 
 `game_index` smallint unsigned not null,
 `item_pocket_id` tinyint unsigned null, # nullable
+`item_fling_power` tinyint unsigned null, # nullable
+`item_fling_effect_id` tinyint unsigned null, # nullable
 
 primary key (
 	`version_group_id`,
@@ -17,6 +19,9 @@ foreign key (`item_id`) references `items` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`item_pocket_id`) references `item_pockets` (`id`)
+	on delete restrict
+	on update cascade,
+foreign key (`item_fling_effect_id`) references `item_fling_effects` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;

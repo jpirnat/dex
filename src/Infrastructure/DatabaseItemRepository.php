@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Items\Item;
-use Jp\Dex\Domain\Items\ItemFlingEffectId;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Items\ItemNotFoundException;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
@@ -39,9 +38,7 @@ final class DatabaseItemRepository implements ItemRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`identifier`,
-				`introduced_in_version_group_id`,
-				`item_fling_power`,
-				`item_fling_effect_id`
+				`introduced_in_version_group_id`
 			FROM `items`
 			WHERE `id` = :item_id
 			LIMIT 1'
@@ -56,19 +53,10 @@ final class DatabaseItemRepository implements ItemRepositoryInterface
 			);
 		}
 
-		if ($result['item_fling_effect_id'] !== null) {
-			$itemFlingEffectId = new ItemFlingEffectId($result['item_fling_effect_id']);
-		} else {
-			// The item has no fling effect.
-			$itemFlingEffectId = null;
-		}
-
 		$item = new Item(
 			$itemId,
 			$result['identifier'],
-			new VersionGroupId($result['introduced_in_version_group_id']),
-			$result['item_fling_power'],
-			$itemFlingEffectId
+			new VersionGroupId($result['introduced_in_version_group_id'])
 		);
 
 		return $item;
@@ -88,9 +76,7 @@ final class DatabaseItemRepository implements ItemRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`id`,
-				`introduced_in_version_group_id`,
-				`item_fling_power`,
-				`item_fling_effect_id`
+				`introduced_in_version_group_id`
 			FROM `items`
 			WHERE `identifier` = :identifier
 			LIMIT 1'
@@ -105,19 +91,10 @@ final class DatabaseItemRepository implements ItemRepositoryInterface
 			);
 		}
 
-		if ($result['item_fling_effect_id'] !== null) {
-			$itemFlingEffectId = new ItemFlingEffectId($result['item_fling_effect_id']);
-		} else {
-			// The item has no fling effect.
-			$itemFlingEffectId = null;
-		}
-
 		$item = new Item(
 			new ItemId($result['id']),
 			$identifier,
-			new VersionGroupId($result['introduced_in_version_group_id']),
-			$result['item_fling_power'],
-			$itemFlingEffectId
+			new VersionGroupId($result['introduced_in_version_group_id'])
 		);
 
 		return $item;
