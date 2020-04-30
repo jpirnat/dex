@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexMove;
 
+use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
@@ -19,6 +20,7 @@ final class DexMovePokemonModel
 {
 	private PokemonMoveRepositoryInterface $pokemonMoveRepository;
 	private TmRepositoryInterface $tmRepository;
+	private ItemNameRepositoryInterface $itemNameRepository;
 	private DexPokemonRepositoryInterface $dexPokemonRepository;
 	private MoveMethodRepositoryInterface $moveMethodRepository;
 	private MoveMethodNameRepositoryInterface $moveMethodNameRepository;
@@ -37,6 +39,7 @@ final class DexMovePokemonModel
 	 *
 	 * @param PokemonMoveRepositoryInterface $pokemonMoveRepository
 	 * @param TmRepositoryInterface $tmRepository
+	 * @param ItemNameRepositoryInterface $itemNameRepository
 	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
 	 * @param MoveMethodRepositoryInterface $moveMethodRepository
 	 * @param MoveMethodNameRepositoryInterface $moveMethodNameRepository
@@ -45,6 +48,7 @@ final class DexMovePokemonModel
 	public function __construct(
 		PokemonMoveRepositoryInterface $pokemonMoveRepository,
 		TmRepositoryInterface $tmRepository,
+		ItemNameRepositoryInterface $itemNameRepository,
 		DexPokemonRepositoryInterface $dexPokemonRepository,
 		MoveMethodRepositoryInterface $moveMethodRepository,
 		MoveMethodNameRepositoryInterface $moveMethodNameRepository,
@@ -52,6 +56,7 @@ final class DexMovePokemonModel
 	) {
 		$this->pokemonMoveRepository = $pokemonMoveRepository;
 		$this->tmRepository = $tmRepository;
+		$this->itemNameRepository = $itemNameRepository;
 		$this->dexPokemonRepository = $dexPokemonRepository;
 		$this->moveMethodRepository = $moveMethodRepository;
 		$this->moveMethodNameRepository = $moveMethodNameRepository;
@@ -104,10 +109,11 @@ final class DexMovePokemonModel
 				case MoveMethodId::MACHINE:
 					// The version group data is the TM's number.
 					$tm = $tms[$vgId];
-					$number = $tm->isHm()
-						? 'H' . $tm->getNumber()
-						: str_pad((string) $tm->getNumber(), 2, '0', STR_PAD_LEFT);
-					$methodsPokemons[$methodId][$pokemonId][$vgId] = $number;
+					$itemName = $this->itemNameRepository->getByLanguageAndItem(
+						$languageId,
+						$tm->getItemId()
+					);
+					$methodsPokemons[$methodId][$pokemonId][$vgId] = $itemName->getName();
 					break;
 				default:
 					// The version group data is just that the Pokémon learns

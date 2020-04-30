@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 final class TechnicalMachine
 {
 	private VersionGroupId $versionGroupId;
-	private bool $isHm;
+	private MachineType $machineType;
 	private int $number;
 	private ItemId $itemId;
 	private MoveId $moveId;
@@ -18,20 +18,20 @@ final class TechnicalMachine
 	 * Constructor.
 	 *
 	 * @param VersionGroupId $versionGroupId
-	 * @param bool $isHm
+	 * @param MachineType $machineType
 	 * @param int $number
 	 * @param ItemId $itemId
 	 * @param MoveId $moveId
 	 */
 	public function __construct(
 		VersionGroupId $versionGroupId,
-		bool $isHm,
+		MachineType $machineType,
 		int $number,
 		ItemId $itemId,
 		MoveId $moveId
 	) {
 		$this->versionGroupId = $versionGroupId;
-		$this->isHm = $isHm;
+		$this->machineType = $machineType;
 		$this->number = $number;
 		$this->itemId = $itemId;
 		$this->moveId = $moveId;
@@ -48,13 +48,23 @@ final class TechnicalMachine
 	}
 
 	/**
+	 * Get the TM's machine type.
+	 *
+	 * @return MachineType
+	 */
+	public function getMachineType() : MachineType
+	{
+		return $this->machineType;
+	}
+
+	/**
 	 * Get whether this machine is an HM.
 	 *
 	 * @return bool
 	 */
 	public function isHm() : bool
 	{
-		return $this->isHm;
+		return $this->machineType->value() === MachineType::HM;
 	}
 
 	/**

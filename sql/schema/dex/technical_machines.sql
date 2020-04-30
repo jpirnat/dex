@@ -1,7 +1,7 @@
 create table if not exists `technical_machines`
 (
 `version_group_id` tinyint unsigned not null,
-`is_hm` bool not null,
+`machine_type` char(2) not null,
 `number` tinyint unsigned not null,
 
 `item_id` smallint unsigned not null,
@@ -9,7 +9,7 @@ create table if not exists `technical_machines`
 
 primary key (
 	`version_group_id`,
-	`is_hm`,
+	`machine_type`,
 	`number`
 ),
 foreign key (`version_group_id`) references `version_groups` (`id`)

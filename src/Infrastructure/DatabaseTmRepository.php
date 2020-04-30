@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Items\ItemId;
+use Jp\Dex\Domain\Items\MachineType;
 use Jp\Dex\Domain\Items\TechnicalMachine;
 use Jp\Dex\Domain\Items\TmNotFoundException;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
@@ -43,7 +44,7 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 	) : TechnicalMachine {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`is_hm`,
+				`machine_type`,
 				`number`,
 				`item_id`
 			FROM `technical_machines`
@@ -65,7 +66,7 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 
 		$tm = new TechnicalMachine(
 			$versionGroupId,
-			(bool) $result['is_hm'],
+			new MachineType($result['machine_type']),
 			$result['number'],
 			new ItemId($result['item_id']),
 			$moveId
@@ -86,7 +87,7 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`version_group_id`,
-				`is_hm`,
+				`machine_type`,
 				`number`,
 				`item_id`
 			FROM `technical_machines`
@@ -100,7 +101,7 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$tm = new TechnicalMachine(
 				new VersionGroupId($result['version_group_id']),
-				(bool) $result['is_hm'],
+				new MachineType($result['machine_type']),
 				$result['number'],
 				new ItemId($result['item_id']),
 				$moveId
@@ -127,7 +128,7 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`tm`.`version_group_id`,
-				`tm`.`is_hm`,
+				`tm`.`machine_type`,
 				`tm`.`number`,
 				`tm`.`item_id`,
 				`tm`.`move_id`
@@ -145,7 +146,7 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$tm = new TechnicalMachine(
 				new VersionGroupId($result['version_group_id']),
-				(bool) $result['is_hm'],
+				new MachineType($result['machine_type']),
 				$result['number'],
 				new ItemId($result['item_id']),
 				new MoveId($result['move_id'])
