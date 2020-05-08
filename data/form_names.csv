@@ -42,6 +42,13 @@ language,form_id,name
 1,773,タイプ：ノーマル
 1,774,りゅうせいのすがた
 1,778,ばけたすがた
+1,849,ハイなすがた
+1,869,ミルキィバニラ
+1,875,アイスフェイス
+1,876,オスのすがた
+1,877,まんぷくもよう
+1,888,れきせんのゆうしゃ
+1,889,れきせんのゆうしゃ
 1,10001,たいようのすがた
 1,10002,あまみずのすがた
 1,10003,ゆきぐものすがた
@@ -199,6 +206,27 @@ language,form_id,name
 1,10170,たそがれのたてがみ
 1,10171,あかつきのつばさ
 1,10172,ウルトラネクロズマ
+1,10175,ガラルのすがた
+1,10176,ガラルのすがた
+1,10177,ガラルのすがた
+1,10178,ガラルのすがた
+1,10179,ガラルのすがた
+1,10180,ガラルのすがた
+1,10181,ガラルのすがた
+1,10182,ガラルのすがた
+1,10183,ガラルのすがた
+1,10184,ガラルのすがた
+1,10185,ガラルのすがた
+1,10186,ダルマモード
+1,10187,ガラルのすがた
+1,10188,ガラルのすがた
+1,10189,ローなすがた
+1,10190,ナイスフェイス
+1,10191,メスのすがた
+1,10192,けんのおう
+1,10193,たてのおう
+1,10194,ムゲンダイマックス
+1,10195,ガラルのすがた
 1,20001,あるすがた
 1,20002,あるすがた
 1,20003,あるすがた
@@ -303,6 +331,98 @@ language,form_id,name
 1,20102,ばれたすがた
 1,20104,５００ねんまえのいろ
 1,20105,キミにきめたキャップ
+1,20106,キョダイマックス
+1,20107,キョダイマックス
+1,20108,キョダイマックス
+1,20109,キョダイマックス
+1,20110,キョダイマックス
+1,20111,キョダイマックス
+1,20112,キョダイマックス
+1,20113,キョダイマックス
+1,20114,キョダイマックス
+1,20115,キョダイマックス
+1,20116,キョダイマックス
+1,20117,キョダイマックス
+1,20118,キョダイマックス
+1,20119,キョダイマックス
+1,20120,キョダイマックス
+1,20121,キョダイマックス
+1,20122,キョダイマックス
+1,20123,キョダイマックス
+1,20124,キョダイマックス
+1,20125,うのみのすがた
+1,20126,まるのみのすがた
+1,20127,キョダイマックス
+1,20128,キョダイマックス
+1,20131,キョダイマックス
+1,20132,キョダイマックス
+1,20133,ミルキィバニラ
+1,20134,ミルキィバニラ
+1,20135,ミルキィバニラ
+1,20136,ミルキィバニラ
+1,20137,ミルキィバニラ
+1,20138,ミルキィバニラ
+1,20139,ミルキィルビー
+1,20140,ミルキィルビー
+1,20141,ミルキィルビー
+1,20142,ミルキィルビー
+1,20143,ミルキィルビー
+1,20144,ミルキィルビー
+1,20145,ミルキィルビー
+1,20146,ミルキィまっちゃ
+1,20147,ミルキィまっちゃ
+1,20148,ミルキィまっちゃ
+1,20149,ミルキィまっちゃ
+1,20150,ミルキィまっちゃ
+1,20151,ミルキィまっちゃ
+1,20152,ミルキィまっちゃ
+1,20153,ミルキィミント
+1,20154,ミルキィミント
+1,20155,ミルキィミント
+1,20156,ミルキィミント
+1,20157,ミルキィミント
+1,20158,ミルキィミント
+1,20159,ミルキィミント
+1,20160,ミルキィレモン
+1,20161,ミルキィレモン
+1,20162,ミルキィレモン
+1,20163,ミルキィレモン
+1,20164,ミルキィレモン
+1,20165,ミルキィレモン
+1,20166,ミルキィレモン
+1,20167,ミルキィソルト
+1,20168,ミルキィソルト
+1,20169,ミルキィソルト
+1,20170,ミルキィソルト
+1,20171,ミルキィソルト
+1,20172,ミルキィソルト
+1,20173,ミルキィソルト
+1,20174,ルビーミックス
+1,20175,ルビーミックス
+1,20176,ルビーミックス
+1,20177,ルビーミックス
+1,20178,ルビーミックス
+1,20179,ルビーミックス
+1,20180,ルビーミックス
+1,20181,キャラメルミックス
+1,20182,キャラメルミックス
+1,20183,キャラメルミックス
+1,20184,キャラメルミックス
+1,20185,キャラメルミックス
+1,20186,キャラメルミックス
+1,20187,キャラメルミックス
+1,20188,トリプルミックス
+1,20189,トリプルミックス
+1,20190,トリプルミックス
+1,20191,トリプルミックス
+1,20192,トリプルミックス
+1,20193,トリプルミックス
+1,20194,トリプルミックス
+1,20195,キョダイマックス
+1,20196,はらぺこもよう
+1,20197,キョダイマックス
+1,20198,キョダイマックス
+1,20199,キョダイマックス
 2,201,One form
 2,351,Normal
 2,382,Kyogre
@@ -346,6 +466,13 @@ language,form_id,name
 2,773,Type: Normal
 2,774,Meteor Form
 2,778,Disguised Form
+2,849,Amped Form
+2,869,Vanilla Cream
+2,875,Ice Face
+2,876,Male
+2,877,Full Belly Mode
+2,888,Hero of Many Battles
+2,889,Hero of Many Battles
 2,10001,Sunny Form
 2,10002,Rainy Form
 2,10003,Snowy Form
@@ -452,25 +579,25 @@ language,form_id,name
 2,10106,Mega Audino
 2,10107,Mega Diancie
 2,10108,Hoopa Unbound
-2,10109,Alola Form
-2,10110,Alola Form
+2,10109,Alolan Form
+2,10110,Alolan Form
 2,10112,Original Cap
-2,10113,Alola Form
-2,10114,Alola Form
-2,10115,Alola Form
-2,10116,Alola Form
-2,10117,Alola Form
-2,10118,Alola Form
-2,10119,Alola Form
-2,10120,Alola Form
-2,10121,Alola Form
-2,10122,Alola Form
-2,10123,Alola Form
-2,10124,Alola Form
-2,10125,Alola Form
-2,10126,Alola Form
-2,10127,Alola Form
-2,10128,Alola Form
+2,10113,Alolan Form
+2,10114,Alolan Form
+2,10115,Alolan Form
+2,10116,Alolan Form
+2,10117,Alolan Form
+2,10118,Alolan Form
+2,10119,Alolan Form
+2,10120,Alolan Form
+2,10121,Alolan Form
+2,10122,Alolan Form
+2,10123,Alolan Form
+2,10124,Alolan Form
+2,10125,Alolan Form
+2,10126,Alolan Form
+2,10127,Alolan Form
+2,10128,Alolan Form
 2,10130,Ash-Greninja
 2,10131,10% Forme
 2,10132,10% Forme
@@ -503,6 +630,27 @@ language,form_id,name
 2,10170,Dusk Mane
 2,10171,Dawn Wings
 2,10172,Ultra Necrozma
+2,10175,Galarian Form
+2,10176,Galarian Form
+2,10177,Galarian Form
+2,10178,Galarian Form
+2,10179,Galarian Form
+2,10180,Galarian Form
+2,10181,Galarian Form
+2,10182,Galarian Form
+2,10183,Galarian Form
+2,10184,Galarian Form
+2,10185,Galarian Form
+2,10186,Zen Mode
+2,10187,Galarian Form
+2,10188,Galarian Form
+2,10189,Low Key Form
+2,10190,Noice Face
+2,10191,Female
+2,10192,Crowned Sword
+2,10193,Crowned Shield
+2,10194,Eternamax
+2,10195,Galarian Form
 2,20001,One form
 2,20002,One form
 2,20003,One form
@@ -607,6 +755,98 @@ language,form_id,name
 2,20102,Busted Form
 2,20104,Original Color
 2,20105,Partner Cap
+2,20106,Gigantamax
+2,20107,Gigantamax
+2,20108,Gigantamax
+2,20109,Gigantamax
+2,20110,Gigantamax
+2,20111,Gigantamax
+2,20112,Gigantamax
+2,20113,Gigantamax
+2,20114,Gigantamax
+2,20115,Gigantamax
+2,20116,Gigantamax
+2,20117,Gigantamax
+2,20118,Gigantamax
+2,20119,Gigantamax
+2,20120,Gigantamax
+2,20121,Gigantamax
+2,20122,Gigantamax
+2,20123,Gigantamax
+2,20124,Gigantamax
+2,20125,Gulping Form
+2,20126,Gorging Form
+2,20127,Gigantamax
+2,20128,Gigantamax
+2,20131,Gigantamax
+2,20132,Gigantamax
+2,20133,Vanilla Cream
+2,20134,Vanilla Cream
+2,20135,Vanilla Cream
+2,20136,Vanilla Cream
+2,20137,Vanilla Cream
+2,20138,Vanilla Cream
+2,20139,Ruby Cream
+2,20140,Ruby Cream
+2,20141,Ruby Cream
+2,20142,Ruby Cream
+2,20143,Ruby Cream
+2,20144,Ruby Cream
+2,20145,Ruby Cream
+2,20146,Matcha Cream
+2,20147,Matcha Cream
+2,20148,Matcha Cream
+2,20149,Matcha Cream
+2,20150,Matcha Cream
+2,20151,Matcha Cream
+2,20152,Matcha Cream
+2,20153,Mint Cream
+2,20154,Mint Cream
+2,20155,Mint Cream
+2,20156,Mint Cream
+2,20157,Mint Cream
+2,20158,Mint Cream
+2,20159,Mint Cream
+2,20160,Lemon Cream
+2,20161,Lemon Cream
+2,20162,Lemon Cream
+2,20163,Lemon Cream
+2,20164,Lemon Cream
+2,20165,Lemon Cream
+2,20166,Lemon Cream
+2,20167,Salted Cream
+2,20168,Salted Cream
+2,20169,Salted Cream
+2,20170,Salted Cream
+2,20171,Salted Cream
+2,20172,Salted Cream
+2,20173,Salted Cream
+2,20174,Ruby Swirl
+2,20175,Ruby Swirl
+2,20176,Ruby Swirl
+2,20177,Ruby Swirl
+2,20178,Ruby Swirl
+2,20179,Ruby Swirl
+2,20180,Ruby Swirl
+2,20181,Caramel Swirl
+2,20182,Caramel Swirl
+2,20183,Caramel Swirl
+2,20184,Caramel Swirl
+2,20185,Caramel Swirl
+2,20186,Caramel Swirl
+2,20187,Caramel Swirl
+2,20188,Rainbow Swirl
+2,20189,Rainbow Swirl
+2,20190,Rainbow Swirl
+2,20191,Rainbow Swirl
+2,20192,Rainbow Swirl
+2,20193,Rainbow Swirl
+2,20194,Rainbow Swirl
+2,20195,Gigantamax
+2,20196,Hangry Mode
+2,20197,Gigantamax
+2,20198,Gigantamax
+2,20199,Gigantamax
 3,201,Forme Unique
 3,351,Forme de Morphéo
 3,382,Kyogre
@@ -650,6 +890,13 @@ language,form_id,name
 3,773,Type : Normal
 3,774,Forme Météore
 3,778,Forme Déguisée
+3,849,Forme Aigüe
+3,869,Lait Vanille
+3,875,Tête de Gel
+3,876,Mâle
+3,877,Mode Rassasié
+3,888,Héros Aguerri
+3,889,Héros Aguerri
 3,10001,Forme Solaire
 3,10002,Forme Eau de Pluie
 3,10003,Forme Blizzard
@@ -807,6 +1054,27 @@ language,form_id,name
 3,10170,Crinière du Couchant
 3,10171,Ailes de l’Aurore
 3,10172,Ultra-Necrozma
+3,10175,Forme de Galar
+3,10176,Forme de Galar
+3,10177,Forme de Galar
+3,10178,Forme de Galar
+3,10179,Forme de Galar
+3,10180,Forme de Galar
+3,10181,Forme de Galar
+3,10182,Forme de Galar
+3,10183,Forme de Galar
+3,10184,Forme de Galar
+3,10185,Forme de Galar
+3,10186,Mode Transe
+3,10187,Forme de Galar
+3,10188,Forme de Galar
+3,10189,Forme Grave
+3,10190,Tête Dégel
+3,10191,Femelle
+3,10192,Épée Suprême
+3,10193,Bouclier Suprême
+3,10194,Infinimax
+3,10195,Forme de Galar
 3,20001,Forme Unique
 3,20002,Forme Unique
 3,20003,Forme Unique
@@ -911,6 +1179,98 @@ language,form_id,name
 3,20102,Forme Démasquée
 3,20104,Couleur du Passé
 3,20105,Casquette Partenaire
+3,20106,Gigamax
+3,20107,Gigamax
+3,20108,Gigamax
+3,20109,Gigamax
+3,20110,Gigamax
+3,20111,Gigamax
+3,20112,Gigamax
+3,20113,Gigamax
+3,20114,Gigamax
+3,20115,Gigamax
+3,20116,Gigamax
+3,20117,Gigamax
+3,20118,Gigamax
+3,20119,Gigamax
+3,20120,Gigamax
+3,20121,Gigamax
+3,20122,Gigamax
+3,20123,Gigamax
+3,20124,Gigamax
+3,20125,Forme Gobe-Tout
+3,20126,Forme Gobe-Chu
+3,20127,Gigamax
+3,20128,Gigamax
+3,20131,Gigamax
+3,20132,Gigamax
+3,20133,Lait Vanille
+3,20134,Lait Vanille
+3,20135,Lait Vanille
+3,20136,Lait Vanille
+3,20137,Lait Vanille
+3,20138,Lait Vanille
+3,20139,Lait Ruby
+3,20140,Lait Ruby
+3,20141,Lait Ruby
+3,20142,Lait Ruby
+3,20143,Lait Ruby
+3,20144,Lait Ruby
+3,20145,Lait Ruby
+3,20146,Lait Matcha
+3,20147,Lait Matcha
+3,20148,Lait Matcha
+3,20149,Lait Matcha
+3,20150,Lait Matcha
+3,20151,Lait Matcha
+3,20152,Lait Matcha
+3,20153,Lait Menthe
+3,20154,Lait Menthe
+3,20155,Lait Menthe
+3,20156,Lait Menthe
+3,20157,Lait Menthe
+3,20158,Lait Menthe
+3,20159,Lait Menthe
+3,20160,Lait Citron
+3,20161,Lait Citron
+3,20162,Lait Citron
+3,20163,Lait Citron
+3,20164,Lait Citron
+3,20165,Lait Citron
+3,20166,Lait Citron
+3,20167,Lait Salé
+3,20168,Lait Salé
+3,20169,Lait Salé
+3,20170,Lait Salé
+3,20171,Lait Salé
+3,20172,Lait Salé
+3,20173,Lait Salé
+3,20174,Mélange Ruby
+3,20175,Mélange Ruby
+3,20176,Mélange Ruby
+3,20177,Mélange Ruby
+3,20178,Mélange Ruby
+3,20179,Mélange Ruby
+3,20180,Mélange Ruby
+3,20181,Mélange Caramel
+3,20182,Mélange Caramel
+3,20183,Mélange Caramel
+3,20184,Mélange Caramel
+3,20185,Mélange Caramel
+3,20186,Mélange Caramel
+3,20187,Mélange Caramel
+3,20188,Mélange Tricolore
+3,20189,Mélange Tricolore
+3,20190,Mélange Tricolore
+3,20191,Mélange Tricolore
+3,20192,Mélange Tricolore
+3,20193,Mélange Tricolore
+3,20194,Mélange Tricolore
+3,20195,Gigamax
+3,20196,Mode Affamé
+3,20197,Gigamax
+3,20198,Gigamax
+3,20199,Gigamax
 4,201,Eine Form
 4,351,Formeo
 4,382,Kyogre
@@ -954,6 +1314,13 @@ language,form_id,name
 4,773,Typ:Normal
 4,774,Meteorform
 4,778,Verkleidete Form
+4,849,Hoch-Form
+4,869,Vanille-Creme
+4,875,Tiefkühlkopf
+4,876,Männlich
+4,877,Pappsattmuster
+4,888,Heldenhafter Krieger
+4,889,Heldenhafter Krieger
 4,10001,Sonnenform
 4,10002,Regenform
 4,10003,Schneeform
@@ -1111,6 +1478,27 @@ language,form_id,name
 4,10170,Abendmähne
 4,10171,Morgenschwingen
 4,10172,Ultra-Necrozma
+4,10175,Galar-Form
+4,10176,Galar-Form
+4,10177,Galar-Form
+4,10178,Galar-Form
+4,10179,Galar-Form
+4,10180,Galar-Form
+4,10181,Galar-Form
+4,10182,Galar-Form
+4,10183,Galar-Form
+4,10184,Galar-Form
+4,10185,Galar-Form
+4,10186,Trance-Modus
+4,10187,Galar-Form
+4,10188,Galar-Form
+4,10189,Tief-Form
+4,10190,Wohlfühlkopf
+4,10191,Weiblich
+4,10192,König des Schwertes
+4,10193,König des Schildes
+4,10194,Unendynamax
+4,10195,Galar-Form
 4,20001,Eine Form
 4,20002,Eine Form
 4,20003,Eine Form
@@ -1215,6 +1603,98 @@ language,form_id,name
 4,20102,Entlarvte Form
 4,20104,Originalfarbe
 4,20105,Partner-Kappe
+4,20106,Gigadynamax
+4,20107,Gigadynamax
+4,20108,Gigadynamax
+4,20109,Gigadynamax
+4,20110,Gigadynamax
+4,20111,Gigadynamax
+4,20112,Gigadynamax
+4,20113,Gigadynamax
+4,20114,Gigadynamax
+4,20115,Gigadynamax
+4,20116,Gigadynamax
+4,20117,Gigadynamax
+4,20118,Gigadynamax
+4,20119,Gigadynamax
+4,20120,Gigadynamax
+4,20121,Gigadynamax
+4,20122,Gigadynamax
+4,20123,Gigadynamax
+4,20124,Gigadynamax
+4,20125,Schlingform
+4,20126,Stopfform
+4,20127,Gigadynamax
+4,20128,Gigadynamax
+4,20131,Gigadynamax
+4,20132,Gigadynamax
+4,20133,Vanille-Creme
+4,20134,Vanille-Creme
+4,20135,Vanille-Creme
+4,20136,Vanille-Creme
+4,20137,Vanille-Creme
+4,20138,Vanille-Creme
+4,20139,Ruby-Creme
+4,20140,Ruby-Creme
+4,20141,Ruby-Creme
+4,20142,Ruby-Creme
+4,20143,Ruby-Creme
+4,20144,Ruby-Creme
+4,20145,Ruby-Creme
+4,20146,Matcha-Creme
+4,20147,Matcha-Creme
+4,20148,Matcha-Creme
+4,20149,Matcha-Creme
+4,20150,Matcha-Creme
+4,20151,Matcha-Creme
+4,20152,Matcha-Creme
+4,20153,Minz-Creme
+4,20154,Minz-Creme
+4,20155,Minz-Creme
+4,20156,Minz-Creme
+4,20157,Minz-Creme
+4,20158,Minz-Creme
+4,20159,Minz-Creme
+4,20160,Zitronen-Creme
+4,20161,Zitronen-Creme
+4,20162,Zitronen-Creme
+4,20163,Zitronen-Creme
+4,20164,Zitronen-Creme
+4,20165,Zitronen-Creme
+4,20166,Zitronen-Creme
+4,20167,Salz-Creme
+4,20168,Salz-Creme
+4,20169,Salz-Creme
+4,20170,Salz-Creme
+4,20171,Salz-Creme
+4,20172,Salz-Creme
+4,20173,Salz-Creme
+4,20174,Ruby-Mix
+4,20175,Ruby-Mix
+4,20176,Ruby-Mix
+4,20177,Ruby-Mix
+4,20178,Ruby-Mix
+4,20179,Ruby-Mix
+4,20180,Ruby-Mix
+4,20181,Karamell-Mix
+4,20182,Karamell-Mix
+4,20183,Karamell-Mix
+4,20184,Karamell-Mix
+4,20185,Karamell-Mix
+4,20186,Karamell-Mix
+4,20187,Karamell-Mix
+4,20188,Trio-Mix
+4,20189,Trio-Mix
+4,20190,Trio-Mix
+4,20191,Trio-Mix
+4,20192,Trio-Mix
+4,20193,Trio-Mix
+4,20194,Trio-Mix
+4,20195,Gigadynamax
+4,20196,Kohldampfmuster
+4,20197,Gigadynamax
+4,20198,Gigadynamax
+4,20199,Gigadynamax
 5,201,Forma Vaga
 5,351,Forma Castform
 5,386,Forma Normale
@@ -1256,6 +1736,13 @@ language,form_id,name
 5,773,Tipo Normale
 5,774,Forma Meteora
 5,778,Forma Mascherata
+5,849,Forma Melodia
+5,869,Lattevaniglia
+5,875,Gelofaccia
+5,876,Maschio
+5,877,Motivo Panciapiena
+5,888,Eroe di Mille Lotte
+5,889,Eroe di Mille Lotte
 5,10001,Forma Sole
 5,10002,Forma Pioggia
 5,10003,Forma Nuvola di Neve
@@ -1413,6 +1900,27 @@ language,form_id,name
 5,10170,Criniera del Vespro
 5,10171,Ali dell’Aurora
 5,10172,UltraNecrozma
+5,10175,Forma di Galar
+5,10176,Forma di Galar
+5,10177,Forma di Galar
+5,10178,Forma di Galar
+5,10179,Forma di Galar
+5,10180,Forma di Galar
+5,10181,Forma di Galar
+5,10182,Forma di Galar
+5,10183,Forma di Galar
+5,10184,Forma di Galar
+5,10185,Forma di Galar
+5,10186,Stato Zen
+5,10187,Forma di Galar
+5,10188,Forma di Galar
+5,10189,Forma Basso
+5,10190,Liquefaccia
+5,10191,Femmina
+5,10192,Re delle Spade
+5,10193,Re degli Scudi
+5,10194,Dynamax Infinito
+5,10195,Forma di Galar
 5,20001,Forma Vaga
 5,20002,Forma Vaga
 5,20003,Forma Vaga
@@ -1517,6 +2025,98 @@ language,form_id,name
 5,20102,Forma Smascherata
 5,20104,Colore Antico
 5,20105,Berretto Compagni
+5,20106,Gigamax
+5,20107,Gigamax
+5,20108,Gigamax
+5,20109,Gigamax
+5,20110,Gigamax
+5,20111,Gigamax
+5,20112,Gigamax
+5,20113,Gigamax
+5,20114,Gigamax
+5,20115,Gigamax
+5,20116,Gigamax
+5,20117,Gigamax
+5,20118,Gigamax
+5,20119,Gigamax
+5,20120,Gigamax
+5,20121,Gigamax
+5,20122,Gigamax
+5,20123,Gigamax
+5,20124,Gigamax
+5,20125,Forma Inghiottitutto
+5,20126,Forma Inghiottintero
+5,20127,Gigamax
+5,20128,Gigamax
+5,20131,Gigamax
+5,20132,Gigamax
+5,20133,Lattevaniglia
+5,20134,Lattevaniglia
+5,20135,Lattevaniglia
+5,20136,Lattevaniglia
+5,20137,Lattevaniglia
+5,20138,Lattevaniglia
+5,20139,Latterosa
+5,20140,Latterosa
+5,20141,Latterosa
+5,20142,Latterosa
+5,20143,Latterosa
+5,20144,Latterosa
+5,20145,Latterosa
+5,20146,Lattematcha
+5,20147,Lattematcha
+5,20148,Lattematcha
+5,20149,Lattematcha
+5,20150,Lattematcha
+5,20151,Lattematcha
+5,20152,Lattematcha
+5,20153,Lattementa
+5,20154,Lattementa
+5,20155,Lattementa
+5,20156,Lattementa
+5,20157,Lattementa
+5,20158,Lattementa
+5,20159,Lattementa
+5,20160,Lattelimone
+5,20161,Lattelimone
+5,20162,Lattelimone
+5,20163,Lattelimone
+5,20164,Lattelimone
+5,20165,Lattelimone
+5,20166,Lattelimone
+5,20167,Lattesale
+5,20168,Lattesale
+5,20169,Lattesale
+5,20170,Lattesale
+5,20171,Lattesale
+5,20172,Lattesale
+5,20173,Lattesale
+5,20174,Rosamix
+5,20175,Rosamix
+5,20176,Rosamix
+5,20177,Rosamix
+5,20178,Rosamix
+5,20179,Rosamix
+5,20180,Rosamix
+5,20181,Caramelmix
+5,20182,Caramelmix
+5,20183,Caramelmix
+5,20184,Caramelmix
+5,20185,Caramelmix
+5,20186,Caramelmix
+5,20187,Caramelmix
+5,20188,Triplomix
+5,20189,Triplomix
+5,20190,Triplomix
+5,20191,Triplomix
+5,20192,Triplomix
+5,20193,Triplomix
+5,20194,Triplomix
+5,20195,Gigamax
+5,20196,Motivo Panciavuota
+5,20197,Gigamax
+5,20198,Gigamax
+5,20199,Gigamax
 6,201,Una forma
 6,351,Forma de Castform
 6,382,Kyogre
@@ -1560,6 +2160,13 @@ language,form_id,name
 6,773,Tipo: Normal
 6,774,Forma Meteorito
 6,778,Forma Encubierta
+6,849,Forma Aguda
+6,869,Crema de Vainilla
+6,875,Cara de Hielo
+6,876,Macho
+6,877,Forma Saciada
+6,888,Guerrero Avezado
+6,889,Guerrero Avezado
 6,10001,Forma Sol
 6,10002,Forma Lluvia
 6,10003,Forma Nieve
@@ -1717,6 +2324,27 @@ language,form_id,name
 6,10170,Melena Crepuscular
 6,10171,Alas del Alba
 6,10172,Ultra-Necrozma
+6,10175,Forma de Galar
+6,10176,Forma de Galar
+6,10177,Forma de Galar
+6,10178,Forma de Galar
+6,10179,Forma de Galar
+6,10180,Forma de Galar
+6,10181,Forma de Galar
+6,10182,Forma de Galar
+6,10183,Forma de Galar
+6,10184,Forma de Galar
+6,10185,Forma de Galar
+6,10186,Modo Daruma
+6,10187,Forma de Galar
+6,10188,Forma de Galar
+6,10189,Forma Grave
+6,10190,Cara Deshielo
+6,10191,Hembra
+6,10192,Espada Suprema
+6,10193,Escudo Supremo
+6,10194,Dinamax Infinito
+6,10195,Forma de Galar
 6,20001,Una forma
 6,20002,Una forma
 6,20003,Una forma
@@ -1821,6 +2449,98 @@ language,form_id,name
 6,20102,Forma Descubierta
 6,20104,Color Vetusto
 6,20105,Gorra Compañero
+6,20106,Gigamax
+6,20107,Gigamax
+6,20108,Gigamax
+6,20109,Gigamax
+6,20110,Gigamax
+6,20111,Gigamax
+6,20112,Gigamax
+6,20113,Gigamax
+6,20114,Gigamax
+6,20115,Gigamax
+6,20116,Gigamax
+6,20117,Gigamax
+6,20118,Gigamax
+6,20119,Gigamax
+6,20120,Gigamax
+6,20121,Gigamax
+6,20122,Gigamax
+6,20123,Gigamax
+6,20124,Gigamax
+6,20125,Forma Tragatodo
+6,20126,Forma Engulletodo
+6,20127,Gigamax
+6,20128,Gigamax
+6,20131,Gigamax
+6,20132,Gigamax
+6,20133,Crema de Vainilla
+6,20134,Crema de Vainilla
+6,20135,Crema de Vainilla
+6,20136,Crema de Vainilla
+6,20137,Crema de Vainilla
+6,20138,Crema de Vainilla
+6,20139,Crema Rosa
+6,20140,Crema Rosa
+6,20141,Crema Rosa
+6,20142,Crema Rosa
+6,20143,Crema Rosa
+6,20144,Crema Rosa
+6,20145,Crema Rosa
+6,20146,Crema de Té
+6,20147,Crema de Té
+6,20148,Crema de Té
+6,20149,Crema de Té
+6,20150,Crema de Té
+6,20151,Crema de Té
+6,20152,Crema de Té
+6,20153,Crema de Menta
+6,20154,Crema de Menta
+6,20155,Crema de Menta
+6,20156,Crema de Menta
+6,20157,Crema de Menta
+6,20158,Crema de Menta
+6,20159,Crema de Menta
+6,20160,Crema de Limón
+6,20161,Crema de Limón
+6,20162,Crema de Limón
+6,20163,Crema de Limón
+6,20164,Crema de Limón
+6,20165,Crema de Limón
+6,20166,Crema de Limón
+6,20167,Crema Salada
+6,20168,Crema Salada
+6,20169,Crema Salada
+6,20170,Crema Salada
+6,20171,Crema Salada
+6,20172,Crema Salada
+6,20173,Crema Salada
+6,20174,Mezcla Rosa
+6,20175,Mezcla Rosa
+6,20176,Mezcla Rosa
+6,20177,Mezcla Rosa
+6,20178,Mezcla Rosa
+6,20179,Mezcla Rosa
+6,20180,Mezcla Rosa
+6,20181,Mezcla Caramelo
+6,20182,Mezcla Caramelo
+6,20183,Mezcla Caramelo
+6,20184,Mezcla Caramelo
+6,20185,Mezcla Caramelo
+6,20186,Mezcla Caramelo
+6,20187,Mezcla Caramelo
+6,20188,Tres Sabores
+6,20189,Tres Sabores
+6,20190,Tres Sabores
+6,20191,Tres Sabores
+6,20192,Tres Sabores
+6,20193,Tres Sabores
+6,20194,Tres Sabores
+6,20195,Gigamax
+6,20196,Forma Voraz
+6,20197,Gigamax
+6,20198,Gigamax
+6,20199,Gigamax
 7,201,형태별 모습
 7,351,캐스퐁의 모습
 7,382,가이오가의 모습
@@ -1864,6 +2584,13 @@ language,form_id,name
 7,773,타입:노말
 7,774,유성의 모습
 7,778,둔갑한 모습
+7,849,하이한 모습
+7,869,밀키바닐라
+7,875,아이스페이스
+7,876,수컷의 모습
+7,877,배부른 모양
+7,888,역전의 용사
+7,889,역전의 용사
 7,10001,태양의 모습
 7,10002,빗방울의 모습
 7,10003,설운의 모습
@@ -2021,6 +2748,27 @@ language,form_id,name
 7,10170,황혼의 갈기
 7,10171,새벽의 날개
 7,10172,울트라네크로즈마
+7,10175,가라르의 모습
+7,10176,가라르의 모습
+7,10177,가라르의 모습
+7,10178,가라르의 모습
+7,10179,가라르의 모습
+7,10180,가라르의 모습
+7,10181,가라르의 모습
+7,10182,가라르의 모습
+7,10183,가라르의 모습
+7,10184,가라르의 모습
+7,10185,가라르의 모습
+7,10186,달마모드
+7,10187,가라르의 모습
+7,10188,가라르의 모습
+7,10189,로우한 모습
+7,10190,나이스페이스
+7,10191,암컷의 모습
+7,10192,검왕
+7,10193,방패왕
+7,10194,무한다이맥스
+7,10195,가라르의 모습
 7,20001,형태별 모습
 7,20002,형태별 모습
 7,20003,형태별 모습
@@ -2125,6 +2873,98 @@ language,form_id,name
 7,20102,들킨 모습
 7,20104,500년 전의 색
 7,20105,너로정했다캡
+7,20106,거다이맥스
+7,20107,거다이맥스
+7,20108,거다이맥스
+7,20109,거다이맥스
+7,20110,거다이맥스
+7,20111,거다이맥스
+7,20112,거다이맥스
+7,20113,거다이맥스
+7,20114,거다이맥스
+7,20115,거다이맥스
+7,20116,거다이맥스
+7,20117,거다이맥스
+7,20118,거다이맥스
+7,20119,거다이맥스
+7,20120,거다이맥스
+7,20121,거다이맥스
+7,20122,거다이맥스
+7,20123,거다이맥스
+7,20124,거다이맥스
+7,20125,그대로 삼킨 모습
+7,20126,통째로 삼킨 모습
+7,20127,거다이맥스
+7,20128,거다이맥스
+7,20131,거다이맥스
+7,20132,거다이맥스
+7,20133,밀키바닐라
+7,20134,밀키바닐라
+7,20135,밀키바닐라
+7,20136,밀키바닐라
+7,20137,밀키바닐라
+7,20138,밀키바닐라
+7,20139,밀키루비
+7,20140,밀키루비
+7,20141,밀키루비
+7,20142,밀키루비
+7,20143,밀키루비
+7,20144,밀키루비
+7,20145,밀키루비
+7,20146,밀키말차
+7,20147,밀키말차
+7,20148,밀키말차
+7,20149,밀키말차
+7,20150,밀키말차
+7,20151,밀키말차
+7,20152,밀키말차
+7,20153,밀키민트
+7,20154,밀키민트
+7,20155,밀키민트
+7,20156,밀키민트
+7,20157,밀키민트
+7,20158,밀키민트
+7,20159,밀키민트
+7,20160,밀키레몬
+7,20161,밀키레몬
+7,20162,밀키레몬
+7,20163,밀키레몬
+7,20164,밀키레몬
+7,20165,밀키레몬
+7,20166,밀키레몬
+7,20167,밀키솔트
+7,20168,밀키솔트
+7,20169,밀키솔트
+7,20170,밀키솔트
+7,20171,밀키솔트
+7,20172,밀키솔트
+7,20173,밀키솔트
+7,20174,루비믹스
+7,20175,루비믹스
+7,20176,루비믹스
+7,20177,루비믹스
+7,20178,루비믹스
+7,20179,루비믹스
+7,20180,루비믹스
+7,20181,캐러멜믹스
+7,20182,캐러멜믹스
+7,20183,캐러멜믹스
+7,20184,캐러멜믹스
+7,20185,캐러멜믹스
+7,20186,캐러멜믹스
+7,20187,캐러멜믹스
+7,20188,트리플믹스
+7,20189,트리플믹스
+7,20190,트리플믹스
+7,20191,트리플믹스
+7,20192,트리플믹스
+7,20193,트리플믹스
+7,20194,트리플믹스
+7,20195,거다이맥스
+7,20196,배고픈 모양
+7,20197,거다이맥스
+7,20198,거다이맥스
+7,20199,거다이맥스
 8,201,あるすがた
 8,351,ポワルンのすがた
 8,382,カイオーガのすがた
@@ -2168,6 +3008,13 @@ language,form_id,name
 8,773,タイプ：ノーマル
 8,774,りゅうせいのすがた
 8,778,ばけたすがた
+8,849,ハイなすがた
+8,869,ミルキィバニラ
+8,875,アイスフェイス
+8,876,オスのすがた
+8,877,まんぷくもよう
+8,888,れきせんのゆうしゃ
+8,889,れきせんのゆうしゃ
 8,10001,たいようのすがた
 8,10002,あまみずのすがた
 8,10003,ゆきぐものすがた
@@ -2325,6 +3172,27 @@ language,form_id,name
 8,10170,たそがれのたてがみ
 8,10171,あかつきのつばさ
 8,10172,ウルトラネクロズマ
+8,10175,ガラルのすがた
+8,10176,ガラルのすがた
+8,10177,ガラルのすがた
+8,10178,ガラルのすがた
+8,10179,ガラルのすがた
+8,10180,ガラルのすがた
+8,10181,ガラルのすがた
+8,10182,ガラルのすがた
+8,10183,ガラルのすがた
+8,10184,ガラルのすがた
+8,10185,ガラルのすがた
+8,10186,ダルマモード
+8,10187,ガラルのすがた
+8,10188,ガラルのすがた
+8,10189,ローなすがた
+8,10190,ナイスフェイス
+8,10191,メスのすがた
+8,10192,けんのおう
+8,10193,たてのおう
+8,10194,ムゲンダイマックス
+8,10195,ガラルのすがた
 8,20001,あるすがた
 8,20002,あるすがた
 8,20003,あるすがた
@@ -2429,6 +3297,98 @@ language,form_id,name
 8,20102,ばれたすがた
 8,20104,５００ねんまえのいろ
 8,20105,キミにきめたキャップ
+8,20106,キョダイマックス
+8,20107,キョダイマックス
+8,20108,キョダイマックス
+8,20109,キョダイマックス
+8,20110,キョダイマックス
+8,20111,キョダイマックス
+8,20112,キョダイマックス
+8,20113,キョダイマックス
+8,20114,キョダイマックス
+8,20115,キョダイマックス
+8,20116,キョダイマックス
+8,20117,キョダイマックス
+8,20118,キョダイマックス
+8,20119,キョダイマックス
+8,20120,キョダイマックス
+8,20121,キョダイマックス
+8,20122,キョダイマックス
+8,20123,キョダイマックス
+8,20124,キョダイマックス
+8,20125,うのみのすがた
+8,20126,まるのみのすがた
+8,20127,キョダイマックス
+8,20128,キョダイマックス
+8,20131,キョダイマックス
+8,20132,キョダイマックス
+8,20133,ミルキィバニラ
+8,20134,ミルキィバニラ
+8,20135,ミルキィバニラ
+8,20136,ミルキィバニラ
+8,20137,ミルキィバニラ
+8,20138,ミルキィバニラ
+8,20139,ミルキィルビー
+8,20140,ミルキィルビー
+8,20141,ミルキィルビー
+8,20142,ミルキィルビー
+8,20143,ミルキィルビー
+8,20144,ミルキィルビー
+8,20145,ミルキィルビー
+8,20146,ミルキィまっちゃ
+8,20147,ミルキィまっちゃ
+8,20148,ミルキィまっちゃ
+8,20149,ミルキィまっちゃ
+8,20150,ミルキィまっちゃ
+8,20151,ミルキィまっちゃ
+8,20152,ミルキィまっちゃ
+8,20153,ミルキィミント
+8,20154,ミルキィミント
+8,20155,ミルキィミント
+8,20156,ミルキィミント
+8,20157,ミルキィミント
+8,20158,ミルキィミント
+8,20159,ミルキィミント
+8,20160,ミルキィレモン
+8,20161,ミルキィレモン
+8,20162,ミルキィレモン
+8,20163,ミルキィレモン
+8,20164,ミルキィレモン
+8,20165,ミルキィレモン
+8,20166,ミルキィレモン
+8,20167,ミルキィソルト
+8,20168,ミルキィソルト
+8,20169,ミルキィソルト
+8,20170,ミルキィソルト
+8,20171,ミルキィソルト
+8,20172,ミルキィソルト
+8,20173,ミルキィソルト
+8,20174,ルビーミックス
+8,20175,ルビーミックス
+8,20176,ルビーミックス
+8,20177,ルビーミックス
+8,20178,ルビーミックス
+8,20179,ルビーミックス
+8,20180,ルビーミックス
+8,20181,キャラメルミックス
+8,20182,キャラメルミックス
+8,20183,キャラメルミックス
+8,20184,キャラメルミックス
+8,20185,キャラメルミックス
+8,20186,キャラメルミックス
+8,20187,キャラメルミックス
+8,20188,トリプルミックス
+8,20189,トリプルミックス
+8,20190,トリプルミックス
+8,20191,トリプルミックス
+8,20192,トリプルミックス
+8,20193,トリプルミックス
+8,20194,トリプルミックス
+8,20195,キョダイマックス
+8,20196,はらぺこもよう
+8,20197,キョダイマックス
+8,20198,キョダイマックス
+8,20199,キョダイマックス
 9,201,某种样子
 9,351,飘浮泡泡的样子
 9,382,盖欧卡的样子
@@ -2472,6 +3432,13 @@ language,form_id,name
 9,773,属性：一般
 9,774,流星的样子
 9,778,化形的样子
+9,849,高调的样子
+9,869,奶香香草
+9,875,结冻头
+9,876,雄性的样子
+9,877,满腹花纹
+9,888,百战勇者
+9,889,百战勇者
 9,10001,太阳的样子
 9,10002,雨水的样子
 9,10003,雪云的样子
@@ -2623,6 +3590,27 @@ language,form_id,name
 9,10170,黄昏之鬃
 9,10171,拂晓之翼
 9,10172,究极奈克洛兹玛
+9,10175,伽勒尔的样子
+9,10176,伽勒尔的样子
+9,10177,伽勒尔的样子
+9,10178,伽勒尔的样子
+9,10179,伽勒尔的样子
+9,10180,伽勒尔的样子
+9,10181,伽勒尔的样子
+9,10182,伽勒尔的样子
+9,10183,伽勒尔的样子
+9,10184,伽勒尔的样子
+9,10185,伽勒尔的样子
+9,10186,达摩模式
+9,10187,伽勒尔的样子
+9,10188,伽勒尔的样子
+9,10189,低调的样子
+9,10190,解冻头
+9,10191,雌性的样子
+9,10192,剑之王
+9,10193,盾之王
+9,10194,无极巨化
+9,10195,伽勒尔的样子
 9,20001,某种样子
 9,20002,某种样子
 9,20003,某种样子
@@ -2727,6 +3715,98 @@ language,form_id,name
 9,20102,现形的样子
 9,20104,５００年前的颜色
 9,20105,就决定是你了之帽子
+9,20106,超极巨化
+9,20107,超极巨化
+9,20108,超极巨化
+9,20109,超极巨化
+9,20110,超极巨化
+9,20111,超极巨化
+9,20112,超极巨化
+9,20113,超极巨化
+9,20114,超极巨化
+9,20115,超极巨化
+9,20116,超极巨化
+9,20117,超极巨化
+9,20118,超极巨化
+9,20119,超极巨化
+9,20120,超极巨化
+9,20121,超极巨化
+9,20122,超极巨化
+9,20123,超极巨化
+9,20124,超极巨化
+9,20125,一口吞的样子
+9,20126,大口吞的样子
+9,20127,超极巨化
+9,20128,超极巨化
+9,20131,超极巨化
+9,20132,超极巨化
+9,20133,奶香香草
+9,20134,奶香香草
+9,20135,奶香香草
+9,20136,奶香香草
+9,20137,奶香香草
+9,20138,奶香香草
+9,20139,奶香红钻
+9,20140,奶香红钻
+9,20141,奶香红钻
+9,20142,奶香红钻
+9,20143,奶香红钻
+9,20144,奶香红钻
+9,20145,奶香红钻
+9,20146,奶香抹茶
+9,20147,奶香抹茶
+9,20148,奶香抹茶
+9,20149,奶香抹茶
+9,20150,奶香抹茶
+9,20151,奶香抹茶
+9,20152,奶香抹茶
+9,20153,奶香薄荷
+9,20154,奶香薄荷
+9,20155,奶香薄荷
+9,20156,奶香薄荷
+9,20157,奶香薄荷
+9,20158,奶香薄荷
+9,20159,奶香薄荷
+9,20160,奶香柠檬
+9,20161,奶香柠檬
+9,20162,奶香柠檬
+9,20163,奶香柠檬
+9,20164,奶香柠檬
+9,20165,奶香柠檬
+9,20166,奶香柠檬
+9,20167,奶香雪盐
+9,20168,奶香雪盐
+9,20169,奶香雪盐
+9,20170,奶香雪盐
+9,20171,奶香雪盐
+9,20172,奶香雪盐
+9,20173,奶香雪盐
+9,20174,红钻综合
+9,20175,红钻综合
+9,20176,红钻综合
+9,20177,红钻综合
+9,20178,红钻综合
+9,20179,红钻综合
+9,20180,红钻综合
+9,20181,焦糖综合
+9,20182,焦糖综合
+9,20183,焦糖综合
+9,20184,焦糖综合
+9,20185,焦糖综合
+9,20186,焦糖综合
+9,20187,焦糖综合
+9,20188,三色综合
+9,20189,三色综合
+9,20190,三色综合
+9,20191,三色综合
+9,20192,三色综合
+9,20193,三色综合
+9,20194,三色综合
+9,20195,超极巨化
+9,20196,空腹花纹
+9,20197,超极巨化
+9,20198,超极巨化
+9,20199,超极巨化
 10,201,某種樣子
 10,351,飄浮泡泡的樣子
 10,382,蓋歐卡的樣子
@@ -2770,6 +3850,13 @@ language,form_id,name
 10,773,屬性：一般
 10,774,流星的樣子
 10,778,化形的樣子
+10,849,高調的樣子
+10,869,奶香香草
+10,875,結凍頭
+10,876,雄性的樣子
+10,877,滿腹花紋
+10,888,百戰勇者
+10,889,百戰勇者
 10,10001,太陽的樣子
 10,10002,雨水的樣子
 10,10003,雪雲的樣子
@@ -2921,6 +4008,27 @@ language,form_id,name
 10,10170,黃昏之鬃
 10,10171,拂曉之翼
 10,10172,究極奈克洛茲瑪
+10,10175,伽勒爾的樣子
+10,10176,伽勒爾的樣子
+10,10177,伽勒爾的樣子
+10,10178,伽勒爾的樣子
+10,10179,伽勒爾的樣子
+10,10180,伽勒爾的樣子
+10,10181,伽勒爾的樣子
+10,10182,伽勒爾的樣子
+10,10183,伽勒爾的樣子
+10,10184,伽勒爾的樣子
+10,10185,伽勒爾的樣子
+10,10186,達摩模式
+10,10187,伽勒爾的樣子
+10,10188,伽勒爾的樣子
+10,10189,低調的樣子
+10,10190,解凍頭
+10,10191,雌性的樣子
+10,10192,劍之王
+10,10193,盾之王
+10,10194,無極巨化
+10,10195,伽勒爾的樣子
 10,20001,某種樣子
 10,20002,某種樣子
 10,20003,某種樣子
@@ -3025,3 +4133,95 @@ language,form_id,name
 10,20102,現形的樣子
 10,20104,５００年前的顏色
 10,20105,就決定是你了之帽子
+10,20106,超極巨化
+10,20107,超極巨化
+10,20108,超極巨化
+10,20109,超極巨化
+10,20110,超極巨化
+10,20111,超極巨化
+10,20112,超極巨化
+10,20113,超極巨化
+10,20114,超極巨化
+10,20115,超極巨化
+10,20116,超極巨化
+10,20117,超極巨化
+10,20118,超極巨化
+10,20119,超極巨化
+10,20120,超極巨化
+10,20121,超極巨化
+10,20122,超極巨化
+10,20123,超極巨化
+10,20124,超極巨化
+10,20125,一口吞的樣子
+10,20126,大口吞的樣子
+10,20127,超極巨化
+10,20128,超極巨化
+10,20131,超極巨化
+10,20132,超極巨化
+10,20133,奶香香草
+10,20134,奶香香草
+10,20135,奶香香草
+10,20136,奶香香草
+10,20137,奶香香草
+10,20138,奶香香草
+10,20139,奶香紅鑽
+10,20140,奶香紅鑽
+10,20141,奶香紅鑽
+10,20142,奶香紅鑽
+10,20143,奶香紅鑽
+10,20144,奶香紅鑽
+10,20145,奶香紅鑽
+10,20146,奶香抹茶
+10,20147,奶香抹茶
+10,20148,奶香抹茶
+10,20149,奶香抹茶
+10,20150,奶香抹茶
+10,20151,奶香抹茶
+10,20152,奶香抹茶
+10,20153,奶香薄荷
+10,20154,奶香薄荷
+10,20155,奶香薄荷
+10,20156,奶香薄荷
+10,20157,奶香薄荷
+10,20158,奶香薄荷
+10,20159,奶香薄荷
+10,20160,奶香檸檬
+10,20161,奶香檸檬
+10,20162,奶香檸檬
+10,20163,奶香檸檬
+10,20164,奶香檸檬
+10,20165,奶香檸檬
+10,20166,奶香檸檬
+10,20167,奶香雪鹽
+10,20168,奶香雪鹽
+10,20169,奶香雪鹽
+10,20170,奶香雪鹽
+10,20171,奶香雪鹽
+10,20172,奶香雪鹽
+10,20173,奶香雪鹽
+10,20174,紅鑽綜合
+10,20175,紅鑽綜合
+10,20176,紅鑽綜合
+10,20177,紅鑽綜合
+10,20178,紅鑽綜合
+10,20179,紅鑽綜合
+10,20180,紅鑽綜合
+10,20181,焦糖綜合
+10,20182,焦糖綜合
+10,20183,焦糖綜合
+10,20184,焦糖綜合
+10,20185,焦糖綜合
+10,20186,焦糖綜合
+10,20187,焦糖綜合
+10,20188,三色綜合
+10,20189,三色綜合
+10,20190,三色綜合
+10,20191,三色綜合
+10,20192,三色綜合
+10,20193,三色綜合
+10,20194,三色綜合
+10,20195,超極巨化
+10,20196,空腹花紋
+10,20197,超極巨化
+10,20198,超極巨化
+10,20199,超極巨化
