@@ -165,7 +165,7 @@ id,identifier,introduced_in_version_group
 164,black-glasses,5
 165,slowpoke-tail,5
 166,pink-bow,5
-167,stick,5
+167,leek,5
 168,smoke-ball,5
 169,never-melt-ice,5
 170,magnet,5
@@ -214,7 +214,7 @@ id,identifier,introduced_in_version_group
 213,gorgeous-box,5
 214,sun-stone,5
 215,polkadot-bow,5
-216,up-grade,5
+216,upgrade,5
 217,berry,5
 218,gold-berry,5
 219,squirt-bottle,5
@@ -644,13 +644,13 @@ id,identifier,introduced_in_version_group
 643,dark-gem,13
 644,steel-gem,13
 645,normal-gem,13
-646,health-wing,13
-647,muscle-wing,13
-648,resist-wing,13
-649,genius-wing,13
-650,clever-wing,13
-651,swift-wing,13
-652,pretty-wing,13
+646,health-feather,13
+647,muscle-feather,13
+648,resist-feather,13
+649,genius-feather,13
+650,clever-feather,13
+651,swift-feather,13
+652,pretty-feather,13
 653,cover-fossil,13
 654,plume-fossil,13
 655,liberty-pass,13
@@ -782,7 +782,7 @@ id,identifier,introduced_in_version_group
 781,elevator-key,15
 782,tmv-pass,15
 783,honor-of-kalos,15
-784,adventure-rules,15
+784,adventure-guide,15
 785,strange-souvenir,15
 786,lens-case,15
 787,travel-trunk-silver,15

@@ -10,6 +10,7 @@ Ice Punch,8
 Thunder Punch,9
 Scratch,10
 Vice Grip,11
+Vise Grip,11
 Guillotine,12
 Razor Wind,13
 Swords Dance,14
@@ -723,6 +724,60 @@ Freezy Frost,739
 Sparkly Swirl,740
 Veevee Volley,741
 Double Iron Bash,742
+Max Guard,743
+Dynamax Cannon,744
+Snipe Shot,745
+Jaw Lock,746
+Stuff Cheeks,747
+No Retreat,748
+Tar Shot,749
+Magic Powder,750
+Dragon Darts,751
+Teatime,752
+Octolock,753
+Bolt Beak,754
+Fishious Rend,755
+Court Change,756
+Max Flare,757
+Max Flutterby,758
+Max Lightning,759
+Max Strike,760
+Max Knuckle,761
+Max Phantasm,762
+Max Hailstorm,763
+Max Ooze,764
+Max Geyser,765
+Max Airstream,766
+Max Starfall,767
+Max Wyrmwind,768
+Max Mindstorm,769
+Max Rockfall,770
+Max Quake,771
+Max Darkness,772
+Max Overgrowth,773
+Max Steelspike,774
+Clangorous Soul,775
+Body Press,776
+Decorate,777
+Drum Beating,778
+Snap Trap,779
+Pyro Ball,780
+Behemoth Blade,781
+Behemoth Bash,782
+Aura Wheel,783
+Breaking Swipe,784
+Branch Poke,785
+Overdrive,786
+Apple Acid,787
+Grav Apple,788
+Spirit Break,789
+Strange Steam,790
+Life Dew,791
+Obstruct,792
+False Surrender,793
+Meteor Assault,794
+Eternabeam,795
+Steel Beam,796
 Hidden Power Fighting,10001
 Hidden Power Flying,10002
 Hidden Power Poison,10003
@@ -739,3 +794,18 @@ Hidden Power Psychic,10013
 Hidden Power Ice,10014
 Hidden Power Dragon,10015
 Hidden Power Dark,10016
+G-Max Befuddle,10036
+G-Max Gold Rush,10038
+G-Max Chi Strike,10039
+G-Max Resonance,10041
+G-Max Cuddle,10042
+G-Max Malodor,10044
+G-Max Finale,10048
+G-Max Depletion,10049
+G-Max Gravitas,10050
+G-Max Sandblast,10052
+G-Max Snooze,10053
+G-Max Smite,10056
+G-Max Meltdown,10058
+G-Max Foam Burst,10059
+G-Max Centiferno,10060
