@@ -20,7 +20,7 @@ final class CurrentStatsMiddleware implements MiddlewareInterface
 	private UsageQueriesInterface $usageQueries;
 
 	/** @var int $DEFAULT_FORMAT_ID */
-	private const DEFAULT_FORMAT_ID = FormatId::GEN_7_OU;
+	private const DEFAULT_FORMAT_ID = FormatId::GEN_8_OU;
 
 	/** @var int $DEFAULT_RATING */
 	private const DEFAULT_RATING = 1695;
