@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Species\ExperienceGroupId;
 use Jp\Dex\Domain\Species\Species;
 use Jp\Dex\Domain\Species\SpeciesId;
 use Jp\Dex\Domain\Species\SpeciesNotFoundException;
@@ -40,8 +39,7 @@ final class DatabaseSpeciesRepository implements SpeciesRepositoryInterface
 			'SELECT
 				`identifier`,
 				`introduced_in_version_group_id`,
-				`base_egg_cycles`,
-				`base_friendship`
+				`base_egg_cycles`
 			FROM `species`
 			WHERE `id` = :species_id
 			LIMIT 1'

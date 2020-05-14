@@ -3,19 +3,15 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Items;
 
+use Exception;
+
 class MachineType
 {
-	/** @var string $TM */
 	public const TM = 'tm';
-
-	/** @var string $HM */
 	public const HM = 'hm';
-
-	/** @var string $TR */
 	public const TR = 'tr';
 
-	/** @var string $value */
-	private $value;
+	private string $value;
 
 	/**
 	 * Constructor.
