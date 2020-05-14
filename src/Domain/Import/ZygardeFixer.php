@@ -60,12 +60,13 @@ final class ZygardeFixer
 
 		// All the formats that allow Power Construct Zygarde.
 		$formatIds = [
-			36, // Gen 7 Anything Goes
+			36, // Gen 7 AG
 			37, // Gen 7 Ubers
 			45, // Gen 7 Doubles Ubers
 			50, // VGC 2019 Sun Series
 			51, // VGC 2019 Moon Series
 			52, // VGC 2019 Ultra Series
+			65, // Gen 8 National Dex AG
 		];
 
 		foreach ($formatIds as $formatId) {

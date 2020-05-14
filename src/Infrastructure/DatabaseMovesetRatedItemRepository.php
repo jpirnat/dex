@@ -10,6 +10,7 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
 use PDO;
+use PDOException;
 
 final class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryInterface
 {
@@ -57,7 +58,13 @@ final class DatabaseMovesetRatedItemRepository implements MovesetRatedItemReposi
 		$stmt->bindValue(':pokemon_id', $movesetRatedItem->getPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':item_id', $movesetRatedItem->getItemId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':percent', $movesetRatedItem->getPercent(), PDO::PARAM_STR);
-		$stmt->execute();
+		try {
+			$stmt->execute();
+		} catch (PDOException $e) {
+			// This record already exists.
+			// Bug fix for https://www.smogon.com/stats/2019-11
+			// in which Leek and Stick both appear, during the transition to gen 8.
+		}
 	}
 
 	/**

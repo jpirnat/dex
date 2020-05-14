@@ -1,7 +1,7 @@
 create table if not exists `formats`
 (
 `id` tinyint unsigned not null,
-`identifier` varchar(20) not null,
+`identifier` varchar(30) not null,
 
 `generation_id` tinyint unsigned not null,
 `level` tinyint unsigned not null,
