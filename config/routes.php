@@ -390,12 +390,10 @@ $routes = [
 ];
 
 // Route dispatching.
-$routeDispatcher = \FastRoute\simpleDispatcher(
+return \FastRoute\simpleDispatcher(
 	function (\FastRoute\RouteCollector $routeCollector) use ($routes) {
 		foreach ($routes as $route) {
 			$routeCollector->addRoute(...$route);
 		}
 	}
 );
-
-return $routeDispatcher;

@@ -82,13 +82,13 @@ if ($routeInfo[0] === \FastRoute\Dispatcher::FOUND) {
 	$middlewareDispatcher->addMiddlewares($middlewareClasses);
 	$response = $middlewareDispatcher->handle($request);
 } elseif ($routeInfo[0] === \FastRoute\Dispatcher::NOT_FOUND) {
-	$response = new \LaminasDiactoros\Response\RedirectResponse('/404');
+	$response = new \Laminas\Diactoros\Response\RedirectResponse('/404');
 } elseif ($routeInfo[0] === \FastRoute\Dispatcher::METHOD_NOT_ALLOWED) {
 	$allowedMethods = $routeInfo[1];
-	$response = new \LaminasDiactoros\Response\RedirectResponse('/405');
+	$response = new \Laminas\Diactoros\Response\RedirectResponse('/405');
 } else {
 	// This should never happen.
-	$response = new \LaminasDiactoros\Response\RedirectResponse('/');
+	$response = new \Laminas\Diactoros\Response\RedirectResponse('/');
 }
 
 // Emit the response.
