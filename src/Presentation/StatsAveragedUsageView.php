@@ -68,7 +68,7 @@ final class StatsAveragedUsageView
 				'name' => $usageData->getPokemonName(),
 				'showMovesetLink' => $usageData->getMonths() > 0,
 				'identifier' => $usageData->getPokemonIdentifier(),
-				'formIcon' => $usageData->getFormIcon(),
+				'icon' => $usageData->getFormIcon(),
 				'usagePercent' => $formatter->formatPercent($usageData->getUsagePercent()),
 				'raw' => $formatter->formatNumber($usageData->getRaw()),
 				'rawPercent' => $formatter->formatPercent($usageData->getRawPercent()),

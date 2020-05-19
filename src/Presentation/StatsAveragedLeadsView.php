@@ -68,7 +68,7 @@ final class StatsAveragedLeadsView
 				'name' => $leadsData->getPokemonName(),
 				'showMovesetLink' => $leadsData->getMonths() > 0,
 				'identifier' => $leadsData->getPokemonIdentifier(),
-				'formIcon' => $leadsData->getFormIcon(),
+				'icon' => $leadsData->getFormIcon(),
 				'usagePercent' => $formatter->formatPercent($leadsData->getLeadUsagePercent()),
 				'raw' => $formatter->formatNumber($leadsData->getRaw()),
 				'rawPercent' => $formatter->formatPercent($leadsData->getRawPercent()),

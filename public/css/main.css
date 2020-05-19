@@ -33,6 +33,10 @@ table {
 	vertical-align: top;
 }
 
+.stats-table__pokemon-icon {
+	text-align: center;
+}
+
 table .number {
 	text-align: right;
 }

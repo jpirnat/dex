@@ -31,8 +31,8 @@
 			{% for pokemon in data %}
 				<tr>
 					<td class="number">{{ pokemon.rank|e }}</td>
-					<td>
-						<img src="/images/pokemon/icons/{{ pokemon.formIcon|e }}">
+					<td class="stats-table__pokemon-icon">
+						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
 					</td>
 					<td>
 						{% if pokemon.showMovesetLink %}
