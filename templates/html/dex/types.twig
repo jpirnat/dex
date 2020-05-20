@@ -45,13 +45,13 @@
 					{% for defendingType in types %}
 						<td
 							{% if factors[attackingType.id][defendingType.id] == 1 %}
-								class="factor neutral"
+								class="type-chart__matchup type-chart__matchup--neutral"
 							{% elseif factors[attackingType.id][defendingType.id] == 2 %}
-								class="factor super-effective"
+								class="type-chart__matchup type-chart__matchup--super-effective"
 							{% elseif factors[attackingType.id][defendingType.id] == 0.5 %}
-								class="factor not-very-effective"
+								class="type-chart__matchup type-chart__matchup--not-very-effective"
 							{% elseif factors[attackingType.id][defendingType.id] == 0 %}
-								class="factor no-effect"
+								class="type-chart__matchup type-chart__matchup--no-effect"
 							{% endif %}
 						></td>
 					{% endfor %}

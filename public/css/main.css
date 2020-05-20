@@ -33,19 +33,19 @@ table {
 	vertical-align: top;
 }
 
-.stats-table__pokemon-icon {
+.dex-table__pokemon-icon {
 	text-align: center;
 }
 
-table .number {
+.dex-table--number {
 	text-align: right;
 }
 
-table .percent-plus {
+.dex-table--percent-plus {
 	color: green;
 }
 
-table .percent-minus {
+.dex-table--percent-minus {
 	color: red;
 }
 
@@ -60,11 +60,6 @@ table .percent-minus {
 .menu {
 	background: #eee;
 	border: 1px solid #ddd;
-}
-
-#hamburger-button {
-	display: inline-block;
-	padding: 10px;
 }
 
 .menu ul {
@@ -268,7 +263,15 @@ a.button {
 
 /* dex natures */
 
-.dex-natures .neutral {
+.dex-nature--increased {
+	color: red;
+}
+
+.dex-nature--decreased {
+	color: blue;
+}
+
+.dex-nature--neutral {
 	text-align: center;
 }
 
@@ -276,43 +279,39 @@ a.button {
 
 /* dex types */
 
-.type-chart .factor {
+.type-chart__matchup {
 	text-align: center;
 	border: 1px solid white;
 }
 
-.type-chart .neutral {
-	color: gray;
+.type-chart__matchup--neutral {
+	color: darkgray;
 }
-
-.type-chart .neutral::before {
+.type-chart__matchup--neutral::before {
 	content: "1";
 }
 
-.type-chart .super-effective {
+.type-chart__matchup--super-effective {
 	background: green;
 	color: white;
 }
-
-.type-chart .super-effective::before {
+.type-chart__matchup--super-effective::before {
 	content: "2";
 }
 
-.type-chart .not-very-effective {
+.type-chart__matchup--not-very-effective {
 	background: red;
 	color: white;
 }
-
-.type-chart .not-very-effective::before {
+.type-chart__matchup--not-very-effective::before {
 	content: "\00BD"; /* ½ */
 }
 
-.type-chart .no-effect {
+.type-chart__matchup--no-effect {
 	background: black;
 	color: white;
 }
-
-.type-chart .no-effect::before {
+.type-chart__matchup--no-effect::before {
 	content: "0";
 }
 

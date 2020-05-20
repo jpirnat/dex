@@ -47,8 +47,8 @@
 		<tbody>
 			{% for pokemon in pokemons %}
 				<tr>
-					<td class="number">{{ pokemon.rank|e }}</td>
-					<td class="stats-table__pokemon-icon">
+					<td class="dex-table--number">{{ pokemon.rank|e }}</td>
+					<td class="dex-table__pokemon-icon">
 						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
 					</td>
 					<td>
@@ -60,22 +60,22 @@
 							{{ pokemon.name|e }}
 						{% endif %}
 					</td>
-					<td class="number">{{ pokemon.usagePercent|e }}</td>
+					<td class="dex-table--number">{{ pokemon.usagePercent|e }}</td>
 					<td
 						{% if pokemon.usageChange > 0 %}
-							class="number percent-plus"
+							class="dex-table--number dex-table--percent-plus"
 						{% elseif pokemon.usageChange < 0 %}
-							class="number percent-minus"
+							class="dex-table--number dex-table--percent-minus"
 						{% else %}
-							class="number"
+							class="dex-table--number"
 						{% endif %}
 					>
 						<a class="trend-link" href="/stats/trends/chart?type=lead-usage&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}">
 							{{ pokemon.usageChangeText|e }}
 						</a>
 					</td>
-					<td class="number">{{ pokemon.raw|e }}</td>
-					<td class="number">{{ pokemon.rawPercent|e }}</td>
+					<td class="dex-table--number">{{ pokemon.raw|e }}</td>
+					<td class="dex-table--number">{{ pokemon.rawPercent|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>

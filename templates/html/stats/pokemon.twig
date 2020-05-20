@@ -52,7 +52,7 @@
 		{% for stat in baseStats %}
 			<tr>
 				<td class="base-stat-name">{{ stat.name|e }}</td>
-				<td class="number">{{ stat.value|e }}</td>
+				<td class="dex-table--number">{{ stat.value|e }}</td>
 				<td>
 					<div class="base-stat-bar" style="width: calc({{ stat.value|e }} / 255 * 300px)"></div>
 				</td>
@@ -119,14 +119,14 @@
 								{{ ability.name|e }}
 							</a>
 						</td>
-						<td class="number">{{ ability.percent|e }}</td>
+						<td class="dex-table--number">{{ ability.percent|e }}</td>
 						<td
 							{% if ability.change > 0 %}
-								class="number percent-plus"
+								class="dex-table--number dex-table--percent-plus"
 							{% elseif ability.change < 0 %}
-								class="number percent-minus"
+								class="dex-table--number dex-table--percent-minus"
 							{% else %}
-								class="number"
+								class="dex-table--number"
 							{% endif %}
 						>
 							<a class="trend-link" href="/stats/trends/chart?type=moveset-ability&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&ability={{ ability.identifier|e }}">
@@ -157,14 +157,14 @@
 								{{ item.name|e }}
 							</a>
 						</td>
-						<td class="number">{{ item.percent|e }}</td>
+						<td class="dex-table--number">{{ item.percent|e }}</td>
 						<td
 							{% if item.change > 0 %}
-								class="number percent-plus"
+								class="dex-table--number dex-table--percent-plus"
 							{% elseif item.change < 0 %}
-								class="number percent-minus"
+								class="dex-table--number dex-table--percent-minus"
 							{% else %}
-								class="number"
+								class="dex-table--number"
 							{% endif %}
 						>
 							<a class="trend-link" href="/stats/trends/chart?type=moveset-item&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&item={{ item.identifier|e }}">
@@ -193,7 +193,7 @@
 					<td>{{ spread.nature|e }}</td>
 					<td>{{ spread.evs|e }}</td>
 					</td>
-					<td class="number">
+					<td class="dex-table--number">
 						{{ spread.percent|e }}
 					</td>
 					<td>{{ spread.stats|e }}</td>
@@ -219,14 +219,14 @@
 							{{ move.name|e }}
 						</a>
 					</td>
-					<td class="number">{{ move.percent|e }}</td>
+					<td class="dex-table--number">{{ move.percent|e }}</td>
 					<td
 						{% if move.change > 0 %}
-							class="number percent-plus"
+							class="dex-table--number dex-table--percent-plus"
 						{% elseif move.change < 0 %}
-							class="number percent-minus"
+							class="dex-table--number dex-table--percent-minus"
 						{% else %}
-							class="number"
+							class="dex-table--number"
 						{% endif %}
 					>
 						<a class="trend-link" href="/stats/trends/chart?type=moveset-move&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&move={{ move.identifier|e }}">
@@ -250,7 +250,7 @@
 		<tbody>
 			{% for teammate in teammates %}
 				<tr>
-					<td class="stats-table__pokemon-icon">
+					<td class="dex-table__pokemon-icon">
 						<img src="/images/pokemon/icons/{{ teammate.icon|e }}">
 					</td>
 					<td>
@@ -258,7 +258,7 @@
 							{{ teammate.name|e }}
 						</a>
 					</td>
-					<td class="number">{{ teammate.percent|e }}</td>
+					<td class="dex-table--number">{{ teammate.percent|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>
@@ -280,7 +280,7 @@
 		<tbody>
 			{% for counter in counters %}
 				<tr>
-					<td class="stats-table__pokemon-icon">
+					<td class="dex-table__pokemon-icon">
 						<img src="/images/pokemon/icons/{{ counter.icon|e }}">
 					</td>
 					<td>
@@ -288,11 +288,11 @@
 							{{ counter.name|e }}
 						</a>
 					</td>
-					<td class="number">{{ counter.score|e }}</td>
-					<td class="number">{{ counter.percent|e }}</td>
-					<td class="number">{{ counter.standardDeviation|e }}</td>
-					<td class="number">{{ counter.percentKnockedOut|e }}</td>
-					<td class="number">{{ counter.percentSwitchedOut|e }}</td>
+					<td class="dex-table--number">{{ counter.score|e }}</td>
+					<td class="dex-table--number">{{ counter.percent|e }}</td>
+					<td class="dex-table--number">{{ counter.standardDeviation|e }}</td>
+					<td class="dex-table--number">{{ counter.percentKnockedOut|e }}</td>
+					<td class="dex-table--number">{{ counter.percentSwitchedOut|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>

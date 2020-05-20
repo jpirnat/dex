@@ -25,9 +25,9 @@
 					<th scope="col">Abilities</th>
 				{% endif %}
 				{% for statAbbreviation in statAbbreviations %}
-					<th scope="col" class="number">{{ statAbbreviation|e }}</th>
+					<th scope="col" class="dex-table--number">{{ statAbbreviation|e }}</th>
 				{% endfor %}
-				<th scope="col" class="number">BST</th>
+				<th scope="col" class="dex-table--number">BST</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -64,11 +64,11 @@
 						</td>
 					{% endif %}
 					{% for baseStat in pokemon.baseStats %}
-						<td class="number">
+						<td class="dex-table--number">
 							{{ baseStat|e }}
 						</td>
 					{% endfor %}
-					<td class="number">{{ pokemon.bst|e }}</td>
+					<td class="dex-table--number">{{ pokemon.bst|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>

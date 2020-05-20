@@ -30,8 +30,8 @@
 		<tbody>
 			{% for pokemon in data %}
 				<tr>
-					<td class="number">{{ pokemon.rank|e }}</td>
-					<td class="stats-table__pokemon-icon">
+					<td class="dex-table--number">{{ pokemon.rank|e }}</td>
+					<td class="dex-table__pokemon-icon">
 						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
 					</td>
 					<td>
@@ -43,9 +43,9 @@
 							{{ pokemon.name|e }}
 						{% endif %}
 					</td>
-					<td class="number">{{ pokemon.usagePercent|e }}</td>
-					<td class="number">{{ pokemon.raw|e }}</td>
-					<td class="number">{{ pokemon.rawPercent|e }}</td>
+					<td class="dex-table--number">{{ pokemon.usagePercent|e }}</td>
+					<td class="dex-table--number">{{ pokemon.raw|e }}</td>
+					<td class="dex-table--number">{{ pokemon.rawPercent|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>

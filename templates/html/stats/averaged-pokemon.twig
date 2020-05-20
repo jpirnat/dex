@@ -36,7 +36,7 @@
 		{% for stat in baseStats %}
 			<tr>
 				<td class="base-stat-name">{{ stat.name|e }}</td>
-				<td class="number">{{ stat.value|e }}</td>
+				<td class="dex-table--number">{{ stat.value|e }}</td>
 				<td>
 					<div class="base-stat-bar" style="width: calc({{ stat.value|e }} / 255 * 300px)"></div>
 				</td>
@@ -79,7 +79,7 @@
 				{% for ability in abilities %}
 					<tr>
 						<td>{{ ability.name|e }}</td>
-						<td class="number">{{ ability.percent|e }}</td>
+						<td class="dex-table--number">{{ ability.percent|e }}</td>
 					</tr>
 				{% endfor %}
 			</tbody>
@@ -99,7 +99,7 @@
 				{% for item in items %}
 					<tr>
 						<td>{{ item.name|e }}</td>
-						<td class="number">{{ item.percent|e }}</td>
+						<td class="dex-table--number">{{ item.percent|e }}</td>
 					</tr>
 				{% endfor %}
 			</tbody>
@@ -118,7 +118,7 @@
 			{% for move in moves %}
 				<tr>
 					<td>{{ move.name|e }}</td>
-					<td class="number">{{ move.percent|e }}</td>
+					<td class="dex-table--number">{{ move.percent|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>

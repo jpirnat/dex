@@ -48,7 +48,7 @@
 		<tbody>
 			{% for pokemon in pokemons %}
 				<tr>
-					<td class="stats-table__pokemon-icon">
+					<td class="dex-table__pokemon-icon">
 						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
 					</td>
 					<td>
@@ -56,16 +56,16 @@
 							{{ pokemon.name|e }}
 						</a>
 					</td>
-					<td class="number">{{ pokemon.pokemonPercent|e }}</td>
-					<td class="number">{{ pokemon.itemPercent|e }}</td>
-					<td class="number">{{ pokemon.usagePercent|e }}</td>
+					<td class="dex-table--number">{{ pokemon.pokemonPercent|e }}</td>
+					<td class="dex-table--number">{{ pokemon.itemPercent|e }}</td>
+					<td class="dex-table--number">{{ pokemon.usagePercent|e }}</td>
 					<td
 						{% if pokemon.usageChange > 0 %}
-							class="number percent-plus"
+							class="dex-table--number dex-table--percent-plus"
 						{% elseif pokemon.usageChange < 0 %}
-							class="number percent-minus"
+							class="dex-table--number dex-table--percent-minus"
 						{% else %}
-							class="number"
+							class="dex-table--number"
 						{% endif %}
 					>
 						<a class="trend-link" href="/stats/trends/chart?type=usage-item&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&item={{ item.identifier|e }}">

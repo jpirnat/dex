@@ -77,9 +77,9 @@
 						<td class="category">
 							<img src="/images/categories/{{ move.category.icon|e }}" alt="{{ move.category.name|e }}">
 						</td>
-						<td class="number">{{ move.pp|e }}</td>
-						<td class="number">{{ move.power|e }}</td>
-						<td class="number">{{ move.accuracy|e }}</td>
+						<td class="dex-table--number">{{ move.pp|e }}</td>
+						<td class="dex-table--number">{{ move.power|e }}</td>
+						<td class="dex-table--number">{{ move.accuracy|e }}</td>
 						{% if showMoveDescriptions %}
 							<td class="description">{{ move.description|e }}</td>
 						{% endif %}

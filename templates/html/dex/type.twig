@@ -25,9 +25,9 @@
 					<th scope="col">Abilities</th>
 				{% endif %}
 				{% for stat in stats %}
-					<th scope="col" class="number">{{ stat|e }}</th>
+					<th scope="col" class="dex-table--number">{{ stat|e }}</th>
 				{% endfor %}
-				<th scope="col" class="number">BST</th>
+				<th scope="col" class="dex-table--number">BST</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -64,11 +64,11 @@
 						</td>
 					{% endif %}
 					{% for baseStat in pokemon.baseStats %}
-						<td class="number">
+						<td class="dex-table--number">
 							{{ baseStat|e }}
 						</td>
 					{% endfor %}
-					<td class="number">{{ pokemon.bst|e }}</td>
+					<td class="dex-table--number">{{ pokemon.bst|e }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>
@@ -104,9 +104,9 @@
 					<td class="category">
 						<img src="/images/categories/{{ move.category.icon|e }}" alt="{{ move.category.name|e }}">
 					</td>
-					<td class="number">{{ move.pp|e }}</td>
-					<td class="number">{{ move.power|e }}</td>
-					<td class="number">{{ move.accuracy|e }}</td>
+					<td class="dex-table--number">{{ move.pp|e }}</td>
+					<td class="dex-table--number">{{ move.power|e }}</td>
+					<td class="dex-table--number">{{ move.accuracy|e }}</td>
 					{% if showMoveDescriptions %}
 						<td class="description">{{ move.description|e }}</td>
 					{% endif %}
