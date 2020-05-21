@@ -1,4 +1,4 @@
-generation_id,attacking_type_id,defending_type_id,factor
+generation_id,attacking_type_id,defending_type_id,multiplier
 1,1,1,1
 1,1,2,1
 1,1,3,1

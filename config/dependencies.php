@@ -307,11 +307,11 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseTmRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Items\TmRepositoryInterface::class, $rule);
 
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseTypeEffectivenessRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Types\TypeEffectivenessRepositoryInterface::class, $rule);
-
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseTypeIconRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\TypeIcons\TypeIconRepositoryInterface::class, $rule);
+
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseTypeMatchupRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseTypeNameRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Types\TypeNameRepositoryInterface::class, $rule);

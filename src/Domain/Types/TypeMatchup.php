@@ -5,12 +5,12 @@ namespace Jp\Dex\Domain\Types;
 
 use Jp\Dex\Domain\Versions\GenerationId;
 
-final class TypeEffectiveness
+final class TypeMatchup
 {
 	private GenerationId $generationId;
 	private TypeId $attackingTypeId;
 	private TypeId $defendingTypeId;
-	private float $factor;
+	private float $multiplier;
 
 	/**
 	 * Constructor.
@@ -18,22 +18,22 @@ final class TypeEffectiveness
 	 * @param GenerationId $generationId
 	 * @param TypeId $attackingTypeId
 	 * @param TypeId $defendingTypeId
-	 * @param float $factor
+	 * @param float $multiplier
 	 */
 	public function __construct(
 		GenerationId $generationId,
 		TypeId $attackingTypeId,
 		TypeId $defendingTypeId,
-		float $factor
+		float $multiplier
 	) {
 		$this->generationId = $generationId;
 		$this->attackingTypeId = $attackingTypeId;
 		$this->defendingTypeId = $defendingTypeId;
-		$this->factor = $factor;
+		$this->multiplier = $multiplier;
 	}
 
 	/**
-	 * Get the type effectiveness's generation id.
+	 * Get the type matchup's generation id.
 	 *
 	 * @return GenerationId
 	 */
@@ -43,7 +43,7 @@ final class TypeEffectiveness
 	}
 
 	/**
-	 * Get the type effectiveness's attacking type id.
+	 * Get the type matchup's attacking type id.
 	 *
 	 * @return TypeId
 	 */
@@ -53,7 +53,7 @@ final class TypeEffectiveness
 	}
 
 	/**
-	 * Get the type effectiveness's defending type id.
+	 * Get the type matchup's defending type id.
 	 *
 	 * @return TypeId
 	 */
@@ -63,12 +63,12 @@ final class TypeEffectiveness
 	}
 
 	/**
-	 * Get the type effectiveness's factor.
+	 * Get the type matchup's multiplier.
 	 *
 	 * @return float
 	 */
-	public function getFactor() : float
+	public function getMultiplier() : float
 	{
-		return $this->factor;
+		return $this->multiplier;
 	}
 }

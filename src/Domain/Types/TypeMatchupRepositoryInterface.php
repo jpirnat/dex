@@ -5,14 +5,14 @@ namespace Jp\Dex\Domain\Types;
 
 use Jp\Dex\Domain\Versions\GenerationId;
 
-interface TypeEffectivenessRepositoryInterface
+interface TypeMatchupRepositoryInterface
 {
 	/**
-	 * Get type effectivenesses by generation.
+	 * Get type matchups by generation.
 	 *
 	 * @param GenerationId $generationId
 	 *
-	 * @return TypeEffectiveness[]
+	 * @return TypeMatchup[]
 	 */
 	public function getByGeneration(GenerationId $generationId) : array;
 }

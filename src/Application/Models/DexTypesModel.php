@@ -6,21 +6,21 @@ namespace Jp\Dex\Application\Models;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
-use Jp\Dex\Domain\Types\TypeEffectivenessRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexTypesModel
 {
 	private GenerationModel $generationModel;
 	private DexTypeRepositoryInterface $dexTypeRepository;
-	private TypeEffectivenessRepositoryInterface $typeEffectivenessRepository;
+	private TypeMatchupRepositoryInterface $typeMatchupRepository;
 
 
 	/** @var DexType[] $types */
 	private array $types = [];
 
-	/** @var int[][] $factors */
-	private array $factors = [];
+	/** @var int[][] $multipliers */
+	private array $multipliers = [];
 
 
 	/**
@@ -28,16 +28,16 @@ final class DexTypesModel
 	 *
 	 * @param GenerationModel $generationModel
 	 * @param DexTypeRepositoryInterface $dexTypeRepository
-	 * @param TypeEffectivenessRepositoryInterface $typeEffectivenessRepository
+	 * @param TypeMatchupRepositoryInterface $typeMatchupRepository
 	 */
 	public function __construct(
 		GenerationModel $generationModel,
 		DexTypeRepositoryInterface $dexTypeRepository,
-		TypeEffectivenessRepositoryInterface $typeEffectivenessRepository
+		TypeMatchupRepositoryInterface $typeMatchupRepository
 	) {
 		$this->generationModel = $generationModel;
 		$this->dexTypeRepository = $dexTypeRepository;
-		$this->typeEffectivenessRepository = $typeEffectivenessRepository;
+		$this->typeMatchupRepository = $typeMatchupRepository;
 	}
 
 	/**
@@ -62,16 +62,16 @@ final class DexTypesModel
 		);
 
 		// Get this generation's type chart.
-		$typeEffectivenesses = $this->typeEffectivenessRepository->getByGeneration(
+		$typeMatchups = $this->typeMatchupRepository->getByGeneration(
 			$generationId
 		);
-		$this->factors = [];
-		foreach ($typeEffectivenesses as $typeEffectiveness) {
-			$attackingTypeId = $typeEffectiveness->getAttackingTypeId()->value();
-			$defendingTypeId = $typeEffectiveness->getDefendingTypeId()->value();
-			$factor = $typeEffectiveness->getFactor();
+		$this->multipliers = [];
+		foreach ($typeMatchups as $typeMatchup) {
+			$attackingTypeId = $typeMatchup->getAttackingTypeId()->value();
+			$defendingTypeId = $typeMatchup->getDefendingTypeId()->value();
+			$multiplier = $typeMatchup->getMultiplier();
 
-			$this->factors[$attackingTypeId][$defendingTypeId] = $factor;
+			$this->multipliers[$attackingTypeId][$defendingTypeId] = $multiplier;
 		}
 	}
 
@@ -96,12 +96,12 @@ final class DexTypesModel
 	}
 
 	/**
-	 * Get the factors.
+	 * Get the multipliers.
 	 *
 	 * @return float[][]
 	 */
-	public function getFactors() : array
+	public function getMultipliers() : array
 	{
-		return $this->factors;
+		return $this->multipliers;
 	}
 }

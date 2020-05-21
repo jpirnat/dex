@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Types\TypeEffectiveness;
-use Jp\Dex\Domain\Types\TypeEffectivenessRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeMatchup;
+use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-final class DatabaseTypeEffectivenessRepository implements TypeEffectivenessRepositoryInterface
+final class DatabaseTypeMatchupRepository implements TypeMatchupRepositoryInterface
 {
 	private PDO $db;
 
@@ -24,11 +24,11 @@ final class DatabaseTypeEffectivenessRepository implements TypeEffectivenessRepo
 	}
 
 	/**
-	 * Get type effectivenesses by generation.
+	 * Get type matchups by generation.
 	 *
 	 * @param GenerationId $generationId
 	 *
-	 * @return TypeEffectiveness[]
+	 * @return TypeMatchup[]
 	 */
 	public function getByGeneration(GenerationId $generationId) : array
 	{
@@ -36,26 +36,26 @@ final class DatabaseTypeEffectivenessRepository implements TypeEffectivenessRepo
 			'SELECT
 				`attacking_type_id`,
 				`defending_type_id`,
-				`factor`
-			FROM `type_effectivenesses`
+				`multiplier`
+			FROM `type_matchups`
 			WHERE `generation_id` = :generation_id'
 		);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
-		$typeEffectivenesses = [];
+		$typeMatchups = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$typeEffectiveness = new TypeEffectiveness(
+			$typeMatchup = new TypeMatchup(
 				$generationId,
 				new TypeId($result['attacking_type_id']),
 				new TypeId($result['defending_type_id']),
-				(float) $result['factor']
+				(float) $result['multiplier']
 			);
 
-			$typeEffectivenesses[] = $typeEffectiveness;
+			$typeMatchups[] = $typeMatchup;
 		}
 
-		return $typeEffectivenesses;
+		return $typeMatchups;
 	}
 }

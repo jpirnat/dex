@@ -52,7 +52,7 @@ return [
 	'types',
 	'type_names',
 	'type_icons',
-	'type_effectivenesses',
+	'type_matchups',
 	'pokemon_types',
 
 	// Moves

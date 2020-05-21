@@ -1,10 +1,10 @@
-create table if not exists `type_effectivenesses`
+create table if not exists `type_matchups`
 (
 `generation_id` tinyint unsigned not null,
 `attacking_type_id` tinyint unsigned not null,
 `defending_type_id` tinyint unsigned not null,
 
-`factor` decimal(2, 1) unsigned not null,
+`multiplier` decimal(2, 1) unsigned not null,
 
 primary key (
 	`generation_id`,

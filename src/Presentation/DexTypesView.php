@@ -46,7 +46,7 @@ final class DexTypesView
 		$generations = $generationModel->getGenerations();
 
 		$types = $this->dexTypesModel->getTypes();
-		$factors = $this->dexTypesModel->getFactors();
+		$multipliers = $this->dexTypesModel->getMultipliers();
 
 		// Navigational breadcrumbs.
 		$breadcrumbs = [
@@ -68,7 +68,7 @@ final class DexTypesView
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'types' => $this->dexFormatter->formatDexTypes($types),
-				'factors' => $factors,
+				'multipliers' => $multipliers,
 			]
 		);
 
