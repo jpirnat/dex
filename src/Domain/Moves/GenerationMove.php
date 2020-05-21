@@ -38,6 +38,8 @@ final class GenerationMove
 	private ?MoveId $zMoveId;
 	private ?int $zBasePower;
 	private ?ZPowerEffectId $zPowerEffectId;
+	private ?MoveId $maxMoveId;
+	private ?int $maxPower;
 
 	/**
 	 * Constructor.
@@ -67,6 +69,8 @@ final class GenerationMove
 	 * @param MoveId|null $zMoveId
 	 * @param int|null $zBasePower
 	 * @param ZPowerEffectId|null $zPowerEffectId
+	 * @param MoveId|null $maxMoveId
+	 * @param int|null $maxPower
 	 */
 	public function __construct(
 		GenerationId $generationId,
@@ -93,7 +97,9 @@ final class GenerationMove
 		TargetId $targetId,
 		?MoveId $zMoveId,
 		?int $zBasePower,
-		?ZPowerEffectId $zPowerEffectId
+		?ZPowerEffectId $zPowerEffectId,
+		?MoveId $maxMoveId,
+		?int $maxPower
 	) {
 		$this->generationId = $generationId;
 		$this->moveId = $moveId;
@@ -120,6 +126,8 @@ final class GenerationMove
 		$this->zMoveId = $zMoveId;
 		$this->zBasePower = $zBasePower;
 		$this->zPowerEffectId = $zPowerEffectId;
+		$this->maxMoveId = $maxMoveId;
+		$this->maxPower = $maxPower;
 	}
 
 	/**
@@ -383,5 +391,25 @@ final class GenerationMove
 	public function getZPowerEffectId() : ?ZPowerEffectId
 	{
 		return $this->zPowerEffectId;
+	}
+
+	/**
+	 * Get the generation move's Max Move id.
+	 *
+	 * @return MoveId|null
+	 */
+	public function getMaxMoveId() : ?MoveId
+	{
+		return $this->maxMoveId;
+	}
+
+	/**
+	 * Get the generation move's Max Move's base power.
+	 *
+	 * @return int|null
+	 */
+	public function getMaxPower() : ?int
+	{
+		return $this->maxPower;
 	}
 }

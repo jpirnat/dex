@@ -10,6 +10,9 @@ final class MoveId extends EntityId
 	/** @var int $SKETCH */
 	public const SKETCH = 166;
 
+	/** @var int $HIDDEN_POWER */
+	public const HIDDEN_POWER = 237;
+
 	/** @var int $TYPED_HIDDEN_POWER_BEGIN */
 	public const TYPED_HIDDEN_POWER_BEGIN = 10001;
 

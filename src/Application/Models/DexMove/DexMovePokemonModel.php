@@ -84,7 +84,16 @@ final class DexMovePokemonModel
 		);
 
 		// Get all the TMs that could show up in the table.
-		$tms = $this->tmRepository->getByMove($moveId);
+		if (MoveId::TYPED_HIDDEN_POWER_BEGIN <= $moveId->value()
+			&& $moveId->value() <= MoveId::TYPED_HIDDEN_POWER_END
+		) {
+			// The TMs table does not track typed Hidden Powers, so look up the
+			// TMs for the real move instead.
+			$hiddenPower = new MoveId(MoveId::HIDDEN_POWER);
+			$tms = $this->tmRepository->getByMove($hiddenPower);
+		} else {
+			$tms = $this->tmRepository->getByMove($moveId);
+		}
 
 		$pokemonIds = [];
 		$methodsPokemons = [];
