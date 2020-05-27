@@ -74,11 +74,20 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				ON `gm`.`generation_id` = `md`.`generation_id`
 				AND `mn`.`language_id` = `md`.`language_id`
 				AND `m`.`id` = `md`.`move_id`
-			WHERE `gm`.`generation_id` = :generation_id
+			WHERE `gm`.`generation_id` = :generation_id1
+				AND `m`.`id` IN (
+					SELECT
+						`vgm`.`move_id`
+					FROM `version_group_moves` AS `vgm`
+					INNER JOIN `version_groups` AS `vg`
+						ON `vgm`.`version_group_id` = `vg`.`id`
+					WHERE `vg`.`generation_id` = :generation_id2
+				)
 				AND `mn`.`language_id` = :language_id
 			ORDER BY `mn`.`name`'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -144,6 +153,14 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				AND `mn`.`language_id` = `md`.`language_id`
 				AND `m`.`id` = `md`.`move_id`
 			WHERE `gm`.`generation_id` = :generation_id1
+				AND `m`.`id` IN (
+					SELECT
+						`vgm`.`move_id`
+					FROM `version_group_moves` AS `vgm`
+					INNER JOIN `version_groups` AS `vg`
+						ON `vgm`.`version_group_id` = `vg`.`id`
+					WHERE `vg`.`generation_id` = :generation_id2
+				)
 				AND `mn`.`language_id` = :language_id
 				AND `m`.`id` IN (
 					SELECT
@@ -152,11 +169,12 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 					INNER JOIN `version_groups` AS `vg`
 						ON `pm`.`version_group_id` = `vg`.`id`
 					WHERE `pm`.`pokemon_id` = :pokemon_id
-						AND `vg`.`generation_id` <= :generation_id2
+						AND `vg`.`generation_id` <= :generation_id3
 				)'
 		);
 		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id3', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -221,12 +239,21 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				ON `gm`.`generation_id` = `md`.`generation_id`
 				AND `mn`.`language_id` = `md`.`language_id`
 				AND `m`.`id` = `md`.`move_id`
-			WHERE `gm`.`generation_id` = :generation_id
+			WHERE `gm`.`generation_id` = :generation_id1
+				AND `m`.`id` IN (
+					SELECT
+						`vgm`.`move_id`
+					FROM `version_group_moves` AS `vgm`
+					INNER JOIN `version_groups` AS `vg`
+						ON `vgm`.`version_group_id` = `vg`.`id`
+					WHERE `vg`.`generation_id` = :generation_id2
+				)
 				AND `mn`.`language_id` = :language_id
 				AND `gm`.`type_id` = :type_id
 			ORDER BY `mn`.`name`'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
