@@ -31,7 +31,7 @@
 					<th scope="col">Power</th>
 					<th scope="col">Accuracy</th>
 					{% if showMoveDescriptions %}
-						<th scope="col" class="description">Description</th>
+						<th scope="col" class="dex-table__move-description">Description</th>
 					{% endif %}
 				</tr>
 				<tr>
@@ -74,14 +74,14 @@
 								<img src="/images/types/{{ move.type.icon|e }}" alt="{{ move.type.name|e }}">
 							</a>
 						</td>
-						<td class="category">
+						<td class="dex-table__move-category">
 							<img src="/images/categories/{{ move.category.icon|e }}" alt="{{ move.category.name|e }}">
 						</td>
 						<td class="dex-table--number">{{ move.pp|e }}</td>
 						<td class="dex-table--number">{{ move.power|e }}</td>
 						<td class="dex-table--number">{{ move.accuracy|e }}</td>
 						{% if showMoveDescriptions %}
-							<td class="description">{{ move.description|e }}</td>
+							<td class="dex-table__move-description">{{ move.description|e }}</td>
 						{% endif %}
 					</tr>
 				{% endfor %}

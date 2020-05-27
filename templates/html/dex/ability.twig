@@ -43,7 +43,7 @@
 							{{ pokemon.name|e }}
 						</a>
 					</td>
-					<td class="types">
+					<td class="dex-table__pokemon-types">
 						{% for type in pokemon.types %}
 							<a href="/dex/{{ generation.identifier|e }}/types/{{ type.identifier|e }}">
 								<img src="/images/types/{{ type.icon|e }}" alt="{{ type.name|e }}">
@@ -51,18 +51,20 @@
 						{% endfor %}
 					</td>
 					{% if showAbilities %}
-						<td class="dex-pokemon-abilities">
-							{% for ability in pokemon.abilities %}
-								<div>
+						<td>
+							<div class="dex-table__pokemon-abilities">
+								{% for ability in pokemon.abilities %}
 									<a href="/dex/{{ generation.identifier|e }}/abilities/{{ ability.identifier|e }}"
 										{% if ability.isHiddenAbility %}
-											class="hidden-ability"
+											class="dex-table__pokemon-ability dex-table__pokemon-ability--hidden"
+										{% else %}
+											class="dex-table__pokemon-ability"
 										{% endif %}
 									>
 										{{ ability.name|e }}
 									</a>
-								</div>
-							{% endfor %}
+								{% endfor %}
+							</div>
 						</td>
 					{% endif %}
 					{% for baseStat in pokemon.baseStats %}

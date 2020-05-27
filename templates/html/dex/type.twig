@@ -41,7 +41,7 @@
 							{{ pokemon.name|e }}
 						</a>
 					</td>
-					<td class="types">
+					<td class="dex-table__pokemon-types">
 						{% for type in pokemon.types %}
 							<a href="/dex/{{ generation.identifier|e }}/types/{{ type.identifier|e }}">
 								<img src="/images/types/{{ type.icon|e }}" alt="{{ type.name|e }}">
@@ -49,18 +49,20 @@
 						{% endfor %}
 					</td>
 					{% if showAbilities %}
-						<td class="dex-pokemon-abilities">
-							{% for ability in pokemon.abilities %}
-								<div>
+						<td>
+							<div class="dex-table__pokemon-abilities">
+								{% for ability in pokemon.abilities %}
 									<a href="/dex/{{ generation.identifier|e }}/abilities/{{ ability.identifier|e }}"
 										{% if ability.isHiddenAbility %}
-											class="hidden-ability"
+											class="dex-table__pokemon-ability dex-table__pokemon-ability--hidden"
+										{% else %}
+											class="dex-table__pokemon-ability"
 										{% endif %}
 									>
 										{{ ability.name|e }}
 									</a>
-								</div>
-							{% endfor %}
+								{% endfor %}
+							</div>
 						</td>
 					{% endif %}
 					{% for baseStat in pokemon.baseStats %}
@@ -84,7 +86,7 @@
 				<th scope="col">Power</th>
 				<th scope="col">Accuracy</th>
 				{% if showMoveDescriptions %}
-					<th scope="col" class="description">Description</th>
+					<th scope="col" class="dex-table__move-description">Description</th>
 				{% endif %}
 			</tr>
 		</thead>
@@ -96,19 +98,19 @@
 							{{ move.name|e }}
 						</a>
 					</td>
-					<td>
+					<td class="dex-table__move-type">
 						<a href="/dex/{{ generation.identifier|e }}/types/{{ move.type.identifier|e }}">
 							<img src="/images/types/{{ move.type.icon|e }}" alt="{{ move.type.name|e }}">
 						</a>
 					</td>
-					<td class="category">
+					<td class="dex-table__move-category">
 						<img src="/images/categories/{{ move.category.icon|e }}" alt="{{ move.category.name|e }}">
 					</td>
 					<td class="dex-table--number">{{ move.pp|e }}</td>
 					<td class="dex-table--number">{{ move.power|e }}</td>
 					<td class="dex-table--number">{{ move.accuracy|e }}</td>
 					{% if showMoveDescriptions %}
-						<td class="description">{{ move.description|e }}</td>
+						<td class="dex-table__move-description">{{ move.description|e }}</td>
 					{% endif %}
 				</tr>
 			{% endfor %}

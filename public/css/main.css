@@ -238,24 +238,33 @@ a.button {
 	color: red;
 }
 
-.dex-pokemon .types {
+.dex-table__pokemon-types,
+.dex-table__move-type {
 	text-align: center;
 }
 
-.dex-pokemon-abilities {
+.dex-table__pokemon-abilities {
+	display: flex;
+	flex-direction: column;
 	font-size: .8rem;
+	white-space: nowrap;
+	text-align: center;
 }
 
-.dex-pokemon .hidden-ability {
+.dex-table__pokemon-ability:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+.dex-table__pokemon-ability--hidden {
 	font-style: italic;
 }
 
 
-.dex-moves .category {
+.dex-table__move-category {
 	text-align: center;
 }
 
-.dex-moves .description {
+.dex-table__move-description {
 	width: 50%;
 }
 
