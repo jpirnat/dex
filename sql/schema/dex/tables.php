@@ -135,6 +135,10 @@ return [
 	'transformation_groups',
 	'transformation_group_pokemon',
 
+	// Evolutions
+	'evolution_methods',
+	'evolutions',
+
 	// Pokémon Showdown identifiers
 	'formats',
 	'format_names',
