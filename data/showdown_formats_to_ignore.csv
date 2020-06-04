@@ -2189,7 +2189,7 @@ month,name,format_id,reason
 2020-04-01,gen4uu,12,too few battles: 37
 2020-04-01,gen81v1,\N,
 2020-04-01,gen8almostanyability,\N,
-2020-04-01,gen8balancedhackmons,\N,battle stadium
+2020-04-01,gen8balancedhackmons,\N,
 2020-04-01,gen8battlestadiumsingles,\N,battle stadium
 2020-04-01,gen8cap,\N,cap
 2020-04-01,gen8galarnewcomers,\N,
@@ -2200,3 +2200,23 @@ month,name,format_id,reason
 2020-04-01,gen8scalemons,\N,
 2020-04-01,gen8sharedpower,\N,
 2020-04-01,gen8stabmons,\N,
+2020-05-01,gen3nu,\N,not official
+2020-05-01,gen3uubl,\N,
+2020-05-01,gen4anythinggoes,\N,not official
+2020-05-01,gen5uu,16,too few battles: 22
+2020-05-01,gen81v1,\N,
+2020-05-01,gen8almostanyability,\N,
+2020-05-01,gen8balancedhackmons,\N,
+2020-05-01,gen8battlestadiumsingles,\N,battle stadium
+2020-05-01,gen8camomons,\N,
+2020-05-01,gen8cap,\N,cap
+2020-05-01,gen8cap1v1,\N,
+2020-05-01,gen8flipped,\N,
+2020-05-01,gen8metronomebattle,\N,
+2020-05-01,gen8mixandmega,\N,
+2020-05-01,gen8nfe,\N,
+2020-05-01,gen8oublitz,\N,
+2020-05-01,gen8pacifistmons,\N,
+2020-05-01,gen8sharedpower,\N,
+2020-05-01,gen8stabmons,\N,
+2020-05-01,gen8zu,\N,not official
