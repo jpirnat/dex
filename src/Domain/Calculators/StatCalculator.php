@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Calculators;
 
-use Jp\Dex\Domain\Natures\Nature;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
@@ -142,7 +141,8 @@ final class StatCalculator
 	 * @param StatValueContainer $ivSpread
 	 * @param StatValueContainer $evSpread
 	 * @param int $level
-	 * @param Nature $nature
+	 * @param StatId|null $increasedStatId
+	 * @param StatId|null $decreasedStatId
 	 *
 	 * @return StatValueContainer
 	 */
@@ -151,7 +151,8 @@ final class StatCalculator
 		StatValueContainer $ivSpread,
 		StatValueContainer $evSpread,
 		int $level,
-		Nature $nature
+		?StatId $increasedStatId,
+		?StatId $decreasedStatId
 	) : StatValueContainer {
 		$statSpread = new StatValueContainer();
 
@@ -174,7 +175,7 @@ final class StatCalculator
 				(int) $ivSpread->get($statId)->getValue(),
 				(int) $evSpread->get($statId)->getValue(),
 				$level,
-				$this->getNatureModifier($nature, $statId)
+				$this->getNatureModifier($statId, $increasedStatId, $decreasedStatId)
 			);
 			$statSpread->add(new StatValue($statId, $value));
 		}
@@ -185,22 +186,23 @@ final class StatCalculator
 	/**
 	 * Get the nature modifier for this stat.
 	 *
-	 * @param Nature $nature
 	 * @param StatId $statId
+	 * @param StatId|null $increasedStatId
+	 * @param StatId|null $decreasedStatId
 	 *
 	 * @return float
 	 */
-	private function getNatureModifier(Nature $nature, StatId $statId) : float
+	private function getNatureModifier(StatId $statId, ?StatId $increasedStatId, ?StatId $decreasedStatId) : float
 	{
-		if ($nature->getIncreasedStatId() === null) {
+		if ($increasedStatId === null) {
 			return 1;
 		}
 
-		if ($nature->getIncreasedStatId()->value() === $statId->value()) {
+		if ($statId->value() === $increasedStatId->value()) {
 			return 1.1;
 		}
 
-		if ($nature->getDecreasedStatId()->value() === $statId->value()) {
+		if ($statId->value() === $decreasedStatId->value()) {
 			return .9;
 		}
 

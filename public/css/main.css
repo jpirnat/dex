@@ -542,6 +542,32 @@ table.moveset-usage td {
 
 
 
+.dex-spreads__stat-names {
+	font-weight: normal;
+	color: #777;
+}
+
+.dex-spread--ev {
+	display: inline-block;
+	width: 36px;
+	text-align: right;
+}
+
+.dex-spread--stat {
+	display: inline-block;
+	width: 32px;
+	text-align: right;
+}
+
+.dex-spread--slash {
+	display: inline-block;
+	margin: 0 5px;
+	text-align: center;
+	color: #bbb;
+}
+
+
+
 /* Desktop */
 @media (min-width: 600px) {
 	#quick-links {

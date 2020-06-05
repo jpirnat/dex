@@ -3,9 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\StatsPokemon\SpreadData;
 use Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel;
-use Jp\Dex\Domain\Stats\StatId;
 use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
 
@@ -121,56 +119,11 @@ final class StatsPokemonView
 		}
 
 		// Get spreads and sort by percent.
-		$spreadDatas = $this->statsPokemonModel->getSpreadDatas();
-		uasort(
-			$spreadDatas,
-			function (SpreadData $a, SpreadData $b) : int {
-				return $b->getPercent() <=> $a->getPercent();
-			}
-		);
-
-		// Compile all spread data into the right form.
-		$spreads = [];
-		$statIds = StatId::getByGeneration($generation->getId());
-		foreach ($spreadDatas as $spreadData) {
-			// Create nature array with stat modifiers.
-			$nature = [];
-			foreach ($statIds as $i => $statId) {
-				$nature[$i] = ''; // Default.
-				if ($spreadData->getIncreasedStatId() === null) {
-					continue;
-				}
-				if ($statId->value() === $spreadData->getIncreasedStatId()->value()) {
-					$nature[$i] = '+';
-				}
-				if ($statId->value() === $spreadData->getDecreasedStatId()->value()) {
-					$nature[$i] = '-';
-				}
-			}
-
-			// Create EV spread string.
-			$evSpread = $spreadData->getEvSpread();
-			$evs = [];
-			foreach ($statIds as $i => $statId) {
-				$evs[] = $evSpread->get($statId)->getValue() . $nature[$i];
-			}
-			$evs = implode(' / ', $evs);
-
-			// Create calculated stats string.
-			$statSpread = $spreadData->getStatSpread();
-			$stats = [];
-			foreach ($statIds as $statId) {
-				$stats[] = $statSpread->get($statId)->getValue();
-			}
-			$stats = implode(' / ', $stats);
-
-			// Put it all together!
-			$spreads[] = [
-				'nature' => $spreadData->getNatureName(),
-				'evs' => $evs,
-				'percent' => $formatter->formatPercent($spreadData->getPercent()),
-				'stats' => $stats,
-			];
+		$stats = $this->statsPokemonModel->getStats();
+		$spreads = $this->statsPokemonModel->getSpreads();
+		foreach ($spreads as $i => $spread) {
+			$percent = $formatter->formatPercent($spread['percent']);
+			$spreads[$i]['percent'] = $percent;
 		}
 
 		// Get moves.
@@ -272,6 +225,7 @@ final class StatsPokemonView
 				'showItems' => $generation->getId()->value() >= 2,
 				'abilities' => $abilities,
 				'items' => $items,
+				'stats' => $stats,
 				'spreads' => $spreads,
 				'moves' => $moves,
 				'teammates' => $teammates,

@@ -5,65 +5,48 @@ namespace Jp\Dex\Application\Models\StatsPokemon;
 
 use DateTime;
 use Jp\Dex\Domain\Calculators\StatCalculator;
-use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
+use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
-use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Spreads\StatsPokemonSpreadRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 
 final class SpreadModel
 {
-	private FormatRepositoryInterface $formatRepository;
-	private MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository;
+	private StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository;
 	private BaseStatRepositoryInterface $baseStatRepository;
-	private NatureRepositoryInterface $natureRepository;
-	private NatureNameRepositoryInterface $natureNameRepository;
 	private StatCalculator $statCalculator;
 
-
-	/** @var SpreadData[] $spreadDatas */
-	private array $spreadDatas = [];
+	private array $spreads = [];
+	private array $stats = [];
 
 
 	/**
 	 * Constructor.
 	 *
-	 * @param FormatRepositoryInterface $formatRepository
-	 * @param MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository
+	 * @param StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository
 	 * @param BaseStatRepositoryInterface $baseStatRepository
-	 * @param NatureRepositoryInterface $natureRepository
-	 * @param NatureNameRepositoryInterface $natureNameRepository
 	 * @param StatCalculator $statCalculator
 	 */
 	public function __construct(
-		FormatRepositoryInterface $formatRepository,
-		MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository,
+		StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository,
 		BaseStatRepositoryInterface $baseStatRepository,
-		NatureRepositoryInterface $natureRepository,
-		NatureNameRepositoryInterface $natureNameRepository,
 		StatCalculator $statCalculator
 	) {
-		$this->formatRepository = $formatRepository;
-		$this->movesetRatedSpreadRepository = $movesetRatedSpreadRepository;
+		$this->statsPokemonSpreadRepository = $statsPokemonSpreadRepository;
 		$this->baseStatRepository = $baseStatRepository;
-		$this->natureRepository = $natureRepository;
-		$this->natureNameRepository = $natureNameRepository;
 		$this->statCalculator = $statCalculator;
 	}
 
+
 	/**
-	 * Get spread data to recreate a stats moveset file, such as
-	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single
-	 * Pokémon.
+	 * Get stat and spread data for the stats Pokémon page.
 	 *
 	 * @param DateTime $month
-	 * @param FormatId $formatId
+	 * @param Format $format
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
@@ -72,21 +55,20 @@ final class SpreadModel
 	 */
 	public function setData(
 		DateTime $month,
-		FormatId $formatId,
+		Format $format,
 		int $rating,
 		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : void {
-		// Get the format.
-		$format = $this->formatRepository->getById($formatId, $languageId);
 		$generationId = $format->getGenerationId();
 
-		// Get moveset rated spread records.
-		$movesetRatedSpreads = $this->movesetRatedSpreadRepository->getByMonthAndFormatAndRatingAndPokemon(
+		// Get stat Pokémon spreads.
+		$spreads = $this->statsPokemonSpreadRepository->getByMonth(
 			$month,
 			$format->getId(),
 			$rating,
-			$pokemonId
+			$pokemonId,
+			$languageId
 		);
 
 		// Get the Pokémon's base stats.
@@ -95,27 +77,49 @@ final class SpreadModel
 			$pokemonId
 		);
 
+		// Get this generation's stats.
+		$statIds = StatId::getByGeneration($generationId);
+		$idsToIdentifiers = [
+			StatId::HP => 'hp',
+			StatId::ATTACK => 'atk',
+			StatId::DEFENSE => 'def',
+			StatId::SPEED => 'spe',
+			StatId::SPECIAL => 'spc',
+			StatId::SPECIAL_ATTACK => 'spa',
+			StatId::SPECIAL_DEFENSE => 'spd',
+		];
+		if ($generationId->value() === 1) {
+			$this->stats = [
+				['value' => 'hp', 'name' => 'HP'],
+				['value' => 'atk', 'name' => 'Atk'],
+				['value' => 'def', 'name' => 'Def'],
+				['value' => 'spc', 'name' => 'Spc'],
+				['value' => 'spe', 'name' => 'Spe'],
+			];
+		} else {
+			$this->stats = [
+				['value' => 'hp', 'name' => 'HP'],
+				['value' => 'atk', 'name' => 'Atk'],
+				['value' => 'def', 'name' => 'Def'],
+				['value' => 'spa', 'name' => 'SpA'],
+				['value' => 'spd', 'name' => 'SpD'],
+				['value' => 'spe', 'name' => 'Spe'],
+			];
+		}
+
 		// Assume the Pokémon has perfect IVs.
 		$ivSpread = new StatValueContainer();
-		$statIds = StatId::getByGeneration($generationId);
 		$perfectIv = $this->statCalculator->getPerfectIv($generationId);
 		foreach ($statIds as $statId) {
 			$ivSpread->add(new StatValue($statId, $perfectIv));
 		}
 
 		// Calculate the Pokémon's stats for each spread.
-		foreach ($movesetRatedSpreads as $movesetRatedSpread) {
-			// Get this spread's nature's name.
-			$natureName = $this->natureNameRepository->getByLanguageAndNature(
-				$languageId,
-				$movesetRatedSpread->getNatureId()
-			);
-
-			$nature = $this->natureRepository->getById(
-				$movesetRatedSpread->getNatureId()
-			);
-
-			$evSpread = $movesetRatedSpread->getEvSpread();
+		$this->spreads = [];
+		foreach ($spreads as $spread) {
+			$evSpread = $spread->getEvs();
+			$increasedStatId = $spread->getIncreasedStatId();
+			$decreasedStatId = $spread->getDecreasedStatId();
 
 			// Get this spread's calculated stats.
 			if ($generationId->value() === 1 || $generationId->value() === 2) {
@@ -129,7 +133,8 @@ final class SpreadModel
 					$actingStatId = $statId->value() !== StatId::SPECIAL
 						? $statId
 						: new StatId(StatId::SPECIAL_ATTACK);
-					$value = $movesetRatedSpread->getEvSpread()->get($actingStatId)->getValue();
+					$value = $spread->getEvs()->get($actingStatId)->getValue();
+
 					$evSpread->add(new StatValue($statId, $value));
 					$calcEvSpread->add(new StatValue($statId, $value ** 2));
 				}
@@ -147,28 +152,58 @@ final class SpreadModel
 					$ivSpread,
 					$evSpread,
 					$format->getLevel(),
-					$nature
+					$increasedStatId,
+					$decreasedStatId
 				);
 			}
 
-			$this->spreadDatas[] = new SpreadData(
-				$natureName->getName(),
-				$nature->getIncreasedStatId(),
-				$nature->getDecreasedStatId(),
-				$evSpread,
-				$movesetRatedSpread->getPercent(),
-				$statSpread
-			);
+			// Convert stat arrays to stat objects.
+			$increasedStatId = $increasedStatId !== null
+				? $increasedStatId->value()
+				: null;
+			$decreasedStatId = $decreasedStatId !== null
+				? $decreasedStatId->value()
+				: null;
+			$increasedStat = $idsToIdentifiers[$increasedStatId] ?? null;
+			$decreasedStat = $idsToIdentifiers[$decreasedStatId] ?? null;
+
+			$evs = [];
+			$stats = [];
+			foreach ($statIds as $statId) {
+				$identifier = $idsToIdentifiers[$statId->value()];
+				$evs[$identifier] = $evSpread->get($statId)->getValue();
+				$stats[$identifier] = $statSpread->get($statId)->getValue();
+			}
+
+			$this->spreads[] = [
+				'nature' => $spread->getNatureName(),
+				'increasedStat' => $increasedStat,
+				'decreasedStat' => $decreasedStat,
+				'evs' => $evs,
+				'percent' => $spread->getPercent(),
+				'stats' => $stats,
+			];
 		}
 	}
 
+
 	/**
-	 * Get the spread datas.
+	 * Get the stats.
 	 *
-	 * @return SpreadData[]
+	 * @return array
 	 */
-	public function getSpreadDatas() : array
+	public function getStats() : array
 	{
-		return $this->spreadDatas;
+		return $this->stats;
+	}
+
+	/**
+	 * Get the spreads.
+	 *
+	 * @return array
+	 */
+	public function getSpreads() : array
+	{
+		return $this->spreads;
 	}
 }

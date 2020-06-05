@@ -298,6 +298,9 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Items\StatsPokemonItemRepositoryInterface:
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonMoveRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Moves\StatsPokemonMoveRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonSpreadRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Spreads\StatsPokemonSpreadRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonTeammateRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Teammates\StatsPokemonTeammateRepositoryInterface::class, $rule);
 

@@ -66,7 +66,7 @@ final class StatsPokemonModel
 	private array $items = [];
 
 	/** @var StatsPokemonMove[] $moves */
-	private array $moves;
+	private array $moves = [];
 
 	/** @var StatsPokemonTeammate[] $teammates */
 	private array $teammates = [];
@@ -219,7 +219,7 @@ final class StatsPokemonModel
 		// Get spread data.
 		$this->spreadModel->setData(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format,
 			$rating,
 			$this->pokemon->getId(),
 			$languageId
@@ -387,13 +387,23 @@ final class StatsPokemonModel
 	}
 
 	/**
-	 * Get the spread datas.
+	 * Get the stats for the spreads.
 	 *
-	 * @return SpreadData[]
+	 * @return array
 	 */
-	public function getSpreadDatas() : array
+	public function getStats() : array
 	{
-		return $this->spreadModel->getSpreadDatas();
+		return $this->spreadModel->getStats();
+	}
+
+	/**
+	 * Get the spreads.
+	 *
+	 * @return array
+	 */
+	public function getSpreads() : array
+	{
+		return $this->spreadModel->getSpreads();
 	}
 
 	/**

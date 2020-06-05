@@ -9,6 +9,18 @@ final class StatValueContainer
 	private array $statValues = [];
 
 	/**
+	 * Constructor.
+	 *
+	 * @param StatValue[] $statValues
+	 */
+	public function __construct(?array $statValues = [])
+	{
+		foreach ($statValues as $statValue) {
+			$this->add($statValue);
+		}
+	}
+
+	/**
 	 * Add a stat value to the container.
 	 *
 	 * @param StatValue $statValue
