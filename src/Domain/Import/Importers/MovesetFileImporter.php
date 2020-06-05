@@ -278,13 +278,14 @@ final class MovesetFileImporter
 				$natureId = $this->showdownNatureRepository->getNatureId($showdownNatureName);
 
 				if ($isPokemonImported && !$movesetRatedPokemonExists) {
-					$evSpread = new StatValueContainer();
-					$evSpread->add(new StatValue(new StatId(StatId::HP), $spread->hp()));
-					$evSpread->add(new StatValue(new StatId(StatId::ATTACK), $spread->atk()));
-					$evSpread->add(new StatValue(new StatId(StatId::DEFENSE), $spread->def()));
-					$evSpread->add(new StatValue(new StatId(StatId::SPECIAL_ATTACK), $spread->spa()));
-					$evSpread->add(new StatValue(new StatId(StatId::SPECIAL_DEFENSE), $spread->spd()));
-					$evSpread->add(new StatValue(new StatId(StatId::SPEED), $spread->spe()));
+					$evSpread = new StatValueContainer([
+						new StatValue(new StatId(StatId::HP), $spread->hp()),
+						new StatValue(new StatId(StatId::ATTACK), $spread->atk()),
+						new StatValue(new StatId(StatId::DEFENSE), $spread->def()),
+						new StatValue(new StatId(StatId::SPECIAL_ATTACK), $spread->spa()),
+						new StatValue(new StatId(StatId::SPECIAL_DEFENSE), $spread->spd()),
+						new StatValue(new StatId(StatId::SPEED), $spread->spe()),
+					]);
 
 					$movesetRatedSpread = new MovesetRatedSpread(
 						$month,

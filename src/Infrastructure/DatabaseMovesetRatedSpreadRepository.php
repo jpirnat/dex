@@ -3,15 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
-use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Natures\NatureId;
-use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpread;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
-use Jp\Dex\Domain\Stats\StatValue;
-use Jp\Dex\Domain\Stats\StatValueContainer;
 use PDO;
 
 final class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRepositoryInterface
@@ -81,70 +75,5 @@ final class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRe
 		$stmt->bindValue(':spe', $evSpread->get(new StatId(StatId::SPEED))->getValue(), PDO::PARAM_INT);
 		$stmt->bindValue(':percent', $movesetRatedSpread->getPercent(), PDO::PARAM_STR);
 		$stmt->execute();
-	}
-
-	/**
-	 * Get moveset rated spread records by month, format, rating, and Pokémon.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return MovesetRatedSpread[]
-	 */
-	public function getByMonthAndFormatAndRatingAndPokemon(
-		DateTime $month,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId
-	) : array {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`nature_id`,
-				`hp`,
-				`atk`,
-				`def`,
-				`spa`,
-				`spd`,
-				`spe`,
-				`percent`
-			FROM `moveset_rated_spreads`
-			WHERE `month` = :month
-				AND `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id'
-		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$movesetRatedSpreads = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$evSpread = new StatValueContainer();
-			$evSpread->add(new StatValue(new StatId(StatId::HP), $result['hp']));
-			$evSpread->add(new StatValue(new StatId(StatId::ATTACK), $result['atk']));
-			$evSpread->add(new StatValue(new StatId(StatId::DEFENSE), $result['def']));
-			$evSpread->add(new StatValue(new StatId(StatId::SPECIAL_ATTACK), $result['spa']));
-			$evSpread->add(new StatValue(new StatId(StatId::SPECIAL_DEFENSE), $result['spd']));
-			$evSpread->add(new StatValue(new StatId(StatId::SPEED), $result['spe']));
-
-			$movesetRatedSpread = new MovesetRatedSpread(
-				$month,
-				$formatId,
-				$rating,
-				$pokemonId,
-				new NatureId($result['nature_id']),
-				$evSpread,
-				(float) $result['percent']
-			);
-
-			$movesetRatedSpreads[] = $movesetRatedSpread;
-		}
-
-		return $movesetRatedSpreads;
 	}
 }
