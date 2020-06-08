@@ -27,7 +27,9 @@
 					<th scope="col">Abilities</th>
 				{% endif %}
 				{% for stat in stats %}
-					<th scope="col" class="dex-table--number">{{ stat|e }}</th>
+					<th scope="col" class="dex-table--number">
+						<abbr title="{{ stat.name|e }}">{{ stat.abbr|e }}</abbr>
+					</th>
 				{% endfor %}
 				<th scope="col" class="dex-table--number">BST</th>
 			</tr>
@@ -67,9 +69,9 @@
 							</div>
 						</td>
 					{% endif %}
-					{% for baseStat in pokemon.baseStats %}
+					{% for stat in stats %}
 						<td class="dex-table--number">
-							{{ baseStat|e }}
+							{{ pokemon.baseStats[stat.key]|e }}
 						</td>
 					{% endfor %}
 					<td class="dex-table--number">{{ pokemon.bst|e }}</td>

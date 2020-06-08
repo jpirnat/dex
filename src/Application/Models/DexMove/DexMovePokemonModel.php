@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexMove;
 
+use Jp\Dex\Application\Models\StatNameModel;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -12,8 +13,6 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
-use Jp\Dex\Domain\Stats\StatId;
-use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexMovePokemonModel
@@ -24,11 +23,10 @@ final class DexMovePokemonModel
 	private DexPokemonRepositoryInterface $dexPokemonRepository;
 	private MoveMethodRepositoryInterface $moveMethodRepository;
 	private MoveMethodNameRepositoryInterface $moveMethodNameRepository;
-	private StatNameRepositoryInterface $statNameRepository;
+	private StatNameModel $statNameModel;
 
 
-	/** @var string[] $statAbbreviations */
-	private array $statAbbreviations = [];
+	private array $stats = [];
 
 	/** @var DexMovePokemonMethod[] $methods */
 	private array $methods = [];
@@ -43,7 +41,7 @@ final class DexMovePokemonModel
 	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
 	 * @param MoveMethodRepositoryInterface $moveMethodRepository
 	 * @param MoveMethodNameRepositoryInterface $moveMethodNameRepository
-	 * @param StatNameRepositoryInterface $statNameRepository
+	 * @param StatNameModel $statNameModel
 	 */
 	public function __construct(
 		PokemonMoveRepositoryInterface $pokemonMoveRepository,
@@ -52,7 +50,7 @@ final class DexMovePokemonModel
 		DexPokemonRepositoryInterface $dexPokemonRepository,
 		MoveMethodRepositoryInterface $moveMethodRepository,
 		MoveMethodNameRepositoryInterface $moveMethodNameRepository,
-		StatNameRepositoryInterface $statNameRepository
+		StatNameModel $statNameModel
 	) {
 		$this->pokemonMoveRepository = $pokemonMoveRepository;
 		$this->tmRepository = $tmRepository;
@@ -60,7 +58,7 @@ final class DexMovePokemonModel
 		$this->dexPokemonRepository = $dexPokemonRepository;
 		$this->moveMethodRepository = $moveMethodRepository;
 		$this->moveMethodNameRepository = $moveMethodNameRepository;
-		$this->statNameRepository = $statNameRepository;
+		$this->statNameModel = $statNameModel;
 	}
 
 
@@ -172,12 +170,7 @@ final class DexMovePokemonModel
 		);
 
 		// Get stat name abbreviations.
-		$statNames = $this->statNameRepository->getByLanguage($languageId);
-		$this->statAbbreviations = [];
-		$statIds = StatId::getByGeneration($generationId);
-		foreach ($statIds as $statId) {
-			$this->statAbbreviations[] = $statNames[$statId->value()]->getAbbreviation();
-		}
+		$this->stats = $this->statNameModel->getByGeneration($generationId, $languageId);
 
 		// Compile the dex move Pokémon method records.
 		foreach ($moveMethods as $methodId => $moveMethod) {
@@ -197,13 +190,13 @@ final class DexMovePokemonModel
 
 
 	/**
-	 * Get the stat abbreviations.
+	 * Get the stats and their names.
 	 *
-	 * @return string[]
+	 * @return array
 	 */
-	public function getStatAbbreviations() : array
+	public function getStats() : array
 	{
-		return $this->statAbbreviations;
+		return $this->stats;
 	}
 
 	/**

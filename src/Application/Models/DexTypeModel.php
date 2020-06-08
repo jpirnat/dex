@@ -16,11 +16,13 @@ final class DexTypeModel
 	private GenerationModel $generationModel;
 	private TypeRepositoryInterface $typeRepository;
 	private TypeNameRepositoryInterface $typeNameRepository;
+	private StatNameModel $statNameModel;
 	private DexPokemonRepositoryInterface $dexPokemonRepository;
 	private DexMoveRepositoryInterface $dexMoveRepository;
 
 
 	private array $type = [];
+	private array $stats = [];
 
 	/** @var DexPokemon[] $pokemon */
 	private array $pokemon = [];
@@ -35,6 +37,7 @@ final class DexTypeModel
 	 * @param GenerationModel $generationModel
 	 * @param TypeRepositoryInterface $typeRepository
 	 * @param TypeNameRepositoryInterface $typeNameRepository
+	 * @param StatNameModel $statNameModel
 	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
 	 * @param DexMoveRepositoryInterface $dexMoveRepository
 	 */
@@ -42,12 +45,14 @@ final class DexTypeModel
 		GenerationModel $generationModel,
 		TypeRepositoryInterface $typeRepository,
 		TypeNameRepositoryInterface $typeNameRepository,
+		StatNameModel $statNameModel,
 		DexPokemonRepositoryInterface $dexPokemonRepository,
 		DexMoveRepositoryInterface $dexMoveRepository
 	) {
 		$this->generationModel = $generationModel;
 		$this->typeRepository = $typeRepository;
 		$this->typeNameRepository = $typeNameRepository;
+		$this->statNameModel = $statNameModel;
 		$this->dexPokemonRepository = $dexPokemonRepository;
 		$this->dexMoveRepository = $dexMoveRepository;
 	}
@@ -82,6 +87,9 @@ final class DexTypeModel
 			'name' => $typeName->getName(),
 		];
 
+		// Get stat name abbreviations.
+		$this->stats = $this->statNameModel->getByGeneration($generationId, $languageId);
+
 		// Get Pokémon with this type.
 		$this->pokemon = $this->dexPokemonRepository->getByType(
 			$generationId,
@@ -115,6 +123,16 @@ final class DexTypeModel
 	public function getType() : array
 	{
 		return $this->type;
+	}
+
+	/**
+	 * Get the stats and their names.
+	 *
+	 * @return array
+	 */
+	public function getStats() : array
+	{
+		return $this->stats;
 	}
 
 	/**

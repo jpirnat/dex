@@ -53,7 +53,7 @@ final class DexMoveView
 		$showAbilities = $generation->getId()->value() >= 3;
 
 		$dexMovePokemonModel = $this->dexMoveModel->getDexMovePokemonModel();
-		$statAbbreviations = $dexMovePokemonModel->getStatAbbreviations();
+		$stats = $dexMovePokemonModel->getStats();
 		$methods = $dexMovePokemonModel->getMethods();
 
 		// Sort Pokémon within each move method.
@@ -65,7 +65,7 @@ final class DexMoveView
 		}
 
 		// How many columns does the move Pokémon table have?
-		$colspan = 4 + count($versionGroups) + count($statAbbreviations)
+		$colspan = 4 + count($versionGroups) + count($stats)
 			+ ($showAbilities ? 1 : 0);
 
 		// Navigational breadcrumbs.
@@ -93,7 +93,7 @@ final class DexMoveView
 				],
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 				'showAbilities' => $showAbilities,
-				'statAbbreviations' => $statAbbreviations,
+				'stats' => $stats,
 				'methods' => $this->formatDexMovePokemonMethods($methods),
 				'colspan' => $colspan,
 			]

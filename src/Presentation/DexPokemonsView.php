@@ -46,7 +46,7 @@ final class DexPokemonsView
 		$generations = $generationModel->getGenerations();
 
 		$showAbilities = $generation->getId()->value() >= 3;
-		$statAbbreviations = $this->dexPokemonsModel->getStatAbbreviations();
+		$stats = $this->dexPokemonsModel->getStats();
 		$pokemon = $this->dexPokemonsModel->getPokemon();
 
 		// Navigational breadcrumbs.
@@ -66,7 +66,7 @@ final class DexPokemonsView
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'showAbilities' => $showAbilities,
-				'statAbbreviations' => $statAbbreviations,
+				'stats' => $stats,
 				'pokemons' => $this->dexFormatter->formatDexPokemon($pokemon),
 			]
 		);

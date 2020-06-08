@@ -6,19 +6,16 @@ namespace Jp\Dex\Application\Models;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\StatId;
-use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexPokemonsModel
 {
 	private GenerationModel $generationModel;
 	private DexPokemonRepositoryInterface $dexPokemonRepository;
-	private StatNameRepositoryInterface $statNameRepository;
+	private StatNameModel $statNameModel;
 
 
-	/** @var string[] $statAbbreviations */
-	private array $statAbbreviations = [];
+	private array $stats = [];
 
 	/** @var DexPokemon[] $pokemon */
 	private array $pokemon = [];
@@ -29,16 +26,16 @@ final class DexPokemonsModel
 	 *
 	 * @param GenerationModel $generationModel
 	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
-	 * @param StatNameRepositoryInterface $statNameRepository
+	 * @param StatNameModel $statNameModel
 	 */
 	public function __construct(
 		GenerationModel $generationModel,
 		DexPokemonRepositoryInterface $dexPokemonRepository,
-		StatNameRepositoryInterface $statNameRepository
+		StatNameModel $statNameModel
 	) {
 		$this->generationModel = $generationModel;
 		$this->dexPokemonRepository = $dexPokemonRepository;
-		$this->statNameRepository = $statNameRepository;
+		$this->statNameModel = $statNameModel;
 	}
 
 
@@ -59,12 +56,7 @@ final class DexPokemonsModel
 		$this->generationModel->setGensSince(new GenerationId(1));
 
 		// Get stat name abbreviations.
-		$statNames = $this->statNameRepository->getByLanguage($languageId);
-		$this->statAbbreviations = [];
-		$statIds = StatId::getByGeneration($generationId);
-		foreach ($statIds as $statId) {
-			$this->statAbbreviations[] = $statNames[$statId->value()]->getAbbreviation();
-		}
+		$this->stats = $this->statNameModel->getByGeneration($generationId, $languageId);
 
 		$this->pokemon = $this->dexPokemonRepository->getByGeneration(
 			$generationId,
@@ -84,13 +76,13 @@ final class DexPokemonsModel
 	}
 
 	/**
-	 * Get the stat abbreviations.
+	 * Get the stats and their names.
 	 *
-	 * @return string[]
+	 * @return array
 	 */
-	public function getStatAbbreviations() : array
+	public function getStats() : array
 	{
-		return $this->statAbbreviations;
+		return $this->stats;
 	}
 
 	/**
