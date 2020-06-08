@@ -109,7 +109,7 @@ final class DexPokemon
 	/**
 	 * Get the Pokémon's base stats.
 	 *
-	 * @return int[]
+	 * @return int[] Indexed by the stats' json keys.
 	 */
 	public function getBaseStats() : array
 	{

@@ -49,12 +49,12 @@
 	</div>
 
 	<table class="base-stats">
-		{% for stat in baseStats %}
+		{% for stat in stats %}
 			<tr>
 				<td class="base-stat-name">{{ stat.name|e }}</td>
-				<td class="dex-table--number">{{ stat.value|e }}</td>
+				<td class="dex-table--number">{{ baseStats[stat.key]|e }}</td>
 				<td>
-					<div class="base-stat-bar" style="width: calc({{ stat.value|e }} / 255 * 300px)"></div>
+					<div class="base-stat-bar" style="width: calc({{ baseStats[stat.key]|e }} / 255 * 300px)"></div>
 				</td>
 			</tr>
 		{% endfor %}
@@ -186,7 +186,7 @@
 					<div>EVs</div>
 					<div class="dex-spreads__stat-names">
 						{% for stat in stats %}
-							<span class="dex-spread--ev">{{ stat.name|e }}</span>
+							<abbr title="{{ stat.name|e }}" class="dex-spread--ev">{{ stat.abbr|e }}</abbr>
 							{% if not loop.last %}
 								<span class="dex-spread--slash">/</span>
 							{% endif %}
@@ -198,7 +198,7 @@
 					<div>Stats</div>
 					<div class="dex-spreads__stat-names">
 						{% for stat in stats %}
-							<span class="dex-spread--stat">{{ stat.name|e }}</span>
+							<abbr title="{{ stat.name|e }}" class="dex-spread--stat">{{ stat.abbr|e }}</abbr>
 							{% if not loop.last %}
 								<span class="dex-spread--slash">/</span>
 							{% endif %}
@@ -214,15 +214,15 @@
 					<td>
 						{% for stat in stats %}
 							<span
-								{% if spread.increasedStat == stat.value %}
+								{% if spread.increasedStat == stat.key %}
 									class="dex-spread--ev dex-nature--increased"
-								{% elseif spread.decreasedStat == stat.value %}
+								{% elseif spread.decreasedStat == stat.key %}
 									class="dex-spread--ev dex-nature--decreased"
 								{% else %}
 									class="dex-spread--ev"
 								{% endif %}
 							>
-								{% if spread.increasedStat == stat.value %}+{% endif %}{% if spread.decreasedStat == stat.value %}-{% endif %}{{ spread.evs[stat.value]|e }}
+								{% if spread.increasedStat == stat.key %}+{% endif %}{% if spread.decreasedStat == stat.key %}-{% endif %}{{ spread.evs[stat.key]|e }}
 							</span>
 							{% if not loop.last %}
 								<span class="dex-spread--slash">/</span>
@@ -236,7 +236,7 @@
 					<td>
 						{% for stat in stats %}
 							<span class="dex-spread--stat">
-								{{ spread.stats[stat.value]|e }}
+								{{ spread.stats[stat.key]|e }}
 							</span>
 							{% if not loop.last %}
 								<span class="dex-spread--slash">/</span>

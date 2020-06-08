@@ -33,12 +33,12 @@
 	</div>
 
 	<table class="base-stats">
-		{% for stat in baseStats %}
+		{% for stat in stats %}
 			<tr>
 				<td class="base-stat-name">{{ stat.name|e }}</td>
-				<td class="dex-table--number">{{ stat.value|e }}</td>
+				<td class="dex-table--number">{{ baseStats[stat.key]|e }}</td>
 				<td>
-					<div class="base-stat-bar" style="width: calc({{ stat.value|e }} / 255 * 300px)"></div>
+					<div class="base-stat-bar" style="width: calc({{ baseStats[stat.key]|e }} / 255 * 300px)"></div>
 				</td>
 			</tr>
 		{% endfor %}

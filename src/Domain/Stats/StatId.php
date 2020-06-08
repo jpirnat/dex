@@ -59,4 +59,22 @@ final class StatId extends EntityId
 			new self(self::SPEED),
 		];
 	}
+
+	/**
+	 * Get the mapping of stat ids to object keys for json stat objects.
+	 *
+	 * return string[]
+	 */
+	public static function getIdsToIdentifiers() : array
+	{
+		return [
+			StatId::HP => 'hp',
+			StatId::ATTACK => 'atk',
+			StatId::DEFENSE => 'def',
+			StatId::SPEED => 'spe',
+			StatId::SPECIAL => 'spc',
+			StatId::SPECIAL_ATTACK => 'spa',
+			StatId::SPECIAL_DEFENSE => 'spd',
+		];
+	}
 }

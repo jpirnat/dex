@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\StatsPokemon;
 
 use Jp\Dex\Application\Models\DateModel;
+use Jp\Dex\Application\Models\StatNameModel;
 use Jp\Dex\Domain\Abilities\StatsPokemonAbility;
 use Jp\Dex\Domain\Abilities\StatsPokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\Counters\StatsPokemonCounter;
@@ -37,6 +38,7 @@ final class StatsPokemonModel
 	private MovesetPokemonRepositoryInterface $movesetPokemonRepository;
 	private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository;
 
+	private StatNameModel $statNameModel;
 	private PokemonModel $pokemonModel;
 	private StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository;
 	private StatsPokemonItemRepositoryInterface $statsPokemonItemRepository;
@@ -58,6 +60,8 @@ final class StatsPokemonModel
 	private ?MovesetPokemon $movesetPokemon;
 	private ?MovesetRatedPokemon $movesetRatedPokemon;
 	private Generation $generation;
+
+	private array $stats = [];
 
 	/** @var StatsPokemonAbility[] $abilities */
 	private array $abilities = [];
@@ -85,6 +89,7 @@ final class StatsPokemonModel
 	 * @param GenerationRepositoryInterface $generationRepository
 	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
 	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
+	 * @param StatNameModel $statNameModel
 	 * @param PokemonModel $pokemonModel
 	 * @param StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository
 	 * @param StatsPokemonItemRepositoryInterface $statsPokemonItemRepository
@@ -101,6 +106,7 @@ final class StatsPokemonModel
 		GenerationRepositoryInterface $generationRepository,
 		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
+		StatNameModel $statNameModel,
 		PokemonModel $pokemonModel,
 		StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository,
 		StatsPokemonItemRepositoryInterface $statsPokemonItemRepository,
@@ -116,6 +122,7 @@ final class StatsPokemonModel
 		$this->generationRepository = $generationRepository;
 		$this->movesetPokemonRepository = $movesetPokemonRepository;
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
+		$this->statNameModel = $statNameModel;
 		$this->pokemonModel = $pokemonModel;
 		$this->statsPokemonAbilityRepository = $statsPokemonAbilityRepository;
 		$this->statsPokemonItemRepository = $statsPokemonItemRepository;
@@ -167,6 +174,12 @@ final class StatsPokemonModel
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
 			$this->format->getId()
+		);
+
+		// Get the stat names.
+		$this->stats = $this->statNameModel->getByGeneration(
+			$this->format->getGenerationId(),
+			$languageId
 		);
 
 		// Get Pokémon data.
@@ -327,6 +340,16 @@ final class StatsPokemonModel
 	}
 
 	/**
+	 * Get the stats and their names.
+	 *
+	 * @return array
+	 */
+	public function getStats() : array
+	{
+		return $this->stats;
+	}
+
+	/**
 	 * Get the Pokémon model.
 	 *
 	 * @return PokemonModel
@@ -384,16 +407,6 @@ final class StatsPokemonModel
 	public function getItems() : array
 	{
 		return $this->items;
-	}
-
-	/**
-	 * Get the stats for the spreads.
-	 *
-	 * @return array
-	 */
-	public function getStats() : array
-	{
-		return $this->spreadModel->getStats();
 	}
 
 	/**

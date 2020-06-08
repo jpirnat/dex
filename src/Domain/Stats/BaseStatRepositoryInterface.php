@@ -32,7 +32,7 @@ interface BaseStatRepositoryInterface
 	 * @param AbilityId $abilityId
 	 *
 	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
-	 *     by stat id.
+	 *     by each stat's json identifier.
 	 */
 	public function getByPokemonAbility(
 		GenerationId $generationId,
@@ -47,7 +47,7 @@ interface BaseStatRepositoryInterface
 	 * @param MoveId $moveId
 	 *
 	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
-	 *     by stat id.
+	 *     by each stat's json identifier.
 	 */
 	public function getByPokemonMove(
 		GenerationId $generationId,
@@ -61,7 +61,7 @@ interface BaseStatRepositoryInterface
 	 * @param GenerationId $generationId
 	 *
 	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
-	 *     by stat id.
+	 *     by each stat's json identifier.
 	 */
 	public function getByGeneration(GenerationId $generationId) : array;
 
@@ -73,7 +73,7 @@ interface BaseStatRepositoryInterface
 	 * @param TypeId $typeId
 	 *
 	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
-	 *     by stat id.
+	 *     by each stat's json identifier.
 	 */
 	public function getByPokemonType(
 		GenerationId $generationId,

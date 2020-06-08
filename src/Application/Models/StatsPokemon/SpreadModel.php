@@ -21,7 +21,6 @@ final class SpreadModel
 	private StatCalculator $statCalculator;
 
 	private array $spreads = [];
-	private array $stats = [];
 
 
 	/**
@@ -62,6 +61,10 @@ final class SpreadModel
 	) : void {
 		$generationId = $format->getGenerationId();
 
+		// Get this generation's stats.
+		$statIds = StatId::getByGeneration($generationId);
+		$idsToIdentifiers = StatId::getIdsToIdentifiers();
+
 		// Get stat Pokémon spreads.
 		$spreads = $this->statsPokemonSpreadRepository->getByMonth(
 			$month,
@@ -76,36 +79,6 @@ final class SpreadModel
 			$generationId,
 			$pokemonId
 		);
-
-		// Get this generation's stats.
-		$statIds = StatId::getByGeneration($generationId);
-		$idsToIdentifiers = [
-			StatId::HP => 'hp',
-			StatId::ATTACK => 'atk',
-			StatId::DEFENSE => 'def',
-			StatId::SPEED => 'spe',
-			StatId::SPECIAL => 'spc',
-			StatId::SPECIAL_ATTACK => 'spa',
-			StatId::SPECIAL_DEFENSE => 'spd',
-		];
-		if ($generationId->value() === 1) {
-			$this->stats = [
-				['value' => 'hp', 'name' => 'HP'],
-				['value' => 'atk', 'name' => 'Atk'],
-				['value' => 'def', 'name' => 'Def'],
-				['value' => 'spc', 'name' => 'Spc'],
-				['value' => 'spe', 'name' => 'Spe'],
-			];
-		} else {
-			$this->stats = [
-				['value' => 'hp', 'name' => 'HP'],
-				['value' => 'atk', 'name' => 'Atk'],
-				['value' => 'def', 'name' => 'Def'],
-				['value' => 'spa', 'name' => 'SpA'],
-				['value' => 'spd', 'name' => 'SpD'],
-				['value' => 'spe', 'name' => 'Spe'],
-			];
-		}
 
 		// Assume the Pokémon has perfect IVs.
 		$ivSpread = new StatValueContainer();
@@ -186,16 +159,6 @@ final class SpreadModel
 		}
 	}
 
-
-	/**
-	 * Get the stats.
-	 *
-	 * @return array
-	 */
-	public function getStats() : array
-	{
-		return $this->stats;
-	}
 
 	/**
 	 * Get the spreads.

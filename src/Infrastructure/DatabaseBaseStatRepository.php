@@ -73,8 +73,8 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	 * @param GenerationId $generationId
 	 * @param AbilityId $abilityId
 	 *
-	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays ordered
-	 *     by the generation's defined order of stats.
+	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
+	 *     by each stat's json identifier.
 	 */
 	public function getByPokemonAbility(
 		GenerationId $generationId,
@@ -116,8 +116,8 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	 * @param GenerationId $generationId
 	 * @param MoveId $moveId
 	 *
-	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays ordered
-	 *     by the generation's defined order of stats.
+	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
+	 *     by each stat's json identifier.
 	 */
 	public function getByPokemonMove(
 		GenerationId $generationId,
@@ -160,8 +160,8 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	 *
 	 * @param GenerationId $generationId
 	 *
-	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays ordered
-	 *     by the generation's defined order of stats.
+	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
+	 *     by each stat's json identifier.
 	 */
 	public function getByGeneration(GenerationId $generationId) : array
 	{
@@ -192,8 +192,8 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	 * @param GenerationId $generationId
 	 * @param TypeId $typeId
 	 *
-	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays ordered
-	 *     by the generation's defined order of stats.
+	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
+	 *     by each stat's json identifier.
 	 */
 	public function getByPokemonType(
 		GenerationId $generationId,
@@ -236,17 +236,19 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	 * @param int[][] $baseStats Outer array indexed by Pokémon id, inner arrays
 	 *     indexed by stat id.
 	 *
-	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays ordered
-	 *     by the generation's defined order of stats.
+	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
+	 *     by each stat's json identifier.
 	 */
 	private function normalize(GenerationId $generationId, array $baseStats) : array
 	{
 		$statIds = StatId::getByGeneration($generationId);
+		$idsToIdentifiers = StatId::getIdsToIdentifiers();
 		$normalized = [];
 
 		foreach ($baseStats as $pokemonId => $statValues) {
 			foreach ($statIds as $statId) {
-				$normalized[$pokemonId][] = $statValues[$statId->value()] ?? 0;
+				$identifier = $idsToIdentifiers[$statId->value()];
+				$normalized[$pokemonId][$identifier] = $statValues[$statId->value()] ?? 0;
 			}
 		}
 

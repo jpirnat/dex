@@ -10,22 +10,16 @@ use Jp\Dex\Domain\Models\ModelRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\StatId;
-use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 final class PokemonModel
 {
 	private DexPokemonRepositoryInterface $dexPokemonRepository;
 	private ModelRepositoryInterface $modelRepository;
-	private StatNameRepositoryInterface $statNameRepository;
 
 
 	private DexPokemon $pokemon;
 	private Model $model;
-
-	/** @var StatData[] $statDatas */
-	private array $statDatas = [];
 
 
 	/**
@@ -33,16 +27,13 @@ final class PokemonModel
 	 *
 	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
 	 * @param ModelRepositoryInterface $modelRepository
-	 * @param StatNameRepositoryInterface $statNameRepository
 	 */
 	public function __construct(
 		DexPokemonRepositoryInterface $dexPokemonRepository,
-		ModelRepositoryInterface $modelRepository,
-		StatNameRepositoryInterface $statNameRepository
+		ModelRepositoryInterface $modelRepository
 	) {
 		$this->dexPokemonRepository = $dexPokemonRepository;
 		$this->modelRepository = $modelRepository;
-		$this->statNameRepository = $statNameRepository;
 	}
 
 	/**
@@ -73,21 +64,6 @@ final class PokemonModel
 			false,
 			0
 		);
-
-		// Get the Pokémon's base stats.
-		$statIds = StatId::getByGeneration($generationId);
-		$statNames = $this->statNameRepository->getByLanguage($languageId);
-		$baseStats = $this->pokemon->getBaseStats();
-		$normalizedStatNames = [];
-		foreach ($statIds as $statId) {
-			$normalizedStatNames[] = $statNames[$statId->value()]->getName();
-		}
-		foreach ($baseStats as $index => $baseStat) {
-			$this->statDatas[] = new StatData(
-				$normalizedStatNames[$index],
-				(int) $baseStat
-			);
-		}
 	}
 
 	/**
@@ -108,15 +84,5 @@ final class PokemonModel
 	public function getModel() : Model
 	{
 		return $this->model;
-	}
-
-	/**
-	 * Get the stat datas.
-	 *
-	 * @return StatData[]
-	 */
-	public function getStatDatas() : array
-	{
-		return $this->statDatas;
 	}
 }

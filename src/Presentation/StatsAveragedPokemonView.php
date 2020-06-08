@@ -60,20 +60,14 @@ final class StatsAveragedPokemonView
 			$this->statsAveragedPokemonModel->getLanguageId()
 		);
 
+		$stats = $this->statsAveragedPokemonModel->getStats();
+
 		// Get miscellaneous Pokémon data.
 		$pokemonModel = $this->statsAveragedPokemonModel->getPokemonModel();
 		$dexPokemon = $pokemonModel->getPokemon();
 		$model = $pokemonModel->getModel();
+		$baseStats = $dexPokemon->getBaseStats();
 		$generation = $this->statsAveragedPokemonModel->getGeneration();
-
-		// Get base stats.
-		$baseStats = [];
-		foreach ($pokemonModel->getStatDatas() as $statData) {
-			$baseStats[] = [
-				'name' => $statData->getStatName(),
-				'value' => $statData->getBaseStat(),
-			];
-		}
 
 		// Get abilities and sort by percent.
 		$abilityDatas = $this->statsAveragedPokemonModel->getAbilityDatas();
@@ -171,6 +165,7 @@ final class StatsAveragedPokemonView
 
 				'ratings' => $this->statsAveragedPokemonModel->getRatings(),
 
+				'stats' => $stats,
 				'model' => $model->getImage(),
 				'types' => $this->dexFormatter->formatDexTypes($dexPokemon->getTypes()),
 				'baseStats' => $baseStats,

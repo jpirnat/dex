@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
 use DateTime;
+use Jp\Dex\Application\Models\StatNameModel;
 use Jp\Dex\Application\Models\StatsPokemon\PokemonModel;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
@@ -21,6 +22,7 @@ final class StatsAveragedPokemonModel
 	private RatingQueriesInterface $ratingQueries;
 	private GenerationRepositoryInterface $generationRepository;
 
+	private StatNameModel $statNameModel;
 	private PokemonModel $pokemonModel;
 	private AbilityModel $abilityModel;
 	private ItemModel $itemModel;
@@ -39,6 +41,8 @@ final class StatsAveragedPokemonModel
 
 	private Generation $generation;
 
+	private array $stats = [];
+
 
 	/**
 	 * Constructor.
@@ -47,6 +51,7 @@ final class StatsAveragedPokemonModel
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param RatingQueriesInterface $ratingQueries
 	 * @param GenerationRepositoryInterface $generationRepository
+	 * @param StatNameModel $statNameModel
 	 * @param PokemonModel $pokemonModel
 	 * @param AbilityModel $abilityModel
 	 * @param ItemModel $itemModel
@@ -57,6 +62,7 @@ final class StatsAveragedPokemonModel
 		PokemonRepositoryInterface $pokemonRepository,
 		RatingQueriesInterface $ratingQueries,
 		GenerationRepositoryInterface $generationRepository,
+		StatNameModel $statNameModel,
 		PokemonModel $pokemonModel,
 		AbilityModel $abilityModel,
 		ItemModel $itemModel,
@@ -66,6 +72,7 @@ final class StatsAveragedPokemonModel
 		$this->pokemonRepository = $pokemonRepository;
 		$this->ratingQueries = $ratingQueries;
 		$this->generationRepository = $generationRepository;
+		$this->statNameModel = $statNameModel;
 		$this->pokemonModel = $pokemonModel;
 		$this->abilityModel = $abilityModel;
 		$this->itemModel = $itemModel;
@@ -115,6 +122,12 @@ final class StatsAveragedPokemonModel
 			$start,
 			$end,
 			$this->format->getId()
+		);
+
+		// Get the stat names.
+		$this->stats = $this->statNameModel->getByGeneration(
+			$this->format->getGenerationId(),
+			$languageId
 		);
 
 		// Get Pokémon data.
@@ -198,6 +211,16 @@ final class StatsAveragedPokemonModel
 	public function getRating() : int
 	{
 		return $this->rating;
+	}
+
+	/**
+	 * Get the stats and their names.
+	 *
+	 * @return array
+	 */
+	public function getStats() : array
+	{
+		return $this->stats;
 	}
 
 	/**

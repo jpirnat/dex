@@ -78,9 +78,11 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 
 		// Normalize the base stats.
 		$statIds = StatId::getByGeneration($generationId);
+		$idsToIdentifiers = StatId::getIdsToIdentifiers();
 		$normalized = [];
 		foreach ($statIds as $statId) {
-			$normalized[] = $baseStats->get($statId)->getValue();
+			$identifier = $idsToIdentifiers[$statId->value()];
+			$normalized[$identifier] = $baseStats->get($statId)->getValue();
 		}
 		$baseStats = $normalized;
 

@@ -77,20 +77,14 @@ final class StatsPokemonView
 			? $movesetPokemon->getViabilityCeiling()
 			: null;
 
+		$stats = $this->statsPokemonModel->getStats();
+
 		// Get miscellaneous Pokémon data.
 		$pokemonModel = $this->statsPokemonModel->getPokemonModel();
 		$dexPokemon = $pokemonModel->getPokemon();
 		$model = $pokemonModel->getModel();
+		$baseStats = $dexPokemon->getBaseStats();
 		$generation = $this->statsPokemonModel->getGeneration();
-
-		// Get base stats.
-		$baseStats = [];
-		foreach ($pokemonModel->getStatDatas() as $statData) {
-			$baseStats[] = [
-				'name' => $statData->getStatName(),
-				'value' => $statData->getBaseStat(),
-			];
-		}
 
 		// Get abilities.
 		$abilitiesData = $this->statsPokemonModel->getAbilities();
@@ -119,7 +113,6 @@ final class StatsPokemonView
 		}
 
 		// Get spreads and sort by percent.
-		$stats = $this->statsPokemonModel->getStats();
 		$spreads = $this->statsPokemonModel->getSpreads();
 		foreach ($spreads as $i => $spread) {
 			$percent = $formatter->formatPercent($spread['percent']);
@@ -210,6 +203,7 @@ final class StatsPokemonView
 				'nextMonth' => $this->monthControlFormatter->format($nextMonth, $formatter),
 				'ratings' => $this->statsPokemonModel->getRatings(),
 
+				'stats' => $stats,
 				'model' => $model->getImage(),
 				'types' => $this->dexFormatter->formatDexTypes($dexPokemon->getTypes()),
 				'baseStats' => $baseStats,
@@ -225,7 +219,6 @@ final class StatsPokemonView
 				'showItems' => $generation->getId()->value() >= 2,
 				'abilities' => $abilities,
 				'items' => $items,
-				'stats' => $stats,
 				'spreads' => $spreads,
 				'moves' => $moves,
 				'teammates' => $teammates,
