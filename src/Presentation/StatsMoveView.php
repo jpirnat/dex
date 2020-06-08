@@ -69,7 +69,7 @@ final class StatsMoveView
 				'movePercent' => $formatter->formatPercent($pokemon->getMovePercent()),
 				'usagePercent' => $formatter->formatPercent($pokemon->getUsagePercent()),
 				'usageChange' => $pokemon->getUsageChange(),
-				'usageChangeText' => $formatter->formatPercent($pokemon->getUsageChange()),
+				'usageChangeText' => $formatter->formatChange($pokemon->getUsageChange()),
 			];
 		}
 

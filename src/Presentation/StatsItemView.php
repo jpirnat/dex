@@ -69,7 +69,7 @@ final class StatsItemView
 				'itemPercent' => $formatter->formatPercent($pokemon->getItemPercent()),
 				'usagePercent' => $formatter->formatPercent($pokemon->getUsagePercent()),
 				'usageChange' => $pokemon->getUsageChange(),
-				'usageChangeText' => $formatter->formatPercent($pokemon->getUsageChange()),
+				'usageChangeText' => $formatter->formatChange($pokemon->getUsageChange()),
 			];
 		}
 

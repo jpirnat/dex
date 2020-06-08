@@ -70,7 +70,7 @@ final class StatsLeadsView
 				'name' => $pokemon->getName(),
 				'usagePercent' => $formatter->formatPercent($pokemon->getUsagePercent()),
 				'usageChange' => $pokemon->getUsageChange(),
-				'usageChangeText' => $formatter->formatPercent($pokemon->getUsageChange()),
+				'usageChangeText' => $formatter->formatChange($pokemon->getUsageChange()),
 				'raw' => $formatter->formatNumber($pokemon->getRaw()),
 				'rawPercent' => $formatter->formatPercent($pokemon->getRawPercent()),
 			];

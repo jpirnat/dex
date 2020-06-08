@@ -59,10 +59,18 @@ final class IntlFormatterFactory
 		);
 		$percentFormatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 5);
 
+		$changeFormatter = new NumberFormatter(
+			$language->getLocale(),
+			NumberFormatter::PERCENT
+		);
+		$changeFormatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 5);
+		$changeFormatter->setTextAttribute(NumberFormatter::POSITIVE_PREFIX, '+');
+
 		return new IntlFormatter(
 			$dateFormatter,
 			$numberFormatter,
-			$percentFormatter
+			$percentFormatter,
+			$changeFormatter
 		);
 	}
 }

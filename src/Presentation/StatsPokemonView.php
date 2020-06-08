@@ -101,7 +101,7 @@ final class StatsPokemonView
 				'name' => $ability->getName(),
 				'percent' => $formatter->formatPercent($ability->getPercent()),
 				'change' => $ability->getChange(),
-				'changeText' => $formatter->formatPercent($ability->getChange()),
+				'changeText' => $formatter->formatChange($ability->getChange()),
 			];
 		}
 
@@ -114,7 +114,7 @@ final class StatsPokemonView
 				'name' => $item->getName(),
 				'percent' => $formatter->formatPercent($item->getPercent()),
 				'change' => $item->getChange(),
-				'changeText' => $formatter->formatPercent($item->getChange()),
+				'changeText' => $formatter->formatChange($item->getChange()),
 			];
 		}
 
@@ -135,7 +135,7 @@ final class StatsPokemonView
 				'name' => $move->getName(),
 				'percent' => $formatter->formatPercent($move->getPercent()),
 				'change' => $move->getChange(),
-				'changeText' => $formatter->formatPercent($move->getChange()),
+				'changeText' => $formatter->formatChange($move->getChange()),
 			];
 		}
 
