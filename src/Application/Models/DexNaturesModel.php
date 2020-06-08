@@ -60,8 +60,8 @@ final class DexNaturesModel
 			$natureId = $nature->getId()->value();
 			$natureName = $natureNames[$natureId];
 
-			$increasedStatName = '-';
-			$decreasedStatName = '-';
+			$increasedStatName = null;
+			$decreasedStatName = null;
 			if ($nature->getIncreasedStatId() !== null) {
 				$increasedStatId = $nature->getIncreasedStatId()->value();
 				$increasedStatName = $statNames[$increasedStatId];

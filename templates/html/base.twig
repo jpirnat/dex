@@ -56,7 +56,7 @@
 		<footer>
 			&copy; 2017 - {{ currentYear|e }}
 
-			<form>
+			<form class="change-language">
 				<select name="language">
 					{% for language in languages %}
 						<option
@@ -70,7 +70,7 @@
 					{% endfor %}
 				</select>
 
-				<input type="submit" value="Translate">
+				<input type="submit" value="Change Language">
 			</form>
 		</footer>
 		{% block scripts %}

@@ -14,24 +14,20 @@
 			{% for nature in natures %}
 				<tr>
 					<td>{{ nature.name|e }}</td>
-					<td
-						{% if nature.increasedStatName == "-" %}
-							class="dex-nature--neutral"
-						{% else %}
-							class="dex-nature--increased"
-						{% endif %}
-					>
-						{{ nature.increasedStatName|e }}
-					</td>
-					<td
-						{% if nature.decreasedStatName == "-" %}
-							class="dex-nature--neutral"
-						{% else %}
-							class="dex-nature--decreased"
-						{% endif %}
-					>
-						{{ nature.decreasedStatName|e }}
-					</td>
+					{% if nature.increasedStatName %}
+						<td class="dex-nature--increased">
+							{{ nature.increasedStatName| e}}
+						</td>
+					{% else %}
+						<td class="dex-nature--neutral">-</td>
+					{% endif %}
+					{% if nature.decreasedStatName %}
+						<td class="dex-nature--decreased">
+							{{ nature.decreasedStatName|e }}
+						</td>
+					{% else %}
+						<td class="dex-nature--neutral">-</td>
+					{% endif %}
 					<td class="dex-table--number">{{ nature.vcExpRemainder|e }}</td>
 				</tr>
 			{% endfor %}
