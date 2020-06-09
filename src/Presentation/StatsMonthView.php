@@ -54,8 +54,13 @@ final class StatsMonthView
 		);
 
 		// Get the previous month and the next month.
-		$prevMonth = $this->statsMonthModel->getDateModel()->getPrevMonth();
-		$nextMonth = $this->statsMonthModel->getDateModel()->getNextMonth();
+		$dateModel = $this->statsMonthModel->getDateModel();
+		$prevMonth = $dateModel->getPrevMonth();
+		$thisMonth = $dateModel->getThisMonth();
+		$nextMonth = $dateModel->getNextMonth();
+		$prevMonth = $this->monthControlFormatter->format($prevMonth, $formatter);
+		$thisMonth = $this->monthControlFormatter->format($thisMonth, $formatter);
+		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
 		// Get format data and sort by name.
 		$formatDatas = $this->statsMonthModel->getFormatDatas();
@@ -83,7 +88,7 @@ final class StatsMonthView
 				'text' => 'Stats',
 			],
 			[
-				'text' => 'Formats',
+				'text' => $thisMonth['text'],
 			]
 		];
 
@@ -93,10 +98,9 @@ final class StatsMonthView
 				// TODO: title - "Month Year formats"?
 				'breadcrumbs' => $breadcrumbs,
 
-				'prevMonth' => $this->monthControlFormatter->format($prevMonth, $formatter),
-				'nextMonth' => $this->monthControlFormatter->format($nextMonth, $formatter),
-
-				'month' => $month,
+				'prevMonth' => $prevMonth,
+				'thisMonth' => $thisMonth,
+				'nextMonth' => $nextMonth,
 
 				// The main data.
 				'formats' => $formats,

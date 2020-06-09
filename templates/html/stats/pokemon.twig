@@ -22,7 +22,7 @@
 			{% for r in ratings %}
 				<li>
 					<a
-						href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ r|e }}/pokemon/{{ pokemon.identifier|e }}"
+						href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ r|e }}/pokemon/{{ pokemon.identifier|e }}"
 						{% if r == rating %}
 							class="current"
 						{% endif %}
@@ -115,7 +115,7 @@
 				{% for ability in abilities %}
 					<tr>
 						<td>
-							<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/abilities/{{ ability.identifier|e }}">
+							<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/abilities/{{ ability.identifier|e }}">
 								{{ ability.name|e }}
 							</a>
 						</td>
@@ -153,7 +153,7 @@
 				{% for item in items %}
 					<tr>
 						<td>
-							<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
+							<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
 								{{ item.name|e }}
 							</a>
 						</td>
@@ -261,7 +261,7 @@
 			{% for move in moves %}
 				<tr>
 					<td>
-						<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
+						<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
 							{{ move.name|e }}
 						</a>
 					</td>
@@ -300,7 +300,7 @@
 						<img src="/images/pokemon/icons/{{ teammate.icon|e }}">
 					</td>
 					<td>
-						<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ teammate.identifier|e }}">
+						<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ teammate.identifier|e }}">
 							{{ teammate.name|e }}
 						</a>
 					</td>
@@ -330,7 +330,7 @@
 						<img src="/images/pokemon/icons/{{ counter.icon|e }}">
 					</td>
 					<td>
-						<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ counter.identifier|e }}">
+						<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ counter.identifier|e }}">
 							{{ counter.name|e }}
 						</a>
 					</td>

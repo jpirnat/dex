@@ -55,8 +55,13 @@ final class StatsUsageView
 		);
 
 		// Get the previous month and the next month.
-		$prevMonth = $this->statsUsageModel->getDateModel()->getPrevMonth();
-		$nextMonth = $this->statsUsageModel->getDateModel()->getNextMonth();
+		$dateModel = $this->statsUsageModel->getDateModel();
+		$prevMonth = $dateModel->getPrevMonth();
+		$thisMonth = $dateModel->getThisMonth();
+		$nextMonth = $dateModel->getNextMonth();
+		$prevMonth = $this->monthControlFormatter->format($prevMonth, $formatter);
+		$thisMonth = $this->monthControlFormatter->format($thisMonth, $formatter);
+		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
 		// Get the Pokémon usage data.
 		$pokemonData = $this->statsUsageModel->getPokemon();
@@ -86,7 +91,7 @@ final class StatsUsageView
 			],
 			[
 				'url' => "/stats/$month",
-				'text' => 'Formats',
+				'text' => $thisMonth['text'],
 			],
 			[
 				'text' => 'Usage',
@@ -96,7 +101,6 @@ final class StatsUsageView
 		$content = $this->renderer->render(
 			'html/stats/usage.twig',
 			$this->baseView->getBaseVariables() + [
-				'month' => $month,
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'name' => $format->getName(),
@@ -105,8 +109,10 @@ final class StatsUsageView
 
 				'breadcrumbs' => $breadcrumbs,
 
-				'prevMonth' => $this->monthControlFormatter->format($prevMonth, $formatter),
-				'nextMonth' => $this->monthControlFormatter->format($nextMonth, $formatter),
+				'prevMonth' => $prevMonth,
+				'thisMonth' => $thisMonth,
+				'nextMonth' => $nextMonth,
+
 				'ratings' => $this->statsUsageModel->getRatings(),
 
 				'myFormat' => $this->statsUsageModel->getMyFormat(),

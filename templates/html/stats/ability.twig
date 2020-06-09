@@ -22,7 +22,7 @@
 			{% for r in ratings %}
 				<li>
 					<a
-						href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ r|e }}/abilities/{{ ability.identifier|e }}"
+						href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ r|e }}/abilities/{{ ability.identifier|e }}"
 						{% if r == rating %}
 							class="current"
 						{% endif %}
@@ -39,10 +39,10 @@
 			<tr>
 				<th></th>
 				<th class="pokemon-name">Pokémon</th>
-				<th>Pokémon %</th>
-				<th>Ability %</th>
-				<th>Usage %</th>
-				<th>Usage Δ</th>
+				<th>Pokémon&nbsp;%</th>
+				<th>Ability&nbsp;%</th>
+				<th>Usage&nbsp;%</th>
+				<th>Usage&nbsp;Δ</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -52,7 +52,7 @@
 						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
 					</td>
 					<td>
-						<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
+						<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
 							{{ pokemon.name|e }}
 						</a>
 					</td>

@@ -61,8 +61,13 @@ final class StatsPokemonView
 		);
 
 		// Get the previous month and the next month.
-		$prevMonth = $this->statsPokemonModel->getDateModel()->getPrevMonth();
-		$nextMonth = $this->statsPokemonModel->getDateModel()->getNextMonth();
+		$dateModel = $this->statsPokemonModel->getDateModel();
+		$prevMonth = $dateModel->getPrevMonth();
+		$thisMonth = $dateModel->getThisMonth();
+		$nextMonth = $dateModel->getNextMonth();
+		$prevMonth = $this->monthControlFormatter->format($prevMonth, $formatter);
+		$thisMonth = $this->monthControlFormatter->format($thisMonth, $formatter);
+		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
 		$movesetPokemon = $this->statsPokemonModel->getMovesetPokemon();
 		$movesetRatedPokemon = $this->statsPokemonModel->getMovesetRatedPokemon();
@@ -171,7 +176,7 @@ final class StatsPokemonView
 			],
 			[
 				'url' => "/stats/$month",
-				'text' => 'Formats',
+				'text' => $thisMonth['text'],
 			],
 			[
 				'url' => "/stats/$month/$formatIdentifier/$rating",
@@ -185,7 +190,6 @@ final class StatsPokemonView
 		$content = $this->renderer->render(
 			'html/stats/pokemon.twig',
 			$this->baseView->getBaseVariables() + [
-				'month' => $month,
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'smogonDexIdentifier' => $format->getSmogonDexIdentifier(),
@@ -199,8 +203,10 @@ final class StatsPokemonView
 
 				'breadcrumbs' => $breadcrumbs,
 
-				'prevMonth' => $this->monthControlFormatter->format($prevMonth, $formatter),
-				'nextMonth' => $this->monthControlFormatter->format($nextMonth, $formatter),
+				'prevMonth' => $prevMonth,
+				'thisMonth' => $thisMonth,
+				'nextMonth' => $nextMonth,
+
 				'ratings' => $this->statsPokemonModel->getRatings(),
 
 				'stats' => $stats,

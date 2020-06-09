@@ -33,7 +33,7 @@
 					<td>{{ format.name|e }}</td>
 					{% for rating in format.ratings %}
 						<td>
-							<a href="/stats/{{ month|e }}/{{ format.identifier|e }}/{{ rating|e }}">
+							<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}">
 								{{ rating|e }}
 							</a>
 						</td>
