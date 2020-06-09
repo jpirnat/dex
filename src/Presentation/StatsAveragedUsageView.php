@@ -87,7 +87,7 @@ final class StatsAveragedUsageView
 				'text' => 'Formats',
 			],
 			[
-				'text' => 'Usage',
+				'text' => $format->getName(),
 			],
 		];
 

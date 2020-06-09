@@ -138,7 +138,7 @@ final class StatsAveragedPokemonView
 			],
 			[
 				'url' => "/stats/$start-to-$end/$formatIdentifier/$rating",
-				'text' => 'Usage',
+				'text' => $format->getName(),
 			],
 			[
 				'text' => $dexPokemon->getName(),

@@ -109,7 +109,7 @@ table {
 }
 
 .breadcrumbs li+li::before {
-	content: "\00BB"; /* &raquo; */
+	content: "»";
 	margin: 0 5px;
 }
 
@@ -320,7 +320,7 @@ a.button {
 	color: white;
 }
 .type-chart__matchup--not-very-effective::before {
-	content: "\00BD"; /* ½ */
+	content: "½";
 }
 
 .type-chart__matchup--no-effect {

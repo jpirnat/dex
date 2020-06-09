@@ -87,7 +87,7 @@ final class StatsAveragedLeadsView
 			],
 			[
 				'url' => "/stats/$start-to-$end/$formatIdentifier/$rating",
-				'text' => 'Usage',
+				'text' => $format->getName(),
 			],
 			[
 				'text' => 'Leads',
