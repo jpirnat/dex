@@ -94,7 +94,7 @@ final class StatsUsageView
 				'text' => $thisMonth['text'],
 			],
 			[
-				'text' => 'Usage',
+				'text' => $format->getName(),
 			],
 		];
 

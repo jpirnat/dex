@@ -91,11 +91,7 @@ final class StatsItemView
 			],
 			[
 				'url' => "/stats/$month/$formatIdentifier/$rating",
-				'text' => 'Usage',
-			],
-			[
-				// TODO: url
-				'text' => 'Items',
+				'text' => $format->getName(),
 			],
 			[
 				'text' => $this->statsItemModel->getItemName()->getName(),

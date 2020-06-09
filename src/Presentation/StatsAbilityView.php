@@ -91,11 +91,7 @@ final class StatsAbilityView
 			],
 			[
 				'url' => "/stats/$month/$formatIdentifier/$rating",
-				'text' => 'Usage',
-			],
-			[
-				// TODO: url
-				'text' => 'Abilities',
+				'text' => $format->getName(),
 			],
 			[
 				'text' => $this->statsAbilityModel->getAbilityName()->getName(),

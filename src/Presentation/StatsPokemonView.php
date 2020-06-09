@@ -180,7 +180,7 @@ final class StatsPokemonView
 			],
 			[
 				'url' => "/stats/$month/$formatIdentifier/$rating",
-				'text' => 'Usage',
+				'text' => $format->getName(),
 			],
 			[
 				'text' => $dexPokemon->getName(),

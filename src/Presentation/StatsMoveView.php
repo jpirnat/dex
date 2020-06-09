@@ -91,11 +91,7 @@ final class StatsMoveView
 			],
 			[
 				'url' => "/stats/$month/$formatIdentifier/$rating",
-				'text' => 'Usage',
-			],
-			[
-				// TODO: url
-				'text' => 'Moves',
+				'text' => $format->getName(),
 			],
 			[
 				'text' => $this->statsMoveModel->getMoveName()->getName(),

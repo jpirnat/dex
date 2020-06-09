@@ -94,7 +94,7 @@ final class StatsLeadsView
 			],
 			[
 				'url' => "/stats/$month/$formatIdentifier/$rating",
-				'text' => 'Usage',
+				'text' => $format->getName(),
 			],
 			[
 				'text' => 'Leads',
