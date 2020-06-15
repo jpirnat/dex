@@ -47,8 +47,6 @@ final class StatsMonthView
 	 */
 	public function index() : ResponseInterface
 	{
-		$month = $this->statsMonthModel->getMonth();
-
 		$formatter = $this->formatterFactory->createFor(
 			$this->statsMonthModel->getLanguageId()
 		);

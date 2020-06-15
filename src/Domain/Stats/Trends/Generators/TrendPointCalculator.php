@@ -27,9 +27,9 @@ final class TrendPointCalculator
 
 	/**
 	 * Get the first date in this array of usage datas. Assume the array is
-	 * indexed and sorted by year then month.
+	 * indexed and sorted by month.
 	 *
-	 * @param UsageDataInterface[][] $usageDatas
+	 * @param UsageDataInterface[] $usageDatas
 	 * @param FormatId $formatId
 	 *
 	 * @return DateTime
@@ -55,9 +55,9 @@ final class TrendPointCalculator
 
 	/**
 	 * Get the final date in this array of usage datas. Assume the array is
-	 * indexed and sorted by year then month.
+	 * indexed and sorted by month.
 	 *
-	 * @param UsageDataInterface[][] $usageDatas
+	 * @param UsageDataInterface[] $usageDatas
 	 * @param FormatId $formatId
 	 *
 	 * @return DateTime
@@ -85,7 +85,7 @@ final class TrendPointCalculator
 	 * Get the trend points from this series of usage datas.
 	 *
 	 * @param FormatId $formatId The format the data is from.
-	 * @param UsageDataInterface[][] $usageDatas
+	 * @param UsageDataInterface[] $usageDatas
 	 * @param string $method The method to call on a usage data object to get
 	 *     the point's value.
 	 * @param float $default The default value for points without data.
