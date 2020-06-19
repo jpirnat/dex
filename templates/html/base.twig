@@ -31,20 +31,19 @@
 					</ul>
 				</nav>
 				{% if breadcrumbs %}
-					<nav class="breadcrumbs">
-						<ul>
+					<nav class="breadcrumbs" aria-label="Breadcrumb">
+						<ol>
+							<li><a class="breadcrumbs__item" href="/">Home</a></li>
 							{% for breadcrumb in breadcrumbs %}
-								{% if loop.first %}
-									<li><a href="/">Home</a></li>
-								{% endif %}
-
-								{% if breadcrumb.url %}
-									<li><a href="{{ breadcrumb.url|e }}">{{ breadcrumb.text|e }}</a></li>
-								{% else %}
-									<li><span class="current">{{ breadcrumb.text|e }}</span></li>
-								{% endif %}
+								<li>
+									{% if breadcrumb.url %}
+										<a class="breadcrumbs__item" href="{{ breadcrumb.url|e }}">{{ breadcrumb.text|e }}</a>
+									{% else %}
+										<span class="breadcrumbs__item" {% if loop.last %}aria-current="page"{% endif %}>{{ breadcrumb.text|e }}</span>
+									{% endif %}
+								</li>
 							{% endfor %}
-						</ul>
+						</ol>
 					</nav>
 				{% endif %}
 			{% endblock %}
