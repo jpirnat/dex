@@ -32,9 +32,7 @@ final class IndexView
 	{
 		$content = $this->renderer->render(
 			'html/index.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Home',
-			]
+			$this->baseView->getBaseVariables()
 		);
 
 		return new HtmlResponse($content);

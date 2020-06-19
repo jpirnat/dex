@@ -82,6 +82,7 @@ final class DexMoveView
 		$content = $this->renderer->render(
 			'html/dex/move.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Moves - ' . $move['name'],
 				'generation' => [
 					'id' => $generation->getId()->value(),
 					'identifier' => $generation->getIdentifier(),

@@ -74,6 +74,7 @@ final class DexTypeView
 		$content = $this->renderer->render(
 			'html/dex/type.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Types - ' . $type['name'],
 				'generation' => [
 					'id' => $generation->getId()->value(),
 					'identifier' => $generation->getIdentifier(),
@@ -81,7 +82,6 @@ final class DexTypeView
 				'type' => [
 					'identifier' => $type['identifier'],
 				],
-				'title' => 'Types - ' . $type['name'],
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'showAbilities' => $showAbilities,

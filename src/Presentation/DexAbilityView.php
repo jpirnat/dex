@@ -73,12 +73,12 @@ final class DexAbilityView
 		$content = $this->renderer->render(
 			'html/dex/ability.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Abilities - ' . $ability['name'],
 				'generation' => [
 					'id' => $generation->getId()->value(),
 					'identifier' => $generation->getIdentifier(),
 				],
 				'ability' => $ability,
-				'title' => 'Abilities - ' . $ability['name'],
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'showAbilities' => $showAbilities,

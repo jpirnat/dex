@@ -61,10 +61,10 @@ final class DexTypesView
 		$content = $this->renderer->render(
 			'html/dex/types.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Types',
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
-				'title' => 'Types',
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'types' => $this->dexFormatter->formatDexTypes($types),

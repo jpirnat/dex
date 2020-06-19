@@ -58,8 +58,7 @@ final class DatabaseSpeciesRepository implements SpeciesRepositoryInterface
 			$speciesId,
 			$result['identifier'],
 			new VersionGroupId($result['introduced_in_version_group_id']),
-			$result['base_egg_cycles'],
-			$result['base_friendship']
+			$result['base_egg_cycles']
 		);
 
 		return $species;

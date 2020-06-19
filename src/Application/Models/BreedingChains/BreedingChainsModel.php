@@ -10,6 +10,7 @@ use Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
@@ -37,6 +38,7 @@ final class BreedingChainsModel
 
 
 	private array $pokemon = [];
+	private array $move = [];
 
 	/** @var BreedingChainRecord[][] $chains */
 	private array $chains = [];
@@ -52,6 +54,7 @@ final class BreedingChainsModel
 	 * @param FormIconRepositoryInterface $formIconRepository
 	 * @param GenerationRepositoryInterface $generationRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
+	 * @param MoveNameRepositoryInterface $moveNameRepository
 	 * @param VersionGroupRepositoryInterface $versionGroupRepository
 	 * @param PokemonEggGroupRepositoryInterface $pokemonEggGroupRepository
 	 * @param EggGroupNameRepositoryInterface $eggGroupNameRepository
@@ -66,6 +69,7 @@ final class BreedingChainsModel
 		FormIconRepositoryInterface $formIconRepository,
 		GenerationRepositoryInterface $generationRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
+		MoveNameRepositoryInterface $moveNameRepository,
 		VersionGroupRepositoryInterface $versionGroupRepository,
 		PokemonEggGroupRepositoryInterface $pokemonEggGroupRepository,
 		EggGroupNameRepositoryInterface $eggGroupNameRepository,
@@ -79,6 +83,7 @@ final class BreedingChainsModel
 		$this->formIconRepository = $formIconRepository;
 		$this->generationRepository = $generationRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
+		$this->moveNameRepository = $moveNameRepository;
 		$this->versionGroupRepository = $versionGroupRepository;
 		$this->pokemonEggGroupRepository = $pokemonEggGroupRepository;
 		$this->eggGroupNameRepository = $eggGroupNameRepository;
@@ -119,6 +124,11 @@ final class BreedingChainsModel
 		$this->pokemon = [
 			'identifier' => $pokemon->getIdentifier(),
 			'name' => $pokemonName->getName(),
+		];
+
+		$moveName = $this->moveNameRepository->getByLanguageAndMove($languageId, $move->getId());
+		$this->move = [
+			'name' => $moveName->getName(),
 		];
 
 		/** @var PokemonMove[][] $chains */
@@ -227,6 +237,16 @@ final class BreedingChainsModel
 	public function getPokemon() : array
 	{
 		return $this->pokemon;
+	}
+
+	/**
+	 * Get the move.
+	 *
+	 * @return array
+	 */
+	public function getMove() : array
+	{
+		return $this->move;
 	}
 
 	/**

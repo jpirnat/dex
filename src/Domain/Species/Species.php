@@ -11,7 +11,6 @@ final class Species
 	private string $identifier;
 	private VersionGroupId $introducedInVersionGroupId;
 	private int $baseEggCycles;
-	private int $baseFriendship;
 
 	/**
 	 * Constructor.
@@ -20,20 +19,17 @@ final class Species
 	 * @param string $identifier
 	 * @param VersionGroupId $introducedInVersionGroupId
 	 * @param int $baseEggCycles
-	 * @param int $baseFriendship
 	 */
 	public function __construct(
 		SpeciesId $speciesId,
 		string $identifier,
 		VersionGroupId $introducedInVersionGroupId,
-		int $baseEggCycles,
-		int $baseFriendship
+		int $baseEggCycles
 	) {
 		$this->id = $speciesId;
 		$this->identifier = $identifier;
 		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
 		$this->baseEggCycles = $baseEggCycles;
-		$this->baseFriendship = $baseFriendship;
 	}
 
 	/**
@@ -74,15 +70,5 @@ final class Species
 	public function getBaseEggCycles() : int
 	{
 		return $this->baseEggCycles;
-	}
-
-	/**
-	 * Get the species's base friendship.
-	 *
-	 * @return int
-	 */
-	public function getBaseFriendship() : int
-	{
-		return $this->baseFriendship;
 	}
 }

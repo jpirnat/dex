@@ -80,6 +80,7 @@ final class StatsMoveView
 
 		// Navigation breadcrumbs.
 		$formatIdentifier = $format->getIdentifier();
+		$moveName = $this->statsMoveModel->getMoveName()->getName();
 		$breadcrumbs = [
 			[
 				'url' => '/stats',
@@ -94,13 +95,14 @@ final class StatsMoveView
 				'text' => $format->getName(),
 			],
 			[
-				'text' => $this->statsMoveModel->getMoveName()->getName(),
+				'text' => $moveName,
 			],
 		];
 
 		$content = $this->renderer->render(
 			'html/stats/move.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats - ' . $thisMonth['text'] . ' ' . $format->getName() . ' - ' . $moveName,
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'name' => $format->getName(),
@@ -117,7 +119,7 @@ final class StatsMoveView
 
 				'move' => [
 					'identifier' => $this->statsMoveModel->getMoveIdentifier(),
-					'name' => $this->statsMoveModel->getMoveName()->getName(),
+					'name' => $moveName,
 					'description' => $this->statsMoveModel->getMoveDescription()->getDescription(),
 				],
 

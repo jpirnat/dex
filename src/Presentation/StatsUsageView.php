@@ -101,6 +101,7 @@ final class StatsUsageView
 		$content = $this->renderer->render(
 			'html/stats/usage.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats - ' . $thisMonth['text'] . ' ' . $format->getName(),
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'name' => $format->getName(),

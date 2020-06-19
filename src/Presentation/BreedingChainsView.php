@@ -42,6 +42,7 @@ final class BreedingChainsView
 		$generation = $generationModel->getGeneration();
 
 		$pokemon = $this->breedingChainsModel->getPokemon();
+		$move = $this->breedingChainsModel->getMove();
 
 		$chainsData = $this->breedingChainsModel->getChains();
 		$chains = [];
@@ -73,18 +74,22 @@ final class BreedingChainsView
 		$breadcrumbs = [[
 			'text' => 'Dex',
 		], [
+			'url' => "/dex/$generationIdentifier/pokemon",
 			'text' => 'Pokémon',
 		], [
 			'url' => "/dex/$generationIdentifier/pokemon/$pokemonIdentifier",
 			'text' => $pokemon['name'],
 		], [
 			'url' => "/dex/$generationIdentifier/pokemon/$pokemonIdentifier#egg-moves",
-			'text' => 'Breeding',
+			'text' => 'Egg Moves',
+		], [
+			'text' => $move['name'] . ' Breeding Chains',
 		]];
 
 		$content = $this->renderer->render(
 			'html/dex/breeding-chains.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Pokémon - ' . $pokemon['name'] . ' - ' . $move['name'] . ' Breeding Chains',
 				'breadcrumbs' => $breadcrumbs,
 				'chains' => $chains,
 			]

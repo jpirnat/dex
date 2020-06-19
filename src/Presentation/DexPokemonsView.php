@@ -59,10 +59,10 @@ final class DexPokemonsView
 		$content = $this->renderer->render(
 			'html/dex/pokemons.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Pokémon',
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
-				'title' => 'Pokémon',
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'showAbilities' => $showAbilities,

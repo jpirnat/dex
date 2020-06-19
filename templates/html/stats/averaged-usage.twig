@@ -16,9 +16,9 @@
 		</ul>
 	</div>
 
-	<div>
+	<div class="buttons-control">
 		{% if showLeadsLink %}
-			<a href="/stats/{{ start|e }}-to-{{ end|e }}/{{ format.identifier|e }}/{{ rating|e }}/leads">
+			<a class="button" href="/stats/{{ start|e }}-to-{{ end|e }}/{{ format.identifier|e }}/{{ rating|e }}/leads">
 				Leads
 			</a>
 		{% endif %}

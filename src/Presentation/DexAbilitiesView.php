@@ -64,10 +64,10 @@ final class DexAbilitiesView
 		$content = $this->renderer->render(
 			'html/dex/abilities.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Abilities',
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
-				'title' => 'Abilities',
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'abilities' => $abilities,

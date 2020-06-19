@@ -104,6 +104,7 @@ final class StatsLeadsView
 		$content = $this->renderer->render(
 			'html/stats/leads.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats - ' . $thisMonth['text'] . ' ' . $format->getName() . ' - Leads',
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'name' => $format->getName(),

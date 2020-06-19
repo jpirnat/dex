@@ -190,6 +190,7 @@ final class StatsPokemonView
 		$content = $this->renderer->render(
 			'html/stats/pokemon.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats - ' . $thisMonth['text'] . ' ' . $format->getName() . ' - ' . $dexPokemon->getName(),
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'smogonDexIdentifier' => $format->getSmogonDexIdentifier(),

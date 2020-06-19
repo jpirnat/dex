@@ -80,6 +80,7 @@ final class StatsAbilityView
 
 		// Navigation breadcrumbs.
 		$formatIdentifier = $format->getIdentifier();
+		$abilityName = $this->statsAbilityModel->getAbilityName()->getName();
 		$breadcrumbs = [
 			[
 				'url' => '/stats',
@@ -94,13 +95,14 @@ final class StatsAbilityView
 				'text' => $format->getName(),
 			],
 			[
-				'text' => $this->statsAbilityModel->getAbilityName()->getName(),
+				'text' => $abilityName,
 			],
 		];
 
 		$content = $this->renderer->render(
 			'html/stats/ability.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats - ' . $thisMonth['text'] . ' ' . $format->getName() . ' - ' . $abilityName,
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'name' => $format->getName(),
@@ -117,7 +119,7 @@ final class StatsAbilityView
 
 				'ability' => [
 					'identifier' => $this->statsAbilityModel->getAbilityIdentifier(),
-					'name' => $this->statsAbilityModel->getAbilityName()->getName(),
+					'name' => $abilityName,
 					'description' => $this->statsAbilityModel->getAbilityDescription()->getDescription(),
 				],
 

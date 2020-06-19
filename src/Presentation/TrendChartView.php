@@ -53,11 +53,6 @@ final class TrendChartView
 				'text' => 'Stats',
 			],
 			[
-				// TODO: url
-				'text' => 'Trends',
-			],
-			[
-				// TODO: text: chart title.
 				'text' => 'Chart',
 			]
 		];
@@ -65,7 +60,7 @@ final class TrendChartView
 		$content = $this->renderer->render(
 			'html/trend-chart.twig',
 			$this->baseView->getBaseVariables() + [
-				'title' => 'Stats - Trends - Chart',
+				'title' => 'Stats - Chart',
 				'breadcrumbs' => $breadcrumbs,
 			]
 		);

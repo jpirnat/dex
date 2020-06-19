@@ -80,6 +80,7 @@ final class StatsItemView
 
 		// Navigation breadcrumbs.
 		$formatIdentifier = $format->getIdentifier();
+		$itemName = $this->statsItemModel->getItemName()->getName();
 		$breadcrumbs = [
 			[
 				'url' => '/stats',
@@ -94,13 +95,14 @@ final class StatsItemView
 				'text' => $format->getName(),
 			],
 			[
-				'text' => $this->statsItemModel->getItemName()->getName(),
+				'text' => $itemName,
 			],
 		];
 
 		$content = $this->renderer->render(
 			'html/stats/item.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats - ' . $thisMonth['text'] . ' ' . $format->getName() . ' - ' . $itemName,
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'name' => $format->getName(),
@@ -117,7 +119,7 @@ final class StatsItemView
 
 				'item' => [
 					'identifier' => $this->statsItemModel->getItemIdentifier(),
-					'name' => $this->statsItemModel->getItemName()->getName(),
+					'name' => $itemName,
 					'description' => $this->statsItemModel->getItemDescription()->getDescription(),
 				],
 

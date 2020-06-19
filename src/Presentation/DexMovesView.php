@@ -58,10 +58,10 @@ final class DexMovesView
 		$content = $this->renderer->render(
 			'html/dex/moves.twig',
 			$this->baseView->getBaseVariables() + [
+				'title' => 'Moves',
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
-				'title' => 'Moves',
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'showMoveDescriptions' => $showMoveDescriptions,
