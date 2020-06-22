@@ -295,7 +295,10 @@ a.button {
 
 /* dex types */
 
-.type-chart__attacking-label {
+.type-chart__axis-label {
+	padding: 5px;
+}
+.type-chart__axis-label--attacking {
 	writing-mode: vertical-lr;
 	transform: rotate(180deg);
 }
@@ -335,6 +338,29 @@ a.button {
 }
 .type-chart__matchup--no-effect::before {
 	content: "×0";
+}
+
+.type-toggler {
+	margin: 20px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.type-toggler__header {
+	padding: 5px;
+	font-weight: bold;
+}
+.type-toggler__types {
+	display: flex;q
+}
+.type-toggler__type {
+	margin: 3px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.type-toggler__select-all {
+	margin: 5px;
 }
 
 

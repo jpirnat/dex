@@ -12,8 +12,24 @@ const app = new Vue({
 		types: [],
 		multipliers: [],
 
+		toggleAttackingIds: [],
+		toggleDefendingIds: [],
 		hoverAttackingId: null,
 		hoverDefendingId: null
+	},
+	computed: {
+		attackingTypes() {
+			if (this.toggleAttackingIds.length === 0) {
+				return this.types;
+			}
+			return this.types.filter(t => this.toggleAttackingIds.includes(t.id));
+		},
+		defendingTypes() {
+			if (this.toggleDefendingIds.length === 0) {
+				return this.types;
+			}
+			return this.types.filter(t => this.toggleDefendingIds.includes(t.id));
+		},
 	},
 	created() {
 		const url = new URL(window.location);
@@ -33,6 +49,11 @@ const app = new Vue({
 				this.generations = data.generations;
 				this.types = data.types;
 				this.multipliers = data.multipliers;
+
+				this.types.forEach(t => {
+					this.toggleAttackingIds.push(t.id);
+					this.toggleDefendingIds.push(t.id);
+				});
 			}
 		});
 	},
