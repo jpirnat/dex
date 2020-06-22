@@ -27,6 +27,10 @@ footer {
 	text-align: center;
 }
 
+[v-cloak] {
+	display: none;
+}
+
 table {
 	border-collapse: collapse;
 	display: inline-table;
@@ -291,11 +295,17 @@ a.button {
 
 /* dex types */
 
+.type-chart__attacking-label {
+	writing-mode: vertical-lr;
+	transform: rotate(180deg);
+}
 .type-chart__matchup {
 	text-align: center;
 	border: 1px solid white;
 }
-
+.type-chart__matchup--highlight {
+	background: yellow;
+}
 .type-chart__matchup--neutral {
 	color: darkgray;
 }
@@ -324,11 +334,7 @@ a.button {
 	color: white;
 }
 .type-chart__matchup--no-effect::before {
-	content: "0";
-}
-
-.type-chart tr:hover {
-	background: yellow;
+	content: "×0";
 }
 
 

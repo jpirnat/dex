@@ -37,4 +37,21 @@ final class IndexView
 
 		return new HtmlResponse($content);
 	}
+
+	/**
+	 * Show the dex types page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function types() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/types.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Types',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
 }

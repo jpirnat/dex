@@ -5,31 +5,24 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\DexTypesModel;
 use Laminas\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
 final class DexTypesView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
 	private DexTypesModel $dexTypesModel;
 	private DexFormatter $dexFormatter;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
 	 * @param DexTypesModel $dexTypesModel
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
 		DexTypesModel $dexTypesModel,
 		DexFormatter $dexFormatter
 	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
 		$this->dexTypesModel = $dexTypesModel;
 		$this->dexFormatter = $dexFormatter;
 	}
@@ -58,20 +51,16 @@ final class DexTypesView
 			],
 		];
 
-		$content = $this->renderer->render(
-			'html/dex/types.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Types',
+		return new JsonResponse([
+			'data' => [
+				'breadcrumbs' => $breadcrumbs,
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
-				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'types' => $this->dexFormatter->formatDexTypes($types),
 				'multipliers' => $multipliers,
 			]
-		);
-
-		return new HtmlResponse($content);
+		]);
 	}
 }
