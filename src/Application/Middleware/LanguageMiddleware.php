@@ -50,34 +50,38 @@ final class LanguageMiddleware implements MiddlewareInterface
 		ServerRequestInterface $request,
 		RequestHandlerInterface $handler
 	) : ResponseInterface {
-		$languageId = self::DEFAULT_LANGUAGE_ID;
-
 		// If the user is requesting to change their language, use that language.
-		$setNewLanguage = isset($request->getQueryParams()[self::LANGUAGE_PARAMETER]);
-		if ($setNewLanguage) {
+		$setNewLanguage = false;
+		$queryParameter = $request->getQueryParams()[self::LANGUAGE_PARAMETER] ?? '';
+		if ($queryParameter) {
+			$setNewLanguage = true;
+			$languageId = $queryParameter;
+		}
+
+		// Or, if the request contains a language cookie, use that language.
+		$cookieValue = $request->getCookieParams()[CookieNames::LANGUAGE] ?? '';
+		if (!$setNewLanguage && $cookieValue) {
+			$languageId = $cookieValue;
+		}
+
+		if (isset($languageId)) {
+			// Ensure that the requested language is valid.
 			try {
-				// Ensure that the requested language is valid.
-				$language = $this->languageRepository->getById(
-					new LanguageId(
-						(int) $request->getQueryParams()[self::LANGUAGE_PARAMETER]
-					)
-				);
+				$languageId = new LanguageId((int) $languageId);
+				$language = $this->languageRepository->getById($languageId);
 				$languageId = $language->getId()->value();
 			} catch (LanguageNotFoundException $e) {
-				// The user tried setting an invalid language.
+				unset($languageId);
 				$setNewLanguage = false;
 			}
 		}
 
-		// Or, if the request contains a language cookie, use that language.
-		if (!$setNewLanguage && isset($request->getCookieParams()[CookieNames::LANGUAGE])) {
-			// If no new language is being set, use the existing language cookie
-			// or the default language.
-			$languageId = $request->getCookieParams()[CookieNames::LANGUAGE];
+		// Or, use the default language.
+		if (!isset($languageId)) {
+			$languageId = self::DEFAULT_LANGUAGE_ID;
 		}
 
 		$request = $request->withAttribute('languageId', $languageId);
-
 		$response = $handler->handle($request);
 
 		// If the user is requesting to change their language, store it in a cookie.
