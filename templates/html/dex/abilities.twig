@@ -17,9 +17,12 @@
 		</ul>
 	</div>
 
-	<div class="dex-abilities-filter">
-		<label>
-			Search by name: <input type="text" v-model="filterName">
+	<div class="dex-abilities__filters">
+		<label class="dex-abilities__filter">
+			Search by ability name: <input type="text" v-model="filterName">
+		</label>
+		<label class="dex-abilities__filter">
+			Search by description: <input type="text" v-model="filterDescription">
 		</label>
 	</div>
 

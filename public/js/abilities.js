@@ -12,10 +12,18 @@ const app = new Vue({
 		abilities: [],
 
 		filterName: '',
+		filterDescription: '',
 	},
 	computed: {
 		filteredAbilities() {
-			return this.abilities.filter(a => a.name.toLowerCase().includes(this.filterName));
+			if (!this.filterName && !this.filterDescription) {
+				return this.abilities;
+			}
+
+			return this.abilities.filter(a => 
+				a.name.toLowerCase().includes(this.filterName.toLowerCase())
+				&& a.description.toLowerCase().includes(this.filterDescription.toLowerCase())
+			);
 		},
 	},
 	created() {

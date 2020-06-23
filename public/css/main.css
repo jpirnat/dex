@@ -270,8 +270,9 @@ a.button {
 
 /* dex abilities */
 
-.dex-abilities-filter {
-	margin: 10px 0;
+.dex-abilities__filter {
+	display: inline-block;
+	margin: 0 10px 10px 0;
 }
 .dex-table__ability-name {
 	width: 10%;
