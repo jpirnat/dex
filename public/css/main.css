@@ -213,35 +213,26 @@ a.button {
 
 /* dex */
 
-.dex-pokemon,
-.dex-moves {
+.dex-table--full-width {
 	width: 100%;
 }
 
-.dex-pokemon th,
-.dex-pokemon td,
-.dex-moves th,
-.dex-moves td,
-.dex-natures th,
-.dex-natures td {
+.dex-table th,
+.dex-table td {
 	border-bottom: 1px solid black;
 	padding: 5px;
 }
 
-.dex-pokemon a,
-.dex-moves a {
+.dex-table a {
 	text-decoration: none;
 }
 
-.dex-pokemon a,
-.dex-pokemon a:visited,
-.dex-moves a,
-.dex-moves a:visited {
+.dex-table a,
+.dex-table a:visited {
 	color: blue;
 }
 
-.dex-pokemon a:hover,
-.dex-moves a:hover {
+.dex-table a:hover {
 	color: red;
 }
 
