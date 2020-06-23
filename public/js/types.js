@@ -15,7 +15,7 @@ const app = new Vue({
 		toggleAttackingIds: [],
 		toggleDefendingIds: [],
 		hoverAttackingId: null,
-		hoverDefendingId: null
+		hoverDefendingId: null,
 	},
 	computed: {
 		attackingTypes() {

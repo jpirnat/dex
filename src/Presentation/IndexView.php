@@ -39,6 +39,23 @@ final class IndexView
 	}
 
 	/**
+	 * Show the dex abilities page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function abilities() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/abilities.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Abilities',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the dex types page.
 	 *
 	 * @return ResponseInterface

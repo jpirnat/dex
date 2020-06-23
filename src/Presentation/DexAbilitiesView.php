@@ -4,32 +4,24 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\DexAbilitiesModel;
-use Laminas\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
 final class DexAbilitiesView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
 	private DexAbilitiesModel $dexAbilitiesModel;
 	private DexFormatter $dexFormatter;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
 	 * @param DexAbilitiesModel $dexAbilitiesModel
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
 		DexAbilitiesModel $dexAbilitiesModel,
 		DexFormatter $dexFormatter
 	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
 		$this->dexAbilitiesModel = $dexAbilitiesModel;
 		$this->dexFormatter = $dexFormatter;
 	}
@@ -47,7 +39,7 @@ final class DexAbilitiesView
 
 		$abilities = $this->dexAbilitiesModel->getAbilities();
 
-		uasort($abilities, function (array $a, array $b) : int {
+		usort($abilities, function (array $a, array $b) : int {
 			return $a['name'] <=> $b['name'];
 		});
 
@@ -61,19 +53,15 @@ final class DexAbilitiesView
 			],
 		];
 
-		$content = $this->renderer->render(
-			'html/dex/abilities.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Abilities',
+		return new JsonResponse([
+			'data' => [
+				'breadcrumbs' => $breadcrumbs,
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
-				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'abilities' => $abilities,
 			]
-		);
-
-		return new HtmlResponse($content);
+		]);
 	}
 }
