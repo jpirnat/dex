@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Abilities;
 
-use Jp\Dex\Domain\Versions\GenerationId;
-
 interface AbilityRepositoryInterface
 {
 	/**
@@ -29,13 +27,4 @@ interface AbilityRepositoryInterface
 	 * @return Ability
 	 */
 	public function getByIdentifier(string $identifier) : Ability;
-
-	/**
-	 * Get abilities in this generation.
-	 *
-	 * @param GenerationId $generationId
-	 *
-	 * @return Ability[] Indexed by id.
-	 */
-	public function getByGeneration(GenerationId $generationId) : array;
 }

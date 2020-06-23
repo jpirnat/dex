@@ -39,10 +39,6 @@ final class DexAbilitiesView
 
 		$abilities = $this->dexAbilitiesModel->getAbilities();
 
-		usort($abilities, function (array $a, array $b) : int {
-			return $a['name'] <=> $b['name'];
-		});
-
 		// Navigational breadcrumbs.
 		$breadcrumbs = [
 			[

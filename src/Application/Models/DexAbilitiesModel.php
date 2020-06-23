@@ -3,18 +3,14 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
-use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
-use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
-use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
+use Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexAbilitiesModel
 {
 	private GenerationModel $generationModel;
-	private AbilityRepositoryInterface $abilityRepository;
-	private AbilityNameRepositoryInterface $abilityNameRepository;
-	private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository;
+	private DexAbilityRepositoryInterface $dexAbilityRepository;
 
 
 	private array $abilities = [];
@@ -24,20 +20,14 @@ final class DexAbilitiesModel
 	 * Constructor.
 	 *
 	 * @param GenerationModel $generationModel
-	 * @param AbilityRepositoryInterface $abilityRepository
-	 * @param AbilityNameRepositoryInterface $abilityNameRepository
-	 * @param AbilityDescriptionRepositoryInterface $abilityDescriptionRepository
+	 * @param DexAbilityRepositoryInterface $dexAbilityRepository
 	 */
 	public function __construct(
 		GenerationModel $generationModel,
-		AbilityRepositoryInterface $abilityRepository,
-		AbilityNameRepositoryInterface $abilityNameRepository,
-		AbilityDescriptionRepositoryInterface $abilityDescriptionRepository
+		DexAbilityRepositoryInterface $dexAbilityRepository
 	) {
 		$this->generationModel = $generationModel;
-		$this->abilityRepository = $abilityRepository;
-		$this->abilityNameRepository = $abilityNameRepository;
-		$this->abilityDescriptionRepository = $abilityDescriptionRepository;
+		$this->dexAbilityRepository = $dexAbilityRepository;
 	}
 
 	/**
@@ -56,32 +46,10 @@ final class DexAbilitiesModel
 
 		$this->generationModel->setGensSince(new GenerationId(3));
 
-		$abilities = $this->abilityRepository->getByGeneration($generationId);
-
-		$abilityNames = $this->abilityNameRepository->getByLanguage($languageId);
-
-		$abilityDescriptions = $this->abilityDescriptionRepository->getByGenerationAndLanguage(
+		$this->abilities = $this->dexAbilityRepository->getByGeneration(
 			$generationId,
 			$languageId
 		);
-
-		$this->abilities = [];
-
-		foreach ($abilities as $ability) {
-			$abilityId = $ability->getId()->value();
-
-			$abilityName = $abilityNames[$abilityId];
-			$abilityDescription = $abilityDescriptions[$abilityId] ?? null;
-			$abilityDescription = $abilityDescription
-				? $abilityDescription->getDescription()
-				: '-';
-
-			$this->abilities[] = [
-				'identifier' => $ability->getIdentifier(),
-				'name' => $abilityName->getName(),
-				'description' => $abilityDescription,
-			];
-		}
 	}
 
 	/**

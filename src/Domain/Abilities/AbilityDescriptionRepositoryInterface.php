@@ -22,17 +22,4 @@ interface AbilityDescriptionRepositoryInterface
 		LanguageId $languageId,
 		AbilityId $abilityId
 	) : AbilityDescription;
-
-	/**
-	 * Get ability descriptions by generation and language.
-	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
-	 * @return AbilityDescription[] Indexed by ability id.
-	 */
-	public function getByGenerationAndLanguage(
-		GenerationId $generationId,
-		LanguageId $languageId
-	) : array;
 }

@@ -22,6 +22,7 @@
 			<tr>
 				<th>Name</th>
 				<th>Description</th>
+				<th>Pokémon</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -32,6 +33,11 @@
 					</a>
 				</td>
 				<td>{{ ability.description }}</td>
+				<td>
+					<a v-for="p in ability.pokemon" :href="`/dex/${generation.identifier}/pokemon/${p.identifier}`">
+						<img :src="`/images/pokemon/icons/${p.icon}`" :alt="p.name">
+					</a>
+				</td>
 			</tr>
 		</tbody>
 	</table>
