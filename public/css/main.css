@@ -268,16 +268,31 @@ a.button {
 
 
 
+/* dex abilities */
+
+.dex-abilities-filter {
+	margin: 10px 0;
+}
+.dex-table__ability-name {
+	width: 10%;
+}
+.dex-table__ability-description {
+	width: 40%;
+}
+.dex-table__ability-pokemon {
+	width: 50%;
+}
+
+
+
 /* dex natures */
 
 .dex-nature--increased {
 	color: red;
 }
-
 .dex-nature--decreased {
 	color: blue;
 }
-
 .dex-nature--neutral {
 	text-align: center;
 }

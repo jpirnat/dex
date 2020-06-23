@@ -10,6 +10,13 @@ const app = new Vue({
 		generation: {},
 		generations: [],
 		abilities: [],
+
+		filterName: '',
+	},
+	computed: {
+		filteredAbilities() {
+			return this.abilities.filter(a => a.name.toLowerCase().includes(this.filterName));
+		},
 	},
 	created() {
 		const url = new URL(window.location);
@@ -28,8 +35,6 @@ const app = new Vue({
 				this.generation = data.generation;
 				this.generations = data.generations;
 				this.abilities = data.abilities;
-
-				console.log(data.abilities);
 			}
 		});
 	},
