@@ -1,6 +1,10 @@
 {% extends "html/base.twig" %}
 
 {% block body %}
+{% verbatim %}
+<div id="app" v-cloak>
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
 	<table class="dex-table">
 		<thead>
 			<tr>
@@ -11,26 +15,25 @@
 			</tr>
 		</thead>
 		<tbody>
-			{% for nature in natures %}
-				<tr>
-					<td>{{ nature.name|e }}</td>
-					{% if nature.increasedStat %}
-						<td class="dex-nature--increased">
-							{{ nature.increasedStat| e}}
-						</td>
-					{% else %}
-						<td class="dex-nature--neutral">-</td>
-					{% endif %}
-					{% if nature.decreasedStat %}
-						<td class="dex-nature--decreased">
-							{{ nature.decreasedStat|e }}
-						</td>
-					{% else %}
-						<td class="dex-nature--neutral">-</td>
-					{% endif %}
-					<td class="dex-table--number">{{ nature.vcExpRemainder|e }}</td>
-				</tr>
-			{% endfor %}
+			<tr v-for="nature in natures">
+				<td>{{ nature.name }}</td>
+				
+				<td v-if="nature.increasedStat" class="dex-nature--increased">{{ nature.increasedStat }}</td>
+				<td v-else class="dex-nature--neutral">-</td>
+				
+				<td v-if="nature.decreasedStat" class="dex-nature--decreased">{{ nature.decreasedStat }}</td>
+				<td v-else class="dex-nature--neutral">-</td>
+
+				<td class="dex-table--number">{{ nature.vcExpRemainder }}</td>
+			</tr>
 		</tbody>
 	</table>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	<script src="/js/dex-breadcrumbs.js"></script>
+	<script src="/js/natures.js"></script>
 {% endblock %}

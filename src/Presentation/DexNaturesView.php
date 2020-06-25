@@ -4,29 +4,21 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\DexNaturesModel;
-use Laminas\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
 final class DexNaturesView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
 	private DexNaturesModel $dexNaturesModel;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
 	 * @param DexNaturesModel $dexNaturesModel
 	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
 		DexNaturesModel $dexNaturesModel
 	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
 		$this->dexNaturesModel = $dexNaturesModel;
 	}
 
@@ -37,6 +29,8 @@ final class DexNaturesView
 	 */
 	public function index() : ResponseInterface
 	{
+		$natures = $this->dexNaturesModel->getNatures();
+
 		// Navigational breadcrumbs.
 		$breadcrumbs = [
 			[
@@ -47,15 +41,11 @@ final class DexNaturesView
 			],
 		];
 
-		$content = $this->renderer->render(
-			'html/dex/natures.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Natures',
+		return new JsonResponse([
+			'data' => [
 				'breadcrumbs' => $breadcrumbs,
-				'natures' => $this->dexNaturesModel->getNatures(),
+				'natures' => $natures,
 			]
-		);
-
-		return new HtmlResponse($content);
+		]);
 	}
 }

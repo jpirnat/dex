@@ -56,6 +56,23 @@ final class IndexView
 	}
 
 	/**
+	 * Show the dex natures page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function natures() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/natures.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Natures',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the dex types page.
 	 *
 	 * @return ResponseInterface
