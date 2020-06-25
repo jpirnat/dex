@@ -14,7 +14,7 @@ interface DexAbilityRepositoryInterface
 	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 *
-	 * @return array Ordered by name.
+	 * @return array Ordered by ability name.
 	 */
 	public function getByGeneration(
 		GenerationId $generationId,

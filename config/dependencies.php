@@ -115,6 +115,9 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Categories\DexCategoryRepositoryInterface:
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexMoveRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Moves\DexMoveRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexNatureRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Natures\DexNatureRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexPokemonAbilityRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Abilities\DexPokemonAbilityRepositoryInterface::class, $rule);
 
@@ -225,12 +228,6 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepository
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseNatureNameRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Natures\NatureNameRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseNatureRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Natures\NatureRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabasePokemonAbilityRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Abilities\PokemonAbilityRepositoryInterface::class, $rule);

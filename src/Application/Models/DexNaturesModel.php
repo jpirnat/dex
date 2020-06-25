@@ -4,15 +4,11 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Natures\NatureNameRepositoryInterface;
-use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
-use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
+use Jp\Dex\Domain\Natures\DexNatureRepositoryInterface;
 
 final class DexNaturesModel
 {
-	private NatureRepositoryInterface $natureRepository;
-	private NatureNameRepositoryInterface $natureNameRepository;
-	private StatNameRepositoryInterface $statNameRepository;
+	private DexNatureRepositoryInterface $dexNatureRepository;
 
 
 	private string $generationIdentifier;
@@ -22,18 +18,12 @@ final class DexNaturesModel
 	/**
 	 * Constructor.
 	 *
-	 * @param NatureRepositoryInterface $natureRepository
-	 * @param NatureNameRepositoryInterface $natureNameRepository
-	 * @param StatNameRepositoryInterface $statNameRepository
+	 * @param DexNatureRepositoryInterface $dexNatureRepository
 	 */
 	public function __construct(
-		NatureRepositoryInterface $natureRepository,
-		NatureNameRepositoryInterface $natureNameRepository,
-		StatNameRepositoryInterface $statNameRepository
+		DexNatureRepositoryInterface $dexNatureRepository
 	) {
-		$this->natureRepository = $natureRepository;
-		$this->natureNameRepository = $natureNameRepository;
-		$this->statNameRepository = $statNameRepository;
+		$this->dexNatureRepository = $dexNatureRepository;
 	}
 
 	/**
@@ -50,36 +40,7 @@ final class DexNaturesModel
 	) : void {
 		$this->generationIdentifier = $generationIdentifier;
 
-		$natures = $this->natureRepository->getAll();
-		$natureNames = $this->natureNameRepository->getByLanguage($languageId);
-		$statNames = $this->statNameRepository->getByLanguage($languageId);
-
-		$this->natures = [];
-
-		foreach ($natures as $nature) {
-			$natureId = $nature->getId()->value();
-			$natureName = $natureNames[$natureId];
-
-			$increasedStatName = null;
-			$decreasedStatName = null;
-			if ($nature->getIncreasedStatId() !== null) {
-				$increasedStatId = $nature->getIncreasedStatId()->value();
-				$increasedStatName = $statNames[$increasedStatId];
-				$increasedStatName = $increasedStatName->getName();
-			}
-			if ($nature->getDecreasedStatId() !== null) {
-				$decreasedStatId = $nature->getDecreasedStatId()->value();
-				$decreasedStatName = $statNames[$decreasedStatId];
-				$decreasedStatName = $decreasedStatName->getName();
-			}
-
-			$this->natures[] = [
-				'name' => $natureName->getName(),
-				'increasedStatName' => $increasedStatName,
-				'decreasedStatName' => $decreasedStatName,
-				'vcExpRemainder' => $nature->getVcExpRemainder(),
-			];
-		}
+		$this->natures = $this->dexNatureRepository->getByLanguage($languageId);
 	}
 
 	/**

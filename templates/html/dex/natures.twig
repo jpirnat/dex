@@ -14,16 +14,16 @@
 			{% for nature in natures %}
 				<tr>
 					<td>{{ nature.name|e }}</td>
-					{% if nature.increasedStatName %}
+					{% if nature.increasedStat %}
 						<td class="dex-nature--increased">
-							{{ nature.increasedStatName| e}}
+							{{ nature.increasedStat| e}}
 						</td>
 					{% else %}
 						<td class="dex-nature--neutral">-</td>
 					{% endif %}
-					{% if nature.decreasedStatName %}
+					{% if nature.decreasedStat %}
 						<td class="dex-nature--decreased">
-							{{ nature.decreasedStatName|e }}
+							{{ nature.decreasedStat|e }}
 						</td>
 					{% else %}
 						<td class="dex-nature--neutral">-</td>
