@@ -92,7 +92,8 @@ final class StatsUsageView
 
 		return new JsonResponse([
 			'data' => [
-				'title' => 'Porydex - Stats - ' . $thisMonth['text'] . ' ' . $format->getName(),
+				'title' => 'Porydex - Stats - ' . $thisMonth['text'] . ' '
+					. $format->getName(),
 
 				'format' => [
 					'identifier' => $format->getIdentifier(),

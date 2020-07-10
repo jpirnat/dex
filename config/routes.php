@@ -297,12 +297,23 @@ $routes = [
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/leads", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'statsLeads',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/data/stats/$month/$formatIdentifier/$rating/leads", [
 		'controllerClass' => StatsLeadsController::class,
 		'controllerMethod' => 'setData',
 		'viewClass' => StatsLeadsView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
+			JsonErrorMiddleware::class,
 			LanguageMiddleware::class,
 		],
 	]],

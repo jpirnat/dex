@@ -30,6 +30,7 @@ final class BreedingChainsModel
 	private FormIconRepositoryInterface $formIconRepository;
 	private GenerationRepositoryInterface $generationRepository;
 	private PokemonNameRepositoryInterface $pokemonNameRepository;
+	private MoveNameRepositoryInterface $moveNameRepository;
 	private VersionGroupRepositoryInterface $versionGroupRepository;
 	private PokemonEggGroupRepositoryInterface $pokemonEggGroupRepository;
 	private EggGroupNameRepositoryInterface $eggGroupNameRepository;
