@@ -19,8 +19,7 @@ Vue.component('dex-pagination', {
 	},
 	data: function() {
 		return {
-			currentPage: this.value,
-			inputPage: 1,
+			inputPage: this.value,
 		};
 	},
 	computed: {
@@ -28,6 +27,12 @@ Vue.component('dex-pagination', {
 			return Math.ceil(this.numberOfItems / this.itemsPerPage);
 		},
 		visiblePages() {
+			const currentPage = this.value;
+
+			// TODO: This is a terrible hack to get around my lack of knowledge on Vue.js's
+			// internal reactivity system.
+			this.inputPage = currentPage;
+
 			const visiblePages = [];
 
 			const first = 1;
@@ -45,7 +50,7 @@ Vue.component('dex-pagination', {
 
 			// If we're in the beginning section, show pages from first through (number of
 			// visible pages, minus 1 for the ellipsis box).
-			if (this.currentPage <= numberOfVisiblePages - 2) {
+			if (currentPage <= numberOfVisiblePages - 2) {
 				for (let page = first; page <= numberOfVisiblePages - 1; page++) {
 					visiblePages.push({ number: page });
 				}
@@ -54,7 +59,7 @@ Vue.component('dex-pagination', {
 			}
 
 			// If we're in the end section, show pages from (last minus
-			if (this.currentPage >= last - numberOfVisiblePages + 3) {
+			if (currentPage >= last - numberOfVisiblePages + 3) {
 				visiblePages.push({ gap: true });
 				for (let page = last - numberOfVisiblePages + 2; page <= last; page++) {
 					visiblePages.push({ number: page });
@@ -64,8 +69,8 @@ Vue.component('dex-pagination', {
 
 			// We're in the middle section. Show pages from (current page - 3) through
 			// (current page + 3).
-			const leftLimit = this.currentPage - 3; // TODO: Math.floor((numberOfVisiblePages - 2) / 2);
-			const rightLimit = this.currentPage + 3; // TODO: Math.floor((numberOfVisiblePages - 2) / 2);
+			const leftLimit = currentPage - 3; // TODO: Math.floor((numberOfVisiblePages - 2) / 2);
+			const rightLimit = currentPage + 3; // TODO: Math.floor((numberOfVisiblePages - 2) / 2);
 			visiblePages.push({ gap: true });
 			for (let page = leftLimit; page <= rightLimit; page++) {
 				visiblePages.push({ number: page });
@@ -79,15 +84,15 @@ Vue.component('dex-pagination', {
 			<ol class="dex-pagination__list">
 				<li class="dex-pagination__page dex-pagination__page--first"
 					:class="{
-						'dex-pagination__page--disabled': currentPage === 1,
+						'dex-pagination__page--disabled': value === 1,
 					}"
 					@click="setCurrentPage(1)"
 				>
 					&laquo;
 				</li>
-				<li class="dex-pagination__page" @click="setCurrentPage(currentPage - 1)"
+				<li class="dex-pagination__page" @click="setCurrentPage(value - 1)"
 					:class="{
-						'dex-pagination__page--disabled': currentPage === 1,
+						'dex-pagination__page--disabled': value === 1,
 					}"
 				>
 					&lsaquo;
@@ -95,7 +100,7 @@ Vue.component('dex-pagination', {
 				<template v-for="page in visiblePages">
 					<li v-if="page.number" class="dex-pagination__page" @click="setCurrentPage(page.number)"
 						:class="{
-							'dex-pagination__page--current': currentPage === page.number,
+							'dex-pagination__page--current': value === page.number,
 						}"
 					>
 						{{ page.number }}
@@ -117,16 +122,16 @@ Vue.component('dex-pagination', {
 						</template>
 					</v-popover>
 				</template>
-				<li class="dex-pagination__page" @click="setCurrentPage(currentPage + 1)"
+				<li class="dex-pagination__page" @click="setCurrentPage(value + 1)"
 					:class="{
-						'dex-pagination__page--disabled': currentPage === numberOfPages,
+						'dex-pagination__page--disabled': value === numberOfPages,
 					}"
 				>
 					&rsaquo;
 				</li>
 				<li class="dex-pagination__page dex-pagination__page--last"
 					:class="{
-						'dex-pagination__page--disabled': currentPage === numberOfPages,
+						'dex-pagination__page--disabled': value === numberOfPages,
 					}"
 					@click="setCurrentPage(numberOfPages)"
 				>
@@ -139,10 +144,10 @@ Vue.component('dex-pagination', {
 		setCurrentPage(page) {
 			page = Math.min(Math.max(1, page), this.numberOfPages);
 
-			this.currentPage = page;
-			this.inputPage = this.currentPage;
+			this.value = page;
+			this.inputPage = this.value;
 
-			this.$emit('input', this.currentPage);
+			this.$emit('input', this.value);
 		},
 	},
 });
