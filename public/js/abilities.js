@@ -55,4 +55,12 @@ const app = new Vue({
 			}
 		});
 	},
+	watch: {
+		filterName() {
+			this.currentPage = 1;
+		},
+		filterDescription() {
+			this.currentPage = 1;
+		},
+	},
 });

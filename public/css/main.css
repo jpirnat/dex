@@ -522,6 +522,10 @@ a.button {
 
 /* Pokémon usage tables */
 
+.stats-usage__filter {
+	margin: 10px 0;
+}
+
 table.pokemon-usage th,
 table.pokemon-usage td {
 	border: 1px solid black;

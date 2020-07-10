@@ -20,11 +20,30 @@ const app = new Vue({
 
 		myFormat: '',
 		myRating: 0,
+
+		filterName: '',
+
+		currentPage: 1,
+		itemsPerPage: 20,
 	},
 	computed: {
 		showSaveAsDefaultFormat() {
 			return this.format.identifier !== this.myFormat
 				|| this.rating !== this.myRating;
+		},
+		filteredPokemons() {
+			if (!this.filterName) {
+				return this.pokemons;
+			}
+
+			return this.pokemons.filter(
+				p => p.name.toLowerCase().includes(this.filterName.toLowerCase())
+			);
+		},
+		paginatedPokemons() {
+			const start = (this.currentPage - 1) * this.itemsPerPage;
+			const end = start + this.itemsPerPage;
+			return this.filteredPokemons.slice(start, end);
 		},
 	},
 	created() {
@@ -81,6 +100,11 @@ const app = new Vue({
 
 			this.myFormat = formatIdentifier;
 			this.myRating = rating;
+		},
+	},
+	watch: {
+		filterName() {
+			this.currentPage = 1;
 		},
 	},
 });

@@ -22,6 +22,12 @@
 		</ul>
 	</div>
 
+	<dex-pagination
+		v-model="currentPage"
+		:number-of-items="filteredAbilities.length"
+		:items-per-page="itemsPerPage"
+	></dex-pagination>
+
 	<div class="dex-abilities__filters">
 		<label class="dex-abilities__filter">
 			Search by ability name: <input type="search" v-model="filterName">
@@ -30,12 +36,6 @@
 			Search by description: <input type="search" v-model="filterDescription">
 		</label>
 	</div>
-
-	<dex-pagination
-		v-model="currentPage"
-		:number-of-items="filteredAbilities.length"
-		:items-per-page="itemsPerPage"
-	></dex-pagination>
 
 	<table class="dex-table dex-table--full-width">
 		<thead>

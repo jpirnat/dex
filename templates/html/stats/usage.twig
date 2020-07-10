@@ -1,5 +1,10 @@
 {% extends "html/base.twig" %}
 
+{% block styles %}
+	<link href="/css/vtooltip.css" rel="stylesheet">
+	<link href="/css/dex-pagination.css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
@@ -47,6 +52,18 @@
 			</div>
 		</div>
 
+		<dex-pagination
+			v-model="currentPage"
+			:number-of-items="filteredPokemons.length"
+			:items-per-page="itemsPerPage"
+		></dex-pagination>
+
+		<div class="stats-usage__filter">
+			<label>
+				Search by Pokémon name: <input type="search" v-model="filterName">
+			</label>
+		</div>
+
 		<table class="pokemon-usage">
 			<thead>
 				<tr>
@@ -62,7 +79,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr v-for="pokemon in pokemons">
+				<tr v-for="pokemon in paginatedPokemons" :key="pokemon.identifier">
 					<td class="dex-table--number">{{ pokemon.rank }}</td>
 					<td class="dex-table__pokemon-icon">
 						<img :src="`/images/pokemon/icons/${pokemon.icon}`">
@@ -91,6 +108,12 @@
 				</tr>
 			</tbody>
 		</table>
+
+		<dex-pagination
+			v-model="currentPage"
+			:number-of-items="filteredPokemons.length"
+			:items-per-page="itemsPerPage"
+		></dex-pagination>
 	</div>
 </div>
 {% endverbatim %}
@@ -100,5 +123,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 	<script src="/js/dex-breadcrumbs.js"></script>
+
+	<script src="https://unpkg.com/v-tooltip"></script>
+	<script src="/js/dex-pagination.js"></script>
+
 	<script src="/js/stats/usage.js"></script>
 {% endblock %}
