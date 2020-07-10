@@ -1,112 +1,104 @@
 {% extends "html/base.twig" %}
 
 {% block body %}
-	<div class="month-control">
-		{% if prevMonth %}
-			<a class="button prev" href="/stats/{{ prevMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}">
-				&#9668; {{ prevMonth.text|e }}
-			</a>
-		{% endif %}
-
-		<div class="space"></div>
-
-		{% if nextMonth %}
-			<a class="button next" href="/stats/{{ nextMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}">
-				{{ nextMonth.text|e }} &#9658;
-			</a>
-		{% endif %}
+{% verbatim %}
+<div id="app" v-cloak>
+	<div v-if="!loaded">
+		Loading...
 	</div>
+	<div v-else>
+		<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="rating-control">
-		<ul>
-			{% for r in ratings %}
-				<li>
-					<a
-						href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ r|e }}"
-						{% if r == rating %}
-							class="current"
-						{% endif %}
-					>{{ r|e }}</a>
+		<div class="month-control">
+			<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}/${format.identifier}/${rating}`">
+				&#9668; {{ prevMonth.text }}
+			</a>
+
+			<div class="space"></div>
+
+			<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.month}/${format.identifier}/${rating}`">
+				{{ nextMonth.text }} &#9658;
+			</a>
+		</div>
+
+		<div class="rating-control">
+			<ul>
+				<li v-for="r in ratings">
+					<a :href="`/stats/${thisMonth.month}/${format.identifier}/${r}`"
+						:class="{
+							'current': r === rating
+						}"
+					>{{ r }}</a>
 				</li>
-			{% endfor %}
-		</ul>
-	</div>
+			</ul>
+		</div>
 
-	<div class="buttons-control">
-		{% if showLeadsLink %}
-			<a class="button" href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/leads">
+		<div class="buttons-control">
+			<a v-if="showLeadsLink" class="button"
+				:href="`/stats/${thisMonth.month}/${format.identifier}/${rating}/leads`"
+			>
 				Leads
 			</a>
-		{% endif %}
 
-		<div class="space"></div>
+			<div class="space"></div>
 
-		{% if format.identifier != myFormat or rating != myRating %}
-			<div id="save-format" class="button"
-				data-format-identifier="{{ format.identifier|e }}"
-				data-format-name="{{ format.name|e }}"
-				data-rating="{{ rating|e }}"
-			>
+			<div v-if="showSaveAsDefaultFormat" class="button" @click="saveAsDefaultFormat">
 				Save as my default format
 			</div>
-		{% endif %}
-	</div>
+		</div>
 
-	<table class="pokemon-usage">
-		<thead>
-			<tr>
-				<th>Rank</th>
-				<th></th>
-				<th class="pokemon-name">Pokémon</th>
-				<th>Usage %</th>
-				<th>Usage Δ</th>
-				<th>Raw</th>
-				<th>%</th>
-				<th>Real</th>
-				<th>%</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for pokemon in pokemons %}
+		<table class="pokemon-usage">
+			<thead>
 				<tr>
-					<td class="dex-table--number">{{ pokemon.rank|e }}</td>
+					<th>Rank</th>
+					<th></th>
+					<th class="pokemon-name">Pokémon</th>
+					<th>Usage %</th>
+					<th>Usage Δ</th>
+					<th>Raw</th>
+					<th>%</th>
+					<th>Real</th>
+					<th>%</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="pokemon in pokemons">
+					<td class="dex-table--number">{{ pokemon.rank }}</td>
 					<td class="dex-table__pokemon-icon">
-						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
+						<img :src="`/images/pokemon/icons/${pokemon.icon}`">
 					</td>
 					<td>
-						{% if pokemon.showMovesetLink %}
-							<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
-								{{ pokemon.name|e }}
-							</a>
-						{% else %}
-							{{ pokemon.name|e }}
-						{% endif %}
+						<a v-if="showMovesetLink(pokemon)"
+							:href="`/stats/${thisMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`"
+						>{{ pokemon.name }}</a>
+						<template v-else>{{ pokemon.name }}</template>
 					</td>
-					<td class="dex-table--number">{{ pokemon.usagePercent|e }}</td>
-					<td
-						{% if pokemon.usageChange > 0 %}
-							class="dex-table--number dex-table--percent-plus"
-						{% elseif pokemon.usageChange < 0 %}
-							class="dex-table--number dex-table--percent-minus"
-						{% else %}
-							class="dex-table--number"
-						{% endif %}
+					<td class="dex-table--number">{{ pokemon.usagePercentText }}</td>
+					<td	class="dex-table--number"
+						:class="{
+							'dex-table--percent-plus': pokemon.usageChange > 0,
+							'dex-table--percent-minus': pokemon.usageChange < 0,
+						}"
 					>
-						<a class="trend-link" href="/stats/trends/chart?type=usage&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}">
-							{{ pokemon.usageChangeText|e }}
-						</a>
+						<a class="trend-link"
+							:href="`/stats/trends/chart?type=usage&format=${format.identifier}&rating=${rating}&pokemon=${pokemon.identifier}`"
+						>{{ pokemon.usageChangeText }}</a>
 					</td>
-					<td class="dex-table--number">{{ pokemon.raw|e }}</td>
-					<td class="dex-table--number">{{ pokemon.rawPercent|e }}</td>
-					<td class="dex-table--number">{{ pokemon.real|e }}</td>
-					<td class="dex-table--number">{{ pokemon.realPercent|e }}</td>
+					<td class="dex-table--number">{{ pokemon.raw }}</td>
+					<td class="dex-table--number">{{ pokemon.rawPercent }}</td>
+					<td class="dex-table--number">{{ pokemon.real }}</td>
+					<td class="dex-table--number">{{ pokemon.realPercent }}</td>
 				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
-	<script src="/js/main.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<script src="/js/dex-breadcrumbs.js"></script>
+	<script src="/js/stats/usage.js"></script>
 {% endblock %}

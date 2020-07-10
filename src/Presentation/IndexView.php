@@ -88,4 +88,21 @@ final class IndexView
 
 		return new HtmlResponse($content);
 	}
+
+	/**
+	 * Show the stats usage page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function statsUsage() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/stats/usage.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
 }

@@ -4,13 +4,11 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\StatsUsageModel;
-use Laminas\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
 final class StatsUsageView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
 	private StatsUsageModel $statsUsageModel;
 	private IntlFormatterFactory $formatterFactory;
 	private MonthControlFormatter $monthControlFormatter;
@@ -18,21 +16,15 @@ final class StatsUsageView
 	/**
 	 * Constructor.
 	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
 	 * @param StatsUsageModel $statsUsageModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 * @param MonthControlFormatter $monthControlFormatter
 	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
 		StatsUsageModel $statsUsageModel,
 		IntlFormatterFactory $formatterFactory,
 		MonthControlFormatter $monthControlFormatter
 	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
 		$this->statsUsageModel = $statsUsageModel;
 		$this->formatterFactory = $formatterFactory;
 		$this->monthControlFormatter = $monthControlFormatter;
@@ -70,10 +62,10 @@ final class StatsUsageView
 			$pokemons[] = [
 				'rank' => $pokemon->getRank(),
 				'icon' => $pokemon->getIcon(),
-				'showMovesetLink' => $pokemon->getUsagePercent() >= .01,
 				'identifier' => $pokemon->getIdentifier(),
 				'name' => $pokemon->getName(),
-				'usagePercent' => $formatter->formatPercent($pokemon->getUsagePercent()),
+				'usagePercent' => $pokemon->getUsagePercent(),
+				'usagePercentText' => $formatter->formatPercent($pokemon->getUsagePercent()),
 				'usageChange' => $pokemon->getUsageChange(),
 				'usageChangeText' => $formatter->formatChange($pokemon->getUsageChange()),
 				'raw' => $formatter->formatNumber($pokemon->getRaw()),
@@ -98,10 +90,10 @@ final class StatsUsageView
 			],
 		];
 
-		$content = $this->renderer->render(
-			'html/stats/usage.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Stats - ' . $thisMonth['text'] . ' ' . $format->getName(),
+		return new JsonResponse([
+			'data' => [
+				'title' => 'Porydex - Stats - ' . $thisMonth['text'] . ' ' . $format->getName(),
+
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'name' => $format->getName(),
@@ -109,23 +101,18 @@ final class StatsUsageView
 				'rating' => $rating,
 
 				'breadcrumbs' => $breadcrumbs,
-
 				'prevMonth' => $prevMonth,
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
-
 				'ratings' => $this->statsUsageModel->getRatings(),
-
-				'myFormat' => $this->statsUsageModel->getMyFormat(),
-				'myRating' => $this->statsUsageModel->getMyRating(),
-
 				'showLeadsLink' => $this->statsUsageModel->doesLeadsDataExist(),
 
 				// The main data.
 				'pokemons' => $pokemons,
-			]
-		);
 
-		return new HtmlResponse($content);
+				'myFormat' => $this->statsUsageModel->getMyFormat(),
+				'myRating' => $this->statsUsageModel->getMyRating(),
+			]
+		]);
 	}
 }

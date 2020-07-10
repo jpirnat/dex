@@ -251,23 +251,46 @@ $routes = [
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating", [
-		'controllerClass' => StatsUsageController::class,
-		'controllerMethod' => 'setData',
-		'viewClass' => StatsUsageView::class,
-		'viewMethod' => 'getData',
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'statsUsage',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
 			LanguageMiddleware::class,
 		],
 	]],
 
-	['GET', "/stats/current", [
+	['GET', "/data/stats/$month/$formatIdentifier/$rating", [
 		'controllerClass' => StatsUsageController::class,
 		'controllerMethod' => 'setData',
 		'viewClass' => StatsUsageView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => [
+			JsonErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/stats/current", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'statsUsage',
+		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+			CurrentStatsMiddleware::class,
+		],
+	]],
+
+	['GET', "/data/stats/current", [
+		'controllerClass' => StatsUsageController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => StatsUsageView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => [
+			JsonErrorMiddleware::class,
 			LanguageMiddleware::class,
 			CurrentStatsMiddleware::class,
 		],
