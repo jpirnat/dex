@@ -1,7 +1,11 @@
+'use strict';
+
 Vue.component('dex-breadcrumbs', {
 	props: {
-		breadcrumbs: Array,
-		required: true
+		breadcrumbs: {
+			type: Array,
+			required: true,
+		},
 	},
 	template: `
 		<nav v-if="breadcrumbs.length" class="breadcrumbs" aria-label="Breadcrumb">
