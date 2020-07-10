@@ -43,7 +43,7 @@ final class IndexView
 	 *
 	 * @return ResponseInterface
 	 */
-	public function abilities() : ResponseInterface
+	public function dexAbilities() : ResponseInterface
 	{
 		$content = $this->renderer->render(
 			'html/dex/abilities.twig',
@@ -60,7 +60,7 @@ final class IndexView
 	 *
 	 * @return ResponseInterface
 	 */
-	public function natures() : ResponseInterface
+	public function dexNatures() : ResponseInterface
 	{
 		$content = $this->renderer->render(
 			'html/dex/natures.twig',
@@ -77,7 +77,7 @@ final class IndexView
 	 *
 	 * @return ResponseInterface
 	 */
-	public function types() : ResponseInterface
+	public function dexTypes() : ResponseInterface
 	{
 		$content = $this->renderer->render(
 			'html/dex/types.twig',

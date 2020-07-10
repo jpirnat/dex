@@ -358,7 +358,9 @@ a.button {
 	font-weight: bold;
 }
 .type-toggler__types {
-	display: flex;q
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .type-toggler__type {
 	margin: 3px;

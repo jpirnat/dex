@@ -89,7 +89,7 @@ $routes = [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
-		'viewMethod' => 'abilities',
+		'viewMethod' => 'dexAbilities',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
 			LanguageMiddleware::class,
@@ -144,7 +144,7 @@ $routes = [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
-		'viewMethod' => 'natures',
+		'viewMethod' => 'dexNatures',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
 			LanguageMiddleware::class,
@@ -188,7 +188,7 @@ $routes = [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
-		'viewMethod' => 'types',
+		'viewMethod' => 'dexTypes',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
 			LanguageMiddleware::class,
