@@ -1,5 +1,10 @@
 {% extends "html/base.twig" %}
 
+{% block styles %}
+	<link href="/css/vtooltip.css" rel="stylesheet">
+	<link href="/css/dex-pagination.css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
@@ -19,12 +24,18 @@
 
 	<div class="dex-abilities__filters">
 		<label class="dex-abilities__filter">
-			Search by ability name: <input type="text" v-model="filterName">
+			Search by ability name: <input type="search" v-model="filterName">
 		</label>
 		<label class="dex-abilities__filter">
-			Search by description: <input type="text" v-model="filterDescription">
+			Search by description: <input type="search" v-model="filterDescription">
 		</label>
 	</div>
+
+	<dex-pagination
+		v-model="currentPage"
+		:number-of-items="filteredAbilities.length"
+		:items-per-page="itemsPerPage"
+	></dex-pagination>
 
 	<table class="dex-table dex-table--full-width">
 		<thead>
@@ -35,7 +46,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr v-for="ability in filteredAbilities">
+			<tr v-for="ability in paginatedAbilities">
 				<td class="dex-table__ability-name">
 					<a :href="`/dex/${generation.identifier}/abilities/${ability.identifier}`">
 						{{ ability.name }}
@@ -53,6 +64,12 @@
 			</tr>
 		</tbody>
 	</table>
+
+	<dex-pagination
+		v-model="currentPage"
+		:number-of-items="filteredAbilities.length"
+		:items-per-page="itemsPerPage"
+	></dex-pagination>
 </div>
 {% endverbatim %}
 {% endblock %}
@@ -60,5 +77,9 @@
 {% block scripts %}
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 	<script src="/js/dex-breadcrumbs.js"></script>
+
+	<script src="https://unpkg.com/v-tooltip"></script>
+	<script src="/js/dex-pagination.js"></script>
+
 	<script src="/js/abilities.js"></script>
 {% endblock %}

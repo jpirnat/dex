@@ -13,9 +13,13 @@ const app = new Vue({
 
 		filterName: '',
 		filterDescription: '',
+
+		currentPage: 1,
+		itemsPerPage: 10,
 	},
 	computed: {
 		filteredAbilities() {
+			// 1) Filter. 2) Sort. 3) Paginate.
 			if (!this.filterName && !this.filterDescription) {
 				return this.abilities;
 			}
@@ -24,6 +28,11 @@ const app = new Vue({
 				a.name.toLowerCase().includes(this.filterName.toLowerCase())
 				&& a.description.toLowerCase().includes(this.filterDescription.toLowerCase())
 			);
+		},
+		paginatedAbilities() {
+			const start = (this.currentPage - 1) * this.itemsPerPage;
+			const end = start + this.itemsPerPage;
+			return this.filteredAbilities.slice(start, end);
 		},
 	},
 	created() {
