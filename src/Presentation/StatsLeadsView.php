@@ -64,11 +64,14 @@ final class StatsLeadsView
 				'icon' => $pokemon->getIcon(),
 				'identifier' => $pokemon->getIdentifier(),
 				'name' => $pokemon->getName(),
+				'usagePercent' => $pokemon->getUsagePercent(),
 				'usagePercentText' => $formatter->formatPercent($pokemon->getUsagePercent()),
 				'usageChange' => $pokemon->getUsageChange(),
 				'usageChangeText' => $formatter->formatChange($pokemon->getUsageChange()),
-				'raw' => $formatter->formatNumber($pokemon->getRaw()),
-				'rawPercent' => $formatter->formatPercent($pokemon->getRawPercent()),
+				'raw' => $pokemon->getRaw(),
+				'rawText' => $formatter->formatNumber($pokemon->getRaw()),
+				'rawPercent' => $pokemon->getRawPercent(),
+				'rawPercentText' => $formatter->formatPercent($pokemon->getRawPercent()),
 			];
 		}
 

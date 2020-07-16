@@ -21,6 +21,9 @@ const app = new Vue({
 
 		currentPage: 1,
 		itemsPerPage: 20,
+
+		sortColumn: '',
+		sortDirection: '',
 	},
 	computed: {
 		filteredPokemons() {
@@ -63,6 +66,27 @@ const app = new Vue({
 				document.title = data.title;
 			}
 		});
+	},
+	methods: {
+		sortBy(column, defaultDirection) {
+			if (this.sortColumn !== column) {
+				// If we're not already sorted by this column, sort in its default direction.
+				this.sortColumn = column;
+				this.sortDirection = defaultDirection;
+			} else {
+				// If we're already sorted by this column, reverse the direction.
+				this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+			}
+
+			const modifier = this.sortDirection === 'asc' ? 1 : -1;
+
+			// Do the sort.
+			this.pokemons.sort((a, b) => {
+				if (a[column] < b[column]) { return -1 * modifier; }
+				if (a[column] > b[column]) { return +1 * modifier; }
+				return 0;
+			});
+		},
 	},
 	watch: {
 		filterName() {

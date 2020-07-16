@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*, *::before, *::after {
 	box-sizing: inherit;
 }
 
@@ -264,6 +264,18 @@ a.button {
 
 .dex-table__move-description {
 	width: 50%;
+}
+
+.dex-table__header--sortable {
+	cursor: pointer;
+}
+.dex-table__header--sorted-asc::after {
+	margin-left: 8px;
+	content: "▲";
+}
+.dex-table__header--sorted-desc::after {
+	margin-left: 8px;
+	content: "▼";
 }
 
 

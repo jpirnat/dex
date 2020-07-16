@@ -68,10 +68,14 @@ final class StatsUsageView
 				'usagePercentText' => $formatter->formatPercent($pokemon->getUsagePercent()),
 				'usageChange' => $pokemon->getUsageChange(),
 				'usageChangeText' => $formatter->formatChange($pokemon->getUsageChange()),
-				'raw' => $formatter->formatNumber($pokemon->getRaw()),
-				'rawPercent' => $formatter->formatPercent($pokemon->getRawPercent()),
-				'real' => $formatter->formatNumber($pokemon->getReal()),
-				'realPercent' => $formatter->formatPercent($pokemon->getRealPercent()),
+				'raw' => $pokemon->getRaw(),
+				'rawText' => $formatter->formatNumber($pokemon->getRaw()),
+				'rawPercent' => $pokemon->getRawPercent(),
+				'rawPercentText' => $formatter->formatPercent($pokemon->getRawPercent()),
+				'real' => $pokemon->getReal(),
+				'realText' => $formatter->formatNumber($pokemon->getReal()),
+				'realPercent' => $pokemon->getRealPercent(),
+				'realPercentText' => $formatter->formatPercent($pokemon->getRealPercent()),
 			];
 		}
 
