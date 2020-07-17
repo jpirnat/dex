@@ -4,13 +4,11 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\StatsItemModel;
-use Laminas\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
 final class StatsItemView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
 	private StatsItemModel $statsItemModel;
 	private IntlFormatterFactory $formatterFactory;
 	private MonthControlFormatter $monthControlFormatter;
@@ -18,21 +16,15 @@ final class StatsItemView
 	/**
 	 * Constructor.
 	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
 	 * @param StatsItemModel $statsItemModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 * @param MonthControlFormatter $monthControlFormatter
 	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
 		StatsItemModel $statsItemModel,
 		IntlFormatterFactory $formatterFactory,
 		MonthControlFormatter $monthControlFormatter
 	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
 		$this->statsItemModel = $statsItemModel;
 		$this->formatterFactory = $formatterFactory;
 		$this->monthControlFormatter = $monthControlFormatter;
@@ -70,9 +62,12 @@ final class StatsItemView
 				'icon' => $pokemon->getIcon(),
 				'identifier' => $pokemon->getIdentifier(),
 				'name' => $pokemon->getName(),
-				'pokemonPercent' => $formatter->formatPercent($pokemon->getPokemonPercent()),
-				'itemPercent' => $formatter->formatPercent($pokemon->getItemPercent()),
-				'usagePercent' => $formatter->formatPercent($pokemon->getUsagePercent()),
+				'pokemonPercent' => $pokemon->getPokemonPercent(),
+				'pokemonPercentText' => $formatter->formatPercent($pokemon->getPokemonPercent()),
+				'itemPercent' => $pokemon->getItemPercent(),
+				'itemPercentText' => $formatter->formatPercent($pokemon->getItemPercent()),
+				'usagePercent' => $pokemon->getUsagePercent(),
+				'usagePercentText' => $formatter->formatPercent($pokemon->getUsagePercent()),
 				'usageChange' => $pokemon->getUsageChange(),
 				'usageChangeText' => $formatter->formatChange($pokemon->getUsageChange()),
 			];
@@ -99,10 +94,11 @@ final class StatsItemView
 			],
 		];
 
-		$content = $this->renderer->render(
-			'html/stats/item.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Stats - ' . $thisMonth['text'] . ' ' . $format->getName() . ' - ' . $itemName,
+		return new JsonResponse([
+			'data' => [
+				'title' => 'Stats - ' . $thisMonth['text'] . ' '
+					. $format->getName() . ' - ' . $itemName,
+
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'name' => $format->getName(),
@@ -110,11 +106,9 @@ final class StatsItemView
 				'rating' => $rating,
 
 				'breadcrumbs' => $breadcrumbs,
-
 				'prevMonth' => $prevMonth,
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
-
 				'ratings' => $this->statsItemModel->getRatings(),
 
 				'item' => [
@@ -126,8 +120,6 @@ final class StatsItemView
 				// The main data.
 				'pokemons' => $pokemons,
 			]
-		);
-
-		return new HtmlResponse($content);
+		]);
 	}
 }

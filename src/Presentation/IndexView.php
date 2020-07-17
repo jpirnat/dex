@@ -122,4 +122,55 @@ final class IndexView
 
 		return new HtmlResponse($content);
 	}
+
+	/**
+	 * Show the stats ability page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function statsAbility() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/stats/ability.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
+	 * Show the stats item page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function statsItem() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/stats/item.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
+	 * Show the stats move page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function statsMove() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/stats/move.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
 }

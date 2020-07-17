@@ -330,34 +330,67 @@ $routes = [
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/abilities/$abilityIdentifier", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'statsAbility',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/data/stats/$month/$formatIdentifier/$rating/abilities/$abilityIdentifier", [
 		'controllerClass' => StatsAbilityController::class,
 		'controllerMethod' => 'setData',
 		'viewClass' => StatsAbilityView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
+			JsonErrorMiddleware::class,
 			LanguageMiddleware::class,
 		],
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/items/$itemIdentifier", [
-		'controllerClass' => StatsItemController::class,
-		'controllerMethod' => 'setData',
-		'viewClass' => StatsItemView::class,
-		'viewMethod' => 'getData',
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'statsItem',
 		'middlewareClasses' => [
 			HtmlErrorMiddleware::class,
 			LanguageMiddleware::class,
 		],
 	]],
 
+	['GET', "/data/stats/$month/$formatIdentifier/$rating/items/$itemIdentifier", [
+		'controllerClass' => StatsItemController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => StatsItemView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => [
+			JsonErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
 	['GET', "/stats/$month/$formatIdentifier/$rating/moves/$moveIdentifier", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'statsMove',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/data/stats/$month/$formatIdentifier/$rating/moves/$moveIdentifier", [
 		'controllerClass' => StatsMoveController::class,
 		'controllerMethod' => 'setData',
 		'viewClass' => StatsMoveView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
+			JsonErrorMiddleware::class,
 			LanguageMiddleware::class,
 		],
 	]],

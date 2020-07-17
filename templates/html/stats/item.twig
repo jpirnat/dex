@@ -1,79 +1,136 @@
 {% extends "html/base.twig" %}
 
+{% block styles %}
+	<link href="/css/vtooltip.css" rel="stylesheet">
+	<link href="/css/dex-pagination.css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
-	<div class="month-control">
-		{% if prevMonth %}
-			<a class="button prev" href="/stats/{{ prevMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
-				&#9668; {{ prevMonth.text|e }}
-			</a>
-		{% endif %}
-
-		<div class="space"></div>
-
-		{% if nextMonth %}
-			<a class="button next" href="/stats/{{ nextMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
-				{{ nextMonth.text|e }} &#9658;
-			</a>
-		{% endif %}
+{% verbatim %}
+<div id="app" v-cloak>
+	<div v-if="!loaded">
+		Loading...
 	</div>
+	<div v-else>
+		<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="rating-control">
-		<ul>
-			{% for r in ratings %}
-				<li>
-					<a
-						href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ r|e }}/items/{{ item.identifier|e }}"
-						{% if r == rating %}
-							class="current"
-						{% endif %}
-					>{{ r|e }}</a>
+		<div class="month-control">
+			<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}/${format.identifier}/${rating}/items/${item.identifier}`">
+				&#9668; {{ prevMonth.text }}
+			</a>
+
+			<div class="space"></div>
+
+			<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.month}/${format.identifier}/${rating}/items/${item.identifier}`">
+				{{ nextMonth.text }} &#9658;
+			</a>
+		</div>
+
+		<div class="rating-control">
+			<ul>
+				<li v-for="r in ratings">
+					<a :href="`/stats/${thisMonth.month}/${format.identifier}/${r}/items/${item.identifier}`"
+						:class="{
+							'current': r === rating
+						}"
+					>{{ r }}</a>
 				</li>
-			{% endfor %}
-		</ul>
-	</div>
+			</ul>
+		</div>
 
-	<p>{{ item.name|e }}: {{ item.description|e }}</p>
+		<p>{{ item.name }}: {{ item.description }}</p>
 
-	<table class="pokemon-usage">
-		<thead>
-			<tr>
-				<th></th>
-				<th class="pokemon-name">Pokémon</th>
-				<th>Pokémon&nbsp;%</th>
-				<th>Item&nbsp;%</th>
-				<th>Usage&nbsp;%</th>
-				<th>Usage&nbsp;Δ</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for pokemon in pokemons %}
+		<dex-pagination
+			v-model="currentPage"
+			:number-of-items="filteredPokemons.length"
+			:items-per-page="itemsPerPage"
+		></dex-pagination>
+
+		<div class="stats-usage__filter">
+			<label>
+				Search by Pokémon name: <input type="search" v-model="filterName">
+			</label>
+		</div>
+
+		<table class="pokemon-usage">
+			<thead>
 				<tr>
+					<th></th>
+					<th class="pokemon-name dex-table__header--sortable" @click="sortBy('name', 'asc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
+						}"
+					>Pokémon</th>
+					<th class="dex-table__header--sortable" @click="sortBy('pokemonPercent', 'desc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'pokemonPercent' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'pokemonPercent' && sortDirection === 'desc',
+						}"
+					>Pokémon&nbsp;%</th>
+					<th class="dex-table__header--sortable" @click="sortBy('itemPercent', 'desc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'itemPercent' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'itemPercent' && sortDirection === 'desc',
+						}"
+					>Item&nbsp;%</th>
+					<th class="dex-table__header--sortable" @click="sortBy('usagePercent', 'desc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'usagePercent' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'usagePercent' && sortDirection === 'desc',
+						}"
+					>Usage&nbsp;%</th>
+					<th class="dex-table__header--sortable" @click="sortBy('usageChange', 'desc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'usageChange' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'usageChange' && sortDirection === 'desc',
+						}"
+					>Usage&nbsp;Δ</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="pokemon in paginatedPokemons" :key="pokemon.identifier">
 					<td class="dex-table__pokemon-icon">
-						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
+						<img :src="`/images/pokemon/icons/${pokemon.icon}`">
 					</td>
 					<td>
-						<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
-							{{ pokemon.name|e }}
+						<a :href="`/stats/${thisMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
+							{{ pokemon.name }}
 						</a>
 					</td>
-					<td class="dex-table--number">{{ pokemon.pokemonPercent|e }}</td>
-					<td class="dex-table--number">{{ pokemon.itemPercent|e }}</td>
-					<td class="dex-table--number">{{ pokemon.usagePercent|e }}</td>
-					<td
-						{% if pokemon.usageChange > 0 %}
-							class="dex-table--number dex-table--percent-plus"
-						{% elseif pokemon.usageChange < 0 %}
-							class="dex-table--number dex-table--percent-minus"
-						{% else %}
-							class="dex-table--number"
-						{% endif %}
+					<td class="dex-table--number">{{ pokemon.pokemonPercentText }}</td>
+					<td class="dex-table--number">{{ pokemon.itemPercentText }}</td>
+					<td class="dex-table--number">{{ pokemon.usagePercentText }}</td>
+					<td class="dex-table--number"
+						:class="{
+							'dex-table--percent-plus': pokemon.usageChange > 0,
+							'dex-table--percent-minus': pokemon.usageChange < 0,
+						}"
 					>
-						<a class="trend-link" href="/stats/trends/chart?type=usage-item&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&item={{ item.identifier|e }}">
-							{{ pokemon.usageChangeText|e }}
-						</a>
+						<a class="trend-link"
+							:href="`/stats/trends/chart?type=usage-item&format=${format.identifier}&rating=${rating}&pokemon=${pokemon.identifier}&item=${item.identifier}`"
+						>{{ pokemon.usageChangeText }}</a>
 					</td>
 				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+			</tbody>
+		</table>
+
+		<dex-pagination
+			v-model="currentPage"
+			:number-of-items="filteredPokemons.length"
+			:items-per-page="itemsPerPage"
+		></dex-pagination>
+	</div>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	<script src="/js/dex-breadcrumbs.js"></script>
+
+	<script src="https://unpkg.com/v-tooltip"></script>
+	<script src="/js/dex-pagination.js"></script>
+
+	<script src="/js/stats/item.js"></script>
 {% endblock %}
