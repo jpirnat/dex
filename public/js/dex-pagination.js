@@ -80,7 +80,7 @@ Vue.component('dex-pagination', {
 		},
 	},
 	template: `
-		<nav class="dex-pagination">
+		<nav class="dex-pagination" v-if="numberOfItems > itemsPerPage">
 			<ol class="dex-pagination__list">
 				<li class="dex-pagination__page dex-pagination__page--first"
 					:class="{
