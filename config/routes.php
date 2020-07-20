@@ -119,12 +119,23 @@ $routes = [
 	]],
 
 	['GET', "/dex/$generationIdentifier/moves", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'dexMoves',
+		'middlewareClasses' => [
+			HtmlErrorMiddleware::class,
+			LanguageMiddleware::class,
+		],
+	]],
+
+	['GET', "/data/dex/$generationIdentifier/moves", [
 		'controllerClass' => DexMovesController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => DexMovesView::class,
 		'viewMethod' => 'index',
 		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
+			JsonErrorMiddleware::class,
 			LanguageMiddleware::class,
 		],
 	]],

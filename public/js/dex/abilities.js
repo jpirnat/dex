@@ -19,15 +19,21 @@ const app = new Vue({
 	},
 	computed: {
 		filteredAbilities() {
-			// 1) Filter. 2) Sort. 3) Paginate.
-			if (!this.filterName && !this.filterDescription) {
-				return this.abilities;
+			let filteredAbilities = this.abilities;
+
+			if (this.filterName) {
+				filteredAbilities = filteredAbilities.filter(a => a.name.toLowerCase().includes(
+					this.filterName.toLowerCase())
+				);
 			}
 
-			return this.abilities.filter(a => 
-				a.name.toLowerCase().includes(this.filterName.toLowerCase())
-				&& a.description.toLowerCase().includes(this.filterDescription.toLowerCase())
-			);
+			if (this.filterDescription) {
+				filteredAbilities = filteredAbilities.filter(a => a.description.toLowerCase().includes(
+					this.filterDescription.toLowerCase())
+				);
+			};
+
+			return filteredAbilities;
 		},
 		paginatedAbilities() {
 			const start = (this.currentPage - 1) * this.itemsPerPage;
