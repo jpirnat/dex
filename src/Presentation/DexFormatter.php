@@ -77,6 +77,7 @@ final class DexFormatter
 				'abilities' => $this->formatDexPokemonAbilities($dexPokemon->getAbilities()),
 				'baseStats' => $dexPokemon->getBaseStats(),
 				'bst' => $dexPokemon->getBst(),
+				'sort' => $dexPokemon->getSort(),
 			];
 		}
 

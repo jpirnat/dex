@@ -1,80 +1,134 @@
 {% extends "html/base.twig" %}
 
+{% block styles %}
+	<link href="/css/vtooltip.css" rel="stylesheet">
+	<link href="/css/dex-pagination.css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
+{% verbatim %}
+<div id="app" v-cloak>
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
 	<div class="generation-control">
 		<ul>
-			{% for g in generations %}
-				<li>
-					<a href="/dex/{{ g.identifier|e }}/pokemon"
-						{% if g.identifier == generation.identifier %}
-							class="current"
-						{% endif %}
-					>{{ g.name|e }}</a>
-				</li>
-			{% endfor %}
+			<li v-for="g in generations">
+				<a :href="`/dex/${g.identifier}/pokemon`"
+					:class="{
+						'current': g.identifier === generation.identifier
+					}"
+				>{{ g.name }}</a>
+			</li>
 		</ul>
+	</div>
+
+	<dex-pagination
+		v-model="currentPage"
+		:number-of-items="filteredPokemons.length"
+		:items-per-page="itemsPerPage"
+	></dex-pagination>
+
+	<div class="dex-pokemons__filters">
+		<label class="dex-pokemons__filter">
+			Filter by Pokémon name: <input type="search" v-model="filterName">
+		</label>
 	</div>
 
 	<table class="dex-table dex-table--full-width">
 		<thead>
 			<tr>
-				<th></th>
-				<th scope="col">Pokémon</th>
+				<th class="dex-table__header--sortable"
+					@click="sortBy('sort', 'asc', p => p.sort)"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'sort' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'sort' && sortDirection === 'desc',
+					}"
+				></th>
+				<th scope="col" class="dex-table__header--sortable"
+					@click="sortBy('name', 'asc', p => p.name)"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
+					}"
+				>Pokémon</th>
 				<th scope="col">Types</th>
-				{% if showAbilities %}
-					<th scope="col">Abilities</th>
-				{% endif %}
-				{% for stat in stats %}
-					<th scope="col" class="dex-table--number">
-						<abbr title="{{ stat.name|e }}">{{ stat.abbr|e }}</abbr>
-					</th>
-				{% endfor %}
-				<th scope="col" class="dex-table--number">BST</th>
+				<th v-if="showAbilities" scope="col">Abilities</th>
+				<th v-for="stat in stats" :key="stat.key" scope="col" class="dex-table--number dex-table__header--sortable"
+					@click="sortBy(stat.key, 'desc', p => p.baseStats[stat.key])"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === stat.key && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === stat.key && sortDirection === 'desc',
+					}"
+				>
+					<abbr title="{{ stat.name }}">{{ stat.abbr }}</abbr>
+				</th>
+				<th scope="col" class="dex-table--number dex-table__header--sortable"
+					@click="sortBy('bst', 'desc', p => p.bst)"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'bst' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'bst' && sortDirection === 'desc',
+					}"
+				>
+					<abbr title="Base Stat Total">BST</abbr>
+				</th>
 			</tr>
 		</thead>
 		<tbody>
-			{% for pokemon in pokemons %}
-				<tr>
-					<td>
-						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
-					</td>
-					<td>
-						<a href="/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.identifier|e }}">
-							{{ pokemon.name|e }}
+			<tr v-for="pokemon in paginatedPokemons" :key="pokemon.identifier">
+				<td>
+					<img :src="`/images/pokemon/icons/${pokemon.icon}`">
+				</td>
+				<td>
+					<a :href="`/dex/${generation.identifier}/pokemon/${pokemon.identifier}`">
+						{{ pokemon.name }}
+					</a>
+				</td>
+				<td class="dex-table__pokemon-types">
+					<a v-for="type in pokemon.types" :key="type.identifier"
+						:href="`/dex/${generation.identifier}/types/${type.identifier}`"
+					>
+						<img :src="`/images/types/${type.icon}`" :alt="type.name">
+					</a>
+				</td>
+				<td v-if="showAbilities">
+					<div class="dex-table__pokemon-abilities">
+						<a v-for="ability in pokemon.abilities" :key="ability.identifier"
+							:href="`/dex/${generation.identifier}/abilities/${ability.identifier}`"
+							class="dex-table__pokemon-ability"
+							:class="{
+								'dex-table__pokemon-ability--hidden': ability.isHiddenAbility,
+							}"
+						>
+							{{ ability.name }}
 						</a>
-					</td>
-					<td class="dex-table__pokemon-types">
-						{% for type in pokemon.types %}
-							<a href="/dex/{{ generation.identifier|e }}/types/{{ type.identifier|e }}">
-								<img src="/images/types/{{ type.icon|e }}" alt="{{ type.name|e }}">
-							</a>
-						{% endfor %}
-					</td>
-					{% if showAbilities %}
-						<td>
-							<div class="dex-table__pokemon-abilities">
-								{% for ability in pokemon.abilities %}
-									<a href="/dex/{{ generation.identifier|e }}/abilities/{{ ability.identifier|e }}"
-										{% if ability.isHiddenAbility %}
-											class="dex-table__pokemon-ability dex-table__pokemon-ability--hidden"
-										{% else %}
-											class="dex-table__pokemon-ability"
-										{% endif %}
-									>
-										{{ ability.name|e }}
-									</a>
-								{% endfor %}
-							</div>
-						</td>
-					{% endif %}
-					{% for stat in stats %}
-						<td class="dex-table--number">
-							{{ pokemon.baseStats[stat.key]|e }}
-						</td>
-					{% endfor %}
-					<td class="dex-table--number">{{ pokemon.bst|e }}</td>
-				</tr>
-			{% endfor %}
+					</div>
+				</td>
+				<td v-for="stat in stats" :key="stat.key" class="dex-table--number">
+					{{ pokemon.baseStats[stat.key] }}
+				</td>
+				<td class="dex-table--number">{{ pokemon.bst }}</td>
+			</tr>
+			<tr v-if="loading">
+				<td :colspan="4 + (showAbilities ? 1 : 0) + stats.length" style="text-align: center;">Loading...</td>
+			</tr>
 		</tbody>
 	</table>
+
+	<dex-pagination
+		v-model="currentPage"
+		:number-of-items="filteredPokemons.length"
+		:items-per-page="itemsPerPage"
+	></dex-pagination>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	<script src="/js/dex-breadcrumbs.js"></script>
+
+	<script src="https://unpkg.com/v-tooltip"></script>
+	<script src="/js/dex-pagination.js"></script>
+
+	<script src="/js/dex/pokemons.js"></script>
 {% endblock %}

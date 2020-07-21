@@ -321,6 +321,15 @@ a.button {
 
 
 
+/* dex Pokémons */
+
+.dex-pokemons__filter {
+	display: inline-block;
+	margin: 0 10px 10px 0;
+}
+
+
+
 /* dex types */
 
 .type-chart__axis-label {

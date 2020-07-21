@@ -30,10 +30,10 @@
 
 	<div class="dex-moves__filters">
 		<label class="dex-moves__filter">
-			Search by move name: <input type="search" v-model="filterName">
+			Filter by move name: <input type="search" v-model="filterName">
 		</label>
 		<label v-if="showMoveDescriptions" class="dex-moves__filter">
-			Search by description: <input type="search" v-model="filterDescription">
+			Filter by description: <input type="search" v-model="filterDescription">
 		</label>
 	</div>
 
@@ -41,7 +41,7 @@
 		<thead>
 			<tr>
 				<th scope="col" class="dex-table__header--sortable"
-					@click="sortBy('name', 'asc', null)"
+					@click="sortBy('name', 'asc', m => m.name)"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
@@ -62,21 +62,21 @@
 					}"
 				>Category</th>
 				<th scope="col" class="dex-table__header--sortable"
-					@click="sortBy('pp', 'desc', null)"
+					@click="sortBy('pp', 'desc', m => m.pp)"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'pp' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'pp' && sortDirection === 'desc',
 					}"
 				>PP</th>
 				<th scope="col" class="dex-table__header--sortable"
-					@click="sortBy('power', 'desc', null)"
+					@click="sortBy('power', 'desc', m => m.power)"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'power' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'power' && sortDirection === 'desc',
 					}"
 				>Power</th>
 				<th scope="col" class="dex-table__header--sortable"
-					@click="sortBy('accuracy', 'desc', null)"
+					@click="sortBy('accuracy', 'desc', m => m.accuracy)"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'accuracy' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'accuracy' && sortDirection === 'desc',

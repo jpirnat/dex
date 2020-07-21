@@ -90,6 +90,23 @@ final class IndexView
 	}
 
 	/**
+	 * Show the dex Pokémons page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function dexPokemons() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/pokemons.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Pokémon',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the dex types page.
 	 *
 	 * @return ResponseInterface

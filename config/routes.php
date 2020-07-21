@@ -95,11 +95,19 @@ $routes = [
 	]],
 
 	['GET', "/dex/$generationIdentifier/pokemon", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'dexPokemons',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$generationIdentifier/pokemon", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexPokemonsController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => \Jp\Dex\Presentation\DexPokemonsView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => MiddlewareGroups::HTML,
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/dex/$generationIdentifier/pokemon/$pokemonIdentifier", [

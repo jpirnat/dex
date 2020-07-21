@@ -9,11 +9,11 @@ const app = new Vue({
 		breadcrumbs: [],
 		generation: {},
 		generations: [],
-		showMoveDescriptions: true,
-		moves: [],
+		showAbilities: true,
+		stats: [],
+		pokemons: [],
 
 		filterName: '',
-		filterDescription: '',
 
 		currentPage: 1,
 		itemsPerPage: 10,
@@ -22,27 +22,21 @@ const app = new Vue({
 		sortDirection: '',
 	},
 	computed: {
-		filteredMoves() {
-			let filteredMoves = this.moves;
+		filteredPokemons() {
+			let filteredPokemons = this.pokemons;
 
 			if (this.filterName) {
-				filteredMoves = filteredMoves.filter(a => a.name.toLowerCase().includes(
+				filteredPokemons = filteredPokemons.filter(p => p.name.toLowerCase().includes(
 					this.filterName.toLowerCase())
 				);
 			}
 
-			if (this.filterDescription) {
-				filteredMoves = filteredMoves.filter(a => a.description.toLowerCase().includes(
-					this.filterDescription.toLowerCase())
-				);
-			};
-
-			return filteredMoves;
+			return filteredPokemons;
 		},
-		paginatedMoves() {
+		paginatedPokemons() {
 			const start = (this.currentPage - 1) * this.itemsPerPage;
 			const end = start + this.itemsPerPage;
-			return this.filteredMoves.slice(start, end);
+			return this.filteredPokemons.slice(start, end);
 		},
 	},
 	created() {
@@ -61,17 +55,14 @@ const app = new Vue({
 				this.breadcrumbs = data.breadcrumbs;
 				this.generation = data.generation;
 				this.generations = data.generations;
-				this.showMoveDescriptions = data.showMoveDescriptions;
-				this.moves = data.moves;
+				this.showAbilities = data.showAbilities;
+				this.stats = data.stats;
+				this.pokemons = data.pokemons;
 			}
 		});
 	},
 	methods: {
 		sortBy(column, defaultDirection, sortValueCallback) {
-			// Some of the values we want to sort on for the moves page are in
-			// nested objects, so for those cases we're taking sortFunction as
-			// a callback to extract the value we want to sort on.
-
 			if (this.sortColumn !== column) {
 				// If we're not already sorted by this column, sort in its default direction.
 				this.sortColumn = column;
@@ -84,7 +75,7 @@ const app = new Vue({
 			const modifier = this.sortDirection === 'asc' ? 1 : -1;
 
 			// Do the sort.
-			this.moves.sort((a, b) => {
+			this.pokemons.sort((a, b) => {
 				const aValue = sortValueCallback(a);
 				const bValue = sortValueCallback(b);
 
@@ -96,9 +87,6 @@ const app = new Vue({
 	},
 	watch: {
 		filterName() {
-			this.currentPage = 1;
-		},
-		filterDescription() {
 			this.currentPage = 1;
 		},
 	},

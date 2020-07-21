@@ -4,32 +4,24 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\DexPokemonsModel;
-use Laminas\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
 final class DexPokemonsView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
 	private DexPokemonsModel $dexPokemonsModel;
 	private DexFormatter $dexFormatter;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
 	 * @param DexPokemonsModel $dexPokemonsModel
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
 		DexPokemonsModel $dexPokemonsModel,
 		DexFormatter $dexFormatter
 	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
 		$this->dexPokemonsModel = $dexPokemonsModel;
 		$this->dexFormatter = $dexFormatter;
 	}
@@ -56,20 +48,18 @@ final class DexPokemonsView
 			'text' => 'Pokémon',
 		]];
 
-		$content = $this->renderer->render(
-			'html/dex/pokemons.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Pokémon',
+		return new JsonResponse([
+			'data' => [
+				'breadcrumbs' => $breadcrumbs,
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
-				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 				'showAbilities' => $showAbilities,
 				'stats' => $stats,
 				'pokemons' => $this->dexFormatter->formatDexPokemon($pokemon),
 			]
-		);
+		]);
 
 		return new HtmlResponse($content);
 	}
