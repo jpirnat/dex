@@ -129,8 +129,11 @@
 								class="dex-table--number"
 							{% endif %}
 						>
-							<a class="trend-link" href="/stats/chart?type=moveset-ability&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&ability={{ ability.identifier|e }}">
+							<a class="chart-link"
+								href="/stats/chart?type=moveset-ability&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&ability={{ ability.identifier|e }}"
+							>
 								{{ ability.changeText|e }}
+								<img src="/images/porydex/chart-icon.png">
 							</a>
 						</td>
 					</tr>
@@ -167,8 +170,11 @@
 								class="dex-table--number"
 							{% endif %}
 						>
-							<a class="trend-link" href="/stats/chart?type=moveset-item&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&item={{ item.identifier|e }}">
+							<a class="chart-link"
+								href="/stats/chart?type=moveset-item&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&item={{ item.identifier|e }}"
+							>
 								{{ item.changeText|e }}
+								<img src="/images/porydex/chart-icon.png">
 							</a>
 						</td>
 					</tr>
@@ -275,8 +281,11 @@
 							class="dex-table--number"
 						{% endif %}
 					>
-						<a class="trend-link" href="/stats/chart?type=moveset-move&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&move={{ move.identifier|e }}">
+						<a class="chart-link"
+							href="/stats/chart?type=moveset-move&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&move={{ move.identifier|e }}"
+						>
 							{{ move.changeText|e }}
+							<img src="/images/porydex/chart-icon.png">
 						</a>
 					</td>
 				</tr>

@@ -559,9 +559,17 @@ table.pokemon-usage .pokemon-name {
 	width: 100%;
 }
 
-.trend-link {
+.chart-link {
 	color: inherit;
 	text-decoration: inherit;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.chart-link img {
+	margin-left: 3px;
 }
 
 

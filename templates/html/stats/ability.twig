@@ -107,9 +107,12 @@
 							'dex-table--percent-minus': pokemon.usageChange < 0,
 						}"
 					>
-						<a class="trend-link"
+						<a class="chart-link"
 							:href="`/stats/chart?type=usage-ability&format=${format.identifier}&rating=${rating}&pokemon=${pokemon.identifier}&ability=${ability.identifier}`"
-						>{{ pokemon.usageChangeText }}</a>
+						>
+							{{ pokemon.usageChangeText }}
+							<img src="/images/porydex/chart-icon.png">
+						</a>
 					</td>
 				</tr>
 			</tbody>
