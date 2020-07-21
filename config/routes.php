@@ -3,10 +3,8 @@
 declare(strict_types=1);
 
 use Jp\Dex\Application\Controllers\IndexController;
-use Jp\Dex\Application\Controllers\TrendChartController;
 use Jp\Dex\Application\Middleware\MiddlewareGroups;
 use Jp\Dex\Presentation\IndexView;
-use Jp\Dex\Presentation\TrendChartView;
 
 // Common route parameter definitions.
 $abilityIdentifier = '{abilityIdentifier:[-\w]+}';
@@ -290,18 +288,18 @@ $routes = [
 	]],
 
 	// Charts
-	['GET', '/stats/trends/chart', [
-		'controllerClass' => TrendChartController::class,
+	['GET', '/stats/chart', [
+		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => TrendChartView::class,
-		'viewMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'statsChart',
 		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
-	['POST', '/stats/trends/chart', [
-		'controllerClass' => TrendChartController::class,
+	['POST', '/stats/chart', [
+		'controllerClass' => \Jp\Dex\Application\Controllers\TrendChartController::class,
 		'controllerMethod' => 'ajax',
-		'viewClass' => TrendChartView::class,
+		'viewClass' => \Jp\Dex\Presentation\TrendChartView::class,
 		'viewMethod' => 'ajax',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],

@@ -9,37 +9,21 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class TrendChartController
 {
-	private BaseController $baseController;
 	private TrendChartModel $trendChartModel;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param BaseController $baseController
 	 * @param TrendChartModel $trendChartModel
 	 */
 	public function __construct(
-		BaseController $baseController,
 		TrendChartModel $trendChartModel
 	) {
-		$this->baseController = $baseController;
 		$this->trendChartModel = $trendChartModel;
 	}
 
 	/**
-	 * Show the /stats/trends/chart page.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
-	 */
-	public function index(ServerRequestInterface $request) : void
-	{
-		$this->baseController->setBaseVariables($request);
-	}
-
-	/**
-	 * Set data for the /stats/trends/chart page.
+	 * Set data for the /stats/chart page.
 	 *
 	 * @param ServerRequestInterface $request
 	 *

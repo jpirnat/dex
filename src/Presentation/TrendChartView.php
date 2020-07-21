@@ -12,64 +12,26 @@ use Jp\Dex\Domain\Stats\Trends\Lines\TrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageAbilityTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageItemTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageMoveTrendLine;
-use Laminas\Diactoros\Response\HtmlResponse;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
 final class TrendChartView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
 	private TrendChartModel $trendChartModel;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
 	 * @param TrendChartModel $trendChartModel
 	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
 		TrendChartModel $trendChartModel
 	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
 		$this->trendChartModel = $trendChartModel;
 	}
 
 	/**
-	 * Show the /stats/trends/chart page.
-	 *
-	 * @return ResponseInterface
-	 */
-	public function index() : ResponseInterface
-	{
-		// Navigational breadcrumbs.
-		$breadcrumbs = [
-			[
-				'url' => '/stats',
-				'text' => 'Stats',
-			],
-			[
-				'text' => 'Chart',
-			]
-		];
-
-		$content = $this->renderer->render(
-			'html/trend-chart.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Stats - Chart',
-				'breadcrumbs' => $breadcrumbs,
-			]
-		);
-
-		return new HtmlResponse($content);
-	}
-
-	/**
-	 * Set data for the /stats/trends/chart page.
+	 * Set data for the /stats/chart page.
 	 *
 	 * @return ResponseInterface
 	 */

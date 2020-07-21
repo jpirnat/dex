@@ -192,6 +192,23 @@ final class IndexView
 	}
 
 	/**
+	 * Show the stats chart page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function statsChart() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/stats/chart.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats - Chart',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the 404 page.
 	 *
 	 * @return ResponseInterface
