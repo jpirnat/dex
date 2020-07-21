@@ -2,60 +2,10 @@
 /** @noinspection PhpFullyQualifiedNameUsageInspection */
 declare(strict_types=1);
 
-use Jp\Dex\Application\Controllers\BreedingChainsController;
-use Jp\Dex\Application\Controllers\DexAbilitiesController;
-use Jp\Dex\Application\Controllers\DexAbilityController;
-use Jp\Dex\Application\Controllers\DexMovesController;
-use Jp\Dex\Application\Controllers\DexMoveController;
-use Jp\Dex\Application\Controllers\DexNaturesController;
-use Jp\Dex\Application\Controllers\DexPokemonController;
-use Jp\Dex\Application\Controllers\DexPokemonsController;
-use Jp\Dex\Application\Controllers\DexTypeController;
-use Jp\Dex\Application\Controllers\DexTypesController;
-use Jp\Dex\Application\Controllers\ErrorController;
 use Jp\Dex\Application\Controllers\IndexController;
-use Jp\Dex\Application\Controllers\NotFoundController;
-use Jp\Dex\Application\Controllers\StatsAbilityController;
-use Jp\Dex\Application\Controllers\StatsAveragedLeadsController;
-use Jp\Dex\Application\Controllers\StatsAveragedPokemonController;
-use Jp\Dex\Application\Controllers\StatsAveragedUsageController;
-use Jp\Dex\Application\Controllers\StatsIndexController;
-use Jp\Dex\Application\Controllers\StatsItemController;
-use Jp\Dex\Application\Controllers\StatsLeadsController;
-use Jp\Dex\Application\Controllers\StatsMonthController;
-use Jp\Dex\Application\Controllers\StatsMoveController;
-use Jp\Dex\Application\Controllers\StatsPokemonController;
-use Jp\Dex\Application\Controllers\StatsUsageController;
 use Jp\Dex\Application\Controllers\TrendChartController;
-use Jp\Dex\Application\Middleware\JsonErrorMiddleware;
-use Jp\Dex\Application\Middleware\CurrentStatsMiddleware;
-use Jp\Dex\Application\Middleware\HtmlErrorMiddleware;
-use Jp\Dex\Application\Middleware\JsonRequestMiddleware;
-use Jp\Dex\Application\Middleware\LanguageMiddleware;
-use Jp\Dex\Presentation\BreedingChainsView;
-use Jp\Dex\Presentation\DexAbilitiesView;
-use Jp\Dex\Presentation\DexAbilityView;
-use Jp\Dex\Presentation\DexMovesView;
-use Jp\Dex\Presentation\DexMoveView;
-use Jp\Dex\Presentation\DexNaturesView;
-use Jp\Dex\Presentation\DexPokemonView;
-use Jp\Dex\Presentation\DexPokemonsView;
-use Jp\Dex\Presentation\DexTypesView;
-use Jp\Dex\Presentation\DexTypeView;
-use Jp\Dex\Presentation\ErrorView;
+use Jp\Dex\Application\Middleware\MiddlewareGroups;
 use Jp\Dex\Presentation\IndexView;
-use Jp\Dex\Presentation\NotFoundView;
-use Jp\Dex\Presentation\StatsAbilityView;
-use Jp\Dex\Presentation\StatsAveragedLeadsView;
-use Jp\Dex\Presentation\StatsAveragedPokemonView;
-use Jp\Dex\Presentation\StatsAveragedUsageView;
-use Jp\Dex\Presentation\StatsIndexView;
-use Jp\Dex\Presentation\StatsItemView;
-use Jp\Dex\Presentation\StatsLeadsView;
-use Jp\Dex\Presentation\StatsMonthView;
-use Jp\Dex\Presentation\StatsMoveView;
-use Jp\Dex\Presentation\StatsPokemonView;
-use Jp\Dex\Presentation\StatsUsageView;
 use Jp\Dex\Presentation\TrendChartView;
 
 // Common route parameter definitions.
@@ -79,10 +29,7 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/dex/$generationIdentifier/abilities", [
@@ -90,32 +37,23 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
 		'viewMethod' => 'dexAbilities',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/data/dex/$generationIdentifier/abilities", [
-		'controllerClass' => DexAbilitiesController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexAbilitiesController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => DexAbilitiesView::class,
+		'viewClass' => \Jp\Dex\Presentation\DexAbilitiesView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			JsonErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/dex/$generationIdentifier/abilities/$abilityIdentifier", [
-		'controllerClass' => DexAbilityController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexAbilityController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => DexAbilityView::class,
+		'viewClass' => \Jp\Dex\Presentation\DexAbilityView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/dex/$generationIdentifier/moves", [
@@ -123,32 +61,23 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
 		'viewMethod' => 'dexMoves',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/data/dex/$generationIdentifier/moves", [
-		'controllerClass' => DexMovesController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexMovesController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => DexMovesView::class,
+		'viewClass' => \Jp\Dex\Presentation\DexMovesView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			JsonErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/dex/$generationIdentifier/moves/$moveIdentifier", [
-		'controllerClass' => DexMoveController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexMoveController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => DexMoveView::class,
+		'viewClass' => \Jp\Dex\Presentation\DexMoveView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/dex/$generationIdentifier/natures", [
@@ -156,43 +85,31 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
 		'viewMethod' => 'dexNatures',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/data/dex/$generationIdentifier/natures", [
-		'controllerClass' => DexNaturesController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexNaturesController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => DexNaturesView::class,
+		'viewClass' => \Jp\Dex\Presentation\DexNaturesView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			JsonErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/dex/$generationIdentifier/pokemon", [
-		'controllerClass' => DexPokemonsController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexPokemonsController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => DexPokemonsView::class,
+		'viewClass' => \Jp\Dex\Presentation\DexPokemonsView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/dex/$generationIdentifier/pokemon/$pokemonIdentifier", [
-		'controllerClass' => DexPokemonController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexPokemonController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => DexPokemonView::class,
+		'viewClass' => \Jp\Dex\Presentation\DexPokemonView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/dex/$generationIdentifier/types", [
@@ -200,65 +117,47 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
 		'viewMethod' => 'dexTypes',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/data/dex/$generationIdentifier/types", [
-		'controllerClass' => DexTypesController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexTypesController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => DexTypesView::class,
+		'viewClass' => \Jp\Dex\Presentation\DexTypesView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			JsonErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/dex/$generationIdentifier/types/$typeIdentifier", [
-		'controllerClass' => DexTypeController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexTypeController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => DexTypeView::class,
+		'viewClass' => \Jp\Dex\Presentation\DexTypeView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/dex/$generationIdentifier/pokemon/$pokemonIdentifier/breeding/$moveIdentifier/$versionGroupIdentifier", [
-		'controllerClass' => BreedingChainsController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\BreedingChainsController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => BreedingChainsView::class,
+		'viewClass' => \Jp\Dex\Presentation\BreedingChainsView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', '/stats', [
-		'controllerClass' => StatsIndexController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsIndexController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => StatsIndexView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsIndexView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/stats/$month", [
-		'controllerClass' => StatsMonthController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsMonthController::class,
 		'controllerMethod' => 'index',
-		'viewClass' => StatsMonthView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsMonthView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating", [
@@ -266,21 +165,15 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
 		'viewMethod' => 'statsUsage',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/data/stats/$month/$formatIdentifier/$rating", [
-		'controllerClass' => StatsUsageController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsUsageController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => StatsUsageView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsUsageView::class,
 		'viewMethod' => 'getData',
-		'middlewareClasses' => [
-			JsonErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/stats/current", [
@@ -288,23 +181,15 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
 		'viewMethod' => 'statsUsage',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-			CurrentStatsMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/data/stats/current", [
-		'controllerClass' => StatsUsageController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsUsageController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => StatsUsageView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsUsageView::class,
 		'viewMethod' => 'getData',
-		'middlewareClasses' => [
-			JsonErrorMiddleware::class,
-			LanguageMiddleware::class,
-			CurrentStatsMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::CURRENT_STATS,
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/leads", [
@@ -312,32 +197,23 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
 		'viewMethod' => 'statsLeads',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/data/stats/$month/$formatIdentifier/$rating/leads", [
-		'controllerClass' => StatsLeadsController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsLeadsController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => StatsLeadsView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsLeadsView::class,
 		'viewMethod' => 'getData',
-		'middlewareClasses' => [
-			JsonErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
-		'controllerClass' => StatsPokemonController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsPokemonController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => StatsPokemonView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsPokemonView::class,
 		'viewMethod' => 'getData',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/abilities/$abilityIdentifier", [
@@ -345,21 +221,15 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
 		'viewMethod' => 'statsAbility',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/data/stats/$month/$formatIdentifier/$rating/abilities/$abilityIdentifier", [
-		'controllerClass' => StatsAbilityController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsAbilityController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => StatsAbilityView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsAbilityView::class,
 		'viewMethod' => 'getData',
-		'middlewareClasses' => [
-			JsonErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/items/$itemIdentifier", [
@@ -367,21 +237,15 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
 		'viewMethod' => 'statsItem',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/data/stats/$month/$formatIdentifier/$rating/items/$itemIdentifier", [
-		'controllerClass' => StatsItemController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsItemController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => StatsItemView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsItemView::class,
 		'viewMethod' => 'getData',
-		'middlewareClasses' => [
-			JsonErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/moves/$moveIdentifier", [
@@ -389,55 +253,40 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
 		'viewMethod' => 'statsMove',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/data/stats/$month/$formatIdentifier/$rating/moves/$moveIdentifier", [
-		'controllerClass' => StatsMoveController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsMoveController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => StatsMoveView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsMoveView::class,
 		'viewMethod' => 'getData',
-		'middlewareClasses' => [
-			JsonErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	// Averaged
 	['GET', "/stats/$start-to-$end/$formatIdentifier/$rating", [
-		'controllerClass' => StatsAveragedUsageController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsAveragedUsageController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => StatsAveragedUsageView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsAveragedUsageView::class,
 		'viewMethod' => 'getData',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/stats/$start-to-$end/$formatIdentifier/$rating/leads", [
-		'controllerClass' => StatsAveragedLeadsController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsAveragedLeadsController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => StatsAveragedLeadsView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsAveragedLeadsView::class,
 		'viewMethod' => 'getData',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', "/stats/$start-to-$end/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
-		'controllerClass' => StatsAveragedPokemonController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsAveragedPokemonController::class,
 		'controllerMethod' => 'setData',
-		'viewClass' => StatsAveragedPokemonView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsAveragedPokemonView::class,
 		'viewMethod' => 'getData',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	// Charts
@@ -446,10 +295,7 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => TrendChartView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['POST', '/stats/trends/chart', [
@@ -457,46 +303,24 @@ $routes = [
 		'controllerMethod' => 'ajax',
 		'viewClass' => TrendChartView::class,
 		'viewMethod' => 'ajax',
-		'middlewareClasses' => [
-			JsonErrorMiddleware::class,
-			LanguageMiddleware::class,
-			JsonRequestMiddleware::class,
-		],
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
-
 
 	// Errors
-
 	['GET', '/404', [
-		'controllerClass' => NotFoundController::class,
-		'controllerMethod' => 'get404',
-		'viewClass' => NotFoundView::class,
-		'viewMethod' => 'get404',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
-	]],
-
-	['GET', '/405', [
-		'controllerClass' => ErrorController::class,
-		'controllerMethod' => 'getError',
-		'viewClass' => ErrorView::class,
-		'viewMethod' => 'getError',
-		'middlewareClasses' => [
-			HtmlErrorMiddleware::class,
-			LanguageMiddleware::class,
-		],
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'error404',
+		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
 	['GET', '/error', [
-		'controllerClass' => ErrorController::class,
-		'controllerMethod' => 'getError',
-		'viewClass' => ErrorView::class,
-		'viewMethod' => 'getError',
-		'middlewareClasses' => [
-			LanguageMiddleware::class,
-		],
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'error',
+		'middlewareClasses' => MiddlewareGroups::ERROR,
 	]],
 ];
 

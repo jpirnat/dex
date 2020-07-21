@@ -47,7 +47,10 @@ final class TrendChartController
 	 */
 	public function ajax(ServerRequestInterface $request) : void
 	{
-		$lines = $request->getParsedBody()['lines'] ?? [];
+		$body = $request->getBody()->getContents();
+		$data = json_decode($body, true);
+
+		$lines = $data['lines'] ?? [];
 
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 

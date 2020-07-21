@@ -54,8 +54,10 @@ if ($routeInfo[0] === \FastRoute\Dispatcher::FOUND) {
 	// Get the route's controller, view, and middleware configuration.
 	$controllerClass = $routeInfo[1]['controllerClass'];
 	$controllerMethod = $routeInfo[1]['controllerMethod'];
+
 	$viewClass = $routeInfo[1]['viewClass'];
 	$viewMethod = $routeInfo[1]['viewMethod'];
+
 	$middlewareClasses = $routeInfo[1]['middlewareClasses'] ?? [];
 
 	// Add route parameters to the request as attributes.
@@ -82,14 +84,8 @@ if ($routeInfo[0] === \FastRoute\Dispatcher::FOUND) {
 	$middlewareDispatcher = new \Jp\Middleware\Dispatcher($container, $app);
 	$middlewareDispatcher->addMiddlewares($middlewareClasses);
 	$response = $middlewareDispatcher->handle($request);
-} elseif ($routeInfo[0] === \FastRoute\Dispatcher::NOT_FOUND) {
-	$response = new \Laminas\Diactoros\Response\RedirectResponse('/404');
-} elseif ($routeInfo[0] === \FastRoute\Dispatcher::METHOD_NOT_ALLOWED) {
-	$allowedMethods = $routeInfo[1];
-	$response = new \Laminas\Diactoros\Response\RedirectResponse('/405');
 } else {
-	// This should never happen.
-	$response = new \Laminas\Diactoros\Response\RedirectResponse('/');
+	$response = new \Laminas\Diactoros\Response\RedirectResponse('/404');
 }
 
 // Emit the response.

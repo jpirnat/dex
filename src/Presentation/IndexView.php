@@ -190,4 +190,38 @@ final class IndexView
 
 		return new HtmlResponse($content);
 	}
+
+	/**
+	 * Show the 404 page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function error404() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/404.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => '404 Not Found',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
+	 * Show the error page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function error() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/error.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => '404 Not Found',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
 }
