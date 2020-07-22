@@ -47,6 +47,14 @@ $routes = [
 	]],
 
 	['GET', "/dex/$generationIdentifier/abilities/$abilityIdentifier", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'dexAbility',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$generationIdentifier/abilities/$abilityIdentifier", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexAbilityController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => \Jp\Dex\Presentation\DexAbilityView::class,
