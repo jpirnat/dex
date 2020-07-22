@@ -22,100 +22,11 @@
 		</ul>
 	</div>
 
-	<dex-pagination
-		v-model="currentPage"
-		:number-of-items="filteredMoves.length"
-		:items-per-page="itemsPerPage"
-	></dex-pagination>
-
-	<div class="dex-moves__filters">
-		<label class="dex-moves__filter">
-			Filter by move name: <input type="search" v-model="filterName">
-		</label>
-		<label v-if="showMoveDescriptions" class="dex-moves__filter">
-			Filter by description: <input type="search" v-model="filterDescription">
-		</label>
-	</div>
-
-	<table class="dex-table dex-table--full-width">
-		<thead>
-			<tr>
-				<th scope="col" class="dex-table__header--sortable"
-					@click="sortBy('name', 'asc', m => m.name)"
-					:class="{
-						'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
-						'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
-					}"
-				>Move</th>
-				<th scope="col" class="dex-table__header--sortable"
-					@click="sortBy('type', 'asc', m => m.type.name)"
-					:class="{
-						'dex-table__header--sorted-asc': sortColumn === 'type' && sortDirection === 'asc',
-						'dex-table__header--sorted-desc': sortColumn === 'type' && sortDirection === 'desc',
-					}"
-				>Type</th>
-				<th scope="col" class="dex-table__header--sortable"
-					@click="sortBy('category', 'asc', m => m.category.name)"
-					:class="{
-						'dex-table__header--sorted-asc': sortColumn === 'category' && sortDirection === 'asc',
-						'dex-table__header--sorted-desc': sortColumn === 'category' && sortDirection === 'desc',
-					}"
-				>Category</th>
-				<th scope="col" class="dex-table__header--sortable"
-					@click="sortBy('pp', 'desc', m => m.pp)"
-					:class="{
-						'dex-table__header--sorted-asc': sortColumn === 'pp' && sortDirection === 'asc',
-						'dex-table__header--sorted-desc': sortColumn === 'pp' && sortDirection === 'desc',
-					}"
-				>PP</th>
-				<th scope="col" class="dex-table__header--sortable"
-					@click="sortBy('power', 'desc', m => m.power)"
-					:class="{
-						'dex-table__header--sorted-asc': sortColumn === 'power' && sortDirection === 'asc',
-						'dex-table__header--sorted-desc': sortColumn === 'power' && sortDirection === 'desc',
-					}"
-				>Power</th>
-				<th scope="col" class="dex-table__header--sortable"
-					@click="sortBy('accuracy', 'desc', m => m.accuracy)"
-					:class="{
-						'dex-table__header--sorted-asc': sortColumn === 'accuracy' && sortDirection === 'asc',
-						'dex-table__header--sorted-desc': sortColumn === 'accuracy' && sortDirection === 'desc',
-					}"
-				>Accuracy</th>
-				<th v-if="showMoveDescriptions" scope="col" class="dex-table__move-description">Description</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr v-for="move in paginatedMoves" :key="move.identifier">
-				<td>
-					<a :href="`/dex/${generation.identifier}/moves/${move.identifier}`">
-						{{ move.name }}
-					</a>
-				</td>
-				<td class="dex-table__move-type">
-					<a :href="`/dex/${generation.identifier}/types/${move.type.identifier}`">
-						<img :src="`/images/types/${move.type.icon}`" :alt="move.type.name">
-					</a>
-				</td>
-				<td class="dex-table__move-category">
-					<img :src="`/images/categories/${move.category.icon}`" :alt="move.category.name">
-				</td>
-				<td class="dex-table--number">{{ move.pp }}</td>
-				<td class="dex-table--number">{{ move.power }}</td>
-				<td class="dex-table--number">{{ move.accuracy }}</td>
-				<td v-if="showMoveDescriptions" class="dex-table__move-description">{{ move.description }}</td>
-			</tr>
-			<tr v-if="loading">
-				<td :colspan="showMoveDescriptions ? 7 : 6" style="text-align: center;">Loading...</td>
-			</tr>
-		</tbody>
-	</table>
-
-	<dex-pagination
-		v-model="currentPage"
-		:number-of-items="filteredMoves.length"
-		:items-per-page="itemsPerPage"
-	></dex-pagination>
+	<dex-moves-table
+		:moves="moves"
+		:generation="generation"
+		:show-descriptions="showMoveDescriptions"
+	></dex-moves-table>
 </div>
 {% endverbatim %}
 {% endblock %}
@@ -126,6 +37,7 @@
 
 	<script src="https://unpkg.com/v-tooltip"></script>
 	<script src="/js/dex-pagination.js"></script>
+	<script src="/js/dex-moves-table.js"></script>
 
 	<script src="/js/dex/moves.js"></script>
 {% endblock %}
