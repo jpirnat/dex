@@ -213,6 +213,15 @@ a.button {
 
 /* dex */
 
+.dex-section__title {
+	background: #eee;
+	border: 1px solid #ddd;
+	margin: 0;
+	padding: 10px;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
 .dex-table--full-width {
 	width: 100%;
 }

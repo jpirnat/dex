@@ -141,6 +141,23 @@ final class IndexView
 	}
 
 	/**
+	 * Show the dex type page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function dexType() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/type.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Types',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the stats usage page.
 	 *
 	 * @return ResponseInterface

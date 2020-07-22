@@ -62,7 +62,5 @@ final class DexPokemonsView
 				'stats' => $stats,
 			]
 		]);
-
-		return new HtmlResponse($content);
 	}
 }

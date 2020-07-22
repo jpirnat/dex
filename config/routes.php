@@ -59,7 +59,7 @@ $routes = [
 		'controllerMethod' => 'index',
 		'viewClass' => \Jp\Dex\Presentation\DexAbilityView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => MiddlewareGroups::HTML,
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/dex/$generationIdentifier/moves", [
@@ -143,11 +143,19 @@ $routes = [
 	]],
 
 	['GET', "/dex/$generationIdentifier/types/$typeIdentifier", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'dexType',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$generationIdentifier/types/$typeIdentifier", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexTypeController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => \Jp\Dex\Presentation\DexTypeView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => MiddlewareGroups::HTML,
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/dex/$generationIdentifier/pokemon/$pokemonIdentifier/breeding/$moveIdentifier/$versionGroupIdentifier", [
