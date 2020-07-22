@@ -80,19 +80,15 @@ final class StatsUsageView
 		}
 
 		// Navigation breadcrumbs.
-		$breadcrumbs = [
-			[
-				'url' => '/stats',
-				'text' => 'Stats',
-			],
-			[
-				'url' => "/stats/$month",
-				'text' => $thisMonth['text'],
-			],
-			[
-				'text' => $format->getName(),
-			],
-		];
+		$breadcrumbs = [[
+			'url' => '/stats',
+			'text' => 'Stats',
+		], [
+			'url' => "/stats/$month",
+			'text' => $thisMonth['text'],
+		], [
+			'text' => $format->getName(),
+		]];
 
 		return new JsonResponse([
 			'data' => [

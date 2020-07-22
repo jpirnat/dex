@@ -50,14 +50,16 @@ final class DexPokemonsView
 
 		return new JsonResponse([
 			'data' => [
-				'breadcrumbs' => $breadcrumbs,
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
+
+				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
+
+				'pokemons' => $this->dexFormatter->formatDexPokemon($pokemon),
 				'showAbilities' => $showAbilities,
 				'stats' => $stats,
-				'pokemons' => $this->dexFormatter->formatDexPokemon($pokemon),
 			]
 		]);
 

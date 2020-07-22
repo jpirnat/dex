@@ -40,22 +40,21 @@ final class DexAbilitiesView
 		$abilities = $this->dexAbilitiesModel->getAbilities();
 
 		// Navigational breadcrumbs.
-		$breadcrumbs = [
-			[
-				'text' => 'Dex',
-			],
-			[
-				'text' => 'Abilities',
-			],
-		];
+		$breadcrumbs = [[
+			'text' => 'Dex',
+		], [
+			'text' => 'Abilities',
+		]];
 
 		return new JsonResponse([
 			'data' => [
-				'breadcrumbs' => $breadcrumbs,
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
+
+				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
+
 				'abilities' => $abilities,
 			]
 		]);

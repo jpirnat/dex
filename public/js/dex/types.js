@@ -6,8 +6,8 @@ const app = new Vue({
 		loading: true,
 		loaded: false,
 
-		breadcrumbs: [],
 		generation: {},
+		breadcrumbs: [],
 		generations: [],
 		types: [],
 		multipliers: [],
@@ -44,8 +44,8 @@ const app = new Vue({
 
 			if (response.data) {
 				const data = response.data;
-				this.breadcrumbs = data.breadcrumbs;
 				this.generation = data.generation;
+				this.breadcrumbs = data.breadcrumbs;
 				this.generations = data.generations;
 				this.types = data.types;
 				this.multipliers = data.multipliers;

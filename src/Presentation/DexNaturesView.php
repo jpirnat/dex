@@ -32,18 +32,16 @@ final class DexNaturesView
 		$natures = $this->dexNaturesModel->getNatures();
 
 		// Navigational breadcrumbs.
-		$breadcrumbs = [
-			[
-				'text' => 'Dex',
-			],
-			[
-				'text' => 'Natures',
-			],
-		];
+		$breadcrumbs = [[
+			'text' => 'Dex',
+		], [
+			'text' => 'Natures',
+		]];
 
 		return new JsonResponse([
 			'data' => [
 				'breadcrumbs' => $breadcrumbs,
+
 				'natures' => $natures,
 			]
 		]);

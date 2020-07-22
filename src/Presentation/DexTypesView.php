@@ -41,22 +41,21 @@ final class DexTypesView
 		$multipliers = $this->dexTypesModel->getMultipliers();
 
 		// Navigational breadcrumbs.
-		$breadcrumbs = [
-			[
-				'text' => 'Dex',
-			],
-			[
-				'text' => 'Types',
-			],
-		];
+		$breadcrumbs = [[
+			'text' => 'Dex',
+		], [
+			'text' => 'Types',
+		]];
 
 		return new JsonResponse([
 			'data' => [
-				'breadcrumbs' => $breadcrumbs,
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
+
+				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
+
 				'types' => $this->dexFormatter->formatDexTypes($types),
 				'multipliers' => $multipliers,
 			]

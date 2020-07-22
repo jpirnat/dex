@@ -76,23 +76,18 @@ final class StatsItemView
 		// Navigation breadcrumbs.
 		$formatIdentifier = $format->getIdentifier();
 		$itemName = $this->statsItemModel->getItemName()->getName();
-		$breadcrumbs = [
-			[
-				'url' => '/stats',
-				'text' => 'Stats',
-			],
-			[
-				'url' => "/stats/$month",
-				'text' => $thisMonth['text'],
-			],
-			[
-				'url' => "/stats/$month/$formatIdentifier/$rating",
-				'text' => $format->getName(),
-			],
-			[
-				'text' => $itemName,
-			],
-		];
+		$breadcrumbs = [[
+			'url' => '/stats',
+			'text' => 'Stats',
+		], [
+			'url' => "/stats/$month",
+			'text' => $thisMonth['text'],
+		], [
+			'url' => "/stats/$month/$formatIdentifier/$rating",
+			'text' => $format->getName(),
+		], [
+			'text' => $itemName,
+		]];
 
 		return new JsonResponse([
 			'data' => [

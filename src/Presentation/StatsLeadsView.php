@@ -77,23 +77,18 @@ final class StatsLeadsView
 
 		// Navigation breadcrumbs.
 		$formatIdentifier = $format->getIdentifier();
-		$breadcrumbs = [
-			[
-				'url' => '/stats',
-				'text' => 'Stats',
-			],
-			[
-				'url' => "/stats/$month",
-				'text' => $thisMonth['text'],
-			],
-			[
-				'url' => "/stats/$month/$formatIdentifier/$rating",
-				'text' => $format->getName(),
-			],
-			[
-				'text' => 'Leads',
-			]
-		];
+		$breadcrumbs = [[
+			'url' => '/stats',
+			'text' => 'Stats',
+		], [
+			'url' => "/stats/$month",
+			'text' => $thisMonth['text'],
+		], [
+			'url' => "/stats/$month/$formatIdentifier/$rating",
+			'text' => $format->getName(),
+		], [
+			'text' => 'Leads',
+		]];
 
 		return new JsonResponse([
 			'data' => [

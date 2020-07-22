@@ -6,12 +6,12 @@ const app = new Vue({
 		loading: true,
 		loaded: false,
 
-		breadcrumbs: [],
 		generation: {},
+		breadcrumbs: [],
 		generations: [],
+		pokemons: [],
 		showAbilities: true,
 		stats: [],
-		pokemons: [],
 	},
 	created() {
 		const url = new URL(window.location);
@@ -26,12 +26,12 @@ const app = new Vue({
 
 			if (response.data) {
 				const data = response.data;
-				this.breadcrumbs = data.breadcrumbs;
 				this.generation = data.generation;
+				this.breadcrumbs = data.breadcrumbs;
 				this.generations = data.generations;
+				this.pokemons = data.pokemons;
 				this.showAbilities = data.showAbilities;
 				this.stats = data.stats;
-				this.pokemons = data.pokemons;
 			}
 		});
 	},

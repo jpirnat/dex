@@ -76,23 +76,18 @@ final class StatsMoveView
 		// Navigation breadcrumbs.
 		$formatIdentifier = $format->getIdentifier();
 		$moveName = $this->statsMoveModel->getMoveName()->getName();
-		$breadcrumbs = [
-			[
-				'url' => '/stats',
-				'text' => 'Stats',
-			],
-			[
-				'url' => "/stats/$month",
-				'text' => $thisMonth['text'],
-			],
-			[
-				'url' => "/stats/$month/$formatIdentifier/$rating",
-				'text' => $format->getName(),
-			],
-			[
-				'text' => $moveName,
-			],
-		];
+		$breadcrumbs = [[
+			'url' => '/stats',
+			'text' => 'Stats',
+		], [
+			'url' => "/stats/$month",
+			'text' => $thisMonth['text'],
+		], [
+			'url' => "/stats/$month/$formatIdentifier/$rating",
+			'text' => $format->getName(),
+		], [
+			'text' => $moveName,
+		]];
 
 		return new JsonResponse([
 			'data' => [

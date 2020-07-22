@@ -49,13 +49,15 @@ final class DexMovesView
 
 		return new JsonResponse([
 			'data' => [
-				'breadcrumbs' => $breadcrumbs,
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
+
+				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
-				'showMoveDescriptions' => $showMoveDescriptions,
+
 				'moves' => $this->dexFormatter->formatDexMoves($moves),
+				'showMoveDescriptions' => $showMoveDescriptions,
 			]
 		]);
 	}

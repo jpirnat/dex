@@ -76,23 +76,18 @@ final class StatsAbilityView
 		// Navigation breadcrumbs.
 		$formatIdentifier = $format->getIdentifier();
 		$abilityName = $this->statsAbilityModel->getAbilityName()->getName();
-		$breadcrumbs = [
-			[
-				'url' => '/stats',
-				'text' => 'Stats',
-			],
-			[
-				'url' => "/stats/$month",
-				'text' => $thisMonth['text'],
-			],
-			[
-				'url' => "/stats/$month/$formatIdentifier/$rating",
-				'text' => $format->getName(),
-			],
-			[
-				'text' => $abilityName,
-			],
-		];
+		$breadcrumbs = [[
+			'url' => '/stats',
+			'text' => 'Stats',
+		], [
+			'url' => "/stats/$month",
+			'text' => $thisMonth['text'],
+		], [
+			'url' => "/stats/$month/$formatIdentifier/$rating",
+			'text' => $format->getName(),
+		], [
+			'text' => $abilityName,
+		]];
 
 		return new JsonResponse([
 			'data' => [
