@@ -287,6 +287,9 @@ a.button {
 	content: "▼";
 }
 
+.dex-table__loading {
+	text-align: center;
+}
 
 
 /* dex abilities */

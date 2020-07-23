@@ -8,127 +8,125 @@
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
-	<div v-if="!loaded">
-		Loading...
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
+	<div class="month-control">
+		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}/${format.identifier}/${rating}/leads`">
+			&#9668; {{ prevMonth.text }}
+		</a>
+
+		<div class="space"></div>
+
+		<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.month}/${format.identifier}/${rating}/leads`">
+			{{ nextMonth.text }} &#9658;
+		</a>
 	</div>
-	<div v-else>
-		<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-		<div class="month-control">
-			<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}/${format.identifier}/${rating}/leads`">
-				&#9668; {{ prevMonth.text }}
-			</a>
+	<div class="rating-control">
+		<ul>
+			<li v-for="r in ratings">
+				<a :href="`/stats/${thisMonth.month}/${format.identifier}/${r}/leads`"
+					:class="{
+						'current': r === rating
+					}"
+				>{{ r }}</a>
+			</li>
+		</ul>
+	</div>
 
-			<div class="space"></div>
+	<dex-pagination
+		v-model="currentPage"
+		:number-of-items="filteredPokemons.length"
+		:items-per-page="itemsPerPage"
+	></dex-pagination>
 
-			<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.month}/${format.identifier}/${rating}/leads`">
-				{{ nextMonth.text }} &#9658;
-			</a>
-		</div>
+	<div class="stats-usage__filter">
+		<label>
+			Filter by Pokémon name: <input type="search" v-model="filterName">
+		</label>
+	</div>
 
-		<div class="rating-control">
-			<ul>
-				<li v-for="r in ratings">
-					<a :href="`/stats/${thisMonth.month}/${format.identifier}/${r}/leads`"
-						:class="{
-							'current': r === rating
-						}"
-					>{{ r }}</a>
-				</li>
-			</ul>
-		</div>
-
-		<dex-pagination
-			v-model="currentPage"
-			:number-of-items="filteredPokemons.length"
-			:items-per-page="itemsPerPage"
-		></dex-pagination>
-
-		<div class="stats-usage__filter">
-			<label>
-				Filter by Pokémon name: <input type="search" v-model="filterName">
-			</label>
-		</div>
-
-		<table class="pokemon-usage">
-			<thead>
-				<tr>
-					<th class="dex-table__header--sortable" @click="sortBy('rank', 'asc')"
-						:class="{
-							'dex-table__header--sorted-asc': sortColumn === 'rank' && sortDirection === 'asc',
-							'dex-table__header--sorted-desc': sortColumn === 'rank' && sortDirection === 'desc',
-						}"
-					>Rank</th>
-					<th></th>
-					<th class="pokemon-name dex-table__header--sortable" @click="sortBy('name', 'asc')"
-						:class="{
-							'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
-							'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
-						}"
-					>Pokémon</th>
-					<th class="dex-table__header--sortable" @click="sortBy('usagePercent', 'desc')"
-						:class="{
-							'dex-table__header--sorted-asc': sortColumn === 'usagePercent' && sortDirection === 'asc',
-							'dex-table__header--sorted-desc': sortColumn === 'usagePercent' && sortDirection === 'desc',
-						}"
-					>Usage&nbsp;%</th>
-					<th class="dex-table__header--sortable" @click="sortBy('usageChange', 'desc')"
-						:class="{
-							'dex-table__header--sorted-asc': sortColumn === 'usageChange' && sortDirection === 'asc',
-							'dex-table__header--sorted-desc': sortColumn === 'usageChange' && sortDirection === 'desc',
-						}"
-					>Usage&nbsp;Δ</th>
-					<th class="dex-table__header--sortable" @click="sortBy('raw', 'desc')"
-						:class="{
-							'dex-table__header--sorted-asc': sortColumn === 'raw' && sortDirection === 'asc',
-							'dex-table__header--sorted-desc': sortColumn === 'raw' && sortDirection === 'desc',
-						}"
-					>Raw</th>
-					<th class="dex-table__header--sortable" @click="sortBy('rawPercent', 'desc')"
-						:class="{
-							'dex-table__header--sorted-asc': sortColumn === 'rawPercent' && sortDirection === 'asc',
-							'dex-table__header--sorted-desc': sortColumn === 'rawPercent' && sortDirection === 'desc',
-						}"
-					>Raw&nbsp;%</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr v-for="pokemon in paginatedPokemons" :key="pokemon.identifier">
-					<td class="dex-table--number">{{ pokemon.rank }}</td>
-					<td class="dex-table__pokemon-icon">
-						<img :src="`/images/pokemon/icons/${pokemon.icon}`">
-					</td>
-					<td>
-						<a
-							:href="`/stats/${thisMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`"
-						>{{ pokemon.name }}</a>
-					</td>
-					<td class="dex-table--number">{{ pokemon.usagePercentText }}</td>
-					<td	class="dex-table--number"
-						:class="{
-							'dex-table--percent-plus': pokemon.usageChange > 0,
-							'dex-table--percent-minus': pokemon.usageChange < 0,
-						}"
+	<table class="pokemon-usage">
+		<thead>
+			<tr>
+				<th class="dex-table__header--sortable" @click="sortBy('rank', 'asc')"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'rank' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'rank' && sortDirection === 'desc',
+					}"
+				>Rank</th>
+				<th></th>
+				<th class="pokemon-name dex-table__header--sortable" @click="sortBy('name', 'asc')"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
+					}"
+				>Pokémon</th>
+				<th class="dex-table__header--sortable" @click="sortBy('usagePercent', 'desc')"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'usagePercent' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'usagePercent' && sortDirection === 'desc',
+					}"
+				>Usage&nbsp;%</th>
+				<th class="dex-table__header--sortable" @click="sortBy('usageChange', 'desc')"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'usageChange' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'usageChange' && sortDirection === 'desc',
+					}"
+				>Usage&nbsp;Δ</th>
+				<th class="dex-table__header--sortable" @click="sortBy('raw', 'desc')"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'raw' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'raw' && sortDirection === 'desc',
+					}"
+				>Raw</th>
+				<th class="dex-table__header--sortable" @click="sortBy('rawPercent', 'desc')"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'rawPercent' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'rawPercent' && sortDirection === 'desc',
+					}"
+				>Raw&nbsp;%</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr v-for="pokemon in paginatedPokemons" :key="pokemon.identifier">
+				<td class="dex-table--number">{{ pokemon.rank }}</td>
+				<td class="dex-table__pokemon-icon">
+					<img :src="`/images/pokemon/icons/${pokemon.icon}`">
+				</td>
+				<td>
+					<a
+						:href="`/stats/${thisMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`"
+					>{{ pokemon.name }}</a>
+				</td>
+				<td class="dex-table--number">{{ pokemon.usagePercentText }}</td>
+				<td	class="dex-table--number"
+					:class="{
+						'dex-table--percent-plus': pokemon.usageChange > 0,
+						'dex-table--percent-minus': pokemon.usageChange < 0,
+					}"
+				>
+					<a class="chart-link"
+						:href="`/stats/chart?type=lead-usage&format=${format.identifier}&rating=${rating}&pokemon=${pokemon.identifier}`"
 					>
-						<a class="chart-link"
-							:href="`/stats/chart?type=lead-usage&format=${format.identifier}&rating=${rating}&pokemon=${pokemon.identifier}`"
-						>
-							{{ pokemon.usageChangeText }}
-							<img src="/images/porydex/chart-icon.png">
-						</a>
-					</td>
-					<td class="dex-table--number">{{ pokemon.rawText }}</td>
-					<td class="dex-table--number">{{ pokemon.rawPercentText }}</td>
-				</tr>
-			</tbody>
-		</table>
+						{{ pokemon.usageChangeText }}
+						<img src="/images/porydex/chart-icon.png">
+					</a>
+				</td>
+				<td class="dex-table--number">{{ pokemon.rawText }}</td>
+				<td class="dex-table--number">{{ pokemon.rawPercentText }}</td>
+			</tr>
+			<tr v-if="!loaded">
+				<td colspan="7" class="dex-table__loading">Loading...</td>
+			</tr>
+		</tbody>
+	</table>
 
-		<dex-pagination
-			v-model="currentPage"
-			:number-of-items="filteredPokemons.length"
-			:items-per-page="itemsPerPage"
-		></dex-pagination>
-	</div>
+	<dex-pagination
+		v-model="currentPage"
+		:number-of-items="filteredPokemons.length"
+		:items-per-page="itemsPerPage"
+	></dex-pagination>
 </div>
 {% endverbatim %}
 {% endblock %}

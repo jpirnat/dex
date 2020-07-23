@@ -140,7 +140,7 @@ Vue.component('dex-pokemons-table', {
 						<td class="dex-table--number">{{ pokemon.bst }}</td>
 					</tr>
 					<tr v-if="pokemons.length === 0">
-						<td :colspan="colspan" style="text-align: center;">Loading...</td>
+						<td :colspan="colspan" class="dex-table__loading">Loading...</td>
 					</tr>
 				</tbody>
 			</table>

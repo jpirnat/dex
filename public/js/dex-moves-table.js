@@ -140,7 +140,7 @@ Vue.component('dex-moves-table', {
 						<td v-if="showDescriptions" class="dex-table__move-description">{{ move.description }}</td>
 					</tr>
 					<tr v-if="moves.length === 0">
-						<td :colspan="colspan" style="text-align: center;">Loading...</td>
+						<td :colspan="colspan" class="dex-table__loading">Loading...</td>
 					</tr>
 				</tbody>
 			</table>

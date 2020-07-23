@@ -8,122 +8,120 @@
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
-	<div v-if="!loaded">
-		Loading...
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
+	<div class="month-control">
+		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}/${format.identifier}/${rating}/moves/${move.identifier}`">
+			&#9668; {{ prevMonth.text }}
+		</a>
+
+		<div class="space"></div>
+
+		<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.month}/${format.identifier}/${rating}/moves/${move.identifier}`">
+			{{ nextMonth.text }} &#9658;
+		</a>
 	</div>
-	<div v-else>
-		<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-		<div class="month-control">
-			<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}/${format.identifier}/${rating}/moves/${move.identifier}`">
-				&#9668; {{ prevMonth.text }}
-			</a>
+	<div class="rating-control">
+		<ul>
+			<li v-for="r in ratings">
+				<a :href="`/stats/${thisMonth.month}/${format.identifier}/${r}/moves/${move.identifier}`"
+					:class="{
+						'current': r === rating
+					}"
+				>{{ r }}</a>
+			</li>
+		</ul>
+	</div>
 
-			<div class="space"></div>
+	<p>{{ move.name }}: {{ move.description }}</p>
 
-			<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.month}/${format.identifier}/${rating}/moves/${move.identifier}`">
-				{{ nextMonth.text }} &#9658;
-			</a>
-		</div>
+	<dex-pagination
+		v-model="currentPage"
+		:number-of-items="filteredPokemons.length"
+		:items-per-page="itemsPerPage"
+	></dex-pagination>
 
-		<div class="rating-control">
-			<ul>
-				<li v-for="r in ratings">
-					<a :href="`/stats/${thisMonth.month}/${format.identifier}/${r}/moves/${move.identifier}`"
-						:class="{
-							'current': r === rating
-						}"
-					>{{ r }}</a>
-				</li>
-			</ul>
-		</div>
+	<div class="stats-usage__filter">
+		<label>
+			Filter by Pokémon name: <input type="search" v-model="filterName">
+		</label>
+	</div>
 
-		<p>{{ move.name }}: {{ move.description }}</p>
-
-		<dex-pagination
-			v-model="currentPage"
-			:number-of-items="filteredPokemons.length"
-			:items-per-page="itemsPerPage"
-		></dex-pagination>
-
-		<div class="stats-usage__filter">
-			<label>
-				Filter by Pokémon name: <input type="search" v-model="filterName">
-			</label>
-		</div>
-
-		<table class="pokemon-usage">
-			<thead>
-				<tr>
-					<th></th>
-					<th class="pokemon-name dex-table__header--sortable" @click="sortBy('name', 'asc')"
-						:class="{
-							'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
-							'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
-						}"
-					>Pokémon</th>
-					<th class="dex-table__header--sortable" @click="sortBy('pokemonPercent', 'desc')"
-						:class="{
-							'dex-table__header--sorted-asc': sortColumn === 'pokemonPercent' && sortDirection === 'asc',
-							'dex-table__header--sorted-desc': sortColumn === 'pokemonPercent' && sortDirection === 'desc',
-						}"
-					>Pokémon&nbsp;%</th>
-					<th class="dex-table__header--sortable" @click="sortBy('movePercent', 'desc')"
-						:class="{
-							'dex-table__header--sorted-asc': sortColumn === 'movePercent' && sortDirection === 'asc',
-							'dex-table__header--sorted-desc': sortColumn === 'movePercent' && sortDirection === 'desc',
-						}"
-					>Move&nbsp;%</th>
-					<th class="dex-table__header--sortable" @click="sortBy('usagePercent', 'desc')"
-						:class="{
-							'dex-table__header--sorted-asc': sortColumn === 'usagePercent' && sortDirection === 'asc',
-							'dex-table__header--sorted-desc': sortColumn === 'usagePercent' && sortDirection === 'desc',
-						}"
-					>Usage&nbsp;%</th>
-					<th class="dex-table__header--sortable" @click="sortBy('usageChange', 'desc')"
-						:class="{
-							'dex-table__header--sorted-asc': sortColumn === 'usageChange' && sortDirection === 'asc',
-							'dex-table__header--sorted-desc': sortColumn === 'usageChange' && sortDirection === 'desc',
-						}"
-					>Usage&nbsp;Δ</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr v-for="pokemon in paginatedPokemons" :key="pokemon.identifier">
-					<td class="dex-table__pokemon-icon">
-						<img :src="`/images/pokemon/icons/${pokemon.icon}`">
-					</td>
-					<td>
-						<a :href="`/stats/${thisMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
-							{{ pokemon.name }}
-						</a>
-					</td>
-					<td class="dex-table--number">{{ pokemon.pokemonPercentText }}</td>
-					<td class="dex-table--number">{{ pokemon.movePercentText }}</td>
-					<td class="dex-table--number">{{ pokemon.usagePercentText }}</td>
-					<td class="dex-table--number"
-						:class="{
-							'dex-table--percent-plus': pokemon.usageChange > 0,
-							'dex-table--percent-minus': pokemon.usageChange < 0,
-						}"
+	<table class="pokemon-usage">
+		<thead>
+			<tr>
+				<th></th>
+				<th class="pokemon-name dex-table__header--sortable" @click="sortBy('name', 'asc')"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
+					}"
+				>Pokémon</th>
+				<th class="dex-table__header--sortable" @click="sortBy('pokemonPercent', 'desc')"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'pokemonPercent' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'pokemonPercent' && sortDirection === 'desc',
+					}"
+				>Pokémon&nbsp;%</th>
+				<th class="dex-table__header--sortable" @click="sortBy('movePercent', 'desc')"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'movePercent' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'movePercent' && sortDirection === 'desc',
+					}"
+				>Move&nbsp;%</th>
+				<th class="dex-table__header--sortable" @click="sortBy('usagePercent', 'desc')"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'usagePercent' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'usagePercent' && sortDirection === 'desc',
+					}"
+				>Usage&nbsp;%</th>
+				<th class="dex-table__header--sortable" @click="sortBy('usageChange', 'desc')"
+					:class="{
+						'dex-table__header--sorted-asc': sortColumn === 'usageChange' && sortDirection === 'asc',
+						'dex-table__header--sorted-desc': sortColumn === 'usageChange' && sortDirection === 'desc',
+					}"
+				>Usage&nbsp;Δ</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr v-for="pokemon in paginatedPokemons" :key="pokemon.identifier">
+				<td class="dex-table__pokemon-icon">
+					<img :src="`/images/pokemon/icons/${pokemon.icon}`">
+				</td>
+				<td>
+					<a :href="`/stats/${thisMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
+						{{ pokemon.name }}
+					</a>
+				</td>
+				<td class="dex-table--number">{{ pokemon.pokemonPercentText }}</td>
+				<td class="dex-table--number">{{ pokemon.movePercentText }}</td>
+				<td class="dex-table--number">{{ pokemon.usagePercentText }}</td>
+				<td class="dex-table--number"
+					:class="{
+						'dex-table--percent-plus': pokemon.usageChange > 0,
+						'dex-table--percent-minus': pokemon.usageChange < 0,
+					}"
+				>
+					<a class="chart-link"
+						:href="`/stats/chart?type=usage-move&format=${format.identifier}&rating=${rating}&pokemon=${pokemon.identifier}&move=${move.identifier}`"
 					>
-						<a class="chart-link"
-							:href="`/stats/chart?type=usage-move&format=${format.identifier}&rating=${rating}&pokemon=${pokemon.identifier}&move=${move.identifier}`"
-						>
-							{{ pokemon.usageChangeText }}
-							<img src="/images/porydex/chart-icon.png">
-						</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+						{{ pokemon.usageChangeText }}
+						<img src="/images/porydex/chart-icon.png">
+					</a>
+				</td>
+			</tr>
+			<tr v-if="!loaded">
+				<td colspan="6" class="dex-table__loading">Loading...</td>
+			</tr>
+		</tbody>
+	</table>
 
-		<dex-pagination
-			v-model="currentPage"
-			:number-of-items="filteredPokemons.length"
-			:items-per-page="itemsPerPage"
-		></dex-pagination>
-	</div>
+	<dex-pagination
+		v-model="currentPage"
+		:number-of-items="filteredPokemons.length"
+		:items-per-page="itemsPerPage"
+	></dex-pagination>
 </div>
 {% endverbatim %}
 {% endblock %}
