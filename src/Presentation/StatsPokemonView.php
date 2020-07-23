@@ -4,13 +4,11 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel;
-use Laminas\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
 final class StatsPokemonView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
 	private StatsPokemonModel $statsPokemonModel;
 	private IntlFormatterFactory $formatterFactory;
 	private MonthControlFormatter $monthControlFormatter;
@@ -19,23 +17,17 @@ final class StatsPokemonView
 	/**
 	 * Constructor.
 	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
 	 * @param StatsPokemonModel $statsPokemonModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 * @param MonthControlFormatter $monthControlFormatter
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
 		StatsPokemonModel $statsPokemonModel,
 		IntlFormatterFactory $formatterFactory,
 		MonthControlFormatter $monthControlFormatter,
 		DexFormatter $dexFormatter
 	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
 		$this->statsPokemonModel = $statsPokemonModel;
 		$this->formatterFactory = $formatterFactory;
 		$this->monthControlFormatter = $monthControlFormatter;
@@ -98,7 +90,8 @@ final class StatsPokemonView
 			$abilities[] = [
 				'identifier' => $ability->getIdentifier(),
 				'name' => $ability->getName(),
-				'percent' => $formatter->formatPercent($ability->getPercent()),
+				'percent' => $ability->getPercent(),
+				'percentText' => $formatter->formatPercent($ability->getPercent()),
 				'change' => $ability->getChange(),
 				'changeText' => $formatter->formatChange($ability->getChange()),
 			];
@@ -111,7 +104,8 @@ final class StatsPokemonView
 			$items[] = [
 				'identifier' => $item->getIdentifier(),
 				'name' => $item->getName(),
-				'percent' => $formatter->formatPercent($item->getPercent()),
+				'percent' => $item->getPercent(),
+				'percentText' => $formatter->formatPercent($item->getPercent()),
 				'change' => $item->getChange(),
 				'changeText' => $formatter->formatChange($item->getChange()),
 			];
@@ -131,7 +125,8 @@ final class StatsPokemonView
 			$moves[] = [
 				'identifier' => $move->getIdentifier(),
 				'name' => $move->getName(),
-				'percent' => $formatter->formatPercent($move->getPercent()),
+				'percent' => $move->getPercent(),
+				'percentText' => $formatter->formatPercent($move->getPercent()),
 				'change' => $move->getChange(),
 				'changeText' => $formatter->formatChange($move->getChange()),
 			];
@@ -146,7 +141,8 @@ final class StatsPokemonView
 				'showMovesetLink' => true, // TODO
 				'identifier' => $teammate->getIdentifier(),
 				'name' => $teammate->getName(),
-				'percent' => $formatter->formatPercent($teammate->getPercent()),
+				'percent' => $teammate->getPercent(),
+				'percentText' => $formatter->formatPercent($teammate->getPercent()),
 			];
 		}
 
@@ -160,37 +156,38 @@ final class StatsPokemonView
 				'identifier' => $counter->getIdentifier(),
 				'name' => $counter->getName(),
 				'score' => $formatter->formatNumber($counter->getScore()),
-				'percent' => $formatter->formatPercent($counter->getPercent()),
-				'standardDeviation' => $formatter->formatNumber($counter->getStandardDeviation()),
-				'percentKnockedOut' => $formatter->formatPercent($counter->getPercentKnockedOut()),
-				'percentSwitchedOut' => $formatter->formatPercent($counter->getPercentSwitchedOut()),
+				'scoreText' => $formatter->formatNumber($counter->getScore()),
+				'percent' => $counter->getPercent(),
+				'percentText' => $formatter->formatPercent($counter->getPercent()),
+				'standardDeviation' => $counter->getStandardDeviation(),
+				'standardDeviationText' => $formatter->formatNumber($counter->getStandardDeviation()),
+				'percentKnockedOut' => $counter->getPercentKnockedOut(),
+				'percentKnockedOutText' => $formatter->formatPercent($counter->getPercentKnockedOut()),
+				'percentSwitchedOut' => $counter->getPercentSwitchedOut(),
+				'percentSwitchedOutText' => $formatter->formatPercent($counter->getPercentSwitchedOut()),
 			];
 		}
 
 		// Navigation breadcrumbs.
 		$formatIdentifier = $format->getIdentifier();
-		$breadcrumbs = [
-			[
-				'url' => '/stats',
-				'text' => 'Stats',
-			],
-			[
-				'url' => "/stats/$month",
-				'text' => $thisMonth['text'],
-			],
-			[
-				'url' => "/stats/$month/$formatIdentifier/$rating",
-				'text' => $format->getName(),
-			],
-			[
-				'text' => $dexPokemon->getName(),
-			],
-		];
+		$breadcrumbs = [[
+			'url' => '/stats',
+			'text' => 'Stats',
+		], [
+			'url' => "/stats/$month",
+			'text' => $thisMonth['text'],
+		], [
+			'url' => "/stats/$month/$formatIdentifier/$rating",
+			'text' => $format->getName(),
+		], [
+			'text' => $dexPokemon->getName(),
+		]];
 
-		$content = $this->renderer->render(
-			'html/stats/pokemon.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Stats - ' . $thisMonth['text'] . ' ' . $format->getName() . ' - ' . $dexPokemon->getName(),
+		return new JsonResponse([
+			'data' => [
+				'title' => 'Stats - ' . $thisMonth['text'] . ' '
+					. $format->getName() . ' - ' . $dexPokemon->getName(),
+
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'smogonDexIdentifier' => $format->getSmogonDexIdentifier(),
@@ -199,25 +196,23 @@ final class StatsPokemonView
 				'pokemon' => [
 					'identifier' => $dexPokemon->getIdentifier(),
 					'name' => $dexPokemon->getName(),
+					'model' => $model->getImage(),
+					'types' => $this->dexFormatter->formatDexTypes($dexPokemon->getTypes()),
+					'baseStats' => $baseStats,
 					'smogonDexIdentifier' => $pokemon->getSmogonDexIdentifier(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
-
 				'prevMonth' => $prevMonth,
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
-
 				'ratings' => $this->statsPokemonModel->getRatings(),
 
-				'stats' => $stats,
-				'model' => $model->getImage(),
-				'types' => $this->dexFormatter->formatDexTypes($dexPokemon->getTypes()),
-				'baseStats' => $baseStats,
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),
 				],
-				'rawCount' =>$rawCount,
+				'stats' => $stats,
+				'rawCount' => $rawCount,
 				'averageWeight' => $averageWeight,
 				'viabilityCeiling' => $viabilityCeiling,
 
@@ -231,8 +226,6 @@ final class StatsPokemonView
 				'teammates' => $teammates,
 				'counters' => $counters,
 			]
-		);
-
-		return new HtmlResponse($content);
+		]);
 	}
 }

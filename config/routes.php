@@ -231,11 +231,19 @@ $routes = [
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'statsPokemon',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/stats/$month/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\StatsPokemonController::class,
 		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\StatsPokemonView::class,
 		'viewMethod' => 'getData',
-		'middlewareClasses' => MiddlewareGroups::HTML,
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating/abilities/$abilityIdentifier", [

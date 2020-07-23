@@ -192,6 +192,23 @@ final class IndexView
 	}
 
 	/**
+	 * Show the stats Pokémon page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function statsPokemon() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/stats/pokemon.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the stats ability page.
 	 *
 	 * @return ResponseInterface

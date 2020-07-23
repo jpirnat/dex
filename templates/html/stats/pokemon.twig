@@ -1,355 +1,154 @@
 {% extends "html/base.twig" %}
 
+{% block styles %}
+	<link href="/css/vtooltip.css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
+{% verbatim %}
+<div id="app" v-cloak>
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
 	<div class="month-control">
-		{% if prevMonth %}
-			<a class="button prev" href="/stats/{{ prevMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
-				&#9668; {{ prevMonth.text|e }}
-			</a>
-		{% endif %}
+		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
+			&#9668; {{ prevMonth.text }}
+		</a>
 
 		<div class="space"></div>
 
-		{% if nextMonth %}
-			<a class="button next" href="/stats/{{ nextMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
-				{{ nextMonth.text|e }} &#9658;
-			</a>
-		{% endif %}
+		<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
+			{{ nextMonth.text }} &#9658;
+		</a>
 	</div>
 
 	<div class="rating-control">
 		<ul>
-			{% for r in ratings %}
-				<li>
-					<a
-						href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ r|e }}/pokemon/{{ pokemon.identifier|e }}"
-						{% if r == rating %}
-							class="current"
-						{% endif %}
-					>{{ r|e }}</a>
-				</li>
-			{% endfor %}
+			<li v-for="r in ratings">
+				<a :href="`/stats/${thisMonth.month}/${format.identifier}/${r}/pokemon/${pokemon.identifier}`"
+					:class="{
+						'current': r === rating
+					}"
+				>{{ r }}</a>
+			</li>
 		</ul>
 	</div>
 
 	<div class="pokemon-data">
 		<div>
-			{{ pokemon.name|e }}
+			{{ pokemon.name }}
 		</div>
 		<div>
-			<img src="/images/pokemon/models/{{ model|e }}">
+			<img :src="`/images/pokemon/models/${pokemon.model}`">
 		</div>
 		<div class="pokemon-types">
-			{% for type in types %}
-				<a href="/dex/{{ generation.identifier|e }}/types/{{ type.identifier|e }}">
-					<img src="/images/types/{{ type.icon|e }}" alt="{{ type.name|e }}">
-				</a>
-			{% endfor %}
+			<a v-for="type in pokemon.types" :key="type.identifier"
+				:href="`/dex/${generation.identifier}/types/${type.identifier}`"
+			>
+				<img :src="`/images/types/${type.icon}`" :alt="type.name">
+			</a>
 		</div>
 	</div>
 
 	<table class="base-stats">
-		{% for stat in stats %}
-			<tr>
-				<td class="base-stat-name">{{ stat.name|e }}</td>
-				<td class="dex-table--number">{{ baseStats[stat.key]|e }}</td>
-				<td>
-					<div class="base-stat-bar" style="width: calc({{ baseStats[stat.key]|e }} / 255 * 300px)"></div>
-				</td>
-			</tr>
-		{% endfor %}
+		<tr v-for="stat in stats" :key="stat.key">
+			<td class="base-stat-name">{{ stat.name }}</td>
+			<td class="dex-table--number">{{ pokemon.baseStats[stat.key] }}</td>
+			<td>
+				<div class="base-stat-bar"
+					:style="{
+						'width': (pokemon.baseStats[stat.key] / 255 * 300) + 'px',
+					}"
+				></div>
+			</td>
+		</tr>
 	</table>
 
-	{% if format.smogonDexIdentifier and pokemon.smogonDexIdentifier %}
-		<div>
-			<a href="https://www.smogon.com/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.smogonDexIdentifier|e }}/{{ format.smogonDexIdentifier|e }}/">
-				Smogon Analysis
-			</a>
-		</div>
-	{% endif %}
+	<div v-if="format.smogonDexIdentifier && pokemon.smogonDexIdentifier">
+		<a :href="`https://www.smogon.com/dex/${generation.identifier}/pokemon/${pokemon.smogonDexIdentifier}/${format.smogonDexIdentifier}/`">
+			Smogon Analysis
+		</a>
+	</div>
 
-	{% if rawCount %}
-		<div>
-			Raw count: {{ rawCount|e }}
-		</div>
-	{% endif %}
-
-	{% if averageWeight %}
-		<div>
-			Avg. weight: {{ averageWeight|e }}
-		</div>
-	{% endif %}
-
-	{% if viabilityCeiling %}
-		<div>
-			Viability Ceiling: {{ viabilityCeiling|e }}
-		</div>
-	{% endif %}
+	<div v-if="rawCount">
+		Raw count: {{ rawCount }}
+	</div>
+	<div v-if="averageWeight">
+		Avg. weight: {{ averageWeight }}
+	</div>
+	<div v-if="viabilityCeiling">
+		Viability Ceiling: {{ viabilityCeiling }}
+	</div>
 
 	<nav id="quick-links">
 		<ul>
-			{% if showAbilities %}
-				<li><a href="#abilities" class="scroll">Abilities</a></li>
-			{% endif %}
-			{% if showItems %}
-				<li><a href="#items" class="scroll">Items</a></li>
-			{% endif %}
-			<li><a href="#spreads" class="scroll">Spreads</a></li>
-			<li><a href="#moves" class="scroll">Moves</a></li>
-			<li><a href="#teammates" class="scroll">Teammates</a></li>
-			<li><a href="#counters" class="scroll">Counters</a></li>
+			<li v-if="showAbilities"><a href="#abilities">Abilities</a></li>
+			<li v-if="showItems"><a href="#items">Items</a></li>
+			<li><a href="#spreads">Spreads</a></li>
+			<li><a href="#moves">Moves</a></li>
+			<li><a href="#teammates">Teammates</a></li>
+			<li><a href="#counters">Counters</a></li>
 		</ul>
 	</nav>
 
-	{% if showAbilities %}
-		<table id="abilities" class="moveset-usage">
-			<caption>Abilities</caption>
-			<thead>
-				<tr>
-					<th>Ability</th>
-					<th>%</th>
-					<th>Δ</th>
-				</tr>
-			</thead>
-			<tbody>
-				{% for ability in abilities %}
-					<tr>
-						<td>
-							<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/abilities/{{ ability.identifier|e }}">
-								{{ ability.name|e }}
-							</a>
-						</td>
-						<td class="dex-table--number">{{ ability.percent|e }}</td>
-						<td
-							{% if ability.change > 0 %}
-								class="dex-table--number dex-table--percent-plus"
-							{% elseif ability.change < 0 %}
-								class="dex-table--number dex-table--percent-minus"
-							{% else %}
-								class="dex-table--number"
-							{% endif %}
-						>
-							<a class="chart-link"
-								href="/stats/chart?type=moveset-ability&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&ability={{ ability.identifier|e }}"
-							>
-								{{ ability.changeText|e }}
-								<img src="/images/porydex/chart-icon.png">
-							</a>
-						</td>
-					</tr>
-				{% endfor %}
-			</tbody>
-		</table>
-	{% endif %}
+	<stats-pokemon-abilities v-if="showAbilities" id="abilities"
+		:abilities="abilities"
+		:month="thisMonth.month"
+		:format="format.identifier"
+		:rating="rating"
+		:pokemon="pokemon.identifier"
+	></stats-pokemon-abilities>
 
-	{% if showItems %}
-		<table id="items" class="moveset-usage">
-			<caption>Items</caption>
-			<thead>
-				<tr>
-					<th>Item</th>
-					<th>%</th>
-					<th>Δ</th>
-				</tr>
-			</thead>
-			<tbody>
-				{% for item in items %}
-					<tr>
-						<td>
-							<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/items/{{ item.identifier|e }}">
-								{{ item.name|e }}
-							</a>
-						</td>
-						<td class="dex-table--number">{{ item.percent|e }}</td>
-						<td
-							{% if item.change > 0 %}
-								class="dex-table--number dex-table--percent-plus"
-							{% elseif item.change < 0 %}
-								class="dex-table--number dex-table--percent-minus"
-							{% else %}
-								class="dex-table--number"
-							{% endif %}
-						>
-							<a class="chart-link"
-								href="/stats/chart?type=moveset-item&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&item={{ item.identifier|e }}"
-							>
-								{{ item.changeText|e }}
-								<img src="/images/porydex/chart-icon.png">
-							</a>
-						</td>
-					</tr>
-				{% endfor %}
-			</tbody>
-		</table>
-	{% endif %}
+	<stats-pokemon-items v-if="showItems" id="items"
+		:items="items"
+		:month="thisMonth.month"
+		:format="format.identifier"
+		:rating="rating"
+		:pokemon="pokemon.identifier"
+	></stats-pokemon-items>
 
-	<table id="spreads" class="moveset-usage">
-		<caption>Spreads</caption>
-		<thead>
-			<tr>
-				<th>Nature</th>
-				<th>
-					<div>EVs</div>
-					<div class="dex-spreads__stat-names">
-						{% for stat in stats %}
-							<abbr title="{{ stat.name|e }}" class="dex-spread--ev">{{ stat.abbr|e }}</abbr>
-							{% if not loop.last %}
-								<span class="dex-spread--slash">/</span>
-							{% endif %}
-						{% endfor %}
-					</div>
-				</th>
-				<th>%</th>
-				<th>
-					<div>Stats</div>
-					<div class="dex-spreads__stat-names">
-						{% for stat in stats %}
-							<abbr title="{{ stat.name|e }}" class="dex-spread--stat">{{ stat.abbr|e }}</abbr>
-							{% if not loop.last %}
-								<span class="dex-spread--slash">/</span>
-							{% endif %}
-						{% endfor %}
-					</div>
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for spread in spreads %}
-				<tr>
-					<td>{{ spread.nature|e }}</td>
-					<td>
-						{% for stat in stats %}
-							<span
-								{% if spread.increasedStat == stat.key %}
-									class="dex-spread--ev dex-nature--increased"
-								{% elseif spread.decreasedStat == stat.key %}
-									class="dex-spread--ev dex-nature--decreased"
-								{% else %}
-									class="dex-spread--ev"
-								{% endif %}
-							>
-								{% if spread.increasedStat == stat.key %}+{% endif %}{% if spread.decreasedStat == stat.key %}-{% endif %}{{ spread.evs[stat.key]|e }}
-							</span>
-							{% if not loop.last %}
-								<span class="dex-spread--slash">/</span>
-							{% endif %}
-						{% endfor %}
-					</td>
-					</td>
-					<td class="dex-table--number">
-						{{ spread.percent|e }}
-					</td>
-					<td>
-						{% for stat in stats %}
-							<span class="dex-spread--stat">
-								{{ spread.stats[stat.key]|e }}
-							</span>
-							{% if not loop.last %}
-								<span class="dex-spread--slash">/</span>
-							{% endif %}
-						{% endfor %}
-					</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+	<stats-pokemon-spreads id="spreads"
+		:spreads="spreads"
+		:stats="stats"
+	></stats-pokemon-spreads>
 
-	<table id="moves" class="moveset-usage">
-		<caption>Moves</caption>
-		<thead>
-			<tr>
-				<th>Move</th>
-				<th>%</th>
-				<th>Δ</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for move in moves %}
-				<tr>
-					<td>
-						<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/moves/{{ move.identifier|e }}">
-							{{ move.name|e }}
-						</a>
-					</td>
-					<td class="dex-table--number">{{ move.percent|e }}</td>
-					<td
-						{% if move.change > 0 %}
-							class="dex-table--number dex-table--percent-plus"
-						{% elseif move.change < 0 %}
-							class="dex-table--number dex-table--percent-minus"
-						{% else %}
-							class="dex-table--number"
-						{% endif %}
-					>
-						<a class="chart-link"
-							href="/stats/chart?type=moveset-move&format={{ format.identifier|e }}&rating={{ rating|e }}&pokemon={{ pokemon.identifier|e }}&move={{ move.identifier|e }}"
-						>
-							{{ move.changeText|e }}
-							<img src="/images/porydex/chart-icon.png">
-						</a>
-					</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+	<stats-pokemon-moves id="moves"
+		:moves="moves"
+		:month="thisMonth.month"
+		:format="format.identifier"
+		:rating="rating"
+		:pokemon="pokemon.identifier"
+	></stats-pokemon-moves>
 
-	<table id="teammates" class="moveset-usage">
-		<caption>Teammates</caption>
-		<thead>
-			<tr>
-				<th></th>
-				<th>Teammate</th>
-				<th>%</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for teammate in teammates %}
-				<tr>
-					<td class="dex-table__pokemon-icon">
-						<img src="/images/pokemon/icons/{{ teammate.icon|e }}">
-					</td>
-					<td>
-						<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ teammate.identifier|e }}">
-							{{ teammate.name|e }}
-						</a>
-					</td>
-					<td class="dex-table--number">{{ teammate.percent|e }}</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+	<stats-pokemon-teammates id="teammates"
+		:teammates="teammates"
+		:month="thisMonth.month"
+		:format="format.identifier"
+		:rating="rating"
+	></stats-pokemon-teammates>
 
-	<table id="counters" class="moveset-usage">
-		<caption>Checks and Counters</caption>
-		<thead>
-			<tr>
-				<th></th>
-				<th>Counter</th>
-				<th title="The counter's numeric score, weighted to remove bias towards low-probability matchups (% - 4σ)">S</th>
-				<th title="The percent of encounters where {{ pokemon.name|e }} was knocked out or switched out">%</th>
-				<th title="The standard deviation of the percent of encounters where {{ pokemon.name|e }} was knocked out or switched out">σ</th>
-				<th>% KOed</th>
-				<th>% switched out</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for counter in counters %}
-				<tr>
-					<td class="dex-table__pokemon-icon">
-						<img src="/images/pokemon/icons/{{ counter.icon|e }}">
-					</td>
-					<td>
-						<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ counter.identifier|e }}">
-							{{ counter.name|e }}
-						</a>
-					</td>
-					<td class="dex-table--number">{{ counter.score|e }}</td>
-					<td class="dex-table--number">{{ counter.percent|e }}</td>
-					<td class="dex-table--number">{{ counter.standardDeviation|e }}</td>
-					<td class="dex-table--number">{{ counter.percentKnockedOut|e }}</td>
-					<td class="dex-table--number">{{ counter.percentSwitchedOut|e }}</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+	<stats-pokemon-counters id="counters"
+		:counters="counters"
+		:month="thisMonth.month"
+		:format="format.identifier"
+		:rating="rating"
+		:pokemon="pokemon.name"
+	></stats-pokemon-counters>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	<script src="/js/dex-breadcrumbs.js"></script>
+
+	<script src="/js/stats-pokemon-abilities.js"></script>
+	<script src="/js/stats-pokemon-items.js"></script>
+	<script src="/js/stats-pokemon-spreads.js"></script>
+	<script src="/js/stats-pokemon-moves.js"></script>
+	<script src="/js/stats-pokemon-teammates.js"></script>
+
+	<script src="https://unpkg.com/v-tooltip"></script>
+	<script src="/js/stats-pokemon-counters.js"></script>
+
+	<script src="/js/stats/pokemon.js"></script>
 {% endblock %}
