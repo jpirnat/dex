@@ -91,7 +91,7 @@ Vue.component('dex-pokemons-table', {
 								'dex-table__header--sorted-desc': sortColumn === stat.key && sortDirection === 'desc',
 							}"
 						>
-							<abbr title="{{ stat.name }}">{{ stat.abbr }}</abbr>
+							<abbr v-tooltip="stat.name" class="dex--tooltip">{{ stat.abbr }}</abbr>
 						</th>
 						<th scope="col" class="dex-table--number dex-table__header--sortable"
 							@click="sortBy('bst', 'desc', p => p.bst)"
@@ -100,7 +100,7 @@ Vue.component('dex-pokemons-table', {
 								'dex-table__header--sorted-desc': sortColumn === 'bst' && sortDirection === 'desc',
 							}"
 						>
-							<abbr title="Base Stat Total">BST</abbr>
+							<abbr v-tooltip="'Base Stat Total'" class="dex--tooltip">BST</abbr>
 						</th>
 					</tr>
 				</thead>

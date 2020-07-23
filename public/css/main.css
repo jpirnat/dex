@@ -292,6 +292,9 @@ a.button {
 	text-align: center;
 }
 
+.dex--tooltip {
+	text-decoration: underline dotted;
+}
 
 /* dex abilities */
 

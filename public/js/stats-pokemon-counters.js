@@ -42,7 +42,7 @@ Vue.component('stats-pokemon-counters', {
 							'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
 						}"
 					>Counter</th>
-					<th scope="col" class="dex-table__header--sortable"
+					<th scope="col" class="dex-table__header--sortable dex--tooltip"
 						@click="sortBy('score', 'desc', c => c.score)"
 						v-tooltip="'The counter\\\'s numeric score, weighted to remove bias towards low-probability matchups (% - 4σ)'"
 						:class="{
@@ -50,7 +50,7 @@ Vue.component('stats-pokemon-counters', {
 							'dex-table__header--sorted-desc': sortColumn === 'score' && sortDirection === 'desc',
 						}"
 					>Score</th>
-					<th scope="col" class="dex-table__header--sortable"
+					<th scope="col" class="dex-table__header--sortable dex--tooltip"
 						@click="sortBy('percent', 'desc', c => c.percent)"
 						v-tooltip="'The percent of encounters where ' + pokemon + ' was knocked out or switched out'"
 						:class="{
@@ -58,7 +58,7 @@ Vue.component('stats-pokemon-counters', {
 							'dex-table__header--sorted-desc': sortColumn === 'percent' && sortDirection === 'desc',
 						}"
 					>%</th>
-					<th scope="col" class="dex-table__header--sortable"
+					<th scope="col" class="dex-table__header--sortable dex--tooltip"
 						@click="sortBy('standardDeviation', 'desc', c => c.standardDeviation)"
 						v-tooltip="'The standard deviation of the percent of encounters where ' + pokemon + ' was knocked out or switched out'"
 						:class="{

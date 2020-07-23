@@ -21,7 +21,7 @@ Vue.component('stats-pokemon-spreads', {
 						<div>EVs</div>
 						<div class="dex-spreads__stat-names">
 							<template v-for="(stat, statIndex) in stats" :key="stat.key">
-								<abbr :title="stat.name" class="dex-spread--ev">{{ stat.abbr }}</abbr>
+								<abbr v-tooltip="stat.name" class="dex-spread--ev dex--tooltip">{{ stat.abbr }}</abbr>
 								<span v-if="statIndex < stats.length - 1" class="dex-spread--slash">/</span>
 							</template>
 						</div>
@@ -31,7 +31,7 @@ Vue.component('stats-pokemon-spreads', {
 						<div>Stats</div>
 						<div class="dex-spreads__stat-names">
 							<template v-for="(stat, statIndex) in stats" :key="stat.key">
-								<abbr :title="stat.name" class="dex-spread--stat">{{ stat.abbr }}</abbr>
+								<abbr v-tooltip="stat.name" class="dex-spread--stat dex--tooltip">{{ stat.abbr }}</abbr>
 								<span v-if="statIndex < stats.length - 1" class="dex-spread--slash">/</span>
 							</template>
 						</div>

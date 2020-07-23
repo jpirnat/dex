@@ -1,7 +1,5 @@
 'use strict';
 
-Vue.component('v-popover', VTooltip.VPopover);
-
 Vue.component('dex-pagination', {
 	props: {
 		value: {
