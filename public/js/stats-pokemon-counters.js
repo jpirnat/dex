@@ -42,30 +42,39 @@ Vue.component('stats-pokemon-counters', {
 							'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
 						}"
 					>Counter</th>
-					<th scope="col" class="dex-table__header--sortable dex--tooltip"
+					<th scope="col" class="dex-table__header--sortable"
 						@click="sortBy('score', 'desc', c => c.score)"
-						v-tooltip="'The counter\\\'s numeric score, weighted to remove bias towards low-probability matchups (% - 4σ)'"
 						:class="{
 							'dex-table__header--sorted-asc': sortColumn === 'score' && sortDirection === 'asc',
 							'dex-table__header--sorted-desc': sortColumn === 'score' && sortDirection === 'desc',
 						}"
-					>Score</th>
-					<th scope="col" class="dex-table__header--sortable dex--tooltip"
+					>
+						<abbr class="dex--tooltip"
+							v-tooltip="'The counter\\\'s numeric score, weighted to remove bias towards low-probability matchups (% - 4σ)'"
+						>Score</abbr>
+					</th>
+					<th scope="col" class="dex-table__header--sortable"
 						@click="sortBy('percent', 'desc', c => c.percent)"
-						v-tooltip="'The percent of encounters where ' + pokemon + ' was knocked out or switched out'"
 						:class="{
 							'dex-table__header--sorted-asc': sortColumn === 'percent' && sortDirection === 'asc',
 							'dex-table__header--sorted-desc': sortColumn === 'percent' && sortDirection === 'desc',
 						}"
-					>%</th>
-					<th scope="col" class="dex-table__header--sortable dex--tooltip"
+					>
+						<abbr class="dex--tooltip"
+							v-tooltip="'The percent of encounters where ' + pokemon + ' was knocked out or switched out'"
+						>%</abbr>
+					</th>
+					<th scope="col" class="dex-table__header--sortable"
 						@click="sortBy('standardDeviation', 'desc', c => c.standardDeviation)"
-						v-tooltip="'The standard deviation of the percent of encounters where ' + pokemon + ' was knocked out or switched out'"
 						:class="{
 							'dex-table__header--sorted-asc': sortColumn === 'standardDeviation' && sortDirection === 'asc',
 							'dex-table__header--sorted-desc': sortColumn === 'standardDeviation' && sortDirection === 'desc',
 						}"
-					>σ</th>
+					>
+						<abbr class="dex--tooltip"
+							v-tooltip="'The standard deviation of the percent of encounters where ' + pokemon + ' was knocked out or switched out'"
+						>σ</abbr>
+					</th>
 					<th scope="col" class="dex-table__header--sortable"
 						@click="sortBy('percentKnockedOut', 'desc', c => c.percentKnockedOut)"
 						:class="{
