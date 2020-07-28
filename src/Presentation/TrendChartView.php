@@ -237,20 +237,35 @@ final class TrendChartView
 	 */
 	private function getLineColor(TrendLine $trendLine) : string
 	{
+		$differences = $this->trendChartModel->getDifferences();
+		if ($differences === ['rating']) {
+			// Special case: For charts where we're looking at the same thing
+			// across different rating levels, each rating has a specific color.
+			$rating = $trendLine->getRating();
+			if ($rating === 0) {
+				return 'rgba(0, 0, 0, 1)'; // black
+			}
+			if ($rating === 1500) {
+				return 'rgba(255, 99, 132, 1)'; // red
+			}
+			if ($rating === 1630 || $rating === 1695) {
+				return 'rgba(54, 162, 235, 1)'; // blue
+			}
+			if ($rating === 1760 || $rating === 1825) {
+				return 'rgba(153, 102, 255, 1)'; // purple
+			}
+			return 'rgba(201, 203, 207, 1)'; // This shouldn't ever happen.
+		}
+
 		return $trendLine->getPokemonType()->getColorCode();
 
-		// These default line colors were taken from the Chart.js documentation
-		// examples: http://www.chartjs.org/samples/latest/utils.js
-		/*
-		return [
-			'#ff6384', // red: 'rgb(255, 99, 132)',
-			'#ff9f40', // orange: 'rgb(255, 159, 64)',
-			'#ffcd56', // yellow: 'rgb(255, 205, 86)',
-			'#4bc0c0', // green: 'rgb(75, 192, 192)',
-			'#36a2eb', // blue: 'rgb(54, 162, 235)',
-			'#9966ff', // purple: 'rgb(153, 102, 255)',
-			'#c9cbcf', // grey: 'rgb(201, 203, 207)'
-		][$index % 7];
-		*/
+		// These example line colors were taken from the Chart.js documentation.
+		// red: 'rgba(255, 99, 132, 1)',
+		// orange: 'rgba(255, 159, 64, 1)',
+		// yellow: 'rgba(255, 206, 86, 1)',
+		// green: 'rgba(75, 192, 192, 1)',
+		// blue: 'rgba(54, 162, 235, 1)',
+		// purple: 'rgba(153, 102, 255, 1)',
+		// grey: 'rgba(201, 203, 207, 1)'
 	}
 }
