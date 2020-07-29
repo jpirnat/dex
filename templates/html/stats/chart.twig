@@ -1,46 +1,20 @@
 {% extends "html/base.twig" %}
 
 {% block body %}
-	<div class="chart-container">
-		<canvas id="chart-canvas"></canvas>
+{% verbatim %}
+<div id="app" v-cloak>
+	<div class="dex-chart__container">
+		<canvas id="dex-chart__canvas"></canvas>
 	</div>
+</div>
+{% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment-with-locales.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment-with-locales.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
-<script>
-let url = new URL(window.location);
-
-let data = {
-	lines: [
-		{
-			type: url.searchParams.get('type'),
-			format: url.searchParams.get('format'),
-			rating: url.searchParams.get('rating'),
-			pokemon: url.searchParams.get('pokemon'),
-			ability: url.searchParams.get('ability'),
-			item: url.searchParams.get('item'),
-			move: url.searchParams.get('move'),
-		},
-	]
-};
-
-fetch('/stats/chart', {
-	method: 'POST',
-	body: JSON.stringify(data),
-	headers: new Headers({
-		'Content-Type': 'application/json'
-	}),
-	credentials: 'same-origin' // enables cookies
-})
-.then(response => response.json())
-.then(function(json) {
-	moment.locale(json.locale);
-	let ctx = document.getElementById('chart-canvas');
-	let chart = new Chart(ctx, json.chart);
-});
-</script>
+	<script src="/js/stats/chart.js"></script>
 {% endblock %}

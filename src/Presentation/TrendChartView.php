@@ -39,8 +39,7 @@ final class TrendChartView
 	{
 		$trendLines = $this->trendChartModel->getTrendLines();
 
-		$datasets = [];
-		$index = 0; // Used to determine line color.
+		$lines = [];
 		foreach ($trendLines as $trendLine) {
 			$data = [];
 			foreach ($trendLine->getTrendPoints() as $point) {
@@ -50,52 +49,19 @@ final class TrendChartView
 				];
 			}
 
-			$datasets[] = [
+			$lines[] = [
 				'label' => $this->getLineLabel($trendLine),
 				'data' => $data,
-				'borderColor' => $this->getLineColor($trendLine),
-				'fill' => false,
+				'color' => $this->getLineColor($trendLine),
 			];
-
-			$index++;
 		}
 
 		return new JsonResponse([
-			'locale' => $this->trendChartModel->getLanguage()->getLocale(),
-			'chart' => [
-				'type' => 'line',
-				'data' => [
-					'datasets' => $datasets,
-				],
-				'options' => [
-					'title' => [
-						'display' => true,
-						'text' => $this->getChartTitle(),
-						'fontSize' => 16,
-					],
-					'scales' => [
-						'xAxes' => [
-							[
-								'type' => 'time',
-								'time' => [
-									'unit' => 'month',
-								],
-							],
-						],
-						'yAxes' => [
-							[
-								'ticks' => [
-									'beginAtZero' => true,
-								],
-							],
-						],
-					],
-					'tooltips' => [
-						'mode' => 'nearest',
-						'intersect' => false,
-					],
-				],
-			],
+			'data' => [
+				'chartTitle' => $this->getChartTitle(),
+				'lines' => $lines,
+				'locale' => $this->trendChartModel->getLanguage()->getLocale(),
+			]
 		]);
 	}
 

@@ -28,6 +28,8 @@ const app = new Vue({
 
 		sortColumn: '',
 		sortDirection: '',
+
+		chartLines: [],
 	},
 	computed: {
 		showSaveAsDefaultFormat() {
@@ -122,6 +124,14 @@ const app = new Vue({
 				if (a[column] > b[column]) { return +1 * modifier; }
 				return 0;
 			});
+		},
+		addChartLine(pokemon) {
+			this.chartLines = [{
+				type: 'usage',
+				format: this.format.identifier,
+				rating: this.rating,
+				pokemon: pokemon.identifier,
+			}];
 		},
 	},
 	watch: {
