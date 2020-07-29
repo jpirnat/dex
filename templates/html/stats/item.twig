@@ -97,18 +97,17 @@
 				<td class="dex-table--number">{{ pokemon.pokemonPercentText }}</td>
 				<td class="dex-table--number">{{ pokemon.itemPercentText }}</td>
 				<td class="dex-table--number">{{ pokemon.usagePercentText }}</td>
-				<td class="dex-table--number"
+				<td class="dex-table--number chart-link"
 					:class="{
 						'dex-table--percent-plus': pokemon.usageChange > 0,
 						'dex-table--percent-minus': pokemon.usageChange < 0,
 					}"
+					@click="addChartLine(pokemon)"
 				>
-					<a class="chart-link"
-						:href="`/stats/chart?type=usage-item&format=${format.identifier}&rating=${rating}&pokemon=${pokemon.identifier}&item=${item.identifier}`"
-					>
+					<div class="chart-link__inner">
 						{{ pokemon.usageChangeText }}
-						<img src="/images/porydex/chart-icon.png">
-					</a>
+						<img class="chart-link__icon" src="/images/porydex/chart-icon.png">
+					</div>
 				</td>
 			</tr>
 			<tr v-if="!loaded">
@@ -122,6 +121,11 @@
 		:number-of-items="filteredPokemons.length"
 		:items-per-page="itemsPerPage"
 	></dex-pagination>
+
+	<dex-chart-drawer
+		:lines="chartLines"
+		:ratings="ratings"
+	></dex-chart-drawer>
 </div>
 {% endverbatim %}
 {% endblock %}
@@ -132,6 +136,10 @@
 
 	<script src="https://unpkg.com/v-tooltip"></script>
 	<script src="/js/dex-pagination.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+	<script src="/js/dex-chart-drawer.js"></script>
 
 	<script src="/js/stats/item.js"></script>
 {% endblock %}
