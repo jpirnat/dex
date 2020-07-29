@@ -30,6 +30,8 @@ const app = new Vue({
 		moves: [],
 		teammates: [],
 		counters: [],
+
+		chartLines: [],
 	},
 	created() {
 		const url = new URL(window.location);
@@ -73,5 +75,10 @@ const app = new Vue({
 				document.title = data.title;
 			}
 		});
+	},
+	methods: {
+		addChartLine(line) {
+			this.chartLines = [line];
+		},
 	},
 });

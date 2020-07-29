@@ -223,6 +223,10 @@ final class TrendChartView
 			return 'rgba(201, 203, 207, 1)'; // This shouldn't ever happen.
 		}
 
+		if ($trendLine instanceof MovesetMoveTrendLine) {
+			return $trendLine->getMoveType()->getColorCode();
+		}
+
 		return $trendLine->getPokemonType()->getColorCode();
 
 		// These example line colors were taken from the Chart.js documentation.

@@ -96,6 +96,7 @@
 		:format="format.identifier"
 		:rating="rating"
 		:pokemon="pokemon.identifier"
+		@add-chart-line="addChartLine($event)"
 	></stats-pokemon-abilities>
 
 	<stats-pokemon-items v-if="showItems" id="items"
@@ -104,6 +105,7 @@
 		:format="format.identifier"
 		:rating="rating"
 		:pokemon="pokemon.identifier"
+		@add-chart-line="addChartLine($event)"
 	></stats-pokemon-items>
 
 	<stats-pokemon-spreads id="spreads"
@@ -117,6 +119,7 @@
 		:format="format.identifier"
 		:rating="rating"
 		:pokemon="pokemon.identifier"
+		@add-chart-line="addChartLine($event)"
 	></stats-pokemon-moves>
 
 	<stats-pokemon-teammates id="teammates"
@@ -133,6 +136,11 @@
 		:rating="rating"
 		:pokemon="pokemon.name"
 	></stats-pokemon-counters>
+
+	<dex-chart-drawer
+		:lines="chartLines"
+		:ratings="ratings"
+	></dex-chart-drawer>
 </div>
 {% endverbatim %}
 {% endblock %}
@@ -141,14 +149,18 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 	<script src="/js/dex-breadcrumbs.js"></script>
 
+	<script src="https://unpkg.com/v-tooltip"></script>
+
 	<script src="/js/stats-pokemon-abilities.js"></script>
 	<script src="/js/stats-pokemon-items.js"></script>
 	<script src="/js/stats-pokemon-spreads.js"></script>
 	<script src="/js/stats-pokemon-moves.js"></script>
 	<script src="/js/stats-pokemon-teammates.js"></script>
-
-	<script src="https://unpkg.com/v-tooltip"></script>
 	<script src="/js/stats-pokemon-counters.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+	<script src="/js/dex-chart-drawer.js"></script>
 
 	<script src="/js/stats/pokemon.js"></script>
 {% endblock %}

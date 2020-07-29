@@ -65,18 +65,17 @@ Vue.component('stats-pokemon-abilities', {
 						</a>
 					</td>
 					<td class="dex-table--number">{{ ability.percentText }}</td>
-					<td class="dex-table--number"
+					<td class="dex-table--number chart-link"
 						:class="{
 							'dex-table--percent-plus': ability.change > 0,
 							'dex-table--percent-minus': ability.change < 0,
 						}"
+						@click="addChartLine(ability)"
 					>
-						<a class="chart-link"
-							:href="'/stats/chart?type=moveset-ability&format=' + format + '&rating=' + rating + '&pokemon=' + pokemon + '&ability=' + ability.identifier"
-						>
+						<div class="chart-link__inner">
 							{{ ability.changeText }}
-							<img src="/images/porydex/chart-icon.png">
-						</a>
+							<img class="chart-link__icon" src="/images/porydex/chart-icon.png">
+						</div>
 					</td>
 				</tr>
 			</tbody>
@@ -103,6 +102,15 @@ Vue.component('stats-pokemon-abilities', {
 				if (aValue < bValue) { return -1 * modifier; }
 				if (aValue > bValue) { return +1 * modifier; }
 				return 0;
+			});
+		},
+		addChartLine(ability) {
+			this.$emit('add-chart-line', {
+				type: 'moveset-ability',
+				format: this.format,
+				rating: this.rating,
+				pokemon: this.pokemon,
+				ability: ability.identifier
 			});
 		},
 	},

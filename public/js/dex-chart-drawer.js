@@ -15,7 +15,7 @@ Vue.component('dex-chart-drawer', {
 		return {
 			isVisible: false,
 			chart: null,
-			chartTitle: "Big Ol' Test Chart",
+			chartTitle: "Loading...",
 			responseLines: [],
 			locale: 'en',
 		};
@@ -73,7 +73,7 @@ Vue.component('dex-chart-drawer', {
 				<div class="buttons-control">
 					<a :href="chartUrl" target="_blank">Save this chart</a>
 				</div>
-				<div class="buttons-control" v-if="lines.length === 1">
+				<div class="buttons-control" v-if="responseLines.length === 1">
 					<button role="button" @click="otherRatings">See at all Rating levels</button>
 				</div>
 				<div class="buttons-control">
