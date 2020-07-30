@@ -9,7 +9,7 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="month-control">
+	<div class="month-control" v-if="loaded">
 		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
 			&#9668; {{ prevMonth.text }}
 		</a>
@@ -21,7 +21,7 @@
 		</a>
 	</div>
 
-	<div class="rating-control">
+	<div class="rating-control" v-if="ratings.length">
 		<ul>
 			<li v-for="r in ratings">
 				<a :href="`/stats/${thisMonth.month}/${format.identifier}/${r}/pokemon/${pokemon.identifier}`"
@@ -64,7 +64,9 @@
 	</table>
 
 	<div v-if="format.smogonDexIdentifier && pokemon.smogonDexIdentifier">
-		<a :href="`https://www.smogon.com/dex/${generation.identifier}/pokemon/${pokemon.smogonDexIdentifier}/${format.smogonDexIdentifier}/`">
+		<a :href="`https://www.smogon.com/dex/${generation.identifier}/pokemon/${pokemon.smogonDexIdentifier}/${format.smogonDexIdentifier}/`"
+			target="_blank" rel="noopener"
+		>
 			Smogon Analysis
 		</a>
 	</div>

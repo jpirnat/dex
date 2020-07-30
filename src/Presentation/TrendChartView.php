@@ -40,6 +40,7 @@ final class TrendChartView
 		$trendLines = $this->trendChartModel->getTrendLines();
 
 		$lines = [];
+		$index = 0;
 		foreach ($trendLines as $trendLine) {
 			$data = [];
 			foreach ($trendLine->getTrendPoints() as $point) {
@@ -52,8 +53,10 @@ final class TrendChartView
 			$lines[] = [
 				'label' => $this->getLineLabel($trendLine),
 				'data' => $data,
-				'color' => $this->getLineColor($trendLine),
+				'color' => $this->getLineColor($trendLine, $index),
 			];
+
+			$index++;
 		}
 
 		return new JsonResponse([
@@ -198,10 +201,11 @@ final class TrendChartView
 	 * Get a color for the line.
 	 *
 	 * @param TrendLine $trendLine
+	 * @param int $index
 	 *
 	 * @return string
 	 */
-	private function getLineColor(TrendLine $trendLine) : string
+	private function getLineColor(TrendLine $trendLine, int $index) : string
 	{
 		$differences = $this->trendChartModel->getDifferences();
 		if ($differences === ['rating']) {
@@ -227,15 +231,22 @@ final class TrendChartView
 			return $trendLine->getMoveType()->getColorCode();
 		}
 
-		return $trendLine->getPokemonType()->getColorCode();
+		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof MovesetItemTrendline) {
+			// For moveset ability and moveset item lines, use these colors from
+			// the Chart.js documentation.
+			return [
+				'rgba(255, 99, 132, 1)', // red
+				'rgba(255, 159, 64, 1)', // orange
+				'rgba(255, 206, 86, 1)', // yellow
+				'rgba(75, 192, 192, 1)', // green
+				'rgba(54, 162, 235, 1)', // blue
+				'rgba(153, 102, 255, 1)', // purple
+				'rgba(201, 203, 207, 1)', // gray
+			][$index % 7];
+			return $trendLine->getMoveType()->getColorCode();
+		}
 
-		// These example line colors were taken from the Chart.js documentation.
-		// red: 'rgba(255, 99, 132, 1)',
-		// orange: 'rgba(255, 159, 64, 1)',
-		// yellow: 'rgba(255, 206, 86, 1)',
-		// green: 'rgba(75, 192, 192, 1)',
-		// blue: 'rgba(54, 162, 235, 1)',
-		// purple: 'rgba(153, 102, 255, 1)',
-		// grey: 'rgba(201, 203, 207, 1)'
+		// For all other cases, use the color of the Pokémon's primary type.
+		return $trendLine->getPokemonType()->getColorCode();
 	}
 }

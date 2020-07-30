@@ -10,7 +10,7 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="generation-control">
+	<div class="generation-control" v-if="generations.length">
 		<ul>
 			<li v-for="g in generations">
 				<a :href="`/dex/${g.identifier}/moves`"

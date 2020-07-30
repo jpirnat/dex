@@ -95,21 +95,21 @@ Vue.component('dex-moves-table', {
 								'dex-table__header--sorted-desc': sortColumn === 'category' && sortDirection === 'desc',
 							}"
 						>Category</th>
-						<th scope="col" class="dex-table__header--sortable"
+						<th scope="col" class="dex-table--number dex-table__header--sortable"
 							@click="sortBy('pp', 'desc', m => m.pp)"
 							:class="{
 								'dex-table__header--sorted-asc': sortColumn === 'pp' && sortDirection === 'asc',
 								'dex-table__header--sorted-desc': sortColumn === 'pp' && sortDirection === 'desc',
 							}"
 						>PP</th>
-						<th scope="col" class="dex-table__header--sortable"
+						<th scope="col" class="dex-table--number dex-table__header--sortable"
 							@click="sortBy('power', 'desc', m => m.power)"
 							:class="{
 								'dex-table__header--sorted-asc': sortColumn === 'power' && sortDirection === 'asc',
 								'dex-table__header--sorted-desc': sortColumn === 'power' && sortDirection === 'desc',
 							}"
 						>Power</th>
-						<th scope="col" class="dex-table__header--sortable"
+						<th scope="col" class="dex-table--number dex-table__header--sortable"
 							@click="sortBy('accuracy', 'desc', m => m.accuracy)"
 							:class="{
 								'dex-table__header--sorted-asc': sortColumn === 'accuracy' && sortDirection === 'asc',
@@ -140,7 +140,9 @@ Vue.component('dex-moves-table', {
 						<td v-if="showDescriptions" class="dex-table__move-description">{{ move.description }}</td>
 					</tr>
 					<tr v-if="moves.length === 0">
-						<td :colspan="colspan" class="dex-table__loading">Loading...</td>
+						<td :colspan="colspan" class="dex-table__loading">
+							<span class="dex-loader"></span>
+						</td>
 					</tr>
 				</tbody>
 			</table>

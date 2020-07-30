@@ -10,7 +10,7 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="generation-control">
+	<div class="generation-control" v-if="generations.length">
 		<ul>
 			<li v-for="g in generations">
 				<a :href="`/dex/${g.identifier}/abilities`"
@@ -60,7 +60,9 @@
 				</td>
 			</tr>
 			<tr v-if="loading">
-				<td colspan="3" class="dex-table__loading">Loading...</td>
+				<td colspan="3" class="dex-table__loading">
+					<span class="dex-loader"></span>
+				</td>
 			</tr>
 		</tbody>
 	</table>

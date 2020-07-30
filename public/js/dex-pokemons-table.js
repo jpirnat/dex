@@ -75,7 +75,7 @@ Vue.component('dex-pokemons-table', {
 								'dex-table__header--sorted-desc': sortColumn === 'sort' && sortDirection === 'desc',
 							}"
 						></th>
-						<th scope="col" class="dex-table__header--sortable"
+						<th scope="col" class="dex-table__pokemon-name dex-table__header--sortable"
 							@click="sortBy('name', 'asc', p => p.name)"
 							:class="{
 								'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
@@ -109,7 +109,7 @@ Vue.component('dex-pokemons-table', {
 						<td class="dex-table__pokemon-icon">
 							<img :src="'/images/pokemon/icons/' + pokemon.icon">
 						</td>
-						<td>
+						<td class="dex-table__pokemon-name">
 							<a :href="'/dex/' + generation.identifier + '/pokemon/' + pokemon.identifier">
 								{{ pokemon.name }}
 							</a>
@@ -140,7 +140,9 @@ Vue.component('dex-pokemons-table', {
 						<td class="dex-table--number">{{ pokemon.bst }}</td>
 					</tr>
 					<tr v-if="pokemons.length === 0">
-						<td :colspan="colspan" class="dex-table__loading">Loading...</td>
+						<td :colspan="colspan" class="dex-table__loading">
+							<span class="dex-loader"></span>
+						</td>
 					</tr>
 				</tbody>
 			</table>

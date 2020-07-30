@@ -24,17 +24,17 @@
 		{% endif %}
 	</div>
 
-	<table class="pokemon-usage">
+	<table class="dex-table dex-table--full-width">
 		<thead>
 			<tr>
-				<th>Rank</th>
+				<th class="dex-table--number">Rank</th>
 				<th></th>
-				<th class="pokemon-name">Pokémon</th>
-				<th>Usage %</th>
-				<th>Raw</th>
-				<th>%</th>
-				<th>Real</th>
-				<th>%</th>
+				<th class="dex-table__pokemon-name">Pokémon</th>
+				<th class="dex-table--number">Usage %</th>
+				<th class="dex-table--number">Raw</th>
+				<th class="dex-table--number">%</th>
+				<th class="dex-table--number">Real</th>
+				<th class="dex-table--number">%</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -44,7 +44,7 @@
 					<td class="dex-table__pokemon-icon">
 						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
 					</td>
-					<td>
+					<td class="dex-table__pokemon-name">
 						{% if pokemon.showMovesetLink %}
 							<a href="/stats/{{ start|e }}-to-{{ end|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
 								{{ pokemon.name|e }}

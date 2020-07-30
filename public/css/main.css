@@ -37,22 +37,6 @@ table {
 	vertical-align: top;
 }
 
-.dex-table__pokemon-icon {
-	text-align: center;
-}
-
-.dex-table--number {
-	text-align: right;
-}
-
-.dex-table--percent-plus {
-	color: green;
-}
-
-.dex-table--percent-minus {
-	color: red;
-}
-
 .hidden {
 	display: none;
 }
@@ -87,12 +71,42 @@ table {
 	color: white;
 }
 
-
-
 .change-language {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+/* Loading spinner from https://vineethtrv.github.io/loader */
+.dex-loader {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	display: inline-block;
+	border-top: 4px solid #ccc;
+	border-right: 4px solid transparent;
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+}
+.dex-loader::after {
+	content: "";  
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border-bottom: 4px solid #ff3d00;
+	border-left: 4px solid transparent;
+}
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 
@@ -243,6 +257,18 @@ a.button {
 
 .dex-table a:hover {
 	color: red;
+}
+
+.dex-table__pokemon-icon {
+	text-align: center;
+}
+
+.dex-table__pokemon-name {
+	text-align: left;
+}
+
+.dex-table--number {
+	text-align: right;
 }
 
 .dex-table__pokemon-types,
@@ -574,16 +600,6 @@ a.button {
 	margin: 10px 0;
 }
 
-table.pokemon-usage th,
-table.pokemon-usage td {
-	border: 1px solid black;
-	padding: 5px;
-}
-
-table.pokemon-usage .pokemon-name {
-	width: 100%;
-}
-
 .chart-link {
 	cursor: pointer;
 }
@@ -598,6 +614,13 @@ table.pokemon-usage .pokemon-name {
 	margin-left: 3px;
 }
 
+.dex-table--percent-plus {
+	color: green;
+}
+
+.dex-table--percent-minus {
+	color: red;
+}
 
 .dex-drawer__content {
 	position: fixed;

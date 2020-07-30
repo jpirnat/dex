@@ -10,7 +10,7 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="month-control">
+	<div class="month-control" v-if="loaded">
 		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}/${format.identifier}/${rating}/items/${item.identifier}`">
 			&#9668; {{ prevMonth.text }}
 		</a>
@@ -22,7 +22,7 @@
 		</a>
 	</div>
 
-	<div class="rating-control">
+	<div class="rating-control" v-if="ratings.length">
 		<ul>
 			<li v-for="r in ratings">
 				<a :href="`/stats/${thisMonth.month}/${format.identifier}/${r}/items/${item.identifier}`"
@@ -48,35 +48,35 @@
 		</label>
 	</div>
 
-	<table class="pokemon-usage">
+	<table class="dex-table dex-table--full-width">
 		<thead>
 			<tr>
 				<th></th>
-				<th class="pokemon-name dex-table__header--sortable" @click="sortBy('name', 'asc')"
+				<th class="dex-table__pokemon-name dex-table__header--sortable" @click="sortBy('name', 'asc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
 					}"
 				>Pokémon</th>
-				<th class="dex-table__header--sortable" @click="sortBy('pokemonPercent', 'desc')"
+				<th class="dex-table--number dex-table__header--sortable" @click="sortBy('pokemonPercent', 'desc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'pokemonPercent' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'pokemonPercent' && sortDirection === 'desc',
 					}"
 				>Pokémon&nbsp;%</th>
-				<th class="dex-table__header--sortable" @click="sortBy('itemPercent', 'desc')"
+				<th class="dex-table--number dex-table__header--sortable" @click="sortBy('itemPercent', 'desc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'itemPercent' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'itemPercent' && sortDirection === 'desc',
 					}"
 				>Item&nbsp;%</th>
-				<th class="dex-table__header--sortable" @click="sortBy('usagePercent', 'desc')"
+				<th class="dex-table--number dex-table__header--sortable" @click="sortBy('usagePercent', 'desc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'usagePercent' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'usagePercent' && sortDirection === 'desc',
 					}"
 				>Usage&nbsp;%</th>
-				<th class="dex-table__header--sortable" @click="sortBy('usageChange', 'desc')"
+				<th class="dex-table--number dex-table__header--sortable" @click="sortBy('usageChange', 'desc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'usageChange' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'usageChange' && sortDirection === 'desc',
@@ -89,7 +89,7 @@
 				<td class="dex-table__pokemon-icon">
 					<img :src="`/images/pokemon/icons/${pokemon.icon}`">
 				</td>
-				<td>
+				<td class="dex-table__pokemon-name">
 					<a :href="`/stats/${thisMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
 						{{ pokemon.name }}
 					</a>
@@ -111,7 +111,9 @@
 				</td>
 			</tr>
 			<tr v-if="!loaded">
-				<td colspan="6" class="dex-table__loading">Loading...</td>
+				<td colspan="6" class="dex-table__loading">
+					<span class="dex-loader"></span>
+				</td>
 			</tr>
 		</tbody>
 	</table>
