@@ -6,10 +6,6 @@ Vue.component('dex-chart-drawer', {
 			type: Array,
 			default: [],
 		},
-		ratings: {
-			type: Array,
-			default: [],
-		},
 	},
 	data() {
 		return {
@@ -74,7 +70,7 @@ Vue.component('dex-chart-drawer', {
 					<a :href="chartUrl" target="_blank">Save this chart</a>
 				</div>
 				<div class="buttons-control" v-if="responseLines.length === 1">
-					<button role="button" @click="otherRatings">See at all Rating levels</button>
+					<button role="button" @click="chartAllRatings">See at all Rating levels</button>
 				</div>
 				<div class="buttons-control">
 					<button role="button" @click="isVisible = false">Close chart panel</button>
@@ -99,20 +95,9 @@ Vue.component('dex-chart-drawer', {
 				options: this.chartOptions,
 			});
 		},
-		otherRatings() {
-			// TODO: Clean this up. It's only here right now as a fun proof of concept.
-			if (this.lines.length !== 1) {
-				return;
-			}
-
-			const line = this.lines[0];
-			this.lines = [];
-			this.ratings.forEach(r => {
-				const newLine = JSON.parse(JSON.stringify(line));
-				newLine.rating = r;
-				this.lines.push(newLine);
-			});
-		}
+		chartAllRatings() {
+			this.$emit('chart-all-ratings');
+		},
 	},
 	watch: {
 		lines() {

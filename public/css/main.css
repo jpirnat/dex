@@ -600,8 +600,9 @@ a.button {
 	margin: 10px 0;
 }
 
-.chart-link {
+.chart-link:hover {
 	cursor: pointer;
+	background: #eee;
 }
 
 .chart-link__inner {

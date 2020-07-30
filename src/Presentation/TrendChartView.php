@@ -243,7 +243,6 @@ final class TrendChartView
 				'rgba(153, 102, 255, 1)', // purple
 				'rgba(201, 203, 207, 1)', // gray
 			][$index % 7];
-			return $trendLine->getMoveType()->getColorCode();
 		}
 
 		// For all other cases, use the color of the Pokémon's primary type.
