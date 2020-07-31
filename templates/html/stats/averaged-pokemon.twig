@@ -71,14 +71,14 @@
 			<caption>Abilities</caption>
 			<thead>
 				<tr>
-					<th>Ability</th>
-					<th>%</th>
+					<th scope="col">Ability</th>
+					<th scope="col">%</th>
 				</tr>
 			</thead>
 			<tbody>
 				{% for ability in abilities %}
 					<tr>
-						<td>{{ ability.name|e }}</td>
+						<th scope="row">{{ ability.name|e }}</th>
 						<td class="dex-table--number">{{ ability.percent|e }}</td>
 					</tr>
 				{% endfor %}
@@ -91,14 +91,14 @@
 			<caption>Items</caption>
 			<thead>
 				<tr>
-					<th>Item</th>
-					<th>%</th>
+					<th scope="col">Item</th>
+					<th scope="col">%</th>
 				</tr>
 			</thead>
 			<tbody>
 				{% for item in items %}
 					<tr>
-						<td>{{ item.name|e }}</td>
+						<th scope="row">{{ item.name|e }}</th>
 						<td class="dex-table--number">{{ item.percent|e }}</td>
 					</tr>
 				{% endfor %}
@@ -110,14 +110,14 @@
 		<caption>Moves</caption>
 		<thead>
 			<tr>
-				<th>Move</th>
-				<th>%</th>
+				<th scope="col">Move</th>
+				<th scope="col">%</th>
 			</tr>
 		</thead>
 		<tbody>
 			{% for move in moves %}
 				<tr>
-					<td>{{ move.name|e }}</td>
+					<th scope="row">{{ move.name|e }}</th>
 					<td class="dex-table--number">{{ move.percent|e }}</td>
 				</tr>
 			{% endfor %}

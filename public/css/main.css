@@ -249,6 +249,10 @@ a.button {
 	padding: 5px;
 }
 
+.dex-table tbody th {
+	font-weight: inherit; /* so my <th scope="row"> elements won't be bold */
+}
+
 .dex-table a {
 	text-decoration: none;
 }

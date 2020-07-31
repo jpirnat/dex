@@ -68,11 +68,11 @@
 							</td>
 						{% endfor %}
 						<td><img src="/images/pokemon/icons/{{ pokemon.icon|e }}"></td>
-						<td>
+						<th scope="row">
 							<a href="/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.identifier|e }}">
 								{{ pokemon.name|e }}
 							</a>
-						</td>
+						</th>
 						<td class="dex-table__pokemon-types">
 							{% for type in pokemon.types %}
 								<a href="/dex/{{ generation.identifier|e }}/types/{{ type.identifier|e }}">

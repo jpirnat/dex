@@ -49,38 +49,38 @@
 	<table class="dex-table dex-table--full-width">
 		<thead>
 			<tr>
-				<th class="dex-table--number dex-table__header--sortable" @click="sortBy('rank', 'asc')"
+				<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('rank', 'asc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'rank' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'rank' && sortDirection === 'desc',
 					}"
 				>Rank</th>
 				<th></th>
-				<th class="dex-table__pokemon-name dex-table__header--sortable" @click="sortBy('name', 'asc')"
+				<th scope="col" class="dex-table__pokemon-name dex-table__header--sortable" @click="sortBy('name', 'asc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
 					}"
 				>Pokémon</th>
-				<th class="dex-table--number dex-table__header--sortable" @click="sortBy('usagePercent', 'desc')"
+				<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('usagePercent', 'desc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'usagePercent' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'usagePercent' && sortDirection === 'desc',
 					}"
 				>Usage&nbsp;%</th>
-				<th class="dex-table--number dex-table__header--sortable" @click="sortBy('usageChange', 'desc')"
+				<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('usageChange', 'desc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'usageChange' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'usageChange' && sortDirection === 'desc',
 					}"
 				>Usage&nbsp;Δ</th>
-				<th class="dex-table--number dex-table__header--sortable" @click="sortBy('raw', 'desc')"
+				<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('raw', 'desc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'raw' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'raw' && sortDirection === 'desc',
 					}"
 				>Raw</th>
-				<th class="dex-table--number dex-table__header--sortable" @click="sortBy('rawPercent', 'desc')"
+				<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('rawPercent', 'desc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'rawPercent' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'rawPercent' && sortDirection === 'desc',
@@ -94,11 +94,11 @@
 				<td class="dex-table__pokemon-icon">
 					<img :src="`/images/pokemon/icons/${pokemon.icon}`">
 				</td>
-				<td class="dex-table__pokemon-name">
+				<th scope="row" class="dex-table__pokemon-name">
 					<a
 						:href="`/stats/${thisMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`"
 					>{{ pokemon.name }}</a>
-				</td>
+				</th>
 				<td class="dex-table--number">{{ pokemon.usagePercentText }}</td>
 				<td	class="dex-table--number chart-link"
 					:class="{

@@ -19,12 +19,12 @@
 	<table class="dex-table dex-table--full-width">
 		<thead>
 			<tr>
-				<th class="dex-table--number">Rank</th>
+				<th scope="col" class="dex-table--number">Rank</th>
 				<th></th>
-				<th class="dex-table__pokemon-name">Pokémon</th>
-				<th class="dex-table--number">Usage %</th>
-				<th class="dex-table--number">Raw</th>
-				<th class="dex-table--number">%</th>
+				<th scope="col" class="dex-table__pokemon-name">Pokémon</th>
+				<th scope="col" class="dex-table--number">Usage %</th>
+				<th scope="col" class="dex-table--number">Raw</th>
+				<th scope="col" class="dex-table--number">%</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -34,7 +34,7 @@
 					<td class="dex-table__pokemon-icon">
 						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
 					</td>
-					<td class="dex-table__pokemon-name">
+					<th scope="row" class="dex-table__pokemon-name">
 						{% if pokemon.showMovesetLink %}
 							<a href="/stats/{{ start|e }}-to-{{ end|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
 								{{ pokemon.name|e }}
@@ -42,7 +42,7 @@
 						{% else %}
 							{{ pokemon.name|e }}
 						{% endif %}
-					</td>
+					</th>
 					<td class="dex-table--number">{{ pokemon.usagePercent|e }}</td>
 					<td class="dex-table--number">{{ pokemon.raw|e }}</td>
 					<td class="dex-table--number">{{ pokemon.rawPercent|e }}</td>
