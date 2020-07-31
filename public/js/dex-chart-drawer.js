@@ -2,7 +2,7 @@
 
 Vue.component('dex-chart-drawer', {
 	props: {
-		lines: {
+		ratings: {
 			type: Array,
 			default: [],
 		},
@@ -12,8 +12,11 @@ Vue.component('dex-chart-drawer', {
 			isVisible: false,
 			chart: null,
 			chartTitle: "Loading...",
+			lines: [],
 			responseLines: [],
 			locale: 'en',
+			addingAnotherLine: false,
+			seeingAllRatings: false,
 		};
 	},
 	computed: {
@@ -69,14 +72,23 @@ Vue.component('dex-chart-drawer', {
 				<div class="buttons-control">
 					<a :href="chartUrl" target="_blank">Save this chart</a>
 				</div>
-				<div class="buttons-control" v-if="responseLines.length === 1">
-					<button role="button" @click="chartAllRatings">See at all Rating levels</button>
+				<div class="buttons-control">
+					<button role="button" @click="addAnotherLine" v-if="!seeingAllRatings"
+						style="margin-right: 10px;"
+					>
+						Add Another Line
+					</button>
+					<button role="button" @click="seeAllRatings" v-if="responseLines.length === 1"
+					>
+						See This at All Rating Levels
+					</button>
+					<div class="space"></div>
 				</div>
 				<div class="buttons-control">
-					<button role="button" @click="isVisible = false">Close chart panel</button>
+					<button role="button" @click="closeAndClear">Close and Clear Chart</button>
 				</div>
 			</div>
-			<div class="dex-drawer__overlay" @click="isVisible = false"></div>
+			<div class="dex-drawer__overlay" @click="closeAndClear"></div>
 		</div>
 	`,
 	mounted() {
@@ -95,8 +107,38 @@ Vue.component('dex-chart-drawer', {
 				options: this.chartOptions,
 			});
 		},
-		chartAllRatings() {
-			this.$emit('chart-all-ratings');
+		addLine(line) {
+			if (this.addingAnotherLine) {
+				this.lines.push(line);
+				return;
+			}
+
+			this.lines = [line];
+		},
+		addAnotherLine() {
+			this.addingAnotherLine = true;
+			this.seeingAllRatings = false;
+			this.isVisible = false;
+		},
+		seeAllRatings() {
+			if (this.lines.length !== 1) {
+				return;
+			}
+
+			const oldLine = this.lines[0];
+			this.lines = [];
+			this.ratings.forEach(r => {
+				const newLine = Object.assign({}, oldLine);
+				newLine.rating = r;
+				this.lines.push(newLine);
+			});
+
+			this.seeingAllRatings = true;
+		},
+		closeAndClear() {
+			this.addingAnotherLine = false;
+			this.seeingAllRatings = false;
+			this.isVisible = false;
 		},
 	},
 	watch: {

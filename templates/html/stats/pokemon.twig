@@ -140,8 +140,8 @@
 	></stats-pokemon-counters>
 
 	<dex-chart-drawer
-		:lines="chartLines"
-		@chart-all-ratings="chartAllRatings"
+		ref="chart"
+		:ratings="ratings"
 	></dex-chart-drawer>
 </div>
 {% endverbatim %}

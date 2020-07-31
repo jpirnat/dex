@@ -153,6 +153,9 @@ a.breadcrumbs__item:hover {
 	justify-content: space-between;
 	margin: 10px 0;
 }
+.buttons-control .space {
+	flex: 1;
+}
 
 .button {
 	display: inline-block;

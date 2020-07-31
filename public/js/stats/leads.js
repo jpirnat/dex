@@ -24,8 +24,6 @@ const app = new Vue({
 
 		sortColumn: '',
 		sortDirection: '',
-
-		chartLines: [],
 	},
 	computed: {
 		filteredPokemons() {
@@ -90,24 +88,11 @@ const app = new Vue({
 			});
 		},
 		addChartLine(pokemon) {
-			this.chartLines = [{
+			this.$refs.chart.addLine({
 				type: 'lead-usage',
 				format: this.format.identifier,
 				rating: this.rating,
 				pokemon: pokemon.identifier,
-			}];
-		},
-		chartAllRatings() {
-			if (this.chartLines.length !== 1) {
-				return;
-			}
-
-			const oldLine = this.chartLines[0];
-			this.chartLines = [];
-			this.ratings.forEach(r => {
-				const newLine = Object.assign({}, oldLine);
-				newLine.rating = r;
-				this.chartLines.push(newLine);
 			});
 		},
 	},
