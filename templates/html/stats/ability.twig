@@ -87,7 +87,7 @@
 		<tbody>
 			<tr v-for="pokemon in paginatedPokemons" :key="pokemon.identifier">
 				<td class="dex-table__pokemon-icon">
-					<img :src="`/images/pokemon/icons/${pokemon.icon}`">
+					<img :src="`/images/pokemon/icons/${pokemon.icon}`" alt="">
 				</td>
 				<th scope="row" class="dex-table__pokemon-name">
 					<a :href="`/stats/${thisMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
@@ -106,7 +106,7 @@
 				>
 					<div class="chart-link__inner">
 						{{ pokemon.usageChangeText }}
-						<img class="chart-link__icon" src="/images/porydex/chart-icon.png">
+						<img class="chart-link__icon" src="/images/porydex/chart-icon.png" alt="Show Chart">
 					</div>
 				</td>
 			</tr>

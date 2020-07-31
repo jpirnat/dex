@@ -31,7 +31,7 @@ Vue.component('stats-pokemon-moves', {
 	},
 	template: `
 		<table class="moveset-usage">
-			<caption>Items</caption>
+			<caption>Moves</caption>
 			<thead>
 				<tr>
 					<th scope="col" class="dex-table__header--sortable"
@@ -40,7 +40,7 @@ Vue.component('stats-pokemon-moves', {
 							'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
 							'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
 						}"
-					>Item</th>
+					>Move</th>
 					<th scope="col" class="dex-table__header--sortable"
 						@click="sortBy('percent', 'desc', m => m.percent)"
 						:class="{

@@ -38,7 +38,7 @@
 			{{ pokemon.name }}
 		</div>
 		<div>
-			<img :src="`/images/pokemon/models/${pokemon.model}`">
+			<img :src="`/images/pokemon/models/${pokemon.model}`" alt="">
 		</div>
 		<div class="pokemon-types">
 			<a v-for="type in pokemon.types" :key="type.identifier"

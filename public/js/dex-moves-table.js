@@ -21,7 +21,7 @@ Vue.component('dex-moves-table', {
 			filterDescription: '',
 
 			currentPage: 1,
-			itemsPerPage: 10,
+			itemsPerPage: 20,
 
 			sortColumn: '',
 			sortDirection: '',

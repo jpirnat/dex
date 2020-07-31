@@ -22,7 +22,9 @@
 			<tbody id="{{ method.identifier|e }}-moves">
 				<tr>
 					{% for versionGroup in versionGroups %}
-						<th scope="col"><img src="/images/versions/{{ versionGroup.icon|e }}"></th>
+						<th scope="col">
+							<img src="/images/versions/{{ versionGroup.icon|e }}">
+						</th>
 					{% endfor %}
 					<th scope="col">Move</th>
 					<th scope="col">Type</th>
@@ -54,10 +56,10 @@
 										{{ move.versionGroupData[versionGroup.id]|e }}
 									{% elseif method.identifier == 'egg' %}
 										<a href="/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.identifier|e }}/breeding/{{ move.identifier|e }}/{{ versionGroup.identifier|e }}" target="_blank">
-											<img src="/images/miscellaneous/egg.png">
+											<img src="/images/miscellaneous/egg.png" alt="Egg move">
 										</a>
 									{% elseif method.identifier == 'light-ball' %}
-										<img src="/images/miscellaneous/egg.png">
+										<img src="/images/miscellaneous/egg.png" alt="Egg move">
 									{% else %}
 										<img src="/images/versions/{{ versionGroup.icon|e }}">
 									{% endif %}

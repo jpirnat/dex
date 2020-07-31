@@ -7,7 +7,7 @@
 				<tr>
 					<th colspan="7" id="{{ chain.id|e }}" class="chain-header">
 						{% for pokemon in chain.pokemon %}
-							<img src="/images/pokemon/icons/{{ pokemon.icon|e }}">
+							<img src="/images/pokemon/icons/{{ pokemon.icon|e }}" alt="{{ pokemon.name|e }}">
 							{% if not loop.last %} → {% endif %}
 						{% endfor %}
 					</th>
@@ -23,7 +23,9 @@
 				</tr>
 				{% for pokemon in chain.pokemon %}
 					<tr class="{{ chain.id|e }} hidden">
-						<td><img src="/images/pokemon/icons/{{ pokemon.icon|e }}"></td>
+						<td>
+							<img src="/images/pokemon/icons/{{ pokemon.icon|e }}" alt="">
+						</td>
 						<td>
 							<a href="/dex/{{ pokemon.generationIdentifier|e }}/pokemon/{{ pokemon.identifier|e }}">
 								{{ pokemon.name|e }}
