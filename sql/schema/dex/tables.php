@@ -10,15 +10,17 @@ declare(strict_types=1);
 // should be the key to an array of those file names (excluding file extension).
 
 return [
+	// Languages
+	'languages',
+	'language_names',
+
 	// Versions
 	'generations',
 	'version_groups',
 	'versions',
-
-	// Languages
-	'languages',
-	'language_names',
 	'version_group_languages',
+	'version_group_names',
+	'version_names',
 
 	// Pokémon
 	'species',

@@ -1,0 +1,221 @@
+language_id,version_id,name
+1,1,赤・緑
+1,2,青
+1,3,赤・青 (国際)
+1,4,ピカチュウ
+1,5,金・銀
+1,6,クリスタル
+1,7,ルビー・サファイア
+1,8,ファイアレッド・リーフグリーン
+1,9,エメラルド
+1,10,ダイヤモンド・パール
+1,11,プラチナ
+1,12,ハートゴールド・ソウルシルバー
+1,13,ブラック・ホワイト
+1,14,ブラック2・ホワイト2
+1,15,X・Y
+1,16,オメガルビー・アルファサファイア
+1,17,サン・ムーン
+1,18,ウルトラサン・ウルトラムーン
+1,19,Let's Go! ピカチュウ・Let's Go! イーブイ
+1,20,ソード・シールド
+1,101,コロシアム
+1,102,ＸＤ 闇の旋風ダーク・ルギア
+2,1,Red/Green (J)
+2,2,Blue (J)
+2,3,Red/Blue
+2,4,Yellow
+2,5,Gold/Silver
+2,6,Crystal
+2,7,Ruby/Sapphire
+2,8,FireRed/LeafGreen
+2,9,Emerald
+2,10,Diamond/Pearl
+2,11,Platinum
+2,12,HeartGold/SoulSilver
+2,13,Black/White
+2,14,Black 2/White 2
+2,15,X/Y
+2,16,Omega Ruby/Alpha Sapphire
+2,17,Sun/Moon
+2,18,Ultra Sun/Ultra Moon
+2,19,"Let's Go, Pikachu!/Let's Go, Eevee!"
+2,20,Sword/Shield
+2,101,Colosseum
+2,102,XD: Gale of Darkness
+3,1,Rouge/Vert (J)
+3,2,Bleue (J)
+3,3,Rouge/Bleue
+3,4,Jaune
+3,5,Or/Argent
+3,6,Cristal
+3,7,Rubis/Saphir
+3,8,Rouge Feu/Vert Feuille
+3,9,Émeraude
+3,10,Diamant/Perle
+3,11,Platine
+3,12,Or HeartGold/Argent SoulSilver
+3,13,Noire/Blanche
+3,14,Noire 2/Blanche 2
+3,15,X/Y
+3,16,Rubis Oméga/Saphir Alpha
+3,17,Soleil/Lune
+3,18,Ultra-Soleil/Ultra-Lune
+3,19,"Let's Go, Pikachu/Let's Go, Évoli"
+3,20,Épée/Bouclier
+3,101,Colosseum
+3,102,XD : Le Souffle des Ténèbres
+4,1,Rote/Grüne (J)
+4,2,Blaue (J)
+4,3,Rote/Blaue
+4,4,Gelbe
+4,5,Goldene/Silberne
+4,6,Kristall
+4,7,Rubin/Saphir
+4,8,Feuerrote/Blattgrüne
+4,9,Smaragd
+4,10,Diamant/Perl
+4,11,Platin
+4,12,HeartGold/SoulSilver
+4,13,Schwarze/Weiße
+4,14,Schwarze 2/Weiße 2
+4,15,X/Y
+4,16,Omega Rubin/Alpha Saphir
+4,17,Sonne/Mond
+4,18,Ultrasonne/Ultramond
+4,19,"Let's Go, Pikachu!/Let's Go, Evoli!"
+4,20,Schwert/Schild
+4,101,Colosseum
+4,102,XD: Der Dunkle Sturm
+5,1,Rossa/Verde (J)
+5,2,Blu (J)
+5,3,Rossa/Blu
+5,4,Gialla
+5,5,Oro/Argento
+5,6,Cristallo
+5,7,Rubino/Zaffiro
+5,8,Rosso Fuoco/Verde Foglia
+5,9,Smeraldo
+5,10,Diamante/Perla
+5,11,Platino
+5,12,Oro HeartGold/Argento SoulSilver
+5,13,Nera/Bianca
+5,14,Nera 2/Bianca 2
+5,15,X/Y
+5,16,Rubino Omega/Zaffiro Alpha
+5,17,Sole/Luna
+5,18,Ultrasole/Ultraluna
+5,19,"Let's Go, Pikachu!/Let's Go, Eevee!"
+5,20,Spada/Scudo
+5,101,Colosseum
+5,102,XD: Tempesta Oscura
+6,1,Roja/Verde (J)
+6,2,Azul (J)
+6,3,Roja/Azul
+6,4,Amarilla
+6,5,Oro/Plata
+6,6,Cristal
+6,7,Rubí/Zafiro
+6,8,Rojo Fuego/Verde Hoja
+6,9,Esmeralda
+6,10,Diamante/Perla
+6,11,Platino
+6,12,Oro HeartGold/Plata SoulSilver
+6,13,Negra/Blanca
+6,14,Negra 2/Blanca 2
+6,15,X/Y
+6,16,Rubí Omega/Zafiro Alfa
+6,17,Sol/Luna
+6,18,Ultrasol/Ultraluna
+6,19,"Let's Go, Pikachu!/Let's Go, Eevee!"
+6,20,Espada/Escudo
+6,101,Colosseum
+6,102,XD: Tempestad oscura
+7,1,레드・그린 (J)
+7,2,블루 (J)
+7,3,레드・블루
+7,4,피카츄
+7,5,금・은
+7,6,크리스탈
+7,7,루비・사파이어
+7,8,파이어레드・리프그린
+7,9,에메랄드
+7,10,디아루가・펄기아
+7,11,기라티나
+7,12,하트골드・소울실버
+7,13,블랙・화이트
+7,14,블랙2・화이트2
+7,15,X・Y
+7,16,오메가루비・알파사파이어
+7,17,썬・문
+7,18,울트라썬・울트라문
+7,19,레츠고! 피카츄・레츠고! 이브이
+7,20,소드・실드
+7,101,콜로세움
+7,102,XD: Gale of Darkness
+8,1,赤・緑
+8,2,青
+8,3,赤・青 (国際)
+8,4,ピカチュウ
+8,5,金・銀
+8,6,クリスタル
+8,7,ルビー・サファイア
+8,8,ファイアレッド・リーフグリーン
+8,9,エメラルド
+8,10,ダイヤモンド・パール
+8,11,プラチナ
+8,12,ハートゴールド・ソウルシルバー
+8,13,ブラック・ホワイト
+8,14,ブラック2・ホワイト2
+8,15,X・Y
+8,16,オメガルビー・アルファサファイア
+8,17,サン・ムーン
+8,18,ウルトラサン・ウルトラムーン
+8,19,Let's Go! ピカチュウ・Let's Go! イーブイ
+8,20,ソード・シールド
+8,101,コロシアム
+8,102,ＸＤ 闇の旋風ダーク・ルギア
+9,1,Red/Green (J)
+9,2,Blue (J)
+9,3,Red/Blue
+9,4,Yellow
+9,5,Gold/Silver
+9,6,Crystal
+9,7,红宝石／蓝宝石
+9,8,FireRed/LeafGreen
+9,9,綠寶石
+9,10,钻石／珍珠
+9,11,白金
+9,12,HeartGold/SoulSilver
+9,13,黑／白
+9,14,黑２／白２
+9,15,Ｘ／Ｙ
+9,16,欧米伽红宝石／阿尔法蓝宝石
+9,17,太阳／月亮
+9,18,究极之日／究极之月
+9,19,Let's Go！皮卡丘／Let's Go！伊布
+9,20,剑／盾
+9,101,Colosseum
+9,102,XD: Gale of Darkness
+10,1,Red/Green (J)
+10,2,Blue (J)
+10,3,Red/Blue
+10,4,Yellow
+10,5,Gold/Silver
+10,6,Crystal
+10,7,紅寶石／藍寶石
+10,8,FireRed/LeafGreen
+10,9,綠寶石
+10,10,鑽石／珍珠
+10,11,白金
+10,12,HeartGold/SoulSilver
+10,13,黑／白
+10,14,黑２／白２
+10,15,Ｘ／Ｙ
+10,16,歐米加紅寶石／阿爾法藍寶石
+10,17,太陽／月亮
+10,18,究極之日／究極之月
+10,19,Let's Go！皮卡丘／Let's Go！伊布
+10,20,劍／盾
+10,101,Colosseum
+10,102,XD: Gale of Darkness
