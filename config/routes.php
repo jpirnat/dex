@@ -167,19 +167,35 @@ $routes = [
 	]],
 
 	['GET', '/stats', [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'statsIndex',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', '/data/stats', [
 		'controllerClass' => \Jp\Dex\Application\Controllers\StatsIndexController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => \Jp\Dex\Presentation\StatsIndexView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => MiddlewareGroups::HTML,
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/stats/$month", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'statsMonth',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/stats/$month", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\StatsMonthController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => \Jp\Dex\Presentation\StatsMonthView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => MiddlewareGroups::HTML,
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/stats/$month/$formatIdentifier/$rating", [

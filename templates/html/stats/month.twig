@@ -1,20 +1,20 @@
 {% extends "html/base.twig" %}
 
 {% block body %}
-	<div class="month-control">
-		{% if prevMonth %}
-			<a class="button prev" href="/stats/{{ prevMonth.month|e }}">
-				&#9668; {{ prevMonth.text|e }}
-			</a>
-		{% endif %}
+{% verbatim %}
+<div id="app" v-cloak>
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
+	<div class="month-control" v-if="loaded">
+		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}`">
+			&#9668; {{ prevMonth.text }}
+		</a>
 
 		<div class="space"></div>
 
-		{% if nextMonth %}
-			<a class="button next" href="/stats/{{ nextMonth.month|e }}">
-				{{ nextMonth.text|e }} &#9658;
-			</a>
-		{% endif %}
+		<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.month}`">
+			{{ nextMonth.text }} &#9658;
+		</a>
 	</div>
 
 	<table>
@@ -28,18 +28,23 @@
 			</tr>
 		</thead>
 		<tbody>
-			{% for format in formats %}
-				<tr>
-					<td>{{ format.name|e }}</td>
-					{% for rating in format.ratings %}
-						<td>
-							<a href="/stats/{{ thisMonth.month|e }}/{{ format.identifier|e }}/{{ rating|e }}">
-								{{ rating|e }}
-							</a>
-						</td>
-					{% endfor %}
-				</tr>
-			{% endfor %}
+			<tr v-for="format in formats" :key="format.identifier">
+				<td>{{ format.name }}</td>
+				<td v-for="rating in format.ratings" :key="rating">
+					<a :href="`/stats/${thisMonth.month}/${format.identifier}/${rating}`">
+						{{ rating }}
+					</a>
+				</td>
+			</tr>
 		</tbody>
 	</table>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+	<script src="/js/dex-breadcrumbs.js"></script>
+	<script src="/js/stats/month.js"></script>
 {% endblock %}

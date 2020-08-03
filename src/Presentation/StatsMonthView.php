@@ -5,13 +5,11 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\StatsMonth\FormatData;
 use Jp\Dex\Application\Models\StatsMonth\StatsMonthModel;
-use Laminas\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
 final class StatsMonthView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
 	private StatsMonthModel $statsMonthModel;
 	private IntlFormatterFactory $formatterFactory;
 	private MonthControlFormatter $monthControlFormatter;
@@ -19,21 +17,15 @@ final class StatsMonthView
 	/**
 	 * Constructor.
 	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
 	 * @param StatsMonthModel $statsMonthModel
 	 * @param IntlFormatterFactory $formatterFactory
 	 * @param MonthControlFormatter $monthControlFormatter
 	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
 		StatsMonthModel $statsMonthModel,
 		IntlFormatterFactory $formatterFactory,
 		MonthControlFormatter $monthControlFormatter
 	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
 		$this->statsMonthModel = $statsMonthModel;
 		$this->formatterFactory = $formatterFactory;
 		$this->monthControlFormatter = $monthControlFormatter;
@@ -80,22 +72,18 @@ final class StatsMonthView
 		}
 
 		// Navigation breadcrumbs.
-		$breadcrumbs = [
-			[
-				'url' => '/stats',
-				'text' => 'Stats',
-			],
-			[
-				'text' => $thisMonth['text'],
-			]
-		];
+		$breadcrumbs = [[
+			'url' => '/stats',
+			'text' => 'Stats',
+		],[
+			'text' => $thisMonth['text'],
+		]];
 
-		$content = $this->renderer->render(
-			'html/stats/month.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Stats - ' . $thisMonth['text'],
+		return new JsonResponse([
+			'data' => [
+				'title' => 'Porydex - Stats - ' . $thisMonth['text'],
+
 				'breadcrumbs' => $breadcrumbs,
-
 				'prevMonth' => $prevMonth,
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
@@ -103,8 +91,6 @@ final class StatsMonthView
 				// The main data.
 				'formats' => $formats,
 			]
-		);
-
-		return new HtmlResponse($content);
+		]);
 	}
 }

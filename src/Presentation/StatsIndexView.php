@@ -5,29 +5,21 @@ namespace Jp\Dex\Presentation;
 
 use DateTime;
 use Jp\Dex\Application\Models\StatsIndexModel;
-use Laminas\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
 final class StatsIndexView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
 	private StatsIndexModel $statsIndexModel;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
 	 * @param StatsIndexModel $statsIndexModel
 	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
 		StatsIndexModel $statsIndexModel
 	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
 		$this->statsIndexModel = $statsIndexModel;
 	}
 
@@ -40,16 +32,14 @@ final class StatsIndexView
 	{
 		// Get months. Sort by year ascending, month ascending.
 		$months = $this->statsIndexModel->getMonths();
-		uasort(
-			$months,
-			function (DateTime $a, DateTime $b) : int {
-				if ($a->format('Y') === $b->format('Y')) {
-					return $a->format('n') <=> $b->format('n');
-				}
-
-				return $b->format('Y') <=> $a->format('Y');
+		uasort($months, function (DateTime $a, DateTime $b) : int {
+			$comparison = $b->format('Y') <=> $a->format('Y');
+			if ($comparison) {
+				return $comparison;
 			}
-		);
+
+			return $a->format('n') <=> $b->format('n');
+		});
 
 		// Restructure the data for the template.
 		$years = [];
@@ -62,23 +52,21 @@ final class StatsIndexView
 				'name' => $month->format('M'),
 			];
 		}
+		$years = array_values($years);
 
 		// Navigational breadcrumbs.
-		$breadcrumbs = [
-			[
-				'text' => 'Stats',
-			],
-		];
+		$breadcrumbs = [[
+			'text' => 'Stats',
+		]];
 
-		$content = $this->renderer->render(
-			'html/stats/index.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Stats',
+		return new JsonResponse([
+			'data' => [
+				'title' => 'Porydex - Stats',
+
 				'breadcrumbs' => $breadcrumbs,
+
 				'years' => $years,
 			]
-		);
-
-		return new HtmlResponse($content);
+		]);
 	}
 }

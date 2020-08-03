@@ -158,6 +158,40 @@ final class IndexView
 	}
 
 	/**
+	 * Show the stats index page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function statsIndex() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/stats/index.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
+	 * Show the stats month page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function statsMonth() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/stats/month.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the stats usage page.
 	 *
 	 * @return ResponseInterface
