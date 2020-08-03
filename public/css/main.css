@@ -233,7 +233,7 @@ a.button {
 .dex-section__title {
 	background: #eee;
 	border: 1px solid #ddd;
-	margin: 0;
+	margin: 10px 0;
 	padding: 10px;
 	font-size: 1.2rem;
 	font-weight: bold;

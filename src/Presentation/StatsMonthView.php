@@ -3,8 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\StatsMonth\FormatData;
-use Jp\Dex\Application\Models\StatsMonth\StatsMonthModel;
+use Jp\Dex\Application\Models\StatsMonthModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
@@ -52,24 +51,7 @@ final class StatsMonthView
 		$thisMonth = $this->monthControlFormatter->format($thisMonth, $formatter);
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
-		// Get format data and sort by name.
-		$formatDatas = $this->statsMonthModel->getFormatDatas();
-		uasort(
-			$formatDatas,
-			function (FormatData $a, FormatData $b) : int {
-				return $a->getFormatName() <=> $b->getFormatName();
-			}
-		);
-
-		// Compile all usage data into the right form.
-		$formats = [];
-		foreach ($formatDatas as $formatData) {
-			$formats[] = [
-				'identifier' => $formatData->getFormatIdentifier(),
-				'name' => $formatData->getFormatName(),
-				'ratings' => $formatData->getRatings(),
-			];
-		}
+		$generations = $this->statsMonthModel->getGenerations();
 
 		// Navigation breadcrumbs.
 		$breadcrumbs = [[
@@ -89,7 +71,7 @@ final class StatsMonthView
 				'nextMonth' => $nextMonth,
 
 				// The main data.
-				'formats' => $formats,
+				'generations' => $generations,
 			]
 		]);
 	}

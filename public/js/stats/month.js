@@ -11,7 +11,7 @@ const app = new Vue({
 		thisMonth: {},
 		nextMonth: {},
 
-		formats: [],
+		generations: [],
 	},
 	created() {
 		const url = new URL(window.location);
@@ -31,7 +31,7 @@ const app = new Vue({
 				this.prevMonth = data.prevMonth;
 				this.thisMonth = data.thisMonth;
 				this.nextMonth = data.nextMonth;
-				this.formats = data.formats;
+				this.generations = data.generations;
 
 				document.title = data.title;
 			}

@@ -17,27 +17,31 @@
 		</a>
 	</div>
 
-	<table>
-		<thead>
-			<tr>
-				<th>Format</th>
-				<th>Rating 1</th>
-				<th>Rating 2</th>
-				<th>Rating 3</th>
-				<th>Rating 4</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr v-for="format in formats" :key="format.identifier">
-				<td>{{ format.name }}</td>
-				<td v-for="rating in format.ratings" :key="rating">
-					<a :href="`/stats/${thisMonth.month}/${format.identifier}/${rating}`">
-						{{ rating }}
-					</a>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+	<section v-for="generation in generations" :key="generation.generation">
+		<h2 class="dex-section__title">Gen {{ generation.generation }}</h2>
+
+		<table class="dex-table">
+			<thead>
+				<tr>
+					<th>Format</th>
+					<th>Rating 1</th>
+					<th>Rating 2</th>
+					<th>Rating 3</th>
+					<th>Rating 4</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="format in generation.formats" :key="format.identifier">
+					<td>{{ format.name }}</td>
+					<td v-for="rating in format.ratings" :key="rating">
+						<a :href="`/stats/${thisMonth.month}/${format.identifier}/${rating}`">
+							{{ rating }}
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
 </div>
 {% endverbatim %}
 {% endblock %}

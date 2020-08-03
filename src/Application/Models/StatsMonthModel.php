@@ -1,9 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\StatsMonth;
+namespace Jp\Dex\Application\Models;
 
-use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -19,8 +18,8 @@ final class StatsMonthModel
 	private string $month;
 	private LanguageId $languageId;
 
-	/** @var FormatData[] $formatDatas */
-	private array $formatDatas = [];
+	/** @var array $generations[] */
+	private array $generations = [];
 
 
 	/**
@@ -79,12 +78,18 @@ final class StatsMonthModel
 		foreach ($formatIds as $formatId) {
 			$format = $this->formatRepository->getById($formatId, $languageId);
 
-			$this->formatDatas[] = new FormatData(
-				$format->getIdentifier(),
-				$format->getName(),
-				$ratings[$formatId->value()]
-			);
+			$generation = $format->getGenerationId()->value();
+			$this->generations[$generation]['generation'] = $generation;
+			$this->generations[$generation]['formats'][] = [
+				'identifier' => $format->getIdentifier(),
+				'name' => $format->getName(),
+				'ratings' => $ratings[$formatId->value()] ?? [],
+			];
 		}
+
+		usort($this->generations, function (array $a, array $b) : int {
+			return $b['generation'] <=> $a['generation'];
+		});
 	}
 
 	/**
@@ -118,12 +123,12 @@ final class StatsMonthModel
 	}
 
 	/**
-	 * Get the format datas.
+	 * Get the generations.
 	 *
-	 * @return FormatData[]
+	 * @return array
 	 */
-	public function getFormatDatas() : array
+	public function getGenerations() : array
 	{
-		return $this->formatDatas;
+		return $this->generations;
 	}
 }
