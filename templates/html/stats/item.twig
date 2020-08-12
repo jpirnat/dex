@@ -69,13 +69,19 @@
 						'dex-table__header--sorted-asc': sortColumn === 'itemPercent' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'itemPercent' && sortDirection === 'desc',
 					}"
-				>Item&nbsp;%</th>
+				>
+					<span class="dex-table__math-symbol">×</span>
+					Item&nbsp;%
+				</th>
 				<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('usagePercent', 'desc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'usagePercent' && sortDirection === 'asc',
 						'dex-table__header--sorted-desc': sortColumn === 'usagePercent' && sortDirection === 'desc',
 					}"
-				>Usage&nbsp;%</th>
+				>
+					<span class="dex-table__math-symbol">=</span>
+					Usage&nbsp;%
+				</th>
 				<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('usageChange', 'desc')"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'usageChange' && sortDirection === 'asc',

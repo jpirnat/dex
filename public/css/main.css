@@ -633,6 +633,11 @@ a.button {
 	color: red;
 }
 
+.dex-table__math-symbol {
+	color: #bbb;
+	margin-right: 5px;
+}
+
 .dex-drawer__content {
 	position: fixed;
 	top: 0;
