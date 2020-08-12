@@ -91,7 +91,7 @@ final class StatsItemView
 
 		return new JsonResponse([
 			'data' => [
-				'title' => 'Stats - ' . $thisMonth['text'] . ' '
+				'title' => 'Porydex - Stats - ' . $thisMonth['text'] . ' '
 					. $format->getName() . ' - ' . $itemName,
 
 				'format' => [

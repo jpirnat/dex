@@ -185,7 +185,7 @@ final class StatsPokemonView
 
 		return new JsonResponse([
 			'data' => [
-				'title' => 'Stats - ' . $thisMonth['text'] . ' '
+				'title' => 'Porydex - Stats - ' . $thisMonth['text'] . ' '
 					. $format->getName() . ' - ' . $dexPokemon->getName(),
 
 				'format' => [

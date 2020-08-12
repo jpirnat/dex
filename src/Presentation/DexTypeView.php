@@ -61,7 +61,7 @@ final class DexTypeView
 
 		return new JsonResponse([
 			'data' => [
-				'title' => 'Types - ' . $type['name'],
+				'title' => 'Porydex - Types - ' . $type['name'],
 
 				'generation' => [
 					'id' => $generation->getId()->value(),

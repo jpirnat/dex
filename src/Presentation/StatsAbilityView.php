@@ -91,7 +91,7 @@ final class StatsAbilityView
 
 		return new JsonResponse([
 			'data' => [
-				'title' => 'Stats - ' . $thisMonth['text'] . ' '
+				'title' => 'Porydex - Stats - ' . $thisMonth['text'] . ' '
 					. $format->getName() . ' - ' . $abilityName,
 
 				'format' => [
