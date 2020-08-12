@@ -277,6 +277,9 @@ a.button {
 .dex-table--number {
 	text-align: right;
 }
+.dex-table--icon {
+	text-align: center;
+}
 
 .dex-table__pokemon-types,
 .dex-table__move-type {

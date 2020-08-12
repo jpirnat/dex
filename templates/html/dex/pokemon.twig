@@ -23,7 +23,7 @@
 				<tr>
 					{% for versionGroup in versionGroups %}
 						<th scope="col">
-							<img src="/images/versions/{{ versionGroup.icon|e }}">
+							<img src="/images/versions/{{ versionGroup.icon|e }}" alt="{{ versionGroup.name|e }}">
 						</th>
 					{% endfor %}
 					<th scope="col">Move</th>
@@ -48,23 +48,34 @@
 				{% for move in method.moves %}
 					<tr>
 						{% for versionGroup in versionGroups %}
-							<td>
-								{% if move.versionGroupData[versionGroup.id] %}
-									{% if method.identifier in 'level-up' %}
+							{% if move.versionGroupData[versionGroup.id] %}
+								{% if method.identifier in 'level-up' %}
+									<td class="dex-table--number">
 										{{ move.versionGroupData[versionGroup.id]|e }}
-									{% elseif method.identifier == 'machine' %}
+									</td>
+								{% elseif method.identifier == 'machine' %}
+									<td>
 										{{ move.versionGroupData[versionGroup.id]|e }}
-									{% elseif method.identifier == 'egg' %}
+									</td>
+								{% elseif method.identifier == 'egg' %}
+									<td class="dex-table--icon">
 										<a href="/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.identifier|e }}/breeding/{{ move.identifier|e }}/{{ versionGroup.identifier|e }}" target="_blank">
 											<img src="/images/miscellaneous/egg.png" alt="Egg move">
 										</a>
-									{% elseif method.identifier == 'light-ball' %}
+									</td>
+								{% elseif method.identifier == 'light-ball' %}
+									<td class="dex-table--icon">
 										<img src="/images/miscellaneous/egg.png" alt="Egg move">
-									{% else %}
-										<img src="/images/versions/{{ versionGroup.icon|e }}">
-									{% endif %}
+									</td>
+								{% else %}
+									<td class="dex-table--icon">
+										<img src="/images/versions/{{ versionGroup.icon|e }}" alt="{{ versionGroup.name|e }}">
+									</td>
 								{% endif %}
-							</td>
+								</td>
+							{% else %}
+								<td></td>
+							{% endif %}
 						{% endfor %}
 						<th scope="row">
 							<a href="/dex/{{ generation.identifier|e }}/moves/{{ move.identifier|e }}">

@@ -92,7 +92,7 @@ final class DexMoveView
 				'move' => [
 					'identifier' => $move['identifier'],
 				],
-				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
+				'versionGroups' => $this->dexFormatter->formatDexVersionGroups($versionGroups),
 				'showAbilities' => $showAbilities,
 				'stats' => $stats,
 				'methods' => $this->formatDexMovePokemonMethods($methods),

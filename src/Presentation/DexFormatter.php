@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Versions\Generation;
-use Jp\Dex\Domain\Versions\VersionGroup;
+use Jp\Dex\Domain\Versions\DexVersionGroup;
 
 final class DexFormatter
 {
@@ -38,11 +38,11 @@ final class DexFormatter
 	/**
 	 * Transform an array of version group objects into a renderable data array.
 	 *
-	 * @param VersionGroup[] $versionGroups
+	 * @param DexVersionGroup[] $versionGroups
 	 *
 	 * @return array
 	 */
-	public function formatVersionGroups(array $versionGroups) : array
+	public function formatDexVersionGroups(array $versionGroups) : array
 	{
 		$vg = [];
 
@@ -50,7 +50,9 @@ final class DexFormatter
 			$vg[] = [
 				'id' => $versionGroup->getId()->value(),
 				'identifier' => $versionGroup->getIdentifier(),
+				'generationId' => $versionGroup->getGenerationId()->value(),
 				'icon' => $versionGroup->getIcon(),
+				'name' => $versionGroup->getName(),
 			];
 		}
 

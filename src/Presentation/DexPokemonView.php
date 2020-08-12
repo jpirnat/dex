@@ -97,7 +97,7 @@ final class DexPokemonView
 				'pokemon' => [
 					'identifier' => $pokemon['identifier'],
 				],
-				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
+				'versionGroups' => $this->dexFormatter->formatDexVersionGroups($versionGroups),
 				'showMoveDescriptions' => $showMoveDescriptions,
 				'methods' => $this->formatDexPokemonMoveMethods($methods),
 				'colspan' => $colspan,

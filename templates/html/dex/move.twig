@@ -21,9 +21,18 @@
 		{% for method in methods %}
 			<tbody>
 				<tr>
+					<th colspan="{{ colspan|e }}">
+						{% if method.description %}
+							{{ method.name|e }} - {{ method.description|e }}
+						{% else %}
+							{{ method.name|e }}
+						{% endif %}
+					</th>
+				</tr>
+				<tr>
 					{% for versionGroup in versionGroups %}
 						<th scope="col">
-							<img src="/images/versions/{{ versionGroup.icon|e }}">
+							<img src="/images/versions/{{ versionGroup.icon|e }}" alt="{{ versionGroup.name|e }}">
 						</th>
 					{% endfor %}
 					<th></th>
@@ -39,35 +48,36 @@
 					{% endfor %}
 					<th scope="col">BST</th>
 				</tr>
-				<tr>
-					<th colspan="{{ colspan|e }}">
-						{% if method.description %}
-							{{ method.name|e }} - {{ method.description|e }}
-						{% else %}
-							{{ method.name|e }}
-						{% endif %}
-					</th>
-				</tr>
 				{% for pokemon in method.pokemon %}
 					<tr>
 						{% for versionGroup in versionGroups %}
-							<td>
-								{% if pokemon.versionGroupData[versionGroup.id] %}
-									{% if method.identifier in 'level-up' %}
+							{% if pokemon.versionGroupData[versionGroup.id] %}
+								{% if method.identifier in 'level-up' %}
+									<td class="dex-table--number">
 										{{ pokemon.versionGroupData[versionGroup.id]|e }}
-									{% elseif method.identifier == 'machine' %}
+									</td>
+								{% elseif method.identifier == 'machine' %}
+									<td>
 										{{ pokemon.versionGroupData[versionGroup.id]|e }}
-									{% elseif method.identifier == 'egg' %}
+									</td>
+								{% elseif method.identifier == 'egg' %}
+									<td class="dex-table--icon">
 										<a href="/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.identifier|e }}/breeding/{{ move.identifier|e }}/{{ versionGroup.identifier|e }}" target="_blank">
 											<img src="/images/miscellaneous/egg.png" alt="Egg move">
 										</a>
-									{% elseif method.identifier == 'light-ball' %}
+									</td>
+								{% elseif method.identifier == 'light-ball' %}
+									<td class="dex-table--icon">
 										<img src="/images/miscellaneous/egg.png" alt="Egg move">
-									{% else %}
-										<img src="/images/versions/{{ versionGroup.icon|e }}">
-									{% endif %}
+									</td>
+								{% else %}
+									<td class="dex-table--icon">
+										<img src="/images/versions/{{ versionGroup.icon|e }}" alt="{{ versionGroup.name|e }}">
+									</td>
 								{% endif %}
-							</td>
+							{% else %}
+								<td></td>
+							{% endif %}
 						{% endfor %}
 						<td>
 							<img src="/images/pokemon/icons/{{ pokemon.icon|e }}" alt="">
