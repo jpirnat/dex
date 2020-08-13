@@ -20,9 +20,18 @@
 		</thead>
 		{% for method in methods %}
 			<tbody id="{{ method.identifier|e }}-moves">
-				<tr>
+				<tr class="dex-table__sticky-header-1">
+					<th colspan="{{ colspan|e }}">
+						{% if method.description %}
+							{{ method.name|e }} - {{ method.description|e }}
+						{% else %}
+							{{ method.name|e }}
+						{% endif %}
+					</th>
+				</tr>
+				<tr class="dex-table__sticky-header-2">
 					{% for versionGroup in versionGroups %}
-						<th scope="col">
+						<th scope="col" class="dex-table--icon">
 							<img src="/images/versions/{{ versionGroup.icon|e }}" alt="{{ versionGroup.name|e }}">
 						</th>
 					{% endfor %}
@@ -36,45 +45,35 @@
 						<th scope="col" class="dex-table__move-description">Description</th>
 					{% endif %}
 				</tr>
-				<tr>
-					<th colspan="{{ colspan|e }}">
-						{% if method.description %}
-							{{ method.name|e }} - {{ method.description|e }}
-						{% else %}
-							{{ method.name|e }}
-						{% endif %}
-					</th>
-				</tr>
 				{% for move in method.moves %}
 					<tr>
 						{% for versionGroup in versionGroups %}
-							{% if move.versionGroupData[versionGroup.id] %}
+							{% if move.versionGroupData[versionGroup.identifier] %}
 								{% if method.identifier in 'level-up' %}
-									<td class="dex-table--number">
-										{{ move.versionGroupData[versionGroup.id]|e }}
+									<td class="dex-table__pokemon-move-data dex-table--number">
+										{{ move.versionGroupData[versionGroup.identifier]|e }}
 									</td>
 								{% elseif method.identifier == 'machine' %}
-									<td>
-										{{ move.versionGroupData[versionGroup.id]|e }}
+									<td class="dex-table__pokemon-move-data">
+										{{ move.versionGroupData[versionGroup.identifier]|e }}
 									</td>
 								{% elseif method.identifier == 'egg' %}
-									<td class="dex-table--icon">
+									<td class="dex-table__pokemon-move-data dex-table--icon">
 										<a href="/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.identifier|e }}/breeding/{{ move.identifier|e }}/{{ versionGroup.identifier|e }}" target="_blank">
 											<img src="/images/miscellaneous/egg.png" alt="Egg move">
 										</a>
 									</td>
 								{% elseif method.identifier == 'light-ball' %}
-									<td class="dex-table--icon">
+									<td class="dex-table__pokemon-move-data dex-table--icon">
 										<img src="/images/miscellaneous/egg.png" alt="Egg move">
 									</td>
 								{% else %}
-									<td class="dex-table--icon">
+									<td class="dex-table__pokemon-move-data dex-table--icon">
 										<img src="/images/versions/{{ versionGroup.icon|e }}" alt="{{ versionGroup.name|e }}">
 									</td>
 								{% endif %}
-								</td>
 							{% else %}
-								<td></td>
+								<td class="dex-table__pokemon-move-data"></td>
 							{% endif %}
 						{% endfor %}
 						<th scope="row">
@@ -82,7 +81,7 @@
 								{{ move.name|e }}
 							</a>
 						</th>
-						<td>
+						<td class="dex-table__move-type">
 							<a href="/dex/{{ generation.identifier|e }}/types/{{ move.type.identifier|e }}">
 								<img src="/images/types/{{ move.type.icon|e }}" alt="{{ move.type.name|e }}">
 							</a>

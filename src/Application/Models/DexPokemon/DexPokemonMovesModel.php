@@ -13,6 +13,7 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
+use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexPokemonMovesModel
@@ -63,6 +64,7 @@ final class DexPokemonMovesModel
 	 * @param GenerationId $introducedInGenerationId
 	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
+	 * @param DexVersionGroup[] $versionGroups
 	 *
 	 * @return void
 	 */
@@ -70,7 +72,8 @@ final class DexPokemonMovesModel
 		PokemonId $pokemonId,
 		GenerationId $introducedInGenerationId,
 		GenerationId $generationId,
-		LanguageId $languageId
+		LanguageId $languageId,
+		array $versionGroups
 	) : void {
 		$pokemonMoves = $this->pokemonMoveRepository->getByPokemonAndGeneration(
 			$pokemonId,
@@ -92,6 +95,13 @@ final class DexPokemonMovesModel
 			$moveId = $pokemonMove->getMoveId()->value();
 			$methodId = $pokemonMove->getMoveMethodId()->value();
 
+			if (!isset($versionGroups[$vgId])) {
+				// This should only happen if this Pokémon move is from a gen 1
+				// version group of the wrong locality (Red/Green vs Red/Blue).
+				continue;
+			}
+			$vgIdentifier = $versionGroups[$vgId]->getIdentifier();
+
 			// Keep track of moves we'll need data for.
 			$moveIds[$moveId] = $pokemonMove->getMoveId();
 
@@ -102,15 +112,15 @@ final class DexPokemonMovesModel
 					// how many times the move is learned in each version group,
 					// to know how many dex Pokémon move records a level up move
 					// will need.
-					if (isset($moveVgIndexes[$moveId][$vgId])) {
-						$moveVgIndexes[$moveId][$vgId]++;
+					if (isset($moveVgIndexes[$moveId][$vgIdentifier])) {
+						$moveVgIndexes[$moveId][$vgIdentifier]++;
 					} else {
-						$moveVgIndexes[$moveId][$vgId] = 0;
+						$moveVgIndexes[$moveId][$vgIdentifier] = 0;
 					}
 
-					$index = $moveVgIndexes[$moveId][$vgId];
+					$index = $moveVgIndexes[$moveId][$vgIdentifier];
 					$level = $pokemonMove->getLevel();
-					$levelUpMoves[$moveId][$index][$vgId] = $level;
+					$levelUpMoves[$moveId][$index][$vgIdentifier] = $level;
 					break;
 				case MoveMethodId::MACHINE:
 					// The version group data is the TM's number.
@@ -120,12 +130,12 @@ final class DexPokemonMovesModel
 						$languageId,
 						$tm->getItemId()
 					);
-					$methodsMoves[$methodId][$moveId][$vgId] = $itemName->getName();
+					$methodsMoves[$methodId][$moveId][$vgIdentifier] = $itemName->getName();
 					break;
 				default:
 					// The version group data is just that the Pokémon learns
 					// the move in this version group.
-					$methodsMoves[$methodId][$moveId][$vgId] = 1;
+					$methodsMoves[$methodId][$moveId][$vgIdentifier] = 1;
 					break;
 			}
 		}

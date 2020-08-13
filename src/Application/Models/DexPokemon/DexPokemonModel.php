@@ -93,7 +93,8 @@ final class DexPokemonModel
 			$pokemon->getId(),
 			$introducedInVg->getGenerationId(),
 			$generationId,
-			$languageId
+			$languageId,
+			$this->versionGroups
 		);
 	}
 
