@@ -79,11 +79,19 @@ $routes = [
 	]],
 
 	['GET', "/dex/$generationIdentifier/moves/$moveIdentifier", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'dexMove',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$generationIdentifier/moves/$moveIdentifier", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexMoveController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => \Jp\Dex\Presentation\DexMoveView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => MiddlewareGroups::HTML,
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', "/dex/$generationIdentifier/natures", [

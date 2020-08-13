@@ -90,6 +90,23 @@ final class IndexView
 	}
 
 	/**
+	 * Show the dex move page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function dexMove() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/move.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Move',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the dex natures page.
 	 *
 	 * @return ResponseInterface
