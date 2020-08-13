@@ -23,6 +23,15 @@
 
 	<h2 class="dex-section__title">Pokémon</h2>
 
+	<nav>
+		<div>{{ move.name }} can be learned in the following ways:</div>
+		<ul class="dex-move__method-links">
+			<li v-for="method in methods" :key="method.identifier">
+				<a :href="`#via-${method.identifier}`">{{ method.name }}</a>
+			</li>
+		</ul>
+	</nav>
+
 	<table class="dex-table dex-table--full-width">
 		<tbody is="dex-move-method-pokemons"
 			v-for="method in methods" :key="method.identifier"

@@ -79,9 +79,7 @@ final class DexMoveView
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 
-				'move' => [
-					'identifier' => $move['identifier'],
-				],
+				'move' => $move,
 
 				'methods' => $this->formatDexMovePokemonMethods($methods),
 				'versionGroups' => $this->dexFormatter->formatDexVersionGroups($versionGroups),

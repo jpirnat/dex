@@ -39,7 +39,7 @@ Vue.component('dex-move-method-pokemons', {
 		},
 	},
 	template: `
-		<tbody>
+		<tbody :id="'via-' + method.identifier">
 			<tr class="dex-table__sticky-header-1">
 				<th :colspan="colspan">
 					<template v-if="method.description">

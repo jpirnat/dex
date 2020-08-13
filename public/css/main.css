@@ -361,6 +361,10 @@ a.button {
 
 /* dex move */
 
+.dex-move__method-links {
+	margin: 0;
+}
+
 .dex-table__sticky-header-1 th {
 	position: sticky;
 	top: 0px;
@@ -764,7 +768,7 @@ table.moveset-usage td {
 
 /* Desktop */
 @media (min-width: 600px) {
-	#quick-links {
+	.quick-links {
 		display: none;
 	}
 
