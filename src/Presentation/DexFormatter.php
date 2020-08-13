@@ -48,7 +48,6 @@ final class DexFormatter
 
 		foreach ($versionGroups as $versionGroup) {
 			$vg[] = [
-				'id' => $versionGroup->getId()->value(),
 				'identifier' => $versionGroup->getIdentifier(),
 				'generationId' => $versionGroup->getGenerationId()->value(),
 				'icon' => $versionGroup->getIcon(),

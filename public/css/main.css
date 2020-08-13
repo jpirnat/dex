@@ -379,7 +379,8 @@ a.button {
 	padding: 5px 10px;
 }
 .dex-table__pokemon-move-data:nth-child(even) {
-	background: rgba(129, 213, 238, .4); /* #8bd5ee */
+	background: #cdeef8; /* Porygon palette #8bd5ee at opacity 40% on white background. */
+	/* https://marcodiiga.github.io/rgba-to-rgb-conversion */
 }
 
 
