@@ -250,7 +250,7 @@ a.button {
 }
 
 .dex-table tbody th {
-	font-weight: inherit; /* so my <th scope="row"> elements won't be bold */
+	font-weight: inherit; /* so my <th scope="row"> elements won't be automatically bold */
 }
 
 .dex-table a {
@@ -355,6 +355,17 @@ a.button {
 .dex-moves__filter {
 	display: inline-block;
 	margin: 0 10px 10px 0;
+}
+
+
+
+/* dex move */
+
+.dex-table tbody .dex-table__pokemon-move-data {
+	padding: 5px 10px;
+}
+.dex-table__pokemon-move-data:nth-child(even) {
+	background: rgba(129, 213, 238, .4); /* #8bd5ee */
 }
 
 

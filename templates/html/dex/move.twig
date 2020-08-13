@@ -31,7 +31,7 @@
 				</tr>
 				<tr>
 					{% for versionGroup in versionGroups %}
-						<th scope="col">
+						<th scope="col" class="dex-table--icon">
 							<img src="/images/versions/{{ versionGroup.icon|e }}" alt="{{ versionGroup.name|e }}">
 						</th>
 					{% endfor %}
@@ -51,32 +51,32 @@
 				{% for pokemon in method.pokemon %}
 					<tr>
 						{% for versionGroup in versionGroups %}
-							{% if pokemon.versionGroupData[versionGroup.id] %}
+							{% if pokemon.versionGroupData[versionGroup.identifier] %}
 								{% if method.identifier in 'level-up' %}
-									<td class="dex-table--number">
-										{{ pokemon.versionGroupData[versionGroup.id]|e }}
+									<td class="dex-table__pokemon-move-data dex-table--number">
+										{{ pokemon.versionGroupData[versionGroup.identifier]|e }}
 									</td>
 								{% elseif method.identifier == 'machine' %}
-									<td>
-										{{ pokemon.versionGroupData[versionGroup.id]|e }}
+									<td class="dex-table__pokemon-move-data">
+										{{ pokemon.versionGroupData[versionGroup.identifier]|e }}
 									</td>
 								{% elseif method.identifier == 'egg' %}
-									<td class="dex-table--icon">
+									<td class="dex-table__pokemon-move-data dex-table--icon">
 										<a href="/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.identifier|e }}/breeding/{{ move.identifier|e }}/{{ versionGroup.identifier|e }}" target="_blank">
 											<img src="/images/miscellaneous/egg.png" alt="Egg move">
 										</a>
 									</td>
 								{% elseif method.identifier == 'light-ball' %}
-									<td class="dex-table--icon">
+									<td class="dex-table__pokemon-move-data dex-table--icon">
 										<img src="/images/miscellaneous/egg.png" alt="Egg move">
 									</td>
 								{% else %}
-									<td class="dex-table--icon">
+									<td class="dex-table__pokemon-move-data dex-table--icon">
 										<img src="/images/versions/{{ versionGroup.icon|e }}" alt="{{ versionGroup.name|e }}">
 									</td>
 								{% endif %}
 							{% else %}
-								<td></td>
+								<td class="dex-table__pokemon-move-data"></td>
 							{% endif %}
 						{% endfor %}
 						<td>

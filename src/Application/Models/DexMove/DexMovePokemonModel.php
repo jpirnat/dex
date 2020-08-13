@@ -13,6 +13,7 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
+use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexMovePokemonModel
@@ -68,13 +69,15 @@ final class DexMovePokemonModel
 	 * @param MoveId $moveId
 	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
+	 * @param DexVersionGroup[] $versionGroups
 	 *
 	 * @return void
 	 */
 	public function setData(
 		MoveId $moveId,
 		GenerationId $generationId,
-		LanguageId $languageId
+		LanguageId $languageId,
+		array $versionGroups
 	) : void {
 		$pokemonMoves = $this->pokemonMoveRepository->getByMoveAndGeneration(
 			$moveId,
@@ -100,6 +103,13 @@ final class DexMovePokemonModel
 			$vgId = $pokemonMove->getVersionGroupId()->value();
 			$methodId = $pokemonMove->getMoveMethodId()->value();
 
+			if (!isset($versionGroups[$vgId])) {
+				// This should only happen if this Pokémon move is from a gen 1
+				// version group of the wrong locality (Red/Green vs Red/Blue).
+				continue;
+			}
+			$vgIdentifier = $versionGroups[$vgId]->getIdentifier();
+
 			// Keep track of the Pokémon we'll need data for.
 			$pokemonIds[$pokemonId] = $pokemonMove->getPokemonId();
 
@@ -108,9 +118,9 @@ final class DexMovePokemonModel
 					// The version group data is the lowest level at which the
 					// Pokémon learns the move.
 					$level = $pokemonMove->getLevel();
-					$oldLevel = $methodsPokemons[$methodId][$pokemonId][$vgId] ?? 101;
+					$oldLevel = $methodsPokemons[$methodId][$pokemonId][$vgIdentifier] ?? 101;
 					if ($level <  $oldLevel) {
-						$methodsPokemons[$methodId][$pokemonId][$vgId] = $level;
+						$methodsPokemons[$methodId][$pokemonId][$vgIdentifier] = $level;
 					}
 					break;
 				case MoveMethodId::MACHINE:
@@ -120,12 +130,12 @@ final class DexMovePokemonModel
 						$languageId,
 						$tm->getItemId()
 					);
-					$methodsPokemons[$methodId][$pokemonId][$vgId] = $itemName->getName();
+					$methodsPokemons[$methodId][$pokemonId][$vgIdentifier] = $itemName->getName();
 					break;
 				default:
 					// The version group data is just that the Pokémon learns
 					// the move in this version group.
-					$methodsPokemons[$methodId][$pokemonId][$vgId] = 1;
+					$methodsPokemons[$methodId][$pokemonId][$vgIdentifier] = 1;
 					break;
 			}
 		}

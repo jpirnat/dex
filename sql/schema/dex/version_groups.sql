@@ -1,7 +1,7 @@
 create table if not exists `version_groups`
 (
 `id` tinyint unsigned not null,
-`identifier` varchar(25) not null,
+`identifier` varchar(8) not null,
 
 `generation_id` tinyint unsigned not null,
 `icon` varchar(29) not null,

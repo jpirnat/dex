@@ -91,7 +91,8 @@ final class DexMoveModel
 		$this->dexMovePokemonModel->setData(
 			$move->getId(),
 			$generationId,
-			$languageId
+			$languageId,
+			$this->versionGroups
 		);
 	}
 
