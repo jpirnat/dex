@@ -17,6 +17,10 @@
 		</a>
 	</div>
 
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
+
 	<section v-for="generation in generations" :key="generation.generation">
 		<h2 class="dex-section__title">Gen {{ generation.generation }}</h2>
 

@@ -5,6 +5,10 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
+
 	<section v-for="year in years" :key="year.year">
 		<h2 class="dex-section__title">{{ year.year }}</h2>
 

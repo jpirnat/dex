@@ -22,14 +22,20 @@
 		</ul>
 	</div>
 
-	<p>{{ ability.name }}: {{ ability.description }}</p>
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
 
-	<dex-pokemons-table
-		:pokemons="pokemons"
-		:generation="generation"
-		:show-abilities="true"
-		:stats="stats"
-	></dex-pokemons-table>
+	<template v-if="loaded">
+		<p>{{ ability.name }}: {{ ability.description }}</p>
+
+		<dex-pokemons-table
+			:pokemons="pokemons"
+			:generation="generation"
+			:show-abilities="true"
+			:stats="stats"
+		></dex-pokemons-table>
+	</template>
 </div>
 {% endverbatim %}
 {% endblock %}

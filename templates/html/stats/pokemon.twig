@@ -33,116 +33,122 @@
 		</ul>
 	</div>
 
-	<div class="pokemon-data">
-		<div>
-			{{ pokemon.name }}
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
+
+	<template v-if="loaded">
+		<div class="pokemon-data">
+			<div>
+				{{ pokemon.name }}
+			</div>
+			<div>
+				<img :src="`/images/pokemon/models/${pokemon.model}`" alt="">
+			</div>
+			<div class="pokemon-types">
+				<a v-for="type in pokemon.types" :key="type.identifier"
+					:href="`/dex/${generation.identifier}/types/${type.identifier}`"
+				>
+					<img :src="`/images/types/${type.icon}`" :alt="type.name">
+				</a>
+			</div>
 		</div>
-		<div>
-			<img :src="`/images/pokemon/models/${pokemon.model}`" alt="">
-		</div>
-		<div class="pokemon-types">
-			<a v-for="type in pokemon.types" :key="type.identifier"
-				:href="`/dex/${generation.identifier}/types/${type.identifier}`"
+
+		<table class="base-stats">
+			<tr v-for="stat in stats" :key="stat.key">
+				<td class="base-stat-name">{{ stat.name }}</td>
+				<td class="dex-table--number">{{ pokemon.baseStats[stat.key] }}</td>
+				<td>
+					<div class="base-stat-bar"
+						:style="{
+							'width': (pokemon.baseStats[stat.key] / 255 * 300) + 'px',
+						}"
+					></div>
+				</td>
+			</tr>
+		</table>
+
+		<div v-if="format.smogonDexIdentifier && pokemon.smogonDexIdentifier">
+			<a :href="`https://www.smogon.com/dex/${generation.identifier}/pokemon/${pokemon.smogonDexIdentifier}/${format.smogonDexIdentifier}/`"
+				target="_blank" rel="noopener"
 			>
-				<img :src="`/images/types/${type.icon}`" :alt="type.name">
+				Smogon Analysis
 			</a>
 		</div>
-	</div>
 
-	<table class="base-stats">
-		<tr v-for="stat in stats" :key="stat.key">
-			<td class="base-stat-name">{{ stat.name }}</td>
-			<td class="dex-table--number">{{ pokemon.baseStats[stat.key] }}</td>
-			<td>
-				<div class="base-stat-bar"
-					:style="{
-						'width': (pokemon.baseStats[stat.key] / 255 * 300) + 'px',
-					}"
-				></div>
-			</td>
-		</tr>
-	</table>
+		<div v-if="rawCount">
+			Raw count: {{ rawCount }}
+		</div>
+		<div v-if="averageWeight">
+			Avg. weight: {{ averageWeight }}
+		</div>
+		<div v-if="viabilityCeiling">
+			Viability Ceiling: {{ viabilityCeiling }}
+		</div>
 
-	<div v-if="format.smogonDexIdentifier && pokemon.smogonDexIdentifier">
-		<a :href="`https://www.smogon.com/dex/${generation.identifier}/pokemon/${pokemon.smogonDexIdentifier}/${format.smogonDexIdentifier}/`"
-			target="_blank" rel="noopener"
-		>
-			Smogon Analysis
-		</a>
-	</div>
+		<nav class="quick-links">
+			<ul>
+				<li v-if="showAbilities"><a href="#abilities">Abilities</a></li>
+				<li v-if="showItems"><a href="#items">Items</a></li>
+				<li><a href="#spreads">Spreads</a></li>
+				<li><a href="#moves">Moves</a></li>
+				<li><a href="#teammates">Teammates</a></li>
+				<li><a href="#counters">Counters</a></li>
+			</ul>
+		</nav>
 
-	<div v-if="rawCount">
-		Raw count: {{ rawCount }}
-	</div>
-	<div v-if="averageWeight">
-		Avg. weight: {{ averageWeight }}
-	</div>
-	<div v-if="viabilityCeiling">
-		Viability Ceiling: {{ viabilityCeiling }}
-	</div>
+		<stats-pokemon-abilities v-if="showAbilities" id="abilities"
+			:abilities="abilities"
+			:month="thisMonth.month"
+			:format="format.identifier"
+			:rating="rating"
+			:pokemon="pokemon.identifier"
+			@add-chart-line="addChartLine($event)"
+		></stats-pokemon-abilities>
 
-	<nav class="quick-links">
-		<ul>
-			<li v-if="showAbilities"><a href="#abilities">Abilities</a></li>
-			<li v-if="showItems"><a href="#items">Items</a></li>
-			<li><a href="#spreads">Spreads</a></li>
-			<li><a href="#moves">Moves</a></li>
-			<li><a href="#teammates">Teammates</a></li>
-			<li><a href="#counters">Counters</a></li>
-		</ul>
-	</nav>
+		<stats-pokemon-items v-if="showItems" id="items"
+			:items="items"
+			:month="thisMonth.month"
+			:format="format.identifier"
+			:rating="rating"
+			:pokemon="pokemon.identifier"
+			@add-chart-line="addChartLine($event)"
+		></stats-pokemon-items>
 
-	<stats-pokemon-abilities v-if="showAbilities" id="abilities"
-		:abilities="abilities"
-		:month="thisMonth.month"
-		:format="format.identifier"
-		:rating="rating"
-		:pokemon="pokemon.identifier"
-		@add-chart-line="addChartLine($event)"
-	></stats-pokemon-abilities>
+		<stats-pokemon-spreads id="spreads"
+			:spreads="spreads"
+			:stats="stats"
+		></stats-pokemon-spreads>
 
-	<stats-pokemon-items v-if="showItems" id="items"
-		:items="items"
-		:month="thisMonth.month"
-		:format="format.identifier"
-		:rating="rating"
-		:pokemon="pokemon.identifier"
-		@add-chart-line="addChartLine($event)"
-	></stats-pokemon-items>
+		<stats-pokemon-moves id="moves"
+			:moves="moves"
+			:month="thisMonth.month"
+			:format="format.identifier"
+			:rating="rating"
+			:pokemon="pokemon.identifier"
+			@add-chart-line="addChartLine($event)"
+		></stats-pokemon-moves>
 
-	<stats-pokemon-spreads id="spreads"
-		:spreads="spreads"
-		:stats="stats"
-	></stats-pokemon-spreads>
+		<stats-pokemon-teammates id="teammates"
+			:teammates="teammates"
+			:month="thisMonth.month"
+			:format="format.identifier"
+			:rating="rating"
+		></stats-pokemon-teammates>
 
-	<stats-pokemon-moves id="moves"
-		:moves="moves"
-		:month="thisMonth.month"
-		:format="format.identifier"
-		:rating="rating"
-		:pokemon="pokemon.identifier"
-		@add-chart-line="addChartLine($event)"
-	></stats-pokemon-moves>
+		<stats-pokemon-counters id="counters"
+			:counters="counters"
+			:month="thisMonth.month"
+			:format="format.identifier"
+			:rating="rating"
+			:pokemon="pokemon.name"
+		></stats-pokemon-counters>
 
-	<stats-pokemon-teammates id="teammates"
-		:teammates="teammates"
-		:month="thisMonth.month"
-		:format="format.identifier"
-		:rating="rating"
-	></stats-pokemon-teammates>
-
-	<stats-pokemon-counters id="counters"
-		:counters="counters"
-		:month="thisMonth.month"
-		:format="format.identifier"
-		:rating="rating"
-		:pokemon="pokemon.name"
-	></stats-pokemon-counters>
-
-	<dex-chart-drawer
-		ref="chart"
-		:ratings="ratings"
-	></dex-chart-drawer>
+		<dex-chart-drawer
+			ref="chart"
+			:ratings="ratings"
+		></dex-chart-drawer>
+	</template>
 </div>
 {% endverbatim %}
 {% endblock %}

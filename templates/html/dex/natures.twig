@@ -5,35 +5,41 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<table class="dex-table">
-		<thead>
-			<tr>
-				<th scope="col">Name</th>
-				<th scope="col">Raises</th>
-				<th scope="col">Lowers</th>
-				<th scope="col">VC Exp Remainder</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr v-for="nature in natures">
-				<th scope="row">{{ nature.name }}</th>
-				
-				<td v-if="nature.increasedStat" class="dex-nature--increased">{{ nature.increasedStat }}</td>
-				<td v-else class="dex-nature--neutral">-</td>
-				
-				<td v-if="nature.decreasedStat" class="dex-nature--decreased">{{ nature.decreasedStat }}</td>
-				<td v-else class="dex-nature--neutral">-</td>
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
 
-				<td class="dex-table--number">{{ nature.vcExpRemainder }}</td>
-			</tr>
-		</tbody>
-	</table>
+	<template v-if="loaded">
+		<table class="dex-table">
+			<thead>
+				<tr>
+					<th scope="col">Name</th>
+					<th scope="col">Raises</th>
+					<th scope="col">Lowers</th>
+					<th scope="col">VC Exp Remainder</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="nature in natures">
+					<th scope="row">{{ nature.name }}</th>
 
-	<p>
-		When transferring a Pokémon from one of the Nintendo 3DS Virtual Console games
-		into Pokémon Bank, its nature is determined by the remainder of the Pokémon's
-		Experience Points when divided by 25.
-	</p>
+					<td v-if="nature.increasedStat" class="dex-nature--increased">{{ nature.increasedStat }}</td>
+					<td v-else class="dex-nature--neutral">-</td>
+
+					<td v-if="nature.decreasedStat" class="dex-nature--decreased">{{ nature.decreasedStat }}</td>
+					<td v-else class="dex-nature--neutral">-</td>
+
+					<td class="dex-table--number">{{ nature.vcExpRemainder }}</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>
+			When transferring a Pokémon from one of the Nintendo 3DS Virtual Console games
+			into Pokémon Bank, its nature is determined by the remainder of the Pokémon's
+			Experience Points when divided by 25.
+		</p>
+	</template>
 </div>
 {% endverbatim %}
 {% endblock %}

@@ -21,28 +21,34 @@
 		</ul>
 	</div>
 
-	<h2 class="dex-section__title">Pokémon</h2>
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
 
-	<nav>
-		<div>{{ move.name }} can be learned in the following ways:</div>
-		<ul class="dex-move__method-links">
-			<li v-for="method in methods" :key="method.identifier">
-				<a :href="`#via-${method.identifier}`">{{ method.name }}</a>
-			</li>
-		</ul>
-	</nav>
+	<template v-if="loaded">
+		<h2 class="dex-section__title">Pokémon</h2>
 
-	<table class="dex-table dex-table--full-width">
-		<tbody is="dex-move-method-pokemons"
-			v-for="method in methods" :key="method.identifier"
-			:method="method"
-			:generation="generation"
-			:move="move"
-			:version-groups="versionGroups"
-			:stats="stats"
-			:show-abilities="showAbilities"
-		></tbody>
-	</table>
+		<nav>
+			<div>{{ move.name }} can be learned in the following ways:</div>
+			<ul class="dex-move__method-links">
+				<li v-for="method in methods" :key="method.identifier">
+					<a :href="`#via-${method.identifier}`">{{ method.name }}</a>
+				</li>
+			</ul>
+		</nav>
+
+		<table class="dex-table dex-table--full-width">
+			<tbody is="dex-move-method-pokemons"
+				v-for="method in methods" :key="method.identifier"
+				:method="method"
+				:generation="generation"
+				:move="move"
+				:version-groups="versionGroups"
+				:stats="stats"
+				:show-abilities="showAbilities"
+			></tbody>
+		</table>
+	</template>
 </div>
 {% endverbatim %}
 {% endblock %}

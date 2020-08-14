@@ -22,56 +22,57 @@
 		</ul>
 	</div>
 
-	<dex-pagination
-		v-model="currentPage"
-		:number-of-items="filteredAbilities.length"
-		:items-per-page="itemsPerPage"
-	></dex-pagination>
-
-	<div class="dex-abilities__filters">
-		<label class="dex-abilities__filter">
-			Filter by ability name: <input type="search" v-model="filterName">
-		</label>
-		<label class="dex-abilities__filter">
-			Filter by description: <input type="search" v-model="filterDescription">
-		</label>
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
 	</div>
 
-	<table class="dex-table dex-table--full-width">
-		<thead>
-			<tr>
-				<th scope="col" class="dex-table__ability-name">Name</th>
-				<th scope="col" class="dex-table__ability-description">Description</th>
-				<th scope="col" class="dex-table__ability-pokemon">Pokémon</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr v-for="ability in paginatedAbilities">
-				<th scope="row" class="dex-table__ability-name">
-					<a :href="`/dex/${generation.identifier}/abilities/${ability.identifier}`">
-						{{ ability.name }}
-					</a>
-				</th>
-				<td class="dex-table__ability-description">{{ ability.description }}</td>
-				<td class="dex-table__ability-pokemon">
-					<a v-for="p in ability.pokemon" :href="`/dex/${generation.identifier}/pokemon/${p.identifier}`">
-						<img :src="`/images/pokemon/icons/${p.icon}`" :alt="p.name">
-					</a>
-				</td>
-			</tr>
-			<tr v-if="loading">
-				<td colspan="3" class="dex-table__loading">
-					<span class="dex-loader"></span>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+	<template v-if="loaded">
+		<dex-pagination
+			v-model="currentPage"
+			:number-of-items="filteredAbilities.length"
+			:items-per-page="itemsPerPage"
+		></dex-pagination>
 
-	<dex-pagination
-		v-model="currentPage"
-		:number-of-items="filteredAbilities.length"
-		:items-per-page="itemsPerPage"
-	></dex-pagination>
+		<div class="dex-abilities__filters">
+			<label class="dex-abilities__filter">
+				Filter by ability name: <input type="search" v-model="filterName">
+			</label>
+			<label class="dex-abilities__filter">
+				Filter by description: <input type="search" v-model="filterDescription">
+			</label>
+		</div>
+
+		<table class="dex-table dex-table--full-width">
+			<thead>
+				<tr>
+					<th scope="col" class="dex-table__ability-name">Name</th>
+					<th scope="col" class="dex-table__ability-description">Description</th>
+					<th scope="col" class="dex-table__ability-pokemon">Pokémon</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="ability in paginatedAbilities">
+					<th scope="row" class="dex-table__ability-name">
+						<a :href="`/dex/${generation.identifier}/abilities/${ability.identifier}`">
+							{{ ability.name }}
+						</a>
+					</th>
+					<td class="dex-table__ability-description">{{ ability.description }}</td>
+					<td class="dex-table__ability-pokemon">
+						<a v-for="p in ability.pokemon" :href="`/dex/${generation.identifier}/pokemon/${p.identifier}`">
+							<img :src="`/images/pokemon/icons/${p.icon}`" :alt="p.name">
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<dex-pagination
+			v-model="currentPage"
+			:number-of-items="filteredAbilities.length"
+			:items-per-page="itemsPerPage"
+		></dex-pagination>
+	</template>
 </div>
 {% endverbatim %}
 {% endblock %}

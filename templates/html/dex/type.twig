@@ -22,20 +22,26 @@
 		</ul>
 	</div>
 
-	<h2 class="dex-section__title">Pokémon</h2>
-	<dex-pokemons-table
-		:pokemons="pokemons"
-		:generation="generation"
-		:show-abilities="true"
-		:stats="stats"
-	></dex-pokemons-table>
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
 
-	<h2 class="dex-section__title">Moves</h2>
-	<dex-moves-table
-		:moves="moves"
-		:generation="generation"
-		:show-descriptions="showMoveDescriptions"
-	></dex-moves-table>
+	<template v-if="loaded">
+		<h2 class="dex-section__title">Pokémon</h2>
+		<dex-pokemons-table
+			:pokemons="pokemons"
+			:generation="generation"
+			:show-abilities="true"
+			:stats="stats"
+		></dex-pokemons-table>
+
+		<h2 class="dex-section__title">Moves</h2>
+		<dex-moves-table
+			:moves="moves"
+			:generation="generation"
+			:show-descriptions="showMoveDescriptions"
+		></dex-moves-table>
+	</template>
 </div>
 {% endverbatim %}
 {% endblock %}

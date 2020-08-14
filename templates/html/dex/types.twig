@@ -17,79 +17,85 @@
 		</ul>
 	</div>
 
-	<table class="type-chart">
-		<thead>
-			<tr>
-				<td colspan="2"></td>
-				<th :colspan="types.length + 2" class="type-chart__axis-label">
-					Defending Type
-				</th>
-			</tr>
-			<tr>
-				<td colspan="2"></td>
-				<th v-for="defendingType in defendingTypes" scope="col">
-					<a :href="`/dex/${generation.identifier}/types/${defendingType.identifier}`">
-						<img :src="`/images/types/${defendingType.icon}`" :alt="`${defendingType.name}`">
-					</a>
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr v-for="(attackingType, attackingIndex) in attackingTypes">
-				<th v-if="attackingIndex === 0" :rowspan="types.length" class="type-chart__axis-label">
-					<span class="type-chart__axis-label--attacking">Attacking Type</span>
-				</th>
-				<th scope="row">
-					<a :href="`/dex/${generation.identifier}/types/${attackingType.identifier}`">
-						<img :src="`/images/types/${attackingType.icon}`" :alt="`${attackingType.name}`">
-					</a>
-				</th>
-				<td v-for="defendingType in defendingTypes" class="type-chart__matchup"
-					:class="{
-						'type-chart__matchup--highlight': hoverAttackingId === attackingType.id || hoverDefendingId === defendingType.id,
-						'type-chart__matchup--neutral': multipliers[attackingType.id][defendingType.id] === 1,
-						'type-chart__matchup--super-effective': multipliers[attackingType.id][defendingType.id] === 2,
-						'type-chart__matchup--not-very-effective': multipliers[attackingType.id][defendingType.id] === 0.5,
-						'type-chart__matchup--no-effect': multipliers[attackingType.id][defendingType.id] === 0,
-					}"
-					@mouseover="onMatchupHover(attackingType, defendingType)"
-					@mouseleave="onMatchupUnhover"
-				></td>
-			</tr>
-		</tbody>
-	</table>
-
-	<div class="type-toggler">
-		<div class="type-toggler__header">Toggle Attacking Types</div>
-		<div class="type-toggler__types">
-			<label v-for="type in types" class="type-toggler__type">
-				<img :src="`/images/types/${type.icon}`" :alt="`${type.name}`">
-				<input type="checkbox" v-model="toggleAttackingIds" :value="type.id">
-			</label>
-		</div>
-		<div>
-			<button type="button" class="type-toggler__select-all"
-				@click="toggleAttackingIds = types.map(t => t.id)"
-			>Select All</button>
-			<button type="button" @click="toggleAttackingIds = []">Unselect All</button>
-		</div>
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
 	</div>
 
-	<div class="type-toggler">
-		<div class="type-toggler__header">Toggle Defending Types</div>
-		<div class="type-toggler__types">
-			<label v-for="type in types" class="type-toggler__type">
-				<img :src="`/images/types/${type.icon}`" :alt="`${type.name}`">
-				<input type="checkbox" v-model="toggleDefendingIds" :value="type.id">
-			</label>
+	<template v-if="loaded">
+		<table class="type-chart">
+			<thead>
+				<tr>
+					<td colspan="2"></td>
+					<th :colspan="types.length + 2" class="type-chart__axis-label">
+						Defending Type
+					</th>
+				</tr>
+				<tr>
+					<td colspan="2"></td>
+					<th v-for="defendingType in defendingTypes" scope="col">
+						<a :href="`/dex/${generation.identifier}/types/${defendingType.identifier}`">
+							<img :src="`/images/types/${defendingType.icon}`" :alt="`${defendingType.name}`">
+						</a>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="(attackingType, attackingIndex) in attackingTypes">
+					<th v-if="attackingIndex === 0" :rowspan="types.length" class="type-chart__axis-label">
+						<span class="type-chart__axis-label--attacking">Attacking Type</span>
+					</th>
+					<th scope="row">
+						<a :href="`/dex/${generation.identifier}/types/${attackingType.identifier}`">
+							<img :src="`/images/types/${attackingType.icon}`" :alt="`${attackingType.name}`">
+						</a>
+					</th>
+					<td v-for="defendingType in defendingTypes" class="type-chart__matchup"
+						:class="{
+							'type-chart__matchup--highlight': hoverAttackingId === attackingType.id || hoverDefendingId === defendingType.id,
+							'type-chart__matchup--neutral': multipliers[attackingType.id][defendingType.id] === 1,
+							'type-chart__matchup--super-effective': multipliers[attackingType.id][defendingType.id] === 2,
+							'type-chart__matchup--not-very-effective': multipliers[attackingType.id][defendingType.id] === 0.5,
+							'type-chart__matchup--no-effect': multipliers[attackingType.id][defendingType.id] === 0,
+						}"
+						@mouseover="onMatchupHover(attackingType, defendingType)"
+						@mouseleave="onMatchupUnhover"
+					></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="type-toggler">
+			<div class="type-toggler__header">Toggle Attacking Types</div>
+			<div class="type-toggler__types">
+				<label v-for="type in types" class="type-toggler__type">
+					<img :src="`/images/types/${type.icon}`" :alt="`${type.name}`">
+					<input type="checkbox" v-model="toggleAttackingIds" :value="type.id">
+				</label>
+			</div>
+			<div>
+				<button type="button" class="type-toggler__select-all"
+					@click="toggleAttackingIds = types.map(t => t.id)"
+				>Select All</button>
+				<button type="button" @click="toggleAttackingIds = []">Unselect All</button>
+			</div>
 		</div>
-		<div>
-			<button type="button" class="type-toggler__select-all"
-				@click="toggleDefendingIds = types.map(t => t.id)"
-			>Select All</button>
-			<button type="button" @click="toggleDefendingIds = []">Unselect All</button>
+
+		<div class="type-toggler">
+			<div class="type-toggler__header">Toggle Defending Types</div>
+			<div class="type-toggler__types">
+				<label v-for="type in types" class="type-toggler__type">
+					<img :src="`/images/types/${type.icon}`" :alt="`${type.name}`">
+					<input type="checkbox" v-model="toggleDefendingIds" :value="type.id">
+				</label>
+			</div>
+			<div>
+				<button type="button" class="type-toggler__select-all"
+					@click="toggleDefendingIds = types.map(t => t.id)"
+				>Select All</button>
+				<button type="button" @click="toggleDefendingIds = []">Unselect All</button>
+			</div>
 		</div>
-	</div>
+	</template>
 </div>
 {% endverbatim %}
 {% endblock %}

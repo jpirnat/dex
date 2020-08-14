@@ -78,12 +78,17 @@ table {
 }
 
 /* Loading spinner from https://vineethtrv.github.io/loader */
+.dex-loader-container {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
 .dex-loader {
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
 	display: inline-block;
-	border-top: 4px solid #ccc;
+	border-top: 4px solid #ff3d00;
 	border-right: 4px solid transparent;
 	box-sizing: border-box;
 	animation: rotation 1s linear infinite;
@@ -97,7 +102,7 @@ table {
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
-	border-bottom: 4px solid #ff3d00;
+	border-bottom: 4px solid #ccc;
 	border-left: 4px solid transparent;
 }
 @keyframes rotation {
@@ -322,10 +327,6 @@ a.button {
 .dex-table__header--sorted-desc::after {
 	margin-left: 8px;
 	content: "▼";
-}
-
-.dex-table__loading {
-	text-align: center;
 }
 
 .dex--tooltip {

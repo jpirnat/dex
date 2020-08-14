@@ -47,9 +47,6 @@ Vue.component('dex-pokemons-table', {
 			const end = start + this.itemsPerPage;
 			return this.filteredPokemons.slice(start, end);
 		},
-		colspan() {
-			return 4 + (this.showAbilities ? 1 : 0) + this.stats.length;
-		},
 	},
 	template: `
 		<div>
@@ -138,11 +135,6 @@ Vue.component('dex-pokemons-table', {
 							{{ pokemon.baseStats[stat.key] }}
 						</td>
 						<td class="dex-table--number">{{ pokemon.bst }}</td>
-					</tr>
-					<tr v-if="pokemons.length === 0">
-						<td :colspan="colspan" class="dex-table__loading">
-							<span class="dex-loader"></span>
-						</td>
 					</tr>
 				</tbody>
 			</table>

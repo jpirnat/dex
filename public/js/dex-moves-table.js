@@ -50,9 +50,6 @@ Vue.component('dex-moves-table', {
 			const end = start + this.itemsPerPage;
 			return this.filteredMoves.slice(start, end);
 		},
-		colspan() {
-			return this.showDescriptions ? 7 : 6;
-		},
 	},
 	template: `
 		<div>
@@ -138,11 +135,6 @@ Vue.component('dex-moves-table', {
 						<td class="dex-table--number">{{ move.power }}</td>
 						<td class="dex-table--number">{{ move.accuracy }}</td>
 						<td v-if="showDescriptions" class="dex-table__move-description">{{ move.description }}</td>
-					</tr>
-					<tr v-if="moves.length === 0">
-						<td :colspan="colspan" class="dex-table__loading">
-							<span class="dex-loader"></span>
-						</td>
 					</tr>
 				</tbody>
 			</table>
