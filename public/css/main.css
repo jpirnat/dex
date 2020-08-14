@@ -362,6 +362,9 @@ a.button {
 
 /* dex move */
 
+.dex-move__methods-nav {
+	margin: 10px 0;
+}
 .dex-move__method-links {
 	margin: 0;
 }
@@ -378,6 +381,10 @@ a.button {
 	top: 30px;
 	background: white;
 	box-shadow: 0px 1px black;
+}
+
+.dex-move__pokemon-icon {
+	border-left: 1px solid black;
 }
 
 .dex-table tbody .dex-table__pokemon-move-data {

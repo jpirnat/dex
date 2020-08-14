@@ -57,7 +57,7 @@ Vue.component('dex-move-method-pokemons', {
 				>
 					<img :src="'/images/versions/' + vg.icon" :alt="vg.name">
 				</th>
-				<th class="dex-table__header--sortable"
+				<th class="dex-table__header--sortable dex-move__pokemon-icon"
 					@click="sortBy('sort', 'asc', p => p.sort)"
 					:class="{
 						'dex-table__header--sorted-asc': sortColumn === 'sort' && sortDirection === 'asc',
@@ -146,7 +146,7 @@ Vue.component('dex-move-method-pokemons', {
 						<td class="dex-table__pokemon-move-data"></td>
 					</template>
 				</template>
-				<td class="dex-table__pokemon-icon">
+				<td class="dex-table__pokemon-icon dex-move__pokemon-icon">
 					<img :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
 				</td>
 				<td class="dex-table__pokemon-name">
