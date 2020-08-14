@@ -96,19 +96,25 @@ Vue.component('dex-move-method-pokemons', {
 				<template v-for="vg in versionGroups" :key="vg.identifier">
 					<template v-if="pokemon.vgData[vg.identifier]">
 						<template v-if="method.identifier === 'level-up'">
-							<td class="dex-table__pokemon-move-data dex-table--number">
+							<td class="dex-table__pokemon-move-data dex-table--number"
+								v-tooltip="pokemonMoveTooltip(pokemon, move, vg, method)"
+							>
 								{{ pokemon.vgData[vg.identifier] }}
 							</td>
 						</template>
 
 						<template v-else-if="method.identifier === 'machine'">
-							<td class="dex-table__pokemon-move-data">
+							<td class="dex-table__pokemon-move-data"
+								v-tooltip="pokemonMoveTooltip(pokemon, move, vg, method)"
+							>
 								{{ pokemon.vgData[vg.identifier] }}
 							</td>
 						</template>
 
 						<template v-else-if="method.identifier === 'egg'">
-							<td class="dex-table__pokemon-move-data dex-table--icon">
+							<td class="dex-table__pokemon-move-data dex-table--icon"
+								v-tooltip="pokemonMoveTooltip(pokemon, move, vg, method)"
+							>
 								<a :href="
 										'/dex/' + generation.identifier + '/pokemon/' + pokemon.identifier
 										+ '/breeding/' + move.identifier + '/' + vg.identifier
@@ -121,14 +127,16 @@ Vue.component('dex-move-method-pokemons', {
 						</template>
 
 						<template v-else-if="method.identifier === 'light-ball'">
-							<td class="dex-table__pokemon-move-data dex-table--icon">
+							<td class="dex-table__pokemon-move-data dex-table--icon"
+								v-tooltip="pokemonMoveTooltip(pokemon, move, vg, method)"
+							>
 								<img src="/images/miscellaneous/egg.png" alt="Egg Move">
 							</td>
 						</template>
 
 						<template v-else>
 							<td class="dex-table__pokemon-move-data dex-table--icon"
-								v-tooltip="vg.name"
+								v-tooltip="pokemonMoveTooltip(pokemon, move, vg, method)"
 							>
 								<img :src="'/images/versions/' + vg.icon" :alt="vg.name">
 							</td>
@@ -195,6 +203,36 @@ Vue.component('dex-move-method-pokemons', {
 				if (aValue > bValue) { return +1 * modifier; }
 				return 0;
 			});
+		},
+		pokemonMoveTooltip(pokemon, move, vg, method) {
+			if (method.identifier === 'level-up') {
+				return `${pokemon.name} learns ${move.name} in ${vg.name} at Level ${pokemon.vgData[vg.identifier]}.`;
+			}
+			if (method.identifier === 'machine') {
+				return `${pokemon.name} learns ${move.name} in ${vg.name} at via ${pokemon.vgData[vg.identifier]}.`;
+			}
+			if (method.identifier === 'egg') {
+				return `${pokemon.name} learns ${move.name} in ${vg.name} as an Egg Move. Click for breeding chains.`;
+			}
+			if (method.identifier === 'sketch') {
+				return `${pokemon.name} learns ${move.name} in ${vg.name} via ${method.name}.`;
+			}
+			if (method.identifier === 'tutor') {
+				return `${pokemon.name} learns ${move.name} in ${vg.name} via ${method.name}.`;
+			}
+			if (method.identifier === 'light-ball') {
+				return `${pokemon.name} learns ${move.name} in ${vg.name} as an Egg Move if a parent is holding a ${method.name}.`;
+			}
+			if (method.identifier === 'form-change') {
+				return `${pokemon.name} learns ${move.name} in ${vg.name} when it changes to this form.`;
+			}
+			if (method.identifier === 'shadow') {
+				return `${pokemon.name} learns ${move.name} in ${vg.name} as a ${method.name} move.`;
+			}
+			if (method.identifier === 'purification') {
+				return `${pokemon.name} learns ${move.name} in ${vg.name} when it is purified.`;
+			}
+			return '';
 		},
 	}
 });
