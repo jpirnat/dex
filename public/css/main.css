@@ -371,16 +371,16 @@ a.button {
 
 .dex-table__sticky-header-1 th {
 	position: sticky;
-	top: 0px;
+	top: 0;
 	background: white;
-	box-shadow: 0px 1px black;
+	box-shadow: 0 1px black;
 	height: 30px
 }
 .dex-table__sticky-header-2 th {
 	position: sticky;
 	top: 30px;
 	background: white;
-	box-shadow: 0px 1px black;
+	box-shadow: 0 1px black;
 }
 
 .dex-move__pokemon-icon {
@@ -416,6 +416,14 @@ a.button {
 .dex-pokemons__filter {
 	display: inline-block;
 	margin: 0 10px 10px 0;
+}
+
+
+
+/* dex Pokémon */
+
+.dex-pokemon__move-name {
+	border-left: 1px solid black;
 }
 
 

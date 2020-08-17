@@ -1,103 +1,71 @@
 {% extends "html/base.twig" %}
 
+{% block styles %}
+	<link href="/css/vtooltip.css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
-	<div class="generation-control">
+{% verbatim %}
+<div id="app" v-cloak>
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
+	<div class="generation-control" v-if="generations.length">
 		<ul>
-			{% for g in generations %}
-				<li>
-					<a href="/dex/{{ g.identifier|e }}/pokemon/{{ pokemon.identifier|e }}"
-						{% if g.identifier == generation.identifier %}
-							class="current"
-						{% endif %}
-					>{{ g.name|e }}</a>
-				</li>
-			{% endfor %}
+			<li v-for="g in generations">
+				<a :href="`/dex/${g.identifier}/pokemon/${pokemon.identifier}`"
+					:class="{
+						'current': g.identifier === generation.identifier
+					}"
+				>{{ g.name }}</a>
+			</li>
 		</ul>
 	</div>
 
-	<table class="dex-table dex-table--full-width">
-		<thead>
-		</thead>
-		{% for method in methods %}
-			<tbody id="{{ method.identifier|e }}-moves">
-				<tr class="dex-table__sticky-header-1">
-					<th colspan="{{ colspan|e }}">
-						{% if method.description %}
-							{{ method.name|e }} - {{ method.description|e }}
-						{% else %}
-							{{ method.name|e }}
-						{% endif %}
-					</th>
-				</tr>
-				<tr class="dex-table__sticky-header-2">
-					{% for versionGroup in versionGroups %}
-						<th scope="col" class="dex-table--icon">
-							<img src="/images/versions/{{ versionGroup.icon|e }}" alt="{{ versionGroup.name|e }}">
-						</th>
-					{% endfor %}
-					<th scope="col">Move</th>
-					<th scope="col">Type</th>
-					<th scope="col">Category</th>
-					<th scope="col">PP</th>
-					<th scope="col">Power</th>
-					<th scope="col">Accuracy</th>
-					{% if showMoveDescriptions %}
-						<th scope="col" class="dex-table__move-description">Description</th>
-					{% endif %}
-				</tr>
-				{% for move in method.moves %}
-					<tr>
-						{% for versionGroup in versionGroups %}
-							{% if move.versionGroupData[versionGroup.identifier] %}
-								{% if method.identifier in 'level-up' %}
-									<td class="dex-table__pokemon-move-data dex-table--number">
-										{{ move.versionGroupData[versionGroup.identifier]|e }}
-									</td>
-								{% elseif method.identifier == 'machine' %}
-									<td class="dex-table__pokemon-move-data">
-										{{ move.versionGroupData[versionGroup.identifier]|e }}
-									</td>
-								{% elseif method.identifier == 'egg' %}
-									<td class="dex-table__pokemon-move-data dex-table--icon">
-										<a href="/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.identifier|e }}/breeding/{{ move.identifier|e }}/{{ versionGroup.identifier|e }}" target="_blank">
-											<img src="/images/miscellaneous/egg.png" alt="Egg move">
-										</a>
-									</td>
-								{% elseif method.identifier == 'light-ball' %}
-									<td class="dex-table__pokemon-move-data dex-table--icon">
-										<img src="/images/miscellaneous/egg.png" alt="Egg move">
-									</td>
-								{% else %}
-									<td class="dex-table__pokemon-move-data dex-table--icon">
-										<img src="/images/versions/{{ versionGroup.icon|e }}" alt="{{ versionGroup.name|e }}">
-									</td>
-								{% endif %}
-							{% else %}
-								<td class="dex-table__pokemon-move-data"></td>
-							{% endif %}
-						{% endfor %}
-						<th scope="row">
-							<a href="/dex/{{ generation.identifier|e }}/moves/{{ move.identifier|e }}">
-								{{ move.name|e }}
-							</a>
-						</th>
-						<td class="dex-table__move-type">
-							<a href="/dex/{{ generation.identifier|e }}/types/{{ move.type.identifier|e }}">
-								<img src="/images/types/{{ move.type.icon|e }}" alt="{{ move.type.name|e }}">
-							</a>
-						</td>
-						<td class="dex-table__move-category">
-							<img src="/images/categories/{{ move.category.icon|e }}" alt="{{ move.category.name|e }}">
-						</td>
-						<td class="dex-table--number">{{ move.pp|e }}</td>
-						<td class="dex-table--number">{{ move.power|e }}</td>
-						<td class="dex-table--number">{{ move.accuracy|e }}</td>
-						{% if showMoveDescriptions %}
-							<td class="dex-table__move-description">{{ move.description|e }}</td>
-						{% endif %}
-					</tr>
-				{% endfor %}
-			</tbody>
-		{% endfor %}
-	</table>
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
+
+	<template v-if="loaded">
+		<h2 class="dex-section__title">Moves</h2>
+
+		<nav class="dex-move__methods-nav">
+			<div>{{ pokemon.name }} can learn moves in the following ways:</div>
+			<ul class="dex-move__method-links">
+				<li v-for="method in visibleMethods" :key="method.identifier">
+					<a :href="`#${method.identifier}-moves`">{{ method.name }}</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div v-if="generation.id !== 1">
+			<label>
+				<input type="checkbox" v-model="showOlderGames" @click="toggleOlderGames">
+				Show older generation games
+			</label>
+		</div>
+
+		<table class="dex-table dex-table--full-width">
+			<tbody is="dex-pokemon-method-moves"
+				v-for="method in visibleMethods" :key="method.identifier"
+				:method="method"
+				:generation="generation"
+				:pokemon="pokemon"
+				:version-groups="visibleVersionGroups"
+				:show-move-descriptions="showMoveDescriptions"
+			></tbody>
+		</table>
+	</template>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	<script src="/js/dex-breadcrumbs.js"></script>
+
+	<script src="https://unpkg.com/v-tooltip"></script>
+	<script src="/js/dex-pokemon-method-moves.js"></script>
+
+	<script src="/js/dex-breadcrumbs.js"></script>
+	<script src="/js/dex/pokemon.js"></script>
 {% endblock %}

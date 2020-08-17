@@ -37,7 +37,7 @@
 			</ul>
 		</nav>
 
-		<div>
+		<div v-if="generation.id !== 1">
 			<label>
 				<input type="checkbox" v-model="showOlderGames" @click="toggleOlderGames">
 				Show older generation games

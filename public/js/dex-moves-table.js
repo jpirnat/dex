@@ -128,12 +128,12 @@ Vue.component('dex-moves-table', {
 								<img :src="'/images/types/' + move.type.icon" :alt="move.type.name">
 							</a>
 						</td>
-						<td class="dex-table__move-category">
+						<td class="dex-table__move-category" v-tooltip="move.category.name">
 							<img :src="'/images/categories/' + move.category.icon" :alt="move.category.name">
 						</td>
 						<td class="dex-table--number">{{ move.pp }}</td>
-						<td class="dex-table--number">{{ move.power }}</td>
-						<td class="dex-table--number">{{ move.accuracy }}</td>
+						<td class="dex-table--number">{{ powerText(move) }}</td>
+						<td class="dex-table--number">{{ accuracyText(move) }}</td>
 						<td v-if="showDescriptions" class="dex-table__move-description">{{ move.description }}</td>
 					</tr>
 				</tbody>
@@ -168,6 +168,21 @@ Vue.component('dex-moves-table', {
 				if (aValue > bValue) { return +1 * modifier; }
 				return 0;
 			});
+		},
+		powerText(move) {
+			if (move.power === 0) {
+				return '—'; // em dash
+			}
+			if (move.power === 1) {
+				return '*';
+			}
+			return move.power;
+		},
+		accuracyText(move) {
+			if (move.accuracy === 101) {
+				return '—'; // em dash
+			}
+			return move.accuracy + '%';
 		},
 	},
 	watch: {

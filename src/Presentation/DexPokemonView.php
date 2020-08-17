@@ -7,32 +7,24 @@ use Jp\Dex\Application\Models\DexPokemon\DexPokemonModel;
 use Jp\Dex\Application\Models\DexPokemon\DexPokemonMove;
 use Jp\Dex\Application\Models\DexPokemon\DexPokemonMoveMethod;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
-use Laminas\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
 final class DexPokemonView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
 	private DexPokemonModel $dexPokemonModel;
 	private DexFormatter $dexFormatter;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
 	 * @param DexPokemonModel $dexPokemonModel
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
 		DexPokemonModel $dexPokemonModel,
 		DexFormatter $dexFormatter
 	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
 		$this->dexPokemonModel = $dexPokemonModel;
 		$this->dexFormatter = $dexFormatter;
 	}
@@ -70,9 +62,6 @@ final class DexPokemonView
 			}
 		}
 
-		// How many columns does the Pokémon move table have?
-		$colspan = 6 + count($versionGroups) + ($showMoveDescriptions ? 1 : 0);
-
 		// Navigational breadcrumbs.
 		$generationIdentifier = $generation->getIdentifier();
 		$breadcrumbs = [[
@@ -84,27 +73,25 @@ final class DexPokemonView
 			'text' => $pokemon['name'],
 		]];
 
-		$content = $this->renderer->render(
-			'html/dex/pokemon.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Pokémon - ' . $pokemon['name'],
+		return new JsonResponse([
+			'data' => [
+				'title' => 'Porydex - Pokémon - ' . $pokemon['name'],
+
 				'generation' => [
 					'id' => $generation->getId()->value(),
 					'identifier' => $generation->getIdentifier(),
 				],
+
 				'breadcrumbs' => $breadcrumbs,
 				'generations' => $this->dexFormatter->formatGenerations($generations),
-				'pokemon' => [
-					'identifier' => $pokemon['identifier'],
-				],
+
+				'pokemon' => $pokemon,
+
+				'methods' => $this->formatDexPokemonMoveMethods($methods),
 				'versionGroups' => $this->dexFormatter->formatDexVersionGroups($versionGroups),
 				'showMoveDescriptions' => $showMoveDescriptions,
-				'methods' => $this->formatDexPokemonMoveMethods($methods),
-				'colspan' => $colspan,
 			]
-		);
-
-		return new HtmlResponse($content);
+		]);
 	}
 
 	/**
@@ -144,28 +131,15 @@ final class DexPokemonView
 		$moves = [];
 
 		foreach ($dexPokemonMoves as $move) {
-			$power = $move->getPower();
-			if ($power === 0) {
-				$power = '—'; // em dash
-			}
-			if ($power === 1) {
-				$power = '*';
-			}
-
-			$accuracy = $move->getAccuracy();
-			if ($accuracy === 101) {
-				$accuracy = '—'; // em dash
-			}
-
 			$moves[] = [
-				'versionGroupData' => $move->getVersionGroupData(),
+				'vgData' => $move->getVersionGroupData(),
 				'identifier' => $move->getIdentifier(),
 				'name' => $move->getName(),
 				'type' => $this->dexFormatter->formatDexType($move->getType()),
 				'category' => $this->dexFormatter->formatDexCategory($move->getCategory()),
 				'pp' => $move->getPP(),
-				'power' => $power,
-				'accuracy' => $accuracy,
+				'power' => $move->getPower(),
+				'accuracy' => $move->getAccuracy(),
 				'description' => $move->getDescription(),
 			];
 		}
