@@ -66,6 +66,27 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 	}
 
 	/**
+	 * Get this Pokémon's evolution.
+	 *
+	 * @param int $pokemonId
+	 * @param int $versionGroupId
+	 *
+	 * @return int Pokémon id.
+	 */
+	public function getEvolution(int $pokemonId, int $versionGroupId) : int
+	{
+		$stmt = $this->db->query(
+			"SELECT
+				`evo_into_id`
+			FROM `evolutions`
+			WHERE `version_group_id` = $versionGroupId
+				AND `evo_from_id` = $pokemonId
+			LIMIT 1"
+		);
+		return $stmt->fetchColumn();
+	}
+
+	/**
 	 * Get Pokémon that share at least one egg group with the current Pokemon,
 	 * and are not in any of the previously traversed egg groups.
 	 *

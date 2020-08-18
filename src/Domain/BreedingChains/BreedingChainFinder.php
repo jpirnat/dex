@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\BreedingChains;
 
+use Jp\Dex\Domain\EggGroups\EggGroupId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
@@ -94,6 +95,20 @@ final class BreedingChainFinder
 		$eggGroupIds = $this->breedingChainQueries->getEggGroupIds($pokemonId, $versionGroupId);
 		// In future recursions from this node, these egg groups need to be
 		// added to $excludeEggGroupIds, so we don't get stuck in a cycle.
+
+		// If this is a baby Pokémon, use the egg groups of its evolution.
+		if ($eggGroupIds === [EggGroupId::UNDISCOVERED]) {
+			$evolvedPokemonId = $this->breedingChainQueries->getEvolution(
+				$pokemonId,
+				$versionGroupId
+			);
+			if ($evolvedPokemonId) {
+				$eggGroupIds = $this->breedingChainQueries->getEggGroupIds(
+					$evolvedPokemonId,
+					$versionGroupId
+				);
+			}
+		}
 
 		$eggGroups = implode(', ', $eggGroupIds);
 		$excludeEggGroups = implode(', ', $excludeEggGroupIds);

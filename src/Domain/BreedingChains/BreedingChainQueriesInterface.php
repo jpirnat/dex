@@ -23,6 +23,16 @@ interface BreedingChainQueriesInterface
 	public function getEggGroupIds(int $pokemonId, int $versionGroupId) : array;
 
 	/**
+	 * Get this Pokémon's evolution.
+	 *
+	 * @param int $pokemonId
+	 * @param int $versionGroupId
+	 *
+	 * @return int Pokémon id.
+	 */
+	public function getEvolution(int $pokemonId, int $versionGroupId) : int;
+
+	/**
 	 * Get Pokémon that share at least one egg group with the current Pokemon,
 	 * and are not in any of the previously traversed egg groups.
 	 *
