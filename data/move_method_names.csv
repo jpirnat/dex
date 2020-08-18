@@ -6,6 +6,5 @@ language_id,move_method_id,name,description
 2,5,Move Tutor,
 2,6,Light Ball,Learned as an egg move when one of the parents is holding a Light Ball.
 2,7,Form Change,Learned when the Pokémon changes to this form.
-2,8,Evolution,Learned when the Pokémon evolves to this stage.
 2,101,Shadow,Moves already known by Shadow Pokémon when they are captured.
 2,102,Purification,Learned by Shadow Pokémon in Colosseum and XD as they are purified.
