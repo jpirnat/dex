@@ -91,7 +91,7 @@ final class BreedingChainFinder
 		));
 
 		// Get the Pokémon's egg groups.
-		$eggGroupIds = $this->breedingChainQueries->getEggGroupIds($pokemonId);
+		$eggGroupIds = $this->breedingChainQueries->getEggGroupIds($pokemonId, $versionGroupId);
 		// In future recursions from this node, these egg groups need to be
 		// added to $excludeEggGroupIds, so we don't get stuck in a cycle.
 
@@ -102,6 +102,7 @@ final class BreedingChainFinder
 		// Pokémon, and are not in any of the previously traversed egg groups.
 		$inSameEggGroupIds = $this->breedingChainQueries->getInSameEggGroupIds(
 			$pokemonId,
+			$versionGroupId,
 			$eggGroups,
 			$excludeEggGroups
 		);
@@ -110,9 +111,16 @@ final class BreedingChainFinder
 		// Pokémon, have at least one egg group not shared with the current
 		// Pokémon, and are not in any of the previously traversed egg groups.
 		$inOtherEggGroupIds = $this->breedingChainQueries->getInOtherEggGroupIds(
+			$versionGroupId,
 			$eggGroups,
 			$excludeEggGroups
 		);
+
+		// BUG FIX - If there are no Pokémon in other egg groups, initialize the
+		// array anyway just so the query later on doesn't break.
+		if ($inOtherEggGroupIds === []) {
+			$inOtherEggGroupIds = [0];
+		}
 
 		$inSameEggGroup = implode(', ', $inSameEggGroupIds);
 		$inOtherEggGroup = implode(', ', $inOtherEggGroupIds);

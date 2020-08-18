@@ -16,16 +16,18 @@ interface BreedingChainQueriesInterface
 	 * Get the Pokémon's egg groups.
 	 *
 	 * @param int $pokemonId
+	 * @param int $versionGroupId
 	 *
 	 * @return int[]
 	 */
-	public function getEggGroupIds(int $pokemonId) : array;
+	public function getEggGroupIds(int $pokemonId, int $versionGroupId) : array;
 
 	/**
 	 * Get Pokémon that share at least one egg group with the current Pokemon,
 	 * and are not in any of the previously traversed egg groups.
 	 *
 	 * @param int $pokemonId
+	 * @param int $versionGroupId
 	 * @param string $eggGroups An imploded int[] of egg group ids.
 	 * @param string $excludeEggGroups An imploded int[] of egg group ids.
 	 *
@@ -33,6 +35,7 @@ interface BreedingChainQueriesInterface
 	 */
 	public function getInSameEggGroupIds(
 		int $pokemonId,
+		int $versionGroupId,
 		string $eggGroups,
 		string $excludeEggGroups
 	) : array;
@@ -42,12 +45,14 @@ interface BreedingChainQueriesInterface
 	 * have at least one egg group not shared with the current Pokémon, and are
 	 * not in any of the previously traversed egg groups.
 	 *
+	 * @param int $versionGroupId
 	 * @param string $eggGroups An imploded int[] of egg group ids.
 	 * @param string $excludeEggGroups An imploded int[] of egg group ids.
 	 *
 	 * @return array
 	 */
 	public function getInOtherEggGroupIds(
+		int $versionGroupId,
 		string $eggGroups,
 		string $excludeEggGroups
 	) : array;

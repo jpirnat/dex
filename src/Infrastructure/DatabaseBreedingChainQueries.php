@@ -44,16 +44,23 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 	 * Get the Pokémon's egg groups.
 	 *
 	 * @param int $pokemonId
+	 * @param int $versionGroupId
 	 *
 	 * @return int[]
 	 */
-	public function getEggGroupIds(int $pokemonId) : array
+	public function getEggGroupIds(int $pokemonId, int $versionGroupId) : array
 	{
 		$stmt = $this->db->query(
 			"SELECT
 				`egg_group_id`
 			FROM `pokemon_egg_groups`
-			WHERE `pokemon_id` = $pokemonId"
+			WHERE `pokemon_id` = $pokemonId
+			AND `generation_id` IN (
+				SELECT
+					`generation_id`
+				FROM `version_groups`
+				WHERE `id` = $versionGroupId
+			)"
 		);
 		return $stmt->fetchAll(PDO::FETCH_COLUMN);
 	}
@@ -63,6 +70,7 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 	 * and are not in any of the previously traversed egg groups.
 	 *
 	 * @param int $pokemonId
+	 * @param int $versionGroupId
 	 * @param string $eggGroups An imploded int[] of egg group ids.
 	 * @param string $excludeEggGroups An imploded int[] of egg group ids.
 	 *
@@ -70,6 +78,7 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 	 */
 	public function getInSameEggGroupIds(
 		int $pokemonId,
+		int $versionGroupId,
 		string $eggGroups,
 		string $excludeEggGroups
 	) : array {
@@ -85,6 +94,12 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 					`pokemon_id`
 				FROM `pokemon_egg_groups`
 				WHERE `egg_group_id` IN ($eggGroups)
+				AND `generation_id` IN (
+					SELECT
+						`generation_id`
+					FROM `version_groups`
+					WHERE `id` = $versionGroupId
+				)
 			)
 			AND `pokemon_id` NOT IN
 			(
@@ -92,6 +107,12 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 					`pokemon_id`
 				FROM `pokemon_egg_groups`
 				WHERE `egg_group_id` IN ($excludeEggGroups)
+				AND `generation_id` IN (
+					SELECT
+						`generation_id`
+					FROM `version_groups`
+					WHERE `id` = $versionGroupId
+				)
 			)"
 		);
 		return $stmt->fetchAll(PDO::FETCH_COLUMN);
@@ -102,12 +123,14 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 	 * have at least one egg group not shared with the current Pokémon, and are
 	 * not in any of the previously traversed egg groups.
 	 *
+	 * @param int $versionGroupId
 	 * @param string $eggGroups An imploded int[] of egg group ids.
 	 * @param string $excludeEggGroups An imploded int[] of egg group ids.
 	 *
 	 * @return array
 	 */
 	public function getInOtherEggGroupIds(
+		int $versionGroupId,
 		string $eggGroups,
 		string $excludeEggGroups
 	) : array {
@@ -122,6 +145,12 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 					`pokemon_id`
 				FROM `pokemon_egg_groups`
 				WHERE `egg_group_id` IN ($eggGroups)
+				AND `generation_id` IN (
+					SELECT
+						`generation_id`
+					FROM `version_groups`
+					WHERE `id` = $versionGroupId
+				)
 			)
 			AND `pokemon_id` IN
 			(
@@ -129,6 +158,12 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 					`pokemon_id`
 				FROM `pokemon_egg_groups`
 				WHERE `egg_group_id` NOT IN ($eggGroups)
+				AND `generation_id` IN (
+					SELECT
+						`generation_id`
+					FROM `version_groups`
+					WHERE `id` = $versionGroupId
+				)
 			)
 			AND `pokemon_id` NOT IN
 			(
@@ -136,6 +171,12 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 					`pokemon_id`
 				FROM `pokemon_egg_groups`
 				WHERE `egg_group_id` IN ($excludeEggGroups)
+				AND `generation_id` IN (
+					SELECT
+						`generation_id`
+					FROM `version_groups`
+					WHERE `id` = $versionGroupId
+				)
 			)"
 		);
 		return $stmt->fetchAll(PDO::FETCH_COLUMN);
