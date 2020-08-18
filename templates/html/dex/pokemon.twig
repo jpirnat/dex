@@ -43,6 +43,12 @@
 				Show older generation games
 			</label>
 		</div>
+		<div v-if="showMoveDescriptionsOption">
+			<label>
+				<input type="checkbox" v-model="showMoveDescriptions" @click="toggleMoveDescriptions">
+				Show move descriptions
+			</label>
+		</div>
 
 		<table class="dex-table dex-table--full-width">
 			<tbody is="dex-pokemon-method-moves"

@@ -12,9 +12,10 @@ const app = new Vue({
 		pokemon: {},
 		methods: [],
 		versionGroups: [],
-		showMoveDescriptions: true,
+		showMoveDescriptionsOption: true,
 
 		showOlderGames: false,
+		showMoveDescriptions: true,
 	},
 	computed: {
 		visibleVersionGroups() {
@@ -53,12 +54,15 @@ const app = new Vue({
 				this.pokemon = data.pokemon;
 				this.methods = data.methods;
 				this.versionGroups = data.versionGroups;
-				this.showMoveDescriptions = data.showMoveDescriptions;
+				this.showMoveDescriptionsOption = data.showMoveDescriptions;
 
 				document.title = data.title;
 
 				const showOlderGames = window.localStorage.getItem('dexMoveShowOlderGames') ?? 'false';
 				this.showOlderGames = JSON.parse(showOlderGames);
+
+				const showMoveDescriptions = window.localStorage.getItem('dexPokemonShowMoveDescriptions') ?? 'true';
+				this.showMoveDescriptions = JSON.parse(showMoveDescriptions);
 			}
 		});
 	},
@@ -66,6 +70,10 @@ const app = new Vue({
 		toggleOlderGames() {
 			this.showOlderGames = !this.showOlderGames;
 			window.localStorage.setItem('dexMoveShowOlderGames', this.showOlderGames);
+		},
+		toggleMoveDescriptions() {
+			this.showMoveDescriptions = !this.showMoveDescriptions;
+			window.localStorage.setItem('dexPokemonShowMoveDescriptions', this.showMoveDescriptions);
 		},
 	},
 });
