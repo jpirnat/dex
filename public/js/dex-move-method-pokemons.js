@@ -37,6 +37,9 @@ Vue.component('dex-move-method-pokemons', {
 		colspan() {
 			return 4 + this.versionGroups.length + this.stats.length + (this.showAbilities ? 1 : 0);
 		},
+		visiblePokemons() {
+			return this.method.pokemons.filter(p => this.versionGroups.some(vg => p.vgData[vg.identifier]));
+		},
 	},
 	template: `
 		<tbody :id="'via-' + method.identifier">
@@ -92,7 +95,7 @@ Vue.component('dex-move-method-pokemons', {
 					<abbr v-tooltip="'Base Stat Total'" class="dex--tooltip">BST</abbr>
 				</th>
 			</tr>
-			<tr v-for="pokemon in method.pokemons" :key="pokemon.identifier">
+			<tr v-for="pokemon in visiblePokemons" :key="pokemon.identifier">
 				<template v-for="vg in versionGroups" :key="vg.identifier">
 					<template v-if="pokemon.vgData[vg.identifier]">
 						<template v-if="method.identifier === 'level-up'">

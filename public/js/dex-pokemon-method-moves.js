@@ -33,6 +33,9 @@ Vue.component('dex-pokemon-method-moves', {
 		colspan() {
 			return 6 + this.versionGroups.length + (this.showMoveDescriptions ? 1 : 0);
 		},
+		visibleMoves() {
+			return this.method.moves.filter(m => this.versionGroups.some(vg => m.vgData[vg.identifier]));
+		},
 	},
 	template: `
 		<tbody :id="method.identifier + '-moves'">
@@ -99,7 +102,7 @@ Vue.component('dex-pokemon-method-moves', {
 					Description
 				</th>
 			</tr>
-			<tr v-for="move in method.moves" :key="move.identifier">
+			<tr v-for="move in visibleMoves" :key="move.identifier">
 				<template v-for="vg in versionGroups" :key="vg.identifier">
 					<template v-if="move.vgData[vg.identifier]">
 						<template v-if="method.identifier === 'level-up'">
