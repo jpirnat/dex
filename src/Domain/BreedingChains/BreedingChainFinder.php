@@ -91,8 +91,10 @@ final class BreedingChainFinder
 			0
 		));
 
+		$generationId = $this->breedingChainQueries->getGenerationId($versionGroupId);
+
 		// Get the Pokémon's egg groups.
-		$eggGroupIds = $this->breedingChainQueries->getEggGroupIds($pokemonId, $versionGroupId);
+		$eggGroupIds = $this->breedingChainQueries->getEggGroupIds($pokemonId, $generationId);
 		// In future recursions from this node, these egg groups need to be
 		// added to $excludeEggGroupIds, so we don't get stuck in a cycle.
 
@@ -105,7 +107,7 @@ final class BreedingChainFinder
 			if ($evolvedPokemonId) {
 				$eggGroupIds = $this->breedingChainQueries->getEggGroupIds(
 					$evolvedPokemonId,
-					$versionGroupId
+					$generationId
 				);
 			}
 		}
@@ -117,7 +119,7 @@ final class BreedingChainFinder
 		// Pokémon, and are not in any of the previously traversed egg groups.
 		$inSameEggGroupIds = $this->breedingChainQueries->getInSameEggGroupIds(
 			$pokemonId,
-			$versionGroupId,
+			$generationId,
 			$eggGroups,
 			$excludeEggGroups
 		);
@@ -126,7 +128,7 @@ final class BreedingChainFinder
 		// Pokémon, have at least one egg group not shared with the current
 		// Pokémon, and are not in any of the previously traversed egg groups.
 		$inOtherEggGroupIds = $this->breedingChainQueries->getInOtherEggGroupIds(
-			$versionGroupId,
+			$generationId,
 			$eggGroups,
 			$excludeEggGroups
 		);
@@ -143,7 +145,7 @@ final class BreedingChainFinder
 		// Get other Pokémon that learn this move by non-egg between gen 3 and
 		// the current generation, and have no other egg groups.
 		$pokemonMoves = $this->breedingChainQueries->getByNonEgg(
-			$versionGroupId,
+			$generationId,
 			$moveId,
 			$inSameEggGroup
 		);
@@ -184,7 +186,7 @@ final class BreedingChainFinder
 		// Get other Pokémon that learn this move by egg between gen 3 and the
 		// current generation, and have another egg group.
 		$pokemonMoves = $this->breedingChainQueries->getByEgg(
-			$versionGroupId,
+			$generationId,
 			$moveId,
 			$inOtherEggGroup
 		);
