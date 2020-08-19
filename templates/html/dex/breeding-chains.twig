@@ -48,15 +48,13 @@
 						<td class="dex-table--icon">
 							<img :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
 						</td>
-						<th scope="row">
+						<th scope="row" class="dex-table__pokemon-name">
 							<a :href="'/dex/' + pokemon.generationIdentifier + '/pokemon/' + pokemon.identifier">
 								{{ pokemon.name }}
 							</a>
 						</th>
-						<td class="dex-table--icon">
-							<img :src="'/images/versions/' + pokemon.versionGroup.icon"
-								:alt="pokemon.versionGroup.name" v-tooltip="pokemon.versionGroup.name"
-							>
+						<td class="dex-table--icon" v-tooltip="pokemon.versionGroup.name">
+							<img :src="'/images/versions/' + pokemon.versionGroup.icon" :alt="pokemon.versionGroup.name">
 						</td>
 						<td class="dex-table--icon">
 							<div v-for="eggGroupName in pokemon.eggGroupNames" :key="eggGroupName">
@@ -64,8 +62,8 @@
 							</div>
 						</td>
 						<td class="dex-table--icon">{{ pokemon.baseEggCycles }}</td>
-						<td class="dex-table--icon">
-							<img :src="'/images/gender-ratios/' + pokemon.genderRatioIcon">
+						<td class="dex-table--icon" v-tooltip="pokemon.genderRatio.text">
+							<img :src="'/images/gender-ratios/' + pokemon.genderRatio.icon" :alt="pokemon.genderRatio.text">
 						</td>
 						<td>{{ pokemon.moveMethod }}</td>
 					</tr>

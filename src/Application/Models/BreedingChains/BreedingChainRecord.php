@@ -18,6 +18,7 @@ final class BreedingChainRecord
 
 	private int $baseEggCycles;
 	private string $genderRatioIcon;
+	private string $genderRatioText;
 	private string $moveMethod;
 
 	/**
@@ -31,6 +32,7 @@ final class BreedingChainRecord
 	 * @param string[] $eggGroupNames
 	 * @param int $baseEggCycles
 	 * @param string $genderRatioIcon
+	 * @param string $genderRatioText
 	 * @param string $moveMethod
 	 */
 	public function __construct(
@@ -42,6 +44,7 @@ final class BreedingChainRecord
 		array $eggGroupNames,
 		int $baseEggCycles,
 		string $genderRatioIcon,
+		string $genderRatioText,
 		string $moveMethod
 	) {
 		$this->formIcon = $formIcon;
@@ -52,6 +55,7 @@ final class BreedingChainRecord
 		$this->eggGroupNames = $eggGroupNames;
 		$this->baseEggCycles = $baseEggCycles;
 		$this->genderRatioIcon = $genderRatioIcon;
+		$this->genderRatioText = $genderRatioText;
 		$this->moveMethod = $moveMethod;
 	}
 
@@ -133,6 +137,16 @@ final class BreedingChainRecord
 	public function getGenderRatioIcon() : string
 	{
 		return $this->genderRatioIcon;
+	}
+
+	/**
+	 * Get the gender ratio text.
+	 *
+	 * @return string
+	 */
+	public function getGenderRatioText() : string
+	{
+		return $this->genderRatioText;
 	}
 
 	/**

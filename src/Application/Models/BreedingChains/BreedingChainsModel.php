@@ -212,6 +212,8 @@ final class BreedingChainsModel
 
 		$species = $this->speciesRepository->getById($pokemon->getSpeciesId());
 
+		$genderRatio = $pokemon->getGenderRatio();
+
 		return new BreedingChainRecord(
 			$formIcon->getImage(),
 			$generation->getIdentifier(),
@@ -220,9 +222,46 @@ final class BreedingChainsModel
 			$versionGroup,
 			$eggGroupNames,
 			$species->getBaseEggCycles(),
-			$pokemon->getGenderRatio() . '.png',
+			"$genderRatio.png",
+			$this->genderRatioText($genderRatio),
 			$this->pokemonMoveFormatter->format($pokemonMove, $languageId)
 		);
+	}
+
+	/**
+	 * Get the alt text for this gender ratio.
+	 *
+	 * @param int $genderRatio
+	 *
+	 * @return string
+	 */
+	public function genderRatioText(int $genderRatio) : string
+	{
+		if ($genderRatio === -1) {
+			return 'Genderless';
+		}
+		if ($genderRatio === 0) {
+			return '100% male';
+		}
+		if ($genderRatio === 1) {
+			return '87.5% male, 12.5% female';
+		}
+		if ($genderRatio === 2) {
+			return '75% male, 25% female';
+		}
+		if ($genderRatio === 4) {
+			return '50% male, 50% female';
+		}
+		if ($genderRatio === 6) {
+			return '25% male, 75% female';
+		}
+		if ($genderRatio === 7) {
+			return '12.5% male, 87.5% female';
+		}
+		if ($genderRatio === 8) {
+			return '100% female';
+		}
+		return '';
 	}
 
 

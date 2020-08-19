@@ -56,7 +56,10 @@ final class BreedingChainsView
 					),
 					'eggGroupNames' => $record->getEggGroupNames(),
 					'baseEggCycles' => $record->getBaseEggCycles(),
-					'genderRatioIcon' => $record->getGenderRatioIcon(),
+					'genderRatio' => [
+						'icon' => $record->getGenderRatioIcon(),
+						'text' => $record->getGenderRatioText(),
+					],
 					'moveMethod' => $record->getMoveMethod(),
 				];
 			}
