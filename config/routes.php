@@ -175,11 +175,19 @@ $routes = [
 	]],
 
 	['GET', "/dex/$generationIdentifier/pokemon/$pokemonIdentifier/breeding/$moveIdentifier/$versionGroupIdentifier", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'breedingChains',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$generationIdentifier/pokemon/$pokemonIdentifier/breeding/$moveIdentifier/$versionGroupIdentifier", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\BreedingChainsController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => \Jp\Dex\Presentation\BreedingChainsView::class,
 		'viewMethod' => 'index',
-		'middlewareClasses' => MiddlewareGroups::HTML,
+		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
 	['GET', '/stats', [

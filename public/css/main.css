@@ -504,41 +504,47 @@ a.button {
 
 /* breeding chains */
 
-#breeding-chains {
-	width: 100%;
+.breeding-chains-table {
+	border: 2px solid black;
 }
 
-#breeding-chains tr {
+.breeding-chains-table tr {
 	border-right: 2px solid black;
 	border-left: 2px solid black;
 }
 
-#breeding-chains .chain-header {
-	border: 2px solid black;
-	cursor: pointer;
-}
-
-#breeding-chains .chain-header img {
-	vertical-align: bottom;
-}
-
-#breeding-chains th,
-#breeding-chains td {
+.breeding-chains-table th,
+.breeding-chains-table td {
 	height: 40px;
-}
-
-#breeding-chains td {
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 }
 
-#breeding-chains .versions,
-#breeding-chains .egg-groups,
-#breeding-chains .egg-cycles,
-#breeding-chains .gender-ratio {
-	text-align: center;
+.breeding-chain__header {
+	border: 2px solid black;
+	background: #eee;
+	cursor: pointer;
 }
 
+.breeding-chain__summary-container {
+	display: flex;
+	align-items: center;
+}
+
+.breeding-chain__arrow {
+	margin: 0 5px;
+}
+
+.breeding-chain__summary {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.breeding-chain__headers {
+	padding: 10px 5px;
+}
 
 
 /* /stats */

@@ -5,32 +5,24 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\BreedingChains\BreedingChainRecord;
 use Jp\Dex\Application\Models\BreedingChains\BreedingChainsModel;
-use Laminas\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
 final class BreedingChainsView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
 	private BreedingChainsModel $breedingChainsModel;
 	private DexFormatter $dexFormatter;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
 	 * @param BreedingChainsModel $breedingChainsModel
 	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
 		BreedingChainsModel $breedingChainsModel,
 		DexFormatter $dexFormatter
 	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
 		$this->breedingChainsModel = $breedingChainsModel;
 		$this->dexFormatter = $dexFormatter;
 	}
@@ -71,6 +63,7 @@ final class BreedingChainsView
 			$chains[] = [
 				'id' => $chainId,
 				'pokemon' => $records,
+				'show' => false,
 			];
 		}
 
@@ -92,15 +85,15 @@ final class BreedingChainsView
 			'text' => $move['name'] . ' Breeding Chains',
 		]];
 
-		$content = $this->renderer->render(
-			'html/dex/breeding-chains.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Pokémon - ' . $pokemon['name'] . ' - ' . $move['name'] . ' Breeding Chains',
+		return new JsonResponse([
+			'data' => [
+				'title' => 'Pokémon - ' . $pokemon['name'] . ' - '. $move['name']
+					. ' Breeding Chains',
+
 				'breadcrumbs' => $breadcrumbs,
+
 				'chains' => $chains,
 			]
-		);
-
-		return new HtmlResponse($content);
+		]);
 	}
 }

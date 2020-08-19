@@ -1,72 +1,87 @@
 {% extends "html/base.twig" %}
 
+{% block styles %}
+	<link href="/css/vtooltip.css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
-	<table id="breeding-chains">
-		{% for chain in chains %}
-			<tbody>
-				<tr>
-					<th colspan="7" id="{{ chain.id|e }}" class="chain-header">
-						{% for pokemon in chain.pokemon %}
-							<img src="/images/pokemon/icons/{{ pokemon.icon|e }}" alt="{{ pokemon.name|e }}">
-							{% if not loop.last %} → {% endif %}
-						{% endfor %}
-					</th>
-				</tr>
-				<tr class="{{ chain.id|e }} hidden">
-					<th></th>
-					<th scope="col">Pokémon</th>
-					<th scope="col">Versions</th>
-					<th scope="col">Egg Groups</th>
-					<th scope="col">Egg Cycles</th>
-					<th scope="col">Gender Ratio</th>
-					<th scope="col">Move Method</th>
-				</tr>
-				{% for pokemon in chain.pokemon %}
-					<tr class="{{ chain.id|e }} hidden">
-						<td>
-							<img src="/images/pokemon/icons/{{ pokemon.icon|e }}" alt="">
-						</td>
-						<td>
-							<a href="/dex/{{ pokemon.generationIdentifier|e }}/pokemon/{{ pokemon.identifier|e }}">
-								{{ pokemon.name|e }}
-							</a>
-						</td>
-						<td class="versions">
-							<img src="/images/versions/{{ pokemon.versionGroup.icon|e }}" alt="{{ pokemon.versionGroup.name|e }}">
-						</td>
-						<td class="egg-groups">
-							{% for eggGroupName in pokemon.eggGroupNames %}
-								<div>{{ eggGroupName|e }}</div>
-							{% endfor %}
-						</td>
-						<td class="egg-cycles">{{ pokemon.baseEggCycles|e }}</td>
-						<td class="gender-ratio">
-							<img src="/images/gender-ratios/{{ pokemon.genderRatioIcon|e }}">
-						</td>
-						<td>{{ pokemon.moveMethod|e }}</td>
+{% verbatim %}
+<div id="app" v-cloak>
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
+
+	<template v-if="loaded">
+		<table class="dex-table dex-table--full-width breeding-chains-table">
+			<template v-for="chain in chains" :key="chain.id">
+				<tbody>
+					<tr class="breeding-chain__header" @click="toggleChain(chain)">
+						<th colspan="7">
+							<div class="breeding-chain__summary-container">
+								<div class="breeding-chain__arrow">
+									<template v-if="chain.show">▼</template>
+									<template v-else>▶</template>
+								</div>
+								<div class="breeding-chain__summary" >
+									<template v-for="(pokemon, pokemonIndex) in chain.pokemon" :key="pokemon.identifier">
+										<img :src="'/images/pokemon/icons/' + pokemon.icon" :alt="pokemon.name" v-tooltip="pokemon.name">
+										<span v-if="pokemonIndex < chain.pokemon.length - 1"> → </span>
+									</template>
+								</div>
+							</div>
+						</th>
 					</tr>
-				{% endfor %}
-			</tbody>
-		{% endfor %}
-	</table>
+				</tbody>
+				<tbody v-if="chain.show">
+					<tr class="breeding-chain__headers">
+						<th></th>
+						<th scope="col">Pokémon</th>
+						<th scope="col">Versions</th>
+						<th scope="col">Egg Groups</th>
+						<th scope="col">Egg Cycles</th>
+						<th scope="col">Gender Ratio</th>
+						<th scope="col">Move Method</th>
+					</tr>
+					<tr v-for="pokemon in chain.pokemon" :key="pokemon.identifier">
+						<td class="dex-table--icon">
+							<img :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
+						</td>
+						<th scope="row">
+							<a :href="'/dex/' + pokemon.generationIdentifier + '/pokemon/' + pokemon.identifier">
+								{{ pokemon.name }}
+							</a>
+						</th>
+						<td class="dex-table--icon">
+							<img :src="'/images/versions/' + pokemon.versionGroup.icon"
+								:alt="pokemon.versionGroup.name" v-tooltip="pokemon.versionGroup.name"
+							>
+						</td>
+						<td class="dex-table--icon">
+							<div v-for="eggGroupName in pokemon.eggGroupNames" :key="eggGroupName">
+								{{ eggGroupName }}
+							</div>
+						</td>
+						<td class="dex-table--icon">{{ pokemon.baseEggCycles }}</td>
+						<td class="dex-table--icon">
+							<img :src="'/images/gender-ratios/' + pokemon.genderRatioIcon">
+						</td>
+						<td>{{ pokemon.moveMethod }}</td>
+					</tr>
+				</tbody>
+			</template>
+		</table>
+	</template>
+</div>
+{% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
-<script>
-function toggleChain(chainId) {
-	Array.from(document.getElementsByClassName(chainId), record => {
-		record.classList.toggle('hidden');
-	});
-}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	<script src="/js/dex-breadcrumbs.js"></script>
 
-Array.from(document.getElementsByClassName('chain-header'), header => {
-	header.addEventListener('click', function(event) {
-		toggleChain(header.id);
-	});
-});
+	<script src="https://unpkg.com/v-tooltip"></script>
 
-if (window.location.hash) {
-	toggleChain(window.location.hash.substring(1));
-}
-</script>
+	<script src="/js/dex/breeding-chains.js"></script>
 {% endblock %}

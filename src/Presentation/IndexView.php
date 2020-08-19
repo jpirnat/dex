@@ -158,6 +158,23 @@ final class IndexView
 	}
 
 	/**
+	 * Show the breeding chains page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function breedingChains() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/breeding-chains.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Pokémon',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the dex types page.
 	 *
 	 * @return ResponseInterface
