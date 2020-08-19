@@ -17,6 +17,7 @@ use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMove;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveFormatter;
 use Jp\Dex\Domain\Species\SpeciesRepositoryInterface;
+use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
@@ -28,6 +29,7 @@ final class BreedingChainsModel
 	private MoveRepositoryInterface $moveRepository;
 	private BreedingChainFinder $breedingChainFinder;
 	private FormIconRepositoryInterface $formIconRepository;
+	private DexVersionGroupRepositoryInterface $dexVersionGroupRepository;
 	private GenerationRepositoryInterface $generationRepository;
 	private PokemonNameRepositoryInterface $pokemonNameRepository;
 	private MoveNameRepositoryInterface $moveNameRepository;
@@ -53,6 +55,7 @@ final class BreedingChainsModel
 	 * @param MoveRepositoryInterface $moveRepository
 	 * @param BreedingChainFinder $breedingChainFinder
 	 * @param FormIconRepositoryInterface $formIconRepository
+	 * @param DexVersionGroupRepositoryInterface $dexVersionGroupRepository
 	 * @param GenerationRepositoryInterface $generationRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param MoveNameRepositoryInterface $moveNameRepository
@@ -68,6 +71,7 @@ final class BreedingChainsModel
 		MoveRepositoryInterface $moveRepository,
 		BreedingChainFinder $breedingChainFinder,
 		FormIconRepositoryInterface $formIconRepository,
+		DexVersionGroupRepositoryInterface $dexVersionGroupRepository,
 		GenerationRepositoryInterface $generationRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		MoveNameRepositoryInterface $moveNameRepository,
@@ -82,6 +86,7 @@ final class BreedingChainsModel
 		$this->moveRepository = $moveRepository;
 		$this->breedingChainFinder = $breedingChainFinder;
 		$this->formIconRepository = $formIconRepository;
+		$this->dexVersionGroupRepository = $dexVersionGroupRepository;
 		$this->generationRepository = $generationRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->moveNameRepository = $moveNameRepository;
@@ -175,8 +180,9 @@ final class BreedingChainsModel
 			false
 		);
 
-		$versionGroup = $this->versionGroupRepository->getById(
-			$pokemonMove->getVersionGroupId()
+		$versionGroup = $this->dexVersionGroupRepository->getById(
+			$pokemonMove->getVersionGroupId(),
+			$languageId
 		);
 
 		$generation = $this->generationRepository->getById(
@@ -211,7 +217,7 @@ final class BreedingChainsModel
 			$generation->getIdentifier(),
 			$pokemon->getIdentifier(),
 			$pokemonName->getName(),
-			$versionGroup->getIcon(),
+			$versionGroup,
 			$eggGroupNames,
 			$species->getBaseEggCycles(),
 			$pokemon->getGenderRatio() . '.png',

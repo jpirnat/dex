@@ -32,7 +32,7 @@
 							</a>
 						</td>
 						<td class="versions">
-							<img src="/images/versions/{{ pokemon.versionGroupIcon|e }}">
+							<img src="/images/versions/{{ pokemon.versionGroup.icon|e }}" alt="{{ pokemon.versionGroup.name|e }}">
 						</td>
 						<td class="egg-groups">
 							{% for eggGroupName in pokemon.eggGroupNames %}

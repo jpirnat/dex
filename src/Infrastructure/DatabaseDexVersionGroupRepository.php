@@ -10,6 +10,7 @@ use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
+use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 use PDO;
 
 final class DatabaseDexVersionGroupRepository implements DexVersionGroupRepositoryInterface
@@ -24,6 +25,53 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 	public function __construct(PDO $db)
 	{
 		$this->db = $db;
+	}
+
+	/**
+	 * Get a dex version group by its id.
+	 *
+	 * @param VersionGroupId $versionGroupId
+	 * @param LanguageId $languageId
+	 *
+	 * @throws VersionGroupNotFoundException if no version group exists with
+	 *
+	 * @return DexVersionGroup
+	 */
+	public function getById(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId
+	) : DexVersionGroup {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`vg`.`id`,
+				`vg`.`identifier`,
+				`vg`.`generation_id`,
+				`vg`.`icon`,
+				`vgn`.`name`
+			FROM `version_groups` AS `vg`
+			INNER JOIN `version_group_names` AS `vgn`
+				ON `vg`.`id` = `vgn`.`version_group_id`
+			WHERE `vg`.`id` = :version_group_id
+				AND `vgn`.`language_id` = :language_id'
+		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			throw new VersionGroupNotFoundException(
+				'No version group exists with id ' . $versionGroupId->value() . '.'
+			);
+		}
+
+		return new DexVersionGroup(
+			new VersionGroupId($result['id']),
+			$result['identifier'],
+			new GenerationId($result['generation_id']),
+			$result['icon'],
+			$result['name']
+		);
 	}
 
 	/**

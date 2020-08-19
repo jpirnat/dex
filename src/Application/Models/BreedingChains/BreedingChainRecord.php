@@ -3,13 +3,15 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\BreedingChains;
 
+use Jp\Dex\Domain\Versions\DexVersionGroup;
+
 final class BreedingChainRecord
 {
 	private string $formIcon;
 	private string $generationIdentifier;
 	private string $pokemonIdentifier;
 	private string $pokemonName;
-	private string $versionGroupIcon;
+	private DexVersionGroup $versionGroup;
 
 	/** @var string[] $eggGroupNames */
 	private array $eggGroupNames;
@@ -25,7 +27,7 @@ final class BreedingChainRecord
 	 * @param string $generationIdentifier
 	 * @param string $pokemonIdentifier
 	 * @param string $pokemonName
-	 * @param string $versionGroupIcon
+	 * @param DexVersionGroup $versionGroup
 	 * @param string[] $eggGroupNames
 	 * @param int $baseEggCycles
 	 * @param string $genderRatioIcon
@@ -36,7 +38,7 @@ final class BreedingChainRecord
 		string $generationIdentifier,
 		string $pokemonIdentifier,
 		string $pokemonName,
-		string $versionGroupIcon,
+		DexVersionGroup $versionGroup,
 		array $eggGroupNames,
 		int $baseEggCycles,
 		string $genderRatioIcon,
@@ -46,7 +48,7 @@ final class BreedingChainRecord
 		$this->generationIdentifier = $generationIdentifier;
 		$this->pokemonIdentifier = $pokemonIdentifier;
 		$this->pokemonName = $pokemonName;
-		$this->versionGroupIcon = $versionGroupIcon;
+		$this->versionGroup = $versionGroup;
 		$this->eggGroupNames = $eggGroupNames;
 		$this->baseEggCycles = $baseEggCycles;
 		$this->genderRatioIcon = $genderRatioIcon;
@@ -94,13 +96,13 @@ final class BreedingChainRecord
 	}
 
 	/**
-	 * Get the version group icon.
+	 * Get the version group.
 	 *
-	 * @return string
+	 * @return DexVersionGroup
 	 */
-	public function getVersionGroupIcon() : string
+	public function getVersionGroup() : DexVersionGroup
 	{
-		return $this->versionGroupIcon;
+		return $this->versionGroup;
 	}
 
 	/**

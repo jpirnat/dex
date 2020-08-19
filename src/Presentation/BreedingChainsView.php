@@ -13,6 +13,7 @@ final class BreedingChainsView
 	private RendererInterface $renderer;
 	private BaseView $baseView;
 	private BreedingChainsModel $breedingChainsModel;
+	private DexFormatter $dexFormatter;
 
 	/**
 	 * Constructor.
@@ -20,15 +21,18 @@ final class BreedingChainsView
 	 * @param RendererInterface $renderer
 	 * @param BaseView $baseView
 	 * @param BreedingChainsModel $breedingChainsModel
+	 * @param DexFormatter $dexFormatter
 	 */
 	public function __construct(
 		RendererInterface $renderer,
 		BaseView $baseView,
-		BreedingChainsModel $breedingChainsModel
+		BreedingChainsModel $breedingChainsModel,
+		DexFormatter $dexFormatter
 	) {
 		$this->renderer = $renderer;
 		$this->baseView = $baseView;
 		$this->breedingChainsModel = $breedingChainsModel;
+		$this->dexFormatter = $dexFormatter;
 	}
 
 	/**
@@ -55,7 +59,9 @@ final class BreedingChainsView
 					'generationIdentifier' => $record->getGenerationIdentifier(),
 					'identifier' => $record->getPokemonIdentifier(),
 					'name' => $record->getPokemonName(),
-					'versionGroupIcon' => $record->getVersionGroupIcon(),
+					'versionGroup' => $this->dexFormatter->formatDexVersionGroup(
+						$record->getVersionGroup()
+					),
 					'eggGroupNames' => $record->getEggGroupNames(),
 					'baseEggCycles' => $record->getBaseEggCycles(),
 					'genderRatioIcon' => $record->getGenderRatioIcon(),

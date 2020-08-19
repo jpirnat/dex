@@ -47,15 +47,27 @@ final class DexFormatter
 		$vg = [];
 
 		foreach ($versionGroups as $versionGroup) {
-			$vg[] = [
-				'identifier' => $versionGroup->getIdentifier(),
-				'generationId' => $versionGroup->getGenerationId()->value(),
-				'icon' => $versionGroup->getIcon(),
-				'name' => $versionGroup->getName(),
-			];
+			$vg[] = $this->formatDexVersionGroup($versionGroup);
 		}
 
 		return $vg;
+	}
+
+	/**
+	 * Transform an array of version group objects into a renderable data array.
+	 *
+	 * @param DexVersionGroup $versionGroup
+	 *
+	 * @return array
+	 */
+	public function formatDexVersionGroup(DexVersionGroup $versionGroup) : array
+	{
+		return [
+			'identifier' => $versionGroup->getIdentifier(),
+			'generationId' => $versionGroup->getGenerationId()->value(),
+			'icon' => $versionGroup->getIcon(),
+			'name' => $versionGroup->getName(),
+		];
 	}
 
 	/**
