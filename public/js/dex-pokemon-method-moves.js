@@ -117,7 +117,7 @@ Vue.component('dex-pokemon-method-moves', {
 							<td class="dex-table__pokemon-move-data"
 								v-tooltip="pokemonMoveTooltip(pokemon, move, vg, method)"
 							>
-								{{ move.vgData[vg.identifier] }}
+								{{ move.vgData[vg.identifier].item }}
 							</td>
 						</template>
 
@@ -206,7 +206,7 @@ Vue.component('dex-pokemon-method-moves', {
 				return `${pokemon.name} learns ${move.name} in ${vg.name} at Level ${move.vgData[vg.identifier]}.`;
 			}
 			if (method.identifier === 'machine') {
-				return `${pokemon.name} learns ${move.name} in ${vg.name} at via ${move.vgData[vg.identifier]}.`;
+				return `${pokemon.name} learns ${move.name} in ${vg.name} at via ${move.vgData[vg.identifier].item}.`;
 			}
 			if (method.identifier === 'egg') {
 				return `${pokemon.name} learns ${move.name} in ${vg.name} as an Egg Move. Click for breeding chains.`;

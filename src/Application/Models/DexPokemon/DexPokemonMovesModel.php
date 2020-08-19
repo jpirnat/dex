@@ -130,7 +130,11 @@ final class DexPokemonMovesModel
 						$languageId,
 						$tm->getItemId()
 					);
-					$methodsMoves[$methodId][$moveId][$vgIdentifier] = $itemName->getName();
+					$methodsMoves[$methodId][$moveId][$vgIdentifier] = [
+						'machineType' => $tm->getMachineType()->value(),
+						'number' => $tm->getNumber(),
+						'item' => $itemName->getName(),
+					];
 					break;
 				default:
 					// The version group data is just that the Pokémon learns
