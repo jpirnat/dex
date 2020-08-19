@@ -97,7 +97,7 @@ Vue.component('stats-pokemon-counters', {
 						<img :src="'/images/pokemon/icons/' + counter.icon">
 					</td>
 					<td>
-						<a :href="'/stats/' + month + '/' + format.identifier + '/' + rating+ '/pokemon/' + counter.identifier">
+						<a :href="'/stats/' + month + '/' + format + '/' + rating + '/pokemon/' + counter.identifier">
 							{{ counter.name }}
 						</a>
 					</td>

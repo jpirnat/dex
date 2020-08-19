@@ -9,6 +9,8 @@ Vue.component('dex-chart-drawer', {
 	},
 	data() {
 		return {
+			loading: true,
+
 			isVisible: false,
 			chart: null,
 			chartTitle: "Loading...",
@@ -66,27 +68,32 @@ Vue.component('dex-chart-drawer', {
 	template: `
 		<div v-show="isVisible">
 			<div class="dex-drawer__content">
-				<div class="dex-chart__container">
-					<canvas id="dex-chart__canvas"></canvas>
+				<div v-if="loading" class="dex-loader-container">
+					<div class="dex-loader"></div>
 				</div>
-				<div class="buttons-control">
-					<a :href="chartUrl" target="_blank">Save this chart</a>
-				</div>
-				<div class="buttons-control">
-					<button role="button" @click="addAnotherLine" v-if="!seeingAllRatings"
-						style="margin-right: 10px;"
-					>
-						Add Another Line
-					</button>
-					<button role="button" @click="seeAllRatings" v-if="responseLines.length === 1"
-					>
-						See This at All Rating Levels
-					</button>
-					<div class="space"></div>
-				</div>
-				<div class="buttons-control">
-					<button role="button" @click="closeAndClear">Close and Clear Chart</button>
-				</div>
+				<template v-if="!loading">
+					<div class="dex-chart__container">
+						<canvas id="dex-chart__canvas"></canvas>
+					</div>
+					<div class="buttons-control">
+						<a :href="chartUrl" target="_blank">Save this chart</a>
+					</div>
+					<div class="buttons-control">
+						<button role="button" @click="addAnotherLine" v-if="!seeingAllRatings"
+							style="margin-right: 10px;"
+						>
+							Add Another Line
+						</button>
+						<button role="button" @click="seeAllRatings" v-if="responseLines.length === 1"
+						>
+							See This at All Rating Levels
+						</button>
+						<div class="space"></div>
+					</div>
+					<div class="buttons-control">
+						<button role="button" @click="closeAndClear">Close and Clear Chart</button>
+					</div>
+				</template>
 			</div>
 			<div class="dex-drawer__overlay" @click="closeAndClear"></div>
 		</div>
@@ -145,6 +152,7 @@ Vue.component('dex-chart-drawer', {
 		lines() {
 			this.isVisible = true;
 
+			this.loading = true;
 			fetch('/stats/chart', {
 				method: 'POST',
 				credentials: 'same-origin',
@@ -157,14 +165,18 @@ Vue.component('dex-chart-drawer', {
 			})
 			.then(response => response.json())
 			.then(async response => {
-				const data = response.data;
+				this.loading = false;
 
-				this.chartTitle = data.chartTitle;
-				this.responseLines = data.lines;
-				this.locale = data.locale;
+				if (response.data) {
+					const data = response.data;
 
-				await this.$nextTick();
-				this.renderChart();
+					this.chartTitle = data.chartTitle;
+					this.responseLines = data.lines;
+					this.locale = data.locale;
+
+					await this.$nextTick();
+					this.renderChart();
+				}
 			});
 		},
 	},

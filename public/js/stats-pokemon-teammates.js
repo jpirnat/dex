@@ -53,7 +53,7 @@ Vue.component('stats-pokemon-teammates', {
 						<img :src="'/images/pokemon/icons/' + teammate.icon">
 					</td>
 					<td>
-						<a :href="'/stats/' + month + '/' + format.identifier + '/' + rating+ '/pokemon/' + teammate.identifier">
+						<a :href="'/stats/' + month + '/' + format + '/' + rating + '/pokemon/' + teammate.identifier">
 							{{ teammate.name }}
 						</a>
 					</td>
