@@ -59,7 +59,12 @@
 						}"
 						@mouseover="onMatchupHover(attackingType, defendingType)"
 						@mouseleave="onMatchupUnhover"
-					></td>
+					>
+						<template v-if="multipliers[attackingType.id][defendingType.id] === 1">1</template>
+						<template v-else-if="multipliers[attackingType.id][defendingType.id] === 2">×2</template>
+						<template v-else-if="multipliers[attackingType.id][defendingType.id] === .5">½</template>
+						<template v-else-if="multipliers[attackingType.id][defendingType.id] === 0">×0</template>
+					</td>
 				</tr>
 			</tbody>
 		</table>

@@ -27,6 +27,60 @@
 	</div>
 
 	<template v-if="loaded">
+		<h2 class="dex-section__title">Matchups</h2>
+		<div>
+			<h3 class="dex-type__matchups-title">Damage Dealt:</h3>
+			<ul class="dex-type__matchups">
+				<li v-for="matchup in matchups.whenAttacking" :key="matchup.type.identifier"
+					class="dex-type__matchup" :class="{
+						'dex-type__matchup--fade': hoverAttackingMultiplier !== null && hoverAttackingMultiplier !== matchup.multiplier,
+					}"
+					@mouseover="onMatchupAttackingHover(matchup)"
+					@mouseleave="onMatchupAttackingUnhover"
+				>
+					<a :href="'/dex/' + generation.identifier + '/types/' + matchup.type.identifier">
+						<img :src="'/images/types/' + matchup.type.icon" :alt="matchup.type.name">
+					</a>
+					<span :class="{
+						'dex-type__matchup--neutral': matchup.multiplier === 1,
+						'dex-type__matchup--favorable': matchup.multiplier === 2,
+						'dex-type__matchup--unfavorable': matchup.multiplier === .5,
+						'dex-type__matchup--no-effect': matchup.multiplier === 0,
+					}">
+						<template v-if="matchup.multiplier === 1">1</template>
+						<template v-else-if="matchup.multiplier === 2">2</template>
+						<template v-else-if="matchup.multiplier === .5">½</template>
+						<template v-else-if="matchup.multiplier === 0">0</template>
+					</span>
+				</li>
+			</ul>
+			<h3 class="dex-type__matchups-title">Damage Taken:</h3>
+			<ul class="dex-type__matchups">
+				<li v-for="matchup in matchups.whenDefending" :key="matchup.type.identifier"
+					class="dex-type__matchup" :class="{
+						'dex-type__matchup--fade': hoverDefendingMultiplier !== null && hoverDefendingMultiplier !== matchup.multiplier,
+					}"
+					@mouseover="onMatchupDefendingHover(matchup)"
+					@mouseleave="onMatchupDefendingUnhover"
+				>
+					<a :href="'/dex/' + generation.identifier + '/types/' + matchup.type.identifier">
+						<img :src="'/images/types/' + matchup.type.icon" :alt="matchup.type.name">
+					</a>
+					<span :class="{
+						'dex-type__matchup--neutral': matchup.multiplier === 1,
+						'dex-type__matchup--unfavorable': matchup.multiplier === 2,
+						'dex-type__matchup--favorable': matchup.multiplier === .5,
+						'dex-type__matchup--no-effect': matchup.multiplier === 0,
+					}">
+						<template v-if="matchup.multiplier === 1">1</template>
+						<template v-else-if="matchup.multiplier === 2">2</template>
+						<template v-else-if="matchup.multiplier === .5">½</template>
+						<template v-else-if="matchup.multiplier === 0">0</template>
+					</span>
+				</li>
+			</ul>
+		</div>
+
 		<h2 class="dex-section__title">Pokémon</h2>
 		<dex-pokemons-table
 			:pokemons="pokemons"

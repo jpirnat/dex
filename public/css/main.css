@@ -444,35 +444,21 @@ a.button {
 .type-chart__matchup--highlight {
 	background: yellow;
 }
+
 .type-chart__matchup--neutral {
 	color: darkgray;
 }
-.type-chart__matchup--neutral::before {
-	content: "1";
-}
-
 .type-chart__matchup--super-effective {
 	background: green;
 	color: white;
 }
-.type-chart__matchup--super-effective::before {
-	content: "×2";
-}
-
 .type-chart__matchup--not-very-effective {
 	background: red;
 	color: white;
 }
-.type-chart__matchup--not-very-effective::before {
-	content: "½";
-}
-
 .type-chart__matchup--no-effect {
 	background: black;
 	color: white;
-}
-.type-chart__matchup--no-effect::before {
-	content: "×0";
 }
 
 .type-toggler {
@@ -501,6 +487,48 @@ a.button {
 }
 
 
+
+/* dex type */
+
+.dex-type__matchups-title {
+	margin-bottom: 10px;
+}
+
+.dex-type__matchups {
+	list-style: none;
+	margin: 0 0 16px 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.dex-type__matchup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-weight: bold;
+	padding: 1px;
+}
+.dex-type__matchup:not(:last-child) {
+	margin-right: 3px;
+}
+
+.dex-type__matchup--neutral {
+	color: #999;
+}
+.dex-type__matchup--favorable {
+	color: #6c6;
+}
+.dex-type__matchup--unfavorable {
+	color: #c66;
+}
+.dex-type__matchup--no-effect {
+	color: #66c;
+}
+.dex-type__matchup--fade {
+	opacity: .25;
+}
 
 /* breeding chains */
 

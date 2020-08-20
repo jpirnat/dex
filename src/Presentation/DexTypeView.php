@@ -41,12 +41,12 @@ final class DexTypeView
 
 		$matchups = $this->dexTypeModel->getMatchups();
 		foreach ($matchups['whenAttacking'] as $i => $matchup) {
-			$type = $this->dexFormatter->formatDexType($matchup['type']);
-			$matchups['whenAttacking'][$i]['type'] = $type;
+			$t = $this->dexFormatter->formatDexType($matchup['type']);
+			$matchups['whenAttacking'][$i]['type'] = $t;
 		}
 		foreach ($matchups['whenDefending'] as $i => $matchup) {
-			$type = $this->dexFormatter->formatDexType($matchup['type']);
-			$matchups['whenDefending'][$i]['type'] = $type;
+			$t = $this->dexFormatter->formatDexType($matchup['type']);
+			$matchups['whenDefending'][$i]['type'] = $t;
 		}
 
 		$stats = $this->dexTypeModel->getStats();

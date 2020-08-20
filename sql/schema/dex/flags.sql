@@ -2,7 +2,7 @@ create table if not exists `flags`
 (
 `id` tinyint unsigned not null,
 
-`identifier` varchar(14) not null,
+`identifier` varchar(20) not null,
 `introduced_in_generation_id` tinyint unsigned not null,
 
 primary key (`id`),

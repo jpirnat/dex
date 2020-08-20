@@ -16,6 +16,9 @@ const app = new Vue({
 		stats: [],
 		moves: [],
 		showMoveDescriptions: true,
+
+		hoverAttackingMultiplier: null,
+		hoverDefendingMultiplier: null,
 	},
 	created() {
 		const url = new URL(window.location);
@@ -44,5 +47,19 @@ const app = new Vue({
 				document.title = data.title;
 			}
 		});
+	},
+	methods: {
+		onMatchupAttackingHover(matchup) {
+			this.hoverAttackingMultiplier = matchup.multiplier;
+		},
+		onMatchupDefendingHover(matchup) {
+			this.hoverDefendingMultiplier = matchup.multiplier;
+		},
+		onMatchupAttackingUnhover() {
+			this.hoverAttackingMultiplier = null;
+		},
+		onMatchupDefendingUnhover() {
+			this.hoverDefendingMultiplier = null;
+		},
 	},
 });
