@@ -58,4 +58,80 @@ final class DatabaseTypeMatchupRepository implements TypeMatchupRepositoryInterf
 
 		return $typeMatchups;
 	}
+
+	/**
+	 * Get type matchups by generation and attacking type.
+	 *
+	 * @param GenerationId $generationId
+	 * @param TypeId $typeId
+	 *
+	 * @return TypeMatchup[]
+	 */
+	public function getByAttackingType(GenerationId $generationId, TypeId $typeId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`defending_type_id`,
+				`multiplier`
+			FROM `type_matchups`
+			WHERE `generation_id` = :generation_id
+				AND `attacking_type_id` = :type_id'
+		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$typeMatchups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$typeMatchup = new TypeMatchup(
+				$generationId,
+				$typeId,
+				new TypeId($result['defending_type_id']),
+				(float) $result['multiplier']
+			);
+
+			$typeMatchups[] = $typeMatchup;
+		}
+
+		return $typeMatchups;
+	}
+
+	/**
+	 * Get type matchups by generation and defending type.
+	 *
+	 * @param GenerationId $generationId
+	 * @param TypeId $typeId
+	 *
+	 * @return TypeMatchup[]
+	 */
+	public function getByDefendingType(GenerationId $generationId, TypeId $typeId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`attacking_type_id`,
+				`multiplier`
+			FROM `type_matchups`
+			WHERE `generation_id` = :generation_id
+				AND `defending_type_id` = :type_id'
+		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$typeMatchups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$typeMatchup = new TypeMatchup(
+				$generationId,
+				new TypeId($result['attacking_type_id']),
+				$typeId,
+				(float) $result['multiplier']
+			);
+
+			$typeMatchups[] = $typeMatchup;
+		}
+
+		return $typeMatchups;
+	}
 }
