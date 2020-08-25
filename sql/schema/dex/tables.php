@@ -69,8 +69,6 @@ return [
 	'z_power_effects',
 	'z_power_effect_names',
 	'generation_moves',
-	'flags',
-	'move_flags',
 	'technical_machines',
 	'move_methods',
 	'move_method_names',
@@ -84,6 +82,12 @@ return [
 		'pokemon_moves_7',
 	],
 	'exclusive_z_moves',
+
+	// Move flags
+	'flags',
+	'generation_flags',
+	'flag_descriptions',
+	'move_flags',
 
 	// Stats
 	'stats',

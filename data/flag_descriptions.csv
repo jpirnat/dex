@@ -1,0 +1,21 @@
+language_id,flag_id,name,description
+2,1,Triggers King’s Rock,This move can trigger the effects of King’s Rock.
+2,2,Accuracy check,This move uses the standard accuracy check.
+2,3,Makes contact,This move causes the user to make contact with the target.
+2,4,Blocked by Protect,This move will not work if the target has used Protect or Detect this turn.
+2,5,Reflectable,This move can be reflected back at the user with Magic Coat or Magic Bounce.
+2,6,Snatchable,The effects of this move can be stolen by a Pokémon using Snatch.
+2,7,Copied by Mirror Move,This move can be copied by Mirror Move.
+2,8,Has a charging turn,This move has a charging turn that can be skipped with a Power Herb.
+2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
+2,10,Punch-based,This move has 1.2× its usual power when used by a Pokémon with Iron Fist.
+2,11,Sound-based,Pokémon with Soundproof are immune to this move.
+2,12,Unusable during Gravity,This move cannot be used in high Gravity.
+2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
+2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
+2,15,Heals,This move is blocked by Heal Block.
+2,16,Ignores Substitute,This move ignores the target's Substitute.
+2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.
+2,18,Ally Animation,This move's animation plays when it targets an ally.
+2,19,Dance,This move triggers Dancer.
+2,20,Metronome,This move can be called by Metronome.
