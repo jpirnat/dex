@@ -362,6 +362,15 @@ a.button {
 
 /* dex move */
 
+.dex-move__flag--disabled {
+	text-decoration: line-through;
+	color: #bbb;
+}
+.dex-move__flag-description {
+	font-size: .8em;
+	font-style: italic;
+}
+
 .dex-move__methods-nav {
 	margin: 10px 0;
 }

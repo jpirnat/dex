@@ -40,6 +40,7 @@ final class DexMoveView
 		$generations = $generationModel->getGenerations();
 
 		$move = $this->dexMoveModel->getMove();
+		$flags = $this->dexMoveModel->getFlags();
 
 		$versionGroups = $this->dexMoveModel->getVersionGroups();
 		$showAbilities = $generation->getId()->value() >= 3;
@@ -80,6 +81,7 @@ final class DexMoveView
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 
 				'move' => $move,
+				'flags' => $flags,
 
 				'methods' => $this->formatDexMovePokemonMethods($methods),
 				'versionGroups' => $this->dexFormatter->formatDexVersionGroups($versionGroups),

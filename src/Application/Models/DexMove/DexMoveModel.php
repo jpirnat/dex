@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\DexMove;
 
 use Jp\Dex\Application\Models\GenerationModel;
+use Jp\Dex\Domain\Flags\FlagRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
@@ -13,14 +14,18 @@ use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 final class DexMoveModel
 {
 	private GenerationModel $generationModel;
-	private DexMovePokemonModel $dexMovePokemonModel;
 	private MoveRepositoryInterface $moveRepository;
 	private MoveNameRepositoryInterface $moveNameRepository;
+	private FlagRepositoryInterface $flagRepository;
 	private DexVersionGroupRepositoryInterface $dexVgRepository;
+	private DexMovePokemonModel $dexMovePokemonModel;
 
 
 	/** @var array $move */
 	private array $move = [];
+
+	/** @var array $flags */
+	private array $flags = [];
 
 	/** @var DexVersionGroup[] $versionGroups */
 	private array $versionGroups = [];
@@ -30,23 +35,26 @@ final class DexMoveModel
 	 * Constructor.
 	 *
 	 * @param GenerationModel $generationModel
-	 * @param DexMovePokemonModel $dexMovePokemonModel
 	 * @param MoveRepositoryInterface $moveRepository
 	 * @param MoveNameRepositoryInterface $moveNameRepository
+	 * @param FlagRepositoryInterface $flagRepository
 	 * @param DexVersionGroupRepositoryInterface $dexVgRepository
+	 * @param DexMovePokemonModel $dexMovePokemonModel
 	 */
 	public function __construct(
 		GenerationModel $generationModel,
-		DexMovePokemonModel $dexMovePokemonModel,
 		MoveRepositoryInterface $moveRepository,
 		MoveNameRepositoryInterface $moveNameRepository,
-		DexVersionGroupRepositoryInterface $dexVgRepository
+		FlagRepositoryInterface $flagRepository,
+		DexVersionGroupRepositoryInterface $dexVgRepository,
+		DexMovePokemonModel $dexMovePokemonModel
 	) {
 		$this->generationModel = $generationModel;
-		$this->dexMovePokemonModel = $dexMovePokemonModel;
 		$this->moveRepository = $moveRepository;
 		$this->moveNameRepository = $moveNameRepository;
+		$this->flagRepository = $flagRepository;
 		$this->dexVgRepository = $dexVgRepository;
+		$this->dexMovePokemonModel = $dexMovePokemonModel;
 	}
 
 
@@ -80,6 +88,20 @@ final class DexMoveModel
 
 		// Set generations for the generation control.
 		$this->generationModel->setWithMove($move->getId());
+
+		// Set the move's flags.
+		$allFlags = $this->flagRepository->getByGeneration($generationId, $languageId);
+		$moveFlagIds = $this->flagRepository->getByMove($generationId, $move->getId());
+		foreach ($allFlags as $flagId => $flag) {
+			$has = isset($moveFlagIds[$flagId]); // Does the move have this flag?
+
+			$this->flags[] = [
+				'identifier' => $flag->getIdentifier(),
+				'name' => $flag->getName(),
+				'description' => $flag->getDescription(),
+				'has' => $has,
+			];
+		}
 
 		// Get the version groups this move has appeared in.
 		$this->versionGroups = $this->dexVgRepository->getWithMove(
@@ -125,6 +147,16 @@ final class DexMoveModel
 	public function getMove() : array
 	{
 		return $this->move;
+	}
+
+	/**
+	 * Get the flags.
+	 *
+	 * @return array
+	 */
+	public function getFlags() : array
+	{
+		return $this->flags;
 	}
 
 	/**

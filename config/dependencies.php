@@ -133,6 +133,9 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterfac
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseEggGroupNameRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\EggGroups\EggGroupNameRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseFlagRepository::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Flags\FlagRepositoryInterface::class, $rule);
+
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseFormatNameRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Formats\FormatNameRepositoryInterface::class, $rule);
 

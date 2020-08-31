@@ -26,6 +26,20 @@
 	</div>
 
 	<template v-if="loaded">
+		<template v-if="flags.length > 0">
+			<h2 class="dex-section__title">Flags</h2>
+			<ul>
+				<li v-for="flag in flags" :key="flag.identifier"
+					:class="{
+						'dex-move__flag--disabled': !flag.has
+					}"
+				>
+					{{ flag.name }}
+					<div v-if="flag.has" class="dex-move__flag-description">{{ flag.description }}</div>
+				</li>
+			</ul>
+		</template>
+
 		<h2 class="dex-section__title">Pokémon</h2>
 
 		<nav class="dex-move__methods-nav">

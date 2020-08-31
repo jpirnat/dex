@@ -10,6 +10,7 @@ const app = new Vue({
 		breadcrumbs: [],
 		generations: [],
 		move: {},
+		flags: [],
 		methods: [],
 		versionGroups: [],
 		showAbilities: true,
@@ -52,6 +53,7 @@ const app = new Vue({
 				this.breadcrumbs = data.breadcrumbs;
 				this.generations = data.generations;
 				this.move = data.move;
+				this.flags = data.flags;
 				this.methods = data.methods;
 				this.versionGroups = data.versionGroups;
 				this.showAbilities = data.showAbilities;
