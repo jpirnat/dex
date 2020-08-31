@@ -40,6 +40,13 @@ final class DexMoveView
 		$generations = $generationModel->getGenerations();
 
 		$move = $this->dexMoveModel->getMove();
+
+		$matchups = $this->dexMoveModel->getMatchups();
+		foreach ($matchups as $i => $matchup) {
+			$t = $this->dexFormatter->formatDexType($matchup['type']);
+			$matchups[$i]['type'] = $t;
+		}
+
 		$flags = $this->dexMoveModel->getFlags();
 
 		$versionGroups = $this->dexMoveModel->getVersionGroups();
@@ -81,6 +88,7 @@ final class DexMoveView
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 
 				'move' => $move,
+				'matchups' => $matchups,
 				'flags' => $flags,
 
 				'methods' => $this->formatDexMovePokemonMethods($methods),

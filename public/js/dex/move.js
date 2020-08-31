@@ -10,11 +10,14 @@ const app = new Vue({
 		breadcrumbs: [],
 		generations: [],
 		move: {},
+		matchups: [],
 		flags: [],
 		methods: [],
 		versionGroups: [],
 		showAbilities: true,
 		stats: [],
+
+		hoverMatchupMultiplier: null,
 
 		showOlderGames: false,
 	},
@@ -53,6 +56,7 @@ const app = new Vue({
 				this.breadcrumbs = data.breadcrumbs;
 				this.generations = data.generations;
 				this.move = data.move;
+				this.matchups = data.matchups;
 				this.flags = data.flags;
 				this.methods = data.methods;
 				this.versionGroups = data.versionGroups;
@@ -67,6 +71,12 @@ const app = new Vue({
 		});
 	},
 	methods: {
+		onMatchupHover(matchup) {
+			this.hoverMatchupMultiplier = matchup.multiplier;
+		},
+		onMatchupUnhover() {
+			this.hoverMatchupMultiplier = null;
+		},
 		toggleOlderGames() {
 			this.showOlderGames = !this.showOlderGames;
 			window.localStorage.setItem('dexMoveShowOlderGames', this.showOlderGames);

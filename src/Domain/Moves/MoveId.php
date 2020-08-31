@@ -13,6 +13,9 @@ final class MoveId extends EntityId
 	/** @var int $HIDDEN_POWER */
 	public const HIDDEN_POWER = 237;
 
+	/** @var int $FREEZE_DRY */
+	public const FREEZE_DRY = 573;
+
 	/** @var int $TYPED_HIDDEN_POWER_BEGIN */
 	public const TYPED_HIDDEN_POWER_BEGIN = 10001;
 
