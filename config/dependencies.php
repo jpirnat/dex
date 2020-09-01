@@ -235,9 +235,6 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepository
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface::class, $rule);
 
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabasePokemonAbilityRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Abilities\PokemonAbilityRepositoryInterface::class, $rule);
-
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabasePokemonEggGroupRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface::class, $rule);
 

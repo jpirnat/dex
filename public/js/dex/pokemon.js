@@ -10,6 +10,7 @@ const app = new Vue({
 		breadcrumbs: [],
 		generations: [],
 		pokemon: {},
+		abilities: [],
 		methods: [],
 		versionGroups: [],
 		showMoveDescriptionsOption: true,
@@ -52,6 +53,7 @@ const app = new Vue({
 				this.breadcrumbs = data.breadcrumbs;
 				this.generations = data.generations;
 				this.pokemon = data.pokemon;
+				this.abilities = data.abilities;
 				this.methods = data.methods;
 				this.versionGroups = data.versionGroups;
 				this.showMoveDescriptionsOption = data.showMoveDescriptions;

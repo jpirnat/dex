@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\DexPokemon;
 
 use Jp\Dex\Application\Models\GenerationModel;
+use Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
@@ -13,13 +14,15 @@ use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 final class DexPokemonModel
 {
 	private GenerationModel $generationModel;
-	private DexPokemonMovesModel $dexPokemonMovesModel;
 	private PokemonRepositoryInterface $pokemonRepository;
 	private PokemonNameRepositoryInterface $pokemonNameRepository;
+	private DexAbilityRepositoryInterface $dexAbilityRepository;
 	private DexVersionGroupRepositoryInterface $dexVgRepository;
+	private DexPokemonMovesModel $dexPokemonMovesModel;
 
 
 	private array $pokemon = [];
+	private array $abilities = [];
 
 	/** @var DexVersionGroup[] $versionGroups */
 	private array $versionGroups = [];
@@ -29,23 +32,26 @@ final class DexPokemonModel
 	 * Constructor.
 	 *
 	 * @param GenerationModel $generationModel
-	 * @param DexPokemonMovesModel $dexPokemonMovesModel
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
+	 * @param DexAbilityRepositoryInterface $dexAbilityRepository
 	 * @param DexVersionGroupRepositoryInterface $dexVgRepository
+	 * @param DexPokemonMovesModel $dexPokemonMovesModel
 	 */
 	public function __construct(
 		GenerationModel $generationModel,
-		DexPokemonMovesModel $dexPokemonMovesModel,
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
-		DexVersionGroupRepositoryInterface $dexVgRepository
+		DexAbilityRepositoryInterface $dexAbilityRepository,
+		DexVersionGroupRepositoryInterface $dexVgRepository,
+		DexPokemonMovesModel $dexPokemonMovesModel
 	) {
 		$this->generationModel = $generationModel;
-		$this->dexPokemonMovesModel = $dexPokemonMovesModel;
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
+		$this->dexAbilityRepository = $dexAbilityRepository;
 		$this->dexVgRepository = $dexVgRepository;
+		$this->dexPokemonMovesModel = $dexPokemonMovesModel;
 	}
 
 
@@ -77,6 +83,13 @@ final class DexPokemonModel
 
 		// Set generations for the generation control.
 		$this->generationModel->setWithPokemon($pokemon->getId());
+
+		// Set the Pokémon's abilities.
+		$this->abilities = $this->dexAbilityRepository->getByPokemon(
+			$generationId,
+			$pokemon->getId(),
+			$languageId
+		);
 
 		// Get the version groups this Pokémon has appeared in.
 		$this->versionGroups = $this->dexVgRepository->getWithPokemon(
@@ -110,16 +123,6 @@ final class DexPokemonModel
 	}
 
 	/**
-	 * Get the dex Pokémon moves model.
-	 *
-	 * @return DexPokemonMovesModel
-	 */
-	public function getDexPokemonMovesModel() : DexPokemonMovesModel
-	{
-		return $this->dexPokemonMovesModel;
-	}
-
-	/**
 	 * Get the Pokémon.
 	 *
 	 * @return array
@@ -130,6 +133,16 @@ final class DexPokemonModel
 	}
 
 	/**
+	 * Get the abilities.
+	 *
+	 * @return array
+	 */
+	public function getAbilities() : array
+	{
+		return $this->abilities;
+	}
+
+	/**
 	 * Get the version groups.
 	 *
 	 * @return DexVersionGroup[]
@@ -137,5 +150,15 @@ final class DexPokemonModel
 	public function getVersionGroups() : array
 	{
 		return $this->versionGroups;
+	}
+
+	/**
+	 * Get the dex Pokémon moves model.
+	 *
+	 * @return DexPokemonMovesModel
+	 */
+	public function getDexPokemonMovesModel() : DexPokemonMovesModel
+	{
+		return $this->dexPokemonMovesModel;
 	}
 }

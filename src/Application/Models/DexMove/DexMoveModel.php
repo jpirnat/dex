@@ -203,16 +203,6 @@ final class DexMoveModel
 	}
 
 	/**
-	 * Get the dex move Pokémon model.
-	 *
-	 * @return DexMovePokemonModel
-	 */
-	public function getDexMovePokemonModel() : DexMovePokemonModel
-	{
-		return $this->dexMovePokemonModel;
-	}
-
-	/**
 	 * Get the move.
 	 *
 	 * @return array
@@ -250,5 +240,15 @@ final class DexMoveModel
 	public function getVersionGroups() : array
 	{
 		return $this->versionGroups;
+	}
+
+	/**
+	 * Get the dex move Pokémon model.
+	 *
+	 * @return DexMovePokemonModel
+	 */
+	public function getDexMovePokemonModel() : DexMovePokemonModel
+	{
+		return $this->dexMovePokemonModel;
 	}
 }

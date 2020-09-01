@@ -26,13 +26,31 @@
 	</div>
 
 	<template v-if="loaded">
+		<template v-if="abilities.length > 0">
+			<h2 class="dex-section__title">Abilities</h2>
+			<ul class="dex-pokemon__abilities">
+				<li v-for="ability in abilities" :key="ability.identifier" class="dex-pokemon__ability">
+					<div :class="{
+						'dex-pokemon__ability--hidden': ability.isHiddenAbility,
+					}">
+						<a :href="'/dex/' + generation.identifier + '/abilities/' + ability.identifier"
+							class="dex-link"
+						>{{ ability.name }}</a>
+						<template v-if="ability.isHiddenAbility"> (Hidden Ability)</template>
+					</div>
+
+					<div>{{ ability.description }}</div>
+				</li>
+			</ul>
+		</template>
+
 		<h2 class="dex-section__title">Moves</h2>
 
 		<nav class="dex-move__methods-nav">
 			<div>{{ pokemon.name }} can learn moves in the following ways:</div>
 			<ul class="dex-move__method-links">
 				<li v-for="method in visibleMethods" :key="method.identifier">
-					<a :href="`#${method.identifier}-moves`">{{ method.name }}</a>
+					<a :href="`#${method.identifier}-moves`" class="dex-link">{{ method.name }}</a>
 				</li>
 			</ul>
 		</nav>

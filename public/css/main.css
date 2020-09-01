@@ -244,6 +244,17 @@ a.button {
 	font-weight: bold;
 }
 
+.dex-link {
+	text-decoration: none;
+}
+.dex-link,
+.dex-link:visited {
+	color: blue;
+}
+.dex-link:hover {
+	color: red;
+}
+
 .dex-table--full-width {
 	width: 100%;
 }
@@ -430,6 +441,20 @@ a.button {
 
 
 /* dex Pokémon */
+
+.dex-pokemon__abilities {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.dex-pokemon__ability {
+	margin: 10px 0;
+}
+
+.dex-pokemon__ability--hidden {
+	font-style: italic;
+}
 
 .dex-pokemon__move-name {
 	border-left: 1px solid black;

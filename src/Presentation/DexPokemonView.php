@@ -43,6 +43,7 @@ final class DexPokemonView
 		$generations = $generationModel->getGenerations();
 
 		$pokemon = $this->dexPokemonModel->getPokemon();
+		$abilities = $this->dexPokemonModel->getAbilities();
 
 		$versionGroups = $this->dexPokemonModel->getVersionGroups();
 		$showMoveDescriptions = $generation->getId()->value() >= 3;
@@ -152,6 +153,7 @@ final class DexPokemonView
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 
 				'pokemon' => $pokemon,
+				'abilities' => array_values($abilities),
 
 				'methods' => $this->formatDexPokemonMoveMethods($methods),
 				'versionGroups' => $this->dexFormatter->formatDexVersionGroups($versionGroups),
