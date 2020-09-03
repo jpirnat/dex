@@ -1,0 +1,297 @@
+<?php
+declare(strict_types=1);
+
+namespace Jp\Dex\Application\Models\DexPokemon;
+
+use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Types\DexType;
+use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
+use Jp\Dex\Domain\Versions\GenerationId;
+
+final class DexPokemonMatchupsModel
+{
+	private DexTypeRepositoryInterface $dexTypeRepository;
+	private TypeMatchupRepositoryInterface $typeMatchupRepository;
+
+
+	/** @var DexType[] $types */
+	private array $types = [];
+
+	/** @var float[][] $damageTaken */
+	private array $damageTaken = [];
+
+	/** @var array $abilities */
+	private array $abilities = [];
+
+
+	private const NO_ABILITY = 'none';
+
+
+	/**
+	 * Constructor.
+	 *
+	 * @param DexTypeRepositoryInterface $dexTypeRepository
+	 * @param TypeMatchupRepositoryInterface $typeMatchupRepository
+	 */
+	public function __construct(
+		DexTypeRepositoryInterface $dexTypeRepository,
+		TypeMatchupRepositoryInterface $typeMatchupRepository
+	) {
+		$this->dexTypeRepository = $dexTypeRepository;
+		$this->typeMatchupRepository = $typeMatchupRepository;
+	}
+
+
+	/**
+	 * Set data for the dex Pokémon page's matchups.
+	 *
+	 * @param GenerationId $generationId
+	 * @param PokemonId $pokemonId
+	 * @param LanguageId $languageId
+	 * @param array $abilities
+	 *
+	 * @return void
+	 */
+	public function setData(
+		GenerationId $generationId,
+		PokemonId $pokemonId,
+		LanguageId $languageId,
+		array $abilities
+	) : void {
+		$this->damageTaken = [];
+		$this->abilities = [];
+
+		// Get all types, and initialize their matchup multipliers to 1.
+		$allTypes = $this->dexTypeRepository->getMainByGeneration(
+			$generationId,
+			$languageId
+		);
+		foreach ($allTypes as $type) {
+			$identifier = $type->getIdentifier();
+			$this->damageTaken[self::NO_ABILITY][$identifier] = 1;
+		}
+
+		// Get the Pokémon's types, then get the matchups for those types.
+		$pokemonTypes = $this->dexTypeRepository->getByPokemon(
+			$generationId,
+			$pokemonId,
+			$languageId
+		);
+		foreach ($pokemonTypes as $type) {
+			$matchups = $this->typeMatchupRepository->getByDefendingType(
+				$generationId,
+				$type->getId()
+			);
+			foreach ($matchups as $matchup) {
+				// Factor this matchup into the Pokémon's overall matchups.
+				$attackingTypeId = $matchup->getAttackingTypeId()->value();
+				$attackingType = $allTypes[$attackingTypeId];
+				$identifier = $attackingType->getIdentifier();
+				$multiplier = $matchup->getMultiplier();
+
+				$this->damageTaken[self::NO_ABILITY][$identifier] *= $multiplier;
+			}
+		}
+
+		foreach ($abilities as $ability) {
+			$this->checkForMatchups($generationId, $ability);
+		}
+
+		$this->abilities[] = [
+			'identifier' => self::NO_ABILITY,
+			'name' => 'Other Ability',
+		];
+
+		$this->types = $allTypes;
+	}
+
+	/**
+	 * If this ability changes any of the Pokémon's matchups, add the ability
+	 * to the matchups array.
+	 *
+	 * @param GenerationId $generationId
+	 * @param array $ability
+	 *
+	 * @return void
+	 */
+	private function checkForMatchups(GenerationId $generationId, array $ability) : void
+	{
+		$abilityId = $ability['id'];
+		$identifier = $ability['identifier'];
+
+		// TODO: Get the type identifiers from somewhere.
+
+		if ($abilityId === AbilityId::VOLT_ABSORB) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['electric'] *= 0;
+			return;
+		}
+
+		if ($abilityId === AbilityId::WATER_ABSORB) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['water'] *= 0;
+			return;
+		}
+
+		if ($abilityId === AbilityId::FLASH_FIRE) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['fire'] *= 0;
+			return;
+		}
+
+		if ($abilityId === AbilityId::WONDER_GUARD) {
+			$this->addToDamageTaken($ability);
+			foreach ($this->damageTaken[$identifier] as $type => $multiplier) {
+				if ($multiplier <= 1) {
+					$this->damageTaken[$identifier][$type] *= 0;
+				}
+			}
+			return;
+		}
+
+		if ($abilityId === AbilityId::LEVITATE) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['ground'] *= 0;
+			return;
+		}
+
+		if ($abilityId === AbilityId::LIGHTNING_ROD && $generationId->value() >= 5) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['electric'] *= 0;
+			return;
+		}
+
+		if ($abilityId === AbilityId::THICK_FAT) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['fire'] *= .5;
+			$this->damageTaken[$identifier]['ice'] *= .5;
+			return;
+		}
+
+		if ($abilityId === AbilityId::MOTOR_DRIVE) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['electric'] *= 0;
+			return;
+		}
+
+		if ($abilityId === AbilityId::HEATPROOF) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['fire'] *= .5;
+			return;
+		}
+
+		if ($abilityId === AbilityId::DRY_SKIN) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['fire'] *= 1.25;
+			$this->damageTaken[$identifier]['water'] *= 0;
+			return;
+		}
+
+		if ($abilityId === AbilityId::FILTER) {
+			$this->addToDamageTaken($ability);
+			foreach ($this->damageTaken[$identifier] as $type => $multiplier) {
+				if ($multiplier > 1) {
+					$this->damageTaken[$identifier][$type] *= .75;
+				}
+			}
+			return;
+		}
+
+		if ($abilityId === AbilityId::STORM_DRAIN && $generationId->value() >= 5) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['water'] *= 0;
+			return;
+		}
+
+		if ($abilityId === AbilityId::SOLID_ROCK) {
+			$this->addToDamageTaken($ability);
+			foreach ($this->damageTaken[$identifier] as $type => $multiplier) {
+				if ($multiplier > 1) {
+					$this->damageTaken[$identifier][$type] *= .75;
+				}
+			}
+			return;
+		}
+
+		if ($abilityId === AbilityId::SAP_SIPPER) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['grass'] *= 0;
+			return;
+		}
+
+		if ($abilityId === AbilityId::WATER_BUBBLE) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['fire'] *= .5;
+			return;
+		}
+
+		if ($abilityId === AbilityId::FLUFFY) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['fire'] *= 2;
+			return;
+		}
+
+		if ($abilityId === AbilityId::PRISM_ARMOR) {
+			$this->addToDamageTaken($ability);
+			foreach ($this->damageTaken[$identifier] as $type => $multiplier) {
+				if ($multiplier > 1) {
+					$this->damageTaken[$identifier][$type] *= .75;
+				}
+			}
+			return;
+		}
+	}
+
+
+	/**
+	 * Add this ability to the matchups array.
+	 *
+	 * @param array $ability
+	 *
+	 * @return void
+	 */
+	private function addToDamageTaken(array $ability) : void
+	{
+		$this->abilities[] = [
+			'identifier' => $ability['identifier'],
+			'name' => $ability['name'],
+		];
+
+		$this->damageTaken[$ability['identifier']] = $this->damageTaken[self::NO_ABILITY];
+	}
+
+
+	/**
+	 * Get the types.
+	 *
+	 * @return DexType[]
+	 */
+	public function getTypes() : array
+	{
+		return $this->types;
+	}
+
+	/**
+	 * Get the damage dealt multipliers for each type, for each ability that has
+	 * unique matchups.
+	 *
+	 * @return float[][]
+	 */
+	public function getDamageTaken() : array
+	{
+		return $this->damageTaken;
+	}
+
+	/**
+	 * Get the abilities that have unique matchups.
+	 *
+	 * @return array
+	 */
+	public function getAbilities() : array
+	{
+		return $this->abilities;
+	}
+}

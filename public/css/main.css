@@ -456,6 +456,26 @@ a.button {
 	font-style: italic;
 }
 
+.dex-pokemon__matchup-abilities {
+	display: flex;
+	justify-content: center;
+}
+
+.dex-pokemon__matchup-ability {
+	display: flex;
+	align-items: center;
+}
+.dex-pokemon__matchup-ability:not(:last-child) {
+	margin-right: 20px;
+}
+
+.dex-pokemon__matchup-ability input {
+	margin: 0 0 1px 0;
+}
+.dex-pokemon__matchup-ability span {
+	padding: 3px;
+}
+
 .dex-pokemon__move-name {
 	border-left: 1px solid black;
 }

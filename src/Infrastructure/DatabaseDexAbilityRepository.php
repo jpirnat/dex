@@ -111,7 +111,7 @@ final class DatabaseDexAbilityRepository implements DexAbilityRepositoryInterfac
 	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
 	 *
-	 * @return array Indexed by ability id. Ordered by slot.
+	 * @return array Ordered by slot.
 	 */
 	public function getByPokemon(
 		GenerationId $generationId,
@@ -148,13 +148,14 @@ final class DatabaseDexAbilityRepository implements DexAbilityRepositoryInterfac
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$ability = [
+				'id' => $result['id'],
 				'identifier' => $result['identifier'],
 				'name' => $result['name'],
 				'description' => $result['description'] ?? '-',
 				'isHiddenAbility' => (bool) $result['is_hidden_ability'],
 			];
 
-			$abilities[$result['id']] = $ability;
+			$abilities[] = $ability;
 		}
 
 		return $abilities;

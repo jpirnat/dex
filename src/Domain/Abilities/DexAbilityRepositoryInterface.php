@@ -31,7 +31,7 @@ interface DexAbilityRepositoryInterface
 	 * @param PokemonId $pokemonId
 	 * @param LanguageId $languageId
 	 *
-	 * @return array Indexed by ability id. Ordered by slot.
+	 * @return array Ordered by slot.
 	 */
 	public function getByPokemon(
 		GenerationId $generationId,

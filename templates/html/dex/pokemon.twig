@@ -44,6 +44,44 @@
 			</ul>
 		</template>
 
+		<h2 class="dex-section__title">Matchups</h2>
+		<div>
+			<h3 class="dex-type__matchups-title">Damage Taken:</h3>
+			<ul class="dex-type__matchups">
+				<li v-for="type in types" :key="type.identifier"
+					class="dex-type__matchup" :class="{
+						'dex-type__matchup--fade': hoverDamageTaken !== null && hoverDamageTaken !== damageTaken[type.identifier],
+					}"
+					@mouseover="onDamageTakenHover(damageTaken[type.identifier])"
+					@mouseleave="onDamageTakenUnhover"
+				>
+					<a :href="'/dex/' + generation.identifier + '/types/' + type.identifier">
+						<img :src="'/images/types/' + type.icon" :alt="type.name">
+					</a>
+					<span :class="{
+						'dex-type__matchup--neutral': damageTaken[type.identifier] === 1,
+						'dex-type__matchup--unfavorable': damageTaken[type.identifier] > 1,
+						'dex-type__matchup--favorable': 0 < damageTaken[type.identifier] && damageTaken[type.identifier] < 1,
+						'dex-type__matchup--no-effect': damageTaken[type.identifier] === 0,
+					}">
+						<template v-if="damageTaken[type.identifier] === 1">1</template>
+						<template v-else-if="damageTaken[type.identifier] === .125">⅛</template>
+						<template v-else-if="damageTaken[type.identifier] === .25">¼</template>
+						<template v-else-if="damageTaken[type.identifier] === .5">½</template>
+						<template v-else>×{{ damageTaken[type.identifier] }}</template>
+					</span>
+				</li>
+			</ul>
+			<div v-if="damageTakenAbilities.length > 1" class="dex-pokemon__matchup-abilities">
+				<label v-for="ability in damageTakenAbilities" :key="ability.identifier"
+					class="dex-pokemon__matchup-ability"
+				>
+					<input type="radio" v-model="damageTakenAbility" :value="ability.identifier">
+					<span>{{ ability.name }}</span>
+				</label>
+			</div>
+		</div>
+
 		<h2 class="dex-section__title">Moves</h2>
 
 		<nav class="dex-move__methods-nav">

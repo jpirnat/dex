@@ -45,6 +45,11 @@ final class DexPokemonView
 		$pokemon = $this->dexPokemonModel->getPokemon();
 		$abilities = $this->dexPokemonModel->getAbilities();
 
+		$dexPokemonMatchupsModel = $this->dexPokemonModel->getDexPokemonMatchupsModel();
+		$types = $dexPokemonMatchupsModel->getTypes();
+		$damageTaken = $dexPokemonMatchupsModel->getDamageTaken();
+		$damageTakenAbilities = $dexPokemonMatchupsModel->getAbilities();
+
 		$versionGroups = $this->dexPokemonModel->getVersionGroups();
 		$showMoveDescriptions = $generation->getId()->value() >= 3;
 
@@ -153,7 +158,11 @@ final class DexPokemonView
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 
 				'pokemon' => $pokemon,
-				'abilities' => array_values($abilities),
+				'abilities' => $abilities,
+
+				'types' => $this->dexFormatter->formatDexTypes($types),
+				'damageTaken' => $damageTaken,
+				'damageTakenAbilities' => $damageTakenAbilities,
 
 				'methods' => $this->formatDexPokemonMoveMethods($methods),
 				'versionGroups' => $this->dexFormatter->formatDexVersionGroups($versionGroups),

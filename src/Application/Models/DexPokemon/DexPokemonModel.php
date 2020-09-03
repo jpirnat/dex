@@ -17,6 +17,7 @@ final class DexPokemonModel
 	private PokemonRepositoryInterface $pokemonRepository;
 	private PokemonNameRepositoryInterface $pokemonNameRepository;
 	private DexAbilityRepositoryInterface $dexAbilityRepository;
+	private DexPokemonMatchupsModel $dexPokemonMatchupsModel;
 	private DexVersionGroupRepositoryInterface $dexVgRepository;
 	private DexPokemonMovesModel $dexPokemonMovesModel;
 
@@ -35,6 +36,7 @@ final class DexPokemonModel
 	 * @param PokemonRepositoryInterface $pokemonRepository
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param DexAbilityRepositoryInterface $dexAbilityRepository
+	 * @param DexPokemonMatchupsModel $dexPokemonMatchupsModel
 	 * @param DexVersionGroupRepositoryInterface $dexVgRepository
 	 * @param DexPokemonMovesModel $dexPokemonMovesModel
 	 */
@@ -43,6 +45,7 @@ final class DexPokemonModel
 		PokemonRepositoryInterface $pokemonRepository,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		DexAbilityRepositoryInterface $dexAbilityRepository,
+		DexPokemonMatchupsModel $dexPokemonMatchupsModel,
 		DexVersionGroupRepositoryInterface $dexVgRepository,
 		DexPokemonMovesModel $dexPokemonMovesModel
 	) {
@@ -50,6 +53,7 @@ final class DexPokemonModel
 		$this->pokemonRepository = $pokemonRepository;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->dexAbilityRepository = $dexAbilityRepository;
+		$this->dexPokemonMatchupsModel = $dexPokemonMatchupsModel;
 		$this->dexVgRepository = $dexVgRepository;
 		$this->dexPokemonMovesModel = $dexPokemonMovesModel;
 	}
@@ -89,6 +93,14 @@ final class DexPokemonModel
 			$generationId,
 			$pokemon->getId(),
 			$languageId
+		);
+
+		// Set the Pokémon's matchups.
+		$this->dexPokemonMatchupsModel->setData(
+			$generationId,
+			$pokemon->getId(),
+			$languageId,
+			$this->abilities
 		);
 
 		// Get the version groups this Pokémon has appeared in.
@@ -140,6 +152,16 @@ final class DexPokemonModel
 	public function getAbilities() : array
 	{
 		return $this->abilities;
+	}
+
+	/**
+	 * Get the dex Pokémon matchups model.
+	 *
+	 * @return DexPokemonMatchupsModel
+	 */
+	public function getDexPokemonMatchupsModel() : DexPokemonMatchupsModel
+	{
+		return $this->dexPokemonMatchupsModel;
 	}
 
 	/**
