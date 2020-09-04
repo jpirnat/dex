@@ -5,7 +5,6 @@ namespace Jp\Dex\Domain\Stats\Usage;
 
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface UsageRatedPokemonRepositoryInterface
 {
@@ -29,21 +28,4 @@ interface UsageRatedPokemonRepositoryInterface
 	 * @return void
 	 */
 	public function save(UsageRatedPokemon $usageRatedPokemon) : void;
-
-	/**
-	 * Get usage rated Pokémon records by their format, rating, and Pokémon.
-	 * Use this to create a trend line for a Pokémon's usage in a format.
-	 * Indexed and sorted by month.
-	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return UsageRatedPokemon[]
-	 */
-	public function getByFormatAndRatingAndPokemon(
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId
-	) : array;
 }

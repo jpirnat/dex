@@ -9,7 +9,6 @@ use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Trends\Lines\TrendPoint;
 use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
-use Jp\Dex\Domain\Stats\UsageDataInterface;
 
 final class TrendPointCalculator
 {
@@ -29,7 +28,7 @@ final class TrendPointCalculator
 	 * Get the first date in this array of usage datas. Assume the array is
 	 * indexed and sorted by month.
 	 *
-	 * @param UsageDataInterface[] $usageDatas
+	 * @param float[] $usageDatas
 	 * @param FormatId $formatId
 	 *
 	 * @return DateTime
@@ -49,15 +48,14 @@ final class TrendPointCalculator
 			return $month;
 		}
 
-		$usageData = reset($usageDatas);
-		return $usageData->getMonth();
+		return new DateTime(array_key_first($usageDatas));
 	}
 
 	/**
 	 * Get the final date in this array of usage datas. Assume the array is
 	 * indexed and sorted by month.
 	 *
-	 * @param UsageDataInterface[] $usageDatas
+	 * @param float[] $usageDatas
 	 * @param FormatId $formatId
 	 *
 	 * @return DateTime
@@ -77,17 +75,14 @@ final class TrendPointCalculator
 			return $month;
 		}
 
-		$usageData = end($usageDatas);
-		return $usageData->getMonth();
+		return new DateTime(array_key_last($usageDatas));
 	}
 
 	/**
 	 * Get the trend points from this series of usage datas.
 	 *
 	 * @param FormatId $formatId The format the data is from.
-	 * @param UsageDataInterface[] $usageDatas
-	 * @param string $method The method to call on a usage data object to get
-	 *     the point's value.
+	 * @param float[] $usageDatas Indexed by month ('YYYY-MM-DD')
 	 * @param float $default The default value for points without data.
 	 *
 	 * @return TrendPoint[]
@@ -95,7 +90,6 @@ final class TrendPointCalculator
 	public function getTrendPoints(
 		FormatId $formatId,
 		array $usageDatas,
-		string $method,
 		float $default
 	) : array {
 		// Get the first and final dates in the series.
@@ -114,8 +108,7 @@ final class TrendPointCalculator
 			// Get this month's usage percent, if one exists.
 			$value = $default;
 			if (isset($usageDatas[$month])) {
-				$usageData = $usageDatas[$month];
-				$value = $usageData->$method();
+				$value = $usageDatas[$month];
 			}
 
 			$trendPoints[] = new TrendPoint($date, $value);

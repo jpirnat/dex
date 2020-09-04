@@ -9,14 +9,14 @@ use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
+use Jp\Dex\Domain\Stats\StatsChartQueriesInterface;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageItemTrendLine;
-use Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonItemRepositoryInterface;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class UsageItemTrendGenerator
 {
-	private UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository;
+	private StatsChartQueriesInterface $statsChartQueries;
 	private PokemonNameRepositoryInterface $pokemonNameRepository;
 	private ItemNameRepositoryInterface $itemNameRepository;
 	private PokemonTypeRepositoryInterface $pokemonTypeRepository;
@@ -26,7 +26,7 @@ final class UsageItemTrendGenerator
 	/**
 	 * Constructor.
 	 *
-	 * @param UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository
+	 * @param StatsChartQueriesInterface $statsChartQueries
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param ItemNameRepositoryInterface $itemNameRepository
 	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
@@ -34,14 +34,14 @@ final class UsageItemTrendGenerator
 	 * @param TrendPointCalculator $trendPointCalculator
 	 */
 	public function __construct(
-		UsageRatedPokemonItemRepositoryInterface $usageRatedPokemonItemRepository,
+		StatsChartQueriesInterface $statsChartQueries,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		ItemNameRepositoryInterface $itemNameRepository,
 		PokemonTypeRepositoryInterface $pokemonTypeRepository,
 		TypeRepositoryInterface $typeRepository,
 		TrendPointCalculator $trendPointCalculator
 	) {
-		$this->usageRatedPokemonItemRepository = $usageRatedPokemonItemRepository;
+		$this->statsChartQueries = $statsChartQueries;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->itemNameRepository = $itemNameRepository;
 		$this->pokemonTypeRepository = $pokemonTypeRepository;
@@ -85,7 +85,7 @@ final class UsageItemTrendGenerator
 		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());
 
 		// Get the usage data.
-		$usageRatedPokemonItems = $this->usageRatedPokemonItemRepository->getByFormatAndRatingAndPokemonAndItem(
+		$usageDatas = $this->statsChartQueries->getUsageItem(
 			$format->getId(),
 			$rating,
 			$pokemonId,
@@ -95,8 +95,7 @@ final class UsageItemTrendGenerator
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
 			$format->getId(),
-			$usageRatedPokemonItems,
-			'getUsagePercent',
+			$usageDatas,
 			0
 		);
 

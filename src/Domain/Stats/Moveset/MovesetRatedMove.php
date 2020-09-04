@@ -10,10 +10,9 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
-use Jp\Dex\Domain\Stats\UsageDataInterface;
 use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
-final class MovesetRatedMove implements UsageDataInterface
+final class MovesetRatedMove
 {
 	use ValidateMonthTrait;
 

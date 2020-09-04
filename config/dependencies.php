@@ -280,6 +280,9 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Stats\StatNameRepositoryInterface::class, 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsAbilityPokemonRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Usage\StatsAbilityPokemonRepositoryInterface::class, $rule);
 
+$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsChartQueries::class];
+$dice = $dice->addRule(\Jp\Dex\Domain\Stats\StatsChartQueriesInterface::class, $rule);
+
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsItemPokemonRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Usage\StatsItemPokemonRepositoryInterface::class, $rule);
 
@@ -330,15 +333,6 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface::class, 
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsageRatedAveragedPokemonRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonAbilityRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonAbilityRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonItemRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonItemRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonMoveRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\Derived\UsageRatedPokemonMoveRepositoryInterface::class, $rule);
 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface::class, $rule);

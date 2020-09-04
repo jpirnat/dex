@@ -7,14 +7,14 @@ use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\StatsChartQueriesInterface;
 use Jp\Dex\Domain\Stats\Trends\Lines\LeadUsageTrendLine;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class LeadUsageTrendGenerator
 {
-	private LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository;
+	private StatsChartQueriesInterface $statsChartQueries;
 	private PokemonNameRepositoryInterface $pokemonNameRepository;
 	private PokemonTypeRepositoryInterface $pokemonTypeRepository;
 	private TypeRepositoryInterface $typeRepository;
@@ -23,20 +23,20 @@ final class LeadUsageTrendGenerator
 	/**
 	 * Constructor.
 	 *
-	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
+	 * @param StatsChartQueriesInterface $statsChartQueries
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
 	 * @param TypeRepositoryInterface $typeRepository
 	 * @param TrendPointCalculator $trendPointCalculator
 	 */
 	public function __construct(
-		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
+		StatsChartQueriesInterface $statsChartQueries,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		PokemonTypeRepositoryInterface $pokemonTypeRepository,
 		TypeRepositoryInterface $typeRepository,
 		TrendPointCalculator $trendPointCalculator
 	) {
-		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
+		$this->statsChartQueries = $statsChartQueries;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->pokemonTypeRepository = $pokemonTypeRepository;
 		$this->typeRepository = $typeRepository;
@@ -73,7 +73,7 @@ final class LeadUsageTrendGenerator
 		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());
 
 		// Get the usage data.
-		$leadsRatedPokemons = $this->leadsRatedPokemonRepository->getByFormatAndRatingAndPokemon(
+		$usageDatas = $this->statsChartQueries->getLeadUsage(
 			$format->getId(),
 			$rating,
 			$pokemonId
@@ -82,8 +82,7 @@ final class LeadUsageTrendGenerator
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
 			$format->getId(),
-			$leadsRatedPokemons,
-			'getUsagePercent',
+			$usageDatas,
 			0
 		);
 

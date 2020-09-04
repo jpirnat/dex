@@ -5,7 +5,6 @@ namespace Jp\Dex\Domain\Stats\Leads;
 
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface LeadsRatedPokemonRepositoryInterface
 {
@@ -29,21 +28,4 @@ interface LeadsRatedPokemonRepositoryInterface
 	 * @return void
 	 */
 	public function save(LeadsRatedPokemon $leadsRatedPokemon) : void;
-
-	/**
-	 * Get leads rated Pokémon records by their format, rating, and Pokémon.
-	 * Use this to create a trend line for a Pokémon's lead usage in a format.
-	 * Indexed and sorted by month.
-	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return LeadsRatedPokemon[]
-	 */
-	public function getByFormatAndRatingAndPokemon(
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId
-	) : array;
 }

@@ -9,14 +9,14 @@ use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface;
+use Jp\Dex\Domain\Stats\StatsChartQueriesInterface;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetAbilityTrendLine;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class MovesetAbilityTrendGenerator
 {
-	private MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository;
+	private StatsChartQueriesInterface $statsChartQueries;
 	private PokemonNameRepositoryInterface $pokemonNameRepository;
 	private AbilityNameRepositoryInterface $abilityNameRepository;
 	private PokemonTypeRepositoryInterface $pokemonTypeRepository;
@@ -26,7 +26,7 @@ final class MovesetAbilityTrendGenerator
 	/**
 	 * Constructor.
 	 *
-	 * @param MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository
+	 * @param StatsChartQueriesInterface $statsChartQueries
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param AbilityNameRepositoryInterface $abilityNameRepository
 	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
@@ -34,14 +34,14 @@ final class MovesetAbilityTrendGenerator
 	 * @param TrendPointCalculator $trendPointCalculator
 	 */
 	public function __construct(
-		MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository,
+		StatsChartQueriesInterface $statsChartQueries,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		AbilityNameRepositoryInterface $abilityNameRepository,
 		PokemonTypeRepositoryInterface $pokemonTypeRepository,
 		TypeRepositoryInterface $typeRepository,
 		TrendPointCalculator $trendPointCalculator
 	) {
-		$this->movesetRatedAbilityRepository = $movesetRatedAbilityRepository;
+		$this->statsChartQueries = $statsChartQueries;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->abilityNameRepository = $abilityNameRepository;
 		$this->pokemonTypeRepository = $pokemonTypeRepository;
@@ -85,7 +85,7 @@ final class MovesetAbilityTrendGenerator
 		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());
 
 		// Get the usage data.
-		$movesetRatedAbilities = $this->movesetRatedAbilityRepository->getByFormatAndRatingAndPokemonAndAbility(
+		$usageDatas = $this->statsChartQueries->getMovesetAbility(
 			$format->getId(),
 			$rating,
 			$pokemonId,
@@ -95,8 +95,7 @@ final class MovesetAbilityTrendGenerator
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
 			$format->getId(),
-			$movesetRatedAbilities,
-			'getPercent',
+			$usageDatas,
 			0
 		);
 

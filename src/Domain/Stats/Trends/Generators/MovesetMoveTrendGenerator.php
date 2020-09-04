@@ -10,14 +10,14 @@ use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\StatsChartQueriesInterface;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetMoveTrendLine;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class MovesetMoveTrendGenerator
 {
-	private MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository;
+	private StatsChartQueriesInterface $statsChartQueries;
 	private PokemonNameRepositoryInterface $pokemonNameRepository;
 	private MoveNameRepositoryInterface $moveNameRepository;
 	private PokemonTypeRepositoryInterface $pokemonTypeRepository;
@@ -28,7 +28,7 @@ final class MovesetMoveTrendGenerator
 	/**
 	 * Constructor.
 	 *
-	 * @param MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository
+	 * @param StatsChartQueriesInterface $statsChartQueries
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param MoveNameRepositoryInterface $moveNameRepository
 	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
@@ -37,7 +37,7 @@ final class MovesetMoveTrendGenerator
 	 * @param TrendPointCalculator $trendPointCalculator
 	 */
 	public function __construct(
-		MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository,
+		StatsChartQueriesInterface $statsChartQueries,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		MoveNameRepositoryInterface $moveNameRepository,
 		PokemonTypeRepositoryInterface $pokemonTypeRepository,
@@ -45,7 +45,7 @@ final class MovesetMoveTrendGenerator
 		GenerationMoveRepositoryInterface $generationMoveRepository,
 		TrendPointCalculator $trendPointCalculator
 	) {
-		$this->movesetRatedMoveRepository = $movesetRatedMoveRepository;
+		$this->statsChartQueries = $statsChartQueries;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->moveNameRepository = $moveNameRepository;
 		$this->pokemonTypeRepository = $pokemonTypeRepository;
@@ -97,7 +97,7 @@ final class MovesetMoveTrendGenerator
 		$moveType = $this->typeRepository->getById($generationMove->getTypeId());
 
 		// Get the usage data.
-		$movesetRatedMoves = $this->movesetRatedMoveRepository->getByFormatAndRatingAndPokemonAndMove(
+		$usageDatas = $this->statsChartQueries->getMovesetMove(
 			$format->getId(),
 			$rating,
 			$pokemonId,
@@ -107,8 +107,7 @@ final class MovesetMoveTrendGenerator
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
 			$format->getId(),
-			$movesetRatedMoves,
-			'getPercent',
+			$usageDatas,
 			0
 		);
 

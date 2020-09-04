@@ -7,14 +7,14 @@ use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
+use Jp\Dex\Domain\Stats\StatsChartQueriesInterface;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageTrendLine;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class UsageTrendGenerator
 {
-	private UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository;
+	private StatsChartQueriesInterface $statsChartQueries;
 	private PokemonNameRepositoryInterface $pokemonNameRepository;
 	private PokemonTypeRepositoryInterface $pokemonTypeRepository;
 	private TypeRepositoryInterface $typeRepository;
@@ -23,20 +23,20 @@ final class UsageTrendGenerator
 	/**
 	 * Constructor.
 	 *
-	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
+	 * @param StatsChartQueriesInterface $statsChartQueries
 	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
 	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
 	 * @param TypeRepositoryInterface $typeRepository
 	 * @param TrendPointCalculator $trendPointCalculator
 	 */
 	public function __construct(
-		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
+		StatsChartQueriesInterface $statsChartQueries,
 		PokemonNameRepositoryInterface $pokemonNameRepository,
 		PokemonTypeRepositoryInterface $pokemonTypeRepository,
 		TypeRepositoryInterface $typeRepository,
 		TrendPointCalculator $trendPointCalculator
 	) {
-		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
+		$this->statsChartQueries = $statsChartQueries;
 		$this->pokemonNameRepository = $pokemonNameRepository;
 		$this->pokemonTypeRepository = $pokemonTypeRepository;
 		$this->typeRepository = $typeRepository;
@@ -73,7 +73,7 @@ final class UsageTrendGenerator
 		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());
 
 		// Get the usage data.
-		$usageRatedPokemons = $this->usageRatedPokemonRepository->getByFormatAndRatingAndPokemon(
+		$usageDatas = $this->statsChartQueries->getUsage(
 			$format->getId(),
 			$rating,
 			$pokemonId
@@ -82,8 +82,7 @@ final class UsageTrendGenerator
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
 			$format->getId(),
-			$usageRatedPokemons,
-			'getUsagePercent',
+			$usageDatas,
 			0
 		);
 

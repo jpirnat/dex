@@ -5,7 +5,6 @@ namespace Jp\Dex\Infrastructure;
 
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemon;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use PDO;
@@ -85,55 +84,5 @@ final class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepo
 		$stmt->bindValue(':rank', $leadsRatedPokemon->getRank(), PDO::PARAM_INT);
 		$stmt->bindValue(':usage_percent', $leadsRatedPokemon->getUsagePercent(), PDO::PARAM_STR);
 		$stmt->execute();
-	}
-
-	/**
-	 * Get leads rated Pokémon records by their format, rating, and Pokémon.
-	 * Use this to create a trend line for a Pokémon's lead usage in a format.
-	 * Indexed and sorted by month.
-	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return LeadsRatedPokemon[]
-	 */
-	public function getByFormatAndRatingAndPokemon(
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId
-	) : array {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`month`,
-				`rank`,
-				`usage_percent`
-			FROM `leads_rated_pokemon`
-			WHERE `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id
-			ORDER BY `month`'
-		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$leadsRatedPokemons = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$leadsRatedPokemon = new LeadsRatedPokemon(
-				new DateTime($result['month']),
-				$formatId,
-				$rating,
-				$pokemonId,
-				$result['rank'],
-				(float) $result['usage_percent']
-			);
-
-			$leadsRatedPokemons[$result['month']] = $leadsRatedPokemon;
-		}
-
-		return $leadsRatedPokemons;
 	}
 }

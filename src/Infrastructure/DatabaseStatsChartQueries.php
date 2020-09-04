@@ -1,0 +1,370 @@
+<?php
+declare(strict_types=1);
+
+namespace Jp\Dex\Infrastructure;
+
+use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Items\ItemId;
+use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Stats\StatsChartQueriesInterface;
+use PDO;
+
+final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
+{
+	private PDO $db;
+
+	/**
+	 * Constructor.
+	 *
+	 * @param PDO $db
+	 */
+	public function __construct(PDO $db)
+	{
+		$this->db = $db;
+	}
+
+	/**
+	 * Get usage data for the usage chart.
+	 *
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
+	 */
+	public function getUsage(
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`month`,
+				`usage_percent`
+			FROM `usage_rated_pokemon`
+			WHERE `format_id` = :format_id
+				AND `rating` = :rating
+				AND `pokemon_id` = :pokemon_id
+			ORDER BY `month`'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$usageDatas = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$usageDatas[$result['month']] = (float) $result['usage_percent'];
+		}
+
+		return $usageDatas;
+	}
+
+	/**
+	 * Get usage data for the lead usage chart.
+	 *
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
+	 */
+	public function getLeadUsage(
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`month`,
+				`usage_percent`
+			FROM `leads_rated_pokemon`
+			WHERE `format_id` = :format_id
+				AND `rating` = :rating
+				AND `pokemon_id` = :pokemon_id
+			ORDER BY `month`'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$usageDatas = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$usageDatas[$result['month']] = (float) $result['usage_percent'];
+		}
+
+		return $usageDatas;
+	}
+
+	/**
+	 * Get usage data for the moveset ability chart.
+	 *
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 * @param AbilityId $abilityId
+	 *
+	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
+	 */
+	public function getMovesetAbility(
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId,
+		AbilityId $abilityId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`month`,
+				`percent`
+			FROM `moveset_rated_abilities`
+			WHERE `format_id` = :format_id
+				AND `rating` = :rating
+				AND `pokemon_id` = :pokemon_id
+				AND `ability_id` = :ability_id
+			ORDER BY `month`'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$usageDatas = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$usageDatas[$result['month']] = (float) $result['percent'];
+		}
+
+		return $usageDatas;
+	}
+
+	/**
+	 * Get usage data for the moveset item chart.
+	 *
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 * @param ItemId $itemId
+	 *
+	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
+	 */
+	public function getMovesetItem(
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId,
+		ItemId $itemId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`month`,
+				`percent`
+			FROM `moveset_rated_items`
+			WHERE `format_id` = :format_id
+				AND `rating` = :rating
+				AND `pokemon_id` = :pokemon_id
+				AND `item_id` = :item_id
+			ORDER BY `month`'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$usageDatas = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$usageDatas[$result['month']] = (float) $result['percent'];
+		}
+
+		return $usageDatas;
+	}
+
+	/**
+	 * Get usage data for the moveset move chart.
+	 *
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 * @param MoveId $moveId
+	 *
+	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
+	 */
+	public function getMovesetMove(
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId,
+		MoveId $moveId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`month`,
+				`percent`
+			FROM `moveset_rated_moves`
+			WHERE `format_id` = :format_id
+				AND `rating` = :rating
+				AND `pokemon_id` = :pokemon_id
+				AND `move_id` = :move_id
+			ORDER BY `month`'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$usageDatas = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$usageDatas[$result['month']] = (float) $result['percent'];
+		}
+
+		return $usageDatas;
+	}
+
+	/**
+	 * Get usage data for the usage ability chart.
+	 *
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 * @param AbilityId $abilityId
+	 *
+	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
+	 */
+	public function getUsageAbility(
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId,
+		AbilityId $abilityId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`u`.`month`,
+				`u`.`usage_percent` * `m`.`percent` / 100 AS `usage_percent`
+			FROM `usage_rated_pokemon` AS `u`
+			INNER JOIN `moveset_rated_abilities` AS `m`
+				ON `u`.`month` = `m`.`month`
+				AND `u`.`format_id` = `m`.`format_id`
+				AND `u`.`rating` = `m`.`rating`
+				AND `u`.`pokemon_id` = `m`.`pokemon_id`
+			WHERE `u`.`format_id` = :format_id
+				AND `u`.`rating` = :rating
+				AND `u`.`pokemon_id` = :pokemon_id
+				AND `m`.`ability_id` = :ability_id
+			ORDER BY `u`.`month`'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$usageDatas = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$usageDatas[$result['month']] = (float) $result['usage_percent'];
+		}
+
+		return $usageDatas;
+	}
+
+	/**
+	 * Get usage data for the usage item chart.
+	 *
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 * @param ItemId $itemId
+	 *
+	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
+	 */
+	public function getUsageItem(
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId,
+		ItemId $itemId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`u`.`month`,
+				`u`.`usage_percent` * `m`.`percent` / 100 AS `usage_percent`
+			FROM `usage_rated_pokemon` AS `u`
+			INNER JOIN `moveset_rated_items` AS `m`
+				ON `u`.`month` = `m`.`month`
+				AND `u`.`format_id` = `m`.`format_id`
+				AND `u`.`rating` = `m`.`rating`
+				AND `u`.`pokemon_id` = `m`.`pokemon_id`
+			WHERE `u`.`format_id` = :format_id
+				AND `u`.`rating` = :rating
+				AND `u`.`pokemon_id` = :pokemon_id
+				AND `m`.`item_id` = :item_id
+			ORDER BY `u`.`month`'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$usageDatas = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$usageDatas[$result['month']] = (float) $result['usage_percent'];
+		}
+
+		return $usageDatas;
+	}
+
+	/**
+	 * Get usage data for the usage move chart.
+	 *
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 * @param MoveId $moveId
+	 *
+	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
+	 */
+	public function getUsageMove(
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId,
+		MoveId $moveId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`u`.`month`,
+				`u`.`usage_percent` * `m`.`percent` / 100 AS `usage_percent`
+			FROM `usage_rated_pokemon` AS `u`
+			INNER JOIN `moveset_rated_moves` AS `m`
+				ON `u`.`month` = `m`.`month`
+				AND `u`.`format_id` = `m`.`format_id`
+				AND `u`.`rating` = `m`.`rating`
+				AND `u`.`pokemon_id` = `m`.`pokemon_id`
+			WHERE `u`.`format_id` = :format_id
+				AND `u`.`rating` = :rating
+				AND `u`.`pokemon_id` = :pokemon_id
+				AND `m`.`move_id` = :move_id
+			ORDER BY `u`.`month`'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$usageDatas = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$usageDatas[$result['month']] = (float) $result['usage_percent'];
+		}
+
+		return $usageDatas;
+	}
+}
