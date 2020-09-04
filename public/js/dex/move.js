@@ -10,14 +10,15 @@ const app = new Vue({
 		breadcrumbs: [],
 		generations: [],
 		move: {},
-		matchups: [],
+		types: [],
+		damageDealt: {},
 		flags: [],
 		methods: [],
 		versionGroups: [],
 		showAbilities: true,
 		stats: [],
 
-		hoverMatchupMultiplier: null,
+		hoverDamageDealt: null,
 
 		showOlderGames: false,
 	},
@@ -56,7 +57,8 @@ const app = new Vue({
 				this.breadcrumbs = data.breadcrumbs;
 				this.generations = data.generations;
 				this.move = data.move;
-				this.matchups = data.matchups;
+				this.types = data.types;
+				this.damageDealt = data.damageDealt;
 				this.flags = data.flags;
 				this.methods = data.methods;
 				this.versionGroups = data.versionGroups;
@@ -71,11 +73,11 @@ const app = new Vue({
 		});
 	},
 	methods: {
-		onMatchupHover(matchup) {
-			this.hoverMatchupMultiplier = matchup.multiplier;
+		onDamageDealtHover(multiplier) {
+			this.hoverDamageDealt = multiplier;
 		},
-		onMatchupUnhover() {
-			this.hoverMatchupMultiplier = null;
+		onDamageDealtUnhover() {
+			this.hoverDamageDealt = null;
 		},
 		toggleOlderGames() {
 			this.showOlderGames = !this.showOlderGames;

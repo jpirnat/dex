@@ -41,11 +41,8 @@ final class DexMoveView
 
 		$move = $this->dexMoveModel->getMove();
 
-		$matchups = $this->dexMoveModel->getMatchups();
-		foreach ($matchups as $i => $matchup) {
-			$t = $this->dexFormatter->formatDexType($matchup['type']);
-			$matchups[$i]['type'] = $t;
-		}
+		$types = $this->dexMoveModel->getTypes();
+		$damageDealt = $this->dexMoveModel->getDamageDealt();
 
 		$flags = $this->dexMoveModel->getFlags();
 
@@ -88,7 +85,8 @@ final class DexMoveView
 				'generations' => $this->dexFormatter->formatGenerations($generations),
 
 				'move' => $move,
-				'matchups' => $matchups,
+				'types' => $this->dexFormatter->formatDexTypes($types),
+				'damageDealt' => $damageDealt,
 				'flags' => $flags,
 
 				'methods' => $this->formatDexMovePokemonMethods($methods),

@@ -11,8 +11,8 @@ use Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
+use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
-use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
@@ -34,10 +34,12 @@ final class DexMoveModel
 	/** @var array $move */
 	private array $move = [];
 
-	/** @var array $matchups */
-	private array $matchups = [];
+	/** @var DexType[] $types */
+	private array $types = [];
 
-	/** @var array $flags */
+	/** @var float[] $damageDealt */
+	private array $damageDealt = [];
+
 	private array $flags = [];
 
 	/** @var DexVersionGroup[] $versionGroups */
@@ -158,7 +160,8 @@ final class DexMoveModel
 		MoveId $moveId,
 		LanguageId $languageId
 	) : void {
-		$this->matchups = [];
+		$this->types = [];
+		$this->damageDealt = [];
 
 		$generationMove = $this->generationMoveRepository->getByGenerationAndMove(
 			$generationId,
@@ -169,25 +172,24 @@ final class DexMoveModel
 			return;
 		}
 
-		$types = $this->dexTypeRepository->getMainByGeneration($generationId, $languageId);
+		$this->types = $this->dexTypeRepository->getMainByGeneration(
+			$generationId,
+			$languageId
+		);
 		$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
 			$generationId,
 			$generationMove->getTypeId()
 		);
 		foreach ($attackingMatchups as $matchup) {
-			$defendingType = $types[$matchup->getDefendingTypeId()->value()];
-			$multiplier = $matchup->getMultiplier();
+			$defendingTypeId = $matchup->getDefendingTypeId()->value();
+			$defendingType = $this->types[$defendingTypeId];
+			$identifier = $defendingType->getIdentifier();
+			$this->damageDealt[$identifier] = $matchup->getMultiplier();
+		}
 
-			if ($moveId->value() === MoveId::FREEZE_DRY
-				&& $defendingType->getId()->value() === TypeId::WATER
-			) {
-				$multiplier = 2;
-			}
-
-			$this->matchups[] = [
-				'type' => $defendingType,
-				'multiplier' => $multiplier,
-			];
+		if ($moveId->value() === MoveId::FREEZE_DRY) {
+			// TODO: get this type identifier from somewhere else.
+			$this->damageDealt['water'] = 2;
 		}
 	}
 
@@ -213,13 +215,23 @@ final class DexMoveModel
 	}
 
 	/**
-	 * Get the matchups.
+	 * Get the types.
 	 *
-	 * @return array
+	 * @return DexType[]
 	 */
-	public function getMatchups() : array
+	public function getTypes() : array
 	{
-		return $this->matchups;
+		return $this->types;
+	}
+
+	/**
+	 * Get the damage dealt matchups.
+	 *
+	 * @return float[]
+	 */
+	public function getDamageDealt() : array
+	{
+		return $this->damageDealt;
 	}
 
 	/**

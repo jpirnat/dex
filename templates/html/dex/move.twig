@@ -26,31 +26,30 @@
 	</div>
 
 	<template v-if="loaded">
-		<template v-if="matchups.length > 0">
+		<template v-if="types.length > 0">
 			<h2 class="dex-section__title">Matchups</h2>
 			<div>
 				<h3 class="dex-type__matchups-title">Damage Dealt:</h3>
 				<ul class="dex-type__matchups">
-					<li v-for="matchup in matchups" :key="matchup.type.identifier"
+					<li v-for="t in types" :key="t.identifier"
 						class="dex-type__matchup" :class="{
-							'dex-type__matchup--fade': hoverMatchupMultiplier !== null && hoverMatchupMultiplier !== matchup.multiplier,
+							'dex-type__matchup--fade': hoverDamageDealt !== null && hoverDamageDealt !== damageDealt[t.identifier],
 						}"
-						@mouseover="onMatchupHover(matchup)"
-						@mouseleave="onMatchupUnhover"
+						@mouseover="onDamageDealtHover(damageDealt[t.identifier])"
+						@mouseleave="onDamageDealtUnhover"
 					>
-						<a :href="'/dex/' + generation.identifier + '/types/' + matchup.type.identifier">
-							<img :src="'/images/types/' + matchup.type.icon" :alt="matchup.type.name">
+						<a :href="'/dex/' + generation.identifier + '/types/' + t.identifier">
+							<img :src="'/images/types/' + t.icon" :alt="t.name">
 						</a>
 						<span :class="{
-							'dex-type__matchup--neutral': matchup.multiplier === 1,
-							'dex-type__matchup--favorable': matchup.multiplier === 2,
-							'dex-type__matchup--unfavorable': matchup.multiplier === .5,
-							'dex-type__matchup--no-effect': matchup.multiplier === 0,
+							'dex-type__matchup--neutral': damageDealt[t.identifier] === 1,
+							'dex-type__matchup--favorable': damageDealt[t.identifier] > 1,
+							'dex-type__matchup--unfavorable': 0 < damageDealt[t.identifier] && damageDealt[t.identifier] < 1,
+							'dex-type__matchup--no-effect': damageDealt[t.identifier] === 0,
 						}">
-							<template v-if="matchup.multiplier === 1">1</template>
-							<template v-else-if="matchup.multiplier === 2">2</template>
-							<template v-else-if="matchup.multiplier === .5">½</template>
-							<template v-else-if="matchup.multiplier === 0">0</template>
+							<template v-if="damageDealt[t.identifier] === 1">1</template>
+							<template v-else-if="damageDealt[t.identifier] === .5">½</template>
+							<template v-else>×{{ damageDealt[t.identifier] }}</template>
 						</span>
 					</li>
 				</ul>
