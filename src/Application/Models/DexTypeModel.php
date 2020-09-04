@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
+use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
@@ -24,7 +25,16 @@ final class DexTypeModel
 
 
 	private array $type = [];
-	private array $matchups = [];
+
+	/** @var DexType[] $dexType */
+	private array $types = [];
+
+	/** @var float[] $damageDealt */
+	private array $damageDealt = [];
+
+	/** @var float[] $damageTaken */
+	private array $damageTaken = [];
+
 	private array $stats = [];
 
 	/** @var DexPokemon[] $pokemon */
@@ -94,23 +104,31 @@ final class DexTypeModel
 		];
 
 		// Get the type matchups.
-		$this->matchups = ['whenAttacking' => [], 'whenDefending' => []];
-		$types = $this->dexTypeRepository->getMainByGeneration($generationId, $languageId);
-		$attackingMatchups = $this->typeMatchupRepository->getByAttackingType($generationId, $type->getId());
-		$defendingMatchups = $this->typeMatchupRepository->getByDefendingType($generationId, $type->getId());
+		$this->types = $this->dexTypeRepository->getMainByGeneration(
+			$generationId,
+			$languageId
+		);
+		$this->damageDealt = [];
+		$this->damageTaken = [];
+		$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
+			$generationId,
+			$type->getId()
+		);
+		$defendingMatchups = $this->typeMatchupRepository->getByDefendingType(
+			$generationId,
+			$type->getId()
+		);
 		foreach ($attackingMatchups as $matchup) {
-			$defendingType = $types[$matchup->getDefendingTypeId()->value()];
-			$this->matchups['whenAttacking'][] = [
-				'type' => $defendingType,
-				'multiplier' => $matchup->getMultiplier(),
-			];
+			$defendingTypeId = $matchup->getDefendingTypeId()->value();
+			$defendingType = $this->types[$defendingTypeId];
+			$identifier = $defendingType->getIdentifier();
+			$this->damageDealt[$identifier] = $matchup->getMultiplier();
 		}
 		foreach ($defendingMatchups as $matchup) {
-			$attackingType = $types[$matchup->getAttackingTypeId()->value()];
-			$this->matchups['whenDefending'][] = [
-				'type' => $attackingType,
-				'multiplier' => $matchup->getMultiplier(),
-			];
+			$attackingTypeId = $matchup->getAttackingTypeId()->value();
+			$attackingType = $this->types[$attackingTypeId];
+			$identifier = $attackingType->getIdentifier();
+			$this->damageTaken[$identifier] = $matchup->getMultiplier();
 		}
 
 		// Get stat name abbreviations.
@@ -152,13 +170,33 @@ final class DexTypeModel
 	}
 
 	/**
-	 * Get the matchups.
+	 * Get the types.
 	 *
-	 * @return array
+	 * @return DexType[]
 	 */
-	public function getMatchups() : array
+	public function getTypes() : array
 	{
-		return $this->matchups;
+		return $this->types;
+	}
+
+	/**
+	 * Get the damage dealt matchups.
+	 *
+	 * @return float[]
+	 */
+	public function getDamageDealt() : array
+	{
+		return $this->damageDealt;
+	}
+
+	/**
+	 * Get the damage taken matchups.
+	 *
+	 * @return float[]
+	 */
+	public function getDamageTaken() : array
+	{
+		return $this->damageTaken;
 	}
 
 	/**

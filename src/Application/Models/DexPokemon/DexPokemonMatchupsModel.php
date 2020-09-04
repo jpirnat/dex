@@ -23,7 +23,6 @@ final class DexPokemonMatchupsModel
 	/** @var float[][] $damageTaken */
 	private array $damageTaken = [];
 
-	/** @var array $abilities */
 	private array $abilities = [];
 
 

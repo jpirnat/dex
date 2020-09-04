@@ -10,15 +10,17 @@ const app = new Vue({
 		breadcrumbs: [],
 		generations: [],
 		type: {},
-		matchups: [],
+		types: [],
+		damageDealt: {},
+		damageTaken: {},
 		pokemons: [],
 		showAbilities: true,
 		stats: [],
 		moves: [],
 		showMoveDescriptions: true,
 
-		hoverAttackingMultiplier: null,
-		hoverDefendingMultiplier: null,
+		hoverDamageDealt: null,
+		hoverDamageTaken: null,
 	},
 	created() {
 		const url = new URL(window.location);
@@ -37,7 +39,9 @@ const app = new Vue({
 				this.breadcrumbs = data.breadcrumbs;
 				this.generations = data.generations;
 				this.type = data.type;
-				this.matchups = data.matchups;
+				this.types = data.types;
+				this.damageDealt = data.damageDealt;
+				this.damageTaken = data.damageTaken;
 				this.pokemons = data.pokemons;
 				this.showAbilities = data.showAbilities;
 				this.stats = data.stats;
@@ -49,17 +53,17 @@ const app = new Vue({
 		});
 	},
 	methods: {
-		onMatchupAttackingHover(matchup) {
-			this.hoverAttackingMultiplier = matchup.multiplier;
+		onDamageDealtHover(multiplier) {
+			this.hoverDamageDealt = multiplier;
 		},
-		onMatchupDefendingHover(matchup) {
-			this.hoverDefendingMultiplier = matchup.multiplier;
+		onDamageTakenHover(multiplier) {
+			this.hoverDamageTaken = multiplier;
 		},
-		onMatchupAttackingUnhover() {
-			this.hoverAttackingMultiplier = null;
+		onDamageDealtUnhover() {
+			this.hoverDamageDealt = null;
 		},
-		onMatchupDefendingUnhover() {
-			this.hoverDefendingMultiplier = null;
+		onDamageTakenUnhover() {
+			this.hoverDamageTaken = null;
 		},
 	},
 });

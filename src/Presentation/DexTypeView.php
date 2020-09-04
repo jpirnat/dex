@@ -38,16 +38,10 @@ final class DexTypeView
 		$generations = $generationModel->getGenerations();
 
 		$type = $this->dexTypeModel->getType();
+		$types = $this->dexTypeModel->getTypes();
 
-		$matchups = $this->dexTypeModel->getMatchups();
-		foreach ($matchups['whenAttacking'] as $i => $matchup) {
-			$t = $this->dexFormatter->formatDexType($matchup['type']);
-			$matchups['whenAttacking'][$i]['type'] = $t;
-		}
-		foreach ($matchups['whenDefending'] as $i => $matchup) {
-			$t = $this->dexFormatter->formatDexType($matchup['type']);
-			$matchups['whenDefending'][$i]['type'] = $t;
-		}
+		$damageDealt = $this->dexTypeModel->getDamageDealt();
+		$damageTaken = $this->dexTypeModel->getDamageTaken();
 
 		$stats = $this->dexTypeModel->getStats();
 		$showAbilities = $generation->getId()->value() >= 3;
@@ -86,7 +80,9 @@ final class DexTypeView
 					'identifier' => $type['identifier'],
 				],
 
-				'matchups' => $matchups,
+				'types' => $this->dexFormatter->formatDexTypes($types),
+				'damageDealt' => $damageDealt,
+				'damageTaken' => $damageTaken,
 
 				'pokemons' => $pokemon,
 				'showAbilities' => $showAbilities,
