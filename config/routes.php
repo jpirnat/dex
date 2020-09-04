@@ -369,9 +369,9 @@ $routes = [
 	]],
 
 	['POST', '/stats/chart', [
-		'controllerClass' => \Jp\Dex\Application\Controllers\TrendChartController::class,
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatsChartController::class,
 		'controllerMethod' => 'ajax',
-		'viewClass' => \Jp\Dex\Presentation\TrendChartView::class,
+		'viewClass' => \Jp\Dex\Presentation\StatsChartView::class,
 		'viewMethod' => 'ajax',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],

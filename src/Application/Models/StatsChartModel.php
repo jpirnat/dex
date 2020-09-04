@@ -21,7 +21,7 @@ use Jp\Dex\Domain\Stats\Trends\Generators\UsageMoveTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Generators\UsageTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Lines\TrendLine;
 
-final class TrendChartModel
+final class StatsChartModel
 {
 	private FormatRepositoryInterface $formatRepository;
 	private PokemonRepositoryInterface $pokemonRepository;

@@ -376,6 +376,7 @@ $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAbilityModel::class, $rul
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAveragedLeads\StatsAveragedLeadsModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAveragedPokemon\StatsAveragedPokemonModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAveragedUsage\StatsAveragedUsageModel::class, $rule);
+$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsChartModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsIndexModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsItemModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsLeadsModel::class, $rule);
@@ -383,7 +384,6 @@ $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsMonthModel::class, $rule)
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsMoveModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel::class, $rule);
 $dice = $dice->addRule(\Jp\Dex\Application\Models\StatsUsageModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\TrendChartModel::class, $rule);
 
 // Shared repositories
 $rule = [

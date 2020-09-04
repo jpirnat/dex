@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\TrendChartModel;
+use Jp\Dex\Application\Models\StatsChartModel;
 use Jp\Dex\Domain\Stats\Trends\Lines\LeadUsageTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetAbilityTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetItemTrendLine;
@@ -15,19 +15,19 @@ use Jp\Dex\Domain\Stats\Trends\Lines\UsageMoveTrendLine;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class TrendChartView
+final class StatsChartView
 {
-	private TrendChartModel $trendChartModel;
+	private StatsChartModel $statsChartModel;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param TrendChartModel $trendChartModel
+	 * @param StatsChartModel $statsChartModel
 	 */
 	public function __construct(
-		TrendChartModel $trendChartModel
+		StatsChartModel $statsChartModel
 	) {
-		$this->trendChartModel = $trendChartModel;
+		$this->statsChartModel = $statsChartModel;
 	}
 
 	/**
@@ -37,7 +37,7 @@ final class TrendChartView
 	 */
 	public function ajax() : ResponseInterface
 	{
-		$trendLines = $this->trendChartModel->getTrendLines();
+		$trendLines = $this->statsChartModel->getTrendLines();
 
 		$lines = [];
 		$index = 0;
@@ -63,7 +63,7 @@ final class TrendChartView
 			'data' => [
 				'chartTitle' => $this->getChartTitle(),
 				'lines' => $lines,
-				'locale' => $this->trendChartModel->getLanguage()->getLocale(),
+				'locale' => $this->statsChartModel->getLanguage()->getLocale(),
 			]
 		]);
 	}
@@ -75,15 +75,15 @@ final class TrendChartView
 	 */
 	private function getChartTitle() : string
 	{
-		$trendLines = $this->trendChartModel->getTrendLines();
+		$trendLines = $this->statsChartModel->getTrendLines();
 		if (count($trendLines) === 1) {
 			// Use the trend line's own chart title rather than generating one ourselves.
 			return $trendLines[0]->getChartTitle();
 		}
 
-		$similarities = $this->trendChartModel->getSimilarities();
+		$similarities = $this->statsChartModel->getSimilarities();
 
-		$trendLine = $this->trendChartModel->getTrendLines()[0];
+		$trendLine = $this->statsChartModel->getTrendLines()[0];
 		$formatName = $trendLine->getFormatName();
 		$rating = (string) $trendLine->getRating();
 		$pokemonName = $trendLine->getPokemonName()->getName();
@@ -141,13 +141,13 @@ final class TrendChartView
 	 */
 	private function getLineLabel(TrendLine $trendLine) : string
 	{
-		$trendLines = $this->trendChartModel->getTrendLines();
+		$trendLines = $this->statsChartModel->getTrendLines();
 		if (count($trendLines) === 1) {
 			// Use the trend line's own label rather than generating one ourselves.
 			return $trendLine->getLineLabel();
 		}
 
-		$differences = $this->trendChartModel->getDifferences();
+		$differences = $this->statsChartModel->getDifferences();
 
 		$formatName = $trendLine->getFormatName();
 		$rating = (string) $trendLine->getRating();
@@ -207,7 +207,7 @@ final class TrendChartView
 	 */
 	private function getLineColor(TrendLine $trendLine, int $index) : string
 	{
-		$differences = $this->trendChartModel->getDifferences();
+		$differences = $this->statsChartModel->getDifferences();
 		if ($differences === ['rating']) {
 			// Special case: For charts where we're looking at the same thing
 			// across different rating levels, each rating has a specific color.
