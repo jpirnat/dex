@@ -33,25 +33,16 @@ final class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeamma
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_rated_teammates` (
-				`month`,
-				`format_id`,
-				`rating`,
-				`pokemon_id`,
+				`usage_rated_pokemon_id`,
 				`teammate_id`,
 				`percent`
 			) VALUES (
-				:month,
-				:format_id,
-				:rating,
-				:pokemon_id,
+				:urp_id,
 				:teammate_id,
 				:percent
 			)'
 		);
-		$stmt->bindValue(':month', $movesetRatedTeammate->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':format_id', $movesetRatedTeammate->getFormatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $movesetRatedTeammate->getRating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $movesetRatedTeammate->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':urp_id', $movesetRatedTeammate->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':teammate_id', $movesetRatedTeammate->getTeammateId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':percent', $movesetRatedTeammate->getPercent(), PDO::PARAM_STR);
 		try {

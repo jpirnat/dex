@@ -32,10 +32,7 @@ final class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounter
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_rated_counters` (
-				`month`,
-				`format_id`,
-				`rating`,
-				`pokemon_id`,
+				`usage_rated_pokemon_id`,
 				`counter_id`,
 				`number1`,
 				`number2`,
@@ -43,10 +40,7 @@ final class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounter
 				`percent_knocked_out`,
 				`percent_switched_out`
 			) VALUES (
-				:month,
-				:format_id,
-				:rating,
-				:pokemon_id,
+				:urp_id,
 				:counter_id,
 				:number1,
 				:number2,
@@ -55,10 +49,7 @@ final class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounter
 				:percent_switched_out
 			)'
 		);
-		$stmt->bindValue(':month', $movesetRatedCounter->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':format_id', $movesetRatedCounter->getFormatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $movesetRatedCounter->getRating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $movesetRatedCounter->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':urp_id', $movesetRatedCounter->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':counter_id', $movesetRatedCounter->getCounterId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':number1', $movesetRatedCounter->getNumber1(), PDO::PARAM_STR);
 		$stmt->bindValue(':number2', $movesetRatedCounter->getNumber2(), PDO::PARAM_STR);

@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 use PDO;
 
 final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonRepositoryInterface
@@ -44,11 +45,13 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
-			FROM `moveset_rated_pokemon`
-			WHERE `month` = :month
-				AND `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id'
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_pokemon` AS `mrp`
+				ON `urp`.`id` = `mrp`.`usage_rated_pokemon_id`
+			WHERE `urp`.`month` = :month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
@@ -74,10 +77,12 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
-			FROM `moveset_rated_pokemon`
-			WHERE `month` = :month
-				AND `format_id` = :format_id
-				AND `rating` = :rating'
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_pokemon` AS `mrp`
+				ON `urp`.`id` = `mrp`.`usage_rated_pokemon_id`
+			WHERE `urp`.`month` = :month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
@@ -109,11 +114,13 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
-			FROM `moveset_rated_pokemon`
-			WHERE `month` BETWEEN :start AND :end
-				AND `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id'
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_pokemon` AS `mrp`
+				ON `urp`.`id` = `mrp`.`usage_rated_pokemon_id`
+			WHERE `urp`.`month` BETWEEN :start AND :end
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id'
 		);
 		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':end', $end->format('Y-m-01'), PDO::PARAM_STR);
@@ -143,12 +150,14 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`pokemon_id`,
+				`urp`.`pokemon_id`,
 				COUNT(*)
-			FROM `moveset_rated_pokemon`
-			WHERE `month` BETWEEN :start AND :end
-				AND `format_id` = :format_id
-				AND `rating` = :rating
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_pokemon` AS `mrp`
+				ON `urp`.`id` = `mrp`.`usage_rated_pokemon_id`
+			WHERE `urp`.`month` BETWEEN :start AND :end
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
 			GROUP BY `pokemon_id`'
 		);
 		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);
@@ -170,23 +179,14 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_rated_pokemon` (
-				`month`,
-				`format_id`,
-				`rating`,
-				`pokemon_id`,
+				`usage_rated_pokemon_id`,
 				`average_weight`
 			) VALUES (
-				:month,
-				:format_id,
-				:rating,
-				:pokemon_id,
+				:urp_id,
 				:average_weight
 			)'
 		);
-		$stmt->bindValue(':month', $movesetRatedPokemon->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':format_id', $movesetRatedPokemon->getFormatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $movesetRatedPokemon->getRating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $movesetRatedPokemon->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':urp_id', $movesetRatedPokemon->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':average_weight', $movesetRatedPokemon->getAverageWeight(), PDO::PARAM_STR);
 		$stmt->execute();
 	}
@@ -209,12 +209,15 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 	) : ?MovesetRatedPokemon {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`average_weight`
-			FROM `moveset_rated_pokemon`
-			WHERE `month` = :month
-				AND `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id
+       			`mrp`.`usage_rated_pokemon_id`,
+				`mrp`.`average_weight`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_pokemon` AS `mrp`
+				ON `urp`.`id` = `mrp`.`usage_rated_pokemon_id`
+			WHERE `urp`.`month` = :month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
 			LIMIT 1'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
@@ -229,10 +232,7 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 		}
 
 		$movesetRatedPokemon = new MovesetRatedPokemon(
-			$month,
-			$formatId,
-			$rating,
-			$pokemonId,
+			new UsageRatedPokemonId($result['usage_rated_pokemon_id']),
 			(float) $result['average_weight']
 		);
 

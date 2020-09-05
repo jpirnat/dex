@@ -103,7 +103,7 @@ final class StatsUsageModel
 			$this->format->getId()
 		);
 
-		// Does leads rated data exist for this month?
+		// Does leads data exist for this month?
 		$this->leadsDataExists = $this->leadsRatedPokemonRepository->hasAny(
 			$thisMonth,
 			$this->format->getId(),

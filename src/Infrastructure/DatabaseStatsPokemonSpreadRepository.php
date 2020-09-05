@@ -58,15 +58,17 @@ final class DatabaseStatsPokemonSpreadRepository implements StatsPokemonSpreadRe
 				`s`.`spd`,
 				`s`.`spe`,
 				`s`.`percent`
-			FROM `moveset_rated_spreads` AS `s`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_spreads` AS `s`
+				ON `urp`.`id` = `s`.`usage_rated_pokemon_id`
 			INNER JOIN `natures` AS `n`
 				ON `s`.`nature_id` = `n`.`id`
 			INNER JOIN `nature_names` AS `nn`
 				ON `n`.`id` = `nn`.`nature_id`
-			WHERE `s`.`month` = :month
-				AND `s`.`format_id` = :format_id
-				AND `s`.`rating` = :rating
-				AND `s`.`pokemon_id` = :pokemon_id
+			WHERE `urp`.`month` = :month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
 				AND `nn`.`language_id` = :language_id
 			ORDER BY `s`.`percent` DESC'
 		);

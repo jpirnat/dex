@@ -58,14 +58,16 @@ final class DatabaseMovesetRatedAveragedAbilityRepository implements MovesetRate
 
 		$stmt = $this->db->prepare(
 			'SELECT
-				`ability_id`,
-				SUM(`percent`) / :months AS `percent`
-			FROM `moveset_rated_abilities`
-			WHERE `month` BETWEEN :start AND :end
-				AND `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id
-			GROUP BY `ability_id`'
+				`mra`.`ability_id`,
+				SUM(`mra`.`percent`) / :months AS `percent`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_abilities` AS `mra`
+				ON `urp`.`id` = `mra`.`usage_rated_pokemon_id`
+			WHERE `urp`.`month` BETWEEN :start AND :end
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
+			GROUP BY `mra`.`ability_id`'
 		);
 		$stmt->bindValue(':months', $months, PDO::PARAM_INT);
 		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);

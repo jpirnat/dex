@@ -1,9 +1,6 @@
 create table if not exists `moveset_rated_counters`
 (
-`month` date not null,
-`format_id` tinyint unsigned not null,
-`rating` smallint unsigned not null,
-`pokemon_id` smallint unsigned not null,
+`usage_rated_pokemon_id` int unsigned not null,
 `counter_id` smallint unsigned not null,
 
 `number1` decimal(6, 3) unsigned not null,
@@ -12,17 +9,8 @@ create table if not exists `moveset_rated_counters`
 `percent_knocked_out` decimal(4, 1) unsigned not null,
 `percent_switched_out` decimal(4, 1) unsigned not null,
 
-primary key (
-	`month`,
-	`format_id`,
-	`rating`,
-	`pokemon_id`,
-	`counter_id`
-),
-foreign key (`format_id`) references `formats` (`id`)
-	on delete restrict
-	on update cascade,
-foreign key (`pokemon_id`) references `pokemon` (`id`)
+primary key (`usage_rated_pokemon_id`, `counter_id`),
+foreign key (`usage_rated_pokemon_id`) references `usage_rated_pokemon` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`counter_id`) references `pokemon` (`id`)

@@ -51,26 +51,30 @@ final class DatabaseStatsPokemonMoveRepository implements StatsPokemonMoveReposi
 
 		$stmt = $this->db->prepare(
 			'SELECT
-				`m`.`identifier`,
-				`mn`.`name`,
+				`i`.`identifier`,
+				`in`.`name`,
 				`mrm`.`percent`,
 				`mrmp`.`percent` AS `prev_percent`
-			FROM `moveset_rated_moves` AS `mrm`
-			INNER JOIN `moves` AS `m`
-				ON `mrm`.`move_id` = `m`.`id`
-			INNER JOIN `move_names` AS `mn`
-				ON `mrm`.`move_id` = `mn`.`move_id`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_moves` AS `mrm`
+				ON `urp`.`id` = `mrm`.`usage_rated_pokemon_id`
+			INNER JOIN `moves` AS `i`
+				ON `mrm`.`move_id` = `i`.`id`
+			INNER JOIN `move_names` AS `in`
+				ON `mrm`.`move_id` = `in`.`move_id`
+			LEFT JOIN `usage_rated_pokemon` AS `urpp`
+				ON `urp`.`format_id` = `urpp`.`format_id`
+				AND `urp`.`rating` = `urpp`.`rating`
+				AND `urp`.`pokemon_id` = `urpp`.`pokemon_id`
 			LEFT JOIN `moveset_rated_moves` AS `mrmp`
-				ON `mrmp`.`month` = :prev_month
-				AND `mrm`.`format_id` = `mrmp`.`format_id`
-				AND `mrm`.`rating` = `mrmp`.`rating`
-				AND `mrm`.`pokemon_id` = `mrmp`.`pokemon_id`
+				ON `urpp`.`id` = `mrmp`.`usage_rated_pokemon_id`
 				AND `mrm`.`move_id` = `mrmp`.`move_id`
-			WHERE `mrm`.`month` = :month
-				AND `mrm`.`format_id` = :format_id
-				AND `mrm`.`rating` = :rating
-				AND `mrm`.`pokemon_id` = :pokemon_id
-				AND `mn`.`language_id` = :language_id
+			WHERE `urp`.`month` = :month
+				AND `urpp`.`month` = :prev_month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
+				AND `in`.`language_id` = :language_id
 			ORDER BY `mrm`.`percent` DESC'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);

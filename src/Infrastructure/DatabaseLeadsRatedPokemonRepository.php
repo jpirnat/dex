@@ -38,10 +38,12 @@ final class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepo
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
-			FROM `leads_rated_pokemon`
-			WHERE `month` = :month
-				AND `format_id` = :format_id
-				AND `rating` = :rating'
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `leads_rated_pokemon` AS `lrp`
+				ON `urp`.`id` = `lrp`.`usage_rated_pokemon_id`
+			WHERE `urp`.`month` = :month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
@@ -62,25 +64,16 @@ final class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepo
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `leads_rated_pokemon` (
-				`month`,
-				`format_id`,
-				`rating`,
-				`pokemon_id`,
+				`usage_rated_pokemon_id`,
 				`rank`,
 				`usage_percent`
 			) VALUES (
-				:month,
-				:format_id,
-				:rating,
-				:pokemon_id,
+				:urp_id,
 				:rank,
 				:usage_percent
 			)'
 		);
-		$stmt->bindValue(':month', $leadsRatedPokemon->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':format_id', $leadsRatedPokemon->getFormatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $leadsRatedPokemon->getRating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $leadsRatedPokemon->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':urp_id', $leadsRatedPokemon->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rank', $leadsRatedPokemon->getRank(), PDO::PARAM_INT);
 		$stmt->bindValue(':usage_percent', $leadsRatedPokemon->getUsagePercent(), PDO::PARAM_STR);
 		$stmt->execute();

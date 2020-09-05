@@ -61,32 +61,26 @@ final class DatabaseStatsMovePokemonRepository implements StatsMovePokemonReposi
 				`mrm`.`percent` AS `move_percent`,
 				`urp`.`usage_percent` * `mrm`.`percent` / 100 AS `usage_percent`,
 				`urpp`.`usage_percent` * `mrmp`.`percent` / 100 AS `prev_percent`
-			FROM `moveset_rated_moves` AS `mrm`
-			INNER JOIN `usage_rated_pokemon` AS `urp`
-				ON `mrm`.`month` = `urp`.`month`
-				AND `mrm`.`format_id` = `urp`.`format_id`
-				AND `mrm`.`rating` = `urp`.`rating`
-				AND `mrm`.`pokemon_id` = `urp`.`pokemon_id`
+			FROM `usage_rated_pokemon` as `urp`
+			INNER JOIN `moveset_rated_moves` as `mrm`
+				ON `urp`.`id` = `mrm`.`usage_rated_pokemon_id`
 			INNER JOIN `form_icons` AS `fi`
-				ON `mrm`.`pokemon_id` = `fi`.`form_id`
+				ON `urp`.`pokemon_id` = `fi`.`form_id`
 			INNER JOIN `pokemon` AS `p`
-				ON `mrm`.`pokemon_id` = `p`.`id`
+				ON `urp`.`pokemon_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
-				ON `mrm`.`pokemon_id` = `pn`.`pokemon_id`
-			LEFT JOIN `moveset_rated_moves` AS `mrmp`
-				ON `mrmp`.`month` = :prev_month
-				AND `mrm`.`format_id` = `mrmp`.`format_id`
-				AND `mrm`.`rating` = `mrmp`.`rating`
-				AND `mrm`.`pokemon_id` = `mrmp`.`pokemon_id`
-				AND `mrm`.`move_id` = `mrmp`.`move_id`
-			LEFT JOIN `usage_rated_pokemon` AS `urpp`
-				ON `mrmp`.`month` = `urpp`.`month`
-				AND `urp`.`format_id` = `urpp`.`format_id`
+				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
+			LEFT JOIN `usage_rated_pokemon` as `urpp`
+				ON `urp`.`format_id` = `urpp`.`format_id`
 				AND `urp`.`rating` = `urpp`.`rating`
 				AND `urp`.`pokemon_id` = `urpp`.`pokemon_id`
-			WHERE `mrm`.`month` = :month
-				AND `mrm`.`format_id` = :format_id
-				AND `mrm`.`rating` = :rating
+			LEFT JOIN `moveset_rated_moves` as `mrmp`
+				ON `urpp`.`id` = `mrmp`.`usage_rated_pokemon_id`
+				AND `mrm`.`move_id` = `mrmp`.`move_id`
+			WHERE `urp`.`month` = :month
+				AND `urpp`.`month` = :prev_month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
 				AND `mrm`.`move_id` = :move_id
 				AND `fi`.`generation_id` = :generation_id
 				AND `fi`.`is_female` = 0

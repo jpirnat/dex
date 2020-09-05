@@ -33,25 +33,16 @@ final class DatabaseMovesetRatedItemRepository implements MovesetRatedItemReposi
 	{
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_rated_items` (
-				`month`,
-				`format_id`,
-				`rating`,
-				`pokemon_id`,
+				`usage_rated_pokemon_id`,
 				`item_id`,
 				`percent`
 			) VALUES (
-				:month,
-				:format_id,
-				:rating,
-				:pokemon_id,
+				:urp_id,
 				:item_id,
 				:percent
 			)'
 		);
-		$stmt->bindValue(':month', $movesetRatedItem->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':format_id', $movesetRatedItem->getFormatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $movesetRatedItem->getRating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $movesetRatedItem->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':urp_id', $movesetRatedItem->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':item_id', $movesetRatedItem->getItemId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':percent', $movesetRatedItem->getPercent(), PDO::PARAM_STR);
 		try {

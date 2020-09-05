@@ -35,10 +35,7 @@ final class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRe
 
 		$stmt = $this->db->prepare(
 			'INSERT INTO `moveset_rated_spreads` (
-				`month`,
-				`format_id`,
-				`rating`,
-				`pokemon_id`,
+				`usage_rated_pokemon_id`,
 				`nature_id`,
 				`hp`,
 				`atk`,
@@ -48,10 +45,7 @@ final class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRe
 				`spe`,
 				`percent`
 			) VALUES (
-				:month,
-				:format_id,
-				:rating,
-				:pokemon_id,
+				:urp_id,
 				:nature_id,
 				:hp,
 				:atk,
@@ -62,10 +56,7 @@ final class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRe
 				:percent
 			)'
 		);
-		$stmt->bindValue(':month', $movesetRatedSpread->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':format_id', $movesetRatedSpread->getFormatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $movesetRatedSpread->getRating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $movesetRatedSpread->getPokemonId()->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':urp_id', $movesetRatedSpread->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':nature_id', $movesetRatedSpread->getNatureId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':hp', $evSpread->get(new StatId(StatId::HP))->getValue(), PDO::PARAM_INT);
 		$stmt->bindValue(':atk', $evSpread->get(new StatId(StatId::ATTACK))->getValue(), PDO::PARAM_INT);

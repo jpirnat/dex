@@ -56,17 +56,19 @@ final class DatabaseStatsPokemonCounterRepository implements StatsPokemonCounter
 				`mrc`.`number3` AS `standard_deviation`,
 				`mrc`.`percent_knocked_out`,
 				`mrc`.`percent_switched_out`
-			FROM `moveset_rated_counters` AS `mrc`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_counters` AS `mrc`
+				ON `urp`.`id` = `mrc`.`usage_rated_pokemon_id`
 			INNER JOIN `form_icons` AS `fi`
 				ON `mrc`.`counter_id` = `fi`.`form_id`
 			INNER JOIN `pokemon` AS `p`
 				ON `mrc`.`counter_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `mrc`.`counter_id` = `pn`.`pokemon_id`
-			WHERE `mrc`.`month` = :month
-				AND `mrc`.`format_id` = :format_id
-				AND `mrc`.`rating` = :rating
-				AND `mrc`.`pokemon_id` = :pokemon_id
+			WHERE `urp`.`month` = :month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
 				AND `fi`.`generation_id` = :generation_id
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0

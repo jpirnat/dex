@@ -48,10 +48,12 @@ final class DatabaseLeadsRatedAveragedPokemonRepository implements LeadsRatedAve
 		$stmt = $this->db->prepare(
 			'SELECT
 				COUNT(*)
-			FROM `leads_rated_pokemon`
-			WHERE `month` BETWEEN :start AND :end
-				AND `format_id` = :format_id
-				AND `rating` = :rating'
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `leads_rated_pokemon` AS `lrp`
+				ON `urp`.`id` = `lrp`.`usage_rated_pokemon_id`
+			WHERE `urp`.`month` BETWEEN :start AND :end
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating'
 		);
 		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);
 		$stmt->bindValue(':end', $end->format('Y-m-01'), PDO::PARAM_STR);
@@ -85,12 +87,14 @@ final class DatabaseLeadsRatedAveragedPokemonRepository implements LeadsRatedAve
 		// database that supports window functions).
 		$stmt = $this->db->prepare(
 			'SELECT
-				`pokemon_id`,
-				SUM(`usage_percent`) / :months AS `usage_percent`
-			FROM `leads_rated_pokemon`
-			WHERE `month` BETWEEN :start AND :end
-				AND `format_id` = :format_id
-				AND `rating` = :rating
+				`urp`.`pokemon_id`,
+				SUM(`lrp`.`usage_percent`) / :months AS `usage_percent`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `leads_rated_pokemon` AS `lrp`
+				ON `urp`.`id` = `lrp`.`usage_rated_pokemon_id`
+			WHERE `urp`.`month` BETWEEN :start AND :end
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
 			GROUP BY `pokemon_id`
 			ORDER BY
 				`usage_percent` DESC,

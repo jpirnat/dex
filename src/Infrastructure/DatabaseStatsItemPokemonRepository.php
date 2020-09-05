@@ -61,32 +61,26 @@ final class DatabaseStatsItemPokemonRepository implements StatsItemPokemonReposi
 				`mri`.`percent` AS `item_percent`,
 				`urp`.`usage_percent` * `mri`.`percent` / 100 AS `usage_percent`,
 				`urpp`.`usage_percent` * `mrip`.`percent` / 100 AS `prev_percent`
-			FROM `moveset_rated_items` AS `mri`
-			INNER JOIN `usage_rated_pokemon` AS `urp`
-				ON `mri`.`month` = `urp`.`month`
-				AND `mri`.`format_id` = `urp`.`format_id`
-				AND `mri`.`rating` = `urp`.`rating`
-				AND `mri`.`pokemon_id` = `urp`.`pokemon_id`
+			FROM `usage_rated_pokemon` as `urp`
+			INNER JOIN `moveset_rated_items` as `mri`
+				ON `urp`.`id` = `mri`.`usage_rated_pokemon_id`
 			INNER JOIN `form_icons` AS `fi`
-				ON `mri`.`pokemon_id` = `fi`.`form_id`
+				ON `urp`.`pokemon_id` = `fi`.`form_id`
 			INNER JOIN `pokemon` AS `p`
-				ON `mri`.`pokemon_id` = `p`.`id`
+				ON `urp`.`pokemon_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
-				ON `mri`.`pokemon_id` = `pn`.`pokemon_id`
-			LEFT JOIN `moveset_rated_items` AS `mrip`
-				ON `mrip`.`month` = :prev_month
-				AND `mri`.`format_id` = `mrip`.`format_id`
-				AND `mri`.`rating` = `mrip`.`rating`
-				AND `mri`.`pokemon_id` = `mrip`.`pokemon_id`
-				AND `mri`.`item_id` = `mrip`.`item_id`
-			LEFT JOIN `usage_rated_pokemon` AS `urpp`
-				ON `mrip`.`month` = `urpp`.`month`
-				AND `urp`.`format_id` = `urpp`.`format_id`
+				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
+			LEFT JOIN `usage_rated_pokemon` as `urpp`
+				ON `urp`.`format_id` = `urpp`.`format_id`
 				AND `urp`.`rating` = `urpp`.`rating`
 				AND `urp`.`pokemon_id` = `urpp`.`pokemon_id`
-			WHERE `mri`.`month` = :month
-				AND `mri`.`format_id` = :format_id
-				AND `mri`.`rating` = :rating
+			LEFT JOIN `moveset_rated_items` as `mrip`
+				ON `urpp`.`id` = `mrip`.`usage_rated_pokemon_id`
+				AND `mri`.`item_id` = `mrip`.`item_id`
+			WHERE `urp`.`month` = :month
+				AND `urpp`.`month` = :prev_month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
 				AND `mri`.`item_id` = :item_id
 				AND `fi`.`generation_id` = :generation_id
 				AND `fi`.`is_female` = 0

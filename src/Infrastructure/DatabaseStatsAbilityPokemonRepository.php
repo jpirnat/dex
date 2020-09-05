@@ -61,32 +61,26 @@ final class DatabaseStatsAbilityPokemonRepository implements StatsAbilityPokemon
 				`mra`.`percent` AS `ability_percent`,
 				`urp`.`usage_percent` * `mra`.`percent` / 100 AS `usage_percent`,
 				`urpp`.`usage_percent` * `mrap`.`percent` / 100 AS `prev_percent`
-			FROM `moveset_rated_abilities` AS `mra`
-			INNER JOIN `usage_rated_pokemon` AS `urp`
-				ON `mra`.`month` = `urp`.`month`
-				AND `mra`.`format_id` = `urp`.`format_id`
-				AND `mra`.`rating` = `urp`.`rating`
-				AND `mra`.`pokemon_id` = `urp`.`pokemon_id`
+			FROM `usage_rated_pokemon` as `urp`
+			INNER JOIN `moveset_rated_abilities` as `mra`
+				ON `urp`.`id` = `mra`.`usage_rated_pokemon_id`
 			INNER JOIN `form_icons` AS `fi`
-				ON `mra`.`pokemon_id` = `fi`.`form_id`
+				ON `urp`.`pokemon_id` = `fi`.`form_id`
 			INNER JOIN `pokemon` AS `p`
-				ON `mra`.`pokemon_id` = `p`.`id`
+				ON `urp`.`pokemon_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
-				ON `mra`.`pokemon_id` = `pn`.`pokemon_id`
-			LEFT JOIN `moveset_rated_abilities` AS `mrap`
-				ON `mrap`.`month` = :prev_month
-				AND `mra`.`format_id` = `mrap`.`format_id`
-				AND `mra`.`rating` = `mrap`.`rating`
-				AND `mra`.`pokemon_id` = `mrap`.`pokemon_id`
-				AND `mra`.`ability_id` = `mrap`.`ability_id`
-			LEFT JOIN `usage_rated_pokemon` AS `urpp`
-				ON `mrap`.`month` = `urpp`.`month`
-				AND `urp`.`format_id` = `urpp`.`format_id`
+				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
+			LEFT JOIN `usage_rated_pokemon` as `urpp`
+				ON `urp`.`format_id` = `urpp`.`format_id`
 				AND `urp`.`rating` = `urpp`.`rating`
 				AND `urp`.`pokemon_id` = `urpp`.`pokemon_id`
-			WHERE `mra`.`month` = :month
-				AND `mra`.`format_id` = :format_id
-				AND `mra`.`rating` = :rating
+			LEFT JOIN `moveset_rated_abilities` as `mrap`
+				ON `urpp`.`id` = `mrap`.`usage_rated_pokemon_id`
+				AND `mra`.`ability_id` = `mrap`.`ability_id`
+			WHERE `urp`.`month` = :month
+				AND `urpp`.`month` = :prev_month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
 				AND `mra`.`ability_id` = :ability_id
 				AND `fi`.`generation_id` = :generation_id
 				AND `fi`.`is_female` = 0

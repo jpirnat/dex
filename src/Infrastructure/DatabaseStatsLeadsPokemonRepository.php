@@ -59,25 +59,29 @@ final class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepo
 				`lrpp`.`usage_percent` AS `prev_percent`,
 				`lp`.`raw`,
 				`lp`.`raw_percent`
-			FROM `leads_rated_pokemon` AS `lrp`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `leads_rated_pokemon` AS `lrp`
+				ON `urp`.`id` = `lrp`.`usage_rated_pokemon_id`
 			INNER JOIN `form_icons` AS `fi`
-				ON `lrp`.`pokemon_id` = `fi`.`form_id`
+				ON `urp`.`pokemon_id` = `fi`.`form_id`
 			INNER JOIN `pokemon` AS `p`
-				ON `lrp`.`pokemon_id` = `p`.`id`
+				ON `urp`.`pokemon_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
-				ON `lrp`.`pokemon_id` = `pn`.`pokemon_id`
+				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
+			LEFT JOIN `usage_rated_pokemon` AS `urpp`
+				ON `urp`.`format_id` = `urpp`.`format_id`
+				AND `urp`.`rating` = `urpp`.`rating`
+				AND `urp`.`pokemon_id` = `urpp`.`pokemon_id`
 			LEFT JOIN `leads_rated_pokemon` AS `lrpp`
-				ON `lrpp`.`month` = :prev_month
-				AND `lrp`.`format_id` = `lrpp`.`format_id`
-				AND `lrp`.`rating` = `lrpp`.`rating`
-				AND `lrp`.`pokemon_id` = `lrpp`.`pokemon_id`
+				ON `urpp`.`id` = `lrpp`.`usage_rated_pokemon_id`
 			INNER JOIN `leads_pokemon` AS `lp`
-				ON `lrp`.`month` = `lp`.`month`
-				AND `lrp`.`format_id` = `lp`.`format_id`
-				AND `lrp`.`pokemon_id` = `lp`.`pokemon_id`
-			WHERE `lrp`.`month` = :month
-				AND `lrp`.`format_id` = :format_id
-				AND `lrp`.`rating` = :rating
+				ON `urp`.`month` = `lp`.`month`
+				AND `urp`.`format_id` = `lp`.`format_id`
+				AND `urp`.`pokemon_id` = `lp`.`pokemon_id`
+			WHERE `urp`.`month` = :month
+				AND `urpp`.`month` = :prev_month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
 				AND `fi`.`generation_id` = :generation_id
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0

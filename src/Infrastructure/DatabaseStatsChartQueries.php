@@ -79,13 +79,15 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`month`,
-				`usage_percent`
-			FROM `leads_rated_pokemon`
-			WHERE `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id
-			ORDER BY `month`'
+				`urp`.`month`,
+				`lrp`.`usage_percent`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `leads_rated_pokemon` AS `lrp`
+				ON `urp`.`id` = `lrp`.`usage_rated_pokemon_id`
+			WHERE `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
+			ORDER BY `urp`.`month`'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -119,14 +121,16 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`month`,
-				`percent`
-			FROM `moveset_rated_abilities`
-			WHERE `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id
-				AND `ability_id` = :ability_id
-			ORDER BY `month`'
+				`urp`.`month`,
+				`mra`.`percent`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_abilities` AS `mra`
+				ON `urp`.`id` = `mra`.`usage_rated_pokemon_id`
+			WHERE `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
+				AND `mra`.`ability_id` = :ability_id
+			ORDER BY `urp`.`month`'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -161,14 +165,16 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`month`,
-				`percent`
-			FROM `moveset_rated_items`
-			WHERE `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id
-				AND `item_id` = :item_id
-			ORDER BY `month`'
+				`urp`.`month`,
+				`mri`.`percent`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_items` AS `mri`
+				ON `urp`.`id` = `mri`.`usage_rated_pokemon_id`
+			WHERE `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
+				AND `mri`.`item_id` = :item_id
+			ORDER BY `urp`.`month`'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -203,14 +209,16 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`month`,
-				`percent`
-			FROM `moveset_rated_moves`
-			WHERE `format_id` = :format_id
-				AND `rating` = :rating
-				AND `pokemon_id` = :pokemon_id
-				AND `move_id` = :move_id
-			ORDER BY `month`'
+				`urp`.`month`,
+				`mrm`.`percent`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_moves` AS `mrm`
+				ON `urp`.`id` = `mrm`.`usage_rated_pokemon_id`
+			WHERE `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
+				AND `mrm`.`move_id` = :move_id
+			ORDER BY `urp`.`month`'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
@@ -249,10 +257,7 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 				`u`.`usage_percent` * `m`.`percent` / 100 AS `usage_percent`
 			FROM `usage_rated_pokemon` AS `u`
 			INNER JOIN `moveset_rated_abilities` AS `m`
-				ON `u`.`month` = `m`.`month`
-				AND `u`.`format_id` = `m`.`format_id`
-				AND `u`.`rating` = `m`.`rating`
-				AND `u`.`pokemon_id` = `m`.`pokemon_id`
+				ON `u`.`id` = `m`.`usage_rated_pokemon_id`
 			WHERE `u`.`format_id` = :format_id
 				AND `u`.`rating` = :rating
 				AND `u`.`pokemon_id` = :pokemon_id
@@ -296,10 +301,7 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 				`u`.`usage_percent` * `m`.`percent` / 100 AS `usage_percent`
 			FROM `usage_rated_pokemon` AS `u`
 			INNER JOIN `moveset_rated_items` AS `m`
-				ON `u`.`month` = `m`.`month`
-				AND `u`.`format_id` = `m`.`format_id`
-				AND `u`.`rating` = `m`.`rating`
-				AND `u`.`pokemon_id` = `m`.`pokemon_id`
+				ON `u`.`id` = `m`.`usage_rated_pokemon_id`
 			WHERE `u`.`format_id` = :format_id
 				AND `u`.`rating` = :rating
 				AND `u`.`pokemon_id` = :pokemon_id
@@ -343,10 +345,7 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 				`u`.`usage_percent` * `m`.`percent` / 100 AS `usage_percent`
 			FROM `usage_rated_pokemon` AS `u`
 			INNER JOIN `moveset_rated_moves` AS `m`
-				ON `u`.`month` = `m`.`month`
-				AND `u`.`format_id` = `m`.`format_id`
-				AND `u`.`rating` = `m`.`rating`
-				AND `u`.`pokemon_id` = `m`.`pokemon_id`
+				ON `u`.`id` = `m`.`usage_rated_pokemon_id`
 			WHERE `u`.`format_id` = :format_id
 				AND `u`.`rating` = :rating
 				AND `u`.`pokemon_id` = :pokemon_id

@@ -3,55 +3,31 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Leads;
 
-use DateTime;
-use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidRankException;
-use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
-use Jp\Dex\Domain\Stats\ValidateMonthTrait;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 
 final class LeadsRatedPokemon
 {
-	use ValidateMonthTrait;
-
-	private DateTime $month;
-	private FormatId $formatId;
-	private int $rating;
-	private PokemonId $pokemonId;
+	private UsageRatedPokemonId $usageRatedPokemonId;
 	private int $rank;
 	private float $usagePercent;
 
 	/**
 	 * Constructor.
 	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
+	 * @param UsageRatedPokemonId $usageRatedPokemonId
 	 * @param int $rank
 	 * @param float $usagePercent
 	 *
-	 * @throws InvalidMonthException if $month is invalid.
-	 * @throws InvalidRatingException if $rating is invalid.
 	 * @throws InvalidRankException if $rank is invalid.
 	 * @throws InvalidPercentException if $usagePercent is invalid
 	 */
 	public function __construct(
-		DateTime $month,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
+		UsageRatedPokemonId $usageRatedPokemonId,
 		int $rank,
 		float $usagePercent
 	) {
-		$this->validateMonth($month);
-
-		if ($rating < 0) {
-			throw new InvalidRatingException('Invalid rating: ' . $rating);
-		}
-
 		if ($rank < 1) {
 			throw new InvalidRankException('Invalid rank: ' . $rank);
 		}
@@ -62,52 +38,19 @@ final class LeadsRatedPokemon
 			);
 		}
 
-		$this->month = $month;
-		$this->formatId = $formatId;
-		$this->rating = $rating;
-		$this->pokemonId = $pokemonId;
+		$this->usageRatedPokemonId = $usageRatedPokemonId;
 		$this->rank = $rank;
 		$this->usagePercent = $usagePercent;
 	}
 
 	/**
-	 * Get the month.
+	 * Get the usage rated Pokémon id.
 	 *
-	 * @return DateTime
+	 * @return UsageRatedPokemonId
 	 */
-	public function getMonth() : DateTime
+	public function getUsageRatedPokemonId() : UsageRatedPokemonId
 	{
-		return $this->month;
-	}
-
-	/**
-	 * Get the format id.
-	 *
-	 * @return FormatId
-	 */
-	public function getFormatId() : FormatId
-	{
-		return $this->formatId;
-	}
-
-	/**
-	 * Get the rating.
-	 *
-	 * @return int
-	 */
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	/**
-	 * Get the Pokémon id.
-	 *
-	 * @return PokemonId
-	 */
-	public function getPokemonId() : PokemonId
-	{
-		return $this->pokemonId;
+		return $this->usageRatedPokemonId;
 	}
 
 	/**

@@ -55,21 +55,25 @@ final class DatabaseStatsPokemonAbilityRepository implements StatsPokemonAbility
 				`an`.`name`,
 				`mra`.`percent`,
 				`mrap`.`percent` AS `prev_percent`
-			FROM `moveset_rated_abilities` AS `mra`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_abilities` AS `mra`
+				ON `urp`.`id` = `mra`.`usage_rated_pokemon_id`
 			INNER JOIN `abilities` AS `a`
 				ON `mra`.`ability_id` = `a`.`id`
 			INNER JOIN `ability_names` AS `an`
 				ON `mra`.`ability_id` = `an`.`ability_id`
+			LEFT JOIN `usage_rated_pokemon` AS `urpp`
+				ON `urp`.`format_id` = `urpp`.`format_id`
+				AND `urp`.`rating` = `urpp`.`rating`
+				AND `urp`.`pokemon_id` = `urpp`.`pokemon_id`
 			LEFT JOIN `moveset_rated_abilities` AS `mrap`
-				ON `mrap`.`month` = :prev_month
-				AND `mra`.`format_id` = `mrap`.`format_id`
-				AND `mra`.`rating` = `mrap`.`rating`
-				AND `mra`.`pokemon_id` = `mrap`.`pokemon_id`
+				ON `urpp`.`id` = `mrap`.`usage_rated_pokemon_id`
 				AND `mra`.`ability_id` = `mrap`.`ability_id`
-			WHERE `mra`.`month` = :month
-				AND `mra`.`format_id` = :format_id
-				AND `mra`.`rating` = :rating
-				AND `mra`.`pokemon_id` = :pokemon_id
+			WHERE `urp`.`month` = :month
+				AND `urpp`.`month` = :prev_month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
 				AND `an`.`language_id` = :language_id
 			ORDER BY `mra`.`percent` DESC'
 		);

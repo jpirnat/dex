@@ -52,17 +52,19 @@ final class DatabaseStatsPokemonTeammateRepository implements StatsPokemonTeamma
 				`p`.`identifier`,
 				`pn`.`name`,
 				`mrt`.`percent`
-			FROM `moveset_rated_teammates` AS `mrt`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_teammates` AS `mrt`
+				ON `urp`.`id` = `mrt`.`usage_rated_pokemon_id`
 			INNER JOIN `form_icons` AS `fi`
 				ON `mrt`.`teammate_id` = `fi`.`form_id`
 			INNER JOIN `pokemon` AS `p`
 				ON `mrt`.`teammate_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `mrt`.`teammate_id` = `pn`.`pokemon_id`
-			WHERE `mrt`.`month` = :month
-				AND `mrt`.`format_id` = :format_id
-				AND `mrt`.`rating` = :rating
-				AND `mrt`.`pokemon_id` = :pokemon_id
+			WHERE `urp`.`month` = :month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
 				AND `fi`.`generation_id` = :generation_id
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
