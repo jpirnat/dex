@@ -5,6 +5,7 @@ namespace Jp\Dex\Domain\Stats\Usage;
 
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface UsageRatedPokemonRepositoryInterface
 {
@@ -28,4 +29,21 @@ interface UsageRatedPokemonRepositoryInterface
 	 * @return void
 	 */
 	public function save(UsageRatedPokemon $usageRatedPokemon) : void;
+
+	/**
+	 * Get the usage rated Pokémon id for this month, format, rating, and Pokémon.
+	 *
+	 * @param DateTime $month
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 *
+	 * @return UsageRatedPokemonId|null
+	 */
+	public function getId(
+		DateTime $month,
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId
+	) : ?UsageRatedPokemonId;
 }

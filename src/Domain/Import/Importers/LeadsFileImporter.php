@@ -13,12 +13,14 @@ use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemon;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
 final class LeadsFileImporter
 {
 	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
 	private LeadsRepositoryInterface $leadsRepository;
+	private UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository;
 	private LeadsPokemonRepositoryInterface $leadsPokemonRepository;
 	private LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository;
 	private LeadsFileExtractor $leadsFileExtractor;
@@ -28,6 +30,7 @@ final class LeadsFileImporter
 	 *
 	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
 	 * @param LeadsRepositoryInterface $leadsRepository
+	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
 	 * @param LeadsPokemonRepositoryInterface $leadsPokemonRepository
 	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
 	 * @param LeadsFileExtractor $leadsFileExtractor
@@ -35,12 +38,14 @@ final class LeadsFileImporter
 	public function __construct(
 		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
 		LeadsRepositoryInterface $leadsRepository,
+		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
 		LeadsPokemonRepositoryInterface $leadsPokemonRepository,
 		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
 		LeadsFileExtractor $leadsFileExtractor
 	) {
 		$this->showdownPokemonRepository = $showdownPokemonRepository;
 		$this->leadsRepository = $leadsRepository;
+		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
 		$this->leadsPokemonRepository = $leadsPokemonRepository;
 		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
 		$this->leadsFileExtractor = $leadsFileExtractor;
@@ -116,6 +121,15 @@ final class LeadsFileImporter
 			}
 
 			$pokemonId = $this->showdownPokemonRepository->getPokemonId($showdownPokemonName);
+			$usageRatedPokemonId = $this->usageRatedPokemonRepository->getId(
+				$month,
+				$formatId,
+				$rating,
+				$pokemonId
+			);
+			if (!$usageRatedPokemonId) {
+				continue;
+			}
 
 			if (!$leadsPokemonExists) {
 				$leadsPokemon = new LeadsPokemon(
@@ -130,10 +144,7 @@ final class LeadsFileImporter
 
 			if (!$leadsRatedPokemonExists) {
 				$leadsRatedPokemon = new LeadsRatedPokemon(
-					$month,
-					$formatId,
-					$rating,
-					$pokemonId,
+					$usageRatedPokemonId,
 					$leadUsage->rank(),
 					$leadUsage->usagePercent()
 				);

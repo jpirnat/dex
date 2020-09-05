@@ -30,6 +30,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
 final class MovesetFileImporter
@@ -39,6 +40,7 @@ final class MovesetFileImporter
 	private ShowdownItemRepositoryInterface $showdownItemRepository;
 	private ShowdownNatureRepositoryInterface $showdownNatureRepository;
 	private ShowdownMoveRepositoryInterface $showdownMoveRepository;
+	private UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository;
 	private MovesetPokemonRepositoryInterface $movesetPokemonRepository;
 	private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository;
 	private MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository;
@@ -57,6 +59,7 @@ final class MovesetFileImporter
 	 * @param ShowdownItemRepositoryInterface $showdownItemRepository
 	 * @param ShowdownNatureRepositoryInterface $showdownNatureRepository
 	 * @param ShowdownMoveRepositoryInterface $showdownMoveRepository
+	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
 	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
 	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
 	 * @param MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository
@@ -73,6 +76,7 @@ final class MovesetFileImporter
 		ShowdownItemRepositoryInterface $showdownItemRepository,
 		ShowdownNatureRepositoryInterface $showdownNatureRepository,
 		ShowdownMoveRepositoryInterface $showdownMoveRepository,
+		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
 		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
 		MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository,
@@ -88,6 +92,7 @@ final class MovesetFileImporter
 		$this->showdownItemRepository = $showdownItemRepository;
 		$this->showdownNatureRepository = $showdownNatureRepository;
 		$this->showdownMoveRepository = $showdownMoveRepository;
+		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
 		$this->movesetPokemonRepository = $movesetPokemonRepository;
 		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
 		$this->movesetRatedAbilityRepository = $movesetRatedAbilityRepository;
@@ -148,12 +153,16 @@ final class MovesetFileImporter
 			}
 			$showdownPokemonName = $this->movesetFileExtractor->extractPokemonName($line);
 			// If this Pokémon is not meant to be imported, skip it.
+			$pokemonId = null;
+			$usageRatedPokemonId = null;
 			if ($this->showdownPokemonRepository->isImported($showdownPokemonName)) {
 				$pokemonId = $this->showdownPokemonRepository->getPokemonId($showdownPokemonName);
-				$isPokemonImported = true;
-			} else {
-				$pokemonId = 0;
-				$isPokemonImported = false;
+				$usageRatedPokemonId = $this->usageRatedPokemonRepository->getId(
+					$month,
+					$formatId,
+					$rating,
+					$pokemonId
+				);
 			}
 			\GuzzleHttp\Psr7\readline($stream); // Separator.
 
@@ -173,7 +182,7 @@ final class MovesetFileImporter
 				$viabilityCeiling = null;
 			}
 
-			if ($isPokemonImported && !$movesetPokemonExists) {
+			if ($pokemonId && !$movesetPokemonExists) {
 				$movesetPokemon = new MovesetPokemon(
 					$month,
 					$formatId,
@@ -185,12 +194,9 @@ final class MovesetFileImporter
 				$this->movesetPokemonRepository->save($movesetPokemon);
 			}
 
-			if ($isPokemonImported && !$movesetRatedPokemonExists) {
+			if ($usageRatedPokemonId && !$movesetRatedPokemonExists) {
 				$movesetRatedPokemon = new MovesetRatedPokemon(
-					$month,
-					$formatId,
-					$rating,
-					$pokemonId,
+					$usageRatedPokemonId,
 					$averageWeight
 				);
 
@@ -211,12 +217,9 @@ final class MovesetFileImporter
 
 				$abilityId = $this->showdownAbilityRepository->getAbilityId($showdownAbilityName);
 
-				if ($isPokemonImported && !$movesetRatedPokemonExists) {
+				if ($usageRatedPokemonId && !$movesetRatedPokemonExists) {
 					$movesetRatedAbility = new MovesetRatedAbility(
-						$month,
-						$formatId,
-						$rating,
-						$pokemonId,
+						$usageRatedPokemonId,
 						$abilityId,
 						$namePercent->percent()
 					);
@@ -244,12 +247,9 @@ final class MovesetFileImporter
 
 				$itemId = $this->showdownItemRepository->getItemId($showdownItemName);
 
-				if ($isPokemonImported && !$movesetRatedPokemonExists) {
+				if ($usageRatedPokemonId && !$movesetRatedPokemonExists) {
 					$movesetRatedItem = new MovesetRatedItem(
-						$month,
-						$formatId,
-						$rating,
-						$pokemonId,
+						$usageRatedPokemonId,
 						$itemId,
 						$namePercent->percent()
 					);
@@ -277,7 +277,7 @@ final class MovesetFileImporter
 
 				$natureId = $this->showdownNatureRepository->getNatureId($showdownNatureName);
 
-				if ($isPokemonImported && !$movesetRatedPokemonExists) {
+				if ($usageRatedPokemonId && !$movesetRatedPokemonExists) {
 					$evSpread = new StatValueContainer([
 						new StatValue(new StatId(StatId::HP), $spread->hp()),
 						new StatValue(new StatId(StatId::ATTACK), $spread->atk()),
@@ -288,10 +288,7 @@ final class MovesetFileImporter
 					]);
 
 					$movesetRatedSpread = new MovesetRatedSpread(
-						$month,
-						$formatId,
-						$rating,
-						$pokemonId,
+						$usageRatedPokemonId,
 						$natureId,
 						$evSpread,
 						$spread->percent()
@@ -320,12 +317,9 @@ final class MovesetFileImporter
 
 				$moveId = $this->showdownMoveRepository->getMoveId($showdownMoveName);
 
-				if ($isPokemonImported && !$movesetRatedPokemonExists) {
+				if ($usageRatedPokemonId && !$movesetRatedPokemonExists) {
 					$movesetRatedMove = new MovesetRatedMove(
-						$month,
-						$formatId,
-						$rating,
-						$pokemonId,
+						$usageRatedPokemonId,
 						$moveId,
 						$namePercent->percent()
 					);
@@ -353,12 +347,9 @@ final class MovesetFileImporter
 
 				$teammateId = $this->showdownPokemonRepository->getPokemonId($showdownTeammateName);
 
-				if ($isPokemonImported && !$movesetRatedPokemonExists) {
+				if ($usageRatedPokemonId && !$movesetRatedPokemonExists) {
 					$movesetRatedTeammate = new MovesetRatedTeammate(
-						$month,
-						$formatId,
-						$rating,
-						$pokemonId,
+						$usageRatedPokemonId,
 						$teammateId,
 						$namePercent->percent()
 					);
@@ -387,12 +378,9 @@ final class MovesetFileImporter
 
 				$counterId = $this->showdownPokemonRepository->getPokemonId($showdownCounterName);
 
-				if ($isPokemonImported && !$movesetRatedPokemonExists) {
+				if ($usageRatedPokemonId && !$movesetRatedPokemonExists) {
 					$movesetRatedCounter = new MovesetRatedCounter(
-						$month,
-						$formatId,
-						$rating,
-						$pokemonId,
+						$usageRatedPokemonId,
 						$counterId,
 						$counter->number1(),
 						$counter->number2(),
