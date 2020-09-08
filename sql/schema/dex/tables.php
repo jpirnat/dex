@@ -63,12 +63,18 @@ return [
 	'move_descriptions',
 	'z_move_names',
 	'version_group_moves',
+
+	// Generation moves
 	'qualities',
 	'inflictions',
+	'infliction_names',
 	'targets',
+	'target_descriptions',
 	'z_power_effects',
 	'z_power_effect_names',
 	'generation_moves',
+
+	// Pokémon moves
 	'technical_machines',
 	'move_methods',
 	'move_method_names',

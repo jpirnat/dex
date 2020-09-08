@@ -1,0 +1,15 @@
+language_id,target_id,description
+2,1,Single Adjacent Pokémon
+2,2,User or Adjacent Ally
+2,3,Single Adjacent Ally
+2,4,Single Adjacent Opponent
+2,5,All Adjacent Pokémon
+2,6,All Adjacent Opponents
+2,7,All Allies
+2,8,User
+2,9,All
+2,10,Random Adjacent Opponent
+2,11,Entire Field
+2,12,Opponent's Field
+2,13,User's Field
+2,14,Unique (Depends on the specific move)

@@ -1,0 +1,22 @@
+language_id,infliction_id,name
+2,1,Paralysis
+2,2,Sleep
+2,3,Freeze
+2,4,Burn
+2,5,Poison
+2,6,Confusion
+2,7,Attract
+2,8,Bind
+2,9,Nightmare
+2,12,Torment
+2,13,Disable
+2,14,Yawn
+2,15,Heal Block
+2,17,Foresight
+2,18,Leech Seed
+2,19,Embargo
+2,20,Perish Song
+2,21,Ingrain
+2,24,Silence
+2,42,Tar Shot
+2,101,Other
