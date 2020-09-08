@@ -71,14 +71,14 @@ final class DatabaseStatsMovePokemonRepository implements StatsMovePokemonReposi
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
 			LEFT JOIN `usage_rated_pokemon` as `urpp`
-				ON `urp`.`format_id` = `urpp`.`format_id`
+				ON `urpp`.`month` = :prev_month
+				AND `urp`.`format_id` = `urpp`.`format_id`
 				AND `urp`.`rating` = `urpp`.`rating`
 				AND `urp`.`pokemon_id` = `urpp`.`pokemon_id`
 			LEFT JOIN `moveset_rated_moves` as `mrmp`
 				ON `urpp`.`id` = `mrmp`.`usage_rated_pokemon_id`
 				AND `mrm`.`move_id` = `mrmp`.`move_id`
 			WHERE `urp`.`month` = :month
-				AND `urpp`.`month` = :prev_month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
 				AND `mrm`.`move_id` = :move_id

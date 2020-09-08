@@ -71,14 +71,14 @@ final class DatabaseStatsItemPokemonRepository implements StatsItemPokemonReposi
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
 			LEFT JOIN `usage_rated_pokemon` as `urpp`
-				ON `urp`.`format_id` = `urpp`.`format_id`
+				ON `urpp`.`month` = :prev_month
+				AND `urp`.`format_id` = `urpp`.`format_id`
 				AND `urp`.`rating` = `urpp`.`rating`
 				AND `urp`.`pokemon_id` = `urpp`.`pokemon_id`
 			LEFT JOIN `moveset_rated_items` as `mrip`
 				ON `urpp`.`id` = `mrip`.`usage_rated_pokemon_id`
 				AND `mri`.`item_id` = `mrip`.`item_id`
 			WHERE `urp`.`month` = :month
-				AND `urpp`.`month` = :prev_month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
 				AND `mri`.`item_id` = :item_id

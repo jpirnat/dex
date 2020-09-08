@@ -69,7 +69,8 @@ final class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepo
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
 			LEFT JOIN `usage_rated_pokemon` AS `urpp`
-				ON `urp`.`format_id` = `urpp`.`format_id`
+				ON `urpp`.`month` = :prev_month
+				AND `urp`.`format_id` = `urpp`.`format_id`
 				AND `urp`.`rating` = `urpp`.`rating`
 				AND `urp`.`pokemon_id` = `urpp`.`pokemon_id`
 			LEFT JOIN `leads_rated_pokemon` AS `lrpp`
@@ -79,7 +80,6 @@ final class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepo
 				AND `urp`.`format_id` = `lp`.`format_id`
 				AND `urp`.`pokemon_id` = `lp`.`pokemon_id`
 			WHERE `urp`.`month` = :month
-				AND `urpp`.`month` = :prev_month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
 				AND `fi`.`generation_id` = :generation_id
