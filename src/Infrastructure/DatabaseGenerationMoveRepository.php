@@ -201,15 +201,40 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 	}
 
 	/**
-	 * Get the upgraded move. This method is used to get basic data for a Z-Move
-	 * or Max Move.
+	 * Get the Z-Move.
 	 *
 	 * @param MoveId $moveId
 	 * @param LanguageId $languageId
 	 *
 	 * @return array
 	 */
-	public function getUpgradedMove(MoveId $moveId, LanguageId $languageId) : array
+	public function getZMove(MoveId $moveId, LanguageId $languageId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`m`.`identifier`,
+				`mn`.`name`
+			FROM `moves` AS `m`
+			INNER JOIN `z_move_names` AS `mn`
+				ON `m`.`id` = `mn`.`move_id`
+			WHERE `m`.`id` = :move_id
+				AND `mn`.`language_id` = :language_id'
+		);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetch(PDO::FETCH_ASSOC);
+	}
+
+	/**
+	 * Get the Max Move.
+	 *
+	 * @param MoveId $moveId
+	 * @param LanguageId $languageId
+	 *
+	 * @return array
+	 */
+	public function getMaxMove(MoveId $moveId, LanguageId $languageId) : array
 	{
 		$stmt = $this->db->prepare(
 			'SELECT

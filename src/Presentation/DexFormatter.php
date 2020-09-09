@@ -181,18 +181,30 @@ final class DexFormatter
 		$moves = [];
 
 		foreach ($dexMoves as $dexMove) {
-			$moves[] = [
-				'identifier' => $dexMove->getIdentifier(),
-				'name' => $dexMove->getName(),
-				'type' => $this->formatDexType($dexMove->getType()),
-				'category' => $this->formatDexCategory($dexMove->getCategory()),
-				'pp' => $dexMove->getPP(),
-				'power' => $dexMove->getPower(),
-				'accuracy' => $dexMove->getAccuracy(),
-				'description' => $dexMove->getDescription(),
-			];
+			$moves[] = $this->formatDexMove($dexMove);
 		}
 
 		return $moves;
+	}
+
+	/**
+	 * Transform a dex move object into a renderable data array.
+	 *
+	 * @param DexMove $dexMove
+	 *
+	 * @return array
+	 */
+	public function formatDexMove(DexMove $dexMove) : array
+	{
+		return [
+			'identifier' => $dexMove->getIdentifier(),
+			'name' => $dexMove->getName(),
+			'type' => $this->formatDexType($dexMove->getType()),
+			'category' => $this->formatDexCategory($dexMove->getCategory()),
+			'pp' => $dexMove->getPP(),
+			'power' => $dexMove->getPower(),
+			'accuracy' => $dexMove->getAccuracy(),
+			'description' => $dexMove->getDescription(),
+		];
 	}
 }

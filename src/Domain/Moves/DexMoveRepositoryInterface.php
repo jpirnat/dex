@@ -11,6 +11,22 @@ use Jp\Dex\Domain\Versions\GenerationId;
 interface DexMoveRepositoryInterface
 {
 	/**
+	 * Get a dex move by its id.
+	 * This method is used to get data for the dex move page.
+	 *
+	 * @param GenerationId $generationId
+	 * @param MoveId $moveId
+	 * @param LanguageId $languageId
+	 *
+	 * @return DexMove
+	 */
+	public function getById(
+		GenerationId $generationId,
+		MoveId $moveId,
+		LanguageId $languageId
+	) : DexMove;
+
+	/**
 	 * Get all dex moves in this generation.
 	 * This method is used to get data for the dex moves page.
 	 *

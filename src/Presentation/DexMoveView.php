@@ -40,10 +40,13 @@ final class DexMoveView
 		$generations = $generationModel->getGenerations();
 
 		$move = $this->dexMoveModel->getMove();
+		$move = $this->dexFormatter->formatDexMove($move);
+		$move += $this->dexMoveModel->getDetailedData();
 
 		$types = $this->dexMoveModel->getTypes();
 		$damageDealt = $this->dexMoveModel->getDamageDealt();
 
+		$statChanges = $this->dexMoveModel->getStatChanges();
 		$flags = $this->dexMoveModel->getFlags();
 
 		$versionGroups = $this->dexMoveModel->getVersionGroups();
@@ -87,6 +90,7 @@ final class DexMoveView
 				'move' => $move,
 				'types' => $this->dexFormatter->formatDexTypes($types),
 				'damageDealt' => $damageDealt,
+				'statChanges' => $statChanges,
 				'flags' => $flags,
 
 				'methods' => $this->formatDexMovePokemonMethods($methods),

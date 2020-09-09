@@ -48,15 +48,24 @@ interface GenerationMoveRepositoryInterface
 	public function getTarget(TargetId $targetId, LanguageId $languageId) : array;
 
 	/**
-	 * Get the upgraded move. This method is used to get basic data for a Z-Move
-	 * or Max Move.
+	 * Get the Z-Move.
 	 *
 	 * @param MoveId $moveId
 	 * @param LanguageId $languageId
 	 *
 	 * @return array
 	 */
-	public function getUpgradedMove(MoveId $moveId, LanguageId $languageId) : array;
+	public function getZMove(MoveId $moveId, LanguageId $languageId) : array;
+
+	/**
+	 * Get the Max Move.
+	 *
+	 * @param MoveId $moveId
+	 * @param LanguageId $languageId
+	 *
+	 * @return array
+	 */
+	public function getMaxMove(MoveId $moveId, LanguageId $languageId) : array;
 
 	/**
 	 * Get the Z-Power Effect.
