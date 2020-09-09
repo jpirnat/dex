@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Categories\CategoryId;
+use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\GenerationMove;
 use Jp\Dex\Domain\Moves\GenerationMoveNotFoundException;
 use Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface;
@@ -137,5 +138,152 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 		);
 
 		return $generationMove;
+	}
+
+	/**
+	 * Get the infliction.
+	 *
+	 * @param InflictionId $inflictionId
+	 * @param LanguageId $languageId
+	 *
+	 * @return array
+	 */
+	public function getInfliction(InflictionId $inflictionId, LanguageId $languageId) : array
+	{
+		// HACK: Move infliction names currently exist only for English.
+		$languageId = new LanguageId(LanguageId::ENGLISH);
+
+		$stmt = $this->db->prepare(
+			'SELECT
+				`i`.`identifier`,
+				`in`.`name`
+			FROM `inflictions` AS `i`
+			INNER JOIN `infliction_names` AS `in`
+				ON `i`.`id` = `in`.`infliction_id`
+			WHERE `i`.`id` = :infliction_id
+				AND `in`.`language_id` = :language_id
+			LIMIT 1'
+		);
+		$stmt->bindValue(':infliction_id', $inflictionId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetch(PDO::FETCH_ASSOC);
+	}
+
+	/**
+	 * Get the target.
+	 *
+	 * @param TargetId $targetId
+	 * @param LanguageId $languageId
+	 *
+	 * @return array
+	 */
+	public function getTarget(TargetId $targetId, LanguageId $languageId) : array
+	{
+		// HACK: Move target names currently exist only for English.
+		$languageId = new LanguageId(LanguageId::ENGLISH);
+
+		$stmt = $this->db->prepare(
+			'SELECT
+				`t`.`identifier`,
+				`tn`.`name`
+			FROM `targets` AS `t`
+			INNER JOIN `target_names` AS `tn`
+				ON `t`.`id` = `tn`.`target_id`
+			WHERE `t`.`id` = :target_id
+				AND `tn`.`language_id` = :language_id
+			LIMIT 1'
+		);
+		$stmt->bindValue(':target_id', $targetId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetch(PDO::FETCH_ASSOC);
+	}
+
+	/**
+	 * Get the upgraded move. This method is used to get basic data for a Z-Move
+	 * or Max Move.
+	 *
+	 * @param MoveId $moveId
+	 * @param LanguageId $languageId
+	 *
+	 * @return array
+	 */
+	public function getUpgradedMove(MoveId $moveId, LanguageId $languageId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`m`.`identifier`,
+				`mn`.`name`
+			FROM `moves` AS `m`
+			INNER JOIN `move_names` AS `mn`
+				ON `m`.`id` = `mn`.`move_id`
+			WHERE `m`.`id` = :move_id
+				AND `mn`.`language_id` = :language_id'
+		);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetch(PDO::FETCH_ASSOC);
+	}
+
+	/**
+	 * Get the Z-Power Effect.
+	 *
+	 * @param ZPowerEffectId $zPowerEffectId
+	 * @param LanguageId $languageId
+	 *
+	 * @return array
+	 */
+	public function getZPowerEffect(ZPowerEffectId $zPowerEffectId, LanguageId $languageId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`z`.`identifier`,
+				`zn`.`name`
+			FROM `z_power_effects` AS `z`
+			INNER JOIN `z_power_effect_names` AS `zn`
+				ON `z`.`id` = `zn`.`z_power_effect_id`
+			WHERE `z`.`id` = :z_power_effect_id
+				AND `zn`.`language_id` = :language_id
+			LIMIT 1'
+		);
+		$stmt->bindValue(':z_power_effect_id', $zPowerEffectId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetch(PDO::FETCH_ASSOC);
+	}
+
+	/**
+	 * Get the move's stat changes.
+	 *
+	 * @param GenerationId $generationId
+	 * @param MoveId $moveId
+	 * @param LanguageId $languageId
+	 *
+	 * @return array
+	 */
+	public function getStatChanges(
+		GenerationId $generationId,
+		MoveId $moveId,
+		LanguageId $languageId
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`sn`.`name` AS `statName`,
+				`msc`.`stages`,
+				`msc`.`percent`
+			FROM `move_stat_changes` AS `msc`
+			INNER JOIN `stat_names` AS `sn`
+				ON `msc`.`stat_id` = `sn`.`stat_id`
+			WHERE `msc`.`generation_id` = :generation_id
+				AND `msc`.`move_id` = :move_id
+				AND `sn`.`language_id` = :language_id'
+		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 }

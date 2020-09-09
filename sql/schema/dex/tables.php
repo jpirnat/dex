@@ -69,7 +69,7 @@ return [
 	'inflictions',
 	'infliction_names',
 	'targets',
-	'target_descriptions',
+	'target_names',
 	'z_power_effects',
 	'z_power_effect_names',
 	'generation_moves',
