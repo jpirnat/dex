@@ -103,9 +103,6 @@ $dice = $dice->addRule(\Jp\Dex\Domain\Stats\BaseStatRepositoryInterface::class, 
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseBreedingChainQueries::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\BreedingChains\BreedingChainQueriesInterface::class, $rule);
 
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseCategoryRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Categories\CategoryRepositoryInterface::class, $rule);
-
 $rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexAbilityRepository::class];
 $dice = $dice->addRule(\Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface::class, $rule);
 
