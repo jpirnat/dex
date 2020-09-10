@@ -26,6 +26,122 @@
 	</div>
 
 	<template v-if="loaded">
+		<h1 class="dex-page__title">{{ move.name }}</h1>
+		<p class="dex-move__description">{{ move.description }}</p>
+
+		<h2 class="dex-section__title">General Data</h2>
+		<div class="dex-move__general">
+			<dl class="dex-move__general-main">
+				<dt>Type:</dt>
+				<dd>
+					<a :href="'/dex/' + generation.identifier + '/types/' + move.type.identifier">
+						<img :src="'/images/types/' + move.type.icon" :alt="move.type.name">
+					</a>
+				</dd>
+
+				<dt>Category:</dt>
+				<dd>
+					<img :src="'/images/categories/' + move.category.icon"
+						:alt="move.category.name" v-tooltip="move.category.name"
+					>
+				</dd>
+
+				<dt>Target:</dt>
+				<dd>{{ move.target.name }}</dd>
+
+				<dt>Power:</dt>
+				<dd>{{ powerText(move) }}</dd>
+
+				<dt>Accuracy:</dt>
+				<dd>{{ accuracyText(move) }}</dd>
+
+				<dt>PP:</dt>
+				<dd>{{ move.pp }} (max {{ move.pp * 1.6 }})</dd>
+
+				<dt>Priority:</dt>
+				<dd>{{ move.priority }}</dd>
+			</dl>
+
+			<div>
+				<div v-if="showOtherDetails" class="dex-move__other-details">
+					<div>Other Details:</div>
+					<ul>
+						<li v-if="move.minHits > 0">
+							Hits {{ move.minHits }}<template v-if="move.minHits !== move.maxHits">–{{ move.maxHits }}</template> times
+						</li>
+						<li v-if="move.infliction">
+							<template v-if="move.infliction.percent === 0 || move.infliction.percent === 100">
+								Inflicts {{ move.infliction.name }}
+							</template>
+							<template v-else>
+								{{ move.infliction.percent }}% chance of inflicting {{ move.infliction.name }}
+							</template>
+						</li>
+						<li v-if="move.minTurns > 0">
+							Effect lasts {{ move.minTurns }}<template v-if="move.minTurns !== move.maxTurns">–{{ move.maxTurns }}</template> turns
+						</li>
+						<li v-if="move.critRate > 0">
+							Boosted critical hit rate (+{{ move.critRate }} stage<template v-if="move.critRate > 1">s</template>)
+						</li>
+						<li v-if="move.flinchPercent > 0">
+							{{ move.flinchPercent }}% chance of causing the target to flinch
+						</li>
+						<li v-if="move.recoilPercent > 0">
+							User recovers {{ move.recoilPercent }}% of the damage dealt
+						</li>
+						<li v-if="move.recoilPercent < 0">
+							User takes {{ Math.abs(move.recoilPercent) }}% of the damage dealt as recoil
+						</li>
+						<li v-if="move.healPercent > 0">
+							User recovers {{ move.healPercent }}% of their maximum HP
+						</li>
+						<li v-if="move.healPercent < 0">
+							User loses {{ Math.abs(move.healPercent) }}% of their maximum HP
+						</li>
+						<li v-for="statChange in statChanges">
+							<template v-if="statChange.percent === 0 || statChange.percent === 100">
+								<template v-if="statChange.stages > 0">Raises</template>
+								<template v-else>Lowers</template>
+								{{ statChange.statName }} by {{ Math.abs(statChange.stages) }}
+								stage<template v-if="Math.abs(statChange.stages) > 1">s</template>
+							</template>
+							<template v-else>
+								{{ statChange.percent }}% chance of
+								<template v-if="statChange.stages > 0">raising</template>
+								<template v-else>lowering</template>
+								{{ statChange.statName }} by {{ Math.abs(statChange.stages) }}
+								stage<template v-if="Math.abs(statChange.stages) > 1">s</template>
+							</template>
+						</li>
+					</ul>
+				</div>
+
+				<div v-if="move.zMove" class="dex-move__other-details">
+					<div>
+						Z-Move:
+						<template v-if="move.zMove.identifier !== move.identifier">
+							<a :href="'/dex/' + generation.identifier + '/moves/' + move.zMove.identifier" class="dex-link">{{ move.zMove.name }}</a>
+						</template>
+						<template v-else>{{ move.zMove.name }}</template>
+					</div>
+					<ul>
+						<li v-if="move.zMove.power">Power: {{ move.zMove.power }}</li>
+						<li v-if="move.zMove.zPowerEffect">{{ move.zMove.zPowerEffect.name }}</li>
+					</ul>
+				</div>
+
+				<div v-if="move.maxMove" class="dex-move__other-details">
+					<div>
+						Max Move:
+						<a :href="'/dex/' + generation.identifier + '/moves/' + move.maxMove.identifier" class="dex-link">{{ move.maxMove.name }}</a>
+					</div>
+					<ul>
+						<li v-if="move.maxMove.power">Power: {{ move.maxMove.power }}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
 		<template v-if="types.length > 0">
 			<h2 class="dex-section__title">Matchups</h2>
 			<div>
@@ -58,7 +174,7 @@
 
 		<template v-if="flags.length > 0">
 			<h2 class="dex-section__title">Flags</h2>
-			<ul>
+			<ul class="dex-move__flags">
 				<li v-for="flag in flags" :key="flag.identifier"
 					:class="{
 						'dex-move__flag--disabled': !flag.has

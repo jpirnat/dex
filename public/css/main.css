@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* General styles */
 
 :root {
@@ -235,6 +237,10 @@ a.button {
 
 /* dex */
 
+.dex-page__title {
+	text-align: center;
+}
+
 .dex-section__title {
 	background: #eee;
 	border: 1px solid #ddd;
@@ -373,6 +379,45 @@ a.button {
 
 /* dex move */
 
+.dex-move__description {
+	font-style: italic;
+}
+
+.dex-move__general {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.dex-move__general-main {
+	margin: 0 20px 20px 0;
+	display: grid;
+	grid-template-columns: max-content max-content;
+}
+.dex-move__general-main dt {
+	grid-column-start: 1;
+	padding: 5px;
+	text-align: right;
+}
+.dex-move__general-main dd {
+	grid-column-start: 2;
+	margin: 0;
+	padding: 5px;
+}
+
+.dex-move__other-details {
+	margin: 0 20px 20px 0;
+}
+.dex-move__other-details ul {
+	margin: 0;
+}
+
+@media (min-width: 600px) {
+	.dex-move__flags {
+		column-count: 2;
+	}
+}
+
 .dex-move__flag--disabled {
 	text-decoration: line-through;
 	color: #bbb;
@@ -386,7 +431,7 @@ a.button {
 	margin: 10px 0;
 }
 .dex-move__method-links {
-	margin: 0;
+	margin: 5px 0;
 }
 
 .dex-table__sticky-header-1 th {

@@ -23,6 +23,17 @@ const app = new Vue({
 		showOlderGames: false,
 	},
 	computed: {
+		showOtherDetails() {
+			return this.move.minHits > 0
+				|| this.move.infliction
+				|| this.move.minTurns > 0
+				|| this.move.critRate > 0
+				|| this.move.flinchPercent > 0
+				|| this.move.recoilPercent !== 0
+				|| this.move.healPercent !== 0
+				|| this.statChanges.length > 0
+			;
+		},
 		visibleVersionGroups() {
 			if (this.showOlderGames) {
 				return this.versionGroups;
@@ -59,6 +70,7 @@ const app = new Vue({
 				this.move = data.move;
 				this.types = data.types;
 				this.damageDealt = data.damageDealt;
+				this.statChanges = data.statChanges;
 				this.flags = data.flags;
 				this.methods = data.methods;
 				this.versionGroups = data.versionGroups;
@@ -73,6 +85,21 @@ const app = new Vue({
 		});
 	},
 	methods: {
+		powerText(move) {
+			if (move.power === 0) {
+				return '—'; // em dash
+			}
+			if (move.power === 1) {
+				return '*';
+			}
+			return move.power;
+		},
+		accuracyText(move) {
+			if (move.accuracy === 101) {
+				return '—'; // em dash
+			}
+			return move.accuracy + '%';
+		},
 		onDamageDealtHover(multiplier) {
 			this.hoverDamageDealt = multiplier;
 		},
