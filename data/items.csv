@@ -1105,7 +1105,7 @@ id,identifier,introduced_in_version_group
 1104,wishing-star,20
 1105,dynamax-band,20
 1106,fishing-rod,20
-1107,rotom-bike,20
+1107,rotom-bike-1,20
 1108,sausages,20
 1109,bobs-food-tin,20
 1110,bachs-food-tin,20
@@ -1286,7 +1286,7 @@ id,identifier,introduced_in_version_group
 1285,precooked-burger,20
 1286,gigantamix,20
 1287,wishing-chip,20
-1288,rotom-bike,20
+1288,rotom-bike-2,20
 1289,catching-charm,20
 1290,old-letter,20
 1291,band-autograph,20
@@ -1592,6 +1592,17 @@ id,identifier,introduced_in_version_group
 1591,star-aql7525,20
 1592,star-aql7602,20
 1593,star-aql7235,20
+1594,max-honey,20
+1595,max-mushrooms,20
+1596,galarica-twig,20
+1597,galarica-cuff,20
+1598,style-card,20
+1599,armor-pass,20
+1600,rotom-bike-3,20
+1601,rotom-bike-4,20
+1602,exp-charm,20
+1603,armorite-ore,20
+1604,mark-charm,20
 10001,jail-key,101
 10002,elevator-key-colosseum,101
 10003,small-tablet,101

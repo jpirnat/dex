@@ -889,6 +889,9 @@ id,identifier,form_identifier,pokemon_id,is_default_form,introduced_in_version_g
 888,zacian,hero,888,1,20,0
 889,zamazenta,hero,889,1,20,0
 890,eternatus,,890,1,20,0
+891,kubfu,,891,1,20,0
+892,urshifu-single-strike,,892,1,20,0
+893,zarude,,893,1,20,0
 10001,castform-sunny,sunny,10001,1,7,1
 10002,castform-rainy,rainy,10002,1,7,1
 10003,castform-snowy,snowy,10003,1,7,1
@@ -1084,6 +1087,8 @@ id,identifier,form_identifier,pokemon_id,is_default_form,introduced_in_version_g
 10193,zamazenta-crowned,crowned,10193,1,20,1
 10194,eternatus-eternamax,eternamax,10194,1,20,1
 10195,slowpoke-galar,galar,10195,1,20,0
+10196,slowbro-galar,,10196,1,20,0
+10197,urshifu-rapid-strike,,10197,1,20,0
 20001,unown-b,b,201,0,5,0
 20002,unown-c,c,201,0,5,0
 20003,unown-d,d,201,0,5,0
@@ -1283,3 +1288,12 @@ id,identifier,form_identifier,pokemon_id,is_default_form,introduced_in_version_g
 20197,copperajah-gmax,gmax,879,0,20,1
 20198,duraludon-gmax,gmax,884,0,20,1
 20199,toxtricity-low-key-gmax,gmax,10189,0,20,1
+20200,venusaur-gmax,gmax,3,0,20,1
+20201,blastoise-gmax,gmax,9,0,20,1
+20202,rillaboom-gmax,gmax,812,0,20,1
+20203,cinderace-gmax,gmax,815,0,20,1
+20204,intelleon-gmax,gmax,818,0,20,1
+20205,urshifu-single-strike-gmax,gmax,892,0,20,1
+20206,zarude-dada,dada,893,0,20,0
+20207,pikachu-cap-world,cap-world,10112,0,20,0
+20208,urshifu-rapid-strike-gmax,gmax,10197,0,20,1
