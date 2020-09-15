@@ -40,16 +40,8 @@ final class ZygardeFixer
 			'usage_rated_pokemon',
 
 			'leads_pokemon',
-			'leads_rated_pokemon',
 
 			'moveset_pokemon',
-			'moveset_rated_abilities',
-			'moveset_rated_counters',
-			'moveset_rated_items',
-			'moveset_rated_moves',
-			'moveset_rated_pokemon',
-			'moveset_rated_spreads',
-			'moveset_rated_teammates',
 		];
 
 		// All the Zygarde forms to be converted.
