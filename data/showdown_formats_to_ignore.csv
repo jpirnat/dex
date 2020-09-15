@@ -1380,7 +1380,7 @@ month,name,format_id,reason
 2017-11-01,gen5doublesou,20,too few battles: 38
 2017-11-01,gen5lc,19,too few battles: 5
 2017-11-01,gen5nu,18,too few battles: 2
-2017-11-01,gen5pu,\N,
+2017-11-01,gen5pu,\N,not official
 2017-11-01,gen5ru,17,too few battles: 1
 2017-11-01,gen5uu,16,too few battles: 3
 2017-11-01,gen6battlefactory,\N,
@@ -1418,7 +1418,7 @@ month,name,format_id,reason
 2017-12-01,gen4ubers,10,too few battles: 1
 2017-12-01,gen4uu,12,too few battles: 0
 2017-12-01,gen5doublesou,20,too few battles: 1
-2017-12-01,gen5pu,\N,
+2017-12-01,gen5pu,\N,not official
 2017-12-01,gen5ubers,14,too few battles: 2
 2017-12-01,gen6anythinggoes,21,too few battles: 79
 2017-12-01,gen6battlefactory,\N,
@@ -2210,7 +2210,7 @@ month,name,format_id,reason
 2020-05-01,gen8battlestadiumsingles,\N,battle stadium
 2020-05-01,gen8camomons,\N,
 2020-05-01,gen8cap,\N,cap
-2020-05-01,gen8cap1v1,\N,
+2020-05-01,gen8cap1v1,\N,cap
 2020-05-01,gen8flipped,\N,
 2020-05-01,gen8metronomebattle,\N,
 2020-05-01,gen8mixandmega,\N,
@@ -2220,3 +2220,23 @@ month,name,format_id,reason
 2020-05-01,gen8sharedpower,\N,
 2020-05-01,gen8stabmons,\N,
 2020-05-01,gen8zu,\N,not official
+2020-06-01,gen3nu,\N,not official
+2020-06-01,gen4anythinggoes,\N,not official
+2020-06-01,gen5pu,\N,not official
+2020-06-01,gen6uu,24,too few battles: 51
+2020-06-01,gen81v1,\N,
+2020-06-01,gen82v2doubles,\N,
+2020-06-01,gen8almostanyability,\N,
+2020-06-01,gen8balancedhackmons,\N,
+2020-06-01,gen8battlestadiumsingles,\N,battle stadium
+2020-06-01,gen8camomons,\N,
+2020-06-01,gen8cap,\N,cap
+2020-06-01,gen8cap1v1,\N,cap
+2020-06-01,gen8flipped,\N,
+2020-06-01,gen8metronomebattle,\N,
+2020-06-01,gen8mixandmega,\N,
+2020-06-01,gen8nfe,\N,
+2020-06-01,gen8oublitz,\N,
+2020-06-01,gen8stabmons,\N,
+2020-06-01,gen8tiershift,\N,
+2020-06-01,gen8zu,\N,not official
