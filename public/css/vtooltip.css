@@ -1,4 +1,5 @@
 /* Styles taken from https://github.com/Akryum/v-tooltip#style-examples */
+
 .tooltip {
 	display: block !important;
 	z-index: 10000;
