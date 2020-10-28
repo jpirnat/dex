@@ -7,18 +7,10 @@ use Jp\Dex\Domain\EntityId;
 
 final class MoveId extends EntityId
 {
-	/** @var int $SKETCH */
 	public const SKETCH = 166;
-
-	/** @var int $HIDDEN_POWER */
 	public const HIDDEN_POWER = 237;
-
-	/** @var int $FREEZE_DRY */
 	public const FREEZE_DRY = 573;
-
-	/** @var int $TYPED_HIDDEN_POWER_BEGIN */
+	public const THOUSAND_ARROWS = 614;
 	public const TYPED_HIDDEN_POWER_BEGIN = 10001;
-
-	/** @var int $TYPED_HIDDEN_POWER_END */
 	public const TYPED_HIDDEN_POWER_END = 10016;
 }
