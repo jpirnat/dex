@@ -13,24 +13,16 @@ final class Leads
 {
 	use ValidateMonthTrait;
 
-	private DateTime $month;
-	private FormatId $formatId;
-	private int $totalLeads;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $totalLeads
 	 *
 	 * @throws InvalidMonthException if $month is invalid.
 	 * @throws InvalidCountException if $totalLeads is invalid.
 	 */
 	public function __construct(
-		DateTime $month,
-		FormatId $formatId,
-		int $totalLeads
+		private DateTime $month,
+		private FormatId $formatId,
+		private int $totalLeads,
 	) {
 		$this->validateMonth($month);
 
@@ -39,10 +31,6 @@ final class Leads
 				'Invalid number of total leads: ' . $totalLeads
 			);
 		}
-
-		$this->month = $month;
-		$this->formatId = $formatId;
-		$this->totalLeads = $totalLeads;
 	}
 
 	/**

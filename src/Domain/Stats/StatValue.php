@@ -5,20 +5,10 @@ namespace Jp\Dex\Domain\Stats;
 
 final class StatValue
 {
-	private StatId $statId;
-	private float $value;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param StatId $statId
-	 * @param float $value
-	 */
-	public function __construct(StatId $statId, float $value)
-	{
-		$this->statId = $statId;
-		$this->value = $value;
-	}
+	public function __construct(
+		private StatId $statId,
+		private float $value,
+	) {}
 
 	/**
 	 * Get the stat id.

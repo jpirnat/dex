@@ -7,30 +7,12 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class StatName
 {
-	private LanguageId $languageId;
-	private StatId $statId;
-	private string $name;
-	private string $abbreviation;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param LanguageId $languageId
-	 * @param StatId $statId
-	 * @param string $name
-	 * @param string $abbreviation
-	 */
 	public function __construct(
-		LanguageId $languageId,
-		StatId $statId,
-		string $name,
-		string $abbreviation
-	) {
-		$this->languageId = $languageId;
-		$this->statId = $statId;
-		$this->name = $name;
-		$this->abbreviation = $abbreviation;
-	}
+		private LanguageId $languageId,
+		private StatId $statId,
+		private string $name,
+		private string $abbreviation,
+	) {}
 
 	/**
 	 * Get the stat name's language id.

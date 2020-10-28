@@ -7,26 +7,11 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class CharacteristicName
 {
-	private LanguageId $languageId;
-	private CharacteristicId $characteristicId;
-	private string $name;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param LanguageId $languageId
-	 * @param CharacteristicId $characteristicId
-	 * @param string $name
-	 */
 	public function __construct(
-		LanguageId $languageId,
-		CharacteristicId $characteristicId,
-		string $name
-	) {
-		$this->languageId = $languageId;
-		$this->characteristicId = $characteristicId;
-		$this->name = $name;
-	}
+		private LanguageId $languageId,
+		private CharacteristicId $characteristicId,
+		private string $name,
+	) {}
 
 	/**
 	 * Get the characteristic name's language id.

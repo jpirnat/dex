@@ -11,38 +11,14 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class MonthDirectoryImporter
 {
-	private UsageFileImporter $usageFileImporter;
-	private LeadsDirectoryImporter $leadsDirectoryImporter;
-	private MovesetDirectoryImporter $movesetDirectoryImporter;
-	private MonthExtractor $monthExtractor;
-	private FormatRatingExtractor $formatRatingExtractor;
-	private ShowdownFormatRepositoryInterface $showdownFormatRepository;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param UsageFileImporter $usageFileImporter
-	 * @param LeadsDirectoryImporter $leadsDirectoryImporter
-	 * @param MovesetDirectoryImporter $movesetDirectoryImporter
-	 * @param MonthExtractor $monthExtractor
-	 * @param FormatRatingExtractor $formatRatingExtractor
-	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
-	 */
 	public function __construct(
-		UsageFileImporter $usageFileImporter,
-		LeadsDirectoryImporter $leadsDirectoryImporter,
-		MovesetDirectoryImporter $movesetDirectoryImporter,
-		MonthExtractor $monthExtractor,
-		FormatRatingExtractor $formatRatingExtractor,
-		ShowdownFormatRepositoryInterface $showdownFormatRepository
-	) {
-		$this->usageFileImporter = $usageFileImporter;
-		$this->leadsDirectoryImporter = $leadsDirectoryImporter;
-		$this->movesetDirectoryImporter = $movesetDirectoryImporter;
-		$this->monthExtractor = $monthExtractor;
-		$this->formatRatingExtractor = $formatRatingExtractor;
-		$this->showdownFormatRepository = $showdownFormatRepository;
-	}
+		private UsageFileImporter $usageFileImporter,
+		private LeadsDirectoryImporter $leadsDirectoryImporter,
+		private MovesetDirectoryImporter $movesetDirectoryImporter,
+		private MonthExtractor $monthExtractor,
+		private FormatRatingExtractor $formatRatingExtractor,
+		private ShowdownFormatRepositoryInterface $showdownFormatRepository,
+	) {}
 
 	/**
 	 * Import all stat files in this month directory.

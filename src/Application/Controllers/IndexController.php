@@ -7,17 +7,9 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class IndexController
 {
-	private BaseController $baseController;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 */
-	public function __construct(BaseController $baseController)
-	{
-		$this->baseController = $baseController;
-	}
+	public function __construct(
+		private BaseController $baseController,
+	) {}
 
 	/**
 	 * Show the home page.

@@ -5,54 +5,18 @@ namespace Jp\Dex\Domain\Usage;
 
 final class StatsUsagePokemon
 {
-	private int $rank;
-	private string $icon;
-	private string $identifier;
-	private string $name;
-	private float $usagePercent;
-	private float $usageChange;
-	private int $raw;
-	private float $rawPercent;
-	private int $real;
-	private float $realPercent;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param int $rank
-	 * @param string $icon
-	 * @param string $identifier
-	 * @param string $name
-	 * @param float $usagePercent
-	 * @param float $usageChange
-	 * @param int $raw
-	 * @param float $rawPercent
-	 * @param int $real
-	 * @param float $realPercent
-	 */
 	public function __construct(
-		int $rank,
-		string $icon,
-		string $identifier,
-		string $name,
-		float $usagePercent,
-		float $usageChange,
-		int $raw,
-		float $rawPercent,
-		int $real,
-		float $realPercent
-	) {
-		$this->rank = $rank;
-		$this->icon = $icon;
-		$this->identifier = $identifier;
-		$this->name = $name;
-		$this->usagePercent = $usagePercent;
-		$this->usageChange = $usageChange;
-		$this->raw = $raw;
-		$this->rawPercent = $rawPercent;
-		$this->real = $real;
-		$this->realPercent = $realPercent;
-	}
+		private int $rank,
+		private string $icon,
+		private string $identifier,
+		private string $name,
+		private float $usagePercent,
+		private float $usageChange,
+		private int $raw,
+		private float $rawPercent,
+		private int $real,
+		private float $realPercent,
+	) {}
 
 	/**
 	 * Get the Pokémon's rank.

@@ -7,20 +7,10 @@ use DateTime;
 
 final class TrendPoint
 {
-	private DateTime $date;
-	private float $value;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param DateTime $date
-	 * @param float $value
-	 */
-	public function __construct(DateTime $date, float $value)
-	{
-		$this->date = $date;
-		$this->value = $value;
-	}
+	public function __construct(
+		private DateTime $date,
+		private float $value,
+	) {}
 
 	/**
 	 * Get the trend point's date.

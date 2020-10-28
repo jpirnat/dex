@@ -20,37 +20,21 @@ final class MovesetRatedAveragedMove
 {
 	use ValidateMonthTrait;
 
-	private DateTime $start;
-	private DateTime $end;
-	private FormatId $formatId;
-	private int $rating;
-	private PokemonId $pokemonId;
-	private MoveId $moveId;
-	private float $percent;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param MoveId $moveId
-	 * @param float $percent
 	 *
 	 * @throws InvalidMonthException if $start or $end is invalid.
 	 * @throws InvalidRatingException if $rating is invalid.
 	 * @throws InvalidPercentException if $percent is invalid
 	 */
 	public function __construct(
-		DateTime $start,
-		DateTime $end,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-		MoveId $moveId,
-		float $percent
+		private DateTime $start,
+		private DateTime $end,
+		private FormatId $formatId,
+		private int $rating,
+		private PokemonId $pokemonId,
+		private MoveId $moveId,
+		private float $percent,
 	) {
 		$this->validateMonth($start);
 		$this->validateMonth($end);
@@ -62,14 +46,6 @@ final class MovesetRatedAveragedMove
 		if ($percent < 0 || $percent > 100) {
 			throw new InvalidPercentException('Invalid percent: ' . $percent);
 		}
-
-		$this->start = $start;
-		$this->end = $end;
-		$this->formatId = $formatId;
-		$this->rating = $rating;
-		$this->pokemonId = $pokemonId;
-		$this->moveId = $moveId;
-		$this->percent = $percent;
 	}
 
 	/**

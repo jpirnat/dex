@@ -5,42 +5,15 @@ namespace Jp\Dex\Domain\Usage;
 
 final class StatsMovePokemon
 {
-	private string $icon;
-	private string $identifier;
-	private string $name;
-	private float $pokemonPercent;
-	private float $movePercent;
-	private float $usagePercent;
-	private float $usageChange;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $icon
-	 * @param string $identifier
-	 * @param string $name
-	 * @param float $pokemonPercent
-	 * @param float $movePercent
-	 * @param float $usagePercent
-	 * @param float $usageChange
-	 */
 	public function __construct(
-		string $icon,
-		string $identifier,
-		string $name,
-		float $pokemonPercent,
-		float $movePercent,
-		float $usagePercent,
-		float $usageChange
-	) {
-		$this->icon = $icon;
-		$this->identifier = $identifier;
-		$this->name = $name;
-		$this->pokemonPercent = $pokemonPercent;
-		$this->movePercent = $movePercent;
-		$this->usagePercent = $usagePercent;
-		$this->usageChange = $usageChange;
-	}
+		private string $icon,
+		private string $identifier,
+		private string $name,
+		private float $pokemonPercent,
+		private float $movePercent,
+		private float $usagePercent,
+		private float $usageChange,
+	) {}
 
 	/**
 	 * Get the Pokémon's icon.

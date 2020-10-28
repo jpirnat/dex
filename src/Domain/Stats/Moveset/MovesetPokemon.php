@@ -15,31 +15,19 @@ final class MovesetPokemon
 {
 	use ValidateMonthTrait;
 
-	private DateTime $month;
-	private FormatId $formatId;
-	private PokemonId $pokemonId;
-	private int $rawCount;
-	private ?int $viabilityCeiling;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param PokemonId $pokemonId
-	 * @param int $rawCount
-	 * @param int|null $viabilityCeiling
 	 *
 	 * @throws InvalidMonthException if $month is invalid.
 	 * @throws InvalidCountException if $rawCount is invalid.
 	 * @throws InvalidViabilityCeilingException if $viabilityCeiling is invalid.
 	 */
 	public function __construct(
-		DateTime $month,
-		FormatId $formatId,
-		PokemonId $pokemonId,
-		int $rawCount,
-		?int $viabilityCeiling
+		private DateTime $month,
+		private FormatId $formatId,
+		private PokemonId $pokemonId,
+		private int $rawCount,
+		private ?int $viabilityCeiling,
 	) {
 		$this->validateMonth($month);
 
@@ -52,12 +40,6 @@ final class MovesetPokemon
 				'Invalid viability ceiling: ' . $viabilityCeiling
 			);
 		}
-
-		$this->month = $month;
-		$this->formatId = $formatId;
-		$this->pokemonId = $pokemonId;
-		$this->rawCount = $rawCount;
-		$this->viabilityCeiling = $viabilityCeiling;
 	}
 
 	/**

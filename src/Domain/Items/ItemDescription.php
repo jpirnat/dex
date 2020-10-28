@@ -8,30 +8,12 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class ItemDescription
 {
-	private GenerationId $generationId;
-	private LanguageId $languageId;
-	private ItemId $itemId;
-	private string $description;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 * @param ItemId $itemId
-	 * @param string $description
-	 */
 	public function __construct(
-		GenerationId $generationId,
-		LanguageId $languageId,
-		ItemId $itemId,
-		string $description
-	) {
-		$this->generationId = $generationId;
-		$this->languageId = $languageId;
-		$this->itemId = $itemId;
-		$this->description = $description;
-	}
+		private GenerationId $generationId,
+		private LanguageId $languageId,
+		private ItemId $itemId,
+		private string $description,
+	) {}
 
 	/**
 	 * Get the item description's generation id.

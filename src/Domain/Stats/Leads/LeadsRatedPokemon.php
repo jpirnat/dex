@@ -9,24 +9,16 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 
 final class LeadsRatedPokemon
 {
-	private UsageRatedPokemonId $usageRatedPokemonId;
-	private int $rank;
-	private float $usagePercent;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param UsageRatedPokemonId $usageRatedPokemonId
-	 * @param int $rank
-	 * @param float $usagePercent
 	 *
 	 * @throws InvalidRankException if $rank is invalid.
 	 * @throws InvalidPercentException if $usagePercent is invalid
 	 */
 	public function __construct(
-		UsageRatedPokemonId $usageRatedPokemonId,
-		int $rank,
-		float $usagePercent
+		private UsageRatedPokemonId $usageRatedPokemonId,
+		private int $rank,
+		private float $usagePercent,
 	) {
 		if ($rank < 1) {
 			throw new InvalidRankException('Invalid rank: ' . $rank);
@@ -37,10 +29,6 @@ final class LeadsRatedPokemon
 				'Invalid usage percent: ' . $usagePercent
 			);
 		}
-
-		$this->usageRatedPokemonId = $usageRatedPokemonId;
-		$this->rank = $rank;
-		$this->usagePercent = $usagePercent;
 	}
 
 	/**

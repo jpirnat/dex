@@ -18,19 +18,15 @@ final class BaseModel
 	private array $languageNames = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param LanguageNameRepositoryInterface $languageNameRepository
-	 */
 	public function __construct(
-		LanguageNameRepositoryInterface $languageNameRepository
+		LanguageNameRepositoryInterface $languageNameRepository,
 	) {
 		$today = new DateTime('today');
 		$this->currentYear = (int) $today->format('Y');
 
 		$this->languageNames = $languageNameRepository->getInOwnLanguages();
 	}
+
 
 	/**
 	 * Set the current language id.

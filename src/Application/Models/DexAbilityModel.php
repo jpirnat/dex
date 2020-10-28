@@ -12,14 +12,6 @@ use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 
 final class DexAbilityModel
 {
-	private GenerationModel $generationModel;
-	private AbilityRepositoryInterface $abilityRepository;
-	private AbilityNameRepositoryInterface $abilityNameRepository;
-	private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository;
-	private StatNameModel $statNameModel;
-	private DexPokemonRepositoryInterface $dexPokemonRepository;
-
-
 	private array $ability;
 	private array $stats = [];
 
@@ -30,31 +22,15 @@ final class DexAbilityModel
 	private array $hiddenPokemon = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationModel $generationModel
-	 * @param AbilityRepositoryInterface $abilityRepository
-	 * @param AbilityNameRepositoryInterface $abilityNameRepository
-	 * @param AbilityDescriptionRepositoryInterface $abilityDescriptionRepository
-	 * @param StatNameModel $statNameModel
-	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
-	 */
 	public function __construct(
-		GenerationModel $generationModel,
-		AbilityRepositoryInterface $abilityRepository,
-		AbilityNameRepositoryInterface $abilityNameRepository,
-		AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
-		StatNameModel $statNameModel,
-		DexPokemonRepositoryInterface $dexPokemonRepository
-	) {
-		$this->generationModel = $generationModel;
-		$this->abilityRepository = $abilityRepository;
-		$this->abilityNameRepository = $abilityNameRepository;
-		$this->abilityDescriptionRepository = $abilityDescriptionRepository;
-		$this->statNameModel = $statNameModel;
-		$this->dexPokemonRepository = $dexPokemonRepository;
-	}
+		private GenerationModel $generationModel,
+		private AbilityRepositoryInterface $abilityRepository,
+		private AbilityNameRepositoryInterface $abilityNameRepository,
+		private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
+		private StatNameModel $statNameModel,
+		private DexPokemonRepositoryInterface $dexPokemonRepository,
+	) {}
+
 
 	/**
 	 * Set data for the dex ability page.

@@ -8,17 +8,9 @@ use Jp\Dex\Domain\Languages\LanguageName;
 
 final class BaseView
 {
-	private BaseModel $baseModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseModel $baseModel
-	 */
-	public function __construct(BaseModel $baseModel)
-	{
-		$this->baseModel = $baseModel;
-	}
+	public function __construct(
+		private BaseModel $baseModel,
+	) {}
 
 	/**
 	 * Get the variables needed for the base template.

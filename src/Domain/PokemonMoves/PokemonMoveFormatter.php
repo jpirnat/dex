@@ -12,26 +12,11 @@ use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 
 final class PokemonMoveFormatter
 {
-	private TmRepositoryInterface $tmRepository;
-	private ItemNameRepositoryInterface $itemNameRepository;
-	private MoveNameRepositoryInterface $moveNameRepository;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param TmRepositoryInterface $tmRepository
-	 * @param ItemNameRepositoryInterface $itemNameRepository
-	 * @param MoveNameRepositoryInterface $moveNameRepository
-	 */
 	public function __construct(
-		TmRepositoryInterface $tmRepository,
-		ItemNameRepositoryInterface $itemNameRepository,
-		MoveNameRepositoryInterface $moveNameRepository
-	) {
-		$this->tmRepository = $tmRepository;
-		$this->itemNameRepository = $itemNameRepository;
-		$this->moveNameRepository = $moveNameRepository;
-	}
+		private TmRepositoryInterface $tmRepository,
+		private ItemNameRepositoryInterface $itemNameRepository,
+		private MoveNameRepositoryInterface $moveNameRepository,
+	) {}
 
 	/**
 	 * Format in words the method through which this Pokémon move is learned.

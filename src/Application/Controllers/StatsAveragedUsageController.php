@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsAveragedUsageController
 {
-	private BaseController $baseController;
-	private StatsAveragedUsageModel $usageAveragedModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param StatsAveragedUsageModel $usageAveragedModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		StatsAveragedUsageModel $usageAveragedModel
-	) {
-		$this->baseController = $baseController;
-		$this->usageAveragedModel = $usageAveragedModel;
-	}
+		private BaseController $baseController,
+		private StatsAveragedUsageModel $usageAveragedModel,
+	) {}
 
 	/**
 	 * Get usage data averaged over multiple months.

@@ -17,15 +17,6 @@ use Jp\Dex\Domain\Usage\StatsItemPokemonRepositoryInterface;
 
 final class StatsItemModel
 {
-	private DateModel $dateModel;
-	private FormatRepositoryInterface $formatRepository;
-	private ItemRepositoryInterface $itemRepository;
-	private RatingQueriesInterface $ratingQueries;
-	private ItemNameRepositoryInterface $itemNameRepository;
-	private ItemDescriptionRepositoryInterface $itemDescriptionRepository;
-	private StatsItemPokemonRepositoryInterface $statsItemPokemonRepository;
-
-
 	private string $month;
 	private Format $format;
 	private int $rating;
@@ -42,34 +33,16 @@ final class StatsItemModel
 	private array $pokemon = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param DateModel $dateModel
-	 * @param FormatRepositoryInterface $formatRepository
-	 * @param ItemRepositoryInterface $itemRepository
-	 * @param RatingQueriesInterface $ratingQueries
-	 * @param ItemNameRepositoryInterface $itemNameRepository
-	 * @param ItemDescriptionRepositoryInterface $itemDescriptionRepository
-	 * @param StatsItemPokemonRepositoryInterface $statsItemPokemonRepository
-	 */
 	public function __construct(
-		DateModel $dateModel,
-		FormatRepositoryInterface $formatRepository,
-		ItemRepositoryInterface $itemRepository,
-		RatingQueriesInterface $ratingQueries,
-		ItemNameRepositoryInterface $itemNameRepository,
-		ItemDescriptionRepositoryInterface $itemDescriptionRepository,
-		StatsItemPokemonRepositoryInterface $statsItemPokemonRepository
-	) {
-		$this->dateModel = $dateModel;
-		$this->formatRepository = $formatRepository;
-		$this->itemRepository = $itemRepository;
-		$this->ratingQueries = $ratingQueries;
-		$this->itemNameRepository = $itemNameRepository;
-		$this->itemDescriptionRepository = $itemDescriptionRepository;
-		$this->statsItemPokemonRepository = $statsItemPokemonRepository;
-	}
+		private DateModel $dateModel,
+		private FormatRepositoryInterface $formatRepository,
+		private ItemRepositoryInterface $itemRepository,
+		private RatingQueriesInterface $ratingQueries,
+		private ItemNameRepositoryInterface $itemNameRepository,
+		private ItemDescriptionRepositoryInterface $itemDescriptionRepository,
+		private StatsItemPokemonRepositoryInterface $statsItemPokemonRepository,
+	) {}
+
 
 	/**
 	 * Get usage data to recreate a stats usage file, such as

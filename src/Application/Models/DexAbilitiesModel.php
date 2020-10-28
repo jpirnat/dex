@@ -9,26 +9,14 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexAbilitiesModel
 {
-	private GenerationModel $generationModel;
-	private DexAbilityRepositoryInterface $dexAbilityRepository;
-
-
 	private array $abilities = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationModel $generationModel
-	 * @param DexAbilityRepositoryInterface $dexAbilityRepository
-	 */
 	public function __construct(
-		GenerationModel $generationModel,
-		DexAbilityRepositoryInterface $dexAbilityRepository
-	) {
-		$this->generationModel = $generationModel;
-		$this->dexAbilityRepository = $dexAbilityRepository;
-	}
+		private GenerationModel $generationModel,
+		private DexAbilityRepositoryInterface $dexAbilityRepository,
+	) {}
+
 
 	/**
 	 * Set data for the dex abilities page.

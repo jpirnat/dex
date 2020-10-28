@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsPokemonController
 {
-	private BaseController $baseController;
-	private StatsPokemonModel $statsPokemonModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param StatsPokemonModel $statsPokemonModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		StatsPokemonModel $statsPokemonModel
-	) {
-		$this->baseController = $baseController;
-		$this->statsPokemonModel = $statsPokemonModel;
-	}
+		private BaseController $baseController,
+		private StatsPokemonModel $statsPokemonModel,
+	) {}
 
 	/**
 	 * Get moveset data to recreate a stats moveset file, such as

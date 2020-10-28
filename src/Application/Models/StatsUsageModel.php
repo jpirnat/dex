@@ -13,13 +13,6 @@ use Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface;
 
 final class StatsUsageModel
 {
-	private DateModel $dateModel;
-	private FormatRepositoryInterface $formatRepository;
-	private RatingQueriesInterface $ratingQueries;
-	private LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository;
-	private StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository;
-
-
 	private string $month;
 	private Format $format;
 	private int $rating;
@@ -36,28 +29,14 @@ final class StatsUsageModel
 	private array $pokemon = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param DateModel $dateModel
-	 * @param FormatRepositoryInterface $formatRepository
-	 * @param RatingQueriesInterface $ratingQueries
-	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
-	 * @param StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository
-	 */
 	public function __construct(
-		DateModel $dateModel,
-		FormatRepositoryInterface $formatRepository,
-		RatingQueriesInterface $ratingQueries,
-		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
-		StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository
-	) {
-		$this->dateModel = $dateModel;
-		$this->formatRepository = $formatRepository;
-		$this->ratingQueries = $ratingQueries;
-		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
-		$this->statsUsagePokemonRepository = $statsUsagePokemonRepository;
-	}
+		private DateModel $dateModel,
+		private FormatRepositoryInterface $formatRepository,
+		private RatingQueriesInterface $ratingQueries,
+		private LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
+		private StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository,
+	) {}
+
 
 	/**
 	 * Get usage data to recreate a stats usage file, such as

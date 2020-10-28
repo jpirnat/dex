@@ -5,30 +5,12 @@ namespace Jp\Dex\Domain\Teammates;
 
 final class StatsPokemonTeammate
 {
-	private string $icon;
-	private string $identifier;
-	private string $name;
-	private float $percent;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $icon
-	 * @param string $identifier
-	 * @param string $name
-	 * @param float $percent
-	 */
 	public function __construct(
-		string $icon,
-		string $identifier,
-		string $name,
-		float $percent
-	) {
-		$this->icon = $icon;
-		$this->identifier = $identifier;
-		$this->name = $name;
-		$this->percent = $percent;
-	}
+		private string $icon,
+		private string $identifier,
+		private string $name,
+		private float $percent,
+	) {}
 
 	/**
 	 * Get the teammate's icon.

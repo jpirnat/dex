@@ -5,26 +5,11 @@ namespace Jp\Dex\Domain\Versions;
 
 final class Generation
 {
-	private GenerationId $id;
-	private string $identifier;
-	private string $icon;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationId $generationId
-	 * @param string $identifier
-	 * @param string $icon
-	 */
 	public function __construct(
-		GenerationId $generationId,
-		string $identifier,
-		string $icon
-	) {
-		$this->id = $generationId;
-		$this->identifier = $identifier;
-		$this->icon = $icon;
-	}
+		private GenerationId $id,
+		private string $identifier,
+		private string $icon,
+	) {}
 
 	/**
 	 * Get the generation's id.

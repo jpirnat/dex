@@ -16,58 +16,19 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class MonthDirectoryParser
 {
-	private UsageFileParser $usageFileParser;
-	private LeadsDirectoryParser $leadsDirectoryParser;
-	private MovesetDirectoryParser $movesetDirectoryParser;
-	private MonthExtractor $monthExtractor;
-	private FormatRatingExtractor $formatRatingExtractor;
-	private ShowdownFormatRepositoryInterface $showdownFormatRepository;
-	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
-	private ShowdownAbilityRepositoryInterface $showdownAbilityRepository;
-	private ShowdownItemRepositoryInterface $showdownItemRepository;
-	private ShowdownNatureRepositoryInterface $showdownNatureRepository;
-	private ShowdownMoveRepositoryInterface $showdownMoveRepository;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param UsageFileParser $usageFileParser
-	 * @param LeadsDirectoryParser $leadsDirectoryParser
-	 * @param MovesetDirectoryParser $movesetDirectoryParser
-	 * @param MonthExtractor $monthExtractor
-	 * @param FormatRatingExtractor $formatRatingExtractor
-	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
-	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
-	 * @param ShowdownAbilityRepositoryInterface $showdownAbilityRepository
-	 * @param ShowdownItemRepositoryInterface $showdownItemRepository
-	 * @param ShowdownNatureRepositoryInterface $showdownNatureRepository
-	 * @param ShowdownMoveRepositoryInterface $showdownMoveRepository
-	 */
 	public function __construct(
-		UsageFileParser $usageFileParser,
-		LeadsDirectoryParser $leadsDirectoryParser,
-		MovesetDirectoryParser $movesetDirectoryParser,
-		MonthExtractor $monthExtractor,
-		FormatRatingExtractor $formatRatingExtractor,
-		ShowdownFormatRepositoryInterface $showdownFormatRepository,
-		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
-		ShowdownAbilityRepositoryInterface $showdownAbilityRepository,
-		ShowdownItemRepositoryInterface $showdownItemRepository,
-		ShowdownNatureRepositoryInterface $showdownNatureRepository,
-		ShowdownMoveRepositoryInterface $showdownMoveRepository
-	) {
-		$this->usageFileParser = $usageFileParser;
-		$this->leadsDirectoryParser = $leadsDirectoryParser;
-		$this->movesetDirectoryParser = $movesetDirectoryParser;
-		$this->monthExtractor = $monthExtractor;
-		$this->formatRatingExtractor = $formatRatingExtractor;
-		$this->showdownFormatRepository = $showdownFormatRepository;
-		$this->showdownPokemonRepository = $showdownPokemonRepository;
-		$this->showdownAbilityRepository = $showdownAbilityRepository;
-		$this->showdownItemRepository = $showdownItemRepository;
-		$this->showdownNatureRepository = $showdownNatureRepository;
-		$this->showdownMoveRepository = $showdownMoveRepository;
-	}
+		private UsageFileParser $usageFileParser,
+		private LeadsDirectoryParser $leadsDirectoryParser,
+		private MovesetDirectoryParser $movesetDirectoryParser,
+		private MonthExtractor $monthExtractor,
+		private FormatRatingExtractor $formatRatingExtractor,
+		private ShowdownFormatRepositoryInterface $showdownFormatRepository,
+		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
+		private ShowdownAbilityRepositoryInterface $showdownAbilityRepository,
+		private ShowdownItemRepositoryInterface $showdownItemRepository,
+		private ShowdownNatureRepositoryInterface $showdownNatureRepository,
+		private ShowdownMoveRepositoryInterface $showdownMoveRepository,
+	) {}
 
 	/**
 	 * Parse this month directory for unknown Showdown format names.

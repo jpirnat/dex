@@ -17,16 +17,6 @@ use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
 final class StatsAveragedLeadsModel
 {
-	private FormatRepositoryInterface $formatRepository;
-	private RatingQueriesInterface $ratingQueries;
-	private LeadsAveragedPokemonRepositoryInterface $leadsAveragedPokemonRepository;
-	private LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository;
-	private MonthsCounter $monthsCounter;
-	private PokemonRepositoryInterface $pokemonRepository;
-	private PokemonNameRepositoryInterface $pokemonNameRepository;
-	private FormIconRepositoryInterface $formIconRepository;
-
-
 	private string $start;
 	private string $end;
 	private Format $format;
@@ -40,37 +30,17 @@ final class StatsAveragedLeadsModel
 	private array $leadsDatas = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param FormatRepositoryInterface $formatRepository
-	 * @param RatingQueriesInterface $ratingQueries
-	 * @param LeadsAveragedPokemonRepositoryInterface $leadsAveragedPokemonRepository
-	 * @param LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository
-	 * @param MonthsCounter $monthsCounter
-	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param FormIconRepositoryInterface $formIconRepository
-	 */
 	public function __construct(
-		FormatRepositoryInterface $formatRepository,
-		RatingQueriesInterface $ratingQueries,
-		LeadsAveragedPokemonRepositoryInterface $leadsAveragedPokemonRepository,
-		LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
-		MonthsCounter $monthsCounter,
-		PokemonRepositoryInterface $pokemonRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
-		FormIconRepositoryInterface $formIconRepository
-	) {
-		$this->formatRepository = $formatRepository;
-		$this->ratingQueries = $ratingQueries;
-		$this->leadsAveragedPokemonRepository = $leadsAveragedPokemonRepository;
-		$this->leadsRatedAveragedPokemonRepository = $leadsRatedAveragedPokemonRepository;
-		$this->monthsCounter = $monthsCounter;
-		$this->pokemonRepository = $pokemonRepository;
-		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->formIconRepository = $formIconRepository;
-	}
+		private FormatRepositoryInterface $formatRepository,
+		private RatingQueriesInterface $ratingQueries,
+		private LeadsAveragedPokemonRepositoryInterface $leadsAveragedPokemonRepository,
+		private LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
+		private MonthsCounter $monthsCounter,
+		private PokemonRepositoryInterface $pokemonRepository,
+		private PokemonNameRepositoryInterface $pokemonNameRepository,
+		private FormIconRepositoryInterface $formIconRepository,
+	) {}
+
 
 	/**
 	 * Get leads data averaged over multiple months.

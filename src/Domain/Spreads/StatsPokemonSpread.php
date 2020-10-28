@@ -8,34 +8,13 @@ use Jp\Dex\Domain\Stats\StatValueContainer;
 
 final class StatsPokemonSpread
 {
-	private string $natureName;
-	private ?StatId $increasedStatId;
-	private ?StatId $decreasedStatId;
-	private StatValueContainer $evs;
-	private float $percent;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $natureName
-	 * @param StatId|null $increasedStatId
-	 * @param StatId|null $decreasedStatId
-	 * @param StatValueContainer $evs
-	 * @param float $percent
-	 */
 	public function __construct(
-		string $natureName,
-		?StatId $increasedStatId,
-		?StatId $decreasedStatId,
-		StatValueContainer $evs,
-		float $percent
-	) {
-		$this->natureName = $natureName;
-		$this->increasedStatId = $increasedStatId;
-		$this->decreasedStatId = $decreasedStatId;
-		$this->evs = $evs;
-		$this->percent = $percent;
-	}
+		private string $natureName,
+		private ?StatId $increasedStatId,
+		private ?StatId $decreasedStatId,
+		private StatValueContainer $evs,
+		private float $percent,
+	) {}
 
 	/**
 	 * Get the spread's nature name.

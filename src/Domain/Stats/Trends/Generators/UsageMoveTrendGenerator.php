@@ -17,42 +17,15 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class UsageMoveTrendGenerator
 {
-	private StatsChartQueriesInterface $statsChartQueries;
-	private PokemonNameRepositoryInterface $pokemonNameRepository;
-	private MoveNameRepositoryInterface $moveNameRepository;
-	private PokemonTypeRepositoryInterface $pokemonTypeRepository;
-	private TypeRepositoryInterface $typeRepository;
-	private GenerationMoveRepositoryInterface $generationMoveRepository;
-	private TrendPointCalculator $trendPointCalculator;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param StatsChartQueriesInterface $statsChartQueries
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param MoveNameRepositoryInterface $moveNameRepository
-	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
-	 * @param TypeRepositoryInterface $typeRepository
-	 * @param GenerationMoveRepositoryInterface $generationMoveRepository
-	 * @param TrendPointCalculator $trendPointCalculator
-	 */
 	public function __construct(
-		StatsChartQueriesInterface $statsChartQueries,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
-		MoveNameRepositoryInterface $moveNameRepository,
-		PokemonTypeRepositoryInterface $pokemonTypeRepository,
-		TypeRepositoryInterface $typeRepository,
-		GenerationMoveRepositoryInterface $generationMoveRepository,
-		TrendPointCalculator $trendPointCalculator
-	) {
-		$this->statsChartQueries = $statsChartQueries;
-		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->moveNameRepository = $moveNameRepository;
-		$this->pokemonTypeRepository = $pokemonTypeRepository;
-		$this->typeRepository = $typeRepository;
-		$this->generationMoveRepository = $generationMoveRepository;
-		$this->trendPointCalculator = $trendPointCalculator;
-	}
+		private StatsChartQueriesInterface $statsChartQueries,
+		private PokemonNameRepositoryInterface $pokemonNameRepository,
+		private MoveNameRepositoryInterface $moveNameRepository,
+		private PokemonTypeRepositoryInterface $pokemonTypeRepository,
+		private TypeRepositoryInterface $typeRepository,
+		private GenerationMoveRepositoryInterface $generationMoveRepository,
+		private TrendPointCalculator $trendPointCalculator,
+	) {}
 
 	/**
 	 * Get the data for a usage move trend line.

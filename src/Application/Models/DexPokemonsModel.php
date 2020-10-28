@@ -10,33 +10,17 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexPokemonsModel
 {
-	private GenerationModel $generationModel;
-	private DexPokemonRepositoryInterface $dexPokemonRepository;
-	private StatNameModel $statNameModel;
-
-
 	private array $stats = [];
 
 	/** @var DexPokemon[] $pokemon */
 	private array $pokemon = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationModel $generationModel
-	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
-	 * @param StatNameModel $statNameModel
-	 */
 	public function __construct(
-		GenerationModel $generationModel,
-		DexPokemonRepositoryInterface $dexPokemonRepository,
-		StatNameModel $statNameModel
-	) {
-		$this->generationModel = $generationModel;
-		$this->dexPokemonRepository = $dexPokemonRepository;
-		$this->statNameModel = $statNameModel;
-	}
+		private GenerationModel $generationModel,
+		private DexPokemonRepositoryInterface $dexPokemonRepository,
+		private StatNameModel $statNameModel,
+	) {}
 
 
 	/**

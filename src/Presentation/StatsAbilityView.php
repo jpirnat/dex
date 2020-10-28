@@ -9,26 +9,11 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsAbilityView
 {
-	private StatsAbilityModel $statsAbilityModel;
-	private IntlFormatterFactory $formatterFactory;
-	private MonthControlFormatter $monthControlFormatter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param StatsAbilityModel $statsAbilityModel
-	 * @param IntlFormatterFactory $formatterFactory
-	 * @param MonthControlFormatter $monthControlFormatter
-	 */
 	public function __construct(
-		StatsAbilityModel $statsAbilityModel,
-		IntlFormatterFactory $formatterFactory,
-		MonthControlFormatter $monthControlFormatter
-	) {
-		$this->statsAbilityModel = $statsAbilityModel;
-		$this->formatterFactory = $formatterFactory;
-		$this->monthControlFormatter = $monthControlFormatter;
-	}
+		private StatsAbilityModel $statsAbilityModel,
+		private IntlFormatterFactory $formatterFactory,
+		private MonthControlFormatter $monthControlFormatter,
+	) {}
 
 	/**
 	 * Get usage data to create a list of Pokémon who use a specific ability.

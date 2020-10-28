@@ -10,30 +10,12 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsAveragedLeadsView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
-	private StatsAveragedLeadsModel $statsAveragedLeadsModel;
-	private IntlFormatterFactory $formatterFactory;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
-	 * @param StatsAveragedLeadsModel $statsAveragedLeadsModel
-	 * @param IntlFormatterFactory $formatterFactory
-	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
-		StatsAveragedLeadsModel $statsAveragedLeadsModel,
-		IntlFormatterFactory $formatterFactory
-	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
-		$this->statsAveragedLeadsModel = $statsAveragedLeadsModel;
-		$this->formatterFactory = $formatterFactory;
-	}
+		private RendererInterface $renderer,
+		private BaseView $baseView,
+		private StatsAveragedLeadsModel $statsAveragedLeadsModel,
+		private IntlFormatterFactory $formatterFactory,
+	) {}
 
 	/**
 	 * Get leads data averaged over multiple months.

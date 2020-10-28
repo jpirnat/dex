@@ -11,17 +11,14 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 class StatNameModel
 {
-	private StatNameRepositoryInterface $statNameRepository;
-
 	/**
 	 * Constructor.
 	 *
 	 * @param StatNameRepositoryInterface $statNameRepository
 	 */
-	public function __construct(StatNameRepositoryInterface $statNameRepository)
-	{
-		$this->statNameRepository = $statNameRepository;
-	}
+	public function __construct(
+		private StatNameRepositoryInterface $statNameRepository,
+	) {}
 
 	/**
 	 * Get the names of the stats for this generation.

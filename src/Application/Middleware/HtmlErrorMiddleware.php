@@ -14,17 +14,9 @@ use Whoops\Run;
 
 final class HtmlErrorMiddleware implements MiddlewareInterface
 {
-	private string $environment;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $environment
-	 */
-	public function __construct(string $environment)
-	{
-		$this->environment = $environment;
-	}
+	public function __construct(
+		private string $environment,
+	) {}
 
 	/**
 	 * Intercept all errors and exceptions in the code and redirect the user to

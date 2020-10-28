@@ -12,22 +12,14 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class BreedingChainFinder
 {
-	private BreedingChainQueriesInterface $breedingChainQueries;
-
-
 	/** @var int[] $femaleOnlyPokemonIds */
 	private array $femaleOnlyPokemonIds = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param BreedingChainQueriesInterface $breedingChainQueries
-	 */
-	public function __construct(BreedingChainQueriesInterface $breedingChainQueries)
-	{
-		$this->breedingChainQueries = $breedingChainQueries;
-	}
+	public function __construct(
+		private BreedingChainQueriesInterface $breedingChainQueries,
+	) {}
+
 
 	/**
 	 * Find breeding chains that allow this Pokémon to learn this egg move.

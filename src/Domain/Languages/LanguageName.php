@@ -5,26 +5,11 @@ namespace Jp\Dex\Domain\Languages;
 
 final class LanguageName
 {
-	private LanguageId $inLanguageId;
-	private LanguageId $namedLanguageId;
-	private string $name;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param LanguageId $inLanguageId
-	 * @param LanguageId $namedLanguageId
-	 * @param string $name
-	 */
 	public function __construct(
-		LanguageId $inLanguageId,
-		LanguageId $namedLanguageId,
-		string $name
-	) {
-		$this->inLanguageId = $inLanguageId;
-		$this->namedLanguageId = $namedLanguageId;
-		$this->name = $name;
-	}
+		private LanguageId $inLanguageId,
+		private LanguageId $namedLanguageId,
+		private string $name,
+	) {}
 
 	/**
 	 * Get the id of the language the name is in.

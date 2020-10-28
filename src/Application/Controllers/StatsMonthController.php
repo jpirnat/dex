@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsMonthController
 {
-	private BaseController $baseController;
-	private StatsMonthModel $statsMonthModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param StatsMonthModel $statsMonthModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		StatsMonthModel $statsMonthModel
-	) {
-		$this->baseController = $baseController;
-		$this->statsMonthModel = $statsMonthModel;
-	}
+		private BaseController $baseController,
+		private StatsMonthModel $statsMonthModel,
+	) {}
 
 	/**
 	 * Get the formats list to recreate a stats month directory, such as

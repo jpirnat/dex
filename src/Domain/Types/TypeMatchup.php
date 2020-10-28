@@ -7,30 +7,12 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class TypeMatchup
 {
-	private GenerationId $generationId;
-	private TypeId $attackingTypeId;
-	private TypeId $defendingTypeId;
-	private float $multiplier;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationId $generationId
-	 * @param TypeId $attackingTypeId
-	 * @param TypeId $defendingTypeId
-	 * @param float $multiplier
-	 */
 	public function __construct(
-		GenerationId $generationId,
-		TypeId $attackingTypeId,
-		TypeId $defendingTypeId,
-		float $multiplier
-	) {
-		$this->generationId = $generationId;
-		$this->attackingTypeId = $attackingTypeId;
-		$this->defendingTypeId = $defendingTypeId;
-		$this->multiplier = $multiplier;
-	}
+		private GenerationId $generationId,
+		private TypeId $attackingTypeId,
+		private TypeId $defendingTypeId,
+		private float $multiplier,
+	) {}
 
 	/**
 	 * Get the type matchup's generation id.

@@ -15,31 +15,19 @@ final class LeadsPokemon
 {
 	use ValidateMonthTrait;
 
-	private DateTime $month;
-	private FormatId $formatId;
-	private PokemonId $pokemonId;
-	private int $raw;
-	private float $rawPercent;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param PokemonId $pokemonId
-	 * @param int $raw
-	 * @param float $rawPercent
 	 *
 	 * @throws InvalidMonthException if $month is invalid.
 	 * @throws InvalidCountException if $raw is invalid.
 	 * @throws InvalidPercentException if $rawPercent is invalid.
 	 */
 	public function __construct(
-		DateTime $month,
-		FormatId $formatId,
-		PokemonId $pokemonId,
-		int $raw,
-		float $rawPercent
+		private DateTime $month,
+		private FormatId $formatId,
+		private PokemonId $pokemonId,
+		private int $raw,
+		private float $rawPercent,
 	) {
 		$this->validateMonth($month);
 
@@ -52,12 +40,6 @@ final class LeadsPokemon
 				'Invalid raw percent: ' . $rawPercent
 			);
 		}
-
-		$this->month = $month;
-		$this->formatId = $formatId;
-		$this->pokemonId = $pokemonId;
-		$this->raw = $raw;
-		$this->rawPercent = $rawPercent;
 	}
 
 	/**

@@ -17,15 +17,6 @@ use Jp\Dex\Domain\Usage\StatsAbilityPokemonRepositoryInterface;
 
 final class StatsAbilityModel
 {
-	private DateModel $dateModel;
-	private FormatRepositoryInterface $formatRepository;
-	private AbilityRepositoryInterface $abilityRepository;
-	private RatingQueriesInterface $ratingQueries;
-	private AbilityNameRepositoryInterface $abilityNameRepository;
-	private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository;
-	private StatsAbilityPokemonRepositoryInterface $statsAbilityPokemonRepository;
-
-
 	private string $month;
 	private Format $format;
 	private int $rating;
@@ -42,34 +33,16 @@ final class StatsAbilityModel
 	private array $pokemon = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param DateModel $dateModel
-	 * @param FormatRepositoryInterface $formatRepository
-	 * @param AbilityRepositoryInterface $abilityRepository
-	 * @param RatingQueriesInterface $ratingQueries
-	 * @param AbilityNameRepositoryInterface $abilityNameRepository
-	 * @param AbilityDescriptionRepositoryInterface $abilityDescriptionRepository
-	 * @param StatsAbilityPokemonRepositoryInterface $statsAbilityPokemonRepository
-	 */
 	public function __construct(
-		DateModel $dateModel,
-		FormatRepositoryInterface $formatRepository,
-		AbilityRepositoryInterface $abilityRepository,
-		RatingQueriesInterface $ratingQueries,
-		AbilityNameRepositoryInterface $abilityNameRepository,
-		AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
-		StatsAbilityPokemonRepositoryInterface $statsAbilityPokemonRepository
-	) {
-		$this->dateModel = $dateModel;
-		$this->formatRepository = $formatRepository;
-		$this->abilityRepository = $abilityRepository;
-		$this->ratingQueries = $ratingQueries;
-		$this->abilityNameRepository = $abilityNameRepository;
-		$this->abilityDescriptionRepository = $abilityDescriptionRepository;
-		$this->statsAbilityPokemonRepository = $statsAbilityPokemonRepository;
-	}
+		private DateModel $dateModel,
+		private FormatRepositoryInterface $formatRepository,
+		private AbilityRepositoryInterface $abilityRepository,
+		private RatingQueriesInterface $ratingQueries,
+		private AbilityNameRepositoryInterface $abilityNameRepository,
+		private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
+		private StatsAbilityPokemonRepositoryInterface $statsAbilityPokemonRepository,
+	) {}
+
 
 	/**
 	 * Get usage data to recreate a stats usage file, such as

@@ -18,49 +18,21 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexMovePokemonModel
 {
-	private PokemonMoveRepositoryInterface $pokemonMoveRepository;
-	private TmRepositoryInterface $tmRepository;
-	private ItemNameRepositoryInterface $itemNameRepository;
-	private DexPokemonRepositoryInterface $dexPokemonRepository;
-	private MoveMethodRepositoryInterface $moveMethodRepository;
-	private MoveMethodNameRepositoryInterface $moveMethodNameRepository;
-	private StatNameModel $statNameModel;
-
-
 	private array $stats = [];
 
 	/** @var DexMovePokemonMethod[] $methods */
 	private array $methods = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param PokemonMoveRepositoryInterface $pokemonMoveRepository
-	 * @param TmRepositoryInterface $tmRepository
-	 * @param ItemNameRepositoryInterface $itemNameRepository
-	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
-	 * @param MoveMethodRepositoryInterface $moveMethodRepository
-	 * @param MoveMethodNameRepositoryInterface $moveMethodNameRepository
-	 * @param StatNameModel $statNameModel
-	 */
 	public function __construct(
-		PokemonMoveRepositoryInterface $pokemonMoveRepository,
-		TmRepositoryInterface $tmRepository,
-		ItemNameRepositoryInterface $itemNameRepository,
-		DexPokemonRepositoryInterface $dexPokemonRepository,
-		MoveMethodRepositoryInterface $moveMethodRepository,
-		MoveMethodNameRepositoryInterface $moveMethodNameRepository,
-		StatNameModel $statNameModel
-	) {
-		$this->pokemonMoveRepository = $pokemonMoveRepository;
-		$this->tmRepository = $tmRepository;
-		$this->itemNameRepository = $itemNameRepository;
-		$this->dexPokemonRepository = $dexPokemonRepository;
-		$this->moveMethodRepository = $moveMethodRepository;
-		$this->moveMethodNameRepository = $moveMethodNameRepository;
-		$this->statNameModel = $statNameModel;
-	}
+		private PokemonMoveRepositoryInterface $pokemonMoveRepository,
+		private TmRepositoryInterface $tmRepository,
+		private ItemNameRepositoryInterface $itemNameRepository,
+		private DexPokemonRepositoryInterface $dexPokemonRepository,
+		private MoveMethodRepositoryInterface $moveMethodRepository,
+		private MoveMethodNameRepositoryInterface $moveMethodNameRepository,
+		private StatNameModel $statNameModel,
+	) {}
 
 
 	/**

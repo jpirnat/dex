@@ -8,18 +8,9 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class StatsDirectoryImporter
 {
-	private MonthDirectoryImporter $monthDirectoryImporter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param MonthDirectoryImporter $monthDirectoryImporter
-	 */
 	public function __construct(
-		MonthDirectoryImporter $monthDirectoryImporter
-	) {
-		$this->monthDirectoryImporter = $monthDirectoryImporter;
-	}
+		private MonthDirectoryImporter $monthDirectoryImporter,
+	) {}
 
 	/**
 	 * Import all month directories in this stats directory.

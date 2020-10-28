@@ -25,6 +25,7 @@ final class DexMovePokemon
 	private int $baseStatTotal;
 	private int $sort;
 
+
 	/**
 	 * Constructor.
 	 *
@@ -59,6 +60,7 @@ final class DexMovePokemon
 		$this->baseStatTotal = $baseStatTotal;
 		$this->sort = $sort;
 	}
+
 
 	/**
 	 * Get the version group data.

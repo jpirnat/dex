@@ -9,22 +9,10 @@ use Psr\Http\Message\ResponseInterface;
 
 final class DexMovesView
 {
-	private DexMovesModel $dexMovesModel;
-	private DexFormatter $dexFormatter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param DexMovesModel $dexMovesModel
-	 * @param DexFormatter $dexFormatter
-	 */
 	public function __construct(
-		DexMovesModel $dexMovesModel,
-		DexFormatter $dexFormatter
-	) {
-		$this->dexMovesModel = $dexMovesModel;
-		$this->dexFormatter = $dexFormatter;
-	}
+		private DexMovesModel $dexMovesModel,
+		private DexFormatter $dexFormatter,
+	) {}
 
 	/**
 	 * Show the dex moves page.

@@ -10,18 +10,9 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsIndexView
 {
-	private StatsIndexModel $statsIndexModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param StatsIndexModel $statsIndexModel
-	 */
 	public function __construct(
-		StatsIndexModel $statsIndexModel
-	) {
-		$this->statsIndexModel = $statsIndexModel;
-	}
+		private StatsIndexModel $statsIndexModel,
+	) {}
 
 	/**
 	 * Show the /stats page.

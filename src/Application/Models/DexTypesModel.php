@@ -11,11 +11,6 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexTypesModel
 {
-	private GenerationModel $generationModel;
-	private DexTypeRepositoryInterface $dexTypeRepository;
-	private TypeMatchupRepositoryInterface $typeMatchupRepository;
-
-
 	/** @var DexType[] $types */
 	private array $types = [];
 
@@ -23,22 +18,12 @@ final class DexTypesModel
 	private array $multipliers = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationModel $generationModel
-	 * @param DexTypeRepositoryInterface $dexTypeRepository
-	 * @param TypeMatchupRepositoryInterface $typeMatchupRepository
-	 */
 	public function __construct(
-		GenerationModel $generationModel,
-		DexTypeRepositoryInterface $dexTypeRepository,
-		TypeMatchupRepositoryInterface $typeMatchupRepository
-	) {
-		$this->generationModel = $generationModel;
-		$this->dexTypeRepository = $dexTypeRepository;
-		$this->typeMatchupRepository = $typeMatchupRepository;
-	}
+		private GenerationModel $generationModel,
+		private DexTypeRepositoryInterface $dexTypeRepository,
+		private TypeMatchupRepositoryInterface $typeMatchupRepository,
+	) {}
+
 
 	/**
 	 * Set data for the dex types page.

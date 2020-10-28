@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsAveragedLeadsController
 {
-	private BaseController $baseController;
-	private StatsAveragedLeadsModel $statsAveragedLeadsModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param StatsAveragedLeadsModel $statsAveragedLeadsModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		StatsAveragedLeadsModel $statsAveragedLeadsModel
-	) {
-		$this->baseController = $baseController;
-		$this->statsAveragedLeadsModel = $statsAveragedLeadsModel;
-	}
+		private BaseController $baseController,
+		private StatsAveragedLeadsModel $statsAveragedLeadsModel,
+	) {}
 
 	/**
 	 * Get leads data averaged over multiple months.

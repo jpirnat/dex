@@ -9,38 +9,14 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class PokemonMove
 {
-	private PokemonId $pokemonId;
-	private VersionGroupId $versionGroupId;
-	private MoveId $moveId;
-	private MoveMethodId $moveMethodId;
-	private int $level;
-	private int $sort;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PokemonId $pokemonId
-	 * @param VersionGroupId $versionGroupId
-	 * @param MoveId $moveId
-	 * @param MoveMethodId $moveMethodId
-	 * @param int $level
-	 * @param int $sort
-	 */
 	public function __construct(
-		PokemonId $pokemonId,
-		VersionGroupId $versionGroupId,
-		MoveId $moveId,
-		MoveMethodId $moveMethodId,
-		int $level,
-		int $sort
-	) {
-		$this->pokemonId = $pokemonId;
-		$this->versionGroupId = $versionGroupId;
-		$this->moveId = $moveId;
-		$this->moveMethodId = $moveMethodId;
-		$this->level = $level;
-		$this->sort = $sort;
-	}
+		private PokemonId $pokemonId,
+		private VersionGroupId $versionGroupId,
+		private MoveId $moveId,
+		private MoveMethodId $moveMethodId,
+		private int $level,
+		private int $sort,
+	) {}
 
 	/**
 	 * Get the Pokémon move's Pokémon id.

@@ -11,30 +11,12 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class LeadsDirectoryParser
 {
-	private LeadsFileParser $leadsFileParser;
-	private MonthExtractor $monthExtractor;
-	private FormatRatingExtractor $formatRatingExtractor;
-	private ShowdownFormatRepositoryInterface $showdownFormatRepository;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param LeadsFileParser $leadsFileParser
-	 * @param MonthExtractor $monthExtractor
-	 * @param FormatRatingExtractor $formatRatingExtractor
-	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
-	 */
 	public function __construct(
-		LeadsFileParser $leadsFileParser,
-		MonthExtractor $monthExtractor,
-		FormatRatingExtractor $formatRatingExtractor,
-		ShowdownFormatRepositoryInterface $showdownFormatRepository
-	) {
-		$this->leadsFileParser = $leadsFileParser;
-		$this->monthExtractor = $monthExtractor;
-		$this->formatRatingExtractor = $formatRatingExtractor;
-		$this->showdownFormatRepository = $showdownFormatRepository;
-	}
+		private LeadsFileParser $leadsFileParser,
+		private MonthExtractor $monthExtractor,
+		private FormatRatingExtractor $formatRatingExtractor,
+		private ShowdownFormatRepositoryInterface $showdownFormatRepository,
+	) {}
 
 	/**
 	 * Parse all leads files in this directory of leads files.

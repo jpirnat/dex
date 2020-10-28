@@ -13,10 +13,6 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexPokemonMatchupsModel
 {
-	private DexTypeRepositoryInterface $dexTypeRepository;
-	private TypeMatchupRepositoryInterface $typeMatchupRepository;
-
-
 	/** @var DexType[] $types */
 	private array $types = [];
 
@@ -36,12 +32,9 @@ final class DexPokemonMatchupsModel
 	 * @param TypeMatchupRepositoryInterface $typeMatchupRepository
 	 */
 	public function __construct(
-		DexTypeRepositoryInterface $dexTypeRepository,
-		TypeMatchupRepositoryInterface $typeMatchupRepository
-	) {
-		$this->dexTypeRepository = $dexTypeRepository;
-		$this->typeMatchupRepository = $typeMatchupRepository;
-	}
+		private DexTypeRepositoryInterface $dexTypeRepository,
+		private TypeMatchupRepositoryInterface $typeMatchupRepository,
+	) {}
 
 
 	/**

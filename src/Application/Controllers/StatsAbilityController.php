@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsAbilityController
 {
-	private BaseController $baseController;
-	private StatsAbilityModel $statsAbilityModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param StatsAbilityModel $statsAbilityModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		StatsAbilityModel $statsAbilityModel
-	) {
-		$this->baseController = $baseController;
-		$this->statsAbilityModel = $statsAbilityModel;
-	}
+		private BaseController $baseController,
+		private StatsAbilityModel $statsAbilityModel,
+	) {}
 
 	/**
 	 * Get usage data to create a list of Pokémon who use a specific ability.

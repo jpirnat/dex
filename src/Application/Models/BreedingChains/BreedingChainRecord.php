@@ -21,6 +21,7 @@ final class BreedingChainRecord
 	private string $genderRatioText;
 	private string $moveMethod;
 
+
 	/**
 	 * Constructor.
 	 *
@@ -58,6 +59,7 @@ final class BreedingChainRecord
 		$this->genderRatioText = $genderRatioText;
 		$this->moveMethod = $moveMethod;
 	}
+
 
 	/**
 	 * Get the form icon.

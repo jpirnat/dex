@@ -12,12 +12,6 @@ use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
 final class StatsLeadsModel
 {
-	private DateModel $dateModel;
-	private FormatRepositoryInterface $formatRepository;
-	private RatingQueriesInterface $ratingQueries;
-	private StatsLeadsPokemonRepositoryInterface $statsLeadsPokemonRepository;
-
-
 	private string $month;
 	private Format $format;
 	private int $rating;
@@ -30,25 +24,13 @@ final class StatsLeadsModel
 	private array $pokemon = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param DateModel $dateModel
-	 * @param FormatRepositoryInterface $formatRepository
-	 * @param RatingQueriesInterface $ratingQueries
-	 * @param StatsLeadsPokemonRepositoryInterface $statsLeadsPokemonRepository
-	 */
 	public function __construct(
-		DateModel $dateModel,
-		FormatRepositoryInterface $formatRepository,
-		RatingQueriesInterface $ratingQueries,
-		StatsLeadsPokemonRepositoryInterface $statsLeadsPokemonRepository
-	) {
-		$this->dateModel = $dateModel;
-		$this->formatRepository = $formatRepository;
-		$this->ratingQueries = $ratingQueries;
-		$this->statsLeadsPokemonRepository = $statsLeadsPokemonRepository;
-	}
+		private DateModel $dateModel,
+		private FormatRepositoryInterface $formatRepository,
+		private RatingQueriesInterface $ratingQueries,
+		private StatsLeadsPokemonRepositoryInterface $statsLeadsPokemonRepository,
+	) {}
+
 
 	/**
 	 * Get leads data to recreate a stats leads file, such as

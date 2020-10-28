@@ -17,29 +17,17 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
  */
 final class GenerationModel
 {
-	private GenerationRepositoryInterface $generationRepository;
-	private VersionGroupRepositoryInterface $versionGroupRepository;
-
-
 	private Generation $generation;
 
 	/** @var Generation[] $generations */
 	private array $generations = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationRepositoryInterface $generationRepository
-	 * @param VersionGroupRepositoryInterface $versionGroupRepository
-	 */
 	public function __construct(
-		GenerationRepositoryInterface $generationRepository,
-		VersionGroupRepositoryInterface $versionGroupRepository
-	) {
-		$this->generationRepository = $generationRepository;
-		$this->versionGroupRepository = $versionGroupRepository;
-	}
+		private GenerationRepositoryInterface $generationRepository,
+		private VersionGroupRepositoryInterface $versionGroupRepository,
+	) {}
+
 
 	/**
 	 * Set the generation by its id.

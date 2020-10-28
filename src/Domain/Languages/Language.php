@@ -5,30 +5,12 @@ namespace Jp\Dex\Domain\Languages;
 
 final class Language
 {
-	private LanguageId $id;
-	private string $identifier;
-	private string $locale;
-	private string $dateFormat;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param LanguageId $languageId
-	 * @param string $identifier
-	 * @param string $locale
-	 * @param string $dateFormat
-	 */
 	public function __construct(
-		LanguageId $languageId,
-		string $identifier,
-		string $locale,
-		string $dateFormat
-	) {
-		$this->id = $languageId;
-		$this->identifier = $identifier;
-		$this->locale = $locale;
-		$this->dateFormat = $dateFormat;
-	}
+		private LanguageId $id,
+		private string $identifier,
+		private string $locale,
+		private string $dateFormat,
+	) {}
 
 	/**
 	 * Get the language's id.

@@ -15,15 +15,6 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class DexTypeModel
 {
-	private GenerationModel $generationModel;
-	private TypeRepositoryInterface $typeRepository;
-	private DexTypeRepositoryInterface $dexTypeRepository;
-	private TypeMatchupRepositoryInterface $typeMatchupRepository;
-	private StatNameModel $statNameModel;
-	private DexPokemonRepositoryInterface $dexPokemonRepository;
-	private DexMoveRepositoryInterface $dexMoveRepository;
-
-
 	private array $type = [];
 
 	/** @var DexType[] $dexType */
@@ -44,34 +35,16 @@ final class DexTypeModel
 	private array $moves = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationModel $generationModel
-	 * @param TypeRepositoryInterface $typeRepository
-	 * @param DexTypeRepositoryInterface $dexTypeRepository
-	 * @param TypeMatchupRepositoryInterface $typeMatchupRepository
-	 * @param StatNameModel $statNameModel
-	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
-	 * @param DexMoveRepositoryInterface $dexMoveRepository
-	 */
 	public function __construct(
-		GenerationModel $generationModel,
-		TypeRepositoryInterface $typeRepository,
-		DexTypeRepositoryInterface $dexTypeRepository,
-		TypeMatchupRepositoryInterface $typeMatchupRepository,
-		StatNameModel $statNameModel,
-		DexPokemonRepositoryInterface $dexPokemonRepository,
-		DexMoveRepositoryInterface $dexMoveRepository
-	) {
-		$this->generationModel = $generationModel;
-		$this->typeRepository = $typeRepository;
-		$this->dexTypeRepository = $dexTypeRepository;
-		$this->typeMatchupRepository = $typeMatchupRepository;
-		$this->statNameModel = $statNameModel;
-		$this->dexPokemonRepository = $dexPokemonRepository;
-		$this->dexMoveRepository = $dexMoveRepository;
-	}
+		private GenerationModel $generationModel,
+		private TypeRepositoryInterface $typeRepository,
+		private DexTypeRepositoryInterface $dexTypeRepository,
+		private TypeMatchupRepositoryInterface $typeMatchupRepository,
+		private StatNameModel $statNameModel,
+		private DexPokemonRepositoryInterface $dexPokemonRepository,
+		private DexMoveRepositoryInterface $dexMoveRepository,
+	) {}
+
 
 	/**
 	 * Set data for the dex type page.

@@ -13,31 +13,16 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInter
 
 final class MoveModel
 {
-	private MovesetRatedAveragedMoveRepositoryInterface $movesetRatedAveragedMoveRepository;
-	private MoveNameRepositoryInterface $moveNameRepository;
-	private MoveRepositoryInterface $moveRepository;
-
-
 	/** @var MoveData[] $moveDatas */
 	private array $moveDatas = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param MovesetRatedAveragedMoveRepositoryInterface $movesetRatedAveragedMoveRepository
-	 * @param MoveNameRepositoryInterface $moveNameRepository
-	 * @param MoveRepositoryInterface $moveRepository
-	 */
 	public function __construct(
-		MovesetRatedAveragedMoveRepositoryInterface $movesetRatedAveragedMoveRepository,
-		MoveNameRepositoryInterface $moveNameRepository,
-		MoveRepositoryInterface $moveRepository
-	) {
-		$this->movesetRatedAveragedMoveRepository = $movesetRatedAveragedMoveRepository;
-		$this->moveNameRepository = $moveNameRepository;
-		$this->moveRepository = $moveRepository;
-	}
+		private MovesetRatedAveragedMoveRepositoryInterface $movesetRatedAveragedMoveRepository,
+		private MoveNameRepositoryInterface $moveNameRepository,
+		private MoveRepositoryInterface $moveRepository,
+	) {}
+
 
 	/**
 	 * Get moveset data averaged over multiple months.

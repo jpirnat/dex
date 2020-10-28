@@ -16,28 +16,16 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 final class CurrentStatsMiddleware implements MiddlewareInterface
 {
-	private FormatRepositoryInterface $formatRepository;
-	private UsageQueriesInterface $usageQueries;
-
 	/** @var int $DEFAULT_FORMAT_ID */
 	private const DEFAULT_FORMAT_ID = FormatId::GEN_8_OU;
 
 	/** @var int $DEFAULT_RATING */
 	private const DEFAULT_RATING = 1695;
 
-	/**
-	 * Constructor.
-	 *
-	 * @param FormatRepositoryInterface $formatRepository
-	 * @param UsageQueriesInterface $usageQueries
-	 */
 	public function __construct(
-		FormatRepositoryInterface $formatRepository,
-		UsageQueriesInterface $usageQueries
-	) {
-		$this->formatRepository = $formatRepository;
-		$this->usageQueries = $usageQueries;
-	}
+		private FormatRepositoryInterface $formatRepository,
+		private UsageQueriesInterface $usageQueries,
+	) {}
 
 	/**
 	 * Set request attributes for the stats usage page so it shows the latest

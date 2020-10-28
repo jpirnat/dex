@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class DexAbilityController
 {
-	private BaseController $baseController;
-	private DexAbilityModel $dexAbilityModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param DexAbilityModel $dexAbilityModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		DexAbilityModel $dexAbilityModel
-	) {
-		$this->baseController = $baseController;
-		$this->dexAbilityModel = $dexAbilityModel;
-	}
+		private BaseController $baseController,
+		private DexAbilityModel $dexAbilityModel,
+	) {}
 
 	/**
 	 * Show the dex ability page.

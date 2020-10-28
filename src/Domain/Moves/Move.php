@@ -7,30 +7,12 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class Move
 {
-	private MoveId $id;
-	private string $identifier;
-	private VersionGroupId $introducedInVersionGroupId;
-	private bool $isZMove;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param MoveId $moveId
-	 * @param string $identifier
-	 * @param VersionGroupId $introducedInVersionGroupId
-	 * @param bool $isZMove
-	 */
 	public function __construct(
-		MoveId $moveId,
-		string $identifier,
-		VersionGroupId $introducedInVersionGroupId,
-		bool $isZMove
-	) {
-		$this->id = $moveId;
-		$this->identifier = $identifier;
-		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
-		$this->isZMove = $isZMove;
-	}
+		private MoveId $moveId,
+		private string $identifier,
+		private VersionGroupId $introducedInVersionGroupId,
+		private bool $isZMove,
+	) {}
 
 	/**
 	 * Get the move's id.

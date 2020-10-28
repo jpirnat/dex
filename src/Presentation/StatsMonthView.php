@@ -9,26 +9,11 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsMonthView
 {
-	private StatsMonthModel $statsMonthModel;
-	private IntlFormatterFactory $formatterFactory;
-	private MonthControlFormatter $monthControlFormatter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param StatsMonthModel $statsMonthModel
-	 * @param IntlFormatterFactory $formatterFactory
-	 * @param MonthControlFormatter $monthControlFormatter
-	 */
 	public function __construct(
-		StatsMonthModel $statsMonthModel,
-		IntlFormatterFactory $formatterFactory,
-		MonthControlFormatter $monthControlFormatter
-	) {
-		$this->statsMonthModel = $statsMonthModel;
-		$this->formatterFactory = $formatterFactory;
-		$this->monthControlFormatter = $monthControlFormatter;
-	}
+		private StatsMonthModel $statsMonthModel,
+		private IntlFormatterFactory $formatterFactory,
+		private MonthControlFormatter $monthControlFormatter,
+	) {}
 
 	/**
 	 * Get the formats list to recreate a stats month directory, such as

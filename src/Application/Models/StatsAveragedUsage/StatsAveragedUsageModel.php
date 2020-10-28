@@ -18,17 +18,6 @@ use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
 final class StatsAveragedUsageModel
 {
-	private FormatRepositoryInterface $formatRepository;
-	private RatingQueriesInterface $ratingQueries;
-	private UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository;
-	private UsageRatedAveragedPokemonRepositoryInterface $usageRatedAveragedPokemonRepository;
-	private LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository;
-	private MonthsCounter $monthsCounter;
-	private PokemonRepositoryInterface $pokemonRepository;
-	private PokemonNameRepositoryInterface $pokemonNameRepository;
-	private FormIconRepositoryInterface $formIconRepository;
-
-
 	private string $start;
 	private string $end;
 	private Format $format;
@@ -44,40 +33,18 @@ final class StatsAveragedUsageModel
 	private array $usageDatas = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param FormatRepositoryInterface $formatRepository
-	 * @param RatingQueriesInterface $ratingQueries
-	 * @param UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository
-	 * @param UsageRatedAveragedPokemonRepositoryInterface $usageRatedAveragedPokemonRepository
-	 * @param LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository
-	 * @param MonthsCounter $monthsCounter
-	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param FormIconRepositoryInterface $formIconRepository
-	 */
 	public function __construct(
-		FormatRepositoryInterface $formatRepository,
-		RatingQueriesInterface $ratingQueries,
-		UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository,
-		UsageRatedAveragedPokemonRepositoryInterface $usageRatedAveragedPokemonRepository,
-		LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
-		MonthsCounter $monthsCounter,
-		PokemonRepositoryInterface $pokemonRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
-		FormIconRepositoryInterface $formIconRepository
-	) {
-		$this->formatRepository = $formatRepository;
-		$this->ratingQueries = $ratingQueries;
-		$this->usageAveragedPokemonRepository = $usageAveragedPokemonRepository;
-		$this->usageRatedAveragedPokemonRepository = $usageRatedAveragedPokemonRepository;
-		$this->leadsRatedAveragedPokemonRepository = $leadsRatedAveragedPokemonRepository;
-		$this->monthsCounter = $monthsCounter;
-		$this->pokemonRepository = $pokemonRepository;
-		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->formIconRepository = $formIconRepository;
-	}
+		private FormatRepositoryInterface $formatRepository,
+		private RatingQueriesInterface $ratingQueries,
+		private UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository,
+		private UsageRatedAveragedPokemonRepositoryInterface $usageRatedAveragedPokemonRepository,
+		private LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
+		private MonthsCounter $monthsCounter,
+		private PokemonRepositoryInterface $pokemonRepository,
+		private PokemonNameRepositoryInterface $pokemonNameRepository,
+		private FormIconRepositoryInterface $formIconRepository,
+	) {}
+
 
 	/**
 	 * Get usage data averaged over multiple months.

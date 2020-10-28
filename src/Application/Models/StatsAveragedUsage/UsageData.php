@@ -5,54 +5,18 @@ namespace Jp\Dex\Application\Models\StatsAveragedUsage;
 
 final class UsageData
 {
-	private int $rank;
-	private string $pokemonName;
-	private int $months;
-	private string $pokemonIdentifier;
-	private string $formIcon;
-	private float $usagePercent;
-	private int $raw;
-	private float $rawPercent;
-	private int $real;
-	private float $realPercent;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param int $rank
-	 * @param string $pokemonName
-	 * @param int $months
-	 * @param string $pokemonIdentifier
-	 * @param string $formIcon
-	 * @param float $usagePercent
-	 * @param int $raw
-	 * @param float $rawPercent
-	 * @param int $real
-	 * @param float $realPercent
-	 */
 	public function __construct(
-		int $rank,
-		string $pokemonName,
-		int $months,
-		string $pokemonIdentifier,
-		string $formIcon,
-		float $usagePercent,
-		int $raw,
-		float $rawPercent,
-		int $real,
-		float $realPercent
-	) {
-		$this->rank = $rank;
-		$this->pokemonName = $pokemonName;
-		$this->months = $months;
-		$this->pokemonIdentifier = $pokemonIdentifier;
-		$this->formIcon = $formIcon;
-		$this->usagePercent = $usagePercent;
-		$this->raw = $raw;
-		$this->rawPercent = $rawPercent;
-		$this->real = $real;
-		$this->realPercent = $realPercent;
-	}
+		private int $rank,
+		private string $pokemonName,
+		private int $months,
+		private string $pokemonIdentifier,
+		private string $formIcon,
+		private float $usagePercent,
+		private int $raw,
+		private float $rawPercent,
+		private int $real,
+		private float $realPercent,
+	) {}
 
 	/**
 	 * Get the rank.

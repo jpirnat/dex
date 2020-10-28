@@ -10,18 +10,9 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
 
 final class MonthsCounter
 {
-	private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
-	 */
 	public function __construct(
-		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
-	) {
-		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
-	}
+		private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
+	) {}
 
 	/**
 	 * Count the number of months from start to end.

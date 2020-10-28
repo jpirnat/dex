@@ -13,31 +13,16 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryIn
 
 final class AbilityModel
 {
-	private MovesetRatedAveragedAbilityRepositoryInterface $movesetRatedAveragedAbilityRepository;
-	private AbilityNameRepositoryInterface $abilityNameRepository;
-	private AbilityRepositoryInterface $abilityRepository;
-
-
 	/** @var AbilityData[] $abilityDatas */
 	private array $abilityDatas = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param MovesetRatedAveragedAbilityRepositoryInterface $movesetRatedAveragedAbilityRepository
-	 * @param AbilityNameRepositoryInterface $abilityNameRepository
-	 * @param AbilityRepositoryInterface $abilityRepository
-	 */
 	public function __construct(
-		MovesetRatedAveragedAbilityRepositoryInterface $movesetRatedAveragedAbilityRepository,
-		AbilityNameRepositoryInterface $abilityNameRepository,
-		AbilityRepositoryInterface $abilityRepository
-	) {
-		$this->movesetRatedAveragedAbilityRepository = $movesetRatedAveragedAbilityRepository;
-		$this->abilityNameRepository = $abilityNameRepository;
-		$this->abilityRepository = $abilityRepository;
-	}
+		private MovesetRatedAveragedAbilityRepositoryInterface $movesetRatedAveragedAbilityRepository,
+		private AbilityNameRepositoryInterface $abilityNameRepository,
+		private AbilityRepositoryInterface $abilityRepository,
+	) {}
+
 
 	/**
 	 * Get moveset data to recreate a stats moveset file, such as

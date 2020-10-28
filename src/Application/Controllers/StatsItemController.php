@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsItemController
 {
-	private BaseController $baseController;
-	private StatsItemModel $statsItemModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param StatsItemModel $statsItemModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		StatsItemModel $statsItemModel
-	) {
-		$this->baseController = $baseController;
-		$this->statsItemModel = $statsItemModel;
-	}
+		private BaseController $baseController,
+		private StatsItemModel $statsItemModel,
+	) {}
 
 	/**
 	 * Get usage data to create a list of Pokémon who use a specific item.

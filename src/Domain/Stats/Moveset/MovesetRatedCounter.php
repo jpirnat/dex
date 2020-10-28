@@ -9,36 +9,20 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 
 final class MovesetRatedCounter
 {
-	private UsageRatedPokemonId $usageRatedPokemonId;
-	private PokemonId $counterId;
-	private float $number1;
-	private float $number2;
-	private float $number3;
-	private float $percentKnockedOut;
-	private float $percentSwitchedOut;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param UsageRatedPokemonId $usageRatedPokemonId
-	 * @param PokemonId $counterId
-	 * @param float $number1
-	 * @param float $number2
-	 * @param float $number3
-	 * @param float $percentKnockedOut
-	 * @param float $percentSwitchedOut
 	 *
 	 * @throws InvalidPercentException if $percentKnockedOut is invalid or if
 	 *     $percentSwitchedOut is invalid.
 	 */
 	public function __construct(
-		UsageRatedPokemonId $usageRatedPokemonId,
-		PokemonId $counterId,
-		float $number1,
-		float $number2,
-		float $number3,
-		float $percentKnockedOut,
-		float $percentSwitchedOut
+		private UsageRatedPokemonId $usageRatedPokemonId,
+		private PokemonId $counterId,
+		private float $number1,
+		private float $number2,
+		private float $number3,
+		private float $percentKnockedOut,
+		private float $percentSwitchedOut,
 	) {
 		// TODO: validation for number1, number2, and number3.
 
@@ -53,14 +37,6 @@ final class MovesetRatedCounter
 				'Invalid percent switched out: ' . $percentSwitchedOut
 			);
 		}
-
-		$this->usageRatedPokemonId = $usageRatedPokemonId;
-		$this->counterId = $counterId;
-		$this->number1 = $number1;
-		$this->number2 = $number2;
-		$this->number3 = $number3;
-		$this->percentKnockedOut = $percentKnockedOut;
-		$this->percentSwitchedOut = $percentSwitchedOut;
 	}
 
 	/**

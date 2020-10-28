@@ -9,17 +9,9 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class BaseController
 {
-	private BaseModel $baseModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseModel $baseModel
-	 */
-	public function __construct(BaseModel $baseModel)
-	{
-		$this->baseModel = $baseModel;
-	}
+	public function __construct(
+		private BaseModel $baseModel,
+	) {}
 
 	/**
 	 * Set the variables needed for the base template.

@@ -24,22 +24,6 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class BreedingChainsModel
 {
-	private GenerationModel $generationModel;
-	private PokemonRepositoryInterface $pokemonRepository;
-	private MoveRepositoryInterface $moveRepository;
-	private BreedingChainFinder $breedingChainFinder;
-	private FormIconRepositoryInterface $formIconRepository;
-	private DexVersionGroupRepositoryInterface $dexVersionGroupRepository;
-	private GenerationRepositoryInterface $generationRepository;
-	private PokemonNameRepositoryInterface $pokemonNameRepository;
-	private MoveNameRepositoryInterface $moveNameRepository;
-	private VersionGroupRepositoryInterface $versionGroupRepository;
-	private PokemonEggGroupRepositoryInterface $pokemonEggGroupRepository;
-	private EggGroupNameRepositoryInterface $eggGroupNameRepository;
-	private SpeciesRepositoryInterface $speciesRepository;
-	private PokemonMoveFormatter $pokemonMoveFormatter;
-
-
 	private array $pokemon = [];
 	private array $move = [];
 
@@ -47,55 +31,23 @@ final class BreedingChainsModel
 	private array $chains = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationModel $generationModel
-	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param MoveRepositoryInterface $moveRepository
-	 * @param BreedingChainFinder $breedingChainFinder
-	 * @param FormIconRepositoryInterface $formIconRepository
-	 * @param DexVersionGroupRepositoryInterface $dexVersionGroupRepository
-	 * @param GenerationRepositoryInterface $generationRepository
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param MoveNameRepositoryInterface $moveNameRepository
-	 * @param VersionGroupRepositoryInterface $versionGroupRepository
-	 * @param PokemonEggGroupRepositoryInterface $pokemonEggGroupRepository
-	 * @param EggGroupNameRepositoryInterface $eggGroupNameRepository
-	 * @param SpeciesRepositoryInterface $speciesRepository
-	 * @param PokemonMoveFormatter $pokemonMoveFormatter
-	 */
 	public function __construct(
-		GenerationModel $generationModel,
-		PokemonRepositoryInterface $pokemonRepository,
-		MoveRepositoryInterface $moveRepository,
-		BreedingChainFinder $breedingChainFinder,
-		FormIconRepositoryInterface $formIconRepository,
-		DexVersionGroupRepositoryInterface $dexVersionGroupRepository,
-		GenerationRepositoryInterface $generationRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
-		MoveNameRepositoryInterface $moveNameRepository,
-		VersionGroupRepositoryInterface $versionGroupRepository,
-		PokemonEggGroupRepositoryInterface $pokemonEggGroupRepository,
-		EggGroupNameRepositoryInterface $eggGroupNameRepository,
-		SpeciesRepositoryInterface $speciesRepository,
-		PokemonMoveFormatter $pokemonMoveFormatter
-	) {
-		$this->generationModel = $generationModel;
-		$this->pokemonRepository = $pokemonRepository;
-		$this->moveRepository = $moveRepository;
-		$this->breedingChainFinder = $breedingChainFinder;
-		$this->formIconRepository = $formIconRepository;
-		$this->dexVersionGroupRepository = $dexVersionGroupRepository;
-		$this->generationRepository = $generationRepository;
-		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->moveNameRepository = $moveNameRepository;
-		$this->versionGroupRepository = $versionGroupRepository;
-		$this->pokemonEggGroupRepository = $pokemonEggGroupRepository;
-		$this->eggGroupNameRepository = $eggGroupNameRepository;
-		$this->speciesRepository = $speciesRepository;
-		$this->pokemonMoveFormatter = $pokemonMoveFormatter;
-	}
+		private GenerationModel $generationModel,
+		private PokemonRepositoryInterface $pokemonRepository,
+		private MoveRepositoryInterface $moveRepository,
+		private BreedingChainFinder $breedingChainFinder,
+		private FormIconRepositoryInterface $formIconRepository,
+		private DexVersionGroupRepositoryInterface $dexVersionGroupRepository,
+		private GenerationRepositoryInterface $generationRepository,
+		private PokemonNameRepositoryInterface $pokemonNameRepository,
+		private MoveNameRepositoryInterface $moveNameRepository,
+		private VersionGroupRepositoryInterface $versionGroupRepository,
+		private PokemonEggGroupRepositoryInterface $pokemonEggGroupRepository,
+		private EggGroupNameRepositoryInterface $eggGroupNameRepository,
+		private SpeciesRepositoryInterface $speciesRepository,
+		private PokemonMoveFormatter $pokemonMoveFormatter,
+	) {}
+
 
 	/**
 	 * Set breeding chain data for this Pokémon, move, and version group combination.

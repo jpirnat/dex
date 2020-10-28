@@ -5,34 +5,13 @@ namespace Jp\Dex\Domain\Versions;
 
 final class DexVersionGroup
 {
-	private VersionGroupId $id;
-	private string $identifier;
-	private GenerationId $generationId;
-	private string $icon;
-	private string $name;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param VersionGroupId $versionGroupId
-	 * @param string $identifier
-	 * @param GenerationId $generationId
-	 * @param string $icon
-	 * @param string $name
-	 */
 	public function __construct(
-		VersionGroupId $versionGroupId,
-		string $identifier,
-		GenerationId $generationId,
-		string $icon,
-		string $name
-	) {
-		$this->id = $versionGroupId;
-		$this->identifier = $identifier;
-		$this->generationId = $generationId;
-		$this->icon = $icon;
-		$this->name = $name;
-	}
+		private VersionGroupId $id,
+		private string $identifier,
+		private GenerationId $generationId,
+		private string $icon,
+		private string $name,
+	) {}
 
 	/**
 	 * Get the dex version group's id.

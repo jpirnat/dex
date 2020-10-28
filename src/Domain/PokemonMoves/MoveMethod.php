@@ -7,30 +7,12 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class MoveMethod
 {
-	private MoveMethodId $id;
-	private string $identifier;
-	private GenerationId $introducedInGenerationId;
-	private int $sort;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param MoveMethodId $moveMethodId
-	 * @param string $identifier
-	 * @param GenerationId $introducedInGenerationId
-	 * @param int $sort
-	 */
 	public function __construct(
-		MoveMethodId $moveMethodId,
-		string $identifier,
-		GenerationId $introducedInGenerationId,
-		int $sort
-	) {
-		$this->id = $moveMethodId;
-		$this->identifier = $identifier;
-		$this->introducedInGenerationId = $introducedInGenerationId;
-		$this->sort = $sort;
-	}
+		private MoveMethodId $id,
+		private string $identifier,
+		private GenerationId $introducedInGenerationId,
+		private int $sort,
+	) {}
 
 	/**
 	 * Get the move method's id.

@@ -9,22 +9,10 @@ use Psr\Http\Message\StreamInterface;
 
 final class LeadsFileParser
 {
-	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
-	private LeadsFileExtractor $leadsFileExtractor;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
-	 * @param LeadsFileExtractor $leadsFileExtractor
-	 */
 	public function __construct(
-		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
-		LeadsFileExtractor $leadsFileExtractor
-	) {
-		$this->showdownPokemonRepository = $showdownPokemonRepository;
-		$this->leadsFileExtractor = $leadsFileExtractor;
-	}
+		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
+		private LeadsFileExtractor $leadsFileExtractor,
+	) {}
 
 	/**
 	 * Parse leads data from the given file.

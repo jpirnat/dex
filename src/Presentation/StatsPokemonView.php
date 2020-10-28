@@ -9,30 +9,12 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsPokemonView
 {
-	private StatsPokemonModel $statsPokemonModel;
-	private IntlFormatterFactory $formatterFactory;
-	private MonthControlFormatter $monthControlFormatter;
-	private DexFormatter $dexFormatter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param StatsPokemonModel $statsPokemonModel
-	 * @param IntlFormatterFactory $formatterFactory
-	 * @param MonthControlFormatter $monthControlFormatter
-	 * @param DexFormatter $dexFormatter
-	 */
 	public function __construct(
-		StatsPokemonModel $statsPokemonModel,
-		IntlFormatterFactory $formatterFactory,
-		MonthControlFormatter $monthControlFormatter,
-		DexFormatter $dexFormatter
-	) {
-		$this->statsPokemonModel = $statsPokemonModel;
-		$this->formatterFactory = $formatterFactory;
-		$this->monthControlFormatter = $monthControlFormatter;
-		$this->dexFormatter = $dexFormatter;
-	}
+		private StatsPokemonModel $statsPokemonModel,
+		private IntlFormatterFactory $formatterFactory,
+		private MonthControlFormatter $monthControlFormatter,
+		private DexFormatter $dexFormatter,
+	) {}
 
 	/**
 	 * Get moveset data to recreate a stats moveset file, such as

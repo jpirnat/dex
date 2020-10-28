@@ -5,36 +5,15 @@ namespace Jp\Dex\Application\Models\StatsAveragedLeads;
 
 final class LeadsData
 {
-	private int $rank;
-	private string $pokemonName;
-	private int $months;
-	private string $pokemonIdentifier;
-	private string $formIcon;
-	private float $leadUsagePercent;
-	private int $raw;
-	private float $rawPercent;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param int $rank
-	 * @param string $pokemonName
-	 * @param int $months
-	 * @param string $pokemonIdentifier
-	 * @param string $formIcon
-	 * @param float $leadUsagePercent
-	 * @param int $raw
-	 * @param float $rawPercent
-	 */
 	public function __construct(
-		int $rank,
-		string $pokemonName,
-		int $months,
-		string $pokemonIdentifier,
-		string $formIcon,
-		float $leadUsagePercent,
-		int $raw,
-		float $rawPercent
+		private int $rank,
+		private string $pokemonName,
+		private int $months,
+		private string $pokemonIdentifier,
+		private string $formIcon,
+		private float $leadUsagePercent,
+		private int $raw,
+		private float $rawPercent,
 	) {
 		$this->rank = $rank;
 		$this->pokemonName = $pokemonName;

@@ -10,11 +10,6 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 
 final class StatsMonthModel
 {
-	private DateModel $dateModel;
-	private UsageRatedQueriesInterface $usageRatedQueries;
-	private FormatRepositoryInterface $formatRepository;
-
-
 	private string $month;
 	private LanguageId $languageId;
 
@@ -22,22 +17,12 @@ final class StatsMonthModel
 	private array $generations = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param DateModel $dateModel
-	 * @param UsageRatedQueriesInterface $usageRatedQueries
-	 * @param FormatRepositoryInterface $formatRepository
-	 */
 	public function __construct(
-		DateModel $dateModel,
-		UsageRatedQueriesInterface $usageRatedQueries,
-		FormatRepositoryInterface $formatRepository
-	) {
-		$this->dateModel = $dateModel;
-		$this->usageRatedQueries = $usageRatedQueries;
-		$this->formatRepository = $formatRepository;
-	}
+		private DateModel $dateModel,
+		private UsageRatedQueriesInterface $usageRatedQueries,
+		private FormatRepositoryInterface $formatRepository,
+	) {}
+
 
 	/**
 	 * Get the formats list to recreate a stats month directory, such as

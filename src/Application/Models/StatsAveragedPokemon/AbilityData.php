@@ -5,26 +5,11 @@ namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
 final class AbilityData
 {
-	private string $abilityName;
-	private string $abilityIdentifier;
-	private float $percent;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $abilityName
-	 * @param string $abilityIdentifier
-	 * @param float $percent
-	 */
 	public function __construct(
-		string $abilityName,
-		string $abilityIdentifier,
-		float $percent
-	) {
-		$this->abilityName = $abilityName;
-		$this->abilityIdentifier = $abilityIdentifier;
-		$this->percent = $percent;
-	}
+		private string $abilityName,
+		private string $abilityIdentifier,
+		private float $percent,
+	) {}
 
 	/**
 	 * Get the ability name.

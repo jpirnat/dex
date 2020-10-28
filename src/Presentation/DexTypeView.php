@@ -9,22 +9,10 @@ use Psr\Http\Message\ResponseInterface;
 
 final class DexTypeView
 {
-	private DexTypeModel $dexTypeModel;
-	private DexFormatter $dexFormatter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param DexTypeModel $dexTypeModel
-	 * @param DexFormatter $dexFormatter
-	 */
 	public function __construct(
-		DexTypeModel $dexTypeModel,
-		DexFormatter $dexFormatter
-	) {
-		$this->dexTypeModel = $dexTypeModel;
-		$this->dexFormatter = $dexFormatter;
-	}
+		private DexTypeModel $dexTypeModel,
+		private DexFormatter $dexFormatter,
+	) {}
 
 	/**
 	 * Show the dex type page.

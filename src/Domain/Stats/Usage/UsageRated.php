@@ -14,18 +14,8 @@ final class UsageRated
 {
 	use ValidateMonthTrait;
 
-	private DateTime $month;
-	private FormatId $formatId;
-	private int $rating;
-	private float $averageWeightPerTeam;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param float $averageWeightPerTeam
 	 *
 	 * @throws InvalidMonthException if $month is invalid.
 	 * @throws InvalidRatingException if $rating is invalid.
@@ -33,10 +23,10 @@ final class UsageRated
 	 *     invalid.
 	 */
 	public function __construct(
-		DateTime $month,
-		FormatId $formatId,
-		int $rating,
-		float $averageWeightPerTeam
+		private DateTime $month,
+		private FormatId $formatId,
+		private int $rating,
+		private float $averageWeightPerTeam,
 	) {
 		$this->validateMonth($month);
 
@@ -49,11 +39,6 @@ final class UsageRated
 				'Invalid average weight per team: ' . $averageWeightPerTeam
 			);
 		}
-
-		$this->month = $month;
-		$this->formatId = $formatId;
-		$this->rating = $rating;
-		$this->averageWeightPerTeam = $averageWeightPerTeam;
 	}
 
 	/**

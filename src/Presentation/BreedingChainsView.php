@@ -10,22 +10,10 @@ use Psr\Http\Message\ResponseInterface;
 
 final class BreedingChainsView
 {
-	private BreedingChainsModel $breedingChainsModel;
-	private DexFormatter $dexFormatter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BreedingChainsModel $breedingChainsModel
-	 * @param DexFormatter $dexFormatter
-	 */
 	public function __construct(
-		BreedingChainsModel $breedingChainsModel,
-		DexFormatter $dexFormatter
-	) {
-		$this->breedingChainsModel = $breedingChainsModel;
-		$this->dexFormatter = $dexFormatter;
-	}
+		private BreedingChainsModel $breedingChainsModel,
+		private DexFormatter $dexFormatter,
+	) {}
 
 	/**
 	 * Show the breeding chains page.

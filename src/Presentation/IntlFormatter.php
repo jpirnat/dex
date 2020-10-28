@@ -9,30 +9,12 @@ use NumberFormatter;
 
 final class IntlFormatter
 {
-	private IntlDateFormatter $dateFormatter;
-	private NumberFormatter $numberFormatter;
-	private NumberFormatter $percentFormatter;
-	private NumberFormatter $changeFormatter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param IntlDateFormatter $dateFormatter
-	 * @param NumberFormatter $numberFormatter
-	 * @param NumberFormatter $percentFormatter
-	 * @param NumberFormatter $changeFormatter
-	 */
 	public function __construct(
-		IntlDateFormatter $dateFormatter,
-		NumberFormatter $numberFormatter,
-		NumberFormatter $percentFormatter,
-		NumberFormatter $changeFormatter
-	) {
-		$this->dateFormatter = $dateFormatter;
-		$this->numberFormatter = $numberFormatter;
-		$this->percentFormatter = $percentFormatter;
-		$this->changeFormatter = $changeFormatter;
-	}
+		private IntlDateFormatter $dateFormatter,
+		private NumberFormatter $numberFormatter,
+		private NumberFormatter $percentFormatter,
+		private NumberFormatter $changeFormatter,
+	) {}
 
 	/**
 	 * Format a month.

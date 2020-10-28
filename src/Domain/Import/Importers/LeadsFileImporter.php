@@ -18,38 +18,14 @@ use Psr\Http\Message\StreamInterface;
 
 final class LeadsFileImporter
 {
-	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
-	private LeadsRepositoryInterface $leadsRepository;
-	private UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository;
-	private LeadsPokemonRepositoryInterface $leadsPokemonRepository;
-	private LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository;
-	private LeadsFileExtractor $leadsFileExtractor;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
-	 * @param LeadsRepositoryInterface $leadsRepository
-	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
-	 * @param LeadsPokemonRepositoryInterface $leadsPokemonRepository
-	 * @param LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository
-	 * @param LeadsFileExtractor $leadsFileExtractor
-	 */
 	public function __construct(
-		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
-		LeadsRepositoryInterface $leadsRepository,
-		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
-		LeadsPokemonRepositoryInterface $leadsPokemonRepository,
-		LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
-		LeadsFileExtractor $leadsFileExtractor
-	) {
-		$this->showdownPokemonRepository = $showdownPokemonRepository;
-		$this->leadsRepository = $leadsRepository;
-		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
-		$this->leadsPokemonRepository = $leadsPokemonRepository;
-		$this->leadsRatedPokemonRepository = $leadsRatedPokemonRepository;
-		$this->leadsFileExtractor = $leadsFileExtractor;
-	}
+		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
+		private LeadsRepositoryInterface $leadsRepository,
+		private UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
+		private LeadsPokemonRepositoryInterface $leadsPokemonRepository,
+		private LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
+		private LeadsFileExtractor $leadsFileExtractor,
+	) {}
 
 	/**
 	 * Import leads data from the given file.

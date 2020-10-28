@@ -19,22 +19,8 @@ final class LeadsAveragedPokemon
 {
 	use ValidateMonthTrait;
 
-	private DateTime $start;
-	private DateTime $end;
-	private FormatId $formatId;
-	private PokemonId $pokemonId;
-	private int $raw;
-	private float $rawPercent;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param PokemonId $pokemonId
-	 * @param int $raw
-	 * @param float $rawPercent
 	 *
 	 * @throws InvalidMonthException if $start or $end is invalid.
 	 * @throws InvalidCountException if $raw is invalid or if $real is invalid.
@@ -42,12 +28,12 @@ final class LeadsAveragedPokemon
 	 *     $realPercent is invalid.
 	 */
 	public function __construct(
-		DateTime $start,
-		DateTime $end,
-		FormatId $formatId,
-		PokemonId $pokemonId,
-		int $raw,
-		float $rawPercent
+		private DateTime $start,
+		private DateTime $end,
+		private FormatId $formatId,
+		private PokemonId $pokemonId,
+		private int $raw,
+		private float $rawPercent,
 	) {
 		$this->validateMonth($start);
 		$this->validateMonth($end);
@@ -61,13 +47,6 @@ final class LeadsAveragedPokemon
 				'Invalid raw percent: ' . $rawPercent
 			);
 		}
-
-		$this->start = $start;
-		$this->end = $end;
-		$this->formatId = $formatId;
-		$this->pokemonId = $pokemonId;
-		$this->raw = $raw;
-		$this->rawPercent = $rawPercent;
 	}
 
 	/**

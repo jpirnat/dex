@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class DexMoveController
 {
-	private BaseController $baseController;
-	private DexMoveModel $dexMoveModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param DexMoveModel $dexMoveModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		DexMoveModel $dexMoveModel
-	) {
-		$this->baseController = $baseController;
-		$this->dexMoveModel = $dexMoveModel;
-	}
+		private BaseController $baseController,
+		private DexMoveModel $dexMoveModel,
+	) {}
 
 	/**
 	 * Show the dex move page.

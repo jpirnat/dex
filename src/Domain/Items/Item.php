@@ -7,26 +7,11 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class Item
 {
-	private ItemId $id;
-	private string $identifier;
-	private VersionGroupId $introducedInVersionGroupId;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param ItemId $itemId
-	 * @param string $identifier
-	 * @param VersionGroupId $introducedInVersionGroupId
-	 */
 	public function __construct(
-		ItemId $itemId,
-		string $identifier,
-		VersionGroupId $introducedInVersionGroupId
-	) {
-		$this->id = $itemId;
-		$this->identifier = $identifier;
-		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
-	}
+		private ItemId $id,
+		private string $identifier,
+		private VersionGroupId $introducedInVersionGroupId,
+	) {}
 
 	/**
 	 * Get the item's id.

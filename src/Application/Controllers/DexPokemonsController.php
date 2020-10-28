@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class DexPokemonsController
 {
-	private BaseController $baseController;
-	private DexPokemonsModel $dexPokemonsModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param DexPokemonsModel $dexPokemonsModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		DexPokemonsModel $dexPokemonsModel
-	) {
-		$this->baseController = $baseController;
-		$this->dexPokemonsModel = $dexPokemonsModel;
-	}
+		private BaseController $baseController,
+		private DexPokemonsModel $dexPokemonsModel,
+	) {}
 
 	/**
 	 * Show the dex Pokémons page.

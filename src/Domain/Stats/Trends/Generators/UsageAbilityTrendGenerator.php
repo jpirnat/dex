@@ -16,38 +16,14 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class UsageAbilityTrendGenerator
 {
-	private StatsChartQueriesInterface $statsChartQueries;
-	private PokemonNameRepositoryInterface $pokemonNameRepository;
-	private AbilityNameRepositoryInterface $abilityNameRepository;
-	private PokemonTypeRepositoryInterface $pokemonTypeRepository;
-	private TypeRepositoryInterface $typeRepository;
-	private TrendPointCalculator $trendPointCalculator;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param StatsChartQueriesInterface $statsChartQueries
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param AbilityNameRepositoryInterface $abilityNameRepository
-	 * @param PokemonTypeRepositoryInterface $pokemonTypeRepository
-	 * @param TypeRepositoryInterface $typeRepository
-	 * @param TrendPointCalculator $trendPointCalculator
-	 */
 	public function __construct(
-		StatsChartQueriesInterface $statsChartQueries,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
-		AbilityNameRepositoryInterface $abilityNameRepository,
-		PokemonTypeRepositoryInterface $pokemonTypeRepository,
-		TypeRepositoryInterface $typeRepository,
-		TrendPointCalculator $trendPointCalculator
-	) {
-		$this->statsChartQueries = $statsChartQueries;
-		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->abilityNameRepository = $abilityNameRepository;
-		$this->pokemonTypeRepository = $pokemonTypeRepository;
-		$this->typeRepository = $typeRepository;
-		$this->trendPointCalculator = $trendPointCalculator;
-	}
+		private StatsChartQueriesInterface $statsChartQueries,
+		private PokemonNameRepositoryInterface $pokemonNameRepository,
+		private AbilityNameRepositoryInterface $abilityNameRepository,
+		private PokemonTypeRepositoryInterface $pokemonTypeRepository,
+		private TypeRepositoryInterface $typeRepository,
+		private TrendPointCalculator $trendPointCalculator,
+	) {}
 
 	/**
 	 * Get the data for a usage ability trend line.

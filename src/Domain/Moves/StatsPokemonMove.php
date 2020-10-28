@@ -5,30 +5,12 @@ namespace Jp\Dex\Domain\Moves;
 
 final class StatsPokemonMove
 {
-	private string $identifier;
-	private string $name;
-	private float $percent;
-	private float $change;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $identifier
-	 * @param string $name
-	 * @param float $percent
-	 * @param float $change
-	 */
 	public function __construct(
-		string $identifier,
-		string $name,
-		float $percent,
-		float $change
-	) {
-		$this->identifier = $identifier;
-		$this->name = $name;
-		$this->percent = $percent;
-		$this->change = $change;
-	}
+		private string $identifier,
+		private string $name,
+		private float $percent,
+		private float $change,
+	) {}
 
 	/**
 	 * Get the move's identifier.

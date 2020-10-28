@@ -19,38 +19,14 @@ use Psr\Http\Message\StreamInterface;
 
 final class UsageFileImporter
 {
-	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
-	private UsageRepositoryInterface $usageRepository;
-	private UsageRatedRepositoryInterface $usageRatedRepository;
-	private UsagePokemonRepositoryInterface $usagePokemonRepository;
-	private UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository;
-	private UsageFileExtractor $usageFileExtractor;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
-	 * @param UsageRepositoryInterface $usageRepository
-	 * @param UsageRatedRepositoryInterface $usageRatedRepository
-	 * @param UsagePokemonRepositoryInterface $usagePokemonRepository
-	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
-	 * @param UsageFileExtractor $usageFileExtractor
-	 */
 	public function __construct(
-		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
-		UsageRepositoryInterface $usageRepository,
-		UsageRatedRepositoryInterface $usageRatedRepository,
-		UsagePokemonRepositoryInterface $usagePokemonRepository,
-		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
-		UsageFileExtractor $usageFileExtractor
-	) {
-		$this->showdownPokemonRepository = $showdownPokemonRepository;
-		$this->usageRepository = $usageRepository;
-		$this->usageRatedRepository = $usageRatedRepository;
-		$this->usagePokemonRepository = $usagePokemonRepository;
-		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
-		$this->usageFileExtractor = $usageFileExtractor;
-	}
+		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
+		private UsageRepositoryInterface $usageRepository,
+		private UsageRatedRepositoryInterface $usageRatedRepository,
+		private UsagePokemonRepositoryInterface $usagePokemonRepository,
+		private UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
+		private UsageFileExtractor $usageFileExtractor,
+	) {}
 
 	/**
 	 * Import usage data from the given file.

@@ -8,20 +8,10 @@ use Psr\Http\Message\ResponseInterface;
 
 final class IndexView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
-	 */
-	public function __construct(RendererInterface $renderer, BaseView $baseView)
-	{
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
-	}
+	public function __construct(
+		private RendererInterface $renderer,
+		private BaseView $baseView,
+	) {}
 
 	/**
 	 * Show the home page.

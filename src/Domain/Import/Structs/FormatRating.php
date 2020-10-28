@@ -5,22 +5,10 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final class FormatRating
 {
-	private string $showdownFormatName;
-	private int $rating;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $showdownFormatName
-	 * @param int $rating
-	 */
 	public function __construct(
-		string $showdownFormatName,
-		int $rating
-	) {
-		$this->showdownFormatName = $showdownFormatName;
-		$this->rating = $rating;
-	}
+		private string $showdownFormatName,
+		private int $rating,
+	) {}
 
 	/**
 	 * Get the Pokémon Showdown format name.

@@ -7,26 +7,11 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class EggGroupName
 {
-	private LanguageId $languageId;
-	private EggGroupId $eggGroupId;
-	private string $name;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param LanguageId $languageId
-	 * @param EggGroupId $eggGroupId
-	 * @param string $name
-	 */
 	public function __construct(
-		LanguageId $languageId,
-		EggGroupId $eggGroupId,
-		string $name
-	) {
-		$this->languageId = $languageId;
-		$this->eggGroupId = $eggGroupId;
-		$this->name = $name;
-	}
+		private LanguageId $languageId,
+		private EggGroupId $eggGroupId,
+		private string $name,
+	) {}
 
 	/**
 	 * Get the egg group name's language id.

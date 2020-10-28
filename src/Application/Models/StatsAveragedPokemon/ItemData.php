@@ -5,26 +5,11 @@ namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
 final class ItemData
 {
-	private string $itemName;
-	private string $itemIdentifier;
-	private float $percent;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $itemName
-	 * @param string $itemIdentifier
-	 * @param float $percent
-	 */
 	public function __construct(
-		string $itemName,
-		string $itemIdentifier,
-		float $percent
-	) {
-		$this->itemName = $itemName;
-		$this->itemIdentifier = $itemIdentifier;
-		$this->percent = $percent;
-	}
+		private string $itemName,
+		private string $itemIdentifier,
+		private float $percent,
+	) {}
 
 	/**
 	 * Get the item name.

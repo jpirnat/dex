@@ -35,74 +35,23 @@ use Psr\Http\Message\StreamInterface;
 
 final class MovesetFileImporter
 {
-	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
-	private ShowdownAbilityRepositoryInterface $showdownAbilityRepository;
-	private ShowdownItemRepositoryInterface $showdownItemRepository;
-	private ShowdownNatureRepositoryInterface $showdownNatureRepository;
-	private ShowdownMoveRepositoryInterface $showdownMoveRepository;
-	private UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository;
-	private MovesetPokemonRepositoryInterface $movesetPokemonRepository;
-	private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository;
-	private MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository;
-	private MovesetRatedItemRepositoryInterface $movesetRatedItemRepository;
-	private MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository;
-	private MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository;
-	private MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository;
-	private MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository;
-	private MovesetFileExtractor $movesetFileExtractor;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
-	 * @param ShowdownAbilityRepositoryInterface $showdownAbilityRepository
-	 * @param ShowdownItemRepositoryInterface $showdownItemRepository
-	 * @param ShowdownNatureRepositoryInterface $showdownNatureRepository
-	 * @param ShowdownMoveRepositoryInterface $showdownMoveRepository
-	 * @param UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository
-	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
-	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
-	 * @param MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository
-	 * @param MovesetRatedItemRepositoryInterface $movesetRatedItemRepository
-	 * @param MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository
-	 * @param MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository
-	 * @param MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository
-	 * @param MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository
-	 * @param MovesetFileExtractor $movesetFileExtractor
-	 */
 	public function __construct(
-		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
-		ShowdownAbilityRepositoryInterface $showdownAbilityRepository,
-		ShowdownItemRepositoryInterface $showdownItemRepository,
-		ShowdownNatureRepositoryInterface $showdownNatureRepository,
-		ShowdownMoveRepositoryInterface $showdownMoveRepository,
-		UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
-		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
-		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
-		MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository,
-		MovesetRatedItemRepositoryInterface $movesetRatedItemRepository,
-		MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository,
-		MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository,
-		MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository,
-		MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository,
-		MovesetFileExtractor $movesetFileExtractor
-	) {
-		$this->showdownPokemonRepository = $showdownPokemonRepository;
-		$this->showdownAbilityRepository = $showdownAbilityRepository;
-		$this->showdownItemRepository = $showdownItemRepository;
-		$this->showdownNatureRepository = $showdownNatureRepository;
-		$this->showdownMoveRepository = $showdownMoveRepository;
-		$this->usageRatedPokemonRepository = $usageRatedPokemonRepository;
-		$this->movesetPokemonRepository = $movesetPokemonRepository;
-		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
-		$this->movesetRatedAbilityRepository = $movesetRatedAbilityRepository;
-		$this->movesetRatedItemRepository = $movesetRatedItemRepository;
-		$this->movesetRatedSpreadRepository = $movesetRatedSpreadRepository;
-		$this->movesetRatedMoveRepository = $movesetRatedMoveRepository;
-		$this->movesetRatedTeammateRepository = $movesetRatedTeammateRepository;
-		$this->movesetRatedCounterRepository = $movesetRatedCounterRepository;
-		$this->movesetFileExtractor = $movesetFileExtractor;
-	}
+		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
+		private ShowdownAbilityRepositoryInterface $showdownAbilityRepository,
+		private ShowdownItemRepositoryInterface $showdownItemRepository,
+		private ShowdownNatureRepositoryInterface $showdownNatureRepository,
+		private ShowdownMoveRepositoryInterface $showdownMoveRepository,
+		private UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
+		private MovesetPokemonRepositoryInterface $movesetPokemonRepository,
+		private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
+		private MovesetRatedAbilityRepositoryInterface $movesetRatedAbilityRepository,
+		private MovesetRatedItemRepositoryInterface $movesetRatedItemRepository,
+		private MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository,
+		private MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository,
+		private MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository,
+		private MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository,
+		private MovesetFileExtractor $movesetFileExtractor,
+	) {}
 
 	/**
 	 * Import moveset data from the given file.

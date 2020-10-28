@@ -7,30 +7,12 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class PokemonName
 {
-	private LanguageId $languageId;
-	private PokemonId $pokemonId;
-	private string $name;
-	private string $category;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param LanguageId $languageId
-	 * @param PokemonId $pokemonId
-	 * @param string $name
-	 * @param string $category
-	 */
 	public function __construct(
-		LanguageId $languageId,
-		PokemonId $pokemonId,
-		string $name,
-		string $category
-	) {
-		$this->languageId = $languageId;
-		$this->pokemonId = $pokemonId;
-		$this->name = $name;
-		$this->category = $category;
-	}
+		private LanguageId $languageId,
+		private PokemonId $pokemonId,
+		private string $name,
+		private string $category,
+	) {}
 
 	/**
 	 * Get the Pokémon name's language id.

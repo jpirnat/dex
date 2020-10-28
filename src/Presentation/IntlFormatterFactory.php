@@ -15,17 +15,9 @@ use NumberFormatter;
  */
 final class IntlFormatterFactory
 {
-	private LanguageRepositoryInterface $languageRepository;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param LanguageRepositoryInterface $languageRepository
-	 */
-	public function __construct(LanguageRepositoryInterface $languageRepository)
-	{
-		$this->languageRepository = $languageRepository;
-	}
+	public function __construct(
+		private LanguageRepositoryInterface $languageRepository,
+	) {}
 
 	/**
 	 * Create the IntlFormatter for this language.

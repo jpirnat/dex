@@ -9,31 +9,19 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 
 final class MovesetRatedTeammate
 {
-	private UsageRatedPokemonId $usageRatedPokemonId;
-	private PokemonId $teammateId;
-	private float $percent;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param UsageRatedPokemonId $usageRatedPokemonId
-	 * @param PokemonId $teammateId
-	 * @param float $percent
 	 *
 	 * @throws InvalidPercentException if $percent is invalid
 	 */
 	public function __construct(
-		UsageRatedPokemonId $usageRatedPokemonId,
-		PokemonId $teammateId,
-		float $percent
+		private UsageRatedPokemonId $usageRatedPokemonId,
+		private PokemonId $teammateId,
+		private float $percent,
 	) {
 		if ($percent < 0 || $percent > 100) {
 			throw new InvalidPercentException('Invalid percent: ' . $percent);
 		}
-
-		$this->usageRatedPokemonId = $usageRatedPokemonId;
-		$this->teammateId = $teammateId;
-		$this->percent = $percent;
 	}
 
 	/**

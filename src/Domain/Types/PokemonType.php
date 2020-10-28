@@ -8,30 +8,12 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class PokemonType
 {
-	private GenerationId $generationId;
-	private PokemonId $pokemonId;
-	private int $slot;
-	private TypeId $typeId;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationId $generationId
-	 * @param PokemonId $pokemonId
-	 * @param int $slot
-	 * @param TypeId $typeId
-	 */
 	public function __construct(
-		GenerationId $generationId,
-		PokemonId $pokemonId,
-		int $slot,
-		TypeId $typeId
-	) {
-		$this->generationId = $generationId;
-		$this->pokemonId = $pokemonId;
-		$this->slot = $slot;
-		$this->typeId = $typeId;
-	}
+		private GenerationId $generationId,
+		private PokemonId $pokemonId,
+		private int $slot,
+		private TypeId $typeId,
+	) {}
 
 	/**
 	 * Get the Pokémon type's generation id.

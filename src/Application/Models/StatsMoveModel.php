@@ -17,15 +17,6 @@ use Jp\Dex\Domain\Usage\StatsMovePokemonRepositoryInterface;
 
 final class StatsMoveModel
 {
-	private DateModel $dateModel;
-	private FormatRepositoryInterface $formatRepository;
-	private MoveRepositoryInterface $moveRepository;
-	private RatingQueriesInterface $ratingQueries;
-	private MoveNameRepositoryInterface $moveNameRepository;
-	private MoveDescriptionRepositoryInterface $moveDescriptionRepository;
-	private StatsMovePokemonRepositoryInterface $statsMovePokemonRepository;
-
-
 	private string $month;
 	private Format $format;
 	private int $rating;
@@ -42,34 +33,16 @@ final class StatsMoveModel
 	private array $pokemon = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param DateModel $dateModel
-	 * @param FormatRepositoryInterface $formatRepository
-	 * @param MoveRepositoryInterface $moveRepository
-	 * @param RatingQueriesInterface $ratingQueries
-	 * @param MoveNameRepositoryInterface $moveNameRepository
-	 * @param MoveDescriptionRepositoryInterface $moveDescriptionRepository
-	 * @param StatsMovePokemonRepositoryInterface $statsMovePokemonRepository
-	 */
 	public function __construct(
-		DateModel $dateModel,
-		FormatRepositoryInterface $formatRepository,
-		MoveRepositoryInterface $moveRepository,
-		RatingQueriesInterface $ratingQueries,
-		MoveNameRepositoryInterface $moveNameRepository,
-		MoveDescriptionRepositoryInterface $moveDescriptionRepository,
-		StatsMovePokemonRepositoryInterface $statsMovePokemonRepository
-	) {
-		$this->dateModel = $dateModel;
-		$this->formatRepository = $formatRepository;
-		$this->moveRepository = $moveRepository;
-		$this->ratingQueries = $ratingQueries;
-		$this->moveNameRepository = $moveNameRepository;
-		$this->moveDescriptionRepository = $moveDescriptionRepository;
-		$this->statsMovePokemonRepository = $statsMovePokemonRepository;
-	}
+		private DateModel $dateModel,
+		private FormatRepositoryInterface $formatRepository,
+		private MoveRepositoryInterface $moveRepository,
+		private RatingQueriesInterface $ratingQueries,
+		private MoveNameRepositoryInterface $moveNameRepository,
+		private MoveDescriptionRepositoryInterface $moveDescriptionRepository,
+		private StatsMovePokemonRepositoryInterface $statsMovePokemonRepository,
+	) {}
+
 
 	/**
 	 * Get usage data to recreate a stats usage file, such as

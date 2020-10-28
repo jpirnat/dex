@@ -7,30 +7,12 @@ use Jp\Dex\Domain\Stats\StatId;
 
 final class Characteristic
 {
-	private CharacteristicId $id;
-	private string $identifier;
-	private StatId $highestStatId;
-	private int $ivModFive;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param CharacteristicId $characteristicId
-	 * @param string $identifier
-	 * @param StatId $highestStatId
-	 * @param int $ivModFive
-	 */
 	public function __construct(
-		CharacteristicId $characteristicId,
-		string $identifier,
-		StatId $highestStatId,
-		int $ivModFive
-	) {
-		$this->id = $characteristicId;
-		$this->identifier = $identifier;
-		$this->highestStatId = $highestStatId;
-		$this->ivModFive = $ivModFive;
-	}
+		private CharacteristicId $id,
+		private string $identifier,
+		private StatId $highestStatId,
+		private int $ivModFive,
+	) {}
 
 	/**
 	 * Get the characteristic's id.

@@ -12,17 +12,9 @@ use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
 
 final class TrendPointCalculator
 {
-	private UsageQueriesInterface $usageQueries;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param UsageQueriesInterface $usageQueries
-	 */
-	public function __construct(UsageQueriesInterface $usageQueries)
-	{
-		$this->usageQueries = $usageQueries;
-	}
+	public function __construct(
+		private UsageQueriesInterface $usageQueries,
+	) {}
 
 	/**
 	 * Get the first date in this array of usage datas. Assume the array is

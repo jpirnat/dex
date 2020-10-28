@@ -7,26 +7,11 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class ItemName
 {
-	private LanguageId $languageId;
-	private ItemId $itemId;
-	private string $name;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param LanguageId $languageId
-	 * @param ItemId $itemId
-	 * @param string $name
-	 */
 	public function __construct(
-		LanguageId $languageId,
-		ItemId $itemId,
-		string $name
-	) {
-		$this->languageId = $languageId;
-		$this->itemId = $itemId;
-		$this->name = $name;
-	}
+		private LanguageId $languageId,
+		private ItemId $itemId,
+		private string $name,
+	) {}
 
 	/**
 	 * Get the item name's language id.

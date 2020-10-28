@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsMoveController
 {
-	private BaseController $baseController;
-	private StatsMoveModel $statsMoveModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param StatsMoveModel $statsMoveModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		StatsMoveModel $statsMoveModel
-	) {
-		$this->baseController = $baseController;
-		$this->statsMoveModel = $statsMoveModel;
-	}
+		private BaseController $baseController,
+		private StatsMoveModel $statsMoveModel,
+	) {}
 
 	/**
 	 * Get usage data to create a list of Pokémon who use a specific move.

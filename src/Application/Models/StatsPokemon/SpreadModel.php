@@ -16,29 +16,14 @@ use Jp\Dex\Domain\Stats\StatValueContainer;
 
 final class SpreadModel
 {
-	private StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository;
-	private BaseStatRepositoryInterface $baseStatRepository;
-	private StatCalculator $statCalculator;
-
 	private array $spreads = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository
-	 * @param BaseStatRepositoryInterface $baseStatRepository
-	 * @param StatCalculator $statCalculator
-	 */
 	public function __construct(
-		StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository,
-		BaseStatRepositoryInterface $baseStatRepository,
-		StatCalculator $statCalculator
-	) {
-		$this->statsPokemonSpreadRepository = $statsPokemonSpreadRepository;
-		$this->baseStatRepository = $baseStatRepository;
-		$this->statCalculator = $statCalculator;
-	}
+		private StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository,
+		private BaseStatRepositoryInterface $baseStatRepository,
+		private StatCalculator $statCalculator,
+	) {}
 
 
 	/**

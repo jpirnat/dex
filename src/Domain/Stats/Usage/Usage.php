@@ -13,24 +13,16 @@ final class Usage
 {
 	use ValidateMonthTrait;
 
-	private DateTime $month;
-	private FormatId $formatId;
-	private int $totalBattles;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $totalBattles
 	 *
 	 * @throws InvalidMonthException if $month is invalid.
 	 * @throws InvalidCountException if $totalBattles is invalid.
 	 */
 	public function __construct(
-		DateTime $month,
-		FormatId $formatId,
-		int $totalBattles
+		private DateTime $month,
+		private FormatId $formatId,
+		private int $totalBattles,
 	) {
 		$this->validateMonth($month);
 
@@ -39,10 +31,6 @@ final class Usage
 				'Invalid number of total battles: ' . $totalBattles
 			);
 		}
-
-		$this->month = $month;
-		$this->formatId = $formatId;
-		$this->totalBattles = $totalBattles;
 	}
 
 	/**

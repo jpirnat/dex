@@ -5,46 +5,16 @@ namespace Jp\Dex\Domain\Counters;
 
 final class StatsPokemonCounter
 {
-	private string $icon;
-	private string $identifier;
-	private string $name;
-	private float $score;
-	private float $percent;
-	private float $standardDeviation;
-	private float $percentKnockedOut;
-	private float $percentSwitchedOut;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $icon
-	 * @param string $identifier
-	 * @param string $name
-	 * @param float $score
-	 * @param float $percent
-	 * @param float $standardDeviation
-	 * @param float $percentKnockedOut
-	 * @param float $percentSwitchedOut
-	 */
 	public function __construct(
-		string $icon,
-		string $identifier,
-		string $name,
-		float $score,
-		float $percent,
-		float $standardDeviation,
-		float $percentKnockedOut,
-		float $percentSwitchedOut
-	) {
-		$this->icon = $icon;
-		$this->identifier = $identifier;
-		$this->name = $name;
-		$this->score = $score;
-		$this->percent = $percent;
-		$this->standardDeviation = $standardDeviation;
-		$this->percentKnockedOut = $percentKnockedOut;
-		$this->percentSwitchedOut = $percentSwitchedOut;
-	}
+		private string $icon,
+		private string $identifier,
+		private string $name,
+		private float $score,
+		private float $percent,
+		private float $standardDeviation,
+		private float $percentKnockedOut,
+		private float $percentSwitchedOut,
+	) {}
 
 	/**
 	 * Get the counter's icon.

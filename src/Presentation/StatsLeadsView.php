@@ -9,26 +9,11 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsLeadsView
 {
-	private StatsLeadsModel $statsLeadsModel;
-	private IntlFormatterFactory $formatterFactory;
-	private MonthControlFormatter $monthControlFormatter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param StatsLeadsModel $statsLeadsModel
-	 * @param IntlFormatterFactory $formatterFactory
-	 * @param MonthControlFormatter $monthControlFormatter
-	 */
 	public function __construct(
-		StatsLeadsModel $statsLeadsModel,
-		IntlFormatterFactory $formatterFactory,
-		MonthControlFormatter $monthControlFormatter
-	) {
-		$this->statsLeadsModel = $statsLeadsModel;
-		$this->formatterFactory = $formatterFactory;
-		$this->monthControlFormatter = $monthControlFormatter;
-	}
+		private StatsLeadsModel $statsLeadsModel,
+		private IntlFormatterFactory $formatterFactory,
+		private MonthControlFormatter $monthControlFormatter,
+	) {}
 
 	/**
 	 * Get leads data to recreate a stats leads file, such as

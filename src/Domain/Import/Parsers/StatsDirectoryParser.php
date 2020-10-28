@@ -14,42 +14,15 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class StatsDirectoryParser
 {
-	private MonthDirectoryParser $monthDirectoryParser;
-	private ShowdownFormatRepositoryInterface $showdownFormatRepository;
-	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
-	private ShowdownAbilityRepositoryInterface $showdownAbilityRepository;
-	private ShowdownItemRepositoryInterface $showdownItemRepository;
-	private ShowdownNatureRepositoryInterface $showdownNatureRepository;
-	private ShowdownMoveRepositoryInterface $showdownMoveRepository;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param MonthDirectoryParser $monthDirectoryParser
-	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
-	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
-	 * @param ShowdownAbilityRepositoryInterface $showdownAbilityRepository
-	 * @param ShowdownItemRepositoryInterface $showdownItemRepository
-	 * @param ShowdownNatureRepositoryInterface $showdownNatureRepository
-	 * @param ShowdownMoveRepositoryInterface $showdownMoveRepository
-	 */
 	public function __construct(
-		MonthDirectoryParser $monthDirectoryParser,
-		ShowdownFormatRepositoryInterface $showdownFormatRepository,
-		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
-		ShowdownAbilityRepositoryInterface $showdownAbilityRepository,
-		ShowdownItemRepositoryInterface $showdownItemRepository,
-		ShowdownNatureRepositoryInterface $showdownNatureRepository,
-		ShowdownMoveRepositoryInterface $showdownMoveRepository
-	) {
-		$this->monthDirectoryParser = $monthDirectoryParser;
-		$this->showdownFormatRepository = $showdownFormatRepository;
-		$this->showdownPokemonRepository = $showdownPokemonRepository;
-		$this->showdownAbilityRepository = $showdownAbilityRepository;
-		$this->showdownItemRepository = $showdownItemRepository;
-		$this->showdownNatureRepository = $showdownNatureRepository;
-		$this->showdownMoveRepository = $showdownMoveRepository;
-	}
+		private MonthDirectoryParser $monthDirectoryParser,
+		private ShowdownFormatRepositoryInterface $showdownFormatRepository,
+		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
+		private ShowdownAbilityRepositoryInterface $showdownAbilityRepository,
+		private ShowdownItemRepositoryInterface $showdownItemRepository,
+		private ShowdownNatureRepositoryInterface $showdownNatureRepository,
+		private ShowdownMoveRepositoryInterface $showdownMoveRepository,
+	) {}
 
 	/**
 	 * Parse all month directories in this stats directory.

@@ -9,18 +9,9 @@ use Psr\Http\Message\ResponseInterface;
 
 final class DexNaturesView
 {
-	private DexNaturesModel $dexNaturesModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param DexNaturesModel $dexNaturesModel
-	 */
 	public function __construct(
-		DexNaturesModel $dexNaturesModel
-	) {
-		$this->dexNaturesModel = $dexNaturesModel;
-	}
+		private DexNaturesModel $dexNaturesModel,
+	) {}
 
 	/**
 	 * Show the dex natures page.

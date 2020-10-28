@@ -9,22 +9,10 @@ use Psr\Http\Message\ResponseInterface;
 
 final class DexPokemonsView
 {
-	private DexPokemonsModel $dexPokemonsModel;
-	private DexFormatter $dexFormatter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param DexPokemonsModel $dexPokemonsModel
-	 * @param DexFormatter $dexFormatter
-	 */
 	public function __construct(
-		DexPokemonsModel $dexPokemonsModel,
-		DexFormatter $dexFormatter
-	) {
-		$this->dexPokemonsModel = $dexPokemonsModel;
-		$this->dexFormatter = $dexFormatter;
-	}
+		private DexPokemonsModel $dexPokemonsModel,
+		private DexFormatter $dexFormatter,
+	) {}
 
 	/**
 	 * Show the dex Pokémons page.

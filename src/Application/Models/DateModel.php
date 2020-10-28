@@ -9,23 +9,14 @@ use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 
 final class DateModel
 {
-	private MonthQueriesInterface $monthQueries;
-
-
 	private DateTime $thisMonth;
 	private ?DateTime $prevMonth;
 	private ?DateTime $nextMonth;
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param MonthQueriesInterface $monthQueries
-	 */
-	public function __construct(MonthQueriesInterface $monthQueries)
-	{
-		$this->monthQueries = $monthQueries;
-	}
+	public function __construct(
+		private MonthQueriesInterface $monthQueries,
+	) {}
 
 
 	/**

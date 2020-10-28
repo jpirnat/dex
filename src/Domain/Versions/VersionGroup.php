@@ -5,34 +5,13 @@ namespace Jp\Dex\Domain\Versions;
 
 final class VersionGroup
 {
-	private VersionGroupId $id;
-	private string $identifier;
-	private GenerationId $generationId;
-	private string $icon;
-	private int $sort;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param VersionGroupId $versionGroupId
-	 * @param string $identifier
-	 * @param GenerationId $generationId
-	 * @param string $icon
-	 * @param int $sort
-	 */
 	public function __construct(
-		VersionGroupId $versionGroupId,
-		string $identifier,
-		GenerationId $generationId,
-		string $icon,
-		int $sort
-	) {
-		$this->id = $versionGroupId;
-		$this->identifier = $identifier;
-		$this->generationId = $generationId;
-		$this->icon = $icon;
-		$this->sort = $sort;
-	}
+		private VersionGroupId $id,
+		private string $identifier,
+		private GenerationId $generationId,
+		private string $icon,
+		private int $sort,
+	) {}
 
 	/**
 	 * Get the version group's id.

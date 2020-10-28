@@ -8,17 +8,14 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class HiddenPowerCalculator
 {
-	private TypeRepositoryInterface $typeRepository;
-
 	/**
 	 * Constructor.
 	 *
 	 * @param TypeRepositoryInterface $typeRepository
 	 */
-	public function __construct(TypeRepositoryInterface $typeRepository)
-	{
-		$this->typeRepository = $typeRepository;
-	}
+	public function __construct(
+		private TypeRepositoryInterface $typeRepository,
+	) {}
 
 	/**
 	 * Calculate a Pokémon's Hidden Power type in Generation II

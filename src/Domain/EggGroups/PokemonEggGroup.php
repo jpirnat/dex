@@ -7,22 +7,10 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 
 final class PokemonEggGroup
 {
-	private PokemonId $pokemonId;
-	private EggGroupId $eggGroupId;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PokemonId $pokemonId
-	 * @param EggGroupId $eggGroupId
-	 */
 	public function __construct(
-		PokemonId $pokemonId,
-		EggGroupId $eggGroupId
-	) {
-		$this->pokemonId = $pokemonId;
-		$this->eggGroupId = $eggGroupId;
-	}
+		private PokemonId $pokemonId,
+		private EggGroupId $eggGroupId,
+	) {}
 
 	/**
 	 * Get the Pokémon egg group's Pokémon id.

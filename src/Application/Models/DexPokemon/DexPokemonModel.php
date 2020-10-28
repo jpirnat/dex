@@ -13,15 +13,6 @@ use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 
 final class DexPokemonModel
 {
-	private GenerationModel $generationModel;
-	private PokemonRepositoryInterface $pokemonRepository;
-	private PokemonNameRepositoryInterface $pokemonNameRepository;
-	private DexAbilityRepositoryInterface $dexAbilityRepository;
-	private DexPokemonMatchupsModel $dexPokemonMatchupsModel;
-	private DexVersionGroupRepositoryInterface $dexVgRepository;
-	private DexPokemonMovesModel $dexPokemonMovesModel;
-
-
 	private array $pokemon = [];
 	private array $abilities = [];
 
@@ -29,34 +20,15 @@ final class DexPokemonModel
 	private array $versionGroups = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationModel $generationModel
-	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param PokemonNameRepositoryInterface $pokemonNameRepository
-	 * @param DexAbilityRepositoryInterface $dexAbilityRepository
-	 * @param DexPokemonMatchupsModel $dexPokemonMatchupsModel
-	 * @param DexVersionGroupRepositoryInterface $dexVgRepository
-	 * @param DexPokemonMovesModel $dexPokemonMovesModel
-	 */
 	public function __construct(
-		GenerationModel $generationModel,
-		PokemonRepositoryInterface $pokemonRepository,
-		PokemonNameRepositoryInterface $pokemonNameRepository,
-		DexAbilityRepositoryInterface $dexAbilityRepository,
-		DexPokemonMatchupsModel $dexPokemonMatchupsModel,
-		DexVersionGroupRepositoryInterface $dexVgRepository,
-		DexPokemonMovesModel $dexPokemonMovesModel
-	) {
-		$this->generationModel = $generationModel;
-		$this->pokemonRepository = $pokemonRepository;
-		$this->pokemonNameRepository = $pokemonNameRepository;
-		$this->dexAbilityRepository = $dexAbilityRepository;
-		$this->dexPokemonMatchupsModel = $dexPokemonMatchupsModel;
-		$this->dexVgRepository = $dexVgRepository;
-		$this->dexPokemonMovesModel = $dexPokemonMovesModel;
-	}
+		private GenerationModel $generationModel,
+		private PokemonRepositoryInterface $pokemonRepository,
+		private PokemonNameRepositoryInterface $pokemonNameRepository,
+		private DexAbilityRepositoryInterface $dexAbilityRepository,
+		private DexPokemonMatchupsModel $dexPokemonMatchupsModel,
+		private DexVersionGroupRepositoryInterface $dexVgRepository,
+		private DexPokemonMovesModel $dexPokemonMovesModel,
+	) {}
 
 
 	/**

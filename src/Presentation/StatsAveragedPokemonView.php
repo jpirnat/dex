@@ -12,34 +12,13 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsAveragedPokemonView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
-	private StatsAveragedPokemonModel $statsAveragedPokemonModel;
-	private IntlFormatterFactory $formatterFactory;
-	private DexFormatter $dexFormatter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
-	 * @param StatsAveragedPokemonModel $statsAveragedPokemonModel
-	 * @param IntlFormatterFactory $formatterFactory
-	 * @param DexFormatter $dexFormatter
-	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
-		StatsAveragedPokemonModel $statsAveragedPokemonModel,
-		IntlFormatterFactory $formatterFactory,
-		DexFormatter $dexFormatter
-	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
-		$this->statsAveragedPokemonModel = $statsAveragedPokemonModel;
-		$this->formatterFactory = $formatterFactory;
-		$this->dexFormatter = $dexFormatter;
-	}
+		private RendererInterface $renderer,
+		private BaseView $baseView,
+		private StatsAveragedPokemonModel $statsAveragedPokemonModel,
+		private IntlFormatterFactory $formatterFactory,
+		private DexFormatter $dexFormatter,
+	) {}
 
 	/**
 	 * Get moveset data to recreate a stats moveset file, such as

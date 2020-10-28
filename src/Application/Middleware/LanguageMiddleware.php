@@ -17,23 +17,15 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 final class LanguageMiddleware implements MiddlewareInterface
 {
-	private LanguageRepositoryInterface $languageRepository;
-
 	/** @var string $LANGUAGE_PARAMETER */
 	private const LANGUAGE_PARAMETER = 'language';
 
 	/** @var int $DEFAULT_LANGUAGE_ID */
 	private const DEFAULT_LANGUAGE_ID = LanguageId::ENGLISH;
 
-	/**
-	 * Constructor.
-	 *
-	 * @param LanguageRepositoryInterface $languageRepository
-	 */
-	public function __construct(LanguageRepositoryInterface $languageRepository)
-	{
-		$this->languageRepository = $languageRepository;
-	}
+	public function __construct(
+		private LanguageRepositoryInterface $languageRepository,
+	) {}
 
 	/**
 	 * Set a request attribute for the user's language.

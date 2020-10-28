@@ -8,62 +8,20 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class Pokemon
 {
-	private PokemonId $id;
-	private string $identifier;
-	private ?string $pokemonIdentifier;
-	private SpeciesId $speciesId;
-	private bool $isDefaultPokemon;
-	private VersionGroupId $introducedInVersionGroupId;
-	private ExperienceGroupId $experienceGroupId;
-	private float $heightM;
-	private float $weightKg;
-	private int $genderRatio;
-	private string $smogonDexIdentifier;
-	private int $sort;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PokemonId $pokemonId
-	 * @param string $identifier
-	 * @param string|null $pokemonIdentifier
-	 * @param SpeciesId $speciesId
-	 * @param bool $isDefaultPokemon
-	 * @param VersionGroupId $introducedInVersionGroupId
-	 * @param ExperienceGroupId $experienceGroupId
-	 * @param float $heightM
-	 * @param float $weightKg
-	 * @param int $genderRatio
-	 * @param string $smogonDexIdentifier
-	 * @param int $sort
-	 */
 	public function __construct(
-		PokemonId $pokemonId,
-		string $identifier,
-		?string $pokemonIdentifier,
-		SpeciesId $speciesId,
-		bool $isDefaultPokemon,
-		VersionGroupId $introducedInVersionGroupId,
-		ExperienceGroupId $experienceGroupId,
-		float $heightM,
-		float $weightKg,
-		int $genderRatio,
-		string $smogonDexIdentifier,
-		int $sort
-	) {
-		$this->id = $pokemonId;
-		$this->identifier = $identifier;
-		$this->pokemonIdentifier = $pokemonIdentifier;
-		$this->speciesId = $speciesId;
-		$this->isDefaultPokemon = $isDefaultPokemon;
-		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
-		$this->experienceGroupId = $experienceGroupId;
-		$this->heightM = $heightM;
-		$this->weightKg = $weightKg;
-		$this->genderRatio = $genderRatio;
-		$this->smogonDexIdentifier = $smogonDexIdentifier;
-		$this->sort = $sort;
-	}
+		private PokemonId $id,
+		private string $identifier,
+		private ?string $pokemonIdentifier,
+		private SpeciesId $speciesId,
+		private bool $isDefaultPokemon,
+		private VersionGroupId $introducedInVersionGroupId,
+		private ExperienceGroupId $experienceGroupId,
+		private float $heightM,
+		private float $weightKg,
+		private int $genderRatio,
+		private string $smogonDexIdentifier,
+		private int $sort,
+	) {}
 
 	/**
 	 * Get the Pokémon's id.

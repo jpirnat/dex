@@ -17,18 +17,9 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsChartView
 {
-	private StatsChartModel $statsChartModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param StatsChartModel $statsChartModel
-	 */
 	public function __construct(
-		StatsChartModel $statsChartModel
-	) {
-		$this->statsChartModel = $statsChartModel;
-	}
+		private StatsChartModel $statsChartModel,
+	) {}
 
 	/**
 	 * Set data for the /stats/chart page.

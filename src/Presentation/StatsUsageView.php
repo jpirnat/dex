@@ -9,26 +9,11 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsUsageView
 {
-	private StatsUsageModel $statsUsageModel;
-	private IntlFormatterFactory $formatterFactory;
-	private MonthControlFormatter $monthControlFormatter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param StatsUsageModel $statsUsageModel
-	 * @param IntlFormatterFactory $formatterFactory
-	 * @param MonthControlFormatter $monthControlFormatter
-	 */
 	public function __construct(
-		StatsUsageModel $statsUsageModel,
-		IntlFormatterFactory $formatterFactory,
-		MonthControlFormatter $monthControlFormatter
-	) {
-		$this->statsUsageModel = $statsUsageModel;
-		$this->formatterFactory = $formatterFactory;
-		$this->monthControlFormatter = $monthControlFormatter;
-	}
+		private StatsUsageModel $statsUsageModel,
+		private IntlFormatterFactory $formatterFactory,
+		private MonthControlFormatter $monthControlFormatter,
+	) {}
 
 	/**
 	 * Get usage data to recreate a stats usage file, such as

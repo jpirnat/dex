@@ -15,17 +15,9 @@ use PDO;
  */
 final class ZygardeFixer
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Fix Zygarde in the usage stats.

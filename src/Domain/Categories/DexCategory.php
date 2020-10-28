@@ -5,20 +5,10 @@ namespace Jp\Dex\Domain\Categories;
 
 final class DexCategory
 {
-	private string $icon;
-	private string $name;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $icon
-	 * @param string $name
-	 */
-	public function __construct(string $icon, string $name)
-	{
-		$this->icon = $icon;
-		$this->name = $name;
-	}
+	public function __construct(
+		private string $icon,
+		private string $name,
+	) {}
 
 	/**
 	 * Get the category's icon.

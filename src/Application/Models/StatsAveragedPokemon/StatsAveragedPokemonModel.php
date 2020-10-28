@@ -17,18 +17,6 @@ use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 
 final class StatsAveragedPokemonModel
 {
-	private FormatRepositoryInterface $formatRepository;
-	private PokemonRepositoryInterface $pokemonRepository;
-	private RatingQueriesInterface $ratingQueries;
-	private GenerationRepositoryInterface $generationRepository;
-
-	private StatNameModel $statNameModel;
-	private PokemonModel $pokemonModel;
-	private AbilityModel $abilityModel;
-	private ItemModel $itemModel;
-	private MoveModel $moveModel;
-
-
 	private string $start;
 	private string $end;
 	private Format $format;
@@ -44,40 +32,18 @@ final class StatsAveragedPokemonModel
 	private array $stats = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param FormatRepositoryInterface $formatRepository
-	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param RatingQueriesInterface $ratingQueries
-	 * @param GenerationRepositoryInterface $generationRepository
-	 * @param StatNameModel $statNameModel
-	 * @param PokemonModel $pokemonModel
-	 * @param AbilityModel $abilityModel
-	 * @param ItemModel $itemModel
-	 * @param MoveModel $moveModel
-	 */
 	public function __construct(
-		FormatRepositoryInterface $formatRepository,
-		PokemonRepositoryInterface $pokemonRepository,
-		RatingQueriesInterface $ratingQueries,
-		GenerationRepositoryInterface $generationRepository,
-		StatNameModel $statNameModel,
-		PokemonModel $pokemonModel,
-		AbilityModel $abilityModel,
-		ItemModel $itemModel,
-		MoveModel $moveModel
-	) {
-		$this->formatRepository = $formatRepository;
-		$this->pokemonRepository = $pokemonRepository;
-		$this->ratingQueries = $ratingQueries;
-		$this->generationRepository = $generationRepository;
-		$this->statNameModel = $statNameModel;
-		$this->pokemonModel = $pokemonModel;
-		$this->abilityModel = $abilityModel;
-		$this->itemModel = $itemModel;
-		$this->moveModel = $moveModel;
-	}
+		private FormatRepositoryInterface $formatRepository,
+		private PokemonRepositoryInterface $pokemonRepository,
+		private RatingQueriesInterface $ratingQueries,
+		private GenerationRepositoryInterface $generationRepository,
+		private StatNameModel $statNameModel,
+		private PokemonModel $pokemonModel,
+		private AbilityModel $abilityModel,
+		private ItemModel $itemModel,
+		private MoveModel $moveModel,
+	) {}
+
 
 	/**
 	 * Get moveset data averaged over multiple months.

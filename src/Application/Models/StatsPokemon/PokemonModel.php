@@ -14,27 +14,15 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class PokemonModel
 {
-	private DexPokemonRepositoryInterface $dexPokemonRepository;
-	private ModelRepositoryInterface $modelRepository;
-
-
 	private DexPokemon $pokemon;
 	private Model $model;
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param DexPokemonRepositoryInterface $dexPokemonRepository
-	 * @param ModelRepositoryInterface $modelRepository
-	 */
 	public function __construct(
-		DexPokemonRepositoryInterface $dexPokemonRepository,
-		ModelRepositoryInterface $modelRepository
-	) {
-		$this->dexPokemonRepository = $dexPokemonRepository;
-		$this->modelRepository = $modelRepository;
-	}
+		private DexPokemonRepositoryInterface $dexPokemonRepository,
+		private ModelRepositoryInterface $modelRepository,
+	) {}
+
 
 	/**
 	 * Set miscellaneous data about the Pokémon (name, types, base stats, etc).

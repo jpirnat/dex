@@ -8,22 +8,14 @@ use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
 
 final class StatsIndexModel
 {
-	private UsageQueriesInterface $usageQueries;
-
-
 	/** @var DateTime[] $months */
 	private array $months = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param UsageQueriesInterface $usageQueries
-	 */
-	public function __construct(UsageQueriesInterface $usageQueries)
-	{
-		$this->usageQueries = $usageQueries;
-	}
+	public function __construct(
+		private UsageQueriesInterface $usageQueries,
+	) {}
+
 
 	/**
 	 * Set the months that have usage data.

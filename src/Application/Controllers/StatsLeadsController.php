@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsLeadsController
 {
-	private BaseController $baseController;
-	private StatsLeadsModel $statsLeadsModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param StatsLeadsModel $statsLeadsModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		StatsLeadsModel $statsLeadsModel
-	) {
-		$this->baseController = $baseController;
-		$this->statsLeadsModel = $statsLeadsModel;
-	}
+		private BaseController $baseController,
+		private StatsLeadsModel $statsLeadsModel,
+	) {}
 
 	/**
 	 * Get leads data to recreate a stats leads file, such as

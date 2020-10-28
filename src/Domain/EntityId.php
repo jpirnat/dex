@@ -5,17 +5,9 @@ namespace Jp\Dex\Domain;
 
 abstract class EntityId
 {
-	protected int $id;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param int $id
-	 */
-	public function __construct(int $id)
-	{
-		$this->id = $id;
-	}
+	public function __construct(
+		protected int $id,
+	) {}
 
 	/**
 	 * Get the id's value.

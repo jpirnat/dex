@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class DexTypeController
 {
-	private BaseController $baseController;
-	private DexTypeModel $dexTypeModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param DexTypeModel $dexTypeModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		DexTypeModel $dexTypeModel
-	) {
-		$this->baseController = $baseController;
-		$this->dexTypeModel = $dexTypeModel;
-	}
+		private BaseController $baseController,
+		private DexTypeModel $dexTypeModel,
+	) {}
 
 	/**
 	 * Show the dex type page.

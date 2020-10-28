@@ -8,29 +8,20 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 
 final class MovesetRatedPokemon
 {
-	private UsageRatedPokemonId $usageRatedPokemonId;
-	private float $averageWeight;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param UsageRatedPokemonId $usageRatedPokemonId
-	 * @param float $averageWeight
 	 *
 	 * @throws InvalidAverageWeightException if $averageWeight is invalid.
 	 */
 	public function __construct(
-		UsageRatedPokemonId $usageRatedPokemonId,
-		float $averageWeight
+		private UsageRatedPokemonId $usageRatedPokemonId,
+		private float $averageWeight,
 	) {
 		if ($averageWeight < 0) {
 			throw new InvalidAverageWeightException(
 				'Invalid average weight: ' . $averageWeight
 			);
 		}
-
-		$this->usageRatedPokemonId = $usageRatedPokemonId;
-		$this->averageWeight = $averageWeight;
 	}
 
 	/**

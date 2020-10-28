@@ -5,65 +5,38 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final class Usage
 {
-	private int $rank;
-	private string $showdownPokemonName;
-	private float $usagePercent;
-	private int $raw;
-	private float $rawPercent;
-	private int $real;
-	private float $realPercent;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param int $rank
-	 * @param string $showdownPokemonName
-	 * @param float $usagePercent
-	 * @param int $raw
-	 * @param float $rawPercent
-	 * @param int $real
-	 * @param float $realPercent
-	 */
 	public function __construct(
-		int $rank,
-		string $showdownPokemonName,
-		float $usagePercent,
-		int $raw,
-		float $rawPercent,
-		int $real,
-		float $realPercent
+		private int $rank,
+		private string $showdownPokemonName,
+		private float $usagePercent,
+		private int $raw,
+		private float $rawPercent,
+		private int $real,
+		private float $realPercent,
 	) {
 		// Clamp usage percent between 0 and 100.
-		if ($usagePercent < 0) {
-			$usagePercent = 0;
+		if ($this->usagePercent < 0) {
+			$this->usagePercent = 0;
 		}
-		if ($usagePercent > 100) {
-			$usagePercent = 100;
+		if ($this->usagePercent > 100) {
+			$this->usagePercent = 100;
 		}
 
 		// Clamp raw percent between 0 and 100.
-		if ($rawPercent < 0) {
-			$rawPercent = 0;
+		if ($this->rawPercent < 0) {
+			$this->rawPercent = 0;
 		}
-		if ($rawPercent > 100) {
-			$rawPercent = 100;
+		if ($this->rawPercent > 100) {
+			$this->rawPercent = 100;
 		}
 
 		// Clamp real percent between 0 and 100.
-		if ($realPercent < 0) {
-			$realPercent = 0;
+		if ($this->realPercent < 0) {
+			$this->realPercent = 0;
 		}
-		if ($realPercent > 100) {
-			$realPercent = 100;
+		if ($this->realPercent > 100) {
+			$this->realPercent = 100;
 		}
-
-		$this->rank = $rank;
-		$this->showdownPokemonName = $showdownPokemonName;
-		$this->usagePercent = $usagePercent;
-		$this->raw = $raw;
-		$this->rawPercent = $rawPercent;
-		$this->real = $real;
-		$this->realPercent = $realPercent;
 	}
 
 	/**

@@ -11,27 +11,17 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 
 final class MovesetRatedSpread
 {
-	private UsageRatedPokemonId $usageRatedPokemonId;
-	private NatureId $natureId;
-	private StatValueContainer $evSpread;
-	private float $percent;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param UsageRatedPokemonId $usageRatedPokemonId
-	 * @param NatureId $natureId
-	 * @param StatValueContainer $evSpread
-	 * @param float $percent
 	 *
 	 * @throws InvalidCountException if any EV spread values are invalid.
 	 * @throws InvalidPercentException if $percent is invalid
 	 */
 	public function __construct(
-		UsageRatedPokemonId $usageRatedPokemonId,
-		NatureId $natureId,
-		StatValueContainer $evSpread,
-		float $percent
+		private UsageRatedPokemonId $usageRatedPokemonId,
+		private NatureId $natureId,
+		private StatValueContainer $evSpread,
+		private float $percent,
 	) {
 		foreach ($evSpread->getAll() as $statValue) {
 			if ($statValue->getValue() < 0 || $statValue->getValue() > 255) {
@@ -45,11 +35,6 @@ final class MovesetRatedSpread
 		if ($percent < 0 || $percent > 100) {
 			throw new InvalidPercentException('Invalid percent: ' . $percent);
 		}
-
-		$this->usageRatedPokemonId = $usageRatedPokemonId;
-		$this->natureId = $natureId;
-		$this->evSpread = $evSpread;
-		$this->percent = $percent;
 	}
 
 	/**

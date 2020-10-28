@@ -8,40 +8,14 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class Type
 {
-	private TypeId $id;
-	private string $identifier;
-	private GenerationId $introducedInGenerationId;
-	private ?CategoryId $categoryId;
-	private ?int $hiddenPowerIndex;
-
-	/** @var string $colorCode "#rrggbb" */
-	private string $colorCode;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param TypeId $typeId
-	 * @param string $identifier
-	 * @param GenerationId $introducedInGenerationId
-	 * @param CategoryId|null $categoryId
-	 * @param int|null $hiddenPowerIndex
-	 * @param string $colorCode
-	 */
 	public function __construct(
-		TypeId $typeId,
-		string $identifier,
-		GenerationId $introducedInGenerationId,
-		?CategoryId $categoryId,
-		?int $hiddenPowerIndex,
-		string $colorCode
-	) {
-		$this->id = $typeId;
-		$this->identifier = $identifier;
-		$this->introducedInGenerationId = $introducedInGenerationId;
-		$this->categoryId = $categoryId;
-		$this->hiddenPowerIndex = $hiddenPowerIndex;
-		$this->colorCode = $colorCode;
-	}
+		private TypeId $id,
+		private string $identifier,
+		private GenerationId $introducedInGenerationId,
+		private ?CategoryId $categoryId,
+		private ?int $hiddenPowerIndex,
+		private string $colorCode,
+	) {}
 
 	/**
 	 * Get the type's id.
@@ -94,7 +68,7 @@ final class Type
 	}
 
 	/**
-	 * Get the type's color code.
+	 * Get the type's color code ("#rrggbb").
 	 *
 	 * @return string
 	 */

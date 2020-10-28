@@ -30,24 +30,6 @@ use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 
 final class StatsPokemonModel
 {
-	private DateModel $dateModel;
-	private FormatRepositoryInterface $formatRepository;
-	private PokemonRepositoryInterface $pokemonRepository;
-	private RatingQueriesInterface $ratingQueries;
-	private GenerationRepositoryInterface $generationRepository;
-	private MovesetPokemonRepositoryInterface $movesetPokemonRepository;
-	private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository;
-
-	private StatNameModel $statNameModel;
-	private PokemonModel $pokemonModel;
-	private StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository;
-	private StatsPokemonItemRepositoryInterface $statsPokemonItemRepository;
-	private SpreadModel $spreadModel;
-	private StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository;
-	private StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository;
-	private StatsPokemonCounterRepositoryInterface $statsPokemonCounterRepository;
-
-
 	private string $month;
 	private Format $format;
 	private int $rating;
@@ -79,58 +61,24 @@ final class StatsPokemonModel
 	private array $counters = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param DateModel $dateModel
-	 * @param FormatRepositoryInterface $formatRepository
-	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param RatingQueriesInterface $ratingQueries
-	 * @param GenerationRepositoryInterface $generationRepository
-	 * @param MovesetPokemonRepositoryInterface $movesetPokemonRepository
-	 * @param MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository
-	 * @param StatNameModel $statNameModel
-	 * @param PokemonModel $pokemonModel
-	 * @param StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository
-	 * @param StatsPokemonItemRepositoryInterface $statsPokemonItemRepository
-	 * @param SpreadModel $spreadModel
-	 * @param StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository
-	 * @param StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository
-	 * @param StatsPokemonCounterRepositoryInterface $statsPokemonCounterRepository
-	 */
 	public function __construct(
-		DateModel $dateModel,
-		FormatRepositoryInterface $formatRepository,
-		PokemonRepositoryInterface $pokemonRepository,
-		RatingQueriesInterface $ratingQueries,
-		GenerationRepositoryInterface $generationRepository,
-		MovesetPokemonRepositoryInterface $movesetPokemonRepository,
-		MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
-		StatNameModel $statNameModel,
-		PokemonModel $pokemonModel,
-		StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository,
-		StatsPokemonItemRepositoryInterface $statsPokemonItemRepository,
-		SpreadModel $spreadModel,
-		StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository,
-		StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository,
-		StatsPokemonCounterRepositoryInterface $statsPokemonCounterRepository
-	) {
-		$this->dateModel = $dateModel;
-		$this->formatRepository = $formatRepository;
-		$this->pokemonRepository = $pokemonRepository;
-		$this->ratingQueries = $ratingQueries;
-		$this->generationRepository = $generationRepository;
-		$this->movesetPokemonRepository = $movesetPokemonRepository;
-		$this->movesetRatedPokemonRepository = $movesetRatedPokemonRepository;
-		$this->statNameModel = $statNameModel;
-		$this->pokemonModel = $pokemonModel;
-		$this->statsPokemonAbilityRepository = $statsPokemonAbilityRepository;
-		$this->statsPokemonItemRepository = $statsPokemonItemRepository;
-		$this->spreadModel = $spreadModel;
-		$this->statsPokemonMoveRepository = $statsPokemonMoveRepository;
-		$this->statsPokemonTeammateRepository = $statsPokemonTeammateRepository;
-		$this->statsPokemonCounterRepository = $statsPokemonCounterRepository;
-	}
+		private DateModel $dateModel,
+		private FormatRepositoryInterface $formatRepository,
+		private PokemonRepositoryInterface $pokemonRepository,
+		private RatingQueriesInterface $ratingQueries,
+		private GenerationRepositoryInterface $generationRepository,
+		private MovesetPokemonRepositoryInterface $movesetPokemonRepository,
+		private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
+		private StatNameModel $statNameModel,
+		private PokemonModel $pokemonModel,
+		private StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository,
+		private StatsPokemonItemRepositoryInterface $statsPokemonItemRepository,
+		private SpreadModel $spreadModel,
+		private StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository,
+		private StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository,
+		private StatsPokemonCounterRepositoryInterface $statsPokemonCounterRepository,
+	) {}
+
 
 	/**
 	 * Get moveset data to recreate a stats moveset file, such as

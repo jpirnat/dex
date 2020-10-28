@@ -9,22 +9,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class BreedingChainsController
 {
-	private BaseController $baseController;
-	private BreedingChainsModel $breedingChainsModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param BreedingChainsModel $breedingChainsModel
-	 */
 	public function __construct(
-		BaseController $baseController,
-		BreedingChainsModel $breedingChainsModel
-	) {
-		$this->baseController = $baseController;
-		$this->breedingChainsModel = $breedingChainsModel;
-	}
+		private BaseController $baseController,
+		private BreedingChainsModel $breedingChainsModel,
+	) {}
 
 	/**
 	 * Show the breeding chains page.

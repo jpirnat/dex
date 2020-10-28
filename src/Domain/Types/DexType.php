@@ -5,30 +5,12 @@ namespace Jp\Dex\Domain\Types;
 
 final class DexType
 {
-	private TypeId $id;
-	private string $identifier;
-	private string $icon;
-	private string $name;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param TypeId $typeId
-	 * @param string $identifier
-	 * @param string $icon
-	 * @param string $name
-	 */
 	public function __construct(
-		TypeId $typeId,
-		string $identifier,
-		string $icon,
-		string $name
-	) {
-		$this->id = $typeId;
-		$this->identifier = $identifier;
-		$this->icon = $icon;
-		$this->name = $name;
-	}
+		private TypeId $id,
+		private string $identifier,
+		private string $icon,
+		private string $name,
+	) {}
 
 	/**
 	 * Get the type's id.

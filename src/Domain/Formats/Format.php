@@ -7,42 +7,15 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class Format
 {
-	private FormatId $id;
-	private string $identifier;
-	private string $name;
-	private GenerationId $generationId;
-	private int $level;
-	private int $fieldSize;
-	private string $smogonDexIdentifier;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param FormatId $formatId
-	 * @param string $identifier
-	 * @param string $name
-	 * @param GenerationId $generationId
-	 * @param int $level
-	 * @param int $fieldSize
-	 * @param string $smogonDexIdentifier
-	 */
 	public function __construct(
-		FormatId $formatId,
-		string $identifier,
-		string $name,
-		GenerationId $generationId,
-		int $level,
-		int $fieldSize,
-		string $smogonDexIdentifier
-	) {
-		$this->id = $formatId;
-		$this->identifier = $identifier;
-		$this->name = $name;
-		$this->generationId = $generationId;
-		$this->level = $level;
-		$this->fieldSize = $fieldSize;
-		$this->smogonDexIdentifier = $smogonDexIdentifier;
-	}
+		private FormatId $formatId,
+		private string $identifier,
+		private string $name,
+		private GenerationId $generationId,
+		private int $level,
+		private int $fieldSize,
+		private string $smogonDexIdentifier,
+	) {}
 
 	/**
 	 * Get the format's id.

@@ -9,18 +9,9 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsChartController
 {
-	private StatsChartModel $statsChartModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param StatsChartModel $statsChartModel
-	 */
 	public function __construct(
-		StatsChartModel $statsChartModel
-	) {
-		$this->statsChartModel = $statsChartModel;
-	}
+		private StatsChartModel $statsChartModel,
+	) {}
 
 	/**
 	 * Set data for the /stats/chart page.

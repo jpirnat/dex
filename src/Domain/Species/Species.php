@@ -7,30 +7,12 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class Species
 {
-	private SpeciesId $id;
-	private string $identifier;
-	private VersionGroupId $introducedInVersionGroupId;
-	private int $baseEggCycles;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param SpeciesId $speciesId
-	 * @param string $identifier
-	 * @param VersionGroupId $introducedInVersionGroupId
-	 * @param int $baseEggCycles
-	 */
 	public function __construct(
-		SpeciesId $speciesId,
-		string $identifier,
-		VersionGroupId $introducedInVersionGroupId,
-		int $baseEggCycles
-	) {
-		$this->id = $speciesId;
-		$this->identifier = $identifier;
-		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
-		$this->baseEggCycles = $baseEggCycles;
-	}
+		private SpeciesId $id,
+		private string $identifier,
+		private VersionGroupId $introducedInVersionGroupId,
+		private int $baseEggCycles,
+	) {}
 
 	/**
 	 * Get the species's id.

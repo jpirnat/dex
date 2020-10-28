@@ -5,22 +5,10 @@ namespace Jp\Dex\Application\Models\StatsPokemon;
 
 final class StatData
 {
-	private string $statName;
-	private int $baseStat;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $statName
-	 * @param int $baseStat
-	 */
 	public function __construct(
-		string $statName,
-		int $baseStat
-	) {
-		$this->statName = $statName;
-		$this->baseStat = $baseStat;
-	}
+		private string $statName,
+		private int $baseStat,
+	) {}
 
 	/**
 	 * Get the stat name.

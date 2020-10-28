@@ -8,30 +8,12 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class MoveDescription
 {
-	private GenerationId $generationId;
-	private LanguageId $languageId;
-	private MoveId $moveId;
-	private string $description;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 * @param MoveId $moveId
-	 * @param string $description
-	 */
 	public function __construct(
-		GenerationId $generationId,
-		LanguageId $languageId,
-		MoveId $moveId,
-		string $description
-	) {
-		$this->generationId = $generationId;
-		$this->languageId = $languageId;
-		$this->moveId = $moveId;
-		$this->description = $description;
-	}
+		private GenerationId $generationId,
+		private LanguageId $languageId,
+		private MoveId $moveId,
+		private string $description,
+	) {}
 
 	/**
 	 * Get the move description's generation.

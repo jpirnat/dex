@@ -10,10 +10,6 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexMovesModel
 {
-	private GenerationModel $generationModel;
-	private DexMoveRepositoryInterface $dexMoveRepository;
-
-
 	/** @var DexMove[] $moves */
 	private array $moves = [];
 
@@ -25,12 +21,9 @@ final class DexMovesModel
 	 * @param DexMoveRepositoryInterface $dexMoveRepository
 	 */
 	public function __construct(
-		GenerationModel $generationModel,
-		DexMoveRepositoryInterface $dexMoveRepository
-	) {
-		$this->generationModel = $generationModel;
-		$this->dexMoveRepository = $dexMoveRepository;
-	}
+		private GenerationModel $generationModel,
+		private DexMoveRepositoryInterface $dexMoveRepository,
+	) {}
 
 
 	/**

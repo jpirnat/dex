@@ -23,22 +23,6 @@ use Jp\Dex\Domain\Stats\Trends\Lines\TrendLine;
 
 final class StatsChartModel
 {
-	private FormatRepositoryInterface $formatRepository;
-	private PokemonRepositoryInterface $pokemonRepository;
-	private AbilityRepositoryInterface $abilityRepository;
-	private ItemRepositoryInterface $itemRepository;
-	private MoveRepositoryInterface $moveRepository;
-	private UsageTrendGenerator $usageTrendGenerator;
-	private LeadUsageTrendGenerator $leadUsageTrendGenerator;
-	private MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator;
-	private MovesetItemTrendGenerator $movesetItemTrendGenerator;
-	private MovesetMoveTrendGenerator $movesetMoveTrendGenerator;
-	private UsageAbilityTrendGenerator $usageAbilityTrendGenerator;
-	private UsageItemTrendGenerator $usageItemTrendGenerator;
-	private UsageMoveTrendGenerator $usageMoveTrendGenerator;
-	private LanguageRepositoryInterface $languageRepository;
-
-
 	/** @var TrendLine[] $trendLines */
 	private array $trendLines = [];
 
@@ -51,55 +35,22 @@ final class StatsChartModel
 	private Language $language;
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param FormatRepositoryInterface $formatRepository
-	 * @param PokemonRepositoryInterface $pokemonRepository
-	 * @param AbilityRepositoryInterface $abilityRepository
-	 * @param ItemRepositoryInterface $itemRepository
-	 * @param MoveRepositoryInterface $moveRepository
-	 * @param UsageTrendGenerator $usageTrendGenerator
-	 * @param LeadUsageTrendGenerator $leadUsageTrendGenerator
-	 * @param MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator
-	 * @param MovesetItemTrendGenerator $movesetItemTrendGenerator
-	 * @param MovesetMoveTrendGenerator $movesetMoveTrendGenerator
-	 * @param UsageAbilityTrendGenerator $usageAbilityTrendGenerator
-	 * @param UsageItemTrendGenerator $usageItemTrendGenerator
-	 * @param UsageMoveTrendGenerator $usageMoveTrendGenerator
-	 * @param LanguageRepositoryInterface $languageRepository
-	 */
 	public function __construct(
-		FormatRepositoryInterface $formatRepository,
-		PokemonRepositoryInterface $pokemonRepository,
-		AbilityRepositoryInterface $abilityRepository,
-		ItemRepositoryInterface $itemRepository,
-		MoveRepositoryInterface $moveRepository,
-		UsageTrendGenerator $usageTrendGenerator,
-		LeadUsageTrendGenerator $leadUsageTrendGenerator,
-		MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator,
-		MovesetItemTrendGenerator $movesetItemTrendGenerator,
-		MovesetMoveTrendGenerator $movesetMoveTrendGenerator,
-		UsageAbilityTrendGenerator $usageAbilityTrendGenerator,
-		UsageItemTrendGenerator $usageItemTrendGenerator,
-		UsageMoveTrendGenerator $usageMoveTrendGenerator,
-		LanguageRepositoryInterface $languageRepository
-	) {
-		$this->formatRepository = $formatRepository;
-		$this->pokemonRepository = $pokemonRepository;
-		$this->abilityRepository = $abilityRepository;
-		$this->itemRepository = $itemRepository;
-		$this->moveRepository = $moveRepository;
-		$this->usageTrendGenerator = $usageTrendGenerator;
-		$this->leadUsageTrendGenerator = $leadUsageTrendGenerator;
-		$this->movesetAbilityTrendGenerator = $movesetAbilityTrendGenerator;
-		$this->movesetItemTrendGenerator = $movesetItemTrendGenerator;
-		$this->movesetMoveTrendGenerator = $movesetMoveTrendGenerator;
-		$this->usageAbilityTrendGenerator = $usageAbilityTrendGenerator;
-		$this->usageItemTrendGenerator = $usageItemTrendGenerator;
-		$this->usageMoveTrendGenerator = $usageMoveTrendGenerator;
-		$this->languageRepository = $languageRepository;
-	}
+		private FormatRepositoryInterface $formatRepository,
+		private PokemonRepositoryInterface $pokemonRepository,
+		private AbilityRepositoryInterface $abilityRepository,
+		private ItemRepositoryInterface $itemRepository,
+		private MoveRepositoryInterface $moveRepository,
+		private UsageTrendGenerator $usageTrendGenerator,
+		private LeadUsageTrendGenerator $leadUsageTrendGenerator,
+		private MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator,
+		private MovesetItemTrendGenerator $movesetItemTrendGenerator,
+		private MovesetMoveTrendGenerator $movesetMoveTrendGenerator,
+		private UsageAbilityTrendGenerator $usageAbilityTrendGenerator,
+		private UsageItemTrendGenerator $usageItemTrendGenerator,
+		private UsageMoveTrendGenerator $usageMoveTrendGenerator,
+		private LanguageRepositoryInterface $languageRepository,
+	) {}
 
 	/**
 	 * Set the data for the requested lines to chart.

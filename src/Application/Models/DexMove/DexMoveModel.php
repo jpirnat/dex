@@ -21,17 +21,6 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexMoveModel
 {
-	private GenerationModel $generationModel;
-	private MoveRepositoryInterface $moveRepository;
-	private DexMoveRepositoryInterface $dexMoveRepository;
-	private GenerationMoveRepositoryInterface $generationMoveRepository;
-	private DexTypeRepositoryInterface $dexTypeRepository;
-	private TypeMatchupRepositoryInterface $typeMatchupRepository;
-	private FlagRepositoryInterface $flagRepository;
-	private DexVersionGroupRepositoryInterface $dexVgRepository;
-	private DexMovePokemonModel $dexMovePokemonModel;
-
-
 	private DexMove $move;
 	private array $detailedData = [];
 
@@ -48,40 +37,17 @@ final class DexMoveModel
 	private array $versionGroups = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationModel $generationModel
-	 * @param MoveRepositoryInterface $moveRepository
-	 * @param DexMoveRepositoryInterface $dexMoveRepository
-	 * @param GenerationMoveRepositoryInterface $generationMoveRepository
-	 * @param DexTypeRepositoryInterface $dexTypeRepository
-	 * @param TypeMatchupRepositoryInterface $typeMatchupRepository
-	 * @param FlagRepositoryInterface $flagRepository
-	 * @param DexVersionGroupRepositoryInterface $dexVgRepository
-	 * @param DexMovePokemonModel $dexMovePokemonModel
-	 */
 	public function __construct(
-		GenerationModel $generationModel,
-		MoveRepositoryInterface $moveRepository,
-		DexMoveRepositoryInterface $dexMoveRepository,
-		GenerationMoveRepositoryInterface $generationMoveRepository,
-		DexTypeRepositoryInterface $dexTypeRepository,
-		TypeMatchupRepositoryInterface $typeMatchupRepository,
-		FlagRepositoryInterface $flagRepository,
-		DexVersionGroupRepositoryInterface $dexVgRepository,
-		DexMovePokemonModel $dexMovePokemonModel
-	) {
-		$this->generationModel = $generationModel;
-		$this->moveRepository = $moveRepository;
-		$this->dexMoveRepository = $dexMoveRepository;
-		$this->generationMoveRepository = $generationMoveRepository;
-		$this->dexTypeRepository = $dexTypeRepository;
-		$this->typeMatchupRepository = $typeMatchupRepository;
-		$this->flagRepository = $flagRepository;
-		$this->dexVgRepository = $dexVgRepository;
-		$this->dexMovePokemonModel = $dexMovePokemonModel;
-	}
+		private GenerationModel $generationModel,
+		private MoveRepositoryInterface $moveRepository,
+		private DexMoveRepositoryInterface $dexMoveRepository,
+		private GenerationMoveRepositoryInterface $generationMoveRepository,
+		private DexTypeRepositoryInterface $dexTypeRepository,
+		private TypeMatchupRepositoryInterface $typeMatchupRepository,
+		private FlagRepositoryInterface $flagRepository,
+		private DexVersionGroupRepositoryInterface $dexVgRepository,
+		private DexMovePokemonModel $dexMovePokemonModel,
+	) {}
 
 
 	/**

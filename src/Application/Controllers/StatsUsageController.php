@@ -10,22 +10,10 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class StatsUsageController
 {
-	private BaseController $baseController;
-	private StatsUsageModel $statsUsageModel;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param BaseController $baseController
-	 * @param StatsUsageModel $statsUsageModel
-	 */
 	public function __construct(
 		BaseController $baseController,
-		StatsUsageModel $statsUsageModel
-	) {
-		$this->baseController = $baseController;
-		$this->statsUsageModel = $statsUsageModel;
-	}
+		StatsUsageModel $statsUsageModel,
+	) {}
 
 	/**
 	 * Get usage data to recreate a stats usage file, such as

@@ -16,22 +16,8 @@ final class UsageRatedPokemon
 {
 	use ValidateMonthTrait;
 
-	private DateTime $month;
-	private FormatId $formatId;
-	private int $rating;
-	private PokemonId $pokemonId;
-	private int $rank;
-	private float $usagePercent;
-
 	/**
 	 * Constructor.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param int $rank
-	 * @param float $usagePercent
 	 *
 	 * @throws InvalidMonthException if $month is invalid.
 	 * @throws InvalidRatingException if $rating is invalid.
@@ -39,12 +25,12 @@ final class UsageRatedPokemon
 	 * @throws InvalidPercentException if $usagePercent is invalid
 	 */
 	public function __construct(
-		DateTime $month,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-		int $rank,
-		float $usagePercent
+		private DateTime $month,
+		private FormatId $formatId,
+		private int $rating,
+		private PokemonId $pokemonId,
+		private int $rank,
+		private float $usagePercent,
 	) {
 		$this->validateMonth($month);
 
@@ -61,13 +47,6 @@ final class UsageRatedPokemon
 				'Invalid usage percent: ' . $usagePercent
 			);
 		}
-
-		$this->month = $month;
-		$this->formatId = $formatId;
-		$this->rating = $rating;
-		$this->pokemonId = $pokemonId;
-		$this->rank = $rank;
-		$this->usagePercent = $usagePercent;
 	}
 
 	/**

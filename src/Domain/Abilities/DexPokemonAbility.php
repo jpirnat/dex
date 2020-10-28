@@ -5,26 +5,11 @@ namespace Jp\Dex\Domain\Abilities;
 
 final class DexPokemonAbility
 {
-	private string $identifier;
-	private string $name;
-	private bool $isHiddenAbility;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $identifier
-	 * @param string $name
-	 * @param bool $isHiddenAbility
-	 */
 	public function __construct(
-		string $identifier,
-		string $name,
-		bool $isHiddenAbility
-	) {
-		$this->identifier = $identifier;
-		$this->name = $name;
-		$this->isHiddenAbility = $isHiddenAbility;
-	}
+		private string $identifier,
+		private string $name,
+		private bool $isHiddenAbility,
+	) {}
 
 	/**
 	 * Get the ability's identifier.

@@ -5,53 +5,23 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final class Spread
 {
-	private string $showdownNatureName;
-	private int $hp;
-	private int $atk;
-	private int $def;
-	private int $spa;
-	private int $spd;
-	private int $spe;
-	private float $percent;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $showdownNatureName
-	 * @param int $hp
-	 * @param int $atk
-	 * @param int $def
-	 * @param int $spa
-	 * @param int $spd
-	 * @param int $spe
-	 * @param float $percent
-	 */
 	public function __construct(
-		string $showdownNatureName,
-		int $hp,
-		int $atk,
-		int $def,
-		int $spa,
-		int $spd,
-		int $spe,
-		float $percent
+		private string $showdownNatureName,
+		private int $hp,
+		private int $atk,
+		private int $def,
+		private int $spa,
+		private int $spd,
+		private int $spe,
+		private float $percent,
 	) {
 		// Clamp percent between 0 and 100.
-		if ($percent < 0) {
-			$percent = 0;
+		if ($this->percent < 0) {
+			$this->percent = 0;
 		}
-		if ($percent > 100) {
-			$percent = 100;
+		if ($this->percent > 100) {
+			$this->percent = 100;
 		}
-
-		$this->showdownNatureName = $showdownNatureName;
-		$this->hp = $hp;
-		$this->atk = $atk;
-		$this->def = $def;
-		$this->spa = $spa;
-		$this->spd = $spd;
-		$this->spe = $spe;
-		$this->percent = $percent;
 	}
 
 	/**

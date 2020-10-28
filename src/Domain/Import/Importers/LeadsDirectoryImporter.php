@@ -13,34 +13,13 @@ use Symfony\Component\DomCrawler\Crawler;
 
 final class LeadsDirectoryImporter
 {
-	private LeadsFileImporter $leadsFileImporter;
-	private MonthExtractor $monthExtractor;
-	private FormatRatingExtractor $formatRatingExtractor;
-	private ShowdownFormatRepositoryInterface $showdownFormatRepository;
-	private FormatRepositoryInterface $formatRepository;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param LeadsFileImporter $leadsFileImporter
-	 * @param MonthExtractor $monthExtractor
-	 * @param FormatRatingExtractor $formatRatingExtractor
-	 * @param ShowdownFormatRepositoryInterface $showdownFormatRepository
-	 * @param FormatRepositoryInterface $formatRepository
-	 */
 	public function __construct(
-		LeadsFileImporter $leadsFileImporter,
-		MonthExtractor $monthExtractor,
-		FormatRatingExtractor $formatRatingExtractor,
-		ShowdownFormatRepositoryInterface $showdownFormatRepository,
-		FormatRepositoryInterface $formatRepository
-	) {
-		$this->leadsFileImporter = $leadsFileImporter;
-		$this->monthExtractor = $monthExtractor;
-		$this->formatRatingExtractor = $formatRatingExtractor;
-		$this->showdownFormatRepository = $showdownFormatRepository;
-		$this->formatRepository = $formatRepository;
-	}
+		private LeadsFileImporter $leadsFileImporter,
+		private MonthExtractor $monthExtractor,
+		private FormatRatingExtractor $formatRatingExtractor,
+		private ShowdownFormatRepositoryInterface $showdownFormatRepository,
+		private FormatRepositoryInterface $formatRepository,
+	) {}
 
 	/**
 	 * Import all leads files in this directory of leads files.

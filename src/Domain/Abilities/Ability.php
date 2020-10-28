@@ -7,26 +7,11 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class Ability
 {
-	private AbilityId $id;
-	private string $identifier;
-	private VersionGroupId $introducedInVersionGroupId;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param AbilityId $abilityId
-	 * @param string $identifier
-	 * @param VersionGroupId $introducedInVersionGroupId
-	 */
 	public function __construct(
-		AbilityId $abilityId,
-		string $identifier,
-		VersionGroupId $introducedInVersionGroupId
-	) {
-		$this->id = $abilityId;
-		$this->identifier = $identifier;
-		$this->introducedInVersionGroupId = $introducedInVersionGroupId;
-	}
+		private AbilityId $id,
+		private string $identifier,
+		private VersionGroupId $introducedInVersionGroupId,
+	) {}
 
 	/**
 	 * Get the ability's id.

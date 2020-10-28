@@ -5,26 +5,11 @@ namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
 final class MoveData
 {
-	private string $moveName;
-	private string $moveIdentifier;
-	private float $percent;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $moveName
-	 * @param string $moveIdentifier
-	 * @param float $percent
-	 */
 	public function __construct(
-		string $moveName,
-		string $moveIdentifier,
-		float $percent
-	) {
-		$this->moveName = $moveName;
-		$this->moveIdentifier = $moveIdentifier;
-		$this->percent = $percent;
-	}
+		private string $moveName,
+		private string $moveIdentifier,
+		private float $percent,
+	) {}
 
 	/**
 	 * Get the move name.

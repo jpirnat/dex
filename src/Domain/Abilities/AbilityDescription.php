@@ -8,30 +8,12 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class AbilityDescription
 {
-	private GenerationId $generationId;
-	private LanguageId $languageId;
-	private AbilityId $abilityId;
-	private string $description;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 * @param AbilityId $abilityId
-	 * @param string $description
-	 */
 	public function __construct(
-		GenerationId $generationId,
-		LanguageId $languageId,
-		AbilityId $abilityId,
-		string $description
-	) {
-		$this->generationId = $generationId;
-		$this->languageId = $languageId;
-		$this->abilityId = $abilityId;
-		$this->description = $description;
-	}
+		private GenerationId $generationId,
+		private LanguageId $languageId,
+		private AbilityId $abilityId,
+		private string $description,
+	) {}
 
 	/**
 	 * Get the ability description's generation id.

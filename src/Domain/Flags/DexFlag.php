@@ -5,26 +5,11 @@ namespace Jp\Dex\Domain\Flags;
 
 final class DexFlag
 {
-	private string $identifier;
-	private string $name;
-	private string $description;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $identifier
-	 * @param string $name
-	 * @param string $description
-	 */
 	public function __construct(
-		string $identifier,
-		string $name,
-		string $description
-	) {
-		$this->identifier = $identifier;
-		$this->name = $name;
-		$this->description = $description;
-	}
+		private string $identifier,
+		private string $name,
+		private string $description,
+	) {}
 
 	/**
 	 * Get the flag's identifier.

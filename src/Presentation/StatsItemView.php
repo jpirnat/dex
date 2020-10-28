@@ -9,26 +9,11 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsItemView
 {
-	private StatsItemModel $statsItemModel;
-	private IntlFormatterFactory $formatterFactory;
-	private MonthControlFormatter $monthControlFormatter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param StatsItemModel $statsItemModel
-	 * @param IntlFormatterFactory $formatterFactory
-	 * @param MonthControlFormatter $monthControlFormatter
-	 */
 	public function __construct(
-		StatsItemModel $statsItemModel,
-		IntlFormatterFactory $formatterFactory,
-		MonthControlFormatter $monthControlFormatter
-	) {
-		$this->statsItemModel = $statsItemModel;
-		$this->formatterFactory = $formatterFactory;
-		$this->monthControlFormatter = $monthControlFormatter;
-	}
+		private StatsItemModel $statsItemModel,
+		private IntlFormatterFactory $formatterFactory,
+		private MonthControlFormatter $monthControlFormatter,
+	) {}
 
 	/**
 	 * Get usage data to create a list of Pokémon who use a specific item.

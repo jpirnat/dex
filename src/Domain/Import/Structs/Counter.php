@@ -5,53 +5,29 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final class Counter
 {
-	private string $showdownPokemonName;
-	private float $number1;
-	private float $number2;
-	private float $number3;
-	private float $percentKnockedOut;
-	private float $percentSwitchedOut;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string $showdownPokemonName
-	 * @param float $number1
-	 * @param float $number2
-	 * @param float $number3
-	 * @param float $percentKnockedOut
-	 * @param float $percentSwitchedOut
-	 */
 	public function __construct(
-		string $showdownPokemonName,
-		float $number1,
-		float $number2,
-		float $number3,
-		float $percentKnockedOut,
-		float $percentSwitchedOut
+		private string $showdownPokemonName,
+		private float $number1,
+		private float $number2,
+		private float $number3,
+		private float $percentKnockedOut,
+		private float $percentSwitchedOut,
 	) {
 		// Clamp percent knocked out between 0 and 100.
-		if ($percentKnockedOut < 0) {
-			$percentKnockedOut = 0;
+		if ($this->percentKnockedOut < 0) {
+			$this->percentKnockedOut = 0;
 		}
-		if ($percentKnockedOut > 100) {
-			$percentKnockedOut = 100;
+		if ($this->percentKnockedOut > 100) {
+			$this->percentKnockedOut = 100;
 		}
 
 		// Clamp percent switched out between 0 and 100.
-		if ($percentSwitchedOut < 0) {
-			$percentSwitchedOut = 0;
+		if ($this->percentSwitchedOut < 0) {
+			$this->percentSwitchedOut = 0;
 		}
-		if ($percentSwitchedOut > 100) {
-			$percentSwitchedOut = 100;
+		if ($this->percentSwitchedOut > 100) {
+			$this->percentSwitchedOut = 100;
 		}
-
-		$this->showdownPokemonName = $showdownPokemonName;
-		$this->number1 = $number1;
-		$this->number2 = $number2;
-		$this->number3 = $number3;
-		$this->percentKnockedOut = $percentKnockedOut;
-		$this->percentSwitchedOut = $percentSwitchedOut;
 	}
 
 	/**

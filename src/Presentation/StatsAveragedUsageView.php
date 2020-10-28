@@ -10,30 +10,12 @@ use Psr\Http\Message\ResponseInterface;
 
 final class StatsAveragedUsageView
 {
-	private RendererInterface $renderer;
-	private BaseView $baseView;
-	private StatsAveragedUsageModel $statsAveragedUsageModel;
-	private IntlFormatterFactory $formatterFactory;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param RendererInterface $renderer
-	 * @param BaseView $baseView
-	 * @param StatsAveragedUsageModel $statsAveragedUsageModel
-	 * @param IntlFormatterFactory $formatterFactory
-	 */
 	public function __construct(
-		RendererInterface $renderer,
-		BaseView $baseView,
-		StatsAveragedUsageModel $statsAveragedUsageModel,
-		IntlFormatterFactory $formatterFactory
-	) {
-		$this->renderer = $renderer;
-		$this->baseView = $baseView;
-		$this->statsAveragedUsageModel = $statsAveragedUsageModel;
-		$this->formatterFactory = $formatterFactory;
-	}
+		private RendererInterface $renderer,
+		private BaseView $baseView,
+		private StatsAveragedUsageModel $statsAveragedUsageModel,
+		private IntlFormatterFactory $formatterFactory,
+	) {}
 
 	/**
 	 * Get usage data averaged over multiple months.

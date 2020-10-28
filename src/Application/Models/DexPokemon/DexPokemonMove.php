@@ -8,50 +8,17 @@ use Jp\Dex\Domain\Types\DexType;
 
 final class DexPokemonMove
 {
-	private array $versionGroupData;
-	private string $identifier;
-	private string $name;
-	private DexType $type;
-	private DexCategory $category;
-	private int $pp;
-	private int $power;
-	private int $accuracy;
-	private string $description;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param array $versionGroupData
-	 * @param string $identifier
-	 * @param string $name
-	 * @param DexType $type
-	 * @param DexCategory $category
-	 * @param int $pp
-	 * @param int $power
-	 * @param int $accuracy
-	 * @param string $description
-	 */
 	public function __construct(
-		array $versionGroupData,
-		string $identifier,
-		string $name,
-		DexType $type,
-		DexCategory $category,
-		int $pp,
-		int $power,
-		int $accuracy,
-		string $description
-	) {
-		$this->versionGroupData = $versionGroupData;
-		$this->identifier = $identifier;
-		$this->name = $name;
-		$this->type = $type;
-		$this->category = $category;
-		$this->pp = $pp;
-		$this->power = $power;
-		$this->accuracy = $accuracy;
-		$this->description = $description;
-	}
+		private array $versionGroupData,
+		private string $identifier,
+		private string $name,
+		private DexType $type,
+		private DexCategory $category,
+		private int $pp,
+		private int $power,
+		private int $accuracy,
+		private string $description,
+	) {}
 
 	/**
 	 * Get the version group data.

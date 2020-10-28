@@ -13,38 +13,14 @@ use Psr\Http\Message\StreamInterface;
 
 final class MovesetFileParser
 {
-	private ShowdownPokemonRepositoryInterface $showdownPokemonRepository;
-	private ShowdownAbilityRepositoryInterface $showdownAbilityRepository;
-	private ShowdownItemRepositoryInterface $showdownItemRepository;
-	private ShowdownNatureRepositoryInterface $showdownNatureRepository;
-	private ShowdownMoveRepositoryInterface $showdownMoveRepository;
-	private MovesetFileExtractor $movesetFileExtractor;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param ShowdownPokemonRepositoryInterface $showdownPokemonRepository
-	 * @param ShowdownAbilityRepositoryInterface $showdownAbilityRepository
-	 * @param ShowdownItemRepositoryInterface $showdownItemRepository
-	 * @param ShowdownNatureRepositoryInterface $showdownNatureRepository
-	 * @param ShowdownMoveRepositoryInterface $showdownMoveRepository
-	 * @param MovesetFileExtractor $movesetFileExtractor
-	 */
 	public function __construct(
-		ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
-		ShowdownAbilityRepositoryInterface $showdownAbilityRepository,
-		ShowdownItemRepositoryInterface $showdownItemRepository,
-		ShowdownNatureRepositoryInterface $showdownNatureRepository,
-		ShowdownMoveRepositoryInterface $showdownMoveRepository,
-		MovesetFileExtractor $movesetFileExtractor
-	) {
-		$this->showdownPokemonRepository = $showdownPokemonRepository;
-		$this->showdownAbilityRepository = $showdownAbilityRepository;
-		$this->showdownItemRepository = $showdownItemRepository;
-		$this->showdownNatureRepository = $showdownNatureRepository;
-		$this->showdownMoveRepository = $showdownMoveRepository;
-		$this->movesetFileExtractor = $movesetFileExtractor;
-	}
+		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
+		private ShowdownAbilityRepositoryInterface $showdownAbilityRepository,
+		private ShowdownItemRepositoryInterface $showdownItemRepository,
+		private ShowdownNatureRepositoryInterface $showdownNatureRepository,
+		private ShowdownMoveRepositoryInterface $showdownMoveRepository,
+		private MovesetFileExtractor $movesetFileExtractor,
+	) {}
 
 	/**
 	 * Parse moveset data from the given file.

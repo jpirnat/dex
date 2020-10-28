@@ -13,122 +13,35 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class GenerationMove
 {
-	private GenerationId $generationId;
-	private MoveId $moveId;
-	private TypeId $typeId;
-	private ?QualityId $qualityId;
-	private CategoryId $categoryId;
-	private int $power;
-	private int $accuracy;
-	private int $pp;
-	private int $priority;
-	private int $minHits;
-	private int $maxHits;
-	private ?InflictionId $inflictionId;
-	private int $inflictionPercent;
-	private int $minTurns;
-	private int $maxTurns;
-	private int $critStage;
-	private int $flinchPercent;
-	private int $effect;
-	private ?int $effectPercent;
-	private int $recoilPercent;
-	private int $healPercent;
-	private TargetId $targetId;
-	private ?MoveId $zMoveId;
-	private ?int $zBasePower;
-	private ?ZPowerEffectId $zPowerEffectId;
-	private ?MoveId $maxMoveId;
-	private ?int $maxPower;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationId $generationId
-	 * @param MoveId $moveId
-	 * @param TypeId $typeId
-	 * @param QualityId|null $qualityId
-	 * @param CategoryId $categoryId
-	 * @param int $power
-	 * @param int $accuracy
-	 * @param int $pp
-	 * @param int $priority
-	 * @param int $minHits
-	 * @param int $maxHits
-	 * @param InflictionId|null $inflictionId
-	 * @param int $inflictionPercent
-	 * @param int $minTurns
-	 * @param int $maxTurns
-	 * @param int $critStage
-	 * @param int $flinchPercent
-	 * @param int $effect
-	 * @param int|null $effectPercent
-	 * @param int $recoilPercent
-	 * @param int $healPercent
-	 * @param TargetId $targetId
-	 * @param MoveId|null $zMoveId
-	 * @param int|null $zBasePower
-	 * @param ZPowerEffectId|null $zPowerEffectId
-	 * @param MoveId|null $maxMoveId
-	 * @param int|null $maxPower
-	 */
 	public function __construct(
-		GenerationId $generationId,
-		MoveId $moveId,
-		TypeId $typeId,
-		?QualityId $qualityId,
-		CategoryId $categoryId,
-		int $power,
-		int $accuracy,
-		int $pp,
-		int $priority,
-		int $minHits,
-		int $maxHits,
-		?InflictionId $inflictionId,
-		int $inflictionPercent,
-		int $minTurns,
-		int $maxTurns,
-		int $critStage,
-		int $flinchPercent,
-		int $effect,
-		?int $effectPercent,
-		int $recoilPercent,
-		int $healPercent,
-		TargetId $targetId,
-		?MoveId $zMoveId,
-		?int $zBasePower,
-		?ZPowerEffectId $zPowerEffectId,
-		?MoveId $maxMoveId,
-		?int $maxPower
-	) {
-		$this->generationId = $generationId;
-		$this->moveId = $moveId;
-		$this->typeId = $typeId;
-		$this->qualityId = $qualityId;
-		$this->categoryId = $categoryId;
-		$this->power = $power;
-		$this->accuracy = $accuracy;
-		$this->pp = $pp;
-		$this->priority = $priority;
-		$this->minHits = $minHits;
-		$this->maxHits = $maxHits;
-		$this->inflictionId = $inflictionId;
-		$this->inflictionPercent = $inflictionPercent;
-		$this->minTurns = $minTurns;
-		$this->maxTurns = $maxTurns;
-		$this->critStage = $critStage;
-		$this->flinchPercent = $flinchPercent;
-		$this->effect = $effect;
-		$this->effectPercent = $effectPercent;
-		$this->recoilPercent = $recoilPercent;
-		$this->healPercent = $healPercent;
-		$this->targetId = $targetId;
-		$this->zMoveId = $zMoveId;
-		$this->zBasePower = $zBasePower;
-		$this->zPowerEffectId = $zPowerEffectId;
-		$this->maxMoveId = $maxMoveId;
-		$this->maxPower = $maxPower;
-	}
+		private GenerationId $generationId,
+		private MoveId $moveId,
+		private TypeId $typeId,
+		private ?QualityId $qualityId,
+		private CategoryId $categoryId,
+		private int $power,
+		private int $accuracy,
+		private int $pp,
+		private int $priority,
+		private int $minHits,
+		private int $maxHits,
+		private ?InflictionId $inflictionId,
+		private int $inflictionPercent,
+		private int $minTurns,
+		private int $maxTurns,
+		private int $critStage,
+		private int $flinchPercent,
+		private int $effect,
+		private ?int $effectPercent,
+		private int $recoilPercent,
+		private int $healPercent,
+		private TargetId $targetId,
+		private ?MoveId $zMoveId,
+		private ?int $zBasePower,
+		private ?ZPowerEffectId $zPowerEffectId,
+		private ?MoveId $maxMoveId,
+		private ?int $maxPower,
+	) {}
 
 	/**
 	 * Get the generation move's generation id.

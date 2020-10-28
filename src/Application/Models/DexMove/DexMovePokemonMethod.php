@@ -12,6 +12,7 @@ final class DexMovePokemonMethod
 	/** @var DexMovePokemon[] $pokemon */
 	private array $pokemon;
 
+
 	/**
 	 * Constructor.
 	 *
@@ -31,6 +32,7 @@ final class DexMovePokemonMethod
 		$this->description = $description;
 		$this->pokemon = $pokemon;
 	}
+
 
 	/**
 	 * Get the method's identifier.

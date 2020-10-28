@@ -8,9 +8,6 @@ use Jp\Dex\Domain\Natures\DexNatureRepositoryInterface;
 
 final class DexNaturesModel
 {
-	private DexNatureRepositoryInterface $dexNatureRepository;
-
-
 	private string $generationIdentifier;
 	private array $natures = [];
 
@@ -21,10 +18,9 @@ final class DexNaturesModel
 	 * @param DexNatureRepositoryInterface $dexNatureRepository
 	 */
 	public function __construct(
-		DexNatureRepositoryInterface $dexNatureRepository
-	) {
-		$this->dexNatureRepository = $dexNatureRepository;
-	}
+		private DexNatureRepositoryInterface $dexNatureRepository,
+	) {}
+
 
 	/**
 	 * Set data for the dex natures page.
