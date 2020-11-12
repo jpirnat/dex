@@ -13,17 +13,9 @@ use PDO;
 
 final class DatabaseFlagRepository implements FlagRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get all dex flags in this generation.

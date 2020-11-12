@@ -10,17 +10,9 @@ use PDO;
 
 final class DatabaseMonthQueries implements MonthQueriesInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get the previous month with usage data for any format.

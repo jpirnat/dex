@@ -12,17 +12,9 @@ use PDO;
 
 final class DatabaseAbilityDescriptionRepository implements AbilityDescriptionRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get an ability description by generation, language, and ability.

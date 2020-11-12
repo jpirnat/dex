@@ -9,17 +9,9 @@ use PDO;
 
 final class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounterRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Save a moveset rated counter record.

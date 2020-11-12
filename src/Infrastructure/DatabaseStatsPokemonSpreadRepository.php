@@ -16,17 +16,9 @@ use PDO;
 
 final class DatabaseStatsPokemonSpreadRepository implements StatsPokemonSpreadRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get stats Pokémon spreads by month, format, rating, and Pokémon.

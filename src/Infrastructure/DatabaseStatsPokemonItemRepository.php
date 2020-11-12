@@ -13,17 +13,9 @@ use PDO;
 
 final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get stats Pokémon items by month, format, rating, and Pokémon.

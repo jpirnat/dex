@@ -10,17 +10,9 @@ use PDO;
 
 final class DatabaseRatingQueries implements RatingQueriesInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get the ratings for which usage data is available for this month and format.

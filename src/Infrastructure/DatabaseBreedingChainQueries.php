@@ -9,17 +9,9 @@ use PDO;
 
 final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get female-only Pokémon introduced prior to gen 6.

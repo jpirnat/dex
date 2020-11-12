@@ -12,17 +12,9 @@ use PDO;
 
 final class DatabaseMoveNameRepository implements MoveNameRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get a move name by language and move.

@@ -14,20 +14,10 @@ use PDO;
 
 final class DatabaseMovesetRatedAveragedMoveRepository implements MovesetRatedAveragedMoveRepositoryInterface
 {
-	private PDO $db;
-	private MonthsCounter $monthsCounter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 * @param MonthsCounter $monthsCounter
-	 */
-	public function __construct(PDO $db, MonthsCounter $monthsCounter)
-	{
-		$this->db = $db;
-		$this->monthsCounter = $monthsCounter;
-	}
+	public function __construct(
+		private PDO $db,
+		private MonthsCounter $monthsCounter,
+	) {}
 
 	/**
 	 * Get moveset rated averaged move records by their start month, end month,

@@ -12,17 +12,9 @@ use PDO;
 
 final class DatabaseMoveDescriptionRepository implements MoveDescriptionRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get a move description by generation, language, and move.

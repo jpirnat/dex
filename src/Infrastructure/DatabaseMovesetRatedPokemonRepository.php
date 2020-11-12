@@ -13,17 +13,9 @@ use PDO;
 
 final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Does a moveset rated Pokémon record exist for this month, format, rating,

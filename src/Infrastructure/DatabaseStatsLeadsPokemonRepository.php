@@ -13,17 +13,9 @@ use PDO;
 
 final class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get stats leads Pokémon by month, format, and rating.

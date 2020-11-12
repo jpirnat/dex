@@ -12,17 +12,9 @@ use PDO;
 
 final class DatabasePokemonTypeRepository implements PokemonTypeRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get Pokémon's types by generation and Pokémon.

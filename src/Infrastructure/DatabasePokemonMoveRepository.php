@@ -14,17 +14,9 @@ use PDO;
 
 final class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get Pokémon moves by Pokémon, in this generation and earlier. Does not

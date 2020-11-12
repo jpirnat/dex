@@ -12,17 +12,9 @@ use PDO;
 
 final class DatabaseAbilityNameRepository implements AbilityNameRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get an ability name by language and ability.

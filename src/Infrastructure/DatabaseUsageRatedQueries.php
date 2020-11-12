@@ -10,17 +10,9 @@ use PDO;
 
 final class DatabaseUsageRatedQueries implements UsageRatedQueriesInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get the format/rating combinations for this month.

@@ -11,17 +11,9 @@ use PDO;
 
 final class DatabaseMoveMethodNameRepository implements MoveMethodNameRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get move method names by language.

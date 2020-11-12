@@ -14,17 +14,9 @@ use PDO;
 
 final class DatabaseStatsPokemonCounterRepository implements StatsPokemonCounterRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get stats Pokémon counters by month, format, rating, and Pokémon.

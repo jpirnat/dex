@@ -11,17 +11,9 @@ use PDO;
 
 final class DatabaseDexAbilityRepository implements DexAbilityRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get the dex abilities available in this generation. This method is used

@@ -11,17 +11,9 @@ use PDO;
 
 final class DatabaseEggGroupNameRepository implements EggGroupNameRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get an egg group name by language and egg group.

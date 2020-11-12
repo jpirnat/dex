@@ -11,17 +11,9 @@ use PDO;
 
 final class DatabaseModelRepository implements ModelRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get a model by its form, shininess, direction, gender, and attacking

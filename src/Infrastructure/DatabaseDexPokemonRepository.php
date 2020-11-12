@@ -20,30 +20,12 @@ use PDO;
 
 final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 {
-	private PDO $db;
-	private DexTypeRepositoryInterface $dexTypeRepository;
-	private DexPokemonAbilityRepositoryInterface $dexPokemonAbilityRepository;
-	private BaseStatRepositoryInterface $baseStatRepository;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 * @param DexTypeRepositoryInterface $dexTypeRepository
-	 * @param DexPokemonAbilityRepositoryInterface $dexPokemonAbilityRepository
-	 * @param BaseStatRepositoryInterface $baseStatRepository
-	 */
 	public function __construct(
-		PDO $db,
-		DexTypeRepositoryInterface $dexTypeRepository,
-		DexPokemonAbilityRepositoryInterface $dexPokemonAbilityRepository,
-		BaseStatRepositoryInterface $baseStatRepository
-	) {
-		$this->db = $db;
-		$this->dexTypeRepository = $dexTypeRepository;
-		$this->dexPokemonAbilityRepository = $dexPokemonAbilityRepository;
-		$this->baseStatRepository = $baseStatRepository;
-	}
+		private PDO $db,
+		private DexTypeRepositoryInterface $dexTypeRepository,
+		private DexPokemonAbilityRepositoryInterface $dexPokemonAbilityRepository,
+		private BaseStatRepositoryInterface $baseStatRepository,
+	) {}
 
 	/**
 	 * Get a dex Pokémon by its id.

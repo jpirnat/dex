@@ -9,17 +9,9 @@ use PDO;
 
 final class DatabaseDexNatureRepository implements DexNatureRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get the dex natures by language.

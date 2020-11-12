@@ -13,20 +13,10 @@ use PDO;
 
 final class DatabaseUsageRatedAveragedPokemonRepository implements UsageRatedAveragedPokemonRepositoryInterface
 {
-	private PDO $db;
-	private MonthsCounter $monthsCounter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 * @param MonthsCounter $monthsCounter
-	 */
-	public function __construct(PDO $db, MonthsCounter $monthsCounter)
-	{
-		$this->db = $db;
-		$this->monthsCounter = $monthsCounter;
-	}
+	public function __construct(
+		private PDO $db,
+		private MonthsCounter $monthsCounter,
+	) {}
 
 	/**
 	 * Get usage rated averaged Pokémon records by their start month, end month,

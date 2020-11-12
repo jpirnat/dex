@@ -11,17 +11,9 @@ use PDO;
 
 final class DatabaseLeadsRepository implements LeadsRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Does a leads record exist for this month and format?

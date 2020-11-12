@@ -16,26 +16,11 @@ use PDO;
 
 final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 {
-	private PDO $db;
-	private DexTypeRepositoryInterface $dexTypeRepository;
-	private DexCategoryRepositoryInterface $dexCategoryRepository;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 * @param DexTypeRepositoryInterface $dexTypeRepository
-	 * @param DexCategoryRepositoryInterface $dexCategoryRepository
-	 */
 	public function __construct(
-		PDO $db,
-		DexTypeRepositoryInterface $dexTypeRepository,
-		DexCategoryRepositoryInterface $dexCategoryRepository
-	) {
-		$this->db = $db;
-		$this->dexTypeRepository = $dexTypeRepository;
-		$this->dexCategoryRepository = $dexCategoryRepository;
-	}
+		private PDO $db,
+		private DexTypeRepositoryInterface $dexTypeRepository,
+		private DexCategoryRepositoryInterface $dexCategoryRepository,
+	) {}
 
 	/**
 	 * Get a dex move by its id.

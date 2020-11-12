@@ -13,17 +13,9 @@ use PDO;
 
 final class DatabaseStatsPokemonAbilityRepository implements StatsPokemonAbilityRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get stats Pokémon abilities by month, format, rating, and Pokémon.

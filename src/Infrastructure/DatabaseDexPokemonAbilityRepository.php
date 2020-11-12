@@ -15,17 +15,9 @@ use PDO;
 
 final class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get the dex Pokémon abilities of this Pokémon.

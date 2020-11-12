@@ -12,17 +12,9 @@ use PDO;
 
 final class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Do any moveset Pokémon records exist for this month and format?

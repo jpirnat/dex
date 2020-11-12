@@ -11,17 +11,9 @@ use PDO;
 
 final class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Does a usage rated record exist for this month, format, and rating?

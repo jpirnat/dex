@@ -13,20 +13,10 @@ use PDO;
 
 final class DatabaseLeadsRatedAveragedPokemonRepository implements LeadsRatedAveragedPokemonRepositoryInterface
 {
-	private PDO $db;
-	private MonthsCounter $monthsCounter;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 * @param MonthsCounter $monthsCounter
-	 */
-	public function __construct(PDO $db, MonthsCounter $monthsCounter)
-	{
-		$this->db = $db;
-		$this->monthsCounter = $monthsCounter;
-	}
+	public function __construct(
+		private PDO $db,
+		private MonthsCounter $monthsCounter,
+	) {}
 
 	/**
 	 * Do any leads rated averaged Pokémon records exist for this start month,

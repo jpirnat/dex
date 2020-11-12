@@ -11,17 +11,9 @@ use PDO;
 
 final class DatabaseLeadsPokemonRepository implements LeadsPokemonRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Do any leads Pokémon records exist for this month and format?

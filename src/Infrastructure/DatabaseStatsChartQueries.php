@@ -13,17 +13,9 @@ use PDO;
 
 final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get usage data for the usage chart.

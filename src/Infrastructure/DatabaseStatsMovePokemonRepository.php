@@ -14,17 +14,9 @@ use PDO;
 
 final class DatabaseStatsMovePokemonRepository implements StatsMovePokemonRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get stats move Pokémon by month, format, rating, and move.

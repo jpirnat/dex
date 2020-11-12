@@ -8,17 +8,9 @@ use Twig\Environment;
 
 final class TwigRenderer implements RendererInterface
 {
-	private Environment $twig;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param Environment $twig
-	 */
-	public function __construct(Environment $twig)
-	{
-		$this->twig = $twig;
-	}
+	public function __construct(
+		private Environment $twig,
+	) {}
 
 	/**
 	 * Render the template with this data.

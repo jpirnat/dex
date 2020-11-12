@@ -10,17 +10,9 @@ use PDO;
 
 final class DatabaseDexCategoryRepository implements DexCategoryRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get dex categories by their language.

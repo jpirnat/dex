@@ -10,17 +10,9 @@ use PDO;
 
 final class DatabaseLanguageNameRepository implements LanguageNameRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get language names in their own languages. Indexed by language id value.

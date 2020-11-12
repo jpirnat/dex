@@ -15,17 +15,9 @@ use PDO;
 
 final class DatabaseDexVersionGroupRepository implements DexVersionGroupRepositoryInterface
 {
-	private PDO $db;
-
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+	public function __construct(
+		private PDO $db,
+	) {}
 
 	/**
 	 * Get a dex version group by its id.
