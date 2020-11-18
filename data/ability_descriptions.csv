@@ -6288,6 +6288,15 @@ generation_id,language_id,ability_id,description
 8,1,256,かがくへんかガスの　ポケモンが　ばにいると\nすべての　ポケモンの　とくせいの\nこうかが　きえたり　はつどう　しなくなる。
 8,1,257,じぶんも　みかたも\nどくの　じょうたいいじょうを\nうけなくなる。
 8,1,258,ターンの　おわりに　まんぷくもよう\nはらぺこもよう　まんぷくもよう……と\nこうごに　すがたを　かえる。
+8,1,259,あいてより　さきに\nこうどう　できることが　ある。
+8,1,260,あいてに　せっしょくする　わざなら\nまもりの　こうかを\nむしして　こうげき　することが　できる。
+8,1,261,とうじょう　したときに\nかいがらから　くすりを　ふりまいて\nみかたの　のうりょくへんかを　もとにもどす。
+8,1,262,でんきタイプの　わざの\nいりょくが　あがる。
+8,1,263,ドラゴンタイプの　わざの\nいりょくが　あがる。
+8,1,264,あいてを　たおすと\nつめたい　こえで　いなないて\nこうげきが　あがる。
+8,1,265,あいてを　たおすと\nおそろしい　こえで　いなないて\nとくこうが　あがる。
+8,1,266,バドレックスの　きんちょうかんと\nブリザポスの　しろのいななきの\nふたつの　とくせいを　あわせもつ。
+8,1,267,バドレックスの　きんちょうかんと\nレイスポスの　くろのいななきの\nふたつの　とくせいを　あわせもつ。
 8,2,1,"By releasing stench when attacking, this Pokémon\nmay cause the target to flinch."
 8,2,2,The Pokémon makes it rain when it enters a battle.
 8,2,3,Its Speed stat is boosted every turn.
@@ -6546,6 +6555,15 @@ generation_id,language_id,ability_id,description
 8,2,256,"If the Pokémon with Neutralizing Gas is in the battle,\nthe effects of all Pokémon’s Abilities will be nullified\nor will not be triggered."
 8,2,257,Protects the Pokémon and its ally Pokémon from\nbeing poisoned.
 8,2,258,"The Pokémon changes its form, alternating between\nits Full Belly Mode and Hangry Mode after the end of\neach turn."
+8,2,259,Enables the Pokémon to move first occasionally.
+8,2,260,"If the Pokémon uses moves that make direct contact,\nit can attack the target even if the target protects itself."
+8,2,261,"When the Pokémon enters a battle, it scatters medicine\nfrom its shell, which removes all stat changes\nfrom allies."
+8,2,262,Powers up Electric-type moves.
+8,2,263,Powers up Dragon-type moves.
+8,2,264,"When the Pokémon knocks out a target, it utters a\nchilling neigh, which boosts its Attack stat."
+8,2,265,"When the Pokémon knocks out a target, it utters a\nterrifying neigh, which boosts its Sp. Atk stat."
+8,2,266,This Ability combines the effects of both Calyrex’s\nUnnerve Ability and Glastrier’s Chilling Neigh Ability.
+8,2,267,This Ability combines the effects of both Calyrex’s\nUnnerve Ability and Spectrier’s Grim Neigh Ability.
 8,3,1,Le Pokémon émet une odeur si nauséabonde\nqu’il peut effrayer sa cible.
 8,3,2,Le Pokémon invoque la pluie quand il entre au combat.
 8,3,3,La Vitesse du Pokémon augmente à chaque tour.
@@ -6804,6 +6822,15 @@ generation_id,language_id,ability_id,description
 8,3,256,"Si un Pokémon avec Gaz Inhibiteur est sur le terrain,\nles effets des talents de tous les autres Pokémon\nsont annulés."
 8,3,257,Protège le Pokémon et ses alliés contre toutes\nles altérations de statut liées à l’empoisonnement.
 8,3,258,"À la fin de chaque tour, le Pokémon alterne\nentre ses formes Mode Rassasié et Mode Affamé."
+8,3,259,Permet parfois au Pokémon d’agir en premier.
+8,3,260,"Si le Pokémon utilise une attaque directe, celle-ci\npourra passer outre les protections de la cible."
+8,3,261,"Quand il entre au combat, le Pokémon répand\nune substance qui annule les changements de stats\nde ses alliés."
+8,3,262,Augmente la puissance des attaques de type Électrik.
+8,3,263,Augmente la puissance des attaques de type Dragon.
+8,3,264,"Quand le Pokémon met un ennemi K.O., il émet\nun hennissement glaçant, ce qui augmente son Attaque."
+8,3,265,"Quand le Pokémon met un ennemi K.O., il émet\nun hennissement terrifiant qui augmente\nson Attaque Spéciale."
+8,3,266,Les talents Tension de Sylveroy et Blanche Ruade\nde Blizzeval sont cumulés.
+8,3,267,Les talents Tension de Sylveroy et Sombre Ruade\nde Spectreval sont cumulés.
 8,4,1,Lässt das Ziel beim Angriff eventuell durch Gestank\nzurückschrecken.
 8,4,2,Ruft bei Kampfantritt Regen herbei.
 8,4,3,Erhöht in jeder Runde die Initiative.
@@ -7062,6 +7089,15 @@ generation_id,language_id,ability_id,description
 8,4,256,"Solange ein Pokémon mit der Fähigkeit Reaktionsgas\nam Kampf beteiligt ist, werden die Fähigkeiten aller\nanderen Pokémon unterdrückt oder aufgehoben."
 8,4,257,Schützt das Pokémon und seine Mitstreiter vor\nVergiftung.
 8,4,258,Das Pokémon ändert zum Ende jeder Runde seine\nForm und wechselt somit zwischen dem Pappsatt- und\ndem Kohldampfmuster.
+8,4,259,Ermöglicht dem Pokémon gelegentlich den Erstschlag.
+8,4,260,"Wenn das Pokémon eine direkte Attacke einsetzt,\ntrifft diese auch dann, wenn sich das Ziel selbst\nschützt."
+8,4,261,"Das Pokémon versprüht bei Kampfantritt Arznei aus\nseiner Muschel, die alle Statusveränderungen auf der\nMitstreiterseite aufhebt."
+8,4,262,Erhöht die Stärke von Elektro-Attacken.
+8,4,263,Erhöht die Stärke von Drachen-Attacken.
+8,4,264,"Besiegt es ein Pokémon, stößt es ein frostiges Wiehern\naus und erhöht damit seinen Angriff."
+8,4,265,"Besiegt es ein Pokémon, stößt es ein furchteinflößendes\nWiehern aus und erhöht damit seinen Spezial-Angriff."
+8,4,266,Das Pokémon verfügt sowohl über Coronospas Fähigkeit\nAnspannung als auch über Polaross’ Fähigkeit\nHelles Wiehern.
+8,4,267,Das Pokémon verfügt sowohl über Coronospas Fähigkeit\nAnspannung als auch über Phantoross’ Fähigkeit\nDunkles Wiehern.
 8,5,1,A volte il cattivo odore emesso dal Pokémon\nfa tentennare i nemici quando attacca.
 8,5,2,"Quando il Pokémon entra in campo, attira la pioggia."
 8,5,3,La Velocità aumenta a ogni turno.
@@ -7320,6 +7356,15 @@ generation_id,language_id,ability_id,description
 8,5,256,"Se in campo c’è un Pokémon con Gas Reagente,\ngli effetti delle abilità di tutti gli altri Pokémon\nvengono annullati o non si attivano."
 8,5,257,Protegge il Pokémon e gli alleati dai problemi di stato\ncausati dal veleno.
 8,5,258,"Alla fine di ogni turno cambia forma, alternando\ntra Motivo Panciapiena e Motivo Panciavuota."
+8,5,259,A volte permette al Pokémon di agire per primo.
+8,5,260,"Quando il Pokémon utilizza un attacco diretto,\ngli effetti di mosse protettive vengono ignorati."
+8,5,261,"Quando il Pokémon entra in campo, sparge un farmaco\ndalla conchiglia che annulla le modifiche alle statistiche\ndegli alleati."
+8,5,262,Potenzia le mosse di tipo Elettro.
+8,5,263,Potenzia le mosse di tipo Drago.
+8,5,264,"Quando manda KO il nemico, emette un nitrito\nagghiacciante, aumentando il proprio Attacco."
+8,5,265,"Quando manda KO il nemico, emette un nitrito\nterrificante, aumentando il proprio Attacco Speciale."
+8,5,266,Il Pokémon ha una doppia abilità: Agitazione di Calyrex\ne Nitrito Bianco di Glastrier.
+8,5,267,Il Pokémon ha una doppia abilità: Agitazione di Calyrex\ne Nitrito Nero di Spectrier.
 8,6,1,Puede amedrentar al rival al atacarlo debido al mal olor\nque emana.
 8,6,2,Hace que llueva al entrar en combate.
 8,6,3,Aumenta su Velocidad en cada turno.
@@ -7578,6 +7623,15 @@ generation_id,language_id,ability_id,description
 8,6,256,Anula los efectos de las habilidades de los demás\nPokémon presentes mientras esté en el terreno de\ncombate.
 8,6,257,Se protege a sí mismo y a sus aliados del\nenvenenamiento.
 8,6,258,Alterna entre su Forma Saciada y Forma Voraz al final\nde cada turno.
+8,6,259,"A veces, puede atacar el primero."
+8,6,260,"Si usa un movimiento de contacto, puede infligir daño\nal objetivo aunque este se proteja."
+8,6,261,"Al entrar en combate, rezuma una substancia medicinal\npor la caracola que revierte los cambios en las\ncaracterísticas de los aliados."
+8,6,262,Potencia los movimientos de tipo Eléctrico.
+8,6,263,Potencia los movimientos de tipo Dragón.
+8,6,264,"Al derrotar a un objetivo, emite un relincho gélido y\naumenta su Ataque."
+8,6,265,"Al derrotar a un objetivo, emite un relincho aterrador y\naumenta su Ataque Especial."
+8,6,266,El Pokémon tiene dos habilidades: Relincho Blanco de\nGlastrier y Nerviosismo de Calyrex.
+8,6,267,El Pokémon tiene dos habilidades: Relincho Negro de\nSpectrier y Nerviosismo de Calyrex.
 8,7,1,악취를 풍겨서\n공격했을 때 상대가\n풀죽을 때가 있다.
 8,7,2,등장했을 때\n날씨를 비로 만든다.
 8,7,3,매 턴 스피드가 올라간다.
@@ -7836,6 +7890,15 @@ generation_id,language_id,ability_id,description
 8,7,256,화학변화가스를 가진 포켓몬이 배틀에 나와 있으면\n모든 포켓몬이 가진 특성의 효과가\n사라지거나 발동하지 않게 된다.
 8,7,257,자신과 같은 편이\n독의 상태 이상 효과를\n받지 않게 된다.
 8,7,258,"턴이 끝날 때마다 배부른 모양,\n배고픈 모양, 배부른 모양...으로\n번갈아서 모습을 바꾼다."
+8,7,259,상대보다 먼저\n행동할 수도 있다.
+8,7,260,상대에게 접촉하는 기술을 사용하면\n방어의 효과를 무시하고 공격할 수 있다.
+8,7,261,등장했을 때\n조개껍질에서 약을 흩뿌려서\n능력 변화를 원래대로 되돌린다.
+8,7,262,전기타입 기술의\n위력이 올라간다.
+8,7,263,드래곤타입 기술의\n위력이 올라간다.
+8,7,264,상대를 쓰러뜨리면\n차가운 울음소리를 내면서\n공격이 올라간다.
+8,7,265,상대를 쓰러뜨리면\n무서운 울음소리를 내면서\n특수공격이 올라간다.
+8,7,266,버드렉스의 긴장감과\n블리자포스의 백의울음\n두 가지 특성을 겸비한다.
+8,7,267,버드렉스의 긴장감과\n레이스포스의 흑의울음\n두 가지 특성을 겸비한다.
 8,8,1,臭い　においを　放つことによって\n攻撃した　ときに　相手を\nひるませることが　ある。
 8,8,2,登場　したときに\n天気を　雨に　する。
 8,8,3,毎ターン　素早さが　上がる。
@@ -8087,13 +8150,22 @@ generation_id,language_id,ability_id,description
 8,8,249,隣に　いるだけで\n技の　威力が　上がる。
 8,8,250,フィールドの　状態に　あわせて\nポケモンの　タイプが　変わる。
 8,8,251,登場　したときに　敵と　味方の\nひかりのかべ　リフレクター\nオーロラベールの　効果が　消える。
-8,8,252,味方の　はがねタイプの\n攻撃の　威力が　あがる。
+8,8,252,味方の　はがねタイプの\n攻撃の　威力が　上がる。
 8,8,253,接触する　技を　受けると\nお互い　３ターン　たつと　ひんしになる。\n交代すると　効果は　なくなる。
 8,8,254,接触する　技で\n攻撃　してきた　ポケモンと\n特性を　入れ替える。
 8,8,255,攻撃は　上がるが\n最初に　選んだ\n技しか　出せなくなる。
 8,8,256,かがくへんかガスの　ポケモンが　場にいると\nすべての　ポケモンの　特性の\n効果が　消えたり　発動　しなくなる。
 8,8,257,自分も　味方も\nどくの　状態異常を\n受けなくなる。
 8,8,258,ターンの　終わりに　まんぷくもよう\nはらぺこもよう　まんぷくもよう……と\n交互に　姿を　変える。
+8,8,259,相手より　先に\n行動できることが　ある。
+8,8,260,相手に　接触する　技なら\n守りの　効果を\n無視して　攻撃することが　できる。
+8,8,261,登場　したときに\n貝がらから　薬を　振りまいて\n味方の　能力変化を　元に戻す。
+8,8,262,でんきタイプの　技の\n威力が　上がる。
+8,8,263,ドラゴンタイプの　技の\n威力が　上がる。
+8,8,264,相手を　倒すと\n冷たい　声で　いなないて\n攻撃が　上がる。
+8,8,265,相手を　倒すと\n恐ろしい　声で　いなないて\n特攻が　上がる。
+8,8,266,バドレックスの　きんちょうかんと\nブリザポスの　しろのいななきの\n二つの　特性を　あわせ持つ。
+8,8,267,バドレックスの　きんちょうかんと\nレイスポスの　くろのいななきの\n二つの　特性を　あわせ持つ。
 8,9,1,通过释放臭臭的气味，\n在攻击的时候，\n有时会使对手畏缩。
 8,9,2,出场时，\n会将天气变为下雨。
 8,9,3,每一回合速度会变快。
@@ -8352,6 +8424,15 @@ generation_id,language_id,ability_id,description
 8,9,256,特性为化学变化气体的宝可梦在场时，\n场上所有宝可梦的\n特性效果都会消失或者无法生效。
 8,9,257,自己和同伴都不会\n陷入中毒的异常状态。
 8,9,258,每回合结束时会在\n满腹花纹与空腹花纹之间\n交替改变样子。
+8,9,259,有时能比对手先一步行动。
+8,9,260,如果使出的是接触到对手的招式，\n就可以无视守护效果进行攻击。
+8,9,261,出场时会从贝壳撒药，\n将我方的能力变化复原。
+8,9,262,电属性的招式威力会提高。
+8,9,263,龙属性的招式威力会提高。
+8,9,264,打倒对手时\n会用冰冷的声音嘶鸣\n并提高攻击。
+8,9,265,打倒对手时\n会用恐怖的声音嘶鸣\n并提高特攻。
+8,9,266,兼备蕾冠王的紧张感和\n雪暴马的苍白嘶鸣这两种特性。
+8,9,267,兼备蕾冠王的紧张感和\n灵幽马的漆黑嘶鸣这两种特性。
 8,10,1,發出臭氣，\n在攻擊的時候，\n有時會使對手畏縮。
 8,10,2,出場時，\n會將天氣變為下雨。
 8,10,3,每一回合速度會變快。
@@ -8610,3 +8691,12 @@ generation_id,language_id,ability_id,description
 8,10,256,當場上有特性是化學變化氣體的寶可夢時，\n所有寶可夢的特性效果\n都會消失或無法發動。
 8,10,257,自己和我方同伴都不會\n陷入中毒的異常狀態。
 8,10,258,在每個回合結束時，\n會在滿腹花紋和空腹花紋之間\n交替改變樣子。
+8,10,259,有時能比對手先一步行動。
+8,10,260,只要是接觸到對手的招式，\n就可以無視對手的防守效果進行攻擊。
+8,10,261,出場時，會從貝殼撒藥，\n將我方的能力變化復原。
+8,10,262,電屬性的招式威力會提高。
+8,10,263,龍屬性的招式威力會提高。
+8,10,264,打倒對手時\n會用冰冷的聲音嘶鳴\n並提高攻擊。
+8,10,265,打倒對手時\n會用恐怖的聲音嘶鳴\n並提高特攻。
+8,10,266,兼具蕾冠王的緊張感和\n雪暴馬的蒼白嘶鳴這２種特性。
+8,10,267,兼具蕾冠王的緊張感和\n靈幽馬的漆黑嘶鳴這２種特性。

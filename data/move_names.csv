@@ -795,6 +795,36 @@ language_id,move_id,name
 1,794,スターアサルト
 1,795,ムゲンダイビーム
 1,796,てっていこうせん
+1,797,ワイドフォース
+1,798,アイアンローラー
+1,799,スケイルショット
+1,800,メテオビーム
+1,801,シェルアームズ
+1,802,ミストバースト
+1,803,グラススライダー
+1,804,ライジングボルト
+1,805,だいちのはどう
+1,806,はいよるいちげき
+1,807,しっとのほのお
+1,808,うっぷんばらし
+1,809,ポルターガイスト
+1,810,ふしょくガス
+1,811,コーチング
+1,812,クイックターン
+1,813,トリプルアクセル
+1,814,ダブルウイング
+1,815,ねっさのだいち
+1,816,ジャングルヒール
+1,817,あんこくきょうだ
+1,818,すいりゅうれんだ
+1,819,サンダープリズン
+1,820,ドラゴンエナジー
+1,821,いてつくしせん
+1,822,もえあがるいかり
+1,823,らいめいげり
+1,824,ブリザードランス
+1,825,アストラルビット
+1,826,ぶきみなじゅもん
 1,10001,めざめるパワー (かくとう)
 1,10002,めざめるパワー (ひこう)
 1,10003,めざめるパワー (どく)
@@ -1651,6 +1681,36 @@ language_id,move_id,name
 2,794,Meteor Assault
 2,795,Eternabeam
 2,796,Steel Beam
+2,797,Expanding Force
+2,798,Steel Roller
+2,799,Scale Shot
+2,800,Meteor Beam
+2,801,Shell Side Arm
+2,802,Misty Explosion
+2,803,Grassy Glide
+2,804,Rising Voltage
+2,805,Terrain Pulse
+2,806,Skitter Smack
+2,807,Burning Jealousy
+2,808,Lash Out
+2,809,Poltergeist
+2,810,Corrosive Gas
+2,811,Coaching
+2,812,Flip Turn
+2,813,Triple Axel
+2,814,Dual Wingbeat
+2,815,Scorching Sands
+2,816,Jungle Healing
+2,817,Wicked Blow
+2,818,Surging Strikes
+2,819,Thunder Cage
+2,820,Dragon Energy
+2,821,Freezing Glare
+2,822,Fiery Wrath
+2,823,Thunderous Kick
+2,824,Glacial Lance
+2,825,Astral Barrage
+2,826,Eerie Spell
 2,10001,Hidden Power (Fighting)
 2,10002,Hidden Power (Flying)
 2,10003,Hidden Power (Poison)
@@ -2507,6 +2567,36 @@ language_id,move_id,name
 3,794,Joute Astrale
 3,795,Laser Infinimax
 3,796,Métalaser
+3,797,Vaste Pouvoir
+3,798,Métalliroue
+3,799,Rafale Écailles
+3,800,Laser Météore
+3,801,Kokiyarme
+3,802,Explo-Brume
+3,803,Gliss’Herbe
+3,804,Monte-Tension
+3,805,Champlification
+3,806,Ravage Rampant
+3,807,Feu Envieux
+3,808,Cent Rancunes
+3,809,Esprit Frappeur
+3,810,Gaz Corrosif
+3,811,Coaching
+3,812,Eau Revoir
+3,813,Triple Axel
+3,814,Double Volée
+3,815,Sable Ardent
+3,816,Selve Salvatrice
+3,817,Poing Obscur
+3,818,Torrent de Coups
+3,819,Voltageôle
+3,820,Draco-Énergie
+3,821,Regard Glaçant
+3,822,Fureur Ardente
+3,823,Coup Fulgurant
+3,824,Lance de Glace
+3,825,Éclat Spectral
+3,826,Sort Sinistre
 3,10001,Puissance Cachée (Combat)
 3,10002,Puissance Cachée (Vol)
 3,10003,Puissance Cachée (Poison)
@@ -3363,6 +3453,36 @@ language_id,move_id,name
 4,794,Sternensturm
 4,795,Unendynastrahlen
 4,796,Stahlstrahl
+4,797,Flächenmacht
+4,798,Eisenwalze
+4,799,Schuppenschuss
+4,800,Meteorstrahl
+4,801,Muschelwaffe
+4,802,Nebelexplosion
+4,803,Grasrutsche
+4,804,Hochspannung
+4,805,Feldimpuls
+4,806,Krabbelkracher
+4,807,Neidflammen
+4,808,Frustventil
+4,809,Poltergeist
+4,810,Korrosionsgas
+4,811,Coaching
+4,812,Rollwende
+4,813,Dreifach-Axel
+4,814,Doppelflügel
+4,815,Brandsand
+4,816,Dschungelheilung
+4,817,Finstertreffer
+4,818,Trefferschwall
+4,819,Blitzgefängnis
+4,820,Drachenkräfte
+4,821,Eisiger Blick
+4,822,Brennender Zorn
+4,823,Donnernder Tritt
+4,824,Blizzardlanze
+4,825,Astralfragmente
+4,826,Schauderspruch
 4,10001,Kraftreserve (Kampf)
 4,10002,Kraftreserve (Flug)
 4,10003,Kraftreserve (Gift)
@@ -4219,6 +4339,36 @@ language_id,move_id,name
 5,794,Sfolgorassalto
 5,795,Raggio Infinito
 5,796,Raggio d’Acciaio
+5,797,Vastenergia
+5,798,Ferrorullo
+5,799,Squamacolpo
+5,800,Raggiometeora
+5,801,Armaguscio
+5,802,Nebbioscoppio
+5,803,Erboscivolata
+5,804,Elettroimpennata
+5,805,Campopulsar
+5,806,Strisciacolpo
+5,807,Fiamminvidia
+5,808,Sfogarabbia
+5,809,Poltergeist
+5,810,Gas Corrosivo
+5,811,Coaching
+5,812,Virata
+5,813,Triplo Axel
+5,814,Doppia Ala
+5,815,Sabbiardente
+5,816,Giunglacura
+5,817,Pugnotenebra
+5,818,Idroraffica
+5,819,Elettrogabbia
+5,820,Dragoenergia
+5,821,Sguardo Gelido
+5,822,Furia Ardente
+5,823,Calcio Tonante
+5,824,Lancia Glaciale
+5,825,Schegge Astrali
+5,826,Inquietantesimo
 5,10001,Introforza (Lotta)
 5,10002,Introforza (Volante)
 5,10003,Introforza (Veleno)
@@ -5075,6 +5225,36 @@ language_id,move_id,name
 6,794,Asalto Estelar
 6,795,Rayo Infinito
 6,796,Metaláser
+6,797,Vasta Fuerza
+6,798,Allanador Férreo
+6,799,Ráfaga Escamas
+6,800,Rayo Meteórico
+6,801,Moluscañón
+6,802,Bruma Explosiva
+6,803,Fitoimpulso
+6,804,Alto Voltaje
+6,805,Pulso de Campo
+6,806,Golpe Rastrero
+6,807,Envidia Ardiente
+6,808,Desahogo
+6,809,Poltergeist
+6,810,Gas Corrosivo
+6,811,Motivación
+6,812,Viraje
+6,813,Triple Axel
+6,814,Ala Bis
+6,815,Arenas Ardientes
+6,816,Cura Selvática
+6,817,Golpe Oscuro
+6,818,Azote Torrencial
+6,819,Electrojaula
+6,820,Dracoenergía
+6,821,Mirada Heladora
+6,822,Furia Candente
+6,823,Patada Relámpago
+6,824,Lanza Glacial
+6,825,Orbes Espectro
+6,826,Conjuro Funesto
 6,10001,Poder Oculto (Lucha)
 6,10002,Poder Oculto (Volador)
 6,10003,Poder Oculto (Veneno)
@@ -5931,6 +6111,36 @@ language_id,move_id,name
 7,794,스타어설트
 7,795,무한다이빔
 7,796,철제광선
+7,797,와이드포스
+7,798,아이언롤러
+7,799,스케일샷
+7,800,메테오빔
+7,801,셸암즈
+7,802,미스트버스트
+7,803,그래스슬라이더
+7,804,라이징볼트
+7,805,대지의파동
+7,806,엄습하는일격
+7,807,질투의불꽃
+7,808,분풀이
+7,809,폴터가이스트
+7,810,부식가스
+7,811,코칭
+7,812,퀵턴
+7,813,트리플악셀
+7,814,더블윙
+7,815,열사의대지
+7,816,정글힐
+7,817,암흑강타
+7,818,수류연타
+7,819,썬더프리즌
+7,820,드래곤에너지
+7,821,얼어붙는시선
+7,822,타오르는분노
+7,823,천둥차기
+7,824,블리자드랜스
+7,825,아스트랄비트
+7,826,섬뜩한주문
 7,10001,잠재파워 (격투)
 7,10002,잠재파워 (비행)
 7,10003,잠재파워 (독)
@@ -6769,6 +6979,36 @@ language_id,move_id,name
 8,794,スターアサルト
 8,795,ムゲンダイビーム
 8,796,てっていこうせん
+8,797,ワイドフォース
+8,798,アイアンローラー
+8,799,スケイルショット
+8,800,メテオビーム
+8,801,シェルアームズ
+8,802,ミストバースト
+8,803,グラススライダー
+8,804,ライジングボルト
+8,805,だいちのはどう
+8,806,はいよるいちげき
+8,807,しっとのほのお
+8,808,うっぷんばらし
+8,809,ポルターガイスト
+8,810,ふしょくガス
+8,811,コーチング
+8,812,クイックターン
+8,813,トリプルアクセル
+8,814,ダブルウイング
+8,815,ねっさのだいち
+8,816,ジャングルヒール
+8,817,あんこくきょうだ
+8,818,すいりゅうれんだ
+8,819,サンダープリズン
+8,820,ドラゴンエナジー
+8,821,いてつくしせん
+8,822,もえあがるいかり
+8,823,らいめいげり
+8,824,ブリザードランス
+8,825,アストラルビット
+8,826,ぶきみなじゅもん
 8,10001,めざめるパワー (かくとう)
 8,10002,めざめるパワー (ひこう)
 8,10003,めざめるパワー (どく)
@@ -7607,6 +7847,36 @@ language_id,move_id,name
 9,794,流星突击
 9,795,无极光束
 9,796,铁蹄光线
+9,797,广域战力
+9,798,铁滚轮
+9,799,鳞射
+9,800,流星光束
+9,801,臂贝武器
+9,802,薄雾炸裂
+9,803,青草滑梯
+9,804,电力上升
+9,805,大地波动
+9,806,爬击
+9,807,妒火
+9,808,泄愤
+9,809,灵骚
+9,810,腐蚀气体
+9,811,指导
+9,812,快速折返
+9,813,三旋击
+9,814,双翼
+9,815,热沙大地
+9,816,丛林治疗
+9,817,暗冥强击
+9,818,水流连打
+9,819,雷电囚笼
+9,820,巨龙威能
+9,821,冰冷视线
+9,822,怒火中烧
+9,823,雷鸣蹴击
+9,824,雪矛
+9,825,星碎
+9,826,诡异咒语
 9,10001,觉醒力量 (格斗)
 9,10002,觉醒力量 (飞行)
 9,10003,觉醒力量 (毒)
@@ -8445,6 +8715,36 @@ language_id,move_id,name
 10,794,流星突擊
 10,795,無極光束
 10,796,鐵蹄光線
+10,797,廣域戰力
+10,798,鐵滾輪
+10,799,鱗射
+10,800,流星光束
+10,801,臂貝武器
+10,802,薄霧炸裂
+10,803,青草滑梯
+10,804,電力上升
+10,805,大地波動
+10,806,爬擊
+10,807,妒火
+10,808,洩憤
+10,809,靈騷
+10,810,腐蝕氣體
+10,811,指導
+10,812,快速折返
+10,813,三旋擊
+10,814,雙翼
+10,815,熱沙大地
+10,816,叢林治療
+10,817,暗冥強擊
+10,818,水流連打
+10,819,雷電囚籠
+10,820,巨龍威能
+10,821,冰冷視線
+10,822,怒火中燒
+10,823,雷鳴蹴擊
+10,824,雪矛
+10,825,星碎
+10,826,詭異咒語
 10,10001,覺醒力量 (格鬥)
 10,10002,覺醒力量 (飛行)
 10,10003,覺醒力量 (毒)

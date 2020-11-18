@@ -257,6 +257,15 @@ language_id,ability_id,name
 1,256,かがくへんかガス
 1,257,パステルベール
 1,258,はらぺこスイッチ
+1,259,クイックドロウ
+1,260,ふかしのこぶし
+1,261,きみょうなくすり
+1,262,トランジスタ
+1,263,りゅうのあぎと
+1,264,しろのいななき
+1,265,くろのいななき
+1,266,じんばいったい
+1,267,じんばいったい
 2,1,Stench
 2,2,Drizzle
 2,3,Speed Boost
@@ -515,6 +524,15 @@ language_id,ability_id,name
 2,256,Neutralizing Gas
 2,257,Pastel Veil
 2,258,Hunger Switch
+2,259,Quick Draw
+2,260,Unseen Fist
+2,261,Curious Medicine
+2,262,Transistor
+2,263,Dragon’s Maw
+2,264,Chilling Neigh
+2,265,Grim Neigh
+2,266,As One
+2,267,As One
 3,1,Puanteur
 3,2,Crachin
 3,3,Turbo
@@ -773,6 +791,15 @@ language_id,ability_id,name
 3,256,Gaz Inhibiteur
 3,257,Voile Pastel
 3,258,Déclic Fringale
+3,259,Tir Vif
+3,260,Poing Invisible
+3,261,Breuvage Suspect
+3,262,Transistor
+3,263,Dent de Dragon
+3,264,Blanche Ruade
+3,265,Sombre Ruade
+3,266,Osmose Équine
+3,267,Osmose Équine
 4,1,Duftnote
 4,2,Niesel
 4,3,Temposchub
@@ -1031,6 +1058,15 @@ language_id,ability_id,name
 4,256,Reaktionsgas
 4,257,Pastellhülle
 4,258,Heißhunger
+4,259,Schnellschuss
+4,260,Verborgene Faust
+4,261,Kuriose Arznei
+4,262,Transistor
+4,263,Drachenkiefer
+4,264,Helles Wiehern
+4,265,Dunkles Wiehern
+4,266,Reitgespann
+4,267,Reitgespann
 5,1,Tanfo
 5,2,Piovischio
 5,3,Acceleratore
@@ -1289,6 +1325,15 @@ language_id,ability_id,name
 5,256,Gas Reagente
 5,257,Pastelvelo
 5,258,Pancialterna
+5,259,Colpolesto
+5,260,Pugni Invisibili
+5,261,Stranofarmaco
+5,262,Transistor
+5,263,Dragomascelle
+5,264,Nitrito Bianco
+5,265,Nitrito Nero
+5,266,Sintonia Equina
+5,267,Sintonia Equina
 6,1,Hedor
 6,2,Llovizna
 6,3,Impulso
@@ -1547,6 +1592,15 @@ language_id,ability_id,name
 6,256,Gas Reactivo
 6,257,Velo Pastel
 6,258,Mutapetito
+6,259,Mano Rápida
+6,260,Puño Invisible
+6,261,Medicina Extraña
+6,262,Transistor
+6,263,Mandíbula Dragón
+6,264,Relincho Blanco
+6,265,Relincho Negro
+6,266,Unidad Ecuestre
+6,267,Unidad Ecuestre
 7,1,악취
 7,2,잔비
 7,3,가속
@@ -1805,6 +1859,15 @@ language_id,ability_id,name
 7,256,화학변화가스
 7,257,파스텔베일
 7,258,꼬르륵스위치
+7,259,퀵드로
+7,260,보이지않는주먹
+7,261,기묘한약
+7,262,트랜지스터
+7,263,용의턱
+7,264,백의울음
+7,265,흑의울음
+7,266,혼연일체
+7,267,혼연일체
 8,1,あくしゅう
 8,2,あめふらし
 8,3,かそく
@@ -2063,6 +2126,15 @@ language_id,ability_id,name
 8,256,かがくへんかガス
 8,257,パステルベール
 8,258,はらぺこスイッチ
+8,259,クイックドロウ
+8,260,ふかしのこぶし
+8,261,きみょうなくすり
+8,262,トランジスタ
+8,263,りゅうのあぎと
+8,264,しろのいななき
+8,265,くろのいななき
+8,266,じんばいったい
+8,267,じんばいったい
 9,1,恶臭
 9,2,降雨
 9,3,加速
@@ -2321,6 +2393,15 @@ language_id,ability_id,name
 9,256,化学变化气体
 9,257,粉彩护幕
 9,258,饱了又饿
+9,259,速击
+9,260,无形拳
+9,261,怪药
+9,262,电晶体
+9,263,龙颚
+9,264,苍白嘶鸣
+9,265,漆黑嘶鸣
+9,266,人马一体
+9,267,人马一体
 10,1,惡臭
 10,2,降雨
 10,3,加速
@@ -2579,3 +2660,12 @@ language_id,ability_id,name
 10,256,化學變化氣體
 10,257,粉彩護幕
 10,258,飽了又餓
+10,259,速擊
+10,260,無形拳
+10,261,怪藥
+10,262,電晶體
+10,263,龍顎
+10,264,蒼白嘶鳴
+10,265,漆黑嘶鳴
+10,266,人馬一體
+10,267,人馬一體
