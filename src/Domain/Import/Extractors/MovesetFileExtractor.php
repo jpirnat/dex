@@ -186,7 +186,7 @@ final class MovesetFileExtractor
 	 */
 	public function extractNamePercent(string $line) : NamePercent
 	{
-		$pattern = "/(\w[\w '.%:-]*?)\s+([+-]?[\d.]+)%/";
+		$pattern = "/(\w[\w '.%:()-]*?)\s+([+-]?[\d.]+)%/";
 
 		try {
 			$matchResult = Regex::match($pattern, $line);
