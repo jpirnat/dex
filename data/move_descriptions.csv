@@ -21482,6 +21482,55 @@ generation_id,language_id,move_id,description
 8,1,824,ふぶきを　まとった　こおりの　やりを\nあいてに　なげつけて　こうげきする。
 8,1,825,たくさんの　ちいさな　れいたいを\nあいてに　ぶつけて　こうげきする。
 8,1,826,きょうりょくな　サイコパワーで　こうげき。\nあいてが　さいごに　つかった　わざの\nＰＰを　３だけ　へらす。
+8,1,10001,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10002,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10003,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10004,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10005,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10006,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10007,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10008,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10009,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10010,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10011,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10012,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10013,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10014,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10015,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10016,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,10035,キョダイマックスした　リザードンが\nくりだす　ほのおタイプの　こうげき。\n４ターンの　あいだ　ダメージを　あたえる。
+8,1,10036,キョダイマックスした　バタフリーが\nくりだす　むしタイプの　こうげき。\nどく・まひ・ねむりの　どれかに　する。
+8,1,10037,キョダイマックスした　ピカチュウが\nくりだす　でんきタイプの　こうげき。\nあいてを　まひ　じょうたいに　する。
+8,1,10038,キョダイマックスした　ニャースが\nくりだす　ノーマルタイプの　こうげき。\nあいてをこんらんさせ　おかねも　もらえる。
+8,1,10039,キョダイマックスした　カイリキーが\nくりだす　かくとうタイプの　こうげき。\nきゅうしょに　あたりやすく　なる。
+8,1,10040,キョダイマックスした　ゲンガーが\nくりだす　ゴーストタイプの　こうげき。\nかげを　ふみ　こうたい　できなくする。
+8,1,10041,キョダイマックスした　ラプラスが\nくりだす　こおりタイプの　こうげき。\n５ターンの　あいだ　ダメージを　よわめる。
+8,1,10042,キョダイマックスした　イーブイが\nくりだす　ノーマルタイプの　こうげき。\nあいてを　メロメロに　する。
+8,1,10043,キョダイマックスした　カビゴンが\nくりだす　ノーマルタイプの　こうげき。\nたべた　きのみを　さいせいする。
+8,1,10044,キョダイマックスした　ダストダスが\nくりだす　どくタイプの　こうげき。\nあいてを　どく　じょうたいに　する。
+8,1,10045,キョダイマックスした　カジリガメが\nくりだす　みずタイプの　こうげき。\nするどい　むすうの　いわを　ばらまく。
+8,1,10046,キョダイマックスした　アーマーガアが\nくりだす　ひこうタイプの　こうげき。\nリフレクターや　ひかりのかべを　けしさる。
+8,1,10047,キョダイマックスした　ストリンダーが\nくりだす　でんきタイプの　こうげき。\nあいてを　どく　か　まひ　どちらかにする。
+8,1,10048,キョダイマックスした　マホイップが\nくりだす　フェアリータイプの　こうげき。\nみかたの　ＨＰを　かいふくする。
+8,1,10049,キョダイマックスした　ジュラルドンが\nくりだす　ドラゴンタイプの　こうげき。\nさいごに　つかわれた　わざＰＰを　へらす。
+8,1,10050,キョダイマックスした　イオルブが\nくりだす　エスパータイプの　こうげき。\n５ターンのあいだ　じゅうりょくが　かわる。
+8,1,10051,キョダイマックスした　セキタンザンが\nくりだす　いわタイプの　こうげき。\n４ターンの　あいだ　ダメージを　あたえる。
+8,1,10052,キョダイマックスした　サダイジャが\nくりだす　じめんタイプの　こうげき。\n４ー５ターンのあいだ　すなが　ふきあれる。
+8,1,10053,キョダイマックスした　オーロンゲが\nくりだす　あくタイプの　こうげき。\nおおきな　あくびで　ねむけを　さそう。
+8,1,10054,キョダイマックスした　アップリューが\nくりだす　くさタイプの　こうげき。\nあいての　かいひりつを　さげる。
+8,1,10055,キョダイマックスした　タルップルが\nくりだす　くさタイプの　こうげき。みかたの\nじょうたいいじょうを　かいふくする。
+8,1,10056,キョダイマックスした　ブリムオンが\nくりだす　フェアリータイプの　こうげき。\nあいてを　こんらん　させる。
+8,1,10057,キョダイマックスした　ダイオウドウが\nくりだす　はがねタイプの　こうげき。\nするどい　むすうの　とげを　ばらまく。
+8,1,10058,キョダイマックスした　メルメタルが\nくりだす　はがねタイプの　こうげき。\nおなじ　わざを　れんぞくで　だせなくする。
+8,1,10059,キョダイマックスした　キングラーが\nくりだす　みずタイプの　こうげき。\nあいての　すばやさを　がくっと　さげる。
+8,1,10060,キョダイマックスした　マルヤクデが\nくりだす　ほのおタイプの　こうげき。\n４ー５ターンのあいだ　ほのおにとじこめる。
+8,1,10061,キョダイマックスした　フシギバナが\nくりだす　くさタイプの　こうげき。\n４ターンの　あいだ　ダメージを　あたえる。
+8,1,10062,キョダイマックスした　カメックスが\nくりだす　みずタイプの　こうげき。\n４ターンの　あいだ　ダメージを　あたえる。
+8,1,10063,キョダイマックスした　ゴリランダーが\nくりだす　くさタイプの　こうげき。\nあいての　とくせいに　じゃまされない。
+8,1,10064,キョダイマックスした　エースバーンが\nくりだす　ほのおタイプの　こうげき。\nあいての　とくせいに　じゃまされない。
+8,1,10065,キョダイマックスした　インテレオンが\nくりだす　みずタイプの　こうげき。\nあいての　とくせいに　じゃまされない。
+8,1,10066,キョダイマックスした　ウーラオスが\nくりだす　あくタイプの　こうげき。\nダイウォールを　むしできる　いちげき。
+8,1,10067,キョダイマックスした　ウーラオスが\nくりだす　みずタイプの　こうげき。\nダイウォールを　むしできる　れんげき。
 8,2,1,"The target is physically pounded with a long tail, a\nforeleg, or the like."
 8,2,2,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
 8,2,3,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
@@ -22308,6 +22357,55 @@ generation_id,language_id,move_id,description
 8,2,824,The user attacks by hurling a blizzard-cloaked\nicicle lance at opposing Pokémon.
 8,2,825,The user attacks by sending a frightful amount of small\nghosts at opposing Pokémon.
 8,2,826,The user attacks with its tremendous psychic power.\nThis also removes 3 PP from the target’s last move.
+8,2,10001,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10002,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10003,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10004,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10005,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10006,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10007,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10008,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10009,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10010,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10011,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10012,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10013,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10014,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10015,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10016,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,10035,A Fire-type attack that Gigantamax Charizard use.\nThis move continues to deal damage to opponents\nfor four turns.
+8,2,10036,"A Bug-type attack that Gigantamax Butterfree use.\nThis move inflicts the poisoned, paralyzed, or\nasleep status condition on opponents."
+8,2,10037,An Electric-type attack that Gigantamax Pikachu use.\nThis move paralyzes opponents.
+8,2,10038,A Normal-type attack that Gigantamax Meowth use.\nThis move confuses opponents and also earns\nextra money.
+8,2,10039,A Fighting-type attack that Gigantamax Machamp use.\nThis move raises the chance of critical hits.
+8,2,10040,A Ghost-type attack that Gigantamax Gengar use.\nThis Pokémon steps on the opposing Pokémon’s shadow\nto prevent them from escaping.
+8,2,10041,An Ice-type attack that Gigantamax Lapras use.\nThis move reduces the damage received for five turns.
+8,2,10042,A Normal-type attack that Gigantamax Eevee use.\nThis move infatuates opponents.
+8,2,10043,A Normal-type attack that Gigantamax Snorlax use.\nThis move restores Berries that have been eaten.
+8,2,10044,A Poison-type attack that Gigantamax Garbodor use.\nThis move poisons opponents.
+8,2,10045,A Water-type attack that Gigantamax Drednaw use.\nThis move scatters sharp rocks around the field.
+8,2,10046,A Flying-type attack that Gigantamax Corviknight use.\nThis move removes the effects of moves like Reflect and\nLight Screen.
+8,2,10047,An Electric-type attack that Gigantamax Toxtricity use.\nThis move poisons or paralyzes opponents.
+8,2,10048,A Fairy-type attack that Gigantamax Alcremie use.\nThis move heals the HP of allies.
+8,2,10049,A Dragon-type attack that Gigantamax Duraludon use.\nReduces the PP of the last move used.
+8,2,10050,A Psychic-type attack that Gigantamax Orbeetle use.\nThis move changes gravity for five turns.
+8,2,10051,A Rock-type attack that Gigantamax Coalossal use.\nThis move continues to deal damage to opponents\nfor four turns.
+8,2,10052,A Ground-type attack that Gigantamax Sandaconda use.\nOpponents are trapped in a raging sandstorm for\nfour to five turns.
+8,2,10053,A Dark-type attack that Gigantamax Grimmsnarl use.\nThe user lets loose a huge yawn that lulls the targets\ninto falling asleep on the next turn.
+8,2,10054,A Grass-type attack that Gigantamax Flapple use.\nThis move reduces the opponents’ evasiveness.
+8,2,10055,A Grass-type attack that Gigantamax Appletun use.\nThis move heals the status conditions of allies.
+8,2,10056,A Fairy-type attack that Gigantamax Hatterene use.\nThis move confuses opponents.
+8,2,10057,A Steel-type attack that Gigantamax Copperajah use.\nThis move scatters sharp spikes around the field.
+8,2,10058,A Steel-type attack that Gigantamax Melmetal use.\nThis move makes opponents incapable of using the\nsame move twice in a row.
+8,2,10059,A Water-type attack that Gigantamax Kingler use.\nThis move harshly lowers the Speed of opponents.
+8,2,10060,A Fire-type attack that Gigantamax Centiskorch use.\nThis move traps opponents in flames for four to\nfive turns.
+8,2,10061,A Grass-type attack that Gigantamax Venusaur use.\nThis move continues to deal damage to opponents\nfor four turns.
+8,2,10062,A Water-type attack that Gigantamax Blastoise use.\nThis move continues to deal damage to opponents\nfor four turns.
+8,2,10063,A Grass-type attack that Gigantamax Rillaboom use.\nThis move can be used on the target regardless of\nits Abilities.
+8,2,10064,A Fire-type attack that Gigantamax Cinderace use.\nThis move can be used on the target regardless of\nits Abilities.
+8,2,10065,A Water-type attack that Gigantamax Inteleon use.\nThis move can be used on the target regardless of\nits Abilities.
+8,2,10066,A Dark-type attack that Gigantamax Urshifu use.\nThis single-strike move can ignore Max Guard.
+8,2,10067,A Water-type attack that Gigantamax Urshifu use.\nThis rapid-strike move can ignore Max Guard.
 8,3,1,"Écrase l’ennemi avec les pattes avant ou la queue,\npar exemple."
 8,3,2,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
 8,3,3,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
@@ -23134,6 +23232,55 @@ generation_id,language_id,move_id,description
 8,3,824,Le lanceur attaque l’ennemi avec une lance de glace\nentourée d’un blizzard.
 8,3,825,Le lanceur attaque l’ennemi avec une multitude\nde petits spectres.
 8,3,826,Le lanceur attaque avec de puissants pouvoirs\npsychiques et retire 3 PP de la dernière capacité\nde l’ennemi.
+8,3,10001,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10002,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10003,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10004,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10005,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10006,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10007,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10008,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10009,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10010,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10011,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10012,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10013,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10014,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10015,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10016,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,10035,"Une attaque de type Feu que seul un Dracaufeu\nGigamax peut utiliser. Pendant quatre tours,\nla cible continue de subir des dégâts."
+8,3,10036,"Une attaque de type Insecte que seul un Papilusion\nGigamax peut utiliser.\nEmpoisonne, paralyse ou endort la cible."
+8,3,10037,Une attaque de type Électrik que seul un Pikachu\nGigamax peut utiliser. Paralyse la cible.
+8,3,10038,Une attaque de type Normal que seul un Miaouss\nGigamax peut utiliser. Rend la cible confuse\net permet d’obtenir de l’argent à la fin du combat.
+8,3,10039,Une attaque de type Combat que seul un Mackogneur\nGigamax peut utiliser. Augmente le taux de critiques\ndu lanceur et de ses alliés.
+8,3,10040,Une attaque de type Spectre que seul un Ectoplasma\nGigamax peut utiliser. Empêche les Pokémon ennemis\nde quitter le combat.
+8,3,10041,Une attaque de type Glace que seul un Lokhlass\nGigamax peut utiliser. Réduit les dégâts causés\npar des capacités pendant cinq tours.
+8,3,10042,Une attaque de type Normal que seul un Évoli\nGigamax peut utiliser. Rend la cible amoureuse.
+8,3,10043,Une attaque de type Normal que seul un Ronflex\nGigamax peut utiliser. Restaure une Baie tenue\nqui a déjà été mangée.
+8,3,10044,Une attaque de type Poison que seul un Miasmax\nGigamax peut utiliser. Empoisonne la cible.
+8,3,10045,Une attaque de type Eau que seul un Torgamord\nGigamax peut utiliser. Disperse des pierres aiguisées\nsur le terrain.
+8,3,10046,Une attaque de type Vol que seul un Corvaillus\nGigamax peut utiliser. Permet de briser les barrières\ncomme Protection et Mur Lumière.
+8,3,10047,Une attaque de type Électrik que seul un Salarsen\nGigamax peut utiliser. Empoisonne ou paralyse la cible.
+8,3,10048,Une attaque de type Fée que seul un Charmilly\nGigamax peut utiliser. Restaure des PV aux alliés.
+8,3,10049,Une attaque de type Dragon que seul un Duralugon\nGigamax peut utiliser. Baisse les PP de la dernière\ncapacité utilisée par la cible.
+8,3,10050,Une attaque de type Psy que seul un Astronelle\nGigamax peut utiliser. Intensifie la gravité\npendant cinq tours.
+8,3,10051,"Une attaque de type Roche que seul un Monthracite\nGigamax peut utiliser. Pendant quatre tours,\nla cible continue de subir des dégâts."
+8,3,10052,Une attaque de type Sol que seul un Dunaconda\nGigamax peut utiliser. Emprisonne la cible dans\nune tempête de sable qui dure de quatre à cinq tours.
+8,3,10053,Une attaque de type Ténèbres que seul un Angoliath\nGigamax peut utiliser. Fait bâiller la cible qui s’endort\nau tour suivant.
+8,3,10054,Une attaque de type Plante que seul un Pomdrapi\nGigamax peut utiliser. Réduit l’Esquive de la cible.
+8,3,10055,Une attaque de type Plante que seul un Dratatin\nGigamax peut utiliser. Soigne les altérations de statut\ndes alliés.
+8,3,10056,Une attaque de type Fée que seul un Sorcilence\nGigamax peut utiliser. Rend la cible confuse.
+8,3,10057,Une attaque de type Acier que seul un Pachyradjah\nGigamax peut utiliser. Disperse des pics aiguisés\nsur le terrain.
+8,3,10058,Une attaque de type Acier que seul un Melmetal\nGigamax peut utiliser. Empêche la cible d’utiliser\nla même capacité deux fois de suite.
+8,3,10059,Une attaque de type Eau que seul un Krabboss\nGigamax peut utiliser. Réduit beaucoup la Vitesse\nde la cible.
+8,3,10060,Une attaque de type Feu que seul un Scolocendre\nGigamax peut utiliser. Emprisonne la cible dans\nun tourbillon de flammes qui dure de quatre à cinq tours.
+8,3,10061,Une attaque de type Plante que seul un Florizarre\nGigamax peut utiliser. Inflige des dégâts à la cible\npendant quatre tours.
+8,3,10062,Une attaque de type Eau que seul un Tortank\nGigamax peut utiliser. Inflige des dégâts à la cible\npendant quatre tours.
+8,3,10063,Une attaque de type Plante que seul un Gorythmic\nGigamax peut utiliser. Ignore le talent de la cible.
+8,3,10064,Une attaque de type Feu que seul un Pyrobut\nGigamax peut utiliser. Ignore le talent de la cible.
+8,3,10065,Une attaque de type Eau que seul un Lézargus\nGigamax peut utiliser. Ignore le talent de la cible.
+8,3,10066,Une attaque de type Ténèbres que seul un Shifours\nGigamax peut utiliser. Cette frappe unique permet\nd’ignorer la capacité Gardomax.
+8,3,10067,Une attaque de type Eau que seul un Shifours\nGigamax peut utiliser. Cet enchaînement de coups\npermet d’ignorer la capacité Gardomax.
 8,4,1,Ein Hieb mit den Vorderbeinen oder dem Schweif.
 8,4,2,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
 8,4,3,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
@@ -23960,6 +24107,55 @@ generation_id,language_id,move_id,description
 8,4,824,Der Anwender wirft eine in einen Blizzard gehüllte\nLanze aus Eis auf gegnerische Pokémon.
 8,4,825,Der Anwender greift gegnerische Pokémon mit vielen\nkleinen Spukgestalten an.
 8,4,826,Der Anwender greift mit gewaltigen Psycho-Kräften an.\nDie AP der letzten Attacke des Zieles werden um\n3 Punkte gesenkt.
+8,4,10001,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10002,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10003,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10004,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10005,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10006,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10007,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10008,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10009,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10010,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10011,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10012,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10013,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10014,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10015,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10016,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,10035,"Eine Feuer-Attacke, die nur Gigadynamax-Glurak\neinsetzen kann. Fügt vier Runden lang Schaden zu."
+8,4,10036,"Eine Käfer-Attacke, die nur Gigadynamax-Smettbo\neinsetzen kann. Gegnerische Pokémon werden entweder\nvergiftet, paralysiert oder in Schlaf versetzt."
+8,4,10037,"Eine Elektro-Attacke, die nur Gigadynamax-Pikachu\neinsetzen kann. Gegnerische Pokémon werden\nparalysiert."
+8,4,10038,"Eine Normal-Attacke, die nur Gigadynamax-Mauzi\neinsetzen kann. Verwirrt Gegner und bringt nach dem\nKampf Geld ein."
+8,4,10039,"Eine Kampf-Attacke, die nur Gigadynamax-Machomei\neinsetzen kann. Erhöht die Volltrefferquote auf\nMitstreiterseite."
+8,4,10040,"Eine Geister-Attacke, die nur Gigadynamax-Gengar\neinsetzen kann. Hindert gegnerische Pokémon an der\nFlucht beziehungsweise am Auswechseln."
+8,4,10041,"Eine Eis-Attacke, die nur Gigadynamax-Lapras\neinsetzen kann. Reduziert fünf Runden lang den\nerlittenen Schaden."
+8,4,10042,"Eine Normal-Attacke, die nur Gigadynamax-Evoli\neinsetzen kann. Gegnerische Pokémon verlieben\nsich in es."
+8,4,10043,"Eine Normal-Attacke, die nur Gigadynamax-Relaxo\neinsetzen kann. Stellt bereits verzehrte Beeren\nwieder her."
+8,4,10044,"Eine Gift-Attacke, die nur Gigadynamax-Deponitox\neinsetzen kann. Vergiftet gegnerische Pokémon."
+8,4,10045,"Eine Wasser-Attacke, die nur Gigadynamax-Kamalm\neinsetzen kann. Verstreut viele spitze Steinbrocken\nauf dem Kampffeld."
+8,4,10046,"Eine Flug-Attacke, die nur Gigadynamax-Krarmor\neinsetzen kann. Beseitigt die Effekte von Attacken wie\nReflektor und Lichtschild."
+8,4,10047,"Eine Elektro-Attacke, die nur Gigadynamax-Riffex\neinsetzen kann. Vergiftet oder paralysiert gegnerische\nPokémon."
+8,4,10048,"Eine Feen-Attacke, die nur Gigadynamax-Pokusan\neinsetzen kann. Füllt die KP auf Mitstreiterseite auf."
+8,4,10049,"Eine Drachen-Attacke, die nur Gigadynamax-Duraludon\neinsetzen kann. AP der letzten Attacke, die gegnerische\nPokémon eingesetzt haben, werden gesenkt."
+8,4,10050,"Eine Psycho-Attacke, die nur Gigadynamax-Maritellit\neinsetzen kann. Ändert die Erdanziehung für fünf\nRunden."
+8,4,10051,"Eine Gesteins-Attacke, die nur Gigadynamax-\nMontecarbo einsetzen kann. Fügt vier Runden\nlang Schaden zu."
+8,4,10052,"Eine Boden-Attacke, die nur Gigadynamax-Sanaconda\neinsetzen kann. Eine Sandhose wütet für vier bis fünf\nRunden."
+8,4,10053,"Eine Unlicht-Attacke, die nur Gigadynamax-Olangaar\neinsetzen kann. Mit einem großen Gähner wird das Ziel\nmüde gemacht und schläft in der nächsten Runde ein."
+8,4,10054,"Eine Pflanzen-Attacke, die nur Gigadynamax-Drapfel\neinsetzen kann. Senkt den Ausweichwert der\ngegnerischen Pokémon."
+8,4,10055,"Eine Pflanzen-Attacke, die nur Gigadynamax-Schlapfel\neinsetzen kann. Heilt Statusprobleme auf\nMitstreiterseite."
+8,4,10056,"Eine Feen-Attacke, die nur Gigadynamax-Silembrim\neinsetzen kann. Verwirrt gegnerische Pokémon."
+8,4,10057,"Eine Stahl-Attacke, die nur Gigadynamax-Patinaraja\neinsetzen kann. Verstreut viele zackige Stahlsplitter\nauf dem Kampffeld."
+8,4,10058,"Eine Stahl-Attacke, die nur Gigadynamax-Melmetal\neinsetzen kann. Hindert Gegner am wiederholten\nEinsatz derselben Attacke."
+8,4,10059,"Eine Wasser-Attacke, die nur Gigadynamax-Kingler\neinsetzen kann. Senkt die Initiative der gegnerischen\nPokémon stark."
+8,4,10060,"Eine Feuer-Attacke, die nur Gigadynamax-Infernopod\neinsetzen kann. Schließt gegnerische Pokémon vier bis\nfünf Runden in wirbelnden Flammen ein."
+8,4,10061,"Eine Pflanzen-Attacke, die nur Gigadynamax-Bisaflor\neinsetzen kann. Geißelt gegnerische Pokémon\nvier Runden lang mit peitschenartigen Ranken."
+8,4,10062,"Eine Wasser-Attacke, die nur Gigadynamax-Turtok\neinsetzen kann. Schließt gegnerische Pokémon\nvier Runden lang in einem Wasserwirbel ein."
+8,4,10063,"Eine Pflanzen-Attacke, die nur Gigadynamax-Gortrom\neinsetzen kann. Ignoriert die Effekte der gegnerischen\nFähigkeiten."
+8,4,10064,"Eine Feuer-Attacke, die nur Gigadynamax-Liberlo\neinsetzen kann. Ignoriert die Effekte der gegnerischen\nFähigkeiten."
+8,4,10065,"Eine Wasser-Attacke, die nur Gigadynamax-Intelleon\neinsetzen kann. Ignoriert die Effekte der gegnerischen\nFähigkeiten."
+8,4,10066,"Eine Unlicht-Attacke, die nur Gigadynamax-Wulaosu\neinsetzen kann. Dieser Einzelhieb ignoriert die\nschützende Wirkung von Dyna-Wall."
+8,4,10067,"Eine Wasser-Attacke, die nur Gigadynamax-Wulaosu\neinsetzen kann. Dieser Multihieb ignoriert die\nschützende Wirkung von Dyna-Wall."
 8,5,1,Colpisce il bersaglio con la coda o le zampe\nanteriori.
 8,5,2,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
 8,5,3,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
@@ -24786,6 +24982,55 @@ generation_id,language_id,move_id,description
 8,5,824,Il Pokémon attacca i nemici scagliando una lancia\ndi ghiaccio accompagnata da una tormenta di neve.
 8,5,825,Il Pokémon attacca i nemici scatenandogli contro\nuna miriade di piccoli spettri.
 8,5,826,Il Pokémon attacca con i suoi potenti poteri psichici.\nSottrae tre PP all’ultima mossa usata dal nemico.
+8,5,10001,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10002,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10003,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10004,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10005,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10006,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10007,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10008,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10009,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10010,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10011,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10012,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10013,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10014,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10015,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10016,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,10035,Attacco di tipo Fuoco eseguito da Charizard Gigamax.\nInfligge danni per quattro turni.
+8,5,10036,"Attacco di tipo Coleottero eseguito da Butterfree\nGigamax. Avvelena, paralizza o addormenta i nemici."
+8,5,10037,Attacco di tipo Elettro eseguito da Pikachu Gigamax.\nParalizza i nemici.
+8,5,10038,Attacco di tipo Normale eseguito da Meowth Gigamax.\nConfonde i nemici e permette anche di ricevere una\nricompensa maggiore.
+8,5,10039,Attacco di tipo Lotta eseguito da Machamp Gigamax.\nAumenta la probabilità di sferrare brutti colpi.
+8,5,10040,Attacco di tipo Spettro eseguito da Gengar Gigamax.\nIl Pokémon calpesta l’ombra del nemico impedendogli\nla fuga o la sostituzione.
+8,5,10041,Attacco di tipo Ghiaccio eseguito da Lapras Gigamax.\nRiduce i danni subiti per cinque turni.
+8,5,10042,Attacco di tipo Normale eseguito da Eevee Gigamax.\nFa infatuare i nemici.
+8,5,10043,Attacco di tipo Normale eseguito da Snorlax Gigamax.\nRigenera le bacche mangiate.
+8,5,10044,Attacco di tipo Veleno eseguito da Garbodor Gigamax.\nAvvelena i nemici.
+8,5,10045,Attacco di tipo Acqua eseguito da Drednaw Gigamax.\nSparge rocce aguzze sul campo di lotta.
+8,5,10046,Attacco di tipo Volante eseguito da Corviknight\nGigamax. Annulla l’effetto di mosse come Riflesso\ne Schermoluce.
+8,5,10047,Attacco di tipo Elettro eseguito da Toxtricity Gigamax.\nAvvelena o paralizza i nemici.
+8,5,10048,Attacco di tipo Folletto eseguito da Alcremie Gigamax.\nFa recuperare PS agli alleati.
+8,5,10049,Attacco di tipo Drago eseguito da Duraludon Gigamax.\nToglie PP all’ultima mossa usata dai nemici.
+8,5,10050,Attacco di tipo Psico eseguito da Orbeetle Gigamax.\nCambia la gravità per cinque turni.
+8,5,10051,Attacco di tipo Roccia eseguito da Coalossal Gigamax.\nInfligge danni per quattro turni.
+8,5,10052,Attacco di tipo Terra eseguito da Sandaconda Gigamax.\nScatena un turbine di sabbia per quattro o cinque turni.
+8,5,10053,Attacco di tipo Buio eseguito da Grimmsnarl Gigamax.\nChi la usa fa un grande sbadiglio che fa addormentare\nil nemico al turno successivo.
+8,5,10054,Attacco di tipo Erba eseguito da Flapple Gigamax.\nRiduce l’elusione dei nemici.
+8,5,10055,Attacco di tipo Erba eseguito da Appletun Gigamax.\nCura i problemi di stato degli alleati.
+8,5,10056,Attacco di tipo Folletto eseguito da Hatterene Gigamax.\nConfonde i nemici.
+8,5,10057,Attacco di tipo Acciaio eseguito da Copperajah\nGigamax. Sparge pezzi di metallo acuminati sul\ncampo di lotta.
+8,5,10058,Attacco di tipo Acciaio eseguito da Melmetal Gigamax.\nImpedisce ai nemici di usare la stessa mossa due volte\ndi seguito.
+8,5,10059,Attacco di tipo Acqua eseguito da Kingler Gigamax.\nRiduce di molto la Velocità dei nemici.
+8,5,10060,Attacco di tipo Fuoco eseguito da Centiskorch Gigamax.\nIntrappola i nemici nelle fiamme per quattro o cinque\nturni.
+8,5,10061,Attacco di tipo Erba eseguito da Venusaur Gigamax.\nInfligge danni ai nemici per quattro turni.
+8,5,10062,Attacco di tipo Acqua eseguito da Blastoise Gigamax.\nInfligge danni ai nemici per quattro turni.
+8,5,10063,Attacco di tipo Erba eseguito da Rillaboom Gigamax.\nIgnora le abilità dei nemici.
+8,5,10064,Attacco di tipo Fuoco eseguito da Cinderace Gigamax.\nIgnora le abilità dei nemici.
+8,5,10065,Attacco di tipo Acqua eseguito da Inteleon Gigamax.\nIgnora le abilità dei nemici.
+8,5,10066,Attacco di tipo Buio eseguito da Urshifu Gigamax.\nColpo singolo che ignora gli effetti della Dynabarriera.
+8,5,10067,Attacco di tipo Acqua eseguito da Urshifu Gigamax.\nSerie di colpi che ignora gli effetti della Dynabarriera.
 8,6,1,Golpea con las patas o la cola.
 8,6,2,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
 8,6,3,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
@@ -25612,6 +25857,55 @@ generation_id,language_id,move_id,description
 8,6,824,El usuario ataca al objetivo lanzándole un carámbano de\nhielo envuelto en una ventisca.
 8,6,825,El usuario ataca al objetivo lanzándole una ingente\ncantidad de pequeños fantasmas.
 8,6,826,El usuario ataca con un poder psíquico de inmensa\npotencia y elimina 3 PP del último movimiento que\nhaya usado el objetivo.
+8,6,10001,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10002,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10003,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10004,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10005,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10006,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10007,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10008,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10009,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10010,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10011,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10012,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10013,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10014,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10015,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10016,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,10035,Ataque de tipo Fuego ejecutado por un Charizard\nGigamax. Inflige daño durante cuatro turnos.
+8,6,10036,"Ataque de tipo Bicho ejecutado por un Butterfree\nGigamax. Envenena, paraliza o duerme al objetivo."
+8,6,10037,Ataque de tipo Eléctrico ejecutado por un Pikachu\nGigamax. Paraliza al objetivo.
+8,6,10038,Ataque de tipo Normal ejecutado por un Meowth\nGigamax. Confunde al objetivo y aumenta la\nrecompensa recibida tras el combate.
+8,6,10039,Ataque de tipo Lucha ejecutado por un Machamp\nGigamax. Aumenta las posibilidades de que el usuario\ny sus aliados asesten un golpe crítico.
+8,6,10040,Ataque de tipo Fantasma ejecutado por un Gengar\nGigamax. Impide que el objetivo sea cambiado por\notro.
+8,6,10041,Ataque de tipo Hielo ejecutado por un Lapras Gigamax.\nReduce el daño recibido durante cinco turnos.
+8,6,10042,Ataque de tipo Normal ejecutado por un Eevee\nGigamax. Hace que el objetivo se enamore.
+8,6,10043,Ataque de tipo Normal ejecutado por un Snorlax\nGigamax. Restaura las bayas que se hayan consumido.
+8,6,10044,Ataque de tipo Veneno ejecutado por un Garbodor\nGigamax. Envenena al objetivo.
+8,6,10045,Ataque de tipo Agua ejecutado por un Drednaw\nGigamax. Esparce rocas afiladas por el terreno de\ncombate.
+8,6,10046,Ataque de tipo Volador ejecutado por un Corviknight\nGigamax. Es capaz de destruir barreras como las\ncreadas por Pantalla de Luz y Reflejo.
+8,6,10047,Ataque de tipo Eléctrico ejecutado por un Toxtricity\nGigamax. Envenena o paraliza al objetivo.
+8,6,10048,Ataque de tipo Hada ejecutado por un Alcremie\nGigamax. Restaura los PS de tu bando.
+8,6,10049,Ataque de tipo Dragón ejecutado por un Duraludon\nGigamax. Reduce PP del último movimiento usado por\nel objetivo.
+8,6,10050,Ataque de tipo Psíquico ejecutado por un Orbeetle\nGigamax. Intensifica la fuerza de gravedad durante\ncinco turnos.
+8,6,10051,Ataque de tipo Roca ejecutado por un Coalossal\nGigamax. Inflige daño durante cuatro turnos.
+8,6,10052,Ataque de tipo Tierra ejecutado por un Sandaconda\nGigamax. Enreda al objetivo en un remolino de arena\nde cuatro a cinco turnos.
+8,6,10053,Ataque de tipo Siniestro ejecutado por un Grimmsnarl\nGigamax. Induce al sueño al objetivo en el siguiente\nturno.
+8,6,10054,Ataque de tipo Planta ejecutado por un Flapple\nGigamax. Reduce la Evasión del objetivo.
+8,6,10055,Ataque de tipo Planta ejecutado por un Appletun\nGigamax. Cura los problemas de estado de tu bando.
+8,6,10056,Ataque de tipo Hada ejecutado por un Hatterene\nGigamax. Confunde al objetivo.
+8,6,10057,Ataque de tipo Acero ejecutado por un Copperajah\nGigamax. Esparce púas de acero por el terreno de\ncombate.
+8,6,10058,Ataque de tipo Acero ejecutado por un Melmetal\nGigamax. Impide al objetivo usar el mismo movimiento\ndos veces seguidas.
+8,6,10059,Ataque de tipo Agua ejecutado por un Kingler Gigamax.\nReduce mucho la Velocidad del objetivo.
+8,6,10060,Ataque de tipo Fuego ejecutado por un Centiskorch\nGigamax. Un aro de fuego atrapa al objetivo de cuatro\na cinco turnos.
+8,6,10061,Ataque de tipo Planta ejecutado por un Venusaur\nGigamax. Inflige daño durante cuatro turnos.
+8,6,10062,Ataque de tipo Agua ejecutado por un Blastoise\nGigamax. Inflige daño durante cuatro turnos.
+8,6,10063,Ataque de tipo Planta ejecutado por un Rillaboom\nGigamax. Ignora la habilidad del objetivo.
+8,6,10064,Ataque de tipo Fuego ejecutado por un Cinderace\nGigamax. Ignora la habilidad del objetivo.
+8,6,10065,Ataque de tipo Agua ejecutado por un Inteleon\nGigamax. Ignora la habilidad del objetivo.
+8,6,10066,Ataque de tipo Siniestro ejecutado por un Urshifu\nGigamax. Propina un único golpe que acierta al\nobjetivo aunque haya usado Maxibarrera.
+8,6,10067,Ataque de tipo Agua ejecutado por un Urshifu Gigamax.\nPropina golpes sucesivos que aciertan al objetivo\naunque haya usado Maxibarrera.
 8,7,1,긴 꼬리나 손 등을 사용하여\n상대를 때려서 공격한다.
 8,7,2,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
 8,7,3,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
@@ -26438,6 +26732,55 @@ generation_id,language_id,move_id,description
 8,7,824,눈보라를 두른 얼음의 창을\n상대에게 던져서 공격한다.
 8,7,825,수많은 작은 영체를\n상대에게 부딪쳐서 공격한다.
 8,7,826,강력한 사이코 파워로 공격한다.\n상대가 마지막으로 사용한 기술의\nPP를 3만큼 줄인다.
+8,7,10001,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10002,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10003,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10004,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10005,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10006,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10007,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10008,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10009,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10010,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10011,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10012,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10013,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10014,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10015,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10016,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,10035,거다이맥스한 리자몽이\n사용하는 불꽃타입 공격.\n4턴 동안 데미지를 준다.
+8,7,10036,거다이맥스한 버터플이\n사용하는 벌레타입 공격.\n독 마비 잠듦 중 어느 하나로 만든다.
+8,7,10037,거다이맥스한 피카츄가\n사용하는 전기타입 공격.\n상대를 마비 상태로 만든다.
+8,7,10038,거다이맥스한 나옹이\n사용하는 노말타입 공격.\n상대를 혼란시키고 돈도 받을 수 있다.
+8,7,10039,거다이맥스한 괴력몬이\n사용하는 격투타입 공격.\n급소에 맞기 쉬워진다.
+8,7,10040,거다이맥스한 팬텀이\n사용하는 고스트타입 공격.\n그림자를 밟아 교체할 수 없게 한다.
+8,7,10041,거다이맥스한 라프라스가\n사용하는 얼음타입 공격.\n5턴 동안 데미지를 약하게 한다.
+8,7,10042,거다이맥스한 이브이가\n사용하는 노말타입 공격.\n상대를 헤롱헤롱하게 만든다.
+8,7,10043,거다이맥스한 잠만보가\n사용하는 노말타입 공격.\n먹은 나무열매를 재생한다.
+8,7,10044,거다이맥스한 더스트나가\n사용하는 독타입 공격.\n상대를 독 상태로 만든다.
+8,7,10045,거다이맥스한 갈가부기가\n사용하는 물타입 공격.\n예리한 바위를 무수히 뿌린다.
+8,7,10046,거다이맥스한 아머까오가\n사용하는 비행타입 공격.\n리플렉터나 빛의장막을 없앤다.
+8,7,10047,거다이맥스한 스트린더가\n사용하는 전기타입 공격.\n상대를 독 또는 마비 어느 하나로 만든다.
+8,7,10048,거다이맥스한 마휘핑이\n사용하는 페어리타입 공격.\n같은 편의 HP를 회복한다.
+8,7,10049,거다이맥스한 두랄루돈이\n사용하는 드래곤타입 공격.\n마지막에 사용한 기술의 PP를 줄인다.
+8,7,10050,거다이맥스한 이올브가\n사용하는 에스퍼타입 공격.\n5턴 동안 중력이 바뀐다.
+8,7,10051,거다이맥스한 석탄산이\n사용하는 바위타입 공격.\n4턴 동안 데미지를 준다.
+8,7,10052,거다이맥스한 사다이사가\n사용하는 땅타입 공격.\n4-5턴 동안 거친 모래바람이 분다.
+8,7,10053,거다이맥스한 오롱털이\n사용하는 악타입 공격.\n큰 하품으로 졸음을 유도한다.
+8,7,10054,거다이맥스한 애프룡이\n사용하는 풀타입 공격.\n상대의 회피율을 떨어뜨린다.
+8,7,10055,거다이맥스한 단지래플이\n사용하는 풀타입 공격.\n같은 편의 상태 이상을 회복한다.
+8,7,10056,거다이맥스한 브리무음이\n사용하는 페어리타입 공격.\n상대를 혼란시킨다.
+8,7,10057,거다이맥스한 대왕끼리동이\n사용하는 강철타입 공격.\n예리한 가시를 무수히 뿌린다.
+8,7,10058,거다이맥스한 멜메탈이\n사용하는 강철타입 공격.\n똑같은 기술을 연속으로 쓸 수 없게 한다.
+8,7,10059,거다이맥스한 킹크랩이\n사용하는 물타입 공격.\n상대의 스피드를 크게 떨어뜨린다.
+8,7,10060,거다이맥스한 다태우지네가\n사용하는 불꽃타입 공격.\n4-5턴 동안 불꽃 속에 가둔다.
+8,7,10061,거다이맥스한 이상해꽃이\n사용하는 풀타입 공격.\n4턴 동안 데미지를 준다.
+8,7,10062,거다이맥스한 거북왕이\n사용하는 물타입 공격.\n4턴 동안 데미지를 준다.
+8,7,10063,거다이맥스한 고릴타가\n사용하는 풀타입 공격.\n상대의 특성에 영향을 받지 않는다.
+8,7,10064,거다이맥스한 에이스번이\n사용하는 불꽃타입 공격.\n상대의 특성에 영향을 받지 않는다.
+8,7,10065,거다이맥스한 인텔리레온이\n사용하는 물타입 공격.\n상대의 특성에 영향을 받지 않는다.
+8,7,10066,거다이맥스한 우라오스가\n사용하는 악타입 공격.\n다이월을 무시하는 일격을 날린다.
+8,7,10067,거다이맥스한 우라오스가\n사용하는 물타입 공격.\n다이월을 무시하는 연격을 날린다.
 8,8,1,長い　しっぽや　手などを　使って\n相手を　はたいて　攻撃する。
 8,8,2,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 8,8,3,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
@@ -27264,6 +27607,55 @@ generation_id,language_id,move_id,description
 8,8,824,吹雪を　まとった　氷の　槍を\n相手に　投げつけて　攻撃する。
 8,8,825,たくさんの　小さな　霊体を\n相手に　ぶつけて　攻撃する。
 8,8,826,強力な　サイコパワーで　攻撃。\n相手が　最後に　使った技の\nＰＰを　３だけ　減らす。
+8,8,10001,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10002,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10003,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10004,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10005,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10006,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10007,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10008,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10009,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10010,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10011,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10012,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10013,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10014,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10015,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10016,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,10035,キョダイマックスした　リザードンが\n繰りだす　ほのおタイプの　攻撃。\n４ターンの　間　ダメージを　与える。
+8,8,10036,キョダイマックスした　バタフリーが\n繰りだす　むしタイプの　攻撃。\n毒・まひ・眠りの　どれかに　する。
+8,8,10037,キョダイマックスした　ピカチュウが\n繰りだす　でんきタイプの　攻撃。\n相手を　まひ状態に　する。
+8,8,10038,キョダイマックスした　ニャースが\n繰りだす　ノーマルタイプの　攻撃。\n相手を　混乱させ　お金も　もらえる。
+8,8,10039,キョダイマックスした　カイリキーが\n繰りだす　かくとうタイプの　攻撃。\n急所に　当たりやすく　なる。
+8,8,10040,キョダイマックスした　ゲンガーが\n繰りだす　ゴーストタイプの　攻撃。\n影を　踏み　交代　できなくする。
+8,8,10041,キョダイマックスした　ラプラスが\n繰りだす　こおりタイプの　攻撃。\n５ターンの　間　ダメージを　弱める。
+8,8,10042,キョダイマックスした　イーブイが\n繰りだす　ノーマルタイプの　攻撃。\n相手を　メロメロに　する。
+8,8,10043,キョダイマックスした　カビゴンが\n繰りだす　ノーマルタイプの　攻撃。\n食べた　きのみを　再生する。
+8,8,10044,キョダイマックスした　ダストダスが\n繰りだす　どくタイプの　攻撃。\n相手を　毒　状態に　する。
+8,8,10045,キョダイマックスした　カジリガメが\n繰りだす　みずタイプの　攻撃。\n鋭い　無数の　岩を　ばらまく。
+8,8,10046,キョダイマックスした　アーマーガアが\n繰りだす　ひこうタイプの　攻撃。\nリフレクターや　ひかりのかべを　消し去る。
+8,8,10047,キョダイマックスした　ストリンダーが\n繰りだす　でんきタイプの　攻撃。\n相手を　毒　か　まひ　どちらかにする。
+8,8,10048,キョダイマックスした　マホイップが\n繰りだす　フェアリータイプの　攻撃。\n味方の　ＨＰを　回復する。
+8,8,10049,キョダイマックスした　ジュラルドンが\n繰りだす　ドラゴンタイプの　攻撃。\n最後に　使われた　わざＰＰを　減らす。
+8,8,10050,キョダイマックスした　イオルブが\n繰りだす　エスパータイプの　攻撃。\n５ターンの　間　重力が　変わる。
+8,8,10051,キョダイマックスした　セキタンザンが\n繰りだす　いわタイプの　攻撃。\n４ターンの　間　ダメージを　与える。
+8,8,10052,キョダイマックスした　サダイジャが\n繰りだす　じめんタイプの　攻撃。\n４ー５ターンの間　砂が　吹き荒れる。
+8,8,10053,キョダイマックスした　オーロンゲが\n繰りだす　あくタイプの　攻撃。\n大きな　あくびで　眠気を　誘う。
+8,8,10054,キョダイマックスした　アップリューが\n繰りだす　くさタイプの　攻撃。\n相手の　回避率を　下げる。
+8,8,10055,キョダイマックスした　タルップルが\n繰りだす　くさタイプの　攻撃。\n味方の　状態異常を　回復する。
+8,8,10056,キョダイマックスした　ブリムオンが\n繰りだす　フェアリータイプの　攻撃。\n相手を　混乱させる。
+8,8,10057,キョダイマックスした　ダイオウドウが\n繰りだす　はがねタイプの　攻撃。\n鋭い　無数の　とげを　ばらまく。
+8,8,10058,キョダイマックスした　メルメタルが\n繰りだす　はがねタイプの　攻撃。\n同じ　技を　連続で　出せなくする。
+8,8,10059,キョダイマックスした　キングラーが\n繰りだす　みずタイプの　攻撃。\n相手の　素早さを　がくっと　さげる。
+8,8,10060,キョダイマックスした　マルヤクデが\n繰りだす　ほのおタイプの　攻撃。\n４ー５ターンの　間　炎に閉じこめる。
+8,8,10061,キョダイマックスした　フシギバナが\n繰りだす　くさタイプの　攻撃。\n４ターンの　間　ダメージを　与える。
+8,8,10062,キョダイマックスした　カメックスが\n繰りだす　みずタイプの　攻撃。\n４ターンの　間　ダメージを　与える。
+8,8,10063,キョダイマックスした　ゴリランダーが\n繰りだす　くさタイプの　攻撃。\n相手の　特性に　ジャマされない。
+8,8,10064,キョダイマックスした　エースバーンが\n繰りだす　ほのおタイプの　攻撃。\n相手の　特性に　ジャマされない。
+8,8,10065,キョダイマックスした　インテレオンが\n繰りだす　みずタイプの　攻撃。\n相手の　特性に　ジャマされない。
+8,8,10066,キョダイマックスした　ウーラオスが\n繰りだす　あくタイプの　攻撃。\nダイウォールを　無視できる　一撃。
+8,8,10067,キョダイマックスした　ウーラオスが\n繰りだす　みずタイプの　攻撃。\nダイウォールを　無視できる　連撃。
 8,9,1,使用长长的尾巴或手等\n拍打对手进行攻击。
 8,9,2,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
 8,9,3,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
@@ -28090,6 +28482,55 @@ generation_id,language_id,move_id,description
 8,9,824,向对手投掷\n掀起暴风雪的冰矛进行攻击。
 8,9,825,用大量的小灵体向\n对手发起攻击。
 8,9,826,用强大的精神力量攻击。\n让对手最后使用的招式\n减少３ＰＰ。
+8,9,10001,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10002,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10003,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10004,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10005,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10006,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10007,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10008,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10009,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10010,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10011,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10012,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10013,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10014,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10015,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10016,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,10035,超极巨化的喷火龙\n使出的火属性攻击。\n可在４回合内给予对手伤害。
+8,9,10036,超极巨化的巴大蝶\n使出的虫属性攻击。\n会让对手陷入中毒、麻痹或睡眠状态。
+8,9,10037,超极巨化的皮卡丘\n使出的电属性攻击。\n会让对手陷入麻痹状态。
+8,9,10038,超极巨化的喵喵\n使出的一般属性攻击。\n会让对手陷入混乱状态，并可获得金钱。
+8,9,10039,超极巨化的怪力\n使出的格斗属性攻击。\n会变得容易击中要害。
+8,9,10040,超极巨化的耿鬼\n使出的幽灵属性攻击。\n会踩住对手的影子，让其无法被替换。
+8,9,10041,超极巨化的拉普拉斯\n使出的冰属性攻击。\n可在５回合内减弱受到的伤害。
+8,9,10042,超极巨化的伊布\n使出的一般属性攻击。\n会让对手陷入着迷状态。
+8,9,10043,超极巨化的卡比兽\n使出的一般属性攻击。\n会让吃掉的树果再生。
+8,9,10044,超极巨化的灰尘山\n使出的毒属性攻击。\n会让对手陷入中毒状态。
+8,9,10045,超极巨化的暴噬龟\n使出的水属性攻击。\n会发射无数锐利的岩石。
+8,9,10046,超极巨化的钢铠鸦\n使出的飞行属性攻击。\n可消除反射壁和光墙。
+8,9,10047,超极巨化的颤弦蝾螈\n使出的电属性攻击。\n会让对手陷入中毒或麻痹状态。
+8,9,10048,超极巨化的霜奶仙\n使出的妖精属性攻击。\n可回复我方的ＨＰ。
+8,9,10049,超极巨化的铝钢龙\n使出的龙属性攻击。\n可减少对手最后使用的招式的ＰＰ。
+8,9,10050,超极巨化的以欧路普\n使出的超能力属性攻击。\n在５回合内重力会产生变化。
+8,9,10051,超极巨化的巨炭山\n使出的岩石属性攻击。\n可在４回合内给予对手伤害。
+8,9,10052,超极巨化的沙螺蟒\n使出的地面属性攻击。\n在４～５回合内会狂刮沙暴。
+8,9,10053,超极巨化的长毛巨魔\n使出的恶属性攻击。\n会通过打大哈欠让对手产生睡意。
+8,9,10054,超极巨化的苹裹龙\n使出的草属性攻击。\n会降低对手的闪避率。
+8,9,10055,超极巨化的丰蜜龙\n使出的草属性攻击。\n会治愈我方的异常状态。
+8,9,10056,超极巨化的布莉姆温\n使出的妖精属性攻击。\n会让对手陷入混乱状态。
+8,9,10057,超极巨化的大王铜象\n使出的钢属性攻击。\n会发射无数锐利的刺。
+8,9,10058,超极巨化的美录梅塔\n使出的钢属性攻击。\n会让对手无法连续使出相同的招式。
+8,9,10059,超极巨化的巨钳蟹\n使出的水属性攻击。\n会大幅降低对手的速度。
+8,9,10060,超极巨化的焚焰蚣\n使出的火属性攻击。\n可在４～５回合内将对手困在火焰中。
+8,9,10061,超极巨化的妙蛙花\n使出的草属性攻击。\n可在４回合内给予对手伤害。
+8,9,10062,超极巨化的水箭龟\n使出的水属性攻击。\n可在４回合内给予对手伤害。
+8,9,10063,超极巨化的轰擂金刚猩\n使出的草属性攻击。\n不会受到对手特性的干扰。
+8,9,10064,超极巨化的闪焰王牌\n使出的火属性攻击。\n不会受到对手特性的干扰。
+8,9,10065,超极巨化的千面避役\n使出的水属性攻击。\n不会受到对手特性的干扰。
+8,9,10066,超极巨化的武道熊师\n使出的恶属性攻击。\n是可以无视极巨防壁的一击。
+8,9,10067,超极巨化的武道熊师\n使出的水属性攻击。\n是可以无视极巨防壁的连击。
 8,10,1,使用長長的尾巴或手等\n拍打對手進行攻擊。
 8,10,2,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 8,10,3,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
@@ -28916,384 +29357,6 @@ generation_id,language_id,move_id,description
 8,10,824,向對手投擲\n捲著暴風雪的冰矛進行攻擊。
 8,10,825,向對手釋出大量的\n小靈體進行攻擊。
 8,10,826,用強大的精神力量攻擊。\n讓對手最近一次使用的招式\n減少３ＰＰ。
-8,1,10001,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10002,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10003,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10004,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10005,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10006,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10007,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10008,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10009,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10010,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10011,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10012,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10013,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10014,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10015,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10016,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,10035,キョダイマックスした　リザードンが\nくりだす　ほのおタイプの　こうげき。\n４ターンの　あいだ　ダメージを　あたえる。
-8,1,10036,キョダイマックスした　バタフリーが\nくりだす　むしタイプの　こうげき。\nどく・まひ・ねむりの　どれかに　する。
-8,1,10037,キョダイマックスした　ピカチュウが\nくりだす　でんきタイプの　こうげき。\nあいてを　まひ　じょうたいに　する。
-8,1,10038,キョダイマックスした　ニャースが\nくりだす　ノーマルタイプの　こうげき。\nあいてをこんらんさせ　おかねも　もらえる。
-8,1,10039,キョダイマックスした　カイリキーが\nくりだす　かくとうタイプの　こうげき。\nきゅうしょに　あたりやすく　なる。
-8,1,10040,キョダイマックスした　ゲンガーが\nくりだす　ゴーストタイプの　こうげき。\nかげを　ふみ　こうたい　できなくする。
-8,1,10041,キョダイマックスした　ラプラスが\nくりだす　こおりタイプの　こうげき。\n５ターンの　あいだ　ダメージを　よわめる。
-8,1,10042,キョダイマックスした　イーブイが\nくりだす　ノーマルタイプの　こうげき。\nあいてを　メロメロに　する。
-8,1,10043,キョダイマックスした　カビゴンが\nくりだす　ノーマルタイプの　こうげき。\nたべた　きのみを　さいせいする。
-8,1,10044,キョダイマックスした　ダストダスが\nくりだす　どくタイプの　こうげき。\nあいてを　どく　じょうたいに　する。
-8,1,10045,キョダイマックスした　カジリガメが\nくりだす　みずタイプの　こうげき。\nするどい　むすうの　いわを　ばらまく。
-8,1,10046,キョダイマックスした　アーマーガアが\nくりだす　ひこうタイプの　こうげき。\nリフレクターや　ひかりのかべを　けしさる。
-8,1,10047,キョダイマックスした　ストリンダーが\nくりだす　でんきタイプの　こうげき。\nあいてを　どく　か　まひ　どちらかにする。
-8,1,10048,キョダイマックスした　マホイップが\nくりだす　フェアリータイプの　こうげき。\nみかたの　ＨＰを　かいふくする。
-8,1,10049,キョダイマックスした　ジュラルドンが\nくりだす　ドラゴンタイプの　こうげき。\nさいごに　つかわれた　わざＰＰを　へらす。
-8,1,10050,キョダイマックスした　イオルブが\nくりだす　エスパータイプの　こうげき。\n５ターンのあいだ　じゅうりょくが　かわる。
-8,1,10051,キョダイマックスした　セキタンザンが\nくりだす　いわタイプの　こうげき。\n４ターンの　あいだ　ダメージを　あたえる。
-8,1,10052,キョダイマックスした　サダイジャが\nくりだす　じめんタイプの　こうげき。\n４ー５ターンのあいだ　すなが　ふきあれる。
-8,1,10053,キョダイマックスした　オーロンゲが\nくりだす　あくタイプの　こうげき。\nおおきな　あくびで　ねむけを　さそう。
-8,1,10054,キョダイマックスした　アップリューが\nくりだす　くさタイプの　こうげき。\nあいての　かいひりつを　さげる。
-8,1,10055,キョダイマックスした　タルップルが\nくりだす　くさタイプの　こうげき。みかたの\nじょうたいいじょうを　かいふくする。
-8,1,10056,キョダイマックスした　ブリムオンが\nくりだす　フェアリータイプの　こうげき。\nあいてを　こんらん　させる。
-8,1,10057,キョダイマックスした　ダイオウドウが\nくりだす　はがねタイプの　こうげき。\nするどい　むすうの　とげを　ばらまく。
-8,1,10058,キョダイマックスした　メルメタルが\nくりだす　はがねタイプの　こうげき。\nおなじ　わざを　れんぞくで　だせなくする。
-8,1,10059,キョダイマックスした　キングラーが\nくりだす　みずタイプの　こうげき。\nあいての　すばやさを　がくっと　さげる。
-8,1,10060,キョダイマックスした　マルヤクデが\nくりだす　ほのおタイプの　こうげき。\n４ー５ターンのあいだ　ほのおにとじこめる。
-8,2,10001,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10002,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10003,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10004,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10005,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10006,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10007,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10008,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10009,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10010,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10011,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10012,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10013,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10014,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10015,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10016,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,10035,A Fire-type attack that Gigantamax Charizard use.\nThis move continues to deal damage to opponents\nfor four turns.
-8,2,10036,"A Bug-type attack that Gigantamax Butterfree use.\nThis move inflicts the poisoned, paralyzed, or\nasleep status condition on opponents."
-8,2,10037,An Electric-type attack that Gigantamax Pikachu use.\nThis move paralyzes opponents.
-8,2,10038,A Normal-type attack that Gigantamax Meowth use.\nThis move confuses opponents and also earns\nextra money.
-8,2,10039,A Fighting-type attack that Gigantamax Machamp use.\nThis move raises the chance of critical hits.
-8,2,10040,A Ghost-type attack that Gigantamax Gengar use.\nThis Pokémon steps on the opposing Pokémon’s shadow\nto prevent them from escaping.
-8,2,10041,An Ice-type attack that Gigantamax Lapras use.\nThis move reduces the damage received for five turns.
-8,2,10042,A Normal-type attack that Gigantamax Eevee use.\nThis move infatuates opponents.
-8,2,10043,A Normal-type attack that Gigantamax Snorlax use.\nThis move restores Berries that have been eaten.
-8,2,10044,A Poison-type attack that Gigantamax Garbodor use.\nThis move poisons opponents.
-8,2,10045,A Water-type attack that Gigantamax Drednaw use.\nThis move scatters sharp rocks around the field.
-8,2,10046,A Flying-type attack that Gigantamax Corviknight use.\nThis move removes the effects of moves like Reflect and\nLight Screen.
-8,2,10047,An Electric-type attack that Gigantamax Toxtricity use.\nThis move poisons or paralyzes opponents.
-8,2,10048,A Fairy-type attack that Gigantamax Alcremie use.\nThis move heals the HP of allies.
-8,2,10049,A Dragon-type attack that Gigantamax Duraludon use.\nReduces the PP of the last move used.
-8,2,10050,A Psychic-type attack that Gigantamax Orbeetle use.\nThis move changes gravity for five turns.
-8,2,10051,A Rock-type attack that Gigantamax Coalossal use.\nThis move continues to deal damage to opponents\nfor four turns.
-8,2,10052,A Ground-type attack that Gigantamax Sandaconda use.\nOpponents are trapped in a raging sandstorm for\nfour to five turns.
-8,2,10053,A Dark-type attack that Gigantamax Grimmsnarl use.\nThe user lets loose a huge yawn that lulls the targets\ninto falling asleep on the next turn.
-8,2,10054,A Grass-type attack that Gigantamax Flapple use.\nThis move reduces the opponents’ evasiveness.
-8,2,10055,A Grass-type attack that Gigantamax Appletun use.\nThis move heals the status conditions of allies.
-8,2,10056,A Fairy-type attack that Gigantamax Hatterene use.\nThis move confuses opponents.
-8,2,10057,A Steel-type attack that Gigantamax Copperajah use.\nThis move scatters sharp spikes around the field.
-8,2,10058,A Steel-type attack that Gigantamax Melmetal use.\nThis move makes opponents incapable of using the\nsame move twice in a row.
-8,2,10059,A Water-type attack that Gigantamax Kingler use.\nThis move harshly lowers the Speed of opponents.
-8,2,10060,A Fire-type attack that Gigantamax Centiskorch use.\nThis move traps opponents in flames for four to\nfive turns.
-8,3,10001,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10002,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10003,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10004,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10005,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10006,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10007,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10008,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10009,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10010,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10011,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10012,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10013,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10014,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10015,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10016,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,10035,"Une attaque de type Feu que seul un Dracaufeu\nGigamax peut utiliser. Pendant quatre tours,\nla cible continue de subir des dégâts."
-8,3,10036,"Une attaque de type Insecte que seul un Papilusion\nGigamax peut utiliser.\nEmpoisonne, paralyse ou endort la cible."
-8,3,10037,Une attaque de type Électrik que seul un Pikachu\nGigamax peut utiliser. Paralyse la cible.
-8,3,10038,Une attaque de type Normal que seul un Miaouss\nGigamax peut utiliser. Rend la cible confuse\net permet d’obtenir de l’argent à la fin du combat.
-8,3,10039,Une attaque de type Combat que seul un Mackogneur\nGigamax peut utiliser. Augmente le taux de critiques\ndu lanceur et de ses alliés.
-8,3,10040,Une attaque de type Spectre que seul un Ectoplasma\nGigamax peut utiliser. Empêche les Pokémon ennemis\nde quitter le combat.
-8,3,10041,Une attaque de type Glace que seul un Lokhlass\nGigamax peut utiliser. Réduit les dégâts causés\npar des capacités pendant cinq tours.
-8,3,10042,Une attaque de type Normal que seul un Évoli\nGigamax peut utiliser. Rend la cible amoureuse.
-8,3,10043,Une attaque de type Normal que seul un Ronflex\nGigamax peut utiliser. Restaure une Baie tenue\nqui a déjà été mangée.
-8,3,10044,Une attaque de type Poison que seul un Miasmax\nGigamax peut utiliser. Empoisonne la cible.
-8,3,10045,Une attaque de type Eau que seul un Torgamord\nGigamax peut utiliser. Disperse des pierres aiguisées\nsur le terrain.
-8,3,10046,Une attaque de type Vol que seul un Corvaillus\nGigamax peut utiliser. Permet de briser les barrières\ncomme Protection et Mur Lumière.
-8,3,10047,Une attaque de type Électrik que seul un Salarsen\nGigamax peut utiliser. Empoisonne ou paralyse la cible.
-8,3,10048,Une attaque de type Fée que seul un Charmilly\nGigamax peut utiliser. Restaure des PV aux alliés.
-8,3,10049,Une attaque de type Dragon que seul un Duralugon\nGigamax peut utiliser. Baisse les PP de la dernière\ncapacité utilisée par la cible.
-8,3,10050,Une attaque de type Psy que seul un Astronelle\nGigamax peut utiliser. Intensifie la gravité\npendant cinq tours.
-8,3,10051,"Une attaque de type Roche que seul un Monthracite\nGigamax peut utiliser. Pendant quatre tours,\nla cible continue de subir des dégâts."
-8,3,10052,Une attaque de type Sol que seul un Dunaconda\nGigamax peut utiliser. Emprisonne la cible dans\nune tempête de sable qui dure de quatre à cinq tours.
-8,3,10053,Une attaque de type Ténèbres que seul un Angoliath\nGigamax peut utiliser. Fait bâiller la cible qui s’endort\nau tour suivant.
-8,3,10054,Une attaque de type Plante que seul un Pomdrapi\nGigamax peut utiliser. Réduit l’Esquive de la cible.
-8,3,10055,Une attaque de type Plante que seul un Dratatin\nGigamax peut utiliser. Soigne les altérations de statut\ndes alliés.
-8,3,10056,Une attaque de type Fée que seul un Sorcilence\nGigamax peut utiliser. Rend la cible confuse.
-8,3,10057,Une attaque de type Acier que seul un Pachyradjah\nGigamax peut utiliser. Disperse des pics aiguisés\nsur le terrain.
-8,3,10058,Une attaque de type Acier que seul un Melmetal\nGigamax peut utiliser. Empêche la cible d’utiliser\nla même capacité deux fois de suite.
-8,3,10059,Une attaque de type Eau que seul un Krabboss\nGigamax peut utiliser. Réduit beaucoup la Vitesse\nde la cible.
-8,3,10060,Une attaque de type Feu que seul un Scolocendre\nGigamax peut utiliser. Emprisonne la cible dans\nun tourbillon de flammes qui dure de quatre à cinq tours.
-8,4,10001,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10002,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10003,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10004,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10005,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10006,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10007,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10008,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10009,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10010,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10011,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10012,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10013,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10014,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10015,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10016,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,10035,"Eine Feuer-Attacke, die nur Gigadynamax-Glurak\neinsetzen kann. Fügt vier Runden lang Schaden zu."
-8,4,10036,"Eine Käfer-Attacke, die nur Gigadynamax-Smettbo\neinsetzen kann. Gegnerische Pokémon werden entweder\nvergiftet, paralysiert oder in Schlaf versetzt."
-8,4,10037,"Eine Elektro-Attacke, die nur Gigadynamax-Pikachu\neinsetzen kann. Gegnerische Pokémon werden\nparalysiert."
-8,4,10038,"Eine Normal-Attacke, die nur Gigadynamax-Mauzi\neinsetzen kann. Verwirrt Gegner und bringt nach dem\nKampf Geld ein."
-8,4,10039,"Eine Kampf-Attacke, die nur Gigadynamax-Machomei\neinsetzen kann. Erhöht die Volltrefferquote auf\nMitstreiterseite."
-8,4,10040,"Eine Geister-Attacke, die nur Gigadynamax-Gengar\neinsetzen kann. Hindert gegnerische Pokémon an der\nFlucht beziehungsweise am Auswechseln."
-8,4,10041,"Eine Eis-Attacke, die nur Gigadynamax-Lapras\neinsetzen kann. Reduziert fünf Runden lang den\nerlittenen Schaden."
-8,4,10042,"Eine Normal-Attacke, die nur Gigadynamax-Evoli\neinsetzen kann. Gegnerische Pokémon verlieben\nsich in es."
-8,4,10043,"Eine Normal-Attacke, die nur Gigadynamax-Relaxo\neinsetzen kann. Stellt bereits verzehrte Beeren\nwieder her."
-8,4,10044,"Eine Gift-Attacke, die nur Gigadynamax-Deponitox\neinsetzen kann. Vergiftet gegnerische Pokémon."
-8,4,10045,"Eine Wasser-Attacke, die nur Gigadynamax-Kamalm\neinsetzen kann. Verstreut viele spitze Steinbrocken\nauf dem Kampffeld."
-8,4,10046,"Eine Flug-Attacke, die nur Gigadynamax-Krarmor\neinsetzen kann. Beseitigt die Effekte von Attacken wie\nReflektor und Lichtschild."
-8,4,10047,"Eine Elektro-Attacke, die nur Gigadynamax-Riffex\neinsetzen kann. Vergiftet oder paralysiert gegnerische\nPokémon."
-8,4,10048,"Eine Feen-Attacke, die nur Gigadynamax-Pokusan\neinsetzen kann. Füllt die KP auf Mitstreiterseite auf."
-8,4,10049,"Eine Drachen-Attacke, die nur Gigadynamax-Duraludon\neinsetzen kann. AP der letzten Attacke, die gegnerische\nPokémon eingesetzt haben, werden gesenkt."
-8,4,10050,"Eine Psycho-Attacke, die nur Gigadynamax-Maritellit\neinsetzen kann. Ändert die Erdanziehung für fünf\nRunden."
-8,4,10051,"Eine Gesteins-Attacke, die nur Gigadynamax-\nMontecarbo einsetzen kann. Fügt vier Runden\nlang Schaden zu."
-8,4,10052,"Eine Boden-Attacke, die nur Gigadynamax-Sanaconda\neinsetzen kann. Eine Sandhose wütet für vier bis fünf\nRunden."
-8,4,10053,"Eine Unlicht-Attacke, die nur Gigadynamax-Olangaar\neinsetzen kann. Mit einem großen Gähner wird das Ziel\nmüde gemacht und schläft in der nächsten Runde ein."
-8,4,10054,"Eine Pflanzen-Attacke, die nur Gigadynamax-Drapfel\neinsetzen kann. Senkt den Ausweichwert der\ngegnerischen Pokémon."
-8,4,10055,"Eine Pflanzen-Attacke, die nur Gigadynamax-Schlapfel\neinsetzen kann. Heilt Statusprobleme auf\nMitstreiterseite."
-8,4,10056,"Eine Feen-Attacke, die nur Gigadynamax-Silembrim\neinsetzen kann. Verwirrt gegnerische Pokémon."
-8,4,10057,"Eine Stahl-Attacke, die nur Gigadynamax-Patinaraja\neinsetzen kann. Verstreut viele zackige Stahlsplitter\nauf dem Kampffeld."
-8,4,10058,"Eine Stahl-Attacke, die nur Gigadynamax-Melmetal\neinsetzen kann. Hindert Gegner am wiederholten\nEinsatz derselben Attacke."
-8,4,10059,"Eine Wasser-Attacke, die nur Gigadynamax-Kingler\neinsetzen kann. Senkt die Initiative der gegnerischen\nPokémon stark."
-8,4,10060,"Eine Feuer-Attacke, die nur Gigadynamax-Infernopod\neinsetzen kann. Schließt gegnerische Pokémon vier bis\nfünf Runden in wirbelnden Flammen ein."
-8,5,10001,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10002,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10003,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10004,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10005,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10006,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10007,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10008,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10009,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10010,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10011,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10012,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10013,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10014,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10015,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10016,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,10035,Attacco di tipo Fuoco eseguito da Charizard Gigamax.\nInfligge danni per quattro turni.
-8,5,10036,"Attacco di tipo Coleottero eseguito da Butterfree\nGigamax. Avvelena, paralizza o addormenta i nemici."
-8,5,10037,Attacco di tipo Elettro eseguito da Pikachu Gigamax.\nParalizza i nemici.
-8,5,10038,Attacco di tipo Normale eseguito da Meowth Gigamax.\nConfonde i nemici e permette anche di ricevere una\nricompensa maggiore.
-8,5,10039,Attacco di tipo Lotta eseguito da Machamp Gigamax.\nAumenta la probabilità di sferrare brutti colpi.
-8,5,10040,Attacco di tipo Spettro eseguito da Gengar Gigamax.\nIl Pokémon calpesta l’ombra del nemico impedendogli\nla fuga o la sostituzione.
-8,5,10041,Attacco di tipo Ghiaccio eseguito da Lapras Gigamax.\nRiduce i danni subiti per cinque turni.
-8,5,10042,Attacco di tipo Normale eseguito da Eevee Gigamax.\nFa infatuare i nemici.
-8,5,10043,Attacco di tipo Normale eseguito da Snorlax Gigamax.\nRigenera le bacche mangiate.
-8,5,10044,Attacco di tipo Veleno eseguito da Garbodor Gigamax.\nAvvelena i nemici.
-8,5,10045,Attacco di tipo Acqua eseguito da Drednaw Gigamax.\nSparge rocce aguzze sul campo di lotta.
-8,5,10046,Attacco di tipo Volante eseguito da Corviknight\nGigamax. Annulla l’effetto di mosse come Riflesso\ne Schermoluce.
-8,5,10047,Attacco di tipo Elettro eseguito da Toxtricity Gigamax.\nAvvelena o paralizza i nemici.
-8,5,10048,Attacco di tipo Folletto eseguito da Alcremie Gigamax.\nFa recuperare PS agli alleati.
-8,5,10049,Attacco di tipo Drago eseguito da Duraludon Gigamax.\nToglie PP all’ultima mossa usata dai nemici.
-8,5,10050,Attacco di tipo Psico eseguito da Orbeetle Gigamax.\nCambia la gravità per cinque turni.
-8,5,10051,Attacco di tipo Roccia eseguito da Coalossal Gigamax.\nInfligge danni per quattro turni.
-8,5,10052,Attacco di tipo Terra eseguito da Sandaconda Gigamax.\nScatena un turbine di sabbia per quattro o cinque turni.
-8,5,10053,Attacco di tipo Buio eseguito da Grimmsnarl Gigamax.\nChi la usa fa un grande sbadiglio che fa addormentare\nil nemico al turno successivo.
-8,5,10054,Attacco di tipo Erba eseguito da Flapple Gigamax.\nRiduce l’elusione dei nemici.
-8,5,10055,Attacco di tipo Erba eseguito da Appletun Gigamax.\nCura i problemi di stato degli alleati.
-8,5,10056,Attacco di tipo Folletto eseguito da Hatterene Gigamax.\nConfonde i nemici.
-8,5,10057,Attacco di tipo Acciaio eseguito da Copperajah\nGigamax. Sparge pezzi di metallo acuminati sul\ncampo di lotta.
-8,5,10058,Attacco di tipo Acciaio eseguito da Melmetal Gigamax.\nImpedisce ai nemici di usare la stessa mossa due volte\ndi seguito.
-8,5,10059,Attacco di tipo Acqua eseguito da Kingler Gigamax.\nRiduce di molto la Velocità dei nemici.
-8,5,10060,Attacco di tipo Fuoco eseguito da Centiskorch Gigamax.\nIntrappola i nemici nelle fiamme per quattro o cinque\nturni.
-8,6,10001,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10002,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10003,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10004,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10005,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10006,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10007,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10008,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10009,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10010,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10011,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10012,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10013,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10014,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10015,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10016,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,10035,Ataque de tipo Fuego ejecutado por un Charizard\nGigamax. Inflige daño durante cuatro turnos.
-8,6,10036,"Ataque de tipo Bicho ejecutado por un Butterfree\nGigamax. Envenena, paraliza o duerme al objetivo."
-8,6,10037,Ataque de tipo Eléctrico ejecutado por un Pikachu\nGigamax. Paraliza al objetivo.
-8,6,10038,Ataque de tipo Normal ejecutado por un Meowth\nGigamax. Confunde al objetivo y aumenta la\nrecompensa recibida tras el combate.
-8,6,10039,Ataque de tipo Lucha ejecutado por un Machamp\nGigamax. Aumenta las posibilidades de que el usuario\ny sus aliados asesten un golpe crítico.
-8,6,10040,Ataque de tipo Fantasma ejecutado por un Gengar\nGigamax. Impide que el objetivo sea cambiado por\notro.
-8,6,10041,Ataque de tipo Hielo ejecutado por un Lapras Gigamax.\nReduce el daño recibido durante cinco turnos.
-8,6,10042,Ataque de tipo Normal ejecutado por un Eevee\nGigamax. Hace que el objetivo se enamore.
-8,6,10043,Ataque de tipo Normal ejecutado por un Snorlax\nGigamax. Restaura las bayas que se hayan consumido.
-8,6,10044,Ataque de tipo Veneno ejecutado por un Garbodor\nGigamax. Envenena al objetivo.
-8,6,10045,Ataque de tipo Agua ejecutado por un Drednaw\nGigamax. Esparce rocas afiladas por el terreno de\ncombate.
-8,6,10046,Ataque de tipo Volador ejecutado por un Corviknight\nGigamax. Es capaz de destruir barreras como las\ncreadas por Pantalla de Luz y Reflejo.
-8,6,10047,Ataque de tipo Eléctrico ejecutado por un Toxtricity\nGigamax. Envenena o paraliza al objetivo.
-8,6,10048,Ataque de tipo Hada ejecutado por un Alcremie\nGigamax. Restaura los PS de tu bando.
-8,6,10049,Ataque de tipo Dragón ejecutado por un Duraludon\nGigamax. Reduce PP del último movimiento usado por\nel objetivo.
-8,6,10050,Ataque de tipo Psíquico ejecutado por un Orbeetle\nGigamax. Intensifica la fuerza de gravedad durante\ncinco turnos.
-8,6,10051,Ataque de tipo Roca ejecutado por un Coalossal\nGigamax. Inflige daño durante cuatro turnos.
-8,6,10052,Ataque de tipo Tierra ejecutado por un Sandaconda\nGigamax. Enreda al objetivo en un remolino de arena\nde cuatro a cinco turnos.
-8,6,10053,Ataque de tipo Siniestro ejecutado por un Grimmsnarl\nGigamax. Induce al sueño al objetivo en el siguiente\nturno.
-8,6,10054,Ataque de tipo Planta ejecutado por un Flapple\nGigamax. Reduce la Evasión del objetivo.
-8,6,10055,Ataque de tipo Planta ejecutado por un Appletun\nGigamax. Cura los problemas de estado de tu bando.
-8,6,10056,Ataque de tipo Hada ejecutado por un Hatterene\nGigamax. Confunde al objetivo.
-8,6,10057,Ataque de tipo Acero ejecutado por un Copperajah\nGigamax. Esparce púas de acero por el terreno de\ncombate.
-8,6,10058,Ataque de tipo Acero ejecutado por un Melmetal\nGigamax. Impide al objetivo usar el mismo movimiento\ndos veces seguidas.
-8,6,10059,Ataque de tipo Agua ejecutado por un Kingler Gigamax.\nReduce mucho la Velocidad del objetivo.
-8,6,10060,Ataque de tipo Fuego ejecutado por un Centiskorch\nGigamax. Un aro de fuego atrapa al objetivo de cuatro\na cinco turnos.
-8,7,10001,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10002,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10003,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10004,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10005,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10006,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10007,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10008,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10009,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10010,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10011,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10012,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10013,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10014,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10015,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10016,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,10035,거다이맥스한 리자몽이\n사용하는 불꽃타입 공격.\n4턴 동안 데미지를 준다.
-8,7,10036,거다이맥스한 버터플이\n사용하는 벌레타입 공격.\n독 마비 잠듦 중 어느 하나로 만든다.
-8,7,10037,거다이맥스한 피카츄가\n사용하는 전기타입 공격.\n상대를 마비 상태로 만든다.
-8,7,10038,거다이맥스한 나옹이\n사용하는 노말타입 공격.\n상대를 혼란시키고 돈도 받을 수 있다.
-8,7,10039,거다이맥스한 괴력몬이\n사용하는 격투타입 공격.\n급소에 맞기 쉬워진다.
-8,7,10040,거다이맥스한 팬텀이\n사용하는 고스트타입 공격.\n그림자를 밟아 교체할 수 없게 한다.
-8,7,10041,거다이맥스한 라프라스가\n사용하는 얼음타입 공격.\n5턴 동안 데미지를 약하게 한다.
-8,7,10042,거다이맥스한 이브이가\n사용하는 노말타입 공격.\n상대를 헤롱헤롱하게 만든다.
-8,7,10043,거다이맥스한 잠만보가\n사용하는 노말타입 공격.\n먹은 나무열매를 재생한다.
-8,7,10044,거다이맥스한 더스트나가\n사용하는 독타입 공격.\n상대를 독 상태로 만든다.
-8,7,10045,거다이맥스한 갈가부기가\n사용하는 물타입 공격.\n예리한 바위를 무수히 뿌린다.
-8,7,10046,거다이맥스한 아머까오가\n사용하는 비행타입 공격.\n리플렉터나 빛의장막을 없앤다.
-8,7,10047,거다이맥스한 스트린더가\n사용하는 전기타입 공격.\n상대를 독 또는 마비 어느 하나로 만든다.
-8,7,10048,거다이맥스한 마휘핑이\n사용하는 페어리타입 공격.\n같은 편의 HP를 회복한다.
-8,7,10049,거다이맥스한 두랄루돈이\n사용하는 드래곤타입 공격.\n마지막에 사용한 기술의 PP를 줄인다.
-8,7,10050,거다이맥스한 이올브가\n사용하는 에스퍼타입 공격.\n5턴 동안 중력이 바뀐다.
-8,7,10051,거다이맥스한 석탄산이\n사용하는 바위타입 공격.\n4턴 동안 데미지를 준다.
-8,7,10052,거다이맥스한 사다이사가\n사용하는 땅타입 공격.\n4-5턴 동안 거친 모래바람이 분다.
-8,7,10053,거다이맥스한 오롱털이\n사용하는 악타입 공격.\n큰 하품으로 졸음을 유도한다.
-8,7,10054,거다이맥스한 애프룡이\n사용하는 풀타입 공격.\n상대의 회피율을 떨어뜨린다.
-8,7,10055,거다이맥스한 단지래플이\n사용하는 풀타입 공격.\n같은 편의 상태 이상을 회복한다.
-8,7,10056,거다이맥스한 브리무음이\n사용하는 페어리타입 공격.\n상대를 혼란시킨다.
-8,7,10057,거다이맥스한 대왕끼리동이\n사용하는 강철타입 공격.\n예리한 가시를 무수히 뿌린다.
-8,7,10058,거다이맥스한 멜메탈이\n사용하는 강철타입 공격.\n똑같은 기술을 연속으로 쓸 수 없게 한다.
-8,7,10059,거다이맥스한 킹크랩이\n사용하는 물타입 공격.\n상대의 스피드를 크게 떨어뜨린다.
-8,7,10060,거다이맥스한 다태우지네가\n사용하는 불꽃타입 공격.\n4-5턴 동안 불꽃 속에 가둔다.
-8,8,10001,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10002,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10003,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10004,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10005,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10006,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10007,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10008,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10009,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10010,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10011,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10012,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10013,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10014,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10015,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10016,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,10035,キョダイマックスした　リザードンが\n繰りだす　ほのおタイプの　攻撃。\n４ターンの　間　ダメージを　与える。
-8,8,10036,キョダイマックスした　バタフリーが\n繰りだす　むしタイプの　攻撃。\n毒・まひ・眠りの　どれかに　する。
-8,8,10037,キョダイマックスした　ピカチュウが\n繰りだす　でんきタイプの　攻撃。\n相手を　まひ状態に　する。
-8,8,10038,キョダイマックスした　ニャースが\n繰りだす　ノーマルタイプの　攻撃。\n相手を　混乱させ　お金も　もらえる。
-8,8,10039,キョダイマックスした　カイリキーが\n繰りだす　かくとうタイプの　攻撃。\n急所に　当たりやすく　なる。
-8,8,10040,キョダイマックスした　ゲンガーが\n繰りだす　ゴーストタイプの　攻撃。\n影を　踏み　交代　できなくする。
-8,8,10041,キョダイマックスした　ラプラスが\n繰りだす　こおりタイプの　攻撃。\n５ターンの　間　ダメージを　弱める。
-8,8,10042,キョダイマックスした　イーブイが\n繰りだす　ノーマルタイプの　攻撃。\n相手を　メロメロに　する。
-8,8,10043,キョダイマックスした　カビゴンが\n繰りだす　ノーマルタイプの　攻撃。\n食べた　きのみを　再生する。
-8,8,10044,キョダイマックスした　ダストダスが\n繰りだす　どくタイプの　攻撃。\n相手を　毒　状態に　する。
-8,8,10045,キョダイマックスした　カジリガメが\n繰りだす　みずタイプの　攻撃。\n鋭い　無数の　岩を　ばらまく。
-8,8,10046,キョダイマックスした　アーマーガアが\n繰りだす　ひこうタイプの　攻撃。\nリフレクターや　ひかりのかべを　消し去る。
-8,8,10047,キョダイマックスした　ストリンダーが\n繰りだす　でんきタイプの　攻撃。\n相手を　毒　か　まひ　どちらかにする。
-8,8,10048,キョダイマックスした　マホイップが\n繰りだす　フェアリータイプの　攻撃。\n味方の　ＨＰを　回復する。
-8,8,10049,キョダイマックスした　ジュラルドンが\n繰りだす　ドラゴンタイプの　攻撃。\n最後に　使われた　わざＰＰを　減らす。
-8,8,10050,キョダイマックスした　イオルブが\n繰りだす　エスパータイプの　攻撃。\n５ターンの　間　重力が　変わる。
-8,8,10051,キョダイマックスした　セキタンザンが\n繰りだす　いわタイプの　攻撃。\n４ターンの　間　ダメージを　与える。
-8,8,10052,キョダイマックスした　サダイジャが\n繰りだす　じめんタイプの　攻撃。\n４ー５ターンの間　砂が　吹き荒れる。
-8,8,10053,キョダイマックスした　オーロンゲが\n繰りだす　あくタイプの　攻撃。\n大きな　あくびで　眠気を　誘う。
-8,8,10054,キョダイマックスした　アップリューが\n繰りだす　くさタイプの　攻撃。\n相手の　回避率を　下げる。
-8,8,10055,キョダイマックスした　タルップルが\n繰りだす　くさタイプの　攻撃。\n味方の　状態異常を　回復する。
-8,8,10056,キョダイマックスした　ブリムオンが\n繰りだす　フェアリータイプの　攻撃。\n相手を　混乱させる。
-8,8,10057,キョダイマックスした　ダイオウドウが\n繰りだす　はがねタイプの　攻撃。\n鋭い　無数の　とげを　ばらまく。
-8,8,10058,キョダイマックスした　メルメタルが\n繰りだす　はがねタイプの　攻撃。\n同じ　技を　連続で　出せなくする。
-8,8,10059,キョダイマックスした　キングラーが\n繰りだす　みずタイプの　攻撃。\n相手の　素早さを　がくっと　さげる。
-8,8,10060,キョダイマックスした　マルヤクデが\n繰りだす　ほのおタイプの　攻撃。\n４ー５ターンの　間　炎に閉じこめる。
-8,9,10001,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10002,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10003,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10004,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10005,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10006,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10007,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10008,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10009,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10010,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10011,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10012,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10013,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10014,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10015,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10016,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,10035,超极巨化的喷火龙\n使出的火属性攻击。\n可在４回合内给予对手伤害。
-8,9,10036,超极巨化的巴大蝶\n使出的虫属性攻击。\n会让对手陷入中毒、麻痹或睡眠状态。
-8,9,10037,超极巨化的皮卡丘\n使出的电属性攻击。\n会让对手陷入麻痹状态。
-8,9,10038,超极巨化的喵喵\n使出的一般属性攻击。\n会让对手陷入混乱状态，并可获得金钱。
-8,9,10039,超极巨化的怪力\n使出的格斗属性攻击。\n会变得容易击中要害。
-8,9,10040,超极巨化的耿鬼\n使出的幽灵属性攻击。\n会踩住对手的影子，让其无法被替换。
-8,9,10041,超极巨化的拉普拉斯\n使出的冰属性攻击。\n可在５回合内减弱受到的伤害。
-8,9,10042,超极巨化的伊布\n使出的一般属性攻击。\n会让对手陷入着迷状态。
-8,9,10043,超极巨化的卡比兽\n使出的一般属性攻击。\n会让吃掉的树果再生。
-8,9,10044,超极巨化的灰尘山\n使出的毒属性攻击。\n会让对手陷入中毒状态。
-8,9,10045,超极巨化的暴噬龟\n使出的水属性攻击。\n会发射无数锐利的岩石。
-8,9,10046,超极巨化的钢铠鸦\n使出的飞行属性攻击。\n可消除反射壁和光墙。
-8,9,10047,超极巨化的颤弦蝾螈\n使出的电属性攻击。\n会让对手陷入中毒或麻痹状态。
-8,9,10048,超极巨化的霜奶仙\n使出的妖精属性攻击。\n可回复我方的ＨＰ。
-8,9,10049,超极巨化的铝钢龙\n使出的龙属性攻击。\n可减少对手最后使用的招式的ＰＰ。
-8,9,10050,超极巨化的以欧路普\n使出的超能力属性攻击。\n在５回合内重力会产生变化。
-8,9,10051,超极巨化的巨炭山\n使出的岩石属性攻击。\n可在４回合内给予对手伤害。
-8,9,10052,超极巨化的沙螺蟒\n使出的地面属性攻击。\n在４～５回合内会狂刮沙暴。
-8,9,10053,超极巨化的长毛巨魔\n使出的恶属性攻击。\n会通过打大哈欠让对手产生睡意。
-8,9,10054,超极巨化的苹裹龙\n使出的草属性攻击。\n会降低对手的闪避率。
-8,9,10055,超极巨化的丰蜜龙\n使出的草属性攻击。\n会治愈我方的异常状态。
-8,9,10056,超极巨化的布莉姆温\n使出的妖精属性攻击。\n会让对手陷入混乱状态。
-8,9,10057,超极巨化的大王铜象\n使出的钢属性攻击。\n会发射无数锐利的刺。
-8,9,10058,超极巨化的美录梅塔\n使出的钢属性攻击。\n会让对手无法连续使出相同的招式。
-8,9,10059,超极巨化的巨钳蟹\n使出的水属性攻击。\n会大幅降低对手的速度。
-8,9,10060,超极巨化的焚焰蚣\n使出的火属性攻击。\n可在４～５回合内将对手困在火焰中。
 8,10,10001,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 8,10,10002,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 8,10,10003,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
@@ -29336,3 +29399,10 @@ generation_id,language_id,move_id,description
 8,10,10058,超極巨化美錄梅塔\n使出的鋼屬性攻擊。\n會讓對手無法連續使出相同招式。
 8,10,10059,超極巨化巨鉗蟹\n使出的水屬性攻擊。\n會大幅降低對手的速度。
 8,10,10060,超極巨化焚焰蚣\n使出的火屬性攻擊。\n會在４～５回合內將對手困在火中。
+8,10,10061,超極巨化妙蛙花\n使出的草屬性攻擊。\n可在４回合內給予對手傷害。
+8,10,10062,超極巨化水箭龜\n使出的水屬性攻擊。\n可在４回合內給予對手傷害。
+8,10,10063,超極巨化轟擂金剛猩\n使出的草屬性攻擊。\n不會受到對手特性的干擾。
+8,10,10064,超極巨化閃焰王牌\n使出的火屬性攻擊。\n不會受到對手特性的干擾。
+8,10,10065,超極巨化千面避役\n使出的水屬性攻擊。\n不會受到對手特性的干擾。
+8,10,10066,超極巨化武道熊師\n使出的惡屬性攻擊。\n是可以無視極巨防壁的一擊。
+8,10,10067,超極巨化武道熊師\n使出的水屬性攻擊。\n是可以無視極巨防壁的連擊。

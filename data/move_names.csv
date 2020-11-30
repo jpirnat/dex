@@ -885,6 +885,13 @@ language_id,move_id,name
 1,10058,キョダイユウゲキ
 1,10059,キョダイホウマツ
 1,10060,キョダイヒャッカ
+1,10061,キョダイベンタツ
+1,10062,キョダイホウゲキ
+1,10063,キョダイコランダ
+1,10064,キョダイカキュウ
+1,10065,キョダイソゲキ
+1,10066,キョダイイチゲキ
+1,10067,キョダイレンゲキ
 2,1,Pound
 2,2,Karate Chop
 2,3,Double Slap
@@ -1771,6 +1778,13 @@ language_id,move_id,name
 2,10058,G-Max Meltdown
 2,10059,G-Max Foam Burst
 2,10060,G-Max Centiferno
+2,10061,G-Max Vine Lash
+2,10062,G-Max Cannonade
+2,10063,G-Max Drum Solo
+2,10064,G-Max Fireball
+2,10065,G-Max Hydrosnipe
+2,10066,G-Max One Blow
+2,10067,G-Max Rapid Flow
 3,1,Écras’Face
 3,2,Poing Karaté
 3,3,Torgnoles
@@ -2657,6 +2671,13 @@ language_id,move_id,name
 3,10058,Fonte G-Max
 3,10059,Bulles G-Max
 3,10060,Combustion G-Max
+3,10061,Fouet G-Max
+3,10062,Canonnade G-Max
+3,10063,Percussion G-Max
+3,10064,Pyroball G-Max
+3,10065,Gâchette G-Max
+3,10066,Coup Final G-Max
+3,10067,Multicoup G-Max
 4,1,Klaps
 4,2,Karateschlag
 4,3,Duplexhieb
@@ -3543,6 +3564,13 @@ language_id,move_id,name
 4,10058,Giga-Schmelze
 4,10059,Giga-Schaumbad
 4,10060,Giga-Feuerkessel
+4,10061,Giga-Geißel
+4,10062,Giga-Beschuss
+4,10063,Giga-Getrommel
+4,10064,Giga-Brandball
+4,10065,Giga-Schütze
+4,10066,Giga-Einzelhieb
+4,10067,Giga-Multihieb
 5,1,Botta
 5,2,Colpokarate
 5,3,Doppiasberla
@@ -4429,6 +4457,13 @@ language_id,move_id,name
 5,10058,Gigaliquefazione
 5,10059,Gigaschiuma
 5,10060,Gigamillefiamme
+5,10061,Gigasferzata
+5,10062,Gigacannonata
+5,10063,Gigarullio
+5,10064,Gigafiammopalla
+5,10065,Gigasparomirato
+5,10066,Gigasingolcolpo
+5,10067,Gigapluricolpo
 6,1,Destructor
 6,2,Golpe Kárate
 6,3,Doble Bofetón
@@ -5315,6 +5350,13 @@ language_id,move_id,name
 6,10058,Gigafundido
 6,10059,Gigaespuma
 6,10060,Gigacienfuegos
+6,10061,Gigalianas
+6,10062,Gigacañonazo
+6,10063,Gigarredoble
+6,10064,Gigaesfera Ígnea
+6,10065,Gigadisparo
+6,10066,Gigagolpe Brusco
+6,10067,Gigagolpe Fluido
 7,1,막치기
 7,2,태권당수
 7,3,연속뺨치기
@@ -6183,6 +6225,13 @@ language_id,move_id,name
 7,10058,거다이융격
 7,10059,거다이포말
 7,10060,거다이백화
+7,10061,거다이편달
+7,10062,거다이포격
+7,10063,거다이난타
+7,10064,거다이화염구
+7,10065,거다이저격
+7,10066,거다이일격
+7,10067,거다이연격
 8,1,はたく
 8,2,からてチョップ
 8,3,おうふくビンタ
@@ -7051,6 +7100,13 @@ language_id,move_id,name
 8,10058,キョダイユウゲキ
 8,10059,キョダイホウマツ
 8,10060,キョダイヒャッカ
+8,10061,キョダイベンタツ
+8,10062,キョダイホウゲキ
+8,10063,キョダイコランダ
+8,10064,キョダイカキュウ
+8,10065,キョダイソゲキ
+8,10066,キョダイイチゲキ
+8,10067,キョダイレンゲキ
 9,1,拍击
 9,2,空手劈
 9,3,连环巴掌
@@ -7919,6 +7975,13 @@ language_id,move_id,name
 9,10058,超极巨液金熔击
 9,10059,超极巨激漩泡涡
 9,10060,超极巨百火焚野
+9,10061,超极巨灰飞鞭灭
+9,10062,超极巨水炮轰灭
+9,10063,超极巨狂擂乱打
+9,10064,超极巨破阵火球
+9,10065,超极巨狙击神射
+9,10066,超极巨夺命一击
+9,10067,超极巨流水连击
 10,1,拍擊
 10,2,空手劈
 10,3,連環巴掌
@@ -8787,3 +8850,10 @@ language_id,move_id,name
 10,10058,超極巨液金熔擊
 10,10059,超極巨激漩泡渦
 10,10060,超極巨百火焚野
+10,10061,超極巨灰飛鞭滅
+10,10062,超極巨水砲轟滅
+10,10063,超極巨狂擂亂打
+10,10064,超極巨破陣火球
+10,10065,超極巨狙擊神射
+10,10066,超極巨奪命一擊
+10,10067,超極巨流水連擊
