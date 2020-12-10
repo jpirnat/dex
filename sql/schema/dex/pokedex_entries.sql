@@ -3,13 +3,15 @@ create table if not exists `pokedex_entries`
 `language_id` tinyint unsigned not null,
 `form_id` smallint unsigned not null,
 `version_id` tinyint unsigned not null,
+`is_female` bool not null,
 
 `entry` text not null,
 
 primary key (
 	`language_id`,
 	`form_id`,
-	`version_id`
+	`version_id`,
+	`is_female`
 ),
 foreign key (`language_id`) references `languages` (`id`)
 	on delete restrict

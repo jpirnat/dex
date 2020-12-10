@@ -134,6 +134,7 @@ return [
 		'pokedex_entries_5',
 		'pokedex_entries_6',
 		'pokedex_entries_7',
+		'pokedex_entries_8',
 	],
 
 	// Shapes
