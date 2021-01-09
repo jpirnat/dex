@@ -1850,6 +1850,7 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 10,3,2,2,\N,\N
 10,4,3,2,\N,\N
 10,5,4,2,\N,\N
+10,6,442,3,\N,\N
 10,7,450,3,\N,\N
 10,8,5,2,\N,\N
 10,9,81,1,30,\N
@@ -2273,7 +2274,6 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 10,543,439,3,\N,\N
 10,544,440,3,\N,\N
 10,545,441,3,\N,\N
-10,546,442,3,\N,\N
 10,547,448,3,\N,\N
 10,548,449,3,\N,\N
 10,549,451,3,\N,\N
@@ -2292,6 +2292,7 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 11,3,2,2,\N,\N
 11,4,3,2,\N,\N
 11,5,4,2,\N,\N
+11,6,442,3,\N,\N
 11,7,450,3,\N,\N
 11,8,5,2,\N,\N
 11,9,81,1,30,\N
@@ -2715,7 +2716,6 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 11,543,439,3,\N,\N
 11,544,440,3,\N,\N
 11,545,441,3,\N,\N
-11,546,442,3,\N,\N
 11,547,448,3,\N,\N
 11,548,449,3,\N,\N
 11,549,451,3,\N,\N
@@ -2738,6 +2738,7 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 12,3,2,2,\N,\N
 12,4,3,2,\N,\N
 12,5,4,2,\N,\N
+12,6,442,3,\N,\N
 12,7,450,3,\N,\N
 12,8,5,2,\N,\N
 12,9,81,1,30,\N
@@ -3192,7 +3193,6 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 12,543,439,3,\N,\N
 12,544,440,3,\N,\N
 12,545,441,3,\N,\N
-12,546,442,3,\N,\N
 12,547,448,3,\N,\N
 12,548,449,3,\N,\N
 12,549,451,3,\N,\N
@@ -3252,6 +3252,7 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 13,3,2,2,\N,\N
 13,4,3,2,\N,\N
 13,5,4,2,\N,\N
+13,6,442,3,\N,\N
 13,7,450,3,\N,\N
 13,8,5,2,\N,\N
 13,9,81,1,30,\N
@@ -3763,7 +3764,6 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 13,614,146,1,\N,\N
 13,615,147,1,\N,\N
 13,616,148,1,\N,\N
-13,617,442,3,\N,\N
 13,618,537,1,30,\N
 13,619,538,1,40,\N
 13,620,539,1,30,\N
@@ -3860,6 +3860,7 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 14,3,2,2,\N,\N
 14,4,3,2,\N,\N
 14,5,4,2,\N,\N
+14,6,442,3,\N,\N
 14,7,450,3,\N,\N
 14,8,5,2,\N,\N
 14,9,81,1,30,\N
@@ -4371,7 +4372,6 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 14,614,146,1,\N,\N
 14,615,147,1,\N,\N
 14,616,148,1,\N,\N
-14,617,442,3,\N,\N
 14,618,537,1,30,\N
 14,619,538,1,40,\N
 14,620,539,1,30,\N
@@ -4480,6 +4480,7 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 15,3,2,1,\N,\N
 15,4,3,1,\N,\N
 15,5,4,1,\N,\N
+15,6,442,3,\N,\N
 15,7,450,3,\N,\N
 15,8,5,1,\N,\N
 15,9,81,1,30,\N
@@ -5094,7 +5095,6 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 15,717,636,3,\N,\N
 15,718,637,3,\N,\N
 15,719,638,3,\N,\N
-15,720,442,3,\N,\N
 15,721,639,1,80,\N
 15,722,640,1,80,\N
 15,723,641,3,\N,\N
@@ -5179,6 +5179,7 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 16,3,2,1,\N,\N
 16,4,3,1,\N,\N
 16,5,4,1,\N,\N
+16,6,442,3,\N,\N
 16,7,450,3,\N,\N
 16,8,5,1,\N,\N
 16,9,81,1,30,\N
@@ -5812,7 +5813,6 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 16,717,636,3,\N,\N
 16,718,637,3,\N,\N
 16,719,638,3,\N,\N
-16,720,442,3,\N,\N
 16,721,639,1,80,\N
 16,722,640,1,80,\N
 16,723,641,3,\N,\N
@@ -5936,6 +5936,7 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 17,3,2,1,\N,\N
 17,4,3,1,\N,\N
 17,5,4,1,\N,\N
+17,6,442,3,\N,\N
 17,7,450,3,\N,\N
 17,8,5,1,\N,\N
 17,9,81,1,30,\N
@@ -6569,7 +6570,6 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 17,717,636,3,\N,\N
 17,718,637,3,\N,\N
 17,719,638,3,\N,\N
-17,720,442,3,\N,\N
 17,721,639,1,80,\N
 17,722,640,1,80,\N
 17,723,641,3,\N,\N
@@ -6795,6 +6795,7 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 18,3,2,1,\N,\N
 18,4,3,1,\N,\N
 18,5,4,1,\N,\N
+18,6,442,3,\N,\N
 18,7,450,3,\N,\N
 18,8,5,1,\N,\N
 18,9,81,1,30,\N
@@ -7428,7 +7429,6 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 18,717,636,3,\N,\N
 18,718,637,3,\N,\N
 18,719,638,3,\N,\N
-18,720,442,3,\N,\N
 18,721,639,1,80,\N
 18,722,640,1,80,\N
 18,723,641,3,\N,\N
@@ -7693,6 +7693,7 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 19,3,2,\N,\N,\N
 19,4,3,\N,\N,\N
 19,5,4,\N,\N,\N
+19,6,442,\N,\N,\N
 19,7,450,\N,\N,\N
 19,8,5,\N,\N,\N
 19,9,81,\N,30,\N
@@ -8334,7 +8335,6 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 19,717,636,\N,\N,\N
 19,718,637,\N,\N,\N
 19,719,638,\N,\N,\N
-19,720,442,\N,\N,\N
 19,721,639,\N,80,\N
 19,722,640,\N,80,\N
 19,723,641,\N,\N,\N
@@ -8720,6 +8720,7 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 20,3,2,\N,\N,\N
 20,4,3,\N,\N,\N
 20,5,4,\N,\N,\N
+20,6,442,\N,\N,\N
 20,7,450,\N,\N,\N
 20,8,5,\N,\N,\N
 20,9,81,\N,\N,\N
@@ -9361,7 +9362,6 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 20,717,636,\N,\N,\N
 20,718,637,\N,\N,\N
 20,719,638,\N,\N,\N
-20,720,442,\N,\N,\N
 20,721,639,\N,\N,\N
 20,722,640,\N,\N,\N
 20,723,641,\N,\N,\N
@@ -10234,6 +10234,35 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 20,1591,1576,\N,\N,\N
 20,1592,1577,\N,\N,\N
 20,1593,1578,\N,\N,\N
+20,1594,1579,\N,\N,\N
+20,1595,1580,\N,\N,\N
+20,1596,1581,\N,\N,\N
+20,1597,1582,\N,\N,\N
+20,1598,1583,\N,\N,\N
+20,1599,1584,\N,\N,\N
+20,1600,1585,\N,\N,\N
+20,1601,1586,\N,\N,\N
+20,1602,1587,\N,\N,\N
+20,1603,1588,\N,\N,\N
+20,1604,1589,\N,\N,\N
+20,1605,1590,\N,\N,\N
+20,1606,1591,\N,\N,\N
+20,1607,1592,\N,\N,\N
+20,1608,1593,\N,\N,\N
+20,1609,1594,\N,\N,\N
+20,1610,1595,\N,\N,\N
+20,1611,1596,\N,\N,\N
+20,1612,1597,\N,\N,\N
+20,1613,1598,\N,\N,\N
+20,1614,1599,\N,\N,\N
+20,1615,1600,\N,\N,\N
+20,1616,1601,\N,\N,\N
+20,1617,1602,\N,\N,\N
+20,1618,1603,\N,\N,\N
+20,1619,1604,\N,\N,\N
+20,1620,1605,\N,\N,\N
+20,1621,1606,\N,\N,\N
+20,1622,1607,\N,\N,\N
 101,1,0,\N,\N,\N
 101,2,1,2,\N,\N
 101,3,2,2,\N,\N
@@ -10837,32 +10866,3 @@ version_group_id,item_id,game_index,item_pocket_id,item_fling_power,item_fling_e
 102,10133,591,\N,\N,\N
 102,10134,592,\N,\N,\N
 102,10135,593,\N,\N,\N
-20,1594,1579,\N,\N,\N
-20,1595,1580,\N,\N,\N
-20,1596,1581,\N,\N,\N
-20,1597,1582,\N,\N,\N
-20,1598,1583,\N,\N,\N
-20,1599,1584,\N,\N,\N
-20,1600,1585,\N,\N,\N
-20,1601,1586,\N,\N,\N
-20,1602,1587,\N,\N,\N
-20,1603,1588,\N,\N,\N
-20,1604,1589,\N,\N,\N
-20,1605,1590,\N,\N,\N
-20,1606,1591,\N,\N,\N
-20,1607,1592,\N,\N,\N
-20,1608,1593,\N,\N,\N
-20,1609,1594,\N,\N,\N
-20,1610,1595,\N,\N,\N
-20,1611,1596,\N,\N,\N
-20,1612,1597,\N,\N,\N
-20,1613,1598,\N,\N,\N
-20,1614,1599,\N,\N,\N
-20,1615,1600,\N,\N,\N
-20,1616,1601,\N,\N,\N
-20,1617,1602,\N,\N,\N
-20,1618,1603,\N,\N,\N
-20,1619,1604,\N,\N,\N
-20,1620,1605,\N,\N,\N
-20,1621,1606,\N,\N,\N
-20,1622,1607,\N,\N,\N

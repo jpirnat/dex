@@ -544,7 +544,6 @@ language_id,item_id,name
 1,543,こだいのおまもり
 1,544,ギンガだんのカギ
 1,545,あかいくさり
-1,546,タウンマップ
 1,547,コダックじょうろ
 1,548,ポフィンケース
 1,549,ルームキー
@@ -615,7 +614,6 @@ language_id,item_id,name
 1,614,ブリッジメールＣ
 1,615,ブリッジメールＶ
 1,616,ブリッジメールＷ
-1,617,タウンマップ
 1,618,きれいなウロコ
 1,619,しんかのきせき
 1,620,かるいし
@@ -718,7 +716,6 @@ language_id,item_id,name
 1,717,わすれもの
 1,718,わすれもの
 1,719,うつしかがみ
-1,720,タウンマップ
 1,721,じゃくてんほけん
 1,722,とつげきチョッキ
 1,723,ホロキャスター
@@ -2301,7 +2298,6 @@ language_id,item_id,name
 2,543,Old Charm
 2,544,Galactic Key
 2,545,Red Chain
-2,546,Town Map
 2,547,Sprayduck
 2,548,Poffin Case
 2,549,Suite Key
@@ -2372,7 +2368,6 @@ language_id,item_id,name
 2,614,Bridge Mail T
 2,615,Bridge Mail V
 2,616,Bridge Mail M
-2,617,Town Map
 2,618,Prism Scale
 2,619,Eviolite
 2,620,Float Stone
@@ -2475,7 +2470,6 @@ language_id,item_id,name
 2,717,Dropped Item
 2,718,Dropped Item
 2,719,Reveal Glass
-2,720,Town Map
 2,721,Weakness Policy
 2,722,Assault Vest
 2,723,Holo Caster
@@ -4058,7 +4052,6 @@ language_id,item_id,name
 3,543,Vieux Grigri
 3,544,Clé Galaxie
 3,545,Chaîne Rouge
-3,546,Carte
 3,547,Kwakarrosoir
 3,548,Boîte Poffin
 3,549,Clé Chambre
@@ -4129,7 +4122,6 @@ language_id,item_id,name
 3,614,Lettre Pont F
 3,615,Lettre Pont H
 3,616,Lettre Pont I
-3,617,Carte
 3,618,Bel’Écaille
 3,619,Évoluroc
 3,620,Pierrallégée
@@ -4232,7 +4224,6 @@ language_id,item_id,name
 3,717,Objet Trouvé
 3,718,Objet Trouvé
 3,719,Miroir Sacré
-3,720,Carte
 3,721,Vulné-Assurance
 3,722,Veste de Combat
 3,723,Holokit
@@ -5815,7 +5806,6 @@ language_id,item_id,name
 4,543,Talisman
 4,544,G-Schlüssel
 4,545,Rote Kette
-4,546,Karte
 4,547,Entonkanne
 4,548,Knurspbox
 4,549,B-Schlüssel
@@ -5886,7 +5876,6 @@ language_id,item_id,name
 4,614,Brückbrief Z
 4,615,Brückbrief D
 4,616,Brückbrief W
-4,617,Karte
 4,618,Schönschuppe
 4,619,Evolith
 4,620,Leichtstein
@@ -5989,7 +5978,6 @@ language_id,item_id,name
 4,717,Fundsache
 4,718,Fundsache
 4,719,Wahrspiegel
-4,720,Karte
 4,721,Schwächenschutz
 4,722,Offensivweste
 4,723,Holo-Log
@@ -7032,7 +7020,7 @@ language_id,item_id,name
 5,3,Ultra Ball
 5,4,Mega Ball
 5,5,Poké Ball
-5,6,Mappa Città
+5,6,Mappa città
 5,7,Bicicletta
 5,8,Safari Ball
 5,9,Pietralunare
@@ -7572,7 +7560,6 @@ language_id,item_id,name
 5,543,Arcamuleto
 5,544,Galachiave
 5,545,Rossocatena
-5,546,Mappa Città
 5,547,Sprayduck
 5,548,Portapoffin
 5,549,Chiave Suite
@@ -7643,7 +7630,6 @@ language_id,item_id,name
 5,614,Mess. Prop.
 5,615,Mess. Vill.
 5,616,Mess. Merav.
-5,617,Mappa Città
 5,618,Squama Bella
 5,619,Evolcondensa
 5,620,Pietralieve
@@ -7746,7 +7732,6 @@ language_id,item_id,name
 5,717,Oggetto perso
 5,718,Oggetto perso
 5,719,Verispecchio
-5,720,Mappa città
 5,721,Vulneropolizza
 5,722,Corpetto assalto
 5,723,Holovox
@@ -9329,7 +9314,6 @@ language_id,item_id,name
 6,543,Talismán
 6,544,Llave Galaxia
 6,545,Cadena Roja
-6,546,Mapa
 6,547,Psydugadera
 6,548,Pokochera
 6,549,Llave Suite
@@ -9400,7 +9384,6 @@ language_id,item_id,name
 6,614,Carta Puente A
 6,615,Carta Puente V
 6,616,Carta Puente P
-6,617,Mapa
 6,618,Escama Bella
 6,619,Mineral Evol
 6,620,Piedra Pómez
@@ -9503,7 +9486,6 @@ language_id,item_id,name
 6,717,Objeto Perdido
 6,718,Objeto Perdido
 6,719,Espejo Veraz
-6,720,Mapa
 6,721,Seguro Debilidad
 6,722,Chaleco Asalto
 6,723,Holomisor
@@ -11056,7 +11038,6 @@ language_id,item_id,name
 7,543,고대의부적
 7,544,갤럭시단의열쇠
 7,545,빨강쇠사슬
-7,546,타운맵
 7,547,고라파덕물뿌리개
 7,548,포핀케이스
 7,549,룸키
@@ -11127,7 +11108,6 @@ language_id,item_id,name
 7,614,브리지메일C
 7,615,브리지메일V
 7,616,브리지메일W
-7,617,타운맵
 7,618,고운비늘
 7,619,진화의휘석
 7,620,가벼운돌
@@ -11230,7 +11210,6 @@ language_id,item_id,name
 7,717,잊은물건
 7,718,잊은물건
 7,719,비추는거울
-7,720,타운맵
 7,721,약점보험
 7,722,돌격조끼
 7,723,홀로캐스터
@@ -12603,7 +12582,6 @@ language_id,item_id,name
 8,543,こだいのおまもり
 8,544,ギンガだんのカギ
 8,545,あかいくさり
-8,546,タウンマップ
 8,547,コダックじょうろ
 8,548,ポフィンケース
 8,549,ルームキー
@@ -12674,7 +12652,6 @@ language_id,item_id,name
 8,614,ブリッジメールＣ
 8,615,ブリッジメールＶ
 8,616,ブリッジメールＷ
-8,617,タウンマップ
 8,618,きれいなウロコ
 8,619,しんかのきせき
 8,620,かるいし
@@ -12777,7 +12754,6 @@ language_id,item_id,name
 8,717,わすれもの
 8,718,わすれもの
 8,719,うつしかがみ
-8,720,タウンマップ
 8,721,じゃくてんほけん
 8,722,とつげきチョッキ
 8,723,ホロキャスター
@@ -14150,7 +14126,6 @@ language_id,item_id,name
 9,543,古代护符
 9,544,银河队钥匙
 9,545,红色锁链
-9,546,城镇地图
 9,547,可达鸭喷壶
 9,548,宝芬盒
 9,549,房间钥匙
@@ -14221,7 +14196,6 @@ language_id,item_id,name
 9,614,桥梁邮件Ｃ
 9,615,桥梁邮件Ｖ
 9,616,桥梁邮件Ｗ
-9,617,城镇地图
 9,618,美丽鳞片
 9,619,进化奇石
 9,620,轻石
@@ -14324,7 +14298,6 @@ language_id,item_id,name
 9,717,遗忘物
 9,718,遗忘物
 9,719,现形镜
-9,720,城镇地图
 9,721,弱点保险
 9,722,突击背心
 9,723,全息影像通讯器
@@ -15697,7 +15670,6 @@ language_id,item_id,name
 10,543,古代護符
 10,544,銀河隊鑰匙
 10,545,紅色鎖鏈
-10,546,城鎮地圖
 10,547,可達鴨噴壺
 10,548,寶芬盒
 10,549,房間鑰匙
@@ -15768,7 +15740,6 @@ language_id,item_id,name
 10,614,橋梁郵件Ｃ
 10,615,橋梁郵件Ｖ
 10,616,橋梁郵件Ｗ
-10,617,城鎮地圖
 10,618,美麗鱗片
 10,619,進化奇石
 10,620,輕石
@@ -15871,7 +15842,6 @@ language_id,item_id,name
 10,717,遺忘物
 10,718,遺忘物
 10,719,現形鏡
-10,720,城鎮地圖
 10,721,弱點保險
 10,722,突擊背心
 10,723,全像投影通訊器

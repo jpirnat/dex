@@ -1,10 +1,10 @@
-id,identifier,introduced_in_version_group
+id,identifier,introduced_in_version_group_id
 1,none,1
 2,master-ball,1
 3,ultra-ball,1
 4,great-ball,1
 5,poke-ball,1
-6,town-map-kanto,1
+6,town-map,1
 7,bike,1
 8,safari-ball,1
 9,moon-stone,1
@@ -544,7 +544,6 @@ id,identifier,introduced_in_version_group
 543,old-charm,10
 544,galactic-key,10
 545,red-chain,10
-546,town-map-sinnoh,10
 547,sprayduck,10
 548,poffin-case,10
 549,suite-key,10
@@ -615,7 +614,6 @@ id,identifier,introduced_in_version_group
 614,bridge-mail-t,13
 615,bridge-mail-v,13
 616,bridge-mail-m,13
-617,town-map-unova,13
 618,prism-scale,13
 619,eviolite,13
 620,float-stone,13
@@ -718,7 +716,6 @@ id,identifier,introduced_in_version_group
 717,dropped-item-curtis,14
 718,dropped-item-yancy,14
 719,reveal-glass,14
-720,town-map-kalos,15
 721,weakness-policy,15
 722,assault-vest,15
 723,holo-caster-green,15
@@ -1104,7 +1101,7 @@ id,identifier,introduced_in_version_group
 1103,pokemon-box-link,20
 1104,wishing-star,20
 1105,dynamax-band,20
-1106,fishing-rod,20
+1106,fishing-rod-galar,20
 1107,rotom-bike-1,20
 1108,sausages,20
 1109,bobs-food-tin,20
