@@ -1,483 +1,483 @@
 name,item_id
-Nothing,1
-Master Ball,2
-Ultra Ball,3
-Great Ball,4
-Poke Ball,5
-Safari Ball,8
-Moon Stone,9
-Old Amber,22
-Fire Stone,23
-Thunder Stone,24
-Water Stone,25
-Dome Fossil,32
-Helix Fossil,33
-Leaf Stone,37
-Bright Powder,127
-BrightPowder,127
-Lucky Punch,128
-Metal Powder,129
-Quick Claw,137
-PSN Cure Berry,138
-Soft Sand,140
-Sharp Beak,141
-PRZ Cure Berry,142
-Burnt Berry,143
-Ice Berry,144
-Poison Barb,145
-King's Rock,146
-Bitter Berry,147
-Mint Berry,148
-Silver Powder,152
-SilverPowder,152
-Mystic Water,158
-Twisted Spoon,159
-TwistedSpoon,159
-Black Belt,161
-Black Glasses,164
-Pink Bow,166
-Leek,167
-Stick,167
-Never-Melt Ice,169
-Magnet,170
-Miracle Berry,171
-Spell Tag,175
-Miracle Seed,177
-Thick Club,178
-Focus Band,179
-Energy Powder,180
-EnergyPowder,180
-Hard Stone,184
-Charcoal,193
-Berry Juice,194
-Scope Lens,195
-Metal Coat,196
-Dragon Fang,197
-Leftovers,198
-Mystery Berry,199
-Dragon Scale,200
-Berserk Gene,201
-Heavy Ball,203
-Mail,204
-Level Ball,205
-Lure Ball,206
-Fast Ball,207
-Light Ball,208
-Friend Ball,209
-Moon Ball,210
-Love Ball,211
-Sun Stone,214
-Polkadot Bow,215
-Up-Grade,216
-Berry,217
-Gold Berry,218
-Sport Ball,220
-Net Ball,238
-Dive Ball,239
-Nest Ball,240
-Repeat Ball,241
-Timer Ball,242
-Luxury Ball,243
-Premier Ball,244
-Cheri Berry,273
-Chesto Berry,274
-Pecha Berry,275
-Rawst Berry,276
-Aspear Berry,277
-Leppa Berry,278
-Oran Berry,279
-Persim Berry,280
-Lum Berry,281
-Sitrus Berry,282
-Figy Berry,283
-Wiki Berry,284
-Mago Berry,285
-Aguav Berry,286
-Iapapa Berry,287
-Razz Berry,288
-Bluk Berry,289
-Nanab Berry,290
-Wepear Berry,291
-Pinap Berry,292
-Pomeg Berry,293
-Kelpsy Berry,294
-Qualot Berry,295
-Hondew Berry,296
-Grepa Berry,297
-Tamato Berry,298
-Cornn Berry,299
-Magost Berry,300
-Rabuta Berry,301
-Nomel Berry,302
-Spelon Berry,303
-Pamtre Berry,304
-Watmel Berry,305
-Durin Berry,306
-Belue Berry,307
-Liechi Berry,308
-Ganlon Berry,309
-Salac Berry,310
-Petaya Berry,311
-Apicot Berry,312
-Lansat Berry,313
-Starf Berry,314
-Enigma Berry,315
-White Herb,316
-Macho Brace,317
-Mental Herb,319
-Choice Band,320
-Soul Dew,321
-Deep Sea Tooth,322
-DeepSeaTooth,322
-Deep Sea Scale,323
-DeepSeaScale,323
-Silk Scarf,324
-Shell Bell,325
-Sea Incense,326
-Lax Incense,327
-Red Orb,344
-Blue Orb,345
-Root Fossil,354
-Claw Fossil,355
-Dusk Ball,373
-Heal Ball,374
-Quick Ball,375
-Cherish Ball,376
-Armor Fossil,384
-Skull Fossil,385
-Rare Bone,386
-Shiny Stone,387
-Dusk Stone,388
-Dawn Stone,389
-Oval Stone,390
-Adamant Orb,392
-Lustrous Orb,393
-Occa Berry,406
-Passho Berry,407
-Wacan Berry,408
-Rindo Berry,409
-Yache Berry,410
-Chople Berry,411
-Kebia Berry,412
-Shuca Berry,413
-Coba Berry,414
-Payapa Berry,415
-Tanga Berry,416
-Charti Berry,417
-Kasib Berry,418
-Haban Berry,419
-Colbur Berry,420
-Babiri Berry,421
-Chilan Berry,422
-Micle Berry,423
-Custap Berry,424
-Jaboca Berry,425
-Rowap Berry,426
-Wide Lens,427
-Muscle Band,428
-Wise Glasses,429
-Expert Belt,430
-Light Clay,431
-Life Orb,432
-Power Herb,433
-Toxic Orb,434
-Flame Orb,435
-Quick Powder,436
-Focus Sash,437
-Zoom Lens,438
-Metronome,439
-Iron Ball,440
-Lagging Tail,441
-Destiny Knot,442
-Black Sludge,443
-Icy Rock,444
-Smooth Rock,445
-Heat Rock,446
-Damp Rock,447
-Grip Claw,448
-Choice Scarf,449
-Sticky Barb,450
-Power Bracer,451
-Power Belt,452
-Power Lens,453
-Power Band,454
-Power Anklet,455
-Power Weight,456
-Shed Shell,457
-Big Root,458
-Choice Specs,459
-Flame Plate,460
-Splash Plate,461
-Zap Plate,462
-Meadow Plate,463
-Icicle Plate,464
-Fist Plate,465
-Toxic Plate,466
-Earth Plate,467
-Sky Plate,468
-Mind Plate,469
-Insect Plate,470
-Stone Plate,471
-Spooky Plate,472
-Draco Plate,473
-Dread Plate,474
-Iron Plate,475
-Odd Incense,476
-Rock Incense,477
-Full Incense,478
-Wave Incense,479
-Rose Incense,480
-Protector,483
-Electirizer,484
-Magmarizer,485
-Dubious Disc,486
-Reaper Cloth,487
-Razor Claw,488
-Razor Fang,489
-Griseous Orb,560
-Park Ball,566
-Douse Drive,600
-Shock Drive,601
-Burn Drive,602
-Chill Drive,603
-Prism Scale,618
-Eviolite,619
-Float Stone,620
-Rocky Helmet,621
-Air Balloon,622
-Red Card,623
-Ring Target,624
-Binding Band,625
-Absorb Bulb,626
-Cell Battery,627
-Eject Button,628
-Fire Gem,629
-Water Gem,630
-Electric Gem,631
-Grass Gem,632
-Ice Gem,633
-Fighting Gem,634
-Poison Gem,635
-Ground Gem,636
-Flying Gem,637
-Psychic Gem,638
-Bug Gem,639
-Rock Gem,640
-Ghost Gem,641
-Dragon Gem,642
-Dark Gem,643
-Steel Gem,644
-Normal Gem,645
-Cover Fossil,653
-Plume Fossil,654
-Dream Ball,657
-Weakness Policy,721
-Assault Vest,722
-Pixie Plate,726
-Whipped Dream,728
-Sachet,729
-Luminous Moss,730
-Snowball,731
-Safety Goggles,732
-Gengarite,737
-Gardevoirite,738
-Ampharosite,739
-Venusaurite,740
-Charizardite X,741
-Blastoisinite,742
-Mewtwonite X,743
-Mewtwonite Y,744
-Blazikenite,745
-Medichamite,746
-Houndoominite,747
-Aggronite,748
-Banettite,749
-Tyranitarite,750
-Scizorite,751
-Pinsirite,752
-Aerodactylite,753
-Lucarionite,754
-Abomasite,755
-Kangaskhanite,756
-Gyaradosite,757
-Absolite,758
-Charizardite Y,759
-Alakazite,760
-Heracronite,761
-Mawilite,762
-Manectite,763
-Garchompite,764
-Latiasite,765
-Latiosite,766
-Roseli Berry,767
-Kee Berry,768
-Maranga Berry,769
-Jaw Fossil,791
-Sail Fossil,792
-Fairy Gem,796
-Swampertite,814
-Sceptilite,815
-Sablenite,816
-Altarianite,817
-Galladite,818
-Audinite,819
-Metagrossite,820
-Sharpedonite,821
-Slowbronite,822
-Steelixite,823
-Pidgeotite,824
-Glalitite,825
-Diancite,826
-Cameruptite,829
-Lopunnite,830
-Salamencite,831
-Beedrillite,832
-Normalium Z,839
-Firium Z,840
-Waterium Z,841
-Electrium Z,842
-Grassium Z,843
-Icium Z,844
-Fightinium Z,845
-Poisonium Z,846
-Groundium Z,847
-Flyinium Z,848
-Psychium Z,849
-Buginium Z,850
-Rockium Z,851
-Ghostium Z,852
-Dragonium Z,853
-Darkinium Z,854
-Steelium Z,855
-Fairium Z,856
-Pikanium Z,857
-Bottle Cap,858
-Gold Bottle Cap,859
-Decidium Z,861
-Incinium Z,862
-Primarium Z,863
-Tapunium Z,864
-Marshadium Z,865
-Aloraichium Z,866
-Snorlium Z,867
-Eevium Z,868
-Mewnium Z,869
-Pikashunium Z,899
-Adrenaline Orb,905
-Ice Stone,907
-Beast Ball,909
-Terrain Extender,918
-Protective Pads,919
-Electric Seed,920
-Psychic Seed,921
-Misty Seed,922
-Grassy Seed,923
-Fighting Memory,924
-Flying Memory,925
-Poison Memory,926
-Ground Memory,927
-Rock Memory,928
-Bug Memory,929
-Ghost Memory,930
-Steel Memory,931
-Fire Memory,932
-Water Memory,933
-Grass Memory,934
-Electric Memory,935
-Psychic Memory,936
-Ice Memory,937
-Dragon Memory,938
-Dark Memory,939
-Fairy Memory,940
-Solganium Z,941
-Lunalium Z,942
-Ultranecrozium Z,943
-Mimikium Z,944
-Lycanium Z,945
-Kommonium Z,946
-Rusted Sword,1125
-Rusted Shield,1126
-Fossilized Bird,1127
-Fossilized Fish,1128
-Fossilized Drake,1129
-Fossilized Dino,1130
-Strawberry Sweet,1131
-Love Sweet,1132
-Berry Sweet,1133
-Clover Sweet,1134
-Flower Sweet,1135
-Star Sweet,1136
-Ribbon Sweet,1137
-Sweet Apple,1138
-Tart Apple,1139
-Throat Spray,1140
-Eject Pack,1141
-Heavy-Duty Boots,1142
-Blunder Policy,1143
-Room Service,1144
-Utility Umbrella,1145
-TR00,1152
-TR02,1154
-TR03,1155
-TR04,1156
-TR06,1158
-TR07,1159
-TR08,1160
-TR09,1161
-TR10,1162
-TR11,1163
-TR12,1164
-TR15,1167
-TR16,1168
-TR19,1171
-TR20,1172
-TR28,1180
-TR30,1182
-TR31,1183
-TR32,1184
-TR34,1186
-TR36,1188
-TR37,1189
-TR38,1190
-TR41,1193
-TR42,1194
-TR43,1195
-TR44,1196
-TR45,1197
-TR46,1198
-TR47,1199
-TR48,1200
-TR49,1201
-TR52,1204
-TR53,1205
-TR55,1207
-TR56,1208
-TR57,1209
-TR59,1211
-TR62,1214
-TR64,1216
-TR65,1217
-TR66,1218
-TR69,1221
-TR71,1223
-TR72,1224
-TR75,1227
-TR77,1229
-TR80,1232
-TR83,1235
-TR85,1237
-TR86,1238
-TR87,1239
-TR88,1240
-TR89,1241
-TR90,1242
-TR91,1243
-TR92,1244
-TR93,1245
-TR94,1246
-TR97,1249
-TR98,1250
-TR99,1251
-Cracked Pot,1275
-Chipped Pot,1276
-Galarica Cuff,1597
+Nothing,0
+Master Ball,1
+Ultra Ball,2
+Great Ball,3
+Poke Ball,4
+Safari Ball,5
+Net Ball,6
+Dive Ball,7
+Nest Ball,8
+Repeat Ball,9
+Timer Ball,10
+Luxury Ball,11
+Premier Ball,12
+Dusk Ball,13
+Heal Ball,14
+Quick Ball,15
+Cherish Ball,16
+Energy Powder,34
+EnergyPowder,34
+Berry Juice,43
+Sun Stone,80
+Moon Stone,81
+Fire Stone,82
+Thunder Stone,83
+Water Stone,84
+Leaf Stone,85
+Root Fossil,99
+Claw Fossil,100
+Helix Fossil,101
+Dome Fossil,102
+Old Amber,103
+Armor Fossil,104
+Skull Fossil,105
+Rare Bone,106
+Shiny Stone,107
+Dusk Stone,108
+Dawn Stone,109
+Oval Stone,110
+Griseous Orb,112
+Douse Drive,116
+Shock Drive,117
+Burn Drive,118
+Chill Drive,119
+Adamant Orb,135
+Lustrous Orb,136
+Cheri Berry,149
+Chesto Berry,150
+Pecha Berry,151
+Rawst Berry,152
+Aspear Berry,153
+Leppa Berry,154
+Oran Berry,155
+Persim Berry,156
+Lum Berry,157
+Sitrus Berry,158
+Figy Berry,159
+Wiki Berry,160
+Mago Berry,161
+Aguav Berry,162
+Iapapa Berry,163
+Razz Berry,164
+Bluk Berry,165
+Nanab Berry,166
+Wepear Berry,167
+Pinap Berry,168
+Pomeg Berry,169
+Kelpsy Berry,170
+Qualot Berry,171
+Hondew Berry,172
+Grepa Berry,173
+Tamato Berry,174
+Cornn Berry,175
+Magost Berry,176
+Rabuta Berry,177
+Nomel Berry,178
+Spelon Berry,179
+Pamtre Berry,180
+Watmel Berry,181
+Durin Berry,182
+Belue Berry,183
+Occa Berry,184
+Passho Berry,185
+Wacan Berry,186
+Rindo Berry,187
+Yache Berry,188
+Chople Berry,189
+Kebia Berry,190
+Shuca Berry,191
+Coba Berry,192
+Payapa Berry,193
+Tanga Berry,194
+Charti Berry,195
+Kasib Berry,196
+Haban Berry,197
+Colbur Berry,198
+Babiri Berry,199
+Chilan Berry,200
+Liechi Berry,201
+Ganlon Berry,202
+Salac Berry,203
+Petaya Berry,204
+Apicot Berry,205
+Lansat Berry,206
+Starf Berry,207
+Enigma Berry,208
+Micle Berry,209
+Custap Berry,210
+Jaboca Berry,211
+Rowap Berry,212
+Bright Powder,213
+BrightPowder,213
+White Herb,214
+Macho Brace,215
+Quick Claw,217
+Mental Herb,219
+Choice Band,220
+King's Rock,221
+Silver Powder,222
+SilverPowder,222
+Soul Dew,225
+Deep Sea Tooth,226
+DeepSeaTooth,226
+Deep Sea Scale,227
+DeepSeaScale,227
+Focus Band,230
+Scope Lens,232
+Metal Coat,233
+Leftovers,234
+Dragon Scale,235
+Light Ball,236
+Soft Sand,237
+Hard Stone,238
+Miracle Seed,239
+Black Glasses,240
+Black Belt,241
+Magnet,242
+Mystic Water,243
+Sharp Beak,244
+Poison Barb,245
+Never-Melt Ice,246
+Spell Tag,247
+Twisted Spoon,248
+TwistedSpoon,248
+Charcoal,249
+Dragon Fang,250
+Silk Scarf,251
+Up-Grade,252
+Shell Bell,253
+Sea Incense,254
+Lax Incense,255
+Lucky Punch,256
+Metal Powder,257
+Thick Club,258
+Leek,259
+Stick,259
+Wide Lens,265
+Muscle Band,266
+Wise Glasses,267
+Expert Belt,268
+Light Clay,269
+Life Orb,270
+Power Herb,271
+Toxic Orb,272
+Flame Orb,273
+Quick Powder,274
+Focus Sash,275
+Zoom Lens,276
+Metronome,277
+Iron Ball,278
+Lagging Tail,279
+Destiny Knot,280
+Black Sludge,281
+Icy Rock,282
+Smooth Rock,283
+Heat Rock,284
+Damp Rock,285
+Grip Claw,286
+Choice Scarf,287
+Sticky Barb,288
+Power Bracer,289
+Power Belt,290
+Power Lens,291
+Power Band,292
+Power Anklet,293
+Power Weight,294
+Shed Shell,295
+Big Root,296
+Choice Specs,297
+Flame Plate,298
+Splash Plate,299
+Zap Plate,300
+Meadow Plate,301
+Icicle Plate,302
+Fist Plate,303
+Toxic Plate,304
+Earth Plate,305
+Sky Plate,306
+Mind Plate,307
+Insect Plate,308
+Stone Plate,309
+Spooky Plate,310
+Draco Plate,311
+Dread Plate,312
+Iron Plate,313
+Odd Incense,314
+Rock Incense,315
+Full Incense,316
+Wave Incense,317
+Rose Incense,318
+Protector,321
+Electirizer,322
+Magmarizer,323
+Dubious Disc,324
+Reaper Cloth,325
+Razor Claw,326
+Razor Fang,327
+Fast Ball,492
+Level Ball,493
+Lure Ball,494
+Heavy Ball,495
+Love Ball,496
+Friend Ball,497
+Moon Ball,498
+Sport Ball,499
+Park Ball,500
+Red Orb,534
+Blue Orb,535
+Prism Scale,537
+Eviolite,538
+Float Stone,539
+Rocky Helmet,540
+Air Balloon,541
+Red Card,542
+Ring Target,543
+Binding Band,544
+Absorb Bulb,545
+Cell Battery,546
+Eject Button,547
+Fire Gem,548
+Water Gem,549
+Electric Gem,550
+Grass Gem,551
+Ice Gem,552
+Fighting Gem,553
+Poison Gem,554
+Ground Gem,555
+Flying Gem,556
+Psychic Gem,557
+Bug Gem,558
+Rock Gem,559
+Ghost Gem,560
+Dragon Gem,561
+Dark Gem,562
+Steel Gem,563
+Normal Gem,564
+Cover Fossil,572
+Plume Fossil,573
+Dream Ball,576
+Weakness Policy,639
+Assault Vest,640
+Pixie Plate,644
+Whipped Dream,646
+Sachet,647
+Luminous Moss,648
+Snowball,649
+Safety Goggles,650
+Gengarite,656
+Gardevoirite,657
+Ampharosite,658
+Venusaurite,659
+Charizardite X,660
+Blastoisinite,661
+Mewtwonite X,662
+Mewtwonite Y,663
+Blazikenite,664
+Medichamite,665
+Houndoominite,666
+Aggronite,667
+Banettite,668
+Tyranitarite,669
+Scizorite,670
+Pinsirite,671
+Aerodactylite,672
+Lucarionite,673
+Abomasite,674
+Kangaskhanite,675
+Gyaradosite,676
+Absolite,677
+Charizardite Y,678
+Alakazite,679
+Heracronite,680
+Mawilite,681
+Manectite,682
+Garchompite,683
+Latiasite,684
+Latiosite,685
+Roseli Berry,686
+Kee Berry,687
+Maranga Berry,688
+Jaw Fossil,710
+Sail Fossil,711
+Fairy Gem,715
+Swampertite,752
+Sceptilite,753
+Sablenite,754
+Altarianite,755
+Galladite,756
+Audinite,757
+Metagrossite,758
+Sharpedonite,759
+Slowbronite,760
+Steelixite,761
+Pidgeotite,762
+Glalitite,763
+Diancite,764
+Cameruptite,767
+Lopunnite,768
+Salamencite,769
+Beedrillite,770
+Normalium Z,776
+Firium Z,777
+Waterium Z,778
+Electrium Z,779
+Grassium Z,780
+Icium Z,781
+Fightinium Z,782
+Poisonium Z,783
+Groundium Z,784
+Flyinium Z,785
+Psychium Z,786
+Buginium Z,787
+Rockium Z,788
+Ghostium Z,789
+Dragonium Z,790
+Darkinium Z,791
+Steelium Z,792
+Fairium Z,793
+Pikanium Z,794
+Bottle Cap,795
+Gold Bottle Cap,796
+Decidium Z,798
+Incinium Z,799
+Primarium Z,800
+Tapunium Z,801
+Marshadium Z,802
+Aloraichium Z,803
+Snorlium Z,804
+Eevium Z,805
+Mewnium Z,806
+Pikashunium Z,836
+Adrenaline Orb,846
+Ice Stone,849
+Beast Ball,851
+Terrain Extender,879
+Protective Pads,880
+Electric Seed,881
+Psychic Seed,882
+Misty Seed,883
+Grassy Seed,884
+Fighting Memory,904
+Flying Memory,905
+Poison Memory,906
+Ground Memory,907
+Rock Memory,908
+Bug Memory,909
+Ghost Memory,910
+Steel Memory,911
+Fire Memory,912
+Water Memory,913
+Grass Memory,914
+Electric Memory,915
+Psychic Memory,916
+Ice Memory,917
+Dragon Memory,918
+Dark Memory,919
+Fairy Memory,920
+Solganium Z,921
+Lunalium Z,922
+Ultranecrozium Z,923
+Mimikium Z,924
+Lycanium Z,925
+Kommonium Z,926
+Rusted Sword,1103
+Rusted Shield,1104
+Fossilized Bird,1105
+Fossilized Fish,1106
+Fossilized Drake,1107
+Fossilized Dino,1108
+Strawberry Sweet,1109
+Love Sweet,1110
+Berry Sweet,1111
+Clover Sweet,1112
+Flower Sweet,1113
+Star Sweet,1114
+Ribbon Sweet,1115
+Sweet Apple,1116
+Tart Apple,1117
+Throat Spray,1118
+Eject Pack,1119
+Heavy-Duty Boots,1120
+Blunder Policy,1121
+Room Service,1122
+Utility Umbrella,1123
+TR00,1130
+TR02,1132
+TR03,1133
+TR04,1134
+TR06,1136
+TR07,1137
+TR08,1138
+TR09,1139
+TR10,1140
+TR11,1141
+TR12,1142
+TR15,1145
+TR16,1146
+TR19,1149
+TR20,1150
+TR28,1158
+TR30,1160
+TR31,1161
+TR32,1162
+TR34,1164
+TR36,1166
+TR37,1167
+TR38,1168
+TR41,1171
+TR42,1172
+TR43,1173
+TR44,1174
+TR45,1175
+TR46,1176
+TR47,1177
+TR48,1178
+TR49,1179
+TR52,1182
+TR53,1183
+TR55,1185
+TR56,1186
+TR57,1187
+TR59,1189
+TR62,1192
+TR64,1194
+TR65,1195
+TR66,1196
+TR69,1199
+TR71,1201
+TR72,1202
+TR75,1205
+TR77,1207
+TR80,1210
+TR83,1213
+TR85,1215
+TR86,1216
+TR87,1217
+TR88,1218
+TR89,1219
+TR90,1220
+TR91,1221
+TR92,1222
+TR93,1223
+TR94,1224
+TR97,1227
+TR98,1228
+TR99,1229
+Cracked Pot,1253
+Chipped Pot,1254
+Galarica Cuff,1582
+PSN Cure Berry,10003
+PRZ Cure Berry,10005
+Burnt Berry,10006
+Ice Berry,10007
+Bitter Berry,10008
+Mint Berry,10009
+Pink Bow,10010
+Miracle Berry,10011
+Mystery Berry,10012
+Berserk Gene,10013
+Mail,10014
+Polkadot Bow,10017
+Berry,10018
+Gold Berry,10019
