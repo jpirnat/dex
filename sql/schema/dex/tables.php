@@ -46,6 +46,7 @@ return [
 	'item_descriptions',
 	'item_names',
 	'item_pockets',
+	'item_icons',
 	'version_group_items',
 
 	// Types

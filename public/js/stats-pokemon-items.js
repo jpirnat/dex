@@ -34,6 +34,7 @@ Vue.component('stats-pokemon-items', {
 			<caption>Items</caption>
 			<thead>
 				<tr>
+					<th></th>
 					<th scope="col" class="dex-table__header--sortable"
 						@click="sortBy('name', 'asc', i => i.name)"
 						:class="{
@@ -59,6 +60,9 @@ Vue.component('stats-pokemon-items', {
 			</thead>
 			<tbody>
 				<tr v-for="item in items" :key="item.identifier">
+					<td>
+						<img :src="'/images/items/' + item.icon">
+					</td>
 					<td>
 						<a :href="'/stats/' + month + '/' + format + '/' + rating + '/items/' + item.identifier">
 							{{ item.name }}

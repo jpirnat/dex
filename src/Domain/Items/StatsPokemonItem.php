@@ -5,6 +5,7 @@ namespace Jp\Dex\Domain\Items;
 
 final class StatsPokemonItem
 {
+	private string $icon;
 	private string $identifier;
 	private string $name;
 	private float $percent;
@@ -13,21 +14,34 @@ final class StatsPokemonItem
 	/**
 	 * Constructor.
 	 *
+	 * @param string $icon
 	 * @param string $identifier
 	 * @param string $name
 	 * @param float $percent
 	 * @param float $change
 	 */
 	public function __construct(
+		string $icon,
 		string $identifier,
 		string $name,
 		float $percent,
 		float $change
 	) {
+		$this->icon = $icon;
 		$this->identifier = $identifier;
 		$this->name = $name;
 		$this->percent = $percent;
 		$this->change = $change;
+	}
+
+	/**
+	 * Get the item's icon.
+	 *
+	 * @return string
+	 */
+	public function getIcon() : string
+	{
+		return $this->icon;
 	}
 
 	/**

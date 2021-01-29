@@ -9,6 +9,7 @@ use Jp\Dex\Domain\Items\StatsPokemonItem;
 use Jp\Dex\Domain\Items\StatsPokemonItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
 final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemRepositoryInterface
@@ -33,6 +34,7 @@ final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemReposi
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
+	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 *
 	 * @return StatsPokemonItem[] Ordered by percent descending.
@@ -43,6 +45,7 @@ final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemReposi
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
+		GenerationId $generationId,
 		LanguageId $languageId
 	) : array {
 		$prevMonth = $prevMonth !== null
@@ -51,6 +54,7 @@ final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemReposi
 
 		$stmt = $this->db->prepare(
 			'SELECT
+				`ii`.`icon`,
 				`i`.`identifier`,
 				`in`.`name`,
 				`mri`.`percent`,
@@ -58,6 +62,8 @@ final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemReposi
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `moveset_rated_items` AS `mri`
 				ON `urp`.`id` = `mri`.`usage_rated_pokemon_id`
+			INNER JOIN `item_icons` AS `ii`
+				ON `mri`.`item_id` = `ii`.`item_id`
 			INNER JOIN `items` AS `i`
 				ON `mri`.`item_id` = `i`.`id`
 			INNER JOIN `item_names` AS `in`
@@ -74,6 +80,7 @@ final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemReposi
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
 				AND `urp`.`pokemon_id` = :pokemon_id
+				AND `ii`.`generation_id` = :generation_id
 				AND `in`.`language_id` = :language_id
 			ORDER BY `mri`.`percent` DESC'
 		);
@@ -82,6 +89,7 @@ final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemReposi
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -89,6 +97,7 @@ final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemReposi
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$item = new StatsPokemonItem(
+				$result['icon'],
 				$result['identifier'],
 				$result['name'],
 				(float) $result['percent'],

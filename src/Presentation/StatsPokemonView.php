@@ -102,6 +102,7 @@ final class StatsPokemonView
 		$items = [];
 		foreach ($itemsData as $item) {
 			$items[] = [
+				'icon' => $item->getIcon(),
 				'identifier' => $item->getIdentifier(),
 				'name' => $item->getName(),
 				'percent' => $item->getPercent(),

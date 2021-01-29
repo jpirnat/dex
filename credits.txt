@@ -24,3 +24,5 @@ http://upcarchive.playker.info/0/upokecenter/content/pokemon-colosseum-and-xd-sh
 
 Azure Heights for some gen 1 move data
 https://www.math.miami.edu/~jam/azure/attacks/comp/statmods.htm
+
+https://github.com/msikma/pokesprite for Pokémon and item icons
