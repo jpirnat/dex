@@ -61,7 +61,7 @@ Vue.component('stats-pokemon-items', {
 			<tbody>
 				<tr v-for="item in items" :key="item.identifier">
 					<td>
-						<img :src="'/images/items/' + item.icon">
+						<img v-if="item.icon" :src="'/images/items/' + item.icon">
 					</td>
 					<td>
 						<a :href="'/stats/' + month + '/' + format + '/' + rating + '/items/' + item.identifier">

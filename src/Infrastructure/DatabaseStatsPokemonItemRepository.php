@@ -62,8 +62,9 @@ final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemReposi
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `moveset_rated_items` AS `mri`
 				ON `urp`.`id` = `mri`.`usage_rated_pokemon_id`
-			INNER JOIN `item_icons` AS `ii`
+			LEFT JOIN `item_icons` AS `ii`
 				ON `mri`.`item_id` = `ii`.`item_id`
+				AND `ii`.`generation_id` = :generation_id
 			INNER JOIN `items` AS `i`
 				ON `mri`.`item_id` = `i`.`id`
 			INNER JOIN `item_names` AS `in`
@@ -80,7 +81,6 @@ final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemReposi
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
 				AND `urp`.`pokemon_id` = :pokemon_id
-				AND `ii`.`generation_id` = :generation_id
 				AND `in`.`language_id` = :language_id
 			ORDER BY `mri`.`percent` DESC'
 		);
@@ -97,7 +97,7 @@ final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemReposi
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$item = new StatsPokemonItem(
-				$result['icon'],
+				(string) $result['icon'],
 				$result['identifier'],
 				$result['name'],
 				(float) $result['percent'],
