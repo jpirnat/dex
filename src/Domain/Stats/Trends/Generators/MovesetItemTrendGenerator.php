@@ -91,11 +91,13 @@ final class MovesetItemTrendGenerator
 			$pokemonId,
 			$itemId
 		);
+		$months = $this->statsChartQueries->getMonthsWithData($format->getId(), $rating);
 
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
 			$format->getId(),
 			$usageDatas,
+			$months,
 			0
 		);
 

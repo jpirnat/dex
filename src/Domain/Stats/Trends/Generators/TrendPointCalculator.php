@@ -83,6 +83,7 @@ final class TrendPointCalculator
 	 *
 	 * @param FormatId $formatId The format the data is from.
 	 * @param float[] $usageDatas Indexed by month ('YYYY-MM-DD')
+	 * @param int[] $months Months with format data. Indexed by month ('YYYY-MM-DD')
 	 * @param float $default The default value for points without data.
 	 *
 	 * @return TrendPoint[]
@@ -90,6 +91,7 @@ final class TrendPointCalculator
 	public function getTrendPoints(
 		FormatId $formatId,
 		array $usageDatas,
+		array $months,
 		float $default
 	) : array {
 		// Get the first and final dates in the series.
@@ -105,13 +107,14 @@ final class TrendPointCalculator
 		foreach ($period as $date) {
 			$month = $date->format('Y-m-d');
 
-			// Get this month's usage percent, if one exists.
-			$value = $default;
+			// Get this month's data, if it exists.
 			if (isset($usageDatas[$month])) {
-				$value = $usageDatas[$month];
+				$trendPoints[] = new TrendPoint($date, $usageDatas[$month]);
+			} elseif (isset($months[$month])) {
+				// General data exists for this month, but not the data we're
+				// looking for. Use the default value.
+				$trendPoints[] = new TrendPoint($date, $default);
 			}
-
-			$trendPoints[] = new TrendPoint($date, $value);
 		}
 
 		return $trendPoints;

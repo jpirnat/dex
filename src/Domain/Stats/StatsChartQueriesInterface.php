@@ -12,6 +12,16 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 interface StatsChartQueriesInterface
 {
 	/**
+	 * Get the months that have data recorded for this format and rating.
+	 *
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 *
+	 * @return array Indexed by month ('YYYY-MM-DD'). Ordered by month.
+	 */
+	public function getMonthsWithData(FormatId $formatId, int $rating) : array;
+
+	/**
 	 * Get usage data for the usage chart.
 	 *
 	 * @param FormatId $formatId
