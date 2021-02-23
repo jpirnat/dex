@@ -889,6 +889,14 @@ language_id,pokemon_id,name,category
 1,888,ザシアン,つわものポケモン
 1,889,ザマゼンタ,つわものポケモン
 1,890,ムゲンダイナ,キョダイポケモン
+1,891,ダクマ,けんぽうポケモン
+1,892,ウーラオス (いちげきのかた),けんぽうポケモン
+1,893,ザルード,わるざるポケモン
+1,894,レジエレキ,エレクトロンポケモン
+1,895,レジドラゴ,りゅうぎょくポケモン
+1,896,ブリザポス,あばれうまポケモン
+1,897,レイスポス,しゅんばポケモン
+1,898,バドレックス,キングポケモン
 1,10001,ポワルン (たいようのすがた),てんきポケモン
 1,10002,ポワルン (あまみずのすがた),てんきポケモン
 1,10003,ポワルン (ゆきぐものすがた),てんきポケモン
@@ -1084,6 +1092,14 @@ language_id,pokemon_id,name,category
 1,10193,ザマゼンタ (たてのおう),つわものポケモン
 1,10194,ムゲンダイナ (ムゲンダイマックス),キョダイポケモン
 1,10195,ヤドン (ガラルのすがた),まぬけポケモン
+1,10196,ヤドラン (ガラルのすがた),やどかりポケモン
+1,10197,ウーラオス (れんげきのかた),けんぽうポケモン
+1,10198,フリーザー (ガラルのすがた),れいこくポケモン
+1,10199,サンダー (ガラルのすがた),けんきゃくポケモン
+1,10200,ファイヤー (ガラルのすがた),じゃあくポケモン
+1,10201,ヤドキング (ガラルのすがた),じゅじゅつしポケモン
+1,10202,バドレックス (はくばじょうのすがた),エンペラーポケモン
+1,10203,バドレックス (こくばじょうのすがた),エンペラーポケモン
 2,1,Bulbasaur,Seed Pokémon
 2,2,Ivysaur,Seed Pokémon
 2,3,Venusaur,Seed Pokémon
@@ -1974,6 +1990,14 @@ language_id,pokemon_id,name,category
 2,888,Zacian,Warrior Pokémon
 2,889,Zamazenta,Warrior Pokémon
 2,890,Eternatus,Gigantic Pokémon
+2,891,Kubfu,Wushu Pokémon
+2,892,Urshifu (Single Strike Style),Wushu Pokémon
+2,893,Zarude,Rogue Monkey Pokémon
+2,894,Regieleki,Electron Pokémon
+2,895,Regidrago,Dragon Orb Pokémon
+2,896,Glastrier,Wild Horse Pokémon
+2,897,Spectrier,Swift Horse Pokémon
+2,898,Calyrex,King Pokémon
 2,10001,Castform (Sunny Form),Weather Pokémon
 2,10002,Castform (Rainy Form),Weather Pokémon
 2,10003,Castform (Snowy Form),Weather Pokémon
@@ -2169,6 +2193,14 @@ language_id,pokemon_id,name,category
 2,10193,Zamazenta (Crowned Shield),Warrior Pokémon
 2,10194,Eternatus (Eternamax),Gigantic Pokémon
 2,10195,Galarian Slowpoke,Dopey Pokémon
+2,10196,Galarian Slowbro,Hermit Crab Pokémon
+2,10197,Urshifu (Rapid Strike Style),Wushu Pokémon
+2,10198,Galarian Articuno,Cruel Pokémon
+2,10199,Galarian Zapdos,Strong Legs Pokémon
+2,10200,Galarian Moltres,Malevolent Pokémon
+2,10201,Galarian Slowking,Hexpert Pokémon
+2,10202,Calyrex (Ice Rider),High King Pokémon
+2,10203,Calyrex (Shadow Rider),High King Pokémon
 3,1,Bulbizarre,Pokémon Graine
 3,2,Herbizarre,Pokémon Graine
 3,3,Florizarre,Pokémon Graine
@@ -3059,6 +3091,14 @@ language_id,pokemon_id,name,category
 3,888,Zacian,Pokémon Valeureux
 3,889,Zamazenta,Pokémon Valeureux
 3,890,Éthernatos,Pokémon Giga
+3,891,Wushours,Pokémon Kung-fu
+3,892,Shifours (Style Poing Final),Pokémon Kung-fu
+3,893,Zarude,Pokémon Vilain Singe
+3,894,Regieleki,Pokémon Électron
+3,895,Regidrago,Pokémon Boule Dragon
+3,896,Blizzeval,Pokémon Cheval Rétif
+3,897,Spectreval,Pokémon Cheval Vif
+3,898,Sylveroy,Pokémon Roi
 3,10001,Morphéo (Forme Solaire),Pokémon Climat
 3,10002,Morphéo (Forme Eau de Pluie),Pokémon Climat
 3,10003,Morphéo (Forme Blizzard),Pokémon Climat
@@ -3254,6 +3294,14 @@ language_id,pokemon_id,name,category
 3,10193,Zamazenta (Bouclier Suprême),Pokémon Valeureux
 3,10194,Éthernatos (Infinimax),Pokémon Giga
 3,10195,Ramoloss (Forme de Galar),Pokémon Crétin
+3,10196,Flagadoss (ガラルのすがた),Pokémon Symbiose
+3,10197,Shifours (Style Mille Poings),Pokémon Kung-fu
+3,10198,Artikodin (ガラルのすがた),Pokémon Implacable
+3,10199,Électhor (ガラルのすがた),Pokémon Fort-Pied
+3,10200,Sulfura (ガラルのすがた),Pokémon Maléfique
+3,10201,Roigada (ガラルのすがた),Pokémon Ensorceleur
+3,10202,Sylveroy (Cavalier du Froid),Pokémon Empereur
+3,10203,Sylveroy (Cavalier d’Effroi),Pokémon Empereur
 4,1,Bisasam,Samen
 4,2,Bisaknosp,Samen
 4,3,Bisaflor,Samen
@@ -4144,6 +4192,14 @@ language_id,pokemon_id,name,category
 4,888,Zacian,Krieger-Pokémon
 4,889,Zamazenta,Krieger-Pokémon
 4,890,Endynalos,Giganten-Pokémon
+4,891,Dakuma,Kung-Fu-Pokémon
+4,892,Wulaosu (Fokussierter Stil),Kung-Fu-Pokémon
+4,893,Zarude,Finsteraffen-Pokémon
+4,894,Regieleki,Elektronen-Pokémon
+4,895,Regidrago,Drachenkugel-Pokémon
+4,896,Polaross,Wildblut-Pokémon
+4,897,Phantoross,Flinkblut-Pokémon
+4,898,Coronospa,Königs-Pokémon
 4,10001,Formeo (Sonnenform),Wetter
 4,10002,Formeo (Regenform),Wetter
 4,10003,Formeo (Schneeform),Wetter
@@ -4339,6 +4395,14 @@ language_id,pokemon_id,name,category
 4,10193,Zamazenta (König des Schildes),Krieger-Pokémon
 4,10194,Endynalos (Unendynamax),Giganten-Pokémon
 4,10195,Flegmon (Galar-Form),Schnarcher-Pokémon
+4,10196,Lahmus (ガラルのすがた),Symbiose-Pokémon
+4,10197,Wulaosu (Fließender Stil),Kung-Fu-Pokémon
+4,10198,Arktos (ガラルのすがた),Gefühlskälte-Pokémon
+4,10199,Zapdos (ガラルのすがた),Läufer-Pokémon
+4,10200,Lavados (ガラルのすがた),Bosheits-Pokémon
+4,10201,Laschoking (ガラルのすがた),Hexenmeister-Pokémon
+4,10202,Coronospa (Schimmelreiter),Kaiser-Pokémon
+4,10203,Coronospa (Rappenreiter),Kaiser-Pokémon
 5,1,Bulbasaur,Pokémon Seme
 5,2,Ivysaur,Pokémon Seme
 5,3,Venusaur,Pokémon Seme
@@ -5229,6 +5293,14 @@ language_id,pokemon_id,name,category
 5,888,Zacian,Pokémon Guerriero
 5,889,Zamazenta,Pokémon Guerriero
 5,890,Eternatus,Pokémon Gigante
+5,891,Kubfu,Pokémon Kung Fu
+5,892,Urshifu (Stile Singolcolpo),Pokémon Kung Fu
+5,893,Zarude,Pokémon Scimmialigna
+5,894,Regieleki,Pokémon Elettrone
+5,895,Regidrago,Pokémon Dracosfera
+5,896,Glastrier,Pokémon Furiequino
+5,897,Spectrier,Pokémon Sveltequino
+5,898,Calyrex,Pokémon Re
 5,10001,Castform (Forma Sole),Pokémon Meteo
 5,10002,Castform (Forma Pioggia),Pokémon Meteo
 5,10003,Castform (Forma Nuvola di Neve),Pokémon Meteo
@@ -5424,6 +5496,14 @@ language_id,pokemon_id,name,category
 5,10193,Zamazenta (Re degli Scudi),Pokémon Guerriero
 5,10194,Eternatus (Dynamax Infinito),Pokémon Gigante
 5,10195,Slowpoke (Forma di Galar),Pokémon Ronfone
+5,10196,Slowbro (ガラルのすがた),Pokémon Paguro
+5,10197,Urshifu (Stile Pluricolpo),Pokémon Kung Fu
+5,10198,Articuno (ガラルのすがた),Pokémon Sanguefreddo
+5,10199,Zapdos (ガラルのすがた),Pokémon Zampeforti
+5,10200,Moltres (ガラルのすがた),Pokémon Malvagità
+5,10201,Slowking (ガラルのすがた),Pokémon Stregone
+5,10202,Calyrex (Cavaliere Glaciale),Pokémon Imperatore
+5,10203,Calyrex (Cavaliere Spettrale),Pokémon Imperatore
 6,1,Bulbasaur,Pokémon Semilla
 6,2,Ivysaur,Pokémon Semilla
 6,3,Venusaur,Pokémon Semilla
@@ -6314,6 +6394,14 @@ language_id,pokemon_id,name,category
 6,888,Zacian,Pokémon Guerrero
 6,889,Zamazenta,Pokémon Guerrero
 6,890,Eternatus,Pokémon Gigantesco
+6,891,Kubfu,Pokémon Kung-fu
+6,892,Urshifu (Estilo Brusco),Pokémon Kung-fu
+6,893,Zarude,Pokémon Simiestro
+6,894,Regieleki,Pokémon Electrón
+6,895,Regidrago,Pokémon Dragosfera
+6,896,Glastrier,Pokémon Corcel Feroz
+6,897,Spectrier,Pokémon Corcel Veloz
+6,898,Calyrex,Pokémon Rey
 6,10001,Castform (Forma Sol),Pokémon Clima
 6,10002,Castform (Forma Lluvia),Pokémon Clima
 6,10003,Castform (Forma Nieve),Pokémon Clima
@@ -6509,6 +6597,14 @@ language_id,pokemon_id,name,category
 6,10193,Zamazenta (Escudo Supremo),Pokémon Guerrero
 6,10194,Eternatus (Dinamax Infinito),Pokémon Gigantesco
 6,10195,Slowpoke (Forma de Galar),Pokémon Atontado
+6,10196,Slowbro (ガラルのすがた),Pokémon Ermitaño
+6,10197,Urshifu (Estilo Fluido),Pokémon Kung-fu
+6,10198,Articuno (ガラルのすがた),Pokémon Calculador
+6,10199,Zapdos (ガラルのすがた),Pokémon Patas Recias
+6,10200,Moltres (ガラルのすがた),Pokémon Malignidad
+6,10201,Slowking (ガラルのすがた),Pokémon Chamán
+6,10202,Calyrex (Jinete Glacial),Pokémon Emperador
+6,10203,Calyrex (Jinete Espectral),Pokémon Emperador
 7,1,이상해씨,씨앗포켓몬
 7,2,이상해풀,씨앗포켓몬
 7,3,이상해꽃,씨앗포켓몬
@@ -7399,6 +7495,14 @@ language_id,pokemon_id,name,category
 7,888,자시안,강자포켓몬
 7,889,자마젠타,강자포켓몬
 7,890,무한다이노,거대포켓몬
+7,891,치고마,권법포켓몬
+7,892,우라오스 (일격의 태세),권법포켓몬
+7,893,자루도,나쁜원숭이포켓몬
+7,894,레지에레키,일렉트론포켓몬
+7,895,레지드래고,용옥포켓몬
+7,896,블리자포스,사나운말포켓몬
+7,897,레이스포스,빠른말포켓몬
+7,898,버드렉스,킹포켓몬
 7,10001,캐스퐁 (태양의 모습),날씨포켓몬
 7,10002,캐스퐁 (빗방울의 모습),날씨포켓몬
 7,10003,캐스퐁 (설운의 모습),날씨포켓몬
@@ -7594,6 +7698,14 @@ language_id,pokemon_id,name,category
 7,10193,자마젠타 (방패왕),강자포켓몬
 7,10194,무한다이노 (무한다이맥스),거대포켓몬
 7,10195,야돈 (가라르의 모습),얼간이포켓몬
+7,10196,야도란 (ガラルのすがた),기생포켓몬
+7,10197,우라오스 (연격의 태세),권법포켓몬
+7,10198,프리져 (ガラルのすがた),냉혹포켓몬
+7,10199,썬더 (ガラルのすがた),건각포켓몬
+7,10200,파이어 (ガラルのすがた),사악포켓몬
+7,10201,야도킹 (ガラルのすがた),술사포켓몬
+7,10202,버드렉스 (백마 탄 모습),엠페러포켓몬
+7,10203,버드렉스 (흑마 탄 모습),엠페러포켓몬
 8,1,フシギダネ,たねポケモン
 8,2,フシギソウ,たねポケモン
 8,3,フシギバナ,たねポケモン
@@ -8484,6 +8596,14 @@ language_id,pokemon_id,name,category
 8,888,ザシアン,つわものポケモン
 8,889,ザマゼンタ,つわものポケモン
 8,890,ムゲンダイナ,キョダイポケモン
+8,891,ダクマ,けんぽうポケモン
+8,892,ウーラオス (いちげきのかた),けんぽうポケモン
+8,893,ザルード,わるざるポケモン
+8,894,レジエレキ,エレクトロンポケモン
+8,895,レジドラゴ,りゅうぎょくポケモン
+8,896,ブリザポス,あばれうまポケモン
+8,897,レイスポス,しゅんばポケモン
+8,898,バドレックス,キングポケモン
 8,10001,ポワルン (たいようのすがた),てんきポケモン
 8,10002,ポワルン (あまみずのすがた),てんきポケモン
 8,10003,ポワルン (ゆきぐものすがた),てんきポケモン
@@ -8679,6 +8799,14 @@ language_id,pokemon_id,name,category
 8,10193,ザマゼンタ (たてのおう),つわものポケモン
 8,10194,ムゲンダイナ (ムゲンダイマックス),キョダイポケモン
 8,10195,ヤドン (ガラルのすがた),まぬけポケモン
+8,10196,ヤドラン (ガラルのすがた),やどかりポケモン
+8,10197,ウーラオス (れんげきのかた),けんぽうポケモン
+8,10198,フリーザー (ガラルのすがた),れいこくポケモン
+8,10199,サンダー (ガラルのすがた),けんきゃくポケモン
+8,10200,ファイヤー (ガラルのすがた),じゃあくポケモン
+8,10201,ヤドキング (ガラルのすがた),じゅじゅつしポケモン
+8,10202,バドレックス (はくばじょうのすがた),エンペラーポケモン
+8,10203,バドレックス (こくばじょうのすがた),エンペラーポケモン
 9,1,妙蛙种子,种子宝可梦
 9,2,妙蛙草,种子宝可梦
 9,3,妙蛙花,种子宝可梦
@@ -9569,6 +9697,14 @@ language_id,pokemon_id,name,category
 9,888,苍响,强者宝可梦
 9,889,藏玛然特,强者宝可梦
 9,890,无极汰那,超极巨宝可梦
+9,891,熊徒弟,拳法宝可梦
+9,892,武道熊师 (一击流),拳法宝可梦
+9,893,萨戮德,恶猿宝可梦
+9,894,雷吉艾勒奇,电子宝可梦
+9,895,雷吉铎拉戈,龙玉宝可梦
+9,896,雪暴马,烈马宝可梦
+9,897,灵幽马,骏马宝可梦
+9,898,蕾冠王,国王宝可梦
 9,10001,飘浮泡泡 (太阳的样子),天气宝可梦
 9,10002,飘浮泡泡 (雨水的样子),天气宝可梦
 9,10003,飘浮泡泡 (雪云的样子),天气宝可梦
@@ -9764,6 +9900,14 @@ language_id,pokemon_id,name,category
 9,10193,藏玛然特 (盾之王),强者宝可梦
 9,10194,无极汰那 (无极巨化),超极巨宝可梦
 9,10195,呆呆兽 (伽勒尔的样子),憨憨宝可梦
+9,10196,呆壳兽 (ガラルのすがた),寄居蟹宝可梦
+9,10197,武道熊师 (连击流),拳法宝可梦
+9,10198,急冻鸟 (ガラルのすがた),冷酷宝可梦
+9,10199,闪电鸟 (ガラルのすがた),健脚宝可梦
+9,10200,火焰鸟 (ガラルのすがた),邪恶宝可梦
+9,10201,呆呆王 (ガラルのすがた),诅咒师宝可梦
+9,10202,蕾冠王 (骑白马的样子),帝皇宝可梦
+9,10203,蕾冠王 (骑黑马的样子),帝皇宝可梦
 10,1,妙蛙種子,種子寶可夢
 10,2,妙蛙草,種子寶可夢
 10,3,妙蛙花,種子寶可夢
@@ -10654,6 +10798,14 @@ language_id,pokemon_id,name,category
 10,888,蒼響,強者寶可夢
 10,889,藏瑪然特,強者寶可夢
 10,890,無極汰那,超極巨寶可夢
+10,891,熊徒弟,拳法寶可夢
+10,892,武道熊師 (一擊流),拳法寶可夢
+10,893,薩戮德,惡猿寶可夢
+10,894,雷吉艾勒奇,電子寶可夢
+10,895,雷吉鐸拉戈,龍玉寶可夢
+10,896,雪暴馬,烈馬寶可夢
+10,897,靈幽馬,駿馬寶可夢
+10,898,蕾冠王,國王寶可夢
 10,10001,飄浮泡泡 (太陽的樣子),天氣寶可夢
 10,10002,飄浮泡泡 (雨水的樣子),天氣寶可夢
 10,10003,飄浮泡泡 (雪雲的樣子),天氣寶可夢
@@ -10849,3 +11001,11 @@ language_id,pokemon_id,name,category
 10,10193,藏瑪然特 (盾之王),強者寶可夢
 10,10194,無極汰那 (無極巨化),超極巨寶可夢
 10,10195,呆呆獸 (伽勒爾的樣子),憨憨寶可夢
+10,10196,呆殼獸 (ガラルのすがた),寄居蟹寶可夢
+10,10197,武道熊師 (連擊流),拳法寶可夢
+10,10198,急凍鳥 (ガラルのすがた),冷酷寶可夢
+10,10199,閃電鳥 (ガラルのすがた),健腳寶可夢
+10,10200,火焰鳥 (ガラルのすがた),邪惡寶可夢
+10,10201,呆呆王 (ガラルのすがた),詛咒師寶可夢
+10,10202,蕾冠王 (騎白馬的樣子),帝皇寶可夢
+10,10203,蕾冠王 (騎黑馬的樣子),帝皇寶可夢

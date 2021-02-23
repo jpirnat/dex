@@ -20789,7 +20789,7 @@ generation_id,language_id,move_id,description
 8,1,131,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
 8,1,132,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
 8,1,133,あたまを　からにして\nいっしゅん　なにかを　わすれる　ことで\nじぶんの　とくぼうを　ぐーんと　あげる。
-8,1,134,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
+8,1,134,スプーンを　まげて　ちゅういを　ひき\nあいての　めいちゅうりつを　さげる。
 8,1,135,さいだい　ＨＰの　はんぶん\nじぶんの　ＨＰを　かいふく　する。
 8,1,136,ジャンプからの　ひざげりで\nあいてを　こうげきする。\nはずすと　じぶんが　ダメージを　うける。
 8,1,137,おなかの　もようで　おびえさせて\nあいてを　まひの　じょうたいに　する。
@@ -20949,7 +20949,7 @@ generation_id,language_id,move_id,description
 8,1,291,１ターンめで　もぐり　２ターンめに\nうきあがって　こうげきする。
 8,1,292,ひらいた　りょうてで\nあいてを　つっぱって　こうげきする。\n２ー５かいの　あいだ　れんぞくで　だす。
 8,1,293,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
-8,1,294,てんめつする　ひかりを　ながめて\nじぶんの　せいしんを　とういつし\nとくこうを　ぐぐーんと　あげる。
+8,1,294,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
 8,1,295,まばゆい　ひかりを　ときはなって\nこうげきする。　あいての　とくぼうを\nさげることが　ある。
 8,1,296,きりじょうの　うもうで　つつみこみ\nこうげきする。　あいての　とくこうを\nさげることが　ある。
 8,1,297,うもうを　ふりまいて\nあいての　からだに　からませる。\nあいての　こうげきを　がくっと　さげる。
@@ -21009,7 +21009,7 @@ generation_id,language_id,move_id,description
 8,1,351,でんげきを　すばやく\nあいてに　あびせる。\nこうげきは　かならず　めいちゅう　する。
 8,1,352,みずの　しんどうを\nあいてに　あたえて　こうげきする。\nあいてを　こんらん　させることが　ある。
 8,1,353,わざを　つかった　２ターン　あとに\nむすうの　ひかりの　たばで\nあいてを　こうげきする。
-8,1,354,フルパワーで　あいてを　こうげきする。\nつかうと　はんどうで\nじぶんの　とくこうが　がくっと　さがる。
+8,1,354,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
 8,1,355,じめんに　おりて　からだを　やすめる。\nさいだい　ＨＰの　はんぶんの\nＨＰを　かいふく　する。
 8,1,356,５ターンのあいだ　ふゆうや　ひこうタイプに\nじめんタイプの　わざが　あたるようになる。\nくうちゅうに　とぶ　わざも　つかえない。
 8,1,357,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
@@ -21046,7 +21046,7 @@ generation_id,language_id,move_id,description
 8,1,388,こころを　なやませる　タネを\nうえつける。　あいてを　ねむれなく　して\nとくせいを　ふみんに　する。
 8,1,389,あいてより　さきに　こうげき　できる。\nあいてが　だすわざが\nこうげきわざ　でないと　しっぱい　する。
 8,1,390,あいての　あしもとに　どくびしを\nしかける。　こうたいで　でてきた　あいての\nポケモンに　どくを　おわせる。
-8,1,391,ちょうのうりょくで\nじぶんと　あいてに　かかっている\nのうりょく　へんかを　いれかえる。
+8,1,391,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
 8,1,392,じぶんの　からだの　まわりを\nみずで　つくった　ベールで　おおう。\nまいターン　ＨＰを　かいふく　する。
 8,1,393,でんきで　つくった　じりょくの　ちからで\nちゅうに　うかぶ。\n５ターンの　あいだ　ふゆう　できる。
 8,1,394,ほのおを　まとって　とっしんする。\nじぶんも　かなり　ダメージを　うける。\nやけど　じょうたいに　することが　ある。
@@ -21452,6 +21452,36 @@ generation_id,language_id,move_id,description
 8,1,794,ふとい　クキを　ふりまわして　こうげき。\nただし　じぶんも　よろめいてしまうため\nつぎの　ターンは　うごけなくなる。
 8,1,795,ほんらいの　すがたと　なった\nムゲンダイナ　さいだいの　こうげき。\nつぎの　ターンは　うごけなくなる。
 8,1,796,ぜんしんから　あつめた　はがねを\nビームとして　はげしく　うちだす。\nじぶんも　ダメージを　うけてしまう。
+8,1,797,サイコパワーで　あいてを　こうげきする。\nサイコフィールドの　とき　いりょくが　あがり\nすべての　あいてに　ダメージを　あたえる。
+8,1,798,フィールドを　はかい　しながら　こうげき。\nなんらかの　フィールドじょうたいに\nかわって　いないと　わざは　しっぱいする。
+8,1,799,ウロコを　うちだして　こうげきする。\n２ー５かいの　あいだ　れんぞくで　だす。\nすばやさが　あがるが　ぼうぎょが　さがる。
+8,1,800,１ターンめに　うちゅうの　ちからを\nあつめることで　とくこうが　あがり\n２ターンめに　あいてを　こうげきする。
+8,1,801,ぶつりか　とくしゅか　よりおおく　ダメージを\nあたえられる　のうりょくで　こうげきする。\nどく　じょうたいに　することが　ある。
+8,1,802,じぶんの　まわりに　いる　すべてを\nこうげき　するが　つかうと　ひんしになる。\nミストフィールドで　いりょくが　あがる。
+8,1,803,じめんを　すべるように　あいてを　こうげき。\nグラスフィールドの　とき\nかならず　せんせい　こうげき　できる。
+8,1,804,じめんから　たちのぼる　でんげきで　こうげき。\nあいてが　エレキフィールドに　いるとき\nわざの　いりょくが　２ばいに　なる。
+8,1,805,フィールドの　ちからを　かりて　こうげき。\nつかったときの　フィールドのじょうたいに　よって\nわざの　タイプと　いりょくが　かわる。
+8,1,806,はいごから　はいより　こうげきする。\nあいての　とくこうを　さげる。
+8,1,807,しっとの　エネルギーで　あいてを　こうげき。\nそのターン　のうりょくが　あがった　ポケモンを\nやけどの　じょうたいに　する。
+8,1,808,あいてへの　いらだちを　ぶつけて　こうげき。\nそのターンに　のうりょくを　さげられていると\nわざの　いりょくが　２ばいに　なる。
+8,1,809,あいての　もちものを　あやつって　こうげき。\nあいてが　どうぐを　もっていない　ばあいは\nしっぱい　する。
+8,1,810,つよい　さんせいの　ガスで\nまわりに　いるものを　つつみこみ\nもっている　どうぐを　とかしてしまう。
+8,1,811,てきかくな　しどうを　おこなうことで　\nみかた　ぜんいんの\nこうげきと　ぼうぎょを　あげる。
+8,1,812,こうげきした　あと\nものすごい　スピードで　もどってきて\nひかえの　ポケモンと　いれかわる。
+8,1,813,３かい　れんぞくで　キックを　くりだして\nこうげきする。　わざが　あたる　たびに\nいりょくは　あがる。
+8,1,814,つばさを　あいてに　ぶつけて\nこうげきする。　２かい　れんぞくで\nダメージを　あたえる。
+8,1,815,あつく　やけた　すなを\nあいてに　ぶつけて　こうげきする。\nやけど　じょうたいに　することが　ある。
+8,1,816,ジャングルと　いったいか　して\nじぶんと　ばにいる　みかたの\nＨＰと　じょうたいを　かいふくする。
+8,1,817,あくの　かたを　きわめし\nきょうれつな　いちげき。\nかならず　きゅうしょに　あたる。
+8,1,818,みずの　かたを　きわめし\nながれるような　３かいの　れんげき。\nかならず　きゅうしょに　あたる。
+8,1,819,ほとばしる　でんきの　おりの　なかに\n４ー５ターンの　あいだ\nあいてを　とじこめて　こうげきする。
+8,1,820,せいめいりょくを　パワーに　かえ　あいてを\nこうげきする。　じぶんの　ＨＰが　すくないほど\nわざの　いりょくは　さがる。
+8,1,821,りょうめから　サイコパワーを\nうちだして　こうげきする。\nこおり　じょうたいに　することが　ある。
+8,1,822,いかりを　ほのおの　ような\nオーラに　かえて　こうげきする。\nあいてを　ひるませる　ことが　ある。
+8,1,823,かみなりの　ような　うごきで\nあいてを　ほんろう　しながら　キックする。\nあいての　ぼうぎょを　さげる。
+8,1,824,ふぶきを　まとった　こおりの　やりを\nあいてに　なげつけて　こうげきする。
+8,1,825,たくさんの　ちいさな　れいたいを\nあいてに　ぶつけて　こうげきする。
+8,1,826,きょうりょくな　サイコパワーで　こうげき。\nあいてが　さいごに　つかった　わざの\nＰＰを　３だけ　へらす。
 8,1,10001,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
 8,1,10002,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
 8,1,10003,このわざは　つかえません\nおもいだすことが　できなくなりますが\nわざを　わすれることを　おすすめします
@@ -21494,6 +21524,13 @@ generation_id,language_id,move_id,description
 8,1,10058,キョダイマックスした　メルメタルが\nくりだす　はがねタイプの　こうげき。\nおなじ　わざを　れんぞくで　だせなくする。
 8,1,10059,キョダイマックスした　キングラーが\nくりだす　みずタイプの　こうげき。\nあいての　すばやさを　がくっと　さげる。
 8,1,10060,キョダイマックスした　マルヤクデが\nくりだす　ほのおタイプの　こうげき。\n４ー５ターンのあいだ　ほのおにとじこめる。
+8,1,10061,キョダイマックスした　フシギバナが\nくりだす　くさタイプの　こうげき。\n４ターンの　あいだ　ダメージを　あたえる。
+8,1,10062,キョダイマックスした　カメックスが\nくりだす　みずタイプの　こうげき。\n４ターンの　あいだ　ダメージを　あたえる。
+8,1,10063,キョダイマックスした　ゴリランダーが\nくりだす　くさタイプの　こうげき。\nあいての　とくせいに　じゃまされない。
+8,1,10064,キョダイマックスした　エースバーンが\nくりだす　ほのおタイプの　こうげき。\nあいての　とくせいに　じゃまされない。
+8,1,10065,キョダイマックスした　インテレオンが\nくりだす　みずタイプの　こうげき。\nあいての　とくせいに　じゃまされない。
+8,1,10066,キョダイマックスした　ウーラオスが\nくりだす　あくタイプの　こうげき。\nダイウォールを　むしできる　いちげき。
+8,1,10067,キョダイマックスした　ウーラオスが\nくりだす　みずタイプの　こうげき。\nダイウォールを　むしできる　れんげき。
 8,2,1,"The target is physically pounded with a long tail, a\nforeleg, or the like."
 8,2,2,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
 8,2,3,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
@@ -21627,7 +21664,7 @@ generation_id,language_id,move_id,description
 8,2,131,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
 8,2,132,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
 8,2,133,The user temporarily empties its mind to forget its\nconcerns. This sharply raises the user’s Sp. Def stat.
-8,2,134,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
+8,2,134,The user distracts the target by bending a spoon.\nThis lowers the target’s accuracy.
 8,2,135,The user restores its own HP by up to half of its\nmax HP.
 8,2,136,"The target is attacked with a knee kick from a jump.\nIf it misses, the user is hurt instead."
 8,2,137,The user intimidates the target with the pattern on\nits belly to cause paralysis.
@@ -21787,7 +21824,7 @@ generation_id,language_id,move_id,description
 8,2,291,"Diving on the first turn, the user floats up and\nattacks on the next turn."
 8,2,292,The user lets loose a flurry of open-palmed arm\nthrusts that hit two to five times in a row.
 8,2,293,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
-8,2,294,"The user stares at flashing lights to focus its mind,\ndrastically raising its Sp. Atk stat."
+8,2,294,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
 8,2,295,The user lets loose a damaging burst of light. This\nmay also lower the target’s Sp. Def stat.
 8,2,296,A mist-like flurry of down envelops and damages the\ntarget. This may also lower the target’s Sp. Atk stat.
 8,2,297,The user covers the target’s body with a mass of\ndown that harshly lowers its Attack stat.
@@ -21847,7 +21884,7 @@ generation_id,language_id,move_id,description
 8,2,351,The user strikes the target with a quick jolt of\nelectricity. This attack never misses.
 8,2,352,The user attacks the target with a pulsing blast of\nwater. This may also confuse the target.
 8,2,353,"Two turns after this move is used, a concentrated\nbundle of light blasts the target."
-8,2,354,The user attacks the target at full power. The\nattack’s recoil harshly lowers the user’s\nSp. Atk stat.
+8,2,354,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
 8,2,355,The user lands and rests its body. This move restores\nthe user’s HP by up to half of its max HP.
 8,2,356,This move enables Flying-type Pokémon or Pokémon\nwith the Levitate Ability to be hit by Ground-type\nmoves. Moves that involve flying can’t be used.
 8,2,357,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
@@ -21884,7 +21921,7 @@ generation_id,language_id,move_id,description
 8,2,388,A seed that causes worry is planted on the target.\nIt prevents sleep by making the target’s\nAbility Insomnia.
 8,2,389,This move enables the user to attack first. This move\nfails if the target is not readying an attack.
 8,2,390,The user lays a trap of poison spikes at the feet of\nthe opposing team. The spikes will poison opposing\nPokémon that switch into battle.
-8,2,391,The user employs its psychic power to switch stat\nchanges with the target.
+8,2,391,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
 8,2,392,The user envelops itself in a veil made of water.\nIt regains some HP every turn.
 8,2,393,The user levitates using electrically generated\nmagnetism for five turns.
 8,2,394,The user cloaks itself in fire and charges the target.\nThis also damages the user quite a lot. This attack\nmay leave the target with a burn.
@@ -22290,6 +22327,36 @@ generation_id,language_id,move_id,description
 8,2,794,"The user attacks wildly with its thick leek.\nThe user can’t move on the next turn, because the\nforce of this move makes it stagger."
 8,2,795,This is Eternatus’s most powerful attack in its original\nform. The user can’t move on the next turn.
 8,2,796,The user fires a beam of steel that it collected from its\nentire body. This also damages the user.
+8,2,797,The user attacks the target with its psychic power.\nThis move’s power goes up and damages all opposing\nPokémon on Psychic Terrain.
+8,2,798,The user attacks while destroying the terrain. This move\nfails when the ground hasn’t turned into a terrain.
+8,2,799,The user attacks by shooting scales two to five times\nin a row. This move boosts the user’s Speed stat but\nlowers its Defense stat.
+8,2,800,"In this two-turn attack, the user gathers space power\nand boosts its Sp. Atk stat, then attacks the target\non the next turn."
+8,2,801,"This move inflicts physical or special damage,\nwhichever will be more effective. This may also poison\nthe target."
+8,2,802,The user attacks everything around it and faints upon\nusing this move. This move’s power is increased on\nMisty Terrain.
+8,2,803,"Gliding on the ground, the user attacks the target.\nThis move always goes first on Grassy Terrain."
+8,2,804,The user attacks with electric voltage rising from\nthe ground. This move’s power doubles when the target\nis on Electric Terrain.
+8,2,805,The user utilizes the power of the terrain to attack.\nThis move’s type and power changes depending on\nthe terrain when it’s used.
+8,2,806,The user skitters behind the target to attack. This also\nlowers the target’s Sp. Atk stat.
+8,2,807,The user attacks with energy from jealousy. This leaves\nall opposing Pokémon that have had their stats boosted\nduring the turn with a burn.
+8,2,808,"The user lashes out to vent its frustration toward\nthe target. If the user’s stats were lowered during this\nturn, the power of this move is doubled."
+8,2,809,The user attacks the target by controlling the target’s\nitem. The move fails if the target doesn’t have an item.
+8,2,810,The user surrounds everything around it with\nhighly acidic gas and melts away items they hold.
+8,2,811,"The user properly coaches its ally Pokémon,\nboosting their Attack and Defense stats."
+8,2,812,"After making its attack, the user rushes back to\nswitch places with a party Pokémon in waiting."
+8,2,813,A consecutive three-kick attack that becomes more\npowerful with each successful hit.
+8,2,814,The user slams the target with its wings.\nThe target is hit twice in a row.
+8,2,815,The user throws scorching sand at the target to attack.\nThis may also leave the target with a burn.
+8,2,816,"The user becomes one with the jungle, restoring HP\nand healing any status conditions of itself and its ally\nPokémon in battle."
+8,2,817,"The user, having mastered the Dark style, strikes the\ntarget with a fierce blow. This attack always results\nin a critical hit."
+8,2,818,"The user, having mastered the Water style, strikes the\ntarget with a flowing motion three times in a row. This\nattack always results in a critical hit."
+8,2,819,The user traps the target in a cage of sparking\nelectricity for four to five turns.
+8,2,820,"Converting its life-force into power, the user attacks\nopposing Pokémon. The lower the user’s HP, the lower\nthe move’s power."
+8,2,821,The user shoots its psychic power from its eyes\nto attack. This may also leave the target frozen.
+8,2,822,The user transforms its wrath into a fire-like aura\nto attack. This may also make opposing Pokémon flinch.
+8,2,823,The user overwhelms the target with lightning-like\nmovement before delivering a kick. This also lowers\nthe target’s Defense stat.
+8,2,824,The user attacks by hurling a blizzard-cloaked\nicicle lance at opposing Pokémon.
+8,2,825,The user attacks by sending a frightful amount of small\nghosts at opposing Pokémon.
+8,2,826,The user attacks with its tremendous psychic power.\nThis also removes 3 PP from the target’s last move.
 8,2,10001,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
 8,2,10002,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
 8,2,10003,"This move can’t be used.\nIt’s recommended that this move is forgotten.\nOnce forgotten, this move can’t be remembered."
@@ -22332,6 +22399,13 @@ generation_id,language_id,move_id,description
 8,2,10058,A Steel-type attack that Gigantamax Melmetal use.\nThis move makes opponents incapable of using the\nsame move twice in a row.
 8,2,10059,A Water-type attack that Gigantamax Kingler use.\nThis move harshly lowers the Speed of opponents.
 8,2,10060,A Fire-type attack that Gigantamax Centiskorch use.\nThis move traps opponents in flames for four to\nfive turns.
+8,2,10061,A Grass-type attack that Gigantamax Venusaur use.\nThis move continues to deal damage to opponents\nfor four turns.
+8,2,10062,A Water-type attack that Gigantamax Blastoise use.\nThis move continues to deal damage to opponents\nfor four turns.
+8,2,10063,A Grass-type attack that Gigantamax Rillaboom use.\nThis move can be used on the target regardless of\nits Abilities.
+8,2,10064,A Fire-type attack that Gigantamax Cinderace use.\nThis move can be used on the target regardless of\nits Abilities.
+8,2,10065,A Water-type attack that Gigantamax Inteleon use.\nThis move can be used on the target regardless of\nits Abilities.
+8,2,10066,A Dark-type attack that Gigantamax Urshifu use.\nThis single-strike move can ignore Max Guard.
+8,2,10067,A Water-type attack that Gigantamax Urshifu use.\nThis rapid-strike move can ignore Max Guard.
 8,3,1,"Écrase l’ennemi avec les pattes avant ou la queue,\npar exemple."
 8,3,2,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
 8,3,3,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
@@ -22465,7 +22539,7 @@ generation_id,language_id,move_id,description
 8,3,131,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
 8,3,132,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
 8,3,133,Le lanceur fait le vide dans son esprit pour oublier\nses soucis. Augmente beaucoup sa Défense Spéciale.
-8,3,134,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
+8,3,134,"Le lanceur distrait l’ennemi en pliant une cuillère,\nce qui baisse sa Précision."
 8,3,135,Le lanceur récupère jusqu’à la moitié de ses PV max.
 8,3,136,"Le lanceur s’élance pour effectuer un coup de genou\nsauté. S’il échoue, le lanceur se blesse."
 8,3,137,Le lanceur intimide l’ennemi grâce à son regard\nterrifiant pour le paralyser.
@@ -22625,7 +22699,7 @@ generation_id,language_id,move_id,description
 8,3,291,Le lanceur plonge sous l’eau au premier tour\net frappe au second.
 8,3,292,Un déluge de coups adressés avec la paume qui frappe\nde deux à cinq fois d’affilée.
 8,3,293,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
-8,3,294,Le lanceur regarde un flash lumineux fixement.\nAugmente énormément son Attaque Spéciale.
+8,3,294,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
 8,3,295,Le lanceur libère un éclair lumineux.\nPeut aussi baisser la Défense Spéciale de l’ennemi.
 8,3,296,Une bulle de brume inflige des dégâts à l’ennemi.\nPeut aussi réduire son Attaque Spéciale.
 8,3,297,Une montagne de plumes ensevelit l’ennemi\net réduit beaucoup son Attaque.
@@ -22685,7 +22759,7 @@ generation_id,language_id,move_id,description
 8,3,351,Le lanceur envoie un choc électrique rapide à l’ennemi.\nImpossible à esquiver.
 8,3,352,Le lanceur envoie un puissant jet d’eau sur l’ennemi.\nPeut le rendre confus.
 8,3,353,Le lanceur génère une sphère lumineuse qu’il projette\nsur l’ennemi deux tours plus tard.
-8,3,354,Attaque l’ennemi à pleine puissance.\nLe contrecoup baisse beaucoup l’Attaque Spéciale\ndu lanceur.
+8,3,354,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
 8,3,355,Le lanceur atterrit et se repose.\nRestaure jusqu’à la moitié de ses PV max.
 8,3,356,"Pendant cinq tours, les Pokémon Vol ou qui ont\nLévitation deviennent sensibles aux capacités Sol,\net les capacités volantes deviennent inutilisables."
 8,3,357,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
@@ -22722,7 +22796,7 @@ generation_id,language_id,move_id,description
 8,3,388,"Plante sur la cible une graine qui la rend soucieuse\net remplace son talent par Insomnia, l’empêchant\nainsi de dormir."
 8,3,389,Permet au lanceur de frapper en priorité.\nÉchoue si l’ennemi ne prépare pas une attaque.
 8,3,390,Lance des pics autour de l’ennemi.\nIls empoisonnent les ennemis qui entrent au combat.
-8,3,391,Le lanceur utilise un pouvoir psychique pour échanger\nses changements de stats avec la cible.
+8,3,391,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
 8,3,392,Un voile d’eau recouvre le lanceur et régénère ses PV\nà chaque tour.
 8,3,393,Le lanceur utilise l’électricité pour générer un champ\nmagnétique et léviter durant cinq tours.
 8,3,394,Le lanceur s’embrase avant de charger l’ennemi.\nLe choc blesse aussi gravement le lanceur.\nPeut brûler l’ennemi.
@@ -23128,6 +23202,36 @@ generation_id,language_id,move_id,description
 8,3,794,"Le lanceur attaque son adversaire avec son poireau.\nToutefois, cette action le fait vaciller et il doit\nse reposer au tour suivant."
 8,3,795,"L’attaque la plus puissante d’Éthernatos sous\nsa forme originelle. S’il l’utilise, il devra se reposer\nau tour suivant."
 8,3,796,Le lanceur concentre du métal issu de tout son corps\nen un rayon qu’il projette violemment sur sa cible.\nIl subit aussi des dégâts.
+8,3,797,"Le lanceur attaque la cible avec ses pouvoirs psychiques.\nSi un Champ Psychique est actif, la puissance de cette\ncapacité augmente et elle touche tous les ennemis."
+8,3,798,"Une attaque qui inflige des dégâts et fait disparaître\nle champ actif, mais qui échoue s’il n’y en a pas\nà ce moment."
+8,3,799,"Le lanceur projette des écailles sur la cible de deux à\ncinq fois d’affilée. Augmente la Vitesse, mais diminue\nla Défense."
+8,3,800,"Le lanceur concentre l’énergie cosmique au premier\ntour, ce qui augmente son Attaque Spéciale, et frappe\nau second."
+8,3,801,"Une attaque physique ou spéciale, en fonction\nde ce qui est le plus efficace contre la cible.\nPeut aussi empoisonner."
+8,3,802,"Le lanceur frappe tous les Pokémon autour de lui\nen explosant, ce qui le met K.O. La puissance de\ncette attaque augmente si un Champ Brumeux est actif."
+8,3,803,Le lanceur attaque l’ennemi en glissant sur le terrain.\nFrappe toujours en priorité si un Champ Herbu est actif.
+8,3,804,Des éclairs surgissent du sol et frappent l’ennemi.\nLa puissance de cette attaque est doublée si la cible\nest sur un Champ Électrifié.
+8,3,805,Une attaque qui tire sa force des champs.\nSon type et sa puissance varient selon le champ actif.
+8,3,806,Le lanceur rampe derrière l’ennemi pour l’attaquer.\nBaisse l’Attaque Spéciale de la cible.
+8,3,807,Le lanceur attaque sa cible avec toute sa jalousie.\nCette capacité brûle tout Pokémon dont les stats\nont augmenté pendant ce tour.
+8,3,808,"Le lanceur frappe l’ennemi avec toute sa rancune.\nSi les stats du lanceur ont diminué pendant ce tour,\nla puissance de cette attaque est doublée."
+8,3,809,Le lanceur manipule l’objet tenu par l’ennemi\npour l’attaquer. Échoue si la cible ne tient rien.
+8,3,810,Un gaz corrosif qui enveloppe tous les Pokémon\nalentour et qui dissout les objets qu’ils tiennent.
+8,3,811,"Le lanceur coache ses alliés, augmentant ainsi\nleur Attaque et leur Défense."
+8,3,812,"Après son attaque, le lanceur revient à toute vitesse\net change de place avec un Pokémon de l’équipe prêt\nau combat."
+8,3,813,Une salve composée de un à trois coups de pied\ndont la puissance augmente à chaque coup porté.
+8,3,814,Le lanceur frappe l’ennemi avec ses ailes deux fois\nd’affilée.
+8,3,815,Le lanceur projette du sable chauffé à blanc\nsur l’ennemi. Peut aussi brûler la cible.
+8,3,816,Le lanceur fait appel au pouvoir de la jungle pour\nrestaurer les PV et soigner les altérations d’état\nde ses alliés et de lui-même.
+8,3,817,Le lanceur assène un coup puissant à l’ennemi.\nCette technique qui inflige toujours un coup critique est\nréservée à ceux qui maîtrisent la puissance des Ténèbres.
+8,3,818,Le lanceur assène trois coups fluides à l’ennemi.\nCette technique qui inflige toujours un coup critique\nest réservée à ceux qui maîtrisent la puissance de l’Eau.
+8,3,819,"Le lanceur frappe l’ennemi, et le piège dans une prison\nélectrique qui dure de quatre à cinq tours."
+8,3,820,"Le lanceur utilise son énergie vitale pour attaquer\nl’ennemi. Moins il a de PV, moins l’attaque est puissante."
+8,3,821,Les yeux du lanceur tirent des rayons psychiques.\nPeut aussi geler l’ennemi.
+8,3,822,"Le lanceur canalise sa colère et la transforme en aura\nbrûlante, avec laquelle il attaque l’ennemi. Peut aussi\nl’apeurer."
+8,3,823,Le lanceur assène un coup de pied à la cible\nà la vitesse de l’éclair. Baisse aussi la Défense\nde la cible.
+8,3,824,Le lanceur attaque l’ennemi avec une lance de glace\nentourée d’un blizzard.
+8,3,825,Le lanceur attaque l’ennemi avec une multitude\nde petits spectres.
+8,3,826,Le lanceur attaque avec de puissants pouvoirs\npsychiques et retire 3 PP de la dernière capacité\nde l’ennemi.
 8,3,10001,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
 8,3,10002,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
 8,3,10003,"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
@@ -23170,6 +23274,13 @@ generation_id,language_id,move_id,description
 8,3,10058,Une attaque de type Acier que seul un Melmetal\nGigamax peut utiliser. Empêche la cible d’utiliser\nla même capacité deux fois de suite.
 8,3,10059,Une attaque de type Eau que seul un Krabboss\nGigamax peut utiliser. Réduit beaucoup la Vitesse\nde la cible.
 8,3,10060,Une attaque de type Feu que seul un Scolocendre\nGigamax peut utiliser. Emprisonne la cible dans\nun tourbillon de flammes qui dure de quatre à cinq tours.
+8,3,10061,Une attaque de type Plante que seul un Florizarre\nGigamax peut utiliser. Inflige des dégâts à la cible\npendant quatre tours.
+8,3,10062,Une attaque de type Eau que seul un Tortank\nGigamax peut utiliser. Inflige des dégâts à la cible\npendant quatre tours.
+8,3,10063,Une attaque de type Plante que seul un Gorythmic\nGigamax peut utiliser. Ignore le talent de la cible.
+8,3,10064,Une attaque de type Feu que seul un Pyrobut\nGigamax peut utiliser. Ignore le talent de la cible.
+8,3,10065,Une attaque de type Eau que seul un Lézargus\nGigamax peut utiliser. Ignore le talent de la cible.
+8,3,10066,Une attaque de type Ténèbres que seul un Shifours\nGigamax peut utiliser. Cette frappe unique permet\nd’ignorer la capacité Gardomax.
+8,3,10067,Une attaque de type Eau que seul un Shifours\nGigamax peut utiliser. Cet enchaînement de coups\npermet d’ignorer la capacité Gardomax.
 8,4,1,Ein Hieb mit den Vorderbeinen oder dem Schweif.
 8,4,2,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
 8,4,3,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
@@ -23303,7 +23414,7 @@ generation_id,language_id,move_id,description
 8,4,131,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
 8,4,132,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
 8,4,133,"Gedächtnisverlust, der die Spezial-Verteidigung\nstark erhöht."
-8,4,134,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
+8,4,134,Lenkt das Ziel durch Verbiegen eines Löffels ab\nund senkt so dessen Genauigkeit.
 8,4,135,KP des Anwenders werden um 50 % der maximalen KP\naufgefüllt.
 8,4,136,Sprungtritt mit Knie. Bei Misserfolg verletzt sich der\nAnwender selbst.
 8,4,137,"Schüchtert Ziel ein, sodass dieses paralysiert wird."
@@ -23463,7 +23574,7 @@ generation_id,language_id,move_id,description
 8,4,291,Anwender taucht in Runde 1 ab und greift in Runde 2\naus der Tiefe an.
 8,4,292,"Schläge mit geradem Arm, die das Ziel zwei- bis\nfünfmal treffen."
 8,4,293,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
-8,4,294,"Ein blinkendes Licht, das den Spezial-Angriff\ndrastisch erhöht."
+8,4,294,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
 8,4,295,"Angriff mit einem grellem Licht, der die\nSpezial-Verteidigung des Zieles eventuell senkt."
 8,4,296,Angriff mit einer Nebelwolke aus Daunen. Senkt\neventuell den Spezial-Angriff des Zieles.
 8,4,297,Hüllt das Ziel in Daunen und senkt dessen\nAngriffs-Wert stark.
@@ -23523,7 +23634,7 @@ generation_id,language_id,move_id,description
 8,4,351,Angriff mit schnellem Elektro-Schlag. Ausweichen nicht\nmöglich.
 8,4,352,"Angriff mit Wasserwelle, die das Ziel eventuell\nverwirren kann."
 8,4,353,Angriff mit gebündeltem Licht erfolgt zwei Runden\nnach Attackeneinsatz.
-8,4,354,"Angriff mit voller Kraft, der den Spezial-Angriff des\nAnwenders durch den Rückstoß stark senkt."
+8,4,354,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
 8,4,355,Anwender landet und ruht sich aus. KP des Anwenders\nwerden um 50 % der maximalen KP aufgefüllt.
 8,4,356,"Ermöglicht es, Flug-Pokémon oder Pokémon mit der\nFähigkeit Schwebe mit Boden-Attacken zu treffen.\nVerhindert Attacken, bei denen der Anwender fliegt."
 8,4,357,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
@@ -23560,7 +23671,7 @@ generation_id,language_id,move_id,description
 8,4,388,"Ziel wird bepflanzt. Seine Fähigkeit wandelt sich zu\nInsomnia und hindert es daran, einzuschlafen."
 8,4,389,"Erstschlag-Attacke, die aber nur gelingt, wenn das Ziel\ngerade eine Attacke vorbereitet, die KP-Schaden\nzufügen würde."
 8,4,390,Anwender legt eine Falle mit Giftdornen aus. In den\nKampf eingewechselte gegnerische Pokémon werden\nvergiftet.
-8,4,391,"Anwender setzt Psycho-Kräfte ein, um\nStatusveränderungen des Zieles mit den\neigenen zu tauschen."
+8,4,391,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
 8,4,392,Anwender umgibt sich mit einem Schleier aus Wasser.\nDabei regeneriert er einige KP pro Runde.
 8,4,393,Anwender schwebt für fünf Runden durch elektrisch\nerzeugten Magnetismus.
 8,4,394,"Anwender hüllt sich in Flammen und stürmt auf das\nZiel zu, das dadurch eventuell Verbrennungen\nerleidet. Anwender nimmt selbst großen Schaden."
@@ -23966,6 +24077,36 @@ generation_id,language_id,move_id,description
 8,4,794,"Der Anwender greift mit seiner Lauchstange an. Von der\nWucht der Attacke wird ihm jedoch so schwindelig,\ndass er in der nächsten Runde nicht handeln kann."
 8,4,795,"Der mächtigste Angriff, über den Endynalos in seiner\nursprünglichen Form verfügt. In der nächsten Runde\nkann der Anwender nicht handeln."
 8,4,796,"Der Anwender schießt Stahl, den er in seinem ganzen\nKörper angesammelt hat, in Form eines mächtigen\nStrahls ab. Dabei verletzt er sich auch selbst."
+8,4,797,"Der Anwender greift das Ziel mit Psycho-Kräften an.\nWenn ein Psychofeld aktiv ist, steigt die Stärke und es\nwird allen gegnerischen Pokémon Schaden zugefügt."
+8,4,798,"Der Anwender greift an und zerstört dabei etwaige\nFelder. Ist kein Feld aktiv, schlägt die Attacke fehl."
+8,4,799,"Der Anwender greift das Ziel zwei- bis fünfmal\nhintereinander mit Schuppen-Geschossen an. Erhöht\ndie eigene Initiative, aber senkt die Verteidigung."
+8,4,800,"Der Anwender sammelt in Runde 1 kosmische Kräfte\nund erhöht damit seinen Spezial-Angriff, bevor er in\nRunde 2 das Ziel angreift."
+8,4,801,"Je nachdem, was höher ausfällt, richtet diese Attacke\nentweder physischen oder Spezial-Schaden an.\nDas Ziel wird eventuell vergiftet."
+8,4,802,"Der Anwender greift alle Pokémon im Umkreis an und\nwird danach kampfunfähig. Die Stärke dieser Attacke\nsteigt, wenn ein Nebelfeld aktiv ist."
+8,4,803,"Der Anwender rutscht über den Boden und greift das\nZiel an. Ermöglicht den Erstschlag, wenn ein Grasfeld\naktiv ist."
+8,4,804,"Der Anwender greift mit aus dem Boden aufsteigender\nElektrizität an. Die Stärke der Attacke wird verdoppelt,\nwenn beim Gegner ein Elektrofeld aktiv ist."
+8,4,805,Der Anwender nutzt die Kraft des aktiven Feldes für\nseinen Angriff. Der Typ und die Stärke der Attacke\nändern sich je nach Art des aktiven Feldes.
+8,4,806,"Der Anwender kriecht hinter das Ziel, greift es an und\nsenkt dabei dessen Spezial-Angriff."
+8,4,807,"Der Anwender greift mit der Energie seines Neids an\nund fügt allen gegnerischen Pokémon, deren Statuswerte\nin dieser Runde erhöht wurden, Verbrennungen zu."
+8,4,808,"Der Anwender entlädt seinen Frust in einem Angriff.\nDie Stärke der Attacke wird verdoppelt, wenn seine\nStatuswerte in dieser Runde gesenkt wurden."
+8,4,809,"Der Anwender greift das Ziel mit dessen getragenem\nItem an. Die Attacke schlägt fehl, wenn das Ziel kein\nItem trägt."
+8,4,810,Der Anwender greift alle Pokémon im Umkreis mit\neinem ätzenden Gas an. Getragene Items werden\ndadurch zersetzt.
+8,4,811,"Der Anwender sorgt durch geschickte Anweisungen\ndafür, dass der Angriff und die Verteidigung seiner\nMitstreiter steigen."
+8,4,812,Nach der Attacke eilt der Anwender zurück und\ntauscht den Platz mit einem anderen Pokémon.
+8,4,813,Tritt das Ziel ein- bis dreimal nacheinander. Die Härte\nder Tritte nimmt von Treffer zu Treffer zu.
+8,4,814,Der Anwender trifft das Ziel zweimal hintereinander mit\nseinen Flügeln und fügt ihm so Schaden zu.
+8,4,815,Der Anwender greift das Ziel mit brennend heißem\nSand an und fügt ihm eventuell Verbrennungen zu.
+8,4,816,Der Anwender wird eins mit dem Dschungel und heilt\nbei sich und seinen am Kampf beteiligten Mitstreitern\nKP und hebt jegliche Statusprobleme auf.
+8,4,817,"Der Anwender hat den Stil des Unlichts gemeistert\nund führt einen fokussierten, harten Schlag mit\nVolltreffergarantie aus."
+8,4,818,Der Anwender hat den Stil des Wassers gemeistert und\nführt mit fließenden Bewegungen drei Angriffe in Folge\nmit Volltreffergarantie aus.
+8,4,819,Das Ziel wird für vier bis fünf Runden in einem\nelektrischen Käfig gefangen.
+8,4,820,"Der Anwender wandelt seine Lebenskraft in Energie um\nund greift gegnerische Pokémon an. Je höher seine\nKP sind, desto mehr Schaden wird angerichtet."
+8,4,821,"Der Anwender greift das Ziel mit Psycho-Kräften an,\ndie er aus seinen Augen abschießt. Das Ziel friert\neventuell ein."
+8,4,822,Der Anwender wandelt seinen Zorn in eine flammende\nAura um und greift damit gegnerische Pokémon an.\nDiese schrecken eventuell zurück.
+8,4,823,Der Anwender bringt das Ziel mit blitzschnellen\nBewegungen durcheinander und tritt dann zu.\nSenkt die Verteidigung des Zieles.
+8,4,824,Der Anwender wirft eine in einen Blizzard gehüllte\nLanze aus Eis auf gegnerische Pokémon.
+8,4,825,Der Anwender greift gegnerische Pokémon mit vielen\nkleinen Spukgestalten an.
+8,4,826,Der Anwender greift mit gewaltigen Psycho-Kräften an.\nDie AP der letzten Attacke des Zieles werden um\n3 Punkte gesenkt.
 8,4,10001,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
 8,4,10002,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
 8,4,10003,"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
@@ -24008,6 +24149,13 @@ generation_id,language_id,move_id,description
 8,4,10058,"Eine Stahl-Attacke, die nur Gigadynamax-Melmetal\neinsetzen kann. Hindert Gegner am wiederholten\nEinsatz derselben Attacke."
 8,4,10059,"Eine Wasser-Attacke, die nur Gigadynamax-Kingler\neinsetzen kann. Senkt die Initiative der gegnerischen\nPokémon stark."
 8,4,10060,"Eine Feuer-Attacke, die nur Gigadynamax-Infernopod\neinsetzen kann. Schließt gegnerische Pokémon vier bis\nfünf Runden in wirbelnden Flammen ein."
+8,4,10061,"Eine Pflanzen-Attacke, die nur Gigadynamax-Bisaflor\neinsetzen kann. Geißelt gegnerische Pokémon\nvier Runden lang mit peitschenartigen Ranken."
+8,4,10062,"Eine Wasser-Attacke, die nur Gigadynamax-Turtok\neinsetzen kann. Schließt gegnerische Pokémon\nvier Runden lang in einem Wasserwirbel ein."
+8,4,10063,"Eine Pflanzen-Attacke, die nur Gigadynamax-Gortrom\neinsetzen kann. Ignoriert die Effekte der gegnerischen\nFähigkeiten."
+8,4,10064,"Eine Feuer-Attacke, die nur Gigadynamax-Liberlo\neinsetzen kann. Ignoriert die Effekte der gegnerischen\nFähigkeiten."
+8,4,10065,"Eine Wasser-Attacke, die nur Gigadynamax-Intelleon\neinsetzen kann. Ignoriert die Effekte der gegnerischen\nFähigkeiten."
+8,4,10066,"Eine Unlicht-Attacke, die nur Gigadynamax-Wulaosu\neinsetzen kann. Dieser Einzelhieb ignoriert die\nschützende Wirkung von Dyna-Wall."
+8,4,10067,"Eine Wasser-Attacke, die nur Gigadynamax-Wulaosu\neinsetzen kann. Dieser Multihieb ignoriert die\nschützende Wirkung von Dyna-Wall."
 8,5,1,Colpisce il bersaglio con la coda o le zampe\nanteriori.
 8,5,2,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
 8,5,3,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
@@ -24141,7 +24289,7 @@ generation_id,language_id,move_id,description
 8,5,131,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
 8,5,132,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
 8,5,133,Chi la usa svuota per un po’ la mente per dimenticare\ni problemi. La Difesa Speciale aumenta di molto.
-8,5,134,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
+8,5,134,Chi la usa distrae il bersaglio piegando un cucchiaio\ne ne riduce la precisione.
 8,5,135,Chi la usa recupera metà dei propri PS massimi.
 8,5,136,"Chi la usa colpisce il bersaglio con una ginocchiata\nin volo. Se fallisce, subisce danni."
 8,5,137,Chi la usa spaventa il bersaglio con uno sguardo\nterrificante e ne causa la paralisi.
@@ -24301,7 +24449,7 @@ generation_id,language_id,move_id,description
 8,5,291,Chi la usa si tuffa in acqua per emergere\ne attaccare al turno successivo.
 8,5,292,Raffica di ceffoni che colpisce da due a\ncinque volte di fila.
 8,5,293,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
-8,5,294,Chi la usa fissa una luce forte per concentrarsi\ne aumentare moltissimo l’Attacco Speciale.
+8,5,294,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
 8,5,295,Chi la usa scatena un’esplosione abbagliante\nche può anche ridurre la Difesa Speciale\ndel Pokémon colpito.
 8,5,296,Una sfera di nebbia avvolge e danneggia il bersaglio.\nPuò anche ridurne l’Attacco Speciale.
 8,5,297,Chi la usa circonda il bersaglio con un turbinio\ndi piume riducendo di molto il suo Attacco.
@@ -24361,7 +24509,7 @@ generation_id,language_id,move_id,description
 8,5,351,Chi la usa colpisce il bersaglio con una scossa\ndi elettricità. È impossibile eludere questa mossa.
 8,5,352,Il bersaglio viene colpito da un getto d’acqua\npotentissimo che può anche confonderlo.
 8,5,353,Intenso fascio di luce che colpisce il bersaglio\ndopo due turni dall’uso della mossa.
-8,5,354,"Chi la usa sferra un potente attacco, ma il contraccolpo\nriduce di molto il suo Attacco Speciale."
+8,5,354,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
 8,5,355,"Chi la usa sta fermo e riposa, recuperando\nmetà dei propri PS massimi."
 8,5,356,Per cinque turni rende vulnerabili alle mosse di tipo\nTerra i Pokémon con Levitazione o di tipo Volante.\nNon è possibile usare mosse che fanno volare.
 8,5,357,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
@@ -24398,7 +24546,7 @@ generation_id,language_id,move_id,description
 8,5,388,Un seme che causa ansia viene piantato sul\nbersaglio. Ne muta l’abilità in Insonnia e ne\npreviene o rimuove il sonno.
 8,5,389,"Chi la usa attacca con alta priorità, ma fallisce\nse il bersaglio non sta preparando un attacco."
 8,5,390,Chi la usa piazza una trappola di punte che\navvelenano i nemici che scendono in campo.
-8,5,391,Chi la usa sfrutta la sua forza psichica per\nscambiare le modifiche alle statistiche con\nil bersaglio.
+8,5,391,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
 8,5,392,Chi la usa si avvolge in un velo d’acqua. Recupera\nalcuni PS a ogni turno.
 8,5,393,Chi la usa si solleva in aria per cinque turni\ngrazie a un campo elettromagnetico.
 8,5,394,"Chi la usa si ricopre di fuoco e carica il bersaglio,\nma subisce il contraccolpo. Può anche scottare\nil Pokémon colpito."
@@ -24804,6 +24952,36 @@ generation_id,language_id,move_id,description
 8,5,794,"Chi la usa attacca il bersaglio brandendo un grosso\ngambo, ma perde l’equilibrio e nel turno successivo\nnon può agire."
 8,5,795,È l’attacco più potente di Eternatus quando assume\nla sua forma originale. Nel turno successivo non può\nagire.
 8,5,796,"Chi la usa utilizza l’acciaio del proprio corpo per\nsparare un violento raggio, ma subisce danni."
+8,5,797,"Chi la usa attacca il bersaglio con energia psichica.\nSe utilizzata quando è attivo un Campo Psichico,\nla mossa aumenta di potenza e danneggia tutti i nemici."
+8,5,798,Chi la usa attacca eliminando lo stato del terreno\ndi lotta. La mossa fallisce se nel terreno non è attivo\nalcuno stato.
+8,5,799,"Il Pokémon attacca lanciando delle squame da due\na cinque volte di fila. Aumenta la Velocità di chi la usa,\nma ne riduce la Difesa."
+8,5,800,"Chi la usa accumula l’energia dello spazio nel primo\nturno per aumentare l’Attacco Speciale, quindi\nattacca nel turno successivo."
+8,5,801,"Il Pokémon esegue un attacco fisico o speciale, in base\na quale causa danni maggiori. Può anche avvelenare\nil bersaglio."
+8,5,802,"Chi la usa attacca tutti i Pokémon che ha intorno,\nma poi va KO. La potenza della mossa aumenta\nquando è attivo un Campo Nebbioso."
+8,5,803,"Chi la usa attacca il bersaglio scivolando sul terreno.\nSe utilizzata quando è attivo un Campo Erboso,\nha priorità alta."
+8,5,804,Chi la usa attacca con dell’elettricità che si alza\ndal suolo. La potenza della mossa raddoppia quando\nl’avversario si trova in un Campo Elettrico.
+8,5,805,Chi la usa attacca sfruttando l’energia del terreno\ndi lotta. Il tipo e la potenza della mossa variano\na seconda dello stato del terreno stesso.
+8,5,806,Chi la usa attacca il bersaglio strisciandogli alle spalle\ne riducendo il suo Attacco Speciale.
+8,5,807,"Chi la usa attacca con la forza dell’invidia, causando\nuna scottatura a tutti i Pokémon le cui statistiche sono\naumentate durante quel turno."
+8,5,808,"Chi la usa attacca il bersaglio con tutta la propria ira.\nSe ha subito riduzioni delle statistiche durante quel\nturno, la potenza della mossa raddoppia."
+8,5,809,Chi la usa attacca utilizzando lo strumento\ndel bersaglio. La mossa fallisce se quest’ultimo\nnon ha uno strumento.
+8,5,810,"Chi la usa avvolge tutti i Pokémon che ha intorno\nin un gas altamente acido, dissolvendo i loro strumenti."
+8,5,811,Chi la usa aumenta l’Attacco e la Difesa di tutti\ngli alleati dando loro indicazioni precise.
+8,5,812,Chi usa questa mossa fa marcia indietro per farsi\nsostituire dopo aver sferrato l’attacco.
+8,5,813,Chi la usa sferra fino a tre calci consecutivi\nla cui potenza aumenta a ogni colpo.
+8,5,814,Chi la usa colpisce il bersaglio due volte di fila\nurtandolo con le ali.
+8,5,815,Chi la usa attacca il bersaglio scagliandogli addosso\ndella sabbia incandescente. Può anche scottarlo.
+8,5,816,"Il Pokémon diventa tutt’uno con la giungla,\nripristinando i PS e curando i problemi di stato\nper sé e per l’alleato in campo."
+8,5,817,"Il Pokémon sferra un singolo colpo potentissimo,\nmassima espressione dello stile di tipo Buio.\nBrutto colpo assicurato."
+8,5,818,"Il Pokémon sferra una fluida serie di tre attacchi,\nmassima espressione dello stile di tipo Acqua.\nBrutto colpo assicurato."
+8,5,819,"Il Pokémon attacca il bersaglio imprigionandolo\nin una gabbia di elettricità, che sprigiona corrente\nper quattro o cinque turni."
+8,5,820,Il Pokémon attacca i nemici convertendo la propria\nforza vitale in energia. La potenza della mossa cala\nman mano che i PS diminuiscono.
+8,5,821,Il Pokémon attacca rilasciando energia psichica\ndagli occhi. Può congelare il bersaglio.
+8,5,822,Il Pokémon attacca trasformando la sua rabbia\nin un’aura simile a fiamme. Può anche far tentennare\ni nemici.
+8,5,823,"Il Pokémon sferra calci al bersaglio dopo averlo\ndistratto con movimenti fulminei, riducendone\nla Difesa."
+8,5,824,Il Pokémon attacca i nemici scagliando una lancia\ndi ghiaccio accompagnata da una tormenta di neve.
+8,5,825,Il Pokémon attacca i nemici scatenandogli contro\nuna miriade di piccoli spettri.
+8,5,826,Il Pokémon attacca con i suoi potenti poteri psichici.\nSottrae tre PP all’ultima mossa usata dal nemico.
 8,5,10001,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
 8,5,10002,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
 8,5,10003,"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
@@ -24846,6 +25024,13 @@ generation_id,language_id,move_id,description
 8,5,10058,Attacco di tipo Acciaio eseguito da Melmetal Gigamax.\nImpedisce ai nemici di usare la stessa mossa due volte\ndi seguito.
 8,5,10059,Attacco di tipo Acqua eseguito da Kingler Gigamax.\nRiduce di molto la Velocità dei nemici.
 8,5,10060,Attacco di tipo Fuoco eseguito da Centiskorch Gigamax.\nIntrappola i nemici nelle fiamme per quattro o cinque\nturni.
+8,5,10061,Attacco di tipo Erba eseguito da Venusaur Gigamax.\nInfligge danni ai nemici per quattro turni.
+8,5,10062,Attacco di tipo Acqua eseguito da Blastoise Gigamax.\nInfligge danni ai nemici per quattro turni.
+8,5,10063,Attacco di tipo Erba eseguito da Rillaboom Gigamax.\nIgnora le abilità dei nemici.
+8,5,10064,Attacco di tipo Fuoco eseguito da Cinderace Gigamax.\nIgnora le abilità dei nemici.
+8,5,10065,Attacco di tipo Acqua eseguito da Inteleon Gigamax.\nIgnora le abilità dei nemici.
+8,5,10066,Attacco di tipo Buio eseguito da Urshifu Gigamax.\nColpo singolo che ignora gli effetti della Dynabarriera.
+8,5,10067,Attacco di tipo Acqua eseguito da Urshifu Gigamax.\nSerie di colpi che ignora gli effetti della Dynabarriera.
 8,6,1,Golpea con las patas o la cola.
 8,6,2,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
 8,6,3,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
@@ -24979,7 +25164,7 @@ generation_id,language_id,move_id,description
 8,6,131,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
 8,6,132,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
 8,6,133,El usuario olvida sus preocupaciones y aumenta mucho\nla Defensa Especial.
-8,6,134,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
+8,6,134,Dobla una cuchara para distraer al objetivo y bajar su\nnivel de Precisión.
 8,6,135,Restaura la mitad de los PS máximos del usuario.
 8,6,136,"El usuario salta muy alto y da un rodillazo. Si falla, se\nhará daño."
 8,6,137,Intimida y asusta al objetivo con la mirada para dejarlo\nparalizado.
@@ -25139,7 +25324,7 @@ generation_id,language_id,move_id,description
 8,6,291,El usuario se sumerge en el primer turno y ataca en el\nsegundo.
 8,6,292,Fuertes empujones que golpean de dos a cinco veces\nseguidas.
 8,6,293,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
-8,6,294,Se concentra en una ráfaga de luz que sube muchísimo\nel Ataque Especial.
+8,6,294,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
 8,6,295,Fogonazo de luz que puede bajar la Defensa Especial\ndel objetivo.
 8,6,296,Banco de niebla que puede bajar el Ataque Especial del\nobjetivo.
 8,6,297,Envuelve al objetivo con un manto de plumas para \nreducir mucho su Ataque.
@@ -25199,7 +25384,7 @@ generation_id,language_id,move_id,description
 8,6,351,Ataque eléctrico muy rápido e ineludible.
 8,6,352,Ataca con un potente chorro de agua. Puede confundir\nal objetivo.
 8,6,353,Concentra un haz de luz y ataca dos turnos después.
-8,6,354,Ataque en toda regla que baja mucho el Ataque \nEspecial de quien lo usa.
+8,6,354,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
 8,6,355,Aterriza sobre la superficie para descansar.\nRecupera hasta la mitad del total de sus PS.
 8,6,356,"Durante cinco turnos, se anulan los movimientos que\nalzan el vuelo y los Pokémon de tipo Volador o que\nlevitan son vulnerables a movimientos de tipo Tierra."
 8,6,357,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
@@ -25236,7 +25421,7 @@ generation_id,language_id,move_id,description
 8,6,388,Planta una semilla en el objetivo que le causa pesar.\nSustituye la habilidad del objetivo por Insomnio y le\nimpide dormirse.
 8,6,389,Permite atacar con prioridad. Falla si el objetivo no está\npreparando ningún ataque.
 8,6,390,Lanza una trampa de púas tóxicas a los pies del\nobjetivo. El veneno afecta a los Pokémon oponentes\nque entran en combate.
-8,6,391,Usa la fuerza mental para intercambiar con el objetivo\nlos cambios en las características.
+8,6,391,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
 8,6,392,Un manto de agua cubre al Pokémon que lo usa. \nRecupera algunos PS en cada turno.
 8,6,393,Levita gracias a un campo magnético generado por \nelectricidad durante cinco turnos.
 8,6,394,"El Pokémon se cubre de llamas y carga contra el\nobjetivo, aunque él también recibe daño. Puede\nquemar."
@@ -25642,6 +25827,36 @@ generation_id,language_id,move_id,description
 8,6,794,"El usuario agita violentamente su grueso puerro para\natacar, pero el mareo que le provocan las sacudidas le\nimpide moverse en el turno siguiente."
 8,6,795,Este es el mayor ataque de Eternatus una vez adquirida\nsu forma original. No puede moverse en el turno\nsiguiente.
 8,6,796,Utiliza el acero de su cuerpo para disparar un potente\nrayo. También hiere al agresor.
+8,6,797,"El usuario ataca al objetivo con sus poderes psíquicos.\nCuando se usa en conjunción con un campo psíquico,\naumenta su potencia e inflige daño a todos los rivales."
+8,6,798,"El usuario lanza su ataque y destruye el campo activo\nen el terreno de combate, y falla si no hay ninguno en\nese momento."
+8,6,799,"Lanza escamas al objetivo de dos a cinco veces\nseguidas. Aumenta la Velocidad del usuario, pero\nreduce su Defensa."
+8,6,800,El usuario dedica el primer turno a aumentar su\nAtaque Especial acumulando energía cósmica y lanza\nsu ofensiva contra el objetivo en el segundo.
+8,6,801,El usuario lanza un ataque físico o especial en función\nde cuál inflija más daño. Puede envenenar al objetivo.
+8,6,802,"El usuario ataca a todos a su alrededor, pero se debilita\nde inmediato. La potencia del movimiento aumenta si el\nterreno está cubierto por un campo de niebla."
+8,6,803,Ataca al objetivo deslizándose sobre el terreno de\ncombate. Este movimiento tiene prioridad alta cuando\nel terreno está cubierto por un campo de hierba.
+8,6,804,Ataca con una descarga eléctrica que surge del terreno\nde combate. La potencia del movimiento se duplica si\nel rival se ve afectado por un campo eléctrico.
+8,6,805,"El usuario ataca aprovechando la energía del campo\nactivo, que determina tanto el tipo como la potencia\ndel movimiento."
+8,6,806,Ataca al objetivo por la espalda de forma subrepticia\ny además reduce su Ataque Especial.
+8,6,807,Ataca al objetivo con la energía generada por la envidia\ny causa quemaduras a los Pokémon cuyas características\nhayan aumentado en ese turno.
+8,6,808,"Ataca al rival presa de la rabia. Si el usuario ha sufrido\nuna reducción de características en ese turno, la\npotencia del movimiento se duplica."
+8,6,809,"El usuario ataca utilizando el objeto que lleva el rival.\nSi no tiene ninguno equipado, el movimiento falla."
+8,6,810,El usuario libera un gas cáustico que envuelve a todos\nlos que se encuentren alrededor y derrite por completo\nlos objetos que lleven equipados.
+8,6,811,"El usuario imparte indicaciones precisas a sus aliados,\nque ven aumentados su Ataque y su Defensa."
+8,6,812,"Tras atacar, el usuario da paso a toda prisa a otro\nPokémon del equipo."
+8,6,813,Patea hasta tres veces seguidas y cada vez más fuerte.
+8,6,814,Ataca al adversario golpeándolo dos veces con las alas.
+8,6,815,Ataca al objetivo arrojándole arena a temperaturas muy\nelevadas. Puede causar quemaduras.
+8,6,816,"Al entrar en plena armonía con la selva, el usuario cura\nproblemas de estado y restaura PS no solo de sí mismo,\nsino también de los aliados presentes en el terreno."
+8,6,817,Golpe devastador que requiere un absoluto dominio de\nlas artes siniestras. Siempre asesta un golpe crítico.
+8,6,818,"El usuario, dominador absoluto del líquido elemento,\ngolpea hasta tres veces con movimientos fluidos.\nSiempre asesta un golpe crítico."
+8,6,819,El objetivo queda atrapado en una jaula electrificada\nque permanece en el terreno de cuatro a cinco turnos.
+8,6,820,"El usuario convierte su fuerza vital en una energía con\nla que ataca al objetivo. Cuantos menos PS tenga el\nusuario, menor será la potencia del movimiento."
+8,6,821,"A través de sus ojos emite poderes psíquicos con los\nque ataca al objetivo, al que puede llegar a congelar."
+8,6,822,El usuario convierte su ira en un aura flamígera para\nlanzar su ataque. Puede amedrentar al objetivo.
+8,6,823,El usuario desconcierta al rival con movimientos\ncentelleantes y le propina una patada. Baja la Defensa\ndel objetivo.
+8,6,824,El usuario ataca al objetivo lanzándole un carámbano de\nhielo envuelto en una ventisca.
+8,6,825,El usuario ataca al objetivo lanzándole una ingente\ncantidad de pequeños fantasmas.
+8,6,826,El usuario ataca con un poder psíquico de inmensa\npotencia y elimina 3 PP del último movimiento que\nhaya usado el objetivo.
 8,6,10001,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
 8,6,10002,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
 8,6,10003,"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
@@ -25684,6 +25899,13 @@ generation_id,language_id,move_id,description
 8,6,10058,Ataque de tipo Acero ejecutado por un Melmetal\nGigamax. Impide al objetivo usar el mismo movimiento\ndos veces seguidas.
 8,6,10059,Ataque de tipo Agua ejecutado por un Kingler Gigamax.\nReduce mucho la Velocidad del objetivo.
 8,6,10060,Ataque de tipo Fuego ejecutado por un Centiskorch\nGigamax. Un aro de fuego atrapa al objetivo de cuatro\na cinco turnos.
+8,6,10061,Ataque de tipo Planta ejecutado por un Venusaur\nGigamax. Inflige daño durante cuatro turnos.
+8,6,10062,Ataque de tipo Agua ejecutado por un Blastoise\nGigamax. Inflige daño durante cuatro turnos.
+8,6,10063,Ataque de tipo Planta ejecutado por un Rillaboom\nGigamax. Ignora la habilidad del objetivo.
+8,6,10064,Ataque de tipo Fuego ejecutado por un Cinderace\nGigamax. Ignora la habilidad del objetivo.
+8,6,10065,Ataque de tipo Agua ejecutado por un Inteleon\nGigamax. Ignora la habilidad del objetivo.
+8,6,10066,Ataque de tipo Siniestro ejecutado por un Urshifu\nGigamax. Propina un único golpe que acierta al\nobjetivo aunque haya usado Maxibarrera.
+8,6,10067,Ataque de tipo Agua ejecutado por un Urshifu Gigamax.\nPropina golpes sucesivos que aciertan al objetivo\naunque haya usado Maxibarrera.
 8,7,1,긴 꼬리나 손 등을 사용하여\n상대를 때려서 공격한다.
 8,7,2,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
 8,7,3,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
@@ -25817,7 +26039,7 @@ generation_id,language_id,move_id,description
 8,7,131,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
 8,7,132,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
 8,7,133,머리를 비워서 순간적으로\n무언가를 잊어버림으로써\n자신의 특수방어를 크게 올린다.
-8,7,134,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
+8,7,134,숟가락을 휘어서 주의를 끌어\n상대의 명중률을 낮춘다.
 8,7,135,자신의 최대 HP 절반을\n회복한다.
 8,7,136,점프해서 무릎차기로\n상대를 공격한다.\n빗나가면 자신이 데미지를 입는다.
 8,7,137,배의 무늬로 겁을 주어\n상대를 마비 상태로 만든다.
@@ -25977,7 +26199,7 @@ generation_id,language_id,move_id,description
 8,7,291,1턴째에 잠수했다가 2턴째에\n떠올라 공격한다.
 8,7,292,펼친 양손으로\n상대를 번갈아 쳐서 공격한다.\n2-5회 동안 연속으로 쓴다.
 8,7,293,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
-8,7,294,깜빡거리는 빛을 바라보고\n자신의 정신을 통일하여\n특수공격을 매우 크게 올린다.
+8,7,294,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
 8,7,295,눈부신 빛을 발산하여\n공격한다. 상대의 특수방어를\n떨어뜨릴 때가 있다.
 8,7,296,안개의 깃털로 둘러싸\n공격한다. 상대의 특수공격을\n떨어뜨릴 때가 있다.
 8,7,297,깃털을 흩뿌려\n상대의 몸에 휘감는다.\n상대의 공격을 크게 떨어뜨린다.
@@ -26037,7 +26259,7 @@ generation_id,language_id,move_id,description
 8,7,351,전격을 재빠르게\n상대에게 날린다.\n공격은 반드시 명중한다.
 8,7,352,물의 진동을\n상대에게 가하여 공격한다.\n상대를 혼란시킬 때가 있다.
 8,7,353,기술을 사용한 2턴 뒤에\n무수한 빛의 다발이\n상대를 공격한다.
-8,7,354,풀 파워로 상대를 공격한다.\n쓰면 반동으로\n자신의 특수공격이 크게 떨어진다.
+8,7,354,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
 8,7,355,땅에 내려와 몸을 쉬게 한다.\n최대 HP의 절반만큼\nHP를 회복한다.
 8,7,356,5턴 동안 부유나 비행타입에\n땅타입의 기술이 맞게 된다.\n공중으로 나는 기술도 사용할 수 없다.
 8,7,357,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
@@ -26074,7 +26296,7 @@ generation_id,language_id,move_id,description
 8,7,388,마음을 괴롭히는 씨앗을\n심는다. 상대를 잠잘 수 없게 해서\n특성을 불면으로 만든다.
 8,7,389,상대보다 먼저 공격할 수 있다.\n상대가 쓴 기술이\n공격기술이 아니면 실패한다.
 8,7,390,상대의 발밑에 독 압정을\n뿌린다. 교체로 나온 상대\n포켓몬에게 독을 퍼지게 한다.
-8,7,391,초능력으로\n자신과 상대에 걸려 있는\n능력 변화를 교체한다.
+8,7,391,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
 8,7,392,자신의 몸 주변을\n물로 만든 베일로 덮는다.\n매 턴 HP를 회복한다.
 8,7,393,전기로 만든 자력의 힘으로\n허공에 뜬다.\n5턴 동안 부유할 수 있다.
 8,7,394,불꽃을 두르고 돌진한다.\n자신도 상당한 데미지를 입는다.\n화상 상태로 만들 때가 있다.
@@ -26480,6 +26702,36 @@ generation_id,language_id,move_id,description
 8,7,794,굵은 줄기를 휘둘러서 공격한다.\n단 자신도 비틀거리기 때문에\n다음 턴은 움직일 수 없다.
 8,7,795,본래의 모습이 된\n무한다이노 최대의 공격.\n다음 턴은 움직일 수 없다.
 8,7,796,전신에서 끌어모은 강철을\n빔으로 바꿔 세차게 발사한다.\n자신도 데미지를 받는다.
+8,7,797,사이코 파워로 상대를 공격한다.\n사이코필드일 때는 위력이 오르며\n모든 상대에게 데미지를 준다.
+8,7,798,필드를 파괴하면서 공격한다.\n필드가 어떤 상태로든 변해 있지 않은 경우\n기술은 실패한다.
+8,7,799,비늘을 쏘아서 공격한다.\n2-5회 동안 연속으로 쓴다.\n스피드가 올라가지만 방어가 떨어진다.
+8,7,800,1턴째에 우주의 힘을 모아서\n특수공격을 올리고\n2턴째에 상대를 공격한다.
+8,7,801,물리와 특수 중 더 많은 데미지를\n줄 수 있는 능력으로 공격한다.\n독 상태로 만들 때가 있다.
+8,7,802,자신의 주위에 있는 모두를\n공격하지만 사용하면 기절한다.\n미스트필드일 때 위력이 올라간다.
+8,7,803,지면에 미끄러지듯 상대를 공격한다.\n그래스필드일 때\n반드시 선제공격할 수 있다.
+8,7,804,지면에서 올라오는 전격으로 공격한다.\n상대가 일렉트릭필드 위에 있을 때\n기술의 위력이 2배가 된다.
+8,7,805,필드의 힘을 빌려서 공격한다.\n사용했을 때의 필드 상태에 따라서\n기술 타입과 위력이 바뀐다.
+8,7,806,배후에서 엄습해서 공격한다.\n상대의 특수공격을 떨어뜨린다.
+8,7,807,질투의 에너지로 상대를 공격한다.\n그 턴에 능력이 올라간 포켓몬을\n화상 상태로 만든다.
+8,7,808,상대에 대한 울분이 담긴 공격을 한다.\n그 턴에 능력이 떨어져 있으면\n기술의 위력이 2배가 된다.
+8,7,809,상대의 지닌 물건을 조종해서 공격한다.\n상대가 도구를 지니고 있지 않으면 실패한다.
+8,7,810,주위에 있는 모든 것을\n강력한 산성 가스로 뒤덮어서\n지니고 있는 도구를 녹여버린다.
+8,7,811,적절한 지도를 통해서\n같은 편 전원의\n공격과 방어를 올린다.
+8,7,812,공격한 뒤\n굉장한 스피드로 돌아와서\n교대 포켓몬과 교체한다.
+8,7,813,3회 연속으로 킥을 날려\n공격한다. 기술이 맞을 때마다\n위력이 올라간다.
+8,7,814,날개를 상대에게 부딪쳐서\n공격한다. 2회 연속으로\n데미지를 준다.
+8,7,815,뜨겁게 달궈진 모래를\n상대에게 부딪쳐서 공격한다.\n화상 상태로 만들 때가 있다.
+8,7,816,정글과 하나가 되어\n자신과 배틀에 나와 있는 같은 편의\nHP와 모든 상태를 회복한다.
+8,7,817,악의 태세가 극에 달하여\n강렬한 일격을 날린다.\n반드시 급소에 맞는다.
+8,7,818,물의 태세가 극에 달하여\n물 흐르듯 3회의 연격을 날린다.\n반드시 급소에 맞는다.
+8,7,819,전기가 흐르는 우리 안에\n4-5턴 동안\n상대를 가두어 공격한다.
+8,7,820,생명력을 파워로 바꿔서 상대를 공격한다.\n자신의 HP가 적을수록\n기술의 위력이 떨어진다.
+8,7,821,두 눈에서 사이코 파워를\n발사해서 공격한다.\n얼음 상태로 만들 때가 있다.
+8,7,822,분노를 불꽃 같은\n오라로 바꿔서 공격한다.\n상대를 풀죽게 만들 때가 있다.
+8,7,823,번개 같은 움직임으로\n상대를 농락하며 킥을 날린다.\n상대의 방어를 떨어뜨린다.
+8,7,824,눈보라를 두른 얼음의 창을\n상대에게 던져서 공격한다.
+8,7,825,수많은 작은 영체를\n상대에게 부딪쳐서 공격한다.
+8,7,826,강력한 사이코 파워로 공격한다.\n상대가 마지막으로 사용한 기술의\nPP를 3만큼 줄인다.
 8,7,10001,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
 8,7,10002,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
 8,7,10003,사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
@@ -26522,6 +26774,13 @@ generation_id,language_id,move_id,description
 8,7,10058,거다이맥스한 멜메탈이\n사용하는 강철타입 공격.\n똑같은 기술을 연속으로 쓸 수 없게 한다.
 8,7,10059,거다이맥스한 킹크랩이\n사용하는 물타입 공격.\n상대의 스피드를 크게 떨어뜨린다.
 8,7,10060,거다이맥스한 다태우지네가\n사용하는 불꽃타입 공격.\n4-5턴 동안 불꽃 속에 가둔다.
+8,7,10061,거다이맥스한 이상해꽃이\n사용하는 풀타입 공격.\n4턴 동안 데미지를 준다.
+8,7,10062,거다이맥스한 거북왕이\n사용하는 물타입 공격.\n4턴 동안 데미지를 준다.
+8,7,10063,거다이맥스한 고릴타가\n사용하는 풀타입 공격.\n상대의 특성에 영향을 받지 않는다.
+8,7,10064,거다이맥스한 에이스번이\n사용하는 불꽃타입 공격.\n상대의 특성에 영향을 받지 않는다.
+8,7,10065,거다이맥스한 인텔리레온이\n사용하는 물타입 공격.\n상대의 특성에 영향을 받지 않는다.
+8,7,10066,거다이맥스한 우라오스가\n사용하는 악타입 공격.\n다이월을 무시하는 일격을 날린다.
+8,7,10067,거다이맥스한 우라오스가\n사용하는 물타입 공격.\n다이월을 무시하는 연격을 날린다.
 8,8,1,長い　しっぽや　手などを　使って\n相手を　はたいて　攻撃する。
 8,8,2,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 8,8,3,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
@@ -26655,7 +26914,7 @@ generation_id,language_id,move_id,description
 8,8,131,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 8,8,132,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 8,8,133,頭を　からにして\n一瞬　なにかを　忘れることで\n自分の　特防を　ぐーんと　あげる。
-8,8,134,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
+8,8,134,スプーンを　まげて　注意を　ひき\n相手の　命中率を　さげる。
 8,8,135,最大ＨＰの　半分\n自分の　ＨＰを　回復する。
 8,8,136,ジャンプからの　ひざげりで\n相手を　攻撃する。\nはずすと　自分が　ダメージを　受ける。
 8,8,137,おなかの　模様で　おびえさせて\n相手を　まひの　状態に　する。
@@ -26815,7 +27074,7 @@ generation_id,language_id,move_id,description
 8,8,291,１ターン目で　潜り　２ターン目に\n浮きあがって　攻撃する。
 8,8,292,ひらいた　両手で\n相手を　つっぱって　攻撃する。\n２ー５回の　間　連続で　だす。
 8,8,293,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
-8,8,294,点滅する　光を　眺めて\n自分の　精神を　統一し\n特攻を　ぐぐーんと　あげる。
+8,8,294,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 8,8,295,まばゆい　光を\n解放して　攻撃する。\n相手の　特防を　さげることが　ある。
 8,8,296,霧状の　羽毛で　包みこみ\n攻撃する。\n相手の　特攻を　さげることが　ある。
 8,8,297,羽毛を　ふりまいて\n相手の　体に　からませる。\n相手の　攻撃を　がくっと　さげる。
@@ -26875,7 +27134,7 @@ generation_id,language_id,move_id,description
 8,8,351,電撃を　素早く\n相手に　浴びせる。\n攻撃は　必ず　命中する。
 8,8,352,水の　振動を\n相手に　与えて　攻撃する。\n相手を　混乱させることが　ある。
 8,8,353,技を　使った　２ターン後に\n無数の　光の　束で\n相手を　攻撃する。
-8,8,354,フルパワーで　相手を　攻撃する。\n使うと　反動で\n自分の　特攻が　がくっと　さがる。
+8,8,354,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 8,8,355,地面に　降りて　体を　やすめる。\n最大ＨＰの　半分の\nＨＰを　回復する。
 8,8,356,５ターンの間　ふゆうや　ひこうタイプに\nじめんタイプの　技が　当たるようになる。\n空中に　飛ぶ　技も　使えない。
 8,8,357,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
@@ -26912,7 +27171,7 @@ generation_id,language_id,move_id,description
 8,8,388,心を　なやませる　タネを\n植えつける。　相手を　眠れなくして\n特性を　ふみんに　する。
 8,8,389,相手より　先に　攻撃　できる。\n相手が　だす技が\n攻撃技でないと　失敗する。
 8,8,390,相手の　足下に　どくびしを\nしかける。　交代で　でてきた　相手の\nポケモンに　毒を　おわせる。
-8,8,391,超能力で\n自分と　相手に　かかっている\n能力変化を　入れ替える。
+8,8,391,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 8,8,392,自分の　体の　周りを\n水で　つくった　ベールで　おおう。\n毎ターン　ＨＰを　回復する。
 8,8,393,電気で　つくった　磁力の　力で\n宙に　浮かぶ。\n５ターンの　間　浮遊できる。
 8,8,394,炎を　まとって　突進する。\n自分も　かなり　ダメージを　受ける。\nやけど状態に　することが　ある。
@@ -27318,6 +27577,36 @@ generation_id,language_id,move_id,description
 8,8,794,太い　クキを　ふりまわして　攻撃。\nただし　自分も　よろめいてしまうため\n次の　ターンは　動けなくなる。
 8,8,795,本来の　姿と　なった\nムゲンダイナ　最大の　攻撃。\n次の　ターンは　動けなくなる。
 8,8,796,全身から　集めた　はがねを\nビームとして　激しく　撃ちだす。\n自分も　ダメージを　受けてしまう。
+8,8,797,サイコパワーで　相手を　攻撃する。\nサイコフィールドの時　威力が　あがり\nすべての　相手に　ダメージを　与える。
+8,8,798,フィールドを　破壊しながら　攻撃。\nなんらかの　フィールド状態に\n変わっていないと　技は　失敗する。
+8,8,799,ウロコを　撃ちだして　攻撃する。\n２ー５回の　間　連続で　だす。\n素早さが　あがるが　防御が　さがる。
+8,8,800,１ターン目に　宇宙の　力を\n集めることで　特攻が　あがり\n２ターン目に　相手を　攻撃する。
+8,8,801,物理か　特殊か　より多く　ダメージを\n与えられる　能力で　攻撃する。\n毒状態に　することが　ある。
+8,8,802,自分の　周りに　いる　すべてを\n攻撃するが　使うと　瀕死になる。\nミストフィールドで　威力が　あがる。
+8,8,803,地面を　滑るように　相手を　攻撃。\nグラスフィールドの時\n必ず　先制攻撃　できる。
+8,8,804,地面から　立ちのぼる　電撃で　攻撃。\n相手が　エレキフィールドに　いる時\n技の　威力が　２倍に　なる。
+8,8,805,フィールドの力を　借りて　攻撃。\n使った時の　フィールドの状態に　よって\n技の　タイプと　威力が　変わる。
+8,8,806,背後から　はいより　攻撃する。\n相手の　特攻を　さげる。
+8,8,807,しっとの　エネルギーで　相手を　攻撃。\nそのターン　能力が　あがった　ポケモンを\nやけどの　状態に　する。
+8,8,808,相手への　いらだちを　ぶつけて　攻撃。\nそのターンに　能力を　さげられていると\n技の　威力が　２倍に　なる。
+8,8,809,相手の　持ち物を　あやつって　攻撃。\n相手が　道具を　持っていない　場合は\n失敗する。
+8,8,810,強い　酸性の　ガスで\n周りに　いるものを　包みこみ\n持っている　道具を　溶かしてしまう。
+8,8,811,的確な　指導を　おこなうことで　\n味方　全員の\n攻撃と　防御を　上げる。
+8,8,812,攻撃した　あと\nものすごい　スピードで　戻ってきて\n控えの　ポケモンと　入れ替わる。
+8,8,813,３回連続で　キックを　くりだして\n攻撃する。　技が　当たるたびに\n威力は　あがる。
+8,8,814,翼を　相手に　ぶつけて\n攻撃する。　２回連続で\nダメージを　与える。
+8,8,815,熱く　焼けた　砂を\n相手に　ぶつけて　攻撃する。\nやけど状態に　することが　ある。
+8,8,816,ジャングルと　一体化して\n自分と　場にいる　味方の\nＨＰと　状態を　回復する。
+8,8,817,あくの型を　極めし\n強烈な　一撃。\n必ず　急所に　当たる。
+8,8,818,みずの型を　極めし\n流れるような　３回の　連撃。\n必ず　急所に　当たる。
+8,8,819,ほとばしる　電気の　おりの　中に\n４ー５ターンの　間\n相手を　閉じこめて　攻撃する。
+8,8,820,生命力を　パワーに　変え　相手を\n攻撃する。　自分の　ＨＰが　少ないほど\n技の　威力は　さがる。
+8,8,821,両目から　サイコパワーを\n撃ちだして　攻撃する。\nこおり状態に　することが　ある。
+8,8,822,怒りを　炎の　ような\nオーラに　変えて　攻撃する。\n相手を　ひるませることが　ある。
+8,8,823,雷の　ような　動きで\n相手を　翻弄しながら　キックする。\n相手の　防御を　さげる。
+8,8,824,吹雪を　まとった　氷の　槍を\n相手に　投げつけて　攻撃する。
+8,8,825,たくさんの　小さな　霊体を\n相手に　ぶつけて　攻撃する。
+8,8,826,強力な　サイコパワーで　攻撃。\n相手が　最後に　使った技の\nＰＰを　３だけ　減らす。
 8,8,10001,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 8,8,10002,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 8,8,10003,この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
@@ -27360,6 +27649,13 @@ generation_id,language_id,move_id,description
 8,8,10058,キョダイマックスした　メルメタルが\n繰りだす　はがねタイプの　攻撃。\n同じ　技を　連続で　出せなくする。
 8,8,10059,キョダイマックスした　キングラーが\n繰りだす　みずタイプの　攻撃。\n相手の　素早さを　がくっと　さげる。
 8,8,10060,キョダイマックスした　マルヤクデが\n繰りだす　ほのおタイプの　攻撃。\n４ー５ターンの　間　炎に閉じこめる。
+8,8,10061,キョダイマックスした　フシギバナが\n繰りだす　くさタイプの　攻撃。\n４ターンの　間　ダメージを　与える。
+8,8,10062,キョダイマックスした　カメックスが\n繰りだす　みずタイプの　攻撃。\n４ターンの　間　ダメージを　与える。
+8,8,10063,キョダイマックスした　ゴリランダーが\n繰りだす　くさタイプの　攻撃。\n相手の　特性に　ジャマされない。
+8,8,10064,キョダイマックスした　エースバーンが\n繰りだす　ほのおタイプの　攻撃。\n相手の　特性に　ジャマされない。
+8,8,10065,キョダイマックスした　インテレオンが\n繰りだす　みずタイプの　攻撃。\n相手の　特性に　ジャマされない。
+8,8,10066,キョダイマックスした　ウーラオスが\n繰りだす　あくタイプの　攻撃。\nダイウォールを　無視できる　一撃。
+8,8,10067,キョダイマックスした　ウーラオスが\n繰りだす　みずタイプの　攻撃。\nダイウォールを　無視できる　連撃。
 8,9,1,使用长长的尾巴或手等\n拍打对手进行攻击。
 8,9,2,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
 8,9,3,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
@@ -27493,7 +27789,7 @@ generation_id,language_id,move_id,description
 8,9,131,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
 8,9,132,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
 8,9,133,将头脑清空，\n瞬间忘记某事，\n从而大幅提高自己的特防。
-8,9,134,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
+8,9,134,折弯汤匙引开注意，\n从而降低对手的命中率。
 8,9,135,回复自己最大ＨＰ的一半。
 8,9,136,跳起后用膝盖撞对手进行攻击。\n如果撞偏则自己会受到伤害。
 8,9,137,用腹部的花纹使对手害怕，\n从而让其陷入麻痹状态。
@@ -27653,7 +27949,7 @@ generation_id,language_id,move_id,description
 8,9,291,第１回合潜入，\n第２回合浮上来进行攻击。
 8,9,292,用张开着的双手\n猛推对手进行攻击。\n连续攻击２～５次。
 8,9,293,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
-8,9,294,凝视闪烁的光芒，\n集中自己的精神，\n从而巨幅提高特攻。
+8,9,294,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
 8,9,295,释放耀眼的光芒进行攻击。\n有时会降低对手的特防。
 8,9,296,用围绕着雾状\n羽毛的球进行攻击。\n有时会降低对手的特攻。
 8,9,297,撒出羽毛，\n笼罩在对手的周围。\n大幅降低对手的攻击。
@@ -27713,7 +28009,7 @@ generation_id,language_id,move_id,description
 8,9,351,向对手快速发出电击。\n攻击必定会命中。
 8,9,352,用水的震动攻击对手。\n有时会使对手混乱。
 8,9,353,使用招式２回合后，\n会用无数道光束攻击对手。
-8,9,354,使出全部力量攻击对手。\n使用之后会因为反作用力，\n自己的特攻大幅降低。
+8,9,354,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
 8,9,355,降到地面，使身体休息。\n回复自己最大ＨＰ的一半。
 8,9,356,在５回合内，飘浮特性和飞行属性的\n宝可梦会被地面属性的招式击中。\n飞向空中的招式也将无法使用。
 8,9,357,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
@@ -27750,7 +28046,7 @@ generation_id,language_id,move_id,description
 8,9,388,种植心神不宁的种子。\n使对手不能入眠，\n并将特性变成不眠。
 8,9,389,可以比对手先攻击。\n对手使出的招式\n如果不是攻击招式则会失败。
 8,9,390,在对手的脚下撒毒菱。\n使对手替换出场的宝可梦中毒。
-8,9,391,利用超能力互换\n自己和对手之间的\n能力变化。
+8,9,391,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
 8,9,392,在自己身体的周围\n覆盖用水制造的幕。\n每回合回复ＨＰ。
 8,9,393,利用电气产生的磁力浮在空中。\n在５回合内可以飘浮。
 8,9,394,让火焰覆盖全身猛撞向对手。\n自己也会受到不小的伤害。\n有时会让对手陷入灼伤状态。
@@ -28156,6 +28452,36 @@ generation_id,language_id,move_id,description
 8,9,794,大力挥舞粗壮的茎进行攻击。\n但同时自己也会被晃晕，\n下一回合自己将无法动弹。
 8,9,795,无极汰那变回原来的样子后，\n发动的最强攻击。\n下一回合自己将无法动弹。
 8,9,796,将从全身聚集的钢铁\n化为光束，激烈地发射出去。\n自己也会受到伤害。
+8,9,797,利用精神力量攻击对手。\n在精神场地上威力会有所提高，\n能对所有对手造成伤害。
+8,9,798,在破坏场地的同时攻击对手。\n如果脚下没有任何场地状态存在，\n使出此招式时便会失败。
+8,9,799,发射鳞片进行攻击。\n连续攻击２～５次。\n速度会提高但防御会降低。
+8,9,800,第１回合聚集宇宙之力提高特攻，\n第２回合攻击对手。
+8,9,801,从物理攻击和特殊攻击中选择\n可造成较多伤害的方式进行攻击。\n有时会让对手陷入中毒状态。
+8,9,802,对自己周围的所有宝可梦进行攻击，\n但使出后，自己会陷入濒死。\n在薄雾场地上，招式威力会提高。
+8,9,803,仿佛在地面上滑行般地攻击对手。\n在青草场地上，\n必定能够先制攻击。
+8,9,804,用从地面升腾而起的电击进行攻击。\n当对手处于电气场地上时，\n招式威力会变成２倍。
+8,9,805,借助场地的力量进行攻击。\n视使出招式时场地状态不同，\n招式的属性和威力会有所变化。
+8,9,806,从对手背后爬近后进行攻击。\n会降低对手的特攻。
+8,9,807,用嫉妒的能量攻击对手。\n会让在该回合内能力有所提高的\n宝可梦陷入灼伤状态。
+8,9,808,攻击对手以发泄对其感到的恼怒情绪。\n如果在该回合内自身能力遭到降低，\n招式的威力会变成２倍。
+8,9,809,操纵对手的持有物进行攻击。\n当对手没有携带道具时，\n使出此招式时便会失败。
+8,9,810,用具有强酸性的气体\n包裹住自己周围所有的宝可梦，\n并融化其所携带的道具。
+8,9,811,通过进行正确合理的指导，\n提高我方全员的攻击和防御。
+8,9,812,在攻击之后急速返回，\n和后备宝可梦进行替换。
+8,9,813,连续３次踢对手进行攻击。\n每踢中一次，威力就会提高。
+8,9,814,将翅膀撞向对手进行攻击。\n连续２次给予伤害。
+8,9,815,将滚烫的沙子砸向对手进行攻击。\n有时会让对手陷入灼伤状态。
+8,9,816,与丛林融为一体，\n回复自己和场上同伴的ＨＰ和状态。
+8,9,817,将恶之流派修炼至大成的\n猛烈一击。\n必定会击中要害。
+8,9,818,将水之流派修炼至大成的\n仿若行云流水般的３次连击。\n必定会击中要害。
+8,9,819,将对手困在\n电流四溅的囚笼中，\n在４～５回合内进行攻击。
+8,9,820,把生命力转换为力量攻击对手。\n自己的ＨＰ越少，招式的威力越小。
+8,9,821,从双眼发射精神力量进行攻击。\n有时会让对手陷入冰冻状态。
+8,9,822,将愤怒转化为火焰般的气场进行攻击。\n有时会使对手畏缩。
+8,9,823,以雷电般的动作\n戏耍对手的同时使出脚踢。\n可降低对手的防御。
+8,9,824,向对手投掷\n掀起暴风雪的冰矛进行攻击。
+8,9,825,用大量的小灵体向\n对手发起攻击。
+8,9,826,用强大的精神力量攻击。\n让对手最后使用的招式\n减少３ＰＰ。
 8,9,10001,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
 8,9,10002,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
 8,9,10003,无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
@@ -28198,6 +28524,13 @@ generation_id,language_id,move_id,description
 8,9,10058,超极巨化的美录梅塔\n使出的钢属性攻击。\n会让对手无法连续使出相同的招式。
 8,9,10059,超极巨化的巨钳蟹\n使出的水属性攻击。\n会大幅降低对手的速度。
 8,9,10060,超极巨化的焚焰蚣\n使出的火属性攻击。\n可在４～５回合内将对手困在火焰中。
+8,9,10061,超极巨化的妙蛙花\n使出的草属性攻击。\n可在４回合内给予对手伤害。
+8,9,10062,超极巨化的水箭龟\n使出的水属性攻击。\n可在４回合内给予对手伤害。
+8,9,10063,超极巨化的轰擂金刚猩\n使出的草属性攻击。\n不会受到对手特性的干扰。
+8,9,10064,超极巨化的闪焰王牌\n使出的火属性攻击。\n不会受到对手特性的干扰。
+8,9,10065,超极巨化的千面避役\n使出的水属性攻击。\n不会受到对手特性的干扰。
+8,9,10066,超极巨化的武道熊师\n使出的恶属性攻击。\n是可以无视极巨防壁的一击。
+8,9,10067,超极巨化的武道熊师\n使出的水属性攻击。\n是可以无视极巨防壁的连击。
 8,10,1,使用長長的尾巴或手等\n拍打對手進行攻擊。
 8,10,2,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 8,10,3,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
@@ -28331,7 +28664,7 @@ generation_id,language_id,move_id,description
 8,10,131,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 8,10,132,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 8,10,133,將頭腦清空，\n藉由在一瞬間遺忘某些事\n大幅提高自己的特防。
-8,10,134,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
+8,10,134,折彎湯匙引起注意，\n降低對手的命中率。
 8,10,135,回復自己最大ＨＰ的一半。
 8,10,136,跳起後用膝蓋踢擊對手。\n沒踢中對手時自己會受到傷害。
 8,10,137,用腹部的花紋使對手心生恐懼，\n讓對手陷入麻痺狀態。
@@ -28491,7 +28824,7 @@ generation_id,language_id,move_id,description
 8,10,291,使用後的第１回合潛入水中，\n並於第２回合浮上來進行攻擊。
 8,10,292,用張開的雙手\n猛推對手進行攻擊。\n連續攻擊２～５次。
 8,10,293,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
-8,10,294,凝視閃爍的光芒，\n集中精神，\n極大幅提高自己的特攻。
+8,10,294,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 8,10,295,放出耀眼的光芒進行攻擊。\n有時會降低對手的特防。
 8,10,296,將霧狀的羽毛聚集成團進行攻擊。\n有時會降低對手的特攻。
 8,10,297,撒出羽毛，\n纏住對手的身體。\n大幅降低對手的攻擊。
@@ -28551,7 +28884,7 @@ generation_id,language_id,move_id,description
 8,10,351,向對手迅速放出電流。\n攻擊一定會命中。
 8,10,352,用水的震動攻擊對手。\n有時會使對手混亂。
 8,10,353,使用招式的２回合後，\n向對手發射無數道光束\n進行攻擊。
-8,10,354,釋放全部能量攻擊對手。\n使用後因為反作用力，\n自己的特攻會大幅降低。
+8,10,354,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 8,10,355,降落到地面，讓身體休息。\n回復自己最大ＨＰ的一半。
 8,10,356,在５回合內，飄浮特性和飛行屬性的\n寶可夢會被地面屬性的招式擊中。\n且無法使用飛向空中的招式。
 8,10,357,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
@@ -28564,7 +28897,7 @@ generation_id,language_id,move_id,description
 8,10,364,能夠攻擊使用了\n守住或看穿的對手。\n並解除對手的防守效果。
 8,10,365,用鳥喙進行攻擊。\n可以吃下對手攜帶的樹果，\n並獲得樹果的效果。
 8,10,366,刮起猛烈的強風，\n在４回合內\n提高我方全體的速度。
-8,10,367,利用點穴激發身體的活力，\n大幅提高自己的某一項能力。
+8,10,367,利用點穴激發身體的活力，\n大幅提高某一項能力。
 8,10,368,將發動攻擊前\n最後受到的招式傷害放大，\n向對手進行反擊。
 8,10,369,攻擊後迅速返回，\n和後備寶可夢進行替換。
 8,10,370,反守為攻，近身突擊對手。\n自己的防禦和特防會降低。
@@ -28588,7 +28921,7 @@ generation_id,language_id,move_id,description
 8,10,388,埋下令人心煩意亂的種子，\n讓對手睡不著，\n將對手的特性變成不眠。
 8,10,389,可以搶先對手一步進行攻擊。\n若對手使用的不是攻擊招式則會失敗。
 8,10,390,在對手腳下散布毒菱。\n讓對手替換出場的寶可夢\n陷入中毒狀態。
-8,10,391,用超能力將自己和對手的\n能力變化互相交換。
+8,10,391,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 8,10,392,在自己的身邊套上水流環。\n每回合會回復自己的ＨＰ。
 8,10,393,利用電氣產生的磁力浮在空中。\n在５回合內可以飄浮。
 8,10,394,將火焰圍繞全身後猛撞對手。\n自己也會受到不小的傷害。\n有時會讓對手陷入灼傷狀態。
@@ -28994,6 +29327,36 @@ generation_id,language_id,move_id,description
 8,10,794,揮舞粗壯的莖進行攻擊。\n但同時自己也會站不穩，\n下一回合將無法動彈。
 8,10,795,無極汰那變回\n本來樣子時的最強攻擊。\n下一回合自己將無法動彈。
 8,10,796,將從全身匯聚起來的鋼鐵\n化為光束激烈地發射出去。\n自己也會受到傷害。
+8,10,797,用精神力量攻擊對手。\n在精神場地時，威力會提高，\n能給予所有對手傷害。
+8,10,798,一邊破壞場地，一邊進行攻擊。\n在不是特殊狀態的場地上使用，\n招式就會失敗。
+8,10,799,射出鱗片進行攻擊。\n可連續攻擊２～５次。\n速度會提高但防禦會降低。
+8,10,800,使用後的第１回合會聚集\n宇宙的力量來提高特攻，\n並於第２回合攻擊對手。
+8,10,801,用物理攻擊和特殊攻擊中\n能夠給予更大傷害的能力進行攻擊。\n有時會讓對手陷入中毒狀態。
+8,10,802,對自己周圍的所有寶可夢進行攻擊，\n但使出後，自己會陷入瀕死。\n在薄霧場地時，招式威力會提高。
+8,10,803,在地面上滑行般地攻擊對手。\n在青草場地時，\n必定能夠發動先制攻擊。
+8,10,804,用從地面升騰的電擊攻擊。\n當對手在電氣場地時，\n招式威力會變成２倍。
+8,10,805,藉助場地的力量進行攻擊。\n視使出招式時場地狀態不同，\n招式的屬性和威力會有所變化。
+8,10,806,從對手背後爬近後進行攻擊。\n會降低對手的特攻。
+8,10,807,用嫉妒的能量攻擊對手。\n讓此回合內能力提高的\n寶可夢陷入灼傷狀態。
+8,10,808,將惱怒砸向對手進行攻擊。\n如果此回合已被降低能力，\n招式威力就會變成２倍。
+8,10,809,操控對手的持有物進行攻擊。\n對手沒有攜帶道具時，\n則會失敗。
+8,10,810,用強烈的酸性氣體\n包圍周圍所有的寶可夢，\n並將攜帶的道具融化掉。
+8,10,811,透過適切的指導，\n提高我方全體的攻擊和防禦。
+8,10,812,攻擊後迅速返回，\n和後備寶可夢進行替換。
+8,10,813,連續踢對手３次進行攻擊。\n每踢中一次，威力就會提高。
+8,10,814,用翅膀撞向對手進行攻擊。\n連續２次給予傷害。
+8,10,815,向對手投灑熾熱的沙子進行攻擊。\n有時會讓對手陷入灼傷狀態。
+8,10,816,和叢林化為一體，\n回復自己和場上同伴的ＨＰ和狀態。
+8,10,817,將惡之流派鍛鍊到了\n極致的強烈一擊。\n必定會擊中要害。
+8,10,818,將水之流派鍛鍊到了極致，\n猶如行雲流水的３次連擊。\n必定會擊中要害。
+8,10,819,將對手困在\n電流奔竄的電牢中，\n在４～５回合內進行攻擊。
+8,10,820,將生命力化為力量攻擊對手。\n自己的ＨＰ越少，招式的威力越小。
+8,10,821,從雙眼釋放出精神力量進行攻擊。\n有時會讓對手陷入冰凍狀態。
+8,10,822,將憤怒化為火焰般的氣場進行攻擊。\n有時會讓對手畏縮。
+8,10,823,以雷電般的動作\n一邊戲弄對手一邊使出踢擊。\n可降低對手的防禦。
+8,10,824,向對手投擲\n捲著暴風雪的冰矛進行攻擊。
+8,10,825,向對手釋出大量的\n小靈體進行攻擊。
+8,10,826,用強大的精神力量攻擊。\n讓對手最近一次使用的招式\n減少３ＰＰ。
 8,10,10001,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 8,10,10002,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 8,10,10003,無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
@@ -29036,3 +29399,10 @@ generation_id,language_id,move_id,description
 8,10,10058,超極巨化美錄梅塔\n使出的鋼屬性攻擊。\n會讓對手無法連續使出相同招式。
 8,10,10059,超極巨化巨鉗蟹\n使出的水屬性攻擊。\n會大幅降低對手的速度。
 8,10,10060,超極巨化焚焰蚣\n使出的火屬性攻擊。\n會在４～５回合內將對手困在火中。
+8,10,10061,超極巨化妙蛙花\n使出的草屬性攻擊。\n可在４回合內給予對手傷害。
+8,10,10062,超極巨化水箭龜\n使出的水屬性攻擊。\n可在４回合內給予對手傷害。
+8,10,10063,超極巨化轟擂金剛猩\n使出的草屬性攻擊。\n不會受到對手特性的干擾。
+8,10,10064,超極巨化閃焰王牌\n使出的火屬性攻擊。\n不會受到對手特性的干擾。
+8,10,10065,超極巨化千面避役\n使出的水屬性攻擊。\n不會受到對手特性的干擾。
+8,10,10066,超極巨化武道熊師\n使出的惡屬性攻擊。\n是可以無視極巨防壁的一擊。
+8,10,10067,超極巨化武道熊師\n使出的水屬性攻擊。\n是可以無視極巨防壁的連擊。

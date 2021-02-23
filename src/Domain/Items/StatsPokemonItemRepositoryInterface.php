@@ -7,6 +7,7 @@ use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Versions\GenerationId;
 
 interface StatsPokemonItemRepositoryInterface
 {
@@ -18,6 +19,7 @@ interface StatsPokemonItemRepositoryInterface
 	 * @param FormatId $formatId
 	 * @param int $rating
 	 * @param PokemonId $pokemonId
+	 * @param GenerationId $generationId
 	 * @param LanguageId $languageId
 	 *
 	 * @return StatsPokemonItem[] Ordered by percent descending.
@@ -28,6 +30,7 @@ interface StatsPokemonItemRepositoryInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
+		GenerationId $generationId,
 		LanguageId $languageId
 	) : array;
 }

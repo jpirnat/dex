@@ -18,6 +18,36 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 	) {}
 
 	/**
+	 * Get the months that have data recorded for this format and rating.
+	 *
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 *
+	 * @return array Indexed by month ('YYYY-MM-DD'). Ordered by month.
+	 */
+	public function getMonthsWithData(FormatId $formatId, int $rating) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`month`
+			FROM `usage_rated`
+			WHERE `format_id` = :format_id
+				AND `rating` = :rating'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->execute();
+
+		$months = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$months[$result['month']] = 1;
+		}
+
+		return $months;
+	}
+
+	/**
 	 * Get usage data for the usage chart.
 	 *
 	 * @param FormatId $formatId

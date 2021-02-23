@@ -795,6 +795,36 @@ language_id,move_id,name
 1,794,スターアサルト
 1,795,ムゲンダイビーム
 1,796,てっていこうせん
+1,797,ワイドフォース
+1,798,アイアンローラー
+1,799,スケイルショット
+1,800,メテオビーム
+1,801,シェルアームズ
+1,802,ミストバースト
+1,803,グラススライダー
+1,804,ライジングボルト
+1,805,だいちのはどう
+1,806,はいよるいちげき
+1,807,しっとのほのお
+1,808,うっぷんばらし
+1,809,ポルターガイスト
+1,810,ふしょくガス
+1,811,コーチング
+1,812,クイックターン
+1,813,トリプルアクセル
+1,814,ダブルウイング
+1,815,ねっさのだいち
+1,816,ジャングルヒール
+1,817,あんこくきょうだ
+1,818,すいりゅうれんだ
+1,819,サンダープリズン
+1,820,ドラゴンエナジー
+1,821,いてつくしせん
+1,822,もえあがるいかり
+1,823,らいめいげり
+1,824,ブリザードランス
+1,825,アストラルビット
+1,826,ぶきみなじゅもん
 1,10001,めざめるパワー (かくとう)
 1,10002,めざめるパワー (ひこう)
 1,10003,めざめるパワー (どく)
@@ -855,6 +885,13 @@ language_id,move_id,name
 1,10058,キョダイユウゲキ
 1,10059,キョダイホウマツ
 1,10060,キョダイヒャッカ
+1,10061,キョダイベンタツ
+1,10062,キョダイホウゲキ
+1,10063,キョダイコランダ
+1,10064,キョダイカキュウ
+1,10065,キョダイソゲキ
+1,10066,キョダイイチゲキ
+1,10067,キョダイレンゲキ
 2,1,Pound
 2,2,Karate Chop
 2,3,Double Slap
@@ -1651,6 +1688,36 @@ language_id,move_id,name
 2,794,Meteor Assault
 2,795,Eternabeam
 2,796,Steel Beam
+2,797,Expanding Force
+2,798,Steel Roller
+2,799,Scale Shot
+2,800,Meteor Beam
+2,801,Shell Side Arm
+2,802,Misty Explosion
+2,803,Grassy Glide
+2,804,Rising Voltage
+2,805,Terrain Pulse
+2,806,Skitter Smack
+2,807,Burning Jealousy
+2,808,Lash Out
+2,809,Poltergeist
+2,810,Corrosive Gas
+2,811,Coaching
+2,812,Flip Turn
+2,813,Triple Axel
+2,814,Dual Wingbeat
+2,815,Scorching Sands
+2,816,Jungle Healing
+2,817,Wicked Blow
+2,818,Surging Strikes
+2,819,Thunder Cage
+2,820,Dragon Energy
+2,821,Freezing Glare
+2,822,Fiery Wrath
+2,823,Thunderous Kick
+2,824,Glacial Lance
+2,825,Astral Barrage
+2,826,Eerie Spell
 2,10001,Hidden Power (Fighting)
 2,10002,Hidden Power (Flying)
 2,10003,Hidden Power (Poison)
@@ -1711,6 +1778,13 @@ language_id,move_id,name
 2,10058,G-Max Meltdown
 2,10059,G-Max Foam Burst
 2,10060,G-Max Centiferno
+2,10061,G-Max Vine Lash
+2,10062,G-Max Cannonade
+2,10063,G-Max Drum Solo
+2,10064,G-Max Fireball
+2,10065,G-Max Hydrosnipe
+2,10066,G-Max One Blow
+2,10067,G-Max Rapid Flow
 3,1,Écras’Face
 3,2,Poing Karaté
 3,3,Torgnoles
@@ -2507,6 +2581,36 @@ language_id,move_id,name
 3,794,Joute Astrale
 3,795,Laser Infinimax
 3,796,Métalaser
+3,797,Vaste Pouvoir
+3,798,Métalliroue
+3,799,Rafale Écailles
+3,800,Laser Météore
+3,801,Kokiyarme
+3,802,Explo-Brume
+3,803,Gliss’Herbe
+3,804,Monte-Tension
+3,805,Champlification
+3,806,Ravage Rampant
+3,807,Feu Envieux
+3,808,Cent Rancunes
+3,809,Esprit Frappeur
+3,810,Gaz Corrosif
+3,811,Coaching
+3,812,Eau Revoir
+3,813,Triple Axel
+3,814,Double Volée
+3,815,Sable Ardent
+3,816,Selve Salvatrice
+3,817,Poing Obscur
+3,818,Torrent de Coups
+3,819,Voltageôle
+3,820,Draco-Énergie
+3,821,Regard Glaçant
+3,822,Fureur Ardente
+3,823,Coup Fulgurant
+3,824,Lance de Glace
+3,825,Éclat Spectral
+3,826,Sort Sinistre
 3,10001,Puissance Cachée (Combat)
 3,10002,Puissance Cachée (Vol)
 3,10003,Puissance Cachée (Poison)
@@ -2567,6 +2671,13 @@ language_id,move_id,name
 3,10058,Fonte G-Max
 3,10059,Bulles G-Max
 3,10060,Combustion G-Max
+3,10061,Fouet G-Max
+3,10062,Canonnade G-Max
+3,10063,Percussion G-Max
+3,10064,Pyroball G-Max
+3,10065,Gâchette G-Max
+3,10066,Coup Final G-Max
+3,10067,Multicoup G-Max
 4,1,Klaps
 4,2,Karateschlag
 4,3,Duplexhieb
@@ -3363,6 +3474,36 @@ language_id,move_id,name
 4,794,Sternensturm
 4,795,Unendynastrahlen
 4,796,Stahlstrahl
+4,797,Flächenmacht
+4,798,Eisenwalze
+4,799,Schuppenschuss
+4,800,Meteorstrahl
+4,801,Muschelwaffe
+4,802,Nebelexplosion
+4,803,Grasrutsche
+4,804,Hochspannung
+4,805,Feldimpuls
+4,806,Krabbelkracher
+4,807,Neidflammen
+4,808,Frustventil
+4,809,Poltergeist
+4,810,Korrosionsgas
+4,811,Coaching
+4,812,Rollwende
+4,813,Dreifach-Axel
+4,814,Doppelflügel
+4,815,Brandsand
+4,816,Dschungelheilung
+4,817,Finstertreffer
+4,818,Trefferschwall
+4,819,Blitzgefängnis
+4,820,Drachenkräfte
+4,821,Eisiger Blick
+4,822,Brennender Zorn
+4,823,Donnernder Tritt
+4,824,Blizzardlanze
+4,825,Astralfragmente
+4,826,Schauderspruch
 4,10001,Kraftreserve (Kampf)
 4,10002,Kraftreserve (Flug)
 4,10003,Kraftreserve (Gift)
@@ -3423,6 +3564,13 @@ language_id,move_id,name
 4,10058,Giga-Schmelze
 4,10059,Giga-Schaumbad
 4,10060,Giga-Feuerkessel
+4,10061,Giga-Geißel
+4,10062,Giga-Beschuss
+4,10063,Giga-Getrommel
+4,10064,Giga-Brandball
+4,10065,Giga-Schütze
+4,10066,Giga-Einzelhieb
+4,10067,Giga-Multihieb
 5,1,Botta
 5,2,Colpokarate
 5,3,Doppiasberla
@@ -4219,6 +4367,36 @@ language_id,move_id,name
 5,794,Sfolgorassalto
 5,795,Raggio Infinito
 5,796,Raggio d’Acciaio
+5,797,Vastenergia
+5,798,Ferrorullo
+5,799,Squamacolpo
+5,800,Raggiometeora
+5,801,Armaguscio
+5,802,Nebbioscoppio
+5,803,Erboscivolata
+5,804,Elettroimpennata
+5,805,Campopulsar
+5,806,Strisciacolpo
+5,807,Fiamminvidia
+5,808,Sfogarabbia
+5,809,Poltergeist
+5,810,Gas Corrosivo
+5,811,Coaching
+5,812,Virata
+5,813,Triplo Axel
+5,814,Doppia Ala
+5,815,Sabbiardente
+5,816,Giunglacura
+5,817,Pugnotenebra
+5,818,Idroraffica
+5,819,Elettrogabbia
+5,820,Dragoenergia
+5,821,Sguardo Gelido
+5,822,Furia Ardente
+5,823,Calcio Tonante
+5,824,Lancia Glaciale
+5,825,Schegge Astrali
+5,826,Inquietantesimo
 5,10001,Introforza (Lotta)
 5,10002,Introforza (Volante)
 5,10003,Introforza (Veleno)
@@ -4279,6 +4457,13 @@ language_id,move_id,name
 5,10058,Gigaliquefazione
 5,10059,Gigaschiuma
 5,10060,Gigamillefiamme
+5,10061,Gigasferzata
+5,10062,Gigacannonata
+5,10063,Gigarullio
+5,10064,Gigafiammopalla
+5,10065,Gigasparomirato
+5,10066,Gigasingolcolpo
+5,10067,Gigapluricolpo
 6,1,Destructor
 6,2,Golpe Kárate
 6,3,Doble Bofetón
@@ -5075,6 +5260,36 @@ language_id,move_id,name
 6,794,Asalto Estelar
 6,795,Rayo Infinito
 6,796,Metaláser
+6,797,Vasta Fuerza
+6,798,Allanador Férreo
+6,799,Ráfaga Escamas
+6,800,Rayo Meteórico
+6,801,Moluscañón
+6,802,Bruma Explosiva
+6,803,Fitoimpulso
+6,804,Alto Voltaje
+6,805,Pulso de Campo
+6,806,Golpe Rastrero
+6,807,Envidia Ardiente
+6,808,Desahogo
+6,809,Poltergeist
+6,810,Gas Corrosivo
+6,811,Motivación
+6,812,Viraje
+6,813,Triple Axel
+6,814,Ala Bis
+6,815,Arenas Ardientes
+6,816,Cura Selvática
+6,817,Golpe Oscuro
+6,818,Azote Torrencial
+6,819,Electrojaula
+6,820,Dracoenergía
+6,821,Mirada Heladora
+6,822,Furia Candente
+6,823,Patada Relámpago
+6,824,Lanza Glacial
+6,825,Orbes Espectro
+6,826,Conjuro Funesto
 6,10001,Poder Oculto (Lucha)
 6,10002,Poder Oculto (Volador)
 6,10003,Poder Oculto (Veneno)
@@ -5135,6 +5350,13 @@ language_id,move_id,name
 6,10058,Gigafundido
 6,10059,Gigaespuma
 6,10060,Gigacienfuegos
+6,10061,Gigalianas
+6,10062,Gigacañonazo
+6,10063,Gigarredoble
+6,10064,Gigaesfera Ígnea
+6,10065,Gigadisparo
+6,10066,Gigagolpe Brusco
+6,10067,Gigagolpe Fluido
 7,1,막치기
 7,2,태권당수
 7,3,연속뺨치기
@@ -5931,6 +6153,36 @@ language_id,move_id,name
 7,794,스타어설트
 7,795,무한다이빔
 7,796,철제광선
+7,797,와이드포스
+7,798,아이언롤러
+7,799,스케일샷
+7,800,메테오빔
+7,801,셸암즈
+7,802,미스트버스트
+7,803,그래스슬라이더
+7,804,라이징볼트
+7,805,대지의파동
+7,806,엄습하는일격
+7,807,질투의불꽃
+7,808,분풀이
+7,809,폴터가이스트
+7,810,부식가스
+7,811,코칭
+7,812,퀵턴
+7,813,트리플악셀
+7,814,더블윙
+7,815,열사의대지
+7,816,정글힐
+7,817,암흑강타
+7,818,수류연타
+7,819,썬더프리즌
+7,820,드래곤에너지
+7,821,얼어붙는시선
+7,822,타오르는분노
+7,823,천둥차기
+7,824,블리자드랜스
+7,825,아스트랄비트
+7,826,섬뜩한주문
 7,10001,잠재파워 (격투)
 7,10002,잠재파워 (비행)
 7,10003,잠재파워 (독)
@@ -5973,6 +6225,13 @@ language_id,move_id,name
 7,10058,거다이융격
 7,10059,거다이포말
 7,10060,거다이백화
+7,10061,거다이편달
+7,10062,거다이포격
+7,10063,거다이난타
+7,10064,거다이화염구
+7,10065,거다이저격
+7,10066,거다이일격
+7,10067,거다이연격
 8,1,はたく
 8,2,からてチョップ
 8,3,おうふくビンタ
@@ -6769,6 +7028,36 @@ language_id,move_id,name
 8,794,スターアサルト
 8,795,ムゲンダイビーム
 8,796,てっていこうせん
+8,797,ワイドフォース
+8,798,アイアンローラー
+8,799,スケイルショット
+8,800,メテオビーム
+8,801,シェルアームズ
+8,802,ミストバースト
+8,803,グラススライダー
+8,804,ライジングボルト
+8,805,だいちのはどう
+8,806,はいよるいちげき
+8,807,しっとのほのお
+8,808,うっぷんばらし
+8,809,ポルターガイスト
+8,810,ふしょくガス
+8,811,コーチング
+8,812,クイックターン
+8,813,トリプルアクセル
+8,814,ダブルウイング
+8,815,ねっさのだいち
+8,816,ジャングルヒール
+8,817,あんこくきょうだ
+8,818,すいりゅうれんだ
+8,819,サンダープリズン
+8,820,ドラゴンエナジー
+8,821,いてつくしせん
+8,822,もえあがるいかり
+8,823,らいめいげり
+8,824,ブリザードランス
+8,825,アストラルビット
+8,826,ぶきみなじゅもん
 8,10001,めざめるパワー (かくとう)
 8,10002,めざめるパワー (ひこう)
 8,10003,めざめるパワー (どく)
@@ -6811,6 +7100,13 @@ language_id,move_id,name
 8,10058,キョダイユウゲキ
 8,10059,キョダイホウマツ
 8,10060,キョダイヒャッカ
+8,10061,キョダイベンタツ
+8,10062,キョダイホウゲキ
+8,10063,キョダイコランダ
+8,10064,キョダイカキュウ
+8,10065,キョダイソゲキ
+8,10066,キョダイイチゲキ
+8,10067,キョダイレンゲキ
 9,1,拍击
 9,2,空手劈
 9,3,连环巴掌
@@ -7607,6 +7903,36 @@ language_id,move_id,name
 9,794,流星突击
 9,795,无极光束
 9,796,铁蹄光线
+9,797,广域战力
+9,798,铁滚轮
+9,799,鳞射
+9,800,流星光束
+9,801,臂贝武器
+9,802,薄雾炸裂
+9,803,青草滑梯
+9,804,电力上升
+9,805,大地波动
+9,806,爬击
+9,807,妒火
+9,808,泄愤
+9,809,灵骚
+9,810,腐蚀气体
+9,811,指导
+9,812,快速折返
+9,813,三旋击
+9,814,双翼
+9,815,热沙大地
+9,816,丛林治疗
+9,817,暗冥强击
+9,818,水流连打
+9,819,雷电囚笼
+9,820,巨龙威能
+9,821,冰冷视线
+9,822,怒火中烧
+9,823,雷鸣蹴击
+9,824,雪矛
+9,825,星碎
+9,826,诡异咒语
 9,10001,觉醒力量 (格斗)
 9,10002,觉醒力量 (飞行)
 9,10003,觉醒力量 (毒)
@@ -7649,6 +7975,13 @@ language_id,move_id,name
 9,10058,超极巨液金熔击
 9,10059,超极巨激漩泡涡
 9,10060,超极巨百火焚野
+9,10061,超极巨灰飞鞭灭
+9,10062,超极巨水炮轰灭
+9,10063,超极巨狂擂乱打
+9,10064,超极巨破阵火球
+9,10065,超极巨狙击神射
+9,10066,超极巨夺命一击
+9,10067,超极巨流水连击
 10,1,拍擊
 10,2,空手劈
 10,3,連環巴掌
@@ -8445,6 +8778,36 @@ language_id,move_id,name
 10,794,流星突擊
 10,795,無極光束
 10,796,鐵蹄光線
+10,797,廣域戰力
+10,798,鐵滾輪
+10,799,鱗射
+10,800,流星光束
+10,801,臂貝武器
+10,802,薄霧炸裂
+10,803,青草滑梯
+10,804,電力上升
+10,805,大地波動
+10,806,爬擊
+10,807,妒火
+10,808,洩憤
+10,809,靈騷
+10,810,腐蝕氣體
+10,811,指導
+10,812,快速折返
+10,813,三旋擊
+10,814,雙翼
+10,815,熱沙大地
+10,816,叢林治療
+10,817,暗冥強擊
+10,818,水流連打
+10,819,雷電囚籠
+10,820,巨龍威能
+10,821,冰冷視線
+10,822,怒火中燒
+10,823,雷鳴蹴擊
+10,824,雪矛
+10,825,星碎
+10,826,詭異咒語
 10,10001,覺醒力量 (格鬥)
 10,10002,覺醒力量 (飛行)
 10,10003,覺醒力量 (毒)
@@ -8487,3 +8850,10 @@ language_id,move_id,name
 10,10058,超極巨液金熔擊
 10,10059,超極巨激漩泡渦
 10,10060,超極巨百火焚野
+10,10061,超極巨灰飛鞭滅
+10,10062,超極巨水砲轟滅
+10,10063,超極巨狂擂亂打
+10,10064,超極巨破陣火球
+10,10065,超極巨狙擊神射
+10,10066,超極巨奪命一擊
+10,10067,超極巨流水連擊

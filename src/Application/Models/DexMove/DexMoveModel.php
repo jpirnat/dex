@@ -242,6 +242,11 @@ final class DexMoveModel
 			// TODO: get this type identifier from somewhere else.
 			$this->damageDealt['water'] = 2;
 		}
+
+		if ($moveId->value() === MoveId::THOUSAND_ARROWS) {
+			// TODO: get this type identifier from somewhere else.
+			$this->damageDealt['flying'] = 1;
+		}
 	}
 
 

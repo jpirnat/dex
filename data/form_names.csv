@@ -49,6 +49,7 @@ language,form_id,name
 1,877,まんぷくもよう
 1,888,れきせんのゆうしゃ
 1,889,れきせんのゆうしゃ
+1,892,いちげきのかた
 1,10001,たいようのすがた
 1,10002,あまみずのすがた
 1,10003,ゆきぐものすがた
@@ -227,6 +228,14 @@ language,form_id,name
 1,10193,たてのおう
 1,10194,ムゲンダイマックス
 1,10195,ガラルのすがた
+1,10196,ガラルのすがた
+1,10197,れんげきのかた
+1,10198,ガラルのすがた
+1,10199,ガラルのすがた
+1,10200,ガラルのすがた
+1,10201,ガラルのすがた
+1,10202,はくばじょうのすがた
+1,10203,こくばじょうのすがた
 1,20001,あるすがた
 1,20002,あるすがた
 1,20003,あるすがた
@@ -423,6 +432,10 @@ language,form_id,name
 1,20197,キョダイマックス
 1,20198,キョダイマックス
 1,20199,キョダイマックス
+1,20205,キョダイマックス
+1,20206,とうちゃん
+1,20207,ワールドキャップ
+1,20208,キョダイマックス
 2,201,One form
 2,351,Normal
 2,382,Kyogre
@@ -473,6 +486,7 @@ language,form_id,name
 2,877,Full Belly Mode
 2,888,Hero of Many Battles
 2,889,Hero of Many Battles
+2,892,Single Strike Style
 2,10001,Sunny Form
 2,10002,Rainy Form
 2,10003,Snowy Form
@@ -651,6 +665,14 @@ language,form_id,name
 2,10193,Crowned Shield
 2,10194,Eternamax
 2,10195,Galarian Form
+2,10196,Galarian Form
+2,10197,Rapid Strike Style
+2,10198,Galarian Form
+2,10199,Galarian Form
+2,10200,Galarian Form
+2,10201,Galarian Form
+2,10202,Ice Rider
+2,10203,Shadow Rider
 2,20001,One form
 2,20002,One form
 2,20003,One form
@@ -847,6 +869,10 @@ language,form_id,name
 2,20197,Gigantamax
 2,20198,Gigantamax
 2,20199,Gigantamax
+2,20205,Gigantamax
+2,20206,Dada
+2,20207,World Cap
+2,20208,Gigantamax
 3,201,Forme Unique
 3,351,Forme de Morphéo
 3,382,Kyogre
@@ -897,6 +923,7 @@ language,form_id,name
 3,877,Mode Rassasié
 3,888,Héros Aguerri
 3,889,Héros Aguerri
+3,892,Style Poing Final
 3,10001,Forme Solaire
 3,10002,Forme Eau de Pluie
 3,10003,Forme Blizzard
@@ -1075,6 +1102,14 @@ language,form_id,name
 3,10193,Bouclier Suprême
 3,10194,Infinimax
 3,10195,Forme de Galar
+3,10196,Forme de Galar
+3,10197,Style Mille Poings
+3,10198,Forme de Galar
+3,10199,Forme de Galar
+3,10200,Forme de Galar
+3,10201,Forme de Galar
+3,10202,Cavalier du Froid
+3,10203,Cavalier d’Effroi
 3,20001,Forme Unique
 3,20002,Forme Unique
 3,20003,Forme Unique
@@ -1271,6 +1306,10 @@ language,form_id,name
 3,20197,Gigamax
 3,20198,Gigamax
 3,20199,Gigamax
+3,20205,Gigamax
+3,20206,Papa
+3,20207,Casquette Monde
+3,20208,Gigamax
 4,201,Eine Form
 4,351,Formeo
 4,382,Kyogre
@@ -1321,6 +1360,7 @@ language,form_id,name
 4,877,Pappsattmuster
 4,888,Heldenhafter Krieger
 4,889,Heldenhafter Krieger
+4,892,Fokussierter Stil
 4,10001,Sonnenform
 4,10002,Regenform
 4,10003,Schneeform
@@ -1499,6 +1539,14 @@ language,form_id,name
 4,10193,König des Schildes
 4,10194,Unendynamax
 4,10195,Galar-Form
+4,10196,Galar-Form
+4,10197,Fließender Stil
+4,10198,Galar-Form
+4,10199,Galar-Form
+4,10200,Galar-Form
+4,10201,Galar-Form
+4,10202,Schimmelreiter
+4,10203,Rappenreiter
 4,20001,Eine Form
 4,20002,Eine Form
 4,20003,Eine Form
@@ -1695,6 +1743,10 @@ language,form_id,name
 4,20197,Gigadynamax
 4,20198,Gigadynamax
 4,20199,Gigadynamax
+4,20205,Gigadynamax
+4,20206,Papa
+4,20207,Weltreise-Kappe
+4,20208,Gigadynamax
 5,201,Forma Vaga
 5,351,Forma Castform
 5,386,Forma Normale
@@ -1743,6 +1795,7 @@ language,form_id,name
 5,877,Motivo Panciapiena
 5,888,Eroe di Mille Lotte
 5,889,Eroe di Mille Lotte
+5,892,Stile Singolcolpo
 5,10001,Forma Sole
 5,10002,Forma Pioggia
 5,10003,Forma Nuvola di Neve
@@ -1921,6 +1974,14 @@ language,form_id,name
 5,10193,Re degli Scudi
 5,10194,Dynamax Infinito
 5,10195,Forma di Galar
+5,10196,Forma di Galar
+5,10197,Stile Pluricolpo
+5,10198,Forma di Galar
+5,10199,Forma di Galar
+5,10200,Forma di Galar
+5,10201,Forma di Galar
+5,10202,Cavaliere Glaciale
+5,10203,Cavaliere Spettrale
 5,20001,Forma Vaga
 5,20002,Forma Vaga
 5,20003,Forma Vaga
@@ -2117,6 +2178,10 @@ language,form_id,name
 5,20197,Gigamax
 5,20198,Gigamax
 5,20199,Gigamax
+5,20205,Gigamax
+5,20206,Papà
+5,20207,Berretto Giramondo
+5,20208,Gigamax
 6,201,Una forma
 6,351,Forma de Castform
 6,382,Kyogre
@@ -2167,6 +2232,7 @@ language,form_id,name
 6,877,Forma Saciada
 6,888,Guerrero Avezado
 6,889,Guerrero Avezado
+6,892,Estilo Brusco
 6,10001,Forma Sol
 6,10002,Forma Lluvia
 6,10003,Forma Nieve
@@ -2345,6 +2411,14 @@ language,form_id,name
 6,10193,Escudo Supremo
 6,10194,Dinamax Infinito
 6,10195,Forma de Galar
+6,10196,Forma de Galar
+6,10197,Estilo Fluido
+6,10198,Forma de Galar
+6,10199,Forma de Galar
+6,10200,Forma de Galar
+6,10201,Forma de Galar
+6,10202,Jinete Glacial
+6,10203,Jinete Espectral
 6,20001,Una forma
 6,20002,Una forma
 6,20003,Una forma
@@ -2541,6 +2615,10 @@ language,form_id,name
 6,20197,Gigamax
 6,20198,Gigamax
 6,20199,Gigamax
+6,20205,Gigamax
+6,20206,Papá
+6,20207,Gorra Trotamundos
+6,20208,Gigamax
 7,201,형태별 모습
 7,351,캐스퐁의 모습
 7,382,가이오가의 모습
@@ -2591,6 +2669,7 @@ language,form_id,name
 7,877,배부른 모양
 7,888,역전의 용사
 7,889,역전의 용사
+7,892,일격의 태세
 7,10001,태양의 모습
 7,10002,빗방울의 모습
 7,10003,설운의 모습
@@ -2769,6 +2848,14 @@ language,form_id,name
 7,10193,방패왕
 7,10194,무한다이맥스
 7,10195,가라르의 모습
+7,10196,가라르의 모습
+7,10197,연격의 태세
+7,10198,가라르의 모습
+7,10199,가라르의 모습
+7,10200,가라르의 모습
+7,10201,가라르의 모습
+7,10202,백마 탄 모습
+7,10203,흑마 탄 모습
 7,20001,형태별 모습
 7,20002,형태별 모습
 7,20003,형태별 모습
@@ -2965,6 +3052,10 @@ language,form_id,name
 7,20197,거다이맥스
 7,20198,거다이맥스
 7,20199,거다이맥스
+7,20205,거다이맥스
+7,20206,아빠
+7,20207,월드캡
+7,20208,거다이맥스
 8,201,あるすがた
 8,351,ポワルンのすがた
 8,382,カイオーガのすがた
@@ -3015,6 +3106,7 @@ language,form_id,name
 8,877,まんぷくもよう
 8,888,れきせんのゆうしゃ
 8,889,れきせんのゆうしゃ
+8,892,いちげきのかた
 8,10001,たいようのすがた
 8,10002,あまみずのすがた
 8,10003,ゆきぐものすがた
@@ -3193,6 +3285,14 @@ language,form_id,name
 8,10193,たてのおう
 8,10194,ムゲンダイマックス
 8,10195,ガラルのすがた
+8,10196,ガラルのすがた
+8,10197,れんげきのかた
+8,10198,ガラルのすがた
+8,10199,ガラルのすがた
+8,10200,ガラルのすがた
+8,10201,ガラルのすがた
+8,10202,はくばじょうのすがた
+8,10203,こくばじょうのすがた
 8,20001,あるすがた
 8,20002,あるすがた
 8,20003,あるすがた
@@ -3389,6 +3489,10 @@ language,form_id,name
 8,20197,キョダイマックス
 8,20198,キョダイマックス
 8,20199,キョダイマックス
+8,20205,キョダイマックス
+8,20206,とうちゃん
+8,20207,ワールドキャップ
+8,20208,キョダイマックス
 9,201,某种样子
 9,351,飘浮泡泡的样子
 9,382,盖欧卡的样子
@@ -3439,6 +3543,7 @@ language,form_id,name
 9,877,满腹花纹
 9,888,百战勇者
 9,889,百战勇者
+9,892,一击流
 9,10001,太阳的样子
 9,10002,雨水的样子
 9,10003,雪云的样子
@@ -3611,6 +3716,14 @@ language,form_id,name
 9,10193,盾之王
 9,10194,无极巨化
 9,10195,伽勒尔的样子
+9,10196,伽勒尔的样子
+9,10197,连击流
+9,10198,伽勒尔的样子
+9,10199,伽勒尔的样子
+9,10200,伽勒尔的样子
+9,10201,伽勒尔的样子
+9,10202,骑白马的样子
+9,10203,骑黑马的样子
 9,20001,某种样子
 9,20002,某种样子
 9,20003,某种样子
@@ -3807,6 +3920,10 @@ language,form_id,name
 9,20197,超极巨化
 9,20198,超极巨化
 9,20199,超极巨化
+9,20205,超极巨化
+9,20206,阿爸
+9,20207,世界帽子
+9,20208,超极巨化
 10,201,某種樣子
 10,351,飄浮泡泡的樣子
 10,382,蓋歐卡的樣子
@@ -3857,6 +3974,7 @@ language,form_id,name
 10,877,滿腹花紋
 10,888,百戰勇者
 10,889,百戰勇者
+10,892,一擊流
 10,10001,太陽的樣子
 10,10002,雨水的樣子
 10,10003,雪雲的樣子
@@ -4029,6 +4147,14 @@ language,form_id,name
 10,10193,盾之王
 10,10194,無極巨化
 10,10195,伽勒爾的樣子
+10,10196,伽勒爾的樣子
+10,10197,連擊流
+10,10198,伽勒爾的樣子
+10,10199,伽勒爾的樣子
+10,10200,伽勒爾的樣子
+10,10201,伽勒爾的樣子
+10,10202,騎白馬的樣子
+10,10203,騎黑馬的樣子
 10,20001,某種樣子
 10,20002,某種樣子
 10,20003,某種樣子
@@ -4225,3 +4351,7 @@ language,form_id,name
 10,20197,超極巨化
 10,20198,超極巨化
 10,20199,超極巨化
+10,20205,超極巨化
+10,20206,阿爸
+10,20207,世界帽子
+10,20208,超極巨化

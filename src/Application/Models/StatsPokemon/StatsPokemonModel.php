@@ -174,6 +174,7 @@ final class StatsPokemonModel
 			$this->format->getId(),
 			$rating,
 			$this->pokemon->getId(),
+			$this->format->getGenerationId(),
 			$languageId
 		);
 

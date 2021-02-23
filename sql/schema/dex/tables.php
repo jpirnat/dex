@@ -46,6 +46,7 @@ return [
 	'item_descriptions',
 	'item_names',
 	'item_pockets',
+	'item_icons',
 	'version_group_items',
 
 	// Types
@@ -86,6 +87,7 @@ return [
 		'pokemon_moves_5',
 		'pokemon_moves_6',
 		'pokemon_moves_7',
+		'pokemon_moves_8',
 	],
 	'exclusive_z_moves',
 
@@ -133,6 +135,7 @@ return [
 		'pokedex_entries_5',
 		'pokedex_entries_6',
 		'pokedex_entries_7',
+		'pokedex_entries_8',
 	],
 
 	// Shapes

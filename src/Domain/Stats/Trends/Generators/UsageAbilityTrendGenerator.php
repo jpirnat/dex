@@ -67,11 +67,13 @@ final class UsageAbilityTrendGenerator
 			$pokemonId,
 			$abilityId
 		);
+		$months = $this->statsChartQueries->getMonthsWithData($format->getId(), $rating);
 
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
 			$format->getId(),
 			$usageDatas,
+			$months,
 			0
 		);
 

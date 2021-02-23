@@ -97,7 +97,7 @@ Vue.component('dex-move-method-pokemons', {
 			</tr>
 			<tr v-for="pokemon in visiblePokemons" :key="pokemon.identifier">
 				<template v-for="vg in versionGroups" :key="vg.identifier">
-					<template v-if="pokemon.vgData[vg.identifier]">
+					<template v-if="pokemon.vgData[vg.identifier] !== undefined">
 						<template v-if="method.identifier === 'level-up'">
 							<td class="dex-table__pokemon-move-data dex-table--number"
 								v-tooltip="pokemonMoveTooltip(pokemon, move, vg, method)"
