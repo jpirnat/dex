@@ -11,8 +11,8 @@ use Psr\Http\Message\ServerRequestInterface;
 final class StatsUsageController
 {
 	public function __construct(
-		BaseController $baseController,
-		StatsUsageModel $statsUsageModel,
+		private BaseController $baseController,
+		private StatsUsageModel $statsUsageModel,
 	) {}
 
 	/**

@@ -39,7 +39,7 @@ final class DatabaseMovesetRatedItemRepository implements MovesetRatedItemReposi
 		$stmt->bindValue(':percent', $movesetRatedItem->getPercent());
 		try {
 			$stmt->execute();
-		} catch (PDOException $e) {
+		} catch (PDOException) {
 			// This record already exists.
 			// Bug fix for https://www.smogon.com/stats/2019-11
 			// in which Leek and Stick both appear, during the transition to gen 8.

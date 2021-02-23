@@ -13,6 +13,7 @@ final class DexTypesController
 		private BaseController $baseController,
 		private DexTypesModel $dexTypesModel,
 	) {
+	}
 
 	/**
 	 * Show the dex types page.

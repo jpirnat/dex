@@ -62,7 +62,7 @@ final class LanguageMiddleware implements MiddlewareInterface
 				$languageId = new LanguageId((int) $languageId);
 				$language = $this->languageRepository->getById($languageId);
 				$languageId = $language->getId()->value();
-			} catch (LanguageNotFoundException $e) {
+			} catch (LanguageNotFoundException) {
 				unset($languageId);
 				$setNewLanguage = false;
 			}

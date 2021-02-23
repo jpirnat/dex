@@ -29,7 +29,7 @@ final class UsageFileExtractor
 			$matchResult = Regex::match($pattern, $line);
 
 			return (int) $matchResult->group(1);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidTotalBattlesLineException(
 				'Total battles line is invalid: ' . $line
 			);
@@ -53,7 +53,7 @@ final class UsageFileExtractor
 			$matchResult = Regex::match($pattern, $line);
 
 			return (float) $matchResult->group(1);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidAverageWeightPerTeamLineException(
 				'Average weight per team line is invalid: ' . $line
 			);
@@ -72,7 +72,7 @@ final class UsageFileExtractor
 		try {
 			$this->extractUsage($line);
 			return true;
-		} catch (InvalidUsageLineException $e) {
+		} catch (InvalidUsageLineException) {
 			// It must not be a usage data line.
 		}
 
@@ -113,7 +113,7 @@ final class UsageFileExtractor
 				(int) $matchResult->group(6),
 				(float) $matchResult->group(7)
 			);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidUsageLineException(
 				'Usage line is invalid: ' . $line
 			);

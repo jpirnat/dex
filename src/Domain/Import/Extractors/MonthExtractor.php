@@ -33,7 +33,7 @@ final class MonthExtractor
 				1
 			);
 			return $month;
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidFilenameException(
 				'Filename is invalid for year-month: ' . $filename
 			);

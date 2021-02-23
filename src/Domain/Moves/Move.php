@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 final class Move
 {
 	public function __construct(
-		private MoveId $moveId,
+		private MoveId $id,
 		private string $identifier,
 		private VersionGroupId $introducedInVersionGroupId,
 		private bool $isZMove,

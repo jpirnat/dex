@@ -34,7 +34,7 @@ final class MovesetFileExtractor
 
 		try {
 			$matchResult = Regex::match($pattern, $line);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			return false;
 		}
 
@@ -58,7 +58,7 @@ final class MovesetFileExtractor
 			$matchResult = Regex::match($pattern, $line);
 
 			return $matchResult->group(1);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidPokemonNameLineException(
 				'Pokémon name line is invalid: ' . $line
 			);
@@ -82,7 +82,7 @@ final class MovesetFileExtractor
 			$matchResult = Regex::match($pattern, $line);
 
 			return (int) $matchResult->group(1);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidRawCountLineException(
 				'Raw count line is invalid: ' . $line
 			);
@@ -106,7 +106,7 @@ final class MovesetFileExtractor
 			$matchResult = Regex::match($pattern, $line);
 
 			return (float) $matchResult->group(1);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidAverageWeightLineException(
 				'Average weight line is invalid: ' . $line
 			);
@@ -125,7 +125,7 @@ final class MovesetFileExtractor
 		try {
 			$this->extractViabilityCeiling($line);
 			return true;
-		} catch (InvalidViabilityCeilingLineException $e) {
+		} catch (InvalidViabilityCeilingLineException) {
 			// It must not be a viability ceiling.
 		}
 
@@ -149,7 +149,7 @@ final class MovesetFileExtractor
 			$matchResult = Regex::match($pattern, $line);
 
 			return (int) $matchResult->group(1);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidViabilityCeilingLineException(
 				'Viability Ceiling line is invalid: ' . $line
 			);
@@ -168,7 +168,7 @@ final class MovesetFileExtractor
 		try {
 			$this->extractNamePercent($line);
 			return true;
-		} catch (InvalidNamePercentLineException $e) {
+		} catch (InvalidNamePercentLineException) {
 			// It must not be a name and percent.
 		}
 
@@ -195,7 +195,7 @@ final class MovesetFileExtractor
 				$matchResult->group(1),
 				(float) $matchResult->group(2)
 			);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidNamePercentLineException(
 				'NamePercent line is invalid: ' . $line
 			);
@@ -237,7 +237,7 @@ final class MovesetFileExtractor
 				(int) $matchResult->group(7),
 				(float) $matchResult->group(8)
 			);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidSpreadLineException(
 				'Spread line is invalid: ' . $line
 			);
@@ -256,7 +256,7 @@ final class MovesetFileExtractor
 		try {
 			$this->extractCounter1($line1);
 			return true;
-		} catch (InvalidCounterLine1Exception $e) {
+		} catch (InvalidCounterLine1Exception) {
 			// It must not be a counter line 1.
 		}
 
@@ -316,7 +316,7 @@ final class MovesetFileExtractor
 				(float) $matchResult1->group(3),
 				(float) $matchResult1->group(4)
 			);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidCounterLine1Exception(
 				'Counter line 1 is invalid: ' . $line1
 			);
@@ -346,7 +346,7 @@ final class MovesetFileExtractor
 				(float) $matchResult2->group(1),
 				(float) $matchResult2->group(2)
 			);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidCounterLine2Exception(
 				'Counter line 2 is invalid: ' . $line2
 			);
@@ -367,7 +367,7 @@ final class MovesetFileExtractor
 			if ($namePercent->showdownName() === 'Other') {
 				return true;
 			}
-		} catch (InvalidNamePercentLineException $e) {
+		} catch (InvalidNamePercentLineException) {
 			// It must not be a NamePercent.
 		}
 

@@ -28,7 +28,7 @@ final class LeadsFileExtractor
 			$matchResult = Regex::match($pattern, $line);
 
 			return (int) $matchResult->group(1);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidTotalLeadsLineException(
 				'Total leads line is invalid: ' . $line
 			);
@@ -47,7 +47,7 @@ final class LeadsFileExtractor
 		try {
 			$this->extractLeadUsage($line);
 			return true;
-		} catch (InvalidLeadUsageLineException $e) {
+		} catch (InvalidLeadUsageLineException) {
 			// It must not be a lead usage data line.
 		}
 
@@ -84,7 +84,7 @@ final class LeadsFileExtractor
 				(int) $matchResult->group(4),
 				(float) $matchResult->group(5)
 			);
-		} catch (RegexFailed $e) {
+		} catch (RegexFailed) {
 			throw new InvalidLeadUsageLineException(
 				'Lead usage line is invalid: ' . $line
 			);

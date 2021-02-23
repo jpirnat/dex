@@ -45,7 +45,7 @@ final class HtmlErrorMiddleware implements MiddlewareInterface
 		// Instead, redirect them to our error page.
 		try {
 			return $handler->handle($request);
-		} catch (Throwable $e) {
+		} catch (Throwable) {
 			return new RedirectResponse('/error');
 		}
 	}

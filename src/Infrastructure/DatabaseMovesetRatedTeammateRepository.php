@@ -39,7 +39,7 @@ final class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeamma
 		$stmt->bindValue(':percent', $movesetRatedTeammate->getPercent());
 		try {
 			$stmt->execute();
-		} catch (PDOException $e) {
+		} catch (PDOException) {
 			// This record already exists.
 			// Bug fix for http://www.smogon.com/stats/2014-11/moveset/anythinggoes-0.txt
 			// in which Inkay has teammate Abra twice.

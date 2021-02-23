@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Versions\GenerationId;
 final class Format
 {
 	public function __construct(
-		private FormatId $formatId,
+		private FormatId $id,
 		private string $identifier,
 		private string $name,
 		private GenerationId $generationId,
