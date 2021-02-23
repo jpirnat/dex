@@ -80,8 +80,8 @@ final class DatabaseStatsAbilityPokemonRepository implements StatsAbilityPokemon
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `usage_percent` DESC'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':prev_month', $prevMonth, PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
+		$stmt->bindValue(':prev_month', $prevMonth);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);

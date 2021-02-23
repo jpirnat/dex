@@ -36,7 +36,7 @@ final class DatabaseUsageRatedQueries implements UsageRatedQueriesInterface
 			FROM `usage_rated`
 			WHERE `month` = :month'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->execute();
 
 		$formatRatings = [];

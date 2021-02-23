@@ -35,7 +35,7 @@ final class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbility
 		);
 		$stmt->bindValue(':urp_id', $movesetRatedAbility->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $movesetRatedAbility->getAbilityId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':percent', $movesetRatedAbility->getPercent(), PDO::PARAM_STR);
+		$stmt->bindValue(':percent', $movesetRatedAbility->getPercent());
 		$stmt->execute();
 	}
 }

@@ -49,8 +49,8 @@ final class DatabaseUsageAveragedPokemonRepository implements UsageAveragedPokem
 		);
 		$stmt->bindValue(':months1', $months, PDO::PARAM_INT);
 		$stmt->bindValue(':months2', $months, PDO::PARAM_INT);
-		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':end', $end->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':start', $start->format('Y-m-01'));
+		$stmt->bindValue(':end', $end->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 

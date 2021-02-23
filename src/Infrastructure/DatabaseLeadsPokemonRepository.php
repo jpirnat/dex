@@ -32,7 +32,7 @@ final class DatabaseLeadsPokemonRepository implements LeadsPokemonRepositoryInte
 			WHERE `month` = :month
 				AND `format_id` = :format_id'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
@@ -63,11 +63,11 @@ final class DatabaseLeadsPokemonRepository implements LeadsPokemonRepositoryInte
 				:raw_percent
 			)'
 		);
-		$stmt->bindValue(':month', $leadsPokemon->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $leadsPokemon->getMonth()->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $leadsPokemon->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $leadsPokemon->getPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':raw', $leadsPokemon->getRaw(), PDO::PARAM_INT);
-		$stmt->bindValue(':raw_percent', $leadsPokemon->getRawPercent(), PDO::PARAM_STR);
+		$stmt->bindValue(':raw_percent', $leadsPokemon->getRawPercent());
 		$stmt->execute();
 	}
 }

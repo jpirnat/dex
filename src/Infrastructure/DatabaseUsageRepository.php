@@ -32,7 +32,7 @@ final class DatabaseUsageRepository implements UsageRepositoryInterface
 			WHERE `month` = :month
 				AND `format_id` = :format_id'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
@@ -59,7 +59,7 @@ final class DatabaseUsageRepository implements UsageRepositoryInterface
 				:total_battles
 			)'
 		);
-		$stmt->bindValue(':month', $usage->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $usage->getMonth()->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $usage->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':total_battles', $usage->getTotalBattles(), PDO::PARAM_INT);
 		$stmt->execute();

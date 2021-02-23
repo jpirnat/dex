@@ -45,7 +45,7 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 				AND `urp`.`rating` = :rating
 				AND `urp`.`pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
@@ -76,7 +76,7 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
@@ -114,8 +114,8 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 				AND `urp`.`rating` = :rating
 				AND `urp`.`pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':end', $end->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':start', $start->format('Y-m-01'));
+		$stmt->bindValue(':end', $end->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
@@ -152,8 +152,8 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 				AND `urp`.`rating` = :rating
 			GROUP BY `pokemon_id`'
 		);
-		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':end', $end->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':start', $start->format('Y-m-01'));
+		$stmt->bindValue(':end', $end->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
@@ -179,7 +179,7 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 			)'
 		);
 		$stmt->bindValue(':urp_id', $movesetRatedPokemon->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':average_weight', $movesetRatedPokemon->getAverageWeight(), PDO::PARAM_STR);
+		$stmt->bindValue(':average_weight', $movesetRatedPokemon->getAverageWeight());
 		$stmt->execute();
 	}
 
@@ -212,7 +212,7 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 				AND `urp`.`pokemon_id` = :pokemon_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);

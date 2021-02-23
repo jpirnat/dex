@@ -36,7 +36,7 @@ final class DatabaseMovesetRatedItemRepository implements MovesetRatedItemReposi
 		);
 		$stmt->bindValue(':urp_id', $movesetRatedItem->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':item_id', $movesetRatedItem->getItemId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':percent', $movesetRatedItem->getPercent(), PDO::PARAM_STR);
+		$stmt->bindValue(':percent', $movesetRatedItem->getPercent());
 		try {
 			$stmt->execute();
 		} catch (PDOException $e) {

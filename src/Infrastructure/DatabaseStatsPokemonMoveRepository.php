@@ -69,8 +69,8 @@ final class DatabaseStatsPokemonMoveRepository implements StatsPokemonMoveReposi
 				AND `in`.`language_id` = :language_id
 			ORDER BY `mrm`.`percent` DESC'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':prev_month', $prevMonth, PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
+		$stmt->bindValue(':prev_month', $prevMonth);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);

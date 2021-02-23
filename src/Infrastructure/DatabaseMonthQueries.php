@@ -31,7 +31,7 @@ final class DatabaseMonthQueries implements MonthQueriesInterface
 			ORDER BY `month` DESC
 			LIMIT 1'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->execute();
 		$prevMonth = $stmt->fetchColumn();
 
@@ -59,7 +59,7 @@ final class DatabaseMonthQueries implements MonthQueriesInterface
 			ORDER BY `month`
 			LIMIT 1'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->execute();
 		$nextMonth = $stmt->fetchColumn();
 
@@ -89,7 +89,7 @@ final class DatabaseMonthQueries implements MonthQueriesInterface
 			ORDER BY `month` DESC
 			LIMIT 1'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$prevMonth = $stmt->fetchColumn();
@@ -120,7 +120,7 @@ final class DatabaseMonthQueries implements MonthQueriesInterface
 			ORDER BY `month`
 			LIMIT 1'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$nextMonth = $stmt->fetchColumn();

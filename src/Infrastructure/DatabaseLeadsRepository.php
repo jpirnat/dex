@@ -32,7 +32,7 @@ final class DatabaseLeadsRepository implements LeadsRepositoryInterface
 			WHERE `month` = :month
 				AND `format_id` = :format_id'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
@@ -59,7 +59,7 @@ final class DatabaseLeadsRepository implements LeadsRepositoryInterface
 				:total_leads
 			)'
 		);
-		$stmt->bindValue(':month', $leads->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $leads->getMonth()->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $leads->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':total_leads', $leads->getTotalLeads(), PDO::PARAM_INT);
 		$stmt->execute();

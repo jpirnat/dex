@@ -76,7 +76,7 @@ final class DatabaseMoveRepository implements MoveRepositoryInterface
 			WHERE `identifier` = :identifier
 			LIMIT 1'
 		);
-		$stmt->bindValue(':identifier', $identifier, PDO::PARAM_STR);
+		$stmt->bindValue(':identifier', $identifier);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 

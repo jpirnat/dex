@@ -46,8 +46,8 @@ final class DatabaseLeadsAveragedPokemonRepository implements LeadsAveragedPokem
 			GROUP BY `pokemon_id`'
 		);
 		$stmt->bindValue(':months', $months, PDO::PARAM_INT);
-		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':end', $end->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':start', $start->format('Y-m-01'));
+		$stmt->bindValue(':end', $end->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 

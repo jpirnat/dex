@@ -56,7 +56,7 @@ final class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRe
 		$stmt->bindValue(':spa', $evSpread->get(new StatId(StatId::SPECIAL_ATTACK))->getValue(), PDO::PARAM_INT);
 		$stmt->bindValue(':spd', $evSpread->get(new StatId(StatId::SPECIAL_DEFENSE))->getValue(), PDO::PARAM_INT);
 		$stmt->bindValue(':spe', $evSpread->get(new StatId(StatId::SPEED))->getValue(), PDO::PARAM_INT);
-		$stmt->bindValue(':percent', $movesetRatedSpread->getPercent(), PDO::PARAM_STR);
+		$stmt->bindValue(':percent', $movesetRatedSpread->getPercent());
 		$stmt->execute();
 	}
 }

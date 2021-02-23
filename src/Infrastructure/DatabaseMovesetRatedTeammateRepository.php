@@ -36,7 +36,7 @@ final class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeamma
 		);
 		$stmt->bindValue(':urp_id', $movesetRatedTeammate->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':teammate_id', $movesetRatedTeammate->getTeammateId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':percent', $movesetRatedTeammate->getPercent(), PDO::PARAM_STR);
+		$stmt->bindValue(':percent', $movesetRatedTeammate->getPercent());
 		try {
 			$stmt->execute();
 		} catch (PDOException $e) {

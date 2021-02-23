@@ -7,7 +7,7 @@ time.
 ## Getting Started
 
 Porydex requires the following to run:
-* PHP 7.4+
+* PHP 8.0+
     * extension `intl`
 * MySQL 5.6+
 

@@ -33,7 +33,7 @@ final class DatabaseMovesetPokemonRepository implements MovesetPokemonRepository
 			WHERE `month` = :month
 				AND `format_id` = :format_id'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
@@ -64,7 +64,7 @@ final class DatabaseMovesetPokemonRepository implements MovesetPokemonRepository
 				:viability_ceiling
 			)'
 		);
-		$stmt->bindValue(':month', $movesetPokemon->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $movesetPokemon->getMonth()->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $movesetPokemon->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $movesetPokemon->getPokemonId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':raw_count', $movesetPokemon->getRawCount(), PDO::PARAM_INT);
@@ -96,7 +96,7 @@ final class DatabaseMovesetPokemonRepository implements MovesetPokemonRepository
 				AND `pokemon_id` = :pokemon_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();

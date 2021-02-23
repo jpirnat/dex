@@ -34,7 +34,7 @@ final class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterfac
 				AND `format_id` = :format_id
 				AND `rating` = :rating'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
@@ -64,10 +64,10 @@ final class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterfac
 				:average_weight_per_team
 			)'
 		);
-		$stmt->bindValue(':month', $usageRated->getMonth()->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $usageRated->getMonth()->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $usageRated->getFormatId()->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $usageRated->getRating(), PDO::PARAM_INT);
-		$stmt->bindValue(':average_weight_per_team', $usageRated->getAverageWeightPerTeam(), PDO::PARAM_STR);
+		$stmt->bindValue(':average_weight_per_team', $usageRated->getAverageWeightPerTeam());
 		$stmt->execute();
 	}
 }

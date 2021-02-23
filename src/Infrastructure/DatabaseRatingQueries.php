@@ -31,7 +31,7 @@ final class DatabaseRatingQueries implements RatingQueriesInterface
 			WHERE `month` = :month
 				AND `format_id` = :format_id'
 		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_COLUMN);
@@ -56,8 +56,8 @@ final class DatabaseRatingQueries implements RatingQueriesInterface
 			WHERE `month` BETWEEN :start AND :end
 				AND `format_id` = :format_id'
 		);
-		$stmt->bindValue(':start', $start->format('Y-m-01'), PDO::PARAM_STR);
-		$stmt->bindValue(':end', $end->format('Y-m-01'), PDO::PARAM_STR);
+		$stmt->bindValue(':start', $start->format('Y-m-01'));
+		$stmt->bindValue(':end', $end->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_COLUMN);

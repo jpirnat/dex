@@ -47,7 +47,7 @@ final class DatabaseFormatRepository implements FormatRepositoryInterface
 				AND `fn`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_STR);
+		$stmt->bindValue(':format_id', $formatId->value());
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -103,7 +103,7 @@ final class DatabaseFormatRepository implements FormatRepositoryInterface
 				AND `fn`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':identifier', $identifier, PDO::PARAM_STR);
+		$stmt->bindValue(':identifier', $identifier);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
