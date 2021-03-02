@@ -847,7 +847,7 @@ month,name,format_id,reason
 2016-09-01,followtheleader,\N,
 2016-09-01,gen1randombattle,\N,random
 2016-09-01,gen2uu,6,too few battles: 13
-2016-09-01,gen3nu,\N,
+2016-09-01,gen3nu,\N,not official
 2016-09-01,gen4lc,13,too few battles: 48
 2016-09-01,gen4uu,12,too few battles: 84
 2016-09-01,gen5doublesou,20,too few battles: 76
@@ -879,7 +879,7 @@ month,name,format_id,reason
 2016-10-01,cap,\N,cap
 2016-10-01,challengecup1v1,\N,
 2016-10-01,gen1randombattle,\N,random
-2016-10-01,gen3nu,\N,
+2016-10-01,gen3nu,\N,not official
 2016-10-01,gen4lc,13,too few battles: 10
 2016-10-01,gen4nu,\N,not official
 2016-10-01,gen4uu,12,too few battles: 66
@@ -2420,3 +2420,31 @@ month,name,format_id,reason
 2021-01-01,gen8tiershift,\N,
 2021-01-01,gen8viabilities,\N,
 2021-01-01,gen8zu,\N,not official
+2021-02-01,gen2uu,6,too few battles: 2
+2021-02-01,gen3nu,\N,not official
+2021-02-01,gen4ubers,\N,too few battles: 70
+2021-02-01,gen5lc,19,too few battles: 0
+2021-02-01,gen6almostanyability,\N,
+2021-02-01,gen6purehackmons,\N,
+2021-02-01,gen7balancedhackmons,\N,
+2021-02-01,gen81v1,\N,
+2021-02-01,gen82v2doubles,\N,
+2021-02-01,gen8almostanyability,\N,
+2021-02-01,gen8balancedhackmons,\N,
+2021-02-01,gen8battlestadiumsingles,\N,
+2021-02-01,gen8camomons,\N,
+2021-02-01,gen8cap,\N,cap
+2021-02-01,gen8cap1v1,\N,cap
+2021-02-01,gen8inheritance,\N,
+2021-02-01,gen8megasforall,\N,
+2021-02-01,gen8metronomebattle,\N,
+2021-02-01,gen8mixandmega,\N,
+2021-02-01,gen8nationaldexmonotype,\N,not official
+2021-02-01,gen8nationaldexuu,\N,not official
+2021-02-01,gen8natureswap,\N,
+2021-02-01,gen8nfe,\N,
+2021-02-01,gen8oublitz,\N,
+2021-02-01,gen8sharedpower,\N,
+2021-02-01,gen8stabmons,\N,
+2021-02-01,gen8tiershift,\N,
+2021-02-01,gen8zu,\N,not official
