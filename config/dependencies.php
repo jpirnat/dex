@@ -10,11 +10,11 @@ $dice = new \Dice\Dice();
 // Databases
 
 // Main database connection.
-$host = getenv('DB_HOST');
-$port = getenv('DB_PORT');
-$name = getenv('DB_NAME');
-$user = getenv('DB_USER');
-$pass = getenv('DB_PASS');
+$host = $_SERVER['DB_HOST'];
+$port = $_SERVER['DB_PORT'];
+$name = $_SERVER['DB_NAME'];
+$user = $_SERVER['DB_USER'];
+$pass = $_SERVER['DB_PASS'];
 $rule = [
 	'constructParams' => [
 		"mysql:host=$host;port=$port;dbname=$name;charset=utf8mb4",
@@ -30,8 +30,8 @@ $rule = [
 $dice = $dice->addRule(PDO::class, $rule);
 
 // Database setup connection.
-$user = getenv('DB_SETUP_USER');
-$pass = getenv('DB_SETUP_PASS');
+$user = $_SERVER['DB_SETUP_USER'];
+$pass = $_SERVER['DB_SETUP_PASS'];
 $rule = [
 	'instanceOf' => PDO::class,
 	'constructParams' => [
@@ -77,7 +77,7 @@ $dice = $dice->addRule(\Jp\Dex\Presentation\RendererInterface::class, $rule);
 
 
 // Middleware
-$environment = getenv('ENVIRONMENT');
+$environment = $_SERVER['ENVIRONMENT'];
 $rule = [
 	'constructParams' => [
 		$environment,
