@@ -1,6 +1,7 @@
-/vendor/
 /.idea/
-.env
-/ignore
-/public/images
-/templates/cache
+/config/.env
+/config/cache/
+/ignore/
+/public/images/
+/templates/cache/
+/vendor/

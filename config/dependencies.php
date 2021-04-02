@@ -1,10 +1,14 @@
 <?php
-/** @noinspection PhpFullyQualifiedNameUsageInspection */
 declare(strict_types=1);
 
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-/** @var \Dice\Dice $dice */
-$dice = new \Dice\Dice();
+return function(ContainerConfigurator $configurator) {
+
+$services = $configurator->services()
+	->defaults()
+		->autowire()
+		->public();
 
 
 // Databases
@@ -15,26 +19,25 @@ $port = $_SERVER['DB_PORT'];
 $name = $_SERVER['DB_NAME'];
 $user = $_SERVER['DB_USER'];
 $pass = $_SERVER['DB_PASS'];
-$rule = [
-	'constructParams' => [
+$services->set(PDO::class)
+	->class(PDO::class)
+	->args([
 		"mysql:host=$host;port=$port;dbname=$name;charset=utf8mb4",
 		$user,
 		$pass,
 		[
 			PDO::ATTR_EMULATE_PREPARES => false,
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-		]
-	],
-	'shared' => true,
-];
-$dice = $dice->addRule(PDO::class, $rule);
+		],
+	])
+;
 
 // Database setup connection.
 $user = $_SERVER['DB_SETUP_USER'];
 $pass = $_SERVER['DB_SETUP_PASS'];
-$rule = [
-	'instanceOf' => PDO::class,
-	'constructParams' => [
+$services->set('$dbsetup')
+	->class(PDO::class)
+	->args([
 		"mysql:host=$host;port=$port;dbname=$name;charset=utf8mb4",
 		$user,
 		$pass,
@@ -42,346 +45,605 @@ $rule = [
 			PDO::ATTR_EMULATE_PREPARES => false,
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 			PDO::MYSQL_ATTR_LOCAL_INFILE => true,
-		]
-	],
-	'shared' => true,
-];
-$dice = $dice->addRule('$dbsetup', $rule);
+		],
+	])
+;
+
+
+// Import almost everything.
+$services->load('Jp\\Dex\\Application\\', '../src/Application')
+	->exclude([
+		'../src/Application/Models/BreedingChains/BreedingChainRecord.php',
+		'../src/Application/Models/DexMove/DexMovePokemon.php',
+		'../src/Application/Models/DexMove/DexMovePokemonMethod.php',
+		'../src/Application/Models/DexPokemon/DexPokemonMove.php',
+		'../src/Application/Models/DexPokemon/DexPokemonMoveMethod.php',
+		'../src/Application/Models/StatsAveragedLeads/LeadsData.php',
+		'../src/Application/Models/StatsAveragedPokemon/AbilityData.php',
+		'../src/Application/Models/StatsAveragedPokemon/ItemData.php',
+		'../src/Application/Models/StatsAveragedPokemon/MoveData.php',
+		'../src/Application/Models/StatsAveragedUsage/UsageData.php',
+		'../src/Application/Models/StatsPokemon/StatData.php',
+	])
+;
+
+$services->load('Jp\\Dex\\Presentation\\', '../src/Presentation');
+
+// Domain services
+$services->set(\Jp\Dex\Domain\BreedingChains\BreedingChainFinder::class);
+$services->set(\Jp\Dex\Domain\PokemonMoves\PokemonMoveFormatter::class);
+$services->set(\Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter::class);
+$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\LeadUsageTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\MovesetAbilityTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\MovesetItemTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\MovesetMoveTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageAbilityTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageItemTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageMoveTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\Calculators\StatCalculator::class);
+$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\TrendPointCalculator::class);
+
+$services->load('Jp\\Dex\\Domain\\Import\\', '../src/Domain/Import')
+	->exclude([
+		'../src/Domain/Import/Extractors/Exceptions/*',
+		'../src/Domain/Import/Showdown/*',
+		'../src/Domain/Import/Structs/*',
+	])
+;
+
+// Some other global classes we need
+$services->set(\IntlDateFormatter::class)
+	->class(\IntlDateFormatter::class)
+	->args([null, null, null])
+;
+$services->set(\NumberFormatter::class)
+	->class(\NumberFormatter::class)
+	->args([null, null])
+;
 
 
 // Templating
-$rule = [
-	'constructParams' => [
-		__DIR__ . '/../templates',
-	],
-	'shared' => true,
-];
-$dice = $dice->addRule(\Twig\Loader\FilesystemLoader::class, $rule);
+$services->set(\Twig\Loader\FilesystemLoader::class)
+	->arg('$paths', [__DIR__ . '/../templates'])
+;
 
-$rule = ['instanceOf' => \Twig\Loader\FilesystemLoader::class];
-$dice = $dice->addRule(\Twig\Loader\LoaderInterface::class, $rule);
+$services->alias(
+	\Twig\Loader\LoaderInterface::class,
+	\Twig\Loader\FilesystemLoader::class
+);
 
-$rule = [
-	'shared' => true,
-	'constructParams' => [
-		[
-			'cache' => __DIR__ . '/../templates/cache',
-			'auto_reload' => true,
-		]
-	],
-];
-$dice = $dice->addRule(\Twig\Environment::class, $rule);
+$services->set(\Twig\Environment::class)
+	->arg('$options', [
+		'cache' => __DIR__ . '/../templates/cache',
+		'auto_reload' => true,
+	]);
 
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\TwigRenderer::class];
-$dice = $dice->addRule(\Jp\Dex\Presentation\RendererInterface::class, $rule);
+$services->set(\Jp\Dex\Infrastructure\TwigRenderer::class);
+$services->alias(
+	\Jp\Dex\Presentation\RendererInterface::class,
+	\Jp\Dex\Infrastructure\TwigRenderer::class
+);
 
 
 // Middleware
-$environment = $_SERVER['ENVIRONMENT'];
-$rule = [
-	'constructParams' => [
-		$environment,
-	]
-];
-$dice = $dice->addRule(\Jp\Dex\Application\Middleware\JsonErrorMiddleware::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Middleware\HtmlErrorMiddleware::class, $rule);
+$services->set(\Jp\Dex\Application\Middleware\HtmlErrorMiddleware::class)
+	->arg('$environment', $_SERVER['ENVIRONMENT'])
+;
+$services->set(\Jp\Dex\Application\Middleware\JsonErrorMiddleware::class)
+	->arg('$environment', $_SERVER['ENVIRONMENT'])
+;
 
 
 // Interfaces
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseAbilityDescriptionRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseAbilityNameRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseAbilityRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Abilities\AbilityRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseBaseStatRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\BaseStatRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseBreedingChainQueries::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\BreedingChains\BreedingChainQueriesInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexAbilityRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexCategoryRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Categories\DexCategoryRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexMoveRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Moves\DexMoveRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexNatureRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Natures\DexNatureRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexPokemonAbilityRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Abilities\DexPokemonAbilityRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexTypeRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Types\DexTypeRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseDexVersionGroupRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseEggGroupNameRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\EggGroups\EggGroupNameRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseFlagRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Flags\FlagRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseFormatRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Formats\FormatRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseFormIconRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseGenerationMoveRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseGenerationRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Versions\GenerationRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseItemDescriptionRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseItemNameRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Items\ItemNameRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseItemRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Items\ItemRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseLanguageNameRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseLanguageRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Languages\LanguageRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseLeadsAveragedPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseLeadsPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseLeadsRatedAveragedPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseLeadsRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseModelRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Models\ModelRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMonthQueries::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMoveDescriptionRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMoveMethodNameRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMoveMethodRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMoveNameRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Moves\MoveNameRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMoveRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Moves\MoveRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetRatedAbilityRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedAbilityRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedItemRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedMoveRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetRatedCounterRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounterRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetRatedItemRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetRatedMoveRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetRatedPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetRatedSpreadRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabasePokemonEggGroupRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabasePokemonMoveRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabasePokemonNameRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabasePokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabasePokemonTypeRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseRatingQueries::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownAbilityRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownAbilityRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownFormatRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownItemRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownMoveRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownMoveRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownNatureRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseSpeciesRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Species\SpeciesRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatNameRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\StatNameRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsAbilityPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Usage\StatsAbilityPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsChartQueries::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\StatsChartQueriesInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsItemPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Usage\StatsItemPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsLeadsPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Leads\StatsLeadsPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsMovePokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Usage\StatsMovePokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonAbilityRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Abilities\StatsPokemonAbilityRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonCounterRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Counters\StatsPokemonCounterRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonItemRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Items\StatsPokemonItemRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonMoveRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Moves\StatsPokemonMoveRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonSpreadRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Spreads\StatsPokemonSpreadRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsPokemonTeammateRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Teammates\StatsPokemonTeammateRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseStatsUsagePokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseTmRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Items\TmRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseTypeMatchupRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseTypeRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Types\TypeRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsageAveragedPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsageQueries::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsageRatedAveragedPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsageRatedQueries::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsageRatedRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseUsageRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface::class, $rule);
-
-$rule = ['instanceOf' => \Jp\Dex\Infrastructure\DatabaseVersionGroupRepository::class];
-$dice = $dice->addRule(\Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface::class, $rule);
-
-
-// Models are shared between controllers and views.
-$rule = [
-	'shared' => true,
-];
-$dice = $dice->addRule(\Jp\Dex\Application\Models\BaseModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\BreedingChains\BreedingChainsModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\DateModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\DexAbilitiesModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\DexAbilityModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\DexMove\DexMoveModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\DexMovesModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\DexNaturesModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\DexPokemon\DexPokemonModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\DexPokemonsModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\DexTypeModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\DexTypesModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAbilityModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAveragedLeads\StatsAveragedLeadsModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAveragedPokemon\StatsAveragedPokemonModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsAveragedUsage\StatsAveragedUsageModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsChartModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsIndexModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsItemModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsLeadsModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsMonthModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsMoveModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Application\Models\StatsUsageModel::class, $rule);
-
-// Shared repositories
-$rule = [
-	'shared' => true,
-];
-$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownAbilityRepositoryInterface::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownMoveRepositoryInterface::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface::class, $rule);
-$dice = $dice->addRule(\Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface::class, $rule);
-
-return new \Jp\Container\DiceContainer($dice);
+$services->set(\Jp\Dex\Infrastructure\DatabaseAbilityDescriptionRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseAbilityDescriptionRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseAbilityNameRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseAbilityNameRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseAbilityRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Abilities\AbilityRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseAbilityRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseBaseStatRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\BaseStatRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseBaseStatRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseBreedingChainQueries::class);
+$services->alias(
+	\Jp\Dex\Domain\BreedingChains\BreedingChainQueriesInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseBreedingChainQueries::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseDexAbilityRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseDexAbilityRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseDexCategoryRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Categories\DexCategoryRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseDexCategoryRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseDexMoveRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Moves\DexMoveRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseDexMoveRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseDexNatureRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Natures\DexNatureRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseDexNatureRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseDexPokemonAbilityRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Abilities\DexPokemonAbilityRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseDexPokemonAbilityRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseDexPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseDexPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseDexTypeRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Types\DexTypeRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseDexTypeRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseDexVersionGroupRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseDexVersionGroupRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseEggGroupNameRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\EggGroups\EggGroupNameRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseEggGroupNameRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseFlagRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Flags\FlagRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseFlagRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseFormatRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Formats\FormatRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseFormatRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseFormIconRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseFormIconRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseGenerationMoveRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseGenerationMoveRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseGenerationRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Versions\GenerationRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseGenerationRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseItemDescriptionRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseItemDescriptionRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseItemNameRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Items\ItemNameRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseItemNameRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseItemRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Items\ItemRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseItemRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseLanguageNameRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseLanguageNameRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseLanguageRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Languages\LanguageRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseLanguageRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseLeadsAveragedPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseLeadsAveragedPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseLeadsPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseLeadsPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseLeadsRatedAveragedPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseLeadsRatedAveragedPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseLeadsRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseLeadsRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseModelRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Models\ModelRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseModelRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMonthQueries::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMonthQueries::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMoveDescriptionRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMoveDescriptionRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMoveMethodNameRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMoveMethodNameRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMoveMethodRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMoveMethodRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMoveNameRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Moves\MoveNameRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMoveNameRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMoveRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Moves\MoveRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMoveRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMovesetPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMovesetPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMovesetRatedAbilityRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMovesetRatedAbilityRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedAbilityRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedAbilityRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedItemRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedItemRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedMoveRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedMoveRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMovesetRatedCounterRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounterRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMovesetRatedCounterRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMovesetRatedItemRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMovesetRatedItemRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMovesetRatedMoveRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMovesetRatedMoveRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMovesetRatedPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMovesetRatedPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMovesetRatedSpreadRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMovesetRatedSpreadRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabasePokemonEggGroupRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabasePokemonEggGroupRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabasePokemonMoveRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabasePokemonMoveRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabasePokemonNameRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabasePokemonNameRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabasePokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabasePokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabasePokemonTypeRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabasePokemonTypeRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseRatingQueries::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseRatingQueries::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownAbilityRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Import\Showdown\ShowdownAbilityRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownAbilityRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownFormatRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownFormatRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownItemRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownItemRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownMoveRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Import\Showdown\ShowdownMoveRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownMoveRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownNatureRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownNatureRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseSpeciesRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Species\SpeciesRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseSpeciesRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatNameRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\StatNameRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatNameRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatsAbilityPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Usage\StatsAbilityPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsAbilityPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatsChartQueries::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\StatsChartQueriesInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsChartQueries::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatsItemPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Usage\StatsItemPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsItemPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatsLeadsPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Leads\StatsLeadsPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsLeadsPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatsMovePokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Usage\StatsMovePokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsMovePokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatsPokemonAbilityRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Abilities\StatsPokemonAbilityRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsPokemonAbilityRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatsPokemonCounterRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Counters\StatsPokemonCounterRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsPokemonCounterRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatsPokemonItemRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Items\StatsPokemonItemRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsPokemonItemRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatsPokemonMoveRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Moves\StatsPokemonMoveRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsPokemonMoveRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatsPokemonSpreadRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Spreads\StatsPokemonSpreadRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsPokemonSpreadRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatsPokemonTeammateRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Teammates\StatsPokemonTeammateRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsPokemonTeammateRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseStatsUsagePokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsUsagePokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseTmRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Items\TmRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseTmRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseTypeMatchupRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseTypeMatchupRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseTypeRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Types\TypeRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseTypeRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseUsageAveragedPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseUsageAveragedPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseUsageQueries::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseUsageQueries::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseUsageRatedAveragedPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseUsageRatedAveragedPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseUsageRatedQueries::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseUsageRatedQueries::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseUsageRatedRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseUsageRatedRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseUsageRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseUsageRepository::class
+);
+
+$services->set(\Jp\Dex\Infrastructure\DatabaseVersionGroupRepository::class);
+$services->alias(
+	\Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseVersionGroupRepository::class
+);
+
+};
