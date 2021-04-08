@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Parsers;
 
+use GuzzleHttp\Psr7\Utils;
 use Jp\Dex\Domain\Import\Extractors\UsageFileExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
@@ -40,14 +41,14 @@ final class UsageFileParser
 			return -1;
 		}
 
-		$line = \GuzzleHttp\Psr7\readline($stream); // Total battles.
+		$line = Utils::readLine($stream); // Total battles.
 		$totalBattles = $this->usageFileExtractor->extractTotalBattles($line);
-		\GuzzleHttp\Psr7\readline($stream); // Average weight per team.
-		\GuzzleHttp\Psr7\readline($stream); // Separator.
-		\GuzzleHttp\Psr7\readline($stream); // Column headings.
-		\GuzzleHttp\Psr7\readline($stream); // Separator.
+		Utils::readLine($stream); // Average weight per team.
+		Utils::readLine($stream); // Separator.
+		Utils::readLine($stream); // Column headings.
+		Utils::readLine($stream); // Separator.
 
-		while ($this->usageFileExtractor->isUsage($line = \GuzzleHttp\Psr7\readline($stream))) {
+		while ($this->usageFileExtractor->isUsage($line = Utils::readLine($stream))) {
 			$usage = $this->usageFileExtractor->extractUsage($line);
 			$showdownPokemonName = $usage->showdownPokemonName();
 

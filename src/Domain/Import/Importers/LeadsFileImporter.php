@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Import\Importers;
 
 use DateTime;
+use GuzzleHttp\Psr7\Utils;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Import\Extractors\LeadsFileExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
@@ -95,7 +96,7 @@ final class LeadsFileImporter
 			return;
 		}
 
-		$line = \GuzzleHttp\Psr7\readline($stream);
+		$line = Utils::readLine($stream);
 		$totalLeads = $this->leadsFileExtractor->extractTotalLeads($line);
 		if (!$leadsExists) {
 			$leads = new Leads(
@@ -107,11 +108,11 @@ final class LeadsFileImporter
 		}
 
 		// Ignore the next three lines.
-		\GuzzleHttp\Psr7\readline($stream);
-		\GuzzleHttp\Psr7\readline($stream);
-		\GuzzleHttp\Psr7\readline($stream);
+		Utils::readLine($stream);
+		Utils::readLine($stream);
+		Utils::readLine($stream);
 
-		while ($this->leadsFileExtractor->isLeadUsage($line = \GuzzleHttp\Psr7\readline($stream))) {
+		while ($this->leadsFileExtractor->isLeadUsage($line = Utils::readLine($stream))) {
 			$leadUsage = $this->leadsFileExtractor->extractLeadUsage($line);
 			$showdownPokemonName = $leadUsage->showdownPokemonName();
 

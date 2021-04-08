@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Parsers;
 
+use GuzzleHttp\Psr7\Utils;
 use Jp\Dex\Domain\Import\Extractors\MovesetFileExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownAbilityRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface;
@@ -63,8 +64,8 @@ final class MovesetFileParser
 		while (!$stream->eof()) {
 			// BLOCK 1 - The Pokémon's name.
 
-			\GuzzleHttp\Psr7\readline($stream); // Separator.
-			$line = \GuzzleHttp\Psr7\readline($stream);
+			Utils::readLine($stream); // Separator.
+			$line = Utils::readLine($stream);
 			if ($stream->eof()) {
 				return;
 			}
@@ -75,21 +76,21 @@ final class MovesetFileParser
 				$this->showdownPokemonRepository->addUnknown($showdownPokemonName);
 			}
 
-			\GuzzleHttp\Psr7\readline($stream); // Separator.
+			Utils::readLine($stream); // Separator.
 
 			// BLOCK 2 - General information.
 
-			\GuzzleHttp\Psr7\readline($stream); // Raw count.
-			\GuzzleHttp\Psr7\readline($stream); // Average weight.
-			$line = \GuzzleHttp\Psr7\readline($stream); // Viability ceiling OR separator.
+			Utils::readLine($stream); // Raw count.
+			Utils::readLine($stream); // Average weight.
+			$line = Utils::readLine($stream); // Viability ceiling OR separator.
 			if ($this->movesetFileExtractor->isViabilityCeiling($line)) {
-				\GuzzleHttp\Psr7\readline($stream); // Separator.
+				Utils::readLine($stream); // Separator.
 			}
 
 			// BLOCK 3 - Abilities.
 
-			\GuzzleHttp\Psr7\readline($stream); // "Abilities"
-			while ($this->movesetFileExtractor->isNamePercent($line = \GuzzleHttp\Psr7\readline($stream))) {
+			Utils::readLine($stream); // "Abilities"
+			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownAbilityName = $namePercent->showdownName();
 
@@ -106,8 +107,8 @@ final class MovesetFileParser
 
 			// BLOCK 4 - Items.
 
-			\GuzzleHttp\Psr7\readline($stream); // "Items"
-			while ($this->movesetFileExtractor->isNamePercent($line = \GuzzleHttp\Psr7\readline($stream))) {
+			Utils::readLine($stream); // "Items"
+			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownItemName = $namePercent->showdownName();
 
@@ -124,8 +125,8 @@ final class MovesetFileParser
 
 			// BLOCK 5 - Spreads.
 
-			\GuzzleHttp\Psr7\readline($stream); // "Spreads"
-			while (!$this->movesetFileExtractor->isSeparator($line = \GuzzleHttp\Psr7\readline($stream))) {
+			Utils::readLine($stream); // "Spreads"
+			while (!$this->movesetFileExtractor->isSeparator($line = Utils::readLine($stream))) {
 				// If this line is an "Other" percent, skip it.
 				if ($this->movesetFileExtractor->isOther($line)) {
 					continue;
@@ -147,8 +148,8 @@ final class MovesetFileParser
 
 			// BLOCK 6 - Moves.
 
-			\GuzzleHttp\Psr7\readline($stream); // "Moves"
-			while ($this->movesetFileExtractor->isNamePercent($line = \GuzzleHttp\Psr7\readline($stream))) {
+			Utils::readLine($stream); // "Moves"
+			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownMoveName = $namePercent->showdownName();
 
@@ -165,8 +166,8 @@ final class MovesetFileParser
 
 			// BLOCK 7 - Teammates.
 
-			\GuzzleHttp\Psr7\readline($stream); // "Teammates"
-			while ($this->movesetFileExtractor->isNamePercent($line = \GuzzleHttp\Psr7\readline($stream))) {
+			Utils::readLine($stream); // "Teammates"
+			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownTeammateName = $namePercent->showdownName();
 
@@ -183,9 +184,9 @@ final class MovesetFileParser
 
 			// BLOCK 8 - Counters.
 
-			\GuzzleHttp\Psr7\readline($stream); // "Counters"
-			while ($this->movesetFileExtractor->isCounter1($line1 = \GuzzleHttp\Psr7\readline($stream))) {
-				$line2 = \GuzzleHttp\Psr7\readline($stream);
+			Utils::readLine($stream); // "Counters"
+			while ($this->movesetFileExtractor->isCounter1($line1 = Utils::readLine($stream))) {
+				$line2 = Utils::readLine($stream);
 				$counter = $this->movesetFileExtractor->extractCounter($line1, $line2);
 				$showdownCounterName = $counter->showdownPokemonName();
 
