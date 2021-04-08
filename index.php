@@ -37,7 +37,7 @@ $request = \Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 
 
 // Load dependency injection container.
-$container = require __DIR__ . '/config/dependencies.php';
+$container = require __DIR__ . '/config/container.php';
 
 
 // Load route dispatcher.

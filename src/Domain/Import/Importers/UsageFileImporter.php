@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Import\Importers;
 
 use DateTime;
+use GuzzleHttp\Psr7\Utils;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Import\Extractors\UsageFileExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
@@ -78,7 +79,7 @@ final class UsageFileImporter
 			return;
 		}
 
-		$line = \GuzzleHttp\Psr7\readline($stream);
+		$line = Utils::readLine($stream);
 		$totalBattles = $this->usageFileExtractor->extractTotalBattles($line);
 		if (!$usageExists) {
 			$usage = new Usage(
@@ -89,7 +90,7 @@ final class UsageFileImporter
 			$this->usageRepository->save($usage);
 		}
 
-		$line = \GuzzleHttp\Psr7\readline($stream);
+		$line = Utils::readLine($stream);
 		$averageWeightPerTeam = $this->usageFileExtractor->extractAverageWeightPerTeam($line);
 		if (!$usageRatedExists) {
 			$usageRated = new UsageRated(
@@ -102,11 +103,11 @@ final class UsageFileImporter
 		}
 
 		// Ignore the next three lines.
-		\GuzzleHttp\Psr7\readline($stream);
-		\GuzzleHttp\Psr7\readline($stream);
-		\GuzzleHttp\Psr7\readline($stream);
+		Utils::readLine($stream);
+		Utils::readLine($stream);
+		Utils::readLine($stream);
 
-		while ($this->usageFileExtractor->isUsage($line = \GuzzleHttp\Psr7\readline($stream))) {
+		while ($this->usageFileExtractor->isUsage($line = Utils::readLine($stream))) {
 			$usage = $this->usageFileExtractor->extractUsage($line);
 			$showdownPokemonName = $usage->showdownPokemonName();
 

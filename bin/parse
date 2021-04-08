@@ -6,7 +6,7 @@ use Jp\Dex\Domain\Import\Parsers\MonthDirectoryParser;
 
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config/environment.php';
-$container = require __DIR__ . '/../config/dependencies.php';
+$container = require __DIR__ . '/../config/container.php';
 
 
 // Get year and month from command line arguments; fall back on previous month.

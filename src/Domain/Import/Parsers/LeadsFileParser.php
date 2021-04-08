@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Parsers;
 
+use GuzzleHttp\Psr7\Utils;
 use Jp\Dex\Domain\Import\Extractors\LeadsFileExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
@@ -28,12 +29,12 @@ final class LeadsFileParser
 			return;
 		}
 
-		\GuzzleHttp\Psr7\readline($stream); // Total leads.
-		\GuzzleHttp\Psr7\readline($stream); // Separator.
-		\GuzzleHttp\Psr7\readline($stream); // Column headings.
-		\GuzzleHttp\Psr7\readline($stream); // Separator.
+		Utils::readLine($stream); // Total leads.
+		Utils::readLine($stream); // Separator.
+		Utils::readLine($stream); // Column headings.
+		Utils::readLine($stream); // Separator.
 
-		while ($this->leadsFileExtractor->isLeadUsage($line = \GuzzleHttp\Psr7\readline($stream))) {
+		while ($this->leadsFileExtractor->isLeadUsage($line = Utils::readLine($stream))) {
 			$leadUsage = $this->leadsFileExtractor->extractLeadUsage($line);
 			$showdownPokemonName = $leadUsage->showdownPokemonName();
 

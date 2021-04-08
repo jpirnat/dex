@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config/environment.php';
-$container = require __DIR__ . '/../config/dependencies.php';
+$container = require __DIR__ . '/../config/container.php';
 $tables = require __DIR__ . '/../sql/schema/dex/tables.php';
 
 function importFile(PDO $database, string $table, string $file) : void
