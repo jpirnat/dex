@@ -160,7 +160,6 @@ final class DexMoveModel
 			$zMove['power'] = $generationMove->getZBasePower();
 		}
 
-		$zPowerEffect = null;
 		if ($generationMove->getZPowerEffectId() !== null) {
 			$zPowerEffect = $this->generationMoveRepository->getZPowerEffect(
 				$generationMove->getZPowerEffectId(),

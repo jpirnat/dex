@@ -48,7 +48,7 @@ final class DexMoveView
 		$bySort = function (DexMovePokemon $a, DexMovePokemon $b) : int {
 			return $a->getSort() <=> $b->getSort();
 		};
-		foreach ($methods as $methodId => $method) {
+		foreach ($methods as $method) {
 			uasort($method->getPokemon(), $bySort);
 		}
 
