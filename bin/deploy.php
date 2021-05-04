@@ -50,7 +50,7 @@ task('deploy', [
 ]);
 
 task('reload:php-fpm', function () {
-    run('sudo /etc/init.d/php7.4-fpm restart');
+    run('sudo /etc/init.d/php8.0-fpm restart');
 });
 // NOTE TO SELF: Whenever I upgrade PHP and thus need to update the php-fpm
 // restart command here, I also need to update `sudo visudo` on the server so
