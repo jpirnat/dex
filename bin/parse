@@ -42,8 +42,8 @@ $items = $parser->getUnknownItems();
 $natures = $parser->getUnknownNatures();
 $moves = $parser->getUnknownMoves();
 
-$end = new DateTime();
 
+$end = new DateTime();
 
 // Display the output.
 $startText = $start->format('Y-m-d H:i:s');

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Jp\Dex\Domain\Import\Importers\MonthDirectoryImporter;
+use Jp\Dex\Domain\Import\TeammatesFixer;
 use Jp\Dex\Domain\Import\ZygardeFixer;
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -40,8 +41,12 @@ $importer->import("http://www.smogon.com/stats/$yearMonth/");
 $zygardeFixer = $container->get(ZygardeFixer::class);
 $zygardeFixer->fixZygarde();
 
-$end = new DateTime();
+/** @var TeammatesFixer $teammatesFixer */
+$teammatesFixer = $container->get(TeammatesFixer::class);
+$teammatesFixer->fixTeammates($date);
 
+
+$end = new DateTime();
 
 // Display the output.
 $startText = $start->format('Y-m-d H:i:s');
