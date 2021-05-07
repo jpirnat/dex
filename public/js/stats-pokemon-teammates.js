@@ -18,6 +18,10 @@ Vue.component('stats-pokemon-teammates', {
 			type: Number,
 			default: 0,
 		},
+		pokemon: { // name, not identifier!!!
+			type: String,
+			default: {},
+		},
 	},
 	data() {
 		return {
@@ -44,7 +48,10 @@ Vue.component('stats-pokemon-teammates', {
 							'dex-table__header--sorted-asc': sortColumn === 'percent' && sortDirection === 'asc',
 							'dex-table__header--sorted-desc': sortColumn === 'percent' && sortDirection === 'desc',
 						}"
-					>%</th>
+						v-tooltip="'X% of teams that use ' + pokemon + ' also use this Pokémon.'"
+					>
+						<abbr class="dex--tooltip">%</abbr>
+					</th>
 				</tr>
 			</thead>
 			<tbody>

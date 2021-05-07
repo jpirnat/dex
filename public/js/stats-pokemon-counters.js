@@ -48,10 +48,9 @@ Vue.component('stats-pokemon-counters', {
 							'dex-table__header--sorted-asc': sortColumn === 'score' && sortDirection === 'asc',
 							'dex-table__header--sorted-desc': sortColumn === 'score' && sortDirection === 'desc',
 						}"
+						v-tooltip="'The counter\\\'s numeric score, weighted to remove bias towards low-probability matchups (% - 4σ)'"
 					>
-						<abbr class="dex--tooltip"
-							v-tooltip="'The counter\\\'s numeric score, weighted to remove bias towards low-probability matchups (% - 4σ)'"
-						>Score</abbr>
+						<abbr class="dex--tooltip">Score</abbr>
 					</th>
 					<th scope="col" class="dex-table__header--sortable"
 						@click="sortBy('percent', 'desc', c => c.percent)"
@@ -59,10 +58,9 @@ Vue.component('stats-pokemon-counters', {
 							'dex-table__header--sorted-asc': sortColumn === 'percent' && sortDirection === 'asc',
 							'dex-table__header--sorted-desc': sortColumn === 'percent' && sortDirection === 'desc',
 						}"
+						v-tooltip="'The percent of encounters where ' + pokemon + ' was knocked out or switched out'"
 					>
-						<abbr class="dex--tooltip"
-							v-tooltip="'The percent of encounters where ' + pokemon + ' was knocked out or switched out'"
-						>%</abbr>
+						<abbr class="dex--tooltip">%</abbr>
 					</th>
 					<th scope="col" class="dex-table__header--sortable"
 						@click="sortBy('standardDeviation', 'desc', c => c.standardDeviation)"
@@ -70,10 +68,9 @@ Vue.component('stats-pokemon-counters', {
 							'dex-table__header--sorted-asc': sortColumn === 'standardDeviation' && sortDirection === 'asc',
 							'dex-table__header--sorted-desc': sortColumn === 'standardDeviation' && sortDirection === 'desc',
 						}"
+						v-tooltip="'The standard deviation of the percent of encounters where ' + pokemon + ' was knocked out or switched out'"
 					>
-						<abbr class="dex--tooltip"
-							v-tooltip="'The standard deviation of the percent of encounters where ' + pokemon + ' was knocked out or switched out'"
-						>σ</abbr>
+						<abbr class="dex--tooltip">σ</abbr>
 					</th>
 					<th scope="col" class="dex-table__header--sortable"
 						@click="sortBy('percentKnockedOut', 'desc', c => c.percentKnockedOut)"
