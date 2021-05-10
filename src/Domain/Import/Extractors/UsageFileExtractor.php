@@ -7,8 +7,8 @@ use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidAverageWeightPerTeamLineEx
 use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidTotalBattlesLineException;
 use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidUsageLineException;
 use Jp\Dex\Domain\Import\Structs\Usage;
+use Spatie\Regex\Exceptions\RegexFailed;
 use Spatie\Regex\Regex;
-use Spatie\Regex\RegexFailed;
 
 final class UsageFileExtractor
 {

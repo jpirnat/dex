@@ -56,7 +56,7 @@ final class StatsDirectoryParser
 	/**
 	 * Return the list of unknown formats.
 	 *
-	 * @return string[]
+	 * @return string[][]
 	 */
 	public function getUnknownFormats() : array
 	{

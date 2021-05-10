@@ -8,13 +8,13 @@ use PDO;
 
 /**
  * Starting with April 2021, the teammates usage percent is calculated differently.
- * 
+ *
  * The old formula is P(X|Y) - P(X), aka the probability that teams with Pokémon Y
  * will also have Teammate X, minus the overall probability that the team will have X.
- * 
+ *
  * The new formula is P(X|Y), aka the probability that teams with Pokémon Y
  * will also have Teammate X.
- * 
+ *
  * Going forward, Porydex is converting the pre-April 2021 teammates data to
  * the new formula. This is done simply by adding the teammate's overall Usage %
  * into the Teammate %.
@@ -28,7 +28,7 @@ final class TeammatesFixer
 	/**
 	 * Fix Teammates in the usage stats.
 	 *
-	 * @param DateTime $yearMonth
+	 * @param DateTime $month
 	 *
 	 * @return void
 	 */

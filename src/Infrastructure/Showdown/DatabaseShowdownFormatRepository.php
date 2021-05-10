@@ -153,7 +153,7 @@ final class DatabaseShowdownFormatRepository implements ShowdownFormatRepository
 	/**
 	 * Get the names of the unknown formats the repository has tracked.
 	 *
-	 * @return string[]
+	 * @return string[][]
 	 */
 	public function getUnknown() : array
 	{

@@ -1,13 +1,9 @@
 <?php
 declare(strict_types=1);
 
-
-// We use Composer for all our autoloading.
 require __DIR__ . '/vendor/autoload.php';
-
-
-// Load environment variables.
 require __DIR__ . '/config/environment.php';
+$container = require __DIR__ . '/config/container.php';
 
 
 // Tell PHP that we're using UTF-8 strings until the end of the script.
@@ -34,10 +30,6 @@ $request = \Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 	$_COOKIE,
 	$_FILES
 );
-
-
-// Load dependency injection container.
-$container = require __DIR__ . '/config/container.php';
 
 
 // Load route dispatcher.

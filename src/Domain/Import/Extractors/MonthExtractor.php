@@ -5,8 +5,8 @@ namespace Jp\Dex\Domain\Import\Extractors;
 
 use DateTime;
 use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidFilenameException;
+use Spatie\Regex\Exceptions\RegexFailed;
 use Spatie\Regex\Regex;
-use Spatie\Regex\RegexFailed;
 
 final class MonthExtractor
 {

@@ -6,8 +6,8 @@ namespace Jp\Dex\Domain\Import\Extractors;
 use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidLeadUsageLineException;
 use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidTotalLeadsLineException;
 use Jp\Dex\Domain\Import\Structs\LeadUsage;
+use Spatie\Regex\Exceptions\RegexFailed;
 use Spatie\Regex\Regex;
-use Spatie\Regex\RegexFailed;
 
 final class LeadsFileExtractor
 {

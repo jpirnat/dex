@@ -5,8 +5,8 @@ namespace Jp\Dex\Domain\Import\Extractors;
 
 use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidFilenameException;
 use Jp\Dex\Domain\Import\Structs\FormatRating;
+use Spatie\Regex\Exceptions\RegexFailed;
 use Spatie\Regex\Regex;
-use Spatie\Regex\RegexFailed;
 
 final class FormatRatingExtractor
 {

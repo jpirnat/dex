@@ -16,8 +16,8 @@ use Jp\Dex\Domain\Import\Structs\Counter1;
 use Jp\Dex\Domain\Import\Structs\Counter2;
 use Jp\Dex\Domain\Import\Structs\NamePercent;
 use Jp\Dex\Domain\Import\Structs\Spread;
+use Spatie\Regex\Exceptions\RegexFailed;
 use Spatie\Regex\Regex;
-use Spatie\Regex\RegexFailed;
 
 final class MovesetFileExtractor
 {
