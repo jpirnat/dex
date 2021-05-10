@@ -2278,7 +2278,7 @@ month,name,format_id,reason
 2020-08-01,gen8crossevolution,\N,
 2020-08-01,gen8godlygift,\N,
 2020-08-01,gen8inverse,\N,
-2020-08-01,gen8lcsuspecttest,\N,
+2020-08-01,gen8lcsuspecttest,\N,suspect test
 2020-08-01,gen8linked,\N,
 2020-08-01,gen8megamax,\N,
 2020-08-01,gen8metronomebattle,\N,
@@ -2478,3 +2478,45 @@ month,name,format_id,reason
 2021-03-01,gen8stabmons,\N,
 2021-03-01,gen8thelosersgame,\N,
 2021-03-01,gen8zu,\N,not official
+2021-04-01,gen4uu,12,too few battles: 23
+2021-04-01,gen6almostanyability,\N,
+2021-04-01,gen6cap,\N,cap
+2021-04-01,gen6purehackmons,\N,
+2021-04-01,gen7balancedhackmons,\N,
+2021-04-01,gen7mixandmega,\N,
+2021-04-01,gen7pu,42,too few battles: 3
+2021-04-01,gen7stabmons,\N,
+2021-04-01,gen81v1,\N,
+2021-04-01,gen82v2doubles,\N,
+2021-04-01,gen8almostanyability,\N,
+2021-04-01,gen8anythinggoeswitheternamax,\N,
+2021-04-01,gen8balancedhackmons,\N,
+2021-04-01,gen8battlestadiumsingles,\N,
+2021-04-01,gen8camomons,\N,
+2021-04-01,gen8cap,\N,cap
+2021-04-01,gen8cap1v1,\N,cap
+2021-04-01,gen8godlygift,\N,
+2021-04-01,gen8maxberries,\N,
+2021-04-01,gen8megasforall,\N,
+2021-04-01,gen8metronomebattle,\N,
+2021-04-01,gen8mixandmega,\N,
+2021-04-01,gen8monotypedynamax,\N,
+2021-04-01,gen8natdexagwitheternamax,\N,
+2021-04-01,gen8nationaldexmonotype,\N,not official
+2021-04-01,gen8nationaldexnostall,\N,
+2021-04-01,gen8nationaldexuu,\N,not official
+2021-04-01,gen8nationaldexuunostall,\N,
+2021-04-01,gen8ndmonotypenotoxapex,\N,
+2021-04-01,gen8nfe,\N,
+2021-04-01,gen8nususpecttest,\N,suspect test
+2021-04-01,gen8oublitz,\N,
+2021-04-01,gen8oususpecttest,\N,suspect test
+2021-04-01,gen8pokebilities,\N,
+2021-04-01,gen8puindeedeefnoteampreview,\N,
+2021-04-01,gen8rudynamax,\N,
+2021-04-01,gen8spikemuthcup,\N,
+2021-04-01,gen8stabmons,\N,
+2021-04-01,gen8thelosersgame,\N,
+2021-04-01,gen8uususpecttest,\N,suspect test
+2021-04-01,gen8vgc2021series9,\N,
+2021-04-01,gen8zu,\N,not official
