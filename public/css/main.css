@@ -50,19 +50,14 @@ table {
 .menu {
 	background: #eee;
 	border: 1px solid #ddd;
+	display: flex;
 }
 
-.menu ul {
-	margin: 0;
-	padding: 0;
-}
-
-.menu li {
-	display: inline-block;
+.menu__space {
+	flex: 1;
 }
 
 .menu a {
-	display: inline-block;
 	padding: 10px;
 	color: black;
 	text-decoration: none;
@@ -122,27 +117,17 @@ table {
 .breadcrumbs {
 	background: #eee;
 	border: 1px solid #ddd;
-}
-
-.breadcrumbs ol {
-	margin: 0;
-	padding: 0;
-}
-
-.breadcrumbs li {
-	display: inline-block;
-}
-
-.breadcrumbs li+li::before {
-	content: "»";
-	margin: 0 5px;
+	display: flex;
 }
 
 .breadcrumbs__item {
-	display: inline-block;
 	padding: 10px;
 	color: black;
-	text-decoration: none
+	text-decoration: none;
+}
+
+.breadcrumbs__separator {
+	padding: 10px 5px;
 }
 
 a.breadcrumbs__item:hover {

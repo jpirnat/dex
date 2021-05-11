@@ -22,30 +22,26 @@
 		<header>
 			{% block nav %}
 				<nav class="menu">
-					<ul>
-						<li><a href="/dex/ss/pokemon">Pokémon</a></li>
-						<li><a href="/dex/ss/moves">Moves</a></li>
-						<li><a href="/dex/ss/types">Types</a></li>
-						<li><a href="/dex/ss/abilities">Abilities</a></li>
-						<li><a href="/dex/ss/natures">Natures</a></li>
-						<li><a href="/stats">Stats</a>
-						<li><a href="/stats/current">Current Stats</a></li>
-					</ul>
+					<a href="/dex/ss/pokemon">Pokémon</a>
+					<a href="/dex/ss/moves">Moves</a>
+					<a href="/dex/ss/types">Types</a>
+					<a href="/dex/ss/abilities">Abilities</a>
+					<a href="/dex/ss/natures">Natures</a>
+					<a href="/stats">Stats</a>
+					<a href="/stats/current">Current Stats</a>
+					<div class="menu__space"></div>
 				</nav>
 				{% if breadcrumbs %}
 					<nav class="breadcrumbs" aria-label="Breadcrumb">
-						<ol>
-							<li><a class="breadcrumbs__item" href="/">Home</a></li>
-							{% for breadcrumb in breadcrumbs %}
-								<li>
-									{% if breadcrumb.url %}
-										<a class="breadcrumbs__item" href="{{ breadcrumb.url|e }}">{{ breadcrumb.text|e }}</a>
-									{% else %}
-										<span class="breadcrumbs__item" {% if loop.last %}aria-current="page"{% endif %}>{{ breadcrumb.text|e }}</span>
-									{% endif %}
-								</li>
-							{% endfor %}
-						</ol>
+						<a class="breadcrumbs__item" href="/">Home</a>
+						{% for breadcrumb in breadcrumbs %}
+							<span class="breadcrumbs__separator">»</span>
+							{% if breadcrumb.url %}
+								<a class="breadcrumbs__item" href="{{ breadcrumb.url|e }}">{{ breadcrumb.text|e }}</a>
+							{% else %}
+								<span class="breadcrumbs__item" {% if loop.last %}aria-current="page"{% endif %}>{{ breadcrumb.text|e }}</span>
+							{% endif %}
+						{% endfor %}
 					</nav>
 				{% endif %}
 			{% endblock %}
