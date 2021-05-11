@@ -376,6 +376,14 @@ $routes = [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
+	['GET', "/about", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'about',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
 	// Errors
 	['GET', '/404', [
 		'controllerClass' => IndexController::class,

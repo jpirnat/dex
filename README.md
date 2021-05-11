@@ -1,8 +1,7 @@
 # Porydex
 
-Porydex is a combined Pokédex and Pokémon Showdown competitive usage stats
-viewer, designed to make it easy to browse and analyze metagame trends over
-time.
+Porydex is a combined Pokédex and Pokémon Showdown usage stats viewer, designed
+to make it easy to browse and analyze metagame trends over time.
 
 ## Getting Started
 

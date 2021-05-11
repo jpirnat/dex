@@ -29,6 +29,23 @@ final class IndexView
 	}
 
 	/**
+	 * Show the About page.
+	 *
+	 * @return ResponseInterface
+	 */
+	public function about() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/about.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'About',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the dex abilities page.
 	 *
 	 * @return ResponseInterface
