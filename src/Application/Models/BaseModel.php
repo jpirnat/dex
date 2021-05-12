@@ -10,7 +10,6 @@ use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
 
 final class BaseModel
 {
-	private int $currentYear;
 	private LanguageId $currentLanguageId;
 
 
@@ -21,9 +20,6 @@ final class BaseModel
 	public function __construct(
 		LanguageNameRepositoryInterface $languageNameRepository,
 	) {
-		$today = new DateTime('today');
-		$this->currentYear = (int) $today->format('Y');
-
 		$this->languageNames = $languageNameRepository->getInOwnLanguages();
 	}
 
@@ -38,16 +34,6 @@ final class BaseModel
 	public function setCurrentLanguageId(LanguageId $currentLanguageId) : void
 	{
 		$this->currentLanguageId = $currentLanguageId;
-	}
-
-	/**
-	 * Get the current year, for the copyright in the footer.
-	 *
-	 * @return int
-	 */
-	public function getCurrentYear() : int
-	{
-		return $this->currentYear;
 	}
 
 	/**

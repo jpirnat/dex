@@ -68,8 +68,3 @@ tables. This is necessary because formats have changed names before ("ou" to
 The main implementation of Porydex only imports the official Smogon and VGC
 formats. If you want to run a clone of Porydex that focuses on (for example) LC
 or CAP, you can! Just edit the database accordingly.
-
-## Other
-
-This README is a work in progress. I know I still need contributing guidelines
-and a license statement. For now, use your best judgement.

@@ -21,7 +21,6 @@ final class BaseView
 	{
 		// Start the data array.
 		$data = [
-			'currentYear' => $this->baseModel->getCurrentYear(),
 			'currentLanguageId' => $this->baseModel->getCurrentLanguageId()->value(),
 		];
 
