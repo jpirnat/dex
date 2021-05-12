@@ -17,7 +17,7 @@ set('shared_files', []);
 set('shared_dirs', []);
 
 // Writable dirs by web server
-set('writable_dirs', ['templates/cache']);
+set('writable_dirs', ['config/cache', 'templates/cache']);
 set('allow_anonymous_stats', false);
 
 // Hosts
