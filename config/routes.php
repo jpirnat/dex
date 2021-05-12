@@ -238,7 +238,7 @@ $routes = [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
-	['GET', "/stats/current", [
+	['GET', '/stats/current', [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
@@ -246,7 +246,7 @@ $routes = [
 		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
-	['GET', "/data/stats/current", [
+	['GET', '/data/stats/current', [
 		'controllerClass' => \Jp\Dex\Application\Controllers\StatsUsageController::class,
 		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\StatsUsageView::class,
@@ -376,7 +376,7 @@ $routes = [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
-	['GET', "/about", [
+	['GET', '/about', [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,

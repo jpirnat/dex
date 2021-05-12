@@ -16,10 +16,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 final class CurrentStatsMiddleware implements MiddlewareInterface
 {
-	/** @var int $DEFAULT_FORMAT_ID */
 	private const DEFAULT_FORMAT_ID = FormatId::GEN_8_OU;
-
-	/** @var int $DEFAULT_RATING */
 	private const DEFAULT_RATING = 1695;
 
 	public function __construct(
@@ -68,7 +65,7 @@ final class CurrentStatsMiddleware implements MiddlewareInterface
 		$month = $this->usageQueries->getNewest($format->getId());
 		if ($month === null) {
 			// This format has no data ever, so it doesn't matter what month we use.
-			$month = new DateTime();
+			$month = new DateTime('-1 month');
 		}
 
 		// Set the attributes.

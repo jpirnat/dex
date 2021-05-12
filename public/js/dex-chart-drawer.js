@@ -98,9 +98,6 @@ Vue.component('dex-chart-drawer', {
 			<div class="dex-drawer__overlay" @click="closeAndClear"></div>
 		</div>
 	`,
-	mounted() {
-		this.renderChart();
-	},
 	methods: {
 		renderChart() {
 			if (this.chart) {
