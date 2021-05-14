@@ -60,7 +60,7 @@
 					<td class="dex-table__ability-description">{{ ability.description }}</td>
 					<td class="dex-table__ability-pokemon">
 						<a v-for="p in ability.pokemon" :href="`/dex/${generation.identifier}/pokemon/${p.identifier}`">
-							<img :src="`/images/pokemon/icons/${p.icon}`" :alt="p.name">
+							<img :src="`/images/pokemon/icons/${p.icon}`" :alt="p.name" v-tooltip="p.name">
 						</a>
 					</td>
 				</tr>

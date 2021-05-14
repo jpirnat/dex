@@ -91,7 +91,7 @@ Vue.component('stats-pokemon-counters', {
 			<tbody>
 				<tr v-for="counter in counters" :key="counter.identifier">
 					<td class="dex-table__pokemon-icon">
-						<img :src="'/images/pokemon/icons/' + counter.icon">
+						<img :src="'/images/pokemon/icons/' + counter.icon" alt="">
 					</td>
 					<td>
 						<a :href="'/stats/' + month + '/' + format + '/' + rating + '/pokemon/' + counter.identifier">
