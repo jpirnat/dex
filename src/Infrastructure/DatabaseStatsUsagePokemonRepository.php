@@ -6,6 +6,7 @@ namespace Jp\Dex\Infrastructure;
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Usage\StatsUsagePokemon;
 use Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
@@ -106,5 +107,135 @@ final class DatabaseStatsUsagePokemonRepository implements StatsUsagePokemonRepo
 		}
 
 		return $pokemons;
+	}
+
+	/**
+	 * Get a stats usage Pokémon by month, format, rating, and Pokémon id.
+	 *
+	 * @param DateTime $month
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param PokemonId $pokemonId
+	 * @param GenerationId $generationId
+	 * @param LanguageId $languageId
+	 *
+	 * @return array|null
+	 */
+	public function getByPokemon(
+		DateTime $month,
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId,
+		GenerationId $generationId,
+		LanguageId $languageId
+	) : ?array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`urp`.`rank`,
+				`fi`.`image` AS `icon`,
+				`p`.`identifier`,
+				`pn`.`name`,
+				`urp`.`usage_percent`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `form_icons` AS `fi`
+				ON `urp`.`pokemon_id` = `fi`.`form_id`
+			INNER JOIN `pokemon` AS `p`
+				ON `urp`.`pokemon_id` = `p`.`id`
+			INNER JOIN `pokemon_names` AS `pn`
+				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
+			WHERE `urp`.`month` = :month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
+				AND `fi`.`generation_id` = :generation_id
+				AND `fi`.`is_female` = 0
+				AND `fi`.`is_right` = 0
+				AND `pn`.`language_id` = :language_id'
+		);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			return null;
+		}
+
+		return [
+			'rank' => $result['rank'],
+			'icon' => $result['icon'],
+			'identifier' => $result['identifier'],
+			'name' => $result['name'],
+			'usagePercent' => (float) $result['usage_percent'],
+		];
+	}
+
+	/**
+	 * Get a stats usage Pokémon by month, format, rating, and rank.
+	 *
+	 * @param DateTime $month
+	 * @param FormatId $formatId
+	 * @param int $rating
+	 * @param int $rank
+	 * @param GenerationId $generationId
+	 * @param LanguageId $languageId
+	 *
+	 * @return array|null
+	 */
+	public function getByRank(
+		DateTime $month,
+		FormatId $formatId,
+		int $rating,
+		int $rank,
+		GenerationId $generationId,
+		LanguageId $languageId
+	) : ?array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`urp`.`rank`,
+				`fi`.`image` AS `icon`,
+				`p`.`identifier`,
+				`pn`.`name`,
+				`urp`.`usage_percent`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `form_icons` AS `fi`
+				ON `urp`.`pokemon_id` = `fi`.`form_id`
+			INNER JOIN `pokemon` AS `p`
+				ON `urp`.`pokemon_id` = `p`.`id`
+			INNER JOIN `pokemon_names` AS `pn`
+				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
+			WHERE `urp`.`month` = :month
+				AND `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`rank` = :rank
+				AND `fi`.`generation_id` = :generation_id
+				AND `fi`.`is_female` = 0
+				AND `fi`.`is_right` = 0
+				AND `pn`.`language_id` = :language_id'
+		);
+		$stmt->bindValue(':month', $month->format('Y-m-01'));
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':rank', $rank, PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			return null;
+		}
+
+		return [
+			'rank' => $result['rank'],
+			'icon' => $result['icon'],
+			'identifier' => $result['identifier'],
+			'name' => $result['name'],
+			'usagePercent' => (float) $result['usage_percent'],
+		];
 	}
 }

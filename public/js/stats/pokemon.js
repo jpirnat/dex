@@ -15,6 +15,9 @@ const app = new Vue({
 		thisMonth: {},
 		nextMonth: {},
 		ratings: [],
+		prevRank: {},
+		thisRank: {},
+		nextRank: {},
 
 		generation: {},
 		stats: [],
@@ -54,6 +57,9 @@ const app = new Vue({
 				this.thisMonth = data.thisMonth;
 				this.nextMonth = data.nextMonth;
 				this.ratings = data.ratings;
+				this.prevRank = data.prevRank;
+				this.thisRank = data.thisRank;
+				this.nextRank = data.nextRank;
 
 				this.generation = data.generation;
 				this.stats = data.stats;

@@ -25,6 +25,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Teammates\StatsPokemonTeammate;
 use Jp\Dex\Domain\Teammates\StatsPokemonTeammateRepositoryInterface;
+use Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 
@@ -38,6 +39,10 @@ final class StatsPokemonModel
 
 	/** @var int[] $ratings */
 	private array $ratings = [];
+
+	private ?array $prevRank = null;
+	private ?array $thisRank = null;
+	private ?array $nextRank = null;
 
 	private ?MovesetPokemon $movesetPokemon;
 	private ?MovesetRatedPokemon $movesetRatedPokemon;
@@ -66,6 +71,7 @@ final class StatsPokemonModel
 		private FormatRepositoryInterface $formatRepository,
 		private PokemonRepositoryInterface $pokemonRepository,
 		private RatingQueriesInterface $ratingQueries,
+		private StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository,
 		private GenerationRepositoryInterface $generationRepository,
 		private MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
@@ -123,6 +129,33 @@ final class StatsPokemonModel
 			$thisMonth,
 			$this->format->getId()
 		);
+
+		// Get the previous and next ranked Pokémon.
+		$this->thisRank = $this->statsUsagePokemonRepository->getByPokemon(
+			$thisMonth,
+			$this->format->getId(),
+			$rating,
+			$this->pokemon->getId(),
+			$this->format->getGenerationId(),
+			$languageId
+		);
+		$this->prevRank = $this->statsUsagePokemonRepository->getByRank(
+			$thisMonth,
+			$this->format->getId(),
+			$rating,
+			$this->thisRank['rank'] - 1,
+			$this->format->getGenerationId(),
+			$languageId
+		);
+		$this->nextRank = $this->statsUsagePokemonRepository->getByRank(
+			$thisMonth,
+			$this->format->getId(),
+			$rating,
+			$this->thisRank['rank'] + 1,
+			$this->format->getGenerationId(),
+			$languageId
+		);
+
 
 		// Get the stat names.
 		$this->stats = $this->statNameModel->getByGeneration(
@@ -286,6 +319,36 @@ final class StatsPokemonModel
 	public function getRatings() : array
 	{
 		return $this->ratings;
+	}
+
+	/**
+	 * Get the previous rank Pokémon.
+	 *
+	 * @return array|null
+	 */
+	public function getPrevRank() : ?array
+	{
+		return $this->prevRank;
+	}
+
+	/**
+	 * Get this Pokémon's usage rank.
+	 *
+	 * @return array|null
+	 */
+	public function getThisRank() : ?array
+	{
+		return $this->thisRank;
+	}
+
+	/**
+	 * Get the next rank Pokémon.
+	 *
+	 * @return array|null
+	 */
+	public function getNextRank() : ?array
+	{
+		return $this->nextRank;
 	}
 
 	/**

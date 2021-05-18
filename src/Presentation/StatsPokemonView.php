@@ -43,6 +43,10 @@ final class StatsPokemonView
 		$thisMonth = $this->monthControlFormatter->format($thisMonth, $formatter);
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
+		$prevRank = $this->statsPokemonModel->getPrevRank();
+		$thisRank = $this->statsPokemonModel->getThisRank();
+		$nextRank = $this->statsPokemonModel->getNextRank();
+
 		$movesetPokemon = $this->statsPokemonModel->getMovesetPokemon();
 		$movesetRatedPokemon = $this->statsPokemonModel->getMovesetRatedPokemon();
 
@@ -190,6 +194,9 @@ final class StatsPokemonView
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
 				'ratings' => $this->statsPokemonModel->getRatings(),
+				'prevRank' => $prevRank,
+				'thisRank' => $thisRank,
+				'nextRank' => $nextRank,
 
 				'generation' => [
 					'identifier' => $generation->getIdentifier(),

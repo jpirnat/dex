@@ -441,7 +441,7 @@ a.button {
 	padding: 5px 10px;
 }
 .dex-table__pokemon-move-data:nth-child(even) {
-	background: #cdeef8; /* Porygon palette #8bd5ee at opacity 40% on white background. */
+	background: #d1eef8; /* Porygon palette #8bd5ee at opacity 40% on white background. */
 	/* https://marcodiiga.github.io/rgba-to-rgb-conversion */
 }
 
@@ -829,6 +829,29 @@ a.button {
 
 
 /* Pokémon stats page */
+
+.rank-control {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+
+.rank-control__rank {
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	border: 1px solid transparent; /* so the button doesn't move when the border is added on hover */
+}
+.rank-control__rank:hover {
+	background: #dcf2fa; /* Porygon palette #8bd5ee at opacity 30% on white background. */
+	border: 1px solid #8bd5ee; /* Porygon palette #8bd5ee */
+	/* https://marcodiiga.github.io/rgba-to-rgb-conversion */
+}
+.rank-control__rank img {
+	padding: 10px;
+}
+
+
 .pokemon-data {
 	display: inline-block;
 	text-align: center;
