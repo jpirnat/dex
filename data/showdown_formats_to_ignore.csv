@@ -2520,3 +2520,48 @@ month,name,format_id,reason
 2021-04-01,gen8uususpecttest,\N,suspect test
 2021-04-01,gen8vgc2021series9,\N,
 2021-04-01,gen8zu,\N,not official
+2021-05-01,gen1customgame,\N,
+2021-05-01,gen1ubers,1,too few battles: 1
+2021-05-01,gen3customgame,\N,
+2021-05-01,gen4anythinggoes,\N,
+2021-05-01,gen4customgame,\N,
+2021-05-01,gen5uu,16,too few battles: 48
+2021-05-01,gen6almostanyability,\N,
+2021-05-01,gen6cap,\N,cap
+2021-05-01,gen6customgame,\N,
+2021-05-01,gen6purehackmons,\N,
+2021-05-01,gen6ubers,22,too few battles: 1
+2021-05-01,gen6vgc2016,35,too few battles: 1
+2021-05-01,gen71v1,\N,
+2021-05-01,gen7balancedhackmons,\N,
+2021-05-01,gen7customgame,\N,
+2021-05-01,gen7mixandmega,\N,
+2021-05-01,gen7stabmons,\N,
+2021-05-01,gen81v1,\N,
+2021-05-01,gen82v2doubles,\N,
+2021-05-01,gen8almostanyability,\N,
+2021-05-01,gen8anythinggoesobtainable,\N,
+2021-05-01,gen8balancedhackmons,\N,
+2021-05-01,gen8battlestadiumsingles,\N,
+2021-05-01,gen8camomons,\N,
+2021-05-01,gen8cap,\N,cap
+2021-05-01,gen8cap1v1,\N,
+2021-05-01,gen8cap1v1gen8camomons,\N,
+2021-05-01,gen8crossevolution,\N,
+2021-05-01,gen8doublescustomgame,\N,
+2021-05-01,gen8fusionevolutionuu,\N,
+2021-05-01,gen8godlygift,\N,
+2021-05-01,gen8inverse,\N,
+2021-05-01,gen8metronomebattle,\N,
+2021-05-01,gen8mixandmega,\N,
+2021-05-01,gen8nationaldexmonotype,\N,not official
+2021-05-01,gen8nationaldexuu,\N,not official
+2021-05-01,gen8nfe,\N,
+2021-05-01,gen8oublitz,\N,
+2021-05-01,gen8pokebilities,\N,
+2021-05-01,gen8sharedpower,\N,
+2021-05-01,gen8sketchmons,\N,
+2021-05-01,gen8stabmons,\N,
+2021-05-01,gen8vgc2021,68,format was renamed last month
+2021-05-01,gen8vgc2021series9limitonerestrictedrestrictedlegendary,\N,
+2021-05-01,gen8zu,\N,not official
