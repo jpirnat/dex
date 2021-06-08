@@ -25,4 +25,7 @@ http://upcarchive.playker.info/0/upokecenter/content/pokemon-colosseum-and-xd-sh
 Azure Heights for some gen 1 move data
 https://www.math.miami.edu/~jam/azure/attacks/comp/statmods.htm
 
+Dragonfree for the catch rates for Shadow Pokémon in Colosseum and XD
+https://www.dragonflycave.com/mechanics/gen-iii-iv-capturing#capture-rate
+
 https://github.com/msikma/pokesprite for Pokémon and item icons
