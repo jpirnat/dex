@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
-use DateTime;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Languages\LanguageName;
 use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
