@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\BaseModel;
-use Jp\Dex\Domain\Languages\LanguageName;
 
 final class BaseView
 {
@@ -19,26 +18,9 @@ final class BaseView
 	 */
 	public function getBaseVariables() : array
 	{
-		// Start the data array.
-		$data = [
+		return [
 			'currentLanguageId' => $this->baseModel->getCurrentLanguageId()->value(),
+			'languages' => $this->baseModel->getLanguages(),
 		];
-
-		// Get data for language names.
-		$languageNames = $this->baseModel->getLanguageNames();
-		uasort(
-			$languageNames,
-			function (LanguageName $a, LanguageName $b) : int {
-				return $a->getName() <=> $b->getName();
-			}
-		);
-		foreach ($languageNames as $languageName) {
-			$data['languages'][] = [
-				'id' => $languageName->getNamedLanguageId()->value(),
-				'name' => $languageName->getName(),
-			];
-		}
-
-		return $data;
 	}
 }

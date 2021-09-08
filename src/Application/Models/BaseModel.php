@@ -4,24 +4,10 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Languages\LanguageName;
-use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
 
 final class BaseModel
 {
 	private LanguageId $currentLanguageId;
-
-
-	/** @var LanguageName[] $languageNames */
-	private array $languageNames = [];
-
-
-	public function __construct(
-		LanguageNameRepositoryInterface $languageNameRepository,
-	) {
-		$this->languageNames = $languageNameRepository->getInOwnLanguages();
-	}
-
 
 	/**
 	 * Set the current language id.
@@ -48,10 +34,23 @@ final class BaseModel
 	/**
 	 * Get the language names, for the language select in the footer.
 	 *
-	 * @return LanguageName[]
+	 * @return array
 	 */
-	public function getLanguageNames() : array
+	public function getLanguages() : array
 	{
-		return $this->languageNames;
+		// I'm hard-coding it for the sake of one fewer database trip on every page load.
+		// Plus, this list only changes once every 3 to 6 years.
+		return [
+			['id' => 4, 'name' => 'Deutsch'],
+			['id' => 2, 'name' => 'English'],
+			['id' => 6, 'name' => 'Español'],
+			['id' => 3, 'name' => 'Français'],
+			['id' => 5, 'name' => 'Italiano'],
+			['id' => 1, 'name' => 'にほんご'],
+			['id' => 8, 'name' => '漢字'],
+			['id' => 9, 'name' => '简体中文'],
+			['id' => 10, 'name' => '繁體中文'],
+			['id' => 7, 'name' => '한국어'],
+		];
 	}
 }
