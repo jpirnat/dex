@@ -23,14 +23,14 @@ const app = new Vue({
 
 			if (this.filterName) {
 				filteredAbilities = filteredAbilities.filter(a => a.name.toLowerCase().includes(
-					this.filterName.toLowerCase())
-				);
+					this.filterName.toLowerCase()
+				));
 			}
 
 			if (this.filterDescription) {
 				filteredAbilities = filteredAbilities.filter(a => a.description.toLowerCase().includes(
-					this.filterDescription.toLowerCase())
-				);
+					this.filterDescription.toLowerCase()
+				));
 			};
 
 			return filteredAbilities;

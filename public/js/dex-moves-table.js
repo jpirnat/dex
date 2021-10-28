@@ -33,14 +33,14 @@ Vue.component('dex-moves-table', {
 
 			if (this.filterName) {
 				filteredMoves = filteredMoves.filter(a => a.name.toLowerCase().includes(
-					this.filterName.toLowerCase())
-				);
+					this.filterName.toLowerCase()
+				));
 			}
 
 			if (this.filterDescription) {
 				filteredMoves = filteredMoves.filter(a => a.description.toLowerCase().includes(
-					this.filterDescription.toLowerCase())
-				);
+					this.filterDescription.toLowerCase()
+				));
 			};
 
 			return filteredMoves;

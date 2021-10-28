@@ -28,13 +28,15 @@ const app = new Vue({
 	},
 	computed: {
 		filteredPokemons() {
-			if (!this.filterName) {
-				return this.pokemons;
+			let filteredPokemons = this.pokemons;
+
+			if (this.filterName) {
+				filteredPokemons = filteredPokemons.filter(p => p.name.toLowerCase().includes(
+					this.filterName.toLowerCase()
+				));
 			}
 
-			return this.pokemons.filter(
-				p => p.name.toLowerCase().includes(this.filterName.toLowerCase())
-			);
+			return filteredPokemons;
 		},
 		paginatedPokemons() {
 			const start = (this.currentPage - 1) * this.itemsPerPage;

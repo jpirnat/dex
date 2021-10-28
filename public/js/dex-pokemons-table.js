@@ -36,8 +36,8 @@ Vue.component('dex-pokemons-table', {
 
 			if (this.filterName) {
 				filteredPokemons = filteredPokemons.filter(p => p.name.toLowerCase().includes(
-					this.filterName.toLowerCase())
-				);
+					this.filterName.toLowerCase()
+				));
 			}
 
 			return filteredPokemons;
