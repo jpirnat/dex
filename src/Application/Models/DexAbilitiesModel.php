@@ -20,11 +20,6 @@ final class DexAbilitiesModel
 
 	/**
 	 * Set data for the dex abilities page.
-	 *
-	 * @param string $generationIdentifier
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $generationIdentifier,
@@ -40,10 +35,9 @@ final class DexAbilitiesModel
 		);
 	}
 
+
 	/**
 	 * Get the generation model.
-	 *
-	 * @return GenerationModel
 	 */
 	public function getGenerationModel() : GenerationModel
 	{
@@ -52,8 +46,6 @@ final class DexAbilitiesModel
 
 	/**
 	 * Get the abilities.
-	 *
-	 * @return array
 	 */
 	public function getAbilities() : array
 	{

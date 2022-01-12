@@ -19,9 +19,6 @@ final class DatabasePokemonTypeRepository implements PokemonTypeRepositoryInterf
 	/**
 	 * Get Pokémon's types by generation and Pokémon.
 	 *
-	 * @param GenerationId $generationId
-	 * @param PokemonId $pokemonId
-	 *
 	 * @return PokemonType[] Indexed and ordered by slot.
 	 */
 	public function getByGenerationAndPokemon(

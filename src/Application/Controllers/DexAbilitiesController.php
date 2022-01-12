@@ -16,10 +16,6 @@ final class DexAbilitiesController
 
 	/**
 	 * Show the dex abilities page.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function index(ServerRequestInterface $request) : void
 	{

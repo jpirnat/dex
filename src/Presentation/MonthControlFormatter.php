@@ -9,11 +9,6 @@ final class MonthControlFormatter
 {
 	/**
 	 * Format the prev month or next month for the month control.
-	 *
-	 * @param DateTime|null $month
-	 * @param IntlFormatter $formatter
-	 *
-	 * @return array|null
 	 */
 	public function format(?DateTime $month, IntlFormatter $formatter) : ?array
 	{

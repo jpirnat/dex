@@ -14,8 +14,6 @@ final class StatsPokemonAbility
 
 	/**
 	 * Get the ability's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -24,8 +22,6 @@ final class StatsPokemonAbility
 
 	/**
 	 * Get the ability's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -34,8 +30,6 @@ final class StatsPokemonAbility
 
 	/**
 	 * Get the ability's percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{
@@ -44,8 +38,6 @@ final class StatsPokemonAbility
 
 	/**
 	 * Get the ability's change.
-	 *
-	 * @return float
 	 */
 	public function getChange() : float
 	{

@@ -16,10 +16,6 @@ final class StatsMoveController
 
 	/**
 	 * Get usage data to create a list of Pokémon who use a specific move.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{

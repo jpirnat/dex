@@ -17,8 +17,6 @@ final class DatabaseUsageRatedQueries implements UsageRatedQueriesInterface
 	/**
 	 * Get the format/rating combinations for this month.
 	 *
-	 * @param DateTime $month
-	 *
 	 * @return array An array of the form [
 	 *     [
 	 *         'formatId' => FormatId

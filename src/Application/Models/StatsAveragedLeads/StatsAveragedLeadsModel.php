@@ -44,14 +44,6 @@ final class StatsAveragedLeadsModel
 
 	/**
 	 * Get leads data averaged over multiple months.
-	 *
-	 * @param string $start
-	 * @param string $end
-	 * @param string $formatIdentifier
-	 * @param int $rating
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $start,
@@ -151,10 +143,9 @@ final class StatsAveragedLeadsModel
 		}
 	}
 
+
 	/**
 	 * Get the start month.
-	 *
-	 * @return string
 	 */
 	public function getStart() : string
 	{
@@ -163,8 +154,6 @@ final class StatsAveragedLeadsModel
 
 	/**
 	 * Get the end month.
-	 *
-	 * @return string
 	 */
 	public function getEnd() : string
 	{
@@ -173,8 +162,6 @@ final class StatsAveragedLeadsModel
 
 	/**
 	 * Get the format.
-	 *
-	 * @return Format
 	 */
 	public function getFormat() : Format
 	{
@@ -183,8 +170,6 @@ final class StatsAveragedLeadsModel
 
 	/**
 	 * Get the rating.
-	 *
-	 * @return int
 	 */
 	public function getRating() : int
 	{
@@ -193,8 +178,6 @@ final class StatsAveragedLeadsModel
 
 	/**
 	 * Get the language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{

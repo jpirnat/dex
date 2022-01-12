@@ -8,23 +8,14 @@ interface PokemonRepositoryInterface
 	/**
 	 * Get a Pokémon by its id.
 	 *
-	 * @param PokemonId $pokemonId
-	 *
 	 * @throws PokemonNotFoundException if no Pokémon exists with this id.
-	 *
-	 * @return Pokemon
 	 */
 	public function getById(PokemonId $pokemonId) : Pokemon;
 
 	/**
 	 * Get a Pokémon by its identifier.
 	 *
-	 * @param string $identifier
-	 *
-	 * @throws PokemonNotFoundException if no Pokémon exists with this
-	 *     identifier.
-	 *
-	 * @return Pokemon
+	 * @throws PokemonNotFoundException if no Pokémon exists with this identifier.
 	 */
 	public function getByIdentifier(string $identifier) : Pokemon;
 

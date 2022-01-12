@@ -22,10 +22,6 @@ final class StatValueContainer
 
 	/**
 	 * Add a stat value to the container.
-	 *
-	 * @param StatValue $statValue
-	 *
-	 * @return void
 	 */
 	public function add(StatValue $statValue) : void
 	{
@@ -35,12 +31,8 @@ final class StatValueContainer
 	/**
 	 * Get a stat value from the container.
 	 *
-	 * @param StatId $statId
-	 *
 	 * @throws StatNotFoundException if the container does not have a stat value
 	 *     for this stat id.
-	 *
-	 * @return StatValue
 	 */
 	public function get(StatId $statId) : StatValue
 	{

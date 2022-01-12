@@ -19,8 +19,6 @@ final class Type
 
 	/**
 	 * Get the type's id.
-	 *
-	 * @return TypeId
 	 */
 	public function getId() : TypeId
 	{
@@ -29,8 +27,6 @@ final class Type
 
 	/**
 	 * Get the type's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -39,8 +35,6 @@ final class Type
 
 	/**
 	 * Get the generation id this type was introduced in.
-	 *
-	 * @return GenerationId
 	 */
 	public function getIntroducedInGenerationId() : GenerationId
 	{
@@ -49,8 +43,6 @@ final class Type
 
 	/**
 	 * Get the type's category id.
-	 *
-	 * @return CategoryId|null
 	 */
 	public function getCategoryId() : ?CategoryId
 	{
@@ -59,8 +51,6 @@ final class Type
 
 	/**
 	 * Get the type's hidden power index.
-	 *
-	 * @return int|null
 	 */
 	public function getHiddenPowerIndex() : ?int
 	{
@@ -69,8 +59,6 @@ final class Type
 
 	/**
 	 * Get the type's color code ("#rrggbb").
-	 *
-	 * @return string
 	 */
 	public function getColorCode() : string
 	{

@@ -11,20 +11,12 @@ interface RatingQueriesInterface
 	/**
 	 * Get the ratings for which usage data is available for this month and format.
 	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 *
 	 * @return int[]
 	 */
 	public function getByMonthAndFormat(DateTime $month, FormatId $formatId) : array;
 
 	/**
-	 * Get the ratings for which usage data is available between these months,
-	 * for this format.
-	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
+	 * Get the ratings for which usage data is available between these months, for this format.
 	 *
 	 * @return int[]
 	 */

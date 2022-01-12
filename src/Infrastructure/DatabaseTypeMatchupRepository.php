@@ -18,8 +18,6 @@ final class DatabaseTypeMatchupRepository implements TypeMatchupRepositoryInterf
 	/**
 	 * Get type matchups by generation.
 	 *
-	 * @param GenerationId $generationId
-	 *
 	 * @return TypeMatchup[]
 	 */
 	public function getByGeneration(GenerationId $generationId) : array
@@ -53,9 +51,6 @@ final class DatabaseTypeMatchupRepository implements TypeMatchupRepositoryInterf
 
 	/**
 	 * Get type matchups by generation and attacking type.
-	 *
-	 * @param GenerationId $generationId
-	 * @param TypeId $typeId
 	 *
 	 * @return TypeMatchup[]
 	 */
@@ -91,9 +86,6 @@ final class DatabaseTypeMatchupRepository implements TypeMatchupRepositoryInterf
 
 	/**
 	 * Get type matchups by generation and defending type.
-	 *
-	 * @param GenerationId $generationId
-	 * @param TypeId $typeId
 	 *
 	 * @return TypeMatchup[]
 	 */

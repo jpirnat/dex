@@ -11,9 +11,6 @@ interface PokemonEggGroupRepositoryInterface
 	/**
 	 * Get Pokémon egg groups by Pokémon.
 	 *
-	 * @param GenerationId $generationId
-	 * @param PokemonId $pokemonId
-	 *
 	 * @return PokemonEggGroup[] Indexed by egg group id.
 	 */
 	public function getByPokemon(GenerationId $generationId, PokemonId $pokemonId) : array;

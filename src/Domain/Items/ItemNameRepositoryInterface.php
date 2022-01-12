@@ -10,13 +10,8 @@ interface ItemNameRepositoryInterface
 	/**
 	 * Get an item name by language and item.
 	 *
-	 * @param LanguageId $languageId
-	 * @param ItemId $itemId
-	 *
 	 * @throws ItemNameNotFoundException if no item name exists for this
 	 *     language and item.
-	 *
-	 * @return ItemName
 	 */
 	public function getByLanguageAndItem(
 		LanguageId $languageId,

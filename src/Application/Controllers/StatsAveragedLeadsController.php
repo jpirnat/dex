@@ -16,10 +16,6 @@ final class StatsAveragedLeadsController
 
 	/**
 	 * Get leads data averaged over multiple months.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{

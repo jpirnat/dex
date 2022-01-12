@@ -7,6 +7,5 @@ use Jp\Dex\Domain\EntityId;
 
 final class GenerationId extends EntityId
 {
-	/** @var int $CURRENT */
 	public const CURRENT = 7;
 }

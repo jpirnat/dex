@@ -10,8 +10,6 @@ interface DexCategoryRepositoryInterface
 	/**
 	 * Get dex categories by their language.
 	 *
-	 * @param LanguageId $languageId
-	 *
 	 * @return DexCategory[] Indexed by id.
 	 */
 	public function getByLanguage(LanguageId $languageId) : array;

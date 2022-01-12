@@ -24,10 +24,6 @@ final class BreedingChainFinder
 	/**
 	 * Find breeding chains that allow this Pokémon to learn this egg move.
 	 *
-	 * @param PokemonId $pokemonId
-	 * @param MoveId $moveId
-	 * @param VersionGroupId $versionGroupId
-	 *
 	 * @return PokemonMove[][]
 	 */
 	public function findChains(
@@ -61,12 +57,7 @@ final class BreedingChainFinder
 	/**
 	 * Find breeding chains that allow this Pokémon to learn this egg move.
 	 *
-	 * @param int $pokemonId
-	 * @param int $moveId
-	 * @param int $versionGroupId
 	 * @param int[] $excludeEggGroupIds
-	 *
-	 * @return BreedingTree
 	 */
 	private function realFindChains(
 		int $pokemonId,

@@ -26,10 +26,6 @@ final class StatsDirectoryParser
 
 	/**
 	 * Parse all month directories in this stats directory.
-	 *
-	 * @param string $url
-	 *
-	 * @return void
 	 */
 	public function parse(string $url) : void
 	{

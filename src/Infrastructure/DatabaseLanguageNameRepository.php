@@ -15,9 +15,9 @@ final class DatabaseLanguageNameRepository implements LanguageNameRepositoryInte
 	) {}
 
 	/**
-	 * Get language names in their own languages. Indexed by language id value.
+	 * Get language names in their own languages.
 	 *
-	 * @return LanguageName[]
+	 * @return LanguageName[] Indexed by language id.
 	 */
 	public function getInOwnLanguages() : array
 	{

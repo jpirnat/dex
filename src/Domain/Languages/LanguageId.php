@@ -7,19 +7,12 @@ use Jp\Dex\Domain\EntityId;
 
 final class LanguageId extends EntityId
 {
-	/** @var int $JAPANESE */
-	public const JAPANESE = 1;
-
-	/** @var int $ENGLISH */
+	private const JAPANESE = 1;
 	public const ENGLISH = 2;
-
-	/** @var int $JAPANESE_KANJI */
-	public const JAPANESE_KANJI = 8;
+	private const JAPANESE_KANJI = 8;
 
 	/**
 	 * Is this a Japanese language?
-	 *
-	 * @return bool
 	 */
 	public function isJapanese() : bool
 	{

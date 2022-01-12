@@ -15,8 +15,6 @@ final class DexNaturesView
 
 	/**
 	 * Show the dex natures page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function index() : ResponseInterface
 	{

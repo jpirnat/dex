@@ -10,12 +10,6 @@ interface AbilityDescriptionRepositoryInterface
 {
 	/**
 	 * Get an ability description by generation, language, and ability.
-	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 * @param AbilityId $abilityId
-	 *
-	 * @return AbilityDescription
 	 */
 	public function getByGenerationAndLanguageAndAbility(
 		GenerationId $generationId,

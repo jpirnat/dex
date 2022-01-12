@@ -19,11 +19,7 @@ final class DatabaseShowdownPokemonRepository implements ShowdownPokemonReposito
 	/** @var string[] $unknownPokemon */
 	private array $unknownPokemon = [];
 
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
+
 	public function __construct(PDO $db)
 	{
 		$stmt = $db->prepare(
@@ -49,10 +45,6 @@ final class DatabaseShowdownPokemonRepository implements ShowdownPokemonReposito
 
 	/**
 	 * Is the Pokémon Showdown Pokémon name known and imported?
-	 *
-	 * @param string $showdownPokemonName
-	 *
-	 * @return bool
 	 */
 	public function isImported(string $showdownPokemonName) : bool
 	{
@@ -61,10 +53,6 @@ final class DatabaseShowdownPokemonRepository implements ShowdownPokemonReposito
 
 	/**
 	 * Is the Pokémon Showdown Pokémon name known and ignored?
-	 *
-	 * @param string $showdownPokemonName
-	 *
-	 * @return bool
 	 */
 	public function isIgnored(string $showdownPokemonName) : bool
 	{
@@ -73,10 +61,6 @@ final class DatabaseShowdownPokemonRepository implements ShowdownPokemonReposito
 
 	/**
 	 * Is the Pokémon Showdown Pokémon name known?
-	 *
-	 * @param string $showdownPokemonName
-	 *
-	 * @return bool
 	 */
 	public function isKnown(string $showdownPokemonName) : bool
 	{
@@ -87,10 +71,6 @@ final class DatabaseShowdownPokemonRepository implements ShowdownPokemonReposito
 
 	/**
 	 * Add a Pokémon Showdown Pokémon name to the list of unknown Pokémon.
-	 *
-	 * @param string $showdownPokemonName
-	 *
-	 * @return void
 	 */
 	public function addUnknown(string $showdownPokemonName) : void
 	{
@@ -100,12 +80,8 @@ final class DatabaseShowdownPokemonRepository implements ShowdownPokemonReposito
 	/**
 	 * Get the Pokémon id of a Pokémon Showdown Pokemon name.
 	 *
-	 * @param string $showdownPokemonName
-	 *
 	 * @throws PokemonNotImportedException if $showdownPokemonName is not an
 	 *     imported Pokémon name.
-	 *
-	 * @return PokemonId
 	 */
 	public function getPokemonId(string $showdownPokemonName) : PokemonId
 	{

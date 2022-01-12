@@ -21,8 +21,6 @@ final class DexPokemonView
 
 	/**
 	 * Show the dex Pokémon page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function index() : ResponseInterface
 	{
@@ -164,8 +162,6 @@ final class DexPokemonView
 	 * data array.
 	 *
 	 * @param DexPokemonMoveMethod[] $dexPokemonMoveMethods
-	 *
-	 * @return array
 	 */
 	public function formatDexPokemonMoveMethods(array $dexPokemonMoveMethods) : array
 	{
@@ -188,8 +184,6 @@ final class DexPokemonView
 	 * array.
 	 *
 	 * @param DexPokemonMove[] $dexPokemonMoves
-	 *
-	 * @return array
 	 */
 	public function formatDexPokemonMoves(array $dexPokemonMoves) : array
 	{

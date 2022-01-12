@@ -15,10 +15,6 @@ final class BaseController
 
 	/**
 	 * Set the variables needed for the base template.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function setBaseVariables(ServerRequestInterface $request) : void
 	{

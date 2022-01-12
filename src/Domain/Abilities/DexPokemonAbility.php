@@ -13,8 +13,6 @@ final class DexPokemonAbility
 
 	/**
 	 * Get the ability's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -23,8 +21,6 @@ final class DexPokemonAbility
 
 	/**
 	 * Get the ability's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -33,8 +29,6 @@ final class DexPokemonAbility
 
 	/**
 	 * Is this a hidden ability?
-	 *
-	 * @return bool
 	 */
 	public function isHiddenAbility() : bool
 	{

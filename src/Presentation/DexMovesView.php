@@ -16,8 +16,6 @@ final class DexMovesView
 
 	/**
 	 * Show the dex moves page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function index() : ResponseInterface
 	{

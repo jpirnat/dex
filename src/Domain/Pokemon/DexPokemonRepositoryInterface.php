@@ -14,13 +14,7 @@ interface DexPokemonRepositoryInterface
 	/**
 	 * Get a dex Pokémon by its id.
 	 *
-	 * @param GenerationId $generationId
-	 * @param PokemonId $pokemonId
-	 * @param LanguageId $languageId
-	 *
 	 * @throws PokemonNotFoundException if no Pokémon exists with this id.
-	 *
-	 * @return DexPokemon.
 	 */
 	public function getById(
 		GenerationId $generationId,
@@ -31,10 +25,6 @@ interface DexPokemonRepositoryInterface
 	/**
 	 * Get all dex Pokémon with this ability.
 	 * This method is used to get data for the dex ability page.
-	 *
-	 * @param GenerationId $generationId
-	 * @param AbilityId $abilityId
-	 * @param LanguageId $languageId
 	 *
 	 * @return DexPokemon[] Ordered by Pokémon sort value.
 	 */
@@ -48,10 +38,6 @@ interface DexPokemonRepositoryInterface
 	 * Get all dex Pokémon with this move.
 	 * This method is used to get data for the dex move page.
 	 *
-	 * @param GenerationId $generationId
-	 * @param MoveId $moveId
-	 * @param LanguageId $languageId
-	 *
 	 * @return DexPokemon[] Indexed by Pokémon id.
 	 */
 	public function getWithMove(
@@ -64,9 +50,6 @@ interface DexPokemonRepositoryInterface
 	 * Get all dex Pokémon in this generation.
 	 * This method is used to get data for the dex Pokémons page.
 	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
 	 * @return DexPokemon[] Ordered by Pokémon sort value.
 	 */
 	public function getByGeneration(
@@ -77,10 +60,6 @@ interface DexPokemonRepositoryInterface
 	/**
 	 * Get all dex Pokémon with this type.
 	 * This method is used to get data for the dex type page.
-	 *
-	 * @param GenerationId $generationId
-	 * @param TypeId $typeId
-	 * @param LanguageId $languageId
 	 *
 	 * @return DexPokemon[] Ordered by Pokémon sort value.
 	 */

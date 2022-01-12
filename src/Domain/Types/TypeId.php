@@ -7,6 +7,5 @@ use Jp\Dex\Domain\EntityId;
 
 final class TypeId extends EntityId
 {
-	/** @var int $WATER */
 	public const WATER = 11;
 }

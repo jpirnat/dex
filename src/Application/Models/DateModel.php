@@ -23,8 +23,6 @@ final class DateModel
 	 * Set this month, prev month, and next month based on the given month.
 	 *
 	 * @param string $month "YYYY-MM"
-	 *
-	 * @return void
 	 */
 	public function setMonth(string $month) : void
 	{
@@ -35,13 +33,9 @@ final class DateModel
 	}
 
 	/**
-	 * Set this month, prev month, and next month based on the given month and
-	 * format.
+	 * Set this month, prev month, and next month based on the given month and format.
 	 *
 	 * @param string $month "YYYY-MM"
-	 * @param FormatId $formatId
-	 *
-	 * @return void
 	 */
 	public function setMonthAndFormat(string $month, FormatId $formatId) : void
 	{
@@ -54,8 +48,6 @@ final class DateModel
 
 	/**
 	 * Get the current month.
-	 *
-	 * @return DateTime
 	 */
 	public function getThisMonth() : DateTime
 	{
@@ -64,8 +56,6 @@ final class DateModel
 
 	/**
 	 * Get the previous month.
-	 *
-	 * @return DateTime|null
 	 */
 	public function getPrevMonth() : ?DateTime
 	{
@@ -74,8 +64,6 @@ final class DateModel
 
 	/**
 	 * Get the next month.
-	 *
-	 * @return DateTime|null
 	 */
 	public function getNextMonth() : ?DateTime
 	{

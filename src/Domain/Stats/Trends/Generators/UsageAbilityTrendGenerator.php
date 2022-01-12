@@ -27,14 +27,6 @@ final class UsageAbilityTrendGenerator
 
 	/**
 	 * Get the data for a usage ability trend line.
-	 *
-	 * @param Format $format
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param AbilityId $abilityId
-	 * @param LanguageId $languageId
-	 *
-	 * @return UsageAbilityTrendLine
 	 */
 	public function generate(
 		Format $format,

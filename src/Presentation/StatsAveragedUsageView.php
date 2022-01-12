@@ -19,8 +19,6 @@ final class StatsAveragedUsageView
 
 	/**
 	 * Get usage data averaged over multiple months.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function getData() : ResponseInterface
 	{

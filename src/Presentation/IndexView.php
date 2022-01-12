@@ -15,8 +15,6 @@ final class IndexView
 
 	/**
 	 * Show the home page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function index() : ResponseInterface
 	{
@@ -30,8 +28,6 @@ final class IndexView
 
 	/**
 	 * Show the About page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function about() : ResponseInterface
 	{
@@ -47,8 +43,6 @@ final class IndexView
 
 	/**
 	 * Show the dex abilities page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function dexAbilities() : ResponseInterface
 	{
@@ -64,8 +58,6 @@ final class IndexView
 
 	/**
 	 * Show the dex ability page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function dexAbility() : ResponseInterface
 	{
@@ -81,8 +73,6 @@ final class IndexView
 
 	/**
 	 * Show the dex moves page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function dexMoves() : ResponseInterface
 	{
@@ -98,8 +88,6 @@ final class IndexView
 
 	/**
 	 * Show the dex move page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function dexMove() : ResponseInterface
 	{
@@ -115,8 +103,6 @@ final class IndexView
 
 	/**
 	 * Show the dex natures page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function dexNatures() : ResponseInterface
 	{
@@ -132,8 +118,6 @@ final class IndexView
 
 	/**
 	 * Show the dex Pokémons page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function dexPokemons() : ResponseInterface
 	{
@@ -149,8 +133,6 @@ final class IndexView
 
 	/**
 	 * Show the dex Pokémon page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function dexPokemon() : ResponseInterface
 	{
@@ -166,8 +148,6 @@ final class IndexView
 
 	/**
 	 * Show the breeding chains page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function breedingChains() : ResponseInterface
 	{
@@ -183,8 +163,6 @@ final class IndexView
 
 	/**
 	 * Show the dex types page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function dexTypes() : ResponseInterface
 	{
@@ -200,8 +178,6 @@ final class IndexView
 
 	/**
 	 * Show the dex type page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function dexType() : ResponseInterface
 	{
@@ -217,8 +193,6 @@ final class IndexView
 
 	/**
 	 * Show the stats index page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function statsIndex() : ResponseInterface
 	{
@@ -234,8 +208,6 @@ final class IndexView
 
 	/**
 	 * Show the stats month page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function statsMonth() : ResponseInterface
 	{
@@ -251,8 +223,6 @@ final class IndexView
 
 	/**
 	 * Show the stats usage page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function statsUsage() : ResponseInterface
 	{
@@ -268,8 +238,6 @@ final class IndexView
 
 	/**
 	 * Show the stats leads page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function statsLeads() : ResponseInterface
 	{
@@ -285,8 +253,6 @@ final class IndexView
 
 	/**
 	 * Show the stats Pokémon page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function statsPokemon() : ResponseInterface
 	{
@@ -302,8 +268,6 @@ final class IndexView
 
 	/**
 	 * Show the stats ability page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function statsAbility() : ResponseInterface
 	{
@@ -319,8 +283,6 @@ final class IndexView
 
 	/**
 	 * Show the stats item page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function statsItem() : ResponseInterface
 	{
@@ -336,8 +298,6 @@ final class IndexView
 
 	/**
 	 * Show the stats move page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function statsMove() : ResponseInterface
 	{
@@ -353,8 +313,6 @@ final class IndexView
 
 	/**
 	 * Show the stats chart page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function statsChart() : ResponseInterface
 	{
@@ -370,8 +328,6 @@ final class IndexView
 
 	/**
 	 * Show the 404 page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function error404() : ResponseInterface
 	{
@@ -387,8 +343,6 @@ final class IndexView
 
 	/**
 	 * Show the error page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function error() : ResponseInterface
 	{

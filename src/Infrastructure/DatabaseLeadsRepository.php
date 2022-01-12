@@ -17,11 +17,6 @@ final class DatabaseLeadsRepository implements LeadsRepositoryInterface
 
 	/**
 	 * Does a leads record exist for this month and format?
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 *
-	 * @return bool
 	 */
 	public function has(DateTime $month, FormatId $formatId) : bool
 	{
@@ -41,10 +36,6 @@ final class DatabaseLeadsRepository implements LeadsRepositoryInterface
 
 	/**
 	 * Save a leads rated Pokémon record.
-	 *
-	 * @param Leads $leads
-	 *
-	 * @return void
 	 */
 	public function save(Leads $leads) : void
 	{

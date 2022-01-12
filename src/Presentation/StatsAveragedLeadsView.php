@@ -19,8 +19,6 @@ final class StatsAveragedLeadsView
 
 	/**
 	 * Get leads data averaged over multiple months.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function getData() : ResponseInterface
 	{

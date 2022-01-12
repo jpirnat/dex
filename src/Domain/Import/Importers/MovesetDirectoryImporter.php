@@ -20,10 +20,6 @@ final class MovesetDirectoryImporter
 
 	/**
 	 * Import all moveset files in this directory of moveset files.
-	 *
-	 * @param string $url
-	 *
-	 * @return void
 	 */
 	public function import(string $url) : void
 	{

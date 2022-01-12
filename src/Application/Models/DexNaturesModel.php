@@ -12,11 +12,6 @@ final class DexNaturesModel
 	private array $natures = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param DexNatureRepositoryInterface $dexNatureRepository
-	 */
 	public function __construct(
 		private DexNatureRepositoryInterface $dexNatureRepository,
 	) {}
@@ -24,11 +19,6 @@ final class DexNaturesModel
 
 	/**
 	 * Set data for the dex natures page.
-	 *
-	 * @param string $generationIdentifier
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $generationIdentifier,
@@ -39,10 +29,9 @@ final class DexNaturesModel
 		$this->natures = $this->dexNatureRepository->getByLanguage($languageId);
 	}
 
+
 	/**
 	 * Get the generation identifier.
-	 *
-	 * @return string
 	 */
 	public function getGenerationIdentifier() : string
 	{
@@ -51,8 +40,6 @@ final class DexNaturesModel
 
 	/**
 	 * Get the natures.
-	 *
-	 * @return array
 	 */
 	public function getNatures() : array
 	{

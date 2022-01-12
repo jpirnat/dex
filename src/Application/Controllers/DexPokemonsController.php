@@ -16,10 +16,6 @@ final class DexPokemonsController
 
 	/**
 	 * Show the dex Pokémons page.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function index(ServerRequestInterface $request) : void
 	{

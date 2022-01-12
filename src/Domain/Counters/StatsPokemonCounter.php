@@ -18,8 +18,6 @@ final class StatsPokemonCounter
 
 	/**
 	 * Get the counter's icon.
-	 *
-	 * @return string
 	 */
 	public function getIcon() : string
 	{
@@ -28,8 +26,6 @@ final class StatsPokemonCounter
 
 	/**
 	 * Get the counter's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -38,8 +34,6 @@ final class StatsPokemonCounter
 
 	/**
 	 * Get the counter's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -48,8 +42,6 @@ final class StatsPokemonCounter
 
 	/**
 	 * Get the counter's score.
-	 *
-	 * @return float
 	 */
 	public function getScore() : float
 	{
@@ -58,8 +50,6 @@ final class StatsPokemonCounter
 
 	/**
 	 * Get the counter's percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{
@@ -68,8 +58,6 @@ final class StatsPokemonCounter
 
 	/**
 	 * Get the counter's standard deviation.
-	 *
-	 * @return float
 	 */
 	public function getStandardDeviation() : float
 	{
@@ -78,8 +66,6 @@ final class StatsPokemonCounter
 
 	/**
 	 * Get the counter's percent knocked out.
-	 *
-	 * @return float
 	 */
 	public function getPercentKnockedOut() : float
 	{
@@ -88,8 +74,6 @@ final class StatsPokemonCounter
 
 	/**
 	 * Get the counter's percent switched out.
-	 *
-	 * @return float
 	 */
 	public function getPercentSwitchedOut() : float
 	{

@@ -18,8 +18,6 @@ final class TechnicalMachine
 
 	/**
 	 * Get the TM's version group id.
-	 *
-	 * @return VersionGroupId
 	 */
 	public function getVersionGroupId() : VersionGroupId
 	{
@@ -28,8 +26,6 @@ final class TechnicalMachine
 
 	/**
 	 * Get the TM's machine type.
-	 *
-	 * @return MachineType
 	 */
 	public function getMachineType() : MachineType
 	{
@@ -37,19 +33,7 @@ final class TechnicalMachine
 	}
 
 	/**
-	 * Get whether this machine is an HM.
-	 *
-	 * @return bool
-	 */
-	public function isHm() : bool
-	{
-		return $this->machineType->value() === MachineType::HM;
-	}
-
-	/**
 	 * Get the TM's number.
-	 *
-	 * @return int
 	 */
 	public function getNumber() : int
 	{
@@ -58,8 +42,6 @@ final class TechnicalMachine
 
 	/**
 	 * Get the TM's item id.
-	 *
-	 * @return ItemId
 	 */
 	public function getItemId() : ItemId
 	{
@@ -68,8 +50,6 @@ final class TechnicalMachine
 
 	/**
 	 * Get the TM's move id.
-	 *
-	 * @return MoveId
 	 */
 	public function getMoveId() : MoveId
 	{

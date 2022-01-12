@@ -16,10 +16,6 @@ final class DexTypeController
 
 	/**
 	 * Show the dex type page.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function index(ServerRequestInterface $request) : void
 	{

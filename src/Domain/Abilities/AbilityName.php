@@ -15,8 +15,6 @@ final class AbilityName
 
 	/**
 	 * Get the ability name's language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -25,8 +23,6 @@ final class AbilityName
 
 	/**
 	 * Get the ability name's ability id.
-	 *
-	 * @return AbilityId
 	 */
 	public function getAbilityId() : AbilityId
 	{
@@ -35,8 +31,6 @@ final class AbilityName
 
 	/**
 	 * Get the ability name's name value.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{

@@ -10,13 +10,8 @@ interface MoveNameRepositoryInterface
 	/**
 	 * Get a move name by language and move.
 	 *
-	 * @param LanguageId $languageId
-	 * @param MoveId $moveId
-	 *
 	 * @throws MoveNameNotFoundException if no move name exists for this
 	 *     language and move.
-	 *
-	 * @return MoveName
 	 */
 	public function getByLanguageAndMove(
 		LanguageId $languageId,

@@ -20,8 +20,6 @@ final class UsageData
 
 	/**
 	 * Get the rank.
-	 *
-	 * @return int
 	 */
 	public function getRank() : int
 	{
@@ -30,8 +28,6 @@ final class UsageData
 
 	/**
 	 * Get the Pokémon name.
-	 *
-	 * @return string
 	 */
 	public function getPokemonName() : string
 	{
@@ -40,8 +36,6 @@ final class UsageData
 
 	/**
 	 * Get the months.
-	 *
-	 * @return int
 	 */
 	public function getMonths() : int
 	{
@@ -50,8 +44,6 @@ final class UsageData
 
 	/**
 	 * Get the Pokémon identifier.
-	 *
-	 * @return string
 	 */
 	public function getPokemonIdentifier() : string
 	{
@@ -60,8 +52,6 @@ final class UsageData
 
 	/**
 	 * Get the form icon.
-	 *
-	 * @return string
 	 */
 	public function getFormIcon() : string
 	{
@@ -70,8 +60,6 @@ final class UsageData
 
 	/**
 	 * Get the usage percent.
-	 *
-	 * @return float
 	 */
 	public function getUsagePercent() : float
 	{
@@ -80,8 +68,6 @@ final class UsageData
 
 	/**
 	 * Get the raw.
-	 *
-	 * @return int
 	 */
 	public function getRaw() : int
 	{
@@ -90,8 +76,6 @@ final class UsageData
 
 	/**
 	 * Get the raw percent.
-	 *
-	 * @return float
 	 */
 	public function getRawPercent() : float
 	{
@@ -100,8 +84,6 @@ final class UsageData
 
 	/**
 	 * Get the real.
-	 *
-	 * @return int
 	 */
 	public function getReal() : int
 	{
@@ -110,8 +92,6 @@ final class UsageData
 
 	/**
 	 * Get the real percent.
-	 *
-	 * @return float
 	 */
 	public function getRealPercent() : float
 	{

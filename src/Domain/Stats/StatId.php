@@ -8,31 +8,16 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class StatId extends EntityId
 {
-	/** @var int $HP */
 	public const HP = 1;
-
-	/** @var int $ATTACK */
 	public const ATTACK = 2;
-
-	/** @var int $DEFENSE */
 	public const DEFENSE = 3;
-
-	/** @var int $SPEED */
 	public const SPEED = 4;
-
-	/** @var int SPECIAL */
 	public const SPECIAL = 5;
-
-	/** @var int $SPECIAL_ATTACK */
 	public const SPECIAL_ATTACK = 8;
-
-	/** @var int $SPECIAL_DEFENSE */
 	public const SPECIAL_DEFENSE = 9;
 
 	/**
 	 * Get the non battle-only stat ids for this generation.
-	 *
-	 * @param GenerationId $generationId
 	 *
 	 * @return self[]
 	 */

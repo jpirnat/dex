@@ -11,13 +11,6 @@ interface LeadsRatedAveragedPokemonRepositoryInterface
 	/**
 	 * Do any leads rated averaged Pokémon records exist for this start month,
 	 * end month, format, and rating?
-	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
-	 * @return bool
 	 */
 	public function hasAny(
 		DateTime $start,
@@ -28,14 +21,9 @@ interface LeadsRatedAveragedPokemonRepositoryInterface
 
 	/**
 	 * Get leads rated averaged Pokémon records by their start month, end month,
-	 * format, and rating. Indexed by Pokémon id value.
+	 * format, and rating.
 	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
-	 * @return LeadsRatedAveragedPokemon[]
+	 * @return LeadsRatedAveragedPokemon[] Indexed by Pokémon id.
 	 */
 	public function getByMonthsAndFormatAndRating(
 		DateTime $start,

@@ -29,14 +29,6 @@ final class MovesetMoveTrendGenerator
 
 	/**
 	 * Get the data for a moveset move trend line.
-	 *
-	 * @param Format $format
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param MoveId $moveId
-	 * @param LanguageId $languageId
-	 *
-	 * @return MovesetMoveTrendLine
 	 */
 	public function generate(
 		Format $format,

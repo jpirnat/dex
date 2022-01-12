@@ -13,8 +13,6 @@ final class DexFlag
 
 	/**
 	 * Get the flag's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -23,8 +21,6 @@ final class DexFlag
 
 	/**
 	 * Get the flag's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -33,8 +29,6 @@ final class DexFlag
 
 	/**
 	 * Get the flag's description.
-	 *
-	 * @return string
 	 */
 	public function getDescription() : string
 	{

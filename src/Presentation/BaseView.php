@@ -13,8 +13,6 @@ final class BaseView
 
 	/**
 	 * Get the variables needed for the base template.
-	 *
-	 * @return array
 	 */
 	public function getBaseVariables() : array
 	{

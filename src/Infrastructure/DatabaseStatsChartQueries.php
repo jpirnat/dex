@@ -20,9 +20,6 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 	/**
 	 * Get the months that have data recorded for this format and rating.
 	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
 	 * @return array Indexed by month ('YYYY-MM-DD'). Ordered by month.
 	 */
 	public function getMonthsWithData(FormatId $formatId, int $rating) : array
@@ -49,10 +46,6 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 
 	/**
 	 * Get usage data for the usage chart.
-	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
 	 *
 	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
 	 */
@@ -87,10 +80,6 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 
 	/**
 	 * Get usage data for the lead usage chart.
-	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
 	 *
 	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
 	 */
@@ -127,11 +116,6 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 
 	/**
 	 * Get usage data for the moveset ability chart.
-	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param AbilityId $abilityId
 	 *
 	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
 	 */
@@ -172,11 +156,6 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 	/**
 	 * Get usage data for the moveset item chart.
 	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param ItemId $itemId
-	 *
 	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
 	 */
 	public function getMovesetItem(
@@ -215,11 +194,6 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 
 	/**
 	 * Get usage data for the moveset move chart.
-	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param MoveId $moveId
 	 *
 	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
 	 */
@@ -260,11 +234,6 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 	/**
 	 * Get usage data for the usage ability chart.
 	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param AbilityId $abilityId
-	 *
 	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
 	 */
 	public function getUsageAbility(
@@ -304,11 +273,6 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 	/**
 	 * Get usage data for the usage item chart.
 	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param ItemId $itemId
-	 *
 	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
 	 */
 	public function getUsageItem(
@@ -347,11 +311,6 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 
 	/**
 	 * Get usage data for the usage move chart.
-	 *
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param MoveId $moveId
 	 *
 	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
 	 */

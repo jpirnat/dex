@@ -17,10 +17,6 @@ final class StatsMonthController
 	/**
 	 * Get the formats list to recreate a stats month directory, such as
 	 * http://www.smogon.com/stats/2014-11.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function index(ServerRequestInterface $request) : void
 	{

@@ -19,13 +19,12 @@ final class StatsIndexModel
 
 	/**
 	 * Set the months that have usage data.
-	 *
-	 * @return void
 	 */
 	public function setMonths() : void
 	{
 		$this->months = $this->usageQueries->getMonths();
 	}
+
 
 	/**
 	 * Get the months that have usage data.

@@ -15,8 +15,6 @@ final class VersionGroup
 
 	/**
 	 * Get the version group's id.
-	 *
-	 * @return VersionGroupId
 	 */
 	public function getId() : VersionGroupId
 	{
@@ -25,8 +23,6 @@ final class VersionGroup
 
 	/**
 	 * Get the version group's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -35,8 +31,6 @@ final class VersionGroup
 
 	/**
 	 * Get the version group's generation id.
-	 *
-	 * @return GenerationId
 	 */
 	public function getGenerationId() : GenerationId
 	{
@@ -45,8 +39,6 @@ final class VersionGroup
 
 	/**
 	 * Get the version group's icon.
-	 *
-	 * @return string
 	 */
 	public function getIcon() : string
 	{
@@ -55,8 +47,6 @@ final class VersionGroup
 
 	/**
 	 * Get the version group's sort value.
-	 *
-	 * @return int
 	 */
 	public function getSort() : int
 	{

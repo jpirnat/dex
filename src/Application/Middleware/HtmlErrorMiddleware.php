@@ -21,11 +21,6 @@ final class HtmlErrorMiddleware implements MiddlewareInterface
 	/**
 	 * Intercept all errors and exceptions in the code and redirect the user to
 	 * the Error page.
-	 *
-	 * @param ServerRequestInterface $request
-	 * @param RequestHandlerInterface $handler
-	 *
-	 * @return ResponseInterface
 	 */
 	public function process(
 		ServerRequestInterface $request,

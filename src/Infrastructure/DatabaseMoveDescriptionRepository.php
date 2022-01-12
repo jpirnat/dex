@@ -18,12 +18,6 @@ final class DatabaseMoveDescriptionRepository implements MoveDescriptionReposito
 
 	/**
 	 * Get a move description by generation, language, and move.
-	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 * @param MoveId $moveId
-	 *
-	 * @return MoveDescription
 	 */
 	public function getByGenerationAndLanguageAndMove(
 		GenerationId $generationId,

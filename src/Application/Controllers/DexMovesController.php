@@ -16,10 +16,6 @@ final class DexMovesController
 
 	/**
 	 * Show the dex moves page.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function index(ServerRequestInterface $request) : void
 	{

@@ -20,8 +20,6 @@ final class PokemonMove
 
 	/**
 	 * Get the Pokémon move's Pokémon id.
-	 *
-	 * @return PokemonId
 	 */
 	public function getPokemonId() : PokemonId
 	{
@@ -30,8 +28,6 @@ final class PokemonMove
 
 	/**
 	 * Get the Pokémon move's version group id.
-	 *
-	 * @return VersionGroupId
 	 */
 	public function getVersionGroupId() : VersionGroupId
 	{
@@ -40,8 +36,6 @@ final class PokemonMove
 
 	/**
 	 * Get the Pokémon move's move id.
-	 *
-	 * @return MoveId
 	 */
 	public function getMoveId() : MoveId
 	{
@@ -50,8 +44,6 @@ final class PokemonMove
 
 	/**
 	 * Get the Pokémon move's move method id.
-	 *
-	 * @return MoveMethodId
 	 */
 	public function getMoveMethodId() : MoveMethodId
 	{
@@ -60,8 +52,6 @@ final class PokemonMove
 
 	/**
 	 * Get the Pokémon move's level.
-	 *
-	 * @return int
 	 */
 	public function getLevel() : int
 	{
@@ -70,8 +60,6 @@ final class PokemonMove
 
 	/**
 	 * Get the Pokémon move's sort value.
-	 *
-	 * @return int
 	 */
 	public function getSort() : int
 	{

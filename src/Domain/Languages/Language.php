@@ -14,8 +14,6 @@ final class Language
 
 	/**
 	 * Get the language's id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getId() : LanguageId
 	{
@@ -24,8 +22,6 @@ final class Language
 
 	/**
 	 * Get the language's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -34,8 +30,6 @@ final class Language
 
 	/**
 	 * Get the language's locale.
-	 *
-	 * @return string
 	 */
 	public function getLocale() : string
 	{
@@ -44,8 +38,6 @@ final class Language
 
 	/**
 	 * Get the language's date format.
-	 *
-	 * @return string
 	 */
 	public function getDateFormat() : string
 	{

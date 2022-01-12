@@ -14,14 +14,6 @@ interface StatsPokemonItemRepositoryInterface
 	/**
 	 * Get stats Pokémon items by month, format, rating, and Pokémon.
 	 *
-	 * @param DateTime $month
-	 * @param DateTime|null $prevMonth
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
 	 * @return StatsPokemonItem[] Ordered by percent descending.
 	 */
 	public function getByMonth(

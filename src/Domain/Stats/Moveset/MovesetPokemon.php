@@ -44,8 +44,6 @@ final class MovesetPokemon
 
 	/**
 	 * Get the month.
-	 *
-	 * @return DateTime
 	 */
 	public function getMonth() : DateTime
 	{
@@ -54,8 +52,6 @@ final class MovesetPokemon
 
 	/**
 	 * Get the format id.
-	 *
-	 * @return FormatId
 	 */
 	public function getFormatId() : FormatId
 	{
@@ -64,8 +60,6 @@ final class MovesetPokemon
 
 	/**
 	 * Get the Pokémon id.
-	 *
-	 * @return PokemonId
 	 */
 	public function getPokemonId() : PokemonId
 	{
@@ -74,8 +68,6 @@ final class MovesetPokemon
 
 	/**
 	 * Get the raw count.
-	 *
-	 * @return int
 	 */
 	public function getRawCount() : int
 	{
@@ -84,8 +76,6 @@ final class MovesetPokemon
 
 	/**
 	 * Get the viability ceiling.
-	 *
-	 * @return int|null
 	 */
 	public function getViabilityCeiling() : ?int
 	{

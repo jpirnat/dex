@@ -21,15 +21,9 @@ final class DatabaseMovesetRatedAveragedAbilityRepository implements MovesetRate
 
 	/**
 	 * Get moveset rated averaged ability records by their start month, end month,
-	 * format, rating, and Pokémon. Indexed by ability id value.
+	 * format, rating, and Pokémon.
 	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return MovesetRatedAveragedAbility[]
+	 * @return MovesetRatedAveragedAbility[] Indexed by ability id.
 	 */
 	public function getByMonthsAndFormatAndRatingAndPokemon(
 		DateTime $start,

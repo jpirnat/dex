@@ -16,8 +16,6 @@ final class Move
 
 	/**
 	 * Get the move's id.
-	 *
-	 * @return MoveId
 	 */
 	public function getId() : MoveId
 	{
@@ -26,8 +24,6 @@ final class Move
 
 	/**
 	 * Get the move's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -36,8 +32,6 @@ final class Move
 
 	/**
 	 * Get the version group id this move was introduced in.
-	 *
-	 * @return VersionGroupId
 	 */
 	public function getIntroducedInVersionGroupId() : VersionGroupId
 	{
@@ -46,8 +40,6 @@ final class Move
 
 	/**
 	 * Is this move a Z-Move?
-	 *
-	 * @return bool
 	 */
 	public function isZMove() : bool
 	{

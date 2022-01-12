@@ -13,13 +13,6 @@ interface StatsLeadsPokemonRepositoryInterface
 	/**
 	 * Get stats leads Pokémon by month, format, and rating.
 	 *
-	 * @param DateTime $month
-	 * @param DateTime|null $prevMonth
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
 	 * @return StatsLeadsPokemon[] Ordered by rank ascending.
 	 */
 	public function getByMonth(

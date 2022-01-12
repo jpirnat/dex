@@ -16,10 +16,6 @@ final class DatabaseMovesetRatedItemRepository implements MovesetRatedItemReposi
 
 	/**
 	 * Save a moveset rated item record.
-	 *
-	 * @param MovesetRatedItem $movesetRatedItem
-	 *
-	 * @return void
 	 */
 	public function save(MovesetRatedItem $movesetRatedItem) : void
 	{

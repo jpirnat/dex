@@ -51,14 +51,6 @@ final class BreedingChainsModel
 
 	/**
 	 * Set breeding chain data for this Pokémon, move, and version group combination.
-	 *
-	 * @param string $generationIdentifier
-	 * @param string $pokemonIdentifier
-	 * @param string $moveIdentifier
-	 * @param string $versionGroupIdentifier
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $generationIdentifier,
@@ -111,12 +103,6 @@ final class BreedingChainsModel
 
 	/**
 	 * Create the breeding chain record for this Pokémon move.
-	 *
-	 * @param GenerationId $generationId
-	 * @param PokemonMove $pokemonMove
-	 * @param LanguageId $languageId
-	 *
-	 * @return BreedingChainRecord
 	 */
 	private function getRecord(
 		GenerationId $generationId,
@@ -182,10 +168,6 @@ final class BreedingChainsModel
 
 	/**
 	 * Get the alt text for this gender ratio.
-	 *
-	 * @param int $genderRatio
-	 *
-	 * @return string
 	 */
 	public function genderRatioText(int $genderRatio) : string
 	{
@@ -219,8 +201,6 @@ final class BreedingChainsModel
 
 	/**
 	 * Get the generation model.
-	 *
-	 * @return GenerationModel
 	 */
 	public function getGenerationModel() : GenerationModel
 	{
@@ -229,8 +209,6 @@ final class BreedingChainsModel
 
 	/**
 	 * Get the Pokémon.
-	 *
-	 * @return array
 	 */
 	public function getPokemon() : array
 	{
@@ -239,8 +217,6 @@ final class BreedingChainsModel
 
 	/**
 	 * Get the move.
-	 *
-	 * @return array
 	 */
 	public function getMove() : array
 	{

@@ -21,11 +21,6 @@ final class PokemonMoveFormatter
 	/**
 	 * Format in words the method through which this Pokémon move is learned.
 	 * Examples: "Level 15", "TM92", "Egg".
-	 *
-	 * @param PokemonMove $pokemonMove
-	 * @param LanguageId $languageId
-	 *
-	 * @return string
 	 */
 	public function format(
 		PokemonMove $pokemonMove,

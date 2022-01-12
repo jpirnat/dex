@@ -21,15 +21,9 @@ final class DatabaseMovesetRatedAveragedItemRepository implements MovesetRatedAv
 
 	/**
 	 * Get moveset rated averaged item records by their start month, end month,
-	 * format, rating, and Pokémon. Indexed by item id value.
+	 * format, rating, and Pokémon.
 	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return MovesetRatedAveragedItem[]
+	 * @return MovesetRatedAveragedItem[] Indexed by item id.
 	 */
 	public function getByMonthsAndFormatAndRatingAndPokemon(
 		DateTime $start,

@@ -21,10 +21,6 @@ final class IntlFormatterFactory
 
 	/**
 	 * Create the IntlFormatter for this language.
-	 *
-	 * @param LanguageId $languageId
-	 *
-	 * @return IntlFormatter
 	 */
 	public function createFor(LanguageId $languageId) : IntlFormatter
 	{

@@ -20,13 +20,6 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 	/**
 	 * Does a moveset rated Pokémon record exist for this month, format, rating,
 	 * and Pokémon?
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return bool
 	 */
 	public function has(
 		DateTime $month,
@@ -57,12 +50,6 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 	/**
 	 * Do any moveset rated Pokémon records exist for this month, format, and
 	 * rating?
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
-	 * @return bool
 	 */
 	public function hasAny(DateTime $month, FormatId $formatId, int $rating) : bool
 	{
@@ -87,14 +74,6 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 	/**
 	 * Count the moveset rated Pokémon records for this start month, end month,
 	 * format, rating, and Pokémon.
-	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return int
 	 */
 	public function count(
 		DateTime $start,
@@ -125,14 +104,9 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 
 	/**
 	 * Count the moveset rated Pokémon records for this start month, end month,
-	 * format, and rating. Indexed by Pokémon id.
+	 * format, and rating.
 	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
-	 * @return int[]
+	 * @return int[] Indexed by Pokémon id.
 	 */
 	public function countAll(
 		DateTime $start,
@@ -162,10 +136,6 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 
 	/**
 	 * Save a moveset rated Pokémon record.
-	 *
-	 * @param MovesetRatedPokemon $movesetRatedPokemon
-	 *
-	 * @return void
 	 */
 	public function save(MovesetRatedPokemon $movesetRatedPokemon) : void
 	{
@@ -185,13 +155,6 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 
 	/**
 	 * Get a moveset rated Pokémon record by month, format, rating, and Pokémon.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return MovesetRatedPokemon|null
 	 */
 	public function getByMonthAndFormatAndRatingAndPokemon(
 		DateTime $month,

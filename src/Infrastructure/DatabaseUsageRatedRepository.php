@@ -17,12 +17,6 @@ final class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterfac
 
 	/**
 	 * Does a usage rated record exist for this month, format, and rating?
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
-	 * @return bool
 	 */
 	public function has(DateTime $month, FormatId $formatId, int $rating) : bool
 	{
@@ -44,10 +38,6 @@ final class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterfac
 
 	/**
 	 * Save a usage rated record.
-	 *
-	 * @param UsageRated $usageRated
-	 *
-	 * @return void
 	 */
 	public function save(UsageRated $usageRated) : void
 	{

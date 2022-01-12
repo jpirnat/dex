@@ -21,14 +21,6 @@ final class DatabaseStatsMovePokemonRepository implements StatsMovePokemonReposi
 	/**
 	 * Get stats move Pokémon by month, format, rating, and move.
 	 *
-	 * @param DateTime $month
-	 * @param DateTime|null $prevMonth
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param MoveId $moveId
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
 	 * @return StatsMovePokemon[] Ordered by usage percent descending.
 	 */
 	public function getByMonth(

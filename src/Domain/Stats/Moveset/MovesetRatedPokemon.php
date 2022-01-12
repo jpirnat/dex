@@ -26,8 +26,6 @@ final class MovesetRatedPokemon
 
 	/**
 	 * Get the usage rated Pokémon id.
-	 *
-	 * @return UsageRatedPokemonId
 	 */
 	public function getUsageRatedPokemonId() : UsageRatedPokemonId
 	{
@@ -36,8 +34,6 @@ final class MovesetRatedPokemon
 
 	/**
 	 * Get the average weight.
-	 *
-	 * @return float
 	 */
 	public function getAverageWeight() : float
 	{

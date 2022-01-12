@@ -26,8 +26,6 @@ final class Spread
 
 	/**
 	 * Get the Pokémon Showdown nature name.
-	 *
-	 * @return string
 	 */
 	public function showdownNatureName() : string
 	{
@@ -36,8 +34,6 @@ final class Spread
 
 	/**
 	 * Get the HP EVs.
-	 *
-	 * @return int
 	 */
 	public function hp() : int
 	{
@@ -46,8 +42,6 @@ final class Spread
 
 	/**
 	 * Get the Attack EVs.
-	 *
-	 * @return int
 	 */
 	public function atk() : int
 	{
@@ -56,8 +50,6 @@ final class Spread
 
 	/**
 	 * Get the Defense EVs.
-	 *
-	 * @return int
 	 */
 	public function def() : int
 	{
@@ -66,8 +58,6 @@ final class Spread
 
 	/**
 	 * Get the Special Attack EVs.
-	 *
-	 * @return int
 	 */
 	public function spa() : int
 	{
@@ -76,8 +66,6 @@ final class Spread
 
 	/**
 	 * Get the Special Defense EVs.
-	 *
-	 * @return int
 	 */
 	public function spd() : int
 	{
@@ -86,8 +74,6 @@ final class Spread
 
 	/**
 	 * Get the Speed EVs.
-	 *
-	 * @return int
 	 */
 	public function spe() : int
 	{
@@ -96,8 +82,6 @@ final class Spread
 
 	/**
 	 * Get the percent.
-	 *
-	 * @return float
 	 */
 	public function percent() : float
 	{

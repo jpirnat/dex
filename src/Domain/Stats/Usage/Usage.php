@@ -35,8 +35,6 @@ final class Usage
 
 	/**
 	 * Get the month.
-	 *
-	 * @return DateTime
 	 */
 	public function getMonth() : DateTime
 	{
@@ -45,8 +43,6 @@ final class Usage
 
 	/**
 	 * Get the format id.
-	 *
-	 * @return FormatId
 	 */
 	public function getFormatId() : FormatId
 	{
@@ -55,8 +51,6 @@ final class Usage
 
 	/**
 	 * Get the total battles.
-	 *
-	 * @return int
 	 */
 	public function getTotalBattles() : int
 	{

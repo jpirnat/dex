@@ -14,8 +14,6 @@ final class DexType
 
 	/**
 	 * Get the type's id.
-	 *
-	 * @return TypeId
 	 */
 	public function getId() : TypeId
 	{
@@ -24,8 +22,6 @@ final class DexType
 
 	/**
 	 * Get the type's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -34,8 +30,6 @@ final class DexType
 
 	/**
 	 * Get the type's icon.
-	 *
-	 * @return string
 	 */
 	public function getIcon() : string
 	{
@@ -44,8 +38,6 @@ final class DexType
 
 	/**
 	 * Get the type's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{

@@ -50,8 +50,6 @@ final class MovesetRatedAveragedAbility
 
 	/**
 	 * Get the start month.
-	 *
-	 * @return DateTime
 	 */
 	public function getStart() : DateTime
 	{
@@ -60,8 +58,6 @@ final class MovesetRatedAveragedAbility
 
 	/**
 	 * Get the end month.
-	 *
-	 * @return DateTime
 	 */
 	public function getEnd() : DateTime
 	{
@@ -70,8 +66,6 @@ final class MovesetRatedAveragedAbility
 
 	/**
 	 * Get the format id.
-	 *
-	 * @return FormatId
 	 */
 	public function getFormatId() : FormatId
 	{
@@ -80,8 +74,6 @@ final class MovesetRatedAveragedAbility
 
 	/**
 	 * Get the rating.
-	 *
-	 * @return int
 	 */
 	public function getRating() : int
 	{
@@ -90,8 +82,6 @@ final class MovesetRatedAveragedAbility
 
 	/**
 	 * Get the Pokémon id.
-	 *
-	 * @return PokemonId
 	 */
 	public function getPokemonId() : PokemonId
 	{
@@ -100,8 +90,6 @@ final class MovesetRatedAveragedAbility
 
 	/**
 	 * Get the ability id.
-	 *
-	 * @return AbilityId
 	 */
 	public function getAbilityId() : AbilityId
 	{
@@ -110,8 +98,6 @@ final class MovesetRatedAveragedAbility
 
 	/**
 	 * Get the percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{

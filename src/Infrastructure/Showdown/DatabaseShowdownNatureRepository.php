@@ -19,11 +19,7 @@ final class DatabaseShowdownNatureRepository implements ShowdownNatureRepository
 	/** @var string[] $unknownNatures */
 	private array $unknownNatures = [];
 
-	/**
-	 * Constructor.
-	 *
-	 * @param PDO $db
-	 */
+
 	public function __construct(PDO $db)
 	{
 		$stmt = $db->prepare(
@@ -49,10 +45,6 @@ final class DatabaseShowdownNatureRepository implements ShowdownNatureRepository
 
 	/**
 	 * Is the Pokémon Showdown nature name known and imported?
-	 *
-	 * @param string $showdownNatureName
-	 *
-	 * @return bool
 	 */
 	public function isImported(string $showdownNatureName) : bool
 	{
@@ -61,10 +53,6 @@ final class DatabaseShowdownNatureRepository implements ShowdownNatureRepository
 
 	/**
 	 * Is the Pokémon Showdown nature name known and ignored?
-	 *
-	 * @param string $showdownNatureName
-	 *
-	 * @return bool
 	 */
 	public function isIgnored(string $showdownNatureName) : bool
 	{
@@ -73,10 +61,6 @@ final class DatabaseShowdownNatureRepository implements ShowdownNatureRepository
 
 	/**
 	 * Is the Pokémon Showdown nature name known?
-	 *
-	 * @param string $showdownNatureName
-	 *
-	 * @return bool
 	 */
 	public function isKnown(string $showdownNatureName) : bool
 	{
@@ -87,10 +71,6 @@ final class DatabaseShowdownNatureRepository implements ShowdownNatureRepository
 
 	/**
 	 * Add a Pokémon Showdown nature name to the list of unknown natures.
-	 *
-	 * @param string $showdownNatureName
-	 *
-	 * @return void
 	 */
 	public function addUnknown(string $showdownNatureName) : void
 	{
@@ -100,12 +80,8 @@ final class DatabaseShowdownNatureRepository implements ShowdownNatureRepository
 	/**
 	 * Get the nature id of a Pokémon Showdown nature name.
 	 *
-	 * @param string $showdownNatureName
-	 *
 	 * @throws NatureNotImportedException if $showdownNatureName is not an
 	 *     imported nature name.
-	 *
-	 * @return NatureId
 	 */
 	public function getNatureId(string $showdownNatureName) : NatureId
 	{

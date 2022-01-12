@@ -16,8 +16,6 @@ final class TypeMatchup
 
 	/**
 	 * Get the type matchup's generation id.
-	 *
-	 * @return GenerationId
 	 */
 	public function getGenerationId() : GenerationId
 	{
@@ -26,8 +24,6 @@ final class TypeMatchup
 
 	/**
 	 * Get the type matchup's attacking type id.
-	 *
-	 * @return TypeId
 	 */
 	public function getAttackingTypeId() : TypeId
 	{
@@ -36,8 +32,6 @@ final class TypeMatchup
 
 	/**
 	 * Get the type matchup's defending type id.
-	 *
-	 * @return TypeId
 	 */
 	public function getDefendingTypeId() : TypeId
 	{
@@ -46,8 +40,6 @@ final class TypeMatchup
 
 	/**
 	 * Get the type matchup's multiplier.
-	 *
-	 * @return float
 	 */
 	public function getMultiplier() : float
 	{

@@ -14,13 +14,6 @@ interface StatsPokemonCounterRepositoryInterface
 	/**
 	 * Get stats Pokémon counters by month, format, rating, and Pokémon.
 	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
 	 * @return StatsPokemonCounter[] Ordered by score descending.
 	 */
 	public function getByMonth(

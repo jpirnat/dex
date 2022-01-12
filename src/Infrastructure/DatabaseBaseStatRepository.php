@@ -22,11 +22,6 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 
 	/**
 	 * Get a Pokémon's base stats by generation and Pokémon.
-	 *
-	 * @param GenerationId $generationId
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return StatValueContainer
 	 */
 	public function getByGenerationAndPokemon(
 		GenerationId $generationId,
@@ -61,9 +56,6 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	/**
 	 * Get all base stats had by Pokémon with this ability.
 	 * This method is used to get data for the dex ability page.
-	 *
-	 * @param GenerationId $generationId
-	 * @param AbilityId $abilityId
 	 *
 	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
 	 *     by each stat's json identifier.
@@ -104,9 +96,6 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	/**
 	 * Get all base stats had by Pokémon with this move.
 	 * This method is used to get data for the dex move page.
-	 *
-	 * @param GenerationId $generationId
-	 * @param MoveId $moveId
 	 *
 	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
 	 *     by each stat's json identifier.
@@ -150,8 +139,6 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	 * Get all base stats had by Pokémon in this generation.
 	 * This method is used to get data for the dex Pokémons page.
 	 *
-	 * @param GenerationId $generationId
-	 *
 	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
 	 *     by each stat's json identifier.
 	 */
@@ -180,9 +167,6 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	/**
 	 * Get all base stats had by Pokémon with this type.
 	 * This method is used to get data for the dex type page.
-	 *
-	 * @param GenerationId $generationId
-	 * @param TypeId $typeId
 	 *
 	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
 	 *     by each stat's json identifier.

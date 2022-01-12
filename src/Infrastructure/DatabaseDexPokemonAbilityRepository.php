@@ -22,10 +22,6 @@ final class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepo
 	/**
 	 * Get the dex Pokémon abilities of this Pokémon.
 	 *
-	 * @param GenerationId $generationId
-	 * @param PokemonId $pokemonId
-	 * @param LanguageId $languageId
-	 *
 	 * @return DexPokemonAbility[] Ordered by Pokémon ability slot.
 	 */
 	public function getByPokemon(
@@ -71,10 +67,6 @@ final class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepo
 	/**
 	 * Get all dex Pokémon abilities had by Pokémon with this ability.
 	 * This method is used to get data for the dex ability page.
-	 *
-	 * @param GenerationId $generationId
-	 * @param AbilityId $abilityId
-	 * @param LanguageId $languageId
 	 *
 	 * @return DexPokemonAbility[][] Outer array indexed by Pokémon id. Inner
 	 *     arrays indexed by ability id and ordered by Pokémon ability slot.
@@ -131,10 +123,6 @@ final class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepo
 	/**
 	 * Get all dex Pokémon abilities had by Pokémon with this move.
 	 * This method is used to get data for the dex move page.
-	 *
-	 * @param GenerationId $generationId
-	 * @param MoveId $moveId
-	 * @param LanguageId $languageId
 	 *
 	 * @return DexPokemonAbility[][] Outer array indexed by Pokémon id. Inner
 	 *     arrays ordered by Pokémon ability slot.
@@ -193,9 +181,6 @@ final class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepo
 	 * Get all dex Pokémon abilities had by Pokémon in this generation.
 	 * This method is used to get data for the dex Pokémons page.
 	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
 	 * @return DexPokemonAbility[][] Outer array indexed by Pokémon id. Inner
 	 *     arrays ordered by Pokémon ability slot.
 	 */
@@ -240,10 +225,6 @@ final class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepo
 	/**
 	 * Get all dex Pokémon abilities had by Pokémon with this type.
 	 * This method is used to get data for the dex type page.
-	 *
-	 * @param GenerationId $generationId
-	 * @param TypeId $typeId
-	 * @param LanguageId $languageId
 	 *
 	 * @return DexPokemonAbility[][] Outer array indexed by Pokémon id. Inner
 	 *     arrays ordered by Pokémon ability slot.

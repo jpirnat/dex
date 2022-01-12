@@ -12,8 +12,6 @@ final class StatData
 
 	/**
 	 * Get the stat name.
-	 *
-	 * @return string
 	 */
 	public function getStatName() : string
 	{
@@ -22,8 +20,6 @@ final class StatData
 
 	/**
 	 * Get the base stat.
-	 *
-	 * @return int
 	 */
 	public function getBaseStat() : int
 	{

@@ -22,8 +22,6 @@ final class DexPokemonMove
 
 	/**
 	 * Get the version group data.
-	 *
-	 * @return array
 	 */
 	public function getVersionGroupData() : array
 	{
@@ -32,8 +30,6 @@ final class DexPokemonMove
 
 	/**
 	 * Get the move's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -42,8 +38,6 @@ final class DexPokemonMove
 
 	/**
 	 * Get the move's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -52,8 +46,6 @@ final class DexPokemonMove
 
 	/**
 	 * Get the move's type.
-	 *
-	 * @return DexType
 	 */
 	public function getType() : DexType
 	{
@@ -62,8 +54,6 @@ final class DexPokemonMove
 
 	/**
 	 * Get the move's category.
-	 *
-	 * @return DexCategory
 	 */
 	public function getCategory() : DexCategory
 	{
@@ -72,8 +62,6 @@ final class DexPokemonMove
 
 	/**
 	 * Get the move's PP.
-	 *
-	 * @return int
 	 */
 	public function getPP() : int
 	{
@@ -82,8 +70,6 @@ final class DexPokemonMove
 
 	/**
 	 * Get the move's power.
-	 *
-	 * @return int
 	 */
 	public function getPower() : int
 	{
@@ -92,8 +78,6 @@ final class DexPokemonMove
 
 	/**
 	 * Get the move's accuracy.
-	 *
-	 * @return int
 	 */
 	public function getAccuracy() : int
 	{
@@ -102,8 +86,6 @@ final class DexPokemonMove
 
 	/**
 	 * Get the move's description.
-	 *
-	 * @return string
 	 */
 	public function getDescription() : string
 	{

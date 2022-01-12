@@ -10,13 +10,9 @@ interface LeadsAveragedPokemonRepositoryInterface
 {
 	/**
 	 * Get leads averaged Pokémon records by their start month, end month, and
-	 * format. Indexed by Pokémon id value.
+	 * format.
 	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 *
-	 * @return LeadsAveragedPokemon[]
+	 * @return LeadsAveragedPokemon[] Indexed by Pokémon id.
 	 */
 	public function getByMonthsAndFormat(
 		DateTime $start,

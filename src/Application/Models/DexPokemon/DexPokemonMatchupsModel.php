@@ -25,12 +25,6 @@ final class DexPokemonMatchupsModel
 	private const NO_ABILITY = 'none';
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param DexTypeRepositoryInterface $dexTypeRepository
-	 * @param TypeMatchupRepositoryInterface $typeMatchupRepository
-	 */
 	public function __construct(
 		private DexTypeRepositoryInterface $dexTypeRepository,
 		private TypeMatchupRepositoryInterface $typeMatchupRepository,
@@ -39,13 +33,6 @@ final class DexPokemonMatchupsModel
 
 	/**
 	 * Set data for the dex Pokémon page's matchups.
-	 *
-	 * @param GenerationId $generationId
-	 * @param PokemonId $pokemonId
-	 * @param LanguageId $languageId
-	 * @param array $abilities
-	 *
-	 * @return void
 	 */
 	public function setData(
 		GenerationId $generationId,
@@ -103,11 +90,6 @@ final class DexPokemonMatchupsModel
 	/**
 	 * If this ability changes any of the Pokémon's matchups, add the ability
 	 * to the matchups array.
-	 *
-	 * @param GenerationId $generationId
-	 * @param array $ability
-	 *
-	 * @return void
 	 */
 	private function checkForMatchups(GenerationId $generationId, array $ability) : void
 	{
@@ -240,10 +222,6 @@ final class DexPokemonMatchupsModel
 
 	/**
 	 * Add this ability to the matchups array.
-	 *
-	 * @param array $ability
-	 *
-	 * @return void
 	 */
 	private function addToDamageTaken(array $ability) : void
 	{
@@ -279,8 +257,6 @@ final class DexPokemonMatchupsModel
 
 	/**
 	 * Get the abilities that have unique matchups.
-	 *
-	 * @return array
 	 */
 	public function getAbilities() : array
 	{

@@ -35,13 +35,7 @@ final class DexPokemonMovesModel
 	/**
 	 * Set data for the dex Pokémon page's moves table.
 	 *
-	 * @param PokemonId $pokemonId
-	 * @param GenerationId $introducedInGenerationId
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
 	 * @param DexVersionGroup[] $versionGroups
-	 *
-	 * @return void
 	 */
 	public function setData(
 		PokemonId $pokemonId,

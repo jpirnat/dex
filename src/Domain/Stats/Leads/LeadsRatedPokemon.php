@@ -33,8 +33,6 @@ final class LeadsRatedPokemon
 
 	/**
 	 * Get the usage rated Pokémon id.
-	 *
-	 * @return UsageRatedPokemonId
 	 */
 	public function getUsageRatedPokemonId() : UsageRatedPokemonId
 	{
@@ -43,8 +41,6 @@ final class LeadsRatedPokemon
 
 	/**
 	 * Get the rank.
-	 *
-	 * @return int
 	 */
 	public function getRank() : int
 	{
@@ -53,8 +49,6 @@ final class LeadsRatedPokemon
 
 	/**
 	 * Get the usage percent.
-	 *
-	 * @return float
 	 */
 	public function getUsagePercent() : float
 	{

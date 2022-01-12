@@ -16,10 +16,6 @@ final class StatsAbilityController
 
 	/**
 	 * Get usage data to create a list of Pokémon who use a specific ability.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{

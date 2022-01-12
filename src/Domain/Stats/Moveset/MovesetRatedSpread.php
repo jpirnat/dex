@@ -39,8 +39,6 @@ final class MovesetRatedSpread
 
 	/**
 	 * Get the usage rated Pokémon id.
-	 *
-	 * @return UsageRatedPokemonId
 	 */
 	public function getUsageRatedPokemonId() : UsageRatedPokemonId
 	{
@@ -49,8 +47,6 @@ final class MovesetRatedSpread
 
 	/**
 	 * Get the nature id.
-	 *
-	 * @return NatureId
 	 */
 	public function getNatureId() : NatureId
 	{
@@ -59,8 +55,6 @@ final class MovesetRatedSpread
 
 	/**
 	 * Get the EV spread.
-	 *
-	 * @return StatValueContainer
 	 */
 	public function getEvSpread() : StatValueContainer
 	{
@@ -69,8 +63,6 @@ final class MovesetRatedSpread
 
 	/**
 	 * Get the percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{

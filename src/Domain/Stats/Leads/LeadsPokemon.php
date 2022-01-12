@@ -44,8 +44,6 @@ final class LeadsPokemon
 
 	/**
 	 * Get the month.
-	 *
-	 * @return DateTime
 	 */
 	public function getMonth() : DateTime
 	{
@@ -54,8 +52,6 @@ final class LeadsPokemon
 
 	/**
 	 * Get the format id.
-	 *
-	 * @return FormatId
 	 */
 	public function getFormatId() : FormatId
 	{
@@ -64,8 +60,6 @@ final class LeadsPokemon
 
 	/**
 	 * Get the Pokémon id.
-	 *
-	 * @return PokemonId
 	 */
 	public function getPokemonId() : PokemonId
 	{
@@ -74,8 +68,6 @@ final class LeadsPokemon
 
 	/**
 	 * Get the raw.
-	 *
-	 * @return int
 	 */
 	public function getRaw() : int
 	{
@@ -84,8 +76,6 @@ final class LeadsPokemon
 
 	/**
 	 * Get the raw percent.
-	 *
-	 * @return float
 	 */
 	public function getRawPercent() : float
 	{

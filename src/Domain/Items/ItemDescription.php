@@ -17,8 +17,6 @@ final class ItemDescription
 
 	/**
 	 * Get the item description's generation id.
-	 *
-	 * @return GenerationId
 	 */
 	public function getGenerationId() : GenerationId
 	{
@@ -27,8 +25,6 @@ final class ItemDescription
 
 	/**
 	 * Get the item description's language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -37,8 +33,6 @@ final class ItemDescription
 
 	/**
 	 * Get the item description's item id.
-	 *
-	 * @return ItemId
 	 */
 	public function getItemId() : ItemId
 	{
@@ -47,8 +41,6 @@ final class ItemDescription
 
 	/**
 	 * Get the item description's description.
-	 *
-	 * @return string
 	 */
 	public function getDescription() : string
 	{

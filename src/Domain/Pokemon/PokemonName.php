@@ -16,8 +16,6 @@ final class PokemonName
 
 	/**
 	 * Get the Pokémon name's language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -26,8 +24,6 @@ final class PokemonName
 
 	/**
 	 * Get the Pokémon name's Pokémon id.
-	 *
-	 * @return PokemonId
 	 */
 	public function getPokemonId() : PokemonId
 	{
@@ -36,8 +32,6 @@ final class PokemonName
 
 	/**
 	 * Get the Pokémon name's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -46,8 +40,6 @@ final class PokemonName
 
 	/**
 	 * Get the Pokémon name's category.
-	 *
-	 * @return string
 	 */
 	public function getCategory() : string
 	{

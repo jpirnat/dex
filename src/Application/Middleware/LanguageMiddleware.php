@@ -17,10 +17,8 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 final class LanguageMiddleware implements MiddlewareInterface
 {
-	/** @var string $LANGUAGE_PARAMETER */
 	private const LANGUAGE_PARAMETER = 'language';
 
-	/** @var int $DEFAULT_LANGUAGE_ID */
 	private const DEFAULT_LANGUAGE_ID = LanguageId::ENGLISH;
 
 	public function __construct(
@@ -32,11 +30,6 @@ final class LanguageMiddleware implements MiddlewareInterface
 	 * If the user is requesting to change their language, use that language.
 	 * Or, if the request contains a language cookie, use that language.
 	 * Or, use the default language.
-	 *
-	 * @param ServerRequestInterface $request
-	 * @param RequestHandlerInterface $handler
-	 *
-	 * @return ResponseInterface
 	 */
 	public function process(
 		ServerRequestInterface $request,

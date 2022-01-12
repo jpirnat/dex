@@ -15,11 +15,7 @@ final class UsageFileExtractor
 	/**
 	 * Extract the total battles count from the first line in the usage file.
 	 *
-	 * @param string $line
-	 *
 	 * @throws InvalidTotalBattlesLineException if $line is invalid.
-	 *
-	 * @return int
 	 */
 	public function extractTotalBattles(string $line) : int
 	{
@@ -39,11 +35,7 @@ final class UsageFileExtractor
 	/**
 	 * Extract the average weight per team from the second line in the usage file.
 	 *
-	 * @param string $line
-	 *
 	 * @throws InvalidAverageWeightPerTeamLineException if $line is invalid.
-	 *
-	 * @return float
 	 */
 	public function extractAverageWeightPerTeam(string $line) : float
 	{
@@ -62,10 +54,6 @@ final class UsageFileExtractor
 
 	/**
 	 * Is this line a usage data line?
-	 *
-	 * @param string $line
-	 *
-	 * @return bool
 	 */
 	public function isUsage(string $line) : bool
 	{
@@ -82,11 +70,7 @@ final class UsageFileExtractor
 	/**
 	 * Extract a Pokémon's usage data from a line in the usage file.
 	 *
-	 * @param string $line
-	 *
 	 * @throws InvalidUsageLineException if $line is invalid.
-	 *
-	 * @return Usage
 	 */
 	public function extractUsage(string $line) : Usage
 	{

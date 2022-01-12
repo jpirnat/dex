@@ -27,8 +27,6 @@ final class LeadsData
 
 	/**
 	 * Get the rank.
-	 *
-	 * @return int
 	 */
 	public function getRank() : int
 	{
@@ -37,8 +35,6 @@ final class LeadsData
 
 	/**
 	 * Get the Pokémon name.
-	 *
-	 * @return string
 	 */
 	public function getPokemonName() : string
 	{
@@ -47,8 +43,6 @@ final class LeadsData
 
 	/**
 	 * Get the months.
-	 *
-	 * @return int
 	 */
 	public function getMonths() : int
 	{
@@ -57,8 +51,6 @@ final class LeadsData
 
 	/**
 	 * Get the Pokémon identifier.
-	 *
-	 * @return string
 	 */
 	public function getPokemonIdentifier() : string
 	{
@@ -67,8 +59,6 @@ final class LeadsData
 
 	/**
 	 * Get the form icon.
-	 *
-	 * @return string
 	 */
 	public function getFormIcon() : string
 	{
@@ -77,8 +67,6 @@ final class LeadsData
 
 	/**
 	 * Get the lead usage percent.
-	 *
-	 * @return float
 	 */
 	public function getLeadUsagePercent() : float
 	{
@@ -87,8 +75,6 @@ final class LeadsData
 
 	/**
 	 * Get the raw.
-	 *
-	 * @return int
 	 */
 	public function getRaw() : int
 	{
@@ -97,8 +83,6 @@ final class LeadsData
 
 	/**
 	 * Get the raw percent.
-	 *
-	 * @return float
 	 */
 	public function getRawPercent() : float
 	{

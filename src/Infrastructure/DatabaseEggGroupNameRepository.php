@@ -17,11 +17,6 @@ final class DatabaseEggGroupNameRepository implements EggGroupNameRepositoryInte
 
 	/**
 	 * Get an egg group name by language and egg group.
-	 *
-	 * @param LanguageId $languageId
-	 * @param EggGroupId $eggGroupId
-	 *
-	 * @return EggGroupName
 	 */
 	public function getByLanguageAndEggGroup(
 		LanguageId $languageId,

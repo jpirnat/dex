@@ -24,8 +24,6 @@ final class StatsAveragedPokemonView
 	 * Get moveset data to recreate a stats moveset file, such as
 	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single
 	 * Pokémon.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function getData() : ResponseInterface
 	{

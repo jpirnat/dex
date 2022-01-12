@@ -17,8 +17,6 @@ final class MoveDescription
 
 	/**
 	 * Get the move description's generation.
-	 *
-	 * @return GenerationId
 	 */
 	public function getGenerationId() : GenerationId
 	{
@@ -27,8 +25,6 @@ final class MoveDescription
 
 	/**
 	 * Get the move description's language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -37,8 +33,6 @@ final class MoveDescription
 
 	/**
 	 * Get the move description's move id.
-	 *
-	 * @return MoveId
 	 */
 	public function getMoveId() : MoveId
 	{
@@ -47,8 +41,6 @@ final class MoveDescription
 
 	/**
 	 * Get the move description's description.
-	 *
-	 * @return string
 	 */
 	public function getDescription() : string
 	{

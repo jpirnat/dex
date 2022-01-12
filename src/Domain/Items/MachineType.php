@@ -14,10 +14,6 @@ class MachineType
 	private string $value;
 
 	/**
-	 * Constructor.
-	 *
-	 * @param string $value
-	 *
 	 * @throws Exception if $value is invalid.
 	 */
 	public function __construct(string $value)
@@ -31,8 +27,6 @@ class MachineType
 
 	/**
 	 * Get the machine type's value.
-	 *
-	 * @return string
 	 */
 	public function value() : string
 	{

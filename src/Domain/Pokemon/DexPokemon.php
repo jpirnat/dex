@@ -27,14 +27,9 @@ final class DexPokemon
 	/**
 	 * Constructor.
 	 *
-	 * @param string $icon
-	 * @param string $identifier
-	 * @param string $name
 	 * @param DexType[] $types
 	 * @param DexPokemonAbility[] $abilities
 	 * @param int[] $baseStats
-	 * @param int $bst
-	 * @param int $sort
 	 */
 	public function __construct(
 		string $icon,
@@ -58,8 +53,6 @@ final class DexPokemon
 
 	/**
 	 * Get the Pokémon's icon.
-	 *
-	 * @return string
 	 */
 	public function getIcon() : string
 	{
@@ -68,8 +61,6 @@ final class DexPokemon
 
 	/**
 	 * Get the Pokémon's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -78,8 +69,6 @@ final class DexPokemon
 
 	/**
 	 * Get the Pokémon's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -118,8 +107,6 @@ final class DexPokemon
 
 	/**
 	 * Get the Pokémon's base stat total.
-	 *
-	 * @return int
 	 */
 	public function getBst() : int
 	{
@@ -128,8 +115,6 @@ final class DexPokemon
 
 	/**
 	 * Get the Pokémon's sort value.
-	 *
-	 * @return int
 	 */
 	public function getSort() : int
 	{

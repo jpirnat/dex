@@ -15,8 +15,6 @@ final class Item
 
 	/**
 	 * Get the item's id.
-	 *
-	 * @return ItemId
 	 */
 	public function getId() : ItemId
 	{
@@ -25,8 +23,6 @@ final class Item
 
 	/**
 	 * Get the item's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -35,8 +31,6 @@ final class Item
 
 	/**
 	 * Get the version group id this item was introduced in.
-	 *
-	 * @return VersionGroupId
 	 */
 	public function getIntroducedInVersionGroupId() : VersionGroupId
 	{

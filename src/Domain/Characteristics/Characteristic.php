@@ -16,8 +16,6 @@ final class Characteristic
 
 	/**
 	 * Get the characteristic's id.
-	 *
-	 * @return CharacteristicId
 	 */
 	public function getId() : CharacteristicId
 	{
@@ -26,8 +24,6 @@ final class Characteristic
 
 	/**
 	 * Get the characteristic's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -36,8 +32,6 @@ final class Characteristic
 
 	/**
 	 * Get the characteristic's highest stat id.
-	 *
-	 * @return StatId
 	 */
 	public function getHighestStatId() : StatId
 	{
@@ -46,8 +40,6 @@ final class Characteristic
 
 	/**
 	 * Get the characteristic's highest stat's IV mod five value.
-	 *
-	 * @return int
 	 */
 	public function getIvModFive() : int
 	{

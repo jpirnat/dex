@@ -18,8 +18,6 @@ final class StatsUsageView
 	/**
 	 * Get usage data to recreate a stats usage file, such as
 	 * http://www.smogon.com/stats/2014-11/ou-1695.txt.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function getData() : ResponseInterface
 	{

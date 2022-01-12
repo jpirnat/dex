@@ -13,10 +13,6 @@ final class IndexController
 
 	/**
 	 * Show the home page.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function index(ServerRequestInterface $request) : void
 	{

@@ -52,12 +52,6 @@ final class DexMoveModel
 
 	/**
 	 * Set data for the dex move page.
-	 *
-	 * @param string $generationIdentifier
-	 * @param string $moveIdentifier
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $generationIdentifier,
@@ -120,12 +114,6 @@ final class DexMoveModel
 
 	/**
 	 * Set the move's detailed data.
-	 *
-	 * @param GenerationId $generationId
-	 * @param MoveId $moveId
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setDetailedData(
 		GenerationId $generationId,
@@ -198,12 +186,6 @@ final class DexMoveModel
 
 	/**
 	 * Set the move's type matchups.
-	 *
-	 * @param GenerationId $generationId
-	 * @param MoveId $moveId
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	private function setMatchups(
 		GenerationId $generationId,
@@ -251,8 +233,6 @@ final class DexMoveModel
 
 	/**
 	 * Get the generation model.
-	 *
-	 * @return GenerationModel
 	 */
 	public function getGenerationModel() : GenerationModel
 	{
@@ -261,8 +241,6 @@ final class DexMoveModel
 
 	/**
 	 * Get the move.
-	 *
-	 * @return DexMove
 	 */
 	public function getMove() : DexMove
 	{
@@ -271,8 +249,6 @@ final class DexMoveModel
 
 	/**
 	 * Get the detailed data.
-	 *
-	 * @return array
 	 */
 	public function getDetailedData() : array
 	{
@@ -301,8 +277,6 @@ final class DexMoveModel
 
 	/**
 	 * Get the stat changes.
-	 *
-	 * @return array
 	 */
 	public function getStatChanges() : array
 	{
@@ -311,8 +285,6 @@ final class DexMoveModel
 
 	/**
 	 * Get the flags.
-	 *
-	 * @return array
 	 */
 	public function getFlags() : array
 	{
@@ -331,8 +303,6 @@ final class DexMoveModel
 
 	/**
 	 * Get the dex move Pokémon model.
-	 *
-	 * @return DexMovePokemonModel
 	 */
 	public function getDexMovePokemonModel() : DexMovePokemonModel
 	{

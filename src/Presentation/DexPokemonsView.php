@@ -16,8 +16,6 @@ final class DexPokemonsView
 
 	/**
 	 * Show the dex Pokémons page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function index() : ResponseInterface
 	{

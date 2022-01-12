@@ -28,8 +28,6 @@ final class Counter2
 
 	/**
 	 * Get the percent knocked out.
-	 *
-	 * @return float
 	 */
 	public function percentKnockedOut() : float
 	{
@@ -38,8 +36,6 @@ final class Counter2
 
 	/**
 	 * Get the percent switched out.
-	 *
-	 * @return float
 	 */
 	public function percentSwitchedOut() : float
 	{

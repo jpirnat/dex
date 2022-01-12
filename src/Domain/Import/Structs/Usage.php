@@ -41,8 +41,6 @@ final class Usage
 
 	/**
 	 * Get the rank.
-	 *
-	 * @return int
 	 */
 	public function rank() : int
 	{
@@ -51,8 +49,6 @@ final class Usage
 
 	/**
 	 * Get the Pokémon Showdown Pokémon name.
-	 *
-	 * @return string
 	 */
 	public function showdownPokemonName() : string
 	{
@@ -61,8 +57,6 @@ final class Usage
 
 	/**
 	 * Get the usage percent.
-	 *
-	 * @return float
 	 */
 	public function usagePercent() : float
 	{
@@ -71,8 +65,6 @@ final class Usage
 
 	/**
 	 * Get the raw count.
-	 *
-	 * @return int
 	 */
 	public function raw() : int
 	{
@@ -81,8 +73,6 @@ final class Usage
 
 	/**
 	 * Get the raw percent.
-	 *
-	 * @return float
 	 */
 	public function rawPercent() : float
 	{
@@ -91,8 +81,6 @@ final class Usage
 
 	/**
 	 * Get the real count.
-	 *
-	 * @return int
 	 */
 	public function real() : int
 	{
@@ -101,8 +89,6 @@ final class Usage
 
 	/**
 	 * Get the real percent.
-	 *
-	 * @return float
 	 */
 	public function realPercent() : float
 	{

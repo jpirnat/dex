@@ -16,10 +16,6 @@ final class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeamma
 
 	/**
 	 * Save a moveset rated teammate record.
-	 *
-	 * @param MovesetRatedTeammate $movesetRatedTeammate
-	 *
-	 * @return void
 	 */
 	public function save(MovesetRatedTeammate $movesetRatedTeammate) : void
 	{

@@ -18,12 +18,6 @@ final class DatabaseItemDescriptionRepository implements ItemDescriptionReposito
 
 	/**
 	 * Get an item description by generation, language, and item.
-	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 * @param ItemId $itemId
-	 *
-	 * @return ItemDescription
 	 */
 	public function getByGenerationAndLanguageAndItem(
 		GenerationId $generationId,

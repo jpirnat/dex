@@ -20,8 +20,6 @@ final class StatsUsagePokemon
 
 	/**
 	 * Get the Pokémon's rank.
-	 *
-	 * @return int
 	 */
 	public function getRank() : int
 	{
@@ -30,8 +28,6 @@ final class StatsUsagePokemon
 
 	/**
 	 * Get the Pokémon's icon.
-	 *
-	 * @return string
 	 */
 	public function getIcon() : string
 	{
@@ -40,8 +36,6 @@ final class StatsUsagePokemon
 
 	/**
 	 * Get the Pokémon's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -50,8 +44,6 @@ final class StatsUsagePokemon
 
 	/**
 	 * Get the Pokémon's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -60,8 +52,6 @@ final class StatsUsagePokemon
 
 	/**
 	 * Get the Pokémon's usage percent.
-	 *
-	 * @return float
 	 */
 	public function getUsagePercent() : float
 	{
@@ -70,8 +60,6 @@ final class StatsUsagePokemon
 
 	/**
 	 * Get the Pokémon's usage change.
-	 *
-	 * @return float
 	 */
 	public function getUsageChange() : float
 	{
@@ -80,8 +68,6 @@ final class StatsUsagePokemon
 
 	/**
 	 * Get the Pokémon's raw count.
-	 *
-	 * @return int
 	 */
 	public function getRaw() : int
 	{
@@ -90,8 +76,6 @@ final class StatsUsagePokemon
 
 	/**
 	 * Get the Pokémon's raw percent.
-	 *
-	 * @return float
 	 */
 	public function getRawPercent() : float
 	{
@@ -100,8 +84,6 @@ final class StatsUsagePokemon
 
 	/**
 	 * Get the Pokémon's real count.
-	 *
-	 * @return int
 	 */
 	public function getReal() : int
 	{
@@ -110,8 +92,6 @@ final class StatsUsagePokemon
 
 	/**
 	 * Get the Pokémon's real percent.
-	 *
-	 * @return float
 	 */
 	public function getRealPercent() : float
 	{

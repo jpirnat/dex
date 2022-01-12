@@ -21,11 +21,6 @@ final class JsonErrorMiddleware implements MiddlewareInterface
 	/**
 	 * Intercept all errors and exceptions in the code and return an error json
 	 * response object.
-	 *
-	 * @param ServerRequestInterface $request
-	 * @param RequestHandlerInterface $handler
-	 *
-	 * @return ResponseInterface
 	 */
 	public function process(
 		ServerRequestInterface $request,

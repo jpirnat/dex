@@ -16,10 +16,6 @@ final class DexNaturesController
 
 	/**
 	 * Show the dex natures page.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function index(ServerRequestInterface $request) : void
 	{

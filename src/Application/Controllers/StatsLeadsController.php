@@ -17,10 +17,6 @@ final class StatsLeadsController
 	/**
 	 * Get leads data to recreate a stats leads file, such as
 	 * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{

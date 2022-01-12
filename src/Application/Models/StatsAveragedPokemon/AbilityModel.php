@@ -27,15 +27,6 @@ final class AbilityModel
 	/**
 	 * Get moveset data to recreate a stats moveset file, such as
 	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single Pokémon.
-	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		DateTime $start,
@@ -74,6 +65,7 @@ final class AbilityModel
 			);
 		}
 	}
+
 
 	/**
 	 * Get the ability datas.

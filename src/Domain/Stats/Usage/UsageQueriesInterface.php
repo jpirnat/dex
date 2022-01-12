@@ -17,19 +17,11 @@ interface UsageQueriesInterface
 
 	/**
 	 * Get the month of the oldest instance of data in this format.
-	 *
-	 * @param FormatId $formatId
-	 *
-	 * @return DateTime|null
 	 */
 	public function getOldest(FormatId $formatId) : ?DateTime;
 
 	/**
 	 * Get the month of the newest instance of data in this format.
-	 *
-	 * @param FormatId $formatId
-	 *
-	 * @return DateTime|null
 	 */
 	public function getNewest(FormatId $formatId) : ?DateTime;
 }

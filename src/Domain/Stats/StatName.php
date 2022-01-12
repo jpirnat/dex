@@ -16,8 +16,6 @@ final class StatName
 
 	/**
 	 * Get the stat name's language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -26,8 +24,6 @@ final class StatName
 
 	/**
 	 * Get the stat name's stat id.
-	 *
-	 * @return StatId
 	 */
 	public function getStatId() : StatId
 	{
@@ -36,8 +32,6 @@ final class StatName
 
 	/**
 	 * Get the stat name's name value.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -46,8 +40,6 @@ final class StatName
 
 	/**
 	 * Get the stat name's abbreviation.
-	 *
-	 * @return string
 	 */
 	public function getAbbreviation() : string
 	{

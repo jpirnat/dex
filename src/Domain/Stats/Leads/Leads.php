@@ -35,8 +35,6 @@ final class Leads
 
 	/**
 	 * Get the month.
-	 *
-	 * @return DateTime
 	 */
 	public function getMonth() : DateTime
 	{
@@ -45,8 +43,6 @@ final class Leads
 
 	/**
 	 * Get the format id.
-	 *
-	 * @return FormatId
 	 */
 	public function getFormatId() : FormatId
 	{
@@ -55,8 +51,6 @@ final class Leads
 
 	/**
 	 * Get the total leads.
-	 *
-	 * @return int
 	 */
 	public function getTotalLeads() : int
 	{

@@ -18,8 +18,6 @@ final class DexFormatter
 	 * This will most commonly be used for the generation control.
 	 *
 	 * @param Generation[] $generations
-	 *
-	 * @return array
 	 */
 	public function formatGenerations(array $generations) : array
 	{
@@ -39,8 +37,6 @@ final class DexFormatter
 	 * Transform an array of version group objects into a renderable data array.
 	 *
 	 * @param DexVersionGroup[] $versionGroups
-	 *
-	 * @return array
 	 */
 	public function formatDexVersionGroups(array $versionGroups) : array
 	{
@@ -55,10 +51,6 @@ final class DexFormatter
 
 	/**
 	 * Transform an array of version group objects into a renderable data array.
-	 *
-	 * @param DexVersionGroup $versionGroup
-	 *
-	 * @return array
 	 */
 	public function formatDexVersionGroup(DexVersionGroup $versionGroup) : array
 	{
@@ -74,8 +66,6 @@ final class DexFormatter
 	 * Transform an array of dex Pokémon objects into a renderable data array.
 	 *
 	 * @param DexPokemon[] $dexPokemons
-	 *
-	 * @return array
 	 */
 	public function formatDexPokemon(array $dexPokemons) : array
 	{
@@ -101,8 +91,6 @@ final class DexFormatter
 	 * Transform an array of dex type objects into a renderable data array.
 	 *
 	 * @param DexType[] $dexTypes
-	 *
-	 * @return array
 	 */
 	public function formatDexTypes(array $dexTypes) : array
 	{
@@ -117,10 +105,6 @@ final class DexFormatter
 
 	/**
 	 * Transform a dex type object into a renderable data array.
-	 *
-	 * @param DexType $dexType
-	 *
-	 * @return array
 	 */
 	public function formatDexType(DexType $dexType) : array
 	{
@@ -134,10 +118,6 @@ final class DexFormatter
 
 	/**
 	 * Transform a dex category object into a renderable data array.
-	 *
-	 * @param DexCategory $dexCategory
-	 *
-	 * @return array
 	 */
 	public function formatDexCategory(DexCategory $dexCategory) : array
 	{
@@ -151,8 +131,6 @@ final class DexFormatter
 	 * Transform an array of dex Pokémon ability objects into a renderable data array.
 	 *
 	 * @param DexPokemonAbility[] $dexPokemonAbilities
-	 *
-	 * @return array
 	 */
 	public function formatDexPokemonAbilities(array $dexPokemonAbilities) : array
 	{
@@ -173,8 +151,6 @@ final class DexFormatter
 	 * Transform an array of dex move objects into a renderable data array.
 	 *
 	 * @param DexMove[] $dexMoves
-	 *
-	 * @return array
 	 */
 	public function formatDexMoves(array $dexMoves) : array
 	{
@@ -189,10 +165,6 @@ final class DexFormatter
 
 	/**
 	 * Transform a dex move object into a renderable data array.
-	 *
-	 * @param DexMove $dexMove
-	 *
-	 * @return array
 	 */
 	public function formatDexMove(DexMove $dexMove) : array
 	{

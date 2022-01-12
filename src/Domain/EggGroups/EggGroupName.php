@@ -15,8 +15,6 @@ final class EggGroupName
 
 	/**
 	 * Get the egg group name's language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -25,8 +23,6 @@ final class EggGroupName
 
 	/**
 	 * Get the egg group name's eggGroup id.
-	 *
-	 * @return EggGroupId
 	 */
 	public function getEggGroupId() : EggGroupId
 	{
@@ -35,8 +31,6 @@ final class EggGroupName
 
 	/**
 	 * Get the egg group name's name value.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{

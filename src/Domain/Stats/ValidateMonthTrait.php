@@ -11,11 +11,7 @@ trait ValidateMonthTrait
 	/**
 	 * Validate the month for a usage data entity.
 	 *
-	 * @param DateTime $month
-	 *
 	 * @throws InvalidMonthException if $month is invalid.
-	 *
-	 * @return void
 	 */
 	public function validateMonth(DateTime $month) : void
 	{

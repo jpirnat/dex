@@ -14,10 +14,6 @@ final class StatsDirectoryImporter
 
 	/**
 	 * Import all month directories in this stats directory.
-	 *
-	 * @param string $url
-	 *
-	 * @return void
 	 */
 	public function import(string $url) : void
 	{

@@ -31,13 +31,6 @@ final class UsageFileImporter
 
 	/**
 	 * Import usage data from the given file.
-	 *
-	 * @param StreamInterface $stream
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
-	 * @return void
 	 */
 	public function import(
 		StreamInterface $stream,

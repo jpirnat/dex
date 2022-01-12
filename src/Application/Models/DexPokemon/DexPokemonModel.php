@@ -33,12 +33,6 @@ final class DexPokemonModel
 
 	/**
 	 * Set data for the dex Pokémon page.
-	 *
-	 * @param string $generationIdentifier
-	 * @param string $pokemonIdentifier
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $generationIdentifier,
@@ -98,8 +92,6 @@ final class DexPokemonModel
 
 	/**
 	 * Get the generation model.
-	 *
-	 * @return GenerationModel
 	 */
 	public function getGenerationModel() : GenerationModel
 	{
@@ -108,8 +100,6 @@ final class DexPokemonModel
 
 	/**
 	 * Get the Pokémon.
-	 *
-	 * @return array
 	 */
 	public function getPokemon() : array
 	{
@@ -118,8 +108,6 @@ final class DexPokemonModel
 
 	/**
 	 * Get the abilities.
-	 *
-	 * @return array
 	 */
 	public function getAbilities() : array
 	{
@@ -128,8 +116,6 @@ final class DexPokemonModel
 
 	/**
 	 * Get the dex Pokémon matchups model.
-	 *
-	 * @return DexPokemonMatchupsModel
 	 */
 	public function getDexPokemonMatchupsModel() : DexPokemonMatchupsModel
 	{
@@ -148,8 +134,6 @@ final class DexPokemonModel
 
 	/**
 	 * Get the dex Pokémon moves model.
-	 *
-	 * @return DexPokemonMovesModel
 	 */
 	public function getDexPokemonMovesModel() : DexPokemonMovesModel
 	{

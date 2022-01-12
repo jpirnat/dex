@@ -18,8 +18,6 @@ final class FormIcon
 
 	/**
 	 * Get the form icon's image.
-	 *
-	 * @return string
 	 */
 	public function getImage() : string
 	{

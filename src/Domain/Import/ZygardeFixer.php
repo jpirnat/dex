@@ -21,8 +21,6 @@ final class ZygardeFixer
 
 	/**
 	 * Fix Zygarde in the usage stats.
-	 *
-	 * @return void
 	 */
 	public function fixZygarde() : void
 	{

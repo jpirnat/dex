@@ -16,10 +16,6 @@ final class DatabaseMonthQueries implements MonthQueriesInterface
 
 	/**
 	 * Get the previous month with usage data for any format.
-	 *
-	 * @param DateTime $month
-	 *
-	 * @return DateTime|null
 	 */
 	public function getPrev(DateTime $month) : ?DateTime
 	{
@@ -44,10 +40,6 @@ final class DatabaseMonthQueries implements MonthQueriesInterface
 
 	/**
 	 * Get the next month with usage data for any format.
-	 *
-	 * @param DateTime $month
-	 *
-	 * @return DateTime|null
 	 */
 	public function getNext(DateTime $month) : ?DateTime
 	{
@@ -72,11 +64,6 @@ final class DatabaseMonthQueries implements MonthQueriesInterface
 
 	/**
 	 * Get the previous month with usage data for this format.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 *
-	 * @return DateTime|null
 	 */
 	public function getPrevByFormat(DateTime $month, FormatId $formatId) : ?DateTime
 	{
@@ -103,11 +90,6 @@ final class DatabaseMonthQueries implements MonthQueriesInterface
 
 	/**
 	 * Get the next month with usage data for this format.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 *
-	 * @return DateTime|null
 	 */
 	public function getNextByFormat(DateTime $month, FormatId $formatId) : ?DateTime
 	{

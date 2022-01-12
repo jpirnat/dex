@@ -10,14 +10,9 @@ interface UsageRatedAveragedPokemonRepositoryInterface
 {
 	/**
 	 * Get usage rated averaged Pokémon records by their start month, end month,
-	 * format, and rating. Indexed by Pokémon id value.
+	 * format, and rating.
 	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
-	 * @return UsageRatedAveragedPokemon[]
+	 * @return UsageRatedAveragedPokemon[] Indexed by Pokémon id.
 	 */
 	public function getByMonthsAndFormatAndRating(
 		DateTime $start,

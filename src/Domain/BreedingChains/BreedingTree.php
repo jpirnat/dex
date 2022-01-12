@@ -20,22 +20,15 @@ final class BreedingTree
 	/** @var BreedingTree[] $parents */
 	private array $parents = [];
 
-	/**
-	 * Constructor.
-	 *
-	 * @param PokemonMove $value
-	 */
+
 	public function __construct(PokemonMove $value)
 	{
 		$this->value = $value;
 	}
 
+
 	/**
 	 * Add a potential parent to the Pokémon.
-	 *
-	 * @param BreedingTree $parent
-	 *
-	 * @return void
 	 */
 	public function addParent(BreedingTree $parent) : void
 	{
@@ -44,10 +37,6 @@ final class BreedingTree
 
 	/**
 	 * Is this Pokémon already a potential parent?
-	 *
-	 * @param int $pokemonId
-	 *
-	 * @return bool
 	 */
 	public function hasParent(int $pokemonId) : bool
 	{
@@ -56,8 +45,6 @@ final class BreedingTree
 
 	/**
 	 * Get this node's Pokémon move.
-	 *
-	 * @return PokemonMove
 	 */
 	public function getValue() : PokemonMove
 	{
@@ -77,8 +64,6 @@ final class BreedingTree
 	/**
 	 * Is this breeding chain complete? (Does it include an ancestor who learns
 	 * the move by non-egg?)
-	 *
-	 * @return bool
 	 */
 	public function isComplete() : bool
 	{

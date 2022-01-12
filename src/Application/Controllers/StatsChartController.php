@@ -15,10 +15,6 @@ final class StatsChartController
 
 	/**
 	 * Set data for the /stats/chart page.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function ajax(ServerRequestInterface $request) : void
 	{

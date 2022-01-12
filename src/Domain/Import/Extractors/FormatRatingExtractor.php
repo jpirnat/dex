@@ -14,11 +14,7 @@ final class FormatRatingExtractor
 	 * Extract a Pokémon Showdown format name and rating from a Pokémon Showdown
 	 * stats filename.
 	 *
-	 * @param string $filename
-	 *
 	 * @throws InvalidFilenameException if $filename is invalid.
-	 *
-	 * @return FormatRating
 	 */
 	public function extractFormatRating(string $filename) : FormatRating
 	{

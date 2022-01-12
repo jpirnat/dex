@@ -22,13 +22,8 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 	/**
 	 * Get a TM by its version group and move.
 	 *
-	 * @param VersionGroupId $versionGroupId
-	 * @param MoveId $moveId
-	 *
 	 * @throws TmNotFoundException if no TM exists with this version group and
 	 *     move.
-	 *
-	 * @return TechnicalMachine
 	 */
 	public function getByVersionGroupAndMove(
 		VersionGroupId $versionGroupId,
@@ -70,8 +65,6 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 	/**
 	 * Get TMs by their move.
 	 *
-	 * @param MoveId $moveId
-	 *
 	 * @return TechnicalMachine[] Indexed by version group id.
 	 */
 	public function getByMove(MoveId $moveId) : array
@@ -108,9 +101,6 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 	/**
 	 * Get TMs between these two generations, inclusive. This method is used to
 	 * get all potentially relevant TMs for the dex Pokémon page.
-	 *
-	 * @param GenerationId $begin
-	 * @param GenerationId $end
 	 *
 	 * @return TechnicalMachine[][] Indexed first by version group id and then
 	 *     by move id.

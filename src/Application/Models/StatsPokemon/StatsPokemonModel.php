@@ -90,14 +90,6 @@ final class StatsPokemonModel
 	 * Get moveset data to recreate a stats moveset file, such as
 	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single
 	 * Pokémon.
-	 *
-	 * @param string $month
-	 * @param string $formatIdentifier
-	 * @param int $rating
-	 * @param string $pokemonIdentifier
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $month,
@@ -251,10 +243,9 @@ final class StatsPokemonModel
 		);
 	}
 
+
 	/**
 	 * Get the month.
-	 *
-	 * @return string
 	 */
 	public function getMonth() : string
 	{
@@ -263,8 +254,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the format.
-	 *
-	 * @return Format
 	 */
 	public function getFormat() : Format
 	{
@@ -273,8 +262,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the rating.
-	 *
-	 * @return int
 	 */
 	public function getRating() : int
 	{
@@ -283,8 +270,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the Pokémon.
-	 *
-	 * @return Pokemon
 	 */
 	public function getPokemon() : Pokemon
 	{
@@ -293,8 +278,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -303,8 +286,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the date model.
-	 *
-	 * @return DateModel
 	 */
 	public function getDateModel() : DateModel
 	{
@@ -323,8 +304,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the previous rank Pokémon.
-	 *
-	 * @return array|null
 	 */
 	public function getPrevRank() : ?array
 	{
@@ -333,8 +312,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get this Pokémon's usage rank.
-	 *
-	 * @return array|null
 	 */
 	public function getThisRank() : ?array
 	{
@@ -343,8 +320,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the next rank Pokémon.
-	 *
-	 * @return array|null
 	 */
 	public function getNextRank() : ?array
 	{
@@ -353,8 +328,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the stats and their names.
-	 *
-	 * @return array
 	 */
 	public function getStats() : array
 	{
@@ -363,8 +336,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the Pokémon model.
-	 *
-	 * @return PokemonModel
 	 */
 	public function getPokemonModel() : PokemonModel
 	{
@@ -373,8 +344,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the generation.
-	 *
-	 * @return Generation
 	 */
 	public function getGeneration() : Generation
 	{
@@ -383,8 +352,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the moveset Pokémon record.
-	 *
-	 * @return MovesetPokemon|null
 	 */
 	public function getMovesetPokemon() : ?MovesetPokemon
 	{
@@ -393,8 +360,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the moveset rated Pokémon record.
-	 *
-	 * @return MovesetRatedPokemon|null
 	 */
 	public function getMovesetRatedPokemon() : ?MovesetRatedPokemon
 	{
@@ -423,8 +388,6 @@ final class StatsPokemonModel
 
 	/**
 	 * Get the spreads.
-	 *
-	 * @return array
 	 */
 	public function getSpreads() : array
 	{

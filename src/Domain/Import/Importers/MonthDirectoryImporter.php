@@ -22,10 +22,6 @@ final class MonthDirectoryImporter
 
 	/**
 	 * Import all stat files in this month directory.
-	 *
-	 * @param string $url
-	 *
-	 * @return void
 	 */
 	public function import(string $url) : void
 	{

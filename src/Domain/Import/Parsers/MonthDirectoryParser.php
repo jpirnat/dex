@@ -32,10 +32,6 @@ final class MonthDirectoryParser
 
 	/**
 	 * Parse this month directory for unknown Showdown format names.
-	 *
-	 * @param string $url
-	 *
-	 * @return void
 	 */
 	public function parse(string $url) : void
 	{

@@ -15,10 +15,6 @@ final class DatabaseMovesetRatedCounterRepository implements MovesetRatedCounter
 
 	/**
 	 * Save a moveset rated counter record.
-	 *
-	 * @param MovesetRatedCounter $movesetRatedCounter
-	 *
-	 * @return void
 	 */
 	public function save(MovesetRatedCounter $movesetRatedCounter) : void
 	{

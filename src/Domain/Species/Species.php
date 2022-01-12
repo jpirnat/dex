@@ -16,8 +16,6 @@ final class Species
 
 	/**
 	 * Get the species's id.
-	 *
-	 * @return SpeciesId
 	 */
 	public function getId() : SpeciesId
 	{
@@ -26,8 +24,6 @@ final class Species
 
 	/**
 	 * Get the species's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -36,8 +32,6 @@ final class Species
 
 	/**
 	 * Get the version group id this species was introduced in.
-	 *
-	 * @return VersionGroupId
 	 */
 	public function getIntroducedInVersionGroupId() : VersionGroupId
 	{
@@ -46,8 +40,6 @@ final class Species
 
 	/**
 	 * Get the species's base egg cycles.
-	 *
-	 * @return int
 	 */
 	public function getBaseEggCycles() : int
 	{

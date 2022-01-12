@@ -18,8 +18,6 @@ final class DatabaseMoveMethodNameRepository implements MoveMethodNameRepository
 	/**
 	 * Get move method names by language.
 	 *
-	 * @param LanguageId $languageId
-	 *
 	 * @return MoveMethodName[] Indexed by move method id.
 	 */
 	public function getByLanguage(LanguageId $languageId) : array

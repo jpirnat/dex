@@ -23,10 +23,6 @@ final class MovesetFileExtractor
 {
 	/**
 	 * Is this line a separator?
-	 *
-	 * @param string $line
-	 *
-	 * @return bool
 	 */
 	public function isSeparator(string $line) : bool
 	{
@@ -44,11 +40,7 @@ final class MovesetFileExtractor
 	/**
 	 * Extract a Pokémon's name from a block header line in the moveset file.
 	 *
-	 * @param string $line
-	 *
 	 * @throws InvalidPokemonNameLineException if $line is invalid.
-	 *
-	 * @return string
 	 */
 	public function extractPokemonName(string $line) : string
 	{
@@ -68,11 +60,7 @@ final class MovesetFileExtractor
 	/**
 	 * Extract a Pokémon's raw count from a line in the moveset file.
 	 *
-	 * @param string $line
-	 *
 	 * @throws InvalidRawCountLineException if $line is invalid.
-	 *
-	 * @return int
 	 */
 	public function extractRawCount(string $line) : int
 	{
@@ -92,11 +80,7 @@ final class MovesetFileExtractor
 	/**
 	 * Extract a Pokémon's average weight from a line in the moveset file.
 	 *
-	 * @param string $line
-	 *
 	 * @throws InvalidAverageWeightLineException if $line is invalid.
-	 *
-	 * @return float
 	 */
 	public function extractAverageWeight(string $line) : float
 	{
@@ -115,10 +99,6 @@ final class MovesetFileExtractor
 
 	/**
 	 * Is this line a Viability Ceiling?
-	 *
-	 * @param string $line
-	 *
-	 * @return bool
 	 */
 	public function isViabilityCeiling(string $line) : bool
 	{
@@ -135,11 +115,7 @@ final class MovesetFileExtractor
 	/**
 	 * Extract a Pokémon's viability ceiling from a line in the moveset file.
 	 *
-	 * @param string $line
-	 *
 	 * @throws InvalidViabilityCeilingLineException if $line is invalid.
-	 *
-	 * @return int
 	 */
 	public function extractViabilityCeiling(string $line) : int
 	{
@@ -158,10 +134,6 @@ final class MovesetFileExtractor
 
 	/**
 	 * Is this line a name and percent?
-	 *
-	 * @param string $line
-	 *
-	 * @return bool
 	 */
 	public function isNamePercent(string $line) : bool
 	{
@@ -178,11 +150,7 @@ final class MovesetFileExtractor
 	/**
 	 * Extract a name and percent from a line in the moveset file.
 	 *
-	 * @param string $line
-	 *
 	 * @throws InvalidNamePercentLineException if $line is invalid.
-	 *
-	 * @return NamePercent
 	 */
 	public function extractNamePercent(string $line) : NamePercent
 	{
@@ -205,11 +173,7 @@ final class MovesetFileExtractor
 	/**
 	 * Extract an EV spread from a line in the moveset file.
 	 *
-	 * @param string $line
-	 *
 	 * @throws InvalidSpreadLineException if $line is invalid.
-	 *
-	 * @return Spread
 	 */
 	public function extractSpread(string $line) : Spread
 	{
@@ -246,10 +210,6 @@ final class MovesetFileExtractor
 
 	/**
 	 * Is the line a counter line 1?
-	 *
-	 * @param string $line1
-	 *
-	 * @return bool
 	 */
 	public function isCounter1(string $line1) : bool
 	{
@@ -266,13 +226,8 @@ final class MovesetFileExtractor
 	/**
 	 * Extract a counter and statistics from lines in the moveset file.
 	 *
-	 * @param string $line1
-	 * @param string $line2
-	 *
 	 * @throws InvalidCounterLine1Exception if $line1 is invalid.
 	 * @throws InvalidCounterLine2Exception if $line2 is invalid.
-	 *
-	 * @return Counter
 	 */
 	public function extractCounter(string $line1, string $line2) : Counter
 	{
@@ -292,11 +247,7 @@ final class MovesetFileExtractor
 	/**
 	 * Extract a counter's line 1 data from a line in the moveset file.
 	 *
-	 * @param string $line1
-	 *
 	 * @throws InvalidCounterLine1Exception if $line1 is invalid.
-	 *
-	 * @return Counter1
 	 */
 	private function extractCounter1(string $line1) : Counter1
 	{
@@ -326,11 +277,7 @@ final class MovesetFileExtractor
 	/**
 	 * Extract a counter's line 2 data from a line in the moveset file.
 	 *
-	 * @param string $line2
-	 *
 	 * @throws InvalidCounterLine2Exception if $line2 is invalid.
-	 *
-	 * @return Counter2
 	 */
 	private function extractCounter2(string $line2) : Counter2
 	{
@@ -355,10 +302,6 @@ final class MovesetFileExtractor
 
 	/**
 	 * Is this line a NamePercent with name "Other"?
-	 *
-	 * @param string $line
-	 *
-	 * @return bool
 	 */
 	public function isOther(string $line) : bool
 	{

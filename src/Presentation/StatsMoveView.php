@@ -17,8 +17,6 @@ final class StatsMoveView
 
 	/**
 	 * Get usage data to create a list of Pokémon who use a specific move.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function getData() : ResponseInterface
 	{

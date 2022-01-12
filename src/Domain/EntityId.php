@@ -11,8 +11,6 @@ abstract class EntityId
 
 	/**
 	 * Get the id's value.
-	 *
-	 * @return int
 	 */
 	public function value() : int
 	{

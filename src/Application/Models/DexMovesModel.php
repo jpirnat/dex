@@ -14,12 +14,6 @@ final class DexMovesModel
 	private array $moves = [];
 
 
-	/**
-	 * Constructor.
-	 *
-	 * @param GenerationModel $generationModel
-	 * @param DexMoveRepositoryInterface $dexMoveRepository
-	 */
 	public function __construct(
 		private GenerationModel $generationModel,
 		private DexMoveRepositoryInterface $dexMoveRepository,
@@ -28,11 +22,6 @@ final class DexMovesModel
 
 	/**
 	 * Set data for the dex moves page.
-	 *
-	 * @param string $generationIdentifier
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $generationIdentifier,
@@ -51,8 +40,6 @@ final class DexMovesModel
 
 	/**
 	 * Get the generation model.
-	 *
-	 * @return GenerationModel
 	 */
 	public function getGenerationModel() : GenerationModel
 	{

@@ -20,9 +20,6 @@ final class DatabaseFlagRepository implements FlagRepositoryInterface
 	/**
 	 * Get all dex flags in this generation.
 	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
 	 * @return DexFlag[] Indexed by flag id.
 	 */
 	public function getByGeneration(
@@ -67,9 +64,6 @@ final class DatabaseFlagRepository implements FlagRepositoryInterface
 
 	/**
 	 * Get this move's flags.
-	 *
-	 * @param GenerationId $generationId
-	 * @param MoveId $moveId
 	 *
 	 * @return FlagId[] Indexed by flag id.
 	 */

@@ -13,13 +13,6 @@ interface StatsPokemonAbilityRepositoryInterface
 	/**
 	 * Get stats Pokémon abilities by month, format, rating, and Pokémon.
 	 *
-	 * @param DateTime $month
-	 * @param DateTime|null $prevMonth
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param LanguageId $languageId
-	 *
 	 * @return StatsPokemonAbility[] Ordered by percent descending.
 	 */
 	public function getByMonth(

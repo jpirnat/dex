@@ -11,30 +11,20 @@ interface GenerationRepositoryInterface
 	/**
 	 * Get a generation by its id.
 	 *
-	 * @param GenerationId $generationId
-	 *
 	 * @throws GenerationNotFoundException if no generation exists with this id.
-	 *
-	 * @return Generation
 	 */
 	public function getById(GenerationId $generationId) : Generation;
 
 	/**
 	 * Get a generation by its identifier
 	 *
-	 * @param string $identifier
-	 *
 	 * @throws GenerationNotFoundException if no generation exists with this
 	 *     identifier.
-	 *
-	 * @return Generation
 	 */
 	public function getByIdentifier(string $identifier) : Generation;
 
 	/**
 	 * Get generations that this Pokémon has appeared in (via version groups).
-	 *
-	 * @param PokemonId $pokemonId
 	 *
 	 * @return Generation[] Indexed by id. Ordered by id.
 	 */
@@ -43,16 +33,12 @@ interface GenerationRepositoryInterface
 	/**
 	 * Get generations that this move has appeared in (via version groups).
 	 *
-	 * @param MoveId $moveId
-	 *
 	 * @return Generation[] Indexed by id. Ordered by id.
 	 */
 	public function getWithMove(MoveId $moveId) : array;
 
 	/**
 	 * Get generations since the given generation, inclusive.
-	 *
-	 * @param GenerationId $generationId
 	 *
 	 * @return Generation[] Indexed by id. Ordered by id.
 	 */

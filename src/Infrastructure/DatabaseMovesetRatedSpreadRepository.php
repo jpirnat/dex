@@ -16,10 +16,6 @@ final class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRe
 
 	/**
 	 * Save a moveset rated spread record.
-	 *
-	 * @param MovesetRatedSpread $movesetRatedSpread
-	 *
-	 * @return void
 	 */
 	public function save(MovesetRatedSpread $movesetRatedSpread) : void
 	{

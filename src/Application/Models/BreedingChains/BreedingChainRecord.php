@@ -25,16 +25,7 @@ final class BreedingChainRecord
 	/**
 	 * Constructor.
 	 *
-	 * @param string $formIcon
-	 * @param string $generationIdentifier
-	 * @param string $pokemonIdentifier
-	 * @param string $pokemonName
-	 * @param DexVersionGroup $versionGroup
 	 * @param string[] $eggGroupNames
-	 * @param int $baseEggCycles
-	 * @param string $genderRatioIcon
-	 * @param string $genderRatioText
-	 * @param string $moveMethod
 	 */
 	public function __construct(
 		string $formIcon,
@@ -63,8 +54,6 @@ final class BreedingChainRecord
 
 	/**
 	 * Get the form icon.
-	 *
-	 * @return string
 	 */
 	public function getFormIcon() : string
 	{
@@ -73,8 +62,6 @@ final class BreedingChainRecord
 
 	/**
 	 * Get the generation identifier.
-	 *
-	 * @return string
 	 */
 	public function getGenerationIdentifier() : string
 	{
@@ -83,8 +70,6 @@ final class BreedingChainRecord
 
 	/**
 	 * Get the Pokémon identifier.
-	 *
-	 * @return string
 	 */
 	public function getPokemonIdentifier() : string
 	{
@@ -93,8 +78,6 @@ final class BreedingChainRecord
 
 	/**
 	 * Get the Pokémon name.
-	 *
-	 * @return string
 	 */
 	public function getPokemonName() : string
 	{
@@ -103,8 +86,6 @@ final class BreedingChainRecord
 
 	/**
 	 * Get the version group.
-	 *
-	 * @return DexVersionGroup
 	 */
 	public function getVersionGroup() : DexVersionGroup
 	{
@@ -123,8 +104,6 @@ final class BreedingChainRecord
 
 	/**
 	 * Get the base egg cycles.
-	 *
-	 * @return int
 	 */
 	public function getBaseEggCycles() : int
 	{
@@ -133,8 +112,6 @@ final class BreedingChainRecord
 
 	/**
 	 * Get the gender ratio icon.
-	 *
-	 * @return string
 	 */
 	public function getGenderRatioIcon() : string
 	{
@@ -143,8 +120,6 @@ final class BreedingChainRecord
 
 	/**
 	 * Get the gender ratio text.
-	 *
-	 * @return string
 	 */
 	public function getGenderRatioText() : string
 	{
@@ -153,8 +128,6 @@ final class BreedingChainRecord
 
 	/**
 	 * Get the move method.
-	 *
-	 * @return string
 	 */
 	public function getMoveMethod() : string
 	{

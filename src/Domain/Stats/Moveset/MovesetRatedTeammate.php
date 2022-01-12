@@ -26,8 +26,6 @@ final class MovesetRatedTeammate
 
 	/**
 	 * Get the usage rated Pokémon id.
-	 *
-	 * @return UsageRatedPokemonId
 	 */
 	public function getUsageRatedPokemonId() : UsageRatedPokemonId
 	{
@@ -36,8 +34,6 @@ final class MovesetRatedTeammate
 
 	/**
 	 * Get the Pokémon id of the teammate.
-	 *
-	 * @return PokemonId
 	 */
 	public function getTeammateId() : PokemonId
 	{
@@ -46,8 +42,6 @@ final class MovesetRatedTeammate
 
 	/**
 	 * Get the percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{

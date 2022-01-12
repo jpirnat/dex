@@ -16,8 +16,6 @@ final class DexTypeView
 
 	/**
 	 * Show the dex type page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function index() : ResponseInterface
 	{

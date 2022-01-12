@@ -18,10 +18,6 @@ abstract class TrendLine
 
 	/**
 	 * Add a trend point to the trend line.
-	 *
-	 * @param TrendPoint $trendPoint
-	 *
-	 * @return void
 	 */
 	protected function addTrendPoint(TrendPoint $trendPoint) : void
 	{
@@ -30,23 +26,17 @@ abstract class TrendLine
 
 	/**
 	 * Get the title of a chart that consists of only this trend line.
-	 *
-	 * @return string
 	 */
 	abstract public function getChartTitle() : string;
 
 	/**
 	 * Get the trend line's label, for a chart that consists of only this trend
 	 * line.
-	 *
-	 * @return string
 	 */
 	abstract public function getLineLabel() : string;
 
 	/**
 	 * Get the trend line's format name.
-	 *
-	 * @return string
 	 */
 	public function getFormatName() : string
 	{
@@ -55,8 +45,6 @@ abstract class TrendLine
 
 	/**
 	 * Get the trend line's rating.
-	 *
-	 * @return int
 	 */
 	public function getRating() : int
 	{
@@ -65,8 +53,6 @@ abstract class TrendLine
 
 	/**
 	 * Get the trend line's Pokémon name.
-	 *
-	 * @return PokemonName
 	 */
 	public function getPokemonName() : PokemonName
 	{
@@ -75,8 +61,6 @@ abstract class TrendLine
 
 	/**
 	 * Get the trend line's Pokémon type.
-	 *
-	 * @return Type
 	 */
 	public function getPokemonType() : Type
 	{

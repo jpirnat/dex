@@ -51,8 +51,6 @@ final class UsageRatedPokemon
 
 	/**
 	 * Get the month.
-	 *
-	 * @return DateTime
 	 */
 	public function getMonth() : DateTime
 	{
@@ -61,8 +59,6 @@ final class UsageRatedPokemon
 
 	/**
 	 * Get the format id.
-	 *
-	 * @return FormatId
 	 */
 	public function getFormatId() : FormatId
 	{
@@ -71,8 +67,6 @@ final class UsageRatedPokemon
 
 	/**
 	 * Get the rating.
-	 *
-	 * @return int
 	 */
 	public function getRating() : int
 	{
@@ -81,8 +75,6 @@ final class UsageRatedPokemon
 
 	/**
 	 * Get the Pokémon id.
-	 *
-	 * @return PokemonId
 	 */
 	public function getPokemonId() : PokemonId
 	{
@@ -91,8 +83,6 @@ final class UsageRatedPokemon
 
 	/**
 	 * Get the rank.
-	 *
-	 * @return int
 	 */
 	public function getRank() : int
 	{
@@ -101,8 +91,6 @@ final class UsageRatedPokemon
 
 	/**
 	 * Get the usage percent.
-	 *
-	 * @return float
 	 */
 	public function getUsagePercent() : float
 	{

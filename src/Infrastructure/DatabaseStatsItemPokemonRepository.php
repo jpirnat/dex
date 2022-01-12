@@ -21,14 +21,6 @@ final class DatabaseStatsItemPokemonRepository implements StatsItemPokemonReposi
 	/**
 	 * Get stats item Pokémon by month, format, rating, and item.
 	 *
-	 * @param DateTime $month
-	 * @param DateTime|null $prevMonth
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param ItemId $itemId
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
 	 * @return StatsItemPokemon[] Ordered by usage percent descending.
 	 */
 	public function getByMonth(

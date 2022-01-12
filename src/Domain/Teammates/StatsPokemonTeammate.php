@@ -14,8 +14,6 @@ final class StatsPokemonTeammate
 
 	/**
 	 * Get the teammate's icon.
-	 *
-	 * @return string
 	 */
 	public function getIcon() : string
 	{
@@ -24,8 +22,6 @@ final class StatsPokemonTeammate
 
 	/**
 	 * Get the teammate's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -34,8 +30,6 @@ final class StatsPokemonTeammate
 
 	/**
 	 * Get the teammate's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -44,8 +38,6 @@ final class StatsPokemonTeammate
 
 	/**
 	 * Get the teammate's percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{

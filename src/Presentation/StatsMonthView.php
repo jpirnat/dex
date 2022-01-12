@@ -18,8 +18,6 @@ final class StatsMonthView
 	/**
 	 * Get the formats list to recreate a stats month directory, such as
 	 * http://www.smogon.com/stats/2014-11.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function index() : ResponseInterface
 	{

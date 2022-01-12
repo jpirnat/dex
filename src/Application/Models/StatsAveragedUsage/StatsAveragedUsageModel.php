@@ -48,14 +48,6 @@ final class StatsAveragedUsageModel
 
 	/**
 	 * Get usage data averaged over multiple months.
-	 *
-	 * @param string $start
-	 * @param string $end
-	 * @param string $formatIdentifier
-	 * @param int $rating
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $start,
@@ -165,10 +157,9 @@ final class StatsAveragedUsageModel
 		}
 	}
 
+
 	/**
 	 * Does leads rated data exist for these months?
-	 *
-	 * @return bool
 	 */
 	public function doesLeadsDataExist() : bool
 	{
@@ -177,8 +168,6 @@ final class StatsAveragedUsageModel
 
 	/**
 	 * Get the start month.
-	 *
-	 * @return string
 	 */
 	public function getStart() : string
 	{
@@ -187,8 +176,6 @@ final class StatsAveragedUsageModel
 
 	/**
 	 * Get the end month.
-	 *
-	 * @return string
 	 */
 	public function getEnd() : string
 	{
@@ -197,8 +184,6 @@ final class StatsAveragedUsageModel
 
 	/**
 	 * Get the format.
-	 *
-	 * @return Format
 	 */
 	public function getFormat() : Format
 	{
@@ -207,8 +192,6 @@ final class StatsAveragedUsageModel
 
 	/**
 	 * Get the rating.
-	 *
-	 * @return int
 	 */
 	public function getRating() : int
 	{
@@ -217,8 +200,6 @@ final class StatsAveragedUsageModel
 
 	/**
 	 * Get the language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{

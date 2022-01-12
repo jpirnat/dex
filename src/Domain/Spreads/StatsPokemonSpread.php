@@ -18,8 +18,6 @@ final class StatsPokemonSpread
 
 	/**
 	 * Get the spread's nature name.
-	 *
-	 * @return string
 	 */
 	public function getNatureName() : string
 	{
@@ -28,8 +26,6 @@ final class StatsPokemonSpread
 
 	/**
 	 * Get the spread's nature-increased stat id.
-	 *
-	 * @return StatId|null
 	 */
 	public function getIncreasedStatId() : ?StatId
 	{
@@ -38,8 +34,6 @@ final class StatsPokemonSpread
 
 	/**
 	 * Get the spread's nature-decreased stat id.
-	 *
-	 * @return StatId|null
 	 */
 	public function getDecreasedStatId() : ?StatId
 	{
@@ -48,8 +42,6 @@ final class StatsPokemonSpread
 
 	/**
 	 * Get the spread's EVs.
-	 *
-	 * @return StatValueContainer
 	 */
 	public function getEvs() : StatValueContainer
 	{
@@ -58,8 +50,6 @@ final class StatsPokemonSpread
 
 	/**
 	 * Get the spread's percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{

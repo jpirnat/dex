@@ -7,10 +7,6 @@ interface MovesetRatedTeammateRepositoryInterface
 {
 	/**
 	 * Save a moveset rated teammate record.
-	 *
-	 * @param MovesetRatedTeammate $movesetRatedTeammate
-	 *
-	 * @return void
 	 */
 	public function save(MovesetRatedTeammate $movesetRatedTeammate) : void;
 }

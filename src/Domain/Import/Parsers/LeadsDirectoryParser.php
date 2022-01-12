@@ -20,10 +20,6 @@ final class LeadsDirectoryParser
 
 	/**
 	 * Parse all leads files in this directory of leads files.
-	 *
-	 * @param string $url
-	 *
-	 * @return void
 	 */
 	public function parse(string $url) : void
 	{

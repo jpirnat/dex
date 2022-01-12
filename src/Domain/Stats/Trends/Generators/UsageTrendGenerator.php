@@ -24,13 +24,6 @@ final class UsageTrendGenerator
 
 	/**
 	 * Get the data for a lead usage trend line.
-	 *
-	 * @param Format $format
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param LanguageId $languageId
-	 *
-	 * @return UsageTrendLine
 	 */
 	public function generate(
 		Format $format,

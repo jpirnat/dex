@@ -13,8 +13,6 @@ final class LanguageName
 
 	/**
 	 * Get the id of the language the name is in.
-	 *
-	 * @return LanguageId
 	 */
 	public function getInLanguageId() : LanguageId
 	{
@@ -23,8 +21,6 @@ final class LanguageName
 
 	/**
 	 * Get the id of the language whose name it is.
-	 *
-	 * @return LanguageId
 	 */
 	public function getNamedLanguageId() : LanguageId
 	{
@@ -33,8 +29,6 @@ final class LanguageName
 
 	/**
 	 * Get the language name's name value.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{

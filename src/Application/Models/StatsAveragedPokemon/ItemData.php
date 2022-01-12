@@ -13,8 +13,6 @@ final class ItemData
 
 	/**
 	 * Get the item name.
-	 *
-	 * @return string
 	 */
 	public function getItemName() : string
 	{
@@ -23,8 +21,6 @@ final class ItemData
 
 	/**
 	 * Get the item identifier.
-	 *
-	 * @return string
 	 */
 	public function getItemIdentifier() : string
 	{
@@ -33,8 +29,6 @@ final class ItemData
 
 	/**
 	 * Get the percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{

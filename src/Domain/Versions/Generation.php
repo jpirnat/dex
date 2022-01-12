@@ -13,8 +13,6 @@ final class Generation
 
 	/**
 	 * Get the generation's id.
-	 *
-	 * @return GenerationId
 	 */
 	public function getId() : GenerationId
 	{
@@ -23,8 +21,6 @@ final class Generation
 
 	/**
 	 * Get the generation's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -33,8 +29,6 @@ final class Generation
 
 	/**
 	 * Get the generation's icon.
-	 *
-	 * @return string
 	 */
 	public function getIcon() : string
 	{

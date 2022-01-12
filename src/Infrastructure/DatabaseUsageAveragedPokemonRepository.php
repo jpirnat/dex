@@ -20,13 +20,9 @@ final class DatabaseUsageAveragedPokemonRepository implements UsageAveragedPokem
 
 	/**
 	 * Get usage averaged Pokémon records by their start month, end month, and
-	 * format. Indexed by Pokémon id value.
+	 * format.
 	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 *
-	 * @return UsageAveragedPokemon[]
+	 * @return UsageAveragedPokemon[] Indexed by Pokémon id.
 	 */
 	public function getByMonthsAndFormat(
 		DateTime $start,

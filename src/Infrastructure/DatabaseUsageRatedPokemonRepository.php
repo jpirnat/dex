@@ -18,14 +18,7 @@ final class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepo
 	) {}
 
 	/**
-	 * Do any usage rated Pokémon records exist for this month, format, and
-	 * rating?
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
-	 * @return bool
+	 * Do any usage rated Pokémon records exist for this month, format, and rating?
 	 */
 	public function hasAny(DateTime $month, FormatId $formatId, int $rating) : bool
 	{
@@ -47,10 +40,6 @@ final class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepo
 
 	/**
 	 * Save a usage rated Pokémon record.
-	 *
-	 * @param UsageRatedPokemon $usageRatedPokemon
-	 *
-	 * @return void
 	 */
 	public function save(UsageRatedPokemon $usageRatedPokemon) : void
 	{
@@ -82,13 +71,6 @@ final class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepo
 
 	/**
 	 * Get the usage rated Pokémon id for this month, format, rating, and Pokémon.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return UsageRatedPokemonId|null
 	 */
 	public function getId(
 		DateTime $month,

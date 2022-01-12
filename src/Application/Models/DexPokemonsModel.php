@@ -25,11 +25,6 @@ final class DexPokemonsModel
 
 	/**
 	 * Set data for the dex Pokémons page.
-	 *
-	 * @param string $generationIdentifier
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $generationIdentifier,
@@ -51,8 +46,6 @@ final class DexPokemonsModel
 
 	/**
 	 * Get the generation model.
-	 *
-	 * @return GenerationModel
 	 */
 	public function getGenerationModel() : GenerationModel
 	{
@@ -61,8 +54,6 @@ final class DexPokemonsModel
 
 	/**
 	 * Get the stats and their names.
-	 *
-	 * @return array
 	 */
 	public function getStats() : array
 	{

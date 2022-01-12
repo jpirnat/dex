@@ -16,8 +16,6 @@ final class MoveMethod
 
 	/**
 	 * Get the move method's id.
-	 *
-	 * @return MoveMethodId
 	 */
 	public function getId() : MoveMethodId
 	{
@@ -26,8 +24,6 @@ final class MoveMethod
 
 	/**
 	 * Get the move method's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -36,8 +32,6 @@ final class MoveMethod
 
 	/**
 	 * Get the generation id this move method was introduced in.
-	 *
-	 * @return GenerationId
 	 */
 	public function getIntroducedInGenerationId() : GenerationId
 	{
@@ -46,8 +40,6 @@ final class MoveMethod
 
 	/**
 	 * Get the move method's sort value.
-	 *
-	 * @return int
 	 */
 	public function getSort() : int
 	{

@@ -63,8 +63,6 @@ final class UsageAveragedPokemon
 
 	/**
 	 * Get the start month.
-	 *
-	 * @return DateTime
 	 */
 	public function getStart() : DateTime
 	{
@@ -73,8 +71,6 @@ final class UsageAveragedPokemon
 
 	/**
 	 * Get the end month.
-	 *
-	 * @return DateTime
 	 */
 	public function getEnd() : DateTime
 	{
@@ -83,8 +79,6 @@ final class UsageAveragedPokemon
 
 	/**
 	 * Get the format id.
-	 *
-	 * @return FormatId
 	 */
 	public function getFormatId() : FormatId
 	{
@@ -93,8 +87,6 @@ final class UsageAveragedPokemon
 
 	/**
 	 * Get the Pokémon id.
-	 *
-	 * @return PokemonId
 	 */
 	public function getPokemonId() : PokemonId
 	{
@@ -103,8 +95,6 @@ final class UsageAveragedPokemon
 
 	/**
 	 * Get the raw.
-	 *
-	 * @return int
 	 */
 	public function getRaw() : int
 	{
@@ -113,8 +103,6 @@ final class UsageAveragedPokemon
 
 	/**
 	 * Get the raw percent.
-	 *
-	 * @return float
 	 */
 	public function getRawPercent() : float
 	{
@@ -123,8 +111,6 @@ final class UsageAveragedPokemon
 
 	/**
 	 * Get the real.
-	 *
-	 * @return int
 	 */
 	public function getReal() : int
 	{
@@ -133,8 +119,6 @@ final class UsageAveragedPokemon
 
 	/**
 	 * Get the real percent.
-	 *
-	 * @return float
 	 */
 	public function getRealPercent() : float
 	{

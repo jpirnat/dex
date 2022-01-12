@@ -11,10 +11,6 @@ final class BaseModel
 
 	/**
 	 * Set the current language id.
-	 *
-	 * @param LanguageId $currentLanguageId
-	 *
-	 * @return void
 	 */
 	public function setCurrentLanguageId(LanguageId $currentLanguageId) : void
 	{
@@ -23,8 +19,6 @@ final class BaseModel
 
 	/**
 	 * Get the current language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getCurrentLanguageId() : LanguageId
 	{
@@ -33,8 +27,6 @@ final class BaseModel
 
 	/**
 	 * Get the language names, for the language select in the footer.
-	 *
-	 * @return array
 	 */
 	public function getLanguages() : array
 	{

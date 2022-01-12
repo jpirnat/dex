@@ -28,14 +28,6 @@ final class SpreadModel
 
 	/**
 	 * Get stat and spread data for the stats Pokémon page.
-	 *
-	 * @param DateTime $month
-	 * @param Format $format
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		DateTime $month,
@@ -147,8 +139,6 @@ final class SpreadModel
 
 	/**
 	 * Get the spreads.
-	 *
-	 * @return array
 	 */
 	public function getSpreads() : array
 	{

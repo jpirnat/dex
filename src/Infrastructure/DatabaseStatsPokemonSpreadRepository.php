@@ -23,12 +23,6 @@ final class DatabaseStatsPokemonSpreadRepository implements StatsPokemonSpreadRe
 	/**
 	 * Get stats Pokémon spreads by month, format, rating, and Pokémon.
 	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param LanguageId $languageId
-	 *
 	 * @return StatsPokemonSpread[] Ordered by percent descending.
 	 */
 	public function getByMonth(

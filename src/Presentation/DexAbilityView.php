@@ -16,8 +16,6 @@ final class DexAbilityView
 
 	/**
 	 * Show the dex ability page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function index() : ResponseInterface
 	{

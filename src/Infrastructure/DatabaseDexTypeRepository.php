@@ -23,12 +23,7 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	/**
 	 * Get a dex type by its id.
 	 *
-	 * @param TypeId $typeId
-	 * @param LanguageId $languageId
-	 *
 	 * @throws TypeNotFoundException if no type exists with this id.
-	 *
-	 * @return DexType
 	 */
 	public function getById(
 		TypeId $typeId,
@@ -71,10 +66,6 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 
 	/**
 	 * Get the dex types of this Pokémon.
-	 *
-	 * @param GenerationId $generationId
-	 * @param PokemonId $pokemonId
-	 * @param LanguageId $languageId
 	 *
 	 * @return DexType[] Ordered by Pokémon type slot.
 	 */
@@ -126,9 +117,6 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	/**
 	 * Get the main dex types available in this generation.
 	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
 	 * @return DexType[] Indexed by type id.
 	 */
 	public function getMainByGeneration(
@@ -173,9 +161,6 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 
 	/**
 	 * Get all dex types available in this generation.
-	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
 	 *
 	 * @return DexType[] Indexed by type id.
 	 */
@@ -222,10 +207,6 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	 * Get all dex types had by Pokémon with this ability.
 	 * This method is used to get data for the dex ability page.
 	 *
-	 * @param GenerationId $generationId
-	 * @param AbilityId $abilityId
-	 * @param LanguageId $languageId
-	 *
 	 * @return DexType[][] Outer array indexed by Pokémon id. Inner arrays
 	 *     ordered by Pokémon type slot.
 	 */
@@ -268,10 +249,6 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	/**
 	 * Get all dex types had by Pokémon with this move.
 	 * This method is used to get data for the dex move page.
-	 *
-	 * @param GenerationId $generationId
-	 * @param MoveId $moveId
-	 * @param LanguageId $languageId
 	 *
 	 * @return DexType[][] Outer array indexed by Pokémon id. Inner arrays
 	 *     ordered by Pokémon type slot.
@@ -318,9 +295,6 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	 * Get all dex types had by Pokémon in this generation.
 	 * This method is used to get data for the dex Pokémons page.
 	 *
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
 	 * @return DexType[][] Outer array indexed by Pokémon id. Inner arrays
 	 *     ordered by Pokémon type slot.
 	 */
@@ -353,10 +327,6 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	/**
 	 * Get all dex types had by Pokémon with this type.
 	 * This method is used to get data for the dex type page.
-	 *
-	 * @param GenerationId $generationId
-	 * @param TypeId $typeId
-	 * @param LanguageId $languageId
 	 *
 	 * @return DexType[][] Outer array indexed by Pokémon id. Inner arrays
 	 *     ordered by Pokémon type slot.

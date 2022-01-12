@@ -18,8 +18,6 @@ final class Model
 
 	/**
 	 * Get the model's image.
-	 *
-	 * @return string
 	 */
 	public function getImage() : string
 	{

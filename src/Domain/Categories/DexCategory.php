@@ -12,8 +12,6 @@ final class DexCategory
 
 	/**
 	 * Get the category's icon.
-	 *
-	 * @return string
 	 */
 	public function getIcon() : string
 	{
@@ -22,8 +20,6 @@ final class DexCategory
 
 	/**
 	 * Get the category's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{

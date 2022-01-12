@@ -16,11 +16,6 @@ final class MonthsCounter
 
 	/**
 	 * Count the number of months from start to end.
-	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 *
-	 * @return int
 	 */
 	public function countAllMonths(DateTime $start, DateTime $end) : int
 	{
@@ -33,14 +28,6 @@ final class MonthsCounter
 
 	/**
 	 * Count the months of moveset data for this Pokémon.
-	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return int
 	 */
 	public function countMovesetMonths(
 		DateTime $start,
@@ -61,12 +48,7 @@ final class MonthsCounter
 	/**
 	 * Count the months of moveset data for all Pokémon.
 	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
-	 * @return int[]
+	 * @return int[] Indexed by Pokémon id.
 	 */
 	public function countMovesetMonthsAll(
 		DateTime $start,

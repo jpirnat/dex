@@ -14,8 +14,6 @@ final class PokemonEggGroup
 
 	/**
 	 * Get the Pokémon egg group's Pokémon id.
-	 *
-	 * @return PokemonId
 	 */
 	public function getPokemonId() : PokemonId
 	{
@@ -24,8 +22,6 @@ final class PokemonEggGroup
 
 	/**
 	 * Get the Pokémon egg group's egg group id.
-	 *
-	 * @return EggGroupId
 	 */
 	public function getEggGroupId() : EggGroupId
 	{

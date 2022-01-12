@@ -19,8 +19,6 @@ final class Format
 
 	/**
 	 * Get the format's id.
-	 *
-	 * @return FormatId
 	 */
 	public function getId() : FormatId
 	{
@@ -29,8 +27,6 @@ final class Format
 
 	/**
 	 * Get the format's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -39,8 +35,6 @@ final class Format
 
 	/**
 	 * Get the format's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -49,8 +43,6 @@ final class Format
 
 	/**
 	 * Get the format's generation id.
-	 *
-	 * @return GenerationId
 	 */
 	public function getGenerationId() : GenerationId
 	{
@@ -59,8 +51,6 @@ final class Format
 
 	/**
 	 * Get the format's level.
-	 *
-	 * @return int
 	 */
 	public function getLevel() : int
 	{
@@ -69,8 +59,6 @@ final class Format
 
 	/**
 	 * Get the format's field size.
-	 *
-	 * @return int
 	 */
 	public function getFieldSize() : int
 	{
@@ -79,8 +67,6 @@ final class Format
 
 	/**
 	 * Get the format's Smogon dex identifier.
-	 *
-	 * @return string
 	 */
 	public function getSmogonDexIdentifier() : string
 	{

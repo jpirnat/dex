@@ -17,11 +17,6 @@ final class DatabaseLeadsPokemonRepository implements LeadsPokemonRepositoryInte
 
 	/**
 	 * Do any leads Pokémon records exist for this month and format?
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 *
-	 * @return bool
 	 */
 	public function hasAny(DateTime $month, FormatId $formatId) : bool
 	{
@@ -41,10 +36,6 @@ final class DatabaseLeadsPokemonRepository implements LeadsPokemonRepositoryInte
 
 	/**
 	 * Save a leads Pokémon record.
-	 *
-	 * @param LeadsPokemon $leadsPokemon
-	 *
-	 * @return void
 	 */
 	public function save(LeadsPokemon $leadsPokemon) : void
 	{

@@ -52,13 +52,9 @@ final class StatsChartModel
 		private LanguageRepositoryInterface $languageRepository,
 	) {}
 
+
 	/**
 	 * Set the data for the requested lines to chart.
-	 *
-	 * @param array $lines
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(array $lines, LanguageId $languageId) : void
 	{
@@ -180,10 +176,6 @@ final class StatsChartModel
 
 	/**
 	 * Is this line valid?
-	 *
-	 * @param array $line
-	 *
-	 * @return bool
 	 */
 	private function isValid(array $line) : bool
 	{
@@ -230,10 +222,6 @@ final class StatsChartModel
 	/**
 	 * Determine which variables are different across the requested lines, so
 	 * we can dynamically generate the chart title and line labels.
-	 *
-	 * @param array $lines
-	 *
-	 * @return void
 	 */
 	private function findDifferences(array $lines) : void
 	{
@@ -296,6 +284,7 @@ final class StatsChartModel
 		}
 	}
 
+
 	/**
 	 * Get the trend lines.
 	 *
@@ -328,8 +317,6 @@ final class StatsChartModel
 
 	/**
 	 * Get the language.
-	 *
-	 * @return Language
 	 */
 	public function getLanguage() : Language
 	{

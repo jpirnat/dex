@@ -15,8 +15,6 @@ final class CharacteristicName
 
 	/**
 	 * Get the characteristic name's language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -25,8 +23,6 @@ final class CharacteristicName
 
 	/**
 	 * Get the characteristic name's characteristic id.
-	 *
-	 * @return CharacteristicId
 	 */
 	public function getCharacteristicId() : CharacteristicId
 	{
@@ -35,8 +31,6 @@ final class CharacteristicName
 
 	/**
 	 * Get the characteristic name's name value.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{

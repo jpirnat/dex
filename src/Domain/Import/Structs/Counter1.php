@@ -14,8 +14,6 @@ final class Counter1
 
 	/**
 	 * Get the Pokémon Showdown Pokémon name.
-	 *
-	 * @return string
 	 */
 	public function showdownPokemonName() : string
 	{
@@ -24,8 +22,6 @@ final class Counter1
 
 	/**
 	 * Get the number1.
-	 *
-	 * @return float
 	 */
 	public function number1() : float
 	{
@@ -34,8 +30,6 @@ final class Counter1
 
 	/**
 	 * Get the number2.
-	 *
-	 * @return float
 	 */
 	public function number2() : float
 	{
@@ -44,8 +38,6 @@ final class Counter1
 
 	/**
 	 * Get the number3.
-	 *
-	 * @return float
 	 */
 	public function number3() : float
 	{

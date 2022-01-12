@@ -14,11 +14,6 @@ final class UsageAbilityTrendLine extends TrendLine
 	/**
 	 * Constructor.
 	 *
-	 * @param string $formatName
-	 * @param int $rating
-	 * @param PokemonName $pokemonName
-	 * @param AbilityName $abilityName
-	 * @param Type $pokemonType
 	 * @param TrendPoint[] $trendPoints
 	 */
 	public function __construct(
@@ -42,8 +37,6 @@ final class UsageAbilityTrendLine extends TrendLine
 
 	/**
 	 * Get the title of a chart that consists of only this trend line.
-	 *
-	 * @return string
 	 */
 	public function getChartTitle() : string
 	{
@@ -58,8 +51,6 @@ final class UsageAbilityTrendLine extends TrendLine
 	/**
 	 * Get the trend line's label, for a chart that consists of only this trend
 	 * line.
-	 *
-	 * @return string
 	 */
 	public function getLineLabel() : string
 	{
@@ -68,8 +59,6 @@ final class UsageAbilityTrendLine extends TrendLine
 
 	/**
 	 * Get the usage ability trend line's ability name.
-	 *
-	 * @return AbilityName
 	 */
 	public function getAbilityName() : AbilityName
 	{

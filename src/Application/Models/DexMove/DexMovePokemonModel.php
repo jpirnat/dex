@@ -38,12 +38,7 @@ final class DexMovePokemonModel
 	/**
 	 * Set data for the dex move page's Pokémon table.
 	 *
-	 * @param MoveId $moveId
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
 	 * @param DexVersionGroup[] $versionGroups
-	 *
-	 * @return void
 	 */
 	public function setData(
 		MoveId $moveId,
@@ -173,8 +168,6 @@ final class DexMovePokemonModel
 
 	/**
 	 * Get the stats and their names.
-	 *
-	 * @return array
 	 */
 	public function getStats() : array
 	{

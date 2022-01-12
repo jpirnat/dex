@@ -16,9 +16,6 @@ final class DexMovePokemonMethod
 	/**
 	 * Constructor.
 	 *
-	 * @param string $identifier
-	 * @param string $name
-	 * @param string $description
 	 * @param DexMovePokemon[] $pokemon
 	 */
 	public function __construct(
@@ -36,8 +33,6 @@ final class DexMovePokemonMethod
 
 	/**
 	 * Get the method's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -46,8 +41,6 @@ final class DexMovePokemonMethod
 
 	/**
 	 * Get the method's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -56,8 +49,6 @@ final class DexMovePokemonMethod
 
 	/**
 	 * Get the method's description.
-	 *
-	 * @return string
 	 */
 	public function getDescription() : string
 	{
@@ -67,8 +58,7 @@ final class DexMovePokemonMethod
 	/**
 	 * Get the method's Pokémon.
 	 *
-	 * @return DexMovePokemon[] Returned as a reference so it can be used with
-	 *     uasort.
+	 * @return DexMovePokemon[] Returned as a reference so it can be used with uasort.
 	 */
 	public function &getPokemon() : array
 	{

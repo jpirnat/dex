@@ -27,10 +27,6 @@ final class TeammatesFixer
 
 	/**
 	 * Fix Teammates in the usage stats.
-	 *
-	 * @param DateTime $month
-	 *
-	 * @return void
 	 */
 	public function fixTeammates(DateTime $month) : void
 	{

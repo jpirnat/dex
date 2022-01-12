@@ -7,6 +7,5 @@ use Jp\Dex\Domain\EntityId;
 
 final class CategoryId extends EntityId
 {
-	/** @var int $STATUS */
 	public const STATUS = 3;
 }

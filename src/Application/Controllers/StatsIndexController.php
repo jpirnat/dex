@@ -15,10 +15,6 @@ final class StatsIndexController
 
 	/**
 	 * Show the /stats page.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function index(ServerRequestInterface $request) : void
 	{

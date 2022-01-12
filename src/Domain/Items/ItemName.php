@@ -15,8 +15,6 @@ final class ItemName
 
 	/**
 	 * Get the item name's language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -25,8 +23,6 @@ final class ItemName
 
 	/**
 	 * Get the item name's item id.
-	 *
-	 * @return ItemId
 	 */
 	public function getItemId() : ItemId
 	{
@@ -35,8 +31,6 @@ final class ItemName
 
 	/**
 	 * Get the item name's name value.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{

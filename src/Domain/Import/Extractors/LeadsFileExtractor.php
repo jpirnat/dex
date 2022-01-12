@@ -14,11 +14,7 @@ final class LeadsFileExtractor
 	/**
 	 * Extract the total leads count from the first line in the leads file.
 	 *
-	 * @param string $line
-	 *
 	 * @throws InvalidTotalLeadsLineException if $line is invalid.
-	 *
-	 * @return int
 	 */
 	public function extractTotalLeads(string $line) : int
 	{
@@ -37,10 +33,6 @@ final class LeadsFileExtractor
 
 	/**
 	 * Is this line a lead usage data line?
-	 *
-	 * @param string $line
-	 *
-	 * @return bool
 	 */
 	public function isLeadUsage(string $line) : bool
 	{
@@ -57,11 +49,7 @@ final class LeadsFileExtractor
 	/**
 	 * Extract a Pokémon's lead usage data from a line in the leads file.
 	 *
-	 * @param string $line
-	 *
 	 * @throws InvalidLeadUsageLineException if $line is invalid.
-	 *
-	 * @return LeadUsage
 	 */
 	public function extractLeadUsage(string $line) : LeadUsage
 	{

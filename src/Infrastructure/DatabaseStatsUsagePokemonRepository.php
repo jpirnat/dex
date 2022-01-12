@@ -21,13 +21,6 @@ final class DatabaseStatsUsagePokemonRepository implements StatsUsagePokemonRepo
 	/**
 	 * Get stats usage Pokémon by month, format, and rating.
 	 *
-	 * @param DateTime $month
-	 * @param DateTime|null $prevMonth
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
 	 * @return StatsUsagePokemon[] Ordered by rank ascending.
 	 */
 	public function getByMonth(
@@ -111,15 +104,6 @@ final class DatabaseStatsUsagePokemonRepository implements StatsUsagePokemonRepo
 
 	/**
 	 * Get a stats usage Pokémon by month, format, rating, and Pokémon id.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
-	 * @return array|null
 	 */
 	public function getByPokemon(
 		DateTime $month,
@@ -176,15 +160,6 @@ final class DatabaseStatsUsagePokemonRepository implements StatsUsagePokemonRepo
 
 	/**
 	 * Get a stats usage Pokémon by month, format, rating, and rank.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param int $rank
-	 * @param GenerationId $generationId
-	 * @param LanguageId $languageId
-	 *
-	 * @return array|null
 	 */
 	public function getByRank(
 		DateTime $month,

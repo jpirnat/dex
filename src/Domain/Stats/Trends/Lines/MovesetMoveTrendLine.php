@@ -15,12 +15,6 @@ final class MovesetMoveTrendLine extends TrendLine
 	/**
 	 * Constructor.
 	 *
-	 * @param string $formatName
-	 * @param int $rating
-	 * @param PokemonName $pokemonName
-	 * @param MoveName $moveName
-	 * @param Type $pokemonType
-	 * @param Type $moveType
 	 * @param TrendPoint[] $trendPoints
 	 */
 	public function __construct(
@@ -46,8 +40,6 @@ final class MovesetMoveTrendLine extends TrendLine
 
 	/**
 	 * Get the title of a chart that consists of only this trend line.
-	 *
-	 * @return string
 	 */
 	public function getChartTitle() : string
 	{
@@ -62,8 +54,6 @@ final class MovesetMoveTrendLine extends TrendLine
 	/**
 	 * Get the trend line's label, for a chart that consists of only this trend
 	 * line.
-	 *
-	 * @return string
 	 */
 	public function getLineLabel() : string
 	{
@@ -72,8 +62,6 @@ final class MovesetMoveTrendLine extends TrendLine
 
 	/**
 	 * Get the moveset move trend line's move name.
-	 *
-	 * @return MoveName
 	 */
 	public function getMoveName() : MoveName
 	{
@@ -82,8 +70,6 @@ final class MovesetMoveTrendLine extends TrendLine
 
 	/**
 	 * Get the trend line's move type.
-	 *
-	 * @return Type
 	 */
 	public function getMoveType() : Type
 	{

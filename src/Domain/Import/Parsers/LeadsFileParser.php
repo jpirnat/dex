@@ -17,10 +17,6 @@ final class LeadsFileParser
 
 	/**
 	 * Parse leads data from the given file.
-	 *
-	 * @param StreamInterface $stream
-	 *
-	 * @return void
 	 */
 	public function parse(StreamInterface $stream) : void
 	{

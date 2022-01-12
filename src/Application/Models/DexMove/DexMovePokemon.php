@@ -29,15 +29,9 @@ final class DexMovePokemon
 	/**
 	 * Constructor.
 	 *
-	 * @param array $versionGroupData
-	 * @param string $icon
-	 * @param string $identifier
-	 * @param string $name
 	 * @param DexType[] $types
 	 * @param DexPokemonAbility[] $abilities
 	 * @param int[] $baseStats
-	 * @param int $baseStatTotal
-	 * @param int $sort
 	 */
 	public function __construct(
 		array $versionGroupData,
@@ -64,8 +58,6 @@ final class DexMovePokemon
 
 	/**
 	 * Get the version group data.
-	 *
-	 * @return array
 	 */
 	public function getVersionGroupData() : array
 	{
@@ -74,8 +66,6 @@ final class DexMovePokemon
 
 	/**
 	 * Get the Pokémon's icon.
-	 *
-	 * @return string
 	 */
 	public function getIcon() : string
 	{
@@ -84,8 +74,6 @@ final class DexMovePokemon
 
 	/**
 	 * Get the Pokémon's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -94,8 +82,6 @@ final class DexMovePokemon
 
 	/**
 	 * Get the Pokémon's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -134,8 +120,6 @@ final class DexMovePokemon
 
 	/**
 	 * Get the Pokémon's base stat total.
-	 *
-	 * @return int
 	 */
 	public function getBaseStatTotal() : int
 	{
@@ -144,8 +128,6 @@ final class DexMovePokemon
 
 	/**
 	 * Get the Pokémon's sort value.
-	 *
-	 * @return int
 	 */
 	public function getSort() : int
 	{

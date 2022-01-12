@@ -15,8 +15,6 @@ final class Ability
 
 	/**
 	 * Get the ability's id.
-	 *
-	 * @return AbilityId
 	 */
 	public function getId() : AbilityId
 	{
@@ -25,8 +23,6 @@ final class Ability
 
 	/**
 	 * Get the ability's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -35,8 +31,6 @@ final class Ability
 
 	/**
 	 * Get the version group id this ability was introduced in.
-	 *
-	 * @return VersionGroupId
 	 */
 	public function getIntroducedInVersionGroupId() : VersionGroupId
 	{

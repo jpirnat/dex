@@ -12,8 +12,6 @@ final class StatValue
 
 	/**
 	 * Get the stat id.
-	 *
-	 * @return StatId
 	 */
 	public function getStatId() : StatId
 	{
@@ -22,8 +20,6 @@ final class StatValue
 
 	/**
 	 * Get the value.
-	 *
-	 * @return float
 	 */
 	public function getValue() : float
 	{

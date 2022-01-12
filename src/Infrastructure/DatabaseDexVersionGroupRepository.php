@@ -22,12 +22,7 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 	/**
 	 * Get a dex version group by its id.
 	 *
-	 * @param VersionGroupId $versionGroupId
-	 * @param LanguageId $languageId
-	 *
 	 * @throws VersionGroupNotFoundException if no version group exists with
-	 *
-	 * @return DexVersionGroup
 	 */
 	public function getById(
 		VersionGroupId $versionGroupId,
@@ -70,10 +65,6 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 	 * Get dex version groups that this Pokémon has appeared in, up to a certain
 	 * generation. This method is used to get all relevant version groups for
 	 * the dex Pokémon page.
-	 *
-	 * @param PokemonId $pokemonId
-	 * @param LanguageId $languageId
-	 * @param GenerationId $end
 	 *
 	 * @return DexVersionGroup[] Indexed by id. Ordered by sort.
 	 */
@@ -136,10 +127,6 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 	 * Get dex version groups that this move has appeared in, up to a certain
 	 * generation. This method is used to get all relevant version groups for
 	 * the dex move page.
-	 *
-	 * @param MoveId $moveId
-	 * @param LanguageId $languageId
-	 * @param GenerationId $end
 	 *
 	 * @return DexVersionGroup[] Indexed by id. Ordered by sort.
 	 */

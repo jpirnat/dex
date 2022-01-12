@@ -13,8 +13,6 @@ final class MoveData
 
 	/**
 	 * Get the move name.
-	 *
-	 * @return string
 	 */
 	public function getMoveName() : string
 	{
@@ -23,8 +21,6 @@ final class MoveData
 
 	/**
 	 * Get the move identifier.
-	 *
-	 * @return string
 	 */
 	public function getMoveIdentifier() : string
 	{
@@ -33,8 +29,6 @@ final class MoveData
 
 	/**
 	 * Get the percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{

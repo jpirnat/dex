@@ -12,8 +12,6 @@ final class FormatRating
 
 	/**
 	 * Get the Pokémon Showdown format name.
-	 *
-	 * @return string
 	 */
 	public function showdownFormatName() : string
 	{
@@ -22,8 +20,6 @@ final class FormatRating
 
 	/**
 	 * Get the rating.
-	 *
-	 * @return int
 	 */
 	public function rating() : int
 	{

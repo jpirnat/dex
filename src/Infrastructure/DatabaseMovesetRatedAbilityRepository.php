@@ -15,10 +15,6 @@ final class DatabaseMovesetRatedAbilityRepository implements MovesetRatedAbility
 
 	/**
 	 * Save a moveset rated ability record.
-	 *
-	 * @param MovesetRatedAbility $movesetRatedAbility
-	 *
-	 * @return void
 	 */
 	public function save(MovesetRatedAbility $movesetRatedAbility) : void
 	{

@@ -26,12 +26,6 @@ final class PokemonModel
 
 	/**
 	 * Set miscellaneous data about the Pokémon (name, types, base stats, etc).
-	 *
-	 * @param GenerationId $generationId
-	 * @param PokemonId $pokemonId
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		GenerationId $generationId,
@@ -56,8 +50,6 @@ final class PokemonModel
 
 	/**
 	 * Get the Pokémon.
-	 *
-	 * @return DexPokemon
 	 */
 	public function getPokemon() : DexPokemon
 	{
@@ -66,8 +58,6 @@ final class PokemonModel
 
 	/**
 	 * Get the model.
-	 *
-	 * @return Model
 	 */
 	public function getModel() : Model
 	{

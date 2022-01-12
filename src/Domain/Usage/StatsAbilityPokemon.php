@@ -17,8 +17,6 @@ final class StatsAbilityPokemon
 
 	/**
 	 * Get the Pokémon's icon.
-	 *
-	 * @return string
 	 */
 	public function getIcon() : string
 	{
@@ -27,8 +25,6 @@ final class StatsAbilityPokemon
 
 	/**
 	 * Get the Pokémon's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -37,8 +33,6 @@ final class StatsAbilityPokemon
 
 	/**
 	 * Get the Pokémon's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -47,8 +41,6 @@ final class StatsAbilityPokemon
 
 	/**
 	 * Get the Pokémon's Pokémon percent.
-	 *
-	 * @return float
 	 */
 	public function getPokemonPercent() : float
 	{
@@ -57,8 +49,6 @@ final class StatsAbilityPokemon
 
 	/**
 	 * Get the Pokémon's ability percent.
-	 *
-	 * @return float
 	 */
 	public function getAbilityPercent() : float
 	{
@@ -67,8 +57,6 @@ final class StatsAbilityPokemon
 
 	/**
 	 * Get the Pokémon's usage percent.
-	 *
-	 * @return float
 	 */
 	public function getUsagePercent() : float
 	{
@@ -77,8 +65,6 @@ final class StatsAbilityPokemon
 
 	/**
 	 * Get the Pokémon's usage change.
-	 *
-	 * @return float
 	 */
 	public function getUsageChange() : float
 	{

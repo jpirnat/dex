@@ -26,15 +26,6 @@ final class ItemModel
 
 	/**
 	 * Get moveset data averaged over multiple months.
-	 *
-	 * @param DateTime $start
-	 * @param DateTime $end
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		DateTime $start,
@@ -73,6 +64,7 @@ final class ItemModel
 			);
 		}
 	}
+
 
 	/**
 	 * Get the item datas.

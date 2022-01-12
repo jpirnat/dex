@@ -18,10 +18,6 @@ final class StatsAveragedPokemonController
 	 * Get moveset data to recreate a stats moveset file, such as
 	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single
 	 * Pokémon.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{

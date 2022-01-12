@@ -20,8 +20,6 @@ final class NamePercent
 
 	/**
 	 * Get the Pokémon Showdown entity name.
-	 *
-	 * @return string
 	 */
 	public function showdownName() : string
 	{
@@ -30,8 +28,6 @@ final class NamePercent
 
 	/**
 	 * Get the percent.
-	 *
-	 * @return float
 	 */
 	public function percent() : float
 	{

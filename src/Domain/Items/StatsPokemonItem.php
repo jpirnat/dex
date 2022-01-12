@@ -15,8 +15,6 @@ final class StatsPokemonItem
 
 	/**
 	 * Get the item's icon.
-	 *
-	 * @return string
 	 */
 	public function getIcon() : string
 	{
@@ -25,8 +23,6 @@ final class StatsPokemonItem
 
 	/**
 	 * Get the item's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -35,8 +31,6 @@ final class StatsPokemonItem
 
 	/**
 	 * Get the item's name.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -45,8 +39,6 @@ final class StatsPokemonItem
 
 	/**
 	 * Get the item's percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{
@@ -55,8 +47,6 @@ final class StatsPokemonItem
 
 	/**
 	 * Get the item's change.
-	 *
-	 * @return float
 	 */
 	public function getChange() : float
 	{

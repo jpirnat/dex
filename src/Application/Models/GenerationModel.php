@@ -31,10 +31,6 @@ final class GenerationModel
 
 	/**
 	 * Set the generation by its id.
-	 *
-	 * @param GenerationId $generationId
-	 *
-	 * @return GenerationId
 	 */
 	public function setById(GenerationId $generationId) : GenerationId
 	{
@@ -45,10 +41,6 @@ final class GenerationModel
 
 	/**
 	 * Set the generation by its identifier.
-	 *
-	 * @param string $generationIdentifier
-	 *
-	 * @return GenerationId
 	 */
 	public function setByIdentifier(string $generationIdentifier) : GenerationId
 	{
@@ -61,10 +53,6 @@ final class GenerationModel
 
 	/**
 	 * Set the navigable generations to all generations this Pokémon has appeared in.
-	 *
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return void
 	 */
 	public function setWithPokemon(PokemonId $pokemonId) : void
 	{
@@ -73,10 +61,6 @@ final class GenerationModel
 
 	/**
 	 * Set the navigable generations to all generations this move has appeared in.
-	 *
-	 * @param MoveId $moveId
-	 *
-	 * @return void
 	 */
 	public function setWithMove(MoveId $moveId) : void
 	{
@@ -85,10 +69,6 @@ final class GenerationModel
 
 	/**
 	 * Set the navigable generations to all generations since the given generation.
-	 *
-	 * @param GenerationId $generationId
-	 *
-	 * @return void
 	 */
 	public function setGensSince(GenerationId $generationId) : void
 	{
@@ -98,10 +78,6 @@ final class GenerationModel
 	/**
 	 * Set the navigable generations to all generations since the given version
 	 * group's generation.
-	 *
-	 * @param VersionGroupId $versionGroupId
-	 *
-	 * @return void
 	 */
 	public function setGensSinceVg(VersionGroupId $versionGroupId) : void
 	{
@@ -111,10 +87,9 @@ final class GenerationModel
 		);
 	}
 
+
 	/**
 	 * Get the generation.
-	 *
-	 * @return Generation
 	 */
 	public function getGeneration() : Generation
 	{

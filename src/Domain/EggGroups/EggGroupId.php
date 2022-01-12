@@ -7,6 +7,5 @@ use Jp\Dex\Domain\EntityId;
 
 final class EggGroupId extends EntityId
 {
-	/** @var int $UNDISCOVERED */
 	public const UNDISCOVERED = 15;
 }

@@ -16,8 +16,6 @@ final class MoveMethodName
 
 	/**
 	 * Get the move method name's language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -26,8 +24,6 @@ final class MoveMethodName
 
 	/**
 	 * Get the move method name's move method id.
-	 *
-	 * @return MoveMethodId
 	 */
 	public function getMoveMethodId() : MoveMethodId
 	{
@@ -36,8 +32,6 @@ final class MoveMethodName
 
 	/**
 	 * Get the move method name's name value.
-	 *
-	 * @return string
 	 */
 	public function getName() : string
 	{
@@ -46,8 +40,6 @@ final class MoveMethodName
 
 	/**
 	 * Get the move method name's description.
-	 *
-	 * @return string
 	 */
 	public function getDescription() : string
 	{

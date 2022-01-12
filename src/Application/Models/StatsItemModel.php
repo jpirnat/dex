@@ -47,14 +47,6 @@ final class StatsItemModel
 	/**
 	 * Get usage data to recreate a stats usage file, such as
 	 * http://www.smogon.com/stats/2014-11/ou-1695.txt.
-	 *
-	 * @param string $month
-	 * @param string $formatIdentifier
-	 * @param int $rating
-	 * @param string $itemIdentifier
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $month,
@@ -113,10 +105,9 @@ final class StatsItemModel
 		);
 	}
 
+
 	/**
 	 * Get the month.
-	 *
-	 * @return string
 	 */
 	public function getMonth() : string
 	{
@@ -125,8 +116,6 @@ final class StatsItemModel
 
 	/**
 	 * Get the format.
-	 *
-	 * @return Format
 	 */
 	public function getFormat() : Format
 	{
@@ -135,8 +124,6 @@ final class StatsItemModel
 
 	/**
 	 * Get the rating.
-	 *
-	 * @return int
 	 */
 	public function getRating() : int
 	{
@@ -145,8 +132,6 @@ final class StatsItemModel
 
 	/**
 	 * Get the item identifier.
-	 *
-	 * @return string
 	 */
 	public function getItemIdentifier() : string
 	{
@@ -155,8 +140,6 @@ final class StatsItemModel
 
 	/**
 	 * Get the language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -165,8 +148,6 @@ final class StatsItemModel
 
 	/**
 	 * Get the date model.
-	 *
-	 * @return DateModel
 	 */
 	public function getDateModel() : DateModel
 	{
@@ -185,8 +166,6 @@ final class StatsItemModel
 
 	/**
 	 * Get the item name.
-	 *
-	 * @return ItemName
 	 */
 	public function getItemName() : ItemName
 	{
@@ -195,8 +174,6 @@ final class StatsItemModel
 
 	/**
 	 * Get the item description.
-	 *
-	 * @return ItemDescription
 	 */
 	public function getItemDescription() : ItemDescription
 	{

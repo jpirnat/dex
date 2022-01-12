@@ -16,8 +16,6 @@ final class StatsIndexView
 
 	/**
 	 * Show the /stats page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function index() : ResponseInterface
 	{

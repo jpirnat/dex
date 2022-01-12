@@ -18,10 +18,6 @@ final class IntlFormatter
 
 	/**
 	 * Format a month.
-	 *
-	 * @param DateTime $month
-	 *
-	 * @return string
 	 */
 	public function formatMonth(DateTime $month) : string
 	{
@@ -30,10 +26,6 @@ final class IntlFormatter
 
 	/**
 	 * Format a number.
-	 *
-	 * @param float $number
-	 *
-	 * @return string
 	 */
 	public function formatNumber(float $number) : string
 	{
@@ -44,8 +36,6 @@ final class IntlFormatter
 	 * Format a percent.
 	 *
 	 * @param float $percent A number between 0 and 100.
-	 *
-	 * @return string
 	 */
 	public function formatPercent(float $percent) : string
 	{
@@ -56,8 +46,6 @@ final class IntlFormatter
 	 * Format a percent.
 	 *
 	 * @param float $percent A number between 0 and 100.
-	 *
-	 * @return string
 	 */
 	public function formatChange(float $percent) : string
 	{

@@ -32,8 +32,6 @@ final class Counter
 
 	/**
 	 * Get the Pokémon Showdown Pokémon name.
-	 *
-	 * @return string
 	 */
 	public function showdownPokemonName() : string
 	{
@@ -42,8 +40,6 @@ final class Counter
 
 	/**
 	 * Get the number1.
-	 *
-	 * @return float
 	 */
 	public function number1() : float
 	{
@@ -52,8 +48,6 @@ final class Counter
 
 	/**
 	 * Get the number2.
-	 *
-	 * @return float
 	 */
 	public function number2() : float
 	{
@@ -62,8 +56,6 @@ final class Counter
 
 	/**
 	 * Get the number3.
-	 *
-	 * @return float
 	 */
 	public function number3() : float
 	{
@@ -72,8 +64,6 @@ final class Counter
 
 	/**
 	 * Get the percent knocked out.
-	 *
-	 * @return float
 	 */
 	public function percentKnockedOut() : float
 	{
@@ -82,8 +72,6 @@ final class Counter
 
 	/**
 	 * Get the percent switched out.
-	 *
-	 * @return float
 	 */
 	public function percentSwitchedOut() : float
 	{

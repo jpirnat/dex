@@ -21,9 +21,6 @@ final class TrendPointCalculator
 	 * indexed and sorted by month.
 	 *
 	 * @param float[] $usageDatas
-	 * @param FormatId $formatId
-	 *
-	 * @return DateTime
 	 */
 	private function getFirstDate(array $usageDatas, FormatId $formatId) : DateTime
 	{
@@ -48,9 +45,6 @@ final class TrendPointCalculator
 	 * indexed and sorted by month.
 	 *
 	 * @param float[] $usageDatas
-	 * @param FormatId $formatId
-	 *
-	 * @return DateTime
 	 */
 	private function getFinalDate(array $usageDatas, FormatId $formatId) : DateTime
 	{

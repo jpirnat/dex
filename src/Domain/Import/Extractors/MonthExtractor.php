@@ -13,11 +13,7 @@ final class MonthExtractor
 	/**
 	 * Extract the month from a stats directory or filename.
 	 *
-	 * @param string $filename
-	 *
 	 * @throws InvalidFilenameException if $filename is invalid.
-	 *
-	 * @return DateTime
 	 */
 	public function extractMonth(string $filename) : DateTime
 	{

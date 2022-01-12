@@ -13,8 +13,6 @@ final class AbilityData
 
 	/**
 	 * Get the ability name.
-	 *
-	 * @return string
 	 */
 	public function getAbilityName() : string
 	{
@@ -23,8 +21,6 @@ final class AbilityData
 
 	/**
 	 * Get the ability identifier.
-	 *
-	 * @return string
 	 */
 	public function getAbilityIdentifier() : string
 	{
@@ -33,8 +29,6 @@ final class AbilityData
 
 	/**
 	 * Get the percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{

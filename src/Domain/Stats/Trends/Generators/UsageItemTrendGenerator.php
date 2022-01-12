@@ -27,14 +27,6 @@ final class UsageItemTrendGenerator
 
 	/**
 	 * Get the data for a usage item trend line.
-	 *
-	 * @param Format $format
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param ItemId $itemId
-	 * @param LanguageId $languageId
-	 *
-	 * @return UsageItemTrendLine
 	 */
 	public function generate(
 		Format $format,

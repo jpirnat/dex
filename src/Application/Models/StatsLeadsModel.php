@@ -35,13 +35,6 @@ final class StatsLeadsModel
 	/**
 	 * Get leads data to recreate a stats leads file, such as
 	 * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
-	 *
-	 * @param string $month
-	 * @param string $formatIdentifier
-	 * @param int $rating
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $month,
@@ -81,10 +74,9 @@ final class StatsLeadsModel
 		);
 	}
 
+
 	/**
 	 * Get the month.
-	 *
-	 * @return string
 	 */
 	public function getMonth() : string
 	{
@@ -93,8 +85,6 @@ final class StatsLeadsModel
 
 	/**
 	 * Get the format.
-	 *
-	 * @return Format
 	 */
 	public function getFormat() : Format
 	{
@@ -103,8 +93,6 @@ final class StatsLeadsModel
 
 	/**
 	 * Get the rating.
-	 *
-	 * @return int
 	 */
 	public function getRating() : int
 	{
@@ -113,8 +101,6 @@ final class StatsLeadsModel
 
 	/**
 	 * Get the language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -123,8 +109,6 @@ final class StatsLeadsModel
 
 	/**
 	 * Get the date model.
-	 *
-	 * @return DateModel
 	 */
 	public function getDateModel() : DateModel
 	{

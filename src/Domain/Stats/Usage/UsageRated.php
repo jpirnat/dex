@@ -31,20 +31,18 @@ final class UsageRated
 		$this->validateMonth($month);
 
 		if ($rating < 0) {
-			throw new InvalidRatingException('Invalid rating: ' . $rating);
+			throw new InvalidRatingException("Invalid rating: $rating.");
 		}
 
 		if ($averageWeightPerTeam < 0) {
 			throw new InvalidAverageWeightPerTeamException(
-				'Invalid average weight per team: ' . $averageWeightPerTeam
+				"Invalid average weight per team: $averageWeightPerTeam."
 			);
 		}
 	}
 
 	/**
 	 * Get the month.
-	 *
-	 * @return DateTime
 	 */
 	public function getMonth() : DateTime
 	{
@@ -53,8 +51,6 @@ final class UsageRated
 
 	/**
 	 * Get the format id.
-	 *
-	 * @return FormatId
 	 */
 	public function getFormatId() : FormatId
 	{
@@ -63,8 +59,6 @@ final class UsageRated
 
 	/**
 	 * Get the rating.
-	 *
-	 * @return int
 	 */
 	public function getRating() : int
 	{
@@ -73,8 +67,6 @@ final class UsageRated
 
 	/**
 	 * Get the average weight per team.
-	 *
-	 * @return float
 	 */
 	public function getAverageWeightPerTeam() : float
 	{

@@ -40,18 +40,16 @@ final class MovesetRatedAveragedMove
 		$this->validateMonth($end);
 
 		if ($rating < 0) {
-			throw new InvalidRatingException('Invalid rating: ' . $rating);
+			throw new InvalidRatingException("Invalid rating: $rating.");
 		}
 
 		if ($percent < 0 || $percent > 100) {
-			throw new InvalidPercentException('Invalid percent: ' . $percent);
+			throw new InvalidPercentException("Invalid percent: $percent.");
 		}
 	}
 
 	/**
 	 * Get the start month.
-	 *
-	 * @return DateTime
 	 */
 	public function getStart() : DateTime
 	{
@@ -60,8 +58,6 @@ final class MovesetRatedAveragedMove
 
 	/**
 	 * Get the end month.
-	 *
-	 * @return DateTime
 	 */
 	public function getEnd() : DateTime
 	{
@@ -70,8 +66,6 @@ final class MovesetRatedAveragedMove
 
 	/**
 	 * Get the format id.
-	 *
-	 * @return FormatId
 	 */
 	public function getFormatId() : FormatId
 	{
@@ -80,8 +74,6 @@ final class MovesetRatedAveragedMove
 
 	/**
 	 * Get the rating.
-	 *
-	 * @return int
 	 */
 	public function getRating() : int
 	{
@@ -90,8 +82,6 @@ final class MovesetRatedAveragedMove
 
 	/**
 	 * Get the Pokémon id.
-	 *
-	 * @return PokemonId
 	 */
 	public function getPokemonId() : PokemonId
 	{
@@ -100,8 +90,6 @@ final class MovesetRatedAveragedMove
 
 	/**
 	 * Get the move id.
-	 *
-	 * @return MoveId
 	 */
 	public function getMoveId() : MoveId
 	{
@@ -110,8 +98,6 @@ final class MovesetRatedAveragedMove
 
 	/**
 	 * Get the percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{

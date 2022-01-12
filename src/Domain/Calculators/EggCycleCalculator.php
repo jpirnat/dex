@@ -11,15 +11,10 @@ final class EggCycleCalculator
 	/**
 	 * Calculate the number of steps it would take for an egg to hatch.
 	 *
-	 * @param GenerationId $generationId
-	 * @param int $baseEggCycles
-	 * @param bool $magmaArmor
 	 * @param string $oPower '', 'weak', 'medium', or 'strong'.
 	 *
 	 * @throws GenerationNotFoundException if steps to hatch cannot be calculated
 	 *     for $generationId.
-	 *
-	 * @return int
 	 */
 	public function calculateStepsToHatch(
 		GenerationId $generationId,

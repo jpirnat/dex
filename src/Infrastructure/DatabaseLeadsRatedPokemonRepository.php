@@ -16,14 +16,7 @@ final class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepo
 	) {}
 
 	/**
-	 * Do any leads rated Pokémon records exist for this month, format, and
-	 * rating?
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param int $rating
-	 *
-	 * @return bool
+	 * Do any leads rated Pokémon records exist for this month, format, and rating?
 	 */
 	public function hasAny(DateTime $month, FormatId $formatId, int $rating) : bool
 	{
@@ -47,10 +40,6 @@ final class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepo
 
 	/**
 	 * Save a leads rated Pokémon record.
-	 *
-	 * @param LeadsRatedPokemon $leadsRatedPokemon
-	 *
-	 * @return void
 	 */
 	public function save(LeadsRatedPokemon $leadsRatedPokemon) : void
 	{

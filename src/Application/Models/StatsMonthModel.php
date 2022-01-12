@@ -27,11 +27,6 @@ final class StatsMonthModel
 	/**
 	 * Get the formats list to recreate a stats month directory, such as
 	 * http://www.smogon.com/stats/2014-11.
-	 *
-	 * @param string $month
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $month,
@@ -77,10 +72,9 @@ final class StatsMonthModel
 		});
 	}
 
+
 	/**
 	 * Get the date model.
-	 *
-	 * @return DateModel
 	 */
 	public function getDateModel() : DateModel
 	{
@@ -89,8 +83,6 @@ final class StatsMonthModel
 
 	/**
 	 * Get the month.
-	 *
-	 * @return string
 	 */
 	public function getMonth() : string
 	{
@@ -99,8 +91,6 @@ final class StatsMonthModel
 
 	/**
 	 * Get the language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -109,8 +99,6 @@ final class StatsMonthModel
 
 	/**
 	 * Get the generations.
-	 *
-	 * @return array
 	 */
 	public function getGenerations() : array
 	{

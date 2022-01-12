@@ -18,11 +18,6 @@ final class DatabaseMovesetPokemonRepository implements MovesetPokemonRepository
 
 	/**
 	 * Do any moveset Pokémon records exist for this month and format?
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 *
-	 * @return bool
 	 */
 	public function hasAny(DateTime $month, FormatId $formatId) : bool
 	{
@@ -42,10 +37,6 @@ final class DatabaseMovesetPokemonRepository implements MovesetPokemonRepository
 
 	/**
 	 * Save a moveset Pokémon record.
-	 *
-	 * @param MovesetPokemon $movesetPokemon
-	 *
-	 * @return void
 	 */
 	public function save(MovesetPokemon $movesetPokemon) : void
 	{
@@ -74,12 +65,6 @@ final class DatabaseMovesetPokemonRepository implements MovesetPokemonRepository
 
 	/**
 	 * Get a moveset Pokémon record by month, format, and Pokémon.
-	 *
-	 * @param DateTime $month
-	 * @param FormatId $formatId
-	 * @param PokemonId $pokemonId
-	 *
-	 * @return MovesetPokemon|null
 	 */
 	public function getByMonthAndFormatAndPokemon(
 		DateTime $month,

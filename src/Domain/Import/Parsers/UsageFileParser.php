@@ -18,8 +18,6 @@ final class UsageFileParser
 	/**
 	 * Parse usage data from the given file.
 	 *
-	 * @param StreamInterface $stream
-	 *
 	 * @return int Total battles, or -1 if the file is empty.
 	 */
 	public function parse(StreamInterface $stream) : int

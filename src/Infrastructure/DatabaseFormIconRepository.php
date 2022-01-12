@@ -19,15 +19,8 @@ final class DatabaseFormIconRepository implements FormIconRepositoryInterface
 	/**
 	 * Get a form icon by its generation, form, gender, and direction.
 	 *
-	 * @param GenerationId $generationId
-	 * @param FormId $formId
-	 * @param bool $isFemale
-	 * @param bool $isRight
-	 *
 	 * @throws FormIconNotFoundException if no form icon exists with this
 	 *     generation, form, gender, and direction.
-	 *
-	 * @return FormIcon
 	 */
 	public function getByGenerationAndFormAndFemaleAndRight(
 		GenerationId $generationId,
@@ -73,14 +66,9 @@ final class DatabaseFormIconRepository implements FormIconRepositoryInterface
 	}
 
 	/**
-	 * Get form icons by their generation, gender, and direction. Indexed by
-	 * form id.
+	 * Get form icons by their generation, gender, and direction.
 	 *
-	 * @param GenerationId $generationId
-	 * @param bool $isFemale
-	 * @param bool $isRight
-	 *
-	 * @return FormIcon[]
+	 * @return FormIcon[] Indexed by form id.
 	 */
 	public function getByGenerationAndFemaleAndRight(
 		GenerationId $generationId,

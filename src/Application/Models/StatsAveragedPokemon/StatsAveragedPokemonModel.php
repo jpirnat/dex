@@ -47,15 +47,6 @@ final class StatsAveragedPokemonModel
 
 	/**
 	 * Get moveset data averaged over multiple months.
-	 *
-	 * @param string $start
-	 * @param string $end
-	 * @param string $formatIdentifier
-	 * @param int $rating
-	 * @param string $pokemonIdentifier
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $start,
@@ -141,8 +132,6 @@ final class StatsAveragedPokemonModel
 
 	/**
 	 * Get the start month.
-	 *
-	 * @return string
 	 */
 	public function getStart() : string
 	{
@@ -151,8 +140,6 @@ final class StatsAveragedPokemonModel
 
 	/**
 	 * Get the end month.
-	 *
-	 * @return string
 	 */
 	public function getEnd() : string
 	{
@@ -161,8 +148,6 @@ final class StatsAveragedPokemonModel
 
 	/**
 	 * Get the format.
-	 *
-	 * @return Format
 	 */
 	public function getFormat() : Format
 	{
@@ -171,8 +156,6 @@ final class StatsAveragedPokemonModel
 
 	/**
 	 * Get the rating.
-	 *
-	 * @return int
 	 */
 	public function getRating() : int
 	{
@@ -181,8 +164,6 @@ final class StatsAveragedPokemonModel
 
 	/**
 	 * Get the stats and their names.
-	 *
-	 * @return array
 	 */
 	public function getStats() : array
 	{
@@ -191,8 +172,6 @@ final class StatsAveragedPokemonModel
 
 	/**
 	 * Get the Pokémon.
-	 *
-	 * @return Pokemon
 	 */
 	public function getPokemon() : Pokemon
 	{
@@ -201,8 +180,6 @@ final class StatsAveragedPokemonModel
 
 	/**
 	 * Get the language id.
-	 *
-	 * @return LanguageId
 	 */
 	public function getLanguageId() : LanguageId
 	{
@@ -221,8 +198,6 @@ final class StatsAveragedPokemonModel
 
 	/**
 	 * Get the Pokémon model.
-	 *
-	 * @return PokemonModel
 	 */
 	public function getPokemonModel() : PokemonModel
 	{
@@ -231,8 +206,6 @@ final class StatsAveragedPokemonModel
 
 	/**
 	 * Get the generation.
-	 *
-	 * @return Generation
 	 */
 	public function getGeneration() : Generation
 	{

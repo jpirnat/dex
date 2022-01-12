@@ -11,10 +11,6 @@ final class LeadUsageTrendLine extends TrendLine
 	/**
 	 * Constructor.
 	 *
-	 * @param string $formatName
-	 * @param int $rating
-	 * @param PokemonName $pokemonName
-	 * @param Type $pokemonType
 	 * @param TrendPoint[] $trendPoints
 	 */
 	public function __construct(
@@ -36,8 +32,6 @@ final class LeadUsageTrendLine extends TrendLine
 
 	/**
 	 * Get the title of a chart that consists of only this trend line.
-	 *
-	 * @return string
 	 */
 	public function getChartTitle() : string
 	{
@@ -51,8 +45,6 @@ final class LeadUsageTrendLine extends TrendLine
 	/**
 	 * Get the trend line's label, for a chart that consists of only this trend
 	 * line.
-	 *
-	 * @return string
 	 */
 	public function getLineLabel() : string
 	{

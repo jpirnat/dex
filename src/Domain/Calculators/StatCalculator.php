@@ -10,58 +10,29 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class StatCalculator
 {
-	/** @var int $PERFECT_IV_GEN_1 */
 	private const PERFECT_IV_GEN_1 = 15;
-
-	/** @var int $PERFECT_IV_GEN_3 */
 	private const PERFECT_IV_GEN_3 = 31;
-
-	/** @var int $MAX_EV_GEN_1 */
 	private const MAX_EV_GEN_1 = 65535;
-
-	/** @var int $MAX_EV_GEN_3 */
 	private const MAX_EV_GEN_3 = 252;
 
 	/**
 	 * Calculate a Pokémon's HP stat in generations 1 or 2.
-	 *
-	 * @param int $base
-	 * @param int $iv
-	 * @param int $ev
-	 * @param int $level
-	 *
-	 * @return int
 	 */
-	public function hp1(int $base, int $iv, int $ev, int $level)
+	public function hp1(int $base, int $iv, int $ev, int $level) : int
 	{
 		return (int) floor(((($base + $iv) * 2 + floor(ceil(sqrt($ev)) / 4)) * $level) / 100) + $level + 10;
 	}
 
 	/**
 	 * Calculate a Pokémon's non-HP stat in generations 1 or 2.
-	 *
-	 * @param int $base
-	 * @param int $iv
-	 * @param int $ev
-	 * @param int $level
-	 *
-	 * @return int
 	 */
-	public function other1(int $base, int $iv, int $ev, int $level)
+	public function other1(int $base, int $iv, int $ev, int $level) : int
 	{
 		return (int) floor(((($base + $iv) * 2 + floor(ceil(sqrt($ev))/4)) * $level) / 100) + 5;
 	}
 
 	/**
 	 * Calculate a Pokémon's stats in generations 1 or 2.
-	 *
-	 * @param GenerationId $generationId
-	 * @param StatValueContainer $baseStats
-	 * @param StatValueContainer $ivSpread
-	 * @param StatValueContainer $evSpread
-	 * @param int $level
-	 *
-	 * @return StatValueContainer
 	 */
 	public function all1(
 		GenerationId $generationId,
@@ -100,15 +71,8 @@ final class StatCalculator
 
 	/**
 	 * Calculate a Pokémon's HP stat in generations 3 and above.
-	 *
-	 * @param int $base
-	 * @param int $iv
-	 * @param int $ev
-	 * @param int $level
-	 *
-	 * @return int
 	 */
-	public function hp3(int $base, int $iv, int $ev, int $level)
+	public function hp3(int $base, int $iv, int $ev, int $level) : int
 	{
 		// Shedinja hack.
 		if ($base === 1) {
@@ -120,31 +84,14 @@ final class StatCalculator
 
 	/**
 	 * Calculate a Pokémon's non-HP stat in generations 3 and above.
-	 *
-	 * @param int $base
-	 * @param int $iv
-	 * @param int $ev
-	 * @param int $level
-	 * @param float $natureModifier 1.0, 0.9, or 1.1
-	 *
-	 * @return int
 	 */
-	public function other3(int $base, int $iv, int $ev, int $level, float $natureModifier)
+	public function other3(int $base, int $iv, int $ev, int $level, float $natureModifier) : int
 	{
 		return (int) floor((floor(((2 * $base + $iv + floor($ev / 4)) * $level) / 100) + 5) * $natureModifier);
 	}
 
 	/**
 	 * Calculate a Pokémon's stats in generations 3 and above.
-	 *
-	 * @param StatValueContainer $baseStats
-	 * @param StatValueContainer $ivSpread
-	 * @param StatValueContainer $evSpread
-	 * @param int $level
-	 * @param StatId|null $increasedStatId
-	 * @param StatId|null $decreasedStatId
-	 *
-	 * @return StatValueContainer
 	 */
 	public function all3(
 		StatValueContainer $baseStats,
@@ -185,12 +132,6 @@ final class StatCalculator
 
 	/**
 	 * Get the nature modifier for this stat.
-	 *
-	 * @param StatId $statId
-	 * @param StatId|null $increasedStatId
-	 * @param StatId|null $decreasedStatId
-	 *
-	 * @return float
 	 */
 	private function getNatureModifier(StatId $statId, ?StatId $increasedStatId, ?StatId $decreasedStatId) : float
 	{
@@ -211,10 +152,6 @@ final class StatCalculator
 
 	/**
 	 * Get the perfect IV value for this generation.
-	 *
-	 * @param GenerationId $generationId
-	 *
-	 * @return int
 	 */
 	public function getPerfectIv(GenerationId $generationId) : int
 	{
@@ -229,10 +166,6 @@ final class StatCalculator
 
 	/**
 	 * Get the max EV value for this generation.
-	 *
-	 * @param GenerationId $generationId
-	 *
-	 * @return int
 	 */
 	public function getMaxEv(GenerationId $generationId) : int
 	{

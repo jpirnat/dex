@@ -34,12 +34,6 @@ final class DexAbilityModel
 
 	/**
 	 * Set data for the dex ability page.
-	 *
-	 * @param string $generationIdentifier
-	 * @param string $abilityIdentifier
-	 * @param LanguageId $languageId
-	 *
-	 * @return void
 	 */
 	public function setData(
 		string $generationIdentifier,
@@ -90,10 +84,9 @@ final class DexAbilityModel
 		}
 	}
 
+
 	/**
 	 * Get the generation model.
-	 *
-	 * @return GenerationModel
 	 */
 	public function getGenerationModel() : GenerationModel
 	{
@@ -102,8 +95,6 @@ final class DexAbilityModel
 
 	/**
 	 * Get the ability.
-	 *
-	 * @return array
 	 */
 	public function getAbility() : array
 	{
@@ -112,8 +103,6 @@ final class DexAbilityModel
 
 	/**
 	 * Get the stats and their names.
-	 *
-	 * @return array
 	 */
 	public function getStats() : array
 	{

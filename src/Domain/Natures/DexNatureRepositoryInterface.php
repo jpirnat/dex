@@ -9,10 +9,6 @@ interface DexNatureRepositoryInterface
 {
 	/**
 	 * Get the dex natures by language.
-	 *
-	 * @param LanguageId $languageId
-	 *
-	 * @return array
 	 */
 	public function getByLanguage(LanguageId $languageId) : array;
 }

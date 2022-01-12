@@ -23,8 +23,6 @@ final class StatsChartView
 
 	/**
 	 * Set data for the /stats/chart page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function ajax() : ResponseInterface
 	{
@@ -61,8 +59,6 @@ final class StatsChartView
 
 	/**
 	 * Get a title for the chart.
-	 *
-	 * @return string
 	 */
 	private function getChartTitle() : string
 	{
@@ -125,10 +121,6 @@ final class StatsChartView
 
 	/**
 	 * Get a label for the line.
-	 *
-	 * @param TrendLine $trendLine
-	 *
-	 * @return string
 	 */
 	private function getLineLabel(TrendLine $trendLine) : string
 	{
@@ -190,11 +182,6 @@ final class StatsChartView
 
 	/**
 	 * Get a color for the line.
-	 *
-	 * @param TrendLine $trendLine
-	 * @param int $index
-	 *
-	 * @return string
 	 */
 	private function getLineColor(TrendLine $trendLine, int $index) : string
 	{

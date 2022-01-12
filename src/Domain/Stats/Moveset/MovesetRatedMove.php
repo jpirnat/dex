@@ -26,8 +26,6 @@ final class MovesetRatedMove
 
 	/**
 	 * Get the usage rated Pokémon id.
-	 *
-	 * @return UsageRatedPokemonId
 	 */
 	public function getUsageRatedPokemonId() : UsageRatedPokemonId
 	{
@@ -36,8 +34,6 @@ final class MovesetRatedMove
 
 	/**
 	 * Get the move id.
-	 *
-	 * @return MoveId
 	 */
 	public function getMoveId() : MoveId
 	{
@@ -46,8 +42,6 @@ final class MovesetRatedMove
 
 	/**
 	 * Get the percent.
-	 *
-	 * @return float
 	 */
 	public function getPercent() : float
 	{

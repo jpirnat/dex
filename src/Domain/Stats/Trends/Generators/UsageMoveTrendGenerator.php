@@ -29,14 +29,6 @@ final class UsageMoveTrendGenerator
 
 	/**
 	 * Get the data for a usage move trend line.
-	 *
-	 * @param Format $format
-	 * @param int $rating
-	 * @param PokemonId $pokemonId
-	 * @param MoveId $moveId
-	 * @param LanguageId $languageId
-	 *
-	 * @return UsageMoveTrendLine
 	 */
 	public function generate(
 		Format $format,

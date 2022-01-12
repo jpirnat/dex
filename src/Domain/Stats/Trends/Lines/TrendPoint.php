@@ -14,8 +14,6 @@ final class TrendPoint
 
 	/**
 	 * Get the trend point's date.
-	 *
-	 * @return DateTime
 	 */
 	public function getDate() : DateTime
 	{
@@ -24,8 +22,6 @@ final class TrendPoint
 
 	/**
 	 * Get the trend point's value.
-	 *
-	 * @return float
 	 */
 	public function getValue() : float
 	{

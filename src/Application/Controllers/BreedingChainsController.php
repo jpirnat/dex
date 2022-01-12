@@ -16,10 +16,6 @@ final class BreedingChainsController
 
 	/**
 	 * Show the breeding chains page.
-	 *
-	 * @param ServerRequestInterface $request
-	 *
-	 * @return void
 	 */
 	public function index(ServerRequestInterface $request) : void
 	{

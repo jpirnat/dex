@@ -19,16 +19,8 @@ final class DatabaseModelRepository implements ModelRepositoryInterface
 	 * Get a model by its form, shininess, direction, gender, and attacking
 	 * index.
 	 *
-	 * @param FormId $formId
-	 * @param bool $isShiny
-	 * @param bool $isBack
-	 * @param bool $isFemale
-	 * @param int $attackingIndex
-	 *
 	 * @throws ModelNotFoundException if no model exists with this form,
 	 *     shininess, direction, gender, and attacking index.
-	 *
-	 * @return Model
 	 */
 	public function getByFormAndShinyAndBackAndFemaleAndAttackingIndex(
 		FormId $formId,

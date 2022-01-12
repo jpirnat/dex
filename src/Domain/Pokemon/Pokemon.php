@@ -25,8 +25,6 @@ final class Pokemon
 
 	/**
 	 * Get the Pokémon's id.
-	 *
-	 * @return PokemonId
 	 */
 	public function getId() : PokemonId
 	{
@@ -35,8 +33,6 @@ final class Pokemon
 
 	/**
 	 * Get the Pokémon's identifier.
-	 *
-	 * @return string
 	 */
 	public function getIdentifier() : string
 	{
@@ -45,8 +41,6 @@ final class Pokemon
 
 	/**
 	 * Get the Pokémon's Pokémon identifier within its species.
-	 *
-	 * @return string|null
 	 */
 	public function getPokemonIdentifier() : ?string
 	{
@@ -55,8 +49,6 @@ final class Pokemon
 
 	/**
 	 * Get the Pokémon's species id.
-	 *
-	 * @return SpeciesId
 	 */
 	public function getSpeciesId() : SpeciesId
 	{
@@ -65,8 +57,6 @@ final class Pokemon
 
 	/**
 	 * Is this Pokémon the default Pokémon of its species?.
-	 *
-	 * @return bool
 	 */
 	public function isDefaultPokemon() : bool
 	{
@@ -75,8 +65,6 @@ final class Pokemon
 
 	/**
 	 * Get the version group id this Pokémon was introduced in.
-	 *
-	 * @return VersionGroupId
 	 */
 	public function getIntroducedInVersionGroupId() : VersionGroupId
 	{
@@ -85,8 +73,6 @@ final class Pokemon
 
 	/**
 	 * Get the Pokémon's experience group id.
-	 *
-	 * @return ExperienceGroupId
 	 */
 	public function getExperienceGroupId() : ExperienceGroupId
 	{
@@ -95,8 +81,6 @@ final class Pokemon
 
 	/**
 	 * Get the Pokémon's height in meters.
-	 *
-	 * @return float
 	 */
 	public function getHeightM() : float
 	{
@@ -105,8 +89,6 @@ final class Pokemon
 
 	/**
 	 * Get the Pokémon's weight in kilograms.
-	 *
-	 * @return float
 	 */
 	public function getWeightKg() : float
 	{
@@ -116,8 +98,6 @@ final class Pokemon
 	/**
 	 * Get the Pokémon's gender ratio. 0 = 0% female, 1 = 12.5% female, 2 = 25%
 	 * female, and so on. -1 = genderless.
-	 *
-	 * @return int
 	 */
 	public function getGenderRatio() : int
 	{
@@ -126,8 +106,6 @@ final class Pokemon
 
 	/**
 	 * Get the Pokémon's Smogon dex identifier.
-	 *
-	 * @return string
 	 */
 	public function getSmogonDexIdentifier() : string
 	{
@@ -136,8 +114,6 @@ final class Pokemon
 
 	/**
 	 * Get the Pokémon's sort value.
-	 *
-	 * @return int
 	 */
 	public function getSort() : int
 	{

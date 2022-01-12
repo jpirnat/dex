@@ -23,10 +23,6 @@ final class LeadsDirectoryImporter
 
 	/**
 	 * Import all leads files in this directory of leads files.
-	 *
-	 * @param string $url
-	 *
-	 * @return void
 	 */
 	public function import(string $url) : void
 	{

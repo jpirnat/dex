@@ -17,8 +17,6 @@ final class BreedingChainsView
 
 	/**
 	 * Show the breeding chains page.
-	 *
-	 * @return ResponseInterface
 	 */
 	public function index() : ResponseInterface
 	{

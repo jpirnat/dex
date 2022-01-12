@@ -41,8 +41,6 @@ final class MovesetRatedCounter
 
 	/**
 	 * Get the usage rated Pokémon id.
-	 *
-	 * @return UsageRatedPokemonId
 	 */
 	public function getUsageRatedPokemonId() : UsageRatedPokemonId
 	{
@@ -51,8 +49,6 @@ final class MovesetRatedCounter
 
 	/**
 	 * Get the Pokémon id of the counter.
-	 *
-	 * @return PokemonId
 	 */
 	public function getCounterId() : PokemonId
 	{
@@ -63,8 +59,6 @@ final class MovesetRatedCounter
 	 * Get the numeric score for the counter. This is calculated by the formula
 	 * (number2 - 4 * number3). According to Antar, it is "an attempt to remove
 	 * bias towards low-probability match ups."
-	 *
-	 * @return float
 	 */
 	public function getNumber1() : float
 	{
@@ -75,8 +69,6 @@ final class MovesetRatedCounter
 	 * Get the number2. This is the percent of [encounters between the Pokémon
 	 * and the counter that ended in one of them being knocked out or switched
 	 * out] where the Pokémon is the one that was knocked out or switched out.
-	 *
-	 * @return float
 	 */
 	public function getNumber2() : float
 	{
@@ -85,8 +77,6 @@ final class MovesetRatedCounter
 
 	/**
 	 * Get the number3. This is the standard deviation for number2.
-	 *
-	 * @return float
 	 */
 	public function getNumber3() : float
 	{
@@ -95,8 +85,6 @@ final class MovesetRatedCounter
 
 	/**
 	 * Get the percent knocked out.
-	 *
-	 * @return float
 	 */
 	public function getPercentKnockedOut() : float
 	{
@@ -105,8 +93,6 @@ final class MovesetRatedCounter
 
 	/**
 	 * Get the percent switched out.
-	 *
-	 * @return float
 	 */
 	public function getPercentSwitchedOut() : float
 	{

@@ -8,22 +8,12 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class HiddenPowerCalculator
 {
-	/**
-	 * Constructor.
-	 *
-	 * @param TypeRepositoryInterface $typeRepository
-	 */
 	public function __construct(
 		private TypeRepositoryInterface $typeRepository,
 	) {}
 
 	/**
-	 * Calculate a Pokémon's Hidden Power type in Generation II
-	 *
-	 * @param int $atk
-	 * @param int $def
-	 *
-	 * @return Type
+	 * Calculate a Pokémon's Hidden Power type in generation 2.
 	 */
 	public function type2(int $atk, int $def) : Type
 	{
@@ -33,16 +23,7 @@ final class HiddenPowerCalculator
 	}
 
 	/**
-	 * Calculate a Pokémon's Hidden Power type in Generations III through VII.
-	 *
-	 * @param int $hp
-	 * @param int $atk
-	 * @param int $def
-	 * @param int $spe
-	 * @param int $spa
-	 * @param int $spd
-	 *
-	 * @return Type
+	 * Calculate a Pokémon's Hidden Power type in generations 3 through 7.
 	 */
 	public function type3(
 		int $hp,
@@ -65,14 +46,7 @@ final class HiddenPowerCalculator
 	}
 
 	/**
-	 * Calculate a Pokémon's Hidden Power base power in Generation II.
-	 *
-	 * @param int $atk
-	 * @param int $def
-	 * @param int $spe
-	 * @param int $spc
-	 *
-	 * @return int
+	 * Calculate a Pokémon's Hidden Power base power in generation 2.
 	 */
 	public function power2(
 		int $atk,
@@ -90,16 +64,7 @@ final class HiddenPowerCalculator
 	}
 
 	/**
-	 * Calculate a Pokémon's Hidden Power base power in Generations III through V.
-	 *
-	 * @param int $hp
-	 * @param int $atk
-	 * @param int $def
-	 * @param int $spe
-	 * @param int $spa
-	 * @param int $spd
-	 *
-	 * @return int
+	 * Calculate a Pokémon's Hidden Power base power in generations 3 through 5.
 	 */
 	public function power3(
 		int $hp,
@@ -120,9 +85,7 @@ final class HiddenPowerCalculator
 	}
 
 	/**
-	 * Calculate a Pokémon's Hidden Power base power in Generations VI through VII.
-	 *
-	 * @return int
+	 * Calculate a Pokémon's Hidden Power base power in generations 6 through 7.
 	 */
 	public function power6() : int
 	{

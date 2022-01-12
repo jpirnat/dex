@@ -45,8 +45,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's generation id.
-	 *
-	 * @return GenerationId
 	 */
 	public function getGenerationId() : GenerationId
 	{
@@ -55,8 +53,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's move id.
-	 *
-	 * @return MoveId
 	 */
 	public function getMoveId() : MoveId
 	{
@@ -65,8 +61,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's type id.
-	 *
-	 * @return TypeId
 	 */
 	public function getTypeId() : TypeId
 	{
@@ -76,8 +70,6 @@ final class GenerationMove
 	/**
 	 * Get the generation move's quality id. This value only exists for
 	 * generations 5 and above.
-	 *
-	 * @return QualityId|null
 	 */
 	public function getQualityId() : ?QualityId
 	{
@@ -86,8 +78,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's category id.
-	 *
-	 * @return CategoryId
 	 */
 	public function getCategoryId() : CategoryId
 	{
@@ -96,8 +86,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's power.
-	 *
-	 * @return int
 	 */
 	public function getPower() : int
 	{
@@ -106,8 +94,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's accuracy.
-	 *
-	 * @return int
 	 */
 	public function getAccuracy() : int
 	{
@@ -116,8 +102,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's PP.
-	 *
-	 * @return int
 	 */
 	public function getPP() : int
 	{
@@ -126,8 +110,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's priority.
-	 *
-	 * @return int
 	 */
 	public function getPriority() : int
 	{
@@ -137,8 +119,6 @@ final class GenerationMove
 	/**
 	 * Get the generation move's minimum number of hits (for moves like Double
 	 * Slap and Water Shuriken).
-	 *
-	 * @return int
 	 */
 	public function getMinHits() : int
 	{
@@ -148,8 +128,6 @@ final class GenerationMove
 	/**
 	 * Get the generation move's maximum number of hits (for moves like Double
 	 * Slap and Water Shuriken).
-	 *
-	 * @return int
 	 */
 	public function getMaxHits() : int
 	{
@@ -158,8 +136,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's infliction id.
-	 *
-	 * @return InflictionId|null
 	 */
 	public function getInflictionId() : ?InflictionId
 	{
@@ -169,8 +145,6 @@ final class GenerationMove
 	/**
 	 * Get the generation move's infliction percent, the percent chance that the
 	 * move will cause its infliction on the target.
-	 *
-	 * @return int
 	 */
 	public function getInflictionPercent() : int
 	{
@@ -180,8 +154,6 @@ final class GenerationMove
 	/**
 	 * Get the generation move's minimum number of turns for which the effect
 	 * might last (for moves like Fire Spin and Spore).
-	 *
-	 * @return int
 	 */
 	public function getMinTurns() : int
 	{
@@ -191,8 +163,6 @@ final class GenerationMove
 	/**
 	 * Get the generation move's maximum number of turns for which the effect
 	 * might last (for moves like Fire Spin and Spore).
-	 *
-	 * @return int
 	 */
 	public function getMaxTurns() : int
 	{
@@ -201,8 +171,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's critical hit stage.
-	 *
-	 * @return int
 	 */
 	public function getCritStage() : int
 	{
@@ -212,8 +180,6 @@ final class GenerationMove
 	/**
 	 * Get the generation move's flinch percent, the percent chance that the
 	 * move has of causing the target to flinch.
-	 *
-	 * @return int
 	 */
 	public function getFlinchPercent() : int
 	{
@@ -222,8 +188,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's effect id.
-	 *
-	 * @return int
 	 */
 	public function getEffect() : int
 	{
@@ -233,8 +197,6 @@ final class GenerationMove
 	/**
 	 * Get the generation move's effect percent. This value only exists for
 	 * generations 2 through 4.
-	 *
-	 * @return int|null
 	 */
 	public function getEffectPercent() : ?int
 	{
@@ -246,8 +208,6 @@ final class GenerationMove
 	 * that the user takes back as recoil. Negative for actual recoil moves like
 	 * Double Edge. Positive for moves like Giga Drain, for which the user
 	 * recovers a percent of the inflicted damage.
-	 *
-	 * @return int
 	 */
 	public function getRecoilPercent() : int
 	{
@@ -258,8 +218,6 @@ final class GenerationMove
 	 * Get the generation move's heal percent, the percent of HP which the user
 	 * heals upon using a move like Recover. Negative for Struggle, which does
 	 * a fixed percent recoil to the user since generation 4.
-	 *
-	 * @return int
 	 */
 	public function getHealPercent() : int
 	{
@@ -268,8 +226,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's target id.
-	 *
-	 * @return TargetId
 	 */
 	public function getTargetId() : TargetId
 	{
@@ -278,8 +234,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's Z-Move id.
-	 *
-	 * @return MoveId|null
 	 */
 	public function getZMoveId() : ?MoveId
 	{
@@ -288,8 +242,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's Z-Move's base power.
-	 *
-	 * @return int|null
 	 */
 	public function getZBasePower() : ?int
 	{
@@ -298,8 +250,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's Z-Move's Z-Power Effect id.
-	 *
-	 * @return ZPowerEffectId|null
 	 */
 	public function getZPowerEffectId() : ?ZPowerEffectId
 	{
@@ -308,8 +258,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's Max Move id.
-	 *
-	 * @return MoveId|null
 	 */
 	public function getMaxMoveId() : ?MoveId
 	{
@@ -318,8 +266,6 @@ final class GenerationMove
 
 	/**
 	 * Get the generation move's Max Move's base power.
-	 *
-	 * @return int|null
 	 */
 	public function getMaxPower() : ?int
 	{
