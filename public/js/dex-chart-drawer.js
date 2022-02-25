@@ -30,33 +30,43 @@ Vue.component('dex-chart-drawer', {
 						data: l.data, // This is already in {x: 'YYYY-MM', y: Number} format.
 						borderColor: l.color,
 						fill: false,
+						tension: 0.4,
 					}
 				}),
 			};
 		},
 		chartOptions() {
 			return {
-				title: {
-					display: true,
-					text: this.chartTitle,
-					fontSize: 16,
-				},
 				scales: {
-					xAxes: [{
+					x: {
 						type: 'time',
 						time: {
 							unit: 'month',
 						},
-					}],
-					yAxes: [{
-						ticks: {
-							beginAtZero: true
-						},
-					}],
+					},
+					y: {
+						beginAtZero: true,
+					},
 				},
-				tooltips: {
-					mode: 'nearest',
-					intersect: false,
+				plugins: {
+					title: {
+						display: true,
+						text: this.chartTitle,
+						font: {
+							size: 16,
+						}
+					},
+					tooltip: {
+						mode: 'nearest',
+						intersect: false,
+						callbacks: {
+							title(tooltipItems) {
+								// Convert each data point's tooltip title from "YYYY-MM" to "Month Year"
+								const d = new Date(tooltipItems[0].raw.x + '-01');
+								return d.toLocaleString('en-US', { month: 'long', year: 'numeric' });
+							},
+						},
+					},
 				},
 			};
 		},
