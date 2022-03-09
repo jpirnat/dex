@@ -35,12 +35,14 @@ final class DatabaseShowdownPokemonRepository implements ShowdownPokemonReposito
 
 		$stmt = $db->prepare(
 			'SELECT
-				`name`,
-				1
+				`name`
 			FROM `showdown_pokemon_to_ignore`'
 		);
 		$stmt->execute();
-		$this->pokemonToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$name = mb_strtolower($result['name']);
+			$this->pokemonToIgnore[$name] = 1;
+		}
 	}
 
 	/**
@@ -56,7 +58,12 @@ final class DatabaseShowdownPokemonRepository implements ShowdownPokemonReposito
 	 */
 	public function isIgnored(string $showdownPokemonName) : bool
 	{
-		return isset($this->pokemonToIgnore[$showdownPokemonName]);
+		$name = mb_strtolower($showdownPokemonName);
+		// Bug fix: Lowercase because the 2022-02 stats include the CAP Pokémon
+		// "venomicon", while my case-insensitive database already includes the
+		// name "Venomicon".
+
+		return isset($this->pokemonToIgnore[$name]);
 	}
 
 	/**
