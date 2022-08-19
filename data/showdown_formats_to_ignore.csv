@@ -2633,9 +2633,9 @@ month,name,format_id,reason
 2021-07-01,gen8purehackmons,\N,
 2021-07-01,gen8samedoublebeat,\N,
 2021-07-01,gen8stabmons,\N,
+2021-07-01,gen8vgc2021series9,68,duplicate
 2021-07-01,gen8waterparadise,\N,
 2021-07-01,gen8zu,\N,not official
-2021-07-01,gen8vgc2021series9,68,duplicate
 2021-08-01,gen1stadiumou,\N,
 2021-08-01,gen2ubers,4,too few battles: 1
 2021-08-01,gen5ru,17,too few battles: 18
@@ -2724,6 +2724,7 @@ month,name,format_id,reason
 2021-10-01,gen8vgc2021series11,\N,
 2021-10-01,gen8zu,\N,not official
 2021-11-01,gen2nc2000crystalmoves,\N,
+2021-11-01,gen3doublesou,\N,not official
 2021-11-01,gen6purehackmons,\N,
 2021-11-01,gen7balancedhackmons,\N,
 2021-11-01,gen7mixandmega,\N,
@@ -2740,7 +2741,6 @@ month,name,format_id,reason
 2021-11-01,gen8bdspou,\N,
 2021-11-01,gen8bdspubers,\N,
 2021-11-01,gen8cap,\N,
-2021-11-01,gen3doublesou,\N,not official
 2021-11-01,gen8gymchallenge,\N,
 2021-11-01,gen8metronomebattle,\N,
 2021-11-01,gen8mixandmega,\N,
@@ -3003,3 +3003,43 @@ month,name,format_id,reason
 2022-06-01,gen8stabmons,\N,
 2022-06-01,gen8tiershift,\N,
 2022-06-01,gen8zu,\N,not official
+2022-07-01,gen1stadiumou,\N,
+2022-07-01,gen1ubers,1,too few battles: 53
+2022-07-01,gen31v1,\N,
+2022-07-01,gen6purehackmons,\N,
+2022-07-01,gen6zu,\N,not official
+2022-07-01,gen7balancedhackmons,\N,
+2022-07-01,gen7mixandmega,\N,
+2022-07-01,gen7uu,39,too few battles: 44
+2022-07-01,gen81v1,\N,
+2022-07-01,gen82v2doubles,\N,
+2022-07-01,gen8almostanyability,\N,
+2022-07-01,gen8balancedhackmons,\N,
+2022-07-01,gen8battlestadiumsingles,\N,
+2022-07-01,gen8bdspbattlefestivaldoubles,\N,
+2022-07-01,gen8bdspdoublesou,\N,
+2022-07-01,gen8bdsplc,\N,
+2022-07-01,gen8bdspmonotype,\N,
+2022-07-01,gen8bdspnu,\N,
+2022-07-01,gen8bdspou,\N,
+2022-07-01,gen8bdsppu,\N,
+2022-07-01,gen8bdspru,\N,
+2022-07-01,gen8bdspubers,\N,
+2022-07-01,gen8bdspuu,\N,
+2022-07-01,gen8brokenrecord,\N,
+2022-07-01,gen8cap,\N,
+2022-07-01,gen8godlygift,\N,
+2022-07-01,gen8ichoosechu,\N,
+2022-07-01,gen8inheritance,\N,
+2022-07-01,gen8inverse,\N,
+2022-07-01,gen8jumpmagikarp,\N,
+2022-07-01,gen8metronomebattle,\N,
+2022-07-01,gen8mixandmega,\N,
+2022-07-01,gen8nationaldexmonotype,\N,not official
+2022-07-01,gen8nationaldexuu,\N,not official
+2022-07-01,gen8nfe,\N,
+2022-07-01,gen8oublitz,\N,
+2022-07-01,gen8singlebattlecup,\N,
+2022-07-01,gen8stabmons,\N,
+2022-07-01,gen8tiershift,\N,
+2022-07-01,gen8zu,\N,not official
