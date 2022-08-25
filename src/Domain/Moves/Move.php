@@ -11,7 +11,7 @@ final class Move
 		private MoveId $id,
 		private string $identifier,
 		private VersionGroupId $introducedInVersionGroupId,
-		private bool $isZMove,
+		private MoveType $type,
 	) {}
 
 	/**
@@ -39,10 +39,10 @@ final class Move
 	}
 
 	/**
-	 * Is this move a Z-Move?
+	 * Get the move's type.
 	 */
-	public function isZMove() : bool
+	public function getType() : MoveType
 	{
-		return $this->isZMove;
+		return $this->type;
 	}
 }

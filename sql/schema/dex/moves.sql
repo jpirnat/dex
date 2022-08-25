@@ -4,7 +4,7 @@ create table if not exists `moves`
 
 `identifier` varchar(31) not null,
 `introduced_in_version_group_id` tinyint unsigned not null,
-`is_z_move` bool not null,
+`move_type` varchar(5) not null,
 
 primary key (`id`),
 unique key (`identifier`),

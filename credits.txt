@@ -29,3 +29,5 @@ Dragonfree for the catch rates for Shadow Pokémon in Colosseum and XD
 https://www.dragonflycave.com/mechanics/gen-iii-iv-capturing#capture-rate
 
 https://github.com/msikma/pokesprite for Pokémon and item icons
+
+https://www.spriters-resource.com/3ds/pokemonultrasunultramoon/sheet/104447/ for Z-Move images

@@ -7,6 +7,7 @@ use Jp\Dex\Domain\Moves\Move;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveNotFoundException;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
+use Jp\Dex\Domain\Moves\MoveType;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
@@ -27,7 +28,7 @@ final class DatabaseMoveRepository implements MoveRepositoryInterface
 			'SELECT
 				`identifier`,
 				`introduced_in_version_group_id`,
-				`is_z_move`
+				`move_type`
 			FROM `moves`
 			WHERE `id` = :move_id
 			LIMIT 1'
@@ -46,7 +47,7 @@ final class DatabaseMoveRepository implements MoveRepositoryInterface
 			$moveId,
 			$result['identifier'],
 			new VersionGroupId($result['introduced_in_version_group_id']),
-			(bool) $result['is_z_move']
+			new MoveType($result['move_type']),
 		);
 
 		return $move;
@@ -63,7 +64,7 @@ final class DatabaseMoveRepository implements MoveRepositoryInterface
 			'SELECT
 				`id`,
 				`introduced_in_version_group_id`,
-				`is_z_move`
+				`move_type`
 			FROM `moves`
 			WHERE `identifier` = :identifier
 			LIMIT 1'
@@ -82,7 +83,7 @@ final class DatabaseMoveRepository implements MoveRepositoryInterface
 			new MoveId($result['id']),
 			$identifier,
 			new VersionGroupId($result['introduced_in_version_group_id']),
-			(bool) $result['is_z_move']
+			new MoveType($result['move_type']),
 		);
 
 		return $move;

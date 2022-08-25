@@ -63,6 +63,7 @@ return [
 	'move_names',
 	'move_descriptions',
 	'z_move_names',
+	'z_move_images',
 	'version_group_moves',
 
 	// Generation moves
