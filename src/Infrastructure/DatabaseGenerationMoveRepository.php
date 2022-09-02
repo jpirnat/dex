@@ -24,6 +24,24 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 	) {}
 
 	/**
+	 * Get the Z-Move image.
+	 */
+	public function getZMoveImage(MoveId $moveId, LanguageId $languageId) : string
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`image`
+			FROM `z_move_images`
+			WHERE `move_id` = :move_id
+				AND `language_id` = :language_id'
+		);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetchColumn();
+	}
+
+	/**
 	 * Get a generation move by its generation and move.
 	 *
 	 * @throws GenerationMoveNotFoundException if no generation move exists with

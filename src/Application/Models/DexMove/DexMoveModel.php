@@ -12,6 +12,7 @@ use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
+use Jp\Dex\Domain\Moves\MoveType;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
@@ -72,6 +73,11 @@ final class DexMoveModel
 
 		// Set the move's detailed data.
 		$this->setDetailedData($generationId, $moveId, $languageId);
+
+		if ($move->getType()->value() === MoveType::Z_MOVE) {
+			$zMoveImage = $this->generationMoveRepository->getZMoveImage($moveId, $languageId);
+			$this->detailedData['zMoveImage'] = $zMoveImage;
+		}
 
 		// Set the type matchups.
 		$this->setMatchups($generationId, $moveId, $languageId);

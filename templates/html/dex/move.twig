@@ -26,7 +26,9 @@
 	</div>
 
 	<template v-if="loaded">
-		<h1 class="dex-page__title">{{ move.name }}</h1>
+		<h1 v-if="!move.zMoveImage" class="dex-page__title">{{ move.name }}</h1>
+		<img v-if="move.zMoveImage" class="dex-page__title--z-move-image" :src="'/images/z-moves/' + move.zMoveImage" :alt="move.name">
+
 		<p class="dex-move__description">{{ move.description }}</p>
 
 		<h2 class="dex-section__title">General Data</h2>

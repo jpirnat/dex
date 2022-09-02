@@ -225,6 +225,10 @@ a.button {
 .dex-page__title {
 	text-align: center;
 }
+.dex-page__title--z-move-image {
+	display: block;
+	margin: 0 auto;
+}
 
 .dex-section__title {
 	background: #eee;

@@ -12,6 +12,11 @@ use Jp\Dex\Domain\Versions\GenerationId;
 interface GenerationMoveRepositoryInterface
 {
 	/**
+	 * Get the Z-Move image.
+	 */
+	public function getZMoveImage(MoveId $moveId, LanguageId $languageId) : string;
+
+	/**
 	 * Get a generation move by its generation and move.
 	 *
 	 * @throws GenerationMoveNotFoundException if no generation move exists with
