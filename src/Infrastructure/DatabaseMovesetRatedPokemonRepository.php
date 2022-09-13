@@ -29,22 +29,22 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 	) : bool {
 		$stmt = $this->db->prepare(
 			'SELECT
-				COUNT(*)
+				1
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `moveset_rated_pokemon` AS `mrp`
 				ON `urp`.`id` = `mrp`.`usage_rated_pokemon_id`
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
-				AND `urp`.`pokemon_id` = :pokemon_id'
+				AND `urp`.`pokemon_id` = :pokemon_id
+			LIMIT 1'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
-		$count = $stmt->fetchColumn();
-		return $count > 0;
+		return (bool) $stmt->fetchColumn();
 	}
 
 	/**
@@ -55,20 +55,20 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				COUNT(*)
+				1
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `moveset_rated_pokemon` AS `mrp`
 				ON `urp`.`id` = `mrp`.`usage_rated_pokemon_id`
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
-				AND `urp`.`rating` = :rating'
+				AND `urp`.`rating` = :rating
+			LIMIT 1'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
-		$count = $stmt->fetchColumn();
-		return $count > 0;
+		return (bool) $stmt->fetchColumn();
 	}
 
 	/**

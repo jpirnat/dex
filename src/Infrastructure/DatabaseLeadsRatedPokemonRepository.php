@@ -22,20 +22,20 @@ final class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepo
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				COUNT(*)
+				1
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `leads_rated_pokemon` AS `lrp`
 				ON `urp`.`id` = `lrp`.`usage_rated_pokemon_id`
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
-				AND `urp`.`rating` = :rating'
+				AND `urp`.`rating` = :rating
+			LIMIT 1'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
-		$count = $stmt->fetchColumn();
-		return $count > 0;
+		return (bool) $stmt->fetchColumn();
 	}
 
 	/**

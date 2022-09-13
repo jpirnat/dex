@@ -22,16 +22,16 @@ final class DatabaseUsageRepository implements UsageRepositoryInterface
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				COUNT(*)
+				1
 			FROM `usage`
 			WHERE `month` = :month
-				AND `format_id` = :format_id'
+				AND `format_id` = :format_id
+			LIMIT 1'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->execute();
-		$count = $stmt->fetchColumn();
-		return $count > 0;
+		return (bool) $stmt->fetchColumn();
 	}
 
 	/**
