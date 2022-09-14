@@ -10,21 +10,21 @@
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
 	<div class="month-control" v-if="loaded">
-		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
-			&#9668; {{ prevMonth.text }}
+		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.value}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
+			&#9668; {{ prevMonth.name }}
 		</a>
 
 		<div class="space"></div>
 
-		<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
-			{{ nextMonth.text }} &#9658;
+		<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.value}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
+			{{ nextMonth.name }} &#9658;
 		</a>
 	</div>
 
 	<div class="rating-control" v-if="ratings.length">
 		<ul>
 			<li v-for="r in ratings">
-				<a :href="`/stats/${thisMonth.month}/${format.identifier}/${r}/pokemon/${pokemon.identifier}`"
+				<a :href="`/stats/${thisMonth.value}/${format.identifier}/${r}/pokemon/${pokemon.identifier}`"
 					:class="{
 						'current': r === rating
 					}"
@@ -35,7 +35,7 @@
 
 	<div class="rank-control" v-if="loaded">
 		<a v-if="prevRank" class="rank-control__rank dex-link"
-			:href="'/stats/' + thisMonth.month + '/' + format.identifier + '/' + rating + '/pokemon/' + prevRank.identifier"
+			:href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + prevRank.identifier"
 			v-tooltip="prevRank.name"
 		>
 			&#9668; #{{ prevRank.rank }} <img :src="'/images/pokemon/icons/' + prevRank.icon" :alt="prevRank.name">
@@ -43,7 +43,7 @@
 		<span v-else class="rank-control__rank"></span>
 
 		<a v-if="nextRank" class="rank-control__rank dex-link"
-			:href="'/stats/' + thisMonth.month + '/' + format.identifier + '/' + rating + '/pokemon/' + nextRank.identifier"
+			:href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + nextRank.identifier"
 			v-tooltip="nextRank.name"
 		>
 			<img :src="'/images/pokemon/icons/' + nextRank.icon" :alt="nextRank.name"> #{{ nextRank.rank }} &#9658;
@@ -117,7 +117,7 @@
 
 		<stats-pokemon-abilities v-if="showAbilities" id="abilities"
 			:abilities="abilities"
-			:month="thisMonth.month"
+			:month="thisMonth.value"
 			:format="format.identifier"
 			:rating="rating"
 			:pokemon="pokemon.identifier"
@@ -126,7 +126,7 @@
 
 		<stats-pokemon-items v-if="showItems" id="items"
 			:items="items"
-			:month="thisMonth.month"
+			:month="thisMonth.value"
 			:format="format.identifier"
 			:rating="rating"
 			:pokemon="pokemon.identifier"
@@ -140,7 +140,7 @@
 
 		<stats-pokemon-moves id="moves"
 			:moves="moves"
-			:month="thisMonth.month"
+			:month="thisMonth.value"
 			:format="format.identifier"
 			:rating="rating"
 			:pokemon="pokemon.identifier"
@@ -149,7 +149,7 @@
 
 		<stats-pokemon-teammates id="teammates"
 			:teammates="teammates"
-			:month="thisMonth.month"
+			:month="thisMonth.value"
 			:format="format.identifier"
 			:rating="rating"
 			:pokemon="pokemon.name"
@@ -157,7 +157,7 @@
 
 		<stats-pokemon-counters id="counters"
 			:counters="counters"
-			:month="thisMonth.month"
+			:month="thisMonth.value"
 			:format="format.identifier"
 			:rating="rating"
 			:pokemon="pokemon.name"

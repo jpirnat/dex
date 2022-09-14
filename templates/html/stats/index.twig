@@ -13,8 +13,8 @@
 		<h2 class="dex-section__title">{{ year.year }}</h2>
 
 		<div class="stats-months">
-			<div v-for="month in year.months" :key="month.month" class="stat-month">
-				<a :href="`/stats/${month.month}`">{{ month.name }}</a>
+			<div v-for="month in year.months" :key="month.value" class="stat-month">
+				<a :href="`/stats/${month.value}`">{{ month.name }}</a>
 			</div>
 		</div>
 	</section>

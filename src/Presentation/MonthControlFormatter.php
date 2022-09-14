@@ -17,8 +17,8 @@ final class MonthControlFormatter
 		}
 
 		return [
-			'month' => $month->format('Y-m'),
-			'text' => $formatter->formatMonth($month),
+			'value' => $month->format('Y-m'),
+			'name' => $formatter->formatMonth($month),
 		];
 	}
 }

@@ -11,21 +11,21 @@
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
 	<div class="month-control" v-if="loaded">
-		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}/${format.identifier}/${rating}/moves/${move.identifier}`">
-			&#9668; {{ prevMonth.text }}
+		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.value}/${format.identifier}/${rating}/moves/${move.identifier}`">
+			&#9668; {{ prevMonth.name }}
 		</a>
 
 		<div class="space"></div>
 
-		<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.month}/${format.identifier}/${rating}/moves/${move.identifier}`">
-			{{ nextMonth.text }} &#9658;
+		<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.value}/${format.identifier}/${rating}/moves/${move.identifier}`">
+			{{ nextMonth.name }} &#9658;
 		</a>
 	</div>
 
 	<div class="rating-control" v-if="ratings.length">
 		<ul>
 			<li v-for="r in ratings">
-				<a :href="`/stats/${thisMonth.month}/${format.identifier}/${r}/moves/${move.identifier}`"
+				<a :href="`/stats/${thisMonth.value}/${format.identifier}/${r}/moves/${move.identifier}`"
 					:class="{
 						'current': r === rating
 					}"
@@ -101,7 +101,7 @@
 						<img :src="`/images/pokemon/icons/${pokemon.icon}`" alt="">
 					</td>
 					<th scope="row" class="dex-table__pokemon-name">
-						<a :href="`/stats/${thisMonth.month}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
+						<a :href="`/stats/${thisMonth.value}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
 							{{ pokemon.name }}
 						</a>
 					</th>

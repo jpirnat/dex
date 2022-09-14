@@ -68,14 +68,14 @@ final class StatsUsageView
 			'text' => 'Stats',
 		], [
 			'url' => "/stats/$month",
-			'text' => $thisMonth['text'],
+			'text' => $thisMonth['name'],
 		], [
 			'text' => $format->getName(),
 		]];
 
 		return new JsonResponse([
 			'data' => [
-				'title' => 'Porydex - Stats - ' . $thisMonth['text'] . ' '
+				'title' => 'Porydex - Stats - ' . $thisMonth['name'] . ' '
 					. $format->getName(),
 
 				'format' => [

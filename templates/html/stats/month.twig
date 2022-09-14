@@ -6,14 +6,14 @@
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
 	<div class="month-control" v-if="loaded">
-		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.month}`">
-			&#9668; {{ prevMonth.text }}
+		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.value}`">
+			&#9668; {{ prevMonth.name }}
 		</a>
 
 		<div class="space"></div>
 
-		<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.month}`">
-			{{ nextMonth.text }} &#9658;
+		<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.value}`">
+			{{ nextMonth.name }} &#9658;
 		</a>
 	</div>
 
@@ -38,7 +38,7 @@
 				<tr v-for="format in generation.formats" :key="format.identifier">
 					<td>{{ format.name }}</td>
 					<td v-for="rating in format.ratings" :key="rating">
-						<a :href="`/stats/${thisMonth.month}/${format.identifier}/${rating}`">
+						<a :href="`/stats/${thisMonth.value}/${format.identifier}/${rating}`">
 							{{ rating }}
 						</a>
 					</td>

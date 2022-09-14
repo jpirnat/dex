@@ -64,7 +64,7 @@ final class StatsMoveView
 			'text' => 'Stats',
 		], [
 			'url' => "/stats/$month",
-			'text' => $thisMonth['text'],
+			'text' => $thisMonth['name'],
 		], [
 			'url' => "/stats/$month/$formatIdentifier/$rating",
 			'text' => $format->getName(),
@@ -74,7 +74,7 @@ final class StatsMoveView
 
 		return new JsonResponse([
 			'data' => [
-				'title' => 'Porydex - Stats - ' . $thisMonth['text'] . ' '
+				'title' => 'Porydex - Stats - ' . $thisMonth['name'] . ' '
 					. $format->getName() . ' - ' . $moveName,
 
 				'format' => [

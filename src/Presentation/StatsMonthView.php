@@ -41,12 +41,12 @@ final class StatsMonthView
 			'url' => '/stats',
 			'text' => 'Stats',
 		],[
-			'text' => $thisMonth['text'],
+			'text' => $thisMonth['name'],
 		]];
 
 		return new JsonResponse([
 			'data' => [
-				'title' => 'Porydex - Stats - ' . $thisMonth['text'],
+				'title' => 'Porydex - Stats - ' . $thisMonth['name'],
 
 				'breadcrumbs' => $breadcrumbs,
 				'prevMonth' => $prevMonth,
