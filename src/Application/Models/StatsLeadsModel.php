@@ -3,12 +3,14 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
+use DateTime;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Leads\StatsLeadsPokemon;
 use Jp\Dex\Domain\Leads\StatsLeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
+use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 
 final class StatsLeadsModel
 {
@@ -23,12 +25,16 @@ final class StatsLeadsModel
 	/** @var StatsLeadsPokemon[] $pokemon */
 	private array $pokemon = [];
 
+	/** @var DateTime[] $months */
+	private array $months = [];
+
 
 	public function __construct(
 		private DateModel $dateModel,
 		private FormatRepositoryInterface $formatRepository,
 		private RatingQueriesInterface $ratingQueries,
 		private StatsLeadsPokemonRepositoryInterface $statsLeadsPokemonRepository,
+		private UsageRatedQueriesInterface $usageRatedQueries,
 	) {}
 
 
@@ -71,6 +77,11 @@ final class StatsLeadsModel
 			$rating,
 			$this->format->getGenerationId(),
 			$languageId
+		);
+
+		$this->months = $this->usageRatedQueries->getMonthsWithData(
+			$this->format->getId(),
+			$rating,
 		);
 	}
 
@@ -133,5 +144,15 @@ final class StatsLeadsModel
 	public function getPokemon() : array
 	{
 		return $this->pokemon;
+	}
+
+	/**
+	 * Get the months.
+	 *
+	 * @return DateTime[]
+	 */
+	public function getMonths() : array
+	{
+		return $this->months;
 	}
 }

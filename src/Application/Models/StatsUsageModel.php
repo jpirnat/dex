@@ -98,7 +98,7 @@ final class StatsUsageModel
 
 		$this->months = $this->usageRatedQueries->getMonthsWithData(
 			$this->format->getId(),
-			$rating
+			$rating,
 		);
 	}
 

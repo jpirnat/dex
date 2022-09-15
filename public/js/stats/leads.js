@@ -14,8 +14,8 @@ const app = new Vue({
 		thisMonth: {},
 		nextMonth: {},
 		ratings: [],
-
 		pokemons: [],
+		months: [],
 
 		filterName: '',
 
@@ -24,6 +24,9 @@ const app = new Vue({
 
 		sortColumn: '',
 		sortDirection: '',
+
+		start: '',
+		end: '',
 	},
 	computed: {
 		filteredPokemons() {
@@ -64,6 +67,10 @@ const app = new Vue({
 				this.nextMonth = data.nextMonth;
 				this.ratings = data.ratings;
 				this.pokemons = data.pokemons;
+				this.months = data.months;
+
+				this.start = data.thisMonth.value;
+				this.end = data.thisMonth.value;
 
 				document.title = data.title;
 			}
@@ -96,6 +103,9 @@ const app = new Vue({
 				rating: this.rating,
 				pokemon: pokemon.identifier,
 			});
+		},
+		goToAveraged() {
+			window.location.assign(`/stats/${this.start}-to-${this.end}/${this.format.identifier}/${this.rating}/leads`);
 		},
 	},
 	watch: {

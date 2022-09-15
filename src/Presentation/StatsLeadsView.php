@@ -38,6 +38,12 @@ final class StatsLeadsView
 		$thisMonth = $this->monthControlFormatter->format($thisMonth, $formatter);
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
+		$months = [];
+		$allMonths = $this->statsLeadsModel->getMonths();
+		foreach ($allMonths as $m) {
+			$months[] = $this->monthControlFormatter->format($m, $formatter);
+		}
+
 		// Get the Pokémon usage data.
 		$pokemonData = $this->statsLeadsModel->getPokemon();
 		$pokemons = [];
@@ -83,15 +89,13 @@ final class StatsLeadsView
 					'name' => $format->getName(),
 				],
 				'rating' => $rating,
-
 				'breadcrumbs' => $breadcrumbs,
 				'prevMonth' => $prevMonth,
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
 				'ratings' => $this->statsLeadsModel->getRatings(),
-
-				// The main data.
 				'pokemons' => $pokemons,
+				'months' => $months,
 			]
 		]);
 	}

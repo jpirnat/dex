@@ -33,6 +33,11 @@ const app = new Vue({
 		moves: [],
 		teammates: [],
 		counters: [],
+
+		months: [],
+
+		start: '',
+		end: '',
 	},
 	created() {
 		const url = new URL(window.location);
@@ -76,6 +81,11 @@ const app = new Vue({
 				this.teammates = data.teammates;
 				this.counters = data.counters;
 
+				this.months = data.months;
+
+				this.start = data.thisMonth.value;
+				this.end = data.thisMonth.value;
+
 				document.title = data.title;
 			}
 		});
@@ -83,6 +93,9 @@ const app = new Vue({
 	methods: {
 		addChartLine(line) {
 			this.$refs.chart.addLine(line);
+		},
+		goToAveraged() {
+			window.location.assign(`/stats/${this.start}-to-${this.end}/${this.format.identifier}/${this.rating}/pokemon/${this.pokemon.identifier}`);
 		},
 	},
 });

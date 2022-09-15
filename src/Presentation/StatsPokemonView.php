@@ -41,6 +41,12 @@ final class StatsPokemonView
 		$thisMonth = $this->monthControlFormatter->format($thisMonth, $formatter);
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
+		$months = [];
+		$allMonths = $this->statsPokemonModel->getMonths();
+		foreach ($allMonths as $m) {
+			$months[] = $this->monthControlFormatter->format($m, $formatter);
+		}
+
 		$prevRank = $this->statsPokemonModel->getPrevRank();
 		$thisRank = $this->statsPokemonModel->getThisRank();
 		$nextRank = $this->statsPokemonModel->getNextRank();
@@ -213,6 +219,8 @@ final class StatsPokemonView
 				'moves' => $moves,
 				'teammates' => $teammates,
 				'counters' => $counters,
+
+				'months' => $months,
 			]
 		]);
 	}
