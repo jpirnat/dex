@@ -38,6 +38,12 @@ final class StatsUsageView
 		$thisMonth = $this->monthControlFormatter->format($thisMonth, $formatter);
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
+		$months = [];
+		$allMonths = $this->statsUsageModel->getMonths();
+		foreach ($allMonths as $m) {
+			$months[] = $this->monthControlFormatter->format($m, $formatter);
+		}
+
 		// Get the Pokémon usage data.
 		$pokemonData = $this->statsUsageModel->getPokemon();
 		$pokemons = [];
@@ -77,25 +83,21 @@ final class StatsUsageView
 			'data' => [
 				'title' => 'Porydex - Stats - ' . $thisMonth['name'] . ' '
 					. $format->getName(),
-
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'name' => $format->getName(),
 				],
 				'rating' => $rating,
-
 				'breadcrumbs' => $breadcrumbs,
 				'prevMonth' => $prevMonth,
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
 				'ratings' => $this->statsUsageModel->getRatings(),
 				'showLeadsLink' => $this->statsUsageModel->doesLeadsDataExist(),
-
-				// The main data.
-				'pokemons' => $pokemons,
-
 				'myFormat' => $this->statsUsageModel->getMyFormat(),
 				'myRating' => $this->statsUsageModel->getMyRating(),
+				'pokemons' => $pokemons,
+				'months' => $months,
 			]
 		]);
 	}

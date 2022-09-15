@@ -158,6 +158,22 @@
 			:items-per-page="itemsPerPage"
 		></dex-pagination>
 
+		<p>
+			View averaged stats
+			<label>
+				from
+				<select v-model="start" @change="goToAveraged">
+					<option v-for="m in months" :key="m.value" :value="m.value">{{ m.name }}</option>
+				</select>
+			</label>
+			<label>
+				to
+				<select v-model="end" @change="goToAveraged">
+					<option v-for="m in months" :key="m.value" :value="m.value">{{ m.name }}</option>
+				</select>
+			</label>
+		</p>
+
 		<dex-chart-drawer
 			ref="chart"
 			:ratings="ratings"

@@ -29,7 +29,8 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 				`month`
 			FROM `usage_rated`
 			WHERE `format_id` = :format_id
-				AND `rating` = :rating'
+				AND `rating` = :rating
+			ORDER BY `month`'
 		);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);

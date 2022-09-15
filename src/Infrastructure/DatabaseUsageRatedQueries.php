@@ -48,4 +48,32 @@ final class DatabaseUsageRatedQueries implements UsageRatedQueriesInterface
 
 		return $formatRatings;
 	}
+
+	/**
+	 * Get the months that have data recorded for this format and rating.
+	 *
+	 * @return DateTime[]
+	 */
+	public function getMonthsWithData(FormatId $formatId, int $rating) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`month`
+			FROM `usage_rated`
+			WHERE `format_id` = :format_id
+				AND `rating` = :rating
+			ORDER BY `month`'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->execute();
+
+		$months = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$months[] = new DateTime($result['month']);
+		}
+
+		return $months;
+	}
 }
