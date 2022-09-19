@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Types\TypeMatchup;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
-use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 

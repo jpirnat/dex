@@ -8,8 +8,8 @@ use Jp\Dex\Domain\Categories\DexCategory;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Types\DexType;
-use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
+use Jp\Dex\Domain\Versions\Generation;
 
 final class DexFormatter
 {
