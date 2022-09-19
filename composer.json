@@ -33,6 +33,6 @@
     "require-dev": {
         "vlucas/phpdotenv": "^5.4",
         "filp/whoops": "^2.14",
-        "deployer/deployer": "^6.8"
+        "deployer/deployer": "^7.0"
     }
 }
