@@ -267,6 +267,51 @@ final class IndexView
 	}
 
 	/**
+	 * Show the stats averaged usage page.
+	 */
+	public function averagedUsage() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/stats/averaged-usage.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
+	 * Show the stats averaged leads page.
+	 */
+	public function averagedLeads() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/stats/averaged-leads.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
+	 * Show the stats averaged Pokémon page.
+	 */
+	public function averagedPokemon() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/stats/averaged-pokemon.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Stats',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the stats ability page.
 	 */
 	public function statsAbility() : ResponseInterface

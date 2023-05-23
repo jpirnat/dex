@@ -1,22 +1,22 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\StatsAveragedUsage;
+namespace Jp\Dex\Application\Models;
 
 use DateTime;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Leads\AveragedLeadsPokemon;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
-use Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
-final class StatsAveragedUsageModel
+final class AveragedLeadsModel
 {
 	private string $start;
 	private string $end;
@@ -27,17 +27,14 @@ final class StatsAveragedUsageModel
 	/** @var int[] $ratings */
 	private array $ratings = [];
 
-	private bool $leadsDataExists;
-
-	/** @var UsageData[] $usageDatas */
-	private array $usageDatas = [];
+	/** @var AveragedLeadsPokemon[] $pokemon */
+	private array $pokemon = [];
 
 
 	public function __construct(
 		private FormatRepositoryInterface $formatRepository,
 		private RatingQueriesInterface $ratingQueries,
-		private UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository,
-		private UsageRatedAveragedPokemonRepositoryInterface $usageRatedAveragedPokemonRepository,
+		private LeadsAveragedPokemonRepositoryInterface $leadsAveragedPokemonRepository,
 		private LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
 		private MonthsCounter $monthsCounter,
 		private PokemonRepositoryInterface $pokemonRepository,
@@ -47,7 +44,7 @@ final class StatsAveragedUsageModel
 
 
 	/**
-	 * Get usage data averaged over multiple months.
+	 * Get leads data averaged over multiple months.
 	 */
 	public function setData(
 		string $start,
@@ -78,23 +75,15 @@ final class StatsAveragedUsageModel
 			$this->format->getId()
 		);
 
-		// Does leads rated data exist for these months?
-		$this->leadsDataExists = $this->leadsRatedAveragedPokemonRepository->hasAny(
-			$start,
-			$end,
-			$this->format->getId(),
-			$rating
-		);
-
-		// Get usage Pokémon records for these months.
-		$usageAveragedPokemons = $this->usageAveragedPokemonRepository->getByMonthsAndFormat(
+		// Get leads Pokémon records for these months.
+		$leadsAveragedPokemons = $this->leadsAveragedPokemonRepository->getByMonthsAndFormat(
 			$start,
 			$end,
 			$this->format->getId()
 		);
 
-		// Get usage rated Pokémon records for these months.
-		$usageRatedAveragedPokemons = $this->usageRatedAveragedPokemonRepository->getByMonthsAndFormatAndRating(
+		// Get leads rated Pokémon records for these months.
+		$leadsRatedAveragedPokemons = $this->leadsRatedAveragedPokemonRepository->getByMonthsAndFormatAndRating(
 			$start,
 			$end,
 			$this->format->getId(),
@@ -123,15 +112,15 @@ final class StatsAveragedUsageModel
 			false
 		);
 
-		// Get each usage record's data.
-		foreach ($usageRatedAveragedPokemons as $usageRatedAveragedPokemon) {
-			$pokemonId = $usageRatedAveragedPokemon->getPokemonId();
+		// Get each leads record's data.
+		foreach ($leadsRatedAveragedPokemons as $leadsRatedAveragedPokemon) {
+			$pokemonId = $leadsRatedAveragedPokemon->getPokemonId();
 
 			// Get this Pokémon's name.
 			$pokemonName = $pokemonNames[$pokemonId->value()];
 
 			// Get this Pokémon's number of months of moveset data.
-			$months = $monthCounts[$pokemonId->value()] ?? 0;
+			$numberOfMonths = $monthCounts[$pokemonId->value()] ?? 0;
 
 			// Get this Pokémon.
 			$pokemon = $pokemons[$pokemonId->value()];
@@ -140,31 +129,21 @@ final class StatsAveragedUsageModel
 			$formIcon = $formIcons[$pokemonId->value()]; // A Pokémon's default form has Pokémon id === form id.
 
 			// Get this Pokémon's non-rated usage record for these months.
-			$usageAveragedPokemon = $usageAveragedPokemons[$pokemonId->value()];
+			$leadsAveragedPokemon = $leadsAveragedPokemons[$pokemonId->value()];
 
-			$this->usageDatas[] = new UsageData(
-				$usageRatedAveragedPokemon->getRank(),
-				$pokemonName->getName(),
-				$months,
-				$pokemon->getIdentifier(),
+			$this->pokemon[] = new AveragedLeadsPokemon(
+				$leadsRatedAveragedPokemon->getRank(),
 				$formIcon->getImage(),
-				$usageRatedAveragedPokemon->getUsagePercent(),
-				$usageAveragedPokemon->getRaw(),
-				$usageAveragedPokemon->getRawPercent(),
-				$usageAveragedPokemon->getReal(),
-				$usageAveragedPokemon->getRealPercent()
+				$numberOfMonths,
+				$pokemon->getIdentifier(),
+				$pokemonName->getName(),
+				$leadsRatedAveragedPokemon->getUsagePercent(),
+				$leadsAveragedPokemon->getRaw(),
+				$leadsAveragedPokemon->getRawPercent(),
 			);
 		}
 	}
 
-
-	/**
-	 * Does leads rated data exist for these months?
-	 */
-	public function doesLeadsDataExist() : bool
-	{
-		return $this->leadsDataExists;
-	}
 
 	/**
 	 * Get the start month.
@@ -217,12 +196,12 @@ final class StatsAveragedUsageModel
 	}
 
 	/**
-	 * Get the usage datas.
+	 * Get the Pokémon.
 	 *
-	 * @return UsageData[]
+	 * @return AveragedLeadsPokemon[]
 	 */
-	public function getUsageDatas() : array
+	public function getPokemon() : array
 	{
-		return $this->usageDatas;
+		return $this->pokemon;
 	}
 }

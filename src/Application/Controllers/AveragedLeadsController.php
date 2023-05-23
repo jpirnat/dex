@@ -3,21 +3,19 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\StatsAveragedPokemon\StatsAveragedPokemonModel;
+use Jp\Dex\Application\Models\AveragedLeadsModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class StatsAveragedPokemonController
+final class AveragedLeadsController
 {
 	public function __construct(
 		private BaseController $baseController,
-		private StatsAveragedPokemonModel $statsAveragedPokemonModel,
+		private AveragedLeadsModel $averagedLeadsModel,
 	) {}
 
 	/**
-	 * Get moveset data to recreate a stats moveset file, such as
-	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single
-	 * Pokémon.
+	 * Get leads data averaged over multiple months.
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{
@@ -27,16 +25,14 @@ final class StatsAveragedPokemonController
 		$end = $request->getAttribute('end');
 		$formatIdentifier = $request->getAttribute('formatIdentifier');
 		$rating = (int) $request->getAttribute('rating');
-		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->statsAveragedPokemonModel->setData(
+		$this->averagedLeadsModel->setData(
 			$start,
 			$end,
 			$formatIdentifier,
 			$rating,
-			$pokemonIdentifier,
-			$languageId
+			$languageId,
 		);
 	}
 }

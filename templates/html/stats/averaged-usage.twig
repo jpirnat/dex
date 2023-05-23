@@ -13,7 +13,7 @@
 	<div class="rating-control" v-if="ratings.length">
 		<ul>
 			<li v-for="r in ratings">
-				<a :href="'/stats/' + start + '-to-' + end + '/' + format.identifier + '/' + r"
+				<a :href="'/stats/' + startMonth.value + '-to-' + endMonth.value + '/' + format.identifier + '/' + r"
 					:class="{
 						'current': r === rating
 					}"
@@ -29,16 +29,12 @@
 	<template v-if="loaded">
 		<div class="buttons-control">
 			<a v-if="showLeadsLink" class="button"
-				:href="'/stats/' + start + '-to-' + end + '/' + format.identifier + '/leads'"
+				:href="'/stats/' + startMonth.value + '-to-' + endMonth.value + '/' + format.identifier + '/' + rating + '/leads'"
 			>
 				Leads
 			</a>
 
 			<div class="space"></div>
-	
-			<div v-if="showSaveAsDefaultFormat" class="button" @click="saveAsDefaultFormat">
-				Save as my default format
-			</div>
 		</div>
 
 		<dex-pagination
@@ -108,8 +104,8 @@
 						<img :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
 					</td>
 					<th scope="row" class="dex-table__pokemon-name">
-						<a v-if="showMovesetLink(pokemon)"
-							:href="'/stats/' + start + '-to-' + end + '/' + format.identifier + '/' + rating + '/pokemon/' + pokemon.identifier"
+						<a v-if="pokemon.showMovesetLink"
+							:href="'/stats/' + startMonth.value + '-to-' + endMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + pokemon.identifier"
 						>{{ pokemon.name }}</a>
 						<template v-else>{{ pokemon.name }}</template>
 					</th>
@@ -129,4 +125,16 @@
 		></dex-pagination>
 	</template>
 </div>
+{% endverbatim %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<script src="/js/dex-breadcrumbs.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/v-tooltip@2.1"></script>
+	<script src="/js/dex-pagination.js"></script>
+
+	<script src="/js/stats/averaged-usage.js"></script>
 {% endblock %}

@@ -1,126 +1,96 @@
 {% extends "html/base.twig" %}
 
 {% block body %}
-	<div class="rating-control">
+{% verbatim %}
+<div id="app" v-cloak>
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
+	<div class="rating-control" v-if="ratings.length">
 		<ul>
-			{% for r in ratings %}
-				<li>
-					<a
-						href="/stats/{{ start|e }}-to-{{ end|e }}/{{ format.identifier|e }}/{{ r|e }}/pokemon/{{ pokemon.identifier|e }}"
-						{% if r == rating %}
-							class="current"
-						{% endif %}
-					>{{ r|e }}</a>
-				</li>
-			{% endfor %}
+			<li v-for="r in ratings">
+				<a :href="'/stats/' + startMonth.value + '-to-' + endMonth.value + '/' + format.identifier + '/' + r + '/pokemon/' + pokemon.identifier"
+					:class="{
+						'current': r === rating
+					}"
+				>{{ r }}</a>
+			</li>
 		</ul>
 	</div>
 
-	<div class="pokemon-data">
-		<div>
-			{{ pokemon.name|e }}
-		</div>
-		<div>
-			<img src="/images/pokemon/models/{{ model|e }}" alt="">
-		</div>
-		<div class="pokemon-types">
-			{% for type in types %}
-				<a href="/dex/{{ generation.identifier|e }}/types/{{ type.identifier|e }}">
-					<img src="/images/types/{{ type.icon|e }}" alt="{{ type.name|e }}">
-				</a>
-			{% endfor %}
-		</div>
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
 	</div>
 
-	<table class="base-stats">
-		{% for stat in stats %}
-			<tr>
-				<td class="base-stat-name">{{ stat.name|e }}</td>
-				<td class="dex-table--number">{{ baseStats[stat.key]|e }}</td>
+	<template v-if="loaded">
+		<div class="pokemon-data">
+			<div>
+				{{ pokemon.name }}
+			</div>
+			<div>
+				<img :src="'/images/pokemon/models/' + pokemon.model" alt="">
+			</div>
+			<div class="pokemon-types">
+				<a v-for="type in pokemon.types" :key="type.identifier"
+					:href="'/dex/' + generation.identifier + '/types/' + type.identifier"
+				>
+					<img :src="'/images/types/' + type.icon" :alt="type.name">
+				</a>
+			</div>
+		</div>
+
+		<table class="base-stats">
+			<tr v-for="stat in stats" :key="stat.key">
+				<td class="base-stat-name">{{ stat.name }}</td>
+				<td class="dex-table--number">{{ pokemon.baseStats[stat.key] }}</td>
 				<td>
-					<div class="base-stat-bar" style="width: calc({{ baseStats[stat.key]|e }} / 255 * 300px)"></div>
+					<div class="base-stat-bar"
+						:style="{
+							'width': (pokemon.baseStats[stat.key] / 255 * 300) + 'px',
+						}"
+					></div>
 				</td>
 			</tr>
-		{% endfor %}
-	</table>
+		</table>
 
-	<div></div>
-
-	{% if format.smogonDexIdentifier and pokemon.smogonDexIdentifier %}
-		<div>
-			<a href="https://www.smogon.com/dex/{{ generation.identifier|e }}/pokemon/{{ pokemon.smogonDexIdentifier|e }}/{{ format.smogonDexIdentifier|e }}/">
+		<div v-if="format.smogonDexIdentifier && pokemon.smogonDexIdentifier">
+			<a :href="'https://www.smogon.com/dex/' + generation.identifier + '/pokemon/' + pokemon.smogonDexIdentifier + '/' + format.smogonDexIdentifier + '/'"
+				target="_blank" rel="noopener"
+			>
 				Smogon Analysis
 			</a>
 		</div>
-	{% endif %}
 
-	<nav class="quick-links">
-		<ul>
-			{% if showAbilities %}
-				<li><a href="#abilities" class="scroll">Abilities</a></li>
-			{% endif %}
-			{% if showItems %}
-				<li><a href="#items" class="scroll">Items</a></li>
-			{% endif %}
-			<li><a href="#moves" class="scroll">Moves</a></li>
-		</ul>
-	</nav>
+		<nav class="quick-links">
+			<ul>
+				<li v-if="showAbilities"><a href="#abilities">Abilities</a></li>
+				<li v-if="showItems"><a href="#items">Items</a></li>
+				<li><a href="#moves">Moves</a></li>
+			</ul>
+		</nav>
 
-	{% if showAbilities %}
-		<table id="abilities" class="moveset-usage">
-			<caption>Abilities</caption>
-			<thead>
-				<tr>
-					<th scope="col">Ability</th>
-					<th scope="col">%</th>
-				</tr>
-			</thead>
-			<tbody>
-				{% for ability in abilities %}
-					<tr>
-						<th scope="row">{{ ability.name|e }}</th>
-						<td class="dex-table--number">{{ ability.percent|e }}</td>
-					</tr>
-				{% endfor %}
-			</tbody>
-		</table>
-	{% endif %}
+		<averaged-pokemon-abilities v-if="showAbilities" id="abilities"
+			:abilities="abilities"
+		></averaged-pokemon-abilities>
 
-	{% if showItems %}
-		<table id="items" class="moveset-usage">
-			<caption>Items</caption>
-			<thead>
-				<tr>
-					<th scope="col">Item</th>
-					<th scope="col">%</th>
-				</tr>
-			</thead>
-			<tbody>
-				{% for item in items %}
-					<tr>
-						<th scope="row">{{ item.name|e }}</th>
-						<td class="dex-table--number">{{ item.percent|e }}</td>
-					</tr>
-				{% endfor %}
-			</tbody>
-		</table>
-	{% endif %}
+		<averaged-pokemon-items v-if="showItems" id="items"
+			:items="items"
+		></averaged-pokemon-items>
 
-	<table id="moves" class="moveset-usage">
-		<caption>Moves</caption>
-		<thead>
-			<tr>
-				<th scope="col">Move</th>
-				<th scope="col">%</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for move in moves %}
-				<tr>
-					<th scope="row">{{ move.name|e }}</th>
-					<td class="dex-table--number">{{ move.percent|e }}</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+		<averaged-pokemon-moves id="moves"
+			:moves="moves"
+		></averaged-pokemon-moves>
+	</template>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7"></script>
+	<script src="/js/dex-breadcrumbs.js"></script>
+
+	<script src="/js/averaged-pokemon-abilities.js"></script>
+	<script src="/js/averaged-pokemon-items.js"></script>
+	<script src="/js/averaged-pokemon-moves.js"></script>
+
+	<script src="/js/stats/averaged-pokemon.js"></script>
 {% endblock %}

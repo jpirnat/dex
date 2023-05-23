@@ -3,15 +3,15 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\StatsAveragedUsage\StatsAveragedUsageModel;
+use Jp\Dex\Application\Models\AveragedUsageModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class StatsAveragedUsageController
+final class AveragedUsageController
 {
 	public function __construct(
 		private BaseController $baseController,
-		private StatsAveragedUsageModel $usageAveragedModel,
+		private AveragedUsageModel $averagedUsageModel,
 	) {}
 
 	/**
@@ -27,12 +27,12 @@ final class StatsAveragedUsageController
 		$rating = (int) $request->getAttribute('rating');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->usageAveragedModel->setData(
+		$this->averagedUsageModel->setData(
 			$start,
 			$end,
 			$formatIdentifier,
 			$rating,
-			$languageId
+			$languageId,
 		);
 	}
 }

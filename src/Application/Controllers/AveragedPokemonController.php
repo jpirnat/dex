@@ -3,19 +3,19 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Controllers;
 
-use Jp\Dex\Application\Models\StatsAveragedLeads\StatsAveragedLeadsModel;
+use Jp\Dex\Application\Models\AveragedPokemonModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class StatsAveragedLeadsController
+final class AveragedPokemonController
 {
 	public function __construct(
 		private BaseController $baseController,
-		private StatsAveragedLeadsModel $statsAveragedLeadsModel,
+		private AveragedPokemonModel $averagedPokemonModel,
 	) {}
 
 	/**
-	 * Get leads data averaged over multiple months.
+	 * Get individual Pokémon usage data averaged over multiple months.
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{
@@ -25,14 +25,16 @@ final class StatsAveragedLeadsController
 		$end = $request->getAttribute('end');
 		$formatIdentifier = $request->getAttribute('formatIdentifier');
 		$rating = (int) $request->getAttribute('rating');
+		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->statsAveragedLeadsModel->setData(
+		$this->averagedPokemonModel->setData(
 			$start,
 			$end,
 			$formatIdentifier,
 			$rating,
-			$languageId
+			$pokemonIdentifier,
+			$languageId,
 		);
 	}
 }

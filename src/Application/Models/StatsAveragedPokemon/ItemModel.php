@@ -13,19 +13,14 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInter
 
 final class ItemModel
 {
-	/** @var ItemData[] $itemDatas */
-	private array $itemDatas = [];
-
-
 	public function __construct(
 		private MovesetRatedAveragedItemRepositoryInterface $movesetRatedAveragedItemRepository,
 		private ItemNameRepositoryInterface $itemNameRepository,
 		private ItemRepositoryInterface $itemRepository,
 	) {}
 
-
 	/**
-	 * Get moveset data averaged over multiple months.
+	 * Set individual Pokémon item data averaged over multiple months.
 	 */
 	public function setData(
 		DateTime $start,
@@ -33,8 +28,8 @@ final class ItemModel
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		LanguageId $languageId
-	) : void {
+		LanguageId $languageId,
+	) : array {
 		// Get moveset rated averaged item records for these months.
 		$movesetRatedAveragedItems = $this->movesetRatedAveragedItemRepository->getByMonthsAndFormatAndRatingAndPokemon(
 			$start,
@@ -43,6 +38,8 @@ final class ItemModel
 			$rating,
 			$pokemonId
 		);
+
+		$items = [];
 
 		// Get each item's data.
 		foreach ($movesetRatedAveragedItems as $movesetRatedAveragedItem) {
@@ -57,22 +54,13 @@ final class ItemModel
 			// Get this item.
 			$item = $this->itemRepository->getById($itemId);
 
-			$this->itemDatas[] = new ItemData(
-				$itemName->getName(),
-				$item->getIdentifier(),
-				$movesetRatedAveragedItem->getPercent()
-			);
+			$items[] = [
+				'identifier' => $item->getIdentifier(),
+				'name' => $itemName->getName(),
+				'percent' => $movesetRatedAveragedItem->getPercent(),
+			];
 		}
-	}
 
-
-	/**
-	 * Get the item datas.
-	 *
-	 * @return ItemData[]
-	 */
-	public function getItemDatas() : array
-	{
-		return $this->itemDatas;
+		return $items;
 	}
 }

@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
+namespace Jp\Dex\Application\Models;
 
 use DateTime;
-use Jp\Dex\Application\Models\StatNameModel;
+use Jp\Dex\Application\Models\StatsAveragedPokemon\AbilityModel;
+use Jp\Dex\Application\Models\StatsAveragedPokemon\ItemModel;
+use Jp\Dex\Application\Models\StatsAveragedPokemon\MoveModel;
 use Jp\Dex\Application\Models\StatsPokemon\PokemonModel;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
@@ -15,7 +17,7 @@ use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 
-final class StatsAveragedPokemonModel
+final class AveragedPokemonModel
 {
 	private string $start;
 	private string $end;
@@ -30,6 +32,10 @@ final class StatsAveragedPokemonModel
 	private Generation $generation;
 
 	private array $stats = [];
+
+	private array $abilities = [];
+	private array $items = [];
+	private array $moves = [];
 
 
 	public function __construct(
@@ -46,7 +52,7 @@ final class StatsAveragedPokemonModel
 
 
 	/**
-	 * Get moveset data averaged over multiple months.
+	 * Set individual Pokémon usage data averaged over multiple months.
 	 */
 	public function setData(
 		string $start,
@@ -100,33 +106,33 @@ final class StatsAveragedPokemonModel
 		);
 
 		// Get ability data.
-		$this->abilityModel->setData(
+		$this->abilities = $this->abilityModel->setData(
 			$start,
 			$end,
 			$this->format->getId(),
 			$rating,
 			$this->pokemon->getId(),
-			$languageId
+			$languageId,
 		);
 
 		// Get item data.
-		$this->itemModel->setData(
+		$this->items = $this->itemModel->setData(
 			$start,
 			$end,
 			$this->format->getId(),
 			$rating,
 			$this->pokemon->getId(),
-			$languageId
+			$languageId,
 		);
 
 		// Get move data.
-		$this->moveModel->setData(
+		$this->moves = $this->moveModel->setData(
 			$start,
 			$end,
 			$this->format->getId(),
 			$rating,
 			$this->pokemon->getId(),
-			$languageId
+			$languageId,
 		);
 	}
 
@@ -212,33 +218,18 @@ final class StatsAveragedPokemonModel
 		return $this->generation;
 	}
 
-	/**
-	 * Get the ability datas.
-	 *
-	 * @return AbilityData[]
-	 */
-	public function getAbilityDatas() : array
+	public function getAbilities() : array
 	{
-		return $this->abilityModel->getAbilityDatas();
+		return $this->abilities;
 	}
 
-	/**
-	 * Get the the item datas.
-	 *
-	 * @return ItemData[]
-	 */
-	public function getItemDatas() : array
+	public function getItems() : array
 	{
-		return $this->itemModel->getItemDatas();
+		return $this->items;
 	}
 
-	/**
-	 * Get the move datas.
-	 *
-	 * @return MoveData[]
-	 */
-	public function getMoveDatas() : array
+	public function getMoves() : array
 	{
-		return $this->moveModel->getMoveDatas();
+		return $this->moves;
 	}
 }

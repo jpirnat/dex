@@ -13,20 +13,14 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryIn
 
 final class AbilityModel
 {
-	/** @var AbilityData[] $abilityDatas */
-	private array $abilityDatas = [];
-
-
 	public function __construct(
 		private MovesetRatedAveragedAbilityRepositoryInterface $movesetRatedAveragedAbilityRepository,
 		private AbilityNameRepositoryInterface $abilityNameRepository,
 		private AbilityRepositoryInterface $abilityRepository,
 	) {}
 
-
 	/**
-	 * Get moveset data to recreate a stats moveset file, such as
-	 * http://www.smogon.com/stats/2014-11/moveset/ou-1695.txt, for a single Pokémon.
+	 * Set individual Pokémon ability data averaged over multiple months.
 	 */
 	public function setData(
 		DateTime $start,
@@ -34,8 +28,8 @@ final class AbilityModel
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		LanguageId $languageId
-	) : void {
+		LanguageId $languageId,
+	) : array {
 		// Get moveset rated averaged ability records for these months.
 		$movesetRatedAveragedAbilities = $this->movesetRatedAveragedAbilityRepository->getByMonthsAndFormatAndRatingAndPokemon(
 			$start,
@@ -44,6 +38,8 @@ final class AbilityModel
 			$rating,
 			$pokemonId
 		);
+
+		$abilities = [];
 
 		// Get each ability's data.
 		foreach ($movesetRatedAveragedAbilities as $movesetRatedAveragedAbility) {
@@ -58,22 +54,13 @@ final class AbilityModel
 			// Get this ability.
 			$ability = $this->abilityRepository->getById($abilityId);
 
-			$this->abilityDatas[] = new AbilityData(
-				$abilityName->getName(),
-				$ability->getIdentifier(),
-				$movesetRatedAveragedAbility->getPercent()
-			);
+			$abilities[] = [
+				'identifier' => $ability->getIdentifier(),
+				'name' => $abilityName->getName(),
+				'percent' => $movesetRatedAveragedAbility->getPercent(),
+			];
 		}
-	}
 
-
-	/**
-	 * Get the ability datas.
-	 *
-	 * @return AbilityData[]
-	 */
-	public function getAbilityDatas() : array
-	{
-		return $this->abilityDatas;
+		return $abilities;
 	}
 }

@@ -13,19 +13,14 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInter
 
 final class MoveModel
 {
-	/** @var MoveData[] $moveDatas */
-	private array $moveDatas = [];
-
-
 	public function __construct(
 		private MovesetRatedAveragedMoveRepositoryInterface $movesetRatedAveragedMoveRepository,
 		private MoveNameRepositoryInterface $moveNameRepository,
 		private MoveRepositoryInterface $moveRepository,
 	) {}
 
-
 	/**
-	 * Get moveset data averaged over multiple months.
+	 * Set individual Pokémon move data averaged over multiple months.
 	 */
 	public function setData(
 		DateTime $start,
@@ -33,8 +28,8 @@ final class MoveModel
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		LanguageId $languageId
-	) : void {
+		LanguageId $languageId,
+	) : array {
 		// Get moveset rated averaged move records for these months.
 		$movesetRatedAveragedMoves = $this->movesetRatedAveragedMoveRepository->getByMonthsAndFormatAndRatingAndPokemon(
 			$start,
@@ -43,6 +38,8 @@ final class MoveModel
 			$rating,
 			$pokemonId
 		);
+
+		$moves = [];
 
 		// Get each move's data.
 		foreach ($movesetRatedAveragedMoves as $movesetRatedAveragedMove) {
@@ -57,22 +54,13 @@ final class MoveModel
 			// Get this move.
 			$move = $this->moveRepository->getById($moveId);
 
-			$this->moveDatas[] = new MoveData(
-				$moveName->getName(),
-				$move->getIdentifier(),
-				$movesetRatedAveragedMove->getPercent()
-			);
+			$moves[] = [
+				'identifier' => $move->getIdentifier(),
+				'name' => $moveName->getName(),
+				'percent' => $movesetRatedAveragedMove->getPercent(),
+			];
 		}
-	}
 
-
-	/**
-	 * Get the move datas.
-	 *
-	 * @return MoveData[]
-	 */
-	public function getMoveDatas() : array
-	{
-		return $this->moveDatas;
+		return $moves;
 	}
 }
