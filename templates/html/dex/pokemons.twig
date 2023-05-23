@@ -13,7 +13,7 @@
 	<div class="generation-control" v-if="generations.length">
 		<ul>
 			<li v-for="g in generations">
-				<a :href="`/dex/${g.identifier}/pokemon`"
+				<a :href="'/dex/' + g.identifier + '/pokemon'"
 					:class="{
 						'current': g.identifier === generation.identifier
 					}"

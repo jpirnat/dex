@@ -12,7 +12,7 @@
 	<div class="generation-control" v-if="generations.length">
 		<ul>
 			<li v-for="g in generations">
-				<a :href="`/dex/${g.identifier}/moves/${move.identifier}`"
+				<a :href="'/dex/' + g.identifier + '/moves/' + move.identifier"
 					:class="{
 						'current': g.identifier === generation.identifier
 					}"
@@ -194,7 +194,7 @@
 			<div>{{ move.name }} can be learned in the following ways:</div>
 			<ul class="dex-move__method-links">
 				<li v-for="method in visibleMethods" :key="method.identifier">
-					<a :href="`#via-${method.identifier}`" class="dex-link">{{ method.name }}</a>
+					<a :href="'#via-' + method.identifier" class="dex-link">{{ method.name }}</a>
 				</li>
 			</ul>
 		</nav>

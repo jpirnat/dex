@@ -10,13 +10,13 @@
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
 	<div class="month-control" v-if="loaded">
-		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.value}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
+		<a v-if="prevMonth" class="button prev" :href="'/stats/' + prevMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + pokemon.identifier">
 			&#9668; {{ prevMonth.name }}
 		</a>
 
 		<div class="space"></div>
 
-		<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.value}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
+		<a v-if="nextMonth" class="button next" :href="'/stats/' + nextMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + pokemon.identifier">
 			{{ nextMonth.name }} &#9658;
 		</a>
 	</div>
@@ -24,7 +24,7 @@
 	<div class="rating-control" v-if="ratings.length">
 		<ul>
 			<li v-for="r in ratings">
-				<a :href="`/stats/${thisMonth.value}/${format.identifier}/${r}/pokemon/${pokemon.identifier}`"
+				<a :href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + r + '/pokemon/' + pokemon.identifier"
 					:class="{
 						'current': r === rating
 					}"
@@ -61,13 +61,13 @@
 				{{ pokemon.name }}
 			</div>
 			<div>
-				<img :src="`/images/pokemon/models/${pokemon.model}`" alt="">
+				<img :src="'/images/pokemon/models/' + pokemon.model" alt="">
 			</div>
 			<div class="pokemon-types">
 				<a v-for="type in pokemon.types" :key="type.identifier"
-					:href="`/dex/${generation.identifier}/types/${type.identifier}`"
+					:href="'/dex/' + generation.identifier + '/types/' + type.identifier"
 				>
-					<img :src="`/images/types/${type.icon}`" :alt="type.name">
+					<img :src="'/images/types/' + type.icon" :alt="type.name">
 				</a>
 			</div>
 		</div>
@@ -87,7 +87,7 @@
 		</table>
 
 		<div v-if="format.smogonDexIdentifier && pokemon.smogonDexIdentifier">
-			<a :href="`https://www.smogon.com/dex/${generation.identifier}/pokemon/${pokemon.smogonDexIdentifier}/${format.smogonDexIdentifier}/`"
+			<a :href="'https://www.smogon.com/dex/' + generation.identifier + '/pokemon/' + pokemon.smogonDexIdentifier + '/' + format.smogonDexIdentifier + '/'"
 				target="_blank" rel="noopener"
 			>
 				Smogon Analysis

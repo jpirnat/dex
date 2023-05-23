@@ -11,13 +11,13 @@
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
 	<div class="month-control" v-if="loaded">
-		<a v-if="prevMonth" class="button prev" :href="`/stats/${prevMonth.value}/${format.identifier}/${rating}/abilities/${ability.identifier}`">
+		<a v-if="prevMonth" class="button prev" :href="'/stats/' + prevMonth.value + '/' + format.identifier + '/' + rating + '/abilities/' + ability.identifier">
 			&#9668; {{ prevMonth.name }}
 		</a>
 
 		<div class="space"></div>
 
-		<a v-if="nextMonth" class="button next" :href="`/stats/${nextMonth.value}/${format.identifier}/${rating}/abilities/${ability.identifier}`">
+		<a v-if="nextMonth" class="button next" :href="'/stats/' + nextMonth.value + '/' + format.identifier + '/' + rating + '/abilities/' + ability.identifier">
 			{{ nextMonth.name }} &#9658;
 		</a>
 	</div>
@@ -25,7 +25,7 @@
 	<div class="rating-control" v-if="ratings.length">
 		<ul>
 			<li v-for="r in ratings">
-				<a :href="`/stats/${thisMonth.value}/${format.identifier}/${r}/abilities/${ability.identifier}`"
+				<a :href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + r + '/abilities/' + ability.identifier"
 					:class="{
 						'current': r === rating
 					}"
@@ -98,10 +98,10 @@
 			<tbody>
 				<tr v-for="pokemon in paginatedPokemons" :key="pokemon.identifier">
 					<td class="dex-table__pokemon-icon">
-						<img :src="`/images/pokemon/icons/${pokemon.icon}`" alt="">
+						<img :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
 					</td>
 					<th scope="row" class="dex-table__pokemon-name">
-						<a :href="`/stats/${thisMonth.value}/${format.identifier}/${rating}/pokemon/${pokemon.identifier}`">
+						<a :href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + pokemon.identifier">
 							{{ pokemon.name }}
 						</a>
 					</th>

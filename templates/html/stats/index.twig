@@ -14,7 +14,7 @@
 
 		<div class="stats-months">
 			<div v-for="month in year.months" :key="month.value" class="stat-month">
-				<a :href="`/stats/${month.value}`">{{ month.name }}</a>
+				<a :href="'/stats/' + month.value">{{ month.name }}</a>
 			</div>
 		</div>
 	</section>

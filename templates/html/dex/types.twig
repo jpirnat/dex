@@ -8,7 +8,7 @@
 	<div class="generation-control" v-if="generations.length">
 		<ul>
 			<li v-for="g in generations">
-				<a :href="`/dex/${g.identifier}/types`"
+				<a :href="'/dex/' + g.identifier + '/types'"
 					:class="{
 						'current': g.identifier === generation.identifier
 					}"
@@ -33,8 +33,8 @@
 				<tr>
 					<td colspan="2"></td>
 					<th v-for="defendingType in defendingTypes" scope="col">
-						<a :href="`/dex/${generation.identifier}/types/${defendingType.identifier}`">
-							<img :src="`/images/types/${defendingType.icon}`" :alt="`${defendingType.name}`">
+						<a :href="'/dex/' + generation.identifier + '/types/' + defendingType.identifier">
+							<img :src="'/images/types/' + defendingType.icon" :alt="defendingType.name">
 						</a>
 					</th>
 				</tr>
@@ -45,8 +45,8 @@
 						<span class="type-chart__axis-label--attacking">Attacking Type</span>
 					</th>
 					<th scope="row">
-						<a :href="`/dex/${generation.identifier}/types/${attackingType.identifier}`">
-							<img :src="`/images/types/${attackingType.icon}`" :alt="`${attackingType.name}`">
+						<a :href="'/dex/' + generation.identifier + '/types/' + attackingType.identifier">
+							<img :src="'/images/types/' + attackingType.icon" :alt="attackingType.name">
 						</a>
 					</th>
 					<td v-for="defendingType in defendingTypes" class="type-chart__matchup"
@@ -73,7 +73,7 @@
 			<div class="type-toggler__header">Toggle Attacking Types</div>
 			<div class="type-toggler__types">
 				<label v-for="type in types" class="type-toggler__type">
-					<img :src="`/images/types/${type.icon}`" :alt="`${type.name}`">
+					<img :src="'/images/types/' + type.icon" :alt="type.name">
 					<input type="checkbox" v-model="toggleAttackingIds" :value="type.id">
 				</label>
 			</div>
@@ -89,7 +89,7 @@
 			<div class="type-toggler__header">Toggle Defending Types</div>
 			<div class="type-toggler__types">
 				<label v-for="type in types" class="type-toggler__type">
-					<img :src="`/images/types/${type.icon}`" :alt="`${type.name}`">
+					<img :src="'/images/types/' + type.icon" :alt="type.name">
 					<input type="checkbox" v-model="toggleDefendingIds" :value="type.id">
 				</label>
 			</div>

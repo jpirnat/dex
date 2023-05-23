@@ -1,65 +1,132 @@
 {% extends "html/base.twig" %}
 
+{% block styles %}
+	<link href="/css/vtooltip.css" rel="stylesheet">
+	<link href="/css/dex-pagination.css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
-	<div class="rating-control">
+{% verbatim %}
+<div id="app" v-cloak>
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
+	<div class="rating-control" v-if="ratings.length">
 		<ul>
-			{% for r in ratings %}
-				<li>
-					<a
-						href="/stats/{{ start|e }}-to-{{ end|e }}/{{ format.identifier|e }}/{{ r|e }}"
-						{% if r == rating %}
-							class="current"
-						{% endif %}
-					>{{ r|e }}</a>
-				</li>
-			{% endfor %}
+			<li v-for="r in ratings">
+				<a :href="'/stats/' + start + '-to-' + end + '/' + format.identifier + '/' + r"
+					:class="{
+						'current': r === rating
+					}"
+				>{{ r }}</a>
+			</li>
 		</ul>
 	</div>
 
-	<div class="buttons-control">
-		{% if showLeadsLink %}
-			<a class="button" href="/stats/{{ start|e }}-to-{{ end|e }}/{{ format.identifier|e }}/{{ rating|e }}/leads">
-				Leads
-			</a>
-		{% endif %}
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
 	</div>
 
-	<table class="dex-table dex-table--full-width">
-		<thead>
-			<tr>
-				<th scope="col" class="dex-table--number">Rank</th>
-				<th></th>
-				<th scope="col" class="dex-table__pokemon-name">Pokémon</th>
-				<th scope="col" class="dex-table--number">Usage %</th>
-				<th scope="col" class="dex-table--number">Raw</th>
-				<th scope="col" class="dex-table--number">%</th>
-				<th scope="col" class="dex-table--number">Real</th>
-				<th scope="col" class="dex-table--number">%</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for pokemon in data %}
+	<template v-if="loaded">
+		<div class="buttons-control">
+			<a v-if="showLeadsLink" class="button"
+				:href="'/stats/' + start + '-to-' + end + '/' + format.identifier + '/leads'"
+			>
+				Leads
+			</a>
+
+			<div class="space"></div>
+	
+			<div v-if="showSaveAsDefaultFormat" class="button" @click="saveAsDefaultFormat">
+				Save as my default format
+			</div>
+		</div>
+
+		<dex-pagination
+			v-model="currentPage"
+			:number-of-items="filteredPokemons.length"
+			:items-per-page="itemsPerPage"
+		></dex-pagination>
+
+		<div class="stats-usage__filter">
+			<label>
+				Filter by Pokémon name: <input type="search" v-model="filterName">
+			</label>
+		</div>
+
+		<table class="dex-table dex-table--full-width">
+			<thead>
 				<tr>
-					<td class="dex-table--number">{{ pokemon.rank|e }}</td>
+					<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('rank', 'asc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'rank' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'rank' && sortDirection === 'desc',
+						}"
+					>Rank</th>
+					<th></th>
+					<th scope="col" class="dex-table__pokemon-name dex-table__header--sortable" @click="sortBy('name', 'asc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
+						}"
+					>Pokémon</th>
+					<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('usagePercent', 'desc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'usagePercent' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'usagePercent' && sortDirection === 'desc',
+						}"
+					>Usage&nbsp;%</th>
+					<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('raw', 'desc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'raw' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'raw' && sortDirection === 'desc',
+						}"
+					>Raw</th>
+					<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('rawPercent', 'desc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'rawPercent' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'rawPercent' && sortDirection === 'desc',
+						}"
+					>Raw&nbsp;%</th>
+					<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('real', 'desc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'real' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'real' && sortDirection === 'desc',
+						}"
+					>Real</th>
+					<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('realPercent', 'desc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'realPercent' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'realPercent' && sortDirection === 'desc',
+						}"
+					>Real&nbsp;%</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="pokemon in paginatedPokemons" :key="pokemon.identifier">
+					<td class="dex-table--number">{{ pokemon.rank }}</td>
 					<td class="dex-table__pokemon-icon">
-						<img src="/images/pokemon/icons/{{ pokemon.icon|e }}" alt="">
+						<img :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
 					</td>
 					<th scope="row" class="dex-table__pokemon-name">
-						{% if pokemon.showMovesetLink %}
-							<a href="/stats/{{ start|e }}-to-{{ end|e }}/{{ format.identifier|e }}/{{ rating|e }}/pokemon/{{ pokemon.identifier|e }}">
-								{{ pokemon.name|e }}
-							</a>
-						{% else %}
-							{{ pokemon.name|e }}
-						{% endif %}
+						<a v-if="showMovesetLink(pokemon)"
+							:href="'/stats/' + start + '-to-' + end + '/' + format.identifier + '/' + rating + '/pokemon/' + pokemon.identifier"
+						>{{ pokemon.name }}</a>
+						<template v-else>{{ pokemon.name }}</template>
 					</th>
-					<td class="dex-table--number">{{ pokemon.usagePercent|e }}</td>
-					<td class="dex-table--number">{{ pokemon.raw|e }}</td>
-					<td class="dex-table--number">{{ pokemon.rawPercent|e }}</td>
-					<td class="dex-table--number">{{ pokemon.real|e }}</td>
-					<td class="dex-table--number">{{ pokemon.realPercent|e }}</td>
+					<td class="dex-table--number">{{ pokemon.usagePercentText }}</td>
+					<td class="dex-table--number">{{ pokemon.rawText }}</td>
+					<td class="dex-table--number">{{ pokemon.rawPercentText }}</td>
+					<td class="dex-table--number">{{ pokemon.realText }}</td>
+					<td class="dex-table--number">{{ pokemon.realPercentText }}</td>
 				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+			</tbody>
+		</table>
+
+		<dex-pagination
+			v-model="currentPage"
+			:number-of-items="filteredPokemons.length"
+			:items-per-page="itemsPerPage"
+		></dex-pagination>
+	</template>
+</div>
 {% endblock %}
