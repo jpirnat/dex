@@ -15,17 +15,12 @@ $services = $configurator->services()
 // Databases
 
 // Main database connection.
-$host = $_SERVER['DB_HOST'];
-$port = $_SERVER['DB_PORT'];
-$name = $_SERVER['DB_NAME'];
-$user = $_SERVER['DB_USER'];
-$pass = $_SERVER['DB_PASS'];
 $services->set(PDO::class)
 	->class(PDO::class)
 	->args([
-		"mysql:host=$host;port=$port;dbname=$name;charset=utf8mb4",
-		$user,
-		$pass,
+		"mysql:host=%env(DB_HOST)%;port=%env(DB_PORT)%;dbname=%env(DB_NAME)%;charset=utf8mb4",
+		'%env(DB_USER)%',
+		'%env(DB_PASS)%',
 		[
 			PDO::ATTR_EMULATE_PREPARES => false,
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -34,14 +29,12 @@ $services->set(PDO::class)
 ;
 
 // Database setup connection.
-$user = $_SERVER['DB_SETUP_USER'];
-$pass = $_SERVER['DB_SETUP_PASS'];
 $services->set('$dbsetup')
 	->class(PDO::class)
 	->args([
-		"mysql:host=$host;port=$port;dbname=$name;charset=utf8mb4",
-		$user,
-		$pass,
+		"mysql:host=%env(DB_HOST)%;port=%env(DB_PORT)%;dbname=%env(DB_NAME)%;charset=utf8mb4",
+		'%env(DB_SETUP_USER)%',
+		'%env(DB_SETUP_PASS)%',
 		[
 			PDO::ATTR_EMULATE_PREPARES => false,
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -129,10 +122,10 @@ $services->alias(
 
 // Middleware
 $services->set(\Jp\Dex\Application\Middleware\HtmlErrorMiddleware::class)
-	->arg('$environment', $_SERVER['ENVIRONMENT'])
+	->arg('$environment', '%env(ENVIRONMENT)%')
 ;
 $services->set(\Jp\Dex\Application\Middleware\JsonErrorMiddleware::class)
-	->arg('$environment', $_SERVER['ENVIRONMENT'])
+	->arg('$environment', '%env(ENVIRONMENT)%')
 ;
 
 
