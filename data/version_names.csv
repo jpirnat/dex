@@ -1,4 +1,4 @@
-language_id,version_group_id,name
+language_id,version_id,name
 1,1,赤
 1,2,緑
 1,3,青
@@ -34,6 +34,11 @@ language_id,version_group_id,name
 1,33,Let's Go! イーブイ
 1,34,ソード
 1,35,シールド
+1,36,ブリリアントダイヤモンド
+1,37,シャイニングパール
+1,38,LEGENDS アルセウス
+1,39,スカーレット
+1,40,バイオレット
 1,101,コロシアム
 1,102,ＸＤ 闇の旋風ダーク・ルギア
 2,1,Red (J)
@@ -71,6 +76,11 @@ language_id,version_group_id,name
 2,33,"Let's Go, Eevee!"
 2,34,Sword
 2,35,Shield
+2,36,Brilliand Diamond
+2,37,Shining Pearl
+2,38,Legends: Arceus
+2,39,Scarlet
+2,40,Violet
 2,101,Colosseum
 2,102,XD: Gale of Darkness
 3,1,Rouge (J)
@@ -108,6 +118,11 @@ language_id,version_group_id,name
 3,33,"Let's Go, Évoli"
 3,34,Épée
 3,35,Bouclier
+3,36,Diamant Étincelant
+3,37,Perle Scintillante
+3,38,Légendes Pokémon : Arceus
+3,39,Écarlate
+3,40,Violet
 3,101,Colosseum
 3,102,XD : Le Souffle des Ténèbres
 4,1,Rote (J)
@@ -145,6 +160,11 @@ language_id,version_group_id,name
 4,33,"Let's Go, Evoli!"
 4,34,Schwert
 4,35,Schild
+4,36,Strahlender Diamant
+4,37,Leuchtende Perle
+4,38,Pokémon-Legenden: Arceus
+4,39,Karmesin
+4,40,Purpur
 4,101,Colosseum
 4,102,XD: Der Dunkle Sturm
 5,1,Rossa (J)
@@ -182,6 +202,11 @@ language_id,version_group_id,name
 5,33,"Let's Go, Eevee!"
 5,34,Spada
 5,35,Scudo
+5,36,Diamante Lucente
+5,37,Perla Splendente
+5,38,Leggende Pokémon: Arceus
+5,39,Scarlatto
+5,40,Violetto
 5,101,Colosseum
 5,102,XD: Tempesta Oscura
 6,1,Roja (J)
@@ -219,6 +244,11 @@ language_id,version_group_id,name
 6,33,"Let's Go, Eevee!"
 6,34,Espada
 6,35,Escudo
+6,36,Diamante Brillante
+6,37,Perla Reluciente
+6,38,Leyendas Pokémon: Arceus
+6,39,Escarlata
+6,40,Púrpura
 6,101,Colosseum
 6,102,XD: Tempestad oscura
 7,1,레드 (J)
@@ -256,6 +286,11 @@ language_id,version_group_id,name
 7,33,레츠고! 이브이
 7,34,소드
 7,35,실드
+7,36,브릴리언트 다이아몬드
+7,37,샤이닝 펄
+7,38,Pokémon LEGENDS 아르세우스
+7,39,스칼렛
+7,40,바이올렛
 7,101,콜로세움
 7,102,XD: Gale of Darkness
 8,1,赤
@@ -293,6 +328,11 @@ language_id,version_group_id,name
 8,33,Let's Go! イーブイ
 8,34,ソード
 8,35,シールド
+8,36,ブリリアントダイヤモンド
+8,37,シャイニングパール
+8,38,LEGENDS アルセウス
+8,39,スカーレット
+8,40,バイオレット
 8,101,コロシアム
 8,102,ＸＤ 闇の旋風ダーク・ルギア
 9,1,Red (J)
@@ -330,6 +370,11 @@ language_id,version_group_id,name
 9,33,Let's Go！伊布
 9,34,剑
 9,35,盾
+9,36,晶灿钻石
+9,37,明亮珍珠
+9,38,宝可梦传说 阿尔宙斯
+9,39,朱
+9,40,紫
 9,101,Colosseum
 9,102,XD: Gale of Darkness
 10,1,Red (J)
@@ -367,5 +412,10 @@ language_id,version_group_id,name
 10,33,Let's Go！伊布
 10,34,劍
 10,35,盾
+10,36,晶燦鑽石
+10,37,明亮珍珠
+10,38,寶可夢傳說 阿爾宙斯
+10,39,朱
+10,40,紫
 10,101,Colosseum
 10,102,XD: Gale of Darkness
