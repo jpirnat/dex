@@ -7,6 +7,8 @@ language_id,region_id,name
 1,6,カロス
 1,7,アローラ
 1,8,ガラル
+1,9,ヒスイ
+1,10,パルデア
 2,1,Kanto
 2,2,Johto
 2,3,Hoenn
@@ -15,6 +17,8 @@ language_id,region_id,name
 2,6,Kalos
 2,7,Alola
 2,8,Galar
+2,9,Hisui
+2,10,Paldea
 3,1,Kanto
 3,2,Johto
 3,3,Hoenn
@@ -23,6 +27,8 @@ language_id,region_id,name
 3,6,Kalos
 3,7,Alola
 3,8,Galar
+3,9,Hisui
+3,10,Paldea
 4,1,Kanto
 4,2,Johto
 4,3,Hoenn
@@ -31,6 +37,8 @@ language_id,region_id,name
 4,6,Kalos
 4,7,Alola
 4,8,Galar
+4,9,Hisui
+4,10,Paldea
 5,1,Kanto
 5,2,Johto
 5,3,Hoenn
@@ -39,6 +47,8 @@ language_id,region_id,name
 5,6,Kalos
 5,7,Alola
 5,8,Galar
+5,9,Hisui
+5,10,Paldea
 6,1,Kanto
 6,2,Johto
 6,3,Hoenn
@@ -47,7 +57,9 @@ language_id,region_id,name
 6,6,Kalos
 6,7,Alola
 6,8,Galar
-7,1,관동
+6,9,Hisui
+6,10,Paldea
+6,1,Kanto
 7,2,성도
 7,3,호연
 7,4,신오
@@ -55,6 +67,8 @@ language_id,region_id,name
 7,6,칼로스
 7,7,알로라
 7,8,가라르
+7,9,히스이
+7,10,팔데아
 8,1,カントー
 8,2,ジョウト
 8,3,ホウエン
@@ -63,6 +77,8 @@ language_id,region_id,name
 8,6,カロス
 8,7,アローラ
 8,8,ガラル
+8,9,ヒスイ
+8,10,パルデア
 9,1,关都
 9,2,城都
 9,3,丰缘
@@ -71,6 +87,8 @@ language_id,region_id,name
 9,6,卡洛斯
 9,7,阿罗拉
 9,8,伽勒尔
+9,9,洗翠
+9,10,帕底亚
 10,1,關都
 10,2,城都
 10,3,豐緣
@@ -79,3 +97,5 @@ language_id,region_id,name
 10,6,卡洛斯
 10,7,阿羅拉
 10,8,伽勒爾
+10,9,洗翠
+10,10,帕底亞
