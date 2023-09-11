@@ -85,9 +85,11 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 				ON `vg`.`id` = `vgn`.`version_group_id`
 			WHERE `vg`.`id` IN (
 				SELECT
-					`version_group_id`
-				FROM `version_group_pokemon`
-				WHERE `pokemon_id` = :pokemon_id
+					`vgf`.`version_group_id`
+				FROM `version_group_forms` AS `vgf`
+				INNER JOIN `forms` AS `f`
+					ON `vgf`.`form_id` = `f`.`id`
+				WHERE `f`.`pokemon_id` = :pokemon_id
 			)
 			AND `vgn`.`language_id` = :language_id
 			AND `vg`.`generation_id` <= :end

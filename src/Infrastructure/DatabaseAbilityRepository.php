@@ -71,7 +71,7 @@ final class DatabaseAbilityRepository implements AbilityRepositoryInterface
 
 		if (!$result) {
 			throw new AbilityNotFoundException(
-				'No ability exists with identifier ' . $identifier . '.'
+				"No ability exists with identifier $identifier."
 			);
 		}
 

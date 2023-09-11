@@ -24,7 +24,7 @@ interface GenerationRepositoryInterface
 	public function getByIdentifier(string $identifier) : Generation;
 
 	/**
-	 * Get generations that this Pokémon has appeared in (via version groups).
+	 * Get generations that this Pokémon has appeared in (via version group forms).
 	 *
 	 * @return Generation[] Indexed by id. Ordered by id.
 	 */

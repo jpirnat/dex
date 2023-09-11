@@ -87,7 +87,7 @@ final class DatabaseGenerationRepository implements GenerationRepositoryInterfac
 	}
 
 	/**
-	 * Get generations that this Pokémon has appeared in (via version groups).
+	 * Get generations that this Pokémon has appeared in (via version group forms).
 	 *
 	 * @return Generation[] Indexed by id. Ordered by id.
 	 */
@@ -103,9 +103,11 @@ final class DatabaseGenerationRepository implements GenerationRepositoryInterfac
 				SELECT
 					`vg`.`generation_id`
 				FROM `version_groups` AS `vg`
-				INNER JOIN `version_group_pokemon` AS `p`
-					ON `vg`.`id` = `p`.`version_group_id`
-				WHERE `p`.`pokemon_id` = :pokemon_id
+				INNER JOIN `version_group_forms` AS `vgf`
+					ON `vg`.`id` = `vgf`.`version_group_id`
+				INNER JOIN `forms` AS `f`
+					ON `vgf`.`form_id` = `f`.`id`
+				WHERE `f`.`pokemon_id` = :pokemon_id
 			)
 			ORDER BY `id`'
 		);

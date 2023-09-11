@@ -226,11 +226,13 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 				ON `p`.`id` = `pn`.`pokemon_id`
 			WHERE `fi`.`generation_id` = :generation_id1
 				AND `p`.`id` IN (
-					SELECT
-						`vgp`.`pokemon_id`
-					FROM `version_group_pokemon` AS `vgp`
+					SELECT DISTINCT
+						`f`.`pokemon_id`
+					FROM `version_group_forms` AS `vgf`
 					INNER JOIN `version_groups` AS `vg`
-						ON `vgp`.`version_group_id` = `vg`.`id`
+						ON `vgf`.`version_group_id` = `vg`.`id`
+					INNER JOIN `forms` AS `f`
+						ON `vgf`.`form_id` = `f`.`id`
 					WHERE `vg`.`generation_id` = :generation_id2
 				)
 				AND `fi`.`is_female` = 0
@@ -311,11 +313,13 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 				ON `p`.`id` = `pn`.`pokemon_id`
 			WHERE `fi`.`generation_id` = :generation_id1
 				AND `p`.`id` IN (
-					SELECT
-						`vgp`.`pokemon_id`
-					FROM `version_group_pokemon` AS `vgp`
+					SELECT DISTINCT
+						`f`.`pokemon_id`
+					FROM `version_group_forms` AS `vgf`
 					INNER JOIN `version_groups` AS `vg`
-						ON `vgp`.`version_group_id` = `vg`.`id`
+						ON `vgf`.`version_group_id` = `vg`.`id`
+					INNER JOIN `forms` AS `f`
+						ON `vgf`.`form_id` = `f`.`id`
 					WHERE `vg`.`generation_id` = :generation_id2
 				)
 				AND `fi`.`is_female` = 0
@@ -391,11 +395,13 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 				ON `p`.`id` = `pn`.`pokemon_id`
 			WHERE `fi`.`generation_id` = :generation_id1
 				AND `p`.`id` IN (
-					SELECT
-						`vgp`.`pokemon_id`
-					FROM `version_group_pokemon` AS `vgp`
+					SELECT DISTINCT
+						`f`.`pokemon_id`
+					FROM `version_group_forms` AS `vgf`
 					INNER JOIN `version_groups` AS `vg`
-						ON `vgp`.`version_group_id` = `vg`.`id`
+						ON `vgf`.`version_group_id` = `vg`.`id`
+					INNER JOIN `forms` AS `f`
+						ON `vgf`.`form_id` = `f`.`id`
 					WHERE `vg`.`generation_id` = :generation_id2
 				)
 				AND `fi`.`is_female` = 0

@@ -71,7 +71,7 @@ final class DatabaseItemRepository implements ItemRepositoryInterface
 
 		if (!$result) {
 			throw new ItemNotFoundException(
-				'No item exists with identifier ' . $identifier . '.'
+				"No item exists with identifier $identifier."
 			);
 		}
 

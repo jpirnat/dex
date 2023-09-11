@@ -100,7 +100,7 @@ final class DatabaseFormatRepository implements FormatRepositoryInterface
 
 		if (!$result) {
 			throw new FormatNotFoundException(
-				'No format exists with identifier ' . $identifier
+				"No format exists with identifier $identifier."
 			);
 		}
 

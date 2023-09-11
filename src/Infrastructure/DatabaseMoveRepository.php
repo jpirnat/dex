@@ -75,7 +75,7 @@ final class DatabaseMoveRepository implements MoveRepositoryInterface
 
 		if (!$result) {
 			throw new MoveNotFoundException(
-				'No move exists with identifier ' . $identifier . '.'
+				"No move exists with identifier $identifier."
 			);
 		}
 
