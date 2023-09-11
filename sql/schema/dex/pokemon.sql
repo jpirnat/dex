@@ -8,8 +8,6 @@ create table if not exists `pokemon`
 `is_default_pokemon` bool not null,
 `introduced_in_version_group_id` tinyint unsigned not null,
 `experience_group_id` tinyint unsigned not null,
-`height_m` decimal(3, 1) not null,
-`weight_kg` decimal(4, 1) not null,
 `gender_ratio` tinyint signed not null,
 `smogon_dex_identifier` varchar(20) not null,
 `sort` smallint unsigned not null,

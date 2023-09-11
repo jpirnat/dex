@@ -33,8 +33,6 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 				`is_default_pokemon`,
 				`introduced_in_version_group_id`,
 				`experience_group_id`,
-				`height_m`,
-				`weight_kg`,
 				`gender_ratio`,
 				`smogon_dex_identifier`,
 				`sort`
@@ -48,7 +46,7 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 
 		if (!$result) {
 			throw new PokemonNotFoundException(
-				'No Pokémon exists with id ' . $pokemonId->value()
+				'No Pokémon exists with id ' . $pokemonId->value() . '.'
 			);
 		}
 
@@ -60,11 +58,9 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 			(bool) $result['is_default_pokemon'],
 			new VersionGroupId($result['introduced_in_version_group_id']),
 			new ExperienceGroupId($result['experience_group_id']),
-			(float) $result['height_m'],
-			(float) $result['weight_kg'],
 			$result['gender_ratio'],
 			$result['smogon_dex_identifier'],
-			$result['sort']
+			$result['sort'],
 		);
 
 		return $pokemon;
@@ -85,8 +81,6 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 				`is_default_pokemon`,
 				`introduced_in_version_group_id`,
 				`experience_group_id`,
-				`height_m`,
-				`weight_kg`,
 				`gender_ratio`,
 				`smogon_dex_identifier`,
 				`sort`
@@ -100,7 +94,7 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 
 		if (!$result) {
 			throw new PokemonNotFoundException(
-				'No Pokémon exists with identifier ' . $identifier
+				"No Pokémon exists with identifier $identifier."
 			);
 		}
 
@@ -112,11 +106,9 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 			(bool) $result['is_default_pokemon'],
 			new VersionGroupId($result['introduced_in_version_group_id']),
 			new ExperienceGroupId($result['experience_group_id']),
-			(float) $result['height_m'],
-			(float) $result['weight_kg'],
 			$result['gender_ratio'],
 			$result['smogon_dex_identifier'],
-			$result['sort']
+			$result['sort'],
 		);
 
 		return $pokemon;
@@ -138,8 +130,6 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 				`is_default_pokemon`,
 				`introduced_in_version_group_id`,
 				`experience_group_id`,
-				`height_m`,
-				`weight_kg`,
 				`gender_ratio`,
 				`smogon_dex_identifier`,
 				`sort`
@@ -159,11 +149,9 @@ final class DatabasePokemonRepository implements PokemonRepositoryInterface
 				(bool) $result['is_default_pokemon'],
 				new VersionGroupId($result['introduced_in_version_group_id']),
 				new ExperienceGroupId($result['experience_group_id']),
-				(float) $result['height_m'],
-				(float) $result['weight_kg'],
 				$result['gender_ratio'],
 				$result['smogon_dex_identifier'],
-				$result['sort']
+				$result['sort'],
 			);
 
 			$pokemons[$result['id']] = $pokemon;

@@ -16,8 +16,6 @@ final class Pokemon
 		private bool $isDefaultPokemon,
 		private VersionGroupId $introducedInVersionGroupId,
 		private ExperienceGroupId $experienceGroupId,
-		private float $heightM,
-		private float $weightKg,
 		private int $genderRatio,
 		private string $smogonDexIdentifier,
 		private int $sort,
@@ -77,22 +75,6 @@ final class Pokemon
 	public function getExperienceGroupId() : ExperienceGroupId
 	{
 		return $this->experienceGroupId;
-	}
-
-	/**
-	 * Get the Pokémon's height in meters.
-	 */
-	public function getHeightM() : float
-	{
-		return $this->heightM;
-	}
-
-	/**
-	 * Get the Pokémon's weight in kilograms.
-	 */
-	public function getWeightKg() : float
-	{
-		return $this->weightKg;
 	}
 
 	/**

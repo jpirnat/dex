@@ -8,6 +8,8 @@ create table if not exists `forms`
 `is_default_form` bool not null,
 `introduced_in_version_group_id` tinyint unsigned not null,
 `is_battle_only` bool not null,
+`height_m` decimal(3, 1) not null,
+`weight_kg` decimal(4, 1) not null,
 
 primary key (`id`),
 unique key (`identifier`),
