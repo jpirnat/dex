@@ -89,6 +89,7 @@ return [
 		'pokemon_moves_7',
 		'pokemon_moves_8_ss',
 		'pokemon_moves_8_bdsp',
+		'pokemon_moves_8_la',
 	],
 	'exclusive_z_moves',
 

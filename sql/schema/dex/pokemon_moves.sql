@@ -5,6 +5,7 @@ create table if not exists `pokemon_moves`
 `move_id` smallint unsigned not null,
 `move_method_id` tinyint unsigned not null,
 `level` tinyint unsigned not null,
+`mastery_level` tinyint unsigned not null,
 
 `sort` tinyint unsigned not null,
 
