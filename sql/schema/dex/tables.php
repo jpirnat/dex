@@ -139,6 +139,7 @@ return [
 		'pokedex_entries_7',
 		'pokedex_entries_8_ss',
 		'pokedex_entries_8_bdsp',
+		'pokedex_entries_8_la',
 	],
 
 	// Shapes
