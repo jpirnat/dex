@@ -95,7 +95,7 @@ return [
 
 	// Move flags
 	'flags',
-	'generation_flags',
+	'version_group_flags',
 	'flag_descriptions',
 	'move_flags',
 
