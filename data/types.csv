@@ -17,5 +17,6 @@ id,identifier,introduced_in_generation_id,category_id,hidden_power_index,color_c
 16,dragon,1,2,14,#7038f8
 17,dark,2,2,15,#705848
 18,fairy,6,\N,\N,#ee99ac
+19,stellar,9,\N,\N,#7cc7b2
 101,unknown,2,\N,\N,#68a090
 102,shadow,3,\N,\N,#000000
