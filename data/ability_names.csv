@@ -266,6 +266,49 @@ language_id,ability_id,name
 1,265,くろのいななき
 1,266,じんばいったい
 1,267,じんばいったい
+1,268,とれないにおい
+1,269,こぼれダネ
+1,270,ねつこうかん
+1,271,いかりのこうら
+1,272,きよめのしお
+1,273,こんがりボディ
+1,274,かぜのり
+1,275,ばんけん
+1,276,いわはこび
+1,277,ふうりょくでんき
+1,278,マイティチェンジ
+1,279,しれいとう
+1,280,でんきにかえる
+1,281,こだいかっせい
+1,282,クォークチャージ
+1,283,おうごんのからだ
+1,284,わざわいのうつわ
+1,285,わざわいのつるぎ
+1,286,わざわいのおふだ
+1,287,わざわいのたま
+1,288,ひひいろのこどう
+1,289,ハドロンエンジン
+1,290,びんじょう
+1,291,はんすう
+1,292,きれあじ
+1,293,そうだいしょう
+1,294,きょうえん
+1,295,どくげしょう
+1,296,テイルアーマー
+1,297,どしょく
+1,298,きんしのちから
+1,299,おもてなし
+1,300,しんがん
+1,301,おもかげやどし
+1,302,おもかげやどし
+1,303,おもかげやどし
+1,304,おもかげやどし
+1,305,どくのくさり
+1,306,かんろなミツ
+1,307,テラスチェンジ
+1,308,テラスシェル
+1,309,ゼロフォーミング
+1,310,どくくぐつ
 2,1,Stench
 2,2,Drizzle
 2,3,Speed Boost
@@ -533,6 +576,49 @@ language_id,ability_id,name
 2,265,Grim Neigh
 2,266,As One
 2,267,As One
+2,268,Lingering Aroma
+2,269,Seed Sower
+2,270,Thermal Exchange
+2,271,Anger Shell
+2,272,Purifying Salt
+2,273,Well-Baked Body
+2,274,Wind Rider
+2,275,Guard Dog
+2,276,Rocky Payload
+2,277,Wind Power
+2,278,Zero to Hero
+2,279,Commander
+2,280,Electromorphosis
+2,281,Protosynthesis
+2,282,Quark Drive
+2,283,Good as Gold
+2,284,Vessel of Ruin
+2,285,Sword of Ruin
+2,286,Tablets of Ruin
+2,287,Beads of Ruin
+2,288,Orichalcum Pulse
+2,289,Hadron Engine
+2,290,Opportunist
+2,291,Cud Chew
+2,292,Sharpness
+2,293,Supreme Overlord
+2,294,Costar
+2,295,Toxic Debris
+2,296,Armor Tail
+2,297,Earth Eater
+2,298,Mycelium Might
+2,299,Hospitality
+2,300,Mind’s Eye
+2,301,Embody Aspect
+2,302,Embody Aspect
+2,303,Embody Aspect
+2,304,Embody Aspect
+2,305,Toxic Chain
+2,306,Supersweet Syrup
+2,307,Tera Shift
+2,308,Tera Shell
+2,309,Teraform Zero
+2,310,Poison Puppeteer
 3,1,Puanteur
 3,2,Crachin
 3,3,Turbo
@@ -567,7 +653,7 @@ language_id,ability_id,name
 3,32,Sérénité
 3,33,Glissade
 3,34,Chlorophylle
-3,35,Lumiattirance
+3,35,Luminescence
 3,36,Calque
 3,37,Coloforce
 3,38,Point Poison
@@ -733,7 +819,7 @@ language_id,ability_id,name
 3,198,Filature
 3,199,Aquabulle
 3,200,Expert Acier
-3,201,Dracolère
+3,201,Folle Furie
 3,202,Chasse-Neige
 3,203,Longue Portée
 3,204,Hydrata-Son
@@ -800,6 +886,49 @@ language_id,ability_id,name
 3,265,Sombre Ruade
 3,266,Osmose Équine
 3,267,Osmose Équine
+3,268,Odeur Tenace
+3,269,Semencier
+3,270,Thermodynamique
+3,271,Courroupace
+3,272,Sel Purificateur
+3,273,Bien Cuit
+3,274,Aéroporté
+3,275,Chien de Garde
+3,276,Porte-Roche
+3,277,Turbine Éolienne
+3,278,Supermutation
+3,279,Commandant
+3,280,Grecharge
+3,281,Paléosynthèse
+3,282,Charge Quantique
+3,283,Corps en Or
+3,284,Urne du Fléau
+3,285,Épée du Fléau
+3,286,Bois du Fléau
+3,287,Perles du Fléau
+3,288,Pouls Orichalque
+3,289,Moteur à Hadrons
+3,290,Opportuniste
+3,291,Ruminant
+3,292,Incisif
+3,293,Général Suprême
+3,294,Collab
+3,295,Dépôt Toxique
+3,296,Armure Caudale
+3,297,Absorbe-Terre
+3,298,Force Fongique
+3,299,Aux Petits Soins
+3,300,Œil Révélateur
+3,301,Force Mémorielle
+3,302,Force Mémorielle
+3,303,Force Mémorielle
+3,304,Force Mémorielle
+3,305,Chaîne Toxique
+3,306,Nectar Mielleux
+3,307,Téramorphose
+3,308,Téra-Carapace
+3,309,Téraformation 0
+3,310,Emprise Toxique
 4,1,Duftnote
 4,2,Niesel
 4,3,Temposchub
@@ -819,7 +948,7 @@ language_id,ability_id,name
 4,17,Immunität
 4,18,Feuerfänger
 4,19,Puderabwehr
-4,20,Tempomacher
+4,20,Gleichmut
 4,21,Saugnapf
 4,22,Bedroher
 4,23,Wegsperre
@@ -876,7 +1005,7 @@ language_id,ability_id,name
 4,74,Mentalkraft
 4,75,Panzerhaut
 4,76,Klimaschutz
-4,77,Fußangel
+4,77,Taumelschritt
 4,78,Starthilfe
 4,79,Rivalität
 4,80,Felsenfest
@@ -889,7 +1018,7 @@ language_id,ability_id,name
 4,87,Trockenheit
 4,88,Download
 4,89,Eisenfaust
-4,90,Aufheber
+4,90,Giftheilung
 4,91,Anpassung
 4,92,Wertelink
 4,93,Hydration
@@ -916,7 +1045,7 @@ language_id,ability_id,name
 4,114,Sturmsog
 4,115,Eishaut
 4,116,Felskern
-4,117,Hagelalarm
+4,117,Schneeschauer
 4,118,Honigmaul
 4,119,Schnüffler
 4,120,Achtlos
@@ -979,7 +1108,7 @@ language_id,ability_id,name
 4,177,Orkanschwingen
 4,178,Megawumme
 4,179,Pflanzenpelz
-4,180,Nutznießer
+4,180,Symbiose
 4,181,Krallenwucht
 4,182,Feenschicht
 4,183,Viskosität
@@ -1067,6 +1196,49 @@ language_id,ability_id,name
 4,265,Dunkles Wiehern
 4,266,Reitgespann
 4,267,Reitgespann
+4,268,Duftschwade
+4,269,Streusaat
+4,270,Thermowandel
+4,271,Wutpanzer
+4,272,Läutersalz
+4,273,Knusperkruste
+4,274,Windreiter
+4,275,Wachhund
+4,276,Steinträger
+4,277,Windkraft
+4,278,Superwechsel
+4,279,Kommandant
+4,280,Dynamo
+4,281,Paläosynthese
+4,282,Quantenantrieb
+4,283,Goldkörper
+4,284,Unheilsgefäß
+4,285,Unheilsschwert
+4,286,Unheilstafeln
+4,287,Unheilsjuwelen
+4,288,Orichalkum-Puls
+4,289,Hadronen-Motor
+4,290,Profiteur
+4,291,Wiederkäuer
+4,292,Scharfkantig
+4,293,Feldherr
+4,294,Synchronauftritt
+4,295,Giftbelag
+4,296,Schweifrüstung
+4,297,Bodenschmaus
+4,298,Myzelienkraft
+4,299,Gastlichkeit
+4,300,Geistiges Auge
+4,301,Erinnerungskraft
+4,302,Erinnerungskraft
+4,303,Erinnerungskraft
+4,304,Erinnerungskraft
+4,305,Giftkette
+4,306,Süßer Nektar
+4,307,Tera-Wandel
+4,308,Tera-Panzer
+4,309,Teraforming Null
+4,310,Giftpuppenspiel
 5,1,Tanfo
 5,2,Piovischio
 5,3,Acceleratore
@@ -1104,7 +1276,7 @@ language_id,ability_id,name
 5,35,Risplendi
 5,36,Traccia
 5,37,Macroforza
-5,38,Velenopunto
+5,38,Velenopunte
 5,39,Forza Interiore
 5,40,Magmascudo
 5,41,Idrovelo
@@ -1334,6 +1506,49 @@ language_id,ability_id,name
 5,265,Nitrito Nero
 5,266,Sintonia Equina
 5,267,Sintonia Equina
+5,268,Odore Tenace
+5,269,Spargisemi
+5,270,Termoscambio
+5,271,Iraguscio
+5,272,Sale Purificante
+5,273,Bentostato
+5,274,Vento Propizio
+5,275,Cane da Guardia
+5,276,Portamassi
+5,277,Energia Eolica
+5,278,Supercambio
+5,279,Torre di Comando
+5,280,Convertivolt
+5,281,Paleoattivazione
+5,282,Carica Quark
+5,283,Corpo Aureo
+5,284,Vaso Nefasto
+5,285,Spada Nefasta
+5,286,Amuleto Nefasto
+5,287,Monile Nefasto
+5,288,Ritmo d’Oricalco
+5,289,Motore Adronico
+5,290,Scrocco
+5,291,Ruminante
+5,292,Affilama
+5,293,Generale Supremo
+5,294,Coprotagonismo
+5,295,Mantossina
+5,296,Codarmatura
+5,297,Mangiaterra
+5,298,Micoforza
+5,299,Ospitalità
+5,300,Occhio Interiore
+5,301,Albergamemorie
+5,302,Albergamemorie
+5,303,Albergamemorie
+5,304,Albergamemorie
+5,305,Catena Tossica
+5,306,Sciroppo Sublime
+5,307,Teramorfosi
+5,308,Teraguscio
+5,309,Zeroformazione
+5,310,Malia Tossica
 6,1,Hedor
 6,2,Llovizna
 6,3,Impulso
@@ -1369,10 +1584,10 @@ language_id,ability_id,name
 6,33,Nado Rápido
 6,34,Clorofila
 6,35,Iluminación
-6,36,Rastro
+6,36,Calco
 6,37,Potencia
 6,38,Punto Tóxico
-6,39,Foco Interno
+6,39,Fuerza Mental
 6,40,Escudo Magma
 6,41,Velo Agua
 6,42,Imán
@@ -1387,7 +1602,7 @@ language_id,ability_id,name
 6,51,Vista Lince
 6,52,Corte Fuerte
 6,53,Recogida
-6,54,Ausente
+6,54,Pereza
 6,55,Entusiasmo
 6,56,Gran Encanto
 6,57,Más
@@ -1397,7 +1612,7 @@ language_id,ability_id,name
 6,61,Mudar
 6,62,Agallas
 6,63,Escama Especial
-6,64,Lodo Líquido
+6,64,Viscosecreción
 6,65,Espesura
 6,66,Mar Llamas
 6,67,Torrente
@@ -1409,7 +1624,7 @@ language_id,ability_id,name
 6,73,Humo Blanco
 6,74,Energía Pura
 6,75,Caparazón
-6,76,Bucle Aire
+6,76,Esclusa de Aire
 6,77,Tumbos
 6,78,Electromotor
 6,79,Rivalidad
@@ -1601,6 +1816,49 @@ language_id,ability_id,name
 6,265,Relincho Negro
 6,266,Unidad Ecuestre
 6,267,Unidad Ecuestre
+6,268,Olor Persistente
+6,269,Disemillar
+6,270,Termoconversión
+6,271,Coraza Ira
+6,272,Sal Purificadora
+6,273,Cuerpo Horneado
+6,274,Surcavientos
+6,275,Perro Guardián
+6,276,Transportarrocas
+6,277,Energía Eólica
+6,278,Cambio Heroico
+6,279,Comandar
+6,280,Dinamo
+6,281,Paleosíntesis
+6,282,Carga Cuark
+6,283,Cuerpo Áureo
+6,284,Caldero Debacle
+6,285,Espada Debacle
+6,286,Tablilla Debacle
+6,287,Abalorio Debacle
+6,288,Latido Oricalco
+6,289,Motor Hadrónico
+6,290,Oportunista
+6,291,Rumia
+6,292,Cortante
+6,293,General Supremo
+6,294,Unísono
+6,295,Capa Tóxica
+6,296,Cola Armadura
+6,297,Geofagia
+6,298,Poder Fúngico
+6,299,Hospitalidad
+6,300,Ojo Mental
+6,301,Evocarrecuerdos
+6,302,Evocarrecuerdos
+6,303,Evocarrecuerdos
+6,304,Evocarrecuerdos
+6,305,Cadena Tóxica
+6,306,Néctar Dulce
+6,307,Teracambio
+6,308,Teracaparazón
+6,309,Teraformación 0
+6,310,Títere Tóxico
 7,1,악취
 7,2,잔비
 7,3,가속
@@ -1823,7 +2081,7 @@ language_id,ability_id,name
 7,220,소울하트
 7,221,컬리헤어
 7,222,리시버
-7,223,과학의힘
+7,223,화학의힘
 7,224,비스트부스트
 7,225,AR시스템
 7,226,일렉트릭메이커
@@ -1868,6 +2126,49 @@ language_id,ability_id,name
 7,265,흑의울음
 7,266,혼연일체
 7,267,혼연일체
+7,268,가시지않는향기
+7,269,넘치는씨
+7,270,열교환
+7,271,분노의껍질
+7,272,정화의소금
+7,273,노릇노릇바디
+7,274,바람타기
+7,275,파수견
+7,276,바위나르기
+7,277,풍력발전
+7,278,마이티체인지
+7,279,사령탑
+7,280,전기로바꾸기
+7,281,고대활성
+7,282,쿼크차지
+7,283,황금몸
+7,284,재앙의그릇
+7,285,재앙의검
+7,286,재앙의목간
+7,287,재앙의구슬
+7,288,진홍빛고동
+7,289,하드론엔진
+7,290,편승
+7,291,되새김질
+7,292,예리함
+7,293,총대장
+7,294,협연
+7,295,독치장
+7,296,테일아머
+7,297,흙먹기
+7,298,균사의힘
+7,299,대접
+7,300,심안
+7,301,초상투영
+7,302,초상투영
+7,303,초상투영
+7,304,초상투영
+7,305,독사슬
+7,306,감미로운꿀
+7,307,테라체인지
+7,308,테라셸
+7,309,제로포밍
+7,310,독조종
 8,1,あくしゅう
 8,2,あめふらし
 8,3,かそく
@@ -2135,6 +2436,49 @@ language_id,ability_id,name
 8,265,くろのいななき
 8,266,じんばいったい
 8,267,じんばいったい
+8,268,とれないにおい
+8,269,こぼれダネ
+8,270,ねつこうかん
+8,271,いかりのこうら
+8,272,きよめのしお
+8,273,こんがりボディ
+8,274,かぜのり
+8,275,ばんけん
+8,276,いわはこび
+8,277,ふうりょくでんき
+8,278,マイティチェンジ
+8,279,しれいとう
+8,280,でんきにかえる
+8,281,こだいかっせい
+8,282,クォークチャージ
+8,283,おうごんのからだ
+8,284,わざわいのうつわ
+8,285,わざわいのつるぎ
+8,286,わざわいのおふだ
+8,287,わざわいのたま
+8,288,ひひいろのこどう
+8,289,ハドロンエンジン
+8,290,びんじょう
+8,291,はんすう
+8,292,きれあじ
+8,293,そうだいしょう
+8,294,きょうえん
+8,295,どくげしょう
+8,296,テイルアーマー
+8,297,どしょく
+8,298,きんしのちから
+8,299,おもてなし
+8,300,しんがん
+8,301,おもかげやどし
+8,302,おもかげやどし
+8,303,おもかげやどし
+8,304,おもかげやどし
+8,305,どくのくさり
+8,306,かんろなミツ
+8,307,テラスチェンジ
+8,308,テラスシェル
+8,309,ゼロフォーミング
+8,310,どくくぐつ
 9,1,恶臭
 9,2,降雨
 9,3,加速
@@ -2240,7 +2584,7 @@ language_id,ability_id,name
 9,103,笨拙
 9,104,破格
 9,105,超幸运
-9,106,引爆
+9,106,诱爆
 9,107,危险预知
 9,108,预知梦
 9,109,纯朴
@@ -2264,7 +2608,7 @@ language_id,ability_id,name
 9,127,紧张感
 9,128,不服输
 9,129,软弱
-9,130,诅咒之躯
+9,130,咒术之躯
 9,131,治愈之心
 9,132,友情防守
 9,133,碎裂铠甲
@@ -2402,6 +2746,49 @@ language_id,ability_id,name
 9,265,漆黑嘶鸣
 9,266,人马一体
 9,267,人马一体
+9,268,甩不掉的气味
+9,269,掉出种子
+9,270,热交换
+9,271,愤怒甲壳
+9,272,洁净之盐
+9,273,焦香之躯
+9,274,乘风
+9,275,看门犬
+9,276,搬岩
+9,277,风力发电
+9,278,全能变身
+9,279,发号施令
+9,280,电力转换
+9,281,古代活性
+9,282,夸克充能
+9,283,黄金之躯
+9,284,灾祸之鼎
+9,285,灾祸之剑
+9,286,灾祸之简
+9,287,灾祸之玉
+9,288,绯红脉动
+9,289,强子引擎
+9,290,跟风
+9,291,反刍
+9,292,锋锐
+9,293,大将
+9,294,同台共演
+9,295,毒满地
+9,296,尾甲
+9,297,食土
+9,298,菌丝之力
+9,299,款待
+9,300,心眼
+9,301,面影辉映
+9,302,面影辉映
+9,303,面影辉映
+9,304,面影辉映
+9,305,毒锁链
+9,306,甘露之蜜
+9,307,太晶变形
+9,308,太晶甲壳
+9,309,归零化境
+9,310,毒傀儡
 10,1,惡臭
 10,2,降雨
 10,3,加速
@@ -2669,3 +3056,46 @@ language_id,ability_id,name
 10,265,漆黑嘶鳴
 10,266,人馬一體
 10,267,人馬一體
+10,268,甩不掉的氣味
+10,269,掉出種子
+10,270,熱交換
+10,271,憤怒甲殼
+10,272,潔淨之鹽
+10,273,焦香之軀
+10,274,乘風
+10,275,看門犬
+10,276,搬岩
+10,277,風力發電
+10,278,全能變身
+10,279,發號施令
+10,280,電力轉換
+10,281,古代活性
+10,282,夸克充能
+10,283,黃金之軀
+10,284,災禍之鼎
+10,285,災禍之劍
+10,286,災禍之簡
+10,287,災禍之玉
+10,288,緋紅脈動
+10,289,強子引擎
+10,290,跟風
+10,291,反芻
+10,292,鋒銳
+10,293,大將
+10,294,同台共演
+10,295,毒滿地
+10,296,尾甲
+10,297,食土
+10,298,菌絲之力
+10,299,款待
+10,300,心眼
+10,301,面影輝映
+10,302,面影輝映
+10,303,面影輝映
+10,304,面影輝映
+10,305,毒鎖鏈
+10,306,甘露之蜜
+10,307,太晶變形
+10,308,太晶甲殼
+10,309,歸零化境
+10,310,毒傀儡

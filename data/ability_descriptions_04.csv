@@ -1,0 +1,2584 @@
+version_group_id,language_id,ability_id,name,description
+10,1,1,あくしゅう,やせいの　ポケモンが\nよりつき　にくくなる。
+10,1,2,あめふらし,せんとうに　でると\nあめを　ふらす。
+10,1,3,かそく,ちょっとずつ\nすばやく　なっていく。
+10,1,4,カブトアーマー,あいての　こうげきが\nきゅうしょに　あたらない。
+10,1,5,がんじょう,いちげきひっさつが\nきかない。
+10,1,6,しめりけ,だれも　じばくが\nできなくなる。
+10,1,7,じゅうなん,まひ　じょうたいに\nならない。
+10,1,8,すながくれ,すなあらしで\nかいひりつが　あがる。
+10,1,9,せいでんき,さわった　あいてを\nまひさせる　ことがある。
+10,1,10,ちくでん,でんきを　うけると\nかいふくする。
+10,1,11,ちょすい,みずを　うけると\nかいふくする。
+10,1,12,どんかん,メロメロ　じょうたいに\nならない。
+10,1,13,ノーてんき,てんきの　えいきょうが\nなくなる。
+10,1,14,ふくがん,わざの　めいちゅうりつが\nあがる。
+10,1,15,ふみん,ねむり　じょうたいに\nならない。
+10,1,16,へんしょく,うけた　わざの　タイプに\nへんかする。
+10,1,17,めんえき,どく　じょうたいに\nならない。
+10,1,18,もらいび,ほのおを　うけると\nほのおわざが　つよくなる。
+10,1,19,りんぷん,わざの　ついかこうかを\nうけない。
+10,1,20,マイペース,こんらん　じょうたいに\nならない。
+10,1,21,きゅうばん,いれかえさせる　わざが\nきかない。
+10,1,22,いかく,あいての　こうげきを\nさげる。
+10,1,23,かげふみ,あいての　かげをふみ\nにげられなくする。
+10,1,24,さめはだ,ふれた　あいてを\nキズつける。
+10,1,25,ふしぎなまもり,こうかばつぐん　しか\nあたらない。
+10,1,26,ふゆう,じめんタイプの　わざを\nうけない。
+10,1,27,ほうし,ふれると　どく　まひ\nねむりに　することがある。
+10,1,28,シンクロ,どく　まひ　やけどを\nあいてに　うつす。
+10,1,29,クリアボディ,あいてに　のうりょくを\nさげられない。
+10,1,30,しぜんかいふく,じょうたい　いじょうが\nひっこむと　なおる。
+10,1,31,ひらいしん,でんきタイプの　わざを\nすべて　うける。
+10,1,32,てんのめぐみ,わざの　ついかこうかが\nでやすい。
+10,1,33,すいすい,あめのとき　すばやさが\nあがる。
+10,1,34,ようりょくそ,はれのとき　すばやさが\nあがる。
+10,1,35,はっこう,やせいの　ポケモンに\nそうぐう　しやすくなる。
+10,1,36,トレース,あいてと　おなじ\nとくせいに　なる。
+10,1,37,ちからもち,ぶつり　こうげきの\nいりょくが　あがる。
+10,1,38,どくのトゲ,ふれた　あいてに　どくを\nおわせる　ことがある。
+10,1,39,せいしんりょく,ひるまない。\n
+10,1,40,マグマのよろい,こおり　じょうたいに\nならない。
+10,1,41,みずのベール,やけど　じょうたいに\nならない。
+10,1,42,じりょく,はがねタイプの　ポケモンを\nにげられなくする。
+10,1,43,ぼうおん,おとの　わざを\nうけない。
+10,1,44,あめうけざら,あめのとき　すこしずつ\nＨＰを　かいふくする。
+10,1,45,すなおこし,せんとうで　すなあらしを\nおこす。
+10,1,46,プレッシャー,あいての　つかう　わざの\nＰＰを　おおく　へらす。
+10,1,47,あついしぼう,ほのおと　こおりタイプの\nわざに　つよい。
+10,1,48,はやおき,おきるのが　はやくなる。\n
+10,1,49,ほのおのからだ,ふれた　あいてを　やけど\nさせることがある。
+10,1,50,にげあし,やせいの　ポケモンから\nかならず　にげられる。
+10,1,51,するどいめ,あいてに　めいちゅうりつを\nさげられない。
+10,1,52,かいりきバサミ,あいてに　こうげきを\nさげられない。
+10,1,53,ものひろい,どうぐを　ひろってくる\nことが　ある。
+10,1,54,なまけ,こうげきが　れんぞくで\nだせない。
+10,1,55,はりきり,こうげきは　たかいが\nはずれやすい。
+10,1,56,メロメロボディ,ふれると　メロメロに\nすることがある。
+10,1,57,プラス,マイナスが　いると\nとくこうが　あがる。
+10,1,58,マイナス,プラスが　いると\nとくこうが　あがる。
+10,1,59,てんきや,てんきで　ポワルンが\nへんかする。
+10,1,60,ねんちゃく,どうぐを　とられない。\n
+10,1,61,だっぴ,じょうたい　いじょうを\nなおす　ことがある。
+10,1,62,こんじょう,じょうたい　いじょうで\nこうげきが　あがる。
+10,1,63,ふしぎなうろこ,じょうたい　いじょうで\nぼうぎょが　あがる。
+10,1,64,ヘドロえき,すいとった　あいての\nＨＰを　へらす
+10,1,65,しんりょく,ピンチのとき　くさの\nいりょくが　あがる。
+10,1,66,もうか,ピンチのとき　ほのおの\nいりょくが　あがる。
+10,1,67,げきりゅう,ピンチのとき　みずの\nいりょくが　あがる。
+10,1,68,むしのしらせ,ピンチのとき　むしの\nいりょくが　あがる。
+10,1,69,いしあたま,ぶつかっても\nはんどうを　うけない。
+10,1,70,ひでり,せんとうに　でると\nにほんばれに　なる。
+10,1,71,ありじごく,せんとうで　あいてを\nにげられなくする。
+10,1,72,やるき,ねむり　じょうたいに\nならない。
+10,1,73,しろいけむり,あいてに　のうりょくを\nさげられない。
+10,1,74,ヨガパワー,ぶつり　こうげきの\nいりょくが　あがる。
+10,1,75,シェルアーマー,あいての　こうげきが\nきゅうしょに　あたらない。
+10,1,76,エアロック,てんきの　えいきょうが\nなくなる。
+10,1,77,ちどりあし,こんらん　していると\nかいひ　しやすくなる。
+10,1,78,でんきエンジン,でんきを　うけると\nすばやさが　あがる。
+10,1,79,とうそうしん,せいべつが　おなじだと\nこうげきが　あがる。
+10,1,80,ふくつのこころ,ひるむ　たびに\nすばやさが　あがる。
+10,1,81,ゆきがくれ,てんきが　あられのとき\nかいひりつが　あがる。
+10,1,82,くいしんぼう,きのみを　いつもより\nはやく　つかう。
+10,1,83,いかりのつぼ,きゅうしょに　うけると\nこうげきが　あがる。
+10,1,84,かるわざ,どうぐが　なくなると\nすばやさが　あがる。
+10,1,85,たいねつ,ほのお　わざの\nいりょくを　よわめる。
+10,1,86,たんじゅん,のうりょく　へんかが\nいつもより　はげしい。
+10,1,87,かんそうはだ,あついと　ＨＰが　へる。\nみずで　ＨＰを　かいふく。
+10,1,88,ダウンロード,あいての　のうりょくを\nみて　つよさを　かえる。
+10,1,89,てつのこぶし,パンチを　つかう　わざの\nいりょくが　あがる。
+10,1,90,ポイズンヒール,どくじょうたいに　なると\nＨＰを　かいふくする。
+10,1,91,てきおうりょく,タイプが　おなじ　わざの\nいりょくが　あがる。
+10,1,92,スキルリンク,れんぞく　わざを\nたくさん　だせる。
+10,1,93,うるおいボディ,じょうたい　いじょうが\nあめの　とき　なおる。
+10,1,94,サンパワー,はれると　ＨＰが　へるが\nとくこうが　あがる。
+10,1,95,はやあし,じょうたい　いじょうで\nすばやさが　あがる。
+10,1,96,ノーマルスキン,だしたわざが　すべて\nノーマルタイプに　なる。
+10,1,97,スナイパー,きゅうしょに　あてたとき\nいりょくが　あがる。
+10,1,98,マジックガード,こうげき　いがいでは\nダメージを　うけない。
+10,1,99,ノーガード,おたがいの　わざが\nかならず　あたる。
+10,1,100,あとだし,あいてより　すばやくても\nこうどうが　おそくなる。
+10,1,101,テクニシャン,よわい　わざの\nいりょくが　あがる。
+10,1,102,リーフガード,じょうたい　いじょうに\nはれのとき　ならない。
+10,1,103,ぶきよう,もっている　どうぐを\nつかうことが　できない。
+10,1,104,かたやぶり,とくせいに　かんけいなく\nあいてに　わざを　だせる。
+10,1,105,きょううん,あいての　きゅうしょに\nこうげきが　あたりやすい。
+10,1,106,ゆうばく,ひんしの　ときに　ふれた\nあいてに　ダメージ。
+10,1,107,きけんよち,あいての　もつ　きけんな\nわざを　さっちする。
+10,1,108,よちむ,あいての　もつ　わざを\nよみとることが　できる。
+10,1,109,てんねん,あいての　のうりょくの\nへんかを　むしする。
+10,1,110,いろめがね,こうかいまひとつ　のとき\nわざを　つよめる。
+10,1,111,フィルター,こうかばつぐん　のとき\nいりょくを　よわめる。
+10,1,112,スロースタート,こうげきと　すばやさが\nしばらく　はんぶんになる。
+10,1,113,きもったま,ゴーストタイプに　わざが\nあたるようになる。
+10,1,114,よびみず,みずタイプの　わざを\nすべて　うける。
+10,1,115,アイスボディ,てんきが　あられのとき\nＨＰを　かいふくする。
+10,1,116,ハードロック,こうかばつぐん　のとき\nいりょくを　よわめる。
+10,1,117,ゆきふらし,せんとうに　でると\nあられを　ふらす。
+10,1,118,みつあつめ,あまいミツを　あつめて\nくることが　ある。
+10,1,119,おみとおし,あいての　もちものを\nしることが　できる。
+10,1,120,すてみ,はんどうで　ダメージを\nうけるわざが　つよくなる。
+10,1,121,マルチタイプ,もっている　プレートで\nタイプが　かわる。
+10,1,122,フラワーギフト,はれのとき　じぶんと\nみかたが　つよくなる。
+10,1,123,ナイトメア,ねむっている　あいての\nＨＰを　へらす。
+10,2,1,Stench,The stench helps keep\nwild Pokémon away.
+10,2,2,Drizzle,The Pokémon makes it rain\nif it appears in battle.
+10,2,3,Speed Boost,The Pokémon’s Speed stat\nis gradually boosted.
+10,2,4,Battle Armor,The Pokémon is protected\nagainst critical hits.
+10,2,5,Sturdy,The Pokémon is protected\nagainst 1-hit KO attacks.
+10,2,6,Damp,Prevents combatants from\nself destructing.
+10,2,7,Limber,The Pokémon is protected\nfrom paralysis.
+10,2,8,Sand Veil,Boosts the Pokémon’s\nevasion in a sandstorm.
+10,2,9,Static,Contact with the Pokémon\nmay cause paralysis.
+10,2,10,Volt Absorb,Restores HP if hit by an\nElectric-type move.
+10,2,11,Water Absorb,Restores HP if hit by a\nWater-type move.
+10,2,12,Oblivious,Prevents the Pokémon\nfrom becoming infatuated.
+10,2,13,Cloud Nine,Eliminates the effects of\nweather.
+10,2,14,Compoundeyes,The Pokémon’s accuracy is\nboosted.
+10,2,15,Insomnia,Prevents the Pokémon\nfrom falling asleep.
+10,2,16,Color Change,Changes the Pokémon’s\ntype to the foe’s move.
+10,2,17,Immunity,Prevents the Pokémon\nfrom getting poisoned.
+10,2,18,Flash Fire,Powers up Fire-type moves\nif hit by a fire move.
+10,2,19,Shield Dust,Blocks the added effects\nof attacks taken.
+10,2,20,Own Tempo,Prevents the Pokémon\nfrom becoming confused.
+10,2,21,Suction Cups,Negates moves that\nforce switching out.
+10,2,22,Intimidate,Lowers the foe’s Attack\nstat.
+10,2,23,Shadow Tag,Prevents the foe from\nescaping.
+10,2,24,Rough Skin,Inflicts damage to the\nfoe on contact.
+10,2,25,Wonder Guard,Only supereffective\nmoves will hit.
+10,2,26,Levitate,Gives full immunity to all\nGround-type moves.
+10,2,27,Effect Spore,"Contact may paralyze,\npoison, or cause sleep."
+10,2,28,Synchronize,"Passes on a burn, poison,\nor paralysis to the foe."
+10,2,29,Clear Body,Prevents the Pokémon’s\nstats from being lowered.
+10,2,30,Natural Cure,All status problems are\nhealed upon switching out.
+10,2,31,Lightningrod,The Pokémon draws in all\nElectric-type moves.
+10,2,32,Serene Grace,Boosts the likelihood of\nadded effects appearing.
+10,2,33,Swift Swim,Boosts the Pokémon’s\nSpeed in rain.
+10,2,34,Chlorophyll,Boosts the Pokémon’s\nSpeed in sunshine.
+10,2,35,Illuminate,Raises the likelihood of\nmeeting wild Pokémon.
+10,2,36,Trace,The Pokémon copies the\nfoe’s ability.
+10,2,37,Huge Power,Raises the Pokémon’s\nAttack stat.
+10,2,38,Poison Point,Contact with the Pokémon\nmay poison the foe.
+10,2,39,Inner Focus,The Pokémon is protected\nfrom flinching.
+10,2,40,Magma Armor,Prevents the Pokémon\nfrom becoming frozen.
+10,2,41,Water Veil,Prevents the Pokémon\nfrom getting a burn.
+10,2,42,Magnet Pull,Prevents Steel-type\nPokémon from escaping.
+10,2,43,Soundproof,Gives full immunity to all\nsound-based moves.
+10,2,44,Rain Dish,The Pokémon gradually\nrecovers HP in rain.
+10,2,45,Sand Stream,The Pokémon summons a\nsandstorm in battle.
+10,2,46,Pressure,The Pokémon raises the\nfoe’s PP usage.
+10,2,47,Thick Fat,Raises resistance to Fire-\nand Ice-type moves.
+10,2,48,Early Bird,The Pokémon awakens\nquickly from sleep.
+10,2,49,Flame Body,Contact with the Pokémon\nmay burn the foe.
+10,2,50,Run Away,Enables sure getaway from\nwild Pokémon.
+10,2,51,Keen Eye,Prevents the Pokémon\nfrom losing accuracy.
+10,2,52,Hyper Cutter,Prevents the Attack stat\nfrom being lowered.
+10,2,53,Pickup,The Pokémon may pick up\nitems.
+10,2,54,Truant,The Pokémon can’t attack\non consecutive turns.
+10,2,55,Hustle,"Boosts the Attack stat,\nbut lowers accuracy."
+10,2,56,Cute Charm,Contact with the Pokémon\nmay cause infatuation.
+10,2,57,Plus,Boosts Sp. Atk if another\nPokémon has Minus.
+10,2,58,Minus,Boosts Sp. Atk if another\nPokémon has Plus.
+10,2,59,Forecast,CASTFORM transforms with\nthe weather.
+10,2,60,Sticky Hold,Protects the Pokémon\nfrom item theft.
+10,2,61,Shed Skin,The Pokémon may heal its\nown status problems.
+10,2,62,Guts,Boosts Attack if there is\na status problem.
+10,2,63,Marvel Scale,Boosts Defense if there is\na status problem.
+10,2,64,Liquid Ooze,Inflicts damage on foes\nusing any draining move.
+10,2,65,Overgrow,Powers up Grass-type\nmoves in a pinch.
+10,2,66,Blaze,Powers up Fire-type\nmoves in a pinch.
+10,2,67,Torrent,Powers up Water-type\nmoves in a pinch.
+10,2,68,Swarm,Powers up Bug-type\nmoves in a pinch.
+10,2,69,Rock Head,Protects the Pokémon\nfrom recoil damage.
+10,2,70,Drought,The Pokémon makes it\nsunny if it is in battle.
+10,2,71,Arena Trap,Prevents the foe from\nfleeing.
+10,2,72,Vital Spirit,Prevents the Pokémon\nfrom falling asleep.
+10,2,73,White Smoke,Prevents the Pokémon’s\nstats from being lowered.
+10,2,74,Pure Power,Boosts the power of\nphysical attacks.
+10,2,75,Shell Armor,The Pokémon is protected\nagainst critical hits.
+10,2,76,Air Lock,Eliminates the effects of\nweather.
+10,2,77,Tangled Feet,Raises evasion if the\nPokémon is confused.
+10,2,78,Motor Drive,Raises Speed if hit by an\nElectric-type move.
+10,2,79,Rivalry,Raises Attack if the foe\nis of the same gender.
+10,2,80,Steadfast,Raises Speed each time\nthe Pokémon flinches.
+10,2,81,Snow Cloak,Raises evasion in a\nhailstorm.
+10,2,82,Gluttony,Encourages the early use\nof a held Berry.
+10,2,83,Anger Point,Raises Attack upon taking\na critical hit.
+10,2,84,Unburden,Raises Speed if a held\nitem is used.
+10,2,85,Heatproof,Weakens the power of\nFire-type moves.
+10,2,86,Simple,The Pokémon is prone to\nwild stat changes.
+10,2,87,Dry Skin,Reduces HP if it is hot.\nWater restores HP.
+10,2,88,Download,Adjusts power according\nto the foe’s ability.
+10,2,89,Iron Fist,Boosts the power of\npunching moves.
+10,2,90,Poison Heal,Restores HP if the\nPokémon is poisoned.
+10,2,91,Adaptability,Powers up moves of the\nsame type.
+10,2,92,Skill Link,Increases the frequency\nof multi-strike moves.
+10,2,93,Hydration,Heals status problems if\nit is raining.
+10,2,94,Solar Power,"Boosts Sp. Atk, but\nlowers HP in sunshine."
+10,2,95,Quick Feet,Boosts Speed if there is a\nstatus problem.
+10,2,96,Normalize,All the Pokémon’s moves\nbecome the Normal type.
+10,2,97,Sniper,Powers up moves if they\nbecome critical hits.
+10,2,98,Magic Guard,The Pokémon only takes\ndamage from attacks.
+10,2,99,No Guard,Ensures the Pokémon and\nits foe’s attacks land.
+10,2,100,Stall,The Pokémon moves after\neven slower foes.
+10,2,101,Technician,Powers up the Pokémon’s\nweaker moves.
+10,2,102,Leaf Guard,Prevents status problems\nin sunny weather.
+10,2,103,Klutz,The Pokémon can’t use\nany held items.
+10,2,104,Mold Breaker,Moves can be used\nregardless of abilities.
+10,2,105,Super Luck,Heightens the critical-hit\nratios of moves.
+10,2,106,Aftermath,Damages the foe landing\nthe finishing hit.
+10,2,107,Anticipation,Senses the foe’s\ndangerous moves.
+10,2,108,Forewarn,Determines what moves\nthe foe has.
+10,2,109,Unaware,Ignores any change in\nability by the foe.
+10,2,110,Tinted Lens,Powers up “not very\neffective” moves.
+10,2,111,Filter,Powers down super-\neffective moves.
+10,2,112,Slow Start,Temporarily halves Attack\nand Speed.
+10,2,113,Scrappy,Enables moves to hit\nGhost-type foes.
+10,2,114,Storm Drain,The Pokémon draws in all\nWater-type moves.
+10,2,115,Ice Body,The Pokémon regains HP in\na hailstorm.
+10,2,116,Solid Rock,Powers down super-\neffective moves.
+10,2,117,Snow Warning,The Pokémon summons a\nhailstorm in battle.
+10,2,118,Honey Gather,The Pokémon may gather\nHoney from somewhere.
+10,2,119,Frisk,The Pokémon can check\nthe foe’s held item.
+10,2,120,Reckless,Powers up moves that\nhave recoil damage.
+10,2,121,Multitype,Changes type to match\nthe held Plate.
+10,2,122,Flower Gift,Powers up party Pokémon\nwhen it is sunny.
+10,2,123,Bad Dreams,Reduces a sleeping foe’s\nHP.
+10,3,1,Puanteur,La puanteur peut repous-\nser les Pokémon sauvages.
+10,3,2,Crachin,Le Pokémon invoque la pluie\nquand il entre au combat.
+10,3,3,Turbo,La Vitesse du Pokémon\naugmente progressivement.
+10,3,4,Armurbaston,Le Pokémon est protégé\ndes coups critiques.
+10,3,5,Fermeté,Le Pokémon est protégé\ndes K.O. en un coup.
+10,3,6,Moiteur,Empêche les combattants\nde s’autodétruire.
+10,3,7,Echauffement,Protège le Pokémon de\nla paralysie.
+10,3,8,Voile Sable,Augmente l’esquive lors\ndes tempêtes de sable.
+10,3,9,Statik,Un contact avec le\nPokémon peut paralyser.
+10,3,10,Absorb Volt,Récupère des PV si touché\npar une capacité Electrik.
+10,3,11,Absorb Eau,Récupère des PV si touché\npar une capacité Eau.
+10,3,12,Benêt,Empêche le Pokémon de\ntomber amoureux.
+10,3,13,Ciel Gris,Annule les effets du\nclimat.
+10,3,14,Oeil Composé,Augmente la précision du\nPokémon.
+10,3,15,Insomnia,Empêche le Pokémon de\ns’endormir.
+10,3,16,Déguisement,Le Pokémon adopte le type\nde la capacité ennemie.
+10,3,17,Vaccin,Empêche le Pokémon d’être\nempoisonné.
+10,3,18,Torche,Booste capacités Feu si\ntouché par attaques Feu.
+10,3,19,Ecran Poudre,Annule les effets cumulés\nd’une attaque ennemie.
+10,3,20,Tempo Perso,Empêche la confusion.
+10,3,21,Ventouse,Annule les cap. forçant\nà changer de Pokémon.
+10,3,22,Intimidation,Baisse l’Attaque ennemie.
+10,3,23,Marque Ombre,Empêche le Pokémon ennemi\nde quitter le combat.
+10,3,24,Peau Dure,Le Pokémon blesse\nl’ennemi qui le touche.
+10,3,25,Garde Mystik,Seules capacités “super\nefficaces” l’atteignent.
+10,3,26,Lévitation,Immunise contre toutes\nles capacités de type Sol.
+10,3,27,Pose Spore,"Peut paralyser, empoison-\nner, endormir au contact."
+10,3,28,Synchro,"Transmet brûlure, poison\nou paralysie à l’ennemi."
+10,3,29,Corps Sain,Peut empêcher les stats\ndu Pokémon de baisser.
+10,3,30,Médic Nature,Quitter le combat soigne\nles problèmes de statut.
+10,3,31,Paratonnerre,Le Pokémon attire les\ncapacités Electrik.
+10,3,32,Sérénité,Augmente la fréquence\ndu cumul d’effets.
+10,3,33,Glissade,Augmente la Vitesse du\nPokémon s’il pleut.
+10,3,34,Chlorophyle,Augmente la Vitesse du\nPokémon s’il y a du soleil.
+10,3,35,Lumiatirance,Augmente les rencontres\navec Pokémon sauvages.
+10,3,36,Calque,Imite la capacité spéciale\nde l’ennemi.
+10,3,37,Coloforce,Augmente l’Attaque du\nPokémon.
+10,3,38,Point Poison,Peut empoisonner l’ennemi\ns’il y a contact.
+10,3,39,Attention,Empêche le Pokémon\nd’avoir peur.
+10,3,40,Armumagma,Protège le Pokémon\ncontre le gel.
+10,3,41,Ignifu-Voile,Protège le Pokémon\ndes brûlures.
+10,3,42,Magnépiège,Empêche les Pokémon Acier\nde fuir.
+10,3,43,Anti-Bruit,Protège de toutes les\ncapacités sonores.
+10,3,44,Cuvette,Récupère progressivement\ndes PV par temps de pluie.
+10,3,45,Sable Volant,Le Pokémon invoque une\ntempête de sable.
+10,3,46,Pression,Force l’ennemi à\ndépenser plus de PP.
+10,3,47,Isograisse,Augmente la résistance\naux cap. Feu et Glace.
+10,3,48,Matinal,Le Pokémon se réveille\nplus rapidement.
+10,3,49,Corps Ardent,Peut brûler l’ennemi s’il y\na contact.
+10,3,50,Fuite,Permet de fuir n’importe\nquel Pokémon sauvage.
+10,3,51,Regard Vif,Empêche le Pokémon de\nperdre en précision.
+10,3,52,Hyper Cutter,Empêche la réduction de\nl’Attaque.
+10,3,53,Ramassage,Permet parfois au Pokémon\nde ramasser des objets.
+10,3,54,Absentéisme,Le Pokémon ne frappe\nqu’un tour sur deux.
+10,3,55,Agitation,Améliore l’Attaque mais\ndiminue la précision.
+10,3,56,Joli Sourire,Séduit parfois l’ennemi\nau contact.
+10,3,57,Plus,Améliore l’Atq. Spé. si un\nautre Pokémon a Minus.
+10,3,58,Minus,Améliore l’Atq. Spé. si un\nautre Pokémon a Plus.
+10,3,59,Météo,MORPHEO change de forme\nselon le climat.
+10,3,60,Glue,Protège le Pokémon\ncontre le vol d’objets.
+10,3,61,Mue,Le Pokémon soigne parfois\nses problèmes de statut.
+10,3,62,Cran,Augmente l’Attaque s’il y\na un problème de statut.
+10,3,63,Ecaille Spé.,Augmente la Défense s’il y\na un problème de statut.
+10,3,64,Suintement,Blesse l’ennemi qui draine\nl’énergie du Pokémon.
+10,3,65,Engrais,Booste les capacités\nPlante en cas de besoin.
+10,3,66,Brasier,Booste les capacités\nFeu en cas de besoin.
+10,3,67,Torrent,Booste les capacités\nEau en cas de besoin.
+10,3,68,Essaim,Booste les capacités\nInsecte en cas de besoin.
+10,3,69,Tête de Roc,Protège le Pokémon des\ndégâts de contrecoups.
+10,3,70,Sécheresse,Invoque le soleil quand il\nest au combat.
+10,3,71,Piège,Empêche l’ennemi de\ns’enfuir.
+10,3,72,Esprit Vital,Empêche le Pokémon\nde s’endormir.
+10,3,73,Ecran Fumée,Empêche la réduction des\nstats du Pokémon.
+10,3,74,Force Pure,Augmente la puissance des\nattaques physiques.
+10,3,75,Coque Armure,Protège le Pokémon contre\nles coups critiques.
+10,3,76,Air Lock,Annule les effets du\nclimat.
+10,3,77,Pieds Confus,Augmente l’esquive si le\nPokémon est confus.
+10,3,78,Motorisé,Augmente la Vit. si touché\npar une cap. Electrik.
+10,3,79,Rivalité,Augmente l’Attaque si\nl’ennemi est du même sexe.
+10,3,80,Impassible,Augmente la Vitesse quand\nle Pokémon a peur.
+10,3,81,Rideau Neige,Augmente l’esquive durant\nles tempêtes de grêle.
+10,3,82,Gloutonnerie,Encourage l’utilisation\nd’une Baie tenue.
+10,3,83,Colérique,Monte l’Attaque au max.\naprès un coup critique.
+10,3,84,Délestage,Augmente la Vit. si l’objet\ntenu est utilisé ou perdu.
+10,3,85,Ignifuge,Réduit la puissance des\ncapacités de type Feu.
+10,3,86,Simple,Le Pokémon est sujet à\ndes variations de stats.
+10,3,87,Peau Sèche,Perd des PV à la chaleur.\nL’eau les restaure.
+10,3,88,Télécharge,Ajuste la puissance selon\nl’ennemi.
+10,3,89,Poing de Fer,Augmente la puissance des\ncapacités coups de poing.
+10,3,90,Soin Poison,Restaure des PV si le\nPokémon est empoisonné.
+10,3,91,Adaptabilité,Augmente la puissance des\ncapacités de même type.
+10,3,92,Multi-Coups,Augmente la fréquence des\nattaques multiples.
+10,3,93,Hydratation,Soigne les problèmes de\nstatut s’il pleut.
+10,3,94,Force Soleil,Augmente l’Atq. Spé. mais\nbaisse les PV au soleil.
+10,3,95,Pied Véloce,Augmente la Vitesse s’il y\na un problème de statut.
+10,3,96,Normalise,Toutes les capacités sont\nde type Normal.
+10,3,97,Sniper,Booste les capacités qui\nsont des coups critiques.
+10,3,98,Garde Magik,Seule une attaque directe\npeut blesser le Pokémon.
+10,3,99,Annule Garde,Attaques du Pokémon et\nde l’ennemi réussissent.
+10,3,100,Frein,"Attaque toujours après \nl’ennemi, même plus lent."
+10,3,101,Technicien,Augmente la puissance des\ncapacités les plus faibles.
+10,3,102,Feuil. Garde,Empêche les problèmes\nde statut au soleil.
+10,3,103,Maladresse,Le Pokémon ne peut\nutiliser aucun objet tenu.
+10,3,104,Brise Moule,Cap. utilisables quelles\nque soient les cap. spé.
+10,3,105,Chanceux,Augmente la fréquence\ndes coups critiques.
+10,3,106,Boom Final,Blesse l’ennemi qui \nporte le coup de grâce.
+10,3,107,Anticipation,Prévoit les capacités\nennemies dangereuses.
+10,3,108,Prédiction,Découvre la capacité\nennemie la plus puissante.
+10,3,109,Inconscient,Ignore les changements de\nstats de l’ennemi.
+10,3,110,Lentiteintée,Améliore les capacités\n“pas très efficaces”.
+10,3,111,Filtre,Affaiblit les capacités\n“super efficaces”.
+10,3,112,Début Calme,Divise temporairement\nVitesse et Attaque par 2.
+10,3,113,Querelleur,Les capacités touchent\nles Pokémon Spectre.
+10,3,114,Lavabo,Attire les attaques Eau\nvisant un Pokémon.
+10,3,115,Corps Gel,Récupère des PV lors des\ntempêtes de grêle.
+10,3,116,Solide Roc,Affaiblit les capacités\n“super efficaces”.
+10,3,117,Alerte Neige,Déclenche une tempête de\ngrêle pendant le combat.
+10,3,118,Cherche Miel,Le Pokémon peut parfois\ntrouver du miel.
+10,3,119,Fouille,Permet de connaître\nl’objet tenu par l’ennemi.
+10,3,120,Téméraire,Booste les cap. ayant des\ndégâts de contrecoups.
+10,3,121,Multi-Type,Modifie le type en fonction\nde la Plaque tenue.
+10,3,122,Don Floral,Pokémon de l’équipe plus\npuissants au soleil.
+10,3,123,Mauvais Rêve,Réduit les PV d’un ennemi\nendormi.
+10,4,1,Duftnote,"Hilft, wilde Pokémon\nfernzuhalten."
+10,4,2,Niesel,Ruft im Kampf\nRegen herbei.
+10,4,3,Temposchub,Erhöht Initiative nach\nund nach.
+10,4,4,Kampfpanzer,Wehrt Volltreffer ab.
+10,4,5,Robustheit,Schutz gegen\n1-Treffer-K.O.-Attacken.
+10,4,6,Feuchtigkeit,Verhindert Selbstzer-\nstörung der Kämpfenden.
+10,4,7,Flexibilität,Verhindert Paralyse.
+10,4,8,Sandschleier,Erhöht Fluchtwert im\nSandsturm.
+10,4,9,Statik,Kann bei Berührung\nparalysieren.
+10,4,10,Voltabsorber,Wandelt Elektrizität in\nKP um.
+10,4,11,H2O-Absorber,Wandelt Wasser in KP um.
+10,4,12,Dösigkeit,Verhindert Anziehung.
+10,4,13,Wolke Sieben,Keine Wetter-Effekte.
+10,4,14,Facettenauge,Steigert Genauigkeit.
+10,4,15,Insomnia,Verhindert Einschlafen.
+10,4,16,Farbwechsel,Typ des Anwenders wird zu\ndem der gegnerischen Att.
+10,4,17,Immunität,Verhindert Vergiftungen.
+10,4,18,Feuerfänger,"Verstärkt Feuer-A., wenn\nv. Feuer-A. getroffen."
+10,4,19,Puderabwehr,Blockiert Zusatz-Effekte\ngegnerischer Attacken.
+10,4,20,Tempomacher,Verhindert Verwirrung.
+10,4,21,Saugnapf,"Negiert Attacken, die PKMN\naustauschen würden."
+10,4,22,Bedroher,Senkt Angriff des\nGegners.
+10,4,23,Wegsperre,Hindert Gegner an Flucht.
+10,4,24,Rauhaut,Verletzt bei Berührung.
+10,4,25,Wunderwache,Nur sehr effektive Treffer\nschaden.
+10,4,26,Schwebe,Volle Immunität gegen\nalle Boden-Attacken.
+10,4,27,Sporenwirt,"Bei Kontakt evtl Paraly.,\nVergiftg. oder Schlaf."
+10,4,28,Synchro,"Gibt Verbrennung, Ver-\ngiftung u. Paraly. an Geg."
+10,4,29,Neutraltorso,Verhindert Absenken\nder Statuswerte evtl.
+10,4,30,Innere Kraft,Heilt bei Austausch\nStatusprobleme.
+10,4,31,Blitzfänger,Zieht Elektro-Attacken\nan.
+10,4,32,Edelmut,Verstärkt\nZusatz-Effekte.
+10,4,33,Wassertempo,Steigert Initiative bei\nRegen.
+10,4,34,Chlorophyll,Steigert Initiative bei\nSonnenschein.
+10,4,35,Erleuchtung,Mehr Pokémon-\nBegegnungen.
+10,4,36,Fährte,Das Pokémon kopiert \nFähigkeit des Gegners.
+10,4,37,Kraftkoloss,Steigert den Angriffs-\nWert eines Pokémon.
+10,4,38,Giftdorn,Vergiftet den Gegner\neventuell bei Berührung.
+10,4,39,Konzentrator,Verhindert\nZurückschrecken.
+10,4,40,Magmapanzer,Verhindert Einfrieren.
+10,4,41,Aquahülle,Verhindert\nVerbrennungen.
+10,4,42,Magnetfalle,Verhindert Flucht von\nStahl-Pokémon.
+10,4,43,Lärmschutz,Immun gegen Lärm-\nAttacken.
+10,4,44,Regengenuss,Langsame Wiederherstellg.\nvon KP bei Regen.
+10,4,45,Sandsturm,Erzeugt einen Sandsturm.
+10,4,46,Erzwinger,Steigert den Verbrauch\nder AP des Gegners.
+10,4,47,Speckschicht,Schutz vor Hitze\nund Kälte.
+10,4,48,Frühwecker,Schnelles Aufwachen.
+10,4,49,Flammkörper,Kann bei Kontakt zu\nVerbrennung führen.
+10,4,50,Angsthase,Erleichtert das\nEntkommen.
+10,4,51,Adlerauge,Verhindert Verlust der\nGenauigkeit.
+10,4,52,Scherenmacht,Verhindert Angriff-Reduz.
+10,4,53,Mitnahme,Kann Items aufnehmen.
+10,4,54,Schnarchnase,Greift nur in jedem\n2. Zug an.
+10,4,55,Übereifer,"Erhöht Angriffs-Wert,\nsenkt Genauigkeit."
+10,4,56,Charmebolzen,Kann bei Kontakt\nbetörend wirken.
+10,4,57,Plus,"Steigert Spezial-Angriff,\nwenn ein PKMN Minus hat."
+10,4,58,Minus,"Steigert Spezial-Angriff,\nwenn ein PKMN Plus hat."
+10,4,59,Prognose,FORMEO verändert seine\nForm abhängig vom Wetter.
+10,4,60,Wertehalter,Verhindert Item-\nDiebstahl.
+10,4,61,Expidermis,PKMN heilt eventuell\nseine Statusprobleme.
+10,4,62,Adrenalin,Steigert Angriff bei\nStatusveränderungen.
+10,4,63,Notschutz,Steigert Verteidigung bei\nStatusveränderungen.
+10,4,64,Kloakensoße,"Schadet Gegnern, die\nSaug-Attacken einsetzen."
+10,4,65,Notdünger,Stärkt Pflanzen-Attacken\nin Not.
+10,4,66,Großbrand,Stärkt Feuer-Attacken\nin Not.
+10,4,67,Sturzbach,Stärkt Wasser-Attacken\nin Not.
+10,4,68,Hexaplaga,Stärkt Käfer-Attacken\nin Not.
+10,4,69,Steinhaupt,"Verhindert Schaden, der\ndurch Rückstoß entsteht."
+10,4,70,Dürre,Erzeugt Sonne im Kampf.
+10,4,71,Auswegslos,Verhindert Flucht\ndes Gegners.
+10,4,72,Munterkeit,Verhindert Einschlafen.
+10,4,73,Pulverrauch,Verhindert das Absenken\nder Statuswerte.
+10,4,74,Mentalkraft,Steigert Kraft physischer\nAttacken.
+10,4,75,Panzerhaut,Wehrt Volltreffer ab.
+10,4,76,Klimaschutz,Eliminiert die Wirkung\ndes Wetters.
+10,4,77,Fußangel,"Erhöht Fluchtwert, wenn\ndas Pokémon verwirrt ist."
+10,4,78,Starthilfe,Erhöht Initiative nach\neiner Elektro-Attacke.
+10,4,79,Rivalität,"Erhöht Angriff, wenn Gegn.\ndasselbe Geschlecht hat."
+10,4,80,Felsenfest,"Erhöht Initiative, sobald\nPokémon zurückschreckt."
+10,4,81,Schneemantel,Erhöht Fluchtwert\nwährend Hagelschauer.
+10,4,82,Völlerei,Ermutigt zum frühzeitigen\nVerwenden einer Beere.
+10,4,83,Kurzschluss,Maximiert Angriff nach Ein-\nstecken e. Volltreffers.
+10,4,84,Entlastung,"Erhöht Init., wenn 1 Item\nverwendet/verloren wird."
+10,4,85,Hitzeschutz,Senkt die Kraft von\nFeuer-Attacken.
+10,4,86,Wankelmut,Das Pokémon ist anfällig\nfür Statusveränderungen.
+10,4,87,Trockenheit,Heißes Wetter reduziert\nKP. Wasser steigert KP.
+10,4,88,Download,Passt Kraft entsprechend\nder gegn. Statuswerte an.
+10,4,89,Eisenfaust,Steigert die Effektivität\nvon Box-Attacken.
+10,4,90,Aufheber,"Steigert KP, wenn das\nPokémon vergiftet ist."
+10,4,91,Anpassung,Steigert Attacken\ndesselben Typs.
+10,4,92,Wertelink,Erhöht die Häufigkeit von\nMehrfach-Attacken.
+10,4,93,Hydration,Heilt Statusprobleme\nbei Regen.
+10,4,94,Solarkraft,"Steigert Spezial-Angriff\nbei Sonne, senkt aber KP."
+10,4,95,Rasanz,Erhöht Initiative bei\nStatusproblemen.
+10,4,96,Regulierung,Alle Attacken des Pokémon\nwerden zu Normal-Att.
+10,4,97,Superschütze,Steigert Attacken nach\nVolltreffern.
+10,4,98,Magieschild,Das PKMN nimmt nur durch\ndirekte Attacken Schaden.
+10,4,99,Schildlos,Attacken des Pokémon und\ndes Gegners treffen.
+10,4,100,Zeitspiel,Das Pokémon bewegt sich \nnach weniger agilen Gegn.
+10,4,101,Techniker,Steigert Effektivität von\nschwächeren Attacken.
+10,4,102,Floraschild,Heilt Statusprobleme\nbei Sonne.
+10,4,103,Tollpatsch,Das Pokémon kann\nkeine Items verwenden.
+10,4,104,Überbrückung,Att. können unabhängig d.\nFähigkeit verw. werden.
+10,4,105,Glückspilz,Erhöht die Chance auf\neinen Volltreffer.
+10,4,106,Finalschlag,"Schadet dem Gegn., der\nfinale Attacke landet."
+10,4,107,Vorahnung,Ahnt gefährliche Attacken\ndes Gegners voraus.
+10,4,108,Vorwarnung,Gibt Auskunft über die\nstärkste gegn. Attacke.
+10,4,109,Unkenntnis,Ignoriert Wechsel der\nStatuswerte des Gegners.
+10,4,110,Aufwertung,Steigert “weniger\neffektive” Attacken.
+10,4,111,Filter,Senkt die Stärke sehr\neffektiver Attacken.
+10,4,112,Saumselig,Halbiert zeitweilig Angriff\nund Initiative.
+10,4,113,Rauflust,Ermöglicht es mit Attacken\nGeist-Gegner zu treffen.
+10,4,114,Sturmsog,"Zieht offens. Wasser-Att.\nan, die auf 1 PKMN zielen."
+10,4,115,Eishaut,Das Pokémon regeneriert\nwährend Hagelsturm KP.
+10,4,116,Felskern,Senkt die Stärke sehr\neffektiver Attacken.
+10,4,117,Hagelalarm,Pokémon beschwört einen\nHagelsturm herauf.
+10,4,118,Honigmaul,Pokémon kann Honig\nsammeln.
+10,4,119,Schnüffler,Gibt Auskunft über\ngegnerische Items.
+10,4,120,Achtlos,Steigert Attacken mit\nRückstoß-Schaden.
+10,4,121,Variabilität,Passt seinen Typ der\ngetragenen Tafel an.
+10,4,122,Pflanzengabe,Steigert Effektivität von\nTeam-Pokémon bei Sonne.
+10,4,123,Alptraum,Senkt die KP eines\nschlafenden Gegners.
+10,5,1,Tanfo,Questo tanfo tiene lontani\ni Pokémon selvatici.
+10,5,2,Piovischio,"Se scende in campo, il\nPokémon attira la pioggia."
+10,5,3,Acceleratore,Graduale aumento della\nVelocità del Pokémon.
+10,5,4,Lottascudo,Evita che il Pokémon\nsubisca brutti colpi.
+10,5,5,Vigore,Il Pokémon non subisce\nKO in un attacco.
+10,5,6,Umidità,Impedisce a chi è in campo\ndi autodistruggersi.
+10,5,7,Scioltezza,Il Pokémon è protetto\ncontro la paralisi.
+10,5,8,Sabbiavelo,Elusione del Pokémon sale\nin una tempesta di sabbia.
+10,5,9,Statico,Il contatto con il Pokémon\npuò causare paralisi.
+10,5,10,Assorbivolt,Ridà PS se si subisce\nuna mossa di tipo Elettro.
+10,5,11,Assorbacqua,Ridà PS se si subisce\nuna mossa di tipo Acqua.
+10,5,12,Indifferenza,Impedisce al Pokémon di\ninfatuarsi.
+10,5,13,Antimeteo,Neutralizza gli effetti\nmeteo.
+10,5,14,Insettocchi,Aumenta la precisione\ndel Pokémon.
+10,5,15,Insonnia,Impedisce al Pokémon\ndi addormentarsi.
+10,5,16,Cambiacolore,Cambia il tipo del Pokémon\nin base all’attacco nemico.
+10,5,17,Immunità,Impedisce al Pokémon di\nvenire avvelenato.
+10,5,18,Fuocardore,Potenzia le mosse fuoco se\ncolpiti da mosse fuoco.
+10,5,19,Polvoscudo,Blocca effetti aggiuntivi\ndegli attacchi subiti.
+10,5,20,Mente Locale,Impedisce al Pokémon\ndi subire la confusione.
+10,5,21,Ventose,Resiste alle mosse che\nobbligano la sostituzione.
+10,5,22,Prepotenza,Riduce l’Attacco del\nnemico.
+10,5,23,Pedinombra,Impedisce la fuga al\nnemico.
+10,5,24,Cartavetro,Danneggia il nemico\nal contatto.
+10,5,25,Magidifesa,Solo le mosse superefficaci\nhanno effetto.
+10,5,26,Levitazione,Protegge totalmente dagli\nattacchi di tipo Terra.
+10,5,27,Spargispora,"Al contatto può causare\nVLN, PAR o DRM."
+10,5,28,Sincronismo,"Trasmette scottatura,\nveleno o paralisi al nemico."
+10,5,29,Corpochiaro,Può evitare la riduzione\ndelle statistiche.
+10,5,30,Alternacura,Cura i problemi di stato\ndel Pokémon se sostituito.
+10,5,31,Parafulmine,Il Pokémon attira tutte\nle mosse di tipo Elettro.
+10,5,32,Leggiadro,Effetti aggiuntivi più\nprobabili.
+10,5,33,Nuotovelox,Dà al Pokémon più\nVelocità nella pioggia.
+10,5,34,Clorofilla,Aumenta Velocità del\nPokémon se c’è il sole.
+10,5,35,Risplendi,Più probabile incontrare\nPokémon selvatici.
+10,5,36,Traccia,Copia l’abilità del nemico.
+10,5,37,Macroforza,Migliora l’Attacco\ndel Pokémon.
+10,5,38,Velenopunto,Il contatto col Pokémon\npuò avvelenare il nemico.
+10,5,39,Fuocodentro,Impedisce al Pokémon\ndi tentennare.
+10,5,40,Magmascudo,Impedisce al Pokémon di\nrimanere congelato.
+10,5,41,Idrovelo,Impedisce al Pokémon di\nrimanere scottato.
+10,5,42,Magnetismo,Impedisce la fuga ai\nPokémon di tipo Acciaio.
+10,5,43,Antisuono,Protegge totalmente da\nmosse sonore.
+10,5,44,Copripioggia,Il Pokémon recupera PS\nquando piove.
+10,5,45,Sabbiafiume,Causa una tempesta di\nsabbia durante la lotta.
+10,5,46,Pressione,Il nemico usa più PP.
+10,5,47,Grassospesso,Protegge meglio da mosse\ndi tipo Fuoco e Ghiaccio.
+10,5,48,Sveglialampo,Il Pokémon si risveglia\nrapidamente dal sonno.
+10,5,49,Corpodifuoco,Il contatto con il Pokémon\npuò scottare il nemico.
+10,5,50,Fugafacile,Garantisce la fuga dai\nPokémon selvatici.
+10,5,51,Sguardofermo,Evita che cali la precisio-\nne del Pokémon.
+10,5,52,Ipertaglio,Evita la riduzione\ndell’Attacco.
+10,5,53,Raccolta,Il Pokémon può\ntrovare strumenti.
+10,5,54,Pigrone,Il Pokémon può attaccare\nun turno sì e uno no.
+10,5,55,Tuttafretta,"Aumenta l’Attacco, ma\nriduce la precisione."
+10,5,56,Incantevole,"Al contatto, il nemico\npuò infatuarsi."
+10,5,57,Più,Aumenta l’Att. Sp. se un\naltro Pokémon ha Meno.
+10,5,58,Meno,Aumenta l’Att. Sp. se un\naltro Pokémon ha Più.
+10,5,59,Previsioni,L’aspetto di CASTFORM\ncambia in base al tempo.
+10,5,60,Antifurto,Protegge il Pokémon\ndal furto di strumenti.
+10,5,61,Muta,Può guarire i problemi di\nstato del Pokémon.
+10,5,62,Dentistretti,Aumenta l’Attacco in caso\ndi problemi di stato.
+10,5,63,Pelledura,Aumenta la Difesa in caso\ndi problemi di stato.
+10,5,64,Melma,Danni al nemico che usa\nmosse assorbi-energia.
+10,5,65,Erbaiuto,In difficoltà potenzia\nle mosse di tipo Erba.
+10,5,66,Aiutofuoco,In difficoltà potenzia\nle mosse di tipo Fuoco.
+10,5,67,Acquaiuto,In difficoltà potenzia\nle mosse di tipo Acqua.
+10,5,68,Aiutinsetto,In difficoltà potenzia le\nmosse di tipo Coleottero.
+10,5,69,Testadura,Protegge il Pokémon dai\ncontraccolpi.
+10,5,70,Siccità,Il Pokémon fa uscire\nil sole nella lotta.
+10,5,71,Trappoarena,Impedisce la fuga al\nnemico.
+10,5,72,Spiritovivo,Impedisce al Pokémon\ndi addormentarsi.
+10,5,73,Fumochiaro,Impedisce la riduzione\ndelle statistiche.
+10,5,74,Forzapura,Aumenta la potenza degli\nattacchi fisici.
+10,5,75,Guscioscudo,Il Pokémon è protetto\ndai brutti colpi.
+10,5,76,Riparo,Neutralizza gli effetti\nmeteo.
+10,5,77,Intricopiedi,Aumenta l’elusione se\nil Pokémon è confuso.
+10,5,78,Elettrorapid,Aumenta Velocità se colpi-\nto da mosse elettriche.
+10,5,79,Antagonismo,Aumenta Attacco se il ne-\nmico è dello stesso sesso.
+10,5,80,Cuordeciso,Aumenta la Velocità quando\nil Pokémon tentenna.
+10,5,81,Mantelneve,Aumenta l’elusione\nquando grandina.
+10,5,82,Voracità,Favorisce l’uso rapido\ndi una Bacca tenuta.
+10,5,83,Grancollera,Massimizza l’Attacco\ndopo un brutto colpo.
+10,5,84,Agiltecnica,Sale Veloc. se strum. te-\nnuto si perde o consuma.
+10,5,85,Antifuoco,Indebolisce l’effetto del-\nle mosse di tipo Fuoco.
+10,5,86,Disinvoltura,Le statistiche possono\ncambiare all’impazzata.
+10,5,87,Pellearsa,Riduce PS se fa caldo.\nL’acqua ridà PS.
+10,5,88,Download,Regola la potenza in base\nal nemico.
+10,5,89,Ferropugno,Potenzia le mosse\ntirapugni.
+10,5,90,Velencura,Ridà PS se il Pokémon\nè avvelenato.
+10,5,91,Adattabilità,Potenzia le mosse del\ntipo del Pokémon.
+10,5,92,Abillegame,Aumenta la frequenza di\nmosse multicolpo.
+10,5,93,Idratazione,Cura i problemi di stato\nse piove.
+10,5,94,Solarpotere,Aumenta l’Att. Sp. ma\nriduce i PS se c’è il sole.
+10,5,95,Piedisvelti,Aumenta la Velocità se\nc’è un problema di stato.
+10,5,96,Normalità,Tutte le mosse del Pokémon\ndiventano di tipo Normale.
+10,5,97,Cecchino,Potenzia le mosse se\ndiventano brutti colpi.
+10,5,98,Magicscudo,Il Pokémon subisce danni\nsolo da attacchi diretti.
+10,5,99,Nullodifesa,Gli attacchi dei Pokémon in\nlotta vanno a buon fine.
+10,5,100,Rallentatore,Anche i nemici più lenti\nattaccano per primi.
+10,5,101,Tecnico,Potenzia le mosse più\ndeboli del Pokémon.
+10,5,102,Fogliamanto,Evita problemi di stato\nquando c’è il sole.
+10,5,103,Impaccio,Il Pokémon non può usare\nlo strumento che tiene.
+10,5,104,Rompiforma,Le mosse si usano a\nprescindere dalle abilità.
+10,5,105,Supersorte,Maggiore probabilità di\ninfliggere brutti colpi.
+10,5,106,Scoppio,Arreca danno al nemico\nche sferra il colpo finale.
+10,5,107,Presagio,Rivela se il nemico ha\nmosse pericolose.
+10,5,108,Premonizione,Scopre la mossa più\npotente del nemico.
+10,5,109,Imprudenza,Ignora i cambiamenti delle\nstatistiche del nemico.
+10,5,110,Lentifumé,Potenzia le mosse\n“non molto efficaci”.
+10,5,111,Filtro,Riduce la potenza delle\nmosse superefficaci.
+10,5,112,Lentoinizio,Dimezza per un po’\nl’Attacco e la Velocità.
+10,5,113,Nervisaldi,Le mosse colpiscono anche\ni nemici di tipo Spettro.
+10,5,114,Acquascolo,Attira le mosse di tipo\nAcqua mirate a un Pokémon.
+10,5,115,Corpogelo,Il Pokémon recupera PS\nquando grandina.
+10,5,116,Solidroccia,Riduce la potenza delle\nmosse superefficaci.
+10,5,117,Scendineve,Il Pokémon provoca una\ngrandinata in battaglia.
+10,5,118,Mielincetta,Il Pokémon può raccoglie-\nre Miele.
+10,5,119,Indagine,Il Pokémon può sapere che \nstrumento ha il nemico.
+10,5,120,Temerarietà,Potenzia le mosse che\nprovocano contraccolpi. 
+10,5,121,Multitipo,Cambia tipo a seconda\ndella Lastra che tiene.
+10,5,122,Regalfiore,Potenzia i Pokémon della\nsquadra se c’è il sole.
+10,5,123,Sogniamari,Riduce i PS di un nemico\naddormentato.
+10,6,1,Hedor,El olor ayuda a mantener\nlejos Pokémon salvajes.
+10,6,2,Llovizna,Hace que llueva si el\nPokémon entra en combate.
+10,6,3,Impulso,Aumenta la Velocidad\ngradualmente.
+10,6,4,Armad. Bat.,Bloquea golpes críticos.
+10,6,5,Robustez,Anula golpes fulminantes.
+10,6,6,Humedad,Evita la autodestrucción.
+10,6,7,Flexibilidad,Evita la parálisis.
+10,6,8,Velo Arena,Aumenta la evasión en\nlas tormentas de arena.
+10,6,9,Elec. Estát.,Puede paralizar al\nmínimo contacto.
+10,6,10,Absor. Elec.,Recupera PS al recibir \nataques de tipo Eléctrico.
+10,6,11,Absor. Agua,Recupera PS al recibir \nataques de tipo Agua.
+10,6,12,Despiste,Evita que el Pokémon\nse enamore.
+10,6,13,Aclimatación,Anula los efectos del\ntiempo atmosférico.
+10,6,14,Ojocompuesto,Aumenta la precisión.
+10,6,15,Insomnio,Evita el quedarse dormido.
+10,6,16,Cambio Color,Cambia el tipo al del\nmovimiento rival.
+10,6,17,Inmunidad,Evita el envenenamiento.
+10,6,18,Absor. Fuego,Potencia movs. tipo Fuego\ntras ataques tipo Fuego.
+10,6,19,Polvo Escudo,Anula efectos secundarios\nde los ataques sufridos.
+10,6,20,Ritmo Propio,Evita la confusión.
+10,6,21,Ventosas,Anula movimientos que\nfuerzan el relevo.
+10,6,22,Intimidación,Baja el Ataque del rival.
+10,6,23,Sombratrampa,Evita que el enemigo huya.
+10,6,24,Piel Tosca,Hiere al tacto.
+10,6,25,Superguarda,Solo le dañan movimientos\nmuy eficaces.
+10,6,26,Levitación,Es inmune frente a los\nataques de tipo Tierra.
+10,6,27,Efec. Espora,"Puede dormir, envenenar\no paralizar al contacto."
+10,6,28,Sincronía,"Pasa envenenamiento,\nparálisis y quemaduras."
+10,6,29,Cuerpo Puro,Puede evitar que bajen\nlas características.
+10,6,30,Cura Natural,Cura problemas de estado\nal cambiar de Pokémon.
+10,6,31,Pararrayos,Frena los ataques\nde tipo Eléctrico.
+10,6,32,Dicha,Aumenta la probabilidad\nde efectos secundarios.
+10,6,33,Nado Rápido,Sube la Velocidad cuando\nhay lluvia.
+10,6,34,Clorofila,Sube la Velocidad cuando\nhay sol.
+10,6,35,Iluminación,Aumenta la probabilidad\nde encontrar Pokémon.
+10,6,36,Rastro,El Pokémon copia la\nhabilidad del rival.
+10,6,37,Potencia,Aumenta el Ataque.
+10,6,38,Punto Tóxico,Puede envenenar al\nmínimo contacto.
+10,6,39,Foco Interno,Evita el retroceso.
+10,6,40,Escudo Magma,Evita la congelación.
+10,6,41,Velo Agua,Evita las quemaduras.
+10,6,42,Imán,Atrapa Pokémon de\ntipo Acero.
+10,6,43,Insonorizar,Evita ataques de sonido.
+10,6,44,Cura Lluvia,El Pokémon gana PS\ngradualmente si llueve.
+10,6,45,Chorro Arena,Crea una tormenta de\narena durante el combate.
+10,6,46,Presión,Hace que los PP del rival\nse acaben antes.
+10,6,47,Sebo,Protege de los ataques\nde tipo Fuego y Hielo.
+10,6,48,Madrugar,El Pokémon se despierta\nrápidamente.
+10,6,49,Cuerpo Llama,Puede quemar al mínimo\ncontacto.
+10,6,50,Fuga,Permite escapar fácilmente\nde los Pokémon salvajes.
+10,6,51,Vista Lince,Evita que disminuya\nla precisión.
+10,6,52,Corte Fuerte,Evita que disminuya\nel Ataque.
+10,6,53,Recogida,El Pokémon puede\nencontrar objetos.
+10,6,54,Ausente,El Pokémon no atacará\nen 2 turnos consecutivos.
+10,6,55,Entusiasmo,"Aumenta el Ataque, pero\nreduce la precisión."
+10,6,56,Gran Encanto,Tocar al Pokémon puede\ncausar enamoramiento.
+10,6,57,Más,Potencia At. Esp. si otro\ntiene la habilidad Menos.
+10,6,58,Menos,Potencia At. Esp. si otro\ntiene la habilidad Más.
+10,6,59,Predicción,Cambia con el tiempo\natmosférico.
+10,6,60,Viscosidad,Impide el robo de objetos.
+10,6,61,Mudar,Cura los problemas de\nestado mudando la piel.
+10,6,62,Agallas,Sube el Ataque si sufre\nun problema de estado.
+10,6,63,Escama Esp.,Sube la Defensa si sufre\nun problema de estado.
+10,6,64,Lodo Líquido,Hiere a los enemigos que\nabsorben PS.
+10,6,65,Espesura,Potencia los ataques de\ntipo Planta en un apuro.
+10,6,66,Mar Llamas,Potencia los ataques de\ntipo Fuego en un apuro.
+10,6,67,Torrente,Potencia los ataques de\ntipo Agua en un apuro.
+10,6,68,Enjambre,Potencia los ataques de\ntipo Bicho en un apuro.
+10,6,69,Cabeza Roca,Impide que el Pokémon\nse dañe con sus movs.
+10,6,70,Sequía,Hace que salga el sol si el\nPokémon entra en combate.
+10,6,71,Trampa Arena,Evita que el rival huya.
+10,6,72,Espír. Vital,Evita quedarse dormido.
+10,6,73,Humo Blanco,Evita que se reduzcan\nlas características.
+10,6,74,Energía Pura,Potencia los ataques\nfísicos.
+10,6,75,Caparazón,Bloquea golpes críticos.
+10,6,76,Bucle Aire,Anula los efectos del\ntiempo atmosférico.
+10,6,77,Tumbos,Sube la evasión si el\nPokémon está confuso.
+10,6,78,Electromotor,Sube la Velocidad si se\nsufre un ataque eléctrico.
+10,6,79,Rivalidad,Sube el Ataque si el rival\nes del mismo sexo.
+10,6,80,Impasible,Sube la Velocidad cada vez\nque el Pokémon retrocede.
+10,6,81,Manto Níveo,Sube la evasión durante\nuna tormenta de granizo.\n
+10,6,82,Gula,Fomenta el uso rápido de\nla baya que porta.
+10,6,83,Irascible,Potencia el Ataque tras\nrecibir un golpe crítico.
+10,6,84,Liviano,Sube la Veloc. al perder\nun objeto equipado.
+10,6,85,Ignífugo,Debilita la fuerza de los\nmovimientos de tipo Fuego.
+10,6,86,Simple,Cambia las características\nde forma más audaz.
+10,6,87,Piel Seca,Pierde PS si hace calor.\nLos recupera con agua.
+10,6,88,Descarga,Ajusta su fuerza según las\ncaracterísticas del rival.
+10,6,89,Puño Férreo,Aumenta la fuerza de los\npuñetazos.
+10,6,90,Antídoto,Recupera PS si el Pokémon\nha sido envenenado.
+10,6,91,Adaptable,Potencia los movimientos\ndel mismo tipo.
+10,6,92,Encadenado,Aumenta la frecuencia de\nlos movimientos múltiples.
+10,6,93,Hidratación,Cura los problemas de\nestado si está lloviendo.
+10,6,94,Poder Solar,"Si hace sol, reduce los PS\npero potencia el At. Esp."
+10,6,95,Pies Rápidos,Potencia la Velocidad si\nhay problemas de estado.
+10,6,96,Normalidad,Todos los movimientos se\nvuelven de tipo Normal.
+10,6,97,Francotirad.,Potencia los movimientos\nque se vuelven críticos.
+10,6,98,Muro Mágico,Solo los ataques directos\ndañan al Pokémon.
+10,6,99,Indefenso,El ataque del Pokémon y\nel del rival acertarán.
+10,6,100,Rezagado,El Pokémon se mueve\ntras el rival más lento.
+10,6,101,Experto,Potencia los movimientos\nmás débiles del Pokémon.
+10,6,102,Defensa Hoja,Evita los problemas de\nestado si hace sol.
+10,6,103,Zoquete,El Pokémon no puede\nusar ningún objeto.
+10,6,104,Rompemoldes,No importan las habilidades\npara usar movimientos.
+10,6,105,Afortunado,Aumenta la probabilidad de\nasestar golpes críticos.
+10,6,106,Resquicio,Daña al rival que le ha\ndado el golpe de gracia.
+10,6,107,Anticipación,Prevé los movimientos\npeligrosos del adversario.
+10,6,108,Alerta,Determina el movimiento\nmás potente del rival.
+10,6,109,Ignorante,Ignora los cambios en las\ncaracterísticas del rival.
+10,6,110,Cromolente,Potencia los movimientos\n“poco eficaces”.
+10,6,111,Filtro,Mitiga los movimientos\nsuperefectivos.
+10,6,112,Inicio Lento,Reduce a la mitad Ataque y\nVelocidad por un tiempo.
+10,6,113,Intrépido,Permite golpear a los\nrivales de tipo Fantasma.
+10,6,114,Colector,Atrae ataques de tipo\nAgua lanzados a un PKMN.
+10,6,115,Gélido,El Pokémon recupera PS en\nlas tormentas de granizo.
+10,6,116,Roca Sólida,Mitiga los movimientos\nsuperefectivos.
+10,6,117,Nevada,El Pokémon invoca una\ntormenta de granizo.
+10,6,118,Recogemiel,El Pokémon recoge miel\nde donde puede.
+10,6,119,Cacheo,El Pokémon puede ver el\nobjeto que lleva el rival.
+10,6,120,Audaz,Potencia los movimientos\nque dañan al usuario.
+10,6,121,Multitipo,Cambia el tipo al de la\ntabla que lleva.
+10,6,122,Don Floral,Potencia los Pokémon del\nequipo si está soleado.
+10,6,123,Mal Sueño,Reduce los PS de un rival\nmientras duerme.
+10,7,1,악취,야생 포켓몬이\n접근하기 어려워진다.
+10,7,2,잔비,배틀에 나가면\n비를 내린다.
+10,7,3,가속,조금씩\n스피드가 높아진다.
+10,7,4,전투무장,상대의 공격이\n급소에 맞지 않는다.
+10,7,5,옹골참,일격 필살기가\n통하지 않는다.
+10,7,6,습기,누구도 자폭\n할 수 없게 된다.
+10,7,7,유연,마비 상태가\n되지 않는다.
+10,7,8,모래숨기,모래바람으로\n회피율이 올라간다.
+10,7,9,정전기,접촉한 상대를\n마비시킬 때가 있다.
+10,7,10,축전,전기를 받으면\n회복한다.
+10,7,11,저수,물을 받으면\n회복한다.
+10,7,12,둔감,헤롱헤롱 상태가\n되지 않는다.
+10,7,13,날씨부정,날씨의 영향이\n없어진다.
+10,7,14,복안,기술의 명중률이\n올라간다.
+10,7,15,불면,잠듦 상태가\n되지 않는다.
+10,7,16,변색,받은 기술의 타입으로\n변화한다.
+10,7,17,면역,독 상태가\n되지 않는다.
+10,7,18,타오르는불꽃,불꽃을 받으면\n불꽃 기술이 강해진다.
+10,7,19,인분,기술의 추가 효과를\n받지 않는다.
+10,7,20,마이페이스,혼란 상태가\n되지 않는다.
+10,7,21,흡반,교체시킨 기술이\n효과를 발휘하지 못한다.
+10,7,22,위협,상대의 공격을\n떨어뜨린다.
+10,7,23,그림자밟기,상대의 그림자를 밟아\n도망칠 수 없게 한다.
+10,7,24,까칠한피부,접촉한 상대에게\n상처를 입힌다.
+10,7,25,불가사의부적,효과가 굉장한 기술밖에\n맞지 않는다.
+10,7,26,부유,땅타입의 기술을\n받지 않는다.
+10,7,27,포자,"스치면 독, 마비, 잠듦\n상태가 될 때가 있다."
+10,7,28,싱크로,"독, 마비, 화상을\n상대에게 옮긴다."
+10,7,29,클리어바디,상대가 능력을\n떨어뜨릴 수 없다.
+10,7,30,자연회복,배틀에서 일단 물러나면\n상태 이상이 회복된다.
+10,7,31,피뢰침,전기타입의 기술을\n모두 자신이 맞는다.
+10,7,32,하늘의은총,기술의 추가 효과가\n나오기 쉽다.
+10,7,33,쓱쓱,비가 올 때 스피드가\n올라간다.
+10,7,34,엽록소,맑을 때 스피드가\n올라간다.
+10,7,35,발광,야생 포켓몬과\n만나기 쉬워진다.
+10,7,36,트레이스,상대와 같은\n특성이 된다.
+10,7,37,천하장사,물리 공격의\n위력이 올라간다.
+10,7,38,독가시,접촉한 상대를\n중독 시킬 때가 있다.
+10,7,39,정신력,풀죽지 않는다.\n
+10,7,40,마그마의무장,얼음 상태가\n되지 않는다.
+10,7,41,수의베일,화상 상태가\n되지 않는다.
+10,7,42,자력,강철타입의 포켓몬을\n도망칠 수 없게 한다.
+10,7,43,방음,소리 기술을\n받지 않는다.
+10,7,44,젖은접시,비가 올 때 조금씩\nHP를 회복한다.
+10,7,45,모래날림,배틀에서 모래바람을\n일으킨다.
+10,7,46,프레셔,상대가 사용하는 기술의\nPP를 많이 줄인다.
+10,7,47,두꺼운지방,불꽃과 얼음타입의\n기술에 강하다.
+10,7,48,일찍기상,잠듦 상태에서\n빨리 깨어난다.
+10,7,49,불꽃몸,접촉한 상대에게\n화상을 입힐 때가 있다.
+10,7,50,도주,야생 포켓몬으로부터\n반드시 도망칠 수 있다.
+10,7,51,날카로운눈,상대가 명중률을\n떨어뜨리지 못한다.
+10,7,52,괴력집게,상대가 공격을\n떨어뜨리지 못한다.
+10,7,53,픽업,도구를 주워올\n때가 있다.
+10,7,54,게으름,연속으로\n공격할 수 없다.
+10,7,55,의욕,공격은 높지만\n빗나가기 쉽다.
+10,7,56,헤롱헤롱바디,스치면 헤롱헤롱 상태가\n될 때가 있다.
+10,7,57,플러스,마이너스가 있으면\n특수공격이 올라간다.
+10,7,58,마이너스,플러스가 있으면\n특수공격이 올라간다.
+10,7,59,기분파,날씨에 따라\n캐스퐁이 변화한다.
+10,7,60,점착,도구를 빼앗기지 않는다.\n
+10,7,61,탈피,상태 이상을\n회복할 때가 있다.
+10,7,62,근성,상태 이상이 되면\n공격이 올라간다.
+10,7,63,이상한비늘,상태 이상이 되면\n방어가 올라간다.
+10,7,64,해감액,흡수한 상대의\nHP를 줄인다.
+10,7,65,심록,위급할 때 풀타입의\n위력이 올라간다.
+10,7,66,맹화,위급할 때 불꽃타입의\n위력이 올라간다.
+10,7,67,급류,위급할 때 물타입의\n위력이 올라간다.
+10,7,68,벌레의알림,위급할 때 벌레타입의\n위력이 올라간다.
+10,7,69,돌머리,부딪쳐도\n반동을 받지 않는다.
+10,7,70,가뭄,배틀에 나가면\n쾌청이 된다.
+10,7,71,개미지옥,배틀에서 상대를\n도망칠 수 없게 한다.
+10,7,72,의기양양,잠듦 상태가\n되지 않는다.
+10,7,73,하얀연기,상대가 능력을\n떨어뜨릴 수 없다.
+10,7,74,순수한힘,물리 공격의\n위력이 올라간다.
+10,7,75,조가비갑옷,상대의 공격이\n급소에 맞지 않는다.
+10,7,76,에어록,날씨의 영향이\n없어진다.
+10,7,77,갈지자걸음,혼란에 빠져있으면\n회피하기 쉬워진다.
+10,7,78,전기엔진,전기를 받으면\n스피드가 올라간다.
+10,7,79,투쟁심,성별이 같으면\n공격이 올라간다.
+10,7,80,불굴의마음,풀죽을 때마다\n스피드가 올라간다.
+10,7,81,눈숨기,날씨가 싸라기눈일 때\n회피율이 올라간다.
+10,7,82,먹보,나무열매를 여느 때보다\n빨리 사용한다.
+10,7,83,분노의경혈,급소에 맞으면\n공격이 올라간다.
+10,7,84,곡예,도구가 없어지면\n스피드가 올라간다.
+10,7,85,내열,불꽃 기술의\n위력을 약하게 한다.
+10,7,86,단순,능력 변화가\n여느 때보다 심하다.
+10,7,87,건조피부,더우면 HP가 줄어든다.\n물로 HP를 회복한다.
+10,7,88,다운로드,상대의 능력을\n보고 능력치를 바꾼다.
+10,7,89,철주먹,펀치를 사용하는 기술의\n위력이 올라간다.
+10,7,90,포이즌힐,독 상태가 되면\nHP를 회복한다.
+10,7,91,적응력,타입이 같은 기술의\n위력이 올라간다.
+10,7,92,스킬링크,연속 기술을\n많이 쓸 수 있다.
+10,7,93,촉촉바디,비가 오면\n상태 이상이 회복된다.
+10,7,94,선파워,맑으면 HP가 줄지만\n특수공격이 올라간다.
+10,7,95,속보,상태 이상이 되면\n스피드가 올라간다.
+10,7,96,노말스킨,쓴 기술이 모두\n노말타입이 된다.
+10,7,97,스나이퍼,급소에 맞혔을 때\n위력이 올라간다.
+10,7,98,매직가드,공격 이외에는\n데미지를 입지 않는다.
+10,7,99,노가드,서로의 기술이\n반드시 맞는다.
+10,7,100,시간벌기,상대보다 재빨라도\n행동이 느려진다.
+10,7,101,테크니션,약한 기술의\n위력이 올라간다.
+10,7,102,리프가드,맑을 때는\n상태 이상이 되지 않는다.
+10,7,103,서투름,지니고 있는 도구를\n쓸 수 없다.
+10,7,104,틀깨기,특성에 관계없이 상대에게\n기술을 쓸 수 있다.
+10,7,105,대운,상대의 급소에\n공격이 맞기 쉽다.
+10,7,106,유폭,기절할 때 스친\n상대에게 데미지를 준다.
+10,7,107,위험예지,상대가 지닌 위험한\n기술을 감지한다.
+10,7,108,예지몽,상대가 지닌 기술을\n꿰뚫어볼 수 있다.
+10,7,109,천진,상대의 능력\n변화를 무시한다.
+10,7,110,색안경,효과가 별로인 기술이\n강해진다.
+10,7,111,필터,효과가 굉장한 기술의\n위력을 약하게 한다.
+10,7,112,슬로스타트,공격과 스피드가\n잠시 동안 절반이 된다.
+10,7,113,배짱,고스트타입에\n기술이 맞게 된다.
+10,7,114,마중물,물타입의 기술을\n모두 자신이 맞는다.
+10,7,115,아이스바디,날씨가 싸라기눈일 때\nHP를 회복한다.
+10,7,116,하드록,효과가 굉장한 기술의\n위력을 약하게 한다.
+10,7,117,눈퍼뜨리기,배틀에 나가면\n싸라기눈을 내리게 한다.
+10,7,118,꿀모으기,달콤한꿀을 모아서\n올 때가 있다.
+10,7,119,통찰,상대가 지닌 물건을\n알 수 있다.
+10,7,120,이판사판,반동 데미지를\n받는 기술이 강해진다.
+10,7,121,멀티타입,지니고 있는 플레이트에\n따라 타입이 바뀐다.
+10,7,122,플라워기프트,맑을 때 자신과\n같은 편이 강해진다.
+10,7,123,나이트메어,잠들어 있는 상대의\nHP를 줄인다.
+11,1,1,あくしゅう,やせいの　ポケモンが\nよりつき　にくくなる。
+11,1,2,あめふらし,せんとうに　でると\nあめを　ふらす。
+11,1,3,かそく,ちょっとずつ\nすばやく　なっていく。
+11,1,4,カブトアーマー,あいての　こうげきが\nきゅうしょに　あたらない。
+11,1,5,がんじょう,いちげきひっさつが\nきかない。
+11,1,6,しめりけ,だれも　じばくが\nできなくなる。
+11,1,7,じゅうなん,まひ　じょうたいに\nならない。
+11,1,8,すながくれ,すなあらしで\nかいひりつが　あがる。
+11,1,9,せいでんき,さわった　あいてを\nまひさせる　ことがある。
+11,1,10,ちくでん,でんきを　うけると\nかいふくする。
+11,1,11,ちょすい,みずを　うけると\nかいふくする。
+11,1,12,どんかん,メロメロ　じょうたいに\nならない。
+11,1,13,ノーてんき,てんきの　えいきょうが\nなくなる。
+11,1,14,ふくがん,わざの　めいちゅうりつが\nあがる。
+11,1,15,ふみん,ねむり　じょうたいに\nならない。
+11,1,16,へんしょく,うけた　わざの　タイプに\nへんかする。
+11,1,17,めんえき,どく　じょうたいに\nならない。
+11,1,18,もらいび,ほのおを　うけると\nほのおわざが　つよくなる。
+11,1,19,りんぷん,わざの　ついかこうかを\nうけない。
+11,1,20,マイペース,こんらん　じょうたいに\nならない。
+11,1,21,きゅうばん,いれかえさせる　わざが\nきかない。
+11,1,22,いかく,あいての　こうげきを\nさげる。
+11,1,23,かげふみ,あいての　かげをふみ\nにげられなくする。
+11,1,24,さめはだ,ふれた　あいてを\nキズつける。
+11,1,25,ふしぎなまもり,こうかばつぐん　しか\nあたらない。
+11,1,26,ふゆう,じめんタイプの　わざを\nうけない。
+11,1,27,ほうし,ふれると　どく　まひ\nねむりに　することがある。
+11,1,28,シンクロ,どく　まひ　やけどを\nあいてに　うつす。
+11,1,29,クリアボディ,あいてに　のうりょくを\nさげられない。
+11,1,30,しぜんかいふく,じょうたい　いじょうが\nひっこむと　なおる。
+11,1,31,ひらいしん,でんきタイプの　わざを\nすべて　うける。
+11,1,32,てんのめぐみ,わざの　ついかこうかが\nでやすい。
+11,1,33,すいすい,あめのとき　すばやさが\nあがる。
+11,1,34,ようりょくそ,はれのとき　すばやさが\nあがる。
+11,1,35,はっこう,やせいの　ポケモンに\nそうぐう　しやすくなる。
+11,1,36,トレース,あいてと　おなじ\nとくせいに　なる。
+11,1,37,ちからもち,ぶつり　こうげきの\nいりょくが　あがる。
+11,1,38,どくのトゲ,ふれた　あいてに　どくを\nおわせる　ことがある。
+11,1,39,せいしんりょく,ひるまない。\n
+11,1,40,マグマのよろい,こおり　じょうたいに\nならない。
+11,1,41,みずのベール,やけど　じょうたいに\nならない。
+11,1,42,じりょく,はがねタイプの　ポケモンを\nにげられなくする。
+11,1,43,ぼうおん,おとの　わざを\nうけない。
+11,1,44,あめうけざら,あめのとき　すこしずつ\nＨＰを　かいふくする。
+11,1,45,すなおこし,せんとうで　すなあらしを\nおこす。
+11,1,46,プレッシャー,あいての　つかう　わざの\nＰＰを　おおく　へらす。
+11,1,47,あついしぼう,ほのおと　こおりタイプの\nわざに　つよい。
+11,1,48,はやおき,おきるのが　はやくなる。\n
+11,1,49,ほのおのからだ,ふれた　あいてを　やけど\nさせることがある。
+11,1,50,にげあし,やせいの　ポケモンから\nかならず　にげられる。
+11,1,51,するどいめ,あいてに　めいちゅうりつを\nさげられない。
+11,1,52,かいりきバサミ,あいてに　こうげきを\nさげられない。
+11,1,53,ものひろい,どうぐを　ひろってくる\nことが　ある。
+11,1,54,なまけ,こうげきが　れんぞくで\nだせない。
+11,1,55,はりきり,こうげきは　たかいが\nはずれやすい。
+11,1,56,メロメロボディ,ふれると　メロメロに\nすることがある。
+11,1,57,プラス,マイナスが　いると\nとくこうが　あがる。
+11,1,58,マイナス,プラスが　いると\nとくこうが　あがる。
+11,1,59,てんきや,てんきで　ポワルンが\nへんかする。
+11,1,60,ねんちゃく,どうぐを　とられない。\n
+11,1,61,だっぴ,じょうたい　いじょうを\nなおす　ことがある。
+11,1,62,こんじょう,じょうたい　いじょうで\nこうげきが　あがる。
+11,1,63,ふしぎなうろこ,じょうたい　いじょうで\nぼうぎょが　あがる。
+11,1,64,ヘドロえき,すいとった　あいての\nＨＰを　へらす
+11,1,65,しんりょく,ピンチのとき　くさの\nいりょくが　あがる。
+11,1,66,もうか,ピンチのとき　ほのおの\nいりょくが　あがる。
+11,1,67,げきりゅう,ピンチのとき　みずの\nいりょくが　あがる。
+11,1,68,むしのしらせ,ピンチのとき　むしの\nいりょくが　あがる。
+11,1,69,いしあたま,ぶつかっても\nはんどうを　うけない。
+11,1,70,ひでり,せんとうに　でると\nにほんばれに　なる。
+11,1,71,ありじごく,せんとうで　あいてを\nにげられなくする。
+11,1,72,やるき,ねむり　じょうたいに\nならない。
+11,1,73,しろいけむり,あいてに　のうりょくを\nさげられない。
+11,1,74,ヨガパワー,ぶつり　こうげきの\nいりょくが　あがる。
+11,1,75,シェルアーマー,あいての　こうげきが\nきゅうしょに　あたらない。
+11,1,76,エアロック,てんきの　えいきょうが\nなくなる。
+11,1,77,ちどりあし,こんらん　していると\nかいひ　しやすくなる。
+11,1,78,でんきエンジン,でんきを　うけると\nすばやさが　あがる。
+11,1,79,とうそうしん,せいべつが　おなじだと\nこうげきが　あがる。
+11,1,80,ふくつのこころ,ひるむ　たびに\nすばやさが　あがる。
+11,1,81,ゆきがくれ,てんきが　あられのとき\x0001\nかいひりつが　あがる。
+11,1,82,くいしんぼう,きのみを　いつもより\nはやく　つかう。
+11,1,83,いかりのつぼ,きゅうしょに　うけると\nこうげきが　あがる。
+11,1,84,かるわざ,どうぐが　なくなると\nすばやさが　あがる。
+11,1,85,たいねつ,ほのお　わざの\nいりょくを　よわめる。
+11,1,86,たんじゅん,のうりょく　へんかが\nいつもより　はげしい。
+11,1,87,かんそうはだ,あついと　ＨＰが　へる。\nみずで　ＨＰを　かいふく。
+11,1,88,ダウンロード,あいての　のうりょくを\nみて　つよさを　かえる。
+11,1,89,てつのこぶし,パンチを　つかう　わざの\nいりょくが　あがる。
+11,1,90,ポイズンヒール,どくじょうたいに　なると\nＨＰを　かいふくする。
+11,1,91,てきおうりょく,タイプが　おなじ　わざの\nいりょくが　あがる。
+11,1,92,スキルリンク,れんぞく　わざを\nたくさん　だせる。
+11,1,93,うるおいボディ,じょうたい　いじょうが\nあめの　とき　なおる。
+11,1,94,サンパワー,はれると　ＨＰが　へるが\nとくこうが　あがる。
+11,1,95,はやあし,じょうたい　いじょうで\nすばやさが　あがる。
+11,1,96,ノーマルスキン,だしたわざが　すべて\nノーマルタイプに　なる。
+11,1,97,スナイパー,きゅうしょに　あてたとき\nいりょくが　あがる。
+11,1,98,マジックガード,こうげき　いがいでは\nダメージを　うけない。
+11,1,99,ノーガード,おたがいの　わざが\nかならず　あたる。
+11,1,100,あとだし,あいてより　すばやくても\nこうどうが　おそくなる。
+11,1,101,テクニシャン,よわい　わざの\nいりょくが　あがる。
+11,1,102,リーフガード,じょうたい　いじょうに\nはれのとき　ならない。
+11,1,103,ぶきよう,もっている　どうぐを\nつかうことが　できない。
+11,1,104,かたやぶり,とくせいに　かんけいなく\nあいてに　わざを　だせる。
+11,1,105,きょううん,あいての　きゅうしょに\nこうげきが　あたりやすい。
+11,1,106,ゆうばく,ひんしの　ときに　ふれた\nあいてに　ダメージ。
+11,1,107,きけんよち,あいての　もつ　きけんな\nわざを　さっちする。
+11,1,108,よちむ,あいての　もつ　わざを\nよみとることが　できる。
+11,1,109,てんねん,あいての　のうりょくの\nへんかを　むしする。
+11,1,110,いろめがね,こうかいまひとつ　のとき\nわざを　つよめる。
+11,1,111,フィルター,こうかばつぐん　のとき\nいりょくを　よわめる。
+11,1,112,スロースタート,こうげきと　すばやさが\nしばらく　はんぶんになる。
+11,1,113,きもったま,ゴーストタイプに　わざが\nあたるようになる。
+11,1,114,よびみず,みずタイプの　わざを\nすべて　うける。
+11,1,115,アイスボディ,てんきが　あられのとき\nＨＰを　かいふくする。
+11,1,116,ハードロック,こうかばつぐん　のとき\nいりょくを　よわめる。
+11,1,117,ゆきふらし,せんとうに　でると\nあられを　ふらす。
+11,1,118,みつあつめ,あまいミツを　あつめて\nくることが　ある。
+11,1,119,おみとおし,あいての　もちものを\nしることが　できる。
+11,1,120,すてみ,はんどうで　ダメージを\nうけるわざが　つよくなる。
+11,1,121,マルチタイプ,もっている　プレートで\nタイプが　かわる。
+11,1,122,フラワーギフト,はれのとき　じぶんと\nみかたが　つよくなる。
+11,1,123,ナイトメア,ねむっている　あいての\nＨＰを　へらす。
+11,2,1,Stench,The stench helps keep\nwild Pokémon away.
+11,2,2,Drizzle,The Pokémon makes it rain\nif it appears in battle.
+11,2,3,Speed Boost,The Pokémon’s Speed stat\nis gradually boosted.
+11,2,4,Battle Armor,The Pokémon is protected\nagainst critical hits.
+11,2,5,Sturdy,The Pokémon is protected\nagainst 1-hit KO attacks.
+11,2,6,Damp,Prevents combatants from\nself destructing.
+11,2,7,Limber,The Pokémon is protected\nfrom paralysis.
+11,2,8,Sand Veil,Boosts the Pokémon’s\nevasion in a sandstorm.
+11,2,9,Static,Contact with the Pokémon\nmay cause paralysis.
+11,2,10,Volt Absorb,Restores HP if hit by an\nElectric-type move.
+11,2,11,Water Absorb,Restores HP if hit by a\nWater-type move.
+11,2,12,Oblivious,Prevents the Pokémon\nfrom becoming infatuated.
+11,2,13,Cloud Nine,Eliminates the effects of\nweather.
+11,2,14,Compoundeyes,The Pokémon’s accuracy is\nboosted.
+11,2,15,Insomnia,Prevents the Pokémon\nfrom falling asleep.
+11,2,16,Color Change,Changes the Pokémon’s\ntype to the foe’s move.
+11,2,17,Immunity,Prevents the Pokémon\nfrom getting poisoned.
+11,2,18,Flash Fire,Powers up Fire-type moves\nif hit by a fire move.
+11,2,19,Shield Dust,Blocks the added effects\nof attacks taken.
+11,2,20,Own Tempo,Prevents the Pokémon\nfrom becoming confused.
+11,2,21,Suction Cups,Negates moves that\nforce switching out.
+11,2,22,Intimidate,Lowers the foe’s Attack\nstat.
+11,2,23,Shadow Tag,Prevents the foe from\nescaping.
+11,2,24,Rough Skin,Inflicts damage to the\nfoe on contact.
+11,2,25,Wonder Guard,Only supereffective\nmoves will hit.
+11,2,26,Levitate,Gives full immunity to all\nGround-type moves.
+11,2,27,Effect Spore,"Contact may paralyze,\npoison, or cause sleep."
+11,2,28,Synchronize,"Passes on a burn, poison,\nor paralysis to the foe."
+11,2,29,Clear Body,Prevents the Pokémon’s\nstats from being lowered.
+11,2,30,Natural Cure,All status problems are\nhealed upon switching out.
+11,2,31,Lightningrod,The Pokémon draws in all\nElectric-type moves.
+11,2,32,Serene Grace,Boosts the likelihood of\nadded effects appearing.
+11,2,33,Swift Swim,Boosts the Pokémon’s\nSpeed in rain.
+11,2,34,Chlorophyll,Boosts the Pokémon’s\nSpeed in sunshine.
+11,2,35,Illuminate,Raises the likelihood of\nmeeting wild Pokémon.
+11,2,36,Trace,The Pokémon copies the\nfoe’s ability.
+11,2,37,Huge Power,Raises the Pokémon’s\nAttack stat.
+11,2,38,Poison Point,Contact with the Pokémon\nmay poison the foe.
+11,2,39,Inner Focus,The Pokémon is protected\nfrom flinching.
+11,2,40,Magma Armor,Prevents the Pokémon\nfrom becoming frozen.
+11,2,41,Water Veil,Prevents the Pokémon\nfrom getting a burn.
+11,2,42,Magnet Pull,Prevents Steel-type\nPokémon from escaping.
+11,2,43,Soundproof,Gives full immunity to all\nsound-based moves.
+11,2,44,Rain Dish,The Pokémon gradually\nrecovers HP in rain.
+11,2,45,Sand Stream,The Pokémon summons a\nsandstorm in battle.
+11,2,46,Pressure,The Pokémon raises the\nfoe’s PP usage.
+11,2,47,Thick Fat,Raises resistance to Fire-\nand Ice-type moves.
+11,2,48,Early Bird,The Pokémon awakens\nquickly from sleep.
+11,2,49,Flame Body,Contact with the Pokémon\nmay burn the foe.
+11,2,50,Run Away,Enables sure getaway from\nwild Pokémon.
+11,2,51,Keen Eye,Prevents the Pokémon\nfrom losing accuracy.
+11,2,52,Hyper Cutter,Prevents the Attack stat\nfrom being lowered.
+11,2,53,Pickup,The Pokémon may pick up\nitems.
+11,2,54,Truant,The Pokémon can’t attack\non consecutive turns.
+11,2,55,Hustle,"Boosts the Attack stat,\nbut lowers accuracy."
+11,2,56,Cute Charm,Contact with the Pokémon\nmay cause infatuation.
+11,2,57,Plus,Boosts Sp. Atk if another\nPokémon has Minus.
+11,2,58,Minus,Boosts Sp. Atk if another\nPokémon has Plus.
+11,2,59,Forecast,CASTFORM transforms with\nthe weather.
+11,2,60,Sticky Hold,Protects the Pokémon\nfrom item theft.
+11,2,61,Shed Skin,The Pokémon may heal its\nown status problems.
+11,2,62,Guts,Boosts Attack if there is\na status problem.
+11,2,63,Marvel Scale,Boosts Defense if there is\na status problem.
+11,2,64,Liquid Ooze,Inflicts damage on foes\nusing any draining move.
+11,2,65,Overgrow,Powers up Grass-type\nmoves in a pinch.
+11,2,66,Blaze,Powers up Fire-type\nmoves in a pinch.
+11,2,67,Torrent,Powers up Water-type\nmoves in a pinch.
+11,2,68,Swarm,Powers up Bug-type\nmoves in a pinch.
+11,2,69,Rock Head,Protects the Pokémon\nfrom recoil damage.
+11,2,70,Drought,The Pokémon makes it\nsunny if it is in battle.
+11,2,71,Arena Trap,Prevents the foe from\nfleeing.
+11,2,72,Vital Spirit,Prevents the Pokémon\nfrom falling asleep.
+11,2,73,White Smoke,Prevents the Pokémon’s\nstats from being lowered.
+11,2,74,Pure Power,Boosts the power of\nphysical attacks.
+11,2,75,Shell Armor,The Pokémon is protected\nagainst critical hits.
+11,2,76,Air Lock,Eliminates the effects of\nweather.
+11,2,77,Tangled Feet,Raises evasion if the\nPokémon is confused.
+11,2,78,Motor Drive,Raises Speed if hit by an\nElectric-type move.
+11,2,79,Rivalry,Raises Attack if the foe\nis of the same gender.
+11,2,80,Steadfast,Raises Speed each time\nthe Pokémon flinches.
+11,2,81,Snow Cloak,Raises evasion in a\nhailstorm.
+11,2,82,Gluttony,Encourages the early use\nof a held Berry.
+11,2,83,Anger Point,Raises Attack upon taking\na critical hit.
+11,2,84,Unburden,Raises Speed if a held\nitem is used.
+11,2,85,Heatproof,Weakens the power of\nFire-type moves.
+11,2,86,Simple,The Pokémon is prone to\nwild stat changes.
+11,2,87,Dry Skin,Reduces HP if it is hot.\nWater restores HP.
+11,2,88,Download,Adjusts power according\nto the foe’s ability.
+11,2,89,Iron Fist,Boosts the power of\npunching moves.
+11,2,90,Poison Heal,Restores HP if the\nPokémon is poisoned.
+11,2,91,Adaptability,Powers up moves of the\nsame type.
+11,2,92,Skill Link,Increases the frequency\nof multi-strike moves.
+11,2,93,Hydration,Heals status problems if\nit is raining.
+11,2,94,Solar Power,"Boosts Sp. Atk, but\nlowers HP in sunshine."
+11,2,95,Quick Feet,Boosts Speed if there is a\nstatus problem.
+11,2,96,Normalize,All the Pokémon’s moves\nbecome the Normal type.
+11,2,97,Sniper,Powers up moves if they\nbecome critical hits.
+11,2,98,Magic Guard,The Pokémon only takes\ndamage from attacks.
+11,2,99,No Guard,Ensures the Pokémon and\nits foe’s attacks land.
+11,2,100,Stall,The Pokémon moves after\neven slower foes.
+11,2,101,Technician,Powers up the Pokémon’s\nweaker moves.
+11,2,102,Leaf Guard,Prevents status problems\nin sunny weather.
+11,2,103,Klutz,The Pokémon can’t use\nany held items.
+11,2,104,Mold Breaker,Moves can be used\nregardless of abilities.
+11,2,105,Super Luck,Heightens the critical-hit\nratios of moves.
+11,2,106,Aftermath,Damages the foe landing\nthe finishing hit.
+11,2,107,Anticipation,Senses the foe’s\ndangerous moves.
+11,2,108,Forewarn,Determines what moves\nthe foe has.
+11,2,109,Unaware,Ignores any change in\nability by the foe.
+11,2,110,Tinted Lens,Powers up “not very\neffective” moves.
+11,2,111,Filter,Powers down super-\neffective moves.
+11,2,112,Slow Start,Temporarily halves Attack\nand Speed.
+11,2,113,Scrappy,Enables moves to hit\nGhost-type foes.
+11,2,114,Storm Drain,The Pokémon draws in all\nWater-type moves.
+11,2,115,Ice Body,The Pokémon regains HP in\na hailstorm.
+11,2,116,Solid Rock,Powers down super-\neffective moves.
+11,2,117,Snow Warning,The Pokémon summons a\nhailstorm in battle.
+11,2,118,Honey Gather,The Pokémon may gather\nHoney from somewhere.
+11,2,119,Frisk,The Pokémon can check\nthe foe’s held item.
+11,2,120,Reckless,Powers up moves that\nhave recoil damage.
+11,2,121,Multitype,Changes type to match\nthe held Plate.
+11,2,122,Flower Gift,Powers up party Pokémon\nwhen it is sunny.
+11,2,123,Bad Dreams,Reduces a sleeping foe’s\nHP.
+11,3,1,Puanteur,La puanteur peut repous-\nser les Pokémon sauvages.
+11,3,2,Crachin,Le Pokémon invoque la pluie\nquand il entre au combat.
+11,3,3,Turbo,La Vitesse du Pokémon\naugmente progressivement.
+11,3,4,Armurbaston,Le Pokémon est protégé\ndes coups critiques.
+11,3,5,Fermeté,Protège des capacités\nmettant K.O. en un coup.
+11,3,6,Moiteur,Empêche les combattants\nde s’autodétruire.
+11,3,7,Echauffement,Protège le Pokémon de\nla paralysie.
+11,3,8,Voile Sable,Augmente l’esquive lors\ndes tempêtes de sable.
+11,3,9,Statik,Un contact avec le\nPokémon peut paralyser.
+11,3,10,Absorb Volt,Récupère des PV si touché\npar une capacité Electrik.
+11,3,11,Absorb Eau,Récupère des PV si touché\npar une capacité Eau.
+11,3,12,Benêt,Empêche le Pokémon de\ntomber amoureux.
+11,3,13,Ciel Gris,Annule les effets du\nclimat.
+11,3,14,Oeil Composé,Augmente la précision du\nPokémon.
+11,3,15,Insomnia,Empêche le Pokémon de\ns’endormir.
+11,3,16,Déguisement,Le Pokémon adopte le type\nde la capacité ennemie.
+11,3,17,Vaccin,Empêche le Pokémon d’être\nempoisonné.
+11,3,18,Torche,Booste capacités Feu si\ntouché par attaques Feu.
+11,3,19,Ecran Poudre,Annule les effets cumulés\nd’une attaque ennemie.
+11,3,20,Tempo Perso,Empêche la confusion.
+11,3,21,Ventouse,Annule les cap. forçant\nà changer de Pokémon.
+11,3,22,Intimidation,Baisse l’Attaque ennemie.
+11,3,23,Marque Ombre,Empêche le Pokémon ennemi\nde quitter le combat.
+11,3,24,Peau Dure,Le Pokémon blesse\nl’ennemi qui le touche.
+11,3,25,Garde Mystik,Seules capacités “super\nefficaces” l’atteignent.
+11,3,26,Lévitation,Immunise contre toutes\nles capacités de type Sol.
+11,3,27,Pose Spore,"Peut paralyser, empoison-\nner, endormir au contact."
+11,3,28,Synchro,"Transmet brûlure, poison\nou paralysie à l’ennemi."
+11,3,29,Corps Sain,Peut empêcher les stats\ndu Pokémon de baisser.
+11,3,30,Médic Nature,Quitter le combat soigne\nles problèmes de statut.
+11,3,31,Paratonnerre,Le Pokémon attire les\ncapacités Electrik.
+11,3,32,Sérénité,Augmente la fréquence\ndu cumul d’effets.
+11,3,33,Glissade,Augmente la Vitesse du\nPokémon s’il pleut.
+11,3,34,Chlorophyle,Augmente la Vitesse du\nPokémon s’il y a du soleil.
+11,3,35,Lumiatirance,Augmente les rencontres\navec Pokémon sauvages.
+11,3,36,Calque,Imite la capacité spéciale\nde l’ennemi.
+11,3,37,Coloforce,Augmente l’Attaque du\nPokémon.
+11,3,38,Point Poison,Peut empoisonner l’ennemi\ns’il y a contact.
+11,3,39,Attention,Empêche le Pokémon\nd’avoir peur.
+11,3,40,Armumagma,Protège le Pokémon\ncontre le gel.
+11,3,41,Ignifu-Voile,Protège le Pokémon\ndes brûlures.
+11,3,42,Magnépiège,Empêche les Pokémon Acier\nde fuir.
+11,3,43,Anti-Bruit,Protège de toutes les\ncapacités sonores.
+11,3,44,Cuvette,Récupère progressivement\ndes PV par temps de pluie.
+11,3,45,Sable Volant,Le Pokémon invoque une\ntempête de sable.
+11,3,46,Pression,Force l’ennemi à\ndépenser plus de PP.
+11,3,47,Isograisse,Augmente la résistance\naux cap. Feu et Glace.
+11,3,48,Matinal,Le Pokémon se réveille\nplus rapidement.
+11,3,49,Corps Ardent,Peut brûler l’ennemi s’il y\na contact.
+11,3,50,Fuite,Permet de fuir n’importe\nquel Pokémon sauvage.
+11,3,51,Regard Vif,Empêche le Pokémon de\nperdre en précision.
+11,3,52,Hyper Cutter,Empêche la réduction de\nl’Attaque.
+11,3,53,Ramassage,Permet parfois au Pokémon\nde ramasser des objets.
+11,3,54,Absentéisme,Le Pokémon ne frappe\nqu’un tour sur deux.
+11,3,55,Agitation,Améliore l’Attaque mais\ndiminue la précision.
+11,3,56,Joli Sourire,Séduit parfois l’ennemi\nau contact.
+11,3,57,Plus,Améliore l’Atq. Spé. si un\nautre Pokémon a Minus.
+11,3,58,Minus,Améliore l’Atq. Spé. si un\nautre Pokémon a Plus.
+11,3,59,Météo,MORPHEO change de forme\nselon le climat.
+11,3,60,Glue,Protège le Pokémon\ncontre le vol d’objets.
+11,3,61,Mue,Le Pokémon soigne parfois\nses problèmes de statut.
+11,3,62,Cran,Augmente l’Attaque s’il y\na un problème de statut.
+11,3,63,Ecaille Spé.,Augmente la Défense s’il y\na un problème de statut.
+11,3,64,Suintement,Blesse l’ennemi qui draine\nl’énergie du Pokémon.
+11,3,65,Engrais,Booste les capacités\nPlante en cas de besoin.
+11,3,66,Brasier,Booste les capacités\nFeu en cas de besoin.
+11,3,67,Torrent,Booste les capacités\nEau en cas de besoin.
+11,3,68,Essaim,Booste les capacités\nInsecte en cas de besoin.
+11,3,69,Tête de Roc,Protège le Pokémon des\ndégâts de contrecoups.
+11,3,70,Sécheresse,Invoque le soleil quand il\nest au combat.
+11,3,71,Piège,Empêche l’ennemi de\ns’enfuir.
+11,3,72,Esprit Vital,Empêche le Pokémon\nde s’endormir.
+11,3,73,Ecran Fumée,Empêche la réduction des\nstats du Pokémon.
+11,3,74,Force Pure,Augmente la puissance des\nattaques physiques.
+11,3,75,Coque Armure,Protège le Pokémon contre\nles coups critiques.
+11,3,76,Air Lock,Annule les effets du\nclimat.
+11,3,77,Pieds Confus,Augmente l’esquive si le\nPokémon est confus.
+11,3,78,Motorisé,Augmente la Vit. si touché\npar une cap. Electrik.
+11,3,79,Rivalité,Augmente l’Attaque si\nl’ennemi est du même sexe.
+11,3,80,Impassible,Augmente la Vitesse quand\nle Pokémon a peur.
+11,3,81,Rideau Neige,Augmente l’esquive durant\nles tempêtes de grêle.
+11,3,82,Gloutonnerie,Encourage l’utilisation\nd’une Baie tenue.
+11,3,83,Colérique,Monte l’Attaque au max.\naprès un coup critique.
+11,3,84,Délestage,Augmente la Vit. si l’objet\ntenu est utilisé ou perdu.
+11,3,85,Ignifuge,Réduit la puissance des\ncapacités de type Feu.
+11,3,86,Simple,Le Pokémon est sujet à\ndes variations de stats.
+11,3,87,Peau Sèche,Perd des PV à la chaleur.\nL’eau les restaure.
+11,3,88,Télécharge,Ajuste la puissance selon\nl’ennemi.
+11,3,89,Poing de Fer,Augmente la puissance des\ncapacités coups de poing.
+11,3,90,Soin Poison,Restaure des PV si le\nPokémon est empoisonné.
+11,3,91,Adaptabilité,Augmente la puissance des\ncapacités de même type.
+11,3,92,Multi-Coups,Augmente la fréquence des\nattaques multiples.
+11,3,93,Hydratation,Soigne les problèmes de\nstatut s’il pleut.
+11,3,94,Force Soleil,Augmente l’Atq. Spé. mais\nbaisse les PV au soleil.
+11,3,95,Pied Véloce,Augmente la Vitesse s’il y\na un problème de statut.
+11,3,96,Normalise,Toutes les capacités sont\nde type Normal.
+11,3,97,Sniper,Booste les capacités qui\nsont des coups critiques.
+11,3,98,Garde Magik,Seule une attaque directe\npeut blesser le Pokémon.
+11,3,99,Annule Garde,Attaques du Pokémon et\nde l’ennemi réussissent.
+11,3,100,Frein,"Attaque toujours après \nl’ennemi, même plus lent."
+11,3,101,Technicien,Augmente la puissance des\ncapacités les plus faibles.
+11,3,102,Feuil. Garde,Empêche les problèmes\nde statut au soleil.
+11,3,103,Maladresse,Le Pokémon ne peut\nutiliser aucun objet tenu.
+11,3,104,Brise Moule,Cap. utilisables quelles\nque soient les cap. spé.
+11,3,105,Chanceux,Augmente la fréquence\ndes coups critiques.
+11,3,106,Boom Final,Blesse l’ennemi qui \nporte le coup de grâce.
+11,3,107,Anticipation,Prévoit les capacités\nennemies dangereuses.
+11,3,108,Prédiction,Découvre la capacité\nennemie la plus puissante.
+11,3,109,Inconscient,Ignore les changements de\nstats de l’ennemi.
+11,3,110,Lentiteintée,Améliore les capacités\n“pas très efficaces”.
+11,3,111,Filtre,Affaiblit les capacités\n“super efficaces”.
+11,3,112,Début Calme,Divise temporairement\nVitesse et Attaque par 2.
+11,3,113,Querelleur,Les capacités touchent\nles Pokémon Spectre.
+11,3,114,Lavabo,Attire les attaques Eau\nvisant un Pokémon.
+11,3,115,Corps Gel,Récupère des PV lors des\ntempêtes de grêle.
+11,3,116,Solide Roc,Affaiblit les capacités\n“super efficaces”.
+11,3,117,Alerte Neige,Déclenche une tempête de\ngrêle pendant le combat.
+11,3,118,Cherche Miel,Le Pokémon peut parfois\ntrouver du Miel.
+11,3,119,Fouille,Permet de connaître\nl’objet tenu par l’ennemi.
+11,3,120,Téméraire,Booste les cap. ayant des\ndégâts de contrecoups.
+11,3,121,Multi-Type,Modifie le type en fonction\nde la Plaque tenue.
+11,3,122,Don Floral,Pokémon de l’équipe plus\npuissants au soleil.
+11,3,123,Mauvais Rêve,Réduit les PV d’un ennemi\nendormi.
+11,4,1,Duftnote,"Hilft, wilde Pokémon\nfernzuhalten."
+11,4,2,Niesel,Ruft im Kampf\nRegen herbei.
+11,4,3,Temposchub,Erhöht Initiative nach\nund nach.
+11,4,4,Kampfpanzer,Wehrt Volltreffer ab.
+11,4,5,Robustheit,Schutz gegen\nK.O.-Treffer-Angriffe.
+11,4,6,Feuchtigkeit,Verhindert Selbstzer-\nstörung der Kämpfenden.
+11,4,7,Flexibilität,Verhindert Paralyse.
+11,4,8,Sandschleier,Erhöht Fluchtwert im\nSandsturm.
+11,4,9,Statik,Kann bei Berührung\nparalysieren.
+11,4,10,Voltabsorber,Wandelt Elektrizität in\nKP um.
+11,4,11,H2O-Absorber,Wandelt Wasser in KP um.
+11,4,12,Dösigkeit,Verhindert Anziehung.
+11,4,13,Wolke Sieben,Keine Wetter-Effekte.
+11,4,14,Facettenauge,Steigert Genauigkeit.
+11,4,15,Insomnia,Verhindert Einschlafen.
+11,4,16,Farbwechsel,Typ des Anwenders wird zu\ndem der gegnerischen Att.
+11,4,17,Immunität,Verhindert Vergiftungen.
+11,4,18,Feuerfänger,"Verstärkt Feuer-A., wenn\nv. Feuer-A. getroffen."
+11,4,19,Puderabwehr,Blockiert Zusatz-Effekte\ngegnerischer Angriffe.
+11,4,20,Tempomacher,Verhindert Verwirrung.
+11,4,21,Saugnapf,"Negiert Attacken, die PKMN\naustauschen würden."
+11,4,22,Bedroher,Senkt Angriff des\nGegners.
+11,4,23,Wegsperre,Hindert Gegner an Flucht.
+11,4,24,Rauhaut,Verletzt bei Berührung.
+11,4,25,Wunderwache,Nur sehr effektive Treffer\nschaden.
+11,4,26,Schwebe,Volle Immunität gegen\nalle Boden-Attacken.
+11,4,27,Sporenwirt,"Bei Kontakt evtl. Paraly.,\nVergiftg. oder Schlaf."
+11,4,28,Synchro,"Gibt Verbrennung, Ver-\ngiftung u. Paraly. an Geg."
+11,4,29,Neutraltorso,Verhindert Absenken\nder Statuswerte evtl.
+11,4,30,Innere Kraft,Heilt bei Austausch\nStatusprobleme.
+11,4,31,Blitzfänger,Zieht Elektro-Attacken\nan.
+11,4,32,Edelmut,Verstärkt\nZusatz-Effekte.
+11,4,33,Wassertempo,Steigert Initiative bei\nRegen.
+11,4,34,Chlorophyll,Steigert Initiative bei\nSonnenschein.
+11,4,35,Erleuchtung,Mehr Pokémon-\nBegegnungen.
+11,4,36,Fährte,Das Pokémon kopiert \nFähigkeit des Gegners.
+11,4,37,Kraftkoloss,Steigert den Angriffs-\nWert eines Pokémon.
+11,4,38,Giftdorn,Vergiftet den Gegner\neventuell bei Berührung.
+11,4,39,Konzentrator,Verhindert\nZurückschrecken.
+11,4,40,Magmapanzer,Verhindert Einfrieren.
+11,4,41,Aquahülle,Verhindert\nVerbrennungen.
+11,4,42,Magnetfalle,Verhindert Flucht von\nStahl-Pokémon.
+11,4,43,Lärmschutz,Immun gegen Lärm-\nAttacken.
+11,4,44,Regengenuss,Langsame Wiederherstellg.\nvon KP bei Regen.
+11,4,45,Sandsturm,Erzeugt einen Sandsturm.
+11,4,46,Erzwinger,Steigert den Verbrauch\nder AP des Gegners.
+11,4,47,Speckschicht,Schutz vor Hitze\nund Kälte.
+11,4,48,Frühwecker,Schnelles Aufwachen.
+11,4,49,Flammkörper,Kann bei Kontakt zu\nVerbrennung führen.
+11,4,50,Angsthase,Erleichtert das\nEntkommen.
+11,4,51,Adlerauge,Verhindert Verlust der\nGenauigkeit.
+11,4,52,Scherenmacht,Verhindert Angriff-Reduz.
+11,4,53,Mitnahme,Kann Items aufnehmen.
+11,4,54,Schnarchnase,Greift nur in jedem\n2. Zug an.
+11,4,55,Übereifer,"Erhöht Angriffs-Wert,\nsenkt Genauigkeit."
+11,4,56,Charmebolzen,Kann bei Kontakt\nbetörend wirken.
+11,4,57,Plus,"Steigert Spezial-Angriff,\nwenn ein PKMN Minus hat."
+11,4,58,Minus,"Steigert Spezial-Angriff,\nwenn ein PKMN Plus hat."
+11,4,59,Prognose,FORMEO verändert seine\nForm abhängig vom Wetter.
+11,4,60,Wertehalter,Verhindert Item-\nDiebstahl.
+11,4,61,Expidermis,PKMN heilt eventuell\nseine Statusprobleme.
+11,4,62,Adrenalin,Steigert Angriff bei\nStatusproblemen.
+11,4,63,Notschutz,Steigert Verteidigung bei\nStatusproblemen.
+11,4,64,Kloakensoße,"Schadet Gegnern, die\nSaug-Attacken einsetzen."
+11,4,65,Notdünger,Stärkt Pflanzen-Attacken\nin Not.
+11,4,66,Großbrand,Stärkt Feuer-Attacken\nin Not.
+11,4,67,Sturzbach,Stärkt Wasser-Attacken\nin Not.
+11,4,68,Hexaplaga,Stärkt Käfer-Attacken\nin Not.
+11,4,69,Steinhaupt,"Verhindert Schaden, der\ndurch Rückstoß entsteht."
+11,4,70,Dürre,Erzeugt Sonne im Kampf.
+11,4,71,Auswegslos,Verhindert Flucht\ndes Gegners.
+11,4,72,Munterkeit,Verhindert Einschlafen.
+11,4,73,Pulverrauch,Verhindert das Absenken\nder Statuswerte.
+11,4,74,Mentalkraft,Steigert Kraft physischer\nAngriffe.
+11,4,75,Panzerhaut,Wehrt Volltreffer ab.
+11,4,76,Klimaschutz,Eliminiert die Wirkung\ndes Wetters.
+11,4,77,Fußangel,"Erhöht Fluchtwert, wenn\ndas Pokémon verwirrt ist."
+11,4,78,Starthilfe,Erhöht Initiative nach\neiner Elektro-Attacke.
+11,4,79,Rivalität,"Erhöht Angriff, wenn Gegn.\ndasselbe Geschlecht hat."
+11,4,80,Felsenfest,"Erhöht Initiative, sobald\nPokémon zurückschreckt."
+11,4,81,Schneemantel,Erhöht Fluchtwert\nwährend Hagelschauer.
+11,4,82,Völlerei,Ermutigt zum frühzeitigen\nVerwenden einer Beere.
+11,4,83,Kurzschluss,Maximiert Angriff nach Ein-\nstecken e. Volltreffers.
+11,4,84,Entlastung,"Erhöht Init., wenn 1 Item\nverwendet/verloren wird."
+11,4,85,Hitzeschutz,Senkt die Kraft von\nFeuer-Attacken.
+11,4,86,Wankelmut,Das Pokémon ist anfällig\nfür Statusveränderungen.
+11,4,87,Trockenheit,Heißes Wetter reduziert\nKP. Wasser steigert KP.
+11,4,88,Download,Passt Kraft entsprechend\nder gegn. Statuswerte an.
+11,4,89,Eisenfaust,Steigert die Effektivität\nvon Box-Attacken.
+11,4,90,Aufheber,"Steigert KP, wenn das\nPokémon vergiftet ist."
+11,4,91,Anpassung,Steigert Attacken\ndesselben Typs.
+11,4,92,Wertelink,Erhöht die Häufigkeit von\nMehrfach-Attacken.
+11,4,93,Hydration,Heilt Statusprobleme\nbei Regen.
+11,4,94,Solarkraft,"Steigert Spezial-Angriff\nbei Sonne, senkt aber KP."
+11,4,95,Rasanz,Erhöht Initiative bei\nStatusproblemen.
+11,4,96,Regulierung,Alle Attacken des Pokémon\nwerden zu Normal-Att.
+11,4,97,Superschütze,Steigert Attacken nach\nVolltreffern.
+11,4,98,Magieschild,Das PKMN nimmt nur durch\ndirekte Attacken Schaden.
+11,4,99,Schildlos,Angriffe des Pokémon und\ndes Gegners treffen.
+11,4,100,Zeitspiel,Das Pokémon bewegt sich \nnach weniger agilen Gegn.
+11,4,101,Techniker,Steigert Effektivität von\nschwächeren Attacken.
+11,4,102,Floraschild,Heilt Statusprobleme\nbei Sonne.
+11,4,103,Tollpatsch,Das Pokémon kann keine\ngetrag. Items verwenden.
+11,4,104,Überbrückung,Att. können unabhängig d.\nFähigkeit verw. werden.
+11,4,105,Glückspilz,Erhöht die Chance auf\neinen Volltreffer.
+11,4,106,Finalschlag,"Schadet dem Gegn., der\nfinale Attacke landet."
+11,4,107,Vorahnung,Ahnt gefährliche Attacken\ndes Gegners voraus.
+11,4,108,Vorwarnung,Gibt Auskunft über die\nstärkste gegn. Attacke.
+11,4,109,Unkenntnis,Ignoriert Wechsel der\nStatuswerte des Gegners.
+11,4,110,Aufwertung,Steigert “weniger\neffektive” Attacken.
+11,4,111,Filter,Senkt die Stärke sehr\neffektiver Attacken.
+11,4,112,Saumselig,Halbiert zeitweilig Angriff\nund Initiative.
+11,4,113,Rauflust,Ermöglicht es mit Attacken\nGeist-Gegner zu treffen.
+11,4,114,Sturmsog,"Zieht offens. Wasser-Att.\nan, die auf 1 PKMN zielen."
+11,4,115,Eishaut,Das Pokémon regeneriert\nwährend Hagelsturm KP.
+11,4,116,Felskern,Senkt die Stärke sehr\neffektiver Attacken.
+11,4,117,Hagelalarm,Pokémon beschwört einen\nHagelsturm herauf.
+11,4,118,Honigmaul,Pokémon kann Honig\nsammeln.
+11,4,119,Schnüffler,Gibt Auskunft über\ngegnerische Items.
+11,4,120,Achtlos,Steigert Attacken mit\nRückstoß-Schaden.
+11,4,121,Variabilität,Passt seinen Typ der\ngetragenen Tafel an.
+11,4,122,Pflanzengabe,Steigert Effektivität von\nTeam-Pokémon bei Sonne.
+11,4,123,Alptraum,Senkt die KP eines\nschlafenden Gegners.
+11,5,1,Tanfo,Questo tanfo tiene lontani\ni Pokémon selvatici.
+11,5,2,Piovischio,"Se scende in campo, il\nPokémon attira la pioggia."
+11,5,3,Acceleratore,Graduale aumento della\nVelocità del Pokémon.
+11,5,4,Lottascudo,Evita che il Pokémon\nsubisca brutti colpi.
+11,5,5,Vigore,Protegge dalle mosse che\ncausano KO in un colpo.
+11,5,6,Umidità,Impedisce a chi è in campo\ndi autodistruggersi.
+11,5,7,Scioltezza,Il Pokémon è protetto\ncontro la paralisi.
+11,5,8,Sabbiavelo,Elusione del Pokémon sale\nin una tempesta di sabbia.
+11,5,9,Statico,Il contatto con il Pokémon\npuò causare paralisi.
+11,5,10,Assorbivolt,Ridà PS se si subisce\nuna mossa di tipo Elettro.
+11,5,11,Assorbacqua,Ridà PS se si subisce\nuna mossa di tipo Acqua.
+11,5,12,Indifferenza,Impedisce al Pokémon di\ninfatuarsi.
+11,5,13,Antimeteo,Neutralizza gli effetti\nmeteo.
+11,5,14,Insettocchi,Aumenta la precisione\ndel Pokémon.
+11,5,15,Insonnia,Impedisce al Pokémon\ndi addormentarsi.
+11,5,16,Cambiacolore,Cambia il tipo del Pokémon\nin base all’attacco nemico.
+11,5,17,Immunità,Impedisce al Pokémon di\nvenire avvelenato.
+11,5,18,Fuocardore,Potenzia le mosse fuoco se\ncolpiti da mosse fuoco.
+11,5,19,Polvoscudo,Blocca effetti aggiuntivi\ndegli attacchi subiti.
+11,5,20,Mente Locale,Impedisce al Pokémon\ndi subire la confusione.
+11,5,21,Ventose,Resiste alle mosse che\nobbligano la sostituzione.
+11,5,22,Prepotenza,Riduce l’Attacco del\nnemico.
+11,5,23,Pedinombra,Impedisce la fuga al\nnemico.
+11,5,24,Cartavetro,Danneggia il nemico\nal contatto.
+11,5,25,Magidifesa,Solo le mosse superefficaci\nhanno effetto.
+11,5,26,Levitazione,Protegge totalmente dagli\nattacchi di tipo Terra.
+11,5,27,Spargispora,"Al contatto può causare\nVLN, PAR o DRM."
+11,5,28,Sincronismo,"Trasmette scottatura,\nveleno o paralisi al nemico."
+11,5,29,Corpochiaro,Può evitare la riduzione\ndelle statistiche.
+11,5,30,Alternacura,Cura i problemi di stato\ndel Pokémon se sostituito.
+11,5,31,Parafulmine,Il Pokémon attira tutte\nle mosse di tipo Elettro.
+11,5,32,Leggiadro,Effetti aggiuntivi più\nprobabili.
+11,5,33,Nuotovelox,Dà al Pokémon più\nVelocità nella pioggia.
+11,5,34,Clorofilla,Aumenta Velocità del\nPokémon se c’è il sole.
+11,5,35,Risplendi,Più probabile incontrare\nPokémon selvatici.
+11,5,36,Traccia,Copia l’abilità del nemico.
+11,5,37,Macroforza,Migliora l’Attacco\ndel Pokémon.
+11,5,38,Velenopunto,Il contatto col Pokémon\npuò avvelenare il nemico.
+11,5,39,Fuocodentro,Impedisce al Pokémon\ndi tentennare.
+11,5,40,Magmascudo,Impedisce al Pokémon di\nrimanere congelato.
+11,5,41,Idrovelo,Impedisce al Pokémon di\nrimanere scottato.
+11,5,42,Magnetismo,Impedisce la fuga ai\nPokémon di tipo Acciaio.
+11,5,43,Antisuono,Protegge totalmente da\nmosse sonore.
+11,5,44,Copripioggia,Il Pokémon recupera PS\nquando piove.
+11,5,45,Sabbiafiume,Causa una tempesta di\nsabbia durante la lotta.
+11,5,46,Pressione,Il nemico usa più PP.
+11,5,47,Grassospesso,Protegge meglio da mosse\ndi tipo Fuoco e Ghiaccio.
+11,5,48,Sveglialampo,Il Pokémon si risveglia\nrapidamente dal sonno.
+11,5,49,Corpodifuoco,Il contatto con il Pokémon\npuò scottare il nemico.
+11,5,50,Fugafacile,Garantisce la fuga dai\nPokémon selvatici.
+11,5,51,Sguardofermo,Evita che cali la precisio-\nne del Pokémon.
+11,5,52,Ipertaglio,Evita la riduzione\ndell’Attacco.
+11,5,53,Raccolta,Il Pokémon può\ntrovare strumenti.
+11,5,54,Pigrone,Il Pokémon può attaccare\nun turno sì e uno no.
+11,5,55,Tuttafretta,"Aumenta l’Attacco, ma\nriduce la precisione."
+11,5,56,Incantevole,"Al contatto, il nemico\npuò infatuarsi."
+11,5,57,Più,Aumenta l’Att. Sp. se un\naltro Pokémon ha Meno.
+11,5,58,Meno,Aumenta l’Att. Sp. se un\naltro Pokémon ha Più.
+11,5,59,Previsioni,L’aspetto di CASTFORM\ncambia in base al tempo.
+11,5,60,Antifurto,Protegge il Pokémon\ndal furto di strumenti.
+11,5,61,Muta,Può guarire i problemi di\nstato del Pokémon.
+11,5,62,Dentistretti,Aumenta l’Attacco in caso\ndi problemi di stato.
+11,5,63,Pelledura,Aumenta la Difesa in caso\ndi problemi di stato.
+11,5,64,Melma,Danni al nemico che usa\nmosse assorbi-energia.
+11,5,65,Erbaiuto,In difficoltà potenzia\nle mosse di tipo Erba.
+11,5,66,Aiutofuoco,In difficoltà potenzia\nle mosse di tipo Fuoco.
+11,5,67,Acquaiuto,In difficoltà potenzia\nle mosse di tipo Acqua.
+11,5,68,Aiutinsetto,In difficoltà potenzia le\nmosse di tipo Coleottero.
+11,5,69,Testadura,Protegge il Pokémon dai\ncontraccolpi.
+11,5,70,Siccità,Il Pokémon fa uscire\nil sole nella lotta.
+11,5,71,Trappoarena,Impedisce la fuga al\nnemico.
+11,5,72,Spiritovivo,Impedisce al Pokémon\ndi addormentarsi.
+11,5,73,Fumochiaro,Impedisce la riduzione\ndelle statistiche.
+11,5,74,Forzapura,Aumenta la potenza degli\nattacchi fisici.
+11,5,75,Guscioscudo,Il Pokémon è protetto\ndai brutti colpi.
+11,5,76,Riparo,Neutralizza gli effetti\nmeteo.
+11,5,77,Intricopiedi,Aumenta l’elusione se\nil Pokémon è confuso.
+11,5,78,Elettrorapid,Aumenta Velocità se colpi-\nto da mosse elettriche.
+11,5,79,Antagonismo,Aumenta Attacco se il ne-\nmico è dello stesso sesso.
+11,5,80,Cuordeciso,Aumenta la Velocità quando\nil Pokémon tentenna.
+11,5,81,Mantelneve,Aumenta l’elusione\nquando grandina.
+11,5,82,Voracità,Favorisce l’uso rapido\ndi una Bacca tenuta.
+11,5,83,Grancollera,Massimizza l’Attacco\ndopo un brutto colpo.
+11,5,84,Agiltecnica,Sale Veloc. se strum. te-\nnuto si perde o consuma.
+11,5,85,Antifuoco,Indebolisce l’effetto del-\nle mosse di tipo Fuoco.
+11,5,86,Disinvoltura,Le statistiche possono\ncambiare all’impazzata.
+11,5,87,Pellearsa,Riduce PS se fa caldo.\nL’acqua ridà PS.
+11,5,88,Download,Regola la potenza in base\nal nemico.
+11,5,89,Ferropugno,Potenzia le mosse\ntirapugni.
+11,5,90,Velencura,Ridà PS se il Pokémon\nè avvelenato.
+11,5,91,Adattabilità,Potenzia le mosse del\ntipo del Pokémon.
+11,5,92,Abillegame,Aumenta la frequenza di\nmosse multicolpo.
+11,5,93,Idratazione,Cura i problemi di stato\nse piove.
+11,5,94,Solarpotere,Aumenta l’Att. Sp. ma\nriduce i PS se c’è il sole.
+11,5,95,Piedisvelti,Aumenta la Velocità se\nc’è un problema di stato.
+11,5,96,Normalità,Tutte le mosse del Pokémon\ndiventano di tipo Normale.
+11,5,97,Cecchino,Potenzia le mosse se\ndiventano brutti colpi.
+11,5,98,Magicscudo,Il Pokémon subisce danni\nsolo da attacchi diretti.
+11,5,99,Nullodifesa,Gli attacchi dei Pokémon in\nlotta vanno a buon fine.
+11,5,100,Rallentatore,Anche i nemici più lenti\nattaccano per primi.
+11,5,101,Tecnico,Potenzia le mosse più\ndeboli del Pokémon.
+11,5,102,Fogliamanto,Evita problemi di stato\nquando c’è il sole.
+11,5,103,Impaccio,Il Pokémon non può usare\nlo strumento che tiene.
+11,5,104,Rompiforma,Le mosse si usano a\nprescindere dalle abilità.
+11,5,105,Supersorte,Maggiore probabilità di\ninfliggere brutti colpi.
+11,5,106,Scoppio,Arreca danno al nemico\nche sferra il colpo finale.
+11,5,107,Presagio,Rivela se il nemico ha\nmosse pericolose.
+11,5,108,Premonizione,Scopre la mossa più\npotente del nemico.
+11,5,109,Imprudenza,Ignora i cambiamenti delle\nstatistiche del nemico.
+11,5,110,Lentifumé,Potenzia le mosse\n“non molto efficaci”.
+11,5,111,Filtro,Riduce la potenza delle\nmosse superefficaci.
+11,5,112,Lentoinizio,Dimezza per un po’\nl’Attacco e la Velocità.
+11,5,113,Nervisaldi,Le mosse colpiscono anche\ni nemici di tipo Spettro.
+11,5,114,Acquascolo,Attira le mosse di tipo\nAcqua mirate a un Pokémon.
+11,5,115,Corpogelo,Il Pokémon recupera PS\nquando grandina.
+11,5,116,Solidroccia,Riduce la potenza delle\nmosse superefficaci.
+11,5,117,Scendineve,Il Pokémon provoca una\ngrandinata in battaglia.
+11,5,118,Mielincetta,Il Pokémon può raccoglie-\nre Miele.
+11,5,119,Indagine,Il Pokémon può sapere che \nstrumento ha il nemico.
+11,5,120,Temerarietà,Potenzia le mosse che\nprovocano contraccolpi. 
+11,5,121,Multitipo,Cambia tipo a seconda\ndella Lastra che tiene.
+11,5,122,Regalfiore,Potenzia i Pokémon della\nsquadra se c’è il sole.
+11,5,123,Sogniamari,Riduce i PS di un nemico\naddormentato.
+11,6,1,Hedor,El olor ayuda a mantener\nlejos Pokémon salvajes.
+11,6,2,Llovizna,Hace que llueva si el\nPokémon entra en combate.
+11,6,3,Impulso,Aumenta la Velocidad\ngradualmente.
+11,6,4,Armad. Bat.,Bloquea golpes críticos.
+11,6,5,Robustez,Protege de movimientos que\ndejan K.O. en un golpe.
+11,6,6,Humedad,Evita la autodestrucción.
+11,6,7,Flexibilidad,Evita la parálisis.
+11,6,8,Velo Arena,Aumenta la evasión en\nlas tormentas de arena.
+11,6,9,Elec. Estát.,Puede paralizar al\nmínimo contacto.
+11,6,10,Absor. Elec.,Recupera PS al recibir \nataques de tipo Eléctrico.
+11,6,11,Absor. Agua,Recupera PS al recibir \nataques de tipo Agua.
+11,6,12,Despiste,Evita que el Pokémon\nse enamore.
+11,6,13,Aclimatación,Anula los efectos del\ntiempo atmosférico.
+11,6,14,Ojocompuesto,Aumenta la precisión.
+11,6,15,Insomnio,Evita el quedarse dormido.
+11,6,16,Cambio Color,Cambia el tipo al del\nmovimiento rival.
+11,6,17,Inmunidad,Evita el envenenamiento.
+11,6,18,Absor. Fuego,Potencia movs. tipo Fuego\ntras ataques tipo Fuego.
+11,6,19,Polvo Escudo,Anula efectos secundarios\nde los ataques sufridos.
+11,6,20,Ritmo Propio,Evita la confusión.
+11,6,21,Ventosas,Anula movimientos que\nfuerzan el relevo.
+11,6,22,Intimidación,Baja el Ataque del rival.
+11,6,23,Sombratrampa,Evita que el enemigo huya.
+11,6,24,Piel Tosca,Hiere al tacto.
+11,6,25,Superguarda,Solo le dañan movimientos\nmuy eficaces.
+11,6,26,Levitación,Es inmune frente a los\nataques de tipo Tierra.
+11,6,27,Efec. Espora,"Puede dormir, envenenar\no paralizar al contacto."
+11,6,28,Sincronía,"Pasa envenenamiento,\nparálisis y quemaduras."
+11,6,29,Cuerpo Puro,Puede evitar que bajen\nlas características.
+11,6,30,Cura Natural,Cura problemas de estado\nal cambiar de Pokémon.
+11,6,31,Pararrayos,Frena los ataques\nde tipo Eléctrico.
+11,6,32,Dicha,Aumenta la probabilidad\nde efectos secundarios.
+11,6,33,Nado Rápido,Sube la Velocidad cuando\nhay lluvia.
+11,6,34,Clorofila,Sube la Velocidad cuando\nhay sol.
+11,6,35,Iluminación,Aumenta la probabilidad\nde encontrar Pokémon.
+11,6,36,Rastro,El Pokémon copia la\nhabilidad del rival.
+11,6,37,Potencia,Aumenta el Ataque.
+11,6,38,Punto Tóxico,Puede envenenar al\nmínimo contacto.
+11,6,39,Foco Interno,Evita el retroceso.
+11,6,40,Escudo Magma,Evita la congelación.
+11,6,41,Velo Agua,Evita las quemaduras.
+11,6,42,Imán,Atrapa Pokémon de\ntipo Acero.
+11,6,43,Insonorizar,Evita ataques de sonido.
+11,6,44,Cura Lluvia,El Pokémon gana PS\ngradualmente si llueve.
+11,6,45,Chorro Arena,Crea una tormenta de\narena durante el combate.
+11,6,46,Presión,Hace que los PP del rival\nse acaben antes.
+11,6,47,Sebo,Protege de los ataques\nde tipo Fuego y Hielo.
+11,6,48,Madrugar,El Pokémon se despierta\nrápidamente.
+11,6,49,Cuerpo Llama,Puede quemar al mínimo\ncontacto.
+11,6,50,Fuga,Permite escapar fácilmente\nde los Pokémon salvajes.
+11,6,51,Vista Lince,Evita que disminuya\nla precisión.
+11,6,52,Corte Fuerte,Evita que disminuya\nel Ataque.
+11,6,53,Recogida,El Pokémon puede\nencontrar objetos.
+11,6,54,Ausente,El Pokémon no atacará\nen 2 turnos consecutivos.
+11,6,55,Entusiasmo,"Aumenta el Ataque, pero\nreduce la precisión."
+11,6,56,Gran Encanto,Tocar al Pokémon puede\ncausar enamoramiento.
+11,6,57,Más,Potencia At. Esp. si otro\ntiene la habilidad Menos.
+11,6,58,Menos,Potencia At. Esp. si otro\ntiene la habilidad Más.
+11,6,59,Predicción,Cambia con el tiempo\natmosférico.
+11,6,60,Viscosidad,Impide el robo de objetos.
+11,6,61,Mudar,Cura los problemas de\nestado mudando la piel.
+11,6,62,Agallas,Sube el Ataque si sufre\nun problema de estado.
+11,6,63,Escama Esp.,Sube la Defensa si sufre\nun problema de estado.
+11,6,64,Lodo Líquido,Hiere a los enemigos que\nabsorben PS.
+11,6,65,Espesura,Potencia los ataques de\ntipo Planta en un apuro.
+11,6,66,Mar Llamas,Potencia los ataques de\ntipo Fuego en un apuro.
+11,6,67,Torrente,Potencia los ataques de\ntipo Agua en un apuro.
+11,6,68,Enjambre,Potencia los ataques de\ntipo Bicho en un apuro.
+11,6,69,Cabeza Roca,Impide que el Pokémon\nse dañe con sus movs.
+11,6,70,Sequía,Hace que salga el sol si el\nPokémon entra en combate.
+11,6,71,Trampa Arena,Evita que el rival huya.
+11,6,72,Espír. Vital,Evita quedarse dormido.
+11,6,73,Humo Blanco,Evita que se reduzcan\nlas características.
+11,6,74,Energía Pura,Potencia los ataques\nfísicos.
+11,6,75,Caparazón,Bloquea golpes críticos.
+11,6,76,Bucle Aire,Anula los efectos del\ntiempo atmosférico.
+11,6,77,Tumbos,Sube la evasión si el\nPokémon está confuso.
+11,6,78,Electromotor,Sube la Velocidad si se\nsufre un ataque eléctrico.
+11,6,79,Rivalidad,Sube el Ataque si el rival\nes del mismo sexo.
+11,6,80,Impasible,Sube la Velocidad cada vez\nque el Pokémon retrocede.
+11,6,81,Manto Níveo,Sube la evasión durante\nuna tormenta de granizo.\n
+11,6,82,Gula,Fomenta el uso rápido de\nla baya que porta.
+11,6,83,Irascible,Potencia el Ataque tras\nrecibir un golpe crítico.
+11,6,84,Liviano,Sube la Veloc. al perder\nun objeto equipado.
+11,6,85,Ignífugo,Debilita la fuerza de los\nmovimientos de tipo Fuego.
+11,6,86,Simple,Cambia las características\nde forma más audaz.
+11,6,87,Piel Seca,Pierde PS si hace calor.\nLos recupera con agua.
+11,6,88,Descarga,Ajusta su fuerza según las\ncaracterísticas del rival.
+11,6,89,Puño Férreo,Aumenta la fuerza de los\npuñetazos.
+11,6,90,Antídoto,Recupera PS si el Pokémon\nha sido envenenado.
+11,6,91,Adaptable,Potencia los movimientos\ndel mismo tipo.
+11,6,92,Encadenado,Aumenta la frecuencia de\nlos movimientos múltiples.
+11,6,93,Hidratación,Cura los problemas de\nestado si está lloviendo.
+11,6,94,Poder Solar,"Si hace sol, reduce los PS\npero potencia el At. Esp."
+11,6,95,Pies Rápidos,Potencia la Velocidad si\nhay problemas de estado.
+11,6,96,Normalidad,Todos los movimientos se\nvuelven de tipo Normal.
+11,6,97,Francotirad.,Potencia los movimientos\nque se vuelven críticos.
+11,6,98,Muro Mágico,Solo los ataques directos\ndañan al Pokémon.
+11,6,99,Indefenso,El ataque del Pokémon y\nel del rival acertarán.
+11,6,100,Rezagado,El Pokémon se mueve\ntras el rival más lento.
+11,6,101,Experto,Potencia los movimientos\nmás débiles del Pokémon.
+11,6,102,Defensa Hoja,Evita los problemas de\nestado si hace sol.
+11,6,103,Zoquete,El Pokémon no puede\nusar ningún objeto.
+11,6,104,Rompemoldes,No importan las habilidades\npara usar movimientos.
+11,6,105,Afortunado,Aumenta la probabilidad de\nasestar golpes críticos.
+11,6,106,Resquicio,Daña al rival que le ha\ndado el golpe de gracia.
+11,6,107,Anticipación,Prevé los movimientos\npeligrosos del adversario.
+11,6,108,Alerta,Determina el movimiento\nmás potente del rival.
+11,6,109,Ignorante,Ignora los cambios en las\ncaracterísticas del rival.
+11,6,110,Cromolente,Potencia los movimientos\n“poco eficaces”.
+11,6,111,Filtro,Mitiga los movimientos\nsupereficaces.
+11,6,112,Inicio Lento,Reduce a la mitad Ataque y\nVelocidad por un tiempo.
+11,6,113,Intrépido,Permite golpear a los\nrivales de tipo Fantasma.
+11,6,114,Colector,Atrae ataques de tipo\nAgua lanzados a un PKMN.
+11,6,115,Gélido,El Pokémon recupera PS en\nlas tormentas de granizo.
+11,6,116,Roca Sólida,Mitiga los movimientos\nsupereficaces.
+11,6,117,Nevada,El Pokémon invoca una\ntormenta de granizo.
+11,6,118,Recogemiel,El Pokémon recoge miel\nde donde puede.
+11,6,119,Cacheo,El Pokémon puede ver el\nobjeto que lleva el rival.
+11,6,120,Audaz,Potencia los movimientos\nque dañan al usuario.
+11,6,121,Multitipo,Cambia el tipo al de la\ntabla que lleva.
+11,6,122,Don Floral,Potencia los Pokémon del\nequipo si está soleado.
+11,6,123,Mal Sueño,Reduce los PS de un rival\nmientras duerme.
+11,7,1,악취,야생 포켓몬이\n접근하기 어려워진다.
+11,7,2,잔비,배틀에 나가면\n비를 내린다.
+11,7,3,가속,조금씩\n스피드가 높아진다.
+11,7,4,전투무장,상대의 공격이\n급소에 맞지 않는다.
+11,7,5,옹골참,일격 필살기가\n통하지 않는다.
+11,7,6,습기,누구도 자폭\n할 수 없게 된다.
+11,7,7,유연,마비 상태가\n되지 않는다.
+11,7,8,모래숨기,모래바람으로\n회피율이 올라간다.
+11,7,9,정전기,접촉한 상대를\n마비시킬 때가 있다.
+11,7,10,축전,전기를 받으면\n회복한다.
+11,7,11,저수,물을 받으면\n회복한다.
+11,7,12,둔감,헤롱헤롱 상태가\n되지 않는다.
+11,7,13,날씨부정,날씨의 영향이\n없어진다.
+11,7,14,복안,기술의 명중률이\n올라간다.
+11,7,15,불면,잠듦 상태가\n되지 않는다.
+11,7,16,변색,받은 기술의 타입으로\n변화한다.
+11,7,17,면역,독 상태가\n되지 않는다.
+11,7,18,타오르는불꽃,불꽃을 받으면\n불꽃 기술이 강해진다.
+11,7,19,인분,기술의 추가 효과를\n받지 않는다.
+11,7,20,마이페이스,혼란 상태가\n되지 않는다.
+11,7,21,흡반,교체시킨 기술이\n효과를 발휘하지 못한다.
+11,7,22,위협,상대의 공격을\n떨어뜨린다.
+11,7,23,그림자밟기,상대의 그림자를 밟아\n도망칠 수 없게 한다.
+11,7,24,까칠한피부,접촉한 상대에게\n상처를 입힌다.
+11,7,25,불가사의부적,효과가 굉장한 기술밖에\n맞지 않는다.
+11,7,26,부유,땅타입의 기술을\n받지 않는다.
+11,7,27,포자,"스치면 독, 마비, 잠듦\n상태가 될 때가 있다."
+11,7,28,싱크로,"독, 마비, 화상을\n상대에게 옮긴다."
+11,7,29,클리어바디,상대가 능력을\n떨어뜨릴 수 없다.
+11,7,30,자연회복,배틀에서 일단 물러나면\n상태 이상이 회복된다.
+11,7,31,피뢰침,전기타입의 기술을\n모두 자신이 맞는다.
+11,7,32,하늘의은총,기술의 추가 효과가\n나오기 쉽다.
+11,7,33,쓱쓱,비가 올 때 스피드가\n올라간다.
+11,7,34,엽록소,맑을 때 스피드가\n올라간다.
+11,7,35,발광,야생 포켓몬과\n만나기 쉬워진다.
+11,7,36,트레이스,상대와 같은\n특성이 된다.
+11,7,37,천하장사,물리 공격의\n위력이 올라간다.
+11,7,38,독가시,접촉한 상대를\n중독 시킬 때가 있다.
+11,7,39,정신력,풀죽지 않는다.\n
+11,7,40,마그마의무장,얼음 상태가\n되지 않는다.
+11,7,41,수의베일,화상 상태가\n되지 않는다.
+11,7,42,자력,강철타입의 포켓몬을\n도망칠 수 없게 한다.
+11,7,43,방음,소리 기술을\n받지 않는다.
+11,7,44,젖은접시,비가 올 때 조금씩\nHP를 회복한다.
+11,7,45,모래날림,배틀에서 모래바람을\n일으킨다.
+11,7,46,프레셔,상대가 사용하는 기술의\nPP를 많이 줄인다.
+11,7,47,두꺼운지방,불꽃과 얼음타입의\n기술에 강하다.
+11,7,48,일찍기상,잠듦 상태에서\n빨리 깨어난다.
+11,7,49,불꽃몸,접촉한 상대에게\n화상을 입힐 때가 있다.
+11,7,50,도주,야생 포켓몬으로부터\n반드시 도망칠 수 있다.
+11,7,51,날카로운눈,상대가 명중률을\n떨어뜨리지 못한다.
+11,7,52,괴력집게,상대가 공격을\n떨어뜨리지 못한다.
+11,7,53,픽업,도구를 주워올\n때가 있다.
+11,7,54,게으름,연속으로\n공격할 수 없다.
+11,7,55,의욕,공격은 높지만\n빗나가기 쉽다.
+11,7,56,헤롱헤롱바디,스치면 헤롱헤롱 상태가\n될 때가 있다.
+11,7,57,플러스,마이너스가 있으면\n특수공격이 올라간다.
+11,7,58,마이너스,플러스가 있으면\n특수공격이 올라간다.
+11,7,59,기분파,날씨에 따라\n캐스퐁이 변화한다.
+11,7,60,점착,도구를 빼앗기지 않는다.\n
+11,7,61,탈피,상태 이상을\n회복할 때가 있다.
+11,7,62,근성,상태 이상이 되면\n공격이 올라간다.
+11,7,63,이상한비늘,상태 이상이 되면\n방어가 올라간다.
+11,7,64,해감액,흡수한 상대의\nHP를 줄인다.
+11,7,65,심록,위급할 때 풀타입의\n위력이 올라간다.
+11,7,66,맹화,위급할 때 불꽃타입의\n위력이 올라간다.
+11,7,67,급류,위급할 때 물타입의\n위력이 올라간다.
+11,7,68,벌레의알림,위급할 때 벌레타입의\n위력이 올라간다.
+11,7,69,돌머리,부딪쳐도\n반동을 받지 않는다.
+11,7,70,가뭄,배틀에 나가면\n쾌청이 된다.
+11,7,71,개미지옥,배틀에서 상대를\n도망칠 수 없게 한다.
+11,7,72,의기양양,잠듦 상태가\n되지 않는다.
+11,7,73,하얀연기,상대가 능력을\n떨어뜨릴 수 없다.
+11,7,74,순수한힘,물리 공격의\n위력이 올라간다.
+11,7,75,조가비갑옷,상대의 공격이\n급소에 맞지 않는다.
+11,7,76,에어록,날씨의 영향이\n없어진다.
+11,7,77,갈지자걸음,혼란에 빠져있으면\n회피하기 쉬워진다.
+11,7,78,전기엔진,전기를 받으면\n스피드가 올라간다.
+11,7,79,투쟁심,성별이 같으면\n공격이 올라간다.
+11,7,80,불굴의마음,풀죽을 때마다\n스피드가 올라간다.
+11,7,81,눈숨기,날씨가 싸라기눈일 때\n회피율이 올라간다.
+11,7,82,먹보,나무열매를 여느 때보다\n빨리 사용한다.
+11,7,83,분노의경혈,급소에 맞으면\n공격이 올라간다.
+11,7,84,곡예,도구가 없어지면\n스피드가 올라간다.
+11,7,85,내열,불꽃 기술의\n위력을 약하게 한다.
+11,7,86,단순,능력 변화가\n여느 때보다 심하다.
+11,7,87,건조피부,더우면 HP가 줄어든다.\n물로 HP를 회복한다.
+11,7,88,다운로드,상대의 능력을\n보고 능력치를 바꾼다.
+11,7,89,철주먹,펀치를 사용하는 기술의\n위력이 올라간다.
+11,7,90,포이즌힐,독 상태가 되면\nHP를 회복한다.
+11,7,91,적응력,타입이 같은 기술의\n위력이 올라간다.
+11,7,92,스킬링크,연속 기술을\n많이 쓸 수 있다.
+11,7,93,촉촉바디,비가 오면\n상태 이상이 회복된다.
+11,7,94,선파워,맑으면 HP가 줄지만\n특수공격이 올라간다.
+11,7,95,속보,상태 이상이 되면\n스피드가 올라간다.
+11,7,96,노말스킨,쓴 기술이 모두\n노말타입이 된다.
+11,7,97,스나이퍼,급소에 맞혔을 때\n위력이 올라간다.
+11,7,98,매직가드,공격 이외에는\n데미지를 입지 않는다.
+11,7,99,노가드,서로의 기술이\n반드시 맞는다.
+11,7,100,시간벌기,상대보다 재빨라도\n행동이 느려진다.
+11,7,101,테크니션,약한 기술의\n위력이 올라간다.
+11,7,102,리프가드,맑을 때는\n상태 이상이 되지 않는다.
+11,7,103,서투름,지니고 있는 도구를\n쓸 수 없다.
+11,7,104,틀깨기,특성에 관계없이 상대에게\n기술을 쓸 수 있다.
+11,7,105,대운,상대의 급소에\n공격이 맞기 쉽다.
+11,7,106,유폭,기절할 때 스친\n상대에게 데미지를 준다.
+11,7,107,위험예지,상대가 지닌 위험한\n기술을 감지한다.
+11,7,108,예지몽,상대가 지닌 기술을\n꿰뚫어볼 수 있다.
+11,7,109,천진,상대의 능력\n변화를 무시한다.
+11,7,110,색안경,효과가 별로인 기술이\n강해진다.
+11,7,111,필터,효과가 굉장한 기술의\n위력을 약하게 한다.
+11,7,112,슬로스타트,공격과 스피드가\n잠시 동안 절반이 된다.
+11,7,113,배짱,고스트타입에\n기술이 맞게 된다.
+11,7,114,마중물,물타입의 기술을\n모두 자신이 맞는다.
+11,7,115,아이스바디,날씨가 싸라기눈일 때\nHP를 회복한다.
+11,7,116,하드록,효과가 굉장한 기술의\n위력을 약하게 한다.
+11,7,117,눈퍼뜨리기,배틀에 나가면\n싸라기눈을 내리게 한다.
+11,7,118,꿀모으기,달콤한꿀을 모아서\n올 때가 있다.
+11,7,119,통찰,상대가 지닌 물건을\n알 수 있다.
+11,7,120,이판사판,반동 데미지를\n받는 기술이 강해진다.
+11,7,121,멀티타입,지니고 있는 플레이트에\n따라 타입이 바뀐다.
+11,7,122,플라워기프트,맑을 때 자신과\n같은 편이 강해진다.
+11,7,123,나이트메어,잠들어 있는 상대의\nHP를 줄인다.
+12,1,1,あくしゅう,やせいの　ポケモンが\nよりつき　にくくなる。
+12,1,2,あめふらし,せんとうに　でると\nあめを　ふらす。
+12,1,3,かそく,ちょっとずつ\nすばやく　なっていく。
+12,1,4,カブトアーマー,あいての　こうげきが\nきゅうしょに　あたらない。
+12,1,5,がんじょう,いちげきひっさつが\nきかない。
+12,1,6,しめりけ,だれも　じばくが\nできなくなる。
+12,1,7,じゅうなん,まひ　じょうたいに\nならない。
+12,1,8,すながくれ,すなあらしで\nかいひりつが　あがる。
+12,1,9,せいでんき,さわった　あいてを\nまひさせる　ことがある。
+12,1,10,ちくでん,でんきを　うけると\nかいふくする。
+12,1,11,ちょすい,みずを　うけると\nかいふくする。
+12,1,12,どんかん,メロメロ　じょうたいに\nならない。
+12,1,13,ノーてんき,てんきの　えいきょうが\nなくなる。
+12,1,14,ふくがん,わざの　めいちゅうりつが\nあがる。
+12,1,15,ふみん,ねむり　じょうたいに\nならない。
+12,1,16,へんしょく,うけた　わざの　タイプに\nへんかする。
+12,1,17,めんえき,どく　じょうたいに\nならない。
+12,1,18,もらいび,ほのおを　うけると\nほのおわざが　つよくなる。
+12,1,19,りんぷん,わざの　ついかこうかを\nうけない。
+12,1,20,マイペース,こんらん　じょうたいに\nならない。
+12,1,21,きゅうばん,いれかえさせる　わざが\nきかない。
+12,1,22,いかく,あいての　こうげきを\nさげる。
+12,1,23,かげふみ,あいての　かげをふみ\nにげられなくする。
+12,1,24,さめはだ,ふれた　あいてを\nキズつける。
+12,1,25,ふしぎなまもり,こうかばつぐん　しか\nあたらない。
+12,1,26,ふゆう,じめんタイプの　わざを\nうけない。
+12,1,27,ほうし,ふれると　どく　まひ\nねむりに　することがある。
+12,1,28,シンクロ,どく　まひ　やけどを\nあいてに　うつす。
+12,1,29,クリアボディ,あいてに　のうりょくを\nさげられない。
+12,1,30,しぜんかいふく,じょうたい　いじょうが\nひっこむと　なおる。
+12,1,31,ひらいしん,でんきタイプの　わざを\nすべて　うける。
+12,1,32,てんのめぐみ,わざの　ついかこうかが\nでやすい。
+12,1,33,すいすい,あめのとき　すばやさが\nあがる。
+12,1,34,ようりょくそ,はれのとき　すばやさが\nあがる。
+12,1,35,はっこう,やせいの　ポケモンに\nそうぐう　しやすくなる。
+12,1,36,トレース,あいてと　おなじ\nとくせいに　なる。
+12,1,37,ちからもち,ぶつり　こうげきの\nいりょくが　あがる。
+12,1,38,どくのトゲ,ふれた　あいてに　どくを\nおわせる　ことがある。
+12,1,39,せいしんりょく,ひるまない。\n
+12,1,40,マグマのよろい,こおり　じょうたいに\nならない。
+12,1,41,みずのベール,やけど　じょうたいに\nならない。
+12,1,42,じりょく,はがねタイプの　ポケモンを\nにげられなくする。
+12,1,43,ぼうおん,おとの　わざを\nうけない。
+12,1,44,あめうけざら,あめのとき　すこしずつ\nＨＰを　かいふくする。
+12,1,45,すなおこし,せんとうで　すなあらしを\nおこす。
+12,1,46,プレッシャー,あいての　つかう　わざの\nＰＰを　おおく　へらす。
+12,1,47,あついしぼう,ほのおと　こおりタイプの\nわざに　つよい。
+12,1,48,はやおき,おきるのが　はやくなる。\n
+12,1,49,ほのおのからだ,ふれた　あいてを　やけど\nさせることがある。
+12,1,50,にげあし,やせいの　ポケモンから\nかならず　にげられる。
+12,1,51,するどいめ,あいてに　めいちゅうりつを\nさげられない。
+12,1,52,かいりきバサミ,あいてに　こうげきを\nさげられない。
+12,1,53,ものひろい,どうぐを　ひろってくる\nことが　ある。
+12,1,54,なまけ,こうげきが　れんぞくで\nだせない。
+12,1,55,はりきり,こうげきは　たかいが\nはずれやすい。
+12,1,56,メロメロボディ,ふれると　メロメロに\nすることがある。
+12,1,57,プラス,マイナスが　いると\nとくこうが　あがる。
+12,1,58,マイナス,プラスが　いると\nとくこうが　あがる。
+12,1,59,てんきや,てんきで　ポワルンが\nへんかする。
+12,1,60,ねんちゃく,どうぐを　とられない。\n
+12,1,61,だっぴ,じょうたい　いじょうを\nなおす　ことがある。
+12,1,62,こんじょう,じょうたい　いじょうで\nこうげきが　あがる。
+12,1,63,ふしぎなうろこ,じょうたい　いじょうで\nぼうぎょが　あがる。
+12,1,64,ヘドロえき,すいとった　あいての\nＨＰを　へらす
+12,1,65,しんりょく,ピンチのとき　くさの\nいりょくが　あがる。
+12,1,66,もうか,ピンチのとき　ほのおの\nいりょくが　あがる。
+12,1,67,げきりゅう,ピンチのとき　みずの\nいりょくが　あがる。
+12,1,68,むしのしらせ,ピンチのとき　むしの\nいりょくが　あがる。
+12,1,69,いしあたま,ぶつかっても\nはんどうを　うけない。
+12,1,70,ひでり,せんとうに　でると\nにほんばれに　なる。
+12,1,71,ありじごく,せんとうで　あいてを\nにげられなくする。
+12,1,72,やるき,ねむり　じょうたいに\nならない。
+12,1,73,しろいけむり,あいてに　のうりょくを\nさげられない。
+12,1,74,ヨガパワー,ぶつり　こうげきの\nいりょくが　あがる。
+12,1,75,シェルアーマー,あいての　こうげきが\nきゅうしょに　あたらない。
+12,1,76,エアロック,てんきの　えいきょうが\nなくなる。
+12,1,77,ちどりあし,こんらん　していると\nかいひ　しやすくなる。
+12,1,78,でんきエンジン,でんきを　うけると\nすばやさが　あがる。
+12,1,79,とうそうしん,せいべつが　おなじだと\nこうげきが　あがる。
+12,1,80,ふくつのこころ,ひるむ　たびに\nすばやさが　あがる。
+12,1,81,ゆきがくれ,てんきが　あられのとき\x0001\nかいひりつが　あがる。
+12,1,82,くいしんぼう,きのみを　いつもより\nはやく　つかう。
+12,1,83,いかりのつぼ,きゅうしょに　うけると\nこうげきが　あがる。
+12,1,84,かるわざ,どうぐが　なくなると\nすばやさが　あがる。
+12,1,85,たいねつ,ほのお　わざの\nいりょくを　よわめる。
+12,1,86,たんじゅん,のうりょく　へんかが\nいつもより　はげしい。
+12,1,87,かんそうはだ,あついと　ＨＰが　へる。\nみずで　ＨＰを　かいふく。
+12,1,88,ダウンロード,あいての　のうりょくを\nみて　つよさを　かえる。
+12,1,89,てつのこぶし,パンチを　つかう　わざの\nいりょくが　あがる。
+12,1,90,ポイズンヒール,どくじょうたいに　なると\nＨＰを　かいふくする。
+12,1,91,てきおうりょく,タイプが　おなじ　わざの\nいりょくが　あがる。
+12,1,92,スキルリンク,れんぞく　わざを\nたくさん　だせる。
+12,1,93,うるおいボディ,じょうたい　いじょうが\nあめの　とき　なおる。
+12,1,94,サンパワー,はれると　ＨＰが　へるが\nとくこうが　あがる。
+12,1,95,はやあし,じょうたい　いじょうで\nすばやさが　あがる。
+12,1,96,ノーマルスキン,だしたわざが　すべて\nノーマルタイプに　なる。
+12,1,97,スナイパー,きゅうしょに　あてたとき\nいりょくが　あがる。
+12,1,98,マジックガード,こうげき　いがいでは\nダメージを　うけない。
+12,1,99,ノーガード,おたがいの　わざが\nかならず　あたる。
+12,1,100,あとだし,あいてより　すばやくても\nこうどうが　おそくなる。
+12,1,101,テクニシャン,よわい　わざの\nいりょくが　あがる。
+12,1,102,リーフガード,じょうたい　いじょうに\nはれのとき　ならない。
+12,1,103,ぶきよう,もっている　どうぐを\nつかうことが　できない。
+12,1,104,かたやぶり,とくせいに　かんけいなく\nあいてに　わざを　だせる。
+12,1,105,きょううん,あいての　きゅうしょに\nこうげきが　あたりやすい。
+12,1,106,ゆうばく,ひんしの　ときに　ふれた\nあいてに　ダメージ。
+12,1,107,きけんよち,あいての　もつ　きけんな\nわざを　さっちする。
+12,1,108,よちむ,あいての　もつ　わざを\nよみとることが　できる。
+12,1,109,てんねん,あいての　のうりょくの\nへんかを　むしする。
+12,1,110,いろめがね,こうかいまひとつ　のとき\nわざを　つよめる。
+12,1,111,フィルター,こうかばつぐん　のとき\nいりょくを　よわめる。
+12,1,112,スロースタート,こうげきと　すばやさが\nしばらく　はんぶんになる。
+12,1,113,きもったま,ゴーストタイプに　わざが\nあたるようになる。
+12,1,114,よびみず,みずタイプの　わざを\nすべて　うける。
+12,1,115,アイスボディ,てんきが　あられのとき\nＨＰを　かいふくする。
+12,1,116,ハードロック,こうかばつぐん　のとき\nいりょくを　よわめる。
+12,1,117,ゆきふらし,せんとうに　でると\nあられを　ふらす。
+12,1,118,みつあつめ,あまいミツを　あつめて\nくることが　ある。
+12,1,119,おみとおし,あいての　もちものを\nしることが　できる。
+12,1,120,すてみ,はんどうで　ダメージを\nうけるわざが　つよくなる。
+12,1,121,マルチタイプ,もっている　プレートで\nタイプが　かわる。
+12,1,122,フラワーギフト,はれのとき　じぶんと\nみかたが　つよくなる。
+12,1,123,ナイトメア,ねむっている　あいての\nＨＰを　へらす。
+12,2,1,Stench,The stench helps keep\nwild Pokémon away.
+12,2,2,Drizzle,The Pokémon makes it rain\nif it appears in battle.
+12,2,3,Speed Boost,Its Speed stat is\ngradually boosted.
+12,2,4,Battle Armor,The Pokémon is protected\nagainst critical hits.
+12,2,5,Sturdy,It is protected against\n1-hit KO attacks.
+12,2,6,Damp,Prevents combatants\nfrom self-destructing.
+12,2,7,Limber,The Pokémon is protected\nfrom paralysis.
+12,2,8,Sand Veil,Boosts the Pokémon’s\nevasion in a sandstorm.
+12,2,9,Static,Contact with the Pokémon\nmay cause paralysis.
+12,2,10,Volt Absorb,Restores HP if hit by an\nElectric-type move.
+12,2,11,Water Absorb,Restores HP if hit by a\nWater-type move.
+12,2,12,Oblivious,Prevents it from\nbecoming infatuated.
+12,2,13,Cloud Nine,Eliminates the effects of\nweather.
+12,2,14,Compoundeyes,The Pokémon’s accuracy\nis boosted.
+12,2,15,Insomnia,Prevents the Pokémon\nfrom falling asleep.
+12,2,16,Color Change,Changes the Pokémon’s\ntype to the foe’s move.
+12,2,17,Immunity,Prevents the Pokémon\nfrom getting poisoned.
+12,2,18,Flash Fire,It powers up Fire-type\nmoves if it’s hit by one.
+12,2,19,Shield Dust,Blocks the added effects\nof attacks taken.
+12,2,20,Own Tempo,Prevents the Pokémon\nfrom becoming confused.
+12,2,21,Suction Cups,Negates foes’ moves that\nforce switching out.
+12,2,22,Intimidate,Lowers the foe’s\nAttack stat.
+12,2,23,Shadow Tag,Prevents the foe from\nescaping.
+12,2,24,Rough Skin,Inflicts damage to the\nfoe on contact.
+12,2,25,Wonder Guard,Only supereffective\nmoves will hit.
+12,2,26,Levitate,Gives full immunity to all\nGround-type moves.
+12,2,27,Effect Spore,"Contact may paralyze,\npoison, or cause sleep."
+12,2,28,Synchronize,"Passes a burn, poison,\nor paralysis to the foe."
+12,2,29,Clear Body,Prevents its stats from\nbeing lowered.
+12,2,30,Natural Cure,All status problems heal\nwhen it switches out.
+12,2,31,Lightningrod,The Pokémon draws in all\nElectric-type moves.
+12,2,32,Serene Grace,Boosts the likelihood of\nadded effects appearing.
+12,2,33,Swift Swim,Boosts the Pokémon’s\nSpeed in rain.
+12,2,34,Chlorophyll,Boosts the Pokémon’s\nSpeed in sunshine.
+12,2,35,Illuminate,Raises the likelihood of\nmeeting wild Pokémon.
+12,2,36,Trace,The Pokémon copies the\nfoe’s ability.
+12,2,37,Huge Power,Raises the Pokémon’s\nAttack stat.
+12,2,38,Poison Point,Contact with the Pokémon\nmay poison the foe.
+12,2,39,Inner Focus,The Pokémon is protected\nfrom flinching.
+12,2,40,Magma Armor,Prevents the Pokémon\nfrom becoming frozen.
+12,2,41,Water Veil,Prevents the Pokémon\nfrom getting a burn.
+12,2,42,Magnet Pull,Prevents Steel-type\nPokémon from escaping.
+12,2,43,Soundproof,Gives full immunity to all\nsound-based moves.
+12,2,44,Rain Dish,The Pokémon gradually\nrecovers HP in rain.
+12,2,45,Sand Stream,The Pokémon summons a\nsandstorm in battle.
+12,2,46,Pressure,The Pokémon raises the\nfoe’s PP usage.
+12,2,47,Thick Fat,Ups resistance to Fire-\nand Ice-type moves.
+12,2,48,Early Bird,The Pokémon awakens\nquickly from sleep.
+12,2,49,Flame Body,Contact with the Pokémon\nmay burn the foe.
+12,2,50,Run Away,Enables sure getaway\nfrom wild Pokémon.
+12,2,51,Keen Eye,Prevents the Pokémon\nfrom losing accuracy.
+12,2,52,Hyper Cutter,Prevents the Attack\nstat from being lowered.
+12,2,53,Pickup,The Pokémon may\npick up items.
+12,2,54,Truant,Pokémon can’t attack\non consecutive turns.
+12,2,55,Hustle,"Boosts the Attack stat,\nbut lowers accuracy."
+12,2,56,Cute Charm,Contact with the Pokémon\nmay cause infatuation.
+12,2,57,Plus,Ups Sp. Atk if another\nPokémon has Minus.
+12,2,58,Minus,Ups Sp. Atk if another\nPokémon has Plus.
+12,2,59,Forecast,CASTFORM transforms with\nthe weather.
+12,2,60,Sticky Hold,Protects the Pokémon\nfrom item theft.
+12,2,61,Shed Skin,The Pokémon may heal its\nown status problems.
+12,2,62,Guts,Boosts Attack if there is\na status problem.
+12,2,63,Marvel Scale,Ups Defense if there is\na status problem.
+12,2,64,Liquid Ooze,Inflicts damage on foes\nusing any draining move.
+12,2,65,Overgrow,Powers up Grass-type\nmoves in a pinch.
+12,2,66,Blaze,Powers up Fire-type\nmoves in a pinch.
+12,2,67,Torrent,Powers up Water-type\nmoves in a pinch.
+12,2,68,Swarm,Powers up Bug-type\nmoves in a pinch.
+12,2,69,Rock Head,Protects the Pokémon\nfrom recoil damage.
+12,2,70,Drought,The Pokémon makes it\nsunny if it is in battle.
+12,2,71,Arena Trap,Prevents the foe from\nfleeing.
+12,2,72,Vital Spirit,Prevents the Pokémon\nfrom falling asleep.
+12,2,73,White Smoke,Prevents its stats from\nbeing lowered.
+12,2,74,Pure Power,Boosts the power of\nphysical attacks.
+12,2,75,Shell Armor,The Pokémon is protected\nagainst critical hits.
+12,2,76,Air Lock,Eliminates the effects of\nweather.
+12,2,77,Tangled Feet,Raises evasion if the\nPokémon is confused.
+12,2,78,Motor Drive,Raises Speed if hit by an\nElectric-type move.
+12,2,79,Rivalry,Raises Attack if the foe\nis of the same gender.
+12,2,80,Steadfast,Raises Speed each time\nthe Pokémon flinches.
+12,2,81,Snow Cloak,Raises evasion in a\nhailstorm.
+12,2,82,Gluttony,Encourages the early use\nof a held Berry.
+12,2,83,Anger Point,Raises Attack upon\ntaking a critical hit.
+12,2,84,Unburden,Raises Speed if a held\nitem is used.
+12,2,85,Heatproof,Weakens the power of\nFire-type moves.
+12,2,86,Simple,The Pokémon is prone to\nwild stat changes.
+12,2,87,Dry Skin,Reduces HP if it is hot.\nWater restores HP.
+12,2,88,Download,Adjusts power according\nto the foe’s ability.
+12,2,89,Iron Fist,Boosts the power of\npunching moves.
+12,2,90,Poison Heal,Restores HP if the\nPokémon is poisoned.
+12,2,91,Adaptability,Powers up moves of the\nsame type.
+12,2,92,Skill Link,Increases the frequency\nof multi-strike moves.
+12,2,93,Hydration,Heals status problems if\nit is raining.
+12,2,94,Solar Power,"Boosts Sp. Atk, but\nlowers HP in sunshine."
+12,2,95,Quick Feet,Boosts Speed if there is\na status problem.
+12,2,96,Normalize,All the Pokémon’s moves\nbecome the Normal type.
+12,2,97,Sniper,Powers up moves if they\nbecome critical hits.
+12,2,98,Magic Guard,The Pokémon only takes\ndamage from attacks.
+12,2,99,No Guard,Ensures both Pokémon’s\nand foe’s attacks land.
+12,2,100,Stall,The Pokémon moves after\neven slower foes.
+12,2,101,Technician,Powers up the Pokémon’s\nweaker moves.
+12,2,102,Leaf Guard,Prevents problems with\nstatus in sunny weather.
+12,2,103,Klutz,The Pokémon can’t use\nany held items.
+12,2,104,Mold Breaker,Moves can be used\nregardless of abilities.
+12,2,105,Super Luck,Heightens the critical-\nhit ratios of moves.
+12,2,106,Aftermath,Damages the foe landing\nthe finishing hit.
+12,2,107,Anticipation,Senses the foe’s\ndangerous moves.
+12,2,108,Forewarn,Determines what moves\nthe foe has.
+12,2,109,Unaware,Ignores any change in\nability by the foe.
+12,2,110,Tinted Lens,Powers up “not very\neffective” moves.
+12,2,111,Filter,Reduces damage from\nsupereffective attacks.
+12,2,112,Slow Start,Temporarily halves\nAttack and Speed.
+12,2,113,Scrappy,Enables moves to hit\nGhost-type foes.
+12,2,114,Storm Drain,The Pokémon draws in all\nWater-type moves.
+12,2,115,Ice Body,The Pokémon regains HP in\na hailstorm.
+12,2,116,Solid Rock,Reduces damage from\nsupereffective attacks
+12,2,117,Snow Warning,The Pokémon summons a\nhailstorm in battle.
+12,2,118,Honey Gather,The Pokémon may gather\nHoney from somewhere.
+12,2,119,Frisk,The Pokémon can check\nthe foe’s held item.
+12,2,120,Reckless,Powers up moves that\nhave recoil damage.
+12,2,121,Multitype,Changes type to match\nthe held Plate.
+12,2,122,Flower Gift,Powers up party Pokémon\nwhen it is sunny.
+12,2,123,Bad Dreams,Reduces a sleeping\nfoe’s HP.
+12,3,1,Puanteur,La puanteur peut repous-\nser les Pokémon sauvages.
+12,3,2,Crachin,Le Pokémon invoque la pluie\nquand il entre au combat.
+12,3,3,Turbo,La Vitesse du Pokémon\naugmente progressivement.
+12,3,4,Armurbaston,Le Pokémon est protégé\ndes coups critiques.
+12,3,5,Fermeté,Protège des capacités\nmettant K.O. en un coup.
+12,3,6,Moiteur,Empêche les combattants\nde s’autodétruire.
+12,3,7,Echauffement,Protège le Pokémon de\nla paralysie.
+12,3,8,Voile Sable,Augmente l’esquive lors\ndes tempêtes de sable.
+12,3,9,Statik,Un contact avec le\nPokémon peut paralyser.
+12,3,10,Absorb Volt,Récupère des PV si touché\npar une capacité Electrik.
+12,3,11,Absorb Eau,Récupère des PV si touché\npar une capacité Eau.
+12,3,12,Benêt,Empêche le Pokémon de\ntomber amoureux.
+12,3,13,Ciel Gris,Annule les effets du\nclimat.
+12,3,14,Oeil Composé,Augmente la précision du\nPokémon.
+12,3,15,Insomnia,Empêche le Pokémon de\ns’endormir.
+12,3,16,Déguisement,Le Pokémon adopte le type\nde la capacité ennemie.
+12,3,17,Vaccin,Empêche le Pokémon d’être\nempoisonné.
+12,3,18,Torche,Booste capacités Feu si\ntouché par attaques Feu.
+12,3,19,Ecran Poudre,Annule les effets cumulés\nd’une attaque ennemie.
+12,3,20,Tempo Perso,Empêche la confusion.
+12,3,21,Ventouse,Annule les cap. forçant\nà changer de Pokémon.
+12,3,22,Intimidation,Baisse l’Attaque ennemie.
+12,3,23,Marque Ombre,Empêche le Pokémon ennemi\nde quitter le combat.
+12,3,24,Peau Dure,Le Pokémon blesse\nl’ennemi qui le touche.
+12,3,25,Garde Mystik,Seules capacités “super\nefficaces” l’atteignent.
+12,3,26,Lévitation,Immunise contre toutes\nles capacités de type Sol.
+12,3,27,Pose Spore,"Peut paralyser, empoison-\nner, endormir au contact."
+12,3,28,Synchro,"Transmet brûlure, poison\nou paralysie à l’ennemi."
+12,3,29,Corps Sain,Peut empêcher les stats\ndu Pokémon de baisser.
+12,3,30,Médic Nature,Quitter le combat soigne\nles problèmes de statut.
+12,3,31,Paratonnerre,Le Pokémon attire les\ncapacités Electrik.
+12,3,32,Sérénité,Augmente la fréquence\ndu cumul d’effets.
+12,3,33,Glissade,Augmente la Vitesse du\nPokémon s’il pleut.
+12,3,34,Chlorophyle,Augmente la Vitesse du\nPokémon s’il y a du soleil.
+12,3,35,Lumiatirance,Augmente les rencontres\navec Pokémon sauvages.
+12,3,36,Calque,Imite la capacité spéciale\nde l’ennemi.
+12,3,37,Coloforce,Augmente l’Attaque du\nPokémon.
+12,3,38,Point Poison,Peut empoisonner l’ennemi\ns’il y a contact.
+12,3,39,Attention,Empêche le Pokémon\nd’avoir peur.
+12,3,40,Armumagma,Protège le Pokémon\ncontre le gel.
+12,3,41,Ignifu-Voile,Protège le Pokémon\ndes brûlures.
+12,3,42,Magnépiège,Empêche les Pokémon Acier\nde fuir.
+12,3,43,Anti-Bruit,Protège de toutes les\ncapacités sonores.
+12,3,44,Cuvette,Récupère progressivement\ndes PV par temps de pluie.
+12,3,45,Sable Volant,Le Pokémon invoque une\ntempête de sable.
+12,3,46,Pression,Force l’ennemi à\ndépenser plus de PP.
+12,3,47,Isograisse,Augmente la résistance\naux cap. Feu et Glace.
+12,3,48,Matinal,Le Pokémon se réveille\nplus rapidement.
+12,3,49,Corps Ardent,Peut brûler l’ennemi s’il y\na contact.
+12,3,50,Fuite,Permet de fuir n’importe\nquel Pokémon sauvage.
+12,3,51,Regard Vif,Empêche le Pokémon de\nperdre en précision.
+12,3,52,Hyper Cutter,Empêche la réduction de\nl’Attaque.
+12,3,53,Ramassage,Permet parfois au Pokémon\nde ramasser des objets.
+12,3,54,Absentéisme,Le Pokémon ne frappe\nqu’un tour sur deux.
+12,3,55,Agitation,Améliore l’Attaque mais\ndiminue la précision.
+12,3,56,Joli Sourire,Séduit parfois l’ennemi\nau contact.
+12,3,57,Plus,Améliore l’Atq. Spé. si un\nautre Pokémon a Minus.
+12,3,58,Minus,Améliore l’Atq. Spé. si un\nautre Pokémon a Plus.
+12,3,59,Météo,MORPHEO change de forme\nselon le climat.
+12,3,60,Glue,Protège le Pokémon\ncontre le vol d’objets.
+12,3,61,Mue,Le Pokémon soigne parfois\nses problèmes de statut.
+12,3,62,Cran,Augmente l’Attaque s’il y\na un problème de statut.
+12,3,63,Ecaille Spé.,Augmente la Défense s’il y\na un problème de statut.
+12,3,64,Suintement,Blesse l’ennemi qui draine\nl’énergie du Pokémon.
+12,3,65,Engrais,Booste les capacités\nPlante en cas de besoin.
+12,3,66,Brasier,Booste les capacités\nFeu en cas de besoin.
+12,3,67,Torrent,Booste les capacités\nEau en cas de besoin.
+12,3,68,Essaim,Booste les capacités\nInsecte en cas de besoin.
+12,3,69,Tête de Roc,Protège le Pokémon des\ndégâts de contrecoups.
+12,3,70,Sécheresse,Invoque le soleil quand il\nest au combat.
+12,3,71,Piège,Empêche l’ennemi de\ns’enfuir.
+12,3,72,Esprit Vital,Empêche le Pokémon\nde s’endormir.
+12,3,73,Ecran Fumée,Empêche la réduction des\nstats du Pokémon.
+12,3,74,Force Pure,Augmente la puissance des\nattaques physiques.
+12,3,75,Coque Armure,Protège le Pokémon contre\nles coups critiques.
+12,3,76,Air Lock,Annule les effets du\nclimat.
+12,3,77,Pieds Confus,Augmente l’esquive si le\nPokémon est confus.
+12,3,78,Motorisé,Augmente la Vit. si touché\npar une cap. Electrik.
+12,3,79,Rivalité,Augmente l’Attaque si\nl’ennemi est du même sexe.
+12,3,80,Impassible,Augmente la Vitesse quand\nle Pokémon a peur.
+12,3,81,Rideau Neige,Augmente l’esquive durant\nles tempêtes de grêle.
+12,3,82,Gloutonnerie,Encourage l’utilisation\nd’une Baie tenue.
+12,3,83,Colérique,Monte l’Attaque au max.\naprès un coup critique.
+12,3,84,Délestage,Augmente la Vit. si l’objet\ntenu est utilisé ou perdu.
+12,3,85,Ignifuge,Réduit la puissance des\ncapacités de type Feu.
+12,3,86,Simple,Le Pokémon est sujet à\ndes variations de stats.
+12,3,87,Peau Sèche,Perd des PV à la chaleur.\nL’eau les restaure.
+12,3,88,Télécharge,Ajuste la puissance selon\nl’ennemi.
+12,3,89,Poing de Fer,Augmente la puissance des\ncapacités coups de poing.
+12,3,90,Soin Poison,Restaure des PV si le\nPokémon est empoisonné.
+12,3,91,Adaptabilité,Augmente la puissance des\ncapacités de même type.
+12,3,92,Multi-Coups,Augmente la fréquence des\nattaques multiples.
+12,3,93,Hydratation,Soigne les problèmes de\nstatut s’il pleut.
+12,3,94,Force Soleil,Augmente l’Atq. Spé. mais\nbaisse les PV au soleil.
+12,3,95,Pied Véloce,Augmente la Vitesse s’il y\na un problème de statut.
+12,3,96,Normalise,Toutes les capacités sont\nde type Normal.
+12,3,97,Sniper,Booste les capacités qui\nsont des coups critiques.
+12,3,98,Garde Magik,Seule une attaque directe\npeut blesser le Pokémon.
+12,3,99,Annule Garde,Attaques du Pokémon et\nde l’ennemi réussissent.
+12,3,100,Frein,"Attaque toujours après \nl’ennemi, même plus lent."
+12,3,101,Technicien,Augmente la puissance des\ncapacités les plus faibles.
+12,3,102,Feuil. Garde,Empêche les problèmes\nde statut au soleil.
+12,3,103,Maladresse,Le Pokémon ne peut\nutiliser aucun objet tenu.
+12,3,104,Brise Moule,Cap. utilisables quelles\nque soient les cap. spé.
+12,3,105,Chanceux,Augmente la fréquence\ndes coups critiques.
+12,3,106,Boom Final,Blesse l’ennemi qui \nporte le coup de grâce.
+12,3,107,Anticipation,Prévoit les capacités\nennemies dangereuses.
+12,3,108,Prédiction,Découvre la capacité\nennemie la plus puissante.
+12,3,109,Inconscient,Ignore les changements de\nstats de l’ennemi.
+12,3,110,Lentiteintée,Améliore les capacités\n“pas très efficaces”.
+12,3,111,Filtre,Affaiblit les capacités\n“super efficaces”.
+12,3,112,Début Calme,Divise temporairement\nVitesse et Attaque par 2.
+12,3,113,Querelleur,Les capacités touchent\nles Pokémon Spectre.
+12,3,114,Lavabo,Attire les attaques Eau\nvisant un Pokémon.
+12,3,115,Corps Gel,Récupère des PV lors des\ntempêtes de grêle.
+12,3,116,Solide Roc,Affaiblit les capacités\n“super efficaces”.
+12,3,117,Alerte Neige,Déclenche une tempête de\ngrêle pendant le combat.
+12,3,118,Cherche Miel,Le Pokémon peut parfois\ntrouver du Miel.
+12,3,119,Fouille,Permet de connaître\nl’objet tenu par l’ennemi.
+12,3,120,Téméraire,Booste les cap. ayant des\ndégâts de contrecoups.
+12,3,121,Multi-Type,Modifie le type en fonction\nde la Plaque tenue.
+12,3,122,Don Floral,Pokémon de l’équipe plus\npuissants au soleil.
+12,3,123,Mauvais Rêve,Réduit les PV d’un ennemi\nendormi.
+12,4,1,Duftnote,"Hilft, wilde Pokémon\nfernzuhalten."
+12,4,2,Niesel,Ruft im Kampf\nRegen herbei.
+12,4,3,Temposchub,Erhöht Initiative nach\nund nach.
+12,4,4,Kampfpanzer,Wehrt Volltreffer ab.
+12,4,5,Robustheit,Schutz gegen\nK.O.-Treffer-Angriffe.
+12,4,6,Feuchtigkeit,Verhindert Selbstzer-\nstörung der Kämpfenden.
+12,4,7,Flexibilität,Verhindert Paralyse.
+12,4,8,Sandschleier,Erhöht Fluchtwert im\nSandsturm.
+12,4,9,Statik,Kann bei Berührung\nparalysieren.
+12,4,10,Voltabsorber,Wandelt Elektrizität in\nKP um.
+12,4,11,H2O-Absorber,Wandelt Wasser in KP um.
+12,4,12,Dösigkeit,Verhindert Anziehung.
+12,4,13,Wolke Sieben,Keine Wetter-Effekte.
+12,4,14,Facettenauge,Steigert Genauigkeit.
+12,4,15,Insomnia,Verhindert Einschlafen.
+12,4,16,Farbwechsel,Typ des Anwenders wird zu\ndem der gegnerischen Att.
+12,4,17,Immunität,Verhindert Vergiftungen.
+12,4,18,Feuerfänger,"Verstärkt Feuer-A., wenn\nv. Feuer-A. getroffen."
+12,4,19,Puderabwehr,Blockiert Zusatz-Effekte\ngegnerischer Angriffe.
+12,4,20,Tempomacher,Verhindert Verwirrung.
+12,4,21,Saugnapf,"Neg. gegn. Att., die PKMN\naustauschen würden."
+12,4,22,Bedroher,Senkt Angriff des\nGegners.
+12,4,23,Wegsperre,Hindert Gegner an Flucht.
+12,4,24,Rauhaut,Verletzt bei Berührung.
+12,4,25,Wunderwache,Nur sehr effektive Treffer\nschaden.
+12,4,26,Schwebe,Volle Immunität gegen\nalle Boden-Attacken.
+12,4,27,Sporenwirt,"Bei Kontakt evtl. Paraly.,\nVergiftg. oder Schlaf."
+12,4,28,Synchro,"Gibt Verbrennung, Ver-\ngiftung u. Paraly. an Geg."
+12,4,29,Neutraltorso,Verhindert Absenken\nder Statuswerte evtl.
+12,4,30,Innere Kraft,Heilt bei Austausch\nStatusprobleme.
+12,4,31,Blitzfänger,Zieht Elektro-Attacken\nan.
+12,4,32,Edelmut,Erhöht Chance für\nZusatz-Effekte.
+12,4,33,Wassertempo,Steigert Initiative bei\nRegen.
+12,4,34,Chlorophyll,Steigert Initiative bei\nSonnenschein.
+12,4,35,Erleuchtung,Mehr Pokémon-\nBegegnungen.
+12,4,36,Fährte,Das Pokémon kopiert \nFähigkeit des Gegners.
+12,4,37,Kraftkoloss,Steigert den Angriffs-\nWert eines Pokémon.
+12,4,38,Giftdorn,Vergiftet den Gegner\neventuell bei Berührung.
+12,4,39,Konzentrator,Verhindert\nZurückschrecken.
+12,4,40,Magmapanzer,Verhindert Einfrieren.
+12,4,41,Aquahülle,Verhindert\nVerbrennungen.
+12,4,42,Magnetfalle,Verhindert Flucht von\nStahl-Pokémon.
+12,4,43,Lärmschutz,Immun gegen Lärm-\nAttacken.
+12,4,44,Regengenuss,Langsame Wiederherstellg.\nvon KP bei Regen.
+12,4,45,Sandsturm,Erzeugt einen Sandsturm.
+12,4,46,Erzwinger,Steigert den Verbrauch\nder AP des Gegners.
+12,4,47,Speckschicht,Schutz vor Hitze\nund Kälte.
+12,4,48,Frühwecker,Schnelles Aufwachen.
+12,4,49,Flammkörper,Kann bei Kontakt zu\nVerbrennung führen.
+12,4,50,Angsthase,Erleichtert das\nEntkommen.
+12,4,51,Adlerauge,Verhindert Verlust der\nGenauigkeit.
+12,4,52,Scherenmacht,Verhindert Angriff-Reduz.
+12,4,53,Mitnahme,Kann Items aufnehmen.
+12,4,54,Schnarchnase,Greift nur in jedem\n2. Zug an.
+12,4,55,Übereifer,"Erhöht Angriffs-Wert,\nsenkt Genauigkeit."
+12,4,56,Charmebolzen,Kann bei Kontakt\nbetörend wirken.
+12,4,57,Plus,"Steigert Spezial-Angriff,\nwenn ein PKMN Minus hat."
+12,4,58,Minus,"Steigert Spezial-Angriff,\nwenn ein PKMN Plus hat."
+12,4,59,Prognose,FORMEO verändert seine\nForm abhängig vom Wetter.
+12,4,60,Wertehalter,Verhindert Item-\nDiebstahl.
+12,4,61,Expidermis,PKMN heilt eventuell\nseine Statusprobleme.
+12,4,62,Adrenalin,Steigert Angriff bei\nStatusproblemen.
+12,4,63,Notschutz,Steigert Verteidigung bei\nStatusproblemen.
+12,4,64,Kloakensoße,"Schadet Gegnern, die\nSaug-Attacken einsetzen."
+12,4,65,Notdünger,Stärkt Pflanzen-\nAttacken in Not.
+12,4,66,Großbrand,Stärkt Feuer-Attacken\nin Not.
+12,4,67,Sturzbach,Stärkt Wasser-Attacken\nin Not.
+12,4,68,Hexaplaga,Stärkt Käfer-Attacken\nin Not.
+12,4,69,Steinhaupt,"Verhindert Schaden, der\ndurch Rückstoß entsteht."
+12,4,70,Dürre,Erzeugt Sonne im Kampf.
+12,4,71,Auswegslos,Verhindert Flucht\ndes Gegners.
+12,4,72,Munterkeit,Verhindert Einschlafen.
+12,4,73,Pulverrauch,Verhindert das Absenken\nder Statuswerte.
+12,4,74,Mentalkraft,Steigert Kraft physischer\nAngriffe.
+12,4,75,Panzerhaut,Wehrt Volltreffer ab.
+12,4,76,Klimaschutz,Eliminiert die Wirkung\ndes Wetters.
+12,4,77,Fußangel,"Erhöht Fluchtwert, wenn\ndas Pokémon verwirrt ist."
+12,4,78,Starthilfe,Erhöht Initiative nach\neiner Elektro-Attacke.
+12,4,79,Rivalität,"Erhöht Angriff, wenn Gegn.\ndasselbe Geschlecht hat."
+12,4,80,Felsenfest,"Erhöht Initiative, sobald\nPokémon zurückschreckt."
+12,4,81,Schneemantel,Erhöht Fluchtwert\nwährend Hagelschauer.
+12,4,82,Völlerei,Ermutigt zum frühzeitigen\nVerwenden einer Beere.
+12,4,83,Kurzschluss,Maximiert Angriff n. Ein-\nstecken e. Volltreffers.
+12,4,84,Entlastung,"Erhöht Init., wenn 1 Item\nverwendet/verloren wird."
+12,4,85,Hitzeschutz,Senkt die Kraft von\nFeuer-Attacken.
+12,4,86,Wankelmut,Das Pokémon ist anfällig\nfür Statusveränderungen.
+12,4,87,Trockenheit,Heißes Wetter reduziert\nKP. Wasser steigert KP.
+12,4,88,Download,Passt Kraft entsprechend\nder gegn. Statuswerte an.
+12,4,89,Eisenfaust,Steigert die Effektivität\nvon Box-Attacken.
+12,4,90,Aufheber,"Steigert KP, wenn das\nPokémon vergiftet ist."
+12,4,91,Anpassung,Steigert Attacken\ndesselben Typs.
+12,4,92,Wertelink,Erhöht die Häufigkeit von\nMehrfach-Attacken.
+12,4,93,Hydration,Heilt Statusprobleme\nbei Regen.
+12,4,94,Solarkraft,"Steigert Spezial-Angriff\nbei Sonne, senkt aber KP."
+12,4,95,Rasanz,Erhöht Initiative bei\nStatusproblemen.
+12,4,96,Regulierung,Alle Attacken des Pokémon\nwerden zu Normal-Att.
+12,4,97,Superschütze,Steigert Attacken nach\nVolltreffern.
+12,4,98,Magieschild,Das PKMN nimmt nur durch\ndirekte Attacken Schaden.
+12,4,99,Schildlos,Angriffe des Pokémon und\ndes Gegners treffen.
+12,4,100,Zeitspiel,Das Pokémon bewegt sich \nnach weniger agilen Gegn.
+12,4,101,Techniker,Steigert Effektivität von\nschwächeren Attacken.
+12,4,102,Floraschild,Verhindert Status-\nprobleme bei Sonne.
+12,4,103,Tollpatsch,Das Pokémon kann keine\ngetrag. Items verwenden.
+12,4,104,Überbrückung,Att. können unabhängig d.\nFähigkeit verw. werden.
+12,4,105,Glückspilz,Erhöht die Chance auf\neinen Volltreffer.
+12,4,106,Finalschlag,"Schadet dem Gegn., der\nfinale Attacke landet."
+12,4,107,Vorahnung,Ahnt gefährliche Attacken\ndes Gegners voraus.
+12,4,108,Vorwarnung,Gibt Auskunft über die\nstärkste gegn. Attacke.
+12,4,109,Unkenntnis,Ignoriert Wechsel der\nStatuswerte des Gegners.
+12,4,110,Aufwertung,Steigert nicht sehr\neffektive Attacken.
+12,4,111,Filter,Senkt die Stärke sehr\neffektiver Attacken.
+12,4,112,Saumselig,Halbiert zeitweilig Angriff\nund Initiative.
+12,4,113,Rauflust,"Ermöglicht, mit Attacken\nGeist-Gegner zu treffen."
+12,4,114,Sturmsog,"Zieht offens. Wasser-Att.\nan, die auf 1 PKMN zielen."
+12,4,115,Eishaut,Das Pokémon regeneriert\nwährend Hagelsturm KP.
+12,4,116,Felskern,Senkt die Stärke sehr\neffektiver Attacken.
+12,4,117,Hagelalarm,Pokémon beschwört einen\nHagelsturm herauf.
+12,4,118,Honigmaul,Pokémon kann Honig\nsammeln.
+12,4,119,Schnüffler,Gibt Auskunft über\ngegnerische Items.
+12,4,120,Achtlos,Steigert Attacken mit\nRückstoß-Schaden.
+12,4,121,Variabilität,Passt seinen Typ der\ngetragenen Tafel an.
+12,4,122,Pflanzengabe,Steigert Effektivität von\nTeam-Pokémon bei Sonne.
+12,4,123,Alptraum,Senkt die KP eines\nschlafenden Gegners.
+12,5,1,Tanfo,Questo tanfo allontana\ni Pokémon selvatici.
+12,5,2,Piovischio,"Se scende in campo, il\nPokémon attira pioggia."
+12,5,3,Acceleratore,Graduale aumento della\nVelocità del Pokémon.
+12,5,4,Lottascudo,Evita che il Pokémon\nsubisca brutti colpi.
+12,5,5,Vigore,Protegge dalle mosse che\ncausano KO in un colpo.
+12,5,6,Umidità,L’autodistruzione di chi\nè in campo è impedita.
+12,5,7,Scioltezza,Il Pokémon è protetto\ncontro la paralisi.
+12,5,8,Sabbiavelo,Elusione del Pokémon sale\nnella tempesta di sabbia.
+12,5,9,Statico,"Al contatto subito, può\ncausare paralisi."
+12,5,10,Assorbivolt,Ridà PS se si subisce una\nmossa di tipo Elettro.
+12,5,11,Assorbacqua,Ridà PS se si subisce\nuna mossa di tipo Acqua.
+12,5,12,Indifferenza,Impedisce al Pokémon di\ninfatuarsi.
+12,5,13,Antimeteo,Neutralizza gli effetti\nmeteo.
+12,5,14,Insettocchi,Aumenta la precisione\ndel Pokémon.
+12,5,15,Insonnia,Impedisce al Pokémon\ndi addormentarsi.
+12,5,16,Cambiacolore,Cambia il tipo del Pokémon\nsecondo la mossa subita.
+12,5,17,Immunità,Impedisce al Pokémon di\nvenire avvelenato.
+12,5,18,Fuocardore,Potenzia le mosse fuoco\nse colpiti dalle stesse.
+12,5,19,Polvoscudo,Blocca effetti aggiuntivi\ndegli attacchi subiti.
+12,5,20,Mente Locale,Impedisce al Pokémon\ndi subire la confusione.
+12,5,21,Ventose,Resiste alle mosse che\ncomportano sostituzione.
+12,5,22,Prepotenza,Riduce l’Attacco del\nnemico.
+12,5,23,Pedinombra,Impedisce la fuga al\nnemico.
+12,5,24,Cartavetro,Danneggia il nemico\nal contatto subito.
+12,5,25,Magidifesa,Rende vulnerabili solo\nalle mosse superefficaci.
+12,5,26,Levitazione,Protegge totalmente da\nattacchi di tipo Terra.
+12,5,27,Spargispora,"Al contatto può causare\nVLN, PAR o DRM."
+12,5,28,Sincronismo,"Passa veleno, paralisi o\nscottatura al nemico."
+12,5,29,Corpochiaro,"Evita la riduzione delle\nstatistiche, se subita."
+12,5,30,Alternacura,Cura i problemi di stato\ndel Pokémon sostituito.
+12,5,31,Parafulmine,Il Pokémon attira tutte\nle mosse di tipo Elettro.
+12,5,32,Leggiadro,Effetti aggiuntivi più\nprobabili.
+12,5,33,Nuotovelox,Dà al Pokémon più\nVelocità nella pioggia.
+12,5,34,Clorofilla,Aumenta Velocità del\nPokémon se c’è il sole.
+12,5,35,Risplendi,Più probabile incontrare\nPokémon selvatici.
+12,5,36,Traccia,Copia l’abilità del nemico.
+12,5,37,Macroforza,Migliora l’Attacco\ndel Pokémon.
+12,5,38,Velenopunto,"Al contatto subito, può\navvelenare il nemico."
+12,5,39,Fuocodentro,Impedisce al Pokémon\ndi tentennare.
+12,5,40,Magmascudo,Impedisce al Pokémon di\nrimanere congelato.
+12,5,41,Idrovelo,Impedisce al Pokémon di\nrimanere scottato.
+12,5,42,Magnetismo,Impedisce la fuga ai\nPokémon di tipo Acciaio.
+12,5,43,Antisuono,Protegge totalmente da\nmosse sonore.
+12,5,44,Copripioggia,Il Pokémon recupera PS\nquando piove.
+12,5,45,Sabbiafiume,Causa una tempesta di\nsabbia durante la lotta.
+12,5,46,Pressione,Il nemico usa più PP.
+12,5,47,Grassospesso,Protegge meglio da mosse\ndi tipo Fuoco e Ghiaccio.
+12,5,48,Sveglialampo,Il Pokémon si risveglia\nrapidamente dal sonno.
+12,5,49,Corpodifuoco,Il contatto subito può\nscottare il nemico.
+12,5,50,Fugafacile,Garantisce la fuga dai\nPokémon selvatici.
+12,5,51,Sguardofermo,Evita che cali la\nprecisione del Pokémon.
+12,5,52,Ipertaglio,Evita la riduzione\ndell’Attacco.
+12,5,53,Raccolta,Il Pokémon può\ntrovare strumenti.
+12,5,54,Pigrone,Il Pokémon può attaccare\nun turno sì e uno no.
+12,5,55,Tuttafretta,"Aumenta l’Attacco, ma\nriduce la precisione."
+12,5,56,Incantevole,"Al contatto subito, il\nnemico può infatuarsi."
+12,5,57,Più,Aumenta l’Att. Sp. se un\naltro Pokémon ha Meno.
+12,5,58,Meno,Aumenta l’Att. Sp. se un\naltro Pokémon ha Più.
+12,5,59,Previsioni,L’aspetto di CASTFORM\ncambia in base al tempo.
+12,5,60,Antifurto,Protegge il Pokémon\ndal furto di strumenti.
+12,5,61,Muta,Può guarire i problemi di\nstato del Pokémon.
+12,5,62,Dentistretti,Aumenta l’Attacco in\ncaso di problemi di stato.
+12,5,63,Pelledura,Aumenta la Difesa in caso\ndi problemi di stato.
+12,5,64,Melma,Danni al nemico che usa\nmosse assorbi-energia.
+12,5,65,Erbaiuto,In difficoltà potenzia\nle mosse di tipo Erba.
+12,5,66,Aiutofuoco,In difficoltà potenzia\nle mosse di tipo Fuoco.
+12,5,67,Acquaiuto,In difficoltà potenzia\nle mosse di tipo Acqua.
+12,5,68,Aiutinsetto,In difficoltà potenzia le\nmosse di tipo Coleottero.
+12,5,69,Testadura,Protegge il Pokémon dai\ncontraccolpi.
+12,5,70,Siccità,Il Pokémon fa uscire\nil sole nella lotta.
+12,5,71,Trappoarena,Impedisce la fuga al\nnemico.
+12,5,72,Spiritovivo,Impedisce al Pokémon\ndi addormentarsi.
+12,5,73,Fumochiaro,"Evita le riduzioni delle\nstatistiche, se subite."
+12,5,74,Forzapura,Aumenta la potenza degli\nattacchi fisici.
+12,5,75,Guscioscudo,Il Pokémon è protetto\ndai brutti colpi.
+12,5,76,Riparo,Neutralizza gli effetti\nmeteo.
+12,5,77,Intricopiedi,Aumenta l’elusione se\nil Pokémon è confuso.
+12,5,78,Elettrorapid,Aumenta Velocità se col-\npito da mosse elettriche.
+12,5,79,Antagonismo,Aumenta Att. se il nemico\nè dello stesso sesso.
+12,5,80,Cuordeciso,Aumenta la Velocità se\nil Pokémon tentenna.
+12,5,81,Mantelneve,Aumenta l’elusione\nquando grandina.
+12,5,82,Voracità,Favorisce l’uso rapido\ndi una Bacca tenuta.
+12,5,83,Grancollera,Massimizza l’Attacco\ndopo un brutto colpo.
+12,5,84,Agiltecnica,Sale Veloc. se strum. te-\nnuto si perde o consuma.
+12,5,85,Antifuoco,Indebolisce l’effetto di\nmosse di tipo Fuoco.
+12,5,86,Disinvoltura,Le statistiche possono\ncambiare all’impazzata.
+12,5,87,Pellearsa,Riduce PS se fa caldo.\nL’acqua ridà PS.
+12,5,88,Download,Regola la potenza in base\nal nemico.
+12,5,89,Ferropugno,Potenzia le mosse\ntirapugni.
+12,5,90,Velencura,Ridà PS se il Pokémon\nè avvelenato.
+12,5,91,Adattabilità,Potenzia le mosse del\ntipo del Pokémon.
+12,5,92,Abillegame,Aumenta la frequenza di\nmosse multicolpo.
+12,5,93,Idratazione,Cura i problemi di stato\nse piove.
+12,5,94,Solarpotere,Aumenta l’Att. Sp. ma\nriduce i PS se c’è il sole.
+12,5,95,Piedisvelti,Aumenta la Velocità se\nc’è un problema di stato.
+12,5,96,Normalità,Le mosse del Pokémon di-\nventano di tipo Normale.
+12,5,97,Cecchino,Potenzia le mosse se\ndiventano brutti colpi.
+12,5,98,Magicscudo,Il Pokémon subisce danni\nsolo da attacchi diretti.
+12,5,99,Nullodifesa,Gli attacchi dei Pokémon\nvanno a buon fine.
+12,5,100,Rallentatore,Anche i nemici più lenti\nattaccano per primi.
+12,5,101,Tecnico,Potenzia le mosse più\ndeboli del Pokémon.
+12,5,102,Fogliamanto,Evita problemi di stato\nquando c’è il sole.
+12,5,103,Impaccio,Il Pokémon non può usare\nlo strumento che tiene.
+12,5,104,Rompiforma,Le mosse si usano a\nprescindere dalle abilità.
+12,5,105,Supersorte,Maggiore probabilità di\ninfliggere brutti colpi.
+12,5,106,Scoppio,Arreca danno al nemico\nsferrante il colpo da KO.
+12,5,107,Presagio,Rivela se il nemico ha\nmosse pericolose.
+12,5,108,Premonizione,Scopre la mossa più\npotente del nemico.
+12,5,109,Imprudenza,Ignora gli aumenti delle\nstatistiche del nemico.
+12,5,110,Lentifumé,Potenzia le mosse\n“non molto efficaci”.
+12,5,111,Filtro,Riduce la potenza delle\nmosse superefficaci.
+12,5,112,Lentoinizio,Dimezza per un po’\nl’Attacco e la Velocità.
+12,5,113,Nervisaldi,Le mosse colpiscono pure\ni nemici di tipo Spettro.
+12,5,114,Acquascolo,Il Pokémon attira tutte\nle mosse di tipo Acqua.
+12,5,115,Corpogelo,Il Pokémon recupera PS\nquando grandina.
+12,5,116,Solidroccia,Riduce la potenza delle\nmosse superefficaci.
+12,5,117,Scendineve,Il Pokémon provoca una\ngrandinata in lotta.
+12,5,118,Mielincetta,Il Pokémon può\nraccogliere Miele.
+12,5,119,Indagine,Il Pokémon scopre che\nstrumento ha il nemico.
+12,5,120,Temerarietà,Potenzia le mosse che\nprovocano contraccolpi.
+12,5,121,Multitipo,Cambia tipo a seconda\ndella Lastra che tiene.
+12,5,122,Regalfiore,Potenzia i Pokémon della\nsquadra se c’è il sole.
+12,5,123,Sogniamari,Riduce i PS dei nemici\naddormentati.
+12,6,1,Hedor,El olor ayuda a mantener\nlejos Pokémon salvajes.
+12,6,2,Llovizna,Hace que llueva cuando\nentra en combate.
+12,6,3,Impulso,Aumenta la Velocidad\ngradualmente.
+12,6,4,Armad. Bat.,Bloquea golpes críticos.
+12,6,5,Robustez,Protege de movimientos\nque dejan KO de 1 golpe.
+12,6,6,Humedad,Evita que se\nautodestruyan.
+12,6,7,Flexibilidad,Evita la parálisis.
+12,6,8,Velo Arena,Aumenta la evasión en\nlas tormentas de arena.
+12,6,9,Elec. Estát.,Puede paralizar al\nmínimo contacto.
+12,6,10,Absor. Elec.,Recupera PS al recibir\nataques eléctricos.
+12,6,11,Absor. Agua,Recupera PS al recibir \nataques de tipo Agua.
+12,6,12,Despiste,Evita que el Pokémon\nse enamore.
+12,6,13,Aclimatación,Anula los efectos del\ntiempo atmosférico.
+12,6,14,Ojocompuesto,Aumenta la precisión.
+12,6,15,Insomnio,Evita el quedarse\ndormido.
+12,6,16,Cambio Color,Cambia el tipo al del\nmovimiento rival.
+12,6,17,Inmunidad,Evita el envenenamiento.
+12,6,18,Absor. Fuego,Potencia movs. tipo Fuego\ntras ataques tipo Fuego.
+12,6,19,Polvo Escudo,Anula efecto secundario\ndel ataque sufrido.
+12,6,20,Ritmo Propio,Evita la confusión.
+12,6,21,Ventosas,Anula movimientos rivales\nque fuerzan el relevo.
+12,6,22,Intimidación,Baja el Ataque del rival.
+12,6,23,Sombratrampa,Evita que el enemigo\nhuya.
+12,6,24,Piel Tosca,Hiere al tacto.
+12,6,25,Superguarda,Solo le dañan movimientos\nmuy eficaces.
+12,6,26,Levitación,Es inmune frente a los\nataques de tipo Tierra.
+12,6,27,Efec. Espora,"Puede dormir, envenenar\no paralizar al contacto."
+12,6,28,Sincronía,"Pasa envenenamiento,\nparálisis y quemaduras."
+12,6,29,Cuerpo Puro,Puede evitar que bajen\nlas características.
+12,6,30,Cura Natural,Cura problemas de estado\nal cambiar de Pokémon.
+12,6,31,Pararrayos,Frena los ataques\nde tipo Eléctrico.
+12,6,32,Dicha,Aumenta la probabilidad\nde efectos secundarios.
+12,6,33,Nado Rápido,Sube la Velocidad cuando\nhay lluvia.
+12,6,34,Clorofila,Sube la Velocidad cuando\nhay sol.
+12,6,35,Iluminación,Aumenta la probabilidad\nde encontrar Pokémon.
+12,6,36,Rastro,El Pokémon copia la\nhabilidad del rival.
+12,6,37,Potencia,Aumenta el Ataque.
+12,6,38,Punto Tóxico,Puede envenenar al\nmínimo contacto.
+12,6,39,Foco Interno,Evita el retroceso.
+12,6,40,Escudo Magma,Evita la congelación.
+12,6,41,Velo Agua,Evita las quemaduras.
+12,6,42,Imán,Evita que Pokémon de\ntipo Acero escapen.
+12,6,43,Insonorizar,Evita ataques de sonido.
+12,6,44,Cura Lluvia,El Pokémon gana PS\ngradualmente si llueve.
+12,6,45,Chorro Arena,Crea una tormenta de\narena en el combate.
+12,6,46,Presión,Hace que los PP del rival\nse acaben antes.
+12,6,47,Sebo,Protege de los ataques\nde tipo Fuego y Hielo.
+12,6,48,Madrugar,El Pokémon se despierta\nrápidamente.
+12,6,49,Cuerpo Llama,Puede quemar al mínimo\ncontacto.
+12,6,50,Fuga,Permite escapar de todos\nlos Pokémon salvajes.
+12,6,51,Vista Lince,Evita que disminuya\nla precisión.
+12,6,52,Corte Fuerte,Evita que disminuya\nel Ataque.
+12,6,53,Recogida,El Pokémon puede\nencontrar objetos.
+12,6,54,Ausente,El Pokémon no atacará en\nturnos consecutivos.
+12,6,55,Entusiasmo,"Aumenta el Ataque, pero\nreduce la precisión."
+12,6,56,Gran Encanto,Tocar al Pokémon puede\ncausar enamoramiento.
+12,6,57,Más,Potencia At. Esp. si otro\ntiene la habilidad Menos.
+12,6,58,Menos,Potencia At. Esp. si otro\ntiene la habilidad Más.
+12,6,59,Predicción,Cambia con el tiempo\natmosférico.
+12,6,60,Viscosidad,Impide el robo\nde objetos.
+12,6,61,Mudar,Cura los problemas de\nestado mudando la piel.
+12,6,62,Agallas,Sube el Ataque si sufre\nun problema de estado.
+12,6,63,Escama Esp.,Sube la Defensa si sufre\nun problema de estado.
+12,6,64,Lodo Líquido,Hiere a los enemigos que\nabsorben PS.
+12,6,65,Espesura,Potencia los ataques de\ntipo Planta en un apuro.
+12,6,66,Mar Llamas,Potencia los ataques de\ntipo Fuego en un apuro.
+12,6,67,Torrente,Potencia los ataques de\ntipo Agua en un apuro.
+12,6,68,Enjambre,Potencia los ataques de\ntipo Bicho en un apuro.
+12,6,69,Cabeza Roca,Impide que el Pokémon\nse dañe con sus movs.
+12,6,70,Sequía,El sol sale si el Pokémon\nentra en combate.
+12,6,71,Trampa Arena,Evita que el rival huya.
+12,6,72,Espír. Vital,Evita quedarse dormido.
+12,6,73,Humo Blanco,Evita que se reduzcan\nlas características.
+12,6,74,Energía Pura,Potencia los ataques\nfísicos.
+12,6,75,Caparazón,Bloquea golpes críticos.
+12,6,76,Bucle Aire,Anula los efectos del\ntiempo atmosférico.
+12,6,77,Tumbos,Sube la evasión si el\nPokémon está confuso.
+12,6,78,Electromotor,Sube la Velocidad si le\nda un ataque eléctrico.
+12,6,79,Rivalidad,Sube el Ataque si el rival\nes del mismo sexo.
+12,6,80,Impasible,Cada vez que retrocede\nsube su Velocidad.
+12,6,81,Manto Níveo,Sube la evasión durante\nuna tormenta de granizo.\n
+12,6,82,Gula,Fomenta el uso rápido de\nla Baya que porta.
+12,6,83,Irascible,Potencia el Ataque tras\nrecibir un golpe crítico.
+12,6,84,Liviano,Sube la Veloc. si usa o\npierde un objeto llevado.
+12,6,85,Ignífugo,Debilita los movimientos\nde tipo Fuego.
+12,6,86,Simple,Aumenta el efecto de los\ncambios en el Pokémon.
+12,6,87,Piel Seca,Pierde PS si hace calor.\nLos recupera con agua.
+12,6,88,Descarga,Adapta su fuerza para\ncada rival.
+12,6,89,Puño Férreo,Aumenta la fuerza de los\npuñetazos.
+12,6,90,Antídoto,Recupera PS si el Pokémon\nha sido envenenado.
+12,6,91,Adaptable,Potencia los movimientos\ndel mismo tipo.
+12,6,92,Encadenado,Aumenta la frecuencia de\nlos movimientos múltiples.
+12,6,93,Hidratación,Cura los problemas de\nestado si está lloviendo.
+12,6,94,Poder Solar,"Si hace sol, baja los PS\npero potencia el At. Esp."
+12,6,95,Pies Rápidos,Potencia la Velocidad si\nhay problemas de estado.
+12,6,96,Normalidad,Todos los movimientos se\nvuelven de tipo Normal.
+12,6,97,Francotirad.,Potencia los movimientos\nsi se vuelven críticos.
+12,6,98,Muro Mágico,Solo dañan al Pokémon\nlos ataques directos.
+12,6,99,Indefenso,El ataque del Pokémon y\nel del rival acertarán.
+12,6,100,Rezagado,El Pokémon se mueve\ntras el rival más lento.
+12,6,101,Experto,Potencia los movimientos\nmás débiles del Pokémon.
+12,6,102,Defensa Hoja,Evita los problemas de\nestado si hace sol.
+12,6,103,Zoquete,El Pokémon no puede\nusar ningún objeto.
+12,6,104,Rompemoldes,Usa movimientos sin que\nimporten las habilidades.
+12,6,105,Afortunado,Aumenta la probabilidad\nde dar golpes críticos.
+12,6,106,Resquicio,Daña al rival que le ha\ndado el golpe de gracia.
+12,6,107,Anticipación,Prevé los movimientos\npeligrosos del rival.
+12,6,108,Alerta,Determina el movimiento\nmás potente del rival.
+12,6,109,Ignorante,Ignora mejoras en las\nestadísticas del enemigo.
+12,6,110,Cromolente,Potencia los movimientos\n“poco eficaces”.
+12,6,111,Filtro,Mitiga los movimientos\nsupereficaces.
+12,6,112,Inicio Lento,Baja a la mitad Ataque y\nVelocidad por un tiempo.
+12,6,113,Intrépido,Permite golpear a los\nrivales de tipo Fantasma.
+12,6,114,Colector,Atrae ataques de tipo\nAgua lanzados a un PKMN.
+12,6,115,Gélido,El Pokémon recupera PS\nen tormentas de granizo.
+12,6,116,Roca Sólida,Mitiga los movimientos\nsupereficaces.
+12,6,117,Nevada,El Pokémon invoca una\ntormenta de granizo.
+12,6,118,Recogemiel,El Pokémon recoge Miel\nde donde puede.
+12,6,119,Cacheo,El Pokémon puede ver el\nobjeto que lleva el rival.
+12,6,120,Audaz,Potencia los movimientos\nque dañan al usuario.
+12,6,121,Multitipo,Cambia el tipo al de la\nTabla que lleva.
+12,6,122,Don Floral,Potencia los Pokémon del\nequipo si está soleado.
+12,6,123,Mal Sueño,Reduce los PS de un rival\nmientras duerme.
+12,7,1,악취,야생 포켓몬이\n접근하기 어려워진다.
+12,7,2,잔비,배틀에 나가면\n비를 내린다.
+12,7,3,가속,조금씩\n스피드가 높아진다.
+12,7,4,전투무장,상대의 공격이\n급소에 맞지 않는다.
+12,7,5,옹골참,일격 필살기가\n통하지 않는다.
+12,7,6,습기,누구도 자폭\n할 수 없게 된다.
+12,7,7,유연,마비 상태가\n되지 않는다.
+12,7,8,모래숨기,모래바람으로\n회피율이 올라간다.
+12,7,9,정전기,접촉한 상대를\n마비시킬 때가 있다.
+12,7,10,축전,전기를 받으면\n회복한다.
+12,7,11,저수,물을 받으면\n회복한다.
+12,7,12,둔감,헤롱헤롱 상태가\n되지 않는다.
+12,7,13,날씨부정,날씨의 영향이\n없어진다.
+12,7,14,복안,기술의 명중률이\n올라간다.
+12,7,15,불면,잠듦 상태가\n되지 않는다.
+12,7,16,변색,받은 기술의 타입으로\n변화한다.
+12,7,17,면역,독 상태가\n되지 않는다.
+12,7,18,타오르는불꽃,불꽃을 받으면\n불꽃 기술이 강해진다.
+12,7,19,인분,기술의 추가 효과를\n받지 않는다.
+12,7,20,마이페이스,혼란 상태가\n되지 않는다.
+12,7,21,흡반,교체시킨 기술이\n효과를 발휘하지 못한다.
+12,7,22,위협,상대의 공격을\n떨어뜨린다.
+12,7,23,그림자밟기,상대의 그림자를 밟아\n도망칠 수 없게 한다.
+12,7,24,까칠한피부,접촉한 상대에게\n상처를 입힌다.
+12,7,25,불가사의부적,효과가 굉장한 기술밖에\n맞지 않는다.
+12,7,26,부유,땅타입의 기술을\n받지 않는다.
+12,7,27,포자,"스치면 독, 마비, 잠듦\n상태가 될 때가 있다."
+12,7,28,싱크로,"독, 마비, 화상을\n상대에게 옮긴다."
+12,7,29,클리어바디,상대가 능력을\n떨어뜨릴 수 없다.
+12,7,30,자연회복,배틀에서 일단 물러나면\n상태 이상이 회복된다.
+12,7,31,피뢰침,전기타입의 기술을\n모두 자신이 맞는다.
+12,7,32,하늘의은총,기술의 추가 효과가\n나오기 쉽다.
+12,7,33,쓱쓱,비가 올 때 스피드가\n올라간다.
+12,7,34,엽록소,맑을 때 스피드가\n올라간다.
+12,7,35,발광,야생 포켓몬과\n만나기 쉬워진다.
+12,7,36,트레이스,상대와 같은\n특성이 된다.
+12,7,37,천하장사,물리 공격의\n위력이 올라간다.
+12,7,38,독가시,접촉한 상대를\n중독 시킬 때가 있다.
+12,7,39,정신력,풀죽지 않는다.\n
+12,7,40,마그마의무장,얼음 상태가\n되지 않는다.
+12,7,41,수의베일,화상 상태가\n되지 않는다.
+12,7,42,자력,강철타입의 포켓몬을\n도망칠 수 없게 한다.
+12,7,43,방음,소리 기술을\n받지 않는다.
+12,7,44,젖은접시,비가 올 때 조금씩\nHP를 회복한다.
+12,7,45,모래날림,배틀에서 모래바람을\n일으킨다.
+12,7,46,프레셔,상대가 사용하는 기술의\nPP를 많이 줄인다.
+12,7,47,두꺼운지방,불꽃과 얼음타입의\n기술에 강하다.
+12,7,48,일찍기상,잠듦 상태에서\n빨리 깨어난다.
+12,7,49,불꽃몸,접촉한 상대에게\n화상을 입힐 때가 있다.
+12,7,50,도주,야생 포켓몬으로부터\n반드시 도망칠 수 있다.
+12,7,51,날카로운눈,상대가 명중률을\n떨어뜨리지 못한다.
+12,7,52,괴력집게,상대가 공격을\n떨어뜨리지 못한다.
+12,7,53,픽업,도구를 주워올\n때가 있다.
+12,7,54,게으름,연속으로\n공격할 수 없다.
+12,7,55,의욕,공격은 높지만\n빗나가기 쉽다.
+12,7,56,헤롱헤롱바디,스치면 헤롱헤롱 상태가\n될 때가 있다.
+12,7,57,플러스,마이너스가 있으면\n특수공격이 올라간다.
+12,7,58,마이너스,플러스가 있으면\n특수공격이 올라간다.
+12,7,59,기분파,날씨에 따라\n캐스퐁이 변화한다.
+12,7,60,점착,도구를 빼앗기지 않는다.\n
+12,7,61,탈피,상태 이상을\n회복할 때가 있다.
+12,7,62,근성,상태 이상이 되면\n공격이 올라간다.
+12,7,63,이상한비늘,상태 이상이 되면\n방어가 올라간다.
+12,7,64,해감액,흡수한 상대의\nHP를 줄인다.
+12,7,65,심록,위급할 때 풀타입의\n위력이 올라간다.
+12,7,66,맹화,위급할 때 불꽃타입의\n위력이 올라간다.
+12,7,67,급류,위급할 때 물타입의\n위력이 올라간다.
+12,7,68,벌레의알림,위급할 때 벌레타입의\n위력이 올라간다.
+12,7,69,돌머리,부딪쳐도\n반동을 받지 않는다.
+12,7,70,가뭄,배틀에 나가면\n쾌청이 된다.
+12,7,71,개미지옥,배틀에서 상대를\n도망칠 수 없게 한다.
+12,7,72,의기양양,잠듦 상태가\n되지 않는다.
+12,7,73,하얀연기,상대가 능력을\n떨어뜨릴 수 없다.
+12,7,74,순수한힘,물리 공격의\n위력이 올라간다.
+12,7,75,조가비갑옷,상대의 공격이\n급소에 맞지 않는다.
+12,7,76,에어록,날씨의 영향이\n없어진다.
+12,7,77,갈지자걸음,혼란에 빠져있으면\n회피하기 쉬워진다.
+12,7,78,전기엔진,전기를 받으면\n스피드가 올라간다.
+12,7,79,투쟁심,성별이 같으면\n공격이 올라간다.
+12,7,80,불굴의마음,풀죽을 때마다\n스피드가 올라간다.
+12,7,81,눈숨기,날씨가 싸라기눈일 때\n회피율이 올라간다.
+12,7,82,먹보,나무열매를 여느 때보다\n빨리 사용한다.
+12,7,83,분노의경혈,급소에 맞으면\n공격이 올라간다.
+12,7,84,곡예,도구가 없어지면\n스피드가 올라간다.
+12,7,85,내열,불꽃 기술의\n위력을 약하게 한다.
+12,7,86,단순,능력 변화가\n여느 때보다 심하다.
+12,7,87,건조피부,더우면 HP가 줄어든다.\n물로 HP를 회복한다.
+12,7,88,다운로드,상대의 능력을\n보고 능력치를 바꾼다.
+12,7,89,철주먹,펀치를 사용하는 기술의\n위력이 올라간다.
+12,7,90,포이즌힐,독 상태가 되면\nHP를 회복한다.
+12,7,91,적응력,타입이 같은 기술의\n위력이 올라간다.
+12,7,92,스킬링크,연속 기술을\n많이 쓸 수 있다.
+12,7,93,촉촉바디,비가 오면\n상태 이상이 회복된다.
+12,7,94,선파워,맑으면 HP가 줄지만\n특수공격이 올라간다.
+12,7,95,속보,상태 이상이 되면\n스피드가 올라간다.
+12,7,96,노말스킨,쓴 기술이 모두\n노말타입이 된다.
+12,7,97,스나이퍼,급소에 맞혔을 때\n위력이 올라간다.
+12,7,98,매직가드,공격 이외에는\n데미지를 입지 않는다.
+12,7,99,노가드,서로의 기술이\n반드시 맞는다.
+12,7,100,시간벌기,상대보다 재빨라도\n행동이 느려진다.
+12,7,101,테크니션,약한 기술의\n위력이 올라간다.
+12,7,102,리프가드,맑을 때는\n상태 이상이 되지 않는다.
+12,7,103,서투름,지니고 있는 도구를\n쓸 수 없다.
+12,7,104,틀깨기,특성에 관계없이 상대에게\n기술을 쓸 수 있다.
+12,7,105,대운,상대의 급소에\n공격이 맞기 쉽다.
+12,7,106,유폭,기절할 때 스친\n상대에게 데미지를 준다.
+12,7,107,위험예지,상대가 지닌 위험한\n기술을 감지한다.
+12,7,108,예지몽,상대가 지닌 기술을\n꿰뚫어볼 수 있다.
+12,7,109,천진,상대의 능력\n변화를 무시한다.
+12,7,110,색안경,효과가 별로인 기술이\n강해진다.
+12,7,111,필터,효과가 굉장한 기술의\n위력을 약하게 한다.
+12,7,112,슬로스타트,공격과 스피드가\n잠시 동안 절반이 된다.
+12,7,113,배짱,고스트타입에\n기술이 맞게 된다.
+12,7,114,마중물,물타입의 기술을\n모두 자신이 맞는다.
+12,7,115,아이스바디,날씨가 싸라기눈일 때\nHP를 회복한다.
+12,7,116,하드록,효과가 굉장한 기술의\n위력을 약하게 한다.
+12,7,117,눈퍼뜨리기,배틀에 나가면\n싸라기눈을 내리게 한다.
+12,7,118,꿀모으기,달콤한꿀을 모아서\n올 때가 있다.
+12,7,119,통찰,상대가 지닌 물건을\n알 수 있다.
+12,7,120,이판사판,반동 데미지를\n받는 기술이 강해진다.
+12,7,121,멀티타입,지니고 있는 플레이트에\n따라 타입이 바뀐다.
+12,7,122,플라워기프트,맑을 때 자신과\n같은 편이 강해진다.
+12,7,123,나이트메어,잠들어 있는 상대의\nHP를 줄인다.

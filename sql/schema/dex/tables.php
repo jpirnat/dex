@@ -37,7 +37,14 @@ return [
 	// Abilities
 	'abilities',
 	'ability_names',
-	'ability_descriptions',
+	'ability_descriptions' => [
+		'ability_descriptions_04',
+		'ability_descriptions_05',
+		'ability_descriptions_06',
+		'ability_descriptions_07',
+		'ability_descriptions_08',
+		'ability_descriptions_09',
+	],
 	'pokemon_abilities',
 
 	// Items
