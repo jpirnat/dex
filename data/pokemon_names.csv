@@ -897,6 +897,133 @@ language_id,pokemon_id,name,category
 1,896,ブリザポス,あばれうまポケモン
 1,897,レイスポス,しゅんばポケモン
 1,898,バドレックス,キングポケモン
+1,899,アヤシシ,おおツノポケモン
+1,900,バサギリ,まさかりポケモン
+1,901,ガチグマ,でいたんポケモン
+1,902,イダイトウ (オスのすがた),おおうおポケモン
+1,903,オオニューラ,クライミングポケモン
+1,904,ハリーマン,けんざんポケモン
+1,905,ラブトロス,あいぞうポケモン
+1,906,ニャオハ,くさねこポケモン
+1,907,ニャローテ,くさねこポケモン
+1,908,マスカーニャ,マジシャンポケモン
+1,909,ホゲータ,ほのおワニポケモン
+1,910,アチゲータ,ほのおワニポケモン
+1,911,ラウドボーン,シンガーポケモン
+1,912,クワッス,こがもポケモン
+1,913,ウェルカモ,レッスンポケモン
+1,914,ウェーニバル,ダンサーポケモン
+1,915,グルトン,ぶたポケモン
+1,916,パフュートン (オスのすがた),ぶたポケモン
+1,917,タマンチュラ,いとだまポケモン
+1,918,ワナイダー,トラップポケモン
+1,919,マメバッタ,バッタポケモン
+1,920,エクスレッグ,バッタポケモン
+1,921,パモ,ねずみポケモン
+1,922,パモット,ねずみポケモン
+1,923,パーモット,てあてポケモン
+1,924,ワッカネズミ,カップルポケモン
+1,925,イッカネズミ,ファミリーポケモン
+1,926,パピモッチ,こいぬポケモン
+1,927,バウッツェル,いぬポケモン
+1,928,ミニーブ,オリーブポケモン
+1,929,オリーニョ,オリーブポケモン
+1,930,オリーヴァ,オリーブポケモン
+1,931,イキリンコ (グリーンフェザー),インコポケモン
+1,932,コジオ,がんえんポケモン
+1,933,ジオヅム,がんえんポケモン
+1,934,キョジオーン,がんえんポケモン
+1,935,カルボウ,ひのこポケモン
+1,936,グレンアルマ,ひのせんしポケモン
+1,937,ソウブレイズ,ひのけんしポケモン
+1,938,ズピカ,でんきおたまポケモン
+1,939,ハラバリー,でんきがえるポケモン
+1,940,カイデン,うみつばめポケモン
+1,941,タイカイデン,ぐんかんどりポケモン
+1,942,オラチフ,わかぞうポケモン
+1,943,マフィティフ,おやぶんポケモン
+1,944,シルシュルー,どくねずみポケモン
+1,945,タギングル,どくざるポケモン
+1,946,アノクサ,ころがりぐさポケモン
+1,947,アノホラグサ,ころがりぐさポケモン
+1,948,ノノクラゲ,きくらげポケモン
+1,949,リククラゲ,きくらげポケモン
+1,950,ガケガニ,まちぶせポケモン
+1,951,カプサイジ,ハバネロポケモン
+1,952,スコヴィラン,ハバネロポケモン
+1,953,シガロコ,ころがしポケモン
+1,954,ベラカス,ころがしポケモン
+1,955,ヒラヒナ,フリルポケモン
+1,956,クエスパトラ,ダチョウポケモン
+1,957,カヌチャン,かなうちポケモン
+1,958,ナカヌチャン,ハンマーポケモン
+1,959,デカヌチャン,ハンマーポケモン
+1,960,ウミディグダ,あなごポケモン
+1,961,ウミトリオ,あなごポケモン
+1,962,オトシドリ,おとしものポケモン
+1,963,ナミイルカ,イルカポケモン
+1,964,イルカマン (ナイーブフォルム),イルカポケモン
+1,965,ブロロン,たんきとうポケモン
+1,966,ブロロローム,たきとうポケモン
+1,967,モトトカゲ,ライドポケモン
+1,968,ミミズズ,ミミズポケモン
+1,969,キラーメ,こうせきポケモン
+1,970,キラフロル,こうせきポケモン
+1,971,ボチ,おばけいぬポケモン
+1,972,ハカドッグ,おばけいぬポケモン
+1,973,カラミンゴ,シンクロポケモン
+1,974,アルクジラ,りくくじらポケモン
+1,975,ハルクジラ,りくくじらポケモン
+1,976,ミガルーサ,きりはなしポケモン
+1,977,ヘイラッシャ,おおなまずポケモン
+1,978,シャリタツ,ぎたいポケモン
+1,979,コノヨザル,ふんどざるポケモン
+1,980,ドオー,とげうおポケモン
+1,981,リキキリン,くびながポケモン
+1,982,ノココッチ,つちへびポケモン
+1,983,ドドゲザン,だいとうポケモン
+1,984,イダイナキバ,パラドックスポケモン
+1,985,サケブシッポ,パラドックスポケモン
+1,986,アラブルタケ,パラドックスポケモン
+1,987,ハバタクカミ,パラドックスポケモン
+1,988,チヲハウハネ,パラドックスポケモン
+1,989,スナノケガワ,パラドックスポケモン
+1,990,テツノワダチ,パラドックスポケモン
+1,991,テツノツツミ,パラドックスポケモン
+1,992,テツノカイナ,パラドックスポケモン
+1,993,テツノコウベ,パラドックスポケモン
+1,994,テツノドクガ,パラドックスポケモン
+1,995,テツノイバラ,パラドックスポケモン
+1,996,セビエ,こおりビレポケモン
+1,997,セゴール,こおりビレポケモン
+1,998,セグレイブ,ひょうりゅうポケモン
+1,999,コレクレー (はこフォルム),たからばこポケモン
+1,1000,サーフゴー,たからものポケモン
+1,1001,チオンジェン,さいやくポケモン
+1,1002,パオジアン,さいやくポケモン
+1,1003,ディンルー,さいやくポケモン
+1,1004,イーユイ,さいやくポケモン
+1,1005,トドロクツキ,パラドックスポケモン
+1,1006,テツノブジン,パラドックスポケモン
+1,1007,コライドン,パラドックスポケモン
+1,1008,ミライドン,パラドックスポケモン
+1,1009,ウネルミナモ,パラドックスポケモン
+1,1010,テツノイサハ,パラドックスポケモン
+1,1011,カミッチュ,りんごあめポケモン
+1,1012,チャデス,まっちゃポケモン
+1,1013,ヤバソチャ,まっちゃポケモン
+1,1014,イイネイヌ,けらいポケモン
+1,1015,マシマシラ,けらいポケモン
+1,1016,キチキギス,けらいポケモン
+1,1017,オーガポン (みどりのめん),おめんポケモン
+1,1018,ブリジュラス,ごうきんポケモン
+1,1019,カミツオロチ,りんごオロチポケモン
+1,1020,ウガツホムラ,パラドックスポケモン
+1,1021,タケルライコ,パラドックスポケモン
+1,1022,テツノカシラ,パラドックスポケモン
+1,1023,テツノイワオ,パラドックスポケモン
+1,1024,テラパゴス (ノーマルフォルム),テラスタルポケモン
+1,1025,モモワロウ,しはいポケモン
 1,10001,ポワルン (たいようのすがた),てんきポケモン
 1,10002,ポワルン (あまみずのすがた),てんきポケモン
 1,10003,ポワルン (ゆきぐものすがた),てんきポケモン
@@ -1060,11 +1187,11 @@ language_id,pokemon_id,name,category
 1,10161,メテノ (のコアフォルム),ながれぼしポケモン
 1,10162,ぬしの　ミミッキュ,ばけのかわポケモン
 1,10163,ぬしの　ジャラランガ,うろこポケモン
-1,10164,ぬしの　ガラガラ,すいほうポケモン
+1,10164,ぬしの　ガラガラ,ほねずきポケモン
 1,10165,ぬしの　アブリボン,ツリアブポケモン
 1,10166,イワンコ (マイペース),こいぬポケモン
 1,10167,ルガルガン (たそがれのすがた),オオカミポケモン
-1,10168,ぬしの　オニシズクモ,ほねずきポケモン
+1,10168,ぬしの　オニシズクモ,すいほうポケモン
 1,10169,ぬしの　トゲデマル,まるまりポケモン
 1,10170,ネクロズマ (たそがれのたてがみ),プリズムポケモン
 1,10171,ネクロズマ (あかつきのつばさ),プリズムポケモン
@@ -1082,7 +1209,7 @@ language_id,pokemon_id,name,category
 1,10183,マッスグマ (ガラルのすがた),とっしんポケモン
 1,10184,ダルマッカ (ガラルのすがた),だるまポケモン
 1,10185,ヒヒダルマ (ガラルのすがた) (ダルマモード),だるまポケモン
-1,10186,ヒヒダルマ (ガラルのすがた) (ノーマルモード),だるまポケモン
+1,10186,ヒヒダルマ (ガラルのすがた) (ノーマルモード),えんじょうポケモン
 1,10187,デスマス (ガラルのすがた),たましいポケモン
 1,10188,マッギョ (ガラルのすがた),トラップポケモン
 1,10189,ストリンダー (ローなすがた),パンクポケモン
@@ -1100,6 +1227,47 @@ language_id,pokemon_id,name,category
 1,10201,ヤドキング (ガラルのすがた),じゅじゅつしポケモン
 1,10202,バドレックス (はくばじょうのすがた),エンペラーポケモン
 1,10203,バドレックス (こくばじょうのすがた),エンペラーポケモン
+1,10204,ガーディ (ヒスイのすがた),みはりポケモン
+1,10205,ウインディ (ヒスイのすがた),でんせつポケモン
+1,10206,ビリリダマ (ヒスイのすがた),きゅうたいポケモン
+1,10207,マルマイン (ヒスイのすがた),きゅうたいポケモン
+1,10208,バクフーン (ヒスイのすがた),おにびポケモン
+1,10209,ハリーセン (ヒスイのすがた),ふうせんポケモン
+1,10210,ニューラ (ヒスイのすがた),かぎづめポケモン
+1,10211,ディアルガ (オリジンフォルム),じかんポケモン
+1,10212,パルキア (オリジンフォルム),くうかんポケモン
+1,10213,ダイケンキ (ヒスイのすがた),かんろくポケモン
+1,10214,ドレディア (ヒスイのすがた),スピンポケモン
+1,10215,バスラオ (しろすじのすがた),おんこうポケモン
+1,10216,ゾロア (ヒスイのすがた),うらみぎつねポケモン
+1,10217,ゾロアーク (ヒスイのすがた),のろいぎつねポケモン
+1,10218,ウォーグル (ヒスイのすがた),おたけびポケモン
+1,10219,ヌメイル (ヒスイのすがた),マイマイポケモン
+1,10220,ヌメルゴン (ヒスイのすがた),からこもりポケモン
+1,10221,クレベース (ヒスイのすがた),ひょうざんポケモン
+1,10222,ジュナイパー (ヒスイのすがた),やばねポケモン
+1,10223,イダイトウ (メスのすがた),おおうおポケモン
+1,10224,ラブトロス (れいじゅうフォルム),あいぞうポケモン
+1,10225,ケンタロス (パルデアのすがた),あばれうしポケモン
+1,10226,ケンタロス (パルデアのすがた),あばれうしポケモン
+1,10227,ケンタロス (パルデアのすがた),あばれうしポケモン
+1,10228,ウパー (パルデアのすがた),どくうおポケモン
+1,10229,パフュートン (メスのすがた),ぶたポケモン
+1,10230,イキリンコ (ブルーフェザー),インコポケモン
+1,10231,イキリンコ (イエローフェザー),インコポケモン
+1,10232,イキリンコ (ホワイトフェザー),インコポケモン
+1,10233,イルカマン (マイティフォルム),ヒーローポケモン
+1,10234,コレクレー (とほフォルム),たからさがしポケモン
+1,10235,ガチグマ (アカツキ),でいたんポケモン
+1,10236,オーガポン (いどのめん),おめんポケモン
+1,10237,オーガポン (かまどのめん),おめんポケモン
+1,10238,オーガポン (いしずえのめん),おめんポケモン
+1,10239,オーガポン (みどりのめん Tera),おめんポケモン
+1,10240,オーガポン (いどのめん Tera),おめんポケモン
+1,10241,オーガポン (かまどのめん Tera),おめんポケモン
+1,10242,オーガポン (いしずえのめん Tera),おめんポケモン
+1,10243,テラパゴス (テラスタルフォルム),テラスタルポケモン
+1,10244,テラパゴス (ステラフォルム),テラスタルポケモン
 2,1,Bulbasaur,Seed Pokémon
 2,2,Ivysaur,Seed Pokémon
 2,3,Venusaur,Seed Pokémon
@@ -1998,6 +2166,133 @@ language_id,pokemon_id,name,category
 2,896,Glastrier,Wild Horse Pokémon
 2,897,Spectrier,Swift Horse Pokémon
 2,898,Calyrex,King Pokémon
+2,899,Wyrdeer,Big Horn Pokémon
+2,900,Kleavor,Axe Pokémon
+2,901,Ursaluna,Peat Pokémon
+2,902,Basculegion (Male),Big Fish Pokémon
+2,903,Sneasler,Free Climb Pokémon
+2,904,Overqwil,Pin Cluster Pokémon
+2,905,Enamorus,Love-Hate Pokémon
+2,906,Sprigatito,Grass Cat Pokémon
+2,907,Floragato,Grass Cat Pokémon
+2,908,Meowscarada,Magician Pokémon
+2,909,Fuecoco,Fire Croc Pokémon
+2,910,Crocalor,Fire Croc Pokémon
+2,911,Skeledirge,Singer Pokémon
+2,912,Quaxly,Duckling Pokémon
+2,913,Quaxwell,Practicing Pokémon
+2,914,Quaquaval,Dancer Pokémon
+2,915,Lechonk,Hog Pokémon
+2,916,Oinkologne (Male),Hog Pokémon
+2,917,Tarountula,String Ball Pokémon
+2,918,Spidops,Trap Pokémon
+2,919,Nymble,Grasshopper Pokémon
+2,920,Lokix,Grasshopper Pokémon
+2,921,Pawmi,Mouse Pokémon
+2,922,Pawmo,Mouse Pokémon
+2,923,Pawmot,Hands-On Pokémon
+2,924,Tandemaus,Couple Pokémon
+2,925,Maushold,Family Pokémon
+2,926,Fidough,Puppy Pokémon
+2,927,Dachsbun,Dog Pokémon
+2,928,Smoliv,Olive Pokémon
+2,929,Dolliv,Olive Pokémon
+2,930,Arboliva,Olive Pokémon
+2,931,Squawkabilly (Green Plumage),Parrot Pokémon
+2,932,Nacli,Rock Salt Pokémon
+2,933,Naclstack,Rock Salt Pokémon
+2,934,Garganacl,Rock Salt Pokémon
+2,935,Charcadet,Fire Child Pokémon
+2,936,Armarouge,Fire Warrior Pokémon
+2,937,Ceruledge,Fire Blades Pokémon
+2,938,Tadbulb,EleTadpole Pokémon
+2,939,Bellibolt,EleFrog Pokémon
+2,940,Wattrel,Storm Petrel Pokémon
+2,941,Kilowattrel,Frigatebird Pokémon
+2,942,Maschiff,Rascal Pokémon
+2,943,Mabosstiff,Boss Pokémon
+2,944,Shroodle,Toxic Mouse Pokémon
+2,945,Grafaiai,Toxic Monkey Pokémon
+2,946,Bramblin,Tumbleweed Pokémon
+2,947,Brambleghast,Tumbleweed Pokémon
+2,948,Toedscool,Woodear Pokémon
+2,949,Toedscruel,Woodear Pokémon
+2,950,Klawf,Ambush Pokémon
+2,951,Capsakid,Spicy Pepper Pokémon
+2,952,Scovillain,Spicy Pepper Pokémon
+2,953,Rellor,Rolling Pokémon
+2,954,Rabsca,Rolling Pokémon
+2,955,Flittle,Frill Pokémon
+2,956,Espathra,Ostrich Pokémon
+2,957,Tinkatink,Metalsmith Pokémon
+2,958,Tinkatuff,Hammer Pokémon
+2,959,Tinkaton,Hammer Pokémon
+2,960,Wiglett,Garden Eel Pokémon
+2,961,Wugtrio,Garden Eel Pokémon
+2,962,Bombirdier,Item Drop Pokémon
+2,963,Finizen,Dolphin Pokémon
+2,964,Palafin (Zero Form),Dolphin Pokémon
+2,965,Varoom,Single-Cyl Pokémon
+2,966,Revavroom,Multi-Cyl Pokémon
+2,967,Cyclizar,Mount Pokémon
+2,968,Orthworm,Earthworm Pokémon
+2,969,Glimmet,Ore Pokémon
+2,970,Glimmora,Ore Pokémon
+2,971,Greavard,Ghost Dog Pokémon
+2,972,Houndstone,Ghost Dog Pokémon
+2,973,Flamigo,Synchronize Pokémon
+2,974,Cetoddle,Terra Whale Pokémon
+2,975,Cetitan,Terra Whale Pokémon
+2,976,Veluza,Jettison Pokémon
+2,977,Dondozo,Big Catfish Pokémon
+2,978,Tatsugiri,Mimicry Pokémon
+2,979,Annihilape,Rage Monkey Pokémon
+2,980,Clodsire,Spiny Fish Pokémon
+2,981,Farigiraf,Long Neck Pokémon
+2,982,Dudunsparce,Land Snake Pokémon
+2,983,Kingambit,Big Blade Pokémon
+2,984,Great Tusk,Paradox Pokémon
+2,985,Scream Tail,Paradox Pokémon
+2,986,Brute Bonnet,Paradox Pokémon
+2,987,Flutter Mane,Paradox Pokémon
+2,988,Slither Wing,Paradox Pokémon
+2,989,Sandy Shocks,Paradox Pokémon
+2,990,Iron Treads,Paradox Pokémon
+2,991,Iron Bundle,Paradox Pokémon
+2,992,Iron Hands,Paradox Pokémon
+2,993,Iron Jugulis,Paradox Pokémon
+2,994,Iron Moth,Paradox Pokémon
+2,995,Iron Thorns,Paradox Pokémon
+2,996,Frigibax,Ice Fin Pokémon
+2,997,Arctibax,Ice Fin Pokémon
+2,998,Baxcalibur,Ice Dragon Pokémon
+2,999,Gimmighoul (Chest Form),Coin Chest Pokémon
+2,1000,Gholdengo,Coin Entity Pokémon
+2,1001,Wo-Chien,Ruinous Pokémon
+2,1002,Chien-Pao,Ruinous Pokémon
+2,1003,Ting-Lu,Ruinous Pokémon
+2,1004,Chi-Yu,Ruinous Pokémon
+2,1005,Roaring Moon,Paradox Pokémon
+2,1006,Iron Valiant,Paradox Pokémon
+2,1007,Koraidon,Paradox Pokémon
+2,1008,Miraidon,Paradox Pokémon
+2,1009,Walking Wake,Paradox Pokémon
+2,1010,Iron Leaves,Paradox Pokémon
+2,1011,Dipplin,Candy Apple Pokémon
+2,1012,Poltchageist,Matcha Pokémon
+2,1013,Sinistcha,Matcha Pokémon
+2,1014,Okidogi,Retainer Pokémon
+2,1015,Munkidori,Retainer Pokémon
+2,1016,Fezandipiti,Retainer Pokémon
+2,1017,Ogerpon (Teal Mask),Mask Pokémon
+2,1018,Archaludon,Alloy Pokémon
+2,1019,Hydrapple,Apple Hydra Pokémon
+2,1020,Gouging Fire,Paradox Pokémon
+2,1021,Raging Bolt,Paradox Pokémon
+2,1022,Iron Crown,Paradox Pokémon
+2,1023,Iron Boulder,Paradox Pokémon
+2,1024,Terapagos (Normal Form),Tera Pokémon
+2,1025,Pecharunt,Subjugation Pokémon
 2,10001,Castform (Sunny Form),Weather Pokémon
 2,10002,Castform (Rainy Form),Weather Pokémon
 2,10003,Castform (Snowy Form),Weather Pokémon
@@ -2161,11 +2456,11 @@ language_id,pokemon_id,name,category
 2,10161,Minior (Core Form),Meteor Pokémon
 2,10162,Totem Mimikyu,Disguise Pokémon
 2,10163,Totem Kommo-o,Scaly Pokémon
-2,10164,Totem Marowak,Water Bubble Pokémon
+2,10164,Totem Marowak,Bone Keeper Pokémon
 2,10165,Totem Ribombee,Bee Fly Pokémon
 2,10166,Rockruff (Own Tempo),Puppy Pokémon
 2,10167,Lycanroc (Dusk Form),Wolf Pokémon
-2,10168,Totem Araquanid,Bone Keeper Pokémon
+2,10168,Totem Araquanid,Water Bubble Pokémon
 2,10169,Totem Togedemaru,Roly-Poly Pokémon
 2,10170,Necrozma (Dusk Mane),Prism Pokémon
 2,10171,Necrozma (Dawn Wings),Prism Pokémon
@@ -2183,7 +2478,7 @@ language_id,pokemon_id,name,category
 2,10183,Galarian Linoone,Rushing Pokémon
 2,10184,Galarian Darumaka,Zen Charm Pokémon
 2,10185,Galarian Darmanitan (Standard Mode),Zen Charm Pokémon
-2,10186,Galarian Darmanitan (Zen Mode),Zen Charm Pokémon
+2,10186,Galarian Darmanitan (Zen Mode),Blazing Pokémon
 2,10187,Galarian Yamask,Spirit Pokémon
 2,10188,Galarian Stunfisk,Trap Pokémon
 2,10189,Toxtricity (Low Key Form),Punk Pokémon
@@ -2201,6 +2496,47 @@ language_id,pokemon_id,name,category
 2,10201,Galarian Slowking,Hexpert Pokémon
 2,10202,Calyrex (Ice Rider),High King Pokémon
 2,10203,Calyrex (Shadow Rider),High King Pokémon
+2,10204,Hisuian Growlithe,Scout Pokémon
+2,10205,Hisuian Arcanine,Legendary Pokémon
+2,10206,Hisuian Voltorb,Sphere Pokémon
+2,10207,Hisuian Electrode,Sphere Pokémon
+2,10208,Hisuian Typhlosion,Ghost Flame Pokémon
+2,10209,Hisuian Qwilfish,Balloon Pokémon
+2,10210,Hisuian Sneasel,Sharp Claw Pokémon
+2,10211,Dialga (Origin Forme),Temporal Pokémon
+2,10212,Palkia (Origin Forme),Spatial Pokémon
+2,10213,Hisuian Samurott,Formidable Pokémon
+2,10214,Hisuian Lilligant,Spinning Pokémon
+2,10215,Basculin (White-Striped Form),Mellow Pokémon
+2,10216,Hisuian Zorua,Spiteful Fox Pokémon
+2,10217,Hisuian Zoroark,Baneful Fox Pokémon
+2,10218,Hisuian Braviary,Battle Cry Pokémon
+2,10219,Hisuian Sliggoo,Snail Pokémon
+2,10220,Hisuian Goodra,Shell Bunker Pokémon
+2,10221,Hisuian Avalugg,Iceberg Pokémon
+2,10222,Hisuian Decidueye,Arrow Quill Pokémon
+2,10223,Basculegion (Female),Big Fish Pokémon
+2,10224,Enamorus (Therian Forme),Love-Hate Pokémon
+2,10225,Paldean Tauros (Combat Breed),Wild Bull Pokémon
+2,10226,Paldean Tauros (Blaze Breed),Wild Bull Pokémon
+2,10227,Paldean Tauros (Aqua Breed),Wild Bull Pokémon
+2,10228,Paldean Wooper,Poison Fish Pokémon
+2,10229,Oinkologne (Female),Hog Pokémon
+2,10230,Squawkabilly (Blue Plumage),Parrot Pokémon
+2,10231,Squawkabilly (Yellow Plumage),Parrot Pokémon
+2,10232,Squawkabilly (White Plumage),Parrot Pokémon
+2,10233,Palafin (Hero Form),Hero Pokémon
+2,10234,Gimmighoul (Roaming Form),Coin Hunter Pokémon
+2,10235,Bloodmoon Ursaluna,Peat Pokémon
+2,10236,Ogerpon (Wellspring Mask),Mask Pokémon
+2,10237,Ogerpon (Hearthflame Mask),Mask Pokémon
+2,10238,Ogerpon (Cornerstone Mask),Mask Pokémon
+2,10239,Ogerpon (Teal Mask Tera),Mask Pokémon
+2,10240,Ogerpon (Wellspring Mask Tera),Mask Pokémon
+2,10241,Ogerpon (Hearthflame Mask Tera),Mask Pokémon
+2,10242,Ogerpon (Cornerstone Mask Tera),Mask Pokémon
+2,10243,Terapagos (Terastal Form),Tera Pokémon
+2,10244,Terapagos (Stellar Form),Tera Pokémon
 3,1,Bulbizarre,Pokémon Graine
 3,2,Herbizarre,Pokémon Graine
 3,3,Florizarre,Pokémon Graine
@@ -3099,6 +3435,133 @@ language_id,pokemon_id,name,category
 3,896,Blizzeval,Pokémon Cheval Rétif
 3,897,Spectreval,Pokémon Cheval Vif
 3,898,Sylveroy,Pokémon Roi
+3,899,Cerbyllin,Pokémon Maxi Corne
+3,900,Hachécateur,Pokémon Hache
+3,901,Ursaking,Pokémon Tourbe
+3,902,Paragruel (Mâle),Pokémon Poissigrand
+3,903,Farfurex,Pokémon Grimpeur
+3,904,Qwilpik,Pokémon Épineux
+3,905,Amovénus,Pokémon Hainamour
+3,906,Poussacha,Pokémon Chat Plante
+3,907,Matourgeon,Pokémon Chat Plante
+3,908,Miascarade,Pokémon Magicien
+3,909,Chochodile,Pokémon Croco Feu
+3,910,Crocogril,Pokémon Croco Feu
+3,911,Flâmigator,Pokémon Chanteur
+3,912,Coiffeton,Pokémon Caneton
+3,913,Canarbello,Pokémon Leçon
+3,914,Palmaval,Pokémon Danseur
+3,915,Gourmelet,Pokémon Pourceau
+3,916,Fragroin (Mâle),Pokémon Pourceau
+3,917,Tissenboule,Pokémon Boule de Fil
+3,918,Filentrappe,Pokémon Piège
+3,919,Lilliterelle,Pokémon Sauterelle
+3,920,Gambex,Pokémon Sauterelle
+3,921,Pohm,Pokémon Souris
+3,922,Pohmotte,Pokémon Souris
+3,923,Pohmarmotte,Pokémon Pose Paume
+3,924,Compagnol,Pokémon Couple
+3,925,Famignol,Pokémon Famille
+3,926,Pâtachiot,Pokémon Chiot
+3,927,Briochien,Pokémon Chien
+3,928,Olivini,Pokémon Olive
+3,929,Olivado,Pokémon Olive
+3,930,Arboliva,Pokémon Olive
+3,931,Tapatoès (Plumage Vert),Pokémon Perroquet
+3,932,Selutin,Pokémon Halite
+3,933,Amassel,Pokémon Halite
+3,934,Gigansel,Pokémon Halite
+3,935,Charbambin,Pokémon Enfant Feu
+3,936,Carmadura,Pokémon Feu Guerrier
+3,937,Malvalame,Pokémon Feu Bretteur
+3,938,Têtampoule,Pokémon Électêtard
+3,939,Ampibidou,Pokémon Élecrapaud
+3,940,Zapétrel,Pokémon Océanite
+3,941,Fulgulairo,Pokémon Frégate
+3,942,Grondogue,Pokémon Jeunot
+3,943,Dogrino,Pokémon Parrain
+3,944,Gribouraigne,Pokémon Souris Venin
+3,945,Tag-Tag,Pokémon Singe Venin
+3,946,Virovent,Pokémon Virevoltant
+3,947,Virevorreur,Pokémon Virevoltant
+3,948,Terracool,Pokémon Champiméduse
+3,949,Terracruel,Pokémon Champiméduse
+3,950,Craparoi,Pokémon Embuscade
+3,951,Pimito,Pokémon Habanero
+3,952,Scovilain,Pokémon Habanero
+3,953,Léboulérou,Pokémon Rouleur
+3,954,Bérasca,Pokémon Rouleur
+3,955,Flotillon,Pokémon Froufrou
+3,956,Cléopsytra,Pokémon Autruche
+3,957,Forgerette,Pokémon Forge
+3,958,Forgella,Pokémon Marteau
+3,959,Forgelina,Pokémon Marteau
+3,960,Taupikeau,Pokémon Congre
+3,961,Triopikeau,Pokémon Congre
+3,962,Lestombaile,Pokémon Délesteur
+3,963,Dofin,Pokémon Dauphin
+3,964,Superdofin (Forme Ordinaire),Pokémon Dauphin
+3,965,Vrombi,Pokémon Monocylindre
+3,966,Vrombotor,Pokémon Polycylindre
+3,967,Motorizard,Pokémon Monture
+3,968,Ferdeter,Pokémon Ver de Terre
+3,969,Germéclat,Pokémon Minerai
+3,970,Floréclat,Pokémon Minerai
+3,971,Toutombe,Pokémon Fantôchien
+3,972,Tomberro,Pokémon Fantôchien
+3,973,Flamenroule,Pokémon Synchro
+3,974,Piétacé,Pokémon Baleinapied
+3,975,Balbalèze,Pokémon Baleinapied
+3,976,Délestin,Pokémon Décharné
+3,977,Oyacata,Pokémon Grand Silure
+3,978,Nigirigon,Pokémon Mimétisme
+3,979,Courrousinge,Pokémon Singe Furax
+3,980,Terraiste,Pokémon Poissépine
+3,981,Farigiraf,Pokémon Long-Cou
+3,982,Deusolourdo,Pokémon Serpent
+3,983,Scalpereur,Pokémon Pourfendant
+3,984,Fort-Ivoire,Pokémon Paradoxe
+3,985,Hurle-Queue,Pokémon Paradoxe
+3,986,Fongus-Furie,Pokémon Paradoxe
+3,987,Flotte-Mèche,Pokémon Paradoxe
+3,988,Rampe-Ailes,Pokémon Paradoxe
+3,989,Pelage-Sablé,Pokémon Paradoxe
+3,990,Roue-de-Fer,Pokémon Paradoxe
+3,991,Hotte-de-Fer,Pokémon Paradoxe
+3,992,Paume-de-Fer,Pokémon Paradoxe
+3,993,Têtes-de-Fer,Pokémon Paradoxe
+3,994,Mite-de-Fer,Pokémon Paradoxe
+3,995,Épine-de-Fer,Pokémon Paradoxe
+3,996,Frigodo,Pokémon Glaçaileron
+3,997,Cryodo,Pokémon Glaçaileron
+3,998,Glaivodo,Pokémon Dragon Glace
+3,999,Mordudor (Forme Coffre),Pokémon Coffrotrésor
+3,1000,Gromago,Pokémon Trésor Animé
+3,1001,Chongjian,Pokémon Fléau
+3,1002,Baojian,Pokémon Fléau
+3,1003,Dinglu,Pokémon Fléau
+3,1004,Yuyu,Pokémon Fléau
+3,1005,Rugit-Lune,Pokémon Paradoxe
+3,1006,Garde-de-Fer,Pokémon Paradoxe
+3,1007,Koraidon,Pokémon Paradoxe
+3,1008,Miraidon,Pokémon Paradoxe
+3,1009,Serpente-Eau,Pokémon Paradoxe
+3,1010,Vert-de-Fer,Pokémon Paradoxe
+3,1011,Pomdramour,Pokémon Sirop Pomme
+3,1012,Poltchageist,Pokémon Matcha
+3,1013,Théffroyable,Pokémon Matcha
+3,1014,Félicanis,Pokémon Serviteur
+3,1015,Fortusimia,Pokémon Serviteur
+3,1016,Favianos,Pokémon Serviteur
+3,1017,Ogerpon (Masque Turquoise),Pokémon Masque
+3,1018,Pondralugon,Pokémon Alliage
+3,1019,Pomdorochi,Pokémon Hydre Pomme
+3,1020,Feu-Perçant,Pokémon Paradoxe
+3,1021,Ire-Foudre,Pokémon Paradoxe
+3,1022,Chef-de-Fer,Pokémon Paradoxe
+3,1023,Roc-de-Fer,Pokémon Paradoxe
+3,1024,Terapagos (Forme Normale),Pokémon Téracristal
+3,1025,Pêchaminus,Pokémon Emprise
 3,10001,Morphéo (Forme Solaire),Pokémon Climat
 3,10002,Morphéo (Forme Eau de Pluie),Pokémon Climat
 3,10003,Morphéo (Forme Blizzard),Pokémon Climat
@@ -3262,11 +3725,11 @@ language_id,pokemon_id,name,category
 3,10161,Météno (Forme Noyau),Pokémon Météore
 3,10162,Mimiqui Dominant,Pokémon Fantômasque
 3,10163,Ékaïser Dominant,Pokémon Écailles
-3,10164,Ossatueur Dominant,Pokémon Aquabulle
+3,10164,Ossatueur Dominant,Pokémon Gard’Os
 3,10165,Rubombelle Dominant,Pokémon Bombyle
 3,10166,Rocabot (Tempo Perso),Pokémon Chiot
 3,10167,Lougaroc (Forme Crépusculaire),Pokémon Loup
-3,10168,Tarenbulle Dominant,Pokémon Gard’Os
+3,10168,Tarenbulle Dominant,Pokémon Aquabulle
 3,10169,Togedemaru Dominant,Pokémon Roulenboule
 3,10170,Necrozma (Crinière du Couchant),Pokémon Prisme
 3,10171,Necrozma (Ailes de l’Aurore),Pokémon Prisme
@@ -3284,7 +3747,7 @@ language_id,pokemon_id,name,category
 3,10183,Linéon (Forme de Galar),Pokémon Fonceur
 3,10184,Darumarond (Forme de Galar),Pokémon Daruma
 3,10185,Darumacho (Forme de Galar) (Mode Transe),Pokémon Daruma
-3,10186,Darumacho (Forme de Galar) (Mode Normal),Pokémon Daruma
+3,10186,Darumacho (Forme de Galar) (Mode Normal),Pokémon Enflammé
 3,10187,Tutafeh (Forme de Galar),Pokémon Âme
 3,10188,Limonde (Forme de Galar),Pokémon Piège
 3,10189,Salarsen (Forme Grave),Pokémon Punk
@@ -3302,813 +3765,854 @@ language_id,pokemon_id,name,category
 3,10201,Roigada (ガラルのすがた),Pokémon Ensorceleur
 3,10202,Sylveroy (Cavalier du Froid),Pokémon Empereur
 3,10203,Sylveroy (Cavalier d’Effroi),Pokémon Empereur
-4,1,Bisasam,Samen
-4,2,Bisaknosp,Samen
-4,3,Bisaflor,Samen
-4,4,Glumanda,Echse
-4,5,Glutexo,Flamme
-4,6,Glurak,Flamme
-4,7,Schiggy,Minikröte
-4,8,Schillok,Kröte
-4,9,Turtok,Panzertier
-4,10,Raupy,Wurm
-4,11,Safcon,Kokon
-4,12,Smettbo,Falter
-4,13,Hornliu,Raupe
-4,14,Kokuna,Kokon
-4,15,Bibor,Giftbiene
-4,16,Taubsi,Kleinvogel
-4,17,Tauboga,Vogel
-4,18,Tauboss,Vogel
-4,19,Rattfratz,Maus
-4,20,Rattikarl,Maus
-4,21,Habitak,Kleinvogel
-4,22,Ibitak,Pickvogel
-4,23,Rettan,Schlange
-4,24,Arbok,Kobra
-4,25,Pikachu,Maus
-4,26,Raichu,Maus
-4,27,Sandan,Maus
-4,28,Sandamer,Maus
-4,29,Nidoran♀,Giftdorn
-4,30,Nidorina,Giftdorn
-4,31,Nidoqueen,Bohrer
-4,32,Nidoran♂,Giftdorn
-4,33,Nidorino,Giftdorn
-4,34,Nidoking,Bohrer
-4,35,Piepi,Fee
-4,36,Pixi,Fee
-4,37,Vulpix,Fuchs
-4,38,Vulnona,Fuchs
-4,39,Pummeluff,Ballon
-4,40,Knuddeluff,Ballon
-4,41,Zubat,Fledermaus
-4,42,Golbat,Fledermaus
-4,43,Myrapla,Unkraut
-4,44,Duflor,Unkraut
-4,45,Giflor,Blume
-4,46,Paras,Pilz
-4,47,Parasek,Pilz
-4,48,Bluzuk,Insekt
-4,49,Omot,Giftmotte
-4,50,Digda,Maulwurf
-4,51,Digdri,Maulwurf
-4,52,Mauzi,Katze
-4,53,Snobilikat,Rassekatze
-4,54,Enton,Ente
-4,55,Entoron,Ente
-4,56,Menki,Schwein/Affe
-4,57,Rasaff,Schwein/Affe
-4,58,Fukano,Hund
-4,59,Arkani,Legendär
-4,60,Quapsel,Kaulquappe
-4,61,Quaputzi,Kaulquappe
-4,62,Quappo,Kaulquappe
-4,63,Abra,Psi
-4,64,Kadabra,Psi
-4,65,Simsala,Psi
-4,66,Machollo,Kraftprotz
-4,67,Maschock,Kraftprotz
-4,68,Machomei,Kraftprotz
-4,69,Knofensa,Blume
-4,70,Ultrigaria,Fliegentod
-4,71,Sarzenia,Fliegentod
-4,72,Tentacha,Qualle
-4,73,Tentoxa,Qualle
-4,74,Kleinstein,Gestein
-4,75,Georok,Gestein
-4,76,Geowaz,Urgestein
-4,77,Ponita,Feuerpferd
-4,78,Gallopa,Feuerpferd
-4,79,Flegmon,Schnarcher
-4,80,Lahmus,Symbiose
-4,81,Magnetilo,Magnet
-4,82,Magneton,Magnet
-4,83,Porenta,Wildente
-4,84,Dodu,Duovogel
-4,85,Dodri,Trivogel
-4,86,Jurob,Seehund
-4,87,Jugong,Seehund
-4,88,Sleima,Schlamm
-4,89,Sleimok,Schlamm
-4,90,Muschas,Muschel
-4,91,Austos,Muschel
-4,92,Nebulak,Gas
-4,93,Alpollo,Gas
-4,94,Gengar,Schatten
-4,95,Onix,Felsnatter
-4,96,Traumato,Hypnose
-4,97,Hypno,Hypnose
-4,98,Krabby,Krabbe
-4,99,Kingler,Kneifer
-4,100,Voltobal,Ball
-4,101,Lektrobal,Ball
-4,102,Owei,Ei
-4,103,Kokowei,Palmfrucht
-4,104,Tragosso,Einsam
-4,105,Knogga,Knochenfan
-4,106,Kicklee,Kicker
-4,107,Nockchan,Puncher
-4,108,Schlurp,Schlecker
-4,109,Smogon,Giftwolke
-4,110,Smogmog,Giftwolke
-4,111,Rihorn,Stachler
-4,112,Rizeros,Bohrer
-4,113,Chaneira,Ei
-4,114,Tangela,Ranke
-4,115,Kangama,Muttertier
-4,116,Seeper,Drache
-4,117,Seemon,Drache
-4,118,Goldini,Goldfisch
-4,119,Golking,Goldfisch
-4,120,Sterndu,Sternform
-4,121,Starmie,Mysteriös
-4,122,Pantimos,Sperre
-4,123,Sichlor,Mantis
-4,124,Rossana,Humanotyp
-4,125,Elektek,Elektro
-4,126,Magmar,Brenner
-4,127,Pinsir,Kneifkäfer
-4,128,Tauros,Wildbulle
-4,129,Karpador,Fisch
-4,130,Garados,Grausam
-4,131,Lapras,Transport
-4,132,Ditto,Transform
-4,133,Evoli,Evolution
-4,134,Aquana,Blubbblase
-4,135,Blitza,Blitz
-4,136,Flamara,Feuer
-4,137,Porygon,Virtuell
-4,138,Amonitas,Spirale
-4,139,Amoroso,Spirale
-4,140,Kabuto,Schaltier
-4,141,Kabutops,Schaltier
-4,142,Aerodactyl,Fossil
-4,143,Relaxo,Tagträumer
-4,144,Arktos,Eis
-4,145,Zapdos,Elektro
-4,146,Lavados,Flamme
-4,147,Dratini,Drache
-4,148,Dragonir,Drache
-4,149,Dragoran,Drache
-4,150,Mewtu,Genmutant
-4,151,Mew,Neue Art
-4,152,Endivie,Laub
-4,153,Lorblatt,Laub
-4,154,Meganie,Kräuter
-4,155,Feurigel,Feuermaus
-4,156,Igelavar,Vulkan
-4,157,Tornupto,Vulkan
-4,158,Karnimani,Großmaul
-4,159,Tyracroc,Großmaul
-4,160,Impergator,Großmaul
-4,161,Wiesor,Späher
-4,162,Wiesenior,Langleib
-4,163,Hoothoot,Eule
-4,164,Noctuh,Eule
-4,165,Ledyba,Fünf-Punkt
-4,166,Ledian,Fünf-Punkt
-4,167,Webarak,Fadenwurf
-4,168,Ariados,Langbein
-4,169,Iksbat,Fledermaus
-4,170,Lampi,Angler
-4,171,Lanturn,Leuchte
-4,172,Pichu,Babymaus
-4,173,Pii,Sternform
-4,174,Fluffeluff,Ballon
-4,175,Togepi,Zackenball
-4,176,Togetic,Freude
-4,177,Natu,Kleinvogel
-4,178,Xatu,Mystik
-4,179,Voltilamm,Wolle
-4,180,Waaty,Wolle
-4,181,Ampharos,Leuchte
-4,182,Blubella,Blume
-4,183,Marill,Aquamaus
-4,184,Azumarill,Aquahase
-4,185,Mogelbaum,Imitation
-4,186,Quaxo,Frosch
-4,187,Hoppspross,Löwenzahn
-4,188,Hubelupf,Löwenzahn
-4,189,Papungha,Löwenzahn
-4,190,Griffel,Langschweif
-4,191,Sonnkern,Samen
-4,192,Sonnflora,Sonne
-4,193,Yanma,Libelle
-4,194,Felino,Fisch
-4,195,Morlord,Fisch
-4,196,Psiana,Sonne
-4,197,Nachtara,Mondschein
-4,198,Kramurx,Finsternis
-4,199,Laschoking,Monarch
-4,200,Traunfugil,Kreischer
-4,201,Icognito,Symbol
-4,202,Woingenau,Geduld
-4,203,Girafarig,Langhals
-4,204,Tannza,Beutelwurm
-4,205,Forstellka,Beutelwurm
-4,206,Dummisel,Schlange
-4,207,Skorgla,Flugskorpi
-4,208,Stahlos,Stahlboa
-4,209,Snubbull,Fee
-4,210,Granbull,Fee
-4,211,Baldorfish,Ballon
-4,212,Scherox,Kneifer
-4,213,Pottrott,Schimmel
-4,214,Skaraborn,Einzelhorn
-4,215,Sniebel,Stichklaue
-4,216,Teddiursa,Kleinbär
-4,217,Ursaring,Schläfer
-4,218,Schneckmag,Lava
-4,219,Magcargo,Lava
-4,220,Quiekel,Ferkel
-4,221,Keifel,Schwein
-4,222,Corasonn,Koralle
-4,223,Remoraid,Hochdruck
-4,224,Octillery,Hochdruck
-4,225,Botogel,Lieferant
-4,226,Mantax,Flugrochen
-4,227,Panzaeron,Flugstahl
-4,228,Hunduster,Hades
-4,229,Hundemon,Hades
-4,230,Seedraking,Drache
-4,231,Phanpy,Langrüssel
-4,232,Donphan,Panzer
-4,233,Porygon2,Virtuell
-4,234,Damhirplex,Vielender
-4,235,Farbeagle,Maler
-4,236,Rabauz,Racker
-4,237,Kapoera,Kopfstand
-4,238,Kussilla,Kuss
-4,239,Elekid,Elektro
-4,240,Magby,Glutherd
-4,241,Miltank,Milchkuh
-4,242,Heiteira,Freude
-4,243,Raikou,Donner
-4,244,Entei,Vulkan
-4,245,Suicune,Polarlicht
-4,246,Larvitar,Felshaut
-4,247,Pupitar,Hartschale
-4,248,Despotar,Panzer
-4,249,Lugia,Taucher
-4,250,Ho-Oh,Regenbogen
-4,251,Celebi,Zeitreise
-4,252,Geckarbor,Waldgecko
-4,253,Reptain,Waldgecko
-4,254,Gewaldro,Dschungel
-4,255,Flemmli,Küken
-4,256,Jungglut,Kleinhahn
-4,257,Lohgock,Großbrand
-4,258,Hydropi,Lehmhüpfer
-4,259,Moorabbel,Lehmhüpfer
-4,260,Sumpex,Lehmhüpfer
-4,261,Fiffyen,Biss
-4,262,Magnayen,Biss
-4,263,Zigzachs,Kleindachs
-4,264,Geradaks,Sprinter
-4,265,Waumpel,Wurm
-4,266,Schaloko,Kokon
-4,267,Papinella,Falter
-4,268,Panekon,Kokon
-4,269,Pudox,Giftmotte
-4,270,Loturzel,Wasserlinse
-4,271,Lombrero,Frohmut
-4,272,Kappalores,Sorglos
-4,273,Samurzel,Eichelnuss
-4,274,Blanas,Hinterlist
-4,275,Tengulist,Verschlagen
-4,276,Schwalbini,Schwälblein
-4,277,Schwalboss,Schwalbe
-4,278,Wingull,Seemöwe
-4,279,Pelipper,Wasservogel
-4,280,Trasla,Gefühl
-4,281,Kirlia,Emotion
-4,282,Guardevoir,Umarmung
-4,283,Gehweiher,Wassergeher
-4,284,Maskeregen,Auge
-4,285,Knilz,Pilz
-4,286,Kapilz,Pilz
-4,287,Bummelz,Faulpelz
-4,288,Muntier,Wildaffe
-4,289,Letarking,Müßig
-4,290,Nincada,Vorbereiter
-4,291,Ninjask,Ninja
-4,292,Ninjatom,Häutung
-4,293,Flurmel,Flüster
-4,294,Krakeelo,Lauthals
-4,295,Krawumms,Krach
-4,296,Makuhita,Courage
-4,297,Hariyama,Armwurf
-4,298,Azurill,Gepunktet
-4,299,Nasgnet,Kompass
-4,300,Eneco,Kätzchen
-4,301,Enekoro,Eingebildet
-4,302,Zobiris,Finsternis
-4,303,Flunkifer,Schwindler
-4,304,Stollunior,Eisenpanzer
-4,305,Stollrak,Eisenpanzer
-4,306,Stolloss,Eisenpanzer
-4,307,Meditie,Meditation
-4,308,Meditalis,Meditation
-4,309,Frizelbliz,Gewitter
-4,310,Voltenso,Entladung
-4,311,Plusle,Jubel
-4,312,Minun,Jubel
-4,313,Volbeat,Glühwürmchen
-4,314,Illumise,Glühwürmchen
-4,315,Roselia,Dorn
-4,316,Schluppuck,Magen
-4,317,Schlukwech,Giftbeutel
-4,318,Kanivanha,Gnadenlos
-4,319,Tohaido,Brutal
-4,320,Wailmer,Kugelwal
-4,321,Wailord,Flutwal
-4,322,Camaub,Taubheit
-4,323,Camerupt,Ausbruch
-4,324,Qurtel,Kohle
-4,325,Spoink,Sprungfeder
-4,326,Groink,Manipulator
-4,327,Pandir,Punkt-Panda
-4,328,Knacklion,Ameisenlöwe
-4,329,Vibrava,Vibration
-4,330,Libelldra,Mystik
-4,331,Tuska,Kaktus
-4,332,Noktuska,Vogelschock
-4,333,Wablu,Wollvogel
-4,334,Altaria,Summsel
-4,335,Sengo,Frettkatz
-4,336,Vipitis,Reißzahn
-4,337,Lunastein,Meteorit
-4,338,Sonnfel,Meteorit
-4,339,Schmerbe,Barthaar
-4,340,Welsar,Barthaar
-4,341,Krebscorps,Grobian
-4,342,Krebutack,Schlingel
-4,343,Puppance,Lehmpuppe
-4,344,Lepumentas,Lehmpuppe
-4,345,Liliep,Seeanemone
-4,346,Wielie,Rankfüßer
-4,347,Anorith,Urgarnele
-4,348,Armaldo,Schild
-4,349,Barschwa,Fisch
-4,350,Milotic,Zartheit
-4,351,Formeo,Wetter
-4,352,Kecleon,Farbenspiel
-4,353,Shuppet,Puppe
-4,354,Banette,Marionette
-4,355,Zwirrlicht,Requiem
-4,356,Zwirrklop,Wink
-4,357,Tropius,Obst
-4,358,Palimpalim,Windspiel
-4,359,Absol,Desaster
-4,360,Isso,Strahlekind
-4,361,Schneppke,Schneehut
-4,362,Firnontor,Antlitz
-4,363,Seemops,Applaus
-4,364,Seejong,Spielball
-4,365,Walraisa,Eisbrecher
-4,366,Perlu,Muschel
-4,367,Aalabyss,Tiefsee
-4,368,Saganabyss,Südsee
-4,369,Relicanth,Bestand
-4,370,Liebiskus,Rendezvous
-4,371,Kindwurm,Steinhaupt
-4,372,Draschel,Durchsteher
-4,373,Brutalanda,Drache
-4,374,Tanhel,Eisenkugel
-4,375,Metang,Eisenklaue
-4,376,Metagross,Eisenfuß
-4,377,Regirock,Steingipfel
-4,378,Regice,Eisberg
-4,379,Registeel,Eisen
-4,380,Latias,Äon
-4,381,Latios,Äon
-4,382,Kyogre,Seegründler
-4,383,Groudon,Kontinent
-4,384,Rayquaza,Himmelhoch
-4,385,Jirachi,Wünscher
-4,386,Deoxys (Normalform),DNS
-4,387,Chelast,Winziglaub
-4,388,Chelcarain,Hain
-4,389,Chelterrar,Kontinent
-4,390,Panflam,Schimpanse
-4,391,Panpyro,Verspielt
-4,392,Panferno,Flamme
-4,393,Plinfa,Pinguin
-4,394,Pliprin,Pinguin
-4,395,Impoleon,Kaiser
-4,396,Staralili,Star
-4,397,Staravia,Star
-4,398,Staraptor,Raubtier
-4,399,Bidiza,Dickmaus
-4,400,Bidifas,Biber
-4,401,Zirpurze,Zirper
-4,402,Zirpeise,Zirper
-4,403,Sheinux,Flacker
-4,404,Luxio,Funken
-4,405,Luxtra,Glühauge
-4,406,Knospi,Knospe
-4,407,Roserade,Blumenstrauß
-4,408,Koknodon,Kopfstoß
-4,409,Rameidon,Kopfstoß
-4,410,Schilterus,Schutzschild
-4,411,Bollterus,Schutzschild
-4,412,Burmy,Beutelwurm
-4,413,Burmadame (Pflanzenumhang),Beutelwurm
-4,414,Moterpel,Motte
-4,415,Wadribie,Kleinbiene
-4,416,Honweisel,Bienenstock
-4,417,Pachirisu,Elektrohörnchen
-4,418,Bamelin,Meereswiesel
-4,419,Bojelin,Meereswiesel
-4,420,Kikugi,Kirsche
-4,421,Kinoso,Blüte
-4,422,Schalellos,Seeschnecke
-4,423,Gastrodon,Seeschnecke
-4,424,Ambidiffel,Langschweif
-4,425,Driftlon,Ballon
-4,426,Drifzepeli,Luftschiff
-4,427,Haspiror,Hase
-4,428,Schlapor,Hase
-4,429,Traunmagil,Magisch
-4,430,Kramshef,Anführer
-4,431,Charmian,Fies
-4,432,Shnurgarst,Tigerkatze
-4,433,Klingplim,Glöckchen
-4,434,Skunkapuh,Stinktier
-4,435,Skuntank,Stinktier
-4,436,Bronzel,Bronze
-4,437,Bronzong,Bronzeglocke
-4,438,Mobai,Bonsai
-4,439,Pantimimi,Mime
-4,440,Wonneira,Spielhaus
-4,441,Plaudagei,Musiknote
-4,442,Kryppuk,Verboten
-4,443,Kaumalat,Landhai
-4,444,Knarksel,Höhle
-4,445,Knakrack,Rasanz
-4,446,Mampfaxo,Nimmersatt
-4,447,Riolu,Wellenspiel
-4,448,Lucario,Aura
-4,449,Hippopotas,Flusspferd
-4,450,Hippoterus,Schwergewicht
-4,451,Pionskora,Skorpion
-4,452,Piondragi,Ogerskorpion
-4,453,Glibunkel,Giftmund
-4,454,Toxiquak,Giftmund
-4,455,Venuflibis,Käfertod
-4,456,Finneon,Flügelfisch
-4,457,Lumineon,Neon
-4,458,Mantirps,Flugrochen
-4,459,Shnebedeck,Frostbaum
-4,460,Rexblisar,Frostbaum
-4,461,Snibunna,Stichklaue
-4,462,Magnezone,Magnetgebiet
-4,463,Schlurplek,Schlecker
-4,464,Rihornior,Bohrer
-4,465,Tangoloss,Ranke
-4,466,Elevoltek,Donnerkeil
-4,467,Magbrant,Detonation
-4,468,Togekiss,Jubilierer
-4,469,Yanmega,Agrion
-4,470,Folipurba,Unreif
-4,471,Glaziola,Neuschnee
-4,472,Skorgro,Zahnskorpi
-4,473,Mamutel,Doppelstoßzahn
-4,474,Porygon-Z,Virtuell
-4,475,Galagladi,Klinge
-4,476,Voluminas,Kompass
-4,477,Zwirrfinst,Greifer
-4,478,Frosdedje,Schneegebiet
-4,479,Rotom,Plasma
-4,480,Selfe,Wissen
-4,481,Vesprit,Emotion
-4,482,Tobutz,Willenskraft
-4,483,Dialga,Zeitweilig
-4,484,Palkia,Räumlich
-4,485,Heatran,Lavadom
-4,486,Regigigas,Kolossal
-4,487,Giratina (Wandelform),Rebell
-4,488,Cresselia,Lunar
-4,489,Phione,Seedrift
-4,490,Manaphy,Seefahrer
-4,491,Darkrai,Dunkelnacht
-4,492,Shaymin (Landform),Dankbarkeit
-4,493,Arceus (Normal),Alpha
-4,494,Victini,Triumph
-4,495,Serpifeu,Grasschlange
-4,496,Efoserp,Grasschlange
-4,497,Serpiroyal,Hoheit
-4,498,Floink,Feuerferkel
-4,499,Ferkokel,Feuerferkel
-4,500,Flambirex,Feuerschwein
-4,501,Ottaro,Otter
-4,502,Zwottronin,Schulung
-4,503,Admurai,Würde
-4,504,Nagelotz,Späher
-4,505,Kukmarda,Wachsamkeit
-4,506,Yorkleff,Hund
-4,507,Terribark,Treuhund
-4,508,Bissbark,Großmut
-4,509,Felilou,Schelm
-4,510,Kleoparda,Gefühlskälte
-4,511,Vegimak,Grasaffe
-4,512,Vegichita,Stachelaffe
-4,513,Grillmak,Hitze
-4,514,Grillchita,Funkenregen
-4,515,Sodamak,Wasserstrahl
-4,516,Sodachita,Drainage
-4,517,Somniam,Traumfresser
-4,518,Somnivora,Halbschlaf
-4,519,Dusselgurr,Täubchen
-4,520,Navitaub,Wildtaube
-4,521,Fasasnob,Stolz
-4,522,Elezeba,Hochspannung
-4,523,Zebritz,Donnerkeil
-4,524,Kiesling,Erdmantel
-4,525,Sedimantur,Erz
-4,526,Brockoloss,Kompression
-4,527,Fleknoil,Fledermaus
-4,528,Fletiamo,Balz
-4,529,Rotomurf,Maulwurf
-4,530,Stalobor,Untergrund
-4,531,Ohrdoch,Gehör
-4,532,Praktibalk,Muskel
-4,533,Strepoli,Muskel
-4,534,Meistagrif,Muskel
-4,535,Schallquap,Kaulquappe
-4,536,Mebrana,Vibration
-4,537,Branawarz,Vibration
-4,538,Jiutesto,Judo
-4,539,Karadonis,Karate
-4,540,Strawickl,Schneider
-4,541,Folikon,Wickelblatt
-4,542,Matrifol,Kinderpflege
-4,543,Toxiped,Tausendfüßer
-4,544,Rollum,Kokonfüßer
-4,545,Cerapendra,Riesenfüßer
-4,546,Waumboll,Wattebausch
-4,547,Elfun,Windschatten
-4,548,Lilminip,Wurzel
-4,549,Dressella,Blumenzier
-4,550,Barschuft (Rotlinige Form),Grobheit
-4,551,Ganovil,Wüstenkroko
-4,552,Rokkaiman,Wüstenkroko
-4,553,Rabigator,Abschreckung
-4,554,Flampion,Lampion
-4,555,Flampivian (Normalmodus),Lichterloh
-4,556,Maracamba,Kaktus
-4,557,Lithomith,Steinhaus
-4,558,Castellith,Felshaus
-4,559,Zurrokex,Hautwechsel
-4,560,Irokex,Halunke
-4,561,Symvolara,Vogelgleich
-4,562,Makabaja,Seele
-4,563,Echnatoll,Sarkophag
-4,564,Galapaflos,Urzeitkröte
-4,565,Karippas,Urzeitkröte
-4,566,Flapteryx,Urzeitvogel
-4,567,Aeropteryx,Urzeitvogel
-4,568,Unratütox,Mülltüte
-4,569,Deponitox,Müllhalde
-4,570,Zorua,Lausefuchs
-4,571,Zoroark,Polymorfuchs
-4,572,Picochilla,Chinchilla
-4,573,Chillabell,Schal
-4,574,Mollimorba,Glotz
-4,575,Hypnomorba,Manipulator
-4,576,Morbitesse,Gestirn
-4,577,Monozyto,Zelle
-4,578,Mitodos,Zellteilung
-4,579,Zytomega,Vermehrung
-4,580,Piccolente,Wasservogel
-4,581,Swaroness,Schwan
-4,582,Gelatini,Neuschnee
-4,583,Gelatroppo,Firn
-4,584,Gelatwino,Schneesturm
-4,585,Sesokitz,Jahreszeit
-4,586,Kronjuwild,Jahreszeit
-4,587,Emolga,Flughörnchen
-4,588,Laukaps,Schnappbiss
-4,589,Cavalanzas,Kavallerie
-4,590,Tarnpignon,Pilz
-4,591,Hutsassa,Pilz
-4,592,Quabbel,Gleit
-4,593,Apoquallyp,Gleit
-4,594,Mamolida,Fürsorge
-4,595,Wattzapf,Kleben
-4,596,Voltula,Stromspinne
-4,597,Kastadur,Dornfrucht
-4,598,Tentantel,Dornkugel
-4,599,Klikk,Getriebe
-4,600,Kliklak,Getriebe
-4,601,Klikdiklak,Getriebe
-4,602,Zapplardin,Stromfisch
-4,603,Zapplalek,Stromfisch
-4,604,Zapplarang,Stromfisch
-4,605,Pygraulon,Grips
-4,606,Megalon,Grips
-4,607,Lichtel,Kerze
-4,608,Laternecto,Lampe
-4,609,Skelabra,Geleit
-4,610,Milza,Stoßzahn
-4,611,Sharfax,Beilkiefer
-4,612,Maxax,Beilkiefer
-4,613,Petznief,Eisscholle
-4,614,Siberio,Packeis
-4,615,Frigometri,Kristall
-4,616,Schnuthelm,Schnecke
-4,617,Hydragil,Entschalung
-4,618,Flunschlik,Falle
-4,619,Lin-Fu,Kampfkünste
-4,620,Wie-Shu,Kampfkünste
-4,621,Shardrago,Höhle
-4,622,Golbit,Urgolem
-4,623,Golgantes,Urgolem
-4,624,Gladiantri,Stahlklinge
-4,625,Caesurio,Schwertklinge
-4,626,Bisofank,Kopfstoßrind
-4,627,Geronimatz,Adlerküken
-4,628,Washakwil,Kühnheit
-4,629,Skallyk,Windel
-4,630,Grypheldis,Knochenadler
-4,631,Furnifraß,Ameisenbär
-4,632,Fermicula,Eisenameise
-4,633,Kapuno,Haudrauf
-4,634,Duodino,Grobheit
-4,635,Trikephalo,Brutal
-4,636,Ignivor,Fackel
-4,637,Ramoth,Sonne
-4,638,Kobalium,Eisenkern
-4,639,Terrakium,Felsenhöhle
-4,640,Viridium,Wiese
-4,641,Boreos (Inkarnationsform),Wirbelsturm
-4,642,Voltolos (Inkarnationsform),Torpedo
-4,643,Reshiram,Wahres Weiß
-4,644,Zekrom,Reines Schwarz
-4,645,Demeteros (Inkarnationsform),Reichtum
-4,646,Kyurem,Schwelle
-4,647,Keldeo,Fohlen
-4,648,Meloetta (Gesangsform),Melodie
-4,649,Genesect,Paläozoikum
-4,650,Igamaro,Stachelkopf
-4,651,Igastarnish,Spitzpanzer
-4,652,Brigaron,Spitzpanzer
-4,653,Fynx,Fuchs
-4,654,Rutena,Fuchs
-4,655,Fennexis,Fuchs
-4,656,Froxy,Blubbfrosch
-4,657,Amphizel,Blubbfrosch
-4,658,Quajutsu,Ninja
-4,659,Scoppel,Baugräber
-4,660,Grebbit,Baugräber
-4,661,Dartiri,Rotkehlchen
-4,662,Dartignis,Funkenregen
-4,663,Fiaro,Stichflamme
-4,664,Purmel,Puderinsekt
-4,665,Puponcho,Puderinsekt
-4,666,Vivillon,Flügelstaub
-4,667,Leufeo,Junglöwe
-4,668,Pyroleo,Monarch
-4,669,Flabébé,Einblütler
-4,670,Floette,Einblütler
-4,671,Florges,Garten
-4,672,Mähikel,Ritt
-4,673,Chevrumm,Ritt
-4,674,Pam-Pam,Verspielt
-4,675,Pandagro,Gaunerblick
-4,676,Coiffwaff,Pudel
-4,677,Psiau,Zügelung
-4,678,Psiaugon (Männlich),Fassung
-4,679,Gramokles,Klingenkraft
-4,680,Duokles,Klingenkraft
-4,681,Durengard (Schildform),Königsklinge
-4,682,Parfi,Parfüm
-4,683,Parfinesse,Duft
-4,684,Flauschling,Zuckerwatte
-4,685,Sabbaione,Schlagsahne
-4,686,Iscalar,Rotation
-4,687,Calamanero,Inversion
-4,688,Bithora,Krallenduo
-4,689,Thanathora,Ballung
-4,690,Algitt,Tangmimikry
-4,691,Tandrak,Tangmimikry
-4,692,Scampisto,Aquapistole
-4,693,Wummer,Aquawumme
-4,694,Eguana,Generator
-4,695,Elezard,Generator
-4,696,Balgoras,Kronprinz
-4,697,Monargoras,Tyrann
-4,698,Amarino,Tundra
-4,699,Amagarga,Tundra
-4,700,Feelinara,Bindung
-4,701,Resladero,Wrestling
-4,702,Dedenne,Antennen
-4,703,Rocara,Edelstein
-4,704,Viscora,Schneckedei
-4,705,Viscargot,Schneckedei
-4,706,Viscogon,Drache
-4,707,Clavion,Schlüssel
-4,708,Paragoni,Baumstumpf
-4,709,Trombork,Urgehölz
-4,710,Irrbis (Größe M),Kürbis
-4,711,Pumpdjinn (Größe M),Kürbis
-4,712,Arktip,Eisklumpen
-4,713,Arktilas,Eisberg
-4,714,eF-eM,Schallwellen
-4,715,UHaFnir,Schallwellen
-4,716,Xerneas,Leben
-4,717,Yveltal,Zerstörung
-4,718,50%-Zygarde,Ordnung
-4,719,Diancie,Edelstein
-4,720,Gebanntes Hoopa,Schabernack
-4,721,Volcanion,Dampf
-4,722,Bauz,Laubflügel
-4,723,Arboretoss,Flügelklinge
-4,724,Silvarro,Pfeilflügel
-4,725,Flamiau,Feuerkatze
-4,726,Miezunder,Feuerkatze
-4,727,Fuegro,Fiesling
-4,728,Robball,Seehund
-4,729,Marikeck,Popsternchen
-4,730,Primarene,Solist
-4,731,Peppeck,Specht
-4,732,Trompeck,Trompete
-4,733,Tukanon,Kanone
-4,734,Mangunior,Patrouille
-4,735,Manguspektor,Beschattung
-4,736,Mabula,Larve
-4,737,Akkup,Batterie
-4,738,Donarion,Kneifkäfer
-4,739,Krabbox,Boxkampf
-4,740,Krawell,Fellkrabbe
-4,741,Choreogel (Flamenco-Stil),Tanz
-4,742,Wommel,Hummelfliege
-4,743,Bandelby,Hummelfliege
-4,744,Wuffels,Hund
-4,745,Wolwerock (Tagform),Wolf
-4,746,Lusardin (Einzelform),Kleinfisch
-4,747,Garstella,Quäl-Stern
-4,748,Aggrostella,Quäl-Stern
-4,749,Pampuli,Packesel
-4,750,Pampross,Zugpferd
-4,751,Araqua,Wasserblase
-4,752,Aranestro,Wasserblase
-4,753,Imantis,Grassichel
-4,754,Mantidea,Blumensichel
-4,755,Bubungus,Lumineszenz
-4,756,Lamellux,Lumineszenz
-4,757,Molunk,Giftechse
-4,758,Amfira,Giftechse
-4,759,Velursi,Wildfang
-4,760,Kosturso,Kraftarme
-4,761,Frubberl,Obst
-4,762,Frubaila,Obst
-4,763,Fruyal,Obst
-4,764,Curelei,Blumenkranz
-4,765,Kommandutan,Weisheit
-4,766,Quartermak,Teamwork
-4,767,Reißlaus,Laufschritt
-4,768,Tectass,Rüstung
-4,769,Sankabuh,Sandhaufen
-4,770,Colossand,Sandschloss
-4,771,Gufa,Seegurke
-4,772,Typ:Null,Modifikation
-4,773,Amigento (Normal),Modifikation
-4,774,Meteno (Meteorform),Meteor
-4,775,Koalelu,Halbschlaf
-4,776,Tortunator,Knallkröte
-4,777,Togedemaru,Einigler
-4,778,Mimigma,Kostümspuk
-4,779,Knirfish,Knirschzahn
-4,780,Sen-Long,Gelassenheit
-4,781,Moruda,Seetang
-4,782,Miniras,Schuppentier
-4,783,Mediras,Schuppentier
-4,784,Grandiras,Schuppentier
-4,785,Kapu-Riki,Schutzpatron
-4,786,Kapu-Fala,Schutzpatron
-4,787,Kapu-Toro,Schutzpatron
-4,788,Kapu-Kime,Schutzpatron
-4,789,Cosmog,Nebula
-4,790,Cosmovum,Urgestirn
-4,791,Solgaleo,Sonnenkreis
-4,792,Lunala,Mondscheibe
-4,793,Anego,Parasit
-4,794,Masskito,Ausdehnung
-4,795,Schabelle,Eleganz
-4,796,Voltriant,Illumination
-4,797,Kaguron,Raketenstart
-4,798,Katagami,Schwertkunst
-4,799,Schlingking,Gaumenfolter
-4,800,Necrozma,Prisma
-4,801,Magearna,Fabrikat
-4,802,Marshadow,Dunkelwesen
-4,803,Venicro,Giftdorn
-4,804,Agoyon,Giftdorn
-4,805,Muramura,Steinmauer
-4,806,Kopplosio,Feuerwerk
-4,807,Zeraora,Blitzsturm
+3,10204,Caninos (Forme de Hisui),Pokémon Espion
+3,10205,Arcanin (Forme de Hisui),Pokémon Légendaire
+3,10206,Voltorbe (Forme de Hisui),Pokémon Sphère
+3,10207,Électrode (Forme de Hisui),Pokémon Sphère
+3,10208,Typhlosion (Forme de Hisui),Pokémon Feu Follet
+3,10209,Qwilfish (Forme de Hisui),Pokémon Bouboule
+3,10210,Farfuret (Forme de Hisui),Pokémon Grifacérée
+3,10211,Dialga (Forme Originelle),Pokémon Temps
+3,10212,Palkia (Forme Originelle),Pokémon Espace
+3,10213,Clamiral (Forme de Hisui),Pokémon Dignitaire
+3,10214,Fragilady (Forme de Hisui),Pokémon Pirouette
+3,10215,Bargantua (Motif Blanc),Pokémon Pacifique
+3,10216,Zorua (Forme de Hisui),Pokémon Rancœurenard
+3,10217,Zoroark (Forme de Hisui),Pokémon Maudirenard
+3,10218,Gueriaigle (Forme de Hisui),Pokémon Cri Guerrier
+3,10219,Colimucus (Forme de Hisui),Pokémon Escargot
+3,10220,Muplodocus (Forme de Hisui),Pokémon Escamoquille
+3,10221,Séracrawl (Forme de Hisui),Pokémon Iceberg
+3,10222,Archéduc (Forme de Hisui),Pokémon Plumeflèche
+3,10223,Paragruel (Femelle),Pokémon Poissigrand
+3,10224,Amovénus (Forme Totémique),Pokémon Hainamour
+3,10225,Tauros (Forme de Paldea),Pokémon Buffle
+3,10226,Tauros (Forme de Paldea),Pokémon Buffle
+3,10227,Tauros (Forme de Paldea),Pokémon Buffle
+3,10228,Axoloto (Forme de Paldea),Pokémon Poizzon
+3,10229,Fragroin (Femelle),Pokémon Pourceau
+3,10230,Tapatoès (Plumage Bleu),Pokémon Perroquet
+3,10231,Tapatoès (Plumage Jaune),Pokémon Perroquet
+3,10232,Tapatoès (Plumage Blanc),Pokémon Perroquet
+3,10233,Superdofin (Forme Super),Pokémon Super Héros
+3,10234,Mordudor (Forme Marche),Pokémon Chassotrésor
+3,10235,Ursaking (Lune Vermeille),Pokémon Tourbe
+3,10236,Ogerpon (Masque du Puits),Pokémon Masque
+3,10237,Ogerpon (Masque du Fourneau),Pokémon Masque
+3,10238,Ogerpon (Masque de la Pierre),Pokémon Masque
+3,10239,Ogerpon (Masque Turquoise Tera),Pokémon Masque
+3,10240,Ogerpon (Masque du Puits Tera),Pokémon Masque
+3,10241,Ogerpon (Masque du Fourneau Tera),Pokémon Masque
+3,10242,Ogerpon (Masque de la Pierre Tera),Pokémon Masque
+3,10243,Terapagos (Forme Téracristal),Pokémon Téracristal
+3,10244,Terapagos (Forme Stellaire),Pokémon Téracristal
+4,1,Bisasam,Samen-Pokémon
+4,2,Bisaknosp,Samen-Pokémon
+4,3,Bisaflor,Samen-Pokémon
+4,4,Glumanda,Echsen-Pokémon
+4,5,Glutexo,Flammen-Pokémon
+4,6,Glurak,Flammen-Pokémon
+4,7,Schiggy,Minikröten-Pokémon
+4,8,Schillok,Kröten-Pokémon
+4,9,Turtok,Panzertier-Pokémon
+4,10,Raupy,Wurm-Pokémon
+4,11,Safcon,Kokon-Pokémon
+4,12,Smettbo,Falter-Pokémon
+4,13,Hornliu,Raupen-Pokémon
+4,14,Kokuna,Kokon-Pokémon
+4,15,Bibor,Giftbienen-Pokémon
+4,16,Taubsi,Kleinvogel-Pokémon
+4,17,Tauboga,Vogel-Pokémon
+4,18,Tauboss,Vogel-Pokémon
+4,19,Rattfratz,Maus-Pokémon
+4,20,Rattikarl,Maus-Pokémon
+4,21,Habitak,Kleinvogel-Pokémon
+4,22,Ibitak,Pickvogel-Pokémon
+4,23,Rettan,Schlangen-Pokémon
+4,24,Arbok,Kobra-Pokémon
+4,25,Pikachu,Maus-Pokémon
+4,26,Raichu,Maus-Pokémon
+4,27,Sandan,Maus-Pokémon
+4,28,Sandamer,Maus-Pokémon
+4,29,Nidoran♀,Giftdorn-Pokémon
+4,30,Nidorina,Giftdorn-Pokémon
+4,31,Nidoqueen,Bohrer-Pokémon
+4,32,Nidoran♂,Giftdorn-Pokémon
+4,33,Nidorino,Giftdorn-Pokémon
+4,34,Nidoking,Bohrer-Pokémon
+4,35,Piepi,Feen-Pokémon
+4,36,Pixi,Feen-Pokémon
+4,37,Vulpix,Fuchs-Pokémon
+4,38,Vulnona,Fuchs-Pokémon
+4,39,Pummeluff,Ballon-Pokémon
+4,40,Knuddeluff,Ballon-Pokémon
+4,41,Zubat,Fledermaus-Pokémon
+4,42,Golbat,Fledermaus-Pokémon
+4,43,Myrapla,Unkraut-Pokémon
+4,44,Duflor,Unkraut-Pokémon
+4,45,Giflor,Blumen-Pokémon
+4,46,Paras,Pilz-Pokémon
+4,47,Parasek,Pilz-Pokémon
+4,48,Bluzuk,Insekten-Pokémon
+4,49,Omot,Giftmotten-Pokémon
+4,50,Digda,Maulwurf-Pokémon
+4,51,Digdri,Maulwurf-Pokémon
+4,52,Mauzi,Katzen-Pokémon
+4,53,Snobilikat,Rassekatzen-Pokémon
+4,54,Enton,Enten-Pokémon
+4,55,Entoron,Enten-Pokémon
+4,56,Menki,Schweinsaffen-Pokémon
+4,57,Rasaff,Schweinsaffen-Pokémon
+4,58,Fukano,Welpen-Pokémon
+4,59,Arkani,Legendär-Pokémon
+4,60,Quapsel,Kaulquappen-Pokémon
+4,61,Quaputzi,Kaulquappen-Pokémon
+4,62,Quappo,Kaulquappen-Pokémon
+4,63,Abra,Psi-Pokémon
+4,64,Kadabra,Psi-Pokémon
+4,65,Simsala,Psi-Pokémon
+4,66,Machollo,Kraftprotz-Pokémon
+4,67,Maschock,Kraftprotz-Pokémon
+4,68,Machomei,Kraftprotz-Pokémon
+4,69,Knofensa,Blumen-Pokémon
+4,70,Ultrigaria,Fliegentod-Pokémon
+4,71,Sarzenia,Fliegentod-Pokémon
+4,72,Tentacha,Quallen-Pokémon
+4,73,Tentoxa,Quallen-Pokémon
+4,74,Kleinstein,Gesteins-Pokémon
+4,75,Georok,Gesteins-Pokémon
+4,76,Geowaz,Urgesteins-Pokémon
+4,77,Ponita,Feuerpferd-Pokémon
+4,78,Gallopa,Feuerpferd-Pokémon
+4,79,Flegmon,Schnarcher-Pokémon
+4,80,Lahmus,Symbiose-Pokémon
+4,81,Magnetilo,Magnet-Pokémon
+4,82,Magneton,Magnet-Pokémon
+4,83,Porenta,Wildenten-Pokémon
+4,84,Dodu,Duovogel-Pokémon
+4,85,Dodri,Trivogel-Pokémon
+4,86,Jurob,Seehund-Pokémon
+4,87,Jugong,Seehund-Pokémon
+4,88,Sleima,Schlamm-Pokémon
+4,89,Sleimok,Schlamm-Pokémon
+4,90,Muschas,Muschel-Pokémon
+4,91,Austos,Muschel-Pokémon
+4,92,Nebulak,Gas-Pokémon
+4,93,Alpollo,Gas-Pokémon
+4,94,Gengar,Schatten-Pokémon
+4,95,Onix,Felsnatter-Pokémon
+4,96,Traumato,Hypnose-Pokémon
+4,97,Hypno,Hypnose-Pokémon
+4,98,Krabby,Krabben-Pokémon
+4,99,Kingler,Kneifer-Pokémon
+4,100,Voltobal,Ball-Pokémon
+4,101,Lektrobal,Ball-Pokémon
+4,102,Owei,Ei-Pokémon
+4,103,Kokowei,Palmfrucht-Pokémon
+4,104,Tragosso,Einsam-Pokémon
+4,105,Knogga,Knochenfan-Pokémon
+4,106,Kicklee,Kicker-Pokémon
+4,107,Nockchan,Puncher-Pokémon
+4,108,Schlurp,Schlecker-Pokémon
+4,109,Smogon,Giftwolken-Pokémon
+4,110,Smogmog,Giftwolken-Pokémon
+4,111,Rihorn,Stachler-Pokémon
+4,112,Rizeros,Bohrer-Pokémon
+4,113,Chaneira,Ei-Pokémon
+4,114,Tangela,Ranken-Pokémon
+4,115,Kangama,Muttertier-Pokémon
+4,116,Seeper,Drachen-Pokémon
+4,117,Seemon,Drachen-Pokémon
+4,118,Goldini,Goldfisch-Pokémon
+4,119,Golking,Goldfisch-Pokémon
+4,120,Sterndu,Sternform-Pokémon
+4,121,Starmie,Mysteriös-Pokémon
+4,122,Pantimos,Sperren-Pokémon
+4,123,Sichlor,Mantis-Pokémon
+4,124,Rossana,Humanotyp-Pokémon
+4,125,Elektek,Elektro-Pokémon
+4,126,Magmar,Brenner-Pokémon
+4,127,Pinsir,Kneifkäfer-Pokémon
+4,128,Tauros,Wildbullen-Pokémon
+4,129,Karpador,Fisch-Pokémon
+4,130,Garados,Grausam-Pokémon
+4,131,Lapras,Transport-Pokémon
+4,132,Ditto,Transform-Pokémon
+4,133,Evoli,Evolutions-Pokémon
+4,134,Aquana,Blubbblasen-Pokémon
+4,135,Blitza,Blitz-Pokémon
+4,136,Flamara,Feuer-Pokémon
+4,137,Porygon,Virtuell-Pokémon
+4,138,Amonitas,Spiralen-Pokémon
+4,139,Amoroso,Spiralen-Pokémon
+4,140,Kabuto,Schaltier-Pokémon
+4,141,Kabutops,Schaltier-Pokémon
+4,142,Aerodactyl,Fossil-Pokémon
+4,143,Relaxo,Tagträumer-Pokémon
+4,144,Arktos,Eis-Pokémon
+4,145,Zapdos,Elektro-Pokémon
+4,146,Lavados,Flammen-Pokémon
+4,147,Dratini,Drachen-Pokémon
+4,148,Dragonir,Drachen-Pokémon
+4,149,Dragoran,Drachen-Pokémon
+4,150,Mewtu,Genmutanten-Pokémon
+4,151,Mew,Neue Art-Pokémon
+4,152,Endivie,Laub-Pokémon
+4,153,Lorblatt,Laub-Pokémon
+4,154,Meganie,Kräuter-Pokémon
+4,155,Feurigel,Feuermaus-Pokémon
+4,156,Igelavar,Vulkan-Pokémon
+4,157,Tornupto,Vulkan-Pokémon
+4,158,Karnimani,Großmaul-Pokémon
+4,159,Tyracroc,Großmaul-Pokémon
+4,160,Impergator,Großmaul-Pokémon
+4,161,Wiesor,Späher-Pokémon
+4,162,Wiesenior,Langleib-Pokémon
+4,163,Hoothoot,Eulen-Pokémon
+4,164,Noctuh,Eulen-Pokémon
+4,165,Ledyba,Fünf-Punkt-Pokémon
+4,166,Ledian,Fünf-Punkt-Pokémon
+4,167,Webarak,Fadenwurf-Pokémon
+4,168,Ariados,Langbein-Pokémon
+4,169,Iksbat,Fledermaus-Pokémon
+4,170,Lampi,Angler-Pokémon
+4,171,Lanturn,Leuchten-Pokémon
+4,172,Pichu,Babymaus-Pokémon
+4,173,Pii,Sternform-Pokémon
+4,174,Fluffeluff,Ballon-Pokémon
+4,175,Togepi,Zackenball-Pokémon
+4,176,Togetic,Freuden-Pokémon
+4,177,Natu,Kleinvogel-Pokémon
+4,178,Xatu,Mystik-Pokémon
+4,179,Voltilamm,Wolle-Pokémon
+4,180,Waaty,Wolle-Pokémon
+4,181,Ampharos,Leuchten-Pokémon
+4,182,Blubella,Blumen-Pokémon
+4,183,Marill,Aquamaus-Pokémon
+4,184,Azumarill,Aquahasen-Pokémon
+4,185,Mogelbaum,Imitations-Pokémon
+4,186,Quaxo,Frosch-Pokémon
+4,187,Hoppspross,Löwenzahn-Pokémon
+4,188,Hubelupf,Löwenzahn-Pokémon
+4,189,Papungha,Löwenzahn-Pokémon
+4,190,Griffel,Langschweif-Pokémon
+4,191,Sonnkern,Samen-Pokémon
+4,192,Sonnflora,Sonnen-Pokémon
+4,193,Yanma,Libellen-Pokémon
+4,194,Felino,Fisch-Pokémon
+4,195,Morlord,Fisch-Pokémon
+4,196,Psiana,Sonnen-Pokémon
+4,197,Nachtara,Mondschein-Pokémon
+4,198,Kramurx,Finsternis-Pokémon
+4,199,Laschoking,Monarchen-Pokémon
+4,200,Traunfugil,Kreischer-Pokémon
+4,201,Icognito,Symbol-Pokémon
+4,202,Woingenau,Gedulds-Pokémon
+4,203,Girafarig,Langhals-Pokémon
+4,204,Tannza,Beutelwurm-Pokémon
+4,205,Forstellka,Beutelwurm-Pokémon
+4,206,Dummisel,Erdschlangen-Pokémon
+4,207,Skorgla,Flugskorpion-Pokémon
+4,208,Stahlos,Stahlboa-Pokémon
+4,209,Snubbull,Feen-Pokémon
+4,210,Granbull,Feen-Pokémon
+4,211,Baldorfish,Ballon-Pokémon
+4,212,Scherox,Kneifer-Pokémon
+4,213,Pottrott,Schimmel-Pokémon
+4,214,Skaraborn,Einzelhorn-Pokémon
+4,215,Sniebel,Stichklauen-Pokémon
+4,216,Teddiursa,Kleinbären-Pokémon
+4,217,Ursaring,Schläfer-Pokémon
+4,218,Schneckmag,Lava-Pokémon
+4,219,Magcargo,Lava-Pokémon
+4,220,Quiekel,Ferkel-Pokémon
+4,221,Keifel,Wildschwein-Pokémon
+4,222,Corasonn,Korallen-Pokémon
+4,223,Remoraid,Hochdruck-Pokémon
+4,224,Octillery,Hochdruck-Pokémon
+4,225,Botogel,Lieferanten-Pokémon
+4,226,Mantax,Flugrochen-Pokémon
+4,227,Panzaeron,Flugstahl-Pokémon
+4,228,Hunduster,Hades-Pokémon
+4,229,Hundemon,Hades-Pokémon
+4,230,Seedraking,Drachen-Pokémon
+4,231,Phanpy,Langrüssel-Pokémon
+4,232,Donphan,Panzer-Pokémon
+4,233,Porygon2,Virtuell-Pokémon
+4,234,Damhirplex,Vielender-Pokémon
+4,235,Farbeagle,Maler-Pokémon
+4,236,Rabauz,Racker-Pokémon
+4,237,Kapoera,Kopfstand-Pokémon
+4,238,Kussilla,Kuss-Pokémon
+4,239,Elekid,Elektro-Pokémon
+4,240,Magby,Glutherd-Pokémon
+4,241,Miltank,Milchkuh-Pokémon
+4,242,Heiteira,Freuden-Pokémon
+4,243,Raikou,Donner-Pokémon
+4,244,Entei,Vulkan-Pokémon
+4,245,Suicune,Polarlicht-Pokémon
+4,246,Larvitar,Felshaut-Pokémon
+4,247,Pupitar,Hartschalen-Pokémon
+4,248,Despotar,Panzer-Pokémon
+4,249,Lugia,Taucher-Pokémon
+4,250,Ho-Oh,Regenbogen-Pokémon
+4,251,Celebi,Zeitreise-Pokémon
+4,252,Geckarbor,Waldgecko-Pokémon
+4,253,Reptain,Waldgecko-Pokémon
+4,254,Gewaldro,Dschungel-Pokémon
+4,255,Flemmli,Küken-Pokémon
+4,256,Jungglut,Jungvogel-Pokémon
+4,257,Lohgock,Großbrand-Pokémon
+4,258,Hydropi,Lehmhüpfer-Pokémon
+4,259,Moorabbel,Lehmhüpfer-Pokémon
+4,260,Sumpex,Lehmhüpfer-Pokémon
+4,261,Fiffyen,Biss-Pokémon
+4,262,Magnayen,Biss-Pokémon
+4,263,Zigzachs,Kleindachs-Pokémon
+4,264,Geradaks,Sprinter-Pokémon
+4,265,Waumpel,Wurm-Pokémon
+4,266,Schaloko,Kokon-Pokémon
+4,267,Papinella,Falter-Pokémon
+4,268,Panekon,Kokon-Pokémon
+4,269,Pudox,Giftmotten-Pokémon
+4,270,Loturzel,Wasserlinsen-Pokémon
+4,271,Lombrero,Frohmut-Pokémon
+4,272,Kappalores,Sorglos-Pokémon
+4,273,Samurzel,Eichelnuss-Pokémon
+4,274,Blanas,Hinterlist-Pokémon
+4,275,Tengulist,Verschlagen-Pokémon
+4,276,Schwalbini,Schwälblein-Pokémon
+4,277,Schwalboss,Schwalben-Pokémon
+4,278,Wingull,Seemöwen-Pokémon
+4,279,Pelipper,Wasservogel-Pokémon
+4,280,Trasla,Gefühls-Pokémon
+4,281,Kirlia,Emotions-Pokémon
+4,282,Guardevoir,Umarmungs-Pokémon
+4,283,Gehweiher,Wassergeher-Pokémon
+4,284,Maskeregen,Augen-Pokémon
+4,285,Knilz,Pilz-Pokémon
+4,286,Kapilz,Pilz-Pokémon
+4,287,Bummelz,Faulpelz-Pokémon
+4,288,Muntier,Wildaffen-Pokémon
+4,289,Letarking,Müßig-Pokémon
+4,290,Nincada,Vorbereiter-Pokémon
+4,291,Ninjask,Ninja-Pokémon
+4,292,Ninjatom,Häutungs-Pokémon
+4,293,Flurmel,Flüster-Pokémon
+4,294,Krakeelo,Lauthals-Pokémon
+4,295,Krawumms,Krach-Pokémon
+4,296,Makuhita,Courage-Pokémon
+4,297,Hariyama,Armwurf-Pokémon
+4,298,Azurill,Gepunktet-Pokémon
+4,299,Nasgnet,Kompass-Pokémon
+4,300,Eneco,Kätzchen-Pokémon
+4,301,Enekoro,Eingebildet-Pokémon
+4,302,Zobiris,Finsternis-Pokémon
+4,303,Flunkifer,Schwindler-Pokémon
+4,304,Stollunior,Eisenpanzer-Pokémon
+4,305,Stollrak,Eisenpanzer-Pokémon
+4,306,Stolloss,Eisenpanzer-Pokémon
+4,307,Meditie,Meditations-Pokémon
+4,308,Meditalis,Meditations-Pokémon
+4,309,Frizelbliz,Gewitter-Pokémon
+4,310,Voltenso,Entladungs-Pokémon
+4,311,Plusle,Jubel-Pokémon
+4,312,Minun,Jubel-Pokémon
+4,313,Volbeat,Glühwürmchen-Pokémon
+4,314,Illumise,Glühwürmchen-Pokémon
+4,315,Roselia,Dorn-Pokémon
+4,316,Schluppuck,Magen-Pokémon
+4,317,Schlukwech,Giftbeutel-Pokémon
+4,318,Kanivanha,Gnadenlos-Pokémon
+4,319,Tohaido,Brutal-Pokémon
+4,320,Wailmer,Kugelwal-Pokémon
+4,321,Wailord,Flutwal-Pokémon
+4,322,Camaub,Taubheits-Pokémon
+4,323,Camerupt,Ausbruch-Pokémon
+4,324,Qurtel,Kohle-Pokémon
+4,325,Spoink,Sprungfeder-Pokémon
+4,326,Groink,Manipulator-Pokémon
+4,327,Pandir,Punkt-Panda-Pokémon
+4,328,Knacklion,Ameisenlöwen-Pokémon
+4,329,Vibrava,Vibrations-Pokémon
+4,330,Libelldra,Mystik-Pokémon
+4,331,Tuska,Kaktus-Pokémon
+4,332,Noktuska,Vogelschock-Pokémon
+4,333,Wablu,Wollvogel-Pokémon
+4,334,Altaria,Summsel-Pokémon
+4,335,Sengo,Frettkatz-Pokémon
+4,336,Vipitis,Reißzahn-Pokémon
+4,337,Lunastein,Meteoriten-Pokémon
+4,338,Sonnfel,Meteoriten-Pokémon
+4,339,Schmerbe,Bartelfisch-Pokémon
+4,340,Welsar,Bartelfisch-Pokémon
+4,341,Krebscorps,Grobian-Pokémon
+4,342,Krebutack,Schlingel-Pokémon
+4,343,Puppance,Lehmpuppen-Pokémon
+4,344,Lepumentas,Lehmpuppen-Pokémon
+4,345,Liliep,Seeanemonen-Pokémon
+4,346,Wielie,Rankfüßer-Pokémon
+4,347,Anorith,Urgarnelen-Pokémon
+4,348,Armaldo,Schild-Pokémon
+4,349,Barschwa,Fisch-Pokémon
+4,350,Milotic,Zartheits-Pokémon
+4,351,Formeo,Wetter-Pokémon
+4,352,Kecleon,Farbenspiel-Pokémon
+4,353,Shuppet,Puppen-Pokémon
+4,354,Banette,Marionetten-Pokémon
+4,355,Zwirrlicht,Requiem-Pokémon
+4,356,Zwirrklop,Wink-Pokémon
+4,357,Tropius,Obst-Pokémon
+4,358,Palimpalim,Windspiel-Pokémon
+4,359,Absol,Desaster-Pokémon
+4,360,Isso,Strahlekind-Pokémon
+4,361,Schneppke,Schneehut-Pokémon
+4,362,Firnontor,Antlitz-Pokémon
+4,363,Seemops,Applaus-Pokémon
+4,364,Seejong,Spielball-Pokémon
+4,365,Walraisa,Eisbrecher-Pokémon
+4,366,Perlu,Muschel-Pokémon
+4,367,Aalabyss,Tiefsee-Pokémon
+4,368,Saganabyss,Südsee-Pokémon
+4,369,Relicanth,Bestand-Pokémon
+4,370,Liebiskus,Rendezvous-Pokémon
+4,371,Kindwurm,Steinhaupt-Pokémon
+4,372,Draschel,Durchsteher-Pokémon
+4,373,Brutalanda,Drachen-Pokémon
+4,374,Tanhel,Eisenkugel-Pokémon
+4,375,Metang,Eisenklauen-Pokémon
+4,376,Metagross,Eisenfuß-Pokémon
+4,377,Regirock,Steingipfel-Pokémon
+4,378,Regice,Eisberg-Pokémon
+4,379,Registeel,Eisen-Pokémon
+4,380,Latias,Äon-Pokémon
+4,381,Latios,Äon-Pokémon
+4,382,Kyogre,Seegründler-Pokémon
+4,383,Groudon,Kontinent-Pokémon
+4,384,Rayquaza,Himmelhoch-Pokémon
+4,385,Jirachi,Wünscher-Pokémon
+4,386,Deoxys (Normalform),DNS-Pokémon
+4,387,Chelast,Winziglaub-Pokémon
+4,388,Chelcarain,Hain-Pokémon
+4,389,Chelterrar,Kontinent-Pokémon
+4,390,Panflam,Schimpansen-Pokémon
+4,391,Panpyro,Verspielt-Pokémon
+4,392,Panferno,Flammen-Pokémon
+4,393,Plinfa,Pinguin-Pokémon
+4,394,Pliprin,Pinguin-Pokémon
+4,395,Impoleon,Kaiser-Pokémon
+4,396,Staralili,Star-Pokémon
+4,397,Staravia,Star-Pokémon
+4,398,Staraptor,Raubtier-Pokémon
+4,399,Bidiza,Dickmaus-Pokémon
+4,400,Bidifas,Biber-Pokémon
+4,401,Zirpurze,Zirper-Pokémon
+4,402,Zirpeise,Zirper-Pokémon
+4,403,Sheinux,Flacker-Pokémon
+4,404,Luxio,Funken-Pokémon
+4,405,Luxtra,Glühaugen-Pokémon
+4,406,Knospi,Knospen-Pokémon
+4,407,Roserade,Blumenstrauß-Pokémon
+4,408,Koknodon,Kopfstoß-Pokémon
+4,409,Rameidon,Kopfstoß-Pokémon
+4,410,Schilterus,Schutzschild-Pokémon
+4,411,Bollterus,Schutzschild-Pokémon
+4,412,Burmy,Beutelwurm-Pokémon
+4,413,Burmadame (Pflanzenumhang),Beutelwurm-Pokémon
+4,414,Moterpel,Motten-Pokémon
+4,415,Wadribie,Kleinbienen-Pokémon
+4,416,Honweisel,Bienenstock-Pokémon
+4,417,Pachirisu,Elektrohörnchen-Pokémon
+4,418,Bamelin,Meereswiesel-Pokémon
+4,419,Bojelin,Meereswiesel-Pokémon
+4,420,Kikugi,Kirschen-Pokémon
+4,421,Kinoso,Blüten-Pokémon
+4,422,Schalellos,Seeschnecken-Pokémon
+4,423,Gastrodon,Seeschnecken-Pokémon
+4,424,Ambidiffel,Langschweif-Pokémon
+4,425,Driftlon,Ballon-Pokémon
+4,426,Drifzepeli,Luftschiff-Pokémon
+4,427,Haspiror,Hasen-Pokémon
+4,428,Schlapor,Hasen-Pokémon
+4,429,Traunmagil,Magisch-Pokémon
+4,430,Kramshef,Anführer-Pokémon
+4,431,Charmian,Fies-Pokémon
+4,432,Shnurgarst,Tigerkatzen-Pokémon
+4,433,Klingplim,Glöckchen-Pokémon
+4,434,Skunkapuh,Stinktier-Pokémon
+4,435,Skuntank,Stinktier-Pokémon
+4,436,Bronzel,Bronze-Pokémon
+4,437,Bronzong,Bronzeglocken-Pokémon
+4,438,Mobai,Bonsai-Pokémon
+4,439,Pantimimi,Mimen-Pokémon
+4,440,Wonneira,Spielhaus-Pokémon
+4,441,Plaudagei,Musiknoten-Pokémon
+4,442,Kryppuk,Verboten-Pokémon
+4,443,Kaumalat,Landhai-Pokémon
+4,444,Knarksel,Höhlen-Pokémon
+4,445,Knakrack,Rasanz-Pokémon
+4,446,Mampfaxo,Nimmersatt-Pokémon
+4,447,Riolu,Wellenspiel-Pokémon
+4,448,Lucario,Aura-Pokémon
+4,449,Hippopotas,Flusspferd-Pokémon
+4,450,Hippoterus,Schwergewichts-Pokémon
+4,451,Pionskora,Skorpion-Pokémon
+4,452,Piondragi,Ogerskorpion-Pokémon
+4,453,Glibunkel,Giftmund-Pokémon
+4,454,Toxiquak,Giftmund-Pokémon
+4,455,Venuflibis,Käfertod-Pokémon
+4,456,Finneon,Flügelfisch-Pokémon
+4,457,Lumineon,Neon-Pokémon
+4,458,Mantirps,Flugrochen-Pokémon
+4,459,Shnebedeck,Frostbaum-Pokémon
+4,460,Rexblisar,Frostbaum-Pokémon
+4,461,Snibunna,Stichklauen-Pokémon
+4,462,Magnezone,Magnetgebiets-Pokémon
+4,463,Schlurplek,Schlecker-Pokémon
+4,464,Rihornior,Bohrer-Pokémon
+4,465,Tangoloss,Ranken-Pokémon
+4,466,Elevoltek,Donnerkeil-Pokémon
+4,467,Magbrant,Detonations-Pokémon
+4,468,Togekiss,Jubilierer-Pokémon
+4,469,Yanmega,Agrion-Pokémon
+4,470,Folipurba,Frischgrün-Pokémon
+4,471,Glaziola,Neuschnee-Pokémon
+4,472,Skorgro,Zahnskorpion-Pokémon
+4,473,Mamutel,Doppelstoßzahn-Pokémon
+4,474,Porygon-Z,Virtuell-Pokémon
+4,475,Galagladi,Klingen-Pokémon
+4,476,Voluminas,Kompass-Pokémon
+4,477,Zwirrfinst,Greifer-Pokémon
+4,478,Frosdedje,Schneegebiets-Pokémon
+4,479,Rotom,Plasma-Pokémon
+4,480,Selfe,Wissens-Pokémon
+4,481,Vesprit,Emotions-Pokémon
+4,482,Tobutz,Willenskraft-Pokémon
+4,483,Dialga,Zeitweilig-Pokémon
+4,484,Palkia,Räumlich-Pokémon
+4,485,Heatran,Lavadom-Pokémon
+4,486,Regigigas,Kolossal-Pokémon
+4,487,Giratina (Wandelform),Rebellen-Pokémon
+4,488,Cresselia,Lunar-Pokémon
+4,489,Phione,Seedrift-Pokémon
+4,490,Manaphy,Seefahrer-Pokémon
+4,491,Darkrai,Dunkelnacht-Pokémon
+4,492,Shaymin (Landform),Dankbarkeits-Pokémon
+4,493,Arceus (Normal),Alpha-Pokémon
+4,494,Victini,Triumph-Pokémon
+4,495,Serpifeu,Grasschlangen-Pokémon
+4,496,Efoserp,Grasschlangen-Pokémon
+4,497,Serpiroyal,Hoheits-Pokémon
+4,498,Floink,Feuerferkel-Pokémon
+4,499,Ferkokel,Feuerferkel-Pokémon
+4,500,Flambirex,Feuerschwein-Pokémon
+4,501,Ottaro,Otter-Pokémon
+4,502,Zwottronin,Schulungs-Pokémon
+4,503,Admurai,Würde-Pokémon
+4,504,Nagelotz,Späher-Pokémon
+4,505,Kukmarda,Wachsamkeits-Pokémon
+4,506,Yorkleff,Welpen-Pokémon
+4,507,Terribark,Treuhund-Pokémon
+4,508,Bissbark,Großmut-Pokémon
+4,509,Felilou,Schelm-Pokémon
+4,510,Kleoparda,Gefühlskälte-Pokémon
+4,511,Vegimak,Grasaffen-Pokémon
+4,512,Vegichita,Stachelaffen-Pokémon
+4,513,Grillmak,Hitze-Pokémon
+4,514,Grillchita,Funkenregen-Pokémon
+4,515,Sodamak,Wasserstrahl-Pokémon
+4,516,Sodachita,Drainage-Pokémon
+4,517,Somniam,Traumfresser-Pokémon
+4,518,Somnivora,Halbschlaf-Pokémon
+4,519,Dusselgurr,Täubchen-Pokémon
+4,520,Navitaub,Wildtauben-Pokémon
+4,521,Fasasnob,Stolz-Pokémon
+4,522,Elezeba,Hochspannungs-Pokémon
+4,523,Zebritz,Donnerkeil-Pokémon
+4,524,Kiesling,Erdmantel-Pokémon
+4,525,Sedimantur,Erz-Pokémon
+4,526,Brockoloss,Kompressions-Pokémon
+4,527,Fleknoil,Fledermaus-Pokémon
+4,528,Fletiamo,Balz-Pokémon
+4,529,Rotomurf,Maulwurf-Pokémon
+4,530,Stalobor,Untergrund-Pokémon
+4,531,Ohrdoch,Gehör-Pokémon
+4,532,Praktibalk,Muskel-Pokémon
+4,533,Strepoli,Muskel-Pokémon
+4,534,Meistagrif,Muskel-Pokémon
+4,535,Schallquap,Kaulquappen-Pokémon
+4,536,Mebrana,Vibrations-Pokémon
+4,537,Branawarz,Vibrations-Pokémon
+4,538,Jiutesto,Judo-Pokémon
+4,539,Karadonis,Karate-Pokémon
+4,540,Strawickl,Schneider-Pokémon
+4,541,Folikon,Wickelblatt-Pokémon
+4,542,Matrifol,Kinderpflege-Pokémon
+4,543,Toxiped,Tausendfüßer-Pokémon
+4,544,Rollum,Kokonfüßer-Pokémon
+4,545,Cerapendra,Riesenfüßer-Pokémon
+4,546,Waumboll,Wattebausch-Pokémon
+4,547,Elfun,Windschatten-Pokémon
+4,548,Lilminip,Wurzel-Pokémon
+4,549,Dressella,Blumenzier-Pokémon
+4,550,Barschuft (Rotlinige Form),Grobheits-Pokémon
+4,551,Ganovil,Wüstenkroko-Pokémon
+4,552,Rokkaiman,Wüstenkroko-Pokémon
+4,553,Rabigator,Abschreckungs-Pokémon
+4,554,Flampion,Lampion-Pokémon
+4,555,Flampivian (Normalmodus),Lichterloh-Pokémon
+4,556,Maracamba,Kaktus-Pokémon
+4,557,Lithomith,Steinhaus-Pokémon
+4,558,Castellith,Felshaus-Pokémon
+4,559,Zurrokex,Hautwechsel-Pokémon
+4,560,Irokex,Halunken-Pokémon
+4,561,Symvolara,Vogelgleich-Pokémon
+4,562,Makabaja,Seelen-Pokémon
+4,563,Echnatoll,Sarkophag-Pokémon
+4,564,Galapaflos,Urzeitkröten-Pokémon
+4,565,Karippas,Urzeitkröten-Pokémon
+4,566,Flapteryx,Urzeitvogel-Pokémon
+4,567,Aeropteryx,Urzeitvogel-Pokémon
+4,568,Unratütox,Mülltüten-Pokémon
+4,569,Deponitox,Müllhalden-Pokémon
+4,570,Zorua,Lausefuchs-Pokémon
+4,571,Zoroark,Polymorfuchs-Pokémon
+4,572,Picochilla,Chinchilla-Pokémon
+4,573,Chillabell,Schal-Pokémon
+4,574,Mollimorba,Glotz-Pokémon
+4,575,Hypnomorba,Manipulator-Pokémon
+4,576,Morbitesse,Gestirns-Pokémon
+4,577,Monozyto,Zellen-Pokémon
+4,578,Mitodos,Zellteilungs-Pokémon
+4,579,Zytomega,Vermehrungs-Pokémon
+4,580,Piccolente,Wasservogel-Pokémon
+4,581,Swaroness,Schwan-Pokémon
+4,582,Gelatini,Neuschnee-Pokémon
+4,583,Gelatroppo,Firn-Pokémon
+4,584,Gelatwino,Schneesturm-Pokémon
+4,585,Sesokitz,Jahreszeiten-Pokémon
+4,586,Kronjuwild,Jahreszeiten-Pokémon
+4,587,Emolga,Flughörnchen-Pokémon
+4,588,Laukaps,Schnappbiss-Pokémon
+4,589,Cavalanzas,Kavallerie-Pokémon
+4,590,Tarnpignon,Pilz-Pokémon
+4,591,Hutsassa,Pilz-Pokémon
+4,592,Quabbel,Gleit-Pokémon
+4,593,Apoquallyp,Gleit-Pokémon
+4,594,Mamolida,Fürsorge-Pokémon
+4,595,Wattzapf,Kleben-Pokémon
+4,596,Voltula,Stromspinnen-Pokémon
+4,597,Kastadur,Dornfrucht-Pokémon
+4,598,Tentantel,Dornkugel-Pokémon
+4,599,Klikk,Getriebe-Pokémon
+4,600,Kliklak,Getriebe-Pokémon
+4,601,Klikdiklak,Getriebe-Pokémon
+4,602,Zapplardin,Stromfisch-Pokémon
+4,603,Zapplalek,Stromfisch-Pokémon
+4,604,Zapplarang,Stromfisch-Pokémon
+4,605,Pygraulon,Grips-Pokémon
+4,606,Megalon,Grips-Pokémon
+4,607,Lichtel,Kerzen-Pokémon
+4,608,Laternecto,Lampen-Pokémon
+4,609,Skelabra,Geleit-Pokémon
+4,610,Milza,Stoßzahn-Pokémon
+4,611,Sharfax,Beilkiefer-Pokémon
+4,612,Maxax,Beilkiefer-Pokémon
+4,613,Petznief,Eisschollen-Pokémon
+4,614,Siberio,Packeis-Pokémon
+4,615,Frigometri,Kristall-Pokémon
+4,616,Schnuthelm,Schnecken-Pokémon
+4,617,Hydragil,Entschalungs-Pokémon
+4,618,Flunschlik,Falle-Pokémon
+4,619,Lin-Fu,Kampfkünste-Pokémon
+4,620,Wie-Shu,Kampfkünste-Pokémon
+4,621,Shardrago,Höhlen-Pokémon
+4,622,Golbit,Urgolem-Pokémon
+4,623,Golgantes,Urgolem-Pokémon
+4,624,Gladiantri,Stahlklingen-Pokémon
+4,625,Caesurio,Schwertklingen-Pokémon
+4,626,Bisofank,Kopfstoßrind-Pokémon
+4,627,Geronimatz,Adlerküken-Pokémon
+4,628,Washakwil,Kühnheits-Pokémon
+4,629,Skallyk,Windel-Pokémon
+4,630,Grypheldis,Knochenadler-Pokémon
+4,631,Furnifraß,Ameisenbären-Pokémon
+4,632,Fermicula,Eisenameisen-Pokémon
+4,633,Kapuno,Haudrauf-Pokémon
+4,634,Duodino,Grobheits-Pokémon
+4,635,Trikephalo,Brutal-Pokémon
+4,636,Ignivor,Fackel-Pokémon
+4,637,Ramoth,Sonnen-Pokémon
+4,638,Kobalium,Eisenkern-Pokémon
+4,639,Terrakium,Felsenhöhlen-Pokémon
+4,640,Viridium,Wiesen-Pokémon
+4,641,Boreos (Inkarnationsform),Wirbelsturm-Pokémon
+4,642,Voltolos (Inkarnationsform),Torpedo-Pokémon
+4,643,Reshiram,Wahres Weiß-Pokémon
+4,644,Zekrom,Reines Schwarz-Pokémon
+4,645,Demeteros (Inkarnationsform),Reichtums-Pokémon
+4,646,Kyurem,Schwellen-Pokémon
+4,647,Keldeo,Fohlen-Pokémon
+4,648,Meloetta (Gesangsform),Melodie-Pokémon
+4,649,Genesect,Paläozoikums-Pokémon
+4,650,Igamaro,Stachelkopf-Pokémon
+4,651,Igastarnish,Spitzpanzer-Pokémon
+4,652,Brigaron,Spitzpanzer-Pokémon
+4,653,Fynx,Fuchs-Pokémon
+4,654,Rutena,Fuchs-Pokémon
+4,655,Fennexis,Fuchs-Pokémon
+4,656,Froxy,Blubbfrosch-Pokémon
+4,657,Amphizel,Blubbfrosch-Pokémon
+4,658,Quajutsu,Ninja-Pokémon
+4,659,Scoppel,Baugräber-Pokémon
+4,660,Grebbit,Baugräber-Pokémon
+4,661,Dartiri,Rotkehlchen-Pokémon
+4,662,Dartignis,Funkenregen-Pokémon
+4,663,Fiaro,Stichflammen-Pokémon
+4,664,Purmel,Puderinsekten-Pokémon
+4,665,Puponcho,Puderinsekten-Pokémon
+4,666,Vivillon,Flügelstaub-Pokémon
+4,667,Leufeo,Junglöwen-Pokémon
+4,668,Pyroleo,Monarchen-Pokémon
+4,669,Flabébé,Einblütler-Pokémon
+4,670,Floette,Einblütler-Pokémon
+4,671,Florges,Garten-Pokémon
+4,672,Mähikel,Ritt-Pokémon
+4,673,Chevrumm,Ritt-Pokémon
+4,674,Pam-Pam,Verspielt-Pokémon
+4,675,Pandagro,Gaunerblick-Pokémon
+4,676,Coiffwaff,Pudel-Pokémon
+4,677,Psiau,Zügelungs-Pokémon
+4,678,Psiaugon (Männlich),Fassungs-Pokémon
+4,679,Gramokles,Klingenkraft-Pokémon
+4,680,Duokles,Klingenkraft-Pokémon
+4,681,Durengard (Schildform),Königsklingen-Pokémon
+4,682,Parfi,Parfüm-Pokémon
+4,683,Parfinesse,Duft-Pokémon
+4,684,Flauschling,Zuckerwatte-Pokémon
+4,685,Sabbaione,Schlagsahne-Pokémon
+4,686,Iscalar,Rotations-Pokémon
+4,687,Calamanero,Inversions-Pokémon
+4,688,Bithora,Krallenduo-Pokémon
+4,689,Thanathora,Ballungs-Pokémon
+4,690,Algitt,Tangmimikry-Pokémon
+4,691,Tandrak,Tangmimikry-Pokémon
+4,692,Scampisto,Aquapistolen-Pokémon
+4,693,Wummer,Aquawummen-Pokémon
+4,694,Eguana,Generatoren-Pokémon
+4,695,Elezard,Generatoren-Pokémon
+4,696,Balgoras,Kronprinz-Pokémon
+4,697,Monargoras,Tyrannen-Pokémon
+4,698,Amarino,Tundra-Pokémon
+4,699,Amagarga,Tundra-Pokémon
+4,700,Feelinara,Bindungs-Pokémon
+4,701,Resladero,Wrestling-Pokémon
+4,702,Dedenne,Antennen-Pokémon
+4,703,Rocara,Edelstein-Pokémon
+4,704,Viscora,Schneckedei-Pokémon
+4,705,Viscargot,Schneckedei-Pokémon
+4,706,Viscogon,Drachen-Pokémon
+4,707,Clavion,Schlüssel-Pokémon
+4,708,Paragoni,Baumstumpf-Pokémon
+4,709,Trombork,Urgehölz-Pokémon
+4,710,Irrbis (Größe M),Kürbis-Pokémon
+4,711,Pumpdjinn (Größe M),Kürbis-Pokémon
+4,712,Arktip,Eisklumpen-Pokémon
+4,713,Arktilas,Eisberg-Pokémon
+4,714,eF-eM,Schallwellen-Pokémon
+4,715,UHaFnir,Schallwellen-Pokémon
+4,716,Xerneas,Lebens-Pokémon
+4,717,Yveltal,Zerstörungs-Pokémon
+4,718,50%-Zygarde,Ordnungs-Pokémon
+4,719,Diancie,Edelstein-Pokémon
+4,720,Gebanntes Hoopa,Schabernack-Pokémon
+4,721,Volcanion,Dampf-Pokémon
+4,722,Bauz,Laubflügel-Pokémon
+4,723,Arboretoss,Flügelklingen-Pokémon
+4,724,Silvarro,Pfeilflügel-Pokémon
+4,725,Flamiau,Feuerkatzen-Pokémon
+4,726,Miezunder,Feuerkatzen-Pokémon
+4,727,Fuegro,Fieslings-Pokémon
+4,728,Robball,Seehund-Pokémon
+4,729,Marikeck,Popsternchen-Pokémon
+4,730,Primarene,Solisten-Pokémon
+4,731,Peppeck,Specht-Pokémon
+4,732,Trompeck,Trompeten-Pokémon
+4,733,Tukanon,Kanonen-Pokémon
+4,734,Mangunior,Patrouillen-Pokémon
+4,735,Manguspektor,Beschattungs-Pokémon
+4,736,Mabula,Larven-Pokémon
+4,737,Akkup,Batterie-Pokémon
+4,738,Donarion,Kneifkäfer-Pokémon
+4,739,Krabbox,Boxkampf-Pokémon
+4,740,Krawell,Fellkrabben-Pokémon
+4,741,Choreogel (Flamenco-Stil),Tanz-Pokémon
+4,742,Wommel,Hummelfliegen-Pokémon
+4,743,Bandelby,Hummelfliegen-Pokémon
+4,744,Wuffels,Welpen-Pokémon
+4,745,Wolwerock (Tagform),Wolfs-Pokémon
+4,746,Lusardin (Einzelform),Kleinfisch-Pokémon
+4,747,Garstella,Quäl-Stern-Pokémon
+4,748,Aggrostella,Quäl-Stern-Pokémon
+4,749,Pampuli,Packesel-Pokémon
+4,750,Pampross,Zugpferd-Pokémon
+4,751,Araqua,Wasserblasen-Pokémon
+4,752,Aranestro,Wasserblasen-Pokémon
+4,753,Imantis,Grassichel-Pokémon
+4,754,Mantidea,Blumensichel-Pokémon
+4,755,Bubungus,Lumineszenz-Pokémon
+4,756,Lamellux,Lumineszenz-Pokémon
+4,757,Molunk,Giftechsen-Pokémon
+4,758,Amfira,Giftechsen-Pokémon
+4,759,Velursi,Wildfang-Pokémon
+4,760,Kosturso,Kraftarme-Pokémon
+4,761,Frubberl,Obst-Pokémon
+4,762,Frubaila,Obst-Pokémon
+4,763,Fruyal,Obst-Pokémon
+4,764,Curelei,Blumenkranz-Pokémon
+4,765,Kommandutan,Weisheits-Pokémon
+4,766,Quartermak,Teamwork-Pokémon
+4,767,Reißlaus,Laufschritt-Pokémon
+4,768,Tectass,Rüstungs-Pokémon
+4,769,Sankabuh,Sandhaufen-Pokémon
+4,770,Colossand,Sandschloss-Pokémon
+4,771,Gufa,Seegurken-Pokémon
+4,772,Typ:Null,Modifikations-Pokémon
+4,773,Amigento (Normal),Modifikations-Pokémon
+4,774,Meteno (Meteorform),Meteoren-Pokémon
+4,775,Koalelu,Halbschlaf-Pokémon
+4,776,Tortunator,Knallkröten-Pokémon
+4,777,Togedemaru,Einigler-Pokémon
+4,778,Mimigma,Kostümspuk-Pokémon
+4,779,Knirfish,Knirschzahn-Pokémon
+4,780,Sen-Long,Gelassenheits-Pokémon
+4,781,Moruda,Seetang-Pokémon
+4,782,Miniras,Schuppentier-Pokémon
+4,783,Mediras,Schuppentier-Pokémon
+4,784,Grandiras,Schuppentier-Pokémon
+4,785,Kapu-Riki,Schutzpatron-Pokémon
+4,786,Kapu-Fala,Schutzpatron-Pokémon
+4,787,Kapu-Toro,Schutzpatron-Pokémon
+4,788,Kapu-Kime,Schutzpatron-Pokémon
+4,789,Cosmog,Nebula-Pokémon
+4,790,Cosmovum,Urgestirns-Pokémon
+4,791,Solgaleo,Sonnenkreis-Pokémon
+4,792,Lunala,Mondscheiben-Pokémon
+4,793,Anego,Parasiten-Pokémon
+4,794,Masskito,Ausdehnungs-Pokémon
+4,795,Schabelle,Eleganz-Pokémon
+4,796,Voltriant,Illuminations-Pokémon
+4,797,Kaguron,Raketenstart-Pokémon
+4,798,Katagami,Schwertkunst-Pokémon
+4,799,Schlingking,Gaumenfolter-Pokémon
+4,800,Necrozma,Prisma-Pokémon
+4,801,Magearna,Fabrikats-Pokémon
+4,802,Marshadow,Dunkelwesen-Pokémon
+4,803,Venicro,Giftdorn-Pokémon
+4,804,Agoyon,Giftdorn-Pokémon
+4,805,Muramura,Steinmauer-Pokémon
+4,806,Kopplosio,Feuerwerks-Pokémon
+4,807,Zeraora,Blitzsturm-Pokémon
 4,808,Meltan,Mutter-Pokémon
 4,809,Melmetal,Mutter-Pokémon
 4,810,Chimpep,Schimpansen-Pokémon
@@ -4200,180 +4704,307 @@ language_id,pokemon_id,name,category
 4,896,Polaross,Wildblut-Pokémon
 4,897,Phantoross,Flinkblut-Pokémon
 4,898,Coronospa,Königs-Pokémon
-4,10001,Formeo (Sonnenform),Wetter
-4,10002,Formeo (Regenform),Wetter
-4,10003,Formeo (Schneeform),Wetter
-4,10004,Deoxys (Angriffsform),DNS
-4,10005,Deoxys (Verteidigungsform),DNS
-4,10006,Deoxys (Initiativeform),DNS
-4,10007,Burmadame (Sandumhang),Beutelwurm
-4,10008,Burmadame (Lumpenumhang),Beutelwurm
-4,10009,Arceus (Kampf),Alpha
-4,10010,Arceus (Flug),Alpha
-4,10011,Arceus (Gift),Alpha
-4,10012,Arceus (Boden),Alpha
-4,10013,Arceus (Gestein),Alpha
-4,10014,Arceus (Käfer),Alpha
-4,10015,Arceus (Geist),Alpha
-4,10016,Arceus (Stahl),Alpha
-4,10017,Arceus (Feuer),Alpha
-4,10018,Arceus (Wasser),Alpha
-4,10019,Arceus (Pflanze),Alpha
-4,10020,Arceus (Elektro),Alpha
-4,10021,Arceus (Psycho),Alpha
-4,10022,Arceus (Eis),Alpha
-4,10023,Arceus (Drache),Alpha
-4,10024,Arceus (Unlicht),Alpha
-4,10025,Arceus (???),Alpha
-4,10026,Hitze-Rotom,Plasma
-4,10027,Wasch-Rotom,Plasma
-4,10028,Frost-Rotom,Plasma
-4,10029,Wirbel-Rotom,Plasma
-4,10030,Schneid-Rotom,Plasma
-4,10031,Giratina (Urform),Rebell
-4,10032,Shaymin (Zenitform),Dankbarkeit
-4,10033,Strubbelohr-Pichu,Babymaus
-4,10034,Barschuft (Blaulinige Form),Grobheit
-4,10035,Flampivian (Trance-Modus),Lichterloh
-4,10036,Meloetta (Tanzform),Melodie
-4,10037,Boreos (Tiergeistform),Wirbelsturm
-4,10038,Voltolos (Tiergeistform),Torpedo
-4,10039,Demeteros (Tiergeistform),Reichtum
-4,10040,Weißes Kyurem,Schwelle
-4,10041,Schwarzes Kyurem,Schwelle
-4,10042,Mega-Bisaflor,Samen
-4,10043,Mega-Glurak X,Flamme
-4,10044,Mega-Glurak Y,Flamme
-4,10045,Mega-Turtok,Panzertier
-4,10046,Mega-Simsala,Psi
-4,10047,Mega-Gengar,Schatten
-4,10048,Mega-Kangama,Muttertier
-4,10049,Mega-Pinsir,Kneifkäfer
-4,10050,Mega-Garados,Grausam
-4,10051,Mega-Aerodactyl,Fossil
-4,10052,Mega-Mewtu X,Genmutant
-4,10053,Mega-Mewtu Y,Genmutant
-4,10054,Mega-Ampharos,Leuchte
-4,10055,Mega-Scherox,Kneifer
-4,10056,Mega-Skaraborn,Einzelhorn
-4,10057,Mega-Hundemon,Hades
-4,10058,Mega-Despotar,Panzer
-4,10059,Mega-Lohgock,Großbrand
-4,10060,Mega-Guardevoir,Umarmung
-4,10061,Mega-Flunkifer,Schwindler
-4,10062,Mega-Stolloss,Eisenpanzer
-4,10063,Mega-Meditalis,Meditation
-4,10064,Mega-Voltenso,Entladung
-4,10065,Mega-Banette,Marionette
-4,10066,Mega-Absol,Desaster
-4,10067,Mega-Latias,Äon
-4,10068,Mega-Latios,Äon
-4,10069,Mega-Knakrack,Rasanz
-4,10070,Mega-Lucario,Aura
-4,10071,Mega-Rexblisar,Frostbaum
-4,10072,Arceus (Fee),Alpha
-4,10073,Floette (Ewigblütler),Einblütler
-4,10074,Psiaugon (Weiblich),Fassung
-4,10075,Durengard (Klingenform),Königsklinge
-4,10076,Irrbis (Größe S),Kürbis
-4,10077,Irrbis (Größe L),Kürbis
-4,10078,Irrbis (Größe XL),Kürbis
-4,10079,Pumpdjinn (Größe S),Kürbis
-4,10080,Pumpdjinn (Größe L),Kürbis
-4,10081,Pumpdjinn (Größe XL),Kürbis
-4,10082,Mega-Bibor,Giftbiene
-4,10083,Mega-Tauboss,Vogel
-4,10084,Rocker-Pikachu,Maus
-4,10085,Damen-Pikachu,Maus
-4,10086,Star-Pikachu,Maus
-4,10087,Professoren-Pikachu,Maus
-4,10088,Wrestler-Pikachu,Maus
-4,10089,Cosplay-Pikachu,Maus
-4,10090,Mega-Lahmus,Symbiose
-4,10091,Mega-Stahlos,Stahlboa
-4,10092,Mega-Gewaldro,Dschungel
-4,10093,Mega-Sumpex,Lehmhüpfer
-4,10094,Mega-Zobiris,Finsternis
-4,10095,Mega-Tohaido,Brutal
-4,10096,Mega-Camerupt,Ausbruch
-4,10097,Mega-Altaria,Summsel
-4,10098,Mega-Firnontor,Antlitz
-4,10099,Mega-Brutalanda,Drache
-4,10100,Mega-Metagross,Eisenfuß
-4,10101,Proto-Kyogre,Seegründler
-4,10102,Proto-Groudon,Kontinent
-4,10103,Mega-Rayquaza,Himmelhoch
-4,10104,Mega-Schlapor,Hase
-4,10105,Mega-Galagladi,Klinge
-4,10106,Mega-Ohrdoch,Gehör
-4,10107,Mega-Diancie,Edelstein
-4,10108,Entfesseltes Hoopa,Plagegeist
-4,10109,Rattfratz (Alola-Form),Maus
-4,10110,Rattikarl (Alola-Form),Maus
-4,10111,Rattikarl (Herrscher),Maus
-4,10112,Pikachu (Kappe),Maus
-4,10113,Raichu (Alola-Form),Maus
-4,10114,Sandan (Alola-Form),Maus
-4,10115,Sandamer (Alola-Form),Maus
-4,10116,Vulpix (Alola-Form),Fuchs
-4,10117,Vulnona (Alola-Form),Fuchs
-4,10118,Digda (Alola-Form),Maulwurf
-4,10119,Digdri (Alola-Form),Maulwurf
-4,10120,Mauzi (Alola-Form),Katze
-4,10121,Snobilikat (Alola-Form),Rassekatze
-4,10122,Kleinstein (Alola-Form),Gestein
-4,10123,Georok (Alola-Form),Gestein
-4,10124,Geowaz (Alola-Form),Urgestein
-4,10125,Sleima (Alola-Form),Schlamm
-4,10126,Sleimok (Alola-Form),Schlamm
-4,10127,Kokowei (Alola-Form),Palmfrucht
-4,10128,Knogga (Alola-Form),Knochenfan
-4,10129,Quajutsu (Freundschaftsakt),Ninja
-4,10130,Ash-Quajutsu,Ninja
-4,10131,10%-Zygarde,Ordnung
-4,10132,10%-Zygarde,Ordnung
-4,10133,50%-Zygarde,Ordnung
-4,10134,Optimum Zygarde,Ordnung
-4,10135,Manguspektor (Herrscher),Beschattung
-4,10136,Donarion (Herrscher),Kneifkäfer
-4,10137,Choreogel (Cheerleading-Stil),Tanz
-4,10138,Choreogel (Hula-Stil),Tanz
-4,10139,Choreogel (Buyo-Stil),Tanz
-4,10140,Wolwerock (Nachtform),Wolf
-4,10141,Lusardin (Schwarmform),Kleinfisch
-4,10142,Mantidea (Herrscher),Blumensichel
-4,10143,Amfira (Herrscher),Giftechse
-4,10144,Amigento (Kampf),Modifikation
-4,10145,Amigento (Flug),Modifikation
-4,10146,Amigento (Gift),Modifikation
-4,10147,Amigento (Boden),Modifikation
-4,10148,Amigento (Gestein),Modifikation
-4,10149,Amigento (Käfer),Modifikation
-4,10150,Amigento (Geist),Modifikation
-4,10151,Amigento (Stahl),Modifikation
-4,10152,Amigento (Feuer),Modifikation
-4,10153,Amigento (Wasser),Modifikation
-4,10154,Amigento (Pflanze),Modifikation
-4,10155,Amigento (Elektro),Modifikation
-4,10156,Amigento (Psycho),Modifikation
-4,10157,Amigento (Eis),Modifikation
-4,10158,Amigento (Drache),Modifikation
-4,10159,Amigento (Unlicht),Modifikation
-4,10160,Amigento (Fee),Modifikation
-4,10161,Meteno (Kernform),Meteor
-4,10162,Mimigma (Herrscher),Kostümspuk
-4,10163,Grandiras (Herrscher),Schuppentier
-4,10164,Knogga (Herrscher),Wasserblase
-4,10165,Bandelby (Herrscher),Hummelfliege
-4,10166,Wuffels (Tempomacher),Hund
-4,10167,Wolwerock (Zwielichtform),Wolf
-4,10168,Aranestro (Herrscher),Knochenfan
-4,10169,Togedemaru (Herrscher),Einigler
-4,10170,Necrozma (Abendmähne),Prisma
-4,10171,Necrozma (Morgenschwingen),Prisma
-4,10172,Ultra-Necrozma,Prisma
-4,10173,Partner-Pikachu,Maus
-4,10174,Partner-Evoli,Evolution
+4,899,Damythir,Vielender-Pokémon
+4,900,Axantor,Axt-Pokémon
+4,901,Ursaluna,Torf-Pokémon
+4,902,Salmagnis (Männlich),Großfisch-Pokémon
+4,903,Snieboss,Kletterei-Pokémon
+4,904,Myriador,Tausenddorn-Pokémon
+4,905,Cupidos,Hassliebe-Pokémon
+4,906,Felori,Florakatzen-Pokémon
+4,907,Feliospa,Florakatzen-Pokémon
+4,908,Maskagato,Magier-Pokémon
+4,909,Krokel,Feuerkroko-Pokémon
+4,910,Lokroko,Feuerkroko-Pokémon
+4,911,Skelokrok,Sänger-Pokémon
+4,912,Kwaks,Jungenten-Pokémon
+4,913,Fuentente,Übungs-Pokémon
+4,914,Bailonda,Tänzer-Pokémon
+4,915,Ferkuli,Schwein-Pokémon
+4,916,Fragrunz (Männlich),Schwein-Pokémon
+4,917,Tarundel,Fadenkugel-Pokémon
+4,918,Spinsidias,Falle-Pokémon
+4,919,Micrick,Heuschrecken-Pokémon
+4,920,Lextremo,Heuschrecken-Pokémon
+4,921,Pamo,Maus-Pokémon
+4,922,Pamamo,Maus-Pokémon
+4,923,Pamomamo,Behandlungs-Pokémon
+4,924,Zwieps,Paar-Pokémon
+4,925,Famieps,Familien-Pokémon
+4,926,Hefel,Welpen-Pokémon
+4,927,Backel,Hunde-Pokémon
+4,928,Olini,Oliven-Pokémon
+4,929,Olivinio,Oliven-Pokémon
+4,930,Olithena,Oliven-Pokémon
+4,931,Krawalloro (Grüngefiedert),Sittich-Pokémon
+4,932,Geosali,Steinsalz-Pokémon
+4,933,Sedisal,Steinsalz-Pokémon
+4,934,Saltigant,Steinsalz-Pokémon
+4,935,Knarbon,Feuerkind-Pokémon
+4,936,Crimanzo,Feuerrüstungs-Pokémon
+4,937,Azugladis,Feuerklingen-Pokémon
+4,938,Blipp,Stromquappen-Pokémon
+4,939,Wampitz,Stromfrosch-Pokémon
+4,940,Voltrel,Sturmvogel-Pokémon
+4,941,Voltrean,Fregattvogel-Pokémon
+4,942,Mobtiff,Halbstark-Pokémon
+4,943,Mastifioso,Oberhaupt-Pokémon
+4,944,Sproxi,Giftmaus-Pokémon
+4,945,Affiti,Giftaffen-Pokémon
+4,946,Weherba,Rollgras-Pokémon
+4,947,Horrerba,Rollgras-Pokémon
+4,948,Tentagra,Quallenpilz-Pokémon
+4,949,Tenterra,Quallenpilz-Pokémon
+4,950,Klibbe,Lauer-Pokémon
+4,951,Chilingel,Habanero-Pokémon
+4,952,Halupenjo,Habanero-Pokémon
+4,953,Relluk,Wälz-Pokémon
+4,954,Skarabaks,Wälz-Pokémon
+4,955,Flattutu,Rüschen-Pokémon
+4,956,Psiopatra,Strauß-Pokémon
+4,957,Forgita,Schmied-Pokémon
+4,958,Tafforgita,Hammer-Pokémon
+4,959,Granforgita,Hammer-Pokémon
+4,960,Schligda,Meeraal-Pokémon
+4,961,Schligdri,Meeraal-Pokémon
+4,962,Adebom,Abwurf-Pokémon
+4,963,Normifin,Delfin-Pokémon
+4,964,Delfinator (Alltagsform),Delfin-Pokémon
+4,965,Knattox,Einzylinder-Pokémon
+4,966,Knattatox,Mehrzylinder-Pokémon
+4,967,Mopex,Ritt-Pokémon
+4,968,Schlurm,Regenwurm-Pokémon
+4,969,Lumispross,Erz-Pokémon
+4,970,Lumiflora,Erz-Pokémon
+4,971,Gruff,Geisterhund-Pokémon
+4,972,Friedwuff,Geisterhund-Pokémon
+4,973,Flaminkno,Synchron-Pokémon
+4,974,Flaniwal,Landwal-Pokémon
+4,975,Kolowal,Landwal-Pokémon
+4,976,Agiluza,Abtrennungs-Pokémon
+4,977,Heerashai,Großwels-Pokémon
+4,978,Nigiragi,Mimesen-Pokémon
+4,979,Epitaff,Zornaffen-Pokémon
+4,980,Suelord,Dornfisch-Pokémon
+4,981,Farigiraf,Langhals-Pokémon
+4,982,Dummimisel,Erdschlangen-Pokémon
+4,983,Gladimperio,Langschwert-Pokémon
+4,984,Riesenzahn,Paradox-Pokémon
+4,985,Brüllschweif,Paradox-Pokémon
+4,986,Wutpilz,Paradox-Pokémon
+4,987,Flatterhaar,Paradox-Pokémon
+4,988,Kriechflügel,Paradox-Pokémon
+4,989,Sandfell,Paradox-Pokémon
+4,990,Eisenrad,Paradox-Pokémon
+4,991,Eisenbündel,Paradox-Pokémon
+4,992,Eisenhand,Paradox-Pokémon
+4,993,Eisenhals,Paradox-Pokémon
+4,994,Eisenfalter,Paradox-Pokémon
+4,995,Eisendorn,Paradox-Pokémon
+4,996,Frospino,Eisfinnen-Pokémon
+4,997,Cryospino,Eisfinnen-Pokémon
+4,998,Espinodon,Eisdrachen-Pokémon
+4,999,Gierspenst (Truhenform),Schatztruhen-Pokémon
+4,1000,Monetigo,Schatzwesen-Pokémon
+4,1001,Chongjian,Unheils-Pokémon
+4,1002,Baojian,Unheils-Pokémon
+4,1003,Dinglu,Unheils-Pokémon
+4,1004,Yuyu,Unheils-Pokémon
+4,1005,Donnersichel,Paradox-Pokémon
+4,1006,Eisenkrieger,Paradox-Pokémon
+4,1007,Koraidon,Paradox-Pokémon
+4,1008,Miraidon,Paradox-Pokémon
+4,1009,Windewoge,Paradox-Pokémon
+4,1010,Eisenblatt,Paradox-Pokémon
+4,1011,Sirapfel,Apfelsirup-Pokémon
+4,1012,Mortcha,Matcha-Pokémon
+4,1013,Fatalitcha,Matcha-Pokémon
+4,1014,Boninu,Lakaien-Pokémon
+4,1015,Benesaru,Lakaien-Pokémon
+4,1016,Beatori,Lakaien-Pokémon
+4,1017,Ogerpon (Türkisgrüne Maske),Masken-Pokémon
+4,1018,Briduradon,Legierungs-Pokémon
+4,1019,Hydrapfel,Apfelhydra-Pokémon
+4,1020,Keilflamme,Paradox-Pokémon
+4,1021,Furienblitz,Paradox-Pokémon
+4,1022,Eisenhaupt,Paradox-Pokémon
+4,1023,Eisenfels,Paradox-Pokémon
+4,1024,Terapagos (Normalform),Terakristall-Pokémon
+4,1025,Infamomo,Knechtungs-Pokémon
+4,10001,Formeo (Sonnenform),Wetter-Pokémon
+4,10002,Formeo (Regenform),Wetter-Pokémon
+4,10003,Formeo (Schneeform),Wetter-Pokémon
+4,10004,Deoxys (Angriffsform),DNS-Pokémon
+4,10005,Deoxys (Verteidigungsform),DNS-Pokémon
+4,10006,Deoxys (Initiativeform),DNS-Pokémon
+4,10007,Burmadame (Sandumhang),Beutelwurm-Pokémon
+4,10008,Burmadame (Lumpenumhang),Beutelwurm-Pokémon
+4,10009,Arceus (Kampf),Alpha-Pokémon
+4,10010,Arceus (Flug),Alpha-Pokémon
+4,10011,Arceus (Gift),Alpha-Pokémon
+4,10012,Arceus (Boden),Alpha-Pokémon
+4,10013,Arceus (Gestein),Alpha-Pokémon
+4,10014,Arceus (Käfer),Alpha-Pokémon
+4,10015,Arceus (Geist),Alpha-Pokémon
+4,10016,Arceus (Stahl),Alpha-Pokémon
+4,10017,Arceus (Feuer),Alpha-Pokémon
+4,10018,Arceus (Wasser),Alpha-Pokémon
+4,10019,Arceus (Pflanze),Alpha-Pokémon
+4,10020,Arceus (Elektro),Alpha-Pokémon
+4,10021,Arceus (Psycho),Alpha-Pokémon
+4,10022,Arceus (Eis),Alpha-Pokémon
+4,10023,Arceus (Drache),Alpha-Pokémon
+4,10024,Arceus (Unlicht),Alpha-Pokémon
+4,10025,Arceus (???),Alpha-Pokémon
+4,10026,Hitze-Rotom,Plasma-Pokémon
+4,10027,Wasch-Rotom,Plasma-Pokémon
+4,10028,Frost-Rotom,Plasma-Pokémon
+4,10029,Wirbel-Rotom,Plasma-Pokémon
+4,10030,Schneid-Rotom,Plasma-Pokémon
+4,10031,Giratina (Urform),Rebellen-Pokémon
+4,10032,Shaymin (Zenitform),Dankbarkeits-Pokémon
+4,10033,Strubbelohr-Pichu,Babymaus-Pokémon
+4,10034,Barschuft (Blaulinige Form),Grobheits-Pokémon
+4,10035,Flampivian (Trance-Modus),Lichterloh-Pokémon
+4,10036,Meloetta (Tanzform),Melodie-Pokémon
+4,10037,Boreos (Tiergeistform),Wirbelsturm-Pokémon
+4,10038,Voltolos (Tiergeistform),Torpedo-Pokémon
+4,10039,Demeteros (Tiergeistform),Reichtums-Pokémon
+4,10040,Weißes Kyurem,Schwellen-Pokémon
+4,10041,Schwarzes Kyurem,Schwellen-Pokémon
+4,10042,Mega-Bisaflor,Samen-Pokémon
+4,10043,Mega-Glurak X,Flammen-Pokémon
+4,10044,Mega-Glurak Y,Flammen-Pokémon
+4,10045,Mega-Turtok,Panzertier-Pokémon
+4,10046,Mega-Simsala,Psi-Pokémon
+4,10047,Mega-Gengar,Schatten-Pokémon
+4,10048,Mega-Kangama,Muttertier-Pokémon
+4,10049,Mega-Pinsir,Kneifkäfer-Pokémon
+4,10050,Mega-Garados,Grausam-Pokémon
+4,10051,Mega-Aerodactyl,Fossil-Pokémon
+4,10052,Mega-Mewtu X,Genmutanten-Pokémon
+4,10053,Mega-Mewtu Y,Genmutanten-Pokémon
+4,10054,Mega-Ampharos,Leuchten-Pokémon
+4,10055,Mega-Scherox,Kneifer-Pokémon
+4,10056,Mega-Skaraborn,Einzelhorn-Pokémon
+4,10057,Mega-Hundemon,Hades-Pokémon
+4,10058,Mega-Despotar,Panzer-Pokémon
+4,10059,Mega-Lohgock,Großbrand-Pokémon
+4,10060,Mega-Guardevoir,Umarmungs-Pokémon
+4,10061,Mega-Flunkifer,Schwindler-Pokémon
+4,10062,Mega-Stolloss,Eisenpanzer-Pokémon
+4,10063,Mega-Meditalis,Meditations-Pokémon
+4,10064,Mega-Voltenso,Entladungs-Pokémon
+4,10065,Mega-Banette,Marionetten-Pokémon
+4,10066,Mega-Absol,Desaster-Pokémon
+4,10067,Mega-Latias,Äon-Pokémon
+4,10068,Mega-Latios,Äon-Pokémon
+4,10069,Mega-Knakrack,Rasanz-Pokémon
+4,10070,Mega-Lucario,Aura-Pokémon
+4,10071,Mega-Rexblisar,Frostbaum-Pokémon
+4,10072,Arceus (Fee),Alpha-Pokémon
+4,10073,Floette (Ewigblütler),Einblütler-Pokémon
+4,10074,Psiaugon (Weiblich),Fassungs-Pokémon
+4,10075,Durengard (Klingenform),Königsklingen-Pokémon
+4,10076,Irrbis (Größe S),Kürbis-Pokémon
+4,10077,Irrbis (Größe L),Kürbis-Pokémon
+4,10078,Irrbis (Größe XL),Kürbis-Pokémon
+4,10079,Pumpdjinn (Größe S),Kürbis-Pokémon
+4,10080,Pumpdjinn (Größe L),Kürbis-Pokémon
+4,10081,Pumpdjinn (Größe XL),Kürbis-Pokémon
+4,10082,Mega-Bibor,Giftbienen-Pokémon
+4,10083,Mega-Tauboss,Vogel-Pokémon
+4,10084,Rocker-Pikachu,Maus-Pokémon
+4,10085,Damen-Pikachu,Maus-Pokémon
+4,10086,Star-Pikachu,Maus-Pokémon
+4,10087,Professoren-Pikachu,Maus-Pokémon
+4,10088,Wrestler-Pikachu,Maus-Pokémon
+4,10089,Cosplay-Pikachu,Maus-Pokémon
+4,10090,Mega-Lahmus,Symbiose-Pokémon
+4,10091,Mega-Stahlos,Stahlboa-Pokémon
+4,10092,Mega-Gewaldro,Dschungel-Pokémon
+4,10093,Mega-Sumpex,Lehmhüpfer-Pokémon
+4,10094,Mega-Zobiris,Finsternis-Pokémon
+4,10095,Mega-Tohaido,Brutal-Pokémon
+4,10096,Mega-Camerupt,Ausbruch-Pokémon
+4,10097,Mega-Altaria,Summsel-Pokémon
+4,10098,Mega-Firnontor,Antlitz-Pokémon
+4,10099,Mega-Brutalanda,Drachen-Pokémon
+4,10100,Mega-Metagross,Eisenfuß-Pokémon
+4,10101,Proto-Kyogre,Seegründler-Pokémon
+4,10102,Proto-Groudon,Kontinent-Pokémon
+4,10103,Mega-Rayquaza,Himmelhoch-Pokémon
+4,10104,Mega-Schlapor,Hasen-Pokémon
+4,10105,Mega-Galagladi,Klingen-Pokémon
+4,10106,Mega-Ohrdoch,Gehör-Pokémon
+4,10107,Mega-Diancie,Edelstein-Pokémon
+4,10108,Entfesseltes Hoopa,Plagegeist-Pokémon
+4,10109,Rattfratz (Alola-Form),Maus-Pokémon
+4,10110,Rattikarl (Alola-Form),Maus-Pokémon
+4,10111,Rattikarl (Herrscher),Maus-Pokémon
+4,10112,Pikachu (Kappe),Maus-Pokémon
+4,10113,Raichu (Alola-Form),Maus-Pokémon
+4,10114,Sandan (Alola-Form),Maus-Pokémon
+4,10115,Sandamer (Alola-Form),Maus-Pokémon
+4,10116,Vulpix (Alola-Form),Fuchs-Pokémon
+4,10117,Vulnona (Alola-Form),Fuchs-Pokémon
+4,10118,Digda (Alola-Form),Maulwurf-Pokémon
+4,10119,Digdri (Alola-Form),Maulwurf-Pokémon
+4,10120,Mauzi (Alola-Form),Katzen-Pokémon
+4,10121,Snobilikat (Alola-Form),Rassekatzen-Pokémon
+4,10122,Kleinstein (Alola-Form),Gesteins-Pokémon
+4,10123,Georok (Alola-Form),Gesteins-Pokémon
+4,10124,Geowaz (Alola-Form),Urgesteins-Pokémon
+4,10125,Sleima (Alola-Form),Schlamm-Pokémon
+4,10126,Sleimok (Alola-Form),Schlamm-Pokémon
+4,10127,Kokowei (Alola-Form),Palmfrucht-Pokémon
+4,10128,Knogga (Alola-Form),Knochenfan-Pokémon
+4,10129,Quajutsu (Freundschaftsakt),Ninja-Pokémon
+4,10130,Ash-Quajutsu,Ninja-Pokémon
+4,10131,10%-Zygarde,Ordnungs-Pokémon
+4,10132,10%-Zygarde,Ordnungs-Pokémon
+4,10133,50%-Zygarde,Ordnungs-Pokémon
+4,10134,Optimum Zygarde,Ordnungs-Pokémon
+4,10135,Manguspektor (Herrscher),Beschattungs-Pokémon
+4,10136,Donarion (Herrscher),Kneifkäfer-Pokémon
+4,10137,Choreogel (Cheerleading-Stil),Tanz-Pokémon
+4,10138,Choreogel (Hula-Stil),Tanz-Pokémon
+4,10139,Choreogel (Buyo-Stil),Tanz-Pokémon
+4,10140,Wolwerock (Nachtform),Wolfs-Pokémon
+4,10141,Lusardin (Schwarmform),Kleinfisch-Pokémon
+4,10142,Mantidea (Herrscher),Blumensichel-Pokémon
+4,10143,Amfira (Herrscher),Giftechsen-Pokémon
+4,10144,Amigento (Kampf),Modifikations-Pokémon
+4,10145,Amigento (Flug),Modifikations-Pokémon
+4,10146,Amigento (Gift),Modifikations-Pokémon
+4,10147,Amigento (Boden),Modifikations-Pokémon
+4,10148,Amigento (Gestein),Modifikations-Pokémon
+4,10149,Amigento (Käfer),Modifikations-Pokémon
+4,10150,Amigento (Geist),Modifikations-Pokémon
+4,10151,Amigento (Stahl),Modifikations-Pokémon
+4,10152,Amigento (Feuer),Modifikations-Pokémon
+4,10153,Amigento (Wasser),Modifikations-Pokémon
+4,10154,Amigento (Pflanze),Modifikations-Pokémon
+4,10155,Amigento (Elektro),Modifikations-Pokémon
+4,10156,Amigento (Psycho),Modifikations-Pokémon
+4,10157,Amigento (Eis),Modifikations-Pokémon
+4,10158,Amigento (Drache),Modifikations-Pokémon
+4,10159,Amigento (Unlicht),Modifikations-Pokémon
+4,10160,Amigento (Fee),Modifikations-Pokémon
+4,10161,Meteno (Kernform),Meteoren-Pokémon
+4,10162,Mimigma (Herrscher),Kostümspuk-Pokémon
+4,10163,Grandiras (Herrscher),Schuppentier-Pokémon
+4,10164,Knogga (Herrscher),Knochenfan-Pokémon
+4,10165,Bandelby (Herrscher),Hummelfliegen-Pokémon
+4,10166,Wuffels (Tempomacher),Welpen-Pokémon
+4,10167,Wolwerock (Zwielichtform),Wolfs-Pokémon
+4,10168,Aranestro (Herrscher),Wasserblasen-Pokémon
+4,10169,Togedemaru (Herrscher),Einigler-Pokémon
+4,10170,Necrozma (Abendmähne),Prisma-Pokémon
+4,10171,Necrozma (Morgenschwingen),Prisma-Pokémon
+4,10172,Ultra-Necrozma,Prisma-Pokémon
+4,10173,Partner-Pikachu,Maus-Pokémon
+4,10174,Partner-Evoli,Evolutions-Pokémon
 4,10175,Mauzi (Galar-Form),Katzen-Pokémon
 4,10176,Ponita (Galar-Form),Einhorn-Pokémon
 4,10177,Gallopa (Galar-Form),Einhorn-Pokémon
@@ -4385,7 +5016,7 @@ language_id,pokemon_id,name,category
 4,10183,Geradaks (Galar-Form),Sprinter-Pokémon
 4,10184,Flampion (Galar-Form),Lampion-Pokémon
 4,10185,Flampivian (Galar-Form) (Trance-Modus),Lampion-Pokémon
-4,10186,Flampivian (Galar-Form) (Normalmodus),Lampion-Pokémon
+4,10186,Flampivian (Galar-Form) (Normalmodus),Lichterloh-Pokémon
 4,10187,Makabaja (Galar-Form),Seelen-Pokémon
 4,10188,Flunschlik (Galar-Form),Falle-Pokémon
 4,10189,Riffex (Tief-Form),Punk-Pokémon
@@ -4403,6 +5034,47 @@ language_id,pokemon_id,name,category
 4,10201,Laschoking (ガラルのすがた),Hexenmeister-Pokémon
 4,10202,Coronospa (Schimmelreiter),Kaiser-Pokémon
 4,10203,Coronospa (Rappenreiter),Kaiser-Pokémon
+4,10204,Fukano (Hisui-Form),Späher-Pokémon
+4,10205,Arkani (Hisui-Form),Legendär-Pokémon
+4,10206,Voltobal (Hisui-Form),Kugel-Pokémon
+4,10207,Lektrobal (Hisui-Form),Kugel-Pokémon
+4,10208,Tornupto (Hisui-Form),Irrlicht-Pokémon
+4,10209,Baldorfish (Hisui-Form),Ballon-Pokémon
+4,10210,Sniebel (Hisui-Form),Stichklauen-Pokémon
+4,10211,Dialga (Urform),Zeitweilig-Pokémon
+4,10212,Palkia (Urform),Räumlich-Pokémon
+4,10213,Admurai (Hisui-Form),Würde-Pokémon
+4,10214,Dressella (Hisui-Form),Pirouetten-Pokémon
+4,10215,Barschuft (Weißlinige Form),Sanftheits-Pokémon
+4,10216,Zorua (Hisui-Form),Grollfuchs-Pokémon
+4,10217,Zoroark (Hisui-Form),Fluchfuchs-Pokémon
+4,10218,Washakwil (Hisui-Form),Kampfschrei-Pokémon
+4,10219,Viscargot (Hisui-Form),Schnecken-Pokémon
+4,10220,Viscogon (Hisui-Form),Schalrückzugs-Pokémon
+4,10221,Arktilas (Hisui-Form),Eisberg-Pokémon
+4,10222,Silvarro (Hisui-Form),Pfeilflügel-Pokémon
+4,10223,Salmagnis (Weiblich),Großfisch-Pokémon
+4,10224,Cupidos (Tiergeistform),Hassliebe-Pokémon
+4,10225,Tauros (Paldea-Form),Wildbullen-Pokémon
+4,10226,Tauros (Paldea-Form),Wildbullen-Pokémon
+4,10227,Tauros (Paldea-Form),Wildbullen-Pokémon
+4,10228,Felino (Paldea-Form),Giftfisch-Pokémon
+4,10229,Fragrunz (Weiblich),Schwein-Pokémon
+4,10230,Krawalloro (Blaugefiedert),Sittich-Pokémon
+4,10231,Krawalloro (Gelbgefiedert),Sittich-Pokémon
+4,10232,Krawalloro (Weißgefiedert),Sittich-Pokémon
+4,10233,Delfinator (Heldenform),Superheld-Pokémon
+4,10234,Gierspenst (Wanderform),Schatzsucher-Pokémon
+4,10235,Ursaluna (Blutmond),Torf-Pokémon
+4,10236,Ogerpon (Brunnenmaske),Masken-Pokémon
+4,10237,Ogerpon (Ofenmaske),Masken-Pokémon
+4,10238,Ogerpon (Fundamentmaske),Masken-Pokémon
+4,10239,Ogerpon (Türkisgrüne Maske Tera),Masken-Pokémon
+4,10240,Ogerpon (Brunnenmaske Tera),Masken-Pokémon
+4,10241,Ogerpon (Ofenmaske Tera),Masken-Pokémon
+4,10242,Ogerpon (Fundamentmaske Tera),Masken-Pokémon
+4,10243,Terapagos (Terakristall-Form),Terakristall-Pokémon
+4,10244,Terapagos (Stellarform),Terakristall-Pokémon
 5,1,Bulbasaur,Pokémon Seme
 5,2,Ivysaur,Pokémon Seme
 5,3,Venusaur,Pokémon Seme
@@ -4411,7 +5083,7 @@ language_id,pokemon_id,name,category
 5,6,Charizard,Pokémon Fiamma
 5,7,Squirtle,Pokémon Tartaghina
 5,8,Wartortle,Pokémon Tartaruga
-5,9,Blastoise,Pokémon Crostaceo
+5,9,Blastoise,Pokémon Carapace
 5,10,Caterpie,Pokémon Baco
 5,11,Metapod,Pokémon Bozzolo
 5,12,Butterfree,Pokémon Farfalla
@@ -4542,8 +5214,8 @@ language_id,pokemon_id,name,category
 5,137,Porygon,Pokémon Virtuale
 5,138,Omanyte,Pokémon Spirale
 5,139,Omastar,Pokémon Spirale
-5,140,Kabuto,Pokémon Crostaceo
-5,141,Kabutops,Pokémon Crostaceo
+5,140,Kabuto,Pokémon Carapace
+5,141,Kabutops,Pokémon Carapace
 5,142,Aerodactyl,Pokémon Fossile
 5,143,Snorlax,Pokémon Sonno
 5,144,Articuno,Pokémon Gelo
@@ -4730,7 +5402,7 @@ language_id,pokemon_id,name,category
 5,325,Spoink,Pokémon Molla
 5,326,Grumpig,Pokémon Raggiro
 5,327,Spinda,Pokémon Macchipanda
-5,328,Trapinch,Pokémon Trappola
+5,328,Trapinch,Pokémon Formicaleone
 5,329,Vibrava,Pokémon Vibrazione
 5,330,Flygon,Pokémon Magico
 5,331,Cacnea,Pokémon Cactus
@@ -5301,6 +5973,133 @@ language_id,pokemon_id,name,category
 5,896,Glastrier,Pokémon Furiequino
 5,897,Spectrier,Pokémon Sveltequino
 5,898,Calyrex,Pokémon Re
+5,899,Wyrdeer,Pokémon Grancorno
+5,900,Kleavor,Pokémon Scure
+5,901,Ursaluna,Pokémon Torba
+5,902,Basculegion (Maschio),Pokémon Pescegrosso
+5,903,Sneasler,Pokémon Scalata
+5,904,Overqwil,Pokémon Spinoso
+5,905,Enamorus,Pokémon Amoreodio
+5,906,Sprigatito,Pokémon Erbagatto
+5,907,Floragato,Pokémon Erbagatto
+5,908,Meowscarada,Pokémon Illusionista
+5,909,Fuecoco,Pokémon Fuocodrillo
+5,910,Crocalor,Pokémon Fuocodrillo
+5,911,Skeledirge,Pokémon Cantante
+5,912,Quaxly,Pokémon Anatroccolo
+5,913,Quaxwell,Pokémon Esercizio
+5,914,Quaquaval,Pokémon Ballerino
+5,915,Lechonk,Pokémon Porcellino
+5,916,Oinkologne (Maschio),Pokémon Porcellino
+5,917,Tarountula,Pokémon Gomitolo
+5,918,Spidops,Pokémon Trappola
+5,919,Nymble,Pokémon Cavalletta
+5,920,Lokix,Pokémon Cavalletta
+5,921,Pawmi,Pokémon Topo
+5,922,Pawmo,Pokémon Topo
+5,923,Pawmot,Pokémon Toccasana
+5,924,Tandemaus,Pokémon Coppia
+5,925,Maushold,Pokémon Famiglia
+5,926,Fidough,Pokémon Cagnolino
+5,927,Dachsbun,Pokémon Cane
+5,928,Smoliv,Pokémon Oliva
+5,929,Dolliv,Pokémon Oliva
+5,930,Arboliva,Pokémon Oliva
+5,931,Squawkabilly (Piume Verdi),Pokémon Pappagallo
+5,932,Nacli,Pokémon Salgemma
+5,933,Naclstack,Pokémon Salgemma
+5,934,Garganacl,Pokémon Salgemma
+5,935,Charcadet,Pokémon Infantigneo
+5,936,Armarouge,Pokémon Guerrigneo
+5,937,Ceruledge,Pokémon Spadaccigneo
+5,938,Tadbulb,Pokémon Amperino
+5,939,Bellibolt,Pokémon Amperana
+5,940,Wattrel,Pokémon Idrobatide
+5,941,Kilowattrel,Pokémon Fregata
+5,942,Maschiff,Pokémon Rompicollo
+5,943,Mabosstiff,Pokémon Boss
+5,944,Shroodle,Pokémon Velentopo
+5,945,Grafaiai,Pokémon Velenprimate
+5,946,Bramblin,Pokémon Rotolerba
+5,947,Brambleghast,Pokémon Rotolerba
+5,948,Toedscool,Pokémon Auricularia
+5,949,Toedscruel,Pokémon Auricularia
+5,950,Klawf,Pokémon Agguato
+5,951,Capsakid,Pokémon Habanero
+5,952,Scovillain,Pokémon Habanero
+5,953,Rellor,Pokémon Rotolatore
+5,954,Rabsca,Pokémon Rotolatore
+5,955,Flittle,Pokémon Volant
+5,956,Espathra,Pokémon Struzzo
+5,957,Tinkatink,Pokémon Forgiatore
+5,958,Tinkatuff,Pokémon Martello
+5,959,Tinkaton,Pokémon Martello
+5,960,Wiglett,Pokémon Grongo
+5,961,Wugtrio,Pokémon Grongo
+5,962,Bombirdier,Pokémon Gettaoggetti
+5,963,Finizen,Pokémon Delfino
+5,964,Palafin (Forma Ingenua),Pokémon Delfino
+5,965,Varoom,Pokémon Monocilindro
+5,966,Revavroom,Pokémon Policilindro
+5,967,Cyclizar,Pokémon Cavalcatura
+5,968,Orthworm,Pokémon Lombrico
+5,969,Glimmet,Pokémon Minerale
+5,970,Glimmora,Pokémon Minerale
+5,971,Greavard,Pokémon Cantasma
+5,972,Houndstone,Pokémon Cantasma
+5,973,Flamigo,Pokémon Sincronia
+5,974,Cetoddle,Pokémon Balenotterra
+5,975,Cetitan,Pokémon Balenotterra
+5,976,Veluza,Pokémon Separazione
+5,977,Dondozo,Pokémon Pescegattone
+5,978,Tatsugiri,Pokémon Mimetico
+5,979,Annihilape,Pokémon Irascimmia
+5,980,Clodsire,Pokémon Pescespine
+5,981,Farigiraf,Pokémon Lungocollo
+5,982,Dudunsparce,Pokémon Terraserpe
+5,983,Kingambit,Pokémon Granspada
+5,984,Grandizanne,Pokémon Paradosso
+5,985,Codaurlante,Pokémon Paradosso
+5,986,Fungofurioso,Pokémon Paradosso
+5,987,Crinealato,Pokémon Paradosso
+5,988,Alirasenti,Pokémon Paradosso
+5,989,Peldisabbia,Pokémon Paradosso
+5,990,Solcoferreo,Pokémon Paradosso
+5,991,Saccoferreo,Pokémon Paradosso
+5,992,Manoferrea,Pokémon Paradosso
+5,993,Colloferreo,Pokémon Paradosso
+5,994,Falenaferrea,Pokémon Paradosso
+5,995,Spineferree,Pokémon Paradosso
+5,996,Frigibax,Pokémon Gelopinna
+5,997,Arctibax,Pokémon Gelopinna
+5,998,Baxcalibur,Pokémon Gelodrago
+5,999,Gimmighoul (Forma Scrigno),Pokémon Scrigno
+5,1000,Gholdengo,Pokémon Tesoro
+5,1001,Wo-Chien,Pokémon Disgrazia
+5,1002,Chien-Pao,Pokémon Disgrazia
+5,1003,Ting-Lu,Pokémon Disgrazia
+5,1004,Chi-Yu,Pokémon Disgrazia
+5,1005,Lunaruggente,Pokémon Paradosso
+5,1006,Eroeferreo,Pokémon Paradosso
+5,1007,Koraidon,Pokémon Paradosso
+5,1008,Miraidon,Pokémon Paradosso
+5,1009,Acquecrespe,Pokémon Paradosso
+5,1010,Fogliaferrea,Pokémon Paradosso
+5,1011,Dipplin,Pokémon Pomelassa
+5,1012,Poltchageist,Pokémon Matcha
+5,1013,Sinistcha,Pokémon Matcha
+5,1014,Okidogi,Pokémon Servo
+5,1015,Munkidori,Pokémon Servo
+5,1016,Fezandipiti,Pokémon Servo
+5,1017,Ogerpon (Maschera Turchese),Pokémon Maschera
+5,1018,Archaludon,Pokémon Metallolega
+5,1019,Hydrapple,Pokémon Pomidra
+5,1020,Vampeaguzze,Pokémon Paradosso
+5,1021,Furiatonante,Pokémon Paradosso
+5,1022,Capoferreo,Pokémon Paradosso
+5,1023,Massoferreo,Pokémon Paradosso
+5,1024,Terapagos (Forma Normale),Pokémon Teracristal
+5,1025,Pecharunt,Pokémon Dominio
 5,10001,Castform (Forma Sole),Pokémon Meteo
 5,10002,Castform (Forma Pioggia),Pokémon Meteo
 5,10003,Castform (Forma Nuvola di Neve),Pokémon Meteo
@@ -5345,7 +6144,7 @@ language_id,pokemon_id,name,category
 5,10042,MegaVenusaur,Pokémon Seme
 5,10043,MegaCharizard X,Pokémon Fiamma
 5,10044,MegaCharizard Y,Pokémon Fiamma
-5,10045,MegaBlastoise,Pokémon Crostaceo
+5,10045,MegaBlastoise,Pokémon Carapace
 5,10046,MegaAlakazam,Pokémon Psico
 5,10047,MegaGengar,Pokémon Ombra
 5,10048,MegaKangaskhan,Pokémon Genitore
@@ -5464,11 +6263,11 @@ language_id,pokemon_id,name,category
 5,10161,Minior (Forma Nucleo),Pokémon Meteora
 5,10162,Mimikyu dominante,Pokémon Fantasmanto
 5,10163,Kommo-o dominante,Pokémon Squama
-5,10164,Marowak dominante,Pokémon Bolladacqua
+5,10164,Marowak dominante,Pokémon Guardaossi
 5,10165,Ribombee dominante,Pokémon Bombilide
 5,10166,Rockruff (Mente Locale),Pokémon Cagnolino
 5,10167,Lycanroc (Forma Crepuscolo),Pokémon Lupo
-5,10168,Araquanid dominante,Pokémon Guardaossi
+5,10168,Araquanid dominante,Pokémon Bolladacqua
 5,10169,Togedemaru dominante,Pokémon Ricciopalla
 5,10170,Necrozma (Criniera del Vespro),Pokémon Prisma
 5,10171,Necrozma (Ali dell’Aurora),Pokémon Prisma
@@ -5486,7 +6285,7 @@ language_id,pokemon_id,name,category
 5,10183,Linoone (Forma di Galar),Pokémon Sfrecciante
 5,10184,Darumaka (Forma di Galar),Pokémon Daruma
 5,10185,Darmanitan (Forma di Galar) (Stato Zen),Pokémon Daruma
-5,10186,Darmanitan (Forma di Galar) (Stato Normale),Pokémon Daruma
+5,10186,Darmanitan (Forma di Galar) (Stato Normale),Pokémon Altefiamme
 5,10187,Yamask (Forma di Galar),Pokémon Fatuanima
 5,10188,Stunfisk (Forma di Galar),Pokémon Trappola
 5,10189,Toxtricity (Forma Basso),Pokémon Punk
@@ -5504,6 +6303,47 @@ language_id,pokemon_id,name,category
 5,10201,Slowking (ガラルのすがた),Pokémon Stregone
 5,10202,Calyrex (Cavaliere Glaciale),Pokémon Imperatore
 5,10203,Calyrex (Cavaliere Spettrale),Pokémon Imperatore
+5,10204,Growlithe (Forma di Hisui),Pokémon Esplorante
+5,10205,Arcanine (Forma di Hisui),Pokémon Leggenda
+5,10206,Voltorb (Forma di Hisui),Pokémon Sfera
+5,10207,Electrode (Forma di Hisui),Pokémon Sfera
+5,10208,Typhlosion (Forma di Hisui),Pokémon Fuocofatuo
+5,10209,Qwilfish (Forma di Hisui),Pokémon Pallone
+5,10210,Sneasel (Forma di Hisui),Pokémon Lamartigli
+5,10211,Dialga (Forma Originale),Pokémon Tempo
+5,10212,Palkia (Forma Originale),Pokémon Spazio
+5,10213,Samurott (Forma di Hisui),Pokémon Dignità
+5,10214,Lilligant (Forma di Hisui),Pokémon Piroetta
+5,10215,Basculin (Forma Lineabianca),Pokémon Docilità
+5,10216,Zorua (Forma di Hisui),Pokémon Rancorvolpe
+5,10217,Zoroark (Forma di Hisui),Pokémon Maledivolpe
+5,10218,Braviary (Forma di Hisui),Pokémon Baldogrido
+5,10219,Sliggoo (Forma di Hisui),Pokémon Lumachina
+5,10220,Goodra (Forma di Hisui),Pokémon Serraguscio
+5,10221,Avalugg (Forma di Hisui),Pokémon Iceberg
+5,10222,Decidueye (Forma di Hisui),Pokémon Alifreccia
+5,10223,Basculegion (Femmina),Pokémon Pescegrosso
+5,10224,Enamorus (Forma Totem),Pokémon Amoreodio
+5,10225,Tauros (Forma di Paldea),Pokémon Torobrado
+5,10226,Tauros (Forma di Paldea),Pokémon Torobrado
+5,10227,Tauros (Forma di Paldea),Pokémon Torobrado
+5,10228,Wooper (Forma di Paldea),Pokémon Velenpesce
+5,10229,Oinkologne (Femmina),Pokémon Porcellino
+5,10230,Squawkabilly (Piume Azzurre),Pokémon Pappagallo
+5,10231,Squawkabilly (Piume Gialle),Pokémon Pappagallo
+5,10232,Squawkabilly (Piume Bianche),Pokémon Pappagallo
+5,10233,Palafin (Forma Possente),Pokémon Eroe
+5,10234,Gimmighoul (Forma Ambulante),Pokémon Trovatesori
+5,10235,Ursaluna (Luna Cremisi),Pokémon Torba
+5,10236,Ogerpon (Maschera Pozzo),Pokémon Maschera
+5,10237,Ogerpon (Maschera Focolare),Pokémon Maschera
+5,10238,Ogerpon (Maschera Fondamenta),Pokémon Maschera
+5,10239,Ogerpon (Maschera Turchese Tera),Pokémon Maschera
+5,10240,Ogerpon (Maschera Pozzo Tera),Pokémon Maschera
+5,10241,Ogerpon (Maschera Focolare Tera),Pokémon Maschera
+5,10242,Ogerpon (Maschera Fondamenta Tera),Pokémon Maschera
+5,10243,Terapagos (Forma Teracristal),Pokémon Teracristal
+5,10244,Terapagos (Forma Astrale),Pokémon Teracristal
 6,1,Bulbasaur,Pokémon Semilla
 6,2,Ivysaur,Pokémon Semilla
 6,3,Venusaur,Pokémon Semilla
@@ -5512,7 +6352,7 @@ language_id,pokemon_id,name,category
 6,6,Charizard,Pokémon Llama
 6,7,Squirtle,Pokémon Tortuguita
 6,8,Wartortle,Pokémon Tortuga
-6,9,Blastoise,Pokémon Marisco
+6,9,Blastoise,Pokémon Armazón
 6,10,Caterpie,Pokémon Gusano
 6,11,Metapod,Pokémon Capullo
 6,12,Butterfree,Pokémon Mariposa
@@ -5552,7 +6392,7 @@ language_id,pokemon_id,name,category
 6,46,Paras,Pokémon Hongo
 6,47,Parasect,Pokémon Hongo
 6,48,Venonat,Pokémon Insecto
-6,49,Venomoth,Pokémon Polilla Ven.
+6,49,Venomoth,Pokémon Polilla Venenosa
 6,50,Diglett,Pokémon Topo
 6,51,Dugtrio,Pokémon Topo
 6,52,Meowth,Pokémon Gato Araña
@@ -5562,7 +6402,7 @@ language_id,pokemon_id,name,category
 6,56,Mankey,Pokémon Mono Cerdo
 6,57,Primeape,Pokémon Mono Cerdo
 6,58,Growlithe,Pokémon Perrito
-6,59,Arcanine,Pokémon Legendario
+6,59,Arcanine,Pokémon Leyenda
 6,60,Poliwag,Pokémon Renacuajo
 6,61,Poliwhirl,Pokémon Renacuajo
 6,62,Poliwrath,Pokémon Renacuajo
@@ -5573,15 +6413,15 @@ language_id,pokemon_id,name,category
 6,67,Machoke,Pokémon Superpoder
 6,68,Machamp,Pokémon Superpoder
 6,69,Bellsprout,Pokémon Flor
-6,70,Weepinbell,Pokémon Matamoscas
-6,71,Victreebel,Pokémon Matamoscas
+6,70,Weepinbell,Pokémon Atrapamoscas
+6,71,Victreebel,Pokémon Atrapamoscas
 6,72,Tentacool,Pokémon Medusa
 6,73,Tentacruel,Pokémon Medusa
 6,74,Geodude,Pokémon Roca
 6,75,Graveler,Pokémon Roca
 6,76,Golem,Pokémon Megatón
-6,77,Ponyta,Pokémon Caballo F.
-6,78,Rapidash,Pokémon Caballo F.
+6,77,Ponyta,Pokémon Caballo Fuego
+6,78,Rapidash,Pokémon Caballo Fuego
 6,79,Slowpoke,Pokémon Atontado
 6,80,Slowbro,Pokémon Ermitaño
 6,81,Magnemite,Pokémon Imán
@@ -5598,7 +6438,7 @@ language_id,pokemon_id,name,category
 6,92,Gastly,Pokémon Gas
 6,93,Haunter,Pokémon Gas
 6,94,Gengar,Pokémon Sombra
-6,95,Onix,Pokémon Serp. Roca
+6,95,Onix,Pokémon Serpiente Roca
 6,96,Drowzee,Pokémon Hipnosis
 6,97,Hypno,Pokémon Hipnosis
 6,98,Krabby,Pokémon Cangrejo
@@ -5614,16 +6454,16 @@ language_id,pokemon_id,name,category
 6,108,Lickitung,Pokémon Lametazo
 6,109,Koffing,Pokémon Gas Venenoso
 6,110,Weezing,Pokémon Gas Venenoso
-6,111,Rhyhorn,Pokémon Clavos
+6,111,Rhyhorn,Pokémon Punzante
 6,112,Rhydon,Pokémon Taladro
 6,113,Chansey,Pokémon Huevo
 6,114,Tangela,Pokémon Enredadera
-6,115,Kangaskhan,Pokémon Padres
+6,115,Kangaskhan,Pokémon Maternal
 6,116,Horsea,Pokémon Dragón
 6,117,Seadra,Pokémon Dragón
 6,118,Goldeen,Pokémon Pez Color
 6,119,Seaking,Pokémon Pez Color
-6,120,Staryu,Pokémon Estrellada
+6,120,Staryu,Pokémon Estrella
 6,121,Starmie,Pokémon Misterioso
 6,122,Mr. Mime,Pokémon Barrera
 6,123,Scyther,Pokémon Mantis
@@ -5635,7 +6475,7 @@ language_id,pokemon_id,name,category
 6,129,Magikarp,Pokémon Pez
 6,130,Gyarados,Pokémon Atrocidad
 6,131,Lapras,Pokémon Transporte
-6,132,Ditto,Pokémon Transform.
+6,132,Ditto,Pokémon Transformación
 6,133,Eevee,Pokémon Evolución
 6,134,Vaporeon,Pokémon Burbuja
 6,135,Jolteon,Pokémon Relámpago
@@ -5643,8 +6483,8 @@ language_id,pokemon_id,name,category
 6,137,Porygon,Pokémon Virtual
 6,138,Omanyte,Pokémon Espiral
 6,139,Omastar,Pokémon Espiral
-6,140,Kabuto,Pokémon Marisco
-6,141,Kabutops,Pokémon Marisco
+6,140,Kabuto,Pokémon Armazón
+6,141,Kabutops,Pokémon Armazón
 6,142,Aerodactyl,Pokémon Fósil
 6,143,Snorlax,Pokémon Dormir
 6,144,Articuno,Pokémon Congelar
@@ -5654,7 +6494,7 @@ language_id,pokemon_id,name,category
 6,148,Dragonair,Pokémon Dragón
 6,149,Dragonite,Pokémon Dragón
 6,150,Mewtwo,Pokémon Genético
-6,151,Mew,Pokémon N. Especie
+6,151,Mew,Pokémon Nueva Especie
 6,152,Chikorita,Pokémon Hoja
 6,153,Bayleef,Pokémon Hoja
 6,154,Meganium,Pokémon Hierba
@@ -5670,15 +6510,15 @@ language_id,pokemon_id,name,category
 6,164,Noctowl,Pokémon Búho
 6,165,Ledyba,Pokémon 5 Estrellas
 6,166,Ledian,Pokémon 5 Estrellas
-6,167,Spinarak,Pokémon Escupesoga
+6,167,Spinarak,Pokémon Escupehilo
 6,168,Ariados,Pokémon Pata Larga
 6,169,Crobat,Pokémon Murciélago
 6,170,Chinchou,Pokémon Rape
 6,171,Lanturn,Pokémon Luz
 6,172,Pichu,Pokémon Ratoncito
-6,173,Cleffa,Pokémon Estrellada
+6,173,Cleffa,Pokémon Estrella
 6,174,Igglybuff,Pokémon Globo
-6,175,Togepi,Pokémon Bolaclavos
+6,175,Togepi,Pokémon Bolapicuda
 6,176,Togetic,Pokémon Felicidad
 6,177,Natu,Pokémon Pajarito
 6,178,Xatu,Pokémon Místico
@@ -5690,9 +6530,9 @@ language_id,pokemon_id,name,category
 6,184,Azumarill,Pokémon Conejo Agua
 6,185,Sudowoodo,Pokémon Imitación
 6,186,Politoed,Pokémon Rana
-6,187,Hoppip,Pokémon Algadón
-6,188,Skiploom,Pokémon Algadón
-6,189,Jumpluff,Pokémon Algadón
+6,187,Hoppip,Pokémon Diente León
+6,188,Skiploom,Pokémon Diente León
+6,189,Jumpluff,Pokémon Diente León
 6,190,Aipom,Pokémon Cola Larga
 6,191,Sunkern,Pokémon Semilla
 6,192,Sunflora,Pokémon Sol
@@ -5709,15 +6549,15 @@ language_id,pokemon_id,name,category
 6,203,Girafarig,Pokémon Gran Cuello
 6,204,Pineco,Pokémon Larva
 6,205,Forretress,Pokémon Larva
-6,206,Dunsparce,Pokémon Serptierra
+6,206,Dunsparce,Pokémon Serpiente Tierra
 6,207,Gligar,Pokémon Escorpiala
-6,208,Steelix,Pokémon Serpférrea
+6,208,Steelix,Pokémon Serpiente Férrea
 6,209,Snubbull,Pokémon Hada
 6,210,Granbull,Pokémon Hada
 6,211,Qwilfish,Pokémon Globo
 6,212,Scizor,Pokémon Tenaza
 6,213,Shuckle,Pokémon Moho
-6,214,Heracross,Pokémon Unicornio
+6,214,Heracross,Pokémon Cuerno
 6,215,Sneasel,Pokémon Garra Filo
 6,216,Teddiursa,Pokémon Osito
 6,217,Ursaring,Pokémon Hibernante
@@ -5757,7 +6597,7 @@ language_id,pokemon_id,name,category
 6,251,Celebi,Pokémon Viajetiempo
 6,252,Treecko,Pokémon Geco Bosque
 6,253,Grovyle,Pokémon Geco Bosque
-6,254,Sceptile,Pokémon Monte
+6,254,Sceptile,Pokémon Bosque
 6,255,Torchic,Pokémon Polluelo
 6,256,Combusken,Pokémon Ave Corral
 6,257,Blaziken,Pokémon Llameante
@@ -5772,8 +6612,8 @@ language_id,pokemon_id,name,category
 6,266,Silcoon,Pokémon Capullo
 6,267,Beautifly,Pokémon Mariposa
 6,268,Cascoon,Pokémon Capullo
-6,269,Dustox,Pokémon Polilla Ven.
-6,270,Lotad,Pokémon Alga
+6,269,Dustox,Pokémon Polilla Venenosa
+6,270,Lotad,Pokémon Lenteja Agua
 6,271,Lombre,Pokémon Alegre
 6,272,Ludicolo,Pokémon Optimista
 6,273,Seedot,Pokémon Bellota
@@ -5807,9 +6647,9 @@ language_id,pokemon_id,name,category
 6,301,Delcatty,Pokémon Cursi
 6,302,Sableye,Pokémon Oscuridad
 6,303,Mawile,Pokémon Tramposo
-6,304,Aron,Pokémon Cor. Férrea
-6,305,Lairon,Pokémon Cor. Férrea
-6,306,Aggron,Pokémon Cor. Férrea
+6,304,Aron,Pokémon Coraza Férrea
+6,305,Lairon,Pokémon Coraza Férrea
+6,306,Aggron,Pokémon Coraza Férrea
 6,307,Meditite,Pokémon Meditador
 6,308,Medicham,Pokémon Meditador
 6,309,Electrike,Pokémon Calambre
@@ -5831,7 +6671,7 @@ language_id,pokemon_id,name,category
 6,325,Spoink,Pokémon Saltarín
 6,326,Grumpig,Pokémon Manipulador
 6,327,Spinda,Pokémon Panda Topos
-6,328,Trapinch,Pokémon Hormigaleón
+6,328,Trapinch,Pokémon Hormiga León
 6,329,Vibrava,Pokémon Vibrante
 6,330,Flygon,Pokémon Místico
 6,331,Cacnea,Pokémon Cactus
@@ -5848,7 +6688,7 @@ language_id,pokemon_id,name,category
 6,342,Crawdaunt,Pokémon Granuja
 6,343,Baltoy,Pokémon Muñeca Barro
 6,344,Claydol,Pokémon Muñeca Barro
-6,345,Lileep,Pokémon Lila Mar
+6,345,Lileep,Pokémon Lirio de Mar
 6,346,Cradily,Pokémon Percebe
 6,347,Anorith,Pokémon Camarón
 6,348,Armaldo,Pokémon Armadura
@@ -5861,7 +6701,7 @@ language_id,pokemon_id,name,category
 6,355,Duskull,Pokémon Réquiem
 6,356,Dusclops,Pokémon Atrayente
 6,357,Tropius,Pokémon Fruto
-6,358,Chimecho,Pokémon Sonido Aire
+6,358,Chimecho,Pokémon Campanilla
 6,359,Absol,Pokémon Catástrofe
 6,360,Wynaut,Pokémon Radiante
 6,361,Snorunt,Pokémon Gorro Nieve
@@ -5921,12 +6761,12 @@ language_id,pokemon_id,name,category
 6,415,Combee,Pokémon Abejita
 6,416,Vespiquen,Pokémon Colmena
 6,417,Pachirisu,Pokémon Ardillalec
-6,418,Buizel,Pokémon Nutria Mar.
-6,419,Floatzel,Pokémon Nutria Mar.
+6,418,Buizel,Pokémon Nutria Marina
+6,419,Floatzel,Pokémon Nutria Marina
 6,420,Cherubi,Pokémon Cereza
 6,421,Cherrim,Pokémon Floración
-6,422,Shellos,Pokémon Babosa Mar.
-6,423,Gastrodon,Pokémon Babosa Mar.
+6,422,Shellos,Pokémon Babosa Marina
+6,423,Gastrodon,Pokémon Babosa Marina
 6,424,Ambipom,Pokémon Cola Larga
 6,425,Drifloon,Pokémon Globo
 6,426,Drifblim,Pokémon Dirigible
@@ -5936,11 +6776,11 @@ language_id,pokemon_id,name,category
 6,430,Honchkrow,Pokémon Gran Jefe
 6,431,Glameow,Pokémon Gastuto
 6,432,Purugly,Pokémon Tigre Gato
-6,433,Chingling,Pokémon Campana
+6,433,Chingling,Pokémon Cascabel
 6,434,Stunky,Pokémon Mofeta
 6,435,Skuntank,Pokémon Mofeta
 6,436,Bronzor,Pokémon Bronce
-6,437,Bronzong,Pokémon Cam. Bronce
+6,437,Bronzong,Pokémon Campana Bronce
 6,438,Bonsly,Pokémon Bonsái
 6,439,Mime Jr.,Pokémon Mimo
 6,440,Happiny,Pokémon Casita
@@ -5958,7 +6798,7 @@ language_id,pokemon_id,name,category
 6,452,Drapion,Pokémon Escorpiogro
 6,453,Croagunk,Pokémon Boca Tóxica
 6,454,Toxicroak,Pokémon Boca Tóxica
-6,455,Carnivine,Pokémon Caza Bichos
+6,455,Carnivine,Pokémon Cazabichos
 6,456,Finneon,Pokémon Pez Ala
 6,457,Lumineon,Pokémon Neón
 6,458,Mantyke,Pokémon Milano
@@ -5998,8 +6838,8 @@ language_id,pokemon_id,name,category
 6,492,Shaymin (Forma Tierra),Pokémon Gratitud
 6,493,Arceus (Normal),Pokémon Alfa
 6,494,Victini,Pokémon Victoria
-6,495,Snivy,Pokémon Serp. Hierba
-6,496,Servine,Pokémon Serp. Hierba
+6,495,Snivy,Pokémon Serpiente Hierba
+6,496,Servine,Pokémon Serpiente Hierba
 6,497,Serperior,Pokémon Realeza
 6,498,Tepig,Pokémon Cerdo Fuego
 6,499,Pignite,Pokémon Cerdo Fuego
@@ -6133,7 +6973,7 @@ language_id,pokemon_id,name,category
 6,627,Rufflet,Pokémon Aguilucho
 6,628,Braviary,Pokémon Aguerrido
 6,629,Vullaby,Pokémon Pañal
-6,630,Mandibuzz,Pokémon Águila Hueso
+6,630,Mandibuzz,Pokémon Buitre Hueso
 6,631,Heatmor,Pokémon Hormiguero
 6,632,Durant,Pokémon Hormigacero
 6,633,Deino,Pokémon Tosco
@@ -6346,8 +7186,8 @@ language_id,pokemon_id,name,category
 6,840,Applin,Pokémon Manzanido
 6,841,Flapple,Pokémon Manzanala
 6,842,Appletun,Pokémon Manzanéctar
-6,843,Silicobra,Pokémon Serp. Arena
-6,844,Sandaconda,Pokémon Serp. Arena
+6,843,Silicobra,Pokémon Serpiente Arena
+6,844,Sandaconda,Pokémon Serpiente Arena
 6,845,Cramorant,Pokémon Tragón
 6,846,Arrokuda,Pokémon Arremetida
 6,847,Barraskewda,Pokémon Ensarta
@@ -6394,14 +7234,141 @@ language_id,pokemon_id,name,category
 6,888,Zacian,Pokémon Guerrero
 6,889,Zamazenta,Pokémon Guerrero
 6,890,Eternatus,Pokémon Gigantesco
-6,891,Kubfu,Pokémon Kung-fu
-6,892,Urshifu (Estilo Brusco),Pokémon Kung-fu
+6,891,Kubfu,Pokémon Kung-Fu
+6,892,Urshifu (Estilo Brusco),Pokémon Kung-Fu
 6,893,Zarude,Pokémon Simiestro
 6,894,Regieleki,Pokémon Electrón
 6,895,Regidrago,Pokémon Dragosfera
 6,896,Glastrier,Pokémon Corcel Feroz
 6,897,Spectrier,Pokémon Corcel Veloz
 6,898,Calyrex,Pokémon Rey
+6,899,Wyrdeer,Pokémon Gran Cuerno
+6,900,Kleavor,Pokémon Hacha
+6,901,Ursaluna,Pokémon Turba
+6,902,Basculegion (Macho),Pokémon Gran Pez
+6,903,Sneasler,Pokémon Escalada
+6,904,Overqwil,Pokémon Espinoso
+6,905,Enamorus,Pokémon Amorodio
+6,906,Sprigatito,Pokémon Gato Planta
+6,907,Floragato,Pokémon Gato Planta
+6,908,Meowscarada,Pokémon Mago
+6,909,Fuecoco,Pokémon Fuegodrilo
+6,910,Crocalor,Pokémon Fuegodrilo
+6,911,Skeledirge,Pokémon Cantante
+6,912,Quaxly,Pokémon Patito
+6,913,Quaxwell,Pokémon Disciplinado
+6,914,Quaquaval,Pokémon Bailarín
+6,915,Lechonk,Pokémon Gorrino
+6,916,Oinkologne (Macho),Pokémon Gorrino
+6,917,Tarountula,Pokémon Ovillo
+6,918,Spidops,Pokémon Trampa
+6,919,Nymble,Pokémon Saltamontes
+6,920,Lokix,Pokémon Saltamontes
+6,921,Pawmi,Pokémon Ratón
+6,922,Pawmo,Pokémon Ratón
+6,923,Pawmot,Pokémon Palmada
+6,924,Tandemaus,Pokémon Pareja
+6,925,Maushold,Pokémon Familia
+6,926,Fidough,Pokémon Perrito
+6,927,Dachsbun,Pokémon Perro
+6,928,Smoliv,Pokémon Aceituna
+6,929,Dolliv,Pokémon Aceituna
+6,930,Arboliva,Pokémon Aceituna
+6,931,Squawkabilly (Plumaje Verde),Pokémon Loro
+6,932,Nacli,Pokémon Halita
+6,933,Naclstack,Pokémon Halita
+6,934,Garganacl,Pokémon Halita
+6,935,Charcadet,Pokémon Piroescudero
+6,936,Armarouge,Pokémon Piroguerrero
+6,937,Ceruledge,Pokémon Piroespada
+6,938,Tadbulb,Pokémon Electrocuajo
+6,939,Bellibolt,Pokémon Electrorrana
+6,940,Wattrel,Pokémon Paíño
+6,941,Kilowattrel,Pokémon Fregata
+6,942,Maschiff,Pokémon Bisoño
+6,943,Mabosstiff,Pokémon Jefazo
+6,944,Shroodle,Pokémon Ratón Veneno
+6,945,Grafaiai,Pokémon Mono Veneno
+6,946,Bramblin,Pokémon Estepicursor
+6,947,Brambleghast,Pokémon Estepicursor
+6,948,Toedscool,Pokémon Auricularia
+6,949,Toedscruel,Pokémon Auricularia
+6,950,Klawf,Pokémon Emboscada
+6,951,Capsakid,Pokémon Habanero
+6,952,Scovillain,Pokémon Habanero
+6,953,Rellor,Pokémon Pelotero
+6,954,Rabsca,Pokémon Pelotero
+6,955,Flittle,Pokémon Volantes
+6,956,Espathra,Pokémon Avestruz
+6,957,Tinkatink,Pokémon Forja
+6,958,Tinkatuff,Pokémon Martillo
+6,959,Tinkaton,Pokémon Martillo
+6,960,Wiglett,Pokémon Cóngrido
+6,961,Wugtrio,Pokémon Cóngrido
+6,962,Bombirdier,Pokémon Arrojador
+6,963,Finizen,Pokémon Delfín
+6,964,Palafin (Forma Ingenua),Pokémon Delfín
+6,965,Varoom,Pokémon Monocilindro
+6,966,Revavroom,Pokémon Policilindro
+6,967,Cyclizar,Pokémon Montura
+6,968,Orthworm,Pokémon Lombriz
+6,969,Glimmet,Pokémon Mineral
+6,970,Glimmora,Pokémon Mineral
+6,971,Greavard,Pokémon Can Fantasma
+6,972,Houndstone,Pokémon Can Fantasma
+6,973,Flamigo,Pokémon Sincronizado
+6,974,Cetoddle,Pokémon Geoballena
+6,975,Cetitan,Pokémon Geoballena
+6,976,Veluza,Pokémon Sueltalastre
+6,977,Dondozo,Pokémon Gran Siluro
+6,978,Tatsugiri,Pokémon Mimetismo
+6,979,Annihilape,Pokémon Mono Furia
+6,980,Clodsire,Pokémon Pez Púas
+6,981,Farigiraf,Pokémon Gran Cuello
+6,982,Dudunsparce,Pokémon Serpiente Tierra
+6,983,Kingambit,Pokémon Gran Espada
+6,984,Colmilargo,Pokémon Paradoja
+6,985,Colagrito,Pokémon Paradoja
+6,986,Furioseta,Pokémon Paradoja
+6,987,Melenaleteo,Pokémon Paradoja
+6,988,Reptalada,Pokémon Paradoja
+6,989,Pelarena,Pokémon Paradoja
+6,990,Ferrodada,Pokémon Paradoja
+6,991,Ferrosaco,Pokémon Paradoja
+6,992,Ferropalmas,Pokémon Paradoja
+6,993,Ferrocuello,Pokémon Paradoja
+6,994,Ferropolilla,Pokémon Paradoja
+6,995,Ferropúas,Pokémon Paradoja
+6,996,Frigibax,Pokémon Aleta Hielo
+6,997,Arctibax,Pokémon Aleta Hielo
+6,998,Baxcalibur,Pokémon Dragón Hielo
+6,999,Gimmighoul (Forma Cofre),Pokémon Cofre
+6,1000,Gholdengo,Pokémon Tesoro
+6,1001,Wo-Chien,Pokémon Debacle
+6,1002,Chien-Pao,Pokémon Debacle
+6,1003,Ting-Lu,Pokémon Debacle
+6,1004,Chi-Yu,Pokémon Debacle
+6,1005,Bramaluna,Pokémon Paradoja
+6,1006,Ferropaladín,Pokémon Paradoja
+6,1007,Koraidon,Pokémon Paradoja
+6,1008,Miraidon,Pokémon Paradoja
+6,1009,Ondulagua,Pokémon Paradoja
+6,1010,Ferroverdor,Pokémon Paradoja
+6,1011,Dipplin,Pokémon Manzamelo
+6,1012,Poltchageist,Pokémon Matcha
+6,1013,Sinistcha,Pokémon Matcha
+6,1014,Okidogi,Pokémon Esbirro
+6,1015,Munkidori,Pokémon Esbirro
+6,1016,Fezandipiti,Pokémon Esbirro
+6,1017,Ogerpon (Máscara Turquesa),Pokémon Máscara
+6,1018,Archaludon,Pokémon Aleación
+6,1019,Hydrapple,Pokémon Manzanhidra
+6,1020,Flamariete,Pokémon Paradoja
+6,1021,Electrofuria,Pokémon Paradoja
+6,1022,Ferrotesta,Pokémon Paradoja
+6,1023,Ferromole,Pokémon Paradoja
+6,1024,Terapagos (Forma Normal),Pokémon Teracristal
+6,1025,Pecharunt,Pokémon Controlador
 6,10001,Castform (Forma Sol),Pokémon Clima
 6,10002,Castform (Forma Lluvia),Pokémon Clima
 6,10003,Castform (Forma Nieve),Pokémon Clima
@@ -6426,7 +7393,7 @@ language_id,pokemon_id,name,category
 6,10022,Arceus (Hielo),Pokémon Alfa
 6,10023,Arceus (Dragón),Pokémon Alfa
 6,10024,Arceus (Siniestro),Pokémon Alfa
-6,10024,Arceus (???),Pokémon Alfa
+6,10025,Arceus (???),Pokémon Alfa
 6,10026,Rotom Calor,Pokémon Plasma
 6,10027,Rotom Lavado,Pokémon Plasma
 6,10028,Rotom Frío,Pokémon Plasma
@@ -6446,10 +7413,10 @@ language_id,pokemon_id,name,category
 6,10042,Mega-Venusaur,Pokémon Semilla
 6,10043,Mega-Charizard X,Pokémon Llama
 6,10044,Mega-Charizard Y,Pokémon Llama
-6,10045,Mega-Blastoise,Pokémon Marisco
+6,10045,Mega-Blastoise,Pokémon Armazón
 6,10046,Mega-Alakazam,Pokémon Psi
 6,10047,Mega-Gengar,Pokémon Sombra
-6,10048,Mega-Kangaskhan,Pokémon Padres
+6,10048,Mega-Kangaskhan,Pokémon Maternal
 6,10049,Mega-Pinsir,Pokémon Escarabajo
 6,10050,Mega-Gyarados,Pokémon Atrocidad
 6,10051,Mega-Aerodactyl,Pokémon Fósil
@@ -6457,13 +7424,13 @@ language_id,pokemon_id,name,category
 6,10053,Mega-Mewtwo Y,Pokémon Genético
 6,10054,Mega-Ampharos,Pokémon Luz
 6,10055,Mega-Scizor,Pokémon Tenaza
-6,10056,Mega-Heracross,Pokémon Unicornio
+6,10056,Mega-Heracross,Pokémon Cuerno
 6,10057,Mega-Houndoom,Pokémon Siniestro
 6,10058,Mega-Tyranitar,Pokémon Coraza
 6,10059,Mega-Blaziken,Pokémon Llameante
 6,10060,Mega-Gardevoir,Pokémon Envolvente
 6,10061,Mega-Mawile,Pokémon Tramposo
-6,10062,Mega-Aggron,Pokémon Cor. Férrea
+6,10062,Mega-Aggron,Pokémon Coraza Férrea
 6,10063,Mega-Medicham,Pokémon Meditador
 6,10064,Mega-Manectric,Pokémon Descarga
 6,10065,Mega-Banette,Pokémon Marioneta
@@ -6492,8 +7459,8 @@ language_id,pokemon_id,name,category
 6,10088,Pikachu Enmascarada,Pokémon Ratón
 6,10089,Pikachu Coqueta,Pokémon Ratón
 6,10090,Mega-Slowbro,Pokémon Ermitaño
-6,10091,Mega-Steelix,Pokémon Serpférrea
-6,10092,Mega-Sceptile,Pokémon Monte
+6,10091,Mega-Steelix,Pokémon Serpiente Férrea
+6,10092,Mega-Sceptile,Pokémon Bosque
 6,10093,Mega-Swampert,Pokémon Pez Lodo
 6,10094,Mega-Sableye,Pokémon Oscuridad
 6,10095,Mega-Sharpedo,Pokémon Voraz
@@ -6565,11 +7532,11 @@ language_id,pokemon_id,name,category
 6,10161,Minior (Forma Núcleo),Pokémon Meteoro
 6,10162,Mimikyu dominante,Pokémon Disfraz
 6,10163,Kommo-o dominante,Pokémon Escamas
-6,10164,Marowak dominante,Pokémon Pompa
+6,10164,Marowak dominante,Pokémon Apilahueso
 6,10165,Ribombee dominante,Pokémon Mosca Abeja
 6,10166,Rockruff (Ritmo Propio),Pokémon Perrito
 6,10167,Lycanroc (Forma Crepuscular),Pokémon Lobo
-6,10168,Araquanid dominante,Pokémon Apilahueso
+6,10168,Araquanid dominante,Pokémon Pompa
 6,10169,Togedemaru dominante,Pokémon Bolita
 6,10170,Necrozma (Melena Crepuscular),Pokémon Prisma
 6,10171,Necrozma (Alas del Alba),Pokémon Prisma
@@ -6587,7 +7554,7 @@ language_id,pokemon_id,name,category
 6,10183,Linoone (Forma de Galar),Pokémon Lanzado
 6,10184,Darumaka (Forma de Galar),Pokémon Daruma
 6,10185,Darmanitan (Forma de Galar) (Modo Daruma),Pokémon Daruma
-6,10186,Darmanitan (Forma de Galar) (Modo Normal),Pokémon Daruma
+6,10186,Darmanitan (Forma de Galar) (Modo Normal),Pokémon Candente
 6,10187,Yamask (Forma de Galar),Pokémon Espíritu
 6,10188,Stunfisk (Forma de Galar),Pokémon Trampa
 6,10189,Toxtricity (Forma Grave),Pokémon Punki
@@ -6598,13 +7565,54 @@ language_id,pokemon_id,name,category
 6,10194,Eternatus (Dinamax Infinito),Pokémon Gigantesco
 6,10195,Slowpoke (Forma de Galar),Pokémon Atontado
 6,10196,Slowbro (ガラルのすがた),Pokémon Ermitaño
-6,10197,Urshifu (Estilo Fluido),Pokémon Kung-fu
+6,10197,Urshifu (Estilo Fluido),Pokémon Kung-Fu
 6,10198,Articuno (ガラルのすがた),Pokémon Calculador
 6,10199,Zapdos (ガラルのすがた),Pokémon Patas Recias
 6,10200,Moltres (ガラルのすがた),Pokémon Malignidad
 6,10201,Slowking (ガラルのすがた),Pokémon Chamán
 6,10202,Calyrex (Jinete Glacial),Pokémon Emperador
 6,10203,Calyrex (Jinete Espectral),Pokémon Emperador
+6,10204,Growlithe (Forma de Hisui),Pokémon Explorador
+6,10205,Arcanine (Forma de Hisui),Pokémon Leyenda
+6,10206,Voltorb (Forma de Hisui),Pokémon Esfera
+6,10207,Electrode (Forma de Hisui),Pokémon Esfera
+6,10208,Typhlosion (Forma de Hisui),Pokémon Fuego Fatuo
+6,10209,Qwilfish (Forma de Hisui),Pokémon Globo
+6,10210,Sneasel (Forma de Hisui),Pokémon Garra Filo
+6,10211,Dialga (Forma Origen),Pokémon Temporal
+6,10212,Palkia (Forma Origen),Pokémon Espacial
+6,10213,Samurott (Forma de Hisui),Pokémon Majestuoso
+6,10214,Lilligant (Forma de Hisui),Pokémon Pirueta
+6,10215,Basculin (Forma Raya Blanca),Pokémon Manso
+6,10216,Zorua (Forma de Hisui),Pokémon Zorro Rencor
+6,10217,Zoroark (Forma de Hisui),Pokémon Maldizorro
+6,10218,Braviary (Forma de Hisui),Pokémon Grito Guerra
+6,10219,Sliggoo (Forma de Hisui),Pokémon Caracol
+6,10220,Goodra (Forma de Hisui),Pokémon Retracción
+6,10221,Avalugg (Forma de Hisui),Pokémon Iceberg
+6,10222,Decidueye (Forma de Hisui),Pokémon Pluma Flecha
+6,10223,Basculegion (Hembra),Pokémon Gran Pez
+6,10224,Enamorus (Forma Tótem),Pokémon Amorodio
+6,10225,Tauros (Forma de Paldea),Pokémon Toro Bravo
+6,10226,Tauros (Forma de Paldea),Pokémon Toro Bravo
+6,10227,Tauros (Forma de Paldea),Pokémon Toro Bravo
+6,10228,Wooper (Forma de Paldea),Pokémon Pez Veneno
+6,10229,Oinkologne (Hembra),Pokémon Gorrino
+6,10230,Squawkabilly (Plumaje Azul),Pokémon Loro
+6,10231,Squawkabilly (Plumaje Amarillo),Pokémon Loro
+6,10232,Squawkabilly (Plumaje Blanco),Pokémon Loro
+6,10233,Palafin (Forma Heroica),Pokémon Héroe
+6,10234,Gimmighoul (Forma Andante),Pokémon Cazatesoros
+6,10235,Ursaluna (Luna Carmesí),Pokémon Turba
+6,10236,Ogerpon (Máscara Fuente),Pokémon Máscara
+6,10237,Ogerpon (Máscara Horno),Pokémon Máscara
+6,10238,Ogerpon (Máscara Cimiento),Pokémon Máscara
+6,10239,Ogerpon (Máscara Turquesa Tera),Pokémon Máscara
+6,10240,Ogerpon (Máscara Fuente Tera),Pokémon Máscara
+6,10241,Ogerpon (Máscara Horno Tera),Pokémon Máscara
+6,10242,Ogerpon (Máscara Cimiento Tera),Pokémon Máscara
+6,10243,Terapagos (Forma Teracristal),Pokémon Teracristal
+6,10244,Terapagos (Forma Astral),Pokémon Teracristal
 7,1,이상해씨,씨앗포켓몬
 7,2,이상해풀,씨앗포켓몬
 7,3,이상해꽃,씨앗포켓몬
@@ -6687,13 +7695,13 @@ language_id,pokemon_id,name,category
 7,80,야도란,기생포켓몬
 7,81,코일,자석포켓몬
 7,82,레어코일,자석포켓몬
-7,83,파오리,천둥오리포켓몬
+7,83,파오리,청둥오리포켓몬
 7,84,두두,쌍둥이새포켓몬
 7,85,두트리오,세쌍둥이새포켓몬
 7,86,쥬쥬,강치포켓몬
 7,87,쥬레곤,강치포켓몬
-7,88,질퍽이,진흙포켓몬
-7,89,질뻐기,진흙포켓몬
+7,88,질퍽이,오물포켓몬
+7,89,질뻐기,오물포켓몬
 7,90,셀러,두조개포켓몬
 7,91,파르셀,두조개포켓몬
 7,92,고오스,가스포켓몬
@@ -6754,7 +7762,7 @@ language_id,pokemon_id,name,category
 7,147,미뇽,드래곤포켓몬
 7,148,신뇽,드래곤포켓몬
 7,149,망나뇽,드래곤포켓몬
-7,150,뮤츠,유전포켓몬
+7,150,뮤츠,유전자포켓몬
 7,151,뮤,신종포켓몬
 7,152,치코리타,잎사귀포켓몬
 7,153,베이리프,잎사귀포켓몬
@@ -6847,7 +7855,7 @@ language_id,pokemon_id,name,category
 7,240,마그비,불씨포켓몬
 7,241,밀탱크,젖소포켓몬
 7,242,해피너스,행복포켓몬
-7,243,라이코,우뢰포켓몬
+7,243,라이코,우레포켓몬
 7,244,앤테이,화산포켓몬
 7,245,스이쿤,오로라포켓몬
 7,246,애버라스,바위표면포켓몬
@@ -6893,7 +7901,7 @@ language_id,pokemon_id,name,category
 7,286,버섯모,버섯포켓몬
 7,287,게을로,게으름뱅이포켓몬
 7,288,발바로,성난원숭이포켓몬
-7,289,게을킹,나태함포켓몬
+7,289,게을킹,나태포켓몬
 7,290,토중몬,신참포켓몬
 7,291,아이스크,시노비포켓몬
 7,292,껍질몬,허물포켓몬
@@ -6903,7 +7911,7 @@ language_id,pokemon_id,name,category
 7,296,마크탕,근성포켓몬
 7,297,하리뭉,손바닥치기포켓몬
 7,298,루리리,물방울포켓몬
-7,299,코코파스,콤파스포켓몬
+7,299,코코파스,컴퍼스포켓몬
 7,300,에나비,작은고양이포켓몬
 7,301,델케티,새침떼기포켓몬
 7,302,깜까미,어둠포켓몬
@@ -6929,7 +7937,7 @@ language_id,pokemon_id,name,category
 7,322,둔타,둔감포켓몬
 7,323,폭타,분화포켓몬
 7,324,코터스,석탄포켓몬
-7,325,피그점프,튀다포켓몬
+7,325,피그점프,바운스포켓몬
 7,326,피그킹,조작포켓몬
 7,327,얼루기,얼룩팬더포켓몬
 7,328,톱치,개미지옥포켓몬
@@ -7080,8 +8088,8 @@ language_id,pokemon_id,name,category
 7,473,맘모꾸리,2개송곳니포켓몬
 7,474,폴리곤Z,가상포켓몬
 7,475,엘레이드,검포켓몬
-7,476,대코파스,콤파스포켓몬
-7,477,야느와르몽,움켜쥠포켓몬
+7,476,대코파스,컴퍼스포켓몬
+7,477,야느와르몽,움켜쥐기포켓몬
 7,478,눈여아,설국포켓몬
 7,479,로토무,플라스마포켓몬
 7,480,유크시,지식포켓몬
@@ -7503,6 +8511,133 @@ language_id,pokemon_id,name,category
 7,896,블리자포스,사나운말포켓몬
 7,897,레이스포스,빠른말포켓몬
 7,898,버드렉스,킹포켓몬
+7,899,신비록,큰뿔포켓몬
+7,900,사마자르,큰도끼포켓몬
+7,901,다투곰,이탄포켓몬
+7,902,대쓰여너 (수컷의 모습),큰물고기포켓몬
+7,903,포푸니크,클라이밍포켓몬
+7,904,장침바루,침봉포켓몬
+7,905,러브로스,애증포켓몬
+7,906,나오하,풀고양이포켓몬
+7,907,나로테,풀고양이포켓몬
+7,908,마스카나,매지션포켓몬
+7,909,뜨아거,불꽃악어포켓몬
+7,910,악뜨거,불꽃악어포켓몬
+7,911,라우드본,싱어포켓몬
+7,912,꾸왁스,꼬마오리포켓몬
+7,913,아꾸왁,레슨포켓몬
+7,914,웨이니발,댄서포켓몬
+7,915,맛보돈,돼지포켓몬
+7,916,퍼퓨돈 (수컷의 모습),돼지포켓몬
+7,917,타랜툴라,실타래포켓몬
+7,918,트래피더,트랩포켓몬
+7,919,콩알뚜기,메뚜기포켓몬
+7,920,엑스레그,메뚜기포켓몬
+7,921,빠모,쥐포켓몬
+7,922,빠모트,쥐포켓몬
+7,923,빠르모트,손길포켓몬
+7,924,두리쥐,커플포켓몬
+7,925,파밀리쥐,패밀리포켓몬
+7,926,쫀도기,강아지포켓몬
+7,927,바우첼,개포켓몬
+7,928,미니브,올리브포켓몬
+7,929,올리뇨,올리브포켓몬
+7,930,올리르바,올리브포켓몬
+7,931,시비꼬 (그린 페더),잉꼬포켓몬
+7,932,베베솔트,암염포켓몬
+7,933,스태솔트,암염포켓몬
+7,934,콜로솔트,암염포켓몬
+7,935,카르본,불의아이포켓몬
+7,936,카디나르마,불의전사포켓몬
+7,937,파라블레이즈,불의검사포켓몬
+7,938,빈나두,전기올챙이포켓몬
+7,939,찌리배리,전기개구리포켓몬
+7,940,찌리비,바다제비포켓몬
+7,941,찌리비크,군함조포켓몬
+7,942,오라티프,애송이포켓몬
+7,943,마피티프,두목포켓몬
+7,944,땃쭈르,독쥐포켓몬
+7,945,태깅구르,독원숭이포켓몬
+7,946,그푸리,회전초포켓몬
+7,947,공푸리,회전초포켓몬
+7,948,들눈해,목이버섯포켓몬
+7,949,육파리,목이버섯포켓몬
+7,950,절벼게,매복포켓몬
+7,951,캡싸이,하바네로포켓몬
+7,952,스코빌런,하바네로포켓몬
+7,953,구르데,굴리기포켓몬
+7,954,베라카스,굴리기포켓몬
+7,955,하느라기,프릴포켓몬
+7,956,클레스퍼트라,타조포켓몬
+7,957,어리짱,대장장이포켓몬
+7,958,벼리짱,해머포켓몬
+7,959,두드리짱,해머포켓몬
+7,960,바다그다,정원장어포켓몬
+7,961,바닥트리오,정원장어포켓몬
+7,962,떨구새,낙하물포켓몬
+7,963,맨돌핀,돌고래포켓몬
+7,964,돌핀맨 (나이브폼),돌고래포켓몬
+7,965,부르롱,단기통포켓몬
+7,966,부르르룸,다기통포켓몬
+7,967,모토마,라이드포켓몬
+7,968,꿈트렁,지렁이포켓몬
+7,969,초롱순,광석포켓몬
+7,970,킬라플로르,광석포켓몬
+7,971,망망이,유령개포켓몬
+7,972,묘두기,유령개포켓몬
+7,973,꼬이밍고,싱크로포켓몬
+7,974,터벅고래,육지고래포켓몬
+7,975,우락고래,육지고래포켓몬
+7,976,가비루사,분리포켓몬
+7,977,어써러셔,큰메기포켓몬
+7,978,싸리용,의태포켓몬
+7,979,저승갓숭,분노숭이포켓몬
+7,980,토오,가시물고기포켓몬
+7,981,키키링,긴목포켓몬
+7,982,노고고치,땅뱀포켓몬
+7,983,대도각참,대도포켓몬
+7,984,위대한엄니,패러독스포켓몬
+7,985,우렁찬꼬리,패러독스포켓몬
+7,986,사나운버섯,패러독스포켓몬
+7,987,날개치는머리,패러독스포켓몬
+7,988,땅을기는날개,패러독스포켓몬
+7,989,모래털가죽,패러독스포켓몬
+7,990,무쇠바퀴,패러독스포켓몬
+7,991,무쇠보따리,패러독스포켓몬
+7,992,무쇠손,패러독스포켓몬
+7,993,무쇠머리,패러독스포켓몬
+7,994,무쇠독나방,패러독스포켓몬
+7,995,무쇠가시,패러독스포켓몬
+7,996,드니차,얼음지느러미포켓몬
+7,997,드니꽁,얼음지느러미포켓몬
+7,998,드닐레이브,빙룡포켓몬
+7,999,모으령 (상자폼),보물상자포켓몬
+7,1000,타부자고,보물생명체포켓몬
+7,1001,총지엔,재액포켓몬
+7,1002,파오젠,재액포켓몬
+7,1003,딩루,재액포켓몬
+7,1004,위유이,재액포켓몬
+7,1005,고동치는달,패러독스포켓몬
+7,1006,무쇠무인,패러독스포켓몬
+7,1007,코라이돈,패러독스포켓몬
+7,1008,미라이돈,패러독스포켓몬
+7,1009,굽이치는물결,패러독스포켓몬
+7,1010,무쇠잎새,패러독스포켓몬
+7,1011,과미르,사과사탕포켓몬
+7,1012,차데스,말차포켓몬
+7,1013,그우린차,말차포켓몬
+7,1014,조타구,수하포켓몬
+7,1015,이야후,수하포켓몬
+7,1016,기로치,수하포켓몬
+7,1017,오거폰 (벽록의 가면),가면포켓몬
+7,1018,브리두라스,합금포켓몬
+7,1019,과미드라,사과이무기포켓몬
+7,1020,꿰뚫는화염,패러독스포켓몬
+7,1021,날뛰는우레,패러독스포켓몬
+7,1022,무쇠감투,패러독스포켓몬
+7,1023,무쇠암석,패러독스포켓몬
+7,1024,테라파고스 (노말폼),테라스탈포켓몬
+7,1025,복숭악동,지배포켓몬
 7,10001,캐스퐁 (태양의 모습),날씨포켓몬
 7,10002,캐스퐁 (빗방울의 모습),날씨포켓몬
 7,10003,캐스퐁 (설운의 모습),날씨포켓몬
@@ -7554,8 +8689,8 @@ language_id,pokemon_id,name,category
 7,10049,메가쁘사이저,뿔집게포켓몬
 7,10050,메가갸라도스,흉악포켓몬
 7,10051,메가프테라,화석포켓몬
-7,10052,메가뮤츠X,유전포켓몬
-7,10053,메가뮤츠Y,유전포켓몬
+7,10052,메가뮤츠X,유전자포켓몬
+7,10053,메가뮤츠Y,유전자포켓몬
 7,10054,메가전룡,라이트포켓몬
 7,10055,메가핫삼,집게포켓몬
 7,10056,메가헤라크로스,외뿔포켓몬
@@ -7627,8 +8762,8 @@ language_id,pokemon_id,name,category
 7,10122,꼬마돌 (알로라의 모습),암석포켓몬
 7,10123,데구리 (알로라의 모습),암석포켓몬
 7,10124,딱구리 (알로라의 모습),메가톤포켓몬
-7,10125,질퍽이 (알로라의 모습),진흙포켓몬
-7,10126,질뻐기 (알로라의 모습),진흙포켓몬
+7,10125,질퍽이 (알로라의 모습),오물포켓몬
+7,10126,질뻐기 (알로라의 모습),오물포켓몬
 7,10127,나시 (알로라의 모습),야자열매포켓몬
 7,10128,텅구리 (알로라의 모습),뼈다귀포켓몬
 7,10129,개굴닌자 (유대변화),시노비포켓몬
@@ -7666,11 +8801,11 @@ language_id,pokemon_id,name,category
 7,10161,메테노 (유성의 코어),유성포켓몬
 7,10162,주인 따라큐,탈포켓몬
 7,10163,주인 짜랑고우거,비늘포켓몬
-7,10164,주인 텅구리,수포포켓몬
+7,10164,주인 텅구리,뼈다귀포켓몬
 7,10165,주인 에리본,재니등에포켓몬
 7,10166,암멍이 (마이페이스),강아지포켓몬
 7,10167,루가루암 (황혼의 모습),늑대포켓몬
-7,10168,주인 깨비물거미,뼈다귀포켓몬
+7,10168,주인 깨비물거미,수포포켓몬
 7,10169,주인 토게데마루,동글동글포켓몬
 7,10170,네크로즈마 (황혼의 갈기),프리즘포켓몬
 7,10171,네크로즈마 (새벽의 날개),프리즘포켓몬
@@ -7688,7 +8823,7 @@ language_id,pokemon_id,name,category
 7,10183,직구리 (가라르의 모습),돌진포켓몬
 7,10184,달막화 (가라르의 모습),달마포켓몬
 7,10185,불비달마 (가라르의 모습) (달마모드),달마포켓몬
-7,10186,불비달마 (가라르의 모습) (노말모드),달마포켓몬
+7,10186,불비달마 (가라르의 모습) (노말모드),염상포켓몬
 7,10187,데스마스 (가라르의 모습),영혼포켓몬
 7,10188,메더 (가라르의 모습),트랩포켓몬
 7,10189,스트린더 (로우한 모습),펑크포켓몬
@@ -7706,6 +8841,47 @@ language_id,pokemon_id,name,category
 7,10201,야도킹 (ガラルのすがた),술사포켓몬
 7,10202,버드렉스 (백마 탄 모습),엠페러포켓몬
 7,10203,버드렉스 (흑마 탄 모습),엠페러포켓몬
+7,10204,가디 (히스이의 모습),망보기포켓몬
+7,10205,윈디 (히스이의 모습),전설포켓몬
+7,10206,찌리리공 (히스이의 모습),구체포켓몬
+7,10207,붐볼 (히스이의 모습),구체포켓몬
+7,10208,블레이범 (히스이의 모습),도깨비불포켓몬
+7,10209,침바루 (히스이의 모습),풍선포켓몬
+7,10210,포푸니 (히스이의 모습),갈고리손톱포켓몬
+7,10211,디아루가 (오리진폼),시간포켓몬
+7,10212,펄기아 (오리진폼),공간포켓몬
+7,10213,대검귀 (히스이의 모습),관록포켓몬
+7,10214,드레디어 (히스이의 모습),스핀포켓몬
+7,10215,배쓰나이 (백색근의 모습),온후포켓몬
+7,10216,조로아 (히스이의 모습),원한여우포켓몬
+7,10217,조로아크 (히스이의 모습),저주여우포켓몬
+7,10218,워글 (히스이의 모습),부르짖기포켓몬
+7,10219,미끄네일 (히스이의 모습),달팽이포켓몬
+7,10220,미끄래곤 (히스이의 모습),껍질숨기포켓몬
+7,10221,크레베이스 (히스이의 모습),빙산포켓몬
+7,10222,모크나이퍼 (히스이의 모습),화살깃포켓몬
+7,10223,대쓰여너 (암컷의 모습),큰물고기포켓몬
+7,10224,러브로스 (영물폼),애증포켓몬
+7,10225,켄타로스 (팔데아의 모습),성난소포켓몬
+7,10226,켄타로스 (팔데아의 모습),성난소포켓몬
+7,10227,켄타로스 (팔데아의 모습),성난소포켓몬
+7,10228,우파 (팔데아의 모습),독물고기포켓몬
+7,10229,퍼퓨돈 (암컷의 모습),돼지포켓몬
+7,10230,시비꼬 (블루 페더),잉꼬포켓몬
+7,10231,시비꼬 (옐로 페더),잉꼬포켓몬
+7,10232,시비꼬 (화이트 페더),잉꼬포켓몬
+7,10233,돌핀맨 (마이티폼),히어로포켓몬
+7,10234,모으령 (도보폼),보물찾기포켓몬
+7,10235,다투곰 (붉은 달),이탄포켓몬
+7,10236,오거폰 (우물의 가면),가면포켓몬
+7,10237,오거폰 (화덕의 가면),가면포켓몬
+7,10238,오거폰 (주춧돌의 가면),가면포켓몬
+7,10239,오거폰 (벽록의 가면 Tera),가면포켓몬
+7,10240,오거폰 (우물의 가면 Tera),가면포켓몬
+7,10241,오거폰 (화덕의 가면 Tera),가면포켓몬
+7,10242,오거폰 (주춧돌의 가면 Tera),가면포켓몬
+7,10243,테라파고스 (테라스탈폼),테라스탈포켓몬
+7,10244,테라파고스 (스텔라폼),테라스탈포켓몬
 8,1,フシギダネ,たねポケモン
 8,2,フシギソウ,たねポケモン
 8,3,フシギバナ,たねポケモン
@@ -8604,6 +9780,133 @@ language_id,pokemon_id,name,category
 8,896,ブリザポス,あばれうまポケモン
 8,897,レイスポス,しゅんばポケモン
 8,898,バドレックス,キングポケモン
+8,899,アヤシシ,おおツノポケモン
+8,900,バサギリ,まさかりポケモン
+8,901,ガチグマ,でいたんポケモン
+8,902,イダイトウ (オスのすがた),おおうおポケモン
+8,903,オオニューラ,クライミングポケモン
+8,904,ハリーマン,けんざんポケモン
+8,905,ラブトロス,あいぞうポケモン
+8,906,ニャオハ,くさねこポケモン
+8,907,ニャローテ,くさねこポケモン
+8,908,マスカーニャ,マジシャンポケモン
+8,909,ホゲータ,ほのおワニポケモン
+8,910,アチゲータ,ほのおワニポケモン
+8,911,ラウドボーン,シンガーポケモン
+8,912,クワッス,こがもポケモン
+8,913,ウェルカモ,レッスンポケモン
+8,914,ウェーニバル,ダンサーポケモン
+8,915,グルトン,ぶたポケモン
+8,916,パフュートン (オスのすがた),ぶたポケモン
+8,917,タマンチュラ,いとだまポケモン
+8,918,ワナイダー,トラップポケモン
+8,919,マメバッタ,バッタポケモン
+8,920,エクスレッグ,バッタポケモン
+8,921,パモ,ねずみポケモン
+8,922,パモット,ねずみポケモン
+8,923,パーモット,てあてポケモン
+8,924,ワッカネズミ,カップルポケモン
+8,925,イッカネズミ,ファミリーポケモン
+8,926,パピモッチ,こいぬポケモン
+8,927,バウッツェル,いぬポケモン
+8,928,ミニーブ,オリーブポケモン
+8,929,オリーニョ,オリーブポケモン
+8,930,オリーヴァ,オリーブポケモン
+8,931,イキリンコ (グリーンフェザー),インコポケモン
+8,932,コジオ,がんえんポケモン
+8,933,ジオヅム,がんえんポケモン
+8,934,キョジオーン,がんえんポケモン
+8,935,カルボウ,ひのこポケモン
+8,936,グレンアルマ,ひのせんしポケモン
+8,937,ソウブレイズ,ひのけんしポケモン
+8,938,ズピカ,でんきおたまポケモン
+8,939,ハラバリー,でんきがえるポケモン
+8,940,カイデン,うみつばめポケモン
+8,941,タイカイデン,ぐんかんどりポケモン
+8,942,オラチフ,わかぞうポケモン
+8,943,マフィティフ,おやぶんポケモン
+8,944,シルシュルー,どくねずみポケモン
+8,945,タギングル,どくざるポケモン
+8,946,アノクサ,ころがりぐさポケモン
+8,947,アノホラグサ,ころがりぐさポケモン
+8,948,ノノクラゲ,きくらげポケモン
+8,949,リククラゲ,きくらげポケモン
+8,950,ガケガニ,まちぶせポケモン
+8,951,カプサイジ,ハバネロポケモン
+8,952,スコヴィラン,ハバネロポケモン
+8,953,シガロコ,ころがしポケモン
+8,954,ベラカス,ころがしポケモン
+8,955,ヒラヒナ,フリルポケモン
+8,956,クエスパトラ,ダチョウポケモン
+8,957,カヌチャン,かなうちポケモン
+8,958,ナカヌチャン,ハンマーポケモン
+8,959,デカヌチャン,ハンマーポケモン
+8,960,ウミディグダ,あなごポケモン
+8,961,ウミトリオ,あなごポケモン
+8,962,オトシドリ,おとしものポケモン
+8,963,ナミイルカ,イルカポケモン
+8,964,イルカマン (ナイーブフォルム),イルカポケモン
+8,965,ブロロン,たんきとうポケモン
+8,966,ブロロローム,たきとうポケモン
+8,967,モトトカゲ,ライドポケモン
+8,968,ミミズズ,ミミズポケモン
+8,969,キラーメ,こうせきポケモン
+8,970,キラフロル,こうせきポケモン
+8,971,ボチ,おばけいぬポケモン
+8,972,ハカドッグ,おばけいぬポケモン
+8,973,カラミンゴ,シンクロポケモン
+8,974,アルクジラ,りくくじらポケモン
+8,975,ハルクジラ,りくくじらポケモン
+8,976,ミガルーサ,きりはなしポケモン
+8,977,ヘイラッシャ,おおなまずポケモン
+8,978,シャリタツ,ぎたいポケモン
+8,979,コノヨザル,ふんどざるポケモン
+8,980,ドオー,とげうおポケモン
+8,981,リキキリン,くびながポケモン
+8,982,ノココッチ,つちへびポケモン
+8,983,ドドゲザン,だいとうポケモン
+8,984,イダイナキバ,パラドックスポケモン
+8,985,サケブシッポ,パラドックスポケモン
+8,986,アラブルタケ,パラドックスポケモン
+8,987,ハバタクカミ,パラドックスポケモン
+8,988,チヲハウハネ,パラドックスポケモン
+8,989,スナノケガワ,パラドックスポケモン
+8,990,テツノワダチ,パラドックスポケモン
+8,991,テツノツツミ,パラドックスポケモン
+8,992,テツノカイナ,パラドックスポケモン
+8,993,テツノコウベ,パラドックスポケモン
+8,994,テツノドクガ,パラドックスポケモン
+8,995,テツノイバラ,パラドックスポケモン
+8,996,セビエ,こおりビレポケモン
+8,997,セゴール,こおりビレポケモン
+8,998,セグレイブ,ひょうりゅうポケモン
+8,999,コレクレー (はこフォルム),たからばこポケモン
+8,1000,サーフゴー,たからものポケモン
+8,1001,チオンジェン,さいやくポケモン
+8,1002,パオジアン,さいやくポケモン
+8,1003,ディンルー,さいやくポケモン
+8,1004,イーユイ,さいやくポケモン
+8,1005,トドロクツキ,パラドックスポケモン
+8,1006,テツノブジン,パラドックスポケモン
+8,1007,コライドン,パラドックスポケモン
+8,1008,ミライドン,パラドックスポケモン
+8,1009,ウネルミナモ,パラドックスポケモン
+8,1010,テツノイサハ,パラドックスポケモン
+8,1011,カミッチュ,りんごあめポケモン
+8,1012,チャデス,まっちゃポケモン
+8,1013,ヤバソチャ,まっちゃポケモン
+8,1014,イイネイヌ,けらいポケモン
+8,1015,マシマシラ,けらいポケモン
+8,1016,キチキギス,けらいポケモン
+8,1017,オーガポン (みどりのめん),おめんポケモン
+8,1018,ブリジュラス,ごうきんポケモン
+8,1019,カミツオロチ,りんごオロチポケモン
+8,1020,ウガツホムラ,パラドックスポケモン
+8,1021,タケルライコ,パラドックスポケモン
+8,1022,テツノカシラ,パラドックスポケモン
+8,1023,テツノイワオ,パラドックスポケモン
+8,1024,テラパゴス (ノーマルフォルム),テラスタルポケモン
+8,1025,モモワロウ,しはいポケモン
 8,10001,ポワルン (たいようのすがた),てんきポケモン
 8,10002,ポワルン (あまみずのすがた),てんきポケモン
 8,10003,ポワルン (ゆきぐものすがた),てんきポケモン
@@ -8767,11 +10070,11 @@ language_id,pokemon_id,name,category
 8,10161,メテノ (のコアフォルム),ながれぼしポケモン
 8,10162,ぬしの　ミミッキュ,ばけのかわポケモン
 8,10163,ぬしの　ジャラランガ,うろこポケモン
-8,10164,ぬしの　ガラガラ,すいほうポケモン
+8,10164,ぬしの　ガラガラ,ほねずきポケモン
 8,10165,ぬしの　アブリボン,ツリアブポケモン
 8,10166,イワンコ (マイペース),こいぬポケモン
 8,10167,ルガルガン (たそがれのすがた),オオカミポケモン
-8,10168,ぬしの　オニシズクモ,ほねずきポケモン
+8,10168,ぬしの　オニシズクモ,すいほうポケモン
 8,10169,ぬしの　トゲデマル,まるまりポケモン
 8,10170,ネクロズマ (たそがれのたてがみ),プリズムポケモン
 8,10171,ネクロズマ (あかつきのつばさ),プリズムポケモン
@@ -8789,7 +10092,7 @@ language_id,pokemon_id,name,category
 8,10183,マッスグマ (ガラルのすがた),とっしんポケモン
 8,10184,ダルマッカ (ガラルのすがた),だるまポケモン
 8,10185,ヒヒダルマ (ガラルのすがた) (ダルマモード),だるまポケモン
-8,10186,ヒヒダルマ (ガラルのすがた) (ノーマルモード),だるまポケモン
+8,10186,ヒヒダルマ (ガラルのすがた) (ノーマルモード),えんじょうポケモン
 8,10187,デスマス (ガラルのすがた),たましいポケモン
 8,10188,マッギョ (ガラルのすがた),トラップポケモン
 8,10189,ストリンダー (ローなすがた),パンクポケモン
@@ -8807,6 +10110,47 @@ language_id,pokemon_id,name,category
 8,10201,ヤドキング (ガラルのすがた),じゅじゅつしポケモン
 8,10202,バドレックス (はくばじょうのすがた),エンペラーポケモン
 8,10203,バドレックス (こくばじょうのすがた),エンペラーポケモン
+8,10204,ガーディ (ヒスイのすがた),みはりポケモン
+8,10205,ウインディ (ヒスイのすがた),でんせつポケモン
+8,10206,ビリリダマ (ヒスイのすがた),きゅうたいポケモン
+8,10207,マルマイン (ヒスイのすがた),きゅうたいポケモン
+8,10208,バクフーン (ヒスイのすがた),おにびポケモン
+8,10209,ハリーセン (ヒスイのすがた),ふうせんポケモン
+8,10210,ニューラ (ヒスイのすがた),かぎづめポケモン
+8,10211,ディアルガ (オリジンフォルム),じかんポケモン
+8,10212,パルキア (オリジンフォルム),くうかんポケモン
+8,10213,ダイケンキ (ヒスイのすがた),かんろくポケモン
+8,10214,ドレディア (ヒスイのすがた),スピンポケモン
+8,10215,バスラオ (しろすじのすがた),おんこうポケモン
+8,10216,ゾロア (ヒスイのすがた),うらみぎつねポケモン
+8,10217,ゾロアーク (ヒスイのすがた),のろいぎつねポケモン
+8,10218,ウォーグル (ヒスイのすがた),おたけびポケモン
+8,10219,ヌメイル (ヒスイのすがた),マイマイポケモン
+8,10220,ヌメルゴン (ヒスイのすがた),からこもりポケモン
+8,10221,クレベース (ヒスイのすがた),ひょうざんポケモン
+8,10222,ジュナイパー (ヒスイのすがた),やばねポケモン
+8,10223,イダイトウ (メスのすがた),おおうおポケモン
+8,10224,ラブトロス (れいじゅうフォルム),あいぞうポケモン
+8,10225,ケンタロス (パルデアのすがた),あばれうしポケモン
+8,10226,ケンタロス (パルデアのすがた),あばれうしポケモン
+8,10227,ケンタロス (パルデアのすがた),あばれうしポケモン
+8,10228,ウパー (パルデアのすがた),どくうおポケモン
+8,10229,パフュートン (メスのすがた),ぶたポケモン
+8,10230,イキリンコ (ブルーフェザー),インコポケモン
+8,10231,イキリンコ (イエローフェザー),インコポケモン
+8,10232,イキリンコ (ホワイトフェザー),インコポケモン
+8,10233,イルカマン (マイティフォルム),ヒーローポケモン
+8,10234,コレクレー (とほフォルム),たからさがしポケモン
+8,10235,ガチグマ (アカツキ),でいたんポケモン
+8,10236,オーガポン (いどのめん),おめんポケモン
+8,10237,オーガポン (かまどのめん),おめんポケモン
+8,10238,オーガポン (いしずえのめん),おめんポケモン
+8,10239,オーガポン (みどりのめん Tera),おめんポケモン
+8,10240,オーガポン (いどのめん Tera),おめんポケモン
+8,10241,オーガポン (かまどのめん Tera),おめんポケモン
+8,10242,オーガポン (いしずえのめん Tera),おめんポケモン
+8,10243,テラパゴス (テラスタルフォルム),テラスタルポケモン
+8,10244,テラパゴス (ステラフォルム),テラスタルポケモン
 9,1,妙蛙种子,种子宝可梦
 9,2,妙蛙草,种子宝可梦
 9,3,妙蛙花,种子宝可梦
@@ -9135,7 +10479,7 @@ language_id,pokemon_id,name,category
 9,326,噗噗猪,操纵宝可梦
 9,327,晃晃斑,斑点熊猫宝可梦
 9,328,大颚蚁,蚁狮宝可梦
-9,329,超音波幼虫,震动宝可梦
+9,329,超音波幼虫,振动宝可梦
 9,330,沙漠蜻蜓,神秘宝可梦
 9,331,刺球仙人掌,仙人掌宝可梦
 9,332,梦歌仙人掌,稻草人宝可梦
@@ -9342,8 +10686,8 @@ language_id,pokemon_id,name,category
 9,533,铁骨土人,筋骨宝可梦
 9,534,修建老匠,筋骨宝可梦
 9,535,圆蝌蚪,蝌蚪宝可梦
-9,536,蓝蟾蜍,震动宝可梦
-9,537,蟾蜍王,震动宝可梦
+9,536,蓝蟾蜍,振动宝可梦
+9,537,蟾蜍王,振动宝可梦
 9,538,投摔鬼,柔道宝可梦
 9,539,打击鬼,空手道宝可梦
 9,540,虫宝包,裁缝宝可梦
@@ -9705,6 +11049,133 @@ language_id,pokemon_id,name,category
 9,896,雪暴马,烈马宝可梦
 9,897,灵幽马,骏马宝可梦
 9,898,蕾冠王,国王宝可梦
+9,899,诡角鹿,大角宝可梦
+9,900,劈斧螳螂,斧钺宝可梦
+9,901,月月熊,泥炭宝可梦
+9,902,幽尾玄鱼 (雄性的样子),大鱼宝可梦
+9,903,大狃拉,攀崖宝可梦
+9,904,万针鱼,剑山宝可梦
+9,905,眷恋云,爱憎宝可梦
+9,906,新叶喵,草猫宝可梦
+9,907,蒂蕾喵,草猫宝可梦
+9,908,魔幻假面喵,魔术师宝可梦
+9,909,呆火鳄,火鳄宝可梦
+9,910,炙烫鳄,火鳄宝可梦
+9,911,骨纹巨声鳄,歌手宝可梦
+9,912,润水鸭,小鸭宝可梦
+9,913,涌跃鸭,习艺宝可梦
+9,914,狂欢浪舞鸭,舞者宝可梦
+9,915,爱吃豚,猪宝可梦
+9,916,飘香豚 (雄性的样子),猪宝可梦
+9,917,团珠蛛,线球宝可梦
+9,918,操陷蛛,陷阱宝可梦
+9,919,豆蟋蟀,蝗虫宝可梦
+9,920,烈腿蝗,蝗虫宝可梦
+9,921,布拨,鼠宝可梦
+9,922,布土拨,鼠宝可梦
+9,923,巴布土拨,押掌宝可梦
+9,924,一对鼠,成对宝可梦
+9,925,一家鼠,家族宝可梦
+9,926,狗仔包,小狗宝可梦
+9,927,麻花犬,狗宝可梦
+9,928,迷你芙,橄榄宝可梦
+9,929,奥利纽,橄榄宝可梦
+9,930,奥利瓦,橄榄宝可梦
+9,931,怒鹦哥 (绿羽毛),鹦鹉宝可梦
+9,932,盐石宝,岩盐宝可梦
+9,933,盐石垒,岩盐宝可梦
+9,934,盐石巨灵,岩盐宝可梦
+9,935,炭小侍,小火星宝可梦
+9,936,红莲铠骑,火战士宝可梦
+9,937,苍炎刃鬼,火剑士宝可梦
+9,938,光蚪仔,电蝌蚪宝可梦
+9,939,电肚蛙,电蛙宝可梦
+9,940,电海燕,海燕宝可梦
+9,941,大电海燕,军舰鸟宝可梦
+9,942,偶叫獒,小辈宝可梦
+9,943,獒教父,大佬宝可梦
+9,944,滋汁鼹,毒鼠宝可梦
+9,945,涂标客,毒猴宝可梦
+9,946,纳噬草,滚草宝可梦
+9,947,怖纳噬草,滚草宝可梦
+9,948,原野水母,木耳宝可梦
+9,949,陆地水母,木耳宝可梦
+9,950,毛崖蟹,埋伏宝可梦
+9,951,热辣娃,热辣宝可梦
+9,952,狠辣椒,热辣宝可梦
+9,953,虫滚泥,滚动宝可梦
+9,954,虫甲圣,滚动宝可梦
+9,955,飘飘雏,褶边宝可梦
+9,956,超能艳鸵,鸵鸟宝可梦
+9,957,小锻匠,锤炼宝可梦
+9,958,巧锻匠,锤子宝可梦
+9,959,巨锻匠,锤子宝可梦
+9,960,海地鼠,糯鳗宝可梦
+9,961,三海地鼠,糯鳗宝可梦
+9,962,下石鸟,掉东西宝可梦
+9,963,波普海豚,海豚宝可梦
+9,964,海豚侠 (平凡形态),海豚宝可梦
+9,965,噗隆隆,单汽缸宝可梦
+9,966,普隆隆姆,多汽缸宝可梦
+9,967,摩托蜥,坐骑宝可梦
+9,968,拖拖蚓,蚯蚓宝可梦
+9,969,晶光芽,矿石宝可梦
+9,970,晶光花,矿石宝可梦
+9,971,墓仔狗,鬼犬宝可梦
+9,972,墓扬犬,鬼犬宝可梦
+9,973,缠红鹤,同步宝可梦
+9,974,走鲸,陆鲸宝可梦
+9,975,浩大鲸,陆鲸宝可梦
+9,976,轻身鳕,卸除宝可梦
+9,977,吃吼霸,大鲶宝可梦
+9,978,米立龙,拟态宝可梦
+9,979,弃世猴,愤怒猴宝可梦
+9,980,土王,刺鱼宝可梦
+9,981,奇麒麟,长颈宝可梦
+9,982,土龙节节,地蛇宝可梦
+9,983,仆刀将军,大刀宝可梦
+9,984,雄伟牙,悖谬宝可梦
+9,985,吼叫尾,悖谬宝可梦
+9,986,猛恶菇,悖谬宝可梦
+9,987,振翼发,悖谬宝可梦
+9,988,爬地翅,悖谬宝可梦
+9,989,沙铁皮,悖谬宝可梦
+9,990,铁辙迹,悖谬宝可梦
+9,991,铁包袱,悖谬宝可梦
+9,992,铁臂膀,悖谬宝可梦
+9,993,铁脖颈,悖谬宝可梦
+9,994,铁毒蛾,悖谬宝可梦
+9,995,铁荆棘,悖谬宝可梦
+9,996,凉脊龙,冰鳍宝可梦
+9,997,冻脊龙,冰鳍宝可梦
+9,998,戟脊龙,冰龙宝可梦
+9,999,索财灵 (宝箱形态),宝箱宝可梦
+9,1000,赛富豪,宝者宝可梦
+9,1001,古简蜗,灾厄宝可梦
+9,1002,古剑豹,灾厄宝可梦
+9,1003,古鼎鹿,灾厄宝可梦
+9,1004,古玉鱼,灾厄宝可梦
+9,1005,轰鸣月,悖谬宝可梦
+9,1006,铁武者,悖谬宝可梦
+9,1007,故勒顿,悖谬宝可梦
+9,1008,密勒顿,悖谬宝可梦
+9,1009,波荡水,悖谬宝可梦
+9,1010,铁斑叶,悖谬宝可梦
+9,1011,裹蜜虫,糖苹果宝可梦
+9,1012,斯魔茶,抹茶宝可梦
+9,1013,来悲粗茶,抹茶宝可梦
+9,1014,够赞狗,随从宝可梦
+9,1015,愿增猿,随从宝可梦
+9,1016,吉雉鸡,随从宝可梦
+9,1017,厄诡椪 (碧草面具),面具宝可梦
+9,1018,铝钢桥龙,合金宝可梦
+9,1019,蜜集大蛇,苹果大蛇宝可梦
+9,1020,破空焰,悖谬宝可梦
+9,1021,猛雷鼓,悖谬宝可梦
+9,1022,铁头壳,悖谬宝可梦
+9,1023,铁磐岩,悖谬宝可梦
+9,1024,太乐巴戈斯 (普通形态),太晶宝可梦
+9,1025,桃歹郎,支配宝可梦
 9,10001,飘浮泡泡 (太阳的样子),天气宝可梦
 9,10002,飘浮泡泡 (雨水的样子),天气宝可梦
 9,10003,飘浮泡泡 (雪云的样子),天气宝可梦
@@ -9868,11 +11339,11 @@ language_id,pokemon_id,name,category
 9,10161,小陨星 (核心的样子),流星宝可梦
 9,10162,霸主谜拟Ｑ,画皮宝可梦
 9,10163,霸主杖尾鳞甲龙,鳞片宝可梦
-9,10164,霸主嘎啦嘎啦,水泡宝可梦
+9,10164,霸主嘎啦嘎啦,爱骨宝可梦
 9,10165,霸主蝶结萌虻,蜂虻宝可梦
 9,10166,岩狗狗 (我行我素),小狗宝可梦
 9,10167,鬃岩狼人 (黄昏的样子),狼宝可梦
-9,10168,霸主滴蛛霸,爱骨宝可梦
+9,10168,霸主滴蛛霸,水泡宝可梦
 9,10169,霸主托戈德玛尔,蜷缩宝可梦
 9,10170,奈克洛兹玛 (黄昏之鬃),棱镜宝可梦
 9,10171,奈克洛兹玛 (拂晓之翼),棱镜宝可梦
@@ -9890,7 +11361,7 @@ language_id,pokemon_id,name,category
 9,10183,直冲熊 (伽勒尔的样子),猛冲宝可梦
 9,10184,火红不倒翁 (伽勒尔的样子),不倒翁宝可梦
 9,10185,达摩狒狒 (伽勒尔的样子) (达摩模式),不倒翁宝可梦
-9,10186,达摩狒狒 (伽勒尔的样子) (普通模式),不倒翁宝可梦
+9,10186,达摩狒狒 (伽勒尔的样子) (普通模式),爆燃宝可梦
 9,10187,哭哭面具 (伽勒尔的样子),魂宝可梦
 9,10188,泥巴鱼 (伽勒尔的样子),陷阱宝可梦
 9,10189,颤弦蝾螈 (低调的样子),庞克宝可梦
@@ -9908,6 +11379,47 @@ language_id,pokemon_id,name,category
 9,10201,呆呆王 (ガラルのすがた),诅咒师宝可梦
 9,10202,蕾冠王 (骑白马的样子),帝皇宝可梦
 9,10203,蕾冠王 (骑黑马的样子),帝皇宝可梦
+9,10204,卡蒂狗 (洗翠的样子),放哨宝可梦
+9,10205,风速狗 (洗翠的样子),传说宝可梦
+9,10206,霹雳电球 (洗翠的样子),丸宝可梦
+9,10207,顽皮雷弹 (洗翠的样子),丸宝可梦
+9,10208,火暴兽 (洗翠的样子),磷火宝可梦
+9,10209,千针鱼 (洗翠的样子),气球宝可梦
+9,10210,狃拉 (洗翠的样子),钩爪宝可梦
+9,10211,帝牙卢卡 (起源形态),时间宝可梦
+9,10212,帕路奇亚 (起源形态),空间宝可梦
+9,10213,大剑鬼 (洗翠的样子),威严宝可梦
+9,10214,裙儿小姐 (洗翠的样子),旋转宝可梦
+9,10215,野蛮鲈鱼 (白条纹的样子),温厚宝可梦
+9,10216,索罗亚 (洗翠的样子),怨狐宝可梦
+9,10217,索罗亚克 (洗翠的样子),咒狐宝可梦
+9,10218,勇士雄鹰 (洗翠的样子),战吼宝可梦
+9,10219,黏美儿 (洗翠的样子),蜗牛宝可梦
+9,10220,黏美龙 (洗翠的样子),窝壳宝可梦
+9,10221,冰岩怪 (洗翠的样子),冰山宝可梦
+9,10222,狙射树枭 (洗翠的样子),箭羽宝可梦
+9,10223,幽尾玄鱼 (雌性的样子),大鱼宝可梦
+9,10224,眷恋云 (灵兽形态),爱憎宝可梦
+9,10225,肯泰罗 (帕底亚的样子),暴牛宝可梦
+9,10226,肯泰罗 (帕底亚的样子),暴牛宝可梦
+9,10227,肯泰罗 (帕底亚的样子),暴牛宝可梦
+9,10228,乌波 (帕底亚的样子),毒鱼宝可梦
+9,10229,飘香豚 (雌性的样子),猪宝可梦
+9,10230,怒鹦哥 (蓝羽毛),鹦鹉宝可梦
+9,10231,怒鹦哥 (黄羽毛),鹦鹉宝可梦
+9,10232,怒鹦哥 (白羽毛),鹦鹉宝可梦
+9,10233,海豚侠 (全能形态),英雄宝可梦
+9,10234,索财灵 (徒步形态),寻宝宝可梦
+9,10235,月月熊 (赫月),泥炭宝可梦
+9,10236,厄诡椪 (水井面具),面具宝可梦
+9,10237,厄诡椪 (火灶面具),面具宝可梦
+9,10238,厄诡椪 (础石面具),面具宝可梦
+9,10239,厄诡椪 (碧草面具 Tera),面具宝可梦
+9,10240,厄诡椪 (水井面具 Tera),面具宝可梦
+9,10241,厄诡椪 (火灶面具 Tera),面具宝可梦
+9,10242,厄诡椪 (础石面具 Tera),面具宝可梦
+9,10243,太乐巴戈斯 (太晶形态),太晶宝可梦
+9,10244,太乐巴戈斯 (星晶形态),太晶宝可梦
 10,1,妙蛙種子,種子寶可夢
 10,2,妙蛙草,種子寶可夢
 10,3,妙蛙花,種子寶可夢
@@ -10806,6 +12318,133 @@ language_id,pokemon_id,name,category
 10,896,雪暴馬,烈馬寶可夢
 10,897,靈幽馬,駿馬寶可夢
 10,898,蕾冠王,國王寶可夢
+10,899,詭角鹿,大角寶可夢
+10,900,劈斧螳螂,斧鉞寶可夢
+10,901,月月熊,泥炭寶可夢
+10,902,幽尾玄魚 (雄性的樣子),大魚寶可夢
+10,903,大狃拉,攀崖寶可夢
+10,904,萬針魚,劍山寶可夢
+10,905,眷戀雲,愛憎寶可夢
+10,906,新葉喵,草貓寶可夢
+10,907,蒂蕾喵,草貓寶可夢
+10,908,魔幻假面喵,魔術師寶可夢
+10,909,呆火鱷,火鱷寶可夢
+10,910,炙燙鱷,火鱷寶可夢
+10,911,骨紋巨聲鱷,歌手寶可夢
+10,912,潤水鴨,小鴨寶可夢
+10,913,湧躍鴨,習藝寶可夢
+10,914,狂歡浪舞鴨,舞者寶可夢
+10,915,愛吃豚,豬寶可夢
+10,916,飄香豚 (雄性的樣子),豬寶可夢
+10,917,團珠蛛,線球寶可夢
+10,918,操陷蛛,陷阱寶可夢
+10,919,豆蟋蟀,蝗蟲寶可夢
+10,920,烈腿蝗,蝗蟲寶可夢
+10,921,布撥,鼠寶可夢
+10,922,布土撥,鼠寶可夢
+10,923,巴布土撥,押掌寶可夢
+10,924,一對鼠,成對寶可夢
+10,925,一家鼠,家族寶可夢
+10,926,狗仔包,小狗寶可夢
+10,927,麻花犬,狗寶可夢
+10,928,迷你芙,橄欖寶可夢
+10,929,奧利紐,橄欖寶可夢
+10,930,奧利瓦,橄欖寶可夢
+10,931,怒鸚哥 (綠羽毛),鸚鵡寶可夢
+10,932,鹽石寶,岩鹽寶可夢
+10,933,鹽石壘,岩鹽寶可夢
+10,934,鹽石巨靈,岩鹽寶可夢
+10,935,炭小侍,小火星寶可夢
+10,936,紅蓮鎧騎,火戰士寶可夢
+10,937,蒼炎刃鬼,火劍士寶可夢
+10,938,光蚪仔,電蝌蚪寶可夢
+10,939,電肚蛙,電蛙寶可夢
+10,940,電海燕,海燕寶可夢
+10,941,大電海燕,軍艦鳥寶可夢
+10,942,偶叫獒,小輩寶可夢
+10,943,獒教父,大佬寶可夢
+10,944,滋汁鼴,毒鼠寶可夢
+10,945,塗標客,毒猴寶可夢
+10,946,納噬草,滾草寶可夢
+10,947,怖納噬草,滾草寶可夢
+10,948,原野水母,木耳寶可夢
+10,949,陸地水母,木耳寶可夢
+10,950,毛崖蟹,埋伏寶可夢
+10,951,熱辣娃,熱辣寶可夢
+10,952,狠辣椒,熱辣寶可夢
+10,953,蟲滾泥,滾動寶可夢
+10,954,蟲甲聖,滾動寶可夢
+10,955,飄飄雛,褶邊寶可夢
+10,956,超能豔鴕,鴕鳥寶可夢
+10,957,小鍛匠,錘鍊寶可夢
+10,958,巧鍛匠,錘子寶可夢
+10,959,巨鍛匠,錘子寶可夢
+10,960,海地鼠,糯鰻寶可夢
+10,961,三海地鼠,糯鰻寶可夢
+10,962,下石鳥,掉東西寶可夢
+10,963,波普海豚,海豚寶可夢
+10,964,海豚俠 (平凡形態),海豚寶可夢
+10,965,噗隆隆,單汽缸寶可夢
+10,966,普隆隆姆,多汽缸寶可夢
+10,967,摩托蜥,坐騎寶可夢
+10,968,拖拖蚓,蚯蚓寶可夢
+10,969,晶光芽,礦石寶可夢
+10,970,晶光花,礦石寶可夢
+10,971,墓仔狗,鬼犬寶可夢
+10,972,墓揚犬,鬼犬寶可夢
+10,973,纏紅鶴,同步寶可夢
+10,974,走鯨,陸鯨寶可夢
+10,975,浩大鯨,陸鯨寶可夢
+10,976,輕身鱈,卸除寶可夢
+10,977,吃吼霸,大鯰寶可夢
+10,978,米立龍,擬態寶可夢
+10,979,棄世猴,憤怒猴寶可夢
+10,980,土王,刺魚寶可夢
+10,981,奇麒麟,長頸寶可夢
+10,982,土龍節節,地蛇寶可夢
+10,983,仆斬將軍,大刀寶可夢
+10,984,雄偉牙,悖謬寶可夢
+10,985,吼叫尾,悖謬寶可夢
+10,986,猛惡菇,悖謬寶可夢
+10,987,振翼髮,悖謬寶可夢
+10,988,爬地翅,悖謬寶可夢
+10,989,沙鐵皮,悖謬寶可夢
+10,990,鐵轍跡,悖謬寶可夢
+10,991,鐵包袱,悖謬寶可夢
+10,992,鐵臂膀,悖謬寶可夢
+10,993,鐵脖頸,悖謬寶可夢
+10,994,鐵毒蛾,悖謬寶可夢
+10,995,鐵荊棘,悖謬寶可夢
+10,996,涼脊龍,冰鰭寶可夢
+10,997,凍脊龍,冰鰭寶可夢
+10,998,戟脊龍,冰龍寶可夢
+10,999,索財靈 (寶箱形態),寶箱寶可夢
+10,1000,賽富豪,寶者寶可夢
+10,1001,古簡蝸,災厄寶可夢
+10,1002,古劍豹,災厄寶可夢
+10,1003,古鼎鹿,災厄寶可夢
+10,1004,古玉魚,災厄寶可夢
+10,1005,轟鳴月,悖謬寶可夢
+10,1006,鐵武者,悖謬寶可夢
+10,1007,故勒頓,悖謬寶可夢
+10,1008,密勒頓,悖謬寶可夢
+10,1009,波盪水,悖謬寶可夢
+10,1010,鐵斑葉,悖謬寶可夢
+10,1011,裹蜜蟲,糖蘋果寶可夢
+10,1012,斯魔茶,抹茶寶可夢
+10,1013,來悲粗茶,抹茶寶可夢
+10,1014,夠讚狗,隨從寶可夢
+10,1015,願增猿,隨從寶可夢
+10,1016,吉雉雞,隨從寶可夢
+10,1017,厄鬼椪 (碧草面具),面具寶可夢
+10,1018,鋁鋼橋龍,合金寶可夢
+10,1019,蜜集大蛇,蘋果大蛇寶可夢
+10,1020,破空焰,悖謬寶可夢
+10,1021,猛雷鼓,悖謬寶可夢
+10,1022,鐵頭殼,悖謬寶可夢
+10,1023,鐵磐岩,悖謬寶可夢
+10,1024,太樂巴戈斯 (普通形態),太晶寶可夢
+10,1025,桃歹郎,支配寶可夢
 10,10001,飄浮泡泡 (太陽的樣子),天氣寶可夢
 10,10002,飄浮泡泡 (雨水的樣子),天氣寶可夢
 10,10003,飄浮泡泡 (雪雲的樣子),天氣寶可夢
@@ -10969,11 +12608,11 @@ language_id,pokemon_id,name,category
 10,10161,小隕星 (核心的樣子),流星寶可夢
 10,10162,霸主謎擬Ｑ,畫皮寶可夢
 10,10163,霸主杖尾鱗甲龍,鱗片寶可夢
-10,10164,霸主嘎啦嘎啦,水泡寶可夢
+10,10164,霸主嘎啦嘎啦,愛骨寶可夢
 10,10165,霸主蝶結萌虻,蜂虻寶可夢
 10,10166,岩狗狗 (我行我素),小狗寶可夢
 10,10167,鬃岩狼人 (黃昏的樣子),狼寶可夢
-10,10168,霸主滴蛛霸,愛骨寶可夢
+10,10168,霸主滴蛛霸,水泡寶可夢
 10,10169,霸主托戈德瑪爾,蜷縮寶可夢
 10,10170,奈克洛茲瑪 (黃昏之鬃),稜鏡寶可夢
 10,10171,奈克洛茲瑪 (拂曉之翼),稜鏡寶可夢
@@ -10991,7 +12630,7 @@ language_id,pokemon_id,name,category
 10,10183,直衝熊 (伽勒爾的樣子),猛衝寶可夢
 10,10184,火紅不倒翁 (伽勒爾的樣子),不倒翁寶可夢
 10,10185,達摩狒狒 (伽勒爾的樣子) (達摩模式),不倒翁寶可夢
-10,10186,達摩狒狒 (伽勒爾的樣子) (普通模式),不倒翁寶可夢
+10,10186,達摩狒狒 (伽勒爾的樣子) (普通模式),爆燃寶可夢
 10,10187,哭哭面具 (伽勒爾的樣子),魂寶可夢
 10,10188,泥巴魚 (伽勒爾的樣子),陷阱寶可夢
 10,10189,顫弦蠑螈 (低調的樣子),龐克寶可夢
@@ -11009,3 +12648,44 @@ language_id,pokemon_id,name,category
 10,10201,呆呆王 (ガラルのすがた),詛咒師寶可夢
 10,10202,蕾冠王 (騎白馬的樣子),帝皇寶可夢
 10,10203,蕾冠王 (騎黑馬的樣子),帝皇寶可夢
+10,10204,卡蒂狗 (洗翠的樣子),放哨寶可夢
+10,10205,風速狗 (洗翠的樣子),傳說寶可夢
+10,10206,霹靂電球 (洗翠的樣子),丸寶可夢
+10,10207,頑皮雷彈 (洗翠的樣子),丸寶可夢
+10,10208,火爆獸 (洗翠的樣子),鬼火寶可夢
+10,10209,千針魚 (洗翠的樣子),氣球寶可夢
+10,10210,狃拉 (洗翠的樣子),鉤爪寶可夢
+10,10211,帝牙盧卡 (起源形態),時間寶可夢
+10,10212,帕路奇亞 (起源形態),空間寶可夢
+10,10213,大劍鬼 (洗翠的樣子),威嚴寶可夢
+10,10214,裙兒小姐 (洗翠的樣子),旋轉寶可夢
+10,10215,野蠻鱸魚 (白條紋的樣子),溫厚寶可夢
+10,10216,索羅亞 (洗翠的樣子),怨狐寶可夢
+10,10217,索羅亞克 (洗翠的樣子),咒狐寶可夢
+10,10218,勇士雄鷹 (洗翠的樣子),戰吼寶可夢
+10,10219,黏美兒 (洗翠的樣子),蝸牛寶可夢
+10,10220,黏美龍 (洗翠的樣子),窩殼寶可夢
+10,10221,冰岩怪 (洗翠的樣子),冰山寶可夢
+10,10222,狙射樹梟 (洗翠的樣子),箭羽寶可夢
+10,10223,幽尾玄魚 (雌性的樣子),大魚寶可夢
+10,10224,眷戀雲 (靈獸形態),愛憎寶可夢
+10,10225,肯泰羅 (帕底亞的樣子),暴牛寶可夢
+10,10226,肯泰羅 (帕底亞的樣子),暴牛寶可夢
+10,10227,肯泰羅 (帕底亞的樣子),暴牛寶可夢
+10,10228,烏波 (帕底亞的樣子),毒魚寶可夢
+10,10229,飄香豚 (雌性的樣子),豬寶可夢
+10,10230,怒鸚哥 (藍羽毛),鸚鵡寶可夢
+10,10231,怒鸚哥 (黃羽毛),鸚鵡寶可夢
+10,10232,怒鸚哥 (白羽毛),鸚鵡寶可夢
+10,10233,海豚俠 (全能形態),英雄寶可夢
+10,10234,索財靈 (徒步形態),尋寶寶可夢
+10,10235,月月熊 (赫月),泥炭寶可夢
+10,10236,厄鬼椪 (水井面具),面具寶可夢
+10,10237,厄鬼椪 (火灶面具),面具寶可夢
+10,10238,厄鬼椪 (礎石面具),面具寶可夢
+10,10239,厄鬼椪 (碧草面具 Tera),面具寶可夢
+10,10240,厄鬼椪 (水井面具 Tera),面具寶可夢
+10,10241,厄鬼椪 (火灶面具 Tera),面具寶可夢
+10,10242,厄鬼椪 (礎石面具 Tera),面具寶可夢
+10,10243,太樂巴戈斯 (太晶形態),太晶寶可夢
+10,10244,太樂巴戈斯 (星晶形態),太晶寶可夢

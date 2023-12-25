@@ -50,6 +50,19 @@ language,form_id,name
 1,888,れきせんのゆうしゃ
 1,889,れきせんのゆうしゃ
 1,892,いちげきのかた
+1,902,オスのすがた
+1,905,けしんフォルム
+1,916,オスのすがた
+1,925,３びきかぞく
+1,931,グリーンフェザー
+1,964,ナイーブフォルム
+1,978,そったすがた
+1,982,ふたふしフォルム
+1,999,はこフォルム
+1,1007,かんぜんけいたい
+1,1008,コンプリートモード
+1,1017,みどりのめん
+1,1024,ノーマルフォルム
 1,10001,たいようのすがた
 1,10002,あまみずのすがた
 1,10003,ゆきぐものすがた
@@ -236,6 +249,43 @@ language,form_id,name
 1,10201,ガラルのすがた
 1,10202,はくばじょうのすがた
 1,10203,こくばじょうのすがた
+1,10204,ヒスイのすがた
+1,10205,ヒスイのすがた
+1,10206,ヒスイのすがた
+1,10207,ヒスイのすがた
+1,10208,ヒスイのすがた
+1,10209,ヒスイのすがた
+1,10210,ヒスイのすがた
+1,10211,オリジンフォルム
+1,10212,オリジンフォルム
+1,10213,ヒスイのすがた
+1,10214,ヒスイのすがた
+1,10215,しろすじのすがた
+1,10216,ヒスイのすがた
+1,10217,ヒスイのすがた
+1,10218,ヒスイのすがた
+1,10219,ヒスイのすがた
+1,10220,ヒスイのすがた
+1,10221,ヒスイのすがた
+1,10222,ヒスイのすがた
+1,10223,メスのすがた
+1,10224,れいじゅうフォルム
+1,10225,パルデアのすがた
+1,10226,パルデアのすがた
+1,10227,パルデアのすがた
+1,10228,パルデアのすがた
+1,10229,メスのすがた
+1,10230,ブルーフェザー
+1,10231,イエローフェザー
+1,10232,ホワイトフェザー
+1,10233,マイティフォルム
+1,10234,とほフォルム
+1,10235,アカツキ
+1,10236,いどのめん
+1,10237,かまどのめん
+1,10238,いしずえのめん
+1,10243,テラスタルフォルム
+1,10244,ステラフォルム
 1,20001,あるすがた
 1,20002,あるすがた
 1,20003,あるすがた
@@ -436,6 +486,25 @@ language,form_id,name
 1,20206,とうちゃん
 1,20207,ワールドキャップ
 1,20208,キョダイマックス
+1,20209,キングのすがた
+1,20210,キングのすがた
+1,20211,キングのすがた
+1,20212,クイーンのすがた
+1,20213,キングのすがた
+1,20214,４ひきかぞく
+1,20215,たれたすがた
+1,20216,のびたすがた
+1,20217,みつふしフォルム
+1,20218,せいげんけいたい
+1,20219,しっそうけいたい
+1,20220,ゆうえいけいたい
+1,20221,かっくうけいたい
+1,20222,リミテッドモード
+1,20223,ドライブモード
+1,20224,フロートモード
+1,20225,グライドモード
+1,20226,タカイモノのすがた
+1,20227,ケッサクのすがた
 2,201,One form
 2,351,Normal
 2,382,Kyogre
@@ -487,6 +556,19 @@ language,form_id,name
 2,888,Hero of Many Battles
 2,889,Hero of Many Battles
 2,892,Single Strike Style
+2,902,Male
+2,905,Incarnate Forme
+2,916,Male
+2,925,Family of Three
+2,931,Green Plumage
+2,964,Zero Form
+2,978,Curly Form
+2,982,Two-Segment Form
+2,999,Chest Form
+2,1007,Apex Build
+2,1008,Ultimate Mode
+2,1017,Teal Mask
+2,1024,Normal Form
 2,10001,Sunny Form
 2,10002,Rainy Form
 2,10003,Snowy Form
@@ -673,6 +755,43 @@ language,form_id,name
 2,10201,Galarian Form
 2,10202,Ice Rider
 2,10203,Shadow Rider
+2,10204,Hisuian Form
+2,10205,Hisuian Form
+2,10206,Hisuian Form
+2,10207,Hisuian Form
+2,10208,Hisuian Form
+2,10209,Hisuian Form
+2,10210,Hisuian Form
+2,10211,Origin Forme
+2,10212,Origin Forme
+2,10213,Hisuian Form
+2,10214,Hisuian Form
+2,10215,White-Striped Form
+2,10216,Hisuian Form
+2,10217,Hisuian Form
+2,10218,Hisuian Form
+2,10219,Hisuian Form
+2,10220,Hisuian Form
+2,10221,Hisuian Form
+2,10222,Hisuian Form
+2,10223,Female
+2,10224,Therian Forme
+2,10225,Paldean Form
+2,10226,Paldean Form
+2,10227,Paldean Form
+2,10228,Paldean Form
+2,10229,Female
+2,10230,Blue Plumage
+2,10231,Yellow Plumage
+2,10232,White Plumage
+2,10233,Hero Form
+2,10234,Roaming Form
+2,10235,Bloodmoon
+2,10236,Wellspring Mask
+2,10237,Hearthflame Mask
+2,10238,Cornerstone Mask
+2,10243,Terastal Form
+2,10244,Stellar Form
 2,20001,One form
 2,20002,One form
 2,20003,One form
@@ -873,6 +992,25 @@ language,form_id,name
 2,20206,Dada
 2,20207,World Cap
 2,20208,Gigantamax
+2,20209,Lord Form
+2,20210,Lord Form
+2,20211,Lord Form
+2,20212,Lady Form
+2,20213,Lord Form
+2,20214,Family of Four
+2,20215,Droopy Form
+2,20216,Stretchy Form
+2,20217,Three-Segment Form
+2,20218,Limited Build
+2,20219,Sprinting Build
+2,20220,Swimming Build
+2,20221,Gliding Build
+2,20222,Low-Power Mode
+2,20223,Drive Mode
+2,20224,Aquatic Mode
+2,20225,Glide Mode
+2,20226,Artisan Form
+2,20227,Masterpiece Form
 3,201,Forme Unique
 3,351,Forme de Morphéo
 3,382,Kyogre
@@ -924,6 +1062,19 @@ language,form_id,name
 3,888,Héros Aguerri
 3,889,Héros Aguerri
 3,892,Style Poing Final
+3,902,Mâle
+3,905,Forme Avatar
+3,916,Mâle
+3,925,Famille de Trois
+3,931,Plumage Vert
+3,964,Forme Ordinaire
+3,978,Forme Courbée
+3,982,Forme Double
+3,999,Forme Coffre
+3,1007,Forme Finale
+3,1008,Mode Ultime
+3,1017,Masque Turquoise
+3,1024,Forme Normale
 3,10001,Forme Solaire
 3,10002,Forme Eau de Pluie
 3,10003,Forme Blizzard
@@ -1110,6 +1261,43 @@ language,form_id,name
 3,10201,Forme de Galar
 3,10202,Cavalier du Froid
 3,10203,Cavalier d’Effroi
+3,10204,Forme de Hisui
+3,10205,Forme de Hisui
+3,10206,Forme de Hisui
+3,10207,Forme de Hisui
+3,10208,Forme de Hisui
+3,10209,Forme de Hisui
+3,10210,Forme de Hisui
+3,10211,Forme Originelle
+3,10212,Forme Originelle
+3,10213,Forme de Hisui
+3,10214,Forme de Hisui
+3,10215,Motif Blanc
+3,10216,Forme de Hisui
+3,10217,Forme de Hisui
+3,10218,Forme de Hisui
+3,10219,Forme de Hisui
+3,10220,Forme de Hisui
+3,10221,Forme de Hisui
+3,10222,Forme de Hisui
+3,10223,Femelle
+3,10224,Forme Totémique
+3,10225,Forme de Paldea
+3,10226,Forme de Paldea
+3,10227,Forme de Paldea
+3,10228,Forme de Paldea
+3,10229,Femelle
+3,10230,Plumage Bleu
+3,10231,Plumage Jaune
+3,10232,Plumage Blanc
+3,10233,Forme Super
+3,10234,Forme Marche
+3,10235,Lune Vermeille
+3,10236,Masque du Puits
+3,10237,Masque du Fourneau
+3,10238,Masque de la Pierre
+3,10243,Forme Téracristal
+3,10244,Forme Stellaire
 3,20001,Forme Unique
 3,20002,Forme Unique
 3,20003,Forme Unique
@@ -1310,6 +1498,25 @@ language,form_id,name
 3,20206,Papa
 3,20207,Casquette Monde
 3,20208,Gigamax
+3,20209,Forme de Roi
+3,20210,Forme de Roi
+3,20211,Forme de Roi
+3,20212,Forme de Reine
+3,20213,Forme de Roi
+3,20214,Famille de Quatre
+3,20215,Forme Affalée
+3,20216,Forme Raide
+3,20217,Forme Triple
+3,20218,Forme Limitée
+3,20219,Forme de Course
+3,20220,Forme de Nage
+3,20221,Forme de Vol
+3,20222,Mode Bridé
+3,20223,Mode Terrestre
+3,20224,Mode Aquatique
+3,20225,Mode Aérien
+3,20226,Forme Onéreuse
+3,20227,Forme Exceptionnelle
 4,201,Eine Form
 4,351,Formeo
 4,382,Kyogre
@@ -1361,6 +1568,19 @@ language,form_id,name
 4,888,Heldenhafter Krieger
 4,889,Heldenhafter Krieger
 4,892,Fokussierter Stil
+4,902,Männlich
+4,905,Inkarnationsform
+4,916,Männlich
+4,925,Dreierfamilie
+4,931,Grüngefiedert
+4,964,Alltagsform
+4,978,Gebogene Form
+4,982,Zweisegmentform
+4,999,Truhenform
+4,1007,Vollkommene Gestalt
+4,1008,Kompletter Modus
+4,1017,Türkisgrüne Maske
+4,1024,Normalform
 4,10001,Sonnenform
 4,10002,Regenform
 4,10003,Schneeform
@@ -1547,6 +1767,43 @@ language,form_id,name
 4,10201,Galar-Form
 4,10202,Schimmelreiter
 4,10203,Rappenreiter
+4,10204,Hisui-Form
+4,10205,Hisui-Form
+4,10206,Hisui-Form
+4,10207,Hisui-Form
+4,10208,Hisui-Form
+4,10209,Hisui-Form
+4,10210,Hisui-Form
+4,10211,Urform
+4,10212,Urform
+4,10213,Hisui-Form
+4,10214,Hisui-Form
+4,10215,Weißlinige Form
+4,10216,Hisui-Form
+4,10217,Hisui-Form
+4,10218,Hisui-Form
+4,10219,Hisui-Form
+4,10220,Hisui-Form
+4,10221,Hisui-Form
+4,10222,Hisui-Form
+4,10223,Weiblich
+4,10224,Tiergeistform
+4,10225,Paldea-Form
+4,10226,Paldea-Form
+4,10227,Paldea-Form
+4,10228,Paldea-Form
+4,10229,Weiblich
+4,10230,Blaugefiedert
+4,10231,Gelbgefiedert
+4,10232,Weißgefiedert
+4,10233,Heldenform
+4,10234,Wanderform
+4,10235,Blutmond
+4,10236,Brunnenmaske
+4,10237,Ofenmaske
+4,10238,Fundamentmaske
+4,10243,Terakristall-Form
+4,10244,Stellarform
 4,20001,Eine Form
 4,20002,Eine Form
 4,20003,Eine Form
@@ -1747,6 +2004,25 @@ language,form_id,name
 4,20206,Papa
 4,20207,Weltreise-Kappe
 4,20208,Gigadynamax
+4,20209,Königsform
+4,20210,Königsform
+4,20211,Königsform
+4,20212,Königinnenform
+4,20213,Königsform
+4,20214,Viererfamilie
+4,20215,Hängende Form
+4,20216,Gestreckte Form
+4,20217,Dreisegmentform
+4,20218,Gehemmte Gestalt
+4,20219,Sprintgestalt
+4,20220,Schwimmgestalt
+4,20221,Schwingengestalt
+4,20222,Begrenzter Modus
+4,20223,Fahrmodus
+4,20224,Wassermodus
+4,20225,Gleitmodus
+4,20226,Kostbarkeitsform
+4,20227,Edle Form
 5,201,Forma Vaga
 5,351,Forma Castform
 5,386,Forma Normale
@@ -1796,6 +2072,19 @@ language,form_id,name
 5,888,Eroe di Mille Lotte
 5,889,Eroe di Mille Lotte
 5,892,Stile Singolcolpo
+5,902,Maschio
+5,905,Forma Incarnazione
+5,916,Maschio
+5,925,Trifamiglia
+5,931,Piume Verdi
+5,964,Forma Ingenua
+5,978,Forma Arcuata
+5,982,Forma Bimetamero
+5,999,Forma Scrigno
+5,1007,Foggia Integrale
+5,1008,Assetto Completo
+5,1017,Maschera Turchese
+5,1024,Forma Normale
 5,10001,Forma Sole
 5,10002,Forma Pioggia
 5,10003,Forma Nuvola di Neve
@@ -1982,6 +2271,43 @@ language,form_id,name
 5,10201,Forma di Galar
 5,10202,Cavaliere Glaciale
 5,10203,Cavaliere Spettrale
+5,10204,Forma di Hisui
+5,10205,Forma di Hisui
+5,10206,Forma di Hisui
+5,10207,Forma di Hisui
+5,10208,Forma di Hisui
+5,10209,Forma di Hisui
+5,10210,Forma di Hisui
+5,10211,Forma Originale
+5,10212,Forma Originale
+5,10213,Forma di Hisui
+5,10214,Forma di Hisui
+5,10215,Forma Lineabianca
+5,10216,Forma di Hisui
+5,10217,Forma di Hisui
+5,10218,Forma di Hisui
+5,10219,Forma di Hisui
+5,10220,Forma di Hisui
+5,10221,Forma di Hisui
+5,10222,Forma di Hisui
+5,10223,Femmina
+5,10224,Forma Totem
+5,10225,Forma di Paldea
+5,10226,Forma di Paldea
+5,10227,Forma di Paldea
+5,10228,Forma di Paldea
+5,10229,Femmina
+5,10230,Piume Azzurre
+5,10231,Piume Gialle
+5,10232,Piume Bianche
+5,10233,Forma Possente
+5,10234,Forma Ambulante
+5,10235,Luna Cremisi
+5,10236,Maschera Pozzo
+5,10237,Maschera Focolare
+5,10238,Maschera Fondamenta
+5,10243,Forma Teracristal
+5,10244,Forma Astrale
 5,20001,Forma Vaga
 5,20002,Forma Vaga
 5,20003,Forma Vaga
@@ -2182,6 +2508,25 @@ language,form_id,name
 5,20206,Papà
 5,20207,Berretto Giramondo
 5,20208,Gigamax
+5,20209,Forma Re
+5,20210,Forma Re
+5,20211,Forma Re
+5,20212,Forma Regina
+5,20213,Forma Re
+5,20214,Quadrifamiglia
+5,20215,Forma Adagiata
+5,20216,Forma Tesa
+5,20217,Forma Trimetamero
+5,20218,Foggia Parziale
+5,20219,Foggia Scattante
+5,20220,Foggia Nautica
+5,20221,Foggia Librata
+5,20222,Assetto Limitato
+5,20223,Assetto Sprint
+5,20224,Assetto Nuoto
+5,20225,Assetto Planata
+5,20226,Forma Pregiata
+5,20227,Forma Eccezionale
 6,201,Una forma
 6,351,Forma de Castform
 6,382,Kyogre
@@ -2233,6 +2578,19 @@ language,form_id,name
 6,888,Guerrero Avezado
 6,889,Guerrero Avezado
 6,892,Estilo Brusco
+6,902,Macho
+6,905,Forma Avatar
+6,916,Macho
+6,925,Familia de Tres
+6,931,Plumaje Verde
+6,964,Forma Ingenua
+6,978,Forma Curvada
+6,982,Forma Binodular
+6,999,Forma Cofre
+6,1007,Fisonomía Plena
+6,1008,Modo Pleno
+6,1017,Máscara Turquesa
+6,1024,Forma Normal
 6,10001,Forma Sol
 6,10002,Forma Lluvia
 6,10003,Forma Nieve
@@ -2419,6 +2777,43 @@ language,form_id,name
 6,10201,Forma de Galar
 6,10202,Jinete Glacial
 6,10203,Jinete Espectral
+6,10204,Forma de Hisui
+6,10205,Forma de Hisui
+6,10206,Forma de Hisui
+6,10207,Forma de Hisui
+6,10208,Forma de Hisui
+6,10209,Forma de Hisui
+6,10210,Forma de Hisui
+6,10211,Forma Origen
+6,10212,Forma Origen
+6,10213,Forma de Hisui
+6,10214,Forma de Hisui
+6,10215,Forma Raya Blanca
+6,10216,Forma de Hisui
+6,10217,Forma de Hisui
+6,10218,Forma de Hisui
+6,10219,Forma de Hisui
+6,10220,Forma de Hisui
+6,10221,Forma de Hisui
+6,10222,Forma de Hisui
+6,10223,Hembra
+6,10224,Forma Tótem
+6,10225,Forma de Paldea
+6,10226,Forma de Paldea
+6,10227,Forma de Paldea
+6,10228,Forma de Paldea
+6,10229,Hembra
+6,10230,Plumaje Azul
+6,10231,Plumaje Amarillo
+6,10232,Plumaje Blanco
+6,10233,Forma Heroica
+6,10234,Forma Andante
+6,10235,Luna Carmesí
+6,10236,Máscara Fuente
+6,10237,Máscara Horno
+6,10238,Máscara Cimiento
+6,10243,Forma Teracristal
+6,10244,Forma Astral
 6,20001,Una forma
 6,20002,Una forma
 6,20003,Una forma
@@ -2619,6 +3014,25 @@ language,form_id,name
 6,20206,Papá
 6,20207,Gorra Trotamundos
 6,20208,Gigamax
+6,20209,Forma de Señor
+6,20210,Forma de Señor
+6,20211,Forma de Señor
+6,20212,Forma de Señora
+6,20213,Forma de Señor
+6,20214,Familia de Cuatro
+6,20215,Forma Lánguida
+6,20216,Forma Recta
+6,20217,Forma Trinodular
+6,20218,Fisonomía Limitada
+6,20219,Fisonomía Carrera
+6,20220,Fisonomía Nado
+6,20221,Fisonomía Planeo
+6,20222,Modo Limitado
+6,20223,Modo Conducción
+6,20224,Modo Flote
+6,20225,Modo Planeo
+6,20226,Forma Opulenta
+6,20227,Forma Exquisita
 7,201,형태별 모습
 7,351,캐스퐁의 모습
 7,382,가이오가의 모습
@@ -2670,6 +3084,19 @@ language,form_id,name
 7,888,역전의 용사
 7,889,역전의 용사
 7,892,일격의 태세
+7,902,수컷의 모습
+7,905,화신폼
+7,916,수컷의 모습
+7,925,세 식구
+7,931,그린 페더
+7,964,나이브폼
+7,978,젖힌 모습
+7,982,두 마디폼
+7,999,상자폼
+7,1007,완전형태
+7,1008,컴플리트모드
+7,1017,벽록의 가면
+7,1024,노말폼
 7,10001,태양의 모습
 7,10002,빗방울의 모습
 7,10003,설운의 모습
@@ -2856,6 +3283,43 @@ language,form_id,name
 7,10201,가라르의 모습
 7,10202,백마 탄 모습
 7,10203,흑마 탄 모습
+7,10204,히스이의 모습
+7,10205,히스이의 모습
+7,10206,히스이의 모습
+7,10207,히스이의 모습
+7,10208,히스이의 모습
+7,10209,히스이의 모습
+7,10210,히스이의 모습
+7,10211,오리진폼
+7,10212,오리진폼
+7,10213,히스이의 모습
+7,10214,히스이의 모습
+7,10215,백색근의 모습
+7,10216,히스이의 모습
+7,10217,히스이의 모습
+7,10218,히스이의 모습
+7,10219,히스이의 모습
+7,10220,히스이의 모습
+7,10221,히스이의 모습
+7,10222,히스이의 모습
+7,10223,암컷의 모습
+7,10224,영물폼
+7,10225,팔데아의 모습
+7,10226,팔데아의 모습
+7,10227,팔데아의 모습
+7,10228,팔데아의 모습
+7,10229,암컷의 모습
+7,10230,블루 페더
+7,10231,옐로 페더
+7,10232,화이트 페더
+7,10233,마이티폼
+7,10234,도보폼
+7,10235,붉은 달
+7,10236,우물의 가면
+7,10237,화덕의 가면
+7,10238,주춧돌의 가면
+7,10243,테라스탈폼
+7,10244,스텔라폼
 7,20001,형태별 모습
 7,20002,형태별 모습
 7,20003,형태별 모습
@@ -3056,6 +3520,25 @@ language,form_id,name
 7,20206,아빠
 7,20207,월드캡
 7,20208,거다이맥스
+7,20209,왕의 모습
+7,20210,왕의 모습
+7,20211,왕의 모습
+7,20212,여왕의 모습
+7,20213,왕의 모습
+7,20214,네 식구
+7,20215,늘어진 모습
+7,20216,뻗은 모습
+7,20217,세 마디폼
+7,20218,제한형태
+7,20219,질주형태
+7,20220,유영형태
+7,20221,활공형태
+7,20222,리미티드모드
+7,20223,드라이브모드
+7,20224,플로트모드
+7,20225,글라이드모드
+7,20226,알짜배기의 모습
+7,20227,걸작의 모습
 8,201,あるすがた
 8,351,ポワルンのすがた
 8,382,カイオーガのすがた
@@ -3107,6 +3590,19 @@ language,form_id,name
 8,888,れきせんのゆうしゃ
 8,889,れきせんのゆうしゃ
 8,892,いちげきのかた
+8,902,オスのすがた
+8,905,けしんフォルム
+8,916,オスのすがた
+8,925,３びきかぞく
+8,931,グリーンフェザー
+8,964,ナイーブフォルム
+8,978,そったすがた
+8,982,ふたふしフォルム
+8,999,はこフォルム
+8,1007,かんぜんけいたい
+8,1008,コンプリートモード
+8,1017,みどりのめん
+8,1024,ノーマルフォルム
 8,10001,たいようのすがた
 8,10002,あまみずのすがた
 8,10003,ゆきぐものすがた
@@ -3293,6 +3789,43 @@ language,form_id,name
 8,10201,ガラルのすがた
 8,10202,はくばじょうのすがた
 8,10203,こくばじょうのすがた
+8,10204,ヒスイのすがた
+8,10205,ヒスイのすがた
+8,10206,ヒスイのすがた
+8,10207,ヒスイのすがた
+8,10208,ヒスイのすがた
+8,10209,ヒスイのすがた
+8,10210,ヒスイのすがた
+8,10211,オリジンフォルム
+8,10212,オリジンフォルム
+8,10213,ヒスイのすがた
+8,10214,ヒスイのすがた
+8,10215,しろすじのすがた
+8,10216,ヒスイのすがた
+8,10217,ヒスイのすがた
+8,10218,ヒスイのすがた
+8,10219,ヒスイのすがた
+8,10220,ヒスイのすがた
+8,10221,ヒスイのすがた
+8,10222,ヒスイのすがた
+8,10223,メスのすがた
+8,10224,れいじゅうフォルム
+8,10225,パルデアのすがた
+8,10226,パルデアのすがた
+8,10227,パルデアのすがた
+8,10228,パルデアのすがた
+8,10229,メスのすがた
+8,10230,ブルーフェザー
+8,10231,イエローフェザー
+8,10232,ホワイトフェザー
+8,10233,マイティフォルム
+8,10234,とほフォルム
+8,10235,アカツキ
+8,10236,いどのめん
+8,10237,かまどのめん
+8,10238,いしずえのめん
+8,10243,テラスタルフォルム
+8,10244,ステラフォルム
 8,20001,あるすがた
 8,20002,あるすがた
 8,20003,あるすがた
@@ -3493,6 +4026,25 @@ language,form_id,name
 8,20206,とうちゃん
 8,20207,ワールドキャップ
 8,20208,キョダイマックス
+8,20209,キングのすがた
+8,20210,キングのすがた
+8,20211,キングのすがた
+8,20212,クイーンのすがた
+8,20213,キングのすがた
+8,20214,４ひきかぞく
+8,20215,たれたすがた
+8,20216,のびたすがた
+8,20217,みつふしフォルム
+8,20218,せいげんけいたい
+8,20219,しっそうけいたい
+8,20220,ゆうえいけいたい
+8,20221,かっくうけいたい
+8,20222,リミテッドモード
+8,20223,ドライブモード
+8,20224,フロートモード
+8,20225,グライドモード
+8,20226,タカイモノのすがた
+8,20227,ケッサクのすがた
 9,201,某种样子
 9,351,飘浮泡泡的样子
 9,382,盖欧卡的样子
@@ -3544,6 +4096,19 @@ language,form_id,name
 9,888,百战勇者
 9,889,百战勇者
 9,892,一击流
+9,902,雄性的样子
+9,905,化身形态
+9,916,雄性的样子
+9,925,三只家庭
+9,931,绿羽毛
+9,964,平凡形态
+9,978,上弓姿势
+9,982,二节形态
+9,999,宝箱形态
+9,1007,完全形态
+9,1008,完整模式
+9,1017,碧草面具
+9,1024,普通形态
 9,10001,太阳的样子
 9,10002,雨水的样子
 9,10003,雪云的样子
@@ -3724,6 +4289,43 @@ language,form_id,name
 9,10201,伽勒尔的样子
 9,10202,骑白马的样子
 9,10203,骑黑马的样子
+9,10204,洗翠的样子
+9,10205,洗翠的样子
+9,10206,洗翠的样子
+9,10207,洗翠的样子
+9,10208,洗翠的样子
+9,10209,洗翠的样子
+9,10210,洗翠的样子
+9,10211,起源形态
+9,10212,起源形态
+9,10213,洗翠的样子
+9,10214,洗翠的样子
+9,10215,白条纹的样子
+9,10216,洗翠的样子
+9,10217,洗翠的样子
+9,10218,洗翠的样子
+9,10219,洗翠的样子
+9,10220,洗翠的样子
+9,10221,洗翠的样子
+9,10222,洗翠的样子
+9,10223,雌性的样子
+9,10224,灵兽形态
+9,10225,帕底亚的样子
+9,10226,帕底亚的样子
+9,10227,帕底亚的样子
+9,10228,帕底亚的样子
+9,10229,雌性的样子
+9,10230,蓝羽毛
+9,10231,黄羽毛
+9,10232,白羽毛
+9,10233,全能形态
+9,10234,徒步形态
+9,10235,赫月
+9,10236,水井面具
+9,10237,火灶面具
+9,10238,础石面具
+9,10243,太晶形态
+9,10244,星晶形态
 9,20001,某种样子
 9,20002,某种样子
 9,20003,某种样子
@@ -3924,6 +4526,25 @@ language,form_id,name
 9,20206,阿爸
 9,20207,世界帽子
 9,20208,超极巨化
+9,20209,王的样子
+9,20210,王的样子
+9,20211,王的样子
+9,20212,女王的样子
+9,20213,王的样子
+9,20214,四只家庭
+9,20215,下垂姿势
+9,20216,平挺姿势
+9,20217,三节形态
+9,20218,制限形态
+9,20219,疾驰形态
+9,20220,破浪形态
+9,20221,乘风形态
+9,20222,受限模式
+9,20223,行驶模式
+9,20224,浮水模式
+9,20225,滑翔模式
+9,20226,高档货的样子
+9,20227,杰作的样子
 10,201,某種樣子
 10,351,飄浮泡泡的樣子
 10,382,蓋歐卡的樣子
@@ -3975,6 +4596,19 @@ language,form_id,name
 10,888,百戰勇者
 10,889,百戰勇者
 10,892,一擊流
+10,902,雄性的樣子
+10,905,化身形態
+10,916,雄性的樣子
+10,925,三隻家庭
+10,931,綠羽毛
+10,964,平凡形態
+10,978,上弓姿勢
+10,982,二節形態
+10,999,寶箱形態
+10,1007,完全形態
+10,1008,完整模式
+10,1017,碧草面具
+10,1024,普通形態
 10,10001,太陽的樣子
 10,10002,雨水的樣子
 10,10003,雪雲的樣子
@@ -4155,6 +4789,43 @@ language,form_id,name
 10,10201,伽勒爾的樣子
 10,10202,騎白馬的樣子
 10,10203,騎黑馬的樣子
+10,10204,洗翠的樣子
+10,10205,洗翠的樣子
+10,10206,洗翠的樣子
+10,10207,洗翠的樣子
+10,10208,洗翠的樣子
+10,10209,洗翠的樣子
+10,10210,洗翠的樣子
+10,10211,起源形態
+10,10212,起源形態
+10,10213,洗翠的樣子
+10,10214,洗翠的樣子
+10,10215,白條紋的樣子
+10,10216,洗翠的樣子
+10,10217,洗翠的樣子
+10,10218,洗翠的樣子
+10,10219,洗翠的樣子
+10,10220,洗翠的樣子
+10,10221,洗翠的樣子
+10,10222,洗翠的樣子
+10,10223,雌性的樣子
+10,10224,靈獸形態
+10,10225,帕底亞的樣子
+10,10226,帕底亞的樣子
+10,10227,帕底亞的樣子
+10,10228,帕底亞的樣子
+10,10229,雌性的樣子
+10,10230,藍羽毛
+10,10231,黃羽毛
+10,10232,白羽毛
+10,10233,全能形態
+10,10234,徒步形態
+10,10235,赫月
+10,10236,水井面具
+10,10237,火灶面具
+10,10238,礎石面具
+10,10243,太晶形態
+10,10244,星晶形態
 10,20001,某種樣子
 10,20002,某種樣子
 10,20003,某種樣子
@@ -4355,3 +5026,22 @@ language,form_id,name
 10,20206,阿爸
 10,20207,世界帽子
 10,20208,超極巨化
+10,20209,王的樣子
+10,20210,王的樣子
+10,20211,王的樣子
+10,20212,女王的樣子
+10,20213,王的樣子
+10,20214,四隻家庭
+10,20215,下垂姿勢
+10,20216,平挺姿勢
+10,20217,三節形態
+10,20218,制限形態
+10,20219,疾馳形態
+10,20220,破浪形態
+10,20221,乘風形態
+10,20222,受限模式
+10,20223,行駛模式
+10,20224,浮水模式
+10,20225,滑翔模式
+10,20226,高檔貨的樣子
+10,20227,傑作的樣子
