@@ -118,6 +118,14 @@ id,identifier,introduced_in_version_group_id
 117,shock-drive,13
 118,burn-drive,13
 119,chill-drive,13
+121,pokemon-box-link-lgpe,19
+122,medicine-pocket,19
+123,tm-case,19
+124,candy-jar,19
+125,power-up-pocket,19
+126,clothing-trunk,19
+127,catching-pocket,19
+128,battle-pocket,19
 134,sweet-heart,13
 135,adamant-orb,10
 136,lustrous-orb,10
@@ -471,9 +479,9 @@ id,identifier,introduced_in_version_group_id
 486,blue-apricorn,5
 487,yellow-apricorn,5
 488,green-apricorn,5
-489,black-apricorn,5
+489,pink-apricorn,5
 490,white-apricorn,5
-491,pink-apricorn,5
+491,black-apricorn,5
 492,fast-ball,5
 493,level-ball,5
 494,lure-ball,5
@@ -2440,7 +2448,7 @@ id,identifier,introduced_in_version_group_id
 10044,pokeblock-case,7
 10045,hm08,7
 10046,fame-checker,8
-10047,tm-case,8
+10047,tm-case-frlg,8
 10048,berry-pouch,8
 10049,teachy-tv,8
 10050,tri-pass,8

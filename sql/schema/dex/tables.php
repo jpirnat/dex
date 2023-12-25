@@ -50,7 +50,16 @@ return [
 	// Items
 	'item_fling_effects',
 	'items',
-	'item_descriptions',
+	'item_descriptions' => [
+		'item_descriptions_04',
+		'item_descriptions_05',
+		'item_descriptions_06',
+		'item_descriptions_07',
+		'item_descriptions_08_ss',
+		'item_descriptions_08_bdsp',
+		'item_descriptions_08_la',
+		'item_descriptions_09_sv',
+	],
 	'item_names',
 	'item_icons',
 	'version_group_items',
