@@ -1233,9 +1233,9 @@ id,identifier,form_identifier,pokemon_id,is_default_form,introduced_in_version_g
 10207,electrode-hisui,hisui,10207,1,22,0,1.2,71
 10208,typhlosion-hisui,hisui,10208,1,22,0,1.6,69.8
 10209,qwilfish-hisui,hisui,10209,1,22,0,0.5,3.9
-10210,dialga-origin,origin,10210,1,22,0,7,850
-10211,palkia-origin,origin,10211,1,22,0,6.3,660
-10212,sneasel-hisui,hisui,10212,1,22,0,0.9,27
+10210,sneasel-hisui,hisui,10210,1,22,0,0.9,27
+10211,dialga-origin,origin,10211,1,22,0,7,850
+10212,palkia-origin,origin,10212,1,22,0,6.3,660
 10213,samurott-hisui,hisui,10213,1,22,0,1.5,58.2
 10214,lilligant-hisui,hisui,10214,1,22,0,1.2,19.2
 10215,basculin-white,white,10215,1,22,0,1,18

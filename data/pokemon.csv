@@ -976,7 +976,7 @@ id,identifier,pokemon_identifier,species_id,is_default_pokemon,introduced_in_ver
 975,cetitan,,975,1,23,3,4,cetitan,1214
 976,veluza,,976,1,23,1,4,veluza,1215
 977,dondozo,,977,1,23,4,4,dondozo,1216
-978,tatsugiri-curly,curly,978,1,23,3,4,tatsugiri,1217
+978,tatsugiri,,978,1,23,3,4,tatsugiri,1217
 979,annihilape,,979,1,23,2,4,annihilape,1218
 980,clodsire,,980,1,23,2,4,clodsire,300
 981,farigiraf,,981,1,23,2,4,farigiraf,1219
@@ -1233,9 +1233,9 @@ id,identifier,pokemon_identifier,species_id,is_default_pokemon,introduced_in_ver
 10207,electrode-hisui,hisui,101,0,22,2,4,electrode-hisui,159
 10208,typhlosion-hisui,hisui,157,0,22,3,1,typhlosion-hisui,260
 10209,qwilfish-hisui,hisui,211,0,22,2,4,qwilfish-hisui,318
-10210,dialga-origin,origin,483,0,22,4,4,dialga-origin,615
-10211,palkia-origin,origin,484,0,22,4,4,palkia-origin,617
-10212,sneasel-hisui,hisui,215,0,22,3,4,sneasel-hisui,324
+10210,sneasel-hisui,hisui,215,0,22,3,4,sneasel-hisui,324
+10211,dialga-origin,origin,483,0,22,4,4,dialga-origin,615
+10212,palkia-origin,origin,484,0,22,4,4,palkia-origin,617
 10213,samurott-hisui,hisui,503,0,22,3,1,samurott-hisui,657
 10214,lilligant-hisui,hisui,549,0,22,2,4,lilligant-hisui,705
 10215,basculin-white,white,550,0,22,2,4,basculin-white-striped,708

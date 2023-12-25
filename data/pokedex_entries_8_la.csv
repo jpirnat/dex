@@ -225,13 +225,58 @@ language_id,form_id,version_id,is_female,entry
 1,903,38,0,他種圧倒する　身体能力と　猛毒　有し\n寒冷なる　高地においては　敵なし。\n群れ成さず　単独を良しとする　性質。
 1,904,38,0,槍の如き　針と　凶暴なる　気質にて\n海鬼の　異名を　持つ　ポケモン。\n毒を　すすりて　己の　糧とす。
 1,905,38,0,海を越えて　飛来したらば　厳しき冬の\n終わりを知る。　慈愛が　ヒスイの地に\n新しき命　芽吹かせるとの　伝承あり。
-1,10116,38,0,雪深き山に　群れを成して　生息す。\n寒冷地に　適応し　姿変えしと　推測。\n凍てつく　吐息で　身を　護る。
+1,10007,38,0,砂泥の皮膚は　相応に　硬く\nムックルの嘴　程度ならば\n易々と　弾き返すこと　造作なし。
+1,10008,38,0,ちり芥にて　構成されし体は　景色に\n溶け込み　目立たず。　天敵より　身を\n隠すに　うってつけの様子。
+1,10009,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10010,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10011,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10012,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10013,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10014,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10015,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10016,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
 1,10017,38,0,万年雪　覆いし　聖なる山に　棲む。\n心　善なる者が　山道　迷うとき\n姿見せ　麓まで　導くと　伝わる。
+1,10017,38,0,万年雪　覆いし　聖なる山に　棲む。\n心　善なる者が　山道　迷うとき\n姿見せ　麓まで　導くと　伝わる。
+1,10018,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10019,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10020,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10021,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10022,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10023,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10024,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10026,38,0,面妖な　釜に　潜みし　フォルム。\n釜の　出自については　不明。\n炎　吹きて　悪事をなす　困り者。
+1,10027,38,0,珍奇な　箪笥に　潜みし　フォルム。\n箪笥　本来の　用途は　分からず。\n冷水　撒きて　悪事をなす　困り者。
+1,10028,38,0,奇怪な　水屋に　潜みし　フォルム。\n水屋の　素材は　未知の　物質。\n霜　起こし　悪事をなす　困り者。
+1,10029,38,0,謎の　器具に　潜みし　フォルム。\n器具の　用途は　分かっていない。\n烈風　吐きて　悪事をなす　困り者。
+1,10030,38,0,異様な　猫車に　潜みし　フォルム。\n猫車の　機構は　不可思議なり。\n草木を　薙ぎ　悪事をなす　困り者。
+1,10031,38,0,フォルムチェンジにより　脚　無くす。\nこれの棲むは　天地の区別なき　世界と\n考察す。　されど　証明の　手段なし。
+1,10032,38,0,珍しき花の香　嗅ぎしとき　小さき体\n光に包まれ　姿　変貌す。　花の香\n試しに　嗅ぐも　我が身に　変化なし。
+1,10037,38,0,フォルムチェンジと　呼ばれし　現象。\n怪鳥のごとき姿こそ　真なりと　考察。\n大海　渡りしとき　この姿で　目撃す。
+1,10038,38,0,霹靂閃電　姿　現す。　尾に　連なりし\n珠より　雷撃　降り注ぎ　敵を　一掃。\n威力　凄まじく　一片すら　残らず。
+1,10039,38,0,霊獣の姿にて　天翔けしとき　大地に\n豊穣もたらす。　衆人　これを　敬う。\n一刻あれば　ヒスイの地を　縦断す。
+1,10072,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+1,10116,38,0,雪深き山に　群れを成して　生息す。\n寒冷地に　適応し　姿変えしと　推測。\n凍てつく　吐息で　身を　護る。
 1,10204,38,0,対になりて　縄張りを　哨戒す。\n体毛に　火成岩なる　成分　混ざるは\n火山活動の　影響と　推察す。
 1,10205,38,0,燃え盛る炎　牙に纏わせ　食らい付く。\n体躯　大柄なれど　陽動　鮮やかなりて\n敵　翻弄せしむる姿　演舞の如し。
 1,10206,38,0,モンスターボールと　空似せし　謎の\nポケモン。　気　昂るほど　腹に\n蓄えし電流を　解き放ち　大笑す。
 1,10207,38,0,体表の組織　ぼんぐりの成分と　極めて\n近く　不思議。　苛立ちしときに　放つ\n電流は　落雷　２０回分に　匹敵す。
 1,10208,38,0,ヒスイの中心にそびえし　霊山の気が\n影響した姿と　考察。　行き場　失いし\n霊魂を　己の炎で浄化し　送ると言う。
+1,10209,38,0,針より　毒　散らす　厄介者ゆえ\n漁師には　忌み嫌われし　存在。\n他の地方では　異なる姿で　生息す。
+1,10210,38,0,鉤爪　逞しく　断崖絶壁を　踏破するに\n有利な　形状。　先端より　毒液　滴り\n獲物　捕らえしとき　神経を　侵す。
+1,10211,38,0,光明　フォルムチェンジの　引き金。\n創造神に　酷似する姿こそ　真なりと\n思わざるを得ぬほどの　剛力　発揮す。
+1,10212,38,0,天翔ける姿　万物を　創りし　存在を\n想起す。　姿を　模すこと　すなわち\nその力を　我がものとする術と　推察。
+1,10213,38,0,非情なる　気質と　太刀筋を　有す。\n怒涛の　連撃は　千重波の　如し。\nヒスイにて　進化せし　稀有なる姿。
+1,10214,38,0,雪深き山に　棲みしゆえに　脚力が\n発達したと　考察す。　周囲の者を\n鼓舞する　香りを　冠の花より　放つ。
+1,10215,38,0,温厚な　気質など　相違点　あれども\nバスラオの　特徴を　多く　有すゆえ\nそのリージョンフォームと　定義す。
+1,10216,38,0,死した魂　ヒスイの地にて　蘇る。\n怨嗟は　力となり　頭より　立ち昇り\n相手の姿に　変じ　恨み　晴らしたり。
+1,10217,38,0,白髪　振り乱し姿　死神の如く。\n我が身をも　切り裂く　激しき怨讐にて\n仇　襲い　道連れ覚悟で　仕留めたり。
+1,10218,38,0,鬼気迫る　鬨の声を　上げ　狩りをする\n猛き　大鳥。　湖水に　衝撃波を　放ち\n水面に　浮かびし　獲物を　捕る。
+1,10219,38,0,陰気な　性質。　ヒスイの地の　水に\n含有する　鉄が　皮膚の粘液に　作用し\n金属の殻へ　変容させたと　考察す。
+1,10220,38,0,金属の殻の　剛柔を　自在に　操る。\n孤独を　厭い　執念深く　好いた者が\n己から　離れると　怒り　荒ぶる。
+1,10221,38,0,下顎を　覆う　氷塊の装甲は　鋼に勝り\n岩石を　砕くこと　容易なり。　深雪を\nかき分け　険しい　山道を　猛進す。
+1,10222,38,0,ヒスイの　極寒に　耐えるため　羽根の\n芯に　空気を含み　防寒機能　有す。\n環境が　進化に　影響すると　判明す。
+1,10223,38,0,遡上の旅路にて　志半ばに　散った\n輩の魂を　まとう。　ヒスイ　流れし\n河川においては　敵うもの　皆無なり。
+1,10224,38,0,女人の姿より　変わりし現象。\n命　粗末にする者あれば　雲海より\n現れ　憤怒の罰を下し　容赦なし。
 1,20001,38,0,生物とは思えぬ　異形の姿なり。\n形状　異なるもの多く　異国の文字との\n共通性を　訴えるも　評価されず。
 1,20002,38,0,生物とは思えぬ　異形の姿なり。\n形状　異なるもの多く　異国の文字との\n共通性を　訴えるも　評価されず。
 1,20003,38,0,生物とは思えぬ　異形の姿なり。\n形状　異なるもの多く　異国の文字との\n共通性を　訴えるも　評価されず。
@@ -259,56 +304,11 @@ language_id,form_id,version_id,is_female,entry
 1,20025,38,0,生物とは思えぬ　異形の姿なり。\n形状　異なるもの多く　異国の文字との\n共通性を　訴えるも　評価されず。
 1,20026,38,0,生物とは思えぬ　異形の姿なり。\n形状　異なるもの多く　異国の文字との\n共通性を　訴えるも　評価されず。
 1,20027,38,0,生物とは思えぬ　異形の姿なり。\n形状　異なるもの多く　異国の文字との\n共通性を　訴えるも　評価されず。
-1,10209,38,0,針より　毒　散らす　厄介者ゆえ\n漁師には　忌み嫌われし　存在。\n他の地方では　異なる姿で　生息す。
-1,10212,38,0,鉤爪　逞しく　断崖絶壁を　踏破するに\n有利な　形状。　先端より　毒液　滴り\n獲物　捕らえしとき　神経を　侵す。
 1,20028,38,0,吐き出す　糸と　砂泥　練りあげ\n蓑を　こしらえる。　砂泥の蓑は\n風雨に脆く　洞などに　隠れる。
 1,20029,38,0,手頃な　材料が　見つからぬと\nちり芥にて　蓑を　こしらえる。\n存外　居心地は　悪くない模様。
-1,10007,38,0,砂泥の皮膚は　相応に　硬く\nムックルの嘴　程度ならば\n易々と　弾き返すこと　造作なし。
-1,10008,38,0,ちり芥にて　構成されし体は　景色に\n溶け込み　目立たず。　天敵より　身を\n隠すに　うってつけの様子。
 1,20030,38,0,晴天ならば　実に　陽気に　活動。\nされど　日が　陰れば　即座に\n花弁を　閉じて　動きを　止める。
 1,20031,38,0,水温　冷たき　磯辺に　多し。\nやや　強く　触れると　体表より\n紫の汁　滲みだし　服を　汚す。
 1,20032,38,0,海中より　陸地での　活動　多し。\n晴天に　比較し　曇天　ならびに\n雨天において　活発なり。
-1,10026,38,0,面妖な　釜に　潜みし　フォルム。\n釜の　出自については　不明。\n炎　吹きて　悪事をなす　困り者。
-1,10027,38,0,珍奇な　箪笥に　潜みし　フォルム。\n箪笥　本来の　用途は　分からず。\n冷水　撒きて　悪事をなす　困り者。
-1,10028,38,0,奇怪な　水屋に　潜みし　フォルム。\n水屋の　素材は　未知の　物質。\n霜　起こし　悪事をなす　困り者。
-1,10029,38,0,謎の　器具に　潜みし　フォルム。\n器具の　用途は　分かっていない。\n烈風　吐きて　悪事をなす　困り者。
-1,10030,38,0,異様な　猫車に　潜みし　フォルム。\n猫車の　機構は　不可思議なり。\n草木を　薙ぎ　悪事をなす　困り者。
-1,10210,38,0,光明　フォルムチェンジの　引き金。\n創造神に　酷似する姿こそ　真なりと\n思わざるを得ぬほどの　剛力　発揮す。
-1,10211,38,0,天翔ける姿　万物を　創りし　存在を\n想起す。　姿を　模すこと　すなわち\nその力を　我がものとする術と　推察。
-1,10031,38,0,フォルムチェンジにより　脚　無くす。\nこれの棲むは　天地の区別なき　世界と\n考察す。　されど　証明の　手段なし。
-1,10032,38,0,珍しき花の香　嗅ぎしとき　小さき体\n光に包まれ　姿　変貌す。　花の香\n試しに　嗅ぐも　我が身に　変化なし。
-1,10009,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10010,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10011,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10012,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10013,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10014,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10015,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10016,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10017,38,0,万年雪　覆いし　聖なる山に　棲む。\n心　善なる者が　山道　迷うとき\n姿見せ　麓まで　導くと　伝わる。
-1,10018,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10019,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10020,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10021,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10022,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10023,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10024,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10072,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-1,10213,38,0,非情なる　気質と　太刀筋を　有す。\n怒涛の　連撃は　千重波の　如し。\nヒスイにて　進化せし　稀有なる姿。
-1,10214,38,0,雪深き山に　棲みしゆえに　脚力が\n発達したと　考察す。　周囲の者を\n鼓舞する　香りを　冠の花より　放つ。
-1,10215,38,0,温厚な　気質など　相違点　あれども\nバスラオの　特徴を　多く　有すゆえ\nそのリージョンフォームと　定義す。
-1,10216,38,0,死した魂　ヒスイの地にて　蘇る。\n怨嗟は　力となり　頭より　立ち昇り\n相手の姿に　変じ　恨み　晴らしたり。
-1,10217,38,0,白髪　振り乱し姿　死神の如く。\n我が身をも　切り裂く　激しき怨讐にて\n仇　襲い　道連れ覚悟で　仕留めたり。
-1,10218,38,0,鬼気迫る　鬨の声を　上げ　狩りをする\n猛き　大鳥。　湖水に　衝撃波を　放ち\n水面に　浮かびし　獲物を　捕る。
-1,10037,38,0,フォルムチェンジと　呼ばれし　現象。\n怪鳥のごとき姿こそ　真なりと　考察。\n大海　渡りしとき　この姿で　目撃す。
-1,10038,38,0,霹靂閃電　姿　現す。　尾に　連なりし\n珠より　雷撃　降り注ぎ　敵を　一掃。\n威力　凄まじく　一片すら　残らず。
-1,10039,38,0,霊獣の姿にて　天翔けしとき　大地に\n豊穣もたらす。　衆人　これを　敬う。\n一刻あれば　ヒスイの地を　縦断す。
-1,10219,38,0,陰気な　性質。　ヒスイの地の　水に\n含有する　鉄が　皮膚の粘液に　作用し\n金属の殻へ　変容させたと　考察す。
-1,10220,38,0,金属の殻の　剛柔を　自在に　操る。\n孤独を　厭い　執念深く　好いた者が\n己から　離れると　怒り　荒ぶる。
-1,10221,38,0,下顎を　覆う　氷塊の装甲は　鋼に勝り\n岩石を　砕くこと　容易なり。　深雪を\nかき分け　険しい　山道を　猛進す。
-1,10222,38,0,ヒスイの　極寒に　耐えるため　羽根の\n芯に　空気を含み　防寒機能　有す。\n環境が　進化に　影響すると　判明す。
-1,10223,38,0,遡上の旅路にて　志半ばに　散った\n輩の魂を　まとう。　ヒスイ　流れし\n河川においては　敵うもの　皆無なり。
-1,10224,38,0,女人の姿より　変わりし現象。\n命　粗末にする者あれば　雲海より\n現れ　憤怒の罰を下し　容赦なし。
 2,25,38,0,Possesses cheek sacs in which it stores electricity. This clever\nforest-dweller roasts tough berries with an electric shock before\nconsuming them.
 2,26,38,0,"It can discharge bursts of electricity exceeding 100,000 volts—\na single strike with that amount of power would incapacitate one\nof the Copperajah of my homeland."
 2,35,38,0,"It can be found in quiet mountain areas on a full moon’s night.\nIts dancing and its tiny, faintly glowing wings confer upon it a\nlovely fairylike quality."
@@ -535,13 +535,58 @@ language_id,form_id,version_id,is_female,entry
 2,903,38,0,"Because of Sneasler’s virulent poison and daunting physical\nprowess, no other species could hope to best it on the frozen\nhighlands. Preferring solitude, this species does not form packs."
 2,904,38,0,Its lancelike spikes and savage temperament have earned it the\nnickname “sea fiend.” It slurps up poison to nourish itself.
 2,905,38,0,"When it flies to this land from across the sea, the bitter winter\ncomes to an end. According to legend, this Pokémon’s love\ngives rise to the budding of fresh life across Hisui."
-2,10116,38,0,These Pokémon live in packs in the snowy mountains and defend\nthemselves with icy breath. I suspect this species changed its\nform to adapt to the frigid climate.
+2,10007,38,0,"Its earthen skin is reasonably hard—it has no problem repelling\na Starly’s pecking, at least."
+2,10008,38,0,"Its body, composed of refuse, blends in to the scenery so much\nas to be inconspicuous. This seems to be the perfect way for the\nPokémon to evade the detection of predators."
+2,10009,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10010,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10011,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10012,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10013,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10014,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10015,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10016,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
 2,10017,38,0,Dwells on sacred peaks perpetually covered in snow. Said to\nappear to virtuous people who have lost their way on mountain\npaths—it then guides them back down to the mountain’s base.
+2,10017,38,0,Dwells on sacred peaks perpetually covered in snow. Said to\nappear to virtuous people who have lost their way on mountain\npaths—it then guides them back down to the mountain’s base.
+2,10018,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10019,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10020,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10021,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10022,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10023,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10024,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10026,38,0,"A form in which Rotom lurks within a strange cauldron.\nThe cauldron’s origin is unknown. A bothersome Pokémon,\ncausing trouble with the flames it spits."
+2,10027,38,0,"A form in which Rotom lurks within an odd bureau. The bureau’s\npurpose is unknown. A bothersome Pokémon, causing trouble\nby splashing cold water everywhere."
+2,10028,38,0,"A form in which Rotom lurks within a bizarre cupboard.\nThe cupboard’s composition is unknown. A bothersome\nPokémon, causing trouble by frosting everything over."
+2,10029,38,0,"A form in which Rotom lurks within a mysterious contraption.\nThe contraption’s purpose is unknown. A bothersome Pokémon,\ncausing trouble by stirring up powerful winds."
+2,10030,38,0,"A form in which Rotom lurks within a misshapen wheelbarrow.\nThe wheelbarrow’s mechanisms are bizarre. It’s a bothersome\nPokémon, causing trouble by mowing down grass and trees."
+2,10031,38,0,"Giratina loses its legs upon changing into this form. I believe this\nPokémon must hail from a world where the heavens and the\nearth are as one, though I have no way of proving it."
+2,10032,38,0,"Upon taking in the scent of a particular rare flower, Shaymin is\nenveloped in light, and its tiny body transforms. I took a whiff\nof the flower myself, but alas, my body remained unchanged."
+2,10037,38,0,"An example of what is known as a “form change,” though I\nsuspect this strange avian guise to be Tornadus’s true form.\nTornadus has been sighted crossing the ocean while in this form."
+2,10038,38,0,"Quick as a flash, it materializes out of nowhere. It pulverizes\nfoes into nothingness with showers of devastatingly powerful\nlightning bolts launched from the string of orbs on its tail."
+2,10039,38,0,"Landorus soars through the sky in this form, bestowing plentiful\nharvests upon the land and earning the people’s reverence.\nIt can traverse the whole of Hisui in a mere couple of hours."
+2,10072,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
+2,10116,38,0,These Pokémon live in packs in the snowy mountains and defend\nthemselves with icy breath. I suspect this species changed its\nform to adapt to the frigid climate.
 2,10204,38,0,They patrol their territory in pairs. I believe the igneous\nrock components in the fur of this species are the result of\nvolcanic activity in its habitat.
 2,10205,38,0,"Snaps at its foes with fangs cloaked in blazing flame. Despite its\nbulk, it deftly feints every which way, leading opponents on a\ndeceptively merry chase as it all but dances around them."
 2,10206,38,0,"An enigmatic Pokémon that happens to bear a resemblance to a\nPoké Ball. When excited, it discharges the electric current it has\nstored in its belly, then lets out a great, uproarious laugh."
 2,10207,38,0,"The tissue on the surface of its body is curiously similar in\ncomposition to an Apricorn. When irritated, this Pokémon lets\nloose an electric current equal to 20 lightning bolts."
 2,10208,38,0,"Said to purify lost, forsaken souls with its flames and guide them\nto the afterlife. I believe its form has been influenced by the\nenergy of the sacred mountain towering at Hisui’s center."
+2,10209,38,0,"Fishers detest this troublesome Pokémon because it sprays\npoison from its spines, getting it everywhere. A different form\nof Qwilfish lives in other regions."
+2,10210,38,0,"Its sturdy, curved claws are ideal for traversing precipitous cliffs.\nFrom the tips of these claws drips a venom that infiltrates the\nnerves of any prey caught in Sneasel’s grasp."
+2,10211,38,0,Radiant light caused Dialga to take on a form bearing a striking\nresemblance to the creator Pokémon. Dialga now wields such\ncolossal strength that one must conclude this is its true form.
+2,10212,38,0,It soars across the sky in a form that greatly resembles the\ncreator of all things. Perhaps this imitation of appearance is\nPalkia’s strategy for gaining Arceus’s powers.
+2,10213,38,0,"Hard of heart and deft of blade, this rare form of Samurott is\na product of the Pokémon’s evolution in the region of Hisui. Its\nturbulent blows crash into foes like ceaseless pounding waves."
+2,10214,38,0,I suspect that its well-developed legs are the result of a life\nspent on mountains covered in deep snow. The scent it exudes\nfrom its flower crown heartens those in proximity.
+2,10215,38,0,"Though it differs from other Basculin in several respects,\nincluding demeanor—this one is gentle—I have categorized\nit as a regional form given the vast array of shared qualities."
+2,10216,38,0,"A once-departed soul, returned to life in Hisui. Derives power\nfrom resentment, which rises as energy atop its head and takes\non the forms of foes. In this way, Zorua vents lingering malice."
+2,10217,38,0,"With its disheveled white fur, it looks like an embodiment of\ndeath. Heedless of its own safety, Zoroark attacks its nemeses\nwith a bitter energy so intense, it lacerates Zoroark’s own body."
+2,10218,38,0,"Screaming a bloodcurdling battle cry, this huge and ferocious\nbird Pokémon goes out on the hunt. It blasts lakes with shock\nwaves, then scoops up any prey that float to the water’s surface."
+2,10219,38,0,A creature given to melancholy. I suspect its metallic shell\ndeveloped as a result of the mucus on its skin reacting with\nthe iron in Hisui’s water.
+2,10220,38,0,Able to freely control the hardness of its metallic shell.\nIt loathes solitude and is extremely clingy—it will fume and\nrun riot if those dearest to it ever leave its side.
+2,10221,38,0,"The armor of ice covering its lower jaw puts steel to shame and\ncan shatter rocks with ease. This Pokémon barrels along steep\nmountain paths, cleaving through the deep snow."
+2,10222,38,0,The air stored inside the rachises of Decidueye’s feathers\ninsulates the Pokémon against Hisui’s extreme cold. This is\nfirm proof that evolution can be influenced by environment.
+2,10223,38,0,Clads itself in the souls of comrades that perished before\nfulfilling their goals of journeying upstream. No other species\nthroughout all Hisui’s rivers is Basculegion’s equal.
+2,10224,38,0,"A different guise from its feminine humanoid form. From the\nclouds, it descends upon those who treat any form of life with\ndisrespect and metes out wrathful, ruthless punishment."
 2,20001,38,0,It is hard to believe these strangely shaped Pokémon are truly\nliving creatures. I’ve pointed out that the species’ many forms\nresemble writing from other lands; no one will take me seriously.
 2,20002,38,0,It is hard to believe these strangely shaped Pokémon are truly\nliving creatures. I’ve pointed out that the species’ many forms\nresemble writing from other lands; no one will take me seriously.
 2,20003,38,0,It is hard to believe these strangely shaped Pokémon are truly\nliving creatures. I’ve pointed out that the species’ many forms\nresemble writing from other lands; no one will take me seriously.
@@ -569,56 +614,11 @@ language_id,form_id,version_id,is_female,entry
 2,20025,38,0,It is hard to believe these strangely shaped Pokémon are truly\nliving creatures. I’ve pointed out that the species’ many forms\nresemble writing from other lands; no one will take me seriously.
 2,20026,38,0,It is hard to believe these strangely shaped Pokémon are truly\nliving creatures. I’ve pointed out that the species’ many forms\nresemble writing from other lands; no one will take me seriously.
 2,20027,38,0,It is hard to believe these strangely shaped Pokémon are truly\nliving creatures. I’ve pointed out that the species’ many forms\nresemble writing from other lands; no one will take me seriously.
-2,10209,38,0,"Fishers detest this troublesome Pokémon because it sprays\npoison from its spines, getting it everywhere. A different form\nof Qwilfish lives in other regions."
-2,10212,38,0,"Its sturdy, curved claws are ideal for traversing precipitous cliffs.\nFrom the tips of these claws drips a venom that infiltrates the\nnerves of any prey caught in Sneasel’s grasp."
 2,20028,38,0,"It creates a cloak by weaving together sand, mud, and silk it\nhas spat out. This earthen cloak is ruined by wind and rain,\nso the Pokémon hides away in caves and other such places."
 2,20029,38,0,"When confronted by a lack of other materials, Burmy will create\nits cloak using dust and refuse. The cloak seems to be more\ncomfortable than one would think."
-2,10007,38,0,"Its earthen skin is reasonably hard—it has no problem repelling\na Starly’s pecking, at least."
-2,10008,38,0,"Its body, composed of refuse, blends in to the scenery so much\nas to be inconspicuous. This seems to be the perfect way for the\nPokémon to evade the detection of predators."
 2,20030,38,0,"Cheerfully active on sunny days. Immediately closes its petals\nand becomes immobile once the sun becomes hidden, however."
 2,20031,38,0,"Found in abundance on seashores bordering cold waters.\nWhen pressed upon, the Pokémon will secrete from its body’s\nsurface a purple fluid that will stain one’s clothes."
 2,20032,38,0,Found more often on the land than in the sea. More active\nwhen it’s cloudy or rainy out than when the weather is fair.
-2,10026,38,0,"A form in which Rotom lurks within a strange cauldron.\nThe cauldron’s origin is unknown. A bothersome Pokémon,\ncausing trouble with the flames it spits."
-2,10027,38,0,"A form in which Rotom lurks within an odd bureau. The bureau’s\npurpose is unknown. A bothersome Pokémon, causing trouble\nby splashing cold water everywhere."
-2,10028,38,0,"A form in which Rotom lurks within a bizarre cupboard.\nThe cupboard’s composition is unknown. A bothersome\nPokémon, causing trouble by frosting everything over."
-2,10029,38,0,"A form in which Rotom lurks within a mysterious contraption.\nThe contraption’s purpose is unknown. A bothersome Pokémon,\ncausing trouble by stirring up powerful winds."
-2,10030,38,0,"A form in which Rotom lurks within a misshapen wheelbarrow.\nThe wheelbarrow’s mechanisms are bizarre. It’s a bothersome\nPokémon, causing trouble by mowing down grass and trees."
-2,10210,38,0,Radiant light caused Dialga to take on a form bearing a striking\nresemblance to the creator Pokémon. Dialga now wields such\ncolossal strength that one must conclude this is its true form.
-2,10211,38,0,It soars across the sky in a form that greatly resembles the\ncreator of all things. Perhaps this imitation of appearance is\nPalkia’s strategy for gaining Arceus’s powers.
-2,10031,38,0,"Giratina loses its legs upon changing into this form. I believe this\nPokémon must hail from a world where the heavens and the\nearth are as one, though I have no way of proving it."
-2,10032,38,0,"Upon taking in the scent of a particular rare flower, Shaymin is\nenveloped in light, and its tiny body transforms. I took a whiff\nof the flower myself, but alas, my body remained unchanged."
-2,10009,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10010,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10011,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10012,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10013,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10014,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10015,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10016,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10017,38,0,Dwells on sacred peaks perpetually covered in snow. Said to\nappear to virtuous people who have lost their way on mountain\npaths—it then guides them back down to the mountain’s base.
-2,10018,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10019,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10020,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10021,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10022,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10023,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10024,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10072,38,0,It is the heavenly fount from which pours the light that shines\nacross Hisui. Its luminance guides and protects all Pokémon.\nHisuian mythology states that Arceus is the creator of all things.
-2,10213,38,0,"Hard of heart and deft of blade, this rare form of Samurott is\na product of the Pokémon’s evolution in the region of Hisui. Its\nturbulent blows crash into foes like ceaseless pounding waves."
-2,10214,38,0,I suspect that its well-developed legs are the result of a life\nspent on mountains covered in deep snow. The scent it exudes\nfrom its flower crown heartens those in proximity.
-2,10215,38,0,"Though it differs from other Basculin in several respects,\nincluding demeanor—this one is gentle—I have categorized\nit as a regional form given the vast array of shared qualities."
-2,10216,38,0,"A once-departed soul, returned to life in Hisui. Derives power\nfrom resentment, which rises as energy atop its head and takes\non the forms of foes. In this way, Zorua vents lingering malice."
-2,10217,38,0,"With its disheveled white fur, it looks like an embodiment of\ndeath. Heedless of its own safety, Zoroark attacks its nemeses\nwith a bitter energy so intense, it lacerates Zoroark’s own body."
-2,10218,38,0,"Screaming a bloodcurdling battle cry, this huge and ferocious\nbird Pokémon goes out on the hunt. It blasts lakes with shock\nwaves, then scoops up any prey that float to the water’s surface."
-2,10037,38,0,"An example of what is known as a “form change,” though I\nsuspect this strange avian guise to be Tornadus’s true form.\nTornadus has been sighted crossing the ocean while in this form."
-2,10038,38,0,"Quick as a flash, it materializes out of nowhere. It pulverizes\nfoes into nothingness with showers of devastatingly powerful\nlightning bolts launched from the string of orbs on its tail."
-2,10039,38,0,"Landorus soars through the sky in this form, bestowing plentiful\nharvests upon the land and earning the people’s reverence.\nIt can traverse the whole of Hisui in a mere couple of hours."
-2,10219,38,0,A creature given to melancholy. I suspect its metallic shell\ndeveloped as a result of the mucus on its skin reacting with\nthe iron in Hisui’s water.
-2,10220,38,0,Able to freely control the hardness of its metallic shell.\nIt loathes solitude and is extremely clingy—it will fume and\nrun riot if those dearest to it ever leave its side.
-2,10221,38,0,"The armor of ice covering its lower jaw puts steel to shame and\ncan shatter rocks with ease. This Pokémon barrels along steep\nmountain paths, cleaving through the deep snow."
-2,10222,38,0,The air stored inside the rachises of Decidueye’s feathers\ninsulates the Pokémon against Hisui’s extreme cold. This is\nfirm proof that evolution can be influenced by environment.
-2,10223,38,0,Clads itself in the souls of comrades that perished before\nfulfilling their goals of journeying upstream. No other species\nthroughout all Hisui’s rivers is Basculegion’s equal.
-2,10224,38,0,"A different guise from its feminine humanoid form. From the\nclouds, it descends upon those who treat any form of life with\ndisrespect and metes out wrathful, ruthless punishment."
 3,25,38,0,Cet astucieux Pokémon gîte en forêt. Ses bajoues contiennent\ndes poches qui emmagasinent l’électricité dont il se sert pour\ngriller les Baies avant de s’en repaître.
 3,26,38,0,"Ses décharges électriques outrepassent les 100 000 volts.\nUne seule d’entre elles suffirait à assommer un Pachyradjah,\nun Pokémon de ma région natale."
 3,35,38,0,"J’en ai croisé un dans la quiétude des montagnes, une nuit\nde pleine lune. Alors qu’il dansait telle une charmante fée,\nses ailes menues diffusaient une douce lueur."
@@ -845,13 +845,58 @@ language_id,form_id,version_id,is_female,entry
 3,903,38,0,"Ce Pokémon n’a guère d’ennemis sur les hauteurs froidies,\ncar ses aptitudes physiques sont sans égales et son poison\nest mortel. Il préfère la solitude à la vie en groupe."
 3,904,38,0,Ses épines semblables à des lances et sa nature violente lui\nvalent le sobriquet « d’ogre des océans ». Il se repaît du poison\nqu’il aspire.
 3,905,38,0,Son arrivée par les mers annonce la fin des hivers rigoureux.\nOn raconte que c’est l’amour que ce Pokémon ressent qui fait\nbourgeonner de nouvelles vies dans la région de Hisui.
-3,10116,38,0,Ces Pokémon vivent en groupe dans les montagnes enneigées\net utilisent leur souffle glacé pour se protéger. Je pense\nqu’ils ont adopté cette forme pour s’adapter au climat froid.
+3,10007,38,0,Son épiderme de sable et de boue très solide peut aisément\nrepousser les coups de bec des Étourmi.
+3,10008,38,0,"Ce Pokémon passe inaperçu, car son corps constitué de détritus\nse fond dans le paysage. Il n’y a guère d’ensemble plus indiqué\npour échapper aux prédateurs."
+3,10009,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10010,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10011,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10012,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10013,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10014,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10015,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10016,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
 3,10017,38,0,Il habite les sommets sacrés couverts de neige éternelle.\nOn raconte qu’il se montre aux personnes vertueuses\négarées pour les guider au pied de la montagne.
+3,10017,38,0,Il habite les sommets sacrés couverts de neige éternelle.\nOn raconte qu’il se montre aux personnes vertueuses\négarées pour les guider au pied de la montagne.
+3,10018,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10019,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10020,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10021,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10022,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10023,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10024,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10026,38,0,"Ce Pokémon a pris cette forme en se cachant dans une curieuse\nmarmite dont j’ignore la provenance. De nature espiègle,\nil cause de nombreux ennuis en crachant des flammes."
+3,10027,38,0,"Ce Pokémon a pris cette forme en se cachant dans une armoire\ninsolite dont j’ignore la fonction. De nature espiègle, il cause\nde nombreux ennuis en projetant de l’eau froide."
+3,10028,38,0,"Ce Pokémon a pris cette forme en se cachant dans un placard\nhétéroclite aux matériaux inconnus. De nature espiègle, il cause\nde nombreux ennuis avec le givre qu’il produit."
+3,10029,38,0,"Ce Pokémon a pris cette forme en se cachant dans un engin\nmystérieux dont j’ignore la fonction. De nature espiègle,\nil cause de nombreux ennuis en soufflant des bourrasques."
+3,10030,38,0,"Ce Pokémon a pris cette forme en se cachant dans une brouette\nétrange aux mécanismes mystérieux. De nature espiègle, il cause\nde nombreux ennuis en fauchant la végétation."
+3,10031,38,0,"Il perd ses pattes lorsqu’il adopte cette forme. Je pense\nqu’il gîte dans un monde où ciel et terre ne font qu’un,\nmais je ne dispose d’aucun moyen de le prouver."
+3,10032,38,0,"Dès lors qu’il hume le parfum d’une fleur rare bien particulière,\nson corps menu s’illumine, et il change de forme. J’ai, moi aussi,\ntenté de humer cette fleur, mais il ne s’est rien produit..."
+3,10037,38,0,Un changement de forme lui a conféré cette apparence d’oiseau\nmonstrueux. Je pense cependant que c’est son aspect originel.\nIl aurait été aperçu sous cette forme quand il traversait l’océan.
+3,10038,38,0,"Ce Pokémon se révèle quand le tonnerre gronde. Il fait pleuvoir\ndes éclairs d’une puissance démesurée depuis les orbes sur\nsa queue, et réduit ses ennemis à néant."
+3,10039,38,0,"Le peuple vénère ce Pokémon, car il assure la fertilité des terres\nqu’il survole sous sa Forme Totémique. Il peut traverser toute\nla région de Hisui en seulement quelques heures."
+3,10072,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
+3,10116,38,0,Ces Pokémon vivent en groupe dans les montagnes enneigées\net utilisent leur souffle glacé pour se protéger. Je pense\nqu’ils ont adopté cette forme pour s’adapter au climat froid.
 3,10204,38,0,Ils patrouillent sur leur territoire en duo. Je pense que les roches\nmagmatiques qui constituent en partie leur toison sont liées à\nl’activité volcanique.
 3,10205,38,0,"Il inflige des morsures grâce à ses canines enveloppées de\nflammes ardentes. Malgré sa grande taille, il est très agile :\nil semble danser autour de ses ennemis déconcertés."
 3,10206,38,0,"Ce Pokémon mystérieux ressemble étrangement à une Poké Ball.\nLorsqu’il est agité, il relâche le courant électrique emmagasiné\ndans son abdomen et laisse échapper des éclats de rire."
 3,10207,38,0,"Son enveloppe corporelle est étrangement semblable à celle\ndes Noigrumes. S’il est irrité, il relâche un courant électrique\ndont l’intensité atteint vingt fois celle de la foudre."
 3,10208,38,0,On dit qu’il purifie les âmes perdues à l’aide de ses flammes\navant de les envoyer dans l’au-delà. Je pense que sa forme est\ninfluencée par la montagne sacrée située au cœur de Hisui.
+3,10209,38,0,"Les pêcheurs exècrent les Qwilfish, car leurs épines expulsent\ndes toxines. Les spécimens d’autres régions se présentent sous\nune forme dissemblable."
+3,10210,38,0,La forme de ses griffes puissantes lui procure un avantage pour\nescalader les précipices escarpés. Le poison qui flue de leur\nextrémité agit sur les nerfs des proies capturées par Farfuret.
+3,10211,38,0,La lumière lui a donné cette forme semblable à celle du créateur\nde toutes choses. La force qu’il déploie est telle que je ne peux\nm’empêcher de penser qu’il est sous sa forme véritable.
+3,10212,38,0,Cette forme qui sillonne les cieux me fait penser au créateur de\ntoutes choses. Je pense qu’épouser cette apparence prodigue\nà Palkia les pouvoirs du créateur.
+3,10213,38,0,Cette fine lame au tempérament impitoyable est une évolution\nrare qui ne se produit qu’à Hisui. Ses attaques sont aussi\nravageuses que les vagues déferlantes.
+3,10214,38,0,Je spécule que ce Pokémon doit ses jambes musclées à son\nhabitat dans les montagnes couvertes de neige épaisse. La fleur\nsur sa couronne exhale un parfum stimulant tout être alentour.
+3,10215,38,0,"Bien qu’il diffère des autres Bargantua par bien des aspects,\nnotamment son tempérament pacifique, les nombreux traits qu’ils\npartagent me font penser que celui-ci est une forme régionale."
+3,10216,38,0,"Zorua serait une âme disparue, ressuscitée à Hisui. Sa rancœur\némane sous forme d’énergie au-dessus de sa tête, puis adopte\nl’apparence de ses ennemis, et finit par se dissiper."
+3,10217,38,0,"Sa crinière blanche échevelée lui donne l’allure d’un dieu de\nla mort. Le ressentiment qu’il éprouve le déchire physiquement,\nmais lui donne une énergie telle qu’elle peut occire tout ennemi."
+3,10218,38,0,"De taille imposante, ce preux volatile chasse en lançant de\nterribles cris de guerre. Il propage des ondes de choc dans\nles lacs, puis se saisit des proies remontées à la surface."
+3,10219,38,0,Ce Pokémon est de nature plutôt mélancolique. Je spécule que\nle fer contenu dans les eaux de Hisui a agi sur son mucus\népidermique et a changé sa peau en carapace de métal.
+3,10220,38,0,Il peut moduler la rigidité de sa carapace de métal à volonté.\nIl abhorre la solitude et enrage si un être qu’il affectionne\nprofondément l’abandonne.
+3,10221,38,0,L’armure de glace qui enveloppe sa mâchoire inférieure peut\nbriser des rocs plus durs que l’acier. Il se meut vélocement\nen fendant la neige épaisse des chemins de montagne.
+3,10222,38,0,Les plumes d’Archéduc le protègent de la froideur glaciale\nde Hisui grâce à l’air logé dans leur tige. Voici une preuve\nque l’environnement agit sur l’évolution des Pokémon.
+3,10223,38,0,"Ce Pokémon revêt les âmes de ses camarades qui ont péri\nen remontant les rivières. Dans les fleuves qui traversent Hisui,\naucune autre espèce n’est à sa mesure."
+3,10224,38,0,Ce Pokémon quitte son apparence de femme et revêt cette\nforme avant de se révéler entre les nuages pour châtier ceux\nqui négligent les êtres vivants. Sa colère est implacable.
 3,20001,38,0,Ce Pokémon à l’apparence singulière existe sous moult formes.\nJe semble être le seul à penser que ces dernières rappellent\nun alphabet étranger.
 3,20002,38,0,Ce Pokémon à l’apparence singulière existe sous moult formes.\nJe semble être le seul à penser que ces dernières rappellent\nun alphabet étranger.
 3,20003,38,0,Ce Pokémon à l’apparence singulière existe sous moult formes.\nJe semble être le seul à penser que ces dernières rappellent\nun alphabet étranger.
@@ -879,56 +924,11 @@ language_id,form_id,version_id,is_female,entry
 3,20025,38,0,Ce Pokémon à l’apparence singulière existe sous moult formes.\nJe semble être le seul à penser que ces dernières rappellent\nun alphabet étranger.
 3,20026,38,0,Ce Pokémon à l’apparence singulière existe sous moult formes.\nJe semble être le seul à penser que ces dernières rappellent\nun alphabet étranger.
 3,20027,38,0,Ce Pokémon à l’apparence singulière existe sous moult formes.\nJe semble être le seul à penser que ces dernières rappellent\nun alphabet étranger.
-3,10209,38,0,"Les pêcheurs exècrent les Qwilfish, car leurs épines expulsent\ndes toxines. Les spécimens d’autres régions se présentent sous\nune forme dissemblable."
-3,10212,38,0,La forme de ses griffes puissantes lui procure un avantage pour\nescalader les précipices escarpés. Le poison qui flue de leur\nextrémité agit sur les nerfs des proies capturées par Farfuret.
 3,20028,38,0,"Il pétrit du sable et de la boue avec les fils de soie qu’il génère\npour se confectionner une cape. Mais le vent et la pluie pouvant\nabîmer celle-ci, Cheniti se cache dans les crevasses et les grottes."
 3,20029,38,0,"Lorsqu’il ne trouve pas de matière première adéquate pour\nconfectionner sa cape, il utilise des détritus. Sa cape est\nd’ailleurs bien plus douillette qu’elle n’y paraît."
-3,10007,38,0,Son épiderme de sable et de boue très solide peut aisément\nrepousser les coups de bec des Étourmi.
-3,10008,38,0,"Ce Pokémon passe inaperçu, car son corps constitué de détritus\nse fond dans le paysage. Il n’y a guère d’ensemble plus indiqué\npour échapper aux prédateurs."
 3,20030,38,0,"Il devient très actif dès lors que le temps est ensoleillé.\nSitôt que le ciel s’ennuage, il se love dans ses pétales\net ne remue plus d’une feuille."
 3,20031,38,0,"Ce Pokémon gîte près des étendues d’eau froide.\nSi on le caresse trop vigoureusement, sa peau sécrète\nun liquide mauve qui tache les vêtements."
 3,20032,38,0,On observe davantage ce Pokémon sur terre qu’en mer.\nIl est plus actif lorsque le temps est pluvieux ou couvert\nque lorsqu’il fait beau.
-3,10026,38,0,"Ce Pokémon a pris cette forme en se cachant dans une curieuse\nmarmite dont j’ignore la provenance. De nature espiègle,\nil cause de nombreux ennuis en crachant des flammes."
-3,10027,38,0,"Ce Pokémon a pris cette forme en se cachant dans une armoire\ninsolite dont j’ignore la fonction. De nature espiègle, il cause\nde nombreux ennuis en projetant de l’eau froide."
-3,10028,38,0,"Ce Pokémon a pris cette forme en se cachant dans un placard\nhétéroclite aux matériaux inconnus. De nature espiègle, il cause\nde nombreux ennuis avec le givre qu’il produit."
-3,10029,38,0,"Ce Pokémon a pris cette forme en se cachant dans un engin\nmystérieux dont j’ignore la fonction. De nature espiègle,\nil cause de nombreux ennuis en soufflant des bourrasques."
-3,10030,38,0,"Ce Pokémon a pris cette forme en se cachant dans une brouette\nétrange aux mécanismes mystérieux. De nature espiègle, il cause\nde nombreux ennuis en fauchant la végétation."
-3,10210,38,0,La lumière lui a donné cette forme semblable à celle du créateur\nde toutes choses. La force qu’il déploie est telle que je ne peux\nm’empêcher de penser qu’il est sous sa forme véritable.
-3,10211,38,0,Cette forme qui sillonne les cieux me fait penser au créateur de\ntoutes choses. Je pense qu’épouser cette apparence prodigue\nà Palkia les pouvoirs du créateur.
-3,10031,38,0,"Il perd ses pattes lorsqu’il adopte cette forme. Je pense\nqu’il gîte dans un monde où ciel et terre ne font qu’un,\nmais je ne dispose d’aucun moyen de le prouver."
-3,10032,38,0,"Dès lors qu’il hume le parfum d’une fleur rare bien particulière,\nson corps menu s’illumine, et il change de forme. J’ai, moi aussi,\ntenté de humer cette fleur, mais il ne s’est rien produit..."
-3,10009,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10010,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10011,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10012,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10013,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10014,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10015,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10016,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10017,38,0,Il habite les sommets sacrés couverts de neige éternelle.\nOn raconte qu’il se montre aux personnes vertueuses\négarées pour les guider au pied de la montagne.
-3,10018,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10019,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10020,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10021,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10022,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10023,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10024,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10072,38,0,"Il est celui qui illumine Hisui depuis les cieux. Il protège et guide\nles Pokémon de sa lumière. Selon les mythes de la région, il est\nle créateur de toutes choses."
-3,10213,38,0,Cette fine lame au tempérament impitoyable est une évolution\nrare qui ne se produit qu’à Hisui. Ses attaques sont aussi\nravageuses que les vagues déferlantes.
-3,10214,38,0,Je spécule que ce Pokémon doit ses jambes musclées à son\nhabitat dans les montagnes couvertes de neige épaisse. La fleur\nsur sa couronne exhale un parfum stimulant tout être alentour.
-3,10215,38,0,"Bien qu’il diffère des autres Bargantua par bien des aspects,\nnotamment son tempérament pacifique, les nombreux traits qu’ils\npartagent me font penser que celui-ci est une forme régionale."
-3,10216,38,0,"Zorua serait une âme disparue, ressuscitée à Hisui. Sa rancœur\némane sous forme d’énergie au-dessus de sa tête, puis adopte\nl’apparence de ses ennemis, et finit par se dissiper."
-3,10217,38,0,"Sa crinière blanche échevelée lui donne l’allure d’un dieu de\nla mort. Le ressentiment qu’il éprouve le déchire physiquement,\nmais lui donne une énergie telle qu’elle peut occire tout ennemi."
-3,10218,38,0,"De taille imposante, ce preux volatile chasse en lançant de\nterribles cris de guerre. Il propage des ondes de choc dans\nles lacs, puis se saisit des proies remontées à la surface."
-3,10037,38,0,Un changement de forme lui a conféré cette apparence d’oiseau\nmonstrueux. Je pense cependant que c’est son aspect originel.\nIl aurait été aperçu sous cette forme quand il traversait l’océan.
-3,10038,38,0,"Ce Pokémon se révèle quand le tonnerre gronde. Il fait pleuvoir\ndes éclairs d’une puissance démesurée depuis les orbes sur\nsa queue, et réduit ses ennemis à néant."
-3,10039,38,0,"Le peuple vénère ce Pokémon, car il assure la fertilité des terres\nqu’il survole sous sa Forme Totémique. Il peut traverser toute\nla région de Hisui en seulement quelques heures."
-3,10219,38,0,Ce Pokémon est de nature plutôt mélancolique. Je spécule que\nle fer contenu dans les eaux de Hisui a agi sur son mucus\népidermique et a changé sa peau en carapace de métal.
-3,10220,38,0,Il peut moduler la rigidité de sa carapace de métal à volonté.\nIl abhorre la solitude et enrage si un être qu’il affectionne\nprofondément l’abandonne.
-3,10221,38,0,L’armure de glace qui enveloppe sa mâchoire inférieure peut\nbriser des rocs plus durs que l’acier. Il se meut vélocement\nen fendant la neige épaisse des chemins de montagne.
-3,10222,38,0,Les plumes d’Archéduc le protègent de la froideur glaciale\nde Hisui grâce à l’air logé dans leur tige. Voici une preuve\nque l’environnement agit sur l’évolution des Pokémon.
-3,10223,38,0,"Ce Pokémon revêt les âmes de ses camarades qui ont péri\nen remontant les rivières. Dans les fleuves qui traversent Hisui,\naucune autre espèce n’est à sa mesure."
-3,10224,38,0,Ce Pokémon quitte son apparence de femme et revêt cette\nforme avant de se révéler entre les nuages pour châtier ceux\nqui négligent les êtres vivants. Sa colère est implacable.
 4,25,38,0,"Dieser kluge Waldbewohner nutzt die Elektrizität, die er in\nseinen Backentaschen speichert, um harte Beeren zu braten\nund sie so verspeisen zu können."
 4,26,38,0,"Raichu kann elektrische Ladungen freisetzen, die 100 000 V\nübersteigen. Solch eine Kraft reicht aus, um ein Patinaraja\naus meiner Heimat zu Fall zu bringen."
 4,35,38,0,In Vollmondnächten kann man es in ruhigen Bergregionen\nantreffen. Das sanfte Leuchten seiner Flügelchen verleiht\nihm beim Tanzen einen feenhaften Liebreiz.
@@ -1155,13 +1155,58 @@ language_id,form_id,version_id,is_female,entry
 4,903,38,0,"Im frostigen Hochland kann diesem Einzelgänger kein anderes\nPokémon das Wasser reichen, da er neben hochwirksamem Gift\nüber herausragende körperliche Fähigkeiten verfügt."
 4,904,38,0,"Sein brutales Wesen sowie die speergleichen Stacheln haben\nihm den Beinamen „Meeresdämon“ beschert. Es schlürft Gift,\ndas ihm als Nahrung dient."
 4,905,38,0,"Kommt es übers Meer geflogen, neigt sich der harsche Winter\ndem Ende zu. Der Volksmund sagt, dass dank seiner Liebe\nneues Leben in Hisui Knospen treibe."
-4,10116,38,0,Es lebt in Rudeln auf schneebedeckten Bergen und setzt zur\nVerteidigung seinen eiskalten Atem ein. Vermutlich änderte sich\nseine Gestalt als Anpassung an das frostige Klima.
+4,10007,38,0,"Seine sandige Haut ist so hart, dass etwaige Schnabelangriffe\nvon Staralili mühelos an ihr abprallen."
+4,10008,38,0,"Da der Unrat, der Teil seines Körpers ist, mit der Umgebung\nverschmilzt, fällt es nicht auf. So ist es perfekt vor den Blicken\nseiner Fressfeinde geschützt."
+4,10009,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10010,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10011,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10012,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10013,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10014,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10015,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10016,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
 4,10017,38,0,"Es bewohnt heilige Berge, die mit ewigem Schnee bedeckt sind.\nMan sagt, es zeige sich gutherzigen Menschen, die sich\nverlaufen haben, um sie zum Fuße des Berges zu geleiten."
+4,10017,38,0,"Es bewohnt heilige Berge, die mit ewigem Schnee bedeckt sind.\nMan sagt, es zeige sich gutherzigen Menschen, die sich\nverlaufen haben, um sie zum Fuße des Berges zu geleiten."
+4,10018,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10019,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10020,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10021,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10022,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10023,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10024,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10026,38,0,"Es haust in einem merkwürdigen Kessel, dessen Ursprung\nunbekannt ist. Dieser Unruhestifter treibt gerne Schabernack,\nindem er Feuer speit."
+4,10027,38,0,"Es haust in einer sonderbaren Kommode, deren eigentlicher\nVerwendungszweck unbekannt ist. Dieser Unruhestifter treibt\ngerne Schabernack, indem er kaltes Wasser verspritzt."
+4,10028,38,0,"Es haust in einem eigenartigen Schrank, der aus unbekanntem\nMaterial gefertigt wurde. Dieser Unruhestifter treibt gerne\nSchabernack, indem er Frost erzeugt."
+4,10029,38,0,"Es haust in einer rätselhaften Vorrichtung, deren Zweck\nunbekannt ist. Dieser Unruhestifter treibt gerne Schabernack,\nindem er starke Winde erzeugt."
+4,10030,38,0,"Es haust in einer seltsamen Schubkarre, deren Bedienung\nRätsel aufgibt. Dieser Unruhestifter treibt gerne Schabernack,\nindem er Gräser und Pflanzen abmäht."
+4,10031,38,0,"Durch den Formwandel verliert es seine Beine. Dieses Pokémon\nmuss wohl in einer Welt leben, in der Himmel und Erde eins\nsind, jedoch ist es mir nicht möglich, dies nachzuweisen."
+4,10032,38,0,"Riecht es an einer bestimmten seltenen Blume, wird sein kleiner\nKörper von Licht umhüllt und vollzieht einen Formwandel.\nAuf mich hatte das Riechen dieser Blume indes keinen Effekt."
+4,10037,38,0,"Ein Beispiel für das Phänomen des Formwandels. Anscheinend\nhandelt es sich bei dieser seltsamen vogelähnlichen Gestalt,\ndie über dem Meer gesichtet wurde, um sein wahres Antlitz."
+4,10038,38,0,"Es erscheint aus dem Nichts mit der Wucht von Blitz und Donner\nund pulverisiert Feinde mittels mächtiger Blitze, die es aus den\naneinandergereihten Kugeln an seiner Rute herabregnen lässt."
+4,10039,38,0,"Die Menschen verehren es, da es das Land mit Fruchtbarkeit\nsegnet, während es in seiner Tiergeistform durch die Lüfte\ngleitet. Es vermag ganz Hisui in zwei Stunden zu durchqueren."
+4,10072,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
+4,10116,38,0,Es lebt in Rudeln auf schneebedeckten Bergen und setzt zur\nVerteidigung seinen eiskalten Atem ein. Vermutlich änderte sich\nseine Gestalt als Anpassung an das frostige Klima.
 4,10204,38,0,"Sie patrouillieren ihr Revier zu zweit. In ihrem Fell lassen sich\nKomponenten von Magmagestein finden, was vermutlich auf\nvulkanische Aktivität innerhalb ihres Habitats verweist."
 4,10205,38,0,"Dieser Meister der Finten schnappt mit Fangzähnen zu, die in\nlodernde Flammen gehüllt sind. Ungeachtet seiner großen Statur\nnarrt er Feinde mit leichtfüßigen, tänzelnden Bewegungen."
 4,10206,38,0,"Ein rätselhaftes Pokémon, das rein zufällig einem Pokéball\nähnelt. Je mehr Aufregung es verspürt, desto mehr seiner im\nBauch gelagerten Elektrizität setzt es herzhaft lachend frei."
 4,10207,38,0,"Sonderbarerweise ähnelt seine Körperoberfläche der einer\nAprikoko. Die elektrische Kraft, die es bei Frustration entlädt,\ngleicht der von zwanzig Blitzen."
 4,10208,38,0,"Ich vermute, dass die Energie des heiligen Berges im Zentrum\nHisuis sein Äußeres beeinflusst hat. Es heißt, es reinige verlorene\nSeelen in seinen Flammen, um sie sodann ins Jenseits zu führen."
+4,10209,38,0,"Fischer verabscheuen dieses Pokémon, da es über seine Stacheln\nGift abgibt. In anderen Regionen ansässige Exemplare weisen\neine unterschiedliche Form auf."
+4,10210,38,0,"Seine robusten Krallen eignen sich ideal dazu, steile Felswände\nzu erklimmen. Von den Spitzen tropft Gift, welches die Nerven\nseiner Beute lähmt."
+4,10211,38,0,"Licht lässt es eine Form annehmen, die der Schöpfergottheit\nzu gleichen scheint. Die gewaltige Stärke nährt den Verdacht,\ndass es sich bei dieser Gestalt um sein wahres Antlitz handelt."
+4,10212,38,0,"Dem Schöpfer aller Dinge gleich gleitet es über das Himmelszelt.\nWomöglich gebärdet es sich auf diese Weise, um sich die Macht\nder Schöpfergottheit zu eigen zu machen."
+4,10213,38,0,"Unbarmherzig, doch meisterhaft im Umgang mit dem Schwert,\nlässt es seine Hiebe auf Gegner hereinbrechen wie Wellen in\nder Brandung. Diese seltene Form entwickelte sich in Hisui."
+4,10214,38,0,Die starke Beinmuskulatur verdankt es wohl dem Leben auf\nschneebedeckten Bergen. Über seine Blumenkrone verströmt\nes stimulierende Düfte.
+4,10215,38,0,"Trotz mancher Unterschiede, wie etwa des sanften Wesens, weist\nes etliche Gemeinsamkeiten mit Barschuft auf. Infolgedessen\nhabe ich es als Regionalform dieses Pokémon eingeordnet."
+4,10216,38,0,"Eine verstorbene Seele, die in Hisui zu neuem Leben erwachte.\nGroll verleiht ihm Kraft und quillt aus seinem Kopf, um als Ventil\nfür den eigenen Hass die Gestalt seiner Feinde anzunehmen."
+4,10217,38,0,"Durch die zerzauste weiße Mähne gleicht es Gevatter Tod.\nGetrieben von bitterem Groll, von dem es selbst zerfressen wird,\nstreckt es Feinde ohne Rücksicht auf das eigene Leben nieder."
+4,10218,38,0,"Mit entsetzlichem Kampfgeschrei geht dieses erbarmungslose,\nriesige Vogel-Pokémon auf Jagd. Es erzeugt Stoßwellen über\nSeen, um sodann die emportreibende Beute zu ergreifen."
+4,10219,38,0,Es ist von düsterem Gemüt und verdankt sein Metallgehäuse\nwohl der chemischen Reaktion zwischen dem Schleim auf seiner\nHaut und dem eisenhaltigen Wasser Hisuis.
+4,10220,38,0,"Es ist imstande, die Härte seines Metallgehäuses nach Belieben\nzu regulieren. Alleinsein missfällt ihm und so wird es von wildem\nZorn gepackt, wenn jemand ihm Liebes es zu verlassen gedenkt."
+4,10221,38,0,"Der Eispanzer, der seinen Kiefer bedeckt, ist härter als Stahl und\nkann mühelos Felsgestein zermalmen. Ungestüm prescht es\nsteile Bergpfade empor, indem es sich durch den Schnee pflügt."
+4,10222,38,0,"Die Kiele seiner Federn enthalten Luft und erlauben es ihm so,\nder extremen Kälte Hisuis zu trotzen. Ein eindeutiger Beweis\ndafür, dass die Umwelt Einfluss auf die Entwicklung haben kann!"
+4,10223,38,0,"Es hüllt sich in die Seelen von Artgenossen, die auf der Reise\nstromaufwärts ihr Leben ließen. In den Flüssen Hisuis findet sich\nkein Lebewesen, welches ihm das Wasser reichen könnte."
+4,10224,38,0,"Es hat seine weibliche Gestalt abgelegt und stößt aus dem\nWolkenmeer herab, um all jene mit unerbittlichem Zorn\nzu strafen, die das Leben anderer nicht achten."
 4,20001,38,0,"Es ist kaum zu glauben, dass es sich bei diesem Pokémon um ein\nLebewesen handelt. Mir scheint, seine vielen Formen ähneln\nfremden Schriftzeichen, doch meine Theorie findet kein Gehör."
 4,20002,38,0,"Es ist kaum zu glauben, dass es sich bei diesem Pokémon um ein\nLebewesen handelt. Mir scheint, seine vielen Formen ähneln\nfremden Schriftzeichen, doch meine Theorie findet kein Gehör."
 4,20003,38,0,"Es ist kaum zu glauben, dass es sich bei diesem Pokémon um ein\nLebewesen handelt. Mir scheint, seine vielen Formen ähneln\nfremden Schriftzeichen, doch meine Theorie findet kein Gehör."
@@ -1189,56 +1234,11 @@ language_id,form_id,version_id,is_female,entry
 4,20025,38,0,"Es ist kaum zu glauben, dass es sich bei diesem Pokémon um ein\nLebewesen handelt. Mir scheint, seine vielen Formen ähneln\nfremden Schriftzeichen, doch meine Theorie findet kein Gehör."
 4,20026,38,0,"Es ist kaum zu glauben, dass es sich bei diesem Pokémon um ein\nLebewesen handelt. Mir scheint, seine vielen Formen ähneln\nfremden Schriftzeichen, doch meine Theorie findet kein Gehör."
 4,20027,38,0,"Es ist kaum zu glauben, dass es sich bei diesem Pokémon um ein\nLebewesen handelt. Mir scheint, seine vielen Formen ähneln\nfremden Schriftzeichen, doch meine Theorie findet kein Gehör."
-4,10209,38,0,"Fischer verabscheuen dieses Pokémon, da es über seine Stacheln\nGift abgibt. In anderen Regionen ansässige Exemplare weisen\neine unterschiedliche Form auf."
-4,10212,38,0,"Seine robusten Krallen eignen sich ideal dazu, steile Felswände\nzu erklimmen. Von den Spitzen tropft Gift, welches die Nerven\nseiner Beute lähmt."
 4,20028,38,0,"Es speit Fäden aus, die es mit Sand und Schlamm zu einem\nUmhang verarbeitet. Dieser ist jedoch nicht sehr wetterfest,\nweshalb es Schutz in Höhlen und dergleichen sucht."
 4,20029,38,0,"Findet es kein brauchbares Material, so fertigt es sich einen\nUmhang aus Unrat an, der sich dem Anschein nach als\nerstaunlich bequem erweist."
-4,10007,38,0,"Seine sandige Haut ist so hart, dass etwaige Schnabelangriffe\nvon Staralili mühelos an ihr abprallen."
-4,10008,38,0,"Da der Unrat, der Teil seines Körpers ist, mit der Umgebung\nverschmilzt, fällt es nicht auf. So ist es perfekt vor den Blicken\nseiner Fressfeinde geschützt."
 4,20030,38,0,"Bei Sonnenschein ist es äußerst rege, doch sobald Wolken\naufziehen, schließt es umgehend seine Blütenblätter und\nbewegt sich nicht mehr."
 4,20031,38,0,"In kalten Küstengewässern trifft man es in großer Zahl an.\nWird es unsanft angefasst, tritt eine purpurne Flüssigkeit aus\nseinem Körper aus, die Kleidung verfärbt."
 4,20032,38,0,Es wird häufiger an Land gesichtet als im Meer. Bei bewölktem\nHimmel oder Regenwetter ist es aktiver als bei Sonnenschein.
-4,10026,38,0,"Es haust in einem merkwürdigen Kessel, dessen Ursprung\nunbekannt ist. Dieser Unruhestifter treibt gerne Schabernack,\nindem er Feuer speit."
-4,10027,38,0,"Es haust in einer sonderbaren Kommode, deren eigentlicher\nVerwendungszweck unbekannt ist. Dieser Unruhestifter treibt\ngerne Schabernack, indem er kaltes Wasser verspritzt."
-4,10028,38,0,"Es haust in einem eigenartigen Schrank, der aus unbekanntem\nMaterial gefertigt wurde. Dieser Unruhestifter treibt gerne\nSchabernack, indem er Frost erzeugt."
-4,10029,38,0,"Es haust in einer rätselhaften Vorrichtung, deren Zweck\nunbekannt ist. Dieser Unruhestifter treibt gerne Schabernack,\nindem er starke Winde erzeugt."
-4,10030,38,0,"Es haust in einer seltsamen Schubkarre, deren Bedienung\nRätsel aufgibt. Dieser Unruhestifter treibt gerne Schabernack,\nindem er Gräser und Pflanzen abmäht."
-4,10210,38,0,"Licht lässt es eine Form annehmen, die der Schöpfergottheit\nzu gleichen scheint. Die gewaltige Stärke nährt den Verdacht,\ndass es sich bei dieser Gestalt um sein wahres Antlitz handelt."
-4,10211,38,0,"Dem Schöpfer aller Dinge gleich gleitet es über das Himmelszelt.\nWomöglich gebärdet es sich auf diese Weise, um sich die Macht\nder Schöpfergottheit zu eigen zu machen."
-4,10031,38,0,"Durch den Formwandel verliert es seine Beine. Dieses Pokémon\nmuss wohl in einer Welt leben, in der Himmel und Erde eins\nsind, jedoch ist es mir nicht möglich, dies nachzuweisen."
-4,10032,38,0,"Riecht es an einer bestimmten seltenen Blume, wird sein kleiner\nKörper von Licht umhüllt und vollzieht einen Formwandel.\nAuf mich hatte das Riechen dieser Blume indes keinen Effekt."
-4,10009,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10010,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10011,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10012,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10013,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10014,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10015,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10016,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10017,38,0,"Es bewohnt heilige Berge, die mit ewigem Schnee bedeckt sind.\nMan sagt, es zeige sich gutherzigen Menschen, die sich\nverlaufen haben, um sie zum Fuße des Berges zu geleiten."
-4,10018,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10019,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10020,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10021,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10022,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10023,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10024,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10072,38,0,"Quell des Lichts, das Hisui vom Himmelszelt aus erleuchtet und\nden Pokémon gleichsam als Schutz und Führung dient. In den\nMythen Hisuis wird es als Schöpfer aller Dinge besungen."
-4,10213,38,0,"Unbarmherzig, doch meisterhaft im Umgang mit dem Schwert,\nlässt es seine Hiebe auf Gegner hereinbrechen wie Wellen in\nder Brandung. Diese seltene Form entwickelte sich in Hisui."
-4,10214,38,0,Die starke Beinmuskulatur verdankt es wohl dem Leben auf\nschneebedeckten Bergen. Über seine Blumenkrone verströmt\nes stimulierende Düfte.
-4,10215,38,0,"Trotz mancher Unterschiede, wie etwa des sanften Wesens, weist\nes etliche Gemeinsamkeiten mit Barschuft auf. Infolgedessen\nhabe ich es als Regionalform dieses Pokémon eingeordnet."
-4,10216,38,0,"Eine verstorbene Seele, die in Hisui zu neuem Leben erwachte.\nGroll verleiht ihm Kraft und quillt aus seinem Kopf, um als Ventil\nfür den eigenen Hass die Gestalt seiner Feinde anzunehmen."
-4,10217,38,0,"Durch die zerzauste weiße Mähne gleicht es Gevatter Tod.\nGetrieben von bitterem Groll, von dem es selbst zerfressen wird,\nstreckt es Feinde ohne Rücksicht auf das eigene Leben nieder."
-4,10218,38,0,"Mit entsetzlichem Kampfgeschrei geht dieses erbarmungslose,\nriesige Vogel-Pokémon auf Jagd. Es erzeugt Stoßwellen über\nSeen, um sodann die emportreibende Beute zu ergreifen."
-4,10037,38,0,"Ein Beispiel für das Phänomen des Formwandels. Anscheinend\nhandelt es sich bei dieser seltsamen vogelähnlichen Gestalt,\ndie über dem Meer gesichtet wurde, um sein wahres Antlitz."
-4,10038,38,0,"Es erscheint aus dem Nichts mit der Wucht von Blitz und Donner\nund pulverisiert Feinde mittels mächtiger Blitze, die es aus den\naneinandergereihten Kugeln an seiner Rute herabregnen lässt."
-4,10039,38,0,"Die Menschen verehren es, da es das Land mit Fruchtbarkeit\nsegnet, während es in seiner Tiergeistform durch die Lüfte\ngleitet. Es vermag ganz Hisui in zwei Stunden zu durchqueren."
-4,10219,38,0,Es ist von düsterem Gemüt und verdankt sein Metallgehäuse\nwohl der chemischen Reaktion zwischen dem Schleim auf seiner\nHaut und dem eisenhaltigen Wasser Hisuis.
-4,10220,38,0,"Es ist imstande, die Härte seines Metallgehäuses nach Belieben\nzu regulieren. Alleinsein missfällt ihm und so wird es von wildem\nZorn gepackt, wenn jemand ihm Liebes es zu verlassen gedenkt."
-4,10221,38,0,"Der Eispanzer, der seinen Kiefer bedeckt, ist härter als Stahl und\nkann mühelos Felsgestein zermalmen. Ungestüm prescht es\nsteile Bergpfade empor, indem es sich durch den Schnee pflügt."
-4,10222,38,0,"Die Kiele seiner Federn enthalten Luft und erlauben es ihm so,\nder extremen Kälte Hisuis zu trotzen. Ein eindeutiger Beweis\ndafür, dass die Umwelt Einfluss auf die Entwicklung haben kann!"
-4,10223,38,0,"Es hüllt sich in die Seelen von Artgenossen, die auf der Reise\nstromaufwärts ihr Leben ließen. In den Flüssen Hisuis findet sich\nkein Lebewesen, welches ihm das Wasser reichen könnte."
-4,10224,38,0,"Es hat seine weibliche Gestalt abgelegt und stößt aus dem\nWolkenmeer herab, um all jene mit unerbittlichem Zorn\nzu strafen, die das Leben anderer nicht achten."
 5,25,38,0,Creatura dal sopraffine intelletto che dimora nei boschi.\nAdopra l’elettricità che stiva nelle sacche delle gote per\ntostare le bacche dure.
 5,26,38,0,"Eietta scariche elettriche che superano i 100.000 volt\ne possono stordire con un sol colpo finanche un Copperajah,\ncreatura della mia terra natia."
 5,35,38,0,Lo si incontra tra le montagne placide nelle notti di plenilunio.\nDanza con le minute ali rilucenti come un aggraziato essere\nfatato.
@@ -1465,13 +1465,58 @@ language_id,form_id,version_id,is_female,entry
 5,903,38,0,Nei frigidi altipiani non ha pari grazie al veleno che produce\ne a capacità fisiche che nessun’altra specie può eguagliare.\nNon vive in branco e ben sopporta la solitudine.
 5,904,38,0,"Appellato ""demone dei mari"" per via del feroce temperamento\ne degli aculei simili a lance, sugge veleno e indi lo converte\nin nutrimento."
 5,905,38,0,La sua venuta dai cieli al di là del mare annunzia la fine\ndel rigido inverno. Si narra che il suo amore faccia\ngermogliare nuova vita a Hisui.
-5,10116,38,0,Vive in branco sui monti innevati. Ritengo sia mutato\nnell’aspetto per adattarsi al gelo. Si difende con gelidi\nafflati.
+5,10007,38,0,"La sua cute arenosa è considerevolmente rigida, quanto basta\na respingere senza pena colpi analoghi alle beccate degli Starly."
+5,10008,38,0,"Non salta agli occhi per merito del corpo costituito da scorie,\nche si fonde coll’ambiente in perfetto mimetismo. Un attributo\nideale per occultarsi agli inimici naturali."
+5,10009,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10010,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10011,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10012,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10013,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10014,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10015,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10016,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
 5,10017,38,0,Dimora su vette sacre coperte da nevi perenni. Talune leggende\nnarrano che si palesi per scortare a valle le persone d’animo\nprobo che han smarrito il sentiero.
+5,10017,38,0,Dimora su vette sacre coperte da nevi perenni. Talune leggende\nnarrano che si palesi per scortare a valle le persone d’animo\nprobo che han smarrito il sentiero.
+5,10018,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10019,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10020,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10021,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10022,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10023,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10024,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10026,38,0,"Assume questa forma quand’è nascosto in un’insolita fornace,\nle cui origini mi sono ignote. È un seccatore che commette male\nopere col soffiar di fiamme."
+5,10027,38,0,"Assume questa forma quand’è nascosto in un comò eccentrico,\nla cui funzione originaria mi è ignota. È un seccatore che\ncommette male opere spargendo frigida acqua."
+5,10028,38,0,Assume questa forma quand’è nascosto in uno stipo singolare\nrealizzato con materiali d’ignota fattura. È un seccatore che\ncommette male opere ingenerando brina.
+5,10029,38,0,Assume questa forma quand’è nascosto in un bislacco congegno\ndagli usi ignoti. È un seccatore che commette male opere\nespellendo venti molesti.
+5,10030,38,0,Assume questa forma quand’è nascosto in una bizzarra carriola\ndal meccanismo invero ignoto. È un seccatore che commette\nmale opere tosando la flora tutta.
+5,10031,38,0,"Privo di gambe per colpa del cambio di forma. Sospetto viva\nin un mondo che non distingue tra cielo e terra, ma non ho\nmodo di dimostrare siffatta teoria."
+5,10032,38,0,"Se annusa un certo fiore raro, il suo corpo minuto viene avvolto\ndalla luce, assumendo questa guisa. Odorare lo stesso fiore\nnon cagiona mutamento alcuno al mio corpo."
+5,10037,38,0,"Il fenomeno del cambio di forma gli ha conferito l’aspetto\ndi un volatile mitologico, che sospetto sia il suo vero sembiante.\nÈ in questa guisa che lo si vede talora attraversare gli oceani."
+5,10038,38,0,"Si manifesta come fragor di tuono e sfolgorar di fulmine. Scaglia\nsaette dalle sfere concatenate nella coda, annientando gli\ninimici con potenza sì tremenda da non lasciarne un minuzzolo."
+5,10039,38,0,Solca da nord a sud i cieli di Hisui in un paio d’ore. Le genti\nvenerano l’aspetto totemico con il quale s’innalza nell’aere\ne dona messi rigogliose.
+5,10072,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
+5,10116,38,0,Vive in branco sui monti innevati. Ritengo sia mutato\nnell’aspetto per adattarsi al gelo. Si difende con gelidi\nafflati.
 5,10204,38,0,"Questi Pokémon pattugliano il territorio in coppia. In base\nalle mie indagini, la presenza di componenti di rocce ignee\nnel loro vello parrebbe cagionata dall’attività vulcanica."
 5,10205,38,0,Stringe le prede con le zanne avviluppate in rovente foco.\nEccelle nelle finte nonostante la considerevole stazza. Le sue\nmovenze mentre schernisce gli inimici rassimigliano a una danza.
 5,10206,38,0,"Enigmatico Pokémon d’accidentale simiglianza con le Poké Ball.\nPiù si galvanizza, più rilascia la corrente elettrica immagazzinata\nnel ventre, ridendo di gusto."
 5,10207,38,0,Arduo spiegare come la sua struttura superficiale sia\nestremamente affine a quella delle ghicocche. L’elettricità\nche eietta se adirato è pari a quella di 20 folgori.
 5,10208,38,0,Reputo l’atmosfera del monte sacro che si erge nel cuore di\nHisui causa del suo mutato aspetto. Si dice mondi le anime\nsmarrite con le proprie vampe per condurle verso l’aldilà.
+5,10209,38,0,"È il cruccio dei pescatori, che lo detestano per via delle spine\nvelenifere. Gli esemplari stabilitisi in altre regioni hanno\nfattezze dissimili."
+5,10210,38,0,"Possiede dei robusti artigli, la cui foggia adunca gli consente\ndi valicare scoscesi dirupi. Le estremità stillano veleno\nche reca danno ai nervi delle prede catturate."
+5,10211,38,0,"La luce ha cagionato in lui un cambio di forma radicale,\nrendendolo un simulacro della divinità creatrice sì potente\nche fatico a non ritenere questa la sua forma veritiera."
+5,10212,38,0,"Vederlo solcare i cieli mi riporta alla mente l’entità creatrice.\nChe, imitandone la forma, stia forse cercando di impadronirsi\ndel suo potere?"
+5,10213,38,0,"Abile spadaccino dal carattere spietato, attacca con una\nsequela di colpi simili a mille burrascosi flutti. Di raro\nsembiante, frutto dell’evoluzione a Hisui."
+5,10214,38,0,L’inerpicarsi per innevati sentieri montani parrebbe averne\nsviluppato maggiormente le gambe. Il fiore della sua corona\nspande un aroma capace di dare animo a chi ha d’intorno.
+5,10215,38,0,"Differisce da Basculin in vari rispetti, tra cui l’indole mite.\nCiò non ostante, i tratti in comune abbondano, perciò\nlo classifico come sua forma regionale."
+5,10216,38,0,"Uno spirito defunto, tornato a nuova vita nella terra di Hisui.\nIl suo sdegno si fa energia e promana dal capo, tramutandosi\nnell’avversario per esigere vendetta."
+5,10217,38,0,"Il vello candido e scarmigliato lo fa somigliare a una divinità\nmortifera. Il profondo astio ne dilania le membra, portandolo\nad abbattersi sull’inimico pronto a condividerne l’amara sorte."
+5,10218,38,0,Enorme e feroce volatile che nel cacciare leva un tremendo\ngrido di guerra. Sferza gli specchi d’acqua con onde d’urto\ne ghermisce le prede in tal modo condotte a galla.
+5,10219,38,0,Ha un temperamento alquanto cupo. Ritengo che il carapace\nmetallico sia il risultato dell’interazione tra l’acqua ferrosa\ndi Hisui e il muco ricoprente la cute.
+5,10220,38,0,Può regolare la durezza del carapace metallico. Rifugge\nla solitudine e monta su tutte le furie se abbandonato\nda coloro a cui è più affezionato.
+5,10221,38,0,L’armatura glaciale di cui la sua mandibola è ammantata è più\ndura dell’acciaio e frantuma la roccia senza sforzo. Avanza pegli\narditi sentieri montani facendosi largo inarrestabile tra la neve.
+5,10222,38,0,Resiste all’algido clima di Hisui grazie all’aria trattenuta\nnel rachide delle sue piume. Un chiaro esempio d’evoluzione\ncagionata dall’ambiente.
+5,10223,38,0,È avvolto dagli spiriti dei suoi simili caduti durante l’ardua\nrisalita da foce a sorgente. Nessuna tra le forme di vita che\nabitano i fiumi di Hisui è in grado di tenergli testa.
+5,10224,38,0,"Mutato il sembiante da quello femmineo, emerge da mari\ndi nubi castigando con ira spietata coloro che disprezzano\nla vita."
 5,20001,38,0,Questi Pokémon sono multiformi e di apparenza così bizzarra\nche è difficile crederli creature viventi. Io sembro il solo\na vederli simiglianti a caratteri di una lingua straniera.
 5,20002,38,0,Questi Pokémon sono multiformi e di apparenza così bizzarra\nche è difficile crederli creature viventi. Io sembro il solo\na vederli simiglianti a caratteri di una lingua straniera.
 5,20003,38,0,Questi Pokémon sono multiformi e di apparenza così bizzarra\nche è difficile crederli creature viventi. Io sembro il solo\na vederli simiglianti a caratteri di una lingua straniera.
@@ -1499,56 +1544,11 @@ language_id,form_id,version_id,is_female,entry
 5,20025,38,0,Questi Pokémon sono multiformi e di apparenza così bizzarra\nche è difficile crederli creature viventi. Io sembro il solo\na vederli simiglianti a caratteri di una lingua straniera.
 5,20026,38,0,Questi Pokémon sono multiformi e di apparenza così bizzarra\nche è difficile crederli creature viventi. Io sembro il solo\na vederli simiglianti a caratteri di una lingua straniera.
 5,20027,38,0,Questi Pokémon sono multiformi e di apparenza così bizzarra\nche è difficile crederli creature viventi. Io sembro il solo\na vederli simiglianti a caratteri di una lingua straniera.
-5,10209,38,0,"È il cruccio dei pescatori, che lo detestano per via delle spine\nvelenifere. Gli esemplari stabilitisi in altre regioni hanno\nfattezze dissimili."
-5,10212,38,0,"Possiede dei robusti artigli, la cui foggia adunca gli consente\ndi valicare scoscesi dirupi. Le estremità stillano veleno\nche reca danno ai nervi delle prede catturate."
 5,20028,38,0,"Confeziona un manto amalgamando sabbia limacciosa\ncon il filo che tesse. È solito celarsi in spelonche, giacché\ntale rivestimento cede alle intemperie."
 5,20029,38,0,"In mancanza di materiali idonei, confeziona un manto\nusufruendo di scarti. Contrariamente alle mie aspettative,\nnon pare affatto scomodo."
-5,10007,38,0,"La sua cute arenosa è considerevolmente rigida, quanto basta\na respingere senza pena colpi analoghi alle beccate degli Starly."
-5,10008,38,0,"Non salta agli occhi per merito del corpo costituito da scorie,\nche si fonde coll’ambiente in perfetto mimetismo. Un attributo\nideale per occultarsi agli inimici naturali."
 5,20030,38,0,"Nelle giornate soleggiate è assai alacre e gioviale.\nPurtuttavia al calar del sole chiude tosto i petali, cessando\nogni attività."
 5,20031,38,0,"Se ne trovano svariati esemplari nelle piagge dalle fresche\nacque. Se si tasta la sua superficie con una certa forza,\nne fuoriesce un fluido viola che macchia le vesti."
 5,20032,38,0,Trascorre assai più tempo sulla terraferma che in acqua.\nÈ più laborioso in giornate nuvolose o piovorne piuttosto\nche sotto i raggi del sole.
-5,10026,38,0,"Assume questa forma quand’è nascosto in un’insolita fornace,\nle cui origini mi sono ignote. È un seccatore che commette male\nopere col soffiar di fiamme."
-5,10027,38,0,"Assume questa forma quand’è nascosto in un comò eccentrico,\nla cui funzione originaria mi è ignota. È un seccatore che\ncommette male opere spargendo frigida acqua."
-5,10028,38,0,Assume questa forma quand’è nascosto in uno stipo singolare\nrealizzato con materiali d’ignota fattura. È un seccatore che\ncommette male opere ingenerando brina.
-5,10029,38,0,Assume questa forma quand’è nascosto in un bislacco congegno\ndagli usi ignoti. È un seccatore che commette male opere\nespellendo venti molesti.
-5,10030,38,0,Assume questa forma quand’è nascosto in una bizzarra carriola\ndal meccanismo invero ignoto. È un seccatore che commette\nmale opere tosando la flora tutta.
-5,10210,38,0,"La luce ha cagionato in lui un cambio di forma radicale,\nrendendolo un simulacro della divinità creatrice sì potente\nche fatico a non ritenere questa la sua forma veritiera."
-5,10211,38,0,"Vederlo solcare i cieli mi riporta alla mente l’entità creatrice.\nChe, imitandone la forma, stia forse cercando di impadronirsi\ndel suo potere?"
-5,10031,38,0,"Privo di gambe per colpa del cambio di forma. Sospetto viva\nin un mondo che non distingue tra cielo e terra, ma non ho\nmodo di dimostrare siffatta teoria."
-5,10032,38,0,"Se annusa un certo fiore raro, il suo corpo minuto viene avvolto\ndalla luce, assumendo questa guisa. Odorare lo stesso fiore\nnon cagiona mutamento alcuno al mio corpo."
-5,10009,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10010,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10011,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10012,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10013,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10014,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10015,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10016,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10017,38,0,Dimora su vette sacre coperte da nevi perenni. Talune leggende\nnarrano che si palesi per scortare a valle le persone d’animo\nprobo che han smarrito il sentiero.
-5,10018,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10019,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10020,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10021,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10022,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10023,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10024,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10072,38,0,"Fonte della luce che rischiara Hisui dalla volta celeste,\noffre protezione ai Pokémon e fa loro da guida.\nNei miti del luogo è sommo creatore d’ogni cosa."
-5,10213,38,0,"Abile spadaccino dal carattere spietato, attacca con una\nsequela di colpi simili a mille burrascosi flutti. Di raro\nsembiante, frutto dell’evoluzione a Hisui."
-5,10214,38,0,L’inerpicarsi per innevati sentieri montani parrebbe averne\nsviluppato maggiormente le gambe. Il fiore della sua corona\nspande un aroma capace di dare animo a chi ha d’intorno.
-5,10215,38,0,"Differisce da Basculin in vari rispetti, tra cui l’indole mite.\nCiò non ostante, i tratti in comune abbondano, perciò\nlo classifico come sua forma regionale."
-5,10216,38,0,"Uno spirito defunto, tornato a nuova vita nella terra di Hisui.\nIl suo sdegno si fa energia e promana dal capo, tramutandosi\nnell’avversario per esigere vendetta."
-5,10217,38,0,"Il vello candido e scarmigliato lo fa somigliare a una divinità\nmortifera. Il profondo astio ne dilania le membra, portandolo\nad abbattersi sull’inimico pronto a condividerne l’amara sorte."
-5,10218,38,0,Enorme e feroce volatile che nel cacciare leva un tremendo\ngrido di guerra. Sferza gli specchi d’acqua con onde d’urto\ne ghermisce le prede in tal modo condotte a galla.
-5,10037,38,0,"Il fenomeno del cambio di forma gli ha conferito l’aspetto\ndi un volatile mitologico, che sospetto sia il suo vero sembiante.\nÈ in questa guisa che lo si vede talora attraversare gli oceani."
-5,10038,38,0,"Si manifesta come fragor di tuono e sfolgorar di fulmine. Scaglia\nsaette dalle sfere concatenate nella coda, annientando gli\ninimici con potenza sì tremenda da non lasciarne un minuzzolo."
-5,10039,38,0,Solca da nord a sud i cieli di Hisui in un paio d’ore. Le genti\nvenerano l’aspetto totemico con il quale s’innalza nell’aere\ne dona messi rigogliose.
-5,10219,38,0,Ha un temperamento alquanto cupo. Ritengo che il carapace\nmetallico sia il risultato dell’interazione tra l’acqua ferrosa\ndi Hisui e il muco ricoprente la cute.
-5,10220,38,0,Può regolare la durezza del carapace metallico. Rifugge\nla solitudine e monta su tutte le furie se abbandonato\nda coloro a cui è più affezionato.
-5,10221,38,0,L’armatura glaciale di cui la sua mandibola è ammantata è più\ndura dell’acciaio e frantuma la roccia senza sforzo. Avanza pegli\narditi sentieri montani facendosi largo inarrestabile tra la neve.
-5,10222,38,0,Resiste all’algido clima di Hisui grazie all’aria trattenuta\nnel rachide delle sue piume. Un chiaro esempio d’evoluzione\ncagionata dall’ambiente.
-5,10223,38,0,È avvolto dagli spiriti dei suoi simili caduti durante l’ardua\nrisalita da foce a sorgente. Nessuna tra le forme di vita che\nabitano i fiumi di Hisui è in grado di tenergli testa.
-5,10224,38,0,"Mutato il sembiante da quello femmineo, emerge da mari\ndi nubi castigando con ira spietata coloro che disprezzano\nla vita."
 6,25,38,0,"Acumula electricidad en las bolsas que tiene en las mejillas.\nHabita en los bosques, donde tuesta con gran astucia las duras\nbayas que encuentra para comérselas."
 6,26,38,0,"Libera unas descargas eléctricas que superan los 100 000 V.\nCon semejante potencia podría derribar de un golpe incluso\na un Copperajah, un Pokémon de mi tierra."
 6,35,38,0,Es posible avistarlo en montañas tranquilas durante las noches\nde luna llena. El tenue brillo que emiten sus alas le confiere el\naspecto de una adorable hada cuando baila.
@@ -1775,13 +1775,58 @@ language_id,form_id,version_id,is_female,entry
 6,903,38,0,"Gracias a su fortaleza física y potente veneno, ninguna especie\nde las alturas heladas le planta cara. Es de personalidad\nsolitaria y no forma manadas."
 6,904,38,0,"Sus púas, afiladas como lanzas, y su violento carácter le han\ngranjeado el mote de Demonio del Mar. Puede sorber veneno\ncomo sustento alimenticio."
 6,905,38,0,"Su llegada de allende el mar significa el fin del duro invierno.\nDe acuerdo con el folclore, su amor siempre trae consigo un\nsoplo de vida nueva a Hisui."
-6,10116,38,0,Vive en manada en montañas nevadas. Puede que su forma haya\ncambiado para adaptarse al clima. Se defiende exhalando\nun gélido aliento.
+6,10007,38,0,Su piel arenosa es lo bastante dura como para resistir y repeler\nsin problema alguno los picotazos de un Starly.
+6,10008,38,0,"Su cuerpo compuesto de residuos adopta el color del entorno y\nle sirve de camuflaje, por lo que resulta idóneo para evitar a\nlos depredadores."
+6,10009,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10010,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10011,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10012,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10013,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10014,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10015,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10016,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
 6,10017,38,0,Habita en montañas sagradas de nieves eternas. Se dice que se\naparece ante las personas de buen corazón que se extravían y\nlas guía hasta el pie de la montaña.
+6,10017,38,0,Habita en montañas sagradas de nieves eternas. Se dice que se\naparece ante las personas de buen corazón que se extravían y\nlas guía hasta el pie de la montaña.
+6,10018,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10019,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10020,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10021,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10022,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10023,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10024,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10026,38,0,Reside en el interior de un extraño caldero de procedencia\ndesconocida. Le encanta realizar fechorías exhalando fuego.
+6,10027,38,0,Reside en el interior de una especie de cajonera cuya finalidad\noriginal se desconoce. Le encanta realizar fechorías esparciendo\nagua muy fría por doquier.
+6,10028,38,0,Reside en el interior de una extraña alacena creada a partir de\nmateriales desconocidos. Le encanta realizar fechorías con la\nescarcha que produce.
+6,10029,38,0,Reside en el interior de un extraño aparato cuya finalidad\nse desconoce. Le encanta realizar fechorías creando fuertes\ncorrientes de aire.
+6,10030,38,0,Reside en el interior de una especie de carretilla cuyos\nmecanismos resultan totalmente inexplicables. Le encanta\nrealizar fechorías cortando plantas.
+6,10031,38,0,"Pierde las patas al adoptar esta forma. Sospecho que vive en un\nmundo en el que no hay distinción entre cielo y tierra, aunque\nno tengo manera de probarlo."
+6,10032,38,0,"Al olisquear el aroma de una flor extraña, la luz rodea su\npequeño cuerpo y se transforma. He olfateado esta flor,\npero no ha surtido efecto en mí."
+6,10037,38,0,El cambio de forma le confiere el aspecto de una extraña ave\nque sospecho que se trata de su forma original. Ha sido\navistado cruzando los océanos de esta guisa.
+6,10038,38,0,Aparece a la velocidad del rayo. Por los orbes de la cola lanza\nuna lluvia de rayos de tal potencia que fulmina a sus rivales y\nno deja rastro alguno de ellos.
+6,10039,38,0,"La gente venera su Forma Tótem, con la que brinda abundantes\ncosechas al surcar el cielo. Puede cruzar todo Hisui en un par de\nhoras."
+6,10072,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
+6,10116,38,0,Vive en manada en montañas nevadas. Puede que su forma haya\ncambiado para adaptarse al clima. Se defiende exhalando\nun gélido aliento.
 6,10204,38,0,Patrullan su territorio en pareja. Las rocas ígneas que salpican su\npelaje quizá sean el resultado de la actividad volcánica del\nlugar.
 6,10205,38,0,"Lanza dentelladas con colmillos envueltos en un intenso fuego.\nA pesar de su gran tamaño, es un maestro de las fintas y\njuguetea alrededor de sus oponentes como si danzara."
 6,10206,38,0,"Curioso ejemplar que guarda cierta similitud con una Poké Ball.\nCuanto más se altera, mayor es la descarga eléctrica que libera\nde su vientre, a la que sigue una sonora carcajada."
 6,10207,38,0,"Curiosamente, su complexión superficial es muy semejante a la\nde un bonguri. Cuando se enoja, la electricidad que emite es\nveinte veces más potente que la de un rayo."
 6,10208,38,0,Mi teoría es que la montaña sagrada que se yergue en el centro\nde Hisui ha influido en su apariencia. Se dice que purifica con\nsus llamas a las almas errantes y las conduce al otro mundo.
+6,10209,38,0,"Segrega veneno a través de las agujas, razón por la que los\npescadores lo odian. Los ejemplares de otras regiones\npresentan una forma diferente."
+6,10210,38,0,Sus robustas garras son ideales para moverse por los riscos más\nescarpados. De sus puntas rezuma un veneno que daña los\nnervios de las presas que captura.
+6,10211,38,0,"La luz desencadena el cambio a esta forma, que recuerda al\ncreador de todo lo existente. La colosal fuerza de la que hace\ngala nos sugiere que se trata de su verdadera forma."
+6,10212,38,0,Esta forma que surca el cielo me hace pensar en el creador de\ntodo lo existente. Quizá adopte dicha forma para hacerse con\nsu poder.
+6,10213,38,0,"De actitud indiferente y muy hábil con la espada, propina\nincesantes y violentos ataques cual maremoto. Se trata de una\nforma poco común que solo se da en Hisui."
+6,10214,38,0,Habitar en montañas cubiertas de nieves le ha permitido\ndesarrollar unas piernas robustas. Expulsa un aroma por la flor\nde su corona que infunde ánimo a quien esté cerca.
+6,10215,38,0,"A pesar de algunos rasgos que lo diferencian de otros Basculin,\ncomo su plácida naturaleza, puede considerarse una forma\nregional dado el vasto abanico de características compartidas."
+6,10216,38,0,"Es un alma difunta resucitada en Hisui que transforma su rencor\nen energía. Esta surge de su cabeza y adopta la forma de su\noponente, disipando así su inquina."
+6,10217,38,0,La revuelta melena blanca le hace parecer la personificación\nde la muerte. Abate a sus rivales sin consideración por su vida\nvaliéndose de un profundo rencor que también daña su cuerpo.
+6,10218,38,0,Esta enorme ave emite un espeluznante graznido de guerra\ncuando sale de caza. Lanza ondas contra los lagos y atrapa a\nlas presas que afloran a la superficie.
+6,10219,38,0,Adolece de una personalidad lúgubre. Sospecho que su concha\nmetálica se formó mediante una reacción entre la mucosidad\nque recubre su piel y el contenido férreo del agua de Hisui.
+6,10220,38,0,"Puede alterar la dureza de su caparazón metálico a voluntad.\nDe carácter dependiente, detesta la soledad y monta en\ncólera si lo abandona alguien a quien profese gran afecto."
+6,10221,38,0,La coraza de hielo que cubre su mandíbula es más dura que el\nacero y le permite triturar rocas con facilidad. Avanza veloz por\nescarpados senderos montañosos apartando la nieve a su paso.
+6,10222,38,0,"Almacena aire en el raquis de las plumas, lo que le permite\naguantar las gélidas temperaturas de Hisui. Un claro ejemplo de\ncómo el entorno puede influir en la evolución de los Pokémon."
+6,10223,38,0,"Durante las remontadas de los ríos, se envuelve de las almas de\nsus congéneres caídos en la ardua travesía. No tiene rival en\nninguna de las corrientes que fluyen por la región de Hisui."
+6,10224,38,0,"Tras perder su apariencia femenina, surge de entre las nubes\ny, sin piedad alguna, desata toda su furia para castigar a\nquienquiera que menosprecie el don de la vida."
 6,20001,38,0,"Dada su apariencia extraña, dudo que sea un ser vivo. Mi teoría\nde que las diversas formas que existen podrían estar basadas en\nun alfabeto foráneo no ha recibido ningún respaldo."
 6,20002,38,0,"Dada su apariencia extraña, dudo que sea un ser vivo. Mi teoría\nde que las diversas formas que existen podrían estar basadas en\nun alfabeto foráneo no ha recibido ningún respaldo."
 6,20003,38,0,"Dada su apariencia extraña, dudo que sea un ser vivo. Mi teoría\nde que las diversas formas que existen podrían estar basadas en\nun alfabeto foráneo no ha recibido ningún respaldo."
@@ -1809,56 +1854,11 @@ language_id,form_id,version_id,is_female,entry
 6,20025,38,0,"Dada su apariencia extraña, dudo que sea un ser vivo. Mi teoría\nde que las diversas formas que existen podrían estar basadas en\nun alfabeto foráneo no ha recibido ningún respaldo."
 6,20026,38,0,"Dada su apariencia extraña, dudo que sea un ser vivo. Mi teoría\nde que las diversas formas que existen podrían estar basadas en\nun alfabeto foráneo no ha recibido ningún respaldo."
 6,20027,38,0,"Dada su apariencia extraña, dudo que sea un ser vivo. Mi teoría\nde que las diversas formas que existen podrían estar basadas en\nun alfabeto foráneo no ha recibido ningún respaldo."
-6,10209,38,0,"Segrega veneno a través de las agujas, razón por la que los\npescadores lo odian. Los ejemplares de otras regiones\npresentan una forma diferente."
-6,10212,38,0,Sus robustas garras son ideales para moverse por los riscos más\nescarpados. De sus puntas rezuma un veneno que daña los\nnervios de las presas que captura.
 6,20028,38,0,"Es capaz de crear un abrigo con el limo y la hebra que\nregurgita. Como este no es idóneo para resguardarse del\nviento y la lluvia, se refugia en lugares como cuevas."
 6,20029,38,0,"Si no encuentra materiales adecuados, rebusca en la basura y\ncrea un manto con desechos. Parece que este es mucho más\ncómodo de lo que se pudiera creer."
-6,10007,38,0,Su piel arenosa es lo bastante dura como para resistir y repeler\nsin problema alguno los picotazos de un Starly.
-6,10008,38,0,"Su cuerpo compuesto de residuos adopta el color del entorno y\nle sirve de camuflaje, por lo que resulta idóneo para evitar a\nlos depredadores."
 6,20030,38,0,"Rebosa alegría y energía siempre que brilla el sol y hace buen\ntiempo. En cuanto se nubla el día, se queda inerte y sus pétalos\nse pliegan."
 6,20031,38,0,"Se ven muchos especímenes en costas de aguas frías. Si se toca\ncon algo de fuerza, secreta un líquido púrpura que mancha\nla ropa."
 6,20032,38,0,"Se encuentra más comúnmente en tierra firme que en el mar.\nMuestra mucha actividad durante los días nublados y lluviosos,\nen comparación con aquellos en los que brilla el sol."
-6,10026,38,0,Reside en el interior de un extraño caldero de procedencia\ndesconocida. Le encanta realizar fechorías exhalando fuego.
-6,10027,38,0,Reside en el interior de una especie de cajonera cuya finalidad\noriginal se desconoce. Le encanta realizar fechorías esparciendo\nagua muy fría por doquier.
-6,10028,38,0,Reside en el interior de una extraña alacena creada a partir de\nmateriales desconocidos. Le encanta realizar fechorías con la\nescarcha que produce.
-6,10029,38,0,Reside en el interior de un extraño aparato cuya finalidad\nse desconoce. Le encanta realizar fechorías creando fuertes\ncorrientes de aire.
-6,10030,38,0,Reside en el interior de una especie de carretilla cuyos\nmecanismos resultan totalmente inexplicables. Le encanta\nrealizar fechorías cortando plantas.
-6,10210,38,0,"La luz desencadena el cambio a esta forma, que recuerda al\ncreador de todo lo existente. La colosal fuerza de la que hace\ngala nos sugiere que se trata de su verdadera forma."
-6,10211,38,0,Esta forma que surca el cielo me hace pensar en el creador de\ntodo lo existente. Quizá adopte dicha forma para hacerse con\nsu poder.
-6,10031,38,0,"Pierde las patas al adoptar esta forma. Sospecho que vive en un\nmundo en el que no hay distinción entre cielo y tierra, aunque\nno tengo manera de probarlo."
-6,10032,38,0,"Al olisquear el aroma de una flor extraña, la luz rodea su\npequeño cuerpo y se transforma. He olfateado esta flor,\npero no ha surtido efecto en mí."
-6,10009,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10010,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10011,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10012,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10013,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10014,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10015,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10016,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10017,38,0,Habita en montañas sagradas de nieves eternas. Se dice que se\naparece ante las personas de buen corazón que se extravían y\nlas guía hasta el pie de la montaña.
-6,10018,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10019,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10020,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10021,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10022,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10023,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10024,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10072,38,0,"Aquel que ilumina Hisui desde el cielo, salvaguardando y\nguiando a los Pokémon con su fulgor. Según los mitos de estas\ntierras, es el creador de todo lo existente."
-6,10213,38,0,"De actitud indiferente y muy hábil con la espada, propina\nincesantes y violentos ataques cual maremoto. Se trata de una\nforma poco común que solo se da en Hisui."
-6,10214,38,0,Habitar en montañas cubiertas de nieves le ha permitido\ndesarrollar unas piernas robustas. Expulsa un aroma por la flor\nde su corona que infunde ánimo a quien esté cerca.
-6,10215,38,0,"A pesar de algunos rasgos que lo diferencian de otros Basculin,\ncomo su plácida naturaleza, puede considerarse una forma\nregional dado el vasto abanico de características compartidas."
-6,10216,38,0,"Es un alma difunta resucitada en Hisui que transforma su rencor\nen energía. Esta surge de su cabeza y adopta la forma de su\noponente, disipando así su inquina."
-6,10217,38,0,La revuelta melena blanca le hace parecer la personificación\nde la muerte. Abate a sus rivales sin consideración por su vida\nvaliéndose de un profundo rencor que también daña su cuerpo.
-6,10218,38,0,Esta enorme ave emite un espeluznante graznido de guerra\ncuando sale de caza. Lanza ondas contra los lagos y atrapa a\nlas presas que afloran a la superficie.
-6,10037,38,0,El cambio de forma le confiere el aspecto de una extraña ave\nque sospecho que se trata de su forma original. Ha sido\navistado cruzando los océanos de esta guisa.
-6,10038,38,0,Aparece a la velocidad del rayo. Por los orbes de la cola lanza\nuna lluvia de rayos de tal potencia que fulmina a sus rivales y\nno deja rastro alguno de ellos.
-6,10039,38,0,"La gente venera su Forma Tótem, con la que brinda abundantes\ncosechas al surcar el cielo. Puede cruzar todo Hisui en un par de\nhoras."
-6,10219,38,0,Adolece de una personalidad lúgubre. Sospecho que su concha\nmetálica se formó mediante una reacción entre la mucosidad\nque recubre su piel y el contenido férreo del agua de Hisui.
-6,10220,38,0,"Puede alterar la dureza de su caparazón metálico a voluntad.\nDe carácter dependiente, detesta la soledad y monta en\ncólera si lo abandona alguien a quien profese gran afecto."
-6,10221,38,0,La coraza de hielo que cubre su mandíbula es más dura que el\nacero y le permite triturar rocas con facilidad. Avanza veloz por\nescarpados senderos montañosos apartando la nieve a su paso.
-6,10222,38,0,"Almacena aire en el raquis de las plumas, lo que le permite\naguantar las gélidas temperaturas de Hisui. Un claro ejemplo de\ncómo el entorno puede influir en la evolución de los Pokémon."
-6,10223,38,0,"Durante las remontadas de los ríos, se envuelve de las almas de\nsus congéneres caídos en la ardua travesía. No tiene rival en\nninguna de las corrientes que fluyen por la región de Hisui."
-6,10224,38,0,"Tras perder su apariencia femenina, surge de entre las nubes\ny, sin piedad alguna, desata toda su furia para castigar a\nquienquiera que menosprecie el don de la vida."
 7,25,38,0,"볼에 전기를 저장하는 주머니가 있다.\n숲을 거처로 삼으며, 단단한 나무열매를\n전기로 익혀 먹는 등의 지혜를 가졌다."
 7,26,38,0,방출하는 전격은 10만 볼트를 뛰어넘으며\n나의 고향에 사는 대왕끼리동조차\n일격에 기절시킬 정도의 위력을 가졌다.
 7,35,38,0,"보름달이 뜬 밤, 조용한 산속에서 만났다.\n작은 날개를 희미하게 빛내며 춤추는 모습이\n마치 요정과도 같은 귀여움을 자아낸다."
@@ -2085,13 +2085,58 @@ language_id,form_id,version_id,is_female,entry
 7,903,38,0,다른 종을 압도하는 신체 능력과 맹독을 가지고 있어\n한랭한 고지대에서는 맞수가 없다.\n무리를 이루지 않고 고독함을 즐긴다.
 7,904,38,0,창과 같은 침과 흉포한 성질 때문에\n“바다 도깨비”라는 이명이 있는 포켓몬.\n독을 마셔서 자신의 양식으로 삼는다.
 7,905,38,0,바다를 건너 날아와 혹독한 겨울의 끝을 알린다.\n자애로움이 히스이 땅에 새로운 생명을\n싹틔우게 했다는 전승이 있다.
-7,10116,38,0,눈 덮인 산에 무리를 지어 서식한다.\n한랭 지대에 적응하여 모습을 바꾼 것으로 추측된다.\n얼어붙는 숨결로 몸을 지킨다.
+7,10007,38,0,모래와 진흙으로 된 피부는\n그에 걸맞게 단단하여\n찌르꼬의 부리 정도는 손쉽게 튕겨 낸다.
+7,10008,38,0,먼지로 구성된 몸은\n주위 풍경에 녹아들어 눈에 띄지 않는다.\n천적으로부터 몸을 숨기는 데 최적의 모습이다.
+7,10009,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10010,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10011,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10012,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10013,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10014,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10015,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10016,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
 7,10017,38,0,만년설에 뒤덮인 신성한 산에 산다.\n마음이 선한 자가 산길을 헤맬 때 나타나\n산기슭까지 인도한다고 전해진다.
+7,10017,38,0,만년설에 뒤덮인 신성한 산에 산다.\n마음이 선한 자가 산길을 헤맬 때 나타나\n산기슭까지 인도한다고 전해진다.
+7,10018,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10019,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10020,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10021,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10022,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10023,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10024,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10026,38,0,이상하게 생긴 솥에 숨어든 모습.\n솥이 어디서 났는지도 불명이다.\n불을 뿜어서 나쁜 짓을 일삼는 골칫거리.
+7,10027,38,0,별나게 생긴 서랍장에 숨어든 모습.\n서랍장의 본래 용도는 불명이다.\n냉수를 뿌리며 나쁜 짓을 일삼는 골칫거리.
+7,10028,38,0,기괴하게 생긴 찬장에 숨은 모습.\n찬장은 미지의 물질로 만들어져 있다.\n서리를 만들어서 나쁜 짓을 일삼는 골칫거리.
+7,10029,38,0,정체불명의 기구에 숨어든 모습.\n기구의 용도는 밝혀내지 못했다.\n강풍을 불어 대며 나쁜 짓을 일삼는 골칫거리.
+7,10030,38,0,특이하게 생긴 수레에 숨어든 모습.\n수레의 작동 원리는 불가사의 그 자체다.\n초목을 베어 내며 나쁜 짓을 일삼는 골칫거리.
+7,10031,38,0,폼체인지로 인해 다리를 잃었다.\n이것이 사는 곳은 천지가 분간이 되지 않는\n세계인 것으로 추측된다. 하지만 증명할 방법이 없다.
+7,10032,38,0,진귀한 꽃의 향기를 맡으면 작은 몸이\n빛에 감싸이며 모습이 바뀐다. 시험 삼아\n꽃향기를 맡아봤지만 내 몸에는 아무 변화가 없었다.
+7,10037,38,0,폼체인지라 불리는 현상에 의해 변했다.\n괴조와도 같은 이 모습이 진정한 모습인 것으로 보인다.\n대해를 건널 때 이 모습으로 목격되었다.
+7,10038,38,0,뇌정벽력과 같이 모습을 드러낸다.\n꼬리에 달린 구슬에서 전격을 내리쳐 적을 일소한다.\n위력이 어마어마하여 부스러기도 남지 않는다.
+7,10039,38,0,영물의 모습으로 날아다닐 때\n대지에 풍요를 가져다주고 사람들은 이를 숭배한다.\n순식간에 히스이 땅을 종단할 수 있다.
+7,10072,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
+7,10116,38,0,눈 덮인 산에 무리를 지어 서식한다.\n한랭 지대에 적응하여 모습을 바꾼 것으로 추측된다.\n얼어붙는 숨결로 몸을 지킨다.
 7,10204,38,0,짝을 이루어 영역을 지킨다.\n털에 화성암의 성분이 섞여 있는 것은\n화산 활동의 영향인 것으로 추측된다.
 7,10205,38,0,활활 타는 불꽃을 이빨에 두르고 문다.\n체구가 큼에도 불구하고 화려한 움직임으로\n적을 농락하는 모습이 마치 춤추는 것 같다.
 7,10206,38,0,몬스터볼을 닮은 수수께끼의 포켓몬.\n흥분하면 배 속에 비축해 둔 전류를\n방출하며 크게 웃는다.
 7,10207,38,0,신기하게도 표면의 조직이 규토리의 성분과\n매우 흡사하다. 화가 났을 때 방출하는 전류는\n벼락이 20번 떨어진 것에 필적한다.
 7,10208,38,0,히스이 중심에 우뚝 선 영산의 기운에\n영향을 받은 모습으로 보인다. 갈 곳 없는 영혼을\n자신의 불꽃으로 정화하여 저승으로 인도한다고 한다.
+7,10209,38,0,침으로 독을 흩뿌리며 귀찮게 하기 때문에\n어부들이 몹시 싫어하는 존재다.\n다른 지방에서는 다른 모습으로 서식한다.
+7,10210,38,0,단단한 갈고리손톱은 가파른 절벽을 오르기에\n유리하다. 끄트머리에서 나오는 독액은\n먹이를 잡을 때 신경에 침투한다.
+7,10211,38,0,밝은 빛이 폼체인지의 방아쇠가 되었다.\n창조신과 흡사한 이 모습이야말로 진정한 모습임에\n의심할 여지가 없을 정도로 강력한 힘을 발휘한다.
+7,10212,38,0,하늘을 나는 모습은 만물의 창조주를 연상케한다.\n창조주의 모습을 흉내 냄으로써\n그 힘을 자신의 것으로 만들었다고 추측된다.
+7,10213,38,0,히스이에서 진화한 희귀한 모습.\n비정한 성격과 칼 솜씨를 자랑한다.\n성난 파도 같은 연격은 천 겹의 파도와도 같다.
+7,10214,38,0,눈 덮인 산에 살기 때문에 다릿심이\n발달한 것으로 추측된다. 화관을 통해\n주위에 있는 이를 고무시키는 향기를 내보낸다.
+7,10215,38,0,"온후한 성질 등, 차이점이 있지만\n배쓰나이의 특징을 다수 갖추고 있기에\n그것의 리전폼인 것으로 정의 내렸다."
+7,10216,38,0,죽은 영혼이 히스이 땅에서 되살아났다.\n원한은 곧 힘이 되어 머리에 피어오르고\n상대의 모습으로 변하여 원한을 풀려 한다.
+7,10217,38,0,백발을 흐트러트린 모습은 마치 사신 같다.\n자신의 몸이 찢어질 정도의 강한 원한을 이용해\n함께 죽을 각오로 원수의 숨통을 노린다.
+7,10218,38,0,소름 끼치는 함성을 외쳐서 사냥하는\n용맹하고 큰 새. 호수에 충격파를 발산해서\n수면에 떠오른 먹잇감을 잡는다.
+7,10219,38,0,음침한 성격을 가졌다. 히스이 땅에 흐르는\n물에 함유된 철이 피부의 점액에 작용하여\n금속 껍질로 변한 것으로 추측된다.
+7,10220,38,0,"금속 껍질의 강도를 자유롭게 조절할 수 있다.\n고독한 것을 싫어하고 집요하여, 좋아하는 이가\n자신에게서 떨어지려 하면 분노하여 날뛴다."
+7,10221,38,0,아래턱을 감싸고 있는 얼음으로 된 장갑은\n강철보다 단단하여 암석을 손쉽게 부서뜨린다.\n깊이 쌓인 눈을 가로지르며 험한 산길을 맹진한다.
+7,10222,38,0,히스이의 극한의 추위에 견디기 위해\n깃털의 심에 공기를 머금어 방한 기능을 갖췄다.\n환경이 진화에 영향을 주는 것으로 판명된다.
+7,10223,38,0,물길을 거슬러 오르는 여정에서\n뜻을 이루지 못하고 죽은 동료들의 혼을 두르고 있다.\n히스이에 흐르는 하천에서는 대적할 자가 없다.
+7,10224,38,0,여인의 형상에서 변한 모습.\n목숨을 함부로 여기는 자가 있으면\n운해로부터 나타나서 자비 없는 분노의 벌을 내린다.
 7,20001,38,0,"생물로는 보이지 않는 특이한 생김새.\n형태가 다른 개체가 많고, 이국의 문자와\n공통성을 주장했으나, 받아들여지지 않았다."
 7,20002,38,0,"생물로는 보이지 않는 특이한 생김새.\n형태가 다른 개체가 많고, 이국의 문자와\n공통성을 주장했으나, 받아들여지지 않았다."
 7,20003,38,0,"생물로는 보이지 않는 특이한 생김새.\n형태가 다른 개체가 많고, 이국의 문자와\n공통성을 주장했으나, 받아들여지지 않았다."
@@ -2119,56 +2164,11 @@ language_id,form_id,version_id,is_female,entry
 7,20025,38,0,"생물로는 보이지 않는 특이한 생김새.\n형태가 다른 개체가 많고, 이국의 문자와\n공통성을 주장했으나, 받아들여지지 않았다."
 7,20026,38,0,"생물로는 보이지 않는 특이한 생김새.\n형태가 다른 개체가 많고, 이국의 문자와\n공통성을 주장했으나, 받아들여지지 않았다."
 7,20027,38,0,"생물로는 보이지 않는 특이한 생김새.\n형태가 다른 개체가 많고, 이국의 문자와\n공통성을 주장했으나, 받아들여지지 않았다."
-7,10209,38,0,침으로 독을 흩뿌리며 귀찮게 하기 때문에\n어부들이 몹시 싫어하는 존재다.\n다른 지방에서는 다른 모습으로 서식한다.
-7,10212,38,0,단단한 갈고리손톱은 가파른 절벽을 오르기에\n유리하다. 끄트머리에서 나오는 독액은\n먹이를 잡을 때 신경에 침투한다.
 7,20028,38,0,"뿜어낸 실과 모래, 진흙으로 도롱이를 만들어 낸다.\n모래와 진흙으로 된 도롱이는\n비바람에 약하기 때문에 동굴 등에 숨어 지낸다."
 7,20029,38,0,적당한 재료가 보이지 않아서\n먼지로 도롱이를 만들었다.\n의외로 착용감이 나쁘지 않은 모양이다.
-7,10007,38,0,모래와 진흙으로 된 피부는\n그에 걸맞게 단단하여\n찌르꼬의 부리 정도는 손쉽게 튕겨 낸다.
-7,10008,38,0,먼지로 구성된 몸은\n주위 풍경에 녹아들어 눈에 띄지 않는다.\n천적으로부터 몸을 숨기는 데 최적의 모습이다.
 7,20030,38,0,날씨가 맑으면 실로 활발하게 움직인다.\n하지만 날이 저물면 곧바로 꽃잎을 닫고는\n움직임을 멈춘다.
 7,20031,38,0,수온이 차가운 해변에 많이 있다.\n강하게 만지면 표면에서\n보랏빛 점액이 스며 나와 옷을 더럽힌다.
 7,20032,38,0,수중보다 육지에서의 활동이 많다.\n맑은 날에 비해 흐리거나\n비가 내리는 날에 더 활발하다.
-7,10026,38,0,이상하게 생긴 솥에 숨어든 모습.\n솥이 어디서 났는지도 불명이다.\n불을 뿜어서 나쁜 짓을 일삼는 골칫거리.
-7,10027,38,0,별나게 생긴 서랍장에 숨어든 모습.\n서랍장의 본래 용도는 불명이다.\n냉수를 뿌리며 나쁜 짓을 일삼는 골칫거리.
-7,10028,38,0,기괴하게 생긴 찬장에 숨은 모습.\n찬장은 미지의 물질로 만들어져 있다.\n서리를 만들어서 나쁜 짓을 일삼는 골칫거리.
-7,10029,38,0,정체불명의 기구에 숨어든 모습.\n기구의 용도는 밝혀내지 못했다.\n강풍을 불어 대며 나쁜 짓을 일삼는 골칫거리.
-7,10030,38,0,특이하게 생긴 수레에 숨어든 모습.\n수레의 작동 원리는 불가사의 그 자체다.\n초목을 베어 내며 나쁜 짓을 일삼는 골칫거리.
-7,10210,38,0,밝은 빛이 폼체인지의 방아쇠가 되었다.\n창조신과 흡사한 이 모습이야말로 진정한 모습임에\n의심할 여지가 없을 정도로 강력한 힘을 발휘한다.
-7,10211,38,0,하늘을 나는 모습은 만물의 창조주를 연상케한다.\n창조주의 모습을 흉내 냄으로써\n그 힘을 자신의 것으로 만들었다고 추측된다.
-7,10031,38,0,폼체인지로 인해 다리를 잃었다.\n이것이 사는 곳은 천지가 분간이 되지 않는\n세계인 것으로 추측된다. 하지만 증명할 방법이 없다.
-7,10032,38,0,진귀한 꽃의 향기를 맡으면 작은 몸이\n빛에 감싸이며 모습이 바뀐다. 시험 삼아\n꽃향기를 맡아봤지만 내 몸에는 아무 변화가 없었다.
-7,10009,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10010,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10011,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10012,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10013,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10014,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10015,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10016,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10017,38,0,만년설에 뒤덮인 신성한 산에 산다.\n마음이 선한 자가 산길을 헤맬 때 나타나\n산기슭까지 인도한다고 전해진다.
-7,10018,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10019,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10020,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10021,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10022,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10023,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10024,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10072,38,0,천상에서 히스이 땅을 비추는 빛의 근원.\n밝은 빛으로 포켓몬을 인도하고 수호한다.\n히스이 신화에는 만물의 창조주라고 기록되어 있다.
-7,10213,38,0,히스이에서 진화한 희귀한 모습.\n비정한 성격과 칼 솜씨를 자랑한다.\n성난 파도 같은 연격은 천 겹의 파도와도 같다.
-7,10214,38,0,눈 덮인 산에 살기 때문에 다릿심이\n발달한 것으로 추측된다. 화관을 통해\n주위에 있는 이를 고무시키는 향기를 내보낸다.
-7,10215,38,0,"온후한 성질 등, 차이점이 있지만\n배쓰나이의 특징을 다수 갖추고 있기에\n그것의 리전폼인 것으로 정의 내렸다."
-7,10216,38,0,죽은 영혼이 히스이 땅에서 되살아났다.\n원한은 곧 힘이 되어 머리에 피어오르고\n상대의 모습으로 변하여 원한을 풀려 한다.
-7,10217,38,0,백발을 흐트러트린 모습은 마치 사신 같다.\n자신의 몸이 찢어질 정도의 강한 원한을 이용해\n함께 죽을 각오로 원수의 숨통을 노린다.
-7,10218,38,0,소름 끼치는 함성을 외쳐서 사냥하는\n용맹하고 큰 새. 호수에 충격파를 발산해서\n수면에 떠오른 먹잇감을 잡는다.
-7,10037,38,0,폼체인지라 불리는 현상에 의해 변했다.\n괴조와도 같은 이 모습이 진정한 모습인 것으로 보인다.\n대해를 건널 때 이 모습으로 목격되었다.
-7,10038,38,0,뇌정벽력과 같이 모습을 드러낸다.\n꼬리에 달린 구슬에서 전격을 내리쳐 적을 일소한다.\n위력이 어마어마하여 부스러기도 남지 않는다.
-7,10039,38,0,영물의 모습으로 날아다닐 때\n대지에 풍요를 가져다주고 사람들은 이를 숭배한다.\n순식간에 히스이 땅을 종단할 수 있다.
-7,10219,38,0,음침한 성격을 가졌다. 히스이 땅에 흐르는\n물에 함유된 철이 피부의 점액에 작용하여\n금속 껍질로 변한 것으로 추측된다.
-7,10220,38,0,"금속 껍질의 강도를 자유롭게 조절할 수 있다.\n고독한 것을 싫어하고 집요하여, 좋아하는 이가\n자신에게서 떨어지려 하면 분노하여 날뛴다."
-7,10221,38,0,아래턱을 감싸고 있는 얼음으로 된 장갑은\n강철보다 단단하여 암석을 손쉽게 부서뜨린다.\n깊이 쌓인 눈을 가로지르며 험한 산길을 맹진한다.
-7,10222,38,0,히스이의 극한의 추위에 견디기 위해\n깃털의 심에 공기를 머금어 방한 기능을 갖췄다.\n환경이 진화에 영향을 주는 것으로 판명된다.
-7,10223,38,0,물길을 거슬러 오르는 여정에서\n뜻을 이루지 못하고 죽은 동료들의 혼을 두르고 있다.\n히스이에 흐르는 하천에서는 대적할 자가 없다.
-7,10224,38,0,여인의 형상에서 변한 모습.\n목숨을 함부로 여기는 자가 있으면\n운해로부터 나타나서 자비 없는 분노의 벌을 내린다.
 8,25,38,0,頬に　電気を溜めし　袋を　有す。\n森林を　棲み処とし　硬き　木の実は\n電撃で　焼き　食べる　知恵者なり。
 8,26,38,0,放つ　電撃は　１０万ボルトを　凌ぎ\n我が故郷に　棲む　ダイオウドウをも\n一撃で　気絶する　威力なり。
 8,35,38,0,満月の夜　静かなる　山間にて　遭遇。\n小さき翼　ほのかに光り　舞う姿は\nまさに　妖精の如き　愛くるしさなり。
@@ -2395,13 +2395,58 @@ language_id,form_id,version_id,is_female,entry
 8,903,38,0,他種圧倒する　身体能力と　猛毒　有し\n寒冷なる　高地においては　敵なし。\n群れ成さず　単独を良しとする　性質。
 8,904,38,0,槍の如き　針と　凶暴なる　気質にて\n海鬼の　異名を　持つ　ポケモン。\n毒を　すすりて　己の　糧とす。
 8,905,38,0,海を越えて　飛来したらば　厳しき冬の\n終わりを知る。　慈愛が　ヒスイの地に\n新しき命　芽吹かせるとの　伝承あり。
-8,10116,38,0,雪深き山に　群れを成して　生息す。\n寒冷地に　適応し　姿変えしと　推測。\n凍てつく　吐息で　身を　護る。
+8,10007,38,0,砂泥の皮膚は　相応に　硬く\nムックルの嘴　程度ならば\n易々と　弾き返すこと　造作なし。
+8,10008,38,0,ちり芥にて　構成されし体は　景色に\n溶け込み　目立たず。　天敵より　身を\n隠すに　うってつけの様子。
+8,10009,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10010,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10011,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10012,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10013,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10014,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10015,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10016,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
 8,10017,38,0,万年雪　覆いし　聖なる山に　棲む。\n心　善なる者が　山道　迷うとき\n姿見せ　麓まで　導くと　伝わる。
+8,10017,38,0,万年雪　覆いし　聖なる山に　棲む。\n心　善なる者が　山道　迷うとき\n姿見せ　麓まで　導くと　伝わる。
+8,10018,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10019,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10020,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10021,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10022,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10023,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10024,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10026,38,0,面妖な　釜に　潜みし　フォルム。\n釜の　出自については　不明。\n炎　吹きて　悪事をなす　困り者。
+8,10027,38,0,珍奇な　箪笥に　潜みし　フォルム。\n箪笥　本来の　用途は　分からず。\n冷水　撒きて　悪事をなす　困り者。
+8,10028,38,0,奇怪な　水屋に　潜みし　フォルム。\n水屋の　素材は　未知の　物質。\n霜　起こし　悪事をなす　困り者。
+8,10029,38,0,謎の　器具に　潜みし　フォルム。\n器具の　用途は　分かっていない。\n烈風　吐きて　悪事をなす　困り者。
+8,10030,38,0,異様な　猫車に　潜みし　フォルム。\n猫車の　機構は　不可思議なり。\n草木を　薙ぎ　悪事をなす　困り者。
+8,10031,38,0,フォルムチェンジにより　脚　無くす。\nこれの棲むは　天地の区別なき　世界と\n考察す。　されど　証明の　手段なし。
+8,10032,38,0,珍しき花の香　嗅ぎしとき　小さき体\n光に包まれ　姿　変貌す。　花の香\n試しに　嗅ぐも　我が身に　変化なし。
+8,10037,38,0,フォルムチェンジと　呼ばれし　現象。\n怪鳥のごとき姿こそ　真なりと　考察。\n大海　渡りしとき　この姿で　目撃す。
+8,10038,38,0,霹靂閃電　姿　現す。　尾に　連なりし\n珠より　雷撃　降り注ぎ　敵を　一掃。\n威力　凄まじく　一片すら　残らず。
+8,10039,38,0,霊獣の姿にて　天翔けしとき　大地に\n豊穣もたらす。　衆人　これを　敬う。\n一刻あれば　ヒスイの地を　縦断す。
+8,10072,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
+8,10116,38,0,雪深き山に　群れを成して　生息す。\n寒冷地に　適応し　姿変えしと　推測。\n凍てつく　吐息で　身を　護る。
 8,10204,38,0,対になりて　縄張りを　哨戒す。\n体毛に　火成岩なる　成分　混ざるは\n火山活動の　影響と　推察す。
 8,10205,38,0,燃え盛る炎　牙に纏わせ　食らい付く。\n体躯　大柄なれど　陽動　鮮やかなりて\n敵　翻弄せしむる姿　演舞の如し。
 8,10206,38,0,モンスターボールと　空似せし　謎の\nポケモン。　気　昂るほど　腹に\n蓄えし電流を　解き放ち　大笑す。
 8,10207,38,0,体表の組織　ぼんぐりの成分と　極めて\n近く　不思議。　苛立ちしときに　放つ\n電流は　落雷　２０回分に　匹敵す。
 8,10208,38,0,ヒスイの中心にそびえし　霊山の気が\n影響した姿と　考察。　行き場　失いし\n霊魂を　己の炎で浄化し　送ると言う。
+8,10209,38,0,針より　毒　散らす　厄介者ゆえ\n漁師には　忌み嫌われし　存在。\n他の地方では　異なる姿で　生息す。
+8,10210,38,0,鉤爪　逞しく　断崖絶壁を　踏破するに\n有利な　形状。　先端より　毒液　滴り\n獲物　捕らえしとき　神経を　侵す。
+8,10211,38,0,光明　フォルムチェンジの　引き金。\n創造神に　酷似する姿こそ　真なりと\n思わざるを得ぬほどの　剛力　発揮す。
+8,10212,38,0,天翔ける姿　万物を　創りし　存在を\n想起す。　姿を　模すこと　すなわち\nその力を　我がものとする術と　推察。
+8,10213,38,0,非情なる　気質と　太刀筋を　有す。\n怒涛の　連撃は　千重波の　如し。\nヒスイにて　進化せし　稀有なる姿。
+8,10214,38,0,雪深き山に　棲みしゆえに　脚力が\n発達したと　考察す。　周囲の者を\n鼓舞する　香りを　冠の花より　放つ。
+8,10215,38,0,温厚な　気質など　相違点　あれども\nバスラオの　特徴を　多く　有すゆえ\nそのリージョンフォームと　定義す。
+8,10216,38,0,死した魂　ヒスイの地にて　蘇る。\n怨嗟は　力となり　頭より　立ち昇り\n相手の姿に　変じ　恨み　晴らしたり。
+8,10217,38,0,白髪　振り乱し姿　死神の如く。\n我が身をも　切り裂く　激しき怨讐にて\n仇　襲い　道連れ覚悟で　仕留めたり。
+8,10218,38,0,鬼気迫る　鬨の声を　上げ　狩りをする\n猛き　大鳥。　湖水に　衝撃波を　放ち\n水面に　浮かびし　獲物を　捕る。
+8,10219,38,0,陰気な　性質。　ヒスイの地の　水に\n含有する　鉄が　皮膚の粘液に　作用し\n金属の殻へ　変容させたと　考察す。
+8,10220,38,0,金属の殻の　剛柔を　自在に　操る。\n孤独を　厭い　執念深く　好いた者が\n己から　離れると　怒り　荒ぶる。
+8,10221,38,0,下顎を　覆う　氷塊の装甲は　鋼に勝り\n岩石を　砕くこと　容易なり。　深雪を\nかき分け　険しい　山道を　猛進す。
+8,10222,38,0,ヒスイの　極寒に　耐えるため　羽根の\n芯に　空気を含み　防寒機能　有す。\n環境が　進化に　影響すると　判明す。
+8,10223,38,0,遡上の旅路にて　志半ばに　散った\n輩の魂を　まとう。　ヒスイ　流れし\n河川においては　敵うもの　皆無なり。
+8,10224,38,0,女人の姿より　変わりし現象。\n命　粗末にする者あれば　雲海より\n現れ　憤怒の罰を下し　容赦なし。
 8,20001,38,0,生物とは思えぬ　異形の姿なり。\n形状　異なるもの多く　異国の文字との\n共通性を　訴えるも　評価されず。
 8,20002,38,0,生物とは思えぬ　異形の姿なり。\n形状　異なるもの多く　異国の文字との\n共通性を　訴えるも　評価されず。
 8,20003,38,0,生物とは思えぬ　異形の姿なり。\n形状　異なるもの多く　異国の文字との\n共通性を　訴えるも　評価されず。
@@ -2429,56 +2474,11 @@ language_id,form_id,version_id,is_female,entry
 8,20025,38,0,生物とは思えぬ　異形の姿なり。\n形状　異なるもの多く　異国の文字との\n共通性を　訴えるも　評価されず。
 8,20026,38,0,生物とは思えぬ　異形の姿なり。\n形状　異なるもの多く　異国の文字との\n共通性を　訴えるも　評価されず。
 8,20027,38,0,生物とは思えぬ　異形の姿なり。\n形状　異なるもの多く　異国の文字との\n共通性を　訴えるも　評価されず。
-8,10209,38,0,針より　毒　散らす　厄介者ゆえ\n漁師には　忌み嫌われし　存在。\n他の地方では　異なる姿で　生息す。
-8,10212,38,0,鉤爪　逞しく　断崖絶壁を　踏破するに\n有利な　形状。　先端より　毒液　滴り\n獲物　捕らえしとき　神経を　侵す。
 8,20028,38,0,吐き出す　糸と　砂泥　練りあげ\n蓑を　こしらえる。　砂泥の蓑は\n風雨に脆く　洞などに　隠れる。
 8,20029,38,0,手頃な　材料が　見つからぬと\nちり芥にて　蓑を　こしらえる。\n存外　居心地は　悪くない模様。
-8,10007,38,0,砂泥の皮膚は　相応に　硬く\nムックルの嘴　程度ならば\n易々と　弾き返すこと　造作なし。
-8,10008,38,0,ちり芥にて　構成されし体は　景色に\n溶け込み　目立たず。　天敵より　身を\n隠すに　うってつけの様子。
 8,20030,38,0,晴天ならば　実に　陽気に　活動。\nされど　日が　陰れば　即座に\n花弁を　閉じて　動きを　止める。
 8,20031,38,0,水温　冷たき　磯辺に　多し。\nやや　強く　触れると　体表より\n紫の汁　滲みだし　服を　汚す。
 8,20032,38,0,海中より　陸地での　活動　多し。\n晴天に　比較し　曇天　ならびに\n雨天において　活発なり。
-8,10026,38,0,面妖な　釜に　潜みし　フォルム。\n釜の　出自については　不明。\n炎　吹きて　悪事をなす　困り者。
-8,10027,38,0,珍奇な　箪笥に　潜みし　フォルム。\n箪笥　本来の　用途は　分からず。\n冷水　撒きて　悪事をなす　困り者。
-8,10028,38,0,奇怪な　水屋に　潜みし　フォルム。\n水屋の　素材は　未知の　物質。\n霜　起こし　悪事をなす　困り者。
-8,10029,38,0,謎の　器具に　潜みし　フォルム。\n器具の　用途は　分かっていない。\n烈風　吐きて　悪事をなす　困り者。
-8,10030,38,0,異様な　猫車に　潜みし　フォルム。\n猫車の　機構は　不可思議なり。\n草木を　薙ぎ　悪事をなす　困り者。
-8,10210,38,0,光明　フォルムチェンジの　引き金。\n創造神に　酷似する姿こそ　真なりと\n思わざるを得ぬほどの　剛力　発揮す。
-8,10211,38,0,天翔ける姿　万物を　創りし　存在を\n想起す。　姿を　模すこと　すなわち\nその力を　我がものとする術と　推察。
-8,10031,38,0,フォルムチェンジにより　脚　無くす。\nこれの棲むは　天地の区別なき　世界と\n考察す。　されど　証明の　手段なし。
-8,10032,38,0,珍しき花の香　嗅ぎしとき　小さき体\n光に包まれ　姿　変貌す。　花の香\n試しに　嗅ぐも　我が身に　変化なし。
-8,10009,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10010,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10011,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10012,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10013,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10014,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10015,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10016,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10017,38,0,万年雪　覆いし　聖なる山に　棲む。\n心　善なる者が　山道　迷うとき\n姿見せ　麓まで　導くと　伝わる。
-8,10018,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10019,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10020,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10021,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10022,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10023,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10024,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10072,38,0,天上より　ヒスイの地を　射す　光源。\n光明にて　ポケモン　導き　守護す。\nヒスイの神話　万物の創造主と　記す。
-8,10213,38,0,非情なる　気質と　太刀筋を　有す。\n怒涛の　連撃は　千重波の　如し。\nヒスイにて　進化せし　稀有なる姿。
-8,10214,38,0,雪深き山に　棲みしゆえに　脚力が\n発達したと　考察す。　周囲の者を\n鼓舞する　香りを　冠の花より　放つ。
-8,10215,38,0,温厚な　気質など　相違点　あれども\nバスラオの　特徴を　多く　有すゆえ\nそのリージョンフォームと　定義す。
-8,10216,38,0,死した魂　ヒスイの地にて　蘇る。\n怨嗟は　力となり　頭より　立ち昇り\n相手の姿に　変じ　恨み　晴らしたり。
-8,10217,38,0,白髪　振り乱し姿　死神の如く。\n我が身をも　切り裂く　激しき怨讐にて\n仇　襲い　道連れ覚悟で　仕留めたり。
-8,10218,38,0,鬼気迫る　鬨の声を　上げ　狩りをする\n猛き　大鳥。　湖水に　衝撃波を　放ち\n水面に　浮かびし　獲物を　捕る。
-8,10037,38,0,フォルムチェンジと　呼ばれし　現象。\n怪鳥のごとき姿こそ　真なりと　考察。\n大海　渡りしとき　この姿で　目撃す。
-8,10038,38,0,霹靂閃電　姿　現す。　尾に　連なりし\n珠より　雷撃　降り注ぎ　敵を　一掃。\n威力　凄まじく　一片すら　残らず。
-8,10039,38,0,霊獣の姿にて　天翔けしとき　大地に\n豊穣もたらす。　衆人　これを　敬う。\n一刻あれば　ヒスイの地を　縦断す。
-8,10219,38,0,陰気な　性質。　ヒスイの地の　水に\n含有する　鉄が　皮膚の粘液に　作用し\n金属の殻へ　変容させたと　考察す。
-8,10220,38,0,金属の殻の　剛柔を　自在に　操る。\n孤独を　厭い　執念深く　好いた者が\n己から　離れると　怒り　荒ぶる。
-8,10221,38,0,下顎を　覆う　氷塊の装甲は　鋼に勝り\n岩石を　砕くこと　容易なり。　深雪を\nかき分け　険しい　山道を　猛進す。
-8,10222,38,0,ヒスイの　極寒に　耐えるため　羽根の\n芯に　空気を含み　防寒機能　有す。\n環境が　進化に　影響すると　判明す。
-8,10223,38,0,遡上の旅路にて　志半ばに　散った\n輩の魂を　まとう。　ヒスイ　流れし\n河川においては　敵うもの　皆無なり。
-8,10224,38,0,女人の姿より　変わりし現象。\n命　粗末にする者あれば　雲海より\n現れ　憤怒の罰を下し　容赦なし。
 9,25,38,0,双颊有囊，用以积蓄电力。\n栖息在森林，性情聪慧，\n会以电击烧灼坚硬的树果食用。
 9,26,38,0,发出的电击能超过十万伏特。\n其威力之强，即使是本人故乡的\n大王铜象也能一击电晕。
 9,35,38,0,能够在满月夜里的静谧山间遇见它。\n小小翅膀绽放着微光，那舞动的\n身姿如同妖精般惹人怜爱。
@@ -2705,13 +2705,58 @@ language_id,form_id,version_id,is_female,entry
 9,903,38,0,拥有凌驾其他物种之上的身体能力\n以及剧毒。在寒冷的高地上所向无敌。\n偏好独自行动，而不会集结成群。
 9,904,38,0,身上如同枪尖般的针以及凶暴的性情\n使这种宝可梦得到了海鬼的外号。\n会吞下毒物作为自身粮食。
 9,905,38,0,当它越过大海飞来，便代表严寒的\n冬季即将终结。传说中其慈爱将使\n新的生命在洗翠大地上萌芽。
-9,10116,38,0,成群栖息在积雪深厚的山中，可以推测\n其姿态的变化是为了适应寒冷的气候。\n会吐出冰冻的气息来保护自己。
+9,10007,38,0,泥沙形成的皮肤有相当的硬度。\n若是姆克儿的嘴喙程度的攻击，\n轻而易举就可以反弹回去。
+9,10008,38,0,尘土草芥等垃圾构成的身体能\n毫不起眼地融入周围景色之中，\n正好适合用来躲避天敌袭击。
+9,10009,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10010,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10011,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10012,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10013,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10014,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10015,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10016,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
 9,10017,38,0,栖息在万年积雪覆盖的圣山。\n据说当心地善良者在山中迷路时，\n它会现身引领迷路者下山。
+9,10017,38,0,栖息在万年积雪覆盖的圣山。\n据说当心地善良者在山中迷路时，\n它会现身引领迷路者下山。
+9,10018,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10019,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10020,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10021,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10022,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10023,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10024,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10026,38,0,藏身于怪异饭锅中的形态。\n此饭锅来历不明。是个会\n喷火来作恶的麻烦家伙。
+9,10027,38,0,藏身于奇特柜子中的形态。\n柜子原本的用途不得而知。是个\n会泼洒冷水来作恶的麻烦家伙。
+9,10028,38,0,藏身于奇怪橱柜中的形态。\n橱柜由未知的物质所制成。是个\n会制造冰霜来作恶的麻烦家伙。
+9,10029,38,0,藏身于神秘器具中的形态。\n器具的用途不得而知。是个\n会喷吐狂风来作恶的麻烦家伙。
+9,10030,38,0,藏身于异样推车中的形态。\n推车的构造十分不可思议。是个\n会砍断草木来作恶的麻烦家伙。
+9,10031,38,0,脚部随着形态变化而消失。据推测，\n此宝可梦栖息于没有天地之分的\n世界，然而没有手段能加以证明。
+9,10032,38,0,当嗅闻珍奇之花的香味时，娇小的\n身体将在光辉之中变化成此形貌。\n本人曾尝试嗅闻该花，但没有变化。
+9,10037,38,0,此乃被称为形态变化的现象。据考察，\n此一形同怪鸟的姿态才是其真正样貌。\n曾被目击以此姿态横越大海。
+9,10038,38,0,在闪电霹雳中现身。会自尾部的\n连串珠子降下雷击扫荡敌手。\n惊人的威力足以令敌手片甲不留。
+9,10039,38,0,以灵兽之姿翱翔天际时，会为大地\n带来丰收，因而受到众人崇敬。\n只需一刻光阴便能纵断洗翠大地。
+9,10072,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
+9,10116,38,0,成群栖息在积雪深厚的山中，可以推测\n其姿态的变化是为了适应寒冷的气候。\n会吐出冰冻的气息来保护自己。
 9,10204,38,0,两只一组共同负责地盘的警卫工作。\n体毛中混有火成岩的成分，可以\n推想这是受到火山活动的影响。
 9,10205,38,0,将猛烈燃烧的火焰缠绕在牙齿上扑向猎物。\n虽然体型很大，却能以灵巧的假动作戏弄敌手，\n那姿态就像是舞蹈一般。
 9,10206,38,0,形状颇似精灵球的奇异宝可梦。\n当情绪高涨时，积蓄在腹部的\n电流就会放出，同时发出大笑。
 9,10207,38,0,体表的组织与球果的成分极为接近，\n不可思议。当它情绪焦躁时所放出的\n电流，能量足以匹敌２０次的落雷。
 9,10208,38,0,据考察，它是受到耸立于洗翠中心的灵山之气\n影响，才形成了现在的模样。据说会用\n自己的火焰净化并超渡无处可去的灵魂。
+9,10209,38,0,会用针散布毒素的棘手家伙，因而\n受到渔民们的厌恶。栖息在其他地区的\n千针鱼则是呈现着不同的姿态。
+9,10210,38,0,强健的爪子形状有助于在断崖绝壁上\n行动自如。爪子尖端滴出的毒液会在\n捉住猎物时侵袭其神经。
+9,10211,38,0,光明乃是促使形态变化的导火线。此形态\n所能发挥的强大力量，令人不得不认为\n如此酷似创造神的姿态才是其真身。
+9,10212,38,0,翱翔天际的姿态令人联想起万物的\n创造主。本人推测，模仿创造主的\n模样正是将其力化为己有的方法。
+9,10213,38,0,性情与刀路皆是残酷无情。\n连绵不断的攻击彷如千层浪涛。\n此乃只在洗翠进化而成的稀有姿态。
+9,10214,38,0,据考察，雪山深处的栖息环境为其\n带来了发达的脚力。会从头冠般的\n花中发出鼓舞周围伙伴的香气。
+9,10215,38,0,此宝可梦具有多项野蛮鲈鱼的特征，\n虽然有性情温驯等不同点存在，\n本人仍将其定义为野蛮鲈鱼的地区形态。
+9,10216,38,0,死后灵魂在洗翠地区复苏。\n怨恨化为力量，从其头部冉冉飘升。\n会化成对手的样貌去洗刷仇恨。
+9,10217,38,0,疯狂舞动白发的姿态如同死神。\n在足以撕裂自身的深刻仇怨驱使下，\n抱定同归于尽之心袭杀仇敌。
+9,10218,38,0,勇猛的大鸟。狩猎时会发出\n气势骇人的战吼，朝湖水发出\n冲击波，捕捉浮出水面的猎物。
+9,10219,38,0,性情阴沉。据考察，洗翠地区的水中\n含有的铁质对皮肤的黏液产生作用，\n使其变化成了金属外壳。
+9,10220,38,0,能自在操纵可刚可柔的金属外壳。\n性情执着且厌恶孤独，一旦喜爱的\n对象离开自己便会怒不可遏。
+9,10221,38,0,包覆下颚的冰块装甲硬度更胜钢铁，\n能轻易地击碎岩石。冰岩怪借此铲开\n厚重积雪，在险峻的山路上猛冲。
+9,10222,38,0,为抵抗洗翠的严寒气候，羽毛的\n芯中含有空气，因而能够防寒。\n由此可见环境会对进化产生影响。
+9,10223,38,0,在溯河而上的旅程中半途丧命的\n伙伴的灵魂缠绕其身。在流经\n洗翠地区的河川里可谓所向无敌。
+9,10224,38,0,自女人的姿态变化而成。若有谁\n做出糟蹋生命之事，便会从云海\n中现身，愤怒地降下无情的惩罚。
 9,20001,38,0,奇形怪状不似生物，且个体之间\n形状各异，本人指出其身姿与\n异国文字的共通之处，但未获重视。
 9,20002,38,0,奇形怪状不似生物，且个体之间\n形状各异，本人指出其身姿与\n异国文字的共通之处，但未获重视。
 9,20003,38,0,奇形怪状不似生物，且个体之间\n形状各异，本人指出其身姿与\n异国文字的共通之处，但未获重视。
@@ -2739,56 +2784,11 @@ language_id,form_id,version_id,is_female,entry
 9,20025,38,0,奇形怪状不似生物，且个体之间\n形状各异，本人指出其身姿与\n异国文字的共通之处，但未获重视。
 9,20026,38,0,奇形怪状不似生物，且个体之间\n形状各异，本人指出其身姿与\n异国文字的共通之处，但未获重视。
 9,20027,38,0,奇形怪状不似生物，且个体之间\n形状各异，本人指出其身姿与\n异国文字的共通之处，但未获重视。
-9,10209,38,0,会用针散布毒素的棘手家伙，因而\n受到渔民们的厌恶。栖息在其他地区的\n千针鱼则是呈现着不同的姿态。
-9,10212,38,0,强健的爪子形状有助于在断崖绝壁上\n行动自如。爪子尖端滴出的毒液会在\n捉住猎物时侵袭其神经。
 9,20028,38,0,将吐出的丝揉合泥沙制成蓑衣。\n泥沙所制的蓑衣不耐风雨，\n因此它会躲藏在洞穴等处。
 9,20029,38,0,当身边找不到适合的材料时，\n会用尘土草芥等垃圾来做蓑衣。\n裹起来的感觉似乎意外地还不坏。
-9,10007,38,0,泥沙形成的皮肤有相当的硬度。\n若是姆克儿的嘴喙程度的攻击，\n轻而易举就可以反弹回去。
-9,10008,38,0,尘土草芥等垃圾构成的身体能\n毫不起眼地融入周围景色之中，\n正好适合用来躲避天敌袭击。
 9,20030,38,0,一到了晴天就会非常积极地\n活动起来，但只要太阳被遮住，\n就会立刻闭上花瓣停止动作。
 9,20031,38,0,常见于水温较低的岩岸。若是\n稍微用力去触摸它，就会被它\n体表渗出的紫色汁液弄脏衣服。
 9,20032,38,0,比起海中，更常在陆地上活动。\n相较于晴天，在阴天及雨天时\n活动会更加活跃。
-9,10026,38,0,藏身于怪异饭锅中的形态。\n此饭锅来历不明。是个会\n喷火来作恶的麻烦家伙。
-9,10027,38,0,藏身于奇特柜子中的形态。\n柜子原本的用途不得而知。是个\n会泼洒冷水来作恶的麻烦家伙。
-9,10028,38,0,藏身于奇怪橱柜中的形态。\n橱柜由未知的物质所制成。是个\n会制造冰霜来作恶的麻烦家伙。
-9,10029,38,0,藏身于神秘器具中的形态。\n器具的用途不得而知。是个\n会喷吐狂风来作恶的麻烦家伙。
-9,10030,38,0,藏身于异样推车中的形态。\n推车的构造十分不可思议。是个\n会砍断草木来作恶的麻烦家伙。
-9,10210,38,0,光明乃是促使形态变化的导火线。此形态\n所能发挥的强大力量，令人不得不认为\n如此酷似创造神的姿态才是其真身。
-9,10211,38,0,翱翔天际的姿态令人联想起万物的\n创造主。本人推测，模仿创造主的\n模样正是将其力化为己有的方法。
-9,10031,38,0,脚部随着形态变化而消失。据推测，\n此宝可梦栖息于没有天地之分的\n世界，然而没有手段能加以证明。
-9,10032,38,0,当嗅闻珍奇之花的香味时，娇小的\n身体将在光辉之中变化成此形貌。\n本人曾尝试嗅闻该花，但没有变化。
-9,10009,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10010,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10011,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10012,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10013,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10014,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10015,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10016,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10017,38,0,栖息在万年积雪覆盖的圣山。\n据说当心地善良者在山中迷路时，\n它会现身引领迷路者下山。
-9,10018,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10019,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10020,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10021,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10022,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10023,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10024,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10072,38,0,以自身为光源，从天照耀洗翠大地。\n凭借其光明引导并守护宝可梦。\n洗翠神话视其为万物的创造主。
-9,10213,38,0,性情与刀路皆是残酷无情。\n连绵不断的攻击彷如千层浪涛。\n此乃只在洗翠进化而成的稀有姿态。
-9,10214,38,0,据考察，雪山深处的栖息环境为其\n带来了发达的脚力。会从头冠般的\n花中发出鼓舞周围伙伴的香气。
-9,10215,38,0,此宝可梦具有多项野蛮鲈鱼的特征，\n虽然有性情温驯等不同点存在，\n本人仍将其定义为野蛮鲈鱼的地区形态。
-9,10216,38,0,死后灵魂在洗翠地区复苏。\n怨恨化为力量，从其头部冉冉飘升。\n会化成对手的样貌去洗刷仇恨。
-9,10217,38,0,疯狂舞动白发的姿态如同死神。\n在足以撕裂自身的深刻仇怨驱使下，\n抱定同归于尽之心袭杀仇敌。
-9,10218,38,0,勇猛的大鸟。狩猎时会发出\n气势骇人的战吼，朝湖水发出\n冲击波，捕捉浮出水面的猎物。
-9,10037,38,0,此乃被称为形态变化的现象。据考察，\n此一形同怪鸟的姿态才是其真正样貌。\n曾被目击以此姿态横越大海。
-9,10038,38,0,在闪电霹雳中现身。会自尾部的\n连串珠子降下雷击扫荡敌手。\n惊人的威力足以令敌手片甲不留。
-9,10039,38,0,以灵兽之姿翱翔天际时，会为大地\n带来丰收，因而受到众人崇敬。\n只需一刻光阴便能纵断洗翠大地。
-9,10219,38,0,性情阴沉。据考察，洗翠地区的水中\n含有的铁质对皮肤的黏液产生作用，\n使其变化成了金属外壳。
-9,10220,38,0,能自在操纵可刚可柔的金属外壳。\n性情执着且厌恶孤独，一旦喜爱的\n对象离开自己便会怒不可遏。
-9,10221,38,0,包覆下颚的冰块装甲硬度更胜钢铁，\n能轻易地击碎岩石。冰岩怪借此铲开\n厚重积雪，在险峻的山路上猛冲。
-9,10222,38,0,为抵抗洗翠的严寒气候，羽毛的\n芯中含有空气，因而能够防寒。\n由此可见环境会对进化产生影响。
-9,10223,38,0,在溯河而上的旅程中半途丧命的\n伙伴的灵魂缠绕其身。在流经\n洗翠地区的河川里可谓所向无敌。
-9,10224,38,0,自女人的姿态变化而成。若有谁\n做出糟蹋生命之事，便会从云海\n中现身，愤怒地降下无情的惩罚。
 10,25,38,0,雙頰有囊，用以積蓄電力。\n棲息在森林，性情聰慧，\n會以電擊燒灼堅硬的樹果食用。
 10,26,38,0,發出的電擊能超過１０萬伏特。\n其威力之強，即使是吾人故鄉的\n大王銅象也能一擊電暈。
 10,35,38,0,能夠在滿月夜裡的靜謐山間遇見牠。\n小小翅膀綻放著微光，那舞動的\n身姿如同妖精般惹人憐愛。
@@ -3015,13 +3015,58 @@ language_id,form_id,version_id,is_female,entry
 10,903,38,0,擁有凌駕其他物種之上的身體能力\n以及劇毒。在寒冷的高地上所向無敵。\n偏好獨自行動，而不會集結成群。
 10,904,38,0,身上如同槍尖般的針以及凶暴的性情\n使這種寶可夢得到了海鬼的外號。\n會吞下毒物作為己身糧食。
 10,905,38,0,當牠越過大海飛來，便代表嚴寒的\n冬季即將終結。傳說中其慈愛將使\n新的生命在洗翠大地上萌芽。
-10,10116,38,0,成群棲息在積雪深厚的山中，可以推測\n其姿態的變化是為了適應寒冷的氣候。\n會吐出冰凍的氣息來保護自己。
+10,10007,38,0,泥沙形成的皮膚相對地比較堅硬。\n若是姆克兒的嘴喙程度的攻擊，\n輕而易舉就可以反彈回去。
+10,10008,38,0,塵土草芥等垃圾構成的身體能\n毫不起眼地融入周遭景色之中，\n正好適合用來躲避天敵襲擊。
+10,10009,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10010,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10011,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10012,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10013,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10014,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10015,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10016,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
 10,10017,38,0,棲息在萬年積雪覆蓋的聖山。\n據說當心地善良者在山中迷路時，\n牠會現身引領迷路者下山。
+10,10017,38,0,棲息在萬年積雪覆蓋的聖山。\n據說當心地善良者在山中迷路時，\n牠會現身引領迷路者下山。
+10,10018,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10019,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10020,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10021,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10022,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10023,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10024,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10026,38,0,藏身於怪異飯鍋中的形態。\n此飯鍋來歷不明。是個會\n噴火來作惡的麻煩傢伙。
+10,10027,38,0,藏身於奇特櫃子中的形態。\n櫃子原本的用途不得而知。是個\n會潑灑冷水來作惡的麻煩傢伙。
+10,10028,38,0,藏身於奇怪櫥櫃中的形態。\n櫥櫃由未知的物質所製成。是個\n會製造冰霜來作惡的麻煩傢伙。
+10,10029,38,0,藏身於神秘器具中的形態。\n器具的用途不得而知。是個\n會噴吐狂風來作惡的麻煩傢伙。
+10,10030,38,0,藏身於異樣推車中的形態。\n推車的構造十分不可思議。是個\n會砍斷草木來作惡的麻煩傢伙。
+10,10031,38,0,腳部隨著形態變化而消失。據推測，\n此寶可夢棲息於沒有天地之分的\n世界，然而沒有手段能加以證明。
+10,10032,38,0,當嗅聞珍奇之花的香味時，嬌小的\n身體將在光輝之中變化成此形貌。\n吾人曾嘗試嗅聞此花，但沒有變化。
+10,10037,38,0,此乃被稱為形態變化的現象。據考察，\n此一形同怪鳥的姿態才是其真正樣貌。\n曾被目擊以此姿態橫越大海。
+10,10038,38,0,在閃電霹靂中現身。會自尾部的\n連串珠子降下雷擊掃蕩敵手。\n驚人的威力足以令敵手片甲不留。
+10,10039,38,0,以靈獸之姿翱翔天際時，會為大地\n帶來豐收，因而受到眾人崇敬。\n只需一刻光陰便能縱斷洗翠大地。
+10,10072,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
+10,10116,38,0,成群棲息在積雪深厚的山中，可以推測\n其姿態的變化是為了適應寒冷的氣候。\n會吐出冰凍的氣息來保護自己。
 10,10204,38,0,兩隻一組共同負責地盤的警戒工作。\n體毛中混有火成岩的成分，可以\n推想這是受到火山活動的影響。
 10,10205,38,0,將猛烈燃燒的火焰纏繞在牙齒上撲向獵物。\n雖然體型很大，卻能以靈巧的假動作戲弄敵手，\n那姿態就像是舞蹈一般。
 10,10206,38,0,形狀頗似精靈球的奇異寶可夢。\n當情緒高漲時，積蓄在腹部的\n電流就會放出，同時發出大笑。
 10,10207,38,0,體表的組織與球果的成分極為接近，\n實在不可思議。當牠情緒焦躁時所放出\n的電流，能量足以匹敵２０次的落雷。
 10,10208,38,0,據考察，牠是受到聳立於洗翠中心的靈山所發\n之氣的影響，才形成了現在的模樣。據說會用\n自己的火焰淨化並超渡無處可去的靈魂。
+10,10209,38,0,會用針散布毒素的棘手傢伙，因而\n受到漁民們的厭惡。棲息在其他地區\n的千針魚則是呈現著不同的姿態。
+10,10210,38,0,強健的爪子形狀有助於在斷崖絕壁上\n行動自如。爪子尖端滴出的毒液會在\n捉住獵物時侵襲其神經。
+10,10211,38,0,光明乃是促使形態變化的導火線。此形態\n所能發揮的強大力量，令人不得不認為\n如此酷似創造神的姿態才是其真身。
+10,10212,38,0,翱翔天際的姿態令人聯想起萬物的\n創造主。吾人推測，模仿創造主的\n模樣正是將其力化為己有的方法。
+10,10213,38,0,性情與刀路皆是殘酷無情。\n連綿不斷的攻擊彷如千層浪濤。\n此乃只在洗翠進化而成的稀有姿態。
+10,10214,38,0,據考察，雪山深處的棲息環境為其\n帶來了發達的腳力。會從頭冠般的\n花中發出鼓舞周遭夥伴的香氣。
+10,10215,38,0,此寶可夢具有多項野蠻鱸魚的特徵，\n雖然有性情溫馴等不同點存在，\n吾人仍將其定義為野蠻鱸魚的地區形態。
+10,10216,38,0,死後靈魂在洗翠地區復甦。\n怨恨化為力量，從其頭部冉冉飄升。\n會化成對手的樣貌去洗刷仇恨。
+10,10217,38,0,瘋狂舞動白髮的姿態如同死神。\n在足以撕裂己身的深刻仇怨驅使下，\n抱定同歸於盡之心襲殺仇敵。
+10,10218,38,0,勇猛的大鳥。狩獵時會發出\n氣勢駭人的戰吼，朝湖水發出\n衝擊波，捕捉浮出水面的獵物。
+10,10219,38,0,性情陰沉。據考察，洗翠地區的水中\n含有的鐵質對皮膚的黏液產生作用，\n使其變化成了金屬外殼。
+10,10220,38,0,能自在操縱可剛可柔的金屬外殼。\n性情執著且厭惡孤獨，一旦喜愛的\n對象離開自己便會怒不可遏。
+10,10221,38,0,包覆下顎的冰塊裝甲硬度更勝鋼鐵，\n能輕易地擊碎岩石。冰岩怪藉此剷開\n厚重積雪，在險峻的山路上猛衝。
+10,10222,38,0,為抵抗洗翠的嚴寒氣候，羽毛的\n芯中含有空氣，因而能夠防寒。\n由此可見環境會對進化產生影響。
+10,10223,38,0,在溯河而上的旅程中半途喪命者\n的靈魂纏繞其身。在流經洗翠地區\n的河川裡可謂所向無敵。
+10,10224,38,0,自女人的姿態變化而成。若有誰\n做出糟蹋生命之事，便會從雲海\n中現身，憤怒地降下無情的懲罰。
 10,20001,38,0,奇形怪狀不似生物，且個體之間\n形狀各異，吾人指出其身姿與\n異國文字的共通性，但未獲重視。
 10,20002,38,0,奇形怪狀不似生物，且個體之間\n形狀各異，吾人指出其身姿與\n異國文字的共通性，但未獲重視。
 10,20003,38,0,奇形怪狀不似生物，且個體之間\n形狀各異，吾人指出其身姿與\n異國文字的共通性，但未獲重視。
@@ -3049,53 +3094,8 @@ language_id,form_id,version_id,is_female,entry
 10,20025,38,0,奇形怪狀不似生物，且個體之間\n形狀各異，吾人指出其身姿與\n異國文字的共通性，但未獲重視。
 10,20026,38,0,奇形怪狀不似生物，且個體之間\n形狀各異，吾人指出其身姿與\n異國文字的共通性，但未獲重視。
 10,20027,38,0,奇形怪狀不似生物，且個體之間\n形狀各異，吾人指出其身姿與\n異國文字的共通性，但未獲重視。
-10,10209,38,0,會用針散布毒素的棘手傢伙，因而\n受到漁民們的厭惡。棲息在其他地區\n的千針魚則是呈現著不同的姿態。
-10,10212,38,0,強健的爪子形狀有助於在斷崖絕壁上\n行動自如。爪子尖端滴出的毒液會在\n捉住獵物時侵襲其神經。
 10,20028,38,0,將吐出的絲揉合泥沙製成蓑衣。\n泥沙所製的蓑衣不耐風雨，\n因此牠會躲藏在洞穴等處。
 10,20029,38,0,當身邊找不到適合的材料時，\n會用塵土草芥等垃圾來做蓑衣。\n裹起來的感覺似乎意外地還不壞。
-10,10007,38,0,泥沙形成的皮膚相對地比較堅硬。\n若是姆克兒的嘴喙程度的攻擊，\n輕而易舉就可以反彈回去。
-10,10008,38,0,塵土草芥等垃圾構成的身體能\n毫不起眼地融入周遭景色之中，\n正好適合用來躲避天敵襲擊。
 10,20030,38,0,一到了晴天就會非常積極地\n活動起來，但只要太陽被遮住，\n就會立刻閉上花瓣停止動作。
 10,20031,38,0,常見於水溫較低的岩岸。若是\n稍微用力去觸摸牠，就會被牠\n體表滲出的紫色汁液弄髒衣服。
 10,20032,38,0,比起海中，更常在陸地上活動。\n相較於晴天，在陰天及雨天時\n活動會更加活躍。
-10,10026,38,0,藏身於怪異飯鍋中的形態。\n此飯鍋來歷不明。是個會\n噴火來作惡的麻煩傢伙。
-10,10027,38,0,藏身於奇特櫃子中的形態。\n櫃子原本的用途不得而知。是個\n會潑灑冷水來作惡的麻煩傢伙。
-10,10028,38,0,藏身於奇怪櫥櫃中的形態。\n櫥櫃由未知的物質所製成。是個\n會製造冰霜來作惡的麻煩傢伙。
-10,10029,38,0,藏身於神秘器具中的形態。\n器具的用途不得而知。是個\n會噴吐狂風來作惡的麻煩傢伙。
-10,10030,38,0,藏身於異樣推車中的形態。\n推車的構造十分不可思議。是個\n會砍斷草木來作惡的麻煩傢伙。
-10,10210,38,0,光明乃是促使形態變化的導火線。此形態\n所能發揮的強大力量，令人不得不認為\n如此酷似創造神的姿態才是其真身。
-10,10211,38,0,翱翔天際的姿態令人聯想起萬物的\n創造主。吾人推測，模仿創造主的\n模樣正是將其力化為己有的方法。
-10,10031,38,0,腳部隨著形態變化而消失。據推測，\n此寶可夢棲息於沒有天地之分的\n世界，然而沒有手段能加以證明。
-10,10032,38,0,當嗅聞珍奇之花的香味時，嬌小的\n身體將在光輝之中變化成此形貌。\n吾人曾嘗試嗅聞此花，但沒有變化。
-10,10009,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10010,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10011,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10012,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10013,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10014,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10015,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10016,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10017,38,0,棲息在萬年積雪覆蓋的聖山。\n據說當心地善良者在山中迷路時，\n牠會現身引領迷路者下山。
-10,10018,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10019,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10020,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10021,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10022,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10023,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10024,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10072,38,0,以己身為光源，從天照耀洗翠大地。\n憑藉其光明引導並守護寶可夢。\n洗翠神話視其為萬物的創造主。
-10,10213,38,0,性情與刀路皆是殘酷無情。\n連綿不斷的攻擊彷如千層浪濤。\n此乃只在洗翠進化而成的稀有姿態。
-10,10214,38,0,據考察，雪山深處的棲息環境為其\n帶來了發達的腳力。會從頭冠般的\n花中發出鼓舞周遭夥伴的香氣。
-10,10215,38,0,此寶可夢具有多項野蠻鱸魚的特徵，\n雖然有性情溫馴等不同點存在，\n吾人仍將其定義為野蠻鱸魚的地區形態。
-10,10216,38,0,死後靈魂在洗翠地區復甦。\n怨恨化為力量，從其頭部冉冉飄升。\n會化成對手的樣貌去洗刷仇恨。
-10,10217,38,0,瘋狂舞動白髮的姿態如同死神。\n在足以撕裂己身的深刻仇怨驅使下，\n抱定同歸於盡之心襲殺仇敵。
-10,10218,38,0,勇猛的大鳥。狩獵時會發出\n氣勢駭人的戰吼，朝湖水發出\n衝擊波，捕捉浮出水面的獵物。
-10,10037,38,0,此乃被稱為形態變化的現象。據考察，\n此一形同怪鳥的姿態才是其真正樣貌。\n曾被目擊以此姿態橫越大海。
-10,10038,38,0,在閃電霹靂中現身。會自尾部的\n連串珠子降下雷擊掃蕩敵手。\n驚人的威力足以令敵手片甲不留。
-10,10039,38,0,以靈獸之姿翱翔天際時，會為大地\n帶來豐收，因而受到眾人崇敬。\n只需一刻光陰便能縱斷洗翠大地。
-10,10219,38,0,性情陰沉。據考察，洗翠地區的水中\n含有的鐵質對皮膚的黏液產生作用，\n使其變化成了金屬外殼。
-10,10220,38,0,能自在操縱可剛可柔的金屬外殼。\n性情執著且厭惡孤獨，一旦喜愛的\n對象離開自己便會怒不可遏。
-10,10221,38,0,包覆下顎的冰塊裝甲硬度更勝鋼鐵，\n能輕易地擊碎岩石。冰岩怪藉此剷開\n厚重積雪，在險峻的山路上猛衝。
-10,10222,38,0,為抵抗洗翠的嚴寒氣候，羽毛的\n芯中含有空氣，因而能夠防寒。\n由此可見環境會對進化產生影響。
-10,10223,38,0,在溯河而上的旅程中半途喪命者\n的靈魂纏繞其身。在流經洗翠地區\n的河川裡可謂所向無敵。
-10,10224,38,0,自女人的姿態變化而成。若有誰\n做出糟蹋生命之事，便會從雲海\n中現身，憤怒地降下無情的懲罰。
