@@ -825,6 +825,99 @@ language_id,move_id,name
 1,824,ブリザードランス
 1,825,アストラルビット
 1,826,ぶきみなじゅもん
+1,827,フェイタルクロー
+1,828,バリアーラッシュ
+1,829,パワーシフト
+1,830,がんせきアックス
+1,831,はるのあらし
+1,832,しんぴのちから
+1,833,だいふんげき
+1,834,ウェーブタックル
+1,835,クロロブラスト
+1,836,ひょうざんおろし
+1,837,しょうりのまい
+1,838,ぶちかまし
+1,839,どくばりセンボン
+1,840,オーラウイング
+1,841,うらみつらみ
+1,842,たてこもる
+1,843,３ぼんのや
+1,844,ひゃっきやこう
+1,845,ひけん・ちえなみ
+1,846,こがらしあらし
+1,847,かみなりあらし
+1,848,ねっさのあらし
+1,849,みかづきのいのり
+1,850,ブレイブチャージ
+1,851,テラバースト
+1,852,スレッドトラップ
+1,853,かかとおとし
+1,854,おはかまいり
+1,855,ルミナコリジョン
+1,856,いっちょうあがり
+1,857,ジェットパンチ
+1,858,ハバネロエキス
+1,859,ホイールスピン
+1,860,ネズミざん
+1,861,アイススピナー
+1,862,きょけんとつげき
+1,863,さいきのいのり
+1,864,しおづけ
+1,865,トリプルダイブ
+1,866,キラースピン
+1,867,うつしえ
+1,868,みをけずる
+1,869,ドゲザン
+1,870,トリックフラワー
+1,871,フレアソング
+1,872,アクアステップ
+1,873,レイジングブル
+1,874,ゴールドラッシュ
+1,875,サイコブレイド
+1,876,ハイドロスチーム
+1,877,カタストロフィ
+1,878,アクセルブレイク
+1,879,イナズマドライブ
+1,880,しっぽきり
+1,881,さむいギャグ
+1,882,おかたづけ
+1,883,ゆきげしき
+1,884,とびつく
+1,885,くさわけ
+1,886,ひやみず
+1,887,ハイパードリル
+1,888,ツインビーム
+1,889,ふんどのこぶし
+1,890,アーマーキャノン
+1,891,むねんのつるぎ
+1,892,でんこうそうげき
+1,893,デカハンマー
+1,894,ほうふく
+1,895,アクアカッター
+1,896,バーンアクセル
+1,897,ダークアクセル
+1,898,ポイズンアクセル
+1,899,ファイトアクセル
+1,900,マジカルアクセル
+1,901,ブラッドムーン
+1,902,シャカシャカほう
+1,903,みずあめボム
+1,904,ツタこんぼう
+1,906,エレクトロビーム
+1,907,テラクラスター
+1,908,きまぐレーザー
+1,909,かえんのまもり
+1,910,じんらい
+1,911,パワフルエッジ
+1,912,タキオンカッター
+1,913,ハードプレス
+1,914,ドラゴンエール
+1,915,みわくのボイス
+1,916,やけっぱち
+1,917,サンダーダイブ
+1,918,サイコノイズ
+1,919,はやてがえし
+1,920,じゃどくのくさり
 1,10001,めざめるパワー (かくとう)
 1,10002,めざめるパワー (ひこう)
 1,10003,めざめるパワー (どく)
@@ -892,6 +985,7 @@ language_id,move_id,name
 1,10065,キョダイソゲキ
 1,10066,キョダイイチゲキ
 1,10067,キョダイレンゲキ
+1,10068,テラバースト (ステラ)
 2,1,Pound
 2,2,Karate Chop
 2,3,Double Slap
@@ -1718,6 +1812,99 @@ language_id,move_id,name
 2,824,Glacial Lance
 2,825,Astral Barrage
 2,826,Eerie Spell
+2,827,Dire Claw
+2,828,Psyshield Bash
+2,829,Power Shift
+2,830,Stone Axe
+2,831,Springtide Storm
+2,832,Mystical Power
+2,833,Raging Fury
+2,834,Wave Crash
+2,835,Chloroblast
+2,836,Mountain Gale
+2,837,Victory Dance
+2,838,Headlong Rush
+2,839,Barb Barrage
+2,840,Esper Wing
+2,841,Bitter Malice
+2,842,Shelter
+2,843,Triple Arrows
+2,844,Infernal Parade
+2,845,Ceaseless Edge
+2,846,Bleakwind Storm
+2,847,Wildbolt Storm
+2,848,Sandsear Storm
+2,849,Lunar Blessing
+2,850,Take Heart
+2,851,Tera Blast
+2,852,Silk Trap
+2,853,Axe Kick
+2,854,Last Respects
+2,855,Lumina Crash
+2,856,Order Up
+2,857,Jet Punch
+2,858,Spicy Extract
+2,859,Spin Out
+2,860,Population Bomb
+2,861,Ice Spinner
+2,862,Glaive Rush
+2,863,Revival Blessing
+2,864,Salt Cure
+2,865,Triple Dive
+2,866,Mortal Spin
+2,867,Doodle
+2,868,Fillet Away
+2,869,Kowtow Cleave
+2,870,Flower Trick
+2,871,Torch Song
+2,872,Aqua Step
+2,873,Raging Bull
+2,874,Make It Rain
+2,875,Psyblade
+2,876,Hydro Steam
+2,877,Ruination
+2,878,Collision Course
+2,879,Electro Drift
+2,880,Shed Tail
+2,881,Chilly Reception
+2,882,Tidy Up
+2,883,Snowscape
+2,884,Pounce
+2,885,Trailblaze
+2,886,Chilling Water
+2,887,Hyper Drill
+2,888,Twin Beam
+2,889,Rage Fist
+2,890,Armor Cannon
+2,891,Bitter Blade
+2,892,Double Shock
+2,893,Gigaton Hammer
+2,894,Comeuppance
+2,895,Aqua Cutter
+2,896,Blazing Torque
+2,897,Wicked Torque
+2,898,Noxious Torque
+2,899,Combat Torque
+2,900,Magical Torque
+2,901,Blood Moon
+2,902,Matcha Gotcha
+2,903,Syrup Bomb
+2,904,Ivy Cudgel
+2,906,Electro Shot
+2,907,Tera Starstorm
+2,908,Fickle Beam
+2,909,Burning Bulwark
+2,910,Thunderclap
+2,911,Mighty Cleave
+2,912,Tachyon Cutter
+2,913,Hard Press
+2,914,Dragon Cheer
+2,915,Alluring Voice
+2,916,Temper Flare
+2,917,Supercell Slam
+2,918,Psychic Noise
+2,919,Upper Hand
+2,920,Malignant Chain
 2,10001,Hidden Power (Fighting)
 2,10002,Hidden Power (Flying)
 2,10003,Hidden Power (Poison)
@@ -1785,6 +1972,7 @@ language_id,move_id,name
 2,10065,G-Max Hydrosnipe
 2,10066,G-Max One Blow
 2,10067,G-Max Rapid Flow
+2,10068,Tera Blast (Stellar)
 3,1,Écras’Face
 3,2,Poing Karaté
 3,3,Torgnoles
@@ -2292,7 +2480,7 @@ language_id,move_id,name
 3,505,Vibra Soin
 3,506,Châtiment
 3,507,Chute Libre
-3,508,Chgt Vitesse
+3,508,Change-Vitesse
 3,509,Projection
 3,510,Calcination
 3,511,À la Queue
@@ -2305,7 +2493,7 @@ language_id,move_id,name
 3,518,Aire d’Eau
 3,519,Aire de Feu
 3,520,Aire d’Herbe
-3,521,Change Éclair
+3,521,Change-Éclair
 3,522,Survinsecte
 3,523,Piétisol
 3,524,Souffle Glacé
@@ -2611,6 +2799,99 @@ language_id,move_id,name
 3,824,Lance de Glace
 3,825,Éclat Spectral
 3,826,Sort Sinistre
+3,827,Griffes Funestes
+3,828,Sprint Bouclier
+3,829,Échange Force
+3,830,Hache de Pierre
+3,831,Typhon Passionné
+3,832,Force Mystique
+3,833,Grand Courroux
+3,834,Aquatacle
+3,835,Herblast
+3,836,Bise Glaciaire
+3,837,Danse Victoire
+3,838,Assaut Frontal
+3,839,Multitoxik
+3,840,Ailes Psycho
+3,841,Cœur de Rancœur
+3,842,Mur Fumigène
+3,843,Triple Flèche
+3,844,Cortège Funèbre
+3,845,Vagues à Lames
+3,846,Typhon Hivernal
+3,847,Typhon Fulgurant
+3,848,Typhon Pyrosable
+3,849,Prière Lunaire
+3,850,Extravaillance
+3,851,Téra Explosion
+3,852,Piège de Fil
+3,853,Talon-Marteau
+3,854,Hommage Posthume
+3,855,Lumino-Impact
+3,856,Plat du Jour
+3,857,Poing Sonique
+3,858,Habanerage
+3,859,Dérapage
+3,860,Prolifération
+3,861,Cryo-Pirouette
+3,862,Charge Glaive
+3,863,Second Souffle
+3,864,Salaison
+3,865,Triple Plongeon
+3,866,Toupie Éclat
+3,867,Décalquage
+3,868,Décharnement
+3,869,Génusection
+3,870,Magie Florale
+3,871,Chant Flamboyant
+3,872,Danse Aquatique
+3,873,Taurogne
+3,874,Ruée d’Or
+3,875,Lame Psychique
+3,876,Hydrovapeur
+3,877,Cataclysme
+3,878,Nitro Crash
+3,879,Turbo Volt
+3,880,Queulonage
+3,881,Neigeux de Mots
+3,882,Grand Nettoyage
+3,883,Chute de Neige
+3,884,Bond
+3,885,Désherbaffe
+3,886,Douche Froide
+3,887,Hyperceuse
+3,888,Double Laser
+3,889,Poing de Colère
+3,890,Canon Blindé
+3,891,Lame en Peine
+3,892,Double Décharge
+3,893,Marteau Mastoc
+3,894,Vindicte
+3,895,Tranch’Aqua
+3,896,Crash Brûlant
+3,897,Crash Obscur
+3,898,Crash Toxique
+3,899,Crash Musclé
+3,900,Crash Magique
+3,901,Lune Rouge
+3,902,Mortier Matcha
+3,903,Bombe au Sirop
+3,904,Massue Liane
+3,906,Fulgurayon
+3,907,Pluie Térastrale
+3,908,Laser Hasard
+3,909,Rempart Brûlant
+3,910,Vif Éclair
+3,911,Lame Puissante
+3,912,Lame Tachyonique
+3,913,Pression Extrême
+3,914,Cri Draconique
+3,915,Voix Envoûtante
+3,916,Indignition
+3,917,Volt Assaut
+3,918,Dissonance Psy
+3,919,Prio-Parade
+3,920,Chaîne Malsaine
 3,10001,Puissance Cachée (Combat)
 3,10002,Puissance Cachée (Vol)
 3,10003,Puissance Cachée (Poison)
@@ -2678,6 +2959,7 @@ language_id,move_id,name
 3,10065,Gâchette G-Max
 3,10066,Coup Final G-Max
 3,10067,Multicoup G-Max
+3,10068,Téra Explosion (Stellaire)
 4,1,Klaps
 4,2,Karateschlag
 4,3,Duplexhieb
@@ -2853,7 +3135,7 @@ language_id,move_id,name
 4,173,Schnarcher
 4,174,Fluch
 4,175,Dreschflegel
-4,176,Umwandlung2
+4,176,Umwandlung 2
 4,177,Luftstoß
 4,178,Baumwollsaat
 4,179,Gegenschlag
@@ -3504,6 +3786,99 @@ language_id,move_id,name
 4,824,Blizzardlanze
 4,825,Astralfragmente
 4,826,Schauderspruch
+4,827,Unheilsklauen
+4,828,Barrierenstoß
+4,829,Kraftwechsel
+4,830,Felsaxt
+4,831,Frühlingsorkan
+4,832,Mythenkraft
+4,833,Flammenwut
+4,834,Wellentackle
+4,835,Chlorostrahl
+4,836,Frostfallwind
+4,837,Siegestanz
+4,838,Schmetterramme
+4,839,Giftstachelregen
+4,840,Auraschwingen
+4,841,Niedertracht
+4,842,Refugium
+4,843,Drillingspfeile
+4,844,Phantomparade
+4,845,Klingenschwall
+4,846,Polarorkan
+4,847,Donnerorkan
+4,848,Wüstenorkan
+4,849,Lunargebet
+4,850,Mutschub
+4,851,Tera-Ausbruch
+4,852,Fadenfalle
+4,853,Fersenkick
+4,854,Letzte Ehre
+4,855,Lichteinschlag
+4,856,Auftischen
+4,857,Düsenhieb
+4,858,Chili-Essenz
+4,859,Reifendrehung
+4,860,Mäuseplage
+4,861,Eiskreisel
+4,862,Großklingenstoß
+4,863,Vitalsegen
+4,864,Pökelsalz
+4,865,Tauchtriade
+4,866,Letalwirbler
+4,867,Abpausen
+4,868,Abspaltung
+4,869,Kniefallspalter
+4,870,Blumentrick
+4,871,Loderlied
+4,872,Wogentanz
+4,873,Rasender Stier
+4,874,Goldrausch
+4,875,Psychoschneide
+4,876,Hydrodampf
+4,877,Verderben
+4,878,Kollisionskurs
+4,879,Blitztour
+4,880,Schwanzabwurf
+4,881,Eisige Stimmung
+4,882,Aufräumen
+4,883,Schneelandschaft
+4,884,Anspringen
+4,885,Wegbereiter
+4,886,Kalte Dusche
+4,887,Hyperbohrer
+4,888,Doppelstrahl
+4,889,Zornesfaust
+4,890,Rüstungskanone
+4,891,Reueschwert
+4,892,Zweifachladung
+4,893,Riesenhammer
+4,894,Vendetta
+4,895,Aquaschnitt
+4,896,Hitzeturbo
+4,897,Finsterturbo
+4,898,Toxiturbo
+4,899,Raufturbo
+4,900,Zauberturbo
+4,901,Blutmond
+4,902,Quirlschuss
+4,903,Sirupbombe
+4,904,Rankenkeule
+4,906,Stromstrahl
+4,907,Tera-Sternhagel
+4,908,Launenlaser
+4,909,Flammenschild
+4,910,Sturmblitz
+4,911,Wuchtklinge
+4,912,Tachyon-Schnitt
+4,913,Stahlpresse
+4,914,Drachenschrei
+4,915,Lockstimme
+4,916,Frustflamme
+4,917,Donnerstoß
+4,918,Psycholärm
+4,919,Schnellkonter
+4,920,Giftkettung
 4,10001,Kraftreserve (Kampf)
 4,10002,Kraftreserve (Flug)
 4,10003,Kraftreserve (Gift)
@@ -3571,6 +3946,7 @@ language_id,move_id,name
 4,10065,Giga-Schütze
 4,10066,Giga-Einzelhieb
 4,10067,Giga-Multihieb
+4,10068,Tera-Ausbruch (Stellar)
 5,1,Botta
 5,2,Colpokarate
 5,3,Doppiasberla
@@ -3710,7 +4086,7 @@ language_id,move_id,name
 5,137,Sguardo Feroce
 5,138,Mangiasogni
 5,139,Velenogas
-5,140,Attacco Pioggia
+5,140,Sferattacco
 5,141,Sanguisuga
 5,142,Demonbacio
 5,143,Aeroattacco
@@ -3748,7 +4124,7 @@ language_id,move_id,name
 5,175,Flagello
 5,176,Conversione2
 5,177,Aerocolpo
-5,178,Cottonspora
+5,178,Cotonspora
 5,179,Contropiede
 5,180,Dispetto
 5,181,Polneve
@@ -3762,7 +4138,7 @@ language_id,move_id,name
 5,189,Fangosberla
 5,190,Octazooka
 5,191,Punte
-5,192,Falcecannone
+5,192,Elettrocannone
 5,193,Preveggenza
 5,194,Destinobbligato
 5,195,Ultimocanto
@@ -3923,7 +4299,7 @@ language_id,move_id,name
 5,350,Cadutamassi
 5,351,Ondashock
 5,352,Idropulsar
-5,353,Obbliderio
+5,353,Desiderio Fatale
 5,354,Psicoslancio
 5,355,Trespolo
 5,356,Gravità
@@ -3966,7 +4342,7 @@ language_id,move_id,name
 5,393,Magnetascesa
 5,394,Fuococarica
 5,395,Palmoforza
-5,396,Forzasfera
+5,396,Sferapulsar
 5,397,Lucidatura
 5,398,Velenpuntura
 5,399,Neropulsar
@@ -4075,7 +4451,7 @@ language_id,move_id,name
 5,502,Cambiaposto
 5,503,Idrovampata
 5,504,Gettaguscio
-5,505,Ondasana
+5,505,Curapulsar
 5,506,Sciagura
 5,507,Cadutalibera
 5,508,Cambiomarcia
@@ -4397,6 +4773,99 @@ language_id,move_id,name
 5,824,Lancia Glaciale
 5,825,Schegge Astrali
 5,826,Inquietantesimo
+5,827,Artigli Fatali
+5,828,Barrierassalto
+5,829,Scambioforza
+5,830,Rocciascure
+5,831,Tempesta Zefirea
+5,832,Forza Mistica
+5,833,Ira Furente
+5,834,Ondaschianto
+5,835,Clorofillaser
+5,836,Soffio d’Iceberg
+5,837,Danzavittoria
+5,838,Scontro Frontale
+5,839,Mille Fielespine
+5,840,Ali d’Aura
+5,841,Livore
+5,842,Barricata
+5,843,Triplodardo
+5,844,Corteo Spettrale
+5,845,Lama Milleflutti
+5,846,Tempesta Boreale
+5,847,Tempesta Tonante
+5,848,Tempesta Ardente
+5,849,Invocaluna
+5,850,Baldimpulso
+5,851,Terascoppio
+5,852,Telatrappola
+5,853,Calcio ad Ascia
+5,854,Omaggio ai KO
+5,855,Fotocollisione
+5,856,Alta Cucina
+5,857,Pugnojet
+5,858,Essenza Piccante
+5,859,Slittaruote
+5,860,Infestazione
+5,861,Vortighiaccio
+5,862,Spadoncarica
+5,863,Preghiera Vitale
+5,864,Sotto Sale
+5,865,Triplo Tuffo
+5,866,Glitturbine
+5,867,Ricalco
+5,868,Alleggerimento
+5,869,Genufendente
+5,870,Prestigiafiore
+5,871,Canzone Ardente
+5,872,Idroballetto
+5,873,Scatenatoro
+5,874,Corsa all’Oro
+5,875,Psicolama
+5,876,Idrovapore
+5,877,Catastrofe
+5,878,Turboschianto
+5,879,Fulmiscatto
+5,880,Tagliacoda
+5,881,Freddura
+5,882,Pulizie
+5,883,Vista Innevata
+5,884,Balzo
+5,885,Apripista
+5,886,Doccia Fredda
+5,887,Ipertrapano
+5,888,Doppioraggio
+5,889,Pugno Furibondo
+5,890,Corazza Cannone
+5,891,Lama del Rimorso
+5,892,Doppiolampo
+5,893,Granmartello
+5,894,Ritorsione
+5,895,Idrotaglio
+5,896,Turboustione
+5,897,Turbotenebra
+5,898,Turbotossina
+5,899,Turborissa
+5,900,Turboincanto
+5,901,Luna Rossa
+5,902,Spruzzatè
+5,903,Bomba Sciroppata
+5,904,Clava di Liane
+5,906,Elettroraggio
+5,907,Teracluster
+5,908,Irregolaser
+5,909,Egida Ignea
+5,910,Saetta
+5,911,Taglio Poderoso
+5,912,Tachiontaglio
+5,913,Pressa d’Acciaio
+5,914,Grido del Drago
+5,915,Ammaliavoce
+5,916,Rabbia Bruciante
+5,917,Elettrotuffo
+5,918,Psicorumore
+5,919,Colpo di Mano
+5,920,Intossicatena
 5,10001,Introforza (Lotta)
 5,10002,Introforza (Volante)
 5,10003,Introforza (Veleno)
@@ -4464,6 +4933,7 @@ language_id,move_id,name
 5,10065,Gigasparomirato
 5,10066,Gigasingolcolpo
 5,10067,Gigapluricolpo
+5,10068,Terascoppio (Astrale)
 6,1,Destructor
 6,2,Golpe Kárate
 6,3,Doble Bofetón
@@ -4500,7 +4970,7 @@ language_id,move_id,name
 6,34,Golpe Cuerpo
 6,35,Constricción
 6,36,Derribo
-6,37,Golpe
+6,37,Saña
 6,38,Doble Filo
 6,39,Látigo
 6,40,Picotazo Veneno
@@ -4592,13 +5062,13 @@ language_id,move_id,name
 6,126,Llamarada
 6,127,Cascada
 6,128,Tenaza
-6,129,Rapidez
+6,129,Meteoros
 6,130,Cabezazo
 6,131,Clavo Cañón
 6,132,Restricción
 6,133,Amnesia
 6,134,Kinético
-6,135,Amortiguador
+6,135,Ovocuración
 6,136,Pat. Salto Alta
 6,137,Deslumbrar
 6,138,Comesueños
@@ -4678,7 +5148,7 @@ language_id,move_id,name
 6,212,Mal de Ojo
 6,213,Atracción
 6,214,Sonámbulo
-6,215,Campana Cura
+6,215,Cascabel Cura
 6,216,Retribución
 6,217,Presente
 6,218,Frustración
@@ -4696,7 +5166,7 @@ language_id,move_id,name
 6,230,Dulce Aroma
 6,231,Cola Férrea
 6,232,Garra Metal
-6,233,Tiro Vital
+6,233,Llave Vital
 6,234,Sol Matinal
 6,235,Síntesis
 6,236,Luz Lunar
@@ -4707,7 +5177,7 @@ language_id,move_id,name
 6,241,Día Soleado
 6,242,Triturar
 6,243,Manto Espejo
-6,244,Más Psique
+6,244,Autosugestión
 6,245,Veloc. Extrema
 6,246,Poder Pasado
 6,247,Bola Sombra
@@ -4757,7 +5227,7 @@ language_id,move_id,name
 6,291,Buceo
 6,292,Empujón
 6,293,Camuflaje
-6,294,Ráfaga
+6,294,Luminicola
 6,295,Resplandor
 6,296,Bola Neblina
 6,297,Danza Pluma
@@ -4787,7 +5257,7 @@ language_id,move_id,name
 6,321,Cosquillas
 6,322,Masa Cósmica
 6,323,Salpicar
-6,324,Doble Rayo
+6,324,Rayo Señal
 6,325,Puño Sombra
 6,326,Paranormal
 6,327,Gancho Alto
@@ -4854,7 +5324,7 @@ language_id,move_id,name
 6,388,Abatidoras
 6,389,Golpe Bajo
 6,390,Púas Tóxicas
-6,391,Cambia Almas
+6,391,Cambiaalmas
 6,392,Acua Aro
 6,393,Levitón
 6,394,Envite Ígneo
@@ -4883,7 +5353,7 @@ language_id,move_id,name
 6,417,Maquinación
 6,418,Puño Bala
 6,419,Alud
-6,420,Canto Helado
+6,420,Esquirla Helada
 6,421,Garra Umbría
 6,422,Colmillo Rayo
 6,423,Colmillo Hielo
@@ -4928,11 +5398,11 @@ language_id,move_id,name
 6,462,Agarrón
 6,463,Lluvia Ígnea
 6,464,Brecha Negra
-6,465,Fogonazo
+6,465,Fulgor Semilla
 6,466,Viento Aciago
 6,467,Golpe Umbrío
 6,468,Afilagarras
-6,469,Vastaguardia
+6,469,Vasta Guardia
 6,470,Isoguardia
 6,471,Isofuerza
 6,472,Zona Extraña
@@ -4950,7 +5420,7 @@ language_id,move_id,name
 6,484,Cuerpo Pesado
 6,485,Sincrorruido
 6,486,Bola Voltio
-6,487,Anegar
+6,487,Empapar
 6,488,Nitrocarga
 6,489,Enrosque
 6,490,Puntapié
@@ -5290,6 +5760,99 @@ language_id,move_id,name
 6,824,Lanza Glacial
 6,825,Orbes Espectro
 6,826,Conjuro Funesto
+6,827,Garra Nociva
+6,828,Asalto Barrera
+6,829,Cambiapoder
+6,830,Hachazo Pétreo
+6,831,Ciclón Primavera
+6,832,Poder Místico
+6,833,Erupción de Ira
+6,834,Envite Acuático
+6,835,Clorofiláser
+6,836,Viento Carámbano
+6,837,Danza Triunfal
+6,838,Arremetida
+6,839,Mil Púas Tóxicas
+6,840,Ala Aural
+6,841,Rencor Reprimido
+6,842,Retracción
+6,843,Triple Flecha
+6,844,Marcha Espectral
+6,845,Tajo Metralla
+6,846,Vendaval Gélido
+6,847,Electormenta
+6,848,Simún de Arena
+6,849,Plegaria Lunar
+6,850,Bálsamo Osado
+6,851,Teraexplosión
+6,852,Telatrampa
+6,853,Patada Hacha
+6,854,Homenaje Póstumo
+6,855,Fotocolisión
+6,856,Oído Cocina
+6,857,Puño Jet
+6,858,Extracto Picante
+6,859,Quemarrueda
+6,860,Proliferación
+6,861,Pirueta Helada
+6,862,Asalto Espadón
+6,863,Plegaria Vital
+6,864,Salazón
+6,865,Triple Inmersión
+6,866,Giro Mortífero
+6,867,Decalcomanía
+6,868,Deslome
+6,869,Genufendiente
+6,870,Truco Floral
+6,871,Canto Ardiente
+6,872,Danza Acuática
+6,873,Furia Taurina
+6,874,Fiebre Dorada
+6,875,Psicohojas
+6,876,Hidrovapor
+6,877,Calamidad
+6,878,Nitrochoque
+6,879,Electroderrape
+6,880,Autotomía
+6,881,Fría Acogida
+6,882,Limpieza General
+6,883,Paisaje Nevado
+6,884,Brinco
+6,885,Abrecaminos
+6,886,Agua Fría
+6,887,Hipertaladro
+6,888,Láser Doble
+6,889,Puño Furia
+6,890,Cañón Armadura
+6,891,Espada Lamento
+6,892,Electropalmas
+6,893,Martillo Colosal
+6,894,Resarcimiento
+6,895,Tajo Acuático
+6,896,Pirochoque
+6,897,Ominochoque
+6,898,Ponzochoque
+6,899,Pugnachoque
+6,900,Feerichoque
+6,901,Luna Roja
+6,902,Cañón Batidor
+6,903,Bomba Caramelo
+6,904,Garrote Liana
+6,906,Electrorrayo
+6,907,Teraclúster
+6,908,Láser Veleidoso
+6,909,Llama Protectora
+6,910,Relámpago Súbito
+6,911,Filo Potente
+6,912,Tajo Taquión
+6,913,Prensa Metálica
+6,914,Bramido Dragón
+6,915,Canto Encantador
+6,916,Cólera Ardiente
+6,917,Plancha Voltaica
+6,918,Psicorruido
+6,919,Palma Rauda
+6,920,Cadena Virulenta
 6,10001,Poder Oculto (Lucha)
 6,10002,Poder Oculto (Volador)
 6,10003,Poder Oculto (Veneno)
@@ -5357,6 +5920,7 @@ language_id,move_id,name
 6,10065,Gigadisparo
 6,10066,Gigagolpe Brusco
 6,10067,Gigagolpe Fluido
+6,10068,Teraexplosión (Astral)
 7,1,막치기
 7,2,태권당수
 7,3,연속뺨치기
@@ -5380,7 +5944,7 @@ language_id,move_id,name
 7,21,힘껏치기
 7,22,덩굴채찍
 7,23,짓밟기
-7,24,두번치기
+7,24,두번차기
 7,25,메가톤킥
 7,26,점프킥
 7,27,돌려차기
@@ -5486,7 +6050,7 @@ language_id,move_id,name
 7,127,폭포오르기
 7,128,껍질끼우기
 7,129,스피드스타
-7,130,로케트박치기
+7,130,로켓박치기
 7,131,가시대포
 7,132,휘감기
 7,133,망각술
@@ -5508,7 +6072,7 @@ language_id,move_id,name
 7,149,사이코웨이브
 7,150,튀어오르기
 7,151,녹기
-7,152,찝게햄머
+7,152,집게해머
 7,153,대폭발
 7,154,마구할퀴기
 7,155,뼈다귀부메랑
@@ -5528,7 +6092,7 @@ language_id,move_id,name
 7,169,거미집
 7,170,마음의눈
 7,171,악몽
-7,172,화염자동차
+7,172,화염바퀴
 7,173,코골기
 7,174,저주
 7,175,바둥바둥
@@ -5552,9 +6116,9 @@ language_id,move_id,name
 7,193,꿰뚫어보기
 7,194,길동무
 7,195,멸망의노래
-7,196,얼다바람
+7,196,얼어붙은바람
 7,197,판별
-7,198,본러쉬
+7,198,본러시
 7,199,록온
 7,200,역린
 7,201,모래바람
@@ -5580,19 +6144,19 @@ language_id,move_id,name
 7,221,성스러운불꽃
 7,222,매그니튜드
 7,223,폭발펀치
-7,224,메가폰
+7,224,메가혼
 7,225,용의숨결
-7,226,바톤터치
-7,227,앵콜
+7,226,배턴터치
+7,227,앙코르
 7,228,따라가때리기
 7,229,고속스핀
 7,230,달콤한향기
 7,231,아이언테일
-7,232,메탈크로우
+7,232,메탈클로
 7,233,받아던지기
 7,234,아침햇살
 7,235,광합성
-7,236,달의불빛
+7,236,달빛
 7,237,잠재파워
 7,238,크로스촙
 7,239,회오리
@@ -5608,7 +6172,7 @@ language_id,move_id,name
 7,249,바위깨기
 7,250,바다회오리
 7,251,집단구타
-7,252,속이다
+7,252,속이기
 7,253,소란피기
 7,254,비축하기
 7,255,토해내기
@@ -5636,41 +6200,41 @@ language_id,move_id,name
 7,277,매직코트
 7,278,리사이클
 7,279,리벤지
-7,280,깨트리다
+7,280,깨트리기
 7,281,하품
 7,282,탁쳐서떨구기
 7,283,죽기살기
 7,284,분화
-7,285,스킬스웹
+7,285,스킬스왑
 7,286,봉인
-7,287,리프레쉬
+7,287,리프레시
 7,288,원념
-7,289,가로챔
+7,289,가로채기
 7,290,비밀의힘
 7,291,다이빙
 7,292,손바닥치기
 7,293,보호색
 7,294,반딧불
-7,295,라스트버지
+7,295,러스터퍼지
 7,296,미스트볼
 7,297,깃털댄스
 7,298,흔들흔들댄스
-7,299,브레이즈킥
+7,299,블레이즈킥
 7,300,흙놀이
 7,301,아이스볼
 7,302,바늘팔
-7,303,태만함
+7,303,게으름피우기
 7,304,하이퍼보이스
-7,305,독엄니
-7,306,브레이크크루
-7,307,블러스트번
+7,305,맹독엄니
+7,306,브레이크클로
+7,307,블라스트번
 7,308,하이드로캐논
 7,309,코멧펀치
 7,310,놀래키기
 7,311,웨더볼
 7,312,아로마테라피
 7,313,거짓울음
-7,314,에어컷터
+7,314,에어커터
 7,315,오버히트
 7,316,냄새구별
 7,317,암석봉인
@@ -5683,30 +6247,30 @@ language_id,move_id,name
 7,324,시그널빔
 7,325,섀도펀치
 7,326,신통력
-7,327,스카이업퍼
+7,327,스카이어퍼
 7,328,모래지옥
 7,329,절대영도
 7,330,탁류
-7,331,기관총
+7,331,씨기관총
 7,332,제비반환
 7,333,고드름침
 7,334,철벽
 7,335,블록
-7,336,멀리짖음
-7,337,드래곤크루
+7,336,멀리짖기
+7,337,드래곤클로
 7,338,하드플랜트
 7,339,벌크업
-7,340,뛰어오르다
-7,341,머드숏
+7,340,뛰어오르기
+7,341,머드샷
 7,342,포이즌테일
-7,343,탐내다
+7,343,탐내기
 7,344,볼트태클
-7,345,메지컬리프
+7,345,매지컬리프
 7,346,물놀이
 7,347,명상
 7,348,리프블레이드
 7,349,용의춤
-7,350,락블레스트
+7,350,록블라스트
 7,351,전격파
 7,352,물의파동
 7,353,파멸의소원
@@ -5740,14 +6304,14 @@ language_id,move_id,name
 7,381,주술
 7,382,선취
 7,383,흉내쟁이
-7,384,파워스웹
-7,385,가드스웹
+7,384,파워스왑
+7,385,가드스왑
 7,386,혼내기
-7,387,뒀다쓰기
+7,387,비장의무기
 7,388,고민씨
 7,389,기습
 7,390,독압정
-7,391,하트스웹
+7,391,하트스왑
 7,392,아쿠아링
 7,393,전자부유
 7,394,플레어드라이브
@@ -5777,7 +6341,7 @@ language_id,move_id,name
 7,418,불릿펀치
 7,419,눈사태
 7,420,얼음뭉치
-7,421,섀도크루
+7,421,섀도클로
 7,422,번개엄니
 7,423,얼음엄니
 7,424,불꽃엄니
@@ -5785,9 +6349,9 @@ language_id,move_id,name
 7,426,진흙폭탄
 7,427,사이코커터
 7,428,사념의박치기
-7,429,미러숏
+7,429,미러샷
 7,430,러스터캐논
-7,431,락클라임
+7,431,록클라임
 7,432,안개제거
 7,433,트릭룸
 7,434,용성군
@@ -5806,7 +6370,7 @@ language_id,move_id,name
 7,447,풀묶기
 7,448,수다
 7,449,심판의뭉치
-7,450,벌레먹음
+7,450,벌레먹기
 7,451,차지빔
 7,452,우드해머
 7,453,아쿠아제트
@@ -5857,7 +6421,7 @@ language_id,move_id,name
 7,498,야금야금
 7,499,클리어스모그
 7,500,어시스트파워
-7,501,퍼스트가드
+7,501,패스트가드
 7,502,사이드체인지
 7,503,열탕
 7,504,껍질깨기
@@ -5888,7 +6452,7 @@ language_id,move_id,name
 7,529,드릴라이너
 7,530,더블촙
 7,531,하트스탬프
-7,532,우드호른
+7,532,우드혼
 7,533,성스러운칼
 7,534,셸블레이드
 7,535,히트스탬프
@@ -5905,7 +6469,7 @@ language_id,move_id,name
 7,546,테크노버스터
 7,547,옛노래
 7,548,신비의칼
-7,549,얼다세계
+7,549,얼어붙은세계
 7,550,뇌격
 7,551,푸른불꽃
 7,552,불꽃춤
@@ -5949,7 +6513,7 @@ language_id,move_id,name
 7,590,비밀이야기
 7,591,다이아스톰
 7,592,스팀버스트
-7,593,다른차원홀
+7,593,이차원홀
 7,594,물수리검
 7,595,매지컬플레임
 7,596,니들가드
@@ -5977,7 +6541,7 @@ language_id,move_id,name
 7,618,근원의파동
 7,619,단애의칼
 7,620,화룡점정
-7,621,다른차원러시
+7,621,이차원러시
 7,622,울트라대시어택
 7,623,울트라대시어택
 7,624,전력무쌍격렬권
@@ -6033,14 +6597,14 @@ language_id,move_id,name
 7,674,어시스트기어
 7,675,지옥찌르기
 7,676,꽃가루경단
-7,677,앵커숏
+7,677,앵커샷
 7,678,사이코필드
 7,679,덤벼들기
 7,680,불꽃채찍
 7,681,기어오르기
 7,682,불사르기
-7,683,스피드스웹
-7,684,스마트호른
+7,683,스피드스왑
+7,684,스마트혼
 7,685,정화
 7,686,잠재댄스
 7,687,코어퍼니셔
@@ -6105,7 +6669,7 @@ language_id,move_id,name
 7,746,물고버티기
 7,747,볼가득넣기
 7,748,배수의진
-7,749,타르숏
+7,749,타르샷
 7,750,마법가루
 7,751,드래곤애로
 7,752,다과회
@@ -6183,6 +6747,99 @@ language_id,move_id,name
 7,824,블리자드랜스
 7,825,아스트랄비트
 7,826,섬뜩한주문
+7,827,페이탈클로
+7,828,배리어러시
+7,829,파워시프트
+7,830,암석액스
+7,831,봄의폭풍
+7,832,신비의힘
+7,833,대격분
+7,834,웨이브태클
+7,835,클로로블라스트
+7,836,빙산바람
+7,837,승리의춤
+7,838,들이받기
+7,839,독침천발
+7,840,오라윙
+7,841,천추지한
+7,842,농성
+7,843,3연화살
+7,844,백귀야행
+7,845,비검천중파
+7,846,찬바람폭풍
+7,847,번개폭풍
+7,848,열사의폭풍
+7,849,초승달의기도
+7,850,브레이브차지
+7,851,테라버스트
+7,852,스레드트랩
+7,853,발꿈치찍기
+7,854,성묘
+7,855,루미나콜리전
+7,856,한판내기
+7,857,제트펀치
+7,858,하바네로엑기스
+7,859,휠스핀
+7,860,찍찍베기
+7,861,아이스스피너
+7,862,대검돌격
+7,863,회생의기도
+7,864,소금절이
+7,865,트리플다이브
+7,866,킬러스핀
+7,867,베껴그리기
+7,868,제살깎기
+7,869,도각참
+7,870,트릭플라워
+7,871,플레어송
+7,872,아쿠아스텝
+7,873,레이징불
+7,874,골드러시
+7,875,사이코블레이드
+7,876,하이드로스팀
+7,877,카타스트로피
+7,878,액셀브레이크
+7,879,라이트닝드라이브
+7,880,꼬리자르기
+7,881,썰렁개그
+7,882,정리정돈
+7,883,설경
+7,884,달려들기
+7,885,개척하기
+7,886,찬물끼얹기
+7,887,하이퍼드릴
+7,888,트윈빔
+7,889,분노의주먹
+7,890,아머캐논
+7,891,원념의칼
+7,892,전광쌍격
+7,893,거대해머
+7,894,앙갚음
+7,895,아쿠아커터
+7,896,번액셀
+7,897,다크액셀
+7,898,포이즌액셀
+7,899,파이트액셀
+7,900,매지컬액셀
+7,901,블러드문
+7,902,휘적휘적포
+7,903,시럽봄
+7,904,덩굴방망이
+7,906,일렉트로빔
+7,907,테라클러스터
+7,908,변덕레이저
+7,909,화염의수호
+7,910,질풍신뢰
+7,911,파워풀에지
+7,912,타키온커터
+7,913,하드프레스
+7,914,드래곤옐
+7,915,매혹의보이스
+7,916,열불내기
+7,917,썬더다이브
+7,918,사이코노이즈
+7,919,기선제압
+7,920,악독사슬
 7,10001,잠재파워 (격투)
 7,10002,잠재파워 (비행)
 7,10003,잠재파워 (독)
@@ -6199,6 +6856,24 @@ language_id,move_id,name
 7,10014,잠재파워 (얼음)
 7,10015,잠재파워 (드래곤)
 7,10016,잠재파워 (악)
+7,10017,Shadow Rush
+7,10018,Shadow Blitz
+7,10019,Shadow Break
+7,10020,Shadow End
+7,10021,Shadow Wave
+7,10022,Shadow Rave
+7,10023,Shadow Storm
+7,10024,Shadow Fire
+7,10025,Shadow Bolt
+7,10026,Shadow Chill
+7,10027,Shadow Blast
+7,10028,Shadow Sky
+7,10029,Shadow Hold
+7,10030,Shadow Mist
+7,10031,Shadow Panic
+7,10032,Shadow Down
+7,10033,Shadow Shed
+7,10034,Shadow Half
 7,10035,거다이옥염
 7,10036,거다이고혹
 7,10037,거다이만뢰
@@ -6232,6 +6907,7 @@ language_id,move_id,name
 7,10065,거다이저격
 7,10066,거다이일격
 7,10067,거다이연격
+7,10068,테라버스트 (스텔라)
 8,1,はたく
 8,2,からてチョップ
 8,3,おうふくビンタ
@@ -7058,6 +7734,99 @@ language_id,move_id,name
 8,824,ブリザードランス
 8,825,アストラルビット
 8,826,ぶきみなじゅもん
+8,827,フェイタルクロー
+8,828,バリアーラッシュ
+8,829,パワーシフト
+8,830,がんせきアックス
+8,831,はるのあらし
+8,832,しんぴのちから
+8,833,だいふんげき
+8,834,ウェーブタックル
+8,835,クロロブラスト
+8,836,ひょうざんおろし
+8,837,しょうりのまい
+8,838,ぶちかまし
+8,839,どくばりセンボン
+8,840,オーラウイング
+8,841,うらみつらみ
+8,842,たてこもる
+8,843,３ぼんのや
+8,844,ひゃっきやこう
+8,845,ひけん・ちえなみ
+8,846,こがらしあらし
+8,847,かみなりあらし
+8,848,ねっさのあらし
+8,849,みかづきのいのり
+8,850,ブレイブチャージ
+8,851,テラバースト
+8,852,スレッドトラップ
+8,853,かかとおとし
+8,854,おはかまいり
+8,855,ルミナコリジョン
+8,856,いっちょうあがり
+8,857,ジェットパンチ
+8,858,ハバネロエキス
+8,859,ホイールスピン
+8,860,ネズミざん
+8,861,アイススピナー
+8,862,きょけんとつげき
+8,863,さいきのいのり
+8,864,しおづけ
+8,865,トリプルダイブ
+8,866,キラースピン
+8,867,うつしえ
+8,868,みをけずる
+8,869,ドゲザン
+8,870,トリックフラワー
+8,871,フレアソング
+8,872,アクアステップ
+8,873,レイジングブル
+8,874,ゴールドラッシュ
+8,875,サイコブレイド
+8,876,ハイドロスチーム
+8,877,カタストロフィ
+8,878,アクセルブレイク
+8,879,イナズマドライブ
+8,880,しっぽきり
+8,881,さむいギャグ
+8,882,おかたづけ
+8,883,ゆきげしき
+8,884,とびつく
+8,885,くさわけ
+8,886,ひやみず
+8,887,ハイパードリル
+8,888,ツインビーム
+8,889,ふんどのこぶし
+8,890,アーマーキャノン
+8,891,むねんのつるぎ
+8,892,でんこうそうげき
+8,893,デカハンマー
+8,894,ほうふく
+8,895,アクアカッター
+8,896,バーンアクセル
+8,897,ダークアクセル
+8,898,ポイズンアクセル
+8,899,ファイトアクセル
+8,900,マジカルアクセル
+8,901,ブラッドムーン
+8,902,シャカシャカほう
+8,903,みずあめボム
+8,904,ツタこんぼう
+8,906,エレクトロビーム
+8,907,テラクラスター
+8,908,きまぐレーザー
+8,909,かえんのまもり
+8,910,じんらい
+8,911,パワフルエッジ
+8,912,タキオンカッター
+8,913,ハードプレス
+8,914,ドラゴンエール
+8,915,みわくのボイス
+8,916,やけっぱち
+8,917,サンダーダイブ
+8,918,サイコノイズ
+8,919,はやてがえし
+8,920,じゃどくのくさり
 8,10001,めざめるパワー (かくとう)
 8,10002,めざめるパワー (ひこう)
 8,10003,めざめるパワー (どく)
@@ -7074,6 +7843,24 @@ language_id,move_id,name
 8,10014,めざめるパワー (こおり)
 8,10015,めざめるパワー (ドラゴン)
 8,10016,めざめるパワー (あく)
+8,10017,ダークラッシュ
+8,10018,ダークアタック
+8,10019,ダークブレイク
+8,10020,ダークエンド
+8,10021,ダークウェーブ
+8,10022,ダークレイブ
+8,10023,ダークストーム
+8,10024,ダークファイア
+8,10025,ダークサンダー
+8,10026,ダークフリーズ
+8,10027,ダークブラスト
+8,10028,ダークウェザー
+8,10029,ダークホールド
+8,10030,ダークミスト
+8,10031,ダークパニック
+8,10032,ダークダウン
+8,10033,ダークリムーブ
+8,10034,ダークハーフ
 8,10035,キョダイゴクエン
 8,10036,キョダイコワク
 8,10037,キョダイバンライ
@@ -7107,6 +7894,7 @@ language_id,move_id,name
 8,10065,キョダイソゲキ
 8,10066,キョダイイチゲキ
 8,10067,キョダイレンゲキ
+8,10068,テラバースト (ステラ)
 9,1,拍击
 9,2,空手劈
 9,3,连环巴掌
@@ -7118,10 +7906,10 @@ language_id,move_id,name
 9,9,雷电拳
 9,10,抓
 9,11,夹住
-9,12,断头钳
+9,12,极落钳
 9,13,旋风刀
 9,14,剑舞
-9,15,居合斩
+9,15,居合劈
 9,16,起风
 9,17,翅膀攻击
 9,18,吹飞
@@ -7172,7 +7960,7 @@ language_id,move_id,name
 9,63,破坏光线
 9,64,啄
 9,65,啄钻
-9,66,地狱翻滚
+9,66,深渊翻滚
 9,67,踢倒
 9,68,双倍奉还
 9,69,地球上投
@@ -7226,7 +8014,7 @@ language_id,move_id,name
 9,117,忍耐
 9,118,挥指
 9,119,鹦鹉学舌
-9,120,自爆
+9,120,玉石俱碎
 9,121,炸蛋
 9,122,舌舔
 9,123,浊雾
@@ -7247,7 +8035,7 @@ language_id,move_id,name
 9,138,食梦
 9,139,毒瓦斯
 9,140,投球
-9,141,吸血
+9,141,汲取
 9,142,恶魔之吻
 9,143,神鸟猛击
 9,144,变身
@@ -7264,7 +8052,7 @@ language_id,move_id,name
 9,155,骨头回力镖
 9,156,睡觉
 9,157,岩崩
-9,158,必杀门牙
+9,158,终结门牙
 9,159,棱角化
 9,160,纹理
 9,161,三重攻击
@@ -7280,17 +8068,17 @@ language_id,move_id,name
 9,171,恶梦
 9,172,火焰轮
 9,173,打鼾
-9,174,诅咒
+9,174,咒术
 9,175,抓狂
 9,176,纹理２
 9,177,气旋攻击
 9,178,棉孢子
-9,179,起死回生
+9,179,绝处逢生
 9,180,怨恨
 9,181,细雪
 9,182,守住
 9,183,音速拳
-9,184,鬼面
+9,184,可怕面孔
 9,185,出奇一击
 9,186,天使之吻
 9,187,腹鼓
@@ -7301,7 +8089,7 @@ language_id,move_id,name
 9,192,电磁炮
 9,193,识破
 9,194,同命
-9,195,灭亡之歌
+9,195,终焉之歌
 9,196,冰冻之风
 9,197,看穿
 9,198,骨棒乱打
@@ -7367,7 +8155,7 @@ language_id,move_id,name
 9,258,冰雹
 9,259,无理取闹
 9,260,吹捧
-9,261,鬼火
+9,261,磷火
 9,262,临别礼物
 9,263,硬撑
 9,264,真气拳
@@ -7395,7 +8183,7 @@ language_id,move_id,name
 9,286,封印
 9,287,焕然一新
 9,288,怨念
-9,289,抢夺
+9,289,化为己用
 9,290,秘密之力
 9,291,潜水
 9,292,猛推
@@ -7434,7 +8222,7 @@ language_id,move_id,name
 9,325,暗影拳
 9,326,神通力
 9,327,冲天拳
-9,328,流沙地狱
+9,328,流沙深渊
 9,329,绝对零度
 9,330,浊流
 9,331,种子机关枪
@@ -7509,7 +8297,7 @@ language_id,move_id,name
 9,400,暗袭要害
 9,401,水流尾
 9,402,种子炸弹
-9,403,空气斩
+9,403,空气之刃
 9,404,十字剪
 9,405,虫鸣
 9,406,龙之波动
@@ -7598,7 +8386,7 @@ language_id,move_id,name
 9,489,盘蜷
 9,490,下盘踢
 9,491,酸液炸弹
-9,492,欺诈
+9,492,移花接木
 9,493,单纯光束
 9,494,找伙伴
 9,495,您先请
@@ -7616,14 +8404,14 @@ language_id,move_id,name
 9,507,自由落体
 9,508,换档
 9,509,巴投
-9,510,烧尽
+9,510,烧净
 9,511,延后
 9,512,杂技
 9,513,镜面属性
 9,514,报仇
 9,515,搏命
 9,516,传递礼物
-9,517,炼狱
+9,517,烈火深渊
 9,518,水之誓约
 9,519,火之誓约
 9,520,草之誓约
@@ -7677,7 +8465,7 @@ language_id,move_id,name
 9,568,战吼
 9,569,等离子浴
 9,570,抛物面充电
-9,571,森林诅咒
+9,571,森林咒术
 9,572,落英缤纷
 9,573,冷冻干燥
 9,574,魅惑之声
@@ -7717,9 +8505,9 @@ language_id,move_id,name
 9,608,圆瞳
 9,609,蹭蹭脸颊
 9,610,手下留情
-9,611,死缠烂打
+9,611,纠缠不休
 9,612,增强拳
-9,613,死亡之翼
+9,613,归天之翼
 9,614,千箭齐发
 9,615,千波激荡
 9,616,大地神力
@@ -7781,7 +8569,7 @@ language_id,move_id,name
 9,672,毒丝
 9,673,磨砺
 9,674,辅助齿轮
-9,675,地狱突刺
+9,675,深渊突刺
 9,676,花粉团
 9,677,掷锚
 9,678,精神场地
@@ -7844,7 +8632,7 @@ language_id,move_id,name
 9,735,熊熊火爆
 9,736,哗哗气场
 9,737,坏坏领域
-9,738,茁茁轰炸
+9,738,茁茁炸弹
 9,739,冰冰霜冻
 9,740,亮亮风暴
 9,741,砰砰击破
@@ -7933,6 +8721,99 @@ language_id,move_id,name
 9,824,雪矛
 9,825,星碎
 9,826,诡异咒语
+9,827,克命爪
+9,828,屏障猛攻
+9,829,力量转换
+9,830,岩斧
+9,831,阳春风暴
+9,832,神秘之力
+9,833,大愤慨
+9,834,波动冲
+9,835,叶绿爆震
+9,836,冰山风
+9,837,胜利之舞
+9,838,突飞猛扑
+9,839,毒千针
+9,840,气场之翼
+9,841,冤冤相报
+9,842,闭关
+9,843,三连箭
+9,844,群魔乱舞
+9,845,秘剑・千重涛
+9,846,枯叶风暴
+9,847,鸣雷风暴
+9,848,热沙风暴
+9,849,新月祈祷
+9,850,勇气填充
+9,851,太晶爆发
+9,852,线阱
+9,853,下压踢
+9,854,扫墓
+9,855,琉光冲激
+9,856,上菜
+9,857,喷射拳
+9,858,辣椒精华
+9,859,疾速转轮
+9,860,鼠数儿
+9,861,冰旋
+9,862,巨剑突击
+9,863,复生祈祷
+9,864,盐腌
+9,865,三连钻
+9,866,晶光转转
+9,867,描绘
+9,868,甩肉
+9,869,仆刀
+9,870,千变万花
+9,871,闪焰高歌
+9,872,流水旋舞
+9,873,怒牛
+9,874,淘金潮
+9,875,精神剑
+9,876,水蒸气
+9,877,大灾难
+9,878,全开猛撞
+9,879,闪电猛冲
+9,880,断尾
+9,881,冷笑话
+9,882,大扫除
+9,883,雪景
+9,884,虫扑
+9,885,起草
+9,886,泼冷水
+9,887,强力钻
+9,888,双光束
+9,889,愤怒之拳
+9,890,铠农炮
+9,891,悔念剑
+9,892,电光双击
+9,893,巨力锤
+9,894,复仇
+9,895,水波刀
+9,896,灼热暴冲
+9,897,黑暗暴冲
+9,898,剧毒暴冲
+9,899,格斗暴冲
+9,900,魔法暴冲
+9,901,血月
+9,902,刷刷茶炮
+9,903,糖浆炸弹
+9,904,棘藤棒
+9,906,电光束
+9,907,晶光星群
+9,908,随机光
+9,909,火焰守护
+9,910,迅雷
+9,911,强刃攻击
+9,912,迅子利刃
+9,913,硬压
+9,914,龙声鼓舞
+9,915,魅诱之声
+9,916,豁出去
+9,917,闪电强袭
+9,918,精神噪音
+9,919,快手还击
+9,920,邪毒锁链
 9,10001,觉醒力量 (格斗)
 9,10002,觉醒力量 (飞行)
 9,10003,觉醒力量 (毒)
@@ -7949,6 +8830,24 @@ language_id,move_id,name
 9,10014,觉醒力量 (冰)
 9,10015,觉醒力量 (龙)
 9,10016,觉醒力量 (恶)
+9,10017,Shadow Rush
+9,10018,Shadow Blitz
+9,10019,Shadow Break
+9,10020,Shadow End
+9,10021,Shadow Wave
+9,10022,Shadow Rave
+9,10023,Shadow Storm
+9,10024,Shadow Fire
+9,10025,Shadow Bolt
+9,10026,Shadow Chill
+9,10027,Shadow Blast
+9,10028,Shadow Sky
+9,10029,Shadow Hold
+9,10030,Shadow Mist
+9,10031,Shadow Panic
+9,10032,Shadow Down
+9,10033,Shadow Shed
+9,10034,Shadow Half
 9,10035,超极巨地狱灭焰
 9,10036,超极巨蝶影蛊惑
 9,10037,超极巨万雷轰顶
@@ -7982,6 +8881,7 @@ language_id,move_id,name
 9,10065,超极巨狙击神射
 9,10066,超极巨夺命一击
 9,10067,超极巨流水连击
+9,10068,太晶爆发 (星晶)
 10,1,拍擊
 10,2,空手劈
 10,3,連環巴掌
@@ -8808,22 +9708,133 @@ language_id,move_id,name
 10,824,雪矛
 10,825,星碎
 10,826,詭異咒語
-10,10001,覺醒力量 (格鬥)
-10,10002,覺醒力量 (飛行)
+10,827,剋命爪
+10,828,屏障猛攻
+10,829,力量轉換
+10,830,岩斧
+10,831,陽春風暴
+10,832,神秘之力
+10,833,大憤慨
+10,834,波動衝
+10,835,葉綠爆震
+10,836,冰山風
+10,837,勝利之舞
+10,838,突飛猛撲
+10,839,毒千針
+10,840,氣場之翼
+10,841,冤冤相報
+10,842,閉關
+10,843,三連箭
+10,844,群魔亂舞
+10,845,秘劍・千重濤
+10,846,枯葉風暴
+10,847,鳴雷風暴
+10,848,熱沙風暴
+10,849,新月祈禱
+10,850,勇氣填充
+10,851,太晶爆發
+10,852,線阱
+10,853,下壓踢
+10,854,掃墓
+10,855,琉光衝激
+10,856,上菜
+10,857,噴射拳
+10,858,辣椒精華
+10,859,疾速轉輪
+10,860,鼠數兒
+10,861,冰旋
+10,862,巨劍突擊
+10,863,復生祈禱
+10,864,鹽醃
+10,865,三連鑽
+10,866,晶光轉轉
+10,867,描繪
+10,868,甩肉
+10,869,仆斬
+10,870,千變萬花
+10,871,閃焰高歌
+10,872,流水旋舞
+10,873,怒牛
+10,874,淘金潮
+10,875,精神劍
+10,876,水蒸氣
+10,877,大災難
+10,878,全開猛撞
+10,879,閃電猛衝
+10,880,斷尾
+10,881,冷笑話
+10,882,大掃除
+10,883,雪景
+10,884,蟲撲
+10,885,起草
+10,886,潑冷水
+10,887,強力鑽
+10,888,雙光束
+10,889,憤怒之拳
+10,890,鎧農炮
+10,891,悔念劍
+10,892,電光雙擊
+10,893,巨力錘
+10,894,復仇
+10,895,水波刀
+10,896,灼熱暴衝
+10,897,黑暗暴衝
+10,898,劇毒暴衝
+10,899,格鬥暴衝
+10,900,魔法暴衝
+10,901,血月
+10,902,刷刷茶炮
+10,903,糖漿炸彈
+10,904,棘藤棒
+10,906,電光束
+10,907,晶光星群
+10,908,隨機光
+10,909,火焰守護
+10,910,迅雷
+10,911,強刃攻擊
+10,912,迅子利刃
+10,913,硬壓
+10,914,龍聲鼓舞
+10,915,魅誘之聲
+10,916,豁出去
+10,917,閃電強襲
+10,918,精神噪音
+10,919,快手還擊
+10,920,邪毒鎖鏈
+10,10001,覺醒力量 (格斗)
+10,10002,覺醒力量 (飞行)
 10,10003,覺醒力量 (毒)
 10,10004,覺醒力量 (地面)
 10,10005,覺醒力量 (岩石)
-10,10006,覺醒力量 (蟲)
-10,10007,覺醒力量 (幽靈)
-10,10008,覺醒力量 (鋼)
+10,10006,覺醒力量 (虫)
+10,10007,覺醒力量 (幽灵)
+10,10008,覺醒力量 (钢)
 10,10009,覺醒力量 (火)
 10,10010,覺醒力量 (水)
 10,10011,覺醒力量 (草)
-10,10012,覺醒力量 (電)
+10,10012,覺醒力量 (电)
 10,10013,覺醒力量 (超能力)
 10,10014,覺醒力量 (冰)
-10,10015,覺醒力量 (龍)
-10,10016,覺醒力量 (惡)
+10,10015,覺醒力量 (龙)
+10,10016,覺醒力量 (恶)
+10,10017,Shadow Rush
+10,10018,Shadow Blitz
+10,10019,Shadow Break
+10,10020,Shadow End
+10,10021,Shadow Wave
+10,10022,Shadow Rave
+10,10023,Shadow Storm
+10,10024,Shadow Fire
+10,10025,Shadow Bolt
+10,10026,Shadow Chill
+10,10027,Shadow Blast
+10,10028,Shadow Sky
+10,10029,Shadow Hold
+10,10030,Shadow Mist
+10,10031,Shadow Panic
+10,10032,Shadow Down
+10,10033,Shadow Shed
+10,10034,Shadow Half
 10,10035,超極巨地獄滅焰
 10,10036,超極巨蝶影蠱惑
 10,10037,超極巨萬雷轟頂
@@ -8857,3 +9868,4 @@ language_id,move_id,name
 10,10065,超極巨狙擊神射
 10,10066,超極巨奪命一擊
 10,10067,超極巨流水連擊
+10,10068,太晶爆發 (星晶)

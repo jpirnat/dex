@@ -8,7 +8,7 @@ create table if not exists `ability_descriptions`
 `description` varchar(255) not null,
 
 primary key (
-	`generation_id`,
+	`version_group_id`,
 	`language_id`,
 	`ability_id`
 ),

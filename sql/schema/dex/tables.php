@@ -76,7 +76,14 @@ return [
 	// Moves
 	'moves',
 	'move_names',
-	'move_descriptions',
+	'move_descriptions' => [
+		'move_descriptions_04',
+		'move_descriptions_05',
+		'move_descriptions_06',
+		'move_descriptions_07',
+		'move_descriptions_08',
+		'move_descriptions_09_sv',
+	],
 	'z_move_names',
 	'z_move_images',
 	'version_group_moves',
