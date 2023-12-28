@@ -45,6 +45,7 @@ return [
 		'ability_descriptions_08',
 		'ability_descriptions_09',
 	],
+	'vg_abilities',
 	'pokemon_abilities',
 
 	// Items
