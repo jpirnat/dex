@@ -903,21 +903,21 @@ language_id,move_id,name
 1,902,シャカシャカほう
 1,903,みずあめボム
 1,904,ツタこんぼう
-1,906,エレクトロビーム
-1,907,テラクラスター
-1,908,きまぐレーザー
-1,909,かえんのまもり
-1,910,じんらい
-1,911,パワフルエッジ
-1,912,タキオンカッター
-1,913,ハードプレス
-1,914,ドラゴンエール
-1,915,みわくのボイス
-1,916,やけっぱち
-1,917,サンダーダイブ
-1,918,サイコノイズ
-1,919,はやてがえし
-1,920,じゃどくのくさり
+1,905,エレクトロビーム
+1,906,テラクラスター
+1,907,きまぐレーザー
+1,908,かえんのまもり
+1,909,じんらい
+1,910,パワフルエッジ
+1,911,タキオンカッター
+1,912,ハードプレス
+1,913,ドラゴンエール
+1,914,みわくのボイス
+1,915,やけっぱち
+1,916,サンダーダイブ
+1,917,サイコノイズ
+1,918,はやてがえし
+1,919,じゃどくのくさり
 1,10001,めざめるパワー (かくとう)
 1,10002,めざめるパワー (ひこう)
 1,10003,めざめるパワー (どく)
@@ -1890,21 +1890,21 @@ language_id,move_id,name
 2,902,Matcha Gotcha
 2,903,Syrup Bomb
 2,904,Ivy Cudgel
-2,906,Electro Shot
-2,907,Tera Starstorm
-2,908,Fickle Beam
-2,909,Burning Bulwark
-2,910,Thunderclap
-2,911,Mighty Cleave
-2,912,Tachyon Cutter
-2,913,Hard Press
-2,914,Dragon Cheer
-2,915,Alluring Voice
-2,916,Temper Flare
-2,917,Supercell Slam
-2,918,Psychic Noise
-2,919,Upper Hand
-2,920,Malignant Chain
+2,905,Electro Shot
+2,906,Tera Starstorm
+2,907,Fickle Beam
+2,908,Burning Bulwark
+2,909,Thunderclap
+2,910,Mighty Cleave
+2,911,Tachyon Cutter
+2,912,Hard Press
+2,913,Dragon Cheer
+2,914,Alluring Voice
+2,915,Temper Flare
+2,916,Supercell Slam
+2,917,Psychic Noise
+2,918,Upper Hand
+2,919,Malignant Chain
 2,10001,Hidden Power (Fighting)
 2,10002,Hidden Power (Flying)
 2,10003,Hidden Power (Poison)
@@ -2877,21 +2877,21 @@ language_id,move_id,name
 3,902,Mortier Matcha
 3,903,Bombe au Sirop
 3,904,Massue Liane
-3,906,Fulgurayon
-3,907,Pluie Térastrale
-3,908,Laser Hasard
-3,909,Rempart Brûlant
-3,910,Vif Éclair
-3,911,Lame Puissante
-3,912,Lame Tachyonique
-3,913,Pression Extrême
-3,914,Cri Draconique
-3,915,Voix Envoûtante
-3,916,Indignition
-3,917,Volt Assaut
-3,918,Dissonance Psy
-3,919,Prio-Parade
-3,920,Chaîne Malsaine
+3,905,Fulgurayon
+3,906,Pluie Térastrale
+3,907,Laser Hasard
+3,908,Rempart Brûlant
+3,909,Vif Éclair
+3,910,Lame Puissante
+3,911,Lame Tachyonique
+3,912,Pression Extrême
+3,913,Cri Draconique
+3,914,Voix Envoûtante
+3,915,Indignition
+3,916,Volt Assaut
+3,917,Dissonance Psy
+3,918,Prio-Parade
+3,919,Chaîne Malsaine
 3,10001,Puissance Cachée (Combat)
 3,10002,Puissance Cachée (Vol)
 3,10003,Puissance Cachée (Poison)
@@ -3864,21 +3864,21 @@ language_id,move_id,name
 4,902,Quirlschuss
 4,903,Sirupbombe
 4,904,Rankenkeule
-4,906,Stromstrahl
-4,907,Tera-Sternhagel
-4,908,Launenlaser
-4,909,Flammenschild
-4,910,Sturmblitz
-4,911,Wuchtklinge
-4,912,Tachyon-Schnitt
-4,913,Stahlpresse
-4,914,Drachenschrei
-4,915,Lockstimme
-4,916,Frustflamme
-4,917,Donnerstoß
-4,918,Psycholärm
-4,919,Schnellkonter
-4,920,Giftkettung
+4,905,Stromstrahl
+4,906,Tera-Sternhagel
+4,907,Launenlaser
+4,908,Flammenschild
+4,909,Sturmblitz
+4,910,Wuchtklinge
+4,911,Tachyon-Schnitt
+4,912,Stahlpresse
+4,913,Drachenschrei
+4,914,Lockstimme
+4,915,Frustflamme
+4,916,Donnerstoß
+4,917,Psycholärm
+4,918,Schnellkonter
+4,919,Giftkettung
 4,10001,Kraftreserve (Kampf)
 4,10002,Kraftreserve (Flug)
 4,10003,Kraftreserve (Gift)
@@ -4851,21 +4851,21 @@ language_id,move_id,name
 5,902,Spruzzatè
 5,903,Bomba Sciroppata
 5,904,Clava di Liane
-5,906,Elettroraggio
-5,907,Teracluster
-5,908,Irregolaser
-5,909,Egida Ignea
-5,910,Saetta
-5,911,Taglio Poderoso
-5,912,Tachiontaglio
-5,913,Pressa d’Acciaio
-5,914,Grido del Drago
-5,915,Ammaliavoce
-5,916,Rabbia Bruciante
-5,917,Elettrotuffo
-5,918,Psicorumore
-5,919,Colpo di Mano
-5,920,Intossicatena
+5,905,Elettroraggio
+5,906,Teracluster
+5,907,Irregolaser
+5,908,Egida Ignea
+5,909,Saetta
+5,910,Taglio Poderoso
+5,911,Tachiontaglio
+5,912,Pressa d’Acciaio
+5,913,Grido del Drago
+5,914,Ammaliavoce
+5,915,Rabbia Bruciante
+5,916,Elettrotuffo
+5,917,Psicorumore
+5,918,Colpo di Mano
+5,919,Intossicatena
 5,10001,Introforza (Lotta)
 5,10002,Introforza (Volante)
 5,10003,Introforza (Veleno)
@@ -5838,21 +5838,21 @@ language_id,move_id,name
 6,902,Cañón Batidor
 6,903,Bomba Caramelo
 6,904,Garrote Liana
-6,906,Electrorrayo
-6,907,Teraclúster
-6,908,Láser Veleidoso
-6,909,Llama Protectora
-6,910,Relámpago Súbito
-6,911,Filo Potente
-6,912,Tajo Taquión
-6,913,Prensa Metálica
-6,914,Bramido Dragón
-6,915,Canto Encantador
-6,916,Cólera Ardiente
-6,917,Plancha Voltaica
-6,918,Psicorruido
-6,919,Palma Rauda
-6,920,Cadena Virulenta
+6,905,Electrorrayo
+6,906,Teraclúster
+6,907,Láser Veleidoso
+6,908,Llama Protectora
+6,909,Relámpago Súbito
+6,910,Filo Potente
+6,911,Tajo Taquión
+6,912,Prensa Metálica
+6,913,Bramido Dragón
+6,914,Canto Encantador
+6,915,Cólera Ardiente
+6,916,Plancha Voltaica
+6,917,Psicorruido
+6,918,Palma Rauda
+6,919,Cadena Virulenta
 6,10001,Poder Oculto (Lucha)
 6,10002,Poder Oculto (Volador)
 6,10003,Poder Oculto (Veneno)
@@ -6825,21 +6825,21 @@ language_id,move_id,name
 7,902,휘적휘적포
 7,903,시럽봄
 7,904,덩굴방망이
-7,906,일렉트로빔
-7,907,테라클러스터
-7,908,변덕레이저
-7,909,화염의수호
-7,910,질풍신뢰
-7,911,파워풀에지
-7,912,타키온커터
-7,913,하드프레스
-7,914,드래곤옐
-7,915,매혹의보이스
-7,916,열불내기
-7,917,썬더다이브
-7,918,사이코노이즈
-7,919,기선제압
-7,920,악독사슬
+7,905,일렉트로빔
+7,906,테라클러스터
+7,907,변덕레이저
+7,908,화염의수호
+7,909,질풍신뢰
+7,910,파워풀에지
+7,911,타키온커터
+7,912,하드프레스
+7,913,드래곤옐
+7,914,매혹의보이스
+7,915,열불내기
+7,916,썬더다이브
+7,917,사이코노이즈
+7,918,기선제압
+7,919,악독사슬
 7,10001,잠재파워 (격투)
 7,10002,잠재파워 (비행)
 7,10003,잠재파워 (독)
@@ -7812,21 +7812,21 @@ language_id,move_id,name
 8,902,シャカシャカほう
 8,903,みずあめボム
 8,904,ツタこんぼう
-8,906,エレクトロビーム
-8,907,テラクラスター
-8,908,きまぐレーザー
-8,909,かえんのまもり
-8,910,じんらい
-8,911,パワフルエッジ
-8,912,タキオンカッター
-8,913,ハードプレス
-8,914,ドラゴンエール
-8,915,みわくのボイス
-8,916,やけっぱち
-8,917,サンダーダイブ
-8,918,サイコノイズ
-8,919,はやてがえし
-8,920,じゃどくのくさり
+8,905,エレクトロビーム
+8,906,テラクラスター
+8,907,きまぐレーザー
+8,908,かえんのまもり
+8,909,じんらい
+8,910,パワフルエッジ
+8,911,タキオンカッター
+8,912,ハードプレス
+8,913,ドラゴンエール
+8,914,みわくのボイス
+8,915,やけっぱち
+8,916,サンダーダイブ
+8,917,サイコノイズ
+8,918,はやてがえし
+8,919,じゃどくのくさり
 8,10001,めざめるパワー (かくとう)
 8,10002,めざめるパワー (ひこう)
 8,10003,めざめるパワー (どく)
@@ -8799,21 +8799,21 @@ language_id,move_id,name
 9,902,刷刷茶炮
 9,903,糖浆炸弹
 9,904,棘藤棒
-9,906,电光束
-9,907,晶光星群
-9,908,随机光
-9,909,火焰守护
-9,910,迅雷
-9,911,强刃攻击
-9,912,迅子利刃
-9,913,硬压
-9,914,龙声鼓舞
-9,915,魅诱之声
-9,916,豁出去
-9,917,闪电强袭
-9,918,精神噪音
-9,919,快手还击
-9,920,邪毒锁链
+9,905,电光束
+9,906,晶光星群
+9,907,随机光
+9,908,火焰守护
+9,909,迅雷
+9,910,强刃攻击
+9,911,迅子利刃
+9,912,硬压
+9,913,龙声鼓舞
+9,914,魅诱之声
+9,915,豁出去
+9,916,闪电强袭
+9,917,精神噪音
+9,918,快手还击
+9,919,邪毒锁链
 9,10001,觉醒力量 (格斗)
 9,10002,觉醒力量 (飞行)
 9,10003,觉醒力量 (毒)
@@ -9786,21 +9786,21 @@ language_id,move_id,name
 10,902,刷刷茶炮
 10,903,糖漿炸彈
 10,904,棘藤棒
-10,906,電光束
-10,907,晶光星群
-10,908,隨機光
-10,909,火焰守護
-10,910,迅雷
-10,911,強刃攻擊
-10,912,迅子利刃
-10,913,硬壓
-10,914,龍聲鼓舞
-10,915,魅誘之聲
-10,916,豁出去
-10,917,閃電強襲
-10,918,精神噪音
-10,919,快手還擊
-10,920,邪毒鎖鏈
+10,905,電光束
+10,906,晶光星群
+10,907,隨機光
+10,908,火焰守護
+10,909,迅雷
+10,910,強刃攻擊
+10,911,迅子利刃
+10,912,硬壓
+10,913,龍聲鼓舞
+10,914,魅誘之聲
+10,915,豁出去
+10,916,閃電強襲
+10,917,精神噪音
+10,918,快手還擊
+10,919,邪毒鎖鏈
 10,10001,覺醒力量 (格斗)
 10,10002,覺醒力量 (飞行)
 10,10003,覺醒力量 (毒)

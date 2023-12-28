@@ -903,21 +903,21 @@ version_group_id,language_id,move_id,name,description
 23,1,902,シャカシャカほう,かきまぜた　お茶の　大砲は　与えた\nダメージの　半分の　ＨＰを　回復して\nやけど状態に　することも　ある。
 23,1,903,みずあめボム,ねっとりした　みずあめを　爆発させ\n相手を　あめまみれ　状態に　して\n３ターンの間　素早さを　さげ続ける。
 23,1,904,ツタこんぼう,ツタを　まきつけた　こん棒で　なぐる。\nかぶっている　お面で　タイプが　変わる。\n急所に　当たりやすい。
-23,1,906,エレクトロビーム,１ターン目に　電気を　集めて　特攻が　あがり\n２ターン目に　高圧の　電気を　発射する。\n天気が　雨のときは　すぐに　発射できる。
-23,1,907,テラクラスター,結晶の力を　照射し　敵を　排除する。\nテラパゴスが　ステラフォルムで　放つと\nすべての　相手に　ダメージを　与える。
-23,1,908,きまぐレーザー,光線を　発射して　攻撃する。\nときどき　ほかの首も　協力して\nレーザーを　放ち　威力が　２倍に　なる。
-23,1,909,かえんのまもり,相手の　攻撃を　超高熱の\n体毛で　防ぎ　同時に　触れた\n相手に　やけどを　与えてしまう。
-23,1,910,じんらい,相手より　先に　電撃を　浴びせる。\n相手が　だす技が\n攻撃技でないと　失敗する。
-23,1,911,パワフルエッジ,頭部に　蓄積した　光で　切断する。\n守りを　無視して　攻撃できる。
-23,1,912,タキオンカッター,粒子の刃を　たて続けに　発射して\n２回連続で　ダメージを　与える。\n攻撃は　必ず　命中する。
-23,1,913,ハードプレス,腕やハサミで　相手を　圧迫する。\n相手の　ＨＰが　残っているほど\n威力が　あがる。
-23,1,914,ドラゴンエール,竜の鼓舞で　士気を　上げて\n味方の技が　急所に　当たりやすくなる。\nドラゴンタイプだと　より　鼓舞される。
-23,1,915,みわくのボイス,天使のような　歌声で　相手を　攻撃。\nそのターン　能力が　あがった　ポケモンを\n混乱の　状態に　する。
-23,1,916,やけっぱち,自棄になった　勢いで　攻撃する。\n前の　ターンに　技を　外していると\n威力が　倍に　なる。
-23,1,917,サンダーダイブ,体を　帯電させて　相手に　のしかかる。\nはずすと　自分が　ダメージを　受ける。
-23,1,918,サイコノイズ,不快な音波を　相手に　浴びせて　攻撃。\n２ターンの間　技や　特性や　持っている\n道具によって　ＨＰを　回復できなくなる。
-23,1,919,はやてがえし,動きに　反応して　掌底を　打ちこみ\n相手を　ひるませる。　相手が　だす技が\n先制攻撃でないと　失敗する。
-23,1,920,じゃどくのくさり,毒でできた鎖を　相手に　巻きつけ\n毒素を　流しこんで　蝕む。\n猛毒の　状態に　することが　ある。
+23,1,905,エレクトロビーム,１ターン目に　電気を　集めて　特攻が　あがり\n２ターン目に　高圧の　電気を　発射する。\n天気が　雨のときは　すぐに　発射できる。
+23,1,906,テラクラスター,結晶の力を　照射し　敵を　排除する。\nテラパゴスが　ステラフォルムで　放つと\nすべての　相手に　ダメージを　与える。
+23,1,907,きまぐレーザー,光線を　発射して　攻撃する。\nときどき　ほかの首も　協力して\nレーザーを　放ち　威力が　２倍に　なる。
+23,1,908,かえんのまもり,相手の　攻撃を　超高熱の\n体毛で　防ぎ　同時に　触れた\n相手に　やけどを　与えてしまう。
+23,1,909,じんらい,相手より　先に　電撃を　浴びせる。\n相手が　だす技が\n攻撃技でないと　失敗する。
+23,1,910,パワフルエッジ,頭部に　蓄積した　光で　切断する。\n守りを　無視して　攻撃できる。
+23,1,911,タキオンカッター,粒子の刃を　たて続けに　発射して\n２回連続で　ダメージを　与える。\n攻撃は　必ず　命中する。
+23,1,912,ハードプレス,腕やハサミで　相手を　圧迫する。\n相手の　ＨＰが　残っているほど\n威力が　あがる。
+23,1,913,ドラゴンエール,竜の鼓舞で　士気を　上げて\n味方の技が　急所に　当たりやすくなる。\nドラゴンタイプだと　より　鼓舞される。
+23,1,914,みわくのボイス,天使のような　歌声で　相手を　攻撃。\nそのターン　能力が　あがった　ポケモンを\n混乱の　状態に　する。
+23,1,915,やけっぱち,自棄になった　勢いで　攻撃する。\n前の　ターンに　技を　外していると\n威力が　倍に　なる。
+23,1,916,サンダーダイブ,体を　帯電させて　相手に　のしかかる。\nはずすと　自分が　ダメージを　受ける。
+23,1,917,サイコノイズ,不快な音波を　相手に　浴びせて　攻撃。\n２ターンの間　技や　特性や　持っている\n道具によって　ＨＰを　回復できなくなる。
+23,1,918,はやてがえし,動きに　反応して　掌底を　打ちこみ\n相手を　ひるませる。　相手が　だす技が\n先制攻撃でないと　失敗する。
+23,1,919,じゃどくのくさり,毒でできた鎖を　相手に　巻きつけ\n毒素を　流しこんで　蝕む。\n猛毒の　状態に　することが　ある。
 23,1,10001,めざめるパワー (かくとう),この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 23,1,10002,めざめるパワー (ひこう),この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 23,1,10003,めざめるパワー (どく),この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
@@ -1839,21 +1839,21 @@ version_group_id,language_id,move_id,name,description
 23,2,902,Matcha Gotcha,The user fires a blast of tea that it mixed. The user’s HP\nis restored by up to half the damage taken by the target.\nThis may also leave the target with a burn.
 23,2,903,Syrup Bomb,"The user sets off an explosion of sticky candy syrup,\nwhich coats the target and causes the target’s Speed\nstat to drop each turn for three turns."
 23,2,904,Ivy Cudgel,"The user strikes with an ivy-wrapped cudgel. This move’s\ntype changes depending on the mask worn by the user,\nand it has a heightened chance of landing a critical hit."
-23,2,906,Electro Shot,"The user gathers electricity on the first turn, boosting its\nSp. Atk stat, then fires a high-voltage shot on the next\nturn. The shot will be fired immediately in rain."
-23,2,907,Tera Starstorm,"With the power of its crystals, the user bombards and\neliminates the target. When used by Terapagos in its\nStellar Form, this move damages all opposing Pokémon."
-23,2,908,Fickle Beam,"The user shoots a beam of light to inflict damage.\nSometimes all the user’s heads shoot beams in unison,\ndoubling the move’s power."
-23,2,909,Burning Bulwark,The user’s intensely hot fur protects it from attacks and\nalso burns any attacker that makes direct contact with it.
-23,2,910,Thunderclap,This move enables the user to attack first with a jolt of\nelectricity. This move fails if the target is not readying\nan attack.
-23,2,911,Mighty Cleave,The user wields the light that has accumulated atop its\nhead to cleave the target. This move hits even if the\ntarget protects itself.
-23,2,912,Tachyon Cutter,The user attacks by launching particle blades at the\ntarget twice in a row. This attack never misses.
-23,2,913,Hard Press,"The target is crushed with an arm, a claw, or the like to\ninflict damage. The more HP the target has left, the\ngreater the move’s power."
-23,2,914,Dragon Cheer,The user raises its allies’ morale with a draconic cry so\nthat their future attacks have a heightened chance of\nlanding critical hits. This rouses Dragon types more.
-23,2,915,Alluring Voice,The user attacks the target using its angelic voice.\nThis also confuses the target if its stats have been\nboosted during the turn.
-23,2,916,Temper Flare,"Spurred by desperation, the user attacks the target.\nThis move’s power is doubled if the user’s previous\nmove failed."
-23,2,917,Supercell Slam,"The user electrifies its body and drops onto the target\nto inflict damage. If this move misses, the user takes\ndamage instead."
-23,2,918,Psychic Noise,"The user attacks the target with unpleasant sound waves.\nFor two turns, the target is prevented from recovering\nHP through moves, Abilities, or held items."
-23,2,919,Upper Hand,"The user reacts to the target’s movement and strikes\nwith the heel of its palm, making the target flinch. This\nmove fails if the target is not readying a priority move."
-23,2,920,Malignant Chain,"The user pours toxins into the target by wrapping them\nin a toxic, corrosive chain. This may also leave the target\nbadly poisoned."
+23,2,905,Electro Shot,"The user gathers electricity on the first turn, boosting its\nSp. Atk stat, then fires a high-voltage shot on the next\nturn. The shot will be fired immediately in rain."
+23,2,906,Tera Starstorm,"With the power of its crystals, the user bombards and\neliminates the target. When used by Terapagos in its\nStellar Form, this move damages all opposing Pokémon."
+23,2,907,Fickle Beam,"The user shoots a beam of light to inflict damage.\nSometimes all the user’s heads shoot beams in unison,\ndoubling the move’s power."
+23,2,908,Burning Bulwark,The user’s intensely hot fur protects it from attacks and\nalso burns any attacker that makes direct contact with it.
+23,2,909,Thunderclap,This move enables the user to attack first with a jolt of\nelectricity. This move fails if the target is not readying\nan attack.
+23,2,910,Mighty Cleave,The user wields the light that has accumulated atop its\nhead to cleave the target. This move hits even if the\ntarget protects itself.
+23,2,911,Tachyon Cutter,The user attacks by launching particle blades at the\ntarget twice in a row. This attack never misses.
+23,2,912,Hard Press,"The target is crushed with an arm, a claw, or the like to\ninflict damage. The more HP the target has left, the\ngreater the move’s power."
+23,2,913,Dragon Cheer,The user raises its allies’ morale with a draconic cry so\nthat their future attacks have a heightened chance of\nlanding critical hits. This rouses Dragon types more.
+23,2,914,Alluring Voice,The user attacks the target using its angelic voice.\nThis also confuses the target if its stats have been\nboosted during the turn.
+23,2,915,Temper Flare,"Spurred by desperation, the user attacks the target.\nThis move’s power is doubled if the user’s previous\nmove failed."
+23,2,916,Supercell Slam,"The user electrifies its body and drops onto the target\nto inflict damage. If this move misses, the user takes\ndamage instead."
+23,2,917,Psychic Noise,"The user attacks the target with unpleasant sound waves.\nFor two turns, the target is prevented from recovering\nHP through moves, Abilities, or held items."
+23,2,918,Upper Hand,"The user reacts to the target’s movement and strikes\nwith the heel of its palm, making the target flinch. This\nmove fails if the target is not readying a priority move."
+23,2,919,Malignant Chain,"The user pours toxins into the target by wrapping them\nin a toxic, corrosive chain. This may also leave the target\nbadly poisoned."
 23,2,10001,Hidden Power (Fighting),"This move can’t be used. It’s recommended that this\nmove is forgotten. Once forgotten, this move can’t\nbe remembered."
 23,2,10002,Hidden Power (Flying),"This move can’t be used. It’s recommended that this\nmove is forgotten. Once forgotten, this move can’t\nbe remembered."
 23,2,10003,Hidden Power (Poison),"This move can’t be used. It’s recommended that this\nmove is forgotten. Once forgotten, this move can’t\nbe remembered."
@@ -2775,21 +2775,21 @@ version_group_id,language_id,move_id,name,description
 23,3,902,Mortier Matcha,Le lanceur remue son thé et en bombarde la cible.\nLa moitié des dégâts infligés sont convertis en PV pour\nle lanceur. Cette capacité peut aussi brûler la cible.
 23,3,903,Bombe au Sirop,Le lanceur jette une bombe qui recouvre la cible\nde sirop gluant et fait progressivement baisser\nla Vitesse de la cible pendant trois tours.
 23,3,904,Massue Liane,Le lanceur frappe la cible à l’aide d’une massue entourée\nd’une liane. Le type de cette capacité varie en fonction\ndu masque que porte le lanceur. Taux de critiques élevé.
-23,3,906,Fulgurayon,"Le lanceur absorbe de l’électricité au premier tour, ce qui\naugmente son Attaque Spéciale, et envoie une puissante\ndécharge au second. S’il pleut, il l’envoie au premier tour."
-23,3,907,Pluie Térastrale,"Le lanceur bombarde la cible afin de l’éliminer grâce au\npouvoir des cristaux. Si le lanceur est Terapagos sous sa\nForme Stellaire, la capacité touche tous les ennemis."
-23,3,908,Laser Hasard,"Le lanceur attaque en tirant un rayon lumineux.\nIl arrive parfois que toutes les têtes agissent ensemble,\nce qui double la puissance de la capacité."
-23,3,909,Rempart Brûlant,"Le lanceur se protège contre les attaques grâce\nà son pelage incandescent, et si un assaillant utilise\nune attaque directe contre lui, il le brûle."
-23,3,910,Vif Éclair,Permet au lanceur d’attaquer la cible en priorité avec\nune décharge électrique. Échoue si la cible ne prépare\npas une attaque.
-23,3,911,Lame Puissante,Le lanceur pourfend la cible avec la lumière accumulée\nsur sa tête. Cette attaque passe outre les protections.
-23,3,912,Lame Tachyonique,Le lanceur concentre des particules élémentaires\npour créer une lame qui inflige des dégâts à la cible\ndeux fois d’affilée. N’échoue jamais.
-23,3,913,Pression Extrême,"Le lanceur écrase la cible avec ses bras ou ses pinces.\nPlus il reste de PV à la cible, plus la puissance\nde la capacité augmente."
-23,3,914,Cri Draconique,Le lanceur galvanise ses alliés avec un encouragement\ndraconique qui augmente leur taux de critiques.\nL’effet est plus puissant si les alliés ont le type Dragon.
-23,3,915,Voix Envoûtante,Le lanceur attaque sa cible avec sa voix angélique.\nCette capacité rend la cible confuse si ses stats\nont augmenté pendant ce tour.
-23,3,916,Indignition,"Le lanceur utilise la force de son dépit pour attaquer.\nS’il a utilisé une capacité qui a échoué au tour\nprécédent, la puissance d’Indignition est doublée."
-23,3,917,Volt Assaut,"Le lanceur se charge en électricité et fond sur la cible.\nS’il échoue, le lanceur se blesse."
-23,3,918,Dissonance Psy,"Le lanceur attaque avec des ondes sonores dissonantes.\nCela empêche la cible de récupérer des PV à l’aide de\ncapacités, talents ou objets tenus pendant deux tours."
-23,3,919,Prio-Parade,Le lanceur réagit instinctivement au moindre mouvement\net donne un coup de paume qui apeure la cible. Échoue\nsi cette dernière n’a pas utilisé une attaque prioritaire.
-23,3,920,Chaîne Malsaine,"Le lanceur ligote la cible avec une chaîne faite de\npoison et lui injecte un venin corrosif, ce qui peut\naussi gravement l’empoisonner."
+23,3,905,Fulgurayon,"Le lanceur absorbe de l’électricité au premier tour, ce qui\naugmente son Attaque Spéciale, et envoie une puissante\ndécharge au second. S’il pleut, il l’envoie au premier tour."
+23,3,906,Pluie Térastrale,"Le lanceur bombarde la cible afin de l’éliminer grâce au\npouvoir des cristaux. Si le lanceur est Terapagos sous sa\nForme Stellaire, la capacité touche tous les ennemis."
+23,3,907,Laser Hasard,"Le lanceur attaque en tirant un rayon lumineux.\nIl arrive parfois que toutes les têtes agissent ensemble,\nce qui double la puissance de la capacité."
+23,3,908,Rempart Brûlant,"Le lanceur se protège contre les attaques grâce\nà son pelage incandescent, et si un assaillant utilise\nune attaque directe contre lui, il le brûle."
+23,3,909,Vif Éclair,Permet au lanceur d’attaquer la cible en priorité avec\nune décharge électrique. Échoue si la cible ne prépare\npas une attaque.
+23,3,910,Lame Puissante,Le lanceur pourfend la cible avec la lumière accumulée\nsur sa tête. Cette attaque passe outre les protections.
+23,3,911,Lame Tachyonique,Le lanceur concentre des particules élémentaires\npour créer une lame qui inflige des dégâts à la cible\ndeux fois d’affilée. N’échoue jamais.
+23,3,912,Pression Extrême,"Le lanceur écrase la cible avec ses bras ou ses pinces.\nPlus il reste de PV à la cible, plus la puissance\nde la capacité augmente."
+23,3,913,Cri Draconique,Le lanceur galvanise ses alliés avec un encouragement\ndraconique qui augmente leur taux de critiques.\nL’effet est plus puissant si les alliés ont le type Dragon.
+23,3,914,Voix Envoûtante,Le lanceur attaque sa cible avec sa voix angélique.\nCette capacité rend la cible confuse si ses stats\nont augmenté pendant ce tour.
+23,3,915,Indignition,"Le lanceur utilise la force de son dépit pour attaquer.\nS’il a utilisé une capacité qui a échoué au tour\nprécédent, la puissance d’Indignition est doublée."
+23,3,916,Volt Assaut,"Le lanceur se charge en électricité et fond sur la cible.\nS’il échoue, le lanceur se blesse."
+23,3,917,Dissonance Psy,"Le lanceur attaque avec des ondes sonores dissonantes.\nCela empêche la cible de récupérer des PV à l’aide de\ncapacités, talents ou objets tenus pendant deux tours."
+23,3,918,Prio-Parade,Le lanceur réagit instinctivement au moindre mouvement\net donne un coup de paume qui apeure la cible. Échoue\nsi cette dernière n’a pas utilisé une attaque prioritaire.
+23,3,919,Chaîne Malsaine,"Le lanceur ligote la cible avec une chaîne faite de\npoison et lui injecte un venin corrosif, ce qui peut\naussi gravement l’empoisonner."
 23,3,10001,Puissance Cachée (Combat),"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
 23,3,10002,Puissance Cachée (Vol),"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
 23,3,10003,Puissance Cachée (Poison),"Cette capacité ne peut pas être utilisée.\nIl est recommandé de l’oublier, même s’il sera\nimpossible de se la remémorer une fois oubliée."
@@ -3711,21 +3711,21 @@ version_group_id,language_id,move_id,name,description
 23,4,902,Quirlschuss,Der Anwender verschießt gequirlten Tee. Die Hälfte des\nzugefügten Schadens wird ihm als KP gutgeschrieben.\nDas Ziel erleidet eventuell Verbrennungen.
 23,4,903,Sirupbombe,"Der Anwender feuert eine klebrige Sirupbombe auf das\nZiel, wodurch es in Sirup gehüllt und seine Initiative drei\nRunden in Folge gesenkt wird."
 23,4,904,Rankenkeule,Der Anwender schlägt mit einer rankenumschlungenen\nKeule zu. Der Typ dieser Attacke hängt von der Maske\ndes Anwenders ab. Hohe Volltrefferquote.
-23,4,906,Stromstrahl,"Sammelt in Runde 1 Elektrizität, um den Spezial-Angriff\nzu erhöhen, und greift dann in Runde 2 mit Starkstrom\nan. Bei Regen erfolgt der Angriff sofort in Runde 1."
-23,4,907,Tera-Sternhagel,"Der Anwender greift das Ziel mit gebündelter Kristall-\nenergie an. Wenn Terapagos diese Attacke in seiner\nStellarform einsetzt, erleiden alle Gegner Schaden."
-23,4,908,Launenlaser,"Der Anwender greift mit einem Laserstrahl an.\nManchmal feuern mehrere seiner Köpfe Laser ab,\nwodurch sich die Stärke dieser Attacke verdoppelt."
-23,4,909,Flammenschild,"Das brennend heiße Fell des Anwenders schützt ihn vor\nAngriffen. Gleichzeitig erleiden alle Pokémon, die mit\nihm in Berührung kommen, Verbrennungen."
-23,4,910,Sturmblitz,"Bei dieser Erstschlag-Attacke lässt der Anwender\neinen Blitz auf das Ziel einschlagen. Sie gelingt nur,\nwenn dieses gerade eine Angriffsattacke vorbereitet."
-23,4,911,Wuchtklinge,"Der Anwender führt mit dem in seinem Kopf\ngespeicherten Licht einen Schnitt aus. Diese Attacke\ntrifft auch, wenn das Ziel sich selbst schützt."
-23,4,912,Tachyon-Schnitt,Der Anwender greift das Ziel zweimal hintereinander\nmit Partikelklingen an. Der Angriff trifft garantiert.
-23,4,913,Stahlpresse,"Der Anwender nimmt das Ziel mit Armen oder Scheren\nin die Mangel. Je höher die KP des Zieles, desto stärker\ndie Attacke."
-23,4,914,Drachenschrei,"Das anspornende Drachengebrüll hebt die Moral aller\nMitstreiter und erhöht ihre Volltrefferquote. Der Effekt\nist stärker, wenn sie dem Typ Drache angehören."
-23,4,915,Lockstimme,"Der Anwender greift mit engelsgleichem Gesang an.\nFalls die Statuswerte des Zieles in dieser Runde erhöht\nwurden, wird es zusätzlich verwirrt."
-23,4,916,Frustflamme,"Der Anwender greift das Ziel voller Verzweiflung an.\nWenn seine vorige Attacke fehlgeschlagen ist,\nverdoppelt sich die Stärke der Attacke."
-23,4,917,Donnerstoß,Der Anwender lädt seinen Körper mit elektrischer\nEnergie auf und stürzt sich auf das Ziel. Bei Misserfolg\nverletzt sich der Anwender selbst.
-23,4,918,Psycholärm,"Der Anwender greift mit unerträglichen Schallwellen an,\nwodurch das Ziel zwei Runden lang nicht durch Attacken,\nFähigkeiten oder getragene Items geheilt werden kann."
-23,4,919,Schnellkonter,"Der Anwender reagiert auf Bewegungen des Zieles und\nlässt es durch einen Schlag zurückschrecken. Gelingt nur,\nwenn das Ziel gerade eine Erstschlag-Attacke vorbereitet."
-23,4,920,Giftkettung,"Der Anwender umwickelt das Ziel mit einer Kette aus\nToxinen, die in dessen Körper eindringen und ihm\nschaden. Das Ziel wird eventuell schwer vergiftet."
+23,4,905,Stromstrahl,"Sammelt in Runde 1 Elektrizität, um den Spezial-Angriff\nzu erhöhen, und greift dann in Runde 2 mit Starkstrom\nan. Bei Regen erfolgt der Angriff sofort in Runde 1."
+23,4,906,Tera-Sternhagel,"Der Anwender greift das Ziel mit gebündelter Kristall-\nenergie an. Wenn Terapagos diese Attacke in seiner\nStellarform einsetzt, erleiden alle Gegner Schaden."
+23,4,907,Launenlaser,"Der Anwender greift mit einem Laserstrahl an.\nManchmal feuern mehrere seiner Köpfe Laser ab,\nwodurch sich die Stärke dieser Attacke verdoppelt."
+23,4,908,Flammenschild,"Das brennend heiße Fell des Anwenders schützt ihn vor\nAngriffen. Gleichzeitig erleiden alle Pokémon, die mit\nihm in Berührung kommen, Verbrennungen."
+23,4,909,Sturmblitz,"Bei dieser Erstschlag-Attacke lässt der Anwender\neinen Blitz auf das Ziel einschlagen. Sie gelingt nur,\nwenn dieses gerade eine Angriffsattacke vorbereitet."
+23,4,910,Wuchtklinge,"Der Anwender führt mit dem in seinem Kopf\ngespeicherten Licht einen Schnitt aus. Diese Attacke\ntrifft auch, wenn das Ziel sich selbst schützt."
+23,4,911,Tachyon-Schnitt,Der Anwender greift das Ziel zweimal hintereinander\nmit Partikelklingen an. Der Angriff trifft garantiert.
+23,4,912,Stahlpresse,"Der Anwender nimmt das Ziel mit Armen oder Scheren\nin die Mangel. Je höher die KP des Zieles, desto stärker\ndie Attacke."
+23,4,913,Drachenschrei,"Das anspornende Drachengebrüll hebt die Moral aller\nMitstreiter und erhöht ihre Volltrefferquote. Der Effekt\nist stärker, wenn sie dem Typ Drache angehören."
+23,4,914,Lockstimme,"Der Anwender greift mit engelsgleichem Gesang an.\nFalls die Statuswerte des Zieles in dieser Runde erhöht\nwurden, wird es zusätzlich verwirrt."
+23,4,915,Frustflamme,"Der Anwender greift das Ziel voller Verzweiflung an.\nWenn seine vorige Attacke fehlgeschlagen ist,\nverdoppelt sich die Stärke der Attacke."
+23,4,916,Donnerstoß,Der Anwender lädt seinen Körper mit elektrischer\nEnergie auf und stürzt sich auf das Ziel. Bei Misserfolg\nverletzt sich der Anwender selbst.
+23,4,917,Psycholärm,"Der Anwender greift mit unerträglichen Schallwellen an,\nwodurch das Ziel zwei Runden lang nicht durch Attacken,\nFähigkeiten oder getragene Items geheilt werden kann."
+23,4,918,Schnellkonter,"Der Anwender reagiert auf Bewegungen des Zieles und\nlässt es durch einen Schlag zurückschrecken. Gelingt nur,\nwenn das Ziel gerade eine Erstschlag-Attacke vorbereitet."
+23,4,919,Giftkettung,"Der Anwender umwickelt das Ziel mit einer Kette aus\nToxinen, die in dessen Körper eindringen und ihm\nschaden. Das Ziel wird eventuell schwer vergiftet."
 23,4,10001,Kraftreserve (Kampf),"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
 23,4,10002,Kraftreserve (Flug),"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
 23,4,10003,Kraftreserve (Gift),"Diese Attacke kann nicht eingesetzt werden. Du solltest\ndein Pokémon sie vergessen lassen. Beachte aber,\ndass es sich danach nicht wieder an sie erinnern kann."
@@ -4647,21 +4647,21 @@ version_group_id,language_id,move_id,name,description
 23,5,902,Spruzzatè,"Il Pokémon attacca mescolando del tè e spruzzandolo,\nrecuperando una quantità di PS pari alla metà del danno\ninflitto. Può anche scottare il bersaglio."
 23,5,903,Bomba Sciroppata,"Il Pokémon fa esplodere dello sciroppo viscoso\nsul bersaglio, ricoprendolo e facendogli diminuire\nla Velocità per tre turni."
 23,5,904,Clava di Liane,Il Pokémon colpisce con una clava avvolta da liane.\nIl tipo della mossa varia in base alla maschera\nindossata. Probabile brutto colpo.
-23,5,906,Elettroraggio,"Il Pokémon accumula elettricità e aumenta l’Attacco\nSpeciale al primo turno, per poi rilasciare una potente\nscarica al turno successivo o, se piove, immediatamente."
-23,5,907,Teracluster,"Il Pokémon elimina il bersaglio irradiando il potere\ndei cristalli. Se Terapagos assume la Forma Astrale,\nla mossa infligge danni a tutti gli avversari."
-23,5,908,Irregolaser,"Il Pokémon attacca rilasciando raggi di luce. Talvolta\ni laser vengono emessi da tutte le teste, contribuendo\na raddoppiare la potenza della mossa."
-23,5,909,Egida Ignea,Il Pokémon blocca gli attacchi avversari con la pelliccia\nincandescente che scotta chi entra in contatto con lui.
-23,5,910,Saetta,Il Pokémon abbatte una scarica elettrica sul bersaglio\nprima che questi possa attaccare. La mossa fallisce\nse il bersaglio sferra una mossa che non è di attacco.
-23,5,911,Taglio Poderoso,"Il Pokémon fende il bersaglio con la luce immagazzinata\nnella testa, ignorando gli effetti delle mosse protettive."
-23,5,912,Tachiontaglio,"Il Pokémon emette delle lame particellari in successione,\ninfliggendo danni due volte di fila. Questo attacco va\nsempre a segno."
-23,5,913,Pressa d’Acciaio,"Il Pokémon schiaccia il bersaglio usando i propri arti.\nPiù PS rimangono al bersaglio, maggiore è la potenza\ndella mossa."
-23,5,914,Grido del Drago,"Il Pokémon incita gli alleati con un inno ai draghi,\naumentando la probabilità che sferrino brutti colpi.\nParticolarmente efficace con alleati di tipo Drago."
-23,5,915,Ammaliavoce,"Il Pokémon attacca sfruttando il suo canto angelico,\nconfondendo il bersaglio se le sue statistiche sono\naumentate nello stesso turno."
-23,5,916,Rabbia Bruciante,"Il Pokémon attacca con l’impeto di chi è pronto a tutto.\nSe la mossa usata al turno precedente non è andata\na segno, la potenza raddoppia."
-23,5,917,Elettrotuffo,"Il Pokémon si schianta sul bersaglio dopo essersi\nelettrificato. Se la mossa fallisce, il Pokémon subisce\ndei danni."
-23,5,918,Psicorumore,"Il Pokémon investe il bersaglio con insopportabili onde\nsonore che gli impediscono di recuperare PS con mosse,\nabilità o strumenti che ha con sé per due turni."
-23,5,919,Colpo di Mano,"Il Pokémon reagisce al movimento del bersaglio e,\ncolpendo con il palmo, lo fa tentennare. Se il bersaglio\nnon sferra un attacco ad alta priorità, la mossa fallisce."
-23,5,920,Intossicatena,Il Pokémon logora il bersaglio avvolgendolo\ncon le sue catene fatte di veleno e iniettandogli\ndelle tossine che possono anche iperavvelenarlo.
+23,5,905,Elettroraggio,"Il Pokémon accumula elettricità e aumenta l’Attacco\nSpeciale al primo turno, per poi rilasciare una potente\nscarica al turno successivo o, se piove, immediatamente."
+23,5,906,Teracluster,"Il Pokémon elimina il bersaglio irradiando il potere\ndei cristalli. Se Terapagos assume la Forma Astrale,\nla mossa infligge danni a tutti gli avversari."
+23,5,907,Irregolaser,"Il Pokémon attacca rilasciando raggi di luce. Talvolta\ni laser vengono emessi da tutte le teste, contribuendo\na raddoppiare la potenza della mossa."
+23,5,908,Egida Ignea,Il Pokémon blocca gli attacchi avversari con la pelliccia\nincandescente che scotta chi entra in contatto con lui.
+23,5,909,Saetta,Il Pokémon abbatte una scarica elettrica sul bersaglio\nprima che questi possa attaccare. La mossa fallisce\nse il bersaglio sferra una mossa che non è di attacco.
+23,5,910,Taglio Poderoso,"Il Pokémon fende il bersaglio con la luce immagazzinata\nnella testa, ignorando gli effetti delle mosse protettive."
+23,5,911,Tachiontaglio,"Il Pokémon emette delle lame particellari in successione,\ninfliggendo danni due volte di fila. Questo attacco va\nsempre a segno."
+23,5,912,Pressa d’Acciaio,"Il Pokémon schiaccia il bersaglio usando i propri arti.\nPiù PS rimangono al bersaglio, maggiore è la potenza\ndella mossa."
+23,5,913,Grido del Drago,"Il Pokémon incita gli alleati con un inno ai draghi,\naumentando la probabilità che sferrino brutti colpi.\nParticolarmente efficace con alleati di tipo Drago."
+23,5,914,Ammaliavoce,"Il Pokémon attacca sfruttando il suo canto angelico,\nconfondendo il bersaglio se le sue statistiche sono\naumentate nello stesso turno."
+23,5,915,Rabbia Bruciante,"Il Pokémon attacca con l’impeto di chi è pronto a tutto.\nSe la mossa usata al turno precedente non è andata\na segno, la potenza raddoppia."
+23,5,916,Elettrotuffo,"Il Pokémon si schianta sul bersaglio dopo essersi\nelettrificato. Se la mossa fallisce, il Pokémon subisce\ndei danni."
+23,5,917,Psicorumore,"Il Pokémon investe il bersaglio con insopportabili onde\nsonore che gli impediscono di recuperare PS con mosse,\nabilità o strumenti che ha con sé per due turni."
+23,5,918,Colpo di Mano,"Il Pokémon reagisce al movimento del bersaglio e,\ncolpendo con il palmo, lo fa tentennare. Se il bersaglio\nnon sferra un attacco ad alta priorità, la mossa fallisce."
+23,5,919,Intossicatena,Il Pokémon logora il bersaglio avvolgendolo\ncon le sue catene fatte di veleno e iniettandogli\ndelle tossine che possono anche iperavvelenarlo.
 23,5,10001,Introforza (Lotta),"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
 23,5,10002,Introforza (Volante),"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
 23,5,10003,Introforza (Veleno),"Questa mossa non può essere usata.\nÈ consigliabile farla dimenticare al Pokémon. Tuttavia,\nuna volta dimenticata, non potrà più essere ricordata."
@@ -5583,21 +5583,21 @@ version_group_id,language_id,move_id,name,description
 23,6,902,Cañón Batidor,Rocía al objetivo con té recién batido y recupera\nla mitad de los PS del daño que produce. Puede\ncausar quemaduras.
 23,6,903,Bomba Caramelo,"Impregna al objetivo con una explosión de su viscoso\nnéctar y lo carameliza, lo que hace que su Velocidad\nse reduzca progresivamente durante tres turnos."
 23,6,904,Garrote Liana,Golpea con un garrote que forma enrollando su liana.\nEl tipo del movimiento varía según la máscara que lleve\npuesta el usuario. Suele asestar un golpe crítico.
-23,6,906,Electrorrayo,"Acumula electricidad y aumenta su Ataque Especial en el\nprimer turno y dispara una descarga de alto voltaje en el\nsegundo. Si llueve, puede atacar en el primer turno."
-23,6,907,Teraclúster,"Ataca al objetivo irradiando el poder de sus cristales.\nSi Terapagos usa este movimiento en su Forma Astral,\ninflige daño a todos los rivales."
-23,6,908,Láser Veleidoso,"Ataca disparando un haz de luz. En ocasiones, el resto\nde sus cabezas se unen al ataque. Cuando esto sucede,\nla potencia del movimiento se duplica."
-23,6,909,Llama Protectora,Emplea su ardiente pelaje para protegerse de los\nataques y causarle quemaduras al atacante si este\nusa un movimiento de contacto.
-23,6,910,Relámpago Súbito,Invoca un rayo que cae sobre el objetivo antes de que\neste pueda realizar cualquier acción. Falla si el objetivo\nno está preparando ningún ataque.
-23,6,911,Filo Potente,Rebana al objetivo con la luz que ha acumulado en la\ntesta. Permite acertar aunque el objetivo esté\nprotegiéndose.
-23,6,912,Tajo Taquión,Lanza una ráfaga de cuchillas formadas por partículas\ncontra el objetivo y le inflige daño dos veces seguidas.\nNo falla nunca.
-23,6,913,Prensa Metálica,"Oprime con los brazos o las pinzas. Cuantos más PS\nle queden al objetivo, mayor será la potencia del\nmovimiento."
-23,6,914,Bramido Dragón,Bramido de dragón que sube la moral de los aliados y\naumenta sus probabilidades de asestar un golpe crítico.\nEs especialmente efectivo con aliados de tipo Dragón.
-23,6,915,Canto Encantador,"Ataca con un canto angelical y, si las características del\nobjetivo han aumentado en ese turno, lo deja confuso."
-23,6,916,Cólera Ardiente,Arremete contra el objetivo tras dejarse llevar por la ira.\nSu potencia se duplica si el movimiento del usuario falló\nen el turno anterior.
-23,6,917,Plancha Voltaica,"El usuario electrifica su cuerpo y salta en plancha sobre\nel objetivo. Si falla, se hiere a sí mismo."
-23,6,918,Psicorruido,"Ataca emitiendo una onda sonora desagradable que\nimpide al objetivo usar movimientos, habilidades y\nobjetos equipados que recuperan PS durante dos turnos."
-23,6,919,Palma Rauda,Se anticipa al objetivo golpeándolo rápidamente con\nla palma y lo amedrenta. Falla si el objetivo no está\npreparando un movimiento de prioridad alta.
-23,6,920,Cadena Virulenta,Apresa al objetivo con una cadena hecha de ponzoña\nque le inocula toxinas para minarle las fuerzas. Puede\nenvenenar gravemente.
+23,6,905,Electrorrayo,"Acumula electricidad y aumenta su Ataque Especial en el\nprimer turno y dispara una descarga de alto voltaje en el\nsegundo. Si llueve, puede atacar en el primer turno."
+23,6,906,Teraclúster,"Ataca al objetivo irradiando el poder de sus cristales.\nSi Terapagos usa este movimiento en su Forma Astral,\ninflige daño a todos los rivales."
+23,6,907,Láser Veleidoso,"Ataca disparando un haz de luz. En ocasiones, el resto\nde sus cabezas se unen al ataque. Cuando esto sucede,\nla potencia del movimiento se duplica."
+23,6,908,Llama Protectora,Emplea su ardiente pelaje para protegerse de los\nataques y causarle quemaduras al atacante si este\nusa un movimiento de contacto.
+23,6,909,Relámpago Súbito,Invoca un rayo que cae sobre el objetivo antes de que\neste pueda realizar cualquier acción. Falla si el objetivo\nno está preparando ningún ataque.
+23,6,910,Filo Potente,Rebana al objetivo con la luz que ha acumulado en la\ntesta. Permite acertar aunque el objetivo esté\nprotegiéndose.
+23,6,911,Tajo Taquión,Lanza una ráfaga de cuchillas formadas por partículas\ncontra el objetivo y le inflige daño dos veces seguidas.\nNo falla nunca.
+23,6,912,Prensa Metálica,"Oprime con los brazos o las pinzas. Cuantos más PS\nle queden al objetivo, mayor será la potencia del\nmovimiento."
+23,6,913,Bramido Dragón,Bramido de dragón que sube la moral de los aliados y\naumenta sus probabilidades de asestar un golpe crítico.\nEs especialmente efectivo con aliados de tipo Dragón.
+23,6,914,Canto Encantador,"Ataca con un canto angelical y, si las características del\nobjetivo han aumentado en ese turno, lo deja confuso."
+23,6,915,Cólera Ardiente,Arremete contra el objetivo tras dejarse llevar por la ira.\nSu potencia se duplica si el movimiento del usuario falló\nen el turno anterior.
+23,6,916,Plancha Voltaica,"El usuario electrifica su cuerpo y salta en plancha sobre\nel objetivo. Si falla, se hiere a sí mismo."
+23,6,917,Psicorruido,"Ataca emitiendo una onda sonora desagradable que\nimpide al objetivo usar movimientos, habilidades y\nobjetos equipados que recuperan PS durante dos turnos."
+23,6,918,Palma Rauda,Se anticipa al objetivo golpeándolo rápidamente con\nla palma y lo amedrenta. Falla si el objetivo no está\npreparando un movimiento de prioridad alta.
+23,6,919,Cadena Virulenta,Apresa al objetivo con una cadena hecha de ponzoña\nque le inocula toxinas para minarle las fuerzas. Puede\nenvenenar gravemente.
 23,6,10001,Poder Oculto (Lucha),"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
 23,6,10002,Poder Oculto (Volador),"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
 23,6,10003,Poder Oculto (Veneno),"Este movimiento no se puede usar, por lo que sería\nmejor olvidarlo, aunque eso implique que no se pueda\nrecordar posteriormente."
@@ -6519,21 +6519,21 @@ version_group_id,language_id,move_id,name,description
 23,7,902,휘적휘적포,휘저은 차를 대포처럼 발사해\n준 데미지의 절반을 HP로 회복한다.\n화상 상태로 만들 때도 있다.
 23,7,903,시럽봄,끈적끈적한 물엿을 폭발시킨다.\n상대를 물엿범벅 상태로 만들어서\n3턴 동안 계속 스피드를 떨어뜨린다.
 23,7,904,덩굴방망이,덩굴을 휘감은 방망이로 때린다.\n쓰고 있는 가면에 따라 타입이 바뀐다.\n급소에 맞기 쉽다.
-23,7,906,일렉트로빔,1턴째에 전기를 모아서 특수공격을 올리고\n2턴째에 고압의 전기를 발사한다.\n비가 오는 날씨일 때는 바로 발사할 수 있다.
-23,7,907,테라클러스터,결정의 힘을 내리쬐어 적을 없애 버린다.\n테라파고스가 스텔라폼일 때 사용하면\n모든 상대에게 데미지를 준다.
-23,7,908,변덕레이저,광선을 발사해서 공격한다.\n가끔 다른 머리도 협력해서\n레이저를 발사하여 위력이 2배가 된다.
-23,7,909,화염의수호,상대의 공격을 초고열의 털로\n방어하는 동시에 접촉한 상대를\n화상 상태로 만든다.
-23,7,910,질풍신뢰,상대보다 먼저 전격을 퍼붓는다.\n상대가 쓴 기술이\n공격 기술이 아니면 실패한다.
-23,7,911,파워풀에지,머리에 축적된 빛으로 절단한다.\n기술 방어를 무시하고 공격할 수 있다.
-23,7,912,타키온커터,입자로 된 칼날을 연이어 발사해서\n2회 연속으로 데미지를 준다.\n공격은 반드시 명중한다.
-23,7,913,하드프레스,팔이나 집게로 상대를 압박한다.\n상대의 HP가 남아 있을수록 위력이 올라간다.
-23,7,914,드래곤옐,용의 북돋움으로 사기를 높여서\n같은 편의 기술이 급소에 맞기 쉬워진다.\n드래곤타입이면 더욱더 사기가 북돋는다.
-23,7,915,매혹의보이스,천사와도 같은 노랫소리로 상대를 공격한다.\n그 턴에 능력이 올라간 포켓몬을\n혼란 상태로 만든다.
-23,7,916,열불내기,자포자기하는 기세로 공격한다.\n앞 턴에서 기술이 빗나갔다면\n위력이 배가 된다.
-23,7,917,썬더다이브,몸에 전기를 두르고 상대를 덮친다.\n빗나가면 자신이 데미지를 입는다.
-23,7,918,사이코노이즈,불쾌한 음파를 상대에게 날려서 공격한다.\n2턴 동안 상대는 기술이나 특성 또는\n지니고 있는 도구로 HP를 회복할 수 없게 된다.
-23,7,919,기선제압,움직임에 반응하여 손바닥으로 밀쳐서\n상대를 풀죽게 한다. 상대가 쓴 기술이\n선제공격 기술이 아니면 실패한다.
-23,7,920,악독사슬,독으로 된 사슬로 상대를 휘감은 뒤\n독소를 흘려보내어 해치운다.\n맹독 상태로 만들 때가 있다.
+23,7,905,일렉트로빔,1턴째에 전기를 모아서 특수공격을 올리고\n2턴째에 고압의 전기를 발사한다.\n비가 오는 날씨일 때는 바로 발사할 수 있다.
+23,7,906,테라클러스터,결정의 힘을 내리쬐어 적을 없애 버린다.\n테라파고스가 스텔라폼일 때 사용하면\n모든 상대에게 데미지를 준다.
+23,7,907,변덕레이저,광선을 발사해서 공격한다.\n가끔 다른 머리도 협력해서\n레이저를 발사하여 위력이 2배가 된다.
+23,7,908,화염의수호,상대의 공격을 초고열의 털로\n방어하는 동시에 접촉한 상대를\n화상 상태로 만든다.
+23,7,909,질풍신뢰,상대보다 먼저 전격을 퍼붓는다.\n상대가 쓴 기술이\n공격 기술이 아니면 실패한다.
+23,7,910,파워풀에지,머리에 축적된 빛으로 절단한다.\n기술 방어를 무시하고 공격할 수 있다.
+23,7,911,타키온커터,입자로 된 칼날을 연이어 발사해서\n2회 연속으로 데미지를 준다.\n공격은 반드시 명중한다.
+23,7,912,하드프레스,팔이나 집게로 상대를 압박한다.\n상대의 HP가 남아 있을수록 위력이 올라간다.
+23,7,913,드래곤옐,용의 북돋움으로 사기를 높여서\n같은 편의 기술이 급소에 맞기 쉬워진다.\n드래곤타입이면 더욱더 사기가 북돋는다.
+23,7,914,매혹의보이스,천사와도 같은 노랫소리로 상대를 공격한다.\n그 턴에 능력이 올라간 포켓몬을\n혼란 상태로 만든다.
+23,7,915,열불내기,자포자기하는 기세로 공격한다.\n앞 턴에서 기술이 빗나갔다면\n위력이 배가 된다.
+23,7,916,썬더다이브,몸에 전기를 두르고 상대를 덮친다.\n빗나가면 자신이 데미지를 입는다.
+23,7,917,사이코노이즈,불쾌한 음파를 상대에게 날려서 공격한다.\n2턴 동안 상대는 기술이나 특성 또는\n지니고 있는 도구로 HP를 회복할 수 없게 된다.
+23,7,918,기선제압,움직임에 반응하여 손바닥으로 밀쳐서\n상대를 풀죽게 한다. 상대가 쓴 기술이\n선제공격 기술이 아니면 실패한다.
+23,7,919,악독사슬,독으로 된 사슬로 상대를 휘감은 뒤\n독소를 흘려보내어 해치운다.\n맹독 상태로 만들 때가 있다.
 23,7,10001,잠재파워 (격투),사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
 23,7,10002,잠재파워 (비행),사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
 23,7,10003,잠재파워 (독),사용할 수 없는 기술입니다.\n다시 배우게 할 수 없지만\n기술을 잊게 하는 것을 권장합니다.
@@ -7455,21 +7455,21 @@ version_group_id,language_id,move_id,name,description
 23,8,902,シャカシャカほう,かきまぜた　お茶の　大砲は　与えた\nダメージの　半分の　ＨＰを　回復して\nやけど状態に　することも　ある。
 23,8,903,みずあめボム,ねっとりした　みずあめを　爆発させ\n相手を　あめまみれ　状態に　して\n３ターンの間　素早さを　さげ続ける。
 23,8,904,ツタこんぼう,ツタを　まきつけた　こん棒で　なぐる。\nかぶっている　お面で　タイプが　変わる。\n急所に　当たりやすい。
-23,8,906,エレクトロビーム,１ターン目に　電気を　集めて　特攻が　あがり\n２ターン目に　高圧の　電気を　発射する。\n天気が　雨のときは　すぐに　発射できる。
-23,8,907,テラクラスター,結晶の力を　照射し　敵を　排除する。\nテラパゴスが　ステラフォルムで　放つと\nすべての　相手に　ダメージを　与える。
-23,8,908,きまぐレーザー,光線を　発射して　攻撃する。\nときどき　ほかの首も　協力して\nレーザーを　放ち　威力が　２倍に　なる。
-23,8,909,かえんのまもり,相手の　攻撃を　超高熱の\n体毛で　防ぎ　同時に　触れた\n相手に　やけどを　与えてしまう。
-23,8,910,じんらい,相手より　先に　電撃を　浴びせる。\n相手が　だす技が\n攻撃技でないと　失敗する。
-23,8,911,パワフルエッジ,頭部に　蓄積した　光で　切断する。\n守りを　無視して　攻撃できる。
-23,8,912,タキオンカッター,粒子の刃を　たて続けに　発射して\n２回連続で　ダメージを　与える。\n攻撃は　必ず　命中する。
-23,8,913,ハードプレス,腕やハサミで　相手を　圧迫する。\n相手の　ＨＰが　残っているほど\n威力が　あがる。
-23,8,914,ドラゴンエール,竜の鼓舞で　士気を　上げて\n味方の技が　急所に　当たりやすくなる。\nドラゴンタイプだと　より　鼓舞される。
-23,8,915,みわくのボイス,天使のような　歌声で　相手を　攻撃。\nそのターン　能力が　あがった　ポケモンを\n混乱の　状態に　する。
-23,8,916,やけっぱち,自棄になった　勢いで　攻撃する。\n前の　ターンに　技を　外していると\n威力が　倍に　なる。
-23,8,917,サンダーダイブ,体を　帯電させて　相手に　のしかかる。\nはずすと　自分が　ダメージを　受ける。
-23,8,918,サイコノイズ,不快な音波を　相手に　浴びせて　攻撃。\n２ターンの間　技や　特性や　持っている\n道具によって　ＨＰを　回復できなくなる。
-23,8,919,はやてがえし,動きに　反応して　掌底を　打ちこみ\n相手を　ひるませる。　相手が　だす技が\n先制攻撃でないと　失敗する。
-23,8,920,じゃどくのくさり,毒でできた鎖を　相手に　巻きつけ\n毒素を　流しこんで　蝕む。\n猛毒の　状態に　することが　ある。
+23,8,905,エレクトロビーム,１ターン目に　電気を　集めて　特攻が　あがり\n２ターン目に　高圧の　電気を　発射する。\n天気が　雨のときは　すぐに　発射できる。
+23,8,906,テラクラスター,結晶の力を　照射し　敵を　排除する。\nテラパゴスが　ステラフォルムで　放つと\nすべての　相手に　ダメージを　与える。
+23,8,907,きまぐレーザー,光線を　発射して　攻撃する。\nときどき　ほかの首も　協力して\nレーザーを　放ち　威力が　２倍に　なる。
+23,8,908,かえんのまもり,相手の　攻撃を　超高熱の\n体毛で　防ぎ　同時に　触れた\n相手に　やけどを　与えてしまう。
+23,8,909,じんらい,相手より　先に　電撃を　浴びせる。\n相手が　だす技が\n攻撃技でないと　失敗する。
+23,8,910,パワフルエッジ,頭部に　蓄積した　光で　切断する。\n守りを　無視して　攻撃できる。
+23,8,911,タキオンカッター,粒子の刃を　たて続けに　発射して\n２回連続で　ダメージを　与える。\n攻撃は　必ず　命中する。
+23,8,912,ハードプレス,腕やハサミで　相手を　圧迫する。\n相手の　ＨＰが　残っているほど\n威力が　あがる。
+23,8,913,ドラゴンエール,竜の鼓舞で　士気を　上げて\n味方の技が　急所に　当たりやすくなる。\nドラゴンタイプだと　より　鼓舞される。
+23,8,914,みわくのボイス,天使のような　歌声で　相手を　攻撃。\nそのターン　能力が　あがった　ポケモンを\n混乱の　状態に　する。
+23,8,915,やけっぱち,自棄になった　勢いで　攻撃する。\n前の　ターンに　技を　外していると\n威力が　倍に　なる。
+23,8,916,サンダーダイブ,体を　帯電させて　相手に　のしかかる。\nはずすと　自分が　ダメージを　受ける。
+23,8,917,サイコノイズ,不快な音波を　相手に　浴びせて　攻撃。\n２ターンの間　技や　特性や　持っている\n道具によって　ＨＰを　回復できなくなる。
+23,8,918,はやてがえし,動きに　反応して　掌底を　打ちこみ\n相手を　ひるませる。　相手が　だす技が\n先制攻撃でないと　失敗する。
+23,8,919,じゃどくのくさり,毒でできた鎖を　相手に　巻きつけ\n毒素を　流しこんで　蝕む。\n猛毒の　状態に　することが　ある。
 23,8,10001,めざめるパワー (かくとう),この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 23,8,10002,めざめるパワー (ひこう),この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
 23,8,10003,めざめるパワー (どく),この技は　使えません\n思い出すことが　できなくなりますが\n技を　忘れることを　おすすめします
@@ -8391,21 +8391,21 @@ version_group_id,language_id,move_id,name,description
 23,9,902,刷刷茶炮,发射经搅拌的茶的大炮，\n可以回复给予对手伤害的一半ＨＰ，\n有时会让对手陷入灼伤状态。
 23,9,903,糖浆炸弹,使粘稠的麦芽糖浆爆炸，\n让对手陷入满身糖状态，\n在３回合内持续降低其速度。
 23,9,904,棘藤棒,用缠有藤蔓的棍棒殴打。\n属性会随所戴的面具而改变。\n容易击中要害。
-23,9,906,电光束,第１回合收集电力提高特攻，\n第２回合将高压的电力发射出去。\n下雨天气时能立刻发射。
-23,9,907,晶光星群,照射出结晶的力量来驱逐敌人。\n太乐巴戈斯在星晶形态下使出时，\n能对所有对手造成伤害。
-23,9,908,随机光,发射光线进行攻击。\n有时其他的头也会合力发射镭射，\n让招式威力变成２倍。
-23,9,909,火焰守护,用超高温的体毛防住对手攻击的同时，\n让接触到自己的对手灼伤。
-23,9,910,迅雷,可以比对手先使出电击进行攻击。\n对手使出的招式\n如果不是攻击招式则会失败。
-23,9,911,强刃攻击,用积蓄在头部的光来斩切对手。\n可以无视守护进行攻击。
-23,9,912,迅子利刃,接连发射出粒子的利刃，\n连续２次给予伤害。\n攻击必定会命中。
-23,9,913,硬压,用手臂或钳子压迫对手。\n对手剩余的ＨＰ越多，\n威力越大。
-23,9,914,龙声鼓舞,以龙之鼓舞提高士气，\n让我方的招式变得容易击中要害。\n对龙属性的鼓舞效果会更强。
-23,9,915,魅诱之声,用天使般的歌声攻击对手。\n会让此回合内能力有提高的\n宝可梦陷入混乱状态。
-23,9,916,豁出去,以自暴自弃的气势进行攻击。\n如果上一回合招式没有命中，\n威力就会翻倍。
-23,9,917,闪电强袭,让身体带电后压向对手。\n如果没有命中则自己会受到伤害。
-23,9,918,精神噪音,用令对手不舒服的音波进行攻击。\n让对手在２回合内无法通过\n招式、特性或携带的道具回复ＨＰ。
-23,9,919,快手还击,察觉到对手的动作后用掌根攻击，\n让对手畏缩。如果对手使出的招式\n不是先制攻击，则会失败。
-23,9,920,邪毒锁链,用由毒形成的锁链缠住对手\n注入毒素加以侵蚀。\n有时会让对手陷入剧毒状态。
+23,9,905,电光束,第１回合收集电力提高特攻，\n第２回合将高压的电力发射出去。\n下雨天气时能立刻发射。
+23,9,906,晶光星群,照射出结晶的力量来驱逐敌人。\n太乐巴戈斯在星晶形态下使出时，\n能对所有对手造成伤害。
+23,9,907,随机光,发射光线进行攻击。\n有时其他的头也会合力发射镭射，\n让招式威力变成２倍。
+23,9,908,火焰守护,用超高温的体毛防住对手攻击的同时，\n让接触到自己的对手灼伤。
+23,9,909,迅雷,可以比对手先使出电击进行攻击。\n对手使出的招式\n如果不是攻击招式则会失败。
+23,9,910,强刃攻击,用积蓄在头部的光来斩切对手。\n可以无视守护进行攻击。
+23,9,911,迅子利刃,接连发射出粒子的利刃，\n连续２次给予伤害。\n攻击必定会命中。
+23,9,912,硬压,用手臂或钳子压迫对手。\n对手剩余的ＨＰ越多，\n威力越大。
+23,9,913,龙声鼓舞,以龙之鼓舞提高士气，\n让我方的招式变得容易击中要害。\n对龙属性的鼓舞效果会更强。
+23,9,914,魅诱之声,用天使般的歌声攻击对手。\n会让此回合内能力有提高的\n宝可梦陷入混乱状态。
+23,9,915,豁出去,以自暴自弃的气势进行攻击。\n如果上一回合招式没有命中，\n威力就会翻倍。
+23,9,916,闪电强袭,让身体带电后压向对手。\n如果没有命中则自己会受到伤害。
+23,9,917,精神噪音,用令对手不舒服的音波进行攻击。\n让对手在２回合内无法通过\n招式、特性或携带的道具回复ＨＰ。
+23,9,918,快手还击,察觉到对手的动作后用掌根攻击，\n让对手畏缩。如果对手使出的招式\n不是先制攻击，则会失败。
+23,9,919,邪毒锁链,用由毒形成的锁链缠住对手\n注入毒素加以侵蚀。\n有时会让对手陷入剧毒状态。
 23,9,10001,觉醒力量 (格斗),无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
 23,9,10002,觉醒力量 (飞行),无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
 23,9,10003,觉醒力量 (毒),无法使用这个招式。\n虽然忘记之后就再也想不起来了，\n但还是建议忘记这个招式。
@@ -9327,21 +9327,21 @@ version_group_id,language_id,move_id,name,description
 23,10,902,刷刷茶炮,像大炮般發射攪拌過的茶。\n可以回復給予對手傷害的一半ＨＰ，\n有時還會讓對手陷入灼傷狀態。
 23,10,903,糖漿炸彈,使黏稠的糖漿爆炸，\n使對手陷入滿身糖狀態，\n在３回合內持續降低對手的速度。
 23,10,904,棘藤棒,用纏繞著藤蔓的棍棒毆打。\n屬性會隨著所戴的面具而改變。\n容易擊中要害。
-23,10,906,電光束,使用後的第１回合會收集電力來提高特攻，\n並於第２回合發射出高壓電。\n天氣為下雨時可立即發射。
-23,10,907,晶光星群,投射結晶之力來掃除敵人。\n當太樂巴戈斯以星晶形態使出時，\n能給予所有對手傷害。
-23,10,908,隨機光,發射光線進行攻擊。\n有時會和其他的頭合力發射雷射，\n讓招式威力變成２倍。
-23,10,909,火焰守護,用超高溫的體毛防住對手攻擊，\n同時讓碰觸到自己的對手灼傷。
-23,10,910,迅雷,可以搶先對手一步用電擊進行攻擊。\n若對手使用的不是攻擊招式則會失敗。
-23,10,911,強刃攻擊,用積蓄在頭部的光斬斷對手。\n可不顧對手的守護進行攻擊。
-23,10,912,迅子利刃,連續發射粒子的利刃，\n連續２次給予傷害。\n攻擊必定會命中。
-23,10,913,硬壓,用手臂或鉗子壓迫對手。\n對手現有的ＨＰ越多，\n招式的威力越大。
-23,10,914,龍聲鼓舞,以龍之鼓舞提高士氣。\n我方的招式會變得容易擊中要害。\n對龍屬性的鼓舞效果更強。
-23,10,915,魅誘之聲,用天使般的歌聲攻擊對手。\n讓此回合內能力提高的\n寶可夢陷入混亂狀態。
-23,10,916,豁出去,用自暴自棄的狠勁攻擊對手。\n如果上一回合的招式沒有命中，\n威力就會加倍。
-23,10,917,閃電強襲,讓身體帶電然後壓向對手。\n沒命中對手時自己會受到傷害。
-23,10,918,精神噪音,用令人不快的音波攻擊對手，\n使對手在２回合內變得無法透過\n招式、特性或攜帶的道具回復ＨＰ。
-23,10,919,快手還擊,察覺對手動作並以掌底攻擊來反應，\n讓對手畏縮。若對手使用的招式\n不是先制攻擊則會失敗。
-23,10,920,邪毒鎖鏈,用毒素形成的鎖鏈纏住對手，\n注入毒素加以侵蝕。\n有時會讓對手陷入劇毒狀態。
+23,10,905,電光束,使用後的第１回合會收集電力來提高特攻，\n並於第２回合發射出高壓電。\n天氣為下雨時可立即發射。
+23,10,906,晶光星群,投射結晶之力來掃除敵人。\n當太樂巴戈斯以星晶形態使出時，\n能給予所有對手傷害。
+23,10,907,隨機光,發射光線進行攻擊。\n有時會和其他的頭合力發射雷射，\n讓招式威力變成２倍。
+23,10,908,火焰守護,用超高溫的體毛防住對手攻擊，\n同時讓碰觸到自己的對手灼傷。
+23,10,909,迅雷,可以搶先對手一步用電擊進行攻擊。\n若對手使用的不是攻擊招式則會失敗。
+23,10,910,強刃攻擊,用積蓄在頭部的光斬斷對手。\n可不顧對手的守護進行攻擊。
+23,10,911,迅子利刃,連續發射粒子的利刃，\n連續２次給予傷害。\n攻擊必定會命中。
+23,10,912,硬壓,用手臂或鉗子壓迫對手。\n對手現有的ＨＰ越多，\n招式的威力越大。
+23,10,913,龍聲鼓舞,以龍之鼓舞提高士氣。\n我方的招式會變得容易擊中要害。\n對龍屬性的鼓舞效果更強。
+23,10,914,魅誘之聲,用天使般的歌聲攻擊對手。\n讓此回合內能力提高的\n寶可夢陷入混亂狀態。
+23,10,915,豁出去,用自暴自棄的狠勁攻擊對手。\n如果上一回合的招式沒有命中，\n威力就會加倍。
+23,10,916,閃電強襲,讓身體帶電然後壓向對手。\n沒命中對手時自己會受到傷害。
+23,10,917,精神噪音,用令人不快的音波攻擊對手，\n使對手在２回合內變得無法透過\n招式、特性或攜帶的道具回復ＨＰ。
+23,10,918,快手還擊,察覺對手動作並以掌底攻擊來反應，\n讓對手畏縮。若對手使用的招式\n不是先制攻擊則會失敗。
+23,10,919,邪毒鎖鏈,用毒素形成的鎖鏈纏住對手，\n注入毒素加以侵蝕。\n有時會讓對手陷入劇毒狀態。
 23,10,10001,覺醒力量 (格斗),無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 23,10,10002,覺醒力量 (飞行),無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
 23,10,10003,覺醒力量 (毒),無法使用此招式。\n雖然忘記後將無法再想起來，\n但還是建議忘記此招式。
