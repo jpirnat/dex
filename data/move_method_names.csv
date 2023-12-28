@@ -8,6 +8,7 @@ language_id,move_method_id,name,description
 2,7,Form Change,Learned when the Pokémon changes to this form.
 2,8,Z-Move,Can be used when this Pokémon is holding a specific Z-Crystal.
 2,9,G-Max Move,Can be used when this Pokémon is Gigantamax.
+2,10,Move Reminder,Can be learned via Move Reminder.
 2,101,Shadow,Moves already known by Shadow Pokémon when they are captured.
 2,102,Purification,Learned by Shadow Pokémon in Colosseum and XD as they are purified.
 2,103,Other,The Pokémon learns this move in a unique way.
