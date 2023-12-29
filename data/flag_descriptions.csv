@@ -19,3 +19,25 @@ language_id,flag_id,name,description
 2,18,Ally Animation,This move's animation plays when it targets an ally.
 2,19,Dance,This move triggers Dancer.
 2,20,Metronome,This move can be called by Metronome.
+2,21,Cures Drowsy,This move cures drowsiness for the user and the target.
+2,22,Cures Frostbite,This move cures frostbite for the user and the target.
+2,23,fail-encore,The move Encore will fail if this move was used last by its target.
+2,24,fail-me-first,The move Me First will fail if this move was used last by its target.
+2,25,future-attack,This move triggers an attack in the future.
+2,26,pressure,"This move is affected by the ability Pressure, even if it doesn't target that Pokémon."
+2,27,combo,This move can be part of a combo.
+2,28,no-sleep-talk,This move cannot be selected by Sleep Talk.
+2,29,no-assist,This move cannot be selected by Assist.
+2,30,fail-copycat,The move Copycat will fail if this move was used last by its target.
+2,31,fail-mimic,The move Mimic will fail if this move was used last by its target.
+2,32,fail-instruct,The move Instruct will fail if this move was used last by its target.
+2,33,powder,"Grass-type Pokémon, Pokémon with the ability Overcoat, and Pokémon holding Safety Goggles are immune to this move."
+2,34,bite,This move's power is boosted by the ability Strong Jaw.
+2,35,bullet,This move has no effect on Pokémon with the ability Bulletproof.
+2,36,no-multi-hit,This move will not be duplicated by the ability Parental Bond.
+2,37,no-effectiveness,"This move will not display as ""super effective"" or ""not very effective."""
+2,38,sheer-force,This move's power is boosted by the ability Sheer Force regardless of having a traditional secondary effect.
+2,39,slicing,This move's power is boosted by the ability Sharpness.
+2,40,wind,This move activates the abilities Wind Rider and Wind Power.
+2,46,cant-use-twice,This move cannot be used twice in a row.
+2,47,no-sketch,The move Sketch will fail if this move was used last by its target.

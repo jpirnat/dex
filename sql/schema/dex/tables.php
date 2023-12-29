@@ -119,8 +119,8 @@ return [
 
 	// Move flags
 	'flags',
-	'version_group_flags',
 	'flag_descriptions',
+	'version_group_flags',
 	'move_flags',
 
 	// Stats
