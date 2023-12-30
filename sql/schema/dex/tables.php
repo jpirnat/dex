@@ -87,17 +87,27 @@ return [
 	],
 	'z_move_names',
 	'z_move_images',
-	'version_group_moves',
 
-	// Generation moves
+	// Version group moves
 	'qualities',
 	'inflictions',
 	'infliction_names',
 	'targets',
 	'target_names',
+	'affinities',
 	'z_power_effects',
 	'z_power_effect_names',
-	'generation_moves',
+	'vg_moves' => [
+		'vg_moves_01',
+		'vg_moves_02',
+		'vg_moves_03',
+		'vg_moves_04',
+		'vg_moves_05',
+		'vg_moves_06',
+		'vg_moves_07',
+		'vg_moves_08',
+		'vg_moves_09',
+	],
 
 	// Pokémon moves
 	'technical_machines',
