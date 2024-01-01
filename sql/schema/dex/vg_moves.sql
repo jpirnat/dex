@@ -13,23 +13,24 @@ create table if not exists `vg_moves`
 `priority` tinyint signed not null,
 `min_hits` tinyint unsigned not null,
 `max_hits` tinyint unsigned not null,
-`infliction_id` tinyint unsigned null, # nullable
+`infliction_id` tinyint unsigned not null,
 `infliction_percent` tinyint unsigned not null,
+`duration_id` tinyint unsigned null, # nullable
 `min_turns` tinyint unsigned not null,
 `max_turns` tinyint unsigned not null,
 `crit_stage` tinyint unsigned not null,
 `flinch_percent` tinyint unsigned not null,
-`effect` smallint unsigned null, # nullable
-`effect_percent` tinyint unsigned null, # nullable
+`effect` smallint unsigned not null,
 `recoil_percent` tinyint signed not null,
 `heal_percent` tinyint signed not null,
 `target_id` tinyint unsigned null, # nullable
 `affinity_id` tinyint unsigned null, # nullable
+`max_move_id` smallint unsigned null, # nullable
+`max_power` tinyint unsigned null, # nullable
 `z_move_id` smallint unsigned null, # nullable
 `z_base_power` tinyint unsigned null, # nullable
 `z_power_effect_id` tinyint unsigned null, # nullable
-`max_move_id` smallint unsigned null, # nullable
-`max_power` tinyint unsigned null, # nullable
+`effect_percent` tinyint unsigned null, # nullable
 
 primary key (
 	`version_group_id`,
