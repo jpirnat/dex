@@ -1,31 +1,31 @@
 language_id,category_id,name
+1,0,変化技
 1,1,物理技
 1,2,特殊技
-1,3,変化技
+2,0,Status
 2,1,Physical
 2,2,Special
-2,3,Status
+3,0,Statut
 3,1,Physique
 3,2,Spéciale
-3,3,Statut
+4,0,Status
 4,1,Physische
 4,2,Spezial
-4,3,Status
+5,0,Stato
 5,1,Fisica
 5,2,Speciale
-5,3,Stato
+6,0,Estado
 6,1,Físico
 6,2,Especial
-6,3,Estado
+7,0,변화 기술
 7,1,물리 기술
 7,2,특수 기술
-7,3,변화 기술
+8,0,変化技
 8,1,物理技
 8,2,特殊技
-8,3,変化技
+9,0,变化招式
 9,1,物理招式
 9,2,特殊招式
-9,3,变化招式
+10,0,變化招式
 10,1,物理招式
 10,2,特殊招式
-10,3,變化招式
