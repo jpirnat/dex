@@ -1,4 +1,5 @@
 language_id,infliction_id,name
+2,0,None
 2,1,Paralysis
 2,2,Sleep
 2,3,Freeze
@@ -17,6 +18,12 @@ language_id,infliction_id,name
 2,19,Embargo
 2,20,Perish Song
 2,21,Ingrain
-2,24,Silence
+2,24,Throat Chop
 2,42,Tar Shot
+2,46,Salt Cure
+2,47,Poison or Paralysis or Sleep
+2,48,Syrupy
 2,101,Other
+2,102,Drowsiness
+2,103,Frostbite
+2,104,Splinters

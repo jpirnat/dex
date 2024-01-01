@@ -92,6 +92,7 @@ return [
 	'qualities',
 	'inflictions',
 	'infliction_names',
+	'infliction_durations',
 	'targets',
 	'target_names',
 	'affinities',

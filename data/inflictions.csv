@@ -1,4 +1,5 @@
 id,identifier
+0,none
 1,paralysis
 2,sleep
 3,freeze
@@ -17,6 +18,12 @@ id,identifier
 19,embargo
 20,perish-song
 21,ingrain
-24,silence
+24,throat-chop
 42,tar-shot
+46,salt-cure
+47,poison-or-paralysis-or-sleep
+48,syrupy
 101,special
+102,drowsiness
+103,frostbite
+104,splinters
