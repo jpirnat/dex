@@ -1,6 +1,6 @@
 create table if not exists `move_stat_changes`
 (
-`generation_id` tinyint unsigned not null,
+`version_group_id` tinyint unsigned not null,
 `move_id` smallint unsigned not null,
 `stat_id` tinyint unsigned not null,
 
@@ -12,7 +12,7 @@ primary key (
 	`move_id`,
 	`stat_id`
 ),
-foreign key (`generation_id`) references `generations` (`id`)
+foreign key (`version_group_id`) references `version_groups` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`move_id`) references `moves` (`id`)
