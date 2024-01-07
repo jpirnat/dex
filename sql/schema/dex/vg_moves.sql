@@ -36,7 +36,7 @@ primary key (
 	`version_group_id`,
 	`move_id`
 ),
-foreign key (`version_group_id`) references `version_group_id` (`id`)
+foreign key (`version_group_id`) references `version_groups` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`move_id`) references `moves` (`id`)

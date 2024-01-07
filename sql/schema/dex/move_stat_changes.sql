@@ -8,7 +8,7 @@ create table if not exists `move_stat_changes`
 `percent` tinyint unsigned not null,
 
 primary key (
-	`generation_id`,
+	`version_group_id`,
 	`move_id`,
 	`stat_id`
 ),
