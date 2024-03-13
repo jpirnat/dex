@@ -111,6 +111,9 @@ return [
 		'vg_moves_08_la',
 		'vg_moves_09_sv',
 	],
+	'vg_moves_legends' => [
+		'vg_moves_legends_08_la',
+	],
 
 	// Pokémon moves
 	'technical_machines',
