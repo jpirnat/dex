@@ -4,16 +4,16 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Items;
 
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface ItemDescriptionRepositoryInterface
 {
 	/**
-	 * Get an item description by generation, language, and item.
+	 * Get an item description by version group, language, and item.
 	 */
-	public function getByGenerationAndLanguageAndItem(
-		GenerationId $generationId,
+	public function getByItem(
+		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
-		ItemId $itemId
+		ItemId $itemId,
 	) : ItemDescription;
 }

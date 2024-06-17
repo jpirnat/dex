@@ -4,16 +4,16 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Abilities;
 
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface AbilityDescriptionRepositoryInterface
 {
 	/**
-	 * Get an ability description by generation, language, and ability.
+	 * Get an ability description by version group, language, and ability.
 	 */
-	public function getByGenerationAndLanguageAndAbility(
-		GenerationId $generationId,
+	public function getByAbility(
+		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
-		AbilityId $abilityId
+		AbilityId $abilityId,
 	) : AbilityDescription;
 }

@@ -4,23 +4,23 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Moves;
 
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class MoveDescription
 {
 	public function __construct(
-		private GenerationId $generationId,
+		private VersionGroupId $versionGroupId,
 		private LanguageId $languageId,
 		private MoveId $moveId,
 		private string $description,
 	) {}
 
 	/**
-	 * Get the move description's generation.
+	 * Get the move description's version group id.
 	 */
-	public function getGenerationId() : GenerationId
+	public function getVersionGroupId() : VersionGroupId
 	{
-		return $this->generationId;
+		return $this->versionGroupId;
 	}
 
 	/**

@@ -4,23 +4,23 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Items;
 
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class ItemDescription
 {
 	public function __construct(
-		private GenerationId $generationId,
+		private VersionGroupId $versionGroupId,
 		private LanguageId $languageId,
 		private ItemId $itemId,
 		private string $description,
 	) {}
 
 	/**
-	 * Get the item description's generation id.
+	 * Get the item description's version group id.
 	 */
-	public function getGenerationId() : GenerationId
+	public function getVersionGroupId() : VersionGroupId
 	{
-		return $this->generationId;
+		return $this->versionGroupId;
 	}
 
 	/**

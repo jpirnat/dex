@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Items\ItemDescription;
 use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final class DatabaseItemDescriptionRepository implements ItemDescriptionRepositoryInterface
@@ -17,37 +17,37 @@ final class DatabaseItemDescriptionRepository implements ItemDescriptionReposito
 	) {}
 
 	/**
-	 * Get an item description by generation, language, and item.
+	 * Get an item description by version group, language, and item.
 	 */
-	public function getByGenerationAndLanguageAndItem(
-		GenerationId $generationId,
+	public function getByItem(
+		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
-		ItemId $itemId
+		ItemId $itemId,
 	) : ItemDescription {
 		$stmt = $this->db->prepare(
 			'SELECT
 				`description`
 			FROM `item_descriptions`
-			WHERE `generation_id` = :generation_id
+			WHERE `version_group_id` = :version_group_id
 				AND `language_id` = :language_id
 				AND `item_id` = :item_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			return new ItemDescription($generationId, $languageId, $itemId, '');
+			return new ItemDescription($versionGroupId, $languageId, $itemId, '');
 		}
 
 		$itemDescription = new ItemDescription(
-			$generationId,
+			$versionGroupId,
 			$languageId,
 			$itemId,
-			$result['description']
+			$result['description'],
 		);
 
 		return $itemDescription;
