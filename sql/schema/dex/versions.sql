@@ -5,6 +5,9 @@ create table if not exists `versions`
 
 `version_group_id` tinyint unsigned not null,
 `icon` varchar(21) not null,
+`abbreviation` varchar(3) not null,
+`background_color` varchar(7) not null,
+`text_color` varchar(5) not null,
 
 primary key (`id`),
 unique key (`identifier`),
