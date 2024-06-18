@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Moves\MoveId;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroupId;
@@ -92,5 +95,175 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 		);
 
 		return $versionGroup;
+	}
+
+	/**
+	 * Get version groups since this generation.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getSinceGeneration(GenerationId $generationId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`icon`,
+				`sort`
+			FROM `version_groups`
+			WHERE `generation_id` >= :generation_id
+			ORDER BY `sort`'
+		);
+		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['icon'],
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
+	 * Get version groups that have this Pokémon.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithPokemon(PokemonId $pokemonId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`icon`,
+				`sort`
+			FROM `version_groups`
+			WHERE `id` IN (
+				SELECT
+					`vgf`.`version_group_id`
+				FROM `version_group_forms` AS `vgf`
+				INNER JOIN `forms` AS `f`
+					ON `vgf`.`form_id` = `f`.`id`
+				WHERE `f`.`pokemon_id` = :pokemon_id
+			)
+			ORDER BY `sort`'
+		);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['icon'],
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
+	 * Get version groups that have this move.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithMove(MoveId $moveId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`icon`,
+				`sort`
+			FROM `version_groups`
+			WHERE `id` IN (
+				SELECT
+					`version_group_id`
+				FROM `vg_moves`
+				WHERE `move_id` = :move_id
+					AND `can_use_move` = 1
+			)
+			ORDER BY `sort`'
+		);
+		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['icon'],
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
+	 * Get version groups that have this ability.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithAbility(AbilityId $abilityId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`icon`,
+				`sort`
+			FROM `version_groups`
+			WHERE `id` IN (
+				SELECT
+					`version_group_id`
+				FROM `vg_abilities`
+				WHERE `ability_id` = :ability_id
+			)
+			ORDER BY `sort`'
+		);
+		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['icon'],
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
 	}
 }

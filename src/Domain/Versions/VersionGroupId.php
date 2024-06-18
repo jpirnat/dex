@@ -10,4 +10,5 @@ final class VersionGroupId extends EntityId
 	public const RED_GREEN = 1;
 	public const BLUE = 2;
 	public const RED_BLUE = 3;
+	public const YELLOW = 4;
 }

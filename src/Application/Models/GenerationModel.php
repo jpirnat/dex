@@ -8,7 +8,6 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
-use Jp\Dex\Domain\Versions\VersionGroupId;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 /**
@@ -28,16 +27,6 @@ final class GenerationModel
 		private VersionGroupRepositoryInterface $versionGroupRepository,
 	) {}
 
-
-	/**
-	 * Set the generation by its id.
-	 */
-	public function setById(GenerationId $generationId) : GenerationId
-	{
-		$this->generation = $this->generationRepository->getById($generationId);
-
-		return $this->generation->getId();
-	}
 
 	/**
 	 * Set the generation by its identifier.
@@ -73,18 +62,6 @@ final class GenerationModel
 	public function setGensSince(GenerationId $generationId) : void
 	{
 		$this->generations = $this->generationRepository->getSince($generationId);
-	}
-
-	/**
-	 * Set the navigable generations to all generations since the given version
-	 * group's generation.
-	 */
-	public function setGensSinceVg(VersionGroupId $versionGroupId) : void
-	{
-		$versionGroup = $this->versionGroupRepository->getById($versionGroupId);
-		$this->generations = $this->generationRepository->getSince(
-			$versionGroup->getGenerationId()
-		);
 	}
 
 
