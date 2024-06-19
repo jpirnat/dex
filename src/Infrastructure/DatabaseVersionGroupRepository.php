@@ -32,6 +32,7 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 				`identifier`,
 				`generation_id`,
 				`icon`,
+				`abbreviation`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` = :version_group_id
@@ -52,7 +53,8 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 			$result['identifier'],
 			new GenerationId($result['generation_id']),
 			$result['icon'],
-			$result['sort']
+			$result['abbreviation'],
+			$result['sort'],
 		);
 
 		return $versionGroup;
@@ -71,6 +73,7 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 				`id`,
 				`generation_id`,
 				`icon`,
+				`abbreviation`,
 				`sort`
 			FROM `version_groups`
 			WHERE `identifier` = :identifier
@@ -91,7 +94,8 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 			$identifier,
 			new GenerationId($result['generation_id']),
 			$result['icon'],
-			$result['sort']
+			$result['abbreviation'],
+			$result['sort'],
 		);
 
 		return $versionGroup;
@@ -110,6 +114,7 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 				`identifier`,
 				`generation_id`,
 				`icon`,
+				`abbreviation`,
 				`sort`
 			FROM `version_groups`
 			WHERE `generation_id` >= :generation_id
@@ -126,6 +131,7 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['icon'],
+				$result['abbreviation'],
 				$result['sort'],
 			);
 
@@ -148,6 +154,7 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 				`identifier`,
 				`generation_id`,
 				`icon`,
+				`abbreviation`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -171,6 +178,7 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['icon'],
+				$result['abbreviation'],
 				$result['sort'],
 			);
 
@@ -193,6 +201,7 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 				`identifier`,
 				`generation_id`,
 				`icon`,
+				`abbreviation`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -215,6 +224,7 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['icon'],
+				$result['abbreviation'],
 				$result['sort'],
 			);
 
@@ -237,6 +247,7 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 				`identifier`,
 				`generation_id`,
 				`icon`,
+				`abbreviation`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -258,6 +269,7 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['icon'],
+				$result['abbreviation'],
 				$result['sort'],
 			);
 

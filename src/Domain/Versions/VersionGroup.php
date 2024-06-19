@@ -10,6 +10,7 @@ final class VersionGroup
 		private string $identifier,
 		private GenerationId $generationId,
 		private string $icon,
+		private string $abbreviation,
 		private int $sort,
 	) {}
 
@@ -43,6 +44,14 @@ final class VersionGroup
 	public function getIcon() : string
 	{
 		return $this->icon;
+	}
+
+	/**
+	 * Get the version group's abbreviation.
+	 */
+	public function getAbbreviation() : string
+	{
+		return $this->abbreviation;
 	}
 
 	/**

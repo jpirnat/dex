@@ -10,9 +10,30 @@ use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\Generation;
+use Jp\Dex\Domain\Versions\VersionGroup;
 
 final class DexFormatter
 {
+	/**
+	 * Transform an array of generation objects into a renderable data array.
+	 * This will most commonly be used for the generation control.
+	 *
+	 * @param VersionGroup[] $versionGroups
+	 */
+	public function formatVersionGroups(array $versionGroups) : array
+	{
+		$g = [];
+
+		foreach ($versionGroups as $versionGroup) {
+			$g[] = [
+				'identifier' => $versionGroup->getIdentifier(),
+				'name' => $versionGroup->getAbbreviation(),
+			];
+		}
+
+		return $g;
+	}
+
 	/**
 	 * Transform an array of generation objects into a renderable data array.
 	 * This will most commonly be used for the generation control.
