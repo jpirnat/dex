@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface DexPokemonAbilityRepositoryInterface
 {
@@ -17,9 +17,9 @@ interface DexPokemonAbilityRepositoryInterface
 	 * @return DexPokemonAbility[] Ordered by Pokémon ability slot.
 	 */
 	public function getByPokemon(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 
 	/**
@@ -30,9 +30,9 @@ interface DexPokemonAbilityRepositoryInterface
 	 *     arrays indexed by ability id and ordered by Pokémon ability slot.
 	 */
 	public function getByPokemonAbility(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		AbilityId $abilityId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 
 	/**
@@ -43,21 +43,21 @@ interface DexPokemonAbilityRepositoryInterface
 	 *     arrays ordered by Pokémon ability slot.
 	 */
 	public function getByPokemonMove(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 
 	/**
-	 * Get all dex Pokémon abilities had by Pokémon in this generation.
+	 * Get all dex Pokémon abilities had by Pokémon in this version group.
 	 * This method is used to get data for the dex Pokémons page.
 	 *
 	 * @return DexPokemonAbility[][] Outer array indexed by Pokémon id. Inner
 	 *     arrays ordered by Pokémon ability slot.
 	 */
-	public function getByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array;
 
 	/**
@@ -68,8 +68,8 @@ interface DexPokemonAbilityRepositoryInterface
 	 *     arrays ordered by Pokémon ability slot.
 	 */
 	public function getByPokemonType(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		TypeId $typeId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 }

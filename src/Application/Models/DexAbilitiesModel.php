@@ -13,7 +13,7 @@ final class DexAbilitiesModel
 
 
 	public function __construct(
-		private GenerationModel $generationModel,
+		private VersionGroupModel $versionGroupModel,
 		private DexAbilityRepositoryInterface $dexAbilityRepository,
 	) {}
 
@@ -22,16 +22,16 @@ final class DexAbilitiesModel
 	 * Set data for the dex abilities page.
 	 */
 	public function setData(
-		string $generationIdentifier,
-		LanguageId $languageId
+		string $vgIdentifier,
+		LanguageId $languageId,
 	) : void {
-		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
+		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->generationModel->setGensSince(new GenerationId(3));
+		$this->versionGroupModel->setSinceGeneration(new GenerationId(3));
 
-		$this->abilities = $this->dexAbilityRepository->getByGeneration(
-			$generationId,
-			$languageId
+		$this->abilities = $this->dexAbilityRepository->getByVersionGroup(
+			$versionGroupId,
+			$languageId,
 		);
 	}
 
@@ -39,9 +39,9 @@ final class DexAbilitiesModel
 	/**
 	 * Get the generation model.
 	 */
-	public function getGenerationModel() : GenerationModel
+	public function getVersionGroupModel() : VersionGroupModel
 	{
-		return $this->generationModel;
+		return $this->versionGroupModel;
 	}
 
 	/**

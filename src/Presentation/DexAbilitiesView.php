@@ -19,9 +19,9 @@ final class DexAbilitiesView
 	 */
 	public function index() : ResponseInterface
 	{
-		$generationModel = $this->dexAbilitiesModel->getGenerationModel();
-		$generation = $generationModel->getGeneration();
-		$generations = $generationModel->getGenerations();
+		$versionGroupModel = $this->dexAbilitiesModel->getVersionGroupModel();
+		$versionGroup = $versionGroupModel->getVersionGroup();
+		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$abilities = $this->dexAbilitiesModel->getAbilities();
 
@@ -34,12 +34,12 @@ final class DexAbilitiesView
 
 		return new JsonResponse([
 			'data' => [
-				'generation' => [
-					'identifier' => $generation->getIdentifier(),
+				'versionGroup' => [
+					'identifier' => $versionGroup->getIdentifier(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
-				'generations' => $this->dexFormatter->formatGenerations($generations),
+				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'abilities' => $abilities,
 			]

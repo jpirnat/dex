@@ -5,19 +5,19 @@ namespace Jp\Dex\Domain\Abilities;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface DexAbilityRepositoryInterface
 {
 	/**
-	 * Get the dex abilities available in this generation. This method is used
-	 * to get data for the dex abilities page.
+	 * Get the dex abilities available in this version group. This method is
+	 * used to get data for the dex abilities page.
 	 *
 	 * @return array Ordered by ability name.
 	 */
-	public function getByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array;
 
 	/**
@@ -27,8 +27,8 @@ interface DexAbilityRepositoryInterface
 	 * @return array Ordered by slot.
 	 */
 	public function getByPokemon(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 }

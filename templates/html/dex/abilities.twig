@@ -10,14 +10,14 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="generation-control" v-if="generations.length">
+	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
-			<li v-for="g in generations">
-				<a :href="'/dex/' + g.identifier + '/abilities'"
+			<li v-for="vg in versionGroups">
+				<a :href="'/dex/' + vg.identifier + '/abilities'"
 					:class="{
-						'current': g.identifier === generation.identifier
+						'current': vg.identifier === versionGroup.identifier
 					}"
-				>{{ g.name }}</a>
+				>{{ vg.name }}</a>
 			</li>
 		</ul>
 	</div>
@@ -53,13 +53,13 @@
 			<tbody>
 				<tr v-for="ability in paginatedAbilities">
 					<th scope="row" class="dex-table__ability-name">
-						<a :href="'/dex/' + generation.identifier + '/abilities/' + ability.identifier">
+						<a :href="'/dex/' + versionGroup.identifier + '/abilities/' + ability.identifier">
 							{{ ability.name }}
 						</a>
 					</th>
 					<td class="dex-table__ability-description">{{ ability.description }}</td>
 					<td class="dex-table__ability-pokemon">
-						<a v-for="p in ability.pokemon" :href="'/dex/' + generation.identifier + '/pokemon/' + p.identifier">
+						<a v-for="p in ability.pokemon" :href="'/dex/' + versionGroup.identifier + '/pokemon/' + p.identifier">
 							<img :src="'/images/pokemon/icons/' + p.icon" :alt="p.name" v-tooltip="p.name">
 						</a>
 					</td>

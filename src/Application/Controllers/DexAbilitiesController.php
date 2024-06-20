@@ -21,9 +21,9 @@ final class DexAbilitiesController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$generationIdentifier = $request->getAttribute('generationIdentifier');
+		$vgIdentifier = $request->getAttribute('vgIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexAbilitiesModel->setData($generationIdentifier, $languageId);
+		$this->dexAbilitiesModel->setData($vgIdentifier, $languageId);
 	}
 }

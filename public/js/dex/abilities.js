@@ -6,9 +6,9 @@ const app = new Vue({
 		loading: true,
 		loaded: false,
 
-		generation: {},
+		versionGroup: {},
 		breadcrumbs: [],
-		generations: [],
+		versionGroups: [],
 		abilities: [],
 
 		filterName: '',
@@ -31,7 +31,7 @@ const app = new Vue({
 				filteredAbilities = filteredAbilities.filter(a => a.description.toLowerCase().includes(
 					this.filterDescription.toLowerCase()
 				));
-			};
+			}
 
 			return filteredAbilities;
 		},
@@ -54,9 +54,9 @@ const app = new Vue({
 
 			if (response.data) {
 				const data = response.data;
-				this.generation = data.generation;
+				this.versionGroup = data.versionGroup;
 				this.breadcrumbs = data.breadcrumbs;
-				this.generations = data.generations;
+				this.versionGroups = data.versionGroups;
 				this.abilities = data.abilities;
 			}
 		});
