@@ -11,6 +11,7 @@ final class DexNaturesView
 {
 	public function __construct(
 		private DexNaturesModel $dexNaturesModel,
+		private DexFormatter $dexFormatter,
 	) {}
 
 	/**
@@ -18,6 +19,10 @@ final class DexNaturesView
 	 */
 	public function index() : ResponseInterface
 	{
+		$versionGroupModel = $this->dexNaturesModel->getVersionGroupModel();
+		$versionGroup = $versionGroupModel->getVersionGroup();
+		$versionGroups = $versionGroupModel->getVersionGroups();
+
 		$natures = $this->dexNaturesModel->getNatures();
 
 		// Navigational breadcrumbs.
@@ -29,7 +34,12 @@ final class DexNaturesView
 
 		return new JsonResponse([
 			'data' => [
+				'versionGroup' => [
+					'identifier' => $versionGroup->getIdentifier(),
+				],
+
 				'breadcrumbs' => $breadcrumbs,
+				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'natures' => $natures,
 			]

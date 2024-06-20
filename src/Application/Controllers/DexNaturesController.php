@@ -21,9 +21,9 @@ final class DexNaturesController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$generationIdentifier = $request->getAttribute('generationIdentifier');
+		$vgIdentifier = $request->getAttribute('vgIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexNaturesModel->setData($generationIdentifier, $languageId);
+		$this->dexNaturesModel->setData($vgIdentifier, $languageId);
 	}
 }

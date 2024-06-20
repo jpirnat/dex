@@ -6,7 +6,9 @@ const app = new Vue({
 		loading: true,
 		loaded: false,
 
+		versionGroup: {},
 		breadcrumbs: [],
+		versionGroups: [],
 		natures: [],
 	},
 	created() {
@@ -22,7 +24,9 @@ const app = new Vue({
 
 			if (response.data) {
 				const data = response.data;
+				this.versionGroup = data.versionGroup;
 				this.breadcrumbs = data.breadcrumbs;
+				this.versionGroups = data.versionGroups;
 				this.natures = data.natures;
 			}
 		});

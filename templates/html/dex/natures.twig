@@ -5,6 +5,18 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
+	<div class="version-group-control" v-if="versionGroups.length">
+		<ul>
+			<li v-for="vg in versionGroups">
+				<a :href="'/dex/' + vg.identifier + '/natures'"
+					:class="{
+						'current': vg.identifier === versionGroup.identifier
+					}"
+				>{{ vg.name }}</a>
+			</li>
+		</ul>
+	</div>
+
 	<div v-if="!loaded" class="dex-loader-container">
 		<div class="dex-loader"></div>
 	</div>
