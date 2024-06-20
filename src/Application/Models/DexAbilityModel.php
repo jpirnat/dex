@@ -23,7 +23,7 @@ final class DexAbilityModel
 
 
 	public function __construct(
-		private GenerationModel $generationModel,
+		private VersionGroupModel $versionGroupModel,
 		private AbilityRepositoryInterface $abilityRepository,
 		private AbilityNameRepositoryInterface $abilityNameRepository,
 		private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
@@ -36,25 +36,26 @@ final class DexAbilityModel
 	 * Set data for the dex ability page.
 	 */
 	public function setData(
-		string $generationIdentifier,
+		string $vgIdentifier,
 		string $abilityIdentifier,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
-		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
+		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
+		$abilityId = $ability->getId();
 
-		$this->generationModel->setGensSinceVg($ability->getIntroducedInVersionGroupId());
+		$this->versionGroupModel->setWithAbility($abilityId);
 
 		$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
 			$languageId,
-			$ability->getId()
+			$abilityId,
 		);
 
-		$abilityDescription = $this->abilityDescriptionRepository->getByGenerationAndLanguageAndAbility(
-			$generationId,
+		$abilityDescription = $this->abilityDescriptionRepository->getByAbility(
+			$versionGroupId,
 			$languageId,
-			$ability->getId()
+			$abilityId,
 		);
 
 		$this->ability = [
@@ -64,13 +65,13 @@ final class DexAbilityModel
 		];
 
 		// Get stat name abbreviations.
-		$this->stats = $this->statNameModel->getByGeneration($generationId, $languageId);
+		$this->stats = $this->statNameModel->getByVersionGroup($versionGroupId, $languageId);
 
 		// Get Pokémon with this ability.
 		$pokemons = $this->dexPokemonRepository->getWithAbility(
-			$generationId,
+			$versionGroupId,
 			$ability->getId(),
-			$languageId
+			$languageId,
 		);
 		$this->normalPokemon = [];
 		$this->hiddenPokemon = [];
@@ -88,9 +89,9 @@ final class DexAbilityModel
 	/**
 	 * Get the generation model.
 	 */
-	public function getGenerationModel() : GenerationModel
+	public function getVersionGroupModel() : VersionGroupModel
 	{
-		return $this->generationModel;
+		return $this->versionGroupModel;
 	}
 
 	/**

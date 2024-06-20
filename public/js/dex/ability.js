@@ -6,9 +6,9 @@ const app = new Vue({
 		loading: true,
 		loaded: false,
 
-		generation: {},
+		versionGroup: {},
 		breadcrumbs: [],
-		generations: [],
+		versionGroups: [],
 		ability: {},
 		pokemons: [],
 		showAbilities: true,
@@ -27,9 +27,9 @@ const app = new Vue({
 
 			if (response.data) {
 				const data = response.data;
-				this.generation = data.generation;
+				this.versionGroup = data.versionGroup;
 				this.breadcrumbs = data.breadcrumbs;
-				this.generations = data.generations;
+				this.versionGroups = data.versionGroups;
 				this.ability = data.ability;
 				this.pokemons = data.pokemons;
 				this.showAbilities = data.showAbilities;

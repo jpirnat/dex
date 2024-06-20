@@ -87,7 +87,7 @@ final class StatsAbilityModel
 		);
 
 		// Get the ability description.
-		$this->abilityDescription = $this->abilityDescriptionRepository->getByGenerationAndLanguageAndAbility(
+		$this->abilityDescription = $this->abilityDescriptionRepository->getByAbility(
 			$this->format->getGenerationId(),
 			$languageId,
 			$ability->getId()

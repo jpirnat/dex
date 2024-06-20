@@ -10,14 +10,14 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="generation-control" v-if="generations.length">
+	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
-			<li v-for="g in generations">
-				<a :href="'/dex/' + g.identifier + '/abilities/' + ability.identifier"
+			<li v-for="vg in versionGroups">
+				<a :href="'/dex/' + vg.identifier + '/abilities/' + ability.identifier"
 					:class="{
-						'current': g.identifier === generation.identifier
+						'current': vg.identifier === versionGroup.identifier
 					}"
-				>{{ g.name }}</a>
+				>{{ vg.name }}</a>
 			</li>
 		</ul>
 	</div>
@@ -31,7 +31,7 @@
 
 		<dex-pokemons-table
 			:pokemons="pokemons"
-			:generation="generation"
+			:version-group="versionGroup"
 			:show-abilities="true"
 			:stats="stats"
 		></dex-pokemons-table>

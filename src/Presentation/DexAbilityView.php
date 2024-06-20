@@ -19,9 +19,9 @@ final class DexAbilityView
 	 */
 	public function index() : ResponseInterface
 	{
-		$generationModel = $this->dexAbilityModel->getGenerationModel();
-		$generation = $generationModel->getGeneration();
-		$generations = $generationModel->getGenerations();
+		$versionGroupModel = $this->dexAbilityModel->getVersionGroupModel();
+		$versionGroup = $versionGroupModel->getVersionGroup();
+		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$ability = $this->dexAbilityModel->getAbility();
 
@@ -33,11 +33,11 @@ final class DexAbilityView
 		$hiddenPokemon = $this->dexFormatter->formatDexPokemon($hiddenPokemon);
 
 		// Navigational breadcrumbs.
-		$generationIdentifier = $generation->getIdentifier();
+		$vgIdentifier = $versionGroup->getIdentifier();
 		$breadcrumbs = [[
 			'text' => 'Dex',
 		], [
-			'url' => "/dex/$generationIdentifier/abilities",
+			'url' => "/dex/$vgIdentifier/abilities",
 			'text' => 'Abilities',
 		], [
 			'text' => $ability['name'],
@@ -47,13 +47,13 @@ final class DexAbilityView
 			'data' => [
 				'title' => 'Porydex - Abilities - ' . $ability['name'],
 
-				'generation' => [
-					'id' => $generation->getId()->value(),
-					'identifier' => $generation->getIdentifier(),
+				'versionGroup' => [
+					'id' => $versionGroup->getId()->value(),
+					'identifier' => $versionGroup->getIdentifier(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
-				'generations' => $this->dexFormatter->formatGenerations($generations),
+				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'ability' => $ability,
 				'pokemons' => array_merge($normalPokemon, $hiddenPokemon),

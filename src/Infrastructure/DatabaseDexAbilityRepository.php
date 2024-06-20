@@ -6,7 +6,7 @@ namespace Jp\Dex\Infrastructure;
 use Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final class DatabaseDexAbilityRepository implements DexAbilityRepositoryInterface
@@ -16,16 +16,16 @@ final class DatabaseDexAbilityRepository implements DexAbilityRepositoryInterfac
 	) {}
 
 	/**
-	 * Get the dex abilities available in this generation. This method is used
-	 * to get data for the dex abilities page.
+	 * Get the dex abilities available in this version group. This method is
+	 * used to get data for the dex abilities page.
 	 *
 	 * @return array Ordered by ability name.
 	 */
-	public function getByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array {
-		// Get Pokémon grouped by ability for this generation.
+		// Get Pokémon grouped by ability for this version group.
 		$stmt = $this->db->prepare(
 			'SELECT
 				`pa`.`ability_id`,
@@ -36,17 +36,17 @@ final class DatabaseDexAbilityRepository implements DexAbilityRepositoryInterfac
 			INNER JOIN `pokemon` AS `p`
 				ON `pa`.`pokemon_id` = `p`.`id`
 			INNER JOIN `form_icons` AS `fi`
-				ON `pa`.`generation_id` = `fi`.`generation_id`
+				ON `pa`.`version_group_id` = `fi`.`version_group_id`
 				AND `pa`.`pokemon_id` = `fi`.`form_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `pa`.`pokemon_id` = `pn`.`pokemon_id`
-			WHERE `pa`.`generation_id` = :generation_id
+			WHERE `pa`.`version_group_id` = :version_group_id
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `p`.`sort`'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$abilityPokemon = $stmt->fetchAll(PDO::FETCH_ASSOC | PDO::FETCH_GROUP);
@@ -61,20 +61,20 @@ final class DatabaseDexAbilityRepository implements DexAbilityRepositoryInterfac
 			INNER JOIN `ability_names` AS `an`
 				ON `a`.`id` = `an`.`ability_id`
 			LEFT JOIN `ability_descriptions` AS `ad`
-				ON `ad`.`generation_id` = :generation_id1
+				ON `ad`.`version_group_id` = :version_group_id1
 				AND `an`.`language_id` = `ad`.`language_id`
 				AND `an`.`ability_id` = `ad`.`ability_id`
 			WHERE `a`.`id` IN (
 				SELECT
 					`ability_id`
 				FROM `pokemon_abilities`
-				WHERE `generation_id` = :generation_id2
+				WHERE `version_group_id` = :version_group_id2
 			)
 			AND `an`.`language_id` = :language_id
 			ORDER BY `name`'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -99,9 +99,9 @@ final class DatabaseDexAbilityRepository implements DexAbilityRepositoryInterfac
 	 * @return array Ordered by slot.
 	 */
 	public function getByPokemon(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -116,15 +116,15 @@ final class DatabaseDexAbilityRepository implements DexAbilityRepositoryInterfac
 			INNER JOIN `ability_names` AS `an`
 				ON `a`.`id` = `an`.`ability_id`
 			LEFT JOIN `ability_descriptions` AS `ad`
-				ON `pa`.`generation_id` = `ad`.`generation_id`
+				ON `pa`.`version_group_id` = `ad`.`version_group_id`
 				AND `an`.`language_id` = `ad`.`language_id`
 				AND `an`.`ability_id` = `ad`.`ability_id`
-			WHERE `pa`.`generation_id` = :generation_id
+			WHERE `pa`.`version_group_id` = :version_group_id
 				AND `pa`.`pokemon_id` = :pokemon_id
 				AND `an`.`language_id` = :language_id
 			ORDER BY `pa`.`slot`'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
