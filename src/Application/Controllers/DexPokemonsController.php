@@ -21,9 +21,9 @@ final class DexPokemonsController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$generationIdentifier = $request->getAttribute('generationIdentifier');
+		$vgIdentifier = $request->getAttribute('vgIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexPokemonsModel->setData($generationIdentifier, $languageId);
+		$this->dexPokemonsModel->setData($vgIdentifier, $languageId);
 	}
 }

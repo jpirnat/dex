@@ -173,17 +173,20 @@ a.button {
 
 /* Generation control */
 
-.generation-control {
+.generation-control,
+.version-group-control {
 	text-align: center;
 	margin: 10px 0;
 }
 
-.generation-control ul::before {
+.generation-control ul::before,
+.version-group-control ul::before {
 	content: "Generation:";
 	margin: 0 5px;
 }
 
-.generation-control ul {
+.generation-control ul,
+.version-group-control ul {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -192,28 +195,34 @@ a.button {
 	border-radius: 5px;
 }
 
-.generation-control li {
+.generation-control li,
+.version-group-control li {
 	display: inline;
 }
 
-.generation-control li+li::before {
+.generation-control li+li::before,
+.version-group-control li+li::before {
 	content: "/";
 	margin: 0 5px;
 }
 
-.generation-control a {
+.generation-control a,
+.version-group-control a {
 	display: inline-block;
 	padding: 5px;
 	color: black;
 	text-decoration: none;
 }
 
-.generation-control li:last-child a {
+.generation-control li:last-child a,
+.version-group-control li:last-child a {
 	border-radius: 0 5px 5px 0;
 }
 
 .generation-control a:hover,
-.generation-control .current {
+.generation-control .current,
+.version-group-control a:hover,
+.version-group-control .current {
 	background: black;
 	color: white;
 }

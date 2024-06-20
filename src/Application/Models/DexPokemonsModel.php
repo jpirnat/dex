@@ -17,7 +17,7 @@ final class DexPokemonsModel
 
 
 	public function __construct(
-		private GenerationModel $generationModel,
+		private VersionGroupModel $versionGroupModel,
 		private DexPokemonRepositoryInterface $dexPokemonRepository,
 		private StatNameModel $statNameModel,
 	) {}
@@ -27,29 +27,29 @@ final class DexPokemonsModel
 	 * Set data for the dex Pokémons page.
 	 */
 	public function setData(
-		string $generationIdentifier,
+		string $vgIdentifier,
 		LanguageId $languageId
 	) : void {
-		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
+		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->generationModel->setGensSince(new GenerationId(1));
+		$this->versionGroupModel->setSinceGeneration(new GenerationId(1));
 
 		// Get stat name abbreviations.
-		$this->stats = $this->statNameModel->getByGeneration($generationId, $languageId);
+		$this->stats = $this->statNameModel->getByVersionGroup($versionGroupId, $languageId);
 
-		$this->pokemon = $this->dexPokemonRepository->getByGeneration(
-			$generationId,
-			$languageId
+		$this->pokemon = $this->dexPokemonRepository->getByVersionGroup(
+			$versionGroupId,
+			$languageId,
 		);
 	}
 
 
 	/**
-	 * Get the generation model.
+	 * Get the version group model.
 	 */
-	public function getGenerationModel() : GenerationModel
+	public function getVersionGroupModel() : VersionGroupModel
 	{
-		return $this->generationModel;
+		return $this->versionGroupModel;
 	}
 
 	/**

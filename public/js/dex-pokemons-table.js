@@ -6,7 +6,7 @@ Vue.component('dex-pokemons-table', {
 			type: Array,
 			default: [],
 		},
-		generation: {
+		versionGroup: {
 			type: Object,
 			default: {},
 		},
@@ -109,13 +109,13 @@ Vue.component('dex-pokemons-table', {
 							<img :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
 						</td>
 						<td class="dex-table__pokemon-name">
-							<a :href="'/dex/' + generation.identifier + '/pokemon/' + pokemon.identifier">
+							<a :href="'/dex/' + versionGroup.identifier + '/pokemon/' + pokemon.identifier">
 								{{ pokemon.name }}
 							</a>
 						</td>
 						<td class="dex-table__pokemon-types">
 							<a v-for="type in pokemon.types" :key="type.identifier"
-								:href="'/dex/' + generation.identifier + '/types/' + type.identifier"
+								:href="'/dex/' + versionGroup.identifier + '/types/' + type.identifier"
 							>
 								<img :src="'/images/types/' + type.icon" :alt="type.name">
 							</a>
@@ -123,7 +123,7 @@ Vue.component('dex-pokemons-table', {
 						<td v-if="showAbilities">
 							<div class="dex-table__pokemon-abilities">
 								<a v-for="ability in pokemon.abilities" :key="ability.identifier"
-									:href="'/dex/' + generation.identifier + '/abilities/' + ability.identifier"
+									:href="'/dex/' + versionGroup.identifier + '/abilities/' + ability.identifier"
 									class="dex-table__pokemon-ability"
 									:class="{
 										'dex-table__pokemon-ability--hidden': ability.isHiddenAbility,

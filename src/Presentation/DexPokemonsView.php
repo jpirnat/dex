@@ -19,11 +19,11 @@ final class DexPokemonsView
 	 */
 	public function index() : ResponseInterface
 	{
-		$generationModel = $this->dexPokemonsModel->getGenerationModel();
-		$generation = $generationModel->getGeneration();
-		$generations = $generationModel->getGenerations();
+		$versionGroupModel = $this->dexPokemonsModel->getVersionGroupModel();
+		$versionGroup = $versionGroupModel->getVersionGroup();
+		$versionGroups = $versionGroupModel->getVersionGroups();
 
-		$showAbilities = $generation->getId()->value() >= 3;
+		$showAbilities = $versionGroup->getId()->hasAbilities();
 		$stats = $this->dexPokemonsModel->getStats();
 		$pokemon = $this->dexPokemonsModel->getPokemon();
 
@@ -36,12 +36,12 @@ final class DexPokemonsView
 
 		return new JsonResponse([
 			'data' => [
-				'generation' => [
-					'identifier' => $generation->getIdentifier(),
+				'versionGroup' => [
+					'identifier' => $versionGroup->getIdentifier(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
-				'generations' => $this->dexFormatter->formatGenerations($generations),
+				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'pokemons' => $this->dexFormatter->formatDexPokemon($pokemon),
 				'showAbilities' => $showAbilities,
