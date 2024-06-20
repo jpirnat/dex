@@ -7,9 +7,9 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\Inflictions\InflictionId;
 use Jp\Dex\Domain\Moves\Targets\TargetId;
 use Jp\Dex\Domain\Moves\ZPowerEffects\ZPowerEffectId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
-interface GenerationMoveRepositoryInterface
+interface VgMoveRepositoryInterface
 {
 	/**
 	 * Get the Z-Move image.
@@ -17,15 +17,15 @@ interface GenerationMoveRepositoryInterface
 	public function getZMoveImage(MoveId $moveId, LanguageId $languageId) : string;
 
 	/**
-	 * Get a generation move by its generation and move.
+	 * Get a version group move by its version group and move.
 	 *
-	 * @throws GenerationMoveNotFoundException if no generation move exists with
-	 *     this generation and move.
+	 * @throws VgMoveNotFoundException if no version group move exists with this
+	 *     version group and move.
 	 */
-	public function getByGenerationAndMove(
-		GenerationId $generationId,
-		MoveId $moveId
-	) : GenerationMove;
+	public function getByVgAndMove(
+		VersionGroupId $versionGroupId,
+		MoveId $moveId,
+	) : VgMove;
 
 	/**
 	 * Get the infliction.
@@ -56,8 +56,8 @@ interface GenerationMoveRepositoryInterface
 	 * Get the move's stat changes.
 	 */
 	public function getStatChanges(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 }

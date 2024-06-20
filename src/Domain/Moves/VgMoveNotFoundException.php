@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Moves;
 
 use Exception;
 
-final class GenerationMoveNotFoundException extends Exception
+final class VgMoveNotFoundException extends Exception
 {
 }

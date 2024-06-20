@@ -199,10 +199,6 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseFormIconRepository::class
 );
 $services->alias(
-	\Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface::class,
-	\Jp\Dex\Infrastructure\DatabaseGenerationMoveRepository::class
-);
-$services->alias(
 	\Jp\Dex\Domain\Versions\GenerationRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseGenerationRepository::class
 );
@@ -469,6 +465,10 @@ $services->alias(
 $services->alias(
 	\Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseVersionGroupRepository::class
+);
+$services->alias(
+	\Jp\Dex\Domain\Moves\VgMoveRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseVgMoveRepository::class
 );
 
 };

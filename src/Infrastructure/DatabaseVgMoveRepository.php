@@ -5,19 +5,19 @@ namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Categories\CategoryId;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Moves\GenerationMove;
-use Jp\Dex\Domain\Moves\GenerationMoveNotFoundException;
-use Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\Inflictions\InflictionId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\Qualities\QualityId;
 use Jp\Dex\Domain\Moves\Targets\TargetId;
+use Jp\Dex\Domain\Moves\VgMove;
+use Jp\Dex\Domain\Moves\VgMoveNotFoundException;
+use Jp\Dex\Domain\Moves\VgMoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\ZPowerEffects\ZPowerEffectId;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseGenerationMoveRepository implements GenerationMoveRepositoryInterface
+final class DatabaseVgMoveRepository implements VgMoveRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -42,15 +42,15 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 	}
 
 	/**
-	 * Get a generation move by its generation and move.
+	 * Get a version group move by its version group and move.
 	 *
-	 * @throws GenerationMoveNotFoundException if no generation move exists with
-	 *     this generation and move.
+	 * @throws VgMoveNotFoundException if no version group move exists with this
+	 *     version group and move.
 	 */
-	public function getByGenerationAndMove(
-		GenerationId $generationId,
-		MoveId $moveId
-	) : GenerationMove {
+	public function getByVgAndMove(
+		VersionGroupId $versionGroupId,
+		MoveId $moveId,
+	) : VgMove {
 		$stmt = $this->db->prepare(
 			'SELECT
 				`type_id`,
@@ -78,20 +78,20 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 				`z_power_effect_id`,
 				`max_move_id`,
 				`max_power`
-			FROM `generation_moves`
-			WHERE `generation_id` = :generation_id
+			FROM `vg_moves`
+			WHERE `version_group_id` = :version_group_id
 				AND `move_id` = :move_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			throw new GenerationMoveNotFoundException(
-				'No generation move exists with generation id '
-				. $generationId->value() . ' and move id ' . $moveId->value()
+			throw new VgMoveNotFoundException(
+				'No version group move exists with version group id '
+				. $versionGroupId->value() . ' and move id ' . $moveId->value()
 				. '.'
 			);
 		}
@@ -112,8 +112,8 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 			? new MoveId($result['max_move_id'])
 			: null;
 
-		$generationMove = new GenerationMove(
-			$generationId,
+		return new VgMove(
+			$versionGroupId,
 			$moveId,
 			new TypeId($result['type_id']),
 			$qualityId,
@@ -141,8 +141,6 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 			$maxMoveId,
 			$result['max_power']
 		);
-
-		return $generationMove;
 	}
 
 	/**
@@ -263,9 +261,9 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 	 * Get the move's stat changes.
 	 */
 	public function getStatChanges(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -275,11 +273,11 @@ final class DatabaseGenerationMoveRepository implements GenerationMoveRepository
 			FROM `move_stat_changes` AS `msc`
 			INNER JOIN `stat_names` AS `sn`
 				ON `msc`.`stat_id` = `sn`.`stat_id`
-			WHERE `msc`.`generation_id` = :generation_id
+			WHERE `msc`.`version_group_id` = :version_group_id
 				AND `msc`.`move_id` = :move_id
 				AND `sn`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();

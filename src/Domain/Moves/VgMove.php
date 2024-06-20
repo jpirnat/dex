@@ -9,12 +9,12 @@ use Jp\Dex\Domain\Moves\Qualities\QualityId;
 use Jp\Dex\Domain\Moves\Targets\TargetId;
 use Jp\Dex\Domain\Moves\ZPowerEffects\ZPowerEffectId;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class GenerationMove
+final class VgMove
 {
 	public function __construct(
-		private GenerationId $generationId,
+		private VersionGroupId $versionGroupId,
 		private MoveId $moveId,
 		private TypeId $typeId,
 		private ?QualityId $qualityId,
@@ -44,15 +44,15 @@ final class GenerationMove
 	) {}
 
 	/**
-	 * Get the generation move's generation id.
+	 * Get the version group move's version group id.
 	 */
-	public function getGenerationId() : GenerationId
+	public function getVersionGroupId() : VersionGroupId
 	{
-		return $this->generationId;
+		return $this->versionGroupId;
 	}
 
 	/**
-	 * Get the generation move's move id.
+	 * Get the version group move's move id.
 	 */
 	public function getMoveId() : MoveId
 	{
@@ -60,7 +60,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's type id.
+	 * Get the version group move's type id.
 	 */
 	public function getTypeId() : TypeId
 	{
@@ -68,7 +68,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's quality id. This value only exists for
+	 * Get the version group move's quality id. This value only exists for
 	 * generations 5 and above.
 	 */
 	public function getQualityId() : ?QualityId
@@ -77,7 +77,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's category id.
+	 * Get the version group move's category id.
 	 */
 	public function getCategoryId() : CategoryId
 	{
@@ -85,7 +85,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's power.
+	 * Get the version group move's power.
 	 */
 	public function getPower() : int
 	{
@@ -93,7 +93,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's accuracy.
+	 * Get the version group move's accuracy.
 	 */
 	public function getAccuracy() : int
 	{
@@ -101,7 +101,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's PP.
+	 * Get the version group move's PP.
 	 */
 	public function getPP() : int
 	{
@@ -109,7 +109,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's priority.
+	 * Get the version group move's priority.
 	 */
 	public function getPriority() : int
 	{
@@ -117,8 +117,8 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's minimum number of hits (for moves like Double
-	 * Slap and Water Shuriken).
+	 * Get the version group move's minimum number of hits (for moves like
+	 * Double Slap and Water Shuriken).
 	 */
 	public function getMinHits() : int
 	{
@@ -126,8 +126,8 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's maximum number of hits (for moves like Double
-	 * Slap and Water Shuriken).
+	 * Get the version group move's maximum number of hits (for moves like
+	 * Double Slap and Water Shuriken).
 	 */
 	public function getMaxHits() : int
 	{
@@ -135,7 +135,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's infliction id.
+	 * Get the version group move's infliction id.
 	 */
 	public function getInflictionId() : ?InflictionId
 	{
@@ -143,8 +143,8 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's infliction percent, the percent chance that the
-	 * move will cause its infliction on the target.
+	 * Get the version group move's infliction percent, the percent chance that
+	 * the move will cause its infliction on the target.
 	 */
 	public function getInflictionPercent() : int
 	{
@@ -152,7 +152,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's minimum number of turns for which the effect
+	 * Get the version group move's minimum number of turns for which the effect
 	 * might last (for moves like Fire Spin and Spore).
 	 */
 	public function getMinTurns() : int
@@ -161,7 +161,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's maximum number of turns for which the effect
+	 * Get the version group move's maximum number of turns for which the effect
 	 * might last (for moves like Fire Spin and Spore).
 	 */
 	public function getMaxTurns() : int
@@ -170,7 +170,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's critical hit stage.
+	 * Get the version group move's critical hit stage.
 	 */
 	public function getCritStage() : int
 	{
@@ -178,7 +178,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's flinch percent, the percent chance that the
+	 * Get the version group move's flinch percent, the percent chance that the
 	 * move has of causing the target to flinch.
 	 */
 	public function getFlinchPercent() : int
@@ -187,7 +187,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's effect id.
+	 * Get the version group move's effect id.
 	 */
 	public function getEffect() : int
 	{
@@ -195,7 +195,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's effect percent. This value only exists for
+	 * Get the version group move's effect percent. This value only exists for
 	 * generations 2 through 4.
 	 */
 	public function getEffectPercent() : ?int
@@ -204,10 +204,10 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's recoil percent, the percent of inflicted damage
-	 * that the user takes back as recoil. Negative for actual recoil moves like
-	 * Double Edge. Positive for moves like Giga Drain, for which the user
-	 * recovers a percent of the inflicted damage.
+	 * Get the version group move's recoil percent, the percent of inflicted
+	 * damage that the user takes back as recoil. Negative for actual recoil
+	 * moves like Double Edge. Positive for moves like Giga Drain, for which the
+	 * user recovers a percent of the inflicted damage.
 	 */
 	public function getRecoilPercent() : int
 	{
@@ -215,9 +215,9 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's heal percent, the percent of HP which the user
-	 * heals upon using a move like Recover. Negative for Struggle, which does
-	 * a fixed percent recoil to the user since generation 4.
+	 * Get the version group move's heal percent, the percent of HP which the
+	 * user heals upon using a move like Recover. Negative for Struggle, which
+	 * does a fixed percent recoil to the user since generation 4.
 	 */
 	public function getHealPercent() : int
 	{
@@ -225,7 +225,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's target id.
+	 * Get the version group move's target id.
 	 */
 	public function getTargetId() : TargetId
 	{
@@ -233,7 +233,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's Z-Move id.
+	 * Get the version group move's Z-Move id.
 	 */
 	public function getZMoveId() : ?MoveId
 	{
@@ -241,7 +241,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's Z-Move's base power.
+	 * Get the version group move's Z-Move's base power.
 	 */
 	public function getZBasePower() : ?int
 	{
@@ -249,7 +249,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's Z-Move's Z-Power Effect id.
+	 * Get the version group move's Z-Move's Z-Power Effect id.
 	 */
 	public function getZPowerEffectId() : ?ZPowerEffectId
 	{
@@ -257,7 +257,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's Max Move id.
+	 * Get the version group move's Max Move id.
 	 */
 	public function getMaxMoveId() : ?MoveId
 	{
@@ -265,7 +265,7 @@ final class GenerationMove
 	}
 
 	/**
-	 * Get the generation move's Max Move's base power.
+	 * Get the version group move's Max Move's base power.
 	 */
 	public function getMaxPower() : ?int
 	{
