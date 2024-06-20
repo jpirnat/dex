@@ -12,6 +12,7 @@ use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Types\TypeNotFoundException;
 use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
@@ -27,7 +28,7 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	 */
 	public function getById(
 		TypeId $typeId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : DexType {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -54,14 +55,12 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 			);
 		}
 
-		$dexType = new DexType(
+		return new DexType(
 			$typeId,
 			$result['identifier'],
 			$result['icon'],
-			$result['name']
+			$result['name'],
 		);
-
-		return $dexType;
 	}
 
 	/**
@@ -72,7 +71,7 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	public function getByPokemon(
 		GenerationId $generationId,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -105,7 +104,7 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 				new TypeId($result['id']),
 				$result['identifier'],
 				$result['icon'],
-				$result['name']
+				$result['name'],
 			);
 
 			$dexTypes[] = $dexType;
@@ -115,13 +114,13 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	}
 
 	/**
-	 * Get the main dex types available in this generation.
+	 * Get the main dex types available in this version group.
 	 *
 	 * @return DexType[] Indexed by type id.
 	 */
-	public function getMainByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getMainByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -130,16 +129,18 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 				`ti`.`icon`,
 				`tn`.`name`
 			FROM `types` AS `t`
+			INNER JOIN `vg_types` AS `vgt`
+				ON `t`.`id` = `vgt`.`type_id`
 			INNER JOIN `type_icons` AS `ti`
 				ON `t`.`id` = `ti`.`type_id`
 			INNER JOIN `type_names` AS `tn`
 				ON `t`.`id` = `tn`.`type_id`
 				AND `ti`.`language_id` = `tn`.`language_id`
-			WHERE `t`.`id` < 100
-				AND `t`.`introduced_in_generation_id` <= :generation_id
+			WHERE `t`.`id` < 18
+				AND `vgt`.`version_group_id` = :version_group_id
 				AND `ti`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -150,7 +151,7 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 				new TypeId($result['id']),
 				$result['identifier'],
 				$result['icon'],
-				$result['name']
+				$result['name'],
 			);
 
 			$dexTypes[$result['id']] = $dexType;
@@ -160,13 +161,13 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	}
 
 	/**
-	 * Get all dex types available in this generation.
+	 * Get all dex types available in this version group.
 	 *
 	 * @return DexType[] Indexed by type id.
 	 */
-	public function getByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -175,15 +176,17 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 				`ti`.`icon`,
 				`tn`.`name`
 			FROM `types` AS `t`
+			INNER JOIN `vg_types` AS `vgt`
+				ON `t`.`id` = `vgt`.`type_id`
 			INNER JOIN `type_icons` AS `ti`
 				ON `t`.`id` = `ti`.`type_id`
 			INNER JOIN `type_names` AS `tn`
 				ON `t`.`id` = `tn`.`type_id`
 				AND `ti`.`language_id` = `tn`.`language_id`
-			WHERE `t`.`introduced_in_generation_id` <= :generation_id
+			WHERE `vgt`.`version_group_id` = :version_group_id
 				AND `ti`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -194,7 +197,7 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 				new TypeId($result['id']),
 				$result['identifier'],
 				$result['icon'],
-				$result['name']
+				$result['name'],
 			);
 
 			$dexTypes[$result['id']] = $dexType;
@@ -211,29 +214,29 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	 *     ordered by Pokémon type slot.
 	 */
 	public function getByPokemonAbility(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		AbilityId $abilityId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
-		$dexTypes = $this->getByGeneration($generationId, $languageId);
+		$dexTypes = $this->getByVersionGroup($versionGroupId, $languageId);
 
 		$stmt = $this->db->prepare(
 			'SELECT
 				`pokemon_id`,
 				`type_id`
 			FROM `pokemon_types`
-			WHERE `generation_id` = :generation_id1
+			WHERE `version_group_id` = :version_group_id1
 				AND `pokemon_id` IN (
 					SELECT
 						`pokemon_id`
 					FROM `pokemon_abilities`
-					WHERE `generation_id` = :generation_id2
+					WHERE `version_group_id` = :version_group_id2
 						AND `ability_id` = :ability_id
 				)
 			ORDER BY `slot`'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -254,31 +257,29 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	 *     ordered by Pokémon type slot.
 	 */
 	public function getByPokemonMove(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
-		$dexTypes = $this->getByGeneration($generationId, $languageId);
+		$dexTypes = $this->getByVersionGroup($versionGroupId, $languageId);
 
 		$stmt = $this->db->prepare(
 			'SELECT
 				`pokemon_id`,
 				`type_id`
 			FROM `pokemon_types`
-			WHERE `generation_id` = :generation_id1
+			WHERE `version_group_id` = :version_group_id1
 				AND `pokemon_id` IN (
 					SELECT
-						`pm`.`pokemon_id`
-					FROM `pokemon_moves` AS `pm`
-					INNER JOIN `version_groups` AS `vg`
-						ON `pm`.`version_group_id` = `vg`.`id`
-					WHERE `pm`.`move_id` = :move_id
-						AND `vg`.`generation_id` <= :generation_id2
+						`pokemon_id`
+					FROM `pokemon_moves`
+					WHERE `move_id` = :move_id
+						AND `version_group_id` <= :version_group_id2
 				)
 			ORDER BY `slot`'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -292,27 +293,27 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	}
 
 	/**
-	 * Get all dex types had by Pokémon in this generation.
+	 * Get all dex types had by Pokémon in this version group.
 	 * This method is used to get data for the dex Pokémons page.
 	 *
 	 * @return DexType[][] Outer array indexed by Pokémon id. Inner arrays
 	 *     ordered by Pokémon type slot.
 	 */
-	public function getByPokemonGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByPokemonVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array {
-		$dexTypes = $this->getByGeneration($generationId, $languageId);
+		$dexTypes = $this->getByVersionGroup($versionGroupId, $languageId);
 
 		$stmt = $this->db->prepare(
 			'SELECT
 				`pokemon_id`,
 				`type_id`
 			FROM `pokemon_types`
-			WHERE `generation_id` = :generation_id
+			WHERE `version_group_id` = :version_group_id
 			ORDER BY `slot`'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$pokemonTypes = [];

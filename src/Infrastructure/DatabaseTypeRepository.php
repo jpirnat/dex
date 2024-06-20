@@ -49,16 +49,14 @@ final class DatabaseTypeRepository implements TypeRepositoryInterface
 			? new CategoryId($result['category_id'])
 			: null;
 
-		$type = new Type(
+		return new Type(
 			$typeId,
 			$result['identifier'],
 			new GenerationId($result['introduced_in_generation_id']),
 			$categoryId,
 			$result['hidden_power_index'],
-			$result['color_code']
+			$result['color_code'],
 		);
-
-		return $type;
 	}
 
 	/**
@@ -93,16 +91,14 @@ final class DatabaseTypeRepository implements TypeRepositoryInterface
 			? new CategoryId($result['category_id'])
 			: null;
 
-		$type = new Type(
+		return new Type(
 			new TypeId($result['id']),
 			$identifier,
 			new GenerationId($result['introduced_in_generation_id']),
 			$categoryId,
 			$result['hidden_power_index'],
-			$result['color_code']
+			$result['color_code'],
 		);
-
-		return $type;
 	}
 
 	/**
@@ -130,7 +126,7 @@ final class DatabaseTypeRepository implements TypeRepositoryInterface
 
 		if (!$result) {
 			throw new TypeNotFoundException(
-				'No type exists with hidden power index ' . $hiddenPowerIndex
+				"No type exists with hidden power index $hiddenPowerIndex."
 			);
 		}
 
@@ -138,15 +134,13 @@ final class DatabaseTypeRepository implements TypeRepositoryInterface
 			? new CategoryId($result['category_id'])
 			: null;
 
-		$type = new Type(
+		return new Type(
 			new TypeId($result['id']),
 			$result['identifier'],
 			new GenerationId($result['introduced_in_generation_id']),
 			$categoryId,
 			$hiddenPowerIndex,
-			$result['color_code']
+			$result['color_code'],
 		);
-
-		return $type;
 	}
 }

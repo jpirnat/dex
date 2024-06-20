@@ -70,6 +70,7 @@ return [
 	'category_names',
 	'types',
 	'type_names',
+	'vg_types',
 	'type_icons',
 	'type_matchups',
 	'pokemon_types',

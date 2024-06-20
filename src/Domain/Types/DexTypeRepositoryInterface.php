@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface DexTypeRepositoryInterface
 {
@@ -18,7 +19,7 @@ interface DexTypeRepositoryInterface
 	 */
 	public function getById(
 		TypeId $typeId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : DexType;
 
 	/**
@@ -29,27 +30,27 @@ interface DexTypeRepositoryInterface
 	public function getByPokemon(
 		GenerationId $generationId,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 
 	/**
-	 * Get the main dex types available in this generation.
+	 * Get the main dex types available in this version group.
 	 *
 	 * @return DexType[] Indexed by type id.
 	 */
-	public function getMainByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getMainByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array;
 
 	/**
-	 * Get all dex types available in this generation.
+	 * Get all dex types available in this version group.
 	 *
 	 * @return DexType[] Indexed by type id.
 	 */
-	public function getByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array;
 
 	/**
@@ -60,9 +61,9 @@ interface DexTypeRepositoryInterface
 	 *     ordered by Pokémon type slot.
 	 */
 	public function getByPokemonAbility(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		AbilityId $abilityId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 
 	/**
@@ -73,21 +74,21 @@ interface DexTypeRepositoryInterface
 	 *     ordered by Pokémon type slot.
 	 */
 	public function getByPokemonMove(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 
 	/**
-	 * Get all dex types had by Pokémon in this generation.
+	 * Get all dex types had by Pokémon in this version group.
 	 * This method is used to get data for the dex Pokémons page.
 	 *
 	 * @return DexType[][] Outer array indexed by Pokémon id. Inner arrays
 	 *     ordered by Pokémon type slot.
 	 */
-	public function getByPokemonGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByPokemonVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array;
 
 	/**
