@@ -10,14 +10,14 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="generation-control" v-if="generations.length">
+	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
-			<li v-for="g in generations">
-				<a :href="'/dex/' + g.identifier + '/types/' + type.identifier"
+			<li v-for="vg in versionGroups">
+				<a :href="'/dex/' + vg.identifier + '/types/' + type.identifier"
 					:class="{
-						'current': g.identifier === generation.identifier
+						'current': vg.identifier === versionGroup.identifier
 					}"
-				>{{ g.name }}</a>
+				>{{ vg.name }}</a>
 			</li>
 		</ul>
 	</div>
@@ -38,7 +38,7 @@
 					@mouseover="onDamageDealtHover(damageDealt[t.identifier])"
 					@mouseleave="onDamageDealtUnhover"
 				>
-					<a :href="'/dex/' + generation.identifier + '/types/' + t.identifier">
+					<a :href="'/dex/' + versionGroup.identifier + '/types/' + t.identifier">
 						<img :src="'/images/types/' + t.icon" :alt="t.name">
 					</a>
 					<span :class="{
@@ -62,7 +62,7 @@
 					@mouseover="onDamageTakenHover(damageTaken[t.identifier])"
 					@mouseleave="onDamageTakenUnhover"
 				>
-					<a :href="'/dex/' + generation.identifier + '/types/' + t.identifier">
+					<a :href="'/dex/' + versionGroup.identifier + '/types/' + t.identifier">
 						<img :src="'/images/types/' + t.icon" :alt="t.name">
 					</a>
 					<span :class="{
@@ -82,7 +82,7 @@
 		<h2 class="dex-section__title">Pokémon</h2>
 		<dex-pokemons-table
 			:pokemons="pokemons"
-			:generation="generation"
+			:version-group="versionGroup"
 			:show-abilities="true"
 			:stats="stats"
 		></dex-pokemons-table>
@@ -90,7 +90,7 @@
 		<h2 class="dex-section__title">Moves</h2>
 		<dex-moves-table
 			:moves="moves"
-			:generation="generation"
+			:version-group="versionGroup"
 			:show-descriptions="showMoveDescriptions"
 		></dex-moves-table>
 	</template>

@@ -19,9 +19,9 @@ final class DexTypeView
 	 */
 	public function index() : ResponseInterface
 	{
-		$generationModel = $this->dexTypeModel->getGenerationModel();
-		$generation = $generationModel->getGeneration();
-		$generations = $generationModel->getGenerations();
+		$versionGroupModel = $this->dexTypeModel->getVersionGroupModel();
+		$versionGroup = $versionGroupModel->getVersionGroup();
+		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$type = $this->dexTypeModel->getType();
 		$types = $this->dexTypeModel->getTypes();
@@ -30,21 +30,21 @@ final class DexTypeView
 		$damageTaken = $this->dexTypeModel->getDamageTaken();
 
 		$stats = $this->dexTypeModel->getStats();
-		$showAbilities = $generation->getId()->value() >= 3;
+		$showAbilities = $versionGroup->getGenerationId()->value() >= 3;
 		$pokemon = $this->dexTypeModel->getPokemon();
 		$pokemon = $this->dexFormatter->formatDexPokemon($pokemon);
 
-		$showMoveDescriptions = $generation->getId()->value() >= 3;
+		$showMoveDescriptions = $versionGroup->getGenerationId()->value() >= 3;
 		$moves = $this->dexTypeModel->getMoves();
 		$moves = $this->dexFormatter->formatDexMoves($moves);
 
 
 		// Navigational breadcrumbs.
-		$generationIdentifier = $generation->getIdentifier();
+		$vgIdentifier = $versionGroup->getIdentifier();
 		$breadcrumbs = [[
 			'text' => 'Dex',
 		], [
-			'url' => "/dex/$generationIdentifier/types",
+			'url' => "/dex/$vgIdentifier/types",
 			'text' => 'Types',
 		], [
 			'text' => $type['name'],
@@ -54,13 +54,13 @@ final class DexTypeView
 			'data' => [
 				'title' => 'Porydex - Types - ' . $type['name'],
 
-				'generation' => [
-					'id' => $generation->getId()->value(),
-					'identifier' => $generation->getIdentifier(),
+				'versionGroup' => [
+					'id' => $versionGroup->getId()->value(),
+					'identifier' => $versionGroup->getIdentifier(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
-				'generations' => $this->dexFormatter->formatGenerations($generations),
+				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'type' => [
 					'identifier' => $type['identifier'],

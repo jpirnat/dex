@@ -19,7 +19,7 @@ final class DexTypesModel
 
 
 	public function __construct(
-		private GenerationModel $generationModel,
+		private VersionGroupModel $versionGroupModel,
 		private DexTypeRepositoryInterface $dexTypeRepository,
 		private TypeMatchupRepositoryInterface $typeMatchupRepository,
 	) {}
@@ -29,21 +29,21 @@ final class DexTypesModel
 	 * Set data for the dex types page.
 	 */
 	public function setData(
-		string $generationIdentifier,
-		LanguageId $languageId
+		string $vgIdentifier,
+		LanguageId $languageId,
 	) : void {
-		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
+		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->generationModel->setGensSince(new GenerationId(1));
+		$this->versionGroupModel->setSinceGeneration(new GenerationId(1));
 
-		$this->types = $this->dexTypeRepository->getMainByGeneration(
-			$generationId,
-			$languageId
+		$this->types = $this->dexTypeRepository->getMainByVersionGroup(
+			$versionGroupId,
+			$languageId,
 		);
 
 		// Get this generation's type chart.
 		$typeMatchups = $this->typeMatchupRepository->getByGeneration(
-			$generationId
+			$this->versionGroupModel->getVersionGroup()->getGenerationId()
 		);
 		$this->multipliers = [];
 		foreach ($typeMatchups as $typeMatchup) {
@@ -59,9 +59,9 @@ final class DexTypesModel
 	/**
 	 * Get the generation model.
 	 */
-	public function getGenerationModel() : GenerationModel
+	public function getVersionGroupModel() : VersionGroupModel
 	{
-		return $this->generationModel;
+		return $this->versionGroupModel;
 	}
 
 	/**

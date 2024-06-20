@@ -6,9 +6,9 @@ const app = new Vue({
 		loading: true,
 		loaded: false,
 
-		generation: {},
+		versionGroup: {},
 		breadcrumbs: [],
-		generations: [],
+		versionGroups: [],
 		type: {},
 		types: [],
 		damageDealt: {},
@@ -35,9 +35,9 @@ const app = new Vue({
 
 			if (response.data) {
 				const data = response.data;
-				this.generation = data.generation;
+				this.versionGroup = data.versionGroup;
 				this.breadcrumbs = data.breadcrumbs;
-				this.generations = data.generations;
+				this.versionGroups = data.versionGroups;
 				this.type = data.type;
 				this.types = data.types;
 				this.damageDealt = data.damageDealt;
@@ -46,7 +46,7 @@ const app = new Vue({
 				this.showAbilities = data.showAbilities;
 				this.stats = data.stats;
 				this.moves = data.moves;
-				this.showMoveDescriptions = this.showMoveDescriptions;
+				this.showMoveDescriptions = data.showMoveDescriptions;
 
 				document.title = data.title;
 			}

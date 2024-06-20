@@ -21,10 +21,10 @@ final class DexTypeController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$generationIdentifier = $request->getAttribute('generationIdentifier');
+		$vgIdentifier = $request->getAttribute('vgIdentifier');
 		$typeIdentifier = $request->getAttribute('typeIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexTypeModel->setData($generationIdentifier, $typeIdentifier, $languageId);
+		$this->dexTypeModel->setData($vgIdentifier, $typeIdentifier, $languageId);
 	}
 }

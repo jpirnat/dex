@@ -5,14 +5,14 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="generation-control" v-if="generations.length">
+	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
-			<li v-for="g in generations">
-				<a :href="'/dex/' + g.identifier + '/types'"
+			<li v-for="vg in versionGroups">
+				<a :href="'/dex/' + vg.identifier + '/types'"
 					:class="{
-						'current': g.identifier === generation.identifier
+						'current': vg.identifier === versionGroup.identifier
 					}"
-				>{{ g.name }}</a>
+				>{{ vg.name }}</a>
 			</li>
 		</ul>
 	</div>
@@ -33,7 +33,7 @@
 				<tr>
 					<td colspan="2"></td>
 					<th v-for="defendingType in defendingTypes" scope="col">
-						<a :href="'/dex/' + generation.identifier + '/types/' + defendingType.identifier">
+						<a :href="'/dex/' + versionGroup.identifier + '/types/' + defendingType.identifier">
 							<img :src="'/images/types/' + defendingType.icon" :alt="defendingType.name">
 						</a>
 					</th>
@@ -45,7 +45,7 @@
 						<span class="type-chart__axis-label--attacking">Attacking Type</span>
 					</th>
 					<th scope="row">
-						<a :href="'/dex/' + generation.identifier + '/types/' + attackingType.identifier">
+						<a :href="'/dex/' + versionGroup.identifier + '/types/' + attackingType.identifier">
 							<img :src="'/images/types/' + attackingType.icon" :alt="attackingType.name">
 						</a>
 					</th>

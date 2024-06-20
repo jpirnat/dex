@@ -12,8 +12,7 @@ final class DexTypesController
 	public function __construct(
 		private BaseController $baseController,
 		private DexTypesModel $dexTypesModel,
-	) {
-	}
+	) {}
 
 	/**
 	 * Show the dex types page.
@@ -22,9 +21,9 @@ final class DexTypesController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$generationIdentifier = $request->getAttribute('generationIdentifier');
+		$vgIdentifier = $request->getAttribute('vgIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexTypesModel->setData($generationIdentifier, $languageId);
+		$this->dexTypesModel->setData($vgIdentifier, $languageId);
 	}
 }

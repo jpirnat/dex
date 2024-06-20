@@ -6,7 +6,7 @@ Vue.component('dex-moves-table', {
 			type: Array,
 			default: [],
 		},
-		generation: {
+		versionGroup: {
 			type: Object,
 			default: {},
 		},
@@ -119,12 +119,12 @@ Vue.component('dex-moves-table', {
 				<tbody>
 					<tr v-for="move in paginatedMoves" :key="move.identifier">
 						<td>
-							<a :href="'/dex/' + generation.identifier + '/moves/' + move.identifier">
+							<a :href="'/dex/' + versionGroup.identifier + '/moves/' + move.identifier">
 								{{ move.name }}
 							</a>
 						</td>
 						<td class="dex-table__move-type">
-							<a :href="'/dex/' + generation.identifier + '/types/' + move.type.identifier">
+							<a :href="'/dex/' + versionGroup.identifier + '/types/' + move.type.identifier">
 								<img :src="'/images/types/' + move.type.icon" :alt="move.type.name">
 							</a>
 						</td>

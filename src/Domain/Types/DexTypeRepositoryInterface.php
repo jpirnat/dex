@@ -7,7 +7,6 @@ use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface DexTypeRepositoryInterface
@@ -28,7 +27,7 @@ interface DexTypeRepositoryInterface
 	 * @return DexType[] Ordered by Pokémon type slot.
 	 */
 	public function getByPokemon(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
 		LanguageId $languageId,
 	) : array;
@@ -99,8 +98,8 @@ interface DexTypeRepositoryInterface
 	 *     ordered by Pokémon type slot.
 	 */
 	public function getByPokemonType(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		TypeId $typeId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 }

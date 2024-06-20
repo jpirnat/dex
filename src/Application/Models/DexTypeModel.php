@@ -36,7 +36,7 @@ final class DexTypeModel
 
 
 	public function __construct(
-		private GenerationModel $generationModel,
+		private VersionGroupModel $versionGroupModel,
 		private TypeRepositoryInterface $typeRepository,
 		private DexTypeRepositoryInterface $dexTypeRepository,
 		private TypeMatchupRepositoryInterface $typeMatchupRepository,
@@ -50,19 +50,19 @@ final class DexTypeModel
 	 * Set data for the dex type page.
 	 */
 	public function setData(
-		string $generationIdentifier,
+		string $vgIdentifier,
 		string $typeIdentifier,
 		LanguageId $languageId
 	) : void {
-		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
+		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$type = $this->typeRepository->getByIdentifier($typeIdentifier);
 
-		$this->generationModel->setGensSince($type->getIntroducedInGenerationId());
+		$this->versionGroupModel->setWithType($type->getId());
 
 		$dexType = $this->dexTypeRepository->getById(
 			$type->getId(),
-			$languageId
+			$languageId,
 		);
 
 		$this->type = [
@@ -71,18 +71,18 @@ final class DexTypeModel
 		];
 
 		// Get the type matchups.
-		$this->types = $this->dexTypeRepository->getMainByGeneration(
-			$generationId,
-			$languageId
+		$this->types = $this->dexTypeRepository->getMainByVersionGroup(
+			$versionGroupId,
+			$languageId,
 		);
 		$this->damageDealt = [];
 		$this->damageTaken = [];
 		$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
-			$generationId,
+			$this->versionGroupModel->getVersionGroup()->getGenerationId(),
 			$type->getId()
 		);
 		$defendingMatchups = $this->typeMatchupRepository->getByDefendingType(
-			$generationId,
+			$this->versionGroupModel->getVersionGroup()->getGenerationId(),
 			$type->getId()
 		);
 		foreach ($attackingMatchups as $matchup) {
@@ -99,20 +99,20 @@ final class DexTypeModel
 		}
 
 		// Get stat name abbreviations.
-		$this->stats = $this->statNameModel->getByGeneration($generationId, $languageId);
+		$this->stats = $this->statNameModel->getByVersionGroup($versionGroupId, $languageId);
 
 		// Get Pokémon with this type.
 		$this->pokemon = $this->dexPokemonRepository->getByType(
-			$generationId,
+			$versionGroupId,
 			$type->getId(),
-			$languageId
+			$languageId,
 		);
 
 		// Get moves with this type.
 		$this->moves = $this->dexMoveRepository->getByType(
-			$generationId,
+			$versionGroupId,
 			$type->getId(),
-			$languageId
+			$languageId,
 		);
 	}
 
@@ -120,9 +120,9 @@ final class DexTypeModel
 	/**
 	 * Get the generation model.
 	 */
-	public function getGenerationModel() : GenerationModel
+	public function getVersionGroupModel() : VersionGroupModel
 	{
-		return $this->generationModel;
+		return $this->versionGroupModel;
 	}
 
 	/**

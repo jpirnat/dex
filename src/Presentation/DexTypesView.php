@@ -19,9 +19,9 @@ final class DexTypesView
 	 */
 	public function index() : ResponseInterface
 	{
-		$generationModel = $this->dexTypesModel->getGenerationModel();
-		$generation = $generationModel->getGeneration();
-		$generations = $generationModel->getGenerations();
+		$versionGroupModel = $this->dexTypesModel->getVersionGroupModel();
+		$versionGroup = $versionGroupModel->getVersionGroup();
+		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$types = $this->dexTypesModel->getTypes();
 		$multipliers = $this->dexTypesModel->getMultipliers();
@@ -35,12 +35,12 @@ final class DexTypesView
 
 		return new JsonResponse([
 			'data' => [
-				'generation' => [
-					'identifier' => $generation->getIdentifier(),
+				'versionGroup' => [
+					'identifier' => $versionGroup->getIdentifier(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
-				'generations' => $this->dexFormatter->formatGenerations($generations),
+				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'types' => $this->dexFormatter->formatDexTypes($types),
 				'multipliers' => $multipliers,

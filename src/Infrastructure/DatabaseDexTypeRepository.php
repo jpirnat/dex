@@ -11,7 +11,6 @@ use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Types\TypeNotFoundException;
-use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
@@ -69,7 +68,7 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	 * @return DexType[] Ordered by Pokémon type slot.
 	 */
 	public function getByPokemon(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
 		LanguageId $languageId,
 	) : array {
@@ -87,12 +86,12 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 			INNER JOIN `type_names` AS `tn`
 				ON `pt`.`type_id` = `tn`.`type_id`
 				AND `ti`.`language_id` = `tn`.`language_id`
-			WHERE `pt`.`generation_id` = :generation_id
+			WHERE `pt`.`version_group_id` = :version_group_id
 				AND `pt`.`pokemon_id` = :pokemon_id
 				AND `ti`.`language_id` = :language_id
 			ORDER BY `pt`.`slot`'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -333,29 +332,29 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 	 *     ordered by Pokémon type slot.
 	 */
 	public function getByPokemonType(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		TypeId $typeId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
-		$dexTypes = $this->getByGeneration($generationId, $languageId);
+		$dexTypes = $this->getByVersionGroup($versionGroupId, $languageId);
 
 		$stmt = $this->db->prepare(
 			'SELECT
 				`pokemon_id`,
 				`type_id`
 			FROM `pokemon_types`
-			WHERE `generation_id` = :generation_id1
+			WHERE `version_group_id` = :version_group_id1
 				AND `pokemon_id` IN (
 					SELECT
 						`pokemon_id`
 					FROM `pokemon_types`
-					WHERE `generation_id` = :generation_id2
+					WHERE `version_group_id` = :version_group_id2
 						AND `type_id` = :type_id
 				)
 			ORDER BY `slot`'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
