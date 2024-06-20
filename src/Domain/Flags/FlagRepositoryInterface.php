@@ -5,18 +5,18 @@ namespace Jp\Dex\Domain\Flags;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface FlagRepositoryInterface
 {
 	/**
-	 * Get all dex flags in this generation.
+	 * Get all dex flags in this version group.
 	 *
 	 * @return DexFlag[] Indexed by flag id.
 	 */
-	public function getByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array;
 
 	/**
@@ -25,7 +25,7 @@ interface FlagRepositoryInterface
 	 * @return FlagId[] Indexed by flag id.
 	 */
 	public function getByMove(
-		GenerationId $generationId,
-		MoveId $moveId
+		VersionGroupId $versionGroupId,
+		MoveId $moveId,
 	) : array;
 }

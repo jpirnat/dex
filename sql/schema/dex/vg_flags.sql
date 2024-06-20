@@ -1,4 +1,4 @@
-create table if not exists `version_group_flags`
+create table if not exists `vg_flags`
 (
 `version_group_id` tinyint unsigned not null,
 `flag_id` tinyint unsigned not null,

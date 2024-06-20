@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Flags\FlagId;
 use Jp\Dex\Domain\Flags\FlagRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final class DatabaseFlagRepository implements FlagRepositoryInterface
@@ -18,13 +18,13 @@ final class DatabaseFlagRepository implements FlagRepositoryInterface
 	) {}
 
 	/**
-	 * Get all dex flags in this generation.
+	 * Get all dex flags in this version group.
 	 *
 	 * @return DexFlag[] Indexed by flag id.
 	 */
-	public function getByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array {
 		// HACK: Move flag descriptions currently exist only for English.
 		$languageId = new LanguageId(LanguageId::ENGLISH);
@@ -36,14 +36,14 @@ final class DatabaseFlagRepository implements FlagRepositoryInterface
 				`fd`.`name`,
 				`fd`.`description`
 			FROM `flags` AS `f`
-			INNER JOIN `generation_flags` AS `gf`
-				ON `f`.`id` = `gf`.`flag_id`
+			INNER JOIN `vg_flags` AS `vgf`
+				ON `f`.`id` = `vgf`.`flag_id`
 			INNER JOIN `flag_descriptions` AS `fd`
-				ON `gf`.`flag_id` = `fd`.`flag_id`
-			WHERE `gf`.`generation_id` = :generation_id
+				ON `vgf`.`flag_id` = `fd`.`flag_id`
+			WHERE `vgf`.`version_group_id` = :version_group_id
 				AND `fd`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -53,7 +53,7 @@ final class DatabaseFlagRepository implements FlagRepositoryInterface
 			$flag = new DexFlag(
 				$result['identifier'],
 				$result['name'],
-				$result['description']
+				$result['description'],
 			);
 
 			$flags[$result['id']] = $flag;
@@ -68,17 +68,17 @@ final class DatabaseFlagRepository implements FlagRepositoryInterface
 	 * @return FlagId[] Indexed by flag id.
 	 */
 	public function getByMove(
-		GenerationId $generationId,
-		MoveId $moveId
+		VersionGroupId $versionGroupId,
+		MoveId $moveId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
 				`flag_id`
 			FROM `move_flags`
-			WHERE `generation_id` = :generation_id
+			WHERE `version_group_id` = :version_group_id
 				AND `move_id` = :move_id'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 

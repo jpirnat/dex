@@ -137,8 +137,17 @@ return [
 	// Move flags
 	'flags',
 	'flag_descriptions',
-	'version_group_flags',
-	'move_flags',
+	'vg_flags',
+	'move_flags' => [
+		'move_flags_02',
+		'move_flags_03',
+		'move_flags_04',
+		'move_flags_05',
+		'move_flags_06',
+		'move_flags_07',
+		'move_flags_08',
+		'move_flags_09',
+	],
 
 	// Stats
 	'stats',
