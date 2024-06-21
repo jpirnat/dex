@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Moves;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface DexMoveRepositoryInterface
 {
@@ -15,9 +15,9 @@ interface DexMoveRepositoryInterface
 	 * This method is used to get data for the dex move page.
 	 */
 	public function getById(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : DexMove;
 
 	/**
@@ -26,9 +26,9 @@ interface DexMoveRepositoryInterface
 	 *
 	 * @return DexMove[] Ordered by name.
 	 */
-	public function getByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array;
 
 	/**
@@ -38,9 +38,9 @@ interface DexMoveRepositoryInterface
 	 * @return DexMove[]
 	 */
 	public function getByPokemon(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 
 	/**
@@ -50,9 +50,9 @@ interface DexMoveRepositoryInterface
 	 * @return DexMove[] Ordered by name.
 	 */
 	public function getByType(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		TypeId $typeId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 
 }

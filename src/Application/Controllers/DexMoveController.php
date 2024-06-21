@@ -21,10 +21,10 @@ final class DexMoveController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$generationIdentifier = $request->getAttribute('generationIdentifier');
+		$vgIdentifier = $request->getAttribute('vgIdentifier');
 		$moveIdentifier = $request->getAttribute('moveIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexMoveModel->setData($generationIdentifier, $moveIdentifier, $languageId);
+		$this->dexMoveModel->setData($vgIdentifier, $moveIdentifier, $languageId);
 	}
 }

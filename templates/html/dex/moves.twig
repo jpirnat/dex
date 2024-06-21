@@ -10,14 +10,14 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="generation-control" v-if="generations.length">
+	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
-			<li v-for="g in generations">
-				<a :href="'/dex/' + g.identifier + '/moves'"
+			<li v-for="vg in versionGroups">
+				<a :href="'/dex/' + vg.identifier + '/moves'"
 					:class="{
-						'current': g.identifier === generation.identifier
+						'current': vg.identifier === versionGroup.identifier
 					}"
-				>{{ g.name }}</a>
+				>{{ vg.name }}</a>
 			</li>
 		</ul>
 	</div>
@@ -29,7 +29,7 @@
 	<template v-if="loaded">
 		<dex-moves-table
 			:moves="moves"
-			:generation="generation"
+			:version-group="versionGroup"
 			:show-descriptions="showMoveDescriptions"
 		></dex-moves-table>
 	</template>

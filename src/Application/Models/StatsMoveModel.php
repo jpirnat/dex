@@ -87,7 +87,7 @@ final class StatsMoveModel
 		);
 
 		// Get the move description.
-		$this->moveDescription = $this->moveDescriptionRepository->getByGenerationAndLanguageAndMove(
+		$this->moveDescription = $this->moveDescriptionRepository->getByMove(
 			$this->format->getGenerationId(),
 			$languageId,
 			$move->getId()

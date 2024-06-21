@@ -27,7 +27,7 @@ final class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterf
 	 */
 	public function getByPokemonAndGeneration(
 		PokemonId $pokemonId,
-		GenerationId $generationId
+		GenerationId $generationId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -63,7 +63,7 @@ final class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterf
 				new MoveId($result['move_id']),
 				new MoveMethodId($result['move_method_id']),
 				$result['level'],
-				$result['sort']
+				$result['sort'],
 			);
 
 			$pokemonMoves[] = $pokemonMove;
@@ -80,7 +80,7 @@ final class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterf
 	 */
 	public function getByMoveAndGeneration(
 		MoveId $moveId,
-		GenerationId $generationId
+		GenerationId $generationId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -110,7 +110,7 @@ final class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterf
 				$moveId,
 				new MoveMethodId($result['move_method_id']),
 				$result['level'],
-				$result['sort']
+				$result['sort'],
 			);
 
 			$pokemonMoves[] = $pokemonMove;

@@ -3,22 +3,22 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexMove;
 
-use Jp\Dex\Application\Models\GenerationModel;
+use Jp\Dex\Application\Models\VersionGroupModel;
 use Jp\Dex\Domain\Categories\CategoryId;
 use Jp\Dex\Domain\Flags\FlagRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
-use Jp\Dex\Domain\Moves\GenerationMoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveType;
+use Jp\Dex\Domain\Moves\VgMoveRepositoryInterface;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class DexMoveModel
 {
@@ -39,10 +39,10 @@ final class DexMoveModel
 
 
 	public function __construct(
-		private GenerationModel $generationModel,
+		private VersionGroupModel $versionGroupModel,
 		private MoveRepositoryInterface $moveRepository,
 		private DexMoveRepositoryInterface $dexMoveRepository,
-		private GenerationMoveRepositoryInterface $generationMoveRepository,
+		private VgMoveRepositoryInterface $vgMoveRepository,
 		private DexTypeRepositoryInterface $dexTypeRepository,
 		private TypeMatchupRepositoryInterface $typeMatchupRepository,
 		private FlagRepositoryInterface $flagRepository,
@@ -55,43 +55,41 @@ final class DexMoveModel
 	 * Set data for the dex move page.
 	 */
 	public function setData(
-		string $generationIdentifier,
+		string $vgIdentifier,
 		string $moveIdentifier,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
-		$generationId = $this->generationModel->setByIdentifier(
-			$generationIdentifier
-		);
+		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
 		$moveId = $move->getId();
 
-		// Set generations for the generation control.
-		$this->generationModel->setWithMove($moveId);
+		// Set version groups for the version group control.
+		$this->versionGroupModel->setWithMove($moveId);
 
-		$this->move = $this->dexMoveRepository->getById($generationId, $moveId, $languageId);
+		$this->move = $this->dexMoveRepository->getById($versionGroupId, $moveId, $languageId);
 
 		// Set the move's detailed data.
-		$this->setDetailedData($generationId, $moveId, $languageId);
+		$this->setDetailedData($versionGroupId, $moveId, $languageId);
 
 		if ($move->getType()->value() === MoveType::Z_MOVE) {
-			$zMoveImage = $this->generationMoveRepository->getZMoveImage($moveId, $languageId);
+			$zMoveImage = $this->vgMoveRepository->getZMoveImage($moveId, $languageId);
 			$this->detailedData['zMoveImage'] = $zMoveImage;
 		}
 
 		// Set the type matchups.
-		$this->setMatchups($generationId, $moveId, $languageId);
+		$this->setMatchups($versionGroupId, $moveId, $languageId);
 
-		$this->statChanges = $this->generationMoveRepository->getStatChanges(
-			$generationId,
+		$this->statChanges = $this->vgMoveRepository->getStatChanges(
+			$versionGroupId,
 			$moveId,
-			$languageId
+			$languageId,
 		);
 
 		// Set the move's flags.
 		$this->flags = [];
-		$allFlags = $this->flagRepository->getByGeneration($generationId, $languageId);
-		$moveFlagIds = $this->flagRepository->getByMove($generationId, $moveId);
+		$allFlags = $this->flagRepository->getByVersionGroup($versionGroupId, $languageId);
+		$moveFlagIds = $this->flagRepository->getByMove($versionGroupId, $moveId);
 		foreach ($allFlags as $flagId => $flag) {
 			$has = isset($moveFlagIds[$flagId]); // Does the move have this flag?
 
@@ -107,14 +105,14 @@ final class DexMoveModel
 		$this->versionGroups = $this->dexVgRepository->getWithMove(
 			$moveId,
 			$languageId,
-			$generationId
+			$this->versionGroupModel->getVersionGroup()->getGenerationId(),
 		);
 
 		$this->dexMovePokemonModel->setData(
 			$moveId,
-			$generationId,
+			$versionGroupId,
 			$languageId,
-			$this->versionGroups
+			$this->versionGroups,
 		);
 	}
 
@@ -122,68 +120,65 @@ final class DexMoveModel
 	 * Set the move's detailed data.
 	 */
 	public function setDetailedData(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
-		$generationMove = $this->generationMoveRepository->getByGenerationAndMove(
-			$generationId,
-			$moveId
-		);
+		$vgMove = $this->vgMoveRepository->getByVgAndMove($versionGroupId, $moveId);
 
 		$infliction = null;
-		if ($generationMove->getInflictionId() !== null) {
-			$infliction = $this->generationMoveRepository->getInfliction(
-				$generationMove->getInflictionId(),
-				$languageId
+		if ($vgMove->getInflictionId() !== null) {
+			$infliction = $this->vgMoveRepository->getInfliction(
+				$vgMove->getInflictionId(),
+				$languageId,
 			);
-			$infliction['percent'] = $generationMove->getInflictionPercent();
+			$infliction['percent'] = $vgMove->getInflictionPercent();
 		}
 
-		$target = $this->generationMoveRepository->getTarget(
-			$generationMove->getTargetId(),
-			$languageId
+		$target = $this->vgMoveRepository->getTarget(
+			$vgMove->getTargetId(),
+			$languageId,
 		);
 
 		$zMove = null;
-		if ($generationMove->getZMoveId() !== null) {
-			$zMove = $this->generationMoveRepository->getZMove(
-				$generationMove->getZMoveId(),
-				$languageId
+		if ($vgMove->getZMoveId() !== null) {
+			$zMove = $this->vgMoveRepository->getZMove(
+				$vgMove->getZMoveId(),
+				$languageId,
 			);
-			$zMove['power'] = $generationMove->getZBasePower();
+			$zMove['power'] = $vgMove->getZBasePower();
 		}
 
-		if ($generationMove->getZPowerEffectId() !== null) {
-			$zPowerEffect = $this->generationMoveRepository->getZPowerEffect(
-				$generationMove->getZPowerEffectId(),
-				$languageId
+		if ($vgMove->getZPowerEffectId() !== null) {
+			$zPowerEffect = $this->vgMoveRepository->getZPowerEffect(
+				$vgMove->getZPowerEffectId(),
+				$languageId,
 			);
 			$zMove['zPowerEffect'] = $zPowerEffect;
 		}
 
 		$maxMove = null;
-		if ($generationMove->getMaxMoveId() !== null) {
-			$maxMove = $this->generationMoveRepository->getMaxMove(
-				$generationMove->getMaxMoveId(),
+		if ($vgMove->getMaxMoveId() !== null) {
+			$maxMove = $this->vgMoveRepository->getMaxMove(
+				$vgMove->getMaxMoveId(),
 				$languageId
 			);
-			$maxMove['power'] = $generationMove->getMaxPower();
+			$maxMove['power'] = $vgMove->getMaxPower();
 		}
 
 		$this->detailedData = [
-			'priority' => $generationMove->getPriority(),
-			'minHits' => $generationMove->getMinHits(),
-			'maxHits' => $generationMove->getMaxHits(),
+			'priority' => $vgMove->getPriority(),
+			'minHits' => $vgMove->getMinHits(),
+			'maxHits' => $vgMove->getMaxHits(),
 			'infliction' => $infliction,
-			'minTurns' => $generationMove->getMinTurns(),
-			'maxTurns' => $generationMove->getMaxTurns(),
-			'critStage' => $generationMove->getCritStage(),
-			'flinchPercent' => $generationMove->getFlinchPercent(),
-			'effect' => $generationMove->getEffect(),
-			'effectPercent' => $generationMove->getEffectPercent(),
-			'recoilPercent' => $generationMove->getRecoilPercent(),
-			'healPercent' => $generationMove->getHealPercent(),
+			'minTurns' => $vgMove->getMinTurns(),
+			'maxTurns' => $vgMove->getMaxTurns(),
+			'critStage' => $vgMove->getCritStage(),
+			'flinchPercent' => $vgMove->getFlinchPercent(),
+			'effect' => $vgMove->getEffect(),
+			'effectPercent' => $vgMove->getEffectPercent(),
+			'recoilPercent' => $vgMove->getRecoilPercent(),
+			'healPercent' => $vgMove->getHealPercent(),
 			'target' => $target,
 			'zMove' => $zMove,
 			'maxMove' => $maxMove,
@@ -194,29 +189,26 @@ final class DexMoveModel
 	 * Set the move's type matchups.
 	 */
 	private function setMatchups(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$this->types = [];
 		$this->damageDealt = [];
 
-		$generationMove = $this->generationMoveRepository->getByGenerationAndMove(
-			$generationId,
-			$moveId
-		);
-		if ($generationMove->getCategoryId()->value() === CategoryId::STATUS) {
+		$vgMove = $this->vgMoveRepository->getByVgAndMove($versionGroupId, $moveId);
+		if ($vgMove->getCategoryId()->value() === CategoryId::STATUS) {
 			// This move doesn't do damage. No matchups needed.
 			return;
 		}
 
-		$this->types = $this->dexTypeRepository->getMainByGeneration(
-			$generationId,
-			$languageId
+		$this->types = $this->dexTypeRepository->getMainByVersionGroup(
+			$versionGroupId,
+			$languageId,
 		);
 		$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
-			$generationId,
-			$generationMove->getTypeId()
+			$this->versionGroupModel->getVersionGroup()->getGenerationId(),
+			$vgMove->getTypeId(),
 		);
 		foreach ($attackingMatchups as $matchup) {
 			$defendingTypeId = $matchup->getDefendingTypeId()->value();
@@ -238,11 +230,11 @@ final class DexMoveModel
 
 
 	/**
-	 * Get the generation model.
+	 * Get the version group model.
 	 */
-	public function getGenerationModel() : GenerationModel
+	public function getVersionGroupModel() : VersionGroupModel
 	{
-		return $this->generationModel;
+		return $this->versionGroupModel;
 	}
 
 	/**

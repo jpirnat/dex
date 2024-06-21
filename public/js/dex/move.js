@@ -6,15 +6,15 @@ const app = new Vue({
 		loading: true,
 		loaded: false,
 
-		generation: {},
+		versionGroup: {},
 		breadcrumbs: [],
-		generations: [],
+		versionGroups: [],
 		move: {},
 		types: [],
 		damageDealt: {},
 		flags: [],
 		methods: [],
-		versionGroups: [],
+		dexVersionGroups: [],
 		showAbilities: true,
 		stats: [],
 
@@ -36,10 +36,10 @@ const app = new Vue({
 		},
 		visibleVersionGroups() {
 			if (this.showOlderGames) {
-				return this.versionGroups;
+				return this.dexVersionGroups;
 			}
 
-			return this.versionGroups.filter(vg => vg.generationId === this.generation.id);
+			return this.dexVersionGroups.filter(vg => vg.generationId === this.versionGroup.generationId);
 		},
 		visibleMethods() {
 			if (this.showOlderGames) {
@@ -64,16 +64,16 @@ const app = new Vue({
 
 			if (response.data) {
 				const data = response.data;
-				this.generation = data.generation;
+				this.versionGroup = data.versionGroup;
 				this.breadcrumbs = data.breadcrumbs;
-				this.generations = data.generations;
+				this.versionGroups = data.versionGroups;
 				this.move = data.move;
 				this.types = data.types;
 				this.damageDealt = data.damageDealt;
 				this.statChanges = data.statChanges;
 				this.flags = data.flags;
 				this.methods = data.methods;
-				this.versionGroups = data.versionGroups;
+				this.dexVersionGroups = data.dexVersionGroups;
 				this.showAbilities = data.showAbilities;
 				this.stats = data.stats;
 

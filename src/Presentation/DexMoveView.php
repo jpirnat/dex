@@ -21,9 +21,9 @@ final class DexMoveView
 	 */
 	public function index() : ResponseInterface
 	{
-		$generationModel = $this->dexMoveModel->getGenerationModel();
-		$generation = $generationModel->getGeneration();
-		$generations = $generationModel->getGenerations();
+		$versionGroupModel = $this->dexMoveModel->getVersionGroupModel();
+		$versionGroup = $versionGroupModel->getVersionGroup();
+		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$move = $this->dexMoveModel->getMove();
 		$move = $this->dexFormatter->formatDexMove($move);
@@ -35,8 +35,8 @@ final class DexMoveView
 		$statChanges = $this->dexMoveModel->getStatChanges();
 		$flags = $this->dexMoveModel->getFlags();
 
-		$versionGroups = $this->dexMoveModel->getVersionGroups();
-		$showAbilities = $generation->getId()->value() >= 3;
+		$dexVersionGroups = $this->dexMoveModel->getVersionGroups();
+		$showAbilities = $versionGroup->getId()->hasAbilities();
 
 		$dexMovePokemonModel = $this->dexMoveModel->getDexMovePokemonModel();
 		$stats = $dexMovePokemonModel->getStats();
@@ -51,11 +51,11 @@ final class DexMoveView
 		}
 
 		// Navigational breadcrumbs.
-		$generationIdentifier = $generation->getIdentifier();
+		$vgIdentifier = $versionGroup->getIdentifier();
 		$breadcrumbs = [[
 			'text' => 'Dex',
 		], [
-			'url' => "/dex/$generationIdentifier/moves",
+			'url' => "/dex/$vgIdentifier/moves",
 			'text' => 'Moves',
 		], [
 			'text' => $move['name'],
@@ -65,13 +65,14 @@ final class DexMoveView
 			'data' => [
 				'title' => 'Porydex - Moves - ' . $move['name'],
 
-				'generation' => [
-					'id' => $generation->getId()->value(),
-					'identifier' => $generation->getIdentifier(),
+				'versionGroup' => [
+					'id' => $versionGroup->getId()->value(),
+					'identifier' => $versionGroup->getIdentifier(),
+					'generationId' => $versionGroup->getGenerationId()->value(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
-				'generations' => $this->dexFormatter->formatGenerations($generations),
+				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'move' => $move,
 				'types' => $this->dexFormatter->formatDexTypes($types),
@@ -80,7 +81,7 @@ final class DexMoveView
 				'flags' => $flags,
 
 				'methods' => $this->formatDexMovePokemonMethods($methods),
-				'versionGroups' => $this->dexFormatter->formatDexVersionGroups($versionGroups),
+				'dexVersionGroups' => $this->dexFormatter->formatDexVersionGroups($dexVersionGroups),
 				'showAbilities' => $showAbilities,
 				'stats' => $stats,
 			]

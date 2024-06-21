@@ -9,14 +9,14 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="generation-control" v-if="generations.length">
+	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
-			<li v-for="g in generations">
-				<a :href="'/dex/' + g.identifier + '/moves/' + move.identifier"
+			<li v-for="vg in versionGroups">
+				<a :href="'/dex/' + vg.identifier + '/moves/' + move.identifier"
 					:class="{
-						'current': g.identifier === generation.identifier
+						'current': vg.identifier === versionGroup.identifier
 					}"
-				>{{ g.name }}</a>
+				>{{ vg.name }}</a>
 			</li>
 		</ul>
 	</div>
@@ -36,7 +36,7 @@
 			<dl class="dex-move__general-main">
 				<dt>Type:</dt>
 				<dd>
-					<a :href="'/dex/' + generation.identifier + '/types/' + move.type.identifier">
+					<a :href="'/dex/' + versionGroup.identifier + '/types/' + move.type.identifier">
 						<img :src="'/images/types/' + move.type.icon" :alt="move.type.name">
 					</a>
 				</dd>
@@ -122,7 +122,7 @@
 					<div>
 						Z-Move:
 						<template v-if="move.zMove.identifier !== move.identifier">
-							<a :href="'/dex/' + generation.identifier + '/moves/' + move.zMove.identifier" class="dex-link">{{ move.zMove.name }}</a>
+							<a :href="'/dex/' + versionGroup.identifier + '/moves/' + move.zMove.identifier" class="dex-link">{{ move.zMove.name }}</a>
 						</template>
 						<template v-else>{{ move.zMove.name }}</template>
 					</div>
@@ -135,7 +135,7 @@
 				<div v-if="move.maxMove" class="dex-move__other-details">
 					<div>
 						Max Move:
-						<a :href="'/dex/' + generation.identifier + '/moves/' + move.maxMove.identifier" class="dex-link">{{ move.maxMove.name }}</a>
+						<a :href="'/dex/' + versionGroup.identifier + '/moves/' + move.maxMove.identifier" class="dex-link">{{ move.maxMove.name }}</a>
 					</div>
 					<ul>
 						<li v-if="move.maxMove.power">Power: {{ move.maxMove.power }}</li>
@@ -156,7 +156,7 @@
 						@mouseover="onDamageDealtHover(damageDealt[t.identifier])"
 						@mouseleave="onDamageDealtUnhover"
 					>
-						<a :href="'/dex/' + generation.identifier + '/types/' + t.identifier">
+						<a :href="'/dex/' + versionGroup.identifier + '/types/' + t.identifier">
 							<img :src="'/images/types/' + t.icon" :alt="t.name">
 						</a>
 						<span :class="{
@@ -199,7 +199,7 @@
 			</ul>
 		</nav>
 
-		<div v-if="generation.id !== 1">
+		<div v-if="versionGroup.generationId > 1">
 			<label>
 				<input type="checkbox" v-model="showOlderGames" @click="toggleOlderGames">
 				Show older generation games
@@ -210,7 +210,7 @@
 			<tbody is="dex-move-method-pokemons"
 				v-for="method in visibleMethods" :key="method.identifier"
 				:method="method"
-				:generation="generation"
+				:version-group="versionGroup"
 				:move="move"
 				:version-groups="visibleVersionGroups"
 				:stats="stats"

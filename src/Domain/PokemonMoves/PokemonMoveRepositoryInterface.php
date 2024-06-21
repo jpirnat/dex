@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\PokemonMoves;
 
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface PokemonMoveRepositoryInterface
 {
@@ -16,9 +16,9 @@ interface PokemonMoveRepositoryInterface
 	 * @return PokemonMove[] Ordered by level, then sort, for easier parsing by
 	 *     DexPokemonMovesModel.
 	 */
-	public function getByPokemonAndGeneration(
+	public function getByPokemonAndVersionGroup(
 		PokemonId $pokemonId,
-		GenerationId $generationId
+		VersionGroupId $versionGroupId,
 	) : array;
 
 	/**
@@ -27,8 +27,8 @@ interface PokemonMoveRepositoryInterface
 	 *
 	 * @return PokemonMove[]
 	 */
-	public function getByMoveAndGeneration(
+	public function getByMoveAndVersionGroup(
 		MoveId $moveId,
-		GenerationId $generationId
+		VersionGroupId $versionGroupId,
 	) : array;
 }

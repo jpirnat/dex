@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
@@ -27,14 +27,14 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 	 * This method is used to get data for the dex move page.
 	 */
 	public function getById(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : DexMove {
 		// TODO: This can be optimized.
-		$dexTypes = $this->dexTypeRepository->getByGeneration(
-			$generationId,
-			$languageId
+		$dexTypes = $this->dexTypeRepository->getByVersionGroup(
+			$versionGroupId,
+			$languageId,
 		);
 		$dexCategories = $this->dexCategoryRepository->getByLanguage($languageId);
 
@@ -42,27 +42,27 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 			'SELECT
 				`m`.`identifier`,
 				`mn`.`name`,
-				`gm`.`type_id`,
-				`gm`.`category_id`,
-				`gm`.`pp`,
-				`gm`.`power`,
-				`gm`.`accuracy`,
+				`vgm`.`type_id`,
+				`vgm`.`category_id`,
+				`vgm`.`pp`,
+				`vgm`.`power`,
+				`vgm`.`accuracy`,
 				`md`.`description`
 			FROM `moves` AS `m`
 			INNER JOIN `move_names` AS `mn`
 				ON `m`.`id` = `mn`.`move_id`
-			INNER JOIN `generation_moves` AS `gm`
-				ON `m`.`id` = `gm`.`move_id`
+			INNER JOIN `vg_moves` AS `vgm`
+				ON `m`.`id` = `vgm`.`move_id`
 			LEFT JOIN `move_descriptions` AS `md`
-				ON `gm`.`generation_id` = `md`.`generation_id`
+				ON `vgm`.`version_group_id` = `md`.`version_group_id`
 				AND `mn`.`language_id` = `md`.`language_id`
 				AND `m`.`id` = `md`.`move_id`
-			WHERE `gm`.`generation_id` = :generation_id
+			WHERE `vgm`.`version_group_id` = :version_group_id
 				AND `m`.`id` = :move_id
 				AND `mn`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -76,7 +76,7 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 			$result['pp'],
 			$result['power'],
 			$result['accuracy'],
-			(string) $result['description']
+			(string) $result['description'],
 		);
 	}
 
@@ -86,13 +86,13 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 	 *
 	 * @return DexMove[] Ordered by name.
 	 */
-	public function getByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array {
-		$dexTypes = $this->dexTypeRepository->getByGeneration(
-			$generationId,
-			$languageId
+		$dexTypes = $this->dexTypeRepository->getByVersionGroup(
+			$versionGroupId,
+			$languageId,
 		);
 		$dexCategories = $this->dexCategoryRepository->getByLanguage($languageId);
 
@@ -100,35 +100,27 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 			'SELECT
 				`m`.`identifier`,
 				`mn`.`name`,
-				`gm`.`type_id`,
-				`gm`.`category_id`,
-				`gm`.`pp`,
-				`gm`.`power`,
-				`gm`.`accuracy`,
+				`vgm`.`type_id`,
+				`vgm`.`category_id`,
+				`vgm`.`pp`,
+				`vgm`.`power`,
+				`vgm`.`accuracy`,
 				`md`.`description`
 			FROM `moves` AS `m`
 			INNER JOIN `move_names` AS `mn`
 				ON `m`.`id` = `mn`.`move_id`
-			INNER JOIN `generation_moves` AS `gm`
-				ON `m`.`id` = `gm`.`move_id`
+			INNER JOIN `vg_moves` AS `vgm`
+				ON `m`.`id` = `vgm`.`move_id`
 			LEFT JOIN `move_descriptions` AS `md`
-				ON `gm`.`generation_id` = `md`.`generation_id`
+				ON `vgm`.`version_group_id` = `md`.`version_group_id`
 				AND `mn`.`language_id` = `md`.`language_id`
 				AND `m`.`id` = `md`.`move_id`
-			WHERE `gm`.`generation_id` = :generation_id1
-				AND `m`.`id` IN (
-					SELECT
-						`vgm`.`move_id`
-					FROM `version_group_moves` AS `vgm`
-					INNER JOIN `version_groups` AS `vg`
-						ON `vgm`.`version_group_id` = `vg`.`id`
-					WHERE `vg`.`generation_id` = :generation_id2
-				)
+			WHERE `vgm`.`version_group_id` = :version_group_id
+				AND `vgm`.`can_use_move` = 1
 				AND `mn`.`language_id` = :language_id
 			ORDER BY `mn`.`name`'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -143,7 +135,7 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				$result['pp'],
 				$result['power'],
 				$result['accuracy'],
-				(string) $result['description']
+				(string) $result['description'],
 			);
 
 			$dexMoves[] = $dexMove;
@@ -159,13 +151,13 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 	 * @return DexMove[] Indexed by move id.
 	 */
 	public function getByPokemon(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
 		$dexTypes = $this->dexTypeRepository->getByGeneration(
-			$generationId,
-			$languageId
+			$versionGroupId,
+			$languageId,
 		);
 		$dexCategories = $this->dexCategoryRepository->getByLanguage($languageId);
 
@@ -174,44 +166,35 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				`m`.`id`,
 				`m`.`identifier`,
 				`mn`.`name`,
-				`gm`.`type_id`,
-				`gm`.`category_id`,
-				`gm`.`pp`,
-				`gm`.`power`,
-				`gm`.`accuracy`,
+				`vgm`.`type_id`,
+				`vgm`.`category_id`,
+				`vgm`.`pp`,
+				`vgm`.`power`,
+				`vgm`.`accuracy`,
 				`md`.`description`
 			FROM `moves` AS `m`
 			INNER JOIN `move_names` AS `mn`
 				ON `m`.`id` = `mn`.`move_id`
-			INNER JOIN `generation_moves` AS `gm`
-				ON `m`.`id` = `gm`.`move_id`
+			INNER JOIN `vg_moves` AS `vgm`
+				ON `m`.`id` = `vgm`.`move_id`
 			LEFT JOIN `move_descriptions` AS `md`
-				ON `gm`.`generation_id` = `md`.`generation_id`
+				ON `vgm`.`version_group_id` = `md`.`version_group_id`
 				AND `mn`.`language_id` = `md`.`language_id`
 				AND `m`.`id` = `md`.`move_id`
-			WHERE `gm`.`generation_id` = :generation_id1
-				AND `m`.`id` IN (
-					SELECT
-						`vgm`.`move_id`
-					FROM `version_group_moves` AS `vgm`
-					INNER JOIN `version_groups` AS `vg`
-						ON `vgm`.`version_group_id` = `vg`.`id`
-					WHERE `vg`.`generation_id` = :generation_id2
-				)
+			WHERE `vgm`.`version_group_id` = :version_group_id1
+				AND `vgm`.`can_use_move` = 1
 				AND `mn`.`language_id` = :language_id
 				AND `m`.`id` IN (
 					SELECT
-						`pm`.`move_id`
-					FROM `pokemon_moves` AS `pm`
-					INNER JOIN `version_groups` AS `vg`
-						ON `pm`.`version_group_id` = `vg`.`id`
-					WHERE `pm`.`pokemon_id` = :pokemon_id
-						AND `vg`.`generation_id` <= :generation_id3
+						`move_id`
+					FROM `pokemon_moves`
+					WHERE `pokemon_id` = :pokemon_id
+						AND `version_group_id` <= :version_group_id3
 				)'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id3', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id3', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -227,7 +210,7 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				$result['pp'],
 				$result['power'],
 				$result['accuracy'],
-				(string) $result['description']
+				(string) $result['description'],
 			);
 
 			$dexMoves[$result['id']] = $dexMove;
@@ -243,13 +226,13 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 	 * @return DexMove[] Ordered by name.
 	 */
 	public function getByType(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		TypeId $typeId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
 		$dexType = $this->dexTypeRepository->getById(
 			$typeId,
-			$languageId
+			$languageId,
 		);
 		$dexCategories = $this->dexCategoryRepository->getByLanguage($languageId);
 
@@ -257,36 +240,28 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 			'SELECT
 				`m`.`identifier`,
 				`mn`.`name`,
-				`gm`.`type_id`,
-				`gm`.`category_id`,
-				`gm`.`pp`,
-				`gm`.`power`,
-				`gm`.`accuracy`,
+				`vgm`.`type_id`,
+				`vgm`.`category_id`,
+				`vgm`.`pp`,
+				`vgm`.`power`,
+				`vgm`.`accuracy`,
 				`md`.`description`
 			FROM `moves` AS `m`
 			INNER JOIN `move_names` AS `mn`
 				ON `m`.`id` = `mn`.`move_id`
-			INNER JOIN `generation_moves` AS `gm`
-				ON `m`.`id` = `gm`.`move_id`
+			INNER JOIN `vg_moves` AS `vgm`
+				ON `m`.`id` = `vgm`.`move_id`
 			LEFT JOIN `move_descriptions` AS `md`
-				ON `gm`.`generation_id` = `md`.`generation_id`
+				ON `vgm`.`version_group_id` = `md`.`version_group_id`
 				AND `mn`.`language_id` = `md`.`language_id`
 				AND `m`.`id` = `md`.`move_id`
-			WHERE `gm`.`generation_id` = :generation_id1
-				AND `m`.`id` IN (
-					SELECT
-						`vgm`.`move_id`
-					FROM `version_group_moves` AS `vgm`
-					INNER JOIN `version_groups` AS `vg`
-						ON `vgm`.`version_group_id` = `vg`.`id`
-					WHERE `vg`.`generation_id` = :generation_id2
-				)
+			WHERE `vgm`.`version_group_id` = :version_group_id
+				AND `vgm`.`can_use_move` = 1
 				AND `mn`.`language_id` = :language_id
-				AND `gm`.`type_id` = :type_id
+				AND `vgm`.`type_id` = :type_id
 			ORDER BY `mn`.`name`'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -302,7 +277,7 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 				$result['pp'],
 				$result['power'],
 				$result['accuracy'],
-				(string) $result['description']
+				(string) $result['description'],
 			);
 
 			$dexMoves[] = $dexMove;

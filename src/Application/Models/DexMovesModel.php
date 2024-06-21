@@ -15,7 +15,7 @@ final class DexMovesModel
 
 
 	public function __construct(
-		private GenerationModel $generationModel,
+		private VersionGroupModel $versionGroupModel,
 		private DexMoveRepositoryInterface $dexMoveRepository,
 	) {}
 
@@ -24,16 +24,16 @@ final class DexMovesModel
 	 * Set data for the dex moves page.
 	 */
 	public function setData(
-		string $generationIdentifier,
-		LanguageId $languageId
+		string $vgIdentifier,
+		LanguageId $languageId,
 	) : void {
-		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
+		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->generationModel->setGensSince(new GenerationId(1));
+		$this->versionGroupModel->setSinceGeneration(new GenerationId(1));
 
-		$this->moves = $this->dexMoveRepository->getByGeneration(
-			$generationId,
-			$languageId
+		$this->moves = $this->dexMoveRepository->getByVersionGroup(
+			$versionGroupId,
+			$languageId,
 		);
 	}
 
@@ -41,9 +41,9 @@ final class DexMovesModel
 	/**
 	 * Get the generation model.
 	 */
-	public function getGenerationModel() : GenerationModel
+	public function getVersionGroupModel() : VersionGroupModel
 	{
-		return $this->generationModel;
+		return $this->versionGroupModel;
 	}
 
 	/**

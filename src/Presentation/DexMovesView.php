@@ -19,11 +19,11 @@ final class DexMovesView
 	 */
 	public function index() : ResponseInterface
 	{
-		$generationModel = $this->dexMovesModel->getGenerationModel();
-		$generation = $generationModel->getGeneration();
-		$generations = $generationModel->getGenerations();
+		$versionGroupModel = $this->dexMovesModel->getVersionGroupModel();
+		$versionGroup = $versionGroupModel->getVersionGroup();
+		$versionGroups = $versionGroupModel->getVersionGroups();
 
-		$showMoveDescriptions = $generation->getId()->value() >= 3;
+		$showMoveDescriptions = $versionGroup->getId()->hasMoveDescriptions();
 		$moves = $this->dexMovesModel->getMoves();
 
 		// Navigational breadcrumbs.
@@ -35,12 +35,12 @@ final class DexMovesView
 
 		return new JsonResponse([
 			'data' => [
-				'generation' => [
-					'identifier' => $generation->getIdentifier(),
+				'versionGroup' => [
+					'identifier' => $versionGroup->getIdentifier(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
-				'generations' => $this->dexFormatter->formatGenerations($generations),
+				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'moves' => $this->dexFormatter->formatDexMoves($moves),
 				'showMoveDescriptions' => $showMoveDescriptions,
