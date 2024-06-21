@@ -121,8 +121,8 @@ Vue.component('dex-move-method-pokemons', {
 								v-tooltip="pokemonMoveTooltip(pokemon, move, vg, method)"
 							>
 								<a :href="
-										'/dex/' + versionGroup.identifier + '/pokemon/' + pokemon.identifier
-										+ '/breeding/' + move.identifier + '/' + vg.identifier
+										'/dex/' + vg.identifier + '/pokemon/' + pokemon.identifier
+										+ '/breeding/' + move.identifier
 									"
 									target="_blank"
 								>

@@ -49,7 +49,7 @@
 							<img :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
 						</td>
 						<th scope="row" class="dex-table__pokemon-name">
-							<a :href="'/dex/' + pokemon.generationIdentifier + '/pokemon/' + pokemon.identifier">
+							<a :href="'/dex/' + pokemon.versionGroup.identifier + '/pokemon/' + pokemon.identifier">
 								{{ pokemon.name }}
 							</a>
 						</th>

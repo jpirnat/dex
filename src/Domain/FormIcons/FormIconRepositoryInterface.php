@@ -5,30 +5,31 @@ namespace Jp\Dex\Domain\FormIcons;
 
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface FormIconRepositoryInterface
 {
 	/**
-	 * Get a form icon by its generation, form, gender, and direction.
+	 * Get a form icon by its version group, form, gender, and direction.
 	 *
 	 * @throws FormIconNotFoundException if no form icon exists with this
-	 *     generation, form, gender, and direction.
+	 *     version group, form, gender, and direction.
 	 */
-	public function getByGenerationAndFormAndFemaleAndRight(
-		GenerationId $generationId,
+	public function getByVgAndFormAndFemaleAndRight(
+		VersionGroupId $versionGroupId,
 		FormId $formId,
 		bool $isFemale,
-		bool $isRight
+		bool $isRight,
 	) : FormIcon;
 
 	/**
-	 * Get form icons by their generation, gender, and direction.
+	 * Get form icons by their version group, gender, and direction.
 	 *
 	 * @return FormIcon[] Indexed by form id.
 	 */
-	public function getByGenerationAndFemaleAndRight(
-		GenerationId $generationId,
+	public function getByVgAndFemaleAndRight(
+		VersionGroupId $versionGroupId,
 		bool $isFemale,
-		bool $isRight
+		bool $isRight,
 	) : array;
 }

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\BreedingChains;
 
-use Jp\Dex\Application\Models\GenerationModel;
+use Jp\Dex\Application\Models\VersionGroupModel;
 use Jp\Dex\Domain\BreedingChains\BreedingChainFinder;
 use Jp\Dex\Domain\EggGroups\EggGroupNameRepositoryInterface;
 use Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface;
@@ -18,8 +18,7 @@ use Jp\Dex\Domain\PokemonMoves\PokemonMove;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveFormatter;
 use Jp\Dex\Domain\Species\SpeciesRepositoryInterface;
 use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
-use Jp\Dex\Domain\Versions\GenerationId;
-use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class BreedingChainsModel
@@ -32,13 +31,12 @@ final class BreedingChainsModel
 
 
 	public function __construct(
-		private GenerationModel $generationModel,
+		private VersionGroupModel $versionGroupModel,
 		private PokemonRepositoryInterface $pokemonRepository,
 		private MoveRepositoryInterface $moveRepository,
 		private BreedingChainFinder $breedingChainFinder,
 		private FormIconRepositoryInterface $formIconRepository,
 		private DexVersionGroupRepositoryInterface $dexVersionGroupRepository,
-		private GenerationRepositoryInterface $generationRepository,
 		private PokemonNameRepositoryInterface $pokemonNameRepository,
 		private MoveNameRepositoryInterface $moveNameRepository,
 		private VersionGroupRepositoryInterface $versionGroupRepository,
@@ -58,13 +56,10 @@ final class BreedingChainsModel
 		string $moveIdentifier,
 		LanguageId $languageId,
 	) : void {
-		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
+		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
 		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
-		$versionGroup = $this->versionGroupRepository->getByIdentifier(
-			$versionGroupIdentifier
-		);
 
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
@@ -84,7 +79,7 @@ final class BreedingChainsModel
 		$chains = $this->breedingChainFinder->findChains(
 			$pokemon->getId(),
 			$move->getId(),
-			$versionGroup->getId()
+			$versionGroupId,
 		);
 
 		$this->chains = [];
@@ -93,7 +88,7 @@ final class BreedingChainsModel
 			$records = [];
 			foreach ($chain as $pokemonMove) {
 				$chainId[] = $pokemonMove->getPokemonId()->value();
-				$records[] = $this->getRecord($generationId, $pokemonMove, $languageId);
+				$records[] = $this->getRecord($versionGroupId, $pokemonMove, $languageId);
 			}
 			$chainId = implode('-', $chainId);
 			$this->chains[$chainId] = $records;
@@ -104,40 +99,36 @@ final class BreedingChainsModel
 	 * Create the breeding chain record for this Pokémon move.
 	 */
 	private function getRecord(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		PokemonMove $pokemonMove,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : BreedingChainRecord {
 		$pokemonId = $pokemonMove->getPokemonId();
 
-		$formIcon = $this->formIconRepository->getByGenerationAndFormAndFemaleAndRight(
-			$generationId,
+		$formIcon = $this->formIconRepository->getByVgAndFormAndFemaleAndRight(
+			$versionGroupId,
 			new FormId($pokemonId->value()),
 			false,
-			false
+			false,
 		);
 
 		$versionGroup = $this->dexVersionGroupRepository->getById(
 			$pokemonMove->getVersionGroupId(),
-			$languageId
-		);
-
-		$generation = $this->generationRepository->getById(
-			$versionGroup->getGenerationId()
+			$languageId,
 		);
 
 		$pokemon = $this->pokemonRepository->getById($pokemonId);
 
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
-			$pokemonId
+			$pokemonId,
 		);
 
 
 		$eggGroupNames = [];
 		$pokemonEggGroups = $this->pokemonEggGroupRepository->getByPokemon(
-			$generationId,
-			$pokemonId
+			$versionGroup->getGenerationId(),
+			$pokemonId,
 		);
 		foreach ($pokemonEggGroups as $pokemonEggGroup) {
 			$eggGroupName = $this->eggGroupNameRepository->getByLanguageAndEggGroup(
@@ -153,7 +144,6 @@ final class BreedingChainsModel
 
 		return new BreedingChainRecord(
 			$formIcon->getImage(),
-			$generation->getIdentifier(),
 			$pokemon->getIdentifier(),
 			$pokemonName->getName(),
 			$versionGroup,
@@ -161,7 +151,7 @@ final class BreedingChainsModel
 			$species->getBaseEggCycles(),
 			"$genderRatio.png",
 			$this->genderRatioText($genderRatio),
-			$this->pokemonMoveFormatter->format($pokemonMove, $languageId)
+			$this->pokemonMoveFormatter->format($pokemonMove, $languageId),
 		);
 	}
 
@@ -201,9 +191,9 @@ final class BreedingChainsModel
 	/**
 	 * Get the generation model.
 	 */
-	public function getGenerationModel() : GenerationModel
+	public function getVersionGroupModel() : VersionGroupModel
 	{
-		return $this->generationModel;
+		return $this->versionGroupModel;
 	}
 
 	/**

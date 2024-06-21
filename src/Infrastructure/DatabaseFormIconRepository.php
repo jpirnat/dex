@@ -7,7 +7,7 @@ use Jp\Dex\Domain\FormIcons\FormIcon;
 use Jp\Dex\Domain\FormIcons\FormIconNotFoundException;
 use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Forms\FormId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final class DatabaseFormIconRepository implements FormIconRepositoryInterface
@@ -17,13 +17,13 @@ final class DatabaseFormIconRepository implements FormIconRepositoryInterface
 	) {}
 
 	/**
-	 * Get a form icon by its generation, form, gender, and direction.
+	 * Get a form icon by its version group, form, gender, and direction.
 	 *
 	 * @throws FormIconNotFoundException if no form icon exists with this
-	 *     generation, form, gender, and direction.
+	 *     version group, form, gender, and direction.
 	 */
-	public function getByGenerationAndFormAndFemaleAndRight(
-		GenerationId $generationId,
+	public function getByVgAndFormAndFemaleAndRight(
+		VersionGroupId $versionGroupId,
 		FormId $formId,
 		bool $isFemale,
 		bool $isRight
@@ -32,13 +32,13 @@ final class DatabaseFormIconRepository implements FormIconRepositoryInterface
 			'SELECT
 				`image`
 			FROM `form_icons`
-			WHERE `generation_id` = :generation_id
+			WHERE `version_group_id` = :version_group_id
 				AND `form_id` = :form_id
 				AND `is_female` = :is_female
 				AND `is_right` = :is_right
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':form_id', $formId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':is_female', $isFemale, PDO::PARAM_INT);
 		$stmt->bindValue(':is_right', $isRight, PDO::PARAM_INT);
@@ -47,44 +47,42 @@ final class DatabaseFormIconRepository implements FormIconRepositoryInterface
 
 		if (!$result) {
 			throw new FormIconNotFoundException(
-				'No form icon exists with generation id ' . $generationId->value()
+				'No form icon exists with version group id ' . $versionGroupId->value()
 				. ', form id ' . $formId->value()
 				. ', gender ' . ($isFemale ? 'female' : 'male')
 				. ', and direction ' . ($isRight ? 'right' : 'left') . '.'
 			);
 		}
 
-		$formIcon = new FormIcon(
-			$generationId,
+		return new FormIcon(
+			$versionGroupId,
 			$formId,
 			$isFemale,
 			$isRight,
-			$result['image']
+			$result['image'],
 		);
-
-		return $formIcon;
 	}
 
 	/**
-	 * Get form icons by their generation, gender, and direction.
+	 * Get form icons by their version group, gender, and direction.
 	 *
 	 * @return FormIcon[] Indexed by form id.
 	 */
-	public function getByGenerationAndFemaleAndRight(
-		GenerationId $generationId,
+	public function getByVgAndFemaleAndRight(
+		VersionGroupId $versionGroupId,
 		bool $isFemale,
-		bool $isRight
+		bool $isRight,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
 				`form_id`,
 				`image`
 			FROM `form_icons`
-			WHERE `generation_id` = :generation_id
+			WHERE `version_group_id` = :version_group_id
 				AND `is_female` = :is_female
 				AND `is_right` = :is_right'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':is_female', $isFemale, PDO::PARAM_INT);
 		$stmt->bindValue(':is_right', $isRight, PDO::PARAM_INT);
 		$stmt->execute();
@@ -93,11 +91,11 @@ final class DatabaseFormIconRepository implements FormIconRepositoryInterface
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$formIcon = new FormIcon(
-				$generationId,
+				$versionGroupId,
 				new FormId($result['form_id']),
 				$isFemale,
 				$isRight,
-				$result['image']
+				$result['image'],
 			);
 
 			$formIcons[$result['form_id']] = $formIcon;

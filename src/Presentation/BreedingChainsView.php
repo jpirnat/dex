@@ -20,8 +20,8 @@ final class BreedingChainsView
 	 */
 	public function index() : ResponseInterface
 	{
-		$generationModel = $this->breedingChainsModel->getGenerationModel();
-		$generation = $generationModel->getGeneration();
+		$versionGroupModel = $this->breedingChainsModel->getVersionGroupModel();
+		$versionGroup = $versionGroupModel->getVersionGroup();
 
 		$pokemon = $this->breedingChainsModel->getPokemon();
 		$move = $this->breedingChainsModel->getMove();
@@ -34,7 +34,6 @@ final class BreedingChainsView
 			foreach ($chain as $record) {
 				$records[] = [
 					'icon' => $record->getFormIcon(),
-					'generationIdentifier' => $record->getGenerationIdentifier(),
 					'identifier' => $record->getPokemonIdentifier(),
 					'name' => $record->getPokemonName(),
 					'versionGroup' => $this->dexFormatter->formatDexVersionGroup(
@@ -57,18 +56,18 @@ final class BreedingChainsView
 		}
 
 		// Navigational breadcrumbs.
-		$generationIdentifier = $generation->getIdentifier();
+		$vgIdentifier = $versionGroup->getIdentifier();
 		$pokemonIdentifier = $pokemon['identifier'];
 		$breadcrumbs = [[
 			'text' => 'Dex',
 		], [
-			'url' => "/dex/$generationIdentifier/pokemon",
+			'url' => "/dex/$vgIdentifier/pokemon",
 			'text' => 'Pokémon',
 		], [
-			'url' => "/dex/$generationIdentifier/pokemon/$pokemonIdentifier",
+			'url' => "/dex/$vgIdentifier/pokemon/$pokemonIdentifier",
 			'text' => $pokemon['name'],
 		], [
-			'url' => "/dex/$generationIdentifier/pokemon/$pokemonIdentifier#egg-moves",
+			'url' => "/dex/$vgIdentifier/pokemon/$pokemonIdentifier#egg-moves",
 			'text' => 'Egg Moves',
 		], [
 			'text' => $move['name'] . ' Breeding Chains',

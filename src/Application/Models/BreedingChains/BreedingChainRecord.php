@@ -8,7 +8,6 @@ use Jp\Dex\Domain\Versions\DexVersionGroup;
 final class BreedingChainRecord
 {
 	private string $formIcon;
-	private string $generationIdentifier;
 	private string $pokemonIdentifier;
 	private string $pokemonName;
 	private DexVersionGroup $versionGroup;
@@ -29,7 +28,6 @@ final class BreedingChainRecord
 	 */
 	public function __construct(
 		string $formIcon,
-		string $generationIdentifier,
 		string $pokemonIdentifier,
 		string $pokemonName,
 		DexVersionGroup $versionGroup,
@@ -40,7 +38,6 @@ final class BreedingChainRecord
 		string $moveMethod
 	) {
 		$this->formIcon = $formIcon;
-		$this->generationIdentifier = $generationIdentifier;
 		$this->pokemonIdentifier = $pokemonIdentifier;
 		$this->pokemonName = $pokemonName;
 		$this->versionGroup = $versionGroup;
@@ -58,14 +55,6 @@ final class BreedingChainRecord
 	public function getFormIcon() : string
 	{
 		return $this->formIcon;
-	}
-
-	/**
-	 * Get the generation identifier.
-	 */
-	public function getGenerationIdentifier() : string
-	{
-		return $this->generationIdentifier;
 	}
 
 	/**
