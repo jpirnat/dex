@@ -27,7 +27,7 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 	 */
 	public function getByVersionGroupAndMove(
 		VersionGroupId $versionGroupId,
-		MoveId $moveId
+		MoveId $moveId,
 	) : TechnicalMachine {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -89,7 +89,7 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 				new MachineType($result['machine_type']),
 				$result['number'],
 				new ItemId($result['item_id']),
-				$moveId
+				$moveId,
 			);
 
 			$tms[$result['version_group_id']] = $tm;
@@ -131,7 +131,7 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 				new MachineType($result['machine_type']),
 				$result['number'],
 				new ItemId($result['item_id']),
-				new MoveId($result['move_id'])
+				new MoveId($result['move_id']),
 			);
 
 			$tms[$result['version_group_id']][$result['move_id']] = $tm;

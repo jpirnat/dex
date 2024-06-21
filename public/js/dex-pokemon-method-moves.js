@@ -6,7 +6,7 @@ Vue.component('dex-pokemon-method-moves', {
 			type: Object,
 			default: {},
 		},
-		generation: {
+		versionGroup: {
 			type: Object,
 			default: {},
 		},
@@ -126,7 +126,7 @@ Vue.component('dex-pokemon-method-moves', {
 								v-tooltip="pokemonMoveTooltip(pokemon, move, vg, method)"
 							>
 								<a :href="
-										'/dex/' + generation.identifier + '/pokemon/' + pokemon.identifier
+										'/dex/' + versionGroup.identifier + '/pokemon/' + pokemon.identifier
 										+ '/breeding/' + move.identifier + '/' + vg.identifier
 									"
 									target="_blank"
@@ -157,12 +157,12 @@ Vue.component('dex-pokemon-method-moves', {
 					</template>
 				</template>
 				<th scope="row" class="dex-pokemon__move-name">
-					<a :href="'/dex/' + generation.identifier + '/moves/' + move.identifier">
+					<a :href="'/dex/' + versionGroup.identifier + '/moves/' + move.identifier">
 						{{ move.name }}
 					</a>
 				</th>
 				<td class="dex-table__move-type">
-					<a :href="'/dex/' + generation.identifier + '/types/' + move.type.identifier">
+					<a :href="'/dex/' + versionGroup.identifier + '/types/' + move.type.identifier">
 						<img :src="'/images/types/' + move.type.icon" :alt="move.type.name">
 					</a>
 				</td>

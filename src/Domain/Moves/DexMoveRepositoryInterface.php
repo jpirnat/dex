@@ -21,7 +21,7 @@ interface DexMoveRepositoryInterface
 	) : DexMove;
 
 	/**
-	 * Get all dex moves in this generation.
+	 * Get all dex moves in this version group.
 	 * This method is used to get data for the dex moves page.
 	 *
 	 * @return DexMove[] Ordered by name.

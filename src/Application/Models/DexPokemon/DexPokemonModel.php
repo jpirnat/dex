@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexPokemon;
 
-use Jp\Dex\Application\Models\GenerationModel;
+use Jp\Dex\Application\Models\VersionGroupModel;
 use Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
@@ -21,7 +21,7 @@ final class DexPokemonModel
 
 
 	public function __construct(
-		private GenerationModel $generationModel,
+		private VersionGroupModel $versionGroupModel,
 		private PokemonRepositoryInterface $pokemonRepository,
 		private PokemonNameRepositoryInterface $pokemonNameRepository,
 		private DexAbilityRepositoryInterface $dexAbilityRepository,
@@ -35,16 +35,16 @@ final class DexPokemonModel
 	 * Set data for the dex Pokémon page.
 	 */
 	public function setData(
-		string $generationIdentifier,
+		string $vgIdentifier,
 		string $pokemonIdentifier,
 		LanguageId $languageId
 	) : void {
-		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
+		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
-			$pokemon->getId()
+			$pokemon->getId(),
 		);
 		$this->pokemon = [
 			'identifier' => $pokemon->getIdentifier(),
@@ -52,28 +52,28 @@ final class DexPokemonModel
 		];
 
 		// Set generations for the generation control.
-		$this->generationModel->setWithPokemon($pokemon->getId());
+		$this->versionGroupModel->setWithPokemon($pokemon->getId());
 
 		// Set the Pokémon's abilities.
 		$this->abilities = $this->dexAbilityRepository->getByPokemon(
-			$generationId,
+			$versionGroupId,
 			$pokemon->getId(),
-			$languageId
+			$languageId,
 		);
 
 		// Set the Pokémon's matchups.
 		$this->dexPokemonMatchupsModel->setData(
-			$generationId,
+			$this->versionGroupModel->getVersionGroup(),
 			$pokemon->getId(),
 			$languageId,
-			$this->abilities
+			$this->abilities,
 		);
 
 		// Get the version groups this Pokémon has appeared in.
 		$this->versionGroups = $this->dexVgRepository->getWithPokemon(
 			$pokemon->getId(),
 			$languageId,
-			$generationId
+			$this->versionGroupModel->getVersionGroup()->getGenerationId(),
 		);
 
 		// Get the generation the Pokémon was introduced in.
@@ -83,7 +83,7 @@ final class DexPokemonModel
 		$this->dexPokemonMovesModel->setData(
 			$pokemon->getId(),
 			$introducedInVg->getGenerationId(),
-			$generationId,
+			$this->versionGroupModel->getVersionGroup(),
 			$languageId,
 			$this->versionGroups
 		);
@@ -93,9 +93,9 @@ final class DexPokemonModel
 	/**
 	 * Get the generation model.
 	 */
-	public function getGenerationModel() : GenerationModel
+	public function getVersionGroupModel() : VersionGroupModel
 	{
-		return $this->generationModel;
+		return $this->versionGroupModel;
 	}
 
 	/**

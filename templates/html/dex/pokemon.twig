@@ -9,14 +9,14 @@
 <div id="app" v-cloak>
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="generation-control" v-if="generations.length">
+	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
-			<li v-for="g in generations">
-				<a :href="'/dex/' + g.identifier + '/pokemon/' + pokemon.identifier"
+			<li v-for="vg in versionGroups">
+				<a :href="'/dex/' + vg.identifier + '/pokemon/' + pokemon.identifier"
 					:class="{
-						'current': g.identifier === generation.identifier
+						'current': vg.identifier === versionGroup.identifier
 					}"
-				>{{ g.name }}</a>
+				>{{ vg.name }}</a>
 			</li>
 		</ul>
 	</div>
@@ -33,7 +33,7 @@
 					<div :class="{
 						'dex-pokemon__ability--hidden': ability.isHiddenAbility,
 					}">
-						<a :href="'/dex/' + generation.identifier + '/abilities/' + ability.identifier"
+						<a :href="'/dex/' + versionGroup.identifier + '/abilities/' + ability.identifier"
 							class="dex-link"
 						>{{ ability.name }}</a>
 						<template v-if="ability.isHiddenAbility"> (Hidden Ability)</template>
@@ -55,7 +55,7 @@
 					@mouseover="onDamageTakenHover(damageTaken[type.identifier])"
 					@mouseleave="onDamageTakenUnhover"
 				>
-					<a :href="'/dex/' + generation.identifier + '/types/' + type.identifier">
+					<a :href="'/dex/' + versionGroup.identifier + '/types/' + type.identifier">
 						<img :src="'/images/types/' + type.icon" :alt="type.name">
 					</a>
 					<span :class="{
@@ -93,7 +93,7 @@
 			</ul>
 		</nav>
 
-		<div v-if="generation.id !== 1">
+		<div v-if="versionGroup.generationId > 1">
 			<label>
 				<input type="checkbox" v-model="showOlderGames" @click="toggleOlderGames">
 				Show older generation games
@@ -110,7 +110,7 @@
 			<tbody is="dex-pokemon-method-moves"
 				v-for="method in visibleMethods" :key="method.identifier"
 				:method="method"
-				:generation="generation"
+				:version-group="versionGroup"
 				:pokemon="pokemon"
 				:version-groups="visibleVersionGroups"
 				:show-move-descriptions="showMoveDescriptions"

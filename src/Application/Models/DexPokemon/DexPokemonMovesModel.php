@@ -15,6 +15,7 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroup;
 
 final class DexPokemonMovesModel
 {
@@ -40,19 +41,19 @@ final class DexPokemonMovesModel
 	public function setData(
 		PokemonId $pokemonId,
 		GenerationId $introducedInGenerationId,
-		GenerationId $generationId,
+		VersionGroup $versionGroup,
 		LanguageId $languageId,
-		array $versionGroups
+		array $versionGroups,
 	) : void {
 		$pokemonMoves = $this->pokemonMoveRepository->getByPokemonAndGeneration(
 			$pokemonId,
-			$generationId,
+			$versionGroup->getGenerationId(),
 		);
 
 		// Get all the TMs that could show up in the table.
 		$tms = $this->tmRepository->getBetween(
 			$introducedInGenerationId,
-			$generationId
+			$versionGroup->getGenerationId(),
 		);
 
 		$moveIds = [];
@@ -115,9 +116,9 @@ final class DexPokemonMovesModel
 
 		// Get move data.
 		$moves = $this->dexMoveRepository->getByPokemon(
-			$generationId,
+			$versionGroup->getId(),
 			$pokemonId,
-			$languageId
+			$languageId,
 		);
 
 		// Compile the dex Pokémon move records.

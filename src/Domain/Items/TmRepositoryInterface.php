@@ -17,7 +17,7 @@ interface TmRepositoryInterface
 	 */
 	public function getByVersionGroupAndMove(
 		VersionGroupId $versionGroupId,
-		MoveId $moveId
+		MoveId $moveId,
 	) : TechnicalMachine;
 
 	/**

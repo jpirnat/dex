@@ -6,16 +6,16 @@ const app = new Vue({
 		loading: true,
 		loaded: false,
 
-		generation: {},
+		versionGroup: {},
 		breadcrumbs: [],
-		generations: [],
+		versionGroups: [],
 		pokemon: {},
 		abilities: [],
 		types: [],
 		abilitiesDamageTaken: {},
 		damageTakenAbilities: [],
 		methods: [],
-		versionGroups: [],
+		dexVersionGroups: [],
 		showMoveDescriptionsOption: true,
 
 		hoverDamageTaken: null,
@@ -29,10 +29,10 @@ const app = new Vue({
 		},
 		visibleVersionGroups() {
 			if (this.showOlderGames) {
-				return this.versionGroups;
+				return this.dexVersionGroups;
 			}
 
-			return this.versionGroups.filter(vg => vg.generationId === this.generation.id);
+			return this.dexVersionGroups.filter(vg => vg.generationId === this.versionGroup.generationId);
 		},
 		visibleMethods() {
 			if (this.showOlderGames) {
@@ -57,16 +57,16 @@ const app = new Vue({
 
 			if (response.data) {
 				const data = response.data;
-				this.generation = data.generation;
+				this.versionGroup = data.versionGroup;
 				this.breadcrumbs = data.breadcrumbs;
-				this.generations = data.generations;
+				this.versionGroups = data.versionGroups;
 				this.pokemon = data.pokemon;
 				this.abilities = data.abilities;
 				this.types = data.types;
 				this.abilitiesDamageTaken = data.damageTaken;
 				this.damageTakenAbilities = data.damageTakenAbilities;
 				this.methods = data.methods;
-				this.versionGroups = data.versionGroups;
+				this.dexVersionGroups = data.dexVersionGroups;
 				this.showMoveDescriptionsOption = data.showMoveDescriptions;
 
 				document.title = data.title;

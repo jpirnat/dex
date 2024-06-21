@@ -81,7 +81,7 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 	}
 
 	/**
-	 * Get all dex moves in this generation.
+	 * Get all dex moves in this version group.
 	 * This method is used to get data for the dex moves page.
 	 *
 	 * @return DexMove[] Ordered by name.
@@ -155,7 +155,7 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 		PokemonId $pokemonId,
 		LanguageId $languageId,
 	) : array {
-		$dexTypes = $this->dexTypeRepository->getByGeneration(
+		$dexTypes = $this->dexTypeRepository->getByVersionGroup(
 			$versionGroupId,
 			$languageId,
 		);
@@ -189,12 +189,11 @@ final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 						`move_id`
 					FROM `pokemon_moves`
 					WHERE `pokemon_id` = :pokemon_id
-						AND `version_group_id` <= :version_group_id3
+						AND `version_group_id` <= :version_group_id2
 				)'
 		);
 		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id3', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();

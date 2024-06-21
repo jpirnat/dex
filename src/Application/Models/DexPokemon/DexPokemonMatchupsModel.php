@@ -10,6 +10,7 @@ use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroup;
 
 final class DexPokemonMatchupsModel
 {
@@ -35,17 +36,17 @@ final class DexPokemonMatchupsModel
 	 * Set data for the dex Pokémon page's matchups.
 	 */
 	public function setData(
-		GenerationId $generationId,
+		VersionGroup $versionGroup,
 		PokemonId $pokemonId,
 		LanguageId $languageId,
-		array $abilities
+		array $abilities,
 	) : void {
 		$this->damageTaken = [];
 		$this->abilities = [];
 
 		// Get all types, and initialize their matchup multipliers to 1.
 		$allTypes = $this->dexTypeRepository->getMainByVersionGroup(
-			$versionGroupId,
+			$versionGroup->getId(),
 			$languageId,
 		);
 		foreach ($allTypes as $type) {
@@ -55,14 +56,14 @@ final class DexPokemonMatchupsModel
 
 		// Get the Pokémon's types, then get the matchups for those types.
 		$pokemonTypes = $this->dexTypeRepository->getByPokemon(
-			$versionGroupId,
+			$versionGroup->getId(),
 			$pokemonId,
 			$languageId,
 		);
 		foreach ($pokemonTypes as $type) {
 			$matchups = $this->typeMatchupRepository->getByDefendingType(
-				$generationId,
-				$type->getId()
+				$versionGroup->getGenerationId(),
+				$type->getId(),
 			);
 			foreach ($matchups as $matchup) {
 				// Factor this matchup into the Pokémon's overall matchups.
@@ -76,7 +77,7 @@ final class DexPokemonMatchupsModel
 		}
 
 		foreach ($abilities as $ability) {
-			$this->checkForMatchups($generationId, $ability);
+			$this->checkForMatchups($versionGroup->getGenerationId(), $ability);
 		}
 
 		$this->abilities[] = [

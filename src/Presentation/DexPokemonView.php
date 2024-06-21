@@ -24,9 +24,9 @@ final class DexPokemonView
 	 */
 	public function index() : ResponseInterface
 	{
-		$generationModel = $this->dexPokemonModel->getGenerationModel();
-		$generation = $generationModel->getGeneration();
-		$generations = $generationModel->getGenerations();
+		$versionGroupModel = $this->dexPokemonModel->getVersionGroupModel();
+		$versionGroup = $versionGroupModel->getVersionGroup();
+		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$pokemon = $this->dexPokemonModel->getPokemon();
 		$abilities = $this->dexPokemonModel->getAbilities();
@@ -36,8 +36,8 @@ final class DexPokemonView
 		$damageTaken = $dexPokemonMatchupsModel->getDamageTaken();
 		$damageTakenAbilities = $dexPokemonMatchupsModel->getAbilities();
 
-		$versionGroups = $this->dexPokemonModel->getVersionGroups();
-		$showMoveDescriptions = $generation->getId()->value() >= 3;
+		$dexVersionGroups = $this->dexPokemonModel->getVersionGroups();
+		$showMoveDescriptions = $versionGroup->getGenerationId()->value() >= 3;
 
 		$dexPokemonMovesModel = $this->dexPokemonModel->getDexPokemonMovesModel();
 		$methods = $dexPokemonMovesModel->getMethods();
@@ -49,7 +49,7 @@ final class DexPokemonView
 
 		$vgIdentifiers = array_map(function (DexVersionGroup $vg) : string {
 			return $vg->getIdentifier();
-		}, $versionGroups);
+		}, $dexVersionGroups);
 		$byMachine = function (DexPokemonMove $a, DexPokemonMove $b) use ($vgIdentifiers) : int {
 			$aVgData = $a->getVersionGroupData();
 			$bVgData = $b->getVersionGroupData();
@@ -121,11 +121,11 @@ final class DexPokemonView
 		}
 
 		// Navigational breadcrumbs.
-		$generationIdentifier = $generation->getIdentifier();
+		$vgIdentifier = $versionGroup->getIdentifier();
 		$breadcrumbs = [[
 			'text' => 'Dex',
 		], [
-			'url' => "/dex/$generationIdentifier/pokemon",
+			'url' => "/dex/$vgIdentifier/pokemon",
 			'text' => 'Pokémon',
 		], [
 			'text' => $pokemon['name'],
@@ -135,13 +135,14 @@ final class DexPokemonView
 			'data' => [
 				'title' => 'Porydex - Pokémon - ' . $pokemon['name'],
 
-				'generation' => [
-					'id' => $generation->getId()->value(),
-					'identifier' => $generation->getIdentifier(),
+				'versionGroup' => [
+					'id' => $versionGroup->getId()->value(),
+					'identifier' => $versionGroup->getIdentifier(),
+					'generationId' => $versionGroup->getGenerationId()->value(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
-				'generations' => $this->dexFormatter->formatGenerations($generations),
+				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'pokemon' => $pokemon,
 				'abilities' => $abilities,
@@ -151,7 +152,7 @@ final class DexPokemonView
 				'damageTakenAbilities' => $damageTakenAbilities,
 
 				'methods' => $this->formatDexPokemonMoveMethods($methods),
-				'versionGroups' => $this->dexFormatter->formatDexVersionGroups($versionGroups),
+				'dexVersionGroups' => $this->dexFormatter->formatDexVersionGroups($dexVersionGroups),
 				'showMoveDescriptions' => $showMoveDescriptions,
 			]
 		]);
