@@ -53,11 +53,10 @@ final class BreedingChainsModel
 	 * Set breeding chain data for this Pokémon, move, and version group combination.
 	 */
 	public function setData(
-		string $generationIdentifier,
+		string $vgIdentifier,
 		string $pokemonIdentifier,
 		string $moveIdentifier,
-		string $versionGroupIdentifier,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$generationId = $this->generationModel->setByIdentifier($generationIdentifier);
 

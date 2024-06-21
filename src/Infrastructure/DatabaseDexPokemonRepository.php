@@ -15,7 +15,7 @@ use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
@@ -33,27 +33,27 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 	 * @throws PokemonNotFoundException if no Pokémon exists with this id.
 	 */
 	public function getById(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
 		LanguageId $languageId
 	) : DexPokemon {
 		$types = $this->dexTypeRepository->getByPokemon(
-			$generationId,
+			$versionGroupId,
 			$pokemonId,
-			$languageId
+			$languageId,
 		);
 		$abilities = $this->dexPokemonAbilityRepository->getByPokemon(
-			$generationId,
+			$versionGroupId,
 			$pokemonId,
-			$languageId
+			$languageId,
 		);
-		$baseStats = $this->baseStatRepository->getByGenerationAndPokemon(
-			$generationId,
-			$pokemonId
+		$baseStats = $this->baseStatRepository->getByVersionGroupAndPokemon(
+			$versionGroupId,
+			$pokemonId,
 		);
 
 		// Normalize the base stats.
-		$statIds = StatId::getByGeneration($generationId);
+		$statIds = StatId::getByVersionGroup($VersionGroup);
 		$idsToIdentifiers = StatId::getIdsToIdentifiers();
 		$normalized = [];
 		foreach ($statIds as $statId) {
@@ -75,13 +75,13 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `p`.`id` = `pn`.`pokemon_id`
 			WHERE `p`.`id` = :pokemon_id
-				AND `fi`.`generation_id` = :generation_id
+				AND `fi`.`version_group_id` = :version_group_id
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -101,7 +101,7 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 			$abilities ?? [],
 			$baseStats,
 			(int) array_sum($baseStats),
-			$result['sort']
+			$result['sort'],
 		);
 
 		return $dexPokemon;
@@ -114,23 +114,23 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 	 * @return DexPokemon[] Ordered by Pokémon sort value.
 	 */
 	public function getWithAbility(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		AbilityId $abilityId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
 		$types = $this->dexTypeRepository->getByPokemonAbility(
-			$generationId,
+			$versionGroupId,
 			$abilityId,
-			$languageId
+			$languageId,
 		);
 		$abilities = $this->dexPokemonAbilityRepository->getByPokemonAbility(
-			$generationId,
+			$versionGroupId,
 			$abilityId,
-			$languageId
+			$languageId,
 		);
 		$baseStats = $this->baseStatRepository->getByPokemonAbility(
-			$generationId,
-			$abilityId
+			$versionGroupId,
+			$abilityId,
 		);
 
 		$stmt = $this->db->prepare(
@@ -145,7 +145,7 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 				ON `p`.`id` = `fi`.`form_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `p`.`id` = `pn`.`pokemon_id`
-			WHERE `fi`.`generation_id` = :generation_id1
+			WHERE `fi`.`version_group_id` = :version_group_id1
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
@@ -153,13 +153,13 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 					SELECT
 						`pokemon_id`
 					FROM `pokemon_abilities`
-					WHERE `generation_id` = :generation_id2
+					WHERE `version_group_id` = :version_group_id2
 						AND `ability_id` = :ability_id
 				)
 			ORDER BY `p`.`sort`'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -177,7 +177,7 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 				$abilities[$result['id']] ?? [],
 				$pokemonBaseStats,
 				(int) array_sum($pokemonBaseStats),
-				$result['sort']
+				$result['sort'],
 			);
 
 			$dexPokemons[] = $dexPokemon;
@@ -193,23 +193,23 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 	 * @return DexPokemon[] Indexed by Pokémon id.
 	 */
 	public function getWithMove(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
 		$types = $this->dexTypeRepository->getByPokemonMove(
-			$generationId,
+			$versionGroupId,
 			$moveId,
-			$languageId
+			$languageId,
 		);
 		$abilities = $this->dexPokemonAbilityRepository->getByPokemonMove(
-			$generationId,
+			$versionGroupId,
 			$moveId,
-			$languageId
+			$languageId,
 		);
 		$baseStats = $this->baseStatRepository->getByPokemonMove(
-			$generationId,
-			$moveId
+			$versionGroupId,
+			$moveId,
 		);
 
 		$stmt = $this->db->prepare(
@@ -224,16 +224,14 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 				ON `p`.`id` = `fi`.`form_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `p`.`id` = `pn`.`pokemon_id`
-			WHERE `fi`.`generation_id` = :generation_id1
+			WHERE `fi`.`version_group_id` = :version_group_id1
 				AND `p`.`id` IN (
 					SELECT DISTINCT
 						`f`.`pokemon_id`
 					FROM `version_group_forms` AS `vgf`
-					INNER JOIN `version_groups` AS `vg`
-						ON `vgf`.`version_group_id` = `vg`.`id`
 					INNER JOIN `forms` AS `f`
 						ON `vgf`.`form_id` = `f`.`id`
-					WHERE `vg`.`generation_id` = :generation_id2
+					WHERE `vgf`.`version_group_id` = :version_group_id2
 				)
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
@@ -242,15 +240,13 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 					SELECT
 						`pokemon_id`
 					FROM `pokemon_moves` AS `pm`
-					INNER JOIN `version_groups` AS `vg`
-						ON `pm`.`version_group_id` = `vg`.`id`
-					WHERE `pm`.`move_id` = :move_id
-						AND `vg`.`generation_id` <= :generation_id3
+					WHERE `pm`.`version_group_id` <= :version_group_id3
+						AND `pm`.`move_id` = :move_id
 				)'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id3', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id3', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -268,7 +264,7 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 				$abilities[$result['id']] ?? [],
 				$pokemonBaseStats,
 				(int) array_sum($pokemonBaseStats),
-				$result['sort']
+				$result['sort'],
 			);
 
 			$dexPokemons[$result['id']] = $dexPokemon;
@@ -278,25 +274,25 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 	}
 
 	/**
-	 * Get all dex Pokémon in this generation.
+	 * Get all dex Pokémon in this version group.
 	 * This method is used to get data for the dex Pokémons page.
 	 *
 	 * @return DexPokemon[] Ordered by Pokémon sort value.
 	 */
-	public function getByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array {
-		$types = $this->dexTypeRepository->getByPokemonGeneration(
-			$generationId,
-			$languageId
+		$types = $this->dexTypeRepository->getByPokemonVersionGroup(
+			$versionGroupId,
+			$languageId,
 		);
-		$abilities = $this->dexPokemonAbilityRepository->getByGeneration(
-			$generationId,
-			$languageId
+		$abilities = $this->dexPokemonAbilityRepository->getByVersionGroup(
+			$versionGroupId,
+			$languageId,
 		);
-		$baseStats = $this->baseStatRepository->getByGeneration(
-			$generationId
+		$baseStats = $this->baseStatRepository->getByVersionGroup(
+			$versionGroupId,
 		);
 
 		$stmt = $this->db->prepare(
@@ -311,25 +307,22 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 				ON `p`.`id` = `fi`.`form_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `p`.`id` = `pn`.`pokemon_id`
-			WHERE `fi`.`generation_id` = :generation_id1
+			WHERE `fi`.`version_group_id` = :version_group_id1
 				AND `p`.`id` IN (
 					SELECT DISTINCT
 						`f`.`pokemon_id`
 					FROM `version_group_forms` AS `vgf`
-					INNER JOIN `version_groups` AS `vg`
-						ON `vgf`.`version_group_id` = `vg`.`id`
 					INNER JOIN `forms` AS `f`
 						ON `vgf`.`form_id` = `f`.`id`
-					WHERE `vg`.`generation_id` = :generation_id2
+					WHERE `vgf`.`version_group_id` = :version_group_id2
 				)
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
-				
 			ORDER BY `p`.`sort`'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -346,7 +339,7 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 				$abilities[$result['id']] ?? [],
 				$pokemonBaseStats,
 				(int) array_sum($pokemonBaseStats),
-				$result['sort']
+				$result['sort'],
 			);
 
 			$dexPokemons[] = $dexPokemon;
@@ -362,23 +355,23 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 	 * @return DexPokemon[] Ordered by Pokémon sort value.
 	 */
 	public function getByType(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		TypeId $typeId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
 		$types = $this->dexTypeRepository->getByPokemonType(
-			$generationId,
+			$versionGroupId,
 			$typeId,
-			$languageId
+			$languageId,
 		);
 		$abilities = $this->dexPokemonAbilityRepository->getByPokemonType(
-			$generationId,
+			$versionGroupId,
 			$typeId,
-			$languageId
+			$languageId,
 		);
 		$baseStats = $this->baseStatRepository->getByPokemonType(
-			$generationId,
-			$typeId
+			$versionGroupId,
+			$typeId,
 		);
 
 		$stmt = $this->db->prepare(
@@ -393,16 +386,14 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 				ON `p`.`id` = `fi`.`form_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `p`.`id` = `pn`.`pokemon_id`
-			WHERE `fi`.`generation_id` = :generation_id1
+			WHERE `fi`.`version_group_id` = :version_group_id1
 				AND `p`.`id` IN (
 					SELECT DISTINCT
 						`f`.`pokemon_id`
 					FROM `version_group_forms` AS `vgf`
-					INNER JOIN `version_groups` AS `vg`
-						ON `vgf`.`version_group_id` = `vg`.`id`
 					INNER JOIN `forms` AS `f`
 						ON `vgf`.`form_id` = `f`.`id`
-					WHERE `vg`.`generation_id` = :generation_id2
+					WHERE `vgf`.`version_group_id` = :version_group_id2
 				)
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
@@ -411,14 +402,14 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 					SELECT
 						`pokemon_id`
 					FROM `pokemon_types`
-					WHERE `generation_id` = :generation_id3
+					WHERE `version_group_id` = :version_group_id3
 						AND `type_id` = :type_id
 				)
 			ORDER BY `p`.`sort`'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id3', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id3', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -436,7 +427,7 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 				$abilities[$result['id']] ?? [],
 				$pokemonBaseStats,
 				(int) array_sum($pokemonBaseStats),
-				$result['sort']
+				$result['sort'],
 			);
 
 			$dexPokemons[] = $dexPokemon;

@@ -110,7 +110,7 @@ final class DexMoveModel
 
 		$this->dexMovePokemonModel->setData(
 			$moveId,
-			$versionGroupId,
+			$this->versionGroupModel->getVersionGroup(),
 			$languageId,
 			$this->versionGroups,
 		);

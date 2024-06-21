@@ -21,10 +21,10 @@ final class DexPokemonController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$generationIdentifier = $request->getAttribute('generationIdentifier');
+		$vgIdentifier = $request->getAttribute('vgIdentifier');
 		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexPokemonModel->setData($generationIdentifier, $pokemonIdentifier, $languageId);
+		$this->dexPokemonModel->setData($vgIdentifier, $pokemonIdentifier, $languageId);
 	}
 }

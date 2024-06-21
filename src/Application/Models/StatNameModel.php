@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatName;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 class StatNameModel
 {

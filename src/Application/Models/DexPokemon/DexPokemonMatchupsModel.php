@@ -44,9 +44,9 @@ final class DexPokemonMatchupsModel
 		$this->abilities = [];
 
 		// Get all types, and initialize their matchup multipliers to 1.
-		$allTypes = $this->dexTypeRepository->getMainByGeneration(
-			$generationId,
-			$languageId
+		$allTypes = $this->dexTypeRepository->getMainByVersionGroup(
+			$versionGroupId,
+			$languageId,
 		);
 		foreach ($allTypes as $type) {
 			$identifier = $type->getIdentifier();
@@ -55,9 +55,9 @@ final class DexPokemonMatchupsModel
 
 		// Get the Pokémon's types, then get the matchups for those types.
 		$pokemonTypes = $this->dexTypeRepository->getByPokemon(
-			$generationId,
+			$versionGroupId,
 			$pokemonId,
-			$languageId
+			$languageId,
 		);
 		foreach ($pokemonTypes as $type) {
 			$matchups = $this->typeMatchupRepository->getByDefendingType(

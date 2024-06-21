@@ -46,7 +46,7 @@ final class DexPokemonMovesModel
 	) : void {
 		$pokemonMoves = $this->pokemonMoveRepository->getByPokemonAndGeneration(
 			$pokemonId,
-			$generationId
+			$generationId,
 		);
 
 		// Get all the TMs that could show up in the table.

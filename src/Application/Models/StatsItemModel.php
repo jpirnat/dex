@@ -87,7 +87,7 @@ final class StatsItemModel
 		);
 
 		// Get the item description.
-		$this->itemDescription = $this->itemDescriptionRepository->getByGenerationAndLanguageAndItem(
+		$this->itemDescription = $this->itemDescriptionRepository->getByItem(
 			$this->format->getGenerationId(),
 			$languageId,
 			$item->getId()

@@ -14,7 +14,7 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
-use Jp\Dex\Domain\Versions\VersionGroupId;
+use Jp\Dex\Domain\Versions\VersionGroup;
 
 final class DexMovePokemonModel
 {
@@ -42,13 +42,13 @@ final class DexMovePokemonModel
 	 */
 	public function setData(
 		MoveId $moveId,
-		VersionGroupId $versionGroupId,
+		VersionGroup $versionGroup,
 		LanguageId $languageId,
 		array $versionGroups
 	) : void {
-		$pokemonMoves = $this->pokemonMoveRepository->getByMoveAndVersionGroup(
+		$pokemonMoves = $this->pokemonMoveRepository->getByMoveAndGeneration(
 			$moveId,
-			$versionGroupId,
+			$versionGroup->getGenerationId(),
 		);
 
 		// Get all the TMs that could show up in the table.
@@ -109,7 +109,7 @@ final class DexMovePokemonModel
 
 		// Get Pokémon data.
 		$pokemons = $this->dexPokemonRepository->getWithMove(
-			$versionGroupId,
+			$versionGroup->getId(),
 			$moveId,
 			$languageId,
 		);
@@ -135,7 +135,7 @@ final class DexMovePokemonModel
 					$pokemon->getAbilities(),
 					$pokemon->getBaseStats(),
 					$pokemon->getBst(),
-					$pokemon->getSort()
+					$pokemon->getSort(),
 				);
 			}
 		}
@@ -147,7 +147,7 @@ final class DexMovePokemonModel
 		);
 
 		// Get stat name abbreviations.
-		$this->stats = $this->statNameModel->getByVersionGroup($versionGroupId, $languageId);
+		$this->stats = $this->statNameModel->getByVersionGroup($versionGroup->getId(), $languageId);
 
 		// Compile the dex move Pokémon method records.
 		foreach ($moveMethods as $methodId => $moveMethod) {

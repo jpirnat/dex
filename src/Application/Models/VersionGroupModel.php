@@ -6,6 +6,7 @@ namespace Jp\Dex\Application\Models;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroupId;
@@ -62,6 +63,14 @@ final class VersionGroupModel
 	public function setWithMove(MoveId $moveId) : void
 	{
 		$this->versionGroups = $this->versionGroupRepository->getWithMove($moveId);
+	}
+
+	/**
+	 * Set the navigable version groups to those that have this move.
+	 */
+	public function setWithType(TypeId $typeId) : void
+	{
+		$this->versionGroups = $this->versionGroupRepository->getWithType($typeId);
 	}
 
 	/**

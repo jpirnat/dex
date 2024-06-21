@@ -6,6 +6,7 @@ namespace Jp\Dex\Domain\Versions;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Types\TypeId;
 
 interface VersionGroupRepositoryInterface
 {
@@ -45,6 +46,13 @@ interface VersionGroupRepositoryInterface
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
 	 */
 	public function getWithMove(MoveId $moveId) : array;
+
+	/**
+	 * Get version groups that have this type.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithType(TypeId $typeId) : array;
 
 	/**
 	 * Get version groups that have this ability.

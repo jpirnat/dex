@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
@@ -21,21 +21,21 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	) {}
 
 	/**
-	 * Get a Pokémon's base stats by generation and Pokémon.
+	 * Get a Pokémon's base stats by version group and Pokémon.
 	 */
-	public function getByGenerationAndPokemon(
-		GenerationId $generationId,
-		PokemonId $pokemonId
+	public function getByVersionGroupAndPokemon(
+		VersionGroupId $versionGroupId,
+		PokemonId $pokemonId,
 	) : StatValueContainer {
 		$stmt = $this->db->prepare(
 			'SELECT
 				`stat_id`,
 				`value`
 			FROM `base_stats`
-			WHERE `generation_id` = :generation_id
+			WHERE `version_group_id` = :version_group_id
 				AND `pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -44,7 +44,7 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$baseStat = new StatValue(
 				new StatId($result['stat_id']),
-				$result['value']
+				$result['value'],
 			);
 
 			$baseStats->add($baseStat);
@@ -61,8 +61,8 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	 *     by each stat's json identifier.
 	 */
 	public function getByPokemonAbility(
-		GenerationId $generationId,
-		AbilityId $abilityId
+		VersionGroupId $versionGroupId,
+		AbilityId $abilityId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -70,17 +70,17 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 				`stat_id`,
 				`value`
 			FROM `base_stats`
-			WHERE `generation_id` = :generation_id1
+			WHERE `version_group_id` = :version_group_id1
 				AND `pokemon_id` IN (
 					SELECT
 						`pokemon_id`
 					FROM `pokemon_abilities`
-					WHERE `generation_id` = :generation_id2
+					WHERE `version_group_id` = :version_group_id2
 						AND `ability_id` = :ability_id
 				)'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -90,7 +90,7 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 			$baseStats[$result['pokemon_id']][$result['stat_id']] = $result['value'];
 		}
 
-		return $this->normalize($generationId, $baseStats);
+		return $this->normalize($versionGroupId, $baseStats);
 	}
 
 	/**
@@ -101,8 +101,8 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	 *     by each stat's json identifier.
 	 */
 	public function getByPokemonMove(
-		GenerationId $generationId,
-		MoveId $moveId
+		VersionGroupId $versionGroupId,
+		MoveId $moveId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -110,19 +110,17 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 				`stat_id`,
 				`value`
 			FROM `base_stats`
-			WHERE `generation_id` = :generation_id1
+			WHERE `version_group_id` = :version_group_id1
 				AND `pokemon_id` IN (
 					SELECT
 						`pokemon_id`
-					FROM `pokemon_moves` AS `pm`
-					INNER JOIN `version_groups` AS `vg`
-						ON `pm`.`version_group_id` = `vg`.`id`
-					WHERE `pm`.`move_id` = :move_id
-						AND `vg`.`generation_id` <= :generation_id2
+					FROM `pokemon_moves`
+					WHERE `move_id` = :move_id
+						AND `version_group_id` <= :version_group_id2
 				)'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -132,17 +130,17 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 			$baseStats[$result['pokemon_id']][$result['stat_id']] = $result['value'];
 		}
 
-		return $this->normalize($generationId, $baseStats);
+		return $this->normalize($versionGroupId, $baseStats);
 	}
 
 	/**
-	 * Get all base stats had by Pokémon in this generation.
+	 * Get all base stats had by Pokémon in this version group.
 	 * This method is used to get data for the dex Pokémons page.
 	 *
 	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
 	 *     by each stat's json identifier.
 	 */
-	public function getByGeneration(GenerationId $generationId) : array
+	public function getByVersionGroup(VersionGroupId $versionGroupId) : array
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -150,9 +148,9 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 				`stat_id`,
 				`value`
 			FROM `base_stats`
-			WHERE `generation_id` = :generation_id'
+			WHERE `version_group_id` = :version_group_id'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$baseStats = [];
@@ -161,7 +159,7 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 			$baseStats[$result['pokemon_id']][$result['stat_id']] = $result['value'];
 		}
 
-		return $this->normalize($generationId, $baseStats);
+		return $this->normalize($versionGroupId, $baseStats);
 	}
 
 	/**
@@ -172,8 +170,8 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 	 *     by each stat's json identifier.
 	 */
 	public function getByPokemonType(
-		GenerationId $generationId,
-		TypeId $typeId
+		VersionGroupId $versionGroupId,
+		TypeId $typeId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -181,17 +179,17 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 				`stat_id`,
 				`value`
 			FROM `base_stats`
-			WHERE `generation_id` = :generation_id1
+			WHERE `version_group_id` = :version_group_id1
 				AND `pokemon_id` IN (
 					SELECT
 						`pokemon_id`
 					FROM `pokemon_types`
-					WHERE `generation_id` = :generation_id2
+					WHERE `version_group_id` = :version_group_id2
 						AND `type_id` = :type_id
 				)'
 		);
-		$stmt->bindValue(':generation_id1', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id2', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -201,23 +199,22 @@ final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 			$baseStats[$result['pokemon_id']][$result['stat_id']] = $result['value'];
 		}
 
-		return $this->normalize($generationId, $baseStats);
+		return $this->normalize($versionGroupId, $baseStats);
 	}
 
 	/**
 	 * Normalize the intermediate results of this class's other methods, by 
 	 * removing the inner array indexing and ordering the stats.
 	 *
-	 * @param GenerationId $generationId
 	 * @param int[][] $baseStats Outer array indexed by Pokémon id, inner arrays
 	 *     indexed by stat id.
 	 *
 	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
 	 *     by each stat's json identifier.
 	 */
-	private function normalize(GenerationId $generationId, array $baseStats) : array
+	private function normalize(VersionGroupId $versionGroupId, array $baseStats) : array
 	{
-		$statIds = StatId::getByGeneration($generationId);
+		$statIds = StatId::getByVersionGroup($versionGroupId);
 		$idsToIdentifiers = StatId::getIdsToIdentifiers();
 		$normalized = [];
 

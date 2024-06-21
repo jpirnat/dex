@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface DexPokemonRepositoryInterface
 {
@@ -17,9 +17,9 @@ interface DexPokemonRepositoryInterface
 	 * @throws PokemonNotFoundException if no Pokémon exists with this id.
 	 */
 	public function getById(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : DexPokemon;
 
 	/**
@@ -29,9 +29,9 @@ interface DexPokemonRepositoryInterface
 	 * @return DexPokemon[] Ordered by Pokémon sort value.
 	 */
 	public function getWithAbility(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		AbilityId $abilityId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 
 	/**
@@ -41,20 +41,20 @@ interface DexPokemonRepositoryInterface
 	 * @return DexPokemon[] Indexed by Pokémon id.
 	 */
 	public function getWithMove(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 
 	/**
-	 * Get all dex Pokémon in this generation.
+	 * Get all dex Pokémon in this version group.
 	 * This method is used to get data for the dex Pokémons page.
 	 *
 	 * @return DexPokemon[] Ordered by Pokémon sort value.
 	 */
-	public function getByGeneration(
-		GenerationId $generationId,
-		LanguageId $languageId
+	public function getByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array;
 
 	/**
@@ -64,8 +64,8 @@ interface DexPokemonRepositoryInterface
 	 * @return DexPokemon[] Ordered by Pokémon sort value.
 	 */
 	public function getByType(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		TypeId $typeId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 }

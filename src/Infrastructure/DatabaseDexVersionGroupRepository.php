@@ -26,7 +26,7 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 	 */
 	public function getById(
 		VersionGroupId $versionGroupId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : DexVersionGroup {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -57,7 +57,7 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 			$result['identifier'],
 			new GenerationId($result['generation_id']),
 			$result['icon'],
-			$result['name']
+			$result['name'],
 		);
 	}
 
@@ -71,7 +71,7 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 	public function getWithPokemon(
 		PokemonId $pokemonId,
 		LanguageId $languageId,
-		GenerationId $end
+		GenerationId $end,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -108,7 +108,7 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['icon'],
-				$result['name']
+				$result['name'],
 			);
 
 			$versionGroups[$result['id']] = $vg;
@@ -135,7 +135,7 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 	public function getWithMove(
 		MoveId $moveId,
 		LanguageId $languageId,
-		GenerationId $end
+		GenerationId $end,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -150,7 +150,7 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 			WHERE `vg`.`id` IN (
 				SELECT
 					`version_group_id`
-				FROM `version_group_moves`
+				FROM `vg_moves`
 				WHERE `move_id` = :move_id
 			)
 			AND `vgn`.`language_id` = :language_id
@@ -170,7 +170,7 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['icon'],
-				$result['name']
+				$result['name'],
 			);
 
 			$versionGroups[$result['id']] = $vg;

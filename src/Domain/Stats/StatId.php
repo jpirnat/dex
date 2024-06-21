@@ -5,6 +5,7 @@ namespace Jp\Dex\Domain\Stats;
 
 use Jp\Dex\Domain\EntityId;
 use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class StatId extends EntityId
 {
@@ -15,6 +16,35 @@ final class StatId extends EntityId
 	public const SPECIAL = 5;
 	public const SPECIAL_ATTACK = 8;
 	public const SPECIAL_DEFENSE = 9;
+
+	/**
+	 * Get the non battle-only stat ids for this generation.
+	 *
+	 * @return self[]
+	 */
+	public static function getByVersionGroup(VersionGroupId $versionGroupId) : array
+	{
+		$generation = $versionGroupId->value();
+
+		if ($generation <= VersionGroupId::YELLOW) {
+			return [
+				new self(self::HP),
+				new self(self::ATTACK),
+				new self(self::DEFENSE),
+				new self(self::SPECIAL),
+				new self(self::SPEED),
+			];
+		}
+
+		return [
+			new self(self::HP),
+			new self(self::ATTACK),
+			new self(self::DEFENSE),
+			new self(self::SPECIAL_ATTACK),
+			new self(self::SPECIAL_DEFENSE),
+			new self(self::SPEED),
+		];
+	}
 
 	/**
 	 * Get the non battle-only stat ids for this generation.

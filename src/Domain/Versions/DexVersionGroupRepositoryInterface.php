@@ -16,7 +16,7 @@ interface DexVersionGroupRepositoryInterface
 	 */
 	public function getById(
 		VersionGroupId $versionGroupId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : DexVersionGroup;
 
 	/**
@@ -29,7 +29,7 @@ interface DexVersionGroupRepositoryInterface
 	public function getWithPokemon(
 		PokemonId $pokemonId,
 		LanguageId $languageId,
-		GenerationId $end
+		GenerationId $end,
 	) : array;
 
 	/**
@@ -42,6 +42,6 @@ interface DexVersionGroupRepositoryInterface
 	public function getWithMove(
 		MoveId $moveId,
 		LanguageId $languageId,
-		GenerationId $end
+		GenerationId $end,
 	) : array;
 }

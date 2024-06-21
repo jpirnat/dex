@@ -6,6 +6,7 @@ namespace Jp\Dex\Infrastructure;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroupId;
@@ -214,6 +215,51 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 			ORDER BY `sort`'
 		);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['icon'],
+				$result['abbreviation'],
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
+	 * Get version groups that have this type.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithType(TypeId $typeId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`icon`,
+				`abbreviation`,
+				`sort`
+			FROM `version_groups`
+			WHERE `id` IN (
+				SELECT
+					`version_group_id`
+				FROM `vg_types`
+				WHERE `type_id` = :type_id
+			)
+			ORDER BY `sort`'
+		);
+		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$versionGroups = [];
