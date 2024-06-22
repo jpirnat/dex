@@ -15,6 +15,7 @@ use Jp\Dex\Domain\Moves\MoveType;
 use Jp\Dex\Domain\Moves\VgMoveRepositoryInterface;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
@@ -215,6 +216,19 @@ final class DexMoveModel
 			$defendingType = $this->types[$defendingTypeId];
 			$identifier = $defendingType->getIdentifier();
 			$this->damageDealt[$identifier] = $matchup->getMultiplier();
+		}
+
+		if ($moveId->value() === MoveId::FLYING_PRESS) {
+			$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
+				$this->versionGroupModel->getVersionGroup()->getGenerationId(),
+				new TypeId(TypeId::FLYING),
+			);
+			foreach ($attackingMatchups as $matchup) {
+				$defendingTypeId = $matchup->getDefendingTypeId()->value();
+				$defendingType = $this->types[$defendingTypeId];
+				$identifier = $defendingType->getIdentifier();
+				$this->damageDealt[$identifier] *= $matchup->getMultiplier();
+			}
 		}
 
 		if ($moveId->value() === MoveId::FREEZE_DRY) {
