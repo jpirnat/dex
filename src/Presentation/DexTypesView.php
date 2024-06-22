@@ -42,7 +42,7 @@ final class DexTypesView
 				'breadcrumbs' => $breadcrumbs,
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
-				'types' => $this->dexFormatter->formatDexTypes($types),
+				'types' => $types,
 				'multipliers' => $multipliers,
 			]
 		]);

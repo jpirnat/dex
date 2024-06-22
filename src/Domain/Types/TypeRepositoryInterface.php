@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Types;
 
+use Jp\Dex\Domain\Versions\VersionGroupId;
+
 interface TypeRepositoryInterface
 {
 	/**
@@ -26,4 +28,11 @@ interface TypeRepositoryInterface
 	 *     index.
 	 */
 	public function getByHiddenPowerIndex(int $hiddenPowerIndex) : Type;
+
+	/**
+	 * Get the main types available in this version group.
+	 *
+	 * @return Type[] Indexed by id.
+	 */
+	public function getMainByVersionGroup(VersionGroupId $versionGroupId) : array;
 }

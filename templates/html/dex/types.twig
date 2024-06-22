@@ -1,5 +1,9 @@
 {% extends "html/base.twig" %}
 
+{% block styles %}
+	<link href="/css/vtooltip.css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
@@ -34,7 +38,9 @@
 					<td colspan="2"></td>
 					<th v-for="defendingType in defendingTypes" scope="col">
 						<a :href="'/dex/' + versionGroup.identifier + '/types/' + defendingType.identifier">
-							<img :src="'/images/types/' + defendingType.icon" :alt="defendingType.name">
+							<img class="type-chart__icon" :src="'/images/types/symbols/' + defendingType.symbolIcon"
+								:alt="defendingType.name" v-tooltip="defendingType.name"
+							>
 						</a>
 					</th>
 				</tr>
@@ -46,7 +52,9 @@
 					</th>
 					<th scope="row">
 						<a :href="'/dex/' + versionGroup.identifier + '/types/' + attackingType.identifier">
-							<img :src="'/images/types/' + attackingType.icon" :alt="attackingType.name">
+							<img class="type-chart__icon" :src="'/images/types/symbols/' + attackingType.symbolIcon"
+								:alt="attackingType.name" v-tooltip="attackingType.name"
+							>
 						</a>
 					</th>
 					<td v-for="defendingType in defendingTypes" class="type-chart__matchup"
@@ -73,7 +81,7 @@
 			<div class="type-toggler__header">Toggle Attacking Types</div>
 			<div class="type-toggler__types">
 				<label v-for="type in types" class="type-toggler__type">
-					<img class="dex-type-icon" :src="'/images/types/' + type.icon" :alt="type.name">
+					<img class="dex-type-icon" :src="'/images/types/' + type.nameIcon" :alt="type.name">
 					<input type="checkbox" v-model="toggleAttackingIds" :value="type.id">
 				</label>
 			</div>
@@ -89,7 +97,7 @@
 			<div class="type-toggler__header">Toggle Defending Types</div>
 			<div class="type-toggler__types">
 				<label v-for="type in types" class="type-toggler__type">
-					<img class="dex-type-icon" :src="'/images/types/' + type.icon" :alt="type.name">
+					<img class="dex-type-icon" :src="'/images/types/' + type.nameIcon" :alt="type.name">
 					<input type="checkbox" v-model="toggleDefendingIds" :value="type.id">
 				</label>
 			</div>
@@ -107,6 +115,8 @@
 
 {% block scripts %}
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.7"></script>
+	<script src="https://cdn.jsdelivr.net/npm/v-tooltip@2.1"></script>
+
 	<script src="/js/dex-breadcrumbs.js"></script>
 	<script src="/js/dex/types.js"></script>
 {% endblock %}

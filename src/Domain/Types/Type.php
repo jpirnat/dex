@@ -11,6 +11,7 @@ final class Type
 		private TypeId $id,
 		private string $identifier,
 		private ?CategoryId $categoryId,
+		private string $symbolIcon,
 		private ?int $hiddenPowerIndex,
 		private string $colorCode,
 	) {}
@@ -37,6 +38,14 @@ final class Type
 	public function getCategoryId() : ?CategoryId
 	{
 		return $this->categoryId;
+	}
+
+	/**
+	 * Get the type's symbol icon.
+	 */
+	public function getSymbolIcon() : string
+	{
+		return $this->symbolIcon;
 	}
 
 	/**

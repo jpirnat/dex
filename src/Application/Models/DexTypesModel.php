@@ -7,11 +7,11 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexTypesModel
 {
-	/** @var DexType[] $types */
 	private array $types = [];
 
 	/** @var int[][] $multipliers */
@@ -21,6 +21,7 @@ final class DexTypesModel
 	public function __construct(
 		private VersionGroupModel $versionGroupModel,
 		private DexTypeRepositoryInterface $dexTypeRepository,
+		private TypeRepositoryInterface $typeRepository,
 		private TypeMatchupRepositoryInterface $typeMatchupRepository,
 	) {}
 
@@ -36,10 +37,21 @@ final class DexTypesModel
 
 		$this->versionGroupModel->setSinceGeneration(new GenerationId(1));
 
-		$this->types = $this->dexTypeRepository->getMainByVersionGroup(
+		$dexTypes = $this->dexTypeRepository->getMainByVersionGroup(
 			$versionGroupId,
 			$languageId,
 		);
+		$types = $this->typeRepository->getMainByVersionGroup($versionGroupId);
+		foreach ($dexTypes as $dexType) {
+			$type = $types[$dexType->getId()->value()];
+			$this->types[] = [
+				'id' => $dexType->getId()->value(),
+				'identifier' => $dexType->getIdentifier(),
+				'name' => $dexType->getName(),
+				'symbolIcon' => $type->getSymbolIcon(),
+				'nameIcon' => $dexType->getIcon(),
+			];
+		}
 
 		// Get this generation's type chart.
 		$typeMatchups = $this->typeMatchupRepository->getByGeneration(
@@ -66,8 +78,6 @@ final class DexTypesModel
 
 	/**
 	 * Get the types.
-	 *
-	 * @return DexType[]
 	 */
 	public function getTypes() : array
 	{

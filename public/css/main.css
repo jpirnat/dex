@@ -529,6 +529,10 @@ a.button {
 	writing-mode: vertical-lr;
 	transform: rotate(180deg);
 }
+.type-chart__icon {
+	max-height: 32px;
+	max-width: 32px;
+}
 .type-chart__matchup {
 	text-align: center;
 	border: 1px solid white;
