@@ -27,7 +27,6 @@ final class DatabaseTypeRepository implements TypeRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`identifier`,
-				`introduced_in_generation_id`,
 				`category_id`,
 				`hidden_power_index`,
 				`color_code`
@@ -52,7 +51,6 @@ final class DatabaseTypeRepository implements TypeRepositoryInterface
 		return new Type(
 			$typeId,
 			$result['identifier'],
-			new GenerationId($result['introduced_in_generation_id']),
 			$categoryId,
 			$result['hidden_power_index'],
 			$result['color_code'],
@@ -69,7 +67,6 @@ final class DatabaseTypeRepository implements TypeRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`id`,
-				`introduced_in_generation_id`,
 				`category_id`,
 				`hidden_power_index`,
 				`color_code`
@@ -94,7 +91,6 @@ final class DatabaseTypeRepository implements TypeRepositoryInterface
 		return new Type(
 			new TypeId($result['id']),
 			$identifier,
-			new GenerationId($result['introduced_in_generation_id']),
 			$categoryId,
 			$result['hidden_power_index'],
 			$result['color_code'],
@@ -113,7 +109,6 @@ final class DatabaseTypeRepository implements TypeRepositoryInterface
 			'SELECT
 				`id`,
 				`identifier`,
-				`introduced_in_generation_id`,
 				`category_id`,
 				`color_code`
 			FROM `types`
@@ -137,7 +132,6 @@ final class DatabaseTypeRepository implements TypeRepositoryInterface
 		return new Type(
 			new TypeId($result['id']),
 			$result['identifier'],
-			new GenerationId($result['introduced_in_generation_id']),
 			$categoryId,
 			$hiddenPowerIndex,
 			$result['color_code'],

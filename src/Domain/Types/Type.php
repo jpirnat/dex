@@ -4,14 +4,12 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Types;
 
 use Jp\Dex\Domain\Categories\CategoryId;
-use Jp\Dex\Domain\Versions\GenerationId;
 
 final class Type
 {
 	public function __construct(
 		private TypeId $id,
 		private string $identifier,
-		private GenerationId $introducedInGenerationId,
 		private ?CategoryId $categoryId,
 		private ?int $hiddenPowerIndex,
 		private string $colorCode,
@@ -31,14 +29,6 @@ final class Type
 	public function getIdentifier() : string
 	{
 		return $this->identifier;
-	}
-
-	/**
-	 * Get the generation id this type was introduced in.
-	 */
-	public function getIntroducedInGenerationId() : GenerationId
-	{
-		return $this->introducedInGenerationId;
 	}
 
 	/**
