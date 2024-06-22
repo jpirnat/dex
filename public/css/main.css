@@ -250,6 +250,10 @@ a.button {
 	color: red;
 }
 
+.dex-type-icon {
+	max-width: 100px;
+}
+
 .dex-table--full-width {
 	width: 100%;
 }

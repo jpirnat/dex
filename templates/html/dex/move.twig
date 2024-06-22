@@ -36,9 +36,10 @@
 			<dl class="dex-move__general-main">
 				<dt>Type:</dt>
 				<dd>
-					<a :href="'/dex/' + versionGroup.identifier + '/types/' + move.type.identifier">
-						<img :src="'/images/types/' + move.type.icon" :alt="move.type.name">
-					</a>
+					<dex-type-link
+						:vgIdentifier="versionGroup.identifier"
+						:type="move.type"
+					></dex-type-link>
 				</dd>
 
 				<dt>Category:</dt>
@@ -156,9 +157,10 @@
 						@mouseover="onDamageDealtHover(damageDealt[t.identifier])"
 						@mouseleave="onDamageDealtUnhover"
 					>
-						<a :href="'/dex/' + versionGroup.identifier + '/types/' + t.identifier">
-							<img :src="'/images/types/' + t.icon" :alt="t.name">
-						</a>
+						<dex-type-link
+							:vgIdentifier="versionGroup.identifier"
+							:type="t"
+						></dex-type-link>
 						<span :class="{
 							'dex-type__matchup--neutral': damageDealt[t.identifier] === 1,
 							'dex-type__matchup--favorable': damageDealt[t.identifier] > 1,
@@ -227,6 +229,7 @@
 	<script src="/js/dex-breadcrumbs.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/v-tooltip@2.1"></script>
+	<script src="/js/dex-type-link.js"></script>
 	<script src="/js/dex-move-method-pokemons.js"></script>
 
 	<script src="/js/dex/move.js"></script>

@@ -38,9 +38,10 @@
 					@mouseover="onDamageDealtHover(damageDealt[t.identifier])"
 					@mouseleave="onDamageDealtUnhover"
 				>
-					<a :href="'/dex/' + versionGroup.identifier + '/types/' + t.identifier">
-						<img :src="'/images/types/' + t.icon" :alt="t.name">
-					</a>
+					<dex-type-link
+						:vgIdentifier="versionGroup.identifier"
+						:type="t"
+					></dex-type-link>
 					<span :class="{
 						'dex-type__matchup--neutral': damageDealt[t.identifier] === 1,
 						'dex-type__matchup--favorable': damageDealt[t.identifier] > 1,
@@ -62,9 +63,10 @@
 					@mouseover="onDamageTakenHover(damageTaken[t.identifier])"
 					@mouseleave="onDamageTakenUnhover"
 				>
-					<a :href="'/dex/' + versionGroup.identifier + '/types/' + t.identifier">
-						<img :src="'/images/types/' + t.icon" :alt="t.name">
-					</a>
+					<dex-type-link
+						:vgIdentifier="versionGroup.identifier"
+						:type="t"
+					></dex-type-link>
 					<span :class="{
 						'dex-type__matchup--neutral': damageTaken[t.identifier] === 1,
 						'dex-type__matchup--unfavorable': damageTaken[t.identifier] > 1,
@@ -104,6 +106,7 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/v-tooltip@2.1"></script>
 	<script src="/js/dex-pagination.js"></script>
+	<script src="/js/dex-type-link.js"></script>
 	<script src="/js/dex-pokemons-table.js"></script>
 	<script src="/js/dex-moves-table.js"></script>
 

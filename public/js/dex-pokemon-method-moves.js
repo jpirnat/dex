@@ -162,9 +162,10 @@ Vue.component('dex-pokemon-method-moves', {
 					</a>
 				</th>
 				<td class="dex-table__move-type">
-					<a :href="'/dex/' + versionGroup.identifier + '/types/' + move.type.identifier">
-						<img :src="'/images/types/' + move.type.icon" :alt="move.type.name">
-					</a>
+					<dex-type-link
+						:vgIdentifier="versionGroup.identifier"
+						:type="move.type"
+					></dex-type-link>
 				</td>
 				<td class="dex-table__move-category" v-tooltip="move.category.name">
 					<img :src="'/images/categories/' + move.category.icon" :alt="move.category.name">

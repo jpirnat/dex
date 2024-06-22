@@ -55,9 +55,10 @@
 					@mouseover="onDamageTakenHover(damageTaken[type.identifier])"
 					@mouseleave="onDamageTakenUnhover"
 				>
-					<a :href="'/dex/' + versionGroup.identifier + '/types/' + type.identifier">
-						<img :src="'/images/types/' + type.icon" :alt="type.name">
-					</a>
+					<dex-type-link
+						:vgIdentifier="versionGroup.identifier"
+						:type="type"
+					></dex-type-link>
 					<span :class="{
 						'dex-type__matchup--neutral': damageTaken[type.identifier] === 1,
 						'dex-type__matchup--unfavorable': damageTaken[type.identifier] > 1,
@@ -126,6 +127,7 @@
 	<script src="/js/dex-breadcrumbs.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/v-tooltip@2.1"></script>
+	<script src="/js/dex-type-link.js"></script>
 	<script src="/js/dex-pokemon-method-moves.js"></script>
 
 	<script src="/js/dex-breadcrumbs.js"></script>

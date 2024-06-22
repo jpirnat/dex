@@ -114,11 +114,12 @@ Vue.component('dex-pokemons-table', {
 							</a>
 						</td>
 						<td class="dex-table__pokemon-types">
-							<a v-for="type in pokemon.types" :key="type.identifier"
-								:href="'/dex/' + versionGroup.identifier + '/types/' + type.identifier"
-							>
-								<img :src="'/images/types/' + type.icon" :alt="type.name">
-							</a>
+							<div v-for="type in pokemon.types" :key="type.identifier">
+								<dex-type-link
+									:vgIdentifier="versionGroup.identifier"
+									:type="type"
+								></dex-type-link>
+							</div>
 						</td>
 						<td v-if="showAbilities">
 							<div class="dex-table__pokemon-abilities">

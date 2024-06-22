@@ -73,7 +73,7 @@
 			<div class="type-toggler__header">Toggle Attacking Types</div>
 			<div class="type-toggler__types">
 				<label v-for="type in types" class="type-toggler__type">
-					<img :src="'/images/types/' + type.icon" :alt="type.name">
+					<img class="dex-type-icon" :src="'/images/types/' + type.icon" :alt="type.name">
 					<input type="checkbox" v-model="toggleAttackingIds" :value="type.id">
 				</label>
 			</div>
@@ -89,7 +89,7 @@
 			<div class="type-toggler__header">Toggle Defending Types</div>
 			<div class="type-toggler__types">
 				<label v-for="type in types" class="type-toggler__type">
-					<img :src="'/images/types/' + type.icon" :alt="type.name">
+					<img class="dex-type-icon" :src="'/images/types/' + type.icon" :alt="type.name">
 					<input type="checkbox" v-model="toggleDefendingIds" :value="type.id">
 				</label>
 			</div>
