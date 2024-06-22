@@ -47,7 +47,7 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 			$pokemonId,
 			$languageId,
 		);
-		$baseStats = $this->baseStatRepository->getByVersionGroupAndPokemon(
+		$baseStats = $this->baseStatRepository->getByPokemon(
 			$versionGroupId,
 			$pokemonId,
 		);

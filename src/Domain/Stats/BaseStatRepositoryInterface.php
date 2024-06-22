@@ -14,7 +14,7 @@ interface BaseStatRepositoryInterface
 	/**
 	 * Get a Pokémon's base stats by version group and Pokémon.
 	 */
-	public function getByVersionGroupAndPokemon(
+	public function getByPokemon(
 		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
 	) : StatValueContainer;
