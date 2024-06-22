@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Items;
 
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface ItemDescriptionRepositoryInterface
@@ -16,4 +17,15 @@ interface ItemDescriptionRepositoryInterface
 		LanguageId $languageId,
 		ItemId $itemId,
 	) : ItemDescription;
+
+	/**
+	 * Get item descriptions for TMs/HMs/TRs between these generations.
+	 *
+	 * @return ItemDescription[][] Indexed by version group id, then item id.
+	 */
+	public function getTmsBetween(
+		GenerationId $begin,
+		GenerationId $end,
+		LanguageId $languageId,
+	) : array;
 }

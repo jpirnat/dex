@@ -12,6 +12,7 @@ final class ItemDescription
 		private VersionGroupId $versionGroupId,
 		private LanguageId $languageId,
 		private ItemId $itemId,
+		private string $name,
 		private string $description,
 	) {}
 
@@ -40,7 +41,15 @@ final class ItemDescription
 	}
 
 	/**
-	 * Get the item description's description.
+	 * Get the item's name.
+	 */
+	public function getName() : string
+	{
+		return $this->name;
+	}
+
+	/**
+	 * Get the item's description.
 	 */
 	public function getDescription() : string
 	{

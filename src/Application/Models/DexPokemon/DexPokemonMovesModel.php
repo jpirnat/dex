@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexPokemon;
 
-use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
+use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\TechnicalMachine;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -26,7 +26,7 @@ final class DexPokemonMovesModel
 	public function __construct(
 		private PokemonMoveRepositoryInterface $pokemonMoveRepository,
 		private TmRepositoryInterface $tmRepository,
-		private ItemNameRepositoryInterface $itemNameRepository,
+		private ItemDescriptionRepositoryInterface $itemDescriptionRepository,
 		private DexMoveRepositoryInterface $dexMoveRepository,
 		private MoveMethodRepositoryInterface $moveMethodRepository,
 		private MoveMethodNameRepositoryInterface $moveMethodNameRepository,
@@ -54,6 +54,11 @@ final class DexPokemonMovesModel
 		$tms = $this->tmRepository->getBetween(
 			$introducedInGenerationId,
 			$versionGroup->getGenerationId(),
+		);
+		$itemDescriptions = $this->itemDescriptionRepository->getTmsBetween(
+			$introducedInGenerationId,
+			$versionGroup->getGenerationId(),
+			$languageId,
 		);
 
 		$moveIds = [];
@@ -96,14 +101,13 @@ final class DexPokemonMovesModel
 					// The version group data is the TM's number.
 					/** @var TechnicalMachine $tm */
 					$tm = $tms[$vgId][$moveId];
-					$itemName = $this->itemNameRepository->getByLanguageAndItem(
-						$languageId,
-						$tm->getItemId()
-					);
+					$itemId = $tm->getItemId()->value();
+					$itemDescription = $itemDescriptions[$vgId][$itemId];
+
 					$methodsMoves[$methodId][$moveId][$vgIdentifier] = [
 						'machineType' => $tm->getMachineType()->value(),
 						'number' => $tm->getNumber(),
-						'item' => $itemName->getName(),
+						'item' => $itemDescription->getName(),
 					];
 					break;
 				default:
