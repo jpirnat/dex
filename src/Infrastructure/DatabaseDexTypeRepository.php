@@ -32,16 +32,16 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`t`.`identifier`,
-				`ti`.`icon`,
-				`tn`.`name`
+				`tn`.`name`,
+				`ti`.`icon`
 			FROM `types` AS `t`
-			INNER JOIN `type_icons` AS `ti`
-				ON `t`.`id` = `ti`.`type_id`
 			INNER JOIN `type_names` AS `tn`
 				ON `t`.`id` = `tn`.`type_id`
-				AND `ti`.`language_id` = `tn`.`language_id`
+			LEFT JOIN `type_icons` AS `ti`
+				ON `t`.`id` = `ti`.`type_id`
+				AND `tn`.`language_id` = `ti`.`language_id`
 			WHERE `t`.`id` = :type_id
-				AND `ti`.`language_id` = :language_id'
+				AND `tn`.`language_id` = :language_id'
 		);
 		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
@@ -57,8 +57,8 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 		return new DexType(
 			$typeId,
 			$result['identifier'],
-			$result['icon'],
 			$result['name'],
+			$result['icon'] ?? '',
 		);
 	}
 
@@ -76,19 +76,19 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 			'SELECT
 				`t`.`id`,
 				`t`.`identifier`,
-				`ti`.`icon`,
-				`tn`.`name`
+				`tn`.`name`,
+				`ti`.`icon`
 			FROM `pokemon_types` AS `pt`
 			INNER JOIN `types` AS `t`
 				ON `pt`.`type_id` = `t`.`id`
-			INNER JOIN `type_icons` AS `ti`
-				ON `pt`.`type_id` = `ti`.`type_id`
 			INNER JOIN `type_names` AS `tn`
 				ON `pt`.`type_id` = `tn`.`type_id`
-				AND `ti`.`language_id` = `tn`.`language_id`
+			LEFT JOIN `type_icons` AS `ti`
+				ON `pt`.`type_id` = `ti`.`type_id`
+				AND `tn`.`language_id` = `ti`.`language_id`
 			WHERE `pt`.`version_group_id` = :version_group_id
 				AND `pt`.`pokemon_id` = :pokemon_id
-				AND `ti`.`language_id` = :language_id
+				AND `tn`.`language_id` = :language_id
 			ORDER BY `pt`.`slot`'
 		);
 		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
@@ -102,8 +102,8 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 			$dexType = new DexType(
 				new TypeId($result['id']),
 				$result['identifier'],
-				$result['icon'],
 				$result['name'],
+				$result['icon'] ?? '',
 			);
 
 			$dexTypes[] = $dexType;
@@ -125,19 +125,19 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 			'SELECT
 				`t`.`id`,
 				`t`.`identifier`,
-				`ti`.`icon`,
-				`tn`.`name`
+				`tn`.`name`,
+				`ti`.`icon`
 			FROM `types` AS `t`
 			INNER JOIN `vg_types` AS `vgt`
 				ON `t`.`id` = `vgt`.`type_id`
-			INNER JOIN `type_icons` AS `ti`
-				ON `t`.`id` = `ti`.`type_id`
 			INNER JOIN `type_names` AS `tn`
 				ON `t`.`id` = `tn`.`type_id`
-				AND `ti`.`language_id` = `tn`.`language_id`
+			LEFT JOIN `type_icons` AS `ti`
+				ON `t`.`id` = `ti`.`type_id`
+				AND `tn`.`language_id` = `ti`.`language_id`
 			WHERE `t`.`id` < 18
 				AND `vgt`.`version_group_id` = :version_group_id
-				AND `ti`.`language_id` = :language_id'
+				AND `tn`.`language_id` = :language_id'
 		);
 		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
@@ -149,8 +149,8 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 			$dexType = new DexType(
 				new TypeId($result['id']),
 				$result['identifier'],
-				$result['icon'],
 				$result['name'],
+				$result['icon'] ?? '',
 			);
 
 			$dexTypes[$result['id']] = $dexType;
@@ -172,18 +172,18 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 			'SELECT
 				`t`.`id`,
 				`t`.`identifier`,
-				`ti`.`icon`,
-				`tn`.`name`
+				`tn`.`name`,
+				`ti`.`icon`
 			FROM `types` AS `t`
 			INNER JOIN `vg_types` AS `vgt`
 				ON `t`.`id` = `vgt`.`type_id`
-			INNER JOIN `type_icons` AS `ti`
-				ON `t`.`id` = `ti`.`type_id`
 			INNER JOIN `type_names` AS `tn`
 				ON `t`.`id` = `tn`.`type_id`
-				AND `ti`.`language_id` = `tn`.`language_id`
+			LEFT JOIN `type_icons` AS `ti`
+				ON `t`.`id` = `ti`.`type_id`
+				AND `tn`.`language_id` = `ti`.`language_id`
 			WHERE `vgt`.`version_group_id` = :version_group_id
-				AND `ti`.`language_id` = :language_id'
+				AND `tn`.`language_id` = :language_id'
 		);
 		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
@@ -195,8 +195,8 @@ final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 			$dexType = new DexType(
 				new TypeId($result['id']),
 				$result['identifier'],
-				$result['icon'],
 				$result['name'],
+				$result['icon'] ?? '',
 			);
 
 			$dexTypes[$result['id']] = $dexType;

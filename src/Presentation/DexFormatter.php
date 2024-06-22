@@ -132,8 +132,8 @@ final class DexFormatter
 		return [
 			'id' => $dexType->getId()->value(),
 			'identifier' => $dexType->getIdentifier(),
-			'icon' => $dexType->getIcon(),
 			'name' => $dexType->getName(),
+			'icon' => $dexType->getIcon(),
 		];
 	}
 
