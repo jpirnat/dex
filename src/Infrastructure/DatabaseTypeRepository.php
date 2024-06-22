@@ -8,7 +8,6 @@ use Jp\Dex\Domain\Types\Type;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Types\TypeNotFoundException;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
-use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
 final class DatabaseTypeRepository implements TypeRepositoryInterface

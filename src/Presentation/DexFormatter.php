@@ -9,7 +9,6 @@ use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
-use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\VersionGroup;
 
 final class DexFormatter
@@ -28,26 +27,6 @@ final class DexFormatter
 			$g[] = [
 				'identifier' => $versionGroup->getIdentifier(),
 				'name' => $versionGroup->getAbbreviation(),
-			];
-		}
-
-		return $g;
-	}
-
-	/**
-	 * Transform an array of generation objects into a renderable data array.
-	 * This will most commonly be used for the generation control.
-	 *
-	 * @param Generation[] $generations
-	 */
-	public function formatGenerations(array $generations) : array
-	{
-		$g = [];
-
-		foreach ($generations as $generation) {
-			$g[] = [
-				'identifier' => $generation->getIdentifier(),
-				'name' => mb_strtoupper($generation->getIdentifier()),
 			];
 		}
 
