@@ -445,6 +445,10 @@ a.button {
 	border-left: 1px solid black;
 }
 
+.dex-table tbody .dex-table__pokemon-move-vg {
+	padding: 5px 10px;
+	font-weight: bold;
+}
 .dex-table tbody .dex-table__pokemon-move-data {
 	padding: 5px 10px;
 }
@@ -668,6 +672,12 @@ a.button {
 
 .breeding-chain__headers {
 	padding: 10px 5px;
+}
+
+.breeding-chain__version-group {
+	padding: 5px 10px;
+	text-align: center;
+	font-weight: bold;
 }
 
 

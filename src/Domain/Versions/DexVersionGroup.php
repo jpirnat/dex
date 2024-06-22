@@ -9,8 +9,8 @@ final class DexVersionGroup
 		private VersionGroupId $id,
 		private string $identifier,
 		private GenerationId $generationId,
-		private string $icon,
 		private string $name,
+		/** @var DexVersion[] $versions */ private array $versions,
 	) {}
 
 	/**
@@ -38,18 +38,20 @@ final class DexVersionGroup
 	}
 
 	/**
-	 * Get the dex version group's icon.
-	 */
-	public function getIcon() : string
-	{
-		return $this->icon;
-	}
-
-	/**
 	 * Get the dex version group's name.
 	 */
 	public function getName() : string
 	{
 		return $this->name;
+	}
+
+	/**
+	 * Get the dex version group's versions.
+	 *
+	 * @return DexVersion[]
+	 */
+	public function getVersions() : array
+	{
+		return $this->versions;
 	}
 }

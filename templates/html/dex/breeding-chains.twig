@@ -53,9 +53,27 @@
 								{{ pokemon.name }}
 							</a>
 						</th>
-						<td class="dex-table--icon" v-tooltip="pokemon.versionGroup.name">
-							<img :src="'/images/versions/' + pokemon.versionGroup.icon" :alt="pokemon.versionGroup.name">
+
+						<td>
+							<div v-if="pokemon.versionGroup.versions.length > 1" class="breeding-chain__version-group"
+								:style="{
+									'backgroundImage': 'linear-gradient(135deg, ' + pokemon.versionGroup.versions[0].backgroundColor + ' 50%, ' + pokemon.versionGroup.versions[1].backgroundColor + ' 50%)',
+								}"
+								v-tooltip="pokemon.versionGroup.name"
+							>
+								<sup :style="{ 'color': pokemon.versionGroup.versions[0].textColor }">{{ pokemon.versionGroup.versions[0].abbreviation }}</sup><sub :style="{ 'color': pokemon.versionGroup.versions[1].textColor }">{{ pokemon.versionGroup.versions[1].abbreviation }}</sub>
+							</div>
+							<div v-else class="breeding-chain__version-group"
+								:style="{
+									'backgroundColor': pokemon.versionGroup.versions[0].backgroundColor,
+									'color': pokemon.versionGroup.versions[0].textColor,
+								}"
+								v-tooltip="pokemon.versionGroup.name"
+							>
+								{{ pokemon.versionGroup.versions[0].abbreviation }}
+							</div>
 						</td>
+
 						<td class="dex-table--icon">
 							<div v-for="eggGroupName in pokemon.eggGroupNames" :key="eggGroupName">
 								{{ eggGroupName }}

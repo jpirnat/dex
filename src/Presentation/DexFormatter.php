@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Categories\DexCategory;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Types\DexType;
+use Jp\Dex\Domain\Versions\DexVersion;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroup;
 
@@ -57,8 +58,36 @@ final class DexFormatter
 		return [
 			'identifier' => $versionGroup->getIdentifier(),
 			'generationId' => $versionGroup->getGenerationId()->value(),
-			'icon' => $versionGroup->getIcon(),
 			'name' => $versionGroup->getName(),
+			'versions' => $this->formatDexVersions($versionGroup->getVersions()),
+		];
+	}
+
+	/**
+	 * Transform an array of version group objects into a renderable data array.
+	 *
+	 * @param DexVersion[] $versions
+	 */
+	private function formatDexVersions(array $versions) : array
+	{
+		$v = [];
+
+		foreach ($versions as $version) {
+			$v[] = $this->formatDexVersion($version);
+		}
+
+		return $v;
+	}
+
+	/**
+	 * Transform an array of version group objects into a renderable data array.
+	 */
+	private function formatDexVersion(DexVersion $version) : array
+	{
+		return [
+			'abbreviation' => $version->getAbbreviation(),
+			'backgroundColor' => $version->getBackgroundColor(),
+			'textColor' => $version->getTextColor(),
 		];
 	}
 

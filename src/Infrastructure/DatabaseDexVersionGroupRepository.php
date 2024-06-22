@@ -6,6 +6,7 @@ namespace Jp\Dex\Infrastructure;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Versions\DexVersion;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
@@ -20,6 +21,38 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 	) {}
 
 	/**
+	 * Get each version group's versions.
+	 *
+	 * @return DexVersion[][] Indexed by version group id
+	 */
+	private function getVersions() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`version_group_id`,
+				`abbreviation`,
+				`background_color`,
+				`text_color`
+			FROM `versions`'
+		);
+		$stmt->execute();
+
+		$versions = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$version = new DexVersion(
+				$result['abbreviation'],
+				$result['background_color'],
+				$result['text_color'],
+			);
+
+			$versions[$result['version_group_id']][] = $version;
+		}
+
+		return $versions;
+	}
+
+	/**
 	 * Get a dex version group by its id.
 	 *
 	 * @throws VersionGroupNotFoundException if no version group exists with
@@ -28,6 +61,8 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : DexVersionGroup {
+		$versions = $this->getVersions();
+
 		$stmt = $this->db->prepare(
 			'SELECT
 				`vg`.`id`,
@@ -56,8 +91,8 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 			new VersionGroupId($result['id']),
 			$result['identifier'],
 			new GenerationId($result['generation_id']),
-			$result['icon'],
 			$result['name'],
+			$versions[$result['id']] ?? [],
 		);
 	}
 
@@ -73,6 +108,8 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 		LanguageId $languageId,
 		GenerationId $end,
 	) : array {
+		$versions = $this->getVersions();
+
 		$stmt = $this->db->prepare(
 			'SELECT
 				`vg`.`id`,
@@ -107,8 +144,8 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 				new VersionGroupId($result['id']),
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
-				$result['icon'],
 				$result['name'],
+				$versions[$result['id']] ?? [],
 			);
 
 			$versionGroups[$result['id']] = $vg;
@@ -137,6 +174,8 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 		LanguageId $languageId,
 		GenerationId $end,
 	) : array {
+		$versions = $this->getVersions();
+
 		$stmt = $this->db->prepare(
 			'SELECT
 				`vg`.`id`,
@@ -169,8 +208,8 @@ final class DatabaseDexVersionGroupRepository implements DexVersionGroupReposito
 				new VersionGroupId($result['id']),
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
-				$result['icon'],
 				$result['name'],
+				$versions[$result['id']] ?? [],
 			);
 
 			$versionGroups[$result['id']] = $vg;

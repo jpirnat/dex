@@ -50,12 +50,25 @@ Vue.component('dex-pokemon-method-moves', {
 				</th>
 			</tr>
 			<tr class="dex-table__sticky-header-2">
-				<th v-for="vg in versionGroups" :key="vg.identifier"
-					scope="col" class="dex-table--icon dex-table__pokemon-move-data"
-					v-tooltip="vg.name"
-				>
-					<img :src="'/images/versions/' + vg.icon" :alt="vg.name">
-				</th>
+				<template v-for="vg in versionGroups" :key="vg.identifier">
+					<th v-if="vg.versions.length > 1" scope="col" class="dex-table__pokemon-move-vg"
+						:style="{
+							'backgroundImage': 'linear-gradient(135deg, ' + vg.versions[0].backgroundColor + ' 50%, ' + vg.versions[1].backgroundColor + ' 50%)',
+						}"
+						v-tooltip="vg.name"
+					>
+						<sup :style="{ 'color': vg.versions[0].textColor }">{{ vg.versions[0].abbreviation }}</sup><sub :style="{ 'color': vg.versions[1].textColor }">{{ vg.versions[1].abbreviation }}</sub>
+					</th>
+					<th v-else scope="col" class="dex-table__pokemon-move-vg"
+						:style="{
+							'backgroundColor': vg.versions[0].backgroundColor,
+							'color': vg.versions[0].textColor,
+						}"
+						v-tooltip="vg.name"
+					>
+						{{ vg.versions[0].abbreviation }}
+					</th>
+				</template>
 				<th scope="col" class="dex-table__header--sortable dex-pokemon__move-name"
 					@click="sortBy('name', 'asc', m => m.name)"
 					:class="{
@@ -148,7 +161,7 @@ Vue.component('dex-pokemon-method-moves', {
 							<td class="dex-table__pokemon-move-data dex-table--icon"
 								v-tooltip="pokemonMoveTooltip(pokemon, move, vg, method)"
 							>
-								<img :src="'/images/versions/' + vg.icon" :alt="vg.name">
+								✓
 							</td>
 						</template>
 					</template>
