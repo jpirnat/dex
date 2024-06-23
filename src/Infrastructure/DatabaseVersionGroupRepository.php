@@ -299,7 +299,7 @@ final class DatabaseVersionGroupRepository implements VersionGroupRepositoryInte
 			WHERE `id` IN (
 				SELECT
 					`version_group_id`
-				FROM `vg_abilities`
+				FROM `pokemon_abilities`
 				WHERE `ability_id` = :ability_id
 			)
 			ORDER BY `sort`'
