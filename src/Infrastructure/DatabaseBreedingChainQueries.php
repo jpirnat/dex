@@ -114,21 +114,25 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 			FROM `forms`
 			WHERE `is_battle_only` = 0
 			AND `pokemon_id` <> $pokemonId
-			AND `pokemon_id` IN
-			(
+			AND `pokemon_id` IN (
 				SELECT
 					`pokemon_id`
 				FROM `pokemon_egg_groups`
 				WHERE `egg_group_id` IN ($eggGroups)
 					AND `generation_id` = $generationId
 			)
-			AND `pokemon_id` NOT IN
-			(
+			AND `pokemon_id` NOT IN (
 				SELECT
 					`pokemon_id`
 				FROM `pokemon_egg_groups`
 				WHERE `egg_group_id` IN ($excludeEggGroups)
 					AND `generation_id` = $generationId
+			)
+			AND `pokemon_id` NOT IN (
+				SELECT
+					`id`
+				FROM `pokemon`
+				WHERE `gender_ratio` = -1
 			)"
 		);
 		return $stmt->fetchAll(PDO::FETCH_COLUMN);
@@ -155,29 +159,32 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 				`pokemon_id`
 			FROM `forms`
 			WHERE `is_battle_only` = 0
-			AND `pokemon_id` IN
-			(
+			AND `pokemon_id` IN (
 				SELECT
 					`pokemon_id`
 				FROM `pokemon_egg_groups`
 				WHERE `egg_group_id` IN ($eggGroups)
 					AND `generation_id` = $generationId
 			)
-			AND `pokemon_id` IN
-			(
+			AND `pokemon_id` IN (
 				SELECT
 					`pokemon_id`
 				FROM `pokemon_egg_groups`
 				WHERE `egg_group_id` NOT IN ($eggGroups)
 					AND `generation_id` = $generationId
 			)
-			AND `pokemon_id` NOT IN
-			(
+			AND `pokemon_id` NOT IN (
 				SELECT
 					`pokemon_id`
 				FROM `pokemon_egg_groups`
 				WHERE `egg_group_id` IN ($excludeEggGroups)
 					AND `generation_id` = $generationId
+			)
+			AND `pokemon_id` NOT IN (
+				SELECT
+					`id`
+				FROM `pokemon`
+				WHERE `gender_ratio` = -1
 			)"
 		);
 		return $stmt->fetchAll(PDO::FETCH_COLUMN);
