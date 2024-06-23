@@ -30,6 +30,8 @@ use Jp\Dex\Domain\Teammates\StatsPokemonTeammateRepositoryInterface;
 use Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroup;
+use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class StatsPokemonModel
 {
@@ -48,6 +50,7 @@ final class StatsPokemonModel
 
 	private ?MovesetPokemon $movesetPokemon;
 	private ?MovesetRatedPokemon $movesetRatedPokemon;
+	private VersionGroup $versionGroup;
 	private Generation $generation;
 
 	private array $stats = [];
@@ -77,6 +80,7 @@ final class StatsPokemonModel
 		private PokemonRepositoryInterface $pokemonRepository,
 		private RatingQueriesInterface $ratingQueries,
 		private StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository,
+		private VersionGroupRepositoryInterface $versionGroupRepository,
 		private GenerationRepositoryInterface $generationRepository,
 		private MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
@@ -168,10 +172,9 @@ final class StatsPokemonModel
 			$languageId,
 		);
 
-		// Get the format's generation.
-		$this->generation = $this->generationRepository->getById(
-			$this->format->getGenerationId()
-		);
+		// Get the format's version group and generation.
+		$this->versionGroup = $this->versionGroupRepository->getById($this->format->getVersionGroupId());
+		$this->generation = $this->generationRepository->getById($this->versionGroup->getGenerationId());
 
 		// Get the moveset Pokémon record.
 		$this->movesetPokemon = $this->movesetPokemonRepository->getByMonthAndFormatAndPokemon(
@@ -351,6 +354,14 @@ final class StatsPokemonModel
 	public function getPokemonModel() : PokemonModel
 	{
 		return $this->pokemonModel;
+	}
+
+	/**
+	 * Get the version group.
+	 */
+	public function getVersionGroup() : VersionGroup
+	{
+		return $this->versionGroup;
 	}
 
 	/**

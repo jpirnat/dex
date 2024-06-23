@@ -15,6 +15,7 @@ const app = new Vue({
 		endMonth: {},
 		ratings: [],
 
+		versionGroup: {},
 		generation: {},
 		stats: [],
 
@@ -47,6 +48,7 @@ const app = new Vue({
 				this.endMonth = data.endMonth;
 				this.ratings = data.ratings;
 
+				this.versionGroup = data.versionGroup;
 				this.generation = data.generation;
 				this.stats = data.stats;
 

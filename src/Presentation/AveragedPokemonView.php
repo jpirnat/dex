@@ -47,6 +47,7 @@ final class AveragedPokemonView
 		$dexPokemon = $pokemonModel->getPokemon();
 		$model = $pokemonModel->getModel();
 		$baseStats = $dexPokemon->getBaseStats();
+		$versionGroup = $this->averagedPokemonModel->getVersionGroup();
 		$generation = $this->averagedPokemonModel->getGeneration();
 
 		// Get abilities.
@@ -130,6 +131,9 @@ final class AveragedPokemonView
 				'endMonth' => $endMonth,
 				'ratings' => $this->averagedPokemonModel->getRatings(),
 
+				'versionGroup' => [
+					'identifier' => $versionGroup->getIdentifier(),
+				],
 				'generation' => [
 					'smogonDexIdentifier' => $generation->getSmogonDexIdentifier(),
 				],

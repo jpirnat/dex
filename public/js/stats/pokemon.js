@@ -19,6 +19,7 @@ const app = new Vue({
 		thisRank: {},
 		nextRank: {},
 
+		versionGroup: {},
 		generation: {},
 		stats: [],
 		rawCount: null,
@@ -66,6 +67,7 @@ const app = new Vue({
 				this.thisRank = data.thisRank;
 				this.nextRank = data.nextRank;
 
+				this.versionGroup = data.versionGroup;
 				this.generation = data.generation;
 				this.stats = data.stats;
 				this.rawCount = data.rawCount;

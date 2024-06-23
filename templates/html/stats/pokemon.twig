@@ -64,11 +64,10 @@
 				<img :src="'/images/pokemon/models/' + pokemon.model" alt="">
 			</div>
 			<div class="pokemon-types">
-				<a v-for="type in pokemon.types" :key="type.identifier"
-					:href="'/dex/' + generation.identifier + '/types/' + type.identifier"
-				>
-					<img :src="'/images/types/' + type.icon" :alt="type.name">
-				</a>
+				<dex-type-link v-for="type in pokemon.types" :key="type.identifier"
+					:vg-identifier="versionGroup.identifier"
+					:type="type"
+				></dex-type-link>
 			</div>
 		</div>
 
@@ -190,10 +189,10 @@
 
 {% block scripts %}
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.7"></script>
-	<script src="/js/dex-breadcrumbs.js"></script>
-
 	<script src="https://cdn.jsdelivr.net/npm/v-tooltip@2.1"></script>
 
+	<script src="/js/dex-breadcrumbs.js"></script>
+	<script src="/js/dex-type-link.js"></script>
 	<script src="/js/stats-pokemon-abilities.js"></script>
 	<script src="/js/stats-pokemon-items.js"></script>
 	<script src="/js/stats-pokemon-spreads.js"></script>

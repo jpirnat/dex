@@ -16,6 +16,8 @@ use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroup;
+use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class AveragedPokemonModel
 {
@@ -29,6 +31,7 @@ final class AveragedPokemonModel
 	/** @var int[] $ratings */
 	private array $ratings = [];
 
+	private VersionGroup $versionGroup;
 	private Generation $generation;
 
 	private array $stats = [];
@@ -42,6 +45,7 @@ final class AveragedPokemonModel
 		private FormatRepositoryInterface $formatRepository,
 		private PokemonRepositoryInterface $pokemonRepository,
 		private RatingQueriesInterface $ratingQueries,
+		private VersionGroupRepositoryInterface $versionGroupRepository,
 		private GenerationRepositoryInterface $generationRepository,
 		private StatNameModel $statNameModel,
 		private PokemonModel $pokemonModel,
@@ -100,10 +104,9 @@ final class AveragedPokemonModel
 			$languageId,
 		);
 
-		// Get the format's generation.
-		$this->generation = $this->generationRepository->getById(
-			$this->format->getGenerationId()
-		);
+		// Get the format's version group and generation.
+		$this->versionGroup = $this->versionGroupRepository->getById($this->format->getVersionGroupId());
+		$this->generation = $this->generationRepository->getById($this->versionGroup->getGenerationId());
 
 		// Get ability data.
 		$this->abilities = $this->abilityModel->setData(
@@ -208,6 +211,14 @@ final class AveragedPokemonModel
 	public function getPokemonModel() : PokemonModel
 	{
 		return $this->pokemonModel;
+	}
+
+	/**
+	 * Get the version group.
+	 */
+	public function getVersionGroup() : VersionGroup
+	{
+		return $this->versionGroup;
 	}
 
 	/**

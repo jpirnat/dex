@@ -71,6 +71,7 @@ final class StatsPokemonView
 		$dexPokemon = $pokemonModel->getPokemon();
 		$model = $pokemonModel->getModel();
 		$baseStats = $dexPokemon->getBaseStats();
+		$versionGroup = $this->statsPokemonModel->getVersionGroup();
 		$generation = $this->statsPokemonModel->getGeneration();
 
 		// Get abilities.
@@ -202,6 +203,9 @@ final class StatsPokemonView
 				'thisRank' => $thisRank,
 				'nextRank' => $nextRank,
 
+				'versionGroup' => [
+					'identifier' => $versionGroup->getIdentifier(),
+				],
 				'generation' => [
 					'smogonDexIdentifier' => $generation->getSmogonDexIdentifier(),
 				],
