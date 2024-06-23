@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\DexMove;
 
 use Jp\Dex\Application\Models\StatNameModel;
-use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
+use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
@@ -27,7 +27,7 @@ final class DexMovePokemonModel
 	public function __construct(
 		private PokemonMoveRepositoryInterface $pokemonMoveRepository,
 		private TmRepositoryInterface $tmRepository,
-		private ItemNameRepositoryInterface $itemNameRepository,
+		private ItemDescriptionRepositoryInterface $itemDescriptionRepository,
 		private DexPokemonRepositoryInterface $dexPokemonRepository,
 		private MoveMethodRepositoryInterface $moveMethodRepository,
 		private MoveMethodNameRepositoryInterface $moveMethodNameRepository,
@@ -51,17 +51,23 @@ final class DexMovePokemonModel
 			$versionGroup->getGenerationId(),
 		);
 
-		// Get all the TMs that could show up in the table.
+		// Get data for the real Hidden Power instead of typed Hidden Powers.
 		if (MoveId::TYPED_HIDDEN_POWER_BEGIN <= $moveId->value()
 			&& $moveId->value() <= MoveId::TYPED_HIDDEN_POWER_END
 		) {
-			// The TMs table does not track typed Hidden Powers, so look up the
-			// TMs for the real move instead.
-			$hiddenPower = new MoveId(MoveId::HIDDEN_POWER);
-			$tms = $this->tmRepository->getByMove($hiddenPower);
-		} else {
-			$tms = $this->tmRepository->getByMove($moveId);
+			$moveId = new MoveId(MoveId::HIDDEN_POWER);
 		}
+
+		// Get all the TMs that could show up in the table.
+		$tms = $this->tmRepository->getByMove($moveId);
+		$beginVg = $versionGroups[array_key_first($versionGroups)];
+		$endVg = $versionGroups[array_key_last($versionGroups)];
+		$itemDescriptions = $this->itemDescriptionRepository->getByTmMoveBetween(
+			$beginVg->getGenerationId(),
+			$endVg->getGenerationId(),
+			$moveId,
+			$languageId,
+		);
 
 		$pokemonIds = [];
 		$methodsPokemons = [];
@@ -93,11 +99,10 @@ final class DexMovePokemonModel
 				case MoveMethodId::MACHINE:
 					// The version group data is the TM's number.
 					$tm = $tms[$vgId];
-					$itemName = $this->itemNameRepository->getByLanguageAndItem(
-						$languageId,
-						$tm->getItemId()
-					);
-					$methodsPokemons[$methodId][$pokemonId][$vgIdentifier] = $itemName->getName();
+					$itemId = $tm->getItemId()->value();
+					$itemDescription = $itemDescriptions[$vgId][$itemId];
+
+					$methodsPokemons[$methodId][$pokemonId][$vgIdentifier] = $itemDescription->getName();
 					break;
 				default:
 					// The version group data is just that the Pokémon learns
