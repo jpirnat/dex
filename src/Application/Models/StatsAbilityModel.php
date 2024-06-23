@@ -53,7 +53,7 @@ final class StatsAbilityModel
 		string $formatIdentifier,
 		int $rating,
 		string $abilityIdentifier,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$this->month = $month;
 		$this->rating = $rating;
@@ -63,7 +63,7 @@ final class StatsAbilityModel
 		// Get the format.
 		$this->format = $this->formatRepository->getByIdentifier(
 			$formatIdentifier,
-			$languageId
+			$languageId,
 		);
 
 		// Get the previous month and the next month.
@@ -77,20 +77,20 @@ final class StatsAbilityModel
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$this->format->getId()
+			$this->format->getId(),
 		);
 
 		// Get the ability name.
 		$this->abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
 			$languageId,
-			$ability->getId()
+			$ability->getId(),
 		);
 
 		// Get the ability description.
 		$this->abilityDescription = $this->abilityDescriptionRepository->getByAbility(
-			$this->format->getGenerationId(),
+			$this->format->getVersionGroupId(),
 			$languageId,
-			$ability->getId()
+			$ability->getId(),
 		);
 
 		// Get the Pokémon usage data.
@@ -100,8 +100,8 @@ final class StatsAbilityModel
 			$this->format->getId(),
 			$rating,
 			$ability->getId(),
-			$this->format->getGenerationId(),
-			$languageId
+			$this->format->getVersionGroupId(),
+			$languageId,
 		);
 	}
 

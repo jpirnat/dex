@@ -53,7 +53,7 @@ final class StatsMoveModel
 		string $formatIdentifier,
 		int $rating,
 		string $moveIdentifier,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$this->month = $month;
 		$this->rating = $rating;
@@ -63,7 +63,7 @@ final class StatsMoveModel
 		// Get the format.
 		$this->format = $this->formatRepository->getByIdentifier(
 			$formatIdentifier,
-			$languageId
+			$languageId,
 		);
 
 		// Get the previous month and the next month.
@@ -77,20 +77,20 @@ final class StatsMoveModel
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$this->format->getId()
+			$this->format->getId(),
 		);
 
 		// Get the move name.
 		$this->moveName = $this->moveNameRepository->getByLanguageAndMove(
 			$languageId,
-			$move->getId()
+			$move->getId(),
 		);
 
 		// Get the move description.
 		$this->moveDescription = $this->moveDescriptionRepository->getByMove(
-			$this->format->getGenerationId(),
+			$this->format->getVersionGroupId(),
 			$languageId,
-			$move->getId()
+			$move->getId(),
 		);
 
 		// Get the Pokémon usage data.
@@ -100,8 +100,8 @@ final class StatsMoveModel
 			$this->format->getId(),
 			$rating,
 			$move->getId(),
-			$this->format->getGenerationId(),
-			$languageId
+			$this->format->getVersionGroupId(),
+			$languageId,
 		);
 	}
 

@@ -4,12 +4,12 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Types;
 
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class PokemonType
 {
 	public function __construct(
-		private GenerationId $generationId,
+		private VersionGroupId $versionGroupId,
 		private PokemonId $pokemonId,
 		private int $slot,
 		private TypeId $typeId,
@@ -18,9 +18,9 @@ final class PokemonType
 	/**
 	 * Get the Pokémon type's generation id.
 	 */
-	public function getGenerationId() : GenerationId
+	public function getVersionGroupId() : VersionGroupId
 	{
-		return $this->generationId;
+		return $this->versionGroupId;
 	}
 
 	/**

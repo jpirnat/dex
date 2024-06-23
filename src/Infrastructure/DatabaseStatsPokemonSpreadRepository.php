@@ -30,7 +30,7 @@ final class DatabaseStatsPokemonSpreadRepository implements StatsPokemonSpreadRe
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -80,7 +80,7 @@ final class DatabaseStatsPokemonSpreadRepository implements StatsPokemonSpreadRe
 					new StatValue(new StatId(StatId::SPECIAL_DEFENSE), $result['spd']),
 					new StatValue(new StatId(StatId::SPEED), $result['spe']),
 				]),
-				(float) $result['percent']
+				(float) $result['percent'],
 			);
 
 			$spreads[] = $spread;

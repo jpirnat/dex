@@ -23,6 +23,6 @@ interface StatsPokemonItemRepositoryInterface
 		int $rating,
 		PokemonId $pokemonId,
 		GenerationId $generationId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 }

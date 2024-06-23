@@ -30,7 +30,7 @@ final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemReposi
 		int $rating,
 		PokemonId $pokemonId,
 		GenerationId $generationId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
 		$prevMonth = $prevMonth !== null
 			? $prevMonth->format('Y-m-01')
@@ -85,7 +85,7 @@ final class DatabaseStatsPokemonItemRepository implements StatsPokemonItemReposi
 				$result['identifier'],
 				$result['name'],
 				(float) $result['percent'],
-				(float) $result['percent'] - (float) $result['prev_percent']
+				(float) $result['percent'] - (float) $result['prev_percent'],
 			);
 
 			$items[] = $item;

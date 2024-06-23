@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Leads\StatsLeadsPokemon;
 use Jp\Dex\Domain\Leads\StatsLeadsPokemonRepositoryInterface;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepositoryInterface
@@ -27,8 +27,8 @@ final class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepo
 		?DateTime $prevMonth,
 		FormatId $formatId,
 		int $rating,
-		GenerationId $generationId,
-		LanguageId $languageId
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array {
 		$prevMonth = $prevMonth !== null
 			? $prevMonth->format('Y-m-01')
@@ -67,7 +67,7 @@ final class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepo
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
-				AND `fi`.`generation_id` = :generation_id
+				AND `fi`.`version_group_id` = :version_group_id
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
@@ -77,7 +77,7 @@ final class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepo
 		$stmt->bindValue(':prev_month', $prevMonth);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -92,7 +92,7 @@ final class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepo
 				(float) $result['usage_percent'],
 				(float) $result['usage_percent'] - (float) $result['prev_percent'],
 				$result['raw'],
-				(float) $result['raw_percent']
+				(float) $result['raw_percent'],
 			);
 
 			$pokemons[] = $pokemon;

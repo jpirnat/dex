@@ -9,6 +9,7 @@ use Jp\Dex\Domain\Formats\FormatNotFoundException;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final class DatabaseFormatRepository implements FormatRepositoryInterface
@@ -32,6 +33,7 @@ final class DatabaseFormatRepository implements FormatRepositoryInterface
 				`f`.`identifier`,
 				`fn`.`name`,
 				`f`.`generation_id`,
+				`f`.`version_group_id`,
 				`f`.`level`,
 				`f`.`field_size`,
 				`f`.`smogon_dex_identifier`
@@ -58,6 +60,7 @@ final class DatabaseFormatRepository implements FormatRepositoryInterface
 			$result['identifier'],
 			$result['name'],
 			new GenerationId($result['generation_id']),
+			new VersionGroupId($result['version_group_id']),
 			$result['level'],
 			$result['field_size'],
 			$result['smogon_dex_identifier']
@@ -83,6 +86,7 @@ final class DatabaseFormatRepository implements FormatRepositoryInterface
 				`f`.`id`,
 				`fn`.`name`,
 				`f`.`generation_id`,
+				`f`.`version_group_id`,
 				`f`.`level`,
 				`f`.`field_size`,
 				`f`.`smogon_dex_identifier`
@@ -109,6 +113,7 @@ final class DatabaseFormatRepository implements FormatRepositoryInterface
 			$identifier,
 			$result['name'],
 			new GenerationId($result['generation_id']),
+			new VersionGroupId($result['version_group_id']),
 			$result['level'],
 			$result['field_size'],
 			$result['smogon_dex_identifier']

@@ -55,7 +55,7 @@ final class StatsLeadsModel
 		// Get the format.
 		$this->format = $this->formatRepository->getByIdentifier(
 			$formatIdentifier,
-			$languageId
+			$languageId,
 		);
 
 		// Get the previous month and the next month.
@@ -66,7 +66,7 @@ final class StatsLeadsModel
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$this->format->getId()
+			$this->format->getId(),
 		);
 
 		// Get the Pokémon usage data.
@@ -75,8 +75,8 @@ final class StatsLeadsModel
 			$prevMonth,
 			$this->format->getId(),
 			$rating,
-			$this->format->getGenerationId(),
-			$languageId
+			$this->format->getVersionGroupId(),
+			$languageId,
 		);
 
 		$this->months = $this->usageRatedQueries->getMonthsWithData(

@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Formats;
 
 use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class Format
 {
@@ -12,6 +13,7 @@ final class Format
 		private string $identifier,
 		private string $name,
 		private GenerationId $generationId,
+		private VersionGroupId $versionGroupId,
 		private int $level,
 		private int $fieldSize,
 		private string $smogonDexIdentifier,
@@ -47,6 +49,14 @@ final class Format
 	public function getGenerationId() : GenerationId
 	{
 		return $this->generationId;
+	}
+
+	/**
+	 * Get the format's version group id.
+	 */
+	public function getVersionGroupId() : VersionGroupId
+	{
+		return $this->versionGroupId;
 	}
 
 	/**

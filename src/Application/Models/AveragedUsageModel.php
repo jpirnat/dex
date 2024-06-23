@@ -55,7 +55,7 @@ final class AveragedUsageModel
 		string $end,
 		string $formatIdentifier,
 		int $rating,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$this->start = $start;
 		$this->end = $end;
@@ -69,14 +69,14 @@ final class AveragedUsageModel
 		// Get the format.
 		$this->format = $this->formatRepository->getByIdentifier(
 			$formatIdentifier,
-			$languageId
+			$languageId,
 		);
 
 		// Get the ratings for these months.
 		$this->ratings = $this->ratingQueries->getByMonthsAndFormat(
 			$start,
 			$end,
-			$this->format->getId()
+			$this->format->getId(),
 		);
 
 		// Does leads rated data exist for these months?
@@ -84,14 +84,14 @@ final class AveragedUsageModel
 			$start,
 			$end,
 			$this->format->getId(),
-			$rating
+			$rating,
 		);
 
 		// Get usage Pokémon records for these months.
 		$usageAveragedPokemons = $this->usageAveragedPokemonRepository->getByMonthsAndFormat(
 			$start,
 			$end,
-			$this->format->getId()
+			$this->format->getId(),
 		);
 
 		// Get usage rated Pokémon records for these months.
@@ -99,7 +99,7 @@ final class AveragedUsageModel
 			$start,
 			$end,
 			$this->format->getId(),
-			$rating
+			$rating,
 		);
 
 		// Get each Pokémon's count of months with moveset data (to determine
@@ -108,7 +108,7 @@ final class AveragedUsageModel
 			$start,
 			$end,
 			$this->format->getId(),
-			$rating
+			$rating,
 		);
 
 		// Get Pokémon.
@@ -118,10 +118,10 @@ final class AveragedUsageModel
 		$pokemonNames = $this->pokemonNameRepository->getByLanguage($languageId);
 
 		// Get form icons.
-		$formIcons = $this->formIconRepository->getByGenerationAndFemaleAndRight(
-			$this->format->getGenerationId(),
+		$formIcons = $this->formIconRepository->getByVgAndFemaleAndRight(
+			$this->format->getVersionGroupId(),
 			false,
-			false
+			false,
 		);
 
 		// Get each usage record's data.

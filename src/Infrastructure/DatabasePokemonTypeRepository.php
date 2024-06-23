@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\PokemonType;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final class DatabasePokemonTypeRepository implements PokemonTypeRepositoryInterface
@@ -17,24 +17,24 @@ final class DatabasePokemonTypeRepository implements PokemonTypeRepositoryInterf
 	) {}
 
 	/**
-	 * Get Pokémon's types by generation and Pokémon.
+	 * Get Pokémon's types by version group and Pokémon.
 	 *
 	 * @return PokemonType[] Indexed and ordered by slot.
 	 */
-	public function getByGenerationAndPokemon(
-		GenerationId $generationId,
-		PokemonId $pokemonId
+	public function getByVgAndPokemon(
+		VersionGroupId $versionGroupId,
+		PokemonId $pokemonId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
 				`slot`,
 				`type_id`
 			FROM `pokemon_types`
-			WHERE `generation_id` = :generation_id
+			WHERE `version_group_id` = :version_group_id
 				AND `pokemon_id` = :pokemon_id
 			ORDER BY `slot`'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -42,10 +42,10 @@ final class DatabasePokemonTypeRepository implements PokemonTypeRepositoryInterf
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$pokemonType = new PokemonType(
-				$generationId,
+				$versionGroupId,
 				$pokemonId,
 				$result['slot'],
-				new TypeId($result['type_id'])
+				new TypeId($result['type_id']),
 			);
 
 			$pokemonTypes[$result['slot']] = $pokemonType;

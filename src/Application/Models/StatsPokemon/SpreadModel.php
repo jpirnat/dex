@@ -34,7 +34,7 @@ final class SpreadModel
 		Format $format,
 		int $rating,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$generationId = $format->getGenerationId();
 
@@ -48,13 +48,13 @@ final class SpreadModel
 			$format->getId(),
 			$rating,
 			$pokemonId,
-			$languageId
+			$languageId,
 		);
 
 		// Get the Pokémon's base stats.
-		$baseStats = $this->baseStatRepository->getByGenerationAndPokemon(
-			$generationId,
-			$pokemonId
+		$baseStats = $this->baseStatRepository->getByPokemon(
+			$format->getVersionGroupId(),
+			$pokemonId,
 		);
 
 		// Assume the Pokémon has perfect IVs.
@@ -94,7 +94,7 @@ final class SpreadModel
 					$baseStats,
 					$ivSpread,
 					$calcEvSpread,
-					$format->getLevel()
+					$format->getLevel(),
 				);
 			} else {
 				$statSpread = $this->statCalculator->all3(
@@ -103,7 +103,7 @@ final class SpreadModel
 					$evSpread,
 					$format->getLevel(),
 					$increasedStatId,
-					$decreasedStatId
+					$decreasedStatId,
 				);
 			}
 

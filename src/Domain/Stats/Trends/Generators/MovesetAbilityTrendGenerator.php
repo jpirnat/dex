@@ -33,22 +33,22 @@ final class MovesetAbilityTrendGenerator
 		int $rating,
 		PokemonId $pokemonId,
 		AbilityId $abilityId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : MovesetAbilityTrendLine {
 		// Get the name data.
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
-			$pokemonId
+			$pokemonId,
 		);
 		$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
 			$languageId,
-			$abilityId
+			$abilityId,
 		);
 
 		// Get the Pokémon's primary type.
-		$pokemonTypes = $this->pokemonTypeRepository->getByGenerationAndPokemon(
-			$format->getGenerationId(),
-			$pokemonId
+		$pokemonTypes = $this->pokemonTypeRepository->getByVgAndPokemon(
+			$format->getVersionGroupId(),
+			$pokemonId,
 		);
 		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());
 
@@ -57,7 +57,7 @@ final class MovesetAbilityTrendGenerator
 			$format->getId(),
 			$rating,
 			$pokemonId,
-			$abilityId
+			$abilityId,
 		);
 		$months = $this->statsChartQueries->getMonthsWithData($format->getId(), $rating);
 
@@ -66,7 +66,7 @@ final class MovesetAbilityTrendGenerator
 			$format->getId(),
 			$usageDatas,
 			$months,
-			0
+			0,
 		);
 
 		return new MovesetAbilityTrendLine(
@@ -75,7 +75,7 @@ final class MovesetAbilityTrendGenerator
 			$pokemonName,
 			$abilityName,
 			$pokemonType,
-			$trendPoints
+			$trendPoints,
 		);
 	}
 }

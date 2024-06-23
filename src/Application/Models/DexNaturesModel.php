@@ -9,7 +9,6 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexNaturesModel
 {
-	private string $vgIdentifier;
 	private array $natures = [];
 
 
@@ -24,7 +23,7 @@ final class DexNaturesModel
 	 */
 	public function setData(
 		string $vgIdentifier,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$this->versionGroupModel->setByIdentifier($vgIdentifier);
 

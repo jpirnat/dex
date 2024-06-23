@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Models\ModelRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class PokemonModel
 {
@@ -28,14 +28,14 @@ final class PokemonModel
 	 * Set miscellaneous data about the Pokémon (name, types, base stats, etc).
 	 */
 	public function setData(
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$this->pokemon = $this->dexPokemonRepository->getById(
-			$generationId,
+			$versionGroupId,
 			$pokemonId,
-			$languageId
+			$languageId,
 		);
 
 		// Get the Pokémon's model.
@@ -44,7 +44,7 @@ final class PokemonModel
 			false,
 			false,
 			false,
-			0
+			0,
 		);
 	}
 

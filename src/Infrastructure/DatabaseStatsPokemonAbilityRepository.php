@@ -28,7 +28,7 @@ final class DatabaseStatsPokemonAbilityRepository implements StatsPokemonAbility
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array {
 		$prevMonth = $prevMonth !== null
 			? $prevMonth->format('Y-m-01')
@@ -77,7 +77,7 @@ final class DatabaseStatsPokemonAbilityRepository implements StatsPokemonAbility
 				$result['identifier'],
 				$result['name'],
 				(float) $result['percent'],
-				(float) $result['percent'] - (float) $result['prev_percent']
+				(float) $result['percent'] - (float) $result['prev_percent'],
 			);
 
 			$abilities[] = $ability;

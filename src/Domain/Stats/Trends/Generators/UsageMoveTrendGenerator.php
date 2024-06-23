@@ -35,28 +35,28 @@ final class UsageMoveTrendGenerator
 		int $rating,
 		PokemonId $pokemonId,
 		MoveId $moveId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : UsageMoveTrendLine {
 		// Get the name data.
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
-			$pokemonId
+			$pokemonId,
 		);
 		$moveName = $this->moveNameRepository->getByLanguageAndMove(
 			$languageId,
-			$moveId
+			$moveId,
 		);
 
 		// Get the Pokémon's primary type.
-		$pokemonTypes = $this->pokemonTypeRepository->getByGenerationAndPokemon(
-			$format->getGenerationId(),
-			$pokemonId
+		$pokemonTypes = $this->pokemonTypeRepository->getByVgAndPokemon(
+			$format->getVersionGroupId(),
+			$pokemonId,
 		);
 		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());
 
 		// Get the move's type.
 		$vgMove = $this->vgMoveRepository->getByVgAndMove(
-			$format->getGenerationId(),
+			$format->getVersionGroupId(),
 			$moveId,
 		);
 		$moveType = $this->typeRepository->getById($vgMove->getTypeId());
@@ -66,7 +66,7 @@ final class UsageMoveTrendGenerator
 			$format->getId(),
 			$rating,
 			$pokemonId,
-			$moveId
+			$moveId,
 		);
 		$months = $this->statsChartQueries->getMonthsWithData($format->getId(), $rating);
 
@@ -75,7 +75,7 @@ final class UsageMoveTrendGenerator
 			$format->getId(),
 			$usageDatas,
 			$months,
-			0
+			0,
 		);
 
 		return new UsageMoveTrendLine(
@@ -85,7 +85,7 @@ final class UsageMoveTrendGenerator
 			$moveName,
 			$pokemonType,
 			$moveType,
-			$trendPoints
+			$trendPoints,
 		);
 	}
 }

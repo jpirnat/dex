@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Usage\StatsMovePokemon;
 use Jp\Dex\Domain\Usage\StatsMovePokemonRepositoryInterface;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final class DatabaseStatsMovePokemonRepository implements StatsMovePokemonRepositoryInterface
@@ -29,8 +29,8 @@ final class DatabaseStatsMovePokemonRepository implements StatsMovePokemonReposi
 		FormatId $formatId,
 		int $rating,
 		MoveId $moveId,
-		GenerationId $generationId,
-		LanguageId $languageId
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
 	) : array {
 		$prevMonth = $prevMonth !== null
 			? $prevMonth->format('Y-m-01')
@@ -66,7 +66,7 @@ final class DatabaseStatsMovePokemonRepository implements StatsMovePokemonReposi
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
 				AND `mrm`.`move_id` = :move_id
-				AND `fi`.`generation_id` = :generation_id
+				AND `fi`.`version_group_id` = :version_group_id
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
@@ -77,7 +77,7 @@ final class DatabaseStatsMovePokemonRepository implements StatsMovePokemonReposi
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -91,7 +91,7 @@ final class DatabaseStatsMovePokemonRepository implements StatsMovePokemonReposi
 				(float) $result['pokemon_percent'],
 				(float) $result['move_percent'],
 				(float) $result['usage_percent'],
-				(float) $result['usage_percent'] - (float) $result['prev_percent']
+				(float) $result['usage_percent'] - (float) $result['prev_percent'],
 			);
 
 			$pokemons[] = $pokemon;

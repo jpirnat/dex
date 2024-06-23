@@ -29,18 +29,18 @@ final class UsageTrendGenerator
 		Format $format,
 		int $rating,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : UsageTrendLine {
 		// Get the name data.
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
-			$pokemonId
+			$pokemonId,
 		);
 
 		// Get the Pokémon's primary type.
-		$pokemonTypes = $this->pokemonTypeRepository->getByGenerationAndPokemon(
-			$format->getGenerationId(),
-			$pokemonId
+		$pokemonTypes = $this->pokemonTypeRepository->getByVgAndPokemon(
+			$format->getVersionGroupId(),
+			$pokemonId,
 		);
 		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());
 
@@ -48,7 +48,7 @@ final class UsageTrendGenerator
 		$usageDatas = $this->statsChartQueries->getUsage(
 			$format->getId(),
 			$rating,
-			$pokemonId
+			$pokemonId,
 		);
 		$months = $this->statsChartQueries->getMonthsWithData($format->getId(), $rating);
 
@@ -57,7 +57,7 @@ final class UsageTrendGenerator
 			$format->getId(),
 			$usageDatas,
 			$months,
-			0
+			0,
 		);
 
 		return new UsageTrendLine(
@@ -65,7 +65,7 @@ final class UsageTrendGenerator
 			$rating,
 			$pokemonName,
 			$pokemonType,
-			$trendPoints
+			$trendPoints,
 		);
 	}
 }

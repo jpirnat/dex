@@ -21,6 +21,6 @@ interface StatsPokemonAbilityRepositoryInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : array;
 }

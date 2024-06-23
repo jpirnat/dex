@@ -53,7 +53,7 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 		);
 
 		// Normalize the base stats.
-		$statIds = StatId::getByVersionGroup($VersionGroup);
+		$statIds = StatId::getByVersionGroup($versionGroupId);
 		$idsToIdentifiers = StatId::getIdsToIdentifiers();
 		$normalized = [];
 		foreach ($statIds as $statId) {

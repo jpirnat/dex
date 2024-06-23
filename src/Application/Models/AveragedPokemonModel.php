@@ -60,7 +60,7 @@ final class AveragedPokemonModel
 		string $formatIdentifier,
 		int $rating,
 		string $pokemonIdentifier,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$this->start = $start;
 		$this->end = $end;
@@ -74,7 +74,7 @@ final class AveragedPokemonModel
 		// Get the format.
 		$this->format = $this->formatRepository->getByIdentifier(
 			$formatIdentifier,
-			$languageId
+			$languageId,
 		);
 
 		// Get the Pokémon.
@@ -84,20 +84,20 @@ final class AveragedPokemonModel
 		$this->ratings = $this->ratingQueries->getByMonthsAndFormat(
 			$start,
 			$end,
-			$this->format->getId()
+			$this->format->getId(),
 		);
 
 		// Get the stat names.
-		$this->stats = $this->statNameModel->getByGeneration(
-			$this->format->getGenerationId(),
-			$languageId
+		$this->stats = $this->statNameModel->getByVersionGroup(
+			$this->format->getVersionGroupId(),
+			$languageId,
 		);
 
 		// Get Pokémon data.
 		$this->pokemonModel->setData(
-			$this->format->getGenerationId(),
+			$this->format->getVersionGroupId(),
 			$this->pokemon->getId(),
-			$languageId
+			$languageId,
 		);
 
 		// Get the format's generation.
