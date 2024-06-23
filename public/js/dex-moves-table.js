@@ -125,7 +125,7 @@ Vue.component('dex-moves-table', {
 						</td>
 						<td class="dex-table__move-type">
 							<dex-type-link
-								:vgIdentifier="versionGroup.identifier"
+								:vg-identifier="versionGroup.identifier"
 								:type="move.type"
 							></dex-type-link>
 						</td>

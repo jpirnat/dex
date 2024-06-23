@@ -176,7 +176,7 @@ Vue.component('dex-pokemon-method-moves', {
 				</th>
 				<td class="dex-table__move-type">
 					<dex-type-link
-						:vgIdentifier="versionGroup.identifier"
+						:vg-identifier="versionGroup.identifier"
 						:type="move.type"
 					></dex-type-link>
 				</td>
