@@ -131,7 +131,7 @@ final class AveragedPokemonView
 				'ratings' => $this->averagedPokemonModel->getRatings(),
 
 				'generation' => [
-					'identifier' => $generation->getIdentifier(),
+					'smogonDexIdentifier' => $generation->getSmogonDexIdentifier(),
 				],
 				'stats' => $stats,
 

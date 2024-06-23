@@ -8,7 +8,7 @@ final class Generation
 	public function __construct(
 		private GenerationId $id,
 		private string $identifier,
-		private string $icon,
+		private string $smogonDexIdentifier,
 	) {}
 
 	/**
@@ -28,10 +28,10 @@ final class Generation
 	}
 
 	/**
-	 * Get the generation's icon.
+	 * Get the generation's Smogon dex identifier.
 	 */
-	public function getIcon() : string
+	public function getSmogonDexIdentifier() : string
 	{
-		return $this->icon;
+		return $this->smogonDexIdentifier;
 	}
 }

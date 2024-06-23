@@ -203,7 +203,7 @@ final class StatsPokemonView
 				'nextRank' => $nextRank,
 
 				'generation' => [
-					'identifier' => $generation->getIdentifier(),
+					'smogonDexIdentifier' => $generation->getSmogonDexIdentifier(),
 				],
 				'stats' => $stats,
 				'rawCount' => $rawCount,
