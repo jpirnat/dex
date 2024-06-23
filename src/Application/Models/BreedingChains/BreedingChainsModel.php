@@ -18,7 +18,6 @@ use Jp\Dex\Domain\PokemonMoves\PokemonMove;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveFormatter;
 use Jp\Dex\Domain\Species\SpeciesRepositoryInterface;
 use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
-use Jp\Dex\Domain\Versions\VersionGroupId;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class BreedingChainsModel
@@ -88,7 +87,7 @@ final class BreedingChainsModel
 			$records = [];
 			foreach ($chain as $pokemonMove) {
 				$chainId[] = $pokemonMove->getPokemonId()->value();
-				$records[] = $this->getRecord($versionGroupId, $pokemonMove, $languageId);
+				$records[] = $this->getRecord($pokemonMove, $languageId);
 			}
 			$chainId = implode('-', $chainId);
 			$this->chains[$chainId] = $records;
@@ -99,14 +98,13 @@ final class BreedingChainsModel
 	 * Create the breeding chain record for this Pokémon move.
 	 */
 	private function getRecord(
-		VersionGroupId $versionGroupId,
 		PokemonMove $pokemonMove,
 		LanguageId $languageId,
 	) : BreedingChainRecord {
 		$pokemonId = $pokemonMove->getPokemonId();
 
 		$formIcon = $this->formIconRepository->getByVgAndFormAndFemaleAndRight(
-			$versionGroupId,
+			$pokemonMove->getVersionGroupId(),
 			new FormId($pokemonId->value()),
 			false,
 			false,

@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\FormIcons;
 
 use Jp\Dex\Domain\Forms\FormId;
-use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface FormIconRepositoryInterface
