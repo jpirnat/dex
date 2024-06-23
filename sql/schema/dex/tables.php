@@ -52,6 +52,7 @@ return [
 	'item_fling_effects',
 	'items',
 	'item_descriptions' => [
+		'item_descriptions_01-3_tm_names_only',
 		'item_descriptions_04',
 		'item_descriptions_05',
 		'item_descriptions_06',
