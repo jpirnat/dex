@@ -41,7 +41,6 @@ final class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterf
 				ON `pm`.`version_group_id` = `vg`.`id`
 			WHERE `pm`.`pokemon_id` = :pokemon_id
 				AND `vg`.`generation_id` <= :generation_id
-				AND `pm`.`move_id` NOT BETWEEN :hp_begin AND :hp_end
 				AND `pm`.`move_method_id` <> :sketch
 			ORDER BY
 				`pm`.`level`,
@@ -49,8 +48,6 @@ final class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterf
 		);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':hp_begin', MoveId::TYPED_HIDDEN_POWER_BEGIN, PDO::PARAM_INT);
-		$stmt->bindValue(':hp_end', MoveId::TYPED_HIDDEN_POWER_END, PDO::PARAM_INT);
 		$stmt->bindValue(':sketch', MoveMethodId::SKETCH, PDO::PARAM_INT);
 		$stmt->execute();
 
