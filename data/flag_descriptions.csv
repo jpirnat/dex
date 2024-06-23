@@ -8,8 +8,8 @@ language_id,flag_id,name,description
 2,7,Copied by Mirror Move,This move can be copied by Mirror Move.
 2,8,Has a charging turn,This move has a charging turn that can be skipped with a Power Herb.
 2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-2,10,Punch-based,This move has 1.2× its usual power when used by a Pokémon with Iron Fist.
-2,11,Sound-based,Pokémon with Soundproof are immune to this move.
+2,10,Punch move,This move has 1.2× its usual power when used by a Pokémon with Iron Fist.
+2,11,Sound-based move,Pokémon with Soundproof are immune to this move.
 2,12,Unusable during Gravity,This move cannot be used in high Gravity.
 2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
 2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
@@ -21,23 +21,23 @@ language_id,flag_id,name,description
 2,20,Metronome,This move can be called by Metronome.
 2,21,Cures Drowsy,This move cures drowsiness for the user and the target.
 2,22,Cures Frostbite,This move cures frostbite for the user and the target.
-2,23,fail-encore,The move Encore will fail if this move was used last by its target.
-2,24,fail-me-first,The move Me First will fail if this move was used last by its target.
-2,25,future-attack,This move triggers an attack in the future.
-2,26,pressure,"This move is affected by the ability Pressure, even if it doesn't target that Pokémon."
-2,27,combo,This move can be part of a combo.
-2,28,no-sleep-talk,This move cannot be selected by Sleep Talk.
-2,29,no-assist,This move cannot be selected by Assist.
-2,30,fail-copycat,The move Copycat will fail if this move was used last by its target.
-2,31,fail-mimic,The move Mimic will fail if this move was used last by its target.
-2,32,fail-instruct,The move Instruct will fail if this move was used last by its target.
-2,33,powder,"Grass-type Pokémon, Pokémon with the ability Overcoat, and Pokémon holding Safety Goggles are immune to this move."
-2,34,bite,This move's power is boosted by the ability Strong Jaw.
-2,35,bullet,This move has no effect on Pokémon with the ability Bulletproof.
-2,36,no-multi-hit,This move will not be duplicated by the ability Parental Bond.
-2,37,no-effectiveness,"This move will not display as ""super effective"" or ""not very effective."""
-2,38,sheer-force,This move's power is boosted by the ability Sheer Force regardless of having a traditional secondary effect.
-2,39,slicing,This move's power is boosted by the ability Sharpness.
-2,40,wind,This move activates the abilities Wind Rider and Wind Power.
-2,46,cant-use-twice,This move cannot be used twice in a row.
-2,47,no-sketch,The move Sketch will fail if this move was used last by its target.
+2,23,Encore fails,The move Encore will fail if this move was used last by its target.
+2,24,Me First fails,The move Me First will fail if this move was used last by its target.
+2,25,Future attack,This move triggers an attack in the future.
+2,26,Affected by Pressure,"This move is affected by the ability Pressure, even if it doesn't target that Pokémon."
+2,27,Combo move,This move can be part of a combo.
+2,28,Ignored by Sleep Talk,This move cannot be selected by Sleep Talk.
+2,29,Ignored by Assist,This move cannot be selected by Assist.
+2,30,Copycat fails,The move Copycat will fail if this move was used last by its target.
+2,31,Mimic fails,The move Mimic will fail if this move was used last by its target.
+2,32,Instruct fails,The move Instruct will fail if this move was used last by its target.
+2,33,Powder or spore move,"Grass-type Pokémon, Pokémon with the ability Overcoat, and Pokémon holding Safety Goggles are immune to this move."
+2,34,Biting move,This move's power is boosted by the ability Strong Jaw.
+2,35,Ball or bomb move,This move has no effect on Pokémon with the ability Bulletproof.
+2,36,No Parental Bond,The ability Parental Bond will not turn this move into a two-hit move.
+2,37,No effectiveness message,"This move will not display as ""super effective"" or ""not very effective."""
+2,38,Boosted by Sheer Force,This move's power is boosted by the ability Sheer Force regardless of having a traditional secondary effect.
+2,39,Slicing move,This move's power is boosted by the ability Sharpness.
+2,40,Wind move,This move activates the abilities Wind Rider and Wind Power.
+2,46,Can't be used consecutively,This move cannot be used twice in a row.
+2,47,Can't be Sketched,The move Sketch will fail if this move was used last by its target.
