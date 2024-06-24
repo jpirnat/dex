@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Formats;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class Format
+final readonly class Format
 {
 	public function __construct(
 		private FormatId $id,

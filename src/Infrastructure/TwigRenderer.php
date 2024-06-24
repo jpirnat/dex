@@ -6,7 +6,7 @@ namespace Jp\Dex\Infrastructure;
 use Jp\Dex\Presentation\RendererInterface;
 use Twig\Environment;
 
-final class TwigRenderer implements RendererInterface
+final readonly class TwigRenderer implements RendererInterface
 {
 	public function __construct(
 		private Environment $twig,

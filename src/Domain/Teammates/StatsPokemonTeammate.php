@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Teammates;
 
-final class StatsPokemonTeammate
+final readonly class StatsPokemonTeammate
 {
 	public function __construct(
 		private string $icon,

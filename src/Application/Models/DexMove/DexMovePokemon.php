@@ -6,7 +6,7 @@ namespace Jp\Dex\Application\Models\DexMove;
 use Jp\Dex\Domain\Abilities\DexPokemonAbility;
 use Jp\Dex\Domain\Types\DexType;
 
-final class DexMovePokemon
+final readonly class DexMovePokemon
 {
 	private array $versionGroupData;
 	private string $icon;
@@ -42,7 +42,7 @@ final class DexMovePokemon
 		array $abilities,
 		array $baseStats,
 		int $baseStatTotal,
-		int $sort
+		int $sort,
 	) {
 		$this->versionGroupData = $versionGroupData;
 		$this->icon = $icon;

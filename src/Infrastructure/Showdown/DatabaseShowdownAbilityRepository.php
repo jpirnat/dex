@@ -96,7 +96,7 @@ final class DatabaseShowdownAbilityRepository implements ShowdownAbilityReposito
 		}
 
 		throw new AbilityNotImportedException(
-			'Ability should not be imported: ' . $showdownAbilityName
+			"Ability should not be imported: $showdownAbilityName."
 		);
 	}
 

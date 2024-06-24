@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Categories;
 
-final class DexCategory
+final readonly class DexCategory
 {
 	public function __construct(
 		private string $icon,

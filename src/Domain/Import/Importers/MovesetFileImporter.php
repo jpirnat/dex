@@ -34,7 +34,7 @@ use Jp\Dex\Domain\Stats\StatValueContainer;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
-final class MovesetFileImporter
+final readonly class MovesetFileImporter
 {
 	public function __construct(
 		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
@@ -61,7 +61,7 @@ final class MovesetFileImporter
 		StreamInterface $stream,
 		DateTime $month,
 		FormatId $formatId,
-		int $rating
+		int $rating,
 	) : void {
 		// If the file is empty, there's nothing to import.
 		if ($stream->getSize() === 0) {
@@ -70,12 +70,12 @@ final class MovesetFileImporter
 
 		$movesetPokemonExists = $this->movesetPokemonRepository->hasAny(
 			$month,
-			$formatId
+			$formatId,
 		);
 		$movesetRatedPokemonExists = $this->movesetRatedPokemonRepository->hasAny(
 			$month,
 			$formatId,
-			$rating
+			$rating,
 		);
 
 		// If all data in this file has already been imported, there's no need
@@ -104,7 +104,7 @@ final class MovesetFileImporter
 					$month,
 					$formatId,
 					$rating,
-					$pokemonId
+					$pokemonId,
 				);
 			}
 			Utils::readLine($stream); // Separator.
@@ -131,7 +131,7 @@ final class MovesetFileImporter
 					$formatId,
 					$pokemonId,
 					$rawCount,
-					$viabilityCeiling
+					$viabilityCeiling,
 				);
 
 				$this->movesetPokemonRepository->save($movesetPokemon);
@@ -140,7 +140,7 @@ final class MovesetFileImporter
 			if ($usageRatedPokemonId && !$movesetRatedPokemonExists) {
 				$movesetRatedPokemon = new MovesetRatedPokemon(
 					$usageRatedPokemonId,
-					$averageWeight
+					$averageWeight,
 				);
 
 				$this->movesetRatedPokemonRepository->save($movesetRatedPokemon);
@@ -164,7 +164,7 @@ final class MovesetFileImporter
 					$movesetRatedAbility = new MovesetRatedAbility(
 						$usageRatedPokemonId,
 						$abilityId,
-						$namePercent->percent()
+						$namePercent->percent(),
 					);
 
 					$this->movesetRatedAbilityRepository->save($movesetRatedAbility);
@@ -194,7 +194,7 @@ final class MovesetFileImporter
 					$movesetRatedItem = new MovesetRatedItem(
 						$usageRatedPokemonId,
 						$itemId,
-						$namePercent->percent()
+						$namePercent->percent(),
 					);
 
 					$this->movesetRatedItemRepository->save($movesetRatedItem);
@@ -234,7 +234,7 @@ final class MovesetFileImporter
 						$usageRatedPokemonId,
 						$natureId,
 						$evSpread,
-						$spread->percent()
+						$spread->percent(),
 					);
 
 					$this->movesetRatedSpreadRepository->save($movesetRatedSpread);
@@ -264,7 +264,7 @@ final class MovesetFileImporter
 					$movesetRatedMove = new MovesetRatedMove(
 						$usageRatedPokemonId,
 						$moveId,
-						$namePercent->percent()
+						$namePercent->percent(),
 					);
 
 					$this->movesetRatedMoveRepository->save($movesetRatedMove);
@@ -294,7 +294,7 @@ final class MovesetFileImporter
 					$movesetRatedTeammate = new MovesetRatedTeammate(
 						$usageRatedPokemonId,
 						$teammateId,
-						$namePercent->percent()
+						$namePercent->percent(),
 					);
 
 					$this->movesetRatedTeammateRepository->save($movesetRatedTeammate);
@@ -329,7 +329,7 @@ final class MovesetFileImporter
 						$counter->number2(),
 						$counter->number3(),
 						$counter->percentKnockedOut(),
-						$counter->percentSwitchedOut()
+						$counter->percentSwitchedOut(),
 					);
 
 					$this->movesetRatedCounterRepository->save($movesetRatedCounter);

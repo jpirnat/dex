@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\StatName;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use PDO;
 
-final class DatabaseStatNameRepository implements StatNameRepositoryInterface
+final readonly class DatabaseStatNameRepository implements StatNameRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -40,7 +40,7 @@ final class DatabaseStatNameRepository implements StatNameRepositoryInterface
 				$languageId,
 				new StatId($result['stat_id']),
 				$result['name'],
-				$result['abbreviation']
+				$result['abbreviation'],
 			);
 
 			$statNames[$result['stat_id']] = $statName;

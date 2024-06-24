@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Stats\Moveset;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidAverageWeightException;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 
-final class MovesetRatedPokemon
+final readonly class MovesetRatedPokemon
 {
 	/**
 	 * Constructor.
@@ -19,7 +19,7 @@ final class MovesetRatedPokemon
 	) {
 		if ($averageWeight < 0) {
 			throw new InvalidAverageWeightException(
-				'Invalid average weight: ' . $averageWeight
+				"Invalid average weight: $averageWeight."
 			);
 		}
 	}

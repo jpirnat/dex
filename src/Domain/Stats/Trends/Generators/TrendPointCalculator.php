@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Trends\Lines\TrendPoint;
 use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
 
-final class TrendPointCalculator
+final readonly class TrendPointCalculator
 {
 	public function __construct(
 		private UsageQueriesInterface $usageQueries,
@@ -78,7 +78,7 @@ final class TrendPointCalculator
 		FormatId $formatId,
 		array $usageDatas,
 		array $months,
-		float $default
+		float $default,
 	) : array {
 		// Get the first and final dates in the series.
 		$firstDate = $this->getFirstDate($usageDatas, $formatId);

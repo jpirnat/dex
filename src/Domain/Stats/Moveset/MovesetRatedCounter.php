@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 
-final class MovesetRatedCounter
+final readonly class MovesetRatedCounter
 {
 	/**
 	 * Constructor.
@@ -28,13 +28,13 @@ final class MovesetRatedCounter
 
 		if ($percentKnockedOut < 0 || $percentKnockedOut > 100) {
 			throw new InvalidPercentException(
-				'Invalid percent knocked out: ' . $percentKnockedOut
+				"Invalid percent knocked out: $percentKnockedOut."
 			);
 		}
 
 		if ($percentSwitchedOut < 0 || $percentSwitchedOut > 100) {
 			throw new InvalidPercentException(
-				'Invalid percent switched out: ' . $percentSwitchedOut
+				"Invalid percent switched out: $percentSwitchedOut."
 			);
 		}
 	}

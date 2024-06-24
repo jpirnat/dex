@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use PDO;
 
-final class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRepositoryInterface
+final readonly class DatabaseMovesetRatedSpreadRepository implements MovesetRatedSpreadRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

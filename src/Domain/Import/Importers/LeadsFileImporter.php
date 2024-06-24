@@ -17,7 +17,7 @@ use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
-final class LeadsFileImporter
+final readonly class LeadsFileImporter
 {
 	public function __construct(
 		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
@@ -35,7 +35,7 @@ final class LeadsFileImporter
 		StreamInterface $stream,
 		DateTime $month,
 		FormatId $formatId,
-		int $rating
+		int $rating,
 	) : void {
 		// If the file is empty, there's nothing to import.
 		if ($stream->getSize() === 0) {
@@ -44,16 +44,16 @@ final class LeadsFileImporter
 
 		$leadsExists = $this->leadsRepository->has(
 			$month,
-			$formatId
+			$formatId,
 		);
 		$leadsPokemonExists = $this->leadsPokemonRepository->hasAny(
 			$month,
-			$formatId
+			$formatId,
 		);
 		$leadsRatedPokemonExists = $this->leadsRatedPokemonRepository->hasAny(
 			$month,
 			$formatId,
-			$rating
+			$rating,
 		);
 
 		// If all data in this file has already been imported, there's no need
@@ -71,7 +71,7 @@ final class LeadsFileImporter
 			$leads = new Leads(
 				$month,
 				$formatId,
-				$totalLeads
+				$totalLeads,
 			);
 			$this->leadsRepository->save($leads);
 		}
@@ -95,7 +95,7 @@ final class LeadsFileImporter
 				$month,
 				$formatId,
 				$rating,
-				$pokemonId
+				$pokemonId,
 			);
 			if (!$usageRatedPokemonId) {
 				continue;
@@ -107,7 +107,7 @@ final class LeadsFileImporter
 					$formatId,
 					$pokemonId,
 					$leadUsage->raw(),
-					$leadUsage->rawPercent()
+					$leadUsage->rawPercent(),
 				);
 				$this->leadsPokemonRepository->save($leadsPokemon);
 			}
@@ -116,7 +116,7 @@ final class LeadsFileImporter
 				$leadsRatedPokemon = new LeadsRatedPokemon(
 					$usageRatedPokemonId,
 					$leadUsage->rank(),
-					$leadUsage->usagePercent()
+					$leadUsage->usagePercent(),
 				);
 				$this->leadsRatedPokemonRepository->save($leadsRatedPokemon);
 			}

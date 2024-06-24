@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Versions;
 
-final class DexVersionGroup
+final readonly class DexVersionGroup
 {
 	public function __construct(
 		private VersionGroupId $id,

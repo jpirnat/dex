@@ -6,7 +6,7 @@ namespace Jp\Dex\Presentation;
 use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class IndexView
+final readonly class IndexView
 {
 	public function __construct(
 		private RendererInterface $renderer,

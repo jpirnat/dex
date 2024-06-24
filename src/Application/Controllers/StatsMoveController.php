@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsMoveModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class StatsMoveController
+final readonly class StatsMoveController
 {
 	public function __construct(
 		private BaseController $baseController,
@@ -32,7 +32,7 @@ final class StatsMoveController
 			$formatIdentifier,
 			$rating,
 			$moveIdentifier,
-			$languageId
+			$languageId,
 		);
 	}
 }

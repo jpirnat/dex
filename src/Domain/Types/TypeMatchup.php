@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Types;
 
 use Jp\Dex\Domain\Versions\GenerationId;
 
-final class TypeMatchup
+final readonly class TypeMatchup
 {
 	public function __construct(
 		private GenerationId $generationId,

@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsMoveModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class StatsMoveView
+final readonly class StatsMoveView
 {
 	public function __construct(
 		private StatsMoveModel $statsMoveModel,

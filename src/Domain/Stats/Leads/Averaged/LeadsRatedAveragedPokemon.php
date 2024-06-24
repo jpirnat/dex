@@ -16,7 +16,7 @@ use Jp\Dex\Domain\Stats\ValidateMonthTrait;
  * This class holds data derived from averaging a Pokémon's leads rated Pokémon
  * data over a span of multiple months.
  */
-final class LeadsRatedAveragedPokemon
+final readonly class LeadsRatedAveragedPokemon
 {
 	use ValidateMonthTrait;
 
@@ -41,17 +41,15 @@ final class LeadsRatedAveragedPokemon
 		$this->validateMonth($end);
 
 		if ($rating < 0) {
-			throw new InvalidRatingException('Invalid rating: ' . $rating);
+			throw new InvalidRatingException("Invalid rating: $rating.");
 		}
 
 		if ($rank < 1) {
-			throw new InvalidRankException('Invalid rank: ' . $rank);
+			throw new InvalidRankException("Invalid rank: $rank.");
 		}
 
 		if ($usagePercent < 0 || $usagePercent > 100) {
-			throw new InvalidPercentException(
-				'Invalid usage percent: ' . $usagePercent
-			);
+			throw new InvalidPercentException("Invalid usage percent: $usagePercent.");
 		}
 	}
 

@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsItemModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class StatsItemController
+final readonly class StatsItemController
 {
 	public function __construct(
 		private BaseController $baseController,
@@ -32,7 +32,7 @@ final class StatsItemController
 			$formatIdentifier,
 			$rating,
 			$itemIdentifier,
-			$languageId
+			$languageId,
 		);
 	}
 }

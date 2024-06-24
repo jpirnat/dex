@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Versions;
 
-final class Generation
+final readonly class Generation
 {
 	public function __construct(
 		private GenerationId $id,

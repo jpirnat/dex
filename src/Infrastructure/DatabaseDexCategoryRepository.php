@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Categories\DexCategoryRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
 
-final class DatabaseDexCategoryRepository implements DexCategoryRepositoryInterface
+final readonly class DatabaseDexCategoryRepository implements DexCategoryRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -39,7 +39,7 @@ final class DatabaseDexCategoryRepository implements DexCategoryRepositoryInterf
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$dexCategory = new DexCategory(
 				$result['icon'],
-				$result['name']
+				$result['name'],
 			);
 
 			$dexCategories[$result['id']] = $dexCategory;

@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseAbilityDescriptionRepository implements AbilityDescriptionRepositoryInterface
+final readonly class DatabaseAbilityDescriptionRepository implements AbilityDescriptionRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

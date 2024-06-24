@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Symfony\Component\DomCrawler\Crawler;
 
-final class LeadsDirectoryImporter
+final readonly class LeadsDirectoryImporter
 {
 	public function __construct(
 		private LeadsFileImporter $leadsFileImporter,
@@ -63,7 +63,7 @@ final class LeadsDirectoryImporter
 			// data.
 			$format = $this->formatRepository->getById(
 				$formatId,
-				new LanguageId(LanguageId::ENGLISH) // The language doesn't matter.
+				new LanguageId(LanguageId::ENGLISH), // The language doesn't matter.
 			);
 			if ($format->getFieldSize() > 1) {
 				continue;
@@ -77,7 +77,7 @@ final class LeadsDirectoryImporter
 				$stream,
 				$month,
 				$formatId,
-				$rating
+				$rating,
 			);
 		}
 	}

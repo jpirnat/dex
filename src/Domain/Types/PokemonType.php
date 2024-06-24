@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Types;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class PokemonType
+final readonly class PokemonType
 {
 	public function __construct(
 		private VersionGroupId $versionGroupId,

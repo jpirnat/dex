@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Items;
 
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class Item
+final readonly class Item
 {
 	public function __construct(
 		private ItemId $id,

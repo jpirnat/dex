@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\BaseModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class BaseController
+final readonly class BaseController
 {
 	public function __construct(
 		private BaseModel $baseModel,

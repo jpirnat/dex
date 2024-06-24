@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Import\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
-final class MonthDirectoryImporter
+final readonly class MonthDirectoryImporter
 {
 	public function __construct(
 		private UsageFileImporter $usageFileImporter,
@@ -66,7 +66,7 @@ final class MonthDirectoryImporter
 				$stream,
 				$month,
 				$formatId,
-				$rating
+				$rating,
 			);
 		}
 

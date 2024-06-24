@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Types;
 
-final class DexType
+final readonly class DexType
 {
 	public function __construct(
 		private TypeId $id,

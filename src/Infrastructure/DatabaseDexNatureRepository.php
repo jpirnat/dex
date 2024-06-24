@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Natures\DexNatureRepositoryInterface;
 use PDO;
 
-final class DatabaseDexNatureRepository implements DexNatureRepositoryInterface
+final readonly class DatabaseDexNatureRepository implements DexNatureRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

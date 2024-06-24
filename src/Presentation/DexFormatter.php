@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Versions\DexVersion;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroup;
 
-final class DexFormatter
+final readonly class DexFormatter
 {
 	/**
 	 * Transform an array of generation objects into a renderable data array.

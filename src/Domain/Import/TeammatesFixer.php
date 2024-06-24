@@ -19,7 +19,7 @@ use PDO;
  * the new formula. This is done simply by adding the teammate's overall Usage %
  * into the Teammate %.
  */
-final class TeammatesFixer
+final readonly class TeammatesFixer
 {
 	public function __construct(
 		private PDO $db,

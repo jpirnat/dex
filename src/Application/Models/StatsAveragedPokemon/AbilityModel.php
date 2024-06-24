@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryInterface;
 
-final class AbilityModel
+final readonly class AbilityModel
 {
 	public function __construct(
 		private MovesetRatedAveragedAbilityRepositoryInterface $movesetRatedAveragedAbilityRepository,
@@ -36,7 +36,7 @@ final class AbilityModel
 			$end,
 			$formatId,
 			$rating,
-			$pokemonId
+			$pokemonId,
 		);
 
 		$abilities = [];
@@ -48,7 +48,7 @@ final class AbilityModel
 			// Get this ability's name.
 			$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
 				$languageId,
-				$abilityId
+				$abilityId,
 			);
 
 			// Get this ability.

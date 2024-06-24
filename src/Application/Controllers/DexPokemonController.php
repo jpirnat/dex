@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\DexPokemon\DexPokemonModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class DexPokemonController
+final readonly class DexPokemonController
 {
 	public function __construct(
 		private BaseController $baseController,

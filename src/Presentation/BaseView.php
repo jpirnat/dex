@@ -5,7 +5,7 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\BaseModel;
 
-final class BaseView
+final readonly class BaseView
 {
 	public function __construct(
 		private BaseModel $baseModel,

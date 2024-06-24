@@ -14,7 +14,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-final class CurrentStatsMiddleware implements MiddlewareInterface
+final readonly class CurrentStatsMiddleware implements MiddlewareInterface
 {
 	private const DEFAULT_FORMAT_ID = FormatId::GEN_8_OU;
 	private const DEFAULT_RATING = 1695;
@@ -30,7 +30,7 @@ final class CurrentStatsMiddleware implements MiddlewareInterface
 	 */
 	public function process(
 		ServerRequestInterface $request,
-		RequestHandlerInterface $handler
+		RequestHandlerInterface $handler,
 	) : ResponseInterface {
 		// Get the format and rating from the user's cookies.
 		$cookies = $request->getCookieParams();
@@ -40,14 +40,14 @@ final class CurrentStatsMiddleware implements MiddlewareInterface
 		if ($formatIdentifier) {
 			$format = $this->formatRepository->getByIdentifier(
 				$formatIdentifier,
-				new LanguageId(LanguageId::ENGLISH) // The language doesn't matter.
+				new LanguageId(LanguageId::ENGLISH), // The language doesn't matter.
 			);
 		} else {
 			// If the user doesn't have a format cookie, use default format.
 			$formatId = new FormatId(self::DEFAULT_FORMAT_ID);
 			$format = $this->formatRepository->getById(
 				$formatId,
-				new LanguageId(LanguageId::ENGLISH) // The language doesn't matter.
+				new LanguageId(LanguageId::ENGLISH), // The language doesn't matter.
 			);
 		}
 

@@ -18,7 +18,7 @@ use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
+final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -35,7 +35,7 @@ final class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterfac
 	public function getById(
 		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : DexPokemon {
 		$types = $this->dexTypeRepository->getByPokemon(
 			$versionGroupId,

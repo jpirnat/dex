@@ -5,7 +5,7 @@ namespace Jp\Dex\Application\Controllers;
 
 use Psr\Http\Message\ServerRequestInterface;
 
-final class IndexController
+final readonly class IndexController
 {
 	public function __construct(
 		private BaseController $baseController,

@@ -44,7 +44,7 @@ final class DexMovePokemonModel
 		MoveId $moveId,
 		VersionGroup $versionGroup,
 		LanguageId $languageId,
-		array $versionGroups
+		array $versionGroups,
 	) : void {
 		$pokemonMoves = $this->pokemonMoveRepository->getByMoveAndGeneration(
 			$moveId,

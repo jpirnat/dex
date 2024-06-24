@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Structs;
 
-final class Counter
+final readonly class Counter
 {
 	public function __construct(
 		private string $showdownPokemonName,

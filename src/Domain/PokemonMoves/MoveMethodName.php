@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\PokemonMoves;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-final class MoveMethodName
+final readonly class MoveMethodName
 {
 	public function __construct(
 		private LanguageId $languageId,

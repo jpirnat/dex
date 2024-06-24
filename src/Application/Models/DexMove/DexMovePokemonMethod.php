@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexMove;
 
-final class DexMovePokemonMethod
+final readonly class DexMovePokemonMethod
 {
 	private string $identifier;
 	private string $name;
@@ -22,7 +22,7 @@ final class DexMovePokemonMethod
 		string $identifier,
 		string $name,
 		string $description,
-		array $pokemon
+		array $pokemon,
 	) {
 		$this->identifier = $identifier;
 		$this->name = $name;

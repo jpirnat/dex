@@ -24,9 +24,7 @@ final class StatId extends EntityId
 	 */
 	public static function getByVersionGroup(VersionGroupId $versionGroupId) : array
 	{
-		$generation = $versionGroupId->value();
-
-		if ($generation <= VersionGroupId::YELLOW) {
+		if ($versionGroupId->value() <= VersionGroupId::YELLOW) {
 			return [
 				new self(self::HP),
 				new self(self::ATTACK),

@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseFormIconRepository implements FormIconRepositoryInterface
+final readonly class DatabaseFormIconRepository implements FormIconRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -26,7 +26,7 @@ final class DatabaseFormIconRepository implements FormIconRepositoryInterface
 		VersionGroupId $versionGroupId,
 		FormId $formId,
 		bool $isFemale,
-		bool $isRight
+		bool $isRight,
 	) : FormIcon {
 		$stmt = $this->db->prepare(
 			'SELECT

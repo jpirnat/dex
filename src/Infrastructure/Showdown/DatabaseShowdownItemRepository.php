@@ -96,7 +96,7 @@ final class DatabaseShowdownItemRepository implements ShowdownItemRepositoryInte
 		}
 
 		throw new ItemNotImportedException(
-			'Item should not be imported: ' . $showdownItemName
+			"Item should not be imported: $showdownItemName."
 		);
 	}
 

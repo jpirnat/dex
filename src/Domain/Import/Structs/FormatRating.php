@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Structs;
 
-final class FormatRating
+final readonly class FormatRating
 {
 	public function __construct(
 		private string $showdownFormatName,

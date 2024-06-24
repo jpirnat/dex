@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class PokemonMove
+final readonly class PokemonMove
 {
 	public function __construct(
 		private PokemonId $pokemonId,

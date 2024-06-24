@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 use PDO;
 
-final class DatabaseUsageRatedQueries implements UsageRatedQueriesInterface
+final readonly class DatabaseUsageRatedQueries implements UsageRatedQueriesInterface
 {
 	public function __construct(
 		private PDO $db,

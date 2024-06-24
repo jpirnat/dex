@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats;
 
-final class StatValue
+final readonly class StatValue
 {
 	public function __construct(
 		private StatId $statId,

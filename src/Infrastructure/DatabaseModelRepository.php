@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Models\ModelNotFoundException;
 use Jp\Dex\Domain\Models\ModelRepositoryInterface;
 use PDO;
 
-final class DatabaseModelRepository implements ModelRepositoryInterface
+final readonly class DatabaseModelRepository implements ModelRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -27,7 +27,7 @@ final class DatabaseModelRepository implements ModelRepositoryInterface
 		bool $isShiny,
 		bool $isBack,
 		bool $isFemale,
-		int $attackingIndex
+		int $attackingIndex,
 	) : Model {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -64,7 +64,7 @@ final class DatabaseModelRepository implements ModelRepositoryInterface
 			$isBack,
 			$isFemale,
 			$attackingIndex,
-			$result['image']
+			$result['image'],
 		);
 
 		return $model;

@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\StatsChartQueriesInterface;
 use PDO;
 
-final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
+final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -53,7 +53,7 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 	public function getUsage(
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -87,7 +87,7 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 	public function getLeadUsage(
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -124,7 +124,7 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		AbilityId $abilityId
+		AbilityId $abilityId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -163,7 +163,7 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		ItemId $itemId
+		ItemId $itemId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -202,7 +202,7 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		MoveId $moveId
+		MoveId $moveId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -241,7 +241,7 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		AbilityId $abilityId
+		AbilityId $abilityId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -280,7 +280,7 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		ItemId $itemId
+		ItemId $itemId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -319,7 +319,7 @@ final class DatabaseStatsChartQueries implements StatsChartQueriesInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		MoveId $moveId
+		MoveId $moveId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT

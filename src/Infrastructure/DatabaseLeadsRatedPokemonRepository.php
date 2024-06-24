@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemon;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use PDO;
 
-final class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepositoryInterface
+final readonly class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

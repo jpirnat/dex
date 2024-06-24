@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class StatsPokemonController
+final readonly class StatsPokemonController
 {
 	public function __construct(
 		private BaseController $baseController,
@@ -34,7 +34,7 @@ final class StatsPokemonController
 			$formatIdentifier,
 			$rating,
 			$pokemonIdentifier,
-			$languageId
+			$languageId,
 		);
 	}
 }

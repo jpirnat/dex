@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidRatingException;
 use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
-final class UsageRated
+final readonly class UsageRated
 {
 	use ValidateMonthTrait;
 

@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabasePokemonTypeRepository implements PokemonTypeRepositoryInterface
+final readonly class DatabasePokemonTypeRepository implements PokemonTypeRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

@@ -18,7 +18,7 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
-final class UsageFileImporter
+final readonly class UsageFileImporter
 {
 	public function __construct(
 		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
@@ -36,7 +36,7 @@ final class UsageFileImporter
 		StreamInterface $stream,
 		DateTime $month,
 		FormatId $formatId,
-		int $rating
+		int $rating,
 	) : void {
 		// If the file is empty, there's nothing to import.
 		if ($stream->getSize() === 0) {
@@ -45,21 +45,21 @@ final class UsageFileImporter
 
 		$usageExists = $this->usageRepository->has(
 			$month,
-			$formatId
+			$formatId,
 		);
 		$usageRatedExists = $this->usageRatedRepository->has(
 			$month,
 			$formatId,
-			$rating
+			$rating,
 		);
 		$usagePokemonExists = $this->usagePokemonRepository->hasAny(
 			$month,
-			$formatId
+			$formatId,
 		);
 		$usageRatedPokemonExists = $this->usageRatedPokemonRepository->hasAny(
 			$month,
 			$formatId,
-			$rating
+			$rating,
 		);
 
 		// If all data in this file has already been imported, there's no need
@@ -78,7 +78,7 @@ final class UsageFileImporter
 			$usage = new Usage(
 				$month,
 				$formatId,
-				$totalBattles
+				$totalBattles,
 			);
 			$this->usageRepository->save($usage);
 		}
@@ -90,7 +90,7 @@ final class UsageFileImporter
 				$month,
 				$formatId,
 				$rating,
-				$averageWeightPerTeam
+				$averageWeightPerTeam,
 			);
 			$this->usageRatedRepository->save($usageRated);
 		}
@@ -119,7 +119,7 @@ final class UsageFileImporter
 					$usage->raw(),
 					$usage->rawPercent(),
 					$usage->real(),
-					$usage->realPercent()
+					$usage->realPercent(),
 				);
 				$this->usagePokemonRepository->save($usagePokemon);
 			}
@@ -131,7 +131,7 @@ final class UsageFileImporter
 					$rating,
 					$pokemonId,
 					$usage->rank(),
-					$usage->usagePercent()
+					$usage->usagePercent(),
 				);
 				$this->usageRatedPokemonRepository->save($usageRatedPokemon);
 			}

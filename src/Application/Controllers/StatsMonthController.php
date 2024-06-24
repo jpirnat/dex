@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsMonthModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class StatsMonthController
+final readonly class StatsMonthController
 {
 	public function __construct(
 		private BaseController $baseController,
@@ -27,7 +27,7 @@ final class StatsMonthController
 
 		$this->statsMonthModel->setData(
 			$month,
-			$languageId
+			$languageId,
 		);
 	}
 }

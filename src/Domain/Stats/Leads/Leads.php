@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidCountException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
-final class Leads
+final readonly class Leads
 {
 	use ValidateMonthTrait;
 
@@ -27,9 +27,7 @@ final class Leads
 		$this->validateMonth($month);
 
 		if ($totalLeads < 0) {
-			throw new InvalidCountException(
-				'Invalid number of total leads: ' . $totalLeads
-			);
+			throw new InvalidCountException("Invalid number of total leads: $totalLeads.");
 		}
 	}
 

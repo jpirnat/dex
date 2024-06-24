@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Middleware;
 
-final class MiddlewareGroups
+final readonly class MiddlewareGroups
 {
 	/** @var string[] $NONE */
 	public const NONE = [];

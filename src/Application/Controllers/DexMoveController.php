@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\DexMove\DexMoveModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class DexMoveController
+final readonly class DexMoveController
 {
 	public function __construct(
 		private BaseController $baseController,

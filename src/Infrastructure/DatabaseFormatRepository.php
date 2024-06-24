@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseFormatRepository implements FormatRepositoryInterface
+final readonly class DatabaseFormatRepository implements FormatRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -63,7 +63,7 @@ final class DatabaseFormatRepository implements FormatRepositoryInterface
 			new VersionGroupId($result['version_group_id']),
 			$result['level'],
 			$result['field_size'],
-			$result['smogon_dex_identifier']
+			$result['smogon_dex_identifier'],
 		);
 
 		return $format;
@@ -76,7 +76,7 @@ final class DatabaseFormatRepository implements FormatRepositoryInterface
 	 */
 	public function getByIdentifier(
 		string $identifier,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : Format {
 		// HACK: Format names currently exist only for English.
 		$languageId = new LanguageId(LanguageId::ENGLISH);
@@ -116,7 +116,7 @@ final class DatabaseFormatRepository implements FormatRepositoryInterface
 			new VersionGroupId($result['version_group_id']),
 			$result['level'],
 			$result['field_size'],
-			$result['smogon_dex_identifier']
+			$result['smogon_dex_identifier'],
 		);
 
 		return $format;

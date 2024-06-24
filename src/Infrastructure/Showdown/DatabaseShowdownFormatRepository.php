@@ -117,7 +117,7 @@ final class DatabaseShowdownFormatRepository implements ShowdownFormatRepository
 		}
 
 		throw new FormatNotImportedException(
-			'Format should not be imported: ' . $showdownFormatName
+			"Format should not be imported: $showdownFormatName."
 		);
 	}
 

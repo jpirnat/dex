@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\DexTypesModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class DexTypesView
+final readonly class DexTypesView
 {
 	public function __construct(
 		private DexTypesModel $dexTypesModel,

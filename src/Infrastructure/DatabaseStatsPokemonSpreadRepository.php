@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 use PDO;
 
-final class DatabaseStatsPokemonSpreadRepository implements StatsPokemonSpreadRepositoryInterface
+final readonly class DatabaseStatsPokemonSpreadRepository implements StatsPokemonSpreadRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

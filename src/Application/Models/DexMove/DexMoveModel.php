@@ -162,7 +162,7 @@ final class DexMoveModel
 		if ($vgMove->getMaxMoveId() !== null) {
 			$maxMove = $this->vgMoveRepository->getMaxMove(
 				$vgMove->getMaxMoveId(),
-				$languageId
+				$languageId,
 			);
 			$maxMove['power'] = $vgMove->getMaxPower();
 		}

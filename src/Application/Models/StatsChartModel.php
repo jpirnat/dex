@@ -73,7 +73,7 @@ final class StatsChartModel
 			$type = $line['type'];
 			$format = $this->formatRepository->getByIdentifier(
 				$line['format'],
-				$languageId
+				$languageId,
 			);
 			$rating = (int) $line['rating'];
 			$pokemon = $this->pokemonRepository->getByIdentifier($line['pokemon']);
@@ -83,7 +83,7 @@ final class StatsChartModel
 					$format,
 					$rating,
 					$pokemon->getId(),
-					$languageId
+					$languageId,
 				);
 			}
 
@@ -92,7 +92,7 @@ final class StatsChartModel
 					$format,
 					$rating,
 					$pokemon->getId(),
-					$languageId
+					$languageId,
 				);
 			}
 
@@ -104,7 +104,7 @@ final class StatsChartModel
 					$rating,
 					$pokemon->getId(),
 					$ability->getId(),
-					$languageId
+					$languageId,
 				);
 			}
 
@@ -116,7 +116,7 @@ final class StatsChartModel
 					$rating,
 					$pokemon->getId(),
 					$item->getId(),
-					$languageId
+					$languageId,
 				);
 			}
 
@@ -128,7 +128,7 @@ final class StatsChartModel
 					$rating,
 					$pokemon->getId(),
 					$move->getId(),
-					$languageId
+					$languageId,
 				);
 			}
 
@@ -140,7 +140,7 @@ final class StatsChartModel
 					$rating,
 					$pokemon->getId(),
 					$ability->getId(),
-					$languageId
+					$languageId,
 				);
 			}
 
@@ -152,7 +152,7 @@ final class StatsChartModel
 					$rating,
 					$pokemon->getId(),
 					$item->getId(),
-					$languageId
+					$languageId,
 				);
 			}
 
@@ -164,7 +164,7 @@ final class StatsChartModel
 					$rating,
 					$pokemon->getId(),
 					$move->getId(),
-					$languageId
+					$languageId,
 				);
 			}
 		}

@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Import\Structs\LeadUsage;
 use Spatie\Regex\Exceptions\RegexFailed;
 use Spatie\Regex\Regex;
 
-final class LeadsFileExtractor
+final readonly class LeadsFileExtractor
 {
 	/**
 	 * Extract the total leads count from the first line in the leads file.
@@ -26,7 +26,7 @@ final class LeadsFileExtractor
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed) {
 			throw new InvalidTotalLeadsLineException(
-				'Total leads line is invalid: ' . $line
+				"Total leads line is invalid: $line"
 			);
 		}
 	}
@@ -70,11 +70,11 @@ final class LeadsFileExtractor
 				$matchResult->group(2),
 				(float) $matchResult->group(3),
 				(int) $matchResult->group(4),
-				(float) $matchResult->group(5)
+				(float) $matchResult->group(5),
 			);
 		} catch (RegexFailed) {
 			throw new InvalidLeadUsageLineException(
-				'Lead usage line is invalid: ' . $line
+				"Lead usage line is invalid: $line"
 			);
 		}
 	}

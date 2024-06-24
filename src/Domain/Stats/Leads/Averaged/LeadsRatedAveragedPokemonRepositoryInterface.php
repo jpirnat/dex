@@ -16,7 +16,7 @@ interface LeadsRatedAveragedPokemonRepositoryInterface
 		DateTime $start,
 		DateTime $end,
 		FormatId $formatId,
-		int $rating
+		int $rating,
 	) : bool;
 
 	/**
@@ -29,6 +29,6 @@ interface LeadsRatedAveragedPokemonRepositoryInterface
 		DateTime $start,
 		DateTime $end,
 		FormatId $formatId,
-		int $rating
+		int $rating,
 	) : array;
 }

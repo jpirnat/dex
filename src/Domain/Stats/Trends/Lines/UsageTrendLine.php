@@ -18,7 +18,7 @@ final class UsageTrendLine extends TrendLine
 		int $rating,
 		PokemonName $pokemonName,
 		Type $pokemonType,
-		array $trendPoints
+		array $trendPoints,
 	) {
 		$this->formatName = $formatName;
 		$this->rating = $rating;

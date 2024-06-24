@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 
-final class PokemonMoveFormatter
+final readonly class PokemonMoveFormatter
 {
 	public function __construct(
 		private TmRepositoryInterface $tmRepository,
@@ -24,7 +24,7 @@ final class PokemonMoveFormatter
 	 */
 	public function format(
 		PokemonMove $pokemonMove,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : string {
 		$method = $pokemonMove->getMoveMethodId()->value();
 
@@ -35,12 +35,12 @@ final class PokemonMoveFormatter
 		if ($method === MoveMethodId::MACHINE) {
 			$tm = $this->tmRepository->getByVersionGroupAndMove(
 				$pokemonMove->getVersionGroupId(),
-				$pokemonMove->getMoveId()
+				$pokemonMove->getMoveId(),
 			);
 
 			$itemName = $this->itemNameRepository->getByLanguageAndItem(
 				$languageId,
-				$tm->getItemId()
+				$tm->getItemId(),
 			);
 
 			return $itemName->getName();
@@ -53,7 +53,7 @@ final class PokemonMoveFormatter
 		if ($method === MoveMethodId::SKETCH) {
 			$moveName = $this->moveNameRepository->getByLanguageAndMove(
 				$languageId,
-				new MoveId(MoveId::SKETCH)
+				new MoveId(MoveId::SKETCH),
 			);
 
 			return $moveName->getName();
@@ -66,7 +66,7 @@ final class PokemonMoveFormatter
 		if ($method === MoveMethodId::LIGHT_BALL) {
 			$itemName = $this->itemNameRepository->getByLanguageAndItem(
 				$languageId,
-				new ItemId(ItemId::LIGHT_BALL)
+				new ItemId(ItemId::LIGHT_BALL),
 			);
 
 			return $itemName->getName();

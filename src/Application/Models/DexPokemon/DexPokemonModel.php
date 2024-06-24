@@ -37,7 +37,7 @@ final class DexPokemonModel
 	public function setData(
 		string $vgIdentifier,
 		string $pokemonIdentifier,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
@@ -85,7 +85,7 @@ final class DexPokemonModel
 			$introducedInVg->getGenerationId(),
 			$this->versionGroupModel->getVersionGroup(),
 			$languageId,
-			$this->versionGroups
+			$this->versionGroups,
 		);
 	}
 

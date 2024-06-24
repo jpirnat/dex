@@ -19,7 +19,7 @@ use Jp\Dex\Domain\Import\Structs\Spread;
 use Spatie\Regex\Exceptions\RegexFailed;
 use Spatie\Regex\Regex;
 
-final class MovesetFileExtractor
+final readonly class MovesetFileExtractor
 {
 	/**
 	 * Is this line a separator?
@@ -52,7 +52,7 @@ final class MovesetFileExtractor
 			return $matchResult->group(1);
 		} catch (RegexFailed) {
 			throw new InvalidPokemonNameLineException(
-				'Pokémon name line is invalid: ' . $line
+				"Pokémon name line is invalid: $line"
 			);
 		}
 	}
@@ -72,7 +72,7 @@ final class MovesetFileExtractor
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed) {
 			throw new InvalidRawCountLineException(
-				'Raw count line is invalid: ' . $line
+				"Raw count line is invalid: $line"
 			);
 		}
 	}
@@ -92,7 +92,7 @@ final class MovesetFileExtractor
 			return (float) $matchResult->group(1);
 		} catch (RegexFailed) {
 			throw new InvalidAverageWeightLineException(
-				'Average weight line is invalid: ' . $line
+				"Average weight line is invalid: $line"
 			);
 		}
 	}
@@ -127,7 +127,7 @@ final class MovesetFileExtractor
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed) {
 			throw new InvalidViabilityCeilingLineException(
-				'Viability Ceiling line is invalid: ' . $line
+				"Viability Ceiling line is invalid: $line"
 			);
 		}
 	}
@@ -161,11 +161,11 @@ final class MovesetFileExtractor
 
 			return new NamePercent(
 				$matchResult->group(1),
-				(float) $matchResult->group(2)
+				(float) $matchResult->group(2),
 			);
 		} catch (RegexFailed) {
 			throw new InvalidNamePercentLineException(
-				'NamePercent line is invalid: ' . $line
+				"NamePercent line is invalid: $line"
 			);
 		}
 	}
@@ -199,11 +199,11 @@ final class MovesetFileExtractor
 				(int) $matchResult->group(5),
 				(int) $matchResult->group(6),
 				(int) $matchResult->group(7),
-				(float) $matchResult->group(8)
+				(float) $matchResult->group(8),
 			);
 		} catch (RegexFailed) {
 			throw new InvalidSpreadLineException(
-				'Spread line is invalid: ' . $line
+				"Spread line is invalid: $line"
 			);
 		}
 	}
@@ -240,7 +240,7 @@ final class MovesetFileExtractor
 			$counter1->number2(),
 			$counter1->number3(),
 			$counter2->percentKnockedOut(),
-			$counter2->percentSwitchedOut()
+			$counter2->percentSwitchedOut(),
 		);
 	}
 
@@ -265,11 +265,11 @@ final class MovesetFileExtractor
 				$matchResult1->group(1),
 				(float) $matchResult1->group(2),
 				(float) $matchResult1->group(3),
-				(float) $matchResult1->group(4)
+				(float) $matchResult1->group(4),
 			);
 		} catch (RegexFailed) {
 			throw new InvalidCounterLine1Exception(
-				'Counter line 1 is invalid: ' . $line1
+				"Counter line 1 is invalid: $line1"
 			);
 		}
 	}
@@ -291,11 +291,11 @@ final class MovesetFileExtractor
 
 			return new Counter2(
 				(float) $matchResult2->group(1),
-				(float) $matchResult2->group(2)
+				(float) $matchResult2->group(2),
 			);
 		} catch (RegexFailed) {
 			throw new InvalidCounterLine2Exception(
-				'Counter line 2 is invalid: ' . $line2
+				"Counter line 2 is invalid: $line2"
 			);
 		}
 	}

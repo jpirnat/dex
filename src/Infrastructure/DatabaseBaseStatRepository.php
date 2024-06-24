@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
+final readonly class DatabaseBaseStatRepository implements BaseStatRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

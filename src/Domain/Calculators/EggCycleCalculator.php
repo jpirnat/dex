@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Calculators;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\GenerationNotFoundException;
 
-final class EggCycleCalculator
+final readonly class EggCycleCalculator
 {
 	/**
 	 * Calculate the number of steps it would take for an egg to hatch.
@@ -20,7 +20,7 @@ final class EggCycleCalculator
 		GenerationId $generationId,
 		int $baseEggCycles,
 		bool $magmaArmor,
-		string $oPower
+		string $oPower,
 	) : int {
 		$generation = $generationId->value();
 

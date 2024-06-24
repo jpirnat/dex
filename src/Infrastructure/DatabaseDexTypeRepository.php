@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Types\TypeNotFoundException;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
+final readonly class DatabaseDexTypeRepository implements DexTypeRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

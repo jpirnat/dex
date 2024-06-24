@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\AveragedUsageModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class AveragedUsageController
+final readonly class AveragedUsageController
 {
 	public function __construct(
 		private BaseController $baseController,

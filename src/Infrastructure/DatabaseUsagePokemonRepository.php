@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\Usage\UsagePokemon;
 use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
 use PDO;
 
-final class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
+final readonly class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

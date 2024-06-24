@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryIn
 use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use PDO;
 
-final class DatabaseMovesetRatedAveragedAbilityRepository implements MovesetRatedAveragedAbilityRepositoryInterface
+final readonly class DatabaseMovesetRatedAveragedAbilityRepository implements MovesetRatedAveragedAbilityRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -30,14 +30,14 @@ final class DatabaseMovesetRatedAveragedAbilityRepository implements MovesetRate
 		DateTime $end,
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : array {
 		$months = $this->monthsCounter->countMovesetMonths(
 			$start,
 			$end,
 			$formatId,
 			$rating,
-			$pokemonId
+			$pokemonId,
 		);
 
 		$stmt = $this->db->prepare(
@@ -71,7 +71,7 @@ final class DatabaseMovesetRatedAveragedAbilityRepository implements MovesetRate
 				$rating,
 				$pokemonId,
 				new AbilityId($result['ability_id']),
-				(float) $result['percent']
+				(float) $result['percent'],
 			);
 
 			$movesetRatedAveragedAbilities[$result['ability_id']] = $movesetRatedAveragedAbility;

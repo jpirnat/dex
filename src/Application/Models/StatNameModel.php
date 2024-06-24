@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-class StatNameModel
+final readonly class StatNameModel
 {
 	public function __construct(
 		private StatNameRepositoryInterface $statNameRepository,
@@ -31,7 +31,7 @@ class StatNameModel
 				new LanguageId(LanguageId::ENGLISH),
 				new StatId(StatId::SPECIAL),
 				'Special',
-				'Spc'
+				'Spc',
 			);
 
 			return [[
@@ -99,7 +99,7 @@ class StatNameModel
 				new LanguageId(LanguageId::ENGLISH),
 				new StatId(StatId::SPECIAL),
 				'Special',
-				'Spc'
+				'Spc',
 			);
 
 			return [[

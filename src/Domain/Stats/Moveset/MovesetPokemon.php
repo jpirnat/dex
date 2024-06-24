@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidViabilityCeilingException;
 use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
-final class MovesetPokemon
+final readonly class MovesetPokemon
 {
 	use ValidateMonthTrait;
 
@@ -32,12 +32,12 @@ final class MovesetPokemon
 		$this->validateMonth($month);
 
 		if ($rawCount < 0) {
-			throw new InvalidCountException('Invalid raw count: ' . $rawCount);
+			throw new InvalidCountException("Invalid raw count: $rawCount.");
 		}
 
 		if ($viabilityCeiling !== null && $viabilityCeiling < 0) {
 			throw new InvalidViabilityCeilingException(
-				'Invalid viability ceiling: ' . $viabilityCeiling
+				"Invalid viability ceiling: $viabilityCeiling."
 			);
 		}
 	}

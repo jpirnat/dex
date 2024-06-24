@@ -8,7 +8,7 @@ use Jp\Dex\Application\Models\BreedingChains\BreedingChainsModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class BreedingChainsView
+final readonly class BreedingChainsView
 {
 	public function __construct(
 		private BreedingChainsModel $breedingChainsModel,

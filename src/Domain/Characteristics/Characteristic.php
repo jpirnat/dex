@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Characteristics;
 
 use Jp\Dex\Domain\Stats\StatId;
 
-final class Characteristic
+final readonly class Characteristic
 {
 	public function __construct(
 		private CharacteristicId $id,

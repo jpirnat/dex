@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\DexAbilitiesModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class DexAbilitiesController
+final readonly class DexAbilitiesController
 {
 	public function __construct(
 		private BaseController $baseController,

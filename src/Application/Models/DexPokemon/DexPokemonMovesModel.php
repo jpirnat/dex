@@ -146,7 +146,7 @@ final class DexPokemonMovesModel
 					$move->getPP(),
 					$move->getPower(),
 					$move->getAccuracy(),
-					$move->getDescription()
+					$move->getDescription(),
 				);
 			}
 		}
@@ -169,7 +169,7 @@ final class DexPokemonMovesModel
 					$move->getPP(),
 					$move->getPower(),
 					$move->getAccuracy(),
-					$move->getDescription()
+					$move->getDescription(),
 				);
 			}
 		}
@@ -190,7 +190,7 @@ final class DexPokemonMovesModel
 				$moveMethod->getIdentifier(),
 				$moveMethodNames[$methodId]->getName(),
 				$moveMethodNames[$methodId]->getDescription(),
-				$dexPokemonMoves[$methodId]
+				$dexPokemonMoves[$methodId],
 			);
 		}
 	}

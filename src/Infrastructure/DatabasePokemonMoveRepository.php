@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterface
+final readonly class DatabasePokemonMoveRepository implements PokemonMoveRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

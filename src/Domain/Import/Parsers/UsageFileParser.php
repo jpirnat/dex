@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Import\Extractors\UsageFileExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
-final class UsageFileParser
+final readonly class UsageFileParser
 {
 	public function __construct(
 		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,

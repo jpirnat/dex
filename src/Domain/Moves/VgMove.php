@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Moves\ZPowerEffects\ZPowerEffectId;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class VgMove
+final readonly class VgMove
 {
 	public function __construct(
 		private VersionGroupId $versionGroupId,

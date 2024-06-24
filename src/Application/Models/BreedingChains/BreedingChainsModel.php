@@ -62,7 +62,7 @@ final class BreedingChainsModel
 
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
-			$pokemon->getId()
+			$pokemon->getId(),
 		);
 		$this->pokemon = [
 			'identifier' => $pokemon->getIdentifier(),
@@ -131,7 +131,7 @@ final class BreedingChainsModel
 		foreach ($pokemonEggGroups as $pokemonEggGroup) {
 			$eggGroupName = $this->eggGroupNameRepository->getByLanguageAndEggGroup(
 				$languageId,
-				$pokemonEggGroup->getEggGroupId()
+				$pokemonEggGroup->getEggGroupId(),
 			);
 			$eggGroupNames[] = $eggGroupName->getName();
 		}

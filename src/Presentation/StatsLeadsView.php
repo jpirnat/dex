@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsLeadsModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class StatsLeadsView
+final readonly class StatsLeadsView
 {
 	public function __construct(
 		private StatsLeadsModel $statsLeadsModel,

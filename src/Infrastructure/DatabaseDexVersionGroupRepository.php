@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 use PDO;
 
-final class DatabaseDexVersionGroupRepository implements DexVersionGroupRepositoryInterface
+final readonly class DatabaseDexVersionGroupRepository implements DexVersionGroupRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

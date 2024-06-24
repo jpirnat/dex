@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Abilities;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-final class AbilityName
+final readonly class AbilityName
 {
 	public function __construct(
 		private LanguageId $languageId,

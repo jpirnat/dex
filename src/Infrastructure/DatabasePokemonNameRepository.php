@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Pokemon\PokemonNameNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use PDO;
 
-final class DatabasePokemonNameRepository implements PokemonNameRepositoryInterface
+final readonly class DatabasePokemonNameRepository implements PokemonNameRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -24,7 +24,7 @@ final class DatabasePokemonNameRepository implements PokemonNameRepositoryInterf
 	 */
 	public function getByLanguageAndPokemon(
 		LanguageId $languageId,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : PokemonName {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -44,7 +44,7 @@ final class DatabasePokemonNameRepository implements PokemonNameRepositoryInterf
 			throw new PokemonNameNotFoundException(
 				'No Pokémon name exists with language id '
 				. $languageId->value() . ' and Pokémon id '
-				. $pokemonId->value()
+				. $pokemonId->value() . '.'
 			);
 		}
 
@@ -52,7 +52,7 @@ final class DatabasePokemonNameRepository implements PokemonNameRepositoryInterf
 			$languageId,
 			$pokemonId,
 			$result['name'],
-			$result['category']
+			$result['category'],
 		);
 
 		return $pokemonName;
@@ -83,7 +83,7 @@ final class DatabasePokemonNameRepository implements PokemonNameRepositoryInterf
 				$languageId,
 				new PokemonId($result['pokemon_id']),
 				$result['name'],
-				$result['category']
+				$result['category'],
 			);
 
 			$pokemonNames[$result['pokemon_id']] = $pokemonName;

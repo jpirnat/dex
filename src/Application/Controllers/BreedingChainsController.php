@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\BreedingChains\BreedingChainsModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class BreedingChainsController
+final readonly class BreedingChainsController
 {
 	public function __construct(
 		private BaseController $baseController,

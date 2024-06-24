@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\EggGroups;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-final class EggGroupName
+final readonly class EggGroupName
 {
 	public function __construct(
 		private LanguageId $languageId,

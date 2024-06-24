@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\DexAbilityModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class DexAbilityView
+final readonly class DexAbilityView
 {
 	public function __construct(
 		private DexAbilityModel $dexAbilityModel,

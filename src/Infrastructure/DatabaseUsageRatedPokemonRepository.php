@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use PDO;
 
-final class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepositoryInterface
+final readonly class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -76,7 +76,7 @@ final class DatabaseUsageRatedPokemonRepository implements UsageRatedPokemonRepo
 		DateTime $month,
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : ?UsageRatedPokemonId {
 		$stmt = $this->db->prepare(
 			'SELECT

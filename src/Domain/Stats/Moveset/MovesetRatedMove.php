@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 
-final class MovesetRatedMove
+final readonly class MovesetRatedMove
 {
 	/**
 	 * Constructor.
@@ -20,7 +20,7 @@ final class MovesetRatedMove
 		private float $percent,
 	) {
 		if ($percent < 0 || $percent > 100) {
-			throw new InvalidPercentException('Invalid percent: ' . $percent);
+			throw new InvalidPercentException("Invalid percent: $percent.");
 		}
 	}
 

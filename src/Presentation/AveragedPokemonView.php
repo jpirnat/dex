@@ -8,7 +8,7 @@ use Jp\Dex\Application\Models\AveragedPokemonModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class AveragedPokemonView
+final readonly class AveragedPokemonView
 {
 	public function __construct(
 		private RendererInterface $renderer,

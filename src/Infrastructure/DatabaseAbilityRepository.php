@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseAbilityRepository implements AbilityRepositoryInterface
+final readonly class DatabaseAbilityRepository implements AbilityRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -44,7 +44,7 @@ final class DatabaseAbilityRepository implements AbilityRepositoryInterface
 		$ability = new Ability(
 			$abilityId,
 			$result['identifier'],
-			new VersionGroupId($result['introduced_in_version_group_id'])
+			new VersionGroupId($result['introduced_in_version_group_id']),
 		);
 
 		return $ability;
@@ -78,7 +78,7 @@ final class DatabaseAbilityRepository implements AbilityRepositoryInterface
 		$ability = new Ability(
 			new AbilityId($result['id']),
 			$identifier,
-			new VersionGroupId($result['introduced_in_version_group_id'])
+			new VersionGroupId($result['introduced_in_version_group_id']),
 		);
 
 		return $ability;

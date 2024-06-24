@@ -9,7 +9,7 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodName;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface;
 use PDO;
 
-final class DatabaseMoveMethodNameRepository implements MoveMethodNameRepositoryInterface
+final readonly class DatabaseMoveMethodNameRepository implements MoveMethodNameRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -43,7 +43,7 @@ final class DatabaseMoveMethodNameRepository implements MoveMethodNameRepository
 				$languageId,
 				new MoveMethodId($result['move_method_id']),
 				$result['name'],
-				$result['description']
+				$result['description'],
 			);
 
 			$moveMethodNames[$result['move_method_id']] = $moveMethodName;

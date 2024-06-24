@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Languages\LanguageName;
 use Jp\Dex\Domain\Languages\LanguageNameRepositoryInterface;
 use PDO;
 
-final class DatabaseLanguageNameRepository implements LanguageNameRepositoryInterface
+final readonly class DatabaseLanguageNameRepository implements LanguageNameRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -37,7 +37,7 @@ final class DatabaseLanguageNameRepository implements LanguageNameRepositoryInte
 			$languageName = new LanguageName(
 				new LanguageId($result['in_language_id']),
 				new LanguageId($result['named_language_id']),
-				$result['name']
+				$result['name'],
 			);
 
 			$languageNames[$result['named_language_id']] = $languageName;

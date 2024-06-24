@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Moves;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-final class MoveName
+final readonly class MoveName
 {
 	public function __construct(
 		private LanguageId $languageId,

@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Items;
 
 use Exception;
 
-class MachineType
+final readonly class MachineType
 {
 	public const TM = 'tm';
 	public const HM = 'hm';

@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseStatsUsagePokemonRepository implements StatsUsagePokemonRepositoryInterface
+final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePokemonRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -93,7 +93,7 @@ final class DatabaseStatsUsagePokemonRepository implements StatsUsagePokemonRepo
 				$result['raw'],
 				(float) $result['raw_percent'],
 				$result['real'],
-				(float) $result['real_percent']
+				(float) $result['real_percent'],
 			);
 
 			$pokemons[] = $pokemon;
@@ -167,7 +167,7 @@ final class DatabaseStatsUsagePokemonRepository implements StatsUsagePokemonRepo
 		int $rating,
 		int $rank,
 		VersionGroupId $versionGroupId,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : ?array {
 		$stmt = $this->db->prepare(
 			'SELECT

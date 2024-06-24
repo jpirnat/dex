@@ -18,6 +18,6 @@ interface UsageRatedAveragedPokemonRepositoryInterface
 		DateTime $start,
 		DateTime $end,
 		FormatId $formatId,
-		int $rating
+		int $rating,
 	) : array;
 }

@@ -15,6 +15,6 @@ interface ItemNameRepositoryInterface
 	 */
 	public function getByLanguageAndItem(
 		LanguageId $languageId,
-		ItemId $itemId
+		ItemId $itemId,
 	) : ItemName;
 }

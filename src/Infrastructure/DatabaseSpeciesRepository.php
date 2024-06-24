@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Species\SpeciesRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseSpeciesRepository implements SpeciesRepositoryInterface
+final readonly class DatabaseSpeciesRepository implements SpeciesRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -46,7 +46,7 @@ final class DatabaseSpeciesRepository implements SpeciesRepositoryInterface
 			$speciesId,
 			$result['identifier'],
 			new VersionGroupId($result['introduced_in_version_group_id']),
-			$result['base_egg_cycles']
+			$result['base_egg_cycles'],
 		);
 
 		return $species;

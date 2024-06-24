@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Abilities;
 
-final class DexPokemonAbility
+final readonly class DexPokemonAbility
 {
 	public function __construct(
 		private string $identifier,

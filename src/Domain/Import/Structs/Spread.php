@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Structs;
 
-final class Spread
+final readonly class Spread
 {
 	public function __construct(
 		private string $showdownNatureName,

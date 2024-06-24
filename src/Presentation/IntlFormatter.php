@@ -7,7 +7,7 @@ use DateTime;
 use IntlDateFormatter;
 use NumberFormatter;
 
-final class IntlFormatter
+final readonly class IntlFormatter
 {
 	public function __construct(
 		private IntlDateFormatter $dateFormatter,

@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
 
-final class DatabaseItemNameRepository implements ItemNameRepositoryInterface
+final readonly class DatabaseItemNameRepository implements ItemNameRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -24,7 +24,7 @@ final class DatabaseItemNameRepository implements ItemNameRepositoryInterface
 	 */
 	public function getByLanguageAndItem(
 		LanguageId $languageId,
-		ItemId $itemId
+		ItemId $itemId,
 	) : ItemName {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -50,7 +50,7 @@ final class DatabaseItemNameRepository implements ItemNameRepositoryInterface
 		$itemName = new ItemName(
 			$languageId,
 			$itemId,
-			$result['name']
+			$result['name'],
 		);
 
 		return $itemName;

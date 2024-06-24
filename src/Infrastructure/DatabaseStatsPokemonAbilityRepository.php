@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use PDO;
 
-final class DatabaseStatsPokemonAbilityRepository implements StatsPokemonAbilityRepositoryInterface
+final readonly class DatabaseStatsPokemonAbilityRepository implements StatsPokemonAbilityRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

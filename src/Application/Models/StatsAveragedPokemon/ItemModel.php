@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInterface;
 
-final class ItemModel
+final readonly class ItemModel
 {
 	public function __construct(
 		private MovesetRatedAveragedItemRepositoryInterface $movesetRatedAveragedItemRepository,
@@ -36,7 +36,7 @@ final class ItemModel
 			$end,
 			$formatId,
 			$rating,
-			$pokemonId
+			$pokemonId,
 		);
 
 		$items = [];
@@ -48,7 +48,7 @@ final class ItemModel
 			// Get this item's name.
 			$itemName = $this->itemNameRepository->getByLanguageAndItem(
 				$languageId,
-				$itemId
+				$itemId,
 			);
 
 			// Get this item.

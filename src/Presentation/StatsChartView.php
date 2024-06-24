@@ -15,7 +15,7 @@ use Jp\Dex\Domain\Stats\Trends\Lines\UsageMoveTrendLine;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class StatsChartView
+final readonly class StatsChartView
 {
 	public function __construct(
 		private StatsChartModel $statsChartModel,

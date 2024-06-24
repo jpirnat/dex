@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-final class DatabasePokemonEggGroupRepository implements PokemonEggGroupRepositoryInterface
+final readonly class DatabasePokemonEggGroupRepository implements PokemonEggGroupRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -39,7 +39,7 @@ final class DatabasePokemonEggGroupRepository implements PokemonEggGroupReposito
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$pokemonEggGroup = new PokemonEggGroup(
 				$pokemonId,
-				new EggGroupId($result['egg_group_id'])
+				new EggGroupId($result['egg_group_id']),
 			);
 
 			$pokemonEggGroups[$result['egg_group_id']] = $pokemonEggGroup;

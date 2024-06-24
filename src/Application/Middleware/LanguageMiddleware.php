@@ -15,7 +15,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-final class LanguageMiddleware implements MiddlewareInterface
+final readonly class LanguageMiddleware implements MiddlewareInterface
 {
 	private const LANGUAGE_PARAMETER = 'language';
 
@@ -33,7 +33,7 @@ final class LanguageMiddleware implements MiddlewareInterface
 	 */
 	public function process(
 		ServerRequestInterface $request,
-		RequestHandlerInterface $handler
+		RequestHandlerInterface $handler,
 	) : ResponseInterface {
 		// If the user is requesting to change their language, use that language.
 		$setNewLanguage = false;

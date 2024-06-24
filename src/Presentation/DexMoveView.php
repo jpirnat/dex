@@ -9,7 +9,7 @@ use Jp\Dex\Application\Models\DexMove\DexMovePokemonMethod;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class DexMoveView
+final readonly class DexMoveView
 {
 	public function __construct(
 		private DexMoveModel $dexMoveModel,

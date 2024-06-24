@@ -9,7 +9,7 @@ use Jp\Dex\Domain\EggGroups\EggGroupNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
 
-final class DatabaseEggGroupNameRepository implements EggGroupNameRepositoryInterface
+final readonly class DatabaseEggGroupNameRepository implements EggGroupNameRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -20,7 +20,7 @@ final class DatabaseEggGroupNameRepository implements EggGroupNameRepositoryInte
 	 */
 	public function getByLanguageAndEggGroup(
 		LanguageId $languageId,
-		EggGroupId $eggGroupId
+		EggGroupId $eggGroupId,
 	) : EggGroupName {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -42,7 +42,7 @@ final class DatabaseEggGroupNameRepository implements EggGroupNameRepositoryInte
 		$eggGroupName = new EggGroupName(
 			$languageId,
 			$eggGroupId,
-			$result['name']
+			$result['name'],
 		);
 
 		return $eggGroupName;

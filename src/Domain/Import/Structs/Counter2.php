@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Structs;
 
-final class Counter2
+final readonly class Counter2
 {
 	public function __construct(
 		private float $percentKnockedOut,

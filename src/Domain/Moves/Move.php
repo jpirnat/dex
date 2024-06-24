@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Moves;
 
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class Move
+final readonly class Move
 {
 	public function __construct(
 		private MoveId $id,

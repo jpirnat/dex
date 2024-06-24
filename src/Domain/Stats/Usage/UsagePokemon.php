@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
 use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
-final class UsagePokemon
+final readonly class UsagePokemon
 {
 	use ValidateMonthTrait;
 
@@ -35,23 +35,19 @@ final class UsagePokemon
 		$this->validateMonth($month);
 
 		if ($raw < 0) {
-			throw new InvalidCountException('Invalid raw: ' . $raw);
+			throw new InvalidCountException("Invalid raw: $raw.");
 		}
 
 		if ($rawPercent < 0 || $rawPercent > 100) {
-			throw new InvalidPercentException(
-				'Invalid raw percent: ' . $rawPercent
-			);
+			throw new InvalidPercentException("Invalid raw percent: $rawPercent.");
 		}
 
 		if ($real < 0) {
-			throw new InvalidCountException('Invalid real: ' . $real);
+			throw new InvalidCountException("Invalid real: $real.");
 		}
 
 		if ($realPercent < 0 || $realPercent > 100) {
-			throw new InvalidPercentException(
-				'Invalid real percent: ' . $realPercent
-			);
+			throw new InvalidPercentException("Invalid real percent: $realPercent.");
 		}
 	}
 

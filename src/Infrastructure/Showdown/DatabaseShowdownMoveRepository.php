@@ -96,7 +96,7 @@ final class DatabaseShowdownMoveRepository implements ShowdownMoveRepositoryInte
 		}
 
 		throw new MoveNotImportedException(
-			'Move should not be imported: ' . $showdownMoveName
+			"Move should not be imported: $showdownMoveName."
 		);
 	}
 

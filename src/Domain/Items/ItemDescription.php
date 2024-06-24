@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Items;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class ItemDescription
+final readonly class ItemDescription
 {
 	public function __construct(
 		private VersionGroupId $versionGroupId,

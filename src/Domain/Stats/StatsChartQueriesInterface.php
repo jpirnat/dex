@@ -26,7 +26,7 @@ interface StatsChartQueriesInterface
 	public function getUsage(
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : array;
 
 	/**
@@ -37,7 +37,7 @@ interface StatsChartQueriesInterface
 	public function getLeadUsage(
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : array;
 
 	/**
@@ -49,7 +49,7 @@ interface StatsChartQueriesInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		AbilityId $abilityId
+		AbilityId $abilityId,
 	) : array;
 
 	/**
@@ -61,7 +61,7 @@ interface StatsChartQueriesInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		ItemId $itemId
+		ItemId $itemId,
 	) : array;
 
 	/**
@@ -73,7 +73,7 @@ interface StatsChartQueriesInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		MoveId $moveId
+		MoveId $moveId,
 	) : array;
 
 	/**
@@ -85,7 +85,7 @@ interface StatsChartQueriesInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		AbilityId $abilityId
+		AbilityId $abilityId,
 	) : array;
 
 	/**
@@ -97,7 +97,7 @@ interface StatsChartQueriesInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		ItemId $itemId
+		ItemId $itemId,
 	) : array;
 
 	/**
@@ -109,6 +109,6 @@ interface StatsChartQueriesInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		MoveId $moveId
+		MoveId $moveId,
 	) : array;
 }

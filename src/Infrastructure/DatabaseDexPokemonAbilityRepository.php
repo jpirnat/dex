@@ -13,7 +13,7 @@ use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepositoryInterface
+final readonly class DatabaseDexPokemonAbilityRepository implements DexPokemonAbilityRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

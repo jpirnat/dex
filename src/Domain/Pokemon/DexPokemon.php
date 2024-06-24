@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Pokemon;
 use Jp\Dex\Domain\Abilities\DexPokemonAbility;
 use Jp\Dex\Domain\Types\DexType;
 
-final class DexPokemon
+final readonly class DexPokemon
 {
 	private string $icon;
 	private string $identifier;
@@ -39,7 +39,7 @@ final class DexPokemon
 		array $abilities,
 		array $baseStats,
 		int $bst,
-		int $sort
+		int $sort,
 	) {
 		$this->icon = $icon;
 		$this->identifier = $identifier;

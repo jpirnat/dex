@@ -8,7 +8,7 @@ use Jp\Dex\Application\Models\StatsIndexModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class StatsIndexView
+final readonly class StatsIndexView
 {
 	public function __construct(
 		private StatsIndexModel $statsIndexModel,

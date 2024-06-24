@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Characteristics;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-final class CharacteristicName
+final readonly class CharacteristicName
 {
 	public function __construct(
 		private LanguageId $languageId,

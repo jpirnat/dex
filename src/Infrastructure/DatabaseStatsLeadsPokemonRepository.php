@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Leads\StatsLeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepositoryInterface
+final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPokemonRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class StatsPokemonView
+final readonly class StatsPokemonView
 {
 	public function __construct(
 		private StatsPokemonModel $statsPokemonModel,

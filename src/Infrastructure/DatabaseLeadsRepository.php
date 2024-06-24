@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\Leads\Leads;
 use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
 use PDO;
 
-final class DatabaseLeadsRepository implements LeadsRepositoryInterface
+final readonly class DatabaseLeadsRepository implements LeadsRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

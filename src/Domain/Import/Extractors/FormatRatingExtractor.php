@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Import\Structs\FormatRating;
 use Spatie\Regex\Exceptions\RegexFailed;
 use Spatie\Regex\Regex;
 
-final class FormatRatingExtractor
+final readonly class FormatRatingExtractor
 {
 	/**
 	 * Extract a Pokémon Showdown format name and rating from a Pokémon Showdown
@@ -25,11 +25,11 @@ final class FormatRatingExtractor
 
 			return new FormatRating(
 				$matchResult->group(1),
-				(int) $matchResult->group(2)
+				(int) $matchResult->group(2),
 			);
 		} catch (RegexFailed) {
 			throw new InvalidFilenameException(
-				'Filename is invalid for format-rating: ' . $filename
+				"Filename is invalid for format-rating: $filename"
 			);
 		}
 	}

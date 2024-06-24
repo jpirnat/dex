@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseTypeRepository implements TypeRepositoryInterface
+final readonly class DatabaseTypeRepository implements TypeRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

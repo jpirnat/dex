@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Types;
 
 use Jp\Dex\Domain\Categories\CategoryId;
 
-final class Type
+final readonly class Type
 {
 	public function __construct(
 		private TypeId $id,

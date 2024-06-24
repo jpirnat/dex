@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
 use PDO;
 use PDOException;
 
-final class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryInterface
+final readonly class DatabaseMovesetRatedItemRepository implements MovesetRatedItemRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

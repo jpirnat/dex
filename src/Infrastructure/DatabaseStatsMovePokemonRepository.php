@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Usage\StatsMovePokemonRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseStatsMovePokemonRepository implements StatsMovePokemonRepositoryInterface
+final readonly class DatabaseStatsMovePokemonRepository implements StatsMovePokemonRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

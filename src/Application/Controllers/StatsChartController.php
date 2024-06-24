@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsChartModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class StatsChartController
+final readonly class StatsChartController
 {
 	public function __construct(
 		private StatsChartModel $statsChartModel,

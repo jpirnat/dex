@@ -12,7 +12,7 @@ use Throwable;
 use Whoops\Handler\JsonResponseHandler;
 use Whoops\Run;
 
-final class JsonErrorMiddleware implements MiddlewareInterface
+final readonly class JsonErrorMiddleware implements MiddlewareInterface
 {
 	public function __construct(
 		private string $environment,
@@ -24,7 +24,7 @@ final class JsonErrorMiddleware implements MiddlewareInterface
 	 */
 	public function process(
 		ServerRequestInterface $request,
-		RequestHandlerInterface $handler
+		RequestHandlerInterface $handler,
 	) : ResponseInterface {
 		if ($this->environment !== 'production') {
 			// In development environments, we want to see the errors. They can

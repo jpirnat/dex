@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Structs;
 
-final class Usage
+final readonly class Usage
 {
 	public function __construct(
 		private int $rank,

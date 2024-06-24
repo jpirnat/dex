@@ -17,7 +17,7 @@ interface MovesetRatedPokemonRepositoryInterface
 		DateTime $month,
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : bool;
 
 	/**
@@ -35,7 +35,7 @@ interface MovesetRatedPokemonRepositoryInterface
 		DateTime $end,
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : int;
 
 	/**
@@ -48,7 +48,7 @@ interface MovesetRatedPokemonRepositoryInterface
 		DateTime $start,
 		DateTime $end,
 		FormatId $formatId,
-		int $rating
+		int $rating,
 	) : array;
 
 	/**
@@ -63,6 +63,6 @@ interface MovesetRatedPokemonRepositoryInterface
 		DateTime $month,
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : ?MovesetRatedPokemon;
 }

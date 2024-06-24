@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Moves\MoveType;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseMoveRepository implements MoveRepositoryInterface
+final readonly class DatabaseMoveRepository implements MoveRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Stats\Trends\Lines\MovesetAbilityTrendLine;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
-final class MovesetAbilityTrendGenerator
+final readonly class MovesetAbilityTrendGenerator
 {
 	public function __construct(
 		private StatsChartQueriesInterface $statsChartQueries,

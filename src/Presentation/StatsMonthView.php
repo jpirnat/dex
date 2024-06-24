@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsMonthModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class StatsMonthView
+final readonly class StatsMonthView
 {
 	public function __construct(
 		private StatsMonthModel $statsMonthModel,

@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
 
-final class DatabaseAbilityNameRepository implements AbilityNameRepositoryInterface
+final readonly class DatabaseAbilityNameRepository implements AbilityNameRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -24,7 +24,7 @@ final class DatabaseAbilityNameRepository implements AbilityNameRepositoryInterf
 	 */
 	public function getByLanguageAndAbility(
 		LanguageId $languageId,
-		AbilityId $abilityId
+		AbilityId $abilityId,
 	) : AbilityName {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -50,7 +50,7 @@ final class DatabaseAbilityNameRepository implements AbilityNameRepositoryInterf
 		$abilityName = new AbilityName(
 			$languageId,
 			$abilityId,
-			$result['name']
+			$result['name'],
 		);
 
 		return $abilityName;

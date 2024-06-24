@@ -20,6 +20,6 @@ interface MovesetRatedAveragedMoveRepositoryInterface
 		DateTime $end,
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : array;
 }

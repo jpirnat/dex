@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface;
 use PDO;
 use PDOException;
 
-final class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepositoryInterface
+final readonly class DatabaseMovesetRatedTeammateRepository implements MovesetRatedTeammateRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

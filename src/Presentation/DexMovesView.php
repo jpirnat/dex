@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\DexMovesModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class DexMovesView
+final readonly class DexMovesView
 {
 	public function __construct(
 		private DexMovesModel $dexMovesModel,

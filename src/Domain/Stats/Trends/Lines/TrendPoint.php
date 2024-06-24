@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Stats\Trends\Lines;
 
 use DateTime;
 
-final class TrendPoint
+final readonly class TrendPoint
 {
 	public function __construct(
 		private DateTime $date,

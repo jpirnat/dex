@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\DexPokemonsModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class DexPokemonsView
+final readonly class DexPokemonsView
 {
 	public function __construct(
 		private DexPokemonsModel $dexPokemonsModel,

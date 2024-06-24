@@ -26,6 +26,6 @@ interface UsageRatedPokemonRepositoryInterface
 		DateTime $month,
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : ?UsageRatedPokemonId;
 }

@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseFlagRepository implements FlagRepositoryInterface
+final readonly class DatabaseFlagRepository implements FlagRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

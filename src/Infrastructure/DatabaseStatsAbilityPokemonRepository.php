@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Usage\StatsAbilityPokemonRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseStatsAbilityPokemonRepository implements StatsAbilityPokemonRepositoryInterface
+final readonly class DatabaseStatsAbilityPokemonRepository implements StatsAbilityPokemonRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -91,7 +91,7 @@ final class DatabaseStatsAbilityPokemonRepository implements StatsAbilityPokemon
 				(float) $result['pokemon_percent'],
 				(float) $result['ability_percent'],
 				(float) $result['usage_percent'],
-				(float) $result['usage_percent'] - (float) $result['prev_percent']
+				(float) $result['usage_percent'] - (float) $result['prev_percent'],
 			);
 
 			$pokemons[] = $pokemon;

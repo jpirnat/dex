@@ -5,7 +5,7 @@ namespace Jp\Dex\Presentation;
 
 use DateTime;
 
-final class MonthControlFormatter
+final readonly class MonthControlFormatter
 {
 	/**
 	 * Format the prev month or next month for the month control.

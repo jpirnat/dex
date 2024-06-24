@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\StatsPokemon;
 
-final class StatData
+final readonly class StatData
 {
 	public function __construct(
 		private string $statName,

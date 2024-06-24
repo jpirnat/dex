@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 use Jp\Dex\Domain\Versions\GenerationId;
 
-final class StatCalculator
+final readonly class StatCalculator
 {
 	private const PERFECT_IV_GEN_1 = 15;
 	private const PERFECT_IV_GEN_3 = 31;
@@ -39,7 +39,7 @@ final class StatCalculator
 		StatValueContainer $baseStats,
 		StatValueContainer $ivSpread,
 		StatValueContainer $evSpread,
-		int $level
+		int $level,
 	) : StatValueContainer {
 		$statSpread = new StatValueContainer();
 
@@ -51,7 +51,7 @@ final class StatCalculator
 					(int) $baseStats->get($statId)->getValue(),
 					(int) $ivSpread->get($statId)->getValue(),
 					(int) $evSpread->get($statId)->getValue(),
-					$level
+					$level,
 				);
 				$statSpread->add(new StatValue($statId, $value));
 				continue;
@@ -61,7 +61,7 @@ final class StatCalculator
 				(int) $baseStats->get($statId)->getValue(),
 				(int) $ivSpread->get($statId)->getValue(),
 				(int) $evSpread->get($statId)->getValue(),
-				$level
+				$level,
 			);
 			$statSpread->add(new StatValue($statId, $value));
 		}
@@ -99,7 +99,7 @@ final class StatCalculator
 		StatValueContainer $evSpread,
 		int $level,
 		?StatId $increasedStatId,
-		?StatId $decreasedStatId
+		?StatId $decreasedStatId,
 	) : StatValueContainer {
 		$statSpread = new StatValueContainer();
 
@@ -111,7 +111,7 @@ final class StatCalculator
 					(int) $baseStats->get($statId)->getValue(),
 					(int) $ivSpread->get($statId)->getValue(),
 					(int) $evSpread->get($statId)->getValue(),
-					$level
+					$level,
 				);
 				$statSpread->add(new StatValue($statId, $value));
 				continue;
@@ -122,7 +122,7 @@ final class StatCalculator
 				(int) $ivSpread->get($statId)->getValue(),
 				(int) $evSpread->get($statId)->getValue(),
 				$level,
-				$this->getNatureModifier($statId, $increasedStatId, $decreasedStatId)
+				$this->getNatureModifier($statId, $increasedStatId, $decreasedStatId),
 			);
 			$statSpread->add(new StatValue($statId, $value));
 		}

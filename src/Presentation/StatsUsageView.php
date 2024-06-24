@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsUsageModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class StatsUsageView
+final readonly class StatsUsageView
 {
 	public function __construct(
 		private StatsUsageModel $statsUsageModel,

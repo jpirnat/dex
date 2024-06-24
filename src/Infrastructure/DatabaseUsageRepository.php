@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\Usage\Usage;
 use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use PDO;
 
-final class DatabaseUsageRepository implements UsageRepositoryInterface
+final readonly class DatabaseUsageRepository implements UsageRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

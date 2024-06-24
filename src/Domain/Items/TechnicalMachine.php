@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Items;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class TechnicalMachine
+final readonly class TechnicalMachine
 {
 	public function __construct(
 		private VersionGroupId $versionGroupId,

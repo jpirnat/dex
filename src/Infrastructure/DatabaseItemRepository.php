@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseItemRepository implements ItemRepositoryInterface
+final readonly class DatabaseItemRepository implements ItemRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -44,7 +44,7 @@ final class DatabaseItemRepository implements ItemRepositoryInterface
 		$item = new Item(
 			$itemId,
 			$result['identifier'],
-			new VersionGroupId($result['introduced_in_version_group_id'])
+			new VersionGroupId($result['introduced_in_version_group_id']),
 		);
 
 		return $item;
@@ -78,7 +78,7 @@ final class DatabaseItemRepository implements ItemRepositoryInterface
 		$item = new Item(
 			new ItemId($result['id']),
 			$identifier,
-			new VersionGroupId($result['introduced_in_version_group_id'])
+			new VersionGroupId($result['introduced_in_version_group_id']),
 		);
 
 		return $item;

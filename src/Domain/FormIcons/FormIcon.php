@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\FormIcons;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class FormIcon
+final readonly class FormIcon
 {
 	public function __construct(
 		private VersionGroupId $versionGroupId,

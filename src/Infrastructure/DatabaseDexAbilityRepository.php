@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseDexAbilityRepository implements DexAbilityRepositoryInterface
+final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

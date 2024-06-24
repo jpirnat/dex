@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Flags;
 
-final class DexFlag
+final readonly class DexFlag
 {
 	public function __construct(
 		private string $identifier,

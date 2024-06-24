@@ -13,7 +13,7 @@ use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseTmRepository implements TmRepositoryInterface
+final readonly class DatabaseTmRepository implements TmRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -56,7 +56,7 @@ final class DatabaseTmRepository implements TmRepositoryInterface
 			new MachineType($result['machine_type']),
 			$result['number'],
 			new ItemId($result['item_id']),
-			$moveId
+			$moveId,
 		);
 
 		return $tm;

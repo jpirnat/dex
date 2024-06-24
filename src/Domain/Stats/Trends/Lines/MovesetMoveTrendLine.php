@@ -24,7 +24,7 @@ final class MovesetMoveTrendLine extends TrendLine
 		MoveName $moveName,
 		Type $pokemonType,
 		Type $moveType,
-		array $trendPoints
+		array $trendPoints,
 	) {
 		$this->formatName = $formatName;
 		$this->rating = $rating;

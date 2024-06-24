@@ -29,7 +29,7 @@ final class BreedingChainFinder
 	public function findChains(
 		PokemonId $pokemonId,
 		MoveId $moveId,
-		VersionGroupId $versionGroupId
+		VersionGroupId $versionGroupId,
 	) : array {
 		$pokemonId = $pokemonId->value();
 		$moveId = $moveId->value();
@@ -45,7 +45,7 @@ final class BreedingChainFinder
 
 		// Sort chains from shortest to longest.
 		usort($chains, function (array $a, array $b) : int {
-		  return count($a) <=> count($b);
+			return count($a) <=> count($b);
 		});
 
 		// Limit to 50 results.
@@ -63,7 +63,7 @@ final class BreedingChainFinder
 		int $pokemonId,
 		int $moveId,
 		int $versionGroupId,
-		array $excludeEggGroupIds
+		array $excludeEggGroupIds,
 	) : BreedingTree {
 		$breedingTree = new BreedingTree(new PokemonMove(
 			new PokemonId($pokemonId),
@@ -71,7 +71,7 @@ final class BreedingChainFinder
 			new MoveId($moveId),
 			new MoveMethodId(MoveMethodId::EGG),
 			0,
-			0
+			0,
 		));
 
 		$generationId = $this->breedingChainQueries->getGenerationId($versionGroupId);
@@ -85,12 +85,12 @@ final class BreedingChainFinder
 		if ($eggGroupIds === [EggGroupId::UNDISCOVERED]) {
 			$evolvedPokemonId = $this->breedingChainQueries->getEvolution(
 				$pokemonId,
-				$versionGroupId
+				$versionGroupId,
 			);
 			if ($evolvedPokemonId) {
 				$eggGroupIds = $this->breedingChainQueries->getEggGroupIds(
 					$evolvedPokemonId,
-					$generationId
+					$generationId,
 				);
 			}
 		}
@@ -104,7 +104,7 @@ final class BreedingChainFinder
 			$pokemonId,
 			$generationId,
 			$eggGroups,
-			$excludeEggGroups
+			$excludeEggGroups,
 		);
 
 		// Get Pokémon that share at least one egg group with the current
@@ -113,7 +113,7 @@ final class BreedingChainFinder
 		$inOtherEggGroupIds = $this->breedingChainQueries->getInOtherEggGroupIds(
 			$generationId,
 			$eggGroups,
-			$excludeEggGroups
+			$excludeEggGroups,
 		);
 
 		// BUG FIX - If there are no Pokémon in other egg groups, initialize the
@@ -130,7 +130,7 @@ final class BreedingChainFinder
 		$pokemonMoves = $this->breedingChainQueries->getByNonEgg(
 			$generationId,
 			$moveId,
-			$inSameEggGroup
+			$inSameEggGroup,
 		);
 
 		foreach ($pokemonMoves as $pokemonMove) {
@@ -154,7 +154,7 @@ final class BreedingChainFinder
 				new MoveId($moveId),
 				new MoveMethodId($pokemonMove['moveMethodId']),
 				$pokemonMove['level'],
-				$pokemonMove['sort']
+				$pokemonMove['sort'],
 			)));
 		}
 
@@ -171,7 +171,7 @@ final class BreedingChainFinder
 		$pokemonMoves = $this->breedingChainQueries->getByEgg(
 			$generationId,
 			$moveId,
-			$inOtherEggGroup
+			$inOtherEggGroup,
 		);
 
 		foreach ($pokemonMoves as $pokemonMove) {
@@ -194,7 +194,7 @@ final class BreedingChainFinder
 				$pokemonMove['pokemonId'],
 				$moveId,
 				$pokemonMove['versionGroupId'],
-				array_merge($excludeEggGroupIds, $eggGroupIds)
+				array_merge($excludeEggGroupIds, $eggGroupIds),
 			);
 
 			if ($extendedTree->isComplete()) {

@@ -5,7 +5,7 @@ namespace Jp\Dex\Application\Models\BreedingChains;
 
 use Jp\Dex\Domain\Versions\DexVersionGroup;
 
-final class BreedingChainRecord
+final readonly class BreedingChainRecord
 {
 	private string $formIcon;
 	private string $pokemonIdentifier;
@@ -35,7 +35,7 @@ final class BreedingChainRecord
 		int $baseEggCycles,
 		string $genderRatioIcon,
 		string $genderRatioText,
-		string $moveMethod
+		string $moveMethod,
 	) {
 		$this->formIcon = $formIcon;
 		$this->pokemonIdentifier = $pokemonIdentifier;

@@ -19,6 +19,6 @@ interface ModelRepositoryInterface
 		bool $isShiny,
 		bool $isBack,
 		bool $isFemale,
-		int $attackingIndex
+		int $attackingIndex,
 	) : Model;
 }

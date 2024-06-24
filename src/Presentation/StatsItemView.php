@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsItemModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class StatsItemView
+final readonly class StatsItemView
 {
 	public function __construct(
 		private StatsItemModel $statsItemModel,

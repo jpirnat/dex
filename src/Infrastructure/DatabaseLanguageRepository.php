@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Languages\LanguageNotFoundException;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use PDO;
 
-final class DatabaseLanguageRepository implements LanguageRepositoryInterface
+final readonly class DatabaseLanguageRepository implements LanguageRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -37,7 +37,7 @@ final class DatabaseLanguageRepository implements LanguageRepositoryInterface
 
 		if (!$result) {
 			throw new LanguageNotFoundException(
-				'No language exists with id ' . $languageId->value()
+				'No language exists with id ' . $languageId->value() . '.'
 			);
 		}
 
@@ -45,7 +45,7 @@ final class DatabaseLanguageRepository implements LanguageRepositoryInterface
 			$languageId,
 			$result['identifier'],
 			$result['locale'],
-			$result['date_format']
+			$result['date_format'],
 		);
 
 		return $language;

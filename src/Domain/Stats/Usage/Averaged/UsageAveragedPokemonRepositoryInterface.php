@@ -17,6 +17,6 @@ interface UsageAveragedPokemonRepositoryInterface
 	public function getByMonthsAndFormat(
 		DateTime $start,
 		DateTime $end,
-		FormatId $formatId
+		FormatId $formatId,
 	) : array;
 }

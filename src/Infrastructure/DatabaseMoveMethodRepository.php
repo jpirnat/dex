@@ -9,7 +9,7 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-final class DatabaseMoveMethodRepository implements MoveMethodRepositoryInterface
+final readonly class DatabaseMoveMethodRepository implements MoveMethodRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -40,7 +40,7 @@ final class DatabaseMoveMethodRepository implements MoveMethodRepositoryInterfac
 				new MoveMethodId($result['id']),
 				$result['identifier'],
 				new GenerationId($result['introduced_in_generation_id']),
-				$result['sort']
+				$result['sort'],
 			);
 
 			$moveMethods[$result['id']] = $moveMethod;

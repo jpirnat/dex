@@ -15,7 +15,7 @@ interface PokemonNameRepositoryInterface
 	 */
 	public function getByLanguageAndPokemon(
 		LanguageId $languageId,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : PokemonName;
 
 	/**

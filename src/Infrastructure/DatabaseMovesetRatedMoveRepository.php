@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMove;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
 use PDO;
 
-final class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryInterface
+final readonly class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

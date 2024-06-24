@@ -21,7 +21,7 @@ final class DexPokemonMoveMethod
 		string $identifier,
 		string $name,
 		string $description,
-		array $moves
+		array $moves,
 	) {
 		$this->identifier = $identifier;
 		$this->name = $name;

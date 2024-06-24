@@ -15,6 +15,6 @@ interface AbilityNameRepositoryInterface
 	 */
 	public function getByLanguageAndAbility(
 		LanguageId $languageId,
-		AbilityId $abilityId
+		AbilityId $abilityId,
 	) : AbilityName;
 }

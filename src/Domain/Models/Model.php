@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Models;
 
 use Jp\Dex\Domain\Forms\FormId;
 
-final class Model
+final readonly class Model
 {
 	public function __construct(
 		private FormId $formId,

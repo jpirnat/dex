@@ -13,7 +13,7 @@ use NumberFormatter;
  * has a run-time dependency on LanguageId. So, those view classes use this
  * factory class as their injected dependency instead.
  */
-final class IntlFormatterFactory
+final readonly class IntlFormatterFactory
 {
 	public function __construct(
 		private LanguageRepositoryInterface $languageRepository,
@@ -32,24 +32,24 @@ final class IntlFormatterFactory
 			IntlDateFormatter::NONE,
 			null,
 			null,
-			$language->getDateFormat()
+			$language->getDateFormat(),
 		);
 
 		$numberFormatter = new NumberFormatter(
 			$language->getLocale(),
-			NumberFormatter::DECIMAL
+			NumberFormatter::DECIMAL,
 		);
 		$numberFormatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 5);
 
 		$percentFormatter = new NumberFormatter(
 			$language->getLocale(),
-			NumberFormatter::PERCENT
+			NumberFormatter::PERCENT,
 		);
 		$percentFormatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 5);
 
 		$changeFormatter = new NumberFormatter(
 			$language->getLocale(),
-			NumberFormatter::PERCENT
+			NumberFormatter::PERCENT,
 		);
 		$changeFormatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 5);
 		$changeFormatter->setTextAttribute(NumberFormatter::POSITIVE_PREFIX, '+');
@@ -58,7 +58,7 @@ final class IntlFormatterFactory
 			$dateFormatter,
 			$numberFormatter,
 			$percentFormatter,
-			$changeFormatter
+			$changeFormatter,
 		);
 	}
 }

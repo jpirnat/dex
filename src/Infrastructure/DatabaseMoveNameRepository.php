@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Moves\MoveNameNotFoundException;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use PDO;
 
-final class DatabaseMoveNameRepository implements MoveNameRepositoryInterface
+final readonly class DatabaseMoveNameRepository implements MoveNameRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -24,7 +24,7 @@ final class DatabaseMoveNameRepository implements MoveNameRepositoryInterface
 	 */
 	public function getByLanguageAndMove(
 		LanguageId $languageId,
-		MoveId $moveId
+		MoveId $moveId,
 	) : MoveName {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -50,7 +50,7 @@ final class DatabaseMoveNameRepository implements MoveNameRepositoryInterface
 		$moveName = new MoveName(
 			$languageId,
 			$moveId,
-			$result['name']
+			$result['name'],
 		);
 
 		return $moveName;

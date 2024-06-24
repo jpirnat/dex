@@ -103,7 +103,7 @@ final class DatabaseShowdownPokemonRepository implements ShowdownPokemonReposito
 		}
 
 		throw new PokemonNotImportedException(
-			'Pokémon should not be imported: ' . $showdownPokemonName
+			"Pokémon should not be imported: $showdownPokemonName."
 		);
 	}
 

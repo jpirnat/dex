@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Stats;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 
-final class StatName
+final readonly class StatName
 {
 	public function __construct(
 		private LanguageId $languageId,

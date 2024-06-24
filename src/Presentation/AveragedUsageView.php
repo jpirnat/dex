@@ -8,7 +8,7 @@ use Jp\Dex\Application\Models\AveragedUsageModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class AveragedUsageView
+final readonly class AveragedUsageView
 {
 	public function __construct(
 		private RendererInterface $renderer,

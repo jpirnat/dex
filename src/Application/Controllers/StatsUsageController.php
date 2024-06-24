@@ -8,7 +8,7 @@ use Jp\Dex\Application\Models\StatsUsageModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class StatsUsageController
+final readonly class StatsUsageController
 {
 	public function __construct(
 		private BaseController $baseController,
@@ -37,7 +37,7 @@ final class StatsUsageController
 			$rating,
 			$myFormat,
 			$myRating,
-			$languageId
+			$languageId,
 		);
 	}
 }

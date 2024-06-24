@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsLeadsModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class StatsLeadsController
+final readonly class StatsLeadsController
 {
 	public function __construct(
 		private BaseController $baseController,
@@ -31,7 +31,7 @@ final class StatsLeadsController
 			$month,
 			$formatIdentifier,
 			$rating,
-			$languageId
+			$languageId,
 		);
 	}
 }

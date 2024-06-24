@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
-final class MoveData
+final readonly class MoveData
 {
 	public function __construct(
 		private string $moveName,

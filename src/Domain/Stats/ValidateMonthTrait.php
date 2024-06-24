@@ -17,17 +17,15 @@ trait ValidateMonthTrait
 	{
 		// Usage data from before November 2014 does not currently exist.
 		if ($month->format('Y-m') < '2014-11') {
-			throw new InvalidMonthException(
-				'This month is too old: ' . $month->format('Y-m-d')
-			);
+			$m = $month->format('Y-m-d');
+			throw new InvalidMonthException("This month is too old: $m.");
 		}
 
 		// Usage data from the future does not currently exist.
 		$today = new DateTime('today');
 		if ($month > $today) {
-			throw new InvalidMonthException(
-				'This month has not happened yet: ' . $month->format('Y-m-d')
-			);
+			$m = $month->format('Y-m-d');
+			throw new InvalidMonthException("This month has not happened yet: $m.");
 		}
 	}
 }

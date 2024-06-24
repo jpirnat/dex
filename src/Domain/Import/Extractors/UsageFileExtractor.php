@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Import\Structs\Usage;
 use Spatie\Regex\Exceptions\RegexFailed;
 use Spatie\Regex\Regex;
 
-final class UsageFileExtractor
+final readonly class UsageFileExtractor
 {
 	/**
 	 * Extract the total battles count from the first line in the usage file.
@@ -27,7 +27,7 @@ final class UsageFileExtractor
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed) {
 			throw new InvalidTotalBattlesLineException(
-				'Total battles line is invalid: ' . $line
+				"Total battles line is invalid: $line"
 			);
 		}
 	}
@@ -47,7 +47,7 @@ final class UsageFileExtractor
 			return (float) $matchResult->group(1);
 		} catch (RegexFailed) {
 			throw new InvalidAverageWeightPerTeamLineException(
-				'Average weight per team line is invalid: ' . $line
+				"Average weight per team line is invalid: $line"
 			);
 		}
 	}
@@ -95,12 +95,10 @@ final class UsageFileExtractor
 				(int) $matchResult->group(4),
 				(float) $matchResult->group(5),
 				(int) $matchResult->group(6),
-				(float) $matchResult->group(7)
+				(float) $matchResult->group(7),
 			);
 		} catch (RegexFailed) {
-			throw new InvalidUsageLineException(
-				'Usage line is invalid: ' . $line
-			);
+			throw new InvalidUsageLineException("Usage line is invalid: $line");
 		}
 	}
 }

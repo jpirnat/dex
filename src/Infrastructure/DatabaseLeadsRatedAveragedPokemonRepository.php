@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterf
 use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use PDO;
 
-final class DatabaseLeadsRatedAveragedPokemonRepository implements LeadsRatedAveragedPokemonRepositoryInterface
+final readonly class DatabaseLeadsRatedAveragedPokemonRepository implements LeadsRatedAveragedPokemonRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -26,7 +26,7 @@ final class DatabaseLeadsRatedAveragedPokemonRepository implements LeadsRatedAve
 		DateTime $start,
 		DateTime $end,
 		FormatId $formatId,
-		int $rating
+		int $rating,
 	) : bool {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -57,7 +57,7 @@ final class DatabaseLeadsRatedAveragedPokemonRepository implements LeadsRatedAve
 		DateTime $start,
 		DateTime $end,
 		FormatId $formatId,
-		int $rating
+		int $rating,
 	) : array {
 		$months = $this->monthsCounter->countAllMonths($start, $end);
 
@@ -96,7 +96,7 @@ final class DatabaseLeadsRatedAveragedPokemonRepository implements LeadsRatedAve
 				$rating,
 				new PokemonId($result['pokemon_id']),
 				$rank++,
-				(float) $result['usage_percent']
+				(float) $result['usage_percent'],
 			);
 
 			$leadsRatedAveragedPokemons[$result['pokemon_id']] = $leadsRatedAveragedPokemon;

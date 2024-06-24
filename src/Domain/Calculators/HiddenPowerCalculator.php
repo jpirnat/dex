@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Calculators;
 use Jp\Dex\Domain\Types\Type;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
-final class HiddenPowerCalculator
+final readonly class HiddenPowerCalculator
 {
 	public function __construct(
 		private TypeRepositoryInterface $typeRepository,
@@ -31,7 +31,7 @@ final class HiddenPowerCalculator
 		int $def,
 		int $spe,
 		int $spa,
-		int $spd
+		int $spd,
 	) : Type {
 		$a = $hp % 2;
 		$b = $atk % 2;
@@ -52,7 +52,7 @@ final class HiddenPowerCalculator
 		int $atk,
 		int $def,
 		int $spe,
-		int $spc
+		int $spc,
 	) : int {
 		$v = $spc < 8 ? 0 : 1;
 		$w = $spe < 8 ? 0 : 1;
@@ -72,7 +72,7 @@ final class HiddenPowerCalculator
 		int $def,
 		int $spe,
 		int $spa,
-		int $spd
+		int $spd,
 	) : int {
 		$u = ($hp % 4 === 2 || $hp % 4 === 3) ? 1 : 0;
 		$v = ($atk % 4 === 2 || $atk % 4 === 3) ? 1 : 0;

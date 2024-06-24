@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\EggGroups;
 
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
-final class PokemonEggGroup
+final readonly class PokemonEggGroup
 {
 	public function __construct(
 		private PokemonId $pokemonId,

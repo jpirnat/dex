@@ -13,7 +13,7 @@ use PDO;
  * Porydex as the Aura Break forms. This class converts Zygarde in the usage
  * stats to the Power Construct forms for the formats in which they are allowed.
  */
-final class ZygardeFixer
+final readonly class ZygardeFixer
 {
 	public function __construct(
 		private PDO $db,

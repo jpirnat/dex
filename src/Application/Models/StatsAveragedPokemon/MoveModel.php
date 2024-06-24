@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInterface;
 
-final class MoveModel
+final readonly class MoveModel
 {
 	public function __construct(
 		private MovesetRatedAveragedMoveRepositoryInterface $movesetRatedAveragedMoveRepository,
@@ -36,7 +36,7 @@ final class MoveModel
 			$end,
 			$formatId,
 			$rating,
-			$pokemonId
+			$pokemonId,
 		);
 
 		$moves = [];
@@ -48,7 +48,7 @@ final class MoveModel
 			// Get this move's name.
 			$moveName = $this->moveNameRepository->getByLanguageAndMove(
 				$languageId,
-				$moveId
+				$moveId,
 			);
 
 			// Get this move.

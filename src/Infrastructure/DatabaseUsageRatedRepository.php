@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\Usage\UsageRated;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
 use PDO;
 
-final class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterface
+final readonly class DatabaseUsageRatedRepository implements UsageRatedRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

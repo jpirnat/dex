@@ -7,7 +7,7 @@ use Jp\Dex\Application\Models\StatsAbilityModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class StatsAbilityView
+final readonly class StatsAbilityView
 {
 	public function __construct(
 		private StatsAbilityModel $statsAbilityModel,

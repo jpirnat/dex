@@ -30,7 +30,7 @@ final class StatsMonthModel
 	 */
 	public function setData(
 		string $month,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$this->month = $month;
 		$this->languageId = $languageId;

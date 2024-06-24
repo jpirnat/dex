@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Species;
 
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class Species
+final readonly class Species
 {
 	public function __construct(
 		private SpeciesId $id,

@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidPercentException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidRankException;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 
-final class LeadsRatedPokemon
+final readonly class LeadsRatedPokemon
 {
 	/**
 	 * Constructor.
@@ -21,13 +21,11 @@ final class LeadsRatedPokemon
 		private float $usagePercent,
 	) {
 		if ($rank < 1) {
-			throw new InvalidRankException('Invalid rank: ' . $rank);
+			throw new InvalidRankException("Invalid rank: $rank.");
 		}
 
 		if ($usagePercent < 0 || $usagePercent > 100) {
-			throw new InvalidPercentException(
-				'Invalid usage percent: ' . $usagePercent
-			);
+			throw new InvalidPercentException("Invalid usage percent: $usagePercent.");
 		}
 	}
 

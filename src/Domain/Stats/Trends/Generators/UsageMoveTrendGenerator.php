@@ -15,7 +15,7 @@ use Jp\Dex\Domain\Stats\Trends\Lines\UsageMoveTrendLine;
 use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
-final class UsageMoveTrendGenerator
+final readonly class UsageMoveTrendGenerator
 {
 	public function __construct(
 		private StatsChartQueriesInterface $statsChartQueries,

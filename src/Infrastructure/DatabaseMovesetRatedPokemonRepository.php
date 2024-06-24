@@ -11,7 +11,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 use PDO;
 
-final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonRepositoryInterface
+final readonly class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -25,7 +25,7 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 		DateTime $month,
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : bool {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -80,7 +80,7 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 		DateTime $end,
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : int {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -112,7 +112,7 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 		DateTime $start,
 		DateTime $end,
 		FormatId $formatId,
-		int $rating
+		int $rating,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -160,7 +160,7 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 		DateTime $month,
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : ?MovesetRatedPokemon {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -188,7 +188,7 @@ final class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemon
 
 		$movesetRatedPokemon = new MovesetRatedPokemon(
 			new UsageRatedPokemonId($result['usage_rated_pokemon_id']),
-			(float) $result['average_weight']
+			(float) $result['average_weight'],
 		);
 
 		return $movesetRatedPokemon;

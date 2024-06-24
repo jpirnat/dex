@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
 
-final class MonthsCounter
+final readonly class MonthsCounter
 {
 	public function __construct(
 		private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
@@ -34,14 +34,14 @@ final class MonthsCounter
 		DateTime $end,
 		FormatId $formatId,
 		int $rating,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : int {
 		return $this->movesetRatedPokemonRepository->count(
 			$start,
 			$end,
 			$formatId,
 			$rating,
-			$pokemonId
+			$pokemonId,
 		);
 	}
 
@@ -54,13 +54,13 @@ final class MonthsCounter
 		DateTime $start,
 		DateTime $end,
 		FormatId $formatId,
-		int $rating
+		int $rating,
 	) : array {
 		return $this->movesetRatedPokemonRepository->countAll(
 			$start,
 			$end,
 			$formatId,
-			$rating
+			$rating,
 		);
 	}
 }

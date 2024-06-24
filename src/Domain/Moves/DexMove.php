@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Moves;
 use Jp\Dex\Domain\Categories\DexCategory;
 use Jp\Dex\Domain\Types\DexType;
 
-final class DexMove
+final readonly class DexMove
 {
 	public function __construct(
 		private string $identifier,

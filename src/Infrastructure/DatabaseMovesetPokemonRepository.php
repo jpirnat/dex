@@ -10,7 +10,7 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
 use PDO;
 
-final class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterface
+final readonly class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -69,7 +69,7 @@ final class DatabaseMovesetPokemonRepository implements MovesetPokemonRepository
 	public function getByMonthAndFormatAndPokemon(
 		DateTime $month,
 		FormatId $formatId,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : ?MovesetPokemon {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -96,7 +96,7 @@ final class DatabaseMovesetPokemonRepository implements MovesetPokemonRepository
 			$formatId,
 			$pokemonId,
 			$result['raw_count'],
-			$result['viability_ceiling']
+			$result['viability_ceiling'],
 		);
 
 		return $movesetPokemon;

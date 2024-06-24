@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Import\Extractors\Exceptions\InvalidFilenameException;
 use Spatie\Regex\Exceptions\RegexFailed;
 use Spatie\Regex\Regex;
 
-final class MonthExtractor
+final readonly class MonthExtractor
 {
 	/**
 	 * Extract the month from a stats directory or filename.
@@ -26,12 +26,12 @@ final class MonthExtractor
 			$month->setDate(
 				(int) $matchResult->group(1),
 				(int) $matchResult->group(2),
-				1
+				1,
 			);
 			return $month;
 		} catch (RegexFailed) {
 			throw new InvalidFilenameException(
-				'Filename is invalid for year-month: ' . $filename
+				"Filename is invalid for year-month: $filename"
 			);
 		}
 	}

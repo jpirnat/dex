@@ -7,7 +7,7 @@ use Jp\Dex\Domain\BreedingChains\BreedingChainQueriesInterface;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
 use PDO;
 
-final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
+final readonly class DatabaseBreedingChainQueries implements BreedingChainQueriesInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -106,7 +106,7 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 		int $pokemonId,
 		int $generationId,
 		string $eggGroups,
-		string $excludeEggGroups
+		string $excludeEggGroups,
 	) : array {
 		$stmt = $this->db->query(
 			"SELECT DISTINCT
@@ -152,7 +152,7 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 	public function getInOtherEggGroupIds(
 		int $generationId,
 		string $eggGroups,
-		string $excludeEggGroups
+		string $excludeEggGroups,
 	) : array {
 		$stmt = $this->db->query(
 			"SELECT DISTINCT
@@ -203,7 +203,7 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 	public function getByNonEgg(
 		int $generationId,
 		int $moveId,
-		string $inSameEggGroup
+		string $inSameEggGroup,
 	) : array {
 		$egg = MoveMethodId::EGG;
 
@@ -250,7 +250,7 @@ final class DatabaseBreedingChainQueries implements BreedingChainQueriesInterfac
 	public function getByEgg(
 		int $generationId,
 		int $moveId,
-		string $inOtherEggGroup
+		string $inOtherEggGroup,
 	) : array {
 		$egg = MoveMethodId::EGG;
 

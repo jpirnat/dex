@@ -52,7 +52,7 @@ final class DexTypeModel
 	public function setData(
 		string $vgIdentifier,
 		string $typeIdentifier,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
@@ -79,11 +79,11 @@ final class DexTypeModel
 		$this->damageTaken = [];
 		$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
 			$this->versionGroupModel->getVersionGroup()->getGenerationId(),
-			$type->getId()
+			$type->getId(),
 		);
 		$defendingMatchups = $this->typeMatchupRepository->getByDefendingType(
 			$this->versionGroupModel->getVersionGroup()->getGenerationId(),
-			$type->getId()
+			$type->getId(),
 		);
 		foreach ($attackingMatchups as $matchup) {
 			$defendingTypeId = $matchup->getDefendingTypeId()->value();

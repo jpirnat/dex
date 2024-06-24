@@ -96,7 +96,7 @@ final class DatabaseShowdownNatureRepository implements ShowdownNatureRepository
 		}
 
 		throw new NatureNotImportedException(
-			'Nature should not be imported: ' . $showdownNatureName
+			"Nature should not be imported: $showdownNatureName."
 		);
 	}
 

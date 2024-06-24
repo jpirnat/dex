@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application;
 
-final class CookieNames
+final readonly class CookieNames
 {
 	public const LANGUAGE = 'language';
 	public const FORMAT = 'format';

@@ -46,7 +46,7 @@ final class StatsLeadsModel
 		string $month,
 		string $formatIdentifier,
 		int $rating,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : void {
 		$this->month = $month;
 		$this->rating = $rating;

@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\Exceptions\InvalidCountException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
-final class Usage
+final readonly class Usage
 {
 	use ValidateMonthTrait;
 
@@ -27,9 +27,7 @@ final class Usage
 		$this->validateMonth($month);
 
 		if ($totalBattles < 0) {
-			throw new InvalidCountException(
-				'Invalid number of total battles: ' . $totalBattles
-			);
+			throw new InvalidCountException("Invalid number of total battles: $totalBattles.");
 		}
 	}
 

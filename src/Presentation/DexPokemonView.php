@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final class DexPokemonView
+final readonly class DexPokemonView
 {
 	public function __construct(
 		private DexPokemonModel $dexPokemonModel,

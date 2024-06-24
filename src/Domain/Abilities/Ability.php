@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Abilities;
 
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class Ability
+final readonly class Ability
 {
 	public function __construct(
 		private AbilityId $id,

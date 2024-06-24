@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
+final readonly class DatabaseDexMoveRepository implements DexMoveRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

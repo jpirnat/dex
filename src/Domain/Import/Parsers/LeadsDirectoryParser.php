@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Import\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
-final class LeadsDirectoryParser
+final readonly class LeadsDirectoryParser
 {
 	public function __construct(
 		private LeadsFileParser $leadsFileParser,

@@ -25,7 +25,7 @@ final class VersionGroupModel
 
 
 	public function __construct(
-		private VersionGroupRepositoryInterface $versionGroupRepository,
+		private VersionGroupRepositoryInterface $vgRepository,
 	) {}
 
 
@@ -34,9 +34,7 @@ final class VersionGroupModel
 	 */
 	public function setByIdentifier(string $vgIdentifier) : VersionGroupId
 	{
-		$this->versionGroup = $this->versionGroupRepository->getByIdentifier(
-			$vgIdentifier
-		);
+		$this->versionGroup = $this->vgRepository->getByIdentifier($vgIdentifier);
 
 		return $this->versionGroup->getId();
 	}
@@ -46,7 +44,7 @@ final class VersionGroupModel
 	 */
 	public function setSinceGeneration(GenerationId $generationId) : void
 	{
-		$this->versionGroups = $this->versionGroupRepository->getSinceGeneration($generationId);
+		$this->versionGroups = $this->vgRepository->getSinceGeneration($generationId);
 	}
 
 	/**
@@ -54,7 +52,7 @@ final class VersionGroupModel
 	 */
 	public function setWithPokemon(PokemonId $pokemonId) : void
 	{
-		$this->versionGroups = $this->versionGroupRepository->getWithPokemon($pokemonId);
+		$this->versionGroups = $this->vgRepository->getWithPokemon($pokemonId);
 	}
 
 	/**
@@ -62,7 +60,7 @@ final class VersionGroupModel
 	 */
 	public function setWithMove(MoveId $moveId) : void
 	{
-		$this->versionGroups = $this->versionGroupRepository->getWithMove($moveId);
+		$this->versionGroups = $this->vgRepository->getWithMove($moveId);
 	}
 
 	/**
@@ -70,7 +68,7 @@ final class VersionGroupModel
 	 */
 	public function setWithType(TypeId $typeId) : void
 	{
-		$this->versionGroups = $this->versionGroupRepository->getWithType($typeId);
+		$this->versionGroups = $this->vgRepository->getWithType($typeId);
 	}
 
 	/**
@@ -78,7 +76,7 @@ final class VersionGroupModel
 	 */
 	public function setWithAbility(AbilityId $abilityId) : void
 	{
-		$this->versionGroups = $this->versionGroupRepository->getWithAbility($abilityId);
+		$this->versionGroups = $this->vgRepository->getWithAbility($abilityId);
 	}
 
 

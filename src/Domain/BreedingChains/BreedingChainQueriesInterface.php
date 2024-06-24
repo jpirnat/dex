@@ -56,7 +56,7 @@ interface BreedingChainQueriesInterface
 		int $pokemonId,
 		int $generationId,
 		string $eggGroups,
-		string $excludeEggGroups
+		string $excludeEggGroups,
 	) : array;
 
 	/**
@@ -73,7 +73,7 @@ interface BreedingChainQueriesInterface
 	public function getInOtherEggGroupIds(
 		int $generationId,
 		string $eggGroups,
-		string $excludeEggGroups
+		string $excludeEggGroups,
 	) : array;
 
 	/**
@@ -89,7 +89,7 @@ interface BreedingChainQueriesInterface
 	public function getByNonEgg(
 		int $generationId,
 		int $moveId,
-		string $inSameEggGroup
+		string $inSameEggGroup,
 	) : array;
 
 	/**
@@ -105,6 +105,6 @@ interface BreedingChainQueriesInterface
 	public function getByEgg(
 		int $generationId,
 		int $moveId,
-		string $inOtherEggGroup
+		string $inOtherEggGroup,
 	) : array;
 }

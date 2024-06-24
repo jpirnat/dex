@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 use PDO;
 
-final class DatabaseTypeMatchupRepository implements TypeMatchupRepositoryInterface
+final readonly class DatabaseTypeMatchupRepository implements TypeMatchupRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -40,7 +40,7 @@ final class DatabaseTypeMatchupRepository implements TypeMatchupRepositoryInterf
 				$generationId,
 				new TypeId($result['attacking_type_id']),
 				new TypeId($result['defending_type_id']),
-				(float) $result['multiplier']
+				(float) $result['multiplier'],
 			);
 
 			$typeMatchups[] = $typeMatchup;
@@ -75,7 +75,7 @@ final class DatabaseTypeMatchupRepository implements TypeMatchupRepositoryInterf
 				$generationId,
 				$typeId,
 				new TypeId($result['defending_type_id']),
-				(float) $result['multiplier']
+				(float) $result['multiplier'],
 			);
 
 			$typeMatchups[] = $typeMatchup;
@@ -110,7 +110,7 @@ final class DatabaseTypeMatchupRepository implements TypeMatchupRepositoryInterf
 				$generationId,
 				new TypeId($result['attacking_type_id']),
 				$typeId,
-				(float) $result['multiplier']
+				(float) $result['multiplier'],
 			);
 
 			$typeMatchups[] = $typeMatchup;

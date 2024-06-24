@@ -21,6 +21,6 @@ interface FormatRepositoryInterface
 	 */
 	public function getByIdentifier(
 		string $identifier,
-		LanguageId $languageId
+		LanguageId $languageId,
 	) : Format;
 }

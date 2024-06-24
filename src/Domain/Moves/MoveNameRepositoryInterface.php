@@ -15,6 +15,6 @@ interface MoveNameRepositoryInterface
 	 */
 	public function getByLanguageAndMove(
 		LanguageId $languageId,
-		MoveId $moveId
+		MoveId $moveId,
 	) : MoveName;
 }

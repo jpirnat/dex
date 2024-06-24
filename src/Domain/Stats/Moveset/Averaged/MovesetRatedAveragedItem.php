@@ -16,7 +16,7 @@ use Jp\Dex\Domain\Stats\ValidateMonthTrait;
  * This class holds data derived from averaging an item's usage percent over a
  * span of multiple months.
  */
-final class MovesetRatedAveragedItem
+final readonly class MovesetRatedAveragedItem
 {
 	use ValidateMonthTrait;
 
@@ -40,11 +40,11 @@ final class MovesetRatedAveragedItem
 		$this->validateMonth($end);
 
 		if ($rating < 0) {
-			throw new InvalidRatingException('Invalid rating: ' . $rating);
+			throw new InvalidRatingException("Invalid rating: $rating.");
 		}
 
 		if ($percent < 0 || $percent > 100) {
-			throw new InvalidPercentException('Invalid percent: ' . $percent);
+			throw new InvalidPercentException("Invalid percent: $percent.");
 		}
 	}
 

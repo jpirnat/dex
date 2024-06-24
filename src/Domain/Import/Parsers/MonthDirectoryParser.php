@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
-final class MonthDirectoryParser
+final readonly class MonthDirectoryParser
 {
 	public function __construct(
 		private UsageFileParser $usageFileParser,
@@ -62,7 +62,7 @@ final class MonthDirectoryParser
 			// If the format is unknown, add it to the list of unknown formats.
 			$formatUnknown = !$this->showdownFormatRepository->isKnown(
 				$month,
-				$showdownFormatName
+				$showdownFormatName,
 			);
 			if ($formatUnknown) {
 				$this->showdownFormatRepository->addUnknown($month, $showdownFormatName);

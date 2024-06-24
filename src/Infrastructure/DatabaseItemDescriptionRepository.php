@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseItemDescriptionRepository implements ItemDescriptionRepositoryInterface
+final readonly class DatabaseItemDescriptionRepository implements ItemDescriptionRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,

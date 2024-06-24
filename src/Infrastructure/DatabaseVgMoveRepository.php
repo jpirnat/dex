@@ -17,7 +17,7 @@ use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final class DatabaseVgMoveRepository implements VgMoveRepositoryInterface
+final readonly class DatabaseVgMoveRepository implements VgMoveRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -139,7 +139,7 @@ final class DatabaseVgMoveRepository implements VgMoveRepositoryInterface
 			$result['z_base_power'],
 			$zPowerEffectId,
 			$maxMoveId,
-			$result['max_power']
+			$result['max_power'],
 		);
 	}
 

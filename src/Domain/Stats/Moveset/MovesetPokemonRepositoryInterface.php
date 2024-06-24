@@ -25,6 +25,6 @@ interface MovesetPokemonRepositoryInterface
 	public function getByMonthAndFormatAndPokemon(
 		DateTime $month,
 		FormatId $formatId,
-		PokemonId $pokemonId
+		PokemonId $pokemonId,
 	) : ?MovesetPokemon;
 }

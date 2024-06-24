@@ -12,7 +12,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
-final class MovesetFileParser
+final readonly class MovesetFileParser
 {
 	public function __construct(
 		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,

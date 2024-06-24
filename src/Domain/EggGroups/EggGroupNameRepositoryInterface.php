@@ -12,6 +12,6 @@ interface EggGroupNameRepositoryInterface
 	 */
 	public function getByLanguageAndEggGroup(
 		LanguageId $languageId,
-		EggGroupId $eggGroupId
+		EggGroupId $eggGroupId,
 	) : EggGroupName;
 }

@@ -9,7 +9,7 @@ use Exception;
  * An enum for classifying the various kinds of special moves.
  * Not to be confused with the in-game type of a move. ("Normal", "Fire", etc.)
  */
-class MoveType
+final readonly class MoveType
 {
 	public const REGULAR = '';
 	public const Z_MOVE = 'z';

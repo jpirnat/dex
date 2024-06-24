@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Moves;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-final class MoveDescription
+final readonly class MoveDescription
 {
 	public function __construct(
 		private VersionGroupId $versionGroupId,
