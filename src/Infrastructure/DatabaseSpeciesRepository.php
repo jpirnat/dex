@@ -7,7 +7,6 @@ use Jp\Dex\Domain\Species\Species;
 use Jp\Dex\Domain\Species\SpeciesId;
 use Jp\Dex\Domain\Species\SpeciesNotFoundException;
 use Jp\Dex\Domain\Species\SpeciesRepositoryInterface;
-use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final readonly class DatabaseSpeciesRepository implements SpeciesRepositoryInterface
@@ -26,7 +25,6 @@ final readonly class DatabaseSpeciesRepository implements SpeciesRepositoryInter
 		$stmt = $this->db->prepare(
 			'SELECT
 				`identifier`,
-				`introduced_in_version_group_id`,
 				`base_egg_cycles`
 			FROM `species`
 			WHERE `id` = :species_id
@@ -45,7 +43,6 @@ final readonly class DatabaseSpeciesRepository implements SpeciesRepositoryInter
 		$species = new Species(
 			$speciesId,
 			$result['identifier'],
-			new VersionGroupId($result['introduced_in_version_group_id']),
 			$result['base_egg_cycles'],
 		);
 
