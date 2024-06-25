@@ -122,7 +122,7 @@ Vue.component('dex-move-method-pokemons', {
 						</template>
 
 						<template v-else-if="method.identifier === 'machine'">
-							<td class="dex-table__pokemon-move-data"
+							<td class="dex-table__pokemon-move-data dex-table--icon"
 								v-tooltip="pokemonMoveTooltip(pokemon, move, vg, method)"
 							>
 								{{ pokemon.vgData[vg.identifier] }}
