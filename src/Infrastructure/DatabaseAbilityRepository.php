@@ -7,7 +7,6 @@ use Jp\Dex\Domain\Abilities\Ability;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Abilities\AbilityNotFoundException;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
-use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final readonly class DatabaseAbilityRepository implements AbilityRepositoryInterface
@@ -25,8 +24,7 @@ final readonly class DatabaseAbilityRepository implements AbilityRepositoryInter
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`identifier`,
-				`introduced_in_version_group_id`
+				`identifier`
 			FROM `abilities`
 			WHERE `id` = :ability_id
 			LIMIT 1'
@@ -44,7 +42,6 @@ final readonly class DatabaseAbilityRepository implements AbilityRepositoryInter
 		$ability = new Ability(
 			$abilityId,
 			$result['identifier'],
-			new VersionGroupId($result['introduced_in_version_group_id']),
 		);
 
 		return $ability;
@@ -59,8 +56,7 @@ final readonly class DatabaseAbilityRepository implements AbilityRepositoryInter
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`id`,
-				`introduced_in_version_group_id`
+				`id`
 			FROM `abilities`
 			WHERE `identifier` = :identifier
 			LIMIT 1'
@@ -78,7 +74,6 @@ final readonly class DatabaseAbilityRepository implements AbilityRepositoryInter
 		$ability = new Ability(
 			new AbilityId($result['id']),
 			$identifier,
-			new VersionGroupId($result['introduced_in_version_group_id']),
 		);
 
 		return $ability;
