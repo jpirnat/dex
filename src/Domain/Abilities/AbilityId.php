@@ -24,4 +24,7 @@ final class AbilityId extends EntityId
 	public const WATER_BUBBLE = 199;
 	public const FLUFFY = 218;
 	public const PRISM_ARMOR = 232;
+	public const PURIFYING_SALT = 272;
+	public const WELL_BAKED_BODY = 273;
+	public const EARTH_EATER = 297;
 }

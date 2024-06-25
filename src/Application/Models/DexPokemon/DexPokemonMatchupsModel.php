@@ -218,6 +218,24 @@ final class DexPokemonMatchupsModel
 			}
 			return;
 		}
+
+		if ($abilityId === AbilityId::PURIFYING_SALT) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['ghost'] *= .5;
+			return;
+		}
+
+		if ($abilityId === AbilityId::WELL_BAKED_BODY) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['fire'] *= 0;
+			return;
+		}
+
+		if ($abilityId === AbilityId::EARTH_EATER) {
+			$this->addToDamageTaken($ability);
+			$this->damageTaken[$identifier]['ground'] *= 0;
+			return;
+		}
 	}
 
 
