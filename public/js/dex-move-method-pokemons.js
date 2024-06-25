@@ -245,6 +245,9 @@ Vue.component('dex-move-method-pokemons', {
 			if (method.identifier === 'form-change') {
 				return `${pokemon.name} learns ${move.name} in ${vg.name} when it changes to this form.`;
 			}
+			if (method.identifier === 'reminder') {
+				return `${pokemon.name} learns ${move.name} in ${vg.name} via ${method.name}`;
+			}
 			if (method.identifier === 'shadow') {
 				return `${pokemon.name} learns ${move.name} in ${vg.name} as a ${method.name} move.`;
 			}
