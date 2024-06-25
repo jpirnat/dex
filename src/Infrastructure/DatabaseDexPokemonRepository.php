@@ -70,14 +70,14 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 				`pn`.`name`,
 				`p`.`sort`
 			FROM `pokemon` AS `p`
-			INNER JOIN `form_icons` AS `fi`
-				ON `p`.`id` = `fi`.`form_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `p`.`id` = `pn`.`pokemon_id`
-			WHERE `p`.`id` = :pokemon_id
+			LEFT JOIN `form_icons` AS `fi`
+				ON `p`.`id` = `fi`.`form_id`
 				AND `fi`.`version_group_id` = :version_group_id
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+			WHERE `p`.`id` = :pokemon_id
 				AND `pn`.`language_id` = :language_id
 			LIMIT 1'
 		);
@@ -94,7 +94,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 		}
 
 		$dexPokemon = new DexPokemon(
-			$result['icon'],
+			$result['icon'] ?? '',
 			$result['identifier'],
 			$result['name'],
 			$types ?? [],
@@ -141,14 +141,14 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 				`pn`.`name`,
 				`p`.`sort`
 			FROM `pokemon` AS `p`
-			INNER JOIN `form_icons` AS `fi`
-				ON `p`.`id` = `fi`.`form_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `p`.`id` = `pn`.`pokemon_id`
-			WHERE `fi`.`version_group_id` = :version_group_id1
+			LEFT JOIN `form_icons` AS `fi`
+				ON `p`.`id` = `fi`.`form_id`
+				AND `fi`.`version_group_id` = :version_group_id1
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
-				AND `pn`.`language_id` = :language_id
+			WHERE `pn`.`language_id` = :language_id
 				AND `p`.`id` IN (
 					SELECT
 						`pokemon_id`
@@ -170,7 +170,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 			$pokemonBaseStats = $baseStats[$result['id']] ?? [];
 
 			$dexPokemon = new DexPokemon(
-				$result['icon'],
+				$result['icon'] ?? '',
 				$result['identifier'],
 				$result['name'],
 				$types[$result['id']] ?? [],
@@ -220,21 +220,21 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 				`pn`.`name`,
 				`p`.`sort`
 			FROM `pokemon` AS `p`
-			INNER JOIN `form_icons` AS `fi`
-				ON `p`.`id` = `fi`.`form_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `p`.`id` = `pn`.`pokemon_id`
-			WHERE `fi`.`version_group_id` = :version_group_id1
-				AND `p`.`id` IN (
-					SELECT DISTINCT
-						`f`.`pokemon_id`
-					FROM `version_group_forms` AS `vgf`
-					INNER JOIN `forms` AS `f`
-						ON `vgf`.`form_id` = `f`.`id`
-					WHERE `vgf`.`version_group_id` = :version_group_id2
-				)
+			LEFT JOIN `form_icons` AS `fi`
+				ON `p`.`id` = `fi`.`form_id`
+				AND `fi`.`version_group_id` = :version_group_id1
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+			WHERE `p`.`id` IN (
+				SELECT DISTINCT
+					`f`.`pokemon_id`
+				FROM `version_group_forms` AS `vgf`
+				INNER JOIN `forms` AS `f`
+					ON `vgf`.`form_id` = `f`.`id`
+				WHERE `vgf`.`version_group_id` = :version_group_id2
+			)
 				AND `pn`.`language_id` = :language_id
 				AND `p`.`id` IN (
 					SELECT
@@ -257,7 +257,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 			$pokemonBaseStats = $baseStats[$result['id']] ?? [];
 
 			$dexPokemon = new DexPokemon(
-				$result['icon'],
+				$result['icon'] ?? '',
 				$result['identifier'],
 				$result['name'],
 				$types[$result['id']] ?? [],
@@ -303,21 +303,21 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 				`pn`.`name`,
 				`p`.`sort`
 			FROM `pokemon` AS `p`
-			INNER JOIN `form_icons` AS `fi`
-				ON `p`.`id` = `fi`.`form_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `p`.`id` = `pn`.`pokemon_id`
-			WHERE `fi`.`version_group_id` = :version_group_id1
-				AND `p`.`id` IN (
-					SELECT DISTINCT
-						`f`.`pokemon_id`
-					FROM `version_group_forms` AS `vgf`
-					INNER JOIN `forms` AS `f`
-						ON `vgf`.`form_id` = `f`.`id`
-					WHERE `vgf`.`version_group_id` = :version_group_id2
-				)
+			LEFT JOIN `form_icons` AS `fi`
+				ON `p`.`id` = `fi`.`form_id`
+				AND `fi`.`version_group_id` = :version_group_id1
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+			WHERE `p`.`id` IN (
+				SELECT DISTINCT
+					`f`.`pokemon_id`
+				FROM `version_group_forms` AS `vgf`
+				INNER JOIN `forms` AS `f`
+					ON `vgf`.`form_id` = `f`.`id`
+				WHERE `vgf`.`version_group_id` = :version_group_id2
+			)
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `p`.`sort`'
 		);
@@ -332,7 +332,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 			$pokemonBaseStats = $baseStats[$result['id']] ?? [];
 
 			$dexPokemon = new DexPokemon(
-				$result['icon'],
+				$result['icon'] ?? '',
 				$result['identifier'],
 				$result['name'],
 				$types[$result['id']] ?? [],
@@ -382,21 +382,21 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 				`pn`.`name`,
 				`p`.`sort`
 			FROM `pokemon` AS `p`
-			INNER JOIN `form_icons` AS `fi`
-				ON `p`.`id` = `fi`.`form_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `p`.`id` = `pn`.`pokemon_id`
-			WHERE `fi`.`version_group_id` = :version_group_id1
-				AND `p`.`id` IN (
-					SELECT DISTINCT
-						`f`.`pokemon_id`
-					FROM `version_group_forms` AS `vgf`
-					INNER JOIN `forms` AS `f`
-						ON `vgf`.`form_id` = `f`.`id`
-					WHERE `vgf`.`version_group_id` = :version_group_id2
-				)
+			LEFT JOIN `form_icons` AS `fi`
+				ON `p`.`id` = `fi`.`form_id`
+				AND `fi`.`version_group_id` = :version_group_id1
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+			WHERE `p`.`id` IN (
+				SELECT DISTINCT
+					`f`.`pokemon_id`
+				FROM `version_group_forms` AS `vgf`
+				INNER JOIN `forms` AS `f`
+					ON `vgf`.`form_id` = `f`.`id`
+				WHERE `vgf`.`version_group_id` = :version_group_id2
+			)
 				AND `pn`.`language_id` = :language_id
 				AND `p`.`id` IN (
 					SELECT
@@ -420,7 +420,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 			$pokemonBaseStats = $baseStats[$result['id']] ?? [];
 
 			$dexPokemon = new DexPokemon(
-				$result['icon'],
+				$result['icon'] ?? '',
 				$result['identifier'],
 				$result['name'],
 				$types[$result['id']] ?? [],

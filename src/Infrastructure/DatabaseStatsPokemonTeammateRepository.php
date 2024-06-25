@@ -40,19 +40,19 @@ final readonly class DatabaseStatsPokemonTeammateRepository implements StatsPoke
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `moveset_rated_teammates` AS `mrt`
 				ON `urp`.`id` = `mrt`.`usage_rated_pokemon_id`
-			INNER JOIN `form_icons` AS `fi`
-				ON `mrt`.`teammate_id` = `fi`.`form_id`
 			INNER JOIN `pokemon` AS `p`
 				ON `mrt`.`teammate_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `mrt`.`teammate_id` = `pn`.`pokemon_id`
+			LEFT JOIN `form_icons` AS `fi`
+				ON `mrt`.`teammate_id` = `fi`.`form_id`
+				AND `fi`.`version_group_id` = :version_group_id
+				AND `fi`.`is_female` = 0
+				AND `fi`.`is_right` = 0
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
 				AND `urp`.`pokemon_id` = :pokemon_id
-				AND `fi`.`version_group_id` = :version_group_id
-				AND `fi`.`is_female` = 0
-				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `mrt`.`percent` DESC'
 		);
@@ -68,7 +68,7 @@ final readonly class DatabaseStatsPokemonTeammateRepository implements StatsPoke
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$teammate = new StatsPokemonTeammate(
-				$result['icon'],
+				$result['icon'] ?? '',
 				$result['identifier'],
 				$result['name'],
 				(float) $result['percent'],

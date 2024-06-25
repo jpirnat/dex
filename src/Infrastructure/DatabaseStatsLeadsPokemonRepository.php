@@ -47,12 +47,15 @@ final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPo
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `leads_rated_pokemon` AS `lrp`
 				ON `urp`.`id` = `lrp`.`usage_rated_pokemon_id`
-			INNER JOIN `form_icons` AS `fi`
-				ON `urp`.`pokemon_id` = `fi`.`form_id`
 			INNER JOIN `pokemon` AS `p`
 				ON `urp`.`pokemon_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
+			LEFT JOIN `form_icons` AS `fi`
+				ON `urp`.`pokemon_id` = `fi`.`form_id`
+				AND `fi`.`version_group_id` = :version_group_id
+				AND `fi`.`is_female` = 0
+				AND `fi`.`is_right` = 0
 			LEFT JOIN `usage_rated_pokemon` AS `urpp`
 				ON `urpp`.`month` = :prev_month
 				AND `urp`.`format_id` = `urpp`.`format_id`
@@ -67,9 +70,6 @@ final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPo
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
-				AND `fi`.`version_group_id` = :version_group_id
-				AND `fi`.`is_female` = 0
-				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `lrp`.`rank`'
 		);
@@ -86,7 +86,7 @@ final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPo
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$pokemon = new StatsLeadsPokemon(
 				$result['rank'],
-				$result['icon'],
+				$result['icon'] ?? '',
 				$result['identifier'],
 				$result['name'],
 				(float) $result['usage_percent'],

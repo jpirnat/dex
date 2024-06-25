@@ -48,12 +48,15 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 				`up`.`real`,
 				`up`.`real_percent`
 			FROM `usage_rated_pokemon` AS `urp`
-			INNER JOIN `form_icons` AS `fi`
-				ON `urp`.`pokemon_id` = `fi`.`form_id`
 			INNER JOIN `pokemon` AS `p`
 				ON `urp`.`pokemon_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
+			LEFT JOIN `form_icons` AS `fi`
+				ON `urp`.`pokemon_id` = `fi`.`form_id`
+				AND `fi`.`version_group_id` = :version_group_id
+				AND `fi`.`is_female` = 0
+				AND `fi`.`is_right` = 0
 			LEFT JOIN `usage_rated_pokemon` AS `urpp`
 				ON `urpp`.`month` = :prev_month
 				AND `urp`.`format_id` = `urpp`.`format_id`
@@ -66,9 +69,6 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
-				AND `fi`.`version_group_id` = :version_group_id
-				AND `fi`.`is_female` = 0
-				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `urp`.`rank`'
 		);
@@ -85,7 +85,7 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$pokemon = new StatsUsagePokemon(
 				$result['rank'],
-				$result['icon'],
+				$result['icon'] ?? '',
 				$result['identifier'],
 				$result['name'],
 				(float) $result['usage_percent'],
@@ -121,19 +121,19 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 				`pn`.`name`,
 				`urp`.`usage_percent`
 			FROM `usage_rated_pokemon` AS `urp`
-			INNER JOIN `form_icons` AS `fi`
-				ON `urp`.`pokemon_id` = `fi`.`form_id`
 			INNER JOIN `pokemon` AS `p`
 				ON `urp`.`pokemon_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
+			LEFT JOIN `form_icons` AS `fi`
+				ON `urp`.`pokemon_id` = `fi`.`form_id`
+				AND `fi`.`version_group_id` = :version_group_id
+				AND `fi`.`is_female` = 0
+				AND `fi`.`is_right` = 0
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
 				AND `urp`.`pokemon_id` = :pokemon_id
-				AND `fi`.`version_group_id` = :version_group_id
-				AND `fi`.`is_female` = 0
-				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
@@ -151,7 +151,7 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 
 		return [
 			'rank' => $result['rank'],
-			'icon' => $result['icon'],
+			'icon' => $result['icon'] ?? '',
 			'identifier' => $result['identifier'],
 			'name' => $result['name'],
 			'usagePercent' => (float) $result['usage_percent'],
@@ -177,19 +177,19 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 				`pn`.`name`,
 				`urp`.`usage_percent`
 			FROM `usage_rated_pokemon` AS `urp`
-			INNER JOIN `form_icons` AS `fi`
-				ON `urp`.`pokemon_id` = `fi`.`form_id`
 			INNER JOIN `pokemon` AS `p`
 				ON `urp`.`pokemon_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
+			LEFT JOIN `form_icons` AS `fi`
+				ON `urp`.`pokemon_id` = `fi`.`form_id`
+				AND `fi`.`version_group_id` = :version_group_id
+				AND `fi`.`is_female` = 0
+				AND `fi`.`is_right` = 0
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
 				AND `urp`.`rank` = :rank
-				AND `fi`.`version_group_id` = :version_group_id
-				AND `fi`.`is_female` = 0
-				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
@@ -207,7 +207,7 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 
 		return [
 			'rank' => $result['rank'],
-			'icon' => $result['icon'],
+			'icon' => $result['icon'] ?? '',
 			'identifier' => $result['identifier'],
 			'name' => $result['name'],
 			'usagePercent' => (float) $result['usage_percent'],

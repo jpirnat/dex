@@ -44,19 +44,19 @@ final readonly class DatabaseStatsPokemonCounterRepository implements StatsPokem
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `moveset_rated_counters` AS `mrc`
 				ON `urp`.`id` = `mrc`.`usage_rated_pokemon_id`
-			INNER JOIN `form_icons` AS `fi`
-				ON `mrc`.`counter_id` = `fi`.`form_id`
 			INNER JOIN `pokemon` AS `p`
 				ON `mrc`.`counter_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `mrc`.`counter_id` = `pn`.`pokemon_id`
+			LEFT JOIN `form_icons` AS `fi`
+				ON `mrc`.`counter_id` = `fi`.`form_id`
+				AND `fi`.`version_group_id` = :version_group_id
+				AND `fi`.`is_female` = 0
+				AND `fi`.`is_right` = 0
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
 				AND `urp`.`pokemon_id` = :pokemon_id
-				AND `fi`.`version_group_id` = :version_group_id
-				AND `fi`.`is_female` = 0
-				AND `fi`.`is_right` = 0
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `mrc`.`number1` DESC'
 		);
@@ -72,7 +72,7 @@ final readonly class DatabaseStatsPokemonCounterRepository implements StatsPokem
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$counter = new StatsPokemonCounter(
-				$result['icon'],
+				$result['icon'] ?? '',
 				$result['identifier'],
 				$result['name'],
 				(float) $result['score'],

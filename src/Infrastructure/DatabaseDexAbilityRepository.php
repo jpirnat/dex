@@ -35,14 +35,14 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 			FROM `pokemon_abilities` AS `pa`
 			INNER JOIN `pokemon` AS `p`
 				ON `pa`.`pokemon_id` = `p`.`id`
-			INNER JOIN `form_icons` AS `fi`
-				ON `pa`.`version_group_id` = `fi`.`version_group_id`
-				AND `pa`.`pokemon_id` = `fi`.`form_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `pa`.`pokemon_id` = `pn`.`pokemon_id`
-			WHERE `pa`.`version_group_id` = :version_group_id
+			LEFT JOIN `form_icons` AS `fi`
+				ON `pa`.`version_group_id` = `fi`.`version_group_id`
+				AND `pa`.`pokemon_id` = `fi`.`form_id`
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+			WHERE `pa`.`version_group_id` = :version_group_id
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `p`.`sort`'
 		);
