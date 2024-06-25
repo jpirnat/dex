@@ -8,7 +8,6 @@ use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveNotFoundException;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveType;
-use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final readonly class DatabaseMoveRepository implements MoveRepositoryInterface
@@ -27,7 +26,6 @@ final readonly class DatabaseMoveRepository implements MoveRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`identifier`,
-				`introduced_in_version_group_id`,
 				`move_type`
 			FROM `moves`
 			WHERE `id` = :move_id
@@ -46,7 +44,6 @@ final readonly class DatabaseMoveRepository implements MoveRepositoryInterface
 		$move = new Move(
 			$moveId,
 			$result['identifier'],
-			new VersionGroupId($result['introduced_in_version_group_id']),
 			new MoveType($result['move_type']),
 		);
 
@@ -63,7 +60,6 @@ final readonly class DatabaseMoveRepository implements MoveRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`id`,
-				`introduced_in_version_group_id`,
 				`move_type`
 			FROM `moves`
 			WHERE `identifier` = :identifier
@@ -82,7 +78,6 @@ final readonly class DatabaseMoveRepository implements MoveRepositoryInterface
 		$move = new Move(
 			new MoveId($result['id']),
 			$identifier,
-			new VersionGroupId($result['introduced_in_version_group_id']),
 			new MoveType($result['move_type']),
 		);
 
