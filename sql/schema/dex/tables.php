@@ -48,6 +48,14 @@ return [
 	'vg_abilities',
 	'pokemon_abilities',
 
+	// Ability flags
+	'ability_flags',
+	'ability_flag_descriptions',
+	'vg_ability_flags',
+	'vg_abilities_flags' => [
+		'vg_abilities_flags_09',
+	],
+
 	// Items
 	'item_fling_effects',
 	'items',

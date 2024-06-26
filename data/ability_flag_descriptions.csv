@@ -1,0 +1,10 @@
+language_id,flag_id,name,description
+2,1,Disabled by Neutralizing Gas,This ability is disabled by Neutralizing Gas.
+2,2,Fail Role Play,"This ability can't be gained by another Pokémon using Role Play, or them or their ally using Doodle."
+2,3,No Receiver,This ability can't be gained by another Pokémon via Receiver or Power of Alchemy.
+2,4,No Entrain,This ability can't be passed to another Pokémon using Entrainment.
+2,5,No Trace,This ability can't be gained by another Pokémon via Trace.
+2,6,Fail Skill Swap,This ability can't be traded with another ability via Skill Swap or Wandering Spirit.
+2,7,Can't Suppress,"This ability can't be suppressed by Gastro Acid or Core Enforcer, or replaced by Doodle."
+2,8,Breakable,This ability can be disabled by Mold Breaker.
+2,9,No Transform,This ability doesn't function on a Transformed Pokémon.
