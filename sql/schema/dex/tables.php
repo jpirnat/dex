@@ -140,15 +140,15 @@ return [
 	'flags',
 	'flag_descriptions',
 	'vg_flags',
-	'move_flags' => [
-		'move_flags_02',
-		'move_flags_03',
-		'move_flags_04',
-		'move_flags_05',
-		'move_flags_06',
-		'move_flags_07',
-		'move_flags_08',
-		'move_flags_09',
+	'vg_moves_flags' => [
+		'vg_moves_flags_02',
+		'vg_moves_flags_03',
+		'vg_moves_flags_04',
+		'vg_moves_flags_05',
+		'vg_moves_flags_06',
+		'vg_moves_flags_07',
+		'vg_moves_flags_08',
+		'vg_moves_flags_09',
 	],
 
 	// Stats

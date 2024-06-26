@@ -74,7 +74,7 @@ final readonly class DatabaseFlagRepository implements FlagRepositoryInterface
 		$stmt = $this->db->prepare(
 			'SELECT
 				`flag_id`
-			FROM `move_flags`
+			FROM `vg_moves_flags`
 			WHERE `version_group_id` = :version_group_id
 				AND `move_id` = :move_id'
 		);
