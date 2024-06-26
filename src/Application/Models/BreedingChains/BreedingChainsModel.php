@@ -188,7 +188,7 @@ final class BreedingChainsModel
 
 
 	/**
-	 * Get the generation model.
+	 * Get the version group model.
 	 */
 	public function getVersionGroupModel() : VersionGroupModel
 	{
