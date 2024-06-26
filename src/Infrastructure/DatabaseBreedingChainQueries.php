@@ -22,12 +22,20 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 	{
 		$stmt = $this->db->query(
 			'SELECT
-				`p`.`id`
-			FROM `pokemon` AS `p`
-			INNER JOIN `version_groups` AS `vg`
-				ON `p`.`introduced_in_version_group_id` = `vg`.`id`
-			WHERE `p`.`gender_ratio` = 100
-				AND `vg`.`generation_id` < 6'
+				`id`
+			FROM `pokemon`
+			WHERE `gender_ratio` = 8
+			AND `id` IN (
+				SELECT
+					`form_id`
+				FROM `version_group_forms`
+				WHERE `version_group_id` IN (
+					SELECT
+						`id`
+					FROM `version_groups`
+					WHERE `generation_id` < 6
+				)
+			)'
 		);
 		return $stmt->fetchAll(PDO::FETCH_COLUMN);
 	}
