@@ -88,20 +88,7 @@ final class DexMoveModel
 			$languageId,
 		);
 
-		// Set the move's flags.
-		$this->flags = [];
-		$allFlags = $this->flagRepository->getByVersionGroup($versionGroupId, $languageId);
-		$moveFlagIds = $this->flagRepository->getByMove($versionGroupId, $moveId);
-		foreach ($allFlags as $flagId => $flag) {
-			$has = isset($moveFlagIds[$flagId]); // Does the move have this flag?
-
-			$this->flags[] = [
-				'identifier' => $flag->getIdentifier(),
-				'name' => $flag->getName(),
-				'description' => $flag->getDescription(),
-				'has' => $has,
-			];
-		}
+		$this->setFlags($versionGroupId, $moveId, $languageId);
 
 		// Get the version groups this move has appeared in.
 		$this->versionGroups = $this->dexVgRepository->getWithMove(
@@ -240,6 +227,28 @@ final class DexMoveModel
 		if ($moveId->value() === MoveId::THOUSAND_ARROWS) {
 			// TODO: get this type identifier from somewhere else.
 			$this->damageDealt['flying'] = 1;
+		}
+	}
+
+	private function setFlags(
+		VersionGroupId $versionGroupId,
+		MoveId $moveId,
+		LanguageId $languageId,
+	) : void {
+		$this->flags = [];
+
+		$allFlags = $this->flagRepository->getByVersionGroup($versionGroupId, $languageId);
+		$moveFlagIds = $this->flagRepository->getByMove($versionGroupId, $moveId);
+
+		foreach ($allFlags as $flagId => $flag) {
+			$has = isset($moveFlagIds[$flagId]); // Does the move have this flag?
+
+			$this->flags[] = [
+				'identifier' => $flag->getIdentifier(),
+				'name' => $flag->getName(),
+				'description' => $flag->getDescription(),
+				'has' => $has,
+			];
 		}
 	}
 

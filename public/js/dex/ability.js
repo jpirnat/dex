@@ -10,6 +10,7 @@ const app = new Vue({
 		breadcrumbs: [],
 		versionGroups: [],
 		ability: {},
+		flags: [],
 		pokemons: [],
 		showAbilities: true,
 		stats: [],
@@ -31,6 +32,7 @@ const app = new Vue({
 				this.breadcrumbs = data.breadcrumbs;
 				this.versionGroups = data.versionGroups;
 				this.ability = data.ability;
+				this.flags = data.flags;
 				this.pokemons = data.pokemons;
 				this.showAbilities = data.showAbilities;
 				this.stats = data.stats;

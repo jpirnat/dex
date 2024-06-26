@@ -4,15 +4,19 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
+use Jp\Dex\Domain\Abilities\AbilityFlagRepositoryInterface;
+use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class DexAbilityModel
 {
-	private array $ability;
+	private array $ability = [];
+	private array $flags = [];
 	private array $stats = [];
 
 	/** @var DexPokemon[] $normalPokemon */
@@ -27,6 +31,7 @@ final class DexAbilityModel
 		private AbilityRepositoryInterface $abilityRepository,
 		private AbilityNameRepositoryInterface $abilityNameRepository,
 		private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
+		private AbilityFlagRepositoryInterface $flagRepository,
 		private StatNameModel $statNameModel,
 		private DexPokemonRepositoryInterface $dexPokemonRepository,
 	) {}
@@ -64,6 +69,8 @@ final class DexAbilityModel
 			'description' => $abilityDescription->getDescription(),
 		];
 
+		$this->setFlags($versionGroupId, $abilityId, $languageId);
+
 		// Get stat name abbreviations.
 		$this->stats = $this->statNameModel->getByVersionGroup($versionGroupId, $languageId);
 
@@ -85,6 +92,28 @@ final class DexAbilityModel
 		}
 	}
 
+	private function setFlags(
+		VersionGroupId $versionGroupId,
+		AbilityId $abilityId,
+		LanguageId $languageId,
+	) : void {
+		$this->flags = [];
+
+		$allFlags = $this->flagRepository->getByVersionGroup($versionGroupId, $languageId);
+		$abilityFlagIds = $this->flagRepository->getByAbility($versionGroupId, $abilityId);
+
+		foreach ($allFlags as $flagId => $flag) {
+			$has = isset($abilityFlagIds[$flagId]); // Does the ability have this flag?
+
+			$this->flags[] = [
+				'identifier' => $flag->getIdentifier(),
+				'name' => $flag->getName(),
+				'description' => $flag->getDescription(),
+				'has' => $has,
+			];
+		}
+	}
+
 
 	/**
 	 * Get the version group model.
@@ -100,6 +129,14 @@ final class DexAbilityModel
 	public function getAbility() : array
 	{
 		return $this->ability;
+	}
+
+	/**
+	 * Get the flags.
+	 */
+	public function getFlags() : array
+	{
+		return $this->flags;
 	}
 
 	/**

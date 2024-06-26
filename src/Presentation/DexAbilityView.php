@@ -24,7 +24,7 @@ final readonly class DexAbilityView
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$ability = $this->dexAbilityModel->getAbility();
-
+		$flags = $this->dexAbilityModel->getFlags();
 		$stats = $this->dexAbilityModel->getStats();
 		$normalPokemon = $this->dexAbilityModel->getNormalPokemon();
 		$hiddenPokemon = $this->dexAbilityModel->getHiddenPokemon();
@@ -56,6 +56,7 @@ final readonly class DexAbilityView
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'ability' => $ability,
+				'flags' => $flags,
 				'pokemons' => array_merge($normalPokemon, $hiddenPokemon),
 				'stats' => $stats,
 			]

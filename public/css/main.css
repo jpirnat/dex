@@ -409,15 +409,18 @@ a.button {
 }
 
 @media (min-width: 600px) {
+	.dex-ability__flags,
 	.dex-move__flags {
 		column-count: 2;
 	}
 }
 
+.dex-ability__flag--disabled,
 .dex-move__flag--disabled {
 	text-decoration: line-through;
 	color: #bbb;
 }
+.dex-ability__flag-description,
 .dex-move__flag-description {
 	font-size: .8em;
 	font-style: italic;

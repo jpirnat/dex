@@ -135,6 +135,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseAbilityDescriptionRepository::class
 );
 $services->alias(
+	\Jp\Dex\Domain\Abilities\AbilityFlagRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseAbilityFlagRepository::class
+);
+$services->alias(
 	\Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseAbilityNameRepository::class
 );

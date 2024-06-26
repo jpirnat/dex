@@ -29,6 +29,21 @@
 	<template v-if="loaded">
 		<p>{{ ability.name }}: {{ ability.description }}</p>
 
+		<template v-if="flags.length > 0">
+			<h2 class="dex-section__title">Technical Data</h2>
+			<ul class="dex-ability__flags">
+				<li v-for="flag in flags" :key="flag.identifier"
+					:class="{
+						'dex-ability__flag--disabled': !flag.has
+					}"
+				>
+					{{ flag.name }}
+					<div v-if="flag.has" class="dex-ability__flag-description">{{ flag.description }}</div>
+				</li>
+			</ul>
+		</template>
+
+		<h2 class="dex-section__title">Pokémon</h2>
 		<dex-pokemons-table
 			:pokemons="pokemons"
 			:version-group="versionGroup"
