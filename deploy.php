@@ -17,7 +17,7 @@ host('159.89.92.65')
 	->set('remote_user', 'jpirnat')
 	->set('labels', ['stage' => 'production'])
 	->set('deploy_path', '/var/www/dex')
-	->set('branch', 'master')
+	->set('branch', 'main')
 ;
 /*
 Add the following to your computer's ~/.ssh/config file:
@@ -40,12 +40,12 @@ task('deploy', [
 ]);
 
 task('reload:php-fpm', function () {
-    run('sudo /etc/init.d/php8.0-fpm restart');
+    run('sudo /etc/init.d/php8.2-fpm restart');
 });
 // NOTE TO SELF: Whenever I upgrade PHP and thus need to update the php-fpm
 // restart command here, I also need to update `sudo visudo` on the server so
 // the updated command can be run without a password:
-// jpirnat ALL=NOPASSWD: /etc/init.d/php8.0-fpm restart
+// jpirnat ALL=NOPASSWD: /etc/init.d/php8.2-fpm restart
 
 // Hooks
 

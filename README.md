@@ -6,7 +6,7 @@ to make it easy to browse and analyze metagame trends over time.
 ## Getting Started
 
 Porydex requires the following to run:
-* PHP 8.0+
+* PHP 8.2+
     * extension `intl`
 * MySQL 5.6+
 
