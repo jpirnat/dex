@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Pokemon;
 
 use Jp\Dex\Domain\Species\SpeciesId;
-use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final readonly class Pokemon
 {
@@ -14,7 +13,6 @@ final readonly class Pokemon
 		private ?string $pokemonIdentifier,
 		private SpeciesId $speciesId,
 		private bool $isDefaultPokemon,
-		private VersionGroupId $introducedInVersionGroupId,
 		private ExperienceGroupId $experienceGroupId,
 		private int $genderRatio,
 		private string $smogonDexIdentifier,
@@ -59,14 +57,6 @@ final readonly class Pokemon
 	public function isDefaultPokemon() : bool
 	{
 		return $this->isDefaultPokemon;
-	}
-
-	/**
-	 * Get the version group id this Pokémon was introduced in.
-	 */
-	public function getIntroducedInVersionGroupId() : VersionGroupId
-	{
-		return $this->introducedInVersionGroupId;
 	}
 
 	/**

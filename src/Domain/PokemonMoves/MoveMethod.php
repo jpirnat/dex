@@ -3,14 +3,11 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\PokemonMoves;
 
-use Jp\Dex\Domain\Versions\GenerationId;
-
 final readonly class MoveMethod
 {
 	public function __construct(
 		private MoveMethodId $id,
 		private string $identifier,
-		private GenerationId $introducedInGenerationId,
 		private int $sort,
 	) {}
 
@@ -28,14 +25,6 @@ final readonly class MoveMethod
 	public function getIdentifier() : string
 	{
 		return $this->identifier;
-	}
-
-	/**
-	 * Get the generation id this move method was introduced in.
-	 */
-	public function getIntroducedInGenerationId() : GenerationId
-	{
-		return $this->introducedInGenerationId;
 	}
 
 	/**

@@ -7,7 +7,6 @@ use Jp\Dex\Domain\Items\Item;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Items\ItemNotFoundException;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
-use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final readonly class DatabaseItemRepository implements ItemRepositoryInterface
@@ -25,8 +24,7 @@ final readonly class DatabaseItemRepository implements ItemRepositoryInterface
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`identifier`,
-				`introduced_in_version_group_id`
+				`identifier`
 			FROM `items`
 			WHERE `id` = :item_id
 			LIMIT 1'
@@ -44,7 +42,6 @@ final readonly class DatabaseItemRepository implements ItemRepositoryInterface
 		$item = new Item(
 			$itemId,
 			$result['identifier'],
-			new VersionGroupId($result['introduced_in_version_group_id']),
 		);
 
 		return $item;
@@ -59,8 +56,7 @@ final readonly class DatabaseItemRepository implements ItemRepositoryInterface
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`id`,
-				`introduced_in_version_group_id`
+				`id`
 			FROM `items`
 			WHERE `identifier` = :identifier
 			LIMIT 1'
@@ -78,7 +74,6 @@ final readonly class DatabaseItemRepository implements ItemRepositoryInterface
 		$item = new Item(
 			new ItemId($result['id']),
 			$identifier,
-			new VersionGroupId($result['introduced_in_version_group_id']),
 		);
 
 		return $item;

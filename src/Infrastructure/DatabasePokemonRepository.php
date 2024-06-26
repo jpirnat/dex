@@ -9,7 +9,6 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Species\SpeciesId;
-use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final readonly class DatabasePokemonRepository implements PokemonRepositoryInterface
@@ -31,7 +30,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
 				`pokemon_identifier`,
 				`species_id`,
 				`is_default_pokemon`,
-				`introduced_in_version_group_id`,
 				`experience_group_id`,
 				`gender_ratio`,
 				`smogon_dex_identifier`,
@@ -56,7 +54,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
 			$result['pokemon_identifier'],
 			new SpeciesId($result['species_id']),
 			(bool) $result['is_default_pokemon'],
-			new VersionGroupId($result['introduced_in_version_group_id']),
 			new ExperienceGroupId($result['experience_group_id']),
 			$result['gender_ratio'],
 			$result['smogon_dex_identifier'],
@@ -79,7 +76,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
 				`pokemon_identifier`,
 				`species_id`,
 				`is_default_pokemon`,
-				`introduced_in_version_group_id`,
 				`experience_group_id`,
 				`gender_ratio`,
 				`smogon_dex_identifier`,
@@ -104,7 +100,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
 			$result['pokemon_identifier'],
 			new SpeciesId($result['species_id']),
 			(bool) $result['is_default_pokemon'],
-			new VersionGroupId($result['introduced_in_version_group_id']),
 			new ExperienceGroupId($result['experience_group_id']),
 			$result['gender_ratio'],
 			$result['smogon_dex_identifier'],
@@ -128,7 +123,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
 				`pokemon_identifier`,
 				`species_id`,
 				`is_default_pokemon`,
-				`introduced_in_version_group_id`,
 				`experience_group_id`,
 				`gender_ratio`,
 				`smogon_dex_identifier`,
@@ -147,7 +141,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
 				$result['pokemon_identifier'],
 				new SpeciesId($result['species_id']),
 				(bool) $result['is_default_pokemon'],
-				new VersionGroupId($result['introduced_in_version_group_id']),
 				new ExperienceGroupId($result['experience_group_id']),
 				$result['gender_ratio'],
 				$result['smogon_dex_identifier'],
