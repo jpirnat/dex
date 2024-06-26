@@ -15,12 +15,12 @@ const app = new Vue({
 		abilitiesDamageTaken: {},
 		damageTakenAbilities: [],
 		methods: [],
-		dexVersionGroups: [],
+		learnsetVgs: [],
 		showMoveDescriptionsOption: true,
 
 		hoverDamageTaken: null,
 		damageTakenAbility: 'none',
-		showOlderGames: false,
+		showOtherGens: false,
 		showMoveDescriptions: true,
 	},
 	computed: {
@@ -28,14 +28,14 @@ const app = new Vue({
 			return this.abilitiesDamageTaken[this.damageTakenAbility];
 		},
 		visibleVersionGroups() {
-			if (this.showOlderGames) {
-				return this.dexVersionGroups;
+			if (this.showOtherGens) {
+				return this.learnsetVgs;
 			}
 
-			return this.dexVersionGroups.filter(vg => vg.generationId === this.versionGroup.generationId);
+			return this.learnsetVgs.filter(vg => vg.generationId === this.versionGroup.generationId);
 		},
 		visibleMethods() {
-			if (this.showOlderGames) {
+			if (this.showOtherGens) {
 				return this.methods;
 			}
 
@@ -66,7 +66,7 @@ const app = new Vue({
 				this.abilitiesDamageTaken = data.damageTaken;
 				this.damageTakenAbilities = data.damageTakenAbilities;
 				this.methods = data.methods;
-				this.dexVersionGroups = data.dexVersionGroups;
+				this.learnsetVgs = data.learnsetVgs;
 				this.showMoveDescriptionsOption = data.showMoveDescriptions;
 
 				document.title = data.title;
@@ -77,8 +77,8 @@ const app = new Vue({
 					this.damageTakenAbility = this.damageTakenAbilities[0].identifier;
 				}
 
-				const showOlderGames = window.localStorage.getItem('dexMoveShowOlderGames') ?? 'false';
-				this.showOlderGames = JSON.parse(showOlderGames);
+				const showOtherGens = window.localStorage.getItem('dexMoveShowOtherGens') ?? 'false';
+				this.showOtherGens = JSON.parse(showOtherGens);
 
 				const showMoveDescriptions = window.localStorage.getItem('dexPokemonShowMoveDescriptions') ?? 'true';
 				this.showMoveDescriptions = JSON.parse(showMoveDescriptions);
@@ -92,9 +92,9 @@ const app = new Vue({
 		onDamageTakenUnhover() {
 			this.hoverDamageTaken = null;
 		},
-		toggleOlderGames() {
-			this.showOlderGames = !this.showOlderGames;
-			window.localStorage.setItem('dexMoveShowOlderGames', this.showOlderGames);
+		toggleOtherGens() {
+			this.showOtherGens = !this.showOtherGens;
+			window.localStorage.setItem('dexMoveShowOtherGens', this.showOtherGens);
 		},
 		toggleMoveDescriptions() {
 			this.showMoveDescriptions = !this.showMoveDescriptions;

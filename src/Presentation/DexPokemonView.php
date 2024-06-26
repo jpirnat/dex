@@ -36,10 +36,10 @@ final readonly class DexPokemonView
 		$damageTaken = $dexPokemonMatchupsModel->getDamageTaken();
 		$damageTakenAbilities = $dexPokemonMatchupsModel->getAbilities();
 
-		$dexVersionGroups = $this->dexPokemonModel->getVersionGroups();
 		$showMoveDescriptions = $versionGroup->getGenerationId()->value() >= 3;
 
 		$dexPokemonMovesModel = $this->dexPokemonModel->getDexPokemonMovesModel();
+		$learnsetVgs = $dexPokemonMovesModel->getLearnsetVgs();
 		$methods = $dexPokemonMovesModel->getMethods();
 
 		// Sort moves within each move method.
@@ -49,7 +49,7 @@ final readonly class DexPokemonView
 
 		$vgIdentifiers = array_map(function (DexVersionGroup $vg) : string {
 			return $vg->getIdentifier();
-		}, $dexVersionGroups);
+		}, $learnsetVgs);
 		$byMachine = function (DexPokemonMove $a, DexPokemonMove $b) use ($vgIdentifiers) : int {
 			$aVgData = $a->getVersionGroupData();
 			$bVgData = $b->getVersionGroupData();
@@ -152,7 +152,7 @@ final readonly class DexPokemonView
 				'damageTakenAbilities' => $damageTakenAbilities,
 
 				'methods' => $this->formatDexPokemonMoveMethods($methods),
-				'dexVersionGroups' => $this->dexFormatter->formatDexVersionGroups($dexVersionGroups),
+				'learnsetVgs' => $this->dexFormatter->formatDexVersionGroups($learnsetVgs),
 				'showMoveDescriptions' => $showMoveDescriptions,
 			]
 		]);

@@ -202,10 +202,11 @@
 			</ul>
 		</nav>
 
-		<div v-if="versionGroup.generationId > 1">
+		<div>
 			<label>
-				<input type="checkbox" v-model="showOlderGames" @click="toggleOlderGames">
-				Show older generation games
+				<input type="checkbox" v-model="showOtherGens" @click="toggleOtherGens">
+				<template v-if="versionGroup.generationId > 1">Show older generation games</template>
+				<template v-else>Show other generation games</template>
 			</label>
 		</div>
 

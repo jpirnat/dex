@@ -14,16 +14,20 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
-use Jp\Dex\Domain\Versions\GenerationId;
-use Jp\Dex\Domain\Versions\VersionGroup;
+use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class DexPokemonMovesModel
 {
+	/** @var DexVersionGroup[] $learnsetVgs */
+	private array $learnsetVgs = [];
+
 	/** @var DexPokemonMoveMethod[] $methods */
 	private array $methods = [];
 
 
 	public function __construct(
+		private DexVersionGroupRepositoryInterface $dexVgRepository,
 		private PokemonMoveRepositoryInterface $pokemonMoveRepository,
 		private TmRepositoryInterface $tmRepository,
 		private ItemDescriptionRepositoryInterface $itemDescriptionRepository,
@@ -35,29 +39,32 @@ final class DexPokemonMovesModel
 
 	/**
 	 * Set data for the dex Pokémon page's moves table.
-	 *
-	 * @param DexVersionGroup[] $versionGroups
 	 */
 	public function setData(
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
-		GenerationId $introducedInGenerationId,
-		VersionGroup $versionGroup,
 		LanguageId $languageId,
-		array $versionGroups,
 	) : void {
-		$pokemonMoves = $this->pokemonMoveRepository->getByPokemonAndGeneration(
+		$this->learnsetVgs = [];
+		$this->methods = [];
+
+		$this->learnsetVgs = $this->dexVgRepository->getByIntoVgWithPokemon(
+			$versionGroupId,
 			$pokemonId,
-			$versionGroup->getGenerationId(),
+			$languageId,
+		);
+
+		$pokemonMoves = $this->pokemonMoveRepository->getByIntoVgAndPokemon(
+			$versionGroupId,
+			$pokemonId,
 		);
 
 		// Get all the TMs that could show up in the table.
-		$tms = $this->tmRepository->getBetween(
-			$introducedInGenerationId,
-			$versionGroup->getGenerationId(),
+		$tms = $this->tmRepository->getByIntoVg(
+			$versionGroupId,
 		);
-		$itemDescriptions = $this->itemDescriptionRepository->getTmsBetween(
-			$introducedInGenerationId,
-			$versionGroup->getGenerationId(),
+		$itemDescriptions = $this->itemDescriptionRepository->getTmsByIntoVg(
+			$versionGroupId,
 			$languageId,
 		);
 
@@ -70,12 +77,12 @@ final class DexPokemonMovesModel
 			$moveId = $pokemonMove->getMoveId()->value();
 			$methodId = $pokemonMove->getMoveMethodId()->value();
 
-			if (!isset($versionGroups[$vgId])) {
+			if (!isset($this->learnsetVgs[$vgId])) {
 				// This should only happen if this Pokémon move is from a gen 1
 				// version group of the wrong locality (Red/Green vs Red/Blue).
 				continue;
 			}
-			$vgIdentifier = $versionGroups[$vgId]->getIdentifier();
+			$vgIdentifier = $this->learnsetVgs[$vgId]->getIdentifier();
 
 			// Keep track of moves we'll need data for.
 			$moveIds[$moveId] = $pokemonMove->getMoveId();
@@ -120,7 +127,7 @@ final class DexPokemonMovesModel
 
 		// Get move data.
 		$moves = $this->dexMoveRepository->getByPokemon(
-			$versionGroup->getId(),
+			$versionGroupId,
 			$pokemonId,
 			$languageId,
 		);
@@ -193,6 +200,17 @@ final class DexPokemonMovesModel
 				$dexPokemonMoves[$methodId],
 			);
 		}
+	}
+
+
+	/**
+	 * Get the move version groups.
+	 *
+	 * @return DexVersionGroup[]
+	 */
+	public function getLearnsetVgs() : array
+	{
+		return $this->learnsetVgs;
 	}
 
 	/**

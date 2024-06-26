@@ -14,13 +14,13 @@ const app = new Vue({
 		damageDealt: {},
 		flags: [],
 		methods: [],
-		dexVersionGroups: [],
+		learnsetVgs: [],
 		showAbilities: true,
 		stats: [],
 
 		hoverDamageDealt: null,
 
-		showOlderGames: false,
+		showOtherGens: false,
 	},
 	computed: {
 		showOtherDetails() {
@@ -35,14 +35,14 @@ const app = new Vue({
 			;
 		},
 		visibleVersionGroups() {
-			if (this.showOlderGames) {
-				return this.dexVersionGroups;
+			if (this.showOtherGens) {
+				return this.learnsetVgs;
 			}
 
-			return this.dexVersionGroups.filter(vg => vg.generationId === this.versionGroup.generationId);
+			return this.learnsetVgs.filter(vg => vg.generationId === this.versionGroup.generationId);
 		},
 		visibleMethods() {
-			if (this.showOlderGames) {
+			if (this.showOtherGens) {
 				return this.methods;
 			}
 
@@ -73,14 +73,14 @@ const app = new Vue({
 				this.statChanges = data.statChanges;
 				this.flags = data.flags;
 				this.methods = data.methods;
-				this.dexVersionGroups = data.dexVersionGroups;
+				this.learnsetVgs = data.learnsetVgs;
 				this.showAbilities = data.showAbilities;
 				this.stats = data.stats;
 
 				document.title = data.title;
 
-				const showOlderGames = window.localStorage.getItem('dexMoveShowOlderGames') ?? 'false';
-				this.showOlderGames = JSON.parse(showOlderGames);
+				const showOtherGens = window.localStorage.getItem('dexMoveShowOtherGens') ?? 'false';
+				this.showOtherGens = JSON.parse(showOtherGens);
 			}
 		});
 	},
@@ -106,9 +106,9 @@ const app = new Vue({
 		onDamageDealtUnhover() {
 			this.hoverDamageDealt = null;
 		},
-		toggleOlderGames() {
-			this.showOlderGames = !this.showOlderGames;
-			window.localStorage.setItem('dexMoveShowOlderGames', this.showOlderGames);
+		toggleOtherGens() {
+			this.showOtherGens = !this.showOtherGens;
+			window.localStorage.setItem('dexMoveShowOtherGens', this.showOtherGens);
 		},
 	},
 });

@@ -5,30 +5,31 @@ namespace Jp\Dex\Domain\PokemonMoves;
 
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface PokemonMoveRepositoryInterface
 {
 	/**
-	 * Get Pokémon moves by Pokémon, in this generation and earlier. Does not
-	 * include the typed Hidden Powers, or moves learned via Sketch.
+	 * Get Pokémon moves available for this Pokémon in this version group, based
+	 * on all the version groups that can transfer movesets into this one.
 	 *
 	 * @return PokemonMove[] Ordered by level, then sort, for easier parsing by
 	 *     DexPokemonMovesModel.
 	 */
-	public function getByPokemonAndGeneration(
+	public function getByIntoVgAndPokemon(
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
-		GenerationId $generationId,
 	) : array;
 
 	/**
-	 * Get Pokémon moves by move, in this generation and earlier. Does not
-	 * include moves learned via Sketch.
+	 * Get Pokémon moves available for this move in this version group,
+	 * based on all the version groups that can transfer movesets into this one.
+	 * Does not include moves learned via Sketch.
 	 *
 	 * @return PokemonMove[]
 	 */
-	public function getByMoveAndGeneration(
+	public function getByIntoVgAndMove(
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		GenerationId $generationId,
 	) : array;
 }

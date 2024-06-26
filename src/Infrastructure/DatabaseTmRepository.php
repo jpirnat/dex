@@ -9,7 +9,6 @@ use Jp\Dex\Domain\Items\TechnicalMachine;
 use Jp\Dex\Domain\Items\TmNotFoundException;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
-use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
@@ -99,28 +98,30 @@ final readonly class DatabaseTmRepository implements TmRepositoryInterface
 	}
 
 	/**
-	 * Get TMs between these two generations, inclusive. This method is used to
-	 * get all potentially relevant TMs for the dex Pokémon page.
+	 * Get TMs available for this version group, based on all the version groups
+	 * that can transfer movesets into this one.
 	 *
 	 * @return TechnicalMachine[][] Indexed first by version group id and then
 	 *     by move id.
 	 */
-	public function getBetween(GenerationId $begin, GenerationId $end) : array
+	public function getByIntoVg(VersionGroupId $versionGroupId) : array
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`tm`.`version_group_id`,
-				`tm`.`machine_type`,
-				`tm`.`number`,
-				`tm`.`item_id`,
-				`tm`.`move_id`
-			FROM `technical_machines` AS `tm`
-			INNER JOIN `version_groups` AS `vg`
-				ON `tm`.`version_group_id` = `vg`.`id`
-			WHERE `vg`.`generation_id` BETWEEN :begin AND :end'
+				`version_group_id`,
+				`machine_type`,
+				`number`,
+				`item_id`,
+				`move_id`
+			FROM `technical_machines`
+			WHERE `version_group_id` IN (
+				SELECT
+					`from_vg_id`
+				FROM `vg_move_transfers`
+				WHERE `into_vg_id` = :version_group_id
+			)'
 		);
-		$stmt->bindValue(':begin', $begin->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':end', $end->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$tms = [];

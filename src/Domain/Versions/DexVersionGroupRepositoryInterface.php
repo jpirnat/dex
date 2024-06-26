@@ -20,16 +20,15 @@ interface DexVersionGroupRepositoryInterface
 	) : DexVersionGroup;
 
 	/**
-	 * Get dex version groups that this Pokémon has appeared in, up to a certain
-	 * generation. This method is used to get all relevant version groups for
-	 * the dex Pokémon page.
+	 * Get dex version groups that this Pokémon has appeared in, and that can
+	 * transfer movesets into this version group.
 	 *
 	 * @return DexVersionGroup[] Indexed by id. Ordered by sort.
 	 */
-	public function getWithPokemon(
+	public function getByIntoVgWithPokemon(
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
 		LanguageId $languageId,
-		GenerationId $end,
 	) : array;
 
 	/**
@@ -39,9 +38,9 @@ interface DexVersionGroupRepositoryInterface
 	 *
 	 * @return DexVersionGroup[] Indexed by id. Ordered by sort.
 	 */
-	public function getWithMove(
+	public function getByIntoVgWithMove(
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
 		LanguageId $languageId,
-		GenerationId $end,
 	) : array;
 }

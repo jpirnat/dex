@@ -21,6 +21,7 @@ return [
 	'version_group_languages',
 	'version_group_names',
 	'version_names',
+	'vg_move_transfers',
 
 	// Pokémon
 	'species',

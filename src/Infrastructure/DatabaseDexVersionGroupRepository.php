@@ -97,16 +97,15 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 	}
 
 	/**
-	 * Get dex version groups that this Pokémon has appeared in, up to a certain
-	 * generation. This method is used to get all relevant version groups for
-	 * the dex Pokémon page.
+	 * Get dex version groups that this Pokémon has appeared in, and that can
+	 * transfer movesets into this version group.
 	 *
 	 * @return DexVersionGroup[] Indexed by id. Ordered by sort.
 	 */
-	public function getWithPokemon(
+	public function getByIntoVgWithPokemon(
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
 		LanguageId $languageId,
-		GenerationId $end,
 	) : array {
 		$versions = $this->getVersions();
 
@@ -122,6 +121,12 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 				ON `vg`.`id` = `vgn`.`version_group_id`
 			WHERE `vg`.`id` IN (
 				SELECT
+					`from_vg_id`
+				FROM `vg_move_transfers`
+				WHERE `into_vg_id` = :version_group_id
+			)
+			AND `vg`.`id` IN (
+				SELECT
 					`vgf`.`version_group_id`
 				FROM `version_group_forms` AS `vgf`
 				INNER JOIN `forms` AS `f`
@@ -129,12 +134,11 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 				WHERE `f`.`pokemon_id` = :pokemon_id
 			)
 			AND `vgn`.`language_id` = :language_id
-			AND `vg`.`generation_id` <= :end
 			ORDER BY `vg`.`sort`'
 		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':end', $end->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$versionGroups = [];
@@ -169,10 +173,10 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 	 *
 	 * @return DexVersionGroup[] Indexed by id. Ordered by sort.
 	 */
-	public function getWithMove(
+	public function getByIntoVgWithMove(
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
 		LanguageId $languageId,
-		GenerationId $end,
 	) : array {
 		$versions = $this->getVersions();
 
@@ -188,17 +192,22 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 				ON `vg`.`id` = `vgn`.`version_group_id`
 			WHERE `vg`.`id` IN (
 				SELECT
+					`from_vg_id`
+				FROM `vg_move_transfers`
+				WHERE `into_vg_id` = :version_group_id
+			)
+			AND `vg`.`id` IN (
+				SELECT
 					`version_group_id`
 				FROM `vg_moves`
 				WHERE `move_id` = :move_id
 			)
 			AND `vgn`.`language_id` = :language_id
-			AND `vg`.`generation_id` <= :end
 			ORDER BY `vg`.`sort`'
 		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':end', $end->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$versionGroups = [];

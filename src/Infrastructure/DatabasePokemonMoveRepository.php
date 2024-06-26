@@ -8,7 +8,6 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
 use Jp\Dex\Domain\PokemonMoves\PokemonMove;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
-use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
@@ -19,35 +18,38 @@ final readonly class DatabasePokemonMoveRepository implements PokemonMoveReposit
 	) {}
 
 	/**
-	 * Get Pokémon moves by Pokémon, in this generation and earlier. Does not
-	 * include the typed Hidden Powers, or moves learned via Sketch.
+	 * Get Pokémon moves available for this Pokémon in this version group, based
+	 * on all the version groups that can transfer movesets into this one.
 	 *
 	 * @return PokemonMove[] Ordered by level, then sort, for easier parsing by
 	 *     DexPokemonMovesModel.
 	 */
-	public function getByPokemonAndGeneration(
+	public function getByIntoVgAndPokemon(
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
-		GenerationId $generationId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`pm`.`version_group_id`,
-				`pm`.`move_id`,
-				`pm`.`move_method_id`,
-				`pm`.`level`,
-				`pm`.`sort`
+				`version_group_id`,
+				`move_id`,
+				`move_method_id`,
+				`level`,
+				`sort`
 			FROM `pokemon_moves` AS `pm`
-			INNER JOIN `version_groups` AS `vg`
-				ON `pm`.`version_group_id` = `vg`.`id`
-			WHERE `pm`.`pokemon_id` = :pokemon_id
-				AND `vg`.`generation_id` <= :generation_id
-				AND `pm`.`move_method_id` <> :sketch
+			WHERE `version_group_id` IN (
+				SELECT
+					`from_vg_id`
+				FROM `vg_move_transfers`
+				WHERE `into_vg_id` = :version_group_id
+			)
+			AND `pokemon_id` = :pokemon_id
+			AND `move_method_id` <> :sketch
 			ORDER BY
-				`pm`.`level`,
-				`pm`.`sort`'
+				`level`,
+				`sort`'
 		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':sketch', MoveMethodId::SKETCH, PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -70,31 +72,35 @@ final readonly class DatabasePokemonMoveRepository implements PokemonMoveReposit
 	}
 
 	/**
-	 * Get Pokémon moves by move, in this generation and earlier. Does not
-	 * include moves learned via Sketch.
+	 * Get Pokémon moves available for this move in this version group,
+	 * based on all the version groups that can transfer movesets into this one.
+	 * Does not include moves learned via Sketch.
 	 *
 	 * @return PokemonMove[]
 	 */
-	public function getByMoveAndGeneration(
+	public function getByIntoVgAndMove(
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
-		GenerationId $generationId,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`pm`.`pokemon_id`,
-				`pm`.`version_group_id`,
-				`pm`.`move_method_id`,
-				`pm`.`level`,
-				`pm`.`sort`
-			FROM `pokemon_moves` AS `pm`
-			INNER JOIN `version_groups` AS `vg`
-				ON `pm`.`version_group_id` = `vg`.`id`
-			WHERE `pm`.`move_id` = :move_id
-				AND `vg`.`generation_id` <= :generation_id
-				AND `pm`.`move_method_id` <> :sketch'
+				`pokemon_id`,
+				`version_group_id`,
+				`move_method_id`,
+				`level`,
+				`sort`
+			FROM `pokemon_moves`
+			WHERE `version_group_id` IN (
+				SELECT
+					`from_vg_id`
+				FROM `vg_move_transfers`
+				WHERE `into_vg_id` = :version_group_id
+			)
+			AND `move_id` = :move_id
+			AND `move_method_id` <> :sketch'
 		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':sketch', MoveMethodId::SKETCH, PDO::PARAM_INT);
 		$stmt->execute();
 

@@ -8,7 +8,6 @@ use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
-use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
@@ -58,13 +57,13 @@ final readonly class DatabaseItemDescriptionRepository implements ItemDescriptio
 	}
 
 	/**
-	 * Get item descriptions for TMs/HMs/TRs between these generations.
+	 * Get item descriptions for TMs/HMs/TRs available for this version group,
+	 * based on all the version groups that can transfer movesets into this one.
 	 *
 	 * @return ItemDescription[][] Indexed by version group id, then item id.
 	 */
-	public function getTmsBetween(
-		GenerationId $begin,
-		GenerationId $end,
+	public function getTmsByIntoVg(
+		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : array {
 		$stmt = $this->db->prepare(
@@ -77,13 +76,15 @@ final readonly class DatabaseItemDescriptionRepository implements ItemDescriptio
 			INNER JOIN `item_descriptions` AS `i`
 				ON `t`.`version_group_id` = `i`.`version_group_id`
 				AND `t`.`item_id` = `i`.`item_id`
-			INNER JOIN `version_groups` AS `vg`
-				ON `i`.`version_group_id` = `vg`.`id`
-			WHERE `vg`.`generation_id` BETWEEN :begin AND :end
-				AND `i`.`language_id` = :language_id'
+			WHERE `i`.`version_group_id` IN (
+				SELECT
+					`from_vg_id`
+				FROM `vg_move_transfers`
+				WHERE `into_vg_id` = :version_group_id
+			)
+			AND `i`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':begin', $begin->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':end', $end->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -105,14 +106,14 @@ final readonly class DatabaseItemDescriptionRepository implements ItemDescriptio
 	}
 
 	/**
-	 * Get item descriptions for TMs/HMs/TRs between these generations for this
-	 * specific move.
+	 * Get item descriptions for TMs/HMs/TRs for this specific move and
+	 * available for this version group, based on all the version groups that
+	 * can transfer movesets into this one.
 	 *
 	 * @return ItemDescription[][] Indexed by version group id, then item id.
 	 */
-	public function getByTmMoveBetween(
-		GenerationId $begin,
-		GenerationId $end,
+	public function getTmsByIntoVgAndMove(
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
 		LanguageId $languageId,
 	) : array {
@@ -126,14 +127,16 @@ final readonly class DatabaseItemDescriptionRepository implements ItemDescriptio
 			INNER JOIN `item_descriptions` AS `i`
 				ON `t`.`version_group_id` = `i`.`version_group_id`
 				AND `t`.`item_id` = `i`.`item_id`
-			INNER JOIN `version_groups` AS `vg`
-				ON `i`.`version_group_id` = `vg`.`id`
-			WHERE `vg`.`generation_id` BETWEEN :begin AND :end
-				AND `t`.`move_id` = :move_id
-				AND `i`.`language_id` = :language_id'
+			WHERE `i`.`version_group_id` IN (
+				SELECT
+					`from_vg_id`
+				FROM `vg_move_transfers`
+				WHERE `into_vg_id` = :version_group_id
+			)
+			AND `t`.`move_id` = :move_id
+			AND `i`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':begin', $begin->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':end', $end->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();

@@ -18,7 +18,6 @@ use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
-use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
@@ -35,9 +34,6 @@ final class DexMoveModel
 
 	private array $statChanges = [];
 	private array $flags = [];
-
-	/** @var DexVersionGroup[] $versionGroups */
-	private array $versionGroups = [];
 
 
 	public function __construct(
@@ -90,18 +86,10 @@ final class DexMoveModel
 
 		$this->setFlags($versionGroupId, $moveId, $languageId);
 
-		// Get the version groups this move has appeared in.
-		$this->versionGroups = $this->dexVgRepository->getWithMove(
-			$moveId,
-			$languageId,
-			$this->versionGroupModel->getVersionGroup()->getGenerationId(),
-		);
-
 		$this->dexMovePokemonModel->setData(
+			$versionGroupId,
 			$moveId,
-			$this->versionGroupModel->getVersionGroup(),
 			$languageId,
-			$this->versionGroups,
 		);
 	}
 
@@ -311,16 +299,6 @@ final class DexMoveModel
 	public function getFlags() : array
 	{
 		return $this->flags;
-	}
-
-	/**
-	 * Get the version groups.
-	 *
-	 * @return DexVersionGroup[]
-	 */
-	public function getVersionGroups() : array
-	{
-		return $this->versionGroups;
 	}
 
 	/**

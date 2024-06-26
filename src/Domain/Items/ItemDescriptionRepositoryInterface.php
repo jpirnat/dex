@@ -5,7 +5,6 @@ namespace Jp\Dex\Domain\Items;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
-use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface ItemDescriptionRepositoryInterface
@@ -20,25 +19,25 @@ interface ItemDescriptionRepositoryInterface
 	) : ItemDescription;
 
 	/**
-	 * Get item descriptions for TMs/HMs/TRs between these generations.
+	 * Get item descriptions for TMs/HMs/TRs available for this version group,
+	 * based on all the version groups that can transfer movesets into this one.
 	 *
 	 * @return ItemDescription[][] Indexed by version group id, then item id.
 	 */
-	public function getTmsBetween(
-		GenerationId $begin,
-		GenerationId $end,
+	public function getTmsByIntoVg(
+		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : array;
 
 	/**
-	 * Get item descriptions for TMs/HMs/TRs between these generations for this
-	 * specific move.
+	 * Get item descriptions for TMs/HMs/TRs for this specific move and
+	 * available for this version group, based on all the version groups that
+	 * can transfer movesets into this one.
 	 *
 	 * @return ItemDescription[][] Indexed by version group id, then item id.
 	 */
-	public function getByTmMoveBetween(
-		GenerationId $begin,
-		GenerationId $end,
+	public function getTmsByIntoVgAndMove(
+		VersionGroupId $versionGroupId,
 		MoveId $moveId,
 		LanguageId $languageId,
 	) : array;

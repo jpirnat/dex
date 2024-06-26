@@ -8,16 +8,11 @@ use Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Versions\DexVersionGroup;
-use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 
 final class DexPokemonModel
 {
 	private array $pokemon = [];
 	private array $abilities = [];
-
-	/** @var DexVersionGroup[] $versionGroups */
-	private array $versionGroups = [];
 
 
 	public function __construct(
@@ -26,7 +21,6 @@ final class DexPokemonModel
 		private PokemonNameRepositoryInterface $pokemonNameRepository,
 		private DexAbilityRepositoryInterface $dexAbilityRepository,
 		private DexPokemonMatchupsModel $dexPokemonMatchupsModel,
-		private DexVersionGroupRepositoryInterface $dexVgRepository,
 		private DexPokemonMovesModel $dexPokemonMovesModel,
 	) {}
 
@@ -69,23 +63,10 @@ final class DexPokemonModel
 			$this->abilities,
 		);
 
-		// Get the version groups this Pokémon has appeared in.
-		$this->versionGroups = $this->dexVgRepository->getWithPokemon(
-			$pokemon->getId(),
-			$languageId,
-			$this->versionGroupModel->getVersionGroup()->getGenerationId(),
-		);
-
-		// Get the generation the Pokémon was introduced in.
-		$key = array_key_first($this->versionGroups);
-		$introducedInVg = $this->versionGroups[$key];
-
 		$this->dexPokemonMovesModel->setData(
+			$versionGroupId,
 			$pokemon->getId(),
-			$introducedInVg->getGenerationId(),
-			$this->versionGroupModel->getVersionGroup(),
 			$languageId,
-			$this->versionGroups,
 		);
 	}
 
@@ -120,16 +101,6 @@ final class DexPokemonModel
 	public function getDexPokemonMatchupsModel() : DexPokemonMatchupsModel
 	{
 		return $this->dexPokemonMatchupsModel;
-	}
-
-	/**
-	 * Get the version groups.
-	 *
-	 * @return DexVersionGroup[]
-	 */
-	public function getVersionGroups() : array
-	{
-		return $this->versionGroups;
 	}
 
 	/**
