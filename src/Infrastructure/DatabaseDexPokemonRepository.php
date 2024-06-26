@@ -242,9 +242,14 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 				AND `p`.`id` IN (
 					SELECT
 						`pokemon_id`
-					FROM `pokemon_moves` AS `pm`
-					WHERE `pm`.`version_group_id` <= :version_group_id3
-						AND `pm`.`move_id` = :move_id
+					FROM `pokemon_moves`
+					WHERE `version_group_id` IN (
+						SELECT
+							`from_vg_id`
+						FROM `vg_move_transfers`
+						WHERE `into_vg_id` = :version_group_id3
+					)
+					AND `move_id` = :move_id
 				)'
 		);
 		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);

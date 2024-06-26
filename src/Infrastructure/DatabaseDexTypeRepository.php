@@ -272,8 +272,13 @@ final readonly class DatabaseDexTypeRepository implements DexTypeRepositoryInter
 					SELECT
 						`pokemon_id`
 					FROM `pokemon_moves`
-					WHERE `move_id` = :move_id
-						AND `version_group_id` <= :version_group_id2
+					WHERE `version_group_id` IN (
+						SELECT
+							`from_vg_id`
+						FROM `vg_move_transfers`
+						WHERE `into_vg_id` = :version_group_id2
+					)
+					AND `move_id` = :move_id
 				)
 			ORDER BY `slot`'
 		);

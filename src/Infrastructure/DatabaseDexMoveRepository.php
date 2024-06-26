@@ -188,8 +188,13 @@ final readonly class DatabaseDexMoveRepository implements DexMoveRepositoryInter
 					SELECT
 						`move_id`
 					FROM `pokemon_moves`
-					WHERE `pokemon_id` = :pokemon_id
-						AND `version_group_id` <= :version_group_id2
+					WHERE `version_group_id` IN (
+						SELECT
+							`from_vg_id`
+						FROM `vg_move_transfers`
+						WHERE `into_vg_id` = :version_group_id2
+					)
+					AND `pokemon_id` = :pokemon_id
 				)'
 		);
 		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
