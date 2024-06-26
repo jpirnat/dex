@@ -413,6 +413,11 @@ a.button {
 	.dex-move__flags {
 		column-count: 2;
 	}
+
+	.dex-ability__flag,
+	.dex-move__flag {
+		break-inside: avoid;
+	}
 }
 
 .dex-ability__flag--disabled,

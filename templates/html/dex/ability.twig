@@ -34,7 +34,8 @@
 			<ul class="dex-ability__flags">
 				<li v-for="flag in flags" :key="flag.identifier"
 					:class="{
-						'dex-ability__flag--disabled': !flag.has
+						'dex-ability__flag': true,
+						'dex-ability__flag--disabled': !flag.has,
 					}"
 				>
 					{{ flag.name }}

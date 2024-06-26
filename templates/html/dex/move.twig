@@ -181,7 +181,8 @@
 			<ul class="dex-move__flags">
 				<li v-for="flag in flags" :key="flag.identifier"
 					:class="{
-						'dex-move__flag--disabled': !flag.has
+						'dex-move__flag': true,
+						'dex-move__flag--disabled': !flag.has,
 					}"
 				>
 					{{ flag.name }}
