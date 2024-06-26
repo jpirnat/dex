@@ -49,6 +49,7 @@ final readonly class DatabaseStatsPokemonTeammateRepository implements StatsPoke
 				AND `fi`.`version_group_id` = :version_group_id
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+				AND `fi`.`is_shiny` = 0
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating

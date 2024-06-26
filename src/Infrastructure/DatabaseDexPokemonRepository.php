@@ -77,6 +77,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 				AND `fi`.`version_group_id` = :version_group_id
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+				AND `fi`.`is_shiny` = 0
 			WHERE `p`.`id` = :pokemon_id
 				AND `pn`.`language_id` = :language_id
 			LIMIT 1'
@@ -148,6 +149,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 				AND `fi`.`version_group_id` = :version_group_id1
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+				AND `fi`.`is_shiny` = 0
 			WHERE `pn`.`language_id` = :language_id
 				AND `p`.`id` IN (
 					SELECT
@@ -227,6 +229,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 				AND `fi`.`version_group_id` = :version_group_id1
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+				AND `fi`.`is_shiny` = 0
 			WHERE `p`.`id` IN (
 				SELECT DISTINCT
 					`f`.`pokemon_id`
@@ -310,6 +313,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 				AND `fi`.`version_group_id` = :version_group_id1
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+				AND `fi`.`is_shiny` = 0
 			WHERE `p`.`id` IN (
 				SELECT DISTINCT
 					`f`.`pokemon_id`
@@ -389,6 +393,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 				AND `fi`.`version_group_id` = :version_group_id1
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+				AND `fi`.`is_shiny` = 0
 			WHERE `p`.`id` IN (
 				SELECT DISTINCT
 					`f`.`pokemon_id`

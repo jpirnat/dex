@@ -13,6 +13,7 @@ final readonly class FormIcon
 		private FormId $formId,
 		private bool $isFemale,
 		private bool $isRight,
+		private bool $isShiny,
 		private string $image,
 	) {}
 

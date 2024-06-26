@@ -57,7 +57,7 @@ Vue.component('stats-pokemon-teammates', {
 			<tbody>
 				<tr v-for="teammate in teammates" :key="teammate.identifier">
 					<td class="dex-table__pokemon-icon">
-						<img :src="'/images/pokemon/icons/' + teammate.icon" alt="">
+						<img v-if="teammate.icon" class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + teammate.icon" alt="">
 					</td>
 					<td>
 						<a :href="'/stats/' + month + '/' + format + '/' + rating + '/pokemon/' + teammate.identifier">

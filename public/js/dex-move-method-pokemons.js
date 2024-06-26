@@ -165,7 +165,7 @@ Vue.component('dex-move-method-pokemons', {
 					</template>
 				</template>
 				<td class="dex-table__pokemon-icon dex-move__pokemon-icon">
-					<img :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
+					<img v-if="pokemon.icon" class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
 				</td>
 				<td class="dex-table__pokemon-name">
 					<a :href="'/dex/' + versionGroup.identifier + '/pokemon/' + pokemon.identifier">

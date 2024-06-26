@@ -250,6 +250,9 @@ a.button {
 	color: red;
 }
 
+.dex-pokemon-icon {
+	max-width: 64px;
+}
 .dex-type-icon {
 	max-width: 100px;
 }

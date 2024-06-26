@@ -26,7 +26,7 @@
 								</div>
 								<div class="breeding-chain__summary" >
 									<template v-for="(pokemon, pokemonIndex) in chain.pokemon" :key="pokemon.identifier">
-										<img :src="'/images/pokemon/icons/' + pokemon.icon" :alt="pokemon.name" v-tooltip="pokemon.name">
+										<img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + pokemon.icon" :alt="pokemon.name" v-tooltip="pokemon.name">
 										<span v-if="pokemonIndex < chain.pokemon.length - 1"> → </span>
 									</template>
 								</div>
@@ -46,7 +46,7 @@
 					</tr>
 					<tr v-for="pokemon in chain.pokemon" :key="pokemon.identifier">
 						<td class="dex-table--icon">
-							<img :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
+							<img v-if="pokemon.icon" class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
 						</td>
 						<th scope="row" class="dex-table__pokemon-name">
 							<a :href="'/dex/' + pokemon.versionGroup.identifier + '/pokemon/' + pokemon.identifier">

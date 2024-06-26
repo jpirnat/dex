@@ -106,8 +106,9 @@ final class AveragedLeadsModel
 		$pokemonNames = $this->pokemonNameRepository->getByLanguage($languageId);
 
 		// Get form icons.
-		$formIcons = $this->formIconRepository->getByVgAndFemaleAndRight(
+		$formIcons = $this->formIconRepository->getByVgAndFemaleAndRightAndShiny(
 			$this->format->getVersionGroupId(),
+			false,
 			false,
 			false,
 		);

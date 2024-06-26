@@ -42,6 +42,7 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 				AND `pa`.`pokemon_id` = `fi`.`form_id`
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+				AND `fi`.`is_shiny` = 0
 			WHERE `pa`.`version_group_id` = :version_group_id
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `p`.`sort`'

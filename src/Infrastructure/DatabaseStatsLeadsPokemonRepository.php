@@ -56,6 +56,7 @@ final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPo
 				AND `fi`.`version_group_id` = :version_group_id
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
+				AND `fi`.`is_shiny` = 0
 			LEFT JOIN `usage_rated_pokemon` AS `urpp`
 				ON `urpp`.`month` = :prev_month
 				AND `urp`.`format_id` = `urpp`.`format_id`

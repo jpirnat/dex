@@ -106,7 +106,7 @@ Vue.component('dex-pokemons-table', {
 				<tbody>
 					<tr v-for="pokemon in paginatedPokemons" :key="pokemon.identifier">
 						<td class="dex-table__pokemon-icon">
-							<img :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
+							<img v-if="pokemon.icon" class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
 						</td>
 						<td class="dex-table__pokemon-name">
 							<a :href="'/dex/' + versionGroup.identifier + '/pokemon/' + pokemon.identifier">

@@ -14,11 +14,12 @@ interface FormIconRepositoryInterface
 	 * @throws FormIconNotFoundException if no form icon exists with this
 	 *     version group, form, gender, and direction.
 	 */
-	public function getByVgAndFormAndFemaleAndRight(
+	public function getByVgAndFormAndFemaleAndRightAndShiny(
 		VersionGroupId $versionGroupId,
 		FormId $formId,
 		bool $isFemale,
 		bool $isRight,
+		bool $isShiny,
 	) : FormIcon;
 
 	/**
@@ -26,9 +27,10 @@ interface FormIconRepositoryInterface
 	 *
 	 * @return FormIcon[] Indexed by form id.
 	 */
-	public function getByVgAndFemaleAndRight(
+	public function getByVgAndFemaleAndRightAndShiny(
 		VersionGroupId $versionGroupId,
 		bool $isFemale,
 		bool $isRight,
+		bool $isShiny,
 	) : array;
 }

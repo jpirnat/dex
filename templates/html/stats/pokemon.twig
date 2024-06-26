@@ -38,7 +38,7 @@
 			:href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + prevRank.identifier"
 			v-tooltip="prevRank.name"
 		>
-			&#9668; #{{ prevRank.rank }} <img :src="'/images/pokemon/icons/' + prevRank.icon" :alt="prevRank.name">
+			&#9668; #{{ prevRank.rank }} <img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + prevRank.icon" :alt="prevRank.name">
 		</a>
 		<span v-else class="rank-control__rank"></span>
 
@@ -46,7 +46,7 @@
 			:href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + nextRank.identifier"
 			v-tooltip="nextRank.name"
 		>
-			<img :src="'/images/pokemon/icons/' + nextRank.icon" :alt="nextRank.name"> #{{ nextRank.rank }} &#9658;
+			<img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + nextRank.icon" :alt="nextRank.name"> #{{ nextRank.rank }} &#9658;
 		</a>
 		<span v-else class="rank-control__rank"></span>
 	</div>

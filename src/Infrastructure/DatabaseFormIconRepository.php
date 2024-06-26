@@ -22,11 +22,12 @@ final readonly class DatabaseFormIconRepository implements FormIconRepositoryInt
 	 * @throws FormIconNotFoundException if no form icon exists with this
 	 *     version group, form, gender, and direction.
 	 */
-	public function getByVgAndFormAndFemaleAndRight(
+	public function getByVgAndFormAndFemaleAndRightAndShiny(
 		VersionGroupId $versionGroupId,
 		FormId $formId,
 		bool $isFemale,
 		bool $isRight,
+		bool $isShiny,
 	) : FormIcon {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -36,12 +37,14 @@ final readonly class DatabaseFormIconRepository implements FormIconRepositoryInt
 				AND `form_id` = :form_id
 				AND `is_female` = :is_female
 				AND `is_right` = :is_right
+				AND `is_shiny` = :is_shiny
 			LIMIT 1'
 		);
 		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':form_id', $formId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':is_female', $isFemale, PDO::PARAM_INT);
 		$stmt->bindValue(':is_right', $isRight, PDO::PARAM_INT);
+		$stmt->bindValue(':is_shiny', $isShiny, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -50,7 +53,8 @@ final readonly class DatabaseFormIconRepository implements FormIconRepositoryInt
 				'No form icon exists with version group id ' . $versionGroupId->value()
 				. ', form id ' . $formId->value()
 				. ', gender ' . ($isFemale ? 'female' : 'male')
-				. ', and direction ' . ($isRight ? 'right' : 'left') . '.'
+				. ', and direction ' . ($isRight ? 'right' : 'left')
+				. ', and shininess ' . ($isShiny ? 'shiny' : 'not shiny') . '.'
 			);
 		}
 
@@ -59,6 +63,7 @@ final readonly class DatabaseFormIconRepository implements FormIconRepositoryInt
 			$formId,
 			$isFemale,
 			$isRight,
+			$isShiny,
 			$result['image'],
 		);
 	}
@@ -68,10 +73,11 @@ final readonly class DatabaseFormIconRepository implements FormIconRepositoryInt
 	 *
 	 * @return FormIcon[] Indexed by form id.
 	 */
-	public function getByVgAndFemaleAndRight(
+	public function getByVgAndFemaleAndRightAndShiny(
 		VersionGroupId $versionGroupId,
 		bool $isFemale,
 		bool $isRight,
+		bool $isShiny,
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
@@ -80,11 +86,13 @@ final readonly class DatabaseFormIconRepository implements FormIconRepositoryInt
 			FROM `form_icons`
 			WHERE `version_group_id` = :version_group_id
 				AND `is_female` = :is_female
-				AND `is_right` = :is_right'
+				AND `is_right` = :is_right
+				AND `is_shiny` = :is_shiny'
 		);
 		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':is_female', $isFemale, PDO::PARAM_INT);
 		$stmt->bindValue(':is_right', $isRight, PDO::PARAM_INT);
+		$stmt->bindValue(':is_shiny', $isShiny, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$formIcons = [];
@@ -95,6 +103,7 @@ final readonly class DatabaseFormIconRepository implements FormIconRepositoryInt
 				new FormId($result['form_id']),
 				$isFemale,
 				$isRight,
+				$isShiny,
 				$result['image'],
 			);
 

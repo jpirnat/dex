@@ -103,9 +103,10 @@ final class BreedingChainsModel
 	) : BreedingChainRecord {
 		$pokemonId = $pokemonMove->getPokemonId();
 
-		$formIcon = $this->formIconRepository->getByVgAndFormAndFemaleAndRight(
+		$formIcon = $this->formIconRepository->getByVgAndFormAndFemaleAndRightAndShiny(
 			$pokemonMove->getVersionGroupId(),
 			new FormId($pokemonId->value()),
+			false,
 			false,
 			false,
 		);
