@@ -15,7 +15,7 @@ foreign key (`version_group_id`) references `version_groups` (`id`)
 foreign key (`move_id`) references `moves` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`flag_id`) references `flags` (`id`)
+foreign key (`flag_id`) references `move_flags` (`id`)
 	on delete restrict
 	on update cascade
 ) engine = InnoDB;

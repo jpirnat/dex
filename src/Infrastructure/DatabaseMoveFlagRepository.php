@@ -3,24 +3,24 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Flags\DexFlag;
-use Jp\Dex\Domain\Flags\FlagId;
-use Jp\Dex\Domain\Flags\FlagRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Moves\DexMoveFlag;
+use Jp\Dex\Domain\Moves\MoveFlagId;
+use Jp\Dex\Domain\Moves\MoveFlagRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final readonly class DatabaseFlagRepository implements FlagRepositoryInterface
+final readonly class DatabaseMoveFlagRepository implements MoveFlagRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
 	) {}
 
 	/**
-	 * Get all dex flags in this version group.
+	 * Get all dex move flags in this version group.
 	 *
-	 * @return DexFlag[] Indexed by flag id.
+	 * @return DexMoveFlag[] Indexed by flag id.
 	 */
 	public function getByVersionGroup(
 		VersionGroupId $versionGroupId,
@@ -35,10 +35,10 @@ final readonly class DatabaseFlagRepository implements FlagRepositoryInterface
 				`f`.`identifier`,
 				`fd`.`name`,
 				`fd`.`description`
-			FROM `flags` AS `f`
-			INNER JOIN `vg_flags` AS `vgf`
+			FROM `move_flags` AS `f`
+			INNER JOIN `vg_move_flags` AS `vgf`
 				ON `f`.`id` = `vgf`.`flag_id`
-			INNER JOIN `flag_descriptions` AS `fd`
+			INNER JOIN `move_flag_descriptions` AS `fd`
 				ON `vgf`.`flag_id` = `fd`.`flag_id`
 			WHERE `vgf`.`version_group_id` = :version_group_id
 				AND `fd`.`language_id` = :language_id'
@@ -50,7 +50,7 @@ final readonly class DatabaseFlagRepository implements FlagRepositoryInterface
 		$flags = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$flag = new DexFlag(
+			$flag = new DexMoveFlag(
 				$result['identifier'],
 				$result['name'],
 				$result['description'],
@@ -65,7 +65,7 @@ final readonly class DatabaseFlagRepository implements FlagRepositoryInterface
 	/**
 	 * Get this move's flags.
 	 *
-	 * @return FlagId[] Indexed by flag id.
+	 * @return MoveFlagId[] Indexed by flag id.
 	 */
 	public function getByMove(
 		VersionGroupId $versionGroupId,
@@ -85,7 +85,7 @@ final readonly class DatabaseFlagRepository implements FlagRepositoryInterface
 		$flagIds = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$flagId = new FlagId($result['flag_id']);
+			$flagId = new MoveFlagId($result['flag_id']);
 
 			$flagIds[$result['flag_id']] = $flagId;
 		}

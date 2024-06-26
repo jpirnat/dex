@@ -5,11 +5,11 @@ namespace Jp\Dex\Application\Models\DexMove;
 
 use Jp\Dex\Application\Models\VersionGroupModel;
 use Jp\Dex\Domain\Categories\CategoryId;
-use Jp\Dex\Domain\Flags\FlagRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\Inflictions\InflictionId;
+use Jp\Dex\Domain\Moves\MoveFlagRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveType;
@@ -47,7 +47,7 @@ final class DexMoveModel
 		private VgMoveRepositoryInterface $vgMoveRepository,
 		private DexTypeRepositoryInterface $dexTypeRepository,
 		private TypeMatchupRepositoryInterface $typeMatchupRepository,
-		private FlagRepositoryInterface $flagRepository,
+		private MoveFlagRepositoryInterface $flagRepository,
 		private DexVersionGroupRepositoryInterface $dexVgRepository,
 		private DexMovePokemonModel $dexMovePokemonModel,
 	) {}

@@ -137,9 +137,9 @@ return [
 	'exclusive_z_moves',
 
 	// Move flags
-	'flags',
-	'flag_descriptions',
-	'vg_flags',
+	'move_flags',
+	'move_flag_descriptions',
+	'vg_move_flags',
 	'vg_moves_flags' => [
 		'vg_moves_flags_02',
 		'vg_moves_flags_03',

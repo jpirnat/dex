@@ -1,18 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Flags;
+namespace Jp\Dex\Domain\Moves;
 
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
-interface FlagRepositoryInterface
+interface MoveFlagRepositoryInterface
 {
 	/**
-	 * Get all dex flags in this version group.
+	 * Get all dex move flags in this version group.
 	 *
-	 * @return DexFlag[] Indexed by flag id.
+	 * @return DexMoveFlag[] Indexed by flag id.
 	 */
 	public function getByVersionGroup(
 		VersionGroupId $versionGroupId,
@@ -22,7 +21,7 @@ interface FlagRepositoryInterface
 	/**
 	 * Get this move's flags.
 	 *
-	 * @return FlagId[] Indexed by flag id.
+	 * @return MoveFlagId[] Indexed by flag id.
 	 */
 	public function getByMove(
 		VersionGroupId $versionGroupId,

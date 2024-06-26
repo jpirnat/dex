@@ -1,4 +1,4 @@
-create table if not exists `flags`
+create table if not exists `move_flags`
 (
 `id` tinyint unsigned not null,
 

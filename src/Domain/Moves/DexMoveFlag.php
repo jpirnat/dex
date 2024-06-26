@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Flags;
+namespace Jp\Dex\Domain\Moves;
 
-final readonly class DexFlag
+final readonly class DexMoveFlag
 {
 	public function __construct(
 		private string $identifier,

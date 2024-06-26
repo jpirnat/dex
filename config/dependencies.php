@@ -187,10 +187,6 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseEggGroupNameRepository::class
 );
 $services->alias(
-	\Jp\Dex\Domain\Flags\FlagRepositoryInterface::class,
-	\Jp\Dex\Infrastructure\DatabaseFlagRepository::class
-);
-$services->alias(
 	\Jp\Dex\Domain\Formats\FormatRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseFormatRepository::class
 );
@@ -253,6 +249,10 @@ $services->alias(
 $services->alias(
 	\Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseMoveDescriptionRepository::class
+);
+$services->alias(
+	\Jp\Dex\Domain\Moves\MoveFlagRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMoveFlagRepository::class
 );
 $services->alias(
 	\Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface::class,
