@@ -9,6 +9,7 @@ use Jp\Dex\Domain\Flags\FlagRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
+use Jp\Dex\Domain\Moves\Inflictions\InflictionId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveType;
@@ -128,7 +129,7 @@ final class DexMoveModel
 		$vgMove = $this->vgMoveRepository->getByVgAndMove($versionGroupId, $moveId);
 
 		$infliction = null;
-		if ($vgMove->getInflictionId() !== null) {
+		if ($vgMove->getInflictionId()->value() !== InflictionId::NONE) {
 			$infliction = $this->vgMoveRepository->getInfliction(
 				$vgMove->getInflictionId(),
 				$languageId,

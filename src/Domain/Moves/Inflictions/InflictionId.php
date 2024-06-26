@@ -7,4 +7,5 @@ use Jp\Dex\Domain\EntityId;
 
 final class InflictionId extends EntityId
 {
+	public const NONE = 0;
 }

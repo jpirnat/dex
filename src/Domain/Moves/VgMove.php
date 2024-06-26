@@ -25,7 +25,7 @@ final readonly class VgMove
 		private int $priority,
 		private int $minHits,
 		private int $maxHits,
-		private ?InflictionId $inflictionId,
+		private InflictionId $inflictionId,
 		private int $inflictionPercent,
 		private int $minTurns,
 		private int $maxTurns,
@@ -137,7 +137,7 @@ final readonly class VgMove
 	/**
 	 * Get the version group move's infliction id.
 	 */
-	public function getInflictionId() : ?InflictionId
+	public function getInflictionId() : InflictionId
 	{
 		return $this->inflictionId;
 	}
