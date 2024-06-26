@@ -20,7 +20,7 @@ $start = '{start:\d{4}-\d{2}}';
 $end = '{end:\d{4}-\d{2}}';
 
 // Route definitions.
-$routes = [
+return [
 	['GET', '/', [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',
@@ -424,12 +424,3 @@ $routes = [
 		'middlewareClasses' => MiddlewareGroups::ERROR,
 	]],
 ];
-
-// Route dispatching.
-return \FastRoute\simpleDispatcher(
-	function (\FastRoute\RouteCollector $routeCollector) use ($routes) {
-		foreach ($routes as $route) {
-			$routeCollector->addRoute(...$route);
-		}
-	}
-);

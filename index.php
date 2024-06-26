@@ -33,7 +33,17 @@ $request = \Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 
 
 // Load route dispatcher.
-$routeDispatcher = require __DIR__ . '/config/routes.php';
+$routeDispatcher = \FastRoute\cachedDispatcher(
+	function (\FastRoute\RouteCollector $routeCollector) {
+		$routes = require __DIR__ . '/config/routes.php';
+		foreach ($routes as $route) {
+			$routeCollector->addRoute(...$route);
+		}
+	},
+	[
+		'cacheFile' => __DIR__ . '/config/cache/routes.php',
+	],
+);
 
 
 // Dispatch the route.
