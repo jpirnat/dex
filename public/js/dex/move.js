@@ -20,6 +20,7 @@ const app = new Vue({
 
 		hoverDamageDealt: null,
 
+		hasMultipleGens: false,
 		showOtherGens: false,
 	},
 	computed: {
@@ -81,6 +82,13 @@ const app = new Vue({
 
 				const showOtherGens = window.localStorage.getItem('dexMoveShowOtherGens') ?? 'false';
 				this.showOtherGens = JSON.parse(showOtherGens);
+
+				this.hasMultipleGens = false;
+				let gens = {};
+				this.learnsetVgs.forEach(vg => {
+					gens[vg.generationId] = 1;
+				});
+				this.hasMultipleGens = Object.keys(gens).length > 1;
 			}
 		});
 	},

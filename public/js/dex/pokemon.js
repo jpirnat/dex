@@ -20,6 +20,7 @@ const app = new Vue({
 
 		hoverDamageTaken: null,
 		damageTakenAbility: 'none',
+		hasMultipleGens: false,
 		showOtherGens: false,
 		showMoveDescriptions: true,
 	},
@@ -77,11 +78,18 @@ const app = new Vue({
 					this.damageTakenAbility = this.damageTakenAbilities[0].identifier;
 				}
 
-				const showOtherGens = window.localStorage.getItem('dexMoveShowOtherGens') ?? 'false';
+				const showOtherGens = window.localStorage.getItem('dexPokemonShowOtherGens') ?? 'false';
 				this.showOtherGens = JSON.parse(showOtherGens);
 
 				const showMoveDescriptions = window.localStorage.getItem('dexPokemonShowMoveDescriptions') ?? 'true';
 				this.showMoveDescriptions = JSON.parse(showMoveDescriptions);
+
+				this.hasMultipleGens = false;
+				let gens = {};
+				this.learnsetVgs.forEach(vg => {
+					gens[vg.generationId] = 1;
+				});
+				this.hasMultipleGens = Object.keys(gens).length > 1;
 			}
 		});
 	},

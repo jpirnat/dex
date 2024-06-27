@@ -202,7 +202,7 @@
 			</ul>
 		</nav>
 
-		<div>
+		<div v-if="hasMultipleGens">
 			<label>
 				<input type="checkbox" v-model="showOtherGens" @click="toggleOtherGens">
 				<template v-if="versionGroup.generationId > 1">Show older generation games</template>
