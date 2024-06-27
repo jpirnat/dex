@@ -221,6 +221,24 @@ a.button {
 
 
 /* dex */
+.dex-index__links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+}
+.dex-index__link {
+	border: 1px solid black;
+	height: 150px;
+	width: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+.dex-index__link:hover {
+	background-color: #eee;
+}
 
 .dex-page__title {
 	text-align: center;

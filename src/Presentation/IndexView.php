@@ -72,6 +72,21 @@ final readonly class IndexView
 	}
 
 	/**
+	 * Show the dex index page.
+	 */
+	public function dexIndex() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/index.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Dex',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the dex moves page.
 	 */
 	public function dexMoves() : ResponseInterface

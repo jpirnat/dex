@@ -29,6 +29,22 @@ return [
 		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
+	['GET', "/dex/$vgIdentifier", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'dexIndex',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$vgIdentifier", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexIndexController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\DexIndexView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
 	['GET', "/dex/$vgIdentifier/abilities", [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',

@@ -14,6 +14,8 @@ final class VersionGroupId extends EntityId
 	private const YELLOW = 4;
 	private const GOLD_SILVER = 5;
 	private const RUBY_SAPPHIRE = 7;
+	private const LETS_GO_PIKACHU_EEVEE = 19;
+	private const LEGENDS_ARCEUS = 22;
 
 	public function hasSpecialStat() : bool
 	{
@@ -26,6 +28,14 @@ final class VersionGroupId extends EntityId
 	}
 
 	public function hasAbilities() : bool
+	{
+		return $this->value() >= self::RUBY_SAPPHIRE
+			&& $this->value() !== self::LETS_GO_PIKACHU_EEVEE
+			&& $this->value() !== self::LEGENDS_ARCEUS
+		;
+	}
+
+	public function hasNatures() : bool
 	{
 		return $this->value() >= self::RUBY_SAPPHIRE;
 	}

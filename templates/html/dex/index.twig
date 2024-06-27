@@ -1,0 +1,40 @@
+{% extends "html/base.twig" %}
+
+{% block body %}
+{% verbatim %}
+<div id="app" v-cloak>
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
+	<div class="version-group-control" v-if="versionGroups.length">
+		<ul>
+			<li v-for="vg in versionGroups">
+				<a :href="'/dex/' + vg.identifier"
+					:class="{
+						'current': vg.identifier === versionGroup.identifier
+					}"
+				>{{ vg.name }}</a>
+			</li>
+		</ul>
+	</div>
+
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
+
+	<div v-if="loaded" class="dex-index__links">
+		<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/pokemon'">Pokémon</a>
+		<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/moves'">Moves</a>
+		<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/types'">Types</a>
+		<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/abilities'" v-if="showAbilities">Abilities</a>
+		<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/natures'" v-if="showNatures">Natures</a>
+	</div>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7"></script>
+	<script src="/js/dex-breadcrumbs.js"></script>
+
+	<script src="/js/dex/index.js"></script>
+{% endblock %}
