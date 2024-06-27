@@ -15,6 +15,7 @@ final class MoveMethodId extends EntityId
 	public const LIGHT_BALL = 6;
 	public const FORM_CHANGE = 7;
 	public const EVOLUTION = 8;
+	public const REMINDER = 10;
 	public const SHADOW = 101;
 	public const PURIFICATION = 102;
 }

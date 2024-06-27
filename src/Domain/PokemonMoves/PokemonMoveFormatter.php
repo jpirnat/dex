@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\PokemonMoves;
 
+use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemId;
-use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
@@ -14,7 +14,7 @@ final readonly class PokemonMoveFormatter
 {
 	public function __construct(
 		private TmRepositoryInterface $tmRepository,
-		private ItemNameRepositoryInterface $itemNameRepository,
+		private ItemDescriptionRepositoryInterface $itemDescriptionRepository,
 		private MoveNameRepositoryInterface $moveNameRepository,
 	) {}
 
@@ -38,7 +38,8 @@ final readonly class PokemonMoveFormatter
 				$pokemonMove->getMoveId(),
 			);
 
-			$itemName = $this->itemNameRepository->getByLanguageAndItem(
+			$itemName = $this->itemDescriptionRepository->getByItem(
+				$pokemonMove->getVersionGroupId(),
 				$languageId,
 				$tm->getItemId(),
 			);
@@ -64,7 +65,8 @@ final readonly class PokemonMoveFormatter
 		}
 
 		if ($method === MoveMethodId::LIGHT_BALL) {
-			$itemName = $this->itemNameRepository->getByLanguageAndItem(
+			$itemName = $this->itemDescriptionRepository->getByItem(
+				$pokemonMove->getVersionGroupId(),
 				$languageId,
 				new ItemId(ItemId::LIGHT_BALL),
 			);
@@ -78,6 +80,10 @@ final readonly class PokemonMoveFormatter
 
 		if ($method === MoveMethodId::EVOLUTION) {
 			return 'Evolution';
+		}
+
+		if ($method === MoveMethodId::REMINDER) {
+			return 'Move Reminder';
 		}
 
 		if ($method === MoveMethodId::SHADOW) {
