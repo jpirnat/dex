@@ -25,7 +25,7 @@ final readonly class StatNameModel
 	) : array {
 		$statNames = $this->statNameRepository->getByLanguage($languageId);
 
-		if ($versionGroupId->value() <= VersionGroupId::YELLOW) {
+		if ($versionGroupId->hasSpecialStat()) {
 			// Not every language has a canon name for gen 1's Special stat.
 			$special = new StatName(
 				new LanguageId(LanguageId::ENGLISH),
