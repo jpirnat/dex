@@ -53,7 +53,8 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 			"SELECT
 				`generation_id`
 			FROM `version_groups`
-			WHERE `id` = $versionGroupId"
+			WHERE `id` = $versionGroupId
+			LIMIT 1"
 		);
 		return $stmt->fetchColumn();
 	}
@@ -103,16 +104,16 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 	 * Get Pokémon that share at least one egg group with the current Pokemon,
 	 * and are not in any of the previously traversed egg groups.
 	 *
+	 * @param int $versionGroupId
 	 * @param int $pokemonId
-	 * @param int $generationId
 	 * @param string $eggGroups An imploded int[] of egg group ids.
 	 * @param string $excludeEggGroups An imploded int[] of egg group ids.
 	 *
 	 * @return array
 	 */
 	public function getInSameEggGroupIds(
+		int $versionGroupId,
 		int $pokemonId,
-		int $generationId,
 		string $eggGroups,
 		string $excludeEggGroups,
 	) : array {
@@ -123,18 +124,31 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 			WHERE `is_battle_only` = 0
 			AND `pokemon_id` <> $pokemonId
 			AND `pokemon_id` IN (
+				# Make sure the Pokémon is in the same game as the egg move.
 				SELECT
-					`pokemon_id`
-				FROM `pokemon_egg_groups`
-				WHERE `egg_group_id` IN ($eggGroups)
-					AND `generation_id` = $generationId
+					`f`.`pokemon_id`
+				FROM `version_group_forms` AS `vgf`
+				INNER JOIN `forms` AS `f`
+					ON `vgf`.`form_id` = `f`.`id`
+				WHERE `vgf`.`version_group_id` = $versionGroupId
+			)
+			AND `pokemon_id` IN (
+				SELECT
+					`peg`.`pokemon_id`
+				FROM `pokemon_egg_groups` AS `peg`
+				INNER JOIN `version_groups` AS `vg`
+					ON `peg`.`generation_id` = `vg`.`generation_id`
+				WHERE `peg`.`egg_group_id` IN ($eggGroups)
+					AND `vg`.`id` = $versionGroupId
 			)
 			AND `pokemon_id` NOT IN (
 				SELECT
-					`pokemon_id`
-				FROM `pokemon_egg_groups`
-				WHERE `egg_group_id` IN ($excludeEggGroups)
-					AND `generation_id` = $generationId
+					`peg`.`pokemon_id`
+				FROM `pokemon_egg_groups` AS `peg`
+				INNER JOIN `version_groups` AS `vg`
+					ON `peg`.`generation_id` = `vg`.`generation_id`
+				WHERE `peg`.`egg_group_id` IN ($excludeEggGroups)
+					AND `vg`.`id` = $versionGroupId
 			)
 			AND `pokemon_id` NOT IN (
 				SELECT
@@ -151,14 +165,14 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 	 * have at least one egg group not shared with the current Pokémon, and are
 	 * not in any of the previously traversed egg groups.
 	 *
-	 * @param int $generationId
+	 * @param int $versionGroupId
 	 * @param string $eggGroups An imploded int[] of egg group ids.
 	 * @param string $excludeEggGroups An imploded int[] of egg group ids.
 	 *
 	 * @return array
 	 */
 	public function getInOtherEggGroupIds(
-		int $generationId,
+		int $versionGroupId,
 		string $eggGroups,
 		string $excludeEggGroups,
 	) : array {
@@ -168,25 +182,40 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 			FROM `forms`
 			WHERE `is_battle_only` = 0
 			AND `pokemon_id` IN (
+				# Make sure the Pokémon is in the same game as the egg move.
 				SELECT
-					`pokemon_id`
-				FROM `pokemon_egg_groups`
-				WHERE `egg_group_id` IN ($eggGroups)
-					AND `generation_id` = $generationId
+					`f`.`pokemon_id`
+				FROM `version_group_forms` AS `vgf`
+				INNER JOIN `forms` AS `f`
+					ON `vgf`.`form_id` = `f`.`id`
+				WHERE `vgf`.`version_group_id` = $versionGroupId
 			)
 			AND `pokemon_id` IN (
 				SELECT
-					`pokemon_id`
-				FROM `pokemon_egg_groups`
-				WHERE `egg_group_id` NOT IN ($eggGroups)
-					AND `generation_id` = $generationId
+					`peg`.`pokemon_id`
+				FROM `pokemon_egg_groups` AS `peg`
+				INNER JOIN `version_groups` AS `vg`
+					ON `peg`.`generation_id` = `vg`.`generation_id`
+				WHERE `peg`.`egg_group_id` IN ($eggGroups)
+					AND `vg`.`id` = $versionGroupId
+			)
+			AND `pokemon_id` IN (
+				SELECT
+					`peg`.`pokemon_id`
+				FROM `pokemon_egg_groups` AS `peg`
+				INNER JOIN `version_groups` AS `vg`
+					ON `peg`.`generation_id` = `vg`.`generation_id`
+				WHERE `peg`.`egg_group_id` NOT IN ($eggGroups)
+					AND `vg`.`id` = $versionGroupId
 			)
 			AND `pokemon_id` NOT IN (
 				SELECT
-					`pokemon_id`
-				FROM `pokemon_egg_groups`
-				WHERE `egg_group_id` IN ($excludeEggGroups)
-					AND `generation_id` = $generationId
+					`peg`.`pokemon_id`
+				FROM `pokemon_egg_groups` AS `peg`
+				INNER JOIN `version_groups` AS `vg`
+					ON `peg`.`generation_id` = `vg`.`generation_id`
+				WHERE `peg`.`egg_group_id` IN ($excludeEggGroups)
+					AND `vg`.`id` = $versionGroupId
 			)
 			AND `pokemon_id` NOT IN (
 				SELECT
@@ -202,24 +231,18 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 	 * Get Pokémon that learn this move by non-egg between gen 3 and the current
 	 * generation, and have no other egg groups.
 	 *
-	 * @param int $generationId
+	 * @param int $versionGroupId
 	 * @param int $moveId
 	 * @param string $inSameEggGroup An imploded int[] of Pokémon ids.
 	 *
 	 * @return array
 	 */
 	public function getByNonEgg(
-		int $generationId,
+		int $versionGroupId,
 		int $moveId,
 		string $inSameEggGroup,
 	) : array {
 		$egg = MoveMethodId::EGG;
-
-		// If we're in gen 2, search only gen 2. If we're beyond gen 2, search
-		// as far back as gen 3.
-		$startGenerationId = $generationId === 2
-			? 2
-			: 3;
 
 		$stmt = $this->db->query(
 			"SELECT
@@ -232,12 +255,17 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 			FROM `pokemon_moves` AS `pm`
 			INNER JOIN `version_groups` AS `vg`
 				ON `pm`.`version_group_id` = `vg`.`id`
-			WHERE `vg`.`generation_id` BETWEEN $startGenerationId AND $generationId
+			WHERE `pm`.`version_group_id` IN (
+				SELECT
+					`from_vg_id`
+				FROM `vg_move_transfers`
+				WHERE `into_vg_id` = $versionGroupId
+			)
 				AND `move_id` = $moveId
 				AND `pm`.`move_method_id` <> $egg
 				AND `pm`.`pokemon_id` IN ($inSameEggGroup)
 			ORDER BY
-				`generation_id` DESC,
+				`vg`.`sort` DESC,
 				`vg`.`breeding_priority`"
 		);
 		// Prioritize newer generations, and newer versions within those
@@ -249,24 +277,18 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 	 * Get Pokémon that learn this move by egg between gen 3 and the current
 	 * generation, and have another egg group.
 	 *
-	 * @param int $generationId
+	 * @param int $versionGroupId
 	 * @param int $moveId
 	 * @param string $inOtherEggGroup An imploded int[] of Pokémon ids.
 	 *
 	 * @return array
 	 */
 	public function getByEgg(
-		int $generationId,
+		int $versionGroupId,
 		int $moveId,
 		string $inOtherEggGroup,
 	) : array {
 		$egg = MoveMethodId::EGG;
-
-		// If we're in gen 2, search only gen 2. If we're beyond gen 2, search
-		// as far back as gen 3.
-		$startGenerationId = $generationId === 2
-			? 2
-			: 3;
 
 		$stmt = $this->db->query(
 			"SELECT
@@ -279,7 +301,12 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 			FROM `pokemon_moves` AS `pm`
 			INNER JOIN `version_groups` AS `vg`
 				ON `pm`.`version_group_id` = `vg`.`id`
-			WHERE `vg`.`generation_id` BETWEEN $startGenerationId AND $generationId
+			WHERE `pm`.`version_group_id` IN (
+				SELECT
+					`from_vg_id`
+				FROM `vg_move_transfers`
+				WHERE `into_vg_id` = $versionGroupId
+			)
 				AND `move_id` = $moveId
 				AND `pm`.`move_method_id` = $egg
 				AND `pm`.`pokemon_id` IN ($inOtherEggGroup)

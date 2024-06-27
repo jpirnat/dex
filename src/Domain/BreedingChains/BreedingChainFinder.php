@@ -27,9 +27,9 @@ final class BreedingChainFinder
 	 * @return PokemonMove[][]
 	 */
 	public function findChains(
+		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
 		MoveId $moveId,
-		VersionGroupId $versionGroupId,
 	) : array {
 		$pokemonId = $pokemonId->value();
 		$moveId = $moveId->value();
@@ -38,7 +38,7 @@ final class BreedingChainFinder
 		// Set female-only Pokémon introduced prior to gen 6.
 		$this->femaleOnlyPokemonIds = $this->breedingChainQueries->getFemaleOnlyPokemon();
 
-		$breedingTree = $this->realFindChains($pokemonId, $moveId, $versionGroupId, [0]);
+		$breedingTree = $this->realFindChains($versionGroupId, $pokemonId, $moveId, [0]);
 
 		// Flatten the tree structure into arrays.
 		$chains = $breedingTree->getChains();
@@ -60,9 +60,9 @@ final class BreedingChainFinder
 	 * @param int[] $excludeEggGroupIds
 	 */
 	private function realFindChains(
+		int $versionGroupId,
 		int $pokemonId,
 		int $moveId,
-		int $versionGroupId,
 		array $excludeEggGroupIds,
 	) : BreedingTree {
 		$breedingTree = new BreedingTree(new PokemonMove(
@@ -95,14 +95,19 @@ final class BreedingChainFinder
 			}
 		}
 
+		// BUG FIX - Make sure the array is initialized for the queries.
+		if ($eggGroupIds === []) {
+			$eggGroupIds = [0];
+		}
+
 		$eggGroups = implode(', ', $eggGroupIds);
 		$excludeEggGroups = implode(', ', $excludeEggGroupIds);
 
 		// Get Pokémon that share at least one egg group with the current
 		// Pokémon, and are not in any of the previously traversed egg groups.
 		$inSameEggGroupIds = $this->breedingChainQueries->getInSameEggGroupIds(
+			$versionGroupId,
 			$pokemonId,
-			$generationId,
 			$eggGroups,
 			$excludeEggGroups,
 		);
@@ -111,13 +116,15 @@ final class BreedingChainFinder
 		// Pokémon, have at least one egg group not shared with the current
 		// Pokémon, and are not in any of the previously traversed egg groups.
 		$inOtherEggGroupIds = $this->breedingChainQueries->getInOtherEggGroupIds(
-			$generationId,
+			$versionGroupId,
 			$eggGroups,
 			$excludeEggGroups,
 		);
 
-		// BUG FIX - If there are no Pokémon in other egg groups, initialize the
-		// array anyway just so the query later on doesn't break.
+		// BUG FIX - Make sure the arrays are initialized for the queries.
+		if ($inSameEggGroupIds === []) {
+			$inSameEggGroupIds = [0];
+		}
 		if ($inOtherEggGroupIds === []) {
 			$inOtherEggGroupIds = [0];
 		}
@@ -128,7 +135,7 @@ final class BreedingChainFinder
 		// Get other Pokémon that learn this move by non-egg between gen 3 and
 		// the current generation, and have no other egg groups.
 		$pokemonMoves = $this->breedingChainQueries->getByNonEgg(
-			$generationId,
+			$versionGroupId,
 			$moveId,
 			$inSameEggGroup,
 		);
@@ -169,7 +176,7 @@ final class BreedingChainFinder
 		// Get other Pokémon that learn this move by egg between gen 3 and the
 		// current generation, and have another egg group.
 		$pokemonMoves = $this->breedingChainQueries->getByEgg(
-			$generationId,
+			$versionGroupId,
 			$moveId,
 			$inOtherEggGroup,
 		);
@@ -191,9 +198,9 @@ final class BreedingChainFinder
 			// This Pokémon learns the move by egg. Recursively find its own
 			// breeding chains.
 			$extendedTree = $this->realFindChains(
+				$pokemonMove['versionGroupId'],
 				$pokemonMove['pokemonId'],
 				$moveId,
-				$pokemonMove['versionGroupId'],
 				array_merge($excludeEggGroupIds, $eggGroupIds),
 			);
 

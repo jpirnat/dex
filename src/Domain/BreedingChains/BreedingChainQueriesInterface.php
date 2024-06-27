@@ -45,16 +45,16 @@ interface BreedingChainQueriesInterface
 	 * Get Pokémon that share at least one egg group with the current Pokemon,
 	 * and are not in any of the previously traversed egg groups.
 	 *
+	 * @param int $versionGroupId
 	 * @param int $pokemonId
-	 * @param int $generationId
 	 * @param string $eggGroups An imploded int[] of egg group ids.
 	 * @param string $excludeEggGroups An imploded int[] of egg group ids.
 	 *
 	 * @return array
 	 */
 	public function getInSameEggGroupIds(
+		int $versionGroupId,
 		int $pokemonId,
-		int $generationId,
 		string $eggGroups,
 		string $excludeEggGroups,
 	) : array;
@@ -64,14 +64,14 @@ interface BreedingChainQueriesInterface
 	 * have at least one egg group not shared with the current Pokémon, and are
 	 * not in any of the previously traversed egg groups.
 	 *
-	 * @param int $generationId
+	 * @param int $versionGroupId
 	 * @param string $eggGroups An imploded int[] of egg group ids.
 	 * @param string $excludeEggGroups An imploded int[] of egg group ids.
 	 *
 	 * @return array
 	 */
 	public function getInOtherEggGroupIds(
-		int $generationId,
+		int $versionGroupId,
 		string $eggGroups,
 		string $excludeEggGroups,
 	) : array;
@@ -80,14 +80,14 @@ interface BreedingChainQueriesInterface
 	 * Get Pokémon that learn this move by non-egg between gen 3 and the current
 	 * generation, and have no other egg groups.
 	 *
-	 * @param int $generationId
+	 * @param int $versionGroupId
 	 * @param int $moveId
 	 * @param string $inSameEggGroup An imploded int[] of Pokémon ids.
 	 *
 	 * @return array
 	 */
 	public function getByNonEgg(
-		int $generationId,
+		int $versionGroupId,
 		int $moveId,
 		string $inSameEggGroup,
 	) : array;
@@ -96,14 +96,14 @@ interface BreedingChainQueriesInterface
 	 * Get Pokémon that learn this move by egg between gen 3 and the current
 	 * generation, and have another egg group.
 	 *
-	 * @param int $generationId
+	 * @param int $versionGroupId
 	 * @param int $moveId
 	 * @param string $inOtherEggGroup An imploded int[] of Pokémon ids.
 	 *
 	 * @return array
 	 */
 	public function getByEgg(
-		int $generationId,
+		int $versionGroupId,
 		int $moveId,
 		string $inOtherEggGroup,
 	) : array;
