@@ -36,7 +36,7 @@ final readonly class DexPokemonView
 		$damageTaken = $dexPokemonMatchupsModel->getDamageTaken();
 		$damageTakenAbilities = $dexPokemonMatchupsModel->getAbilities();
 
-		$showMoveDescriptions = $versionGroup->getGenerationId()->value() >= 3;
+		$showMoveDescriptions = $versionGroup->getId()->hasMoveDescriptions();
 
 		$dexPokemonMovesModel = $this->dexPokemonModel->getDexPokemonMovesModel();
 		$learnsetVgs = $dexPokemonMovesModel->getLearnsetVgs();

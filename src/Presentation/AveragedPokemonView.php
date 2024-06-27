@@ -140,7 +140,7 @@ final readonly class AveragedPokemonView
 				'stats' => $stats,
 
 				// The main data.
-				'showAbilities' => $generation->getId()->value() >= 3,
+				'showAbilities' => $versionGroup->getId()->hasAbilities(),
 				'showItems' => $generation->getId()->value() >= 2,
 				'abilities' => $abilities,
 				'items' => $items,

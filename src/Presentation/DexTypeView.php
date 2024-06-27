@@ -30,11 +30,11 @@ final readonly class DexTypeView
 		$damageTaken = $this->dexTypeModel->getDamageTaken();
 
 		$stats = $this->dexTypeModel->getStats();
-		$showAbilities = $versionGroup->getGenerationId()->value() >= 3;
+		$showAbilities = $versionGroup->getId()->hasAbilities();
 		$pokemon = $this->dexTypeModel->getPokemon();
 		$pokemon = $this->dexFormatter->formatDexPokemon($pokemon);
 
-		$showMoveDescriptions = $versionGroup->getGenerationId()->value() >= 3;
+		$showMoveDescriptions = $versionGroup->getId()->hasMoveDescriptions();
 		$moves = $this->dexTypeModel->getMoves();
 		$moves = $this->dexFormatter->formatDexMoves($moves);
 
