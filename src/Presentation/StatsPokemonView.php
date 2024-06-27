@@ -214,7 +214,7 @@ final readonly class StatsPokemonView
 
 				// The main data.
 				'showAbilities' => $versionGroup->getId()->hasAbilities(),
-				'showItems' => $generation->getId()->value() >= 2,
+				'showItems' => $versionGroup->getId()->hasHeldItems(),
 				'abilities' => $abilities,
 				'items' => $items,
 				'spreads' => $spreads,
