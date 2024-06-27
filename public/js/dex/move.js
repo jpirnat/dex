@@ -48,7 +48,7 @@ const app = new Vue({
 			}
 
 			return this.methods.filter(m => {
-				return this.visibleVersionGroups.some(vg => m.pokemons.some(p => p.vgData[vg.identifier]));
+				return this.visibleVersionGroups.some(vg => m.pokemons.some(p => vg.identifier in p.vgData));
 			});
 		}
 	},

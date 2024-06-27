@@ -38,7 +38,7 @@ Vue.component('dex-move-method-pokemons', {
 			return 4 + this.versionGroups.length + this.stats.length + (this.showAbilities ? 1 : 0);
 		},
 		visiblePokemons() {
-			return this.method.pokemons.filter(p => this.versionGroups.some(vg => p.vgData[vg.identifier]));
+			return this.method.pokemons.filter(p => this.versionGroups.some(vg => vg.identifier in p.vgData));
 		},
 	},
 	template: `

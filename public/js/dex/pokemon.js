@@ -41,7 +41,7 @@ const app = new Vue({
 			}
 
 			return this.methods.filter(m => {
-				return this.visibleVersionGroups.some(vg => m.moves.some(mo => mo.vgData[vg.identifier]));
+				return this.visibleVersionGroups.some(vg => m.moves.some(mo => vg.identifier in mo.vgData));
 			});
 		}
 	},
