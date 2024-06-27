@@ -23,9 +23,6 @@ final readonly class DexIndexView
 		$versionGroup = $versionGroupModel->getVersionGroup();
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
-		$showAbilities = $this->dexIndexModel->getShowAbilities();
-		$showNatures = $this->dexIndexModel->getShowNatures();
-
 		// Navigational breadcrumbs.
 		$breadcrumbs = [[
 			'text' => 'Dex',
@@ -40,8 +37,8 @@ final readonly class DexIndexView
 				'breadcrumbs' => $breadcrumbs,
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
-				'showAbilities' => $showAbilities,
-				'showNatures' => $showNatures,
+				'showAbilities' => $versionGroup->getId()->hasAbilities(),
+				'showNatures' => $versionGroup->getId()->hasNatures(),
 			]
 		]);
 	}

@@ -23,7 +23,6 @@ final readonly class DexMovesView
 		$versionGroup = $versionGroupModel->getVersionGroup();
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
-		$showMoveDescriptions = $versionGroup->getId()->hasMoveDescriptions();
 		$moves = $this->dexMovesModel->getMoves();
 
 		// Navigational breadcrumbs.
@@ -43,7 +42,7 @@ final readonly class DexMovesView
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'moves' => $this->dexFormatter->formatDexMoves($moves),
-				'showMoveDescriptions' => $showMoveDescriptions,
+				'showMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
 			]
 		]);
 	}

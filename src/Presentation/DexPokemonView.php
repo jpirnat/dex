@@ -36,8 +36,6 @@ final readonly class DexPokemonView
 		$damageTaken = $dexPokemonMatchupsModel->getDamageTaken();
 		$damageTakenAbilities = $dexPokemonMatchupsModel->getAbilities();
 
-		$showMoveDescriptions = $versionGroup->getId()->hasMoveDescriptions();
-
 		$dexPokemonMovesModel = $this->dexPokemonModel->getDexPokemonMovesModel();
 		$learnsetVgs = $dexPokemonMovesModel->getLearnsetVgs();
 		$methods = $dexPokemonMovesModel->getMethods();
@@ -153,7 +151,7 @@ final readonly class DexPokemonView
 
 				'methods' => $this->formatDexPokemonMoveMethods($methods),
 				'learnsetVgs' => $this->dexFormatter->formatDexVersionGroups($learnsetVgs),
-				'showMoveDescriptions' => $showMoveDescriptions,
+				'showMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
 			]
 		]);
 	}

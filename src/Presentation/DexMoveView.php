@@ -35,8 +35,6 @@ final readonly class DexMoveView
 		$statChanges = $this->dexMoveModel->getStatChanges();
 		$flags = $this->dexMoveModel->getFlags();
 
-		$showAbilities = $versionGroup->getId()->hasAbilities();
-
 		$dexMovePokemonModel = $this->dexMoveModel->getDexMovePokemonModel();
 		$learnsetVgs = $dexMovePokemonModel->getLearnsetVgs();
 		$stats = $dexMovePokemonModel->getStats();
@@ -82,7 +80,7 @@ final readonly class DexMoveView
 
 				'methods' => $this->formatDexMovePokemonMethods($methods),
 				'learnsetVgs' => $this->dexFormatter->formatDexVersionGroups($learnsetVgs),
-				'showAbilities' => $showAbilities,
+				'showAbilities' => $versionGroup->getId()->hasAbilities(),
 				'stats' => $stats,
 			]
 		]);
