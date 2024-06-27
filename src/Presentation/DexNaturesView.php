@@ -15,9 +15,9 @@ final readonly class DexNaturesView
 	) {}
 
 	/**
-	 * Show the dex natures page.
+	 * Get data for the dex natures page.
 	 */
-	public function index() : ResponseInterface
+	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexNaturesModel->getVersionGroupModel();
 		$versionGroup = $versionGroupModel->getVersionGroup();

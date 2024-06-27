@@ -16,10 +16,9 @@ final readonly class StatsMonthView
 	) {}
 
 	/**
-	 * Get the formats list to recreate a stats month directory, such as
-	 * http://www.smogon.com/stats/2014-11.
+	 * Get data for the stats month page.
 	 */
-	public function index() : ResponseInterface
+	public function getData() : ResponseInterface
 	{
 		$formatter = $this->formatterFactory->createFor(
 			$this->statsMonthModel->getLanguageId()

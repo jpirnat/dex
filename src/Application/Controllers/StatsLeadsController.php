@@ -15,8 +15,7 @@ final readonly class StatsLeadsController
 	) {}
 
 	/**
-	 * Get leads data to recreate a stats leads file, such as
-	 * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
+	 * Set data for the stats leads page.
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{

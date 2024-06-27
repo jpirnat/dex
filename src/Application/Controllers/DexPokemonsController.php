@@ -15,9 +15,9 @@ final readonly class DexPokemonsController
 	) {}
 
 	/**
-	 * Show the dex Pokémons page.
+	 * Set data for the dex Pokémons page.
 	 */
-	public function index(ServerRequestInterface $request) : void
+	public function setData(ServerRequestInterface $request) : void
 	{
 		$this->baseController->setBaseVariables($request);
 

@@ -22,9 +22,9 @@ final readonly class StatsChartView
 	) {}
 
 	/**
-	 * Set data for the /stats/chart page.
+	 * Get data for the stats chart page.
 	 */
-	public function ajax() : ResponseInterface
+	public function getData() : ResponseInterface
 	{
 		$trendLines = $this->statsChartModel->getTrendLines();
 

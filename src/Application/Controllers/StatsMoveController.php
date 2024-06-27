@@ -15,7 +15,7 @@ final readonly class StatsMoveController
 	) {}
 
 	/**
-	 * Get usage data to create a list of Pokémon who use a specific move.
+	 * Set data for the stats move page.
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{

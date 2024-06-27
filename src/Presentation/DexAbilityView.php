@@ -15,9 +15,9 @@ final readonly class DexAbilityView
 	) {}
 
 	/**
-	 * Show the dex ability page.
+	 * Get data for the dex ability page.
 	 */
-	public function index() : ResponseInterface
+	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexAbilityModel->getVersionGroupModel();
 		$versionGroup = $versionGroupModel->getVersionGroup();

@@ -20,7 +20,7 @@ final readonly class AveragedPokemonView
 	) {}
 
 	/**
-	 * Get individual Pokémon usage data averaged over multiple months.
+	 * Set data for the stats averaged Pokémon page.
 	 */
 	public function getData() : ResponseInterface
 	{

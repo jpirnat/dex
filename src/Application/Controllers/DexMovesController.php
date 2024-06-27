@@ -15,9 +15,9 @@ final readonly class DexMovesController
 	) {}
 
 	/**
-	 * Show the dex moves page.
+	 * Set data for the dex moves page.
 	 */
-	public function index(ServerRequestInterface $request) : void
+	public function setData(ServerRequestInterface $request) : void
 	{
 		$this->baseController->setBaseVariables($request);
 

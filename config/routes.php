@@ -39,9 +39,9 @@ return [
 
 	['GET', "/data/dex/$vgIdentifier/abilities", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexAbilitiesController::class,
-		'controllerMethod' => 'index',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\DexAbilitiesView::class,
-		'viewMethod' => 'index',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
@@ -55,9 +55,9 @@ return [
 
 	['GET', "/data/dex/$vgIdentifier/abilities/$abilityIdentifier", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexAbilityController::class,
-		'controllerMethod' => 'index',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\DexAbilityView::class,
-		'viewMethod' => 'index',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
@@ -71,9 +71,9 @@ return [
 
 	['GET', "/data/dex/$vgIdentifier/moves", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexMovesController::class,
-		'controllerMethod' => 'index',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\DexMovesView::class,
-		'viewMethod' => 'index',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
@@ -87,9 +87,9 @@ return [
 
 	['GET', "/data/dex/$vgIdentifier/moves/$moveIdentifier", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexMoveController::class,
-		'controllerMethod' => 'index',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\DexMoveView::class,
-		'viewMethod' => 'index',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
@@ -103,9 +103,9 @@ return [
 
 	['GET', "/data/dex/$vgIdentifier/natures", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexNaturesController::class,
-		'controllerMethod' => 'index',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\DexNaturesView::class,
-		'viewMethod' => 'index',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
@@ -119,9 +119,9 @@ return [
 
 	['GET', "/data/dex/$vgIdentifier/pokemon", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexPokemonsController::class,
-		'controllerMethod' => 'index',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\DexPokemonsView::class,
-		'viewMethod' => 'index',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
@@ -135,9 +135,9 @@ return [
 
 	['GET', "/data/dex/$vgIdentifier/pokemon/$pokemonIdentifier", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexPokemonController::class,
-		'controllerMethod' => 'index',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\DexPokemonView::class,
-		'viewMethod' => 'index',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
@@ -151,9 +151,9 @@ return [
 
 	['GET', "/data/dex/$vgIdentifier/types", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexTypesController::class,
-		'controllerMethod' => 'index',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\DexTypesView::class,
-		'viewMethod' => 'index',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
@@ -167,9 +167,9 @@ return [
 
 	['GET', "/data/dex/$vgIdentifier/types/$typeIdentifier", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexTypeController::class,
-		'controllerMethod' => 'index',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\DexTypeView::class,
-		'viewMethod' => 'index',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
@@ -183,9 +183,9 @@ return [
 
 	['GET', "/data/dex/$vgIdentifier/pokemon/$pokemonIdentifier/breeding/$moveIdentifier", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\BreedingChainsController::class,
-		'controllerMethod' => 'index',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\BreedingChainsView::class,
-		'viewMethod' => 'index',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
@@ -199,9 +199,9 @@ return [
 
 	['GET', '/data/stats', [
 		'controllerClass' => \Jp\Dex\Application\Controllers\StatsIndexController::class,
-		'controllerMethod' => 'index',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\StatsIndexView::class,
-		'viewMethod' => 'index',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
@@ -215,9 +215,9 @@ return [
 
 	['GET', "/data/stats/$month", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\StatsMonthController::class,
-		'controllerMethod' => 'index',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\StatsMonthView::class,
-		'viewMethod' => 'index',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
@@ -393,9 +393,9 @@ return [
 
 	['POST', '/stats/chart', [
 		'controllerClass' => \Jp\Dex\Application\Controllers\StatsChartController::class,
-		'controllerMethod' => 'ajax',
+		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\StatsChartView::class,
-		'viewMethod' => 'ajax',
+		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 

@@ -19,7 +19,7 @@ final readonly class AveragedLeadsView
 	) {}
 
 	/**
-	 * Get leads data averaged over multiple months.
+	 * Get data for the stats averaged leads page.
 	 */
 	public function getData() : ResponseInterface
 	{

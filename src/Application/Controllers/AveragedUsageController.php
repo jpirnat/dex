@@ -15,7 +15,7 @@ final readonly class AveragedUsageController
 	) {}
 
 	/**
-	 * Get usage data averaged over multiple months.
+	 * Set data for the stats averaged usage page.
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{

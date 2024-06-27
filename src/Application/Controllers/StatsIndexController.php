@@ -14,9 +14,9 @@ final readonly class StatsIndexController
 	) {}
 
 	/**
-	 * Show the /stats page.
+	 * Set data for the stats index page.
 	 */
-	public function index(ServerRequestInterface $request) : void
+	public function setData(ServerRequestInterface $request) : void
 	{
 		$this->baseController->setBaseVariables($request);
 

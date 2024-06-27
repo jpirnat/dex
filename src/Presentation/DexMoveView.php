@@ -17,9 +17,9 @@ final readonly class DexMoveView
 	) {}
 
 	/**
-	 * Show the dex move page.
+	 * Get data for the dex move page.
 	 */
-	public function index() : ResponseInterface
+	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexMoveModel->getVersionGroupModel();
 		$versionGroup = $versionGroupModel->getVersionGroup();

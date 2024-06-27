@@ -15,7 +15,7 @@ final readonly class StatsAbilityController
 	) {}
 
 	/**
-	 * Get usage data to create a list of Pokémon who use a specific ability.
+	 * Set data for the stats ability page.
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{

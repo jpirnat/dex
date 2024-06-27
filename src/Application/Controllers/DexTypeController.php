@@ -15,9 +15,9 @@ final readonly class DexTypeController
 	) {}
 
 	/**
-	 * Show the dex type page.
+	 * Set data for the dex type page.
 	 */
-	public function index(ServerRequestInterface $request) : void
+	public function setData(ServerRequestInterface $request) : void
 	{
 		$this->baseController->setBaseVariables($request);
 

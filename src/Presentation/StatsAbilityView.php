@@ -16,7 +16,7 @@ final readonly class StatsAbilityView
 	) {}
 
 	/**
-	 * Get usage data to create a list of Pokémon who use a specific ability.
+	 * Get data for the stats ability page.
 	 */
 	public function getData() : ResponseInterface
 	{

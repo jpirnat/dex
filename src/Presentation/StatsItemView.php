@@ -16,7 +16,7 @@ final readonly class StatsItemView
 	) {}
 
 	/**
-	 * Get usage data to create a list of Pokémon who use a specific item.
+	 * Get data for the stats item page.
 	 */
 	public function getData() : ResponseInterface
 	{

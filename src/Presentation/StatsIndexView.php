@@ -15,9 +15,9 @@ final readonly class StatsIndexView
 	) {}
 
 	/**
-	 * Show the /stats page.
+	 * Get data for the stats index page.
 	 */
-	public function index() : ResponseInterface
+	public function getData() : ResponseInterface
 	{
 		// Get months. Sort by year ascending, month ascending.
 		$months = $this->statsIndexModel->getMonths();

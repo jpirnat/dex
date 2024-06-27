@@ -16,9 +16,9 @@ final readonly class BreedingChainsView
 	) {}
 
 	/**
-	 * Show the breeding chains page.
+	 * Get data for the breeding chains page.
 	 */
-	public function index() : ResponseInterface
+	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->breedingChainsModel->getVersionGroupModel();
 		$versionGroup = $versionGroupModel->getVersionGroup();

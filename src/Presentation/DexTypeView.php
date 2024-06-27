@@ -15,9 +15,9 @@ final readonly class DexTypeView
 	) {}
 
 	/**
-	 * Show the dex type page.
+	 * Get data for the dex type page.
 	 */
-	public function index() : ResponseInterface
+	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexTypeModel->getVersionGroupModel();
 		$versionGroup = $versionGroupModel->getVersionGroup();

@@ -15,9 +15,9 @@ final readonly class DexPokemonsView
 	) {}
 
 	/**
-	 * Show the dex Pokémons page.
+	 * Get data for the dex Pokémons page.
 	 */
-	public function index() : ResponseInterface
+	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexPokemonsModel->getVersionGroupModel();
 		$versionGroup = $versionGroupModel->getVersionGroup();

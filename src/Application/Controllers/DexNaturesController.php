@@ -15,9 +15,9 @@ final readonly class DexNaturesController
 	) {}
 
 	/**
-	 * Show the dex natures page.
+	 * Set data for the dex natures page.
 	 */
-	public function index(ServerRequestInterface $request) : void
+	public function setData(ServerRequestInterface $request) : void
 	{
 		$this->baseController->setBaseVariables($request);
 

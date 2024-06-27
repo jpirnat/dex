@@ -19,7 +19,7 @@ final readonly class AveragedUsageView
 	) {}
 
 	/**
-	 * Get usage data averaged over multiple months.
+	 * Get data for the stats averaged usage page.
 	 */
 	public function getData() : ResponseInterface
 	{

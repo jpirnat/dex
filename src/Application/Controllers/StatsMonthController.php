@@ -15,10 +15,9 @@ final readonly class StatsMonthController
 	) {}
 
 	/**
-	 * Get the formats list to recreate a stats month directory, such as
-	 * http://www.smogon.com/stats/2014-11.
+	 * Set data for the stats month page.
 	 */
-	public function index(ServerRequestInterface $request) : void
+	public function setData(ServerRequestInterface $request) : void
 	{
 		$this->baseController->setBaseVariables($request);
 

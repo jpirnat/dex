@@ -16,8 +16,7 @@ final readonly class StatsUsageController
 	) {}
 
 	/**
-	 * Get usage data to recreate a stats usage file, such as
-	 * http://www.smogon.com/stats/2014-11/ou-1695.txt.
+	 * Set data for the stats usage page.
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{

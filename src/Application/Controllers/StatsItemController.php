@@ -15,7 +15,7 @@ final readonly class StatsItemController
 	) {}
 
 	/**
-	 * Get usage data to create a list of Pokémon who use a specific item.
+	 * Set data for the stats item page.
 	 */
 	public function setData(ServerRequestInterface $request) : void
 	{

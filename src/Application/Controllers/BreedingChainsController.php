@@ -15,9 +15,9 @@ final readonly class BreedingChainsController
 	) {}
 
 	/**
-	 * Show the breeding chains page.
+	 * Set data for the breeding chains page.
 	 */
-	public function index(ServerRequestInterface $request) : void
+	public function setData(ServerRequestInterface $request) : void
 	{
 		$this->baseController->setBaseVariables($request);
 

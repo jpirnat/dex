@@ -15,9 +15,9 @@ final readonly class DexAbilityController
 	) {}
 
 	/**
-	 * Show the dex ability page.
+	 * Set data for the dex ability page.
 	 */
-	public function index(ServerRequestInterface $request) : void
+	public function setData(ServerRequestInterface $request) : void
 	{
 		$this->baseController->setBaseVariables($request);
 

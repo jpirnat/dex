@@ -14,9 +14,9 @@ final readonly class StatsChartController
 	) {}
 
 	/**
-	 * Set data for the /stats/chart page.
+	 * Set data for the stats chart page.
 	 */
-	public function ajax(ServerRequestInterface $request) : void
+	public function setData(ServerRequestInterface $request) : void
 	{
 		$body = $request->getBody()->getContents();
 		$data = json_decode($body, true);

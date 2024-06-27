@@ -16,8 +16,7 @@ final readonly class StatsLeadsView
 	) {}
 
 	/**
-	 * Get leads data to recreate a stats leads file, such as
-	 * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
+	 * Set data for the stats leads page.
 	 */
 	public function getData() : ResponseInterface
 	{
