@@ -59,6 +59,7 @@ final readonly class BreedingChainsView
 		$vgIdentifier = $versionGroup->getIdentifier();
 		$pokemonIdentifier = $pokemon['identifier'];
 		$breadcrumbs = [[
+			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
 		], [
 			'url' => "/dex/$vgIdentifier/pokemon",

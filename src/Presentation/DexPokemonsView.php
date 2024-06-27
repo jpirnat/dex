@@ -27,7 +27,9 @@ final readonly class DexPokemonsView
 		$pokemon = $this->dexPokemonsModel->getPokemon();
 
 		// Navigational breadcrumbs.
+		$vgIdentifier = $versionGroup->getIdentifier();
 		$breadcrumbs = [[
+			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
 		], [
 			'text' => 'Pokémon',

@@ -40,6 +40,7 @@ final readonly class DexTypeView
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();
 		$breadcrumbs = [[
+			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
 		], [
 			'url' => "/dex/$vgIdentifier/types",

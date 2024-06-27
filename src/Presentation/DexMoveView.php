@@ -51,6 +51,7 @@ final readonly class DexMoveView
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();
 		$breadcrumbs = [[
+			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
 		], [
 			'url' => "/dex/$vgIdentifier/moves",

@@ -27,7 +27,9 @@ final readonly class DexTypesView
 		$multipliers = $this->dexTypesModel->getMultipliers();
 
 		// Navigational breadcrumbs.
+		$vgIdentifier = $versionGroup->getIdentifier();
 		$breadcrumbs = [[
+			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
 		], [
 			'text' => 'Types',

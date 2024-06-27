@@ -35,6 +35,7 @@ final readonly class DexAbilityView
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();
 		$breadcrumbs = [[
+			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
 		], [
 			'url' => "/dex/$vgIdentifier/abilities",
