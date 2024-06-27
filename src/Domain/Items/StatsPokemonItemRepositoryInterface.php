@@ -7,7 +7,7 @@ use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface StatsPokemonItemRepositoryInterface
 {
@@ -22,7 +22,7 @@ interface StatsPokemonItemRepositoryInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : array;
 }

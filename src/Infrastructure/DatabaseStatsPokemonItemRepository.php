@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Items\StatsPokemonItem;
 use Jp\Dex\Domain\Items\StatsPokemonItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\GenerationId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final readonly class DatabaseStatsPokemonItemRepository implements StatsPokemonItemRepositoryInterface
@@ -29,7 +29,7 @@ final readonly class DatabaseStatsPokemonItemRepository implements StatsPokemonI
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		GenerationId $generationId,
+		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : array {
 		$prevMonth = $prevMonth !== null
@@ -46,13 +46,13 @@ final readonly class DatabaseStatsPokemonItemRepository implements StatsPokemonI
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `moveset_rated_items` AS `mri`
 				ON `urp`.`id` = `mri`.`usage_rated_pokemon_id`
-			LEFT JOIN `item_icons` AS `ii`
-				ON `mri`.`item_id` = `ii`.`item_id`
-				AND `ii`.`generation_id` = :generation_id
 			INNER JOIN `items` AS `i`
 				ON `mri`.`item_id` = `i`.`id`
 			INNER JOIN `item_names` AS `in`
 				ON `mri`.`item_id` = `in`.`item_id`
+			LEFT JOIN `vg_items` AS `vgi`
+				ON `mri`.`item_id` = `vgi`.`item_id`
+				AND `vgi`.`version_group_id` = :version_group_id
 			LEFT JOIN `usage_rated_pokemon` AS `urpp`
 				ON `urpp`.`month` = :prev_month
 				AND `urp`.`format_id` = `urpp`.`format_id`
@@ -73,7 +73,7 @@ final readonly class DatabaseStatsPokemonItemRepository implements StatsPokemonI
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 

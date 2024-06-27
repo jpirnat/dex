@@ -72,8 +72,7 @@ return [
 		'item_descriptions_09_sv',
 	],
 	'item_names',
-	'item_icons',
-	'version_group_items',
+	'vg_items',
 
 	// Types
 	'categories',
