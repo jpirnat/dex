@@ -62,3 +62,5 @@ id,identifier
 90,use-item-full-moon
 91,use-move-agile-style
 92,use-move-strong-style
+201,use-item-day
+202,use-item-night
