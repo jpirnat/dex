@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Natures\DexNatureRepositoryInterface;
 use PDO;
@@ -38,5 +39,30 @@ final readonly class DatabaseDexNatureRepository implements DexNatureRepositoryI
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	/**
+	 * Get the names of the natures for which Toxel will evolve into this form.
+	 *
+	 * @return string[]
+	 */
+	public function getByToxelEvo(
+		LanguageId $languageId,
+		FormId $toxelEvoId,
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`nn`.`name`
+			FROM `natures` AS `n`
+			INNER JOIN `nature_names` AS `nn`
+				ON `n`.`id` = `nn`.`nature_id`
+			WHERE `nn`.`language_id` = :language_id
+				AND `n`.`toxel_evo_id` = :toxel_evo_id
+			ORDER BY `name`'
+		);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':toxel_evo_id', $toxelEvoId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetchAll(PDO::FETCH_COLUMN);
 	}
 }
