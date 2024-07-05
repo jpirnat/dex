@@ -475,6 +475,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseVersionGroupRepository::class
 );
 $services->alias(
+	\Jp\Dex\Domain\Versions\VersionNameRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseVersionNameRepository::class
+);
+$services->alias(
 	\Jp\Dex\Domain\Moves\VgMoveRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseVgMoveRepository::class
 );
