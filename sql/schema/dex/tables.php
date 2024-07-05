@@ -215,6 +215,10 @@ return [
 	'transformation_groups',
 	'transformation_group_pokemon',
 
+	// conditions
+	'conditions',
+	'condition_names',
+
 	// Evolutions
 	'evolution_methods',
 	'evolutions',

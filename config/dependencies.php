@@ -155,6 +155,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseBreedingChainQueries::class
 );
 $services->alias(
+	\Jp\Dex\Domain\Conditions\ConditionNameRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseConditionNameRepository::class
+);
+$services->alias(
 	\Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseDexAbilityRepository::class
 );
