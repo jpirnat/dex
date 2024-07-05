@@ -66,6 +66,7 @@ $services->load('Jp\\Dex\\Presentation\\', '../src/Presentation');
 
 // Domain services
 $services->set(\Jp\Dex\Domain\BreedingChains\BreedingChainFinder::class);
+$services->set(\Jp\Dex\Domain\Evolutions\EvolutionFormatter::class);
 $services->set(\Jp\Dex\Domain\PokemonMoves\PokemonMoveFormatter::class);
 $services->set(\Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter::class);
 $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageTrendGenerator::class);
@@ -193,6 +194,10 @@ $services->alias(
 $services->alias(
 	\Jp\Dex\Domain\EggGroups\EggGroupNameRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseEggGroupNameRepository::class
+);
+$services->alias(
+	\Jp\Dex\Domain\Evolutions\EvolutionRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseEvolutionRepository::class
 );
 $services->alias(
 	\Jp\Dex\Domain\Formats\FormatRepositoryInterface::class,
