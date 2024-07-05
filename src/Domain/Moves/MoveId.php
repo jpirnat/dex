@@ -12,6 +12,8 @@ final class MoveId extends EntityId
 	public const FLYING_PRESS = 560;
 	public const FREEZE_DRY = 573;
 	public const THOUSAND_ARROWS = 614;
+	public const PSYSHIELD_BASH = 828;
+	public const BARB_BARRAGE = 839;
 	public const TYPED_HIDDEN_POWER_BEGIN = 10001;
 	public const TYPED_HIDDEN_POWER_END = 10016;
 }

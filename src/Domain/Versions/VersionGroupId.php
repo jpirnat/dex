@@ -14,8 +14,11 @@ final class VersionGroupId extends EntityId
 	private const YELLOW = 4;
 	private const GOLD_SILVER = 5;
 	private const RUBY_SAPPHIRE = 7;
+	public const ULTRA_SUN_ULTRA_MOON = 18;
 	private const LETS_GO_PIKACHU_EEVEE = 19;
+	public const SWORD_SHIELD = 20;
 	private const LEGENDS_ARCEUS = 22;
+	public const SCARLET_VIOLET = 23;
 
 	public function hasSpecialStat() : bool
 	{
