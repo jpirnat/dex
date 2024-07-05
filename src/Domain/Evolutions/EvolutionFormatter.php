@@ -257,7 +257,7 @@ final readonly class EvolutionFormatter
 		);
 		$beauty = $beauty->getName();
 
-		$text = "Level up, starting at level $level, with at least $number $beauty";
+		$text = "Level up, with at least $number $beauty";
 
 		return $text;
 	}

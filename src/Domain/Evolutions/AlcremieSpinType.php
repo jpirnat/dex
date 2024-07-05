@@ -45,14 +45,14 @@ final readonly class AlcremieSpinType
 			self::COUNTERCLOCKWISE_LT_5_DAY,
 			self::CLOCKWISE_LT_5_NIGHT,
 			self::COUNTERCLOCKWISE_LT_5_NIGHT,
-				=> 'for less than 5 seconds',
+				=> 'less than 5 seconds',
 			self::COUNTERCLOCKWISE_GT_5_NIGHT,
 			self::CLOCKWISE_GT_5_NIGHT,
 			self::COUNTERCLOCKWISE_GT_5_DAY,
 			self::CLOCKWISE_GT_5_DAY,
-				=> 'for more than 5 seconds',
+				=> 'more than 5 seconds',
 			self::COUNTERCLOCKWISE_GT_10_EVENING,
-				=> 'for more than 10 seconds',
+				=> 'more than 10 seconds',
 		};
 	}
 
