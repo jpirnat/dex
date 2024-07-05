@@ -5,6 +5,6 @@ namespace Jp\Dex\Domain\Versions;
 
 use Jp\Dex\Domain\EntityId;
 
-final class GenerationId extends EntityId
+final class VersionId extends EntityId
 {
 }
