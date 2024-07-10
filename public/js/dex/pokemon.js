@@ -14,6 +14,7 @@ const app = new Vue({
 		types: [],
 		abilitiesDamageTaken: {},
 		damageTakenAbilities: [],
+		evolutionTableRows: [],
 		methods: [],
 		learnsetVgs: [],
 		showMoveDescriptionsOption: true,
@@ -66,6 +67,7 @@ const app = new Vue({
 				this.types = data.types;
 				this.abilitiesDamageTaken = data.damageTaken;
 				this.damageTakenAbilities = data.damageTakenAbilities;
+				this.evolutionTableRows = data.evolutionTableRows;
 				this.methods = data.methods;
 				this.learnsetVgs = data.learnsetVgs;
 				this.showMoveDescriptionsOption = data.showMoveDescriptions;

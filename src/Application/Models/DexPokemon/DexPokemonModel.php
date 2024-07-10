@@ -21,6 +21,7 @@ final class DexPokemonModel
 		private PokemonNameRepositoryInterface $pokemonNameRepository,
 		private DexAbilityRepositoryInterface $dexAbilityRepository,
 		private DexPokemonMatchupsModel $dexPokemonMatchupsModel,
+		private DexPokemonEvolutionsModel $dexPokemonEvolutionsModel,
 		private DexPokemonMovesModel $dexPokemonMovesModel,
 	) {}
 
@@ -63,6 +64,13 @@ final class DexPokemonModel
 			$this->abilities,
 		);
 
+		// Set the Pokémon's evolutions.
+		$this->dexPokemonEvolutionsModel->setData(
+			$versionGroupId,
+			$pokemon->getId(),
+			$languageId,
+		);
+
 		$this->dexPokemonMovesModel->setData(
 			$versionGroupId,
 			$pokemon->getId(),
@@ -101,6 +109,14 @@ final class DexPokemonModel
 	public function getDexPokemonMatchupsModel() : DexPokemonMatchupsModel
 	{
 		return $this->dexPokemonMatchupsModel;
+	}
+
+	/**
+	 * Get the dex Pokémon evolutions model.
+	 */
+	public function getDexPokemonEvolutionsModel() : DexPokemonEvolutionsModel
+	{
+		return $this->dexPokemonEvolutionsModel;
 	}
 
 	/**

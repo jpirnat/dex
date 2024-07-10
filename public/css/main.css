@@ -445,7 +445,7 @@ a.button {
 }
 .dex-ability__flag-description,
 .dex-move__flag-description {
-	font-size: .8em;
+	font-size: .8rem;
 	font-style: italic;
 }
 
@@ -546,6 +546,30 @@ a.button {
 .dex-pokemon__matchup-ability span {
 	padding: 3px;
 }
+
+.dex-evolutions-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.dex-evolutions-table th,
+.dex-evolutions-table td {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 5px;
+	min-width: 200px;
+	max-width: 400px;
+}
+
+.dex-evolutions-table-cell {
+	display: flex;
+	align-items: center;
+}
+
+.dex-evolutions-table-arrow {
+	font-size: 2rem;
+}
+
 
 .dex-pokemon__move-name {
 	border-left: 1px solid black;

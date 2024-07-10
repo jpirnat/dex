@@ -17,6 +17,7 @@ final readonly class DexPokemonView
 	public function __construct(
 		private DexPokemonModel $dexPokemonModel,
 		private DexFormatter $dexFormatter,
+		private EvolutionTableFormatter $evolutionTableFormatter,
 	) {}
 
 	/**
@@ -35,6 +36,9 @@ final readonly class DexPokemonView
 		$types = $dexPokemonMatchupsModel->getTypes();
 		$damageTaken = $dexPokemonMatchupsModel->getDamageTaken();
 		$damageTakenAbilities = $dexPokemonMatchupsModel->getAbilities();
+
+		$dexPokemonEvolutionsModel = $this->dexPokemonModel->getDexPokemonEvolutionsModel();
+		$evolutionTableRows = $dexPokemonEvolutionsModel->getEvolutionTableRows();
 
 		$dexPokemonMovesModel = $this->dexPokemonModel->getDexPokemonMovesModel();
 		$learnsetVgs = $dexPokemonMovesModel->getLearnsetVgs();
@@ -149,6 +153,8 @@ final readonly class DexPokemonView
 				'types' => $this->dexFormatter->formatDexTypes($types),
 				'damageTaken' => $damageTaken,
 				'damageTakenAbilities' => $damageTakenAbilities,
+
+				'evolutionTableRows' => $this->evolutionTableFormatter->formatRows($evolutionTableRows),
 
 				'methods' => $this->formatDexPokemonMoveMethods($methods),
 				'learnsetVgs' => $this->dexFormatter->formatDexVersionGroups($learnsetVgs),
