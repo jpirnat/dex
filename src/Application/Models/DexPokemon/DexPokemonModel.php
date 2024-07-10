@@ -50,11 +50,13 @@ final class DexPokemonModel
 		$this->versionGroupModel->setWithPokemon($pokemon->getId());
 
 		// Set the Pokémon's abilities.
-		$this->abilities = $this->dexAbilityRepository->getByPokemon(
-			$versionGroupId,
-			$pokemon->getId(),
-			$languageId,
-		);
+		if ($versionGroupId->hasAbilities()) {
+			$this->abilities = $this->dexAbilityRepository->getByPokemon(
+				$versionGroupId,
+				$pokemon->getId(),
+				$languageId,
+			);
+		}
 
 		// Set the Pokémon's matchups.
 		$this->dexPokemonMatchupsModel->setData(
