@@ -89,12 +89,12 @@ $services->load('Jp\\Dex\\Domain\\Import\\', '../src/Domain/Import')
 ;
 
 // Some other global classes we need
-$services->set(\IntlDateFormatter::class)
-	->class(\IntlDateFormatter::class)
+$services->set(IntlDateFormatter::class)
+	->class(IntlDateFormatter::class)
 	->args([null, null, null])
 ;
-$services->set(\NumberFormatter::class)
-	->class(\NumberFormatter::class)
+$services->set(NumberFormatter::class)
+	->class(NumberFormatter::class)
 	->args([null, null])
 ;
 
@@ -206,6 +206,10 @@ $services->alias(
 $services->alias(
 	\Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseFormIconRepository::class
+);
+$services->alias(
+	\Jp\Dex\Domain\Forms\FormRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseFormRepository::class
 );
 $services->alias(
 	\Jp\Dex\Domain\Versions\GenerationRepositoryInterface::class,
