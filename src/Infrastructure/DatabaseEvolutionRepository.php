@@ -22,6 +22,106 @@ final readonly class DatabaseEvolutionRepository implements EvolutionRepositoryI
 	) {}
 
 	/**
+	 * Get evolutions that evolve from this form.
+	 *
+	 * @return Evolution[] Ordered by evo into id.
+	 */
+	public function getByEvoFrom(VersionGroupId $versionGroupId, FormId $evoFromId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`evo_method_id`,
+				`evo_into_id`,
+				`level`,
+				`item_id`,
+				`move_id`,
+				`pokemon_id`,
+				`type_id`,
+				`version_id`,
+				`other_parameter`
+			FROM `evolutions`
+			WHERE `version_group_id` = :version_group_id
+				AND `evo_from_id` = :evo_from_id
+			ORDER BY `evo_into_id`'
+		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':evo_from_id', $evoFromId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$evolutions = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$evolution = new Evolution(
+				$versionGroupId,
+				$evoFromId,
+				new EvoMethodId($result['evo_method_id']),
+				new FormId($result['evo_into_id']),
+				$result['level'],
+				$result['item_id'] !== null ? new ItemId($result['item_id']) : null,
+				$result['move_id'] !== null ? new MoveId($result['move_id']) : null,
+				$result['pokemon_id'] !== null ? new PokemonId($result['pokemon_id']) : null,
+				$result['type_id'] !== null ? new TypeId($result['type_id']) : null,
+				$result['version_id'] !== null ? new VersionId($result['version_id']) : null,
+				$result['other_parameter'],
+			);
+
+			$evolutions[] = $evolution;
+		}
+
+		return $evolutions;
+	}
+
+	/**
+	 * Get evolutions that evolve into this form.
+	 *
+	 * @return Evolution[] Ordered by evo from id.
+	 */
+	public function getByEvoInto(VersionGroupId $versionGroupId, FormId $evoIntoId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`evo_from_id`,
+				`evo_method_id`,
+				`level`,
+				`item_id`,
+				`move_id`,
+				`pokemon_id`,
+				`type_id`,
+				`version_id`,
+				`other_parameter`
+			FROM `evolutions`
+			WHERE `version_group_id` = :version_group_id
+				AND `evo_into_id` = :evo_into_id
+			ORDER BY `evo_from_id`'
+		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':evo_into_id', $evoIntoId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$evolutions = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$evolution = new Evolution(
+				$versionGroupId,
+				new FormId($result['evo_from_id']),
+				new EvoMethodId($result['evo_method_id']),
+				$evoIntoId,
+				$result['level'],
+				$result['item_id'] !== null ? new ItemId($result['item_id']) : null,
+				$result['move_id'] !== null ? new MoveId($result['move_id']) : null,
+				$result['pokemon_id'] !== null ? new PokemonId($result['pokemon_id']) : null,
+				$result['type_id'] !== null ? new TypeId($result['type_id']) : null,
+				$result['version_id'] !== null ? new VersionId($result['version_id']) : null,
+				$result['other_parameter'],
+			);
+
+			$evolutions[] = $evolution;
+		}
+
+		return $evolutions;
+	}
+
+	/**
 	 * Get all evolutions.
 	 *
 	 * @return Evolution[]
