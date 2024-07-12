@@ -28,7 +28,7 @@ final readonly class DatabaseDexItemRepository implements DexItemRepositoryInter
 			'SELECT
 				`vgi`.`icon`,
 				`i`.`identifier`,
-				`in`.`name`,
+				COALESCE(`id`.`name`, `in`.`name`) AS `name`,
 				`id`.`description`
 			FROM `items` AS `i`
 			INNER JOIN `item_names` AS `in`
@@ -71,7 +71,7 @@ final readonly class DatabaseDexItemRepository implements DexItemRepositoryInter
 			'SELECT
 				`vgi`.`icon`,
 				`i`.`identifier`,
-				`in`.`name`,
+				COALESCE(`id`.`name`, `in`.`name`) AS `name`,
 				`id`.`description`
 			FROM `items` AS `i`
 			INNER JOIN `item_names` AS `in`

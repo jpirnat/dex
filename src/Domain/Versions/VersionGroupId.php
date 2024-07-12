@@ -39,7 +39,7 @@ final class VersionGroupId extends EntityId
 
 	public function hasItemDescriptions() : bool
 	{
-		return $this->value() >= self::RUBY_SAPPHIRE;
+		return $this->value() >= self::GOLD_SILVER;
 	}
 
 	public function hasItemIcons() : bool
