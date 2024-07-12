@@ -7,6 +7,7 @@ create table if not exists `vg_items`
 `icon` varchar(44) not null,
 `item_fling_power` tinyint unsigned null, # nullable
 `item_fling_effect_id` tinyint unsigned null, # nullable
+`is_available` bool not null,
 
 primary key (
 	`version_group_id`,

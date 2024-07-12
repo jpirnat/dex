@@ -83,6 +83,7 @@ final readonly class DatabaseDexItemRepository implements DexItemRepositoryInter
 				AND `in`.`language_id` = `id`.`language_id`
 				AND `i`.`id` = `id`.`item_id`
 			WHERE `vgi`.`version_group_id` = :version_group_id
+				AND `vgi`.`is_available` = 1
 				AND `in`.`language_id` = :language_id
 			ORDER BY `in`.`name`'
 		);
