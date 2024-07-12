@@ -168,6 +168,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseDexCategoryRepository::class
 );
 $services->alias(
+	\Jp\Dex\Domain\Items\DexItemRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseDexItemRepository::class
+);
+$services->alias(
 	\Jp\Dex\Domain\Moves\DexMoveRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseDexMoveRepository::class
 );

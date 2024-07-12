@@ -3,7 +3,7 @@ create table if not exists `item_names`
 `language_id` tinyint unsigned not null,
 `item_id` smallint unsigned not null,
 
-`name` varchar(18) not null,
+`name` varchar(25) not null,
 
 primary key (
 	`language_id`,

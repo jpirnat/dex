@@ -87,6 +87,36 @@ final readonly class IndexView
 	}
 
 	/**
+	 * Show the dex items page.
+	 */
+	public function dexItems() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/items.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Items',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
+	 * Show the dex item page.
+	 */
+	public function dexItem() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/item.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Item',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the dex moves page.
 	 */
 	public function dexMoves() : ResponseInterface

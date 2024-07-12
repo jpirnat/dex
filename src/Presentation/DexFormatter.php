@@ -5,6 +5,7 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Domain\Abilities\DexPokemonAbility;
 use Jp\Dex\Domain\Categories\DexCategory;
+use Jp\Dex\Domain\Items\DexItem;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Types\DexType;
@@ -206,6 +207,35 @@ final readonly class DexFormatter
 			'power' => $dexMove->getPower(),
 			'accuracy' => $dexMove->getAccuracy(),
 			'description' => $dexMove->getDescription(),
+		];
+	}
+
+	/**
+	 * Transform an array of dex item objects into a renderable data array.
+	 *
+	 * @param DexItem[] $dexItems
+	 */
+	public function formatDexItems(array $dexItems) : array
+	{
+		$items = [];
+
+		foreach ($dexItems as $dexItem) {
+			$items[] = $this->formatDexItem($dexItem);
+		}
+
+		return $items;
+	}
+
+	/**
+	 * Transform a dex move object into a renderable data array.
+	 */
+	public function formatDexItem(DexItem $dexItem) : array
+	{
+		return [
+			'icon' => $dexItem->getIcon(),
+			'identifier' => $dexItem->getIdentifier(),
+			'name' => $dexItem->getName(),
+			'description' => $dexItem->getDescription(),
 		];
 	}
 }
