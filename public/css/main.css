@@ -525,7 +525,9 @@ a.button {
 
 
 /* dex natures */
-
+.dex-nature__name {
+	text-align: left;
+}
 .dex-nature--increased {
 	color: red;
 }

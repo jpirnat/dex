@@ -33,7 +33,7 @@
 			</thead>
 			<tbody>
 				<tr v-for="nature in natures">
-					<th scope="row">{{ nature.name }}</th>
+					<th scope="row" class="dex-nature__name">{{ nature.name }}</th>
 
 					<td v-if="nature.increasedStat" class="dex-nature--increased">{{ nature.increasedStat }}</td>
 					<td v-else class="dex-nature--neutral">-</td>
