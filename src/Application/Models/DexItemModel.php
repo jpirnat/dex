@@ -4,9 +4,13 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Evolutions\EvolutionRepositoryInterface;
+use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
+use Jp\Dex\Domain\Forms\FormRepositoryInterface;
 use Jp\Dex\Domain\Items\DexItemRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 
 final class DexItemModel
 {
@@ -18,7 +22,12 @@ final class DexItemModel
 		private VersionGroupModel $versionGroupModel,
 		private ItemRepositoryInterface $itemRepository,
 		private DexItemRepositoryInterface $dexItemRepository,
+
 		private EvolutionRepositoryInterface $evolutionRepository,
+		private FormRepositoryInterface $formRepository,
+		private FormIconRepositoryInterface $formIconRepository,
+		private PokemonRepositoryInterface $pokemonRepository,
+		private PokemonNameRepositoryInterface $pokemonNameRepository,
 	) {}
 
 
@@ -53,17 +62,33 @@ final class DexItemModel
 			'description' => $dexItem->getDescription(),
 		];
 
-		/*
 		$evolutions = $this->evolutionRepository->getByItem(
 			$versionGroupId,
 			$itemId,
 		);
 		foreach ($evolutions as $evolution) {
-			$this->evolutions[] = [
+			$formId = $evolution->getEvoFromId();
 
+			$form = $this->formRepository->getById($formId);
+			$formIcon = $this->formIconRepository->getByVgAndFormAndFemaleAndRightAndShiny(
+				$versionGroupId,
+				$formId,
+				false,
+				false,
+				false,
+			);
+			$pokemon = $this->pokemonRepository->getById($form->getPokemonId());
+			$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+				$languageId,
+				$pokemon->getId(),
+			);
+
+			$this->evolutions[] = [
+				'icon' => $formIcon->getImage(),
+				'identifier' => $pokemon->getIdentifier(),
+				'name' => $pokemonName->getName(),
 			];
 		}
-		*/
 	}
 
 

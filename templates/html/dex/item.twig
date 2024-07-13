@@ -36,6 +36,12 @@
 
 		<template v-if="evolutions.length">
 			<h2 class="dex-section__title">Evolutions</h2>
+			<div>This item can cause the following Pokémon to evolve:</div>
+			<div>
+				<a v-for="p in evolutions" :href="'/dex/' + versionGroup.identifier + '/pokemon/' + p.identifier">
+					<img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + p.icon" :alt="p.name" v-tooltip="p.name">
+				</a>
+			</div>
 		</template>
 	</template>
 </div>
