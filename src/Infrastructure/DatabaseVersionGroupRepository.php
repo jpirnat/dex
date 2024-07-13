@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\TypeId;
@@ -260,6 +261,52 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			ORDER BY `sort`'
 		);
 		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['icon'],
+				$result['abbreviation'],
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
+	 * Get version groups that have this item.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithItem(ItemId $itemId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`icon`,
+				`abbreviation`,
+				`sort`
+			FROM `version_groups`
+			WHERE `id` IN (
+				SELECT
+					`version_group_id`
+				FROM `vg_items`
+				WHERE `item_id` = :item_id
+					AND `is_available` = 1
+			)
+			ORDER BY `sort`'
+		);
+		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$versionGroups = [];

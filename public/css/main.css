@@ -385,6 +385,13 @@ a.button {
 }
 
 
+/* dex ability */
+
+.dex-ability__description {
+	font-style: italic;
+}
+
+
 
 /* dex items */
 
@@ -395,6 +402,18 @@ a.button {
 .dex-table__item-name {
 	width: 15%;
 	text-align: left;
+}
+
+
+
+/* dex item */
+
+.dex-item__icon {
+	text-align: center;
+}
+
+.dex-item__description {
+	font-style: italic;
 }
 
 

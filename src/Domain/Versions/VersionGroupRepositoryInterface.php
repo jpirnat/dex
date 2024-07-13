@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Versions;
 
 use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\TypeId;
@@ -53,6 +54,13 @@ interface VersionGroupRepositoryInterface
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
 	 */
 	public function getWithType(TypeId $typeId) : array;
+
+	/**
+	 * Get version groups that have this item.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithItem(ItemId $itemId) : array;
 
 	/**
 	 * Get version groups that have this ability.

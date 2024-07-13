@@ -1,0 +1,58 @@
+<?php
+declare(strict_types=1);
+
+namespace Jp\Dex\Presentation;
+
+use Jp\Dex\Application\Models\DexItemModel;
+use Laminas\Diactoros\Response\JsonResponse;
+use Psr\Http\Message\ResponseInterface;
+
+final readonly class DexItemView
+{
+	public function __construct(
+		private DexItemModel $dexItemModel,
+		private DexFormatter $dexFormatter,
+	) {}
+
+	/**
+	 * Get data for the dex item page.
+	 */
+	public function getData() : ResponseInterface
+	{
+		$versionGroupModel = $this->dexItemModel->getVersionGroupModel();
+		$versionGroup = $versionGroupModel->getVersionGroup();
+		$versionGroups = $versionGroupModel->getVersionGroups();
+
+		$item = $this->dexItemModel->getItem();
+		$evolutions = $this->dexItemModel->getEvolutions();
+
+		// Navigational breadcrumbs.
+		$vgIdentifier = $versionGroup->getIdentifier();
+		$breadcrumbs = [[
+			'url' => "/dex/$vgIdentifier",
+			'text' => 'Dex',
+		], [
+			'url' => "/dex/$vgIdentifier/items",
+			'text' => 'Items',
+		], [
+			'text' => $item['name'],
+		]];
+
+		return new JsonResponse([
+			'data' => [
+				'title' => 'Porydex - Items - ' . $item['name'],
+
+				'versionGroup' => [
+					'id' => $versionGroup->getId()->value(),
+					'identifier' => $versionGroup->getIdentifier(),
+				],
+
+				'breadcrumbs' => $breadcrumbs,
+				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
+
+				'item' => $item,
+				'evolutions' => $evolutions,
+			]
+		]);
+	}
+}

@@ -93,6 +93,22 @@ return [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
+	['GET', "/dex/$vgIdentifier/items/$itemIdentifier", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'dexItem',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$vgIdentifier/items/$itemIdentifier", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexItemController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\DexItemView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
 	['GET', "/dex/$vgIdentifier/moves", [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',
