@@ -39,6 +39,7 @@ return [
 	'abilities',
 	'ability_names',
 	'ability_descriptions' => [
+		'ability_descriptions_03',
 		'ability_descriptions_04',
 		'ability_descriptions_05',
 		'ability_descriptions_06',
