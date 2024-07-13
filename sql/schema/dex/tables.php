@@ -90,6 +90,7 @@ return [
 	'move_names',
 	'move_descriptions' => [
 		'move_descriptions_02',
+		'move_descriptions_03',
 		'move_descriptions_04',
 		'move_descriptions_05',
 		'move_descriptions_06',
