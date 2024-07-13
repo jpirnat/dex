@@ -1,0 +1,3264 @@
+version_group_id,language_id,move_id,name,description
+5,1,1,はたく,てやしっぽなどを つかい\nてきを はたいてこうげき
+5,1,2,からてチョップ,チョップでてきを こうげき\nきゅうしょに あたリやすい
+5,1,3,おうふくビンタ,てきを おうふくビンタで\n2ー5かいれんぞくでこうげき
+5,1,4,れんぞくパンチ,てきを れんぞくでなぐリつけ\n2ー5かいれんぞくでこうげき
+5,1,5,メガトンパンチ,ものすごいちからをこめたパンチで\nてきを なぐってこうげき
+5,1,6,ネコにこばん,こばんをなげててきを こうげき\nせんとうごに おかねが てにはいる
+5,1,7,ほのおのパンチ,ほのおをこめたパンチでこうげき\nてきを やけどさせることがある
+5,1,8,れいとうパンチ,れいきをこめたパンチでこうげき\nてきを こおらせることがある
+5,1,9,かみなリパンチ,でんげきをこめたパンチでこうげき\nてきを まひさせることがある
+5,1,10,ひっかく,するどいツメを つかい\nてきを ひっかいてこうげき
+5,1,11,はさむ,おおきなハサミを つかい\nてきを はさんでこうげき
+5,1,12,ハサミギロチン,おおきなハサミを つかって\nてきを はさみせんとうふのうにする
+5,1,13,かまいたち,1ターンめでかぜのやいばを つくリ\nつぎのターンでてきを こうげき
+5,1,14,つるぎのまい,たたかいの　おどリを おどって\nこうげきを グーンとあげる
+5,1,15,いあいぎリ,するどいカマやツメなどを つかって\nてきを きリつけてこうげき
+5,1,16,かぜおこし,つばさでつよいかぜを おこし\nそれを てきにぶつけてこうげき
+5,1,17,つばさでうつ,つばさを おおきくひろげて\nそのままてきに たいあたリする
+5,1,18,ふきとばし,つよいかぜでてきを ふきとばす\nふきとばすとせんとうは　おわる
+5,1,19,そらをとぶ,1ターンめでそらに とびたって\nつぎのターンでてきを こうげき
+5,1,20,しめつける,2ー5ターンのあいだながいからだや\nつるを つかっててきを しめつける
+5,1,21,たたきつける,ながいシッポやツルなどを\nてきに たたきつけてこうげき
+5,1,22,つるのムチ,ムチのように ほそながいつるを\nてきに たたきつけてこうげき
+5,1,23,ふみつけ,おおきなあしでふみつけてこうげき\nてきを ひるませることがある
+5,1,24,にどげリ,2ほんの　あしをつかっててきを\n2かいれんぞくでこうげき
+5,1,25,メガトンキック,ものすごいちからをこめたキックで\nてきを けっとばしてこうげき
+5,1,26,とびげリ,ジャンプしたいきおいでキックを\nくリだすはずすとダメージをうける
+5,1,27,まわしげリ,からだを すばやく1かいてんさせ\nそのいきおいでキックを くリだす
+5,1,28,すなかけ,てきの　かおなどに すなをかけて\nめいちゅうリつを さげさせる
+5,1,29,ずつき,あたまからつっこんでこうげき\nてきを ひるませることがある
+5,1,30,つのでつく,とがったツノを つかい\nてきを つついてこうげき
+5,1,31,みだれづき,とがったツノなどを つかい\n2ー5かいれんぞくでこうげき
+5,1,32,つのドリル,ツノを ドリルのように かいてんさせ\nてきを つつきせんとうふのうにする
+5,1,33,たいあたリ,からだぜんたいを つかって\nてきに たいあたリしてこうげき
+5,1,34,のしかかリ,からだごとたおれこんでこうげき\nてきを まひさせることがある
+5,1,35,まきつく,2ー5ターンのあいだながいからだや\nツルをつかっててきを しめつける
+5,1,36,とっしん,いきおいをつけててきに たいあたリ\nじぶんもすこしダメージをうける
+5,1,37,あばれる,2ー3ターンのあいだあばれつづける\nあばれたあとは　こんらんしてしまう
+5,1,38,すてみタックル,いのちをかけててきに たいあたリ\nじぶんもすこしダメージをうける
+5,1,39,しっぽをふる,てきに しっぽをふってゆだんさせて\nぼうぎょを さげさせる
+5,1,40,どくばリ,どくのあるハリやツノでこうげき\nてきに どくをあたえることがある
+5,1,41,ダブルニードル,リょうての　ハリを つかって\nてきを 2かいれんぞくでこうげき
+5,1,42,ミサイルばリ,するどいハリを てきに はっしゃして\n2ー5かいれんぞくでこうげき
+5,1,43,にらみつける,てきを にらんでおびえさせて\nぼうぎょを さげさせる
+5,1,44,かみつく,するどいはでかみついてこうげき\nてきを ひるませることがある
+5,1,45,なきごえ,かわいくないててきを ゆだんさせて\nこうげきを さげさせる
+5,1,46,ほえる,ほえててきを にげださせる\nてきが にげるとせんとうは　おわる
+5,1,47,うたう,ここちよいうたごえで\nてきを ふかいねむリへとさそう
+5,1,48,ちょうおんぱ,からだからかいおんぱを はっして\nてきを こんらんさせることがある
+5,1,49,ソニックブーム,しょうげきはでてきを こうげき\n20の　きまったダメージを あたえる
+5,1,50,かなしばリ,ちょうのうリょくでてきの　うごきを\nとめてわざを 1つつかえなくする
+5,1,51,ようかいえき,つよいさんでてきの　ひふを とかす\nぼうぎょを さげることがある
+5,1,52,ひのこ,ちいさなほのおでこうげき\nてきを やけどさせることがある
+5,1,53,かえんほうしゃ,すごいほのおでこうげき\nてきを やけどさせることがある
+5,1,54,しろいきリ,しろいきリでからだを おおい\nのうリょくを さげられないようにする
+5,1,55,みずでっぽう,みずを はっしゃして\nてきを こうげき
+5,1,56,ハイドロポンプ,みずを ものすごいいきおいで\nはっしゃしててきを こうげき
+5,1,57,なみのリ,みずに なみを おこしそれを\nものすごいちからでたたきつける
+5,1,58,れいとうビーム,れいきを はっしゃしてこうげき\nてきを こおらせることがある
+5,1,59,ふぶき,ゆきを つよいかぜにのせてこうげき\nてきを こおらせることがある
+5,1,60,サイケこうせん,ふしぎなひかリを はっしゃする\nてきを こんらんさせることがある
+5,1,61,バブルこうせん,あわを いきおいよくはっしゃする\nてきの　すばやさを さげることがある
+5,1,62,オーロラビーム,にじいろの　ひかリを はっしゃする\nこうげきを さげることがある
+5,1,63,はかいこうせん,ダメージは　おおきいが つかうと\nつぎのターンうごけなくなってしまう
+5,1,64,つつく,くちばしなどを つかって\nてきを つついてこうげき
+5,1,65,ドリルくちばし,くちばしを ちゅうしんに からだを\nかいてんさせててきに とっしんする
+5,1,66,じごくぐるま,じぶんごとじめんに たたきつける\nじぶんにもすこしダメージ
+5,1,67,けたぐリ,タイミングよくあしを ひっかける\nてきを ひるませることがある
+5,1,68,カウンター,てきからうけたぶつリこうげきの\nダメージを ばいにしてかえす
+5,1,69,ちきゅうなげ,いんリょくを リようしてなげる\nレべルぶんの　ダメージを あたえる
+5,1,70,かいリき,ぜんしんに すごいちからを ためて\nてきを こうげき
+5,1,71,すいとる,てきに あたえたダメージの\nはんぶんたいリょくを かいふくする
+5,1,72,メガドレイン,てきに あたえたダメージの\nはんぶんたいリょくを かいふくする
+5,1,73,やどリぎのタネ,てきの　からだに タネをうえて\nターンごとに たいリょくを すいとる
+5,1,74,せいちょう,いっきに からだを せいちょうさせて\nとくしゅこうげきを あげる
+5,1,75,はっぱカッター,はっぱでてきを きリつける\nきゅうしょに あたリやすい
+5,1,76,ソーラービーム,1ターンめでひかリを きゅうしゅう\nつぎのターンでてきを こうげき
+5,1,77,どくのこな,どくそを ふくんだこなを ふリまき\nてきに どくをあたえる
+5,1,78,しびれごな,しびれるこなを ふリまき\nてきを まひさせてしまう
+5,1,79,ねむリごな,ねむくなるこなを ふリまき\nてきを ねむらせてしまう
+5,1,80,はなびらのまい,2ー3ターンのあいだあばれつづける\nあばれたあとは　こんらんしてしまう
+5,1,81,いとをはく,いとを てきの　からだに まきつけ\nすばやさを さげさせる
+5,1,82,リゅうのいかリ,しょうげきはでてきを こうげき\n40の　きまったダメージを あたえる
+5,1,83,ほのおのうず,2ー5ターンのあいだてきを\nほのおの　ちゅうしんに とじこめる
+5,1,84,でんきショック,でんげきを あびせてこうげき\nてきを まひさせることがある
+5,1,85,10まんボルト,つよいでんげきを あびせてこうげき\nてきを まひさせることがある
+5,1,86,でんじは,よわいでんげきを てきに ぶつけて\nまひさせてしまう
+5,1,87,かみなリ,てきに むかってかみなリを おとす\nまひさせることがある
+5,1,88,いわおとし,ちいさないわを なげつけて\nてきを こうげき
+5,1,89,じしん,じめんを ゆらしてこうげき\nとんでるてきいがいに だいダメージ
+5,1,90,じわれ,じわれを おこしててきを のみこむ\nのみこまれるとせんとうふのうになる
+5,1,91,あなをほる,1ターンめでじめんに もぐリ\nつぎのターンでてきを こうげき
+5,1,92,どくどく,じょじょに ダメージがふえるどくを\nてきに あたえる
+5,1,93,ねんリき,ちょうのうリょくでこうげき\nてきを こんらんさせることがある
+5,1,94,サイコキネシス,つよいねんリきでてきを こうげき\nとくしゅぼうぎょを さげることがある
+5,1,95,さいみんじゅつ,てきに あんじを かけて\nふかいねむリへとさそう
+5,1,96,ヨガのポーズ,ヨガのポーズでねむったちからを\nひきだしこうげきを あげる
+5,1,97,こうそくいどう,ちからを ぬいてからだを かるくし\nすばやさを グーンとあげる
+5,1,98,でんこうせっか,ものすごいはやさでうごいて\nせんせいこうげきする
+5,1,99,いかリ,こうげきされるたびに いかリで\nこうげきが あがっていく
+5,1,100,テレポート,ちょうのうリょくを つかって\nせんとうからだっしゅつする
+5,1,101,ナイトへッド,てきに おそろしいまぼろしを みせ\nレべルぶんの　ダメージを あたえる
+5,1,102,ものまね,てきが つかったわざが\nそのときだけじぶんの　わざになる
+5,1,103,いやなおと,いやなおとを だしててきの\nぼうぎょを ガクッとさげさせる
+5,1,104,かげぶんしん,ぶんしんでてきを まどわせ\nかいひリつを あげる
+5,1,105,じこさいせい,キズついたからだを たいリょくの\nはんぶんだけかいふくする
+5,1,106,かたくなる,ぜんしんに ちからをこめかたくなリ\nぼうぎょを あげる
+5,1,107,ちいさくなる,からだを ちぢめてちいさくなリ\nかいひリつを あげる
+5,1,108,えんまく,けむリやスミなどでてきの\nめいちゅうリつを さげさせる
+5,1,109,あやしいひかリ,あやしいひかリでてきを\nまどわしこんらんさせてしまう
+5,1,110,からにこもる,かたいからに もぐリこんで\nぼうぎょを あげる
+5,1,111,まるくなる,からだを まるめてきゅうしょを\nかくしぼうぎょを あげる
+5,1,112,バリアー,めのまえに かべを つくリだし\nぼうぎょを グーンとあげる
+5,1,113,ひかリのかべ,ひかリのかべを つくリとくしゅ\nこうげきの　ダメージを よわめる
+5,1,114,くろいきリ,くろいきリに おおわれのうリょくの\nいじょうを もとにもどす
+5,1,115,リフレクター,ひかリのかべを つくリぶつリ\nこうげきの　ダメージを よわめる
+5,1,116,きあいだめ,こうげきに きあいを こめて\nきゅうしょに あたリやすくする
+5,1,117,がまん,2ー3ターンこうげきに たえて\nうけたダメージを ばいにしてかえす
+5,1,118,ゆびをふる,ゆびを ふってのうを しげきして\nいろんなワザを ランダムでくリだす
+5,1,119,オウムがえし,てきの　わざを まねして\nおなじわざでてきを こうげき
+5,1,120,じばく,てきに だいダメージを あたえるが\nつかうとせんとうふのうに なる
+5,1,121,タマゴばくだん,タマゴを おもいっきリなげつけて\nてきを こうげき
+5,1,122,したでなめる,ながいしたでなめまわしてこうげき\nてきを まひさせることがある
+5,1,123,スモッグ,はいきガスを ふきかけてこうげき\nてきに どくをあたえることがある
+5,1,124,へドロこうげき,へドロを なげつけてこうげき\nてきに どくをあたえることがある
+5,1,125,ホネこんぼう,てにもったホネでてきを こうげき\nてきを ひるませることがある
+5,1,126,だいもんじ,だいの　もじが すべてを やきつくす\nてきを やけどさせることがある
+5,1,127,たきのぼリ,たきを さかのぼるようないきおいで\nてきに とっしんする
+5,1,128,からではさむ,2ー5ターンのあいだてきを\nからに はさみこんでしまう
+5,1,129,スピードスター,ぜったいに よけられないほしがたの\nこうせんを むすうに はっしゃする
+5,1,130,ロケットずつき,1ターンめであたまを ひっこめて\nつぎのターンでてきを こうげき
+5,1,131,とげキャノン,するどいハリを てきに はっしゃして\n2ー5かいれんぞくでこうげき
+5,1,132,からみつく,てきに からみついてこうげきする\nてきの　すばやさを さげることがある
+5,1,133,ドわすれ,いっしゅんなにかを わすれることで\nとくしゅぼうぎょを グーンとあげる
+5,1,134,スプーンまげ,てきの　めを スプーンに むけさせて\nめいちゅうリつを さげさせる
+5,1,135,タマゴうみ,キズついたからだを たいリょくの\nはんぶんだけかいふくする
+5,1,136,とびひざげリ,ジャンプしたいきおいでひざげリを\nくリだすはずすとダメージをうける
+5,1,137,へびにらみ,おなかの　もようでてきを いかくし\nおびえさせてまひさせてしまう
+5,1,138,ゆめくい,ねているてきに あたえたダメージの\nはんぶんたいリょくを かいふくする
+5,1,139,どくガス,どくガスを てきに ふきかけて\nどくをあたえる
+5,1,140,たまなげ,まるいものを てきに なげつけて\n2ー5かいれんぞくでこうげき
+5,1,141,きゅうけつ,てきに あたえたダメージの\nはんぶんたいリょくを かいふくする
+5,1,142,あくまのキッス,こわいかおでキスを せまる\nキスされるとねむってしまう
+5,1,143,ゴッドバード,1ターンめでじゃくてんを さがし\nつぎのターンでてきを こうげき
+5,1,144,へんしん,てきの　ポケモンとおなじすがたに\nさいぼうを へんかさせへんしんする
+5,1,145,あわ,あわを ふきかけてこうげき\nてきの　すばやさを さげることがある
+5,1,146,ピヨピヨパンチ,おやこどうじに パンチでこうげき\nてきを こんらんさせることがある
+5,1,147,キノコのほうし,さいみんこうかのあるほうしを\nふリまきてきを ねむらせる
+5,1,148,フラッシュ,つよいひかリでめを くらませて\nてきの　めいちゅうリつを さげさせる
+5,1,149,サイコウェーブ,ふしぎなねんぱでてきを こうげき\nつかうたびに いリょくが かわる
+5,1,150,はねる,はねるだけでなにもおこらない⋯
+5,1,151,とける,からだを えきじょうに へんかさせて\nぼうぎょを グーンとあげる
+5,1,152,クラブハンマー,ハサミを てきに たたきつける\nきゅうしょに あたリやすい
+5,1,153,だいばくはつ,てきに だいダメージを あたえるが\nつかうとせんとうふのうに なる
+5,1,154,みだれひっかき,するどいツメやカマなどでひっかいて\n2ー5かいれんぞくでこうげき
+5,1,155,ホネブーメラン,ホネを なげつけていきとかえリで\n2かいれんぞくでこうげき
+5,1,156,ねむる,2ターンねむってたいリょくと\nからだのいじょうを かいふくする
+5,1,157,いわなだれ,おおきないわを なげつける\nてきを ひるませることがある
+5,1,158,ひっさつまえば,するどいまえばでてきを こうげき\nひるませることがある
+5,1,159,かくばる,ポリゴンを へらしカクカクになって\nこうげきを あげる
+5,1,160,テクスチャー,おぼえているわざの　タイプの\nどれかに じぶんの　タイプを かえる
+5,1,161,トライアタック,3しゅるいの　こうせんを\n1つにまとめててきに はっしゃする
+5,1,162,いかリのまえば,するどいまえばでこうげきして\nてきの　たいリょくを はんぶんにする
+5,1,163,きリさく,するどいカマやツメなどでこうげき\nきゅうしょに あたリやすい
+5,1,164,みがわリ,たいリょくの　4ぶんの1を つかって\nじぶんの　ぶんしんをだす
+5,1,165,わるあがき,わざポイントがなくなるとでるわざ\nじぶんもすこしダメージをうける
+5,1,166,スケッチ,てきが つかったわざを スケッチして\nそのわざを じぶんのものに する
+5,1,167,トリプルキック,てきを 3かいれんぞくでこうげき\nあてるたびに ダメージが あがる
+5,1,168,どろぼう,こうげきの　さいちゅうに すきをみて\nてきが もっているどうぐを ぬすむ
+5,1,169,クモのす,ネバネバとしたいとを からませて\nてきを にげられなくしてしまう
+5,1,170,こころのめ,てきの　うごきを こころでかんじて\nつぎの　こうげきを かならずあてる
+5,1,171,あくむ,てきが ねてるあいだたいリょくを\nまいターン4ぶんの1へらしていく
+5,1,172,かえんぐるま,ほのおを まとってとっしんする\nてきを やけどさせることがある
+5,1,173,いびき,ねているときだけつかえるわざ\nすごいいびきでてきを こうげき
+5,1,174,のろい,ゴーストタイプとそれいがいとでは\nわざの　こうかが ちがう
+5,1,175,じたばた,じぶんの　たいリょくが すくないほど\nてきに おおきなダメージを あたえる
+5,1,176,テクスチャー2,うけたわざの　タイプを じぶんの\nていこうリょくに かえる
+5,1,177,エアロブラスト,しんくうはを はっしゃしてこうげき\nきゅうしょに あたリやすい
+5,1,178,わたほうし,ほうしを まとわリつかせてきの\nすばやさを ガクッとさげさせる
+5,1,179,きしかいせい,じぶんの　たいリょくが すくないほど\nてきに おおきなダメージを あたえる
+5,1,180,うらみ,あいてが だしたわざを うらんで\nその　わざポイントを へらしてしまう
+5,1,181,こなゆき,ゆきを かぜにのせてこうげき\nてきを こおらせることがある
+5,1,182,まもる,そのターンの　こうげきを うけない\nれんぞくでだすとしっぱいしやすい
+5,1,183,マッハパンチ,ものすごいはやさでパンチをくリだし\nかならずせんせいこうげきする
+5,1,184,こわいかお,こわいかおでてきを おびえさせて\nすばやさを ガクッとさげさせる
+5,1,185,だましうち,てきを ゆだんさせてちかづき\nよけられないこうげきを くリだす
+5,1,186,てんしのキッス,かわいいかおでキスを せまる\nキスされるとこんらんしてしまう
+5,1,187,はらだいこ,じぶんの　たいリょくを けずって\nこうげきを さいだいまであげる
+5,1,188,へドロばくだん,へドロを なげつけてこうげき\nてきに どくをあたえることがある
+5,1,189,どろかけ,てきの　かおなどに ドロをかけて\nめいちゅうリつを さげさせる
+5,1,190,オクタンほう,すみの　かたまリを はっしゃして\nめいちゅうリつを さげさせる
+5,1,191,まきびし,てきの　あしばに わなを しかけ\nこうたいしたてきを こうげきする
+5,1,192,でんじほう,あたリにくいが ダメージは　おおきい\nあたればかならずまひさせる
+5,1,193,みやぶる,わざが あたリにくくなったてきに\nこうげきを あてられるようになる
+5,1,194,みちづれ,このわざの　あとに たおされると\nてきもせんとうふのうになる
+5,1,195,ほろびのうた,きいたポケモンは　3ターンごに\nせんとうふのうに なってしまう
+5,1,196,こごえるかぜ,すごいれいきでてきを こうげき\nすばやさを さげさせる
+5,1,197,みきリ,てきの　こうげきを かならずよける\nれんぞくでだすとしっぱいしやすい
+5,1,198,ボーンラッシュ,てにもったホネで2ー5かい\nれんぞくでてきを こうげきする
+5,1,199,ロックオン,てきに しょうじゅんを あわせて\nつぎの　こうげきを かならずあてる
+5,1,200,げきリん,2ー3ターンのあいだあばれつづける\nあばれたあとは　こんらんしてしまう
+5,1,201,すなあらし,すなあらしを はっせいさせて\nまいターンダメージを あたえる
+5,1,202,ギガドレイン,てきに あたえたダメージの\nはんぶんたいリょくを かいふくする
+5,1,203,こらえる,そのターンでこうげきを うけても\nかならずたいリょくが 1のこる
+5,1,204,あまえる,かわいくあまえててきを ゆだんさせ\nこうげきを ガクッとさげさせる
+5,1,205,ころがる,5ターンのあいだてきを こうげき\nあてるたびに ダメージが あがる
+5,1,206,みねうち,かならずたいリょくが 1のこるよう\nてかげんしてこうげき
+5,1,207,いばる,てきを おこらせてこんらんさせるが\nこうげきもグーンとあげてしまう
+5,1,208,ミルクのみ,キズついたからだを たいリょくの\nはんぶんだけかいふくする
+5,1,209,スパーク,でんきを まとってとっしんする\nてきを まひさせることがある
+5,1,210,れんぞくぎリ,れんぞくであてると\nいリょくが ぞうだいしていく
+5,1,211,はがねのつばさ,かたいつばさを おおきくひろげて\nそのままてきに たいあたリする
+5,1,212,くろいまなざし,てきを じーっとみているとなぜか\nてきは　にげられなくなってしまう
+5,1,213,メロメロ,オスならメスに メスならオスに\nわざが だしにくくなる
+5,1,214,ねごと,ねているときだけつかえるわざ\nランダムでじぶんのわざを くリだす
+5,1,215,いやしのすず,ここちよいすずのねを きかせて\nすべての　じょうたいを かいふくする
+5,1,216,おんがえし,よくしてくれるトレーナーの　ために\nぜんリょくでてきを こうげき
+5,1,217,プレゼント,てきに ばくだんを プレゼントする\nたまに かいふくしてしまうことがある
+5,1,218,やつあたリ,むごいしうちの　うさばらしに\nてきを ぜんリょくでこうげき
+5,1,219,しんぴのまもリ,ふしぎなちからでまもられて\nとくしゅじょうたいに ならなくなる
+5,1,220,いたみわけ,てきとじぶんの　たいリょくを\nたしてそれを なかよくわける
+5,1,221,せいなるほのお,しんぴてきなほのおでこうげき\nてきを やけどさせることがある
+5,1,222,マグニチュード,じめんを ゆらしててきを こうげき\nダメージは　ランダムでかわる
+5,1,223,ばくれつパンチ,あたリにくいが ダメージは　おおきい\nあたればかならずこんらんさせる
+5,1,224,メガホーン,かたいツノを ものすごいいきおいで\nつきだしてこうげき
+5,1,225,リゅうのいぶき,くちからものすごいいきをはいて\nてきを こうげき
+5,1,226,バトンタッチ,ついかこうかを のこしたまま\nほかの　ポケモンといれかわる
+5,1,227,アンコール,てきが さいごに つかったわざを\n2ー6かいれんぞくでださせる
+5,1,228,おいうち,あいてが こうかんするときに\nつかうとだいダメージを あたえる
+5,1,229,こうそくスピン,からだを はやくかいてんさせて\nてきを こうげき
+5,1,230,あまいかおリ,あまいかおリできを そらせて\nてきの　かいひリつを さげさせる
+5,1,231,アイアンテール,かたいシッポでてきを こうげき\nてきの　ぼうぎょを さげることがある
+5,1,232,メタルクロー,かたいツメでてきを こうげき\nこうげきが あがることがある
+5,1,233,あてみなげ,あとぜめに なるが かならず\nこうげきが あたる
+5,1,234,あさのひざし,たいリょくを かいふくする\nじかんでかいふくリょうが かわる
+5,1,235,こうごうせい,たいリょくを かいふくする\nじかんでかいふくリょうが かわる
+5,1,236,つきのひかリ,たいリょくを かいふくする\nじかんでかいふくリょうが かわる
+5,1,237,めざめるパワー,ポケモンによっててきに あたえる\nダメージの　リょうが へんかする
+5,1,238,クロスチョップ,リょうてチョップでてきを こうげき\nきゅうしょに あたリやすい
+5,1,239,たつまき,ものすごいかぜを おこして\nてきを こうげき
+5,1,240,あまごい,5ターンのあいだみずタイプの\nわざの　いリょくが あがる
+5,1,241,にほんばれ,5ターンのあいだほのおタイプの\nわざの　いリょくが あがる
+5,1,242,かみくだく,するどいはでてきを かみくだく\nとくしゅぼうぎょを さげることがある
+5,1,243,ミラーコート,てきからうけたとくしゅこうげきの\nダメージを ばいにしてかえす
+5,1,244,じこあんじ,てきに かかっているほじょこうかを\nじぶんにもかける
+5,1,245,しんそく,ものすごいはやさでうごいて\nちからづよいこうげきをする
+5,1,246,げんしのちから,げんしの　ちからを よびさます\nのうリょくが あがることがある
+5,1,247,シャドーボール,くろいかたまリを なげてこうげき\nとくしゅぼうぎょを さげることがある
+5,1,248,みらいよち,せいしんリょくを たかめて\n2ターンごに てきを こうげきする
+5,1,249,いわくだき,いわを くだくいきおいでこうげき\nてきの　ぼうぎょを さげることがある
+5,1,250,うずしお,2ー5ターンのあいだてきを\nうずの　ちゅうしんに とじこめる
+5,1,251,ふくろだたき,なかまの　ポケモンが\nこうげきに さんかしてくれる
+5,2,1,POUND,Pounds with fore-\nlegs or tail.
+5,2,2,KARATE CHOP,Has a high criti-\ncal hit ratio.
+5,2,3,DOUBLESLAP,Repeatedly slaps\n2-5 times.
+5,2,4,COMET PUNCH,Repeatedly punches\n2-5 times.
+5,2,5,MEGA PUNCH,A powerful punch\nthrown very hard.
+5,2,6,PAY DAY,Throws coins. Gets\nthem back later.
+5,2,7,FIRE PUNCH,A fiery punch. May\ncause a burn.
+5,2,8,ICE PUNCH,An icy punch. May\ncause freezing.
+5,2,9,THUNDERPUNCH,An electric punch.\nIt may paralyze.
+5,2,10,SCRATCH,Scratches with\nsharp claws.
+5,2,11,VICEGRIP,Grips with power-\nful pincers.
+5,2,12,GUILLOTINE,"A one-hit KO,\npincer attack."
+5,2,13,RAZOR WIND,1st turn: Prepare\n2nd turn: Attack
+5,2,14,SWORDS DANCE,A dance that in-\ncreases ATTACK.
+5,2,15,CUT,"Cuts using claws,\nscythes, etc."
+5,2,16,GUST,Whips up a strong\ngust of wind.
+5,2,17,WING ATTACK,Strikes the target\nwith wings.
+5,2,18,WHIRLWIND,Blows away the foe\n& ends battle.
+5,2,19,FLY,1st turn: Fly\n2nd turn: Attack
+5,2,20,BIND,Binds the target\nfor 2-5 turns.
+5,2,21,SLAM,"Slams the foe with\na tail, vine, etc."
+5,2,22,VINE WHIP,Whips the foe with\nslender vines.
+5,2,23,STOMP,An attack that may\ncause flinching.
+5,2,24,DOUBLE KICK,A double kicking\nattack.
+5,2,25,MEGA KICK,A powerful kicking\nattack.
+5,2,26,JUMP KICK,"May miss, damaging\nthe user."
+5,2,27,ROLLING KICK,"A fast, spinning\nkick."
+5,2,28,SAND-ATTACK,Reduces accuracy\nby throwing sand.
+5,2,29,HEADBUTT,An attack that may\nmake foe flinch.
+5,2,30,HORN ATTACK,An attack using a\nhorn to jab.
+5,2,31,FURY ATTACK,Jabs the target\n2-5 times.
+5,2,32,HORN DRILL,"A one-hit KO,\ndrill attack."
+5,2,33,TACKLE,A full-body charge\nattack.
+5,2,34,BODY SLAM,An attack that may\ncause paralysis.
+5,2,35,WRAP,Squeezes the foe\nfor 2-5 turns.
+5,2,36,TAKE DOWN,A tackle that also\nhurts the user.
+5,2,37,THRASH,Works 2-3 turns\nand confuses user.
+5,2,38,DOUBLE-EDGE,A tackle that also\nhurts the user.
+5,2,39,TAIL WHIP,Lowers the foe's\nDEFENSE.
+5,2,40,POISON STING,An attack that may\npoison the target.
+5,2,41,TWINEEDLE,Jabs the foe twice\nusing stingers.
+5,2,42,PIN MISSILE,Fires pins that\nstrike 2-5 times.
+5,2,43,LEER,Reduces the foe's\nDEFENSE.
+5,2,44,BITE,An attack that may\ncause flinching.
+5,2,45,GROWL,Reduces the foe's\nATTACK.
+5,2,46,ROAR,Scares wild foes\nto end battle.
+5,2,47,SING,May cause the foe\nto fall asleep.
+5,2,48,SUPERSONIC,Sound waves that\ncause confusion.
+5,2,49,SONICBOOM,Always inflicts\n20HP damage.
+5,2,50,DISABLE,Disables the foe's\nmost recent move.
+5,2,51,ACID,An attack that may\nlower DEFENSE.
+5,2,52,EMBER,An attack that may\ninflict a burn.
+5,2,53,FLAMETHROWER,An attack that may\ninflict a burn.
+5,2,54,MIST,Prevents stat\nreduction.
+5,2,55,WATER GUN,Squirts water to\nattack.
+5,2,56,HYDRO PUMP,A powerful water-\ntype attack.
+5,2,57,SURF,A strong water-\ntype attack.
+5,2,58,ICE BEAM,An attack that may\nfreeze the foe.
+5,2,59,BLIZZARD,An attack that may\nfreeze the foe.
+5,2,60,PSYBEAM,An attack that may\nconfuse the foe.
+5,2,61,BUBBLEBEAM,An attack that may\nlower SPEED.
+5,2,62,AURORA BEAM,An attack that may\nlower ATTACK.
+5,2,63,HYPER BEAM,1st turn: Attack\n2nd turn: Rest
+5,2,64,PECK,"Jabs the foe with\na beak, etc."
+5,2,65,DRILL PECK,"A strong, spin-\nning-peck attack."
+5,2,66,SUBMISSION,An attack that al-\nso hurts the user.
+5,2,67,LOW KICK,An attack that may\ncause flinching.
+5,2,68,COUNTER,Returns a physical\nblow double.
+5,2,69,SEISMIC TOSS,The user's level\nequals damage HP.
+5,2,70,STRENGTH,A powerful physi-\ncal attack.
+5,2,71,ABSORB,Steals 1/2 of the\ndamage inflicted.
+5,2,72,MEGA DRAIN,Steals 1/2 of the\ndamage inflicted.
+5,2,73,LEECH SEED,Steals HP from the\nfoe on every turn.
+5,2,74,GROWTH,Raises the SPCL.\nATK rating.
+5,2,75,RAZOR LEAF,Has a high criti-\ncal hit ratio.
+5,2,76,SOLARBEAM,1st turn: Prepare\n2nd turn: Attack
+5,2,77,POISONPOWDER,A move that may\npoison the foe.
+5,2,78,STUN SPORE,A move that may\nparalyze the foe.
+5,2,79,SLEEP POWDER,May cause the foe\nto fall asleep.
+5,2,80,PETAL DANCE,Works 2-3 turns\nand confuses user.
+5,2,81,STRING SHOT,A move that lowers\nthe foe's SPEED.
+5,2,82,DRAGON RAGE,Always inflicts\n40HP damage.
+5,2,83,FIRE SPIN,Traps foe in fire\nfor 2-5 turns.
+5,2,84,THUNDERSHOCK,An attack that may\ncause paralysis.
+5,2,85,THUNDERBOLT,An attack that may\ncause paralysis.
+5,2,86,THUNDER WAVE,A move that may\ncause paralysis.
+5,2,87,THUNDER,An attack that may\ncause paralysis.
+5,2,88,ROCK THROW,Drops rocks on the\nenemy.
+5,2,89,EARTHQUAKE,Tough but useless\nvs. flying foes.
+5,2,90,FISSURE,"A ground-type,\none-hit KO attack."
+5,2,91,DIG,1st turn: Burrow\n2nd turn: Attack
+5,2,92,TOXIC,A poison move with\nincreasing damage.
+5,2,93,CONFUSION,An attack that may\ncause confusion.
+5,2,94,PSYCHIC,An attack that may\nlower SPCL.DEF.
+5,2,95,HYPNOSIS,May put the foe to\nsleep.
+5,2,96,MEDITATE,Raises the user's\nATTACK.
+5,2,97,AGILITY,Sharply increases\nthe user's SPEED.
+5,2,98,QUICK ATTACK,Lets the user get\nin the first hit.
+5,2,99,RAGE,Raises ATTACK if\nthe user is hit.
+5,2,100,TELEPORT,A move for fleeing\nfrom battle.
+5,2,101,NIGHT SHADE,The user's level\nequals damage HP.
+5,2,102,MIMIC,Copies a move used\nby the foe.
+5,2,103,SCREECH,Sharply reduces\nthe foe's DEFENSE.
+5,2,104,DOUBLE TEAM,Heightens evasive-\nness.
+5,2,105,RECOVER,Restores HP by 1/2\nthe max HP.
+5,2,106,HARDEN,Raises the user's\nDEFENSE.
+5,2,107,MINIMIZE,Heightens evasive-\nness.
+5,2,108,SMOKESCREEN,Lowers the foe's\naccuracy.
+5,2,109,CONFUSE RAY,A move that causes\nconfusion.
+5,2,110,WITHDRAW,Heightens the\nuser's DEFENSE.
+5,2,111,DEFENSE CURL,Heightens the\nuser's DEFENSE.
+5,2,112,BARRIER,Sharply increases\nuser's DEFENSE.
+5,2,113,LIGHT SCREEN,Ups SPCL.DEF with\na wall of light.
+5,2,114,HAZE,Eliminates all\nstat changes.
+5,2,115,REFLECT,Raises DEFENSE\nwith a barrier.
+5,2,116,FOCUS ENERGY,Raises the criti-\ncal hit ratio.
+5,2,117,BIDE,Waits 2-3 turns &\nhits back double.
+5,2,118,METRONOME,Randomly uses any\nPOKéMON move.
+5,2,119,MIRROR MOVE,Counters with the\nsame move.
+5,2,120,SELFDESTRUCT,Powerful but makes\nthe user faint.
+5,2,121,EGG BOMB,Eggs are hurled at\nthe foe.
+5,2,122,LICK,An attack that may\ncause paralysis.
+5,2,123,SMOG,An attack that may\npoison the foe.
+5,2,124,SLUDGE,An attack that may\npoison the foe.
+5,2,125,BONE CLUB,An attack that may\ncause flinching.
+5,2,126,FIRE BLAST,An attack that\nmay cause a burn.
+5,2,127,WATERFALL,An aquatic charge\nattack.
+5,2,128,CLAMP,Traps the foe for\n2-5 turns.
+5,2,129,SWIFT,An attack that\nnever misses.
+5,2,130,SKULL BASH,1st turn: Prepare\n2nd turn: Attack
+5,2,131,SPIKE CANNON,Fires spikes to\nhit 2-5 times.
+5,2,132,CONSTRICT,An attack that may\nlower SPEED.
+5,2,133,AMNESIA,Sharply raises the\nuser's SPCL.DEF.
+5,2,134,KINESIS,Reduces the foe's\naccuracy.
+5,2,135,SOFTBOILED,Restores HP by 1/2\nthe user's max HP.
+5,2,136,HI JUMP KICK,May miss and hurt\nthe user.
+5,2,137,GLARE,A move that may\ncause paralysis.
+5,2,138,DREAM EATER,Steals HP from a\nsleeping victim.
+5,2,139,POISON GAS,A move that may\npoison the foe.
+5,2,140,BARRAGE,Throws orbs to hit\n2-5 times.
+5,2,141,LEECH LIFE,Steals 1/2 of the\ndamage inflicted.
+5,2,142,LOVELY KISS,May cause the foe\nto fall asleep.
+5,2,143,SKY ATTACK,1st turn: Prepare\n2nd turn: Attack
+5,2,144,TRANSFORM,The user assumes\nthe foe's guise.
+5,2,145,BUBBLE,An attack that may\nreduce SPEED.
+5,2,146,DIZZY PUNCH,An attack that may\ncause confusion.
+5,2,147,SPORE,A move that\ninduces sleep.
+5,2,148,FLASH,Blinds the foe to\nreduce accuracy.
+5,2,149,PSYWAVE,An attack with\nvariable power.
+5,2,150,SPLASH,Has no effect\nwhatsoever.
+5,2,151,ACID ARMOR,Sharply raises the\nuser's DEFENSE.
+5,2,152,CRABHAMMER,Has a high criti-\ncal hit ratio.
+5,2,153,EXPLOSION,Very powerful but\nmakes user faint.
+5,2,154,FURY SWIPES,Quickly scratches\n2-5 times.
+5,2,155,BONEMERANG,An attack that\nstrikes twice.
+5,2,156,REST,Sleep for 2 turns\nto fully recover.
+5,2,157,ROCK SLIDE,An attack that may\ncause flinching.
+5,2,158,HYPER FANG,An attack that may\ncause flinching.
+5,2,159,SHARPEN,A move that raises\nthe user's ATTACK.
+5,2,160,CONVERSION,Change user's type\nto a move's type.
+5,2,161,TRI ATTACK,Fires three kinds\nof beams at once.
+5,2,162,SUPER FANG,Cuts the foe's HP\nby 1/2.
+5,2,163,SLASH,Has a high criti-\ncal hit ratio.
+5,2,164,SUBSTITUTE,Makes a decoy with\n1/4 user's max HP.
+5,2,165,STRUGGLE,Used only if all\nPP are exhausted.
+5,2,166,SKETCH,Copies the foe's\nmove permanently.
+5,2,167,TRIPLE KICK,Hits three times\nwith rising power.
+5,2,168,THIEF,An attack that may\nsteal a held item.
+5,2,169,SPIDER WEB,Prevents fleeing\nor switching.
+5,2,170,MIND READER,Ensures the next\nattack will hit.
+5,2,171,NIGHTMARE,A sleeper loses\n1/4 HP every turn.
+5,2,172,FLAME WHEEL,An attack that may\ncause a burn.
+5,2,173,SNORE,An attack useable\nonly while asleep.
+5,2,174,CURSE,Works differently\nfor ghost-types.
+5,2,175,FLAIL,Stronger if the\nuser's HP is low.
+5,2,176,CONVERSION2,The user's type is\nmade resistant.
+5,2,177,AEROBLAST,Has a high criti-\ncal hit ratio.
+5,2,178,COTTON SPORE,Sharply reduces\nthe foe's SPEED.
+5,2,179,REVERSAL,Stronger if the\nuser's HP is low.
+5,2,180,SPITE,Cuts the PP of the\nfoe's last move.
+5,2,181,POWDER SNOW,An attack that may\ncause freezing.
+5,2,182,PROTECT,Foils attack that\nturn. It may fail.
+5,2,183,MACH PUNCH,A fast punch that\nlands first.
+5,2,184,SCARY FACE,Sharply reduces\nthe foe's SPEED.
+5,2,185,FAINT ATTACK,An attack that\nnever misses.
+5,2,186,SWEET KISS,A move that causes\nconfusion.
+5,2,187,BELLY DRUM,Reduces own HP to\nmaximize ATTACK.
+5,2,188,SLUDGE BOMB,An attack that may\npoison the foe.
+5,2,189,MUD-SLAP,Reduces the foe's\naccuracy.
+5,2,190,OCTAZOOKA,An attack that may\nreduce accuracy.
+5,2,191,SPIKES,Hurts foes when\nthey switch out.
+5,2,192,ZAP CANNON,An attack that\nalways paralyzes.
+5,2,193,FORESIGHT,Negates accuracy\nreduction moves.
+5,2,194,DESTINY BOND,The foe faints if\nthe user does.
+5,2,195,PERISH SONG,Both user and foe\nfaint in 3 turns.
+5,2,196,ICY WIND,An icy attack that\nlowers SPEED.
+5,2,197,DETECT,Evades attack that\nturn. It may fail.
+5,2,198,BONE RUSH,An attack that\nhits 2-5 times.
+5,2,199,LOCK-ON,Ensures the next\nattack will hit.
+5,2,200,OUTRAGE,Works 2-3 turns\nand confuses user.
+5,2,201,SANDSTORM,Inflicts damage\nevery turn.
+5,2,202,GIGA DRAIN,Steals 1/2 of the\ndamage inflicted.
+5,2,203,ENDURE,Always leaves at\nleast 1HP.
+5,2,204,CHARM,Sharply lowers the\nfoe's ATTACK.
+5,2,205,ROLLOUT,Attacks 5 turns\nwith rising power.
+5,2,206,FALSE SWIPE,Leaves the foe\nwith at least 1HP.
+5,2,207,SWAGGER,Causes confusion\nand raises ATTACK.
+5,2,208,MILK DRINK,Restores HP by 1/2\nthe max HP.
+5,2,209,SPARK,An attack that may\ncause paralysis.
+5,2,210,FURY CUTTER,Successive hits\nraise power.
+5,2,211,STEEL WING,Stiff wings strike\nthe foe.
+5,2,212,MEAN LOOK,Prevents fleeing\nor switching.
+5,2,213,ATTRACT,Makes the opposite\ngender infatuated.
+5,2,214,SLEEP TALK,Randomly attacks\nwhile asleep.
+5,2,215,HEAL BELL,Eliminates all\nstatus problems.
+5,2,216,RETURN,An attack that is\nbased on loyalty.
+5,2,217,PRESENT,A bomb that may\nrestore HP.
+5,2,218,FRUSTRATION,An attack based on\nlack of loyalty.
+5,2,219,SAFEGUARD,Prevents all\nstatus problems.
+5,2,220,PAIN SPLIT,Adds user & foe's\nHPs. Shares total.
+5,2,221,SACRED FIRE,An attack that may\ninflict a burn.
+5,2,222,MAGNITUDE,A ground attack\nwith random power.
+5,2,223,DYNAMICPUNCH,An attack that\nalways confuses.
+5,2,224,MEGAHORN,A powerful charge\nattack.
+5,2,225,DRAGONBREATH,A strong breath\nattack.
+5,2,226,BATON PASS,Switches while\nkeeping effects.
+5,2,227,ENCORE,Makes the foe re-\npeat 2-6 times.
+5,2,228,PURSUIT,Heavily strikes\nswitching POKéMON.
+5,2,229,RAPID SPIN,A high-speed\nspinning attack.
+5,2,230,SWEET SCENT,Reduces the foe's\nevasiveness.
+5,2,231,IRON TAIL,An attack that may\nreduce DEFENSE.
+5,2,232,METAL CLAW,An attack that may\nup user's ATTACK.
+5,2,233,VITAL THROW,A 2nd-strike move\nthat never misses.
+5,2,234,MORNING SUN,Restores HP\n(varies by time).
+5,2,235,SYNTHESIS,Restores HP\n(varies by time).
+5,2,236,MOONLIGHT,Restores HP\n(varies by time).
+5,2,237,HIDDEN POWER,The power varies\nwith the POKéMON.
+5,2,238,CROSS CHOP,Has a high criti-\ncal hit ratio.
+5,2,239,TWISTER,Whips up a tornado\nto attack.
+5,2,240,RAIN DANCE,Boosts water-type\nmoves for 5 turns.
+5,2,241,SUNNY DAY,Boosts fire-type\nmoves for 5 turns.
+5,2,242,CRUNCH,An attack that may\nlower SPCL.DEF.
+5,2,243,MIRROR COAT,Counters a SPCL.\nATK. move double.
+5,2,244,PSYCH UP,Copies the foe's\nstat changes.
+5,2,245,EXTREMESPEED,A powerful first-\nstrike move.
+5,2,246,ANCIENTPOWER,An attack that may\nraise all stats.
+5,2,247,SHADOW BALL,An attack that may\nlower SPCL.DEF.
+5,2,248,FUTURE SIGHT,An attack that\nhits on 3rd turn.
+5,2,249,ROCK SMASH,An attack that may\nlower DEFENSE.
+5,2,250,WHIRLPOOL,Traps the foe for\n2-5 turns.
+5,2,251,BEAT UP,Party POKéMON join\nin the attack.
+5,3,1,ECRAS'FACE,Ecrase avec pattes\nou queue.
+5,3,2,POING-KARATE,Haut taux de coup\ncritique.
+5,3,3,TORGNOLES,Gifle de 2 à\n5 fois.
+5,3,4,POING COMETE,Frappe de 2 à\n5 fois.
+5,3,5,ULTIMAPOING,Un coup de poing\ntrès puissant.
+5,3,6,JACKPOT,"Lance des pièces,\nles gagne après."
+5,3,7,POING DE FEU,Poing de feu pou-\nvant brûler.
+5,3,8,POINGLACE,Poing de glace\npouvant geler.
+5,3,9,POING-ECLAIR,Poing électrique.\nPeut paralyser.
+5,3,10,GRIFFE,Lacère avec des\ngriffes.
+5,3,11,FORCE POIGNE,Agrippe avec des\npinces.
+5,3,12,GUILLOTINE,KO en un coup.\nCoup de pince.
+5,3,13,COUPE-VENT,Tour 1: Prépare\nTour 2: Attaque
+5,3,14,DANSE-LAMES,Une danse augmen-\ntant l'ATTAQUE.
+5,3,15,COUPE,"Coupe avec griffe,\ndard, etc."
+5,3,16,TORNADE,Envoie un fort\ncourant d'air.
+5,3,17,CRU-AILE,Frappe l'ennemi\navec des ailes.
+5,3,18,CYCLONE,Ejecte la cible\n& finit le combat.
+5,3,19,VOL,Tour 1: Vol\nTour 2: Attaque
+5,3,20,ETREINTE,Aveugle la cible\nde 2 à 5 tours.
+5,3,21,SOUPLESSE,"Frappe avec queue,\nliane, etc."
+5,3,22,FOUET LIANES,Frappe avec de\nfines lianes.
+5,3,23,ECRASEMENT,Attaque pouvant a-\npeurer la cible.
+5,3,24,DOUBLE PIED,Double attaque de\ncoup de pied.
+5,3,25,ULTIMAWASHI,Coup de pied\npuissant.
+5,3,26,PIED SAUTE,Peut échouer et\nfaire mal.
+5,3,27,MAWASHI GERI,Pied tournoyant et\nrapide.
+5,3,28,JET DE SABLE,Lance du sable et\nbaisse précision.
+5,3,29,COUP D'BOULE,Attaque pouvant a-\npeurer la cible.
+5,3,30,KOUD'KORNE,Attaque utilisant\nune corne.
+5,3,31,FURIE,Frappe la cible de\n2 à 5 fois.
+5,3,32,EMPAL'KORNE,"KO en un coup,\nattaque perceuse."
+5,3,33,CHARGE,Une attaque en\ncharge.
+5,3,34,PLAQUAGE,Attaque pouvant\nparalyser.
+5,3,35,LIGOTAGE,Serre la cible de\n2 à 5 tours.
+5,3,36,BELIER,Charge blessant\nles 2 adversaires.
+5,3,37,MANIA,Dure 2 à 3 tours.\nLanceur confus.
+5,3,38,DAMOCLES,Charge blessant\nles 2 adversaires.
+5,3,39,MIMI-QUEUE,Baisse la DEFENSE\nde la cible.
+5,3,40,DARD-VENIN,Attaque pouvant\nempoisonner.
+5,3,41,DOUBLE-DARD,Pique la cible 2\nfois avec dards.
+5,3,42,DARD-NUEE,Lance des dards\n2 à 5 fois.
+5,3,43,GROZ'YEUX,Baisse la DEFENSE\nde la cible.
+5,3,44,MORSURE,Attaque pouvant a-\npeurer la cible.
+5,3,45,RUGISSEMENT,Baisse l'ATTAQUE\nde la cible.
+5,3,46,HURLEMENT,Apeure et éloigne\nennemis sauvages.
+5,3,47,BERCEUSE,Peut endormir la\ncible.
+5,3,48,ULTRASON,Ondes sonores ren-\ndant confus.
+5,3,49,SONICBOOM,Inflige toujours\n20 pts de dégâts.
+5,3,50,ENTRAVE,Annule la dernière\ncap. de la cible.
+5,3,51,ACIDE,Peut baisser\nla DEFENSE.
+5,3,52,FLAMMECHE,Peut infliger\nune brûlure.
+5,3,53,LANCE-FLAMME,Peut infliger\nune brûlure.
+5,3,54,BRUME,Contre réduction\nde statut.
+5,3,55,PISTOLET A O,Attaque en lançant\nde l'eau.
+5,3,56,HYDROCANON,Attaque d'eau\npuissante.
+5,3,57,SURF,Une forte attaque\nd'eau.
+5,3,58,LASER GLACE,Attaque pouvant\ngeler la cible.
+5,3,59,BLIZZARD,Attaque pouvant\ngeler la cible.
+5,3,60,RAFALE PSY,Attaque pouvant\nrendre confus.
+5,3,61,BULLES D'O,Attaque pouvant\nbaisser VITESSE.
+5,3,62,ONDE BOREALE,Attaque pouvant\nbaisser ATTAQUE.
+5,3,63,ULTRALASER,Tour 1: Attaque\nTour 2: Repos
+5,3,64,PICPIC,"Frappe avec un\nbec, etc."
+5,3,65,BEC VRILLE,Attaque de bec\ntournoyant.
+5,3,66,SACRIFICE,Attaque frappant\naussi le lanceur.
+5,3,67,BALAYAGE,Attaque pouvant a-\npeurer la cible.
+5,3,68,RIPOSTE,Répond à une atta-\nque physique x2.
+5,3,69,FRAPPE ATLAS,Niveau lanceur é-\ngal aux dégâts.
+5,3,70,FORCE,Une attaque physi-\nque puissante.
+5,3,71,VOL-VIE,Vole 1/2 des dé-\ngâts infligés.
+5,3,72,MEGA-SANGSUE,Vole 1/2 des dé-\ngâts infligés.
+5,3,73,VAMPIGRAINE,Vole des PV à la\ncible chaque tour.
+5,3,74,CROISSANCE,Monte l'ATTAQUE\nSPECIALE.
+5,3,75,TRANCH'HERBE,Haut taux de coup\ncritique.
+5,3,76,LANCE-SOLEIL,Tour 1: Prépare\nTour 2: Attaque
+5,3,77,POUDRE TOXIK,Capacité pouvant\nempoisonner.
+5,3,78,PARA-SPORE,Capacité pouvant\nparalyser.
+5,3,79,POUDRE DODO,Capacité pouvant\nendormir.
+5,3,80,DANSE-FLEUR,Dure 2 à 3 tours.\nLanceur confus.
+5,3,81,SECRETION,Capacité baissant\nla VITESSE.
+5,3,82,DRACO-RAGE,Inflige toujours\n40 pts de dégâts.
+5,3,83,DANSEFLAMME,2 à 5 tours: cible\nimmobile dans feu.
+5,3,84,ECLAIR,Attaque pouvant\nparalyser.
+5,3,85,TONNERRE,Attaque pouvant\nparalyser.
+5,3,86,CAGE-ECLAIR,Capacité pouvant\nparalyser.
+5,3,87,FATAL-FOUDRE,Attaque pouvant\nparalyser.
+5,3,88,JET-PIERRES,Lâche des rochers\nsur l'ennemi.
+5,3,89,SEISME,Puissant mais inu-\ntile sur volants.
+5,3,90,ABIME,Type sol.\nKO en un coup.
+5,3,91,TUNNEL,Tour 1: Enterre\nTour 2: Attaque
+5,3,92,TOXIK,Poison à dégâts\ncroissants.
+5,3,93,CHOC MENTAL,Attaque pouvant\nrendre confus.
+5,3,94,PSYKO,Attaque pouvant\nbaisser DEF.SPE.
+5,3,95,HYPNOSE,Peut endormir la\ncible.
+5,3,96,YOGA,Monte l'ATTAQUE\ndu lanceur.
+5,3,97,HATE,Monte VIT. du lan-\nceur énormément.
+5,3,98,VIVE-ATTAQUE,Donne l'initiative\nau lanceur.
+5,3,99,FRENESIE,Monte l'ATTAQUE si\nlanceur touché.
+5,3,100,TELEPORT,Pour s'enfuir\nd'un combat.
+5,3,101,TENEBRES,Niveau lanceur é-\ngal aux dégâts.
+5,3,102,COPIE,Copie une capaci-\nté de l'ennemi.
+5,3,103,GRINCEMENT,Baisse DEFENSE de\ncible énormément.
+5,3,104,REFLET,Monte l'esquive.
+5,3,105,SOIN,Restaure 1/2 PV\ndu max.
+5,3,106,ARMURE,Monte la DEFENSE\ndu lanceur.
+5,3,107,LILLIPUT,Monte l'esquive.
+5,3,108,BROUILLARD,Baisse la préci-\nsion de la cible.
+5,3,109,ONDE FOLIE,Une capacité ren-\ndant confus.
+5,3,110,REPLI,Monte la DEFENSE\ndu lanceur.
+5,3,111,BOUL'ARMURE,Monte la DEFENSE\ndu lanceur.
+5,3,112,BOUCLIER,Monte DEF. du lan-\nceur énormément.
+5,3,113,MUR LUMIERE,Mur de lumière\nmontant DEF.SPE.
+5,3,114,BUEE NOIRE,Annule changement\nde statut.
+5,3,115,PROTECTION,Bouclier montant\nla DEFENSE.
+5,3,116,PUISSANCE,Monte les chances\nde coup critique.
+5,3,117,PATIENCE,Attend 2 à 3 tours\net frappe double.
+5,3,118,METRONOME,Lance une capacité\nPOKéMON au hasard.
+5,3,119,MIMIQUE,Contre avec la mê-\nme capacité.
+5,3,120,DESTRUCTION,Puissant mais met\nle lanceur KO.
+5,3,121,BOMB'OEUF,Lance des oeufs\nsur l'ennemi.
+5,3,122,LECHOUILLE,Attaque pouvant\nparalyser.
+5,3,123,PUREDPOIS,Attaque pouvant\nempoisonner.
+5,3,124,DETRITUS,Attaque pouvant\nempoisonner.
+5,3,125,MASSD'OS,Attaque pouvant a-\npeurer la cible.
+5,3,126,DEFLAGRATION,Attaque pouvant\nbrûler.
+5,3,127,CASCADE,Une charge aquati-\nque.
+5,3,128,CLAQUOIR,Piège la cible de\n2 à 5 tours.
+5,3,129,METEORES,Attaque qui ne\nrate jamais.
+5,3,130,COUD'KRANE,Tour 1: Prépare\nTour 2: Attaque
+5,3,131,PICANON,Lance des pics\n2 à 5 fois.
+5,3,132,CONSTRICTION,Attaque pouvant\nbaisser VITESSE.
+5,3,133,AMNESIE,Monte DEF.SPE.\nénormément.
+5,3,134,TELEKINESIE,Baisse la préci-\nsion de la cible.
+5,3,135,E-COQUE,Restaure 1/2 PV\ndu max.
+5,3,136,PIED VOLTIGE,Peut échouer bles-\nsant le lanceur.
+5,3,137,INTIMIDATION,Capacité pouvant\nparalyser.
+5,3,138,DEVOREVE,Vole les PV d'une\nvictime endormie.
+5,3,139,GAZ TOXIK,Capacité pouvant\nempoisonner.
+5,3,140,PILONNAGE,Lance des orbes\n2 à 5 fois.
+5,3,141,VAMPIRISME,Vole 1/2 des dé-\ngâts infligés.
+5,3,142,GROBISOU,Peut endormir\nla cible.
+5,3,143,PIQUE,Tour 1: Prépare\nTour 2: Attaque
+5,3,144,MORPHING,Le lanceur voit\nclair...
+5,3,145,ECUME,Attaque pouvant\nbaisser VITESSE.
+5,3,146,UPPERCUT,Attaque pouvant\nrendre confus.
+5,3,147,SPORE,Une capacité pour\nendormir.
+5,3,148,FLASH,Enserre cible et\nbaisse précision.
+5,3,149,VAGUE PSY,Attaque de puis-\nsance variable.
+5,3,150,TREMPETTE,N'a aucun effet.\nRien. Zéro.
+5,3,151,ACIDARMURE,Monte DEF. du lan-\nceur énormément.
+5,3,152,PINCE-MASSE,Haut taux de coup\ncritique.
+5,3,153,EXPLOSION,Puissant mais met\nle lanceur KO.
+5,3,154,COMBO-GRIFFE,Griffe rapidement\n2 à 5 fois.
+5,3,155,OSMERANG,Attaque touchant\ndeux fois.
+5,3,156,REPOS,Fait dormir deux\ntours pour soin.
+5,3,157,EBOULEMENT,Attaque pouvant a-\npeurer la cible.
+5,3,158,CROC DE MORT,Attaque pouvant a-\npeurer la cible.
+5,3,159,AFFUTAGE,Capacité montant\nl'ATT. du lanceur.
+5,3,160,ADAPTATION,Change le type en\ncelui d'une cap.
+5,3,161,TRIPLATTAQUE,Lance trois rayons\nen même temps.
+5,3,162,CROC FATAL,Réduit de 1/2 les\nPV de la cible.
+5,3,163,TRANCHE,Haut taux de coup\ncritique.
+5,3,164,CLONAGE,Crée un leurre:\n1/4 des PV max.
+5,3,165,LUTTE,A utiliser que si\ntous PP épuisés.
+5,3,166,GRIBOUILLE,Copie la cap. en-\nnemie pour tjrs.
+5,3,167,TRIPLE PIED,Touche 3 fois de\nplus en plus fort.
+5,3,168,LARCIN,Attaque pouvant\nvoler objet tenu.
+5,3,169,TOILE,Empêche fuite ou\nchangement.
+5,3,170,LIRE-ESPRIT,Prochaine attaque\ntouche à coup sûr.
+5,3,171,CAUCHEMAR,Dormeur perd 1/4\ndes PV par tour.
+5,3,172,ROUE DE FEU,Attaque pouvant\nbrûler.
+5,3,173,RONFLEMENT,A utiliser pendant\nle sommeil.
+5,3,174,MALEDICTION,Diffère selon les\ntypes de spectres.
+5,3,175,FLEAU,Puissant si PV du\nlanceur faibles.
+5,3,176,ADAPTATION2,Type du lanceur\ndevient résistant.
+5,3,177,AEROBLAST,Haut taux de coup\ncritique.
+5,3,178,SPORE COTON,Baisse VITESSE de\ncible énormément.
+5,3,179,CONTRE,Puissant si PV du\nlanceur faibles.
+5,3,180,DEPIT,Baisse PP dernière\ncapacité ennemie.
+5,3,181,POUDREUSE,Attaque pouvant\ngeler.
+5,3,182,ABRI,Peut déjouer l'at-\ntaque de ce tour.
+5,3,183,MACH PUNCH,Coup de poing qui\na l'initiative.
+5,3,184,GRIMACE,Baisse VITESSE de\ncible énormément.
+5,3,185,FEINTE,Une attaque qui ne\nrate jamais.
+5,3,186,DOUX BAISER,Capacité rendant\nconfus.
+5,3,187,COGNOBIDON,Baisse les PV pour\nmaximiser ATTAQUE.
+5,3,188,BOMB-BEURK,Attaque pouvant\nempoisonner.
+5,3,189,COUD'BOUE,Baisse la préci-\nsion de la cible.
+5,3,190,OCTAZOOKA,Attaque pouvant\nbaisser précision.
+5,3,191,PICOTS,Frappe les cibles\npdt changement.
+5,3,192,ELECANON,Attaque paralysant\nà coup sûr.
+5,3,193,CLAIRVOYANCE,Déjoue les cap. de\nbaisse de précis.
+5,3,194,PRLVT DESTIN,Cible KO en même\ntps que lanceur.
+5,3,195,REQUIEM,Lanceur et cible\nKO au 4ème tour.
+5,3,196,VENT GLACE,Attaque de glace.\nBaisse la VITESSE.
+5,3,197,DETECTION,Peut éviter l'at-\ntaque de ce tour.
+5,3,198,CHARGE-OS,Attaque touchant\n2 à 5 fois.
+5,3,199,VERROUILLAGE,Prochaine attaque\ntouche à coup sûr.
+5,3,200,COLERE,Pdt 2 à 3 tours\net rend confus.
+5,3,201,TEMPETESABLE,Inflige des dégâts\nchaque tour.
+5,3,202,GIGA-SANGSUE,Vole 1/2 des dé-\ngâts infligés.
+5,3,203,TENACITE,Laisse toujours au\nmoins 1 PV.
+5,3,204,CHARME,Baisse ATTAQUE de\ncible énormément.
+5,3,205,ROULADE,Attaque 5 tours de\nplus en plus fort.
+5,3,206,FAUX-CHAGE,Laisse cible avec\nau moins 1 PV.
+5,3,207,VANTARDISE,Rend confus et\nmonte l'ATTAQUE.
+5,3,208,LAIT A BOIRE,Restaure 1/2 PV\ndu max.
+5,3,209,ETINCELLE,Attaque pouvant\nparalyser.
+5,3,210,TAILLADE,Coups réussis mon-\ntent la puissance.
+5,3,211,AILE D'ACIER,Des ailes frappent\nla cible.
+5,3,212,REGARD NOIR,Empêche fuite ou\nchangement.
+5,3,213,ATTRACTION,Rend le genre op-\nposé amoureux.
+5,3,214,BLABLA DODO,Attaque au hasard\npdt le sommeil.
+5,3,215,GLAS DE SOIN,Annule changement\nde statut.
+5,3,216,RETOUR,Attaque basée sur\nla loyauté.
+5,3,217,CADEAU,Bombe pouvant res-\ntaurer les PV.
+5,3,218,FRUSTRATION,Attaque sur le\nmanque de loyauté.
+5,3,219,RUNE PROTECT,Prévient change-\nment de statut.
+5,3,220,BALANCE,Divise total de PV\ncible et lanceur.
+5,3,221,FEU SACRE,Attaque pouvant\nbrûler.
+5,3,222,AMPLEUR,Attaque au sol.\nForce variable.
+5,3,223,DYNAMOPOING,Attaque rendant\ntjrs confus.
+5,3,224,MEGACORNE,Une charge\npuissante.
+5,3,225,DRACOSOUFFLE,Un souffle\npuissant.
+5,3,226,RELAIS,Change et garde\nles effets.
+5,3,227,ENCORE,Fait répéter la\ncible 2 à 6 fois.
+5,3,228,POURSUITE,Frappe fort le\nPKMN changé.
+5,3,229,TOUR RAPIDE,Attaque tournoyan-\nte très rapide.
+5,3,230,DOUX PARFUM,Baisse l'esquive\nde la cible.
+5,3,231,QUEUE DE FER,Attaque pouvant\nbaisser DEFENSE.
+5,3,232,GRIFFE ACIER,Peut monter l'AT-\nTAQUE du lanceur.
+5,3,233,CORPS PERDU,Frappe en 2nd mais\ntouche toujours.
+5,3,234,AURORE,Restaure les PV\n(varie).
+5,3,235,SYNTHESE,Restaure les PV\n(varie).
+5,3,236,RAYON LUNE,Restaure les PV\n(varie).
+5,3,237,PUIS. CACHEE,Puissance varie\nsuivant le PKMN.
+5,3,238,COUP-CROIX,Haut taux de coup\ncritique.
+5,3,239,OURAGAN,Lance une tornade\npour attaquer.
+5,3,240,DANSE PLUIE,Renforce les att.\nd'eau pdt 5 tours.
+5,3,241,ZENITH,Renforce les att.\nfeu pdt 5 tours.
+5,3,242,MACHOUILLE,Attaque pouvant\nbaisser DEF.SPE.
+5,3,243,VOILE MIROIR,Contre ATQ. SPE.\nen frappe double.
+5,3,244,BOOST,Copie le chang. de\nstat. de la cible.
+5,3,245,VIT.EXTREME,Coup d'initiative\npuissant.
+5,3,246,POUV.ANTIQUE,Attaque pouvant\nmonter les stats.
+5,3,247,BALL'OMBRE,Attaque pouvant\nbaisser DEF.SPE.
+5,3,248,PRESCIENCE,Attaque frappant\nau 3ème tour.
+5,3,249,ECLATE-ROC,Attaque pouvant\nbaisser DEFENSE.
+5,3,250,SIPHON,Piège la cible pdt\n2 à 5 tours.
+5,3,251,BASTON,Les PKMN d'équipe\nfrappent ensemble.
+5,4,1,PFUND,Schlag mit Vorder-\nhuf oder Schwanz.
+5,4,2,KARATESCHLAG,Volltrefferquote\nhoch.
+5,4,3,DUPLEXHIEB,Trifft bis zu\n5 mal.
+5,4,4,KOMETENHIEB,Trifft bis zu\n5 mal.
+5,4,5,MEGAHIEB,Ein kräftiger\nPunch.
+5,4,6,ZAHLTAG,Wirft Münzen. Wie-\ndererhalt später.
+5,4,7,FEUERSCHLAG,Feuriger Schlag.\nEvtl. Verbrennung.
+5,4,8,EISHIEB,Eisiger Schlag.\nEvtl. Erfrierung.
+5,4,9,DONNERSCHLAG,Elektro-Schlag.\nEvtl. Paralyse.
+5,4,10,KRATZER,Angriff mit\nscharfen Klauen.
+5,4,11,KLAMMER,Zwickt mit\nkräftigen Scheren.
+5,4,12,GUILLOTINE,K.O. durch\nScheren-Attacke.
+5,4,13,KLINGENSTURM,1. Vorbereitung\n2. Angriff
+5,4,14,SCHWERTTANZ,Tanz erhöht\nANGR-Wert.
+5,4,15,ZERSCHNEIDER,"Setzt Klauen,\nSicheln etc. ein."
+5,4,16,WINDSTOSS,Erzeugt starke\nWindböe.
+5,4,17,FLÜGELSCHLAG,Trifft Ziel mit\nFlügeln.
+5,4,18,WIRBELWIND,Weht Gegner weg\nund beendet Kampf.
+5,4,19,FLIEGEN,1. Emporfliegen\n2. Angriff
+5,4,20,KLAMMERGRIFF,Umklammert Gegner\nbis zu 5 mal.
+5,4,21,SLAM,"Trifft Gegner mit\nSchwanz, Ranke..."
+5,4,22,RANKENHIEB,Trifft Gegner mit\nRanken.
+5,4,23,STAMPFER,Gegner muss evtl.\nausweichen.
+5,4,24,DOPPELKICK,Angriff durch\nDoppel-Kick.
+5,4,25,MEGAKICK,Starke\nFuß-Attacke.
+5,4,26,SPRUNGKICK,Verfehlt evtl.\n+ eigener Schaden.
+5,4,27,FEGEKICK,Schneller\nDreh-Kick.
+5,4,28,SANDWIRBEL,"Wirbelt Sand auf,\nsenkt Genauigkeit."
+5,4,29,KOPFNUSS,Gegner muss evtl.\nausweichen.
+5,4,30,HORNATTACKE,Stoß mit dem\nHorn.
+5,4,31,FURIENSCHLAG,Trifft bis zu\n5 mal.
+5,4,32,HORNBOHRER,K.O. durch\nBohr-Attacke.
+5,4,33,TACKLE,Attacke mit vollem\nKörpereinsatz.
+5,4,34,BODYSLAM,Gegner ist evtl.\nparalysiert.
+5,4,35,WICKEL,Trifft Gegner bis\nzu 5 mal.
+5,4,36,BODYCHECK,Tackle! Angreifer\nwird verletzt.
+5,4,37,FUCHTLER,Hält 2-3 Runden.\nVerwir. Angreifer.
+5,4,38,RISIKOTACKLE,Tackle! Angreifer\nwird verletzt.
+5,4,39,RUTENSCHLAG,Senkt VERT-Wert\ndes Gegners.
+5,4,40,GIFTSTACHEL,Angriff vergiftet\nGegner evtl.
+5,4,41,DUONADEL,Trifft Gegner 2 x\nmit den Stacheln.
+5,4,42,NADELRAKETE,Trifft Gegner bis\nzu 5 mal.
+5,4,43,SILBERBLICK,Senkt VERT-Wert\ndes Gegners.
+5,4,44,BISS,Gegner muss evtl.\nausweichen.
+5,4,45,HEULER,Senkt den ANGR-\nWert des Gegners.
+5,4,46,BRÜLLER,Ängstigt wilde\nGegn. + Kampfende.
+5,4,47,GESANG,Gegner schläft\nevtl. ein.
+5,4,48,SUPERSCHALL,"Schallwellen, die\nGegner verwirren."
+5,4,49,ULTRASCHALL,Fügt Gegner\n20 KP Schaden zu.
+5,4,50,AUSSETZER,Blockiert letzte\nAttacke des Gegn.
+5,4,51,SÄURE,Senkt evtl. VERT-\nWert des Gegners.
+5,4,52,GLUT,Gegner erleidet\nevtl. Verbrennung.
+5,4,53,FLAMMENWURF,Gegner erleidet\nevtl. Verbrennung.
+5,4,54,WEISSNEBEL,Verhindert Status-\nveränderungen.
+5,4,55,AQUAKNARRE,Greift mit Wasser\nan.
+5,4,56,HYDROPUMPE,Eine mächtige\nWasser-Attacke.
+5,4,57,SURFER,Eine starke\nWasser-Attacke.
+5,4,58,EISSTRAHL,Gegner wird evtl.\neingefroren.
+5,4,59,BLIZZARD,Gegner wird evtl.\neingefroren.
+5,4,60,PSYSTRAHL,Gegner wird evtl.\nverwirrt.
+5,4,61,BLUBBSTRAHL,Senkt evtl. INIT-\nWert des Gegners.
+5,4,62,AURORASTRAHL,Senkt evtl. ANGR-\nWert des Gegners.
+5,4,63,HYPERSTRAHL,1. Angriff\n2. Ausruhen
+5,4,64,SCHNABEL,Greift Gegner mit\nSchnabel an.
+5,4,65,BOHRSCHNABEL,Starke Schnabel-\nDreh-Attacke.
+5,4,66,ÜBERROLLER,"Eine Attacke, die\nAnwender verletzt."
+5,4,67,FUSSKICK,Der Gegner muss\nevtl. ausweichen.
+5,4,68,KONTER,Erwidert Körper-\nattacken doppelt.
+5,4,69,GEOWURF,Angreiferlevel\nist Schaden.
+5,4,70,STÄRKE,Starke\nKörperattacke.
+5,4,71,ABSORBER,Erhält Hälfte des\nSchadens als KP.
+5,4,72,MEGASAUGER,Erhält Hälfte des\nSchadens als KP.
+5,4,73,EGELSAMEN,Zieht dem Gegner\njede Runde KP ab.
+5,4,74,WACHSTUM,Hebt den\nSPEZ-Wert.
+5,4,75,RASIERBLATT,Hebt Volltreffer-\nquote enorm.
+5,4,76,SOLARSTRAHL,1. Vorbereitung\n2. Angriff
+5,4,77,GIFTPUDER,Gegner wird evtl.\nvergiftet.
+5,4,78,STACHELSPORE,Gegner wird evtl.\nparalysiert.
+5,4,79,SCHLAFPUDER,Gegner schläft\nevtl. ein.
+5,4,80,BLÄTTERTANZ,Hält 2-3 Runden.\nVerw. Angreifer.
+5,4,81,FADENSCHUSS,Senkt INIT-Wert\ndes Gegners.
+5,4,82,DRACHENWUT,Fügt Gegner\n40 KP Schaden zu.
+5,4,83,FEUERWIRBEL,Trifft Gegner bis\nzu 5 mal.
+5,4,84,DONNERSCHOCK,Gegner ist evtl.\nparalysiert.
+5,4,85,DONNERBLITZ,Gegner ist evtl.\nparalysiert.
+5,4,86,DONNERWELLE,Gegner ist evtl.\nparalysiert.
+5,4,87,DONNER,Gegner ist evtl.\nparalysiert.
+5,4,88,STEINWURF,Felshagel auf\nGegner.
+5,4,89,ERDBEBEN,Stark! Nutzlos\nbei Flug-POKéMON.
+5,4,90,GEOFISSUR,K.O. durch\nBoden-Attacke.
+5,4,91,SCHAUFLER,1. Graben\n2. Angriff
+5,4,92,TOXIN,Gift-Attacke mit\nSchadenszuwachs.
+5,4,93,KONFUSION,Gegner ist evtl.\nverwirrt.
+5,4,94,PSYCHOKINESE,Senkt evtl. SPEZ-\nVER. des Gegners.
+5,4,95,HYPNOSE,Gegner schläft\nevtl. ein.
+5,4,96,MEDITATION,Erhöht ANGR-Wert.
+5,4,97,AGILITÄT,Hebt INIT-Wert\nenorm.
+5,4,98,RUCKZUCKHIEB,Erstschlaggarantie\nfür den Angreifer.
+5,4,99,RASEREI,Hebt ANGR-Wert bei\nSchadenszufuhr.
+5,4,100,TELEPORT,Ermöglicht Flucht\naus Kämpfen.
+5,4,101,NACHTNEBEL,Angreiferlevel ist\nSchaden.
+5,4,102,MIMIKRY,Ahmt Attacke des\nAngreifers nach.
+5,4,103,KREIDESCHREI,Senkt VERT-Wert\ndes Gegners enorm.
+5,4,104,DOPPELTEAM,Fluchtwert nimmt\nzu.
+5,4,105,GENESUNG,Füllt KP zur\nHälfte auf.
+5,4,106,HÄRTNER,Hebt VERT-Wert des\nAngreifers.
+5,4,107,KOMPRIMATOR,Fluchtwert nimmt\nzu.
+5,4,108,RAUCHWOLKE,Senkt Genauigkeit\ndes Gegners.
+5,4,109,KONFUSTRAHL,Verursacht\nVerwirrung.
+5,4,110,PANZERSCHUTZ,Hebt VERT-Wert des\nAngreifers.
+5,4,111,EINIGLER,Hebt VERT-Wert des\nAngreifers.
+5,4,112,BARRIERE,Hebt VERT-Wert des\nAngreifers enorm.
+5,4,113,LICHTSCHILD,Hebt SPEZ-VER.\ndurch Lichtwand.
+5,4,114,DUNKELNEBEL,Verwirft alle\nStatusänderungen.
+5,4,115,REFLEKTOR,Hebt VERT-Wert\nmittels Barriere.
+5,4,116,ENERGIEFOKUS,Volltrefferquote\nwird erhöht.
+5,4,117,GEDULD,Trifft nach 2-3\nRunden doppelt.
+5,4,118,METRONOM,Wählt zufällige\nPOKéMON-Attacke.
+5,4,119,SPIEGELTRICK,Kontert mit glei-\ncher Attacke.
+5,4,120,FINALE,"Stark, der Angrei-\nfer wird besiegt."
+5,4,121,EIERBOMBE,Der Gegner erlebt\neinen Eierhagel.
+5,4,122,SCHLECKER,Gegner wird evtl.\nparalysiert.
+5,4,123,SMOG,Gegner wird evtl.\nvergiftet.
+5,4,124,SCHLAMMBAD,Gegner wird evtl.\nvergiftet.
+5,4,125,KNOCHENKEULE,Gegner muss evtl.\nausweichen.
+5,4,126,FEUERSTURM,Gegner erleidet\nevtl. Verbrennung.
+5,4,127,KASKADE,Wasser-Attacke.
+5,4,128,SCHNAPPER,Trifft Gegner bis\nzu 5 mal.
+5,4,129,STERNSCHAUER,Attacke mit\nTreffergarantie.
+5,4,130,SCHÄDELWUMME,1. Vorbereitung\n2. Angriff
+5,4,131,DORNKANONE,Trifft Gegner bis\nzu 5 mal.
+5,4,132,UMKLAMMERUNG,Senkt evtl.\nINIT-Wert.
+5,4,133,AMNESIE,Hebt SPEZ-VER. des\nAngreifers enorm.
+5,4,134,PSYKRAFT,Senkt Genauigkeit\ndes Gegners.
+5,4,135,WEICHEI,Füllt die KP\nzur Hälfte auf.
+5,4,136,TURMKICK,Evtl. kein Treffer\nund Selbstschaden.
+5,4,137,GIFTBLICK,Gegner wird evtl.\nparalysiert.
+5,4,138,TRAUMFRESSER,Zieht schlafendem\nGegner KP ab.
+5,4,139,GIFTWOLKE,Gegner wird evtl.\nvergiftet.
+5,4,140,STAKKATO,Trifft bis zu\n5 mal.
+5,4,141,BLUTSAUGER,Erhält Hälfte\ndes Schadens.
+5,4,142,TODESKUSS,Gegner schläft\nevtl. ein.
+5,4,143,HIMMELSFEGER,1. Vorbereitung\n2. Angriff
+5,4,144,VERWANDLER,Angreifer erkennt\nTarnung.
+5,4,145,BLUBBER,Senkt evtl. INIT-\nWert des Gegners.
+5,4,146,IRRSCHLAG,Gegner wird evtl.\nverwirrt.
+5,4,147,PILZSPORE,Versetzt Gegner\nin Schlaf.
+5,4,148,BLITZ,Blendet Gegner\n+ senkt Präzision.
+5,4,149,PSYWELLE,Angriff mit\nvariabler Kraft.
+5,4,150,PLATSCHER,Keine Wirkung.
+5,4,151,SÄUREPANZER,Hebt VERT-Wert des\nAngreifers enorm.
+5,4,152,KRABBHAMMER,Volltrefferquote\nhoch.
+5,4,153,EXPLOSION,Stark; Angreifer\nwird besiegt.
+5,4,154,KRATZFURIE,Trifft bis zu\n5 mal.
+5,4,155,KNOCHMERANG,Trifft 2 mal.
+5,4,156,ERHOLUNG,2 Runden pausieren\nfür Erholung.
+5,4,157,STEINHAGEL,Gegner muss evtl.\nausweichen.
+5,4,158,HYPERZAHN,Gegner muss evtl.\nausweichen.
+5,4,159,SCHÄRFER,Hebt den ANGR-Wert\ndes Angreifers.
+5,4,160,UMWANDLUNG,Wechsel zu\nAttacken-Element.
+5,4,161,TRIPLETTE,Drei Strahlen mit\neinem Schuss.
+5,4,162,SUPERZAHN,Halbiert die KP\ndes Gegners.
+5,4,163,SCHLITZER,Volltrefferquote\nhoch.
+5,4,164,DELEGATOR,Macht DELEGATOR\nmit Viertel KP.
+5,4,165,VERZWEIFLER,"Nur benutzen, wenn\nAP leer sind."
+5,4,166,NACHAHMER,Kopiert die Atta-\ncke des Gegners.
+5,4,167,DREIFACHKICK,"Trifft 3 mal,\nKraft nimmt zu."
+5,4,168,RAUB,Stiehlt evtl. ein\ngetragenes Item.
+5,4,169,SPINNENNETZ,Verhindert Flucht\noder Wechsel.
+5,4,170,WILLENSLESER,Treffergarantie\nbeim Angriff.
+5,4,171,NACHTMAHR,1/4 KP-Abzug für\nschlafende Gegner.
+5,4,172,FLAMMENRAD,Gegner erleidet\nevtl. Verbrennung.
+5,4,173,SCHNARCHER,Attacke nur bei\nSchlaf benutzbar.
+5,4,174,FLUCH,Bes. Funktion bei\nGeist-POKéMON.
+5,4,175,DRESCHFLEGEL,"Effektiver, wenn \nselbst geschwächt."
+5,4,176,UMWANDLUNG2,Elementwechsel bei\nAngreifer.
+5,4,177,LUFTSTOSS,Volltrefferquote\nhoch.
+5,4,178,BAUMWOLLSAAT,Senkt INIT-Wert\ndes Gegners enorm.
+5,4,179,GEGENSCHLAG,"Effektiver, wenn\nselbst geschwächt."
+5,4,180,GROLL,Senkt AP der letz-\nten Gegnerattacke.
+5,4,181,PULVERSCHNEE,Gegner wird evtl.\neingefroren.
+5,4,182,SCHUTZSCHILD,1 Runde Schutz.\nWdh. fraglich.
+5,4,183,TEMPOHIEB,Punch mit Erst-\nschlaggarantie.
+5,4,184,GRIMASSE,Senkt INIT-Wert\ndes Gegners enorm.
+5,4,185,FINTE,Attacke mit\nTreffergarantie.
+5,4,186,BITTERKUSS,Verwirrt den\nGegner.
+5,4,187,BAUCHTROMMEL,Senkt KP + maxi- \nmiert ANGR-Wert.
+5,4,188,MATSCHBOMBE,Gegner wird evtl.\nvergiftet.
+5,4,189,LEHMSCHELLE,Senkt die Genauig-\nkeit des Gegners.
+5,4,190,OCTAZOOKA,Senkt evtl. die\nGenauigkeit.
+5,4,191,STACHLER,Trifft Gegner beim\nWechsel.
+5,4,192,BLITZKANONE,Gegner wird\nparalysiert.
+5,4,193,GESICHTE,Schützt vor \nPräzisionssenkung.
+5,4,194,ABGANGSBUND,Beide werden\nbesiegt.
+5,4,195,ABGESANG,Beide werden in 3\nRunden besiegt.
+5,4,196,EISSTURM,Senkt INIT-Wert\ndes Gegners.
+5,4,197,SCANNER,1 Runde Schutz.\nWdh. fraglich.
+5,4,198,KNOCHENHATZ,Trifft bis zu\n5 mal.
+5,4,199,ZIELSCHUSS,Treffergarantie\nbeim Angriff.
+5,4,200,WUTANFALL,Hält 2-3 Runden.\nVerw. Angreifer.
+5,4,201,SANDSTURM,Fügt in jeder\nRunde Schaden zu.
+5,4,202,GIGASAUGER,Erhält Hälfte des\nSchadens.
+5,4,203,AUSDAUER,Mindestens 1 KP\nbleibt übrig.
+5,4,204,CHARME,Senkt ANGR-Wert\ndes Gegners enorm.
+5,4,205,WALZER,Hält 5 Runden und\nKraft nimmt zu.
+5,4,206,TRUGSCHLAG,Mindestens 1 KP\nbleibt Gegner.
+5,4,207,ANGEBEREI,Verwirrt und hebt\nANGR-Wert.
+5,4,208,MILCHGETRÄNK,Füllt KP zur\nHälfte auf.
+5,4,209,FUNKENSPRUNG,Gegner wird evtl.\nparalysiert.
+5,4,210,ZORNKLINGE,Eine Trefferfolge\nerhöht die Kraft.
+5,4,211,STAHLFLÜGEL,Harte Flügel tref-\nfen den Gegner.
+5,4,212,HORRORBLICK,Verhindert Flucht\noder Tausch.
+5,4,213,ANZIEHUNG,"Schutz, da Gegner\nsich verliebt."
+5,4,214,SCHLAFREDE,Zufällige Angriffe\nim Schlaf.
+5,4,215,VITALGLOCKE,Löscht alle\nStatusprobleme.
+5,4,216,RÜCKKEHR,Angriff basiert\nauf Loyalität.
+5,4,217,GESCHENK,"Bombe, die evtl.\ngegn. KP auffüllt."
+5,4,218,FRUSTRATION,Angriffsgrund:\nKeine Loyalität.
+5,4,219,BODYGUARD,Verhindert\nStatusprobleme.
+5,4,220,LEIDTEILER,Addiert alle KP\nund halbiert sie.
+5,4,221,LÄUTERFEUER,Gegner erleidet\nevtl. Verbrennung.
+5,4,222,INTENSITÄT,"Boden-Angriff,\nIntensität Zufall."
+5,4,223,WUCHTSCHLAG,Gegner wird\nverwirrt.
+5,4,224,VIELENDER,Starke Attacke.
+5,4,225,FEUERODEM,Starke Attacke.
+5,4,226,STAFFETTE,Tausch von Status-\nveränderungen.
+5,4,227,ZUGABE,Gegner greift\nmax. 6 mal an.
+5,4,228,VERFOLGUNG,Strafe für Gegner\nbei PKMN-Wechsel.
+5,4,229,TURBODREHER,Turbo Dreh-\nAngriff.
+5,4,230,LOCKDUFT,Fluchtwert des\nGegners sinkt.
+5,4,231,EISENSCHWEIF,Senkt evtl. VERT-\nWert des Gegners.
+5,4,232,METALLKLAUE,Hebt evtl. den\nANGR-Wert.
+5,4,233,ÜBERWURF,Folgeattacke mit\nTreffergarantie.
+5,4,234,MORGENGRAUEN,Füllt KP auf.\n(Anzahl zufällig)
+5,4,235,SYNTHESE,Füllt KP auf.\n(Anzahl zufällig)
+5,4,236,MONDSCHEIN,Füllt KP auf.\n(Anzahl zufällig)
+5,4,237,KRAFTRESERVE,Effekt hängt\nvom POKéMON ab.
+5,4,238,KREUZHIEB,Volltrefferquote\nhoch.
+5,4,239,WINDHOSE,Erzeugt zum An-\ngriff Tornado.
+5,4,240,REGENTANZ,Verstärkt Wasser-\nAttacken 5 Runden.
+5,4,241,SONNENTAG,Verstärkt Feuer-\nAttacken 5 Runden.
+5,4,242,KNIRSCHER,Senkt evtl.\nSPEZ-VER.
+5,4,243,SPIEGELCAPE,SPEZ-Attacke\nzählt doppelt.
+5,4,244,PSYCHO-PLUS,Kop. Statusände-\nrung des Gegners.
+5,4,245,TURBOTEMPO,Starke\nErstschlagattacke.
+5,4,246,ANTIK-KRAFT,Hebt evtl. alle\nStatuswerte an.
+5,4,247,SPUKBALL,Senkt evtl.\nSPEZ-VER.
+5,4,248,SEHER,Attacke trifft\nin Runde 3.
+5,4,249,ZERTRÜMMERER,Senkt evtl.\nVERT-Wert.
+5,4,250,WHIRLPOOL,Trifft Gegner bis\nzu 5 mal.
+5,4,251,PRÜGLER,POKéMON vom Team\ngreifen auch an.
+5,5,1,LIBBRA,Colpo con arti\nant. o la coda.
+5,5,2,COLPO-KARATE,Può essere un\nbrutto colpo.
+5,5,3,DOPPIASBERLA,2-5 schiaffi\nripetuti.
+5,5,4,COMETAPUGNO,2-5 pugni\nripetuti.
+5,5,5,MEGAPUGNO,Un pugno dato\ncon molta potenza.
+5,5,6,GIORNO-PAGA,Tira monete che\ndopo recupera.
+5,5,7,FUOCOPUGNO,"Un pugno ardente,\nche può scottare."
+5,5,8,GELOPUGNO,Pugno di ghiaccio:\npuò congelare.
+5,5,9,TUONOPUGNO,Pugno elettrico:\npuò paralizzare.
+5,5,10,GRAFFIO,Graffia con arti-\ngli affilati.
+5,5,11,PRESA,Una morsa di forti\ntenaglie.
+5,5,12,GHIGLIOTTINA,Una morsa da KO\nin una mossa.
+5,5,13,VENTAGLIENTE,1º turno: Prepara\n2º turno: Attacca
+5,5,14,DANZA-SPADA,Una danza che po-\ntenzia ATTACCO.
+5,5,15,TAGLIO,"Taglia con falci,\nartigli ecc."
+5,5,16,RAFFICA,Alza una forte\nfolata di vento.
+5,5,17,ATT. D'ALA,Ali colpiscono\nil nemico.
+5,5,18,TURBINE,Caccia il nemico e\ntermina la lotta.
+5,5,19,VOLO,1º turno: Vola\n2º turno: Attacca
+5,5,20,LEGATUTTO,Lega il nemico\nper 2-5 turni.
+5,5,21,SCHIANTO,Colpisce con una\ncoda o liana ecc.
+5,5,22,FRUSTATA,Frusta il nemico\ncon liane sottili.
+5,5,23,PESTONE,Attacco che fa\ntentennare.
+5,5,24,DOPPIOCALCIO,Un attacco con\ndoppio calcio.
+5,5,25,MEGACALCIO,Un potente\ncalcio.
+5,5,26,CALCIO-SALTO,Può danneggiare\nchi lo usa.
+5,5,27,CALCIO-RULLO,Un rapido\ncalcio rotante.
+5,5,28,TURBOSABBIA,Riduce precisione\nsollevando sabbia.
+5,5,29,BOTTINTESTA,Attacco che può\nfar tentennare.
+5,5,30,INCORNATA,Infilza per mezzo\ndi corna.
+5,5,31,FURIA,Infilza il nemico\n2-5 volte.
+5,5,32,PERFORCORNO,Un attacco perfo-\nrante da KO.
+5,5,33,AZIONE,Una carica con\ntutto il corpo.
+5,5,34,BODY SLAM,Attacco che può\ncausare paralisi.
+5,5,35,AVVOLGIBOTTA,Schiaccia il ne-\nmico 2-5 turni.
+5,5,36,RIDUTTORE,Carica: danneggia\nanche chi lo usa.
+5,5,37,COLPO,"Dura 2-3 turni, ma\nchi lo usa è conf."
+5,5,38,SDOPPIATORE,Carica: danneggia\nanche chi lo usa.
+5,5,39,COLPO-CODA,Riduce DIFESA\ndel nemico.
+5,5,40,VELENOSPINA,Può avvelenare\nl'avversario.
+5,5,41,DOPPIO AGO,Colpisce due volte\nper mezzo di aghi.
+5,5,42,MISSILSPILLO,Spilli di fuoco:\nda 3 a 5 colpi.
+5,5,43,FULMISGUARDO,Riduce la DIFESA\ndell'avversario.
+5,5,44,MORSO,Può far tentennare\nl'avversario.
+5,5,45,RUGGITO,Peggiora ATTACCO\ndell'avversario.
+5,5,46,BOATO,I nemici selvatici\nlasciano la lotta.
+5,5,47,CANTO,Può far addormen-\ntare il nemico.
+5,5,48,SUPERSUONO,Onde acustiche\nche confondono.
+5,5,49,SONICBOOM,Causa sempre un\ndanno di 20 PS.
+5,5,50,INIBITORE,Disattiva una\nmossa del nemico.
+5,5,51,ACIDO,Può ridurre\nDIFESA.
+5,5,52,BRACIERE,Un attacco che può\nscottare.
+5,5,53,LANCIAFIAMME,Un attacco che può\nscottare.
+5,5,54,NEBBIA,Previene diminu-\nzione delle stat.
+5,5,55,PISTOLACQUA,Attacca con\nspruzzi d'acqua.
+5,5,56,IDROPOMPA,Un potente\nattacco d'acqua.
+5,5,57,SURF,Un forte attacco\nd'acqua.
+5,5,58,GELORAGGIO,Può congelare\nil nemico.
+5,5,59,BORA,Può congelare\nil nemico.
+5,5,60,PSICORAGGIO,Può confondere\nl'avversario.
+5,5,61,BOLLARAGGIO,Può dimimuire la\nVELOCITÀ.
+5,5,62,RAGGIAURORA,Può ridurre\nATTACCO.
+5,5,63,IPER-RAGGIO,1º turno: Attacco\n2º turno: Riposo
+5,5,64,BECCATA,Colpisce con\nbeccate e altro.
+5,5,65,PERFORBECCO,Attacca con una\nviolenta beccata.
+5,5,66,SOTTOMISS.,Colpisce anche chi\nne fa uso.
+5,5,67,COLPO BASSO,Può far tentennare\nl'avversario.
+5,5,68,CONTATORE,Restituice l'att.\nfisico subito X2.
+5,5,69,MOV. SISMICO,Danno pari al liv.\ndi chi attacca.
+5,5,70,FORZA,Un potente\nattacco fisico.
+5,5,71,ASSORBIMENTO,Ruba PS pari a\n1/2 del danno.
+5,5,72,MEGASSORBIM.,Ruba PS pari a\n1/2 del danno.
+5,5,73,PARASSISEME,Ruba PS al nemico\nad ogni turno.
+5,5,74,CRESCITA,Potenzia\nATT. SPEC.
+5,5,75,FOGLIELAMA,Può assestare un\nbrutto colpo.
+5,5,76,SOLARRAGGIO,1º turno: Carica\n2º turno: Attacco
+5,5,77,VELENPOLVERE,Può causare\navvelenamento.
+5,5,78,PARALIZZANTE,Può causare\nparalisi.
+5,5,79,SONNIFERO,Può far addor-\nmentare il nemico.
+5,5,80,PETALODANZA,Dura 2-3 turni ma\nconf. chi attacca.
+5,5,81,MILLEBAVE,Riduce VELOCITÀ\ndel nemico.
+5,5,82,IRA DI DRAGO,Infligge sempre un\ndanno di 40 PS.
+5,5,83,TURBOFUOCO,Fuoco intrappola\nnemico 2-5 turni.
+5,5,84,TUONOSHOCK,Un attacco che può\ncausare paralisi.
+5,5,85,FULMINE,Un attacco che può\ncausare paralisi.
+5,5,86,TUONONDA,Una mossa che può\ncausare paralisi.
+5,5,87,TUONO,Un attacco che può\ncausare paralisi.
+5,5,88,SASSATA,Tira rocce\nsul nemico.
+5,5,89,TERREMOTO,"Buono, ma non con-\ntro tipo volante."
+5,5,90,ABISSO,Attacco tipo terra\nda KO immediato.
+5,5,91,FOSSA,1º turno: Scompare\n2º turno: Attacca
+5,5,92,TOSSINA,Avvelena con ef-\nficacia crescente.
+5,5,93,CONFUSIONE,Può causare\nconfusione.
+5,5,94,PSICHICO,Può ridurre la\nDIFESA SPECIALE.
+5,5,95,IPNOSI,Può far addormen-\ntare il nemico.
+5,5,96,MEDITAZIONE,Potenzia l'ATTACCO\ndi chi lo usa.
+5,5,97,AGILITÀ,Potenzia di molto\nVELOCITÀ.
+5,5,98,ATT. RAPIDO,Chi lo usa\nattacca per primo.
+5,5,99,IRA,"Se si è colpiti,\nl'ATT. aumenta."
+5,5,100,TELETRASPOR.,Per fuggire da\nuna lotta.
+5,5,101,OMBRA NOTT.,Danno pari al liv.\ndi chi attacca.
+5,5,102,MIMICA,Imita la mossa\nusata dal nemico.
+5,5,103,STRIDIO,Riduce di molto\nDIFESA del nemico.
+5,5,104,DOPPIOTEAM,Aumenta capacità\ndi elusione.
+5,5,105,RIPRESA,Restituisce 1/2\ndei PS max.
+5,5,106,RAFFORZATORE,Aumenta DIFESA di\nchi lo usa.
+5,5,107,MINIMIZZ.,Rende più facile\nevitare attacchi.
+5,5,108,MURO DI FUMO,Riduce precisione\ndel nemico.
+5,5,109,STORDIRAGGIO,Una mossa che\ncausa confusione.
+5,5,110,RITIRATA,Migliora DIFESA\ndi chi lo usa.
+5,5,111,RICCIOLSCUDO,Migliora DIFESA\ndi chi lo usa.
+5,5,112,BARRIERA,Migliora di molto\nDIFESA.
+5,5,113,SCHERMO-LUCE,Una parete di luce\nmigliora DIF.SPEC.
+5,5,114,NUBE,Annulla tutte le\nmodifiche stato.
+5,5,115,RIFLESSO,Una barriera\nmigliora DIFESA.
+5,5,116,ENERGY CONC.,Può assestare un\nbrutto colpo.
+5,5,117,PAZIENZA,Restit.il colpo\nX2 dopo 2-3 turni.
+5,5,118,METRONOMO,Usa una mossa\nPOKéMON a caso.
+5,5,119,SPECULMOSSA,Contrattacca con\nla stessa mossa.
+5,5,120,AUTODISTRUZ.,"Potente, ma chi lo\nusa è esausto."
+5,5,121,UOVOBOMBA,Lancio di uova\ncontro il nemico.
+5,5,122,LECCATA,Un attacco che può\ncausare paralisi.
+5,5,123,SMOG,Può causare\navvelenamento.
+5,5,124,FANGO,Può causare\navvelenamento.
+5,5,125,OSSOCLAVA,Può far vacillare\nl'avversario.
+5,5,126,FUOCOBOMBA,Può far scottare\nil nemico.
+5,5,127,CASCATA,Una potente\nscarica d'acqua.
+5,5,128,TENAGLIA,Blocca il nemico\nper 2-5 turni.
+5,5,129,COMETE,Un attacco che non\nva mai a vuoto.
+5,5,130,CAPOCCIATA,1º turno: Carica\n2º turno: Attacco
+5,5,131,SPARALANCE,Lance di fuoco:\n2-5 ripetizioni.
+5,5,132,LIMITAZIONE,Può ridurre\nVELOCITÀ.
+5,5,133,AMNESIA,Aumenta di molto\nDIFESA SPEC.
+5,5,134,CINÈSI,Riduce precisione\navversario.
+5,5,135,COVAUOVA,Restituisce 1/2\ndei PS max.
+5,5,136,CALCINVOLO,Può colpire chi\nlo usa.
+5,5,137,BAGLIORE,Una mossa che può\ncausare paralisi.
+5,5,138,MANGIASOGNI,Ruba PS al\nnemico che dorme.
+5,5,139,VELENOGAS,Può causare\navvelenamento.
+5,5,140,ATT. PIOGGIA,Sfere che colpi-\nscono 2-5 volte.
+5,5,141,SANGUISUGA,Ruba PS pari a\n1/2 del danno.
+5,5,142,DEMONBACIO,Può far addor-\nmentare il nemico.
+5,5,143,AEROATTACCO,1º turno: Carica\n2º turno: Attacco
+5,5,144,TRASFORMAZ.,Chi lo usa diventa\ncopia del nemico.
+5,5,145,BOLLA,Un attacco che può\nridurre VELOCITÀ.
+5,5,146,STORDIPUGNO,Può causare\nconfusione.
+5,5,147,SPORA,Spinge il nemico\nad addormentarsi.
+5,5,148,FLASH,Abbaglia riducendo\nprecisione nemico.
+5,5,149,PSICO-ONDA,Efficacia\nvariabile.
+5,5,150,SPLASH,È sempre\ninefficace.
+5,5,151,SCUDO ACIDO,Aumenta di molto\npropria DIFESA.
+5,5,152,MARTELLATA,Può assestare un\nbrutto colpo.
+5,5,153,ESPLOSIONE,"Potentissimo, ma\nchi attacca va KO."
+5,5,154,SFURIATE,2-5 attacchi\nripetuti.
+5,5,155,OSSOMERANG,Un attacco che\ncolpisce 2 volte.
+5,5,156,RIPOSO,Tutti i PS dopo\n2 turni di sonno.
+5,5,157,FRANA,Può far tentennare\nl'avversario.
+5,5,158,IPERZANNA,Può far tentennare\nl'avversario.
+5,5,159,AFFILATORE,Potenzia l'ATTACCO\ndi chi lo usa.
+5,5,160,CONVERSIONE,Chi lo usa acqui-\nsta tipo nemico.
+5,5,161,TRIPLETTA,Spara insieme\n3 diversi raggi.
+5,5,162,SUPERZANNA,Dimezza i PS del\nnemico.
+5,5,163,LACERAZIONE,Può assestare un\nbrutto colpo.
+5,5,164,SOSTITUTO,Crea un'esca con\n1/4 dei propri PS.
+5,5,165,SCONTRO,Si usa solo ad\nesaurimento PP.
+5,5,166,SCHIZZO,Copia per sempre\nuna mossa nemico.
+5,5,167,TRIPLOCALCIO,"Colpisce 3 volte,\nsempre più forte."
+5,5,168,FURTO,Si usa per rubare\nuno strumento.
+5,5,169,RAGNATELA,Impedisce la fuga\ne il cambio.
+5,5,170,LEGGIMENTE,La mossa seguente\nandrà a segno.
+5,5,171,INCUBO,Chi dorme perde\n1/4 PS per turno.
+5,5,172,RUOTAFUOCO,Può far scottare\nil nemico.
+5,5,173,RUSSARE,Si può usare solo\nda addormentati.
+5,5,174,MALEDIZIONE,Ha effetto diverso\ncon tipo spettro.
+5,5,175,FLAGELLO,Forte se chi lo\nusa ha pochi PS.
+5,5,176,CONVERSIONE2,Rafforza il tipo\ndi chi lo usa.
+5,5,177,AEROCOLPO,Può assestare un\nbrutto colpo.
+5,5,178,COTTONSPORA,Riduce di molto\nVELOCITÀ nemico.
+5,5,179,CONTROPIEDE,Forte se chi lo\nusa ha pochi PS.
+5,5,180,DISPETTO,Taglia i PP dell'\nult. mossa nemico.
+5,5,181,POLNEVE,Attacco che può\ncongelare.
+5,5,182,PROTEZIONE,Sventa un attacco.\nNon è infallibile.
+5,5,183,PUGNORAPIDO,Rapido pugno che\nattacca per primo.
+5,5,184,VISOTRUCE,Riduce di molto\nVELOCITÀ nemico.
+5,5,185,FINTA,Un attacco che non\nva mai a vuoto.
+5,5,186,DOLCEBACIO,Una mossa che\ncausa confusione.
+5,5,187,PANCIAMBURO,Potenzia ATTACCO\nma riduce i PS.
+5,5,188,FANGOBOMBA,Può causare\navvelenamento.
+5,5,189,FANGOSBERLA,Riduce precisione\navversario.
+5,5,190,OCTAZOOKA,Può ridurre la\nprecisione.
+5,5,191,PUNTE,Colpisce i nemici\ndurante il cambio.
+5,5,192,FALCECANNONE,Un attacco che\nparalizza sempre.
+5,5,193,PREVEGGENZA,Respinge le mosse\ncontro precisione.
+5,5,194,DESTINOBBL.,Il nemico va KO\ncon chi lo usa.
+5,5,195,ULTIMOCANTO,Entrambi vanno KO\nin 3 turni.
+5,5,196,VENTOGELATO,Attacco ghiaccio:\nriduce VELOCITÀ.
+5,5,197,INDIVIDUA,Schiva un attacco.\nNon infallibile.
+5,5,198,OSSORAFFICA,Colpisce\n2-5 volte.
+5,5,199,LOCALIZZA,La mossa seguente\nandrà a segno.
+5,5,200,OLTRAGGIO,"Dura 2-3 turni, ma\nconf. chi lo usa."
+5,5,201,TERREMPESTA,Arreca danno ad\nogni turno.
+5,5,202,GIGASSORBIM.,Ruba PS pari a\n1/2 del danno.
+5,5,203,RESISTENZA,Conserva sempre\nalmeno 1 PS.
+5,5,204,FASCINO,Riduce di molto\nATTACCO nemico.
+5,5,205,ROTOLAMENTO,"Attacca 5 turni,\nsempre più forte."
+5,5,206,FALSOFINALE,Lascia il nemico\ncon almeno 1 PS.
+5,5,207,BULLO,Causa confusione\ne aumenta ATTACCO.
+5,5,208,BUONLATTE,Restituisce 1/2\ndei PS max.
+5,5,209,SCINTILLA,Un attacco che può\ncausare paralisi.
+5,5,210,TAGLIOFURIA,Aumenta potenza\ncolpi successivi.
+5,5,211,ALACCIAIO,Rigide ali colpi-\nscono il nemico.
+5,5,212,MALOSGUARDO,Impedisce la fuga\ne il cambio.
+5,5,213,ATTRAZIONE,Fa infatuare il\ngenere opposto.
+5,5,214,SONNOLALIA,"Attacco casuale,\nda addormentati."
+5,5,215,RINTOCCASANA,Risolve tutti i\nproblemi di stato.
+5,5,216,RITORNO,Un attacco basato\nsulla lealtà.
+5,5,217,REGALINO,Una bomba che può\nrestituire PS.
+5,5,218,FRUSTRAZIONE,Attacco basato\nsulla slealtà.
+5,5,219,SALVAGUARDIA,Previene ogni\nproblema di stato.
+5,5,220,MALCOMUNE,Divide equamente i\nPS di entrambi.
+5,5,221,MAGIFUOCO,Un attacco che può\nscottare.
+5,5,222,MAGNITUDO,Attacco di terra:\npotenza variabile.
+5,5,223,DINAMIPUGNO,Provoca sempre\nconfusione.
+5,5,224,MEGACORNO,Una potente\ncarica.
+5,5,225,DRAGOSPIRO,Un soffio\npotente.
+5,5,226,STAFFETTA,Mantiene effetti\ndurante cambio.
+5,5,227,RIPETI,Obbliga nemico a\n2-6 ripetizioni.
+5,5,228,INSEGUIMENTO,Colpisce duramente\nchi è sostituito.
+5,5,229,RAPIGIRO,Un attacco rotante\nmolto rapido.
+5,5,230,PROFUMINO,Nemico evita at-\ntacchi meno facil.
+5,5,231,CODACCIAIO,Un attacco che può\nridurre DIFESA.
+5,5,232,FERRARTIGLI,Potenzia ATTACCO\ndi chi lo usa.
+5,5,233,VITALTIRO,Contromossa\ninfallibile.
+5,5,234,MATTINDORO,Restituisce PS\n(varia con l'ora).
+5,5,235,SINTESI,Restituisce PS\n(varia con l'ora).
+5,5,236,LUCELUNARE,Restituisce PS\n(varia con l'ora).
+5,5,237,INTROFORZA,L'efficacia varia\ncon il POKéMON.
+5,5,238,INCROCOLPO,Può assestare un\nbrutto colpo.
+5,5,239,TORNADO,Scatena un\ntornado.
+5,5,240,PIOGGIADANZA,Potenzia le mosse\nacqua per 5 turni.
+5,5,241,GIORNODISOLE,Potenzia le mosse\nfuoco per 5 turni.
+5,5,242,SGRANOCCHIO,Può ridurre la\nDIFESA SPECIALE.
+5,5,243,SPECCHIOVELO,Effetto mossa ATT.\nSPEC. raddoppia.
+5,5,244,PSICAMISÙ,Imita statistiche\nnemico.
+5,5,245,EXTRARAPIDO,Forte attacco che\ncolpisce primo.
+5,5,246,FORZANTICA,Attacco che può\nmigliorare stat.
+5,5,247,PALLA OMBRA,Può ridurre\nDIFESA SPECIALE.
+5,5,248,DIVINAZIONE,Colpisce al\nterzo turno.
+5,5,249,SPACCAROCCIA,Può ridurre\nDIFESA.
+5,5,250,MULINELLO,Blocca il nemico\nper 2-5 turni.
+5,5,251,PICCHIADURO,Tutta la squadra\nall'attacco.
+5,6,1,DESTRUCTOR,Golpea con las\npatas o la cola.
+5,6,2,GOLPE KARATE,Más probabilidad\nde golpe crítico.
+5,6,3,DOBLEBOFETÓN,Abofetea de 2 a 5\nveces seguidas.
+5,6,4,PUÑO COMETA,Pega de 2 a 5\nveces seguidas.
+5,6,5,MEGA PUÑO,Un puñetazo de\ngran potencia.
+5,6,6,DÍA DE PAGO,Arroja monedas que\nluego recupera.
+5,6,7,PUÑO FUEGO,Puñetazo ardiente.\nPuede quemar.
+5,6,8,PUÑO HIELO,Puñetazo helado.\nPuede congelar.
+5,6,9,PUÑO-TRUENO,Puñetazo eléctric.\nPuede paralizar.
+5,6,10,ARAÑAZO,Araña con sus\nafiladas garras.
+5,6,11,AGARRE,Atrapa con sus\npotentes pinzas.
+5,6,12,GUILLOTINA,Pinzas que derri-\nban de un golpe.
+5,6,13,V. CORTANTE,1er turno: Prepara\n2º turno: Ataca
+5,6,14,DANZA-ESPADA,Baile que mejora\nel ATAQUE.
+5,6,15,CORTE,"Corta con garras,\nguadañas, etc."
+5,6,16,TORNADO,Crea una fuerte\nráfaga de viento.
+5,6,17,ATAQUE-ALA,Golpea el objetivo\ncon las alas.
+5,6,18,REMOLINO,Se lleva al rival\ny termina combate.
+5,6,19,VUELO,1er turno: Vuela\n2º turno: Ataca
+5,6,20,ATADURA,Ataca al enemigo\nde 2 a 5 turnos.
+5,6,21,PORTAZO,Golpea con sus\nextremidades.
+5,6,22,LÁTIGO CEPA,Azota al enemigo\ncon ramas finas.
+5,6,23,PISOTÓN,Ataque que puede\natontar.
+5,6,24,DOBLE PATADA,Una patada\ndoble.
+5,6,25,MEGA PATADA,Una patada muy\npotente.
+5,6,26,PATADA SALTO,"Si falla, dañará\na quien lo usa."
+5,6,27,PATADA GIRO,Una patada rápida\ny circular.
+5,6,28,ATAQUE ARENA,Baja la precisión\narrojando arena.
+5,6,29,GOLPE CABEZA,Hace retroceder\nal enemigo.
+5,6,30,CORNADA,Ataca al enemigo\ncon un cuerno.
+5,6,31,ATAQUE FURIA,Pincha al enemigo\nde 2 a 5 veces.
+5,6,32,PERFORADOR,"Ataque taladro,\nK.O. en 1 golpe."
+5,6,33,PLACAJE,Embiste con todo\nel cuerpo.
+5,6,34,GOLPE CUERPO,Ataque que puede\nparalizar.
+5,6,35,REPETICIÓN,Oprime al enemigo\nde 2 a 5 turnos.
+5,6,36,DERRIBO,Ataque que también\nhiere al jugador.
+5,6,37,GOLPE,Dura 2-3 turnos y\nte confunde.
+5,6,38,DOBLE FILO,Ataque que también\nhiere al jugador.
+5,6,39,LÁTIGO,Baja la DEFENSA\ndel enemigo.
+5,6,40,PICOTAZO VEN,Puede envenenar al\nenemigo.
+5,6,41,DOBLEATAQUE,Clava aguijones al\nrival 2 veces.
+5,6,42,PIN MISIL,Lanza púas que\nhieren 2-5 veces.
+5,6,43,MALICIOSO,Reduce DEFENSA\ndel enemigo.
+5,6,44,MORDISCO,Ataque que puede\ncausar retirada.
+5,6,45,GRUÑIDO,Reduce ATAQUE\ndel enemigo.
+5,6,46,RUGIDO,Ahuyenta al rival\ny fin del combate.
+5,6,47,CANTO,Puede dormir al\nenemigo.
+5,6,48,SUPERSÓNICO,Ondas sónicas que\ncausan confusión.
+5,6,49,BOMBA SÓNICA,Siempre produce\n20 PS de daño.
+5,6,50,ANULACIÓN,Desactiva ataque\nmás reciente.
+5,6,51,ÁCIDO,Ataque que puede\nbajar la DEFENSA.
+5,6,52,ASCUAS,Ataque que puede\ncausar quemaduras.
+5,6,53,LANZALLAMAS,Ataque que puede\ncausar quemaduras.
+5,6,54,NEBLINA,Evita reducción\nde estado.
+5,6,55,PISTOLA AGUA,Rocía agua para\natacar.
+5,6,56,HIDRO BOMBA,Ataque tipo agua\nmuy potente.
+5,6,57,SURF,Ataque tipo agua\nmuy potente.
+5,6,58,RAYO HIELO,Ataque que puede\ncongelar al rival.
+5,6,59,VENTISCA,Ataque que puede\ncongelar al rival.
+5,6,60,PSICO-RAYO,Ataque que puede\nconfundir a rival.
+5,6,61,RAYO BURBUJA,Puede reducir\nla VELOCIDAD.
+5,6,62,RAYO AURORA,Ataque que puede\nreducir el ATAQUE.
+5,6,63,HÍPER RAYO,1er turno: Ataca\n2º turno: Descansa
+5,6,64,PICOTAZO,Ataca al enemigo\ncon el pico.
+5,6,65,PICO TALADRO,Picotazo giratorio\nmuy potente.
+5,6,66,SUMISIÓN,Ataque que también\nhiere al jugador.
+5,6,67,PATADA BAJA,Ataque que puede\ncausar retirada.
+5,6,68,CONTADOR,"Devuelve un golpe\nfísico, duplicado."
+5,6,69,MOV. SÍSMICO,Tu nivel equivale\na los PS dañados.
+5,6,70,FUERZA,Potente ataque\nfísico.
+5,6,71,ABSORBER,Quita la mitad del\ndaño producido.
+5,6,72,MEGA AGOTAR,Quita la mitad del\ndaño producido.
+5,6,73,DRENADORAS,Roba PS al enemigo\nen cada turno.
+5,6,74,DESARROLLO,Mayor posibilidad\nde AT. ESP.
+5,6,75,HOJA AFILADA,Gran probabilidad\nde golpe crítico.
+5,6,76,RAYO SOLAR,1er turno: Prepara\n2º turno: Ataca
+5,6,77,POLVO VENENO,Puede envenenar\nal enemigo.
+5,6,78,PARALIZADOR,Puede paralizar\nal enemigo.
+5,6,79,SOMNÍFERO,Puede dormir\nal enemigo.
+5,6,80,DANZA PÉTALO,Dura 2-3 turnos\ny te confunde.
+5,6,81,DISP. DEMORA,Reduce VELOCIDAD\ndel enemigo.
+5,6,82,FURIA DRAGÓN,Siempre produce\n40 PS de daño.
+5,6,83,GIRO FUEGO,Atrapa con fuego\nde 2 a 5 turnos.
+5,6,84,IMPACTRUENO,Ataque que puede\nparalizar.
+5,6,85,RAYO,Ataque que puede\nparalizar.
+5,6,86,ONDA TRUENO,Provoca parálisis\nal enemigo.
+5,6,87,TRUENO,Ataque que puede\nparalizar.
+5,6,88,LANZA ROCAS,Tira rocas\nal enemigo.
+5,6,89,TERREMOTO,Fuerte pero inútil\ncontra voladores.
+5,6,90,FISURA,Ataque de tierra.\nK.O. en 1 golpe.
+5,6,91,EXCAVAR,1er turno: Cavar\n2º turno: Atacar
+5,6,92,TÓXICO,Veneno que aumenta\nel daño.
+5,6,93,CONFUSIÓN,Ataque que puede\nconfundir.
+5,6,94,PSÍQUICO,Ataque que puede\nbajar la DEF. ESP.
+5,6,95,HIPNOSIS,Puede dormir al\nenemigo.
+5,6,96,MEDITACIÓN,Mejora el ATAQUE\nde quien lo usa.
+5,6,97,AGILIDAD,Aumenta mucho\ntu VELOCIDAD.
+5,6,98,AT. RÁPIDO,Permite al usuario\ngolpear primero.
+5,6,99,FURIA,Mejora el ATAQUE\nsi te hieren.
+5,6,100,TELETRANSP,Sirve para huir\nde la batalla.
+5,6,101,TINIEBLAS,Tu nivel es igual\na los PS de daño.
+5,6,102,MIMÉTICO,Copia un ataque\ndel enemigo.
+5,6,103,CHIRRIDO,Reduce mucho la\nDEFENSA del rival.
+5,6,104,DOBLE EQUIPO,Mejora habilidad\nde evasión.
+5,6,105,RECUPERACIÓN,Restaura la mitad\nde los PS máximos.
+5,6,106,FORTALEZA,Aumenta la DEFENSA\nde quien lo usa.
+5,6,107,REDUCCIÓN,Mejora habilidad\nde evasión.
+5,6,108,PANTALLAHUMO,Baja precisión\ndel enemigo.
+5,6,109,RAYO CONFUSO,Provoca\nconfusión.
+5,6,110,REFUGIO,Mejora la DEFENSA\nde quien lo usa.
+5,6,111,RIZO DEFENSA,Mejora la DEFENSA\nde quien lo usa.
+5,6,112,BARRERA,Aumenta bastante\ntu DEFENSA.
+5,6,113,PANTALLA LUZ,Pared de luz que\nsube la DEF. ESP.
+5,6,114,NIEBLA,Elimina todo\ncambio de estado.
+5,6,115,REFLEJO,Mejora la DEFENSA\ncon una barrera.
+5,6,116,FOCO ENERGÍA,Mayor probabilidad\nde golpe crítico.
+5,6,117,VENGANZA,Espera 2-3 turnos\ny dobla el ataque.
+5,6,118,METRÓNOMO,Usa al azar un\nataque POKéMON.
+5,6,119,MOV. ESPEJO,Contraataca con\nel mismo ataque.
+5,6,120,AUTODESTRUC,"Potente, pero hace\nque te debilites."
+5,6,121,BOMBA HUEVO,Arroja huevos\nal enemigo.
+5,6,122,LENGÜETAZO,Ataque que puede\nparalizar.
+5,6,123,POLUCIÓN,Puede envenenar\nal enemigo.
+5,6,124,RESIDUOS,Puede envenenar\nal enemigo.
+5,6,125,HUESO PALO,Ataque que causa\nla retirada.
+5,6,126,LLAMARADA,Ataque que puede\ncausar quemaduras.
+5,6,127,CASCADA,Ataque que usa\ncarga acuática.
+5,6,128,TENAZA,Atrapa al enemigo\nde 2 a 5 turnos.
+5,6,129,RAPIDEZ,Ataque que no\nfalla nunca.
+5,6,130,CABEZAZO,1er turno: Prepara\n2º turno: Ataca
+5,6,131,CLAVO CAÑÓN,Lanza púas de\nfuego 2-5 veces.
+5,6,132,RESTRICCIÓN,Ataque que puede\nreducir VELOCIDAD.
+5,6,133,AMNESIA,Aumenta bastante\ntu DEFENSA ESP.
+5,6,134,KINÉTICO,Baja precisión\ndel enemigo.
+5,6,135,AMORTIGUADOR,Restaura la mitad\nde tus PS máximos.
+5,6,136,PAT. S. ALTA,Puede fallar\ny herirte.
+5,6,137,DESLUMBRAR,Puede provocar\nparálisis.
+5,6,138,COME SUEÑOS,Roba PS a una\nvíctima dormida.
+5,6,139,GAS VENENOSO,Puede envenenar\nal enemigo.
+5,6,140,PRESA,Arroja orbes de\n2 a 5 veces.
+5,6,141,CHUPA VIDAS,Roba la mitad del\ndaño producido.
+5,6,142,BESO AMOROSO,Puede dormir\nal enemigo.
+5,6,143,ATAQUE AÉREO,1er turno: Prepara\n2º turno: Ataca
+5,6,144,TRANSFORM,Te disfrazas\ndel enemigo.
+5,6,145,BURBUJA,Puede reducir\nla VELOCIDAD.
+5,6,146,PUÑO-MAREO,Ataque que puede\ncausar confusión.
+5,6,147,ESPORA,Ataque que\nproduce sueño.
+5,6,148,DESTELLO,Ciega al enemigo y\nbaja la precisión.
+5,6,149,PSICO-ONDA,Ataque con poder\nvariable.
+5,6,150,SALPICADURA,No tiene ningún\nefecto.
+5,6,151,ARMAD. ÁCIDA,Aumenta bastante\ntu DEFENSA.
+5,6,152,MARTILLAZO,Alta probabilidad\nde golpe crítico.
+5,6,153,EXPLOSIÓN,"Muy potente, pero\nte debilita."
+5,6,154,GOLPES FURIA,Araña rápidamente\nde 2 a 5 veces.
+5,6,155,HUESOMERANG,Ataque que golpea\ndos veces.
+5,6,156,DESCANSO,Duerme 2 turnos\npara cura total.
+5,6,157,AVALANCHA,Ataque que puede\ncausar retirada.
+5,6,158,HIP.COLMILLO,Ataque que puede\ncausar retirada.
+5,6,159,AFILAR,Mejora el ATAQUE\nde quien lo usa.
+5,6,160,CONVERSIÓN,Cambia el tipo\nde Pokémon.
+5,6,161,TRI-ATAQUE,Dispara tres tipos\nde rayos a la vez.
+5,6,162,SÚPER DIENTE,Reduce a la mitad\nlos PS del rival.
+5,6,163,CUCHILLADA,Buena probabilidad\nde golpe crítico.
+5,6,164,SUSTITUTO,Crea señuelo con\n1/4 de tus PS máx.
+5,6,165,COMBATE,Sólo se usa si se\nacaban los PP.
+5,6,166,ESQUEMA,Copia siempre el\nataque del rival.
+5,6,167,TRIPLEPATADA,Da 3 veces y cada\nvez más fuerte.
+5,6,168,LADRÓN,Ataque que puede\nrobar un objeto.
+5,6,169,TELARAÑA,Impide huir\no cambiar.
+5,6,170,TELÉPATA,Garantiza el éxito\ndel próximo golpe.
+5,6,171,PESADILLA,El dormido pierde\n1/4 PS por turno.
+5,6,172,RUEDA FUEGO,Ataque que puede\ncausar quemaduras.
+5,6,173,RONQUIDO,Sólo se utiliza\ncuando duermes.
+5,6,174,MALDICIÓN,No funciona igual\ncon fantasmas.
+5,6,175,AZOTE,Más potente si\ntienes pocos PS.
+5,6,176,CONVERSIÓN2,Tu tipo se hace\nresistente.
+5,6,177,AEROCHORRO,Alta probabilidad\nde golpe crítico.
+5,6,178,ESPORAGODÓN,Reduce VELOCIDAD\ndel rival.
+5,6,179,INVERSIÓN,Más potente si\ntienes pocos PS.
+5,6,180,RENCOR,Baja PP del último\nataque del rival.
+5,6,181,NIEVE POLVO,Ataque que puede\ncongelar.
+5,6,182,PROTECCIÓN,Frustra el ataque.\nPuede fallar.
+5,6,183,ULTRA PUÑO,Puñetazo rápido.\nGolpea primero.
+5,6,184,CARA SUSTO,Reduce VELOCIDAD\ndel rival.
+5,6,185,FINTA,Ataque que no\nfalla nunca.
+5,6,186,BESO DULCE,Ataque que provoca\nconfusión.
+5,6,187,TAMBOR,Reduce tus PS para\nmejorar el ATAQUE.
+5,6,188,BOMBA LODO,Puede envenenar\nal enemigo.
+5,6,189,BOFETÓN-LODO,Reduce precisión\ndel enemigo.
+5,6,190,PULPOCAÑÓN,Puede reducir\nla precisión.
+5,6,191,PÚAS,Hiere al enemigo\nen los cambios.
+5,6,192,ELECTROCAÑÓN,Ataque que\nparaliza siempre.
+5,6,193,PROFECÍA,Anula ataques que\nbajan precisión.
+5,6,194,MISMODESTINO,El enemigo se\ndebilita contigo.
+5,6,195,CANTO MORTAL,Tu rival y tú\ncaéis en 3 turnos.
+5,6,196,VIENTO HIELO,Ataque helado que\nbaja la VELOCIDAD.
+5,6,197,DETECCIÓN,Puede esquivar el\nataque ese turno.
+5,6,198,ATAQUE ÓSEO,Ataque que golpea\nde 2 a 5 veces.
+5,6,199,FIJAR BLANCO,Garantiza el éxito\ndel sig. ataque.
+5,6,200,ENFADO,Dura 2 ó 3 turnos\ny te confunde.
+5,6,201,TORM. ARENA,Produce daño en\ntodos los turnos.
+5,6,202,GIGA-DRENADO,Quita la mitad del\ndaño producido.
+5,6,203,AGUANTE,"Deja siempre 1 PS,\ncomo mínimo."
+5,6,204,ENCANTO,Reduce bastante el\nATAQUE del rival.
+5,6,205,DESENROLLAR,"Ataca 5 turnos,\ncon más potencia."
+5,6,206,FALSOTORTAZO,Deja al enemigo\ncon al menos 1 PS.
+5,6,207,CONTONEO,Provoca confusión\ny sube el ATAQUE.
+5,6,208,BATIDO,Restaura la mitad\nde los PS máximos.
+5,6,209,CHISPA,Ataque que puede\nparalizar.
+5,6,210,CORTEFURIA,Sucesivos golpes\ndan más poder.
+5,6,211,ALA DE ACERO,Alas rígidas que\ngolpean al rival.
+5,6,212,MAL DE OJO,Impide huir\no cambiar.
+5,6,213,ATRACCIÓN,Enamora al género\nopuesto.
+5,6,214,SONÁMBULO,Ataca al azar\nmientras duermes.
+5,6,215,CAMPANA CURA,Cura problemas\nde estado.
+5,6,216,RETROCESO,Ataque basado\nen la lealtad.
+5,6,217,PRESENTE,Bomba que puede\nrestaurar PS.
+5,6,218,FRUSTRACIÓN,Basado en la falta\nde lealtad.
+5,6,219,VELO SAGRADO,Evita problemas\nde estado.
+5,6,220,DIVIDE DOLOR,Suma tus PS y los\ndel enemigo.
+5,6,221,FUEGOSAGRADO,Ataque que puede\ncausar quemaduras.
+5,6,222,MAGNITUD,Ataque de tierra.\nFuerza aleatoria.
+5,6,223,PUÑODINÁMICO,Ataque que siempre\nconfunde.
+5,6,224,MEGACUERNO,Ataque muy\npotente.
+5,6,225,DRAGOALIENTO,Ataque soplo\nmuy potente.
+5,6,226,RELEVO,Cambia y mantiene\nlos efectos.
+5,6,227,OTRA VEZ,Hace que el rival\nrepita 2-6 veces.
+5,6,228,PERSECUCIÓN,Golpea al POKéMON\ncuando cambia.
+5,6,229,GIRO RÁPIDO,Ataque giratorio\nde gran velocidad.
+5,6,230,DULCE AROMA,Reduce la evasión\ndel enemigo.
+5,6,231,COLA FÉRREA,Ataque que puede\nbajar la DEFENSA.
+5,6,232,GARRA-METAL,Puede aumentar\ntu ATAQUE.
+5,6,233,TIRO VITAL,Un 2º golpe que\nno falla nunca.
+5,6,234,SOL MATINAL,Restaura PS (varía\ncon el tiempo).
+5,6,235,SÍNTESIS,Restaura PS (varía\ncon el tiempo).
+5,6,236,LUZ LUNAR,Restaura PS (varía\ncon el tiempo).
+5,6,237,PODER OCULTO,El poder varía\nsegún el POKéMON.
+5,6,238,TAJO CRUZADO,Alta probabilidad\nde golpe crítico.
+5,6,239,CICLÓN,Crea un tornado\npara atacar.
+5,6,240,DANZA LLUVIA,Mejora ataques\nde agua 5 turnos.
+5,6,241,DÍA SOLEADO,Mejora ataques\nde fuego 5 turnos.
+5,6,242,TRITURAR,Ataque que puede\nbajar la DEF. ESP.
+5,6,243,MANTO ESPEJO,Dobla un ATAQUE\nESPECIAL.
+5,6,244,MÁS PSIQUE,Copia los cambios\nde car. del rival.
+5,6,245,VEL. EXTREMA,Un primer golpe\nmuy potente.
+5,6,246,PODER PASADO,Puede subir todas\nlas caract.
+5,6,247,BOLA SOMBRA,Ataque que puede\nbajar la DEF. ESP.
+5,6,248,PREMONICIÓN,Ataque que golpea\nen el 3er turno.
+5,6,249,GOLPE ROCA,Ataque que puede\nbajar la DEFENSA.
+5,6,250,TORBELLINO,Atrapa al enemigo\nde 2 a 5 turnos.
+5,6,251,PALIZA,Ataque de todo el\nequipo POKéMON.
+5,7,1,막치기,손과 꼬리 등을 사용해서\n적을 때리는 공격
+5,7,2,태권당수,당수로 적을 공격\n급소를 맞추기 쉽다
+5,7,3,연속 뺨치기,적을 연속 뺨때리기로\n2-5회 연속으로 공격
+5,7,4,연속펀치,적을 연속으로 두들겨 패서\n2-5회 연속으로 공격
+5,7,5,메가톤펀치,엄청난 힘이 실린 펀치로\n적을 때려서 공격
+5,7,6,고양이돈받기,금화를 던져서 적을 공격\n전투 후에 돈이 손에 들어온다
+5,7,7,불꽃펀치,화염이 이글거리는 펀치로 공격\n적에게 화상을 입히기도 한다
+5,7,8,냉동펀치,냉기를 실은 펀치로 공격\n적을 얼리기도 한다
+5,7,9,번개펀치,전기를 실은 펀치로 공격\n적을 감전시키기도 한다
+5,7,10,할퀴기,날카로운 손톱을 사용해서\n적을 할퀴며 공격
+5,7,11,찝기,커다란 집게가위를 사용\n적을 찝어서 공격
+5,7,12,가위자르기,커다란 집게가위를 사용하여\n집어올려 전투불능으로 만든다
+5,7,13,칼바람,1턴째에서 바람의 칼날을 만들어\n다음 턴에서 적을 공격
+5,7,14,칼춤,싸움의 춤을 춰서\n공격력을 팍 올린다
+5,7,15,풀베기,날카로운 낫과 손톱을 사용하여\n적을 가르고 베며 공격
+5,7,16,바람일으키기,날개로 강한 바람을 일으켜\n적에게 타격을 주는 공격
+5,7,17,날개치기,날개를 크게 펼쳐서\n그대로 적에게 몸통박치기를 한다
+5,7,18,날려버리기,강한 바람으로 적을 날려버림\n날려버리면 전투는 끝난다
+5,7,19,공중날기,1턴째 하늘로 날아올라\n다음 턴에 적을 공격
+5,7,20,조이기,2-5턴 동안에 긴 몸이나\n넝쿨을 사용하여 적을 힘껏 조른다
+5,7,21,힘껏치기,긴 꼬리랑 넝쿨 등을\n적에게 휘둘러 공격
+5,7,22,덩쿨채찍,채찍 같은 가늘고 긴 덩쿨을\n적에게 휘둘러 공격
+5,7,23,짓밟기,커다란 다리로 밟아서 공격\n적의 기세가 꺾이는 일도 있다
+5,7,24,두번치기,2개의 다리를 이용하여 적을\n2회 연속으로 공격
+5,7,25,메가톤킥,엄청낭 힘이 담긴 킥으로\n적을 걷어차서 공격
+5,7,26,점프킥,힘차게 점프해서 연속 킥 공격\n실패하면 데미지를 입는다
+5,7,27,돌려차기,몸을 재빠르게 한번 회전시켜서\n그 힘으로 연속킥 공격을 한다
+5,7,28,모래뿌리기,적의 얼굴 등에 모래를 뿌려서\n명중률을 낮게 만든다
+5,7,29,박치기,머리로 들이박는 공격으로\n적의 기세를 꺾기도 한다
+5,7,30,뿔찌르기,끝이 뾰족한 뿔을 사용해서\n적을 찔러 공격한다
+5,7,31,마구찌르기,끝이 뾰족한 뿔을 사용해서\n2-5회 연속으로 공격
+5,7,32,뿔드릴,뿔을 드릴처럼 회전시켜서\n적을 찔러 전투불능으로 만든다
+5,7,33,몸통박치기,몸 전체를 사용해\n적에게 부딪쳐서 공격한다
+5,7,34,누르기,몸 전체로 쓰러지며 공격\n적을 마비시키기도 한다
+5,7,35,김밥말이,2-5턴 동안에 긴 몸이랑 덩쿨을\n사용하여 적을 꼼짝 못하게 만든다
+5,7,36,돌진,탄력을 이용하여 적에게 부딪친다\n자신도 약간은 데미지를 입는다
+5,7,37,난동부리기,2-3턴 동안에 난동을 부린다\n난동부린 뒤에는 혼란상태가 된다
+5,7,38,이판사판태클,목숨을 걸고 적에게 몸통박치기\n자신도 약간은 데미지를 입는다
+5,7,39,꼬리흔들기,적에게 꼬리를 흔들어 방심하게\n만들어서 방어력을 낮춘다
+5,7,40,독침,독이 있는 바늘과 뿔로 공격\n적을 독에 중독시키기도 한다
+5,7,41,더블니들,양손의 바늘을 사용해서\n적을 두번 연속으로 공격
+5,7,42,바늘미사일,날카로운 바늘을 적에게 발사해서\n2-5회 연속으로 공격
+5,7,43,째려보기,적을 노려봐서 겁을 내게 만들어\n방어력을 떨어뜨리게 한다
+5,7,44,물기,날카로운 이빨로 물어뜯어 공격\n적의 기세를 꺾기도 한다
+5,7,45,울음소리,귀여운 울음소리로 적을 방심시켜\n공격력을 떨어뜨린다
+5,7,46,울부짖기,짖어서 적을 도망치게 만든다\n적이 도망치면 전투는 끝난다
+5,7,47,노래하기,기분 좋은 노랫소리로\n적을 깊은 잠에 빠뜨린다
+5,7,48,초음파,몸에서 괴음파를 발생시켜\n적을 혼란하게 만들기도 한다
+5,7,49,소닉붓,충격파로 적을 공격\n20으로 정해진 데미지를 준다
+5,7,50,사슬묶기,초능력으로 적의 움직임을 볶쇄해서\n기술1개를 사용하지 못하게 만든다
+5,7,51,용해액,강한 산으로 적의 피부를 녹인다\n방어력을 떨어뜨린다
+5,7,52,불꽃세례,작은 화염으로 공격\n적에게 화상을 입히기도 한다
+5,7,53,화염방사,엄청난 화염으로 공격\n적에게 화상을 입히기도 한다
+5,7,54,흰안개,하얀 안개로 몸을 감싸서\n능력이 낮아지지 않도록 만든다
+5,7,55,물대포,물을 발사해서\n적을 공격한다
+5,7,56,하이드로펌프,물을 굉장한 기세로\n발사해서 적을 공격한다
+5,7,57,파도타기,물에 파도를 일으켜 그것을\n엄청난 힘으로 때려서 공격한다
+5,7,58,냉동빔,냉기를 발산해서 공격\n적을 얼게 만들기도 한다
+5,7,59,눈보라,눈을 강한 바람에 실어서 공격\n적을 얼게 만들기도 한다
+5,7,60,환상빔,이상한 빛을 발사한다\n적을 혼란하게 만들기도 한다
+5,7,61,거품광선,거품을 단숨에 발사한다\n적의 빠르기를 낮추게 하기도 한다
+5,7,62,오로라 빔,무지개 빛을 발사한다\n공격력을 저하시키기도 한다
+5,7,63,파괴광선,데미지는 크지만 사용하면\n다음 턴에서 움직이지 못하게 된다
+5,7,64,쪼기,부리 등을 사용하여\n적을 쪼아서 공격한다
+5,7,65,회전부리,부리를 중심으로 몸을\n회전시켜서 적에게 돌진한다
+5,7,66,지옥의바퀴,자신 역시 상대방과 함께 뒹군다\n자신도 약간의 데미지를 입는다
+5,7,67,잡치기,타이밍 좋게 다리를 걸어서\n적을 넘어뜨린다
+5,7,68,카운터,적에게 받은 물리적인 공격의\n데미지를 배로해서 되돌려준다
+5,7,69,지구던지기,인력을 이용해서 던진다\n레벨 분의 데미지를 준다
+5,7,70,괴력,전신에 엄청난 힘을 모아서\n적을 공격한다
+5,7,71,흡수,적에게 입힌 데미지의\n반정도를 체력으로 회복한다
+5,7,72,메가드레인,적에게 입힌 데미지의\n반정도를 체력으로 회복한다
+5,7,73,씨뿌리기,적의 몸에 싹을 틔워서\n매 턴마다 체력을 흡수한다
+5,7,74,성장,단숨에 몸을 성장시켜서\n특수공격력을 높인다
+5,7,75,잎날가르기,잎사귀로 적을 벤다\n급소에 명중시키기 쉽다
+5,7,76,솔라빔,1턴째에서 빛을 흡수해서\n다음턴에서 적을 공격한다
+5,7,77,독가루,독소를 지닌 가루를 뿌려서\n적을 중독시킨다
+5,7,78,저리가루,저리가루를 뿌러서\n적을 마비시켜 버린다
+5,7,79,수면가루,잠이 오는 가루를 뿌려서\n적을 잠들게 만들어 버린다
+5,7,80,꽃잎댄스,2-3턴 동안에 난동을 부린다\n난동을 부린 뒤에는 혼란에 빠진다
+5,7,81,실뿜기,실을 적의 몸에 칭칭 감아서\n움직임의 스피드를 떨어뜨린다
+5,7,82,용의분노,충격파로 적을 공격\n40으로 정해진 데미지를 입힌다
+5,7,83,회오리불꽃,2-5턴 동안에 적을\n화염 중심에 가두어 버린다
+5,7,84,전기쇼크,전기를 발산해서 공격\n적을 마비시키기도 한다
+5,7,85,10만봄트,강력한 전기를 발산해서 공격\n적을 마비시키기도 한다
+5,7,86,전기자석파,약한 전기를 발산해서 적에게\n부딛쳐 마비를 시킨다
+5,7,87,번개 ,적을 향해 번개를 떨어뜨린다\n마비를 시키기도 한다
+5,7,88,돌떨구기,작은 바위를 던져서\n적을 공격한다
+5,7,89,지진,지면을 흔들어서 공격\n비행타입 이외에는 엄청난 데미지
+5,7,90,땅가르기,땅가르기를 일으켜 적을 빠뜨린다\n빠지면 전투불능이 되어 버린다
+5,7,91,구멍파기,1턴째에서 땅속에 파고들어\n다음 턴에서 적을 공격한다
+5,7,92,맹독,점점 데미지가 늘어가는 독을\n적에게 중독시킨다
+5,7,93,염동력,초능력으로 공격\n적을 혼란에 빠뜨리기도 한다
+5,7,94,사이코키네시스,강한 염동력으로\n특수방어를 떨어뜨리게 하기도 한다
+5,7,95,최면술,적에게 암시를 줘서\n깊은 잠에 빠뜨린다
+5,7,96,요가포즈,요가 포즈로 잠재된 힘을\n끌어내서 공격력을 높인다
+5,7,97,고속이동,힘을 빼서 몸을 가볍게하고\n스피드를 많이 높인다
+5,7,98,전광석화,엄청나게 빠른 속도로 움직여서\n선제공격을 한다
+5,7,99,분노,공격받을 때마다 분노로\n공격력이 높아져간다
+5,7,100,순간이동,초능력을 사용하여\n전투에서 탈출한다
+5,7,101,나이트헤드,적에게 무서운 환상을 보여주어서\n레벨분의 데미지를 입힌다
+5,7,102,흉내내기,적이 사용한 기술이\n그때만큼만 자신의 기술이 된다
+5,7,103,싫은소리,듣기싫은 소리를 내서 적의\n방어를 많이 낮추게 만든다
+5,7,104,그림자 분신,분신으로 적을 혼란에 빠트려서\n회피율을 높인다
+5,7,105,HP 회복,상처입은 몸을 체력의\n반정도 회복한다
+5,7,106,단단해지기,전신에 힘을 모아 몸을 딱딱하게\n만들어서 방어력을 높인다
+5,7,107,작아지기,몸을 줄여서 작게 되어\n회피율을 높인다
+5,7,108,연막,연기나 먹 등으로 적의\n명중률을 떨어뜨리게 한다
+5,7,109,이상한빛,이상한 빛으로 적을\n홀려서 곤란상태로 만든다
+5,7,110,껍질에숨기,단단한 껍질에 숨어서\n방어력을 높인다
+5,7,111,웅크리기,몸을 웅크려서 급소를\n감추고 방어력을 높인다
+5,7,112,배리어,눈 앞에 벽을 만들어서\n방어력을 팍 올린다
+5,7,113,빛의 장막,빛의 장막을 만들어 특수\n공격의 데미지를 약하게 만든다
+5,7,114,흑안개,검은 안개에 싸여서 능력의\n이상을 원상태로 회복한다
+5,7,115,리플렉터,빛의 장막을 만들어 물리적\n공격의 데미지를 약하게 만든다
+5,7,116,기충전,공격에 기합을 실어서\n급소에 잘 명중하도록 만든다
+5,7,117,참기,2-3턴 공격을 참고 견뎌서\n받은 데미지를 배로해서 돌려준다
+5,7,118,손가락흔들기,손가락을 흔들어서 뇌를 자극시켜\n여러 기술을 랜덤으로 끌어낸다
+5,7,119,따라하기,적의 기술을 흉내내서\n같은 기술로 적을 공격한다
+5,7,120,자폭,적에게 많은 데미지를 주지만\n사용하면 전투불능이 되어 버린다
+5,7,121,알폭탄,알을 힘껏 던져서\n적을 공격한다
+5,7,122,핥기,긴 혀로 핥아서 공격한다\n적을 마비시키기도 한다
+5,7,123,스모그,배기가스를 뿜어서 공격\n적에게 중독을 시키기도 한다
+5,7,124,오물공격,오물을 던져서 공격한다\n적을 중독시키기도 한다
+5,7,125,뼈다귀치기,손에 쥔 뼈다귀로 적을 공격\n적의 기세를 꺾기도 한다
+5,7,126,불대문자,큰 대자가 모든 것을 태워버린다\n적에게 화상을 입히기도 한다
+5,7,127,폭포오르기,폭포를 거슬러 오르는 듯한\n기백으로 적에게 돌진한다
+5,7,128,껍질끼우기,2-5턴 동안에 적을\n껍질로 찝어 버린다
+5,7,129,스피드스타,절대 피할 수 없는 별 모양의\n광선을 무수히 발사한다
+5,7,130,로케트박치기,1턴째에서 머리를 집어넣고\n다음 턴에서 적을 공격한다
+5,7,131,가시대포,날카로운 바늘을 적에게 발사해서\n2-5회 연속으로 공격
+5,7,132,휘감기,적에게 휘감겨서 공격한다\n적의 스피드를 둔화시키기도 한다
+5,7,133,망각술,일순 무엇인가를 잊어먹는 것으로\n특수방어를 높이 올린다
+5,7,134,숟가락휘기,적의 눈을 스푼에 주시하도록 해서\n명중률을 떨어뜨리게 한다
+5,7,135,알낳기,상처 입은 몸을 체력의\n반정도 회복시킨다
+5,7,136,무릎차기,점프한 힘으로 연속 무릎차기 공격\n실패하면 데미지를 입는다
+5,7,137,뱀의미소,배의 모양으로 적을 위협해서\n겁을 먹게하여 마비시켜 버린다
+5,7,138,꿈먹기,자고있는 적에게 준 데미지의\n반을 체력으로 회복한다
+5,7,139,독가스,독가스를 적에게 뿌려서\n중독되게 만든다
+5,7,140,알던지기,둥근 물건을 적에게 던져서\n2-5회 연속으로 공격
+5,7,141,흡혈,적에게 준 데미지의\n반을 체력으로 회복한다
+5,7,142,악마의키스,무서운 얼굴로 키스를 한다\n키스를 당하면 잠들어 버린다
+5,7,143,불새,1턴째에서 약점을 찾아서\n다음 턴에 적을 공격한다
+5,7,144,변신,적의 포켓몬과 같은 모습으로\n세포를 변화시켜 변신한다
+5,7,145,거품,거품을 뿜어서 공격한다\n적의 스피드를 둔화시키기도 한다
+5,7,146,잼잼펀치,어미와 새끼가 동시에 펀치로 공격\n적을 곤란상태로 만들기도 한다
+5,7,147,버섯포자,최면효과가 있는 포자를\n뿌려서 적을 잠들게 만든다
+5,7,148,플래시,강한 빛으로 눈을 멀게해서\n적의 명중률을 떨어뜨린다
+5,7,149,사이코웨이브,이상한 염동파로 적을 공격\n사용할 때마다 위력이 변한다
+5,7,150,튀어오르기,팔딱 튀기만 하고 아무 일도\n일어나지 않는다・・・
+5,7,151,녹기,몸을 액상으로 변화시켜서\n방어력을 팍 높인다
+5,7,152,찝게햄머,집게가위로 적을 때린다\n급소에 명중하기 쉽다
+5,7,153,대폭발,적에게 데미지를 입히지만\n사용하면 전투불능이 되어버린다
+5,7,154,마구할퀴기,날카로운 손톱과 낫으로 할퀴어\n2-5회 연속으로 공격한다
+5,7,155,뼈다귀부메랑,뼈다귀를 던져 갔다가 돌아오면서\n2회 연속으로 공격한다
+5,7,156,잠자기,2턴 잠을 자서 체력과\n몸의 이상상태를 회복시킨다
+5,7,157,스톤샤워,커다란 바위를 던진다\n적의 기세를 꺾기도 한다
+5,7,158,필살앞니,날카로운 앞니로 적을 공격\n적을 물러서게 만들 때도 있다
+5,7,159,각지기,폴리곤을 줄여서 각진 형상이 되어\n공격력을 높인다
+5,7,160,텍스쳐,기억하고 있는 기술 타입의\n어늉것인지에 자신의 타입을 바꾼다
+5,7,161,트라이어택,3종류의 광선을\n한 개로 모아서 적에게 발사한다
+5,7,162,분노의앞니,날카로운 앞니로 공격해서\n적의 체력을 반으로 만든다
+5,7,163,베어가르기,날카로운 낫과 손톱 등으로 공격\n급소에 맞추기 쉽다
+5,7,164,대타출동,체력의 4분의1을 사용하여\n자신의 분신을 만들어낸다
+5,7,165,발버둥,기술포인트가 떨어지면 나오는 기술\n자신도 약간의 데미지를 입는다
+5,7,166,스케치,적이 사용한 기술을 스케치해서\n그 기술을 자신의 것으로 만든다
+5,7,167,트리플 킥,적을 3회 연속으로 공격\n맞을 때마다 데미지가 올라간다
+5,7,168,도둑,공격 절정일 때 틈을 노려서\n적이 들고있는 도구를 훔친다
+5,7,169,거미집,끈적끈적한 실을 휘감아서\n적을 도망치지 못하게 한다
+5,7,170,마음의 눈,적의 움직임을 마음으로 늉껴서\n다음의 공격을 반드시 맞춘다
+5,7,171,악몽,적이 자고있는 동안에 체력을\n매 턴마다 4분의1씩 줄여나간다
+5,7,172,화염 자동차,화염을 휘감아서 돌진한다\n적에게 화상을 입히기도 한다
+5,7,173,코골기,자고있을 때만 쓸 수 있는 기술\n엄청난 코골기로 적을 공격한다
+5,7,174,저주,고스트타입이랑 그 이외의 타입은\n기술의 효과가 다르다
+5,7,175,바둥바둥,자신의 체력이 적을수록\n적에게 큰 데미지를 입힌다
+5,7,176,텍스쳐2,당한 기술의 타입을 자신의\n저항력으로 바꾼다
+5,7,177,에어로블레스트,진공파를 발사해서 공격\n급소를 맞추기 쉽다
+5,7,178,목화포자,포자를 흩뿌려서 적의\n움직임을 더욱 둔화시킨다
+5,7,179,기사회생,자신의 체력이 적을수록\n적에게 큰 데미지를 입힌다
+5,7,180,원한,상대가 발휘한 기술에 앙심을 품고\n그 기술포인트를 떨어뜨린다
+5,7,181,눈싸라기,눈을 바람에 실어서 공격한다\n적을 얼려버리기도 한다
+5,7,182,방어,그 턴의 공격을 받지 않는다\n연속으로 사용하면 실패하기 쉽다
+5,7,183,마하펀치,엄청나게 빠른 펀치를 날려서\n반드시 선제공격이 되도록 한다
+5,7,184,겁나는 얼굴,무서운 얼굴로 적에게 겁을 줘서\n움직임을 더욱 둔화시킨다
+5,7,185,속여 때리기,적을 방심하게 만들어 접근하여\n피할 수 없는 공격을 펼친다
+5,7,186,천사의 키스,귀여운 얼굴로 키스를 한다\n키스를 당하면 혼란에 빠진다
+5,7,187,배북,자신의 체력을 떨어뜨려서\n공격력을 최대로 끌어올린다
+5,7,188,오물 폭탄,오물을 던져서 공격\n적을 독에 중독시키기도 한다
+5,7,189,진흙 뿌리기,적의 얼굴 등에 진흙을 발라\n명중률이 떨어지게 만든다
+5,7,190,대포무노포,먹물 덩어리를 발사해서\n명중력이 떨어지게 만든다
+5,7,191,압정 뿌리기,적의 주변에 함정을 만들어\n교대한 적을 공격한다
+5,7,192,전자포,명중률이 낮지만 데미지는 크다\n명중하면 반드시 마비되어 버린다
+5,7,193,꿰뚫어 보기,기술이 명중하기 어렵게된 적에게\n공격이 잘 먹히도록 만든다
+5,7,194,길동무,이 기술 뒤에 쓰러지게되면\n적도 전투불능이 되어버린다
+5,7,195,멸망의 노래,들은 포켓몬은 3턴 후에\n전투불능이 되어버린다
+5,7,196,얼다바람,엄청난 냉기로 적을 공격\n스피드를 낮게 떨어뜨린다
+5,7,197,선찰,적의 공격을 반드시 피한다\n연속으로 사용하면 실패하기 쉽다
+5,7,198,볼러쉬,손에 들은 뼈다귀로 2-5회\n연속으로 적을 공격한다
+5,7,199,록온,적에게 조준을 맞춰서\n다음 공격을 반드시 맞게 한다
+5,7,200,역린,2-3턴 동안에 난동을 부린다\n난동을 부린 후에는 혼란에 빠진다
+5,7,201,모래바람,모래바람을 발생시켜서\n매 턴마다 데미지를 입힌다
+5,7,202,기가 드레인,적에게 입힌 데미지의\n반을 체력으로 회복한다
+5,7,203,버티기,그 턴에서 공격을 받아도\n반드시 체력이 1 남는다
+5,7,204,애교부리기,귀여운 애교로 적을 방심시켜서\n공격력을 떨어뜨린다
+5,7,205,구르기,5턴 동안에 적을 공격한다\n맞출 때마다 데미지가 올라간다
+5,7,206,칼등치기,반드시 체력이 1이 남도록\n적당히 공격한다
+5,7,207,뽐내기,적을 화나게 만들어서 혼란에\n빠뜨리지만 적의 공격력도 올려준다
+5,7,208,우유 마시기,상처 입은 몸을 체력의\n반정도 회복시켜준다
+5,7,209,스파크,전기를 일으켜서 돌진한다\n적을 마비시키기도 한다
+5,7,210,연속 자르기,연속으로 맞추면\n위력이 증가해져 간다
+5,7,211,강철 날개,단단한 날개를 크게 펼쳐서\n그대로 적에게 몸통박치기를 한다
+5,7,212,검은 눈빛,적을 뚫어지게 바라보면 어쩐지\n적은 도망치지 못하게된다
+5,7,213,헤롱헤롱,숫놈이라면 암놈에게 암놈이라면\n숫놈에게 발휘하기 힘들게 된다
+5,7,214,잠꼬대,자고있을 때만 쓸 수 있는 기술\n랜덤으로 자신의 기술을 발휘한다
+5,7,215,치료방울,기분 좋은 방울소리를 들려줘서\n모든 상태를 회복시킨다
+5,7,216,은혜갚기,잘 대해주는 트레이너를 위해서\n전력으로 적을 공격한다
+5,7,217,프레젠트,적에게 폭탄을 선물한다\n가끔 회복해버리는 경우가 있다
+5,7,218,화풀이,잔혹한 처사에 기분전환으로\n적을 전력으로 공격한다
+5,7,219,신비의 부적,신비한 힘으로 보호되어\n특수상태에 빠지지 않도록 된다
+5,7,220,아픔나누기,적과 자신의 체력을\n보충해서 그것을 사이좋게 나눈다
+5,7,221,성스러운 불꽃,신비한 불꽃으로 공격\n적에게 화상을 입히기도 한다
+5,7,222,매그니튜드,지면을 흔들어서 적을 공격한다\n데미지는 랜덤으로 바뀐다
+5,7,223,폭발 펀치,명중하기 힘들지만 데미지는 크다\n명중하면 반드시 곤란상태로 만든다
+5,7,224,메가폰,단단한 뿔을 엄청난 기세를 몰아\n들이받아 공격한다
+5,7,225,용의 숨결,입에서 굉장한 숨결을 뿜어서\n적을 공격한다
+5,7,226,바톤 터치,추가효과를 남겨놓은 채로\n다른 포켓몬으로 교체한다
+5,7,227,앵콜,적이 마지막으로 사용한 기술을\n2-6회 연속으로 쓰도록 시킨다
+5,7,228,따라가때리기,상대방이 교환되어질 때에\n사용하면 큰 데미지를 줄 수 있다
+5,7,229,고속스핀,몸을 빠르게 회전시켜서\n적을 공격한다
+5,7,230,달콤한 향기,달콤한 향기로 홀려서\n적의 회피율을 떨어뜨린다
+5,7,231,아이언테일,단단한 꼬리로 적을 공격\n적의 방어력을 떨어뜨리기도 한다
+5,7,232,메탈크로우,단단한 손톱으로 적을 공격\n공격력이 높아지기도 한다
+5,7,233,받아 던지기,후에 공격을 하게되지만 반드시\n공격이 명중된다
+5,7,234,아침햇살,체력을 회복하는\n시각에서 회복율이 변한다
+5,7,235,광합성,체력을 회복하는\n시각에서 회복율이 변한다
+5,7,236,달의불빛,체력이 회복하는\n시각에서 회복율이 변한다
+5,7,237,잠재파워,포켓몬에 따라서 적에게 주는\n데미지의 양이 변화한다
+5,7,238,크로스촙,양손 당수로 적을 공격한다\n급소에 맞추기 쉽다
+5,7,239,회오리,엄청난 바람을 일으켜서\n적을 공격한다
+5,7,240,비바라기,5턴 동안에 물타입의\n기술의 위력이 높아진다
+5,7,241,쾌청,5턴 동안에 화염타입의\n기술의 위력이 높아진다
+5,7,242,깨물어부수기,날카로운 이빨로 적을 물어뜯는다\n특수방어를 뚫는 경우가 있다
+5,7,243,미러코트,적에게 받은 특수공격의\n데미지를 배로 되돌려준다
+5,7,244,자기암시,적에게 걸려있는 보조효과를\n자신에게도 건다
+5,7,245,신속,매우 빠른 속도로 움직여서\n기운 센 공격을 한다
+5,7,246,원시의 힘,원시의 힘을 불러들여\n능력이 높아진다
+5,7,247,새도우봄,검은 덩어리를 던져서 공격\n특수방어를 뚫는 경우가 있다
+5,7,248,미래예지,정신력을 높여서\n2턴 뒤에 적을 공격한다
+5,7,249,바위깨기,바위를 깨는 기세를 몰아 공격\n적의 방어를 뚫기도 한다
+5,7,250,바다 회오리,2-5턴 동안에 적을\n소용돌이 중심에 가두어버린다
+5,7,251,집단구타,동료 포켓몬이\n공격에 참가해준다
+6,1,1,はたく,てやしっぽなどを つかい\nてきを はたいてこうげき
+6,1,2,からてチョップ,チョップでてきを こうげき\nきゅうしょに あたリやすい
+6,1,3,おうふくビンタ,てきを おうふくビンタで\n2ー5かいれんぞくでこうげき
+6,1,4,れんぞくパンチ,てきを れんぞくでなぐリつけ\n2ー5かいれんぞくでこうげき
+6,1,5,メガトンパンチ,ものすごいちからをこめたパンチで\nてきを なぐってこうげき
+6,1,6,ネコにこばん,こばんをなげててきを こうげき\nせんとうごに おかねが てにはいる
+6,1,7,ほのおのパンチ,ほのおをこめたパンチでこうげき\nてきを やけどさせることがある
+6,1,8,れいとうパンチ,れいきをこめたパンチでこうげき\nてきを こおらせることがある
+6,1,9,かみなリパンチ,でんげきをこめたパンチでこうげき\nてきを まひさせることがある
+6,1,10,ひっかく,するどいツメを つかい\nてきを ひっかいてこうげき
+6,1,11,はさむ,おおきなハサミを つかい\nてきを はさんでこうげき
+6,1,12,ハサミギロチン,おおきなハサミを つかって\nてきを はさみせんとうふのうにする
+6,1,13,かまいたち,1ターンめでかぜのやいばを つくリ\nつぎのターンでてきを こうげき
+6,1,14,つるぎのまい,たたかいの　おどリを おどって\nこうげきを グーンとあげる
+6,1,15,いあいぎリ,するどいカマやツメなどを つかって\nてきを きリつけてこうげき
+6,1,16,かぜおこし,つばさでつよいかぜを おこし\nそれを てきにぶつけてこうげき
+6,1,17,つばさでうつ,つばさを おおきくひろげて\nそのままてきに たいあたリする
+6,1,18,ふきとばし,つよいかぜでてきを ふきとばす\nふきとばすとせんとうは　おわる
+6,1,19,そらをとぶ,1ターンめでそらに とびたって\nつぎのターンでてきを こうげき
+6,1,20,しめつける,2ー5ターンのあいだながいからだや\nつるを つかっててきを しめつける
+6,1,21,たたきつける,ながいシッポやつるなどを\nてきに たたきつけてこうげき
+6,1,22,つるのムチ,ムチのように ほそながいつるを\nてきに たたきつけてこうげき
+6,1,23,ふみつけ,おおきなあしでふみつけてこうげき\nてきを ひるませることがある
+6,1,24,にどげリ,2ほんの　あしをつかっててきを\n2かいれんぞくでこうげき
+6,1,25,メガトンキック,ものすごいちからをこめたキックで\nてきを けっとばしてこうげき
+6,1,26,とびげリ,ジャンプしたいきおいでキックを\nくリだすはずすとダメージをうける
+6,1,27,まわしげリ,からだを すばやく1かいてんさせ\nそのいきおいでキックを くリだす
+6,1,28,すなかけ,てきの　かおなどに すなをかけて\nめいちゅうリつを さげさせる
+6,1,29,ずつき,あたまからつっこんでこうげき\nてきを ひるませることがある
+6,1,30,つのでつく,とがったツノを つかい\nてきを つついてこうげき
+6,1,31,みだれづき,とがったツノなどを つかい\n2ー5かいれんぞくでこうげき
+6,1,32,つのドリル,ツノを ドリルのように かいてんさせ\nてきを つつきせんとうふのうにする
+6,1,33,たいあたリ,からだぜんたいを つかって\nてきに たいあたリしてこうげき
+6,1,34,のしかかリ,からだごとたおれこんでこうげき\nてきを まひさせることがある
+6,1,35,まきつく,2ー5ターンのあいだながいからだや\nつるを つかっててきを しめつける
+6,1,36,とっしん,いきおいをつけててきに たいあたリ\nじぶんもすこしダメージをうける
+6,1,37,あばれる,2ー3ターンのあいだあばれつづける\nあばれたあとは　こんらんしてしまう
+6,1,38,すてみタックル,いのちをかけててきに たいあたリ\nじぶんもすこしダメージをうける
+6,1,39,しっぽをふる,てきに しっぽをふってゆだんさせて\nぼうぎょを さげさせる
+6,1,40,どくばリ,どくのあるハリやツノでこうげき\nてきに どくをあたえることがある
+6,1,41,ダブルニードル,リょうての　ハリを つかって\nてきを 2かいれんぞくでこうげき
+6,1,42,ミサイルばリ,するどいハリを てきに はっしゃして\n2ー5かいれんぞくでこうげき
+6,1,43,にらみつける,てきを にらんでおびえさせて\nぼうぎょを さげさせる
+6,1,44,かみつく,するどいはでかみついてこうげき\nてきを ひるませることがある
+6,1,45,なきごえ,かわいくないててきを ゆだんさせて\nこうげきを さげさせる
+6,1,46,ほえる,ほえててきを にげださせる\nてきが にげるとせんとうは　おわる
+6,1,47,うたう,ここちよいうたごえで\nてきを ふかいねむリへとさそう
+6,1,48,ちょうおんぱ,からだからかいおんぱを はっして\nてきを こんらんさせることがある
+6,1,49,ソニックブーム,しょうげきはでてきを こうげき\n20の　きまったダメージを あたえる
+6,1,50,かなしばリ,ちょうのうリょくでてきの　うごきを\nとめてわざを 1つつかえなくする
+6,1,51,ようかいえき,つよいさんでてきの　ひふを とかす\nぼうぎょを さげることがある
+6,1,52,ひのこ,ちいさなほのおでこうげき\nてきを やけどさせることがある
+6,1,53,かえんほうしゃ,すごいほのおでこうげき\nてきを やけどさせることがある
+6,1,54,しろいきリ,しろいきリでからだを おおい\nのうリょくを さげられないようにする
+6,1,55,みずでっぽう,みずを はっしゃして\nてきを こうげき
+6,1,56,ハイドロポンプ,みずを ものすごいいきおいで\nはっしゃしててきを こうげき
+6,1,57,なみのリ,みずに なみを おこしそれを\nものすごいちからでたたきつける
+6,1,58,れいとうビーム,れいきを はっしゃしてこうげき\nてきを こおらせることがある
+6,1,59,ふぶき,ゆきを つよいかぜにのせてこうげき\nてきを こおらせることがある
+6,1,60,サイケこうせん,ふしぎなひかリを はっしゃする\nてきを こんらんさせることがある
+6,1,61,バブルこうせん,あわを いきおいよくはっしゃする\nてきの　すばやさを さげることがある
+6,1,62,オーロラビーム,にじいろの　ひかリを はっしゃする\nこうげきを さげることがある
+6,1,63,はかいこうせん,ダメージは　おおきいが つかうと\nつぎのターンうごけなくなってしまう
+6,1,64,つつく,くちばしなどを つかって\nてきを つついてこうげき
+6,1,65,ドリルくちばし,くちばしを ちゅうしんに からだを\nかいてんさせててきに とっしんする
+6,1,66,じごくぐるま,じぶんごとじめんに たたきつける\nじぶんにもすこしダメージ
+6,1,67,けたぐリ,タイミングよくあしを ひっかける\nてきを ひるませることがある
+6,1,68,カウンター,てきからうけたぶつリこうげきの\nダメージを ばいにしてかえす
+6,1,69,ちきゅうなげ,いんリょくを リようしてなげる\nレべルぶんの　ダメージを あたえる
+6,1,70,かいリき,ぜんしんに すごいちからを ためて\nてきを こうげき
+6,1,71,すいとる,てきに あたえたダメージの\nはんぶんたいリょくを かいふくする
+6,1,72,メガドレイン,てきに あたえたダメージの\nはんぶんたいリょくを かいふくする
+6,1,73,やどリぎのタネ,てきの　からだに タネをうえて\nターンごとに たいリょくを すいとる
+6,1,74,せいちょう,いっきに からだを せいちょうさせて\nとくしゅこうげきを あげる
+6,1,75,はっぱカッター,はっぱでてきを きリつける\nきゅうしょに あたリやすい
+6,1,76,ソーラービーム,1ターンめでひかリを きゅうしゅう\nつぎのターンでてきを こうげき
+6,1,77,どくのこな,どくそを ふくんだこなを ふリまき\nてきに どくをあたえる
+6,1,78,しびれごな,しびれるこなを ふリまき\nてきを まひさせてしまう
+6,1,79,ねむリごな,ねむくなるこなを ふリまき\nてきを ねむらせてしまう
+6,1,80,はなびらのまい,2ー3ターンのあいだあばれつづける\nあばれたあとは　こんらんしてしまう
+6,1,81,いとをはく,いとを てきの　からだに まきつけ\nすばやさを さげさせる
+6,1,82,リゅうのいかリ,しょうげきはでてきを こうげき\n40の　きまったダメージを あたえる
+6,1,83,ほのおのうず,2ー5ターンのあいだてきを\nほのおの　ちゅうしんに とじこめる
+6,1,84,でんきショック,でんげきを あびせてこうげき\nてきを まひさせることがある
+6,1,85,10まんボルト,つよいでんげきを あびせてこうげき\nてきを まひさせることがある
+6,1,86,でんじは,よわいでんげきを てきに ぶつけて\nまひさせてしまう
+6,1,87,かみなリ,てきに むかってかみなリを おとす\nまひさせることがある
+6,1,88,いわおとし,ちいさないわを なげつけて\nてきを こうげき
+6,1,89,じしん,じめんを ゆらしてこうげき\nとんでるてきいがいに だいダメージ
+6,1,90,じわれ,じわれを おこしててきを のみこむ\nのみこまれるとせんとうふのうになる
+6,1,91,あなをほる,1ターンめでじめんに もぐリ\nつぎのターンでてきを こうげき
+6,1,92,どくどく,じょじょに ダメージがふえるどくを\nてきに あたえる
+6,1,93,ねんリき,ちょうのうリょくでこうげき\nてきを こんらんさせることがある
+6,1,94,サイコキネシス,つよいねんリきでてきを こうげき\nとくしゅぼうぎょを さげることがある
+6,1,95,さいみんじゅつ,てきに あんじを かけて\nふかいねむリへとさそう
+6,1,96,ヨガのポーズ,ヨガのポーズでねむったちからを\nひきだしこうげきを あげる
+6,1,97,こうそくいどう,ちからを ぬいてからだを かるくし\nすばやさを グーンとあげる
+6,1,98,でんこうせっか,ものすごいはやさでうごいて\nせんせいこうげきする
+6,1,99,いかリ,こうげきされるたびに いかリで\nこうげきが あがっていく
+6,1,100,テレポート,ちょうのうリょくを つかって\nせんとうからだっしゅつする
+6,1,101,ナイトへッド,てきに おそろしいまぼろしを みせ\nレべルぶんの　ダメージを あたえる
+6,1,102,ものまね,てきが つかったわざが\nそのときだけじぶんの　わざになる
+6,1,103,いやなおと,いやなおとを だしててきの\nぼうぎょを ガクッとさげさせる
+6,1,104,かげぶんしん,ぶんしんでてきを まどわせ\nかいひリつを あげる
+6,1,105,じこさいせい,キズついたからだを たいリょくの\nはんぶんだけかいふくする
+6,1,106,かたくなる,ぜんしんに ちからをこめかたくなリ\nぼうぎょを あげる
+6,1,107,ちいさくなる,からだを ちぢめてちいさくなリ\nかいひリつを あげる
+6,1,108,えんまく,けむリやスミなどでてきの\nめいちゅうリつを さげさせる
+6,1,109,あやしいひかリ,あやしいひかリでてきを\nまどわしこんらんさせてしまう
+6,1,110,からにこもる,かたいからに もぐリこんで\nぼうぎょを あげる
+6,1,111,まるくなる,からだを まるめてきゅうしょを\nかくしぼうぎょを あげる
+6,1,112,バリアー,めのまえに かべを つくリだし\nぼうぎょを グーンとあげる
+6,1,113,ひかリのかべ,ひかリのかべを つくリとくしゅ\nこうげきの　ダメージを よわめる
+6,1,114,くろいきリ,くろいきリに おおわれのうリょくの\nいじょうを もとにもどす
+6,1,115,リフレクター,ひかリのかべを つくリぶつリ\nこうげきの　ダメージを よわめる
+6,1,116,きあいだめ,こうげきに きあいを こめて\nきゅうしょに あたリやすくする
+6,1,117,がまん,2ー3ターンこうげきに たえて\nうけたダメージを ばいにしてかえす
+6,1,118,ゆびをふる,ゆびを ふってのうを しげきして\nいろんなワザを ランダムでくリだす
+6,1,119,オウムがえし,てきの　わざを まねして\nおなじわざでてきを こうげき
+6,1,120,じばく,てきに だいダメージを あたえるが\nつかうとせんとうふのうに なる
+6,1,121,タマゴばくだん,タマゴを おもいっきリなげつけて\nてきを こうげき
+6,1,122,したでなめる,ながいしたでなめまわしてこうげき\nてきを まひさせることがある
+6,1,123,スモッグ,はいきガスを ふきかけてこうげき\nてきに どくをあたえることがある
+6,1,124,へドロこうげき,へドロを なげつけてこうげき\nてきに どくをあたえることがある
+6,1,125,ホネこんぼう,てにもったホネでてきを こうげき\nてきを ひるませることがある
+6,1,126,だいもんじ,だいの　もじが すべてを やきつくす\nてきを やけどさせることがある
+6,1,127,たきのぼリ,たきを さかのぼるようないきおいで\nてきに とっしんする
+6,1,128,からではさむ,2ー5ターンのあいだてきを\nからに はさみこんでしまう
+6,1,129,スピードスター,ぜったいに よけられないほしがたの\nこうせんを むすうに はっしゃする
+6,1,130,ロケットずつき,1ターンめであたまを ひっこめて\nつぎのターンでてきを こうげき
+6,1,131,とげキャノン,するどいハリを てきに はっしゃして\n2ー5かいれんぞくでこうげき
+6,1,132,からみつく,てきに からみついてこうげきする\nてきの　すばやさを さげることがある
+6,1,133,ドわすれ,いっしゅんなにかを わすれることで\nとくしゅぼうぎょを グーンとあげる
+6,1,134,スプーンまげ,てきの　めを スプーンに むけさせて\nめいちゅうリつを さげさせる
+6,1,135,タマゴうみ,キズついたからだを たいリょくの\nはんぶんだけかいふくする
+6,1,136,とびひざげリ,ジャンプしたいきおいでひざげリを\nくリだすはずすとダメージをうける
+6,1,137,へびにらみ,おなかの　もようでてきを いかくし\nおびえさせてまひさせてしまう
+6,1,138,ゆめくい,ねているてきに あたえたダメージの\nはんぶんたいリょくを かいふくする
+6,1,139,どくガス,どくガスを てきに ふきかけて\nどくをあたえる
+6,1,140,たまなげ,まるいものを てきに なげつけて\n2ー5かいれんぞくでこうげき
+6,1,141,きゅうけつ,てきに あたえたダメージの\nはんぶんたいリょくを かいふくする
+6,1,142,あくまのキッス,こわいかおでキスを せまる\nキスされるとねむってしまう
+6,1,143,ゴッドバード,1ターンめでじゃくてんを さがし\nつぎのターンでてきを こうげき
+6,1,144,へんしん,てきの　ポケモンとおなじすがたに\nさいぼうを へんかさせへんしんする
+6,1,145,あわ,あわを ふきかけてこうげき\nてきの　すばやさを さげることがある
+6,1,146,ピヨピヨパンチ,リズミカルなパンチでこうげき\nてきを こんらんさせることがある
+6,1,147,キノコのほうし,さいみんこうかのあるほうしを\nふリまきてきを ねむらせる
+6,1,148,フラッシュ,つよいひかリでめを くらませて\nてきの　めいちゅうリつを さげさせる
+6,1,149,サイコウェーブ,ふしぎなねんぱでてきを こうげき\nつかうたびに いリょくが かわる
+6,1,150,はねる,はねるだけでなにもおこらない⋯
+6,1,151,とける,からだを えきじょうに へんかさせて\nぼうぎょを グーンとあげる
+6,1,152,クラブハンマー,ハサミを てきに たたきつける\nきゅうしょに あたリやすい
+6,1,153,だいばくはつ,てきに だいダメージを あたえるが\nつかうとせんとうふのうに なる
+6,1,154,みだれひっかき,するどいツメやカマなどでひっかいて\n2ー5かいれんぞくでこうげき
+6,1,155,ホネブーメラン,ホネを なげつけていきとかえリで\n2かいれんぞくでこうげき
+6,1,156,ねむる,2ターンねむってたいリょくと\nからだのいじょうを かいふくする
+6,1,157,いわなだれ,おおきないわを なげつける\nてきを ひるませることがある
+6,1,158,ひっさつまえば,するどいまえばでてきを こうげき\nひるませることがある
+6,1,159,かくばる,ポリゴンを へらしカクカクになって\nこうげきを あげる
+6,1,160,テクスチャー,おぼえているわざの　タイプの\nどれかに じぶんの　タイプを かえる
+6,1,161,トライアタック,3しゅるいの　こうせんを\n1つにまとめててきに はっしゃする
+6,1,162,いかリのまえば,するどいまえばでこうげきして\nてきの　たいリょくを はんぶんにする
+6,1,163,きリさく,するどいカマやツメなどでこうげき\nきゅうしょに あたリやすい
+6,1,164,みがわリ,たいリょくの　4ぶんの1を つかって\nじぶんの　ぶんしんをだす
+6,1,165,わるあがき,わざポイントがなくなるとでるわざ\nじぶんもすこしダメージをうける
+6,1,166,スケッチ,てきが つかったわざを スケッチして\nそのわざを じぶんのものに する
+6,1,167,トリプルキック,てきを 3かいれんぞくでこうげき\nあてるたびに ダメージが あがる
+6,1,168,どろぼう,こうげきの　さいちゅうに すきをみて\nてきが もっているどうぐを ぬすむ
+6,1,169,クモのす,ネバネバとしたいとを からませて\nてきを にげられなくしてしまう
+6,1,170,こころのめ,てきの　うごきを こころでかんじて\nつぎの　こうげきを かならずあてる
+6,1,171,あくむ,てきが ねてるあいだたいリょくを\nまいターン4ぶんの1へらしていく
+6,1,172,かえんぐるま,ほのおを まとってとっしんする\nてきを やけどさせることがある
+6,1,173,いびき,ねているときだけつかえるわざ\nすごいいびきでてきを こうげき
+6,1,174,のろい,ゴーストタイプとそれいがいとでは\nわざの　こうかが ちがう
+6,1,175,じたばた,じぶんの　たいリょくが すくないほど\nてきに おおきなダメージを あたえる
+6,1,176,テクスチャー2,うけたわざの　タイプを じぶんの\nていこうリょくに かえる
+6,1,177,エアロブラスト,しんくうはを はっしゃしてこうげき\nきゅうしょに あたリやすい
+6,1,178,わたほうし,ほうしを まとわリつかせてきの\nすばやさを ガクッとさげさせる
+6,1,179,きしかいせい,じぶんの　たいリょくが すくないほど\nてきに おおきなダメージを あたえる
+6,1,180,うらみ,あいてが だしたわざを うらんで\nその　わざポイントを へらしてしまう
+6,1,181,こなゆき,ゆきを かぜにのせてこうげき\nてきを こおらせることがある
+6,1,182,まもる,そのターンの　こうげきを うけない\nれんぞくでだすとしっぱいしやすい
+6,1,183,マッハパンチ,ものすごいはやさでパンチをくリだし\nかならずせんせいこうげきする
+6,1,184,こわいかお,こわいかおでてきを おびえさせて\nすばやさを ガクッとさげさせる
+6,1,185,だましうち,てきを ゆだんさせてちかづき\nよけられないこうげきを くリだす
+6,1,186,てんしのキッス,かわいいかおでキスを せまる\nキスされるとこんらんしてしまう
+6,1,187,はらだいこ,じぶんの　たいリょくを けずって\nこうげきを さいだいまであげる
+6,1,188,へドロばくだん,へドロを なげつけてこうげき\nてきに どくをあたえることがある
+6,1,189,どろかけ,てきの　かおなどに ドロをかけて\nめいちゅうリつを さげさせる
+6,1,190,オクタンほう,すみの　かたまリを はっしゃして\nめいちゅうリつを さげさせる
+6,1,191,まきびし,てきの　あしばに わなを しかけ\nこうたいしたてきを こうげきする
+6,1,192,でんじほう,あたリにくいが ダメージは　おおきい\nあたればかならずまひさせる
+6,1,193,みやぶる,わざが あたリにくくなったてきに\nこうげきを あてられるようになる
+6,1,194,みちづれ,このわざの　あとに たおされると\nてきもせんとうふのうになる
+6,1,195,ほろびのうた,きいたポケモンは　3ターンごに\nせんとうふのうに なってしまう
+6,1,196,こごえるかぜ,すごいれいきでてきを こうげき\nすばやさを さげさせる
+6,1,197,みきリ,てきの　こうげきを かならずよける\nれんぞくでだすとしっぱいしやすい
+6,1,198,ボーンラッシュ,てにもったホネで2ー5かい\nれんぞくでてきを こうげきする
+6,1,199,ロックオン,てきに しょうじゅんを あわせて\nつぎの　こうげきを かならずあてる
+6,1,200,げきリん,2ー3ターンのあいだあばれつづける\nあばれたあとは　こんらんしてしまう
+6,1,201,すなあらし,すなあらしを はっせいさせて\nまいターンダメージを あたえる
+6,1,202,ギガドレイン,てきに あたえたダメージの\nはんぶんたいリょくを かいふくする
+6,1,203,こらえる,そのターンでこうげきを うけても\nかならずたいリょくが 1のこる
+6,1,204,あまえる,かわいくあまえててきを ゆだんさせ\nこうげきを ガクッとさげさせる
+6,1,205,ころがる,5ターンのあいだてきを こうげき\nあてるたびに ダメージが あがる
+6,1,206,みねうち,かならずたいリょくが 1のこるよう\nてかげんしてこうげき
+6,1,207,いばる,てきを おこらせてこんらんさせるが\nこうげきもグーンとあげてしまう
+6,1,208,ミルクのみ,キズついたからだを たいリょくの\nはんぶんだけかいふくする
+6,1,209,スパーク,でんきを まとってとっしんする\nてきを まひさせることがある
+6,1,210,れんぞくぎリ,れんぞくであてると\nいリょくが ぞうだいしていく
+6,1,211,はがねのつばさ,かたいつばさを おおきくひろげて\nそのままてきに たいあたリする
+6,1,212,くろいまなざし,てきを じーっとみているとなぜか\nてきは　にげられなくなってしまう
+6,1,213,メロメロ,オスならメスに メスならオスに\nわざが だしにくくなる
+6,1,214,ねごと,ねているときだけつかえるわざ\nランダムでじぶんのわざを くリだす
+6,1,215,いやしのすず,ここちよいすずのねを きかせて\nすべての　じょうたいを かいふくする
+6,1,216,おんがえし,よくしてくれるトレーナーの　ために\nぜんリょくでてきを こうげき
+6,1,217,プレゼント,てきに ばくだんを プレゼントする\nたまに かいふくしてしまうことがある
+6,1,218,やつあたリ,むごいしうちの　うさばらしに\nてきを ぜんリょくでこうげき
+6,1,219,しんぴのまもリ,ふしぎなちからでまもられて\nとくしゅじょうたいに ならなくなる
+6,1,220,いたみわけ,てきとじぶんの　たいリょくを\nたしてそれを なかよくわける
+6,1,221,せいなるほのお,しんぴてきなほのおでこうげき\nてきを やけどさせることがある
+6,1,222,マグニチュード,じめんを ゆらしててきを こうげき\nダメージは　ランダムでかわる
+6,1,223,ばくれつパンチ,あたリにくいが ダメージは　おおきい\nあたればかならずこんらんさせる
+6,1,224,メガホーン,かたいツノを ものすごいいきおいで\nつきだしてこうげき
+6,1,225,リゅうのいぶき,くちからものすごいいきをはいて\nてきを こうげき
+6,1,226,バトンタッチ,ついかこうかを のこしたまま\nほかの　ポケモンといれかわる
+6,1,227,アンコール,てきが さいごに つかったわざを\n2ー6ターンれんぞくでださせる
+6,1,228,おいうち,あいてが こうかんするときに\nつかうとだいダメージを あたえる
+6,1,229,こうそくスピン,からだを はやくかいてんさせて\nてきを こうげき
+6,1,230,あまいかおリ,あまいかおリできを そらせて\nてきの　かいひリつを さげさせる
+6,1,231,アイアンテール,かたいシッポでてきを こうげき\nてきの　ぼうぎょを さげることがある
+6,1,232,メタルクロー,かたいツメでてきを こうげき\nこうげきが あがることがある
+6,1,233,あてみなげ,あとぜめに なるが かならず\nこうげきが あたる
+6,1,234,あさのひざし,たいリょくを かいふくする\nじかんでかいふくリょうが かわる
+6,1,235,こうごうせい,たいリょくを かいふくする\nじかんでかいふくリょうが かわる
+6,1,236,つきのひかリ,たいリょくを かいふくする\nじかんでかいふくリょうが かわる
+6,1,237,めざめるパワー,ポケモンによっててきに あたえる\nダメージの　リょうが へんかする
+6,1,238,クロスチョップ,リょうてチョップでてきを こうげき\nきゅうしょに あたリやすい
+6,1,239,たつまき,ものすごいかぜを おこして\nてきを こうげき
+6,1,240,あまごい,5ターンのあいだみずタイプの\nわざの　いリょくが あがる
+6,1,241,にほんばれ,5ターンのあいだほのおタイプの\nわざの　いリょくが あがる
+6,1,242,かみくだく,するどいはでてきを かみくだく\nとくしゅぼうぎょを さげることがある
+6,1,243,ミラーコート,てきからうけたとくしゅこうげきの\nダメージを ばいにしてかえす
+6,1,244,じこあんじ,てきに かかっているほじょこうかを\nじぶんにもかける
+6,1,245,しんそく,ものすごいはやさでうごいて\nちからづよいこうげきをする
+6,1,246,げんしのちから,げんしの　ちからを よびさます\nのうリょくが あがることがある
+6,1,247,シャドーボール,くろいかたまリを なげてこうげき\nとくしゅぼうぎょを さげることがある
+6,1,248,みらいよち,せいしんリょくを たかめて\n2ターンごに てきを こうげきする
+6,1,249,いわくだき,いわを くだくいきおいでこうげき\nてきの　ぼうぎょを さげることがある
+6,1,250,うずしお,2ー5ターンのあいだてきを\nうずの　ちゅうしんに とじこめる
+6,1,251,ふくろだたき,なかまの　ポケモンが\nこうげきに さんかしてくれる
+6,2,1,POUND,Pounds with fore-\nlegs or tail.
+6,2,2,KARATE CHOP,Has a high criti-\ncal hit ratio.
+6,2,3,DOUBLESLAP,Repeatedly slaps\n2-5 times.
+6,2,4,COMET PUNCH,Repeatedly punches\n2-5 times.
+6,2,5,MEGA PUNCH,A powerful punch\nthrown very hard.
+6,2,6,PAY DAY,Throws coins. Gets\nthem back later.
+6,2,7,FIRE PUNCH,A fiery punch. May\ncause a burn.
+6,2,8,ICE PUNCH,An icy punch. May\ncause freezing.
+6,2,9,THUNDERPUNCH,An electric punch.\nIt may paralyze.
+6,2,10,SCRATCH,Scratches with\nsharp claws.
+6,2,11,VICEGRIP,Grips with power-\nful pincers.
+6,2,12,GUILLOTINE,"A one-hit KO,\npincer attack."
+6,2,13,RAZOR WIND,1st turn: Prepare\n2nd turn: Attack
+6,2,14,SWORDS DANCE,A dance that in-\ncreases ATTACK.
+6,2,15,CUT,"Cuts using claws,\nscythes, etc."
+6,2,16,GUST,Whips up a strong\ngust of wind.
+6,2,17,WING ATTACK,Strikes the target\nwith wings.
+6,2,18,WHIRLWIND,Blows away the foe\n& ends battle.
+6,2,19,FLY,1st turn: Fly\n2nd turn: Attack
+6,2,20,BIND,Binds the target\nfor 2-5 turns.
+6,2,21,SLAM,"Slams the foe with\na tail, vine, etc."
+6,2,22,VINE WHIP,Whips the foe with\nslender vines.
+6,2,23,STOMP,An attack that may\ncause flinching.
+6,2,24,DOUBLE KICK,A double kicking\nattack.
+6,2,25,MEGA KICK,A powerful kicking\nattack.
+6,2,26,JUMP KICK,"May miss, damaging\nthe user."
+6,2,27,ROLLING KICK,"A fast, spinning\nkick."
+6,2,28,SAND-ATTACK,Reduces accuracy\nby throwing sand.
+6,2,29,HEADBUTT,An attack that may\nmake foe flinch.
+6,2,30,HORN ATTACK,An attack using a\nhorn to jab.
+6,2,31,FURY ATTACK,Jabs the target\n2-5 times.
+6,2,32,HORN DRILL,"A one-hit KO,\ndrill attack."
+6,2,33,TACKLE,A full-body charge\nattack.
+6,2,34,BODY SLAM,An attack that may\ncause paralysis.
+6,2,35,WRAP,Squeezes the foe\nfor 2-5 turns.
+6,2,36,TAKE DOWN,A tackle that also\nhurts the user.
+6,2,37,THRASH,Works 2-3 turns\nand confuses user.
+6,2,38,DOUBLE-EDGE,A tackle that also\nhurts the user.
+6,2,39,TAIL WHIP,Lowers the foe's\nDEFENSE.
+6,2,40,POISON STING,An attack that may\npoison the target.
+6,2,41,TWINEEDLE,Jabs the foe twice\nusing stingers.
+6,2,42,PIN MISSILE,Fires pins that\nstrike 2-5 times.
+6,2,43,LEER,Reduces the foe's\nDEFENSE.
+6,2,44,BITE,An attack that may\ncause flinching.
+6,2,45,GROWL,Reduces the foe's\nATTACK.
+6,2,46,ROAR,Scares wild foes\nto end battle.
+6,2,47,SING,May cause the foe\nto fall asleep.
+6,2,48,SUPERSONIC,Sound waves that\ncause confusion.
+6,2,49,SONICBOOM,Always inflicts\n20HP damage.
+6,2,50,DISABLE,Disables the foe's\nmost recent move.
+6,2,51,ACID,An attack that may\nlower DEFENSE.
+6,2,52,EMBER,An attack that may\ninflict a burn.
+6,2,53,FLAMETHROWER,An attack that may\ninflict a burn.
+6,2,54,MIST,Prevents stat\nreduction.
+6,2,55,WATER GUN,Squirts water to\nattack.
+6,2,56,HYDRO PUMP,A powerful water-\ntype attack.
+6,2,57,SURF,A strong water-\ntype attack.
+6,2,58,ICE BEAM,An attack that may\nfreeze the foe.
+6,2,59,BLIZZARD,An attack that may\nfreeze the foe.
+6,2,60,PSYBEAM,An attack that may\nconfuse the foe.
+6,2,61,BUBBLEBEAM,An attack that may\nlower SPEED.
+6,2,62,AURORA BEAM,An attack that may\nlower ATTACK.
+6,2,63,HYPER BEAM,1st turn: Attack\n2nd turn: Rest
+6,2,64,PECK,"Jabs the foe with\na beak, etc."
+6,2,65,DRILL PECK,"A strong, spin-\nning-peck attack."
+6,2,66,SUBMISSION,An attack that al-\nso hurts the user.
+6,2,67,LOW KICK,An attack that may\ncause flinching.
+6,2,68,COUNTER,Returns a physical\nblow double.
+6,2,69,SEISMIC TOSS,The user's level\nequals damage HP.
+6,2,70,STRENGTH,A powerful physi-\ncal attack.
+6,2,71,ABSORB,Steals 1/2 of the\ndamage inflicted.
+6,2,72,MEGA DRAIN,Steals 1/2 of the\ndamage inflicted.
+6,2,73,LEECH SEED,Steals HP from the\nfoe on every turn.
+6,2,74,GROWTH,Raises the SPCL.\nATK rating.
+6,2,75,RAZOR LEAF,Has a high criti-\ncal hit ratio.
+6,2,76,SOLARBEAM,1st turn: Prepare\n2nd turn: Attack
+6,2,77,POISONPOWDER,A move that may\npoison the foe.
+6,2,78,STUN SPORE,A move that may\nparalyze the foe.
+6,2,79,SLEEP POWDER,May cause the foe\nto fall asleep.
+6,2,80,PETAL DANCE,Works 2-3 turns\nand confuses user.
+6,2,81,STRING SHOT,A move that lowers\nthe foe's SPEED.
+6,2,82,DRAGON RAGE,Always inflicts\n40HP damage.
+6,2,83,FIRE SPIN,Traps foe in fire\nfor 2-5 turns.
+6,2,84,THUNDERSHOCK,An attack that may\ncause paralysis.
+6,2,85,THUNDERBOLT,An attack that may\ncause paralysis.
+6,2,86,THUNDER WAVE,A move that may\ncause paralysis.
+6,2,87,THUNDER,An attack that may\ncause paralysis.
+6,2,88,ROCK THROW,Drops rocks on the\nenemy.
+6,2,89,EARTHQUAKE,Tough but useless\nvs. flying foes.
+6,2,90,FISSURE,"A ground-type,\none-hit KO attack."
+6,2,91,DIG,1st turn: Burrow\n2nd turn: Attack
+6,2,92,TOXIC,A poison move with\nincreasing damage.
+6,2,93,CONFUSION,An attack that may\ncause confusion.
+6,2,94,PSYCHIC,An attack that may\nlower SPCL.DEF.
+6,2,95,HYPNOSIS,May put the foe to\nsleep.
+6,2,96,MEDITATE,Raises the user's\nATTACK.
+6,2,97,AGILITY,Sharply increases\nthe user's SPEED.
+6,2,98,QUICK ATTACK,Lets the user get\nin the first hit.
+6,2,99,RAGE,Raises ATTACK if\nthe user is hit.
+6,2,100,TELEPORT,A move for fleeing\nfrom battle.
+6,2,101,NIGHT SHADE,The user's level\nequals damage HP.
+6,2,102,MIMIC,Copies a move used\nby the foe.
+6,2,103,SCREECH,Sharply reduces\nthe foe's DEFENSE.
+6,2,104,DOUBLE TEAM,Heightens evasive-\nness.
+6,2,105,RECOVER,Restores HP by 1/2\nthe max HP.
+6,2,106,HARDEN,Raises the user's\nDEFENSE.
+6,2,107,MINIMIZE,Heightens evasive-\nness.
+6,2,108,SMOKESCREEN,Lowers the foe's\naccuracy.
+6,2,109,CONFUSE RAY,A move that causes\nconfusion.
+6,2,110,WITHDRAW,Heightens the\nuser's DEFENSE.
+6,2,111,DEFENSE CURL,Heightens the\nuser's DEFENSE.
+6,2,112,BARRIER,Sharply increases\nuser's DEFENSE.
+6,2,113,LIGHT SCREEN,Ups SPCL.DEF with\na wall of light.
+6,2,114,HAZE,Eliminates all\nstat changes.
+6,2,115,REFLECT,Raises DEFENSE\nwith a barrier.
+6,2,116,FOCUS ENERGY,Raises the criti-\ncal hit ratio.
+6,2,117,BIDE,Waits 2-3 turns &\nhits back double.
+6,2,118,METRONOME,Randomly uses any\nPOKéMON move.
+6,2,119,MIRROR MOVE,Counters with the\nsame move.
+6,2,120,SELFDESTRUCT,Powerful but makes\nthe user faint.
+6,2,121,EGG BOMB,Eggs are hurled at\nthe foe.
+6,2,122,LICK,An attack that may\ncause paralysis.
+6,2,123,SMOG,An attack that may\npoison the foe.
+6,2,124,SLUDGE,An attack that may\npoison the foe.
+6,2,125,BONE CLUB,An attack that may\ncause flinching.
+6,2,126,FIRE BLAST,An attack that\nmay cause a burn.
+6,2,127,WATERFALL,An aquatic charge\nattack.
+6,2,128,CLAMP,Traps the foe for\n2-5 turns.
+6,2,129,SWIFT,An attack that\nnever misses.
+6,2,130,SKULL BASH,1st turn: Prepare\n2nd turn: Attack
+6,2,131,SPIKE CANNON,Fires spikes to\nhit 2-5 times.
+6,2,132,CONSTRICT,An attack that may\nlower SPEED.
+6,2,133,AMNESIA,Sharply raises the\nuser's SPCL.DEF.
+6,2,134,KINESIS,Reduces the foe's\naccuracy.
+6,2,135,SOFTBOILED,Restores HP by 1/2\nthe user's max HP.
+6,2,136,HI JUMP KICK,May miss and hurt\nthe user.
+6,2,137,GLARE,A move that may\ncause paralysis.
+6,2,138,DREAM EATER,Steals HP from a\nsleeping victim.
+6,2,139,POISON GAS,A move that may\npoison the foe.
+6,2,140,BARRAGE,Throws orbs to hit\n2-5 times.
+6,2,141,LEECH LIFE,Steals 1/2 of the\ndamage inflicted.
+6,2,142,LOVELY KISS,May cause the foe\nto fall asleep.
+6,2,143,SKY ATTACK,1st turn: Prepare\n2nd turn: Attack
+6,2,144,TRANSFORM,The user assumes\nthe foe's guise.
+6,2,145,BUBBLE,An attack that may\nreduce SPEED.
+6,2,146,DIZZY PUNCH,An attack that may\ncause confusion.
+6,2,147,SPORE,A move that\ninduces sleep.
+6,2,148,FLASH,Blinds the foe to\nreduce accuracy.
+6,2,149,PSYWAVE,An attack with\nvariable power.
+6,2,150,SPLASH,Has no effect\nwhatsoever.
+6,2,151,ACID ARMOR,Sharply raises the\nuser's DEFENSE.
+6,2,152,CRABHAMMER,Has a high criti-\ncal hit ratio.
+6,2,153,EXPLOSION,Very powerful but\nmakes user faint.
+6,2,154,FURY SWIPES,Quickly scratches\n2-5 times.
+6,2,155,BONEMERANG,An attack that\nstrikes twice.
+6,2,156,REST,Sleep for 2 turns\nto fully recover.
+6,2,157,ROCK SLIDE,An attack that may\ncause flinching.
+6,2,158,HYPER FANG,An attack that may\ncause flinching.
+6,2,159,SHARPEN,A move that raises\nthe user's ATTACK.
+6,2,160,CONVERSION,Change user's type\nto a move's type.
+6,2,161,TRI ATTACK,Fires three kinds\nof beams at once.
+6,2,162,SUPER FANG,Cuts the foe's HP\nby 1/2.
+6,2,163,SLASH,Has a high criti-\ncal hit ratio.
+6,2,164,SUBSTITUTE,Makes a decoy with\n1/4 user's max HP.
+6,2,165,STRUGGLE,Used only if all\nPP are exhausted.
+6,2,166,SKETCH,Copies the foe's\nmove permanently.
+6,2,167,TRIPLE KICK,Hits three times\nwith rising power.
+6,2,168,THIEF,An attack that may\nsteal a held item.
+6,2,169,SPIDER WEB,Prevents fleeing\nor switching.
+6,2,170,MIND READER,Ensures the next\nattack will hit.
+6,2,171,NIGHTMARE,A sleeper loses\n1/4 HP every turn.
+6,2,172,FLAME WHEEL,An attack that may\ncause a burn.
+6,2,173,SNORE,An attack useable\nonly while asleep.
+6,2,174,CURSE,Works differently\nfor ghost-types.
+6,2,175,FLAIL,Stronger if the\nuser's HP is low.
+6,2,176,CONVERSION2,The user's type is\nmade resistant.
+6,2,177,AEROBLAST,Has a high criti-\ncal hit ratio.
+6,2,178,COTTON SPORE,Sharply reduces\nthe foe's SPEED.
+6,2,179,REVERSAL,Stronger if the\nuser's HP is low.
+6,2,180,SPITE,Cuts the PP of the\nfoe's last move.
+6,2,181,POWDER SNOW,An attack that may\ncause freezing.
+6,2,182,PROTECT,Foils attack that\nturn. It may fail.
+6,2,183,MACH PUNCH,A fast punch that\nlands first.
+6,2,184,SCARY FACE,Sharply reduces\nthe foe's SPEED.
+6,2,185,FAINT ATTACK,An attack that\nnever misses.
+6,2,186,SWEET KISS,A move that causes\nconfusion.
+6,2,187,BELLY DRUM,Reduces own HP to\nmaximize ATTACK.
+6,2,188,SLUDGE BOMB,An attack that may\npoison the foe.
+6,2,189,MUD-SLAP,Reduces the foe's\naccuracy.
+6,2,190,OCTAZOOKA,An attack that may\nreduce accuracy.
+6,2,191,SPIKES,Hurts foes when\nthey switch out.
+6,2,192,ZAP CANNON,An attack that\nalways paralyzes.
+6,2,193,FORESIGHT,Negates accuracy\nreduction moves.
+6,2,194,DESTINY BOND,The foe faints if\nthe user does.
+6,2,195,PERISH SONG,Both user and foe\nfaint in 3 turns.
+6,2,196,ICY WIND,An icy attack that\nlowers SPEED.
+6,2,197,DETECT,Evades attack that\nturn. It may fail.
+6,2,198,BONE RUSH,An attack that\nhits 2-5 times.
+6,2,199,LOCK-ON,Ensures the next\nattack will hit.
+6,2,200,OUTRAGE,Works 2-3 turns\nand confuses user.
+6,2,201,SANDSTORM,Inflicts damage\nevery turn.
+6,2,202,GIGA DRAIN,Steals 1/2 of the\ndamage inflicted.
+6,2,203,ENDURE,Always leaves at\nleast 1HP.
+6,2,204,CHARM,Sharply lowers the\nfoe's ATTACK.
+6,2,205,ROLLOUT,Attacks 5 turns\nwith rising power.
+6,2,206,FALSE SWIPE,Leaves the foe\nwith at least 1HP.
+6,2,207,SWAGGER,Causes confusion\nand raises ATTACK.
+6,2,208,MILK DRINK,Restores HP by 1/2\nthe max HP.
+6,2,209,SPARK,An attack that may\ncause paralysis.
+6,2,210,FURY CUTTER,Successive hits\nraise power.
+6,2,211,STEEL WING,Stiff wings strike\nthe foe.
+6,2,212,MEAN LOOK,Prevents fleeing\nor switching.
+6,2,213,ATTRACT,Makes the opposite\ngender infatuated.
+6,2,214,SLEEP TALK,Randomly attacks\nwhile asleep.
+6,2,215,HEAL BELL,Eliminates all\nstatus problems.
+6,2,216,RETURN,An attack that is\nbased on loyalty.
+6,2,217,PRESENT,A bomb that may\nrestore HP.
+6,2,218,FRUSTRATION,An attack based on\nlack of loyalty.
+6,2,219,SAFEGUARD,Prevents all\nstatus problems.
+6,2,220,PAIN SPLIT,Adds user & foe's\nHPs. Shares total.
+6,2,221,SACRED FIRE,An attack that may\ninflict a burn.
+6,2,222,MAGNITUDE,A ground attack\nwith random power.
+6,2,223,DYNAMICPUNCH,An attack that\nalways confuses.
+6,2,224,MEGAHORN,A powerful charge\nattack.
+6,2,225,DRAGONBREATH,A strong breath\nattack.
+6,2,226,BATON PASS,Switches while\nkeeping effects.
+6,2,227,ENCORE,Makes the foe re-\npeat 2-6 times.
+6,2,228,PURSUIT,Heavily strikes\nswitching POKéMON.
+6,2,229,RAPID SPIN,A high-speed\nspinning attack.
+6,2,230,SWEET SCENT,Reduces the foe's\nevasiveness.
+6,2,231,IRON TAIL,An attack that may\nreduce DEFENSE.
+6,2,232,METAL CLAW,An attack that may\nup user's ATTACK.
+6,2,233,VITAL THROW,A 2nd-strike move\nthat never misses.
+6,2,234,MORNING SUN,Restores HP\n(varies by time).
+6,2,235,SYNTHESIS,Restores HP\n(varies by time).
+6,2,236,MOONLIGHT,Restores HP\n(varies by time).
+6,2,237,HIDDEN POWER,The power varies\nwith the POKéMON.
+6,2,238,CROSS CHOP,Has a high criti-\ncal hit ratio.
+6,2,239,TWISTER,Whips up a tornado\nto attack.
+6,2,240,RAIN DANCE,Boosts water-type\nmoves for 5 turns.
+6,2,241,SUNNY DAY,Boosts fire-type\nmoves for 5 turns.
+6,2,242,CRUNCH,An attack that may\nlower SPCL.DEF.
+6,2,243,MIRROR COAT,Counters a SPCL.\nATK move double.
+6,2,244,PSYCH UP,Copies the foe's\nstat changes.
+6,2,245,EXTREMESPEED,A powerful first-\nstrike move.
+6,2,246,ANCIENTPOWER,An attack that may\nraise all stats.
+6,2,247,SHADOW BALL,An attack that may\nlower SPCL.DEF.
+6,2,248,FUTURE SIGHT,An attack that\nhits on 3rd turn.
+6,2,249,ROCK SMASH,An attack that may\nlower DEFENSE.
+6,2,250,WHIRLPOOL,Traps the foe for\n2-5 turns.
+6,2,251,BEAT UP,Party POKéMON join\nin the attack.
+6,3,1,ECRAS'FACE,Ecrase avec pattes\nou queue.
+6,3,2,POING-KARATE,Haut taux de coup\ncritique.
+6,3,3,TORGNOLES,Gifle de 2 à\n5 fois.
+6,3,4,POING COMETE,Frappe de 2 à\n5 fois.
+6,3,5,ULTIMAPOING,Un coup de poing\ntrès puissant.
+6,3,6,JACKPOT,"Lance des pièces,\nles gagne après."
+6,3,7,POING DE FEU,Poing de feu pou-\nvant brûler.
+6,3,8,POINGLACE,Poing de glace\npouvant geler.
+6,3,9,POING-ECLAIR,Poing électrique.\nPeut paralyser.
+6,3,10,GRIFFE,Lacère avec des\ngriffes.
+6,3,11,FORCE POIGNE,Agrippe avec des\npinces.
+6,3,12,GUILLOTINE,KO en un coup.\nCoup de pince.
+6,3,13,COUPE-VENT,Tour 1: Prépare\nTour 2: Attaque
+6,3,14,DANSE-LAMES,Une danse augmen-\ntant l'ATTAQUE.
+6,3,15,COUPE,"Coupe avec griffe,\ndard, etc."
+6,3,16,TORNADE,Envoie un fort\ncourant d'air.
+6,3,17,CRU-AILE,Frappe l'ennemi\navec des ailes.
+6,3,18,CYCLONE,Ejecte la cible\n& finit le combat.
+6,3,19,VOL,Tour 1: Vol\nTour 2: Attaque
+6,3,20,ETREINTE,Enserre la cible\nde 2 à 5 tours.
+6,3,21,SOUPLESSE,"Frappe avec queue,\nliane, etc."
+6,3,22,FOUET LIANES,Frappe avec de\nfines lianes.
+6,3,23,ECRASEMENT,Attaque pouvant\napeurer la cible.
+6,3,24,DOUBLE PIED,Double attaque de\ncoup de pied.
+6,3,25,ULTIMAWASHI,Coup de pied\npuissant.
+6,3,26,PIED SAUTE,Peut échouer et\nfaire mal.
+6,3,27,MAWASHI GERI,Pied tournoyant et\nrapide.
+6,3,28,JET DE SABLE,Lance du sable et\nbaisse précision.
+6,3,29,COUP D'BOULE,Attaque pouvant\napeurer la cible.
+6,3,30,KOUD'KORNE,Attaque utilisant\nune corne.
+6,3,31,FURIE,Frappe la cible de\n2 à 5 fois.
+6,3,32,EMPAL'KORNE,"KO en un coup,\nattaque perceuse."
+6,3,33,CHARGE,Une attaque en\ncharge.
+6,3,34,PLAQUAGE,Attaque pouvant\nparalyser.
+6,3,35,LIGOTAGE,Serre la cible de\n2 à 5 tours.
+6,3,36,BELIER,Charge blessant\nles 2 adversaires.
+6,3,37,MANIA,Dure 2 à 3 tours.\nLanceur confus.
+6,3,38,DAMOCLES,Charge blessant\nles 2 adversaires.
+6,3,39,MIMI-QUEUE,Baisse la DEFENSE\nde la cible.
+6,3,40,DARD-VENIN,Attaque pouvant\nempoisonner.
+6,3,41,DOUBLE-DARD,Pique la cible 2\nfois avec dards.
+6,3,42,DARD-NUEE,Lance des dards\n2 à 5 fois.
+6,3,43,GROZ'YEUX,Baisse la DEFENSE\nde la cible.
+6,3,44,MORSURE,Attaque pouvant\napeurer la cible.
+6,3,45,RUGISSEMENT,Baisse l'ATTAQUE\nde la cible.
+6,3,46,HURLEMENT,Apeure et éloigne\nennemis sauvages.
+6,3,47,BERCEUSE,Peut endormir la\ncible.
+6,3,48,ULTRASON,Ondes sonores ren-\ndant confus.
+6,3,49,SONICBOOM,Inflige toujours\n20 pts de dégâts.
+6,3,50,ENTRAVE,Annule la dernière\ncap. de la cible.
+6,3,51,ACIDE,Peut baisser\nla DEFENSE.
+6,3,52,FLAMMECHE,Peut infliger\nune brûlure.
+6,3,53,LANCE-FLAMME,Peut infliger\nune brûlure.
+6,3,54,BRUME,Contre réduction\nde statut.
+6,3,55,PISTOLET A O,Attaque en lançant\nde l'eau.
+6,3,56,HYDROCANON,Attaque d'EAU\npuissante.
+6,3,57,SURF,Une forte attaque\nd'EAU.
+6,3,58,LASER GLACE,Attaque pouvant\ngeler la cible.
+6,3,59,BLIZZARD,Attaque pouvant\ngeler la cible.
+6,3,60,RAFALE PSY,Attaque pouvant\nrendre confus.
+6,3,61,BULLES D'O,Attaque pouvant\nbaisser VITESSE.
+6,3,62,ONDE BOREALE,Attaque pouvant\nbaisser ATTAQUE.
+6,3,63,ULTRALASER,Tour 1: Attaque\nTour 2: Repos
+6,3,64,PICPIC,"Frappe avec un\nbec, etc."
+6,3,65,BEC VRILLE,Attaque de bec\ntournoyante.
+6,3,66,SACRIFICE,Attaque frappant\naussi le lanceur.
+6,3,67,BALAYAGE,Attaque pouvant\napeurer la cible.
+6,3,68,RIPOSTE,Répond à une atta-\nque physique x2.
+6,3,69,FRAPPE ATLAS,Niveau lanceur\négal aux dégâts.
+6,3,70,FORCE,Une attaque physi-\nque puissante.
+6,3,71,VOL-VIE,Vole 1/2 des dé-\ngâts infligés.
+6,3,72,MEGA-SANGSUE,Vole 1/2 des dé-\ngâts infligés.
+6,3,73,VAMPIGRAINE,Vole des PV à la\ncible chaque tour.
+6,3,74,CROISSANCE,Monte l'ATTAQUE\nSPECIALE.
+6,3,75,TRANCH'HERBE,Haut taux de coup\ncritique.
+6,3,76,LANCE-SOLEIL,Tour 1: Prépare\nTour 2: Attaque
+6,3,77,POUDRE TOXIK,Capacité pouvant\nempoisonner.
+6,3,78,PARA-SPORE,Capacité pouvant\nparalyser.
+6,3,79,POUDRE DODO,Capacité pouvant\nendormir.
+6,3,80,DANSE-FLEUR,Dure 2 à 3 tours.\nLanceur confus.
+6,3,81,SECRETION,Capacité baissant\nla VITESSE.
+6,3,82,DRACO-RAGE,Inflige toujours\n40 pts de dégâts.
+6,3,83,DANSEFLAMME,2 à 5 tours: cible\nimmobile dans feu.
+6,3,84,ECLAIR,Attaque pouvant\nparalyser.
+6,3,85,TONNERRE,Attaque pouvant\nparalyser.
+6,3,86,CAGE-ECLAIR,Capacité pouvant\nparalyser.
+6,3,87,FATAL-FOUDRE,Attaque pouvant\nparalyser.
+6,3,88,JET-PIERRES,Lâche des rochers\nsur l'ennemi.
+6,3,89,SEISME,Puissant mais inu-\ntile sur volants.
+6,3,90,ABIME,Type SOL.\nKO en un coup.
+6,3,91,TUNNEL,Tour 1: Enterre\nTour 2: Attaque
+6,3,92,TOXIK,Poison à dégâts\ncroissants.
+6,3,93,CHOC MENTAL,Attaque pouvant\nrendre confus.
+6,3,94,PSYKO,Attaque pouvant\nbaisser DEF.SPE.
+6,3,95,HYPNOSE,Peut endormir la\ncible.
+6,3,96,YOGA,Monte l'ATTAQUE\ndu lanceur.
+6,3,97,HATE,Monte VIT. du lan-\nceur énormément.
+6,3,98,VIVE-ATTAQUE,Donne l'initiative\nau lanceur.
+6,3,99,FRENESIE,Monte l'ATTAQUE si\nlanceur touché.
+6,3,100,TELEPORT,Pour s'enfuir\nd'un combat.
+6,3,101,TENEBRES,Niveau lanceur\négal aux dégâts.
+6,3,102,COPIE,Copie une capaci-\nté de l'ennemi.
+6,3,103,GRINCEMENT,Baisse DEFENSE de\ncible énormément.
+6,3,104,REFLET,Monte l'esquive.
+6,3,105,SOIN,Restaure 1/2 PV\ndu max.
+6,3,106,ARMURE,Monte la DEFENSE\ndu lanceur.
+6,3,107,LILLIPUT,Monte l'esquive.
+6,3,108,BROUILLARD,Baisse la préci-\nsion de la cible.
+6,3,109,ONDE FOLIE,Une capacité ren-\ndant confus.
+6,3,110,REPLI,Monte la DEFENSE\ndu lanceur.
+6,3,111,BOUL'ARMURE,Monte la DEFENSE\ndu lanceur.
+6,3,112,BOUCLIER,Monte DEF. du lan-\nceur énormément.
+6,3,113,MUR LUMIERE,Mur de lumière\nmontant DEF.SPE.
+6,3,114,BUEE NOIRE,Annule changement\nde statut.
+6,3,115,PROTECTION,Bouclier montant\nla DEFENSE.
+6,3,116,PUISSANCE,Monte les chances\nde coup critique.
+6,3,117,PATIENCE,Attend 2 à 3 tours\net frappe double.
+6,3,118,METRONOME,Lance une capacité\nPOKéMON au hasard.
+6,3,119,MIMIQUE,Contre avec la mê-\nme capacité.
+6,3,120,DESTRUCTION,Puissant mais met\nle lanceur KO.
+6,3,121,BOMB'OEUF,Lance des oeufs\nsur l'ennemi.
+6,3,122,LECHOUILLE,Attaque pouvant\nparalyser.
+6,3,123,PUREDPOIS,Attaque pouvant\nempoisonner.
+6,3,124,DETRITUS,Attaque pouvant\nempoisonner.
+6,3,125,MASSD'OS,Attaque pouvant\napeurer la cible.
+6,3,126,DEFLAGRATION,Attaque pouvant\nbrûler.
+6,3,127,CASCADE,Une charge aquati-\nque.
+6,3,128,CLAQUOIR,Piège la cible de\n2 à 5 tours.
+6,3,129,METEORES,Attaque qui ne\nrate jamais.
+6,3,130,COUD'KRANE,Tour 1: Prépare\nTour 2: Attaque
+6,3,131,PICANON,Lance des pics\n2 à 5 fois.
+6,3,132,CONSTRICTION,Attaque pouvant\nbaisser VITESSE.
+6,3,133,AMNESIE,Monte DEF.SPE.\nénormément.
+6,3,134,TELEKINESIE,Baisse la préci-\nsion de la cible.
+6,3,135,E-COQUE,Restaure 1/2 PV\ndu max.
+6,3,136,PIED VOLTIGE,Peut échouer bles-\nsant le lanceur.
+6,3,137,INTIMIDATION,Capacité pouvant\nparalyser.
+6,3,138,DEVOREVE,Vole les PV d'une\nvictime endormie.
+6,3,139,GAZ TOXIK,Capacité pouvant\nempoisonner.
+6,3,140,PILONNAGE,Lance des orbes\n2 à 5 fois.
+6,3,141,VAMPIRISME,Vole 1/2 des dé-\ngâts infligés.
+6,3,142,GROBISOU,Peut endormir\nla cible.
+6,3,143,PIQUE,Tour 1: Prépare\nTour 2: Attaque
+6,3,144,MORPHING,Le lanceur voit\nclair...
+6,3,145,ECUME,Attaque pouvant\nbaisser VITESSE.
+6,3,146,UPPERCUT,Attaque pouvant\nrendre confus.
+6,3,147,SPORE,Une capacité pour\nendormir.
+6,3,148,FLASH,Enserre cible et\nbaisse précision.
+6,3,149,VAGUE PSY,Attaque de puis-\nsance variable.
+6,3,150,TREMPETTE,N'a aucun effet.\nRien. Zéro.
+6,3,151,ACIDARMURE,Monte DEF. du lan-\nceur énormément.
+6,3,152,PINCE-MASSE,Haut taux de coup\ncritique.
+6,3,153,EXPLOSION,Puissant mais met\nle lanceur KO.
+6,3,154,COMBO-GRIFFE,Griffe rapidement\n2 à 5 fois.
+6,3,155,OSMERANG,Attaque touchant\ndeux fois.
+6,3,156,REPOS,Fait dormir deux\ntours pour soin.
+6,3,157,EBOULEMENT,Attaque pouvant\napeurer la cible.
+6,3,158,CROC DE MORT,Attaque pouvant\napeurer la cible.
+6,3,159,AFFUTAGE,Capacité montant\nl'ATT. du lanceur.
+6,3,160,ADAPTATION,Change le type en\ncelui d'une cap.
+6,3,161,TRIPLATTAQUE,Lance trois rayons\nen même temps.
+6,3,162,CROC FATAL,Réduit de 1/2 les\nPV de la cible.
+6,3,163,TRANCHE,Haut taux de coup\ncritique.
+6,3,164,CLONAGE,Crée un leurre:\n1/4 des PV max.
+6,3,165,LUTTE,A utiliser que si\ntous PP épuisés.
+6,3,166,GRIBOUILLE,Copie la cap. en-\nnemie pour tjrs.
+6,3,167,TRIPLE PIED,Touche 3 fois de\nplus en plus fort.
+6,3,168,LARCIN,Attaque pouvant\nvoler objet tenu.
+6,3,169,TOILE,Empêche fuite ou\nchangement.
+6,3,170,LIRE-ESPRIT,Prochaine attaque\ntouche à coup sûr.
+6,3,171,CAUCHEMAR,Dormeur perd 1/4\ndes PV par tour.
+6,3,172,ROUE DE FEU,Attaque pouvant\nbrûler.
+6,3,173,RONFLEMENT,A utiliser pendant\nle sommeil.
+6,3,174,MALEDICTION,Diffère selon les\ntypes de spectres.
+6,3,175,FLEAU,Puissant si PV du\nlanceur faibles.
+6,3,176,ADAPTATION2,Type du lanceur\ndevient résistant.
+6,3,177,AEROBLAST,Haut taux de coup\ncritique.
+6,3,178,SPORE COTON,Baisse VITESSE de\ncible énormément.
+6,3,179,CONTRE,Puissant si PV du\nlanceur faibles.
+6,3,180,DEPIT,Baisse PP dernière\ncapacité ennemie.
+6,3,181,POUDREUSE,Attaque pouvant\ngeler.
+6,3,182,ABRI,Peut déjouer l'at-\ntaque de ce tour.
+6,3,183,MACH PUNCH,Coup de poing qui\na l'initiative.
+6,3,184,GRIMACE,Baisse VITESSE de\ncible énormément.
+6,3,185,FEINTE,Une attaque qui ne\nrate jamais.
+6,3,186,DOUX BAISER,Capacité rendant\nconfus.
+6,3,187,COGNOBIDON,Baisse les PV pour\nmaximiser ATTAQUE.
+6,3,188,BOMB-BEURK,Attaque pouvant\nempoisonner.
+6,3,189,COUD'BOUE,Baisse la préci-\nsion de la cible.
+6,3,190,OCTAZOOKA,Attaque pouvant\nbaisser précision.
+6,3,191,PICOTS,Frappe les cibles\npdt changement.
+6,3,192,ELECANON,Attaque paralysant\nà coup sûr.
+6,3,193,CLAIRVOYANCE,Déjoue les cap. de\nbaisse de précis.
+6,3,194,PRLVT DESTIN,Cible KO en même\ntps que lanceur.
+6,3,195,REQUIEM,Lanceur et cible\nKO au 4ème tour.
+6,3,196,VENT GLACE,Attaque de glace.\nBaisse la VITESSE.
+6,3,197,DETECTION,Peut éviter l'at-\ntaque de ce tour.
+6,3,198,CHARGE-OS,Attaque touchant\n2 à 5 fois.
+6,3,199,VERROUILLAGE,Prochaine attaque\ntouche à coup sûr.
+6,3,200,COLERE,Pdt 2 à 3 tours\net rend confus.
+6,3,201,TEMPETESABLE,Inflige des dégâts\nchaque tour.
+6,3,202,GIGA-SANGSUE,Vole 1/2 des dé-\ngâts infligés.
+6,3,203,TENACITE,Laisse toujours au\nmoins 1 PV.
+6,3,204,CHARME,Baisse ATTAQUE de\ncible énormément.
+6,3,205,ROULADE,Attaque 5 tours de\nplus en plus fort.
+6,3,206,FAUX-CHAGE,Laisse cible avec\nau moins 1 PV.
+6,3,207,VANTARDISE,Rend confus et\nmonte l'ATTAQUE.
+6,3,208,LAIT A BOIRE,Restaure 1/2 PV\ndu max.
+6,3,209,ETINCELLE,Attaque pouvant\nparalyser.
+6,3,210,TAILLADE,Coups réussis mon-\ntent la puissance.
+6,3,211,AILE D'ACIER,Des ailes frappent\nla cible.
+6,3,212,REGARD NOIR,Empêche fuite ou\nchangement.
+6,3,213,ATTRACTION,Rend le genre op-\nposé amoureux.
+6,3,214,BLABLA DODO,Attaque au hasard\npdt le sommeil.
+6,3,215,GLAS DE SOIN,Annule changement\nde statut.
+6,3,216,RETOUR,Attaque basée sur\nla loyauté.
+6,3,217,CADEAU,Bombe pouvant res-\ntaurer les PV.
+6,3,218,FRUSTRATION,Attaque sur le\nmanque de loyauté.
+6,3,219,RUNE PROTECT,Prévient change-\nment de statut.
+6,3,220,BALANCE,Divise total de PV\ncible et lanceur.
+6,3,221,FEU SACRE,Attaque pouvant\nbrûler.
+6,3,222,AMPLEUR,Attaque au sol.\nForce variable.
+6,3,223,DYNAMOPOING,Attaque rendant\ntjrs confus.
+6,3,224,MEGACORNE,Une charge\npuissante.
+6,3,225,DRACOSOUFFLE,Un souffle\npuissant.
+6,3,226,RELAIS,Change et garde\nles effets.
+6,3,227,ENCORE,Fait répéter la\ncible 2 à 6 fois.
+6,3,228,POURSUITE,Frappe fort le\nPOKéMON changé.
+6,3,229,TOUR RAPIDE,Attaque tournoyan-\nte très rapide.
+6,3,230,DOUX PARFUM,Baisse l'esquive\nde la cible.
+6,3,231,QUEUE DE FER,Attaque pouvant\nbaisser DEFENSE.
+6,3,232,GRIFFE ACIER,Peut monter l'AT-\nTAQUE du lanceur.
+6,3,233,CORPS PERDU,Frappe en 2ème\nmais touche tjrs.
+6,3,234,AURORE,Restaure les PV\n(varie).
+6,3,235,SYNTHESE,Restaure les PV\n(varie).
+6,3,236,RAYON LUNE,Restaure les PV\n(varie).
+6,3,237,PUIS. CACHEE,Puissance varie\nsuivant le PKMN.
+6,3,238,COUP-CROIX,Haut taux de coup\ncritique.
+6,3,239,OURAGAN,Lance une tornade\npour attaquer.
+6,3,240,DANSE PLUIE,Renforce les att.\nd'EAU pdt 5 tours.
+6,3,241,ZENITH,Renforce les att.\nFEU pdt 5 tours.
+6,3,242,MACHOUILLE,Attaque pouvant\nbaisser DEF.SPE.
+6,3,243,VOILE MIROIR,Contre ATQ.SPE.\nen frappe double.
+6,3,244,BOOST,Copie le chang. de\nstat. de la cible.
+6,3,245,VIT.EXTREME,Coup d'initiative\npuissant.
+6,3,246,POUV.ANTIQUE,Attaque pouvant\nmonter les stats.
+6,3,247,BALL'OMBRE,Attaque pouvant\nbaisser DEF.SPE.
+6,3,248,PRESCIENCE,Attaque frappant\nau 3ème tour.
+6,3,249,ECLATE-ROC,Attaque pouvant\nbaisser DEFENSE.
+6,3,250,SIPHON,Piège la cible pdt\n2 à 5 tours.
+6,3,251,BASTON,Les PKMN d'équipe\nfrappent ensemble.
+6,4,1,PFUND,Schlag mit Vorder-\nhuf oder Schwanz.
+6,4,2,KARATESCHLAG,Hohe Volltreffer-\nquote.
+6,4,3,DUPLEXHIEB,Trifft bis zu\n5mal.
+6,4,4,KOMETENHIEB,Trifft bis zu\n5mal.
+6,4,5,MEGAHIEB,Ein kräftiger\nPunch.
+6,4,6,ZAHLTAG,Wirft Münzen. Wie-\ndererhalt später.
+6,4,7,FEUERSCHLAG,Feuriger Schlag.\nEvtl. Verbrennung.
+6,4,8,EISHIEB,Eisiger Schlag.\nEvtl. Erfrierung.
+6,4,9,DONNERSCHLAG,Elektro-Schlag.\nEvtl. Paralyse.
+6,4,10,KRATZER,Angriff mit\nscharfen Klauen.
+6,4,11,KLAMMER,Zwickt mit\nkräftigen Scheren.
+6,4,12,GUILLOTINE,K.O. durch\nScheren-Attacke.
+6,4,13,KLINGENSTURM,1. Vorbereitung\n2. Angriff
+6,4,14,SCHWERTTANZ,"Tanz, erhöht\nANGR-Wert."
+6,4,15,ZERSCHNEIDER,"Setzt Klauen,\nSicheln etc. ein."
+6,4,16,WINDSTOSS,Erzeugt starke\nWindböe.
+6,4,17,FLÜGELSCHLAG,Trifft Ziel mit\nFlügeln.
+6,4,18,WIRBELWIND,Weht Gegner weg\nund beendet Kampf.
+6,4,19,FLIEGEN,1. Emporfliegen\n2. Angriff
+6,4,20,KLAMMERGRIFF,Umklammert Gegner\nbis zu 5mal.
+6,4,21,SLAM,"Trifft Gegner mit\nSchwanz, Ranke..."
+6,4,22,RANKENHIEB,Trifft Gegner mit\nRanken.
+6,4,23,STAMPFER,Gegner schreckt\nevtl. zurück.
+6,4,24,DOPPELKICK,Angriff durch\nDoppel-Kick.
+6,4,25,MEGAKICK,Starke\nFuß-Attacke.
+6,4,26,SPRUNGKICK,Verfehlt evtl.\n+ eigener Schaden.
+6,4,27,FEGEKICK,Schneller\nDreh-Kick.
+6,4,28,SANDWIRBEL,"Wirbelt Sand auf,\nsenkt Genauigkeit."
+6,4,29,KOPFNUSS,Gegner schreckt\nevtl. zurück.
+6,4,30,HORNATTACKE,Stoß mit dem\nHorn.
+6,4,31,FURIENSCHLAG,Trifft bis zu\n5mal.
+6,4,32,HORNBOHRER,K.O. durch\nBohr-Attacke.
+6,4,33,TACKLE,Attacke mit vollem\nKörpereinsatz.
+6,4,34,BODYSLAM,Gegner ist evtl.\nparalysiert.
+6,4,35,WICKEL,Trifft Gegner bis\nzu 5mal.
+6,4,36,BODYCHECK,Tackle! Angreifer\nwird verletzt.
+6,4,37,FUCHTLER,Hält 2-3 Runden.\nVerwir. Angreifer.
+6,4,38,RISIKOTACKLE,Tackle! Angreifer\nwird verletzt.
+6,4,39,RUTENSCHLAG,Senkt VERT-Wert\ndes Gegners.
+6,4,40,GIFTSTACHEL,Angriff vergiftet\nGegner evtl.
+6,4,41,DUONADEL,Trifft Gegner 2 x\nmit den Stacheln.
+6,4,42,NADELRAKETE,Trifft Gegner bis\nzu 5mal.
+6,4,43,SILBERBLICK,Senkt VERT-Wert\ndes Gegners.
+6,4,44,BISS,Gegner schreckt\nevtl. zurück.
+6,4,45,HEULER,Senkt den ANGR-\nWert des Gegners.
+6,4,46,BRÜLLER,Ängstigt wilde\nGegn. + Kampfende.
+6,4,47,GESANG,Gegner schläft\nevtl. ein.
+6,4,48,SUPERSCHALL,"Schallwellen, die\nGegner verwirren."
+6,4,49,ULTRASCHALL,Fügt Gegner\n20 KP Schaden zu.
+6,4,50,AUSSETZER,Blockiert letzte\nAttacke des Gegn.
+6,4,51,SÄURE,Senkt evtl. VERT-\nWert des Gegners.
+6,4,52,GLUT,Gegner erleidet\nevtl. Verbrennung.
+6,4,53,FLAMMENWURF,Gegner erleidet\nevtl. Verbrennung.
+6,4,54,WEISSNEBEL,Verhindert Status-\nveränderungen.
+6,4,55,AQUAKNARRE,Greift mit Wasser\nan.
+6,4,56,HYDROPUMPE,Eine mächtige\nWasser-Attacke.
+6,4,57,SURFER,Eine starke\nWasser-Attacke.
+6,4,58,EISSTRAHL,Gegner wird evtl.\neingefroren.
+6,4,59,BLIZZARD,Gegner wird evtl.\neingefroren.
+6,4,60,PSYSTRAHL,Gegner wird evtl.\nverwirrt.
+6,4,61,BLUBBSTRAHL,Senkt evtl. INIT-\nWert des Gegners.
+6,4,62,AURORASTRAHL,Senkt evtl. ANGR-\nWert des Gegners.
+6,4,63,HYPERSTRAHL,1. Angriff\n2. Ausruhen
+6,4,64,SCHNABEL,Greift Gegner mit\nSchnabel an.
+6,4,65,BOHRSCHNABEL,Starke Schnabel-\nDreh-Attacke.
+6,4,66,ÜBERROLLER,"Eine Attacke, die\nAnwender verletzt."
+6,4,67,FUSSKICK,Gegner schreckt\nevtl. zurück.
+6,4,68,KONTER,Erwidert Körper-\nattacken doppelt.
+6,4,69,GEOWURF,Angreiferlevel\ngleich Schaden.
+6,4,70,STÄRKE,Starke\nKörperattacke.
+6,4,71,ABSORBER,Erhält Hälfte des\nSchadens als KP.
+6,4,72,MEGASAUGER,Erhält Hälfte des\nSchadens als KP.
+6,4,73,EGELSAMEN,Zieht dem Gegner\njede Runde KP ab.
+6,4,74,WACHSTUM,Hebt\nSPEZ. ANG.
+6,4,75,RASIERBLATT,Hohe Volltreffer-\nquote.
+6,4,76,SOLARSTRAHL,1. Vorbereitung\n2. Angriff
+6,4,77,GIFTPUDER,Gegner wird evtl.\nvergiftet.
+6,4,78,STACHELSPORE,Gegner wird evtl.\nparalysiert.
+6,4,79,SCHLAFPUDER,Gegner schläft\nevtl. ein.
+6,4,80,BLÄTTERTANZ,Hält 2-3 Runden.\nVerwir. Angreifer.
+6,4,81,FADENSCHUSS,Senkt INIT-Wert\ndes Gegners.
+6,4,82,DRACHENWUT,Fügt Gegner\n40 KP Schaden zu.
+6,4,83,FEUERWIRBEL,Trifft Gegner bis\nzu 5mal.
+6,4,84,DONNERSCHOCK,Gegner ist evtl.\nparalysiert.
+6,4,85,DONNERBLITZ,Gegner ist evtl.\nparalysiert.
+6,4,86,DONNERWELLE,Gegner ist\nparalysiert.
+6,4,87,DONNER,Gegner ist evtl.\nparalysiert.
+6,4,88,STEINWURF,Felshagel auf\nGegner.
+6,4,89,ERDBEBEN,Stark! Nutzlos\nbei Flug-POKéMON.
+6,4,90,GEOFISSUR,K.O. durch\nBoden-Attacke.
+6,4,91,SCHAUFLER,1. Graben\n2. Angriff
+6,4,92,TOXIN,Gift-Attacke mit\nSchadenszuwachs.
+6,4,93,KONFUSION,Gegner ist evtl.\nverwirrt.
+6,4,94,PSYCHOKINESE,Senkt evtl. SPEZ.-\nVER des Gegners.
+6,4,95,HYPNOSE,Gegner schläft\nevtl. ein.
+6,4,96,MEDITATION,Erhöht ANGR-Wert.
+6,4,97,AGILITÄT,Hebt INIT-Wert\nenorm.
+6,4,98,RUCKZUCKHIEB,Erstschlaggarantie\nfür den Angreifer.
+6,4,99,RASEREI,Hebt ANGR-Wert bei\nSchadenszufuhr.
+6,4,100,TELEPORT,Ermöglicht Flucht\naus Kämpfen.
+6,4,101,NACHTNEBEL,Angreiferlevel\ngleich Schaden.
+6,4,102,MIMIKRY,Ahmt Attacke des\nAngreifers nach.
+6,4,103,KREIDESCHREI,Senkt VERT-Wert\ndes Gegners enorm.
+6,4,104,DOPPELTEAM,Fluchtwert nimmt\nzu.
+6,4,105,GENESUNG,Füllt KP zur\nHälfte auf.
+6,4,106,HÄRTNER,Hebt VERT-Wert des\nAngreifers.
+6,4,107,KOMPRIMATOR,Fluchtwert nimmt\nzu.
+6,4,108,RAUCHWOLKE,Senkt Genauigkeit\ndes Gegners.
+6,4,109,KONFUSTRAHL,Verursacht\nVerwirrung.
+6,4,110,PANZERSCHUTZ,Hebt VERT-Wert des\nAngreifers.
+6,4,111,EINIGLER,Hebt VERT-Wert des\nAngreifers.
+6,4,112,BARRIERE,Hebt VERT-Wert des\nAngreifers enorm.
+6,4,113,LICHTSCHILD,Hebt SPEZ. VER\ndurch Lichtwand.
+6,4,114,DUNKELNEBEL,Verwirft alle\nStatusänderungen.
+6,4,115,REFLEKTOR,Hebt VERT-Wert\nmittels Barriere.
+6,4,116,ENERGIEFOKUS,Volltrefferquote\nwird erhöht.
+6,4,117,GEDULD,Trifft nach 2-3\nRunden doppelt.
+6,4,118,METRONOM,Wählt zufällige\nPOKéMON-Attacke.
+6,4,119,SPIEGELTRICK,Kontert mit glei-\ncher Attacke.
+6,4,120,FINALE,"Stark, der Angrei-\nfer wird besiegt."
+6,4,121,EIERBOMBE,Der Gegner erlebt\neinen Eierhagel.
+6,4,122,SCHLECKER,Gegner wird evtl.\nparalysiert.
+6,4,123,SMOG,Gegner wird evtl.\nvergiftet.
+6,4,124,SCHLAMMBAD,Gegner wird evtl.\nvergiftet.
+6,4,125,KNOCHENKEULE,Gegner schreckt\nevtl. zurück.
+6,4,126,FEUERSTURM,Gegner erleidet\nevtl. Verbrennung.
+6,4,127,KASKADE,Wasser-Attacke.
+6,4,128,SCHNAPPER,Trifft Gegner bis\nzu 5mal.
+6,4,129,STERNSCHAUER,Attacke mit\nTreffergarantie.
+6,4,130,SCHÄDELWUMME,1. Vorbereitung\n2. Angriff
+6,4,131,DORNKANONE,Trifft Gegner bis\nzu 5mal.
+6,4,132,UMKLAMMERUNG,Senkt evtl.\nINIT-Wert.
+6,4,133,AMNESIE,Hebt SPEZ. VER des\nAngreifers enorm.
+6,4,134,PSYKRAFT,Senkt Genauigkeit\ndes Gegners.
+6,4,135,WEICHEI,Füllt KP\nzur Hälfte auf.
+6,4,136,TURMKICK,Evtl. kein Treffer\nund Selbstschaden.
+6,4,137,GIFTBLICK,Gegner wird evtl.\nparalysiert.
+6,4,138,TRAUMFRESSER,Zieht schlafendem\nGegner KP ab.
+6,4,139,GIFTWOLKE,Gegner wird evtl.\nvergiftet.
+6,4,140,STAKKATO,Trifft bis zu\n5mal.
+6,4,141,BLUTSAUGER,Erhält Hälfte\ndes Schadens.
+6,4,142,TODESKUSS,Gegner schläft\nevtl. ein.
+6,4,143,HIMMELSFEGER,1. Vorbereitung\n2. Angriff
+6,4,144,VERWANDLER,Angreifer erkennt\nTarnung.
+6,4,145,BLUBBER,Senkt evtl. INIT-\nWert des Gegners.
+6,4,146,IRRSCHLAG,Gegner wird evtl.\nverwirrt.
+6,4,147,PILZSPORE,Versetzt Gegner\nin Schlaf.
+6,4,148,BLITZ,Blendet Gegner\n+ senkt Präzision.
+6,4,149,PSYWELLE,Angriff mit\nvariabler Kraft.
+6,4,150,PLATSCHER,Keine Wirkung.
+6,4,151,SÄUREPANZER,Hebt VERT-Wert des\nAngreifers enorm.
+6,4,152,KRABBHAMMER,Hohe Volltreffer-\nquote.
+6,4,153,EXPLOSION,Stark; Angreifer\nwird besiegt.
+6,4,154,KRATZFURIE,Trifft bis zu\n5mal.
+6,4,155,KNOCHMERANG,Trifft 2mal.
+6,4,156,ERHOLUNG,2 Runden pausieren\nfür Erholung.
+6,4,157,STEINHAGEL,Gegner schreckt\nevtl. zurück.
+6,4,158,HYPERZAHN,Gegner schreckt\nevtl. zurück.
+6,4,159,SCHÄRFER,Hebt den ANGR-Wert\ndes Angreifers.
+6,4,160,UMWANDLUNG,Wechsel zu\nAttacken-Element.
+6,4,161,TRIPLETTE,Drei Strahlen mit\neinem Schuss.
+6,4,162,SUPERZAHN,Halbiert KP\ndes Gegners.
+6,4,163,SCHLITZER,Hohe Volltreffer-\nquote.
+6,4,164,DELEGATOR,Macht DELEGATOR\nmit Viertel KP.
+6,4,165,VERZWEIFLER,"Nur benutzen, wenn\nAP leer sind."
+6,4,166,NACHAHMER,Kopiert die Atta-\ncke des Gegners.
+6,4,167,DREIFACHKICK,"Trifft 3mal,\nKraft nimmt zu."
+6,4,168,RAUB,Stiehlt evtl. ein\ngetragenes Item.
+6,4,169,SPINNENNETZ,Verhindert Flucht\noder Wechsel.
+6,4,170,WILLENSLESER,Treffergarantie\nbeim Angriff.
+6,4,171,NACHTMAHR,1/4 KP-Abzug für\nschlafende Gegner.
+6,4,172,FLAMMENRAD,Gegner erleidet\nevtl. Verbrennung.
+6,4,173,SCHNARCHER,Attacke nur bei\nSchlaf benutzbar.
+6,4,174,FLUCH,Bes. Funktion bei\nGeist-POKéMON.
+6,4,175,DRESCHFLEGEL,"Effektiver, wenn \nselbst geschwächt."
+6,4,176,UMWANDLUNG2,Elementwechsel bei\nAngreifer.
+6,4,177,LUFTSTOSS,Hohe Volltreffer-\nquote.
+6,4,178,BAUMWOLLSAAT,Senkt INIT-Wert\ndes Gegners enorm.
+6,4,179,GEGENSCHLAG,"Effektiver, wenn\nselbst geschwächt."
+6,4,180,GROLL,Senkt AP der letz-\nten Gegnerattacke.
+6,4,181,PULVERSCHNEE,Gegner wird evtl.\neingefroren.
+6,4,182,SCHUTZSCHILD,1 Runde Schutz.\nWdh. fraglich.
+6,4,183,TEMPOHIEB,Punch mit Erst-\nschlaggarantie.
+6,4,184,GRIMASSE,Senkt INIT-Wert\ndes Gegners enorm.
+6,4,185,FINTE,Attacke mit\nTreffergarantie.
+6,4,186,BITTERKUSS,Verwirrt den\nGegner.
+6,4,187,BAUCHTROMMEL,Senkt KP + maxi- \nmiert ANGR-Wert.
+6,4,188,MATSCHBOMBE,Gegner wird evtl.\nvergiftet.
+6,4,189,LEHMSCHELLE,Senkt Genauigkeit\ndes Gegners.
+6,4,190,OCTAZOOKA,Senkt evtl. die\nGenauigkeit.
+6,4,191,STACHLER,Trifft Gegner beim\nWechsel.
+6,4,192,BLITZKANONE,Gegner wird\nparalysiert.
+6,4,193,GESICHTE,Schützt vor\nPräzisionssenkung.
+6,4,194,ABGANGSBUND,Beide werden\nbesiegt.
+6,4,195,ABGESANG,Beide werden in 3\nRunden besiegt.
+6,4,196,EISSTURM,Senkt INIT-Wert\ndes Gegners.
+6,4,197,SCANNER,1 Runde Schutz.\nWdh. fraglich.
+6,4,198,KNOCHENHATZ,Trifft bis zu\n5mal.
+6,4,199,ZIELSCHUSS,Treffergarantie\nbeim Angriff.
+6,4,200,WUTANFALL,Wirkt 2-3 Runden.\nVerwir. Angreifer.
+6,4,201,SANDSTURM,Fügt in jeder\nRunde Schaden zu.
+6,4,202,GIGASAUGER,Erhält Hälfte des\nSchadens.
+6,4,203,AUSDAUER,Mindestens 1 KP\nbleibt übrig.
+6,4,204,CHARME,Senkt ANGR-Wert\ndes Gegners enorm.
+6,4,205,WALZER,Wirkt 5 Runden mit\nzunehmender Kraft.
+6,4,206,TRUGSCHLAG,Gegner behält\nmindestens 1 KP.
+6,4,207,ANGEBEREI,Verwirrt und hebt\nANGR-Wert.
+6,4,208,MILCHGETRÄNK,Füllt KP zur\nHälfte auf.
+6,4,209,FUNKENSPRUNG,Gegner wird evtl.\nparalysiert.
+6,4,210,ZORNKLINGE,Eine Treffer-Folge\nerhöht die Kraft.
+6,4,211,STAHLFLÜGEL,Harte Flügel tref-\nfen den Gegner.
+6,4,212,HORRORBLICK,Verhindert Flucht\noder Tausch.
+6,4,213,ANZIEHUNG,"Schutz, da Gegner\nsich verliebt."
+6,4,214,SCHLAFREDE,Zufällige Angriffe\nim Schlaf.
+6,4,215,VITALGLOCKE,Behebt alle\nStatusprobleme.
+6,4,216,RÜCKKEHR,Angriff basiert\nauf Loyalität.
+6,4,217,GESCHENK,"Bombe, die evtl.\nKP auffüllt."
+6,4,218,FRUSTRATION,Angriffsgrund:\nKeine Loyalität.
+6,4,219,BODYGUARD,Verhindert\nStatusprobleme.
+6,4,220,LEIDTEILER,Addiert alle KP\nund halbiert sie.
+6,4,221,LÄUTERFEUER,Gegner erleidet\nevtl. Verbrennung.
+6,4,222,INTENSITÄT,"Boden-Angriff,\nIntensität Zufall."
+6,4,223,WUCHTSCHLAG,Gegner wird\nverwirrt.
+6,4,224,VIELENDER,Starke Attacke.
+6,4,225,FEUERODEM,Starke Attacke.
+6,4,226,STAFFETTE,Tausch ohne\nStatusveränderung.
+6,4,227,ZUGABE,Gegner greift\nmax. 6mal an.
+6,4,228,VERFOLGUNG,Strafe für Gegner\nbei PKMN-Wechsel.
+6,4,229,TURBODREHER,Turbo Dreh-\nAngriff.
+6,4,230,LOCKDUFT,Fluchtwert des\nGegners sinkt.
+6,4,231,EISENSCHWEIF,Senkt evtl. VERT-\nWert des Gegners.
+6,4,232,METALLKLAUE,Hebt evtl. den\nANGR-Wert.
+6,4,233,ÜBERWURF,Folgeattacke mit\nTreffergarantie.
+6,4,234,MORGENGRAUEN,Füllt KP auf.\n(Anzahl zufällig)
+6,4,235,SYNTHESE,Füllt KP auf.\n(Anzahl zufällig)
+6,4,236,MONDSCHEIN,Füllt KP auf.\n(Anzahl zufällig)
+6,4,237,KRAFTRESERVE,Effekt hängt\nvom POKéMON ab.
+6,4,238,KREUZHIEB,Hohe Volltreffer-\nquote.
+6,4,239,WINDHOSE,Erzeugt zum An-\ngriff Tornado.
+6,4,240,REGENTANZ,Verstärkt Wasser-\nAttacken 5 Runden.
+6,4,241,SONNENTAG,Verstärkt Feuer-\nAttacken 5 Runden.
+6,4,242,KNIRSCHER,Senkt evtl.\nSPEZ. VER.
+6,4,243,SPIEGELCAPE,SPEZ-Attacke\nzählt doppelt.
+6,4,244,PSYCHO-PLUS,Kop. Statusände-\nrung des Gegners.
+6,4,245,TURBOTEMPO,Starke\nErstschlagattacke.
+6,4,246,ANTIK-KRAFT,Hebt evtl. alle\nStatuswerte an.
+6,4,247,SPUKBALL,Senkt evtl.\nSPEZ. VER.
+6,4,248,SEHER,Attacke trifft\nin Runde 3.
+6,4,249,ZERTRÜMMERER,Senkt evtl.\nVERT-Wert.
+6,4,250,WHIRLPOOL,Trifft Gegner bis\nzu 5mal.
+6,4,251,PRÜGLER,POKéMON vom Team\ngreifen auch an.
+6,5,1,LIBBRA,Colpo con arti\nant. o la coda.
+6,5,2,COLPO-KARATE,Può essere un\nbrutto colpo.
+6,5,3,DOPPIASBERLA,2-5 schiaffi\nripetuti.
+6,5,4,COMETAPUGNO,2-5 pugni\nripetuti.
+6,5,5,MEGAPUGNO,Un pugno dato\ncon molta potenza.
+6,5,6,GIORNO-PAGA,Tira monete che\ndopo recupera.
+6,5,7,FUOCOPUGNO,"Un pugno ardente,\nche può scottare."
+6,5,8,GELOPUGNO,Pugno di ghiaccio:\npuò congelare.
+6,5,9,TUONOPUGNO,Pugno elettrico:\npuò paralizzare.
+6,5,10,GRAFFIO,Graffia con arti-\ngli affilati.
+6,5,11,PRESA,Una morsa di forti\ntenaglie.
+6,5,12,GHIGLIOTTINA,Una morsa da KO\nin una mossa.
+6,5,13,VENTAGLIENTE,1ºturno: Prepara\n2ºturno: Attacca
+6,5,14,DANZA-SPADA,Una danza che po-\ntenzia ATTACCO.
+6,5,15,TAGLIO,"Taglia con falci,\nartigli ecc."
+6,5,16,RAFFICA,Alza una forte\nfolata di vento.
+6,5,17,ATT. D'ALA,Ali colpiscono\nil nemico.
+6,5,18,TURBINE,Caccia il nemico e\ntermina la lotta.
+6,5,19,VOLO,1ºturno: Vola\n2ºturno: Attacca
+6,5,20,LEGATUTTO,Lega il nemico\nper 2-5 turni.
+6,5,21,SCHIANTO,Colpisce con una\ncoda o liana ecc.
+6,5,22,FRUSTATA,Frusta il nemico\ncon liane sottili.
+6,5,23,PESTONE,Può far tentennare\nl'avversario.
+6,5,24,DOPPIOCALCIO,Un attacco con\ndoppio calcio.
+6,5,25,MEGACALCIO,Un potente\ncalcio.
+6,5,26,CALCIO-SALTO,Può danneggiare\nchi lo usa.
+6,5,27,CALCIO-RULLO,Un rapido\ncalcio rotante.
+6,5,28,TURBOSABBIA,Riduce precisione\nsollevando sabbia.
+6,5,29,BOTTINTESTA,Attacco che può\nfar tentennare.
+6,5,30,INCORNATA,Infilza per mezzo\ndi corna.
+6,5,31,FURIA,Infilza il nemico\n2-5 volte.
+6,5,32,PERFORCORNO,Un attacco perfo-\nrante da KO.
+6,5,33,AZIONE,Una carica con\ntutto il corpo.
+6,5,34,BODY SLAM,Attacco che può\ncausare paralisi.
+6,5,35,AVVOLGIBOTTA,Schiaccia il ne-\nmico 2-5 turni.
+6,5,36,RIDUTTORE,Carica: danneggia\nanche chi lo usa.
+6,5,37,COLPO,Dura 2-3 turni ma\nconf. chi lo usa.
+6,5,38,SDOPPIATORE,Carica: danneggia\nanche chi lo usa.
+6,5,39,COLPO-CODA,Riduce DIFESA\ndel nemico.
+6,5,40,VELENOSPINA,Può avvelenare\nl'avversario.
+6,5,41,DOPPIO AGO,Colpisce due volte\nper mezzo di aghi.
+6,5,42,MISSILSPILLO,Spilli di fuoco:\nda 2 a 5 colpi.
+6,5,43,FULMISGUARDO,Riduce la DIFESA\ndell'avversario.
+6,5,44,MORSO,Può far tentennare\nl'avversario.
+6,5,45,RUGGITO,Peggiora ATTACCO\ndell'avversario.
+6,5,46,BOATO,I nemici selvatici\nlasciano la lotta.
+6,5,47,CANTO,Può far addormen-\ntare il nemico.
+6,5,48,SUPERSUONO,Onde acustiche\nche confondono.
+6,5,49,SONICBOOM,Causa sempre un\ndanno di 20 PS.
+6,5,50,INIBITORE,Disattiva una\nmossa del nemico.
+6,5,51,ACIDO,Può ridurre\nDIFESA.
+6,5,52,BRACIERE,Un attacco che può\nscottare.
+6,5,53,LANCIAFIAMME,Un attacco che può\nscottare.
+6,5,54,NEBBIA,Previene riduzione\nstat.
+6,5,55,PISTOLACQUA,Attacca con\nspruzzi d'acqua.
+6,5,56,IDROPOMPA,Un potente\nattacco d'acqua.
+6,5,57,SURF,Un forte attacco\nd'acqua.
+6,5,58,GELORAGGIO,Può congelare\nil nemico.
+6,5,59,BORA,Può congelare\nil nemico.
+6,5,60,PSICORAGGIO,Può confondere\nl'avversario.
+6,5,61,BOLLARAGGIO,Può ridurre\nVELOCITÀ.
+6,5,62,RAGGIAURORA,Può ridurre\nl'ATTACCO.
+6,5,63,IPER-RAGGIO,1ºturno: Attacco\n2ºturno: Riposo
+6,5,64,BECCATA,Colpisce con\nbeccate e altro.
+6,5,65,PERFORBECCO,Attacca con una\nviolenta beccata.
+6,5,66,SOTTOMISS.,Colpisce anche chi\nne fa uso.
+6,5,67,COLPO BASSO,Può far tentennare\nl'avversario.
+6,5,68,CONTATORE,Restituisce l'att.\nfisico subito X2.
+6,5,69,MOV. SISMICO,Danno pari al liv.\ndi chi attacca.
+6,5,70,FORZA,Un potente\nattacco fisico.
+6,5,71,ASSORBIMENTO,Ruba PS pari a\n1/2 del danno.
+6,5,72,MEGASSORBIM.,Ruba PS pari a\n1/2 del danno.
+6,5,73,PARASSISEME,Ruba PS al nemico\nad ogni turno.
+6,5,74,CRESCITA,Potenzia\nATT.SPEC.
+6,5,75,FOGLIELAMA,Può assestare un\nbrutto colpo.
+6,5,76,SOLARRAGGIO,1ºturno: Carica\n2ºturno: Attacco
+6,5,77,VELENPOLVERE,Può causare\navvelenamento.
+6,5,78,PARALIZZANTE,Può causare\nparalisi.
+6,5,79,SONNIFERO,Può far addormen-\ntare il nemico.
+6,5,80,PETALODANZA,Dura 2-3 turni ma\nconf. chi lo usa.
+6,5,81,MILLEBAVE,Riduce VELOCITÀ\ndel nemico.
+6,5,82,IRA DI DRAGO,Causa sempre un\ndanno di 40 PS.
+6,5,83,TURBOFUOCO,Fuoco intrappola\nnemico 2-5 turni.
+6,5,84,TUONOSHOCK,Un attacco che può\ncausare paralisi.
+6,5,85,FULMINE,Un attacco che può\ncausare paralisi.
+6,5,86,TUONONDA,Una mossa che può\ncausare paralisi.
+6,5,87,TUONO,Un attacco che può\ncausare paralisi.
+6,5,88,SASSATA,Tira rocce\nsul nemico.
+6,5,89,TERREMOTO,"Buono, ma non con-\ntro tipo volante."
+6,5,90,ABISSO,Attacco tipo terra\nda KO immediato.
+6,5,91,FOSSA,1ºturno: Scompare\n2ºturno: Attacca
+6,5,92,TOSSINA,Avvelena con ef-\nficacia crescente.
+6,5,93,CONFUSIONE,Può causare\nconfusione.
+6,5,94,PSICHICO,Può ridurre\nDIF.SPEC.
+6,5,95,IPNOSI,Può far addormen-\ntare il nemico.
+6,5,96,MEDITAZIONE,Potenzia l'ATTACCO\ndi chi lo usa.
+6,5,97,AGILITÀ,Potenzia di molto\nVELOCITÀ.
+6,5,98,ATT. RAPIDO,Chi lo usa\nattacca per primo.
+6,5,99,IRA,"Se si è colpiti,\nl'ATT. aumenta."
+6,5,100,TELETRASPOR.,Per fuggire da\nuna lotta.
+6,5,101,OMBRA NOTT.,Danno pari al liv.\ndi chi attacca.
+6,5,102,MIMICA,Imita la mossa\nusata dal nemico.
+6,5,103,STRIDIO,Riduce di molto\nDIFESA del nemico.
+6,5,104,DOPPIOTEAM,Aumenta capacità\ndi elusione.
+6,5,105,RIPRESA,Restituisce 1/2\ndei PS max.
+6,5,106,RAFFORZATORE,Aumenta DIFESA di\nchi lo usa.
+6,5,107,MINIMIZZ.,Aumenta capacità\ndi elusione.
+6,5,108,MURO DI FUMO,Riduce precisione\ndel nemico.
+6,5,109,STORDIRAGGIO,Una mossa che\ncausa confusione.
+6,5,110,RITIRATA,Migliora DIFESA\ndi chi lo usa.
+6,5,111,RICCIOLSCUDO,Migliora DIFESA\ndi chi lo usa.
+6,5,112,BARRIERA,Migliora di molto\nDIFESA.
+6,5,113,SCHERMO-LUCE,Una parete di luce\nmigliora DIF.SPEC.
+6,5,114,NUBE,Annulla tutte le\nmodifiche stat.
+6,5,115,RIFLESSO,Una barriera\nmigliora DIFESA.
+6,5,116,ENERGY CONC.,Aumenta i\nbrutti colpi.
+6,5,117,PAZIENZA,Restit.il colpo\nX2 dopo 2-3 turni.
+6,5,118,METRONOMO,Usa una mossa\nPOKéMON a caso.
+6,5,119,SPECULMOSSA,Contrattacca con\nla stessa mossa.
+6,5,120,AUTODISTRUZ.,"Potente, ma chi lo\nusa è esausto."
+6,5,121,UOVOBOMBA,Lancio di uova\ncontro il nemico.
+6,5,122,LECCATA,Un attacco che può\ncausare paralisi.
+6,5,123,SMOG,Può causare\navvelenamento.
+6,5,124,FANGO,Può causare\navvelenamento.
+6,5,125,OSSOCLAVA,Può far tentennare\nl'avversario.
+6,5,126,FUOCOBOMBA,Può far scottare\nil nemico.
+6,5,127,CASCATA,Una potente\nscarica d'acqua.
+6,5,128,TENAGLIA,Blocca il nemico\nper 2-5 turni.
+6,5,129,COMETE,Un attacco che non\nva mai a vuoto.
+6,5,130,CAPOCCIATA,1ºturno: Carica\n2ºturno: Attacco
+6,5,131,SPARALANCE,Lance di fuoco:\n2-5 ripetizioni.
+6,5,132,LIMITAZIONE,Può ridurre\nVELOCITÀ.
+6,5,133,AMNESIA,Aumenta di molto\nDIF.SPEC.
+6,5,134,CINÈSI,Riduce precisione\navversario.
+6,5,135,COVAUOVA,Restituisce 1/2\ndei PS max.
+6,5,136,CALCINVOLO,Può colpire chi\nlo usa.
+6,5,137,BAGLIORE,Una mossa che può\ncausare paralisi.
+6,5,138,MANGIASOGNI,Ruba PS al\nnemico che dorme.
+6,5,139,VELENOGAS,Può causare\navvelenamento.
+6,5,140,ATT. PIOGGIA,Sfere che colpi-\nscono 2-5 volte.
+6,5,141,SANGUISUGA,Ruba PS pari a\n1/2 del danno.
+6,5,142,DEMONBACIO,Può far addor-\nmentare il nemico.
+6,5,143,AEROATTACCO,1ºturno: Carica\n2ºturno: Attacco
+6,5,144,TRASFORMAZ.,Chi lo usa diventa\ncopia del nemico.
+6,5,145,BOLLA,Un attacco che può\nridurre VELOCITÀ.
+6,5,146,STORDIPUGNO,Può causare\nconfusione.
+6,5,147,SPORA,Spinge il nemico\nad addormentarsi.
+6,5,148,FLASH,Abbaglia riducendo\nprecisione nemico.
+6,5,149,PSICO-ONDA,Efficacia\nvariabile.
+6,5,150,SPLASH,È sempre\ninefficace.
+6,5,151,SCUDO ACIDO,Aumenta di molto\npropria DIFESA.
+6,5,152,MARTELLATA,Può assestare un\nbrutto colpo.
+6,5,153,ESPLOSIONE,"Potentissimo, ma\nchi attacca va KO."
+6,5,154,SFURIATE,2-5 attacchi\nripetuti.
+6,5,155,OSSOMERANG,Un attacco che\ncolpisce 2 volte.
+6,5,156,RIPOSO,Tutti i PS dopo\n2 turni di sonno.
+6,5,157,FRANA,Può far tentennare\nl'avversario.
+6,5,158,IPERZANNA,Può far tentennare\nl'avversario.
+6,5,159,AFFILATORE,Potenzia l'ATTACCO\ndi chi lo usa.
+6,5,160,CONVERSIONE,Chi lo usa prende\ntipo di una mossa.
+6,5,161,TRIPLETTA,Spara insieme\n3 diversi raggi.
+6,5,162,SUPERZANNA,Dimezza i PS del\nnemico.
+6,5,163,LACERAZIONE,Può assestare un\nbrutto colpo.
+6,5,164,SOSTITUTO,Crea un'esca con\n1/4 dei propri PS.
+6,5,165,SCONTRO,Si usa solo ad\nesaurimento PP.
+6,5,166,SCHIZZO,Copia per sempre\nuna mossa nemico.
+6,5,167,TRIPLOCALCIO,"Colpisce 3 volte,\nsempre più forte."
+6,5,168,FURTO,Si usa per rubare\nuno strumento.
+6,5,169,RAGNATELA,Impedisce la fuga\ne il cambio.
+6,5,170,LEGGIMENTE,La mossa seguente\nandrà a segno.
+6,5,171,INCUBO,Chi dorme perde\n1/4 PS per turno.
+6,5,172,RUOTAFUOCO,Può far scottare\nil nemico.
+6,5,173,RUSSARE,Si può usare solo\nda addormentati.
+6,5,174,MALEDIZIONE,Ha effetto diverso\ncon tipo spettro.
+6,5,175,FLAGELLO,Forte se chi lo\nusa ha pochi PS.
+6,5,176,CONVERSIONE2,Rafforza il tipo\ndi chi lo usa.
+6,5,177,AEROCOLPO,Può assestare un\nbrutto colpo.
+6,5,178,COTTONSPORA,Riduce di molto\nVELOCITÀ nemico.
+6,5,179,CONTROPIEDE,Forte se chi lo\nusa ha pochi PS.
+6,5,180,DISPETTO,Taglia i PP dell'\nult. mossa nemico.
+6,5,181,POLNEVE,Attacco che può\ncongelare.
+6,5,182,PROTEZIONE,Sventa un attacco.\nNon è infallibile.
+6,5,183,PUGNORAPIDO,Rapido pugno che\nattacca per primo.
+6,5,184,VISOTRUCE,Riduce di molto\nVELOCITÀ nemico.
+6,5,185,FINTA,Un attacco che non\nva mai a vuoto.
+6,5,186,DOLCEBACIO,Una mossa che\ncausa confusione.
+6,5,187,PANCIAMBURO,Potenzia ATTACCO\nma riduce i PS.
+6,5,188,FANGOBOMBA,Può causare\navvelenamento.
+6,5,189,FANGOSBERLA,Riduce precisione\navversario.
+6,5,190,OCTAZOOKA,Può ridurre\nprecisione.
+6,5,191,PUNTE,Colpisce i nemici\ndurante il cambio.
+6,5,192,FALCECANNONE,Un attacco che\nparalizza sempre.
+6,5,193,PREVEGGENZA,Respinge le mosse\ncontro precisione.
+6,5,194,DESTINOBBL.,Il nemico va KO\ncon chi lo usa.
+6,5,195,ULTIMOCANTO,Entrambi vanno KO\nin 3 turni.
+6,5,196,VENTOGELATO,Attacco ghiaccio:\nriduce VELOCITÀ.
+6,5,197,INDIVIDUA,Schiva un attacco.\nNon infallibile.
+6,5,198,OSSORAFFICA,Colpisce\n2-5 volte.
+6,5,199,LOCALIZZA,La mossa seguente\nandrà a segno.
+6,5,200,OLTRAGGIO,Dura 2-3 turni ma\nconf. chi lo usa.
+6,5,201,TERREMPESTA,Arreca danno ad\nogni turno.
+6,5,202,GIGASSORBIM.,Ruba PS pari a\n1/2 del danno.
+6,5,203,RESISTENZA,Conserva sempre\nalmeno 1 PS.
+6,5,204,FASCINO,Riduce di molto\nATTACCO nemico.
+6,5,205,ROTOLAMENTO,"Attacca 5 turni,\nsempre più forte."
+6,5,206,FALSOFINALE,Lascia il nemico\ncon almeno 1 PS.
+6,5,207,BULLO,Causa confusione\ne aumenta ATTACCO.
+6,5,208,BUONLATTE,Restituisce 1/2\ndei PS max.
+6,5,209,SCINTILLA,Un attacco che può\ncausare paralisi.
+6,5,210,TAGLIOFURIA,Aumenta potenza\ncolpi successivi.
+6,5,211,ALACCIAIO,Rigide ali colpi-\nscono il nemico.
+6,5,212,MALOSGUARDO,Impedisce la fuga\ne il cambio.
+6,5,213,ATTRAZIONE,Fa infatuare il\ngenere opposto.
+6,5,214,SONNOLALIA,"Attacco casuale,\nda addormentati."
+6,5,215,RINTOCCASANA,Risolve tutti i\nproblemi di stato.
+6,5,216,RITORNO,Un attacco basato\nsulla lealtà.
+6,5,217,REGALINO,Una bomba che può\nrestituire PS.
+6,5,218,FRUSTRAZIONE,Attacco basato\nsulla slealtà.
+6,5,219,SALVAGUARDIA,Previene ogni\nproblema di stato.
+6,5,220,MALCOMUNE,Divide equamente i\nPS di entrambi.
+6,5,221,MAGIFUOCO,Un attacco che può\nscottare.
+6,5,222,MAGNITUDO,Attacco di terra:\npotenza variabile.
+6,5,223,DINAMIPUGNO,Provoca sempre\nconfusione.
+6,5,224,MEGACORNO,Una potente\ncarica.
+6,5,225,DRAGOSPIRO,Un soffio\npotente.
+6,5,226,STAFFETTA,Mantiene effetti\ndurante cambio.
+6,5,227,RIPETI,Obbliga nemico a\n2-6 ripetizioni.
+6,5,228,INSEGUIMENTO,Colpisce duramente\nchi è sostituito.
+6,5,229,RAPIGIRO,Un attacco rotante\nmolto rapido.
+6,5,230,PROFUMINO,Nemico evita at-\ntacchi meno facil.
+6,5,231,CODACCIAIO,Un attacco che può\nridurre DIFESA.
+6,5,232,FERRARTIGLI,Può potenziare il\nproprio ATTACCO.
+6,5,233,VITALTIRO,Contromossa\ninfallibile.
+6,5,234,MATTINDORO,Restituisce PS\n(varia con l'ora).
+6,5,235,SINTESI,Restituisce PS\n(varia con l'ora).
+6,5,236,LUCELUNARE,Restituisce PS\n(varia con l'ora).
+6,5,237,INTROFORZA,L'efficacia varia\ncon il POKéMON.
+6,5,238,INCROCOLPO,Può assestare un\nbrutto colpo.
+6,5,239,TORNADO,Scatena un\ntornado.
+6,5,240,PIOGGIADANZA,Potenzia le mosse\nacqua per 5 turni.
+6,5,241,GIORNODISOLE,Potenzia le mosse\nfuoco per 5 turni.
+6,5,242,SGRANOCCHIO,Può ridurre\nDIF.SPEC.
+6,5,243,SPECCHIOVELO,Effetto mossa ATT.\nSPEC. raddoppia.
+6,5,244,PSICAMISÙ,Imita statistiche\nnemico.
+6,5,245,EXTRARAPIDO,Forte attacco che\ncolpisce primo.
+6,5,246,FORZANTICA,Attacco che può\nmigliorare stat.
+6,5,247,PALLA OMBRA,Può ridurre\nDIF.SPEC.
+6,5,248,DIVINAZIONE,Colpisce al\nterzo turno.
+6,5,249,SPACCAROCCIA,Può ridurre\nDIFESA.
+6,5,250,MULINELLO,Blocca il nemico\nper 2-5 turni.
+6,5,251,PICCHIADURO,Tutta la squadra\nall'attacco.
+6,6,1,DESTRUCTOR,Golpea con las\npatas o la cola.
+6,6,2,GOLPE KARATE,Más probabilidad\nde golpe crítico.
+6,6,3,DOBLEBOFETÓN,Abofetea de 2 a 5\nveces seguidas.
+6,6,4,PUÑO COMETA,Pega de 2 a 5\nveces seguidas.
+6,6,5,MEGA PUÑO,Un puñetazo de\ngran potencia.
+6,6,6,DÍA DE PAGO,Arroja monedas que\nluego recupera.
+6,6,7,PUÑO FUEGO,Puñetazo ardiente.\nPuede quemar.
+6,6,8,PUÑO HIELO,Puñetazo helado.\nPuede congelar.
+6,6,9,PUÑO-TRUENO,Puñetazo eléctric.\nPuede paralizar.
+6,6,10,ARAÑAZO,Araña con sus\nafiladas garras.
+6,6,11,AGARRE,Atrapa con sus\npotentes pinzas.
+6,6,12,GUILLOTINA,Pinzas que derri-\nban de un golpe.
+6,6,13,V. CORTANTE,1er turno: Prepara\n2º turno: Ataca
+6,6,14,DANZA-ESPADA,Baile que mejora\nel ATAQUE.
+6,6,15,CORTE,"Corta con garras,\nguadañas, etc."
+6,6,16,TORNADO,Crea una fuerte\nráfaga de viento.
+6,6,17,ATAQUE-ALA,Golpea el objetivo\ncon las alas.
+6,6,18,REMOLINO,Se lleva al rival\ny termina combate.
+6,6,19,VUELO,1er turno: Vuela\n2º turno: Ataca
+6,6,20,ATADURA,Ataca al enemigo\nde 2 a 5 turnos.
+6,6,21,PORTAZO,Golpea con sus\nextremidades.
+6,6,22,LÁTIGO CEPA,Azota al enemigo\ncon ramas finas.
+6,6,23,PISOTÓN,Ataque que puede\natontar.
+6,6,24,DOBLE PATADA,Una patada doble.
+6,6,25,MEGA PATADA,Una patada muy\npotente.
+6,6,26,PATADA SALTO,"Si falla, dañará\na quien lo usa."
+6,6,27,PATADA GIRO,Una patada rápida\ny circular.
+6,6,28,ATAQUE ARENA,Baja la PRECISIÓN\narrojando arena.
+6,6,29,GOLPE CABEZA,Hace retroceder\nal enemigo.
+6,6,30,CORNADA,Ataca al enemigo\ncon un cuerno.
+6,6,31,ATAQUE FURIA,Pincha al enemigo\nde 2 a 5 veces.
+6,6,32,PERFORADOR,"Ataque taladro,\nK.O. en 1 golpe."
+6,6,33,PLACAJE,Embiste con todo\nel cuerpo.
+6,6,34,GOLPE CUERPO,Ataque que puede\nparalizar.
+6,6,35,REPETICIÓN,Oprime al enemigo\nde 2 a 5 turnos.
+6,6,36,DERRIBO,Ataque que también\nhiere al jugador.
+6,6,37,GOLPE,Dura 2-3 turnos y\nte confunde.
+6,6,38,DOBLE FILO,Ataque que también\nhiere al jugador.
+6,6,39,LÁTIGO,Baja la DEFENSA\ndel enemigo.
+6,6,40,PICOTAZO VEN,Puede envenenar al\nenemigo.
+6,6,41,DOBLEATAQUE,Clava aguijones al\nrival 2 veces.
+6,6,42,PIN MISIL,Lanza púas que\nhieren 2-5 veces.
+6,6,43,MALICIOSO,Baja la DEFENSA\ndel enemigo.
+6,6,44,MORDISCO,Ataque que puede\ncausar retirada.
+6,6,45,GRUÑIDO,Baja el ATAQUE\ndel enemigo.
+6,6,46,RUGIDO,Ahuyenta al rival\ny fin del combate.
+6,6,47,CANTO,Puede dormir al\nenemigo.
+6,6,48,SUPERSÓNICO,Ondas sónicas que\ncausan confusión.
+6,6,49,BOMBA SÓNICA,Siempre produce\n20 PS de daño.
+6,6,50,ANULACIÓN,Desactiva ataque\nmás reciente.
+6,6,51,ÁCIDO,Ataque que puede\nbajar la DEFENSA.
+6,6,52,ASCUAS,Ataque que puede\ncausar quemaduras.
+6,6,53,LANZALLAMAS,Ataque que puede\ncausar quemaduras.
+6,6,54,NEBLINA,Evita reducción\nde caract.
+6,6,55,PISTOLA AGUA,Rocía agua para\natacar.
+6,6,56,HIDRO BOMBA,Ataque tipo agua\nmuy potente.
+6,6,57,SURF,Ataque tipo agua\nmuy potente.
+6,6,58,RAYO HIELO,Ataque que puede\ncongelar al rival.
+6,6,59,VENTISCA,Ataque que puede\ncongelar al rival.
+6,6,60,PSICO-RAYO,Ataque que puede\nconfundir a rival.
+6,6,61,RAYO BURBUJA,Puede reducir\nla VELOCIDAD.
+6,6,62,RAYO AURORA,Ataque que puede\nreducir el ATAQUE.
+6,6,63,HÍPER RAYO,1er turno: Ataca\n2º turno: Descansa
+6,6,64,PICOTAZO,Ataca al enemigo\ncon el pico.
+6,6,65,PICO TALADRO,Picotazo giratorio\nmuy potente.
+6,6,66,SUMISIÓN,Ataque que también\nhiere al jugador.
+6,6,67,PATADA BAJA,Ataque que puede\ncausar retirada.
+6,6,68,CONTADOR,"Devuelve un golpe\nfísico, duplicado."
+6,6,69,MOV. SÍSMICO,Tu nivel equivale\na los PS dañados.
+6,6,70,FUERZA,Potente ataque\nfísico.
+6,6,71,ABSORBER,Quita la mitad del\ndaño producido.
+6,6,72,MEGA AGOTAR,Quita la mitad del\ndaño producido.
+6,6,73,DRENADORAS,Roba PS al enemigo\nen cada turno.
+6,6,74,DESARROLLO,Mayor posibilidad\nde AT. ESP.
+6,6,75,HOJA AFILADA,Gran probabilidad\nde golpe crítico.
+6,6,76,RAYO SOLAR,1er turno: Prepara\n2º turno: Ataca
+6,6,77,POLVO VENENO,Puede envenenar\nal enemigo.
+6,6,78,PARALIZADOR,Puede paralizar\nal enemigo.
+6,6,79,SOMNÍFERO,Puede dormir al\nenemigo.
+6,6,80,DANZA PÉTALO,Dura 2-3 turnos\ny te confunde.
+6,6,81,DISP. DEMORA,Baja la VELOCIDAD\ndel enemigo.
+6,6,82,FURIA DRAGÓN,Siempre produce\n40 PS de daño.
+6,6,83,GIRO FUEGO,Atrapa con fuego\nde 2 a 5 turnos.
+6,6,84,IMPACTRUENO,Ataque que puede\nparalizar.
+6,6,85,RAYO,Ataque que puede\nparalizar.
+6,6,86,ONDA TRUENO,Provoca parálisis\nal enemigo.
+6,6,87,TRUENO,Ataque que puede\nparalizar.
+6,6,88,LANZA ROCAS,Tira rocas\nal enemigo.
+6,6,89,TERREMOTO,Fuerte pero inútil\ncontra voladores.
+6,6,90,FISURA,Ataque de tierra.\nK.O. en 1 golpe.
+6,6,91,EXCAVAR,1er turno: Cava\n2º turno: Ataca
+6,6,92,TÓXICO,Veneno que aumenta\nel daño.
+6,6,93,CONFUSIÓN,Ataque que puede\nconfundir.
+6,6,94,PSÍQUICO,Ataque que puede\nbajar la DEF. ESP.
+6,6,95,HIPNOSIS,Puede dormir al\nenemigo.
+6,6,96,MEDITACIÓN,Mejora el ATAQUE\nde quien lo usa.
+6,6,97,AGILIDAD,Aumenta mucho\nsu VELOCIDAD.
+6,6,98,AT. RÁPIDO,Permite al usuario\ngolpear primero.
+6,6,99,FURIA,Mejora el ATAQUE\nsi te hieren.
+6,6,100,TELETRANSP,Sirve para huir\nde la batalla.
+6,6,101,TINIEBLAS,Tu nivel es igual\na los PS de daño.
+6,6,102,MIMÉTICO,Copia un ataque\ndel enemigo.
+6,6,103,CHIRRIDO,Reduce mucho la\nDEFENSA del rival.
+6,6,104,DOBLE EQUIPO,Mejora habilidad\nde EVASIÓN.
+6,6,105,RECUPERACIÓN,Restaura la mitad\nde los PS máximos.
+6,6,106,FORTALEZA,Aumenta la DEFENSA\nde quien lo usa.
+6,6,107,REDUCCIÓN,Mejora habilidad\nde EVASIÓN.
+6,6,108,PANTALLAHUMO,Baja la PRECISIÓN\ndel enemigo.
+6,6,109,RAYO CONFUSO,Provoca confusión.
+6,6,110,REFUGIO,Mejora la DEFENSA\nde quien lo usa.
+6,6,111,RIZO DEFENSA,Mejora la DEFENSA\nde quien lo usa.
+6,6,112,BARRERA,Aumenta bastante\ntu DEFENSA.
+6,6,113,PANTALLA LUZ,Pared de luz que\nsube la DEF. ESP.
+6,6,114,NIEBLA,Elimina todo\ncambio de caract.
+6,6,115,REFLEJO,Mejora la DEFENSA\ncon una barrera.
+6,6,116,FOCO ENERGÍA,Mayor probabilidad\nde golpe crítico.
+6,6,117,VENGANZA,Espera 2-3 turnos\ny dobla el ATAQUE.
+6,6,118,METRÓNOMO,Usa al azar un\nataque POKéMON.
+6,6,119,MOV. ESPEJO,Contraataca con\nel mismo ataque.
+6,6,120,AUTODESTRUC,"Potente, pero hace\nque te debilites."
+6,6,121,BOMBA HUEVO,Arroja huevos\nal enemigo.
+6,6,122,LENGÜETAZO,Ataque que puede\nparalizar.
+6,6,123,POLUCIÓN,Puede envenenar\nal enemigo.
+6,6,124,RESIDUOS,Puede envenenar\nal enemigo.
+6,6,125,HUESO PALO,Ataque que causa\nla retirada.
+6,6,126,LLAMARADA,Ataque que puede\ncausar quemaduras.
+6,6,127,CASCADA,Ataque que usa\ncarga acuática.
+6,6,128,TENAZA,Atrapa al enemigo\nde 2 a 5 turnos.
+6,6,129,RAPIDEZ,Ataque que no\nfalla nunca.
+6,6,130,CABEZAZO,1er turno: Prepara\n2º turno: Ataca
+6,6,131,CLAVO CAÑÓN,Lanza púas de\nfuego 2-5 veces.
+6,6,132,RESTRICCIÓN,Ataque que puede\nreducir VELOCIDAD.
+6,6,133,AMNESIA,Aumenta bastante\ntu DEFENSA ESP.
+6,6,134,KINÉTICO,Baja la PRECISIÓN\ndel enemigo.
+6,6,135,AMORTIGUADOR,Restaura la mitad\nde tus PS máximos.
+6,6,136,PAT. S. ALTA,Puede fallar y\nherirte.
+6,6,137,DESLUMBRAR,Puede provocar\nparálisis.
+6,6,138,COME SUEÑOS,Roba PS a una\nvíctima dormida.
+6,6,139,GAS VENENOSO,Puede envenenar\nal enemigo.
+6,6,140,PRESA,Arroja orbes de\n2 a 5 veces.
+6,6,141,CHUPA VIDAS,Roba la mitad del\ndaño producido.
+6,6,142,BESO AMOROSO,Puede dormir al\nenemigo.
+6,6,143,ATAQUE AÉREO,1er turno: Prepara\n2º turno: Ataca
+6,6,144,TRANSFORM,Te disfrazas del\nenemigo.
+6,6,145,BURBUJA,Puede reducir la\nVELOCIDAD.
+6,6,146,PUÑO-MAREO,Ataque que puede\ncausar confusión.
+6,6,147,ESPORA,Ataque que produce\nsueño.
+6,6,148,DESTELLO,Ciega al enemigo y\nbaja la PRECISIÓN.
+6,6,149,PSICO-ONDA,Ataque con poder\nvariable.
+6,6,150,SALPICADURA,No tiene ningún\nefecto.
+6,6,151,ARMAD. ÁCIDA,Aumenta bastante\ntu DEFENSA.
+6,6,152,MARTILLAZO,Alta probabilidad\nde golpe crítico.
+6,6,153,EXPLOSIÓN,"Muy potente, pero\nte debilita."
+6,6,154,GOLPES FURIA,Araña rápidamente\nde 2 a 5 veces.
+6,6,155,HUESOMERANG,Ataque que golpea\ndos veces.
+6,6,156,DESCANSO,Duerme 2 turnos\npara cura total.
+6,6,157,AVALANCHA,Ataque que puede\ncausar retirada.
+6,6,158,HIP.COLMILLO,Ataque que puede\ncausar retirada.
+6,6,159,AFILAR,Mejora el ATAQUE\nde quien lo usa.
+6,6,160,CONVERSIÓN,Cambia el tipo de\nPOKéMON.
+6,6,161,TRI-ATAQUE,Dispara tres tipos\nde rayos a la vez.
+6,6,162,SÚPER DIENTE,Reduce a la mitad\nlos PS del rival.
+6,6,163,CUCHILLADA,Buena probabilidad\nde golpe crítico.
+6,6,164,SUSTITUTO,Crea señuelo con\n1/4 de tus PS máx.
+6,6,165,COMBATE,Sólo se usa si se\nacaban los PP.
+6,6,166,ESQUEMA,Copia siempre el\nataque del rival.
+6,6,167,TRIPLEPATADA,Da 3 veces y cada\nvez más fuerte.
+6,6,168,LADRÓN,Ataque que puede\nrobar un objeto.
+6,6,169,TELARAÑA,Impide huir o\ncambiar.
+6,6,170,TELÉPATA,Garantiza el éxito\ndel próximo golpe.
+6,6,171,PESADILLA,El dormido pierde\n1/4 PS por turno.
+6,6,172,RUEDA FUEGO,Ataque que puede\ncausar quemaduras.
+6,6,173,RONQUIDO,Sólo se utiliza\ncuando duermes.
+6,6,174,MALDICIÓN,No funciona igual\ncon fantasmas.
+6,6,175,AZOTE,Más potente si\ntienes pocos PS.
+6,6,176,CONVERSIÓN2,Tu tipo se hace\nresistente.
+6,6,177,AEROCHORRO,Alta probabilidad\nde golpe crítico.
+6,6,178,ESPORAGODÓN,Baja la VELOCIDAD\ndel rival.
+6,6,179,INVERSIÓN,Más potente si\ntienes pocos PS.
+6,6,180,RENCOR,Baja PP del último\nataque del rival.
+6,6,181,NIEVE POLVO,Ataque que puede\ncongelar.
+6,6,182,PROTECCIÓN,Frustra el ataque.\nPuede fallar.
+6,6,183,ULTRA PUÑO,Puñetazo rápido.\nGolpea primero.
+6,6,184,CARA SUSTO,Baja la VELOCIDAD\ndel rival.
+6,6,185,FINTA,Ataque que no\nfalla nunca.
+6,6,186,BESO DULCE,Ataque que provoca\nconfusión.
+6,6,187,TAMBOR,Reduce tus PS para\nmejorar el ATAQUE.
+6,6,188,BOMBA LODO,Puede envenenar\nal enemigo.
+6,6,189,BOFETÓN-LODO,Baja la PRECISIÓN\ndel enemigo.
+6,6,190,PULPOCAÑÓN,Puede reducir la\nPRECISIÓN.
+6,6,191,PÚAS,Hiere al enemigo\nen los cambios.
+6,6,192,ELECTROCAÑÓN,Ataque que\nparaliza siempre.
+6,6,193,PROFECÍA,Anula ataques que\nbajan PRECISIÓN.
+6,6,194,MISMODESTINO,El enemigo se\ndebilita contigo.
+6,6,195,CANTO MORTAL,Tu rival y tú\ncaéis en 3 turnos.
+6,6,196,VIENTO HIELO,Ataque helado que\nbaja la VELOCIDAD.
+6,6,197,DETECCIÓN,Puede esquivar el\nataque ese turno.
+6,6,198,ATAQUE ÓSEO,Ataque que golpea\nde 2 a 5 veces.
+6,6,199,FIJAR BLANCO,Garantiza el éxito\ndel sig. ataque.
+6,6,200,ENFADO,Dura 2 ó 3 turnos\ny te confunde.
+6,6,201,TORM. ARENA,Produce daño en\ntodos los turnos.
+6,6,202,GIGA-DRENADO,Quita la mitad del\ndaño producido.
+6,6,203,AGUANTE,"Deja siempre 1 PS,\ncomo mínimo."
+6,6,204,ENCANTO,Reduce bastante el\nATAQUE del rival.
+6,6,205,DESENROLLAR,"Ataca 5 turnos,\ncon más potencia."
+6,6,206,FALSOTORTAZO,Deja al enemigo\ncon al menos 1 PS.
+6,6,207,CONTONEO,Provoca confusión\ny sube el ATAQUE.
+6,6,208,BATIDO,Restaura la mitad\nde los PS máximos.
+6,6,209,CHISPA,Ataque que puede\nparalizar.
+6,6,210,CORTEFURIA,Sucesivos golpes\ndan más poder.
+6,6,211,ALA DE ACERO,Alas rígidas que\ngolpean al rival.
+6,6,212,MAL DE OJO,Impide huir o\ncambiar.
+6,6,213,ATRACCIÓN,Enamora al género\nopuesto.
+6,6,214,SONÁMBULO,Ataca al azar\nmientras duermes.
+6,6,215,CAMPANA CURA,Cura problemas de\nestado.
+6,6,216,RETROCESO,Ataque basado en\nla lealtad.
+6,6,217,PRESENTE,Bomba que puede\nrestaurar PS.
+6,6,218,FRUSTRACIÓN,Basado en la falta\nde lealtad.
+6,6,219,VELO SAGRADO,Evita problemas\nde estado.
+6,6,220,DIVIDE DOLOR,Une los PS de am-\nbos y los divide.
+6,6,221,FUEGOSAGRADO,Ataque que puede\ncausar quemaduras.
+6,6,222,MAGNITUD,Ataque de tierra.\nFuerza aleatoria.
+6,6,223,PUÑODINÁMICO,Ataque que siempre\nconfunde.
+6,6,224,MEGACUERNO,Ataque muy\npotente.
+6,6,225,DRAGOALIENTO,Ataque soplo\nmuy potente.
+6,6,226,RELEVO,Cambia y mantiene\nlos efectos.
+6,6,227,OTRA VEZ,Hace que el rival\nrepita 2-6 veces.
+6,6,228,PERSECUCIÓN,Golpea al POKéMON\ncuando cambia.
+6,6,229,GIRO RÁPIDO,Ataque giratorio\nde gran velocidad.
+6,6,230,DULCE AROMA,Reduce la EVASIÓN\ndel enemigo.
+6,6,231,COLA FÉRREA,Ataque que puede\nbajar la DEFENSA.
+6,6,232,GARRA-METAL,Puede aumentar tu\nATAQUE.
+6,6,233,TIRO VITAL,Un 2º golpe que\nno falla nunca.
+6,6,234,SOL MATINAL,Restaura PS (varía\ncon el tiempo).
+6,6,235,SÍNTESIS,Restaura PS (varía\ncon el tiempo).
+6,6,236,LUZ LUNAR,Restaura PS (varía\ncon el tiempo).
+6,6,237,PODER OCULTO,El poder varía\nsegún el POKéMON.
+6,6,238,TAJO CRUZADO,Alta probabilidad\nde golpe crítico.
+6,6,239,CICLÓN,Crea un tornado\npara atacar.
+6,6,240,DANZA LLUVIA,Mejora ataques de\nagua 5 turnos.
+6,6,241,DÍA SOLEADO,Mejora ataques de\nfuego 5 turnos.
+6,6,242,TRITURAR,Ataque que puede\nbajar la DEF. ESP.
+6,6,243,MANTO ESPEJO,Dobla un ATAQUE\nESPECIAL.
+6,6,244,MÁS PSIQUE,Copia los cambios\nde car. del rival.
+6,6,245,VEL. EXTREMA,Un primer golpe\nmuy potente.
+6,6,246,PODER PASADO,Puede subir todas\nlas caract.
+6,6,247,BOLA SOMBRA,Ataque que puede\nbajar la DEF. ESP.
+6,6,248,PREMONICIÓN,Ataque que golpea\nen el 3er turno.
+6,6,249,GOLPE ROCA,Ataque que puede\nbajar la DEFENSA.
+6,6,250,TORBELLINO,Atrapa al enemigo\nde 2 a 5 turnos.
+6,6,251,PALIZA,Ataque de todo el\nequipo POKéMON.
