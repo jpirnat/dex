@@ -440,6 +440,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseStatsUsagePokemonRepository::class
 );
 $services->alias(
+	\Jp\Dex\Domain\TextLinks\TextLinkRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseTextLinkRepository::class
+);
+$services->alias(
 	\Jp\Dex\Domain\Items\TmRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseTmRepository::class
 );

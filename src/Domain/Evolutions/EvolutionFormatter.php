@@ -7,16 +7,13 @@ use Jp\Dex\Domain\Conditions\ConditionId;
 use Jp\Dex\Domain\Conditions\ConditionNameRepositoryInterface;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Items\ItemId;
-use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
-use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Natures\DexNatureRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
-use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
+use Jp\Dex\Domain\TextLinks\TextLinkRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
@@ -26,11 +23,8 @@ final readonly class EvolutionFormatter
 {
 	public function __construct(
 		private VersionGroupRepositoryInterface $versionGroupRepository,
-		private ItemNameRepositoryInterface $itemNameRepository,
-		private MoveNameRepositoryInterface $moveNameRepository,
-		private PokemonNameRepositoryInterface $pokemonNameRepository,
+		private TextLinkRepositoryInterface $textLinkRepository,
 		private StatNameRepositoryInterface $statNameRepository,
-		private DexTypeRepositoryInterface $dexTypeRepository,
 		private VersionNameRepositoryInterface $versionNameRepository,
 		private ConditionNameRepositoryInterface $conditionNameRepository,
 		private DexNatureRepositoryInterface $dexNatureRepository,
@@ -56,38 +50,42 @@ final readonly class EvolutionFormatter
 
 		$item = '';
 		if ($evoMethodId->needsItem()) {
-			$item = $this->itemNameRepository->getByLanguageAndItem(
+			$textLinkItem = $this->textLinkRepository->getForItem(
+				$evolution->getVersionGroupId(),
 				$languageId,
 				$evolution->getItemId(),
 			);
-			$item = $item->getName();
+			$item = $textLinkItem->getLinkHtml();
 		}
 
 		$move = '';
 		if ($evoMethodId->needsMove()) {
-			$move = $this->moveNameRepository->getByLanguageAndMove(
+			$textLinkMove = $this->textLinkRepository->getForMove(
+				$evolution->getVersionGroupId(),
 				$languageId,
 				$evolution->getMoveId(),
 			);
-			$move = $move->getName();
+			$move = $textLinkMove->getLinkHtml();
 		}
 
 		$pokemon = '';
 		if ($evoMethodId->needsPokemon()) {
-			$pokemon = $this->pokemonNameRepository->getByLanguageAndPokemon(
+			$textLinkPokemon = $this->textLinkRepository->getForPokemon(
+				$evolution->getVersionGroupId(),
 				$languageId,
 				$evolution->getPokemonId(),
 			);
-			$pokemon = $pokemon->getName();
+			$pokemon = $textLinkPokemon->getLinkHtml();
 		}
 
 		$type = '';
 		if ($evoMethodId->needsType()) {
-			$type = $this->dexTypeRepository->getById(
-				$evolution->getTypeId(),
+			$textLinkType = $this->textLinkRepository->getForType(
+				$evolution->getVersionGroupId(),
 				$languageId,
+				$evolution->getTypeId(),
 			);
-			$type = $type->getName();
+			$type = $textLinkType->getLinkHtml();
 		}
 
 		$version = '';
@@ -250,8 +248,8 @@ final readonly class EvolutionFormatter
 			EvoMethodId::USE_ITEM_FULL_MOON => new EvolutionTableMethod(
 				"Use $item during a full moon",
 			),
-			EvoMethodId::USE_MOVE_AGILE_STYLE => $this->useMoveAgileStyle($languageId),
-			EvoMethodId::USE_MOVE_STRONG_STYLE => $this->useMoveStrongStyle($languageId),
+			EvoMethodId::USE_MOVE_AGILE_STYLE => $this->useMoveAgileStyle($evolution, $languageId),
+			EvoMethodId::USE_MOVE_STRONG_STYLE => $this->useMoveStrongStyle($evolution, $languageId),
 			EvoMethodId::USE_ITEM_DAY => new EvolutionTableMethod(
 				"Use $item during the day",
 			),
@@ -270,11 +268,12 @@ final readonly class EvolutionFormatter
 			FormId::SHELMET => FormId::KARRABLAST,
 		};
 
-		$pokemon = $this->pokemonNameRepository->getByLanguageAndPokemon(
+		$textLinkPokemon = $this->textLinkRepository->getForPokemon(
+			$evolution->getVersionGroupId(),
 			$languageId,
 			new PokemonId($inExchangeFor),
 		);
-		$pokemon = $pokemon->getName();
+		$pokemon = $textLinkPokemon->getLinkHtml();
 
 		return new EvolutionTableMethod(
 			"Trade, in exchange for $pokemon",
@@ -312,22 +311,25 @@ final readonly class EvolutionFormatter
 		Evolution $evolution,
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
-		$nincada = $this->pokemonNameRepository->getByLanguageAndPokemon(
+		$nincada = $this->textLinkRepository->getForPokemon(
+			$evolution->getVersionGroupId(),
 			$languageId,
 			new PokemonId($evolution->getEvoFromId()->value()),
 		);
-		$ninjask = $this->pokemonNameRepository->getByLanguageAndPokemon(
+		$ninjask = $this->textLinkRepository->getForPokemon(
+			$evolution->getVersionGroupId(),
 			$languageId,
 			New PokemonId(PokemonId::NINJASK),
 		);
-		$pokeBall = $this->itemNameRepository->getByLanguageAndItem(
+		$pokeBall = $this->textLinkRepository->getForItem(
+			$evolution->getVersionGroupId(),
 			$languageId,
 			new ItemId(ItemId::POKE_BALL),
 		);
 
-		$nincada = $nincada->getName();
-		$ninjask = $ninjask->getName();
-		$pokeBall = $pokeBall->getName();
+		$nincada = $nincada->getLinkHtml();
+		$ninjask = $ninjask->getLinkHtml();
+		$pokeBall = $pokeBall->getLinkHtml();
 
 		return new EvolutionTableMethod(
 			"Evolve $nincada into $ninjask, with an empty party slot and a $pokeBall in your bag",
@@ -472,17 +474,19 @@ final readonly class EvolutionFormatter
 	) : EvolutionTableMethod {
 		$number = $evolution->getOtherParameter();
 
-		$bisharp = $this->pokemonNameRepository->getByLanguageAndPokemon(
+		$bisharp = $this->textLinkRepository->getForPokemon(
+			$evolution->getVersionGroupId(),
 			$languageId,
 			New PokemonId(PokemonId::BISHARP),
 		);
-		$leadersCrest = $this->itemNameRepository->getByLanguageAndItem(
+		$leadersCrest = $this->textLinkRepository->getForItem(
+			$evolution->getVersionGroupId(),
 			$languageId,
 			new ItemId(ItemId::LEADERS_CREST),
 		);
 
-		$bisharp = $bisharp->getName();
-		$leadersCrest = $leadersCrest->getName();
+		$bisharp = $bisharp->getLinkHtml();
+		$leadersCrest = $leadersCrest->getLinkHtml();
 
 		return new EvolutionTableMethod(
 			"Level up, after defeating $number $bisharp that hold a $leadersCrest",
@@ -515,13 +519,15 @@ final readonly class EvolutionFormatter
 	 * For Stantler into Wyrdeer.
 	 */
 	private function useMoveAgileStyle(
+		Evolution $evolution,
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
-		$psyshieldBash = $this->moveNameRepository->getByLanguageAndMove(
+		$psyshieldBash = $this->textLinkRepository->getForMove(
+			$evolution->getVersionGroupId(),
 			$languageId,
 			new MoveId(MoveId::PSYSHIELD_BASH),
 		);
-		$psyshieldBash = $psyshieldBash->getName();
+		$psyshieldBash = $psyshieldBash->getLinkHtml();
 
 		return new EvolutionTableMethod(
 			"Use $psyshieldBash in the agile style 20 times",
@@ -532,13 +538,15 @@ final readonly class EvolutionFormatter
 	 * For Hisuian Qwilfish into Overqwil.
 	 */
 	private function useMoveStrongStyle(
+		Evolution $evolution,
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
-		$barbBarrage = $this->moveNameRepository->getByLanguageAndMove(
+		$barbBarrage = $this->textLinkRepository->getForMove(
+			$evolution->getVersionGroupId(),
 			$languageId,
 			new MoveId(MoveId::BARB_BARRAGE),
 		);
-		$barbBarrage = $barbBarrage->getName();
+		$barbBarrage = $barbBarrage->getLinkHtml();
 
 		return new EvolutionTableMethod(
 			"Use $barbBarrage in the strong style 20 times",
