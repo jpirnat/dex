@@ -26,6 +26,8 @@
 	</div>
 
 	<template v-if="loaded">
+		<h1 class="dex-page__title">{{ pokemon.name }}</h1>
+
 		<template v-if="abilities.length > 0">
 			<h2 class="dex-section__title">Abilities</h2>
 			<ul class="dex-pokemon__abilities">
