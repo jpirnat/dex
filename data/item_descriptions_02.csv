@@ -1,0 +1,2641 @@
+version_group_id,language_id,item_id,name,description
+5,1,1,マスターボール,
+5,1,2,ハイパーボール,
+5,1,3,スーパーボール,
+5,1,4,モンスターボール,
+5,1,17,キズぐすリ,
+5,1,18,どくけし,
+5,1,19,やけどなおし,
+5,1,20,こおリなおし,
+5,1,21,ねむけざまし,
+5,1,22,まひなおし,
+5,1,23,かいふくのくすリ,
+5,1,24,まんたんのくすリ,
+5,1,25,すごいキズぐすリ,
+5,1,26,いいキズぐすリ,
+5,1,27,なんでもなおし,
+5,1,28,げんきのかけら,
+5,1,29,げんきのかたまリ,
+5,1,30,おいしいみず,
+5,1,31,サイコソーダ,
+5,1,32,ミックスオレ,
+5,1,33,モーモーミルク,
+5,1,34,ちからのこな,
+5,1,35,ちからのねっこ,
+5,1,36,ばんのうごな,
+5,1,37,ふっかつそう,
+5,1,38,ピーピーエイド,
+5,1,39,ピーピーリカバー,
+5,1,40,ピーピーエイダー,
+5,1,41,ピーピーマックス,
+5,1,43,きのみジュース,
+5,1,44,せいなるはい,
+5,1,45,マックスアップ,
+5,1,46,タウリン,
+5,1,47,ブロムへキシン,
+5,1,48,インドメタシン,
+5,1,49,リゾチウム,
+5,1,50,ふしぎなアメ,
+5,1,51,ポイントアップ,
+5,1,55,エフェクトガード,
+5,1,56,クリティカッター,
+5,1,57,プラスパワー,
+5,1,58,ディフェンダー,
+5,1,59,スピーダー,
+5,1,60,ヨクアタール,
+5,1,61,スぺシャルアップ,
+5,1,63,ピッピにんぎょう,
+5,1,76,シルバースプレー,
+5,1,77,ゴールドスプレー,
+5,1,78,あなぬけのヒモ,
+5,1,79,むしよけスプレー,
+5,1,80,たいようのいし,
+5,1,81,つきのいし,
+5,1,82,ほのおのいし,
+5,1,83,かみなリのいし,
+5,1,84,みずのいし,
+5,1,85,リーフのいし,
+5,1,86,ちいさなキノコ,
+5,1,87,おおきなキノコ,
+5,1,88,しんじゅ,
+5,1,89,おおきなしんじゅ,
+5,1,90,ほしのすな,
+5,1,91,ほしのかけら,
+5,1,92,きんのたま,
+5,1,213,ひかリのこな,
+5,1,216,がくしゅうそうち,
+5,1,217,せんせいのツメ,
+5,1,221,おうじゃのしるし,
+5,1,222,ぎんのこな,
+5,1,223,おまもリこばん,
+5,1,224,きよめのおふだ,
+5,1,228,けむリだま,
+5,1,229,かわらずのいし,
+5,1,230,きあいのハチマキ,
+5,1,231,しあわせタマゴ,
+5,1,232,ピントレンズ,
+5,1,233,メタルコート,
+5,1,234,たべのこし,
+5,1,235,リゅうのウロコ,
+5,1,236,でんきだま,
+5,1,237,やわらかいすな,
+5,1,238,かたいいし,
+5,1,239,きせきのタネ,
+5,1,240,くろいメガネ,
+5,1,241,くろおび,
+5,1,242,じしゃく,
+5,1,243,しんぴのしずく,
+5,1,244,するどいくちばし,
+5,1,245,どくバリ,
+5,1,246,とけないこおリ,
+5,1,247,のろいのおふだ,
+5,1,248,まがったスプーン,
+5,1,249,もくたん,
+5,1,250,リゅうのキバ,
+5,1,252,アップグレード,
+5,1,256,ラッキーパンチ,
+5,1,257,メタルパウダー,
+5,1,258,ふといホネ,
+5,1,259,ながねぎ,
+5,1,328,わざマシン０１,
+5,1,329,わざマシン０２,
+5,1,330,わざマシン０３,
+5,1,331,わざマシン０４,
+5,1,332,わざマシン０５,
+5,1,333,わざマシン０６,
+5,1,334,わざマシン０７,
+5,1,335,わざマシン０８,
+5,1,336,わざマシン０９,
+5,1,337,わざマシン１０,
+5,1,338,わざマシン１１,
+5,1,339,わざマシン１２,
+5,1,340,わざマシン１３,
+5,1,341,わざマシン１４,
+5,1,342,わざマシン１５,
+5,1,343,わざマシン１６,
+5,1,344,わざマシン１７,
+5,1,345,わざマシン１８,
+5,1,346,わざマシン１９,
+5,1,347,わざマシン２０,
+5,1,348,わざマシン２１,
+5,1,349,わざマシン２２,
+5,1,350,わざマシン２３,
+5,1,351,わざマシン２４,
+5,1,352,わざマシン２５,
+5,1,353,わざマシン２６,
+5,1,354,わざマシン２７,
+5,1,355,わざマシン２８,
+5,1,356,わざマシン２９,
+5,1,357,わざマシン３０,
+5,1,358,わざマシン３１,
+5,1,359,わざマシン３２,
+5,1,360,わざマシン３３,
+5,1,361,わざマシン３４,
+5,1,362,わざマシン３５,
+5,1,363,わざマシン３６,
+5,1,364,わざマシン３７,
+5,1,365,わざマシン３８,
+5,1,366,わざマシン３９,
+5,1,367,わざマシン４０,
+5,1,368,わざマシン４１,
+5,1,369,わざマシン４２,
+5,1,370,わざマシン４３,
+5,1,371,わざマシン４４,
+5,1,372,わざマシン４５,
+5,1,373,わざマシン４６,
+5,1,374,わざマシン４７,
+5,1,375,わざマシン４８,
+5,1,376,わざマシン４９,
+5,1,377,わざマシン５０,
+5,1,420,ひでんマシン０１,
+5,1,421,ひでんマシン０２,
+5,1,422,ひでんマシン０３,
+5,1,423,ひでんマシン０４,
+5,1,424,ひでんマシン０５,
+5,1,425,ひでんマシン０６,
+5,1,444,コインケース,
+5,1,445,ボロのつリざお,
+5,1,446,いいつリざお,
+5,1,447,すごいつリざお,
+5,1,450,じてんしゃ,
+5,1,456,ふねのチケット,
+5,1,464,ひでんのくすリ,
+5,1,471,ダウジングマシン,
+5,1,473,おいしいシッポ,
+5,1,475,カードキー,
+5,1,476,ちかのカギ,
+5,1,477,ゼニガメじょうろ,
+5,1,478,あかいウロコ,
+5,1,479,おとしもの,
+5,1,480,ていきけん,
+5,1,481,きかいのぶひん,
+5,1,482,ぎんいろのはね,
+5,1,483,にじいろのはね,
+5,1,484,ふしぎなタマゴ,
+5,1,485,あかぼんぐリ,
+5,1,486,あおぼんぐリ,
+5,1,487,きぼんぐリ,
+5,1,488,みどぼんぐリ,
+5,1,489,くろぼんぐリ,
+5,1,490,しろぼんぐリ,
+5,1,491,ももぼんぐリ,
+5,1,492,スピードボール,
+5,1,493,レべルボール,
+5,1,494,ルアーボール,
+5,1,495,へビーボール,
+5,1,496,ラブラブボール,
+5,1,497,フレンドボール,
+5,1,498,ムーンボール,
+5,1,499,パークボール,
+5,1,504,いかリまんじゅう,
+5,1,737,ひでんマシン０７,
+5,1,10002,ぎんのはっぱ,
+5,1,10003,どくけしのみ,
+5,1,10004,きんのはっぱ,
+5,1,10005,まひなおしのみ,
+5,1,10006,やけたきのみ,
+5,1,10007,こおったきのみ,
+5,1,10008,にがいきのみ,
+5,1,10009,はっかのみ,
+5,1,10010,ピンクのリボン,
+5,1,10011,きせきのみ,
+5,1,10012,ふしぎなきのみ,
+5,1,10013,はかいのいでんし,
+5,1,10014,はながらメール,
+5,1,10015,きのはこ,
+5,1,10016,きリのはこ,
+5,1,10017,みずたまリボン,
+5,1,10018,きのみ,
+5,1,10019,おうごんのみ,
+5,1,10020,かわらのかけら,
+5,1,10021,なみのリメール,
+5,1,10022,みずいろメール,
+5,1,10023,にがおえメール,
+5,1,10024,ラブリーメール,
+5,1,10025,ブイブイメール,
+5,1,10026,へんしんメール,
+5,1,10027,あおぞらメール,
+5,1,10028,おんぷメール,
+5,1,10029,まぼろしメール,
+5,2,1,MASTER BALL,The best BALL. It\nnever misses.
+5,2,2,ULTRA BALL,A BALL with a high\nrate of success.
+5,2,3,GREAT BALL,A BALL with a de-\ncent success rate.
+5,2,4,POKé BALL,An item for catch-\ning POKéMON.
+5,2,17,POTION,Restores POKéMON\nHP by 20.
+5,2,18,ANTIDOTE,Cures poisoned\nPOKéMON.
+5,2,19,BURN HEAL,Heals burned\nPOKéMON.
+5,2,20,ICE HEAL,Defrosts frozen\nPOKéMON.
+5,2,21,AWAKENING,Awakens sleeping\nPOKéMON.
+5,2,22,PARLYZ HEAL,Heals paralyzed\nPOKéMON.
+5,2,23,FULL RESTORE,Fully restores HP\n& status.
+5,2,24,MAX POTION,Fully restores\nPOKéMON HP.
+5,2,25,HYPER POTION,Restores POKéMON\nHP by 200.
+5,2,26,SUPER POTION,Restores POKéMON\nHP by 50.
+5,2,27,FULL HEAL,Eliminates all\nstatus problems.
+5,2,28,REVIVE,Restores a fainted\nPOKéMON to 1/2 HP.
+5,2,29,MAX REVIVE,Fully restores a\nfainted POKéMON.
+5,2,30,FRESH WATER,Restores POKéMON\nHP by 50.
+5,2,31,SODA POP,Restores POKéMON\nHP by 60.
+5,2,32,LEMONADE,Restores POKéMON\nHP by 80.
+5,2,33,MOOMOO MILK,Restores POKéMON\nHP by 100.
+5,2,34,ENERGYPOWDER,Restores POKéMON\nHP by 50. Bitter.
+5,2,35,ENERGY ROOT,Restores POKéMON\nHP by 200. Bitter.
+5,2,36,HEAL POWDER,Cures all status\nproblems. Bitter.
+5,2,37,REVIVAL HERB,Revives fainted\nPOKéMON. Bitter.
+5,2,38,ETHER,Restores PP of one\nmove by 10.
+5,2,39,MAX ETHER,Fully restores PP\nof one move.
+5,2,40,ELIXER,Restores PP of all\nmoves by 10.
+5,2,41,MAX ELIXER,Fully restores the\nPP of one POKéMON.
+5,2,43,BERRY JUICE,Restores POKéMON\nHP by 20.
+5,2,44,SACRED ASH,Fully revives all\nfainted POKéMON.
+5,2,45,HP UP,Raises the HP of\none POKéMON.
+5,2,46,PROTEIN,Raises ATTACK of\none POKéMON.
+5,2,47,IRON,Raises DEFENSE of\none POKéMON.
+5,2,48,CARBOS,Raises SPEED of\none POKéMON.
+5,2,49,CALCIUM,Ups SPECIAL stats\nof one POKéMON.
+5,2,50,RARE CANDY,Raises level of a\nPOKéMON by one.
+5,2,51,PP UP,Raises max PP of\na selected move.
+5,2,55,GUARD SPEC.,Prevents stat\nreduction. (1 BTL)
+5,2,56,DIRE HIT,Ups critical hit\nratio. (1 BTL)
+5,2,57,X ATTACK,Raises ATTACK.\n(1 BTL)
+5,2,58,X DEFEND,Raises DEFENSE.\n(1 BTL)
+5,2,59,X SPEED,Raises SPEED.\n(1 BTL)
+5,2,60,X ACCURACY,Raises accuracy.\n(1 BTL)
+5,2,61,X SPECIAL,Raises SPECIAL\nstats. (1 BTL)
+5,2,63,POKé DOLL,Use to escape from\na wild POKéMON.
+5,2,76,SUPER REPEL,Repels weak POKé-\nMON for 200 steps.
+5,2,77,MAX REPEL,Repels weak POKé-\nMON for 250 steps.
+5,2,78,ESCAPE ROPE,"Use for escaping\nfrom caves, etc."
+5,2,79,REPEL,Repels weak POKé-\nMON for 100 steps.
+5,2,80,SUN STONE,Evolves certain\nkinds of POKéMON.
+5,2,81,MOON STONE,Evolves certain\nkinds of POKéMON.
+5,2,82,FIRE STONE,Evolves certain\nkinds of POKéMON.
+5,2,83,THUNDERSTONE,Evolves certain\nkinds of POKéMON.
+5,2,84,WATER STONE,Evolves certain\nkinds of POKéMON.
+5,2,85,LEAF STONE,Evolves certain\nkinds of POKéMON.
+5,2,86,TINYMUSHROOM,An ordinary mush-\nroom. Sell low.
+5,2,87,BIG MUSHROOM,A rare mushroom.\nSell high.
+5,2,88,PEARL,A beautiful pearl.\nSell low.
+5,2,89,BIG PEARL,"A big, beautiful\npearl. Sell high."
+5,2,90,STARDUST,"Pretty, red sand.\nSell high."
+5,2,91,STAR PIECE,A hunk of red gem.\nSell very high.
+5,2,92,NUGGET,Made of pure gold.\nSell high.
+5,2,213,BRIGHTPOWDER,Lowers the foe's\naccuracy. (HOLD)
+5,2,216,EXP.SHARE,Shares battle EXP.\npoints. (HOLD)
+5,2,217,QUICK CLAW,Raises 1st strike\nratio. (HOLD)
+5,2,221,KING'S ROCK,May make the foe\nflinch. (HOLD)
+5,2,222,SILVERPOWDER,Powers up bug-type\nmoves. (HOLD)
+5,2,223,AMULET COIN,Doubles monetary\nearnings. (HOLD)
+5,2,224,CLEANSE TAG,Helps repel wild\nPOKéMON. (HOLD)
+5,2,228,SMOKE BALL,Escape from wild\nPOKéMON. (HOLD)
+5,2,229,EVERSTONE,Stops evolution.\n(HOLD)
+5,2,230,FOCUS BAND,May prevent faint-\ning. (HOLD)
+5,2,231,LUCKY EGG,Earns extra EXP.\npoints. (HOLD)
+5,2,232,SCOPE LENS,Raises critical\nhit ratio. (HOLD)
+5,2,233,METAL COAT,Powers up steel-\ntype moves. (HOLD)
+5,2,234,LEFTOVERS,Restores HP during\nbattle. (HOLD)
+5,2,235,DRAGON SCALE,A rare dragon-type\nitem.
+5,2,236,LIGHT BALL,"An odd, electrical\norb. (HOLD)"
+5,2,237,SOFT SAND,Powers up ground-\ntype moves. (HOLD)
+5,2,238,HARD STONE,Powers up rock-\ntype moves. (HOLD)
+5,2,239,MIRACLE SEED,Powers up grass-\ntype moves. (HOLD)
+5,2,240,BLACKGLASSES,Powers up dark-\ntype moves. (HOLD)
+5,2,241,BLACKBELT,Boosts fighting-\ntype moves. (HOLD)
+5,2,242,MAGNET,Boosts electric-\ntype moves. (HOLD)
+5,2,243,MYSTIC WATER,Powers up water-\ntype moves. (HOLD)
+5,2,244,SHARP BEAK,Powers up flying-\ntype moves. (HOLD)
+5,2,245,POISON BARB,Powers up poison-\ntype moves. (HOLD)
+5,2,246,NEVERMELTICE,Powers up ice-type\nmoves. (HOLD)
+5,2,247,SPELL TAG,Powers up ghost-\ntype moves. (HOLD)
+5,2,248,TWISTEDSPOON,Powers up psychic-\ntype moves. (HOLD)
+5,2,249,CHARCOAL,Powers up fire-\ntype moves. (HOLD)
+5,2,250,DRAGON FANG,Powers up dragon-\ntype moves. (HOLD)
+5,2,252,UP-GRADE,A mysterious box\nmade by SILPH CO.
+5,2,256,LUCKY PUNCH,Ups critical hit\nratio of CHANSEY.
+5,2,257,METAL POWDER,Raises DEFENSE of\nDITTO. (HOLD)
+5,2,258,THICK CLUB,A bone of some\nsort. Sell low.
+5,2,259,STICK,An ordinary stick.\nSell low.
+5,2,328,TM01,
+5,2,329,TM02,
+5,2,330,TM03,
+5,2,331,TM04,
+5,2,332,TM05,
+5,2,333,TM06,
+5,2,334,TM07,
+5,2,335,TM08,
+5,2,336,TM09,
+5,2,337,TM10,
+5,2,338,TM11,
+5,2,339,TM12,
+5,2,340,TM13,
+5,2,341,TM14,
+5,2,342,TM15,
+5,2,343,TM16,
+5,2,344,TM17,
+5,2,345,TM18,
+5,2,346,TM19,
+5,2,347,TM20,
+5,2,348,TM21,
+5,2,349,TM22,
+5,2,350,TM23,
+5,2,351,TM24,
+5,2,352,TM25,
+5,2,353,TM26,
+5,2,354,TM27,
+5,2,355,TM28,
+5,2,356,TM29,
+5,2,357,TM30,
+5,2,358,TM31,
+5,2,359,TM32,
+5,2,360,TM33,
+5,2,361,TM34,
+5,2,362,TM35,
+5,2,363,TM36,
+5,2,364,TM37,
+5,2,365,TM38,
+5,2,366,TM39,
+5,2,367,TM40,
+5,2,368,TM41,
+5,2,369,TM42,
+5,2,370,TM43,
+5,2,371,TM44,
+5,2,372,TM45,
+5,2,373,TM46,
+5,2,374,TM47,
+5,2,375,TM48,
+5,2,376,TM49,
+5,2,377,TM50,
+5,2,420,HM01,
+5,2,421,HM02,
+5,2,422,HM03,
+5,2,423,HM04,
+5,2,424,HM05,
+5,2,425,HM06,
+5,2,444,COIN CASE,"Holds up to 9,999\ngame coins."
+5,2,445,OLD ROD,Use by water to\nfish for POKéMON.
+5,2,446,GOOD ROD,A good ROD for\ncatching POKéMON.
+5,2,447,SUPER ROD,The best ROD for\ncatching POKéMON.
+5,2,450,BICYCLE,A collapsible bike\nfor fast movement.
+5,2,456,S.S.TICKET,A ticket for the\nS.S.AQUA.
+5,2,464,SECRETPOTION,Fully heals any\nPOKéMON.
+5,2,471,ITEMFINDER,Checks for unseen\nitems in the area.
+5,2,473,SLOWPOKETAIL,Very tasty. Sell\nhigh.
+5,2,475,CARD KEY,Opens shutters in\nthe RADIO TOWER.
+5,2,476,BASEMENT KEY,Opens doors.\n
+5,2,477,SQUIRTBOTTLE,A bottle used for\nwatering plants.
+5,2,478,RED SCALE,A scale from the\nred GYARADOS.
+5,2,479,LOST ITEM,The POKé DOLL lost\nby the COPYCAT.
+5,2,480,PASS,A ticket for the\nMAGNET TRAIN.
+5,2,481,MACHINE PART,A machine part for\nthe POWER PLANT.
+5,2,482,SILVER WING,"A strange, silver-\ncolored feather."
+5,2,483,RAINBOW WING,A mystical feather\nof rainbow colors.
+5,2,484,MYSTERY EGG,An EGG obtained\nfrom MR.POKéMON.
+5,2,485,RED APRICORN,A red APRICORN.
+5,2,486,BLU APRICORN,A blue APRICORN.
+5,2,487,YLW APRICORN,A yellow APRICORN.
+5,2,488,GRN APRICORN,A green APRICORN.
+5,2,489,BLK APRICORN,A black APRICORN.
+5,2,490,WHT APRICORN,A white APRICORN.
+5,2,491,PNK APRICORN,A pink APRICORN.
+5,2,492,FAST BALL,A BALL for catch-\ning fast POKéMON.
+5,2,493,LEVEL BALL,A BALL for lower-\nlevel POKéMON.
+5,2,494,LURE BALL,A BALL for POKéMON\nhooked by a ROD.
+5,2,495,HEAVY BALL,A BALL for catch-\ning heavy POKéMON.
+5,2,496,LOVE BALL,For catching the\nopposite gender.
+5,2,497,FRIEND BALL,A BALL that makes\nPOKéMON friendly.
+5,2,498,MOON BALL,A BALL for MOON\nSTONE evolvers.
+5,2,499,PARK BALL,The Bug-Catching\nContest BALL.
+5,2,504,RAGECANDYBAR,Restores POKéMON\nHP by 20.
+5,2,737,HM07,
+5,2,10002,SILVER LEAF,"A strange, silver-\ncolored leaf."
+5,2,10003,PSNCUREBERRY,A self-cure for\npoison. (HOLD)
+5,2,10004,GOLD LEAF,"A strange, gold-\ncolored leaf."
+5,2,10005,PRZCUREBERRY,A self-cure for\nparalysis. (HOLD)
+5,2,10006,BURNT BERRY,A self-cure for\nfreezing. (HOLD)
+5,2,10007,ICE BERRY,A self-heal for a\nburn. (HOLD)
+5,2,10008,BITTER BERRY,A self-cure for\nconfusion. (HOLD)
+5,2,10009,MINT BERRY,A self-awakening\nfor sleep. (HOLD)
+5,2,10010,PINK BOW,Powers up normal-\ntype moves. (HOLD)
+5,2,10011,MIRACLEBERRY,Cures all status\nproblems. (HOLD)
+5,2,10012,MYSTERYBERRY,A self-restore\nfor PP. (HOLD)
+5,2,10013,BERSERK GENE,Boosts ATTACK but\ncauses confusion.
+5,2,10014,FLOWER MAIL,Flower-print MAIL.\n(HOLD)
+5,2,10015,NORMAL BOX,Open it and see\nwhat's inside.
+5,2,10016,GORGEOUS BOX,Open it and see\nwhat's inside.
+5,2,10017,POLKADOT BOW,Powers up normal-\ntype moves. (HOLD)
+5,2,10018,BERRY,"A self-restore\nitem. (10HP, HOLD)"
+5,2,10019,GOLD BERRY,"A self-restore\nitem. (30HP, HOLD)"
+5,2,10020,BRICK PIECE,A rare chunk of\nbrick.
+5,2,10021,SURF MAIL,LAPRAS-print MAIL.\n(HOLD)
+5,2,10022,LITEBLUEMAIL,DRATINI-print\nMAIL. (HOLD)
+5,2,10023,PORTRAITMAIL,MAIL featuring the\nholder's likeness.
+5,2,10024,LOVELY MAIL,Heart-print MAIL.\n(HOLD)
+5,2,10025,EON MAIL,EEVEE-print MAIL.\n(HOLD)
+5,2,10026,MORPH MAIL,DITTO-print MAIL.\n(HOLD)
+5,2,10027,BLUESKY MAIL,Sky-print MAIL.\n(HOLD)
+5,2,10028,MUSIC MAIL,NATU-print MAIL.\n(HOLD)
+5,2,10029,MIRAGE MAIL,MEW-print MAIL.\n(HOLD)
+5,3,1,MASTER BALL,La meilleure BALL.\nNe rate jamais.
+5,3,2,HYPER BALL,BALL à haut taux\nde réussite.
+5,3,3,SUPER BALL,BALL à taux de\nréussite correct.
+5,3,4,POKé BALL,Objet pour captu-\nrer les POKéMON.
+5,3,17,POTION,Restaure 20 PV\nd'un POKéMON.
+5,3,18,ANTIDOTE,Soigne les POKéMON\nempoisonnés.
+5,3,19,ANTI-BRULE,Soigne les POKéMON\nbrûlés.
+5,3,20,ANTIGEL,Dégèle les POKéMON\ngelés.
+5,3,21,REVEIL,Réveille les POKé-\nMON endormis.
+5,3,22,ANTI-PARA,Soigne les POKéMON\nparalysés.
+5,3,23,GUERISON,Restaure tous PV\net statut.
+5,3,24,POTION MAX,Restaure tous les\nPV d'un POKéMON.
+5,3,25,HYPER POTION,Restaure 200 PV\nd'un POKéMON.
+5,3,26,SUPER POTION,Restaure 50 PV\nd'un POKéMON.
+5,3,27,TOTAL SOIN,Contre tout chan-\ngement de statut.
+5,3,28,RAPPEL,Ranime POKéMON KO\navec 1/2 PV.
+5,3,29,RAPPEL MAX,Réanimation et\nsoin total.
+5,3,30,EAU FRAICHE,Restaure 50 PV\nd'un POKéMON.
+5,3,31,SODA COOL,Restaure 60 PV\nd'un POKéMON.
+5,3,32,LIMONADE,Restaure 80 PV\nd'un POKéMON.
+5,3,33,LAIT MEUMEU,Restaure 100 PV\nd'un POKéMON.
+5,3,34,POUDRENERGIE,Restaure 50 PV\nd'un PKMN. Amer.
+5,3,35,RACINENERGIE,Restaure 200 PV\nd'un PKMN. Amer.
+5,3,36,POUDRE SOIN,Contre changement\nde statut. Amer.
+5,3,37,HERBE RAPPEL,Ranime un PKMN KO.\nAmer.
+5,3,38,HUILE,Restaure 10 PP\nd'une capacité.
+5,3,39,HUILE MAX,Restaure tous les\nPP d'une capacité.
+5,3,40,ELIXIR,Restaure 10 PP de\ntoutes capacités.
+5,3,41,MAX ELIXIR,Restaure tous PP\nd'un POKéMON.
+5,3,43,JUS DE BAIE,Restaure 20 PV\nd'un POKéMON.
+5,3,44,CENDRESACREE,Ranimation totale\nde tous POKéMON.
+5,3,45,PV PLUS,Monte les PV d'un\nPOKéMON.
+5,3,46,PROTEINE,Monte l'ATTAQUE\nd'un POKéMON.
+5,3,47,FER,Monte la DEFENSE\nd'un POKéMON.
+5,3,48,CARBONE,Monte la VITESSE\nd'un POKéMON.
+5,3,49,CALCIUM,Monte le SPECIAL\nd'un POKéMON.
+5,3,50,SUPER BONBON,Monte d'un niveau\nun POKéMON.
+5,3,51,PP PLUS,Monte le max de PP\nd'une capacité.
+5,3,55,DEFENSE SPEC,Prévient réduction\nde stat.(1 CBT)
+5,3,56,MUSCLE +,Plus de chances de\ncritiques. (1 CBT)
+5,3,57,ATTAQUE +,Monte l'ATTAQUE.\n(1 CBT)
+5,3,58,DEFENSE +,Monte la DEFENSE.\n(1 CBT)
+5,3,59,VITESSE +,Monte la VITESSE.\n(1 CBT)
+5,3,60,PRECISION +,Monte la précision\n(1 CBT).
+5,3,61,SPECIAL +,Monte le SPECIAL.\n(1 CBT)
+5,3,63,POKé POUPEE,Pour s'enfuir face\nà un PKMN sauvage.
+5,3,76,SUPEREPOUSSE,Repousse faibles\nPKMN de 200 pas.
+5,3,77,MAX REPOUSSE,Repousse faibles\nPKMN de 250 pas.
+5,3,78,CORDE SORTIE,"Pour s'enfuir\nd'une grotte, etc."
+5,3,79,REPOUSSE,Repousse faibles\nPKMN de 100 pas.
+5,3,80,PIERRESOLEIL,Evolue certains\ntypes de POKéMON.
+5,3,81,PIERRE LUNE,Evolue certains\ntypes de POKéMON.
+5,3,82,PIERRE FEU,Evolue certains\ntypes de POKéMON.
+5,3,83,PIERREFOUDRE,Evolue certains\ntypes de POKéMON.
+5,3,84,PIERRE EAU,Evolue certains\ntypes de POKéMON.
+5,3,85,PIERREPLANTE,Evolue certains\ntypes de POKéMON.
+5,3,86,PETIT CHAMPI,Un champignon.\nSe vend peu cher.
+5,3,87,GROS CHAMPI,Champignon rare.\nSe vend cher.
+5,3,88,PERLE,Une belle perle.\nSe vend peu cher.
+5,3,89,GRANDE PERLE,Une belle grosse\nperle. Très chère.
+5,3,90,POUSS.ETOILE,Joli sable rouge.\nSe vend cher.
+5,3,91,MORC. ETOILE,Morceau de joyau\nrouge. Très cher.
+5,3,92,PEPITE,En or pur.\nSe vend cher.
+5,3,213,POUDRECLAIRE,Baisse précision\nennemi. (TENU)
+5,3,216,MULTI EXP,Partager les pts\nd'EXP. (TENU)
+5,3,217,VIVE GRIFFE,Plus de chances d'\ninitiative. (TENU)
+5,3,221,ROCHE ROYALE,Peut apeurer l'\nennemi. (TENU)
+5,3,222,POUDRE ARG.,Renforce capacités\nINSECTE. (TENU)
+5,3,223,PIECE RUNE,Double les gains\nd'argent. (TENU)
+5,3,224,RUNE PURIF.,Repousse les PKMN\nsauvages. (TENU)
+5,3,228,BOULE FUMEE,Pour s'enfuir face\nà un PKMN sauvage.
+5,3,229,PIERRE STASE,Arrête une\névolution. (TENU)
+5,3,230,BANDEAU +,Peut empêcher un\nK.O. (TENU)
+5,3,231,OEUF CHANCE,Gagne plus de pts\nEXP. (TENU)
+5,3,232,LENTILSCOPE,Plus de chances de\ncritiques. (TENU)
+5,3,233,PEAU METAL,Renforce capacités\nACIER. (TENU)
+5,3,234,RESTES,Restaure les PV\nen combat. (TENU)
+5,3,235,ECAILLEDRACO,Une écaille rare\nde type dragon.
+5,3,236,BALLELUMIERE,Une orbe électri-\nque étrange.(TENU)
+5,3,237,SABLE DOUX,Renforce les capa-\ncités SOL. (TENU)
+5,3,238,PIERRE DURE,Renforce capacités\nROCHE. (TENU)
+5,3,239,GRAIN MIRACL,Renforce capacités\nPLANTE. (TENU)
+5,3,240,LUNET.NOIRES,Renforce capacités\nTENEBRES. (TENU)
+5,3,241,CEINT.NOIRE,Renforce capacités\nCOMBAT. (TENU)
+5,3,242,AIMANT,Renforce capacités\nELECTRIK. (TENU)
+5,3,243,EAU MYSTIQUE,Renforce capacités\nEAU. (TENU)
+5,3,244,BEC POINTU,Renforce les capa-\ncités VOL. (TENU)
+5,3,245,PIC VENIN,Renforce capacités\nPOISON. (TENU)
+5,3,246,GLACETERNEL,Renforce capacités\nGLACE. (TENU)
+5,3,247,RUNE SORT,Renforce capacités\nSPECTRE. (TENU)
+5,3,248,CUILLERTORDU,Renforce capacités\nPSY. (TENU)
+5,3,249,CHARBON,Renforce capacités\nFEU. (TENU)
+5,3,250,CROC DRAGON,Renforce capacités\nDRAGON. (TENU)
+5,3,252,EVOLUTOR,Une étrange boîte\nde la SYLPHE SARL.
+5,3,256,POING CHANCE,Plus de critiques\navec LEVEINARD.
+5,3,257,POUDRE METAL,Monte DEFENSE de\nMETAMORPH. (TENU)
+5,3,258,MASSE OS,Un os. Se vend\npeu cher.
+5,3,259,BATON,Un poireau normal.\nSe vend peu cher.
+5,3,328,CT01,
+5,3,329,CT02,
+5,3,330,CT03,
+5,3,331,CT04,
+5,3,332,CT05,
+5,3,333,CT06,
+5,3,334,CT07,
+5,3,335,CT08,
+5,3,336,CT09,
+5,3,337,CT10,
+5,3,338,CT11,
+5,3,339,CT12,
+5,3,340,CT13,
+5,3,341,CT14,
+5,3,342,CT15,
+5,3,343,CT16,
+5,3,344,CT17,
+5,3,345,CT18,
+5,3,346,CT19,
+5,3,347,CT20,
+5,3,348,CT21,
+5,3,349,CT22,
+5,3,350,CT23,
+5,3,351,CT24,
+5,3,352,CT25,
+5,3,353,CT26,
+5,3,354,CT27,
+5,3,355,CT28,
+5,3,356,CT29,
+5,3,357,CT30,
+5,3,358,CT31,
+5,3,359,CT32,
+5,3,360,CT33,
+5,3,361,CT34,
+5,3,362,CT35,
+5,3,363,CT36,
+5,3,364,CT37,
+5,3,365,CT38,
+5,3,366,CT39,
+5,3,367,CT40,
+5,3,368,CT41,
+5,3,369,CT42,
+5,3,370,CT43,
+5,3,371,CT44,
+5,3,372,CT45,
+5,3,373,CT46,
+5,3,374,CT47,
+5,3,375,CT48,
+5,3,376,CT49,
+5,3,377,CT50,
+5,3,420,CS01,
+5,3,421,CS02,
+5,3,422,CS03,
+5,3,423,CS04,
+5,3,424,CS05,
+5,3,425,CS06,
+5,3,444,BOITE JETON,"Contient jusqu'à\n9,999 jetons."
+5,3,445,CANNE,Pour pêcher les\nPKMN dans l'eau.
+5,3,446,SUPER CANNE,Une bonne canne à\npêcher les PKMN.
+5,3,447,MEGA CANNE,La meilleure canne\nà pêcher les PKMN.
+5,3,450,BICYCLETTE,Un vélo pliable\npour se balader.
+5,3,456,PASSE BATEAU,Un ticket pour\nl'AQUARIA.
+5,3,464,POTIONSECRET,Soin total d'un\nPOKéMON.
+5,3,471,CHERCH'OBJET,Voir objets invi-\nsibles de la zone.
+5,3,473,QUEUERAMOLOS,Très bon. Se vend\ncher.
+5,3,475,CARTE MAGN.,Ouvre les volets\ndans TOUR RADIO.
+5,3,476,CLE SOUS-SOL,Ouvre des portes.
+5,3,477,CARAPUCE A O,Bouteille pour ar-\nroser les plantes.
+5,3,478,ECAILLEROUGE,Ecaille du LEVIA-\nTOR rouge.
+5,3,479,OBJET PERDU,POKé POUPEE perdue\npar la COPIEUSE.
+5,3,480,PASSE,Un ticket pour le\nTRAIN MAGNET.
+5,3,481,PARTIE MACH.,Un élément de la\nCENTRALE.
+5,3,482,AILE ARGENT,Une étrange plume\nargentée.
+5,3,483,ARCENCI'AILE,Plume mystique\narc-en-ciel.
+5,3,484,OEUF MYSTERE,Un OEUF obtenu de\nM.POKéMON.
+5,3,485,NOIGRUME RGE,Un NOIGRUME rouge.
+5,3,486,NOIGRUME BLU,Un NOIGRUME bleu.
+5,3,487,NOIGRUME JNE,Un NOIGRUME jaune.
+5,3,488,NOIGRUME VER,Un NOIGRUME vert.
+5,3,489,NOIGRUME NOI,Un NOIGRUME noir.
+5,3,490,NOIGRUME BLC,Un NOIGRUME blanc.
+5,3,491,NOIGRUME ROS,Un NOIGRUME rose.
+5,3,492,SPEED BALL,BALL pour capturer\nPOKéMON rapides.
+5,3,493,NIVEAU BALL,BALL pour POKéMON\nde niveau moindre.
+5,3,494,APPAT BALL,BALL pour POKéMON\nferrés par CANNE.
+5,3,495,MASSE BALL,BALL pour capturer\nles PKMN lourds.
+5,3,496,LOVE BALL,Pour capturer le\ngenre opposé.
+5,3,497,COPAIN BALL,BALL pour rendre\nun PKMN amical.
+5,3,498,LUNE BALL,BALL pour évolués\npar PIERRE LUNE.
+5,3,499,PARC BALL,BALL du Concours\nde Capture.
+5,3,504,BONBON RAGE,Restaure 20 PV\nd'un POKéMON.
+5,3,737,CS07,
+5,3,10002,FEUILLE ARG.,Une étrange feuil-\nle argentée.
+5,3,10003,BAIE ANTIDOT,Un antidote auto-\nmatique. (TENU)
+5,3,10004,FEUILLE D'OR,Une étrange feuil-\nle dorée.
+5,3,10005,BAIE ANTIPAR,Un anti-paralysie\nautomatique.(TENU)
+5,3,10006,BAIE BRULURE,Un antigel\nautomatique.(TENU)
+5,3,10007,BAIE GEL,Un anti-brûle\nautomatique.(TENU)
+5,3,10008,BAIE AMERE,Un anti-confusion\nautomatique.(TENU)
+5,3,10009,BAIE MENTHE,Réveil pour PKMN\nendormis. (TENU)
+5,3,10010,RUBAN ROSE,Renforce capacités\nNORMAL. (TENU)
+5,3,10011,BAIE MIRACLE,Contre changement\nde statut. (TENU)
+5,3,10012,BAIE MYSTERE,Restaure les PP en\nauto. (TENU)
+5,3,10013,ADN BERZERK,Monte l'ATTAQUE\nrend confus.
+5,3,10014,LETR FLEUR,LETTRE à fleurs.\n(TENU)
+5,3,10015,COFFRE NML,A ouvrir pour voir\nà l'intérieur.
+5,3,10016,COFFRE LUXE,A ouvrir pour voir\nà l'intérieur.
+5,3,10017,RUBAN A POIS,Renforce capacités\nNORMAL. (TENU)
+5,3,10018,BAIE,"Auto-soin.\n(10PV, TENU)"
+5,3,10019,BAIE DOREE,"Auto-soin.\n(30PV, TENU)"
+5,3,10020,MORC. BRIQUE,Morceau rare d'une\nbrique.
+5,3,10021,LETR SURF,LETTRE avec un\nLOKHLASS. (TENU)
+5,3,10022,LETRBLEUCIEL,LETTRE avec un\nMINIDRACO. (TENU)
+5,3,10023,LETRPORTRAIT,LETTRE au goût du\ndétenteur. (TENU)
+5,3,10024,LETRCHARM.,LETTRE à coeurs.\n(TENU)
+5,3,10025,LETR EVOLI,LETTRE avec un\nEVOLI. (TENU)
+5,3,10026,LETR MORPH,LETTRE avec un\nMETAMORPH. (TENU)
+5,3,10027,LETRCIELBLEU,LETTRE avec des\nnuages. (TENU)
+5,3,10028,LETR MUSIQUE,LETTRE avec un\nNATU. (TENU)
+5,3,10029,LETR MIRAGE,LETTRE avec un\nMEW. (TENU)
+5,4,1,MEISTERBALL,Der beste BALL.\nErfolg garantiert!
+5,4,2,HYPERBALL,Ein BALL mit hoher\nErfolgsquote.
+5,4,3,SUPERBALL,Ein BALL mit guter\nErfolgsquote.
+5,4,4,POKéBALL,Damit fängst du\nPOKéMON.
+5,4,17,TRANK,Füllt die KP um\n20 auf.
+5,4,18,GEGENGIFT,Heilt\nVergiftungen.
+5,4,19,FEUERHEILER,Heilt\nVerbrennungen.
+5,4,20,EISHEILER,Taut POKéMON\nwieder auf.
+5,4,21,AUFWECKER,Weckt schlafende\nPOKéMON.
+5,4,22,PARA-HEILER,Heilt \nParalyse.
+5,4,23,TOP-GENESUNG,Stellt KP und\nStatus wieder her.
+5,4,24,TOP-TRANK,Füllt KP\nvollständig auf.
+5,4,25,HYPERTRANK,Füllt die KP um\n200 auf.
+5,4,26,SUPERTRANK,Füllt die KP um\n50 auf. Bitter.
+5,4,27,HYPERHEILER,Beseitigt alle\nStatusprobleme.
+5,4,28,BELEBER,Belebt POKéMON\nplus halbe KP.
+5,4,29,TOP-BELEBER,Belebt POKéMON\nplus volle KP.
+5,4,30,TAFELWASSER,Füllt KP um\n50 auf.
+5,4,31,SPRUDEL,Füllt KP um\n60 auf.
+5,4,32,LIMONADE,Füllt KP um\n80 auf.
+5,4,33,KUHMUH-MILCH,Füllt die KP\num 100 auf.
+5,4,34,ENERGIESTAUB,Füllt KP um\n50 auf.
+5,4,35,KRAFTWURZEL,Füllt KP um\n200 auf. Bitter.
+5,4,36,HEILPUDER,Heilt alle Status-\nprobleme. Bitter.
+5,4,37,VITALKRAUT,Belebt besiegte\nPOKéMON wieder.
+5,4,38,ÄTHER,Füllt die AP\num 10 auf.
+5,4,39,TOP-ÄTHER,Füllt die AP\nvollständig auf.
+5,4,40,ELIXIER,Füllt alle AP\num 10 auf.
+5,4,41,TOP-ELIXIER,Füllt alle APs\nauf.
+5,4,43,BEERENSAFT,Füllt KP um\n20 auf.
+5,4,44,ZAUBERASCHE,Belebt alle be-\nsiegten POKéMON.
+5,4,45,KP-PLUS,Erhöht die KP\neines POKéMON.
+5,4,46,PROTEIN,Erhöht den\nANGR-Wert.
+5,4,47,EISEN,Erhöht den\nVERT-Wert.
+5,4,48,CARBON,Erhöht den\nINIT-Wert.
+5,4,49,KALZIUM,Erhöht den\nSPEZ-Wert.
+5,4,50,SONDERBONBON,Hebt Level um\neins an.
+5,4,51,AP-PLUS,Hebt die max.\nAnzahl der AP.
+5,4,55,MEGABLOCK,Keine Statusände-\nrung für 1 Kampf.
+5,4,56,ANGRIFFPLUS,Hebt Volltreffer-\nquote für 1 Kampf.
+5,4,57,X-ANGRIFF,Hebt ANGR-Wert\nfür 1 Kampf.
+5,4,58,X-ABWEHR,Hebt VERT-Wert\nfür 1 Kampf.
+5,4,59,X-TEMPO,Hebt INIT-Wert\nfür 1 Kampf.
+5,4,60,X-TREFFER,Hebt Genauigkeit\nfür 1 Kampf.
+5,4,61,X-SPEZIAL,Hebt SPEZ-Wert\nfür 1 Kampf.
+5,4,63,POKéPUPPE,Flucht vor wilden\nPOKéMON.
+5,4,76,SUPERSCHUTZ,Starker Schutz vor\nPOKéMON.
+5,4,77,TOP-SCHUTZ,Bester Schutz vor\nPOKéMON.
+5,4,78,FLUCHTSEIL,"Ermöglicht Flucht\naus Höhlen, etc."
+5,4,79,SCHUTZ,Hält schwache\nPOKéMON ab.
+5,4,80,SONNENSTEIN,Entwickelt manche\nPOKéMON.
+5,4,81,MONDSTEIN,Entwickelt\nmanche POKéMON.
+5,4,82,FEUERSTEIN,Entwickelt manche\nPOKéMON.
+5,4,83,DONNERSTEIN,Entwickelt manche\nPOKéMON.
+5,4,84,WASSERSTEIN,Entwickelt manche\nPOKéMON.
+5,4,85,BLATTSTEIN,Entwickelt manche\nPOKéMON.
+5,4,86,MINIPILZ,Ein gemeiner Pilz.\nWert gering.
+5,4,87,RIESENPILZ,Ein seltener Pilz.\nWert hoch.
+5,4,88,PERLE,Eine Perle.\nWert niedrig.
+5,4,89,RIESENPERLE,Eine schöne Perle.\nWert hoch.
+5,4,90,STERNENSTAUB,Schöner roter\nSand. Wert hoch.
+5,4,91,STERNENSTÜCK,Roter Edelstein.\nWert sehr hoch.
+5,4,92,NUGGET,Aus purem Gold.\nWert hoch.
+5,4,213,BLENDPUDER,Senkt Genauigkeit.\n(TRAGEN)
+5,4,216,EP-TEILER,Teilt Kampf-EP\n(TRAGEN)
+5,4,217,FLINKKLAUE,Erhöht Erstschlag-\nquote. (TRAGEN)
+5,4,221,KING-STEIN,Feind flieht\nevtl. (TRAGEN)
+5,4,222,SILBERSTAUB,Verstärkt Käfer-\nAttacken. (TRAGEN)
+5,4,223,MÜNZAMULETT,Doppeltes Ein-\nkommen. (TRAGEN)
+5,4,224,SCHUTZBAND,Schutz vor wilden\nPOKéMON. (TRAGEN)
+5,4,228,RAUCHBALL,Flucht vor wilden\nPOKéMON. (TRAGEN)
+5,4,229,EWIGSTEIN,Entwicklungsstopp.\n(TRAGEN)
+5,4,230,FOKUS-BAND,Könnte K.O. ver-\nhindern. (TRAGEN)
+5,4,231,GLÜCKS-EI,Erhält Extra-EP.\n(TRAGEN)
+5,4,232,SCOPE-LINSE,Hebt Volltreffer-\nquote. (TRAGEN)
+5,4,233,METALLMANTEL,Verstärkt Stahl-\nAttacken. (TRAGEN)
+5,4,234,ÜBERRESTE,Füllt KP im Kampf\nauf. (TRAGEN)
+5,4,235,DRACHENHAUT,Ein seltenes\nDrachen-Item.
+5,4,236,KUGELBLITZ,Bizarrer Elektro-\nBall. (TRAGEN)
+5,4,237,PUDERSAND,Verstärkt Boden-\nAttacken. (TRAGEN)
+5,4,238,GRANITSTEIN,Verstärkt Gestein-\nAttacken. (TRAGEN)
+5,4,239,WUNDERSAAT,Verstärkt Pfl.-\nAttacken. (TRAGEN)
+5,4,240,SCHATTENGLAS,Verstärkt Unlicht-\nAttacken. (TRAGEN)
+5,4,241,SCHWARZGURT,Verstärkt Kampf-\nAttacken. (TRAGEN)
+5,4,242,MAGNET,Verstärkt Elektro-\nAttacken. (TRAGEN)
+5,4,243,ZAUBERWASSER,Verstärkt Wasser-\nAttacken. (TRAGEN)
+5,4,244,HACKATTACK,Verstärkt Flug-\nAttacken. (TRAGEN)
+5,4,245,GIFTSTICH,Verstärkt Gift-\nAttacken. (TRAGEN)
+5,4,246,EWIGES EIS,Verstärkt Eis-\nAttacken. (TRAGEN)
+5,4,247,BANNSTICKER,Verstärkt Geist-\nAttacken. (TRAGEN)
+5,4,248,KRÜMMLÖFFEL,Verstärkt Psycho-\nAttacken. (TRAGEN)
+5,4,249,HOLZKOHLE,Verstärkt Feuer-\nAttacken. (TRAGEN)
+5,4,250,DRACHENZAHN,Verstärkt Drachen-\nAttacken. (TRAGEN)
+5,4,252,UP-GRADE,Eine mysteriöse\nBox der SILPH CO.
+5,4,256,LUCKY PUNCH,Erhöht CHANEIRAS\nVolltrefferquote.
+5,4,257,METALLSTAUB,Hebt VERT-Wert von\nDITTO. (TRAGEN)
+5,4,258,KAMPFKNOCHEN,Ein Knochen.\nWert niedrig.
+5,4,259,LAUCHSTANGE,Gemeiner Lauch.\nWert gering.
+5,4,328,TM01,
+5,4,329,TM02,
+5,4,330,TM03,
+5,4,331,TM04,
+5,4,332,TM05,
+5,4,333,TM06,
+5,4,334,TM07,
+5,4,335,TM08,
+5,4,336,TM09,
+5,4,337,TM10,
+5,4,338,TM11,
+5,4,339,TM12,
+5,4,340,TM13,
+5,4,341,TM14,
+5,4,342,TM15,
+5,4,343,TM16,
+5,4,344,TM17,
+5,4,345,TM18,
+5,4,346,TM19,
+5,4,347,TM20,
+5,4,348,TM21,
+5,4,349,TM22,
+5,4,350,TM23,
+5,4,351,TM24,
+5,4,352,TM25,
+5,4,353,TM26,
+5,4,354,TM27,
+5,4,355,TM28,
+5,4,356,TM29,
+5,4,357,TM30,
+5,4,358,TM31,
+5,4,359,TM32,
+5,4,360,TM33,
+5,4,361,TM34,
+5,4,362,TM35,
+5,4,363,TM36,
+5,4,364,TM37,
+5,4,365,TM38,
+5,4,366,TM39,
+5,4,367,TM40,
+5,4,368,TM41,
+5,4,369,TM42,
+5,4,370,TM43,
+5,4,371,TM44,
+5,4,372,TM45,
+5,4,373,TM46,
+5,4,374,TM47,
+5,4,375,TM48,
+5,4,376,TM49,
+5,4,377,TM50,
+5,4,420,VM01,
+5,4,421,VM02,
+5,4,422,VM03,
+5,4,423,VM04,
+5,4,424,VM05,
+5,4,425,VM06,
+5,4,444,MÜNZKORB,Kann bis zu 9.999\nMünzen aufnehmen.
+5,4,445,ANGEL,Damit kannst du\nPOKéMON angeln.
+5,4,446,PROFIANGEL,Eine gute ANGEL\nzum Fischen.
+5,4,447,SUPERANGEL,Die beste ANGEL\nzum Fischen.
+5,4,450,FAHRRAD,"Ein Klapprad, um\nschneller zu sein."
+5,4,456,BOOTSTICKET,Ein Ticket für die\nM.S.AQUA.
+5,4,464,GEHEIMTRANK,Heilt jedes POKé-\nMON vollständig.
+5,4,471,DETEKTOR,Scannt die Umge-\nbung nach Items.
+5,4,473,FLEGMONRUTE,Sehr lecker.\nWert hoch.
+5,4,475,TÜRÖFFNER,Öffnet die Rollos\nim RADIOTURM.
+5,4,476,KELLERÖFFNER,Öffnet Türen.
+5,4,477,SCHIGGYKANNE,"Eine Kanne, um\nBäume zu wässern."
+5,4,478,ROTE HAUT,Haut vom roten\nGARADOS.
+5,4,479,FUNDSACHE,Nachahmerin verlor\nPOKé-PUPPE.
+5,4,480,FAHRSCHEIN,Ticket für\nMAGNETZUG.
+5,4,481,SPULE,Ein Maschinenteil\nfür das KRAFTWERK.
+5,4,482,SILBERFLÜGEL,Eine seltsame\nsilberne Feder.
+5,4,483,BUNTSCHWINGE,Mystische Regen-\nBogen-Feder.
+5,4,484,RÄTSEL-EI,Ein EI von\nMr. POKéMON.
+5,4,485,APRIKOKO ROT,Eine rote\nAPRIKOKO.
+5,4,486,APRIKOKO BLU,Eine blaue\nAPRIKOKO.
+5,4,487,APRIKOKO GLB,Eine gelbe\nAPRIKOKO.
+5,4,488,APRIKOKO GRN,Eine grüne\nAPRIKOKO.
+5,4,489,APRIKOKO SWZ,Eine schwarze\nAPRIKOKO.
+5,4,490,APRIKOKO WSS,Eine weiße\nAPRIKOKO.
+5,4,491,APRIKOKO PNK,Eine pinke\nAPRIKOKO.
+5,4,492,TURBOBALL,Ein BALL für\nschnelle POKéMON.
+5,4,493,LEVELBALL,Ein BALL für\nschwache POKéMON.
+5,4,494,KÖDERBALL,Ein BALL für POKé-\nMON an der Angel.
+5,4,495,SCHWERBALL,Damit fängst du\nschwere POKéMON.
+5,4,496,SYMPABALL,Fängt anderes Ge-\nschlecht leichter.
+5,4,497,FREUNDESBALL,Fördert Sympathie\nbei wilden PKMN.
+5,4,498,MONDBALL,Fängt MONDST.-Ent-\nwickler eher ein.
+5,4,499,PARKBALL,BALL für das\nKäfertunier.
+5,4,504,WUTKEKS,Füllt KP um\n20 auf.
+5,4,737,VM07,
+5,4,10002,SILBERBLATT,Ein seltsames\nsilbernes Blatt.
+5,4,10003,GGNGIFTBEERE,Selbstheilung bei\nGift. (TRAGEN)
+5,4,10004,GOLDBLATT,Ein seltsames\ngoldenes Blatt.
+5,4,10005,ANTIPARBEERE,Selbstheilung bei\nParalyse. (TRAGEN)
+5,4,10006,BRANDBEERE,Selbstheilung bei\nFrost. (TRAGEN)
+5,4,10007,EISBEERE,Selbstheilung bei\nBrand. (TRAGEN)
+5,4,10008,BITTERBEERE,Selbstheilung bei\nVerwirr. (TRAGEN)
+5,4,10009,MINZBEERE,Auto-Aufwecker bei\nSchlaf. (TRAGEN)
+5,4,10010,ROSA BAND,Verstärkt Normal-\nAttacken. (TRAGEN)
+5,4,10011,WUNDERBEERE,Setzt Status in\nUrzustand.(TRAGEN)
+5,4,10012,RÄTSELBEERE,Auto-Auffüllung\nder AP. (TRAGEN)
+5,4,10013,BERSERK-GEN,Hebt ANGR-Wert und\nbewirkt Verwirr.
+5,4,10014,BLUMENBRIEF,Umschlag mit Blu-\nmendruck.(TRAGEN)
+5,4,10015,SCHACHTEL,Öffne sie und\nschau hinein.
+5,4,10016,SCHATULLE,Öffne sie und\nschau hinein.
+5,4,10017,PUNKT-BAND,Verstärkt Normal-\nAttacken. (TRAGEN)
+5,4,10018,BEERE,Selbstheilung um\n10 KP. (TRAGEN)
+5,4,10019,GOLDBEERE,Selbstheilung um\n30 KP. (TRAGEN)
+5,4,10020,ZIEGELSTEIN,Ein seltenes Stück\neines Ziegels.
+5,4,10021,SURFERBRIEF,Umschlag mit\nLAPRAS. (TRAGEN)
+5,4,10022,CYANBRIEF,Umschlag mit\nDRATINI. (TRAGEN)
+5,4,10023,ABBILDBRIEF,Umschlag mit\nBesitzerportrait.
+5,4,10024,HERZBRIEF,Umschlag mit Herz-\nAufdruck. (TRAGEN)
+5,4,10025,ANARA-BRIEF,Umschlag mit\nEVOLI. (TRAGEN)
+5,4,10026,MORPH-BRIEF,Umschlag mit\nDITTO. (TRAGEN)
+5,4,10027,KOBALTBRIEF,Himmelblauer\nUmschlag. (TRAGEN)
+5,4,10028,MELODIEBRIEF,Umschlag mit NATU-\nAufdruck. (TRAGEN)
+5,4,10029,TRUGBRIEF,Umschlag mit MEW-\nAufdruck. (TRAGEN)
+5,5,1,MASTER BALL,La BALL migliore:\ninfallibile.
+5,5,2,ULTRA BALL,Altissima probabi-\nlità di successo.
+5,5,3,MEGA BALL,Discrete possibi-\nlità di successo.
+5,5,4,POKé BALL,Si usa per cattu-\nrare i POKéMON.
+5,5,17,POZIONE,Restituisce 20 PS\nal POKéMON.
+5,5,18,ANTIDOTO,Cura i POKéMON\navvelenati.
+5,5,19,ANTISCOTTAT.,Cura i POKéMON\nscottati.
+5,5,20,ANTIGELO,Cura i POKéMON\ncongelati.
+5,5,21,SVEGLIA,Sveglia i POKéMON\naddormentati.
+5,5,22,ANTIPARALISI,Cura i POKéMON\nparalizzati.
+5,5,23,RICARICA TOT,Ridà i PS e azzera\nproblemi di stato.
+5,5,24,POZIONE MAX,Restituisce tutti\ni PS.
+5,5,25,IPERPOZIONE,Restituisce 200 PS\nal POKéMON.
+5,5,26,SUPERPOZIONE,Restituisce 50 PS\nal POKéMON.
+5,5,27,CURA TOTALE,Risolve tutti i\nproblemi di stato.
+5,5,28,REVITALIZ.,Un POKéMON esausto\nritorna a 1/2 PS.
+5,5,29,REVITAL.MAX,Un POKéMON esausto\nrecupera ogni PS.
+5,5,30,ACQUA FRESCA,Restituisce 50 PS\nal POKéMON.
+5,5,31,GASSOSA,Restituisce 60 PS\nal POKéMON.
+5,5,32,LEMONSUCCO,Restituisce 80 PS\nal POKéMON.
+5,5,33,LATTE MUMU,Restituisce 100 PS\nal POKéMON.
+5,5,34,POLVENERGIA,Restituisce 50 PS.\nGusto amaro.
+5,5,35,RADICENERGIA,Restituisce 200\nPS. Gusto amaro.
+5,5,36,POLVOCURA,Cura ogni problema\ndi stato. Amara.
+5,5,37,VITALERBA,Rianima POKéMON\nesausto. Amara.
+5,5,38,ETERE,Restituisce 10 PP\ndi una mossa.
+5,5,39,ETERE MAX,Restituisce tutti\ni PP di una mossa.
+5,5,40,ELISIR,Restituisce 10 PP\nad ogni mossa.
+5,5,41,ELISIR MAX,Restituisce tutti\ni PP del POKéMON.
+5,5,43,SUCCODIBACCA,Restituisce al\nPOKéMON 20 PS.
+5,5,44,CENEREMAGICA,Rianima qualsiasi\nPOKéMON esausto.
+5,5,45,PS-SU,Aumenta i PS\ndi un POKéMON.
+5,5,46,PROTEINA,Potenzia ATTACCO\ndi un POKéMON.
+5,5,47,FERRO,Potenzia DIFESA\ndi un POKéMON.
+5,5,48,CARBURANTE,Potenzia VELOCITÀ\ndi un POKéMON.
+5,5,49,CALCIO,Aumenta stat.SPEC.\ndi un POKéMON.
+5,5,50,CARAM. RARA,Eleva il POKéMON\ndi un livello.
+5,5,51,PP-SU,Aumenta PP max.\ndi una data mossa.
+5,5,55,SUPERGUARDIA,Previene riduzione\nstat.(LOTTA)
+5,5,56,SUPERCOLPO,Brutti colpi più\nprobabili.(LOTTA)
+5,5,57,ATTACCO X,Migliora ATTACCO.\n(LOTTA)
+5,5,58,DIFESA X,Migliora DIFESA.\n(LOTTA)
+5,5,59,VELOCITÀ X,Migliora VELOCITÀ.\n(LOTTA)
+5,5,60,PRECISIONE X,Migliora\nprecisione.(LOTTA)
+5,5,61,SPECIAL X,Migliora ATTACCO\nSPEC.(LOTTA)
+5,5,63,POKé BAMBOLA,Per fuggire da un\nPOKéMON selvatico.
+5,5,76,SUPERREPELL.,Tiene a 200 passi\ni POKéMON deboli.
+5,5,77,REPELL.MAX,Tiene a 250 passi\ni POKéMON deboli.
+5,5,78,FUNE DI FUGA,"Si usa per uscire\nda grotte, ecc."
+5,5,79,REPELLENTE,Tiene a 100 passi\ni POKéMON deboli.
+5,5,80,PIETRASOLARE,Fa evolvere certi\ntipi di POKéMON.
+5,5,81,PIETRALUNARE,Fa evolvere certi\ntipi di POKéMON.
+5,5,82,PIETRAFOCAIA,Fa evolvere certi\ntipi di POKéMON.
+5,5,83,PIETRATUONO,Fa evolvere certi\ntipi di POKéMON.
+5,5,84,PIETRAIDRICA,Fa evolvere certi\ntipi di POKéMON.
+5,5,85,PIETRAFOGLIA,Fa evolvere certi\ntipi di POKéMON.
+5,5,86,MINIFUNGO,Un comune fungo.\nCosta poco.
+5,5,87,GRANDE FUNGO,Un fungo raro.\nMolto costoso.
+5,5,88,PERLA,Una bella perla.\nCosta poco.
+5,5,89,GRANDE PERLA,"Una bella perla,\ngrande e costosa."
+5,5,90,POLVOSTELLA,Splendida sabbia\nrossa. Costosa.
+5,5,91,PEZZO STELLA,Gemma rossa enor-\nme e costosissima.
+5,5,92,PEPITA,È d'oro massiccio.\nCostoso.
+5,5,213,LUMINPOLVERE,Riduce precisione\ndel nemico.(DAI)
+5,5,216,CONDIV.ESP.,Suddivide i punti\nESP.(DAI)
+5,5,217,RAPIDARTIGLI,Aumenta chance di\ncolpire prima(DAI)
+5,5,221,ROCCIA DI RE,Può far tentennare\nl'avversario.(DAI)
+5,5,222,ARGENPOLVERE,Potenzia le mosse\ncoleottero.(DAI)
+5,5,223,MONETAMULETO,Raddoppia i\nguadagni.(DAI)
+5,5,224,VELOPURO,Allontana POKéMON\nselvatici.(DAI)
+5,5,228,PALLA FUMO,Per sfuggire ai\nPOKéMON selv.(DAI)
+5,5,229,PIETRASTANTE,Blocca l'evolu-\nzione.(DAI)
+5,5,230,BANDANA,Può evitare\nil KO.(DAI)
+5,5,231,FORTUNUOVO,Punti ESP.\nextra.(DAI)
+5,5,232,MIRINO,Aumenta i brutti\ncolpi.(DAI)
+5,5,233,METALCOPERTA,Potenzia le mosse\nacciaio.(DAI)
+5,5,234,AVANZI,Ridà PS durante la\nlotta.(DAI)
+5,5,235,SQUAMA DRAGO,Raro strumento\ndi tipo drago.
+5,5,236,ELETTROPALLA,Una strana sfera\nelettrica.(DAI)
+5,5,237,SABBIA SOFF.,Potenzia le mosse\ntipo terra.(DAI)
+5,5,238,PIETRADURA,Potenzia attacchi\nroccia.(DAI)
+5,5,239,MIRACOLSEME,Potenzia le mosse\nerba.(DAI)
+5,5,240,OCCHIALINERI,Potenzia le mosse\nbuio.(DAI)
+5,5,241,CINTURANERA,Migliora le mosse\nlotta.(DAI)
+5,5,242,CALAMITA,Potenzia mosse\nelettro.(DAI)
+5,5,243,ACQUA MAGICA,Potenzia le mosse\nacqua.(DAI)
+5,5,244,BECCAFFILATO,Potenzia le mosse\nvolante.(DAI)
+5,5,245,VELENACULEO,Potenzia le mosse\nveleno.(DAI)
+5,5,246,GELOMAI,Potenzia mosse\nghiaccio.(DAI)
+5,5,247,SPETTROTARGA,Potenzia le mosse\nspettro.(DAI)
+5,5,248,CUCCH.TORTO,Migliora le mosse\npsico.(DAI)
+5,5,249,CARBONELLA,Potenzia le mosse\ndi fuoco.(DAI)
+5,5,250,DENTEDIDRAGO,Potenzia le mosse\ndrago.(DAI)
+5,5,252,UPGRADE,Una strana scatola\ndi SILPH SPA.
+5,5,256,FORTUNPUGNO,Aumenta i brutti\ncolpi di CHANSEY.
+5,5,257,METALPOLVERE,Migliora DIFESA\ndi DITTO.(DAI)
+5,5,258,OSSOSPESSO,"Un osso qualsiasi,\ncosta poco."
+5,5,259,GAMBO,Un normale gambo.\nCosta poco.
+5,5,328,MT01,
+5,5,329,MT02,
+5,5,330,MT03,
+5,5,331,MT04,
+5,5,332,MT05,
+5,5,333,MT06,
+5,5,334,MT07,
+5,5,335,MT08,
+5,5,336,MT09,
+5,5,337,MT10,
+5,5,338,MT11,
+5,5,339,MT12,
+5,5,340,MT13,
+5,5,341,MT14,
+5,5,342,MT15,
+5,5,343,MT16,
+5,5,344,MT17,
+5,5,345,MT18,
+5,5,346,TM19,
+5,5,347,MT20,
+5,5,348,MT21,
+5,5,349,MT22,
+5,5,350,MT23,
+5,5,351,MT24,
+5,5,352,MT25,
+5,5,353,MT26,
+5,5,354,MT27,
+5,5,355,MT28,
+5,5,356,MT29,
+5,5,357,MT30,
+5,5,358,MT31,
+5,5,359,MT32,
+5,5,360,MT33,
+5,5,361,MT34,
+5,5,362,MT35,
+5,5,363,MT36,
+5,5,364,MT37,
+5,5,365,MT38,
+5,5,366,MT39,
+5,5,367,MT40,
+5,5,368,MT41,
+5,5,369,MT42,
+5,5,370,MT43,
+5,5,371,MT44,
+5,5,372,MT45,
+5,5,373,MT46,
+5,5,374,MT47,
+5,5,375,MT48,
+5,5,376,MT49,
+5,5,377,MT50,
+5,5,420,MN01,
+5,5,421,MN02,
+5,5,422,MN03,
+5,5,423,MN04,
+5,5,424,MN05,
+5,5,425,MN06,
+5,5,444,SALVADANAIO,Può contenere\n9.999 gettoni.
+5,5,445,AMO VECCHIO,Pesca i POKéMON\nd'acqua.
+5,5,446,AMO BUONO,Un buon AMO per i\nPOKéMON acqua.
+5,5,447,SUPER AMO,L'AMO migliore per\ncatturare POKéMON.
+5,5,450,BICICLETTA,Bici pieghevole:\nper andare veloce.
+5,5,456,BIGL.NAVE,Un biglietto per\nla M/N ACQUA.
+5,5,464,POZ.SEGRETA,Guarisce ogni\nPOKéMON.
+5,5,471,DETECTOR,Cerca strumenti\nnella zona.
+5,5,473,CODASLOWPOKE,Molto gustosa\ne costosa.
+5,5,475,APRIPORTA,Apriporta nella\nTORRE RADIO.
+5,5,476,CHIAVE SOTT.,Apre le porte.
+5,5,477,ANNAFFIATOIO,Per annaffiare\nle piante.
+5,5,478,SQUAMA ROSSA,La squama di un\nGYARADOS rosso.
+5,5,479,STRUM.PERSO,La POKé BAMBOLA\npersa da COPIONA.
+5,5,480,ABBONAMENTO,Biglietto per il\nSUPERTRENO.
+5,5,481,PEZZO MACCH.,Pezzo macchina\nCENTRALE ELETT.
+5,5,482,ALADARGENTO,Una strana piuma\nargentata.
+5,5,483,ALA D'IRIDE,Piuma magica dai\nmille colori.
+5,5,484,UOVO MISTERO,UOVO che si riceve\nda MR.POKéMON.
+5,5,485,GHICOC.ROSSA,Una GHICOCCA\nrossa.
+5,5,486,GHICOCCA BLU,Una GHICOCCA\nblu.
+5,5,487,GHICOC.GIAL.,Una GHICOCCA\ngialla.
+5,5,488,GHICOC.VERDE,Una GHICOCCA\nverde.
+5,5,489,GHICOC.NERA,Una GHICOCCA\nnera.
+5,5,490,GHICOC.BNCA,Una GHICOCCA\nbianca.
+5,5,491,GHICOC.ROSA,Una GHICOCCA\nrosa.
+5,5,492,RAPID BALL,Per catturare\nPOKéMON veloci.
+5,5,493,LEVEL BALL,Per POKéMON di\nlivello basso.
+5,5,494,ESCA BALL,Per catturare i\nPOKéMON pescati.
+5,5,495,PESO BALL,Cattura POKéMON\npesanti.
+5,5,496,LOVE BALL,Per catturare il\ngenere opposto.
+5,5,497,FRIEND BALL,Rende i POKéMON\namichevoli.
+5,5,498,LUNA BALL,Per chi si evolve\ncon PIETRALUNARE.
+5,5,499,PARK BALL,La BALL della Gara\nPigliamosche.
+5,5,504,IRAMELLA,Restituisce 20 PS\nal POKéMON.
+5,5,737,MN07,
+5,5,10002,FOGLIARGENTO,Una strana foglia\nargentata.
+5,5,10003,BACCANTIVEL.,Autorimedio contro\nil veleno.(DAI)
+5,5,10004,FOGLIADORO,Una strana foglia\ndorata.
+5,5,10005,BACCANTIPAR.,Autorimedio per\nparalisi.(DAI)
+5,5,10006,BACCA BRUC.,Autorim. per con-\ngelamento.(DAI)
+5,5,10007,BACCA GHIAC.,Autorimedio per\nscottature.(DAI)
+5,5,10008,BACCA AMARA,Autorimedio contro\nconfusione.(DAI)
+5,5,10009,BACCA MENTA,Autorisveglio.\n(DAI)
+5,5,10010,FIOCCO ROSA,Potenzia mosse\nnormale.(DAI)
+5,5,10011,BACCA MIRAC.,Cura ogni problema\ndi stato.(DAI)
+5,5,10012,BACCA MIST.,Autorecupero\nPP.(DAI)
+5,5,10013,GENEFURIOSO,Potenzia ATTACCO\nma causa confus.
+5,5,10014,MESS.FIORE,Stampa fiori.\n(DAI)
+5,5,10015,SCAT.NORMALE,Apri e vedrai!
+5,5,10016,SCAT.LUSSO,Apri e vedrai!
+5,5,10017,FIOCCO POIS,Potenzia mosse\nnormale.(DAI)
+5,5,10018,BACCA,"Autorecupero.\n(10 PS, DAI)"
+5,5,10019,BACCA ORO,"Autorecupero.\n(30 PS, DAI)"
+5,5,10020,MATTONCINO,Un raro pezzo di\nmattone.
+5,5,10021,MESS.SURF,Stampa\nLAPRAS.(DAI)
+5,5,10022,MESS.AZZURRO,Stampa\nDRATINI.(DAI)
+5,5,10023,MESS.RITRAT.,Stampa l'immagine\ndi chi la tiene.
+5,5,10024,MESS.DOLCE,Stampa un cuore.\n(DAI)
+5,5,10025,MESS.EON,Stampa EEVEE.\n(DAI)
+5,5,10026,MESS.MORPH,Stampa DITTO.\n(DAI)
+5,5,10027,MESS.CIELO,Stampa il cielo.\n(DAI)
+5,5,10028,MESS.MUSICA,Stampa NATU.\n(DAI)
+5,5,10029,MESS.VISIONE,Stampa MEW.\n(DAI)
+5,6,1,MASTER BALL,Es la mejor BALL.\nNunca falla.
+5,6,2,ULTRA BALL,BALL con un gran\níndice de éxito.
+5,6,3,SÚPER BALL,BALL con un buen\níndice de éxito.
+5,6,4,POKé BALL,Objeto para\ncapturar POKéMON.
+5,6,17,POCIÓN,Restaura 20 PS\ndel POKéMON.
+5,6,18,ANTÍDOTO,Cura a los POKéMON\nenvenenados.
+5,6,19,ANTIQUEMAR,Cura a los POKéMON\nquemados.
+5,6,20,ANTIHIELO,Descongela a los\nPOKéMON.
+5,6,21,DESPERTAR,Despierta a los\nPOKéMON dormidos.
+5,6,22,ANTIPARALIZ,Cura a los POKéMON\nparalizados.
+5,6,23,RESTAU. TODO,Restaura todos los\nPS y el estado.
+5,6,24,MÁX. POCIÓN,Restaura todos los\nPS del POKéMON.
+5,6,25,HÍPER POCIÓN,Restaura 200 PS\ndel POKéMON.
+5,6,26,SÚPER POCIÓN,Restaura 50 PS\ndel POKéMON.
+5,6,27,CURA TOTAL,Cura los problemas\nde estado.
+5,6,28,REVIVIR,Restaura 1/2 PS a\nun POKéMON debili.
+5,6,29,MÁX. REVIVIR,Cura a un POKéMON\ndebilitado.
+5,6,30,AGUA FRESCA,Restaura 50 PS de\nun POKéMON.
+5,6,31,REFRESCO,Restaura 60 PS de\nun POKéMON.
+5,6,32,LIMONADA,Restaura 80 PS de\nun POKéMON.
+5,6,33,LECHE MU-MU,Restaura 100 PS de\nun POKéMON.
+5,6,34,POLVOENERGÍA,Restaura 50 PS del\nPOKéMON. Amarga.
+5,6,35,RAÍZ ENERGÍA,Restaura 200 PS al\nPOKéMON. Amarga.
+5,6,36,POL.CURACIÓN,Cura todos los\nmales. Amarga.
+5,6,37,HIERBA-REV,Revive a los\nPOKéMON. Amarga.
+5,6,38,ÉTER,Restaura 10 PP de\nun movimiento.
+5,6,39,ÉTER MÁX,Restaura todos los\nPP de un ataque.
+5,6,40,ELIXIR,Restaura 10 PP de\ntodos los ataques.
+5,6,41,ELIXIR MÁX,Restaura todos los\nPP de un POKéMON.
+5,6,43,ZUMO DE BAYA,Restaura 20 PS\ndel POKéMON.
+5,6,44,CEN. SAGRADA,Revive POKéMON\ndebilitados.
+5,6,45,MÁS PS,Aumenta los PS de\nun POKéMON.
+5,6,46,PROTEÍNAS,Mejora el ATAQUE\nde un POKéMON.
+5,6,47,HIERRO,Mejora la DEFENSA\nde un POKéMON.
+5,6,48,CARBURANTE,Eleva la VELOCIDAD\nde un POKéMON.
+5,6,49,CALCIO,Sube caract. ESP.\nde un POKéMON.
+5,6,50,CARAMELORARO,Sube de nivel a\nun POKéMON.
+5,6,51,MÁS PP,Aumenta los PP\nmáx. de un ataque.
+5,6,55,PROTEC. ESP,Evita la reducción\nde caract.(1 BAT.)
+5,6,56,DIRECTO,Sube prob. golpe\ncrítico. (1 BAT.)
+5,6,57,ATAQUE X,Mejora el ATAQUE.\n(1 BAT.)
+5,6,58,DEFENSA X,Mejora la\nDEFENSA. (1 BAT.)
+5,6,59,VELOCIDAD X,Más VELOCIDAD.\n(1 BAT.)
+5,6,60,PRECISIÓN X,Sube la precisión.\n(1 BAT.)
+5,6,61,ESPECIAL X,Sube caract.\nESPECIALES(1 BAT.)
+5,6,63,POKé MUÑECO,Sirve para huir de\nPOKéMON salvajes.
+5,6,76,SÚPER REPEL,Repele POKéMON\ndébiles 200 pasos.
+5,6,77,MÁX. REPEL,Repele POKéMON\ndébiles 250 pasos.
+5,6,78,CUERDA HUIDA,"Se usa para salir\nde cuevas, etc."
+5,6,79,REPELENTE,Repele POKéMON\ndébiles 100 pasos.
+5,6,80,PIEDRA SOLAR,Evoluciona ciertos\ntipos de POKéMON.
+5,6,81,PIEDRA LUNAR,Evoluciona ciertos\ntipos de POKéMON.
+5,6,82,PIEDRA FUEGO,Evoluciona ciertos\ntipos de POKéMON.
+5,6,83,PIEDRATRUENO,Evoluciona ciertos\ntipos de POKéMON.
+5,6,84,PIEDRA AGUA,Evoluciona ciertos\ntipos de POKéMON.
+5,6,85,PIEDRA HOJA,Evoluciona ciertos\ntipos de POKéMON.
+5,6,86,MINI SETA,Una seta común.\nEs muy barata.
+5,6,87,SETA GRANDE,Una seta rara.\nEs muy cara.
+5,6,88,PERLA,Una perla bonita.\nEs barata.
+5,6,89,PERLA GRANDE,Perla preciosa y\nenorme. Carísima.
+5,6,90,POLVOESTELAR,Bonita arena roja.\nMuy cara.
+5,6,91,TR. ESTRELLA,Un trozo de gema\nroja. Carísima.
+5,6,92,PEPITA,Hecha de oro puro.\nEs muy cara.
+5,6,213,POLVO BRILLO,Baja la precisión\ndel enemigo. (EQ.)
+5,6,216,REPARTIR EXP,Reparte los puntos\nde EXP. (EQ.)
+5,6,217,GARRA RÁPIDA,Sube probabilidad\nprimer golpe.(EQ.)
+5,6,221,ROCA DEL REY,El enemigo podría\nretroceder. (EQ.)
+5,6,222,POLVO PLATA,Mejora los ataques\ntipo bicho. (EQ.)
+5,6,223,MON. AMULETO,Dobla el dinero\nque ganas. (EQ.)
+5,6,224,AMULETO,Repele a POKéMON\nsalvajes. (EQ.)
+5,6,228,BOLA HUMO,Huir de POKé-\nMON salvajes.(EQ.)
+5,6,229,PIEDRAETERNA,Detiene la\nevolución. (EQ.)
+5,6,230,CINTA-FOCUS,Podría evitar caer\ndebilitado. (EQ.)
+5,6,231,HUEVO SUERTE,Gana puntos de\nEXP. extra. (EQ.)
+5,6,232,PERISCOPIO,Sube prob. golpe\ncrítico. (EQ.)
+5,6,233,REV.METÁLICO,Mejora ataques\ntipo acero. (EQ.)
+5,6,234,RESTOS,Restaura PS en\nel combate. (EQ.)
+5,6,235,ESCAMADRAGÓN,Un objeto extraño\nde tipo dragón.
+5,6,236,BOLALUMINOSA,Un extraño orbe\neléctrico. (EQ.)
+5,6,237,ARENA FINA,Mejora los ataques\ntipo tierra. (EQ.)
+5,6,238,PIEDRA DURA,Mejora ataques\ntipo roca. (EQ.)
+5,6,239,SEM. MILAGRO,Mejora ataques\ntipo planta. (EQ.)
+5,6,240,GAFAS DE SOL,Mejora ataques\nsiniestros. (EQ.)
+5,6,241,CINT. NEGRO,Mejora ataques\ntipo lucha. (EQ.)
+5,6,242,IMÁN,Mejora ataques\neléctricos. (EQ.)
+5,6,243,AGUA MÍSTICA,Mejora ataques\ntipo agua. (EQ.)
+5,6,244,PICO AFILADO,Mejora los ataques\ntipo volador.(EQ.)
+5,6,245,FLECHA VEN,Mejora los ataques\ntipo veneno. (EQ.)
+5,6,246,ANTIDERRETIR,Mejora ataques\ntipo hielo. (EQ.)
+5,6,247,HECHIZO,Sube ataques tipo\nfantasma. (EQ.)
+5,6,248,CUCHARA TOR,Mejora ataques\npsíquicos. (EQ.)
+5,6,249,CARBÓN,Mejora ataques\ntipo fuego. (EQ.)
+5,6,250,COLMILLODRAG,Mejora ataques\ntipo dragón. (EQ.)
+5,6,252,MEJORA,Caja misteriosa\nde SILPH S.A.
+5,6,256,PUÑO SUERTE,Sube golpe crítico\nde CHANSEY.
+5,6,257,POL.METÁLICO,Mejora la DEFENSA\nde DITTO. (EQ.)
+5,6,258,HUESO GRUESO,Un tipo de hueso.\nEs muy barato.
+5,6,259,PALO,Un palo corriente.\nEs muy barato.
+5,6,328,MT01,
+5,6,329,MT02,
+5,6,330,MT03,
+5,6,331,MT04,
+5,6,332,MT05,
+5,6,333,MT06,
+5,6,334,MT07,
+5,6,335,MT08,
+5,6,336,MT09,
+5,6,337,MT10,
+5,6,338,MT11,
+5,6,339,MT12,
+5,6,340,MT13,
+5,6,341,MT14,
+5,6,342,MT15,
+5,6,343,MT16,
+5,6,344,MT17,
+5,6,345,MT18,
+5,6,346,MT19,
+5,6,347,MT20,
+5,6,348,MT21,
+5,6,349,MT22,
+5,6,350,MT23,
+5,6,351,MT24,
+5,6,352,MT25,
+5,6,353,MT26,
+5,6,354,MT27,
+5,6,355,MT28,
+5,6,356,MT29,
+5,6,357,MT30,
+5,6,358,MT31,
+5,6,359,MT32,
+5,6,360,MT33,
+5,6,361,MT34,
+5,6,362,MT35,
+5,6,363,MT36,
+5,6,364,MT37,
+5,6,365,MT38,
+5,6,366,MT39,
+5,6,367,MT40,
+5,6,368,MT41,
+5,6,369,MT42,
+5,6,370,MT43,
+5,6,371,MT44,
+5,6,372,MT45,
+5,6,373,MT46,
+5,6,374,MT47,
+5,6,375,MT48,
+5,6,376,MT49,
+5,6,377,MT50,
+5,6,420,MO01,
+5,6,421,MO02,
+5,6,422,MO03,
+5,6,423,MO04,
+5,6,424,MO05,
+5,6,425,MO06,
+5,6,444,MONEDERO,Guarda hasta 9.999\nfichas de juego.
+5,6,445,CAÑA VIEJA,Sirve para pescar\nPOKéMON.
+5,6,446,CAÑA BUENA,CAÑA buena para\natrapar POKéMON.
+5,6,447,SÚPER CAÑA,La mejor CAÑA para\natrapar POKéMON.
+5,6,450,BICICLETA,Bici plegable para\nir más rápido.
+5,6,456,TICKET BARCO,Un ticket para el\nS.S. AQUA.
+5,6,464,POC. SECRETA,Cura por completo\na un POKéMON.
+5,6,471,BUSCAOBJETOS,Busca objetos\nocultos.
+5,6,473,COLASLOWPOKE,Muy sabroso.\nEs caro.
+5,6,475,LL.MAGNÉTICA,Abre las puertas\nde la TORRE RADIO.
+5,6,476,LL. SÓTANO,Abre las puertas.
+5,6,477,REGADERA,Recipiente para\nregar las plantas.
+5,6,478,ESCAMA ROJA,Una escama de un\nGYARADOS rojo.
+5,6,479,OBJ. PERDIDO,El POKé MUÑECO\nde la COPIONA.
+5,6,480,PASE,Un ticket para\nel MAGNETOTRÉN.
+5,6,481,MAQUINARIA,Maquinaria de la\nCENTRAL ENERGÍA.
+5,6,482,ALA PLATEADA,Pluma muy extraña\nde color plateado.
+5,6,483,ALA ARCOIRIS,Pluma mística de\ncolor arcoiris.
+5,6,484,HUEVO MIST,HUEVO recibido\ndel SR. POKéMON.
+5,6,485,BONGURI ROJ,Un BONGURI rojo.
+5,6,486,BONGURI AZU,Un BONGURI azul.
+5,6,487,BONGURI AMA,Un BONGURI\namarillo.
+5,6,488,BONGURI VER,Un BONGURI verde.
+5,6,489,BONGURI NEG,Un BONGURI negro.
+5,6,490,BONGURI BLA,Un BONGURI blanco.
+5,6,491,BONGURI ROS,Un BONGURI rosa.
+5,6,492,RAPID BALL,BALL para atrapar\nPOKéMON veloces.
+5,6,493,NIVEL BALL,BALL para POKéMON\nde bajo nivel.
+5,6,494,CEBO BALL,BALL para POKéMON\npescados con CAÑA.
+5,6,495,PESO BALL,BALL para capturar\nPOKéMON pesados.
+5,6,496,AMOR BALL,Para capturar al\ngénero opuesto.
+5,6,497,AMIGO BALL,Una BALL que\nenternece POKéMON.
+5,6,498,LUNA BALL,BALL para PKMN que\nevol. con P.LUNAR.
+5,6,499,PARQUE BALL,BALL del Concurso\nCaptura de Bichos.
+5,6,504,CARAM. FURIA,Restaura 20 PS de\nun POKéMON.
+5,6,737,MO07,
+5,6,10002,HOJA PLATA,Hoja muy extraña\nde color plateado.
+5,6,10003,BAYANTÍDOTO,Cura automática\ndel veneno. (EQ.)
+5,6,10004,HOJA DORADA,Hoja muy extraña\nde color dorado.
+5,6,10005,ANTIPARABAYA,Cura automática\nde parálisis.(EQ.)
+5,6,10006,ANTIQUEMBAYA,Cura automática de\ncongelación. (EQ.)
+5,6,10007,BAYA HIELO,Cura automática de\nquemaduras. (EQ.)
+5,6,10008,BAYAMARGA,Cura automática\nde confusión.(EQ.)
+5,6,10009,BAYA MENTA,Cura automática\ndel sueño. (EQ.)
+5,6,10010,LAZO ROSA,Mejora ataques\nnormales. (EQ.)
+5,6,10011,BAYA MILAGRO,Cura problemas\nde estado. (EQ.)
+5,6,10012,BAYAMISTERIO,Restaura PP auto-\nmáticamente. (EQ.)
+5,6,10013,GEN LOCO,Mejora el ATAQUE\npero confunde.
+5,6,10014,CARTA FLOR,CARTA con dibujos\nde flores. (EQ.)
+5,6,10015,CAJA NORMAL,Ábrelo para ver\nqué hay dentro.
+5,6,10016,CAJA GRANDE,Ábrelo para ver\nqué hay dentro.
+5,6,10017,CINTALUNARES,Mejora los ataques\nnormales. (EQ.)
+5,6,10018,BAYA,"Objeto de autocu-\nración.(10PS, EQ.)"
+5,6,10019,BAYA DORADA,"Objeto de autocu-\nración.(30PS, EQ.)"
+5,6,10020,LADRILLO,Un extraño trozo\nde ladrillo.
+5,6,10021,CARTA SURF,CARTA con dibujos\nde LAPRAS. (EQ.)
+5,6,10022,CARTA AZUL,CARTA con dibujos\nde Dratini. (EQ.)
+5,6,10023,CART-RETRATO,Aparece el POKéMON\nque la tiene.
+5,6,10024,CARTA AMOR,CARTA con dibujos\nde corazones.(EQ.)
+5,6,10025,CARTA EÓN,CARTA con dibujos\nde EEVEE. (EQ.)
+5,6,10026,CARTMORFOSIS,CARTA con dibujos\nde DITTO. (EQ.)
+5,6,10027,CARTACELESTE,CARTA con dibujos\ndel cielo. (EQ.)
+5,6,10028,CARTA MÚSICA,CARTA con dibujos\nde NATU. (EQ.)
+5,6,10029,C.ESPEJISMO,CARTA con dibujos\nde MEW. (EQ.)
+6,1,1,マスターボール,
+6,1,2,ハイパーボール,
+6,1,3,スーパーボール,
+6,1,4,モンスターボール,
+6,1,17,キズぐすリ,
+6,1,18,どくけし,
+6,1,19,やけどなおし,
+6,1,20,こおリなおし,
+6,1,21,ねむけざまし,
+6,1,22,まひなおし,
+6,1,23,かいふくのくすリ,
+6,1,24,まんたんのくすリ,
+6,1,25,すごいキズぐすリ,
+6,1,26,いいキズぐすリ,
+6,1,27,なんでもなおし,
+6,1,28,げんきのかけら,
+6,1,29,げんきのかたまリ,
+6,1,30,おいしいみず,
+6,1,31,サイコソーダ,
+6,1,32,ミックスオレ,
+6,1,33,モーモーミルク,
+6,1,34,ちからのこな,
+6,1,35,ちからのねっこ,
+6,1,36,ばんのうごな,
+6,1,37,ふっかつそう,
+6,1,38,ピーピーエイド,
+6,1,39,ピーピーリカバー,
+6,1,40,ピーピーエイダー,
+6,1,41,ピーピーマックス,
+6,1,43,きのみジュース,
+6,1,44,せいなるはい,
+6,1,45,マックスアップ,
+6,1,46,タウリン,
+6,1,47,ブロムへキシン,
+6,1,48,インドメタシン,
+6,1,49,リゾチウム,
+6,1,50,ふしぎなアメ,
+6,1,51,ポイントアップ,
+6,1,55,エフェクトガード,
+6,1,56,クリティカッター,
+6,1,57,プラスパワー,
+6,1,58,ディフェンダー,
+6,1,59,スピーダー,
+6,1,60,ヨクアタール,
+6,1,61,スぺシャルアップ,
+6,1,63,ピッピにんぎょう,
+6,1,76,シルバースプレー,
+6,1,77,ゴールドスプレー,
+6,1,78,あなぬけのヒモ,
+6,1,79,むしよけスプレー,
+6,1,80,たいようのいし,
+6,1,81,つきのいし,
+6,1,82,ほのおのいし,
+6,1,83,かみなリのいし,
+6,1,84,みずのいし,
+6,1,85,リーフのいし,
+6,1,86,ちいさなキノコ,
+6,1,87,おおきなキノコ,
+6,1,88,しんじゅ,
+6,1,89,おおきなしんじゅ,
+6,1,90,ほしのすな,
+6,1,91,ほしのかけら,
+6,1,92,きんのたま,
+6,1,213,ひかリのこな,
+6,1,216,がくしゅうそうち,
+6,1,217,せんせいのツメ,
+6,1,221,おうじゃのしるし,
+6,1,222,ぎんのこな,
+6,1,223,おまもリこばん,
+6,1,224,きよめのおふだ,
+6,1,228,けむリだま,
+6,1,229,かわらずのいし,
+6,1,230,きあいのハチマキ,
+6,1,231,しあわせタマゴ,
+6,1,232,ピントレンズ,
+6,1,233,メタルコート,
+6,1,234,たべのこし,
+6,1,235,リゅうのウロコ,
+6,1,236,でんきだま,
+6,1,237,やわらかいすな,
+6,1,238,かたいいし,
+6,1,239,きせきのタネ,
+6,1,240,くろいメガネ,
+6,1,241,くろおび,
+6,1,242,じしゃく,
+6,1,243,しんぴのしずく,
+6,1,244,するどいくちばし,
+6,1,245,どくバリ,
+6,1,246,とけないこおリ,
+6,1,247,のろいのおふだ,
+6,1,248,まがったスプーン,
+6,1,249,もくたん,
+6,1,250,リゅうのキバ,
+6,1,252,アップグレード,
+6,1,256,ラッキーパンチ,
+6,1,257,メタルパウダー,
+6,1,258,ふといホネ,
+6,1,259,ながねぎ,
+6,1,328,わざマシン０１,
+6,1,329,わざマシン０２,
+6,1,330,わざマシン０３,
+6,1,331,わざマシン０４,
+6,1,332,わざマシン０５,
+6,1,333,わざマシン０６,
+6,1,334,わざマシン０７,
+6,1,335,わざマシン０８,
+6,1,336,わざマシン０９,
+6,1,337,わざマシン１０,
+6,1,338,わざマシン１１,
+6,1,339,わざマシン１２,
+6,1,340,わざマシン１３,
+6,1,341,わざマシン１４,
+6,1,342,わざマシン１５,
+6,1,343,わざマシン１６,
+6,1,344,わざマシン１７,
+6,1,345,わざマシン１８,
+6,1,346,わざマシン１９,
+6,1,347,わざマシン２０,
+6,1,348,わざマシン２１,
+6,1,349,わざマシン２２,
+6,1,350,わざマシン２３,
+6,1,351,わざマシン２４,
+6,1,352,わざマシン２５,
+6,1,353,わざマシン２６,
+6,1,354,わざマシン２７,
+6,1,355,わざマシン２８,
+6,1,356,わざマシン２９,
+6,1,357,わざマシン３０,
+6,1,358,わざマシン３１,
+6,1,359,わざマシン３２,
+6,1,360,わざマシン３３,
+6,1,361,わざマシン３４,
+6,1,362,わざマシン３５,
+6,1,363,わざマシン３６,
+6,1,364,わざマシン３７,
+6,1,365,わざマシン３８,
+6,1,366,わざマシン３９,
+6,1,367,わざマシン４０,
+6,1,368,わざマシン４１,
+6,1,369,わざマシン４２,
+6,1,370,わざマシン４３,
+6,1,371,わざマシン４４,
+6,1,372,わざマシン４５,
+6,1,373,わざマシン４６,
+6,1,374,わざマシン４７,
+6,1,375,わざマシン４８,
+6,1,376,わざマシン４９,
+6,1,377,わざマシン５０,
+6,1,420,ひでんマシン０１,
+6,1,421,ひでんマシン０２,
+6,1,422,ひでんマシン０３,
+6,1,423,ひでんマシン０４,
+6,1,424,ひでんマシン０５,
+6,1,425,ひでんマシン０６,
+6,1,444,コインケース,
+6,1,445,ボロのつリざお,
+6,1,446,いいつリざお,
+6,1,447,すごいつリざお,
+6,1,450,じてんしゃ,
+6,1,456,ふねのチケット,
+6,1,464,ひでんのくすリ,
+6,1,471,ダウジングマシン,
+6,1,472,ブルーカード,
+6,1,473,おいしいシッポ,
+6,1,474,とうめいなスズ,
+6,1,475,カードキー,
+6,1,476,ちかのカギ,
+6,1,477,ゼニガメじょうろ,
+6,1,478,あかいウロコ,
+6,1,479,おとしもの,
+6,1,480,ていきけん,
+6,1,481,きかいのぶひん,
+6,1,482,ぎんいろのはね,
+6,1,483,にじいろのはね,
+6,1,484,ふしぎなタマゴ,
+6,1,485,あかぼんぐリ,
+6,1,486,あおぼんぐリ,
+6,1,487,きぼんぐリ,
+6,1,488,みどぼんぐリ,
+6,1,489,くろぼんぐリ,
+6,1,490,しろぼんぐリ,
+6,1,491,ももぼんぐリ,
+6,1,492,スピードボール,
+6,1,493,レべルボール,
+6,1,494,ルアーボール,
+6,1,495,へビーボール,
+6,1,496,ラブラブボール,
+6,1,497,フレンドボール,
+6,1,498,ムーンボール,
+6,1,499,パークボール,
+6,1,504,いかリまんじゅう,
+6,1,737,ひでんマシン０７,
+6,1,10002,ぎんのはっぱ,
+6,1,10003,どくけしのみ,
+6,1,10004,きんのはっぱ,
+6,1,10005,まひなおしのみ,
+6,1,10006,やけたきのみ,
+6,1,10007,こおったきのみ,
+6,1,10008,にがいきのみ,
+6,1,10009,はっかのみ,
+6,1,10010,ピンクのリボン,
+6,1,10011,きせきのみ,
+6,1,10012,ふしぎなきのみ,
+6,1,10013,はかいのいでんし,
+6,1,10014,はながらメール,
+6,1,10015,きのはこ,
+6,1,10016,きリのはこ,
+6,1,10017,みずたまリボン,
+6,1,10018,きのみ,
+6,1,10019,おうごんのみ,
+6,1,10020,かわらのかけら,
+6,1,10021,なみのリメール,
+6,1,10022,みずいろメール,
+6,1,10023,にがおえメール,
+6,1,10024,ラブリーメール,
+6,1,10025,ブイブイメール,
+6,1,10026,へんしんメール,
+6,1,10027,あおぞらメール,
+6,1,10028,おんぷメール,
+6,1,10029,まぼろしメール,
+6,1,10030,ジーエスボール,
+6,1,10031,タマゴけん,
+6,2,1,MASTER BALL,The best BALL. It\nnever misses.
+6,2,2,ULTRA BALL,A BALL with a high\nrate of success.
+6,2,3,GREAT BALL,A BALL with a de-\ncent success rate.
+6,2,4,POKé BALL,An item for catch-\ning POKéMON.
+6,2,17,POTION,Restores POKéMON\nHP by 20.
+6,2,18,ANTIDOTE,Cures poisoned\nPOKéMON.
+6,2,19,BURN HEAL,Heals burned\nPOKéMON.
+6,2,20,ICE HEAL,Defrosts frozen\nPOKéMON.
+6,2,21,AWAKENING,Awakens sleeping\nPOKéMON.
+6,2,22,PARLYZ HEAL,Heals paralyzed\nPOKéMON.
+6,2,23,FULL RESTORE,Fully restores HP\n& status.
+6,2,24,MAX POTION,Fully restores\nPOKéMON HP.
+6,2,25,HYPER POTION,Restores POKéMON\nHP by 200.
+6,2,26,SUPER POTION,Restores POKéMON\nHP by 50.
+6,2,27,FULL HEAL,Eliminates all\nstatus problems.
+6,2,28,REVIVE,Restores a fainted\nPOKéMON to 1/2 HP.
+6,2,29,MAX REVIVE,Fully restores a\nfainted POKéMON.
+6,2,30,FRESH WATER,Restores POKéMON\nHP by 50.
+6,2,31,SODA POP,Restores POKéMON\nHP by 60.
+6,2,32,LEMONADE,Restores POKéMON\nHP by 80.
+6,2,33,MOOMOO MILK,Restores POKéMON\nHP by 100.
+6,2,34,ENERGYPOWDER,Restores POKéMON\nHP by 50. Bitter.
+6,2,35,ENERGY ROOT,Restores POKéMON\nHP by 200. Bitter.
+6,2,36,HEAL POWDER,Cures all status\nproblems. Bitter.
+6,2,37,REVIVAL HERB,Revives fainted\nPOKéMON. Bitter.
+6,2,38,ETHER,Restores PP of one\nmove by 10.
+6,2,39,MAX ETHER,Fully restores PP\nof one move.
+6,2,40,ELIXER,Restores PP of all\nmoves by 10.
+6,2,41,MAX ELIXER,Fully restores the\nPP of one POKéMON.
+6,2,43,BERRY JUICE,Restores POKéMON\nHP by 20.
+6,2,44,SACRED ASH,Fully revives all\nfainted POKéMON.
+6,2,45,HP UP,Raises the HP of\none POKéMON.
+6,2,46,PROTEIN,Raises ATTACK of\none POKéMON.
+6,2,47,IRON,Raises DEFENSE of\none POKéMON.
+6,2,48,CARBOS,Raises SPEED of\none POKéMON.
+6,2,49,CALCIUM,Ups SPECIAL stats\nof one POKéMON.
+6,2,50,RARE CANDY,Raises level of a\nPOKéMON by one.
+6,2,51,PP UP,Raises max PP of\na selected move.
+6,2,55,GUARD SPEC.,Prevents stats\nreduction. (1 BTL)
+6,2,56,DIRE HIT,Ups critical hit\nratio. (1 BTL)
+6,2,57,X ATTACK,Raises ATTACK.\n(1 BTL)
+6,2,58,X DEFEND,Raises DEFENSE.\n(1 BTL)
+6,2,59,X SPEED,Raises SPEED.\n(1 BTL)
+6,2,60,X ACCURACY,Raises accuracy.\n(1 BTL)
+6,2,61,X SPECIAL,Raises SPECIAL\nATTACK. (1 BTL)
+6,2,63,POKé DOLL,Use to escape from\na wild POKéMON.
+6,2,76,SUPER REPEL,Repels weak POKé-\nMON for 200 steps.
+6,2,77,MAX REPEL,Repels weak POKé-\nMON for 250 steps.
+6,2,78,ESCAPE ROPE,"Use for escaping\nfrom caves, etc."
+6,2,79,REPEL,Repels weak POKé-\nMON for 100 steps.
+6,2,80,SUN STONE,Evolves certain\nkinds of POKéMON.
+6,2,81,MOON STONE,Evolves certain\nkinds of POKéMON.
+6,2,82,FIRE STONE,Evolves certain\nkinds of POKéMON.
+6,2,83,THUNDERSTONE,Evolves certain\nkinds of POKéMON.
+6,2,84,WATER STONE,Evolves certain\nkinds of POKéMON.
+6,2,85,LEAF STONE,Evolves certain\nkinds of POKéMON.
+6,2,86,TINYMUSHROOM,An ordinary mush-\nroom. Sell low.
+6,2,87,BIG MUSHROOM,A rare mushroom.\nSell high.
+6,2,88,PEARL,A beautiful pearl.\nSell low.
+6,2,89,BIG PEARL,"A big, beautiful\npearl. Sell high."
+6,2,90,STARDUST,"Pretty, red sand.\nSell high."
+6,2,91,STAR PIECE,A hunk of red gem.\nSell very high.
+6,2,92,NUGGET,Made of pure gold.\nSell high.
+6,2,213,BRIGHTPOWDER,Lowers the foe's\naccuracy. (HOLD)
+6,2,216,EXP.SHARE,Shares battle EXP.\nPoints. (HOLD)
+6,2,217,QUICK CLAW,Raises 1st strike\nratio. (HOLD)
+6,2,221,KING'S ROCK,May make the foe\nflinch. (HOLD)
+6,2,222,SILVERPOWDER,Powers up bug-type\nmoves. (HOLD)
+6,2,223,AMULET COIN,Doubles monetary\nearnings. (HOLD)
+6,2,224,CLEANSE TAG,Helps repel wild\nPOKéMON. (HOLD)
+6,2,228,SMOKE BALL,Escape from wild\nPOKéMON. (HOLD)
+6,2,229,EVERSTONE,Stops evolution.\n(HOLD)
+6,2,230,FOCUS BAND,May prevent faint-\ning. (HOLD)
+6,2,231,LUCKY EGG,Earns extra EXP.\npoints. (HOLD)
+6,2,232,SCOPE LENS,Raises critical\nhit ratio. (HOLD)
+6,2,233,METAL COAT,Powers up steel-\ntype moves. (HOLD)
+6,2,234,LEFTOVERS,Restores HP during\nbattle. (HOLD)
+6,2,235,DRAGON SCALE,A rare dragon-type\nitem.
+6,2,236,LIGHT BALL,"An odd, electrical\norb. (HOLD)"
+6,2,237,SOFT SAND,Powers up ground-\ntype moves. (HOLD)
+6,2,238,HARD STONE,Powers up rock-\ntype moves. (HOLD)
+6,2,239,MIRACLE SEED,Powers up grass-\ntype moves. (HOLD)
+6,2,240,BLACKGLASSES,Powers up dark-\ntype moves. (HOLD)
+6,2,241,BLACKBELT,Boosts fighting-\ntype moves. (HOLD)
+6,2,242,MAGNET,Boosts electric-\ntype moves. (HOLD)
+6,2,243,MYSTIC WATER,Powers up water-\ntype moves. (HOLD)
+6,2,244,SHARP BEAK,Powers up flying-\ntype moves. (HOLD)
+6,2,245,POISON BARB,Powers up poison-\ntype moves. (HOLD)
+6,2,246,NEVERMELTICE,Powers up ice-type\nmoves. (HOLD)
+6,2,247,SPELL TAG,Powers up ghost-\ntype moves. (HOLD)
+6,2,248,TWISTEDSPOON,Powers up psychic-\ntype moves. (HOLD)
+6,2,249,CHARCOAL,Powers up fire-\ntype moves. (HOLD)
+6,2,250,DRAGON FANG,Powers up dragon-\ntype moves. (HOLD)
+6,2,252,UP-GRADE,A mysterious box\nmade by SILPH CO.
+6,2,256,LUCKY PUNCH,Ups critical hit\nratio of CHANSEY.
+6,2,257,METAL POWDER,Raises DEFENSE of\nDITTO. (HOLD)
+6,2,258,THICK CLUB,A bone of some\nsort. Sell low.
+6,2,259,STICK,An ordinary stick.\nSell low.
+6,2,328,TM01,
+6,2,329,TM02,
+6,2,330,TM03,
+6,2,331,TM04,
+6,2,332,TM05,
+6,2,333,TM06,
+6,2,334,TM07,
+6,2,335,TM08,
+6,2,336,TM09,
+6,2,337,TM10,
+6,2,338,TM11,
+6,2,339,TM12,
+6,2,340,TM13,
+6,2,341,TM14,
+6,2,342,TM15,
+6,2,343,TM16,
+6,2,344,TM17,
+6,2,345,TM18,
+6,2,346,TM19,
+6,2,347,TM20,
+6,2,348,TM21,
+6,2,349,TM22,
+6,2,350,TM23,
+6,2,351,TM24,
+6,2,352,TM25,
+6,2,353,TM26,
+6,2,354,TM27,
+6,2,355,TM28,
+6,2,356,TM29,
+6,2,357,TM30,
+6,2,358,TM31,
+6,2,359,TM32,
+6,2,360,TM33,
+6,2,361,TM34,
+6,2,362,TM35,
+6,2,363,TM36,
+6,2,364,TM37,
+6,2,365,TM38,
+6,2,366,TM39,
+6,2,367,TM40,
+6,2,368,TM41,
+6,2,369,TM42,
+6,2,370,TM43,
+6,2,371,TM44,
+6,2,372,TM45,
+6,2,373,TM46,
+6,2,374,TM47,
+6,2,375,TM48,
+6,2,376,TM49,
+6,2,377,TM50,
+6,2,420,HM01,
+6,2,421,HM02,
+6,2,422,HM03,
+6,2,423,HM04,
+6,2,424,HM05,
+6,2,425,HM06,
+6,2,444,COIN CASE,"Holds up to 9,999\ngame coins."
+6,2,445,OLD ROD,Use by water to\nfish for POKéMON.
+6,2,446,GOOD ROD,A good ROD for\ncatching POKéMON.
+6,2,447,SUPER ROD,The best ROD for\ncatching POKéMON.
+6,2,450,BICYCLE,A collapsible bike\nfor fast movement.
+6,2,456,S.S.TICKET,A ticket for the\nS.S.AQUA.
+6,2,464,SECRETPOTION,Fully heals any\nPOKéMON.
+6,2,471,ITEMFINDER,Checks for unseen\nitems in the area.
+6,2,472,BLUE CARD,Card to save\npoints.
+6,2,473,SLOWPOKETAIL,Very tasty. Sell\nhigh.
+6,2,474,CLEAR BELL,Makes a gentle\nringing.
+6,2,475,CARD KEY,Opens shutters in\nthe RADIO TOWER.
+6,2,476,BASEMENT KEY,Opens doors.\n
+6,2,477,SQUIRTBOTTLE,A bottle used for\nwatering plants.
+6,2,478,RED SCALE,A scale from the\nred GYARADOS.
+6,2,479,LOST ITEM,The POKé DOLL lost\nby the COPYCAT.
+6,2,480,PASS,A ticket for the\nMAGNET TRAIN.
+6,2,481,MACHINE PART,A machine part for\nthe POWER PLANT.
+6,2,482,SILVER WING,"A strange, silver-\ncolored feather."
+6,2,483,RAINBOW WING,A mystical feather\nof rainbow colors.
+6,2,484,MYSTERY EGG,An EGG obtained\nfrom MR.POKéMON.
+6,2,485,RED APRICORN,A red APRICORN.
+6,2,486,BLU APRICORN,A blue APRICORN.
+6,2,487,YLW APRICORN,A yellow APRICORN.
+6,2,488,GRN APRICORN,A green APRICORN.
+6,2,489,BLK APRICORN,A black APRICORN.
+6,2,490,WHT APRICORN,A white APRICORN.
+6,2,491,PNK APRICORN,A pink APRICORN.
+6,2,492,FAST BALL,A BALL for catch-\ning fast POKéMON.
+6,2,493,LEVEL BALL,A BALL for lower-\nlevel POKéMON.
+6,2,494,LURE BALL,A BALL for POKéMON\nhooked by a ROD.
+6,2,495,HEAVY BALL,A BALL for catch-\ning heavy POKéMON.
+6,2,496,LOVE BALL,For catching the\nopposite gender.
+6,2,497,FRIEND BALL,A BALL that makes\nPOKéMON friendly.
+6,2,498,MOON BALL,A BALL for MOON\nSTONE evolvers.
+6,2,499,PARK BALL,The Bug-Catching\nContest BALL.
+6,2,504,RAGECANDYBAR,Restores POKéMON\nHP by 20.
+6,2,737,HM07,
+6,2,10002,SILVER LEAF,"A strange, silver-\ncolored leaf."
+6,2,10003,PSNCUREBERRY,A self-cure for\npoison. (HOLD)
+6,2,10004,GOLD LEAF,"A strange, gold-\ncolored leaf."
+6,2,10005,PRZCUREBERRY,A self-cure for\nparalysis. (HOLD)
+6,2,10006,BURNT BERRY,A self-cure for\nfreezing. (HOLD)
+6,2,10007,ICE BERRY,A self-heal for a\nburn. (HOLD)
+6,2,10008,BITTER BERRY,A self-cure for\nconfusion. (HOLD)
+6,2,10009,MINT BERRY,A self-awakening\nfor sleep. (HOLD)
+6,2,10010,PINK BOW,Powers up normal-\ntype moves. (HOLD)
+6,2,10011,MIRACLEBERRY,Cures all status\nproblems. (HOLD)
+6,2,10012,MYSTERYBERRY,A self-restore\nfor PP. (HOLD)
+6,2,10013,BERSERK GENE,Boosts ATTACK but\ncauses confusion.
+6,2,10014,FLOWER MAIL,Flower-print MAIL.\n(HOLD)
+6,2,10015,NORMAL BOX,Open it and see\nwhat's inside.
+6,2,10016,GORGEOUS BOX,Open it and see\nwhat's inside.
+6,2,10017,POLKADOT BOW,Powers up normal-\ntype moves. (HOLD)
+6,2,10018,BERRY,"A self-restore\nitem. (10HP, HOLD)"
+6,2,10019,GOLD BERRY,"A self-restore\nitem. (30HP, HOLD)"
+6,2,10020,BRICK PIECE,A rare chunk of\ntile.
+6,2,10021,SURF MAIL,LAPRAS-print MAIL.\n(HOLD)
+6,2,10022,LITEBLUEMAIL,DRATINI-print\nMAIL. (HOLD)
+6,2,10023,PORTRAITMAIL,MAIL featuring the\nholder's likeness.
+6,2,10024,LOVELY MAIL,Heart-print MAIL.\n(HOLD)
+6,2,10025,EON MAIL,EEVEE-print MAIL.\n(HOLD)
+6,2,10026,MORPH MAIL,DITTO-print MAIL.\n(HOLD)
+6,2,10027,BLUESKY MAIL,Sky-print MAIL.\n(HOLD)
+6,2,10028,MUSIC MAIL,NATU-print MAIL.\n(HOLD)
+6,2,10029,MIRAGE MAIL,MEW-print MAIL.\n(HOLD)
+6,2,10030,GS BALL,The mysterious\nBALL.
+6,2,10031,EGG TICKET,May use at Golden-\nrod trade corner.
+6,3,1,MASTER BALL,La meilleure BALL.\nNe rate jamais.
+6,3,2,HYPER BALL,BALL à haut taux\nde réussite.
+6,3,3,SUPER BALL,BALL à taux de\nréussite correct.
+6,3,4,POKé BALL,Objet pour captu-\nrer les POKéMON.
+6,3,17,POTION,Restaure 20 PV\nd'un POKéMON.
+6,3,18,ANTIDOTE,Soigne les POKéMON\nempoisonnés.
+6,3,19,ANTI-BRULE,Soigne les POKéMON\nbrûlés.
+6,3,20,ANTIGEL,Dégèle les POKéMON\ngelés.
+6,3,21,REVEIL,Réveille les POKé-\nMON endormis.
+6,3,22,ANTI-PARA,Soigne les POKéMON\nparalysés.
+6,3,23,GUERISON,Restaure tous PV\net statut.
+6,3,24,POTION MAX,Restaure tous les\nPV d'un POKéMON.
+6,3,25,HYPER POTION,Restaure 200 PV\nd'un POKéMON.
+6,3,26,SUPER POTION,Restaure 50 PV\nd'un POKéMON.
+6,3,27,TOTAL SOIN,Contre tout chan-\ngement de statut.
+6,3,28,RAPPEL,Réanime POKéMON KO\navec 1/2 PV.
+6,3,29,RAPPEL MAX,Réanimation et\nsoin total.
+6,3,30,EAU FRAICHE,Restaure 50 PV\nd'un POKéMON.
+6,3,31,SODA COOL,Restaure 60 PV\nd'un POKéMON.
+6,3,32,LIMONADE,Restaure 80 PV\nd'un POKéMON.
+6,3,33,LAIT MEUMEU,Restaure 100 PV\nd'un POKéMON.
+6,3,34,POUDRENERGIE,Restaure 50 PV\nd'un PKMN. Amer.
+6,3,35,RACINENERGIE,Restaure 200 PV\nd'un PKMN. Amer.
+6,3,36,POUDRE SOIN,Contre changement\nde statut. Amer.
+6,3,37,HERBE RAPPEL,Réanime un PKMN\nK.O. Amer.
+6,3,38,HUILE,Restaure 10 PP\nd'une capacité.
+6,3,39,HUILE MAX,Restaure tous les\nPP d'une capacité.
+6,3,40,ELIXIR,Restaure 10 PP de\ntoutes capacités.
+6,3,41,MAX ELIXIR,Restaure tous PP\nd'un POKéMON.
+6,3,43,JUS DE BAIE,Restaure 20 PV\nd'un POKéMON.
+6,3,44,CENDRESACREE,Réanimation totale\nde tous POKéMON.
+6,3,45,PV PLUS,Monte les PV d'un\nPOKéMON.
+6,3,46,PROTEINE,Monte l'ATTAQUE\nd'un POKéMON.
+6,3,47,FER,Monte la DEFENSE\nd'un POKéMON.
+6,3,48,CARBONE,Monte la VITESSE\nd'un POKéMON.
+6,3,49,CALCIUM,Monte le SPECIAL\nd'un POKéMON.
+6,3,50,SUPER BONBON,Monte d'un niveau\nun POKéMON.
+6,3,51,PP PLUS,Monte le max de PP\nd'une capacité.
+6,3,55,DEFENSE SPEC,Prévient réduction\nde stat. (1 CBT)
+6,3,56,MUSCLE +,Plus de chances de\ncritiques. (1 CBT)
+6,3,57,ATTAQUE +,Monte l'ATTAQUE.\n(1 CBT)
+6,3,58,DEFENSE +,Monte la DEFENSE.\n(1 CBT)
+6,3,59,VITESSE +,Monte la VITESSE.\n(1 CBT)
+6,3,60,PRECISION +,Monte la préci-\nsion. (1 CBT)
+6,3,61,SPECIAL +,Monte l'ATQ.SPE.\n(1 CBT)
+6,3,63,POKé POUPEE,Pour s'enfuir face\nà un PKMN sauvage.
+6,3,76,SUPEREPOUSSE,Repousse faibles\nPKMN de 200 pas.
+6,3,77,MAX REPOUSSE,Repousse faibles\nPKMN de 250 pas.
+6,3,78,CORDE SORTIE,"Pour s'enfuir\nd'une grotte, etc."
+6,3,79,REPOUSSE,Repousse faibles\nPKMN de 100 pas.
+6,3,80,PIERRESOLEIL,Evolue certains\ntypes de POKéMON.
+6,3,81,PIERRE LUNE,Evolue certains\ntypes de POKéMON.
+6,3,82,PIERRE FEU,Evolue certains\ntypes de POKéMON.
+6,3,83,PIERREFOUDRE,Evolue certains\ntypes de POKéMON.
+6,3,84,PIERRE EAU,Evolue certains\ntypes de POKéMON.
+6,3,85,PIERREPLANTE,Evolue certains\ntypes de POKéMON.
+6,3,86,PETIT CHAMPI,Un champignon.\nSe vend peu cher.
+6,3,87,GROS CHAMPI,Champignon rare.\nSe vend cher.
+6,3,88,PERLE,Une belle perle.\nSe vend peu cher.
+6,3,89,GRANDE PERLE,Une belle grosse\nperle. Très chère.
+6,3,90,POUSS.ETOILE,Joli sable rouge.\nSe vend cher.
+6,3,91,MORC. ETOILE,Morceau de joyau\nrouge. Très cher.
+6,3,92,PEPITE,En or pur.\nSe vend cher.
+6,3,213,POUDRECLAIRE,Baisse précision\nde l'ennemi.(TENU)
+6,3,216,MULTI EXP,Partage les pts\nd'EXP. (TENU)
+6,3,217,VIVE GRIFFE,Plus de chances d'\ninitiative. (TENU)
+6,3,221,ROCHE ROYALE,Peut apeurer l'\nennemi. (TENU)
+6,3,222,POUDRE ARG.,Renforce capacités\nINSECTE. (TENU)
+6,3,223,PIECE RUNE,Double les gains\nd'argent. (TENU)
+6,3,224,RUNE PURIF.,Repousse les PKMN\nsauvages. (TENU)
+6,3,228,BOULE FUMEE,Pour s'enfuir face\nà un PKMN sauvage.
+6,3,229,PIERRE STASE,Arrête une\névolution. (TENU)
+6,3,230,BANDEAU +,Peut empêcher un\nK.O. (TENU)
+6,3,231,OEUF CHANCE,Gagne plus de pts\nEXP. (TENU)
+6,3,232,LENTILSCOPE,Plus de chances de\ncritiques. (TENU)
+6,3,233,PEAU METAL,Renforce capacités\nACIER. (TENU)
+6,3,234,RESTES,Restaure les PV\nen combat. (TENU)
+6,3,235,ECAILLEDRACO,Une écaille rare\ndu type DRAGON.
+6,3,236,BALLELUMIERE,Un orbe électri-\nque étrange.(TENU)
+6,3,237,SABLE DOUX,Renforce les capa-\ncités SOL. (TENU)
+6,3,238,PIERRE DURE,Renforce capacités\nROCHE. (TENU)
+6,3,239,GRAIN MIRACL,Renforce capacités\nPLANTE. (TENU)
+6,3,240,LUNET.NOIRES,Renforce capacités\nTENEBRES. (TENU)
+6,3,241,CEINT.NOIRE,Renforce capacités\nCOMBAT. (TENU)
+6,3,242,AIMANT,Renforce capacités\nELECTRIK. (TENU)
+6,3,243,EAU MYSTIQUE,Renforce capacités\nEAU. (TENU)
+6,3,244,BEC POINTU,Renforce les capa-\ncités VOL. (TENU)
+6,3,245,PIC VENIN,Renforce capacités\nPOISON. (TENU)
+6,3,246,GLACETERNEL,Renforce capacités\nGLACE. (TENU)
+6,3,247,RUNE SORT,Renforce capacités\nSPECTRE. (TENU)
+6,3,248,CUILLERTORDU,Renforce capacités\nPSY. (TENU)
+6,3,249,CHARBON,Renforce capacités\nFEU. (TENU)
+6,3,250,CROC DRAGON,Renforce capacités\nDRAGON. (TENU)
+6,3,252,EVOLUTOR,Une étrange boîte\nde la SYLPHE SARL.
+6,3,256,POING CHANCE,Plus de critiques\navec LEVEINARD.
+6,3,257,POUDRE METAL,Monte DEFENSE de\nMETAMORPH. (TENU)
+6,3,258,MASSE OS,Un os. Se vend\npeu cher.
+6,3,259,BATON,Un poireau normal.\nSe vend peu cher.
+6,3,328,CT01,
+6,3,329,CT02,
+6,3,330,CT03,
+6,3,331,CT04,
+6,3,332,CT05,
+6,3,333,CT06,
+6,3,334,CT07,
+6,3,335,CT08,
+6,3,336,CT09,
+6,3,337,CT10,
+6,3,338,CT11,
+6,3,339,CT12,
+6,3,340,CT13,
+6,3,341,CT14,
+6,3,342,CT15,
+6,3,343,CT16,
+6,3,344,CT17,
+6,3,345,CT18,
+6,3,346,CT19,
+6,3,347,CT20,
+6,3,348,CT21,
+6,3,349,CT22,
+6,3,350,CT23,
+6,3,351,CT24,
+6,3,352,CT25,
+6,3,353,CT26,
+6,3,354,CT27,
+6,3,355,CT28,
+6,3,356,CT29,
+6,3,357,CT30,
+6,3,358,CT31,
+6,3,359,CT32,
+6,3,360,CT33,
+6,3,361,CT34,
+6,3,362,CT35,
+6,3,363,CT36,
+6,3,364,CT37,
+6,3,365,CT38,
+6,3,366,CT39,
+6,3,367,CT40,
+6,3,368,CT41,
+6,3,369,CT42,
+6,3,370,CT43,
+6,3,371,CT44,
+6,3,372,CT45,
+6,3,373,CT46,
+6,3,374,CT47,
+6,3,375,CT48,
+6,3,376,CT49,
+6,3,377,CT50,
+6,3,420,CS01,
+6,3,421,CS02,
+6,3,422,CS03,
+6,3,423,CS04,
+6,3,424,CS05,
+6,3,425,CS06,
+6,3,444,BOITE JETON,Contient jusqu'à\n9999 jetons.
+6,3,445,CANNE,Pour pêcher les\nPKMN dans l'eau.
+6,3,446,SUPER CANNE,Une bonne canne à\npêcher les PKMN.
+6,3,447,MEGA CANNE,La meilleure canne\nà pêcher les PKMN.
+6,3,450,BICYCLETTE,Un vélo pliable\npour se balader.
+6,3,456,PASSE BATEAU,Un ticket pour\nl'AQUARIA.
+6,3,464,POTIONSECRET,Soin total d'un\nPOKéMON.
+6,3,471,CHERCH'OBJET,Voir objets invi-\nsibles de la zone.
+6,3,472,CARTE BLEUE,Carte pour gagner\ndes points.
+6,3,473,QUEUERAMOLOS,Très bon. Se vend\ncher.
+6,3,474,GLAS TRANSP.,Sonne doucement.
+6,3,475,CARTE MAGN.,Ouvre les volets\ndans TOUR RADIO.
+6,3,476,CLE SOUS-SOL,Ouvre des portes.
+6,3,477,CARAPUCE A O,Bouteille pour ar-\nroser les plantes.
+6,3,478,ECAILLEROUGE,Ecaille du LEVIA-\nTOR rouge.
+6,3,479,OBJET PERDU,POKé POUPEE perdue\npar la COPIEUSE.
+6,3,480,PASSE,Un ticket pour le\nTRAIN MAGNET.
+6,3,481,PARTIE MACH.,Un élément de la\nCENTRALE.
+6,3,482,AILE ARGENT,Une étrange plume\nargentée.
+6,3,483,ARCENCI'AILE,Plume mystique\narc-en-ciel.
+6,3,484,OEUF MYSTERE,Un OEUF obtenu de\nM.POKéMON.
+6,3,485,NOIGRUME RGE,Un NOIGRUME rouge.
+6,3,486,NOIGRUME BLU,Un NOIGRUME bleu.
+6,3,487,NOIGRUME JNE,Un NOIGRUME jaune.
+6,3,488,NOIGRUME VER,Un NOIGRUME vert.
+6,3,489,NOIGRUME NOI,Un NOIGRUME noir.
+6,3,490,NOIGRUME BLC,Un NOIGRUME blanc.
+6,3,491,NOIGRUME ROS,Un NOIGRUME rose.
+6,3,492,SPEED BALL,BALL pour capturer\nPOKéMON rapides.
+6,3,493,NIVEAU BALL,BALL pour POKéMON\nde niveau moindre.
+6,3,494,APPAT BALL,BALL pour POKéMON\nferrés par CANNE.
+6,3,495,MASSE BALL,BALL pour capturer\nles PKMN lourds.
+6,3,496,LOVE BALL,Pour capturer le\ngenre opposé.
+6,3,497,COPAIN BALL,BALL pour rendre\nun PKMN amical.
+6,3,498,LUNE BALL,BALL pour évolués\npar PIERRE LUNE.
+6,3,499,PARC BALL,BALL du Concours\nde Capture.
+6,3,504,BONBON RAGE,Restaure 20 PV\nd'un POKéMON.
+6,3,737,CS07,
+6,3,10002,FEUILLE ARG.,Une étrange feuil-\nle argentée.
+6,3,10003,BAIE ANTIDOT,Un antidote auto-\nmatique. (TENU)
+6,3,10004,FEUILLE D'OR,Une étrange feuil-\nle dorée.
+6,3,10005,BAIE ANTIPAR,Un anti-paralysie\nautomatique.(TENU)
+6,3,10006,BAIE BRULURE,Un antigel\nautomatique.(TENU)
+6,3,10007,BAIE GEL,Un anti-brûle\nautomatique.(TENU)
+6,3,10008,BAIE AMERE,Un anti-confusion\nautomatique.(TENU)
+6,3,10009,BAIE MENTHE,Réveil pour PKMN\nendormis. (TENU)
+6,3,10010,RUBAN ROSE,Renforce capacités\nNORMAL. (TENU)
+6,3,10011,BAIE MIRACLE,Contre changement\nde statut. (TENU)
+6,3,10012,BAIE MYSTERE,Restaure les PP en\nauto. (TENU)
+6,3,10013,ADN BERZERK,"Monte l'ATTAQUE,\nrend confus."
+6,3,10014,LETR FLEUR,LETTRE à fleurs.\n(TENU)
+6,3,10015,COFFRE NML,Ouvrir pour voir\nà l'intérieur.
+6,3,10016,COFFRE LUXE,Ouvrir pour voir\nà l'intérieur.
+6,3,10017,RUBAN A POIS,Renforce capacités\nNORMAL. (TENU)
+6,3,10018,BAIE,"Auto-soin.\n(10PV, TENU)"
+6,3,10019,BAIE DOREE,"Auto-soin.\n(30PV, TENU)"
+6,3,10020,MORC. BRIQUE,Morceau rare d'une\nbrique.
+6,3,10021,LETR SURF,LETTRE avec un\nLOKHLASS. (TENU)
+6,3,10022,LETRBLEUCIEL,LETTRE avec un\nMINIDRACO. (TENU)
+6,3,10023,LETRPORTRAIT,LETTRE au goût du\ndétenteur. (TENU)
+6,3,10024,LETRCHARM.,LETTRE à coeurs.\n(TENU)
+6,3,10025,LETR EVOLI,LETTRE avec un\nEVOLI. (TENU)
+6,3,10026,LETR MORPH,LETTRE avec un\nMETAMORPH. (TENU)
+6,3,10027,LETRCIELBLEU,LETTRE avec des\nnuages. (TENU)
+6,3,10028,LETR MUSIQUE,LETTRE avec un\nNATU. (TENU)
+6,3,10029,LETR MIRAGE,LETTRE avec un\nMEW. (TENU)
+6,3,10030,GS BALL,Une BALL\nmystérieuse.
+6,3,10031,TICKET OEUF,A utiliser au\nCENTRE TROC.
+6,4,1,MEISTERBALL,Der beste BALL.\nErfolg garantiert!
+6,4,2,HYPERBALL,Ein BALL mit hoher\nErfolgsquote.
+6,4,3,SUPERBALL,Ein BALL mit guter\nErfolgsquote.
+6,4,4,POKéBALL,Damit fängst du\nPOKéMON.
+6,4,17,TRANK,Füllt KP um\n20 auf.
+6,4,18,GEGENGIFT,Heilt\nVergiftungen.
+6,4,19,FEUERHEILER,Heilt\nVerbrennungen.
+6,4,20,EISHEILER,Taut POKéMON\nwieder auf.
+6,4,21,AUFWECKER,Weckt schlafende\nPOKéMON.
+6,4,22,PARA-HEILER,Heilt \nParalyse.
+6,4,23,TOP-GENESUNG,Stellt KP und\nStatus wieder her.
+6,4,24,TOP-TRANK,Füllt KP\nvollständig auf.
+6,4,25,HYPERTRANK,Füllt KP um\n200 auf.
+6,4,26,SUPERTRANK,Füllt KP um\n50 auf.
+6,4,27,HYPERHEILER,Beseitigt alle\nStatusprobleme.
+6,4,28,BELEBER,Belebt POKéMON\nplus halbe KP.
+6,4,29,TOP-BELEBER,Belebt POKéMON\nplus volle KP.
+6,4,30,TAFELWASSER,Füllt KP um\n50 auf.
+6,4,31,SPRUDEL,Füllt KP um\n60 auf.
+6,4,32,LIMONADE,Füllt KP um\n80 auf.
+6,4,33,KUHMUH-MILCH,Füllt KP um\n100 auf.
+6,4,34,ENERGIESTAUB,Füllt KP um\n50 auf. Bitter.
+6,4,35,KRAFTWURZEL,Füllt KP um\n200 auf. Bitter.
+6,4,36,HEILPUDER,Heilt alle Status-\nprobleme. Bitter.
+6,4,37,VITALKRAUT,Belebt besiegte\nPOKéMON wieder.
+6,4,38,ÄTHER,Füllt AP um\n10 auf.
+6,4,39,TOP-ÄTHER,Füllt AP\nvollständig auf.
+6,4,40,ELIXIER,Füllt alle AP\num 10 auf.
+6,4,41,TOP-ELIXIER,Füllt alle AP\nauf.
+6,4,43,BEERENSAFT,Füllt KP um\n20 auf.
+6,4,44,ZAUBERASCHE,Belebt alle be-\nsiegten POKéMON.
+6,4,45,KP-PLUS,Erhöht KP\neines POKéMON.
+6,4,46,PROTEIN,Erhöht den\nANGR-Wert.
+6,4,47,EISEN,Erhöht den\nVERT-Wert.
+6,4,48,CARBON,Erhöht den\nINIT-Wert.
+6,4,49,KALZIUM,Erhöht den\nSPEZ-Wert.
+6,4,50,SONDERBONBON,Hebt Level um\neins an.
+6,4,51,AP-PLUS,Hebt die max.\nAnzahl der AP.
+6,4,55,MEGABLOCK,Keine Statusände-\nrung für 1 Kampf.
+6,4,56,ANGRIFFPLUS,Hebt Volltreffer-\nquote für 1 Kampf.
+6,4,57,X-ANGRIFF,Hebt ANGR-Wert\nfür 1 Kampf.
+6,4,58,X-ABWEHR,Hebt VERT-Wert\nfür 1 Kampf.
+6,4,59,X-TEMPO,Hebt INIT-Wert\nfür 1 Kampf.
+6,4,60,X-TREFFER,Hebt Genauigkeit\nfür 1 Kampf.
+6,4,61,X-SPEZIAL,Hebt SPEZ. ANG\nfür 1 Kampf.
+6,4,63,POKéPUPPE,Flucht vor wilden\nPOKéMON.
+6,4,76,SUPERSCHUTZ,Starker Schutz vor\nPOKéMON.
+6,4,77,TOP-SCHUTZ,Bester Schutz vor\nPOKéMON.
+6,4,78,FLUCHTSEIL,"Ermöglicht Flucht\naus Höhlen, etc."
+6,4,79,SCHUTZ,Hält schwache\nPOKéMON ab.
+6,4,80,SONNENSTEIN,Entwickelt manche\nPOKéMON.
+6,4,81,MONDSTEIN,Entwickelt\nmanche POKéMON.
+6,4,82,FEUERSTEIN,Entwickelt manche\nPOKéMON.
+6,4,83,DONNERSTEIN,Entwickelt manche\nPOKéMON.
+6,4,84,WASSERSTEIN,Entwickelt manche\nPOKéMON.
+6,4,85,BLATTSTEIN,Entwickelt manche\nPOKéMON.
+6,4,86,MINIPILZ,Ein gemeiner Pilz.\nWert gering.
+6,4,87,RIESENPILZ,Ein seltener Pilz.\nWert hoch.
+6,4,88,PERLE,Eine Perle.\nWert niedrig.
+6,4,89,RIESENPERLE,Eine schöne Perle.\nWert hoch.
+6,4,90,STERNENSTAUB,Schöner roter\nSand. Wert hoch.
+6,4,91,STERNENSTÜCK,Roter Edelstein.\nWert sehr hoch.
+6,4,92,NUGGET,Aus purem Gold.\nWert hoch.
+6,4,213,BLENDPUDER,Senkt Genauigkeit.\n(TRAGEN)
+6,4,216,EP-TEILER,Teilt Kampf-EP.\n(TRAGEN)
+6,4,217,FLINKKLAUE,Erhöht Erstschlag-\nquote. (TRAGEN)
+6,4,221,KING-STEIN,Feind flieht\nevtl. (TRAGEN)
+6,4,222,SILBERSTAUB,Verstärkt Käfer-\nAttacken. (TRAGEN)
+6,4,223,MÜNZAMULETT,Doppeltes Ein-\nkommen. (TRAGEN)
+6,4,224,SCHUTZBAND,Schutz vor wilden\nPOKéMON. (TRAGEN)
+6,4,228,RAUCHBALL,Flucht vor wilden\nPOKéMON. (TRAGEN)
+6,4,229,EWIGSTEIN,Entwicklungsstopp.\n(TRAGEN)
+6,4,230,FOKUS-BAND,Könnte K.O. ver-\nhindern. (TRAGEN)
+6,4,231,GLÜCKS-EI,Erhält Extra-EP.\n(TRAGEN)
+6,4,232,SCOPE-LINSE,Hebt Volltreffer-\nquote. (TRAGEN)
+6,4,233,METALLMANTEL,Verstärkt Stahl-\nAttacken. (TRAGEN)
+6,4,234,ÜBERRESTE,Füllt KP im Kampf\nauf. (TRAGEN)
+6,4,235,DRACHENHAUT,Ein seltenes\nDrachen-Item.
+6,4,236,KUGELBLITZ,Bizarrer Elektro-\nBall. (TRAGEN)
+6,4,237,PUDERSAND,Verstärkt Boden-\nAttacken. (TRAGEN)
+6,4,238,GRANITSTEIN,Verstärkt Gestein-\nAttacken. (TRAGEN)
+6,4,239,WUNDERSAAT,Verstärkt Pfl.-\nAttacken. (TRAGEN)
+6,4,240,SCHATTENGLAS,Verstärkt Unlicht-\nAttacken. (TRAGEN)
+6,4,241,SCHWARZGURT,Verstärkt Kampf-\nAttacken. (TRAGEN)
+6,4,242,MAGNET,Verstärkt Elektro-\nAttacken. (TRAGEN)
+6,4,243,ZAUBERWASSER,Verstärkt Wasser-\nAttacken. (TRAGEN)
+6,4,244,HACKATTACK,Verstärkt Flug-\nAttacken. (TRAGEN)
+6,4,245,GIFTSTICH,Verstärkt Gift-\nAttacken. (TRAGEN)
+6,4,246,EWIGES EIS,Verstärkt Eis-\nAttacken. (TRAGEN)
+6,4,247,BANNSTICKER,Verstärkt Geist-\nAttacken. (TRAGEN)
+6,4,248,KRÜMMLÖFFEL,Verstärkt Psycho-\nAttacken. (TRAGEN)
+6,4,249,HOLZKOHLE,Verstärkt Feuer-\nAttacken. (TRAGEN)
+6,4,250,DRACHENZAHN,Verstärkt Drachen-\nAttacken. (TRAGEN)
+6,4,252,UP-GRADE,Eine mysteriöse\nBox der SILPH CO.
+6,4,256,LUCKY PUNCH,Erhöht CHANEIRAs\nVolltrefferquote.
+6,4,257,METALLSTAUB,Hebt VERT-Wert von\nDITTO. (TRAGEN)
+6,4,258,KAMPFKNOCHEN,Ein Knochen.\nWert niedrig.
+6,4,259,LAUCHSTANGE,Gemeiner Lauch.\nWert gering.
+6,4,328,TM01,
+6,4,329,TM02,
+6,4,330,TM03,
+6,4,331,TM04,
+6,4,332,TM05,
+6,4,333,TM06,
+6,4,334,TM07,
+6,4,335,TM08,
+6,4,336,TM09,
+6,4,337,TM10,
+6,4,338,TM11,
+6,4,339,TM12,
+6,4,340,TM13,
+6,4,341,TM14,
+6,4,342,TM15,
+6,4,343,TM16,
+6,4,344,TM17,
+6,4,345,TM18,
+6,4,346,TM19,
+6,4,347,TM20,
+6,4,348,TM21,
+6,4,349,TM22,
+6,4,350,TM23,
+6,4,351,TM24,
+6,4,352,TM25,
+6,4,353,TM26,
+6,4,354,TM27,
+6,4,355,TM28,
+6,4,356,TM29,
+6,4,357,TM30,
+6,4,358,TM31,
+6,4,359,TM32,
+6,4,360,TM33,
+6,4,361,TM34,
+6,4,362,TM35,
+6,4,363,TM36,
+6,4,364,TM37,
+6,4,365,TM38,
+6,4,366,TM39,
+6,4,367,TM40,
+6,4,368,TM41,
+6,4,369,TM42,
+6,4,370,TM43,
+6,4,371,TM44,
+6,4,372,TM45,
+6,4,373,TM46,
+6,4,374,TM47,
+6,4,375,TM48,
+6,4,376,TM49,
+6,4,377,TM50,
+6,4,420,VM01,
+6,4,421,VM02,
+6,4,422,VM03,
+6,4,423,VM04,
+6,4,424,VM05,
+6,4,425,VM06,
+6,4,444,MÜNZKORB,Kann bis zu 9.999\nMünzen aufnehmen.
+6,4,445,ANGEL,Damit kannst du\nPOKéMON angeln.
+6,4,446,PROFIANGEL,Eine gute ANGEL\nzum Fischen.
+6,4,447,SUPERANGEL,Die beste ANGEL\nzum Fischen.
+6,4,450,FAHRRAD,"Ein Klapprad, um\nschneller zu sein."
+6,4,456,BOOTSTICKET,Ein Ticket für die\nM.S. AQUA.
+6,4,464,GEHEIMTRANK,Heilt jedes POKé-\nMON vollständig.
+6,4,471,DETEKTOR,Scannt die Umge-\nbung nach Items.
+6,4,472,BLAUE KARTE,Karte zum Punkte-\nsammeln.
+6,4,473,FLEGMONRUTE,Sehr lecker.\nWert hoch.
+6,4,474,KLARGLOCKE,Erzeugt ein\nangenehmes Läuten.
+6,4,475,TÜRÖFFNER,Öffnet die Rollos\nim RADIOTURM.
+6,4,476,KELLERÖFFNER,Öffnet Türen.
+6,4,477,SCHIGGYKANNE,"Eine Kanne, um\nBäume zu wässern."
+6,4,478,ROTE HAUT,Haut vom roten\nGARADOS.
+6,4,479,FUNDSACHE,POKéPUPPE der\nNACHAHMERIN.
+6,4,480,FAHRSCHEIN,Ticket für\nMAGNETZUG.
+6,4,481,SPULE,Ein Maschinenteil\nfür das KRAFTWERK.
+6,4,482,SILBERFLÜGEL,Eine seltsame\nsilberne Feder.
+6,4,483,BUNTSCHWINGE,Mystische Regen-\nbogen-Feder.
+6,4,484,RÄTSEL-EI,Ein EI von\nMR. POKéMON.
+6,4,485,APRIKOKO ROT,Eine rote\nAPRIKOKO.
+6,4,486,APRIKOKO BLU,Eine blaue\nAPRIKOKO.
+6,4,487,APRIKOKO GLB,Eine gelbe\nAPRIKOKO.
+6,4,488,APRIKOKO GRN,Eine grüne\nAPRIKOKO.
+6,4,489,APRIKOKO SWZ,Eine schwarze\nAPRIKOKO.
+6,4,490,APRIKOKO WSS,Eine weiße\nAPRIKOKO.
+6,4,491,APRIKOKO PNK,Eine pinke\nAPRIKOKO.
+6,4,492,TURBOBALL,Ein BALL für\nschnelle POKéMON.
+6,4,493,LEVELBALL,Ein BALL für\nschwache POKéMON.
+6,4,494,KÖDERBALL,Ein BALL für POKé-\nMON an der Angel.
+6,4,495,SCHWERBALL,Damit fängst du\nschwere POKéMON.
+6,4,496,SYMPABALL,Fängt anderes Ge-\nschlecht leichter.
+6,4,497,FREUNDESBALL,Fördert Sympathie\nbei wilden PKMN.
+6,4,498,MONDBALL,Fängt MONDST.-Ent-\nwickler eher ein.
+6,4,499,PARKBALL,BALL für das\nKäferturnier.
+6,4,504,WUTKEKS,Füllt KP um\n20 auf.
+6,4,737,VM07,
+6,4,10002,SILBERBLATT,Ein seltsames\nsilbernes Blatt.
+6,4,10003,GGNGIFTBEERE,Selbstheilung bei\nGift. (TRAGEN)
+6,4,10004,GOLDBLATT,Ein seltsames\ngoldenes Blatt.
+6,4,10005,ANTIPARBEERE,Selbstheilung bei\nParalyse. (TRAGEN)
+6,4,10006,BRANDBEERE,Selbstheilung bei\nFrost. (TRAGEN)
+6,4,10007,EISBEERE,Selbstheilung bei\nBrand. (TRAGEN)
+6,4,10008,BITTERBEERE,Selbstheilung bei\nVerwirr. (TRAGEN)
+6,4,10009,MINZBEERE,Auto-Aufwecker bei\nSchlaf. (TRAGEN)
+6,4,10010,ROSA BAND,Verstärkt Normal-\nAttacken. (TRAGEN)
+6,4,10011,WUNDERBEERE,Setzt Status in\nUrzustand.(TRAGEN)
+6,4,10012,RÄTSELBEERE,Auto-Auffüllung\nder AP. (TRAGEN)
+6,4,10013,BERSERK-GEN,Hebt ANGR-Wert und\nbewirkt Verwirr.
+6,4,10014,BLUMENBRIEF,Umschlag mit Blu-\nmendruck.(TRAGEN)
+6,4,10015,SCHACHTEL,Öffne sie und\nschau hinein.
+6,4,10016,SCHATULLE,Öffne sie und\nschau hinein.
+6,4,10017,PUNKT-BAND,Verstärkt Normal-\nAttacken. (TRAGEN)
+6,4,10018,BEERE,Selbstheilung um\n10 KP. (TRAGEN)
+6,4,10019,GOLDBEERE,Selbstheilung um\n30 KP. (TRAGEN)
+6,4,10020,ZIEGELSTEIN,Ein seltenes Stück\neines Ziegels.
+6,4,10021,SURFERBRIEF,Umschlag mit\nLAPRAS. (TRAGEN)
+6,4,10022,CYANBRIEF,Umschlag mit\nDRATINI. (TRAGEN)
+6,4,10023,ABBILDBRIEF,Umschlag mit\nBesitzerportrait.
+6,4,10024,HERZBRIEF,Umschlag mit Herz-\nAufdruck. (TRAGEN)
+6,4,10025,ANARA-BRIEF,Umschlag mit\nEVOLI. (TRAGEN)
+6,4,10026,MORPH-BRIEF,Umschlag mit\nDITTO. (TRAGEN)
+6,4,10027,KOBALTBRIEF,Himmelblauer\nUmschlag. (TRAGEN)
+6,4,10028,MELODIEBRIEF,Umschlag mit NATU-\nAufdruck. (TRAGEN)
+6,4,10029,TRUGBRIEF,Umschlag mit MEW-\nAufdruck. (TRAGEN)
+6,4,10030,GS-BALL,Ein geheimnis-\nvoller BALL.
+6,4,10031,EI-TICKET,In SPIELHALLE von\nDUKATIA benutzen.
+6,5,1,MASTER BALL,La BALL migliore:\ninfallibile.
+6,5,2,ULTRA BALL,Altissima probabi-\nlità di successo.
+6,5,3,MEGA BALL,Discrete possibi-\nlità di successo.
+6,5,4,POKé BALL,Si usa per cattu-\nrare i POKéMON.
+6,5,17,POZIONE,Restituisce 20 PS\nal POKéMON.
+6,5,18,ANTIDOTO,Cura i POKéMON\navvelenati.
+6,5,19,ANTISCOTTAT.,Cura i POKéMON\nscottati.
+6,5,20,ANTIGELO,Cura i POKéMON\ncongelati.
+6,5,21,SVEGLIA,Sveglia i POKéMON\naddormentati.
+6,5,22,ANTIPARALISI,Cura i POKéMON\nparalizzati.
+6,5,23,RICARICA TOT,Ridà i PS e azzera\nproblemi di stato.
+6,5,24,POZIONE MAX,Restituisce tutti\ni PS.
+6,5,25,IPERPOZIONE,Restituisce 200 PS\nal POKéMON.
+6,5,26,SUPERPOZIONE,Restituisce 50 PS\nal POKéMON.
+6,5,27,CURA TOTALE,Risolve tutti i\nproblemi di stato.
+6,5,28,REVITALIZ.,Un POKéMON esausto\nritorna a 1/2 PS.
+6,5,29,REVITAL.MAX,Un POKéMON esausto\nrecupera ogni PS.
+6,5,30,ACQUA FRESCA,Restituisce 50 PS\nal POKéMON.
+6,5,31,GASSOSA,Restituisce 60 PS\nal POKéMON.
+6,5,32,LEMONSUCCO,Restituisce 80 PS\nal POKéMON.
+6,5,33,LATTE MUMU,Restituisce 100 PS\nal POKéMON.
+6,5,34,POLVENERGIA,Restituisce 50 PS.\nGusto amaro.
+6,5,35,RADICENERGIA,Restituisce 200\nPS. Gusto amaro.
+6,5,36,POLVOCURA,Cura ogni problema\ndi stato. Amara.
+6,5,37,VITALERBA,Rianima POKéMON\nesausto. Amara.
+6,5,38,ETERE,Restituisce 10 PP\ndi una mossa.
+6,5,39,ETERE MAX,Restituisce tutti\ni PP di una mossa.
+6,5,40,ELISIR,Restituisce 10 PP\nad ogni mossa.
+6,5,41,ELISIR MAX,Restituisce tutti\ni PP del POKéMON.
+6,5,43,SUCCODIBACCA,Restituisce al\nPOKéMON 20 PS.
+6,5,44,CENEREMAGICA,Rianima qualsiasi\nPOKéMON esausto.
+6,5,45,PS-SU,Aumenta i PS\ndi un POKéMON.
+6,5,46,PROTEINA,Potenzia ATTACCO\ndi un POKéMON.
+6,5,47,FERRO,Potenzia DIFESA\ndi un POKéMON.
+6,5,48,CARBURANTE,Potenzia VELOCITÀ\ndi un POKéMON.
+6,5,49,CALCIO,Aumenta stat.SPEC.\ndi un POKéMON.
+6,5,50,CARAM. RARA,Eleva il POKéMON\ndi un livello.
+6,5,51,PP-SU,Aumenta PP max.\ndi una data mossa.
+6,5,55,SUPERGUARDIA,Previene riduzione\nstat.(LOTTA)
+6,5,56,SUPERCOLPO,Brutti colpi più\nprobabili.(LOTTA)
+6,5,57,ATTACCO X,Migliora ATTACCO.\n(LOTTA)
+6,5,58,DIFESA X,Migliora DIFESA.\n(LOTTA)
+6,5,59,VELOCITÀ X,Migliora VELOCITÀ.\n(LOTTA)
+6,5,60,PRECISIONE X,Migliora\nprecisione.(LOTTA)
+6,5,61,SPECIAL X,Migliora ATT.\nSPEC.(LOTTA)
+6,5,63,POKé BAMBOLA,Per fuggire da un\nPOKéMON selvatico.
+6,5,76,SUPERREPELL.,Tiene a 200 passi\ni POKéMON deboli.
+6,5,77,REPELL.MAX,Tiene a 250 passi\ni POKéMON deboli.
+6,5,78,FUNE DI FUGA,"Si usa per uscire\nda grotte, ecc."
+6,5,79,REPELLENTE,Tiene a 100 passi\ni POKéMON deboli.
+6,5,80,PIETRASOLARE,Fa evolvere certi\nPOKéMON.
+6,5,81,PIETRALUNARE,Fa evolvere certi\nPOKéMON.
+6,5,82,PIETRAFOCAIA,Fa evolvere certi\nPOKéMON.
+6,5,83,PIETRATUONO,Fa evolvere certi\nPOKéMON.
+6,5,84,PIETRAIDRICA,Fa evolvere certi\nPOKéMON.
+6,5,85,PIETRAFOGLIA,Fa evolvere certi\nPOKéMON.
+6,5,86,MINIFUNGO,Un comune fungo.\nCosta poco.
+6,5,87,GRANDE FUNGO,Un fungo raro.\nMolto costoso.
+6,5,88,PERLA,Una bella perla.\nCosta poco.
+6,5,89,GRANDE PERLA,"Una bella perla,\ngrande e costosa."
+6,5,90,POLVOSTELLA,Splendida sabbia\nrossa. Costosa.
+6,5,91,PEZZO STELLA,Gemma rossa enor-\nme e costosissima.
+6,5,92,PEPITA,È d'oro massiccio.\nCostoso.
+6,5,213,LUMINPOLVERE,Riduce precisione\ndel nemico.(DAI)
+6,5,216,CONDIV.ESP.,Suddivide i punti\nESP.(DAI)
+6,5,217,RAPIDARTIGLI,Aumenta chance di\ncolpire prima(DAI)
+6,5,221,ROCCIA DI RE,Può far tentennare\nl'avversario.(DAI)
+6,5,222,ARGENPOLVERE,Potenzia le mosse\ncoleottero.(DAI)
+6,5,223,MONETAMULETO,Raddoppia i\nguadagni.(DAI)
+6,5,224,VELOPURO,Allontana POKéMON\nselvatici.(DAI)
+6,5,228,PALLA FUMO,Per sfuggire ai\nPOKéMON selv.(DAI)
+6,5,229,PIETRASTANTE,Blocca l'evolu-\nzione.(DAI)
+6,5,230,BANDANA,Può evitare\nil KO.(DAI)
+6,5,231,FORTUNUOVO,Punti ESP.\nextra.(DAI)
+6,5,232,MIRINO,Aumenta i brutti\ncolpi.(DAI)
+6,5,233,METALCOPERTA,Potenzia le mosse\nacciaio.(DAI)
+6,5,234,AVANZI,Ridà PS durante la\nlotta.(DAI)
+6,5,235,SQUAMA DRAGO,Raro strumento\ndi tipo drago.
+6,5,236,ELETTROPALLA,Una strana sfera\nelettrica.(DAI)
+6,5,237,SABBIA SOFF.,Potenzia le mosse\ntipo terra.(DAI)
+6,5,238,PIETRADURA,Potenzia attacchi\nroccia.(DAI)
+6,5,239,MIRACOLSEME,Potenzia le mosse\nerba.(DAI)
+6,5,240,OCCHIALINERI,Potenzia le mosse\nbuio.(DAI)
+6,5,241,CINTURANERA,Migliora le mosse\nlotta.(DAI)
+6,5,242,CALAMITA,Potenzia mosse\nelettro.(DAI)
+6,5,243,ACQUA MAGICA,Potenzia le mosse\nacqua.(DAI)
+6,5,244,BECCAFFILATO,Potenzia le mosse\nvolante.(DAI)
+6,5,245,VELENACULEO,Potenzia le mosse\nveleno.(DAI)
+6,5,246,GELOMAI,Potenzia mosse\nghiaccio.(DAI)
+6,5,247,SPETTROTARGA,Potenzia le mosse\nspettro.(DAI)
+6,5,248,CUCCH.TORTO,Migliora le mosse\npsico.(DAI)
+6,5,249,CARBONELLA,Potenzia le mosse\ndi fuoco.(DAI)
+6,5,250,DENTEDIDRAGO,Potenzia le mosse\ndrago.(DAI)
+6,5,252,UPGRADE,Una strana scatola\ndi SILPH SPA.
+6,5,256,FORTUNPUGNO,Aumenta i brutti\ncolpi di CHANSEY.
+6,5,257,METALPOLVERE,Migliora DIFESA\ndi DITTO.(DAI)
+6,5,258,OSSOSPESSO,"Un osso qualsiasi,\ncosta poco."
+6,5,259,GAMBO,Un normale gambo.\nCosta poco.
+6,5,328,MT01,
+6,5,329,MT02,
+6,5,330,MT03,
+6,5,331,MT04,
+6,5,332,MT05,
+6,5,333,MT06,
+6,5,334,MT07,
+6,5,335,MT08,
+6,5,336,MT09,
+6,5,337,MT10,
+6,5,338,MT11,
+6,5,339,MT12,
+6,5,340,MT13,
+6,5,341,MT14,
+6,5,342,MT15,
+6,5,343,MT16,
+6,5,344,MT17,
+6,5,345,MT18,
+6,5,346,TM19,
+6,5,347,MT20,
+6,5,348,MT21,
+6,5,349,MT22,
+6,5,350,MT23,
+6,5,351,MT24,
+6,5,352,MT25,
+6,5,353,MT26,
+6,5,354,MT27,
+6,5,355,MT28,
+6,5,356,MT29,
+6,5,357,MT30,
+6,5,358,MT31,
+6,5,359,MT32,
+6,5,360,MT33,
+6,5,361,MT34,
+6,5,362,MT35,
+6,5,363,MT36,
+6,5,364,MT37,
+6,5,365,MT38,
+6,5,366,MT39,
+6,5,367,MT40,
+6,5,368,MT41,
+6,5,369,MT42,
+6,5,370,MT43,
+6,5,371,MT44,
+6,5,372,MT45,
+6,5,373,MT46,
+6,5,374,MT47,
+6,5,375,MT48,
+6,5,376,MT49,
+6,5,377,MT50,
+6,5,420,MN01,
+6,5,421,MN02,
+6,5,422,MN03,
+6,5,423,MN04,
+6,5,424,MN05,
+6,5,425,MN06,
+6,5,444,SALVADANAIO,Può contenere\n9.999 gettoni.
+6,5,445,AMO VECCHIO,Pesca i POKéMON\nd'acqua.
+6,5,446,AMO BUONO,Un buon AMO per i\nPOKéMON acqua.
+6,5,447,SUPER AMO,L'AMO migliore per\ncatturare POKéMON.
+6,5,450,BICICLETTA,Bici pieghevole:\nper andare veloce.
+6,5,456,BIGL.NAVE,Un biglietto per\nla M/N ACQUA.
+6,5,464,POZ.SEGRETA,Guarisce ogni\nPOKéMON.
+6,5,471,DETECTOR,Cerca strumenti\nnella zona.
+6,5,472,CARTA BLU,Per conservare i\npunti.
+6,5,473,CODASLOWPOKE,Molto gustosa\ne costosa.
+6,5,474,CAMP.CHIARA,Produce un suono\ndelicato.
+6,5,475,APRIPORTA,Apriporta nella\nTORRE RADIO.
+6,5,476,CHIAVE SOTT.,Apre le porte.
+6,5,477,ANNAFFIATOIO,Per annaffiare\nle piante.
+6,5,478,SQUAMA ROSSA,La squama di un\nGYARADOS rosso.
+6,5,479,STRUM.PERSO,La POKé BAMBOLA\npersa da COPIONA.
+6,5,480,ABBONAMENTO,Biglietto per il\nSUPERTRENO.
+6,5,481,PEZZO MACCH.,Pezzo macchina\nCENTRALE ELETT.
+6,5,482,ALADARGENTO,Una strana piuma\nargentata.
+6,5,483,ALA D'IRIDE,Piuma magica dai\nmille colori.
+6,5,484,UOVO MISTERO,UOVO che si riceve\nda MR.POKéMON.
+6,5,485,GHICOC.ROSSA,Una GHICOCCA\nrossa.
+6,5,486,GHICOCCA BLU,Una GHICOCCA\nblu.
+6,5,487,GHICOC.GIAL.,Una GHICOCCA\ngialla.
+6,5,488,GHICOC.VERDE,Una GHICOCCA\nverde.
+6,5,489,GHICOC.NERA,Una GHICOCCA\nnera.
+6,5,490,GHICOC.BNCA,Una GHICOCCA\nbianca.
+6,5,491,GHICOC.ROSA,Una GHICOCCA\nrosa.
+6,5,492,RAPID BALL,Per catturare\nPOKéMON veloci.
+6,5,493,LEVEL BALL,Per POKéMON di\nlivello basso.
+6,5,494,ESCA BALL,Per catturare i\nPOKéMON pescati.
+6,5,495,PESO BALL,Cattura POKéMON\npesanti.
+6,5,496,LOVE BALL,Per catturare il\ngenere opposto.
+6,5,497,FRIEND BALL,Rende i POKéMON\namichevoli.
+6,5,498,LUNA BALL,Per chi si evolve\ncon PIETRALUNARE.
+6,5,499,PARK BALL,La BALL della Gara\nPigliamosche.
+6,5,504,IRAMELLA,Restituisce 20 PS\nal POKéMON.
+6,5,737,MN07,
+6,5,10002,FOGLIARGENTO,Una strana foglia\nargentata.
+6,5,10003,BACCANTIVEL.,Autorimedio contro\nil veleno.(DAI)
+6,5,10004,FOGLIADORO,Una strana foglia\ndorata.
+6,5,10005,BACCANTIPAR.,Autorimedio per\nparalisi.(DAI)
+6,5,10006,BACCA BRUC.,Autorim. per con-\ngelamento.(DAI)
+6,5,10007,BACCA GHIAC.,Autorimedio per\nscottature.(DAI)
+6,5,10008,BACCA AMARA,Autorimedio contro\nconfusione.(DAI)
+6,5,10009,BACCA MENTA,Autorisveglio.\n(DAI)
+6,5,10010,FIOCCO ROSA,Potenzia le mosse\nnormale.(DAI)
+6,5,10011,BACCA MIRAC.,Cura ogni problema\ndi stato.(DAI)
+6,5,10012,BACCA MIST.,Autorecupero\nPP.(DAI)
+6,5,10013,GENEFURIOSO,Potenzia ATTACCO\nma causa confus.
+6,5,10014,MESS.FIORE,Stampa fiori.\n(DAI)
+6,5,10015,SCAT.NORMALE,Apri e vedrai!
+6,5,10016,SCAT.LUSSO,Apri e vedrai!
+6,5,10017,FIOCCO POIS,Potenzia le mosse\nnormale.(DAI)
+6,5,10018,BACCA,"Autorecupero.\n(10 PS, DAI)"
+6,5,10019,BACCA ORO,"Autorecupero.\n(30 PS, DAI)"
+6,5,10020,MATTONCINO,Un raro pezzo di\nmattone.
+6,5,10021,MESS.SURF,Stampa\nLAPRAS.(DAI)
+6,5,10022,MESS.AZZURRO,Stampa\nDRATINI.(DAI)
+6,5,10023,MESS.RITRAT.,Stampa l'immagine\ndi chi lo tiene.
+6,5,10024,MESS.DOLCE,Stampa un cuore.\n(DAI)
+6,5,10025,MESS.EON,Stampa EEVEE.\n(DAI)
+6,5,10026,MESS.MORPH,Stampa DITTO.\n(DAI)
+6,5,10027,MESS.CIELO,Stampa il cielo.\n(DAI)
+6,5,10028,MESS.MUSICA,Stampa NATU.\n(DAI)
+6,5,10029,MESS.VISIONE,Stampa MEW.\n(DAI)
+6,5,10030,GS BALL,Una BALL\nmisteriosa.
+6,5,10031,BIGL.UOVO,Per uno scambio a\nFIORDOROPOLI.
+6,6,1,MASTER BALL,Es la mejor BALL.\nNunca falla.
+6,6,2,ULTRA BALL,BALL con un gran\níndice de éxito.
+6,6,3,SÚPER BALL,BALL con un buen\níndice de éxito.
+6,6,4,POKé BALL,Objeto para\ncapturar POKéMON.
+6,6,17,POCIÓN,Restaura 20 PS\ndel POKéMON.
+6,6,18,ANTÍDOTO,Cura a los POKéMON\nenvenenados.
+6,6,19,ANTIQUEMAR,Cura a los POKéMON\nquemados.
+6,6,20,ANTIHIELO,Descongela a los\nPOKéMON.
+6,6,21,DESPERTAR,Despierta a los\nPOKéMON dormidos.
+6,6,22,ANTIPARALIZ,Cura a los POKéMON\nparalizados.
+6,6,23,RESTAU. TODO,Restaura todos los\nPS y el estado.
+6,6,24,MÁX. POCIÓN,Restaura todos los\nPS del POKéMON.
+6,6,25,HÍPER POCIÓN,Restaura 200 PS\ndel POKéMON.
+6,6,26,SÚPER POCIÓN,Restaura 50 PS\ndel POKéMON.
+6,6,27,CURA TOTAL,Cura los problemas\nde estado.
+6,6,28,REVIVIR,Restaura 1/2 PS a\nun POKéMON debili.
+6,6,29,MÁX. REVIVIR,Cura a un POKéMON\ndebilitado.
+6,6,30,AGUA FRESCA,Restaura 50 PS de\nun POKéMON.
+6,6,31,REFRESCO,Restaura 60 PS de\nun POKéMON.
+6,6,32,LIMONADA,Restaura 80 PS de\nun POKéMON.
+6,6,33,LECHE MU-MU,Restaura 100 PS de\nun POKéMON.
+6,6,34,POLVOENERGÍA,Restaura 50 PS del\nPOKéMON. Amarga.
+6,6,35,RAÍZ ENERGÍA,Restaura 200 PS al\nPOKéMON. Amarga.
+6,6,36,POL.CURACIÓN,Cura todos los\nmales. Amarga.
+6,6,37,HIERBA-REV,Revive POKéMON.\nAmarga.
+6,6,38,ÉTER,Restaura 10 PP de\nun movimiento.
+6,6,39,ÉTER MÁX,Restaura todos los\nPP de un ataque.
+6,6,40,ELIXIR,Restaura 10 PP de\ntodos los ataques.
+6,6,41,ELIXIR MÁX,Restaura todos los\nPP de un POKéMON.
+6,6,43,ZUMO DE BAYA,Restaura 20 PS\ndel POKéMON.
+6,6,44,CEN. SAGRADA,Revive POKéMON\ndebilitados.
+6,6,45,MÁS PS,Aumenta los PS de\nun POKéMON.
+6,6,46,PROTEÍNAS,Mejora el ATAQUE\nde un POKéMON.
+6,6,47,HIERRO,Mejora la DEFENSA\nde un POKéMON.
+6,6,48,CARBURANTE,Eleva la VELOCIDAD\nde un POKéMON.
+6,6,49,CALCIO,Sube caract. ESP.\nde un POKéMON.
+6,6,50,CARAMELORARO,Sube de nivel a\nun POKéMON.
+6,6,51,MÁS PP,Aumenta los PP\nmáx. de un ataque.
+6,6,55,PROTEC. ESP,Evita la reducción\nde caract.(1 BAT.)
+6,6,56,DIRECTO,Sube prob. golpe\ncrítico. (1 BAT.)
+6,6,57,ATAQUE X,Mejora el ATAQUE.\n(1 BAT.)
+6,6,58,DEFENSA X,Mejora la\nDEFENSA. (1 BAT.)
+6,6,59,VELOCIDAD X,Más VELOCIDAD.\n(1 BAT.)
+6,6,60,PRECISIÓN X,Sube la PRECISIÓN.\n(1 BAT.)
+6,6,61,ESPECIAL X,Sube ATAQUE\nESPECIAL. (1 BAT.)
+6,6,63,POKé MUÑECO,Sirve para huir de\nPOKéMON salvajes.
+6,6,76,SÚPER REPEL,Repele POKéMON\ndébiles 200 pasos.
+6,6,77,MÁX. REPEL,Repele POKéMON\ndébiles 250 pasos.
+6,6,78,CUERDA HUIDA,"Se usa para salir\nde cuevas, etc."
+6,6,79,REPELENTE,Repele POKéMON\ndébiles 100 pasos.
+6,6,80,PIEDRA SOLAR,Evoluciona ciertos\ntipos de POKéMON.
+6,6,81,PIEDRA LUNAR,Evoluciona ciertos\ntipos de POKéMON.
+6,6,82,PIEDRA FUEGO,Evoluciona ciertos\ntipos de POKéMON.
+6,6,83,PIEDRATRUENO,Evoluciona ciertos\ntipos de POKéMON.
+6,6,84,PIEDRA AGUA,Evoluciona ciertos\ntipos de POKéMON.
+6,6,85,PIEDRA HOJA,Evoluciona ciertos\ntipos de POKéMON.
+6,6,86,MINI SETA,Una seta común.\nEs muy barata.
+6,6,87,SETA GRANDE,Una seta rara.\nEs muy cara.
+6,6,88,PERLA,Una perla bonita.\nEs barata.
+6,6,89,PERLA GRANDE,Perla preciosa y\nenorme. Carísima.
+6,6,90,POLVOESTELAR,Bonita arena roja.\nMuy cara.
+6,6,91,TR. ESTRELLA,Un trozo de gema\nroja. Carísima.
+6,6,92,PEPITA,Hecha de oro puro.\nEs muy cara.
+6,6,213,POLVO BRILLO,Baja la PRECISIÓN\ndel enemigo. (EQ.)
+6,6,216,REPARTIR EXP,Reparte los puntos\nde EXP. (EQ.)
+6,6,217,GARRA RÁPIDA,Sube probabilidad\nprimer golpe.(EQ.)
+6,6,221,ROCA DEL REY,El enemigo podría\nretroceder. (EQ.)
+6,6,222,POLVO PLATA,Mejora los ataques\ntipo bicho. (EQ.)
+6,6,223,MON. AMULETO,Dobla el dinero\nque ganas. (EQ.)
+6,6,224,AMULETO,Repele a POKéMON\nsalvajes. (EQ.)
+6,6,228,BOLA HUMO,Huye de POKé-\nMON salvajes.(EQ.)
+6,6,229,PIEDRAETERNA,Detiene la\nevolución. (EQ.)
+6,6,230,CINTA-FOCUS,Podría evitar caer\ndebilitado. (EQ.)
+6,6,231,HUEVO SUERTE,Gana puntos de\nEXP. extra. (EQ.)
+6,6,232,PERISCOPIO,Sube prob. golpe\ncrítico. (EQ.)
+6,6,233,REV.METÁLICO,Mejora ataques\ntipo acero. (EQ.)
+6,6,234,RESTOS,Restaura PS en\nel combate. (EQ.)
+6,6,235,ESCAMADRAGÓN,Un objeto extraño\nde tipo dragón.
+6,6,236,BOLALUMINOSA,Un extraño orbe\neléctrico. (EQ.)
+6,6,237,ARENA FINA,Mejora los ataques\ntipo tierra. (EQ.)
+6,6,238,PIEDRA DURA,Mejora ataques\ntipo roca. (EQ.)
+6,6,239,SEM. MILAGRO,Mejora ataques\ntipo planta. (EQ.)
+6,6,240,GAFAS DE SOL,Mejora ataques\nsiniestros. (EQ.)
+6,6,241,CINT. NEGRO,Mejora ataques\ntipo lucha. (EQ.)
+6,6,242,IMÁN,Mejora ataques\neléctricos. (EQ.)
+6,6,243,AGUA MÍSTICA,Mejora ataques\ntipo agua. (EQ.)
+6,6,244,PICO AFILADO,Mejora los ataques\ntipo volador.(EQ.)
+6,6,245,FLECHA VEN,Mejora los ataques\ntipo veneno. (EQ.)
+6,6,246,ANTIDERRETIR,Mejora ataques\ntipo hielo. (EQ.)
+6,6,247,HECHIZO,Sube ataques tipo\nfantasma. (EQ.)
+6,6,248,CUCHARA TOR,Mejora ataques\npsíquicos. (EQ.)
+6,6,249,CARBÓN,Mejora ataques\ntipo fuego. (EQ.)
+6,6,250,COLMILLODRAG,Mejora ataques\ntipo dragón. (EQ.)
+6,6,252,MEJORA,Caja misteriosa\nde SILPH S.A.
+6,6,256,PUÑO SUERTE,Sube golpe crítico\nde CHANSEY.
+6,6,257,POL.METÁLICO,Mejora la DEFENSA\nde DITTO. (EQ.)
+6,6,258,HUESO GRUESO,Un tipo de hueso.\nEs muy barato.
+6,6,259,PALO,Un palo corriente.\nEs muy barato.
+6,6,328,MT01,
+6,6,329,MT02,
+6,6,330,MT03,
+6,6,331,MT04,
+6,6,332,MT05,
+6,6,333,MT06,
+6,6,334,MT07,
+6,6,335,MT08,
+6,6,336,MT09,
+6,6,337,MT10,
+6,6,338,MT11,
+6,6,339,MT12,
+6,6,340,MT13,
+6,6,341,MT14,
+6,6,342,MT15,
+6,6,343,MT16,
+6,6,344,MT17,
+6,6,345,MT18,
+6,6,346,MT19,
+6,6,347,MT20,
+6,6,348,MT21,
+6,6,349,MT22,
+6,6,350,MT23,
+6,6,351,MT24,
+6,6,352,MT25,
+6,6,353,MT26,
+6,6,354,MT27,
+6,6,355,MT28,
+6,6,356,MT29,
+6,6,357,MT30,
+6,6,358,MT31,
+6,6,359,MT32,
+6,6,360,MT33,
+6,6,361,MT34,
+6,6,362,MT35,
+6,6,363,MT36,
+6,6,364,MT37,
+6,6,365,MT38,
+6,6,366,MT39,
+6,6,367,MT40,
+6,6,368,MT41,
+6,6,369,MT42,
+6,6,370,MT43,
+6,6,371,MT44,
+6,6,372,MT45,
+6,6,373,MT46,
+6,6,374,MT47,
+6,6,375,MT48,
+6,6,376,MT49,
+6,6,377,MT50,
+6,6,420,MO01,
+6,6,421,MO02,
+6,6,422,MO03,
+6,6,423,MO04,
+6,6,424,MO05,
+6,6,425,MO06,
+6,6,444,MONEDERO,Guarda hasta 9.999\nfichas de juego.
+6,6,445,CAÑA VIEJA,Sirve para pescar\nPOKéMON.
+6,6,446,CAÑA BUENA,CAÑA buena para\natrapar POKéMON.
+6,6,447,SÚPER CAÑA,La mejor CAÑA para\natrapar POKéMON.
+6,6,450,BICICLETA,Bici plegable para\nir más rápido.
+6,6,456,TICKET BARCO,Un ticket para el\nS.S. AQUA.
+6,6,464,POC. SECRETA,Cura por completo\na un POKéMON.
+6,6,471,BUSCAOBJETOS,Busca objetos\nocultos.
+6,6,472,TARJETA AZUL,Tarjeta para\nmarcar puntos.
+6,6,473,COLASLOWPOKE,Muy sabroso.\nEs caro.
+6,6,474,CAMP. CLARA,Tintinea muy\ndelicadamente.
+6,6,475,LL.MAGNÉTICA,Abre las puertas\nde la TORRE RADIO.
+6,6,476,LL. SÓTANO,Abre las puertas.
+6,6,477,REGADERA,Recipiente para\nregar las plantas.
+6,6,478,ESCAMA ROJA,Una escama de un\nGYARADOS rojo.
+6,6,479,OBJ. PERDIDO,El POKé MUÑECO\nde la COPIONA.
+6,6,480,PASE,Un ticket para\nel MAGNETOTRÉN.
+6,6,481,MAQUINARIA,Maquinaria de la\nCENTRAL ENERGÍA.
+6,6,482,ALA PLATEADA,Pluma muy extraña\nde color plateado.
+6,6,483,ALA ARCOIRIS,Pluma mística de\ncolor arcoiris.
+6,6,484,HUEVO MIST,HUEVO recibido\ndel SR. POKéMON.
+6,6,485,BONGURI ROJ,Un BONGURI rojo.
+6,6,486,BONGURI AZU,Un BONGURI azul.
+6,6,487,BONGURI AMA,Un BONGURI\namarillo.
+6,6,488,BONGURI VER,Un BONGURI verde.
+6,6,489,BONGURI NEG,Un BONGURI negro.
+6,6,490,BONGURI BLA,Un BONGURI blanco.
+6,6,491,BONGURI ROS,Un BONGURI rosa.
+6,6,492,RAPID BALL,BALL para atrapar\nPOKéMON veloces.
+6,6,493,NIVEL BALL,BALL para POKéMON\nde bajo nivel.
+6,6,494,CEBO BALL,BALL para POKéMON\npescados con CAÑA.
+6,6,495,PESO BALL,BALL para capturar\nPOKéMON pesados.
+6,6,496,AMOR BALL,Para capturar al\ngénero opuesto.
+6,6,497,AMIGO BALL,Una BALL que\nenternece POKéMON.
+6,6,498,LUNA BALL,BALL para PKMN que\nevol. con P.LUNAR.
+6,6,499,PARQUE BALL,BALL del Concurso\nCaptura de Bichos.
+6,6,504,CARAM. FURIA,Restaura 20 PS de\nun POKéMON.
+6,6,737,MO07,
+6,6,10002,HOJA PLATA,Hoja muy extraña\nde color plateado.
+6,6,10003,BAYANTÍDOTO,Cura automática\ndel veneno. (EQ.)
+6,6,10004,HOJA DORADA,Hoja muy extraña\nde color dorado.
+6,6,10005,ANTIPARABAYA,Cura automática\nde parálisis.(EQ.)
+6,6,10006,ANTIQUEMBAYA,Cura automática de\ncongelación. (EQ.)
+6,6,10007,BAYA HIELO,Cura automática de\nquemaduras. (EQ.)
+6,6,10008,BAYAMARGA,Cura automática\nde confusión.(EQ.)
+6,6,10009,BAYA MENTA,Cura automática\ndel sueño. (EQ.)
+6,6,10010,LAZO ROSA,Mejora ataques\nnormales. (EQ.)
+6,6,10011,BAYA MILAGRO,Cura problemas\nde estado. (EQ.)
+6,6,10012,BAYAMISTERIO,Restaura PP auto-\nmáticamente. (EQ.)
+6,6,10013,GEN LOCO,Mejora el ATAQUE\npero confunde.
+6,6,10014,CARTA FLOR,CARTA con dibujos\nde flores. (EQ.)
+6,6,10015,CAJA NORMAL,Ábrelo para ver\nqué hay dentro.
+6,6,10016,CAJA GRANDE,Ábrelo para ver\nqué hay dentro.
+6,6,10017,CINTALUNARES,Mejora los ataques\nnormales. (EQ.)
+6,6,10018,BAYA,"Objeto de autocu-\nración.(10PS, EQ.)"
+6,6,10019,BAYA DORADA,"Objeto de autocu-\nración.(30PS, EQ.)"
+6,6,10020,LADRILLO,Un extraño trozo\nde ladrillo.
+6,6,10021,CARTA SURF,CARTA con dibujos\nde LAPRAS. (EQ.)
+6,6,10022,CARTA AZUL,CARTA con dibujos\nde DRATINI. (EQ.)
+6,6,10023,CART-RETRATO,Aparece el POKéMON\nque la tiene.
+6,6,10024,CARTA AMOR,CARTA con dibujos\nde corazones.(EQ.)
+6,6,10025,CARTA EÓN,CARTA con dibujos\nde EEVEE. (EQ.)
+6,6,10026,CARTMORFOSIS,CARTA con dibujos\nde DITTO. (EQ.)
+6,6,10027,CARTACELESTE,CARTA con dibujos\ndel cielo. (EQ.)
+6,6,10028,CARTA MÚSICA,CARTA con dibujos\nde NATU. (EQ.)
+6,6,10029,C.ESPEJISMO,CARTA con dibujos\nde MEW. (EQ.)
+6,6,10030,GS BALL,La BALL\nmisteriosa.
+6,6,10031,TICKET HUEVO,Puede usarse en C.\nCAMBIO de TRIGAL.
