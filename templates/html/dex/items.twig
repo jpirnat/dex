@@ -27,6 +27,8 @@
 	</div>
 
 	<template v-if="loaded">
+		<h1 class="dex-page__title">Items</h1>
+
 		<dex-pagination
 			v-model="currentPage"
 			:number-of-items="filteredItems.length"

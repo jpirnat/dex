@@ -61,9 +61,7 @@ final readonly class DexTypeView
 				'breadcrumbs' => $breadcrumbs,
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
-				'type' => [
-					'identifier' => $type['identifier'],
-				],
+				'type' => $type,
 
 				'types' => $this->dexFormatter->formatDexTypes($types),
 				'damageDealt' => $damageDealt,
