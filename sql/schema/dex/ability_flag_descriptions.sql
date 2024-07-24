@@ -1,12 +1,16 @@
 create table if not exists `ability_flag_descriptions`
 (
+`version_group_id` tinyint unsigned not null,
 `language_id` tinyint unsigned not null,
 `flag_id` tinyint unsigned not null,
 
-`name` varchar(100) not null,
-`description` varchar(200) not null,
+`name` varchar(28) not null,
+`description` varchar(207) not null,
 
-primary key (`language_id`, `flag_id`),
+primary key (`version_group_id`, `language_id`, `flag_id`),
+foreign key (`version_group_id`) references `version_groups` (`id`)
+	on delete restrict
+	on update cascade,
 foreign key (`language_id`) references `languages` (`id`)
 	on delete restrict
 	on update cascade,

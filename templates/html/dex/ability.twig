@@ -41,7 +41,7 @@
 					}"
 				>
 					{{ flag.name }}
-					<div v-if="flag.has" class="dex-ability__flag-description">{{ flag.description }}</div>
+					<div v-if="flag.has" class="dex-ability__flag-description" v-html="flag.description"></div>
 				</li>
 			</ul>
 		</template>

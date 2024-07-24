@@ -39,7 +39,8 @@ final readonly class DatabaseMoveFlagRepository implements MoveFlagRepositoryInt
 			INNER JOIN `vg_move_flags` AS `vgf`
 				ON `f`.`id` = `vgf`.`flag_id`
 			INNER JOIN `move_flag_descriptions` AS `fd`
-				ON `vgf`.`flag_id` = `fd`.`flag_id`
+				ON `vgf`.`version_group_id` = `fd`.`version_group_id`
+				AND `vgf`.`flag_id` = `fd`.`flag_id`
 			WHERE `vgf`.`version_group_id` = :version_group_id
 				AND `fd`.`language_id` = :language_id'
 		);

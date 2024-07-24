@@ -39,7 +39,8 @@ final readonly class DatabaseAbilityFlagRepository implements AbilityFlagReposit
 			INNER JOIN `vg_ability_flags` AS `vgf`
 				ON `f`.`id` = `vgf`.`flag_id`
 			INNER JOIN `ability_flag_descriptions` AS `fd`
-				ON `vgf`.`flag_id` = `fd`.`flag_id`
+				ON `vgf`.`version_group_id` = `fd`.`version_group_id`
+				AND `vgf`.`flag_id` = `fd`.`flag_id`
 			WHERE `vgf`.`version_group_id` = :version_group_id
 				AND `fd`.`language_id` = :language_id'
 		);
