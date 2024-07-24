@@ -40,7 +40,7 @@ final readonly class DatabaseStatsPokemonItemRepository implements StatsPokemonI
 			'SELECT
 				`ii`.`icon`,
 				`i`.`identifier`,
-				`in`.`name`,
+				COALESCE(`id`.`name`, `in`.`name`) AS `name`,
 				`mri`.`percent`,
 				`mrip`.`percent` AS `prev_percent`
 			FROM `usage_rated_pokemon` AS `urp`
@@ -53,6 +53,10 @@ final readonly class DatabaseStatsPokemonItemRepository implements StatsPokemonI
 			LEFT JOIN `vg_items` AS `vgi`
 				ON `mri`.`item_id` = `vgi`.`item_id`
 				AND `vgi`.`version_group_id` = :version_group_id
+			LEFT JOIN `item_descriptions` AS `id`
+				ON `vgi`.`version_group_id` = `id`.`version_group_id`
+				AND `in`.`language_id` = `id`.`language_id`
+				AND `i`.`id` = `id`.`item_id`
 			LEFT JOIN `usage_rated_pokemon` AS `urpp`
 				ON `urpp`.`month` = :prev_month
 				AND `urp`.`format_id` = `urpp`.`format_id`

@@ -179,7 +179,7 @@ a.button {
 }
 
 .version-group-control ul::before {
-	content: "Generation:";
+	content: "Game:";
 	margin: 0 5px;
 }
 
