@@ -17,7 +17,7 @@ names you want. For example,
 ```MySQL
 create schema `dex`
 	charset utf8mb4
-	collate utf8mb4_unicode_520_ci # Use the best modern collation you have access to.
+	collate utf8mb4_0900_ai_ci # Use the best modern collation you have access to.
 ;
 create user `dex_user`@'127.0.0.1' identified by 'password';
 # Don't forget the grants!
