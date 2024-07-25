@@ -38,7 +38,7 @@ final readonly class DatabaseStatsPokemonItemRepository implements StatsPokemonI
 
 		$stmt = $this->db->prepare(
 			'SELECT
-				`ii`.`icon`,
+				`vgi`.`icon`,
 				`i`.`identifier`,
 				COALESCE(`id`.`name`, `in`.`name`) AS `name`,
 				`mri`.`percent`,
