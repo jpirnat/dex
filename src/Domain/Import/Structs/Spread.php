@@ -5,6 +5,8 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final readonly class Spread
 {
+	private float $percent;
+
 	public function __construct(
 		private string $showdownNatureName,
 		private int $hp,
@@ -13,15 +15,16 @@ final readonly class Spread
 		private int $spa,
 		private int $spd,
 		private int $spe,
-		private float $percent,
+		float $percent,
 	) {
 		// Clamp percent between 0 and 100.
-		if ($this->percent < 0) {
-			$this->percent = 0;
+		if ($percent < 0) {
+			$percent = 0;
 		}
-		if ($this->percent > 100) {
-			$this->percent = 100;
+		if ($percent > 100) {
+			$percent = 100;
 		}
+		$this->percent = $percent;
 	}
 
 	/**

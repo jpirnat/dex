@@ -5,28 +5,33 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final readonly class LeadUsage
 {
+	private float $usagePercent;
+	private float $rawPercent;
+
 	public function __construct(
 		private int $rank,
 		private string $showdownPokemonName,
-		private float $usagePercent,
+		float $usagePercent,
 		private int $raw,
-		private float $rawPercent,
+		float $rawPercent,
 	) {
 		// Clamp usage percent between 0 and 100.
-		if ($this->usagePercent < 0) {
-			$this->usagePercent = 0;
+		if ($usagePercent < 0) {
+			$usagePercent = 0;
 		}
-		if ($this->usagePercent > 100) {
-			$this->usagePercent = 100;
+		if ($usagePercent > 100) {
+			$usagePercent = 100;
 		}
+		$this->usagePercent = $usagePercent;
 
 		// Clamp raw percent between 0 and 100.
-		if ($this->rawPercent < 0) {
-			$this->rawPercent = 0;
+		if ($rawPercent < 0) {
+			$rawPercent = 0;
 		}
-		if ($this->rawPercent > 100) {
-			$this->rawPercent = 100;
+		if ($rawPercent > 100) {
+			$rawPercent = 100;
 		}
+		$this->rawPercent = $rawPercent;
 	}
 
 	/**
