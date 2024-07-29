@@ -74,6 +74,7 @@ Defense Curl,\N
 Defog,\N
 Diancite,\N
 Disable,\N
+Doodle,\N
 Draco Plate,\N
 Dragon Dance,\N
 Dragon Fang,\N
@@ -98,9 +99,11 @@ Fake Tears,\N
 Feather Dance,\N
 Fightinium Z,\N
 Figy Berry,\N
+Fillet Away,\N
 Firium Z,\N
 Fist Plate,\N
 Flash,\N
+Flatter,\N
 Flyinium Z,\N
 Focus Band,\N
 Focus Energy,\N
@@ -133,6 +136,7 @@ Heal Pulse,\N
 Healing Wish,\N
 Heart Swap,\N
 Heat Rock,\N
+Helping Hand,\N
 Heracronite,\N
 Hold Hands,\N
 Hone Claws,\N
@@ -173,12 +177,14 @@ Light Screen,\N
 Lock-On,\N
 Lopunnite,\N
 Lum Berry,\N
+Lunar Blessing,\N
 Lunar Dance,\N
 Magic Coat,\N
 Magic Powder,\N
 Magic Room,\N
 Magnet,\N
 Magnet Rise,\N
+Magnetic Flux,\N
 Mago Berry,\N
 Manectite,\N
 Maranga Berry,\N
@@ -284,12 +290,14 @@ Sharp Beak,\N
 Shed Shell,\N
 Shell Bell,\N
 Shell Smash,\N
+Shelter,\N
 Shift Gear,\N
 Shore Up,\N
 Shuca Berry,\N
 Silk Scarf,\N
 Simple Beam,\N
 Sitrus Berry,\N
+Skill Swap,\N
 Sky Plate,\N
 Slack Off,\N
 Sleep Talk,\N
@@ -298,12 +306,14 @@ Smokescreen,\N
 Smooth Rock,\N
 Snatch,\N
 Snowball,\N
+Snowscape,\N
 Soak,\N
 Soft Sand,\N
 Soft-Boiled,\N
 Soul Dew,\N
 Speed Swap,\N
 Spell Tag,\N
+Spicy Extract,\N
 Spikes,\N
 Spite,\N
 Splash,\N
@@ -338,6 +348,7 @@ Tailwind,\N
 Tar Shot,\N
 Taunt,\N
 Tearful Look,\N
+Teatime,\N
 Teeter Dance,\N
 Telekinesis,\N
 Teleport,\N
@@ -345,6 +356,7 @@ Terrain Extender,\N
 Thick Club,\N
 Thunder Wave,\N
 Tickle,\N
+Tidy Up,\N
 Topsy-Turvy,\N
 Torment,\N
 Toxic,\N
@@ -359,6 +371,7 @@ Trick-or-Treat,\N
 Twisted Spoon,\N
 Venom Drench,\N
 Venusaurite,\N
+Victory Dance,\N
 Wacan Berry,\N
 Water Sport,\N
 Waterium Z,\N
@@ -369,6 +382,7 @@ Wiki Berry,\N
 Will-O-Wisp,\N
 Wise Glasses,\N
 Wish,\N
+Withdraw,\N
 Wonder Room,\N
 Work Up,\N
 Worry Seed,\N

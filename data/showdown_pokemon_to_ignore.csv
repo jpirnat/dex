@@ -1,4 +1,5 @@
 name,pokemon_id
+Ababo,\N
 Alcremie-Gmax,869
 Appletun-Gmax,842
 Argalis,\N
@@ -16,6 +17,7 @@ Cawmodore,\N
 Centiskorch-Gmax,851
 Charizard-Gmax,6
 Chromera,\N
+Chuggalong,\N
 Cinderace-Gmax,815
 Coalossal-Gmax,839
 Colossoil,\N
@@ -24,13 +26,16 @@ Coribalis,\N
 Corviknight-Gmax,823
 Cramorant-Gorging,845
 Cramorant-Gulping,845
+Cresceidon,\N
 Crucibelle,\N
 Crucibelle-Mega,\N
 Cupra,\N
 Cyclohm,\N
 Darmanitan-Galar-Zen,10186
 Darmanitan-Zen,10035
+Dorsoil,\N
 Drednaw-Gmax,834
+Duohm,\N
 Duraludon-Gmax,884
 Eevee-Gmax,133
 Electrelk,\N
@@ -45,6 +50,7 @@ Garbodor-Gmax,569
 Gengar-Gmax,94
 Grimmsnarl-Gmax,861
 Hatterene-Gmax,858
+Hemogoblin,\N
 Jumbao,\N
 Justyke,\N
 Kerfluffle,\N
@@ -65,11 +71,13 @@ Minior-Meteor,774
 Missingno,\N
 Missingno.,\N
 Mollux,\N
+Monohm,\N
 Morpeko-Hangry,877
 Mumbao,\N
 Naviathan,\N
 Necturine,\N
 Necturna,\N
+Nohface,\N
 Orbeetle-Gmax,826
 Pajantom,\N
 Pikachu-Alola,10112
@@ -99,11 +107,14 @@ Pokestar UFO-2,\N
 Pokestar UFO-PropU2,\N
 Pokestar White Door,\N
 Privatyke,\N
+Protowatt,\N
 Pyroak,\N
 Rebble,\N
 Revenankh,\N
 Saharaja,\N
+Saharascal,\N
 Sandaconda-Gmax,844
+Scattervein,\N
 Scratchet,\N
 Smogecko,\N
 Smoguana,\N
@@ -127,4 +138,5 @@ Volkritter,\N
 Voodoll,\N
 Voodoom,\N
 Wishiwashi-School,10141
+Xerneas-Neutral,716
 Zarude-Dada,893
