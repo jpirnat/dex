@@ -1344,7 +1344,6 @@ month,name,format_id
 2019-11-01,gen8doublesou,63
 2019-11-01,gen8lc,60
 2019-11-01,gen8monotype,61
-2019-11-01,gen8nationaldexag,65
 2019-11-01,gen8ou,55
 2019-11-01,gen8ubers,54
 2019-12-01,gen1ou,2
@@ -1370,8 +1369,6 @@ month,name,format_id
 2019-12-01,gen8doublesou,63
 2019-12-01,gen8lc,60
 2019-12-01,gen8monotype,61
-2019-12-01,gen8nationaldex,66
-2019-12-01,gen8nationaldexag,65
 2019-12-01,gen8ou,55
 2019-12-01,gen8ubers,54
 2019-12-01,gen8uu,56
@@ -1398,8 +1395,6 @@ month,name,format_id
 2020-01-01,gen8doublesuu,64
 2020-01-01,gen8lc,60
 2020-01-01,gen8monotype,61
-2020-01-01,gen8nationaldex,66
-2020-01-01,gen8nationaldexag,65
 2020-01-01,gen8ou,55
 2020-01-01,gen8ru,57
 2020-01-01,gen8ubers,54
@@ -1422,8 +1417,6 @@ month,name,format_id
 2020-02-01,gen8doublesuu,64
 2020-02-01,gen8lc,60
 2020-02-01,gen8monotype,61
-2020-02-01,gen8nationaldex,66
-2020-02-01,gen8nationaldexag,65
 2020-02-01,gen8nu,58
 2020-02-01,gen8ou,55
 2020-02-01,gen8ru,57
@@ -1449,8 +1442,6 @@ month,name,format_id
 2020-03-01,gen8doublesuu,64
 2020-03-01,gen8lc,60
 2020-03-01,gen8monotype,61
-2020-03-01,gen8nationaldex,66
-2020-03-01,gen8nationaldexag,65
 2020-03-01,gen8nu,58
 2020-03-01,gen8ou,55
 2020-03-01,gen8pu,59
@@ -1476,8 +1467,6 @@ month,name,format_id
 2020-04-01,gen8doublesuu,64
 2020-04-01,gen8lc,60
 2020-04-01,gen8monotype,61
-2020-04-01,gen8nationaldex,66
-2020-04-01,gen8nationaldexag,65
 2020-04-01,gen8nu,58
 2020-04-01,gen8ou,55
 2020-04-01,gen8pu,59
@@ -1504,8 +1493,6 @@ month,name,format_id
 2020-05-01,gen8doublesuu,64
 2020-05-01,gen8lc,60
 2020-05-01,gen8monotype,61
-2020-05-01,gen8nationaldex,66
-2020-05-01,gen8nationaldexag,65
 2020-05-01,gen8nu,58
 2020-05-01,gen8ou,55
 2020-05-01,gen8pu,59
@@ -1532,8 +1519,6 @@ month,name,format_id
 2020-06-01,gen8doublesuu,64
 2020-06-01,gen8lc,60
 2020-06-01,gen8monotype,61
-2020-06-01,gen8nationaldex,66
-2020-06-01,gen8nationaldexag,65
 2020-06-01,gen8nu,58
 2020-06-01,gen8ou,55
 2020-06-01,gen8pu,59
@@ -1560,8 +1545,6 @@ month,name,format_id
 2020-07-01,gen8doublesuu,64
 2020-07-01,gen8lc,60
 2020-07-01,gen8monotype,61
-2020-07-01,gen8nationaldex,66
-2020-07-01,gen8nationaldexag,65
 2020-07-01,gen8nu,58
 2020-07-01,gen8ou,55
 2020-07-01,gen8pu,59
@@ -1587,8 +1570,6 @@ month,name,format_id
 2020-08-01,gen8doublesuu,64
 2020-08-01,gen8lc,60
 2020-08-01,gen8monotype,61
-2020-08-01,gen8nationaldex,66
-2020-08-01,gen8nationaldexag,65
 2020-08-01,gen8nu,58
 2020-08-01,gen8ou,55
 2020-08-01,gen8pu,59
@@ -1614,8 +1595,6 @@ month,name,format_id
 2020-09-01,gen8doublesuu,64
 2020-09-01,gen8lc,60
 2020-09-01,gen8monotype,61
-2020-09-01,gen8nationaldex,66
-2020-09-01,gen8nationaldexag,65
 2020-09-01,gen8nu,58
 2020-09-01,gen8ou,55
 2020-09-01,gen8pu,59
@@ -1643,8 +1622,6 @@ month,name,format_id
 2020-10-01,gen8doublesuu,64
 2020-10-01,gen8lc,60
 2020-10-01,gen8monotype,61
-2020-10-01,gen8nationaldex,66
-2020-10-01,gen8nationaldexag,65
 2020-10-01,gen8nu,58
 2020-10-01,gen8ou,55
 2020-10-01,gen8pu,59
@@ -1671,8 +1648,6 @@ month,name,format_id
 2020-11-01,gen8doublesuu,64
 2020-11-01,gen8lc,60
 2020-11-01,gen8monotype,61
-2020-11-01,gen8nationaldex,66
-2020-11-01,gen8nationaldexag,65
 2020-11-01,gen8nu,58
 2020-11-01,gen8ou,55
 2020-11-01,gen8pu,59
@@ -1697,8 +1672,6 @@ month,name,format_id
 2020-12-01,gen8doublesuu,64
 2020-12-01,gen8lc,60
 2020-12-01,gen8monotype,61
-2020-12-01,gen8nationaldex,66
-2020-12-01,gen8nationaldexag,65
 2020-12-01,gen8nu,58
 2020-12-01,gen8ou,55
 2020-12-01,gen8pu,59
@@ -1725,8 +1698,6 @@ month,name,format_id
 2021-01-01,gen8doublesuu,64
 2021-01-01,gen8lc,60
 2021-01-01,gen8monotype,61
-2021-01-01,gen8nationaldex,66
-2021-01-01,gen8nationaldexag,65
 2021-01-01,gen8nu,58
 2021-01-01,gen8ou,55
 2021-01-01,gen8pu,59
@@ -1751,8 +1722,6 @@ month,name,format_id
 2021-02-01,gen8doublesuu,64
 2021-02-01,gen8lc,60
 2021-02-01,gen8monotype,61
-2021-02-01,gen8nationaldex,66
-2021-02-01,gen8nationaldexag,65
 2021-02-01,gen8nu,58
 2021-02-01,gen8ou,55
 2021-02-01,gen8pu,59
@@ -1778,8 +1747,6 @@ month,name,format_id
 2021-03-01,gen8doublesuu,64
 2021-03-01,gen8lc,60
 2021-03-01,gen8monotype,61
-2021-03-01,gen8nationaldex,66
-2021-03-01,gen8nationaldexag,65
 2021-03-01,gen8nu,58
 2021-03-01,gen8ou,55
 2021-03-01,gen8pu,59
@@ -1805,8 +1772,6 @@ month,name,format_id
 2021-04-01,gen8doublesuu,64
 2021-04-01,gen8lc,60
 2021-04-01,gen8monotype,61
-2021-04-01,gen8nationaldex,66
-2021-04-01,gen8nationaldexag,65
 2021-04-01,gen8nu,58
 2021-04-01,gen8ou,55
 2021-04-01,gen8pu,59
@@ -1833,8 +1798,6 @@ month,name,format_id
 2021-05-01,gen8doublesuu,64
 2021-05-01,gen8lc,60
 2021-05-01,gen8monotype,61
-2021-05-01,gen8nationaldex,66
-2021-05-01,gen8nationaldexag,65
 2021-05-01,gen8nu,58
 2021-05-01,gen8ou,55
 2021-05-01,gen8pu,59
@@ -1860,8 +1823,6 @@ month,name,format_id
 2021-06-01,gen8doublesuu,64
 2021-06-01,gen8lc,60
 2021-06-01,gen8monotype,61
-2021-06-01,gen8nationaldex,66
-2021-06-01,gen8nationaldexag,65
 2021-06-01,gen8nu,58
 2021-06-01,gen8ou,55
 2021-06-01,gen8pu,59
@@ -1888,8 +1849,6 @@ month,name,format_id
 2021-07-01,gen8doublesuu,64
 2021-07-01,gen8lc,60
 2021-07-01,gen8monotype,61
-2021-07-01,gen8nationaldex,66
-2021-07-01,gen8nationaldexag,65
 2021-07-01,gen8nu,58
 2021-07-01,gen8ou,55
 2021-07-01,gen8pu,59
@@ -1915,8 +1874,6 @@ month,name,format_id
 2021-08-01,gen8doublesuu,64
 2021-08-01,gen8lc,60
 2021-08-01,gen8monotype,61
-2021-08-01,gen8nationaldex,66
-2021-08-01,gen8nationaldexag,65
 2021-08-01,gen8nu,58
 2021-08-01,gen8ou,55
 2021-08-01,gen8pu,59
@@ -1941,8 +1898,6 @@ month,name,format_id
 2021-09-01,gen8doublesuu,64
 2021-09-01,gen8lc,60
 2021-09-01,gen8monotype,61
-2021-09-01,gen8nationaldex,66
-2021-09-01,gen8nationaldexag,65
 2021-09-01,gen8nu,58
 2021-09-01,gen8ou,55
 2021-09-01,gen8pu,59
@@ -1969,8 +1924,6 @@ month,name,format_id
 2021-10-01,gen8doublesuu,64
 2021-10-01,gen8lc,60
 2021-10-01,gen8monotype,61
-2021-10-01,gen8nationaldex,66
-2021-10-01,gen8nationaldexag,65
 2021-10-01,gen8nu,58
 2021-10-01,gen8ou,55
 2021-10-01,gen8pu,59
@@ -1997,8 +1950,6 @@ month,name,format_id
 2021-11-01,gen8doublesuu,64
 2021-11-01,gen8lc,60
 2021-11-01,gen8monotype,61
-2021-11-01,gen8nationaldex,66
-2021-11-01,gen8nationaldexag,65
 2021-11-01,gen8nu,58
 2021-11-01,gen8ou,55
 2021-11-01,gen8pu,59
@@ -2025,8 +1976,6 @@ month,name,format_id
 2021-12-01,gen8doublesuu,64
 2021-12-01,gen8lc,60
 2021-12-01,gen8monotype,61
-2021-12-01,gen8nationaldex,66
-2021-12-01,gen8nationaldexag,65
 2021-12-01,gen8nu,58
 2021-12-01,gen8ou,55
 2021-12-01,gen8pu,59
@@ -2053,8 +2002,6 @@ month,name,format_id
 2022-01-01,gen8doublesuu,64
 2022-01-01,gen8lc,60
 2022-01-01,gen8monotype,61
-2022-01-01,gen8nationaldex,66
-2022-01-01,gen8nationaldexag,65
 2022-01-01,gen8nu,58
 2022-01-01,gen8ou,55
 2022-01-01,gen8pu,59
@@ -2082,8 +2029,6 @@ month,name,format_id
 2022-02-01,gen8doublesuu,64
 2022-02-01,gen8lc,60
 2022-02-01,gen8monotype,61
-2022-02-01,gen8nationaldex,66
-2022-02-01,gen8nationaldexag,65
 2022-02-01,gen8nu,58
 2022-02-01,gen8ou,55
 2022-02-01,gen8pu,59
@@ -2110,8 +2055,6 @@ month,name,format_id
 2022-03-01,gen8doublesuu,64
 2022-03-01,gen8lc,60
 2022-03-01,gen8monotype,61
-2022-03-01,gen8nationaldex,66
-2022-03-01,gen8nationaldexag,65
 2022-03-01,gen8nu,58
 2022-03-01,gen8ou,55
 2022-03-01,gen8pu,59
@@ -2139,8 +2082,6 @@ month,name,format_id
 2022-04-01,gen8doublesuu,64
 2022-04-01,gen8lc,60
 2022-04-01,gen8monotype,61
-2022-04-01,gen8nationaldex,66
-2022-04-01,gen8nationaldexag,65
 2022-04-01,gen8nu,58
 2022-04-01,gen8ou,55
 2022-04-01,gen8pu,59
@@ -2166,8 +2107,6 @@ month,name,format_id
 2022-05-01,gen8doublesuu,64
 2022-05-01,gen8lc,60
 2022-05-01,gen8monotype,61
-2022-05-01,gen8nationaldex,66
-2022-05-01,gen8nationaldexag,65
 2022-05-01,gen8nu,58
 2022-05-01,gen8ou,55
 2022-05-01,gen8pu,59
@@ -2193,8 +2132,6 @@ month,name,format_id
 2022-06-01,gen8doublesuu,64
 2022-06-01,gen8lc,60
 2022-06-01,gen8monotype,61
-2022-06-01,gen8nationaldex,66
-2022-06-01,gen8nationaldexag,65
 2022-06-01,gen8nu,58
 2022-06-01,gen8ou,55
 2022-06-01,gen8pu,59
@@ -2219,8 +2156,6 @@ month,name,format_id
 2022-07-01,gen8doublesuu,64
 2022-07-01,gen8lc,60
 2022-07-01,gen8monotype,61
-2022-07-01,gen8nationaldex,66
-2022-07-01,gen8nationaldexag,65
 2022-07-01,gen8nu,58
 2022-07-01,gen8ou,55
 2022-07-01,gen8pu,59
@@ -2246,8 +2181,6 @@ month,name,format_id
 2022-08-01,gen8doublesuu,64
 2022-08-01,gen8lc,60
 2022-08-01,gen8monotype,61
-2022-08-01,gen8nationaldex,66
-2022-08-01,gen8nationaldexag,65
 2022-08-01,gen8nu,58
 2022-08-01,gen8ou,55
 2022-08-01,gen8pu,59
@@ -2273,8 +2206,6 @@ month,name,format_id
 2022-09-01,gen8doublesuu,64
 2022-09-01,gen8lc,60
 2022-09-01,gen8monotype,61
-2022-09-01,gen8nationaldex,66
-2022-09-01,gen8nationaldexag,65
 2022-09-01,gen8nu,58
 2022-09-01,gen8ou,55
 2022-09-01,gen8pu,59

@@ -2091,7 +2091,8 @@ month,name,format_id,reason
 2019-11-01,gen8galarbeginnings,\N,
 2019-11-01,gen8mixandmega,\N,
 2019-11-01,gen8natdexanythinggoes,65,duplicate
-2019-11-01,gen8nationaldexbeta,66,beta
+2019-11-01,gen8nationaldexag,\N,national dex
+2019-11-01,gen8nationaldexbeta,\N,national dex
 2019-11-01,gen8nfe,\N,
 2019-11-01,gen8oubeta,\N,beta
 2019-11-01,gen8stabmons,\N,
@@ -2112,7 +2113,9 @@ month,name,format_id,reason
 2019-12-01,gen8cap,\N,cap
 2019-12-01,gen8galarbeginnings,\N,
 2019-12-01,gen8mixandmega,\N,
-2019-12-01,gen8nationaldexbeta,66,beta
+2019-12-01,gen8nationaldex,\N,national dex
+2019-12-01,gen8nationaldexag,\N,national dex
+2019-12-01,gen8nationaldexbeta,\N,national dex
 2019-12-01,gen8nfe,\N,
 2019-12-01,gen8stabmons,\N,
 2020-01-01,gen1uu,3,too few battles: 9
@@ -2135,6 +2138,8 @@ month,name,format_id,reason
 2020-01-01,gen8cap,\N,cap
 2020-01-01,gen8galarnewcomers,\N,
 2020-01-01,gen8mixandmega,\N,
+2020-01-01,gen8nationaldex,\N,national dex
+2020-01-01,gen8nationaldexag,\N,national dex
 2020-01-01,gen8nfe,\N,
 2020-01-01,gen8stabmons,\N,
 2020-02-01,gen1ounodefenseboosting,\N,
@@ -2161,6 +2166,8 @@ month,name,format_id,reason
 2020-02-01,gen8cap,\N,cap
 2020-02-01,gen8galarnewcomers,\N,
 2020-02-01,gen8mixandmega,\N,
+2020-02-01,gen8nationaldex,\N,national dex
+2020-02-01,gen8nationaldexag,\N,national dex
 2020-02-01,gen8nfe,\N,
 2020-02-01,gen8purehackmons,\N,
 2020-02-01,gen8stabmons,\N,
@@ -2178,6 +2185,8 @@ month,name,format_id,reason
 2020-03-01,gen8galarnewcomers,\N,
 2020-03-01,gen8inheritance,\N,
 2020-03-01,gen8mixandmega,\N,
+2020-03-01,gen8nationaldex,\N,national dex
+2020-03-01,gen8nationaldexag,\N,national dex
 2020-03-01,gen8nfe,\N,
 2020-03-01,gen8purehackmons,\N,
 2020-03-01,gen8scalemons,\N,
@@ -2195,6 +2204,8 @@ month,name,format_id,reason
 2020-04-01,gen8galarnewcomers,\N,
 2020-04-01,gen8inheritance,\N,
 2020-04-01,gen8mixandmega,\N,
+2020-04-01,gen8nationaldex,\N,national dex
+2020-04-01,gen8nationaldexag,\N,national dex
 2020-04-01,gen8nfe,\N,
 2020-04-01,gen8pacifistmons,\N,
 2020-04-01,gen8scalemons,\N,
@@ -2214,6 +2225,8 @@ month,name,format_id,reason
 2020-05-01,gen8flipped,\N,
 2020-05-01,gen8metronomebattle,\N,
 2020-05-01,gen8mixandmega,\N,
+2020-05-01,gen8nationaldex,\N,national dex
+2020-05-01,gen8nationaldexag,\N,national dex
 2020-05-01,gen8nfe,\N,
 2020-05-01,gen8oublitz,\N,
 2020-05-01,gen8pacifistmons,\N,
@@ -2235,6 +2248,8 @@ month,name,format_id,reason
 2020-06-01,gen8flipped,\N,
 2020-06-01,gen8metronomebattle,\N,
 2020-06-01,gen8mixandmega,\N,
+2020-06-01,gen8nationaldex,\N,national dex
+2020-06-01,gen8nationaldexag,\N,national dex
 2020-06-01,gen8nfe,\N,
 2020-06-01,gen8oublitz,\N,
 2020-06-01,gen8stabmons,\N,
@@ -2258,7 +2273,9 @@ month,name,format_id,reason
 2020-07-01,gen8megamax,\N,
 2020-07-01,gen8metronomebattle,\N,
 2020-07-01,gen8mixandmega,\N,
-2020-07-01,gen8nationaldexbh,\N,
+2020-07-01,gen8nationaldex,\N,national dex
+2020-07-01,gen8nationaldexag,\N,national dex
+2020-07-01,gen8nationaldexbh,\N,national dex
 2020-07-01,gen8nfe,\N,
 2020-07-01,gen8oublitz,\N,
 2020-07-01,gen8stabmons,\N,
@@ -2283,8 +2300,10 @@ month,name,format_id,reason
 2020-08-01,gen8megamax,\N,
 2020-08-01,gen8metronomebattle,\N,
 2020-08-01,gen8mixandmega,\N,
-2020-08-01,gen8nationaldexbh,\N,
-2020-08-01,gen8nationaldexuu,\N,not official
+2020-08-01,gen8nationaldex,\N,national dex
+2020-08-01,gen8nationaldexag,\N,national dex
+2020-08-01,gen8nationaldexbh,\N,national dex
+2020-08-01,gen8nationaldexuu,\N,national dex
 2020-08-01,gen8nfe,\N,
 2020-08-01,gen8oublitz,\N,
 2020-08-01,gen8stabmons,\N,
@@ -2308,8 +2327,10 @@ month,name,format_id,reason
 2020-09-01,gen8megamax,\N,
 2020-09-01,gen8metronomebattle,\N,
 2020-09-01,gen8mixandmega,\N,
-2020-09-01,gen8nationaldexbh,\N,
-2020-09-01,gen8nationaldexuu,\N,not official
+2020-09-01,gen8nationaldex,\N,national dex
+2020-09-01,gen8nationaldexag,\N,national dex
+2020-09-01,gen8nationaldexbh,\N,national dex
+2020-09-01,gen8nationaldexuu,\N,national dex
 2020-09-01,gen8nfe,\N,
 2020-09-01,gen8oublitz,\N,
 2020-09-01,gen8stabmons,\N,
@@ -2332,8 +2353,10 @@ month,name,format_id,reason
 2020-10-01,gen8megamax,\N,
 2020-10-01,gen8metronomebattle,\N,
 2020-10-01,gen8mixandmega,\N,
-2020-10-01,gen8nationaldexbh,\N,
-2020-10-01,gen8nationaldexuu,\N,not official
+2020-10-01,gen8nationaldex,\N,national dex
+2020-10-01,gen8nationaldexag,\N,national dex
+2020-10-01,gen8nationaldexbh,\N,national dex
+2020-10-01,gen8nationaldexuu,\N,national dex
 2020-10-01,gen8nfe,\N,
 2020-10-01,gen8oublitz,\N,
 2020-10-01,gen8stabmons,\N,
@@ -2358,9 +2381,11 @@ month,name,format_id,reason
 2020-11-01,gen8dragonkingcup,\N,
 2020-11-01,gen8metronomebattle,\N,
 2020-11-01,gen8mixandmega,\N,
-2020-11-01,gen8nationaldexbh,\N,
-2020-11-01,gen8nationaldexmonotype,\N,
-2020-11-01,gen8nationaldexuu,\N,not official
+2020-11-01,gen8nationaldex,\N,national dex
+2020-11-01,gen8nationaldexag,\N,national dex
+2020-11-01,gen8nationaldexbh,\N,national dex
+2020-11-01,gen8nationaldexmonotype,\N,national dex
+2020-11-01,gen8nationaldexuu,\N,national dex
 2020-11-01,gen8nfe,\N,
 2020-11-01,gen8oublitz,\N,
 2020-11-01,gen8scalemons,\N,
@@ -2386,9 +2411,11 @@ month,name,format_id,reason
 2020-12-01,gen8dragonkingcup,\N,
 2020-12-01,gen8metronomebattle,\N,
 2020-12-01,gen8mixandmega,\N,
-2020-12-01,gen8nationaldexbh,\N,
-2020-12-01,gen8nationaldexmonotype,\N,
-2020-12-01,gen8nationaldexuu,\N,not official
+2020-12-01,gen8nationaldex,\N,national dex
+2020-12-01,gen8nationaldexag,\N,national dex
+2020-12-01,gen8nationaldexbh,\N,national dex
+2020-12-01,gen8nationaldexmonotype,\N,national dex
+2020-12-01,gen8nationaldexuu,\N,national dex
 2020-12-01,gen8nfe,\N,
 2020-12-01,gen8oublitz,\N,
 2020-12-01,gen8scalemons,\N,
@@ -2410,8 +2437,10 @@ month,name,format_id,reason
 2021-01-01,gen8megasforall,\N,
 2021-01-01,gen8metronomebattle,\N,
 2021-01-01,gen8mixandmega,\N,
-2021-01-01,gen8nationaldexmonotype,\N,not official
-2021-01-01,gen8nationaldexuu,\N,not official
+2021-01-01,gen8nationaldex,\N,national dex
+2021-01-01,gen8nationaldexag,\N,national dex
+2021-01-01,gen8nationaldexmonotype,\N,national dex
+2021-01-01,gen8nationaldexuu,\N,national dex
 2021-01-01,gen8nfe,\N,
 2021-01-01,gen8oublitz,\N,
 2021-01-01,gen8sharedpower,\N,
@@ -2439,8 +2468,10 @@ month,name,format_id,reason
 2021-02-01,gen8megasforall,\N,
 2021-02-01,gen8metronomebattle,\N,
 2021-02-01,gen8mixandmega,\N,
-2021-02-01,gen8nationaldexmonotype,\N,not official
-2021-02-01,gen8nationaldexuu,\N,not official
+2021-02-01,gen8nationaldex,\N,national dex
+2021-02-01,gen8nationaldexag,\N,national dex
+2021-02-01,gen8nationaldexmonotype,\N,national dex
+2021-02-01,gen8nationaldexuu,\N,national dex
 2021-02-01,gen8natureswap,\N,
 2021-02-01,gen8nfe,\N,
 2021-02-01,gen8oublitz,\N,
@@ -2469,8 +2500,10 @@ month,name,format_id,reason
 2021-03-01,gen8megasforall,\N,
 2021-03-01,gen8metronomebattle,\N,
 2021-03-01,gen8mixandmega,\N,
-2021-03-01,gen8nationaldexmonotype,\N,not official
-2021-03-01,gen8nationaldexuu,\N,not official
+2021-03-01,gen8nationaldex,\N,national dex
+2021-03-01,gen8nationaldexag,\N,national dex
+2021-03-01,gen8nationaldexmonotype,\N,national dex
+2021-03-01,gen8nationaldexuu,\N,national dex
 2021-03-01,gen8natureswap,\N,
 2021-03-01,gen8nfe,\N,
 2021-03-01,gen8oublitz,\N,
@@ -2502,10 +2535,12 @@ month,name,format_id,reason
 2021-04-01,gen8mixandmega,\N,
 2021-04-01,gen8monotypedynamax,\N,
 2021-04-01,gen8natdexagwitheternamax,\N,
-2021-04-01,gen8nationaldexmonotype,\N,not official
-2021-04-01,gen8nationaldexnostall,\N,
-2021-04-01,gen8nationaldexuu,\N,not official
-2021-04-01,gen8nationaldexuunostall,\N,
+2021-04-01,gen8nationaldex,\N,national dex
+2021-04-01,gen8nationaldexag,\N,national dex
+2021-04-01,gen8nationaldexmonotype,\N,national dex
+2021-04-01,gen8nationaldexnostall,\N,national dex
+2021-04-01,gen8nationaldexuu,\N,national dex
+2021-04-01,gen8nationaldexuunostall,\N,national dex
 2021-04-01,gen8ndmonotypenotoxapex,\N,
 2021-04-01,gen8nfe,\N,
 2021-04-01,gen8nususpecttest,\N,suspect test
@@ -2554,8 +2589,10 @@ month,name,format_id,reason
 2021-05-01,gen8inverse,\N,
 2021-05-01,gen8metronomebattle,\N,
 2021-05-01,gen8mixandmega,\N,
-2021-05-01,gen8nationaldexmonotype,\N,not official
-2021-05-01,gen8nationaldexuu,\N,not official
+2021-05-01,gen8nationaldex,\N,national dex
+2021-05-01,gen8nationaldexag,\N,national dex
+2021-05-01,gen8nationaldexmonotype,\N,national dex
+2021-05-01,gen8nationaldexuu,\N,national dex
 2021-05-01,gen8nfe,\N,
 2021-05-01,gen8oublitz,\N,
 2021-05-01,gen8pokebilities,\N,
@@ -2594,8 +2631,10 @@ month,name,format_id,reason
 2021-06-01,gen8inverse,\N,
 2021-06-01,gen8metronomebattle,\N,
 2021-06-01,gen8mixandmega,\N,
-2021-06-01,gen8nationaldexmonotype,\N,not official
-2021-06-01,gen8nationaldexuu,\N,not official
+2021-06-01,gen8nationaldex,\N,national dex
+2021-06-01,gen8nationaldexag,\N,national dex
+2021-06-01,gen8nationaldexmonotype,\N,national dex
+2021-06-01,gen8nationaldexuu,\N,national dex
 2021-06-01,gen8nfe,\N,
 2021-06-01,gen8oublitz,\N,
 2021-06-01,gen8purehackmons,\N,
@@ -2625,8 +2664,10 @@ month,name,format_id,reason
 2021-07-01,gen8fusionevolutionuu,\N,
 2021-07-01,gen8metronomebattle,\N,
 2021-07-01,gen8mixandmega,\N,
-2021-07-01,gen8nationaldexmonotype,\N,not official
-2021-07-01,gen8nationaldexuu,\N,not official
+2021-07-01,gen8nationaldex,\N,national dex
+2021-07-01,gen8nationaldexag,\N,national dex
+2021-07-01,gen8nationaldexmonotype,\N,national dex
+2021-07-01,gen8nationaldexuu,\N,national dex
 2021-07-01,gen8nfe,\N,
 2021-07-01,gen8oublitz,\N,
 2021-07-01,gen8partnersincrime,\N,
@@ -2657,8 +2698,10 @@ month,name,format_id,reason
 2021-08-01,gen8metronomebattle,\N,
 2021-08-01,gen8mixandmega,\N,
 2021-08-01,gen8mythicalmelee,\N,
-2021-08-01,gen8nationaldexmonotype,\N,not official
-2021-08-01,gen8nationaldexuu,\N,not official
+2021-08-01,gen8nationaldex,\N,national dex
+2021-08-01,gen8nationaldexag,\N,national dex
+2021-08-01,gen8nationaldexmonotype,\N,national dex
+2021-08-01,gen8nationaldexuu,\N,national dex
 2021-08-01,gen8nfe,\N,
 2021-08-01,gen8oublitz,\N,
 2021-08-01,gen8purehackmons,\N,
@@ -2688,8 +2731,10 @@ month,name,format_id,reason
 2021-09-01,gen8metronomebattle,\N,
 2021-09-01,gen8mixandmega,\N,
 2021-09-01,gen8mythicalmelee,\N,
-2021-09-01,gen8nationaldexmonotype,\N,not official
-2021-09-01,gen8nationaldexuu,\N,not official
+2021-09-01,gen8nationaldex,\N,national dex
+2021-09-01,gen8nationaldexag,\N,national dex
+2021-09-01,gen8nationaldexmonotype,\N,national dex
+2021-09-01,gen8nationaldexuu,\N,national dex
 2021-09-01,gen8nfe,\N,
 2021-09-01,gen8oublitz,\N,
 2021-09-01,gen8spookycup2021,\N,
@@ -2715,8 +2760,10 @@ month,name,format_id,reason
 2021-10-01,gen8metronomebattle,\N,
 2021-10-01,gen8mixandmega,\N,
 2021-10-01,gen8multibility,\N,
-2021-10-01,gen8nationaldexmonotype,\N,not official
-2021-10-01,gen8nationaldexuu,\N,not official
+2021-10-01,gen8nationaldex,\N,national dex
+2021-10-01,gen8nationaldexag,\N,national dex
+2021-10-01,gen8nationaldexmonotype,\N,national dex
+2021-10-01,gen8nationaldexuu,\N,national dex
 2021-10-01,gen8nfe,\N,
 2021-10-01,gen8oublitz,\N,
 2021-10-01,gen8spookycup2021,\N,
@@ -2745,8 +2792,10 @@ month,name,format_id,reason
 2021-11-01,gen8metronomebattle,\N,
 2021-11-01,gen8mixandmega,\N,
 2021-11-01,gen8multibility,\N,
-2021-11-01,gen8nationaldexmonotype,\N,not official
-2021-11-01,gen8nationaldexuu,\N,not official
+2021-11-01,gen8nationaldex,\N,national dex
+2021-11-01,gen8nationaldexag,\N,national dex
+2021-11-01,gen8nationaldexmonotype,\N,national dex
+2021-11-01,gen8nationaldexuu,\N,national dex
 2021-11-01,gen8nfe,\N,
 2021-11-01,gen8oublitz,\N,
 2021-11-01,gen8sketchmons,\N,
@@ -2777,8 +2826,10 @@ month,name,format_id,reason
 2021-12-01,gen8godlygift,\N,
 2021-12-01,gen8metronomebattle,\N,
 2021-12-01,gen8mixandmega,\N,
-2021-12-01,gen8nationaldexmonotype,\N,not official
-2021-12-01,gen8nationaldexuu,\N,not official
+2021-12-01,gen8nationaldex,\N,national dex
+2021-12-01,gen8nationaldexag,\N,national dex
+2021-12-01,gen8nationaldexmonotype,\N,national dex
+2021-12-01,gen8nationaldexuu,\N,national dex
 2021-12-01,gen8nfe,\N,
 2021-12-01,gen8oublitz,\N,
 2021-12-01,gen8revelationmons,\N,
@@ -2815,8 +2866,10 @@ month,name,format_id,reason
 2022-01-01,gen8godlygift,\N,
 2022-01-01,gen8metronomebattle,\N,
 2022-01-01,gen8mixandmega,\N,
-2022-01-01,gen8nationaldexmonotype,\N,not official
-2022-01-01,gen8nationaldexuu,\N,not official
+2022-01-01,gen8nationaldex,\N,national dex
+2022-01-01,gen8nationaldexag,\N,national dex
+2022-01-01,gen8nationaldexmonotype,\N,national dex
+2022-01-01,gen8nationaldexuu,\N,national dex
 2022-01-01,gen8nfe,\N,
 2022-01-01,gen8oublitz,\N,
 2022-01-01,gen8pokebilities,\N,
@@ -2852,8 +2905,10 @@ month,name,format_id,reason
 2022-02-01,gen8linked,\N,
 2022-02-01,gen8metronomebattle,\N,
 2022-02-01,gen8mixandmega,\N,
-2022-02-01,gen8nationaldexmonotype,\N,not official
-2022-02-01,gen8nationaldexuu,\N,not official
+2022-02-01,gen8nationaldex,\N,national dex
+2022-02-01,gen8nationaldexag,\N,national dex
+2022-02-01,gen8nationaldexmonotype,\N,national dex
+2022-02-01,gen8nationaldexuu,\N,national dex
 2022-02-01,gen8nfe,\N,
 2022-02-01,gen8oublitz,\N,
 2022-02-01,gen8pokebilities,\N,
@@ -2888,8 +2943,10 @@ month,name,format_id,reason
 2022-03-01,gen8linked,\N,
 2022-03-01,gen8metronomebattle,\N,
 2022-03-01,gen8mixandmega,\N,
-2022-03-01,gen8nationaldexmonotype,\N,not official
-2022-03-01,gen8nationaldexuu,\N,not official
+2022-03-01,gen8nationaldex,\N,national dex
+2022-03-01,gen8nationaldexag,\N,national dex
+2022-03-01,gen8nationaldexmonotype,\N,national dex
+2022-03-01,gen8nationaldexuu,\N,national dex
 2022-03-01,gen8nfe,\N,
 2022-03-01,gen8oublitz,\N,
 2022-03-01,gen8sharedpower,\N,
@@ -2924,8 +2981,10 @@ month,name,format_id,reason
 2022-04-01,gen8godlygift,\N,
 2022-04-01,gen8metronomebattle,\N,
 2022-04-01,gen8mixandmega,\N,
-2022-04-01,gen8nationaldexmonotype,\N,not official
-2022-04-01,gen8nationaldexuu,\N,not official
+2022-04-01,gen8nationaldex,\N,national dex
+2022-04-01,gen8nationaldexag,\N,national dex
+2022-04-01,gen8nationaldexmonotype,\N,national dex
+2022-04-01,gen8nationaldexuu,\N,national dex
 2022-04-01,gen8nfe,\N,
 2022-04-01,gen8oublitz,\N,
 2022-04-01,gen8sharedpower,\N,
@@ -2959,8 +3018,10 @@ month,name,format_id,reason
 2022-05-01,gen8godlygift,\N,
 2022-05-01,gen8metronomebattle,\N,
 2022-05-01,gen8mixandmega,\N,
-2022-05-01,gen8nationaldexmonotype,\N,not official
-2022-05-01,gen8nationaldexuu,\N,not official
+2022-05-01,gen8nationaldex,\N,national dex
+2022-05-01,gen8nationaldexag,\N,national dex
+2022-05-01,gen8nationaldexmonotype,\N,national dex
+2022-05-01,gen8nationaldexuu,\N,national dex
 2022-05-01,gen8nfe,\N,
 2022-05-01,gen8oublitz,\N,
 2022-05-01,gen8pokebilitiesaaa,\N,
@@ -2994,8 +3055,10 @@ month,name,format_id,reason
 2022-06-01,gen8inverse,\N,
 2022-06-01,gen8metronomebattle,\N,
 2022-06-01,gen8mixandmega,\N,
-2022-06-01,gen8nationaldexmonotype,\N,not official
-2022-06-01,gen8nationaldexuu,\N,not official
+2022-06-01,gen8nationaldex,\N,national dex
+2022-06-01,gen8nationaldexag,\N,national dex
+2022-06-01,gen8nationaldexmonotype,\N,national dex
+2022-06-01,gen8nationaldexuu,\N,national dex
 2022-06-01,gen8nfe,\N,
 2022-06-01,gen8oublitz,\N,
 2022-06-01,gen8pokebilitiesaaa,\N,
@@ -3035,8 +3098,10 @@ month,name,format_id,reason
 2022-07-01,gen8jumpmagikarp,\N,
 2022-07-01,gen8metronomebattle,\N,
 2022-07-01,gen8mixandmega,\N,
-2022-07-01,gen8nationaldexmonotype,\N,not official
-2022-07-01,gen8nationaldexuu,\N,not official
+2022-07-01,gen8nationaldex,\N,national dex
+2022-07-01,gen8nationaldexag,\N,national dex
+2022-07-01,gen8nationaldexmonotype,\N,national dex
+2022-07-01,gen8nationaldexuu,\N,national dex
 2022-07-01,gen8nfe,\N,
 2022-07-01,gen8oublitz,\N,
 2022-07-01,gen8singlebattlecup,\N,
@@ -3073,8 +3138,10 @@ month,name,format_id,reason
 2022-08-01,gen8inheritance,\N,
 2022-08-01,gen8metronomebattle,\N,
 2022-08-01,gen8mixandmega,\N,
-2022-08-01,gen8nationaldexmonotype,\N,not official
-2022-08-01,gen8nationaldexuu,\N,not official
+2022-08-01,gen8nationaldex,\N,national dex
+2022-08-01,gen8nationaldexag,\N,national dex
+2022-08-01,gen8nationaldexmonotype,\N,national dex
+2022-08-01,gen8nationaldexuu,\N,national dex
 2022-08-01,gen8nfe,\N,
 2022-08-01,gen8oublitz,\N,
 2022-08-01,gen8reevolution,\N,
@@ -3103,9 +3170,11 @@ month,name,format_id,reason
 2022-09-01,gen8ichoosechu,\N,
 2022-09-01,gen8metronomebattle,\N,
 2022-09-01,gen8mixandmega,\N,
-2022-09-01,gen8nationaldexbh,\N,
-2022-09-01,gen8nationaldexmonotype,\N,not official
-2022-09-01,gen8nationaldexuu,\N,not official
+2022-09-01,gen8nationaldex,\N,national dex
+2022-09-01,gen8nationaldexag,\N,national dex
+2022-09-01,gen8nationaldexbh,\N,national dex
+2022-09-01,gen8nationaldexmonotype,\N,national dex
+2022-09-01,gen8nationaldexuu,\N,national dex
 2022-09-01,gen8nfe,\N,
 2022-09-01,gen8oublitz,\N,
 2022-09-01,gen8partnersincrime,\N,
