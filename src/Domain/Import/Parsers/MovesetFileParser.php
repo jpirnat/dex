@@ -62,6 +62,9 @@ final readonly class MovesetFileParser
 			// BLOCK 3 - Abilities.
 
 			Utils::readLine($stream); // "Abilities"
+			if ($stream->eof()) {
+				return;
+			}
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownAbilityName = $namePercent->showdownName();
@@ -80,6 +83,9 @@ final readonly class MovesetFileParser
 			// BLOCK 4 - Items.
 
 			Utils::readLine($stream); // "Items"
+			if ($stream->eof()) {
+				return;
+			}
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownItemName = $namePercent->showdownName();
@@ -98,6 +104,9 @@ final readonly class MovesetFileParser
 			// BLOCK 5 - Spreads.
 
 			Utils::readLine($stream); // "Spreads"
+			if ($stream->eof()) {
+				return;
+			}
 			while (!$this->movesetFileExtractor->isSeparator($line = Utils::readLine($stream))) {
 				// If this line is an "Other" percent, skip it.
 				if ($this->movesetFileExtractor->isOther($line)) {
@@ -121,6 +130,9 @@ final readonly class MovesetFileParser
 			// BLOCK 6 - Moves.
 
 			Utils::readLine($stream); // "Moves"
+			if ($stream->eof()) {
+				return;
+			}
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownMoveName = $namePercent->showdownName();
@@ -139,6 +151,9 @@ final readonly class MovesetFileParser
 			// BLOCK 7 - Teammates.
 
 			Utils::readLine($stream); // "Teammates"
+			if ($stream->eof()) {
+				return;
+			}
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownTeammateName = $namePercent->showdownName();
@@ -157,6 +172,9 @@ final readonly class MovesetFileParser
 			// BLOCK 8 - Counters.
 
 			Utils::readLine($stream); // "Counters"
+			if ($stream->eof()) {
+				return;
+			}
 			while ($this->movesetFileExtractor->isCounter1($line1 = Utils::readLine($stream))) {
 				$line2 = Utils::readLine($stream);
 				$counter = $this->movesetFileExtractor->extractCounter($line1, $line2);

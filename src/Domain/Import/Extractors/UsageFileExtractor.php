@@ -27,7 +27,7 @@ final readonly class UsageFileExtractor
 			return (int) $matchResult->group(1);
 		} catch (RegexFailed) {
 			throw new InvalidTotalBattlesLineException(
-				"Total battles line is invalid: $line"
+				"Total battles line is invalid: $line."
 			);
 		}
 	}
@@ -47,7 +47,7 @@ final readonly class UsageFileExtractor
 			return (float) $matchResult->group(1);
 		} catch (RegexFailed) {
 			throw new InvalidAverageWeightPerTeamLineException(
-				"Average weight per team line is invalid: $line"
+				"Average weight per team line is invalid: $line."
 			);
 		}
 	}
@@ -98,7 +98,7 @@ final readonly class UsageFileExtractor
 				(float) $matchResult->group(7),
 			);
 		} catch (RegexFailed) {
-			throw new InvalidUsageLineException("Usage line is invalid: $line");
+			throw new InvalidUsageLineException("Usage line is invalid: $line.");
 		}
 	}
 }

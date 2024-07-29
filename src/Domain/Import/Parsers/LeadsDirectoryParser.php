@@ -35,7 +35,7 @@ final readonly class LeadsDirectoryParser
 		$crawler = new Crawler($html, $url);
 
 		// Get all the links on the leads directory page.
-		$links = $crawler->filterXPath('//a[contains(@href, ".txt")]')->links();
+		$links = $crawler->filterXPath('//a[contains(@href, ".txt")][not(contains(@href, ".txt.gz"))]')->links();
 
 		// Get the month from the leads directory url.
 		$month = $this->monthExtractor->extractMonth($url);
