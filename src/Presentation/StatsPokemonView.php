@@ -67,7 +67,6 @@ final readonly class StatsPokemonView
 		// Get miscellaneous Pokémon data.
 		$pokemonModel = $this->statsPokemonModel->getPokemonModel();
 		$dexPokemon = $pokemonModel->getPokemon();
-		$model = $pokemonModel->getModel();
 		$baseStats = $dexPokemon->getBaseStats();
 		$versionGroup = $this->statsPokemonModel->getVersionGroup();
 		$generation = $this->statsPokemonModel->getGeneration();
@@ -186,7 +185,7 @@ final readonly class StatsPokemonView
 				'pokemon' => [
 					'identifier' => $dexPokemon->getIdentifier(),
 					'name' => $dexPokemon->getName(),
-					'model' => $model->getImage(),
+					'image' => $pokemonModel->getImage(),
 					'types' => $this->dexFormatter->formatDexTypes($dexPokemon->getTypes()),
 					'baseStats' => $baseStats,
 					'smogonDexIdentifier' => $pokemon->getSmogonDexIdentifier(),

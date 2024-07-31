@@ -271,6 +271,9 @@ a.button {
 .dex-item-icon {
 	max-width: 64px;
 }
+.dex-item-icon--small {
+	max-width: 32px;
+}
 .dex-pokemon-icon {
 	max-width: 64px;
 }

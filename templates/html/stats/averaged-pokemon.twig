@@ -26,8 +26,8 @@
 			<div>
 				{{ pokemon.name }}
 			</div>
-			<div>
-				<img :src="'/images/pokemon/models/' + pokemon.model" alt="">
+			<div v-if="pokemon.image">
+				<img :src="'/images/pokemon/' + pokemon.image" alt="">
 			</div>
 			<div class="pokemon-types">
 				<dex-type-link v-for="type in pokemon.types" :key="type.identifier"

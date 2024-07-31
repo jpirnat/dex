@@ -6,6 +6,7 @@ namespace Jp\Dex\Application\Models\StatsPokemon;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Models\Model;
+use Jp\Dex\Domain\Models\ModelNotFoundException;
 use Jp\Dex\Domain\Models\ModelRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
@@ -15,7 +16,7 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 final class PokemonModel
 {
 	private DexPokemon $pokemon;
-	private Model $model;
+	private string $image;
 
 
 	public function __construct(
@@ -32,6 +33,8 @@ final class PokemonModel
 		PokemonId $pokemonId,
 		LanguageId $languageId,
 	) : void {
+		$this->image = '';
+
 		$this->pokemon = $this->dexPokemonRepository->getById(
 			$versionGroupId,
 			$pokemonId,
@@ -39,13 +42,18 @@ final class PokemonModel
 		);
 
 		// Get the Pokémon's model.
-		$this->model = $this->modelRepository->getByFormAndShinyAndBackAndFemaleAndAttackingIndex(
-			new FormId($pokemonId->value()), // A Pokémon's default form has Pokémon id === form id.
-			false,
-			false,
-			false,
-			0,
-		);
+		try {
+			$model = $this->modelRepository->getByFormAndShinyAndBackAndFemaleAndAttackingIndex(
+				new FormId($pokemonId->value()), // A Pokémon's default form has Pokémon id === form id.
+				false,
+				false,
+				false,
+				0,
+			);
+			$image = $model->getImage();
+			$this->image = "models/$image";
+		} catch (ModelNotFoundException) {
+		}
 	}
 
 	/**
@@ -59,8 +67,8 @@ final class PokemonModel
 	/**
 	 * Get the model.
 	 */
-	public function getModel() : Model
+	public function getImage() : string
 	{
-		return $this->model;
+		return $this->image;
 	}
 }
