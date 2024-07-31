@@ -16,7 +16,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 final readonly class CurrentStatsMiddleware implements MiddlewareInterface
 {
-	private const DEFAULT_FORMAT_ID = FormatId::GEN_8_OU;
+	private const DEFAULT_FORMAT_ID = FormatId::GEN_9_OU;
 	private const DEFAULT_RATING = 1695;
 
 	public function __construct(
