@@ -48,7 +48,6 @@ final readonly class ZygardeFixer
 			50, // VGC 2019 Sun Series
 			51, // VGC 2019 Moon Series
 			52, // VGC 2019 Ultra Series
-			65, // Gen 8 National Dex AG
 		];
 
 		foreach ($formatIds as $formatId) {

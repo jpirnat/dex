@@ -2090,7 +2090,7 @@ month,name,format_id,reason
 2019-11-01,gen8doublesoubeta,\N,beta
 2019-11-01,gen8galarbeginnings,\N,
 2019-11-01,gen8mixandmega,\N,
-2019-11-01,gen8natdexanythinggoes,65,duplicate
+2019-11-01,gen8natdexanythinggoes,63,duplicate
 2019-11-01,gen8nationaldexag,\N,national dex
 2019-11-01,gen8nationaldexbeta,\N,national dex
 2019-11-01,gen8nfe,\N,
@@ -2599,7 +2599,7 @@ month,name,format_id,reason
 2021-05-01,gen8sharedpower,\N,
 2021-05-01,gen8sketchmons,\N,
 2021-05-01,gen8stabmons,\N,
-2021-05-01,gen8vgc2021,68,format was renamed last month
+2021-05-01,gen8vgc2021,66,format was renamed last month
 2021-05-01,gen8vgc2021series9limitonerestrictedrestrictedlegendary,\N,
 2021-05-01,gen8zu,\N,not official
 2021-06-01,gen3nu,\N,not official
@@ -2674,7 +2674,7 @@ month,name,format_id,reason
 2021-07-01,gen8purehackmons,\N,
 2021-07-01,gen8samedoublebeat,\N,
 2021-07-01,gen8stabmons,\N,
-2021-07-01,gen8vgc2021series9,68,duplicate
+2021-07-01,gen8vgc2021series9,66,duplicate
 2021-07-01,gen8waterparadise,\N,
 2021-07-01,gen8zu,\N,not official
 2021-08-01,gen1stadiumou,\N,
@@ -2708,7 +2708,7 @@ month,name,format_id,reason
 2021-08-01,gen8samedoublebeat,\N,
 2021-08-01,gen8stabmons,\N,
 2021-08-01,gen8stabmonsmixandmega,\N,
-2021-08-01,gen8vgc2021series9,68,duplicate
+2021-08-01,gen8vgc2021series9,66,duplicate
 2021-08-01,gen8zu,\N,not official
 2021-09-01,gen1tradebacksou,\N,
 2021-09-01,gen31v1,\N,
@@ -3437,7 +3437,7 @@ month,name,format_id,reason
 2023-05-01,gen8anythinggoes,53,too few battles: 1
 2023-05-01,gen8ubers,54,too few battles: 1
 2023-05-01,gen8uu,56,too few battles: 4
-2023-05-01,gen8vgc2020,67,too few battles: 1
+2023-05-01,gen8vgc2020,65,too few battles: 1
 2023-05-01,gen91v1,\N,
 2023-05-01,gen92v2doubles,\N,
 2023-05-01,gen9almostanyability,\N,

@@ -7,5 +7,5 @@ use Jp\Dex\Domain\EntityId;
 
 final class FormatId extends EntityId
 {
-	public const GEN_9_OU = 72;
+	public const GEN_9_OU = 70;
 }
