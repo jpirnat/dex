@@ -30,6 +30,8 @@ final readonly class TeammatesFixer
 	 */
 	public function fixTeammates(DateTime $month) : void
 	{
+		echo 'Fixing teammates: month ' . $month->format('Y-m') . ".\n";
+
 		if ($month >= new DateTime('2021-04-01')) {
 			return;
 		}

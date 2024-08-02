@@ -59,9 +59,6 @@ final readonly class MovesetDirectoryImporter
 			$stream = $client->request('GET', $link->getUri())->getBody();
 
 			// Import the moveset file.
-			echo 'Importing moveset file: month ' . $month->format('Y-m')
-				. ', format id ' . $formatId->value()
-				. ", rating $rating. (" . (new DateTime())->format('Y-m-d H:i:s') . ")\n";
 			$this->movesetFileImporter->import(
 				$stream,
 				$month,

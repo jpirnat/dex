@@ -7,6 +7,7 @@ use GuzzleHttp\Client;
 use Jp\Dex\Domain\Import\Extractors\FormatRatingExtractor;
 use Jp\Dex\Domain\Import\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface;
+use Jp\Dex\Domain\Import\TeammatesFixer;
 use Symfony\Component\DomCrawler\Crawler;
 
 final readonly class MonthDirectoryImporter
@@ -18,6 +19,7 @@ final readonly class MonthDirectoryImporter
 		private MonthExtractor $monthExtractor,
 		private FormatRatingExtractor $formatRatingExtractor,
 		private ShowdownFormatRepositoryInterface $showdownFormatRepository,
+		private TeammatesFixer $teammatesFixer,
 	) {}
 
 	/**
@@ -75,5 +77,8 @@ final readonly class MonthDirectoryImporter
 
 		// Import each moveset file.
 		$this->movesetDirectoryImporter->import($url . 'moveset/');
+
+		// Fix teammate percentages.
+		$this->teammatesFixer->fixTeammates($month);
 	}
 }

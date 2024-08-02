@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+use Jp\Dex\Domain\Import\Importers\StatsDirectoryImporter;
+use Jp\Dex\Domain\Import\ZygardeFixer;
+
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config/environment.php';
+$container = require __DIR__ . '/../config/container.php';
+
+
+// Run the importer.
+$start = new DateTime();
+
+/** @var StatsDirectoryImporter $importer */
+$importer = $container->get(StatsDirectoryImporter::class);
+$importer->import('http://www.smogon.com/stats/');
+
+/** @var ZygardeFixer $zygardeFixer */
+$zygardeFixer = $container->get(ZygardeFixer::class);
+$zygardeFixer->fixZygarde();
+
+
+$end = new DateTime();
+
+// Display the output.
+$startText = $start->format('Y-m-d H:i:s');
+$endText = $end->format('Y-m-d H:i:s');
+
+echo "Start Time: $startText\n";
+echo "End Time: $endText\n";
+echo "\n";
