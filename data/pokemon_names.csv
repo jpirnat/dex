@@ -1048,226 +1048,214 @@ language_id,pokemon_id,name,category
 1,10022,アルセウス (こおり),そうぞうポケモン
 1,10023,アルセウス (ドラゴン),そうぞうポケモン
 1,10024,アルセウス (あく),そうぞうポケモン
-1,10025,アルセウス (？？？),そうぞうポケモン
-1,10026,ヒートロトム,プラズマポケモン
-1,10027,ウォッシュロトム,プラズマポケモン
-1,10028,フロストロトム,プラズマポケモン
-1,10029,スピンロトム,プラズマポケモン
-1,10030,カットロトム,プラズマポケモン
-1,10031,ギラティナ (オリジンフォルム),はんこつポケモン
-1,10032,シェイミ (スカイフォルム),かんしゃポケモン
-1,10033,ギザみみピチュー,こねずみポケモン
-1,10034,バスラオ (あおすじのすがた),らんぼうポケモン
-1,10035,ヒヒダルマ (ダルマモード),えんじょうポケモン
-1,10036,メロエッタ (ステップフォルム),せんりつポケモン
-1,10037,トルネロス (れいじゅうフォルム),せんぷうポケモン
-1,10038,ボルトロス (れいじゅうフォルム),らいげきポケモン
-1,10039,ランドロス (れいじゅうフォルム),ほうじょうポケモン
-1,10040,ホワイトキュレム,きょうかいポケモン
-1,10041,ブラックキュレム,きょうかいポケモン
-1,10042,メガフシギバナ,たねポケモン
-1,10043,メガリザードンＸ,かえんポケモン
-1,10044,メガリザードンＹ,かえんポケモン
-1,10045,メガカメックス,こうらポケモン
-1,10046,メガフーディン,ねんりきポケモン
-1,10047,メガゲンガー,シャドーポケモン
-1,10048,メガガルーラ,おやこポケモン
-1,10049,メガカイロス,くわがたポケモン
-1,10050,メガギャラドス,きょうあくポケモン
-1,10051,メガプテラ,かせきポケモン
-1,10052,メガミュウツーＸ,いでんしポケモン
-1,10053,メガミュウツーＹ,いでんしポケモン
-1,10054,メガデンリュウ,ライトポケモン
-1,10055,メガハッサム,はさみポケモン
-1,10056,メガヘラクロス,１ぽんヅノポケモン
-1,10057,メガヘルガー,ダークポケモン
-1,10058,メガバンギラス,よろいポケモン
-1,10059,メガバシャーモ,もうかポケモン
-1,10060,メガサーナイト,ほうようポケモン
-1,10061,メガクチート,あざむきポケモン
-1,10062,メガボスゴドラ,てつヨロイポケモン
-1,10063,メガチャーレム,めいそうポケモン
-1,10064,メガライボルト,ほうでんポケモン
-1,10065,メガジュペッタ,ぬいぐるみポケモン
-1,10066,メガアブソル,わざわいポケモン
-1,10067,メガラティアス,むげんポケモン
-1,10068,メガラティオス,むげんポケモン
-1,10069,メガガブリアス,マッハポケモン
-1,10070,メガルカリオ,はどうポケモン
-1,10071,メガユキノオー,じゅひょうポケモン
-1,10072,アルセウス (フェアリー),そうぞうポケモン
-1,10073,フラエッテ (えいえんのはな),いちりんポケモン
-1,10074,ニャオニクス (メスのすがた),よくせいポケモン
-1,10075,ギルガルド (ブレードフォルム),おうけんポケモン
-1,10076,バケッチャ (ちいさいサイズ),かぼちゃポケモン
-1,10077,バケッチャ (おおきいサイズ),かぼちゃポケモン
-1,10078,バケッチャ (とくだいサイズ),かぼちゃポケモン
-1,10079,パンプジン (ちいさいサイズ),かぼちゃポケモン
-1,10080,パンプジン (おおきいサイズ),かぼちゃポケモン
-1,10081,パンプジン (とくだいサイズ),かぼちゃポケモン
-1,10082,メガスピアー,どくばちポケモン
-1,10083,メガピジョット,とりポケモン
-1,10084,ハードロック・ピカチュウ,ねずみポケモン
-1,10085,マダム・ピカチュウ,ねずみポケモン
-1,10086,アイドル・ピカチュウ,ねずみポケモン
-1,10087,ドクター・ピカチュウ,ねずみポケモン
-1,10088,マスク・ド・ピカチュウ,ねずみポケモン
-1,10089,おきがえピカチュウ,ねずみポケモン
-1,10090,メガヤドラン,やどかりポケモン
-1,10091,メガハガネール,てつへびポケモン
-1,10092,メガジュカイン,みつりんポケモン
-1,10093,メガラグラージ,ぬまうおポケモン
-1,10094,メガヤミラミ,くらやみポケモン
-1,10095,メガサメハダー,きょうぼうポケモン
-1,10096,メガバクーダ,ふんかポケモン
-1,10097,メガチルタリス,ハミングポケモン
-1,10098,メガオニゴーリ,がんめんポケモン
-1,10099,メガボーマンダ,ドラゴンポケモン
-1,10100,メガメタグロス,てつあしポケモン
-1,10101,カイオーガ (ゲンシカイキのすがた),かいていポケモン
-1,10102,グラードン (ゲンシカイキのすがた),たいりくポケモン
-1,10103,メガレックウザ,てんくうポケモン
-1,10104,メガミミロップ,うさぎポケモン
-1,10105,メガエルレイド,やいばポケモン
-1,10106,メガタブンネ,ヒヤリングポケモン
-1,10107,メガディアンシー,ほうせきポケモン
-1,10108,ときはなたれしフーパ,まじんポケモン
-1,10109,コラッタ (アローラのすがた),ねずみポケモン
-1,10110,ラッタ (アローラのすがた),ねずみポケモン
-1,10111,ぬしの　ラッタ,ねずみポケモン
-1,10112,ピカチュウ (キャップ),ねずみポケモン
-1,10113,ライチュウ (アローラのすがた),ねずみポケモン
-1,10114,サンド (アローラのすがた),ねずみポケモン
-1,10115,サンドパン (アローラのすがた),ねずみポケモン
-1,10116,ロコン (アローラのすがた),きつねポケモン
-1,10117,キュウコン (アローラのすがた),きつねポケモン
-1,10118,ディグダ (アローラのすがた),もぐらポケモン
-1,10119,ダグトリオ (アローラのすがた),もぐらポケモン
-1,10120,ニャース (アローラのすがた),ばけねこポケモン
-1,10121,ペルシアン (アローラのすがた),シャムネコポケモン
-1,10122,イシツブテ (アローラのすがた),がんせきポケモン
-1,10123,ゴローン (アローラのすがた),がんせきポケモン
-1,10124,ゴローニャ (アローラのすがた),メガトンポケモン
-1,10125,ベトベター (アローラのすがた),ヘドロポケモン
-1,10126,ベトベトン (アローラのすがた),ヘドロポケモン
-1,10127,ナッシー (アローラのすがた),やしのみポケモン
-1,10128,ガラガラ (アローラのすがた),ほねずきポケモン
-1,10129,ゲッコウガ (きずなへんげ),しのびポケモン
-1,10130,サトシゲッコウガ,しのびポケモン
-1,10131,１０％ジガルデ (オーラブレイク),ちつじょポケモン
-1,10132,１０％ジガルデ (スワームチェンジ),ちつじょポケモン
-1,10133,５０％ジガルデ (スワームチェンジ),ちつじょポケモン
-1,10134,パーフェクトジガルデ,ちつじょポケモン
-1,10135,ぬしの　デカグース,はりこみポケモン
-1,10136,ぬしの　クワガノン,くわがたポケモン
-1,10137,オドリドリ (ぱちぱちスタイル),ダンスポケモン
-1,10138,オドリドリ (ふらふらスタイル),ダンスポケモン
-1,10139,オドリドリ (まいまいスタイル),ダンスポケモン
-1,10140,ルガルガン (まよなかのすがた),オオカミポケモン
-1,10141,ヨワシ (むれたすがた),こざかなポケモン
-1,10142,ぬしの　ラランテス,はなかまポケモン
-1,10143,ぬしの　エンニュート,どくトカゲポケモン
-1,10144,シルヴァディ (かくとう),じんこうポケモン
-1,10145,シルヴァディ (ひこう),じんこうポケモン
-1,10146,シルヴァディ (どく),じんこうポケモン
-1,10147,シルヴァディ (じめん),じんこうポケモン
-1,10148,シルヴァディ (いわ),じんこうポケモン
-1,10149,シルヴァディ (むし),じんこうポケモン
-1,10150,シルヴァディ (ゴースト),じんこうポケモン
-1,10151,シルヴァディ (はがね),じんこうポケモン
-1,10152,シルヴァディ (ほのお),じんこうポケモン
-1,10153,シルヴァディ (みず),じんこうポケモン
-1,10154,シルヴァディ (くさ),じんこうポケモン
-1,10155,シルヴァディ (でんき),じんこうポケモン
-1,10156,シルヴァディ (エスパー),じんこうポケモン
-1,10157,シルヴァディ (こおり),じんこうポケモン
-1,10158,シルヴァディ (ドラゴン),じんこうポケモン
-1,10159,シルヴァディ (あく),じんこうポケモン
-1,10160,シルヴァディ (フェアリー),じんこうポケモン
-1,10161,メテノ (のコアフォルム),ながれぼしポケモン
-1,10162,ぬしの　ミミッキュ,ばけのかわポケモン
-1,10163,ぬしの　ジャラランガ,うろこポケモン
-1,10164,ぬしの　ガラガラ,ほねずきポケモン
-1,10165,ぬしの　アブリボン,ツリアブポケモン
-1,10166,イワンコ (マイペース),こいぬポケモン
-1,10167,ルガルガン (たそがれのすがた),オオカミポケモン
-1,10168,ぬしの　オニシズクモ,すいほうポケモン
-1,10169,ぬしの　トゲデマル,まるまりポケモン
-1,10170,ネクロズマ (たそがれのたてがみ),プリズムポケモン
-1,10171,ネクロズマ (あかつきのつばさ),プリズムポケモン
-1,10172,ウルトラネクロズマ,プリズムポケモン
-1,10173,相棒ピカチュウ,ねずみポケモン
-1,10174,相棒イーブイ,しんかポケモン
-1,10175,ニャース (ガラルのすがた),ばけねこポケモン
-1,10176,ポニータ (ガラルのすがた),いっかくポケモン
-1,10177,ギャロップ (ガラルのすがた),いっかくポケモン
-1,10178,カモネギ (ガラルのすがた),かるがもポケモン
-1,10179,マタドガス (ガラルのすがた),どくガスポケモン
-1,10180,バリヤード (ガラルのすがた),ダンスポケモン
-1,10181,サニーゴ (ガラルのすがた),さんごポケモン
-1,10182,ジグザグマ (ガラルのすがた),まめだぬきポケモン
-1,10183,マッスグマ (ガラルのすがた),とっしんポケモン
-1,10184,ダルマッカ (ガラルのすがた),だるまポケモン
-1,10185,ヒヒダルマ (ガラルのすがた) (ダルマモード),だるまポケモン
-1,10186,ヒヒダルマ (ガラルのすがた) (ノーマルモード),えんじょうポケモン
-1,10187,デスマス (ガラルのすがた),たましいポケモン
-1,10188,マッギョ (ガラルのすがた),トラップポケモン
-1,10189,ストリンダー (ローなすがた),パンクポケモン
-1,10190,コオリッポ (ナイスフェイス),ペンギンポケモン
-1,10191,イエッサン (メスのすがた),かんじょうポケモン
-1,10192,ザシアン (けんのおう),つわものポケモン
-1,10193,ザマゼンタ (たてのおう),つわものポケモン
-1,10194,ムゲンダイナ (ムゲンダイマックス),キョダイポケモン
-1,10195,ヤドン (ガラルのすがた),まぬけポケモン
-1,10196,ヤドラン (ガラルのすがた),やどかりポケモン
-1,10197,ウーラオス (れんげきのかた),けんぽうポケモン
-1,10198,フリーザー (ガラルのすがた),れいこくポケモン
-1,10199,サンダー (ガラルのすがた),けんきゃくポケモン
-1,10200,ファイヤー (ガラルのすがた),じゃあくポケモン
-1,10201,ヤドキング (ガラルのすがた),じゅじゅつしポケモン
-1,10202,バドレックス (はくばじょうのすがた),エンペラーポケモン
-1,10203,バドレックス (こくばじょうのすがた),エンペラーポケモン
-1,10204,ガーディ (ヒスイのすがた),みはりポケモン
-1,10205,ウインディ (ヒスイのすがた),でんせつポケモン
-1,10206,ビリリダマ (ヒスイのすがた),きゅうたいポケモン
-1,10207,マルマイン (ヒスイのすがた),きゅうたいポケモン
-1,10208,バクフーン (ヒスイのすがた),おにびポケモン
-1,10209,ハリーセン (ヒスイのすがた),ふうせんポケモン
-1,10210,ニューラ (ヒスイのすがた),かぎづめポケモン
-1,10211,ディアルガ (オリジンフォルム),じかんポケモン
-1,10212,パルキア (オリジンフォルム),くうかんポケモン
-1,10213,ダイケンキ (ヒスイのすがた),かんろくポケモン
-1,10214,ドレディア (ヒスイのすがた),スピンポケモン
-1,10215,バスラオ (しろすじのすがた),おんこうポケモン
-1,10216,ゾロア (ヒスイのすがた),うらみぎつねポケモン
-1,10217,ゾロアーク (ヒスイのすがた),のろいぎつねポケモン
-1,10218,ウォーグル (ヒスイのすがた),おたけびポケモン
-1,10219,ヌメイル (ヒスイのすがた),マイマイポケモン
-1,10220,ヌメルゴン (ヒスイのすがた),からこもりポケモン
-1,10221,クレベース (ヒスイのすがた),ひょうざんポケモン
-1,10222,ジュナイパー (ヒスイのすがた),やばねポケモン
-1,10223,イダイトウ (メスのすがた),おおうおポケモン
-1,10224,ラブトロス (れいじゅうフォルム),あいぞうポケモン
-1,10225,ケンタロス (パルデアのすがた),あばれうしポケモン
-1,10226,ケンタロス (パルデアのすがた),あばれうしポケモン
-1,10227,ケンタロス (パルデアのすがた),あばれうしポケモン
-1,10228,ウパー (パルデアのすがた),どくうおポケモン
-1,10229,パフュートン (メスのすがた),ぶたポケモン
-1,10230,イキリンコ (ブルーフェザー),インコポケモン
-1,10231,イキリンコ (イエローフェザー),インコポケモン
-1,10232,イキリンコ (ホワイトフェザー),インコポケモン
-1,10233,イルカマン (マイティフォルム),ヒーローポケモン
-1,10234,コレクレー (とほフォルム),たからさがしポケモン
-1,10235,ガチグマ (アカツキ),でいたんポケモン
-1,10236,オーガポン (いどのめん),おめんポケモン
-1,10237,オーガポン (かまどのめん),おめんポケモン
-1,10238,オーガポン (いしずえのめん),おめんポケモン
-1,10239,オーガポン (みどりのめん Tera),おめんポケモン
-1,10240,オーガポン (いどのめん Tera),おめんポケモン
-1,10241,オーガポン (かまどのめん Tera),おめんポケモン
-1,10242,オーガポン (いしずえのめん Tera),おめんポケモン
-1,10243,テラパゴス (テラスタルフォルム),テラスタルポケモン
-1,10244,テラパゴス (ステラフォルム),テラスタルポケモン
+1,10025,ヒートロトム,プラズマポケモン
+1,10026,ウォッシュロトム,プラズマポケモン
+1,10027,フロストロトム,プラズマポケモン
+1,10028,スピンロトム,プラズマポケモン
+1,10029,カットロトム,プラズマポケモン
+1,10030,ギラティナ (オリジンフォルム),はんこつポケモン
+1,10031,シェイミ (スカイフォルム),かんしゃポケモン
+1,10032,ギザみみピチュー,こねずみポケモン
+1,10033,バスラオ (あおすじのすがた),らんぼうポケモン
+1,10034,ヒヒダルマ (ダルマモード),えんじょうポケモン
+1,10035,メロエッタ (ステップフォルム),せんりつポケモン
+1,10036,トルネロス (れいじゅうフォルム),せんぷうポケモン
+1,10037,ボルトロス (れいじゅうフォルム),らいげきポケモン
+1,10038,ランドロス (れいじゅうフォルム),ほうじょうポケモン
+1,10039,ホワイトキュレム,きょうかいポケモン
+1,10040,ブラックキュレム,きょうかいポケモン
+1,10041,メガフシギバナ,たねポケモン
+1,10042,メガリザードンＸ,かえんポケモン
+1,10043,メガリザードンＹ,かえんポケモン
+1,10044,メガカメックス,こうらポケモン
+1,10045,メガフーディン,ねんりきポケモン
+1,10046,メガゲンガー,シャドーポケモン
+1,10047,メガガルーラ,おやこポケモン
+1,10048,メガカイロス,くわがたポケモン
+1,10049,メガギャラドス,きょうあくポケモン
+1,10050,メガプテラ,かせきポケモン
+1,10051,メガミュウツーＸ,いでんしポケモン
+1,10052,メガミュウツーＹ,いでんしポケモン
+1,10053,メガデンリュウ,ライトポケモン
+1,10054,メガハッサム,はさみポケモン
+1,10055,メガヘラクロス,１ぽんヅノポケモン
+1,10056,メガヘルガー,ダークポケモン
+1,10057,メガバンギラス,よろいポケモン
+1,10058,メガバシャーモ,もうかポケモン
+1,10059,メガサーナイト,ほうようポケモン
+1,10060,メガクチート,あざむきポケモン
+1,10061,メガボスゴドラ,てつヨロイポケモン
+1,10062,メガチャーレム,めいそうポケモン
+1,10063,メガライボルト,ほうでんポケモン
+1,10064,メガジュペッタ,ぬいぐるみポケモン
+1,10065,メガアブソル,わざわいポケモン
+1,10066,メガラティアス,むげんポケモン
+1,10067,メガラティオス,むげんポケモン
+1,10068,メガガブリアス,マッハポケモン
+1,10069,メガルカリオ,はどうポケモン
+1,10070,メガユキノオー,じゅひょうポケモン
+1,10071,アルセウス (フェアリー),そうぞうポケモン
+1,10072,フラエッテ (えいえんのはな),いちりんポケモン
+1,10073,ニャオニクス (メスのすがた),よくせいポケモン
+1,10074,ギルガルド (ブレードフォルム),おうけんポケモン
+1,10075,バケッチャ (ちいさいサイズ),かぼちゃポケモン
+1,10076,バケッチャ (おおきいサイズ),かぼちゃポケモン
+1,10077,バケッチャ (とくだいサイズ),かぼちゃポケモン
+1,10078,パンプジン (ちいさいサイズ),かぼちゃポケモン
+1,10079,パンプジン (おおきいサイズ),かぼちゃポケモン
+1,10080,パンプジン (とくだいサイズ),かぼちゃポケモン
+1,10081,メガスピアー,どくばちポケモン
+1,10082,メガピジョット,とりポケモン
+1,10083,ハードロック・ピカチュウ,ねずみポケモン
+1,10084,マダム・ピカチュウ,ねずみポケモン
+1,10085,アイドル・ピカチュウ,ねずみポケモン
+1,10086,ドクター・ピカチュウ,ねずみポケモン
+1,10087,マスク・ド・ピカチュウ,ねずみポケモン
+1,10088,おきがえピカチュウ,ねずみポケモン
+1,10089,メガヤドラン,やどかりポケモン
+1,10090,メガハガネール,てつへびポケモン
+1,10091,メガジュカイン,みつりんポケモン
+1,10092,メガラグラージ,ぬまうおポケモン
+1,10093,メガヤミラミ,くらやみポケモン
+1,10094,メガサメハダー,きょうぼうポケモン
+1,10095,メガバクーダ,ふんかポケモン
+1,10096,メガチルタリス,ハミングポケモン
+1,10097,メガオニゴーリ,がんめんポケモン
+1,10098,メガボーマンダ,ドラゴンポケモン
+1,10099,メガメタグロス,てつあしポケモン
+1,10100,カイオーガ (ゲンシカイキのすがた),かいていポケモン
+1,10101,グラードン (ゲンシカイキのすがた),たいりくポケモン
+1,10102,メガレックウザ,てんくうポケモン
+1,10103,メガミミロップ,うさぎポケモン
+1,10104,メガエルレイド,やいばポケモン
+1,10105,メガタブンネ,ヒヤリングポケモン
+1,10106,メガディアンシー,ほうせきポケモン
+1,10107,ときはなたれしフーパ,まじんポケモン
+1,10108,コラッタ (アローラのすがた),ねずみポケモン
+1,10109,ラッタ (アローラのすがた),ねずみポケモン
+1,10110,ピカチュウ (キャップ),ねずみポケモン
+1,10111,ライチュウ (アローラのすがた),ねずみポケモン
+1,10112,サンド (アローラのすがた),ねずみポケモン
+1,10113,サンドパン (アローラのすがた),ねずみポケモン
+1,10114,ロコン (アローラのすがた),きつねポケモン
+1,10115,キュウコン (アローラのすがた),きつねポケモン
+1,10116,ディグダ (アローラのすがた),もぐらポケモン
+1,10117,ダグトリオ (アローラのすがた),もぐらポケモン
+1,10118,ニャース (アローラのすがた),ばけねこポケモン
+1,10119,ペルシアン (アローラのすがた),シャムネコポケモン
+1,10120,イシツブテ (アローラのすがた),がんせきポケモン
+1,10121,ゴローン (アローラのすがた),がんせきポケモン
+1,10122,ゴローニャ (アローラのすがた),メガトンポケモン
+1,10123,ベトベター (アローラのすがた),ヘドロポケモン
+1,10124,ベトベトン (アローラのすがた),ヘドロポケモン
+1,10125,ナッシー (アローラのすがた),やしのみポケモン
+1,10126,ガラガラ (アローラのすがた),ほねずきポケモン
+1,10127,ゲッコウガ (きずなへんげ),しのびポケモン
+1,10128,サトシゲッコウガ,しのびポケモン
+1,10129,１０％ジガルデ (オーラブレイク),ちつじょポケモン
+1,10130,１０％ジガルデ (スワームチェンジ),ちつじょポケモン
+1,10131,５０％ジガルデ (スワームチェンジ),ちつじょポケモン
+1,10132,パーフェクトジガルデ,ちつじょポケモン
+1,10133,オドリドリ (ぱちぱちスタイル),ダンスポケモン
+1,10134,オドリドリ (ふらふらスタイル),ダンスポケモン
+1,10135,オドリドリ (まいまいスタイル),ダンスポケモン
+1,10136,ルガルガン (まよなかのすがた),オオカミポケモン
+1,10137,ヨワシ (むれたすがた),こざかなポケモン
+1,10138,シルヴァディ (かくとう),じんこうポケモン
+1,10139,シルヴァディ (ひこう),じんこうポケモン
+1,10140,シルヴァディ (どく),じんこうポケモン
+1,10141,シルヴァディ (じめん),じんこうポケモン
+1,10142,シルヴァディ (いわ),じんこうポケモン
+1,10143,シルヴァディ (むし),じんこうポケモン
+1,10144,シルヴァディ (ゴースト),じんこうポケモン
+1,10145,シルヴァディ (はがね),じんこうポケモン
+1,10146,シルヴァディ (ほのお),じんこうポケモン
+1,10147,シルヴァディ (みず),じんこうポケモン
+1,10148,シルヴァディ (くさ),じんこうポケモン
+1,10149,シルヴァディ (でんき),じんこうポケモン
+1,10150,シルヴァディ (エスパー),じんこうポケモン
+1,10151,シルヴァディ (こおり),じんこうポケモン
+1,10152,シルヴァディ (ドラゴン),じんこうポケモン
+1,10153,シルヴァディ (あく),じんこうポケモン
+1,10154,シルヴァディ (フェアリー),じんこうポケモン
+1,10155,メテノ (のコアフォルム),ながれぼしポケモン
+1,10156,イワンコ (マイペース),こいぬポケモン
+1,10157,ルガルガン (たそがれのすがた),オオカミポケモン
+1,10158,ネクロズマ (たそがれのたてがみ),プリズムポケモン
+1,10159,ネクロズマ (あかつきのつばさ),プリズムポケモン
+1,10160,ウルトラネクロズマ,プリズムポケモン
+1,10161,相棒ピカチュウ,ねずみポケモン
+1,10162,相棒イーブイ,しんかポケモン
+1,10163,ニャース (ガラルのすがた),ばけねこポケモン
+1,10164,ポニータ (ガラルのすがた),いっかくポケモン
+1,10165,ギャロップ (ガラルのすがた),いっかくポケモン
+1,10166,カモネギ (ガラルのすがた),かるがもポケモン
+1,10167,マタドガス (ガラルのすがた),どくガスポケモン
+1,10168,バリヤード (ガラルのすがた),ダンスポケモン
+1,10169,サニーゴ (ガラルのすがた),さんごポケモン
+1,10170,ジグザグマ (ガラルのすがた),まめだぬきポケモン
+1,10171,マッスグマ (ガラルのすがた),とっしんポケモン
+1,10172,ダルマッカ (ガラルのすがた),だるまポケモン
+1,10173,ヒヒダルマ (ガラルのすがた) (ダルマモード),だるまポケモン
+1,10174,ヒヒダルマ (ガラルのすがた) (ノーマルモード),えんじょうポケモン
+1,10175,デスマス (ガラルのすがた),たましいポケモン
+1,10176,マッギョ (ガラルのすがた),トラップポケモン
+1,10177,ストリンダー (ローなすがた),パンクポケモン
+1,10178,コオリッポ (ナイスフェイス),ペンギンポケモン
+1,10179,イエッサン (メスのすがた),かんじょうポケモン
+1,10180,ザシアン (けんのおう),つわものポケモン
+1,10181,ザマゼンタ (たてのおう),つわものポケモン
+1,10182,ムゲンダイナ (ムゲンダイマックス),キョダイポケモン
+1,10183,ヤドン (ガラルのすがた),まぬけポケモン
+1,10184,ヤドラン (ガラルのすがた),やどかりポケモン
+1,10185,ウーラオス (れんげきのかた),けんぽうポケモン
+1,10186,フリーザー (ガラルのすがた),れいこくポケモン
+1,10187,サンダー (ガラルのすがた),けんきゃくポケモン
+1,10188,ファイヤー (ガラルのすがた),じゃあくポケモン
+1,10189,ヤドキング (ガラルのすがた),じゅじゅつしポケモン
+1,10190,バドレックス (はくばじょうのすがた),エンペラーポケモン
+1,10191,バドレックス (こくばじょうのすがた),エンペラーポケモン
+1,10192,ガーディ (ヒスイのすがた),みはりポケモン
+1,10193,ウインディ (ヒスイのすがた),でんせつポケモン
+1,10194,ビリリダマ (ヒスイのすがた),きゅうたいポケモン
+1,10195,マルマイン (ヒスイのすがた),きゅうたいポケモン
+1,10196,バクフーン (ヒスイのすがた),おにびポケモン
+1,10197,ハリーセン (ヒスイのすがた),ふうせんポケモン
+1,10198,ニューラ (ヒスイのすがた),かぎづめポケモン
+1,10199,ディアルガ (オリジンフォルム),じかんポケモン
+1,10200,パルキア (オリジンフォルム),くうかんポケモン
+1,10201,ダイケンキ (ヒスイのすがた),かんろくポケモン
+1,10202,ドレディア (ヒスイのすがた),スピンポケモン
+1,10203,バスラオ (しろすじのすがた),おんこうポケモン
+1,10204,ゾロア (ヒスイのすがた),うらみぎつねポケモン
+1,10205,ゾロアーク (ヒスイのすがた),のろいぎつねポケモン
+1,10206,ウォーグル (ヒスイのすがた),おたけびポケモン
+1,10207,ヌメイル (ヒスイのすがた),マイマイポケモン
+1,10208,ヌメルゴン (ヒスイのすがた),からこもりポケモン
+1,10209,クレベース (ヒスイのすがた),ひょうざんポケモン
+1,10210,ジュナイパー (ヒスイのすがた),やばねポケモン
+1,10211,イダイトウ (メスのすがた),おおうおポケモン
+1,10212,ラブトロス (れいじゅうフォルム),あいぞうポケモン
+1,10213,ケンタロス (パルデアのすがた),あばれうしポケモン
+1,10214,ケンタロス (パルデアのすがた),あばれうしポケモン
+1,10215,ケンタロス (パルデアのすがた),あばれうしポケモン
+1,10216,ウパー (パルデアのすがた),どくうおポケモン
+1,10217,パフュートン (メスのすがた),ぶたポケモン
+1,10218,イキリンコ (ブルーフェザー),インコポケモン
+1,10219,イキリンコ (イエローフェザー),インコポケモン
+1,10220,イキリンコ (ホワイトフェザー),インコポケモン
+1,10221,イルカマン (マイティフォルム),ヒーローポケモン
+1,10222,コレクレー (とほフォルム),たからさがしポケモン
+1,10223,ガチグマ (アカツキ),でいたんポケモン
+1,10224,オーガポン (いどのめん),おめんポケモン
+1,10225,オーガポン (かまどのめん),おめんポケモン
+1,10226,オーガポン (いしずえのめん),おめんポケモン
+1,10227,オーガポン (みどりのめん Tera),おめんポケモン
+1,10228,オーガポン (いどのめん Tera),おめんポケモン
+1,10229,オーガポン (かまどのめん Tera),おめんポケモン
+1,10230,オーガポン (いしずえのめん Tera),おめんポケモン
+1,10231,テラパゴス (テラスタルフォルム),テラスタルポケモン
+1,10232,テラパゴス (ステラフォルム),テラスタルポケモン
 2,1,Bulbasaur,Seed Pokémon
 2,2,Ivysaur,Seed Pokémon
 2,3,Venusaur,Seed Pokémon
@@ -2317,226 +2305,214 @@ language_id,pokemon_id,name,category
 2,10022,Arceus (Ice),Alpha Pokémon
 2,10023,Arceus (Dragon),Alpha Pokémon
 2,10024,Arceus (Dark),Alpha Pokémon
-2,10025,Arceus (???),Alpha Pokémon
-2,10026,Heat Rotom,Plasma Pokémon
-2,10027,Wash Rotom,Plasma Pokémon
-2,10028,Frost Rotom,Plasma Pokémon
-2,10029,Fan Rotom,Plasma Pokémon
-2,10030,Mow Rotom,Plasma Pokémon
-2,10031,Giratina (Origin Forme),Renegade Pokémon
-2,10032,Shaymin (Sky Forme),Gratitude Pokémon
-2,10033,Spiky-eared Pichu,Tiny Mouse Pokémon
-2,10034,Basculin (Blue-Striped Form),Hostile Pokémon
-2,10035,Darmanitan (Zen Mode),Blazing Pokémon
-2,10036,Meloetta (Pirouette Forme),Melody Pokémon
-2,10037,Tornadus (Therian Forme),Cyclone Pokémon
-2,10038,Thundurus (Therian Forme),Bolt Strike Pokémon
-2,10039,Landorus (Therian Forme),Abundance Pokémon
-2,10040,White Kyurem,Boundary Pokémon
-2,10041,Black Kyurem,Boundary Pokémon
-2,10042,Mega Venusaur,Seed Pokémon
-2,10043,Mega Charizard X,Flame Pokémon
-2,10044,Mega Charizard Y,Flame Pokémon
-2,10045,Mega Blastoise,Shellfish Pokémon
-2,10046,Mega Alakazam,Psi Pokémon
-2,10047,Mega Gengar,Shadow Pokémon
-2,10048,Mega Kangaskhan,Parent Pokémon
-2,10049,Mega Pinsir,Stag Beetle Pokémon
-2,10050,Mega Gyarados,Atrocious Pokémon
-2,10051,Mega Aerodactyl,Fossil Pokémon
-2,10052,Mega Mewtwo X,Genetic Pokémon
-2,10053,Mega Mewtwo Y,Genetic Pokémon
-2,10054,Mega Ampharos,Light Pokémon
-2,10055,Mega Scizor,Pincer Pokémon
-2,10056,Mega Heracross,Single Horn Pokémon
-2,10057,Mega Houndoom,Dark Pokémon
-2,10058,Mega Tyranitar,Armor Pokémon
-2,10059,Mega Blaziken,Blaze Pokémon
-2,10060,Mega Gardevoir,Embrace Pokémon
-2,10061,Mega Mawile,Deceiver Pokémon
-2,10062,Mega Aggron,Iron Armor Pokémon
-2,10063,Mega Medicham,Meditate Pokémon
-2,10064,Mega Manectric,Discharge Pokémon
-2,10065,Mega Banette,Marionette Pokémon
-2,10066,Mega Absol,Disaster Pokémon
-2,10067,Mega Latias,Eon Pokémon
-2,10068,Mega Latios,Eon Pokémon
-2,10069,Mega Garchomp,Mach Pokémon
-2,10070,Mega Lucario,Aura Pokémon
-2,10071,Mega Abomasnow,Frost Tree Pokémon
-2,10072,Arceus (Fairy),Alpha Pokémon
-2,10073,Floette (Eternal Flower),Single Bloom Pokémon
-2,10074,Meowstic (Female),Constraint Pokémon
-2,10075,Aegislash (Blade Forme),Royal Sword Pokémon
-2,10076,Pumpkaboo (Small Size),Pumpkin Pokémon
-2,10077,Pumpkaboo (Large Size),Pumpkin Pokémon
-2,10078,Pumpkaboo (Super Size),Pumpkin Pokémon
-2,10079,Gourgeist (Small Size),Pumpkin Pokémon
-2,10080,Gourgeist (Large Size),Pumpkin Pokémon
-2,10081,Gourgeist (Super Size),Pumpkin Pokémon
-2,10082,Mega Beedrill,Poison Bee Pokémon
-2,10083,Mega Pidgeot,Bird Pokémon
-2,10084,Pikachu Rock Star,Mouse Pokémon
-2,10085,Pikachu Belle,Mouse Pokémon
-2,10086,Pikachu Pop Star,Mouse Pokémon
-2,10087,"Pikachu, Ph.D.",Mouse Pokémon
-2,10088,Pikachu Libre,Mouse Pokémon
-2,10089,Cosplay Pikachu,Mouse Pokémon
-2,10090,Mega Slowbro,Hermit Crab Pokémon
-2,10091,Mega Steelix,Iron Snake Pokémon
-2,10092,Mega Sceptile,Forest Pokémon
-2,10093,Mega Swampert,Mud Fish Pokémon
-2,10094,Mega Sableye,Darkness Pokémon
-2,10095,Mega Sharpedo,Brutal Pokémon
-2,10096,Mega Camerupt,Eruption Pokémon
-2,10097,Mega Altaria,Humming Pokémon
-2,10098,Mega Glalie,Face Pokémon
-2,10099,Mega Salamence,Dragon Pokémon
-2,10100,Mega Metagross,Iron Leg Pokémon
-2,10101,Primal Kyogre,Sea Basin Pokémon
-2,10102,Primal Groudon,Continent Pokémon
-2,10103,Mega Rayquaza,Sky High Pokémon
-2,10104,Mega Lopunny,Rabbit Pokémon
-2,10105,Mega Gallade,Blade Pokémon
-2,10106,Mega Audino,Hearing Pokémon
-2,10107,Mega Diancie,Jewel Pokémon
-2,10108,Hoopa Unbound,Djinn Pokémon
-2,10109,Alolan Rattata,Mouse Pokémon
-2,10110,Alolan Raticate,Mouse Pokémon
-2,10111,Totem Raticate,Mouse Pokémon
-2,10112,Pikachu (Cap),Mouse Pokémon
-2,10113,Alolan Raichu,Mouse Pokémon
-2,10114,Alolan Sandshrew,Mouse Pokémon
-2,10115,Alolan Sandslash,Mouse Pokémon
-2,10116,Alolan Vulpix,Fox Pokémon
-2,10117,Alolan Ninetales,Fox Pokémon
-2,10118,Alolan Diglett,Mole Pokémon
-2,10119,Alolan Dugtrio,Mole Pokémon
-2,10120,Alolan Meowth,Scratch Cat Pokémon
-2,10121,Alolan Persian,Classy Cat Pokémon
-2,10122,Alolan Geodude,Rock Pokémon
-2,10123,Alolan Graveler,Rock Pokémon
-2,10124,Alolan Golem,Megaton Pokémon
-2,10125,Alolan Grimer,Sludge Pokémon
-2,10126,Alolan Muk,Sludge Pokémon
-2,10127,Alolan Exeggutor,Coconut Pokémon
-2,10128,Alolan Marowak,Bone Keeper Pokémon
-2,10129,Greninja (Battle Bond),Ninja Pokémon
-2,10130,Ash-Greninja,Ninja Pokémon
-2,10131,10% Zygarde (Aura Break),Order Pokémon
-2,10132,10% Zygarde (Power Construct),Order Pokémon
-2,10133,50% Zygarde (Power Construct),Order Pokémon
-2,10134,Complete Zygarde,Order Pokémon
-2,10135,Totem Gumshoos,Stakeout Pokémon
-2,10136,Totem Vikavolt,Stag Beetle Pokémon
-2,10137,Oricorio (Pom-Pom Style),Dancing Pokémon
-2,10138,Oricorio (Pa’u Style),Dancing Pokémon
-2,10139,Oricorio (Sensu Style),Dancing Pokémon
-2,10140,Lycanroc (Midnight Form),Wolf Pokémon
-2,10141,Wishiwashi (School Form),Small Fry Pokémon
-2,10142,Totem Lurantis,Bloom Sickle Pokémon
-2,10143,Totem Salazzle,Toxic Lizard Pokémon
-2,10144,Silvally (Fighting),Synthetic Pokémon
-2,10145,Silvally (Flying),Synthetic Pokémon
-2,10146,Silvally (Poison),Synthetic Pokémon
-2,10147,Silvally (Ground),Synthetic Pokémon
-2,10148,Silvally (Rock),Synthetic Pokémon
-2,10149,Silvally (Bug),Synthetic Pokémon
-2,10150,Silvally (Ghost),Synthetic Pokémon
-2,10151,Silvally (Steel),Synthetic Pokémon
-2,10152,Silvally (Fire),Synthetic Pokémon
-2,10153,Silvally (Water),Synthetic Pokémon
-2,10154,Silvally (Grass),Synthetic Pokémon
-2,10155,Silvally (Electric),Synthetic Pokémon
-2,10156,Silvally (Psychic),Synthetic Pokémon
-2,10157,Silvally (Ice),Synthetic Pokémon
-2,10158,Silvally (Dragon),Synthetic Pokémon
-2,10159,Silvally (Dark),Synthetic Pokémon
-2,10160,Silvally (Fairy),Synthetic Pokémon
-2,10161,Minior (Core Form),Meteor Pokémon
-2,10162,Totem Mimikyu,Disguise Pokémon
-2,10163,Totem Kommo-o,Scaly Pokémon
-2,10164,Totem Marowak,Bone Keeper Pokémon
-2,10165,Totem Ribombee,Bee Fly Pokémon
-2,10166,Rockruff (Own Tempo),Puppy Pokémon
-2,10167,Lycanroc (Dusk Form),Wolf Pokémon
-2,10168,Totem Araquanid,Water Bubble Pokémon
-2,10169,Totem Togedemaru,Roly-Poly Pokémon
-2,10170,Necrozma (Dusk Mane),Prism Pokémon
-2,10171,Necrozma (Dawn Wings),Prism Pokémon
-2,10172,Ultra Necrozma,Prism Pokémon
-2,10173,Partner Pikachu,Mouse Pokémon
-2,10174,Partner Eevee,Evolution Pokémon
-2,10175,Galarian Meowth,Scratch Cat Pokémon
-2,10176,Galarian Ponyta,Unique Horn Pokémon
-2,10177,Galarian Rapidash,Unique Horn Pokémon
-2,10178,Galarian Farfetch’d,Wild Duck Pokémon
-2,10179,Galarian Weezing,Poison Gas Pokémon
-2,10180,Galarian Mr. Mime,Dancing Pokémon
-2,10181,Galarian Corsola,Coral Pokémon
-2,10182,Galarian Zigzagoon,Tiny Raccoon Pokémon
-2,10183,Galarian Linoone,Rushing Pokémon
-2,10184,Galarian Darumaka,Zen Charm Pokémon
-2,10185,Galarian Darmanitan (Standard Mode),Zen Charm Pokémon
-2,10186,Galarian Darmanitan (Zen Mode),Blazing Pokémon
-2,10187,Galarian Yamask,Spirit Pokémon
-2,10188,Galarian Stunfisk,Trap Pokémon
-2,10189,Toxtricity (Low Key Form),Punk Pokémon
-2,10190,Eiscue (Noice Face),Penguin Pokémon
-2,10191,Indeedee (Female),Emotion Pokémon
-2,10192,Zacian (Crowned Sword),Warrior Pokémon
-2,10193,Zamazenta (Crowned Shield),Warrior Pokémon
-2,10194,Eternatus (Eternamax),Gigantic Pokémon
-2,10195,Galarian Slowpoke,Dopey Pokémon
-2,10196,Galarian Slowbro,Hermit Crab Pokémon
-2,10197,Urshifu (Rapid Strike Style),Wushu Pokémon
-2,10198,Galarian Articuno,Cruel Pokémon
-2,10199,Galarian Zapdos,Strong Legs Pokémon
-2,10200,Galarian Moltres,Malevolent Pokémon
-2,10201,Galarian Slowking,Hexpert Pokémon
-2,10202,Calyrex (Ice Rider),High King Pokémon
-2,10203,Calyrex (Shadow Rider),High King Pokémon
-2,10204,Hisuian Growlithe,Scout Pokémon
-2,10205,Hisuian Arcanine,Legendary Pokémon
-2,10206,Hisuian Voltorb,Sphere Pokémon
-2,10207,Hisuian Electrode,Sphere Pokémon
-2,10208,Hisuian Typhlosion,Ghost Flame Pokémon
-2,10209,Hisuian Qwilfish,Balloon Pokémon
-2,10210,Hisuian Sneasel,Sharp Claw Pokémon
-2,10211,Dialga (Origin Forme),Temporal Pokémon
-2,10212,Palkia (Origin Forme),Spatial Pokémon
-2,10213,Hisuian Samurott,Formidable Pokémon
-2,10214,Hisuian Lilligant,Spinning Pokémon
-2,10215,Basculin (White-Striped Form),Mellow Pokémon
-2,10216,Hisuian Zorua,Spiteful Fox Pokémon
-2,10217,Hisuian Zoroark,Baneful Fox Pokémon
-2,10218,Hisuian Braviary,Battle Cry Pokémon
-2,10219,Hisuian Sliggoo,Snail Pokémon
-2,10220,Hisuian Goodra,Shell Bunker Pokémon
-2,10221,Hisuian Avalugg,Iceberg Pokémon
-2,10222,Hisuian Decidueye,Arrow Quill Pokémon
-2,10223,Basculegion (Female),Big Fish Pokémon
-2,10224,Enamorus (Therian Forme),Love-Hate Pokémon
-2,10225,Paldean Tauros (Combat Breed),Wild Bull Pokémon
-2,10226,Paldean Tauros (Blaze Breed),Wild Bull Pokémon
-2,10227,Paldean Tauros (Aqua Breed),Wild Bull Pokémon
-2,10228,Paldean Wooper,Poison Fish Pokémon
-2,10229,Oinkologne (Female),Hog Pokémon
-2,10230,Squawkabilly (Blue Plumage),Parrot Pokémon
-2,10231,Squawkabilly (Yellow Plumage),Parrot Pokémon
-2,10232,Squawkabilly (White Plumage),Parrot Pokémon
-2,10233,Palafin (Hero Form),Hero Pokémon
-2,10234,Gimmighoul (Roaming Form),Coin Hunter Pokémon
-2,10235,Bloodmoon Ursaluna,Peat Pokémon
-2,10236,Ogerpon (Wellspring Mask),Mask Pokémon
-2,10237,Ogerpon (Hearthflame Mask),Mask Pokémon
-2,10238,Ogerpon (Cornerstone Mask),Mask Pokémon
-2,10239,Ogerpon (Teal Mask Tera),Mask Pokémon
-2,10240,Ogerpon (Wellspring Mask Tera),Mask Pokémon
-2,10241,Ogerpon (Hearthflame Mask Tera),Mask Pokémon
-2,10242,Ogerpon (Cornerstone Mask Tera),Mask Pokémon
-2,10243,Terapagos (Terastal Form),Tera Pokémon
-2,10244,Terapagos (Stellar Form),Tera Pokémon
+2,10025,Heat Rotom,Plasma Pokémon
+2,10026,Wash Rotom,Plasma Pokémon
+2,10027,Frost Rotom,Plasma Pokémon
+2,10028,Fan Rotom,Plasma Pokémon
+2,10029,Mow Rotom,Plasma Pokémon
+2,10030,Giratina (Origin Forme),Renegade Pokémon
+2,10031,Shaymin (Sky Forme),Gratitude Pokémon
+2,10032,Spiky-eared Pichu,Tiny Mouse Pokémon
+2,10033,Basculin (Blue-Striped Form),Hostile Pokémon
+2,10034,Darmanitan (Zen Mode),Blazing Pokémon
+2,10035,Meloetta (Pirouette Forme),Melody Pokémon
+2,10036,Tornadus (Therian Forme),Cyclone Pokémon
+2,10037,Thundurus (Therian Forme),Bolt Strike Pokémon
+2,10038,Landorus (Therian Forme),Abundance Pokémon
+2,10039,White Kyurem,Boundary Pokémon
+2,10040,Black Kyurem,Boundary Pokémon
+2,10041,Mega Venusaur,Seed Pokémon
+2,10042,Mega Charizard X,Flame Pokémon
+2,10043,Mega Charizard Y,Flame Pokémon
+2,10044,Mega Blastoise,Shellfish Pokémon
+2,10045,Mega Alakazam,Psi Pokémon
+2,10046,Mega Gengar,Shadow Pokémon
+2,10047,Mega Kangaskhan,Parent Pokémon
+2,10048,Mega Pinsir,Stag Beetle Pokémon
+2,10049,Mega Gyarados,Atrocious Pokémon
+2,10050,Mega Aerodactyl,Fossil Pokémon
+2,10051,Mega Mewtwo X,Genetic Pokémon
+2,10052,Mega Mewtwo Y,Genetic Pokémon
+2,10053,Mega Ampharos,Light Pokémon
+2,10054,Mega Scizor,Pincer Pokémon
+2,10055,Mega Heracross,Single Horn Pokémon
+2,10056,Mega Houndoom,Dark Pokémon
+2,10057,Mega Tyranitar,Armor Pokémon
+2,10058,Mega Blaziken,Blaze Pokémon
+2,10059,Mega Gardevoir,Embrace Pokémon
+2,10060,Mega Mawile,Deceiver Pokémon
+2,10061,Mega Aggron,Iron Armor Pokémon
+2,10062,Mega Medicham,Meditate Pokémon
+2,10063,Mega Manectric,Discharge Pokémon
+2,10064,Mega Banette,Marionette Pokémon
+2,10065,Mega Absol,Disaster Pokémon
+2,10066,Mega Latias,Eon Pokémon
+2,10067,Mega Latios,Eon Pokémon
+2,10068,Mega Garchomp,Mach Pokémon
+2,10069,Mega Lucario,Aura Pokémon
+2,10070,Mega Abomasnow,Frost Tree Pokémon
+2,10071,Arceus (Fairy),Alpha Pokémon
+2,10072,Floette (Eternal Flower),Single Bloom Pokémon
+2,10073,Meowstic (Female),Constraint Pokémon
+2,10074,Aegislash (Blade Forme),Royal Sword Pokémon
+2,10075,Pumpkaboo (Small Size),Pumpkin Pokémon
+2,10076,Pumpkaboo (Large Size),Pumpkin Pokémon
+2,10077,Pumpkaboo (Super Size),Pumpkin Pokémon
+2,10078,Gourgeist (Small Size),Pumpkin Pokémon
+2,10079,Gourgeist (Large Size),Pumpkin Pokémon
+2,10080,Gourgeist (Super Size),Pumpkin Pokémon
+2,10081,Mega Beedrill,Poison Bee Pokémon
+2,10082,Mega Pidgeot,Bird Pokémon
+2,10083,Pikachu Rock Star,Mouse Pokémon
+2,10084,Pikachu Belle,Mouse Pokémon
+2,10085,Pikachu Pop Star,Mouse Pokémon
+2,10086,"Pikachu, Ph.D.",Mouse Pokémon
+2,10087,Pikachu Libre,Mouse Pokémon
+2,10088,Cosplay Pikachu,Mouse Pokémon
+2,10089,Mega Slowbro,Hermit Crab Pokémon
+2,10090,Mega Steelix,Iron Snake Pokémon
+2,10091,Mega Sceptile,Forest Pokémon
+2,10092,Mega Swampert,Mud Fish Pokémon
+2,10093,Mega Sableye,Darkness Pokémon
+2,10094,Mega Sharpedo,Brutal Pokémon
+2,10095,Mega Camerupt,Eruption Pokémon
+2,10096,Mega Altaria,Humming Pokémon
+2,10097,Mega Glalie,Face Pokémon
+2,10098,Mega Salamence,Dragon Pokémon
+2,10099,Mega Metagross,Iron Leg Pokémon
+2,10100,Primal Kyogre,Sea Basin Pokémon
+2,10101,Primal Groudon,Continent Pokémon
+2,10102,Mega Rayquaza,Sky High Pokémon
+2,10103,Mega Lopunny,Rabbit Pokémon
+2,10104,Mega Gallade,Blade Pokémon
+2,10105,Mega Audino,Hearing Pokémon
+2,10106,Mega Diancie,Jewel Pokémon
+2,10107,Hoopa Unbound,Djinn Pokémon
+2,10108,Alolan Rattata,Mouse Pokémon
+2,10109,Alolan Raticate,Mouse Pokémon
+2,10110,Pikachu (Cap),Mouse Pokémon
+2,10111,Alolan Raichu,Mouse Pokémon
+2,10112,Alolan Sandshrew,Mouse Pokémon
+2,10113,Alolan Sandslash,Mouse Pokémon
+2,10114,Alolan Vulpix,Fox Pokémon
+2,10115,Alolan Ninetales,Fox Pokémon
+2,10116,Alolan Diglett,Mole Pokémon
+2,10117,Alolan Dugtrio,Mole Pokémon
+2,10118,Alolan Meowth,Scratch Cat Pokémon
+2,10119,Alolan Persian,Classy Cat Pokémon
+2,10120,Alolan Geodude,Rock Pokémon
+2,10121,Alolan Graveler,Rock Pokémon
+2,10122,Alolan Golem,Megaton Pokémon
+2,10123,Alolan Grimer,Sludge Pokémon
+2,10124,Alolan Muk,Sludge Pokémon
+2,10125,Alolan Exeggutor,Coconut Pokémon
+2,10126,Alolan Marowak,Bone Keeper Pokémon
+2,10127,Greninja (Battle Bond),Ninja Pokémon
+2,10128,Ash-Greninja,Ninja Pokémon
+2,10129,10% Zygarde (Aura Break),Order Pokémon
+2,10130,10% Zygarde (Power Construct),Order Pokémon
+2,10131,50% Zygarde (Power Construct),Order Pokémon
+2,10132,Complete Zygarde,Order Pokémon
+2,10133,Oricorio (Pom-Pom Style),Dancing Pokémon
+2,10134,Oricorio (Pa’u Style),Dancing Pokémon
+2,10135,Oricorio (Sensu Style),Dancing Pokémon
+2,10136,Lycanroc (Midnight Form),Wolf Pokémon
+2,10137,Wishiwashi (School Form),Small Fry Pokémon
+2,10138,Silvally (Fighting),Synthetic Pokémon
+2,10139,Silvally (Flying),Synthetic Pokémon
+2,10140,Silvally (Poison),Synthetic Pokémon
+2,10141,Silvally (Ground),Synthetic Pokémon
+2,10142,Silvally (Rock),Synthetic Pokémon
+2,10143,Silvally (Bug),Synthetic Pokémon
+2,10144,Silvally (Ghost),Synthetic Pokémon
+2,10145,Silvally (Steel),Synthetic Pokémon
+2,10146,Silvally (Fire),Synthetic Pokémon
+2,10147,Silvally (Water),Synthetic Pokémon
+2,10148,Silvally (Grass),Synthetic Pokémon
+2,10149,Silvally (Electric),Synthetic Pokémon
+2,10150,Silvally (Psychic),Synthetic Pokémon
+2,10151,Silvally (Ice),Synthetic Pokémon
+2,10152,Silvally (Dragon),Synthetic Pokémon
+2,10153,Silvally (Dark),Synthetic Pokémon
+2,10154,Silvally (Fairy),Synthetic Pokémon
+2,10155,Minior (Core Form),Meteor Pokémon
+2,10156,Rockruff (Own Tempo),Puppy Pokémon
+2,10157,Lycanroc (Dusk Form),Wolf Pokémon
+2,10158,Necrozma (Dusk Mane),Prism Pokémon
+2,10159,Necrozma (Dawn Wings),Prism Pokémon
+2,10160,Ultra Necrozma,Prism Pokémon
+2,10161,Partner Pikachu,Mouse Pokémon
+2,10162,Partner Eevee,Evolution Pokémon
+2,10163,Galarian Meowth,Scratch Cat Pokémon
+2,10164,Galarian Ponyta,Unique Horn Pokémon
+2,10165,Galarian Rapidash,Unique Horn Pokémon
+2,10166,Galarian Farfetch’d,Wild Duck Pokémon
+2,10167,Galarian Weezing,Poison Gas Pokémon
+2,10168,Galarian Mr. Mime,Dancing Pokémon
+2,10169,Galarian Corsola,Coral Pokémon
+2,10170,Galarian Zigzagoon,Tiny Raccoon Pokémon
+2,10171,Galarian Linoone,Rushing Pokémon
+2,10172,Galarian Darumaka,Zen Charm Pokémon
+2,10173,Galarian Darmanitan (Standard Mode),Zen Charm Pokémon
+2,10174,Galarian Darmanitan (Zen Mode),Blazing Pokémon
+2,10175,Galarian Yamask,Spirit Pokémon
+2,10176,Galarian Stunfisk,Trap Pokémon
+2,10177,Toxtricity (Low Key Form),Punk Pokémon
+2,10178,Eiscue (Noice Face),Penguin Pokémon
+2,10179,Indeedee (Female),Emotion Pokémon
+2,10180,Zacian (Crowned Sword),Warrior Pokémon
+2,10181,Zamazenta (Crowned Shield),Warrior Pokémon
+2,10182,Eternatus (Eternamax),Gigantic Pokémon
+2,10183,Galarian Slowpoke,Dopey Pokémon
+2,10184,Galarian Slowbro,Hermit Crab Pokémon
+2,10185,Urshifu (Rapid Strike Style),Wushu Pokémon
+2,10186,Galarian Articuno,Cruel Pokémon
+2,10187,Galarian Zapdos,Strong Legs Pokémon
+2,10188,Galarian Moltres,Malevolent Pokémon
+2,10189,Galarian Slowking,Hexpert Pokémon
+2,10190,Calyrex (Ice Rider),High King Pokémon
+2,10191,Calyrex (Shadow Rider),High King Pokémon
+2,10192,Hisuian Growlithe,Scout Pokémon
+2,10193,Hisuian Arcanine,Legendary Pokémon
+2,10194,Hisuian Voltorb,Sphere Pokémon
+2,10195,Hisuian Electrode,Sphere Pokémon
+2,10196,Hisuian Typhlosion,Ghost Flame Pokémon
+2,10197,Hisuian Qwilfish,Balloon Pokémon
+2,10198,Hisuian Sneasel,Sharp Claw Pokémon
+2,10199,Dialga (Origin Forme),Temporal Pokémon
+2,10200,Palkia (Origin Forme),Spatial Pokémon
+2,10201,Hisuian Samurott,Formidable Pokémon
+2,10202,Hisuian Lilligant,Spinning Pokémon
+2,10203,Basculin (White-Striped Form),Mellow Pokémon
+2,10204,Hisuian Zorua,Spiteful Fox Pokémon
+2,10205,Hisuian Zoroark,Baneful Fox Pokémon
+2,10206,Hisuian Braviary,Battle Cry Pokémon
+2,10207,Hisuian Sliggoo,Snail Pokémon
+2,10208,Hisuian Goodra,Shell Bunker Pokémon
+2,10209,Hisuian Avalugg,Iceberg Pokémon
+2,10210,Hisuian Decidueye,Arrow Quill Pokémon
+2,10211,Basculegion (Female),Big Fish Pokémon
+2,10212,Enamorus (Therian Forme),Love-Hate Pokémon
+2,10213,Paldean Tauros (Combat Breed),Wild Bull Pokémon
+2,10214,Paldean Tauros (Blaze Breed),Wild Bull Pokémon
+2,10215,Paldean Tauros (Aqua Breed),Wild Bull Pokémon
+2,10216,Paldean Wooper,Poison Fish Pokémon
+2,10217,Oinkologne (Female),Hog Pokémon
+2,10218,Squawkabilly (Blue Plumage),Parrot Pokémon
+2,10219,Squawkabilly (Yellow Plumage),Parrot Pokémon
+2,10220,Squawkabilly (White Plumage),Parrot Pokémon
+2,10221,Palafin (Hero Form),Hero Pokémon
+2,10222,Gimmighoul (Roaming Form),Coin Hunter Pokémon
+2,10223,Bloodmoon Ursaluna,Peat Pokémon
+2,10224,Ogerpon (Wellspring Mask),Mask Pokémon
+2,10225,Ogerpon (Hearthflame Mask),Mask Pokémon
+2,10226,Ogerpon (Cornerstone Mask),Mask Pokémon
+2,10227,Ogerpon (Teal Mask Tera),Mask Pokémon
+2,10228,Ogerpon (Wellspring Mask Tera),Mask Pokémon
+2,10229,Ogerpon (Hearthflame Mask Tera),Mask Pokémon
+2,10230,Ogerpon (Cornerstone Mask Tera),Mask Pokémon
+2,10231,Terapagos (Terastal Form),Tera Pokémon
+2,10232,Terapagos (Stellar Form),Tera Pokémon
 3,1,Bulbizarre,Pokémon Graine
 3,2,Herbizarre,Pokémon Graine
 3,3,Florizarre,Pokémon Graine
@@ -3586,226 +3562,214 @@ language_id,pokemon_id,name,category
 3,10022,Arceus (Glace),Pokémon Alpha
 3,10023,Arceus (Dragon),Pokémon Alpha
 3,10024,Arceus (Ténèbres),Pokémon Alpha
-3,10025,Arceus (???),Pokémon Alpha
-3,10026,Motisma Chaleur,Pokémon Plasma
-3,10027,Motisma Lavage,Pokémon Plasma
-3,10028,Motisma Froid,Pokémon Plasma
-3,10029,Motisma Hélice,Pokémon Plasma
-3,10030,Motisma Tonte,Pokémon Plasma
-3,10031,Giratina (Forme Originelle),Pokémon Renégat
-3,10032,Shaymin (Forme Céleste),Pokémon Gratitude
-3,10033,Pichu Troizépi,Pokémon Minisouris
-3,10034,Bargantua (Motif Bleu),Pokémon Violent
-3,10035,Darumacho (Mode Transe),Pokémon Enflammé
-3,10036,Meloetta (Forme Danse),Pokémon Mélodie
-3,10037,Boréas (Forme Totémique),Pokémon Tornade
-3,10038,Fulguris (Forme Totémique),Pokémon Foudroyeur
-3,10039,Démétéros (Forme Totémique),Pokémon Fertilité
-3,10040,Kyurem Blanc,Pokémon Frontière
-3,10041,Kyurem Noir,Pokémon Frontière
-3,10042,Méga-Florizarre,Pokémon Graine
-3,10043,Méga-Dracaufeu X,Pokémon Flamme
-3,10044,Méga-Dracaufeu Y,Pokémon Flamme
-3,10045,Méga-Tortank,Pokémon Carapace
-3,10046,Méga-Alakazam,Pokémon Psy
-3,10047,Méga-Ectoplasma,Pokémon Ombre
-3,10048,Méga-Kangourex,Pokémon Maternel
-3,10049,Méga-Scarabrute,Pokémon Scarabée
-3,10050,Méga-Léviator,Pokémon Terrifiant
-3,10051,Méga-Ptéra,Pokémon Fossile
-3,10052,Méga-Mewtwo X,Pokémon Génétique
-3,10053,Méga-Mewtwo Y,Pokémon Génétique
-3,10054,Méga-Pharamp,Pokémon Lumière
-3,10055,Méga-Cizayox,Pokémon Pince
-3,10056,Méga-Scarhino,Pokémon Unicorne
-3,10057,Méga-Démolosse,Pokémon Sombre
-3,10058,Méga-Tyranocif,Pokémon Armure
-3,10059,Méga-Braségali,Pokémon Ardent
-3,10060,Méga-Gardevoir,Pokémon Étreinte
-3,10061,Méga-Mysdibule,Pokémon Trompeur
-3,10062,Méga-Galeking,Pokémon Armurfer
-3,10063,Méga-Charmina,Pokémon Méditation
-3,10064,Méga-Élecsprint,Pokémon Décharge
-3,10065,Méga-Branette,Pokémon Marionnette
-3,10066,Méga-Absol,Pokémon Désastre
-3,10067,Méga-Latias,Pokémon Éon
-3,10068,Méga-Latios,Pokémon Éon
-3,10069,Méga-Carchacrok,Pokémon Supersonic
-3,10070,Méga-Lucario,Pokémon Aura
-3,10071,Méga-Blizzaroi,Pokémon Arbregelé
-3,10072,Arceus (Fée),Pokémon Alpha
-3,10073,Floette (Éternelle),Pokémon Uniflore
-3,10074,Mistigrix (Femelle),Pokémon SelfContrôle
-3,10075,Exagide (Forme Assaut),Pokémon Noble Lame
-3,10076,Pitrouille (Taille Mini),Pokémon Citrouille
-3,10077,Pitrouille (Taille Maxi),Pokémon Citrouille
-3,10078,Pitrouille (Taille Ultra),Pokémon Citrouille
-3,10079,Banshitrouye (Taille Mini),Pokémon Citrouille
-3,10080,Banshitrouye (Taille Maxi),Pokémon Citrouille
-3,10081,Banshitrouye (Taille Ultra),Pokémon Citrouille
-3,10082,Méga-Dardargnan,Pokémon Guêpoison
-3,10083,Méga-Roucarnage,Pokémon Oiseau
-3,10084,Pikachu Rockeur,Pokémon Souris
-3,10085,Pikachu Lady,Pokémon Souris
-3,10086,Pikachu Star,Pokémon Souris
-3,10087,Pikachu Docteur,Pokémon Souris
-3,10088,Pikachu Catcheur,Pokémon Souris
-3,10089,Pikachu Cosplayeur,Pokémon Souris
-3,10090,Méga-Flagadoss,Pokémon Symbiose
-3,10091,Méga-Steelix,Pokémon Serpenfer
-3,10092,Méga-Jungko,Pokémon Forêt
-3,10093,Méga-Laggron,Pokémon Poissonboue
-3,10094,Méga-Ténéfix,Pokémon Obscurité
-3,10095,Méga-Sharpedo,Pokémon Brutal
-3,10096,Méga-Camérupt,Pokémon Éruption
-3,10097,Méga-Altaria,Pokémon Virevolteur
-3,10098,Méga-Oniglali,Pokémon Face
-3,10099,Méga-Drattak,Pokémon Dragon
-3,10100,Méga-Métalosse,Pokémon Pattefer
-3,10101,Primo-Kyogre,Pokémon Bassinmarin
-3,10102,Primo-Groudon,Pokémon Continent
-3,10103,Méga-Rayquaza,Pokémon Cieux
-3,10104,Méga-Lockpin,Pokémon Lapin
-3,10105,Méga-Gallame,Pokémon Lame
-3,10106,Méga-Nanméouïe,Pokémon Audition
-3,10107,Méga-Diancie,Pokémon Joyau
-3,10108,Hoopa Déchaîné,Pokémon Djinn
-3,10109,Rattata (Forme d’Alola),Pokémon Souris
-3,10110,Rattatac (Forme d’Alola),Pokémon Souris
-3,10111,Rattatac Dominant,Pokémon Souris
-3,10112,Pikachu (Casquette),Pokémon Souris
-3,10113,Raichu (Forme d’Alola),Pokémon Souris
-3,10114,Sabelette (Forme d’Alola),Pokémon Souris
-3,10115,Sablaireau (Forme d’Alola),Pokémon Souris
-3,10116,Goupix (Forme d’Alola),Pokémon Renard
-3,10117,Feunard (Forme d’Alola),Pokémon Renard
-3,10118,Taupiqueur (Forme d’Alola),Pokémon Taupe
-3,10119,Triopikeur (Forme d’Alola),Pokémon Taupe
-3,10120,Miaouss (Forme d’Alola),Pokémon Chadégout
-3,10121,Persian (Forme d’Alola),Pokémon Chadeville
-3,10122,Racaillou (Forme d’Alola),Pokémon Roche
-3,10123,Gravalanch (Forme d’Alola),Pokémon Roche
-3,10124,Grolem (Forme d’Alola),Pokémon Titanesque
-3,10125,Tadmorv (Forme d’Alola),Pokémon Dégueu
-3,10126,Grotadmorv (Forme d’Alola),Pokémon Dégueu
-3,10127,Noadkoko (Forme d’Alola),Pokémon Fruitpalme
-3,10128,Ossatueur (Forme d’Alola),Pokémon Gard’Os
-3,10129,Amphinobi (Synergie),Pokémon Ninja
-3,10130,Sachanobi,Pokémon Ninja
-3,10131,Zygarde 10 % (Aura Inversée),Pokémon Équilibre
-3,10132,Zygarde 10 % (Rassemblement),Pokémon Équilibre
-3,10133,Zygarde 50 % (Rassemblement),Pokémon Équilibre
-3,10134,Zygarde Parfaite,Pokémon Équilibre
-3,10135,Argouste Dominant,Pokémon Filature
-3,10136,Lucanon Dominant,Pokémon Scarabée
-3,10137,Plumeline (Style Pom-Pom),Pokémon Danse
-3,10138,Plumeline (Style Hula),Pokémon Danse
-3,10139,Plumeline (Style Buyō),Pokémon Danse
-3,10140,Lougaroc (Forme Nocturne),Pokémon Loup
-3,10141,Froussardine (Forme Banc),Pokémon Minipoisson
-3,10142,Floramantis Dominant,Pokémon Fauch’Fleur
-3,10143,Malamandre Dominant,Pokémon Toxilézard
-3,10144,Silvallié (Combat),Pokémon Multigénome
-3,10145,Silvallié (Vol),Pokémon Multigénome
-3,10146,Silvallié (Poison),Pokémon Multigénome
-3,10147,Silvallié (Sol),Pokémon Multigénome
-3,10148,Silvallié (Roche),Pokémon Multigénome
-3,10149,Silvallié (Insecte),Pokémon Multigénome
-3,10150,Silvallié (Spectre),Pokémon Multigénome
-3,10151,Silvallié (Acier),Pokémon Multigénome
-3,10152,Silvallié (Feu),Pokémon Multigénome
-3,10153,Silvallié (Eau),Pokémon Multigénome
-3,10154,Silvallié (Plante),Pokémon Multigénome
-3,10155,Silvallié (Électrik),Pokémon Multigénome
-3,10156,Silvallié (Psy),Pokémon Multigénome
-3,10157,Silvallié (Glace),Pokémon Multigénome
-3,10158,Silvallié (Dragon),Pokémon Multigénome
-3,10159,Silvallié (Ténèbres),Pokémon Multigénome
-3,10160,Silvallié (Fée),Pokémon Multigénome
-3,10161,Météno (Forme Noyau),Pokémon Météore
-3,10162,Mimiqui Dominant,Pokémon Fantômasque
-3,10163,Ékaïser Dominant,Pokémon Écailles
-3,10164,Ossatueur Dominant,Pokémon Gard’Os
-3,10165,Rubombelle Dominant,Pokémon Bombyle
-3,10166,Rocabot (Tempo Perso),Pokémon Chiot
-3,10167,Lougaroc (Forme Crépusculaire),Pokémon Loup
-3,10168,Tarenbulle Dominant,Pokémon Aquabulle
-3,10169,Togedemaru Dominant,Pokémon Roulenboule
-3,10170,Necrozma (Crinière du Couchant),Pokémon Prisme
-3,10171,Necrozma (Ailes de l’Aurore),Pokémon Prisme
-3,10172,Ultra-Necrozma,Pokémon Prisme
-3,10173,Pikachu partenaire,Pokémon Souris
-3,10174,Évoli partenaire,Pokémon Évolutif
-3,10175,Miaouss (Forme de Galar),Pokémon Chadégout
-3,10176,Ponyta (Forme de Galar),Pokémon Monocorne
-3,10177,Galopa (Forme de Galar),Pokémon Monocorne
-3,10178,Canarticho (Forme de Galar),Pokémon Canard Fou
-3,10179,Smogogo (Forme de Galar),Pokémon Gaz Mortel
-3,10180,M. Mime (Forme de Galar),Pokémon Danse
-3,10181,Corayon (Forme de Galar),Pokémon Corail
-3,10182,Zigzaton (Forme de Galar),Pokémon Petit Raton
-3,10183,Linéon (Forme de Galar),Pokémon Fonceur
-3,10184,Darumarond (Forme de Galar),Pokémon Daruma
-3,10185,Darumacho (Forme de Galar) (Mode Transe),Pokémon Daruma
-3,10186,Darumacho (Forme de Galar) (Mode Normal),Pokémon Enflammé
-3,10187,Tutafeh (Forme de Galar),Pokémon Âme
-3,10188,Limonde (Forme de Galar),Pokémon Piège
-3,10189,Salarsen (Forme Grave),Pokémon Punk
-3,10190,Bekaglaçon (Tête Dégel),Pokémon Pingouin
-3,10191,Wimessir (Femelle),Pokémon Émotion
-3,10192,Zacian (Épée Suprême),Pokémon Valeureux
-3,10193,Zamazenta (Bouclier Suprême),Pokémon Valeureux
-3,10194,Éthernatos (Infinimax),Pokémon Giga
-3,10195,Ramoloss (Forme de Galar),Pokémon Crétin
-3,10196,Flagadoss (ガラルのすがた),Pokémon Symbiose
-3,10197,Shifours (Style Mille Poings),Pokémon Kung-fu
-3,10198,Artikodin (ガラルのすがた),Pokémon Implacable
-3,10199,Électhor (ガラルのすがた),Pokémon Fort-Pied
-3,10200,Sulfura (ガラルのすがた),Pokémon Maléfique
-3,10201,Roigada (ガラルのすがた),Pokémon Ensorceleur
-3,10202,Sylveroy (Cavalier du Froid),Pokémon Empereur
-3,10203,Sylveroy (Cavalier d’Effroi),Pokémon Empereur
-3,10204,Caninos (Forme de Hisui),Pokémon Espion
-3,10205,Arcanin (Forme de Hisui),Pokémon Légendaire
-3,10206,Voltorbe (Forme de Hisui),Pokémon Sphère
-3,10207,Électrode (Forme de Hisui),Pokémon Sphère
-3,10208,Typhlosion (Forme de Hisui),Pokémon Feu Follet
-3,10209,Qwilfish (Forme de Hisui),Pokémon Bouboule
-3,10210,Farfuret (Forme de Hisui),Pokémon Grifacérée
-3,10211,Dialga (Forme Originelle),Pokémon Temps
-3,10212,Palkia (Forme Originelle),Pokémon Espace
-3,10213,Clamiral (Forme de Hisui),Pokémon Dignitaire
-3,10214,Fragilady (Forme de Hisui),Pokémon Pirouette
-3,10215,Bargantua (Motif Blanc),Pokémon Pacifique
-3,10216,Zorua (Forme de Hisui),Pokémon Rancœurenard
-3,10217,Zoroark (Forme de Hisui),Pokémon Maudirenard
-3,10218,Gueriaigle (Forme de Hisui),Pokémon Cri Guerrier
-3,10219,Colimucus (Forme de Hisui),Pokémon Escargot
-3,10220,Muplodocus (Forme de Hisui),Pokémon Escamoquille
-3,10221,Séracrawl (Forme de Hisui),Pokémon Iceberg
-3,10222,Archéduc (Forme de Hisui),Pokémon Plumeflèche
-3,10223,Paragruel (Femelle),Pokémon Poissigrand
-3,10224,Amovénus (Forme Totémique),Pokémon Hainamour
-3,10225,Tauros (Forme de Paldea),Pokémon Buffle
-3,10226,Tauros (Forme de Paldea),Pokémon Buffle
-3,10227,Tauros (Forme de Paldea),Pokémon Buffle
-3,10228,Axoloto (Forme de Paldea),Pokémon Poizzon
-3,10229,Fragroin (Femelle),Pokémon Pourceau
-3,10230,Tapatoès (Plumage Bleu),Pokémon Perroquet
-3,10231,Tapatoès (Plumage Jaune),Pokémon Perroquet
-3,10232,Tapatoès (Plumage Blanc),Pokémon Perroquet
-3,10233,Superdofin (Forme Super),Pokémon Super Héros
-3,10234,Mordudor (Forme Marche),Pokémon Chassotrésor
-3,10235,Ursaking (Lune Vermeille),Pokémon Tourbe
-3,10236,Ogerpon (Masque du Puits),Pokémon Masque
-3,10237,Ogerpon (Masque du Fourneau),Pokémon Masque
-3,10238,Ogerpon (Masque de la Pierre),Pokémon Masque
-3,10239,Ogerpon (Masque Turquoise Tera),Pokémon Masque
-3,10240,Ogerpon (Masque du Puits Tera),Pokémon Masque
-3,10241,Ogerpon (Masque du Fourneau Tera),Pokémon Masque
-3,10242,Ogerpon (Masque de la Pierre Tera),Pokémon Masque
-3,10243,Terapagos (Forme Téracristal),Pokémon Téracristal
-3,10244,Terapagos (Forme Stellaire),Pokémon Téracristal
+3,10025,Motisma Chaleur,Pokémon Plasma
+3,10026,Motisma Lavage,Pokémon Plasma
+3,10027,Motisma Froid,Pokémon Plasma
+3,10028,Motisma Hélice,Pokémon Plasma
+3,10029,Motisma Tonte,Pokémon Plasma
+3,10030,Giratina (Forme Originelle),Pokémon Renégat
+3,10031,Shaymin (Forme Céleste),Pokémon Gratitude
+3,10032,Pichu Troizépi,Pokémon Minisouris
+3,10033,Bargantua (Motif Bleu),Pokémon Violent
+3,10034,Darumacho (Mode Transe),Pokémon Enflammé
+3,10035,Meloetta (Forme Danse),Pokémon Mélodie
+3,10036,Boréas (Forme Totémique),Pokémon Tornade
+3,10037,Fulguris (Forme Totémique),Pokémon Foudroyeur
+3,10038,Démétéros (Forme Totémique),Pokémon Fertilité
+3,10039,Kyurem Blanc,Pokémon Frontière
+3,10040,Kyurem Noir,Pokémon Frontière
+3,10041,Méga-Florizarre,Pokémon Graine
+3,10042,Méga-Dracaufeu X,Pokémon Flamme
+3,10043,Méga-Dracaufeu Y,Pokémon Flamme
+3,10044,Méga-Tortank,Pokémon Carapace
+3,10045,Méga-Alakazam,Pokémon Psy
+3,10046,Méga-Ectoplasma,Pokémon Ombre
+3,10047,Méga-Kangourex,Pokémon Maternel
+3,10048,Méga-Scarabrute,Pokémon Scarabée
+3,10049,Méga-Léviator,Pokémon Terrifiant
+3,10050,Méga-Ptéra,Pokémon Fossile
+3,10051,Méga-Mewtwo X,Pokémon Génétique
+3,10052,Méga-Mewtwo Y,Pokémon Génétique
+3,10053,Méga-Pharamp,Pokémon Lumière
+3,10054,Méga-Cizayox,Pokémon Pince
+3,10055,Méga-Scarhino,Pokémon Unicorne
+3,10056,Méga-Démolosse,Pokémon Sombre
+3,10057,Méga-Tyranocif,Pokémon Armure
+3,10058,Méga-Braségali,Pokémon Ardent
+3,10059,Méga-Gardevoir,Pokémon Étreinte
+3,10060,Méga-Mysdibule,Pokémon Trompeur
+3,10061,Méga-Galeking,Pokémon Armurfer
+3,10062,Méga-Charmina,Pokémon Méditation
+3,10063,Méga-Élecsprint,Pokémon Décharge
+3,10064,Méga-Branette,Pokémon Marionnette
+3,10065,Méga-Absol,Pokémon Désastre
+3,10066,Méga-Latias,Pokémon Éon
+3,10067,Méga-Latios,Pokémon Éon
+3,10068,Méga-Carchacrok,Pokémon Supersonic
+3,10069,Méga-Lucario,Pokémon Aura
+3,10070,Méga-Blizzaroi,Pokémon Arbregelé
+3,10071,Arceus (Fée),Pokémon Alpha
+3,10072,Floette (Éternelle),Pokémon Uniflore
+3,10073,Mistigrix (Femelle),Pokémon SelfContrôle
+3,10074,Exagide (Forme Assaut),Pokémon Noble Lame
+3,10075,Pitrouille (Taille Mini),Pokémon Citrouille
+3,10076,Pitrouille (Taille Maxi),Pokémon Citrouille
+3,10077,Pitrouille (Taille Ultra),Pokémon Citrouille
+3,10078,Banshitrouye (Taille Mini),Pokémon Citrouille
+3,10079,Banshitrouye (Taille Maxi),Pokémon Citrouille
+3,10080,Banshitrouye (Taille Ultra),Pokémon Citrouille
+3,10081,Méga-Dardargnan,Pokémon Guêpoison
+3,10082,Méga-Roucarnage,Pokémon Oiseau
+3,10083,Pikachu Rockeur,Pokémon Souris
+3,10084,Pikachu Lady,Pokémon Souris
+3,10085,Pikachu Star,Pokémon Souris
+3,10086,Pikachu Docteur,Pokémon Souris
+3,10087,Pikachu Catcheur,Pokémon Souris
+3,10088,Pikachu Cosplayeur,Pokémon Souris
+3,10089,Méga-Flagadoss,Pokémon Symbiose
+3,10090,Méga-Steelix,Pokémon Serpenfer
+3,10091,Méga-Jungko,Pokémon Forêt
+3,10092,Méga-Laggron,Pokémon Poissonboue
+3,10093,Méga-Ténéfix,Pokémon Obscurité
+3,10094,Méga-Sharpedo,Pokémon Brutal
+3,10095,Méga-Camérupt,Pokémon Éruption
+3,10096,Méga-Altaria,Pokémon Virevolteur
+3,10097,Méga-Oniglali,Pokémon Face
+3,10098,Méga-Drattak,Pokémon Dragon
+3,10099,Méga-Métalosse,Pokémon Pattefer
+3,10100,Primo-Kyogre,Pokémon Bassinmarin
+3,10101,Primo-Groudon,Pokémon Continent
+3,10102,Méga-Rayquaza,Pokémon Cieux
+3,10103,Méga-Lockpin,Pokémon Lapin
+3,10104,Méga-Gallame,Pokémon Lame
+3,10105,Méga-Nanméouïe,Pokémon Audition
+3,10106,Méga-Diancie,Pokémon Joyau
+3,10107,Hoopa Déchaîné,Pokémon Djinn
+3,10108,Rattata (Forme d’Alola),Pokémon Souris
+3,10109,Rattatac (Forme d’Alola),Pokémon Souris
+3,10110,Pikachu (Casquette),Pokémon Souris
+3,10111,Raichu (Forme d’Alola),Pokémon Souris
+3,10112,Sabelette (Forme d’Alola),Pokémon Souris
+3,10113,Sablaireau (Forme d’Alola),Pokémon Souris
+3,10114,Goupix (Forme d’Alola),Pokémon Renard
+3,10115,Feunard (Forme d’Alola),Pokémon Renard
+3,10116,Taupiqueur (Forme d’Alola),Pokémon Taupe
+3,10117,Triopikeur (Forme d’Alola),Pokémon Taupe
+3,10118,Miaouss (Forme d’Alola),Pokémon Chadégout
+3,10119,Persian (Forme d’Alola),Pokémon Chadeville
+3,10120,Racaillou (Forme d’Alola),Pokémon Roche
+3,10121,Gravalanch (Forme d’Alola),Pokémon Roche
+3,10122,Grolem (Forme d’Alola),Pokémon Titanesque
+3,10123,Tadmorv (Forme d’Alola),Pokémon Dégueu
+3,10124,Grotadmorv (Forme d’Alola),Pokémon Dégueu
+3,10125,Noadkoko (Forme d’Alola),Pokémon Fruitpalme
+3,10126,Ossatueur (Forme d’Alola),Pokémon Gard’Os
+3,10127,Amphinobi (Synergie),Pokémon Ninja
+3,10128,Sachanobi,Pokémon Ninja
+3,10129,Zygarde 10 % (Aura Inversée),Pokémon Équilibre
+3,10130,Zygarde 10 % (Rassemblement),Pokémon Équilibre
+3,10131,Zygarde 50 % (Rassemblement),Pokémon Équilibre
+3,10132,Zygarde Parfaite,Pokémon Équilibre
+3,10133,Plumeline (Style Pom-Pom),Pokémon Danse
+3,10134,Plumeline (Style Hula),Pokémon Danse
+3,10135,Plumeline (Style Buyō),Pokémon Danse
+3,10136,Lougaroc (Forme Nocturne),Pokémon Loup
+3,10137,Froussardine (Forme Banc),Pokémon Minipoisson
+3,10138,Silvallié (Combat),Pokémon Multigénome
+3,10139,Silvallié (Vol),Pokémon Multigénome
+3,10140,Silvallié (Poison),Pokémon Multigénome
+3,10141,Silvallié (Sol),Pokémon Multigénome
+3,10142,Silvallié (Roche),Pokémon Multigénome
+3,10143,Silvallié (Insecte),Pokémon Multigénome
+3,10144,Silvallié (Spectre),Pokémon Multigénome
+3,10145,Silvallié (Acier),Pokémon Multigénome
+3,10146,Silvallié (Feu),Pokémon Multigénome
+3,10147,Silvallié (Eau),Pokémon Multigénome
+3,10148,Silvallié (Plante),Pokémon Multigénome
+3,10149,Silvallié (Électrik),Pokémon Multigénome
+3,10150,Silvallié (Psy),Pokémon Multigénome
+3,10151,Silvallié (Glace),Pokémon Multigénome
+3,10152,Silvallié (Dragon),Pokémon Multigénome
+3,10153,Silvallié (Ténèbres),Pokémon Multigénome
+3,10154,Silvallié (Fée),Pokémon Multigénome
+3,10155,Météno (Forme Noyau),Pokémon Météore
+3,10156,Rocabot (Tempo Perso),Pokémon Chiot
+3,10157,Lougaroc (Forme Crépusculaire),Pokémon Loup
+3,10158,Necrozma (Crinière du Couchant),Pokémon Prisme
+3,10159,Necrozma (Ailes de l’Aurore),Pokémon Prisme
+3,10160,Ultra-Necrozma,Pokémon Prisme
+3,10161,Pikachu partenaire,Pokémon Souris
+3,10162,Évoli partenaire,Pokémon Évolutif
+3,10163,Miaouss (Forme de Galar),Pokémon Chadégout
+3,10164,Ponyta (Forme de Galar),Pokémon Monocorne
+3,10165,Galopa (Forme de Galar),Pokémon Monocorne
+3,10166,Canarticho (Forme de Galar),Pokémon Canard Fou
+3,10167,Smogogo (Forme de Galar),Pokémon Gaz Mortel
+3,10168,M. Mime (Forme de Galar),Pokémon Danse
+3,10169,Corayon (Forme de Galar),Pokémon Corail
+3,10170,Zigzaton (Forme de Galar),Pokémon Petit Raton
+3,10171,Linéon (Forme de Galar),Pokémon Fonceur
+3,10172,Darumarond (Forme de Galar),Pokémon Daruma
+3,10173,Darumacho (Forme de Galar) (Mode Transe),Pokémon Daruma
+3,10174,Darumacho (Forme de Galar) (Mode Normal),Pokémon Enflammé
+3,10175,Tutafeh (Forme de Galar),Pokémon Âme
+3,10176,Limonde (Forme de Galar),Pokémon Piège
+3,10177,Salarsen (Forme Grave),Pokémon Punk
+3,10178,Bekaglaçon (Tête Dégel),Pokémon Pingouin
+3,10179,Wimessir (Femelle),Pokémon Émotion
+3,10180,Zacian (Épée Suprême),Pokémon Valeureux
+3,10181,Zamazenta (Bouclier Suprême),Pokémon Valeureux
+3,10182,Éthernatos (Infinimax),Pokémon Giga
+3,10183,Ramoloss (Forme de Galar),Pokémon Crétin
+3,10184,Flagadoss (ガラルのすがた),Pokémon Symbiose
+3,10185,Shifours (Style Mille Poings),Pokémon Kung-fu
+3,10186,Artikodin (ガラルのすがた),Pokémon Implacable
+3,10187,Électhor (ガラルのすがた),Pokémon Fort-Pied
+3,10188,Sulfura (ガラルのすがた),Pokémon Maléfique
+3,10189,Roigada (ガラルのすがた),Pokémon Ensorceleur
+3,10190,Sylveroy (Cavalier du Froid),Pokémon Empereur
+3,10191,Sylveroy (Cavalier d’Effroi),Pokémon Empereur
+3,10192,Caninos (Forme de Hisui),Pokémon Espion
+3,10193,Arcanin (Forme de Hisui),Pokémon Légendaire
+3,10194,Voltorbe (Forme de Hisui),Pokémon Sphère
+3,10195,Électrode (Forme de Hisui),Pokémon Sphère
+3,10196,Typhlosion (Forme de Hisui),Pokémon Feu Follet
+3,10197,Qwilfish (Forme de Hisui),Pokémon Bouboule
+3,10198,Farfuret (Forme de Hisui),Pokémon Grifacérée
+3,10199,Dialga (Forme Originelle),Pokémon Temps
+3,10200,Palkia (Forme Originelle),Pokémon Espace
+3,10201,Clamiral (Forme de Hisui),Pokémon Dignitaire
+3,10202,Fragilady (Forme de Hisui),Pokémon Pirouette
+3,10203,Bargantua (Motif Blanc),Pokémon Pacifique
+3,10204,Zorua (Forme de Hisui),Pokémon Rancœurenard
+3,10205,Zoroark (Forme de Hisui),Pokémon Maudirenard
+3,10206,Gueriaigle (Forme de Hisui),Pokémon Cri Guerrier
+3,10207,Colimucus (Forme de Hisui),Pokémon Escargot
+3,10208,Muplodocus (Forme de Hisui),Pokémon Escamoquille
+3,10209,Séracrawl (Forme de Hisui),Pokémon Iceberg
+3,10210,Archéduc (Forme de Hisui),Pokémon Plumeflèche
+3,10211,Paragruel (Femelle),Pokémon Poissigrand
+3,10212,Amovénus (Forme Totémique),Pokémon Hainamour
+3,10213,Tauros (Forme de Paldea),Pokémon Buffle
+3,10214,Tauros (Forme de Paldea),Pokémon Buffle
+3,10215,Tauros (Forme de Paldea),Pokémon Buffle
+3,10216,Axoloto (Forme de Paldea),Pokémon Poizzon
+3,10217,Fragroin (Femelle),Pokémon Pourceau
+3,10218,Tapatoès (Plumage Bleu),Pokémon Perroquet
+3,10219,Tapatoès (Plumage Jaune),Pokémon Perroquet
+3,10220,Tapatoès (Plumage Blanc),Pokémon Perroquet
+3,10221,Superdofin (Forme Super),Pokémon Super Héros
+3,10222,Mordudor (Forme Marche),Pokémon Chassotrésor
+3,10223,Ursaking (Lune Vermeille),Pokémon Tourbe
+3,10224,Ogerpon (Masque du Puits),Pokémon Masque
+3,10225,Ogerpon (Masque du Fourneau),Pokémon Masque
+3,10226,Ogerpon (Masque de la Pierre),Pokémon Masque
+3,10227,Ogerpon (Masque Turquoise Tera),Pokémon Masque
+3,10228,Ogerpon (Masque du Puits Tera),Pokémon Masque
+3,10229,Ogerpon (Masque du Fourneau Tera),Pokémon Masque
+3,10230,Ogerpon (Masque de la Pierre Tera),Pokémon Masque
+3,10231,Terapagos (Forme Téracristal),Pokémon Téracristal
+3,10232,Terapagos (Forme Stellaire),Pokémon Téracristal
 4,1,Bisasam,Samen-Pokémon
 4,2,Bisaknosp,Samen-Pokémon
 4,3,Bisaflor,Samen-Pokémon
@@ -4855,226 +4819,214 @@ language_id,pokemon_id,name,category
 4,10022,Arceus (Eis),Alpha-Pokémon
 4,10023,Arceus (Drache),Alpha-Pokémon
 4,10024,Arceus (Unlicht),Alpha-Pokémon
-4,10025,Arceus (???),Alpha-Pokémon
-4,10026,Hitze-Rotom,Plasma-Pokémon
-4,10027,Wasch-Rotom,Plasma-Pokémon
-4,10028,Frost-Rotom,Plasma-Pokémon
-4,10029,Wirbel-Rotom,Plasma-Pokémon
-4,10030,Schneid-Rotom,Plasma-Pokémon
-4,10031,Giratina (Urform),Rebellen-Pokémon
-4,10032,Shaymin (Zenitform),Dankbarkeits-Pokémon
-4,10033,Strubbelohr-Pichu,Babymaus-Pokémon
-4,10034,Barschuft (Blaulinige Form),Grobheits-Pokémon
-4,10035,Flampivian (Trance-Modus),Lichterloh-Pokémon
-4,10036,Meloetta (Tanzform),Melodie-Pokémon
-4,10037,Boreos (Tiergeistform),Wirbelsturm-Pokémon
-4,10038,Voltolos (Tiergeistform),Torpedo-Pokémon
-4,10039,Demeteros (Tiergeistform),Reichtums-Pokémon
-4,10040,Weißes Kyurem,Schwellen-Pokémon
-4,10041,Schwarzes Kyurem,Schwellen-Pokémon
-4,10042,Mega-Bisaflor,Samen-Pokémon
-4,10043,Mega-Glurak X,Flammen-Pokémon
-4,10044,Mega-Glurak Y,Flammen-Pokémon
-4,10045,Mega-Turtok,Panzertier-Pokémon
-4,10046,Mega-Simsala,Psi-Pokémon
-4,10047,Mega-Gengar,Schatten-Pokémon
-4,10048,Mega-Kangama,Muttertier-Pokémon
-4,10049,Mega-Pinsir,Kneifkäfer-Pokémon
-4,10050,Mega-Garados,Grausam-Pokémon
-4,10051,Mega-Aerodactyl,Fossil-Pokémon
-4,10052,Mega-Mewtu X,Genmutanten-Pokémon
-4,10053,Mega-Mewtu Y,Genmutanten-Pokémon
-4,10054,Mega-Ampharos,Leuchten-Pokémon
-4,10055,Mega-Scherox,Kneifer-Pokémon
-4,10056,Mega-Skaraborn,Einzelhorn-Pokémon
-4,10057,Mega-Hundemon,Hades-Pokémon
-4,10058,Mega-Despotar,Panzer-Pokémon
-4,10059,Mega-Lohgock,Großbrand-Pokémon
-4,10060,Mega-Guardevoir,Umarmungs-Pokémon
-4,10061,Mega-Flunkifer,Schwindler-Pokémon
-4,10062,Mega-Stolloss,Eisenpanzer-Pokémon
-4,10063,Mega-Meditalis,Meditations-Pokémon
-4,10064,Mega-Voltenso,Entladungs-Pokémon
-4,10065,Mega-Banette,Marionetten-Pokémon
-4,10066,Mega-Absol,Desaster-Pokémon
-4,10067,Mega-Latias,Äon-Pokémon
-4,10068,Mega-Latios,Äon-Pokémon
-4,10069,Mega-Knakrack,Rasanz-Pokémon
-4,10070,Mega-Lucario,Aura-Pokémon
-4,10071,Mega-Rexblisar,Frostbaum-Pokémon
-4,10072,Arceus (Fee),Alpha-Pokémon
-4,10073,Floette (Ewigblütler),Einblütler-Pokémon
-4,10074,Psiaugon (Weiblich),Fassungs-Pokémon
-4,10075,Durengard (Klingenform),Königsklingen-Pokémon
-4,10076,Irrbis (Größe S),Kürbis-Pokémon
-4,10077,Irrbis (Größe L),Kürbis-Pokémon
-4,10078,Irrbis (Größe XL),Kürbis-Pokémon
-4,10079,Pumpdjinn (Größe S),Kürbis-Pokémon
-4,10080,Pumpdjinn (Größe L),Kürbis-Pokémon
-4,10081,Pumpdjinn (Größe XL),Kürbis-Pokémon
-4,10082,Mega-Bibor,Giftbienen-Pokémon
-4,10083,Mega-Tauboss,Vogel-Pokémon
-4,10084,Rocker-Pikachu,Maus-Pokémon
-4,10085,Damen-Pikachu,Maus-Pokémon
-4,10086,Star-Pikachu,Maus-Pokémon
-4,10087,Professoren-Pikachu,Maus-Pokémon
-4,10088,Wrestler-Pikachu,Maus-Pokémon
-4,10089,Cosplay-Pikachu,Maus-Pokémon
-4,10090,Mega-Lahmus,Symbiose-Pokémon
-4,10091,Mega-Stahlos,Stahlboa-Pokémon
-4,10092,Mega-Gewaldro,Dschungel-Pokémon
-4,10093,Mega-Sumpex,Lehmhüpfer-Pokémon
-4,10094,Mega-Zobiris,Finsternis-Pokémon
-4,10095,Mega-Tohaido,Brutal-Pokémon
-4,10096,Mega-Camerupt,Ausbruch-Pokémon
-4,10097,Mega-Altaria,Summsel-Pokémon
-4,10098,Mega-Firnontor,Antlitz-Pokémon
-4,10099,Mega-Brutalanda,Drachen-Pokémon
-4,10100,Mega-Metagross,Eisenfuß-Pokémon
-4,10101,Proto-Kyogre,Seegründler-Pokémon
-4,10102,Proto-Groudon,Kontinent-Pokémon
-4,10103,Mega-Rayquaza,Himmelhoch-Pokémon
-4,10104,Mega-Schlapor,Hasen-Pokémon
-4,10105,Mega-Galagladi,Klingen-Pokémon
-4,10106,Mega-Ohrdoch,Gehör-Pokémon
-4,10107,Mega-Diancie,Edelstein-Pokémon
-4,10108,Entfesseltes Hoopa,Plagegeist-Pokémon
-4,10109,Rattfratz (Alola-Form),Maus-Pokémon
-4,10110,Rattikarl (Alola-Form),Maus-Pokémon
-4,10111,Rattikarl (Herrscher),Maus-Pokémon
-4,10112,Pikachu (Kappe),Maus-Pokémon
-4,10113,Raichu (Alola-Form),Maus-Pokémon
-4,10114,Sandan (Alola-Form),Maus-Pokémon
-4,10115,Sandamer (Alola-Form),Maus-Pokémon
-4,10116,Vulpix (Alola-Form),Fuchs-Pokémon
-4,10117,Vulnona (Alola-Form),Fuchs-Pokémon
-4,10118,Digda (Alola-Form),Maulwurf-Pokémon
-4,10119,Digdri (Alola-Form),Maulwurf-Pokémon
-4,10120,Mauzi (Alola-Form),Katzen-Pokémon
-4,10121,Snobilikat (Alola-Form),Rassekatzen-Pokémon
-4,10122,Kleinstein (Alola-Form),Gesteins-Pokémon
-4,10123,Georok (Alola-Form),Gesteins-Pokémon
-4,10124,Geowaz (Alola-Form),Urgesteins-Pokémon
-4,10125,Sleima (Alola-Form),Schlamm-Pokémon
-4,10126,Sleimok (Alola-Form),Schlamm-Pokémon
-4,10127,Kokowei (Alola-Form),Palmfrucht-Pokémon
-4,10128,Knogga (Alola-Form),Knochenfan-Pokémon
-4,10129,Quajutsu (Freundschaftsakt),Ninja-Pokémon
-4,10130,Ash-Quajutsu,Ninja-Pokémon
-4,10131,10%-Zygarde,Ordnungs-Pokémon
-4,10132,10%-Zygarde,Ordnungs-Pokémon
-4,10133,50%-Zygarde,Ordnungs-Pokémon
-4,10134,Optimum Zygarde,Ordnungs-Pokémon
-4,10135,Manguspektor (Herrscher),Beschattungs-Pokémon
-4,10136,Donarion (Herrscher),Kneifkäfer-Pokémon
-4,10137,Choreogel (Cheerleading-Stil),Tanz-Pokémon
-4,10138,Choreogel (Hula-Stil),Tanz-Pokémon
-4,10139,Choreogel (Buyo-Stil),Tanz-Pokémon
-4,10140,Wolwerock (Nachtform),Wolfs-Pokémon
-4,10141,Lusardin (Schwarmform),Kleinfisch-Pokémon
-4,10142,Mantidea (Herrscher),Blumensichel-Pokémon
-4,10143,Amfira (Herrscher),Giftechsen-Pokémon
-4,10144,Amigento (Kampf),Modifikations-Pokémon
-4,10145,Amigento (Flug),Modifikations-Pokémon
-4,10146,Amigento (Gift),Modifikations-Pokémon
-4,10147,Amigento (Boden),Modifikations-Pokémon
-4,10148,Amigento (Gestein),Modifikations-Pokémon
-4,10149,Amigento (Käfer),Modifikations-Pokémon
-4,10150,Amigento (Geist),Modifikations-Pokémon
-4,10151,Amigento (Stahl),Modifikations-Pokémon
-4,10152,Amigento (Feuer),Modifikations-Pokémon
-4,10153,Amigento (Wasser),Modifikations-Pokémon
-4,10154,Amigento (Pflanze),Modifikations-Pokémon
-4,10155,Amigento (Elektro),Modifikations-Pokémon
-4,10156,Amigento (Psycho),Modifikations-Pokémon
-4,10157,Amigento (Eis),Modifikations-Pokémon
-4,10158,Amigento (Drache),Modifikations-Pokémon
-4,10159,Amigento (Unlicht),Modifikations-Pokémon
-4,10160,Amigento (Fee),Modifikations-Pokémon
-4,10161,Meteno (Kernform),Meteoren-Pokémon
-4,10162,Mimigma (Herrscher),Kostümspuk-Pokémon
-4,10163,Grandiras (Herrscher),Schuppentier-Pokémon
-4,10164,Knogga (Herrscher),Knochenfan-Pokémon
-4,10165,Bandelby (Herrscher),Hummelfliegen-Pokémon
-4,10166,Wuffels (Tempomacher),Welpen-Pokémon
-4,10167,Wolwerock (Zwielichtform),Wolfs-Pokémon
-4,10168,Aranestro (Herrscher),Wasserblasen-Pokémon
-4,10169,Togedemaru (Herrscher),Einigler-Pokémon
-4,10170,Necrozma (Abendmähne),Prisma-Pokémon
-4,10171,Necrozma (Morgenschwingen),Prisma-Pokémon
-4,10172,Ultra-Necrozma,Prisma-Pokémon
-4,10173,Partner-Pikachu,Maus-Pokémon
-4,10174,Partner-Evoli,Evolutions-Pokémon
-4,10175,Mauzi (Galar-Form),Katzen-Pokémon
-4,10176,Ponita (Galar-Form),Einhorn-Pokémon
-4,10177,Gallopa (Galar-Form),Einhorn-Pokémon
-4,10178,Porenta (Galar-Form),Wildenten-Pokémon
-4,10179,Smogmog (Galar-Form),Giftwolken-Pokémon
-4,10180,Pantimos (Galar-Form),Tanz-Pokémon
-4,10181,Corasonn (Galar-Form),Korallen-Pokémon
-4,10182,Zigzachs (Galar-Form),Kleindachs-Pokémon
-4,10183,Geradaks (Galar-Form),Sprinter-Pokémon
-4,10184,Flampion (Galar-Form),Lampion-Pokémon
-4,10185,Flampivian (Galar-Form) (Trance-Modus),Lampion-Pokémon
-4,10186,Flampivian (Galar-Form) (Normalmodus),Lichterloh-Pokémon
-4,10187,Makabaja (Galar-Form),Seelen-Pokémon
-4,10188,Flunschlik (Galar-Form),Falle-Pokémon
-4,10189,Riffex (Tief-Form),Punk-Pokémon
-4,10190,Kubuin (Wohlfühlkopf),Pinguin-Pokémon
-4,10191,Servol (Weiblich),Emotions-Pokémon
-4,10192,Zacian (König des Schwertes),Krieger-Pokémon
-4,10193,Zamazenta (König des Schildes),Krieger-Pokémon
-4,10194,Endynalos (Unendynamax),Giganten-Pokémon
-4,10195,Flegmon (Galar-Form),Schnarcher-Pokémon
-4,10196,Lahmus (ガラルのすがた),Symbiose-Pokémon
-4,10197,Wulaosu (Fließender Stil),Kung-Fu-Pokémon
-4,10198,Arktos (ガラルのすがた),Gefühlskälte-Pokémon
-4,10199,Zapdos (ガラルのすがた),Läufer-Pokémon
-4,10200,Lavados (ガラルのすがた),Bosheits-Pokémon
-4,10201,Laschoking (ガラルのすがた),Hexenmeister-Pokémon
-4,10202,Coronospa (Schimmelreiter),Kaiser-Pokémon
-4,10203,Coronospa (Rappenreiter),Kaiser-Pokémon
-4,10204,Fukano (Hisui-Form),Späher-Pokémon
-4,10205,Arkani (Hisui-Form),Legendär-Pokémon
-4,10206,Voltobal (Hisui-Form),Kugel-Pokémon
-4,10207,Lektrobal (Hisui-Form),Kugel-Pokémon
-4,10208,Tornupto (Hisui-Form),Irrlicht-Pokémon
-4,10209,Baldorfish (Hisui-Form),Ballon-Pokémon
-4,10210,Sniebel (Hisui-Form),Stichklauen-Pokémon
-4,10211,Dialga (Urform),Zeitweilig-Pokémon
-4,10212,Palkia (Urform),Räumlich-Pokémon
-4,10213,Admurai (Hisui-Form),Würde-Pokémon
-4,10214,Dressella (Hisui-Form),Pirouetten-Pokémon
-4,10215,Barschuft (Weißlinige Form),Sanftheits-Pokémon
-4,10216,Zorua (Hisui-Form),Grollfuchs-Pokémon
-4,10217,Zoroark (Hisui-Form),Fluchfuchs-Pokémon
-4,10218,Washakwil (Hisui-Form),Kampfschrei-Pokémon
-4,10219,Viscargot (Hisui-Form),Schnecken-Pokémon
-4,10220,Viscogon (Hisui-Form),Schalrückzugs-Pokémon
-4,10221,Arktilas (Hisui-Form),Eisberg-Pokémon
-4,10222,Silvarro (Hisui-Form),Pfeilflügel-Pokémon
-4,10223,Salmagnis (Weiblich),Großfisch-Pokémon
-4,10224,Cupidos (Tiergeistform),Hassliebe-Pokémon
-4,10225,Tauros (Paldea-Form),Wildbullen-Pokémon
-4,10226,Tauros (Paldea-Form),Wildbullen-Pokémon
-4,10227,Tauros (Paldea-Form),Wildbullen-Pokémon
-4,10228,Felino (Paldea-Form),Giftfisch-Pokémon
-4,10229,Fragrunz (Weiblich),Schwein-Pokémon
-4,10230,Krawalloro (Blaugefiedert),Sittich-Pokémon
-4,10231,Krawalloro (Gelbgefiedert),Sittich-Pokémon
-4,10232,Krawalloro (Weißgefiedert),Sittich-Pokémon
-4,10233,Delfinator (Heldenform),Superheld-Pokémon
-4,10234,Gierspenst (Wanderform),Schatzsucher-Pokémon
-4,10235,Ursaluna (Blutmond),Torf-Pokémon
-4,10236,Ogerpon (Brunnenmaske),Masken-Pokémon
-4,10237,Ogerpon (Ofenmaske),Masken-Pokémon
-4,10238,Ogerpon (Fundamentmaske),Masken-Pokémon
-4,10239,Ogerpon (Türkisgrüne Maske Tera),Masken-Pokémon
-4,10240,Ogerpon (Brunnenmaske Tera),Masken-Pokémon
-4,10241,Ogerpon (Ofenmaske Tera),Masken-Pokémon
-4,10242,Ogerpon (Fundamentmaske Tera),Masken-Pokémon
-4,10243,Terapagos (Terakristall-Form),Terakristall-Pokémon
-4,10244,Terapagos (Stellarform),Terakristall-Pokémon
+4,10025,Hitze-Rotom,Plasma-Pokémon
+4,10026,Wasch-Rotom,Plasma-Pokémon
+4,10027,Frost-Rotom,Plasma-Pokémon
+4,10028,Wirbel-Rotom,Plasma-Pokémon
+4,10029,Schneid-Rotom,Plasma-Pokémon
+4,10030,Giratina (Urform),Rebellen-Pokémon
+4,10031,Shaymin (Zenitform),Dankbarkeits-Pokémon
+4,10032,Strubbelohr-Pichu,Babymaus-Pokémon
+4,10033,Barschuft (Blaulinige Form),Grobheits-Pokémon
+4,10034,Flampivian (Trance-Modus),Lichterloh-Pokémon
+4,10035,Meloetta (Tanzform),Melodie-Pokémon
+4,10036,Boreos (Tiergeistform),Wirbelsturm-Pokémon
+4,10037,Voltolos (Tiergeistform),Torpedo-Pokémon
+4,10038,Demeteros (Tiergeistform),Reichtums-Pokémon
+4,10039,Weißes Kyurem,Schwellen-Pokémon
+4,10040,Schwarzes Kyurem,Schwellen-Pokémon
+4,10041,Mega-Bisaflor,Samen-Pokémon
+4,10042,Mega-Glurak X,Flammen-Pokémon
+4,10043,Mega-Glurak Y,Flammen-Pokémon
+4,10044,Mega-Turtok,Panzertier-Pokémon
+4,10045,Mega-Simsala,Psi-Pokémon
+4,10046,Mega-Gengar,Schatten-Pokémon
+4,10047,Mega-Kangama,Muttertier-Pokémon
+4,10048,Mega-Pinsir,Kneifkäfer-Pokémon
+4,10049,Mega-Garados,Grausam-Pokémon
+4,10050,Mega-Aerodactyl,Fossil-Pokémon
+4,10051,Mega-Mewtu X,Genmutanten-Pokémon
+4,10052,Mega-Mewtu Y,Genmutanten-Pokémon
+4,10053,Mega-Ampharos,Leuchten-Pokémon
+4,10054,Mega-Scherox,Kneifer-Pokémon
+4,10055,Mega-Skaraborn,Einzelhorn-Pokémon
+4,10056,Mega-Hundemon,Hades-Pokémon
+4,10057,Mega-Despotar,Panzer-Pokémon
+4,10058,Mega-Lohgock,Großbrand-Pokémon
+4,10059,Mega-Guardevoir,Umarmungs-Pokémon
+4,10060,Mega-Flunkifer,Schwindler-Pokémon
+4,10061,Mega-Stolloss,Eisenpanzer-Pokémon
+4,10062,Mega-Meditalis,Meditations-Pokémon
+4,10063,Mega-Voltenso,Entladungs-Pokémon
+4,10064,Mega-Banette,Marionetten-Pokémon
+4,10065,Mega-Absol,Desaster-Pokémon
+4,10066,Mega-Latias,Äon-Pokémon
+4,10067,Mega-Latios,Äon-Pokémon
+4,10068,Mega-Knakrack,Rasanz-Pokémon
+4,10069,Mega-Lucario,Aura-Pokémon
+4,10070,Mega-Rexblisar,Frostbaum-Pokémon
+4,10071,Arceus (Fee),Alpha-Pokémon
+4,10072,Floette (Ewigblütler),Einblütler-Pokémon
+4,10073,Psiaugon (Weiblich),Fassungs-Pokémon
+4,10074,Durengard (Klingenform),Königsklingen-Pokémon
+4,10075,Irrbis (Größe S),Kürbis-Pokémon
+4,10076,Irrbis (Größe L),Kürbis-Pokémon
+4,10077,Irrbis (Größe XL),Kürbis-Pokémon
+4,10078,Pumpdjinn (Größe S),Kürbis-Pokémon
+4,10079,Pumpdjinn (Größe L),Kürbis-Pokémon
+4,10080,Pumpdjinn (Größe XL),Kürbis-Pokémon
+4,10081,Mega-Bibor,Giftbienen-Pokémon
+4,10082,Mega-Tauboss,Vogel-Pokémon
+4,10083,Rocker-Pikachu,Maus-Pokémon
+4,10084,Damen-Pikachu,Maus-Pokémon
+4,10085,Star-Pikachu,Maus-Pokémon
+4,10086,Professoren-Pikachu,Maus-Pokémon
+4,10087,Wrestler-Pikachu,Maus-Pokémon
+4,10088,Cosplay-Pikachu,Maus-Pokémon
+4,10089,Mega-Lahmus,Symbiose-Pokémon
+4,10090,Mega-Stahlos,Stahlboa-Pokémon
+4,10091,Mega-Gewaldro,Dschungel-Pokémon
+4,10092,Mega-Sumpex,Lehmhüpfer-Pokémon
+4,10093,Mega-Zobiris,Finsternis-Pokémon
+4,10094,Mega-Tohaido,Brutal-Pokémon
+4,10095,Mega-Camerupt,Ausbruch-Pokémon
+4,10096,Mega-Altaria,Summsel-Pokémon
+4,10097,Mega-Firnontor,Antlitz-Pokémon
+4,10098,Mega-Brutalanda,Drachen-Pokémon
+4,10099,Mega-Metagross,Eisenfuß-Pokémon
+4,10100,Proto-Kyogre,Seegründler-Pokémon
+4,10101,Proto-Groudon,Kontinent-Pokémon
+4,10102,Mega-Rayquaza,Himmelhoch-Pokémon
+4,10103,Mega-Schlapor,Hasen-Pokémon
+4,10104,Mega-Galagladi,Klingen-Pokémon
+4,10105,Mega-Ohrdoch,Gehör-Pokémon
+4,10106,Mega-Diancie,Edelstein-Pokémon
+4,10107,Entfesseltes Hoopa,Plagegeist-Pokémon
+4,10108,Rattfratz (Alola-Form),Maus-Pokémon
+4,10109,Rattikarl (Alola-Form),Maus-Pokémon
+4,10110,Pikachu (Kappe),Maus-Pokémon
+4,10111,Raichu (Alola-Form),Maus-Pokémon
+4,10112,Sandan (Alola-Form),Maus-Pokémon
+4,10113,Sandamer (Alola-Form),Maus-Pokémon
+4,10114,Vulpix (Alola-Form),Fuchs-Pokémon
+4,10115,Vulnona (Alola-Form),Fuchs-Pokémon
+4,10116,Digda (Alola-Form),Maulwurf-Pokémon
+4,10117,Digdri (Alola-Form),Maulwurf-Pokémon
+4,10118,Mauzi (Alola-Form),Katzen-Pokémon
+4,10119,Snobilikat (Alola-Form),Rassekatzen-Pokémon
+4,10120,Kleinstein (Alola-Form),Gesteins-Pokémon
+4,10121,Georok (Alola-Form),Gesteins-Pokémon
+4,10122,Geowaz (Alola-Form),Urgesteins-Pokémon
+4,10123,Sleima (Alola-Form),Schlamm-Pokémon
+4,10124,Sleimok (Alola-Form),Schlamm-Pokémon
+4,10125,Kokowei (Alola-Form),Palmfrucht-Pokémon
+4,10126,Knogga (Alola-Form),Knochenfan-Pokémon
+4,10127,Quajutsu (Freundschaftsakt),Ninja-Pokémon
+4,10128,Ash-Quajutsu,Ninja-Pokémon
+4,10129,10%-Zygarde,Ordnungs-Pokémon
+4,10130,10%-Zygarde,Ordnungs-Pokémon
+4,10131,50%-Zygarde,Ordnungs-Pokémon
+4,10132,Optimum Zygarde,Ordnungs-Pokémon
+4,10133,Choreogel (Cheerleading-Stil),Tanz-Pokémon
+4,10134,Choreogel (Hula-Stil),Tanz-Pokémon
+4,10135,Choreogel (Buyo-Stil),Tanz-Pokémon
+4,10136,Wolwerock (Nachtform),Wolfs-Pokémon
+4,10137,Lusardin (Schwarmform),Kleinfisch-Pokémon
+4,10138,Amigento (Kampf),Modifikations-Pokémon
+4,10139,Amigento (Flug),Modifikations-Pokémon
+4,10140,Amigento (Gift),Modifikations-Pokémon
+4,10141,Amigento (Boden),Modifikations-Pokémon
+4,10142,Amigento (Gestein),Modifikations-Pokémon
+4,10143,Amigento (Käfer),Modifikations-Pokémon
+4,10144,Amigento (Geist),Modifikations-Pokémon
+4,10145,Amigento (Stahl),Modifikations-Pokémon
+4,10146,Amigento (Feuer),Modifikations-Pokémon
+4,10147,Amigento (Wasser),Modifikations-Pokémon
+4,10148,Amigento (Pflanze),Modifikations-Pokémon
+4,10149,Amigento (Elektro),Modifikations-Pokémon
+4,10150,Amigento (Psycho),Modifikations-Pokémon
+4,10151,Amigento (Eis),Modifikations-Pokémon
+4,10152,Amigento (Drache),Modifikations-Pokémon
+4,10153,Amigento (Unlicht),Modifikations-Pokémon
+4,10154,Amigento (Fee),Modifikations-Pokémon
+4,10155,Meteno (Kernform),Meteoren-Pokémon
+4,10156,Wuffels (Tempomacher),Welpen-Pokémon
+4,10157,Wolwerock (Zwielichtform),Wolfs-Pokémon
+4,10158,Necrozma (Abendmähne),Prisma-Pokémon
+4,10159,Necrozma (Morgenschwingen),Prisma-Pokémon
+4,10160,Ultra-Necrozma,Prisma-Pokémon
+4,10161,Partner-Pikachu,Maus-Pokémon
+4,10162,Partner-Evoli,Evolutions-Pokémon
+4,10163,Mauzi (Galar-Form),Katzen-Pokémon
+4,10164,Ponita (Galar-Form),Einhorn-Pokémon
+4,10165,Gallopa (Galar-Form),Einhorn-Pokémon
+4,10166,Porenta (Galar-Form),Wildenten-Pokémon
+4,10167,Smogmog (Galar-Form),Giftwolken-Pokémon
+4,10168,Pantimos (Galar-Form),Tanz-Pokémon
+4,10169,Corasonn (Galar-Form),Korallen-Pokémon
+4,10170,Zigzachs (Galar-Form),Kleindachs-Pokémon
+4,10171,Geradaks (Galar-Form),Sprinter-Pokémon
+4,10172,Flampion (Galar-Form),Lampion-Pokémon
+4,10173,Flampivian (Galar-Form) (Trance-Modus),Lampion-Pokémon
+4,10174,Flampivian (Galar-Form) (Normalmodus),Lichterloh-Pokémon
+4,10175,Makabaja (Galar-Form),Seelen-Pokémon
+4,10176,Flunschlik (Galar-Form),Falle-Pokémon
+4,10177,Riffex (Tief-Form),Punk-Pokémon
+4,10178,Kubuin (Wohlfühlkopf),Pinguin-Pokémon
+4,10179,Servol (Weiblich),Emotions-Pokémon
+4,10180,Zacian (König des Schwertes),Krieger-Pokémon
+4,10181,Zamazenta (König des Schildes),Krieger-Pokémon
+4,10182,Endynalos (Unendynamax),Giganten-Pokémon
+4,10183,Flegmon (Galar-Form),Schnarcher-Pokémon
+4,10184,Lahmus (ガラルのすがた),Symbiose-Pokémon
+4,10185,Wulaosu (Fließender Stil),Kung-Fu-Pokémon
+4,10186,Arktos (ガラルのすがた),Gefühlskälte-Pokémon
+4,10187,Zapdos (ガラルのすがた),Läufer-Pokémon
+4,10188,Lavados (ガラルのすがた),Bosheits-Pokémon
+4,10189,Laschoking (ガラルのすがた),Hexenmeister-Pokémon
+4,10190,Coronospa (Schimmelreiter),Kaiser-Pokémon
+4,10191,Coronospa (Rappenreiter),Kaiser-Pokémon
+4,10192,Fukano (Hisui-Form),Späher-Pokémon
+4,10193,Arkani (Hisui-Form),Legendär-Pokémon
+4,10194,Voltobal (Hisui-Form),Kugel-Pokémon
+4,10195,Lektrobal (Hisui-Form),Kugel-Pokémon
+4,10196,Tornupto (Hisui-Form),Irrlicht-Pokémon
+4,10197,Baldorfish (Hisui-Form),Ballon-Pokémon
+4,10198,Sniebel (Hisui-Form),Stichklauen-Pokémon
+4,10199,Dialga (Urform),Zeitweilig-Pokémon
+4,10200,Palkia (Urform),Räumlich-Pokémon
+4,10201,Admurai (Hisui-Form),Würde-Pokémon
+4,10202,Dressella (Hisui-Form),Pirouetten-Pokémon
+4,10203,Barschuft (Weißlinige Form),Sanftheits-Pokémon
+4,10204,Zorua (Hisui-Form),Grollfuchs-Pokémon
+4,10205,Zoroark (Hisui-Form),Fluchfuchs-Pokémon
+4,10206,Washakwil (Hisui-Form),Kampfschrei-Pokémon
+4,10207,Viscargot (Hisui-Form),Schnecken-Pokémon
+4,10208,Viscogon (Hisui-Form),Schalrückzugs-Pokémon
+4,10209,Arktilas (Hisui-Form),Eisberg-Pokémon
+4,10210,Silvarro (Hisui-Form),Pfeilflügel-Pokémon
+4,10211,Salmagnis (Weiblich),Großfisch-Pokémon
+4,10212,Cupidos (Tiergeistform),Hassliebe-Pokémon
+4,10213,Tauros (Paldea-Form),Wildbullen-Pokémon
+4,10214,Tauros (Paldea-Form),Wildbullen-Pokémon
+4,10215,Tauros (Paldea-Form),Wildbullen-Pokémon
+4,10216,Felino (Paldea-Form),Giftfisch-Pokémon
+4,10217,Fragrunz (Weiblich),Schwein-Pokémon
+4,10218,Krawalloro (Blaugefiedert),Sittich-Pokémon
+4,10219,Krawalloro (Gelbgefiedert),Sittich-Pokémon
+4,10220,Krawalloro (Weißgefiedert),Sittich-Pokémon
+4,10221,Delfinator (Heldenform),Superheld-Pokémon
+4,10222,Gierspenst (Wanderform),Schatzsucher-Pokémon
+4,10223,Ursaluna (Blutmond),Torf-Pokémon
+4,10224,Ogerpon (Brunnenmaske),Masken-Pokémon
+4,10225,Ogerpon (Ofenmaske),Masken-Pokémon
+4,10226,Ogerpon (Fundamentmaske),Masken-Pokémon
+4,10227,Ogerpon (Türkisgrüne Maske Tera),Masken-Pokémon
+4,10228,Ogerpon (Brunnenmaske Tera),Masken-Pokémon
+4,10229,Ogerpon (Ofenmaske Tera),Masken-Pokémon
+4,10230,Ogerpon (Fundamentmaske Tera),Masken-Pokémon
+4,10231,Terapagos (Terakristall-Form),Terakristall-Pokémon
+4,10232,Terapagos (Stellarform),Terakristall-Pokémon
 5,1,Bulbasaur,Pokémon Seme
 5,2,Ivysaur,Pokémon Seme
 5,3,Venusaur,Pokémon Seme
@@ -6124,226 +6076,214 @@ language_id,pokemon_id,name,category
 5,10022,Arceus (Ghiaccio),Pokémon Primevo
 5,10023,Arceus (Drago),Pokémon Primevo
 5,10024,Arceus (Buio),Pokémon Primevo
-5,10025,Arceus (???),Pokémon Primevo
-5,10026,Rotom Calore,Pokémon Plasma
-5,10027,Rotom Lavaggio,Pokémon Plasma
-5,10028,Rotom Gelo,Pokémon Plasma
-5,10029,Rotom Vortice,Pokémon Plasma
-5,10030,Rotom Taglio,Pokémon Plasma
-5,10031,Giratina (Forma Originale),Pokémon Ribelle
-5,10032,Shaymin (Forma Cielo),Pokémon Gratitudine
-5,10033,Pichu Spunzorek,Pokémon Topino
-5,10034,Basculin (Forma Lineablu),Pokémon Irruenza
-5,10035,Darmanitan (Stato Zen),Pokémon Altefiamme
-5,10036,Meloetta (Forma Danza),Pokémon Melodia
-5,10037,Tornadus (Forma Totem),Pokémon Turbinio
-5,10038,Thundurus (Forma Totem),Pokémon Fulminante
-5,10039,Landorus (Forma Totem),Pokémon Fertilità
-5,10040,Kyurem Bianco,Pokémon Confine
-5,10041,Kyurem Nero,Pokémon Confine
-5,10042,MegaVenusaur,Pokémon Seme
-5,10043,MegaCharizard X,Pokémon Fiamma
-5,10044,MegaCharizard Y,Pokémon Fiamma
-5,10045,MegaBlastoise,Pokémon Carapace
-5,10046,MegaAlakazam,Pokémon Psico
-5,10047,MegaGengar,Pokémon Ombra
-5,10048,MegaKangaskhan,Pokémon Genitore
-5,10049,MegaPinsir,Pokémon Cervolante
-5,10050,MegaGyarados,Pokémon Atroce
-5,10051,MegaAerodactyl,Pokémon Fossile
-5,10052,MegaMewtwo X,Pokémon Genetico
-5,10053,MegaMewtwo Y,Pokémon Genetico
-5,10054,MegaAmpharos,Pokémon Luce
-5,10055,MegaScizor,Pokémon Chela
-5,10056,MegaHeracross,Pokémon Monocorno
-5,10057,MegaHoundoom,Pokémon Buio
-5,10058,MegaTyranitar,Pokémon Armatura
-5,10059,MegaBlaziken,Pokémon Vampe
-5,10060,MegaGardevoir,Pokémon Abbraccio
-5,10061,MegaMawile,Pokémon Inganno
-5,10062,MegaAggron,Pokémon Corazza
-5,10063,MegaMedicham,Pokémon Meditazione
-5,10064,MegaManectric,Pokémon Scossa
-5,10065,MegaBanette,Pokémon Marionetta
-5,10066,MegaAbsol,Pokémon Catastrofe
-5,10067,MegaLatias,Pokémon Eone
-5,10068,MegaLatios,Pokémon Eone
-5,10069,MegaGarchomp,Pokémon Mach
-5,10070,MegaLucario,Pokémon Aura
-5,10071,MegaAbomasnow,Pokémon Albergelo
-5,10072,Arceus (Folletto),Pokémon Primevo
-5,10073,Floette (Fiore Eterno),Pokémon Monofiore
-5,10074,Meowstic (Femmina),Pokémon Temperanza
-5,10075,Aegislash (Forma Spada),Pokémon Spadareale
-5,10076,Pumpkaboo (Mini),Pokémon Zucca
-5,10077,Pumpkaboo (Grande),Pokémon Zucca
-5,10078,Pumpkaboo (Maxi),Pokémon Zucca
-5,10079,Gourgeist (Mini),Pokémon Zucca
-5,10080,Gourgeist (Grande),Pokémon Zucca
-5,10081,Gourgeist (Maxi),Pokémon Zucca
-5,10082,MegaBeedrill,Pokémon Velenape
-5,10083,MegaPidgeot,Pokémon Uccello
-5,10084,Pikachu rockstar,Pokémon Topo
-5,10085,Pikachu damigella,Pokémon Topo
-5,10086,Pikachu confetto,Pokémon Topo
-5,10087,Pikachu scienziata,Pokémon Topo
-5,10088,Pikachu wrestler,Pokémon Topo
-5,10089,Pikachu Cosplay,Pokémon Topo
-5,10090,MegaSlowbro,Pokémon Paguro
-5,10091,MegaSteelix,Pokémon Ferroserpe
-5,10092,MegaSceptile,Pokémon Foresta
-5,10093,MegaSwampert,Pokémon Fango Pesce
-5,10094,MegaSableye,Pokémon Oscurità
-5,10095,MegaSharpedo,Pokémon Brutale
-5,10096,MegaCamerupt,Pokémon Eruzione
-5,10097,MegaAltaria,Pokémon Canterino
-5,10098,MegaGlalie,Pokémon Tuttomuso
-5,10099,MegaSalamence,Pokémon Drago
-5,10100,MegaMetagross,Pokémon Ferrarto
-5,10101,ArcheoKyogre,Pokémon Oceano
-5,10102,ArcheoGroudon,Pokémon Continente
-5,10103,MegaRayquaza,Pokémon Stratosfera
-5,10104,MegaLopunny,Pokémon Coniglio
-5,10105,MegaGallade,Pokémon Lama
-5,10106,MegaAudino,Pokémon Ascolto
-5,10107,MegaDiancie,Pokémon Gemma
-5,10108,Hoopa Libero,Pokémon Genio
-5,10109,Rattata (Forma di Alola),Pokémon Topo
-5,10110,Raticate (Forma di Alola),Pokémon Topo
-5,10111,Raticate dominante,Pokémon Topo
-5,10112,Pikachu (Berreto),Pokémon Topo
-5,10113,Raichu (Forma di Alola),Pokémon Topo
-5,10114,Sandshrew (Forma di Alola),Pokémon Topo
-5,10115,Sandslash (Forma di Alola),Pokémon Topo
-5,10116,Vulpix (Forma di Alola),Pokémon Volpe
-5,10117,Ninetales (Forma di Alola),Pokémon Volpe
-5,10118,Diglett (Forma di Alola),Pokémon Talpa
-5,10119,Dugtrio (Forma di Alola),Pokémon Talpa
-5,10120,Meowth (Forma di Alola),Pokémon Graffimiao
-5,10121,Persian (Forma di Alola),Pokémon Nobilgatto
-5,10122,Geodude (Forma di Alola),Pokémon Roccia
-5,10123,Graveler (Forma di Alola),Pokémon Roccia
-5,10124,Golem (Forma di Alola),Pokémon Megatone
-5,10125,Grimer (Forma di Alola),Pokémon Melma
-5,10126,Muk (Forma di Alola),Pokémon Melma
-5,10127,Exeggutor (Forma di Alola),Pokémon Nocecocco
-5,10128,Marowak (Forma di Alola),Pokémon Guardaossi
-5,10129,Greninja (Morfosintonia),Pokémon Ninja
-5,10130,Greninja Forma Ash,Pokémon Ninja
-5,10131,Zygarde 10% (Frangiaura),Pokémon Equilibrio
-5,10132,Zygarde 10% (Sciamefusione),Pokémon Equilibrio
-5,10133,Zygarde 50% (Sciamefusione),Pokémon Equilibrio
-5,10134,Zygarde Perfetta,Pokémon Equilibrio
-5,10135,Gumshoos dominante,Pokémon Sorveglianza
-5,10136,Vikavolt dominante,Pokémon Cervolante
-5,10137,Oricorio (Stile Cheerdance),Pokémon Danza
-5,10138,Oricorio (Stile Hula),Pokémon Danza
-5,10139,Oricorio (Stile Buyō),Pokémon Danza
-5,10140,Lycanroc (Forma Notte),Pokémon Lupo
-5,10141,Wishiwashi (Forma Banco),Pokémon Pesciolino
-5,10142,Lurantis dominante,Pokémon Mantifiore
-5,10143,Salazzle dominante,Pokémon Lucertossina
-5,10144,Silvally (Lotta),Pokémon Multigene
-5,10145,Silvally (Volante),Pokémon Multigene
-5,10146,Silvally (Veleno),Pokémon Multigene
-5,10147,Silvally (Terra),Pokémon Multigene
-5,10148,Silvally (Roccia),Pokémon Multigene
-5,10149,Silvally (Coleottero),Pokémon Multigene
-5,10150,Silvally (Spettro),Pokémon Multigene
-5,10151,Silvally (Acciaio),Pokémon Multigene
-5,10152,Silvally (Fuoco),Pokémon Multigene
-5,10153,Silvally (Acqua),Pokémon Multigene
-5,10154,Silvally (Erba),Pokémon Multigene
-5,10155,Silvally (Elettro),Pokémon Multigene
-5,10156,Silvally (Psico),Pokémon Multigene
-5,10157,Silvally (Ghiaccio),Pokémon Multigene
-5,10158,Silvally (Drago),Pokémon Multigene
-5,10159,Silvally (Buio),Pokémon Multigene
-5,10160,Silvally (Folletto),Pokémon Multigene
-5,10161,Minior (Forma Nucleo),Pokémon Meteora
-5,10162,Mimikyu dominante,Pokémon Fantasmanto
-5,10163,Kommo-o dominante,Pokémon Squama
-5,10164,Marowak dominante,Pokémon Guardaossi
-5,10165,Ribombee dominante,Pokémon Bombilide
-5,10166,Rockruff (Mente Locale),Pokémon Cagnolino
-5,10167,Lycanroc (Forma Crepuscolo),Pokémon Lupo
-5,10168,Araquanid dominante,Pokémon Bolladacqua
-5,10169,Togedemaru dominante,Pokémon Ricciopalla
-5,10170,Necrozma (Criniera del Vespro),Pokémon Prisma
-5,10171,Necrozma (Ali dell’Aurora),Pokémon Prisma
-5,10172,UltraNecrozma,Pokémon Prisma
-5,10173,Pikachu compagno,Pokémon Topo
-5,10174,Eevee compagno,Pokémon Evoluzione
-5,10175,Meowth (Forma di Galar),Pokémon Graffimiao
-5,10176,Ponyta (Forma di Galar),Pokémon Singolcorno
-5,10177,Rapidash (Forma di Galar),Pokémon Singolcorno
-5,10178,Farfetch’d (Forma di Galar),Pokémon Selvanatra
-5,10179,Weezing (Forma di Galar),Pokémon Velenuvola
-5,10180,Mr. Mime (Forma di Galar),Pokémon Danza
-5,10181,Corsola (Forma di Galar),Pokémon Corallo
-5,10182,Zigzagoon (Forma di Galar),Pokémon Procione
-5,10183,Linoone (Forma di Galar),Pokémon Sfrecciante
-5,10184,Darumaka (Forma di Galar),Pokémon Daruma
-5,10185,Darmanitan (Forma di Galar) (Stato Zen),Pokémon Daruma
-5,10186,Darmanitan (Forma di Galar) (Stato Normale),Pokémon Altefiamme
-5,10187,Yamask (Forma di Galar),Pokémon Fatuanima
-5,10188,Stunfisk (Forma di Galar),Pokémon Trappola
-5,10189,Toxtricity (Forma Basso),Pokémon Punk
-5,10190,Eiscue (Liquefaccia),Pokémon Pinguino
-5,10191,Indeedee (Femmina),Pokémon Emozione
-5,10192,Zacian (Re delle Spade),Pokémon Guerriero
-5,10193,Zamazenta (Re degli Scudi),Pokémon Guerriero
-5,10194,Eternatus (Dynamax Infinito),Pokémon Gigante
-5,10195,Slowpoke (Forma di Galar),Pokémon Ronfone
-5,10196,Slowbro (ガラルのすがた),Pokémon Paguro
-5,10197,Urshifu (Stile Pluricolpo),Pokémon Kung Fu
-5,10198,Articuno (ガラルのすがた),Pokémon Sanguefreddo
-5,10199,Zapdos (ガラルのすがた),Pokémon Zampeforti
-5,10200,Moltres (ガラルのすがた),Pokémon Malvagità
-5,10201,Slowking (ガラルのすがた),Pokémon Stregone
-5,10202,Calyrex (Cavaliere Glaciale),Pokémon Imperatore
-5,10203,Calyrex (Cavaliere Spettrale),Pokémon Imperatore
-5,10204,Growlithe (Forma di Hisui),Pokémon Esplorante
-5,10205,Arcanine (Forma di Hisui),Pokémon Leggenda
-5,10206,Voltorb (Forma di Hisui),Pokémon Sfera
-5,10207,Electrode (Forma di Hisui),Pokémon Sfera
-5,10208,Typhlosion (Forma di Hisui),Pokémon Fuocofatuo
-5,10209,Qwilfish (Forma di Hisui),Pokémon Pallone
-5,10210,Sneasel (Forma di Hisui),Pokémon Lamartigli
-5,10211,Dialga (Forma Originale),Pokémon Tempo
-5,10212,Palkia (Forma Originale),Pokémon Spazio
-5,10213,Samurott (Forma di Hisui),Pokémon Dignità
-5,10214,Lilligant (Forma di Hisui),Pokémon Piroetta
-5,10215,Basculin (Forma Lineabianca),Pokémon Docilità
-5,10216,Zorua (Forma di Hisui),Pokémon Rancorvolpe
-5,10217,Zoroark (Forma di Hisui),Pokémon Maledivolpe
-5,10218,Braviary (Forma di Hisui),Pokémon Baldogrido
-5,10219,Sliggoo (Forma di Hisui),Pokémon Lumachina
-5,10220,Goodra (Forma di Hisui),Pokémon Serraguscio
-5,10221,Avalugg (Forma di Hisui),Pokémon Iceberg
-5,10222,Decidueye (Forma di Hisui),Pokémon Alifreccia
-5,10223,Basculegion (Femmina),Pokémon Pescegrosso
-5,10224,Enamorus (Forma Totem),Pokémon Amoreodio
-5,10225,Tauros (Forma di Paldea),Pokémon Torobrado
-5,10226,Tauros (Forma di Paldea),Pokémon Torobrado
-5,10227,Tauros (Forma di Paldea),Pokémon Torobrado
-5,10228,Wooper (Forma di Paldea),Pokémon Velenpesce
-5,10229,Oinkologne (Femmina),Pokémon Porcellino
-5,10230,Squawkabilly (Piume Azzurre),Pokémon Pappagallo
-5,10231,Squawkabilly (Piume Gialle),Pokémon Pappagallo
-5,10232,Squawkabilly (Piume Bianche),Pokémon Pappagallo
-5,10233,Palafin (Forma Possente),Pokémon Eroe
-5,10234,Gimmighoul (Forma Ambulante),Pokémon Trovatesori
-5,10235,Ursaluna (Luna Cremisi),Pokémon Torba
-5,10236,Ogerpon (Maschera Pozzo),Pokémon Maschera
-5,10237,Ogerpon (Maschera Focolare),Pokémon Maschera
-5,10238,Ogerpon (Maschera Fondamenta),Pokémon Maschera
-5,10239,Ogerpon (Maschera Turchese Tera),Pokémon Maschera
-5,10240,Ogerpon (Maschera Pozzo Tera),Pokémon Maschera
-5,10241,Ogerpon (Maschera Focolare Tera),Pokémon Maschera
-5,10242,Ogerpon (Maschera Fondamenta Tera),Pokémon Maschera
-5,10243,Terapagos (Forma Teracristal),Pokémon Teracristal
-5,10244,Terapagos (Forma Astrale),Pokémon Teracristal
+5,10025,Rotom Calore,Pokémon Plasma
+5,10026,Rotom Lavaggio,Pokémon Plasma
+5,10027,Rotom Gelo,Pokémon Plasma
+5,10028,Rotom Vortice,Pokémon Plasma
+5,10029,Rotom Taglio,Pokémon Plasma
+5,10030,Giratina (Forma Originale),Pokémon Ribelle
+5,10031,Shaymin (Forma Cielo),Pokémon Gratitudine
+5,10032,Pichu Spunzorek,Pokémon Topino
+5,10033,Basculin (Forma Lineablu),Pokémon Irruenza
+5,10034,Darmanitan (Stato Zen),Pokémon Altefiamme
+5,10035,Meloetta (Forma Danza),Pokémon Melodia
+5,10036,Tornadus (Forma Totem),Pokémon Turbinio
+5,10037,Thundurus (Forma Totem),Pokémon Fulminante
+5,10038,Landorus (Forma Totem),Pokémon Fertilità
+5,10039,Kyurem Bianco,Pokémon Confine
+5,10040,Kyurem Nero,Pokémon Confine
+5,10041,MegaVenusaur,Pokémon Seme
+5,10042,MegaCharizard X,Pokémon Fiamma
+5,10043,MegaCharizard Y,Pokémon Fiamma
+5,10044,MegaBlastoise,Pokémon Carapace
+5,10045,MegaAlakazam,Pokémon Psico
+5,10046,MegaGengar,Pokémon Ombra
+5,10047,MegaKangaskhan,Pokémon Genitore
+5,10048,MegaPinsir,Pokémon Cervolante
+5,10049,MegaGyarados,Pokémon Atroce
+5,10050,MegaAerodactyl,Pokémon Fossile
+5,10051,MegaMewtwo X,Pokémon Genetico
+5,10052,MegaMewtwo Y,Pokémon Genetico
+5,10053,MegaAmpharos,Pokémon Luce
+5,10054,MegaScizor,Pokémon Chela
+5,10055,MegaHeracross,Pokémon Monocorno
+5,10056,MegaHoundoom,Pokémon Buio
+5,10057,MegaTyranitar,Pokémon Armatura
+5,10058,MegaBlaziken,Pokémon Vampe
+5,10059,MegaGardevoir,Pokémon Abbraccio
+5,10060,MegaMawile,Pokémon Inganno
+5,10061,MegaAggron,Pokémon Corazza
+5,10062,MegaMedicham,Pokémon Meditazione
+5,10063,MegaManectric,Pokémon Scossa
+5,10064,MegaBanette,Pokémon Marionetta
+5,10065,MegaAbsol,Pokémon Catastrofe
+5,10066,MegaLatias,Pokémon Eone
+5,10067,MegaLatios,Pokémon Eone
+5,10068,MegaGarchomp,Pokémon Mach
+5,10069,MegaLucario,Pokémon Aura
+5,10070,MegaAbomasnow,Pokémon Albergelo
+5,10071,Arceus (Folletto),Pokémon Primevo
+5,10072,Floette (Fiore Eterno),Pokémon Monofiore
+5,10073,Meowstic (Femmina),Pokémon Temperanza
+5,10074,Aegislash (Forma Spada),Pokémon Spadareale
+5,10075,Pumpkaboo (Mini),Pokémon Zucca
+5,10076,Pumpkaboo (Grande),Pokémon Zucca
+5,10077,Pumpkaboo (Maxi),Pokémon Zucca
+5,10078,Gourgeist (Mini),Pokémon Zucca
+5,10079,Gourgeist (Grande),Pokémon Zucca
+5,10080,Gourgeist (Maxi),Pokémon Zucca
+5,10081,MegaBeedrill,Pokémon Velenape
+5,10082,MegaPidgeot,Pokémon Uccello
+5,10083,Pikachu rockstar,Pokémon Topo
+5,10084,Pikachu damigella,Pokémon Topo
+5,10085,Pikachu confetto,Pokémon Topo
+5,10086,Pikachu scienziata,Pokémon Topo
+5,10087,Pikachu wrestler,Pokémon Topo
+5,10088,Pikachu Cosplay,Pokémon Topo
+5,10089,MegaSlowbro,Pokémon Paguro
+5,10090,MegaSteelix,Pokémon Ferroserpe
+5,10091,MegaSceptile,Pokémon Foresta
+5,10092,MegaSwampert,Pokémon Fango Pesce
+5,10093,MegaSableye,Pokémon Oscurità
+5,10094,MegaSharpedo,Pokémon Brutale
+5,10095,MegaCamerupt,Pokémon Eruzione
+5,10096,MegaAltaria,Pokémon Canterino
+5,10097,MegaGlalie,Pokémon Tuttomuso
+5,10098,MegaSalamence,Pokémon Drago
+5,10099,MegaMetagross,Pokémon Ferrarto
+5,10100,ArcheoKyogre,Pokémon Oceano
+5,10101,ArcheoGroudon,Pokémon Continente
+5,10102,MegaRayquaza,Pokémon Stratosfera
+5,10103,MegaLopunny,Pokémon Coniglio
+5,10104,MegaGallade,Pokémon Lama
+5,10105,MegaAudino,Pokémon Ascolto
+5,10106,MegaDiancie,Pokémon Gemma
+5,10107,Hoopa Libero,Pokémon Genio
+5,10108,Rattata (Forma di Alola),Pokémon Topo
+5,10109,Raticate (Forma di Alola),Pokémon Topo
+5,10110,Pikachu (Berreto),Pokémon Topo
+5,10111,Raichu (Forma di Alola),Pokémon Topo
+5,10112,Sandshrew (Forma di Alola),Pokémon Topo
+5,10113,Sandslash (Forma di Alola),Pokémon Topo
+5,10114,Vulpix (Forma di Alola),Pokémon Volpe
+5,10115,Ninetales (Forma di Alola),Pokémon Volpe
+5,10116,Diglett (Forma di Alola),Pokémon Talpa
+5,10117,Dugtrio (Forma di Alola),Pokémon Talpa
+5,10118,Meowth (Forma di Alola),Pokémon Graffimiao
+5,10119,Persian (Forma di Alola),Pokémon Nobilgatto
+5,10120,Geodude (Forma di Alola),Pokémon Roccia
+5,10121,Graveler (Forma di Alola),Pokémon Roccia
+5,10122,Golem (Forma di Alola),Pokémon Megatone
+5,10123,Grimer (Forma di Alola),Pokémon Melma
+5,10124,Muk (Forma di Alola),Pokémon Melma
+5,10125,Exeggutor (Forma di Alola),Pokémon Nocecocco
+5,10126,Marowak (Forma di Alola),Pokémon Guardaossi
+5,10127,Greninja (Morfosintonia),Pokémon Ninja
+5,10128,Greninja Forma Ash,Pokémon Ninja
+5,10129,Zygarde 10% (Frangiaura),Pokémon Equilibrio
+5,10130,Zygarde 10% (Sciamefusione),Pokémon Equilibrio
+5,10131,Zygarde 50% (Sciamefusione),Pokémon Equilibrio
+5,10132,Zygarde Perfetta,Pokémon Equilibrio
+5,10133,Oricorio (Stile Cheerdance),Pokémon Danza
+5,10134,Oricorio (Stile Hula),Pokémon Danza
+5,10135,Oricorio (Stile Buyō),Pokémon Danza
+5,10136,Lycanroc (Forma Notte),Pokémon Lupo
+5,10137,Wishiwashi (Forma Banco),Pokémon Pesciolino
+5,10138,Silvally (Lotta),Pokémon Multigene
+5,10139,Silvally (Volante),Pokémon Multigene
+5,10140,Silvally (Veleno),Pokémon Multigene
+5,10141,Silvally (Terra),Pokémon Multigene
+5,10142,Silvally (Roccia),Pokémon Multigene
+5,10143,Silvally (Coleottero),Pokémon Multigene
+5,10144,Silvally (Spettro),Pokémon Multigene
+5,10145,Silvally (Acciaio),Pokémon Multigene
+5,10146,Silvally (Fuoco),Pokémon Multigene
+5,10147,Silvally (Acqua),Pokémon Multigene
+5,10148,Silvally (Erba),Pokémon Multigene
+5,10149,Silvally (Elettro),Pokémon Multigene
+5,10150,Silvally (Psico),Pokémon Multigene
+5,10151,Silvally (Ghiaccio),Pokémon Multigene
+5,10152,Silvally (Drago),Pokémon Multigene
+5,10153,Silvally (Buio),Pokémon Multigene
+5,10154,Silvally (Folletto),Pokémon Multigene
+5,10155,Minior (Forma Nucleo),Pokémon Meteora
+5,10156,Rockruff (Mente Locale),Pokémon Cagnolino
+5,10157,Lycanroc (Forma Crepuscolo),Pokémon Lupo
+5,10158,Necrozma (Criniera del Vespro),Pokémon Prisma
+5,10159,Necrozma (Ali dell’Aurora),Pokémon Prisma
+5,10160,UltraNecrozma,Pokémon Prisma
+5,10161,Pikachu compagno,Pokémon Topo
+5,10162,Eevee compagno,Pokémon Evoluzione
+5,10163,Meowth (Forma di Galar),Pokémon Graffimiao
+5,10164,Ponyta (Forma di Galar),Pokémon Singolcorno
+5,10165,Rapidash (Forma di Galar),Pokémon Singolcorno
+5,10166,Farfetch’d (Forma di Galar),Pokémon Selvanatra
+5,10167,Weezing (Forma di Galar),Pokémon Velenuvola
+5,10168,Mr. Mime (Forma di Galar),Pokémon Danza
+5,10169,Corsola (Forma di Galar),Pokémon Corallo
+5,10170,Zigzagoon (Forma di Galar),Pokémon Procione
+5,10171,Linoone (Forma di Galar),Pokémon Sfrecciante
+5,10172,Darumaka (Forma di Galar),Pokémon Daruma
+5,10173,Darmanitan (Forma di Galar) (Stato Zen),Pokémon Daruma
+5,10174,Darmanitan (Forma di Galar) (Stato Normale),Pokémon Altefiamme
+5,10175,Yamask (Forma di Galar),Pokémon Fatuanima
+5,10176,Stunfisk (Forma di Galar),Pokémon Trappola
+5,10177,Toxtricity (Forma Basso),Pokémon Punk
+5,10178,Eiscue (Liquefaccia),Pokémon Pinguino
+5,10179,Indeedee (Femmina),Pokémon Emozione
+5,10180,Zacian (Re delle Spade),Pokémon Guerriero
+5,10181,Zamazenta (Re degli Scudi),Pokémon Guerriero
+5,10182,Eternatus (Dynamax Infinito),Pokémon Gigante
+5,10183,Slowpoke (Forma di Galar),Pokémon Ronfone
+5,10184,Slowbro (ガラルのすがた),Pokémon Paguro
+5,10185,Urshifu (Stile Pluricolpo),Pokémon Kung Fu
+5,10186,Articuno (ガラルのすがた),Pokémon Sanguefreddo
+5,10187,Zapdos (ガラルのすがた),Pokémon Zampeforti
+5,10188,Moltres (ガラルのすがた),Pokémon Malvagità
+5,10189,Slowking (ガラルのすがた),Pokémon Stregone
+5,10190,Calyrex (Cavaliere Glaciale),Pokémon Imperatore
+5,10191,Calyrex (Cavaliere Spettrale),Pokémon Imperatore
+5,10192,Growlithe (Forma di Hisui),Pokémon Esplorante
+5,10193,Arcanine (Forma di Hisui),Pokémon Leggenda
+5,10194,Voltorb (Forma di Hisui),Pokémon Sfera
+5,10195,Electrode (Forma di Hisui),Pokémon Sfera
+5,10196,Typhlosion (Forma di Hisui),Pokémon Fuocofatuo
+5,10197,Qwilfish (Forma di Hisui),Pokémon Pallone
+5,10198,Sneasel (Forma di Hisui),Pokémon Lamartigli
+5,10199,Dialga (Forma Originale),Pokémon Tempo
+5,10200,Palkia (Forma Originale),Pokémon Spazio
+5,10201,Samurott (Forma di Hisui),Pokémon Dignità
+5,10202,Lilligant (Forma di Hisui),Pokémon Piroetta
+5,10203,Basculin (Forma Lineabianca),Pokémon Docilità
+5,10204,Zorua (Forma di Hisui),Pokémon Rancorvolpe
+5,10205,Zoroark (Forma di Hisui),Pokémon Maledivolpe
+5,10206,Braviary (Forma di Hisui),Pokémon Baldogrido
+5,10207,Sliggoo (Forma di Hisui),Pokémon Lumachina
+5,10208,Goodra (Forma di Hisui),Pokémon Serraguscio
+5,10209,Avalugg (Forma di Hisui),Pokémon Iceberg
+5,10210,Decidueye (Forma di Hisui),Pokémon Alifreccia
+5,10211,Basculegion (Femmina),Pokémon Pescegrosso
+5,10212,Enamorus (Forma Totem),Pokémon Amoreodio
+5,10213,Tauros (Forma di Paldea),Pokémon Torobrado
+5,10214,Tauros (Forma di Paldea),Pokémon Torobrado
+5,10215,Tauros (Forma di Paldea),Pokémon Torobrado
+5,10216,Wooper (Forma di Paldea),Pokémon Velenpesce
+5,10217,Oinkologne (Femmina),Pokémon Porcellino
+5,10218,Squawkabilly (Piume Azzurre),Pokémon Pappagallo
+5,10219,Squawkabilly (Piume Gialle),Pokémon Pappagallo
+5,10220,Squawkabilly (Piume Bianche),Pokémon Pappagallo
+5,10221,Palafin (Forma Possente),Pokémon Eroe
+5,10222,Gimmighoul (Forma Ambulante),Pokémon Trovatesori
+5,10223,Ursaluna (Luna Cremisi),Pokémon Torba
+5,10224,Ogerpon (Maschera Pozzo),Pokémon Maschera
+5,10225,Ogerpon (Maschera Focolare),Pokémon Maschera
+5,10226,Ogerpon (Maschera Fondamenta),Pokémon Maschera
+5,10227,Ogerpon (Maschera Turchese Tera),Pokémon Maschera
+5,10228,Ogerpon (Maschera Pozzo Tera),Pokémon Maschera
+5,10229,Ogerpon (Maschera Focolare Tera),Pokémon Maschera
+5,10230,Ogerpon (Maschera Fondamenta Tera),Pokémon Maschera
+5,10231,Terapagos (Forma Teracristal),Pokémon Teracristal
+5,10232,Terapagos (Forma Astrale),Pokémon Teracristal
 6,1,Bulbasaur,Pokémon Semilla
 6,2,Ivysaur,Pokémon Semilla
 6,3,Venusaur,Pokémon Semilla
@@ -7393,226 +7333,214 @@ language_id,pokemon_id,name,category
 6,10022,Arceus (Hielo),Pokémon Alfa
 6,10023,Arceus (Dragón),Pokémon Alfa
 6,10024,Arceus (Siniestro),Pokémon Alfa
-6,10025,Arceus (???),Pokémon Alfa
-6,10026,Rotom Calor,Pokémon Plasma
-6,10027,Rotom Lavado,Pokémon Plasma
-6,10028,Rotom Frío,Pokémon Plasma
-6,10029,Rotom Ventilador,Pokémon Plasma
-6,10030,Rotom Corte,Pokémon Plasma
-6,10031,Giratina (Forma Origen),Pokémon Renegado
-6,10032,Shaymin (Forma Cielo),Pokémon Gratitud
-6,10033,Pichu Picoreja,Pokémon Ratoncito
-6,10034,Basculin (Forma Raya Azul),Pokémon Violento
-6,10035,Darmanitan (Modo Daruma),Pokémon Candente
-6,10036,Meloetta (Forma Danza),Pokémon Melodía
-6,10037,Tornadus (Forma Tótem),Pokémon Torbellino
-6,10038,Thundurus (Forma Tótem),Pokémon Centella
-6,10039,Landorus (Forma Tótem),Pokémon Fertilidad
-6,10040,Kyurem Blanco,Pokémon Frontera
-6,10041,Kyurem Negro,Pokémon Frontera
-6,10042,Mega-Venusaur,Pokémon Semilla
-6,10043,Mega-Charizard X,Pokémon Llama
-6,10044,Mega-Charizard Y,Pokémon Llama
-6,10045,Mega-Blastoise,Pokémon Armazón
-6,10046,Mega-Alakazam,Pokémon Psi
-6,10047,Mega-Gengar,Pokémon Sombra
-6,10048,Mega-Kangaskhan,Pokémon Maternal
-6,10049,Mega-Pinsir,Pokémon Escarabajo
-6,10050,Mega-Gyarados,Pokémon Atrocidad
-6,10051,Mega-Aerodactyl,Pokémon Fósil
-6,10052,Mega-Mewtwo X,Pokémon Genético
-6,10053,Mega-Mewtwo Y,Pokémon Genético
-6,10054,Mega-Ampharos,Pokémon Luz
-6,10055,Mega-Scizor,Pokémon Tenaza
-6,10056,Mega-Heracross,Pokémon Cuerno
-6,10057,Mega-Houndoom,Pokémon Siniestro
-6,10058,Mega-Tyranitar,Pokémon Coraza
-6,10059,Mega-Blaziken,Pokémon Llameante
-6,10060,Mega-Gardevoir,Pokémon Envolvente
-6,10061,Mega-Mawile,Pokémon Tramposo
-6,10062,Mega-Aggron,Pokémon Coraza Férrea
-6,10063,Mega-Medicham,Pokémon Meditador
-6,10064,Mega-Manectric,Pokémon Descarga
-6,10065,Mega-Banette,Pokémon Marioneta
-6,10066,Mega-Absol,Pokémon Catástrofe
-6,10067,Mega-Latias,Pokémon Eón
-6,10068,Mega-Latios,Pokémon Eón
-6,10069,Mega-Garchomp,Pokémon Mach
-6,10070,Mega-Lucario,Pokémon Aura
-6,10071,Mega-Abomasnow,Pokémon Árbol Nieve
-6,10072,Arceus (Hada),Pokémon Alfa
-6,10073,Floette (Flor Eterna),Pokémon Monoflor
-6,10074,Meowstic (Hembra),Pokémon Autocontrol
-6,10075,Aegislash (Forma Filo),Pokémon Espada Real
-6,10076,Pumpkaboo (Tamaño Pequeño),Pokémon Calabaza
-6,10077,Pumpkaboo (Tamaño Grande),Pokémon Calabaza
-6,10078,Pumpkaboo (Tamaño Extragrande),Pokémon Calabaza
-6,10079,Gourgeist (Tamaño Pequeño),Pokémon Calabaza
-6,10080,Gourgeist (Tamaño Grande),Pokémon Calabaza
-6,10081,Gourgeist (Tamaño Extragrande),Pokémon Calabaza
-6,10082,Mega-Beedrill,Pokémon Abeja Veneno
-6,10083,Mega-Pidgeot,Pokémon Pájaro
-6,10084,Pikachu Roquera,Pokémon Ratón
-6,10085,Pikachu Aristócrata,Pokémon Ratón
-6,10086,Pikachu Superstar,Pokémon Ratón
-6,10087,Pikachu Erudita,Pokémon Ratón
-6,10088,Pikachu Enmascarada,Pokémon Ratón
-6,10089,Pikachu Coqueta,Pokémon Ratón
-6,10090,Mega-Slowbro,Pokémon Ermitaño
-6,10091,Mega-Steelix,Pokémon Serpiente Férrea
-6,10092,Mega-Sceptile,Pokémon Bosque
-6,10093,Mega-Swampert,Pokémon Pez Lodo
-6,10094,Mega-Sableye,Pokémon Oscuridad
-6,10095,Mega-Sharpedo,Pokémon Voraz
-6,10096,Mega-Camerupt,Pokémon Erupción
-6,10097,Mega-Altaria,Pokémon Cantor
-6,10098,Mega-Glalie,Pokémon Cara
-6,10099,Mega-Salamence,Pokémon Dragón
-6,10100,Mega-Metagross,Pokémon Pata Hierro
-6,10101,Kyogre Primigenia,Pokémon Cuenca Mar
-6,10102,Groudon Primigenia,Pokémon Continente
-6,10103,Mega-Rayquaza,Pokémon Cielo
-6,10104,Mega-Lopunny,Pokémon Conejo
-6,10105,Mega-Gallade,Pokémon Cuchilla
-6,10106,Mega-Audino,Pokémon Escucha
-6,10107,Mega-Diancie,Pokémon Joya
-6,10108,Hoopa Desatado,Pokémon Genio Burlón
-6,10109,Rattata (Forma de Alola),Pokémon Ratón
-6,10110,Raticate (Forma de Alola),Pokémon Ratón
-6,10111,Raticate dominante,Pokémon Ratón
-6,10112,Pikachu (Gorra),Pokémon Ratón
-6,10113,Raichu (Forma de Alola),Pokémon Ratón
-6,10114,Sandshrew (Forma de Alola),Pokémon Ratón
-6,10115,Sandslash (Forma de Alola),Pokémon Ratón
-6,10116,Vulpix (Forma de Alola),Pokémon Zorro
-6,10117,Ninetales (Forma de Alola),Pokémon Zorro
-6,10118,Diglett (Forma de Alola),Pokémon Topo
-6,10119,Dugtrio (Forma de Alola),Pokémon Topo
-6,10120,Meowth (Forma de Alola),Pokémon Gato Araña
-6,10121,Persian (Forma de Alola),Pokémon Gato Fino
-6,10122,Geodude (Forma de Alola),Pokémon Roca
-6,10123,Graveler (Forma de Alola),Pokémon Roca
-6,10124,Golem (Forma de Alola),Pokémon Megatón
-6,10125,Grimer (Forma de Alola),Pokémon Lodo
-6,10126,Muk (Forma de Alola),Pokémon Lodo
-6,10127,Exeggutor (Forma de Alola),Pokémon Coco
-6,10128,Marowak (Forma de Alola),Pokémon Apilahueso
-6,10129,Greninja (Fuerte Afecto),Pokémon Ninja
-6,10130,Greninja Ash,Pokémon Ninja
-6,10131,Zygarde 10% (Rompeaura),Pokémon Equilibrio
-6,10132,Zygarde 10% (Agrupamiento),Pokémon Equilibrio
-6,10133,Zygarde 50% (Agrupamiento),Pokémon Equilibrio
-6,10134,Zygarde Completa,Pokémon Equilibrio
-6,10135,Gumshoos dominante,Pokémon Vigilante
-6,10136,Vikavolt dominante,Pokémon Escarabajo
-6,10137,Oricorio (Estilo Animado),Pokémon Danza
-6,10138,Oricorio (Estilo Plácido),Pokémon Danza
-6,10139,Oricorio (Estilo Refinado),Pokémon Danza
-6,10140,Lycanroc (Forma Nocturna),Pokémon Lobo
-6,10141,Wishiwashi (Forma Banco),Pokémon Pececillo
-6,10142,Lurantis dominante,Pokémon Filo Flor
-6,10143,Salazzle dominante,Pokémon Lagartoxina
-6,10144,Silvally (Lucha),Pokémon Multigénico
-6,10145,Silvally (Volador),Pokémon Multigénico
-6,10146,Silvally (Veneno),Pokémon Multigénico
-6,10147,Silvally (Tierra),Pokémon Multigénico
-6,10148,Silvally (Roca),Pokémon Multigénico
-6,10149,Silvally (Bicho),Pokémon Multigénico
-6,10150,Silvally (Fantasma),Pokémon Multigénico
-6,10151,Silvally (Acero),Pokémon Multigénico
-6,10152,Silvally (Fuego),Pokémon Multigénico
-6,10153,Silvally (Agua),Pokémon Multigénico
-6,10154,Silvally (Planta),Pokémon Multigénico
-6,10155,Silvally (Eléctrico),Pokémon Multigénico
-6,10156,Silvally (Psíquico),Pokémon Multigénico
-6,10157,Silvally (Hielo),Pokémon Multigénico
-6,10158,Silvally (Dragón),Pokémon Multigénico
-6,10159,Silvally (Siniestro),Pokémon Multigénico
-6,10160,Silvally (Hada),Pokémon Multigénico
-6,10161,Minior (Forma Núcleo),Pokémon Meteoro
-6,10162,Mimikyu dominante,Pokémon Disfraz
-6,10163,Kommo-o dominante,Pokémon Escamas
-6,10164,Marowak dominante,Pokémon Apilahueso
-6,10165,Ribombee dominante,Pokémon Mosca Abeja
-6,10166,Rockruff (Ritmo Propio),Pokémon Perrito
-6,10167,Lycanroc (Forma Crepuscular),Pokémon Lobo
-6,10168,Araquanid dominante,Pokémon Pompa
-6,10169,Togedemaru dominante,Pokémon Bolita
-6,10170,Necrozma (Melena Crepuscular),Pokémon Prisma
-6,10171,Necrozma (Alas del Alba),Pokémon Prisma
-6,10172,Ultra-Necrozma,Pokémon Prisma
-6,10173,Compañero Pikachu,Pokémon Ratón
-6,10174,Compañero Eevee,Pokémon Evolución
-6,10175,Meowth (Forma de Galar),Pokémon Gato Araña
-6,10176,Ponyta (Forma de Galar),Pokémon Unicorne
-6,10177,Rapidash (Forma de Galar),Pokémon Unicorne
-6,10178,Farfetch’d (Forma de Galar),Pokémon Pato Salvaje
-6,10179,Weezing (Forma de Galar),Pokémon Gas Venenoso
-6,10180,Mr. Mime (Forma de Galar),Pokémon Danza
-6,10181,Corsola (Forma de Galar),Pokémon Coral
-6,10182,Zigzagoon (Forma de Galar),Pokémon Mapachito
-6,10183,Linoone (Forma de Galar),Pokémon Lanzado
-6,10184,Darumaka (Forma de Galar),Pokémon Daruma
-6,10185,Darmanitan (Forma de Galar) (Modo Daruma),Pokémon Daruma
-6,10186,Darmanitan (Forma de Galar) (Modo Normal),Pokémon Candente
-6,10187,Yamask (Forma de Galar),Pokémon Espíritu
-6,10188,Stunfisk (Forma de Galar),Pokémon Trampa
-6,10189,Toxtricity (Forma Grave),Pokémon Punki
-6,10190,Eiscue (Cara Deshielo),Pokémon Pingüino
-6,10191,Indeedee (Hembra),Pokémon Sensorio
-6,10192,Zacian (Espada Suprema),Pokémon Guerrero
-6,10193,Zamazenta (Escudo Supremo),Pokémon Guerrero
-6,10194,Eternatus (Dinamax Infinito),Pokémon Gigantesco
-6,10195,Slowpoke (Forma de Galar),Pokémon Atontado
-6,10196,Slowbro (ガラルのすがた),Pokémon Ermitaño
-6,10197,Urshifu (Estilo Fluido),Pokémon Kung-Fu
-6,10198,Articuno (ガラルのすがた),Pokémon Calculador
-6,10199,Zapdos (ガラルのすがた),Pokémon Patas Recias
-6,10200,Moltres (ガラルのすがた),Pokémon Malignidad
-6,10201,Slowking (ガラルのすがた),Pokémon Chamán
-6,10202,Calyrex (Jinete Glacial),Pokémon Emperador
-6,10203,Calyrex (Jinete Espectral),Pokémon Emperador
-6,10204,Growlithe (Forma de Hisui),Pokémon Explorador
-6,10205,Arcanine (Forma de Hisui),Pokémon Leyenda
-6,10206,Voltorb (Forma de Hisui),Pokémon Esfera
-6,10207,Electrode (Forma de Hisui),Pokémon Esfera
-6,10208,Typhlosion (Forma de Hisui),Pokémon Fuego Fatuo
-6,10209,Qwilfish (Forma de Hisui),Pokémon Globo
-6,10210,Sneasel (Forma de Hisui),Pokémon Garra Filo
-6,10211,Dialga (Forma Origen),Pokémon Temporal
-6,10212,Palkia (Forma Origen),Pokémon Espacial
-6,10213,Samurott (Forma de Hisui),Pokémon Majestuoso
-6,10214,Lilligant (Forma de Hisui),Pokémon Pirueta
-6,10215,Basculin (Forma Raya Blanca),Pokémon Manso
-6,10216,Zorua (Forma de Hisui),Pokémon Zorro Rencor
-6,10217,Zoroark (Forma de Hisui),Pokémon Maldizorro
-6,10218,Braviary (Forma de Hisui),Pokémon Grito Guerra
-6,10219,Sliggoo (Forma de Hisui),Pokémon Caracol
-6,10220,Goodra (Forma de Hisui),Pokémon Retracción
-6,10221,Avalugg (Forma de Hisui),Pokémon Iceberg
-6,10222,Decidueye (Forma de Hisui),Pokémon Pluma Flecha
-6,10223,Basculegion (Hembra),Pokémon Gran Pez
-6,10224,Enamorus (Forma Tótem),Pokémon Amorodio
-6,10225,Tauros (Forma de Paldea),Pokémon Toro Bravo
-6,10226,Tauros (Forma de Paldea),Pokémon Toro Bravo
-6,10227,Tauros (Forma de Paldea),Pokémon Toro Bravo
-6,10228,Wooper (Forma de Paldea),Pokémon Pez Veneno
-6,10229,Oinkologne (Hembra),Pokémon Gorrino
-6,10230,Squawkabilly (Plumaje Azul),Pokémon Loro
-6,10231,Squawkabilly (Plumaje Amarillo),Pokémon Loro
-6,10232,Squawkabilly (Plumaje Blanco),Pokémon Loro
-6,10233,Palafin (Forma Heroica),Pokémon Héroe
-6,10234,Gimmighoul (Forma Andante),Pokémon Cazatesoros
-6,10235,Ursaluna (Luna Carmesí),Pokémon Turba
-6,10236,Ogerpon (Máscara Fuente),Pokémon Máscara
-6,10237,Ogerpon (Máscara Horno),Pokémon Máscara
-6,10238,Ogerpon (Máscara Cimiento),Pokémon Máscara
-6,10239,Ogerpon (Máscara Turquesa Tera),Pokémon Máscara
-6,10240,Ogerpon (Máscara Fuente Tera),Pokémon Máscara
-6,10241,Ogerpon (Máscara Horno Tera),Pokémon Máscara
-6,10242,Ogerpon (Máscara Cimiento Tera),Pokémon Máscara
-6,10243,Terapagos (Forma Teracristal),Pokémon Teracristal
-6,10244,Terapagos (Forma Astral),Pokémon Teracristal
+6,10025,Rotom Calor,Pokémon Plasma
+6,10026,Rotom Lavado,Pokémon Plasma
+6,10027,Rotom Frío,Pokémon Plasma
+6,10028,Rotom Ventilador,Pokémon Plasma
+6,10029,Rotom Corte,Pokémon Plasma
+6,10030,Giratina (Forma Origen),Pokémon Renegado
+6,10031,Shaymin (Forma Cielo),Pokémon Gratitud
+6,10032,Pichu Picoreja,Pokémon Ratoncito
+6,10033,Basculin (Forma Raya Azul),Pokémon Violento
+6,10034,Darmanitan (Modo Daruma),Pokémon Candente
+6,10035,Meloetta (Forma Danza),Pokémon Melodía
+6,10036,Tornadus (Forma Tótem),Pokémon Torbellino
+6,10037,Thundurus (Forma Tótem),Pokémon Centella
+6,10038,Landorus (Forma Tótem),Pokémon Fertilidad
+6,10039,Kyurem Blanco,Pokémon Frontera
+6,10040,Kyurem Negro,Pokémon Frontera
+6,10041,Mega-Venusaur,Pokémon Semilla
+6,10042,Mega-Charizard X,Pokémon Llama
+6,10043,Mega-Charizard Y,Pokémon Llama
+6,10044,Mega-Blastoise,Pokémon Armazón
+6,10045,Mega-Alakazam,Pokémon Psi
+6,10046,Mega-Gengar,Pokémon Sombra
+6,10047,Mega-Kangaskhan,Pokémon Maternal
+6,10048,Mega-Pinsir,Pokémon Escarabajo
+6,10049,Mega-Gyarados,Pokémon Atrocidad
+6,10050,Mega-Aerodactyl,Pokémon Fósil
+6,10051,Mega-Mewtwo X,Pokémon Genético
+6,10052,Mega-Mewtwo Y,Pokémon Genético
+6,10053,Mega-Ampharos,Pokémon Luz
+6,10054,Mega-Scizor,Pokémon Tenaza
+6,10055,Mega-Heracross,Pokémon Cuerno
+6,10056,Mega-Houndoom,Pokémon Siniestro
+6,10057,Mega-Tyranitar,Pokémon Coraza
+6,10058,Mega-Blaziken,Pokémon Llameante
+6,10059,Mega-Gardevoir,Pokémon Envolvente
+6,10060,Mega-Mawile,Pokémon Tramposo
+6,10061,Mega-Aggron,Pokémon Coraza Férrea
+6,10062,Mega-Medicham,Pokémon Meditador
+6,10063,Mega-Manectric,Pokémon Descarga
+6,10064,Mega-Banette,Pokémon Marioneta
+6,10065,Mega-Absol,Pokémon Catástrofe
+6,10066,Mega-Latias,Pokémon Eón
+6,10067,Mega-Latios,Pokémon Eón
+6,10068,Mega-Garchomp,Pokémon Mach
+6,10069,Mega-Lucario,Pokémon Aura
+6,10070,Mega-Abomasnow,Pokémon Árbol Nieve
+6,10071,Arceus (Hada),Pokémon Alfa
+6,10072,Floette (Flor Eterna),Pokémon Monoflor
+6,10073,Meowstic (Hembra),Pokémon Autocontrol
+6,10074,Aegislash (Forma Filo),Pokémon Espada Real
+6,10075,Pumpkaboo (Tamaño Pequeño),Pokémon Calabaza
+6,10076,Pumpkaboo (Tamaño Grande),Pokémon Calabaza
+6,10077,Pumpkaboo (Tamaño Extragrande),Pokémon Calabaza
+6,10078,Gourgeist (Tamaño Pequeño),Pokémon Calabaza
+6,10079,Gourgeist (Tamaño Grande),Pokémon Calabaza
+6,10080,Gourgeist (Tamaño Extragrande),Pokémon Calabaza
+6,10081,Mega-Beedrill,Pokémon Abeja Veneno
+6,10082,Mega-Pidgeot,Pokémon Pájaro
+6,10083,Pikachu Roquera,Pokémon Ratón
+6,10084,Pikachu Aristócrata,Pokémon Ratón
+6,10085,Pikachu Superstar,Pokémon Ratón
+6,10086,Pikachu Erudita,Pokémon Ratón
+6,10087,Pikachu Enmascarada,Pokémon Ratón
+6,10088,Pikachu Coqueta,Pokémon Ratón
+6,10089,Mega-Slowbro,Pokémon Ermitaño
+6,10090,Mega-Steelix,Pokémon Serpiente Férrea
+6,10091,Mega-Sceptile,Pokémon Bosque
+6,10092,Mega-Swampert,Pokémon Pez Lodo
+6,10093,Mega-Sableye,Pokémon Oscuridad
+6,10094,Mega-Sharpedo,Pokémon Voraz
+6,10095,Mega-Camerupt,Pokémon Erupción
+6,10096,Mega-Altaria,Pokémon Cantor
+6,10097,Mega-Glalie,Pokémon Cara
+6,10098,Mega-Salamence,Pokémon Dragón
+6,10099,Mega-Metagross,Pokémon Pata Hierro
+6,10100,Kyogre Primigenia,Pokémon Cuenca Mar
+6,10101,Groudon Primigenia,Pokémon Continente
+6,10102,Mega-Rayquaza,Pokémon Cielo
+6,10103,Mega-Lopunny,Pokémon Conejo
+6,10104,Mega-Gallade,Pokémon Cuchilla
+6,10105,Mega-Audino,Pokémon Escucha
+6,10106,Mega-Diancie,Pokémon Joya
+6,10107,Hoopa Desatado,Pokémon Genio Burlón
+6,10108,Rattata (Forma de Alola),Pokémon Ratón
+6,10109,Raticate (Forma de Alola),Pokémon Ratón
+6,10110,Pikachu (Gorra),Pokémon Ratón
+6,10111,Raichu (Forma de Alola),Pokémon Ratón
+6,10112,Sandshrew (Forma de Alola),Pokémon Ratón
+6,10113,Sandslash (Forma de Alola),Pokémon Ratón
+6,10114,Vulpix (Forma de Alola),Pokémon Zorro
+6,10115,Ninetales (Forma de Alola),Pokémon Zorro
+6,10116,Diglett (Forma de Alola),Pokémon Topo
+6,10117,Dugtrio (Forma de Alola),Pokémon Topo
+6,10118,Meowth (Forma de Alola),Pokémon Gato Araña
+6,10119,Persian (Forma de Alola),Pokémon Gato Fino
+6,10120,Geodude (Forma de Alola),Pokémon Roca
+6,10121,Graveler (Forma de Alola),Pokémon Roca
+6,10122,Golem (Forma de Alola),Pokémon Megatón
+6,10123,Grimer (Forma de Alola),Pokémon Lodo
+6,10124,Muk (Forma de Alola),Pokémon Lodo
+6,10125,Exeggutor (Forma de Alola),Pokémon Coco
+6,10126,Marowak (Forma de Alola),Pokémon Apilahueso
+6,10127,Greninja (Fuerte Afecto),Pokémon Ninja
+6,10128,Greninja Ash,Pokémon Ninja
+6,10129,Zygarde 10% (Rompeaura),Pokémon Equilibrio
+6,10130,Zygarde 10% (Agrupamiento),Pokémon Equilibrio
+6,10131,Zygarde 50% (Agrupamiento),Pokémon Equilibrio
+6,10132,Zygarde Completa,Pokémon Equilibrio
+6,10133,Oricorio (Estilo Animado),Pokémon Danza
+6,10134,Oricorio (Estilo Plácido),Pokémon Danza
+6,10135,Oricorio (Estilo Refinado),Pokémon Danza
+6,10136,Lycanroc (Forma Nocturna),Pokémon Lobo
+6,10137,Wishiwashi (Forma Banco),Pokémon Pececillo
+6,10138,Silvally (Lucha),Pokémon Multigénico
+6,10139,Silvally (Volador),Pokémon Multigénico
+6,10140,Silvally (Veneno),Pokémon Multigénico
+6,10141,Silvally (Tierra),Pokémon Multigénico
+6,10142,Silvally (Roca),Pokémon Multigénico
+6,10143,Silvally (Bicho),Pokémon Multigénico
+6,10144,Silvally (Fantasma),Pokémon Multigénico
+6,10145,Silvally (Acero),Pokémon Multigénico
+6,10146,Silvally (Fuego),Pokémon Multigénico
+6,10147,Silvally (Agua),Pokémon Multigénico
+6,10148,Silvally (Planta),Pokémon Multigénico
+6,10149,Silvally (Eléctrico),Pokémon Multigénico
+6,10150,Silvally (Psíquico),Pokémon Multigénico
+6,10151,Silvally (Hielo),Pokémon Multigénico
+6,10152,Silvally (Dragón),Pokémon Multigénico
+6,10153,Silvally (Siniestro),Pokémon Multigénico
+6,10154,Silvally (Hada),Pokémon Multigénico
+6,10155,Minior (Forma Núcleo),Pokémon Meteoro
+6,10156,Rockruff (Ritmo Propio),Pokémon Perrito
+6,10157,Lycanroc (Forma Crepuscular),Pokémon Lobo
+6,10158,Necrozma (Melena Crepuscular),Pokémon Prisma
+6,10159,Necrozma (Alas del Alba),Pokémon Prisma
+6,10160,Ultra-Necrozma,Pokémon Prisma
+6,10161,Compañero Pikachu,Pokémon Ratón
+6,10162,Compañero Eevee,Pokémon Evolución
+6,10163,Meowth (Forma de Galar),Pokémon Gato Araña
+6,10164,Ponyta (Forma de Galar),Pokémon Unicorne
+6,10165,Rapidash (Forma de Galar),Pokémon Unicorne
+6,10166,Farfetch’d (Forma de Galar),Pokémon Pato Salvaje
+6,10167,Weezing (Forma de Galar),Pokémon Gas Venenoso
+6,10168,Mr. Mime (Forma de Galar),Pokémon Danza
+6,10169,Corsola (Forma de Galar),Pokémon Coral
+6,10170,Zigzagoon (Forma de Galar),Pokémon Mapachito
+6,10171,Linoone (Forma de Galar),Pokémon Lanzado
+6,10172,Darumaka (Forma de Galar),Pokémon Daruma
+6,10173,Darmanitan (Forma de Galar) (Modo Daruma),Pokémon Daruma
+6,10174,Darmanitan (Forma de Galar) (Modo Normal),Pokémon Candente
+6,10175,Yamask (Forma de Galar),Pokémon Espíritu
+6,10176,Stunfisk (Forma de Galar),Pokémon Trampa
+6,10177,Toxtricity (Forma Grave),Pokémon Punki
+6,10178,Eiscue (Cara Deshielo),Pokémon Pingüino
+6,10179,Indeedee (Hembra),Pokémon Sensorio
+6,10180,Zacian (Espada Suprema),Pokémon Guerrero
+6,10181,Zamazenta (Escudo Supremo),Pokémon Guerrero
+6,10182,Eternatus (Dinamax Infinito),Pokémon Gigantesco
+6,10183,Slowpoke (Forma de Galar),Pokémon Atontado
+6,10184,Slowbro (ガラルのすがた),Pokémon Ermitaño
+6,10185,Urshifu (Estilo Fluido),Pokémon Kung-Fu
+6,10186,Articuno (ガラルのすがた),Pokémon Calculador
+6,10187,Zapdos (ガラルのすがた),Pokémon Patas Recias
+6,10188,Moltres (ガラルのすがた),Pokémon Malignidad
+6,10189,Slowking (ガラルのすがた),Pokémon Chamán
+6,10190,Calyrex (Jinete Glacial),Pokémon Emperador
+6,10191,Calyrex (Jinete Espectral),Pokémon Emperador
+6,10192,Growlithe (Forma de Hisui),Pokémon Explorador
+6,10193,Arcanine (Forma de Hisui),Pokémon Leyenda
+6,10194,Voltorb (Forma de Hisui),Pokémon Esfera
+6,10195,Electrode (Forma de Hisui),Pokémon Esfera
+6,10196,Typhlosion (Forma de Hisui),Pokémon Fuego Fatuo
+6,10197,Qwilfish (Forma de Hisui),Pokémon Globo
+6,10198,Sneasel (Forma de Hisui),Pokémon Garra Filo
+6,10199,Dialga (Forma Origen),Pokémon Temporal
+6,10200,Palkia (Forma Origen),Pokémon Espacial
+6,10201,Samurott (Forma de Hisui),Pokémon Majestuoso
+6,10202,Lilligant (Forma de Hisui),Pokémon Pirueta
+6,10203,Basculin (Forma Raya Blanca),Pokémon Manso
+6,10204,Zorua (Forma de Hisui),Pokémon Zorro Rencor
+6,10205,Zoroark (Forma de Hisui),Pokémon Maldizorro
+6,10206,Braviary (Forma de Hisui),Pokémon Grito Guerra
+6,10207,Sliggoo (Forma de Hisui),Pokémon Caracol
+6,10208,Goodra (Forma de Hisui),Pokémon Retracción
+6,10209,Avalugg (Forma de Hisui),Pokémon Iceberg
+6,10210,Decidueye (Forma de Hisui),Pokémon Pluma Flecha
+6,10211,Basculegion (Hembra),Pokémon Gran Pez
+6,10212,Enamorus (Forma Tótem),Pokémon Amorodio
+6,10213,Tauros (Forma de Paldea),Pokémon Toro Bravo
+6,10214,Tauros (Forma de Paldea),Pokémon Toro Bravo
+6,10215,Tauros (Forma de Paldea),Pokémon Toro Bravo
+6,10216,Wooper (Forma de Paldea),Pokémon Pez Veneno
+6,10217,Oinkologne (Hembra),Pokémon Gorrino
+6,10218,Squawkabilly (Plumaje Azul),Pokémon Loro
+6,10219,Squawkabilly (Plumaje Amarillo),Pokémon Loro
+6,10220,Squawkabilly (Plumaje Blanco),Pokémon Loro
+6,10221,Palafin (Forma Heroica),Pokémon Héroe
+6,10222,Gimmighoul (Forma Andante),Pokémon Cazatesoros
+6,10223,Ursaluna (Luna Carmesí),Pokémon Turba
+6,10224,Ogerpon (Máscara Fuente),Pokémon Máscara
+6,10225,Ogerpon (Máscara Horno),Pokémon Máscara
+6,10226,Ogerpon (Máscara Cimiento),Pokémon Máscara
+6,10227,Ogerpon (Máscara Turquesa Tera),Pokémon Máscara
+6,10228,Ogerpon (Máscara Fuente Tera),Pokémon Máscara
+6,10229,Ogerpon (Máscara Horno Tera),Pokémon Máscara
+6,10230,Ogerpon (Máscara Cimiento Tera),Pokémon Máscara
+6,10231,Terapagos (Forma Teracristal),Pokémon Teracristal
+6,10232,Terapagos (Forma Astral),Pokémon Teracristal
 7,1,이상해씨,씨앗포켓몬
 7,2,이상해풀,씨앗포켓몬
 7,3,이상해꽃,씨앗포켓몬
@@ -8662,226 +8590,214 @@ language_id,pokemon_id,name,category
 7,10022,아르세우스 (얼음),창조포켓몬
 7,10023,아르세우스 (드래곤),창조포켓몬
 7,10024,아르세우스 (악),창조포켓몬
-7,10025,아르세우스 (???),창조포켓몬
-7,10026,히트로토무,플라스마포켓몬
-7,10027,워시로토무,플라스마포켓몬
-7,10028,프로스트로토무,플라스마포켓몬
-7,10029,스핀로토무,플라스마포켓몬
-7,10030,커트로토무,플라스마포켓몬
-7,10031,기라티나 (오리진폼),반골포켓몬
-7,10032,쉐이미 (스카이폼),감사포켓몬
-7,10033,삐쭉귀 피츄,아기쥐포켓몬
-7,10034,배쓰나이 (청색근의 모습),흉포포켓몬
-7,10035,불비달마 (달마모드),염상포켓몬
-7,10036,메로엣타 (스텝폼),선율포켓몬
-7,10037,토네로스 (영물폼),선풍포켓몬
-7,10038,볼트로스 (영물폼),뇌격포켓몬
-7,10039,랜드로스 (영물폼),풍요포켓몬
-7,10040,화이트큐레무,경계포켓몬
-7,10041,블랙큐레무,경계포켓몬
-7,10042,메가이상해꽃,씨앗포켓몬
-7,10043,메가리자몽X,화염포켓몬
-7,10044,메가리자몽Y,화염포켓몬
-7,10045,메가거북왕,껍질포켓몬
-7,10046,메가후딘,초능력포켓몬
-7,10047,메가팬텀,그림자포켓몬
-7,10048,메가캥카,가족포켓몬
-7,10049,메가쁘사이저,뿔집게포켓몬
-7,10050,메가갸라도스,흉악포켓몬
-7,10051,메가프테라,화석포켓몬
-7,10052,메가뮤츠X,유전자포켓몬
-7,10053,메가뮤츠Y,유전자포켓몬
-7,10054,메가전룡,라이트포켓몬
-7,10055,메가핫삼,집게포켓몬
-7,10056,메가헤라크로스,외뿔포켓몬
-7,10057,메가헬가,다크포켓몬
-7,10058,메가마기라스,갑옷포켓몬
-7,10059,메가번치코,맹화포켓몬
-7,10060,메가가디안,포용포켓몬
-7,10061,메가입치트,배반포켓몬
-7,10062,메가보스로라,철갑옷포켓몬
-7,10063,메가요가램,명상포켓몬
-7,10064,메가썬더볼트,방전포켓몬
-7,10065,메가다크펫,봉제인형포켓몬
-7,10066,메가앱솔,재난포켓몬
-7,10067,메가라티아스,무한포켓몬
-7,10068,메가라티오스,무한포켓몬
-7,10069,메가한카리아스,마하포켓몬
-7,10070,메가루카리오,파동포켓몬
-7,10071,메가눈설왕,얼음나무포켓몬
-7,10072,아르세우스 (페어리),창조포켓몬
-7,10073,플라엣테 (영원의 꽃),한송이포켓몬
-7,10074,냐오닉스 (암컷의 모습),억제포켓몬
-7,10075,킬가르도 (블레이드폼),왕검포켓몬
-7,10076,호바귀 (작은 사이즈),호박포켓몬
-7,10077,호바귀 (큰 사이즈),호박포켓몬
-7,10078,호바귀 (특대 사이즈),호박포켓몬
-7,10079,펌킨인 (작은 사이즈),호박포켓몬
-7,10080,펌킨인 (큰 사이즈),호박포켓몬
-7,10081,펌킨인 (특대 사이즈),호박포켓몬
-7,10082,메가독침붕,독벌포켓몬
-7,10083,메가피죤투,새포켓몬
-7,10084,하드록 피카츄,쥐포켓몬
-7,10085,마담 피카츄,쥐포켓몬
-7,10086,아이돌 피카츄,쥐포켓몬
-7,10087,닥터 피카츄,쥐포켓몬
-7,10088,마스크드 피카츄,쥐포켓몬
-7,10089,옷갈아입기 피카츄,쥐포켓몬
-7,10090,메가야도란,기생포켓몬
-7,10091,메가강철톤,철뱀포켓몬
-7,10092,메가나무킹,밀림포켓몬
-7,10093,메가대짱이,늪물고기포켓몬
-7,10094,메가깜까미,어둠포켓몬
-7,10095,메가샤크니아,난폭포켓몬
-7,10096,메가폭타,분화포켓몬
-7,10097,메가파비코리,허밍포켓몬
-7,10098,메가얼음귀신,얼굴포켓몬
-7,10099,메가보만다,드래곤포켓몬
-7,10100,메가메타그로스,무쇠다리포켓몬
-7,10101,원시가이오가,해저포켓몬
-7,10102,원시그란돈,대륙포켓몬
-7,10103,메가레쿠쟈,천공포켓몬
-7,10104,메가이어롭,토끼포켓몬
-7,10105,메가엘레이드,검포켓몬
-7,10106,메가다부니,히어링포켓몬
-7,10107,메가디안시,보석포켓몬
-7,10108,굴레를 벗어난 후파,마신포켓몬
-7,10109,꼬렛 (알로라의 모습),쥐포켓몬
-7,10110,레트라 (알로라의 모습),쥐포켓몬
-7,10111,주인 레트라,쥐포켓몬
-7,10112,피카츄 (캡),쥐포켓몬
-7,10113,라이츄 (알로라의 모습),쥐포켓몬
-7,10114,모래두지 (알로라의 모습),쥐포켓몬
-7,10115,고지 (알로라의 모습),쥐포켓몬
-7,10116,식스테일 (알로라의 모습),여우포켓몬
-7,10117,나인테일 (알로라의 모습),여우포켓몬
-7,10118,디그다 (알로라의 모습),두더지포켓몬
-7,10119,닥트리오 (알로라의 모습),두더지포켓몬
-7,10120,나옹 (알로라의 모습),요괴고양이포켓몬
-7,10121,페르시온 (알로라의 모습),샴고양이포켓몬
-7,10122,꼬마돌 (알로라의 모습),암석포켓몬
-7,10123,데구리 (알로라의 모습),암석포켓몬
-7,10124,딱구리 (알로라의 모습),메가톤포켓몬
-7,10125,질퍽이 (알로라의 모습),오물포켓몬
-7,10126,질뻐기 (알로라의 모습),오물포켓몬
-7,10127,나시 (알로라의 모습),야자열매포켓몬
-7,10128,텅구리 (알로라의 모습),뼈다귀포켓몬
-7,10129,개굴닌자 (유대변화),시노비포켓몬
-7,10130,지우개굴닌자,시노비포켓몬
-7,10131,10%지가르데 (오라브레이크),질서포켓몬
-7,10132,10%지가르데 (스웜체인지),질서포켓몬
-7,10133,50%지가르데 (스웜체인지),질서포켓몬
-7,10134,퍼펙트지가르데,질서포켓몬
-7,10135,주인 형사구스,잠복포켓몬
-7,10136,주인 투구뿌논,뿔집게포켓몬
-7,10137,춤추새 (파칙파칙스타일),댄스포켓몬
-7,10138,춤추새 (훌라훌라스타일),댄스포켓몬
-7,10139,춤추새 (하늘하늘스타일),댄스포켓몬
-7,10140,루가루암 (한밤중의 모습),늑대포켓몬
-7,10141,약어리 (군집의 모습),잔물고기포켓몬
-7,10142,주인 라란티스,꽃사마귀포켓몬
-7,10143,주인 염뉴트,독도마뱀포켓몬
-7,10144,실버디 (격투),인공포켓몬
-7,10145,실버디 (비행),인공포켓몬
-7,10146,실버디 (독),인공포켓몬
-7,10147,실버디 (땅),인공포켓몬
-7,10148,실버디 (바위),인공포켓몬
-7,10149,실버디 (벌레),인공포켓몬
-7,10150,실버디 (고스트),인공포켓몬
-7,10151,실버디 (강철),인공포켓몬
-7,10152,실버디 (불꽃),인공포켓몬
-7,10153,실버디 (물),인공포켓몬
-7,10154,실버디 (풀),인공포켓몬
-7,10155,실버디 (전기),인공포켓몬
-7,10156,실버디 (에스퍼),인공포켓몬
-7,10157,실버디 (얼음),인공포켓몬
-7,10158,실버디 (드래곤),인공포켓몬
-7,10159,실버디 (악),인공포켓몬
-7,10160,실버디 (페어리),인공포켓몬
-7,10161,메테노 (유성의 코어),유성포켓몬
-7,10162,주인 따라큐,탈포켓몬
-7,10163,주인 짜랑고우거,비늘포켓몬
-7,10164,주인 텅구리,뼈다귀포켓몬
-7,10165,주인 에리본,재니등에포켓몬
-7,10166,암멍이 (마이페이스),강아지포켓몬
-7,10167,루가루암 (황혼의 모습),늑대포켓몬
-7,10168,주인 깨비물거미,수포포켓몬
-7,10169,주인 토게데마루,동글동글포켓몬
-7,10170,네크로즈마 (황혼의 갈기),프리즘포켓몬
-7,10171,네크로즈마 (새벽의 날개),프리즘포켓몬
-7,10172,울트라네크로즈마,프리즘포켓몬
-7,10173,파트너 피카츄,쥐포켓몬
-7,10174,파트너 이브이,진화포켓몬
-7,10175,나옹 (가라르의 모습),요괴고양이포켓몬
-7,10176,포니타 (가라르의 모습),일각포켓몬
-7,10177,날쌩마 (가라르의 모습),일각포켓몬
-7,10178,파오리 (가라르의 모습),청둥오리포켓몬
-7,10179,또도가스 (가라르의 모습),독가스포켓몬
-7,10180,마임맨 (가라르의 모습),댄스포켓몬
-7,10181,코산호 (가라르의 모습),산호포켓몬
-7,10182,지그제구리 (가라르의 모습),앙증너구리포켓몬
-7,10183,직구리 (가라르의 모습),돌진포켓몬
-7,10184,달막화 (가라르의 모습),달마포켓몬
-7,10185,불비달마 (가라르의 모습) (달마모드),달마포켓몬
-7,10186,불비달마 (가라르의 모습) (노말모드),염상포켓몬
-7,10187,데스마스 (가라르의 모습),영혼포켓몬
-7,10188,메더 (가라르의 모습),트랩포켓몬
-7,10189,스트린더 (로우한 모습),펑크포켓몬
-7,10190,빙큐보 (나이스페이스),펭귄포켓몬
-7,10191,에써르 (암컷의 모습),감정포켓몬
-7,10192,자시안 (검왕),강자포켓몬
-7,10193,자마젠타 (방패왕),강자포켓몬
-7,10194,무한다이노 (무한다이맥스),거대포켓몬
-7,10195,야돈 (가라르의 모습),얼간이포켓몬
-7,10196,야도란 (ガラルのすがた),기생포켓몬
-7,10197,우라오스 (연격의 태세),권법포켓몬
-7,10198,프리져 (ガラルのすがた),냉혹포켓몬
-7,10199,썬더 (ガラルのすがた),건각포켓몬
-7,10200,파이어 (ガラルのすがた),사악포켓몬
-7,10201,야도킹 (ガラルのすがた),술사포켓몬
-7,10202,버드렉스 (백마 탄 모습),엠페러포켓몬
-7,10203,버드렉스 (흑마 탄 모습),엠페러포켓몬
-7,10204,가디 (히스이의 모습),망보기포켓몬
-7,10205,윈디 (히스이의 모습),전설포켓몬
-7,10206,찌리리공 (히스이의 모습),구체포켓몬
-7,10207,붐볼 (히스이의 모습),구체포켓몬
-7,10208,블레이범 (히스이의 모습),도깨비불포켓몬
-7,10209,침바루 (히스이의 모습),풍선포켓몬
-7,10210,포푸니 (히스이의 모습),갈고리손톱포켓몬
-7,10211,디아루가 (오리진폼),시간포켓몬
-7,10212,펄기아 (오리진폼),공간포켓몬
-7,10213,대검귀 (히스이의 모습),관록포켓몬
-7,10214,드레디어 (히스이의 모습),스핀포켓몬
-7,10215,배쓰나이 (백색근의 모습),온후포켓몬
-7,10216,조로아 (히스이의 모습),원한여우포켓몬
-7,10217,조로아크 (히스이의 모습),저주여우포켓몬
-7,10218,워글 (히스이의 모습),부르짖기포켓몬
-7,10219,미끄네일 (히스이의 모습),달팽이포켓몬
-7,10220,미끄래곤 (히스이의 모습),껍질숨기포켓몬
-7,10221,크레베이스 (히스이의 모습),빙산포켓몬
-7,10222,모크나이퍼 (히스이의 모습),화살깃포켓몬
-7,10223,대쓰여너 (암컷의 모습),큰물고기포켓몬
-7,10224,러브로스 (영물폼),애증포켓몬
-7,10225,켄타로스 (팔데아의 모습),성난소포켓몬
-7,10226,켄타로스 (팔데아의 모습),성난소포켓몬
-7,10227,켄타로스 (팔데아의 모습),성난소포켓몬
-7,10228,우파 (팔데아의 모습),독물고기포켓몬
-7,10229,퍼퓨돈 (암컷의 모습),돼지포켓몬
-7,10230,시비꼬 (블루 페더),잉꼬포켓몬
-7,10231,시비꼬 (옐로 페더),잉꼬포켓몬
-7,10232,시비꼬 (화이트 페더),잉꼬포켓몬
-7,10233,돌핀맨 (마이티폼),히어로포켓몬
-7,10234,모으령 (도보폼),보물찾기포켓몬
-7,10235,다투곰 (붉은 달),이탄포켓몬
-7,10236,오거폰 (우물의 가면),가면포켓몬
-7,10237,오거폰 (화덕의 가면),가면포켓몬
-7,10238,오거폰 (주춧돌의 가면),가면포켓몬
-7,10239,오거폰 (벽록의 가면 Tera),가면포켓몬
-7,10240,오거폰 (우물의 가면 Tera),가면포켓몬
-7,10241,오거폰 (화덕의 가면 Tera),가면포켓몬
-7,10242,오거폰 (주춧돌의 가면 Tera),가면포켓몬
-7,10243,테라파고스 (테라스탈폼),테라스탈포켓몬
-7,10244,테라파고스 (스텔라폼),테라스탈포켓몬
+7,10025,히트로토무,플라스마포켓몬
+7,10026,워시로토무,플라스마포켓몬
+7,10027,프로스트로토무,플라스마포켓몬
+7,10028,스핀로토무,플라스마포켓몬
+7,10029,커트로토무,플라스마포켓몬
+7,10030,기라티나 (오리진폼),반골포켓몬
+7,10031,쉐이미 (스카이폼),감사포켓몬
+7,10032,삐쭉귀 피츄,아기쥐포켓몬
+7,10033,배쓰나이 (청색근의 모습),흉포포켓몬
+7,10034,불비달마 (달마모드),염상포켓몬
+7,10035,메로엣타 (스텝폼),선율포켓몬
+7,10036,토네로스 (영물폼),선풍포켓몬
+7,10037,볼트로스 (영물폼),뇌격포켓몬
+7,10038,랜드로스 (영물폼),풍요포켓몬
+7,10039,화이트큐레무,경계포켓몬
+7,10040,블랙큐레무,경계포켓몬
+7,10041,메가이상해꽃,씨앗포켓몬
+7,10042,메가리자몽X,화염포켓몬
+7,10043,메가리자몽Y,화염포켓몬
+7,10044,메가거북왕,껍질포켓몬
+7,10045,메가후딘,초능력포켓몬
+7,10046,메가팬텀,그림자포켓몬
+7,10047,메가캥카,가족포켓몬
+7,10048,메가쁘사이저,뿔집게포켓몬
+7,10049,메가갸라도스,흉악포켓몬
+7,10050,메가프테라,화석포켓몬
+7,10051,메가뮤츠X,유전자포켓몬
+7,10052,메가뮤츠Y,유전자포켓몬
+7,10053,메가전룡,라이트포켓몬
+7,10054,메가핫삼,집게포켓몬
+7,10055,메가헤라크로스,외뿔포켓몬
+7,10056,메가헬가,다크포켓몬
+7,10057,메가마기라스,갑옷포켓몬
+7,10058,메가번치코,맹화포켓몬
+7,10059,메가가디안,포용포켓몬
+7,10060,메가입치트,배반포켓몬
+7,10061,메가보스로라,철갑옷포켓몬
+7,10062,메가요가램,명상포켓몬
+7,10063,메가썬더볼트,방전포켓몬
+7,10064,메가다크펫,봉제인형포켓몬
+7,10065,메가앱솔,재난포켓몬
+7,10066,메가라티아스,무한포켓몬
+7,10067,메가라티오스,무한포켓몬
+7,10068,메가한카리아스,마하포켓몬
+7,10069,메가루카리오,파동포켓몬
+7,10070,메가눈설왕,얼음나무포켓몬
+7,10071,아르세우스 (페어리),창조포켓몬
+7,10072,플라엣테 (영원의 꽃),한송이포켓몬
+7,10073,냐오닉스 (암컷의 모습),억제포켓몬
+7,10074,킬가르도 (블레이드폼),왕검포켓몬
+7,10075,호바귀 (작은 사이즈),호박포켓몬
+7,10076,호바귀 (큰 사이즈),호박포켓몬
+7,10077,호바귀 (특대 사이즈),호박포켓몬
+7,10078,펌킨인 (작은 사이즈),호박포켓몬
+7,10079,펌킨인 (큰 사이즈),호박포켓몬
+7,10080,펌킨인 (특대 사이즈),호박포켓몬
+7,10081,메가독침붕,독벌포켓몬
+7,10082,메가피죤투,새포켓몬
+7,10083,하드록 피카츄,쥐포켓몬
+7,10084,마담 피카츄,쥐포켓몬
+7,10085,아이돌 피카츄,쥐포켓몬
+7,10086,닥터 피카츄,쥐포켓몬
+7,10087,마스크드 피카츄,쥐포켓몬
+7,10088,옷갈아입기 피카츄,쥐포켓몬
+7,10089,메가야도란,기생포켓몬
+7,10090,메가강철톤,철뱀포켓몬
+7,10091,메가나무킹,밀림포켓몬
+7,10092,메가대짱이,늪물고기포켓몬
+7,10093,메가깜까미,어둠포켓몬
+7,10094,메가샤크니아,난폭포켓몬
+7,10095,메가폭타,분화포켓몬
+7,10096,메가파비코리,허밍포켓몬
+7,10097,메가얼음귀신,얼굴포켓몬
+7,10098,메가보만다,드래곤포켓몬
+7,10099,메가메타그로스,무쇠다리포켓몬
+7,10100,원시가이오가,해저포켓몬
+7,10101,원시그란돈,대륙포켓몬
+7,10102,메가레쿠쟈,천공포켓몬
+7,10103,메가이어롭,토끼포켓몬
+7,10104,메가엘레이드,검포켓몬
+7,10105,메가다부니,히어링포켓몬
+7,10106,메가디안시,보석포켓몬
+7,10107,굴레를 벗어난 후파,마신포켓몬
+7,10108,꼬렛 (알로라의 모습),쥐포켓몬
+7,10109,레트라 (알로라의 모습),쥐포켓몬
+7,10110,피카츄 (캡),쥐포켓몬
+7,10111,라이츄 (알로라의 모습),쥐포켓몬
+7,10112,모래두지 (알로라의 모습),쥐포켓몬
+7,10113,고지 (알로라의 모습),쥐포켓몬
+7,10114,식스테일 (알로라의 모습),여우포켓몬
+7,10115,나인테일 (알로라의 모습),여우포켓몬
+7,10116,디그다 (알로라의 모습),두더지포켓몬
+7,10117,닥트리오 (알로라의 모습),두더지포켓몬
+7,10118,나옹 (알로라의 모습),요괴고양이포켓몬
+7,10119,페르시온 (알로라의 모습),샴고양이포켓몬
+7,10120,꼬마돌 (알로라의 모습),암석포켓몬
+7,10121,데구리 (알로라의 모습),암석포켓몬
+7,10122,딱구리 (알로라의 모습),메가톤포켓몬
+7,10123,질퍽이 (알로라의 모습),오물포켓몬
+7,10124,질뻐기 (알로라의 모습),오물포켓몬
+7,10125,나시 (알로라의 모습),야자열매포켓몬
+7,10126,텅구리 (알로라의 모습),뼈다귀포켓몬
+7,10127,개굴닌자 (유대변화),시노비포켓몬
+7,10128,지우개굴닌자,시노비포켓몬
+7,10129,10%지가르데 (오라브레이크),질서포켓몬
+7,10130,10%지가르데 (스웜체인지),질서포켓몬
+7,10131,50%지가르데 (스웜체인지),질서포켓몬
+7,10132,퍼펙트지가르데,질서포켓몬
+7,10133,춤추새 (파칙파칙스타일),댄스포켓몬
+7,10134,춤추새 (훌라훌라스타일),댄스포켓몬
+7,10135,춤추새 (하늘하늘스타일),댄스포켓몬
+7,10136,루가루암 (한밤중의 모습),늑대포켓몬
+7,10137,약어리 (군집의 모습),잔물고기포켓몬
+7,10138,실버디 (격투),인공포켓몬
+7,10139,실버디 (비행),인공포켓몬
+7,10140,실버디 (독),인공포켓몬
+7,10141,실버디 (땅),인공포켓몬
+7,10142,실버디 (바위),인공포켓몬
+7,10143,실버디 (벌레),인공포켓몬
+7,10144,실버디 (고스트),인공포켓몬
+7,10145,실버디 (강철),인공포켓몬
+7,10146,실버디 (불꽃),인공포켓몬
+7,10147,실버디 (물),인공포켓몬
+7,10148,실버디 (풀),인공포켓몬
+7,10149,실버디 (전기),인공포켓몬
+7,10150,실버디 (에스퍼),인공포켓몬
+7,10151,실버디 (얼음),인공포켓몬
+7,10152,실버디 (드래곤),인공포켓몬
+7,10153,실버디 (악),인공포켓몬
+7,10154,실버디 (페어리),인공포켓몬
+7,10155,메테노 (유성의 코어),유성포켓몬
+7,10156,암멍이 (마이페이스),강아지포켓몬
+7,10157,루가루암 (황혼의 모습),늑대포켓몬
+7,10158,네크로즈마 (황혼의 갈기),프리즘포켓몬
+7,10159,네크로즈마 (새벽의 날개),프리즘포켓몬
+7,10160,울트라네크로즈마,프리즘포켓몬
+7,10161,파트너 피카츄,쥐포켓몬
+7,10162,파트너 이브이,진화포켓몬
+7,10163,나옹 (가라르의 모습),요괴고양이포켓몬
+7,10164,포니타 (가라르의 모습),일각포켓몬
+7,10165,날쌩마 (가라르의 모습),일각포켓몬
+7,10166,파오리 (가라르의 모습),청둥오리포켓몬
+7,10167,또도가스 (가라르의 모습),독가스포켓몬
+7,10168,마임맨 (가라르의 모습),댄스포켓몬
+7,10169,코산호 (가라르의 모습),산호포켓몬
+7,10170,지그제구리 (가라르의 모습),앙증너구리포켓몬
+7,10171,직구리 (가라르의 모습),돌진포켓몬
+7,10172,달막화 (가라르의 모습),달마포켓몬
+7,10173,불비달마 (가라르의 모습) (달마모드),달마포켓몬
+7,10174,불비달마 (가라르의 모습) (노말모드),염상포켓몬
+7,10175,데스마스 (가라르의 모습),영혼포켓몬
+7,10176,메더 (가라르의 모습),트랩포켓몬
+7,10177,스트린더 (로우한 모습),펑크포켓몬
+7,10178,빙큐보 (나이스페이스),펭귄포켓몬
+7,10179,에써르 (암컷의 모습),감정포켓몬
+7,10180,자시안 (검왕),강자포켓몬
+7,10181,자마젠타 (방패왕),강자포켓몬
+7,10182,무한다이노 (무한다이맥스),거대포켓몬
+7,10183,야돈 (가라르의 모습),얼간이포켓몬
+7,10184,야도란 (ガラルのすがた),기생포켓몬
+7,10185,우라오스 (연격의 태세),권법포켓몬
+7,10186,프리져 (ガラルのすがた),냉혹포켓몬
+7,10187,썬더 (ガラルのすがた),건각포켓몬
+7,10188,파이어 (ガラルのすがた),사악포켓몬
+7,10189,야도킹 (ガラルのすがた),술사포켓몬
+7,10190,버드렉스 (백마 탄 모습),엠페러포켓몬
+7,10191,버드렉스 (흑마 탄 모습),엠페러포켓몬
+7,10192,가디 (히스이의 모습),망보기포켓몬
+7,10193,윈디 (히스이의 모습),전설포켓몬
+7,10194,찌리리공 (히스이의 모습),구체포켓몬
+7,10195,붐볼 (히스이의 모습),구체포켓몬
+7,10196,블레이범 (히스이의 모습),도깨비불포켓몬
+7,10197,침바루 (히스이의 모습),풍선포켓몬
+7,10198,포푸니 (히스이의 모습),갈고리손톱포켓몬
+7,10199,디아루가 (오리진폼),시간포켓몬
+7,10200,펄기아 (오리진폼),공간포켓몬
+7,10201,대검귀 (히스이의 모습),관록포켓몬
+7,10202,드레디어 (히스이의 모습),스핀포켓몬
+7,10203,배쓰나이 (백색근의 모습),온후포켓몬
+7,10204,조로아 (히스이의 모습),원한여우포켓몬
+7,10205,조로아크 (히스이의 모습),저주여우포켓몬
+7,10206,워글 (히스이의 모습),부르짖기포켓몬
+7,10207,미끄네일 (히스이의 모습),달팽이포켓몬
+7,10208,미끄래곤 (히스이의 모습),껍질숨기포켓몬
+7,10209,크레베이스 (히스이의 모습),빙산포켓몬
+7,10210,모크나이퍼 (히스이의 모습),화살깃포켓몬
+7,10211,대쓰여너 (암컷의 모습),큰물고기포켓몬
+7,10212,러브로스 (영물폼),애증포켓몬
+7,10213,켄타로스 (팔데아의 모습),성난소포켓몬
+7,10214,켄타로스 (팔데아의 모습),성난소포켓몬
+7,10215,켄타로스 (팔데아의 모습),성난소포켓몬
+7,10216,우파 (팔데아의 모습),독물고기포켓몬
+7,10217,퍼퓨돈 (암컷의 모습),돼지포켓몬
+7,10218,시비꼬 (블루 페더),잉꼬포켓몬
+7,10219,시비꼬 (옐로 페더),잉꼬포켓몬
+7,10220,시비꼬 (화이트 페더),잉꼬포켓몬
+7,10221,돌핀맨 (마이티폼),히어로포켓몬
+7,10222,모으령 (도보폼),보물찾기포켓몬
+7,10223,다투곰 (붉은 달),이탄포켓몬
+7,10224,오거폰 (우물의 가면),가면포켓몬
+7,10225,오거폰 (화덕의 가면),가면포켓몬
+7,10226,오거폰 (주춧돌의 가면),가면포켓몬
+7,10227,오거폰 (벽록의 가면 Tera),가면포켓몬
+7,10228,오거폰 (우물의 가면 Tera),가면포켓몬
+7,10229,오거폰 (화덕의 가면 Tera),가면포켓몬
+7,10230,오거폰 (주춧돌의 가면 Tera),가면포켓몬
+7,10231,테라파고스 (테라스탈폼),테라스탈포켓몬
+7,10232,테라파고스 (스텔라폼),테라스탈포켓몬
 8,1,フシギダネ,たねポケモン
 8,2,フシギソウ,たねポケモン
 8,3,フシギバナ,たねポケモン
@@ -9931,226 +9847,214 @@ language_id,pokemon_id,name,category
 8,10022,アルセウス (こおり),そうぞうポケモン
 8,10023,アルセウス (ドラゴン),そうぞうポケモン
 8,10024,アルセウス (あく),そうぞうポケモン
-8,10025,アルセウス (？？？),そうぞうポケモン
-8,10026,ヒートロトム,プラズマポケモン
-8,10027,ウォッシュロトム,プラズマポケモン
-8,10028,フロストロトム,プラズマポケモン
-8,10029,スピンロトム,プラズマポケモン
-8,10030,カットロトム,プラズマポケモン
-8,10031,ギラティナ (オリジンフォルム),はんこつポケモン
-8,10032,シェイミ (スカイフォルム),かんしゃポケモン
-8,10033,ギザみみピチュ,こねずみポケモン
-8,10034,バスラオ (あおすじのすがた),らんぼうポケモン
-8,10035,ヒヒダルマ (ダルマモード),えんじょうポケモン
-8,10036,メロエッタ (ステップフォルム),せんりつポケモン
-8,10037,トルネロス (れいじゅうフォルム),せんぷうポケモン
-8,10038,ボルトロス (れいじゅうフォルム),らいげきポケモン
-8,10039,ランドロス (れいじゅうフォルム),ほうじょうポケモン
-8,10040,ホワイトキュレム,きょうかいポケモン
-8,10041,ブラックキュレム,きょうかいポケモン
-8,10042,メガフシギバナ,たねポケモン
-8,10043,メガリザードンＸ,かえんポケモン
-8,10044,メガリザードンＹ,かえんポケモン
-8,10045,メガカメックス,こうらポケモン
-8,10046,メガフーディン,ねんりきポケモン
-8,10047,メガゲンガー,シャドーポケモン
-8,10048,メガガルーラ,おやこポケモン
-8,10049,メガカイロス,くわがたポケモン
-8,10050,メガギャラドス,きょうあくポケモン
-8,10051,メガプテラ,かせきポケモン
-8,10052,メガミュウツーＸ,いでんしポケモン
-8,10053,メガミュウツーＹ,いでんしポケモン
-8,10054,メガデンリュウ,ライトポケモン
-8,10055,メガハッサム,はさみポケモン
-8,10056,メガヘラクロス,１ぽんヅノポケモン
-8,10057,メガヘルガー,ダークポケモン
-8,10058,メガバンギラス,よろいポケモン
-8,10059,メガバシャーモ,もうかポケモン
-8,10060,メガサーナイト,ほうようポケモン
-8,10061,メガクチート,あざむきポケモン
-8,10062,メガボスゴドラ,てつヨロイポケモン
-8,10063,メガチャーレム,めいそうポケモン
-8,10064,メガライボルト,ほうでんポケモン
-8,10065,メガジュペッタ,ぬいぐるみポケモン
-8,10066,メガアブソル,わざわいポケモン
-8,10067,メガラティアス,むげんポケモン
-8,10068,メガラティオス,むげんポケモン
-8,10069,メガガブリアス,マッハポケモン
-8,10070,メガルカリオ,はどうポケモン
-8,10071,メガユキノオー,じゅひょうポケモン
-8,10072,アルセウス (フェアリー),そうぞうポケモン
-8,10073,フラエッテ (えいえんのはな),いちりんポケモン
-8,10074,ニャオニクス (メスのすがた),よくせいポケモン
-8,10075,ギルガルド (ブレードフォルム),おうけんポケモン
-8,10076,バケッチャ (ちいさいサイズ),かぼちゃポケモン
-8,10077,バケッチャ (おおきいサイズ),かぼちゃポケモン
-8,10078,バケッチャ (とくだいサイズ),かぼちゃポケモン
-8,10079,パンプジン (ちいさいサイズ),かぼちゃポケモン
-8,10080,パンプジン (おおきいサイズ),かぼちゃポケモン
-8,10081,パンプジン (とくだいサイズ),かぼちゃポケモン
-8,10082,メガスピアー,どくばちポケモン
-8,10083,メガピジョット,とりポケモン
-8,10084,ハードロック・ピカチュウ,ねずみポケモン
-8,10085,マダム・ピカチュウ,ねずみポケモン
-8,10086,アイドル・ピカチュウ,ねずみポケモン
-8,10087,ドクター・ピカチュウ,ねずみポケモン
-8,10088,マスク・ド・ピカチュウ,ねずみポケモン
-8,10089,おきがえピカチュウ,ねずみポケモン
-8,10090,メガヤドラン,やどかりポケモン
-8,10091,メガハガネール,てつへびポケモン
-8,10092,メガジュカイン,みつりんポケモン
-8,10093,メガラグラージ,ぬまうおポケモン
-8,10094,メガヤミラミ,くらやみポケモン
-8,10095,メガサメハダー,きょうぼうポケモン
-8,10096,メガバクーダ,ふんかポケモン
-8,10097,メガチルタリス,ハミングポケモン
-8,10098,メガオニゴーリ,がんめんポケモン
-8,10099,メガボーマンダ,ドラゴンポケモン
-8,10100,メガメタグロス,てつあしポケモン
-8,10101,カイオーガ (ゲンシカイキのすがた),かいていポケモン
-8,10102,グラードン (ゲンシカイキのすがた),たいりくポケモン
-8,10103,メガレックウザ,てんくうポケモン
-8,10104,メガミミロップ,うさぎポケモン
-8,10105,メガエルレイド,やいばポケモン
-8,10106,メガタブンネ,ヒヤリングポケモン
-8,10107,メガディアンシー,ほうせきポケモン
-8,10108,ときはなたれしフーパ,まじんポケモン
-8,10109,コラッタ (アローラのすがた),ねずみポケモン
-8,10110,ラッタ (アローラのすがた),ねずみポケモン
-8,10111,ぬしの　ラッタ,ねずみポケモン
-8,10112,ピカチュウ (キャップ),ねずみポケモン
-8,10113,ライチュウ (アローラのすがた),ねずみポケモン
-8,10114,サンド (アローラのすがた),ねずみポケモン
-8,10115,サンドパン (アローラのすがた),ねずみポケモン
-8,10116,ロコン (アローラのすがた),きつねポケモン
-8,10117,キュウコン (アローラのすがた),きつねポケモン
-8,10118,ディグダ (アローラのすがた),もぐらポケモン
-8,10119,ダグトリオ (アローラのすがた),もぐらポケモン
-8,10120,ニャース (アローラのすがた),ばけねこポケモン
-8,10121,ペルシアン (アローラのすがた),シャムネコポケモン
-8,10122,イシツブテ (アローラのすがた),がんせきポケモン
-8,10123,ゴローン (アローラのすがた),がんせきポケモン
-8,10124,ゴローニャ (アローラのすがた),メガトンポケモン
-8,10125,ベトベター (アローラのすがた),ヘドロポケモン
-8,10126,ベトベトン (アローラのすがた),ヘドロポケモン
-8,10127,ナッシー (アローラのすがた),やしのみポケモン
-8,10128,ガラガラ (アローラのすがた),ほねずきポケモン
-8,10129,ゲッコウガ (きずなへんげ),しのびポケモン
-8,10130,サトシゲッコウガ,しのびポケモン
-8,10131,１０％ジガルデ (オーラブレイク),ちつじょポケモン
-8,10132,１０％ジガルデ (スワームチェンジ),ちつじょポケモン
-8,10133,５０％ジガルデ (スワームチェンジ),ちつじょポケモン
-8,10134,パーフェクトジガルデ,ちつじょポケモン
-8,10135,ぬしの　デカグース,はりこみポケモン
-8,10136,ぬしの　クワガノン,くわがたポケモン
-8,10137,オドリドリ (ぱちぱちスタイル),ダンスポケモン
-8,10138,オドリドリ (ふらふらスタイル),ダンスポケモン
-8,10139,オドリドリ (まいまいスタイル),ダンスポケモン
-8,10140,ルガルガン (まよなかのすがた),オオカミポケモン
-8,10141,ヨワシ (むれたすがた),こざかなポケモン
-8,10142,ぬしの　ラランテス,はなかまポケモン
-8,10143,ぬしの　エンニュート,どくトカゲポケモン
-8,10144,シルヴァディ (かくとう),じんこうポケモン
-8,10145,シルヴァディ (ひこう),じんこうポケモン
-8,10146,シルヴァディ (どく),じんこうポケモン
-8,10147,シルヴァディ (じめん),じんこうポケモン
-8,10148,シルヴァディ (いわ),じんこうポケモン
-8,10149,シルヴァディ (むし),じんこうポケモン
-8,10150,シルヴァディ (ゴースト),じんこうポケモン
-8,10151,シルヴァディ (はがね),じんこうポケモン
-8,10152,シルヴァディ (ほのお),じんこうポケモン
-8,10153,シルヴァディ (みず),じんこうポケモン
-8,10154,シルヴァディ (くさ),じんこうポケモン
-8,10155,シルヴァディ (でんき),じんこうポケモン
-8,10156,シルヴァディ (エスパー),じんこうポケモン
-8,10157,シルヴァディ (こおり),じんこうポケモン
-8,10158,シルヴァディ (ドラゴン),じんこうポケモン
-8,10159,シルヴァディ (あく),じんこうポケモン
-8,10160,シルヴァディ (フェアリー),じんこうポケモン
-8,10161,メテノ (のコアフォルム),ながれぼしポケモン
-8,10162,ぬしの　ミミッキュ,ばけのかわポケモン
-8,10163,ぬしの　ジャラランガ,うろこポケモン
-8,10164,ぬしの　ガラガラ,ほねずきポケモン
-8,10165,ぬしの　アブリボン,ツリアブポケモン
-8,10166,イワンコ (マイペース),こいぬポケモン
-8,10167,ルガルガン (たそがれのすがた),オオカミポケモン
-8,10168,ぬしの　オニシズクモ,すいほうポケモン
-8,10169,ぬしの　トゲデマル,まるまりポケモン
-8,10170,ネクロズマ (たそがれのたてがみ),プリズムポケモン
-8,10171,ネクロズマ (あかつきのつばさ),プリズムポケモン
-8,10172,ウルトラネクロズマ,プリズムポケモン
-8,10173,相棒ピカチュウ,ねずみポケモン
-8,10174,相棒イーブイ,しんかポケモン
-8,10175,ニャース (ガラルのすがた),ばけねこポケモン
-8,10176,ポニータ (ガラルのすがた),いっかくポケモン
-8,10177,ギャロップ (ガラルのすがた),いっかくポケモン
-8,10178,カモネギ (ガラルのすがた),かるがもポケモン
-8,10179,マタドガス (ガラルのすがた),どくガスポケモン
-8,10180,バリヤード (ガラルのすがた),ダンスポケモン
-8,10181,サニーゴ (ガラルのすがた),さんごポケモン
-8,10182,ジグザグマ (ガラルのすがた),まめだぬきポケモン
-8,10183,マッスグマ (ガラルのすがた),とっしんポケモン
-8,10184,ダルマッカ (ガラルのすがた),だるまポケモン
-8,10185,ヒヒダルマ (ガラルのすがた) (ダルマモード),だるまポケモン
-8,10186,ヒヒダルマ (ガラルのすがた) (ノーマルモード),えんじょうポケモン
-8,10187,デスマス (ガラルのすがた),たましいポケモン
-8,10188,マッギョ (ガラルのすがた),トラップポケモン
-8,10189,ストリンダー (ローなすがた),パンクポケモン
-8,10190,コオリッポ (ナイスフェイス),ペンギンポケモン
-8,10191,イエッサン (メスのすがた),かんじょうポケモン
-8,10192,ザシアン (けんのおう),つわものポケモン
-8,10193,ザマゼンタ (たてのおう),つわものポケモン
-8,10194,ムゲンダイナ (ムゲンダイマックス),キョダイポケモン
-8,10195,ヤドン (ガラルのすがた),まぬけポケモン
-8,10196,ヤドラン (ガラルのすがた),やどかりポケモン
-8,10197,ウーラオス (れんげきのかた),けんぽうポケモン
-8,10198,フリーザー (ガラルのすがた),れいこくポケモン
-8,10199,サンダー (ガラルのすがた),けんきゃくポケモン
-8,10200,ファイヤー (ガラルのすがた),じゃあくポケモン
-8,10201,ヤドキング (ガラルのすがた),じゅじゅつしポケモン
-8,10202,バドレックス (はくばじょうのすがた),エンペラーポケモン
-8,10203,バドレックス (こくばじょうのすがた),エンペラーポケモン
-8,10204,ガーディ (ヒスイのすがた),みはりポケモン
-8,10205,ウインディ (ヒスイのすがた),でんせつポケモン
-8,10206,ビリリダマ (ヒスイのすがた),きゅうたいポケモン
-8,10207,マルマイン (ヒスイのすがた),きゅうたいポケモン
-8,10208,バクフーン (ヒスイのすがた),おにびポケモン
-8,10209,ハリーセン (ヒスイのすがた),ふうせんポケモン
-8,10210,ニューラ (ヒスイのすがた),かぎづめポケモン
-8,10211,ディアルガ (オリジンフォルム),じかんポケモン
-8,10212,パルキア (オリジンフォルム),くうかんポケモン
-8,10213,ダイケンキ (ヒスイのすがた),かんろくポケモン
-8,10214,ドレディア (ヒスイのすがた),スピンポケモン
-8,10215,バスラオ (しろすじのすがた),おんこうポケモン
-8,10216,ゾロア (ヒスイのすがた),うらみぎつねポケモン
-8,10217,ゾロアーク (ヒスイのすがた),のろいぎつねポケモン
-8,10218,ウォーグル (ヒスイのすがた),おたけびポケモン
-8,10219,ヌメイル (ヒスイのすがた),マイマイポケモン
-8,10220,ヌメルゴン (ヒスイのすがた),からこもりポケモン
-8,10221,クレベース (ヒスイのすがた),ひょうざんポケモン
-8,10222,ジュナイパー (ヒスイのすがた),やばねポケモン
-8,10223,イダイトウ (メスのすがた),おおうおポケモン
-8,10224,ラブトロス (れいじゅうフォルム),あいぞうポケモン
-8,10225,ケンタロス (パルデアのすがた),あばれうしポケモン
-8,10226,ケンタロス (パルデアのすがた),あばれうしポケモン
-8,10227,ケンタロス (パルデアのすがた),あばれうしポケモン
-8,10228,ウパー (パルデアのすがた),どくうおポケモン
-8,10229,パフュートン (メスのすがた),ぶたポケモン
-8,10230,イキリンコ (ブルーフェザー),インコポケモン
-8,10231,イキリンコ (イエローフェザー),インコポケモン
-8,10232,イキリンコ (ホワイトフェザー),インコポケモン
-8,10233,イルカマン (マイティフォルム),ヒーローポケモン
-8,10234,コレクレー (とほフォルム),たからさがしポケモン
-8,10235,ガチグマ (アカツキ),でいたんポケモン
-8,10236,オーガポン (いどのめん),おめんポケモン
-8,10237,オーガポン (かまどのめん),おめんポケモン
-8,10238,オーガポン (いしずえのめん),おめんポケモン
-8,10239,オーガポン (みどりのめん Tera),おめんポケモン
-8,10240,オーガポン (いどのめん Tera),おめんポケモン
-8,10241,オーガポン (かまどのめん Tera),おめんポケモン
-8,10242,オーガポン (いしずえのめん Tera),おめんポケモン
-8,10243,テラパゴス (テラスタルフォルム),テラスタルポケモン
-8,10244,テラパゴス (ステラフォルム),テラスタルポケモン
+8,10025,ヒートロトム,プラズマポケモン
+8,10026,ウォッシュロトム,プラズマポケモン
+8,10027,フロストロトム,プラズマポケモン
+8,10028,スピンロトム,プラズマポケモン
+8,10029,カットロトム,プラズマポケモン
+8,10030,ギラティナ (オリジンフォルム),はんこつポケモン
+8,10031,シェイミ (スカイフォルム),かんしゃポケモン
+8,10032,ギザみみピチュ,こねずみポケモン
+8,10033,バスラオ (あおすじのすがた),らんぼうポケモン
+8,10034,ヒヒダルマ (ダルマモード),えんじょうポケモン
+8,10035,メロエッタ (ステップフォルム),せんりつポケモン
+8,10036,トルネロス (れいじゅうフォルム),せんぷうポケモン
+8,10037,ボルトロス (れいじゅうフォルム),らいげきポケモン
+8,10038,ランドロス (れいじゅうフォルム),ほうじょうポケモン
+8,10039,ホワイトキュレム,きょうかいポケモン
+8,10040,ブラックキュレム,きょうかいポケモン
+8,10041,メガフシギバナ,たねポケモン
+8,10042,メガリザードンＸ,かえんポケモン
+8,10043,メガリザードンＹ,かえんポケモン
+8,10044,メガカメックス,こうらポケモン
+8,10045,メガフーディン,ねんりきポケモン
+8,10046,メガゲンガー,シャドーポケモン
+8,10047,メガガルーラ,おやこポケモン
+8,10048,メガカイロス,くわがたポケモン
+8,10049,メガギャラドス,きょうあくポケモン
+8,10050,メガプテラ,かせきポケモン
+8,10051,メガミュウツーＸ,いでんしポケモン
+8,10052,メガミュウツーＹ,いでんしポケモン
+8,10053,メガデンリュウ,ライトポケモン
+8,10054,メガハッサム,はさみポケモン
+8,10055,メガヘラクロス,１ぽんヅノポケモン
+8,10056,メガヘルガー,ダークポケモン
+8,10057,メガバンギラス,よろいポケモン
+8,10058,メガバシャーモ,もうかポケモン
+8,10059,メガサーナイト,ほうようポケモン
+8,10060,メガクチート,あざむきポケモン
+8,10061,メガボスゴドラ,てつヨロイポケモン
+8,10062,メガチャーレム,めいそうポケモン
+8,10063,メガライボルト,ほうでんポケモン
+8,10064,メガジュペッタ,ぬいぐるみポケモン
+8,10065,メガアブソル,わざわいポケモン
+8,10066,メガラティアス,むげんポケモン
+8,10067,メガラティオス,むげんポケモン
+8,10068,メガガブリアス,マッハポケモン
+8,10069,メガルカリオ,はどうポケモン
+8,10070,メガユキノオー,じゅひょうポケモン
+8,10071,アルセウス (フェアリー),そうぞうポケモン
+8,10072,フラエッテ (えいえんのはな),いちりんポケモン
+8,10073,ニャオニクス (メスのすがた),よくせいポケモン
+8,10074,ギルガルド (ブレードフォルム),おうけんポケモン
+8,10075,バケッチャ (ちいさいサイズ),かぼちゃポケモン
+8,10076,バケッチャ (おおきいサイズ),かぼちゃポケモン
+8,10077,バケッチャ (とくだいサイズ),かぼちゃポケモン
+8,10078,パンプジン (ちいさいサイズ),かぼちゃポケモン
+8,10079,パンプジン (おおきいサイズ),かぼちゃポケモン
+8,10080,パンプジン (とくだいサイズ),かぼちゃポケモン
+8,10081,メガスピアー,どくばちポケモン
+8,10082,メガピジョット,とりポケモン
+8,10083,ハードロック・ピカチュウ,ねずみポケモン
+8,10084,マダム・ピカチュウ,ねずみポケモン
+8,10085,アイドル・ピカチュウ,ねずみポケモン
+8,10086,ドクター・ピカチュウ,ねずみポケモン
+8,10087,マスク・ド・ピカチュウ,ねずみポケモン
+8,10088,おきがえピカチュウ,ねずみポケモン
+8,10089,メガヤドラン,やどかりポケモン
+8,10090,メガハガネール,てつへびポケモン
+8,10091,メガジュカイン,みつりんポケモン
+8,10092,メガラグラージ,ぬまうおポケモン
+8,10093,メガヤミラミ,くらやみポケモン
+8,10094,メガサメハダー,きょうぼうポケモン
+8,10095,メガバクーダ,ふんかポケモン
+8,10096,メガチルタリス,ハミングポケモン
+8,10097,メガオニゴーリ,がんめんポケモン
+8,10098,メガボーマンダ,ドラゴンポケモン
+8,10099,メガメタグロス,てつあしポケモン
+8,10100,カイオーガ (ゲンシカイキのすがた),かいていポケモン
+8,10101,グラードン (ゲンシカイキのすがた),たいりくポケモン
+8,10102,メガレックウザ,てんくうポケモン
+8,10103,メガミミロップ,うさぎポケモン
+8,10104,メガエルレイド,やいばポケモン
+8,10105,メガタブンネ,ヒヤリングポケモン
+8,10106,メガディアンシー,ほうせきポケモン
+8,10107,ときはなたれしフーパ,まじんポケモン
+8,10108,コラッタ (アローラのすがた),ねずみポケモン
+8,10109,ラッタ (アローラのすがた),ねずみポケモン
+8,10110,ピカチュウ (キャップ),ねずみポケモン
+8,10111,ライチュウ (アローラのすがた),ねずみポケモン
+8,10112,サンド (アローラのすがた),ねずみポケモン
+8,10113,サンドパン (アローラのすがた),ねずみポケモン
+8,10114,ロコン (アローラのすがた),きつねポケモン
+8,10115,キュウコン (アローラのすがた),きつねポケモン
+8,10116,ディグダ (アローラのすがた),もぐらポケモン
+8,10117,ダグトリオ (アローラのすがた),もぐらポケモン
+8,10118,ニャース (アローラのすがた),ばけねこポケモン
+8,10119,ペルシアン (アローラのすがた),シャムネコポケモン
+8,10120,イシツブテ (アローラのすがた),がんせきポケモン
+8,10121,ゴローン (アローラのすがた),がんせきポケモン
+8,10122,ゴローニャ (アローラのすがた),メガトンポケモン
+8,10123,ベトベター (アローラのすがた),ヘドロポケモン
+8,10124,ベトベトン (アローラのすがた),ヘドロポケモン
+8,10125,ナッシー (アローラのすがた),やしのみポケモン
+8,10126,ガラガラ (アローラのすがた),ほねずきポケモン
+8,10127,ゲッコウガ (きずなへんげ),しのびポケモン
+8,10128,サトシゲッコウガ,しのびポケモン
+8,10129,１０％ジガルデ (オーラブレイク),ちつじょポケモン
+8,10130,１０％ジガルデ (スワームチェンジ),ちつじょポケモン
+8,10131,５０％ジガルデ (スワームチェンジ),ちつじょポケモン
+8,10132,パーフェクトジガルデ,ちつじょポケモン
+8,10133,オドリドリ (ぱちぱちスタイル),ダンスポケモン
+8,10134,オドリドリ (ふらふらスタイル),ダンスポケモン
+8,10135,オドリドリ (まいまいスタイル),ダンスポケモン
+8,10136,ルガルガン (まよなかのすがた),オオカミポケモン
+8,10137,ヨワシ (むれたすがた),こざかなポケモン
+8,10138,シルヴァディ (かくとう),じんこうポケモン
+8,10139,シルヴァディ (ひこう),じんこうポケモン
+8,10140,シルヴァディ (どく),じんこうポケモン
+8,10141,シルヴァディ (じめん),じんこうポケモン
+8,10142,シルヴァディ (いわ),じんこうポケモン
+8,10143,シルヴァディ (むし),じんこうポケモン
+8,10144,シルヴァディ (ゴースト),じんこうポケモン
+8,10145,シルヴァディ (はがね),じんこうポケモン
+8,10146,シルヴァディ (ほのお),じんこうポケモン
+8,10147,シルヴァディ (みず),じんこうポケモン
+8,10148,シルヴァディ (くさ),じんこうポケモン
+8,10149,シルヴァディ (でんき),じんこうポケモン
+8,10150,シルヴァディ (エスパー),じんこうポケモン
+8,10151,シルヴァディ (こおり),じんこうポケモン
+8,10152,シルヴァディ (ドラゴン),じんこうポケモン
+8,10153,シルヴァディ (あく),じんこうポケモン
+8,10154,シルヴァディ (フェアリー),じんこうポケモン
+8,10155,メテノ (のコアフォルム),ながれぼしポケモン
+8,10156,イワンコ (マイペース),こいぬポケモン
+8,10157,ルガルガン (たそがれのすがた),オオカミポケモン
+8,10158,ネクロズマ (たそがれのたてがみ),プリズムポケモン
+8,10159,ネクロズマ (あかつきのつばさ),プリズムポケモン
+8,10160,ウルトラネクロズマ,プリズムポケモン
+8,10161,相棒ピカチュウ,ねずみポケモン
+8,10162,相棒イーブイ,しんかポケモン
+8,10163,ニャース (ガラルのすがた),ばけねこポケモン
+8,10164,ポニータ (ガラルのすがた),いっかくポケモン
+8,10165,ギャロップ (ガラルのすがた),いっかくポケモン
+8,10166,カモネギ (ガラルのすがた),かるがもポケモン
+8,10167,マタドガス (ガラルのすがた),どくガスポケモン
+8,10168,バリヤード (ガラルのすがた),ダンスポケモン
+8,10169,サニーゴ (ガラルのすがた),さんごポケモン
+8,10170,ジグザグマ (ガラルのすがた),まめだぬきポケモン
+8,10171,マッスグマ (ガラルのすがた),とっしんポケモン
+8,10172,ダルマッカ (ガラルのすがた),だるまポケモン
+8,10173,ヒヒダルマ (ガラルのすがた) (ダルマモード),だるまポケモン
+8,10174,ヒヒダルマ (ガラルのすがた) (ノーマルモード),えんじょうポケモン
+8,10175,デスマス (ガラルのすがた),たましいポケモン
+8,10176,マッギョ (ガラルのすがた),トラップポケモン
+8,10177,ストリンダー (ローなすがた),パンクポケモン
+8,10178,コオリッポ (ナイスフェイス),ペンギンポケモン
+8,10179,イエッサン (メスのすがた),かんじょうポケモン
+8,10180,ザシアン (けんのおう),つわものポケモン
+8,10181,ザマゼンタ (たてのおう),つわものポケモン
+8,10182,ムゲンダイナ (ムゲンダイマックス),キョダイポケモン
+8,10183,ヤドン (ガラルのすがた),まぬけポケモン
+8,10184,ヤドラン (ガラルのすがた),やどかりポケモン
+8,10185,ウーラオス (れんげきのかた),けんぽうポケモン
+8,10186,フリーザー (ガラルのすがた),れいこくポケモン
+8,10187,サンダー (ガラルのすがた),けんきゃくポケモン
+8,10188,ファイヤー (ガラルのすがた),じゃあくポケモン
+8,10189,ヤドキング (ガラルのすがた),じゅじゅつしポケモン
+8,10190,バドレックス (はくばじょうのすがた),エンペラーポケモン
+8,10191,バドレックス (こくばじょうのすがた),エンペラーポケモン
+8,10192,ガーディ (ヒスイのすがた),みはりポケモン
+8,10193,ウインディ (ヒスイのすがた),でんせつポケモン
+8,10194,ビリリダマ (ヒスイのすがた),きゅうたいポケモン
+8,10195,マルマイン (ヒスイのすがた),きゅうたいポケモン
+8,10196,バクフーン (ヒスイのすがた),おにびポケモン
+8,10197,ハリーセン (ヒスイのすがた),ふうせんポケモン
+8,10198,ニューラ (ヒスイのすがた),かぎづめポケモン
+8,10199,ディアルガ (オリジンフォルム),じかんポケモン
+8,10200,パルキア (オリジンフォルム),くうかんポケモン
+8,10201,ダイケンキ (ヒスイのすがた),かんろくポケモン
+8,10202,ドレディア (ヒスイのすがた),スピンポケモン
+8,10203,バスラオ (しろすじのすがた),おんこうポケモン
+8,10204,ゾロア (ヒスイのすがた),うらみぎつねポケモン
+8,10205,ゾロアーク (ヒスイのすがた),のろいぎつねポケモン
+8,10206,ウォーグル (ヒスイのすがた),おたけびポケモン
+8,10207,ヌメイル (ヒスイのすがた),マイマイポケモン
+8,10208,ヌメルゴン (ヒスイのすがた),からこもりポケモン
+8,10209,クレベース (ヒスイのすがた),ひょうざんポケモン
+8,10210,ジュナイパー (ヒスイのすがた),やばねポケモン
+8,10211,イダイトウ (メスのすがた),おおうおポケモン
+8,10212,ラブトロス (れいじゅうフォルム),あいぞうポケモン
+8,10213,ケンタロス (パルデアのすがた),あばれうしポケモン
+8,10214,ケンタロス (パルデアのすがた),あばれうしポケモン
+8,10215,ケンタロス (パルデアのすがた),あばれうしポケモン
+8,10216,ウパー (パルデアのすがた),どくうおポケモン
+8,10217,パフュートン (メスのすがた),ぶたポケモン
+8,10218,イキリンコ (ブルーフェザー),インコポケモン
+8,10219,イキリンコ (イエローフェザー),インコポケモン
+8,10220,イキリンコ (ホワイトフェザー),インコポケモン
+8,10221,イルカマン (マイティフォルム),ヒーローポケモン
+8,10222,コレクレー (とほフォルム),たからさがしポケモン
+8,10223,ガチグマ (アカツキ),でいたんポケモン
+8,10224,オーガポン (いどのめん),おめんポケモン
+8,10225,オーガポン (かまどのめん),おめんポケモン
+8,10226,オーガポン (いしずえのめん),おめんポケモン
+8,10227,オーガポン (みどりのめん Tera),おめんポケモン
+8,10228,オーガポン (いどのめん Tera),おめんポケモン
+8,10229,オーガポン (かまどのめん Tera),おめんポケモン
+8,10230,オーガポン (いしずえのめん Tera),おめんポケモン
+8,10231,テラパゴス (テラスタルフォルム),テラスタルポケモン
+8,10232,テラパゴス (ステラフォルム),テラスタルポケモン
 9,1,妙蛙种子,种子宝可梦
 9,2,妙蛙草,种子宝可梦
 9,3,妙蛙花,种子宝可梦
@@ -11200,226 +11104,214 @@ language_id,pokemon_id,name,category
 9,10022,阿尔宙斯 (冰),创造宝可梦
 9,10023,阿尔宙斯 (龙),创造宝可梦
 9,10024,阿尔宙斯 (恶),创造宝可梦
-9,10025,阿尔宙斯 (???),创造宝可梦
-9,10026,加热洛托姆,等离子宝可梦
-9,10027,清洗洛托姆,等离子宝可梦
-9,10028,结冰洛托姆,等离子宝可梦
-9,10029,旋转洛托姆,等离子宝可梦
-9,10030,切割洛托姆,等离子宝可梦
-9,10031,骑拉帝纳 (起源形态),反抗宝可梦
-9,10032,谢米 (天空形态),感谢宝可梦
-9,10033,刺刺耳皮丘,小鼠宝可梦
-9,10034,野蛮鲈鱼 (蓝条纹的样子),粗暴宝可梦
-9,10035,达摩狒狒 (达摩模式),爆燃宝可梦
-9,10036,美洛耶塔 (舞步形态),旋律宝可梦
-9,10037,龙卷云 (灵兽形态),旋风宝可梦
-9,10038,雷电云 (灵兽形态),雷击宝可梦
-9,10039,土地云 (灵兽形态),丰饶宝可梦
-9,10040,焰白酋雷姆,境界宝可梦
-9,10041,暗黑酋雷姆,境界宝可梦
-9,10042,超级妙蛙花,种子宝可梦
-9,10043,超级喷火龙Ｘ,火焰宝可梦
-9,10044,超级喷火龙Ｙ,火焰宝可梦
-9,10045,超级水箭龟,甲壳宝可梦
-9,10046,超级胡地,念力宝可梦
-9,10047,超级耿鬼,影子宝可梦
-9,10048,超级袋兽,亲子宝可梦
-9,10049,超级凯罗斯,锹形虫宝可梦
-9,10050,超级暴鲤龙,凶恶宝可梦
-9,10051,超级化石翼龙,化石宝可梦
-9,10052,超级超梦Ｘ,基因宝可梦
-9,10053,超级超梦Ｙ,基因宝可梦
-9,10054,超级电龙,灯宝可梦
-9,10055,超级巨钳螳螂,钳子宝可梦
-9,10056,超级赫拉克罗斯,独角宝可梦
-9,10057,超级黑鲁加,阴暗宝可梦
-9,10058,超级班基拉斯,铠甲宝可梦
-9,10059,超级火焰鸡,猛火宝可梦
-9,10060,超级沙奈朵,包容宝可梦
-9,10061,超级大嘴娃,欺骗宝可梦
-9,10062,超级波士可多拉,铁铠宝可梦
-9,10063,超级恰雷姆,冥想宝可梦
-9,10064,超级雷电兽,放电宝可梦
-9,10065,超级诅咒娃娃,布偶宝可梦
-9,10066,超级阿勃梭鲁,灾祸宝可梦
-9,10067,超级拉帝亚斯,无限宝可梦
-9,10068,超级拉帝欧斯,无限宝可梦
-9,10069,超级烈咬陆鲨,音速宝可梦
-9,10070,超级路卡利欧,波导宝可梦
-9,10071,超级暴雪王,树冰宝可梦
-9,10072,阿尔宙斯 (妖精),创造宝可梦
-9,10073,花叶蒂 (永恒之花),单朵宝可梦
-9,10074,超能妙喵 (雌性的样子),抑制宝可梦
-9,10075,坚盾剑怪 (刀剑形态),王剑宝可梦
-9,10076,南瓜精 (小尺寸),南瓜宝可梦
-9,10077,南瓜精 (大尺寸),南瓜宝可梦
-9,10078,南瓜精 (特大尺寸),南瓜宝可梦
-9,10079,南瓜怪人 (小尺寸),南瓜宝可梦
-9,10080,南瓜怪人 (大尺寸),南瓜宝可梦
-9,10081,南瓜怪人 (特大尺寸),南瓜宝可梦
-9,10082,超级大针蜂,毒蜂宝可梦
-9,10083,超级大比鸟,鸟宝可梦
-9,10084,重摇滚皮卡丘,鼠宝可梦
-9,10085,贵妇皮卡丘,鼠宝可梦
-9,10086,偶像皮卡丘,鼠宝可梦
-9,10087,博士皮卡丘,鼠宝可梦
-9,10088,蒙面皮卡丘,鼠宝可梦
-9,10089,角色扮演皮卡丘,鼠宝可梦
-9,10090,超级呆壳兽,寄居蟹宝可梦
-9,10091,超级大钢蛇,铁蛇宝可梦
-9,10092,超级蜥蜴王,密林宝可梦
-9,10093,超级巨沼怪,沼鱼宝可梦
-9,10094,超级勾魂眼,黑暗宝可梦
-9,10095,超级巨牙鲨,凶暴宝可梦
-9,10096,超级喷火驼,喷火宝可梦
-9,10097,超级七夕青鸟,哼唱宝可梦
-9,10098,超级冰鬼护,脸面宝可梦
-9,10099,超级暴飞龙,龙宝可梦
-9,10100,超级巨金怪,铁足宝可梦
-9,10101,原始盖欧卡,海底宝可梦
-9,10102,原始固拉多,大陆宝可梦
-9,10103,超级烈空坐,天空宝可梦
-9,10104,超级长耳兔,兔子宝可梦
-9,10105,超级艾路雷朵,利刃宝可梦
-9,10106,超级差不多娃娃,听力宝可梦
-9,10107,超级蒂安希,宝石宝可梦
-9,10108,解放胡帕,魔神宝可梦
-9,10109,小拉达 (阿罗拉的样子),鼠宝可梦
-9,10110,拉达 (阿罗拉的样子),鼠宝可梦
-9,10111,霸主拉达,鼠宝可梦
-9,10112,皮卡丘 (帽子),鼠宝可梦
-9,10113,雷丘 (阿罗拉的样子),鼠宝可梦
-9,10114,穿山鼠 (阿罗拉的样子),鼠宝可梦
-9,10115,穿山王 (阿罗拉的样子),鼠宝可梦
-9,10116,六尾 (阿罗拉的样子),狐狸宝可梦
-9,10117,九尾 (阿罗拉的样子),狐狸宝可梦
-9,10118,地鼠 (阿罗拉的样子),鼹鼠宝可梦
-9,10119,三地鼠 (阿罗拉的样子),鼹鼠宝可梦
-9,10120,喵喵 (阿罗拉的样子),妖怪猫宝可梦
-9,10121,猫老大 (阿罗拉的样子),暹罗猫宝可梦
-9,10122,小拳石 (阿罗拉的样子),岩石宝可梦
-9,10123,隆隆石 (阿罗拉的样子),岩石宝可梦
-9,10124,隆隆岩 (阿罗拉的样子),重量级宝可梦
-9,10125,臭泥 (阿罗拉的样子),污泥宝可梦
-9,10126,臭臭泥 (阿罗拉的样子),污泥宝可梦
-9,10127,椰蛋树 (阿罗拉的样子),椰子宝可梦
-9,10128,嘎啦嘎啦 (阿罗拉的样子),爱骨宝可梦
-9,10129,甲贺忍蛙 (牵绊变身),忍者宝可梦
-9,10130,小智版甲贺忍蛙,忍者宝可梦
-9,10131,１０％基格尔德 (气场破坏),秩序宝可梦
-9,10132,１０％基格尔德 (群聚变形),秩序宝可梦
-9,10133,５０％基格尔德 (群聚变形),秩序宝可梦
-9,10134,完全体基格尔德,秩序宝可梦
-9,10135,霸主猫鼬探长,蹲守宝可梦
-9,10136,霸主锹农炮虫,锹形虫宝可梦
-9,10137,花舞鸟 (啪滋啪滋风格),舞蹈宝可梦
-9,10138,花舞鸟 (呼拉呼拉风格),舞蹈宝可梦
-9,10139,花舞鸟 (轻盈轻盈风格),舞蹈宝可梦
-9,10140,鬃岩狼人 (黑夜的样子),狼宝可梦
-9,10141,弱丁鱼 (鱼群的样子),小鱼宝可梦
-9,10142,霸主兰螳花,花镰宝可梦
-9,10143,霸主焰后蜥,毒蜥宝可梦
-9,10144,银伴战兽 (格斗),人工宝可梦
-9,10145,银伴战兽 (飞行),人工宝可梦
-9,10146,银伴战兽 (毒),人工宝可梦
-9,10147,银伴战兽 (地面),人工宝可梦
-9,10148,银伴战兽 (岩石),人工宝可梦
-9,10149,银伴战兽 (虫),人工宝可梦
-9,10150,银伴战兽 (幽灵),人工宝可梦
-9,10151,银伴战兽 (钢),人工宝可梦
-9,10152,银伴战兽 (火),人工宝可梦
-9,10153,银伴战兽 (水),人工宝可梦
-9,10154,银伴战兽 (草),人工宝可梦
-9,10155,银伴战兽 (电),人工宝可梦
-9,10156,银伴战兽 (超能力),人工宝可梦
-9,10157,银伴战兽 (冰),人工宝可梦
-9,10158,银伴战兽 (龙),人工宝可梦
-9,10159,银伴战兽 (恶),人工宝可梦
-9,10160,银伴战兽 (妖精),人工宝可梦
-9,10161,小陨星 (核心的样子),流星宝可梦
-9,10162,霸主谜拟Ｑ,画皮宝可梦
-9,10163,霸主杖尾鳞甲龙,鳞片宝可梦
-9,10164,霸主嘎啦嘎啦,爱骨宝可梦
-9,10165,霸主蝶结萌虻,蜂虻宝可梦
-9,10166,岩狗狗 (我行我素),小狗宝可梦
-9,10167,鬃岩狼人 (黄昏的样子),狼宝可梦
-9,10168,霸主滴蛛霸,水泡宝可梦
-9,10169,霸主托戈德玛尔,蜷缩宝可梦
-9,10170,奈克洛兹玛 (黄昏之鬃),棱镜宝可梦
-9,10171,奈克洛兹玛 (拂晓之翼),棱镜宝可梦
-9,10172,究极奈克洛兹玛,棱镜宝可梦
-9,10173,搭档皮卡丘,鼠宝可梦
-9,10174,搭档伊布,进化宝可梦
-9,10175,喵喵 (伽勒尔的样子),妖怪猫宝可梦
-9,10176,小火马 (伽勒尔的样子),一角宝可梦
-9,10177,烈焰马 (伽勒尔的样子),一角宝可梦
-9,10178,大葱鸭 (伽勒尔的样子),黄嘴鸭宝可梦
-9,10179,双弹瓦斯 (伽勒尔的样子),毒气宝可梦
-9,10180,魔墙人偶 (伽勒尔的样子),舞蹈宝可梦
-9,10181,太阳珊瑚 (伽勒尔的样子),珊瑚宝可梦
-9,10182,蛇纹熊 (伽勒尔的样子),豆狸宝可梦
-9,10183,直冲熊 (伽勒尔的样子),猛冲宝可梦
-9,10184,火红不倒翁 (伽勒尔的样子),不倒翁宝可梦
-9,10185,达摩狒狒 (伽勒尔的样子) (达摩模式),不倒翁宝可梦
-9,10186,达摩狒狒 (伽勒尔的样子) (普通模式),爆燃宝可梦
-9,10187,哭哭面具 (伽勒尔的样子),魂宝可梦
-9,10188,泥巴鱼 (伽勒尔的样子),陷阱宝可梦
-9,10189,颤弦蝾螈 (低调的样子),庞克宝可梦
-9,10190,冰砌鹅 (解冻头),企鹅宝可梦
-9,10191,爱管侍 (雌性的样子),感情宝可梦
-9,10192,苍响 (剑之王),强者宝可梦
-9,10193,藏玛然特 (盾之王),强者宝可梦
-9,10194,无极汰那 (无极巨化),超极巨宝可梦
-9,10195,呆呆兽 (伽勒尔的样子),憨憨宝可梦
-9,10196,呆壳兽 (ガラルのすがた),寄居蟹宝可梦
-9,10197,武道熊师 (连击流),拳法宝可梦
-9,10198,急冻鸟 (ガラルのすがた),冷酷宝可梦
-9,10199,闪电鸟 (ガラルのすがた),健脚宝可梦
-9,10200,火焰鸟 (ガラルのすがた),邪恶宝可梦
-9,10201,呆呆王 (ガラルのすがた),诅咒师宝可梦
-9,10202,蕾冠王 (骑白马的样子),帝皇宝可梦
-9,10203,蕾冠王 (骑黑马的样子),帝皇宝可梦
-9,10204,卡蒂狗 (洗翠的样子),放哨宝可梦
-9,10205,风速狗 (洗翠的样子),传说宝可梦
-9,10206,霹雳电球 (洗翠的样子),丸宝可梦
-9,10207,顽皮雷弹 (洗翠的样子),丸宝可梦
-9,10208,火暴兽 (洗翠的样子),磷火宝可梦
-9,10209,千针鱼 (洗翠的样子),气球宝可梦
-9,10210,狃拉 (洗翠的样子),钩爪宝可梦
-9,10211,帝牙卢卡 (起源形态),时间宝可梦
-9,10212,帕路奇亚 (起源形态),空间宝可梦
-9,10213,大剑鬼 (洗翠的样子),威严宝可梦
-9,10214,裙儿小姐 (洗翠的样子),旋转宝可梦
-9,10215,野蛮鲈鱼 (白条纹的样子),温厚宝可梦
-9,10216,索罗亚 (洗翠的样子),怨狐宝可梦
-9,10217,索罗亚克 (洗翠的样子),咒狐宝可梦
-9,10218,勇士雄鹰 (洗翠的样子),战吼宝可梦
-9,10219,黏美儿 (洗翠的样子),蜗牛宝可梦
-9,10220,黏美龙 (洗翠的样子),窝壳宝可梦
-9,10221,冰岩怪 (洗翠的样子),冰山宝可梦
-9,10222,狙射树枭 (洗翠的样子),箭羽宝可梦
-9,10223,幽尾玄鱼 (雌性的样子),大鱼宝可梦
-9,10224,眷恋云 (灵兽形态),爱憎宝可梦
-9,10225,肯泰罗 (帕底亚的样子),暴牛宝可梦
-9,10226,肯泰罗 (帕底亚的样子),暴牛宝可梦
-9,10227,肯泰罗 (帕底亚的样子),暴牛宝可梦
-9,10228,乌波 (帕底亚的样子),毒鱼宝可梦
-9,10229,飘香豚 (雌性的样子),猪宝可梦
-9,10230,怒鹦哥 (蓝羽毛),鹦鹉宝可梦
-9,10231,怒鹦哥 (黄羽毛),鹦鹉宝可梦
-9,10232,怒鹦哥 (白羽毛),鹦鹉宝可梦
-9,10233,海豚侠 (全能形态),英雄宝可梦
-9,10234,索财灵 (徒步形态),寻宝宝可梦
-9,10235,月月熊 (赫月),泥炭宝可梦
-9,10236,厄诡椪 (水井面具),面具宝可梦
-9,10237,厄诡椪 (火灶面具),面具宝可梦
-9,10238,厄诡椪 (础石面具),面具宝可梦
-9,10239,厄诡椪 (碧草面具 Tera),面具宝可梦
-9,10240,厄诡椪 (水井面具 Tera),面具宝可梦
-9,10241,厄诡椪 (火灶面具 Tera),面具宝可梦
-9,10242,厄诡椪 (础石面具 Tera),面具宝可梦
-9,10243,太乐巴戈斯 (太晶形态),太晶宝可梦
-9,10244,太乐巴戈斯 (星晶形态),太晶宝可梦
+9,10025,加热洛托姆,等离子宝可梦
+9,10026,清洗洛托姆,等离子宝可梦
+9,10027,结冰洛托姆,等离子宝可梦
+9,10028,旋转洛托姆,等离子宝可梦
+9,10029,切割洛托姆,等离子宝可梦
+9,10030,骑拉帝纳 (起源形态),反抗宝可梦
+9,10031,谢米 (天空形态),感谢宝可梦
+9,10032,刺刺耳皮丘,小鼠宝可梦
+9,10033,野蛮鲈鱼 (蓝条纹的样子),粗暴宝可梦
+9,10034,达摩狒狒 (达摩模式),爆燃宝可梦
+9,10035,美洛耶塔 (舞步形态),旋律宝可梦
+9,10036,龙卷云 (灵兽形态),旋风宝可梦
+9,10037,雷电云 (灵兽形态),雷击宝可梦
+9,10038,土地云 (灵兽形态),丰饶宝可梦
+9,10039,焰白酋雷姆,境界宝可梦
+9,10040,暗黑酋雷姆,境界宝可梦
+9,10041,超级妙蛙花,种子宝可梦
+9,10042,超级喷火龙Ｘ,火焰宝可梦
+9,10043,超级喷火龙Ｙ,火焰宝可梦
+9,10044,超级水箭龟,甲壳宝可梦
+9,10045,超级胡地,念力宝可梦
+9,10046,超级耿鬼,影子宝可梦
+9,10047,超级袋兽,亲子宝可梦
+9,10048,超级凯罗斯,锹形虫宝可梦
+9,10049,超级暴鲤龙,凶恶宝可梦
+9,10050,超级化石翼龙,化石宝可梦
+9,10051,超级超梦Ｘ,基因宝可梦
+9,10052,超级超梦Ｙ,基因宝可梦
+9,10053,超级电龙,灯宝可梦
+9,10054,超级巨钳螳螂,钳子宝可梦
+9,10055,超级赫拉克罗斯,独角宝可梦
+9,10056,超级黑鲁加,阴暗宝可梦
+9,10057,超级班基拉斯,铠甲宝可梦
+9,10058,超级火焰鸡,猛火宝可梦
+9,10059,超级沙奈朵,包容宝可梦
+9,10060,超级大嘴娃,欺骗宝可梦
+9,10061,超级波士可多拉,铁铠宝可梦
+9,10062,超级恰雷姆,冥想宝可梦
+9,10063,超级雷电兽,放电宝可梦
+9,10064,超级诅咒娃娃,布偶宝可梦
+9,10065,超级阿勃梭鲁,灾祸宝可梦
+9,10066,超级拉帝亚斯,无限宝可梦
+9,10067,超级拉帝欧斯,无限宝可梦
+9,10068,超级烈咬陆鲨,音速宝可梦
+9,10069,超级路卡利欧,波导宝可梦
+9,10070,超级暴雪王,树冰宝可梦
+9,10071,阿尔宙斯 (妖精),创造宝可梦
+9,10072,花叶蒂 (永恒之花),单朵宝可梦
+9,10073,超能妙喵 (雌性的样子),抑制宝可梦
+9,10074,坚盾剑怪 (刀剑形态),王剑宝可梦
+9,10075,南瓜精 (小尺寸),南瓜宝可梦
+9,10076,南瓜精 (大尺寸),南瓜宝可梦
+9,10077,南瓜精 (特大尺寸),南瓜宝可梦
+9,10078,南瓜怪人 (小尺寸),南瓜宝可梦
+9,10079,南瓜怪人 (大尺寸),南瓜宝可梦
+9,10080,南瓜怪人 (特大尺寸),南瓜宝可梦
+9,10081,超级大针蜂,毒蜂宝可梦
+9,10082,超级大比鸟,鸟宝可梦
+9,10083,重摇滚皮卡丘,鼠宝可梦
+9,10084,贵妇皮卡丘,鼠宝可梦
+9,10085,偶像皮卡丘,鼠宝可梦
+9,10086,博士皮卡丘,鼠宝可梦
+9,10087,蒙面皮卡丘,鼠宝可梦
+9,10088,角色扮演皮卡丘,鼠宝可梦
+9,10089,超级呆壳兽,寄居蟹宝可梦
+9,10090,超级大钢蛇,铁蛇宝可梦
+9,10091,超级蜥蜴王,密林宝可梦
+9,10092,超级巨沼怪,沼鱼宝可梦
+9,10093,超级勾魂眼,黑暗宝可梦
+9,10094,超级巨牙鲨,凶暴宝可梦
+9,10095,超级喷火驼,喷火宝可梦
+9,10096,超级七夕青鸟,哼唱宝可梦
+9,10097,超级冰鬼护,脸面宝可梦
+9,10098,超级暴飞龙,龙宝可梦
+9,10099,超级巨金怪,铁足宝可梦
+9,10100,原始盖欧卡,海底宝可梦
+9,10101,原始固拉多,大陆宝可梦
+9,10102,超级烈空坐,天空宝可梦
+9,10103,超级长耳兔,兔子宝可梦
+9,10104,超级艾路雷朵,利刃宝可梦
+9,10105,超级差不多娃娃,听力宝可梦
+9,10106,超级蒂安希,宝石宝可梦
+9,10107,解放胡帕,魔神宝可梦
+9,10108,小拉达 (阿罗拉的样子),鼠宝可梦
+9,10109,拉达 (阿罗拉的样子),鼠宝可梦
+9,10110,皮卡丘 (帽子),鼠宝可梦
+9,10111,雷丘 (阿罗拉的样子),鼠宝可梦
+9,10112,穿山鼠 (阿罗拉的样子),鼠宝可梦
+9,10113,穿山王 (阿罗拉的样子),鼠宝可梦
+9,10114,六尾 (阿罗拉的样子),狐狸宝可梦
+9,10115,九尾 (阿罗拉的样子),狐狸宝可梦
+9,10116,地鼠 (阿罗拉的样子),鼹鼠宝可梦
+9,10117,三地鼠 (阿罗拉的样子),鼹鼠宝可梦
+9,10118,喵喵 (阿罗拉的样子),妖怪猫宝可梦
+9,10119,猫老大 (阿罗拉的样子),暹罗猫宝可梦
+9,10120,小拳石 (阿罗拉的样子),岩石宝可梦
+9,10121,隆隆石 (阿罗拉的样子),岩石宝可梦
+9,10122,隆隆岩 (阿罗拉的样子),重量级宝可梦
+9,10123,臭泥 (阿罗拉的样子),污泥宝可梦
+9,10124,臭臭泥 (阿罗拉的样子),污泥宝可梦
+9,10125,椰蛋树 (阿罗拉的样子),椰子宝可梦
+9,10126,嘎啦嘎啦 (阿罗拉的样子),爱骨宝可梦
+9,10127,甲贺忍蛙 (牵绊变身),忍者宝可梦
+9,10128,小智版甲贺忍蛙,忍者宝可梦
+9,10129,１０％基格尔德 (气场破坏),秩序宝可梦
+9,10130,１０％基格尔德 (群聚变形),秩序宝可梦
+9,10131,５０％基格尔德 (群聚变形),秩序宝可梦
+9,10132,完全体基格尔德,秩序宝可梦
+9,10133,花舞鸟 (啪滋啪滋风格),舞蹈宝可梦
+9,10134,花舞鸟 (呼拉呼拉风格),舞蹈宝可梦
+9,10135,花舞鸟 (轻盈轻盈风格),舞蹈宝可梦
+9,10136,鬃岩狼人 (黑夜的样子),狼宝可梦
+9,10137,弱丁鱼 (鱼群的样子),小鱼宝可梦
+9,10138,银伴战兽 (格斗),人工宝可梦
+9,10139,银伴战兽 (飞行),人工宝可梦
+9,10140,银伴战兽 (毒),人工宝可梦
+9,10141,银伴战兽 (地面),人工宝可梦
+9,10142,银伴战兽 (岩石),人工宝可梦
+9,10143,银伴战兽 (虫),人工宝可梦
+9,10144,银伴战兽 (幽灵),人工宝可梦
+9,10145,银伴战兽 (钢),人工宝可梦
+9,10146,银伴战兽 (火),人工宝可梦
+9,10147,银伴战兽 (水),人工宝可梦
+9,10148,银伴战兽 (草),人工宝可梦
+9,10149,银伴战兽 (电),人工宝可梦
+9,10150,银伴战兽 (超能力),人工宝可梦
+9,10151,银伴战兽 (冰),人工宝可梦
+9,10152,银伴战兽 (龙),人工宝可梦
+9,10153,银伴战兽 (恶),人工宝可梦
+9,10154,银伴战兽 (妖精),人工宝可梦
+9,10155,小陨星 (核心的样子),流星宝可梦
+9,10156,岩狗狗 (我行我素),小狗宝可梦
+9,10157,鬃岩狼人 (黄昏的样子),狼宝可梦
+9,10158,奈克洛兹玛 (黄昏之鬃),棱镜宝可梦
+9,10159,奈克洛兹玛 (拂晓之翼),棱镜宝可梦
+9,10160,究极奈克洛兹玛,棱镜宝可梦
+9,10161,搭档皮卡丘,鼠宝可梦
+9,10162,搭档伊布,进化宝可梦
+9,10163,喵喵 (伽勒尔的样子),妖怪猫宝可梦
+9,10164,小火马 (伽勒尔的样子),一角宝可梦
+9,10165,烈焰马 (伽勒尔的样子),一角宝可梦
+9,10166,大葱鸭 (伽勒尔的样子),黄嘴鸭宝可梦
+9,10167,双弹瓦斯 (伽勒尔的样子),毒气宝可梦
+9,10168,魔墙人偶 (伽勒尔的样子),舞蹈宝可梦
+9,10169,太阳珊瑚 (伽勒尔的样子),珊瑚宝可梦
+9,10170,蛇纹熊 (伽勒尔的样子),豆狸宝可梦
+9,10171,直冲熊 (伽勒尔的样子),猛冲宝可梦
+9,10172,火红不倒翁 (伽勒尔的样子),不倒翁宝可梦
+9,10173,达摩狒狒 (伽勒尔的样子) (达摩模式),不倒翁宝可梦
+9,10174,达摩狒狒 (伽勒尔的样子) (普通模式),爆燃宝可梦
+9,10175,哭哭面具 (伽勒尔的样子),魂宝可梦
+9,10176,泥巴鱼 (伽勒尔的样子),陷阱宝可梦
+9,10177,颤弦蝾螈 (低调的样子),庞克宝可梦
+9,10178,冰砌鹅 (解冻头),企鹅宝可梦
+9,10179,爱管侍 (雌性的样子),感情宝可梦
+9,10180,苍响 (剑之王),强者宝可梦
+9,10181,藏玛然特 (盾之王),强者宝可梦
+9,10182,无极汰那 (无极巨化),超极巨宝可梦
+9,10183,呆呆兽 (伽勒尔的样子),憨憨宝可梦
+9,10184,呆壳兽 (ガラルのすがた),寄居蟹宝可梦
+9,10185,武道熊师 (连击流),拳法宝可梦
+9,10186,急冻鸟 (ガラルのすがた),冷酷宝可梦
+9,10187,闪电鸟 (ガラルのすがた),健脚宝可梦
+9,10188,火焰鸟 (ガラルのすがた),邪恶宝可梦
+9,10189,呆呆王 (ガラルのすがた),诅咒师宝可梦
+9,10190,蕾冠王 (骑白马的样子),帝皇宝可梦
+9,10191,蕾冠王 (骑黑马的样子),帝皇宝可梦
+9,10192,卡蒂狗 (洗翠的样子),放哨宝可梦
+9,10193,风速狗 (洗翠的样子),传说宝可梦
+9,10194,霹雳电球 (洗翠的样子),丸宝可梦
+9,10195,顽皮雷弹 (洗翠的样子),丸宝可梦
+9,10196,火暴兽 (洗翠的样子),磷火宝可梦
+9,10197,千针鱼 (洗翠的样子),气球宝可梦
+9,10198,狃拉 (洗翠的样子),钩爪宝可梦
+9,10199,帝牙卢卡 (起源形态),时间宝可梦
+9,10200,帕路奇亚 (起源形态),空间宝可梦
+9,10201,大剑鬼 (洗翠的样子),威严宝可梦
+9,10202,裙儿小姐 (洗翠的样子),旋转宝可梦
+9,10203,野蛮鲈鱼 (白条纹的样子),温厚宝可梦
+9,10204,索罗亚 (洗翠的样子),怨狐宝可梦
+9,10205,索罗亚克 (洗翠的样子),咒狐宝可梦
+9,10206,勇士雄鹰 (洗翠的样子),战吼宝可梦
+9,10207,黏美儿 (洗翠的样子),蜗牛宝可梦
+9,10208,黏美龙 (洗翠的样子),窝壳宝可梦
+9,10209,冰岩怪 (洗翠的样子),冰山宝可梦
+9,10210,狙射树枭 (洗翠的样子),箭羽宝可梦
+9,10211,幽尾玄鱼 (雌性的样子),大鱼宝可梦
+9,10212,眷恋云 (灵兽形态),爱憎宝可梦
+9,10213,肯泰罗 (帕底亚的样子),暴牛宝可梦
+9,10214,肯泰罗 (帕底亚的样子),暴牛宝可梦
+9,10215,肯泰罗 (帕底亚的样子),暴牛宝可梦
+9,10216,乌波 (帕底亚的样子),毒鱼宝可梦
+9,10217,飘香豚 (雌性的样子),猪宝可梦
+9,10218,怒鹦哥 (蓝羽毛),鹦鹉宝可梦
+9,10219,怒鹦哥 (黄羽毛),鹦鹉宝可梦
+9,10220,怒鹦哥 (白羽毛),鹦鹉宝可梦
+9,10221,海豚侠 (全能形态),英雄宝可梦
+9,10222,索财灵 (徒步形态),寻宝宝可梦
+9,10223,月月熊 (赫月),泥炭宝可梦
+9,10224,厄诡椪 (水井面具),面具宝可梦
+9,10225,厄诡椪 (火灶面具),面具宝可梦
+9,10226,厄诡椪 (础石面具),面具宝可梦
+9,10227,厄诡椪 (碧草面具 Tera),面具宝可梦
+9,10228,厄诡椪 (水井面具 Tera),面具宝可梦
+9,10229,厄诡椪 (火灶面具 Tera),面具宝可梦
+9,10230,厄诡椪 (础石面具 Tera),面具宝可梦
+9,10231,太乐巴戈斯 (太晶形态),太晶宝可梦
+9,10232,太乐巴戈斯 (星晶形态),太晶宝可梦
 10,1,妙蛙種子,種子寶可夢
 10,2,妙蛙草,種子寶可夢
 10,3,妙蛙花,種子寶可夢
@@ -12469,223 +12361,211 @@ language_id,pokemon_id,name,category
 10,10022,阿爾宙斯 (冰),創造寶可夢
 10,10023,阿爾宙斯 (龍),創造寶可夢
 10,10024,阿爾宙斯 (惡),創造寶可夢
-10,10025,阿爾宙斯 (???),創造寶可夢
-10,10026,加熱洛托姆,等離子寶可夢
-10,10027,清洗洛托姆,等離子寶可夢
-10,10028,結冰洛托姆,等離子寶可夢
-10,10029,旋轉洛托姆,等離子寶可夢
-10,10030,切割洛托姆,等離子寶可夢
-10,10031,騎拉帝納 (起源形態),反抗寶可夢
-10,10032,謝米 (天空形態),感謝寶可夢
-10,10033,刺刺耳皮丘,小鼠寶可夢
-10,10034,野蠻鱸魚 (藍條紋的樣子),粗暴寶可夢
-10,10035,達摩狒狒 (達摩模式),爆燃寶可夢
-10,10036,美洛耶塔 (舞步形態),旋律寶可夢
-10,10037,龍捲雲 (靈獸形態),旋風寶可夢
-10,10038,雷電雲 (靈獸形態),雷擊寶可夢
-10,10039,土地雲 (靈獸形態),豐饒寶可夢
-10,10040,焰白酋雷姆,境界寶可夢
-10,10041,闇黑酋雷姆,境界寶可夢
-10,10042,超級妙蛙花,種子寶可夢
-10,10043,超級噴火龍Ｘ,火焰寶可夢
-10,10044,超級噴火龍Ｙ,火焰寶可夢
-10,10045,超級水箭龜,甲殼寶可夢
-10,10046,超級胡地,念力寶可夢
-10,10047,超級耿鬼,影子寶可夢
-10,10048,超級袋獸,親子寶可夢
-10,10049,超級凱羅斯,鍬形蟲寶可夢
-10,10050,超級暴鯉龍,凶惡寶可夢
-10,10051,超級化石翼龍,化石寶可夢
-10,10052,超級超夢Ｘ,基因寶可夢
-10,10053,超級超夢Ｙ,基因寶可夢
-10,10054,超級電龍,燈寶可夢
-10,10055,超級巨鉗螳螂,鉗子寶可夢
-10,10056,超級赫拉克羅斯,獨角寶可夢
-10,10057,超級黑魯加,陰暗寶可夢
-10,10058,超級班基拉斯,鎧甲寶可夢
-10,10059,超級火焰雞,猛火寶可夢
-10,10060,超級沙奈朵,包容寶可夢
-10,10061,超級大嘴娃,欺騙寶可夢
-10,10062,超級波士可多拉,鐵鎧寶可夢
-10,10063,超級恰雷姆,冥想寶可夢
-10,10064,超級雷電獸,放電寶可夢
-10,10065,超級詛咒娃娃,布偶寶可夢
-10,10066,超級阿勃梭魯,災禍寶可夢
-10,10067,超級拉帝亞斯,無限寶可夢
-10,10068,超級拉帝歐斯,無限寶可夢
-10,10069,超級烈咬陸鯊,音速寶可夢
-10,10070,超級路卡利歐,波導寶可夢
-10,10071,超級暴雪王,樹冰寶可夢
-10,10072,阿爾宙斯 (妖精),創造寶可夢
-10,10073,花葉蒂 (永恆之花),單朵寶可夢
-10,10074,超能妙喵 (雌性的樣子),抑制寶可夢
-10,10075,堅盾劍怪 (刀劍形態),王劍寶可夢
-10,10076,南瓜精 (小尺寸),南瓜寶可夢
-10,10077,南瓜精 (大尺寸),南瓜寶可夢
-10,10078,南瓜精 (特大尺寸),南瓜寶可夢
-10,10079,南瓜怪人 (小尺寸),南瓜寶可夢
-10,10080,南瓜怪人 (大尺寸),南瓜寶可夢
-10,10081,南瓜怪人 (特大尺寸),南瓜寶可夢
-10,10082,超級大針蜂,毒蜂寶可夢
-10,10083,超級大比鳥,鳥寶可夢
-10,10084,重搖滾皮卡丘,鼠寶可夢
-10,10085,貴婦皮卡丘,鼠寶可夢
-10,10086,偶像皮卡丘,鼠寶可夢
-10,10087,博士皮卡丘,鼠寶可夢
-10,10088,蒙面皮卡丘,鼠寶可夢
-10,10089,角色扮演皮卡丘,鼠寶可夢
-10,10090,超級呆殼獸,寄居蟹寶可夢
-10,10091,超級大鋼蛇,鐵蛇寶可夢
-10,10092,超級蜥蜴王,密林寶可夢
-10,10093,超級巨沼怪,沼魚寶可夢
-10,10094,超級勾魂眼,黑暗寶可夢
-10,10095,超級巨牙鯊,凶暴寶可夢
-10,10096,超級噴火駝,噴火寶可夢
-10,10097,超級七夕青鳥,哼唱寶可夢
-10,10098,超級冰鬼護,臉面寶可夢
-10,10099,超級暴飛龍,龍寶可夢
-10,10100,超級巨金怪,鐵足寶可夢
-10,10101,原始蓋歐卡,海底寶可夢
-10,10102,原始固拉多,大陸寶可夢
-10,10103,超級烈空坐,天空寶可夢
-10,10104,超級長耳兔,兔子寶可夢
-10,10105,超級艾路雷朵,利刃寶可夢
-10,10106,超級差不多娃娃,聽力寶可夢
-10,10107,超級蒂安希,寶石寶可夢
-10,10108,解放胡帕,魔神寶可夢
-10,10109,小拉達 (阿羅拉的樣子),鼠寶可夢
-10,10110,拉達 (阿羅拉的樣子),鼠寶可夢
-10,10111,霸主拉達,鼠寶可夢
-10,10112,皮卡丘 (帽子),鼠寶可夢
-10,10113,雷丘 (阿羅拉的樣子),鼠寶可夢
-10,10114,穿山鼠 (阿羅拉的樣子),鼠寶可夢
-10,10115,穿山王 (阿羅拉的樣子),鼠寶可夢
-10,10116,六尾 (阿羅拉的樣子),狐狸寶可夢
-10,10117,九尾 (阿羅拉的樣子),狐狸寶可夢
-10,10118,地鼠 (阿羅拉的樣子),鼴鼠寶可夢
-10,10119,三地鼠 (阿羅拉的樣子),鼴鼠寶可夢
-10,10120,喵喵 (阿羅拉的樣子),妖怪貓寶可夢
-10,10121,貓老大 (阿羅拉的樣子),暹羅貓寶可夢
-10,10122,小拳石 (阿羅拉的樣子),岩石寶可夢
-10,10123,隆隆石 (阿羅拉的樣子),岩石寶可夢
-10,10124,隆隆岩 (阿羅拉的樣子),重量級寶可夢
-10,10125,臭泥 (阿羅拉的樣子),污泥寶可夢
-10,10126,臭臭泥 (阿羅拉的樣子),污泥寶可夢
-10,10127,椰蛋樹 (阿羅拉的樣子),椰子寶可夢
-10,10128,嘎啦嘎啦 (阿羅拉的樣子),愛骨寶可夢
-10,10129,甲賀忍蛙 (牽絆變身),忍者寶可夢
-10,10130,小智版甲賀忍蛙,忍者寶可夢
-10,10131,１０％基格爾德 (氣場破壞),秩序寶可夢
-10,10132,１０％基格爾德 (群聚變形),秩序寶可夢
-10,10133,５０％基格爾德 (群聚變形),秩序寶可夢
-10,10134,完全體基格爾德,秩序寶可夢
-10,10135,霸主貓鼬探長,監視寶可夢
-10,10136,霸主鍬農炮蟲,鍬形蟲寶可夢
-10,10137,花舞鳥 (啪滋啪滋風格),舞蹈寶可夢
-10,10138,花舞鳥 (呼拉呼拉風格),舞蹈寶可夢
-10,10139,花舞鳥 (輕盈輕盈風格),舞蹈寶可夢
-10,10140,鬃岩狼人 (黑夜的樣子),狼寶可夢
-10,10141,弱丁魚 (魚群的樣子),小魚寶可夢
-10,10142,霸主蘭螳花,花鐮寶可夢
-10,10143,霸主焰后蜥,毒蜥寶可夢
-10,10144,銀伴戰獸 (格鬥),人工寶可夢
-10,10145,銀伴戰獸 (飛行),人工寶可夢
-10,10146,銀伴戰獸 (毒),人工寶可夢
-10,10147,銀伴戰獸 (地面),人工寶可夢
-10,10148,銀伴戰獸 (岩石),人工寶可夢
-10,10149,銀伴戰獸 (蟲),人工寶可夢
-10,10150,銀伴戰獸 (幽靈),人工寶可夢
-10,10151,銀伴戰獸 (鋼),人工寶可夢
-10,10152,銀伴戰獸 (火),人工寶可夢
-10,10153,銀伴戰獸 (水),人工寶可夢
-10,10154,銀伴戰獸 (草),人工寶可夢
-10,10155,銀伴戰獸 (電),人工寶可夢
-10,10156,銀伴戰獸 (超能力),人工寶可夢
-10,10157,銀伴戰獸 (冰),人工寶可夢
-10,10158,銀伴戰獸 (龍),人工寶可夢
-10,10159,銀伴戰獸 (惡),人工寶可夢
-10,10160,銀伴戰獸 (妖精),人工寶可夢
-10,10161,小隕星 (核心的樣子),流星寶可夢
-10,10162,霸主謎擬Ｑ,畫皮寶可夢
-10,10163,霸主杖尾鱗甲龍,鱗片寶可夢
-10,10164,霸主嘎啦嘎啦,愛骨寶可夢
-10,10165,霸主蝶結萌虻,蜂虻寶可夢
-10,10166,岩狗狗 (我行我素),小狗寶可夢
-10,10167,鬃岩狼人 (黃昏的樣子),狼寶可夢
-10,10168,霸主滴蛛霸,水泡寶可夢
-10,10169,霸主托戈德瑪爾,蜷縮寶可夢
-10,10170,奈克洛茲瑪 (黃昏之鬃),稜鏡寶可夢
-10,10171,奈克洛茲瑪 (拂曉之翼),稜鏡寶可夢
-10,10172,究極奈克洛茲瑪,稜鏡寶可夢
-10,10173,搭檔皮卡丘,鼠寶可夢
-10,10174,搭檔伊布,進化寶可夢
-10,10175,喵喵 (伽勒爾的樣子),妖怪貓寶可夢
-10,10176,小火馬 (伽勒爾的樣子),一角寶可夢
-10,10177,烈焰馬 (伽勒爾的樣子),一角寶可夢
-10,10178,大蔥鴨 (伽勒爾的樣子),黃嘴鴨寶可夢
-10,10179,雙彈瓦斯 (伽勒爾的樣子),毒氣寶可夢
-10,10180,魔牆人偶 (伽勒爾的樣子),舞蹈寶可夢
-10,10181,太陽珊瑚 (伽勒爾的樣子),珊瑚寶可夢
-10,10182,蛇紋熊 (伽勒爾的樣子),豆貍寶可夢
-10,10183,直衝熊 (伽勒爾的樣子),猛衝寶可夢
-10,10184,火紅不倒翁 (伽勒爾的樣子),不倒翁寶可夢
-10,10185,達摩狒狒 (伽勒爾的樣子) (達摩模式),不倒翁寶可夢
-10,10186,達摩狒狒 (伽勒爾的樣子) (普通模式),爆燃寶可夢
-10,10187,哭哭面具 (伽勒爾的樣子),魂寶可夢
-10,10188,泥巴魚 (伽勒爾的樣子),陷阱寶可夢
-10,10189,顫弦蠑螈 (低調的樣子),龐克寶可夢
-10,10190,冰砌鵝 (解凍頭),企鵝寶可夢
-10,10191,愛管侍 (雌性的樣子),感情寶可夢
-10,10192,蒼響 (劍之王),強者寶可夢
-10,10193,藏瑪然特 (盾之王),強者寶可夢
-10,10194,無極汰那 (無極巨化),超極巨寶可夢
-10,10195,呆呆獸 (伽勒爾的樣子),憨憨寶可夢
-10,10196,呆殼獸 (ガラルのすがた),寄居蟹寶可夢
-10,10197,武道熊師 (連擊流),拳法寶可夢
-10,10198,急凍鳥 (ガラルのすがた),冷酷寶可夢
-10,10199,閃電鳥 (ガラルのすがた),健腳寶可夢
-10,10200,火焰鳥 (ガラルのすがた),邪惡寶可夢
-10,10201,呆呆王 (ガラルのすがた),詛咒師寶可夢
-10,10202,蕾冠王 (騎白馬的樣子),帝皇寶可夢
-10,10203,蕾冠王 (騎黑馬的樣子),帝皇寶可夢
-10,10204,卡蒂狗 (洗翠的樣子),放哨寶可夢
-10,10205,風速狗 (洗翠的樣子),傳說寶可夢
-10,10206,霹靂電球 (洗翠的樣子),丸寶可夢
-10,10207,頑皮雷彈 (洗翠的樣子),丸寶可夢
-10,10208,火爆獸 (洗翠的樣子),鬼火寶可夢
-10,10209,千針魚 (洗翠的樣子),氣球寶可夢
-10,10210,狃拉 (洗翠的樣子),鉤爪寶可夢
-10,10211,帝牙盧卡 (起源形態),時間寶可夢
-10,10212,帕路奇亞 (起源形態),空間寶可夢
-10,10213,大劍鬼 (洗翠的樣子),威嚴寶可夢
-10,10214,裙兒小姐 (洗翠的樣子),旋轉寶可夢
-10,10215,野蠻鱸魚 (白條紋的樣子),溫厚寶可夢
-10,10216,索羅亞 (洗翠的樣子),怨狐寶可夢
-10,10217,索羅亞克 (洗翠的樣子),咒狐寶可夢
-10,10218,勇士雄鷹 (洗翠的樣子),戰吼寶可夢
-10,10219,黏美兒 (洗翠的樣子),蝸牛寶可夢
-10,10220,黏美龍 (洗翠的樣子),窩殼寶可夢
-10,10221,冰岩怪 (洗翠的樣子),冰山寶可夢
-10,10222,狙射樹梟 (洗翠的樣子),箭羽寶可夢
-10,10223,幽尾玄魚 (雌性的樣子),大魚寶可夢
-10,10224,眷戀雲 (靈獸形態),愛憎寶可夢
-10,10225,肯泰羅 (帕底亞的樣子),暴牛寶可夢
-10,10226,肯泰羅 (帕底亞的樣子),暴牛寶可夢
-10,10227,肯泰羅 (帕底亞的樣子),暴牛寶可夢
-10,10228,烏波 (帕底亞的樣子),毒魚寶可夢
-10,10229,飄香豚 (雌性的樣子),豬寶可夢
-10,10230,怒鸚哥 (藍羽毛),鸚鵡寶可夢
-10,10231,怒鸚哥 (黃羽毛),鸚鵡寶可夢
-10,10232,怒鸚哥 (白羽毛),鸚鵡寶可夢
-10,10233,海豚俠 (全能形態),英雄寶可夢
-10,10234,索財靈 (徒步形態),尋寶寶可夢
-10,10235,月月熊 (赫月),泥炭寶可夢
-10,10236,厄鬼椪 (水井面具),面具寶可夢
-10,10237,厄鬼椪 (火灶面具),面具寶可夢
-10,10238,厄鬼椪 (礎石面具),面具寶可夢
-10,10239,厄鬼椪 (碧草面具 Tera),面具寶可夢
-10,10240,厄鬼椪 (水井面具 Tera),面具寶可夢
-10,10241,厄鬼椪 (火灶面具 Tera),面具寶可夢
-10,10242,厄鬼椪 (礎石面具 Tera),面具寶可夢
-10,10243,太樂巴戈斯 (太晶形態),太晶寶可夢
-10,10244,太樂巴戈斯 (星晶形態),太晶寶可夢
+10,10025,加熱洛托姆,等離子寶可夢
+10,10026,清洗洛托姆,等離子寶可夢
+10,10027,結冰洛托姆,等離子寶可夢
+10,10028,旋轉洛托姆,等離子寶可夢
+10,10029,切割洛托姆,等離子寶可夢
+10,10030,騎拉帝納 (起源形態),反抗寶可夢
+10,10031,謝米 (天空形態),感謝寶可夢
+10,10032,刺刺耳皮丘,小鼠寶可夢
+10,10033,野蠻鱸魚 (藍條紋的樣子),粗暴寶可夢
+10,10034,達摩狒狒 (達摩模式),爆燃寶可夢
+10,10035,美洛耶塔 (舞步形態),旋律寶可夢
+10,10036,龍捲雲 (靈獸形態),旋風寶可夢
+10,10037,雷電雲 (靈獸形態),雷擊寶可夢
+10,10038,土地雲 (靈獸形態),豐饒寶可夢
+10,10039,焰白酋雷姆,境界寶可夢
+10,10040,闇黑酋雷姆,境界寶可夢
+10,10041,超級妙蛙花,種子寶可夢
+10,10042,超級噴火龍Ｘ,火焰寶可夢
+10,10043,超級噴火龍Ｙ,火焰寶可夢
+10,10044,超級水箭龜,甲殼寶可夢
+10,10045,超級胡地,念力寶可夢
+10,10046,超級耿鬼,影子寶可夢
+10,10047,超級袋獸,親子寶可夢
+10,10048,超級凱羅斯,鍬形蟲寶可夢
+10,10049,超級暴鯉龍,凶惡寶可夢
+10,10050,超級化石翼龍,化石寶可夢
+10,10051,超級超夢Ｘ,基因寶可夢
+10,10052,超級超夢Ｙ,基因寶可夢
+10,10053,超級電龍,燈寶可夢
+10,10054,超級巨鉗螳螂,鉗子寶可夢
+10,10055,超級赫拉克羅斯,獨角寶可夢
+10,10056,超級黑魯加,陰暗寶可夢
+10,10057,超級班基拉斯,鎧甲寶可夢
+10,10058,超級火焰雞,猛火寶可夢
+10,10059,超級沙奈朵,包容寶可夢
+10,10060,超級大嘴娃,欺騙寶可夢
+10,10061,超級波士可多拉,鐵鎧寶可夢
+10,10062,超級恰雷姆,冥想寶可夢
+10,10063,超級雷電獸,放電寶可夢
+10,10064,超級詛咒娃娃,布偶寶可夢
+10,10065,超級阿勃梭魯,災禍寶可夢
+10,10066,超級拉帝亞斯,無限寶可夢
+10,10067,超級拉帝歐斯,無限寶可夢
+10,10068,超級烈咬陸鯊,音速寶可夢
+10,10069,超級路卡利歐,波導寶可夢
+10,10070,超級暴雪王,樹冰寶可夢
+10,10071,阿爾宙斯 (妖精),創造寶可夢
+10,10072,花葉蒂 (永恆之花),單朵寶可夢
+10,10073,超能妙喵 (雌性的樣子),抑制寶可夢
+10,10074,堅盾劍怪 (刀劍形態),王劍寶可夢
+10,10075,南瓜精 (小尺寸),南瓜寶可夢
+10,10076,南瓜精 (大尺寸),南瓜寶可夢
+10,10077,南瓜精 (特大尺寸),南瓜寶可夢
+10,10078,南瓜怪人 (小尺寸),南瓜寶可夢
+10,10079,南瓜怪人 (大尺寸),南瓜寶可夢
+10,10080,南瓜怪人 (特大尺寸),南瓜寶可夢
+10,10081,超級大針蜂,毒蜂寶可夢
+10,10082,超級大比鳥,鳥寶可夢
+10,10083,重搖滾皮卡丘,鼠寶可夢
+10,10084,貴婦皮卡丘,鼠寶可夢
+10,10085,偶像皮卡丘,鼠寶可夢
+10,10086,博士皮卡丘,鼠寶可夢
+10,10087,蒙面皮卡丘,鼠寶可夢
+10,10088,角色扮演皮卡丘,鼠寶可夢
+10,10089,超級呆殼獸,寄居蟹寶可夢
+10,10090,超級大鋼蛇,鐵蛇寶可夢
+10,10091,超級蜥蜴王,密林寶可夢
+10,10092,超級巨沼怪,沼魚寶可夢
+10,10093,超級勾魂眼,黑暗寶可夢
+10,10094,超級巨牙鯊,凶暴寶可夢
+10,10095,超級噴火駝,噴火寶可夢
+10,10096,超級七夕青鳥,哼唱寶可夢
+10,10097,超級冰鬼護,臉面寶可夢
+10,10098,超級暴飛龍,龍寶可夢
+10,10099,超級巨金怪,鐵足寶可夢
+10,10100,原始蓋歐卡,海底寶可夢
+10,10101,原始固拉多,大陸寶可夢
+10,10102,超級烈空坐,天空寶可夢
+10,10103,超級長耳兔,兔子寶可夢
+10,10104,超級艾路雷朵,利刃寶可夢
+10,10105,超級差不多娃娃,聽力寶可夢
+10,10106,超級蒂安希,寶石寶可夢
+10,10107,解放胡帕,魔神寶可夢
+10,10108,小拉達 (阿羅拉的樣子),鼠寶可夢
+10,10109,拉達 (阿羅拉的樣子),鼠寶可夢
+10,10110,皮卡丘 (帽子),鼠寶可夢
+10,10111,雷丘 (阿羅拉的樣子),鼠寶可夢
+10,10112,穿山鼠 (阿羅拉的樣子),鼠寶可夢
+10,10113,穿山王 (阿羅拉的樣子),鼠寶可夢
+10,10114,六尾 (阿羅拉的樣子),狐狸寶可夢
+10,10115,九尾 (阿羅拉的樣子),狐狸寶可夢
+10,10116,地鼠 (阿羅拉的樣子),鼴鼠寶可夢
+10,10117,三地鼠 (阿羅拉的樣子),鼴鼠寶可夢
+10,10118,喵喵 (阿羅拉的樣子),妖怪貓寶可夢
+10,10119,貓老大 (阿羅拉的樣子),暹羅貓寶可夢
+10,10120,小拳石 (阿羅拉的樣子),岩石寶可夢
+10,10121,隆隆石 (阿羅拉的樣子),岩石寶可夢
+10,10122,隆隆岩 (阿羅拉的樣子),重量級寶可夢
+10,10123,臭泥 (阿羅拉的樣子),污泥寶可夢
+10,10124,臭臭泥 (阿羅拉的樣子),污泥寶可夢
+10,10125,椰蛋樹 (阿羅拉的樣子),椰子寶可夢
+10,10126,嘎啦嘎啦 (阿羅拉的樣子),愛骨寶可夢
+10,10127,甲賀忍蛙 (牽絆變身),忍者寶可夢
+10,10128,小智版甲賀忍蛙,忍者寶可夢
+10,10129,１０％基格爾德 (氣場破壞),秩序寶可夢
+10,10130,１０％基格爾德 (群聚變形),秩序寶可夢
+10,10131,５０％基格爾德 (群聚變形),秩序寶可夢
+10,10132,完全體基格爾德,秩序寶可夢
+10,10133,花舞鳥 (啪滋啪滋風格),舞蹈寶可夢
+10,10134,花舞鳥 (呼拉呼拉風格),舞蹈寶可夢
+10,10135,花舞鳥 (輕盈輕盈風格),舞蹈寶可夢
+10,10136,鬃岩狼人 (黑夜的樣子),狼寶可夢
+10,10137,弱丁魚 (魚群的樣子),小魚寶可夢
+10,10138,銀伴戰獸 (格鬥),人工寶可夢
+10,10139,銀伴戰獸 (飛行),人工寶可夢
+10,10140,銀伴戰獸 (毒),人工寶可夢
+10,10141,銀伴戰獸 (地面),人工寶可夢
+10,10142,銀伴戰獸 (岩石),人工寶可夢
+10,10143,銀伴戰獸 (蟲),人工寶可夢
+10,10144,銀伴戰獸 (幽靈),人工寶可夢
+10,10145,銀伴戰獸 (鋼),人工寶可夢
+10,10146,銀伴戰獸 (火),人工寶可夢
+10,10147,銀伴戰獸 (水),人工寶可夢
+10,10148,銀伴戰獸 (草),人工寶可夢
+10,10149,銀伴戰獸 (電),人工寶可夢
+10,10150,銀伴戰獸 (超能力),人工寶可夢
+10,10151,銀伴戰獸 (冰),人工寶可夢
+10,10152,銀伴戰獸 (龍),人工寶可夢
+10,10153,銀伴戰獸 (惡),人工寶可夢
+10,10154,銀伴戰獸 (妖精),人工寶可夢
+10,10155,小隕星 (核心的樣子),流星寶可夢
+10,10156,岩狗狗 (我行我素),小狗寶可夢
+10,10157,鬃岩狼人 (黃昏的樣子),狼寶可夢
+10,10158,奈克洛茲瑪 (黃昏之鬃),稜鏡寶可夢
+10,10159,奈克洛茲瑪 (拂曉之翼),稜鏡寶可夢
+10,10160,究極奈克洛茲瑪,稜鏡寶可夢
+10,10161,搭檔皮卡丘,鼠寶可夢
+10,10162,搭檔伊布,進化寶可夢
+10,10163,喵喵 (伽勒爾的樣子),妖怪貓寶可夢
+10,10164,小火馬 (伽勒爾的樣子),一角寶可夢
+10,10165,烈焰馬 (伽勒爾的樣子),一角寶可夢
+10,10166,大蔥鴨 (伽勒爾的樣子),黃嘴鴨寶可夢
+10,10167,雙彈瓦斯 (伽勒爾的樣子),毒氣寶可夢
+10,10168,魔牆人偶 (伽勒爾的樣子),舞蹈寶可夢
+10,10169,太陽珊瑚 (伽勒爾的樣子),珊瑚寶可夢
+10,10170,蛇紋熊 (伽勒爾的樣子),豆貍寶可夢
+10,10171,直衝熊 (伽勒爾的樣子),猛衝寶可夢
+10,10172,火紅不倒翁 (伽勒爾的樣子),不倒翁寶可夢
+10,10173,達摩狒狒 (伽勒爾的樣子) (達摩模式),不倒翁寶可夢
+10,10174,達摩狒狒 (伽勒爾的樣子) (普通模式),爆燃寶可夢
+10,10175,哭哭面具 (伽勒爾的樣子),魂寶可夢
+10,10176,泥巴魚 (伽勒爾的樣子),陷阱寶可夢
+10,10177,顫弦蠑螈 (低調的樣子),龐克寶可夢
+10,10178,冰砌鵝 (解凍頭),企鵝寶可夢
+10,10179,愛管侍 (雌性的樣子),感情寶可夢
+10,10180,蒼響 (劍之王),強者寶可夢
+10,10181,藏瑪然特 (盾之王),強者寶可夢
+10,10182,無極汰那 (無極巨化),超極巨寶可夢
+10,10183,呆呆獸 (伽勒爾的樣子),憨憨寶可夢
+10,10184,呆殼獸 (ガラルのすがた),寄居蟹寶可夢
+10,10185,武道熊師 (連擊流),拳法寶可夢
+10,10186,急凍鳥 (ガラルのすがた),冷酷寶可夢
+10,10187,閃電鳥 (ガラルのすがた),健腳寶可夢
+10,10188,火焰鳥 (ガラルのすがた),邪惡寶可夢
+10,10189,呆呆王 (ガラルのすがた),詛咒師寶可夢
+10,10190,蕾冠王 (騎白馬的樣子),帝皇寶可夢
+10,10191,蕾冠王 (騎黑馬的樣子),帝皇寶可夢
+10,10192,卡蒂狗 (洗翠的樣子),放哨寶可夢
+10,10193,風速狗 (洗翠的樣子),傳說寶可夢
+10,10194,霹靂電球 (洗翠的樣子),丸寶可夢
+10,10195,頑皮雷彈 (洗翠的樣子),丸寶可夢
+10,10196,火爆獸 (洗翠的樣子),鬼火寶可夢
+10,10197,千針魚 (洗翠的樣子),氣球寶可夢
+10,10198,狃拉 (洗翠的樣子),鉤爪寶可夢
+10,10199,帝牙盧卡 (起源形態),時間寶可夢
+10,10200,帕路奇亞 (起源形態),空間寶可夢
+10,10201,大劍鬼 (洗翠的樣子),威嚴寶可夢
+10,10202,裙兒小姐 (洗翠的樣子),旋轉寶可夢
+10,10203,野蠻鱸魚 (白條紋的樣子),溫厚寶可夢
+10,10204,索羅亞 (洗翠的樣子),怨狐寶可夢
+10,10205,索羅亞克 (洗翠的樣子),咒狐寶可夢
+10,10206,勇士雄鷹 (洗翠的樣子),戰吼寶可夢
+10,10207,黏美兒 (洗翠的樣子),蝸牛寶可夢
+10,10208,黏美龍 (洗翠的樣子),窩殼寶可夢
+10,10209,冰岩怪 (洗翠的樣子),冰山寶可夢
+10,10210,狙射樹梟 (洗翠的樣子),箭羽寶可夢
+10,10211,幽尾玄魚 (雌性的樣子),大魚寶可夢
+10,10212,眷戀雲 (靈獸形態),愛憎寶可夢
+10,10213,肯泰羅 (帕底亞的樣子),暴牛寶可夢
+10,10214,肯泰羅 (帕底亞的樣子),暴牛寶可夢
+10,10215,肯泰羅 (帕底亞的樣子),暴牛寶可夢
+10,10216,烏波 (帕底亞的樣子),毒魚寶可夢
+10,10217,飄香豚 (雌性的樣子),豬寶可夢
+10,10218,怒鸚哥 (藍羽毛),鸚鵡寶可夢
+10,10219,怒鸚哥 (黃羽毛),鸚鵡寶可夢
+10,10220,怒鸚哥 (白羽毛),鸚鵡寶可夢
+10,10221,海豚俠 (全能形態),英雄寶可夢
+10,10222,索財靈 (徒步形態),尋寶寶可夢
+10,10223,月月熊 (赫月),泥炭寶可夢
+10,10224,厄鬼椪 (水井面具),面具寶可夢
+10,10225,厄鬼椪 (火灶面具),面具寶可夢
+10,10226,厄鬼椪 (礎石面具),面具寶可夢
+10,10227,厄鬼椪 (碧草面具 Tera),面具寶可夢
+10,10228,厄鬼椪 (水井面具 Tera),面具寶可夢
+10,10229,厄鬼椪 (火灶面具 Tera),面具寶可夢
+10,10230,厄鬼椪 (礎石面具 Tera),面具寶可夢
+10,10231,太樂巴戈斯 (太晶形態),太晶寶可夢
+10,10232,太樂巴戈斯 (星晶形態),太晶寶可夢

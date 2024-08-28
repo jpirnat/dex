@@ -162,7 +162,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			WHERE `id` IN (
 				SELECT
 					`vgf`.`version_group_id`
-				FROM `version_group_forms` AS `vgf`
+				FROM `vg_forms` AS `vgf`
 				INNER JOIN `forms` AS `f`
 					ON `vgf`.`form_id` = `f`.`id`
 				WHERE `f`.`pokemon_id` = :pokemon_id

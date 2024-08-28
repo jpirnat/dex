@@ -71,7 +71,7 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 				`vg`.`icon`,
 				`vgn`.`name`
 			FROM `version_groups` AS `vg`
-			INNER JOIN `version_group_names` AS `vgn`
+			INNER JOIN `vg_names` AS `vgn`
 				ON `vg`.`id` = `vgn`.`version_group_id`
 			WHERE `vg`.`id` = :version_group_id
 				AND `vgn`.`language_id` = :language_id'
@@ -117,7 +117,7 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 				`vg`.`icon`,
 				`vgn`.`name`
 			FROM `version_groups` AS `vg`
-			INNER JOIN `version_group_names` AS `vgn`
+			INNER JOIN `vg_names` AS `vgn`
 				ON `vg`.`id` = `vgn`.`version_group_id`
 			WHERE `vg`.`id` IN (
 				SELECT
@@ -128,7 +128,7 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 			AND `vg`.`id` IN (
 				SELECT
 					`vgf`.`version_group_id`
-				FROM `version_group_forms` AS `vgf`
+				FROM `vg_forms` AS `vgf`
 				INNER JOIN `forms` AS `f`
 					ON `vgf`.`form_id` = `f`.`id`
 				WHERE `f`.`pokemon_id` = :pokemon_id
@@ -188,7 +188,7 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 				`vg`.`icon`,
 				`vgn`.`name`
 			FROM `version_groups` AS `vg`
-			INNER JOIN `version_group_names` AS `vgn`
+			INNER JOIN `vg_names` AS `vgn`
 				ON `vg`.`id` = `vgn`.`version_group_id`
 			WHERE `vg`.`id` IN (
 				SELECT

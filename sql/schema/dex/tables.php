@@ -18,8 +18,8 @@ return [
 	'generations',
 	'version_groups',
 	'versions',
-	'version_group_languages',
-	'version_group_names',
+	'vg_languages',
+	'vg_names',
 	'version_names',
 	'vg_move_transfers',
 
@@ -33,7 +33,7 @@ return [
 	'form_names',
 	'models',
 	'form_icons',
-	'version_group_forms',
+	'vg_forms',
 
 	// Abilities
 	'abilities',

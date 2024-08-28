@@ -63,7 +63,7 @@ final readonly class DatabaseFormRepository implements FormRepositoryInterface
 			WHERE `id` IN (
 				SELECT
 					`form_id`
-				FROM `version_group_forms`
+				FROM `vg_forms`
 				WHERE `version_group_id` = :version_group_id
 			)
 			AND `pokemon_id` = :pokemon_id'

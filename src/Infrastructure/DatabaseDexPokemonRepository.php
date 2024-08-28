@@ -233,7 +233,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 			WHERE `p`.`id` IN (
 				SELECT DISTINCT
 					`f`.`pokemon_id`
-				FROM `version_group_forms` AS `vgf`
+				FROM `vg_forms` AS `vgf`
 				INNER JOIN `forms` AS `f`
 					ON `vgf`.`form_id` = `f`.`id`
 				WHERE `vgf`.`version_group_id` = :version_group_id2
@@ -322,7 +322,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 			WHERE `p`.`id` IN (
 				SELECT DISTINCT
 					`f`.`pokemon_id`
-				FROM `version_group_forms` AS `vgf`
+				FROM `vg_forms` AS `vgf`
 				INNER JOIN `forms` AS `f`
 					ON `vgf`.`form_id` = `f`.`id`
 				WHERE `vgf`.`version_group_id` = :version_group_id2
@@ -402,7 +402,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 			WHERE `p`.`id` IN (
 				SELECT DISTINCT
 					`f`.`pokemon_id`
-				FROM `version_group_forms` AS `vgf`
+				FROM `vg_forms` AS `vgf`
 				INNER JOIN `forms` AS `f`
 					ON `vgf`.`form_id` = `f`.`id`
 				WHERE `vgf`.`version_group_id` = :version_group_id2

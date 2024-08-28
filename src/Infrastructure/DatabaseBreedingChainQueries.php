@@ -28,7 +28,7 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 			AND `id` IN (
 				SELECT
 					`form_id`
-				FROM `version_group_forms`
+				FROM `vg_forms`
 				WHERE `version_group_id` IN (
 					SELECT
 						`id`
@@ -127,7 +127,7 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 				# Make sure the Pokémon is in the same game as the egg move.
 				SELECT
 					`f`.`pokemon_id`
-				FROM `version_group_forms` AS `vgf`
+				FROM `vg_forms` AS `vgf`
 				INNER JOIN `forms` AS `f`
 					ON `vgf`.`form_id` = `f`.`id`
 				WHERE `vgf`.`version_group_id` = $versionGroupId
@@ -185,7 +185,7 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 				# Make sure the Pokémon is in the same game as the egg move.
 				SELECT
 					`f`.`pokemon_id`
-				FROM `version_group_forms` AS `vgf`
+				FROM `vg_forms` AS `vgf`
 				INNER JOIN `forms` AS `f`
 					ON `vgf`.`form_id` = `f`.`id`
 				WHERE `vgf`.`version_group_id` = $versionGroupId

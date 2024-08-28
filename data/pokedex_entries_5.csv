@@ -2691,6 +2691,10 @@ language_id,form_id,version_id,is_female,entry
 1,10024,21,0,なにも　ない　ばしょに　あった\nタマゴのなかから　すがたを　あらわし\nせかいを　うみだしたと　されている。
 1,10024,22,0,なにも　ない　ばしょに　あった\nタマゴのなかから　すがたを　あらわし\nせかいを　うみだしたと　されている。
 1,10024,23,0,なにも　ない　ばしょに　あった\nタマゴのなかから　すがたを　あらわし\nせかいを　うみだしたと　されている。
+1,10025,20,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
+1,10025,21,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
+1,10025,22,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
+1,10025,23,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
 1,10026,20,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
 1,10026,21,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
 1,10026,22,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
@@ -2707,40 +2711,36 @@ language_id,form_id,version_id,is_female,entry
 1,10029,21,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
 1,10029,22,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
 1,10029,23,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
-1,10030,20,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
-1,10030,21,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
-1,10030,22,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
-1,10030,23,0,でんきのような　からだは　いちぶの\nきかいに　はいりこむことが　できる。\nそして　そのからだで　いたずらする。
-1,10031,20,0,あばれもの　ゆえ　おいだされたが\nやぶれたせかいと　いわれる　ばしょで\nしずかに　もとのせかいを　みていた。
-1,10031,21,0,あばれもの　ゆえ　おいだされたが\nやぶれたせかいと　いわれる　ばしょで\nしずかに　もとのせかいを　みていた。
-1,10031,22,0,あばれもの　ゆえ　おいだされたが\nやぶれたせかいと　いわれる　ばしょで\nしずかに　もとのせかいを　みていた。
-1,10031,23,0,あばれもの　ゆえ　おいだされたが\nやぶれたせかいと　いわれる　ばしょで\nしずかに　もとのせかいを　みていた。
-1,10032,20,0,ひとに　やさしく　だきしめられ　\nありがとうの　きもちを　かんじると\nぜんしんの　はなが　ひらきだす。
-1,10032,21,0,ひとに　やさしく　だきしめられ　\nありがとうの　きもちを　かんじると\nぜんしんの　はなが　ひらきだす。
-1,10032,22,0,ひとに　やさしく　だきしめられ　\nありがとうの　きもちを　かんじると\nぜんしんの　はなが　ひらきだす。
-1,10032,23,0,ひとに　やさしく　だきしめられ　\nありがとうの　きもちを　かんじると\nぜんしんの　はなが　ひらきだす。
-1,10034,20,0,あかと　あおの　バスラオは　すぐに\nケンカするほど　なかが　わるい。\nとても　らんぼうな　ポケモン。
-1,10034,21,0,あかと　あおの　バスラオは　なかが\nわるいが　なぜか　いろの　ちがう\nこたいが　むれに　まぎれこんでいる。
-1,10034,22,0,とても　らんぼうで　いつも　あかと\nあおの　バスラオは　あらそっている。\nたべると　いがいと　おいしいらしい。
-1,10034,23,0,とても　らんぼうで　いつも　あかと\nあおの　バスラオは　あらそっている。\nたべると　いがいと　おいしいらしい。
-1,10035,20,0,たいないで　１４００どの　ほのおを\nもやすことで　ダンプカーを　パンチで\nはかいするほどの　パワーを　つくる。
-1,10035,21,0,たたかいで　よわると　いわのように\nうごかなくなる。こころを　とぎすまし\nせいしんりょくで　たたかうのだ。
-1,10035,22,0,はげしい　たたかいで　きずつくと\nいわのように　かたまり　もっこうして\nこころを　とぎすませるのだ。
-1,10035,23,0,はげしい　たたかいで　きずつくと\nいわのように　かたまり　もっこうして\nこころを　とぎすませるのだ。
-1,10036,20,0,とくしゅな　はっせいほうで　うたう\nメロディは　きいた　ものの\nかんじょうを　じざいに　あやつる。
-1,10036,21,0,メロエッタの　かなでる　メロディに\nインスピレーションを　うけて\nつくられた　めいきょくは　おおい。
-1,10036,22,0,メロエッタの　かなでる　せんりつは\nまわりの　ポケモンを　よろこばせたり\nかなしませるほどの　パワーがある。
-1,10036,23,0,メロエッタの　かなでる　せんりつは\nまわりの　ポケモンを　よろこばせたり\nかなしませるほどの　パワーがある。
-1,10037,22,0,しほうはっぽうを　とびまわる。\nこのときに　だす　かぜは　つよすぎて\nどんなものでも　ふきとばしてしまう。
-1,10037,23,0,しほうはっぽうを　とびまわる。\nこのときに　だす　かぜは　つよすぎて\nどんなものでも　ふきとばしてしまう。
-1,10038,22,0,おおぞらを　とびまわりながら\nあちこちに　カミナリを　おとして\nやまかじを　おこすので　きらわれる。
-1,10038,23,0,おおぞらを　とびまわりながら\nあちこちに　カミナリを　おとして\nやまかじを　おこすので　きらわれる。
-1,10039,22,0,かぜや　かみなりを　とりこみ　かえた\nエネルギーが　つちに　えいようを\nあたえて　だいちを　ゆたかに　する。
-1,10039,23,0,かぜや　かみなりを　とりこみ　かえた\nエネルギーが　つちに　えいようを\nあたえて　だいちを　ゆたかに　する。
+1,10030,20,0,あばれもの　ゆえ　おいだされたが\nやぶれたせかいと　いわれる　ばしょで\nしずかに　もとのせかいを　みていた。
+1,10030,21,0,あばれもの　ゆえ　おいだされたが\nやぶれたせかいと　いわれる　ばしょで\nしずかに　もとのせかいを　みていた。
+1,10030,22,0,あばれもの　ゆえ　おいだされたが\nやぶれたせかいと　いわれる　ばしょで\nしずかに　もとのせかいを　みていた。
+1,10030,23,0,あばれもの　ゆえ　おいだされたが\nやぶれたせかいと　いわれる　ばしょで\nしずかに　もとのせかいを　みていた。
+1,10031,20,0,ひとに　やさしく　だきしめられ　\nありがとうの　きもちを　かんじると\nぜんしんの　はなが　ひらきだす。
+1,10031,21,0,ひとに　やさしく　だきしめられ　\nありがとうの　きもちを　かんじると\nぜんしんの　はなが　ひらきだす。
+1,10031,22,0,ひとに　やさしく　だきしめられ　\nありがとうの　きもちを　かんじると\nぜんしんの　はなが　ひらきだす。
+1,10031,23,0,ひとに　やさしく　だきしめられ　\nありがとうの　きもちを　かんじると\nぜんしんの　はなが　ひらきだす。
+1,10033,20,0,あかと　あおの　バスラオは　すぐに\nケンカするほど　なかが　わるい。\nとても　らんぼうな　ポケモン。
+1,10033,21,0,あかと　あおの　バスラオは　なかが\nわるいが　なぜか　いろの　ちがう\nこたいが　むれに　まぎれこんでいる。
+1,10033,22,0,とても　らんぼうで　いつも　あかと\nあおの　バスラオは　あらそっている。\nたべると　いがいと　おいしいらしい。
+1,10033,23,0,とても　らんぼうで　いつも　あかと\nあおの　バスラオは　あらそっている。\nたべると　いがいと　おいしいらしい。
+1,10034,20,0,たいないで　１４００どの　ほのおを\nもやすことで　ダンプカーを　パンチで\nはかいするほどの　パワーを　つくる。
+1,10034,21,0,たたかいで　よわると　いわのように\nうごかなくなる。こころを　とぎすまし\nせいしんりょくで　たたかうのだ。
+1,10034,22,0,はげしい　たたかいで　きずつくと\nいわのように　かたまり　もっこうして\nこころを　とぎすませるのだ。
+1,10034,23,0,はげしい　たたかいで　きずつくと\nいわのように　かたまり　もっこうして\nこころを　とぎすませるのだ。
+1,10035,20,0,とくしゅな　はっせいほうで　うたう\nメロディは　きいた　ものの\nかんじょうを　じざいに　あやつる。
+1,10035,21,0,メロエッタの　かなでる　メロディに\nインスピレーションを　うけて\nつくられた　めいきょくは　おおい。
+1,10035,22,0,メロエッタの　かなでる　せんりつは\nまわりの　ポケモンを　よろこばせたり\nかなしませるほどの　パワーがある。
+1,10035,23,0,メロエッタの　かなでる　せんりつは\nまわりの　ポケモンを　よろこばせたり\nかなしませるほどの　パワーがある。
+1,10036,22,0,しほうはっぽうを　とびまわる。\nこのときに　だす　かぜは　つよすぎて\nどんなものでも　ふきとばしてしまう。
+1,10036,23,0,しほうはっぽうを　とびまわる。\nこのときに　だす　かぜは　つよすぎて\nどんなものでも　ふきとばしてしまう。
+1,10037,22,0,おおぞらを　とびまわりながら\nあちこちに　カミナリを　おとして\nやまかじを　おこすので　きらわれる。
+1,10037,23,0,おおぞらを　とびまわりながら\nあちこちに　カミナリを　おとして\nやまかじを　おこすので　きらわれる。
+1,10038,22,0,かぜや　かみなりを　とりこみ　かえた\nエネルギーが　つちに　えいようを\nあたえて　だいちを　ゆたかに　する。
+1,10038,23,0,かぜや　かみなりを　とりこみ　かえた\nエネルギーが　つちに　えいようを\nあたえて　だいちを　ゆたかに　する。
+1,10039,22,0,うしなった　からだを　しんじつと\nりそうで　うめてくれる　えいゆうを\nまつ　こおりの　でんせつポケモン。
+1,10039,23,0,うしなった　からだを　しんじつと\nりそうで　うめてくれる　えいゆうを\nまつ　こおりの　でんせつポケモン。
 1,10040,22,0,うしなった　からだを　しんじつと\nりそうで　うめてくれる　えいゆうを\nまつ　こおりの　でんせつポケモン。
 1,10040,23,0,うしなった　からだを　しんじつと\nりそうで　うめてくれる　えいゆうを\nまつ　こおりの　でんせつポケモン。
-1,10041,22,0,うしなった　からだを　しんじつと\nりそうで　うめてくれる　えいゆうを\nまつ　こおりの　でんせつポケモン。
-1,10041,23,0,うしなった　からだを　しんじつと\nりそうで　うめてくれる　えいゆうを\nまつ　こおりの　でんせつポケモン。
 1,20001,20,0,１ぴきで　いても　なにも　おきないが\n２ひき　いじょうで　ならぶと\nなにかの　ちからが　めばえるという。
 1,20001,21,0,１ぴきで　いても　なにも　おきないが\n２ひき　いじょうで　ならぶと\nなにかの　ちからが　めばえるという。
 1,20001,22,0,１ぴきで　いても　なにも　おきないが\n２ひき　いじょうで　ならぶと\nなにかの　ちからが　めばえるという。
@@ -5603,6 +5603,10 @@ language_id,form_id,version_id,is_female,entry
 2,10024,21,0,"It is said to have emerged from an\negg in a place where there was\nnothing, then shaped the world."
 2,10024,22,0,It is said to have emerged from an\negg in a place where there was\nnothing then shaped the world.
 2,10024,23,0,It is said to have emerged from an\negg in a place where there was\nnothing then shaped the world.
+2,10025,20,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
+2,10025,21,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
+2,10025,22,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
+2,10025,23,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
 2,10026,20,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
 2,10026,21,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
 2,10026,22,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
@@ -5619,40 +5623,36 @@ language_id,form_id,version_id,is_female,entry
 2,10029,21,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
 2,10029,22,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
 2,10029,23,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
-2,10030,20,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
-2,10030,21,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
-2,10030,22,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
-2,10030,23,0,Its electric-like body can enter\nsome kinds of machines and take\ncontrol in order to make mischief.
-2,10031,20,0,It was banished for its violence.\nIt silently gazed upon the old\nworld from the Distortion World.
-2,10031,21,0,It was banished for its violence.\nIt silently gazed upon the old\nworld from the Distortion World.
-2,10031,22,0,It was banished for its violence.\nIt silently gazed upon the old\nworld from the Distortion World.
-2,10031,23,0,It was banished for its violence.\nIt silently gazed upon the old\nworld from the Distortion World.
-2,10032,20,0,The flowers all over its body burst\ninto bloom if it is lovingly hugged\nand senses gratitude.
-2,10032,21,0,The flowers all over its body burst\ninto bloom if it is lovingly hugged\nand senses gratitude.
-2,10032,22,0,The flowers all over its body burst\ninto bloom if it is lovingly hugged\nand senses gratitude.
-2,10032,23,0,The flowers all over its body burst\ninto bloom if it is lovingly hugged\nand senses gratitude.
-2,10034,20,0,"Red and blue Basculin get along so\npoorly, they'll start fighting instantly.\nThese Pokémon are very hostile."
-2,10034,21,0,"Red and blue Basculin usually do not\nget along, but sometimes members of one\nschool mingle with the other's school."
-2,10034,22,0,Red- and blue-striped Basculin are\nvery violent and always fighting.\nThey are also remarkably tasty.
-2,10034,23,0,Red- and blue-striped Basculin are\nvery violent and always fighting.\nThey are also remarkably tasty.
-2,10035,20,0,"Its internal fire burns at 2,500° F,\nmaking enough power that it can\ndestroy a dump truck with one punch."
-2,10035,21,0,"When weakened in battle, it transforms\ninto a stone statue. Then it sharpens\nits mind and fights on mentally."
-2,10035,22,0,"When one is injured in a fierce battle,\nit hardens into a stone-like form.\nThen it meditates and sharpens its mind."
-2,10035,23,0,"When one is injured in a fierce battle,\nit hardens into a stone-like form.\nThen it meditates and sharpens its mind."
-2,10036,20,0,Its melodies are sung with a special\nvocalization method that can control\nthe feelings of those who hear it.
-2,10036,21,0,Many famous songs have been inspired\nby the melodies that Meloetta plays.
-2,10036,22,0,The melodies sung by Meloetta have\nthe power to make Pokémon that\nhear them happy or sad.
-2,10036,23,0,The melodies sung by Meloetta have\nthe power to make Pokémon that\nhear them happy or sad.
-2,10037,22,0,"In every direction it flies,\ncreating winds so powerful,\nthey blow everything away."
-2,10037,23,0,"In every direction it flies,\ncreating winds so powerful,\nthey blow everything away."
-2,10038,22,0,"As it flies around, it shoots lightning all\nover the place and causes forest fires.\nIt is therefore disliked."
-2,10038,23,0,"As it flies around, it shoots lightning all\nover the place and causes forest fires.\nIt is therefore disliked."
-2,10039,22,0,"From the forces of lightning and wind,\nit creates energy to give nutrients to\nthe soil and make the land abundant."
-2,10039,23,0,"From the forces of lightning and wind,\nit creates energy to give nutrients to\nthe soil and make the land abundant."
+2,10030,20,0,It was banished for its violence.\nIt silently gazed upon the old\nworld from the Distortion World.
+2,10030,21,0,It was banished for its violence.\nIt silently gazed upon the old\nworld from the Distortion World.
+2,10030,22,0,It was banished for its violence.\nIt silently gazed upon the old\nworld from the Distortion World.
+2,10030,23,0,It was banished for its violence.\nIt silently gazed upon the old\nworld from the Distortion World.
+2,10031,20,0,The flowers all over its body burst\ninto bloom if it is lovingly hugged\nand senses gratitude.
+2,10031,21,0,The flowers all over its body burst\ninto bloom if it is lovingly hugged\nand senses gratitude.
+2,10031,22,0,The flowers all over its body burst\ninto bloom if it is lovingly hugged\nand senses gratitude.
+2,10031,23,0,The flowers all over its body burst\ninto bloom if it is lovingly hugged\nand senses gratitude.
+2,10033,20,0,"Red and blue Basculin get along so\npoorly, they'll start fighting instantly.\nThese Pokémon are very hostile."
+2,10033,21,0,"Red and blue Basculin usually do not\nget along, but sometimes members of one\nschool mingle with the other's school."
+2,10033,22,0,Red- and blue-striped Basculin are\nvery violent and always fighting.\nThey are also remarkably tasty.
+2,10033,23,0,Red- and blue-striped Basculin are\nvery violent and always fighting.\nThey are also remarkably tasty.
+2,10034,20,0,"Its internal fire burns at 2,500° F,\nmaking enough power that it can\ndestroy a dump truck with one punch."
+2,10034,21,0,"When weakened in battle, it transforms\ninto a stone statue. Then it sharpens\nits mind and fights on mentally."
+2,10034,22,0,"When one is injured in a fierce battle,\nit hardens into a stone-like form.\nThen it meditates and sharpens its mind."
+2,10034,23,0,"When one is injured in a fierce battle,\nit hardens into a stone-like form.\nThen it meditates and sharpens its mind."
+2,10035,20,0,Its melodies are sung with a special\nvocalization method that can control\nthe feelings of those who hear it.
+2,10035,21,0,Many famous songs have been inspired\nby the melodies that Meloetta plays.
+2,10035,22,0,The melodies sung by Meloetta have\nthe power to make Pokémon that\nhear them happy or sad.
+2,10035,23,0,The melodies sung by Meloetta have\nthe power to make Pokémon that\nhear them happy or sad.
+2,10036,22,0,"In every direction it flies,\ncreating winds so powerful,\nthey blow everything away."
+2,10036,23,0,"In every direction it flies,\ncreating winds so powerful,\nthey blow everything away."
+2,10037,22,0,"As it flies around, it shoots lightning all\nover the place and causes forest fires.\nIt is therefore disliked."
+2,10037,23,0,"As it flies around, it shoots lightning all\nover the place and causes forest fires.\nIt is therefore disliked."
+2,10038,22,0,"From the forces of lightning and wind,\nit creates energy to give nutrients to\nthe soil and make the land abundant."
+2,10038,23,0,"From the forces of lightning and wind,\nit creates energy to give nutrients to\nthe soil and make the land abundant."
+2,10039,22,0,This legendary ice Pokémon waits for\na hero to fill in the missing parts\nof its body with truth or ideals.
+2,10039,23,0,This legendary ice Pokémon waits for\na hero to fill in the missing parts\nof its body with truth or ideals.
 2,10040,22,0,This legendary ice Pokémon waits for\na hero to fill in the missing parts\nof its body with truth or ideals.
 2,10040,23,0,This legendary ice Pokémon waits for\na hero to fill in the missing parts\nof its body with truth or ideals.
-2,10041,22,0,This legendary ice Pokémon waits for\na hero to fill in the missing parts\nof its body with truth or ideals.
-2,10041,23,0,This legendary ice Pokémon waits for\na hero to fill in the missing parts\nof its body with truth or ideals.
 2,20001,20,0,"When alone, nothing happens.\nHowever, if there are two or more,\nan odd power is said to emerge."
 2,20001,21,0,"When alone, nothing happens.\nHowever, if there are two or more,\nan odd power is said to emerge."
 2,20001,22,0,"When alone, nothing happens.\nHowever, if there are two or more,\nan odd power is said to emerge."
@@ -8515,6 +8515,10 @@ language_id,form_id,version_id,is_female,entry
 3,10024,21,0,On dit que son œuf a éclos dans\nle néant et qu'il est à l'origine\nde la création du monde.
 3,10024,22,0,On dit que son œuf a éclos dans\nle néant et qu'il est à l'origine\nde la création du monde.
 3,10024,23,0,On dit que son œuf a éclos dans\nle néant et qu'il est à l'origine\nde la création du monde.
+3,10025,20,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
+3,10025,21,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
+3,10025,22,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
+3,10025,23,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
 3,10026,20,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
 3,10026,21,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
 3,10026,22,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
@@ -8531,40 +8535,36 @@ language_id,form_id,version_id,is_female,entry
 3,10029,21,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
 3,10029,22,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
 3,10029,23,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
-3,10030,20,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
-3,10030,21,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
-3,10030,22,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
-3,10030,23,0,Son corps parcouru d'électricité\nlui permet de prendre le contrôle\nde certains appareils ménagers.
-3,10031,20,0,Sa grande violence lui a valu d'être\nbanni. Il observe les hommes en\nsilence depuis le Monde Distorsion.
-3,10031,21,0,Sa grande violence lui a valu d'être\nbanni. Il observe les hommes en\nsilence depuis le Monde Distorsion.
-3,10031,22,0,Sa grande violence lui a valu d'être\nbanni. Il observe les hommes en\nsilence depuis le Monde Distorsion.
-3,10031,23,0,Sa grande violence lui a valu d'être\nbanni. Il observe les hommes en\nsilence depuis le Monde Distorsion.
-3,10032,20,0,Les fleurs qui couvrent son corps\ns'ouvrent quand il est câliné avec\namour et perçoit de la gratitude.
-3,10032,21,0,Les fleurs qui couvrent son corps\ns'ouvrent quand il est câliné avec\namour et perçoit de la gratitude.
-3,10032,22,0,Les fleurs qui couvrent son corps\ns'ouvrent quand il est câliné avec\namour et perçoit de la gratitude.
-3,10032,23,0,Les fleurs qui couvrent son corps\ns'ouvrent quand il est câliné avec\namour et perçoit de la gratitude.
-3,10034,20,0,Les bleus et les rouges se détestent\ncordialement et se battent dès qu'ils\ns'aperçoivent. Un Pokémon très violent.
-3,10034,21,0,"Les rouges et les bleus se détestent,\nmais il y en a toujours un ou deux\ndans un groupe de l'autre couleur."
-3,10034,22,0,Les rouges et les bleus se détestent\net se battent dès qu'ils s'aperçoivent.\nUn Pokémon violent mais délicieux.
-3,10034,23,0,Les rouges et les bleus se détestent\net se battent dès qu'ils s'aperçoivent.\nUn Pokémon violent mais délicieux.
-3,10035,20,0,Il entretient des flammes à 1 400 °C\ndans son corps. De quoi détruire un\ncamion-benne d'un coup de poing!
-3,10035,21,0,"S'il a le dessous au combat, il se fige\ncomme un rocher, fait le vide dans son\nesprit et combat avec sa force mentale."
-3,10035,22,0,"S'il est blessé dans un combat, il se fige\ncomme un rocher, fait le vide dans son\nesprit et aiguise ses sens."
-3,10035,23,0,"S'il est blessé dans un combat, il se fige\ncomme un rocher, fait le vide dans son\nesprit et aiguise ses sens."
-3,10036,20,0,Sa voix si particulière lui permet de\nchanter des mélodies qui ensorcellent\nles gens et modifient leurs émotions.
-3,10036,21,0,De nombreux succès musicaux ont été\ncomposés en s'inspirant des mélodies\nchantées par Meloetta.
-3,10036,22,0,"Les mélodies enivrantes de Meloetta\ntouchent les Pokémon, pouvant les\nrendre heureux ou tristes."
-3,10036,23,0,"Les mélodies enivrantes de Meloetta\ntouchent les Pokémon, pouvant les\nrendre heureux ou tristes."
-3,10037,22,0,Il voyage aux quatre vents. Son passage\nprovoque des tempêtes qui balayent tout\naux alentours.
-3,10037,23,0,Il voyage aux quatre vents. Son passage\nprovoque des tempêtes qui balayent tout\naux alentours.
-3,10038,22,0,"Il vole dans le ciel d'Unys et fait tomber\ndes éclairs, provoquant des incendies\nqui font sa mauvaise réputation."
-3,10038,23,0,"Il vole dans le ciel d'Unys et fait tomber\ndes éclairs, provoquant des incendies\nqui font sa mauvaise réputation."
-3,10039,22,0,Il utilise l'énergie qu'il tire du vent\net de la foudre pour enrichir les sols\nen nutriments pour les cultures.
-3,10039,23,0,Il utilise l'énergie qu'il tire du vent\net de la foudre pour enrichir les sols\nen nutriments pour les cultures.
+3,10030,20,0,Sa grande violence lui a valu d'être\nbanni. Il observe les hommes en\nsilence depuis le Monde Distorsion.
+3,10030,21,0,Sa grande violence lui a valu d'être\nbanni. Il observe les hommes en\nsilence depuis le Monde Distorsion.
+3,10030,22,0,Sa grande violence lui a valu d'être\nbanni. Il observe les hommes en\nsilence depuis le Monde Distorsion.
+3,10030,23,0,Sa grande violence lui a valu d'être\nbanni. Il observe les hommes en\nsilence depuis le Monde Distorsion.
+3,10031,20,0,Les fleurs qui couvrent son corps\ns'ouvrent quand il est câliné avec\namour et perçoit de la gratitude.
+3,10031,21,0,Les fleurs qui couvrent son corps\ns'ouvrent quand il est câliné avec\namour et perçoit de la gratitude.
+3,10031,22,0,Les fleurs qui couvrent son corps\ns'ouvrent quand il est câliné avec\namour et perçoit de la gratitude.
+3,10031,23,0,Les fleurs qui couvrent son corps\ns'ouvrent quand il est câliné avec\namour et perçoit de la gratitude.
+3,10033,20,0,Les bleus et les rouges se détestent\ncordialement et se battent dès qu'ils\ns'aperçoivent. Un Pokémon très violent.
+3,10033,21,0,"Les rouges et les bleus se détestent,\nmais il y en a toujours un ou deux\ndans un groupe de l'autre couleur."
+3,10033,22,0,Les rouges et les bleus se détestent\net se battent dès qu'ils s'aperçoivent.\nUn Pokémon violent mais délicieux.
+3,10033,23,0,Les rouges et les bleus se détestent\net se battent dès qu'ils s'aperçoivent.\nUn Pokémon violent mais délicieux.
+3,10034,20,0,Il entretient des flammes à 1 400 °C\ndans son corps. De quoi détruire un\ncamion-benne d'un coup de poing!
+3,10034,21,0,"S'il a le dessous au combat, il se fige\ncomme un rocher, fait le vide dans son\nesprit et combat avec sa force mentale."
+3,10034,22,0,"S'il est blessé dans un combat, il se fige\ncomme un rocher, fait le vide dans son\nesprit et aiguise ses sens."
+3,10034,23,0,"S'il est blessé dans un combat, il se fige\ncomme un rocher, fait le vide dans son\nesprit et aiguise ses sens."
+3,10035,20,0,Sa voix si particulière lui permet de\nchanter des mélodies qui ensorcellent\nles gens et modifient leurs émotions.
+3,10035,21,0,De nombreux succès musicaux ont été\ncomposés en s'inspirant des mélodies\nchantées par Meloetta.
+3,10035,22,0,"Les mélodies enivrantes de Meloetta\ntouchent les Pokémon, pouvant les\nrendre heureux ou tristes."
+3,10035,23,0,"Les mélodies enivrantes de Meloetta\ntouchent les Pokémon, pouvant les\nrendre heureux ou tristes."
+3,10036,22,0,Il voyage aux quatre vents. Son passage\nprovoque des tempêtes qui balayent tout\naux alentours.
+3,10036,23,0,Il voyage aux quatre vents. Son passage\nprovoque des tempêtes qui balayent tout\naux alentours.
+3,10037,22,0,"Il vole dans le ciel d'Unys et fait tomber\ndes éclairs, provoquant des incendies\nqui font sa mauvaise réputation."
+3,10037,23,0,"Il vole dans le ciel d'Unys et fait tomber\ndes éclairs, provoquant des incendies\nqui font sa mauvaise réputation."
+3,10038,22,0,Il utilise l'énergie qu'il tire du vent\net de la foudre pour enrichir les sols\nen nutriments pour les cultures.
+3,10038,23,0,Il utilise l'énergie qu'il tire du vent\net de la foudre pour enrichir les sols\nen nutriments pour les cultures.
+3,10039,22,0,Il attend le héros qui saura réanimer son\ncorps de glace incomplet en partageant\navec lui son Idéal et sa Réalité.
+3,10039,23,0,Il attend le héros qui saura réanimer son\ncorps de glace incomplet en partageant\navec lui son Idéal et sa Réalité.
 3,10040,22,0,Il attend le héros qui saura réanimer son\ncorps de glace incomplet en partageant\navec lui son Idéal et sa Réalité.
 3,10040,23,0,Il attend le héros qui saura réanimer son\ncorps de glace incomplet en partageant\navec lui son Idéal et sa Réalité.
-3,10041,22,0,Il attend le héros qui saura réanimer son\ncorps de glace incomplet en partageant\navec lui son Idéal et sa Réalité.
-3,10041,23,0,Il attend le héros qui saura réanimer son\ncorps de glace incomplet en partageant\navec lui son Idéal et sa Réalité.
 3,20001,20,0,"Quand il est seul, il ne se passe\nrien... Mais en groupe, il semble\nhabité par un mystérieux pouvoir."
 3,20001,21,0,"Quand il est seul, il ne se passe\nrien... Mais en groupe, il semble\nhabité par un mystérieux pouvoir."
 3,20001,22,0,"Quand il est seul, il ne se passe\nrien... Mais en groupe, il semble\nhabité par un mystérieux pouvoir."
@@ -11427,6 +11427,10 @@ language_id,form_id,version_id,is_female,entry
 4,10024,21,0,"Man sagt, es sei im Nichts aus\neinem Ei geschlüpft und\nhabe dann die Welt geformt."
 4,10024,22,0,"Man sagt, es sei im Nichts aus\neinem Ei geschlüpft und\nhabe dann die Welt geformt."
 4,10024,23,0,"Man sagt, es sei im Nichts aus\neinem Ei geschlüpft und\nhabe dann die Welt geformt."
+4,10025,20,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
+4,10025,21,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
+4,10025,22,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
+4,10025,23,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
 4,10026,20,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
 4,10026,21,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
 4,10026,22,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
@@ -11443,40 +11447,36 @@ language_id,form_id,version_id,is_female,entry
 4,10029,21,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
 4,10029,22,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
 4,10029,23,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
-4,10030,20,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
-4,10030,21,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
-4,10030,22,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
-4,10030,23,0,Es kann mit seinem Körper in\nelektrische Geräte eindringen\nund dann für Chaos sorgen.
-4,10031,20,0,Es wurde aufgrund seines Verhaltens\nverbannt. Aus der Zerrwelt schaut es\nauf die alte Welt.
-4,10031,21,0,Es wurde aufgrund seines Verhaltens\nverbannt. Aus der Zerrwelt schaut es\nauf die alte Welt.
-4,10031,22,0,Es wurde aufgrund seines Verhaltens\nverbannt. Aus der Zerrwelt schaut es\nauf die alte Welt.
-4,10031,23,0,Es wurde aufgrund seines Verhaltens\nverbannt. Aus der Zerrwelt schaut es\nauf die alte Welt.
-4,10032,20,0,"Wird es umarmt, empfindet es\nDankbarkeit, was wiederum dazu\nführt, dass seine Blumen blühen."
-4,10032,21,0,"Wird es umarmt, empfindet es\nDankbarkeit, was wiederum dazu\nführt, dass seine Blumen blühen."
-4,10032,22,0,"Wird es umarmt, empfindet es\nDankbarkeit, was wiederum dazu\nführt, dass seine Blumen blühen."
-4,10032,23,0,"Wird es umarmt, empfindet es\nDankbarkeit, was wiederum dazu\nführt, dass seine Blumen blühen."
-4,10034,20,0,Rot gestreifte und blau gestreifte\nExemplare kriegen sich sofort in die\nHaare. Ein äußerst aggressives Pokémon.
-4,10034,21,0,Rot gestreifte und blau gestreifte\nExemplare sind sich feindlich gesonnen.\nDoch ist jeder Schwarm bunt gemischt.
-4,10034,22,0,Sie gelten als Delikatesse. Aufgrund\nihrer brutalen Natur liegen rot und blau\ngestreifte Exemplare immer im Clinch.
-4,10034,23,0,Sie gelten als Delikatesse. Aufgrund\nihrer brutalen Natur liegen rot und blau\ngestreifte Exemplare immer im Clinch.
-4,10035,20,0,"Erhitzt das Innere seines Körpers auf\n1 400 Grad und erlangt so die Kraft, um\nmit der Faust Laster zu zerstören."
-4,10035,21,0,"Schwächt man es im Kampf, wird es reglos\nwie ein Stein und horcht in sich hinein, um\nmit der Kraft seines Geistes zu kämpfen."
-4,10035,22,0,"Nimmt es in einem heißen Kampf Schaden,\nwird es hart wie Stein und fällt in eine\nTrance, um seinen Verstand zu schärfen."
-4,10035,23,0,"Nimmt es in einem heißen Kampf Schaden,\nwird es hart wie Stein und fällt in eine\nTrance, um seinen Verstand zu schärfen."
-4,10036,20,0,"Wer die Melodie hört, die es in einer\nspeziellen Stimmlage von sich gibt,\nsteht voll in seinem Bann."
-4,10036,21,0,"Seine Melodien inspirierten\nKomponisten, die daraus viele\nbekannte Lieder komponierten."
-4,10036,22,0,"Es besitzt die Macht, Pokémon, die sich in\nseiner Nähe aufhalten, mit seinen\nMelodien froh oder traurig zu stimmen."
-4,10036,23,0,"Es besitzt die Macht, Pokémon, die sich in\nseiner Nähe aufhalten, mit seinen\nMelodien froh oder traurig zu stimmen."
-4,10037,22,0,"Es fliegt den gesamten Globus ab. Der\nWind, den es dabei erzeugt, ist so stark,\ndass er alles aus den Angeln hebt."
-4,10037,23,0,"Es fliegt den gesamten Globus ab. Der\nWind, den es dabei erzeugt, ist so stark,\ndass er alles aus den Angeln hebt."
-4,10038,22,0,"Es ist bei den Leuten verhasst, weil es\nauf seinen Rundflügen immer wieder Blitze\nerzeugt, die Waldbrände verursachen."
-4,10038,23,0,"Es ist bei den Leuten verhasst, weil es\nauf seinen Rundflügen immer wieder Blitze\nerzeugt, die Waldbrände verursachen."
-4,10039,22,0,"Seine aus Wind und Donner gewonnene\nEnergie sorgt für reiche Ernten, da sie\nden Boden mit Nährstoffen anreichert."
-4,10039,23,0,"Seine aus Wind und Donner gewonnene\nEnergie sorgt für reiche Ernten, da sie\nden Boden mit Nährstoffen anreichert."
+4,10030,20,0,Es wurde aufgrund seines Verhaltens\nverbannt. Aus der Zerrwelt schaut es\nauf die alte Welt.
+4,10030,21,0,Es wurde aufgrund seines Verhaltens\nverbannt. Aus der Zerrwelt schaut es\nauf die alte Welt.
+4,10030,22,0,Es wurde aufgrund seines Verhaltens\nverbannt. Aus der Zerrwelt schaut es\nauf die alte Welt.
+4,10030,23,0,Es wurde aufgrund seines Verhaltens\nverbannt. Aus der Zerrwelt schaut es\nauf die alte Welt.
+4,10031,20,0,"Wird es umarmt, empfindet es\nDankbarkeit, was wiederum dazu\nführt, dass seine Blumen blühen."
+4,10031,21,0,"Wird es umarmt, empfindet es\nDankbarkeit, was wiederum dazu\nführt, dass seine Blumen blühen."
+4,10031,22,0,"Wird es umarmt, empfindet es\nDankbarkeit, was wiederum dazu\nführt, dass seine Blumen blühen."
+4,10031,23,0,"Wird es umarmt, empfindet es\nDankbarkeit, was wiederum dazu\nführt, dass seine Blumen blühen."
+4,10033,20,0,Rot gestreifte und blau gestreifte\nExemplare kriegen sich sofort in die\nHaare. Ein äußerst aggressives Pokémon.
+4,10033,21,0,Rot gestreifte und blau gestreifte\nExemplare sind sich feindlich gesonnen.\nDoch ist jeder Schwarm bunt gemischt.
+4,10033,22,0,Sie gelten als Delikatesse. Aufgrund\nihrer brutalen Natur liegen rot und blau\ngestreifte Exemplare immer im Clinch.
+4,10033,23,0,Sie gelten als Delikatesse. Aufgrund\nihrer brutalen Natur liegen rot und blau\ngestreifte Exemplare immer im Clinch.
+4,10034,20,0,"Erhitzt das Innere seines Körpers auf\n1 400 Grad und erlangt so die Kraft, um\nmit der Faust Laster zu zerstören."
+4,10034,21,0,"Schwächt man es im Kampf, wird es reglos\nwie ein Stein und horcht in sich hinein, um\nmit der Kraft seines Geistes zu kämpfen."
+4,10034,22,0,"Nimmt es in einem heißen Kampf Schaden,\nwird es hart wie Stein und fällt in eine\nTrance, um seinen Verstand zu schärfen."
+4,10034,23,0,"Nimmt es in einem heißen Kampf Schaden,\nwird es hart wie Stein und fällt in eine\nTrance, um seinen Verstand zu schärfen."
+4,10035,20,0,"Wer die Melodie hört, die es in einer\nspeziellen Stimmlage von sich gibt,\nsteht voll in seinem Bann."
+4,10035,21,0,"Seine Melodien inspirierten\nKomponisten, die daraus viele\nbekannte Lieder komponierten."
+4,10035,22,0,"Es besitzt die Macht, Pokémon, die sich in\nseiner Nähe aufhalten, mit seinen\nMelodien froh oder traurig zu stimmen."
+4,10035,23,0,"Es besitzt die Macht, Pokémon, die sich in\nseiner Nähe aufhalten, mit seinen\nMelodien froh oder traurig zu stimmen."
+4,10036,22,0,"Es fliegt den gesamten Globus ab. Der\nWind, den es dabei erzeugt, ist so stark,\ndass er alles aus den Angeln hebt."
+4,10036,23,0,"Es fliegt den gesamten Globus ab. Der\nWind, den es dabei erzeugt, ist so stark,\ndass er alles aus den Angeln hebt."
+4,10037,22,0,"Es ist bei den Leuten verhasst, weil es\nauf seinen Rundflügen immer wieder Blitze\nerzeugt, die Waldbrände verursachen."
+4,10037,23,0,"Es ist bei den Leuten verhasst, weil es\nauf seinen Rundflügen immer wieder Blitze\nerzeugt, die Waldbrände verursachen."
+4,10038,22,0,"Seine aus Wind und Donner gewonnene\nEnergie sorgt für reiche Ernten, da sie\nden Boden mit Nährstoffen anreichert."
+4,10038,23,0,"Seine aus Wind und Donner gewonnene\nEnergie sorgt für reiche Ernten, da sie\nden Boden mit Nährstoffen anreichert."
+4,10039,22,0,"Ein Legendäres Eis-Pokémon, das auf den\nHelden wartet, der seinen verstümmelten\nKörper mit Wunsch und Wirklichkeit heilt."
+4,10039,23,0,"Ein Legendäres Eis-Pokémon, das auf den\nHelden wartet, der seinen verstümmelten\nKörper mit Wunsch und Wirklichkeit heilt."
 4,10040,22,0,"Ein Legendäres Eis-Pokémon, das auf den\nHelden wartet, der seinen verstümmelten\nKörper mit Wunsch und Wirklichkeit heilt."
 4,10040,23,0,"Ein Legendäres Eis-Pokémon, das auf den\nHelden wartet, der seinen verstümmelten\nKörper mit Wunsch und Wirklichkeit heilt."
-4,10041,22,0,"Ein Legendäres Eis-Pokémon, das auf den\nHelden wartet, der seinen verstümmelten\nKörper mit Wunsch und Wirklichkeit heilt."
-4,10041,23,0,"Ein Legendäres Eis-Pokémon, das auf den\nHelden wartet, der seinen verstümmelten\nKörper mit Wunsch und Wirklichkeit heilt."
 4,20001,20,0,"Sind sie zu zweit oder mehr, entsteht\neine eigentümliche Kraft. So sagt man\nzumindest."
 4,20001,21,0,"Sind sie zu zweit oder mehr, entsteht\neine eigentümliche Kraft. So sagt man\nzumindest."
 4,20001,22,0,"Sind sie zu zweit oder mehr, entsteht\neine eigentümliche Kraft. So sagt man\nzumindest."
@@ -14339,6 +14339,10 @@ language_id,form_id,version_id,is_female,entry
 5,10024,21,0,Si dice che sia nato da un uovo in mezzo\nal nulla e che poi abbia dato origine\nal mondo.
 5,10024,22,0,Si dice che sia nato da un uovo in mezzo\nal nulla e che poi abbia dato origine\nal mondo.
 5,10024,23,0,Si dice che sia nato da un uovo in mezzo\nal nulla e che poi abbia dato origine\nal mondo.
+5,10025,20,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
+5,10025,21,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
+5,10025,22,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
+5,10025,23,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
 5,10026,20,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
 5,10026,21,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
 5,10026,22,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
@@ -14355,40 +14359,36 @@ language_id,form_id,version_id,is_female,entry
 5,10029,21,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
 5,10029,22,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
 5,10029,23,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
-5,10030,20,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
-5,10030,21,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
-5,10030,22,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
-5,10030,23,0,"Il suo corpo elettrico può introdursi\nin alcuni apparecchi, prendendone\nil controllo e creando caos."
-5,10031,20,0,È stato bandito per la sua violenza.\nOsserva il vecchio mondo in silenzio\ndal Mondo Distorto.
-5,10031,21,0,È stato bandito per la sua violenza.\nOsserva il vecchio mondo in silenzio\ndal Mondo Distorto.
-5,10031,22,0,È stato bandito per la sua violenza.\nOsserva il vecchio mondo in silenzio\ndal Mondo Distorto.
-5,10031,23,0,È stato bandito per la sua violenza.\nOsserva il vecchio mondo in silenzio\ndal Mondo Distorto.
-5,10032,20,0,I fiori che lo ricoprono sbocciano se\nviene abbracciato con affetto e\nsi sente apprezzato.
-5,10032,21,0,I fiori che lo ricoprono sbocciano se\nviene abbracciato con affetto e\nsi sente apprezzato.
-5,10032,22,0,I fiori che lo ricoprono sbocciano se\nviene abbracciato con affetto e\nsi sente apprezzato.
-5,10032,23,0,I fiori che lo ricoprono sbocciano se\nviene abbracciato con affetto e\nsi sente apprezzato.
-5,10034,20,0,I Basculin con la linea rossa e quelli con\nla linea blu litigano per un nonnulla.\nSono dei Pokémon molto aggressivi.
-5,10034,21,0,"I Basculin con la linea rossa e quelli con\nla linea blu non vanno d'accordo ma,\nchissà perché, in gruppo si mescolano."
-5,10034,22,0,I Basculin con la linea rossa e quelli con\nla linea blu sono molto violenti e litigano\nspesso.
-5,10034,23,0,I Basculin con la linea rossa e quelli con\nla linea blu sono molto violenti e litigano\nspesso.
-5,10035,20,0,"La sua fiamma interna, alla temperatura\ndi 1400°C, sviluppa una potenza tale da\ndistruggere un autocarro."
-5,10035,21,0,"Se indebolito in combattimento, si\ntrasforma in una statua, attiva la mente\ne combatte con la forza dello spirito."
-5,10035,22,0,"Se resta ferito durante una battaglia\nviolenta, diventa duro come la pietra e\nmedita per purificare la mente."
-5,10035,23,0,"Se resta ferito durante una battaglia\nviolenta, diventa duro come la pietra e\nmedita per purificare la mente."
-5,10036,20,0,Controlla a suo piacimento le emozioni\ndi coloro che ascoltano i suoi singolari\nvocalizzi.
-5,10036,21,0,Sono molte le canzoni composte traendo\nispirazione dalla melodia suonata da\nMeloetta.
-5,10036,22,0,Canta una melodia che ha il potere di\nportare la gioia o la tristezza nel cuore\ndei Pokémon che l'ascoltano.
-5,10036,23,0,Canta una melodia che ha il potere di\nportare la gioia o la tristezza nel cuore\ndei Pokémon che l'ascoltano.
-5,10037,22,0,Vola nei cieli in perenne girovagare e\nproduce un vento così forte da spazzare\nvia ogni cosa incontri.
-5,10037,23,0,Vola nei cieli in perenne girovagare e\nproduce un vento così forte da spazzare\nvia ogni cosa incontri.
-5,10038,22,0,Non è molto amato perché durante i suoi\nperegrinaggi nei cieli fa cadere fulmini\nqua e là che causano incendi nei boschi.
-5,10038,23,0,Non è molto amato perché durante i suoi\nperegrinaggi nei cieli fa cadere fulmini\nqua e là che causano incendi nei boschi.
-5,10039,22,0,Rende fertile la terra trasformando\nl'energia del vento e dei fulmini in\nnutrimento per il suolo.
-5,10039,23,0,Rende fertile la terra trasformando\nl'energia del vento e dei fulmini in\nnutrimento per il suolo.
+5,10030,20,0,È stato bandito per la sua violenza.\nOsserva il vecchio mondo in silenzio\ndal Mondo Distorto.
+5,10030,21,0,È stato bandito per la sua violenza.\nOsserva il vecchio mondo in silenzio\ndal Mondo Distorto.
+5,10030,22,0,È stato bandito per la sua violenza.\nOsserva il vecchio mondo in silenzio\ndal Mondo Distorto.
+5,10030,23,0,È stato bandito per la sua violenza.\nOsserva il vecchio mondo in silenzio\ndal Mondo Distorto.
+5,10031,20,0,I fiori che lo ricoprono sbocciano se\nviene abbracciato con affetto e\nsi sente apprezzato.
+5,10031,21,0,I fiori che lo ricoprono sbocciano se\nviene abbracciato con affetto e\nsi sente apprezzato.
+5,10031,22,0,I fiori che lo ricoprono sbocciano se\nviene abbracciato con affetto e\nsi sente apprezzato.
+5,10031,23,0,I fiori che lo ricoprono sbocciano se\nviene abbracciato con affetto e\nsi sente apprezzato.
+5,10033,20,0,I Basculin con la linea rossa e quelli con\nla linea blu litigano per un nonnulla.\nSono dei Pokémon molto aggressivi.
+5,10033,21,0,"I Basculin con la linea rossa e quelli con\nla linea blu non vanno d'accordo ma,\nchissà perché, in gruppo si mescolano."
+5,10033,22,0,I Basculin con la linea rossa e quelli con\nla linea blu sono molto violenti e litigano\nspesso.
+5,10033,23,0,I Basculin con la linea rossa e quelli con\nla linea blu sono molto violenti e litigano\nspesso.
+5,10034,20,0,"La sua fiamma interna, alla temperatura\ndi 1400°C, sviluppa una potenza tale da\ndistruggere un autocarro."
+5,10034,21,0,"Se indebolito in combattimento, si\ntrasforma in una statua, attiva la mente\ne combatte con la forza dello spirito."
+5,10034,22,0,"Se resta ferito durante una battaglia\nviolenta, diventa duro come la pietra e\nmedita per purificare la mente."
+5,10034,23,0,"Se resta ferito durante una battaglia\nviolenta, diventa duro come la pietra e\nmedita per purificare la mente."
+5,10035,20,0,Controlla a suo piacimento le emozioni\ndi coloro che ascoltano i suoi singolari\nvocalizzi.
+5,10035,21,0,Sono molte le canzoni composte traendo\nispirazione dalla melodia suonata da\nMeloetta.
+5,10035,22,0,Canta una melodia che ha il potere di\nportare la gioia o la tristezza nel cuore\ndei Pokémon che l'ascoltano.
+5,10035,23,0,Canta una melodia che ha il potere di\nportare la gioia o la tristezza nel cuore\ndei Pokémon che l'ascoltano.
+5,10036,22,0,Vola nei cieli in perenne girovagare e\nproduce un vento così forte da spazzare\nvia ogni cosa incontri.
+5,10036,23,0,Vola nei cieli in perenne girovagare e\nproduce un vento così forte da spazzare\nvia ogni cosa incontri.
+5,10037,22,0,Non è molto amato perché durante i suoi\nperegrinaggi nei cieli fa cadere fulmini\nqua e là che causano incendi nei boschi.
+5,10037,23,0,Non è molto amato perché durante i suoi\nperegrinaggi nei cieli fa cadere fulmini\nqua e là che causano incendi nei boschi.
+5,10038,22,0,Rende fertile la terra trasformando\nl'energia del vento e dei fulmini in\nnutrimento per il suolo.
+5,10038,23,0,Rende fertile la terra trasformando\nl'energia del vento e dei fulmini in\nnutrimento per il suolo.
+5,10039,22,0,Questo leggendario Pokémon dei ghiacci\nattende l'eroe che gli restituirà le sue\nvere sembianze con gli ideali o la verità.
+5,10039,23,0,Questo leggendario Pokémon dei ghiacci\nattende l'eroe che gli restituirà le sue\nvere sembianze con gli ideali o la verità.
 5,10040,22,0,Questo leggendario Pokémon dei ghiacci\nattende l'eroe che gli restituirà le sue\nvere sembianze con gli ideali o la verità.
 5,10040,23,0,Questo leggendario Pokémon dei ghiacci\nattende l'eroe che gli restituirà le sue\nvere sembianze con gli ideali o la verità.
-5,10041,22,0,Questo leggendario Pokémon dei ghiacci\nattende l'eroe che gli restituirà le sue\nvere sembianze con gli ideali o la verità.
-5,10041,23,0,Questo leggendario Pokémon dei ghiacci\nattende l'eroe che gli restituirà le sue\nvere sembianze con gli ideali o la verità.
 5,20001,20,0,"Un solo esemplare non produce alcun\neffetto, ma se ce ne sono due o più,\nemerge uno strano potere."
 5,20001,21,0,"Un solo esemplare non produce alcun\neffetto, ma se ce ne sono due o più,\nemerge uno strano potere."
 5,20001,22,0,"Un solo esemplare non produce alcun\neffetto, ma se ce ne sono due o più,\nemerge uno strano potere."
@@ -17251,6 +17251,10 @@ language_id,form_id,version_id,is_female,entry
 6,10024,21,0,Se dice que surgió de un huevo en\nun lugar en el que no había nada.\nY luego dio forma al mundo.
 6,10024,22,0,Se dice que surgió de un huevo en\nun lugar en el que no había nada.\nY luego dio forma al mundo.
 6,10024,23,0,Se dice que surgió de un huevo en\nun lugar en el que no había nada.\nY luego dio forma al mundo.
+6,10025,20,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
+6,10025,21,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
+6,10025,22,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
+6,10025,23,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
 6,10026,20,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
 6,10026,21,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
 6,10026,22,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
@@ -17267,40 +17271,36 @@ language_id,form_id,version_id,is_female,entry
 6,10029,21,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
 6,10029,22,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
 6,10029,23,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
-6,10030,20,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
-6,10030,21,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
-6,10030,22,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
-6,10030,23,0,Con su cuerpo eléctrico puede\ninfiltrarse en algunas máquinas\npara controlarlas y causar daños.
-6,10031,20,0,Fue desterrado por su violencia.\nObserva el mundo en silencio desde\nel Mundo Distorsión.
-6,10031,21,0,Fue desterrado por su violencia.\nObserva el mundo en silencio desde\nel Mundo Distorsión.
-6,10031,22,0,Fue desterrado por su violencia.\nObserva el mundo en silencio desde\nel Mundo Distorsión.
-6,10031,23,0,Fue desterrado por su violencia.\nObserva el mundo en silencio desde\nel Mundo Distorsión.
-6,10032,20,0,Todas las flores de su cuerpo florecen\nsi se le abraza con amor y percibe\ngratitud.
-6,10032,21,0,Todas las flores de su cuerpo florecen\nsi se le abraza con amor y percibe\ngratitud.
-6,10032,22,0,Todas las flores de su cuerpo florecen\nsi se le abraza con amor y percibe\ngratitud.
-6,10032,23,0,Todas las flores de su cuerpo florecen\nsi se le abraza con amor y percibe\ngratitud.
-6,10034,20,0,Los Basculin con la raya roja y aquellos\ncon la raya azul no dejan de pelearse.\nSon unos Pokémon muy violentos.
-6,10034,21,0,"Los Basculin con la raya roja y aquellos\ncon la raya azul se llevan fatal, pero\nalgunos tienden a agruparse."
-6,10034,22,0,"Los de color azul y los de color rojo\nsiempre se pelean. Son muy violentos,\npero su sabor es excepcional."
-6,10034,23,0,"Los de color azul y los de color rojo\nsiempre se pelean. Son muy violentos,\npero su sabor es excepcional."
-6,10035,20,0,Genera llamas que alcanzan los 1400°\nde temperatura con las que es capaz\nde destrozar un camión.
-6,10035,21,0,Se queda firme como una estatua\ncuando es debilitado en combate.\nAgudiza el ingenio para luchar.
-6,10035,22,0,"Cuando resulta gravemente herido,\nse endurece como una piedra y\nmedita para agudizar la mente."
-6,10035,23,0,"Cuando resulta gravemente herido,\nse endurece como una piedra y\nmedita para agudizar la mente."
-6,10036,20,0,Controla los sentimientos de los que\nescuchan las melodías que emite con\nsu singular vocalización.
-6,10036,21,0,Se han creado innumerables canciones\ninspiradas en las melodías que emite\nMeloetta.
-6,10036,22,0,Las melodías que canta Meloetta tienen\nel poder de hacer sentir felicidad a\nlos Pokémon que hay a su alrededor.
-6,10036,23,0,Las melodías que canta Meloetta tienen\nel poder de hacer sentir felicidad a\nlos Pokémon que hay a su alrededor.
-6,10037,22,0,"Le gusta ir volando de un lado a otro,\ngenerando tempestades tan potentes\nque pueden echar abajo una casa."
-6,10037,23,0,"Le gusta ir volando de un lado a otro,\ngenerando tempestades tan potentes\nque pueden echar abajo una casa."
-6,10038,22,0,Su gusto por surcar el cielo lanzando\nrayos y provocando incendios forestales\nle ha granjeado pocas simpatías.
-6,10038,23,0,Su gusto por surcar el cielo lanzando\nrayos y provocando incendios forestales\nle ha granjeado pocas simpatías.
-6,10039,22,0,Utiliza energía que obtiene del viento\ny del relámpago para nutrir el suelo\ny generar abundantes cosechas.
-6,10039,23,0,Utiliza energía que obtiene del viento\ny del relámpago para nutrir el suelo\ny generar abundantes cosechas.
+6,10030,20,0,Fue desterrado por su violencia.\nObserva el mundo en silencio desde\nel Mundo Distorsión.
+6,10030,21,0,Fue desterrado por su violencia.\nObserva el mundo en silencio desde\nel Mundo Distorsión.
+6,10030,22,0,Fue desterrado por su violencia.\nObserva el mundo en silencio desde\nel Mundo Distorsión.
+6,10030,23,0,Fue desterrado por su violencia.\nObserva el mundo en silencio desde\nel Mundo Distorsión.
+6,10031,20,0,Todas las flores de su cuerpo florecen\nsi se le abraza con amor y percibe\ngratitud.
+6,10031,21,0,Todas las flores de su cuerpo florecen\nsi se le abraza con amor y percibe\ngratitud.
+6,10031,22,0,Todas las flores de su cuerpo florecen\nsi se le abraza con amor y percibe\ngratitud.
+6,10031,23,0,Todas las flores de su cuerpo florecen\nsi se le abraza con amor y percibe\ngratitud.
+6,10033,20,0,Los Basculin con la raya roja y aquellos\ncon la raya azul no dejan de pelearse.\nSon unos Pokémon muy violentos.
+6,10033,21,0,"Los Basculin con la raya roja y aquellos\ncon la raya azul se llevan fatal, pero\nalgunos tienden a agruparse."
+6,10033,22,0,"Los de color azul y los de color rojo\nsiempre se pelean. Son muy violentos,\npero su sabor es excepcional."
+6,10033,23,0,"Los de color azul y los de color rojo\nsiempre se pelean. Son muy violentos,\npero su sabor es excepcional."
+6,10034,20,0,Genera llamas que alcanzan los 1400°\nde temperatura con las que es capaz\nde destrozar un camión.
+6,10034,21,0,Se queda firme como una estatua\ncuando es debilitado en combate.\nAgudiza el ingenio para luchar.
+6,10034,22,0,"Cuando resulta gravemente herido,\nse endurece como una piedra y\nmedita para agudizar la mente."
+6,10034,23,0,"Cuando resulta gravemente herido,\nse endurece como una piedra y\nmedita para agudizar la mente."
+6,10035,20,0,Controla los sentimientos de los que\nescuchan las melodías que emite con\nsu singular vocalización.
+6,10035,21,0,Se han creado innumerables canciones\ninspiradas en las melodías que emite\nMeloetta.
+6,10035,22,0,Las melodías que canta Meloetta tienen\nel poder de hacer sentir felicidad a\nlos Pokémon que hay a su alrededor.
+6,10035,23,0,Las melodías que canta Meloetta tienen\nel poder de hacer sentir felicidad a\nlos Pokémon que hay a su alrededor.
+6,10036,22,0,"Le gusta ir volando de un lado a otro,\ngenerando tempestades tan potentes\nque pueden echar abajo una casa."
+6,10036,23,0,"Le gusta ir volando de un lado a otro,\ngenerando tempestades tan potentes\nque pueden echar abajo una casa."
+6,10037,22,0,Su gusto por surcar el cielo lanzando\nrayos y provocando incendios forestales\nle ha granjeado pocas simpatías.
+6,10037,23,0,Su gusto por surcar el cielo lanzando\nrayos y provocando incendios forestales\nle ha granjeado pocas simpatías.
+6,10038,22,0,Utiliza energía que obtiene del viento\ny del relámpago para nutrir el suelo\ny generar abundantes cosechas.
+6,10038,23,0,Utiliza energía que obtiene del viento\ny del relámpago para nutrir el suelo\ny generar abundantes cosechas.
+6,10039,22,0,Pokémon legendario que aguarda al héroe\nque compense el vacío de su cuerpo\nde hielo con verdad e ideales.
+6,10039,23,0,Pokémon legendario que aguarda al héroe\nque compense el vacío de su cuerpo\nde hielo con verdad e ideales.
 6,10040,22,0,Pokémon legendario que aguarda al héroe\nque compense el vacío de su cuerpo\nde hielo con verdad e ideales.
 6,10040,23,0,Pokémon legendario que aguarda al héroe\nque compense el vacío de su cuerpo\nde hielo con verdad e ideales.
-6,10041,22,0,Pokémon legendario que aguarda al héroe\nque compense el vacío de su cuerpo\nde hielo con verdad e ideales.
-6,10041,23,0,Pokémon legendario que aguarda al héroe\nque compense el vacío de su cuerpo\nde hielo con verdad e ideales.
 6,20001,20,0,"Si están en solitario, no pasa nada;\npero si se juntan dos o más, se\ndice que surge un extraño poder."
 6,20001,21,0,"Si están en solitario, no pasa nada;\npero si se juntan dos o más, se\ndice que surge un extraño poder."
 6,20001,22,0,"Si están en solitario, no pasa nada;\npero, si se juntan dos o más, se\ndice que surge un extraño poder."
@@ -20163,6 +20163,10 @@ language_id,form_id,version_id,is_female,entry
 7,10024,21,0,아무것도 없는 곳에 있던\n알에서 깨어나 세계를\n만들었다고 여겨진다.
 7,10024,22,0,아무것도 없는 곳에 있던\n알에서 깨어나 세계를\n만들었다고 여겨진다.
 7,10024,23,0,아무것도 없는 곳에 있던\n알에서 깨어나 세계를\n만들었다고 여겨진다.
+7,10025,20,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
+7,10025,21,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
+7,10025,22,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
+7,10025,23,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
 7,10026,20,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
 7,10026,21,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
 7,10026,22,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
@@ -20179,40 +20183,36 @@ language_id,form_id,version_id,is_female,entry
 7,10029,21,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
 7,10029,22,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
 7,10029,23,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
-7,10030,20,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
-7,10030,21,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
-7,10030,22,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
-7,10030,23,0,전기 같은 몸은 일부 기계에\n들어갈 수 있다. 그리고\n그 몸으로 장난을 친다.
-7,10031,20,0,난폭하다는 이유로 쫓겨났지만\n깨어진 세계라고 전해지는 장소에서\n조용히 원래 세계를 보고 있었다.
-7,10031,21,0,난폭하다는 이유로 쫓겨났지만\n깨어진 세계라고 전해지는 장소에서\n조용히 원래 세계를 보고 있었다.
-7,10031,22,0,난폭하다는 이유로 쫓겨났지만\n깨어진 세계라고 전해지는 장소에서\n조용히 원래 세계를 보고 있었다.
-7,10031,23,0,난폭하다는 이유로 쫓겨났지만\n깨어진 세계라고 전해지는 장소에서\n조용히 원래 세계를 보고 있었다.
-7,10032,20,0,사람에게 부드럽게 껴안아져\n감사의 마음을 느끼면\n전신의 꽃이 피어난다.
-7,10032,21,0,사람에게 부드럽게 껴안아져\n감사의 마음을 느끼면\n전신의 꽃이 피어난다.
-7,10032,22,0,사람에게 부드럽게 껴안아져\n감사의 마음을 느끼면\n전신의 꽃이 피어난다.
-7,10032,23,0,사람에게 부드럽게 껴안아져\n감사의 마음을 느끼면\n전신의 꽃이 피어난다.
-7,10034,20,0,적색과 청색 배쓰나이는 툭하면\n싸울 만큼 사이가 나쁘다.\n매우 난폭한 포켓몬이다.
-7,10034,21,0,빨강과 파랑 배쓰나이는 사이가\n나쁨에도 불구하고 같은 무리에\n다른 색 개체가 섞여 있다.
-7,10034,22,0,아주 난폭하고 항상 빨강과\n파랑의 배쓰나이는 다투고 있다.\n먹으면 의외로 맛있다고 한다.
-7,10034,23,0,아주 난폭하고 항상 빨강과\n파랑의 배쓰나이는 다투고 있다.\n먹으면 의외로 맛있다고 한다.
-7,10035,20,0,체내에서 1400도의 불꽃을\n태워서 덤프트럭을 펀치로\n파괴할 정도의 파워를 만든다.
-7,10035,21,0,싸움 중 약해지면 바위처럼\n움직이지 않는다. 마음을 가다듬고\n정신력으로 싸운다.
-7,10035,22,0,격렬한 싸움으로 상처입으면\n바위처럼 굳어져 묵상하며\n마음을 연마한다.
-7,10035,23,0,격렬한 싸움으로 상처입으면\n바위처럼 굳어져 묵상하며\n마음을 연마한다.
-7,10036,20,0,특수한 발성법으로 노래하는\n멜로디는 노래를 들은 자의\n감정을 자유자재로 조종한다.
-7,10036,21,0,메로엣타가 연주하는\n멜로디에서 영감을 받아\n만들어진 명곡이 많다.
-7,10036,22,0,메로엣타가 연주하는 선율에는\n주위 포켓몬을 기쁘게 하거나\n슬프게 할 정도의 힘이 있다.
-7,10036,23,0,메로엣타가 연주하는 선율에는\n주위 포켓몬을 기쁘게 하거나\n슬프게 할 정도의 힘이 있다.
-7,10037,22,0,사방팔방 날아다닌다.\n이때 내는 바람은 너무 강해서\n어떤 것이라도 날려버리고 만다.
-7,10037,23,0,사방팔방 날아다닌다.\n이때 내는 바람은 너무 강해서\n어떤 것이라도 날려버리고 만다.
-7,10038,22,0,넓은 하늘을 날아다니며\n여기저기 번개를 떨어뜨려\n산불을 내기 때문에 미움받는다.
-7,10038,23,0,넓은 하늘을 날아다니며\n여기저기 번개를 떨어뜨려\n산불을 내기 때문에 미움받는다.
-7,10039,22,0,바람이나 번개를 거둬들여 바꾼\n에너지가 흙에 영양을\n주어 대지를 풍족하게 한다.
-7,10039,23,0,바람이나 번개를 거둬들여 바꾼\n에너지가 흙에 영양을\n주어 대지를 풍족하게 한다.
+7,10030,20,0,난폭하다는 이유로 쫓겨났지만\n깨어진 세계라고 전해지는 장소에서\n조용히 원래 세계를 보고 있었다.
+7,10030,21,0,난폭하다는 이유로 쫓겨났지만\n깨어진 세계라고 전해지는 장소에서\n조용히 원래 세계를 보고 있었다.
+7,10030,22,0,난폭하다는 이유로 쫓겨났지만\n깨어진 세계라고 전해지는 장소에서\n조용히 원래 세계를 보고 있었다.
+7,10030,23,0,난폭하다는 이유로 쫓겨났지만\n깨어진 세계라고 전해지는 장소에서\n조용히 원래 세계를 보고 있었다.
+7,10031,20,0,사람에게 부드럽게 껴안아져\n감사의 마음을 느끼면\n전신의 꽃이 피어난다.
+7,10031,21,0,사람에게 부드럽게 껴안아져\n감사의 마음을 느끼면\n전신의 꽃이 피어난다.
+7,10031,22,0,사람에게 부드럽게 껴안아져\n감사의 마음을 느끼면\n전신의 꽃이 피어난다.
+7,10031,23,0,사람에게 부드럽게 껴안아져\n감사의 마음을 느끼면\n전신의 꽃이 피어난다.
+7,10033,20,0,적색과 청색 배쓰나이는 툭하면\n싸울 만큼 사이가 나쁘다.\n매우 난폭한 포켓몬이다.
+7,10033,21,0,빨강과 파랑 배쓰나이는 사이가\n나쁨에도 불구하고 같은 무리에\n다른 색 개체가 섞여 있다.
+7,10033,22,0,아주 난폭하고 항상 빨강과\n파랑의 배쓰나이는 다투고 있다.\n먹으면 의외로 맛있다고 한다.
+7,10033,23,0,아주 난폭하고 항상 빨강과\n파랑의 배쓰나이는 다투고 있다.\n먹으면 의외로 맛있다고 한다.
+7,10034,20,0,체내에서 1400도의 불꽃을\n태워서 덤프트럭을 펀치로\n파괴할 정도의 파워를 만든다.
+7,10034,21,0,싸움 중 약해지면 바위처럼\n움직이지 않는다. 마음을 가다듬고\n정신력으로 싸운다.
+7,10034,22,0,격렬한 싸움으로 상처입으면\n바위처럼 굳어져 묵상하며\n마음을 연마한다.
+7,10034,23,0,격렬한 싸움으로 상처입으면\n바위처럼 굳어져 묵상하며\n마음을 연마한다.
+7,10035,20,0,특수한 발성법으로 노래하는\n멜로디는 노래를 들은 자의\n감정을 자유자재로 조종한다.
+7,10035,21,0,메로엣타가 연주하는\n멜로디에서 영감을 받아\n만들어진 명곡이 많다.
+7,10035,22,0,메로엣타가 연주하는 선율에는\n주위 포켓몬을 기쁘게 하거나\n슬프게 할 정도의 힘이 있다.
+7,10035,23,0,메로엣타가 연주하는 선율에는\n주위 포켓몬을 기쁘게 하거나\n슬프게 할 정도의 힘이 있다.
+7,10036,22,0,사방팔방 날아다닌다.\n이때 내는 바람은 너무 강해서\n어떤 것이라도 날려버리고 만다.
+7,10036,23,0,사방팔방 날아다닌다.\n이때 내는 바람은 너무 강해서\n어떤 것이라도 날려버리고 만다.
+7,10037,22,0,넓은 하늘을 날아다니며\n여기저기 번개를 떨어뜨려\n산불을 내기 때문에 미움받는다.
+7,10037,23,0,넓은 하늘을 날아다니며\n여기저기 번개를 떨어뜨려\n산불을 내기 때문에 미움받는다.
+7,10038,22,0,바람이나 번개를 거둬들여 바꾼\n에너지가 흙에 영양을\n주어 대지를 풍족하게 한다.
+7,10038,23,0,바람이나 번개를 거둬들여 바꾼\n에너지가 흙에 영양을\n주어 대지를 풍족하게 한다.
+7,10039,22,0,잃어버린 몸을 진실과\n이상으로 채워줄 영웅을\n기다리는 얼음의 전설 포켓몬.
+7,10039,23,0,잃어버린 몸을 진실과\n이상으로 채워줄 영웅을\n기다리는 얼음의 전설 포켓몬.
 7,10040,22,0,잃어버린 몸을 진실과\n이상으로 채워줄 영웅을\n기다리는 얼음의 전설 포켓몬.
 7,10040,23,0,잃어버린 몸을 진실과\n이상으로 채워줄 영웅을\n기다리는 얼음의 전설 포켓몬.
-7,10041,22,0,잃어버린 몸을 진실과\n이상으로 채워줄 영웅을\n기다리는 얼음의 전설 포켓몬.
-7,10041,23,0,잃어버린 몸을 진실과\n이상으로 채워줄 영웅을\n기다리는 얼음의 전설 포켓몬.
 7,20001,20,0,혼자 있으면 아무 일도 일어나지\n않지만 두 마리 이상 있게 되면\n어떤 힘이 생긴다고 한다.
 7,20001,21,0,혼자 있으면 아무 일도 일어나지\n않지만 두 마리 이상 있게 되면\n어떤 힘이 생긴다고 한다.
 7,20001,22,0,혼자 있으면 아무 일도 일어나지\n않지만 두 마리 이상 있게 되면\n어떤 힘이 생긴다고 한다.
@@ -23075,6 +23075,10 @@ language_id,form_id,version_id,is_female,entry
 8,10024,21,0,なにも　ない　場所に　あった\nタマゴの中から　姿を　現し\n世界を　生み出したと　されている。
 8,10024,22,0,なにも　ない　場所に　あった\nタマゴの中から　姿を　現し\n世界を　生み出したと　されている。
 8,10024,23,0,なにも　ない　場所に　あった\nタマゴの中から　姿を　現し\n世界を　生み出したと　されている。
+8,10025,20,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
+8,10025,21,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
+8,10025,22,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
+8,10025,23,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
 8,10026,20,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
 8,10026,21,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
 8,10026,22,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
@@ -23091,40 +23095,36 @@ language_id,form_id,version_id,is_female,entry
 8,10029,21,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
 8,10029,22,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
 8,10029,23,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
-8,10030,20,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
-8,10030,21,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
-8,10030,22,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
-8,10030,23,0,電気のような　体は　一部の\n機械に　入り込むことが　できる。\nそして　その体で　いたずらする。
-8,10031,20,0,暴れ者　ゆえ　追い出されたが\n破れた世界と　言われる　場所で\n静かに　元の世界を　見ていた。
-8,10031,21,0,暴れ者　ゆえ　追い出されたが\n破れた世界と　言われる　場所で\n静かに　元の世界を　見ていた。
-8,10031,22,0,暴れ者　ゆえ　追い出されたが\n破れた世界と　言われる　場所で\n静かに　元の世界を　見ていた。
-8,10031,23,0,暴れ者　ゆえ　追い出されたが\n破れた世界と　言われる　場所で\n静かに　元の世界を　見ていた。
-8,10032,20,0,人に　優しく　抱きしめられ\nありがとうの　気持ちを　感じると\n全身の　花が　開きだす。
-8,10032,21,0,人に　優しく　抱きしめられ\nありがとうの　気持ちを　感じると\n全身の　花が　開きだす。
-8,10032,22,0,人に　優しく　抱きしめられ\nありがとうの　気持ちを　感じると\n全身の　花が　開きだす。
-8,10032,23,0,人に　優しく　抱きしめられ\nありがとうの　気持ちを　感じると\n全身の　花が　開きだす。
-8,10034,20,0,赤と　青の　バスラオは\nすぐに　ケンカするほど　仲が　悪い。\nとても　乱暴な　ポケモン。
-8,10034,21,0,赤と　青の　バスラオは　仲が　悪いが\nなぜか　色の　違う　個体が\n群れに　紛れ込んでいる。
-8,10034,22,0,とても　乱暴で　いつも　あかと\nあおの　バスラオは　争っている。\n食べると　意外と　おいしいらしい。
-8,10034,23,0,とても　乱暴で　いつも　あかと\nあおの　バスラオは　争っている。\n食べると　意外と　おいしいらしい。
-8,10035,20,0,体内で　１４００度の　炎を\n燃やすことで　ダンプカーを　パンチで\n破壊するほどの　パワーを　作る。
-8,10035,21,0,戦いで　弱ると　岩のように\n動かなくなる。心を　研ぎ澄まし\n精神力で　戦うのだ。
-8,10035,22,0,激しい　戦いで　傷つくと\n岩のように　固まり　黙考して\n心を　研ぎ澄ませるのだ。
-8,10035,23,0,激しい　戦いで　傷つくと\n岩のように　固まり　黙考して\n心を　研ぎ澄ませるのだ。
-8,10036,20,0,特殊な　発声法で　歌う　メロディは\n聞いた　者の　感情を\n自在に　操る。
-8,10036,21,0,メロエッタの　奏でる　メロディに\nインスピレーションを　受けて\n作られた　名曲は　多い。
-8,10036,22,0,メロエッタの　奏でる　旋律は\n周りの　ポケモンを　喜ばせたり\n悲しませるほどの　パワーがある。
-8,10036,23,0,メロエッタの　奏でる　旋律は\n周りの　ポケモンを　喜ばせたり\n悲しませるほどの　パワーがある。
-8,10037,22,0,四方八方を　飛びまわる。\nこのときに　だす　風は　強すぎて\nどんなものでも　吹きとばしてしまう。
-8,10037,23,0,四方八方を　飛びまわる。\nこのときに　だす　風は　強すぎて\nどんなものでも　吹きとばしてしまう。
-8,10038,22,0,大空を　飛びまわりながら\nあちこちに　カミナリを　落として\n山火事を　起こすので　嫌われる。
-8,10038,23,0,大空を　飛びまわりながら\nあちこちに　カミナリを　落として\n山火事を　起こすので　嫌われる。
-8,10039,22,0,風や　雷を　取りこみ　変えた\nエネルギーが　土に　栄養を\n与えて　大地を　豊かに　する。
-8,10039,23,0,風や　雷を　取りこみ　変えた\nエネルギーが　土に　栄養を\n与えて　大地を　豊かに　する。
+8,10030,20,0,暴れ者　ゆえ　追い出されたが\n破れた世界と　言われる　場所で\n静かに　元の世界を　見ていた。
+8,10030,21,0,暴れ者　ゆえ　追い出されたが\n破れた世界と　言われる　場所で\n静かに　元の世界を　見ていた。
+8,10030,22,0,暴れ者　ゆえ　追い出されたが\n破れた世界と　言われる　場所で\n静かに　元の世界を　見ていた。
+8,10030,23,0,暴れ者　ゆえ　追い出されたが\n破れた世界と　言われる　場所で\n静かに　元の世界を　見ていた。
+8,10031,20,0,人に　優しく　抱きしめられ\nありがとうの　気持ちを　感じると\n全身の　花が　開きだす。
+8,10031,21,0,人に　優しく　抱きしめられ\nありがとうの　気持ちを　感じると\n全身の　花が　開きだす。
+8,10031,22,0,人に　優しく　抱きしめられ\nありがとうの　気持ちを　感じると\n全身の　花が　開きだす。
+8,10031,23,0,人に　優しく　抱きしめられ\nありがとうの　気持ちを　感じると\n全身の　花が　開きだす。
+8,10033,20,0,赤と　青の　バスラオは\nすぐに　ケンカするほど　仲が　悪い。\nとても　乱暴な　ポケモン。
+8,10033,21,0,赤と　青の　バスラオは　仲が　悪いが\nなぜか　色の　違う　個体が\n群れに　紛れ込んでいる。
+8,10033,22,0,とても　乱暴で　いつも　あかと\nあおの　バスラオは　争っている。\n食べると　意外と　おいしいらしい。
+8,10033,23,0,とても　乱暴で　いつも　あかと\nあおの　バスラオは　争っている。\n食べると　意外と　おいしいらしい。
+8,10034,20,0,体内で　１４００度の　炎を\n燃やすことで　ダンプカーを　パンチで\n破壊するほどの　パワーを　作る。
+8,10034,21,0,戦いで　弱ると　岩のように\n動かなくなる。心を　研ぎ澄まし\n精神力で　戦うのだ。
+8,10034,22,0,激しい　戦いで　傷つくと\n岩のように　固まり　黙考して\n心を　研ぎ澄ませるのだ。
+8,10034,23,0,激しい　戦いで　傷つくと\n岩のように　固まり　黙考して\n心を　研ぎ澄ませるのだ。
+8,10035,20,0,特殊な　発声法で　歌う　メロディは\n聞いた　者の　感情を\n自在に　操る。
+8,10035,21,0,メロエッタの　奏でる　メロディに\nインスピレーションを　受けて\n作られた　名曲は　多い。
+8,10035,22,0,メロエッタの　奏でる　旋律は\n周りの　ポケモンを　喜ばせたり\n悲しませるほどの　パワーがある。
+8,10035,23,0,メロエッタの　奏でる　旋律は\n周りの　ポケモンを　喜ばせたり\n悲しませるほどの　パワーがある。
+8,10036,22,0,四方八方を　飛びまわる。\nこのときに　だす　風は　強すぎて\nどんなものでも　吹きとばしてしまう。
+8,10036,23,0,四方八方を　飛びまわる。\nこのときに　だす　風は　強すぎて\nどんなものでも　吹きとばしてしまう。
+8,10037,22,0,大空を　飛びまわりながら\nあちこちに　カミナリを　落として\n山火事を　起こすので　嫌われる。
+8,10037,23,0,大空を　飛びまわりながら\nあちこちに　カミナリを　落として\n山火事を　起こすので　嫌われる。
+8,10038,22,0,風や　雷を　取りこみ　変えた\nエネルギーが　土に　栄養を\n与えて　大地を　豊かに　する。
+8,10038,23,0,風や　雷を　取りこみ　変えた\nエネルギーが　土に　栄養を\n与えて　大地を　豊かに　する。
+8,10039,22,0,失った　体を　真実と\n理想で　埋めてくれる　英雄を\n待つ　氷の　伝説ポケモン。
+8,10039,23,0,失った　体を　真実と\n理想で　埋めてくれる　英雄を\n待つ　氷の　伝説ポケモン。
 8,10040,22,0,失った　体を　真実と\n理想で　埋めてくれる　英雄を\n待つ　氷の　伝説ポケモン。
 8,10040,23,0,失った　体を　真実と\n理想で　埋めてくれる　英雄を\n待つ　氷の　伝説ポケモン。
-8,10041,22,0,失った　体を　真実と\n理想で　埋めてくれる　英雄を\n待つ　氷の　伝説ポケモン。
-8,10041,23,0,失った　体を　真実と\n理想で　埋めてくれる　英雄を\n待つ　氷の　伝説ポケモン。
 8,20001,20,0,１匹で　いても　なにも　起きないが\n２匹　以上で　並ぶと\nなにかの　力が　芽生えるという。
 8,20001,21,0,１匹で　いても　なにも　起きないが\n２匹　以上で　並ぶと\nなにかの　力が　芽生えるという。
 8,20001,22,0,１匹で　いても　なにも　起きないが\n２匹　以上で　並ぶと\nなにかの　力が　芽生えるという。

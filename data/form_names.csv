@@ -87,91 +87,93 @@ language,form_id,name
 1,10022,アルセウスのすがた
 1,10023,アルセウスのすがた
 1,10024,アルセウスのすがた
-1,10026,ヒートロトム
-1,10027,ウォッシュロトム
-1,10028,フロストロトム
-1,10029,スピンロトム
-1,10030,カットロトム
-1,10031,オリジンフォルム
-1,10032,スカイフォルム
-1,10034,あおすじのすがた
-1,10035,ダルマモード
-1,10036,ステップフォルム
+1,10025,ヒートロトム
+1,10026,ウォッシュロトム
+1,10027,フロストロトム
+1,10028,スピンロトム
+1,10029,カットロトム
+1,10030,オリジンフォルム
+1,10031,スカイフォルム
+1,10033,あおすじのすがた
+1,10034,ダルマモード
+1,10035,ステップフォルム
+1,10036,れいじゅうフォルム
 1,10037,れいじゅうフォルム
 1,10038,れいじゅうフォルム
-1,10039,れいじゅうフォルム
-1,10040,ホワイトキュレム
-1,10041,ブラックキュレム
-1,10042,メガフシギバナ
-1,10043,メガリザードンＸ
-1,10044,メガリザードンＹ
-1,10045,メガカメックス
-1,10046,メガフーディン
-1,10047,メガゲンガー
-1,10048,メガガルーラ
-1,10049,メガカイロス
-1,10050,メガギャラドス
-1,10051,メガプテラ
-1,10052,メガミュウツーＸ
-1,10053,メガミュウツーＹ
-1,10054,メガデンリュウ
-1,10055,メガハッサム
-1,10056,メガヘラクロス
-1,10057,メガヘルガー
-1,10058,メガバンギラス
-1,10059,メガバシャーモ
-1,10060,メガサーナイト
-1,10061,メガクチート
-1,10062,メガボスゴドラ
-1,10063,メガチャーレム
-1,10064,メガライボルト
-1,10065,メガジュペッタ
-1,10066,メガアブソル
-1,10067,メガラティアス
-1,10068,メガラティオス
-1,10069,メガガブリアス
-1,10070,メガルカリオ
-1,10071,メガユキノオー
-1,10072,アルセウスのすがた
-1,10073,えいえんのはな
-1,10074,メスのすがた
-1,10075,ブレードフォルム
-1,10076,ちいさいサイズ
-1,10077,おおきいサイズ
-1,10078,とくだいサイズ
-1,10079,ちいさいサイズ
-1,10080,おおきいサイズ
-1,10081,とくだいサイズ
-1,10082,メガスピアー
-1,10083,メガピジョット
-1,10084,ハードロック・ピカチュウ
-1,10085,マダム・ピカチュウ
-1,10086,アイドル・ピカチュウ
-1,10087,ドクター・ピカチュウ
-1,10088,マスク・ド・ピカチュウ
-1,10089,おきがえピカチュウ
-1,10090,メガヤドラン
-1,10091,メガハガネール
-1,10092,メガジュカイン
-1,10093,メガラグラージ
-1,10094,メガヤミラミ
-1,10095,メガサメハダー
-1,10096,メガバクーダ
-1,10097,メガチルタリス
-1,10098,メガオニゴーリ
-1,10099,メガボーマンダ
-1,10100,メガメタグロス
+1,10039,ホワイトキュレム
+1,10040,ブラックキュレム
+1,10041,メガフシギバナ
+1,10042,メガリザードンＸ
+1,10043,メガリザードンＹ
+1,10044,メガカメックス
+1,10045,メガフーディン
+1,10046,メガゲンガー
+1,10047,メガガルーラ
+1,10048,メガカイロス
+1,10049,メガギャラドス
+1,10050,メガプテラ
+1,10051,メガミュウツーＸ
+1,10052,メガミュウツーＹ
+1,10053,メガデンリュウ
+1,10054,メガハッサム
+1,10055,メガヘラクロス
+1,10056,メガヘルガー
+1,10057,メガバンギラス
+1,10058,メガバシャーモ
+1,10059,メガサーナイト
+1,10060,メガクチート
+1,10061,メガボスゴドラ
+1,10062,メガチャーレム
+1,10063,メガライボルト
+1,10064,メガジュペッタ
+1,10065,メガアブソル
+1,10066,メガラティアス
+1,10067,メガラティオス
+1,10068,メガガブリアス
+1,10069,メガルカリオ
+1,10070,メガユキノオー
+1,10071,アルセウスのすがた
+1,10072,えいえんのはな
+1,10073,メスのすがた
+1,10074,ブレードフォルム
+1,10075,ちいさいサイズ
+1,10076,おおきいサイズ
+1,10077,とくだいサイズ
+1,10078,ちいさいサイズ
+1,10079,おおきいサイズ
+1,10080,とくだいサイズ
+1,10081,メガスピアー
+1,10082,メガピジョット
+1,10083,ハードロック・ピカチュウ
+1,10084,マダム・ピカチュウ
+1,10085,アイドル・ピカチュウ
+1,10086,ドクター・ピカチュウ
+1,10087,マスク・ド・ピカチュウ
+1,10088,おきがえピカチュウ
+1,10089,メガヤドラン
+1,10090,メガハガネール
+1,10091,メガジュカイン
+1,10092,メガラグラージ
+1,10093,メガヤミラミ
+1,10094,メガサメハダー
+1,10095,メガバクーダ
+1,10096,メガチルタリス
+1,10097,メガオニゴーリ
+1,10098,メガボーマンダ
+1,10099,メガメタグロス
+1,10100,ゲンシカイキのすがた
 1,10101,ゲンシカイキのすがた
-1,10102,ゲンシカイキのすがた
-1,10103,メガレックウザ
-1,10104,メガミミロップ
-1,10105,メガエルレイド
-1,10106,メガタブンネ
-1,10107,メガディアンシー
-1,10108,ときはなたれしフーパ
+1,10102,メガレックウザ
+1,10103,メガミミロップ
+1,10104,メガエルレイド
+1,10105,メガタブンネ
+1,10106,メガディアンシー
+1,10107,ときはなたれしフーパ
+1,10108,アローラのすがた
 1,10109,アローラのすがた
-1,10110,アローラのすがた
-1,10112,オリジナルキャップ
+1,10110,オリジナルキャップ
+1,10111,アローラのすがた
+1,10112,アローラのすがた
 1,10113,アローラのすがた
 1,10114,アローラのすがた
 1,10115,アローラのすがた
@@ -186,69 +188,79 @@ language,form_id,name
 1,10124,アローラのすがた
 1,10125,アローラのすがた
 1,10126,アローラのすがた
-1,10127,アローラのすがた
-1,10128,アローラのすがた
-1,10130,サトシゲッコウガ
-1,10131,１０％フォルム
-1,10132,１０％フォルム
-1,10133,５０％フォルム
-1,10134,パーフェクトフォルム
-1,10137,ぱちぱちスタイル
-1,10138,ふらふらスタイル
-1,10139,まいまいスタイル
-1,10140,まよなかのすがた
-1,10141,むれたすがた
-1,10144,タイプ：ファイト
-1,10145,タイプ：フライング
-1,10146,タイプ：ポイズン
-1,10147,タイプ：グラウンド
-1,10148,タイプ：ロック
-1,10149,タイプ：バグ
-1,10150,タイプ：ゴースト
-1,10151,タイプ：スチール
-1,10152,タイプ：ファイヤー
-1,10153,タイプ：ウオーター
-1,10154,タイプ：グラス
-1,10155,タイプ：エレクトロ
-1,10156,タイプ：サイキック
-1,10157,タイプ：アイス
-1,10158,タイプ：ドラゴン
-1,10159,タイプ：ダーク
-1,10160,タイプ：フェアリー
-1,10161,あかいろのコア
-1,10167,たそがれのすがた
-1,10170,たそがれのたてがみ
-1,10171,あかつきのつばさ
-1,10172,ウルトラネクロズマ
+1,10128,サトシゲッコウガ
+1,10129,１０％フォルム
+1,10130,１０％フォルム
+1,10131,５０％フォルム
+1,10132,パーフェクトフォルム
+1,10133,ぱちぱちスタイル
+1,10134,ふらふらスタイル
+1,10135,まいまいスタイル
+1,10136,まよなかのすがた
+1,10137,むれたすがた
+1,10138,タイプ：ファイト
+1,10139,タイプ：フライング
+1,10140,タイプ：ポイズン
+1,10141,タイプ：グラウンド
+1,10142,タイプ：ロック
+1,10143,タイプ：バグ
+1,10144,タイプ：ゴースト
+1,10145,タイプ：スチール
+1,10146,タイプ：ファイヤー
+1,10147,タイプ：ウオーター
+1,10148,タイプ：グラス
+1,10149,タイプ：エレクトロ
+1,10150,タイプ：サイキック
+1,10151,タイプ：アイス
+1,10152,タイプ：ドラゴン
+1,10153,タイプ：ダーク
+1,10154,タイプ：フェアリー
+1,10155,あかいろのコア
+1,10157,たそがれのすがた
+1,10158,たそがれのたてがみ
+1,10159,あかつきのつばさ
+1,10160,ウルトラネクロズマ
+1,10163,ガラルのすがた
+1,10164,ガラルのすがた
+1,10165,ガラルのすがた
+1,10166,ガラルのすがた
+1,10167,ガラルのすがた
+1,10168,ガラルのすがた
+1,10169,ガラルのすがた
+1,10170,ガラルのすがた
+1,10171,ガラルのすがた
+1,10172,ガラルのすがた
+1,10173,ガラルのすがた
+1,10174,ダルマモード
 1,10175,ガラルのすがた
 1,10176,ガラルのすがた
-1,10177,ガラルのすがた
-1,10178,ガラルのすがた
-1,10179,ガラルのすがた
-1,10180,ガラルのすがた
-1,10181,ガラルのすがた
-1,10182,ガラルのすがた
+1,10177,ローなすがた
+1,10178,ナイスフェイス
+1,10179,メスのすがた
+1,10180,けんのおう
+1,10181,たてのおう
+1,10182,ムゲンダイマックス
 1,10183,ガラルのすがた
 1,10184,ガラルのすがた
-1,10185,ガラルのすがた
-1,10186,ダルマモード
+1,10185,れんげきのかた
+1,10186,ガラルのすがた
 1,10187,ガラルのすがた
 1,10188,ガラルのすがた
-1,10189,ローなすがた
-1,10190,ナイスフェイス
-1,10191,メスのすがた
-1,10192,けんのおう
-1,10193,たてのおう
-1,10194,ムゲンダイマックス
-1,10195,ガラルのすがた
-1,10196,ガラルのすがた
-1,10197,れんげきのかた
-1,10198,ガラルのすがた
-1,10199,ガラルのすがた
-1,10200,ガラルのすがた
-1,10201,ガラルのすがた
-1,10202,はくばじょうのすがた
-1,10203,こくばじょうのすがた
+1,10189,ガラルのすがた
+1,10190,はくばじょうのすがた
+1,10191,こくばじょうのすがた
+1,10192,ヒスイのすがた
+1,10193,ヒスイのすがた
+1,10194,ヒスイのすがた
+1,10195,ヒスイのすがた
+1,10196,ヒスイのすがた
+1,10197,ヒスイのすがた
+1,10198,ヒスイのすがた
+1,10199,オリジンフォルム
+1,10200,オリジンフォルム
+1,10201,ヒスイのすがた
+1,10202,ヒスイのすがた
+1,10203,しろすじのすがた
 1,10204,ヒスイのすがた
 1,10205,ヒスイのすがた
 1,10206,ヒスイのすがた
@@ -256,36 +268,24 @@ language,form_id,name
 1,10208,ヒスイのすがた
 1,10209,ヒスイのすがた
 1,10210,ヒスイのすがた
-1,10211,オリジンフォルム
-1,10212,オリジンフォルム
-1,10213,ヒスイのすがた
-1,10214,ヒスイのすがた
-1,10215,しろすじのすがた
-1,10216,ヒスイのすがた
-1,10217,ヒスイのすがた
-1,10218,ヒスイのすがた
-1,10219,ヒスイのすがた
-1,10220,ヒスイのすがた
-1,10221,ヒスイのすがた
-1,10222,ヒスイのすがた
-1,10223,メスのすがた
-1,10224,れいじゅうフォルム
-1,10225,パルデアのすがた
-1,10226,パルデアのすがた
-1,10227,パルデアのすがた
-1,10228,パルデアのすがた
-1,10229,メスのすがた
-1,10230,ブルーフェザー
-1,10231,イエローフェザー
-1,10232,ホワイトフェザー
-1,10233,マイティフォルム
-1,10234,とほフォルム
-1,10235,アカツキ
-1,10236,いどのめん
-1,10237,かまどのめん
-1,10238,いしずえのめん
-1,10243,テラスタルフォルム
-1,10244,ステラフォルム
+1,10211,メスのすがた
+1,10212,れいじゅうフォルム
+1,10213,パルデアのすがた
+1,10214,パルデアのすがた
+1,10215,パルデアのすがた
+1,10216,パルデアのすがた
+1,10217,メスのすがた
+1,10218,ブルーフェザー
+1,10219,イエローフェザー
+1,10220,ホワイトフェザー
+1,10221,マイティフォルム
+1,10222,とほフォルム
+1,10223,アカツキ
+1,10224,いどのめん
+1,10225,かまどのめん
+1,10226,いしずえのめん
+1,10231,テラスタルフォルム
+1,10232,ステラフォルム
 1,20001,あるすがた
 1,20002,あるすがた
 1,20003,あるすがた
@@ -329,182 +329,193 @@ language,form_id,name
 1,20041,ゲノセクトのすがた
 1,20042,ゲノセクトのすがた
 1,20043,かくごのすがた
-1,20044,ゆきぐにのもよう
-1,20045,せつげんのもよう
-1,20046,たいりくのもよう
-1,20047,ていえんのもよう
-1,20048,みやびなもよう
-1,20049,はなぞののもよう
-1,20050,モダンなもよう
-1,20051,マリンのもよう
-1,20052,ぐんとうのもよう
-1,20053,こうやのもよう
-1,20054,さじんのもよう
-1,20055,たいがのもよう
-1,20056,スコールのもよう
-1,20057,サバンナのもよう
-1,20058,たいようのもよう
-1,20059,オーシャンのもよう
-1,20060,ジャングルのもよう
-1,20061,ファンシーなもよう
-1,20062,ボールのもよう
-1,20063,きいろのはな
-1,20064,オレンジいろのはな
-1,20065,あおいはな
-1,20066,しろいはな
-1,20067,きいろのはな
-1,20068,オレンジいろのはな
-1,20069,あおいはな
-1,20070,しろいはな
-1,20071,きいろのはな
-1,20072,オレンジいろのはな
-1,20073,あおいはな
-1,20074,しろいはな
-1,20075,ハートカット
-1,20076,スターカット
-1,20077,ダイヤカット
-1,20078,レディカット
-1,20079,マダムカット
-1,20080,ジェントルカット
-1,20081,クイーンカット
-1,20082,カブキカット
-1,20083,キングダムカット
-1,20084,アクティブモード
-1,20085,ホウエンキャップ
-1,20086,シンオウキャップ
-1,20087,イッシュキャップ
-1,20088,カロスキャップ
-1,20089,アローラキャップ
-1,20090,りゅうせいのすがた
-1,20091,りゅうせいのすがた
-1,20092,りゅうせいのすがた
-1,20093,りゅうせいのすがた
-1,20094,りゅうせいのすがた
-1,20095,りゅうせいのすがた
-1,20096,だいだいいろのコア
-1,20097,きいろのコア
-1,20098,みどりいろのコア
-1,20099,みずいろのコア
-1,20100,あおいろのコア
-1,20101,むらさきいろのコア
-1,20102,ばれたすがた
-1,20104,５００ねんまえのいろ
-1,20105,キミにきめたキャップ
-1,20106,キョダイマックス
-1,20107,キョダイマックス
-1,20108,キョダイマックス
-1,20109,キョダイマックス
-1,20110,キョダイマックス
-1,20111,キョダイマックス
-1,20112,キョダイマックス
-1,20113,キョダイマックス
-1,20114,キョダイマックス
-1,20115,キョダイマックス
-1,20116,キョダイマックス
-1,20117,キョダイマックス
-1,20118,キョダイマックス
-1,20119,キョダイマックス
-1,20120,キョダイマックス
-1,20121,キョダイマックス
-1,20122,キョダイマックス
-1,20123,キョダイマックス
-1,20124,キョダイマックス
-1,20125,うのみのすがた
-1,20126,まるのみのすがた
-1,20127,キョダイマックス
-1,20128,キョダイマックス
-1,20131,キョダイマックス
-1,20132,キョダイマックス
-1,20133,ミルキィバニラ
-1,20134,ミルキィバニラ
-1,20135,ミルキィバニラ
-1,20136,ミルキィバニラ
-1,20137,ミルキィバニラ
-1,20138,ミルキィバニラ
-1,20139,ミルキィルビー
-1,20140,ミルキィルビー
-1,20141,ミルキィルビー
-1,20142,ミルキィルビー
-1,20143,ミルキィルビー
-1,20144,ミルキィルビー
-1,20145,ミルキィルビー
-1,20146,ミルキィまっちゃ
-1,20147,ミルキィまっちゃ
-1,20148,ミルキィまっちゃ
-1,20149,ミルキィまっちゃ
-1,20150,ミルキィまっちゃ
-1,20151,ミルキィまっちゃ
-1,20152,ミルキィまっちゃ
-1,20153,ミルキィミント
-1,20154,ミルキィミント
-1,20155,ミルキィミント
-1,20156,ミルキィミント
-1,20157,ミルキィミント
-1,20158,ミルキィミント
-1,20159,ミルキィミント
-1,20160,ミルキィレモン
-1,20161,ミルキィレモン
-1,20162,ミルキィレモン
-1,20163,ミルキィレモン
-1,20164,ミルキィレモン
-1,20165,ミルキィレモン
-1,20166,ミルキィレモン
-1,20167,ミルキィソルト
-1,20168,ミルキィソルト
-1,20169,ミルキィソルト
-1,20170,ミルキィソルト
-1,20171,ミルキィソルト
-1,20172,ミルキィソルト
-1,20173,ミルキィソルト
-1,20174,ルビーミックス
-1,20175,ルビーミックス
-1,20176,ルビーミックス
-1,20177,ルビーミックス
-1,20178,ルビーミックス
-1,20179,ルビーミックス
-1,20180,ルビーミックス
-1,20181,キャラメルミックス
-1,20182,キャラメルミックス
-1,20183,キャラメルミックス
-1,20184,キャラメルミックス
-1,20185,キャラメルミックス
-1,20186,キャラメルミックス
-1,20187,キャラメルミックス
-1,20188,トリプルミックス
-1,20189,トリプルミックス
-1,20190,トリプルミックス
-1,20191,トリプルミックス
-1,20192,トリプルミックス
-1,20193,トリプルミックス
-1,20194,トリプルミックス
-1,20195,キョダイマックス
-1,20196,はらぺこもよう
-1,20197,キョダイマックス
-1,20198,キョダイマックス
-1,20199,キョダイマックス
-1,20205,キョダイマックス
-1,20206,とうちゃん
-1,20207,ワールドキャップ
-1,20208,キョダイマックス
-1,20209,キングのすがた
-1,20210,キングのすがた
-1,20211,キングのすがた
-1,20212,クイーンのすがた
-1,20213,キングのすがた
-1,20214,４ひきかぞく
-1,20215,たれたすがた
-1,20216,のびたすがた
-1,20217,みつふしフォルム
-1,20218,せいげんけいたい
-1,20219,しっそうけいたい
-1,20220,ゆうえいけいたい
-1,20221,かっくうけいたい
-1,20222,リミテッドモード
-1,20223,ドライブモード
-1,20224,フロートモード
-1,20225,グライドモード
-1,20226,タカイモノのすがた
-1,20227,ケッサクのすがた
+1,20082,ゆきぐにのもよう
+1,20083,せつげんのもよう
+1,20084,たいりくのもよう
+1,20085,ていえんのもよう
+1,20086,みやびなもよう
+1,20087,はなぞののもよう
+1,20088,モダンなもよう
+1,20089,マリンのもよう
+1,20090,ぐんとうのもよう
+1,20091,こうやのもよう
+1,20092,さじんのもよう
+1,20093,たいがのもよう
+1,20094,スコールのもよう
+1,20095,サバンナのもよう
+1,20096,たいようのもよう
+1,20097,オーシャンのもよう
+1,20098,ジャングルのもよう
+1,20099,ファンシーなもよう
+1,20100,ボールのもよう
+1,20101,きいろのはな
+1,20102,オレンジいろのはな
+1,20103,あおいはな
+1,20104,しろいはな
+1,20105,きいろのはな
+1,20106,オレンジいろのはな
+1,20107,あおいはな
+1,20108,しろいはな
+1,20109,きいろのはな
+1,20110,オレンジいろのはな
+1,20111,あおいはな
+1,20112,しろいはな
+1,20113,ハートカット
+1,20114,スターカット
+1,20115,ダイヤカット
+1,20116,レディカット
+1,20117,マダムカット
+1,20118,ジェントルカット
+1,20119,クイーンカット
+1,20120,カブキカット
+1,20121,キングダムカット
+1,20122,アクティブモード
+1,20123,ぬしの　ラッタ
+1,20124,ホウエンキャップ
+1,20125,シンオウキャップ
+1,20126,イッシュキャップ
+1,20127,カロスキャップ
+1,20128,アローラキャップ
+1,20129,ぬしの　デカグース
+1,20130,ぬしの　クワガノン
+1,20131,ぬしの　ラランテス
+1,20132,ぬしの　エンニュート
+1,20133,りゅうせいのすがた
+1,20134,りゅうせいのすがた
+1,20135,りゅうせいのすがた
+1,20136,りゅうせいのすがた
+1,20137,りゅうせいのすがた
+1,20138,りゅうせいのすがた
+1,20139,だいだいいろのコア
+1,20140,きいろのコア
+1,20141,みどりいろのコア
+1,20142,みずいろのコア
+1,20143,あおいろのコア
+1,20144,むらさきいろのコア
+1,20145,ばれたすがた
+1,20146,ぬしの　ミミッキュ
+1,20148,ぬしの　ジャラランガ
+1,20149,５００ねんまえのいろ
+1,20150,キミにきめたキャップ
+1,20151,ぬしの　ガラガラ
+1,20152,ぬしの　アブリボン
+1,20153,ぬしの　オニシズクモ
+1,20154,ぬしの　トゲデマル
+1,20155,キョダイマックス
+1,20156,キョダイマックス
+1,20157,キョダイマックス
+1,20158,キョダイマックス
+1,20159,キョダイマックス
+1,20160,キョダイマックス
+1,20161,キョダイマックス
+1,20162,キョダイマックス
+1,20163,キョダイマックス
+1,20164,キョダイマックス
+1,20165,キョダイマックス
+1,20166,キョダイマックス
+1,20167,キョダイマックス
+1,20168,キョダイマックス
+1,20169,キョダイマックス
+1,20170,キョダイマックス
+1,20171,キョダイマックス
+1,20172,キョダイマックス
+1,20173,キョダイマックス
+1,20174,うのみのすがた
+1,20175,まるのみのすがた
+1,20176,キョダイマックス
+1,20177,キョダイマックス
+1,20180,キョダイマックス
+1,20181,キョダイマックス
+1,20182,ミルキィバニラ
+1,20183,ミルキィバニラ
+1,20184,ミルキィバニラ
+1,20185,ミルキィバニラ
+1,20186,ミルキィバニラ
+1,20187,ミルキィバニラ
+1,20188,ミルキィルビー
+1,20189,ミルキィルビー
+1,20190,ミルキィルビー
+1,20191,ミルキィルビー
+1,20192,ミルキィルビー
+1,20193,ミルキィルビー
+1,20194,ミルキィルビー
+1,20195,ミルキィまっちゃ
+1,20196,ミルキィまっちゃ
+1,20197,ミルキィまっちゃ
+1,20198,ミルキィまっちゃ
+1,20199,ミルキィまっちゃ
+1,20200,ミルキィまっちゃ
+1,20201,ミルキィまっちゃ
+1,20202,ミルキィミント
+1,20203,ミルキィミント
+1,20204,ミルキィミント
+1,20205,ミルキィミント
+1,20206,ミルキィミント
+1,20207,ミルキィミント
+1,20208,ミルキィミント
+1,20209,ミルキィレモン
+1,20210,ミルキィレモン
+1,20211,ミルキィレモン
+1,20212,ミルキィレモン
+1,20213,ミルキィレモン
+1,20214,ミルキィレモン
+1,20215,ミルキィレモン
+1,20216,ミルキィソルト
+1,20217,ミルキィソルト
+1,20218,ミルキィソルト
+1,20219,ミルキィソルト
+1,20220,ミルキィソルト
+1,20221,ミルキィソルト
+1,20222,ミルキィソルト
+1,20223,ルビーミックス
+1,20224,ルビーミックス
+1,20225,ルビーミックス
+1,20226,ルビーミックス
+1,20227,ルビーミックス
+1,20228,ルビーミックス
+1,20229,ルビーミックス
+1,20230,キャラメルミックス
+1,20231,キャラメルミックス
+1,20232,キャラメルミックス
+1,20233,キャラメルミックス
+1,20234,キャラメルミックス
+1,20235,キャラメルミックス
+1,20236,キャラメルミックス
+1,20237,トリプルミックス
+1,20238,トリプルミックス
+1,20239,トリプルミックス
+1,20240,トリプルミックス
+1,20241,トリプルミックス
+1,20242,トリプルミックス
+1,20243,トリプルミックス
+1,20244,キョダイマックス
+1,20245,はらぺこもよう
+1,20246,キョダイマックス
+1,20247,キョダイマックス
+1,20248,キョダイマックス
+1,20254,キョダイマックス
+1,20255,とうちゃん
+1,20256,ワールドキャップ
+1,20257,キョダイマックス
+1,20258,キングのすがた
+1,20259,キングのすがた
+1,20260,キングのすがた
+1,20261,クイーンのすがた
+1,20262,キングのすがた
+1,20263,４ひきかぞく
+1,20264,たれたすがた
+1,20265,のびたすがた
+1,20266,みつふしフォルム
+1,20267,せいげんけいたい
+1,20268,しっそうけいたい
+1,20269,ゆうえいけいたい
+1,20270,かっくうけいたい
+1,20271,リミテッドモード
+1,20272,ドライブモード
+1,20273,フロートモード
+1,20274,グライドモード
+1,20275,タカイモノのすがた
+1,20276,ケッサクのすがた
 2,201,One form
 2,351,Normal
 2,382,Kyogre
@@ -593,91 +604,93 @@ language,form_id,name
 2,10022,Arceus
 2,10023,Arceus
 2,10024,Arceus
-2,10026,Heat Rotom
-2,10027,Wash Rotom
-2,10028,Frost Rotom
-2,10029,Fan Rotom
-2,10030,Mow Rotom
-2,10031,Origin Forme
-2,10032,Sky Forme
-2,10034,Blue-Striped Form
-2,10035,Zen Mode
-2,10036,Pirouette Forme
+2,10025,Heat Rotom
+2,10026,Wash Rotom
+2,10027,Frost Rotom
+2,10028,Fan Rotom
+2,10029,Mow Rotom
+2,10030,Origin Forme
+2,10031,Sky Forme
+2,10033,Blue-Striped Form
+2,10034,Zen Mode
+2,10035,Pirouette Forme
+2,10036,Therian Forme
 2,10037,Therian Forme
 2,10038,Therian Forme
-2,10039,Therian Forme
-2,10040,White Kyurem
-2,10041,Black Kyurem
-2,10042,Mega Venusaur
-2,10043,Mega Charizard X
-2,10044,Mega Charizard Y
-2,10045,Mega Blastoise
-2,10046,Mega Alakazam
-2,10047,Mega Gengar
-2,10048,Mega Kangaskhan
-2,10049,Mega Pinsir
-2,10050,Mega Gyarados
-2,10051,Mega Aerodactyl
-2,10052,Mega Mewtwo X
-2,10053,Mega Mewtwo Y
-2,10054,Mega Ampharos
-2,10055,Mega Scizor
-2,10056,Mega Heracross
-2,10057,Mega Houndoom
-2,10058,Mega Tyranitar
-2,10059,Mega Blaziken
-2,10060,Mega Gardevoir
-2,10061,Mega Mawile
-2,10062,Mega Aggron
-2,10063,Mega Medicham
-2,10064,Mega Manectric
-2,10065,Mega Banette
-2,10066,Mega Absol
-2,10067,Mega Latias
-2,10068,Mega Latios
-2,10069,Mega Garchomp
-2,10070,Mega Lucario
-2,10071,Mega Abomasnow
-2,10072,Arceus
-2,10073,Eternal Flower
-2,10074,Female
-2,10075,Blade Forme
-2,10076,Small Size
-2,10077,Large Size
-2,10078,Super Size
-2,10079,Small Size
-2,10080,Large Size
-2,10081,Super Size
-2,10082,Mega Beedrill
-2,10083,Mega Pidgeot
-2,10084,Pikachu Rock Star
-2,10085,Pikachu Belle
-2,10086,Pikachu Pop Star
-2,10087,"Pikachu, Ph.D."
-2,10088,Pikachu Libre
-2,10089,Cosplay Pikachu
-2,10090,Mega Slowbro
-2,10091,Mega Steelix
-2,10092,Mega Sceptile
-2,10093,Mega Swampert
-2,10094,Mega Sableye
-2,10095,Mega Sharpedo
-2,10096,Mega Camerupt
-2,10097,Mega Altaria
-2,10098,Mega Glalie
-2,10099,Mega Salamence
-2,10100,Mega Metagross
+2,10039,White Kyurem
+2,10040,Black Kyurem
+2,10041,Mega Venusaur
+2,10042,Mega Charizard X
+2,10043,Mega Charizard Y
+2,10044,Mega Blastoise
+2,10045,Mega Alakazam
+2,10046,Mega Gengar
+2,10047,Mega Kangaskhan
+2,10048,Mega Pinsir
+2,10049,Mega Gyarados
+2,10050,Mega Aerodactyl
+2,10051,Mega Mewtwo X
+2,10052,Mega Mewtwo Y
+2,10053,Mega Ampharos
+2,10054,Mega Scizor
+2,10055,Mega Heracross
+2,10056,Mega Houndoom
+2,10057,Mega Tyranitar
+2,10058,Mega Blaziken
+2,10059,Mega Gardevoir
+2,10060,Mega Mawile
+2,10061,Mega Aggron
+2,10062,Mega Medicham
+2,10063,Mega Manectric
+2,10064,Mega Banette
+2,10065,Mega Absol
+2,10066,Mega Latias
+2,10067,Mega Latios
+2,10068,Mega Garchomp
+2,10069,Mega Lucario
+2,10070,Mega Abomasnow
+2,10071,Arceus
+2,10072,Eternal Flower
+2,10073,Female
+2,10074,Blade Forme
+2,10075,Small Size
+2,10076,Large Size
+2,10077,Super Size
+2,10078,Small Size
+2,10079,Large Size
+2,10080,Super Size
+2,10081,Mega Beedrill
+2,10082,Mega Pidgeot
+2,10083,Pikachu Rock Star
+2,10084,Pikachu Belle
+2,10085,Pikachu Pop Star
+2,10086,"Pikachu, Ph.D."
+2,10087,Pikachu Libre
+2,10088,Cosplay Pikachu
+2,10089,Mega Slowbro
+2,10090,Mega Steelix
+2,10091,Mega Sceptile
+2,10092,Mega Swampert
+2,10093,Mega Sableye
+2,10094,Mega Sharpedo
+2,10095,Mega Camerupt
+2,10096,Mega Altaria
+2,10097,Mega Glalie
+2,10098,Mega Salamence
+2,10099,Mega Metagross
+2,10100,Primal Reversion
 2,10101,Primal Reversion
-2,10102,Primal Reversion
-2,10103,Mega Rayquaza
-2,10104,Mega Lopunny
-2,10105,Mega Gallade
-2,10106,Mega Audino
-2,10107,Mega Diancie
-2,10108,Hoopa Unbound
+2,10102,Mega Rayquaza
+2,10103,Mega Lopunny
+2,10104,Mega Gallade
+2,10105,Mega Audino
+2,10106,Mega Diancie
+2,10107,Hoopa Unbound
+2,10108,Alolan Form
 2,10109,Alolan Form
-2,10110,Alolan Form
-2,10112,Original Cap
+2,10110,Original Cap
+2,10111,Alolan Form
+2,10112,Alolan Form
 2,10113,Alolan Form
 2,10114,Alolan Form
 2,10115,Alolan Form
@@ -692,69 +705,79 @@ language,form_id,name
 2,10124,Alolan Form
 2,10125,Alolan Form
 2,10126,Alolan Form
-2,10127,Alolan Form
-2,10128,Alolan Form
-2,10130,Ash-Greninja
-2,10131,10% Forme
-2,10132,10% Forme
-2,10133,50% Forme
-2,10134,Complete Forme
-2,10137,Pom-Pom Style
-2,10138,Pa’u Style
-2,10139,Sensu Style
-2,10140,Midnight Form
-2,10141,School Form
-2,10144,Type: Fighting
-2,10145,Type: Flying
-2,10146,Type: Poison
-2,10147,Type: Ground
-2,10148,Type: Rock
-2,10149,Type: Bug
-2,10150,Type: Ghost
-2,10151,Type: Steel
-2,10152,Type: Fire
-2,10153,Type: Water
-2,10154,Type: Grass
-2,10155,Type: Electric
-2,10156,Type: Psychic
-2,10157,Type: Ice
-2,10158,Type: Dragon
-2,10159,Type: Dark
-2,10160,Type: Fairy
-2,10161,Red Core
-2,10167,Dusk Form
-2,10170,Dusk Mane
-2,10171,Dawn Wings
-2,10172,Ultra Necrozma
+2,10128,Ash-Greninja
+2,10129,10% Forme
+2,10130,10% Forme
+2,10131,50% Forme
+2,10132,Complete Forme
+2,10133,Pom-Pom Style
+2,10134,Pa’u Style
+2,10135,Sensu Style
+2,10136,Midnight Form
+2,10137,School Form
+2,10138,Type: Fighting
+2,10139,Type: Flying
+2,10140,Type: Poison
+2,10141,Type: Ground
+2,10142,Type: Rock
+2,10143,Type: Bug
+2,10144,Type: Ghost
+2,10145,Type: Steel
+2,10146,Type: Fire
+2,10147,Type: Water
+2,10148,Type: Grass
+2,10149,Type: Electric
+2,10150,Type: Psychic
+2,10151,Type: Ice
+2,10152,Type: Dragon
+2,10153,Type: Dark
+2,10154,Type: Fairy
+2,10155,Red Core
+2,10157,Dusk Form
+2,10158,Dusk Mane
+2,10159,Dawn Wings
+2,10160,Ultra Necrozma
+2,10163,Galarian Form
+2,10164,Galarian Form
+2,10165,Galarian Form
+2,10166,Galarian Form
+2,10167,Galarian Form
+2,10168,Galarian Form
+2,10169,Galarian Form
+2,10170,Galarian Form
+2,10171,Galarian Form
+2,10172,Galarian Form
+2,10173,Galarian Form
+2,10174,Zen Mode
 2,10175,Galarian Form
 2,10176,Galarian Form
-2,10177,Galarian Form
-2,10178,Galarian Form
-2,10179,Galarian Form
-2,10180,Galarian Form
-2,10181,Galarian Form
-2,10182,Galarian Form
+2,10177,Low Key Form
+2,10178,Noice Face
+2,10179,Female
+2,10180,Crowned Sword
+2,10181,Crowned Shield
+2,10182,Eternamax
 2,10183,Galarian Form
 2,10184,Galarian Form
-2,10185,Galarian Form
-2,10186,Zen Mode
+2,10185,Rapid Strike Style
+2,10186,Galarian Form
 2,10187,Galarian Form
 2,10188,Galarian Form
-2,10189,Low Key Form
-2,10190,Noice Face
-2,10191,Female
-2,10192,Crowned Sword
-2,10193,Crowned Shield
-2,10194,Eternamax
-2,10195,Galarian Form
-2,10196,Galarian Form
-2,10197,Rapid Strike Style
-2,10198,Galarian Form
-2,10199,Galarian Form
-2,10200,Galarian Form
-2,10201,Galarian Form
-2,10202,Ice Rider
-2,10203,Shadow Rider
+2,10189,Galarian Form
+2,10190,Ice Rider
+2,10191,Shadow Rider
+2,10192,Hisuian Form
+2,10193,Hisuian Form
+2,10194,Hisuian Form
+2,10195,Hisuian Form
+2,10196,Hisuian Form
+2,10197,Hisuian Form
+2,10198,Hisuian Form
+2,10199,Origin Forme
+2,10200,Origin Forme
+2,10201,Hisuian Form
+2,10202,Hisuian Form
+2,10203,White-Striped Form
 2,10204,Hisuian Form
 2,10205,Hisuian Form
 2,10206,Hisuian Form
@@ -762,36 +785,24 @@ language,form_id,name
 2,10208,Hisuian Form
 2,10209,Hisuian Form
 2,10210,Hisuian Form
-2,10211,Origin Forme
-2,10212,Origin Forme
-2,10213,Hisuian Form
-2,10214,Hisuian Form
-2,10215,White-Striped Form
-2,10216,Hisuian Form
-2,10217,Hisuian Form
-2,10218,Hisuian Form
-2,10219,Hisuian Form
-2,10220,Hisuian Form
-2,10221,Hisuian Form
-2,10222,Hisuian Form
-2,10223,Female
-2,10224,Therian Forme
-2,10225,Paldean Form
-2,10226,Paldean Form
-2,10227,Paldean Form
-2,10228,Paldean Form
-2,10229,Female
-2,10230,Blue Plumage
-2,10231,Yellow Plumage
-2,10232,White Plumage
-2,10233,Hero Form
-2,10234,Roaming Form
-2,10235,Bloodmoon
-2,10236,Wellspring Mask
-2,10237,Hearthflame Mask
-2,10238,Cornerstone Mask
-2,10243,Terastal Form
-2,10244,Stellar Form
+2,10211,Female
+2,10212,Therian Forme
+2,10213,Paldean Form
+2,10214,Paldean Form
+2,10215,Paldean Form
+2,10216,Paldean Form
+2,10217,Female
+2,10218,Blue Plumage
+2,10219,Yellow Plumage
+2,10220,White Plumage
+2,10221,Hero Form
+2,10222,Roaming Form
+2,10223,Bloodmoon
+2,10224,Wellspring Mask
+2,10225,Hearthflame Mask
+2,10226,Cornerstone Mask
+2,10231,Terastal Form
+2,10232,Stellar Form
 2,20001,One form
 2,20002,One form
 2,20003,One form
@@ -835,182 +846,193 @@ language,form_id,name
 2,20041,Genesect
 2,20042,Genesect
 2,20043,Resolute Form
-2,20044,Polar Pattern
-2,20045,Tundra Pattern
-2,20046,Continental Pattern
-2,20047,Garden Pattern
-2,20048,Elegant Pattern
-2,20049,Meadow Pattern
-2,20050,Modern Pattern
-2,20051,Marine Pattern
-2,20052,Archipelago Pattern
-2,20053,High Plains Pattern
-2,20054,Sandstorm Pattern
-2,20055,River Pattern
-2,20056,Monsoon Pattern
-2,20057,Savanna Pattern
-2,20058,Sun Pattern
-2,20059,Ocean Pattern
-2,20060,Jungle Pattern
-2,20061,Fancy Pattern
-2,20062,Poké Ball Pattern
-2,20063,Yellow Flower
-2,20064,Orange Flower
-2,20065,Blue Flower
-2,20066,White Flower
-2,20067,Yellow Flower
-2,20068,Orange Flower
-2,20069,Blue Flower
-2,20070,White Flower
-2,20071,Yellow Flower
-2,20072,Orange Flower
-2,20073,Blue Flower
-2,20074,White Flower
-2,20075,Heart Trim
-2,20076,Star Trim
-2,20077,Diamond Trim
-2,20078,Debutante Trim
-2,20079,Matron Trim
-2,20080,Dandy Trim
-2,20081,La Reine Trim
-2,20082,Kabuki Trim
-2,20083,Pharaoh Trim
-2,20084,Active Mode
-2,20085,Hoenn Cap
-2,20086,Sinnoh Cap
-2,20087,Unova Cap
-2,20088,Kalos Cap
-2,20089,Alola Cap
-2,20090,Meteor Form
-2,20091,Meteor Form
-2,20092,Meteor Form
-2,20093,Meteor Form
-2,20094,Meteor Form
-2,20095,Meteor Form
-2,20096,Orange Core
-2,20097,Yellow Core
-2,20098,Green Core
-2,20099,Blue Core
-2,20100,Indigo Core
-2,20101,Violet Core
-2,20102,Busted Form
-2,20104,Original Color
-2,20105,Partner Cap
-2,20106,Gigantamax
-2,20107,Gigantamax
-2,20108,Gigantamax
-2,20109,Gigantamax
-2,20110,Gigantamax
-2,20111,Gigantamax
-2,20112,Gigantamax
-2,20113,Gigantamax
-2,20114,Gigantamax
-2,20115,Gigantamax
-2,20116,Gigantamax
-2,20117,Gigantamax
-2,20118,Gigantamax
-2,20119,Gigantamax
-2,20120,Gigantamax
-2,20121,Gigantamax
-2,20122,Gigantamax
-2,20123,Gigantamax
-2,20124,Gigantamax
-2,20125,Gulping Form
-2,20126,Gorging Form
-2,20127,Gigantamax
-2,20128,Gigantamax
-2,20131,Gigantamax
-2,20132,Gigantamax
-2,20133,Vanilla Cream
-2,20134,Vanilla Cream
-2,20135,Vanilla Cream
-2,20136,Vanilla Cream
-2,20137,Vanilla Cream
-2,20138,Vanilla Cream
-2,20139,Ruby Cream
-2,20140,Ruby Cream
-2,20141,Ruby Cream
-2,20142,Ruby Cream
-2,20143,Ruby Cream
-2,20144,Ruby Cream
-2,20145,Ruby Cream
-2,20146,Matcha Cream
-2,20147,Matcha Cream
-2,20148,Matcha Cream
-2,20149,Matcha Cream
-2,20150,Matcha Cream
-2,20151,Matcha Cream
-2,20152,Matcha Cream
-2,20153,Mint Cream
-2,20154,Mint Cream
-2,20155,Mint Cream
-2,20156,Mint Cream
-2,20157,Mint Cream
-2,20158,Mint Cream
-2,20159,Mint Cream
-2,20160,Lemon Cream
-2,20161,Lemon Cream
-2,20162,Lemon Cream
-2,20163,Lemon Cream
-2,20164,Lemon Cream
-2,20165,Lemon Cream
-2,20166,Lemon Cream
-2,20167,Salted Cream
-2,20168,Salted Cream
-2,20169,Salted Cream
-2,20170,Salted Cream
-2,20171,Salted Cream
-2,20172,Salted Cream
-2,20173,Salted Cream
-2,20174,Ruby Swirl
-2,20175,Ruby Swirl
-2,20176,Ruby Swirl
-2,20177,Ruby Swirl
-2,20178,Ruby Swirl
-2,20179,Ruby Swirl
-2,20180,Ruby Swirl
-2,20181,Caramel Swirl
-2,20182,Caramel Swirl
-2,20183,Caramel Swirl
-2,20184,Caramel Swirl
-2,20185,Caramel Swirl
-2,20186,Caramel Swirl
-2,20187,Caramel Swirl
-2,20188,Rainbow Swirl
-2,20189,Rainbow Swirl
-2,20190,Rainbow Swirl
-2,20191,Rainbow Swirl
-2,20192,Rainbow Swirl
-2,20193,Rainbow Swirl
-2,20194,Rainbow Swirl
-2,20195,Gigantamax
-2,20196,Hangry Mode
-2,20197,Gigantamax
-2,20198,Gigantamax
-2,20199,Gigantamax
-2,20205,Gigantamax
-2,20206,Dada
-2,20207,World Cap
-2,20208,Gigantamax
-2,20209,Lord Form
-2,20210,Lord Form
-2,20211,Lord Form
-2,20212,Lady Form
-2,20213,Lord Form
-2,20214,Family of Four
-2,20215,Droopy Form
-2,20216,Stretchy Form
-2,20217,Three-Segment Form
-2,20218,Limited Build
-2,20219,Sprinting Build
-2,20220,Swimming Build
-2,20221,Gliding Build
-2,20222,Low-Power Mode
-2,20223,Drive Mode
-2,20224,Aquatic Mode
-2,20225,Glide Mode
-2,20226,Artisan Form
-2,20227,Masterpiece Form
+2,20082,Polar Pattern
+2,20083,Tundra Pattern
+2,20084,Continental Pattern
+2,20085,Garden Pattern
+2,20086,Elegant Pattern
+2,20087,Meadow Pattern
+2,20088,Modern Pattern
+2,20089,Marine Pattern
+2,20090,Archipelago Pattern
+2,20091,High Plains Pattern
+2,20092,Sandstorm Pattern
+2,20093,River Pattern
+2,20094,Monsoon Pattern
+2,20095,Savanna Pattern
+2,20096,Sun Pattern
+2,20097,Ocean Pattern
+2,20098,Jungle Pattern
+2,20099,Fancy Pattern
+2,20100,Poké Ball Pattern
+2,20101,Yellow Flower
+2,20102,Orange Flower
+2,20103,Blue Flower
+2,20104,White Flower
+2,20105,Yellow Flower
+2,20106,Orange Flower
+2,20107,Blue Flower
+2,20108,White Flower
+2,20109,Yellow Flower
+2,20110,Orange Flower
+2,20111,Blue Flower
+2,20112,White Flower
+2,20113,Heart Trim
+2,20114,Star Trim
+2,20115,Diamond Trim
+2,20116,Debutante Trim
+2,20117,Matron Trim
+2,20118,Dandy Trim
+2,20119,La Reine Trim
+2,20120,Kabuki Trim
+2,20121,Pharaoh Trim
+2,20122,Active Mode
+2,20123,Totem Raticate
+2,20124,Hoenn Cap
+2,20125,Sinnoh Cap
+2,20126,Unova Cap
+2,20127,Kalos Cap
+2,20128,Alola Cap
+2,20129,Totem Gumshoos
+2,20130,Totem Vikavolt
+2,20131,Totem Lurantis
+2,20132,Totem Salazzle
+2,20133,Meteor Form
+2,20134,Meteor Form
+2,20135,Meteor Form
+2,20136,Meteor Form
+2,20137,Meteor Form
+2,20138,Meteor Form
+2,20139,Orange Core
+2,20140,Yellow Core
+2,20141,Green Core
+2,20142,Blue Core
+2,20143,Indigo Core
+2,20144,Violet Core
+2,20145,Busted Form
+2,20146,Totem Mimikyu
+2,20148,Totem Kommo-o
+2,20149,Original Color
+2,20150,Partner Cap
+2,20151,Totem Marowak
+2,20152,Totem Ribombee
+2,20153,Totem Araquanid
+2,20154,Totem Togedemaru
+2,20155,Gigantamax
+2,20156,Gigantamax
+2,20157,Gigantamax
+2,20158,Gigantamax
+2,20159,Gigantamax
+2,20160,Gigantamax
+2,20161,Gigantamax
+2,20162,Gigantamax
+2,20163,Gigantamax
+2,20164,Gigantamax
+2,20165,Gigantamax
+2,20166,Gigantamax
+2,20167,Gigantamax
+2,20168,Gigantamax
+2,20169,Gigantamax
+2,20170,Gigantamax
+2,20171,Gigantamax
+2,20172,Gigantamax
+2,20173,Gigantamax
+2,20174,Gulping Form
+2,20175,Gorging Form
+2,20176,Gigantamax
+2,20177,Gigantamax
+2,20180,Gigantamax
+2,20181,Gigantamax
+2,20182,Vanilla Cream
+2,20183,Vanilla Cream
+2,20184,Vanilla Cream
+2,20185,Vanilla Cream
+2,20186,Vanilla Cream
+2,20187,Vanilla Cream
+2,20188,Ruby Cream
+2,20189,Ruby Cream
+2,20190,Ruby Cream
+2,20191,Ruby Cream
+2,20192,Ruby Cream
+2,20193,Ruby Cream
+2,20194,Ruby Cream
+2,20195,Matcha Cream
+2,20196,Matcha Cream
+2,20197,Matcha Cream
+2,20198,Matcha Cream
+2,20199,Matcha Cream
+2,20200,Matcha Cream
+2,20201,Matcha Cream
+2,20202,Mint Cream
+2,20203,Mint Cream
+2,20204,Mint Cream
+2,20205,Mint Cream
+2,20206,Mint Cream
+2,20207,Mint Cream
+2,20208,Mint Cream
+2,20209,Lemon Cream
+2,20210,Lemon Cream
+2,20211,Lemon Cream
+2,20212,Lemon Cream
+2,20213,Lemon Cream
+2,20214,Lemon Cream
+2,20215,Lemon Cream
+2,20216,Salted Cream
+2,20217,Salted Cream
+2,20218,Salted Cream
+2,20219,Salted Cream
+2,20220,Salted Cream
+2,20221,Salted Cream
+2,20222,Salted Cream
+2,20223,Ruby Swirl
+2,20224,Ruby Swirl
+2,20225,Ruby Swirl
+2,20226,Ruby Swirl
+2,20227,Ruby Swirl
+2,20228,Ruby Swirl
+2,20229,Ruby Swirl
+2,20230,Caramel Swirl
+2,20231,Caramel Swirl
+2,20232,Caramel Swirl
+2,20233,Caramel Swirl
+2,20234,Caramel Swirl
+2,20235,Caramel Swirl
+2,20236,Caramel Swirl
+2,20237,Rainbow Swirl
+2,20238,Rainbow Swirl
+2,20239,Rainbow Swirl
+2,20240,Rainbow Swirl
+2,20241,Rainbow Swirl
+2,20242,Rainbow Swirl
+2,20243,Rainbow Swirl
+2,20244,Gigantamax
+2,20245,Hangry Mode
+2,20246,Gigantamax
+2,20247,Gigantamax
+2,20248,Gigantamax
+2,20254,Gigantamax
+2,20255,Dada
+2,20256,World Cap
+2,20257,Gigantamax
+2,20258,Lord Form
+2,20259,Lord Form
+2,20260,Lord Form
+2,20261,Lady Form
+2,20262,Lord Form
+2,20263,Family of Four
+2,20264,Droopy Form
+2,20265,Stretchy Form
+2,20266,Three-Segment Form
+2,20267,Limited Build
+2,20268,Sprinting Build
+2,20269,Swimming Build
+2,20270,Gliding Build
+2,20271,Low-Power Mode
+2,20272,Drive Mode
+2,20273,Aquatic Mode
+2,20274,Glide Mode
+2,20275,Artisan Form
+2,20276,Masterpiece Form
 3,201,Forme Unique
 3,351,Forme de Morphéo
 3,382,Kyogre
@@ -1099,91 +1121,93 @@ language,form_id,name
 3,10022,Forme de Arceus
 3,10023,Forme de Arceus
 3,10024,Forme de Arceus
-3,10026,Motisma Chaleur
-3,10027,Motisma Lavage
-3,10028,Motisma Froid
-3,10029,Motisma Hélice
-3,10030,Motisma Tonte
-3,10031,Forme Originelle
-3,10032,Forme Céleste
-3,10034,Motif Bleu
-3,10035,Mode Transe
-3,10036,Forme Danse
+3,10025,Motisma Chaleur
+3,10026,Motisma Lavage
+3,10027,Motisma Froid
+3,10028,Motisma Hélice
+3,10029,Motisma Tonte
+3,10030,Forme Originelle
+3,10031,Forme Céleste
+3,10033,Motif Bleu
+3,10034,Mode Transe
+3,10035,Forme Danse
+3,10036,Forme Totémique
 3,10037,Forme Totémique
 3,10038,Forme Totémique
-3,10039,Forme Totémique
-3,10040,Kyurem Blanc
-3,10041,Kyurem Noir
-3,10042,Méga-Florizarre
-3,10043,Méga-Dracaufeu X
-3,10044,Méga-Dracaufeu Y
-3,10045,Méga-Tortank
-3,10046,Méga-Alakazam
-3,10047,Méga-Ectoplasma
-3,10048,Méga-Kangourex
-3,10049,Méga-Scarabrute
-3,10050,Méga-Léviator
-3,10051,Méga-Ptéra
-3,10052,Méga-Mewtwo X
-3,10053,Méga-Mewtwo Y
-3,10054,Méga-Pharamp
-3,10055,Méga-Cizayox
-3,10056,Méga-Scarhino
-3,10057,Méga-Démolosse
-3,10058,Méga-Tyranocif
-3,10059,Méga-Braségali
-3,10060,Méga-Gardevoir
-3,10061,Méga-Mysdibule
-3,10062,Méga-Galeking
-3,10063,Méga-Charmina
-3,10064,Méga-Élecsprint
-3,10065,Méga-Branette
-3,10066,Méga-Absol
-3,10067,Méga-Latias
-3,10068,Méga-Latios
-3,10069,Méga-Carchacrok
-3,10070,Méga-Lucario
-3,10071,Méga-Blizzaroi
-3,10072,Forme de Arceus
-3,10073,Éternelle
-3,10074,Femelle
-3,10075,Forme Assaut
-3,10076,Taille Mini
-3,10077,Taille Maxi
-3,10078,Taille Ultra
-3,10079,Taille Mini
-3,10080,Taille Maxi
-3,10081,Taille Ultra
-3,10082,Méga-Dardargnan
-3,10083,Méga-Roucarnage
-3,10084,Pikachu Rockeur
-3,10085,Pikachu Lady
-3,10086,Pikachu Star
-3,10087,Pikachu Docteur
-3,10088,Pikachu Catcheur
-3,10089,Pikachu Cosplayeur
-3,10090,Méga-Flagadoss
-3,10091,Méga-Steelix
-3,10092,Méga-Jungko
-3,10093,Méga-Laggron
-3,10094,Méga-Ténéfix
-3,10095,Méga-Sharpedo
-3,10096,Méga-Camérupt
-3,10097,Méga-Altaria
-3,10098,Méga-Oniglali
-3,10099,Méga-Drattak
-3,10100,Méga-Métalosse
+3,10039,Kyurem Blanc
+3,10040,Kyurem Noir
+3,10041,Méga-Florizarre
+3,10042,Méga-Dracaufeu X
+3,10043,Méga-Dracaufeu Y
+3,10044,Méga-Tortank
+3,10045,Méga-Alakazam
+3,10046,Méga-Ectoplasma
+3,10047,Méga-Kangourex
+3,10048,Méga-Scarabrute
+3,10049,Méga-Léviator
+3,10050,Méga-Ptéra
+3,10051,Méga-Mewtwo X
+3,10052,Méga-Mewtwo Y
+3,10053,Méga-Pharamp
+3,10054,Méga-Cizayox
+3,10055,Méga-Scarhino
+3,10056,Méga-Démolosse
+3,10057,Méga-Tyranocif
+3,10058,Méga-Braségali
+3,10059,Méga-Gardevoir
+3,10060,Méga-Mysdibule
+3,10061,Méga-Galeking
+3,10062,Méga-Charmina
+3,10063,Méga-Élecsprint
+3,10064,Méga-Branette
+3,10065,Méga-Absol
+3,10066,Méga-Latias
+3,10067,Méga-Latios
+3,10068,Méga-Carchacrok
+3,10069,Méga-Lucario
+3,10070,Méga-Blizzaroi
+3,10071,Forme de Arceus
+3,10072,Éternelle
+3,10073,Femelle
+3,10074,Forme Assaut
+3,10075,Taille Mini
+3,10076,Taille Maxi
+3,10077,Taille Ultra
+3,10078,Taille Mini
+3,10079,Taille Maxi
+3,10080,Taille Ultra
+3,10081,Méga-Dardargnan
+3,10082,Méga-Roucarnage
+3,10083,Pikachu Rockeur
+3,10084,Pikachu Lady
+3,10085,Pikachu Star
+3,10086,Pikachu Docteur
+3,10087,Pikachu Catcheur
+3,10088,Pikachu Cosplayeur
+3,10089,Méga-Flagadoss
+3,10090,Méga-Steelix
+3,10091,Méga-Jungko
+3,10092,Méga-Laggron
+3,10093,Méga-Ténéfix
+3,10094,Méga-Sharpedo
+3,10095,Méga-Camérupt
+3,10096,Méga-Altaria
+3,10097,Méga-Oniglali
+3,10098,Méga-Drattak
+3,10099,Méga-Métalosse
+3,10100,Primo-Résurgence
 3,10101,Primo-Résurgence
-3,10102,Primo-Résurgence
-3,10103,Méga-Rayquaza
-3,10104,Méga-Lockpin
-3,10105,Méga-Gallame
-3,10106,Méga-Nanméouïe
-3,10107,Méga-Diancie
-3,10108,Hoopa Déchaîné
+3,10102,Méga-Rayquaza
+3,10103,Méga-Lockpin
+3,10104,Méga-Gallame
+3,10105,Méga-Nanméouïe
+3,10106,Méga-Diancie
+3,10107,Hoopa Déchaîné
+3,10108,Forme d’Alola
 3,10109,Forme d’Alola
-3,10110,Forme d’Alola
-3,10112,Casquette Originale
+3,10110,Casquette Originale
+3,10111,Forme d’Alola
+3,10112,Forme d’Alola
 3,10113,Forme d’Alola
 3,10114,Forme d’Alola
 3,10115,Forme d’Alola
@@ -1198,69 +1222,79 @@ language,form_id,name
 3,10124,Forme d’Alola
 3,10125,Forme d’Alola
 3,10126,Forme d’Alola
-3,10127,Forme d’Alola
-3,10128,Forme d’Alola
-3,10130,Forme Sacha
-3,10131,Forme 10 %
-3,10132,Forme 10 %
-3,10133,Forme 50 %
-3,10134,Forme Parfaite
-3,10137,Style Pom-Pom
-3,10138,Style Hula
-3,10139,Style Buyō
-3,10140,Forme Nocturne
-3,10141,Forme Banc
-3,10144,Type : Combat
-3,10145,Type : Vol
-3,10146,Type : Poison
-3,10147,Type : Sol
-3,10148,Type : Roche
-3,10149,Type : Insecte
-3,10150,Type : Spectre
-3,10151,Type : Acier
-3,10152,Type : Feu
-3,10153,Type : Eau
-3,10154,Type : Plante
-3,10155,Type : Électrik
-3,10156,Type : Psy
-3,10157,Type : Glace
-3,10158,Type : Dragon
-3,10159,Type : Ténèbres
-3,10160,Type : Fée
-3,10161,Noyau Rouge
-3,10167,Forme Crépusculaire
-3,10170,Crinière du Couchant
-3,10171,Ailes de l’Aurore
-3,10172,Ultra-Necrozma
+3,10128,Forme Sacha
+3,10129,Forme 10 %
+3,10130,Forme 10 %
+3,10131,Forme 50 %
+3,10132,Forme Parfaite
+3,10133,Style Pom-Pom
+3,10134,Style Hula
+3,10135,Style Buyō
+3,10136,Forme Nocturne
+3,10137,Forme Banc
+3,10138,Type : Combat
+3,10139,Type : Vol
+3,10140,Type : Poison
+3,10141,Type : Sol
+3,10142,Type : Roche
+3,10143,Type : Insecte
+3,10144,Type : Spectre
+3,10145,Type : Acier
+3,10146,Type : Feu
+3,10147,Type : Eau
+3,10148,Type : Plante
+3,10149,Type : Électrik
+3,10150,Type : Psy
+3,10151,Type : Glace
+3,10152,Type : Dragon
+3,10153,Type : Ténèbres
+3,10154,Type : Fée
+3,10155,Noyau Rouge
+3,10157,Forme Crépusculaire
+3,10158,Crinière du Couchant
+3,10159,Ailes de l’Aurore
+3,10160,Ultra-Necrozma
+3,10163,Forme de Galar
+3,10164,Forme de Galar
+3,10165,Forme de Galar
+3,10166,Forme de Galar
+3,10167,Forme de Galar
+3,10168,Forme de Galar
+3,10169,Forme de Galar
+3,10170,Forme de Galar
+3,10171,Forme de Galar
+3,10172,Forme de Galar
+3,10173,Forme de Galar
+3,10174,Mode Transe
 3,10175,Forme de Galar
 3,10176,Forme de Galar
-3,10177,Forme de Galar
-3,10178,Forme de Galar
-3,10179,Forme de Galar
-3,10180,Forme de Galar
-3,10181,Forme de Galar
-3,10182,Forme de Galar
+3,10177,Forme Grave
+3,10178,Tête Dégel
+3,10179,Femelle
+3,10180,Épée Suprême
+3,10181,Bouclier Suprême
+3,10182,Infinimax
 3,10183,Forme de Galar
 3,10184,Forme de Galar
-3,10185,Forme de Galar
-3,10186,Mode Transe
+3,10185,Style Mille Poings
+3,10186,Forme de Galar
 3,10187,Forme de Galar
 3,10188,Forme de Galar
-3,10189,Forme Grave
-3,10190,Tête Dégel
-3,10191,Femelle
-3,10192,Épée Suprême
-3,10193,Bouclier Suprême
-3,10194,Infinimax
-3,10195,Forme de Galar
-3,10196,Forme de Galar
-3,10197,Style Mille Poings
-3,10198,Forme de Galar
-3,10199,Forme de Galar
-3,10200,Forme de Galar
-3,10201,Forme de Galar
-3,10202,Cavalier du Froid
-3,10203,Cavalier d’Effroi
+3,10189,Forme de Galar
+3,10190,Cavalier du Froid
+3,10191,Cavalier d’Effroi
+3,10192,Forme de Hisui
+3,10193,Forme de Hisui
+3,10194,Forme de Hisui
+3,10195,Forme de Hisui
+3,10196,Forme de Hisui
+3,10197,Forme de Hisui
+3,10198,Forme de Hisui
+3,10199,Forme Originelle
+3,10200,Forme Originelle
+3,10201,Forme de Hisui
+3,10202,Forme de Hisui
+3,10203,Motif Blanc
 3,10204,Forme de Hisui
 3,10205,Forme de Hisui
 3,10206,Forme de Hisui
@@ -1268,36 +1302,24 @@ language,form_id,name
 3,10208,Forme de Hisui
 3,10209,Forme de Hisui
 3,10210,Forme de Hisui
-3,10211,Forme Originelle
-3,10212,Forme Originelle
-3,10213,Forme de Hisui
-3,10214,Forme de Hisui
-3,10215,Motif Blanc
-3,10216,Forme de Hisui
-3,10217,Forme de Hisui
-3,10218,Forme de Hisui
-3,10219,Forme de Hisui
-3,10220,Forme de Hisui
-3,10221,Forme de Hisui
-3,10222,Forme de Hisui
-3,10223,Femelle
-3,10224,Forme Totémique
-3,10225,Forme de Paldea
-3,10226,Forme de Paldea
-3,10227,Forme de Paldea
-3,10228,Forme de Paldea
-3,10229,Femelle
-3,10230,Plumage Bleu
-3,10231,Plumage Jaune
-3,10232,Plumage Blanc
-3,10233,Forme Super
-3,10234,Forme Marche
-3,10235,Lune Vermeille
-3,10236,Masque du Puits
-3,10237,Masque du Fourneau
-3,10238,Masque de la Pierre
-3,10243,Forme Téracristal
-3,10244,Forme Stellaire
+3,10211,Femelle
+3,10212,Forme Totémique
+3,10213,Forme de Paldea
+3,10214,Forme de Paldea
+3,10215,Forme de Paldea
+3,10216,Forme de Paldea
+3,10217,Femelle
+3,10218,Plumage Bleu
+3,10219,Plumage Jaune
+3,10220,Plumage Blanc
+3,10221,Forme Super
+3,10222,Forme Marche
+3,10223,Lune Vermeille
+3,10224,Masque du Puits
+3,10225,Masque du Fourneau
+3,10226,Masque de la Pierre
+3,10231,Forme Téracristal
+3,10232,Forme Stellaire
 3,20001,Forme Unique
 3,20002,Forme Unique
 3,20003,Forme Unique
@@ -1341,182 +1363,193 @@ language,form_id,name
 3,20041,Forme de Genesect
 3,20042,Forme de Genesect
 3,20043,Aspect Décidé
-3,20044,Motif Banquise
-3,20045,Motif Glace
-3,20046,Motif Continent
-3,20047,Motif Verdure
-3,20048,Motif Monarchie
-3,20049,Motif Floraison
-3,20050,Motif Métropole
-3,20051,Motif Rivage
-3,20052,Motif Archipel
-3,20053,Motif Sécheresse
-3,20054,Motif Sable
-3,20055,Motif Delta
-3,20056,Motif Cyclone
-3,20057,Motif Mangrove
-3,20058,Motif Zénith
-3,20059,Motif Soleil Levant
-3,20060,Motif Jungle
-3,20061,Motif Fantaisie
-3,20062,Motif Poké Ball
-3,20063,Fleur Jaune
-3,20064,Fleur Orange
-3,20065,Fleur Bleue
-3,20066,Fleur Blanche
-3,20067,Fleur Jaune
-3,20068,Fleur Orange
-3,20069,Fleur Bleue
-3,20070,Fleur Blanche
-3,20071,Fleur Jaune
-3,20072,Fleur Orange
-3,20073,Fleur Bleue
-3,20074,Fleur Blanche
-3,20075,Coupe Cœur
-3,20076,Coupe Étoile
-3,20077,Coupe Diamant
-3,20078,Coupe Demoiselle
-3,20079,Coupe Madame
-3,20080,Coupe Monsieur
-3,20081,Coupe Reine
-3,20082,Coupe Kabuki
-3,20083,Coupe Pharaon
-3,20084,Mode Déchaîné
-3,20085,Casquette de Hoenn
-3,20086,Casquette de Sinnoh
-3,20087,Casquette d’Unys
-3,20088,Casquette de Kalos
-3,20089,Casquette d’Alola
-3,20090,Forme Météore
-3,20091,Forme Météore
-3,20092,Forme Météore
-3,20093,Forme Météore
-3,20094,Forme Météore
-3,20095,Forme Météore
-3,20096,Noyau Orange
-3,20097,Noyau Jaune
-3,20098,Noyau Vert
-3,20099,Noyau Bleu
-3,20100,Noyau Indigo
-3,20101,Noyau Violet
-3,20102,Forme Démasquée
-3,20104,Couleur du Passé
-3,20105,Casquette Partenaire
-3,20106,Gigamax
-3,20107,Gigamax
-3,20108,Gigamax
-3,20109,Gigamax
-3,20110,Gigamax
-3,20111,Gigamax
-3,20112,Gigamax
-3,20113,Gigamax
-3,20114,Gigamax
-3,20115,Gigamax
-3,20116,Gigamax
-3,20117,Gigamax
-3,20118,Gigamax
-3,20119,Gigamax
-3,20120,Gigamax
-3,20121,Gigamax
-3,20122,Gigamax
-3,20123,Gigamax
-3,20124,Gigamax
-3,20125,Forme Gobe-Tout
-3,20126,Forme Gobe-Chu
-3,20127,Gigamax
-3,20128,Gigamax
-3,20131,Gigamax
-3,20132,Gigamax
-3,20133,Lait Vanille
-3,20134,Lait Vanille
-3,20135,Lait Vanille
-3,20136,Lait Vanille
-3,20137,Lait Vanille
-3,20138,Lait Vanille
-3,20139,Lait Ruby
-3,20140,Lait Ruby
-3,20141,Lait Ruby
-3,20142,Lait Ruby
-3,20143,Lait Ruby
-3,20144,Lait Ruby
-3,20145,Lait Ruby
-3,20146,Lait Matcha
-3,20147,Lait Matcha
-3,20148,Lait Matcha
-3,20149,Lait Matcha
-3,20150,Lait Matcha
-3,20151,Lait Matcha
-3,20152,Lait Matcha
-3,20153,Lait Menthe
-3,20154,Lait Menthe
-3,20155,Lait Menthe
-3,20156,Lait Menthe
-3,20157,Lait Menthe
-3,20158,Lait Menthe
-3,20159,Lait Menthe
-3,20160,Lait Citron
-3,20161,Lait Citron
-3,20162,Lait Citron
-3,20163,Lait Citron
-3,20164,Lait Citron
-3,20165,Lait Citron
-3,20166,Lait Citron
-3,20167,Lait Salé
-3,20168,Lait Salé
-3,20169,Lait Salé
-3,20170,Lait Salé
-3,20171,Lait Salé
-3,20172,Lait Salé
-3,20173,Lait Salé
-3,20174,Mélange Ruby
-3,20175,Mélange Ruby
-3,20176,Mélange Ruby
-3,20177,Mélange Ruby
-3,20178,Mélange Ruby
-3,20179,Mélange Ruby
-3,20180,Mélange Ruby
-3,20181,Mélange Caramel
-3,20182,Mélange Caramel
-3,20183,Mélange Caramel
-3,20184,Mélange Caramel
-3,20185,Mélange Caramel
-3,20186,Mélange Caramel
-3,20187,Mélange Caramel
-3,20188,Mélange Tricolore
-3,20189,Mélange Tricolore
-3,20190,Mélange Tricolore
-3,20191,Mélange Tricolore
-3,20192,Mélange Tricolore
-3,20193,Mélange Tricolore
-3,20194,Mélange Tricolore
-3,20195,Gigamax
-3,20196,Mode Affamé
-3,20197,Gigamax
-3,20198,Gigamax
-3,20199,Gigamax
-3,20205,Gigamax
-3,20206,Papa
-3,20207,Casquette Monde
-3,20208,Gigamax
-3,20209,Forme de Roi
-3,20210,Forme de Roi
-3,20211,Forme de Roi
-3,20212,Forme de Reine
-3,20213,Forme de Roi
-3,20214,Famille de Quatre
-3,20215,Forme Affalée
-3,20216,Forme Raide
-3,20217,Forme Triple
-3,20218,Forme Limitée
-3,20219,Forme de Course
-3,20220,Forme de Nage
-3,20221,Forme de Vol
-3,20222,Mode Bridé
-3,20223,Mode Terrestre
-3,20224,Mode Aquatique
-3,20225,Mode Aérien
-3,20226,Forme Onéreuse
-3,20227,Forme Exceptionnelle
+3,20082,Motif Banquise
+3,20083,Motif Glace
+3,20084,Motif Continent
+3,20085,Motif Verdure
+3,20086,Motif Monarchie
+3,20087,Motif Floraison
+3,20088,Motif Métropole
+3,20089,Motif Rivage
+3,20090,Motif Archipel
+3,20091,Motif Sécheresse
+3,20092,Motif Sable
+3,20093,Motif Delta
+3,20094,Motif Cyclone
+3,20095,Motif Mangrove
+3,20096,Motif Zénith
+3,20097,Motif Soleil Levant
+3,20098,Motif Jungle
+3,20099,Motif Fantaisie
+3,20100,Motif Poké Ball
+3,20101,Fleur Jaune
+3,20102,Fleur Orange
+3,20103,Fleur Bleue
+3,20104,Fleur Blanche
+3,20105,Fleur Jaune
+3,20106,Fleur Orange
+3,20107,Fleur Bleue
+3,20108,Fleur Blanche
+3,20109,Fleur Jaune
+3,20110,Fleur Orange
+3,20111,Fleur Bleue
+3,20112,Fleur Blanche
+3,20113,Coupe Cœur
+3,20114,Coupe Étoile
+3,20115,Coupe Diamant
+3,20116,Coupe Demoiselle
+3,20117,Coupe Madame
+3,20118,Coupe Monsieur
+3,20119,Coupe Reine
+3,20120,Coupe Kabuki
+3,20121,Coupe Pharaon
+3,20122,Mode Déchaîné
+3,20123,Rattatac Dominant
+3,20124,Casquette de Hoenn
+3,20125,Casquette de Sinnoh
+3,20126,Casquette d’Unys
+3,20127,Casquette de Kalos
+3,20128,Casquette d’Alola
+3,20129,Argouste Dominant
+3,20130,Lucanon Dominant
+3,20131,Floramantis Dominant
+3,20132,Malamandre Dominant
+3,20133,Forme Météore
+3,20134,Forme Météore
+3,20135,Forme Météore
+3,20136,Forme Météore
+3,20137,Forme Météore
+3,20138,Forme Météore
+3,20139,Noyau Orange
+3,20140,Noyau Jaune
+3,20141,Noyau Vert
+3,20142,Noyau Bleu
+3,20143,Noyau Indigo
+3,20144,Noyau Violet
+3,20145,Forme Démasquée
+3,20146,Mimiqui Dominant
+3,20148,Ékaïser Dominant
+3,20149,Couleur du Passé
+3,20150,Casquette Partenaire
+3,20151,Ossatueur Dominant
+3,20152,Rubombelle Dominant
+3,20153,Tarenbulle Dominant
+3,20154,Togedemaru Dominant
+3,20155,Gigamax
+3,20156,Gigamax
+3,20157,Gigamax
+3,20158,Gigamax
+3,20159,Gigamax
+3,20160,Gigamax
+3,20161,Gigamax
+3,20162,Gigamax
+3,20163,Gigamax
+3,20164,Gigamax
+3,20165,Gigamax
+3,20166,Gigamax
+3,20167,Gigamax
+3,20168,Gigamax
+3,20169,Gigamax
+3,20170,Gigamax
+3,20171,Gigamax
+3,20172,Gigamax
+3,20173,Gigamax
+3,20174,Forme Gobe-Tout
+3,20175,Forme Gobe-Chu
+3,20176,Gigamax
+3,20177,Gigamax
+3,20180,Gigamax
+3,20181,Gigamax
+3,20182,Lait Vanille
+3,20183,Lait Vanille
+3,20184,Lait Vanille
+3,20185,Lait Vanille
+3,20186,Lait Vanille
+3,20187,Lait Vanille
+3,20188,Lait Ruby
+3,20189,Lait Ruby
+3,20190,Lait Ruby
+3,20191,Lait Ruby
+3,20192,Lait Ruby
+3,20193,Lait Ruby
+3,20194,Lait Ruby
+3,20195,Lait Matcha
+3,20196,Lait Matcha
+3,20197,Lait Matcha
+3,20198,Lait Matcha
+3,20199,Lait Matcha
+3,20200,Lait Matcha
+3,20201,Lait Matcha
+3,20202,Lait Menthe
+3,20203,Lait Menthe
+3,20204,Lait Menthe
+3,20205,Lait Menthe
+3,20206,Lait Menthe
+3,20207,Lait Menthe
+3,20208,Lait Menthe
+3,20209,Lait Citron
+3,20210,Lait Citron
+3,20211,Lait Citron
+3,20212,Lait Citron
+3,20213,Lait Citron
+3,20214,Lait Citron
+3,20215,Lait Citron
+3,20216,Lait Salé
+3,20217,Lait Salé
+3,20218,Lait Salé
+3,20219,Lait Salé
+3,20220,Lait Salé
+3,20221,Lait Salé
+3,20222,Lait Salé
+3,20223,Mélange Ruby
+3,20224,Mélange Ruby
+3,20225,Mélange Ruby
+3,20226,Mélange Ruby
+3,20227,Mélange Ruby
+3,20228,Mélange Ruby
+3,20229,Mélange Ruby
+3,20230,Mélange Caramel
+3,20231,Mélange Caramel
+3,20232,Mélange Caramel
+3,20233,Mélange Caramel
+3,20234,Mélange Caramel
+3,20235,Mélange Caramel
+3,20236,Mélange Caramel
+3,20237,Mélange Tricolore
+3,20238,Mélange Tricolore
+3,20239,Mélange Tricolore
+3,20240,Mélange Tricolore
+3,20241,Mélange Tricolore
+3,20242,Mélange Tricolore
+3,20243,Mélange Tricolore
+3,20244,Gigamax
+3,20245,Mode Affamé
+3,20246,Gigamax
+3,20247,Gigamax
+3,20248,Gigamax
+3,20254,Gigamax
+3,20255,Papa
+3,20256,Casquette Monde
+3,20257,Gigamax
+3,20258,Forme de Roi
+3,20259,Forme de Roi
+3,20260,Forme de Roi
+3,20261,Forme de Reine
+3,20262,Forme de Roi
+3,20263,Famille de Quatre
+3,20264,Forme Affalée
+3,20265,Forme Raide
+3,20266,Forme Triple
+3,20267,Forme Limitée
+3,20268,Forme de Course
+3,20269,Forme de Nage
+3,20270,Forme de Vol
+3,20271,Mode Bridé
+3,20272,Mode Terrestre
+3,20273,Mode Aquatique
+3,20274,Mode Aérien
+3,20275,Forme Onéreuse
+3,20276,Forme Exceptionnelle
 4,201,Eine Form
 4,351,Formeo
 4,382,Kyogre
@@ -1605,91 +1638,93 @@ language,form_id,name
 4,10022,Arceus
 4,10023,Arceus
 4,10024,Arceus
-4,10026,Hitze-Rotom
-4,10027,Wasch-Rotom
-4,10028,Frost-Rotom
-4,10029,Wirbel-Rotom
-4,10030,Schneid-Rotom
-4,10031,Urform
-4,10032,Zenitform
-4,10034,Blaulinige Form
-4,10035,Trance-Modus
-4,10036,Tanzform
+4,10025,Hitze-Rotom
+4,10026,Wasch-Rotom
+4,10027,Frost-Rotom
+4,10028,Wirbel-Rotom
+4,10029,Schneid-Rotom
+4,10030,Urform
+4,10031,Zenitform
+4,10033,Blaulinige Form
+4,10034,Trance-Modus
+4,10035,Tanzform
+4,10036,Tiergeistform
 4,10037,Tiergeistform
 4,10038,Tiergeistform
-4,10039,Tiergeistform
-4,10040,Weißes Kyurem
-4,10041,Schwarzes Kyurem
-4,10042,Mega-Bisaflor
-4,10043,Mega-Glurak X
-4,10044,Mega-Glurak Y
-4,10045,Mega-Turtok
-4,10046,Mega-Simsala
-4,10047,Mega-Gengar
-4,10048,Mega-Kangama
-4,10049,Mega-Pinsir
-4,10050,Mega-Garados
-4,10051,Mega-Aerodactyl
-4,10052,Mega-Mewtu X
-4,10053,Mega-Mewtu Y
-4,10054,Mega-Ampharos
-4,10055,Mega-Scherox
-4,10056,Mega-Skaraborn
-4,10057,Mega-Hundemon
-4,10058,Mega-Despotar
-4,10059,Mega-Lohgock
-4,10060,Mega-Guardevoir
-4,10061,Mega-Flunkifer
-4,10062,Mega-Stolloss
-4,10063,Mega-Meditalis
-4,10064,Mega-Voltenso
-4,10065,Mega-Banette
-4,10066,Mega-Absol
-4,10067,Mega-Latias
-4,10068,Mega-Latios
-4,10069,Mega-Knakrack
-4,10070,Mega-Lucario
-4,10071,Mega-Rexblisar
-4,10072,Arceus
-4,10073,Ewigblütler
-4,10074,Weiblich
-4,10075,Klingenform
-4,10076,Größe S
-4,10077,Größe L
-4,10078,Größe XL
-4,10079,Größe S
-4,10080,Größe L
-4,10081,Größe XL
-4,10082,Mega-Bibor
-4,10083,Mega-Tauboss
-4,10084,Rocker-Pikachu
-4,10085,Damen-Pikachu
-4,10086,Star-Pikachu
-4,10087,Professoren-Pikachu
-4,10088,Wrestler-Pikachu
-4,10089,Cosplay-Pikachu
-4,10090,Mega-Lahmus
-4,10091,Mega-Stahlos
-4,10092,Mega-Gewaldro
-4,10093,Mega-Sumpex
-4,10094,Mega-Zobiris
-4,10095,Mega-Tohaido
-4,10096,Mega-Camerupt
-4,10097,Mega-Altaria
-4,10098,Mega-Firnontor
-4,10099,Mega-Brutalanda
-4,10100,Mega-Metagross
+4,10039,Weißes Kyurem
+4,10040,Schwarzes Kyurem
+4,10041,Mega-Bisaflor
+4,10042,Mega-Glurak X
+4,10043,Mega-Glurak Y
+4,10044,Mega-Turtok
+4,10045,Mega-Simsala
+4,10046,Mega-Gengar
+4,10047,Mega-Kangama
+4,10048,Mega-Pinsir
+4,10049,Mega-Garados
+4,10050,Mega-Aerodactyl
+4,10051,Mega-Mewtu X
+4,10052,Mega-Mewtu Y
+4,10053,Mega-Ampharos
+4,10054,Mega-Scherox
+4,10055,Mega-Skaraborn
+4,10056,Mega-Hundemon
+4,10057,Mega-Despotar
+4,10058,Mega-Lohgock
+4,10059,Mega-Guardevoir
+4,10060,Mega-Flunkifer
+4,10061,Mega-Stolloss
+4,10062,Mega-Meditalis
+4,10063,Mega-Voltenso
+4,10064,Mega-Banette
+4,10065,Mega-Absol
+4,10066,Mega-Latias
+4,10067,Mega-Latios
+4,10068,Mega-Knakrack
+4,10069,Mega-Lucario
+4,10070,Mega-Rexblisar
+4,10071,Arceus
+4,10072,Ewigblütler
+4,10073,Weiblich
+4,10074,Klingenform
+4,10075,Größe S
+4,10076,Größe L
+4,10077,Größe XL
+4,10078,Größe S
+4,10079,Größe L
+4,10080,Größe XL
+4,10081,Mega-Bibor
+4,10082,Mega-Tauboss
+4,10083,Rocker-Pikachu
+4,10084,Damen-Pikachu
+4,10085,Star-Pikachu
+4,10086,Professoren-Pikachu
+4,10087,Wrestler-Pikachu
+4,10088,Cosplay-Pikachu
+4,10089,Mega-Lahmus
+4,10090,Mega-Stahlos
+4,10091,Mega-Gewaldro
+4,10092,Mega-Sumpex
+4,10093,Mega-Zobiris
+4,10094,Mega-Tohaido
+4,10095,Mega-Camerupt
+4,10096,Mega-Altaria
+4,10097,Mega-Firnontor
+4,10098,Mega-Brutalanda
+4,10099,Mega-Metagross
+4,10100,Protomorphose
 4,10101,Protomorphose
-4,10102,Protomorphose
-4,10103,Mega-Rayquaza
-4,10104,Mega-Schlapor
-4,10105,Mega-Galagladi
-4,10106,Mega-Ohrdoch
-4,10107,Mega-Diancie
-4,10108,Entfesseltes Hoopa
+4,10102,Mega-Rayquaza
+4,10103,Mega-Schlapor
+4,10104,Mega-Galagladi
+4,10105,Mega-Ohrdoch
+4,10106,Mega-Diancie
+4,10107,Entfesseltes Hoopa
+4,10108,Alola-Form
 4,10109,Alola-Form
-4,10110,Alola-Form
-4,10112,Original-Kappe
+4,10110,Original-Kappe
+4,10111,Alola-Form
+4,10112,Alola-Form
 4,10113,Alola-Form
 4,10114,Alola-Form
 4,10115,Alola-Form
@@ -1704,69 +1739,79 @@ language,form_id,name
 4,10124,Alola-Form
 4,10125,Alola-Form
 4,10126,Alola-Form
-4,10127,Alola-Form
-4,10128,Alola-Form
-4,10130,Ash-Form
-4,10131,10%-Form
-4,10132,10%-Form
-4,10133,50%-Form
-4,10134,Optimumform
-4,10137,Cheerleading-Stil
-4,10138,Hula-Stil
-4,10139,Buyo-Stil
-4,10140,Nachtform
-4,10141,Schwarmform
-4,10144,Typ:Kampf
-4,10145,Typ:Flug
-4,10146,Typ:Gift
-4,10147,Typ:Boden
-4,10148,Typ:Gestein
-4,10149,Typ:Käfer
-4,10150,Typ:Geist
-4,10151,Typ:Stahl
-4,10152,Typ:Feuer
-4,10153,Typ:Wasser
-4,10154,Typ:Pflanze
-4,10155,Typ:Elektro
-4,10156,Typ:Psycho
-4,10157,Typ:Eis
-4,10158,Typ:Drache
-4,10159,Typ:Unlicht
-4,10160,Typ:Fee
-4,10161,Roter Kern
-4,10167,Zwielichtform
-4,10170,Abendmähne
-4,10171,Morgenschwingen
-4,10172,Ultra-Necrozma
+4,10128,Ash-Form
+4,10129,10%-Form
+4,10130,10%-Form
+4,10131,50%-Form
+4,10132,Optimumform
+4,10133,Cheerleading-Stil
+4,10134,Hula-Stil
+4,10135,Buyo-Stil
+4,10136,Nachtform
+4,10137,Schwarmform
+4,10138,Typ:Kampf
+4,10139,Typ:Flug
+4,10140,Typ:Gift
+4,10141,Typ:Boden
+4,10142,Typ:Gestein
+4,10143,Typ:Käfer
+4,10144,Typ:Geist
+4,10145,Typ:Stahl
+4,10146,Typ:Feuer
+4,10147,Typ:Wasser
+4,10148,Typ:Pflanze
+4,10149,Typ:Elektro
+4,10150,Typ:Psycho
+4,10151,Typ:Eis
+4,10152,Typ:Drache
+4,10153,Typ:Unlicht
+4,10154,Typ:Fee
+4,10155,Roter Kern
+4,10157,Zwielichtform
+4,10158,Abendmähne
+4,10159,Morgenschwingen
+4,10160,Ultra-Necrozma
+4,10163,Galar-Form
+4,10164,Galar-Form
+4,10165,Galar-Form
+4,10166,Galar-Form
+4,10167,Galar-Form
+4,10168,Galar-Form
+4,10169,Galar-Form
+4,10170,Galar-Form
+4,10171,Galar-Form
+4,10172,Galar-Form
+4,10173,Galar-Form
+4,10174,Trance-Modus
 4,10175,Galar-Form
 4,10176,Galar-Form
-4,10177,Galar-Form
-4,10178,Galar-Form
-4,10179,Galar-Form
-4,10180,Galar-Form
-4,10181,Galar-Form
-4,10182,Galar-Form
+4,10177,Tief-Form
+4,10178,Wohlfühlkopf
+4,10179,Weiblich
+4,10180,König des Schwertes
+4,10181,König des Schildes
+4,10182,Unendynamax
 4,10183,Galar-Form
 4,10184,Galar-Form
-4,10185,Galar-Form
-4,10186,Trance-Modus
+4,10185,Fließender Stil
+4,10186,Galar-Form
 4,10187,Galar-Form
 4,10188,Galar-Form
-4,10189,Tief-Form
-4,10190,Wohlfühlkopf
-4,10191,Weiblich
-4,10192,König des Schwertes
-4,10193,König des Schildes
-4,10194,Unendynamax
-4,10195,Galar-Form
-4,10196,Galar-Form
-4,10197,Fließender Stil
-4,10198,Galar-Form
-4,10199,Galar-Form
-4,10200,Galar-Form
-4,10201,Galar-Form
-4,10202,Schimmelreiter
-4,10203,Rappenreiter
+4,10189,Galar-Form
+4,10190,Schimmelreiter
+4,10191,Rappenreiter
+4,10192,Hisui-Form
+4,10193,Hisui-Form
+4,10194,Hisui-Form
+4,10195,Hisui-Form
+4,10196,Hisui-Form
+4,10197,Hisui-Form
+4,10198,Hisui-Form
+4,10199,Urform
+4,10200,Urform
+4,10201,Hisui-Form
+4,10202,Hisui-Form
+4,10203,Weißlinige Form
 4,10204,Hisui-Form
 4,10205,Hisui-Form
 4,10206,Hisui-Form
@@ -1774,36 +1819,24 @@ language,form_id,name
 4,10208,Hisui-Form
 4,10209,Hisui-Form
 4,10210,Hisui-Form
-4,10211,Urform
-4,10212,Urform
-4,10213,Hisui-Form
-4,10214,Hisui-Form
-4,10215,Weißlinige Form
-4,10216,Hisui-Form
-4,10217,Hisui-Form
-4,10218,Hisui-Form
-4,10219,Hisui-Form
-4,10220,Hisui-Form
-4,10221,Hisui-Form
-4,10222,Hisui-Form
-4,10223,Weiblich
-4,10224,Tiergeistform
-4,10225,Paldea-Form
-4,10226,Paldea-Form
-4,10227,Paldea-Form
-4,10228,Paldea-Form
-4,10229,Weiblich
-4,10230,Blaugefiedert
-4,10231,Gelbgefiedert
-4,10232,Weißgefiedert
-4,10233,Heldenform
-4,10234,Wanderform
-4,10235,Blutmond
-4,10236,Brunnenmaske
-4,10237,Ofenmaske
-4,10238,Fundamentmaske
-4,10243,Terakristall-Form
-4,10244,Stellarform
+4,10211,Weiblich
+4,10212,Tiergeistform
+4,10213,Paldea-Form
+4,10214,Paldea-Form
+4,10215,Paldea-Form
+4,10216,Paldea-Form
+4,10217,Weiblich
+4,10218,Blaugefiedert
+4,10219,Gelbgefiedert
+4,10220,Weißgefiedert
+4,10221,Heldenform
+4,10222,Wanderform
+4,10223,Blutmond
+4,10224,Brunnenmaske
+4,10225,Ofenmaske
+4,10226,Fundamentmaske
+4,10231,Terakristall-Form
+4,10232,Stellarform
 4,20001,Eine Form
 4,20002,Eine Form
 4,20003,Eine Form
@@ -1847,182 +1880,193 @@ language,form_id,name
 4,20041,Genesect
 4,20042,Genesect
 4,20043,Resolutform
-4,20044,Schneefeldmuster
-4,20045,Flockenmuster
-4,20046,Kontinentalmuster
-4,20047,Ziergartenmuster
-4,20048,Prunkmuster
-4,20049,Blumenmeermuster
-4,20050,Innovationsmuster
-4,20051,Aquamarinmuster
-4,20052,Archipelmuster
-4,20053,Dürremuster
-4,20054,Sandmuster
-4,20055,Flussdeltamuster
-4,20056,Monsunmuster
-4,20057,Savannenmuster
-4,20058,Sonnenmuster
-4,20059,Ozeanmuster
-4,20060,Dschungelmuster
-4,20061,Fantasiemuster
-4,20062,Pokéball-Muster
-4,20063,Gelbblütler
-4,20064,Orangeblütler
-4,20065,Blaublütler
-4,20066,Weißblütler
-4,20067,Gelbblütler
-4,20068,Orangeblütler
-4,20069,Blaublütler
-4,20070,Weißblütler
-4,20071,Gelbblütler
-4,20072,Orangeblütler
-4,20073,Blaublütler
-4,20074,Weißblütler
-4,20075,Herzchenschnitt
-4,20076,Sternchenschnitt
-4,20077,Diamantenschnitt
-4,20078,Fräuleinschnitt
-4,20079,Damenschnitt
-4,20080,Kavaliersschnitt
-4,20081,Königinnenschnitt
-4,20082,Kabuki-Schnitt
-4,20083,Herrscherschnitt
-4,20084,Aktiv-Modus
-4,20085,Hoenn-Kappe
-4,20086,Sinnoh-Kappe
-4,20087,Einall-Kappe
-4,20088,Kalos-Kappe
-4,20089,Alola-Kappe
-4,20090,Meteorform
-4,20091,Meteorform
-4,20092,Meteorform
-4,20093,Meteorform
-4,20094,Meteorform
-4,20095,Meteorform
-4,20096,Oranger Kern
-4,20097,Gelber Kern
-4,20098,Grüner Kern
-4,20099,Hellblauer Kern
-4,20100,Blauer Kern
-4,20101,Violetter Kern
-4,20102,Entlarvte Form
-4,20104,Originalfarbe
-4,20105,Partner-Kappe
-4,20106,Gigadynamax
-4,20107,Gigadynamax
-4,20108,Gigadynamax
-4,20109,Gigadynamax
-4,20110,Gigadynamax
-4,20111,Gigadynamax
-4,20112,Gigadynamax
-4,20113,Gigadynamax
-4,20114,Gigadynamax
-4,20115,Gigadynamax
-4,20116,Gigadynamax
-4,20117,Gigadynamax
-4,20118,Gigadynamax
-4,20119,Gigadynamax
-4,20120,Gigadynamax
-4,20121,Gigadynamax
-4,20122,Gigadynamax
-4,20123,Gigadynamax
-4,20124,Gigadynamax
-4,20125,Schlingform
-4,20126,Stopfform
-4,20127,Gigadynamax
-4,20128,Gigadynamax
-4,20131,Gigadynamax
-4,20132,Gigadynamax
-4,20133,Vanille-Creme
-4,20134,Vanille-Creme
-4,20135,Vanille-Creme
-4,20136,Vanille-Creme
-4,20137,Vanille-Creme
-4,20138,Vanille-Creme
-4,20139,Ruby-Creme
-4,20140,Ruby-Creme
-4,20141,Ruby-Creme
-4,20142,Ruby-Creme
-4,20143,Ruby-Creme
-4,20144,Ruby-Creme
-4,20145,Ruby-Creme
-4,20146,Matcha-Creme
-4,20147,Matcha-Creme
-4,20148,Matcha-Creme
-4,20149,Matcha-Creme
-4,20150,Matcha-Creme
-4,20151,Matcha-Creme
-4,20152,Matcha-Creme
-4,20153,Minz-Creme
-4,20154,Minz-Creme
-4,20155,Minz-Creme
-4,20156,Minz-Creme
-4,20157,Minz-Creme
-4,20158,Minz-Creme
-4,20159,Minz-Creme
-4,20160,Zitronen-Creme
-4,20161,Zitronen-Creme
-4,20162,Zitronen-Creme
-4,20163,Zitronen-Creme
-4,20164,Zitronen-Creme
-4,20165,Zitronen-Creme
-4,20166,Zitronen-Creme
-4,20167,Salz-Creme
-4,20168,Salz-Creme
-4,20169,Salz-Creme
-4,20170,Salz-Creme
-4,20171,Salz-Creme
-4,20172,Salz-Creme
-4,20173,Salz-Creme
-4,20174,Ruby-Mix
-4,20175,Ruby-Mix
-4,20176,Ruby-Mix
-4,20177,Ruby-Mix
-4,20178,Ruby-Mix
-4,20179,Ruby-Mix
-4,20180,Ruby-Mix
-4,20181,Karamell-Mix
-4,20182,Karamell-Mix
-4,20183,Karamell-Mix
-4,20184,Karamell-Mix
-4,20185,Karamell-Mix
-4,20186,Karamell-Mix
-4,20187,Karamell-Mix
-4,20188,Trio-Mix
-4,20189,Trio-Mix
-4,20190,Trio-Mix
-4,20191,Trio-Mix
-4,20192,Trio-Mix
-4,20193,Trio-Mix
-4,20194,Trio-Mix
-4,20195,Gigadynamax
-4,20196,Kohldampfmuster
-4,20197,Gigadynamax
-4,20198,Gigadynamax
-4,20199,Gigadynamax
-4,20205,Gigadynamax
-4,20206,Papa
-4,20207,Weltreise-Kappe
-4,20208,Gigadynamax
-4,20209,Königsform
-4,20210,Königsform
-4,20211,Königsform
-4,20212,Königinnenform
-4,20213,Königsform
-4,20214,Viererfamilie
-4,20215,Hängende Form
-4,20216,Gestreckte Form
-4,20217,Dreisegmentform
-4,20218,Gehemmte Gestalt
-4,20219,Sprintgestalt
-4,20220,Schwimmgestalt
-4,20221,Schwingengestalt
-4,20222,Begrenzter Modus
-4,20223,Fahrmodus
-4,20224,Wassermodus
-4,20225,Gleitmodus
-4,20226,Kostbarkeitsform
-4,20227,Edle Form
+4,20082,Schneefeldmuster
+4,20083,Flockenmuster
+4,20084,Kontinentalmuster
+4,20085,Ziergartenmuster
+4,20086,Prunkmuster
+4,20087,Blumenmeermuster
+4,20088,Innovationsmuster
+4,20089,Aquamarinmuster
+4,20090,Archipelmuster
+4,20091,Dürremuster
+4,20092,Sandmuster
+4,20093,Flussdeltamuster
+4,20094,Monsunmuster
+4,20095,Savannenmuster
+4,20096,Sonnenmuster
+4,20097,Ozeanmuster
+4,20098,Dschungelmuster
+4,20099,Fantasiemuster
+4,20100,Pokéball-Muster
+4,20101,Gelbblütler
+4,20102,Orangeblütler
+4,20103,Blaublütler
+4,20104,Weißblütler
+4,20105,Gelbblütler
+4,20106,Orangeblütler
+4,20107,Blaublütler
+4,20108,Weißblütler
+4,20109,Gelbblütler
+4,20110,Orangeblütler
+4,20111,Blaublütler
+4,20112,Weißblütler
+4,20113,Herzchenschnitt
+4,20114,Sternchenschnitt
+4,20115,Diamantenschnitt
+4,20116,Fräuleinschnitt
+4,20117,Damenschnitt
+4,20118,Kavaliersschnitt
+4,20119,Königinnenschnitt
+4,20120,Kabuki-Schnitt
+4,20121,Herrscherschnitt
+4,20122,Aktiv-Modus
+4,20123,Rattikarl (Herrscher)
+4,20124,Hoenn-Kappe
+4,20125,Sinnoh-Kappe
+4,20126,Einall-Kappe
+4,20127,Kalos-Kappe
+4,20128,Alola-Kappe
+4,20129,Manguspektor (Herrscher)
+4,20130,Donarion (Herrscher)
+4,20131,Mantidea (Herrscher)
+4,20132,Amfira (Herrscher)
+4,20133,Meteorform
+4,20134,Meteorform
+4,20135,Meteorform
+4,20136,Meteorform
+4,20137,Meteorform
+4,20138,Meteorform
+4,20139,Oranger Kern
+4,20140,Gelber Kern
+4,20141,Grüner Kern
+4,20142,Hellblauer Kern
+4,20143,Blauer Kern
+4,20144,Violetter Kern
+4,20145,Entlarvte Form
+4,20146,Mimigma (Herrscher)
+4,20148,Grandiras (Herrscher)
+4,20149,Originalfarbe
+4,20150,Partner-Kappe
+4,20151,Knogga (Herrscher)
+4,20152,Bandelby (Herrscher)
+4,20153,Aranestro (Herrscher)
+4,20154,Togedemaru (Herrscher)
+4,20155,Gigadynamax
+4,20156,Gigadynamax
+4,20157,Gigadynamax
+4,20158,Gigadynamax
+4,20159,Gigadynamax
+4,20160,Gigadynamax
+4,20161,Gigadynamax
+4,20162,Gigadynamax
+4,20163,Gigadynamax
+4,20164,Gigadynamax
+4,20165,Gigadynamax
+4,20166,Gigadynamax
+4,20167,Gigadynamax
+4,20168,Gigadynamax
+4,20169,Gigadynamax
+4,20170,Gigadynamax
+4,20171,Gigadynamax
+4,20172,Gigadynamax
+4,20173,Gigadynamax
+4,20174,Schlingform
+4,20175,Stopfform
+4,20176,Gigadynamax
+4,20177,Gigadynamax
+4,20180,Gigadynamax
+4,20181,Gigadynamax
+4,20182,Vanille-Creme
+4,20183,Vanille-Creme
+4,20184,Vanille-Creme
+4,20185,Vanille-Creme
+4,20186,Vanille-Creme
+4,20187,Vanille-Creme
+4,20188,Ruby-Creme
+4,20189,Ruby-Creme
+4,20190,Ruby-Creme
+4,20191,Ruby-Creme
+4,20192,Ruby-Creme
+4,20193,Ruby-Creme
+4,20194,Ruby-Creme
+4,20195,Matcha-Creme
+4,20196,Matcha-Creme
+4,20197,Matcha-Creme
+4,20198,Matcha-Creme
+4,20199,Matcha-Creme
+4,20200,Matcha-Creme
+4,20201,Matcha-Creme
+4,20202,Minz-Creme
+4,20203,Minz-Creme
+4,20204,Minz-Creme
+4,20205,Minz-Creme
+4,20206,Minz-Creme
+4,20207,Minz-Creme
+4,20208,Minz-Creme
+4,20209,Zitronen-Creme
+4,20210,Zitronen-Creme
+4,20211,Zitronen-Creme
+4,20212,Zitronen-Creme
+4,20213,Zitronen-Creme
+4,20214,Zitronen-Creme
+4,20215,Zitronen-Creme
+4,20216,Salz-Creme
+4,20217,Salz-Creme
+4,20218,Salz-Creme
+4,20219,Salz-Creme
+4,20220,Salz-Creme
+4,20221,Salz-Creme
+4,20222,Salz-Creme
+4,20223,Ruby-Mix
+4,20224,Ruby-Mix
+4,20225,Ruby-Mix
+4,20226,Ruby-Mix
+4,20227,Ruby-Mix
+4,20228,Ruby-Mix
+4,20229,Ruby-Mix
+4,20230,Karamell-Mix
+4,20231,Karamell-Mix
+4,20232,Karamell-Mix
+4,20233,Karamell-Mix
+4,20234,Karamell-Mix
+4,20235,Karamell-Mix
+4,20236,Karamell-Mix
+4,20237,Trio-Mix
+4,20238,Trio-Mix
+4,20239,Trio-Mix
+4,20240,Trio-Mix
+4,20241,Trio-Mix
+4,20242,Trio-Mix
+4,20243,Trio-Mix
+4,20244,Gigadynamax
+4,20245,Kohldampfmuster
+4,20246,Gigadynamax
+4,20247,Gigadynamax
+4,20248,Gigadynamax
+4,20254,Gigadynamax
+4,20255,Papa
+4,20256,Weltreise-Kappe
+4,20257,Gigadynamax
+4,20258,Königsform
+4,20259,Königsform
+4,20260,Königsform
+4,20261,Königinnenform
+4,20262,Königsform
+4,20263,Viererfamilie
+4,20264,Hängende Form
+4,20265,Gestreckte Form
+4,20266,Dreisegmentform
+4,20267,Gehemmte Gestalt
+4,20268,Sprintgestalt
+4,20269,Schwimmgestalt
+4,20270,Schwingengestalt
+4,20271,Begrenzter Modus
+4,20272,Fahrmodus
+4,20273,Wassermodus
+4,20274,Gleitmodus
+4,20275,Kostbarkeitsform
+4,20276,Edle Form
 5,201,Forma Vaga
 5,351,Forma Castform
 5,386,Forma Normale
@@ -2109,91 +2153,93 @@ language,form_id,name
 5,10022,Forma di Arceus
 5,10023,Forma di Arceus
 5,10024,Forma di Arceus
-5,10026,Rotom Calore
-5,10027,Rotom Lavaggio
-5,10028,Rotom Gelo
-5,10029,Rotom Vortice
-5,10030,Rotom Taglio
-5,10031,Forma Originale
-5,10032,Forma Cielo
-5,10034,Forma Lineablu
-5,10035,Stato Zen
-5,10036,Forma Danza
+5,10025,Rotom Calore
+5,10026,Rotom Lavaggio
+5,10027,Rotom Gelo
+5,10028,Rotom Vortice
+5,10029,Rotom Taglio
+5,10030,Forma Originale
+5,10031,Forma Cielo
+5,10033,Forma Lineablu
+5,10034,Stato Zen
+5,10035,Forma Danza
+5,10036,Forma Totem
 5,10037,Forma Totem
 5,10038,Forma Totem
-5,10039,Forma Totem
-5,10040,Kyurem Bianco
-5,10041,Kyurem Nero
-5,10042,MegaVenusaur
-5,10043,MegaCharizard X
-5,10044,MegaCharizard Y
-5,10045,MegaBlastoise
-5,10046,MegaAlakazam
-5,10047,MegaGengar
-5,10048,MegaKangaskhan
-5,10049,MegaPinsir
-5,10050,MegaGyarados
-5,10051,MegaAerodactyl
-5,10052,MegaMewtwo X
-5,10053,MegaMewtwo Y
-5,10054,MegaAmpharos
-5,10055,MegaScizor
-5,10056,MegaHeracross
-5,10057,MegaHoundoom
-5,10058,MegaTyranitar
-5,10059,MegaBlaziken
-5,10060,MegaGardevoir
-5,10061,MegaMawile
-5,10062,MegaAggron
-5,10063,MegaMedicham
-5,10064,MegaManectric
-5,10065,MegaBanette
-5,10066,MegaAbsol
-5,10067,MegaLatias
-5,10068,MegaLatios
-5,10069,MegaGarchomp
-5,10070,MegaLucario
-5,10071,MegaAbomasnow
-5,10072,Forma di Arceus
-5,10073,Fiore Eterno
-5,10074,Femmina
-5,10075,Forma Spada
-5,10076,Mini
-5,10077,Grande
-5,10078,Maxi
-5,10079,Mini
-5,10080,Grande
-5,10081,Maxi
-5,10082,MegaBeedrill
-5,10083,MegaPidgeot
-5,10084,Pikachu rockstar
-5,10085,Pikachu damigella
-5,10086,Pikachu confetto
-5,10087,Pikachu scienziata
-5,10088,Pikachu wrestler
-5,10089,Pikachu Cosplay
-5,10090,MegaSlowbro
-5,10091,MegaSteelix
-5,10092,MegaSceptile
-5,10093,MegaSwampert
-5,10094,MegaSableye
-5,10095,MegaSharpedo
-5,10096,MegaCamerupt
-5,10097,MegaAltaria
-5,10098,MegaGlalie
-5,10099,MegaSalamence
-5,10100,MegaMetagross
+5,10039,Kyurem Bianco
+5,10040,Kyurem Nero
+5,10041,MegaVenusaur
+5,10042,MegaCharizard X
+5,10043,MegaCharizard Y
+5,10044,MegaBlastoise
+5,10045,MegaAlakazam
+5,10046,MegaGengar
+5,10047,MegaKangaskhan
+5,10048,MegaPinsir
+5,10049,MegaGyarados
+5,10050,MegaAerodactyl
+5,10051,MegaMewtwo X
+5,10052,MegaMewtwo Y
+5,10053,MegaAmpharos
+5,10054,MegaScizor
+5,10055,MegaHeracross
+5,10056,MegaHoundoom
+5,10057,MegaTyranitar
+5,10058,MegaBlaziken
+5,10059,MegaGardevoir
+5,10060,MegaMawile
+5,10061,MegaAggron
+5,10062,MegaMedicham
+5,10063,MegaManectric
+5,10064,MegaBanette
+5,10065,MegaAbsol
+5,10066,MegaLatias
+5,10067,MegaLatios
+5,10068,MegaGarchomp
+5,10069,MegaLucario
+5,10070,MegaAbomasnow
+5,10071,Forma di Arceus
+5,10072,Fiore Eterno
+5,10073,Femmina
+5,10074,Forma Spada
+5,10075,Mini
+5,10076,Grande
+5,10077,Maxi
+5,10078,Mini
+5,10079,Grande
+5,10080,Maxi
+5,10081,MegaBeedrill
+5,10082,MegaPidgeot
+5,10083,Pikachu rockstar
+5,10084,Pikachu damigella
+5,10085,Pikachu confetto
+5,10086,Pikachu scienziata
+5,10087,Pikachu wrestler
+5,10088,Pikachu Cosplay
+5,10089,MegaSlowbro
+5,10090,MegaSteelix
+5,10091,MegaSceptile
+5,10092,MegaSwampert
+5,10093,MegaSableye
+5,10094,MegaSharpedo
+5,10095,MegaCamerupt
+5,10096,MegaAltaria
+5,10097,MegaGlalie
+5,10098,MegaSalamence
+5,10099,MegaMetagross
+5,10100,Archeorisveglio
 5,10101,Archeorisveglio
-5,10102,Archeorisveglio
-5,10103,MegaRayquaza
-5,10104,MegaLopunny
-5,10105,MegaGallade
-5,10106,MegaAudino
-5,10107,MegaDiancie
-5,10108,Hoopa Libero
+5,10102,MegaRayquaza
+5,10103,MegaLopunny
+5,10104,MegaGallade
+5,10105,MegaAudino
+5,10106,MegaDiancie
+5,10107,Hoopa Libero
+5,10108,Forma di Alola
 5,10109,Forma di Alola
-5,10110,Forma di Alola
-5,10112,Berretto Originale
+5,10110,Berretto Originale
+5,10111,Forma di Alola
+5,10112,Forma di Alola
 5,10113,Forma di Alola
 5,10114,Forma di Alola
 5,10115,Forma di Alola
@@ -2208,69 +2254,79 @@ language,form_id,name
 5,10124,Forma di Alola
 5,10125,Forma di Alola
 5,10126,Forma di Alola
-5,10127,Forma di Alola
-5,10128,Forma di Alola
-5,10130,Forma Ash
-5,10131,Forma 10%
-5,10132,Forma 10%
-5,10133,Forma 50%
-5,10134,Forma Perfetta
-5,10137,Stile Cheerdance
-5,10138,Stile Hula
-5,10139,Stile Buyō
-5,10140,Forma Notte
-5,10141,Forma Banco
-5,10144,Tipo Lotta
-5,10145,Tipo Volante
-5,10146,Tipo Veleno
-5,10147,Tipo Terra
-5,10148,Tipo Roccia
-5,10149,Tipo Coleottero
-5,10150,Tipo Spettro
-5,10151,Tipo Acciaio
-5,10152,Tipo Fuoco
-5,10153,Tipo Acqua
-5,10154,Tipo Erba
-5,10155,Tipo Elettro
-5,10156,Tipo Psico
-5,10157,Tipo Ghiaccio
-5,10158,Tipo Drago
-5,10159,Tipo Buio
-5,10160,Tipo Folletto
-5,10161,Nucleo Rosso
-5,10167,Forma Crepuscolo
-5,10170,Criniera del Vespro
-5,10171,Ali dell’Aurora
-5,10172,UltraNecrozma
+5,10128,Forma Ash
+5,10129,Forma 10%
+5,10130,Forma 10%
+5,10131,Forma 50%
+5,10132,Forma Perfetta
+5,10133,Stile Cheerdance
+5,10134,Stile Hula
+5,10135,Stile Buyō
+5,10136,Forma Notte
+5,10137,Forma Banco
+5,10138,Tipo Lotta
+5,10139,Tipo Volante
+5,10140,Tipo Veleno
+5,10141,Tipo Terra
+5,10142,Tipo Roccia
+5,10143,Tipo Coleottero
+5,10144,Tipo Spettro
+5,10145,Tipo Acciaio
+5,10146,Tipo Fuoco
+5,10147,Tipo Acqua
+5,10148,Tipo Erba
+5,10149,Tipo Elettro
+5,10150,Tipo Psico
+5,10151,Tipo Ghiaccio
+5,10152,Tipo Drago
+5,10153,Tipo Buio
+5,10154,Tipo Folletto
+5,10155,Nucleo Rosso
+5,10157,Forma Crepuscolo
+5,10158,Criniera del Vespro
+5,10159,Ali dell’Aurora
+5,10160,UltraNecrozma
+5,10163,Forma di Galar
+5,10164,Forma di Galar
+5,10165,Forma di Galar
+5,10166,Forma di Galar
+5,10167,Forma di Galar
+5,10168,Forma di Galar
+5,10169,Forma di Galar
+5,10170,Forma di Galar
+5,10171,Forma di Galar
+5,10172,Forma di Galar
+5,10173,Forma di Galar
+5,10174,Stato Zen
 5,10175,Forma di Galar
 5,10176,Forma di Galar
-5,10177,Forma di Galar
-5,10178,Forma di Galar
-5,10179,Forma di Galar
-5,10180,Forma di Galar
-5,10181,Forma di Galar
-5,10182,Forma di Galar
+5,10177,Forma Basso
+5,10178,Liquefaccia
+5,10179,Femmina
+5,10180,Re delle Spade
+5,10181,Re degli Scudi
+5,10182,Dynamax Infinito
 5,10183,Forma di Galar
 5,10184,Forma di Galar
-5,10185,Forma di Galar
-5,10186,Stato Zen
+5,10185,Stile Pluricolpo
+5,10186,Forma di Galar
 5,10187,Forma di Galar
 5,10188,Forma di Galar
-5,10189,Forma Basso
-5,10190,Liquefaccia
-5,10191,Femmina
-5,10192,Re delle Spade
-5,10193,Re degli Scudi
-5,10194,Dynamax Infinito
-5,10195,Forma di Galar
-5,10196,Forma di Galar
-5,10197,Stile Pluricolpo
-5,10198,Forma di Galar
-5,10199,Forma di Galar
-5,10200,Forma di Galar
-5,10201,Forma di Galar
-5,10202,Cavaliere Glaciale
-5,10203,Cavaliere Spettrale
+5,10189,Forma di Galar
+5,10190,Cavaliere Glaciale
+5,10191,Cavaliere Spettrale
+5,10192,Forma di Hisui
+5,10193,Forma di Hisui
+5,10194,Forma di Hisui
+5,10195,Forma di Hisui
+5,10196,Forma di Hisui
+5,10197,Forma di Hisui
+5,10198,Forma di Hisui
+5,10199,Forma Originale
+5,10200,Forma Originale
+5,10201,Forma di Hisui
+5,10202,Forma di Hisui
+5,10203,Forma Lineabianca
 5,10204,Forma di Hisui
 5,10205,Forma di Hisui
 5,10206,Forma di Hisui
@@ -2278,36 +2334,24 @@ language,form_id,name
 5,10208,Forma di Hisui
 5,10209,Forma di Hisui
 5,10210,Forma di Hisui
-5,10211,Forma Originale
-5,10212,Forma Originale
-5,10213,Forma di Hisui
-5,10214,Forma di Hisui
-5,10215,Forma Lineabianca
-5,10216,Forma di Hisui
-5,10217,Forma di Hisui
-5,10218,Forma di Hisui
-5,10219,Forma di Hisui
-5,10220,Forma di Hisui
-5,10221,Forma di Hisui
-5,10222,Forma di Hisui
-5,10223,Femmina
-5,10224,Forma Totem
-5,10225,Forma di Paldea
-5,10226,Forma di Paldea
-5,10227,Forma di Paldea
-5,10228,Forma di Paldea
-5,10229,Femmina
-5,10230,Piume Azzurre
-5,10231,Piume Gialle
-5,10232,Piume Bianche
-5,10233,Forma Possente
-5,10234,Forma Ambulante
-5,10235,Luna Cremisi
-5,10236,Maschera Pozzo
-5,10237,Maschera Focolare
-5,10238,Maschera Fondamenta
-5,10243,Forma Teracristal
-5,10244,Forma Astrale
+5,10211,Femmina
+5,10212,Forma Totem
+5,10213,Forma di Paldea
+5,10214,Forma di Paldea
+5,10215,Forma di Paldea
+5,10216,Forma di Paldea
+5,10217,Femmina
+5,10218,Piume Azzurre
+5,10219,Piume Gialle
+5,10220,Piume Bianche
+5,10221,Forma Possente
+5,10222,Forma Ambulante
+5,10223,Luna Cremisi
+5,10224,Maschera Pozzo
+5,10225,Maschera Focolare
+5,10226,Maschera Fondamenta
+5,10231,Forma Teracristal
+5,10232,Forma Astrale
 5,20001,Forma Vaga
 5,20002,Forma Vaga
 5,20003,Forma Vaga
@@ -2351,182 +2395,193 @@ language,form_id,name
 5,20041,Forma di Genesect
 5,20042,Forma di Genesect
 5,20043,Forma Risoluta
-5,20044,Motivo Nordico
-5,20045,Motivo Manto di Neve
-5,20046,Motivo Continentale
-5,20047,Motivo Prato
-5,20048,Motivo Eleganza
-5,20049,Motivo Giardinfiore
-5,20050,Motivo Trendy
-5,20051,Motivo Marino
-5,20052,Motivo Arcipelago
-5,20053,Motivo Deserto
-5,20054,Motivo Sabbia
-5,20055,Motivo Fluviale
-5,20056,Motivo Pluviale
-5,20057,Motivo Savana
-5,20058,Motivo Solare
-5,20059,Motivo Oceanico
-5,20060,Motivo Giungla
-5,20061,Motivo Sbarazzino
-5,20062,Motivo Poké Ball
-5,20063,Fiore Giallo
-5,20064,Fiore Arancione
-5,20065,Fiore Blu
-5,20066,Fiore Bianco
-5,20067,Fiore Giallo
-5,20068,Fiore Arancione
-5,20069,Fiore Blu
-5,20070,Fiore Bianco
-5,20071,Fiore Giallo
-5,20072,Fiore Arancione
-5,20073,Fiore Blu
-5,20074,Fiore Bianco
-5,20075,Taglio Cuore
-5,20076,Taglio Stella
-5,20077,Taglio Diamante
-5,20078,Taglio Signorina
-5,20079,Taglio Gentildonna
-5,20080,Taglio Gentiluomo
-5,20081,Taglio Regina
-5,20082,Taglio Kabuki
-5,20083,Taglio Faraone
-5,20084,Modo Attivo
-5,20085,Berretto Hoenn
-5,20086,Berretto Sinnoh
-5,20087,Berretto Unima
-5,20088,Berretto Kalos
-5,20089,Berretto Alola
-5,20090,Forma Meteora
-5,20091,Forma Meteora
-5,20092,Forma Meteora
-5,20093,Forma Meteora
-5,20094,Forma Meteora
-5,20095,Forma Meteora
-5,20096,Nucleo Arancione
-5,20097,Nucleo Giallo
-5,20098,Nucleo Verde
-5,20099,Nucleo Azzurro
-5,20100,Nucleo Indaco
-5,20101,Nucleo Violetto
-5,20102,Forma Smascherata
-5,20104,Colore Antico
-5,20105,Berretto Compagni
-5,20106,Gigamax
-5,20107,Gigamax
-5,20108,Gigamax
-5,20109,Gigamax
-5,20110,Gigamax
-5,20111,Gigamax
-5,20112,Gigamax
-5,20113,Gigamax
-5,20114,Gigamax
-5,20115,Gigamax
-5,20116,Gigamax
-5,20117,Gigamax
-5,20118,Gigamax
-5,20119,Gigamax
-5,20120,Gigamax
-5,20121,Gigamax
-5,20122,Gigamax
-5,20123,Gigamax
-5,20124,Gigamax
-5,20125,Forma Inghiottitutto
-5,20126,Forma Inghiottintero
-5,20127,Gigamax
-5,20128,Gigamax
-5,20131,Gigamax
-5,20132,Gigamax
-5,20133,Lattevaniglia
-5,20134,Lattevaniglia
-5,20135,Lattevaniglia
-5,20136,Lattevaniglia
-5,20137,Lattevaniglia
-5,20138,Lattevaniglia
-5,20139,Latterosa
-5,20140,Latterosa
-5,20141,Latterosa
-5,20142,Latterosa
-5,20143,Latterosa
-5,20144,Latterosa
-5,20145,Latterosa
-5,20146,Lattematcha
-5,20147,Lattematcha
-5,20148,Lattematcha
-5,20149,Lattematcha
-5,20150,Lattematcha
-5,20151,Lattematcha
-5,20152,Lattematcha
-5,20153,Lattementa
-5,20154,Lattementa
-5,20155,Lattementa
-5,20156,Lattementa
-5,20157,Lattementa
-5,20158,Lattementa
-5,20159,Lattementa
-5,20160,Lattelimone
-5,20161,Lattelimone
-5,20162,Lattelimone
-5,20163,Lattelimone
-5,20164,Lattelimone
-5,20165,Lattelimone
-5,20166,Lattelimone
-5,20167,Lattesale
-5,20168,Lattesale
-5,20169,Lattesale
-5,20170,Lattesale
-5,20171,Lattesale
-5,20172,Lattesale
-5,20173,Lattesale
-5,20174,Rosamix
-5,20175,Rosamix
-5,20176,Rosamix
-5,20177,Rosamix
-5,20178,Rosamix
-5,20179,Rosamix
-5,20180,Rosamix
-5,20181,Caramelmix
-5,20182,Caramelmix
-5,20183,Caramelmix
-5,20184,Caramelmix
-5,20185,Caramelmix
-5,20186,Caramelmix
-5,20187,Caramelmix
-5,20188,Triplomix
-5,20189,Triplomix
-5,20190,Triplomix
-5,20191,Triplomix
-5,20192,Triplomix
-5,20193,Triplomix
-5,20194,Triplomix
-5,20195,Gigamax
-5,20196,Motivo Panciavuota
-5,20197,Gigamax
-5,20198,Gigamax
-5,20199,Gigamax
-5,20205,Gigamax
-5,20206,Papà
-5,20207,Berretto Giramondo
-5,20208,Gigamax
-5,20209,Forma Re
-5,20210,Forma Re
-5,20211,Forma Re
-5,20212,Forma Regina
-5,20213,Forma Re
-5,20214,Quadrifamiglia
-5,20215,Forma Adagiata
-5,20216,Forma Tesa
-5,20217,Forma Trimetamero
-5,20218,Foggia Parziale
-5,20219,Foggia Scattante
-5,20220,Foggia Nautica
-5,20221,Foggia Librata
-5,20222,Assetto Limitato
-5,20223,Assetto Sprint
-5,20224,Assetto Nuoto
-5,20225,Assetto Planata
-5,20226,Forma Pregiata
-5,20227,Forma Eccezionale
+5,20082,Motivo Nordico
+5,20083,Motivo Manto di Neve
+5,20084,Motivo Continentale
+5,20085,Motivo Prato
+5,20086,Motivo Eleganza
+5,20087,Motivo Giardinfiore
+5,20088,Motivo Trendy
+5,20089,Motivo Marino
+5,20090,Motivo Arcipelago
+5,20091,Motivo Deserto
+5,20092,Motivo Sabbia
+5,20093,Motivo Fluviale
+5,20094,Motivo Pluviale
+5,20095,Motivo Savana
+5,20096,Motivo Solare
+5,20097,Motivo Oceanico
+5,20098,Motivo Giungla
+5,20099,Motivo Sbarazzino
+5,20100,Motivo Poké Ball
+5,20101,Fiore Giallo
+5,20102,Fiore Arancione
+5,20103,Fiore Blu
+5,20104,Fiore Bianco
+5,20105,Fiore Giallo
+5,20106,Fiore Arancione
+5,20107,Fiore Blu
+5,20108,Fiore Bianco
+5,20109,Fiore Giallo
+5,20110,Fiore Arancione
+5,20111,Fiore Blu
+5,20112,Fiore Bianco
+5,20113,Taglio Cuore
+5,20114,Taglio Stella
+5,20115,Taglio Diamante
+5,20116,Taglio Signorina
+5,20117,Taglio Gentildonna
+5,20118,Taglio Gentiluomo
+5,20119,Taglio Regina
+5,20120,Taglio Kabuki
+5,20121,Taglio Faraone
+5,20122,Modo Attivo
+5,20123,Raticate dominante
+5,20124,Berretto Hoenn
+5,20125,Berretto Sinnoh
+5,20126,Berretto Unima
+5,20127,Berretto Kalos
+5,20128,Berretto Alola
+5,20129,Gumshoos dominante
+5,20130,Vikavolt dominante
+5,20131,Lurantis dominante
+5,20132,Salazzle dominante
+5,20133,Forma Meteora
+5,20134,Forma Meteora
+5,20135,Forma Meteora
+5,20136,Forma Meteora
+5,20137,Forma Meteora
+5,20138,Forma Meteora
+5,20139,Nucleo Arancione
+5,20140,Nucleo Giallo
+5,20141,Nucleo Verde
+5,20142,Nucleo Azzurro
+5,20143,Nucleo Indaco
+5,20144,Nucleo Violetto
+5,20145,Forma Smascherata
+5,20146,Mimikyu dominante
+5,20148,Kommo-o dominante
+5,20149,Colore Antico
+5,20150,Berretto Compagni
+5,20151,Marowak dominante
+5,20152,Ribombee dominante
+5,20153,Araquanid dominante
+5,20154,Togedemaru dominante
+5,20155,Gigamax
+5,20156,Gigamax
+5,20157,Gigamax
+5,20158,Gigamax
+5,20159,Gigamax
+5,20160,Gigamax
+5,20161,Gigamax
+5,20162,Gigamax
+5,20163,Gigamax
+5,20164,Gigamax
+5,20165,Gigamax
+5,20166,Gigamax
+5,20167,Gigamax
+5,20168,Gigamax
+5,20169,Gigamax
+5,20170,Gigamax
+5,20171,Gigamax
+5,20172,Gigamax
+5,20173,Gigamax
+5,20174,Forma Inghiottitutto
+5,20175,Forma Inghiottintero
+5,20176,Gigamax
+5,20177,Gigamax
+5,20180,Gigamax
+5,20181,Gigamax
+5,20182,Lattevaniglia
+5,20183,Lattevaniglia
+5,20184,Lattevaniglia
+5,20185,Lattevaniglia
+5,20186,Lattevaniglia
+5,20187,Lattevaniglia
+5,20188,Latterosa
+5,20189,Latterosa
+5,20190,Latterosa
+5,20191,Latterosa
+5,20192,Latterosa
+5,20193,Latterosa
+5,20194,Latterosa
+5,20195,Lattematcha
+5,20196,Lattematcha
+5,20197,Lattematcha
+5,20198,Lattematcha
+5,20199,Lattematcha
+5,20200,Lattematcha
+5,20201,Lattematcha
+5,20202,Lattementa
+5,20203,Lattementa
+5,20204,Lattementa
+5,20205,Lattementa
+5,20206,Lattementa
+5,20207,Lattementa
+5,20208,Lattementa
+5,20209,Lattelimone
+5,20210,Lattelimone
+5,20211,Lattelimone
+5,20212,Lattelimone
+5,20213,Lattelimone
+5,20214,Lattelimone
+5,20215,Lattelimone
+5,20216,Lattesale
+5,20217,Lattesale
+5,20218,Lattesale
+5,20219,Lattesale
+5,20220,Lattesale
+5,20221,Lattesale
+5,20222,Lattesale
+5,20223,Rosamix
+5,20224,Rosamix
+5,20225,Rosamix
+5,20226,Rosamix
+5,20227,Rosamix
+5,20228,Rosamix
+5,20229,Rosamix
+5,20230,Caramelmix
+5,20231,Caramelmix
+5,20232,Caramelmix
+5,20233,Caramelmix
+5,20234,Caramelmix
+5,20235,Caramelmix
+5,20236,Caramelmix
+5,20237,Triplomix
+5,20238,Triplomix
+5,20239,Triplomix
+5,20240,Triplomix
+5,20241,Triplomix
+5,20242,Triplomix
+5,20243,Triplomix
+5,20244,Gigamax
+5,20245,Motivo Panciavuota
+5,20246,Gigamax
+5,20247,Gigamax
+5,20248,Gigamax
+5,20254,Gigamax
+5,20255,Papà
+5,20256,Berretto Giramondo
+5,20257,Gigamax
+5,20258,Forma Re
+5,20259,Forma Re
+5,20260,Forma Re
+5,20261,Forma Regina
+5,20262,Forma Re
+5,20263,Quadrifamiglia
+5,20264,Forma Adagiata
+5,20265,Forma Tesa
+5,20266,Forma Trimetamero
+5,20267,Foggia Parziale
+5,20268,Foggia Scattante
+5,20269,Foggia Nautica
+5,20270,Foggia Librata
+5,20271,Assetto Limitato
+5,20272,Assetto Sprint
+5,20273,Assetto Nuoto
+5,20274,Assetto Planata
+5,20275,Forma Pregiata
+5,20276,Forma Eccezionale
 6,201,Una forma
 6,351,Forma de Castform
 6,382,Kyogre
@@ -2615,91 +2670,93 @@ language,form_id,name
 6,10022,Forma de Arceus
 6,10023,Forma de Arceus
 6,10024,Forma de Arceus
-6,10026,Rotom Calor
-6,10027,Rotom Lavado
-6,10028,Rotom Frío
-6,10029,Rotom Ventilador
-6,10030,Rotom Corte
-6,10031,Forma Origen
-6,10032,Forma Cielo
-6,10034,Forma Raya Azul
-6,10035,Modo Daruma
-6,10036,Forma Danza
+6,10025,Rotom Calor
+6,10026,Rotom Lavado
+6,10027,Rotom Frío
+6,10028,Rotom Ventilador
+6,10029,Rotom Corte
+6,10030,Forma Origen
+6,10031,Forma Cielo
+6,10033,Forma Raya Azul
+6,10034,Modo Daruma
+6,10035,Forma Danza
+6,10036,Forma Tótem
 6,10037,Forma Tótem
 6,10038,Forma Tótem
-6,10039,Forma Tótem
-6,10040,Kyurem Blanco
-6,10041,Kyurem Negro
-6,10042,Mega-Venusaur
-6,10043,Mega-Charizard X
-6,10044,Mega-Charizard Y
-6,10045,Mega-Blastoise
-6,10046,Mega-Alakazam
-6,10047,Mega-Gengar
-6,10048,Mega-Kangaskhan
-6,10049,Mega-Pinsir
-6,10050,Mega-Gyarados
-6,10051,Mega-Aerodactyl
-6,10052,Mega-Mewtwo X
-6,10053,Mega-Mewtwo Y
-6,10054,Mega-Ampharos
-6,10055,Mega-Scizor
-6,10056,Mega-Heracross
-6,10057,Mega-Houndoom
-6,10058,Mega-Tyranitar
-6,10059,Mega-Blaziken
-6,10060,Mega-Gardevoir
-6,10061,Mega-Mawile
-6,10062,Mega-Aggron
-6,10063,Mega-Medicham
-6,10064,Mega-Manectric
-6,10065,Mega-Banette
-6,10066,Mega-Absol
-6,10067,Mega-Latias
-6,10068,Mega-Latios
-6,10069,Mega-Garchomp
-6,10070,Mega-Lucario
-6,10071,Mega-Abomasnow
-6,10072,Forma de Arceus
-6,10073,Flor Eterna
-6,10074,Hembra
-6,10075,Forma Filo
-6,10076,Tamaño Pequeño
-6,10077,Tamaño Grande
-6,10078,Tamaño Extragrande
-6,10079,Tamaño Pequeño
-6,10080,Tamaño Grande
-6,10081,Tamaño Extragrande
-6,10082,Mega-Beedrill
-6,10083,Mega-Pidgeot
-6,10084,Pikachu Roquera
-6,10085,Pikachu Aristócrata
-6,10086,Pikachu Superstar
-6,10087,Pikachu Erudita
-6,10088,Pikachu Enmascarada
-6,10089,Pikachu Coqueta
-6,10090,Mega-Slowbro
-6,10091,Mega-Steelix
-6,10092,Mega-Sceptile
-6,10093,Mega-Swampert
-6,10094,Mega-Sableye
-6,10095,Mega-Sharpedo
-6,10096,Mega-Camerupt
-6,10097,Mega-Altaria
-6,10098,Mega-Glalie
-6,10099,Mega-Salamence
-6,10100,Mega-Metagross
+6,10039,Kyurem Blanco
+6,10040,Kyurem Negro
+6,10041,Mega-Venusaur
+6,10042,Mega-Charizard X
+6,10043,Mega-Charizard Y
+6,10044,Mega-Blastoise
+6,10045,Mega-Alakazam
+6,10046,Mega-Gengar
+6,10047,Mega-Kangaskhan
+6,10048,Mega-Pinsir
+6,10049,Mega-Gyarados
+6,10050,Mega-Aerodactyl
+6,10051,Mega-Mewtwo X
+6,10052,Mega-Mewtwo Y
+6,10053,Mega-Ampharos
+6,10054,Mega-Scizor
+6,10055,Mega-Heracross
+6,10056,Mega-Houndoom
+6,10057,Mega-Tyranitar
+6,10058,Mega-Blaziken
+6,10059,Mega-Gardevoir
+6,10060,Mega-Mawile
+6,10061,Mega-Aggron
+6,10062,Mega-Medicham
+6,10063,Mega-Manectric
+6,10064,Mega-Banette
+6,10065,Mega-Absol
+6,10066,Mega-Latias
+6,10067,Mega-Latios
+6,10068,Mega-Garchomp
+6,10069,Mega-Lucario
+6,10070,Mega-Abomasnow
+6,10071,Forma de Arceus
+6,10072,Flor Eterna
+6,10073,Hembra
+6,10074,Forma Filo
+6,10075,Tamaño Pequeño
+6,10076,Tamaño Grande
+6,10077,Tamaño Extragrande
+6,10078,Tamaño Pequeño
+6,10079,Tamaño Grande
+6,10080,Tamaño Extragrande
+6,10081,Mega-Beedrill
+6,10082,Mega-Pidgeot
+6,10083,Pikachu Roquera
+6,10084,Pikachu Aristócrata
+6,10085,Pikachu Superstar
+6,10086,Pikachu Erudita
+6,10087,Pikachu Enmascarada
+6,10088,Pikachu Coqueta
+6,10089,Mega-Slowbro
+6,10090,Mega-Steelix
+6,10091,Mega-Sceptile
+6,10092,Mega-Swampert
+6,10093,Mega-Sableye
+6,10094,Mega-Sharpedo
+6,10095,Mega-Camerupt
+6,10096,Mega-Altaria
+6,10097,Mega-Glalie
+6,10098,Mega-Salamence
+6,10099,Mega-Metagross
+6,10100,Regresión Primigenia
 6,10101,Regresión Primigenia
-6,10102,Regresión Primigenia
-6,10103,Mega-Rayquaza
-6,10104,Mega-Lopunny
-6,10105,Mega-Gallade
-6,10106,Mega-Audino
-6,10107,Mega-Diancie
-6,10108,Hoopa Desatado
+6,10102,Mega-Rayquaza
+6,10103,Mega-Lopunny
+6,10104,Mega-Gallade
+6,10105,Mega-Audino
+6,10106,Mega-Diancie
+6,10107,Hoopa Desatado
+6,10108,Forma de Alola
 6,10109,Forma de Alola
-6,10110,Forma de Alola
-6,10112,Gorra Original
+6,10110,Gorra Original
+6,10111,Forma de Alola
+6,10112,Forma de Alola
 6,10113,Forma de Alola
 6,10114,Forma de Alola
 6,10115,Forma de Alola
@@ -2714,69 +2771,79 @@ language,form_id,name
 6,10124,Forma de Alola
 6,10125,Forma de Alola
 6,10126,Forma de Alola
-6,10127,Forma de Alola
-6,10128,Forma de Alola
-6,10130,Forma Ash
-6,10131,Forma 10%
-6,10132,Forma 10%
-6,10133,Forma 50%
-6,10134,Forma Completa
-6,10137,Estilo Animado
-6,10138,Estilo Plácido
-6,10139,Estilo Refinado
-6,10140,Forma Nocturna
-6,10141,Forma Banco
-6,10144,Tipo: Lucha
-6,10145,Tipo: Volador
-6,10146,Tipo: Veneno
-6,10147,Tipo: Tierra
-6,10148,Tipo: Roca
-6,10149,Tipo: Bicho
-6,10150,Tipo: Fantasma
-6,10151,Tipo: Acero
-6,10152,Tipo: Fuego
-6,10153,Tipo: Agua
-6,10154,Tipo: Planta
-6,10155,Tipo: Eléctrico
-6,10156,Tipo: Psíquico
-6,10157,Tipo: Hielo
-6,10158,Tipo: Dragón
-6,10159,Tipo: Siniestro
-6,10160,Tipo: Hada
-6,10161,Núcleo Rojo
-6,10167,Forma Crepuscular
-6,10170,Melena Crepuscular
-6,10171,Alas del Alba
-6,10172,Ultra-Necrozma
+6,10128,Forma Ash
+6,10129,Forma 10%
+6,10130,Forma 10%
+6,10131,Forma 50%
+6,10132,Forma Completa
+6,10133,Estilo Animado
+6,10134,Estilo Plácido
+6,10135,Estilo Refinado
+6,10136,Forma Nocturna
+6,10137,Forma Banco
+6,10138,Tipo: Lucha
+6,10139,Tipo: Volador
+6,10140,Tipo: Veneno
+6,10141,Tipo: Tierra
+6,10142,Tipo: Roca
+6,10143,Tipo: Bicho
+6,10144,Tipo: Fantasma
+6,10145,Tipo: Acero
+6,10146,Tipo: Fuego
+6,10147,Tipo: Agua
+6,10148,Tipo: Planta
+6,10149,Tipo: Eléctrico
+6,10150,Tipo: Psíquico
+6,10151,Tipo: Hielo
+6,10152,Tipo: Dragón
+6,10153,Tipo: Siniestro
+6,10154,Tipo: Hada
+6,10155,Núcleo Rojo
+6,10157,Forma Crepuscular
+6,10158,Melena Crepuscular
+6,10159,Alas del Alba
+6,10160,Ultra-Necrozma
+6,10163,Forma de Galar
+6,10164,Forma de Galar
+6,10165,Forma de Galar
+6,10166,Forma de Galar
+6,10167,Forma de Galar
+6,10168,Forma de Galar
+6,10169,Forma de Galar
+6,10170,Forma de Galar
+6,10171,Forma de Galar
+6,10172,Forma de Galar
+6,10173,Forma de Galar
+6,10174,Modo Daruma
 6,10175,Forma de Galar
 6,10176,Forma de Galar
-6,10177,Forma de Galar
-6,10178,Forma de Galar
-6,10179,Forma de Galar
-6,10180,Forma de Galar
-6,10181,Forma de Galar
-6,10182,Forma de Galar
+6,10177,Forma Grave
+6,10178,Cara Deshielo
+6,10179,Hembra
+6,10180,Espada Suprema
+6,10181,Escudo Supremo
+6,10182,Dinamax Infinito
 6,10183,Forma de Galar
 6,10184,Forma de Galar
-6,10185,Forma de Galar
-6,10186,Modo Daruma
+6,10185,Estilo Fluido
+6,10186,Forma de Galar
 6,10187,Forma de Galar
 6,10188,Forma de Galar
-6,10189,Forma Grave
-6,10190,Cara Deshielo
-6,10191,Hembra
-6,10192,Espada Suprema
-6,10193,Escudo Supremo
-6,10194,Dinamax Infinito
-6,10195,Forma de Galar
-6,10196,Forma de Galar
-6,10197,Estilo Fluido
-6,10198,Forma de Galar
-6,10199,Forma de Galar
-6,10200,Forma de Galar
-6,10201,Forma de Galar
-6,10202,Jinete Glacial
-6,10203,Jinete Espectral
+6,10189,Forma de Galar
+6,10190,Jinete Glacial
+6,10191,Jinete Espectral
+6,10192,Forma de Hisui
+6,10193,Forma de Hisui
+6,10194,Forma de Hisui
+6,10195,Forma de Hisui
+6,10196,Forma de Hisui
+6,10197,Forma de Hisui
+6,10198,Forma de Hisui
+6,10199,Forma Origen
+6,10200,Forma Origen
+6,10201,Forma de Hisui
+6,10202,Forma de Hisui
+6,10203,Forma Raya Blanca
 6,10204,Forma de Hisui
 6,10205,Forma de Hisui
 6,10206,Forma de Hisui
@@ -2784,36 +2851,24 @@ language,form_id,name
 6,10208,Forma de Hisui
 6,10209,Forma de Hisui
 6,10210,Forma de Hisui
-6,10211,Forma Origen
-6,10212,Forma Origen
-6,10213,Forma de Hisui
-6,10214,Forma de Hisui
-6,10215,Forma Raya Blanca
-6,10216,Forma de Hisui
-6,10217,Forma de Hisui
-6,10218,Forma de Hisui
-6,10219,Forma de Hisui
-6,10220,Forma de Hisui
-6,10221,Forma de Hisui
-6,10222,Forma de Hisui
-6,10223,Hembra
-6,10224,Forma Tótem
-6,10225,Forma de Paldea
-6,10226,Forma de Paldea
-6,10227,Forma de Paldea
-6,10228,Forma de Paldea
-6,10229,Hembra
-6,10230,Plumaje Azul
-6,10231,Plumaje Amarillo
-6,10232,Plumaje Blanco
-6,10233,Forma Heroica
-6,10234,Forma Andante
-6,10235,Luna Carmesí
-6,10236,Máscara Fuente
-6,10237,Máscara Horno
-6,10238,Máscara Cimiento
-6,10243,Forma Teracristal
-6,10244,Forma Astral
+6,10211,Hembra
+6,10212,Forma Tótem
+6,10213,Forma de Paldea
+6,10214,Forma de Paldea
+6,10215,Forma de Paldea
+6,10216,Forma de Paldea
+6,10217,Hembra
+6,10218,Plumaje Azul
+6,10219,Plumaje Amarillo
+6,10220,Plumaje Blanco
+6,10221,Forma Heroica
+6,10222,Forma Andante
+6,10223,Luna Carmesí
+6,10224,Máscara Fuente
+6,10225,Máscara Horno
+6,10226,Máscara Cimiento
+6,10231,Forma Teracristal
+6,10232,Forma Astral
 6,20001,Una forma
 6,20002,Una forma
 6,20003,Una forma
@@ -2857,182 +2912,193 @@ language,form_id,name
 6,20041,Forma de Genesect
 6,20042,Forma de Genesect
 6,20043,Forma Brío
-6,20044,Motivo Taiga
-6,20045,Motivo Tundra
-6,20046,Motivo Continental
-6,20047,Motivo Vergel
-6,20048,Motivo Oriental
-6,20049,Motivo Floral
-6,20050,Motivo Moderno
-6,20051,Motivo Marino
-6,20052,Motivo Isleño
-6,20053,Motivo Estepa
-6,20054,Motivo Desierto
-6,20055,Motivo Oasis
-6,20056,Motivo Monzón
-6,20057,Motivo Pantano
-6,20058,Motivo Solar
-6,20059,Motivo Océano
-6,20060,Motivo Jungla
-6,20061,Motivo Fantasía
-6,20062,Motivo Poké Ball
-6,20063,Flor Amarilla
-6,20064,Flor Naranja
-6,20065,Flor Azul
-6,20066,Flor Blanca
-6,20067,Flor Amarilla
-6,20068,Flor Naranja
-6,20069,Flor Azul
-6,20070,Flor Blanca
-6,20071,Flor Amarilla
-6,20072,Flor Naranja
-6,20073,Flor Azul
-6,20074,Flor Blanca
-6,20075,Corte Corazón
-6,20076,Corte Estrella
-6,20077,Corte Rombo
-6,20078,Corte Señorita
-6,20079,Corte Dama
-6,20080,Corte Caballero
-6,20081,Corte Aristocrático
-6,20082,Corte Kabuki
-6,20083,Corte Faraónico
-6,20084,Modo Activo
-6,20085,Gorra Hoenn
-6,20086,Gorra Sinnoh
-6,20087,Gorra Teselia
-6,20088,Gorra Kalos
-6,20089,Gorra Alola
-6,20090,Forma Meteorito
-6,20091,Forma Meteorito
-6,20092,Forma Meteorito
-6,20093,Forma Meteorito
-6,20094,Forma Meteorito
-6,20095,Forma Meteorito
-6,20096,Núcleo Naranja
-6,20097,Núcleo Amarillo
-6,20098,Núcleo Verde
-6,20099,Núcleo Azul
-6,20100,Núcleo Añil
-6,20101,Núcleo Violeta
-6,20102,Forma Descubierta
-6,20104,Color Vetusto
-6,20105,Gorra Compañero
-6,20106,Gigamax
-6,20107,Gigamax
-6,20108,Gigamax
-6,20109,Gigamax
-6,20110,Gigamax
-6,20111,Gigamax
-6,20112,Gigamax
-6,20113,Gigamax
-6,20114,Gigamax
-6,20115,Gigamax
-6,20116,Gigamax
-6,20117,Gigamax
-6,20118,Gigamax
-6,20119,Gigamax
-6,20120,Gigamax
-6,20121,Gigamax
-6,20122,Gigamax
-6,20123,Gigamax
-6,20124,Gigamax
-6,20125,Forma Tragatodo
-6,20126,Forma Engulletodo
-6,20127,Gigamax
-6,20128,Gigamax
-6,20131,Gigamax
-6,20132,Gigamax
-6,20133,Crema de Vainilla
-6,20134,Crema de Vainilla
-6,20135,Crema de Vainilla
-6,20136,Crema de Vainilla
-6,20137,Crema de Vainilla
-6,20138,Crema de Vainilla
-6,20139,Crema Rosa
-6,20140,Crema Rosa
-6,20141,Crema Rosa
-6,20142,Crema Rosa
-6,20143,Crema Rosa
-6,20144,Crema Rosa
-6,20145,Crema Rosa
-6,20146,Crema de Té
-6,20147,Crema de Té
-6,20148,Crema de Té
-6,20149,Crema de Té
-6,20150,Crema de Té
-6,20151,Crema de Té
-6,20152,Crema de Té
-6,20153,Crema de Menta
-6,20154,Crema de Menta
-6,20155,Crema de Menta
-6,20156,Crema de Menta
-6,20157,Crema de Menta
-6,20158,Crema de Menta
-6,20159,Crema de Menta
-6,20160,Crema de Limón
-6,20161,Crema de Limón
-6,20162,Crema de Limón
-6,20163,Crema de Limón
-6,20164,Crema de Limón
-6,20165,Crema de Limón
-6,20166,Crema de Limón
-6,20167,Crema Salada
-6,20168,Crema Salada
-6,20169,Crema Salada
-6,20170,Crema Salada
-6,20171,Crema Salada
-6,20172,Crema Salada
-6,20173,Crema Salada
-6,20174,Mezcla Rosa
-6,20175,Mezcla Rosa
-6,20176,Mezcla Rosa
-6,20177,Mezcla Rosa
-6,20178,Mezcla Rosa
-6,20179,Mezcla Rosa
-6,20180,Mezcla Rosa
-6,20181,Mezcla Caramelo
-6,20182,Mezcla Caramelo
-6,20183,Mezcla Caramelo
-6,20184,Mezcla Caramelo
-6,20185,Mezcla Caramelo
-6,20186,Mezcla Caramelo
-6,20187,Mezcla Caramelo
-6,20188,Tres Sabores
-6,20189,Tres Sabores
-6,20190,Tres Sabores
-6,20191,Tres Sabores
-6,20192,Tres Sabores
-6,20193,Tres Sabores
-6,20194,Tres Sabores
-6,20195,Gigamax
-6,20196,Forma Voraz
-6,20197,Gigamax
-6,20198,Gigamax
-6,20199,Gigamax
-6,20205,Gigamax
-6,20206,Papá
-6,20207,Gorra Trotamundos
-6,20208,Gigamax
-6,20209,Forma de Señor
-6,20210,Forma de Señor
-6,20211,Forma de Señor
-6,20212,Forma de Señora
-6,20213,Forma de Señor
-6,20214,Familia de Cuatro
-6,20215,Forma Lánguida
-6,20216,Forma Recta
-6,20217,Forma Trinodular
-6,20218,Fisonomía Limitada
-6,20219,Fisonomía Carrera
-6,20220,Fisonomía Nado
-6,20221,Fisonomía Planeo
-6,20222,Modo Limitado
-6,20223,Modo Conducción
-6,20224,Modo Flote
-6,20225,Modo Planeo
-6,20226,Forma Opulenta
-6,20227,Forma Exquisita
+6,20082,Motivo Taiga
+6,20083,Motivo Tundra
+6,20084,Motivo Continental
+6,20085,Motivo Vergel
+6,20086,Motivo Oriental
+6,20087,Motivo Floral
+6,20088,Motivo Moderno
+6,20089,Motivo Marino
+6,20090,Motivo Isleño
+6,20091,Motivo Estepa
+6,20092,Motivo Desierto
+6,20093,Motivo Oasis
+6,20094,Motivo Monzón
+6,20095,Motivo Pantano
+6,20096,Motivo Solar
+6,20097,Motivo Océano
+6,20098,Motivo Jungla
+6,20099,Motivo Fantasía
+6,20100,Motivo Poké Ball
+6,20101,Flor Amarilla
+6,20102,Flor Naranja
+6,20103,Flor Azul
+6,20104,Flor Blanca
+6,20105,Flor Amarilla
+6,20106,Flor Naranja
+6,20107,Flor Azul
+6,20108,Flor Blanca
+6,20109,Flor Amarilla
+6,20110,Flor Naranja
+6,20111,Flor Azul
+6,20112,Flor Blanca
+6,20113,Corte Corazón
+6,20114,Corte Estrella
+6,20115,Corte Rombo
+6,20116,Corte Señorita
+6,20117,Corte Dama
+6,20118,Corte Caballero
+6,20119,Corte Aristocrático
+6,20120,Corte Kabuki
+6,20121,Corte Faraónico
+6,20122,Modo Activo
+6,20123,Raticate dominante
+6,20124,Gorra Hoenn
+6,20125,Gorra Sinnoh
+6,20126,Gorra Teselia
+6,20127,Gorra Kalos
+6,20128,Gorra Alola
+6,20129,Gumshoos dominante
+6,20130,Vikavolt dominante
+6,20131,Lurantis dominante
+6,20132,Salazzle dominante
+6,20133,Forma Meteorito
+6,20134,Forma Meteorito
+6,20135,Forma Meteorito
+6,20136,Forma Meteorito
+6,20137,Forma Meteorito
+6,20138,Forma Meteorito
+6,20139,Núcleo Naranja
+6,20140,Núcleo Amarillo
+6,20141,Núcleo Verde
+6,20142,Núcleo Azul
+6,20143,Núcleo Añil
+6,20144,Núcleo Violeta
+6,20145,Forma Descubierta
+6,20146,Mimikyu dominante
+6,20148,Kommo-o dominante
+6,20149,Color Vetusto
+6,20150,Gorra Compañero
+6,20151,Marowak dominante
+6,20152,Ribombee dominante
+6,20153,Araquanid dominante
+6,20154,Togedemaru dominante
+6,20155,Gigamax
+6,20156,Gigamax
+6,20157,Gigamax
+6,20158,Gigamax
+6,20159,Gigamax
+6,20160,Gigamax
+6,20161,Gigamax
+6,20162,Gigamax
+6,20163,Gigamax
+6,20164,Gigamax
+6,20165,Gigamax
+6,20166,Gigamax
+6,20167,Gigamax
+6,20168,Gigamax
+6,20169,Gigamax
+6,20170,Gigamax
+6,20171,Gigamax
+6,20172,Gigamax
+6,20173,Gigamax
+6,20174,Forma Tragatodo
+6,20175,Forma Engulletodo
+6,20176,Gigamax
+6,20177,Gigamax
+6,20180,Gigamax
+6,20181,Gigamax
+6,20182,Crema de Vainilla
+6,20183,Crema de Vainilla
+6,20184,Crema de Vainilla
+6,20185,Crema de Vainilla
+6,20186,Crema de Vainilla
+6,20187,Crema de Vainilla
+6,20188,Crema Rosa
+6,20189,Crema Rosa
+6,20190,Crema Rosa
+6,20191,Crema Rosa
+6,20192,Crema Rosa
+6,20193,Crema Rosa
+6,20194,Crema Rosa
+6,20195,Crema de Té
+6,20196,Crema de Té
+6,20197,Crema de Té
+6,20198,Crema de Té
+6,20199,Crema de Té
+6,20200,Crema de Té
+6,20201,Crema de Té
+6,20202,Crema de Menta
+6,20203,Crema de Menta
+6,20204,Crema de Menta
+6,20205,Crema de Menta
+6,20206,Crema de Menta
+6,20207,Crema de Menta
+6,20208,Crema de Menta
+6,20209,Crema de Limón
+6,20210,Crema de Limón
+6,20211,Crema de Limón
+6,20212,Crema de Limón
+6,20213,Crema de Limón
+6,20214,Crema de Limón
+6,20215,Crema de Limón
+6,20216,Crema Salada
+6,20217,Crema Salada
+6,20218,Crema Salada
+6,20219,Crema Salada
+6,20220,Crema Salada
+6,20221,Crema Salada
+6,20222,Crema Salada
+6,20223,Mezcla Rosa
+6,20224,Mezcla Rosa
+6,20225,Mezcla Rosa
+6,20226,Mezcla Rosa
+6,20227,Mezcla Rosa
+6,20228,Mezcla Rosa
+6,20229,Mezcla Rosa
+6,20230,Mezcla Caramelo
+6,20231,Mezcla Caramelo
+6,20232,Mezcla Caramelo
+6,20233,Mezcla Caramelo
+6,20234,Mezcla Caramelo
+6,20235,Mezcla Caramelo
+6,20236,Mezcla Caramelo
+6,20237,Tres Sabores
+6,20238,Tres Sabores
+6,20239,Tres Sabores
+6,20240,Tres Sabores
+6,20241,Tres Sabores
+6,20242,Tres Sabores
+6,20243,Tres Sabores
+6,20244,Gigamax
+6,20245,Forma Voraz
+6,20246,Gigamax
+6,20247,Gigamax
+6,20248,Gigamax
+6,20254,Gigamax
+6,20255,Papá
+6,20256,Gorra Trotamundos
+6,20257,Gigamax
+6,20258,Forma de Señor
+6,20259,Forma de Señor
+6,20260,Forma de Señor
+6,20261,Forma de Señora
+6,20262,Forma de Señor
+6,20263,Familia de Cuatro
+6,20264,Forma Lánguida
+6,20265,Forma Recta
+6,20266,Forma Trinodular
+6,20267,Fisonomía Limitada
+6,20268,Fisonomía Carrera
+6,20269,Fisonomía Nado
+6,20270,Fisonomía Planeo
+6,20271,Modo Limitado
+6,20272,Modo Conducción
+6,20273,Modo Flote
+6,20274,Modo Planeo
+6,20275,Forma Opulenta
+6,20276,Forma Exquisita
 7,201,형태별 모습
 7,351,캐스퐁의 모습
 7,382,가이오가의 모습
@@ -3121,91 +3187,93 @@ language,form_id,name
 7,10022,아르세우스의 모습
 7,10023,아르세우스의 모습
 7,10024,아르세우스의 모습
-7,10026,히트로토무
-7,10027,워시로토무
-7,10028,프로스트로토무
-7,10029,스핀로토무
-7,10030,커트로토무
-7,10031,오리진폼
-7,10032,스카이폼
-7,10034,청색근의 모습
-7,10035,달마모드
-7,10036,스텝폼
+7,10025,히트로토무
+7,10026,워시로토무
+7,10027,프로스트로토무
+7,10028,스핀로토무
+7,10029,커트로토무
+7,10030,오리진폼
+7,10031,스카이폼
+7,10033,청색근의 모습
+7,10034,달마모드
+7,10035,스텝폼
+7,10036,영물폼
 7,10037,영물폼
 7,10038,영물폼
-7,10039,영물폼
-7,10040,화이트큐레무
-7,10041,블랙큐레무
-7,10042,메가이상해꽃
-7,10043,메가리자몽X
-7,10044,메가리자몽Y
-7,10045,메가거북왕
-7,10046,메가후딘
-7,10047,메가팬텀
-7,10048,메가캥카
-7,10049,메가쁘사이저
-7,10050,메가갸라도스
-7,10051,메가프테라
-7,10052,메가뮤츠X
-7,10053,메가뮤츠Y
-7,10054,메가전룡
-7,10055,메가핫삼
-7,10056,메가헤라크로스
-7,10057,메가헬가
-7,10058,메가마기라스
-7,10059,메가번치코
-7,10060,메가가디안
-7,10061,메가입치트
-7,10062,메가보스로라
-7,10063,메가요가램
-7,10064,메가썬더볼트
-7,10065,메가다크펫
-7,10066,메가앱솔
-7,10067,메가라티아스
-7,10068,메가라티오스
-7,10069,메가한카리아스
-7,10070,메가루카리오
-7,10071,메가눈설왕
-7,10072,아르세우스의 모습
-7,10073,영원의 꽃
-7,10074,암컷의 모습
-7,10075,블레이드폼
-7,10076,작은 사이즈
-7,10077,큰 사이즈
-7,10078,특대 사이즈
-7,10079,작은 사이즈
-7,10080,큰 사이즈
-7,10081,특대 사이즈
-7,10082,메가독침붕
-7,10083,메가피죤투
-7,10084,하드록 피카츄
-7,10085,마담 피카츄
-7,10086,아이돌 피카츄
-7,10087,닥터 피카츄
-7,10088,마스크드 피카츄
-7,10089,옷갈아입기 피카츄
-7,10090,메가야도란
-7,10091,메가강철톤
-7,10092,메가나무킹
-7,10093,메가대짱이
-7,10094,메가깜까미
-7,10095,메가샤크니아
-7,10096,메가폭타
-7,10097,메가파비코리
-7,10098,메가얼음귀신
-7,10099,메가보만다
-7,10100,메가메타그로스
+7,10039,화이트큐레무
+7,10040,블랙큐레무
+7,10041,메가이상해꽃
+7,10042,메가리자몽X
+7,10043,메가리자몽Y
+7,10044,메가거북왕
+7,10045,메가후딘
+7,10046,메가팬텀
+7,10047,메가캥카
+7,10048,메가쁘사이저
+7,10049,메가갸라도스
+7,10050,메가프테라
+7,10051,메가뮤츠X
+7,10052,메가뮤츠Y
+7,10053,메가전룡
+7,10054,메가핫삼
+7,10055,메가헤라크로스
+7,10056,메가헬가
+7,10057,메가마기라스
+7,10058,메가번치코
+7,10059,메가가디안
+7,10060,메가입치트
+7,10061,메가보스로라
+7,10062,메가요가램
+7,10063,메가썬더볼트
+7,10064,메가다크펫
+7,10065,메가앱솔
+7,10066,메가라티아스
+7,10067,메가라티오스
+7,10068,메가한카리아스
+7,10069,메가루카리오
+7,10070,메가눈설왕
+7,10071,아르세우스의 모습
+7,10072,영원의 꽃
+7,10073,암컷의 모습
+7,10074,블레이드폼
+7,10075,작은 사이즈
+7,10076,큰 사이즈
+7,10077,특대 사이즈
+7,10078,작은 사이즈
+7,10079,큰 사이즈
+7,10080,특대 사이즈
+7,10081,메가독침붕
+7,10082,메가피죤투
+7,10083,하드록 피카츄
+7,10084,마담 피카츄
+7,10085,아이돌 피카츄
+7,10086,닥터 피카츄
+7,10087,마스크드 피카츄
+7,10088,옷갈아입기 피카츄
+7,10089,메가야도란
+7,10090,메가강철톤
+7,10091,메가나무킹
+7,10092,메가대짱이
+7,10093,메가깜까미
+7,10094,메가샤크니아
+7,10095,메가폭타
+7,10096,메가파비코리
+7,10097,메가얼음귀신
+7,10098,메가보만다
+7,10099,메가메타그로스
+7,10100,원시회귀의 모습
 7,10101,원시회귀의 모습
-7,10102,원시회귀의 모습
-7,10103,메가레쿠쟈
-7,10104,메가이어롭
-7,10105,메가엘레이드
-7,10106,메가다부니
-7,10107,메가디안시
-7,10108,굴레를 벗어난 후파
+7,10102,메가레쿠쟈
+7,10103,메가이어롭
+7,10104,메가엘레이드
+7,10105,메가다부니
+7,10106,메가디안시
+7,10107,굴레를 벗어난 후파
+7,10108,알로라의 모습
 7,10109,알로라의 모습
-7,10110,알로라의 모습
-7,10112,오리지널캡
+7,10110,오리지널캡
+7,10111,알로라의 모습
+7,10112,알로라의 모습
 7,10113,알로라의 모습
 7,10114,알로라의 모습
 7,10115,알로라의 모습
@@ -3220,69 +3288,79 @@ language,form_id,name
 7,10124,알로라의 모습
 7,10125,알로라의 모습
 7,10126,알로라의 모습
-7,10127,알로라의 모습
-7,10128,알로라의 모습
-7,10130,지우개굴닌자
-7,10131,10%폼
-7,10132,10%폼
-7,10133,50%폼
-7,10134,퍼펙트폼
-7,10137,파칙파칙스타일
-7,10138,훌라훌라스타일
-7,10139,하늘하늘스타일
-7,10140,한밤중의 모습
-7,10141,군집의 모습
-7,10144,타입:파이팅
-7,10145,타입:플라잉
-7,10146,타입:포이즌
-7,10147,타입:그라운드
-7,10148,타입:락
-7,10149,타입:버그
-7,10150,타입:고스트
-7,10151,타입:스틸
-7,10152,타입:파이어
-7,10153,타입:워터
-7,10154,타입:그래스
-7,10155,타입:일렉트릭
-7,10156,타입:사이킥
-7,10157,타입:아이스
-7,10158,타입:드래곤
-7,10159,타입:다크
-7,10160,타입:페어리
-7,10161,빨간색 코어
-7,10167,황혼의 모습
-7,10170,황혼의 갈기
-7,10171,새벽의 날개
-7,10172,울트라네크로즈마
+7,10128,지우개굴닌자
+7,10129,10%폼
+7,10130,10%폼
+7,10131,50%폼
+7,10132,퍼펙트폼
+7,10133,파칙파칙스타일
+7,10134,훌라훌라스타일
+7,10135,하늘하늘스타일
+7,10136,한밤중의 모습
+7,10137,군집의 모습
+7,10138,타입:파이팅
+7,10139,타입:플라잉
+7,10140,타입:포이즌
+7,10141,타입:그라운드
+7,10142,타입:락
+7,10143,타입:버그
+7,10144,타입:고스트
+7,10145,타입:스틸
+7,10146,타입:파이어
+7,10147,타입:워터
+7,10148,타입:그래스
+7,10149,타입:일렉트릭
+7,10150,타입:사이킥
+7,10151,타입:아이스
+7,10152,타입:드래곤
+7,10153,타입:다크
+7,10154,타입:페어리
+7,10155,빨간색 코어
+7,10157,황혼의 모습
+7,10158,황혼의 갈기
+7,10159,새벽의 날개
+7,10160,울트라네크로즈마
+7,10163,가라르의 모습
+7,10164,가라르의 모습
+7,10165,가라르의 모습
+7,10166,가라르의 모습
+7,10167,가라르의 모습
+7,10168,가라르의 모습
+7,10169,가라르의 모습
+7,10170,가라르의 모습
+7,10171,가라르의 모습
+7,10172,가라르의 모습
+7,10173,가라르의 모습
+7,10174,달마모드
 7,10175,가라르의 모습
 7,10176,가라르의 모습
-7,10177,가라르의 모습
-7,10178,가라르의 모습
-7,10179,가라르의 모습
-7,10180,가라르의 모습
-7,10181,가라르의 모습
-7,10182,가라르의 모습
+7,10177,로우한 모습
+7,10178,나이스페이스
+7,10179,암컷의 모습
+7,10180,검왕
+7,10181,방패왕
+7,10182,무한다이맥스
 7,10183,가라르의 모습
 7,10184,가라르의 모습
-7,10185,가라르의 모습
-7,10186,달마모드
+7,10185,연격의 태세
+7,10186,가라르의 모습
 7,10187,가라르의 모습
 7,10188,가라르의 모습
-7,10189,로우한 모습
-7,10190,나이스페이스
-7,10191,암컷의 모습
-7,10192,검왕
-7,10193,방패왕
-7,10194,무한다이맥스
-7,10195,가라르의 모습
-7,10196,가라르의 모습
-7,10197,연격의 태세
-7,10198,가라르의 모습
-7,10199,가라르의 모습
-7,10200,가라르의 모습
-7,10201,가라르의 모습
-7,10202,백마 탄 모습
-7,10203,흑마 탄 모습
+7,10189,가라르의 모습
+7,10190,백마 탄 모습
+7,10191,흑마 탄 모습
+7,10192,히스이의 모습
+7,10193,히스이의 모습
+7,10194,히스이의 모습
+7,10195,히스이의 모습
+7,10196,히스이의 모습
+7,10197,히스이의 모습
+7,10198,히스이의 모습
+7,10199,오리진폼
+7,10200,오리진폼
+7,10201,히스이의 모습
+7,10202,히스이의 모습
+7,10203,백색근의 모습
 7,10204,히스이의 모습
 7,10205,히스이의 모습
 7,10206,히스이의 모습
@@ -3290,36 +3368,24 @@ language,form_id,name
 7,10208,히스이의 모습
 7,10209,히스이의 모습
 7,10210,히스이의 모습
-7,10211,오리진폼
-7,10212,오리진폼
-7,10213,히스이의 모습
-7,10214,히스이의 모습
-7,10215,백색근의 모습
-7,10216,히스이의 모습
-7,10217,히스이의 모습
-7,10218,히스이의 모습
-7,10219,히스이의 모습
-7,10220,히스이의 모습
-7,10221,히스이의 모습
-7,10222,히스이의 모습
-7,10223,암컷의 모습
-7,10224,영물폼
-7,10225,팔데아의 모습
-7,10226,팔데아의 모습
-7,10227,팔데아의 모습
-7,10228,팔데아의 모습
-7,10229,암컷의 모습
-7,10230,블루 페더
-7,10231,옐로 페더
-7,10232,화이트 페더
-7,10233,마이티폼
-7,10234,도보폼
-7,10235,붉은 달
-7,10236,우물의 가면
-7,10237,화덕의 가면
-7,10238,주춧돌의 가면
-7,10243,테라스탈폼
-7,10244,스텔라폼
+7,10211,암컷의 모습
+7,10212,영물폼
+7,10213,팔데아의 모습
+7,10214,팔데아의 모습
+7,10215,팔데아의 모습
+7,10216,팔데아의 모습
+7,10217,암컷의 모습
+7,10218,블루 페더
+7,10219,옐로 페더
+7,10220,화이트 페더
+7,10221,마이티폼
+7,10222,도보폼
+7,10223,붉은 달
+7,10224,우물의 가면
+7,10225,화덕의 가면
+7,10226,주춧돌의 가면
+7,10231,테라스탈폼
+7,10232,스텔라폼
 7,20001,형태별 모습
 7,20002,형태별 모습
 7,20003,형태별 모습
@@ -3363,182 +3429,193 @@ language,form_id,name
 7,20041,게노세크트의 모습
 7,20042,게노세크트의 모습
 7,20043,각오의 모습
-7,20044,설국의 모양
-7,20045,설원의 모양
-7,20046,대륙의 모양
-7,20047,정원의 모양
-7,20048,우아한 모양
-7,20049,화원의 모양
-7,20050,모던한 모양
-7,20051,마린의 모양
-7,20052,군도의 모양
-7,20053,황야의 모양
-7,20054,사진의 모양
-7,20055,대하의 모양
-7,20056,스콜의 모양
-7,20057,사바나의 모양
-7,20058,태양의 모양
-7,20059,오션의 모양
-7,20060,정글의 모양
-7,20061,팬시한 모양
-7,20062,볼의 모양
-7,20063,노란 꽃
-7,20064,오렌지색 꽃
-7,20065,파란 꽃
-7,20066,하얀 꽃
-7,20067,노란 꽃
-7,20068,오렌지색 꽃
-7,20069,파란 꽃
-7,20070,하얀 꽃
-7,20071,노란 꽃
-7,20072,오렌지색 꽃
-7,20073,파란 꽃
-7,20074,하얀 꽃
-7,20075,하트컷
-7,20076,스타컷
-7,20077,다이아컷
-7,20078,레이디컷
-7,20079,마담컷
-7,20080,젠틀컷
-7,20081,퀸컷
-7,20082,가부키컷
-7,20083,킹덤컷
-7,20084,액티브모드
-7,20085,호연캡
-7,20086,신오캡
-7,20087,하나캡
-7,20088,칼로스캡
-7,20089,알로라캡
-7,20090,유성의 모습
-7,20091,유성의 모습
-7,20092,유성의 모습
-7,20093,유성의 모습
-7,20094,유성의 모습
-7,20095,유성의 모습
-7,20096,주황색 코어
-7,20097,노란색 코어
-7,20098,초록색 코어
-7,20099,옥색 코어
-7,20100,파란색 코어
-7,20101,보라색 코어
-7,20102,들킨 모습
-7,20104,500년 전의 색
-7,20105,너로정했다캡
-7,20106,거다이맥스
-7,20107,거다이맥스
-7,20108,거다이맥스
-7,20109,거다이맥스
-7,20110,거다이맥스
-7,20111,거다이맥스
-7,20112,거다이맥스
-7,20113,거다이맥스
-7,20114,거다이맥스
-7,20115,거다이맥스
-7,20116,거다이맥스
-7,20117,거다이맥스
-7,20118,거다이맥스
-7,20119,거다이맥스
-7,20120,거다이맥스
-7,20121,거다이맥스
-7,20122,거다이맥스
-7,20123,거다이맥스
-7,20124,거다이맥스
-7,20125,그대로 삼킨 모습
-7,20126,통째로 삼킨 모습
-7,20127,거다이맥스
-7,20128,거다이맥스
-7,20131,거다이맥스
-7,20132,거다이맥스
-7,20133,밀키바닐라
-7,20134,밀키바닐라
-7,20135,밀키바닐라
-7,20136,밀키바닐라
-7,20137,밀키바닐라
-7,20138,밀키바닐라
-7,20139,밀키루비
-7,20140,밀키루비
-7,20141,밀키루비
-7,20142,밀키루비
-7,20143,밀키루비
-7,20144,밀키루비
-7,20145,밀키루비
-7,20146,밀키말차
-7,20147,밀키말차
-7,20148,밀키말차
-7,20149,밀키말차
-7,20150,밀키말차
-7,20151,밀키말차
-7,20152,밀키말차
-7,20153,밀키민트
-7,20154,밀키민트
-7,20155,밀키민트
-7,20156,밀키민트
-7,20157,밀키민트
-7,20158,밀키민트
-7,20159,밀키민트
-7,20160,밀키레몬
-7,20161,밀키레몬
-7,20162,밀키레몬
-7,20163,밀키레몬
-7,20164,밀키레몬
-7,20165,밀키레몬
-7,20166,밀키레몬
-7,20167,밀키솔트
-7,20168,밀키솔트
-7,20169,밀키솔트
-7,20170,밀키솔트
-7,20171,밀키솔트
-7,20172,밀키솔트
-7,20173,밀키솔트
-7,20174,루비믹스
-7,20175,루비믹스
-7,20176,루비믹스
-7,20177,루비믹스
-7,20178,루비믹스
-7,20179,루비믹스
-7,20180,루비믹스
-7,20181,캐러멜믹스
-7,20182,캐러멜믹스
-7,20183,캐러멜믹스
-7,20184,캐러멜믹스
-7,20185,캐러멜믹스
-7,20186,캐러멜믹스
-7,20187,캐러멜믹스
-7,20188,트리플믹스
-7,20189,트리플믹스
-7,20190,트리플믹스
-7,20191,트리플믹스
-7,20192,트리플믹스
-7,20193,트리플믹스
-7,20194,트리플믹스
-7,20195,거다이맥스
-7,20196,배고픈 모양
-7,20197,거다이맥스
-7,20198,거다이맥스
-7,20199,거다이맥스
-7,20205,거다이맥스
-7,20206,아빠
-7,20207,월드캡
-7,20208,거다이맥스
-7,20209,왕의 모습
-7,20210,왕의 모습
-7,20211,왕의 모습
-7,20212,여왕의 모습
-7,20213,왕의 모습
-7,20214,네 식구
-7,20215,늘어진 모습
-7,20216,뻗은 모습
-7,20217,세 마디폼
-7,20218,제한형태
-7,20219,질주형태
-7,20220,유영형태
-7,20221,활공형태
-7,20222,리미티드모드
-7,20223,드라이브모드
-7,20224,플로트모드
-7,20225,글라이드모드
-7,20226,알짜배기의 모습
-7,20227,걸작의 모습
+7,20082,설국의 모양
+7,20083,설원의 모양
+7,20084,대륙의 모양
+7,20085,정원의 모양
+7,20086,우아한 모양
+7,20087,화원의 모양
+7,20088,모던한 모양
+7,20089,마린의 모양
+7,20090,군도의 모양
+7,20091,황야의 모양
+7,20092,사진의 모양
+7,20093,대하의 모양
+7,20094,스콜의 모양
+7,20095,사바나의 모양
+7,20096,태양의 모양
+7,20097,오션의 모양
+7,20098,정글의 모양
+7,20099,팬시한 모양
+7,20100,볼의 모양
+7,20101,노란 꽃
+7,20102,오렌지색 꽃
+7,20103,파란 꽃
+7,20104,하얀 꽃
+7,20105,노란 꽃
+7,20106,오렌지색 꽃
+7,20107,파란 꽃
+7,20108,하얀 꽃
+7,20109,노란 꽃
+7,20110,오렌지색 꽃
+7,20111,파란 꽃
+7,20112,하얀 꽃
+7,20113,하트컷
+7,20114,스타컷
+7,20115,다이아컷
+7,20116,레이디컷
+7,20117,마담컷
+7,20118,젠틀컷
+7,20119,퀸컷
+7,20120,가부키컷
+7,20121,킹덤컷
+7,20122,액티브모드
+7,20123,주인 레트라
+7,20124,호연캡
+7,20125,신오캡
+7,20126,하나캡
+7,20127,칼로스캡
+7,20128,알로라캡
+7,20129,주인 형사구스
+7,20130,주인 투구뿌논
+7,20131,주인 라란티스
+7,20132,주인 염뉴트
+7,20133,유성의 모습
+7,20134,유성의 모습
+7,20135,유성의 모습
+7,20136,유성의 모습
+7,20137,유성의 모습
+7,20138,유성의 모습
+7,20139,주황색 코어
+7,20140,노란색 코어
+7,20141,초록색 코어
+7,20142,옥색 코어
+7,20143,파란색 코어
+7,20144,보라색 코어
+7,20145,들킨 모습
+7,20146,주인 따라큐
+7,20148,주인 짜랑고우거
+7,20149,500년 전의 색
+7,20150,너로정했다캡
+7,20151,주인 텅구리
+7,20152,주인 에리본
+7,20153,주인 깨비물거미
+7,20154,주인 토게데마루
+7,20155,거다이맥스
+7,20156,거다이맥스
+7,20157,거다이맥스
+7,20158,거다이맥스
+7,20159,거다이맥스
+7,20160,거다이맥스
+7,20161,거다이맥스
+7,20162,거다이맥스
+7,20163,거다이맥스
+7,20164,거다이맥스
+7,20165,거다이맥스
+7,20166,거다이맥스
+7,20167,거다이맥스
+7,20168,거다이맥스
+7,20169,거다이맥스
+7,20170,거다이맥스
+7,20171,거다이맥스
+7,20172,거다이맥스
+7,20173,거다이맥스
+7,20174,그대로 삼킨 모습
+7,20175,통째로 삼킨 모습
+7,20176,거다이맥스
+7,20177,거다이맥스
+7,20180,거다이맥스
+7,20181,거다이맥스
+7,20182,밀키바닐라
+7,20183,밀키바닐라
+7,20184,밀키바닐라
+7,20185,밀키바닐라
+7,20186,밀키바닐라
+7,20187,밀키바닐라
+7,20188,밀키루비
+7,20189,밀키루비
+7,20190,밀키루비
+7,20191,밀키루비
+7,20192,밀키루비
+7,20193,밀키루비
+7,20194,밀키루비
+7,20195,밀키말차
+7,20196,밀키말차
+7,20197,밀키말차
+7,20198,밀키말차
+7,20199,밀키말차
+7,20200,밀키말차
+7,20201,밀키말차
+7,20202,밀키민트
+7,20203,밀키민트
+7,20204,밀키민트
+7,20205,밀키민트
+7,20206,밀키민트
+7,20207,밀키민트
+7,20208,밀키민트
+7,20209,밀키레몬
+7,20210,밀키레몬
+7,20211,밀키레몬
+7,20212,밀키레몬
+7,20213,밀키레몬
+7,20214,밀키레몬
+7,20215,밀키레몬
+7,20216,밀키솔트
+7,20217,밀키솔트
+7,20218,밀키솔트
+7,20219,밀키솔트
+7,20220,밀키솔트
+7,20221,밀키솔트
+7,20222,밀키솔트
+7,20223,루비믹스
+7,20224,루비믹스
+7,20225,루비믹스
+7,20226,루비믹스
+7,20227,루비믹스
+7,20228,루비믹스
+7,20229,루비믹스
+7,20230,캐러멜믹스
+7,20231,캐러멜믹스
+7,20232,캐러멜믹스
+7,20233,캐러멜믹스
+7,20234,캐러멜믹스
+7,20235,캐러멜믹스
+7,20236,캐러멜믹스
+7,20237,트리플믹스
+7,20238,트리플믹스
+7,20239,트리플믹스
+7,20240,트리플믹스
+7,20241,트리플믹스
+7,20242,트리플믹스
+7,20243,트리플믹스
+7,20244,거다이맥스
+7,20245,배고픈 모양
+7,20246,거다이맥스
+7,20247,거다이맥스
+7,20248,거다이맥스
+7,20254,거다이맥스
+7,20255,아빠
+7,20256,월드캡
+7,20257,거다이맥스
+7,20258,왕의 모습
+7,20259,왕의 모습
+7,20260,왕의 모습
+7,20261,여왕의 모습
+7,20262,왕의 모습
+7,20263,네 식구
+7,20264,늘어진 모습
+7,20265,뻗은 모습
+7,20266,세 마디폼
+7,20267,제한형태
+7,20268,질주형태
+7,20269,유영형태
+7,20270,활공형태
+7,20271,리미티드모드
+7,20272,드라이브모드
+7,20273,플로트모드
+7,20274,글라이드모드
+7,20275,알짜배기의 모습
+7,20276,걸작의 모습
 8,201,あるすがた
 8,351,ポワルンのすがた
 8,382,カイオーガのすがた
@@ -3627,91 +3704,93 @@ language,form_id,name
 8,10022,アルセウスのすがた
 8,10023,アルセウスのすがた
 8,10024,アルセウスのすがた
-8,10026,ヒートロトム
-8,10027,ウォッシュロトム
-8,10028,フロストロトム
-8,10029,スピンロトム
-8,10030,カットロトム
-8,10031,オリジンフォルム
-8,10032,スカイフォルム
-8,10034,あおすじのすがた
-8,10035,ダルマモード
-8,10036,ステップフォルム
+8,10025,ヒートロトム
+8,10026,ウォッシュロトム
+8,10027,フロストロトム
+8,10028,スピンロトム
+8,10029,カットロトム
+8,10030,オリジンフォルム
+8,10031,スカイフォルム
+8,10033,あおすじのすがた
+8,10034,ダルマモード
+8,10035,ステップフォルム
+8,10036,れいじゅうフォルム
 8,10037,れいじゅうフォルム
 8,10038,れいじゅうフォルム
-8,10039,れいじゅうフォルム
-8,10040,ホワイトキュレム
-8,10041,ブラックキュレム
-8,10042,メガフシギバナ
-8,10043,メガリザードンＸ
-8,10044,メガリザードンＹ
-8,10045,メガカメックス
-8,10046,メガフーディン
-8,10047,メガゲンガー
-8,10048,メガガルーラ
-8,10049,メガカイロス
-8,10050,メガギャラドス
-8,10051,メガプテラ
-8,10052,メガミュウツーＸ
-8,10053,メガミュウツーＹ
-8,10054,メガデンリュウ
-8,10055,メガハッサム
-8,10056,メガヘラクロス
-8,10057,メガヘルガー
-8,10058,メガバンギラス
-8,10059,メガバシャーモ
-8,10060,メガサーナイト
-8,10061,メガクチート
-8,10062,メガボスゴドラ
-8,10063,メガチャーレム
-8,10064,メガライボルト
-8,10065,メガジュペッタ
-8,10066,メガアブソル
-8,10067,メガラティアス
-8,10068,メガラティオス
-8,10069,メガガブリアス
-8,10070,メガルカリオ
-8,10071,メガユキノオー
-8,10072,アルセウスのすがた
-8,10073,えいえんのはな
-8,10074,メスのすがた
-8,10075,ブレードフォルム
-8,10076,ちいさいサイズ
-8,10077,おおきいサイズ
-8,10078,とくだいサイズ
-8,10079,ちいさいサイズ
-8,10080,おおきいサイズ
-8,10081,とくだいサイズ
-8,10082,メガスピアー
-8,10083,メガピジョット
-8,10084,ハードロック・ピカチュウ
-8,10085,マダム・ピカチュウ
-8,10086,アイドル・ピカチュウ
-8,10087,ドクター・ピカチュウ
-8,10088,マスク・ド・ピカチュウ
-8,10089,おきがえピカチュウ
-8,10090,メガヤドラン
-8,10091,メガハガネール
-8,10092,メガジュカイン
-8,10093,メガラグラージ
-8,10094,メガヤミラミ
-8,10095,メガサメハダー
-8,10096,メガバクーダ
-8,10097,メガチルタリス
-8,10098,メガオニゴーリ
-8,10099,メガボーマンダ
-8,10100,メガメタグロス
+8,10039,ホワイトキュレム
+8,10040,ブラックキュレム
+8,10041,メガフシギバナ
+8,10042,メガリザードンＸ
+8,10043,メガリザードンＹ
+8,10044,メガカメックス
+8,10045,メガフーディン
+8,10046,メガゲンガー
+8,10047,メガガルーラ
+8,10048,メガカイロス
+8,10049,メガギャラドス
+8,10050,メガプテラ
+8,10051,メガミュウツーＸ
+8,10052,メガミュウツーＹ
+8,10053,メガデンリュウ
+8,10054,メガハッサム
+8,10055,メガヘラクロス
+8,10056,メガヘルガー
+8,10057,メガバンギラス
+8,10058,メガバシャーモ
+8,10059,メガサーナイト
+8,10060,メガクチート
+8,10061,メガボスゴドラ
+8,10062,メガチャーレム
+8,10063,メガライボルト
+8,10064,メガジュペッタ
+8,10065,メガアブソル
+8,10066,メガラティアス
+8,10067,メガラティオス
+8,10068,メガガブリアス
+8,10069,メガルカリオ
+8,10070,メガユキノオー
+8,10071,アルセウスのすがた
+8,10072,えいえんのはな
+8,10073,メスのすがた
+8,10074,ブレードフォルム
+8,10075,ちいさいサイズ
+8,10076,おおきいサイズ
+8,10077,とくだいサイズ
+8,10078,ちいさいサイズ
+8,10079,おおきいサイズ
+8,10080,とくだいサイズ
+8,10081,メガスピアー
+8,10082,メガピジョット
+8,10083,ハードロック・ピカチュウ
+8,10084,マダム・ピカチュウ
+8,10085,アイドル・ピカチュウ
+8,10086,ドクター・ピカチュウ
+8,10087,マスク・ド・ピカチュウ
+8,10088,おきがえピカチュウ
+8,10089,メガヤドラン
+8,10090,メガハガネール
+8,10091,メガジュカイン
+8,10092,メガラグラージ
+8,10093,メガヤミラミ
+8,10094,メガサメハダー
+8,10095,メガバクーダ
+8,10096,メガチルタリス
+8,10097,メガオニゴーリ
+8,10098,メガボーマンダ
+8,10099,メガメタグロス
+8,10100,ゲンシカイキのすがた
 8,10101,ゲンシカイキのすがた
-8,10102,ゲンシカイキのすがた
-8,10103,メガレックウザ
-8,10104,メガミミロップ
-8,10105,メガエルレイド
-8,10106,メガタブンネ
-8,10107,メガディアンシー
-8,10108,ときはなたれしフーパ
+8,10102,メガレックウザ
+8,10103,メガミミロップ
+8,10104,メガエルレイド
+8,10105,メガタブンネ
+8,10106,メガディアンシー
+8,10107,ときはなたれしフーパ
+8,10108,アローラのすがた
 8,10109,アローラのすがた
-8,10110,アローラのすがた
-8,10112,オリジナルキャップ
+8,10110,オリジナルキャップ
+8,10111,アローラのすがた
+8,10112,アローラのすがた
 8,10113,アローラのすがた
 8,10114,アローラのすがた
 8,10115,アローラのすがた
@@ -3726,69 +3805,79 @@ language,form_id,name
 8,10124,アローラのすがた
 8,10125,アローラのすがた
 8,10126,アローラのすがた
-8,10127,アローラのすがた
-8,10128,アローラのすがた
-8,10130,サトシゲッコウガ
-8,10131,１０％フォルム
-8,10132,１０％フォルム
-8,10133,５０％フォルム
-8,10134,パーフェクトフォルム
-8,10137,ぱちぱちスタイル
-8,10138,ふらふらスタイル
-8,10139,まいまいスタイル
-8,10140,まよなかのすがた
-8,10141,むれたすがた
-8,10144,タイプ：ファイト
-8,10145,タイプ：フライング
-8,10146,タイプ：ポイズン
-8,10147,タイプ：グラウンド
-8,10148,タイプ：ロック
-8,10149,タイプ：バグ
-8,10150,タイプ：ゴースト
-8,10151,タイプ：スチール
-8,10152,タイプ：ファイヤー
-8,10153,タイプ：ウオーター
-8,10154,タイプ：グラス
-8,10155,タイプ：エレクトロ
-8,10156,タイプ：サイキック
-8,10157,タイプ：アイス
-8,10158,タイプ：ドラゴン
-8,10159,タイプ：ダーク
-8,10160,タイプ：フェアリー
-8,10161,あかいろのコア
-8,10167,たそがれのすがた
-8,10170,たそがれのたてがみ
-8,10171,あかつきのつばさ
-8,10172,ウルトラネクロズマ
+8,10128,サトシゲッコウガ
+8,10129,１０％フォルム
+8,10130,１０％フォルム
+8,10131,５０％フォルム
+8,10132,パーフェクトフォルム
+8,10133,ぱちぱちスタイル
+8,10134,ふらふらスタイル
+8,10135,まいまいスタイル
+8,10136,まよなかのすがた
+8,10137,むれたすがた
+8,10138,タイプ：ファイト
+8,10139,タイプ：フライング
+8,10140,タイプ：ポイズン
+8,10141,タイプ：グラウンド
+8,10142,タイプ：ロック
+8,10143,タイプ：バグ
+8,10144,タイプ：ゴースト
+8,10145,タイプ：スチール
+8,10146,タイプ：ファイヤー
+8,10147,タイプ：ウオーター
+8,10148,タイプ：グラス
+8,10149,タイプ：エレクトロ
+8,10150,タイプ：サイキック
+8,10151,タイプ：アイス
+8,10152,タイプ：ドラゴン
+8,10153,タイプ：ダーク
+8,10154,タイプ：フェアリー
+8,10155,あかいろのコア
+8,10157,たそがれのすがた
+8,10158,たそがれのたてがみ
+8,10159,あかつきのつばさ
+8,10160,ウルトラネクロズマ
+8,10163,ガラルのすがた
+8,10164,ガラルのすがた
+8,10165,ガラルのすがた
+8,10166,ガラルのすがた
+8,10167,ガラルのすがた
+8,10168,ガラルのすがた
+8,10169,ガラルのすがた
+8,10170,ガラルのすがた
+8,10171,ガラルのすがた
+8,10172,ガラルのすがた
+8,10173,ガラルのすがた
+8,10174,ダルマモード
 8,10175,ガラルのすがた
 8,10176,ガラルのすがた
-8,10177,ガラルのすがた
-8,10178,ガラルのすがた
-8,10179,ガラルのすがた
-8,10180,ガラルのすがた
-8,10181,ガラルのすがた
-8,10182,ガラルのすがた
+8,10177,ローなすがた
+8,10178,ナイスフェイス
+8,10179,メスのすがた
+8,10180,けんのおう
+8,10181,たてのおう
+8,10182,ムゲンダイマックス
 8,10183,ガラルのすがた
 8,10184,ガラルのすがた
-8,10185,ガラルのすがた
-8,10186,ダルマモード
+8,10185,れんげきのかた
+8,10186,ガラルのすがた
 8,10187,ガラルのすがた
 8,10188,ガラルのすがた
-8,10189,ローなすがた
-8,10190,ナイスフェイス
-8,10191,メスのすがた
-8,10192,けんのおう
-8,10193,たてのおう
-8,10194,ムゲンダイマックス
-8,10195,ガラルのすがた
-8,10196,ガラルのすがた
-8,10197,れんげきのかた
-8,10198,ガラルのすがた
-8,10199,ガラルのすがた
-8,10200,ガラルのすがた
-8,10201,ガラルのすがた
-8,10202,はくばじょうのすがた
-8,10203,こくばじょうのすがた
+8,10189,ガラルのすがた
+8,10190,はくばじょうのすがた
+8,10191,こくばじょうのすがた
+8,10192,ヒスイのすがた
+8,10193,ヒスイのすがた
+8,10194,ヒスイのすがた
+8,10195,ヒスイのすがた
+8,10196,ヒスイのすがた
+8,10197,ヒスイのすがた
+8,10198,ヒスイのすがた
+8,10199,オリジンフォルム
+8,10200,オリジンフォルム
+8,10201,ヒスイのすがた
+8,10202,ヒスイのすがた
+8,10203,しろすじのすがた
 8,10204,ヒスイのすがた
 8,10205,ヒスイのすがた
 8,10206,ヒスイのすがた
@@ -3796,36 +3885,24 @@ language,form_id,name
 8,10208,ヒスイのすがた
 8,10209,ヒスイのすがた
 8,10210,ヒスイのすがた
-8,10211,オリジンフォルム
-8,10212,オリジンフォルム
-8,10213,ヒスイのすがた
-8,10214,ヒスイのすがた
-8,10215,しろすじのすがた
-8,10216,ヒスイのすがた
-8,10217,ヒスイのすがた
-8,10218,ヒスイのすがた
-8,10219,ヒスイのすがた
-8,10220,ヒスイのすがた
-8,10221,ヒスイのすがた
-8,10222,ヒスイのすがた
-8,10223,メスのすがた
-8,10224,れいじゅうフォルム
-8,10225,パルデアのすがた
-8,10226,パルデアのすがた
-8,10227,パルデアのすがた
-8,10228,パルデアのすがた
-8,10229,メスのすがた
-8,10230,ブルーフェザー
-8,10231,イエローフェザー
-8,10232,ホワイトフェザー
-8,10233,マイティフォルム
-8,10234,とほフォルム
-8,10235,アカツキ
-8,10236,いどのめん
-8,10237,かまどのめん
-8,10238,いしずえのめん
-8,10243,テラスタルフォルム
-8,10244,ステラフォルム
+8,10211,メスのすがた
+8,10212,れいじゅうフォルム
+8,10213,パルデアのすがた
+8,10214,パルデアのすがた
+8,10215,パルデアのすがた
+8,10216,パルデアのすがた
+8,10217,メスのすがた
+8,10218,ブルーフェザー
+8,10219,イエローフェザー
+8,10220,ホワイトフェザー
+8,10221,マイティフォルム
+8,10222,とほフォルム
+8,10223,アカツキ
+8,10224,いどのめん
+8,10225,かまどのめん
+8,10226,いしずえのめん
+8,10231,テラスタルフォルム
+8,10232,ステラフォルム
 8,20001,あるすがた
 8,20002,あるすがた
 8,20003,あるすがた
@@ -3869,182 +3946,193 @@ language,form_id,name
 8,20041,ゲノセクトのすがた
 8,20042,ゲノセクトのすがた
 8,20043,かくごのすがた
-8,20044,ゆきぐにのもよう
-8,20045,せつげんのもよう
-8,20046,たいりくのもよう
-8,20047,ていえんのもよう
-8,20048,みやびなもよう
-8,20049,はなぞののもよう
-8,20050,モダンなもよう
-8,20051,マリンのもよう
-8,20052,ぐんとうのもよう
-8,20053,こうやのもよう
-8,20054,さじんのもよう
-8,20055,たいがのもよう
-8,20056,スコールのもよう
-8,20057,サバンナのもよう
-8,20058,たいようのもよう
-8,20059,オーシャンのもよう
-8,20060,ジャングルのもよう
-8,20061,ファンシーなもよう
-8,20062,ボールのもよう
-8,20063,きいろのはな
-8,20064,オレンジいろのはな
-8,20065,あおいはな
-8,20066,しろいはな
-8,20067,きいろのはな
-8,20068,オレンジいろのはな
-8,20069,あおいはな
-8,20070,しろいはな
-8,20071,きいろのはな
-8,20072,オレンジいろのはな
-8,20073,あおいはな
-8,20074,しろいはな
-8,20075,ハートカット
-8,20076,スターカット
-8,20077,ダイヤカット
-8,20078,レディカット
-8,20079,マダムカット
-8,20080,ジェントルカット
-8,20081,クイーンカット
-8,20082,カブキカット
-8,20083,キングダムカット
-8,20084,アクティブモード
-8,20085,ホウエンキャップ
-8,20086,シンオウキャップ
-8,20087,イッシュキャップ
-8,20088,カロスキャップ
-8,20089,アローラキャップ
-8,20090,りゅうせいのすがた
-8,20091,りゅうせいのすがた
-8,20092,りゅうせいのすがた
-8,20093,りゅうせいのすがた
-8,20094,りゅうせいのすがた
-8,20095,りゅうせいのすがた
-8,20096,だいだいいろのコア
-8,20097,きいろのコア
-8,20098,みどりいろのコア
-8,20099,みずいろのコア
-8,20100,あおいろのコア
-8,20101,むらさきいろのコア
-8,20102,ばれたすがた
-8,20104,５００ねんまえのいろ
-8,20105,キミにきめたキャップ
-8,20106,キョダイマックス
-8,20107,キョダイマックス
-8,20108,キョダイマックス
-8,20109,キョダイマックス
-8,20110,キョダイマックス
-8,20111,キョダイマックス
-8,20112,キョダイマックス
-8,20113,キョダイマックス
-8,20114,キョダイマックス
-8,20115,キョダイマックス
-8,20116,キョダイマックス
-8,20117,キョダイマックス
-8,20118,キョダイマックス
-8,20119,キョダイマックス
-8,20120,キョダイマックス
-8,20121,キョダイマックス
-8,20122,キョダイマックス
-8,20123,キョダイマックス
-8,20124,キョダイマックス
-8,20125,うのみのすがた
-8,20126,まるのみのすがた
-8,20127,キョダイマックス
-8,20128,キョダイマックス
-8,20131,キョダイマックス
-8,20132,キョダイマックス
-8,20133,ミルキィバニラ
-8,20134,ミルキィバニラ
-8,20135,ミルキィバニラ
-8,20136,ミルキィバニラ
-8,20137,ミルキィバニラ
-8,20138,ミルキィバニラ
-8,20139,ミルキィルビー
-8,20140,ミルキィルビー
-8,20141,ミルキィルビー
-8,20142,ミルキィルビー
-8,20143,ミルキィルビー
-8,20144,ミルキィルビー
-8,20145,ミルキィルビー
-8,20146,ミルキィまっちゃ
-8,20147,ミルキィまっちゃ
-8,20148,ミルキィまっちゃ
-8,20149,ミルキィまっちゃ
-8,20150,ミルキィまっちゃ
-8,20151,ミルキィまっちゃ
-8,20152,ミルキィまっちゃ
-8,20153,ミルキィミント
-8,20154,ミルキィミント
-8,20155,ミルキィミント
-8,20156,ミルキィミント
-8,20157,ミルキィミント
-8,20158,ミルキィミント
-8,20159,ミルキィミント
-8,20160,ミルキィレモン
-8,20161,ミルキィレモン
-8,20162,ミルキィレモン
-8,20163,ミルキィレモン
-8,20164,ミルキィレモン
-8,20165,ミルキィレモン
-8,20166,ミルキィレモン
-8,20167,ミルキィソルト
-8,20168,ミルキィソルト
-8,20169,ミルキィソルト
-8,20170,ミルキィソルト
-8,20171,ミルキィソルト
-8,20172,ミルキィソルト
-8,20173,ミルキィソルト
-8,20174,ルビーミックス
-8,20175,ルビーミックス
-8,20176,ルビーミックス
-8,20177,ルビーミックス
-8,20178,ルビーミックス
-8,20179,ルビーミックス
-8,20180,ルビーミックス
-8,20181,キャラメルミックス
-8,20182,キャラメルミックス
-8,20183,キャラメルミックス
-8,20184,キャラメルミックス
-8,20185,キャラメルミックス
-8,20186,キャラメルミックス
-8,20187,キャラメルミックス
-8,20188,トリプルミックス
-8,20189,トリプルミックス
-8,20190,トリプルミックス
-8,20191,トリプルミックス
-8,20192,トリプルミックス
-8,20193,トリプルミックス
-8,20194,トリプルミックス
-8,20195,キョダイマックス
-8,20196,はらぺこもよう
-8,20197,キョダイマックス
-8,20198,キョダイマックス
-8,20199,キョダイマックス
-8,20205,キョダイマックス
-8,20206,とうちゃん
-8,20207,ワールドキャップ
-8,20208,キョダイマックス
-8,20209,キングのすがた
-8,20210,キングのすがた
-8,20211,キングのすがた
-8,20212,クイーンのすがた
-8,20213,キングのすがた
-8,20214,４ひきかぞく
-8,20215,たれたすがた
-8,20216,のびたすがた
-8,20217,みつふしフォルム
-8,20218,せいげんけいたい
-8,20219,しっそうけいたい
-8,20220,ゆうえいけいたい
-8,20221,かっくうけいたい
-8,20222,リミテッドモード
-8,20223,ドライブモード
-8,20224,フロートモード
-8,20225,グライドモード
-8,20226,タカイモノのすがた
-8,20227,ケッサクのすがた
+8,20082,ゆきぐにのもよう
+8,20083,せつげんのもよう
+8,20084,たいりくのもよう
+8,20085,ていえんのもよう
+8,20086,みやびなもよう
+8,20087,はなぞののもよう
+8,20088,モダンなもよう
+8,20089,マリンのもよう
+8,20090,ぐんとうのもよう
+8,20091,こうやのもよう
+8,20092,さじんのもよう
+8,20093,たいがのもよう
+8,20094,スコールのもよう
+8,20095,サバンナのもよう
+8,20096,たいようのもよう
+8,20097,オーシャンのもよう
+8,20098,ジャングルのもよう
+8,20099,ファンシーなもよう
+8,20100,ボールのもよう
+8,20101,きいろのはな
+8,20102,オレンジいろのはな
+8,20103,あおいはな
+8,20104,しろいはな
+8,20105,きいろのはな
+8,20106,オレンジいろのはな
+8,20107,あおいはな
+8,20108,しろいはな
+8,20109,きいろのはな
+8,20110,オレンジいろのはな
+8,20111,あおいはな
+8,20112,しろいはな
+8,20113,ハートカット
+8,20114,スターカット
+8,20115,ダイヤカット
+8,20116,レディカット
+8,20117,マダムカット
+8,20118,ジェントルカット
+8,20119,クイーンカット
+8,20120,カブキカット
+8,20121,キングダムカット
+8,20122,アクティブモード
+8,20123,ぬしの　ラッタ
+8,20124,ホウエンキャップ
+8,20125,シンオウキャップ
+8,20126,イッシュキャップ
+8,20127,カロスキャップ
+8,20128,アローラキャップ
+8,20129,ぬしの　デカグース
+8,20130,ぬしの　クワガノン
+8,20131,ぬしの　ラランテス
+8,20132,ぬしの　エンニュート
+8,20133,りゅうせいのすがた
+8,20134,りゅうせいのすがた
+8,20135,りゅうせいのすがた
+8,20136,りゅうせいのすがた
+8,20137,りゅうせいのすがた
+8,20138,りゅうせいのすがた
+8,20139,だいだいいろのコア
+8,20140,きいろのコア
+8,20141,みどりいろのコア
+8,20142,みずいろのコア
+8,20143,あおいろのコア
+8,20144,むらさきいろのコア
+8,20145,ばれたすがた
+8,20146,ぬしの　ミミッキュ
+8,20148,ぬしの　ジャラランガ
+8,20149,５００ねんまえのいろ
+8,20150,キミにきめたキャップ
+8,20151,ぬしの　ガラガラ
+8,20152,ぬしの　アブリボン
+8,20153,ぬしの　オニシズクモ
+8,20154,ぬしの　トゲデマル
+8,20155,キョダイマックス
+8,20156,キョダイマックス
+8,20157,キョダイマックス
+8,20158,キョダイマックス
+8,20159,キョダイマックス
+8,20160,キョダイマックス
+8,20161,キョダイマックス
+8,20162,キョダイマックス
+8,20163,キョダイマックス
+8,20164,キョダイマックス
+8,20165,キョダイマックス
+8,20166,キョダイマックス
+8,20167,キョダイマックス
+8,20168,キョダイマックス
+8,20169,キョダイマックス
+8,20170,キョダイマックス
+8,20171,キョダイマックス
+8,20172,キョダイマックス
+8,20173,キョダイマックス
+8,20174,うのみのすがた
+8,20175,まるのみのすがた
+8,20176,キョダイマックス
+8,20177,キョダイマックス
+8,20180,キョダイマックス
+8,20181,キョダイマックス
+8,20182,ミルキィバニラ
+8,20183,ミルキィバニラ
+8,20184,ミルキィバニラ
+8,20185,ミルキィバニラ
+8,20186,ミルキィバニラ
+8,20187,ミルキィバニラ
+8,20188,ミルキィルビー
+8,20189,ミルキィルビー
+8,20190,ミルキィルビー
+8,20191,ミルキィルビー
+8,20192,ミルキィルビー
+8,20193,ミルキィルビー
+8,20194,ミルキィルビー
+8,20195,ミルキィまっちゃ
+8,20196,ミルキィまっちゃ
+8,20197,ミルキィまっちゃ
+8,20198,ミルキィまっちゃ
+8,20199,ミルキィまっちゃ
+8,20200,ミルキィまっちゃ
+8,20201,ミルキィまっちゃ
+8,20202,ミルキィミント
+8,20203,ミルキィミント
+8,20204,ミルキィミント
+8,20205,ミルキィミント
+8,20206,ミルキィミント
+8,20207,ミルキィミント
+8,20208,ミルキィミント
+8,20209,ミルキィレモン
+8,20210,ミルキィレモン
+8,20211,ミルキィレモン
+8,20212,ミルキィレモン
+8,20213,ミルキィレモン
+8,20214,ミルキィレモン
+8,20215,ミルキィレモン
+8,20216,ミルキィソルト
+8,20217,ミルキィソルト
+8,20218,ミルキィソルト
+8,20219,ミルキィソルト
+8,20220,ミルキィソルト
+8,20221,ミルキィソルト
+8,20222,ミルキィソルト
+8,20223,ルビーミックス
+8,20224,ルビーミックス
+8,20225,ルビーミックス
+8,20226,ルビーミックス
+8,20227,ルビーミックス
+8,20228,ルビーミックス
+8,20229,ルビーミックス
+8,20230,キャラメルミックス
+8,20231,キャラメルミックス
+8,20232,キャラメルミックス
+8,20233,キャラメルミックス
+8,20234,キャラメルミックス
+8,20235,キャラメルミックス
+8,20236,キャラメルミックス
+8,20237,トリプルミックス
+8,20238,トリプルミックス
+8,20239,トリプルミックス
+8,20240,トリプルミックス
+8,20241,トリプルミックス
+8,20242,トリプルミックス
+8,20243,トリプルミックス
+8,20244,キョダイマックス
+8,20245,はらぺこもよう
+8,20246,キョダイマックス
+8,20247,キョダイマックス
+8,20248,キョダイマックス
+8,20254,キョダイマックス
+8,20255,とうちゃん
+8,20256,ワールドキャップ
+8,20257,キョダイマックス
+8,20258,キングのすがた
+8,20259,キングのすがた
+8,20260,キングのすがた
+8,20261,クイーンのすがた
+8,20262,キングのすがた
+8,20263,４ひきかぞく
+8,20264,たれたすがた
+8,20265,のびたすがた
+8,20266,みつふしフォルム
+8,20267,せいげんけいたい
+8,20268,しっそうけいたい
+8,20269,ゆうえいけいたい
+8,20270,かっくうけいたい
+8,20271,リミテッドモード
+8,20272,ドライブモード
+8,20273,フロートモード
+8,20274,グライドモード
+8,20275,タカイモノのすがた
+8,20276,ケッサクのすがた
 9,201,某种样子
 9,351,飘浮泡泡的样子
 9,382,盖欧卡的样子
@@ -4133,85 +4221,87 @@ language,form_id,name
 9,10022,阿尔宙斯的样子
 9,10023,阿尔宙斯的样子
 9,10024,阿尔宙斯的样子
-9,10026,加热洛托姆
-9,10027,清洗洛托姆
-9,10028,结冰洛托姆
-9,10029,旋转洛托姆
-9,10030,切割洛托姆
-9,10031,起源形态
-9,10032,天空形态
-9,10034,蓝条纹的样子
-9,10035,达摩模式
-9,10036,舞步形态
+9,10025,加热洛托姆
+9,10026,清洗洛托姆
+9,10027,结冰洛托姆
+9,10028,旋转洛托姆
+9,10029,切割洛托姆
+9,10030,起源形态
+9,10031,天空形态
+9,10033,蓝条纹的样子
+9,10034,达摩模式
+9,10035,舞步形态
+9,10036,灵兽形态
 9,10037,灵兽形态
 9,10038,灵兽形态
-9,10039,灵兽形态
-9,10040,焰白酋雷姆
-9,10041,暗黑酋雷姆
-9,10042,超级妙蛙花
-9,10043,超级喷火龙Ｘ
-9,10044,超级喷火龙Ｙ
-9,10045,超级水箭龟
-9,10046,超级胡地
-9,10047,超级耿鬼
-9,10048,超级袋兽
-9,10049,超级凯罗斯
-9,10050,超级暴鲤龙
-9,10051,超级化石翼龙
-9,10052,超级超梦Ｘ
-9,10053,超级超梦Ｙ
-9,10054,超级电龙
-9,10055,超级巨钳螳螂
-9,10056,超级赫拉克罗斯
-9,10057,超级黑鲁加
-9,10058,超级班基拉斯
-9,10059,超级火焰鸡
-9,10060,超级沙奈朵
-9,10061,超级大嘴娃
-9,10062,超级波士可多拉
-9,10063,超级恰雷姆
-9,10064,超级雷电兽
-9,10065,超级诅咒娃娃
-9,10066,超级阿勃梭鲁
-9,10067,超级拉帝亚斯
-9,10068,超级拉帝欧斯
-9,10069,超级烈咬陆鲨
-9,10070,超级路卡利欧
-9,10071,超级暴雪王
-9,10072,阿尔宙斯的样子
-9,10073,永恒之花
-9,10074,雌性的样子
-9,10075,刀剑形态
-9,10076,小尺寸
-9,10077,大尺寸
-9,10078,特大尺寸
-9,10079,小尺寸
-9,10080,大尺寸
-9,10081,特大尺寸
-9,10082,超级大针蜂
-9,10083,超级大比鸟
-9,10090,超级呆壳兽
-9,10091,超级大钢蛇
-9,10092,超级蜥蜴王
-9,10093,超级巨沼怪
-9,10094,超级勾魂眼
-9,10095,超级巨牙鲨
-9,10096,超级喷火驼
-9,10097,超级七夕青鸟
-9,10098,超级冰鬼护
-9,10099,超级暴飞龙
-9,10100,超级巨金怪
+9,10039,焰白酋雷姆
+9,10040,暗黑酋雷姆
+9,10041,超级妙蛙花
+9,10042,超级喷火龙Ｘ
+9,10043,超级喷火龙Ｙ
+9,10044,超级水箭龟
+9,10045,超级胡地
+9,10046,超级耿鬼
+9,10047,超级袋兽
+9,10048,超级凯罗斯
+9,10049,超级暴鲤龙
+9,10050,超级化石翼龙
+9,10051,超级超梦Ｘ
+9,10052,超级超梦Ｙ
+9,10053,超级电龙
+9,10054,超级巨钳螳螂
+9,10055,超级赫拉克罗斯
+9,10056,超级黑鲁加
+9,10057,超级班基拉斯
+9,10058,超级火焰鸡
+9,10059,超级沙奈朵
+9,10060,超级大嘴娃
+9,10061,超级波士可多拉
+9,10062,超级恰雷姆
+9,10063,超级雷电兽
+9,10064,超级诅咒娃娃
+9,10065,超级阿勃梭鲁
+9,10066,超级拉帝亚斯
+9,10067,超级拉帝欧斯
+9,10068,超级烈咬陆鲨
+9,10069,超级路卡利欧
+9,10070,超级暴雪王
+9,10071,阿尔宙斯的样子
+9,10072,永恒之花
+9,10073,雌性的样子
+9,10074,刀剑形态
+9,10075,小尺寸
+9,10076,大尺寸
+9,10077,特大尺寸
+9,10078,小尺寸
+9,10079,大尺寸
+9,10080,特大尺寸
+9,10081,超级大针蜂
+9,10082,超级大比鸟
+9,10089,超级呆壳兽
+9,10090,超级大钢蛇
+9,10091,超级蜥蜴王
+9,10092,超级巨沼怪
+9,10093,超级勾魂眼
+9,10094,超级巨牙鲨
+9,10095,超级喷火驼
+9,10096,超级七夕青鸟
+9,10097,超级冰鬼护
+9,10098,超级暴飞龙
+9,10099,超级巨金怪
+9,10100,原始回归的样子
 9,10101,原始回归的样子
-9,10102,原始回归的样子
-9,10103,超级烈空坐
-9,10104,超级长耳兔
-9,10105,超级艾路雷朵
-9,10106,超级差不多娃娃
-9,10107,超级蒂安希
-9,10108,解放胡帕
+9,10102,超级烈空坐
+9,10103,超级长耳兔
+9,10104,超级艾路雷朵
+9,10105,超级差不多娃娃
+9,10106,超级蒂安希
+9,10107,解放胡帕
+9,10108,阿罗拉的样子
 9,10109,阿罗拉的样子
-9,10110,阿罗拉的样子
-9,10112,初始帽子
+9,10110,初始帽子
+9,10111,阿罗拉的样子
+9,10112,阿罗拉的样子
 9,10113,阿罗拉的样子
 9,10114,阿罗拉的样子
 9,10115,阿罗拉的样子
@@ -4226,69 +4316,79 @@ language,form_id,name
 9,10124,阿罗拉的样子
 9,10125,阿罗拉的样子
 9,10126,阿罗拉的样子
-9,10127,阿罗拉的样子
-9,10128,阿罗拉的样子
-9,10130,小智版甲贺忍蛙
-9,10131,１０％形态
-9,10132,１０％形态
-9,10133,５０％形态
-9,10134,完全体形态
-9,10137,啪滋啪滋风格
-9,10138,呼拉呼拉风格
-9,10139,轻盈轻盈风格
-9,10140,黑夜的样子
-9,10141,鱼群的样子
-9,10144,属性：战斗
-9,10145,属性：飞翔
-9,10146,属性：毒
-9,10147,属性：大地
-9,10148,属性：岩石
-9,10149,属性：虫子
-9,10150,属性：幽灵
-9,10151,属性：钢铁
-9,10152,属性：火焰
-9,10153,属性：清水
-9,10154,属性：青草
-9,10155,属性：电子
-9,10156,属性：精神
-9,10157,属性：冰雪
-9,10158,属性：龙
-9,10159,属性：黑暗
-9,10160,属性：妖精
-9,10161,红色核心
-9,10167,黄昏的样子
-9,10170,黄昏之鬃
-9,10171,拂晓之翼
-9,10172,究极奈克洛兹玛
+9,10128,小智版甲贺忍蛙
+9,10129,１０％形态
+9,10130,１０％形态
+9,10131,５０％形态
+9,10132,完全体形态
+9,10133,啪滋啪滋风格
+9,10134,呼拉呼拉风格
+9,10135,轻盈轻盈风格
+9,10136,黑夜的样子
+9,10137,鱼群的样子
+9,10138,属性：战斗
+9,10139,属性：飞翔
+9,10140,属性：毒
+9,10141,属性：大地
+9,10142,属性：岩石
+9,10143,属性：虫子
+9,10144,属性：幽灵
+9,10145,属性：钢铁
+9,10146,属性：火焰
+9,10147,属性：清水
+9,10148,属性：青草
+9,10149,属性：电子
+9,10150,属性：精神
+9,10151,属性：冰雪
+9,10152,属性：龙
+9,10153,属性：黑暗
+9,10154,属性：妖精
+9,10155,红色核心
+9,10157,黄昏的样子
+9,10158,黄昏之鬃
+9,10159,拂晓之翼
+9,10160,究极奈克洛兹玛
+9,10163,伽勒尔的样子
+9,10164,伽勒尔的样子
+9,10165,伽勒尔的样子
+9,10166,伽勒尔的样子
+9,10167,伽勒尔的样子
+9,10168,伽勒尔的样子
+9,10169,伽勒尔的样子
+9,10170,伽勒尔的样子
+9,10171,伽勒尔的样子
+9,10172,伽勒尔的样子
+9,10173,伽勒尔的样子
+9,10174,达摩模式
 9,10175,伽勒尔的样子
 9,10176,伽勒尔的样子
-9,10177,伽勒尔的样子
-9,10178,伽勒尔的样子
-9,10179,伽勒尔的样子
-9,10180,伽勒尔的样子
-9,10181,伽勒尔的样子
-9,10182,伽勒尔的样子
+9,10177,低调的样子
+9,10178,解冻头
+9,10179,雌性的样子
+9,10180,剑之王
+9,10181,盾之王
+9,10182,无极巨化
 9,10183,伽勒尔的样子
 9,10184,伽勒尔的样子
-9,10185,伽勒尔的样子
-9,10186,达摩模式
+9,10185,连击流
+9,10186,伽勒尔的样子
 9,10187,伽勒尔的样子
 9,10188,伽勒尔的样子
-9,10189,低调的样子
-9,10190,解冻头
-9,10191,雌性的样子
-9,10192,剑之王
-9,10193,盾之王
-9,10194,无极巨化
-9,10195,伽勒尔的样子
-9,10196,伽勒尔的样子
-9,10197,连击流
-9,10198,伽勒尔的样子
-9,10199,伽勒尔的样子
-9,10200,伽勒尔的样子
-9,10201,伽勒尔的样子
-9,10202,骑白马的样子
-9,10203,骑黑马的样子
+9,10189,伽勒尔的样子
+9,10190,骑白马的样子
+9,10191,骑黑马的样子
+9,10192,洗翠的样子
+9,10193,洗翠的样子
+9,10194,洗翠的样子
+9,10195,洗翠的样子
+9,10196,洗翠的样子
+9,10197,洗翠的样子
+9,10198,洗翠的样子
+9,10199,起源形态
+9,10200,起源形态
+9,10201,洗翠的样子
+9,10202,洗翠的样子
+9,10203,白条纹的样子
 9,10204,洗翠的样子
 9,10205,洗翠的样子
 9,10206,洗翠的样子
@@ -4296,36 +4396,24 @@ language,form_id,name
 9,10208,洗翠的样子
 9,10209,洗翠的样子
 9,10210,洗翠的样子
-9,10211,起源形态
-9,10212,起源形态
-9,10213,洗翠的样子
-9,10214,洗翠的样子
-9,10215,白条纹的样子
-9,10216,洗翠的样子
-9,10217,洗翠的样子
-9,10218,洗翠的样子
-9,10219,洗翠的样子
-9,10220,洗翠的样子
-9,10221,洗翠的样子
-9,10222,洗翠的样子
-9,10223,雌性的样子
-9,10224,灵兽形态
-9,10225,帕底亚的样子
-9,10226,帕底亚的样子
-9,10227,帕底亚的样子
-9,10228,帕底亚的样子
-9,10229,雌性的样子
-9,10230,蓝羽毛
-9,10231,黄羽毛
-9,10232,白羽毛
-9,10233,全能形态
-9,10234,徒步形态
-9,10235,赫月
-9,10236,水井面具
-9,10237,火灶面具
-9,10238,础石面具
-9,10243,太晶形态
-9,10244,星晶形态
+9,10211,雌性的样子
+9,10212,灵兽形态
+9,10213,帕底亚的样子
+9,10214,帕底亚的样子
+9,10215,帕底亚的样子
+9,10216,帕底亚的样子
+9,10217,雌性的样子
+9,10218,蓝羽毛
+9,10219,黄羽毛
+9,10220,白羽毛
+9,10221,全能形态
+9,10222,徒步形态
+9,10223,赫月
+9,10224,水井面具
+9,10225,火灶面具
+9,10226,础石面具
+9,10231,太晶形态
+9,10232,星晶形态
 9,20001,某种样子
 9,20002,某种样子
 9,20003,某种样子
@@ -4369,182 +4457,193 @@ language,form_id,name
 9,20041,盖诺赛克特的样子
 9,20042,盖诺赛克特的样子
 9,20043,觉悟的样子
-9,20044,雪国花纹
-9,20045,雪原花纹
-9,20046,大陆花纹
-9,20047,庭园花纹
-9,20048,高雅花纹
-9,20049,花园花纹
-9,20050,摩登花纹
-9,20051,大海花纹
-9,20052,群岛花纹
-9,20053,荒野花纹
-9,20054,沙尘花纹
-9,20055,大河花纹
-9,20056,骤雨花纹
-9,20057,热带草原花纹
-9,20058,太阳花纹
-9,20059,大洋花纹
-9,20060,热带雨林花纹
-9,20061,幻彩花纹
-9,20062,球球花纹
-9,20063,黄花
-9,20064,橙花
-9,20065,蓝花
-9,20066,白花
-9,20067,黄花
-9,20068,橙花
-9,20069,蓝花
-9,20070,白花
-9,20071,黄花
-9,20072,橙花
-9,20073,蓝花
-9,20074,白花
-9,20075,心形造型
-9,20076,星形造型
-9,20077,菱形造型
-9,20078,淑女造型
-9,20079,贵妇造型
-9,20080,绅士造型
-9,20081,女王造型
-9,20082,歌舞伎造型
-9,20083,国王造型
-9,20084,活跃模式
-9,20085,丰缘帽子
-9,20086,神奥帽子
-9,20087,合众帽子
-9,20088,卡洛斯帽子
-9,20089,阿罗拉帽子
-9,20090,流星的样子
-9,20091,流星的样子
-9,20092,流星的样子
-9,20093,流星的样子
-9,20094,流星的样子
-9,20095,流星的样子
-9,20096,橙色核心
-9,20097,黄色核心
-9,20098,绿色核心
-9,20099,浅蓝色核心
-9,20100,蓝色核心
-9,20101,紫色核心
-9,20102,现形的样子
-9,20104,５００年前的颜色
-9,20105,就决定是你了之帽子
-9,20106,超极巨化
-9,20107,超极巨化
-9,20108,超极巨化
-9,20109,超极巨化
-9,20110,超极巨化
-9,20111,超极巨化
-9,20112,超极巨化
-9,20113,超极巨化
-9,20114,超极巨化
-9,20115,超极巨化
-9,20116,超极巨化
-9,20117,超极巨化
-9,20118,超极巨化
-9,20119,超极巨化
-9,20120,超极巨化
-9,20121,超极巨化
-9,20122,超极巨化
-9,20123,超极巨化
-9,20124,超极巨化
-9,20125,一口吞的样子
-9,20126,大口吞的样子
-9,20127,超极巨化
-9,20128,超极巨化
-9,20131,超极巨化
-9,20132,超极巨化
-9,20133,奶香香草
-9,20134,奶香香草
-9,20135,奶香香草
-9,20136,奶香香草
-9,20137,奶香香草
-9,20138,奶香香草
-9,20139,奶香红钻
-9,20140,奶香红钻
-9,20141,奶香红钻
-9,20142,奶香红钻
-9,20143,奶香红钻
-9,20144,奶香红钻
-9,20145,奶香红钻
-9,20146,奶香抹茶
-9,20147,奶香抹茶
-9,20148,奶香抹茶
-9,20149,奶香抹茶
-9,20150,奶香抹茶
-9,20151,奶香抹茶
-9,20152,奶香抹茶
-9,20153,奶香薄荷
-9,20154,奶香薄荷
-9,20155,奶香薄荷
-9,20156,奶香薄荷
-9,20157,奶香薄荷
-9,20158,奶香薄荷
-9,20159,奶香薄荷
-9,20160,奶香柠檬
-9,20161,奶香柠檬
-9,20162,奶香柠檬
-9,20163,奶香柠檬
-9,20164,奶香柠檬
-9,20165,奶香柠檬
-9,20166,奶香柠檬
-9,20167,奶香雪盐
-9,20168,奶香雪盐
-9,20169,奶香雪盐
-9,20170,奶香雪盐
-9,20171,奶香雪盐
-9,20172,奶香雪盐
-9,20173,奶香雪盐
-9,20174,红钻综合
-9,20175,红钻综合
-9,20176,红钻综合
-9,20177,红钻综合
-9,20178,红钻综合
-9,20179,红钻综合
-9,20180,红钻综合
-9,20181,焦糖综合
-9,20182,焦糖综合
-9,20183,焦糖综合
-9,20184,焦糖综合
-9,20185,焦糖综合
-9,20186,焦糖综合
-9,20187,焦糖综合
-9,20188,三色综合
-9,20189,三色综合
-9,20190,三色综合
-9,20191,三色综合
-9,20192,三色综合
-9,20193,三色综合
-9,20194,三色综合
-9,20195,超极巨化
-9,20196,空腹花纹
-9,20197,超极巨化
-9,20198,超极巨化
-9,20199,超极巨化
-9,20205,超极巨化
-9,20206,阿爸
-9,20207,世界帽子
-9,20208,超极巨化
-9,20209,王的样子
-9,20210,王的样子
-9,20211,王的样子
-9,20212,女王的样子
-9,20213,王的样子
-9,20214,四只家庭
-9,20215,下垂姿势
-9,20216,平挺姿势
-9,20217,三节形态
-9,20218,制限形态
-9,20219,疾驰形态
-9,20220,破浪形态
-9,20221,乘风形态
-9,20222,受限模式
-9,20223,行驶模式
-9,20224,浮水模式
-9,20225,滑翔模式
-9,20226,高档货的样子
-9,20227,杰作的样子
+9,20082,雪国花纹
+9,20083,雪原花纹
+9,20084,大陆花纹
+9,20085,庭园花纹
+9,20086,高雅花纹
+9,20087,花园花纹
+9,20088,摩登花纹
+9,20089,大海花纹
+9,20090,群岛花纹
+9,20091,荒野花纹
+9,20092,沙尘花纹
+9,20093,大河花纹
+9,20094,骤雨花纹
+9,20095,热带草原花纹
+9,20096,太阳花纹
+9,20097,大洋花纹
+9,20098,热带雨林花纹
+9,20099,幻彩花纹
+9,20100,球球花纹
+9,20101,黄花
+9,20102,橙花
+9,20103,蓝花
+9,20104,白花
+9,20105,黄花
+9,20106,橙花
+9,20107,蓝花
+9,20108,白花
+9,20109,黄花
+9,20110,橙花
+9,20111,蓝花
+9,20112,白花
+9,20113,心形造型
+9,20114,星形造型
+9,20115,菱形造型
+9,20116,淑女造型
+9,20117,贵妇造型
+9,20118,绅士造型
+9,20119,女王造型
+9,20120,歌舞伎造型
+9,20121,国王造型
+9,20122,活跃模式
+9,20123,霸主拉达
+9,20124,丰缘帽子
+9,20125,神奥帽子
+9,20126,合众帽子
+9,20127,卡洛斯帽子
+9,20128,阿罗拉帽子
+9,20129,霸主猫鼬探长
+9,20130,霸主锹农炮虫
+9,20131,霸主兰螳花
+9,20132,霸主焰后蜥
+9,20133,流星的样子
+9,20134,流星的样子
+9,20135,流星的样子
+9,20136,流星的样子
+9,20137,流星的样子
+9,20138,流星的样子
+9,20139,橙色核心
+9,20140,黄色核心
+9,20141,绿色核心
+9,20142,浅蓝色核心
+9,20143,蓝色核心
+9,20144,紫色核心
+9,20145,现形的样子
+9,20146,霸主谜拟Ｑ
+9,20148,霸主杖尾鳞甲龙
+9,20149,５００年前的颜色
+9,20150,就决定是你了之帽子
+9,20151,霸主嘎啦嘎啦
+9,20152,霸主蝶结萌虻
+9,20153,霸主滴蛛霸
+9,20154,霸主托戈德玛尔
+9,20155,超极巨化
+9,20156,超极巨化
+9,20157,超极巨化
+9,20158,超极巨化
+9,20159,超极巨化
+9,20160,超极巨化
+9,20161,超极巨化
+9,20162,超极巨化
+9,20163,超极巨化
+9,20164,超极巨化
+9,20165,超极巨化
+9,20166,超极巨化
+9,20167,超极巨化
+9,20168,超极巨化
+9,20169,超极巨化
+9,20170,超极巨化
+9,20171,超极巨化
+9,20172,超极巨化
+9,20173,超极巨化
+9,20174,一口吞的样子
+9,20175,大口吞的样子
+9,20176,超极巨化
+9,20177,超极巨化
+9,20180,超极巨化
+9,20181,超极巨化
+9,20182,奶香香草
+9,20183,奶香香草
+9,20184,奶香香草
+9,20185,奶香香草
+9,20186,奶香香草
+9,20187,奶香香草
+9,20188,奶香红钻
+9,20189,奶香红钻
+9,20190,奶香红钻
+9,20191,奶香红钻
+9,20192,奶香红钻
+9,20193,奶香红钻
+9,20194,奶香红钻
+9,20195,奶香抹茶
+9,20196,奶香抹茶
+9,20197,奶香抹茶
+9,20198,奶香抹茶
+9,20199,奶香抹茶
+9,20200,奶香抹茶
+9,20201,奶香抹茶
+9,20202,奶香薄荷
+9,20203,奶香薄荷
+9,20204,奶香薄荷
+9,20205,奶香薄荷
+9,20206,奶香薄荷
+9,20207,奶香薄荷
+9,20208,奶香薄荷
+9,20209,奶香柠檬
+9,20210,奶香柠檬
+9,20211,奶香柠檬
+9,20212,奶香柠檬
+9,20213,奶香柠檬
+9,20214,奶香柠檬
+9,20215,奶香柠檬
+9,20216,奶香雪盐
+9,20217,奶香雪盐
+9,20218,奶香雪盐
+9,20219,奶香雪盐
+9,20220,奶香雪盐
+9,20221,奶香雪盐
+9,20222,奶香雪盐
+9,20223,红钻综合
+9,20224,红钻综合
+9,20225,红钻综合
+9,20226,红钻综合
+9,20227,红钻综合
+9,20228,红钻综合
+9,20229,红钻综合
+9,20230,焦糖综合
+9,20231,焦糖综合
+9,20232,焦糖综合
+9,20233,焦糖综合
+9,20234,焦糖综合
+9,20235,焦糖综合
+9,20236,焦糖综合
+9,20237,三色综合
+9,20238,三色综合
+9,20239,三色综合
+9,20240,三色综合
+9,20241,三色综合
+9,20242,三色综合
+9,20243,三色综合
+9,20244,超极巨化
+9,20245,空腹花纹
+9,20246,超极巨化
+9,20247,超极巨化
+9,20248,超极巨化
+9,20254,超极巨化
+9,20255,阿爸
+9,20256,世界帽子
+9,20257,超极巨化
+9,20258,王的样子
+9,20259,王的样子
+9,20260,王的样子
+9,20261,女王的样子
+9,20262,王的样子
+9,20263,四只家庭
+9,20264,下垂姿势
+9,20265,平挺姿势
+9,20266,三节形态
+9,20267,制限形态
+9,20268,疾驰形态
+9,20269,破浪形态
+9,20270,乘风形态
+9,20271,受限模式
+9,20272,行驶模式
+9,20273,浮水模式
+9,20274,滑翔模式
+9,20275,高档货的样子
+9,20276,杰作的样子
 10,201,某種樣子
 10,351,飄浮泡泡的樣子
 10,382,蓋歐卡的樣子
@@ -4633,85 +4732,87 @@ language,form_id,name
 10,10022,阿爾宙斯的樣子
 10,10023,阿爾宙斯的樣子
 10,10024,阿爾宙斯的樣子
-10,10026,加熱洛托姆
-10,10027,清洗洛托姆
-10,10028,結冰洛托姆
-10,10029,旋轉洛托姆
-10,10030,切割洛托姆
-10,10031,起源形態
-10,10032,天空形態
-10,10034,藍條紋的樣子
-10,10035,達摩模式
-10,10036,舞步形態
+10,10025,加熱洛托姆
+10,10026,清洗洛托姆
+10,10027,結冰洛托姆
+10,10028,旋轉洛托姆
+10,10029,切割洛托姆
+10,10030,起源形態
+10,10031,天空形態
+10,10033,藍條紋的樣子
+10,10034,達摩模式
+10,10035,舞步形態
+10,10036,靈獸形態
 10,10037,靈獸形態
 10,10038,靈獸形態
-10,10039,靈獸形態
-10,10040,焰白酋雷姆
-10,10041,闇黑酋雷姆
-10,10042,超級妙蛙花
-10,10043,超級噴火龍Ｘ
-10,10044,超級噴火龍Ｙ
-10,10045,超級水箭龜
-10,10046,超級胡地
-10,10047,超級耿鬼
-10,10048,超級袋獸
-10,10049,超級凱羅斯
-10,10050,超級暴鯉龍
-10,10051,超級化石翼龍
-10,10052,超級超夢Ｘ
-10,10053,超級超夢Ｙ
-10,10054,超級電龍
-10,10055,超級巨鉗螳螂
-10,10056,超級赫拉克羅斯
-10,10057,超級黑魯加
-10,10058,超級班基拉斯
-10,10059,超級火焰雞
-10,10060,超級沙奈朵
-10,10061,超級大嘴娃
-10,10062,超級波士可多拉
-10,10063,超級恰雷姆
-10,10064,超級雷電獸
-10,10065,超級詛咒娃娃
-10,10066,超級阿勃梭魯
-10,10067,超級拉帝亞斯
-10,10068,超級拉帝歐斯
-10,10069,超級烈咬陸鯊
-10,10070,超級路卡利歐
-10,10071,超級暴雪王
-10,10072,阿爾宙斯的樣子
-10,10073,永恆之花
-10,10074,雌性的樣子
-10,10075,刀劍形態
-10,10076,小尺寸
-10,10077,大尺寸
-10,10078,特大尺寸
-10,10079,小尺寸
-10,10080,大尺寸
-10,10081,特大尺寸
-10,10082,超級大針蜂
-10,10083,超級大比鳥
-10,10090,超級呆殼獸
-10,10091,超級大鋼蛇
-10,10092,超級蜥蜴王
-10,10093,超級巨沼怪
-10,10094,超級勾魂眼
-10,10095,超級巨牙鯊
-10,10096,超級噴火駝
-10,10097,超級七夕青鳥
-10,10098,超級冰鬼護
-10,10099,超級暴飛龍
-10,10100,超級巨金怪
+10,10039,焰白酋雷姆
+10,10040,闇黑酋雷姆
+10,10041,超級妙蛙花
+10,10042,超級噴火龍Ｘ
+10,10043,超級噴火龍Ｙ
+10,10044,超級水箭龜
+10,10045,超級胡地
+10,10046,超級耿鬼
+10,10047,超級袋獸
+10,10048,超級凱羅斯
+10,10049,超級暴鯉龍
+10,10050,超級化石翼龍
+10,10051,超級超夢Ｘ
+10,10052,超級超夢Ｙ
+10,10053,超級電龍
+10,10054,超級巨鉗螳螂
+10,10055,超級赫拉克羅斯
+10,10056,超級黑魯加
+10,10057,超級班基拉斯
+10,10058,超級火焰雞
+10,10059,超級沙奈朵
+10,10060,超級大嘴娃
+10,10061,超級波士可多拉
+10,10062,超級恰雷姆
+10,10063,超級雷電獸
+10,10064,超級詛咒娃娃
+10,10065,超級阿勃梭魯
+10,10066,超級拉帝亞斯
+10,10067,超級拉帝歐斯
+10,10068,超級烈咬陸鯊
+10,10069,超級路卡利歐
+10,10070,超級暴雪王
+10,10071,阿爾宙斯的樣子
+10,10072,永恆之花
+10,10073,雌性的樣子
+10,10074,刀劍形態
+10,10075,小尺寸
+10,10076,大尺寸
+10,10077,特大尺寸
+10,10078,小尺寸
+10,10079,大尺寸
+10,10080,特大尺寸
+10,10081,超級大針蜂
+10,10082,超級大比鳥
+10,10089,超級呆殼獸
+10,10090,超級大鋼蛇
+10,10091,超級蜥蜴王
+10,10092,超級巨沼怪
+10,10093,超級勾魂眼
+10,10094,超級巨牙鯊
+10,10095,超級噴火駝
+10,10096,超級七夕青鳥
+10,10097,超級冰鬼護
+10,10098,超級暴飛龍
+10,10099,超級巨金怪
+10,10100,原始回歸的樣子
 10,10101,原始回歸的樣子
-10,10102,原始回歸的樣子
-10,10103,超級烈空坐
-10,10104,超級長耳兔
-10,10105,超級艾路雷朵
-10,10106,超級差不多娃娃
-10,10107,超級蒂安希
-10,10108,解放胡帕
+10,10102,超級烈空坐
+10,10103,超級長耳兔
+10,10104,超級艾路雷朵
+10,10105,超級差不多娃娃
+10,10106,超級蒂安希
+10,10107,解放胡帕
+10,10108,阿羅拉的樣子
 10,10109,阿羅拉的樣子
-10,10110,阿羅拉的樣子
-10,10112,初始帽子
+10,10110,初始帽子
+10,10111,阿羅拉的樣子
+10,10112,阿羅拉的樣子
 10,10113,阿羅拉的樣子
 10,10114,阿羅拉的樣子
 10,10115,阿羅拉的樣子
@@ -4726,69 +4827,79 @@ language,form_id,name
 10,10124,阿羅拉的樣子
 10,10125,阿羅拉的樣子
 10,10126,阿羅拉的樣子
-10,10127,阿羅拉的樣子
-10,10128,阿羅拉的樣子
-10,10130,小智版甲賀忍蛙
-10,10131,１０％形態
-10,10132,１０％形態
-10,10133,５０％形態
-10,10134,完全體形態
-10,10137,啪滋啪滋風格
-10,10138,呼拉呼拉風格
-10,10139,輕盈輕盈風格
-10,10140,黑夜的樣子
-10,10141,魚群的樣子
-10,10144,屬性：戰鬥
-10,10145,屬性：飛翔
-10,10146,屬性：毒
-10,10147,屬性：大地
-10,10148,屬性：岩石
-10,10149,屬性：蟲子
-10,10150,屬性：幽靈
-10,10151,屬性：鋼鐵
-10,10152,屬性：火焰
-10,10153,屬性：清水
-10,10154,屬性：青草
-10,10155,屬性：電子
-10,10156,屬性：精神
-10,10157,屬性：冰雪
-10,10158,屬性：龍
-10,10159,屬性：黑暗
-10,10160,屬性：妖精
-10,10161,紅色核心
-10,10167,黃昏的樣子
-10,10170,黃昏之鬃
-10,10171,拂曉之翼
-10,10172,究極奈克洛茲瑪
+10,10128,小智版甲賀忍蛙
+10,10129,１０％形態
+10,10130,１０％形態
+10,10131,５０％形態
+10,10132,完全體形態
+10,10133,啪滋啪滋風格
+10,10134,呼拉呼拉風格
+10,10135,輕盈輕盈風格
+10,10136,黑夜的樣子
+10,10137,魚群的樣子
+10,10138,屬性：戰鬥
+10,10139,屬性：飛翔
+10,10140,屬性：毒
+10,10141,屬性：大地
+10,10142,屬性：岩石
+10,10143,屬性：蟲子
+10,10144,屬性：幽靈
+10,10145,屬性：鋼鐵
+10,10146,屬性：火焰
+10,10147,屬性：清水
+10,10148,屬性：青草
+10,10149,屬性：電子
+10,10150,屬性：精神
+10,10151,屬性：冰雪
+10,10152,屬性：龍
+10,10153,屬性：黑暗
+10,10154,屬性：妖精
+10,10155,紅色核心
+10,10157,黃昏的樣子
+10,10158,黃昏之鬃
+10,10159,拂曉之翼
+10,10160,究極奈克洛茲瑪
+10,10163,伽勒爾的樣子
+10,10164,伽勒爾的樣子
+10,10165,伽勒爾的樣子
+10,10166,伽勒爾的樣子
+10,10167,伽勒爾的樣子
+10,10168,伽勒爾的樣子
+10,10169,伽勒爾的樣子
+10,10170,伽勒爾的樣子
+10,10171,伽勒爾的樣子
+10,10172,伽勒爾的樣子
+10,10173,伽勒爾的樣子
+10,10174,達摩模式
 10,10175,伽勒爾的樣子
 10,10176,伽勒爾的樣子
-10,10177,伽勒爾的樣子
-10,10178,伽勒爾的樣子
-10,10179,伽勒爾的樣子
-10,10180,伽勒爾的樣子
-10,10181,伽勒爾的樣子
-10,10182,伽勒爾的樣子
+10,10177,低調的樣子
+10,10178,解凍頭
+10,10179,雌性的樣子
+10,10180,劍之王
+10,10181,盾之王
+10,10182,無極巨化
 10,10183,伽勒爾的樣子
 10,10184,伽勒爾的樣子
-10,10185,伽勒爾的樣子
-10,10186,達摩模式
+10,10185,連擊流
+10,10186,伽勒爾的樣子
 10,10187,伽勒爾的樣子
 10,10188,伽勒爾的樣子
-10,10189,低調的樣子
-10,10190,解凍頭
-10,10191,雌性的樣子
-10,10192,劍之王
-10,10193,盾之王
-10,10194,無極巨化
-10,10195,伽勒爾的樣子
-10,10196,伽勒爾的樣子
-10,10197,連擊流
-10,10198,伽勒爾的樣子
-10,10199,伽勒爾的樣子
-10,10200,伽勒爾的樣子
-10,10201,伽勒爾的樣子
-10,10202,騎白馬的樣子
-10,10203,騎黑馬的樣子
+10,10189,伽勒爾的樣子
+10,10190,騎白馬的樣子
+10,10191,騎黑馬的樣子
+10,10192,洗翠的樣子
+10,10193,洗翠的樣子
+10,10194,洗翠的樣子
+10,10195,洗翠的樣子
+10,10196,洗翠的樣子
+10,10197,洗翠的樣子
+10,10198,洗翠的樣子
+10,10199,起源形態
+10,10200,起源形態
+10,10201,洗翠的樣子
+10,10202,洗翠的樣子
+10,10203,白條紋的樣子
 10,10204,洗翠的樣子
 10,10205,洗翠的樣子
 10,10206,洗翠的樣子
@@ -4796,36 +4907,24 @@ language,form_id,name
 10,10208,洗翠的樣子
 10,10209,洗翠的樣子
 10,10210,洗翠的樣子
-10,10211,起源形態
-10,10212,起源形態
-10,10213,洗翠的樣子
-10,10214,洗翠的樣子
-10,10215,白條紋的樣子
-10,10216,洗翠的樣子
-10,10217,洗翠的樣子
-10,10218,洗翠的樣子
-10,10219,洗翠的樣子
-10,10220,洗翠的樣子
-10,10221,洗翠的樣子
-10,10222,洗翠的樣子
-10,10223,雌性的樣子
-10,10224,靈獸形態
-10,10225,帕底亞的樣子
-10,10226,帕底亞的樣子
-10,10227,帕底亞的樣子
-10,10228,帕底亞的樣子
-10,10229,雌性的樣子
-10,10230,藍羽毛
-10,10231,黃羽毛
-10,10232,白羽毛
-10,10233,全能形態
-10,10234,徒步形態
-10,10235,赫月
-10,10236,水井面具
-10,10237,火灶面具
-10,10238,礎石面具
-10,10243,太晶形態
-10,10244,星晶形態
+10,10211,雌性的樣子
+10,10212,靈獸形態
+10,10213,帕底亞的樣子
+10,10214,帕底亞的樣子
+10,10215,帕底亞的樣子
+10,10216,帕底亞的樣子
+10,10217,雌性的樣子
+10,10218,藍羽毛
+10,10219,黃羽毛
+10,10220,白羽毛
+10,10221,全能形態
+10,10222,徒步形態
+10,10223,赫月
+10,10224,水井面具
+10,10225,火灶面具
+10,10226,礎石面具
+10,10231,太晶形態
+10,10232,星晶形態
 10,20001,某種樣子
 10,20002,某種樣子
 10,20003,某種樣子
@@ -4869,179 +4968,190 @@ language,form_id,name
 10,20041,蓋諾賽克特的樣子
 10,20042,蓋諾賽克特的樣子
 10,20043,覺悟的樣子
-10,20044,雪國花紋
-10,20045,雪原花紋
-10,20046,大陸花紋
-10,20047,庭園花紋
-10,20048,高雅花紋
-10,20049,花園花紋
-10,20050,摩登花紋
-10,20051,大海花紋
-10,20052,群島花紋
-10,20053,荒野花紋
-10,20054,沙塵花紋
-10,20055,大河花紋
-10,20056,驟雨花紋
-10,20057,熱帶草原花紋
-10,20058,太陽花紋
-10,20059,大洋花紋
-10,20060,熱帶雨林花紋
-10,20061,幻彩花紋
-10,20062,球球花紋
-10,20063,黃花
-10,20064,橙花
-10,20065,藍花
-10,20066,白花
-10,20067,黃花
-10,20068,橙花
-10,20069,藍花
-10,20070,白花
-10,20071,黃花
-10,20072,橙花
-10,20073,藍花
-10,20074,白花
-10,20075,心形造型
-10,20076,星形造型
-10,20077,菱形造型
-10,20078,淑女造型
-10,20079,貴婦造型
-10,20080,紳士造型
-10,20081,女王造型
-10,20082,歌舞伎造型
-10,20083,國王造型
-10,20084,活躍模式
-10,20085,豐緣帽子
-10,20086,神奧帽子
-10,20087,合眾帽子
-10,20088,卡洛斯帽子
-10,20089,阿羅拉帽子
-10,20090,流星的樣子
-10,20091,流星的樣子
-10,20092,流星的樣子
-10,20093,流星的樣子
-10,20094,流星的樣子
-10,20095,流星的樣子
-10,20096,橙色核心
-10,20097,黃色核心
-10,20098,綠色核心
-10,20099,淺藍色核心
-10,20100,藍色核心
-10,20101,紫色核心
-10,20102,現形的樣子
-10,20104,５００年前的顏色
-10,20105,就決定是你了之帽子
-10,20106,超極巨化
-10,20107,超極巨化
-10,20108,超極巨化
-10,20109,超極巨化
-10,20110,超極巨化
-10,20111,超極巨化
-10,20112,超極巨化
-10,20113,超極巨化
-10,20114,超極巨化
-10,20115,超極巨化
-10,20116,超極巨化
-10,20117,超極巨化
-10,20118,超極巨化
-10,20119,超極巨化
-10,20120,超極巨化
-10,20121,超極巨化
-10,20122,超極巨化
-10,20123,超極巨化
-10,20124,超極巨化
-10,20125,一口吞的樣子
-10,20126,大口吞的樣子
-10,20127,超極巨化
-10,20128,超極巨化
-10,20131,超極巨化
-10,20132,超極巨化
-10,20133,奶香香草
-10,20134,奶香香草
-10,20135,奶香香草
-10,20136,奶香香草
-10,20137,奶香香草
-10,20138,奶香香草
-10,20139,奶香紅鑽
-10,20140,奶香紅鑽
-10,20141,奶香紅鑽
-10,20142,奶香紅鑽
-10,20143,奶香紅鑽
-10,20144,奶香紅鑽
-10,20145,奶香紅鑽
-10,20146,奶香抹茶
-10,20147,奶香抹茶
-10,20148,奶香抹茶
-10,20149,奶香抹茶
-10,20150,奶香抹茶
-10,20151,奶香抹茶
-10,20152,奶香抹茶
-10,20153,奶香薄荷
-10,20154,奶香薄荷
-10,20155,奶香薄荷
-10,20156,奶香薄荷
-10,20157,奶香薄荷
-10,20158,奶香薄荷
-10,20159,奶香薄荷
-10,20160,奶香檸檬
-10,20161,奶香檸檬
-10,20162,奶香檸檬
-10,20163,奶香檸檬
-10,20164,奶香檸檬
-10,20165,奶香檸檬
-10,20166,奶香檸檬
-10,20167,奶香雪鹽
-10,20168,奶香雪鹽
-10,20169,奶香雪鹽
-10,20170,奶香雪鹽
-10,20171,奶香雪鹽
-10,20172,奶香雪鹽
-10,20173,奶香雪鹽
-10,20174,紅鑽綜合
-10,20175,紅鑽綜合
-10,20176,紅鑽綜合
-10,20177,紅鑽綜合
-10,20178,紅鑽綜合
-10,20179,紅鑽綜合
-10,20180,紅鑽綜合
-10,20181,焦糖綜合
-10,20182,焦糖綜合
-10,20183,焦糖綜合
-10,20184,焦糖綜合
-10,20185,焦糖綜合
-10,20186,焦糖綜合
-10,20187,焦糖綜合
-10,20188,三色綜合
-10,20189,三色綜合
-10,20190,三色綜合
-10,20191,三色綜合
-10,20192,三色綜合
-10,20193,三色綜合
-10,20194,三色綜合
-10,20195,超極巨化
-10,20196,空腹花紋
-10,20197,超極巨化
-10,20198,超極巨化
-10,20199,超極巨化
-10,20205,超極巨化
-10,20206,阿爸
-10,20207,世界帽子
-10,20208,超極巨化
-10,20209,王的樣子
-10,20210,王的樣子
-10,20211,王的樣子
-10,20212,女王的樣子
-10,20213,王的樣子
-10,20214,四隻家庭
-10,20215,下垂姿勢
-10,20216,平挺姿勢
-10,20217,三節形態
-10,20218,制限形態
-10,20219,疾馳形態
-10,20220,破浪形態
-10,20221,乘風形態
-10,20222,受限模式
-10,20223,行駛模式
-10,20224,浮水模式
-10,20225,滑翔模式
-10,20226,高檔貨的樣子
-10,20227,傑作的樣子
+10,20082,雪國花紋
+10,20083,雪原花紋
+10,20084,大陸花紋
+10,20085,庭園花紋
+10,20086,高雅花紋
+10,20087,花園花紋
+10,20088,摩登花紋
+10,20089,大海花紋
+10,20090,群島花紋
+10,20091,荒野花紋
+10,20092,沙塵花紋
+10,20093,大河花紋
+10,20094,驟雨花紋
+10,20095,熱帶草原花紋
+10,20096,太陽花紋
+10,20097,大洋花紋
+10,20098,熱帶雨林花紋
+10,20099,幻彩花紋
+10,20100,球球花紋
+10,20101,黃花
+10,20102,橙花
+10,20103,藍花
+10,20104,白花
+10,20105,黃花
+10,20106,橙花
+10,20107,藍花
+10,20108,白花
+10,20109,黃花
+10,20110,橙花
+10,20111,藍花
+10,20112,白花
+10,20113,心形造型
+10,20114,星形造型
+10,20115,菱形造型
+10,20116,淑女造型
+10,20117,貴婦造型
+10,20118,紳士造型
+10,20119,女王造型
+10,20120,歌舞伎造型
+10,20121,國王造型
+10,20122,活躍模式
+10,20123,霸主拉達
+10,20124,豐緣帽子
+10,20125,神奧帽子
+10,20126,合眾帽子
+10,20127,卡洛斯帽子
+10,20128,阿羅拉帽子
+10,20129,霸主貓鼬探長
+10,20130,霸主鍬農炮蟲
+10,20131,霸主蘭螳花
+10,20132,霸主焰后蜥
+10,20133,流星的樣子
+10,20134,流星的樣子
+10,20135,流星的樣子
+10,20136,流星的樣子
+10,20137,流星的樣子
+10,20138,流星的樣子
+10,20139,橙色核心
+10,20140,黃色核心
+10,20141,綠色核心
+10,20142,淺藍色核心
+10,20143,藍色核心
+10,20144,紫色核心
+10,20145,現形的樣子
+10,20146,霸主謎擬Ｑ
+10,20148,霸主杖尾鱗甲龍
+10,20149,５００年前的顏色
+10,20150,就決定是你了之帽子
+10,20151,霸主嘎啦嘎啦
+10,20152,霸主蝶結萌虻
+10,20153,霸主滴蛛霸
+10,20154,霸主托戈德瑪爾
+10,20155,超極巨化
+10,20156,超極巨化
+10,20157,超極巨化
+10,20158,超極巨化
+10,20159,超極巨化
+10,20160,超極巨化
+10,20161,超極巨化
+10,20162,超極巨化
+10,20163,超極巨化
+10,20164,超極巨化
+10,20165,超極巨化
+10,20166,超極巨化
+10,20167,超極巨化
+10,20168,超極巨化
+10,20169,超極巨化
+10,20170,超極巨化
+10,20171,超極巨化
+10,20172,超極巨化
+10,20173,超極巨化
+10,20174,一口吞的樣子
+10,20175,大口吞的樣子
+10,20176,超極巨化
+10,20177,超極巨化
+10,20180,超極巨化
+10,20181,超極巨化
+10,20182,奶香香草
+10,20183,奶香香草
+10,20184,奶香香草
+10,20185,奶香香草
+10,20186,奶香香草
+10,20187,奶香香草
+10,20188,奶香紅鑽
+10,20189,奶香紅鑽
+10,20190,奶香紅鑽
+10,20191,奶香紅鑽
+10,20192,奶香紅鑽
+10,20193,奶香紅鑽
+10,20194,奶香紅鑽
+10,20195,奶香抹茶
+10,20196,奶香抹茶
+10,20197,奶香抹茶
+10,20198,奶香抹茶
+10,20199,奶香抹茶
+10,20200,奶香抹茶
+10,20201,奶香抹茶
+10,20202,奶香薄荷
+10,20203,奶香薄荷
+10,20204,奶香薄荷
+10,20205,奶香薄荷
+10,20206,奶香薄荷
+10,20207,奶香薄荷
+10,20208,奶香薄荷
+10,20209,奶香檸檬
+10,20210,奶香檸檬
+10,20211,奶香檸檬
+10,20212,奶香檸檬
+10,20213,奶香檸檬
+10,20214,奶香檸檬
+10,20215,奶香檸檬
+10,20216,奶香雪鹽
+10,20217,奶香雪鹽
+10,20218,奶香雪鹽
+10,20219,奶香雪鹽
+10,20220,奶香雪鹽
+10,20221,奶香雪鹽
+10,20222,奶香雪鹽
+10,20223,紅鑽綜合
+10,20224,紅鑽綜合
+10,20225,紅鑽綜合
+10,20226,紅鑽綜合
+10,20227,紅鑽綜合
+10,20228,紅鑽綜合
+10,20229,紅鑽綜合
+10,20230,焦糖綜合
+10,20231,焦糖綜合
+10,20232,焦糖綜合
+10,20233,焦糖綜合
+10,20234,焦糖綜合
+10,20235,焦糖綜合
+10,20236,焦糖綜合
+10,20237,三色綜合
+10,20238,三色綜合
+10,20239,三色綜合
+10,20240,三色綜合
+10,20241,三色綜合
+10,20242,三色綜合
+10,20243,三色綜合
+10,20244,超極巨化
+10,20245,空腹花紋
+10,20246,超極巨化
+10,20247,超極巨化
+10,20248,超極巨化
+10,20254,超極巨化
+10,20255,阿爸
+10,20256,世界帽子
+10,20257,超極巨化
+10,20258,王的樣子
+10,20259,王的樣子
+10,20260,王的樣子
+10,20261,女王的樣子
+10,20262,王的樣子
+10,20263,四隻家庭
+10,20264,下垂姿勢
+10,20265,平挺姿勢
+10,20266,三節形態
+10,20267,制限形態
+10,20268,疾馳形態
+10,20269,破浪形態
+10,20270,乘風形態
+10,20271,受限模式
+10,20272,行駛模式
+10,20273,浮水模式
+10,20274,滑翔模式
+10,20275,高檔貨的樣子
+10,20276,傑作的樣子
