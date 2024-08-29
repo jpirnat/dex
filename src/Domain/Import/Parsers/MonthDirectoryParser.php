@@ -54,6 +54,13 @@ final readonly class MonthDirectoryParser
 
 		// Parse each usage file link.
 		foreach ($links as $link) {
+			if (str_contains($link->getUri(), '/stats/2016-10/cap-')) {
+				// October 2016 CAP doesn't have valid usage files. The moveset
+				// files seem to have been accidentally uploaded in their place.
+				// https://www.smogon.com/stats/2016-10/cap-0.txt
+				continue;
+			}
+
 			// Get the format and rating from the filename of the link.
 			$filename = pathinfo($link->getUri())['filename'];
 			$formatRating = $this->formatRatingExtractor->extractFormatRating($filename);
