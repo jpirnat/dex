@@ -10,7 +10,7 @@ final class PokemonId extends EntityId
 	public const NINJASK = 291;
 	public const BISHARP = 625;
 	public const ZYGARDE_50_AURA = 718;
-	public const ZYGARDE_10_AURA = 10131;
-	public const ZYGARDE_10_POWER = 10132;
-	public const ZYGARDE_50_POWER = 10133;
+	public const ZYGARDE_10_AURA = 10129;
+	public const ZYGARDE_10_POWER = 10130;
+	public const ZYGARDE_50_POWER = 10131;
 }

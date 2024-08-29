@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import;
 
+use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use PDO;
 
@@ -42,12 +43,12 @@ final readonly class ZygardeFixer
 
 		// All the formats that allow Power Construct Zygarde.
 		$formatIds = [
-			36, // Gen 7 AG
-			37, // Gen 7 Ubers
-			45, // Gen 7 Doubles Ubers
-			50, // VGC 2019 Sun Series
-			51, // VGC 2019 Moon Series
-			52, // VGC 2019 Ultra Series
+			FormatId::GEN_7_AG,
+			FormatId::GEN_7_UBERS,
+			FormatId::GEN_7_DOUBLES_UBERS,
+			FormatId::VGC_2019_SUN,
+			FormatId::VGC_2019_MOON,
+			FormatId::VGC_2019_ULTRA,
 		];
 
 		foreach ($formatIds as $formatId) {
