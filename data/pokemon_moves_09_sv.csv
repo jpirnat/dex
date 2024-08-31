@@ -2894,7 +2894,6 @@ pokemon_id,version_group_id,move_id,move_method_id,level,mastery_level,sort
 73,23,851,2,0,\N,0
 73,23,884,2,0,\N,0
 73,23,886,2,0,\N,0
-74,23,5,2,0,\N,0
 74,23,5,3,0,\N,0
 74,23,7,2,0,\N,0
 74,23,9,2,0,\N,0
@@ -4491,7 +4490,6 @@ pokemon_id,version_group_id,move_id,move_method_id,level,mastery_level,sort
 106,23,853,1,50,\N,0
 106,23,918,2,0,\N,0
 107,23,5,1,32,\N,0
-107,23,5,2,0,\N,0
 107,23,7,1,24,\N,2
 107,23,7,2,0,\N,0
 107,23,8,1,24,\N,1
@@ -23492,7 +23490,6 @@ pokemon_id,version_group_id,move_id,move_method_id,level,mastery_level,sort
 485,23,912,2,0,\N,0
 486,23,1,1,1,\N,0
 486,23,5,1,36,\N,0
-486,23,5,2,0,\N,0
 486,23,7,2,0,\N,0
 486,23,8,2,0,\N,0
 486,23,9,2,0,\N,0
@@ -27667,7 +27664,6 @@ pokemon_id,version_group_id,move_id,move_method_id,level,mastery_level,sort
 620,23,918,2,0,\N,0
 622,23,1,1,8,\N,0
 622,23,5,1,32,\N,0
-622,23,5,2,0,\N,0
 622,23,7,2,0,\N,0
 622,23,8,2,0,\N,0
 622,23,9,2,0,\N,0
@@ -27739,7 +27735,6 @@ pokemon_id,version_group_id,move_id,move_method_id,level,mastery_level,sort
 622,23,851,2,0,\N,0
 623,23,1,1,1,\N,0
 623,23,5,1,32,\N,0
-623,23,5,2,0,\N,0
 623,23,7,2,0,\N,0
 623,23,8,2,0,\N,0
 623,23,9,2,0,\N,0
