@@ -25,6 +25,7 @@ return [
 	'moveset_rated_items',
 	'moveset_rated_spreads',
 	'moveset_rated_moves',
+	'moveset_rated_tera_types',
 	'moveset_rated_teammates',
 	'moveset_rated_counters',
 ];

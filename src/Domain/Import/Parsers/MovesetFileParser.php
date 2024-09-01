@@ -10,6 +10,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownMoveRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\ShowdownTypeRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
 final readonly class MovesetFileParser
@@ -20,6 +21,7 @@ final readonly class MovesetFileParser
 		private ShowdownItemRepositoryInterface $showdownItemRepository,
 		private ShowdownNatureRepositoryInterface $showdownNatureRepository,
 		private ShowdownMoveRepositoryInterface $showdownMoveRepository,
+		private ShowdownTypeRepositoryInterface $showdownTypeRepository,
 		private MovesetFileExtractor $movesetFileExtractor,
 	) {}
 
@@ -148,12 +150,34 @@ final readonly class MovesetFileParser
 				}
 			}
 
-			// BLOCK 7 - Teammates.
+			// BLOCK 7 (if it exists) - Tera Types.
+			$line = Utils::readLine($stream); // "Tera Types"
+			if (str_contains($line, 'Tera Types')) {
+				if ($stream->eof()) {
+					return;
+				}
+				while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
+					$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
+					$showdownTypeName = $namePercent->showdownName();
 
-			Utils::readLine($stream); // "Teammates"
-			if ($stream->eof()) {
-				return;
+					// If the type is unknown, add it to the list of unknown types.
+					if (!$this->showdownTypeRepository->isKnown($showdownTypeName)) {
+						$this->showdownTypeRepository->addUnknown($showdownTypeName);
+					}
+
+					// If the file randomly ends here, there's nothing else to do.
+					if ($stream->eof()) {
+						return;
+					}
+				}
+
+				Utils::readLine($stream); // "Teammates"
+				if ($stream->eof()) {
+					return;
+				}
 			}
+
+			// BLOCK 7 - Teammates.
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownTeammateName = $namePercent->showdownName();

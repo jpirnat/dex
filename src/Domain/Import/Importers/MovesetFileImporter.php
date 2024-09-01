@@ -12,6 +12,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownMoveRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\ShowdownTypeRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbility;
@@ -28,6 +29,8 @@ use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpread;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammate;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeraType;
+use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeraTypeRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
@@ -42,6 +45,7 @@ final readonly class MovesetFileImporter
 		private ShowdownItemRepositoryInterface $showdownItemRepository,
 		private ShowdownNatureRepositoryInterface $showdownNatureRepository,
 		private ShowdownMoveRepositoryInterface $showdownMoveRepository,
+		private ShowdownTypeRepositoryInterface $showdownTypeRepository,
 		private UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
 		private MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
@@ -49,6 +53,7 @@ final readonly class MovesetFileImporter
 		private MovesetRatedItemRepositoryInterface $movesetRatedItemRepository,
 		private MovesetRatedSpreadRepositoryInterface $movesetRatedSpreadRepository,
 		private MovesetRatedMoveRepositoryInterface $movesetRatedMoveRepository,
+		private MovesetRatedTeraTypeRepositoryInterface $movesetRatedTeraTypeRepository,
 		private MovesetRatedTeammateRepositoryInterface $movesetRatedTeammateRepository,
 		private MovesetRatedCounterRepositoryInterface $movesetRatedCounterRepository,
 		private MovesetFileExtractor $movesetFileExtractor,
@@ -292,12 +297,44 @@ final readonly class MovesetFileImporter
 				}
 			}
 
+			// BLOCK 7 (if it exists) - Tera Types.
+			$line = Utils::readLine($stream); // "Tera Types"
+			if (str_contains($line, 'Tera Types')) {
+				while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
+					$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
+					$showdownTypeName = $namePercent->showdownName();
+
+					// If this type is not meant to be imported, skip it.
+					if (!$this->showdownTypeRepository->isImported($showdownTypeName)) {
+						continue;
+					}
+
+					$typeId = $this->showdownTypeRepository->getTypeId($showdownTypeName);
+
+					if ($usageRatedPokemonId && !$movesetRatedPokemonExists) {
+						$movesetRatedTeraType = new MovesetRatedTeraType(
+							$usageRatedPokemonId,
+							$typeId,
+							$namePercent->percent(),
+						);
+
+						$this->movesetRatedTeraTypeRepository->save($movesetRatedTeraType);
+					}
+
+					// If the file randomly ends here, there's nothing else to do.
+					if ($stream->eof()) {
+						return;
+					}
+				}
+
+				Utils::readLine($stream); // "Teammates"
+				if ($stream->eof()) {
+					return;
+				}
+			}
+
 			// BLOCK 7 - Teammates.
 
-			Utils::readLine($stream); // "Teammates"
-			if ($stream->eof()) {
-				return;
-			}
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
 				$showdownTeammateName = $namePercent->showdownName();

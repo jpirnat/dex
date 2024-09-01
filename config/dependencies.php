@@ -336,6 +336,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository::class
 );
 $services->alias(
+	\Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeraTypeRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseMovesetRatedTeraTypeRepository::class
+);
+$services->alias(
 	\Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabasePokemonEggGroupRepository::class
 );
@@ -382,6 +386,10 @@ $services->alias(
 $services->alias(
 	\Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\Showdown\DatabaseShowdownPokemonRepository::class
+);
+$services->alias(
+	\Jp\Dex\Domain\Import\Showdown\ShowdownTypeRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\Showdown\SimpleShowdownTypeRepository::class
 );
 $services->alias(
 	\Jp\Dex\Domain\Species\SpeciesRepositoryInterface::class,
