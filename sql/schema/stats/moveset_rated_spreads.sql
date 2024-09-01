@@ -11,7 +11,7 @@ create table if not exists `moveset_rated_spreads`
 `spa` tinyint unsigned not null,
 `spd` tinyint unsigned not null,
 `spe` tinyint unsigned not null,
-`percent` decimal(6, 3) unsigned not null,
+`percent` decimal(6, 3) not null,
 
 primary key (`id`),
 /*

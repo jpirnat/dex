@@ -3,7 +3,7 @@ create table if not exists `moveset_rated_teammates`
 `usage_rated_pokemon_id` int unsigned not null,
 `teammate_id` smallint unsigned not null,
 
-`percent` decimal(6, 3) unsigned not null,
+`percent` decimal(6, 3) not null,
 # `percent` % of teams that have `pokemon_id` also have `teammate_id`.
 
 primary key (`usage_rated_pokemon_id`, `teammate_id`),

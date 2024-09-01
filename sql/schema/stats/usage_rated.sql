@@ -4,7 +4,7 @@ create table if not exists `usage_rated`
 `format_id` tinyint unsigned not null,
 `rating` smallint unsigned not null,
 
-`average_weight_per_team` decimal(6, 3) unsigned not null,
+`average_weight_per_team` decimal(6, 3) not null,
 
 primary key (
 	`month`,

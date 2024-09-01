@@ -5,7 +5,7 @@ create table if not exists `leads_pokemon`
 `pokemon_id` smallint unsigned not null,
 
 `raw` mediumint unsigned not null,
-`raw_percent` decimal(6, 3) unsigned not null,
+`raw_percent` decimal(6, 3) not null,
 
 primary key (
 	`month`,

@@ -8,7 +8,7 @@ create table if not exists `usage_rated_pokemon`
 `pokemon_id` smallint unsigned not null,
 
 `rank` smallint unsigned not null,
-`usage_percent` decimal(8, 5) unsigned not null,
+`usage_percent` decimal(8, 5) not null,
 
 primary key (`id`),
 unique key (`month`,`format_id`,`rating`,`pokemon_id`),

@@ -4,7 +4,7 @@ create table if not exists `type_matchups`
 `attacking_type_id` tinyint unsigned not null,
 `defending_type_id` tinyint unsigned not null,
 
-`multiplier` decimal(2, 1) unsigned not null,
+`multiplier` decimal(2, 1) not null,
 
 primary key (
 	`generation_id`,
