@@ -26,12 +26,14 @@ const app = new Vue({
 		averageWeight: null,
 		viabilityCeiling: null,
 
-		showAbilities: true,
-		showItems: true,
+		showAbilities: false,
+		showItems: false,
+		showTeraTypes: false,
 		abilities: [],
 		items: [],
 		spreads: [],
 		moves: [],
+		teraTypes: [],
 		teammates: [],
 		counters: [],
 
@@ -76,10 +78,12 @@ const app = new Vue({
 
 				this.showAbilities = data.showAbilities;
 				this.showItems = data.showItems;
+				this.showTeraTypes = data.showTeraTypes;
 				this.abilities = data.abilities;
 				this.items = data.items;
 				this.spreads = data.spreads;
 				this.moves = data.moves;
+				this.teraTypes = data.teraTypes;
 				this.teammates = data.teammates;
 				this.counters = data.counters;
 

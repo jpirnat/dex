@@ -27,6 +27,8 @@ use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 use Jp\Dex\Domain\Teammates\StatsPokemonTeammate;
 use Jp\Dex\Domain\Teammates\StatsPokemonTeammateRepositoryInterface;
+use Jp\Dex\Domain\Types\StatsPokemonTeraType;
+use Jp\Dex\Domain\Types\StatsPokemonTeraTypeRepositoryInterface;
 use Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Versions\Generation;
 use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
@@ -64,6 +66,9 @@ final class StatsPokemonModel
 	/** @var StatsPokemonMove[] $moves */
 	private array $moves = [];
 
+	/** @var StatsPokemonTeraType[] $teraTypes */
+	private array $teraTypes = [];
+
 	/** @var StatsPokemonTeammate[] $teammates */
 	private array $teammates = [];
 
@@ -90,6 +95,7 @@ final class StatsPokemonModel
 		private StatsPokemonItemRepositoryInterface $statsPokemonItemRepository,
 		private SpreadModel $spreadModel,
 		private StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository,
+		private StatsPokemonTeraTypeRepositoryInterface $statsPokemonTeraTypeRepository,
 		private StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository,
 		private StatsPokemonCounterRepositoryInterface $statsPokemonCounterRepository,
 		private UsageRatedQueriesInterface $usageRatedQueries,
@@ -230,6 +236,17 @@ final class StatsPokemonModel
 			$this->pokemon->getId(),
 			$languageId,
 		);
+
+		// Get Tera type data.
+		if ($this->format->getVersionGroupId()->hasTeraTypes()) {
+			$this->teraTypes = $this->statsPokemonTeraTypeRepository->getByMonth(
+				$thisMonth,
+				$this->format->getId(),
+				$rating,
+				$this->pokemon->getId(),
+				$languageId,
+			);
+		}
 
 		// Get teammate data.
 		$this->teammates = $this->statsPokemonTeammateRepository->getByMonth(
@@ -424,6 +441,16 @@ final class StatsPokemonModel
 	public function getMoves() : array
 	{
 		return $this->moves;
+	}
+
+	/**
+	 * Get the Tera types.
+	 *
+	 * @return StatsPokemonTeraType[]
+	 */
+	public function getTeraTypes() : array
+	{
+		return $this->teraTypes;
 	}
 
 	/**

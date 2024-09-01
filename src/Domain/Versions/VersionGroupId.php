@@ -23,45 +23,50 @@ final class VersionGroupId extends EntityId
 
 	public function hasAbilities() : bool
 	{
-		return $this->value() >= self::RUBY_SAPPHIRE
-			&& $this->value() !== self::LETS_GO_PIKACHU_EEVEE
-			&& $this->value() !== self::LEGENDS_ARCEUS
+		return $this->id >= self::RUBY_SAPPHIRE
+			&& $this->id !== self::LETS_GO_PIKACHU_EEVEE
+			&& $this->id !== self::LEGENDS_ARCEUS
 		;
 	}
 
 	public function hasHeldItems() : bool
 	{
-		return $this->value() >= self::GOLD_SILVER
-			&& $this->value() !== self::LETS_GO_PIKACHU_EEVEE
-			&& $this->value() !== self::LEGENDS_ARCEUS
+		return $this->id >= self::GOLD_SILVER
+			&& $this->id !== self::LETS_GO_PIKACHU_EEVEE
+			&& $this->id !== self::LEGENDS_ARCEUS
 		;
 	}
 
 	public function hasItemDescriptions() : bool
 	{
-		return $this->value() >= self::GOLD_SILVER;
+		return $this->id >= self::GOLD_SILVER;
 	}
 
 	public function hasItemIcons() : bool
 	{
-		return $this->value() >= self::RUBY_SAPPHIRE
-			&& $this->value() !== self::COLOSSEUM
-			&& $this->value() !== self::XD
+		return $this->id >= self::RUBY_SAPPHIRE
+			&& $this->id !== self::COLOSSEUM
+			&& $this->id !== self::XD
 		;
 	}
 
 	public function hasMoveDescriptions() : bool
 	{
-		return $this->value() >= self::GOLD_SILVER;
+		return $this->id >= self::GOLD_SILVER;
 	}
 
 	public function hasNatures() : bool
 	{
-		return $this->value() >= self::RUBY_SAPPHIRE;
+		return $this->id >= self::RUBY_SAPPHIRE;
 	}
 
 	public function hasSpecialStat() : bool
 	{
-		return $this->value() <= self::YELLOW;
+		return $this->id <= self::YELLOW;
+	}
+
+	public function hasTeraTypes() : bool
+	{
+		return $this->id === self::SCARLET_VIOLET;
 	}
 }

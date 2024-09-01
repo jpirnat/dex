@@ -1,8 +1,8 @@
 'use strict';
 
-Vue.component('stats-pokemon-teammates', {
+Vue.component('stats-pokemon-tera-types', {
 	props: {
-		teammates: {
+		teraTypes: {
 			type: Array,
 			default: [],
 		},
@@ -18,10 +18,14 @@ Vue.component('stats-pokemon-teammates', {
 			type: Number,
 			default: 0,
 		},
-		pokemon: { // name, not identifier!!!
+		pokemon: {
 			type: String,
 			default: '',
 		},
+		versionGroup: {
+			type: String,
+			default: '',
+		}
 	},
 	data() {
 		return {
@@ -31,40 +35,34 @@ Vue.component('stats-pokemon-teammates', {
 	},
 	template: `
 		<table class="moveset-usage">
-			<caption>Teammates</caption>
+			<caption>Tera Types</caption>
 			<thead>
 				<tr>
-					<th></th>
 					<th scope="col" class="dex-table__header--sortable"
 						@click="sortBy('name', 'asc', t => t.name)"
 						:class="{
 							'dex-table__header--sorted-asc': sortColumn === 'name' && sortDirection === 'asc',
 							'dex-table__header--sorted-desc': sortColumn === 'name' && sortDirection === 'desc',
 						}"
-					>Teammate</th>
+					>Type</th>
 					<th scope="col" class="dex-table__header--sortable"
 						@click="sortBy('percent', 'desc', t => t.percent)"
 						:class="{
 							'dex-table__header--sorted-asc': sortColumn === 'percent' && sortDirection === 'asc',
 							'dex-table__header--sorted-desc': sortColumn === 'percent' && sortDirection === 'desc',
 						}"
-						v-tooltip="'X% of teams that use ' + pokemon + ' also use this Pokémon.'"
-					>
-						<abbr class="dex--tooltip">%</abbr>
-					</th>
+					>%</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr v-for="teammate in teammates" :key="teammate.identifier">
+				<tr v-for="type in teraTypes" :key="type.identifier">
 					<td class="dex-table__pokemon-icon">
-						<img v-if="teammate.icon" class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + teammate.icon" alt="">
+						<dex-type-link 
+							:vg-identifier="versionGroup"
+							:type="type"
+						></dex-type-link>
 					</td>
-					<td>
-						<a :href="'/stats/' + month + '/' + format + '/' + rating + '/pokemon/' + teammate.identifier">
-							{{ teammate.name }}
-						</a>
-					</td>
-					<td class="dex-table--number">{{ teammate.percentText }}</td>
+					<td class="dex-table--number">{{ type.percentText }}</td>
 				</tr>
 			</tbody>
 		</table>
@@ -83,7 +81,7 @@ Vue.component('stats-pokemon-teammates', {
 			const modifier = this.sortDirection === 'asc' ? 1 : -1;
 
 			// Do the sort.
-			this.teammates.sort((a, b) => {
+			this.teraTypes.sort((a, b) => {
 				const aValue = sortValueCallback(a);
 				const bValue = sortValueCallback(b);
 

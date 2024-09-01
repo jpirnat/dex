@@ -135,6 +135,19 @@ final readonly class StatsPokemonView
 			];
 		}
 
+		// Get Tera types.
+		$teraTypesData = $this->statsPokemonModel->getTeraTypes();
+		$teraTypes = [];
+		foreach ($teraTypesData as $teraType) {
+			$teraTypes[] = [
+				'icon' => $teraType->getIcon(),
+				'identifier' => $teraType->getIdentifier(),
+				'name' => $teraType->getName(),
+				'percent' => $teraType->getPercent(),
+				'percentText' => $formatter->formatPercent($teraType->getPercent()),
+			];
+		}
+
 		// Get counters.
 		$countersData = $this->statsPokemonModel->getCounters();
 		$counters = [];
@@ -214,10 +227,12 @@ final readonly class StatsPokemonView
 				// The main data.
 				'showAbilities' => $versionGroup->getId()->hasAbilities(),
 				'showItems' => $versionGroup->getId()->hasHeldItems(),
+				'showTeraTypes' => $versionGroup->getId()->hasTeraTypes(),
 				'abilities' => $abilities,
 				'items' => $items,
 				'spreads' => $spreads,
 				'moves' => $moves,
+				'teraTypes' => $teraTypes,
 				'teammates' => $teammates,
 				'counters' => $counters,
 

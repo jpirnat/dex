@@ -109,6 +109,7 @@
 				<li v-if="showItems"><a href="#items">Items</a></li>
 				<li><a href="#spreads">Spreads</a></li>
 				<li><a href="#moves">Moves</a></li>
+				<li v-if="showTeraTypes && teraTypes.length > 0"><a href="#tera-types">Tera Types</a></li>
 				<li><a href="#teammates">Teammates</a></li>
 				<li><a href="#counters">Counters</a></li>
 			</ul>
@@ -145,6 +146,15 @@
 			:pokemon="pokemon.identifier"
 			@add-chart-line="addChartLine($event)"
 		></stats-pokemon-moves>
+
+		<stats-pokemon-tera-types v-if="showTeraTypes && teraTypes.length > 0" id="tera-types"
+			:tera-types="teraTypes"
+			:month="thisMonth.value"
+			:format="format.identifier"
+			:rating="rating"
+			:pokemon="pokemon.identifier"
+			:version-group="versionGroup.identifier"
+		></stats-pokemon-tera-types>
 
 		<stats-pokemon-teammates id="teammates"
 			:teammates="teammates"
@@ -197,6 +207,7 @@
 	<script src="/js/stats-pokemon-items.js"></script>
 	<script src="/js/stats-pokemon-spreads.js"></script>
 	<script src="/js/stats-pokemon-moves.js"></script>
+	<script src="/js/stats-pokemon-tera-types.js"></script>
 	<script src="/js/stats-pokemon-teammates.js"></script>
 	<script src="/js/stats-pokemon-counters.js"></script>
 

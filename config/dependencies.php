@@ -444,6 +444,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseStatsPokemonTeammateRepository::class
 );
 $services->alias(
+	\Jp\Dex\Domain\Types\StatsPokemonTeraTypeRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatsPokemonTeraTypeRepository::class
+);
+$services->alias(
 	\Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseStatsUsagePokemonRepository::class
 );
