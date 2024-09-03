@@ -1020,8 +1020,8 @@ language_id,pokemon_id,name,category
 1,1019,カミツオロチ,りんごオロチポケモン
 1,1020,ウガツホムラ,パラドックスポケモン
 1,1021,タケルライコ,パラドックスポケモン
-1,1022,テツノカシラ,パラドックスポケモン
-1,1023,テツノイワオ,パラドックスポケモン
+1,1022,テツノイワオ,パラドックスポケモン
+1,1023,テツノカシラ,パラドックスポケモン
 1,1024,テラパゴス (ノーマルフォルム),テラスタルポケモン
 1,1025,モモワロウ,しはいポケモン
 1,10001,ポワルン (たいようのすがた),てんきポケモン
@@ -2277,8 +2277,8 @@ language_id,pokemon_id,name,category
 2,1019,Hydrapple,Apple Hydra Pokémon
 2,1020,Gouging Fire,Paradox Pokémon
 2,1021,Raging Bolt,Paradox Pokémon
-2,1022,Iron Crown,Paradox Pokémon
-2,1023,Iron Boulder,Paradox Pokémon
+2,1022,Iron Boulder,Paradox Pokémon
+2,1023,Iron Crown,Paradox Pokémon
 2,1024,Terapagos (Normal Form),Tera Pokémon
 2,1025,Pecharunt,Subjugation Pokémon
 2,10001,Castform (Sunny Form),Weather Pokémon
@@ -3534,8 +3534,8 @@ language_id,pokemon_id,name,category
 3,1019,Pomdorochi,Pokémon Hydre Pomme
 3,1020,Feu-Perçant,Pokémon Paradoxe
 3,1021,Ire-Foudre,Pokémon Paradoxe
-3,1022,Chef-de-Fer,Pokémon Paradoxe
-3,1023,Roc-de-Fer,Pokémon Paradoxe
+3,1022,Roc-de-Fer,Pokémon Paradoxe
+3,1023,Chef-de-Fer,Pokémon Paradoxe
 3,1024,Terapagos (Forme Normale),Pokémon Téracristal
 3,1025,Pêchaminus,Pokémon Emprise
 3,10001,Morphéo (Forme Solaire),Pokémon Climat
@@ -4791,8 +4791,8 @@ language_id,pokemon_id,name,category
 4,1019,Hydrapfel,Apfelhydra-Pokémon
 4,1020,Keilflamme,Paradox-Pokémon
 4,1021,Furienblitz,Paradox-Pokémon
-4,1022,Eisenhaupt,Paradox-Pokémon
-4,1023,Eisenfels,Paradox-Pokémon
+4,1022,Eisenfels,Paradox-Pokémon
+4,1023,Eisenhaupt,Paradox-Pokémon
 4,1024,Terapagos (Normalform),Terakristall-Pokémon
 4,1025,Infamomo,Knechtungs-Pokémon
 4,10001,Formeo (Sonnenform),Wetter-Pokémon
@@ -6048,8 +6048,8 @@ language_id,pokemon_id,name,category
 5,1019,Hydrapple,Pokémon Pomidra
 5,1020,Vampeaguzze,Pokémon Paradosso
 5,1021,Furiatonante,Pokémon Paradosso
-5,1022,Capoferreo,Pokémon Paradosso
-5,1023,Massoferreo,Pokémon Paradosso
+5,1022,Massoferreo,Pokémon Paradosso
+5,1023,Capoferreo,Pokémon Paradosso
 5,1024,Terapagos (Forma Normale),Pokémon Teracristal
 5,1025,Pecharunt,Pokémon Dominio
 5,10001,Castform (Forma Sole),Pokémon Meteo
@@ -7305,8 +7305,8 @@ language_id,pokemon_id,name,category
 6,1019,Hydrapple,Pokémon Manzanhidra
 6,1020,Flamariete,Pokémon Paradoja
 6,1021,Electrofuria,Pokémon Paradoja
-6,1022,Ferrotesta,Pokémon Paradoja
-6,1023,Ferromole,Pokémon Paradoja
+6,1022,Ferromole,Pokémon Paradoja
+6,1023,Ferrotesta,Pokémon Paradoja
 6,1024,Terapagos (Forma Normal),Pokémon Teracristal
 6,1025,Pecharunt,Pokémon Controlador
 6,10001,Castform (Forma Sol),Pokémon Clima
@@ -8562,8 +8562,8 @@ language_id,pokemon_id,name,category
 7,1019,과미드라,사과이무기포켓몬
 7,1020,꿰뚫는화염,패러독스포켓몬
 7,1021,날뛰는우레,패러독스포켓몬
-7,1022,무쇠감투,패러독스포켓몬
-7,1023,무쇠암석,패러독스포켓몬
+7,1022,무쇠암석,패러독스포켓몬
+7,1023,무쇠감투,패러독스포켓몬
 7,1024,테라파고스 (노말폼),테라스탈포켓몬
 7,1025,복숭악동,지배포켓몬
 7,10001,캐스퐁 (태양의 모습),날씨포켓몬
@@ -9819,8 +9819,8 @@ language_id,pokemon_id,name,category
 8,1019,カミツオロチ,りんごオロチポケモン
 8,1020,ウガツホムラ,パラドックスポケモン
 8,1021,タケルライコ,パラドックスポケモン
-8,1022,テツノカシラ,パラドックスポケモン
-8,1023,テツノイワオ,パラドックスポケモン
+8,1022,テツノイワオ,パラドックスポケモン
+8,1023,テツノカシラ,パラドックスポケモン
 8,1024,テラパゴス (ノーマルフォルム),テラスタルポケモン
 8,1025,モモワロウ,しはいポケモン
 8,10001,ポワルン (たいようのすがた),てんきポケモン
@@ -11076,8 +11076,8 @@ language_id,pokemon_id,name,category
 9,1019,蜜集大蛇,苹果大蛇宝可梦
 9,1020,破空焰,悖谬宝可梦
 9,1021,猛雷鼓,悖谬宝可梦
-9,1022,铁头壳,悖谬宝可梦
-9,1023,铁磐岩,悖谬宝可梦
+9,1022,铁磐岩,悖谬宝可梦
+9,1023,铁头壳,悖谬宝可梦
 9,1024,太乐巴戈斯 (普通形态),太晶宝可梦
 9,1025,桃歹郎,支配宝可梦
 9,10001,飘浮泡泡 (太阳的样子),天气宝可梦
@@ -12333,8 +12333,8 @@ language_id,pokemon_id,name,category
 10,1019,蜜集大蛇,蘋果大蛇寶可夢
 10,1020,破空焰,悖謬寶可夢
 10,1021,猛雷鼓,悖謬寶可夢
-10,1022,鐵頭殼,悖謬寶可夢
-10,1023,鐵磐岩,悖謬寶可夢
+10,1022,鐵磐岩,悖謬寶可夢
+10,1023,鐵頭殼,悖謬寶可夢
 10,1024,太樂巴戈斯 (普通形態),太晶寶可夢
 10,1025,桃歹郎,支配寶可夢
 10,10001,飄浮泡泡 (太陽的樣子),天氣寶可夢
