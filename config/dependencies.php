@@ -74,6 +74,7 @@ $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\LeadUsageTrendGenerator::c
 $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\MovesetAbilityTrendGenerator::class);
 $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\MovesetItemTrendGenerator::class);
 $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\MovesetMoveTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\MovesetTeraTrendGenerator::class);
 $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageAbilityTrendGenerator::class);
 $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageItemTrendGenerator::class);
 $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageMoveTrendGenerator::class);
@@ -462,6 +463,10 @@ $services->alias(
 $services->alias(
 	\Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseTypeMatchupRepository::class
+);
+$services->alias(
+	\Jp\Dex\Domain\Types\TypeNameRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseTypeNameRepository::class
 );
 $services->alias(
 	\Jp\Dex\Domain\Types\TypeRepositoryInterface::class,

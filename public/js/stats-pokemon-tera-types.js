@@ -115,7 +115,7 @@ Vue.component('stats-pokemon-tera-types', {
 				format: this.format,
 				rating: this.rating,
 				pokemon: this.pokemon,
-				type: type.identifier
+				tera: type.identifier,
 			});
 		},
 	},

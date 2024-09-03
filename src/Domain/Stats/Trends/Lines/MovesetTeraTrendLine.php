@@ -3,14 +3,13 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Trends\Lines;
 
-use Jp\Dex\Domain\Moves\MoveName;
 use Jp\Dex\Domain\Pokemon\PokemonName;
 use Jp\Dex\Domain\Types\Type;
 
-final class MovesetMoveTrendLine extends TrendLine
+final class MovesetTeraTrendLine extends TrendLine
 {
-	private MoveName $moveName;
-	private Type $moveType;
+	private string $typeName;
+	private string $typeColorCode;
 
 	/**
 	 * Constructor.
@@ -21,17 +20,17 @@ final class MovesetMoveTrendLine extends TrendLine
 		string $formatName,
 		int $rating,
 		PokemonName $pokemonName,
-		MoveName $moveName,
+		string $typeName,
 		Type $pokemonType,
-		Type $moveType,
+		string $typeColorCode,
 		array $trendPoints,
 	) {
 		$this->formatName = $formatName;
 		$this->rating = $rating;
 		$this->pokemonName = $pokemonName;
-		$this->moveName = $moveName;
+		$this->typeName = $typeName;
 		$this->pokemonType = $pokemonType;
-		$this->moveType = $moveType;
+		$this->typeColorCode = $typeColorCode;
 
 		foreach ($trendPoints as $trendPoint) {
 			$this->addTrendPoint($trendPoint);
@@ -46,9 +45,9 @@ final class MovesetMoveTrendLine extends TrendLine
 		$formatName = $this->formatName;
 		$rating = $this->rating;
 		$pokemonName = $this->pokemonName->getName();
-		$moveName = $this->moveName->getName();
+		$typeName = $this->typeName;
 
-		return "$formatName [$rating] $pokemonName - $moveName Usage";
+		return "$formatName [$rating] $pokemonName - Tera $typeName Usage";
 	}
 
 	/**
@@ -61,19 +60,18 @@ final class MovesetMoveTrendLine extends TrendLine
 	}
 
 	/**
-	 * Get the moveset move trend line's move name.
+	 * Get the moveset Tera trend line's type name.
 	 */
-	public function getMoveName() : MoveName
+	public function getTypeName() : string
 	{
-		return $this->moveName;
+		return $this->typeName;
 	}
-
 
 	/**
 	 * Get the trend line's move type.
 	 */
-	public function getMoveType() : Type
+	public function getTypeColorCode() : string
 	{
-		return $this->moveType;
+		return $this->typeColorCode;
 	}
 }

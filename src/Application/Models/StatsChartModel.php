@@ -15,11 +15,13 @@ use Jp\Dex\Domain\Stats\Trends\Generators\LeadUsageTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Generators\MovesetAbilityTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Generators\MovesetItemTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Generators\MovesetMoveTrendGenerator;
+use Jp\Dex\Domain\Stats\Trends\Generators\MovesetTeraTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Generators\UsageAbilityTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Generators\UsageItemTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Generators\UsageMoveTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Generators\UsageTrendGenerator;
 use Jp\Dex\Domain\Stats\Trends\Lines\TrendLine;
+use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class StatsChartModel
 {
@@ -41,11 +43,13 @@ final class StatsChartModel
 		private AbilityRepositoryInterface $abilityRepository,
 		private ItemRepositoryInterface $itemRepository,
 		private MoveRepositoryInterface $moveRepository,
+		private TypeRepositoryInterface $typeRepository,
 		private UsageTrendGenerator $usageTrendGenerator,
 		private LeadUsageTrendGenerator $leadUsageTrendGenerator,
 		private MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator,
 		private MovesetItemTrendGenerator $movesetItemTrendGenerator,
 		private MovesetMoveTrendGenerator $movesetMoveTrendGenerator,
+		private MovesetTeraTrendGenerator $movesetTeraTrendGenerator,
 		private UsageAbilityTrendGenerator $usageAbilityTrendGenerator,
 		private UsageItemTrendGenerator $usageItemTrendGenerator,
 		private UsageMoveTrendGenerator $usageMoveTrendGenerator,
@@ -70,7 +74,7 @@ final class StatsChartModel
 
 		// Create a trend line object from each valid line request.
 		foreach ($validLines as $line) {
-			$type = $line['type'];
+			$lineType = $line['type'];
 			$format = $this->formatRepository->getByIdentifier(
 				$line['format'],
 				$languageId,
@@ -78,7 +82,7 @@ final class StatsChartModel
 			$rating = (int) $line['rating'];
 			$pokemon = $this->pokemonRepository->getByIdentifier($line['pokemon']);
 
-			if ($type === 'usage') {
+			if ($lineType === 'usage') {
 				$this->trendLines[] = $this->usageTrendGenerator->generate(
 					$format,
 					$rating,
@@ -87,7 +91,7 @@ final class StatsChartModel
 				);
 			}
 
-			if ($type === 'lead-usage') {
+			if ($lineType === 'lead-usage') {
 				$this->trendLines[] = $this->leadUsageTrendGenerator->generate(
 					$format,
 					$rating,
@@ -96,7 +100,7 @@ final class StatsChartModel
 				);
 			}
 
-			if ($type === 'moveset-ability') {
+			if ($lineType === 'moveset-ability') {
 				$ability = $this->abilityRepository->getByIdentifier($line['ability']);
 
 				$this->trendLines[] = $this->movesetAbilityTrendGenerator->generate(
@@ -108,7 +112,7 @@ final class StatsChartModel
 				);
 			}
 
-			if ($type === 'moveset-item') {
+			if ($lineType === 'moveset-item') {
 				$item = $this->itemRepository->getByIdentifier($line['item']);
 
 				$this->trendLines[] = $this->movesetItemTrendGenerator->generate(
@@ -120,7 +124,7 @@ final class StatsChartModel
 				);
 			}
 
-			if ($type === 'moveset-move') {
+			if ($lineType === 'moveset-move') {
 				$move = $this->moveRepository->getByIdentifier($line['move']);
 
 				$this->trendLines[] = $this->movesetMoveTrendGenerator->generate(
@@ -132,7 +136,19 @@ final class StatsChartModel
 				);
 			}
 
-			if ($type === 'usage-ability') {
+			if ($lineType === 'moveset-tera') {
+				$type = $this->typeRepository->getByIdentifier($line['tera']);
+
+				$this->trendLines[] = $this->movesetTeraTrendGenerator->generate(
+					$format,
+					$rating,
+					$pokemon->getId(),
+					$type->getId(),
+					$languageId,
+				);
+			}
+
+			if ($lineType === 'usage-ability') {
 				$ability = $this->abilityRepository->getByIdentifier($line['ability']);
 
 				$this->trendLines[] = $this->usageAbilityTrendGenerator->generate(
@@ -144,7 +160,7 @@ final class StatsChartModel
 				);
 			}
 
-			if ($type === 'usage-item') {
+			if ($lineType === 'usage-item') {
 				$item = $this->itemRepository->getByIdentifier($line['item']);
 
 				$this->trendLines[] = $this->usageItemTrendGenerator->generate(
@@ -156,7 +172,7 @@ final class StatsChartModel
 				);
 			}
 
-			if ($type === 'usage-move') {
+			if ($lineType === 'usage-move') {
 				$move = $this->moveRepository->getByIdentifier($line['move']);
 
 				$this->trendLines[] = $this->usageMoveTrendGenerator->generate(
@@ -188,31 +204,36 @@ final class StatsChartModel
 			return false;
 		}
 
-		$type = $line['type'];
+		$lineType = $line['type'];
 
 		// The current list of accepted chart types.
-		if ($type !== 'usage'
-			&& $type !== 'lead-usage'
-			&& $type !== 'moveset-ability'
-			&& $type !== 'moveset-item'
-			&& $type !== 'moveset-move'
-			&& $type !== 'usage-ability'
-			&& $type !== 'usage-item'
-			&& $type !== 'usage-move'
+		if ($lineType !== 'usage'
+			&& $lineType !== 'lead-usage'
+			&& $lineType !== 'moveset-ability'
+			&& $lineType !== 'moveset-item'
+			&& $lineType !== 'moveset-move'
+			&& $lineType !== 'moveset-tera'
+			&& $lineType !== 'usage-ability'
+			&& $lineType !== 'usage-item'
+			&& $lineType !== 'usage-move'
 		) {
 			return false;
 		}
 
 		// Optional parameters for certain chart types.
-		if (($type === 'moveset-ability' || $type === 'usage-ability') && !isset($line['ability'])) {
+		if (($lineType === 'moveset-ability' || $lineType === 'usage-ability') && !isset($line['ability'])) {
 			return false;
 		}
 
-		if (($type === 'moveset-item' || $type === 'usage-item') && !isset($line['item'])) {
+		if (($lineType === 'moveset-item' || $lineType === 'usage-item') && !isset($line['item'])) {
 			return false;
 		}
 
-		if (($type === 'moveset-move' || $type === 'usage-move') && !isset($line['move'])) {
+		if (($lineType === 'moveset-move' || $lineType === 'usage-move') && !isset($line['move'])) {
+			return false;
+		}
+
+		if ($lineType === 'moveset-tera' && !isset($line['tera'])) {
 			return false;
 		}
 
@@ -225,7 +246,7 @@ final class StatsChartModel
 	 */
 	private function findDifferences(array $lines) : void
 	{
-		$types = [];
+		$lineTypes = [];
 		$formats = [];
 		$ratings = [];
 		$pokemon = [];
@@ -236,7 +257,7 @@ final class StatsChartModel
 		$this->differences = [];
 
 		foreach ($lines as $line) {
-			$types[$line['type']] = $line['type'];
+			$lineTypes[$line['type']] = $line['type'];
 			$formats[$line['format']] = $line['format'];
 			$ratings[$line['rating']] = $line['rating'];
 			$pokemon[$line['pokemon']] = $line['pokemon'];
@@ -251,7 +272,7 @@ final class StatsChartModel
 			}
 		}
 
-		if (count($types) === 1) {
+		if (count($lineTypes) === 1) {
 			$this->similarities[] = 'type';
 		}
 		if (count($formats) === 1) {
@@ -267,7 +288,7 @@ final class StatsChartModel
 			$this->similarities[] = 'moveset';
 		}
 
-		if (count($types) > 1) {
+		if (count($lineTypes) > 1) {
 			$this->differences[] = 'type';
 		}
 		if (count($formats) > 1) {

@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Types\TypeId;
 
 interface StatsChartQueriesInterface
 {
@@ -74,6 +75,18 @@ interface StatsChartQueriesInterface
 		int $rating,
 		PokemonId $pokemonId,
 		MoveId $moveId,
+	) : array;
+
+	/**
+	 * Get usage data for the moveset Tera chart.
+	 *
+	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
+	 */
+	public function getMovesetTera(
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId,
+		TypeId $typeId,
 	) : array;
 
 	/**

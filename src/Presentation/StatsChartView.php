@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Stats\Trends\Lines\LeadUsageTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetAbilityTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetItemTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetMoveTrendLine;
+use Jp\Dex\Domain\Stats\Trends\Lines\MovesetTeraTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\TrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageAbilityTrendLine;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageItemTrendLine;
@@ -84,6 +85,9 @@ final readonly class StatsChartView
 		if ($trendLine instanceof MovesetMoveTrendLine || $trendLine instanceof UsageMoveTrendLine) {
 			$movesetName = $trendLine->getMoveName()->getName();
 		}
+		if ($trendLine instanceof MovesetTeraTrendLine) {
+			$movesetName = $trendLine->getTypeName();
+		}
 
 		$titleParts = [];
 
@@ -144,6 +148,9 @@ final readonly class StatsChartView
 		}
 		if ($trendLine instanceof MovesetMoveTrendLine || $trendLine instanceof UsageMoveTrendLine) {
 			$movesetName = $trendLine->getMoveName()->getName();
+		}
+		if ($trendLine instanceof MovesetTeraTrendLine) {
+			$movesetName = $trendLine->getTypeName();
 		}
 
 		$labelParts = [];
@@ -207,6 +214,10 @@ final readonly class StatsChartView
 
 		if ($trendLine instanceof MovesetMoveTrendLine) {
 			return $trendLine->getMoveType()->getColorCode();
+		}
+
+		if ($trendLine instanceof MovesetTeraTrendLine) {
+			return $trendLine->getTypeColorCode();
 		}
 
 		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof MovesetItemTrendline) {

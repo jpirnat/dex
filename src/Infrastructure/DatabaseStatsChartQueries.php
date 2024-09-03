@@ -9,6 +9,7 @@ use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\StatsChartQueriesInterface;
+use Jp\Dex\Domain\Types\TypeId;
 use PDO;
 
 final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInterface
@@ -221,6 +222,45 @@ final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInter
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$usageDatas = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$usageDatas[$result['month']] = (float) $result['percent'];
+		}
+
+		return $usageDatas;
+	}
+
+	/**
+	 * Get usage data for the moveset Tera chart.
+	 *
+	 * @return float[] Indexed by month ('YYYY-MM-DD'). Ordered by month.
+	 */
+	public function getMovesetTera(
+		FormatId $formatId,
+		int $rating,
+		PokemonId $pokemonId,
+		TypeId $typeId,
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`urp`.`month`,
+				`mrt`.`percent`
+			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `moveset_rated_tera_types` AS `mrt`
+				ON `urp`.`id` = `mrt`.`usage_rated_pokemon_id`
+			WHERE `urp`.`format_id` = :format_id
+				AND `urp`.`rating` = :rating
+				AND `urp`.`pokemon_id` = :pokemon_id
+				AND `mrt`.`type_id` = :type_id
+			ORDER BY `urp`.`month`'
+		);
+		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$usageDatas = [];
