@@ -24,17 +24,23 @@ final readonly class DatabaseStatsPokemonTeraTypeRepository implements StatsPoke
 	 */
 	public function getByMonth(
 		DateTime $month,
+		?DateTime $prevMonth,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
 		LanguageId $languageId,
 	) : array {
+		$prevMonth = $prevMonth !== null
+			? $prevMonth->format('Y-m-01')
+			: null;
+
 		$stmt = $this->db->prepare(
 			'SELECT
 				`ti`.`icon`,
 				`t`.`identifier`,
 				`tn`.`name`,
-				`mrt`.`percent`
+				`mrt`.`percent`,
+				`mrtp`.`percent` AS `prev_percent`
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `moveset_rated_tera_types` AS `mrt`
 				ON `urp`.`id` = `mrt`.`usage_rated_pokemon_id`
@@ -45,6 +51,14 @@ final readonly class DatabaseStatsPokemonTeraTypeRepository implements StatsPoke
 			LEFT JOIN `type_icons` AS `ti`
 				ON `tn`.`language_id` = `ti`.`language_id`
 				AND `tn`.`type_id` = `ti`.`type_id`
+			LEFT JOIN `usage_rated_pokemon` AS `urpp`
+				ON `urpp`.`month` = :prev_month
+				AND `urp`.`format_id` = `urpp`.`format_id`
+				AND `urp`.`rating` = `urpp`.`rating`
+				AND `urp`.`pokemon_id` = `urpp`.`pokemon_id`
+			LEFT JOIN `moveset_rated_tera_types` AS `mrtp`
+				ON `urpp`.`id` = `mrtp`.`usage_rated_pokemon_id`
+				AND `mrt`.`type_id` = `mrtp`.`type_id`
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
@@ -53,6 +67,7 @@ final readonly class DatabaseStatsPokemonTeraTypeRepository implements StatsPoke
 			ORDER BY `mrt`.`percent` DESC'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
+		$stmt->bindValue(':prev_month', $prevMonth);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
@@ -67,6 +82,7 @@ final readonly class DatabaseStatsPokemonTeraTypeRepository implements StatsPoke
 				$result['identifier'],
 				$result['name'],
 				(float) $result['percent'],
+				(float) $result['percent'] - (float) $result['prev_percent'],
 			);
 
 			$teraTypes[] = $teraType;

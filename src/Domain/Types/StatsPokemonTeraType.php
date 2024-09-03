@@ -10,6 +10,7 @@ final readonly class StatsPokemonTeraType
 		private string $identifier,
 		private string $name,
 		private float $percent,
+		private float $change,
 	) {}
 
 	public function getIcon() : string
@@ -30,5 +31,10 @@ final readonly class StatsPokemonTeraType
 	public function getPercent() : float
 	{
 		return $this->percent;
+	}
+
+	public function getChange() : float
+	{
+		return $this->change;
 	}
 }

@@ -241,6 +241,7 @@ final class StatsPokemonModel
 		if ($this->format->getVersionGroupId()->hasTeraTypes()) {
 			$this->teraTypes = $this->statsPokemonTeraTypeRepository->getByMonth(
 				$thisMonth,
+				$prevMonth,
 				$this->format->getId(),
 				$rating,
 				$this->pokemon->getId(),

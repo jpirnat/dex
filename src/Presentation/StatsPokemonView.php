@@ -145,6 +145,8 @@ final readonly class StatsPokemonView
 				'name' => $teraType->getName(),
 				'percent' => $teraType->getPercent(),
 				'percentText' => $formatter->formatPercent($teraType->getPercent()),
+				'change' => $teraType->getChange(),
+				'changeText' => $formatter->formatChange($teraType->getChange()),
 			];
 		}
 

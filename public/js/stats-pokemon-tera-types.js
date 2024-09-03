@@ -52,6 +52,13 @@ Vue.component('stats-pokemon-tera-types', {
 							'dex-table__header--sorted-desc': sortColumn === 'percent' && sortDirection === 'desc',
 						}"
 					>%</th>
+					<th scope="col" class="dex-table__header--sortable"
+						@click="sortBy('change', 'desc', t => t.change)"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'change' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'change' && sortDirection === 'desc',
+						}"
+					>Δ</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -63,6 +70,18 @@ Vue.component('stats-pokemon-tera-types', {
 						></dex-type-link>
 					</td>
 					<td class="dex-table--number">{{ type.percentText }}</td>
+					<td class="dex-table--number chart-link"
+						:class="{
+							'dex-table--percent-plus': type.change > 0,
+							'dex-table--percent-minus': type.change < 0,
+						}"
+						@click="addChartLine(type)"
+					>
+						<div class="chart-link__inner">
+							{{ type.changeText }}
+							<img class="chart-link__icon" src="/images/porydex/chart-icon.png">
+						</div>
+					</td>
 				</tr>
 			</tbody>
 		</table>
@@ -88,6 +107,15 @@ Vue.component('stats-pokemon-tera-types', {
 				if (aValue < bValue) { return -1 * modifier; }
 				if (aValue > bValue) { return +1 * modifier; }
 				return 0;
+			});
+		},
+		addChartLine(type) {
+			this.$emit('add-chart-line', {
+				type: 'moveset-tera',
+				format: this.format,
+				rating: this.rating,
+				pokemon: this.pokemon,
+				type: type.identifier
 			});
 		},
 	},

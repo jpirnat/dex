@@ -17,6 +17,7 @@ interface StatsPokemonTeraTypeRepositoryInterface
 	 */
 	public function getByMonth(
 		DateTime $month,
+		?DateTime $prevMonth,
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
