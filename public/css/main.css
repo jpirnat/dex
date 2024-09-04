@@ -257,6 +257,10 @@ a.button {
 	font-weight: bold;
 }
 
+.dex-section__description {
+	margin: 20px 0;
+}
+
 .dex-link {
 	text-decoration: none;
 }

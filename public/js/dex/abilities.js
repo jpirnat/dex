@@ -10,6 +10,7 @@ const app = new Vue({
 		breadcrumbs: [],
 		versionGroups: [],
 		abilities: [],
+		flags: [],
 
 		filterName: '',
 		filterDescription: '',
@@ -58,6 +59,7 @@ const app = new Vue({
 				this.breadcrumbs = data.breadcrumbs;
 				this.versionGroups = data.versionGroups;
 				this.abilities = data.abilities;
+				this.flags = data.flags;
 			}
 		});
 	},

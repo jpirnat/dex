@@ -11,6 +11,7 @@ const app = new Vue({
 		versionGroups: [],
 		moves: [],
 		showMoveDescriptions: true,
+		flags: [],
 	},
 	created() {
 		const url = new URL(window.location);
@@ -30,6 +31,7 @@ const app = new Vue({
 				this.versionGroups = data.versionGroups;
 				this.moves = data.moves;
 				this.showMoveDescriptions = data.showMoveDescriptions;
+				this.flags = data.flags;
 			}
 		});
 	},
