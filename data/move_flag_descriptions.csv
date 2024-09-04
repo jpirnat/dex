@@ -1,258 +1,258 @@
-version_group_id,language_id,flag_id,name,description
-5,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/gs/items/kings-rock"">King’s Rock</a>."
-5,2,2,Accuracy check,This move uses the standard accuracy check.
-6,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/c/items/kings-rock"">King’s Rock</a>."
-6,2,2,Accuracy check,This move uses the standard accuracy check.
-7,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/rs/items/kings-rock"">King’s Rock</a>."
-7,2,3,Makes contact,This move causes the user to make contact with the target.
-7,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/rs/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/rs/moves/detect"">Detect</a> this turn."
-7,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/rs/moves/magic-coat"">Magic Coat</a>."
-7,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/rs/moves/snatch"">Snatch</a>."
-7,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/rs/moves/mirror-move"">Mirror Move</a>."
-8,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/frlg/items/kings-rock"">King’s Rock</a>."
-8,2,3,Makes contact,This move causes the user to make contact with the target.
-8,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/frlg/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/frlg/moves/detect"">Detect</a> this turn."
-8,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/frlg/moves/magic-coat"">Magic Coat</a>."
-8,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/frlg/moves/snatch"">Snatch</a>."
-8,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/frlg/moves/mirror-move"">Mirror Move</a>."
-9,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/e/items/kings-rock"">King’s Rock</a>."
-9,2,3,Makes contact,This move causes the user to make contact with the target.
-9,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/e/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/e/moves/detect"">Detect</a> this turn."
-9,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/e/moves/magic-coat"">Magic Coat</a>."
-9,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/e/moves/snatch"">Snatch</a>."
-9,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/e/moves/mirror-move"">Mirror Move</a>."
-10,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/dp/items/kings-rock"">King’s Rock</a>."
-10,2,3,Makes contact,This move causes the user to make contact with the target.
-10,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/dp/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/dp/moves/detect"">Detect</a> this turn."
-10,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/dp/moves/magic-coat"">Magic Coat</a>."
-10,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/dp/moves/snatch"">Snatch</a>."
-10,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/dp/moves/mirror-move"">Mirror Move</a>."
-11,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/pt/items/kings-rock"">King’s Rock</a>."
-11,2,3,Makes contact,This move causes the user to make contact with the target.
-11,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/pt/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/pt/moves/detect"">Detect</a> this turn."
-11,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/pt/moves/magic-coat"">Magic Coat</a>."
-11,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/pt/moves/snatch"">Snatch</a>."
-11,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/pt/moves/mirror-move"">Mirror Move</a>."
-12,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/hgss/items/kings-rock"">King’s Rock</a>."
-12,2,3,Makes contact,This move causes the user to make contact with the target.
-12,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/hgss/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/hgss/moves/detect"">Detect</a> this turn."
-12,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/hgss/moves/magic-coat"">Magic Coat</a>."
-12,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/hgss/moves/snatch"">Snatch</a>."
-12,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/hgss/moves/mirror-move"">Mirror Move</a>."
-13,2,3,Makes contact,This move causes the user to make contact with the target.
-13,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/bw/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/bw/moves/detect"">Detect</a> this turn."
-13,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/bw/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/bw/abilities/magic-bounce"">Magic Bounce</a>."
-13,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/bw/moves/snatch"">Snatch</a>."
-13,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/bw/moves/mirror-move"">Mirror Move</a>."
-13,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/bw/items/power-herb"">Power Herb</a>."
-13,2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-13,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/bw/abilities/iron-fist"">Iron Fist</a>."
-13,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/bw/abilities/soundproof"">Soundproof</a>"
-13,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/bw/moves/gravity"">Gravity</a> is in effect."
-13,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
-13,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
-13,2,15,Heals,"This move is blocked by <a class=""dex-link"" href=""/dex/bw/moves/heal-block"">Heal Block</a>."
-13,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/bw/moves/substitute"">Substitute</a>."
-14,2,3,Makes contact,This move causes the user to make contact with the target.
-14,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/b2w2/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/b2w2/moves/detect"">Detect</a> this turn."
-14,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/b2w2/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/b2w2/abilities/magic-bounce"">Magic Bounce</a>."
-14,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/b2w2/moves/snatch"">Snatch</a>."
-14,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/b2w2/moves/mirror-move"">Mirror Move</a>."
-14,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/b2w2/items/power-herb"">Power Herb</a>."
-14,2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-14,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/b2w2/abilities/iron-fist"">Iron Fist</a>."
-14,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/b2w2/abilities/soundproof"">Soundproof</a>"
-14,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/b2w2/moves/gravity"">Gravity</a> is in effect."
-14,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
-14,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
-14,2,15,Heals,"This move is blocked by <a class=""dex-link"" href=""/dex/b2w2/moves/heal-block"">Heal Block</a>."
-14,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/b2w2/moves/substitute"">Substitute</a>."
-15,2,3,Makes contact,This move causes the user to make contact with the target.
-15,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/xy/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/xy/moves/detect"">Detect</a>, or <a class=""dex-link"" href=""/dex/xy/moves/spiky-shield"">Spiky Shield</a> this turn."
-15,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/xy/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/xy/abilities/magic-bounce"">Magic Bounce</a>."
-15,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/xy/moves/snatch"">Snatch</a>."
-15,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/xy/moves/mirror-move"">Mirror Move</a>."
-15,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/xy/items/power-herb"">Power Herb</a>."
-15,2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-15,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/xy/abilities/iron-fist"">Iron Fist</a>."
-15,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/xy/abilities/soundproof"">Soundproof</a>"
-15,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/xy/moves/gravity"">Gravity</a> is in effect."
-15,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
-15,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
-15,2,15,Heals,"This move is blocked by <a class=""dex-link"" href=""/dex/xy/moves/heal-block"">Heal Block</a>."
-15,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/xy/moves/substitute"">Substitute</a>."
-15,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.
-15,2,18,Ally Animation,This move's animation plays when it targets an ally.
-16,2,3,Makes contact,This move causes the user to make contact with the target.
-16,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/oras/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/oras/moves/detect"">Detect</a>, or <a class=""dex-link"" href=""/dex/oras/moves/spiky-shield"">Spiky Shield</a> this turn."
-16,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/oras/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/oras/abilities/magic-bounce"">Magic Bounce</a>."
-16,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/oras/moves/snatch"">Snatch</a>."
-16,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/oras/moves/mirror-move"">Mirror Move</a>."
-16,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/oras/items/power-herb"">Power Herb</a>."
-16,2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-16,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/oras/abilities/iron-fist"">Iron Fist</a>."
-16,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/oras/abilities/soundproof"">Soundproof</a>"
-16,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/oras/moves/gravity"">Gravity</a> is in effect."
-16,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
-16,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
-16,2,15,Heals,"This move is blocked by <a class=""dex-link"" href=""/dex/oras/moves/heal-block"">Heal Block</a>."
-16,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/oras/moves/substitute"">Substitute</a>."
-16,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.
-16,2,18,Ally Animation,This move's animation plays when it targets an ally.
-17,2,3,Makes contact,This move causes the user to make contact with the target.
-17,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/sm/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/sm/moves/detect"">Detect</a>, <a class=""dex-link"" href=""/dex/sm/moves/spiky-shield"">Spiky Shield</a>, or <a class=""dex-link"" href=""/dex/sm/moves/baneful-bunker"">Baneful Bunker</a> this turn."
-17,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/sm/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/sm/abilities/magic-bounce"">Magic Bounce</a>."
-17,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/sm/moves/snatch"">Snatch</a>."
-17,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/sm/moves/mirror-move"">Mirror Move</a>."
-17,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/sm/items/power-herb"">Power Herb</a>."
-17,2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-17,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/sm/abilities/iron-fist"">Iron Fist</a>."
-17,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/sm/abilities/soundproof"">Soundproof</a>, can be prevented by <a class=""dex-link"" href=""/dex/sm/moves/throat-chop"">Throat Chop</a>, and becomes <a class=""dex-link"" href=""/dex/sm/types/water"">Water</a>-type if used by a Pokémon with <a class=""dex-link"" href=""/dex/sm/abilities/liquid-voice"">Liquid Voice</a>."
-17,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/sm/moves/gravity"">Gravity</a> is in effect."
-17,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
-17,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
-17,2,15,Heals,"This move is blocked by <a class=""dex-link"" href=""/dex/sm/moves/heal-block"">Heal Block</a>."
-17,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/sm/moves/substitute"">Substitute</a>."
-17,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.
-17,2,18,Ally Animation,This move's animation plays when it targets an ally.
-17,2,19,Dance,"This move will be copied by Pokémon with <a class=""dex-link"" href=""/dex/sm/abilities/dancer"">Dancer</a>."
-18,2,3,Makes contact,This move causes the user to make contact with the target.
-18,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/usum/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/usum/moves/detect"">Detect</a>, <a class=""dex-link"" href=""/dex/usum/moves/spiky-shield"">Spiky Shield</a>, or <a class=""dex-link"" href=""/dex/usum/moves/baneful-bunker"">Baneful Bunker</a> this turn."
-18,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/usum/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/usum/abilities/magic-bounce"">Magic Bounce</a>."
-18,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/usum/moves/snatch"">Snatch</a>."
-18,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/usum/moves/mirror-move"">Mirror Move</a>."
-18,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/usum/items/power-herb"">Power Herb</a>."
-18,2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-18,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/usum/abilities/iron-fist"">Iron Fist</a>."
-18,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/usum/abilities/soundproof"">Soundproof</a>, can be prevented by <a class=""dex-link"" href=""/dex/usum/moves/throat-chop"">Throat Chop</a>, and becomes <a class=""dex-link"" href=""/dex/usum/types/water"">Water</a>-type if used by a Pokémon with <a class=""dex-link"" href=""/dex/usum/abilities/liquid-voice"">Liquid Voice</a>."
-18,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/usum/moves/gravity"">Gravity</a> is in effect."
-18,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
-18,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
-18,2,15,Heals,"This move is blocked by <a class=""dex-link"" href=""/dex/usum/moves/heal-block"">Heal Block</a>."
-18,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/usum/moves/substitute"">Substitute</a>."
-18,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.
-18,2,18,Ally Animation,This move's animation plays when it targets an ally.
-18,2,19,Dance,"This move will be copied by Pokémon with <a class=""dex-link"" href=""/dex/usum/abilities/dancer"">Dancer</a>."
-19,2,3,Makes contact,This move causes the user to make contact with the target.
-19,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/lgpe/moves/protect"">Protect</a> this turn."
-19,2,5,Reflectable,This move can be reflected back at the user with Magic Coat or Magic Bounce.
-19,2,6,Snatchable,The effects of this move can be stolen by a Pokémon using Snatch.
-19,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/lgpe/moves/mirror-move"">Mirror Move</a>."
-19,2,8,Has a charging turn,This move has a charging turn.
-19,2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-19,2,10,Punch move,This is a punch-based move.
-19,2,11,Sound-based move,"This move does not affect Pokémon with Soundproof, can be prevented by Throat Chop, and becomes <a class=""dex-link"" href=""/dex/lgpe/types/water"">Water</a>-type if used by a Pokémon with Liquid Voice."
-19,2,12,Unusable during Gravity,This move cannot be used while Gravity is in effect.
-19,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
-19,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
-19,2,15,Heals,This is is a healing move.
-19,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/lgpe/moves/substitute"">Substitute</a>."
-19,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.
-19,2,18,Ally Animation,This move's animation plays when it targets an ally.
-19,2,19,Dance,This is a dance-based move.
-20,2,3,Makes contact,This move causes the user to make contact with the target.
-20,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/ss/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/ss/moves/detect"">Detect</a>, <a class=""dex-link"" href=""/dex/ss/moves/spiky-shield"">Spiky Shield</a>, or <a class=""dex-link"" href=""/dex/ss/moves/baneful-bunker"">Baneful Bunker</a> this turn."
-20,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/ss/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/ss/abilities/magic-bounce"">Magic Bounce</a>."
-20,2,6,Snatchable,The effects of this move can be stolen by a Pokémon using Snatch.
-20,2,7,Copied by Mirror Move,This move can be copied by Mirror Move.
-20,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/ss/items/power-herb"">Power Herb</a>."
-20,2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-20,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/ss/abilities/iron-fist"">Iron Fist</a>."
-20,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/ss/abilities/soundproof"">Soundproof</a>, can be prevented by <a class=""dex-link"" href=""/dex/ss/moves/throat-chop"">Throat Chop</a>, becomes <a class=""dex-link"" href=""/dex/ss/types/water"">Water</a>-type if used by a Pokémon with <a class=""dex-link"" href=""/dex/ss/abilities/liquid-voice"">Liquid Voice</a>, receives a 30% power boost from <a class=""dex-link"" href=""/dex/ss/abilities/punk-rock"">Punk Rock</a>, and triggers <a class=""dex-link"" href=""/dex/ss/items/throat-spray"">Throat Spray</a>."
-20,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/ss/moves/gravity"">Gravity</a> is in effect."
-20,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
-20,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
-20,2,15,Heals,This is is a healing move.
-20,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/ss/moves/substitute"">Substitute</a>."
-20,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.
-20,2,18,Ally Animation,This move's animation plays when it targets an ally.
-20,2,19,Dance,This is a dance-based move.
-20,2,20,Metronome,"This move can be called by <a class=""dex-link"" href=""/dex/ss/moves/metronome"">Metronome</a>."
-21,2,3,Makes contact,This move causes the user to make contact with the target.
-21,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/bdsp/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/bdsp/moves/detect"">Detect</a>, or <a class=""dex-link"" href=""/dex/bdsp/moves/spiky-shield"">Spiky Shield</a> this turn."
-21,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/bdsp/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/bdsp/abilities/magic-bounce"">Magic Bounce</a>."
-21,2,6,Snatchable,The effects of this move can be stolen by a Pokémon using Snatch.
-21,2,7,Copied by Mirror Move,This move can be copied by Mirror Move.
-21,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/bdsp/items/power-herb"">Power Herb</a>."
-21,2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-21,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/bdsp/abilities/iron-fist"">Iron Fist</a>."
-21,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/bdsp/abilities/soundproof"">Soundproof</a> and can be prevented by <a class=""dex-link"" href=""/dex/bdsp/moves/throat-chop"">Throat Chop</a>."
-21,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/bdsp/moves/gravity"">Gravity</a> is in effect."
-21,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
-21,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
-21,2,15,Heals,This is is a healing move.
-21,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/bdsp/moves/substitute"">Substitute</a>."
-21,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.
-21,2,18,Ally Animation,This move's animation plays when it targets an ally.
-21,2,19,Dance,This is a dance-based move.
-21,2,20,Metronome,"This move can be called by <a class=""dex-link"" href=""/dex/bdsp/moves/metronome"">Metronome</a>."
-22,2,3,Makes contact,This move causes the user to make contact with the target.
-22,2,4,Blocked by Protect,This move will be blocked if the target has used a protection move this turn.
-22,2,5,Reflectable,This move can be reflected back at the user with Magic Coat or Magic Bounce.
-22,2,6,Snatchable,The effects of this move can be stolen by a Pokémon using Snatch.
-22,2,7,Copied by Mirror Move,This move can be copied by Mirror Move.
-22,2,8,Has a charging turn,This move has a charging turn.
-22,2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-22,2,10,Punch move,This is a punch-based move.
-22,2,11,Sound-based move,This is a sound-based move.
-22,2,12,Unusable during Gravity,This move cannot be used while Gravity is in effect.
-22,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
-22,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
-22,2,15,Heals,This is is a healing move.
-22,2,16,Ignores Substitute,This move ignores the target's Substitute.
-22,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.
-22,2,18,Ally Animation,This move's animation plays when it targets an ally.
-22,2,19,Dance,This is a dance-based move.
-22,2,20,Metronome,This move can be called by Metronome.
-22,2,21,Cures Drowsy,This move cures drowsiness for the user and the target.
-22,2,22,Cures Frostbite,This move cures frostbite for the user and the target.
-23,2,3,Makes contact,This move causes the user to make contact with the target.
-23,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/sv/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/sv/moves/detect"">Detect</a>, <a class=""dex-link"" href=""/dex/sv/moves/spiky-shield"">Spiky Shield</a>, or <a class=""dex-link"" href=""/dex/sv/moves/baneful-bunker"">Baneful Bunker</a> this turn."
-23,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/sv/abilities/magic-bounce"">Magic Bounce</a>."
-23,2,6,Snatchable,The effects of this move can be stolen by a Pokémon using Snatch.
-23,2,7,Copied by Mirror Move,This move can be copied by Mirror Move.
-23,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/sv/items/power-herb"">Power Herb</a>."
-23,2,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-23,2,10,Punch move,"This move recieves a 20% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/iron-fist"">Iron Fist</a>, and a 10% power boost from <a class=""dex-link"" href=""/dex/sv/items/punching-glove"">Punching Glove</a>."
-23,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/soundproof"">Soundproof</a>, can be prevented by <a class=""dex-link"" href=""/dex/sv/moves/throat-chop"">Throat Chop</a>, becomes <a class=""dex-link"" href=""/dex/sv/types/water"">Water</a>-type if used by a Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/liquid-voice"">Liquid Voice</a>, receives a 30% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/punk-rock"">Punk Rock</a>, and triggers <a class=""dex-link"" href=""/dex/sv/items/throat-spray"">Throat Spray</a>."
-23,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/sv/moves/gravity"">Gravity</a> is in effect."
-23,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
-23,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user."
-23,2,15,Heals,This is is a healing move.
-23,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/sv/moves/substitute"">Substitute</a>."
-23,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.
-23,2,18,Ally Animation,This move's animation plays when it targets an ally.
-23,2,19,Dance,"This move will be copied by Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/dancer"">Dancer</a>."
-23,2,20,Metronome,"This move can be called by <a class=""dex-link"" href=""/dex/sv/moves/metronome"">Metronome</a>."
-23,2,23,Encore fails,"The move <a class=""dex-link"" href=""/dex/sv/moves/encore"">Encore</a> will fail if this move was used last by its target."
-23,2,24,Me First fails,The move Me First will fail if this move was used last by its target.
-23,2,25,Future attack,This move triggers an attack in the future.
-23,2,26,Affected by Pressure,"This move is affected by <a class=""dex-link"" href=""/dex/sv/abilities/pressure"">Pressure</a>, even if it doesn't target that Pokémon."
-23,2,27,Combo move,This move can be part of a combo.
-23,2,28,Ignored by Sleep Talk,"This move cannot be selected by <a class=""dex-link"" href=""/dex/sv/moves/sleep-talk"">Sleep Talk</a>."
-23,2,29,Ignored by Assist,This move cannot be selected by Assist.
-23,2,30,Copycat fails,"The move <a class=""dex-link"" href=""/dex/sv/moves/copycat"">Copycat</a> will fail if this move was used last by its target."
-23,2,31,Mimic fails,"The move <a class=""dex-link"" href=""/dex/sv/moves/mimic"">Mimic</a> will fail if this move was used last by its target."
-23,2,32,Instruct fails,"The move <a class=""dex-link"" href=""/dex/sv/moves/instruct"">Instruct</a> will fail if this move was used last by its target."
-23,2,33,Powder or spore move,"<a class=""dex-link"" href=""/dex/sv/types/grass"">Grass</a>-type Pokémon, Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/overcoat"">Overcoat</a>, and Pokémon holding <a class=""dex-link"" href=""/dex/sv/items/safety-goggles"">Safety Goggles</a> are immune to this move."
-23,2,34,Biting move,"This move receives a 50% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/strong-jaw"">Strong Jaw</a>."
-23,2,35,Ball or bomb move,"Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/bulletproof"">Bulletproof</a> are immune to this move."
-23,2,36,No Parental Bond,Parental Bond will not turn this move into a two-hit move.
-23,2,37,No effectiveness message,"This move will not display as ""super effective"" or ""not very effective."""
-23,2,38,Boosted by Sheer Force,"This move receives a 30% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/sheer-force"">Sheer Force</a> regardless of having a traditional secondary effect."
-23,2,39,Slicing move,"This move receives a 50% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/sharpness"">Sharpness</a>."
-23,2,40,Wind move,"This move triggers <a class=""dex-link"" href=""/dex/sv/abilities/wind-rider"">Wind Rider</a> and <a class=""dex-link"" href=""/dex/sv/abilities/wind-power"">Wind Power</a>."
-23,2,46,Can't be used consecutively,This move cannot be used twice in a row.
-23,2,47,Can't be Sketched,"The move <a class=""dex-link"" href=""/dex/sv/moves/sketch"">Sketch</a> will fail if this move was used last by its target."
-101,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/colo/items/kings-rock"">King’s Rock</a>."
-101,2,3,Makes contact,This move causes the user to make contact with the target.
-101,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/colo/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/colo/moves/detect"">Detect</a> this turn."
-101,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/colo/moves/magic-coat"">Magic Coat</a>."
-101,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/colo/moves/snatch"">Snatch</a>."
-101,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/colo/moves/mirror-move"">Mirror Move</a>."
-102,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/xd/items/kings-rock"">King’s Rock</a>."
-102,2,3,Makes contact,This move causes the user to make contact with the target.
-102,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/xd/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/xd/moves/detect"">Detect</a> this turn."
-102,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/xd/moves/magic-coat"">Magic Coat</a>."
-102,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/xd/moves/snatch"">Snatch</a>."
-102,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/xd/moves/mirror-move"">Mirror Move</a>."
+version_group_id,language_id,flag_id,name,description_singular,description_plural
+5,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/gs/items/kings-rock"">King’s Rock</a>.","These moves can trigger the effects of <a class=""dex-link"" href=""/dex/gs/items/kings-rock"">King’s Rock</a>."
+5,2,2,Accuracy check,This move uses the standard accuracy check.,These moves use the standard accuracy check.
+6,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/c/items/kings-rock"">King’s Rock</a>.","These moves can trigger the effects of <a class=""dex-link"" href=""/dex/c/items/kings-rock"">King’s Rock</a>."
+6,2,2,Accuracy check,This move uses the standard accuracy check.,These moves use the standard accuracy check.
+7,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/rs/items/kings-rock"">King’s Rock</a>.","These moves can trigger the effects of <a class=""dex-link"" href=""/dex/rs/items/kings-rock"">King’s Rock</a>."
+7,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+7,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/rs/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/rs/moves/detect"">Detect</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/rs/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/rs/moves/detect"">Detect</a> this turn."
+7,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/rs/moves/magic-coat"">Magic Coat</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/rs/moves/magic-coat"">Magic Coat</a>."
+7,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/rs/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/rs/moves/snatch"">Snatch</a>."
+7,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/rs/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/rs/moves/mirror-move"">Mirror Move</a>."
+8,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/frlg/items/kings-rock"">King’s Rock</a>.","These moves can trigger the effects of <a class=""dex-link"" href=""/dex/frlg/items/kings-rock"">King’s Rock</a>."
+8,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+8,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/frlg/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/frlg/moves/detect"">Detect</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/frlg/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/frlg/moves/detect"">Detect</a> this turn."
+8,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/frlg/moves/magic-coat"">Magic Coat</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/frlg/moves/magic-coat"">Magic Coat</a>."
+8,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/frlg/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/frlg/moves/snatch"">Snatch</a>."
+8,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/frlg/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/frlg/moves/mirror-move"">Mirror Move</a>."
+9,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/e/items/kings-rock"">King’s Rock</a>.","These moves can trigger the effects of <a class=""dex-link"" href=""/dex/e/items/kings-rock"">King’s Rock</a>."
+9,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+9,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/e/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/e/moves/detect"">Detect</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/e/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/e/moves/detect"">Detect</a> this turn."
+9,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/e/moves/magic-coat"">Magic Coat</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/e/moves/magic-coat"">Magic Coat</a>."
+9,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/e/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/e/moves/snatch"">Snatch</a>."
+9,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/e/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/e/moves/mirror-move"">Mirror Move</a>."
+10,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/dp/items/kings-rock"">King’s Rock</a>.","These moves can trigger the effects of <a class=""dex-link"" href=""/dex/dp/items/kings-rock"">King’s Rock</a>."
+10,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+10,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/dp/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/dp/moves/detect"">Detect</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/dp/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/dp/moves/detect"">Detect</a> this turn."
+10,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/dp/moves/magic-coat"">Magic Coat</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/dp/moves/magic-coat"">Magic Coat</a>."
+10,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/dp/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/dp/moves/snatch"">Snatch</a>."
+10,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/dp/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/dp/moves/mirror-move"">Mirror Move</a>."
+11,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/pt/items/kings-rock"">King’s Rock</a>.","These moves can trigger the effects of <a class=""dex-link"" href=""/dex/pt/items/kings-rock"">King’s Rock</a>."
+11,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+11,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/pt/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/pt/moves/detect"">Detect</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/pt/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/pt/moves/detect"">Detect</a> this turn."
+11,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/pt/moves/magic-coat"">Magic Coat</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/pt/moves/magic-coat"">Magic Coat</a>."
+11,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/pt/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/pt/moves/snatch"">Snatch</a>."
+11,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/pt/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/pt/moves/mirror-move"">Mirror Move</a>."
+12,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/hgss/items/kings-rock"">King’s Rock</a>.","These moves can trigger the effects of <a class=""dex-link"" href=""/dex/hgss/items/kings-rock"">King’s Rock</a>."
+12,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+12,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/hgss/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/hgss/moves/detect"">Detect</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/hgss/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/hgss/moves/detect"">Detect</a> this turn."
+12,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/hgss/moves/magic-coat"">Magic Coat</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/hgss/moves/magic-coat"">Magic Coat</a>."
+12,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/hgss/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/hgss/moves/snatch"">Snatch</a>."
+12,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/hgss/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/hgss/moves/mirror-move"">Mirror Move</a>."
+13,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+13,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/bw/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/bw/moves/detect"">Detect</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/bw/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/bw/moves/detect"">Detect</a> this turn."
+13,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/bw/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/bw/abilities/magic-bounce"">Magic Bounce</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/bw/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/bw/abilities/magic-bounce"">Magic Bounce</a>."
+13,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/bw/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/bw/moves/snatch"">Snatch</a>."
+13,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/bw/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/bw/moves/mirror-move"">Mirror Move</a>."
+13,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/bw/items/power-herb"">Power Herb</a>.","These moves have a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/bw/items/power-herb"">Power Herb</a>."
+13,2,9,Must recharge,"On the turn after this move is used, the Pokémon's action is skipped so it can recharge.","On the turn after these moves are used, the Pokémon's action is skipped so it can recharge."
+13,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/bw/abilities/iron-fist"">Iron Fist</a>.","These moves receive a 20% power boost from <a class=""dex-link"" href=""/dex/bw/abilities/iron-fist"">Iron Fist</a>."
+13,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/bw/abilities/soundproof"">Soundproof</a>","These moves do not affect Pokémon with <a class=""dex-link"" href=""/dex/bw/abilities/soundproof"">Soundproof</a>"
+13,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/bw/moves/gravity"">Gravity</a> is in effect.","These moves cannot be used while <a class=""dex-link"" href=""/dex/bw/moves/gravity"">Gravity</a> is in effect."
+13,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.,These moves can be used while frozen to force the Pokémon to defrost.
+13,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user.","In triple battles, these moves can target Pokémon on the opposite side from the user."
+13,2,15,Heals,"This move is blocked by <a class=""dex-link"" href=""/dex/bw/moves/heal-block"">Heal Block</a>.","These moves are blocked by <a class=""dex-link"" href=""/dex/bw/moves/heal-block"">Heal Block</a>."
+13,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/bw/moves/substitute"">Substitute</a>.","These moves ignore the target's <a class=""dex-link"" href=""/dex/bw/moves/substitute"">Substitute</a>."
+14,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+14,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/b2w2/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/b2w2/moves/detect"">Detect</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/b2w2/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/b2w2/moves/detect"">Detect</a> this turn."
+14,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/b2w2/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/b2w2/abilities/magic-bounce"">Magic Bounce</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/b2w2/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/b2w2/abilities/magic-bounce"">Magic Bounce</a>."
+14,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/b2w2/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/b2w2/moves/snatch"">Snatch</a>."
+14,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/b2w2/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/b2w2/moves/mirror-move"">Mirror Move</a>."
+14,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/b2w2/items/power-herb"">Power Herb</a>.","These moves have a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/b2w2/items/power-herb"">Power Herb</a>."
+14,2,9,Must recharge,"On the turn after this move is used, the Pokémon's action is skipped so it can recharge.","On the turn after these moves are used, the Pokémon's action is skipped so it can recharge."
+14,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/b2w2/abilities/iron-fist"">Iron Fist</a>.","These moves receive a 20% power boost from <a class=""dex-link"" href=""/dex/b2w2/abilities/iron-fist"">Iron Fist</a>."
+14,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/b2w2/abilities/soundproof"">Soundproof</a>","These moves do not affect Pokémon with <a class=""dex-link"" href=""/dex/b2w2/abilities/soundproof"">Soundproof</a>"
+14,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/b2w2/moves/gravity"">Gravity</a> is in effect.","These moves cannot be used while <a class=""dex-link"" href=""/dex/b2w2/moves/gravity"">Gravity</a> is in effect."
+14,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.,These moves can be used while frozen to force the Pokémon to defrost.
+14,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user.","In triple battles, these moves can target Pokémon on the opposite side from the user."
+14,2,15,Heals,"This move is blocked by <a class=""dex-link"" href=""/dex/b2w2/moves/heal-block"">Heal Block</a>.","These moves are blocked by <a class=""dex-link"" href=""/dex/b2w2/moves/heal-block"">Heal Block</a>."
+14,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/b2w2/moves/substitute"">Substitute</a>.","These moves ignore the target's <a class=""dex-link"" href=""/dex/b2w2/moves/substitute"">Substitute</a>."
+15,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+15,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/xy/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/xy/moves/detect"">Detect</a>, or <a class=""dex-link"" href=""/dex/xy/moves/spiky-shield"">Spiky Shield</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/xy/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/xy/moves/detect"">Detect</a>, or <a class=""dex-link"" href=""/dex/xy/moves/spiky-shield"">Spiky Shield</a> this turn."
+15,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/xy/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/xy/abilities/magic-bounce"">Magic Bounce</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/xy/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/xy/abilities/magic-bounce"">Magic Bounce</a>."
+15,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/xy/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/xy/moves/snatch"">Snatch</a>."
+15,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/xy/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/xy/moves/mirror-move"">Mirror Move</a>."
+15,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/xy/items/power-herb"">Power Herb</a>.","These moves have a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/xy/items/power-herb"">Power Herb</a>."
+15,2,9,Must recharge,"On the turn after this move is used, the Pokémon's action is skipped so it can recharge.","On the turn after these moves are used, the Pokémon's action is skipped so it can recharge."
+15,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/xy/abilities/iron-fist"">Iron Fist</a>.","These moves receive a 20% power boost from <a class=""dex-link"" href=""/dex/xy/abilities/iron-fist"">Iron Fist</a>."
+15,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/xy/abilities/soundproof"">Soundproof</a>","These moves do not affect Pokémon with <a class=""dex-link"" href=""/dex/xy/abilities/soundproof"">Soundproof</a>"
+15,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/xy/moves/gravity"">Gravity</a> is in effect.","These moves cannot be used while <a class=""dex-link"" href=""/dex/xy/moves/gravity"">Gravity</a> is in effect."
+15,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.,These moves can be used while frozen to force the Pokémon to defrost.
+15,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user.","In triple battles, these moves can target Pokémon on the opposite side from the user."
+15,2,15,Heals,"This move is blocked by <a class=""dex-link"" href=""/dex/xy/moves/heal-block"">Heal Block</a>.","These moves are blocked by <a class=""dex-link"" href=""/dex/xy/moves/heal-block"">Heal Block</a>."
+15,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/xy/moves/substitute"">Substitute</a>.","These moves ignore the target's <a class=""dex-link"" href=""/dex/xy/moves/substitute"">Substitute</a>."
+15,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.,These moves are unusable during Sky Battles.
+15,2,18,Ally Animation,This move is always animated when it targets an ally.,These moves are always animated when they target an ally.
+16,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+16,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/oras/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/oras/moves/detect"">Detect</a>, or <a class=""dex-link"" href=""/dex/oras/moves/spiky-shield"">Spiky Shield</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/oras/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/oras/moves/detect"">Detect</a>, or <a class=""dex-link"" href=""/dex/oras/moves/spiky-shield"">Spiky Shield</a> this turn."
+16,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/oras/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/oras/abilities/magic-bounce"">Magic Bounce</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/oras/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/oras/abilities/magic-bounce"">Magic Bounce</a>."
+16,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/oras/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/oras/moves/snatch"">Snatch</a>."
+16,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/oras/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/oras/moves/mirror-move"">Mirror Move</a>."
+16,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/oras/items/power-herb"">Power Herb</a>.","These moves have a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/oras/items/power-herb"">Power Herb</a>."
+16,2,9,Must recharge,"On the turn after this move is used, the Pokémon's action is skipped so it can recharge.","On the turn after these moves are used, the Pokémon's action is skipped so it can recharge."
+16,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/oras/abilities/iron-fist"">Iron Fist</a>.","These moves receive a 20% power boost from <a class=""dex-link"" href=""/dex/oras/abilities/iron-fist"">Iron Fist</a>."
+16,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/oras/abilities/soundproof"">Soundproof</a>","These moves do not affect Pokémon with <a class=""dex-link"" href=""/dex/oras/abilities/soundproof"">Soundproof</a>"
+16,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/oras/moves/gravity"">Gravity</a> is in effect.","These moves cannot be used while <a class=""dex-link"" href=""/dex/oras/moves/gravity"">Gravity</a> is in effect."
+16,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.,These moves can be used while frozen to force the Pokémon to defrost.
+16,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user.","In triple battles, these moves can target Pokémon on the opposite side from the user."
+16,2,15,Heals,"This move is blocked by <a class=""dex-link"" href=""/dex/oras/moves/heal-block"">Heal Block</a>.","These moves are blocked by <a class=""dex-link"" href=""/dex/oras/moves/heal-block"">Heal Block</a>."
+16,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/oras/moves/substitute"">Substitute</a>.","These moves ignore the target's <a class=""dex-link"" href=""/dex/oras/moves/substitute"">Substitute</a>."
+16,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.,These moves are unusable during Sky Battles.
+16,2,18,Ally Animation,This move is always animated when it targets an ally.,These moves are always animated when they target an ally.
+17,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+17,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/sm/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/sm/moves/detect"">Detect</a>, <a class=""dex-link"" href=""/dex/sm/moves/spiky-shield"">Spiky Shield</a>, or <a class=""dex-link"" href=""/dex/sm/moves/baneful-bunker"">Baneful Bunker</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/sm/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/sm/moves/detect"">Detect</a>, <a class=""dex-link"" href=""/dex/sm/moves/spiky-shield"">Spiky Shield</a>, or <a class=""dex-link"" href=""/dex/sm/moves/baneful-bunker"">Baneful Bunker</a> this turn."
+17,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/sm/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/sm/abilities/magic-bounce"">Magic Bounce</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/sm/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/sm/abilities/magic-bounce"">Magic Bounce</a>."
+17,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/sm/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/sm/moves/snatch"">Snatch</a>."
+17,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/sm/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/sm/moves/mirror-move"">Mirror Move</a>."
+17,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/sm/items/power-herb"">Power Herb</a>.","These moves have a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/sm/items/power-herb"">Power Herb</a>."
+17,2,9,Must recharge,"On the turn after this move is used, the Pokémon's action is skipped so it can recharge.","On the turn after these moves are used, the Pokémon's action is skipped so it can recharge."
+17,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/sm/abilities/iron-fist"">Iron Fist</a>.","These moves receive a 20% power boost from <a class=""dex-link"" href=""/dex/sm/abilities/iron-fist"">Iron Fist</a>."
+17,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/sm/abilities/soundproof"">Soundproof</a>, can be prevented by <a class=""dex-link"" href=""/dex/sm/moves/throat-chop"">Throat Chop</a>, and becomes <a class=""dex-link"" href=""/dex/sm/types/water"">Water</a>-type if used by a Pokémon with <a class=""dex-link"" href=""/dex/sm/abilities/liquid-voice"">Liquid Voice</a>.","These moves do not affect Pokémon with <a class=""dex-link"" href=""/dex/sm/abilities/soundproof"">Soundproof</a>, can be prevented by <a class=""dex-link"" href=""/dex/sm/moves/throat-chop"">Throat Chop</a>, and become <a class=""dex-link"" href=""/dex/sm/types/water"">Water</a>-type if used by a Pokémon with <a class=""dex-link"" href=""/dex/sm/abilities/liquid-voice"">Liquid Voice</a>."
+17,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/sm/moves/gravity"">Gravity</a> is in effect.","These moves cannot be used while <a class=""dex-link"" href=""/dex/sm/moves/gravity"">Gravity</a> is in effect."
+17,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.,These moves can be used while frozen to force the Pokémon to defrost.
+17,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user.","In triple battles, these moves can target Pokémon on the opposite side from the user."
+17,2,15,Heals,"This move is blocked by <a class=""dex-link"" href=""/dex/sm/moves/heal-block"">Heal Block</a>.","These moves are blocked by <a class=""dex-link"" href=""/dex/sm/moves/heal-block"">Heal Block</a>."
+17,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/sm/moves/substitute"">Substitute</a>.","These moves ignore the target's <a class=""dex-link"" href=""/dex/sm/moves/substitute"">Substitute</a>."
+17,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.,These moves are unusable during Sky Battles.
+17,2,18,Ally Animation,This move is always animated when it targets an ally.,These moves are always animated when they target an ally.
+17,2,19,Dance,"This move will be copied by Pokémon with <a class=""dex-link"" href=""/dex/sm/abilities/dancer"">Dancer</a>.","These moves will be copied by Pokémon with <a class=""dex-link"" href=""/dex/sm/abilities/dancer"">Dancer</a>."
+18,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+18,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/usum/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/usum/moves/detect"">Detect</a>, <a class=""dex-link"" href=""/dex/usum/moves/spiky-shield"">Spiky Shield</a>, or <a class=""dex-link"" href=""/dex/usum/moves/baneful-bunker"">Baneful Bunker</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/usum/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/usum/moves/detect"">Detect</a>, <a class=""dex-link"" href=""/dex/usum/moves/spiky-shield"">Spiky Shield</a>, or <a class=""dex-link"" href=""/dex/usum/moves/baneful-bunker"">Baneful Bunker</a> this turn."
+18,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/usum/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/usum/abilities/magic-bounce"">Magic Bounce</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/usum/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/usum/abilities/magic-bounce"">Magic Bounce</a>."
+18,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/usum/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/usum/moves/snatch"">Snatch</a>."
+18,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/usum/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/usum/moves/mirror-move"">Mirror Move</a>."
+18,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/usum/items/power-herb"">Power Herb</a>.","These moves have a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/usum/items/power-herb"">Power Herb</a>."
+18,2,9,Must recharge,"On the turn after this move is used, the Pokémon's action is skipped so it can recharge.","On the turn after these moves are used, the Pokémon's action is skipped so it can recharge."
+18,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/usum/abilities/iron-fist"">Iron Fist</a>.","These moves receive a 20% power boost from <a class=""dex-link"" href=""/dex/usum/abilities/iron-fist"">Iron Fist</a>."
+18,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/usum/abilities/soundproof"">Soundproof</a>, can be prevented by <a class=""dex-link"" href=""/dex/usum/moves/throat-chop"">Throat Chop</a>, and becomes <a class=""dex-link"" href=""/dex/usum/types/water"">Water</a>-type if used by a Pokémon with <a class=""dex-link"" href=""/dex/usum/abilities/liquid-voice"">Liquid Voice</a>.","These moves do not affect Pokémon with <a class=""dex-link"" href=""/dex/usum/abilities/soundproof"">Soundproof</a>, can be prevented by <a class=""dex-link"" href=""/dex/usum/moves/throat-chop"">Throat Chop</a>, and become <a class=""dex-link"" href=""/dex/usum/types/water"">Water</a>-type if used by a Pokémon with <a class=""dex-link"" href=""/dex/usum/abilities/liquid-voice"">Liquid Voice</a>."
+18,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/usum/moves/gravity"">Gravity</a> is in effect.","These moves cannot be used while <a class=""dex-link"" href=""/dex/usum/moves/gravity"">Gravity</a> is in effect."
+18,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.,These moves can be used while frozen to force the Pokémon to defrost.
+18,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user.","In triple battles, these moves can target Pokémon on the opposite side from the user."
+18,2,15,Heals,"This move is blocked by <a class=""dex-link"" href=""/dex/usum/moves/heal-block"">Heal Block</a>.","These moves are blocked by <a class=""dex-link"" href=""/dex/usum/moves/heal-block"">Heal Block</a>."
+18,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/usum/moves/substitute"">Substitute</a>.","These moves ignore the target's <a class=""dex-link"" href=""/dex/usum/moves/substitute"">Substitute</a>."
+18,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.,These moves are unusable during Sky Battles.
+18,2,18,Ally Animation,This move is always animated when it targets an ally.,These moves are always animated when they target an ally.
+18,2,19,Dance,"This move will be copied by Pokémon with <a class=""dex-link"" href=""/dex/usum/abilities/dancer"">Dancer</a>.","These moves will be copied by Pokémon with <a class=""dex-link"" href=""/dex/usum/abilities/dancer"">Dancer</a>."
+19,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+19,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/lgpe/moves/protect"">Protect</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/lgpe/moves/protect"">Protect</a> this turn."
+19,2,5,Reflectable,This move can be reflected back at the user with Magic Coat or Magic Bounce.,These moves can be reflected back at the user with Magic Coat or Magic Bounce.
+19,2,6,Snatchable,The effects of this move can be stolen by a Pokémon using Snatch.,The effects of these moves can be stolen by a Pokémon using Snatch.
+19,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/lgpe/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/lgpe/moves/mirror-move"">Mirror Move</a>."
+19,2,8,Has a charging turn,This move has a charging turn.,These moves have a charging turn.
+19,2,9,Must recharge,"On the turn after this move is used, the Pokémon's action is skipped so it can recharge.","On the turn after these moves are used, the Pokémon's action is skipped so it can recharge."
+19,2,10,Punch move,This is a punch-based move.,These are punch-based moves.
+19,2,11,Sound-based move,"This move does not affect Pokémon with Soundproof, can be prevented by Throat Chop, and becomes <a class=""dex-link"" href=""/dex/lgpe/types/water"">Water</a>-type if used by a Pokémon with Liquid Voice.","These moves do not affect Pokémon with Soundproof, can be prevented by Throat Chop, and become <a class=""dex-link"" href=""/dex/lgpe/types/water"">Water</a>-type if used by a Pokémon with Liquid Voice."
+19,2,12,Unusable during Gravity,This move cannot be used while Gravity is in effect.,These moves cannot be used while Gravity is in effect.
+19,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.,These moves can be used while frozen to force the Pokémon to defrost.
+19,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user.","In triple battles, these moves can target Pokémon on the opposite side from the user."
+19,2,15,Heals,This is is a healing move.,These are healing moves.
+19,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/lgpe/moves/substitute"">Substitute</a>.","These moves ignore the target's <a class=""dex-link"" href=""/dex/lgpe/moves/substitute"">Substitute</a>."
+19,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.,These moves are unusable during Sky Battles.
+19,2,18,Ally Animation,This move is always animated when it targets an ally.,These moves are always animated when they target an ally.
+19,2,19,Dance,This is a dance-based move.,These are dance-based moves.
+20,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+20,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/ss/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/ss/moves/detect"">Detect</a>, <a class=""dex-link"" href=""/dex/ss/moves/spiky-shield"">Spiky Shield</a>, or <a class=""dex-link"" href=""/dex/ss/moves/baneful-bunker"">Baneful Bunker</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/ss/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/ss/moves/detect"">Detect</a>, <a class=""dex-link"" href=""/dex/ss/moves/spiky-shield"">Spiky Shield</a>, or <a class=""dex-link"" href=""/dex/ss/moves/baneful-bunker"">Baneful Bunker</a> this turn."
+20,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/ss/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/ss/abilities/magic-bounce"">Magic Bounce</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/ss/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/ss/abilities/magic-bounce"">Magic Bounce</a>."
+20,2,6,Snatchable,The effects of this move can be stolen by a Pokémon using Snatch.,The effects of these moves can be stolen by a Pokémon using Snatch.
+20,2,7,Copied by Mirror Move,This move can be copied by Mirror Move.,These moves can be copied by Mirror Move.
+20,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/ss/items/power-herb"">Power Herb</a>.","These moves have a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/ss/items/power-herb"">Power Herb</a>."
+20,2,9,Must recharge,"On the turn after this move is used, the Pokémon's action is skipped so it can recharge.","On the turn after these moves are used, the Pokémon's action is skipped so it can recharge."
+20,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/ss/abilities/iron-fist"">Iron Fist</a>.","These moves receive a 20% power boost from <a class=""dex-link"" href=""/dex/ss/abilities/iron-fist"">Iron Fist</a>."
+20,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/ss/abilities/soundproof"">Soundproof</a>, can be prevented by <a class=""dex-link"" href=""/dex/ss/moves/throat-chop"">Throat Chop</a>, becomes <a class=""dex-link"" href=""/dex/ss/types/water"">Water</a>-type if used by a Pokémon with <a class=""dex-link"" href=""/dex/ss/abilities/liquid-voice"">Liquid Voice</a>, receives a 30% power boost from <a class=""dex-link"" href=""/dex/ss/abilities/punk-rock"">Punk Rock</a>, and triggers <a class=""dex-link"" href=""/dex/ss/items/throat-spray"">Throat Spray</a>.","These moves do not affect Pokémon with <a class=""dex-link"" href=""/dex/ss/abilities/soundproof"">Soundproof</a>, can be prevented by <a class=""dex-link"" href=""/dex/ss/moves/throat-chop"">Throat Chop</a>, become <a class=""dex-link"" href=""/dex/ss/types/water"">Water</a>-type if used by a Pokémon with <a class=""dex-link"" href=""/dex/ss/abilities/liquid-voice"">Liquid Voice</a>, receive a 30% power boost from <a class=""dex-link"" href=""/dex/ss/abilities/punk-rock"">Punk Rock</a>, and trigger <a class=""dex-link"" href=""/dex/ss/items/throat-spray"">Throat Spray</a>."
+20,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/ss/moves/gravity"">Gravity</a> is in effect.","These moves cannot be used while <a class=""dex-link"" href=""/dex/ss/moves/gravity"">Gravity</a> is in effect."
+20,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.,These moves can be used while frozen to force the Pokémon to defrost.
+20,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user.","In triple battles, these moves can target Pokémon on the opposite side from the user."
+20,2,15,Heals,This is is a healing move.,These are healing moves.
+20,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/ss/moves/substitute"">Substitute</a>.","These moves ignore the target's <a class=""dex-link"" href=""/dex/ss/moves/substitute"">Substitute</a>."
+20,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.,These moves are unusable during Sky Battles.
+20,2,18,Ally Animation,This move is always animated when it targets an ally.,These moves are always animated when they target an ally.
+20,2,19,Dance,This is a dance-based move.,These are dance-based moves.
+20,2,20,Metronome,"This move can be called by <a class=""dex-link"" href=""/dex/ss/moves/metronome"">Metronome</a>.","These moves can be called by <a class=""dex-link"" href=""/dex/ss/moves/metronome"">Metronome</a>."
+21,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+21,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/bdsp/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/bdsp/moves/detect"">Detect</a>, or <a class=""dex-link"" href=""/dex/bdsp/moves/spiky-shield"">Spiky Shield</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/bdsp/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/bdsp/moves/detect"">Detect</a>, or <a class=""dex-link"" href=""/dex/bdsp/moves/spiky-shield"">Spiky Shield</a> this turn."
+21,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/bdsp/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/bdsp/abilities/magic-bounce"">Magic Bounce</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/bdsp/moves/magic-coat"">Magic Coat</a> or <a class=""dex-link"" href=""/dex/bdsp/abilities/magic-bounce"">Magic Bounce</a>."
+21,2,6,Snatchable,The effects of this move can be stolen by a Pokémon using Snatch.,The effects of these moves can be stolen by a Pokémon using Snatch.
+21,2,7,Copied by Mirror Move,This move can be copied by Mirror Move.,These moves can be copied by Mirror Move.
+21,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/bdsp/items/power-herb"">Power Herb</a>.","These moves have a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/bdsp/items/power-herb"">Power Herb</a>."
+21,2,9,Must recharge,"On the turn after this move is used, the Pokémon's action is skipped so it can recharge.","On the turn after these moves are used, the Pokémon's action is skipped so it can recharge."
+21,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/bdsp/abilities/iron-fist"">Iron Fist</a>.","These moves receive a 20% power boost from <a class=""dex-link"" href=""/dex/bdsp/abilities/iron-fist"">Iron Fist</a>."
+21,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/bdsp/abilities/soundproof"">Soundproof</a> and can be prevented by <a class=""dex-link"" href=""/dex/bdsp/moves/throat-chop"">Throat Chop</a>.","These moves do not affect Pokémon with <a class=""dex-link"" href=""/dex/bdsp/abilities/soundproof"">Soundproof</a> and can be prevented by <a class=""dex-link"" href=""/dex/bdsp/moves/throat-chop"">Throat Chop</a>."
+21,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/bdsp/moves/gravity"">Gravity</a> is in effect.","These moves cannot be used while <a class=""dex-link"" href=""/dex/bdsp/moves/gravity"">Gravity</a> is in effect."
+21,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.,These moves can be used while frozen to force the Pokémon to defrost.
+21,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user.","In triple battles, these moves can target Pokémon on the opposite side from the user."
+21,2,15,Heals,This is is a healing move.,These are healing moves.
+21,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/bdsp/moves/substitute"">Substitute</a>.","These moves ignore the target's <a class=""dex-link"" href=""/dex/bdsp/moves/substitute"">Substitute</a>."
+21,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.,These moves are unusable during Sky Battles.
+21,2,18,Ally Animation,This move is always animated when it targets an ally.,These moves are always animated when they target an ally.
+21,2,19,Dance,This is a dance-based move.,These are dance-based moves.
+21,2,20,Metronome,"This move can be called by <a class=""dex-link"" href=""/dex/bdsp/moves/metronome"">Metronome</a>.","These moves can be called by <a class=""dex-link"" href=""/dex/bdsp/moves/metronome"">Metronome</a>."
+22,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+22,2,4,Blocked by Protect,This move will be blocked if the target has used a protection move this turn.,These moves will be blocked if the target has used a protection move this turn.
+22,2,5,Reflectable,This move can be reflected back at the user with Magic Coat or Magic Bounce.,These moves can be reflected back at the user with Magic Coat or Magic Bounce.
+22,2,6,Snatchable,The effects of this move can be stolen by a Pokémon using Snatch.,The effects of these moves can be stolen by a Pokémon using Snatch.
+22,2,7,Copied by Mirror Move,This move can be copied by Mirror Move.,These moves can be copied by Mirror Move.
+22,2,8,Has a charging turn,This move has a charging turn.,These moves have a charging turn.
+22,2,9,Must recharge,"On the turn after this move is used, the Pokémon's action is skipped so it can recharge.","On the turn after these moves are used, the Pokémon's action is skipped so it can recharge."
+22,2,10,Punch move,This is a punch-based move.,These are punch-based moves.
+22,2,11,Sound-based move,This is a sound-based move.,These are sound-based moves.
+22,2,12,Unusable during Gravity,This move cannot be used while Gravity is in effect.,These moves cannot be used while Gravity is in effect.
+22,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.,These moves can be used while frozen to force the Pokémon to defrost.
+22,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user.","In triple battles, these moves can target Pokémon on the opposite side from the user."
+22,2,15,Heals,This is is a healing move.,These are healing moves.
+22,2,16,Ignores Substitute,This move ignores the target's Substitute.,These moves ignore the target's Substitute.
+22,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.,These moves are unusable during Sky Battles.
+22,2,18,Ally Animation,This move is always animated when it targets an ally.,These moves are always animated when they target an ally.
+22,2,19,Dance,This is a dance-based move.,These are dance-based moves.
+22,2,20,Metronome,This move can be called by Metronome.,These moves can be called by Metronome.
+22,2,21,Cures Drowsy,This move cures drowsiness for the user and the target.,These moves cure drowsiness for the user and the target.
+22,2,22,Cures Frostbite,This move cures frostbite for the user and the target.,These moves cure frostbite for the user and the target.
+23,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+23,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/sv/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/sv/moves/detect"">Detect</a>, <a class=""dex-link"" href=""/dex/sv/moves/spiky-shield"">Spiky Shield</a>, or <a class=""dex-link"" href=""/dex/sv/moves/baneful-bunker"">Baneful Bunker</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/sv/moves/protect"">Protect</a>, <a class=""dex-link"" href=""/dex/sv/moves/detect"">Detect</a>, <a class=""dex-link"" href=""/dex/sv/moves/spiky-shield"">Spiky Shield</a>, or <a class=""dex-link"" href=""/dex/sv/moves/baneful-bunker"">Baneful Bunker</a> this turn."
+23,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/sv/abilities/magic-bounce"">Magic Bounce</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/sv/abilities/magic-bounce"">Magic Bounce</a>."
+23,2,6,Snatchable,The effects of this move can be stolen by a Pokémon using Snatch.,The effects of these moves can be stolen by a Pokémon using Snatch.
+23,2,7,Copied by Mirror Move,This move can be copied by Mirror Move.,These moves can be copied by Mirror Move.
+23,2,8,Has a charging turn,"This move has a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/sv/items/power-herb"">Power Herb</a>.","These moves have a charging turn that can be skipped with a <a class=""dex-link"" href=""/dex/sv/items/power-herb"">Power Herb</a>."
+23,2,9,Must recharge,"On the turn after this move is used, the Pokémon's action is skipped so it can recharge.","On the turn after these moves are used, the Pokémon's action is skipped so it can recharge."
+23,2,10,Punch move,"This move receives a 20% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/iron-fist"">Iron Fist</a>, and a 10% power boost from <a class=""dex-link"" href=""/dex/sv/items/punching-glove"">Punching Glove</a>.","These moves receive a 20% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/iron-fist"">Iron Fist</a>, and a 10% power boost from <a class=""dex-link"" href=""/dex/sv/items/punching-glove"">Punching Glove</a>."
+23,2,11,Sound-based move,"This move does not affect Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/soundproof"">Soundproof</a>, can be prevented by <a class=""dex-link"" href=""/dex/sv/moves/throat-chop"">Throat Chop</a>, becomes <a class=""dex-link"" href=""/dex/sv/types/water"">Water</a>-type if used by a Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/liquid-voice"">Liquid Voice</a>, receives a 30% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/punk-rock"">Punk Rock</a>, and triggers <a class=""dex-link"" href=""/dex/sv/items/throat-spray"">Throat Spray</a>.","These moves do not affect Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/soundproof"">Soundproof</a>, can be prevented by <a class=""dex-link"" href=""/dex/sv/moves/throat-chop"">Throat Chop</a>, become <a class=""dex-link"" href=""/dex/sv/types/water"">Water</a>-type if used by a Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/liquid-voice"">Liquid Voice</a>, receive a 30% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/punk-rock"">Punk Rock</a>, and trigger <a class=""dex-link"" href=""/dex/sv/items/throat-spray"">Throat Spray</a>."
+23,2,12,Unusable during Gravity,"This move cannot be used while <a class=""dex-link"" href=""/dex/sv/moves/gravity"">Gravity</a> is in effect.","These moves cannot be used while <a class=""dex-link"" href=""/dex/sv/moves/gravity"">Gravity</a> is in effect."
+23,2,13,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.,These moves can be used while frozen to force the Pokémon to defrost.
+23,2,14,Targets opposite side in triples,"In triple battles, this move can target Pokémon on the opposite side from the user.","In triple battles, these moves can target Pokémon on the opposite side from the user."
+23,2,15,Heals,This is is a healing move.,These are healing moves.
+23,2,16,Ignores Substitute,"This move ignores the target's <a class=""dex-link"" href=""/dex/sv/moves/substitute"">Substitute</a>.","These moves ignore the target's <a class=""dex-link"" href=""/dex/sv/moves/substitute"">Substitute</a>."
+23,2,17,Unusable during Sky Battles,This move is unusable during Sky Battles.,These moves are unusable during Sky Battles.
+23,2,18,Ally Animation,This move is always animated when it targets an ally.,These moves are always animated when they target an ally.
+23,2,19,Dance,"This move will be copied by Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/dancer"">Dancer</a>.","These moves will be copied by Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/dancer"">Dancer</a>."
+23,2,20,Metronome,"This move can be called by <a class=""dex-link"" href=""/dex/sv/moves/metronome"">Metronome</a>.","These moves can be called by <a class=""dex-link"" href=""/dex/sv/moves/metronome"">Metronome</a>."
+23,2,23,Encore fails,"The move <a class=""dex-link"" href=""/dex/sv/moves/encore"">Encore</a> will fail if this move was used last by its target.","The move <a class=""dex-link"" href=""/dex/sv/moves/encore"">Encore</a> will fail if one of these moves was used last by its target."
+23,2,24,Me First fails,The move Me First will fail if this move was used last by its target.,The move Me First will fail if one of these moves was used last by its target.
+23,2,25,Future attack,This move triggers an attack in the future.,These moves trigger an attack in the future.
+23,2,26,Affected by Pressure,"This move is affected by <a class=""dex-link"" href=""/dex/sv/abilities/pressure"">Pressure</a>, even if it doesn't target that Pokémon.","These moves are affected by <a class=""dex-link"" href=""/dex/sv/abilities/pressure"">Pressure</a>, even if it doesn't target that Pokémon."
+23,2,27,Combo move,This move can be part of a combo.,These moves can be part of a combo.
+23,2,28,Ignored by Sleep Talk,"This move cannot be selected by <a class=""dex-link"" href=""/dex/sv/moves/sleep-talk"">Sleep Talk</a>.","These moves cannot be selected by <a class=""dex-link"" href=""/dex/sv/moves/sleep-talk"">Sleep Talk</a>."
+23,2,29,Ignored by Assist,This move cannot be selected by Assist.,These moves cannot be selected by Assist.
+23,2,30,Copycat fails,"The move <a class=""dex-link"" href=""/dex/sv/moves/copycat"">Copycat</a> will fail if this move was used last by its target.","The move <a class=""dex-link"" href=""/dex/sv/moves/copycat"">Copycat</a> will fail if one of these moves was used last by its target."
+23,2,31,Mimic fails,"The move <a class=""dex-link"" href=""/dex/sv/moves/mimic"">Mimic</a> will fail if this move was used last by its target.","The move <a class=""dex-link"" href=""/dex/sv/moves/mimic"">Mimic</a> will fail if one of these moves was used last by its target."
+23,2,32,Instruct fails,"The move <a class=""dex-link"" href=""/dex/sv/moves/instruct"">Instruct</a> will fail if this move was used last by its target.","The move <a class=""dex-link"" href=""/dex/sv/moves/instruct"">Instruct</a> will fail if one of these moves was used last by its target."
+23,2,33,Powder or spore move,"<a class=""dex-link"" href=""/dex/sv/types/grass"">Grass</a>-type Pokémon, Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/overcoat"">Overcoat</a>, and Pokémon holding <a class=""dex-link"" href=""/dex/sv/items/safety-goggles"">Safety Goggles</a> are immune to this move.","<a class=""dex-link"" href=""/dex/sv/types/grass"">Grass</a>-type Pokémon, Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/overcoat"">Overcoat</a>, and Pokémon holding <a class=""dex-link"" href=""/dex/sv/items/safety-goggles"">Safety Goggles</a> are immune to these moves."
+23,2,34,Biting move,"This move receives a 50% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/strong-jaw"">Strong Jaw</a>.","These moves receive a 50% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/strong-jaw"">Strong Jaw</a>."
+23,2,35,Ball or bomb move,"Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/bulletproof"">Bulletproof</a> are immune to this move.","Pokémon with <a class=""dex-link"" href=""/dex/sv/abilities/bulletproof"">Bulletproof</a> are immune to these moves."
+23,2,36,No Parental Bond,Parental Bond will not turn this move into a two-hit move.,Parental Bond will not turn these moves into two-hit moves.
+23,2,37,No effectiveness message,"This move will not display as ""super effective"" or ""not very effective.""","These moves will not display as ""super effective"" or ""not very effective."""
+23,2,38,Boosted by Sheer Force,"This move receives a 30% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/sheer-force"">Sheer Force</a> regardless of having a traditional secondary effect.","These moves receive a 30% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/sheer-force"">Sheer Force</a> regardless of having a traditional secondary effect."
+23,2,39,Slicing move,"This move receives a 50% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/sharpness"">Sharpness</a>.","These moves receive a 50% power boost from <a class=""dex-link"" href=""/dex/sv/abilities/sharpness"">Sharpness</a>."
+23,2,40,Wind move,"This move triggers <a class=""dex-link"" href=""/dex/sv/abilities/wind-rider"">Wind Rider</a> and <a class=""dex-link"" href=""/dex/sv/abilities/wind-power"">Wind Power</a>.","These moves trigger <a class=""dex-link"" href=""/dex/sv/abilities/wind-rider"">Wind Rider</a> and <a class=""dex-link"" href=""/dex/sv/abilities/wind-power"">Wind Power</a>."
+23,2,46,Can't be used consecutively,This move cannot be used twice in a row.,These moves cannot be used twice in a row.
+23,2,47,Can't be Sketched,"The move <a class=""dex-link"" href=""/dex/sv/moves/sketch"">Sketch</a> will fail if this move was used last by its target.","The move <a class=""dex-link"" href=""/dex/sv/moves/sketch"">Sketch</a> will fail if one of these moves was used last by its target."
+101,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/colo/items/kings-rock"">King’s Rock</a>.","These moves can trigger the effects of <a class=""dex-link"" href=""/dex/colo/items/kings-rock"">King’s Rock</a>."
+101,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+101,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/colo/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/colo/moves/detect"">Detect</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/colo/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/colo/moves/detect"">Detect</a> this turn."
+101,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/colo/moves/magic-coat"">Magic Coat</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/colo/moves/magic-coat"">Magic Coat</a>."
+101,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/colo/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/colo/moves/snatch"">Snatch</a>."
+101,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/colo/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/colo/moves/mirror-move"">Mirror Move</a>."
+102,2,1,Triggers King’s Rock,"This move can trigger the effects of <a class=""dex-link"" href=""/dex/xd/items/kings-rock"">King’s Rock</a>.","These moves can trigger the effects of <a class=""dex-link"" href=""/dex/xd/items/kings-rock"">King’s Rock</a>."
+102,2,3,Makes contact,This move causes the user to make contact with the target.,These moves cause the user to make contact with the target.
+102,2,4,Blocked by Protect,"This move will be blocked if the target has used <a class=""dex-link"" href=""/dex/xd/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/xd/moves/detect"">Detect</a> this turn.","These moves will be blocked if the target has used <a class=""dex-link"" href=""/dex/xd/moves/protect"">Protect</a> or <a class=""dex-link"" href=""/dex/xd/moves/detect"">Detect</a> this turn."
+102,2,5,Reflectable,"This move can be reflected back at the user with <a class=""dex-link"" href=""/dex/xd/moves/magic-coat"">Magic Coat</a>.","These moves can be reflected back at the user with <a class=""dex-link"" href=""/dex/xd/moves/magic-coat"">Magic Coat</a>."
+102,2,6,Snatchable,"The effects of this move can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/xd/moves/snatch"">Snatch</a>.","The effects of these moves can be stolen by a Pokémon using <a class=""dex-link"" href=""/dex/xd/moves/snatch"">Snatch</a>."
+102,2,7,Copied by Mirror Move,"This move can be copied by <a class=""dex-link"" href=""/dex/xd/moves/mirror-move"">Mirror Move</a>.","These moves can be copied by <a class=""dex-link"" href=""/dex/xd/moves/mirror-move"">Mirror Move</a>."

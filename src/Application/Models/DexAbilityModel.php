@@ -99,8 +99,14 @@ final class DexAbilityModel
 	) : void {
 		$this->flags = [];
 
-		$allFlags = $this->flagRepository->getByVersionGroup($versionGroupId, $languageId);
-		$abilityFlagIds = $this->flagRepository->getByAbility($versionGroupId, $abilityId);
+		$allFlags = $this->flagRepository->getByVersionGroupSingular(
+			$versionGroupId,
+			$languageId,
+		);
+		$abilityFlagIds = $this->flagRepository->getByAbility(
+			$versionGroupId,
+			$abilityId,
+		);
 
 		foreach ($allFlags as $flagId => $flag) {
 			$has = isset($abilityFlagIds[$flagId]); // Does the ability have this flag?

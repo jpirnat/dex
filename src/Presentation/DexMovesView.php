@@ -24,6 +24,7 @@ final readonly class DexMovesView
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$moves = $this->dexMovesModel->getMoves();
+		$flags = $this->dexMovesModel->getFlags();
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();
@@ -45,6 +46,7 @@ final readonly class DexMovesView
 
 				'moves' => $this->dexFormatter->formatDexMoves($moves),
 				'showMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
+				'flags' => $flags,
 			]
 		]);
 	}

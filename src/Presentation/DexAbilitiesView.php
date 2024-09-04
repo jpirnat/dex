@@ -24,6 +24,7 @@ final readonly class DexAbilitiesView
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$abilities = $this->dexAbilitiesModel->getAbilities();
+		$flags = $this->dexAbilitiesModel->getFlags();
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();
@@ -44,6 +45,7 @@ final readonly class DexAbilitiesView
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'abilities' => $abilities,
+				'flags' => $flags,
 			]
 		]);
 	}

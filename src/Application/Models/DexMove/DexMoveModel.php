@@ -225,8 +225,14 @@ final class DexMoveModel
 	) : void {
 		$this->flags = [];
 
-		$allFlags = $this->flagRepository->getByVersionGroup($versionGroupId, $languageId);
-		$moveFlagIds = $this->flagRepository->getByMove($versionGroupId, $moveId);
+		$allFlags = $this->flagRepository->getByVersionGroupSingular(
+			$versionGroupId,
+			$languageId,
+		);
+		$moveFlagIds = $this->flagRepository->getByMove(
+			$versionGroupId,
+			$moveId,
+		);
 
 		foreach ($allFlags as $flagId => $flag) {
 			$has = isset($moveFlagIds[$flagId]); // Does the move have this flag?

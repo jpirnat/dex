@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
+use Jp\Dex\Domain\Abilities\AbilityFlagRepositoryInterface;
 use Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\GenerationId;
@@ -10,11 +11,13 @@ use Jp\Dex\Domain\Versions\GenerationId;
 final class DexAbilitiesModel
 {
 	private array $abilities = [];
+	private array $flags = [];
 
 
 	public function __construct(
 		private VersionGroupModel $versionGroupModel,
 		private DexAbilityRepositoryInterface $dexAbilityRepository,
+		private AbilityFlagRepositoryInterface $flagRepository,
 	) {}
 
 
@@ -25,6 +28,9 @@ final class DexAbilitiesModel
 		string $vgIdentifier,
 		LanguageId $languageId,
 	) : void {
+		$this->abilities = [];
+		$this->flags = [];
+
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$this->versionGroupModel->setSinceGeneration(new GenerationId(3));
@@ -33,6 +39,18 @@ final class DexAbilitiesModel
 			$versionGroupId,
 			$languageId,
 		);
+
+		$flags = $this->flagRepository->getByVersionGroupPlural(
+			$versionGroupId,
+			$languageId,
+		);
+		foreach ($flags as $flag) {
+			$this->flags[] = [
+				'identifier' => $flag->getIdentifier(),
+				'name' => $flag->getName(),
+				'description' => $flag->getDescription(),
+			];
+		}
 	}
 
 
@@ -50,5 +68,10 @@ final class DexAbilitiesModel
 	public function getAbilities() : array
 	{
 		return $this->abilities;
+	}
+
+	public function getFlags() : array
+	{
+		return $this->flags;
 	}
 }
