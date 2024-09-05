@@ -72,6 +72,21 @@ final readonly class IndexView
 	}
 
 	/**
+	 * Show the dex ability flag page.
+	 */
+	public function dexAbilityFlag() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/ability-flag.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Ability Flags',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the dex index page.
 	 */
 	public function dexIndex() : ResponseInterface
@@ -140,6 +155,21 @@ final readonly class IndexView
 			'html/dex/move.twig',
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Move',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
+	 * Show the dex move flag page.
+	 */
+	public function dexMoveFlag() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/move-flag.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Move Flags',
 			]
 		);
 

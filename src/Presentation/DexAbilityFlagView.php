@@ -35,6 +35,7 @@ final readonly class DexAbilityFlagView
 			'url' => "/dex/$vgIdentifier/abilities",
 			'text' => 'Abilities',
 		], [
+			'url' => "/dex/$vgIdentifier/abilities#flags",
 			'text' => 'Flags',
 		], [
 			'text' => $flag['name'],

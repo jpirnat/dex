@@ -13,7 +13,7 @@
 	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
 			<li v-for="vg in versionGroups">
-				<a :href="'/dex/' + vg.identifier + '/moves'"
+				<a :href="'/dex/' + vg.identifier + '/move-flags/' + flag.identifier"
 					:class="{
 						'current': vg.identifier === versionGroup.identifier
 					}"
@@ -27,38 +27,15 @@
 	</div>
 
 	<template v-if="loaded">
-		<h1 class="dex-page__title">Moves</h1>
+		<h1 class="dex-page__title">{{ flag.name }}</h1>
+
+		<div class="dex-section__description" v-html="flag.description"></div>
 
 		<dex-moves-table
 			:moves="moves"
 			:version-group="versionGroup"
-			:show-descriptions="showMoveDescriptions"
+			:show-descriptions="true"
 		></dex-moves-table>
-
-		<template v-if="flags.length">
-			<h2 id="flags" class="dex-section__title">Flags</h2>
-
-			<div class="dex-section__description">Click a flag to view the list of moves with that flag.</div>
-
-			<table class="dex-table dex-table--full-width">
-				<thead>
-					<tr>
-						<th scope="col">Name</th>
-						<th scope="col">Description</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr v-for="f in flags" :key="f.identifier">
-						<td>
-							<a :href="'/dex/' + versionGroup.identifier + '/move-flags/' + f.identifier" class="dex-link">
-								{{ f.name }}
-							</a>
-						</td>
-						<td v-html="f.description"></td>
-					</tr>
-				</tbody>
-			</table>
-		</template>
 	</template>
 </div>
 {% endverbatim %}
@@ -73,5 +50,5 @@
 	<script src="/js/dex-type-link.js"></script>
 	<script src="/js/dex-moves-table.js"></script>
 
-	<script src="/js/dex/moves.js"></script>
+	<script src="/js/dex/move-flag.js"></script>
 {% endblock %}

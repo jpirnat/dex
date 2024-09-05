@@ -35,6 +35,7 @@ final readonly class DexMoveFlagView
 			'url' => "/dex/$vgIdentifier/moves",
 			'text' => 'Moves',
 		], [
+			'url' => "/dex/$vgIdentifier/moves#flags",
 			'text' => 'Flags',
 		], [
 			'text' => $flag['name'],
