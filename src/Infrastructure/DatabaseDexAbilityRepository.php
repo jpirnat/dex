@@ -163,7 +163,7 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 			AND `a`.`id` IN (
 				SELECT
 					`ability_id`
-				FROM `vg_ability_flags`
+				FROM `vg_abilities_flags`
 				WHERE `version_group_id` = :version_group_id3
 					AND `flag_id` = :flag_id
 			)

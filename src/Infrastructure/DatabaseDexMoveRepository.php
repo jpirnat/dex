@@ -181,19 +181,20 @@ final readonly class DatabaseDexMoveRepository implements DexMoveRepositoryInter
 				ON `vgm`.`version_group_id` = `md`.`version_group_id`
 				AND `mn`.`language_id` = `md`.`language_id`
 				AND `m`.`id` = `md`.`move_id`
-			WHERE `vgm`.`version_group_id` = :version_group_id
+			WHERE `vgm`.`version_group_id` = :version_group_id1
 				AND `vgm`.`can_use_move` = 1
 				AND `vgm`.`move_id` IN (
 					SELECT
 						`move_id`
-					FROM `vg_move_flags`
-					WHERE `version_group_id` = :version_group_id3
+					FROM `vg_moves_flags`
+					WHERE `version_group_id` = :version_group_id2
 						AND `flag_id` = :flag_id
 				)
 				AND `mn`.`language_id` = :language_id
 			ORDER BY `mn`.`name`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
