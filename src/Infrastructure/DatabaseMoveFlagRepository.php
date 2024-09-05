@@ -99,6 +99,46 @@ final readonly class DatabaseMoveFlagRepository implements MoveFlagRepositoryInt
 	}
 
 	/**
+	 * Get a dex move flag, with description in plural form.
+	 */
+	public function getByIdPlural(
+		VersionGroupId $versionGroupId,
+		MoveFlagId $flagId,
+		LanguageId $languageId,
+	) : DexMoveFlag {
+		// HACK: Move flag descriptions currently exist only for English.
+		$languageId = new LanguageId(LanguageId::ENGLISH);
+
+		$stmt = $this->db->prepare(
+			'SELECT
+				`f`.`identifier`,
+				`fd`.`name`,
+				`fd`.`description_plural`
+			FROM `move_flags` AS `f`
+			INNER JOIN `vg_move_flags` AS `vgf`
+				ON `f`.`id` = `vgf`.`flag_id`
+			INNER JOIN `move_flag_descriptions` AS `fd`
+				ON `vgf`.`version_group_id` = `fd`.`version_group_id`
+				AND `vgf`.`flag_id` = `fd`.`flag_id`
+			WHERE `vgf`.`version_group_id` = :version_group_id
+				AND `vgf`.`flag_id` = :flag_id
+				AND `fd`.`language_id` = :language_id
+			LIMIT 1'
+		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		return new DexMoveFlag(
+			$result['identifier'],
+			$result['name'],
+			$result['description_plural'],
+		);
+	}
+
+	/**
 	 * Get all dex move flags in this version group, with descriptions in
 	 * singular form. ("This move")
 	 *

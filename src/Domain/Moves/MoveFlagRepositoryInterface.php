@@ -28,6 +28,15 @@ interface MoveFlagRepositoryInterface
 	) : array;
 
 	/**
+	 * Get a dex move flag, with description in plural form.
+	 */
+	public function getByIdPlural(
+		VersionGroupId $versionGroupId,
+		MoveFlagId $flagId,
+		LanguageId $languageId,
+	) : DexMoveFlag;
+
+	/**
 	 * Get all dex move flags in this version group, with descriptions in
 	 * singular form. ("This move")
 	 *

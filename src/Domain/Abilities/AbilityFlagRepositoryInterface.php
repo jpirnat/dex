@@ -28,6 +28,15 @@ interface AbilityFlagRepositoryInterface
 	) : array;
 
 	/**
+	 * Get a dex ability flag, with description in plural form.
+	 */
+	public function getByIdPlural(
+		VersionGroupId $versionGroupId,
+		AbilityFlagId $flagId,
+		LanguageId $languageId,
+	) : DexAbilityFlag;
+
+	/**
 	 * Get all dex ability flags in this version group, with descriptions in
 	 * singular form. ("This ability")
 	 *
