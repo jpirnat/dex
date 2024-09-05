@@ -7,6 +7,7 @@ use Jp\Dex\Domain\Categories\DexCategoryRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
+use Jp\Dex\Domain\Moves\MoveFlagId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
@@ -121,6 +122,79 @@ final readonly class DatabaseDexMoveRepository implements DexMoveRepositoryInter
 			ORDER BY `mn`.`name`'
 		);
 		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$dexMoves = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$dexMove = new DexMove(
+				$result['identifier'],
+				$result['name'],
+				$dexTypes[$result['type_id']],
+				$dexCategories[$result['category_id']],
+				$result['pp'],
+				$result['power'],
+				$result['accuracy'],
+				(string) $result['description'],
+			);
+
+			$dexMoves[] = $dexMove;
+		}
+
+		return $dexMoves;
+	}
+
+	/**
+	 * Get all dex moves in this version group.
+	 * This method is used to get data for the dex moves page.
+	 *
+	 * @return DexMove[] Ordered by name.
+	 */
+	public function getByVgAndFlag(
+		VersionGroupId $versionGroupId,
+		MoveFlagId $flagId,
+		LanguageId $languageId,
+	) : array {
+		$dexTypes = $this->dexTypeRepository->getByVersionGroup(
+			$versionGroupId,
+			$languageId,
+		);
+		$dexCategories = $this->dexCategoryRepository->getByLanguage($languageId);
+
+		$stmt = $this->db->prepare(
+			'SELECT
+				`m`.`identifier`,
+				`mn`.`name`,
+				`vgm`.`type_id`,
+				`vgm`.`category_id`,
+				`vgm`.`pp`,
+				`vgm`.`power`,
+				`vgm`.`accuracy`,
+				`md`.`description`
+			FROM `moves` AS `m`
+			INNER JOIN `move_names` AS `mn`
+				ON `m`.`id` = `mn`.`move_id`
+			INNER JOIN `vg_moves` AS `vgm`
+				ON `m`.`id` = `vgm`.`move_id`
+			LEFT JOIN `move_descriptions` AS `md`
+				ON `vgm`.`version_group_id` = `md`.`version_group_id`
+				AND `mn`.`language_id` = `md`.`language_id`
+				AND `m`.`id` = `md`.`move_id`
+			WHERE `vgm`.`version_group_id` = :version_group_id
+				AND `vgm`.`can_use_move` = 1
+				AND `vgm`.`move_id` IN (
+					SELECT
+						`move_id`
+					FROM `vg_move_flags`
+					WHERE `version_group_id` = :version_group_id3
+						AND `flag_id` = :flag_id
+				)
+				AND `mn`.`language_id` = :language_id
+			ORDER BY `mn`.`name`'
+		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 

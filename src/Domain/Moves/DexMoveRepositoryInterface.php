@@ -32,6 +32,18 @@ interface DexMoveRepositoryInterface
 	) : array;
 
 	/**
+	 * Get all dex moves with this move flag.
+	 * This method is used to get data for the dex move flag page.
+	 *
+	 * @return DexMove[] Ordered by name.
+	 */
+	public function getByVgAndFlag(
+		VersionGroupId $versionGroupId,
+		MoveFlagId $flagId,
+		LanguageId $languageId,
+	) : array;
+
+	/**
 	 * Get all dex moves learned by this Pokémon.
 	 * This method is used to get data for the dex Pokémon page.
 	 *
