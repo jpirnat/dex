@@ -3,8 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Abilities\AbilityFlagId;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Items\ItemId;
+use Jp\Dex\Domain\Moves\MoveFlagId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\TypeId;
@@ -237,6 +239,52 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	}
 
 	/**
+	 * Get version groups that have this move flag.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithMoveFlag(MoveFlagId $flagId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`icon`,
+				`abbreviation`,
+				`sort`
+			FROM `version_groups`
+			WHERE `id` IN (
+				SELECT
+					`version_group_id`
+				FROM `vg_move_flags`
+				WHERE `flag_id` = :flag_id
+					AND `is_functional` = 1
+			)
+			ORDER BY `sort`'
+		);
+		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['icon'],
+				$result['abbreviation'],
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
 	 * Get version groups that have this type.
 	 *
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
@@ -352,6 +400,52 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			ORDER BY `sort`'
 		);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['icon'],
+				$result['abbreviation'],
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
+	 * Get version groups that have this ability flag.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithAbilityFlag(AbilityFlagId $flagId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`icon`,
+				`abbreviation`,
+				`sort`
+			FROM `version_groups`
+			WHERE `id` IN (
+				SELECT
+					`version_group_id`
+				FROM `vg_ability_flags`
+				WHERE `flag_id` = :flag_id
+					AND `is_functional` = 1
+			)
+			ORDER BY `sort`'
+		);
+		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
 		$versionGroups = [];

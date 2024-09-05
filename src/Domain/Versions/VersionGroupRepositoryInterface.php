@@ -3,8 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Versions;
 
+use Jp\Dex\Domain\Abilities\AbilityFlagId;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Items\ItemId;
+use Jp\Dex\Domain\Moves\MoveFlagId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\TypeId;
@@ -49,6 +51,13 @@ interface VersionGroupRepositoryInterface
 	public function getWithMove(MoveId $moveId) : array;
 
 	/**
+	 * Get version groups that have this move flag.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithMoveFlag(MoveFlagId $flagId) : array;
+
+	/**
 	 * Get version groups that have this type.
 	 *
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
@@ -68,4 +77,11 @@ interface VersionGroupRepositoryInterface
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
 	 */
 	public function getWithAbility(AbilityId $abilityId) : array;
+
+	/**
+	 * Get version groups that have this ability flag.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithAbilityFlag(AbilityFlagId $flagId) : array;
 }

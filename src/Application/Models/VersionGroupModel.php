@@ -3,8 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
+use Jp\Dex\Domain\Abilities\AbilityFlagId;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Items\ItemId;
+use Jp\Dex\Domain\Moves\MoveFlagId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\TypeId;
@@ -65,6 +67,14 @@ final class VersionGroupModel
 	}
 
 	/**
+	 * Set the navigable version groups to those that have this move flag.
+	 */
+	public function setWithMoveFlag(MoveFlagId $flagId) : void
+	{
+		$this->versionGroups = $this->vgRepository->getWithMoveFlag($flagId);
+	}
+
+	/**
 	 * Set the navigable version groups to those that have this type.
 	 */
 	public function setWithType(TypeId $typeId) : void
@@ -86,6 +96,14 @@ final class VersionGroupModel
 	public function setWithAbility(AbilityId $abilityId) : void
 	{
 		$this->versionGroups = $this->vgRepository->getWithAbility($abilityId);
+	}
+
+	/**
+	 * Set the navigable version groups to those that have this ability flag.
+	 */
+	public function setWithAbilityFlag(AbilityFlagId $flagId) : void
+	{
+		$this->versionGroups = $this->vgRepository->getWithAbilityFlag($flagId);
 	}
 
 
