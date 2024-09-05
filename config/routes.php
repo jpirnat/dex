@@ -8,8 +8,10 @@ use Jp\Dex\Presentation\IndexView;
 
 // Common route parameter definitions.
 $abilityIdentifier = '{abilityIdentifier:[-\w]+}';
+$abilityFlagIdentifier = '{abilityFlagIdentifier:[-\w]+}';
 $itemIdentifier = '{itemIdentifier:[-\w]+}';
 $moveIdentifier = '{moveIdentifier:[-\w]+}';
+$moveFlagIdentifier = '{moveFlagIdentifier:[-\w]+}';
 $pokemonIdentifier = '{pokemonIdentifier:[-\w]+}';
 $typeIdentifier = '{typeIdentifier:[-\w]+}';
 $vgIdentifier = '{vgIdentifier:[-\w]+}';
@@ -77,6 +79,22 @@ return [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
+	['GET', "/dex/$vgIdentifier/ability-flags/$abilityFlagIdentifier", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'dexAbilityFlag',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$vgIdentifier/ability-flags/$abilityFlagIdentifier", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexAbilityFlagController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\DexAbilityFlagView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
 	['GET', "/dex/$vgIdentifier/items", [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',
@@ -137,6 +155,22 @@ return [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexMoveController::class,
 		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\DexMoveView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
+	['GET', "/dex/$vgIdentifier/move-flags/$moveFlagIdentifier", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'dexMoveFlag',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$vgIdentifier/move-flags/$moveFlagIdentifier", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexMoveFlagController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\DexMoveFlagView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
