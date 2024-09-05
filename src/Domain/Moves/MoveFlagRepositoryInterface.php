@@ -9,6 +9,14 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 interface MoveFlagRepositoryInterface
 {
 	/**
+	 * Get a move flag by its identifier.
+	 *
+	 * @throws MoveFlagNotFoundException if no move flag exists with this
+	 *     identifier.
+	 */
+	public function getByIdentifier(string $identifier) : MoveFlag;
+
+	/**
 	 * Get all dex move flags in this version group, with descriptions in
 	 * plural form. ("These moves")
 	 *

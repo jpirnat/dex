@@ -5,7 +5,9 @@ namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\DexMoveFlag;
+use Jp\Dex\Domain\Moves\MoveFlag;
 use Jp\Dex\Domain\Moves\MoveFlagId;
+use Jp\Dex\Domain\Moves\MoveFlagNotFoundException;
 use Jp\Dex\Domain\Moves\MoveFlagRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
@@ -16,6 +18,37 @@ final readonly class DatabaseMoveFlagRepository implements MoveFlagRepositoryInt
 	public function __construct(
 		private PDO $db,
 	) {}
+
+	/**
+	 * Get a move flag by its identifier.
+	 *
+	 * @throws MoveFlagNotFoundException if no move flag exists with this
+	 *     identifier.
+	 */
+	public function getByIdentifier(string $identifier) : MoveFlag
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`
+			FROM `move_flags`
+			WHERE `identifier` = :identifier
+			LIMIT 1'
+		);
+		$stmt->bindValue(':identifier', $identifier);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			throw new MoveFlagNotFoundException(
+				"No move flag exists with identifier $identifier."
+			);
+		}
+
+		return new MoveFlag(
+			new MoveFlagId($result['id']),
+			$identifier,
+		);
+	}
 
 	/**
 	 * Get all dex move flags in this version group, with descriptions in

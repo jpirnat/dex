@@ -9,6 +9,14 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 interface AbilityFlagRepositoryInterface
 {
 	/**
+	 * Get an ability flag by its identifier.
+	 *
+	 * @throws AbilityFlagNotFoundException if no ability flag exists with this
+	 *     identifier.
+	 */
+	public function getByIdentifier(string $identifier) : AbilityFlag;
+
+	/**
 	 * Get all dex ability flags in this version group, with descriptions in
 	 * plural form. ("These abilities")
 	 *

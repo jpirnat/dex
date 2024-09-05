@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Abilities\AbilityFlag;
+use Jp\Dex\Domain\Abilities\AbilityFlagNotFoundException;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Abilities\DexAbilityFlag;
 use Jp\Dex\Domain\Abilities\AbilityFlagId;
@@ -16,6 +18,37 @@ final readonly class DatabaseAbilityFlagRepository implements AbilityFlagReposit
 	public function __construct(
 		private PDO $db,
 	) {}
+
+	/**
+	 * Get an ability flag by its identifier.
+	 *
+	 * @throws AbilityFlagNotFoundException if no ability flag exists with this
+	 *     identifier.
+	 */
+	public function getByIdentifier(string $identifier) : AbilityFlag
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`
+			FROM `ability_flags`
+			WHERE `identifier` = :identifier
+			LIMIT 1'
+		);
+		$stmt->bindValue(':identifier', $identifier);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			throw new AbilityFlagNotFoundException(
+				"No ability flag exists with identifier $identifier."
+			);
+		}
+
+		return new AbilityFlag(
+			new AbilityFlagId($result['id']),
+			$identifier,
+		);
+	}
 
 	/**
 	 * Get all dex ability flags in this version group, with descriptions in
