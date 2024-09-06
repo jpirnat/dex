@@ -14,6 +14,7 @@ const app = new Vue({
 		thisMonth: {},
 		nextMonth: {},
 		ratings: [],
+		speedName: '',
 		pokemons: [],
 		months: [],
 
@@ -66,6 +67,7 @@ const app = new Vue({
 				this.thisMonth = data.thisMonth;
 				this.nextMonth = data.nextMonth;
 				this.ratings = data.ratings;
+				this.speedName = data.speedName;
 				this.pokemons = data.pokemons;
 				this.months = data.months;
 

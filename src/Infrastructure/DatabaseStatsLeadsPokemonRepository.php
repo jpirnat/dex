@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Leads\StatsLeadsPokemon;
 use Jp\Dex\Domain\Leads\StatsLeadsPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
@@ -43,7 +44,8 @@ final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPo
 				`lrp`.`usage_percent`,
 				`lrpp`.`usage_percent` AS `prev_percent`,
 				`lp`.`raw`,
-				`lp`.`raw_percent`
+				`lp`.`raw_percent`,
+				`bs`.`value` AS `base_speed`
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `leads_rated_pokemon` AS `lrp`
 				ON `urp`.`id` = `lrp`.`usage_rated_pokemon_id`
@@ -53,7 +55,7 @@ final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPo
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
 			LEFT JOIN `form_icons` AS `fi`
 				ON `urp`.`pokemon_id` = `fi`.`form_id`
-				AND `fi`.`version_group_id` = :version_group_id
+				AND `fi`.`version_group_id` = :version_group_id1
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
 				AND `fi`.`is_shiny` = 0
@@ -68,6 +70,10 @@ final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPo
 				ON `urp`.`month` = `lp`.`month`
 				AND `urp`.`format_id` = `lp`.`format_id`
 				AND `urp`.`pokemon_id` = `lp`.`pokemon_id`
+			INNER JOIN `base_stats` AS `bs`
+				ON `bs`.`version_group_id` = :version_group_id2
+				AND `urp`.`pokemon_id` = `bs`.`pokemon_id`
+				AND `bs`.`stat_id` = :speed_id
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
@@ -78,8 +84,10 @@ final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPo
 		$stmt->bindValue(':prev_month', $prevMonth);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':speed_id', StatId::SPEED, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$pokemons = [];
@@ -94,6 +102,7 @@ final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPo
 				(float) $result['usage_percent'] - (float) $result['prev_percent'],
 				$result['raw'],
 				(float) $result['raw_percent'],
+				$result['base_speed'],
 			);
 
 			$pokemons[] = $pokemon;

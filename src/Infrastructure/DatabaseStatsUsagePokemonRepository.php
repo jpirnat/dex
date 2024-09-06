@@ -7,6 +7,7 @@ use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Usage\StatsUsagePokemon;
 use Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
@@ -46,7 +47,8 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 				`up`.`raw`,
 				`up`.`raw_percent`,
 				`up`.`real`,
-				`up`.`real_percent`
+				`up`.`real_percent`,
+				`bs`.`value` AS `base_speed`
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `pokemon` AS `p`
 				ON `urp`.`pokemon_id` = `p`.`id`
@@ -54,7 +56,7 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
 			LEFT JOIN `form_icons` AS `fi`
 				ON `urp`.`pokemon_id` = `fi`.`form_id`
-				AND `fi`.`version_group_id` = :version_group_id
+				AND `fi`.`version_group_id` = :version_group_id1
 				AND `fi`.`is_female` = 0
 				AND `fi`.`is_right` = 0
 				AND `fi`.`is_shiny` = 0
@@ -67,6 +69,10 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 				ON `urp`.`month` = `up`.`month`
 				AND `urp`.`format_id` = `up`.`format_id`
 				AND `urp`.`pokemon_id` = `up`.`pokemon_id`
+			INNER JOIN `base_stats` AS `bs`
+				ON `bs`.`version_group_id` = :version_group_id2
+				AND `urp`.`pokemon_id` = `bs`.`pokemon_id`
+				AND `bs`.`stat_id` = :speed_id
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
@@ -77,8 +83,10 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 		$stmt->bindValue(':prev_month', $prevMonth);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':speed_id', StatId::SPEED, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$pokemons = [];
@@ -95,6 +103,7 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 				(float) $result['raw_percent'],
 				$result['real'],
 				(float) $result['real_percent'],
+				$result['base_speed'],
 			);
 
 			$pokemons[] = $pokemon;

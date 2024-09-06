@@ -64,6 +64,7 @@ final readonly class StatsUsageView
 				'realText' => $formatter->formatNumber($pokemon->getReal()),
 				'realPercent' => $pokemon->getRealPercent(),
 				'realPercentText' => $formatter->formatPercent($pokemon->getRealPercent()),
+				'baseSpeed' => $pokemon->getBaseSpeed(),
 			];
 		}
 
@@ -95,6 +96,7 @@ final readonly class StatsUsageView
 				'showLeadsLink' => $this->statsUsageModel->doesLeadsDataExist(),
 				'myFormat' => $this->statsUsageModel->getMyFormat(),
 				'myRating' => $this->statsUsageModel->getMyRating(),
+				'speedName' => $this->statsUsageModel->getSpeedName(),
 				'pokemons' => $pokemons,
 				'months' => $months,
 			]

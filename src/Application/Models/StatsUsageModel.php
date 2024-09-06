@@ -8,6 +8,8 @@ use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\StatId;
+use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 use Jp\Dex\Domain\Usage\StatsUsagePokemon;
@@ -25,7 +27,8 @@ final class StatsUsageModel
 	/** @var int[] $ratings */
 	private array $ratings = [];
 
-	private bool $leadsDataExists;
+	private bool $leadsDataExists = false;
+	private string $speedName = '';
 
 	/** @var StatsUsagePokemon[] $pokemon */
 	private array $pokemon = [];
@@ -39,6 +42,7 @@ final class StatsUsageModel
 		private FormatRepositoryInterface $formatRepository,
 		private RatingQueriesInterface $ratingQueries,
 		private LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
+		private StatNameRepositoryInterface $statNameRepository,
 		private StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository,
 		private UsageRatedQueriesInterface $usageRatedQueries,
 	) {}
@@ -86,6 +90,12 @@ final class StatsUsageModel
 			$rating,
 		);
 
+		$speedName = $this->statNameRepository->getByLanguageAndStat(
+			$languageId,
+			new StatId(StatId::SPEED),
+		);
+		$this->speedName = $speedName->getName();
+
 		// Get the Pokémon usage data.
 		$this->pokemon = $this->statsUsagePokemonRepository->getByMonth(
 			$thisMonth,
@@ -103,65 +113,42 @@ final class StatsUsageModel
 	}
 
 
-	/**
-	 * Get the month.
-	 */
 	public function getMonth() : string
 	{
 		return $this->month;
 	}
 
-	/**
-	 * Get the format.
-	 */
 	public function getFormat() : Format
 	{
 		return $this->format;
 	}
 
-	/**
-	 * Get the rating.
-	 */
 	public function getRating() : int
 	{
 		return $this->rating;
 	}
 
-	/**
-	 * Get the user's default format identifier.
-	 */
 	public function getMyFormat() : string
 	{
 		return $this->myFormat;
 	}
 
-	/**
-	 * Get the user's default rating.
-	 */
 	public function getMyRating() : string
 	{
 		return $this->myRating;
 	}
 
-	/**
-	 * Get the language id.
-	 */
 	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
 	}
 
-	/**
-	 * Get the date model.
-	 */
 	public function getDateModel() : DateModel
 	{
 		return $this->dateModel;
 	}
 
 	/**
-	 * Get the ratings for this month.
-	 *
 	 * @return int[]
 	 */
 	public function getRatings() : array
@@ -169,17 +156,17 @@ final class StatsUsageModel
 		return $this->ratings;
 	}
 
-	/**
-	 * Does leads rated data exist for this month?
-	 */
 	public function doesLeadsDataExist() : bool
 	{
 		return $this->leadsDataExists;
 	}
 
+	public function getSpeedName() : string
+	{
+		return $this->speedName;
+	}
+
 	/**
-	 * Get the Pokémon.
-	 *
 	 * @return StatsUsagePokemon[]
 	 */
 	public function getPokemon() : array
@@ -188,8 +175,6 @@ final class StatsUsageModel
 	}
 
 	/**
-	 * Get the months.
-	 *
 	 * @return DateTime[]
 	 */
 	public function getMonths() : array

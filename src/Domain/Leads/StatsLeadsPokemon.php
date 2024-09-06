@@ -14,69 +14,51 @@ final readonly class StatsLeadsPokemon
 		private float $usageChange,
 		private int $raw,
 		private float $rawPercent,
+		private int $baseSpeed,
 	) {}
 
-	/**
-	 * Get the Pokémon's rank.
-	 */
 	public function getRank() : int
 	{
 		return $this->rank;
 	}
 
-	/**
-	 * Get the Pokémon's icon.
-	 */
 	public function getIcon() : string
 	{
 		return $this->icon;
 	}
 
-	/**
-	 * Get the Pokémon's identifier.
-	 */
 	public function getIdentifier() : string
 	{
 		return $this->identifier;
 	}
 
-	/**
-	 * Get the Pokémon's name.
-	 */
 	public function getName() : string
 	{
 		return $this->name;
 	}
 
-	/**
-	 * Get the Pokémon's usage percent.
-	 */
 	public function getUsagePercent() : float
 	{
 		return $this->usagePercent;
 	}
 
-	/**
-	 * Get the Pokémon's usage change.
-	 */
 	public function getUsageChange() : float
 	{
 		return $this->usageChange;
 	}
 
-	/**
-	 * Get the Pokémon's raw count.
-	 */
 	public function getRaw() : int
 	{
 		return $this->raw;
 	}
 
-	/**
-	 * Get the Pokémon's raw percent.
-	 */
 	public function getRawPercent() : float
 	{
 		return $this->rawPercent;
+	}
+
+	public function getBaseSpeed() : int
+	{
+		return $this->baseSpeed;
 	}
 }

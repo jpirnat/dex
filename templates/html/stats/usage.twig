@@ -117,6 +117,12 @@
 							'dex-table__header--sorted-desc': sortColumn === 'realPercent' && sortDirection === 'desc',
 						}"
 					>Real&nbsp;%</th>
+					<th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('baseSpeed', 'desc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'baseSpeed' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'baseSpeed' && sortDirection === 'desc',
+						}"
+					>Base {{ speedName }}</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -148,6 +154,7 @@
 					<td class="dex-table--number">{{ pokemon.rawPercentText }}</td>
 					<td class="dex-table--number">{{ pokemon.realText }}</td>
 					<td class="dex-table--number">{{ pokemon.realPercentText }}</td>
+					<td class="dex-table--number">{{ pokemon.baseSpeed }}</td>
 				</tr>
 			</tbody>
 		</table>

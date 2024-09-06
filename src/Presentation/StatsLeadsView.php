@@ -60,6 +60,7 @@ final readonly class StatsLeadsView
 				'rawText' => $formatter->formatNumber($pokemon->getRaw()),
 				'rawPercent' => $pokemon->getRawPercent(),
 				'rawPercentText' => $formatter->formatPercent($pokemon->getRawPercent()),
+				'baseSpeed' => $pokemon->getBaseSpeed(),
 			];
 		}
 
@@ -93,6 +94,7 @@ final readonly class StatsLeadsView
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
 				'ratings' => $this->statsLeadsModel->getRatings(),
+				'speedName' => $this->statsLeadsModel->getSpeedName(),
 				'pokemons' => $pokemons,
 				'months' => $months,
 			]

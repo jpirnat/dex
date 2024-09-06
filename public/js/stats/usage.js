@@ -17,6 +17,7 @@ const app = new Vue({
 		showLeadsLink: false,
 		myFormat: '',
 		myRating: 0,
+		speedName: '',
 		pokemons: [],
 		months: [],
 
@@ -76,6 +77,7 @@ const app = new Vue({
 				this.showLeadsLink = data.showLeadsLink;
 				this.myFormat = data.myFormat;
 				this.myRating = parseInt(data.myRating);
+				this.speedName = data.speedName;
 				this.pokemons = data.pokemons;
 				this.months = data.months;
 
