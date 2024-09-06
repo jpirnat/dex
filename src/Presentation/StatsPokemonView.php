@@ -118,6 +118,12 @@ final readonly class StatsPokemonView
 				'percentText' => $formatter->formatPercent($move->getPercent()),
 				'change' => $move->getChange(),
 				'changeText' => $formatter->formatChange($move->getChange()),
+				'type' => $this->dexFormatter->formatDexType($move->getType()),
+				'category' => $this->dexFormatter->formatDexCategory($move->getCategory()),
+				'pp' => $move->getPP() * 1.6,
+				'power' => $move->getPower(),
+				'accuracy' => $move->getAccuracy(),
+				'priority' => $move->getPriority(),
 			];
 		}
 

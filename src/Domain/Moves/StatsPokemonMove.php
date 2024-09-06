@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Moves;
 
+use Jp\Dex\Domain\Categories\DexCategory;
+use Jp\Dex\Domain\Types\DexType;
+
 final readonly class StatsPokemonMove
 {
 	public function __construct(
@@ -10,37 +13,61 @@ final readonly class StatsPokemonMove
 		private string $name,
 		private float $percent,
 		private float $change,
+		private DexType $type,
+		private DexCategory $category,
+		private int $pp,
+		private int $power,
+		private int $accuracy,
+		private int $priority,
 	) {}
 
-	/**
-	 * Get the move's identifier.
-	 */
 	public function getIdentifier() : string
 	{
 		return $this->identifier;
 	}
 
-	/**
-	 * Get the move's name.
-	 */
 	public function getName() : string
 	{
 		return $this->name;
 	}
 
-	/**
-	 * Get the move's percent.
-	 */
 	public function getPercent() : float
 	{
 		return $this->percent;
 	}
 
-	/**
-	 * Get the move's change.
-	 */
 	public function getChange() : float
 	{
 		return $this->change;
+	}
+
+	public function getType() : DexType
+	{
+		return $this->type;
+	}
+
+	public function getCategory() : DexCategory
+	{
+		return $this->category;
+	}
+
+	public function getPP() : int
+	{
+		return $this->pp;
+	}
+
+	public function getPower() : int
+	{
+		return $this->power;
+	}
+
+	public function getAccuracy() : int
+	{
+		return $this->accuracy;
+	}
+
+	public function getPriority() : int
+	{
+		return $this->priority;
 	}
 }

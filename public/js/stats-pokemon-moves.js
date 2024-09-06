@@ -22,12 +22,21 @@ Vue.component('stats-pokemon-moves', {
 			type: String,
 			default: '',
 		},
+		versionGroup: {
+			type: String,
+			default: '',
+		},
 	},
 	data() {
 		return {
 			sortColumn: '',
 			sortDirection: '',
 		};
+	},
+	computed: {
+		showPriority() {
+			return this.moves.some(m => m.priority !== 0);
+		},
 	},
 	template: `
 		<table class="moveset-usage">
@@ -55,6 +64,48 @@ Vue.component('stats-pokemon-moves', {
 							'dex-table__header--sorted-desc': sortColumn === 'change' && sortDirection === 'desc',
 						}"
 					>Δ</th>
+					<th scope="col" class="dex-table__header--sortable"
+						@click="sortBy('type', 'asc', m => m.type.name)"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'type' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'type' && sortDirection === 'desc',
+						}"
+					>Type</th>
+					<th scope="col" class="dex-table__header--sortable"
+						@click="sortBy('category', 'asc', m => m.category.name)"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'category' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'category' && sortDirection === 'desc',
+						}"
+					>Category</th>
+					<th scope="col" class="dex-table--number dex-table__header--sortable"
+						@click="sortBy('pp', 'desc', m => m.pp)"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'pp' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'pp' && sortDirection === 'desc',
+						}"
+					>PP</th>
+					<th scope="col" class="dex-table--number dex-table__header--sortable"
+						@click="sortBy('power', 'desc', m => m.power)"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'power' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'power' && sortDirection === 'desc',
+						}"
+					>Power</th>
+					<th scope="col" class="dex-table--number dex-table__header--sortable"
+						@click="sortBy('accuracy', 'desc', m => m.accuracy)"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'accuracy' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'accuracy' && sortDirection === 'desc',
+						}"
+					>Accuracy</th>
+					<th scope="col" class="dex-table--number dex-table__header--sortable" v-if="showPriority"
+						@click="sortBy('priority', 'desc', m => m.priority)"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'priority' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'priority' && sortDirection === 'desc',
+						}"
+					>Priority</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -77,6 +128,19 @@ Vue.component('stats-pokemon-moves', {
 							<img class="chart-link__icon" src="/images/porydex/chart-icon.png">
 						</div>
 					</td>
+					<td class="dex-table__move-type">
+						<dex-type-link
+							:vg-identifier="versionGroup"
+							:type="move.type"
+						></dex-type-link>
+					</td>
+					<td class="dex-table__move-category" v-tooltip="move.category.name">
+						<img :src="'/images/categories/' + move.category.icon" :alt="move.category.name">
+					</td>
+					<td class="dex-table--number">{{ move.pp }}</td>
+					<td class="dex-table--number">{{ powerText(move) }}</td>
+					<td class="dex-table--number">{{ accuracyText(move) }}</td>
+					<td class="dex-table--number" v-if="showPriority">{{ move.priority }}</td>
 				</tr>
 			</tbody>
 		</table>
@@ -103,6 +167,21 @@ Vue.component('stats-pokemon-moves', {
 				if (aValue > bValue) { return +1 * modifier; }
 				return 0;
 			});
+		},
+		powerText(move) {
+			if (move.power === 0) {
+				return '—'; // em dash
+			}
+			if (move.power === 1) {
+				return '*';
+			}
+			return move.power;
+		},
+		accuracyText(move) {
+			if (move.accuracy === 101) {
+				return '—'; // em dash
+			}
+			return move.accuracy + '%';
 		},
 		addChartLine(move) {
 			this.$emit('add-chart-line', {

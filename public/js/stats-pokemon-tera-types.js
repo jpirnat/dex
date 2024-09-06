@@ -25,7 +25,7 @@ Vue.component('stats-pokemon-tera-types', {
 		versionGroup: {
 			type: String,
 			default: '',
-		}
+		},
 	},
 	data() {
 		return {
