@@ -18,14 +18,14 @@ final class DexPokemonModel
 
 
 	public function __construct(
-		private VersionGroupModel $versionGroupModel,
-		private PokemonRepositoryInterface $pokemonRepository,
-		private PokemonNameRepositoryInterface $pokemonNameRepository,
-		private DexStatRepositoryInterface $dexStatRepository,
-		private DexAbilityRepositoryInterface $dexAbilityRepository,
-		private DexPokemonMatchupsModel $dexPokemonMatchupsModel,
-		private DexPokemonEvolutionsModel $dexPokemonEvolutionsModel,
-		private DexPokemonMovesModel $dexPokemonMovesModel,
+		private readonly VersionGroupModel $versionGroupModel,
+		private readonly PokemonRepositoryInterface $pokemonRepository,
+		private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
+		private readonly DexStatRepositoryInterface $dexStatRepository,
+		private readonly DexAbilityRepositoryInterface $dexAbilityRepository,
+		private readonly DexPokemonMatchupsModel $dexPokemonMatchupsModel,
+		private readonly DexPokemonEvolutionsModel $dexPokemonEvolutionsModel,
+		private readonly DexPokemonMovesModel $dexPokemonMovesModel,
 	) {}
 
 

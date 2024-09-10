@@ -11,8 +11,6 @@ use Psr\Http\Message\ResponseInterface;
 final readonly class AveragedUsageView
 {
 	public function __construct(
-		private RendererInterface $renderer,
-		private BaseView $baseView,
 		private AveragedUsageModel $averagedUsageModel,
 		private IntlFormatterFactory $formatterFactory,
 		private MonthControlFormatter $monthControlFormatter,

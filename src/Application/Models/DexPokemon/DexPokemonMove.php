@@ -6,7 +6,7 @@ namespace Jp\Dex\Application\Models\DexPokemon;
 use Jp\Dex\Domain\Categories\DexCategory;
 use Jp\Dex\Domain\Types\DexType;
 
-final class DexPokemonMove
+final readonly class DexPokemonMove
 {
 	public function __construct(
 		private array $versionGroupData,

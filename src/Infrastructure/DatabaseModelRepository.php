@@ -58,7 +58,7 @@ final readonly class DatabaseModelRepository implements ModelRepositoryInterface
 			);
 		}
 
-		$model = new Model(
+		return new Model(
 			$formId,
 			$isShiny,
 			$isBack,
@@ -66,7 +66,5 @@ final readonly class DatabaseModelRepository implements ModelRepositoryInterface
 			$attackingIndex,
 			$result['image'],
 		);
-
-		return $model;
 	}
 }

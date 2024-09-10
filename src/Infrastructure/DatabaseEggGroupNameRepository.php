@@ -39,12 +39,10 @@ final readonly class DatabaseEggGroupNameRepository implements EggGroupNameRepos
 			return new EggGroupName($languageId, $eggGroupId, '');
 		}
 
-		$eggGroupName = new EggGroupName(
+		return new EggGroupName(
 			$languageId,
 			$eggGroupId,
 			$result['name'],
 		);
-
-		return $eggGroupName;
 	}
 }

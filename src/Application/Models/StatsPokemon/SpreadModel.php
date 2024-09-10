@@ -21,9 +21,9 @@ final class SpreadModel
 
 
 	public function __construct(
-		private StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository,
-		private DexStatRepositoryInterface $dexStatRepository,
-		private StatCalculator $statCalculator,
+		private readonly StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository,
+		private readonly DexStatRepositoryInterface $dexStatRepository,
+		private readonly StatCalculator $statCalculator,
 	) {}
 
 

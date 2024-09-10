@@ -91,14 +91,12 @@ final readonly class DatabaseMovesetPokemonRepository implements MovesetPokemonR
 			return null;
 		}
 
-		$movesetPokemon = new MovesetPokemon(
+		return new MovesetPokemon(
 			$month,
 			$formatId,
 			$pokemonId,
 			$result['raw_count'],
 			$result['viability_ceiling'],
 		);
-
-		return $movesetPokemon;
 	}
 }

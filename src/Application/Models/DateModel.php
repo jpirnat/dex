@@ -15,7 +15,7 @@ final class DateModel
 
 
 	public function __construct(
-		private MonthQueriesInterface $monthQueries,
+		private readonly MonthQueriesInterface $monthQueries,
 	) {}
 
 

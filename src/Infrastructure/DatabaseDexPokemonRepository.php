@@ -83,18 +83,16 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 			);
 		}
 
-		$dexPokemon = new DexPokemon(
+		return new DexPokemon(
 			$result['icon'] ?? '',
 			$result['identifier'],
 			$result['name'],
-			$types ?? [],
-			$abilities ?? [],
+			$types,
+			$abilities,
 			$baseStats,
 			(int) array_sum($baseStats),
 			$result['sort'],
 		);
-
-		return $dexPokemon;
 	}
 
 	/**

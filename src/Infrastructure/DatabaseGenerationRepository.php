@@ -40,12 +40,10 @@ final readonly class DatabaseGenerationRepository implements GenerationRepositor
 			);
 		}
 
-		$generation = new Generation(
+		return new Generation(
 			$generationId,
 			$result['identifier'],
 			$result['smogon_dex_identifier'],
 		);
-
-		return $generation;
 	}
 }

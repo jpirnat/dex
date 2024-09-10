@@ -47,12 +47,10 @@ final readonly class DatabaseVersionNameRepository implements VersionNameReposit
 			);
 		}
 
-		$versionName = new VersionName(
+		return new VersionName(
 			$languageId,
 			$versionId,
 			$result['name'],
 		);
-
-		return $versionName;
 	}
 }

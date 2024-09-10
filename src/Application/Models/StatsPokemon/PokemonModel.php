@@ -21,9 +21,9 @@ final class PokemonModel
 
 
 	public function __construct(
-		private DexPokemonRepositoryInterface $dexPokemonRepository,
-		private ModelRepositoryInterface $modelRepository,
-		private DexStatRepositoryInterface $dexStatRepository,
+		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
+		private readonly ModelRepositoryInterface $modelRepository,
+		private readonly DexStatRepositoryInterface $dexStatRepository,
 	) {}
 
 

@@ -47,12 +47,10 @@ final readonly class DatabaseAbilityNameRepository implements AbilityNameReposit
 			);
 		}
 
-		$abilityName = new AbilityName(
+		return new AbilityName(
 			$languageId,
 			$abilityId,
 			$result['name'],
 		);
-
-		return $abilityName;
 	}
 }

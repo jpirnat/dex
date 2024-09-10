@@ -42,16 +42,16 @@ final class AveragedPokemonModel
 
 
 	public function __construct(
-		private FormatRepositoryInterface $formatRepository,
-		private PokemonRepositoryInterface $pokemonRepository,
-		private RatingQueriesInterface $ratingQueries,
-		private VersionGroupRepositoryInterface $versionGroupRepository,
-		private GenerationRepositoryInterface $generationRepository,
-		private StatNameModel $statNameModel,
-		private PokemonModel $pokemonModel,
-		private AbilityModel $abilityModel,
-		private ItemModel $itemModel,
-		private MoveModel $moveModel,
+		private readonly FormatRepositoryInterface $formatRepository,
+		private readonly PokemonRepositoryInterface $pokemonRepository,
+		private readonly RatingQueriesInterface $ratingQueries,
+		private readonly VersionGroupRepositoryInterface $versionGroupRepository,
+		private readonly GenerationRepositoryInterface $generationRepository,
+		private readonly StatNameModel $statNameModel,
+		private readonly PokemonModel $pokemonModel,
+		private readonly AbilityModel $abilityModel,
+		private readonly ItemModel $itemModel,
+		private readonly MoveModel $moveModel,
 	) {}
 
 

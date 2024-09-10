@@ -18,7 +18,6 @@ use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
-use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class DexMoveModel
@@ -37,15 +36,14 @@ final class DexMoveModel
 
 
 	public function __construct(
-		private VersionGroupModel $versionGroupModel,
-		private MoveRepositoryInterface $moveRepository,
-		private DexMoveRepositoryInterface $dexMoveRepository,
-		private VgMoveRepositoryInterface $vgMoveRepository,
-		private DexTypeRepositoryInterface $dexTypeRepository,
-		private TypeMatchupRepositoryInterface $typeMatchupRepository,
-		private MoveFlagRepositoryInterface $flagRepository,
-		private DexVersionGroupRepositoryInterface $dexVgRepository,
-		private DexMovePokemonModel $dexMovePokemonModel,
+		private readonly VersionGroupModel $versionGroupModel,
+		private readonly MoveRepositoryInterface $moveRepository,
+		private readonly DexMoveRepositoryInterface $dexMoveRepository,
+		private readonly VgMoveRepositoryInterface $vgMoveRepository,
+		private readonly DexTypeRepositoryInterface $dexTypeRepository,
+		private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
+		private readonly MoveFlagRepositoryInterface $flagRepository,
+		private readonly DexMovePokemonModel $dexMovePokemonModel,
 	) {}
 
 

@@ -34,13 +34,13 @@ final class StatsAbilityModel
 
 
 	public function __construct(
-		private DateModel $dateModel,
-		private FormatRepositoryInterface $formatRepository,
-		private AbilityRepositoryInterface $abilityRepository,
-		private RatingQueriesInterface $ratingQueries,
-		private AbilityNameRepositoryInterface $abilityNameRepository,
-		private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
-		private StatsAbilityPokemonRepositoryInterface $statsAbilityPokemonRepository,
+		private readonly DateModel $dateModel,
+		private readonly FormatRepositoryInterface $formatRepository,
+		private readonly AbilityRepositoryInterface $abilityRepository,
+		private readonly RatingQueriesInterface $ratingQueries,
+		private readonly AbilityNameRepositoryInterface $abilityNameRepository,
+		private readonly AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
+		private readonly StatsAbilityPokemonRepositoryInterface $statsAbilityPokemonRepository,
 	) {}
 
 

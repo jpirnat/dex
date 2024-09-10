@@ -28,13 +28,13 @@ final class DexAbilityModel
 
 
 	public function __construct(
-		private VersionGroupModel $versionGroupModel,
-		private AbilityRepositoryInterface $abilityRepository,
-		private AbilityNameRepositoryInterface $abilityNameRepository,
-		private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
-		private AbilityFlagRepositoryInterface $flagRepository,
-		private DexStatRepositoryInterface $dexStatRepository,
-		private DexPokemonRepositoryInterface $dexPokemonRepository,
+		private readonly VersionGroupModel $versionGroupModel,
+		private readonly AbilityRepositoryInterface $abilityRepository,
+		private readonly AbilityNameRepositoryInterface $abilityNameRepository,
+		private readonly AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
+		private readonly AbilityFlagRepositoryInterface $flagRepository,
+		private readonly DexStatRepositoryInterface $dexStatRepository,
+		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
 	) {}
 
 

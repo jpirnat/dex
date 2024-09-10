@@ -18,7 +18,6 @@ use Jp\Dex\Domain\PokemonMoves\PokemonMove;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveFormatter;
 use Jp\Dex\Domain\Species\SpeciesRepositoryInterface;
 use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
-use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class BreedingChainsModel
 {
@@ -30,19 +29,18 @@ final class BreedingChainsModel
 
 
 	public function __construct(
-		private VersionGroupModel $versionGroupModel,
-		private PokemonRepositoryInterface $pokemonRepository,
-		private MoveRepositoryInterface $moveRepository,
-		private BreedingChainFinder $breedingChainFinder,
-		private FormIconRepositoryInterface $formIconRepository,
-		private DexVersionGroupRepositoryInterface $dexVersionGroupRepository,
-		private PokemonNameRepositoryInterface $pokemonNameRepository,
-		private MoveNameRepositoryInterface $moveNameRepository,
-		private VersionGroupRepositoryInterface $versionGroupRepository,
-		private PokemonEggGroupRepositoryInterface $pokemonEggGroupRepository,
-		private EggGroupNameRepositoryInterface $eggGroupNameRepository,
-		private SpeciesRepositoryInterface $speciesRepository,
-		private PokemonMoveFormatter $pokemonMoveFormatter,
+		private readonly VersionGroupModel $versionGroupModel,
+		private readonly PokemonRepositoryInterface $pokemonRepository,
+		private readonly MoveRepositoryInterface $moveRepository,
+		private readonly BreedingChainFinder $breedingChainFinder,
+		private readonly FormIconRepositoryInterface $formIconRepository,
+		private readonly DexVersionGroupRepositoryInterface $dexVersionGroupRepository,
+		private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
+		private readonly MoveNameRepositoryInterface $moveNameRepository,
+		private readonly PokemonEggGroupRepositoryInterface $pokemonEggGroupRepository,
+		private readonly EggGroupNameRepositoryInterface $eggGroupNameRepository,
+		private readonly SpeciesRepositoryInterface $speciesRepository,
+		private readonly PokemonMoveFormatter $pokemonMoveFormatter,
 	) {}
 
 
@@ -74,7 +72,6 @@ final class BreedingChainsModel
 			'name' => $moveName->getName(),
 		];
 
-		/** @var PokemonMove[][] $chains */
 		$chains = $this->breedingChainFinder->findChains(
 			$versionGroupId,
 			$pokemon->getId(),

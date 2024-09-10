@@ -40,12 +40,10 @@ final readonly class DatabaseSpeciesRepository implements SpeciesRepositoryInter
 			);
 		}
 
-		$species = new Species(
+		return new Species(
 			$speciesId,
 			$result['identifier'],
 			$result['base_egg_cycles'],
 		);
-
-		return $species;
 	}
 }

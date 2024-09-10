@@ -10,10 +10,10 @@ use Jp\Dex\Domain\Types\TypeId;
 final class SimpleShowdownTypeRepository implements ShowdownTypeRepositoryInterface
 {
 	/** @var TypeId[] $typesToImport */
-	private array $typesToImport = [];
+	private array $typesToImport;
 
 	/** @var array<string, int> $typesToIgnore */
-	private array $typesToIgnore = [];
+	private array $typesToIgnore;
 
 	/** @var string[] $unknownTypes */
 	private array $unknownTypes = [];

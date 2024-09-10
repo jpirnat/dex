@@ -47,12 +47,10 @@ final readonly class DatabaseItemNameRepository implements ItemNameRepositoryInt
 			);
 		}
 
-		$itemName = new ItemName(
+		return new ItemName(
 			$languageId,
 			$itemId,
 			$result['name'],
 		);
-
-		return $itemName;
 	}
 }

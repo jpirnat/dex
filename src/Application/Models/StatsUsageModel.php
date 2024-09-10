@@ -38,13 +38,13 @@ final class StatsUsageModel
 
 
 	public function __construct(
-		private DateModel $dateModel,
-		private FormatRepositoryInterface $formatRepository,
-		private RatingQueriesInterface $ratingQueries,
-		private LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
-		private StatNameRepositoryInterface $statNameRepository,
-		private StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository,
-		private UsageRatedQueriesInterface $usageRatedQueries,
+		private readonly DateModel $dateModel,
+		private readonly FormatRepositoryInterface $formatRepository,
+		private readonly RatingQueriesInterface $ratingQueries,
+		private readonly LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
+		private readonly StatNameRepositoryInterface $statNameRepository,
+		private readonly StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository,
+		private readonly UsageRatedQueriesInterface $usageRatedQueries,
 	) {}
 
 

@@ -55,7 +55,7 @@ final readonly class DatabaseFormatRepository implements FormatRepositoryInterfa
 			);
 		}
 
-		$format = new Format(
+		return new Format(
 			$formatId,
 			$result['identifier'],
 			$result['name'],
@@ -65,8 +65,6 @@ final readonly class DatabaseFormatRepository implements FormatRepositoryInterfa
 			$result['field_size'],
 			$result['smogon_dex_identifier'],
 		);
-
-		return $format;
 	}
 
 	/**
@@ -108,7 +106,7 @@ final readonly class DatabaseFormatRepository implements FormatRepositoryInterfa
 			);
 		}
 
-		$format = new Format(
+		return new Format(
 			new FormatId($result['id']),
 			$identifier,
 			$result['name'],
@@ -118,7 +116,5 @@ final readonly class DatabaseFormatRepository implements FormatRepositoryInterfa
 			$result['field_size'],
 			$result['smogon_dex_identifier'],
 		);
-
-		return $format;
 	}
 }

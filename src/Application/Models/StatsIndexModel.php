@@ -13,7 +13,7 @@ final class StatsIndexModel
 
 
 	public function __construct(
-		private UsageQueriesInterface $usageQueries,
+		private readonly UsageQueriesInterface $usageQueries,
 	) {}
 
 

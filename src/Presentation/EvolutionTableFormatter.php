@@ -59,7 +59,8 @@ final readonly class EvolutionTableFormatter
 	/**
 	 * @param EvolutionTableMethod[] $methods
 	 */
-	private function formatMethods(array $methods) {
+	private function formatMethods(array $methods) : array
+	{
 		$m = [];
 
 		foreach ($methods as $method) {

@@ -47,12 +47,10 @@ final readonly class DatabaseConditionNameRepository implements ConditionNameRep
 			);
 		}
 
-		$conditionName = new ConditionName(
+		return new ConditionName(
 			$languageId,
 			$conditionId,
 			$result['name'],
 		);
-
-		return $conditionName;
 	}
 }

@@ -13,7 +13,7 @@ final readonly class MonthControlFormatter
 	public function format(?DateTime $month, IntlFormatter $formatter) : ?array
 	{
 		if ($month === null) {
-			return $month;
+			return null;
 		}
 
 		return [

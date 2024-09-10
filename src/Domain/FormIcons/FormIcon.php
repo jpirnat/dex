@@ -17,9 +17,31 @@ final readonly class FormIcon
 		private string $image,
 	) {}
 
-	/**
-	 * Get the form icon's image.
-	 */
+	public function getVersionGroupId() : VersionGroupId
+	{
+		return $this->versionGroupId;
+	}
+
+	public function getFormId() : FormId
+	{
+		return $this->formId;
+	}
+
+	public function isFemale() : bool
+	{
+		return $this->isFemale;
+	}
+
+	public function isRight() : bool
+	{
+		return $this->isRight;
+	}
+
+	public function isShiny() : bool
+	{
+		return $this->isShiny;
+	}
+
 	public function getImage() : string
 	{
 		return $this->image;

@@ -5,7 +5,7 @@ namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Versions\GenerationId;
 
-final class DexIndexModel
+final readonly class DexIndexModel
 {
 	public function __construct(
 		private VersionGroupModel $versionGroupModel,

@@ -28,7 +28,7 @@ final class VersionGroupModel
 
 
 	public function __construct(
-		private VersionGroupRepositoryInterface $vgRepository,
+		private readonly VersionGroupRepositoryInterface $vgRepository,
 	) {}
 
 

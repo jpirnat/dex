@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Spreads;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 
-final class StatsPokemonSpread
+final readonly class StatsPokemonSpread
 {
 	public function __construct(
 		private string $natureName,

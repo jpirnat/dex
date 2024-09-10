@@ -60,9 +60,7 @@ final readonly class DatabaseUsageQueries implements UsageQueriesInterface
 			return null;
 		}
 
-		$month = new DateTime($result['month']);
-
-		return $month;
+		return new DateTime($result['month']);
 	}
 
 	/**
@@ -86,8 +84,6 @@ final readonly class DatabaseUsageQueries implements UsageQueriesInterface
 			return null;
 		}
 
-		$month = new DateTime($result['month']);
-
-		return $month;
+		return new DateTime($result['month']);
 	}
 }

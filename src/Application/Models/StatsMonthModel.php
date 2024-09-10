@@ -18,9 +18,9 @@ final class StatsMonthModel
 
 
 	public function __construct(
-		private DateModel $dateModel,
-		private UsageRatedQueriesInterface $usageRatedQueries,
-		private FormatRepositoryInterface $formatRepository,
+		private readonly DateModel $dateModel,
+		private readonly UsageRatedQueriesInterface $usageRatedQueries,
+		private readonly FormatRepositoryInterface $formatRepository,
 	) {}
 
 

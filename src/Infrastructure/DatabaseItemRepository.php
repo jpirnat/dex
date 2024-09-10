@@ -39,12 +39,10 @@ final readonly class DatabaseItemRepository implements ItemRepositoryInterface
 			);
 		}
 
-		$item = new Item(
+		return new Item(
 			$itemId,
 			$result['identifier'],
 		);
-
-		return $item;
 	}
 
 	/**
@@ -71,11 +69,9 @@ final readonly class DatabaseItemRepository implements ItemRepositoryInterface
 			);
 		}
 
-		$item = new Item(
+		return new Item(
 			new ItemId($result['id']),
 			$identifier,
 		);
-
-		return $item;
 	}
 }

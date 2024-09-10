@@ -15,8 +15,8 @@ final class DexItemsModel
 
 
 	public function __construct(
-		private VersionGroupModel $versionGroupModel,
-		private DexItemRepositoryInterface $dexItemRepository,
+		private readonly VersionGroupModel $versionGroupModel,
+		private readonly DexItemRepositoryInterface $dexItemRepository,
 	) {}
 
 

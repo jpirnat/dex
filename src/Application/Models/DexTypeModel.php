@@ -37,13 +37,13 @@ final class DexTypeModel
 
 
 	public function __construct(
-		private VersionGroupModel $versionGroupModel,
-		private TypeRepositoryInterface $typeRepository,
-		private DexTypeRepositoryInterface $dexTypeRepository,
-		private TypeMatchupRepositoryInterface $typeMatchupRepository,
-		private DexStatRepositoryInterface $dexStatRepository,
-		private DexPokemonRepositoryInterface $dexPokemonRepository,
-		private DexMoveRepositoryInterface $dexMoveRepository,
+		private readonly VersionGroupModel $versionGroupModel,
+		private readonly TypeRepositoryInterface $typeRepository,
+		private readonly DexTypeRepositoryInterface $dexTypeRepository,
+		private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
+		private readonly DexStatRepositoryInterface $dexStatRepository,
+		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
+		private readonly DexMoveRepositoryInterface $dexMoveRepository,
 	) {}
 
 

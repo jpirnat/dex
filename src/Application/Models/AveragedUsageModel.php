@@ -35,15 +35,15 @@ final class AveragedUsageModel
 
 
 	public function __construct(
-		private FormatRepositoryInterface $formatRepository,
-		private RatingQueriesInterface $ratingQueries,
-		private UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository,
-		private UsageRatedAveragedPokemonRepositoryInterface $usageRatedAveragedPokemonRepository,
-		private LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
-		private MonthsCounter $monthsCounter,
-		private PokemonRepositoryInterface $pokemonRepository,
-		private PokemonNameRepositoryInterface $pokemonNameRepository,
-		private FormIconRepositoryInterface $formIconRepository,
+		private readonly FormatRepositoryInterface $formatRepository,
+		private readonly RatingQueriesInterface $ratingQueries,
+		private readonly UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository,
+		private readonly UsageRatedAveragedPokemonRepositoryInterface $usageRatedAveragedPokemonRepository,
+		private readonly LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
+		private readonly MonthsCounter $monthsCounter,
+		private readonly PokemonRepositoryInterface $pokemonRepository,
+		private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
+		private readonly FormIconRepositoryInterface $formIconRepository,
 	) {}
 
 

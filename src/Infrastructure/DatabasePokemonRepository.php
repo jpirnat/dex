@@ -48,7 +48,7 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
 			);
 		}
 
-		$pokemon = new Pokemon(
+		return new Pokemon(
 			$pokemonId,
 			$result['identifier'],
 			$result['pokemon_identifier'],
@@ -59,8 +59,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
 			$result['smogon_dex_identifier'],
 			$result['sort'],
 		);
-
-		return $pokemon;
 	}
 
 	/**
@@ -94,7 +92,7 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
 			);
 		}
 
-		$pokemon = new Pokemon(
+		return new Pokemon(
 			new PokemonId($result['id']),
 			$identifier,
 			$result['pokemon_identifier'],
@@ -105,8 +103,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
 			$result['smogon_dex_identifier'],
 			$result['sort'],
 		);
-
-		return $pokemon;
 	}
 
 	/**

@@ -27,13 +27,13 @@ final class DexPokemonMovesModel
 
 
 	public function __construct(
-		private DexVersionGroupRepositoryInterface $dexVgRepository,
-		private PokemonMoveRepositoryInterface $pokemonMoveRepository,
-		private TmRepositoryInterface $tmRepository,
-		private ItemDescriptionRepositoryInterface $itemDescriptionRepository,
-		private DexMoveRepositoryInterface $dexMoveRepository,
-		private MoveMethodRepositoryInterface $moveMethodRepository,
-		private MoveMethodNameRepositoryInterface $moveMethodNameRepository,
+		private readonly DexVersionGroupRepositoryInterface $dexVgRepository,
+		private readonly PokemonMoveRepositoryInterface $pokemonMoveRepository,
+		private readonly TmRepositoryInterface $tmRepository,
+		private readonly ItemDescriptionRepositoryInterface $itemDescriptionRepository,
+		private readonly DexMoveRepositoryInterface $dexMoveRepository,
+		private readonly MoveMethodRepositoryInterface $moveMethodRepository,
+		private readonly MoveMethodNameRepositoryInterface $moveMethodNameRepository,
 	) {}
 
 
@@ -68,7 +68,6 @@ final class DexPokemonMovesModel
 			$languageId,
 		);
 
-		$moveIds = [];
 		$levelUpMoves = [];
 		$moveVgIndexes = [];
 		$methodsMoves = [];
@@ -83,9 +82,6 @@ final class DexPokemonMovesModel
 				continue;
 			}
 			$vgIdentifier = $this->learnsetVgs[$vgId]->getIdentifier();
-
-			// Keep track of moves we'll need data for.
-			$moveIds[$moveId] = $pokemonMove->getMoveId();
 
 			switch ($methodId) {
 				case MoveMethodId::LEVEL_UP:

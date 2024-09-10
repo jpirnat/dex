@@ -15,9 +15,9 @@ final class DexAbilitiesModel
 
 
 	public function __construct(
-		private VersionGroupModel $versionGroupModel,
-		private DexAbilityRepositoryInterface $dexAbilityRepository,
-		private AbilityFlagRepositoryInterface $flagRepository,
+		private readonly VersionGroupModel $versionGroupModel,
+		private readonly DexAbilityRepositoryInterface $dexAbilityRepository,
+		private readonly AbilityFlagRepositoryInterface $flagRepository,
 	) {}
 
 

@@ -14,7 +14,7 @@ final class DatabaseShowdownNatureRepository implements ShowdownNatureRepository
 	private array $naturesToImport = [];
 
 	/** @var array<string, int> $naturesToIgnore */
-	private array $naturesToIgnore = [];
+	private array $naturesToIgnore;
 
 	/** @var string[] $unknownNatures */
 	private array $unknownNatures = [];

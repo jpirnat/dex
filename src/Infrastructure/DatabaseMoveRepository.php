@@ -41,13 +41,11 @@ final readonly class DatabaseMoveRepository implements MoveRepositoryInterface
 			);
 		}
 
-		$move = new Move(
+		return new Move(
 			$moveId,
 			$result['identifier'],
 			new MoveType($result['move_type']),
 		);
-
-		return $move;
 	}
 
 	/**
@@ -75,12 +73,10 @@ final readonly class DatabaseMoveRepository implements MoveRepositoryInterface
 			);
 		}
 
-		$move = new Move(
+		return new Move(
 			new MoveId($result['id']),
 			$identifier,
 			new MoveType($result['move_type']),
 		);
-
-		return $move;
 	}
 }

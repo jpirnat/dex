@@ -43,13 +43,11 @@ final readonly class DatabaseMoveDescriptionRepository implements MoveDescriptio
 			return new MoveDescription($versionGroupId, $languageId, $moveId, '');
 		}
 
-		$moveDescription = new MoveDescription(
+		return new MoveDescription(
 			$versionGroupId,
 			$languageId,
 			$moveId,
 			$result['description'],
 		);
-
-		return $moveDescription;
 	}
 }

@@ -39,12 +39,10 @@ final readonly class DatabaseAbilityRepository implements AbilityRepositoryInter
 			);
 		}
 
-		$ability = new Ability(
+		return new Ability(
 			$abilityId,
 			$result['identifier'],
 		);
-
-		return $ability;
 	}
 
 	/**
@@ -71,11 +69,9 @@ final readonly class DatabaseAbilityRepository implements AbilityRepositoryInter
 			);
 		}
 
-		$ability = new Ability(
+		return new Ability(
 			new AbilityId($result['id']),
 			$identifier,
 		);
-
-		return $ability;
 	}
 }

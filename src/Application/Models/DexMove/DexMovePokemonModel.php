@@ -29,14 +29,14 @@ final class DexMovePokemonModel
 
 
 	public function __construct(
-		private DexVersionGroupRepositoryInterface $dexVgRepository,
-		private PokemonMoveRepositoryInterface $pokemonMoveRepository,
-		private TmRepositoryInterface $tmRepository,
-		private ItemDescriptionRepositoryInterface $itemDescriptionRepository,
-		private DexPokemonRepositoryInterface $dexPokemonRepository,
-		private MoveMethodRepositoryInterface $moveMethodRepository,
-		private MoveMethodNameRepositoryInterface $moveMethodNameRepository,
-		private DexStatRepositoryInterface $dexStatRepository,
+		private readonly DexVersionGroupRepositoryInterface $dexVgRepository,
+		private readonly PokemonMoveRepositoryInterface $pokemonMoveRepository,
+		private readonly TmRepositoryInterface $tmRepository,
+		private readonly ItemDescriptionRepositoryInterface $itemDescriptionRepository,
+		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
+		private readonly MoveMethodRepositoryInterface $moveMethodRepository,
+		private readonly MoveMethodNameRepositoryInterface $moveMethodNameRepository,
+		private readonly DexStatRepositoryInterface $dexStatRepository,
 	) {}
 
 
@@ -78,7 +78,6 @@ final class DexMovePokemonModel
 			$languageId,
 		);
 
-		$pokemonIds = [];
 		$methodsPokemons = [];
 		foreach ($pokemonMoves as $pokemonMove) {
 			$pokemonId = $pokemonMove->getPokemonId()->value();
@@ -91,9 +90,6 @@ final class DexMovePokemonModel
 				continue;
 			}
 			$vgIdentifier = $this->learnsetVgs[$vgId]->getIdentifier();
-
-			// Keep track of the Pokémon we'll need data for.
-			$pokemonIds[$pokemonId] = $pokemonMove->getPokemonId();
 
 			switch ($methodId) {
 				case MoveMethodId::LEVEL_UP:

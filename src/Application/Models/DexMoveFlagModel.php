@@ -17,9 +17,9 @@ final class DexMoveFlagModel
 
 
 	public function __construct(
-		private VersionGroupModel $versionGroupModel,
-		private MoveFlagRepositoryInterface $flagRepository,
-		private DexMoveRepositoryInterface $dexMoveRepository,
+		private readonly VersionGroupModel $versionGroupModel,
+		private readonly MoveFlagRepositoryInterface $flagRepository,
+		private readonly DexMoveRepositoryInterface $dexMoveRepository,
 	) {}
 
 

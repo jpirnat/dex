@@ -38,22 +38,22 @@ final class StatsChartModel
 
 
 	public function __construct(
-		private FormatRepositoryInterface $formatRepository,
-		private PokemonRepositoryInterface $pokemonRepository,
-		private AbilityRepositoryInterface $abilityRepository,
-		private ItemRepositoryInterface $itemRepository,
-		private MoveRepositoryInterface $moveRepository,
-		private TypeRepositoryInterface $typeRepository,
-		private UsageTrendGenerator $usageTrendGenerator,
-		private LeadUsageTrendGenerator $leadUsageTrendGenerator,
-		private MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator,
-		private MovesetItemTrendGenerator $movesetItemTrendGenerator,
-		private MovesetMoveTrendGenerator $movesetMoveTrendGenerator,
-		private MovesetTeraTrendGenerator $movesetTeraTrendGenerator,
-		private UsageAbilityTrendGenerator $usageAbilityTrendGenerator,
-		private UsageItemTrendGenerator $usageItemTrendGenerator,
-		private UsageMoveTrendGenerator $usageMoveTrendGenerator,
-		private LanguageRepositoryInterface $languageRepository,
+		private readonly FormatRepositoryInterface $formatRepository,
+		private readonly PokemonRepositoryInterface $pokemonRepository,
+		private readonly AbilityRepositoryInterface $abilityRepository,
+		private readonly ItemRepositoryInterface $itemRepository,
+		private readonly MoveRepositoryInterface $moveRepository,
+		private readonly TypeRepositoryInterface $typeRepository,
+		private readonly UsageTrendGenerator $usageTrendGenerator,
+		private readonly LeadUsageTrendGenerator $leadUsageTrendGenerator,
+		private readonly MovesetAbilityTrendGenerator $movesetAbilityTrendGenerator,
+		private readonly MovesetItemTrendGenerator $movesetItemTrendGenerator,
+		private readonly MovesetMoveTrendGenerator $movesetMoveTrendGenerator,
+		private readonly MovesetTeraTrendGenerator $movesetTeraTrendGenerator,
+		private readonly UsageAbilityTrendGenerator $usageAbilityTrendGenerator,
+		private readonly UsageItemTrendGenerator $usageItemTrendGenerator,
+		private readonly UsageMoveTrendGenerator $usageMoveTrendGenerator,
+		private readonly LanguageRepositoryInterface $languageRepository,
 	) {}
 
 

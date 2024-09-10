@@ -52,7 +52,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			);
 		}
 
-		$versionGroup = new VersionGroup(
+		return new VersionGroup(
 			$versionGroupId,
 			$result['identifier'],
 			new GenerationId($result['generation_id']),
@@ -60,8 +60,6 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			$result['abbreviation'],
 			$result['sort'],
 		);
-
-		return $versionGroup;
 	}
 
 	/**
@@ -93,7 +91,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			);
 		}
 
-		$versionGroup = new VersionGroup(
+		return new VersionGroup(
 			new VersionGroupId($result['id']),
 			$identifier,
 			new GenerationId($result['generation_id']),
@@ -101,8 +99,6 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			$result['abbreviation'],
 			$result['sort'],
 		);
-
-		return $versionGroup;
 	}
 
 	/**

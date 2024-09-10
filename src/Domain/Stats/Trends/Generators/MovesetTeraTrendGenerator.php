@@ -5,7 +5,6 @@ namespace Jp\Dex\Domain\Stats\Trends\Generators;
 
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Moves\VgMoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatsChartQueriesInterface;
@@ -23,7 +22,6 @@ final readonly class MovesetTeraTrendGenerator
 		private TypeNameRepositoryInterface $typeNameRepository,
 		private PokemonTypeRepositoryInterface $pokemonTypeRepository,
 		private TypeRepositoryInterface $typeRepository,
-		private VgMoveRepositoryInterface $vgMoveRepository,
 		private TrendPointCalculator $trendPointCalculator,
 	) {}
 

@@ -11,8 +11,6 @@ use Psr\Http\Message\ResponseInterface;
 final readonly class AveragedPokemonView
 {
 	public function __construct(
-		private RendererInterface $renderer,
-		private BaseView $baseView,
 		private AveragedPokemonModel $averagedPokemonModel,
 		private IntlFormatterFactory $formatterFactory,
 		private DexFormatter $dexFormatter,

@@ -41,13 +41,11 @@ final readonly class DatabaseLanguageRepository implements LanguageRepositoryInt
 			);
 		}
 
-		$language = new Language(
+		return new Language(
 			$languageId,
 			$result['identifier'],
 			$result['locale'],
 			$result['date_format'],
 		);
-
-		return $language;
 	}
 }

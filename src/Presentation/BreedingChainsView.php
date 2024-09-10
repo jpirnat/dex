@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\BreedingChains\BreedingChainRecord;
 use Jp\Dex\Application\Models\BreedingChains\BreedingChainsModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
@@ -30,7 +29,6 @@ final readonly class BreedingChainsView
 		$chains = [];
 		foreach ($chainsData as $chainId => $chain) {
 			$records = [];
-			/** @var BreedingChainRecord $record */
 			foreach ($chain as $record) {
 				$records[] = [
 					'icon' => $record->getFormIcon(),

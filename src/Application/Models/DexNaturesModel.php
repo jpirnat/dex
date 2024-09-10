@@ -13,8 +13,8 @@ final class DexNaturesModel
 
 
 	public function __construct(
-		private VersionGroupModel $versionGroupModel,
-		private DexNatureRepositoryInterface $dexNatureRepository,
+		private readonly VersionGroupModel $versionGroupModel,
+		private readonly DexNatureRepositoryInterface $dexNatureRepository,
 	) {}
 
 

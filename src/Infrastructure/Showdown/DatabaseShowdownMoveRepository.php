@@ -14,7 +14,7 @@ final class DatabaseShowdownMoveRepository implements ShowdownMoveRepositoryInte
 	private array $movesToImport = [];
 
 	/** @var array<string, int> $movesToIgnore */
-	private array $movesToIgnore = [];
+	private array $movesToIgnore;
 
 	/** @var string[] $unknownMoves */
 	private array $unknownMoves = [];

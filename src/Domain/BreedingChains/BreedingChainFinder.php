@@ -17,7 +17,7 @@ final class BreedingChainFinder
 
 
 	public function __construct(
-		private BreedingChainQueriesInterface $breedingChainQueries,
+		private readonly BreedingChainQueriesInterface $breedingChainQueries,
 	) {}
 
 

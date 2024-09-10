@@ -186,11 +186,9 @@ final readonly class DatabaseMovesetRatedPokemonRepository implements MovesetRat
 			return null;
 		}
 
-		$movesetRatedPokemon = new MovesetRatedPokemon(
+		return new MovesetRatedPokemon(
 			new UsageRatedPokemonId($result['usage_rated_pokemon_id']),
 			(float) $result['average_weight'],
 		);
-
-		return $movesetRatedPokemon;
 	}
 }

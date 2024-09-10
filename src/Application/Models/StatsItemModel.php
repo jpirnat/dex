@@ -34,13 +34,13 @@ final class StatsItemModel
 
 
 	public function __construct(
-		private DateModel $dateModel,
-		private FormatRepositoryInterface $formatRepository,
-		private ItemRepositoryInterface $itemRepository,
-		private RatingQueriesInterface $ratingQueries,
-		private ItemNameRepositoryInterface $itemNameRepository,
-		private ItemDescriptionRepositoryInterface $itemDescriptionRepository,
-		private StatsItemPokemonRepositoryInterface $statsItemPokemonRepository,
+		private readonly DateModel $dateModel,
+		private readonly FormatRepositoryInterface $formatRepository,
+		private readonly ItemRepositoryInterface $itemRepository,
+		private readonly RatingQueriesInterface $ratingQueries,
+		private readonly ItemNameRepositoryInterface $itemNameRepository,
+		private readonly ItemDescriptionRepositoryInterface $itemDescriptionRepository,
+		private readonly StatsItemPokemonRepositoryInterface $statsItemPokemonRepository,
 	) {}
 
 

@@ -14,7 +14,7 @@ final class DatabaseShowdownItemRepository implements ShowdownItemRepositoryInte
 	private array $itemsToImport = [];
 
 	/** @var array<string, int> $itemsToIgnore */
-	private array $itemsToIgnore = [];
+	private array $itemsToIgnore;
 
 	/** @var string[] $unknownItems */
 	private array $unknownItems = [];

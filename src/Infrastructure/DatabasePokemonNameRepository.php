@@ -48,14 +48,12 @@ final readonly class DatabasePokemonNameRepository implements PokemonNameReposit
 			);
 		}
 
-		$pokemonName = new PokemonName(
+		return new PokemonName(
 			$languageId,
 			$pokemonId,
 			$result['name'],
 			$result['category'],
 		);
-
-		return $pokemonName;
 	}
 
 	/**

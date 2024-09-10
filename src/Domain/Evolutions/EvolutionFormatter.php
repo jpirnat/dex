@@ -122,12 +122,10 @@ final readonly class EvolutionFormatter
 			EvoMethodId::USE_ITEM => new EvolutionTableMethod(
 				"Use $item",
 			),
-			EvoMethodId::LEVEL_UP_ATK_GT_DEF => $this->tyrogue($evolution, $languageId),
-			EvoMethodId::LEVEL_UP_ATK_EQ_DEF => $this->tyrogue($evolution, $languageId),
+			EvoMethodId::LEVEL_UP_ATK_GT_DEF,
+			EvoMethodId::LEVEL_UP_ATK_EQ_DEF,
 			EvoMethodId::LEVEL_UP_DEF_GT_ATK => $this->tyrogue($evolution, $languageId),
-			EvoMethodId::LEVEL_UP_EC_LT_FIVE => new EvolutionTableMethod(
-				"Level up, starting at level $level, 50% chance",
-			),
+			EvoMethodId::LEVEL_UP_EC_LT_FIVE,
 			EvoMethodId::LEVEL_UP_EC_GT_EQ_FIVE => new EvolutionTableMethod(
 				"Level up, starting at level $level, 50% chance",
 			),
@@ -210,7 +208,7 @@ final readonly class EvolutionFormatter
 			),
 			EvoMethodId::HP_LOST_IN_BATTLE => $this->hpLostInBattle($evolution, $languageId),
 			EvoMethodId::SPIN => $this->spin($evolution, $item),
-			EvoMethodId::LEVEL_UP_NATURE_AMPED => $this->levelUpNatures($evolution, $languageId),
+			EvoMethodId::LEVEL_UP_NATURE_AMPED,
 			EvoMethodId::LEVEL_UP_NATURE_LOW_KEY => $this->levelUpNatures($evolution, $languageId),
 			EvoMethodId::TOWER_OF_DARKNESS => new EvolutionTableMethod(
 				"Read the Scroll of Darkness in the Tower of Darkness",
@@ -243,7 +241,7 @@ final readonly class EvolutionFormatter
 			EvoMethodId::LEVEL_UP_KNOW_MOVE_EC_25 => new EvolutionTableMethod(
 				"Level up, knowing $move, 1% chance",
 			),
-			EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_MALE => $this->levelUpRecoilDamage($evolution, $languageId),
+			EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_MALE,
 			EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_FEMALE => $this->levelUpRecoilDamage($evolution, $languageId),
 			EvoMethodId::USE_ITEM_FULL_MOON => new EvolutionTableMethod(
 				"Use $item during a full moon",

@@ -19,15 +19,14 @@ final class DexItemModel
 
 
 	public function __construct(
-		private VersionGroupModel $versionGroupModel,
-		private ItemRepositoryInterface $itemRepository,
-		private DexItemRepositoryInterface $dexItemRepository,
-
-		private EvolutionRepositoryInterface $evolutionRepository,
-		private FormRepositoryInterface $formRepository,
-		private FormIconRepositoryInterface $formIconRepository,
-		private PokemonRepositoryInterface $pokemonRepository,
-		private PokemonNameRepositoryInterface $pokemonNameRepository,
+		private readonly VersionGroupModel $versionGroupModel,
+		private readonly ItemRepositoryInterface $itemRepository,
+		private readonly DexItemRepositoryInterface $dexItemRepository,
+		private readonly EvolutionRepositoryInterface $evolutionRepository,
+		private readonly FormRepositoryInterface $formRepository,
+		private readonly FormIconRepositoryInterface $formIconRepository,
+		private readonly PokemonRepositoryInterface $pokemonRepository,
+		private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
 	) {}
 
 

@@ -47,12 +47,10 @@ final readonly class DatabaseMoveNameRepository implements MoveNameRepositoryInt
 			);
 		}
 
-		$moveName = new MoveName(
+		return new MoveName(
 			$languageId,
 			$moveId,
 			$result['name'],
 		);
-
-		return $moveName;
 	}
 }

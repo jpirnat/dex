@@ -32,14 +32,14 @@ final class AveragedLeadsModel
 
 
 	public function __construct(
-		private FormatRepositoryInterface $formatRepository,
-		private RatingQueriesInterface $ratingQueries,
-		private LeadsAveragedPokemonRepositoryInterface $leadsAveragedPokemonRepository,
-		private LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
-		private MonthsCounter $monthsCounter,
-		private PokemonRepositoryInterface $pokemonRepository,
-		private PokemonNameRepositoryInterface $pokemonNameRepository,
-		private FormIconRepositoryInterface $formIconRepository,
+		private readonly FormatRepositoryInterface $formatRepository,
+		private readonly RatingQueriesInterface $ratingQueries,
+		private readonly LeadsAveragedPokemonRepositoryInterface $leadsAveragedPokemonRepository,
+		private readonly LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
+		private readonly MonthsCounter $monthsCounter,
+		private readonly PokemonRepositoryInterface $pokemonRepository,
+		private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
+		private readonly FormIconRepositoryInterface $formIconRepository,
 	) {}
 
 

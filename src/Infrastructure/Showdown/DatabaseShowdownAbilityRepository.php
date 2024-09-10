@@ -14,7 +14,7 @@ final class DatabaseShowdownAbilityRepository implements ShowdownAbilityReposito
 	private array $abilitiesToImport = [];
 
 	/** @var array<string, int> $abilitiesToIgnore */
-	private array $abilitiesToIgnore = [];
+	private array $abilitiesToIgnore;
 
 	/** @var string[] $unknownAbilities */
 	private array $unknownAbilities = [];

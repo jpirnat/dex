@@ -34,13 +34,13 @@ final class StatsMoveModel
 
 
 	public function __construct(
-		private DateModel $dateModel,
-		private FormatRepositoryInterface $formatRepository,
-		private MoveRepositoryInterface $moveRepository,
-		private RatingQueriesInterface $ratingQueries,
-		private MoveNameRepositoryInterface $moveNameRepository,
-		private MoveDescriptionRepositoryInterface $moveDescriptionRepository,
-		private StatsMovePokemonRepositoryInterface $statsMovePokemonRepository,
+		private readonly DateModel $dateModel,
+		private readonly FormatRepositoryInterface $formatRepository,
+		private readonly MoveRepositoryInterface $moveRepository,
+		private readonly RatingQueriesInterface $ratingQueries,
+		private readonly MoveNameRepositoryInterface $moveNameRepository,
+		private readonly MoveDescriptionRepositoryInterface $moveDescriptionRepository,
+		private readonly StatsMovePokemonRepositoryInterface $statsMovePokemonRepository,
 	) {}
 
 

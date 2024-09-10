@@ -18,9 +18,9 @@ final class DexPokemonsModel
 
 
 	public function __construct(
-		private VersionGroupModel $versionGroupModel,
-		private DexPokemonRepositoryInterface $dexPokemonRepository,
-		private DexStatRepositoryInterface $dexStatRepository,
+		private readonly VersionGroupModel $versionGroupModel,
+		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
+		private readonly DexStatRepositoryInterface $dexStatRepository,
 	) {}
 
 

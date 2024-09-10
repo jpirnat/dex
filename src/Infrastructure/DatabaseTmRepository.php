@@ -50,15 +50,13 @@ final readonly class DatabaseTmRepository implements TmRepositoryInterface
 			);
 		}
 
-		$tm = new TechnicalMachine(
+		return new TechnicalMachine(
 			$versionGroupId,
 			new MachineType($result['machine_type']),
 			$result['number'],
 			new ItemId($result['item_id']),
 			$moveId,
 		);
-
-		return $tm;
 	}
 
 	/**

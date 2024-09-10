@@ -5,9 +5,6 @@ namespace Jp\Dex\Application\Middleware;
 
 final readonly class MiddlewareGroups
 {
-	/** @var string[] $NONE */
-	public const NONE = [];
-
 	/**
 	 * The default middleware group for index routes.
 	 *

@@ -27,8 +27,8 @@ final class DexPokemonMatchupsModel
 
 
 	public function __construct(
-		private DexTypeRepositoryInterface $dexTypeRepository,
-		private TypeMatchupRepositoryInterface $typeMatchupRepository,
+		private readonly DexTypeRepositoryInterface $dexTypeRepository,
+		private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
 	) {}
 
 
@@ -234,7 +234,6 @@ final class DexPokemonMatchupsModel
 		if ($abilityId === AbilityId::EARTH_EATER) {
 			$this->addToDamageTaken($ability);
 			$this->damageTaken[$identifier]['ground'] *= 0;
-			return;
 		}
 	}
 

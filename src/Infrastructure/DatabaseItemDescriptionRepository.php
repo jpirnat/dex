@@ -45,15 +45,13 @@ final readonly class DatabaseItemDescriptionRepository implements ItemDescriptio
 			return new ItemDescription($versionGroupId, $languageId, $itemId, '', '');
 		}
 
-		$itemDescription = new ItemDescription(
+		return new ItemDescription(
 			$versionGroupId,
 			$languageId,
 			$itemId,
 			$result['name'],
 			$result['description'],
 		);
-
-		return $itemDescription;
 	}
 
 	/**

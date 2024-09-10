@@ -5,7 +5,6 @@ namespace Jp\Dex\Application\Models\StatsPokemon;
 
 use DateTime;
 use Jp\Dex\Application\Models\DateModel;
-use Jp\Dex\Application\Models\StatNameModel;
 use Jp\Dex\Domain\Abilities\StatsPokemonAbility;
 use Jp\Dex\Domain\Abilities\StatsPokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\Counters\StatsPokemonCounter;
@@ -78,25 +77,24 @@ final class StatsPokemonModel
 
 
 	public function __construct(
-		private DateModel $dateModel,
-		private FormatRepositoryInterface $formatRepository,
-		private PokemonRepositoryInterface $pokemonRepository,
-		private RatingQueriesInterface $ratingQueries,
-		private StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository,
-		private VersionGroupRepositoryInterface $versionGroupRepository,
-		private GenerationRepositoryInterface $generationRepository,
-		private MovesetPokemonRepositoryInterface $movesetPokemonRepository,
-		private MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
-		private StatNameModel $statNameModel,
-		private PokemonModel $pokemonModel,
-		private StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository,
-		private StatsPokemonItemRepositoryInterface $statsPokemonItemRepository,
-		private SpreadModel $spreadModel,
-		private StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository,
-		private StatsPokemonTeraTypeRepositoryInterface $statsPokemonTeraTypeRepository,
-		private StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository,
-		private StatsPokemonCounterRepositoryInterface $statsPokemonCounterRepository,
-		private UsageRatedQueriesInterface $usageRatedQueries,
+		private readonly DateModel $dateModel,
+		private readonly FormatRepositoryInterface $formatRepository,
+		private readonly PokemonRepositoryInterface $pokemonRepository,
+		private readonly RatingQueriesInterface $ratingQueries,
+		private readonly StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository,
+		private readonly VersionGroupRepositoryInterface $versionGroupRepository,
+		private readonly GenerationRepositoryInterface $generationRepository,
+		private readonly MovesetPokemonRepositoryInterface $movesetPokemonRepository,
+		private readonly MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
+		private readonly PokemonModel $pokemonModel,
+		private readonly StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository,
+		private readonly StatsPokemonItemRepositoryInterface $statsPokemonItemRepository,
+		private readonly SpreadModel $spreadModel,
+		private readonly StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository,
+		private readonly StatsPokemonTeraTypeRepositoryInterface $statsPokemonTeraTypeRepository,
+		private readonly StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository,
+		private readonly StatsPokemonCounterRepositoryInterface $statsPokemonCounterRepository,
+		private readonly UsageRatedQueriesInterface $usageRatedQueries,
 	) {}
 
 

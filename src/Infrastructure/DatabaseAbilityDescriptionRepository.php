@@ -43,13 +43,11 @@ final readonly class DatabaseAbilityDescriptionRepository implements AbilityDesc
 			return new AbilityDescription($versionGroupId, $languageId, $abilityId, '');
 		}
 
-		$abilityDescription = new AbilityDescription(
+		return new AbilityDescription(
 			$versionGroupId,
 			$languageId,
 			$abilityId,
 			$result['description'],
 		);
-
-		return $abilityDescription;
 	}
 }
