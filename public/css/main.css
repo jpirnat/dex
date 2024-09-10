@@ -1096,6 +1096,10 @@ table.moveset-usage td {
 	color: #bbb;
 }
 
+.stats-pokemon-move--hits-multiple td {
+	background: rgba(0, 255, 255, 0.3);
+}
+
 
 
 /* Desktop */

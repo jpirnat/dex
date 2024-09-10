@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Moves;
 
 use Jp\Dex\Domain\Categories\DexCategory;
+use Jp\Dex\Domain\Moves\Targets\TargetId;
 use Jp\Dex\Domain\Types\DexType;
 
 final readonly class StatsPokemonMove
@@ -19,6 +20,7 @@ final readonly class StatsPokemonMove
 		private int $power,
 		private int $accuracy,
 		private int $priority,
+		private TargetId $targetId,
 	) {}
 
 	public function getIdentifier() : string
@@ -69,5 +71,10 @@ final readonly class StatsPokemonMove
 	public function getPriority() : int
 	{
 		return $this->priority;
+	}
+
+	public function getTargetId() : TargetId
+	{
+		return $this->targetId;
 	}
 }

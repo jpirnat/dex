@@ -26,6 +26,10 @@ Vue.component('stats-pokemon-moves', {
 			type: String,
 			default: '',
 		},
+		fieldSize: {
+			type: Number,
+			default: 1,
+		},
 	},
 	data() {
 		return {
@@ -109,7 +113,9 @@ Vue.component('stats-pokemon-moves', {
 				</tr>
 			</thead>
 			<tbody>
-				<tr v-for="move in moves" :key="move.identifier">
+				<tr v-for="move in moves" :key="move.identifier" :class="{
+					'stats-pokemon-move--hits-multiple': fieldSize > 1 && move.hitsMultiplePokemon,
+				}">
 					<td>
 						<a :href="'/stats/' + month + '/' + format + '/' + rating + '/moves/' + move.identifier">
 							{{ move.name }}

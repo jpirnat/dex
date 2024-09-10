@@ -124,6 +124,7 @@ final readonly class StatsPokemonView
 				'power' => $move->getPower(),
 				'accuracy' => $move->getAccuracy(),
 				'priority' => $move->getPriority(),
+				'hitsMultiplePokemon' => $move->getTargetId()->hitsMultiplePokemon(),
 			];
 		}
 
@@ -201,6 +202,7 @@ final readonly class StatsPokemonView
 				'format' => [
 					'identifier' => $format->getIdentifier(),
 					'smogonDexIdentifier' => $format->getSmogonDexIdentifier(),
+					'fieldSize' => $format->getFieldSize(),
 				],
 				'rating' => $rating,
 				'pokemon' => [

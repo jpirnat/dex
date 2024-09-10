@@ -9,6 +9,7 @@ use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\StatsPokemonMove;
 use Jp\Dex\Domain\Moves\StatsPokemonMoveRepositoryInterface;
+use Jp\Dex\Domain\Moves\Targets\TargetId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\TypeId;
@@ -55,7 +56,8 @@ final readonly class DatabaseStatsPokemonMoveRepository implements StatsPokemonM
 				`vgm`.`pp`,
 				`vgm`.`power`,
 				`vgm`.`accuracy`,
-				`vgm`.`priority`
+				`vgm`.`priority`,
+				`vgm`.`target_id`
 
 			FROM `usage_rated_pokemon` AS `urp`
 			INNER JOIN `moveset_rated_moves` AS `mrm`
@@ -128,6 +130,7 @@ final readonly class DatabaseStatsPokemonMoveRepository implements StatsPokemonM
 				$result['power'],
 				$result['accuracy'],
 				$result['priority'],
+				new TargetId($result['target_id']),
 			);
 
 			$moves[] = $move;
