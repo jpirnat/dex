@@ -28,6 +28,25 @@
 	<template v-if="loaded">
 		<h1 class="dex-page__title">{{ pokemon.name }}</h1>
 
+		<h2 class="dex-section__title">Base Stats</h2>
+		<table class="dex-pokemon__base-stats">
+			<tr v-for="stat in baseStats" :key="stat.identifier">
+				<td class="dex-pokemon__base-stat-name">{{ stat.name }}</td>
+				<td class="dex-table--number">{{ stat.value }}</td>
+				<td>
+					<div
+						:class="{
+							'dex-pokemon__base-stat-bar': true,
+							['dex-stat--' + stat.identifier]: true,
+						}"
+						:style="{
+							'width': (stat.value / 255 * 300) + 'px',
+						}"
+					></div>
+				</td>
+			</tr>
+		</table>
+
 		<template v-if="abilities.length > 0">
 			<h2 class="dex-section__title">Abilities</h2>
 			<ul class="dex-pokemon__abilities">

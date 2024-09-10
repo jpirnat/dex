@@ -189,6 +189,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseDexPokemonRepository::class
 );
 $services->alias(
+	\Jp\Dex\Domain\Stats\DexStatRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseDexStatRepository::class
+);
+$services->alias(
 	\Jp\Dex\Domain\Types\DexTypeRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseDexTypeRepository::class
 );

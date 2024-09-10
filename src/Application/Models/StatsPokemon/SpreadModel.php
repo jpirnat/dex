@@ -9,19 +9,20 @@ use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Spreads\StatsPokemonSpreadRepositoryInterface;
-use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
+use Jp\Dex\Domain\Stats\DexStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 
 final class SpreadModel
 {
+	private array $stats = [];
 	private array $spreads = [];
 
 
 	public function __construct(
 		private StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository,
-		private BaseStatRepositoryInterface $baseStatRepository,
+		private DexStatRepositoryInterface $dexStatRepository,
 		private StatCalculator $statCalculator,
 	) {}
 
@@ -38,9 +39,13 @@ final class SpreadModel
 	) : void {
 		$generationId = $format->getGenerationId();
 
+		$this->stats = $this->dexStatRepository->getByVersionGroup(
+			$format->getVersionGroupId(),
+			$languageId,
+		);
+
 		// Get this generation's stats.
 		$statIds = StatId::getByGeneration($generationId);
-		$idsToIdentifiers = StatId::getIdsToIdentifiers();
 
 		// Get stat Pokémon spreads.
 		$spreads = $this->statsPokemonSpreadRepository->getByMonth(
@@ -52,10 +57,21 @@ final class SpreadModel
 		);
 
 		// Get the Pokémon's base stats.
-		$baseStats = $this->baseStatRepository->getByPokemon(
+		$baseStatsArray = $this->dexStatRepository->getBaseStats(
 			$format->getVersionGroupId(),
 			$pokemonId,
+			$languageId,
 		);
+		$idsToIdentifiers = [];
+		foreach ($baseStatsArray as $stat) {
+			$idsToIdentifiers[$stat['id']] = $stat['identifier'];
+		}
+
+		// Convert the base stats data structure for use in the stat calculator.
+		$baseStats = new StatValueContainer();
+		foreach ($baseStatsArray as $stat) {
+			$baseStats->add(new StatValue(new StatId($stat['id']), $stat['value']));
+		}
 
 		// Assume the Pokémon has perfect IVs.
 		$ivSpread = new StatValueContainer();
@@ -137,9 +153,11 @@ final class SpreadModel
 	}
 
 
-	/**
-	 * Get the spreads.
-	 */
+	public function getStats() : array
+	{
+		return $this->stats;
+	}
+
 	public function getSpreads() : array
 	{
 		return $this->spreads;

@@ -11,6 +11,7 @@ use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\DexStatRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class DexAbilityModel
@@ -32,7 +33,7 @@ final class DexAbilityModel
 		private AbilityNameRepositoryInterface $abilityNameRepository,
 		private AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
 		private AbilityFlagRepositoryInterface $flagRepository,
-		private StatNameModel $statNameModel,
+		private DexStatRepositoryInterface $dexStatRepository,
 		private DexPokemonRepositoryInterface $dexPokemonRepository,
 	) {}
 
@@ -71,8 +72,7 @@ final class DexAbilityModel
 
 		$this->setFlags($versionGroupId, $abilityId, $languageId);
 
-		// Get stat name abbreviations.
-		$this->stats = $this->statNameModel->getByVersionGroup($versionGroupId, $languageId);
+		$this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
 
 		// Get Pokémon with this ability.
 		$pokemons = $this->dexPokemonRepository->getWithAbility(

@@ -10,6 +10,7 @@ const app = new Vue({
 		breadcrumbs: [],
 		versionGroups: [],
 		pokemon: {},
+		baseStats: [],
 		abilities: [],
 		types: [],
 		abilitiesDamageTaken: {},
@@ -63,6 +64,7 @@ const app = new Vue({
 				this.breadcrumbs = data.breadcrumbs;
 				this.versionGroups = data.versionGroups;
 				this.pokemon = data.pokemon;
+				this.baseStats = data.baseStats;
 				this.abilities = data.abilities;
 				this.types = data.types;
 				this.abilitiesDamageTaken = data.damageTaken;

@@ -81,15 +81,16 @@ Vue.component('dex-pokemons-table', {
 						>Pokémon</th>
 						<th scope="col">Types</th>
 						<th v-if="showAbilities" scope="col">Abilities</th>
-						<th v-for="stat in stats" :key="stat.key" scope="col" class="dex-table--number dex-table__header--sortable"
-							@click="sortBy(stat.key, 'desc', p => p.baseStats[stat.key])"
+						<th v-for="stat in stats" :key="stat.identifier" scope="col" class="dex-table--number dex-table__header--sortable"
+							@click="sortBy(stat.identifier, 'desc', p => p.baseStats[stat.identifier])"
 							:class="{
-								'dex-table__header--sorted-asc': sortColumn === stat.key && sortDirection === 'asc',
-								'dex-table__header--sorted-desc': sortColumn === stat.key && sortDirection === 'desc',
+								['dex-table__stat--' + stat.identifier]: true,
+								'dex-table__header--sorted-asc': sortColumn === stat.identifier && sortDirection === 'asc',
+								'dex-table__header--sorted-desc': sortColumn === stat.identifier && sortDirection === 'desc',
 							}"
 							v-tooltip="stat.name"
 						>
-							<abbr class="dex--tooltip">{{ stat.abbr }}</abbr>
+							<abbr class="dex--tooltip">{{ stat.abbreviation }}</abbr>
 						</th>
 						<th scope="col" class="dex-table--number dex-table__header--sortable"
 							@click="sortBy('bst', 'desc', p => p.bst)"
@@ -134,8 +135,12 @@ Vue.component('dex-pokemons-table', {
 								</a>
 							</div>
 						</td>
-						<td v-for="stat in stats" :key="stat.key" class="dex-table--number">
-							{{ pokemon.baseStats[stat.key] }}
+						<td v-for="stat in stats" :key="stat.identifier" class="dex-table--number"
+							:class="{
+								['dex-table__stat--' + stat.identifier]: true,
+							}"
+						>
+							{{ pokemon.baseStats[stat.identifier] }}
 						</td>
 						<td class="dex-table--number">{{ pokemon.bst }}</td>
 					</tr>

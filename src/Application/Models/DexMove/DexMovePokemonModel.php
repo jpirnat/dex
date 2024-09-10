@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexMove;
 
-use Jp\Dex\Application\Models\StatNameModel;
 use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -13,6 +12,7 @@ use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodNameRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\MoveMethodRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\DexStatRepositoryInterface;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
 use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
@@ -36,7 +36,7 @@ final class DexMovePokemonModel
 		private DexPokemonRepositoryInterface $dexPokemonRepository,
 		private MoveMethodRepositoryInterface $moveMethodRepository,
 		private MoveMethodNameRepositoryInterface $moveMethodNameRepository,
-		private StatNameModel $statNameModel,
+		private DexStatRepositoryInterface $dexStatRepository,
 	) {}
 
 
@@ -160,8 +160,7 @@ final class DexMovePokemonModel
 			$languageId
 		);
 
-		// Get stat name abbreviations.
-		$this->stats = $this->statNameModel->getByVersionGroup($versionGroupId, $languageId);
+		$this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
 
 		// Compile the dex move Pokémon method records.
 		foreach ($moveMethods as $methodId => $moveMethod) {

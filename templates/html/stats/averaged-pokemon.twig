@@ -37,14 +37,18 @@
 			</div>
 		</div>
 
-		<table class="base-stats">
-			<tr v-for="stat in stats" :key="stat.key">
-				<td class="base-stat-name">{{ stat.name }}</td>
-				<td class="dex-table--number">{{ pokemon.baseStats[stat.key] }}</td>
+		<table class="dex-pokemon__base-stats">
+			<tr v-for="stat in pokemon.baseStats" :key="stat.identifier">
+				<td class="dex-pokemon__base-stat-name">{{ stat.name }}</td>
+				<td class="dex-table--number">{{ stat.value }}</td>
 				<td>
-					<div class="base-stat-bar"
+					<div
+						:class="{
+							'dex-pokemon__base-stat-bar': true,
+							['dex-stat--' + stat.identifier]: true,
+						}"
 						:style="{
-							'width': (pokemon.baseStats[stat.key] / 255 * 300) + 'px',
+							'width': (stat.value / 255 * 300) + 'px',
 						}"
 					></div>
 				</td>

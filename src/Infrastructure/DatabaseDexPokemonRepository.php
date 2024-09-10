@@ -12,7 +12,6 @@ use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
-use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
@@ -51,16 +50,6 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 			$versionGroupId,
 			$pokemonId,
 		);
-
-		// Normalize the base stats.
-		$statIds = StatId::getByVersionGroup($versionGroupId);
-		$idsToIdentifiers = StatId::getIdsToIdentifiers();
-		$normalized = [];
-		foreach ($statIds as $statId) {
-			$identifier = $idsToIdentifiers[$statId->value()];
-			$normalized[$identifier] = $baseStats->get($statId)->getValue();
-		}
-		$baseStats = $normalized;
 
 		$stmt = $this->db->prepare(
 			'SELECT

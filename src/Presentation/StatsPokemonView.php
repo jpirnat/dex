@@ -62,12 +62,10 @@ final readonly class StatsPokemonView
 			? $movesetPokemon->getViabilityCeiling()
 			: null;
 
-		$stats = $this->statsPokemonModel->getStats();
-
 		// Get miscellaneous Pokémon data.
 		$pokemonModel = $this->statsPokemonModel->getPokemonModel();
 		$dexPokemon = $pokemonModel->getPokemon();
-		$baseStats = $dexPokemon->getBaseStats();
+		$baseStats = $pokemonModel->getBaseStats();
 		$versionGroup = $this->statsPokemonModel->getVersionGroup();
 		$generation = $this->statsPokemonModel->getGeneration();
 
@@ -101,7 +99,9 @@ final readonly class StatsPokemonView
 		}
 
 		// Get spreads and sort by percent.
-		$spreads = $this->statsPokemonModel->getSpreads();
+		$spreadModel = $this->statsPokemonModel->getSpreadModel();
+		$stats = $spreadModel->getStats();
+		$spreads = $spreadModel->getSpreads();
 		foreach ($spreads as $i => $spread) {
 			$percent = $formatter->formatPercent($spread['percent']);
 			$spreads[$i]['percent'] = $percent;
@@ -227,7 +227,6 @@ final readonly class StatsPokemonView
 				'generation' => [
 					'smogonDexIdentifier' => $generation->getSmogonDexIdentifier(),
 				],
-				'stats' => $stats,
 				'rawCount' => $rawCount,
 				'averageWeight' => $averageWeight,
 				'viabilityCeiling' => $viabilityCeiling,
@@ -238,6 +237,7 @@ final readonly class StatsPokemonView
 				'showTeraTypes' => $versionGroup->getId()->hasTeraTypes(),
 				'abilities' => $abilities,
 				'items' => $items,
+				'stats' => $stats,
 				'spreads' => $spreads,
 				'moves' => $moves,
 				'teraTypes' => $teraTypes,

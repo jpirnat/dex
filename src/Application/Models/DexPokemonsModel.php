@@ -6,6 +6,7 @@ namespace Jp\Dex\Application\Models;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\DexStatRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexPokemonsModel
@@ -19,7 +20,7 @@ final class DexPokemonsModel
 	public function __construct(
 		private VersionGroupModel $versionGroupModel,
 		private DexPokemonRepositoryInterface $dexPokemonRepository,
-		private StatNameModel $statNameModel,
+		private DexStatRepositoryInterface $dexStatRepository,
 	) {}
 
 
@@ -34,8 +35,7 @@ final class DexPokemonsModel
 
 		$this->versionGroupModel->setSinceGeneration(new GenerationId(1));
 
-		// Get stat name abbreviations.
-		$this->stats = $this->statNameModel->getByVersionGroup($versionGroupId, $languageId);
+		$this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
 
 		$this->pokemon = $this->dexPokemonRepository->getByVersionGroup(
 			$versionGroupId,

@@ -7,9 +7,6 @@ use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
-use Jp\Dex\Domain\Stats\StatId;
-use Jp\Dex\Domain\Stats\StatValue;
-use Jp\Dex\Domain\Stats\StatValueContainer;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
@@ -22,32 +19,34 @@ final readonly class DatabaseBaseStatRepository implements BaseStatRepositoryInt
 
 	/**
 	 * Get a Pokémon's base stats by version group and Pokémon.
+	 *
+	 * @return int[] Indexed by stat identifier.
 	 */
 	public function getByPokemon(
 		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
-	) : StatValueContainer {
+	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`stat_id`,
-				`value`
-			FROM `base_stats`
-			WHERE `version_group_id` = :version_group_id
-				AND `pokemon_id` = :pokemon_id'
+				`s`.`identifier`,
+				`bs`.`value`
+			FROM `base_stats` AS `bs`
+			INNER JOIN `stats` AS `s`
+				ON `bs`.`stat_id` = `s`.`id`
+			WHERE `bs`.`version_group_id` = :version_group_id
+				AND `bs`.`pokemon_id` = :pokemon_id
+			ORDER BY
+				`bs`.`pokemon_id`,
+				`s`.`sort`'
 		);
 		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
-		$baseStats = new StatValueContainer();
+		$baseStats = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$baseStat = new StatValue(
-				new StatId($result['stat_id']),
-				$result['value'],
-			);
-
-			$baseStats->add($baseStat);
+			$baseStats[$result['identifier']] = $result['value'];
 		}
 
 		return $baseStats;
@@ -57,8 +56,7 @@ final readonly class DatabaseBaseStatRepository implements BaseStatRepositoryInt
 	 * Get all base stats had by Pokémon with this ability.
 	 * This method is used to get data for the dex ability page.
 	 *
-	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
-	 *     by each stat's json identifier.
+	 * @return int[][] Indexed first by Pokémon id, then by stat identifier.
 	 */
 	public function getByPokemonAbility(
 		VersionGroupId $versionGroupId,
@@ -66,18 +64,23 @@ final readonly class DatabaseBaseStatRepository implements BaseStatRepositoryInt
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`pokemon_id`,
-				`stat_id`,
-				`value`
-			FROM `base_stats`
-			WHERE `version_group_id` = :version_group_id1
-				AND `pokemon_id` IN (
+				`bs`.`pokemon_id`,
+				`s`.`identifier`,
+				`bs`.`value`
+			FROM `base_stats` AS `bs`
+			INNER JOIN `stats` AS `s`
+				ON `bs`.`stat_id` = `s`.`id`
+			WHERE `bs`.`version_group_id` = :version_group_id1
+				AND `bs`.`pokemon_id` IN (
 					SELECT
 						`pokemon_id`
 					FROM `pokemon_abilities`
 					WHERE `version_group_id` = :version_group_id2
 						AND `ability_id` = :ability_id
-				)'
+				)
+			ORDER BY
+				`bs`.`pokemon_id`,
+				`s`.`sort`'
 		);
 		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
@@ -87,18 +90,17 @@ final readonly class DatabaseBaseStatRepository implements BaseStatRepositoryInt
 		$baseStats = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$baseStats[$result['pokemon_id']][$result['stat_id']] = $result['value'];
+			$baseStats[$result['pokemon_id']][$result['identifier']] = $result['value'];
 		}
 
-		return $this->normalize($versionGroupId, $baseStats);
+		return $baseStats;
 	}
 
 	/**
 	 * Get all base stats had by Pokémon with this move.
 	 * This method is used to get data for the dex move page.
 	 *
-	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
-	 *     by each stat's json identifier.
+	 * @return int[][] Indexed first by Pokémon id, then by stat identifier.
 	 */
 	public function getByPokemonMove(
 		VersionGroupId $versionGroupId,
@@ -106,12 +108,14 @@ final readonly class DatabaseBaseStatRepository implements BaseStatRepositoryInt
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`pokemon_id`,
-				`stat_id`,
-				`value`
-			FROM `base_stats`
-			WHERE `version_group_id` = :version_group_id1
-				AND `pokemon_id` IN (
+				`bs`.`pokemon_id`,
+				`s`.`identifier`,
+				`bs`.`value`
+			FROM `base_stats` AS `bs`
+			INNER JOIN `stats` AS `s`
+				ON `bs`.`stat_id` = `s`.`id`
+			WHERE `bs`.`version_group_id` = :version_group_id1
+				AND `bs`.`pokemon_id` IN (
 					SELECT
 						`pokemon_id`
 					FROM `pokemon_moves`
@@ -122,7 +126,10 @@ final readonly class DatabaseBaseStatRepository implements BaseStatRepositoryInt
 						WHERE `into_vg_id` = :version_group_id2
 					)
 					AND `move_id` = :move_id
-				)'
+				)
+			ORDER BY
+				`bs`.`pokemon_id`,
+				`s`.`sort`'
 		);
 		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
@@ -132,28 +139,32 @@ final readonly class DatabaseBaseStatRepository implements BaseStatRepositoryInt
 		$baseStats = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$baseStats[$result['pokemon_id']][$result['stat_id']] = $result['value'];
+			$baseStats[$result['pokemon_id']][$result['identifier']] = $result['value'];
 		}
 
-		return $this->normalize($versionGroupId, $baseStats);
+		return $baseStats;
 	}
 
 	/**
 	 * Get all base stats had by Pokémon in this version group.
 	 * This method is used to get data for the dex Pokémons page.
 	 *
-	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
-	 *     by each stat's json identifier.
+	 * @return int[][] Indexed first by Pokémon id, then by stat identifier.
 	 */
 	public function getByVersionGroup(VersionGroupId $versionGroupId) : array
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`pokemon_id`,
-				`stat_id`,
-				`value`
-			FROM `base_stats`
-			WHERE `version_group_id` = :version_group_id'
+				`bs`.`pokemon_id`,
+				`s`.`identifier`,
+				`bs`.`value`
+			FROM `base_stats` AS `bs`
+			INNER JOIN `stats` AS `s`
+				ON `bs`.`stat_id` = `s`.`id`
+			WHERE `bs`.`version_group_id` = :version_group_id
+			ORDER BY
+				`bs`.`pokemon_id`,
+				`s`.`sort`'
 		);
 		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->execute();
@@ -161,18 +172,17 @@ final readonly class DatabaseBaseStatRepository implements BaseStatRepositoryInt
 		$baseStats = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$baseStats[$result['pokemon_id']][$result['stat_id']] = $result['value'];
+			$baseStats[$result['pokemon_id']][$result['identifier']] = $result['value'];
 		}
 
-		return $this->normalize($versionGroupId, $baseStats);
+		return $baseStats;
 	}
 
 	/**
 	 * Get all base stats had by Pokémon with this type.
 	 * This method is used to get data for the dex type page.
 	 *
-	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
-	 *     by each stat's json identifier.
+	 * @return int[][] Indexed first by Pokémon id, then by stat identifier.
 	 */
 	public function getByPokemonType(
 		VersionGroupId $versionGroupId,
@@ -180,12 +190,14 @@ final readonly class DatabaseBaseStatRepository implements BaseStatRepositoryInt
 	) : array {
 		$stmt = $this->db->prepare(
 			'SELECT
-				`pokemon_id`,
-				`stat_id`,
-				`value`
-			FROM `base_stats`
-			WHERE `version_group_id` = :version_group_id1
-				AND `pokemon_id` IN (
+				`bs`.`pokemon_id`,
+				`s`.`identifier`,
+				`bs`.`value`
+			FROM `base_stats` AS `bs`
+			INNER JOIN `stats` AS `s`
+				ON `bs`.`stat_id` = `s`.`id`
+			WHERE `bs`.`version_group_id` = :version_group_id1
+				AND `bs`.`pokemon_id` IN (
 					SELECT
 						`pokemon_id`
 					FROM `pokemon_types`
@@ -201,35 +213,9 @@ final readonly class DatabaseBaseStatRepository implements BaseStatRepositoryInt
 		$baseStats = [];
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$baseStats[$result['pokemon_id']][$result['stat_id']] = $result['value'];
+			$baseStats[$result['pokemon_id']][$result['identifier']] = $result['value'];
 		}
 
-		return $this->normalize($versionGroupId, $baseStats);
-	}
-
-	/**
-	 * Normalize the intermediate results of this class's other methods, by 
-	 * removing the inner array indexing and ordering the stats.
-	 *
-	 * @param int[][] $baseStats Outer array indexed by Pokémon id, inner arrays
-	 *     indexed by stat id.
-	 *
-	 * @return int[][] Outer array indexed by Pokémon id. Inner arrays indexed
-	 *     by each stat's json identifier.
-	 */
-	private function normalize(VersionGroupId $versionGroupId, array $baseStats) : array
-	{
-		$statIds = StatId::getByVersionGroup($versionGroupId);
-		$idsToIdentifiers = StatId::getIdsToIdentifiers();
-		$normalized = [];
-
-		foreach ($baseStats as $pokemonId => $statValues) {
-			foreach ($statIds as $statId) {
-				$identifier = $idsToIdentifiers[$statId->value()];
-				$normalized[$pokemonId][$identifier] = $statValues[$statId->value()] ?? 0;
-			}
-		}
-
-		return $normalized;
+		return $baseStats;
 	}
 }

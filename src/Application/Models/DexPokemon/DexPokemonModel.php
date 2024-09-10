@@ -8,10 +8,12 @@ use Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\DexStatRepositoryInterface;
 
 final class DexPokemonModel
 {
 	private array $pokemon = [];
+	private array $baseStats = [];
 	private array $abilities = [];
 
 
@@ -19,6 +21,7 @@ final class DexPokemonModel
 		private VersionGroupModel $versionGroupModel,
 		private PokemonRepositoryInterface $pokemonRepository,
 		private PokemonNameRepositoryInterface $pokemonNameRepository,
+		private DexStatRepositoryInterface $dexStatRepository,
 		private DexAbilityRepositoryInterface $dexAbilityRepository,
 		private DexPokemonMatchupsModel $dexPokemonMatchupsModel,
 		private DexPokemonEvolutionsModel $dexPokemonEvolutionsModel,
@@ -45,6 +48,12 @@ final class DexPokemonModel
 			'identifier' => $pokemon->getIdentifier(),
 			'name' => $pokemonName->getName(),
 		];
+
+		$this->baseStats = $this->dexStatRepository->getBaseStats(
+			$versionGroupId,
+			$pokemon->getId(),
+			$languageId,
+		);
 
 		// Set generations for the generation control.
 		$this->versionGroupModel->setWithPokemon($pokemon->getId());
@@ -81,49 +90,36 @@ final class DexPokemonModel
 	}
 
 
-	/**
-	 * Get the version group model.
-	 */
 	public function getVersionGroupModel() : VersionGroupModel
 	{
 		return $this->versionGroupModel;
 	}
 
-	/**
-	 * Get the Pokémon.
-	 */
 	public function getPokemon() : array
 	{
 		return $this->pokemon;
 	}
 
-	/**
-	 * Get the abilities.
-	 */
+	public function getBaseStats() : array
+	{
+		return $this->baseStats;
+	}
+
 	public function getAbilities() : array
 	{
 		return $this->abilities;
 	}
 
-	/**
-	 * Get the dex Pokémon matchups model.
-	 */
 	public function getDexPokemonMatchupsModel() : DexPokemonMatchupsModel
 	{
 		return $this->dexPokemonMatchupsModel;
 	}
 
-	/**
-	 * Get the dex Pokémon evolutions model.
-	 */
 	public function getDexPokemonEvolutionsModel() : DexPokemonEvolutionsModel
 	{
 		return $this->dexPokemonEvolutionsModel;
 	}
 
-	/**
-	 * Get the dex Pokémon moves model.
-	 */
 	public function getDexPokemonMovesModel() : DexPokemonMovesModel
 	{
 		return $this->dexPokemonMovesModel;

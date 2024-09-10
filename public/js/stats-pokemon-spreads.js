@@ -20,8 +20,8 @@ Vue.component('stats-pokemon-spreads', {
 					<th>
 						<div>EVs</div>
 						<div class="dex-spreads__stat-names">
-							<template v-for="(stat, statIndex) in stats" :key="stat.key">
-								<abbr v-tooltip="stat.name" class="dex-spread--ev dex--tooltip">{{ stat.abbr }}</abbr>
+							<template v-for="(stat, statIndex) in stats" :key="stat.identifier">
+								<abbr v-tooltip="stat.name" class="dex-spread--ev dex--tooltip">{{ stat.abbreviation }}</abbr>
 								<span v-if="statIndex < stats.length - 1" class="dex-spread--slash">/</span>
 							</template>
 						</div>
@@ -30,8 +30,8 @@ Vue.component('stats-pokemon-spreads', {
 					<th>
 						<div>Stats</div>
 						<div class="dex-spreads__stat-names">
-							<template v-for="(stat, statIndex) in stats" :key="stat.key">
-								<abbr v-tooltip="stat.name" class="dex-spread--stat dex--tooltip">{{ stat.abbr }}</abbr>
+							<template v-for="(stat, statIndex) in stats" :key="stat.identifier">
+								<abbr v-tooltip="stat.name" class="dex-spread--stat dex--tooltip">{{ stat.abbreviation }}</abbr>
 								<span v-if="statIndex < stats.length - 1" class="dex-spread--slash">/</span>
 							</template>
 						</div>
@@ -42,14 +42,14 @@ Vue.component('stats-pokemon-spreads', {
 				<tr v-for="spread in spreads">
 					<td>{{ spread.nature }}</td>
 					<td>
-						<template v-for="(stat, statIndex) in stats" :key="stat.key">
+						<template v-for="(stat, statIndex) in stats" :key="stat.identifier">
 							<span class="dex-spread--ev"
 								:class="{
-									'dex-nature--increased': spread.increasedStat === stat.key,
-									'dex-nature--decreased': spread.decreasedStat === stat.key,
+									'dex-nature--increased': spread.increasedStat === stat.identifier,
+									'dex-nature--decreased': spread.decreasedStat === stat.identifier,
 								}"
 							>
-								<template v-if="spread.increasedStat === stat.key">+</template><template v-if="spread.decreasedStat === stat.key">-</template>{{ spread.evs[stat.key] }}
+								<template v-if="spread.increasedStat === stat.identifier">+</template><template v-if="spread.decreasedStat === stat.identifier">-</template>{{ spread.evs[stat.identifier] }}
 							</span>
 							<span v-if="statIndex < stats.length - 1" class="dex-spread--slash">/</span>
 						</template>
@@ -59,9 +59,9 @@ Vue.component('stats-pokemon-spreads', {
 						{{ spread.percent }}
 					</td>
 					<td>
-						<template v-for="(stat, statIndex) in stats" :key="stat.key">
+						<template v-for="(stat, statIndex) in stats" :key="stat.identifier">
 							<span class="dex-spread--stat">
-								{{ spread.stats[stat.key] }}
+								{{ spread.stats[stat.identifier] }}
 							</span>
 							<span v-if="statIndex < stats.length - 1" class="dex-spread--slash">/</span>
 						</template>

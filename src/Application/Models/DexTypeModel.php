@@ -8,6 +8,7 @@ use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\DexStatRepositoryInterface;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
@@ -40,7 +41,7 @@ final class DexTypeModel
 		private TypeRepositoryInterface $typeRepository,
 		private DexTypeRepositoryInterface $dexTypeRepository,
 		private TypeMatchupRepositoryInterface $typeMatchupRepository,
-		private StatNameModel $statNameModel,
+		private DexStatRepositoryInterface $dexStatRepository,
 		private DexPokemonRepositoryInterface $dexPokemonRepository,
 		private DexMoveRepositoryInterface $dexMoveRepository,
 	) {}
@@ -98,8 +99,7 @@ final class DexTypeModel
 			$this->damageTaken[$identifier] = $matchup->getMultiplier();
 		}
 
-		// Get stat name abbreviations.
-		$this->stats = $this->statNameModel->getByVersionGroup($versionGroupId, $languageId);
+		$this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
 
 		// Get Pokémon with this type.
 		$this->pokemon = $this->dexPokemonRepository->getByType(

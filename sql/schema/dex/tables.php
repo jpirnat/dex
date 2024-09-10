@@ -166,6 +166,7 @@ return [
 
 	// Stats
 	'stats',
+	'vg_stats',
 	'stat_names',
 	'base_stats',
 	'ev_yields',

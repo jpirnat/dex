@@ -40,12 +40,10 @@ final readonly class AveragedPokemonView
 		$startMonth = $this->monthControlFormatter->format($startMonth, $formatter);
 		$endMonth   = $this->monthControlFormatter->format($endMonth,   $formatter);
 
-		$stats = $this->averagedPokemonModel->getStats();
-
 		// Get miscellaneous Pokémon data.
 		$pokemonModel = $this->averagedPokemonModel->getPokemonModel();
 		$dexPokemon = $pokemonModel->getPokemon();
-		$baseStats = $dexPokemon->getBaseStats();
+		$baseStats = $pokemonModel->getBaseStats();
 		$versionGroup = $this->averagedPokemonModel->getVersionGroup();
 		$generation = $this->averagedPokemonModel->getGeneration();
 
@@ -136,7 +134,6 @@ final readonly class AveragedPokemonView
 				'generation' => [
 					'smogonDexIdentifier' => $generation->getSmogonDexIdentifier(),
 				],
-				'stats' => $stats,
 
 				// The main data.
 				'showAbilities' => $versionGroup->getId()->hasAbilities(),

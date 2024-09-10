@@ -30,6 +30,7 @@ final readonly class DexPokemonView
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$pokemon = $this->dexPokemonModel->getPokemon();
+		$baseStats = $this->dexPokemonModel->getBaseStats();
 		$abilities = $this->dexPokemonModel->getAbilities();
 
 		$dexPokemonMatchupsModel = $this->dexPokemonModel->getDexPokemonMatchupsModel();
@@ -148,6 +149,7 @@ final readonly class DexPokemonView
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'pokemon' => $pokemon,
+				'baseStats' => $baseStats,
 				'abilities' => $abilities,
 
 				'types' => $this->dexFormatter->formatDexTypes($types),

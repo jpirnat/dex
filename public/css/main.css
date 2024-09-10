@@ -977,19 +977,74 @@ a.button {
 	text-align: center;
 }
 
-.base-stat-name {
+.dex-pokemon__base-stat-name {
 	text-align: right;
 }
 
-.base-stats td {
+.dex-pokemon__base-stats td {
 	padding: 3px;
 }
 
-.base-stat-bar {
+.dex-pokemon__base-stat-bar {
 	display: inline-block;
-	background: blue;
 	height: 15px;
 }
+
+/*
+Stat colors from Bulbapedia (https://bulbapedia.bulbagarden.net/wiki/Help:Color_templates#Pok%C3%A9mon_Stats)
+and then converted from hex to rgb (https://www.rgbtohex.net/hex-to-rgb/).
+*/
+.dex-stat--hp {
+	/* #69dc12 */
+	background: rgb(105, 220, 18);
+}
+.dex-stat--attack {
+	/* #efcc18 */
+	background: rgb(239, 204, 24);
+}
+.dex-stat--defense {
+	/* #e86412 */
+	background: rgb(232, 100, 18);
+}
+.dex-stat--speed {
+	/* #d51dad */
+	background: rgb(213, 29, 173);
+}
+.dex-stat--special {
+	/* #2f97e8 */
+	background: rgb(47, 151, 232);
+}
+.dex-stat--special-attack {
+	/* #14c3f1 */
+	background: rgb(20, 195, 241);
+}
+.dex-stat--special-defense {
+	/* #4a6adf */
+	background: rgb(74, 106, 223);
+}
+
+.dex-table__stat--hp {
+	background: rgba(105, 220, 18, 0.4);
+}
+.dex-table__stat--attack {
+	background: rgba(239, 204, 24, 0.4);
+}
+.dex-table__stat--defense {
+	background: rgba(232, 100, 18, 0.4);
+}
+.dex-table__stat--speed {
+	background: rgba(213, 29, 173, 0.4);
+}
+.dex-table__stat--special {
+	background: rgba(47, 151, 232, 0.4);
+}
+.dex-table__stat--special-attack {
+	background: rgba(20, 195, 241, 0.4);
+}
+.dex-table__stat--special-defense {
+	background: rgba(74, 106, 223, 0.4);
+}
+
 
 
 

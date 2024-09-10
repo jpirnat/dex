@@ -55,8 +55,6 @@ final class StatsPokemonModel
 	private VersionGroup $versionGroup;
 	private Generation $generation;
 
-	private array $stats = [];
-
 	/** @var StatsPokemonAbility[] $abilities */
 	private array $abilities = [];
 
@@ -164,12 +162,6 @@ final class StatsPokemonModel
 			$languageId,
 		);
 
-
-		// Get the stat names.
-		$this->stats = $this->statNameModel->getByVersionGroup(
-			$this->format->getVersionGroupId(),
-			$languageId,
-		);
 
 		// Get Pokémon data.
 		$this->pokemonModel->setData(
@@ -360,14 +352,6 @@ final class StatsPokemonModel
 	}
 
 	/**
-	 * Get the stats and their names.
-	 */
-	public function getStats() : array
-	{
-		return $this->stats;
-	}
-
-	/**
 	 * Get the Pokémon model.
 	 */
 	public function getPokemonModel() : PokemonModel
@@ -428,11 +412,11 @@ final class StatsPokemonModel
 	}
 
 	/**
-	 * Get the spreads.
+	 * Get the spread model.
 	 */
-	public function getSpreads() : array
+	public function getSpreadModel() : SpreadModel
 	{
-		return $this->spreadModel->getSpreads();
+		return $this->spreadModel;
 	}
 
 	/**

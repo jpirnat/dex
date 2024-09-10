@@ -4,6 +4,7 @@ create table if not exists `stats`
 
 `identifier` varchar(15) not null,
 `is_battle_only` tinyint unsigned not null,
+`sort` tinyint unsigned not null,
 
 primary key (`id`),
 unique key (`identifier`)
