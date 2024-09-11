@@ -34,8 +34,6 @@ final class AveragedPokemonModel
 	private VersionGroup $versionGroup;
 	private Generation $generation;
 
-	private array $stats = [];
-
 	private array $abilities = [];
 	private array $items = [];
 	private array $moves = [];
@@ -47,7 +45,6 @@ final class AveragedPokemonModel
 		private readonly RatingQueriesInterface $ratingQueries,
 		private readonly VersionGroupRepositoryInterface $versionGroupRepository,
 		private readonly GenerationRepositoryInterface $generationRepository,
-		private readonly StatNameModel $statNameModel,
 		private readonly PokemonModel $pokemonModel,
 		private readonly AbilityModel $abilityModel,
 		private readonly ItemModel $itemModel,
@@ -89,12 +86,6 @@ final class AveragedPokemonModel
 			$start,
 			$end,
 			$this->format->getId(),
-		);
-
-		// Get the stat names.
-		$this->stats = $this->statNameModel->getByVersionGroup(
-			$this->format->getVersionGroupId(),
-			$languageId,
 		);
 
 		// Get Pokémon data.
@@ -169,14 +160,6 @@ final class AveragedPokemonModel
 	public function getRating() : int
 	{
 		return $this->rating;
-	}
-
-	/**
-	 * Get the stats and their names.
-	 */
-	public function getStats() : array
-	{
-		return $this->stats;
 	}
 
 	/**
