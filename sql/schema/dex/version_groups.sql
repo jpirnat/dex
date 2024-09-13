@@ -4,8 +4,10 @@ create table if not exists `version_groups`
 `identifier` varchar(4) not null,
 
 `generation_id` tinyint unsigned not null,
-`icon` varchar(35) not null,
 `abbreviation` varchar(4) not null,
+`has_abilities` bool not null,
+`has_evs` bool not null,
+`has_natures` bool not null,
 `sort` tinyint unsigned not null,
 `breeding_priority` tinyint unsigned not null,
 

@@ -35,8 +35,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			'SELECT
 				`identifier`,
 				`generation_id`,
-				`icon`,
 				`abbreviation`,
+				`has_abilities`,
+				`has_evs`,
+				`has_natures`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` = :version_group_id
@@ -56,8 +58,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			$versionGroupId,
 			$result['identifier'],
 			new GenerationId($result['generation_id']),
-			$result['icon'],
 			$result['abbreviation'],
+			(bool) $result['has_abilities'],
+			(bool) $result['has_evs'],
+			(bool) $result['has_natures'],
 			$result['sort'],
 		);
 	}
@@ -74,8 +78,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			'SELECT
 				`id`,
 				`generation_id`,
-				`icon`,
 				`abbreviation`,
+				`has_abilities`,
+				`has_evs`,
+				`has_natures`,
 				`sort`
 			FROM `version_groups`
 			WHERE `identifier` = :identifier
@@ -95,8 +101,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			new VersionGroupId($result['id']),
 			$identifier,
 			new GenerationId($result['generation_id']),
-			$result['icon'],
 			$result['abbreviation'],
+			(bool) $result['has_abilities'],
+			(bool) $result['has_evs'],
+			(bool) $result['has_natures'],
 			$result['sort'],
 		);
 	}
@@ -113,8 +121,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`id`,
 				`identifier`,
 				`generation_id`,
-				`icon`,
 				`abbreviation`,
+				`has_abilities`,
+				`has_evs`,
+				`has_natures`,
 				`sort`
 			FROM `version_groups`
 			WHERE `generation_id` >= :generation_id
@@ -130,8 +140,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new VersionGroupId($result['id']),
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
-				$result['icon'],
 				$result['abbreviation'],
+				(bool) $result['has_abilities'],
+				(bool) $result['has_evs'],
+				(bool) $result['has_natures'],
 				$result['sort'],
 			);
 
@@ -153,8 +165,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`id`,
 				`identifier`,
 				`generation_id`,
-				`icon`,
 				`abbreviation`,
+				`has_abilities`,
+				`has_evs`,
+				`has_natures`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -177,8 +191,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new VersionGroupId($result['id']),
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
-				$result['icon'],
 				$result['abbreviation'],
+				(bool) $result['has_abilities'],
+				(bool) $result['has_evs'],
+				(bool) $result['has_natures'],
 				$result['sort'],
 			);
 
@@ -200,8 +216,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`id`,
 				`identifier`,
 				`generation_id`,
-				`icon`,
 				`abbreviation`,
+				`has_abilities`,
+				`has_evs`,
+				`has_natures`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -223,8 +241,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new VersionGroupId($result['id']),
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
-				$result['icon'],
 				$result['abbreviation'],
+				(bool) $result['has_abilities'],
+				(bool) $result['has_evs'],
+				(bool) $result['has_natures'],
 				$result['sort'],
 			);
 
@@ -246,8 +266,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`id`,
 				`identifier`,
 				`generation_id`,
-				`icon`,
 				`abbreviation`,
+				`has_abilities`,
+				`has_evs`,
+				`has_natures`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -269,8 +291,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new VersionGroupId($result['id']),
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
-				$result['icon'],
 				$result['abbreviation'],
+				(bool) $result['has_abilities'],
+				(bool) $result['has_evs'],
+				(bool) $result['has_natures'],
 				$result['sort'],
 			);
 
@@ -292,8 +316,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`id`,
 				`identifier`,
 				`generation_id`,
-				`icon`,
 				`abbreviation`,
+				`has_abilities`,
+				`has_evs`,
+				`has_natures`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -314,8 +340,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new VersionGroupId($result['id']),
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
-				$result['icon'],
 				$result['abbreviation'],
+				(bool) $result['has_abilities'],
+				(bool) $result['has_evs'],
+				(bool) $result['has_natures'],
 				$result['sort'],
 			);
 
@@ -337,8 +365,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`id`,
 				`identifier`,
 				`generation_id`,
-				`icon`,
 				`abbreviation`,
+				`has_abilities`,
+				`has_evs`,
+				`has_natures`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -360,8 +390,52 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new VersionGroupId($result['id']),
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
-				$result['icon'],
 				$result['abbreviation'],
+				(bool) $result['has_abilities'],
+				(bool) $result['has_evs'],
+				(bool) $result['has_natures'],
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
+	 * Get version groups that have abilities.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithAbilities() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`abbreviation`,
+				`has_evs`,
+				`has_natures`,
+				`sort`
+			FROM `version_groups`
+			WHERE `has_abilities` = 1
+			ORDER BY `sort`'
+		);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['abbreviation'],
+				true,
+				(bool) $result['has_evs'],
+				(bool) $result['has_natures'],
 				$result['sort'],
 			);
 
@@ -383,8 +457,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`id`,
 				`identifier`,
 				`generation_id`,
-				`icon`,
 				`abbreviation`,
+				`has_abilities`,
+				`has_evs`,
+				`has_natures`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -405,8 +481,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new VersionGroupId($result['id']),
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
-				$result['icon'],
 				$result['abbreviation'],
+				(bool) $result['has_abilities'],
+				(bool) $result['has_evs'],
+				(bool) $result['has_natures'],
 				$result['sort'],
 			);
 
@@ -428,8 +506,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`id`,
 				`identifier`,
 				`generation_id`,
-				`icon`,
 				`abbreviation`,
+				`has_abilities`,
+				`has_evs`,
+				`has_natures`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -451,8 +531,94 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new VersionGroupId($result['id']),
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
-				$result['icon'],
 				$result['abbreviation'],
+				(bool) $result['has_abilities'],
+				(bool) $result['has_evs'],
+				(bool) $result['has_natures'],
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
+	 * Get version groups that have EVs.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithNatures() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`abbreviation`,
+				`has_abilities`,
+				`has_evs`,
+				`sort`
+			FROM `version_groups`
+			WHERE `has_natures` = 1
+			ORDER BY `sort`'
+		);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['abbreviation'],
+				(bool) $result['has_abilities'],
+				(bool) $result['has_evs'],
+				true,
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
+	 * Get version groups that have EVs.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithEvs() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`abbreviation`,
+				`has_abilities`,
+				`has_natures`,
+				`sort`
+			FROM `version_groups`
+			WHERE `has_evs` = 1
+			ORDER BY `sort`'
+		);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['abbreviation'],
+				(bool) $result['has_abilities'],
+				true,
+				(bool) $result['has_natures'],
 				$result['sort'],
 			);
 

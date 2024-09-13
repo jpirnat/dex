@@ -9,54 +9,48 @@ final readonly class VersionGroup
 		private VersionGroupId $id,
 		private string $identifier,
 		private GenerationId $generationId,
-		private string $icon,
 		private string $abbreviation,
+		private bool $hasAbilities,
+		private bool $hasEvs,
+		private bool $hasNatures,
 		private int $sort,
 	) {}
 
-	/**
-	 * Get the version group's id.
-	 */
 	public function getId() : VersionGroupId
 	{
 		return $this->id;
 	}
 
-	/**
-	 * Get the version group's identifier.
-	 */
 	public function getIdentifier() : string
 	{
 		return $this->identifier;
 	}
 
-	/**
-	 * Get the version group's generation id.
-	 */
 	public function getGenerationId() : GenerationId
 	{
 		return $this->generationId;
 	}
 
-	/**
-	 * Get the version group's icon.
-	 */
-	public function getIcon() : string
-	{
-		return $this->icon;
-	}
-
-	/**
-	 * Get the version group's abbreviation.
-	 */
 	public function getAbbreviation() : string
 	{
 		return $this->abbreviation;
 	}
 
-	/**
-	 * Get the version group's sort value.
-	 */
+	public function hasAbilities() : bool
+	{
+		return $this->hasAbilities;
+	}
+
+	public function hasEvs() : bool
+	{
+		return $this->hasEvs;
+	}
+
+	public function hasNatures() : bool
+	{
+		return $this->hasNatures;
+	}
+
 	public function getSort() : int
 	{
 		return $this->sort;

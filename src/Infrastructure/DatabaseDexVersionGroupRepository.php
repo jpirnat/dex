@@ -23,7 +23,7 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 	/**
 	 * Get each version group's versions.
 	 *
-	 * @return DexVersion[][] Indexed by version group id
+	 * @return DexVersion[][] Indexed by version group id.
 	 */
 	private function getVersions() : array
 	{
@@ -56,6 +56,7 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 	 * Get a dex version group by its id.
 	 *
 	 * @throws VersionGroupNotFoundException if no version group exists with
+	 *     this id.
 	 */
 	public function getById(
 		VersionGroupId $versionGroupId,
@@ -68,7 +69,6 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 				`vg`.`id`,
 				`vg`.`identifier`,
 				`vg`.`generation_id`,
-				`vg`.`icon`,
 				`vgn`.`name`
 			FROM `version_groups` AS `vg`
 			INNER JOIN `vg_names` AS `vgn`
@@ -114,7 +114,6 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 				`vg`.`id`,
 				`vg`.`identifier`,
 				`vg`.`generation_id`,
-				`vg`.`icon`,
 				`vgn`.`name`
 			FROM `version_groups` AS `vg`
 			INNER JOIN `vg_names` AS `vgn`
@@ -185,7 +184,6 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 				`vg`.`id`,
 				`vg`.`identifier`,
 				`vg`.`generation_id`,
-				`vg`.`icon`,
 				`vgn`.`name`
 			FROM `version_groups` AS `vg`
 			INNER JOIN `vg_names` AS `vgn`

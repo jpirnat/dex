@@ -72,6 +72,13 @@ interface VersionGroupRepositoryInterface
 	public function getWithItem(ItemId $itemId) : array;
 
 	/**
+	 * Get version groups that have abilities.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithAbilities() : array;
+
+	/**
 	 * Get version groups that have this ability.
 	 *
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
@@ -84,4 +91,18 @@ interface VersionGroupRepositoryInterface
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
 	 */
 	public function getWithAbilityFlag(AbilityFlagId $flagId) : array;
+
+	/**
+	 * Get version groups that have natures.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithNatures() : array;
+
+	/**
+	 * Get version groups that have EVs.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithEvs() : array;
 }

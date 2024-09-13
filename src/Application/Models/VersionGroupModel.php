@@ -91,6 +91,14 @@ final class VersionGroupModel
 	}
 
 	/**
+	 * Set the navigable version groups to those that have abilities.
+	 */
+	public function setWithAbilities() : void
+	{
+		$this->versionGroups = $this->vgRepository->getWithAbilities();
+	}
+
+	/**
 	 * Set the navigable version groups to those that have this ability.
 	 */
 	public function setWithAbility(AbilityId $abilityId) : void
@@ -104,6 +112,22 @@ final class VersionGroupModel
 	public function setWithAbilityFlag(AbilityFlagId $flagId) : void
 	{
 		$this->versionGroups = $this->vgRepository->getWithAbilityFlag($flagId);
+	}
+
+	/**
+	 * Set the navigable version groups to those that have natures.
+	 */
+	public function setWithNatures() : void
+	{
+		$this->versionGroups = $this->vgRepository->getWithNatures();
+	}
+
+	/**
+	 * Set the navigable version groups to those that have EVs.
+	 */
+	public function setWithEvs() : void
+	{
+		$this->versionGroups = $this->vgRepository->getWithEvs();
 	}
 
 

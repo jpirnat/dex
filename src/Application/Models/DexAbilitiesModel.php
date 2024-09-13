@@ -6,7 +6,6 @@ namespace Jp\Dex\Application\Models;
 use Jp\Dex\Domain\Abilities\AbilityFlagRepositoryInterface;
 use Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexAbilitiesModel
 {
@@ -33,7 +32,7 @@ final class DexAbilitiesModel
 
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->versionGroupModel->setSinceGeneration(new GenerationId(3));
+		$this->versionGroupModel->setWithAbilities();
 
 		$this->abilities = $this->dexAbilityRepository->getByVersionGroup(
 			$versionGroupId,

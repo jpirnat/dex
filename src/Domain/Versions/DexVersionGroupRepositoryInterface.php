@@ -13,6 +13,7 @@ interface DexVersionGroupRepositoryInterface
 	 * Get a dex version group by its id.
 	 *
 	 * @throws VersionGroupNotFoundException if no version group exists with
+	 *     this id.
 	 */
 	public function getById(
 		VersionGroupId $versionGroupId,

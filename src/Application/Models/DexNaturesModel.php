@@ -27,7 +27,7 @@ final class DexNaturesModel
 	) : void {
 		$this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->versionGroupModel->setSinceGeneration(new GenerationId(3));
+		$this->versionGroupModel->setWithNatures();
 
 
 		$this->natures = $this->dexNatureRepository->getByLanguage($languageId);
