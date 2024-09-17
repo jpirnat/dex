@@ -267,6 +267,21 @@ final readonly class IndexView
 	}
 
 	/**
+	 * Show the EV calculator page.
+	 */
+	public function evCalculator() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/tools/ev-calculator.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'EV Calculator',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the stats index page.
 	 */
 	public function statsIndex() : ResponseInterface

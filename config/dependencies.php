@@ -205,6 +205,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseEggGroupNameRepository::class
 );
 $services->alias(
+	\Jp\Dex\Application\Models\EvCalculator\EvCalculatorQueriesInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseEvCalculatorQueries::class
+);
+$services->alias(
 	\Jp\Dex\Domain\Evolutions\EvolutionRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseEvolutionRepository::class
 );
@@ -345,6 +349,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseMovesetRatedTeraTypeRepository::class
 );
 $services->alias(
+	\Jp\Dex\Domain\Natures\NatureRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseNatureRepository::class
+);
+$services->alias(
 	\Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabasePokemonEggGroupRepository::class
 );
@@ -403,6 +411,10 @@ $services->alias(
 $services->alias(
 	\Jp\Dex\Domain\Stats\StatNameRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseStatNameRepository::class
+);
+$services->alias(
+	\Jp\Dex\Domain\Stats\StatRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseStatRepository::class
 );
 $services->alias(
 	\Jp\Dex\Domain\Usage\StatsAbilityPokemonRepositoryInterface::class,

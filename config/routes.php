@@ -271,6 +271,30 @@ return [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
+	['GET', "/dex/$vgIdentifier/tools/ev-calculator", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'evCalculator',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$vgIdentifier/tools/ev-calculator", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\EvCalculatorIndexController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\EvCalculatorIndexView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
+	['POST', "/dex/$vgIdentifier/tools/ev-calculator", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\EvCalculatorSubmitController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\EvCalculatorSubmitView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
 	['GET', '/stats', [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',
