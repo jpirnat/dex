@@ -9,8 +9,6 @@ const app = new Vue({
 		versionGroup: {},
 		breadcrumbs: [],
 		versionGroups: [],
-		showAbilities: false,
-		showNatures: false,
 	},
 	created() {
 		const url = new URL(window.location);
@@ -29,8 +27,6 @@ const app = new Vue({
 				this.versionGroup = data.versionGroup;
 				this.breadcrumbs = data.breadcrumbs;
 				this.versionGroups = data.versionGroups;
-				this.showAbilities = data.showAbilities;
-				this.showNatures = data.showNatures;
 			}
 		});
 	},

@@ -32,13 +32,13 @@ final readonly class DexIndexView
 			'data' => [
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
+					'hasAbilities' => $versionGroup->hasAbilities(),
+					'hasNatures' => $versionGroup->hasNatures(),
+					'hasEvs' => $versionGroup->hasEvs(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
-
-				'showAbilities' => $versionGroup->getId()->hasAbilities(),
-				'showNatures' => $versionGroup->getId()->hasNatures(),
 			]
 		]);
 	}

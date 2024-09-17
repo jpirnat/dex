@@ -21,14 +21,21 @@
 		<div class="dex-loader"></div>
 	</div>
 
-	<div v-if="loaded" class="dex-index__links">
-		<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/pokemon'">Pokémon</a>
-		<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/moves'">Moves</a>
-		<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/types'">Types</a>
-		<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/items'">Items</a>
-		<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/abilities'" v-if="showAbilities">Abilities</a>
-		<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/natures'" v-if="showNatures">Natures</a>
-	</div>
+	<template v-if="loaded" class="dex-index__links">
+		<div class="dex-index__links">
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/pokemon'">Pokémon</a>
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/moves'">Moves</a>
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/types'">Types</a>
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/items'">Items</a>
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/abilities'" v-if="versionGroup.hasAbilities">Abilities</a>
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/natures'" v-if="versionGroup.hasNatures">Natures</a>
+		</div>
+
+		<div class="dex-section__title" v-if="versionGroup.hasEvs">Tools</div>
+		<div class="dex-index__links">
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/ev-calculator'" v-if="versionGroup.hasEvs">EV Calculator</a>
+		</div>
+	</template>
 </div>
 {% endverbatim %}
 {% endblock %}
