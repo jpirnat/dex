@@ -14,33 +14,21 @@ final readonly class Characteristic
 		private int $ivModFive,
 	) {}
 
-	/**
-	 * Get the characteristic's id.
-	 */
 	public function getId() : CharacteristicId
 	{
 		return $this->id;
 	}
 
-	/**
-	 * Get the characteristic's identifier.
-	 */
 	public function getIdentifier() : string
 	{
 		return $this->identifier;
 	}
 
-	/**
-	 * Get the characteristic's highest stat id.
-	 */
 	public function getHighestStatId() : StatId
 	{
 		return $this->highestStatId;
 	}
 
-	/**
-	 * Get the characteristic's highest stat's IV mod five value.
-	 */
 	public function getIvModFive() : int
 	{
 		return $this->ivModFive;
