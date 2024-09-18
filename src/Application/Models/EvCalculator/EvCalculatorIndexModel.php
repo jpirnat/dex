@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\EvCalculator;
 
+use Jp\Dex\Application\Models\IvCalculator\IvCalculatorQueriesInterface;
 use Jp\Dex\Application\Models\VersionGroupModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 
@@ -15,7 +16,7 @@ final class EvCalculatorIndexModel
 
 	public function __construct(
 		private readonly VersionGroupModel $versionGroupModel,
-		private readonly EvCalculatorQueriesInterface $queries,
+		private readonly IvCalculatorQueriesInterface $queries,
 	) {}
 
 

@@ -3,19 +3,19 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Application\Models\EvCalculator\EvCalculatorQueriesInterface;
+use Jp\Dex\Application\Models\IvCalculator\IvCalculatorQueriesInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
-final readonly class DatabaseEvCalculatorQueries implements EvCalculatorQueriesInterface
+final readonly class DatabaseIvCalculatorQueries implements IvCalculatorQueriesInterface
 {
 	public function __construct(
 		private PDO $db,
 	) {}
 
 	/**
-	 * Get Pokémon for the EV calculator page.
+	 * Get Pokémon for the IV calculator page.
 	 */
 	public function getPokemons(
 		VersionGroupId $versionGroupId,
@@ -46,7 +46,7 @@ final readonly class DatabaseEvCalculatorQueries implements EvCalculatorQueriesI
 	}
 
 	/**
-	 * Get natures for the EV calculator page.
+	 * Get natures for the IV calculator page.
 	 */
 	public function getNatures(LanguageId $languageId) : array
 	{
@@ -74,7 +74,31 @@ final readonly class DatabaseEvCalculatorQueries implements EvCalculatorQueriesI
 	}
 
 	/**
-	 * Get stats for the EV calculator page.
+	 * Get characteristics for the IV calculator page.
+	 */
+	public function getCharacteristics(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`c`.`identifier`,
+				`cn`.`name`
+			FROM `characteristics` AS `c`
+			INNER JOIN `characteristic_names` AS `cn`
+				ON `c`.`id` = `cn`.`characteristic_id`
+			WHERE `cn`.`version_group_id` = :version_group_id
+				AND `cn`.`language_id` = :language_id
+			ORDER BY `name`'
+		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	/**
+	 * Get stats for the IV calculator page.
 	 */
 	public function getStats(
 		VersionGroupId $versionGroupId,

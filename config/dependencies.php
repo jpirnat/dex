@@ -209,8 +209,8 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseEggGroupNameRepository::class
 );
 $services->alias(
-	\Jp\Dex\Application\Models\EvCalculator\EvCalculatorQueriesInterface::class,
-	\Jp\Dex\Infrastructure\DatabaseEvCalculatorQueries::class
+	\Jp\Dex\Application\Models\EvCalculator\IvCalculatorQueriesInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseIvCalculatorQueries::class
 );
 $services->alias(
 	\Jp\Dex\Domain\Evolutions\EvolutionRepositoryInterface::class,
