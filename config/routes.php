@@ -271,6 +271,14 @@ return [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
+
+	['GET', "/data/dex/$vgIdentifier/tools/iv-calculator", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\IvCalculatorIndexController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\IvCalculatorIndexView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
 	['GET', "/dex/$vgIdentifier/tools/ev-calculator", [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',
