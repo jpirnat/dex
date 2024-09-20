@@ -100,6 +100,13 @@ interface VersionGroupRepositoryInterface
 	public function getWithNatures() : array;
 
 	/**
+	 * Get version groups that have IVs.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithIvs() : array;
+
+	/**
 	 * Get version groups that have EVs.
 	 *
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.

@@ -37,6 +37,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`generation_id`,
 				`abbreviation`,
 				`has_abilities`,
+				`has_ivs`,
 				`has_evs`,
 				`has_natures`,
 				`sort`
@@ -60,6 +61,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			new GenerationId($result['generation_id']),
 			$result['abbreviation'],
 			(bool) $result['has_abilities'],
+			(bool) $result['has_ivs'],
 			(bool) $result['has_evs'],
 			(bool) $result['has_natures'],
 			$result['sort'],
@@ -80,6 +82,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`generation_id`,
 				`abbreviation`,
 				`has_abilities`,
+				`has_ivs`,
 				`has_evs`,
 				`has_natures`,
 				`sort`
@@ -103,6 +106,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			new GenerationId($result['generation_id']),
 			$result['abbreviation'],
 			(bool) $result['has_abilities'],
+			(bool) $result['has_ivs'],
 			(bool) $result['has_evs'],
 			(bool) $result['has_natures'],
 			$result['sort'],
@@ -123,6 +127,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`generation_id`,
 				`abbreviation`,
 				`has_abilities`,
+				`has_ivs`,
 				`has_evs`,
 				`has_natures`,
 				`sort`
@@ -142,6 +147,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
 				(bool) $result['has_abilities'],
+				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
 				(bool) $result['has_natures'],
 				$result['sort'],
@@ -167,6 +173,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`generation_id`,
 				`abbreviation`,
 				`has_abilities`,
+				`has_ivs`,
 				`has_evs`,
 				`has_natures`,
 				`sort`
@@ -193,6 +200,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
 				(bool) $result['has_abilities'],
+				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
 				(bool) $result['has_natures'],
 				$result['sort'],
@@ -218,6 +226,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`generation_id`,
 				`abbreviation`,
 				`has_abilities`,
+				`has_ivs`,
 				`has_evs`,
 				`has_natures`,
 				`sort`
@@ -243,6 +252,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
 				(bool) $result['has_abilities'],
+				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
 				(bool) $result['has_natures'],
 				$result['sort'],
@@ -268,6 +278,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`generation_id`,
 				`abbreviation`,
 				`has_abilities`,
+				`has_ivs`,
 				`has_evs`,
 				`has_natures`,
 				`sort`
@@ -293,6 +304,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
 				(bool) $result['has_abilities'],
+				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
 				(bool) $result['has_natures'],
 				$result['sort'],
@@ -318,6 +330,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`generation_id`,
 				`abbreviation`,
 				`has_abilities`,
+				`has_ivs`,
 				`has_evs`,
 				`has_natures`,
 				`sort`
@@ -342,6 +355,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
 				(bool) $result['has_abilities'],
+				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
 				(bool) $result['has_natures'],
 				$result['sort'],
@@ -367,6 +381,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`generation_id`,
 				`abbreviation`,
 				`has_abilities`,
+				`has_ivs`,
 				`has_evs`,
 				`has_natures`,
 				`sort`
@@ -392,6 +407,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
 				(bool) $result['has_abilities'],
+				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
 				(bool) $result['has_natures'],
 				$result['sort'],
@@ -416,6 +432,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
+				`has_ivs`,
 				`has_evs`,
 				`has_natures`,
 				`sort`
@@ -434,6 +451,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
 				true,
+				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
 				(bool) $result['has_natures'],
 				$result['sort'],
@@ -459,6 +477,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`generation_id`,
 				`abbreviation`,
 				`has_abilities`,
+				`has_ivs`,
 				`has_evs`,
 				`has_natures`,
 				`sort`
@@ -483,6 +502,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
 				(bool) $result['has_abilities'],
+				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
 				(bool) $result['has_natures'],
 				$result['sort'],
@@ -508,6 +528,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`generation_id`,
 				`abbreviation`,
 				`has_abilities`,
+				`has_ivs`,
 				`has_evs`,
 				`has_natures`,
 				`sort`
@@ -533,6 +554,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
 				(bool) $result['has_abilities'],
+				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
 				(bool) $result['has_natures'],
 				$result['sort'],
@@ -558,6 +580,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`generation_id`,
 				`abbreviation`,
 				`has_abilities`,
+				`has_ivs`,
 				`has_evs`,
 				`sort`
 			FROM `version_groups`
@@ -575,8 +598,53 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
 				(bool) $result['has_abilities'],
+				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
 				true,
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
+	 * Get version groups that have IVs.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithIvs() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`abbreviation`,
+				`has_abilities`,
+				`has_evs`,
+				`has_natures`,
+				`sort`
+			FROM `version_groups`
+			WHERE `has_ivs` = 1
+			ORDER BY `sort`'
+		);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['abbreviation'],
+				(bool) $result['has_abilities'],
+				true,
+				(bool) $result['has_evs'],
+				(bool) $result['has_natures'],
 				$result['sort'],
 			);
 
@@ -600,6 +668,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`generation_id`,
 				`abbreviation`,
 				`has_abilities`,
+				`has_ivs`,
 				`has_natures`,
 				`sort`
 			FROM `version_groups`
@@ -617,6 +686,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
 				(bool) $result['has_abilities'],
+				(bool) $result['has_ivs'],
 				true,
 				(bool) $result['has_natures'],
 				$result['sort'],
