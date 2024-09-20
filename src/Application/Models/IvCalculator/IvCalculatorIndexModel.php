@@ -34,7 +34,7 @@ final class IvCalculatorIndexModel
 
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->versionGroupModel->setWithEvs();
+		$this->versionGroupModel->setWithIvs();
 
 		$this->pokemons = $this->queries->getPokemons($versionGroupId, $languageId);
 

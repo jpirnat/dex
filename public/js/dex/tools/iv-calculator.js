@@ -11,16 +11,17 @@ const app = new Vue({
 		versionGroups: [],
 		pokemons: [],
 		natures: [],
+		characteristics: [],
 		stats: [],
 
 		pokemonName: '',
 		natureName: '',
+		characteristicName: '',
 		selectedPokemon: null,
 		selectedNature: null,
-		level: 100,
-		finalStats: {},
+		selectedCharacteristic: null,
+		atLevel: [],
 		ivs: {},
-		evs: {},
 	},
 	computed: {
 		filteredPokemons() {
@@ -37,13 +38,17 @@ const app = new Vue({
 
 			return this.natures.filter(n => n.expandedName.toLowerCase().includes(this.natureName.toLowerCase()));
 		},
-		disableCalculate() {
-			if (this.selectedPokemon === null
-				|| this.level === ''
-			) {
-				return true;
+		filteredCharacteristics() {
+			if (!this.characteristicName) {
+				return this.characteristics;
 			}
 
+			return this.characteristics.filter(c => c.name.toLowerCase().includes(this.characteristicName.toLowerCase()));
+		},
+		disableCalculate() {
+			if (this.selectedPokemon === null) {
+				return true;
+			}
 			return false;
 		},
 	},
@@ -65,22 +70,23 @@ const app = new Vue({
 				this.versionGroups = data.versionGroups;
 				this.pokemons = data.pokemons;
 				this.natures = data.natures;
+				this.characteristics = data.characteristics;
 				this.stats = data.stats;
 
+				this.addLevel();
+
 				this.stats.forEach(s => {
-					this.$set(this.finalStats, s.identifier, '');
-					this.$set(this.ivs, s.identifier, 31);
-					this.$set(this.evs, s.identifier, '???');
+					this.$set(this.ivs, s.identifier, '???');
 				});
 			}
 		});
 	},
 	methods: {
-		evCalculatorUrl(versionGroup) {
+		ivCalculatorUrl(versionGroup) {
 			const queryParams = this.selectedPokemon !== null
 				? `?pokemon=${this.selectedPokemon.identifier}`
 				: '';
-			return '/dex/' + versionGroup.identifier + '/tools/ev-calculator' + queryParams;
+			return '/dex/' + versionGroup.identifier + '/tools/iv-calculator' + queryParams;
 		},
 
 		onChangePokemonName() {
@@ -111,6 +117,51 @@ const app = new Vue({
 				return;
 			}
 		},
+		onChangeCharacteristicName() {
+			if (this.characteristicName === '') {
+				this.selectedCharacteristic = null;
+				return;
+			}
+
+			if (this.filteredCharacteristics.length === 1) {
+				this.selectedCharacteristic = this.filteredCharacteristics[0];
+				return;
+			}
+		},
+
+		addLevel() {
+			let previousLevel = 0;
+			let previousFinal = {};
+			let previousEvs = {};
+			this.stats.forEach(s => {
+				previousEvs[s.identifier] = 0;
+			});
+
+			if (this.atLevel.length > 0) {
+				previousLevel = this.atLevel[this.atLevel.length - 1].level;
+				previousFinal = this.atLevel[this.atLevel.length - 1].finalStats;
+				previousEvs = this.atLevel[this.atLevel.length - 1].evs;
+			}
+
+			const finalStats = {};
+			const evs = {};
+			this.stats.forEach(s => {
+				finalStats[s.identifier] = previousFinal[s.identifier];
+			});
+			this.stats.forEach(s => {
+				evs[s.identifier] = previousEvs[s.identifier];
+			});
+
+			this.atLevel.push({
+				level: Math.min(previousLevel + 1, 100),
+				finalStats: finalStats,
+				evs: evs,
+			});
+		},
+		removeLevel(atLevelIndex) {
+			this.atLevel.splice(atLevelIndex, 1);
+		},
+
 		async calculate() {
 			if (this.disableCalculate) {
 				return;
@@ -128,13 +179,13 @@ const app = new Vue({
 					pokemonIdentifier: this.selectedPokemon !== null
 						? this.selectedPokemon.identifier
 						: '',
-					level: this.level,
 					natureIdentifier: this.selectedNature !== null
 						? this.selectedNature.identifier
 						: '',
-					ivs: this.ivs,
-					finalStats: this.finalStats,
-					
+					characteristicIdentifier: this.selectedCharacteristic !== null
+						? this.selectedCharacteristic.identifier
+						: '',
+					atLevel: this.atLevel,
 				}),
 			})
 			.then(response => response.json())
@@ -142,7 +193,7 @@ const app = new Vue({
 			if (response.data) {
 				const data = response.data;
 
-				this.evs = data.evs;
+				this.ivs = data.ivs;
 			}
 		},
 	},

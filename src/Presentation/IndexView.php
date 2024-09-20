@@ -267,6 +267,21 @@ final readonly class IndexView
 	}
 
 	/**
+	 * Show the IV calculator page.
+	 */
+	public function ivCalculator() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/tools/iv-calculator.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'IV Calculator',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the EV calculator page.
 	 */
 	public function evCalculator() : ResponseInterface

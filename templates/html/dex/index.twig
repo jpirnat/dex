@@ -33,6 +33,7 @@
 
 		<div class="dex-section__title" v-if="versionGroup.hasEvs">Tools</div>
 		<div class="dex-index__links">
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/iv-calculator'" v-if="versionGroup.hasIvs">IV Calculator</a>
 			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/ev-calculator'" v-if="versionGroup.hasEvs">EV Calculator</a>
 		</div>
 	</template>

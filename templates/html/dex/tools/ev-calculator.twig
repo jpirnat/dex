@@ -65,21 +65,7 @@
 					<div v-if="selectedNature !== null">Selected Nature: {{ selectedNature.expandedName }}</div>
 				</div>
 			</div>
-			<div class="ev-calculator__column">
-				<div class="ev-calculator__column-title">IVs:</div>
-				<label v-for="s in stats" :key="s.identifier"
-					:class="{
-						'ev-calculator__stat-block': true,
-						['dex-table__stat--' + s.identifier]: true,
-					}"
-				>
-					<span class="ev-calculator__label">{{ s.name }}:</span>
-					<input type="number" class="ev-calculator__input--iv"
-						v-model.number="ivs[s.identifier]"
-						min="0" max="31" step="1"
-					>
-				</label>
-			</div>
+
 			<div class="ev-calculator__column">
 				<div class="ev-calculator__column-title">Stats:</div>
 				<label v-for="s in stats" :key="s.identifier"
@@ -95,9 +81,27 @@
 					>
 				</label>
 			</div>
+
+			<div class="ev-calculator__column">
+				<div class="ev-calculator__column-title">IVs:</div>
+				<label v-for="s in stats" :key="s.identifier"
+					:class="{
+						'ev-calculator__stat-block': true,
+						['dex-table__stat--' + s.identifier]: true,
+					}"
+				>
+					<span class="ev-calculator__label">{{ s.name }}:</span>
+					<input type="number" class="ev-calculator__input--iv"
+						v-model.number="ivs[s.identifier]"
+						min="0" max="31" step="1"
+					>
+				</label>
+			</div>
+
 			<div class="ev-calculator__column">
 				<button :disabled="disableCalculate" @click="calculate">Calculate</button>
 			</div>
+
 			<div class="ev-calculator__column">
 				<div class="ev-calculator__column-title">EVs:</div>
 				<label v-for="s in stats" :key="s.identifier"
@@ -107,7 +111,7 @@
 					}"
 				>
 					<span class="ev-calculator__label">{{ s.name }}:</span>
-					<input type="text" class="ev-calculator__input--ev"
+					<input type="text" class="ev-calculator__input--ev" readonly
 						v-model="evs[s.identifier]"
 					>
 				</label>
@@ -116,47 +120,6 @@
 	</template>
 </div>
 {% endverbatim %}
-
-<style>
-.ev-calculator__container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 20px;
-}
-
-.ev-calculator__column {
-	display: flex;
-	flex-direction: column;
-}
-.ev-calculator__column--gap {
-	gap: 20px;
-}
-
-.ev-calculator__column-title {
-	text-align: center;
-	font-weight: bold;
-}
-
-.ev-calculator__stat-block {
-	padding: 5px;
-}
-
-.ev-calculator__label {
-	display: inline-block;
-	min-width: 70px;
-}
-.ev-calculator__input--level,
-.ev-calculator__input--final {
-	width: 60px;
-}
-.ev-calculator__input--iv {
-	width: 50px;
-}
-.ev-calculator__input--ev {
-	width: 120px;
-}
-</style>
 {% endblock %}
 
 {% block scripts %}

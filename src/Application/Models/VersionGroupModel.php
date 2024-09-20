@@ -123,6 +123,14 @@ final class VersionGroupModel
 	}
 
 	/**
+	 * Set the navigable version groups to those that have IVs.
+	 */
+	public function setWithIvs() : void
+	{
+		$this->versionGroups = $this->vgRepository->getWithIvs();
+	}
+
+	/**
 	 * Set the navigable version groups to those that have EVs.
 	 */
 	public function setWithEvs() : void

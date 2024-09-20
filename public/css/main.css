@@ -779,6 +779,92 @@ a.button {
 }
 
 
+/* IV calculator */
+
+.iv-calculator__container {
+	margin: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.iv-calculator__column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.iv-calculator__column--gap {
+	gap: 20px;
+}
+
+.iv-calculator__column-title {
+	text-align: center;
+	font-weight: bold;
+}
+
+.iv-calculator__stat-block {
+	padding: 5px;
+}
+
+.iv-calculator__label {
+	display: inline-block;
+	min-width: 70px;
+}
+.iv-calculator__input--level,
+.iv-calculator__input--final {
+	width: 60px;
+}
+.iv-calculator__input--ev {
+	width: 60px;
+}
+.iv-calculator__input--iv {
+	width: 400px;
+}
+
+
+/* EV calculator */
+
+.ev-calculator__container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.ev-calculator__column {
+	display: flex;
+	flex-direction: column;
+}
+.ev-calculator__column--gap {
+	gap: 20px;
+}
+
+.ev-calculator__column-title {
+	text-align: center;
+	font-weight: bold;
+}
+
+.ev-calculator__stat-block {
+	padding: 5px;
+}
+
+.ev-calculator__label {
+	display: inline-block;
+	min-width: 70px;
+}
+.ev-calculator__input--level,
+.ev-calculator__input--final {
+	width: 60px;
+}
+.ev-calculator__input--iv {
+	width: 50px;
+}
+.ev-calculator__input--ev {
+	width: 120px;
+}
+
+
 /* /stats */
 
 .stats-year {

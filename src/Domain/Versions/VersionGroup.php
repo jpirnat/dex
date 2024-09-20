@@ -11,6 +11,7 @@ final readonly class VersionGroup
 		private GenerationId $generationId,
 		private string $abbreviation,
 		private bool $hasAbilities,
+		private bool $hasIvs,
 		private bool $hasEvs,
 		private bool $hasNatures,
 		private int $sort,
@@ -39,6 +40,11 @@ final readonly class VersionGroup
 	public function hasAbilities() : bool
 	{
 		return $this->hasAbilities;
+	}
+
+	public function hasIvs() : bool
+	{
+		return $this->hasIvs;
 	}
 
 	public function hasEvs() : bool
