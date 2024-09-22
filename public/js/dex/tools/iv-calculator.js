@@ -151,6 +151,23 @@ const app = new Vue({
 			}
 		},
 
+		clearPokemonName() {
+			this.pokemonName = '';
+			this.onChangePokemonName();
+		},
+		clearNatureName() {
+			this.natureName = '';
+			this.onChangeNatureName();
+		},
+		clearCharacteristicName() {
+			this.characteristicName = '';
+			this.onChangeCharacteristicName();
+		},
+		clearHpTypeName() {
+			this.hpTypeName = '';
+			this.onChangeHpTypeName();
+		},
+
 		addLevel() {
 			let previousLevel = 0;
 			let previousFinal = {};

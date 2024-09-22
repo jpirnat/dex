@@ -24,64 +24,64 @@
 	<template v-if="loaded">
 		<h1 class="dex-page__title">IV Calculator</h1>
 
-		<div>
-			<div>
-				<div v-if="selectedPokemon !== null">Selected Pokémon: {{ selectedPokemon.name }}</div>
-				<label>
-					<span>Pokémon:</span>
-					<input type="text" v-model.trim="pokemonName" list="pokemon-names"
-						@input="onChangePokemonName"
-					>
-					<datalist id="pokemon-names">
-						<option v-for="p in pokemons" :key="p.identifier" :value="p.name"></option>
-					</datalist>
-				</label>
-			</div>
+		<div class="dex-section__description">You can leave stats blank if you don't care about them. The calculator will do what it can with what it's given.</div>
 
-			<div>
-				<div v-if="selectedNature !== null">Selected Nature: {{ selectedNature.expandedName }}</div>
-				<label>
-					<span class="iv-calculator__label">Nature:</span>
-					<input type="text" v-model.trim="natureName" list="nature-names"
-						@input="onChangeNatureName"
-					>
-					<datalist id="nature-names">
-						<option v-for="n in natures" :key="n.identifier" :value="n.expandedName"></option>
-					</datalist>
-				</label>
-			</div>
+		<label class="iv-calculator__block">
+			<span class="iv-calculator__label">Pokémon:</span>
+			<input type="text" v-model.trim="pokemonName" list="pokemon-names"
+				@input="onChangePokemonName"
+			>
+			<datalist id="pokemon-names">
+				<option v-for="p in pokemons" :key="p.identifier" :value="p.name"></option>
+			</datalist>
+			<img class="iv-calculator__x" src="/images/porydex/x.png" @click="clearPokemonName">
+			<span v-if="selectedPokemon !== null">{{ selectedPokemon.name }}</span>
+			<span v-if="selectedPokemon === null" class="iv-calculator__no-selection">No Pokémon selected</span>
+		</label>
 
-			<div v-if="characteristics.length > 0">
-				<div v-if="selectedCharacteristic !== null">Selected Characteristic: {{ selectedCharacteristic.name }}</div>
-				<label>
-					<span class="iv-calculator__label">Characteristic:</span>
-					<input type="text" v-model.trim="characteristicName" list="characteristic-names"
-						@input="onChangeCharacteristicName"
-					>
-					<datalist id="characteristic-names">
-						<option v-for="c in characteristics" :key="c.identifier" :value="c.name"></option>
-					</datalist>
-				</label>
-			</div>
+		<label class="iv-calculator__block">
+			<span class="iv-calculator__label">Nature:</span>
+			<input type="text" v-model.trim="natureName" list="nature-names"
+				@input="onChangeNatureName"
+			>
+			<datalist id="nature-names">
+				<option v-for="n in natures" :key="n.identifier" :value="n.expandedName"></option>
+			</datalist>
+			<img class="iv-calculator__x" src="/images/porydex/x.png" @click="clearNatureName">
+			<span v-if="selectedNature !== null">{{ selectedNature.expandedName }}</span>
+			<span v-if="selectedNature === null" class="iv-calculator__no-selection">No Nature selected</span>
+		</label>
 
-			<div v-if="types.length > 0">
-				<div v-if="selectedHpType !== null">Selected Hidden Power Type: {{ selectedHpType.name }}</div>
-				<label>
-					<span class="iv-calculator__label">Hidden Power Type:</span>
-					<input type="text" v-model.trim="hpTypeName" list="type-names"
-						@input="onChangeHpTypeName"
-					>
-					<datalist id="type-names">
-						<option v-for="t in types" :key="t.identifier" :value="t.name"></option>
-					</datalist>
-				</label>
-			</div>
-		</div>
+		<label class="iv-calculator__block" v-if="characteristics.length > 0">
+			<span class="iv-calculator__label">Characteristic:</span>
+			<input type="text" v-model.trim="characteristicName" list="characteristic-names"
+				@input="onChangeCharacteristicName"
+			>
+			<datalist id="characteristic-names">
+				<option v-for="c in characteristics" :key="c.identifier" :value="c.name"></option>
+			</datalist>
+			<img class="iv-calculator__x" src="/images/porydex/x.png" @click="clearCharacteristicName">
+			<span v-if="selectedCharacteristic !== null">{{ selectedCharacteristic.name }}</span>
+			<span v-if="selectedCharacteristic === null" class="iv-calculator__no-selection">No Characteristic selected</span>
+		</label>
+
+		<label class="iv-calculator__block" v-if="types.length > 0">
+			<span class="iv-calculator__label">Hidden Power:</span>
+			<input type="text" v-model.trim="hpTypeName" list="type-names"
+				@input="onChangeHpTypeName"
+			>
+			<datalist id="type-names">
+				<option v-for="t in types" :key="t.identifier" :value="t.name"></option>
+			</datalist>
+			<img class="iv-calculator__x" src="/images/porydex/x.png" @click="clearHpTypeName">
+			<span v-if="selectedHpType !== null">{{ selectedHpType.name }}</span>
+			<span v-if="selectedHpType === null" class="iv-calculator__no-selection">No Type selected</span>
+		</label>
 
 		<div class="iv-calculator__container" v-for="(l, atLevelIndex) in atLevel">
 			<div class="iv-calculator__column iv-calculator__column--gap">
 				<label>
-					<span class="iv-calculator__label">Level:</span>
+					<span class="iv-calculator__stat-label">Level:</span>
 					<input type="number" class="iv-calculator__input--level"
 						v-model.number="l.level"
 						min="1" max="100" step="1"
@@ -101,7 +101,7 @@
 						['dex-table__stat--' + s.identifier]: true,
 					}"
 				>
-					<span class="iv-calculator__label">{{ s.name }}:</span>
+					<span class="iv-calculator__stat-label">{{ s.name }}:</span>
 					<input type="number" class="iv-calculator__input--final"
 						v-model.number="l.finalStats[s.identifier]"
 						min="1" max="714" step="1"
@@ -117,7 +117,7 @@
 						['dex-table__stat--' + s.identifier]: true,
 					}"
 				>
-					<span class="iv-calculator__label">{{ s.name }}:</span>
+					<span class="iv-calculator__stat-label">{{ s.name }}:</span>
 					<input type="number" class="iv-calculator__input--ev"
 						v-model.number="l.evs[s.identifier]"
 						min="0" max="252" step="1"
@@ -141,7 +141,7 @@
 						['dex-table__stat--' + s.identifier]: true,
 					}"
 				>
-					<span class="iv-calculator__label">{{ s.name }}:</span>
+					<span class="iv-calculator__stat-label">{{ s.name }}:</span>
 					<input type="text" class="iv-calculator__input--iv" readonly
 						v-model="ivs[s.identifier]"
 					>

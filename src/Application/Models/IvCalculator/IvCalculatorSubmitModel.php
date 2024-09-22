@@ -236,7 +236,29 @@ final class IvCalculatorSubmitModel
 					}
 				}
 			}
+
+			if ($characteristic && $versionGroup->hasCharacteristics()) {
+				// The "maximum of minimums" characteristic check can be run again
+				// to rule out more possible IVs after the Hidden Power checks.
+				$minimumIvs = [];
+				foreach ($stats as $stat) {
+					$statIdentifier = $stat->getIdentifier();
+					if ($statIdentifier === $highestStatIdentifier) {
+						continue;
+					}
+					$minimumIvs[$statIdentifier] = min($possibleIvs[$statIdentifier]);
+				}
+				$maximumOfMinimumIvs = max($minimumIvs);
+
+				foreach ($possibleIvs[$highestStatIdentifier] ?? [] as $possibleIvIndex => $possibleIv) {
+					if ($possibleIv < $maximumOfMinimumIvs) {
+						unset($possibleIvs[$highestStatIdentifier][$possibleIvIndex]);
+					}
+				}
+			}
 		}
+
+
 
 		foreach ($stats as $stat) {
 			$statIdentifier = $stat->getIdentifier();
