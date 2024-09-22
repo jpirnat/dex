@@ -10,10 +10,12 @@ final readonly class VersionGroup
 		private string $identifier,
 		private GenerationId $generationId,
 		private string $abbreviation,
-		private bool $hasAbilities,
+		private bool $hasTypedHiddenPower,
 		private bool $hasIvs,
 		private bool $hasEvs,
+		private bool $hasAbilities,
 		private bool $hasNatures,
+		private bool $hasCharacteristics,
 		private int $sort,
 	) {}
 
@@ -37,9 +39,9 @@ final readonly class VersionGroup
 		return $this->abbreviation;
 	}
 
-	public function hasAbilities() : bool
+	public function hasTypedHiddenPower() : bool
 	{
-		return $this->hasAbilities;
+		return $this->hasTypedHiddenPower;
 	}
 
 	public function hasIvs() : bool
@@ -52,9 +54,19 @@ final readonly class VersionGroup
 		return $this->hasEvs;
 	}
 
+	public function hasAbilities() : bool
+	{
+		return $this->hasAbilities;
+	}
+
 	public function hasNatures() : bool
 	{
 		return $this->hasNatures;
+	}
+
+	public function hasCharacteristics() : bool
+	{
+		return $this->hasCharacteristics;
 	}
 
 	public function getSort() : int

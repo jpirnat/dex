@@ -12,14 +12,17 @@ const app = new Vue({
 		pokemons: [],
 		natures: [],
 		characteristics: [],
+		types: [],
 		stats: [],
 
 		pokemonName: '',
 		natureName: '',
 		characteristicName: '',
+		hpTypeName: '',
 		selectedPokemon: null,
 		selectedNature: null,
 		selectedCharacteristic: null,
+		selectedHpType: null,
 		atLevel: [],
 		ivs: {},
 	},
@@ -44,6 +47,13 @@ const app = new Vue({
 			}
 
 			return this.characteristics.filter(c => c.name.toLowerCase().includes(this.characteristicName.toLowerCase()));
+		},
+		filteredHpTypes() {
+			if (!this.hpTypeName) {
+				return this.types;
+			}
+
+			return this.types.filter(t => t.name.toLowerCase().includes(this.hpTypeName.toLowerCase()));
 		},
 		disableCalculate() {
 			if (this.selectedPokemon === null) {
@@ -71,6 +81,7 @@ const app = new Vue({
 				this.pokemons = data.pokemons;
 				this.natures = data.natures;
 				this.characteristics = data.characteristics;
+				this.types = data.types;
 				this.stats = data.stats;
 
 				this.addLevel();
@@ -125,6 +136,17 @@ const app = new Vue({
 
 			if (this.filteredCharacteristics.length === 1) {
 				this.selectedCharacteristic = this.filteredCharacteristics[0];
+				return;
+			}
+		},
+		onChangeHpTypeName() {
+			if (this.hpTypeName === '') {
+				this.selectedHpType = null;
+				return;
+			}
+
+			if (this.filteredHpTypes.length === 1) {
+				this.selectedHpType = this.filteredHpTypes[0];
 				return;
 			}
 		},
@@ -184,6 +206,9 @@ const app = new Vue({
 						: '',
 					characteristicIdentifier: this.selectedCharacteristic !== null
 						? this.selectedCharacteristic.identifier
+						: '',
+					hpTypeIdentifier: this.selectedHpType !== null
+						? this.selectedHpType.identifier
 						: '',
 					atLevel: this.atLevel,
 				}),

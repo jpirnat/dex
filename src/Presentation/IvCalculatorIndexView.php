@@ -26,6 +26,7 @@ final readonly class IvCalculatorIndexView
 		$pokemons = $this->ivCalculatorIndexModel->getPokemons();
 		$natures = $this->ivCalculatorIndexModel->getNatures();
 		$characteristics = $this->ivCalculatorIndexModel->getCharacteristics();
+		$types = $this->ivCalculatorIndexModel->getTypes();
 		$stats = $this->ivCalculatorIndexModel->getStats();
 
 		// Navigational breadcrumbs.
@@ -49,6 +50,7 @@ final readonly class IvCalculatorIndexView
 				'pokemons' => $pokemons,
 				'natures' => $natures,
 				'characteristics' => $characteristics,
+				'types' => $types,
 				'stats' => $stats,
 			]
 		]);

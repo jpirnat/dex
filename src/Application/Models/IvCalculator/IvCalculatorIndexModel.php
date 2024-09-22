@@ -11,6 +11,7 @@ final class IvCalculatorIndexModel
 	private array $pokemons = [];
 	private array $natures = [];
 	private array $characteristics = [];
+	private array $types = [];
 	private array $stats = [];
 
 
@@ -30,6 +31,7 @@ final class IvCalculatorIndexModel
 		$this->pokemons = [];
 		$this->natures = [];
 		$this->characteristics = [];
+		$this->types = [];
 		$this->stats = [];
 
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
@@ -58,6 +60,14 @@ final class IvCalculatorIndexModel
 			$languageId,
 		);
 
+		$versionGroup = $this->versionGroupModel->getVersionGroup();
+		if ($versionGroup->hasTypedHiddenPower()) {
+			$this->types = $this->queries->getTypes(
+				$versionGroupId,
+				$languageId,
+			);
+		}
+
 		$this->stats = $this->queries->getStats($versionGroupId, $languageId);
 	}
 
@@ -80,6 +90,11 @@ final class IvCalculatorIndexModel
 	public function getCharacteristics() : array
 	{
 		return $this->characteristics;
+	}
+
+	public function getTypes() : array
+	{
+		return $this->types;
 	}
 
 	public function getStats() : array

@@ -98,6 +98,32 @@ final readonly class DatabaseIvCalculatorQueries implements IvCalculatorQueriesI
 	}
 
 	/**
+	 * Get types for the IV calculator page.
+	 */
+	public function getTypes(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
+	) : array {
+		$stmt = $this->db->prepare(
+			'SELECT
+				`t`.`identifier`,
+				`tn`.`name`
+			FROM `types` AS `t`
+			INNER JOIN `vg_types` AS `vt`
+				ON `t`.`id` = `vt`.`type_id`
+			INNER JOIN `type_names` AS `tn`
+				ON `t`.`id` = `tn`.`type_id`
+			WHERE `vt`.`version_group_id` = :version_group_id
+				AND `tn`.`language_id` = :language_id
+				AND `t`.`hidden_power_index` IS NOT NULL'
+		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	/**
 	 * Get stats for the IV calculator page.
 	 */
 	public function getStats(

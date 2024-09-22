@@ -63,6 +63,19 @@
 					</datalist>
 				</label>
 			</div>
+
+			<div v-if="types.length > 0">
+				<div v-if="selectedHpType !== null">Selected Hidden Power Type: {{ selectedHpType.name }}</div>
+				<label>
+					<span class="iv-calculator__label">Hidden Power Type:</span>
+					<input type="text" v-model.trim="hpTypeName" list="type-names"
+						@input="onChangeHpTypeName"
+					>
+					<datalist id="type-names">
+						<option v-for="t in types" :key="t.identifier" :value="t.name"></option>
+					</datalist>
+				</label>
+			</div>
 		</div>
 
 		<div class="iv-calculator__container" v-for="(l, atLevelIndex) in atLevel">

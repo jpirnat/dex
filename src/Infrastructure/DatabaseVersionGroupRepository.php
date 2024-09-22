@@ -36,10 +36,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
 				`has_evs`,
+				`has_abilities`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` = :version_group_id
@@ -60,10 +62,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			$result['identifier'],
 			new GenerationId($result['generation_id']),
 			$result['abbreviation'],
-			(bool) $result['has_abilities'],
+			(bool) $result['has_typed_hidden_power'],
 			(bool) $result['has_ivs'],
 			(bool) $result['has_evs'],
+			(bool) $result['has_abilities'],
 			(bool) $result['has_natures'],
+			(bool) $result['has_characteristics'],
 			$result['sort'],
 		);
 	}
@@ -81,10 +85,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`id`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
 				`has_evs`,
+				`has_abilities`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `identifier` = :identifier
@@ -105,10 +111,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			$identifier,
 			new GenerationId($result['generation_id']),
 			$result['abbreviation'],
-			(bool) $result['has_abilities'],
+			(bool) $result['has_typed_hidden_power'],
 			(bool) $result['has_ivs'],
 			(bool) $result['has_evs'],
+			(bool) $result['has_abilities'],
 			(bool) $result['has_natures'],
+			(bool) $result['has_characteristics'],
 			$result['sort'],
 		);
 	}
@@ -126,10 +134,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
 				`has_evs`,
+				`has_abilities`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `generation_id` >= :generation_id
@@ -146,10 +156,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
-				(bool) $result['has_abilities'],
+				(bool) $result['has_typed_hidden_power'],
 				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
+				(bool) $result['has_abilities'],
 				(bool) $result['has_natures'],
+				(bool) $result['has_characteristics'],
 				$result['sort'],
 			);
 
@@ -172,10 +184,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
 				`has_evs`,
+				`has_abilities`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -199,10 +213,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
-				(bool) $result['has_abilities'],
+				(bool) $result['has_typed_hidden_power'],
 				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
+				(bool) $result['has_abilities'],
 				(bool) $result['has_natures'],
+				(bool) $result['has_characteristics'],
 				$result['sort'],
 			);
 
@@ -225,10 +241,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
 				`has_evs`,
+				`has_abilities`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -251,10 +269,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
-				(bool) $result['has_abilities'],
+				(bool) $result['has_typed_hidden_power'],
 				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
+				(bool) $result['has_abilities'],
 				(bool) $result['has_natures'],
+				(bool) $result['has_characteristics'],
 				$result['sort'],
 			);
 
@@ -277,10 +297,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
 				`has_evs`,
+				`has_abilities`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -303,10 +325,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
-				(bool) $result['has_abilities'],
+				(bool) $result['has_typed_hidden_power'],
 				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
+				(bool) $result['has_abilities'],
 				(bool) $result['has_natures'],
+				(bool) $result['has_characteristics'],
 				$result['sort'],
 			);
 
@@ -329,10 +353,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
 				`has_evs`,
+				`has_abilities`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -354,10 +380,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
-				(bool) $result['has_abilities'],
+				(bool) $result['has_typed_hidden_power'],
 				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
+				(bool) $result['has_abilities'],
 				(bool) $result['has_natures'],
+				(bool) $result['has_characteristics'],
 				$result['sort'],
 			);
 
@@ -380,10 +408,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
 				`has_evs`,
+				`has_abilities`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -406,10 +436,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
-				(bool) $result['has_abilities'],
+				(bool) $result['has_typed_hidden_power'],
 				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
+				(bool) $result['has_abilities'],
 				(bool) $result['has_natures'],
+				(bool) $result['has_characteristics'],
 				$result['sort'],
 			);
 
@@ -432,9 +464,11 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
 				`has_evs`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `has_abilities` = 1
@@ -450,10 +484,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
-				true,
+				(bool) $result['has_typed_hidden_power'],
 				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
+				true,
 				(bool) $result['has_natures'],
+				(bool) $result['has_characteristics'],
 				$result['sort'],
 			);
 
@@ -476,10 +512,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
 				`has_evs`,
+				`has_abilities`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -501,10 +539,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
-				(bool) $result['has_abilities'],
+				(bool) $result['has_typed_hidden_power'],
 				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
+				(bool) $result['has_abilities'],
 				(bool) $result['has_natures'],
+				(bool) $result['has_characteristics'],
 				$result['sort'],
 			);
 
@@ -527,10 +567,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
 				`has_evs`,
+				`has_abilities`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `id` IN (
@@ -553,10 +595,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
-				(bool) $result['has_abilities'],
+				(bool) $result['has_typed_hidden_power'],
 				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
+				(bool) $result['has_abilities'],
 				(bool) $result['has_natures'],
+				(bool) $result['has_characteristics'],
 				$result['sort'],
 			);
 
@@ -579,9 +623,11 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
 				`has_evs`,
+				`has_abilities`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `has_natures` = 1
@@ -597,10 +643,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
-				(bool) $result['has_abilities'],
+				(bool) $result['has_typed_hidden_power'],
 				(bool) $result['has_ivs'],
 				(bool) $result['has_evs'],
+				(bool) $result['has_abilities'],
 				true,
+				(bool) $result['has_characteristics'],
 				$result['sort'],
 			);
 
@@ -623,9 +671,11 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_evs`,
+				`has_abilities`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `has_ivs` = 1
@@ -641,10 +691,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
-				(bool) $result['has_abilities'],
+				(bool) $result['has_typed_hidden_power'],
 				true,
 				(bool) $result['has_evs'],
+				(bool) $result['has_abilities'],
 				(bool) $result['has_natures'],
+				(bool) $result['has_characteristics'],
 				$result['sort'],
 			);
 
@@ -667,9 +719,11 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
-				`has_abilities`,
+				`has_typed_hidden_power`,
 				`has_ivs`,
+				`has_abilities`,
 				`has_natures`,
+				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
 			WHERE `has_evs` = 1
@@ -685,10 +739,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				$result['identifier'],
 				new GenerationId($result['generation_id']),
 				$result['abbreviation'],
-				(bool) $result['has_abilities'],
+				(bool) $result['has_typed_hidden_power'],
 				(bool) $result['has_ivs'],
 				true,
+				(bool) $result['has_abilities'],
 				(bool) $result['has_natures'],
+				(bool) $result['has_characteristics'],
 				$result['sort'],
 			);
 

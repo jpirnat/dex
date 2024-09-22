@@ -30,6 +30,14 @@ interface IvCalculatorQueriesInterface
 	) : array;
 
 	/**
+	 * Get types for the IV calculator page.
+	 */
+	public function getTypes(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
+	) : array;
+
+	/**
 	 * Get stats for the IV calculator page.
 	 */
 	public function getStats(
