@@ -24,6 +24,7 @@ final readonly class IvCalculatorSubmitController
 		$pokemonIdentifier = (string) ($data['pokemonIdentifier'] ?? '');
 		$natureIdentifier = (string) ($data['natureIdentifier'] ?? '') ?: 'hardy';
 		$characteristicIdentifier = (string) ($data['characteristicIdentifier'] ?? '');
+		$hpTypeIdentifier = (string) ($data['hpTypeIdentifier'] ?? '');
 		$atLevel = (array) ($data['atLevel'] ?? []);
 
 		$this->ivCalculatorSubmitModel->setData(
@@ -31,6 +32,7 @@ final readonly class IvCalculatorSubmitController
 			$pokemonIdentifier,
 			$natureIdentifier,
 			$characteristicIdentifier,
+			$hpTypeIdentifier,
 			$atLevel,
 		);
 	}

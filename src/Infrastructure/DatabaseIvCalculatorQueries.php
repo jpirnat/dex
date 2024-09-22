@@ -115,7 +115,8 @@ final readonly class DatabaseIvCalculatorQueries implements IvCalculatorQueriesI
 				ON `t`.`id` = `tn`.`type_id`
 			WHERE `vt`.`version_group_id` = :version_group_id
 				AND `tn`.`language_id` = :language_id
-				AND `t`.`hidden_power_index` IS NOT NULL'
+				AND `t`.`hidden_power_index` IS NOT NULL
+			ORDER BY `name`'
 		);
 		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);

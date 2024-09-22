@@ -78,6 +78,7 @@ $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\MovesetTeraTrendGenerator:
 $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageAbilityTrendGenerator::class);
 $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageItemTrendGenerator::class);
 $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageMoveTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\Calculators\HiddenPowerCalculator::class);
 $services->set(\Jp\Dex\Domain\Calculators\StatCalculator::class);
 $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\TrendPointCalculator::class);
 
@@ -209,7 +210,7 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseEggGroupNameRepository::class
 );
 $services->alias(
-	\Jp\Dex\Application\Models\EvCalculator\IvCalculatorQueriesInterface::class,
+	\Jp\Dex\Application\Models\IvCalculator\IvCalculatorQueriesInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseIvCalculatorQueries::class
 );
 $services->alias(

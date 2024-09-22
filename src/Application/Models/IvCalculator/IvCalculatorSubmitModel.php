@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\IvCalculator;
 
+use Jp\Dex\Domain\Calculators\HiddenPowerCalculator;
 use Jp\Dex\Domain\Calculators\StatCalculator;
 use Jp\Dex\Domain\Characteristics\CharacteristicNotFoundException;
 use Jp\Dex\Domain\Characteristics\CharacteristicRepositoryInterface;
@@ -12,6 +13,7 @@ use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class IvCalculatorSubmitModel
@@ -24,9 +26,11 @@ final class IvCalculatorSubmitModel
 		private readonly PokemonRepositoryInterface $pokemonRepository,
 		private readonly NatureRepositoryInterface $natureRepository,
 		private readonly CharacteristicRepositoryInterface $characteristicRepository,
+		private readonly TypeRepositoryInterface $typeRepository,
 		private readonly StatRepositoryInterface $statRepository,
 		private readonly BaseStatRepositoryInterface $baseStatRepository,
 		private readonly StatCalculator $statCalculator,
+		private readonly HiddenPowerCalculator $hiddenPowerCalculator,
 	) {}
 
 
@@ -35,6 +39,7 @@ final class IvCalculatorSubmitModel
 		string $pokemonIdentifier,
 		string $natureIdentifier,
 		string $characteristicIdentifier,
+		string $hpTypeIdentifier,
 		array $atLevel,
 	) : void {
 		$this->ivs = [];
@@ -46,6 +51,9 @@ final class IvCalculatorSubmitModel
 			$nature = $this->natureRepository->getByIdentifier($natureIdentifier);
 			$characteristic = $characteristicIdentifier !== ''
 				? $this->characteristicRepository->getByIdentifier($characteristicIdentifier)
+				: null;
+			$hpType = $hpTypeIdentifier !== ''
+				? $this->typeRepository->getByIdentifier($hpTypeIdentifier)
 				: null;
 		} catch (PokemonNotFoundException
 			| NatureNotFoundException
@@ -107,7 +115,7 @@ final class IvCalculatorSubmitModel
 		}
 
 		// Use characteristic to further narrow down the options.
-		if ($characteristic) {
+		if ($characteristic && $versionGroup->hasCharacteristics()) {
 			$highestStatId = $characteristic->getHighestStatId();
 			$highestStat = $stats[$highestStatId->value()];
 			$highestStatIdentifier = $highestStat->getIdentifier();
@@ -161,7 +169,74 @@ final class IvCalculatorSubmitModel
 		}
 
 		// Use Hidden Power type to further narrow down the options.
-		// TODO
+		if ($hpType && $versionGroup->hasTypedHiddenPower()) {
+			// We don't need to test every combination of possible IVs; just
+			// every combination of evenness and oddness among possible IVs.
+
+			// For each stat, keep track of the possible sets of least significant bits.
+			// [0] if only even possible IVs remain.
+			// [1] if only odd possible IVs remain.
+			// [0, 1] if a combination of even and odd possible IVs remain.
+			// [] if no possible IVs remain.
+			$statBits = [];
+
+			// As the bit combinations are checked, if any produce the correct type,
+			// put them all in here.
+			$possibleBits = [];
+
+			foreach ($stats as $stat) {
+				$statIdentifier = $stat->getIdentifier();
+
+				$statBits[$statIdentifier] = [];
+				foreach ($possibleIvs[$statIdentifier] as $possibleIv) {
+					$statBits[$statIdentifier][$possibleIv % 2] = 1;
+				}
+				$statBits[$statIdentifier] = array_keys($statBits[$statIdentifier]);
+
+				$possibleBits[$statIdentifier] = [];
+			}
+
+			foreach ($statBits['hp'] ?? [] as $hpBit) {
+				foreach ($statBits['attack'] ?? [] as $atkBit) {
+					foreach ($statBits['defense'] ?? [] as $defBit) {
+						foreach ($statBits['speed'] ?? [] as $speBit) {
+							foreach ($statBits['special-attack'] ?? [] as $spaBit) {
+								foreach ($statBits['special-defense'] ?? [] as $spdBit) {
+									$calculatedIndex = $this->hiddenPowerCalculator->gen3TypeIndex(
+										$hpBit,
+										$atkBit,
+										$defBit,
+										$speBit,
+										$spaBit,
+										$spdBit,
+									);
+									if ($calculatedIndex === $hpType->getHiddenPowerIndex()) {
+										$possibleBits['hp'][$hpBit] = 1;
+										$possibleBits['attack'][$atkBit] = 1;
+										$possibleBits['defense'][$defBit] = 1;
+										$possibleBits['speed'][$speBit] = 1;
+										$possibleBits['special-attack'][$spaBit] = 1;
+										$possibleBits['special-defense'][$spdBit] = 1;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			foreach ($stats as $stat) {
+				$statIdentifier = $stat->getIdentifier();
+
+				$possibleBits[$statIdentifier] = array_keys($possibleBits[$statIdentifier]);
+
+				foreach ($possibleIvs[$statIdentifier] ?? [] as $possibleIvIndex => $possibleIv) {
+					if (!in_array($possibleIv % 2, $possibleBits[$statIdentifier])) {
+						unset($possibleIvs[$statIdentifier][$possibleIvIndex]);
+					}
+				}
+			}
+		}
 
 		foreach ($stats as $stat) {
 			$statIdentifier = $stat->getIdentifier();

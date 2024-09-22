@@ -3,52 +3,48 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Calculators;
 
-use Jp\Dex\Domain\Types\Type;
-use Jp\Dex\Domain\Types\TypeRepositoryInterface;
-
 final readonly class HiddenPowerCalculator
 {
-	public function __construct(
-		private TypeRepositoryInterface $typeRepository,
-	) {}
-
 	/**
 	 * Calculate a Pokémon's Hidden Power type in generation 2.
+	 * https://bulbapedia.bulbagarden.net/wiki/Hidden_Power_(move)/Calculation#Type
+	 *
+	 * @return int The Hidden Power index of the type.
 	 */
-	public function type2(int $atk, int $def) : Type
+	public function gen2TypeIndex(int $atk, int $def) : int
 	{
-		$hiddenPowerIndex = 4 * $atk % 4 + $def % 4;
-
-		return $this->typeRepository->getByHiddenPowerIndex($hiddenPowerIndex);
+		return 4 * $atk % 4 + $def % 4;
 	}
 
 	/**
-	 * Calculate a Pokémon's Hidden Power type in generations 3 through 7.
+	 * Calculate a Pokémon's Hidden Power type in generations 3 through 8.
+	 * https://bulbapedia.bulbagarden.net/wiki/Hidden_Power_(move)/Calculation#Type_2
+	 *
+	 * @return int The Hidden Power index of the type.
 	 */
-	public function type3(
+	public function gen3TypeIndex(
 		int $hp,
 		int $atk,
 		int $def,
 		int $spe,
 		int $spa,
 		int $spd,
-	) : Type {
-		$a = $hp % 2;
+	) : int {
+		$a = $hp  % 2;
 		$b = $atk % 2;
 		$c = $def % 2;
 		$d = $spe % 2;
 		$e = $spa % 2;
 		$f = $spd % 2;
 
-		$hiddenPowerIndex = (int) floor(($a + 2 * $b + 4 * $c + 8 * $d + 16 * $e + 32 * $f) * 15 / 63);
-
-		return $this->typeRepository->getByHiddenPowerIndex($hiddenPowerIndex);
+		return (int) (($a + 2 * $b + 4 * $c + 8 * $d + 16 * $e + 32 * $f) * 15 / 63);
 	}
 
 	/**
 	 * Calculate a Pokémon's Hidden Power base power in generation 2.
+	 * https://bulbapedia.bulbagarden.net/wiki/Hidden_Power_(move)/Calculation#Power
 	 */
-	public function power2(
+	public function gen2Power(
 		int $atk,
 		int $def,
 		int $spe,
@@ -65,8 +61,9 @@ final readonly class HiddenPowerCalculator
 
 	/**
 	 * Calculate a Pokémon's Hidden Power base power in generations 3 through 5.
+	 * https://bulbapedia.bulbagarden.net/wiki/Hidden_Power_(move)/Calculation#Power_2
 	 */
-	public function power3(
+	public function gen3Power(
 		int $hp,
 		int $atk,
 		int $def,
@@ -74,7 +71,7 @@ final readonly class HiddenPowerCalculator
 		int $spa,
 		int $spd,
 	) : int {
-		$u = ($hp % 4 === 2 || $hp % 4 === 3) ? 1 : 0;
+		$u = ($hp  % 4 === 2 || $hp  % 4 === 3) ? 1 : 0;
 		$v = ($atk % 4 === 2 || $atk % 4 === 3) ? 1 : 0;
 		$w = ($def % 4 === 2 || $def % 4 === 3) ? 1 : 0;
 		$x = ($spe % 4 === 2 || $spe % 4 === 3) ? 1 : 0;
@@ -87,7 +84,7 @@ final readonly class HiddenPowerCalculator
 	/**
 	 * Calculate a Pokémon's Hidden Power base power in generations 6 through 7.
 	 */
-	public function power6() : int
+	public function gen6Power() : int
 	{
 		return 60;
 	}
