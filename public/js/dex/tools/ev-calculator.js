@@ -17,8 +17,7 @@ const app = new Vue({
 		natureName: '',
 		selectedPokemon: null,
 		selectedNature: null,
-		level: 100,
-		finalStats: {},
+		atLevel: [],
 		ivs: {},
 		evs: {},
 	},
@@ -38,9 +37,7 @@ const app = new Vue({
 			return this.natures.filter(n => n.expandedName.toLowerCase().includes(this.natureName.toLowerCase()));
 		},
 		disableCalculate() {
-			if (this.selectedPokemon === null
-				|| this.level === ''
-			) {
+			if (this.selectedPokemon === null) {
 				return true;
 			}
 
@@ -67,8 +64,9 @@ const app = new Vue({
 				this.natures = data.natures;
 				this.stats = data.stats;
 
+				this.addLevel();
+
 				this.stats.forEach(s => {
-					this.$set(this.finalStats, s.identifier, '');
 					this.$set(this.ivs, s.identifier, 31);
 					this.$set(this.evs, s.identifier, '???');
 				});
@@ -111,6 +109,40 @@ const app = new Vue({
 				return;
 			}
 		},
+
+
+		clearPokemonName() {
+			this.pokemonName = '';
+			this.onChangePokemonName();
+		},
+		clearNatureName() {
+			this.natureName = '';
+			this.onChangeNatureName();
+		},
+
+		addLevel() {
+			let previousLevel = 0;
+			let previousFinal = {};
+
+			if (this.atLevel.length > 0) {
+				previousLevel = this.atLevel[this.atLevel.length - 1].level;
+				previousFinal = this.atLevel[this.atLevel.length - 1].finalStats;
+			}
+
+			const finalStats = {};
+			this.stats.forEach(s => {
+				finalStats[s.identifier] = previousFinal[s.identifier];
+			});
+
+			this.atLevel.push({
+				level: Math.min(previousLevel + 1, 100),
+				finalStats: finalStats,
+			});
+		},
+		removeLevel(atLevelIndex) {
+			this.atLevel.splice(atLevelIndex, 1);
+		},
+
 		async calculate() {
 			if (this.disableCalculate) {
 				return;
@@ -128,13 +160,11 @@ const app = new Vue({
 					pokemonIdentifier: this.selectedPokemon !== null
 						? this.selectedPokemon.identifier
 						: '',
-					level: this.level,
 					natureIdentifier: this.selectedNature !== null
 						? this.selectedNature.identifier
 						: '',
 					ivs: this.ivs,
-					finalStats: this.finalStats,
-					
+					atLevel: this.atLevel,
 				}),
 			})
 			.then(response => response.json())

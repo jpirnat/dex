@@ -14,6 +14,7 @@ use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class IvCalculatorSubmitModel
@@ -44,9 +45,8 @@ final class IvCalculatorSubmitModel
 	) : void {
 		$this->ivs = [];
 
-		$versionGroup = $this->vgRepository->getByIdentifier($vgIdentifier);
-
 		try {
+			$versionGroup = $this->vgRepository->getByIdentifier($vgIdentifier);
 			$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
 			$nature = $this->natureRepository->getByIdentifier($natureIdentifier);
 			$characteristic = $characteristicIdentifier !== ''
@@ -55,7 +55,8 @@ final class IvCalculatorSubmitModel
 			$hpType = $hpTypeIdentifier !== ''
 				? $this->typeRepository->getByIdentifier($hpTypeIdentifier)
 				: null;
-		} catch (PokemonNotFoundException
+		} catch (VersionGroupNotFoundException
+			| PokemonNotFoundException
 			| NatureNotFoundException
 			| CharacteristicNotFoundException
 		) {
@@ -258,8 +259,7 @@ final class IvCalculatorSubmitModel
 			}
 		}
 
-
-
+		// We're done. Compile the results.
 		foreach ($stats as $stat) {
 			$statIdentifier = $stat->getIdentifier();
 

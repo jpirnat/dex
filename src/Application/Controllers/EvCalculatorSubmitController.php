@@ -22,18 +22,16 @@ final readonly class EvCalculatorSubmitController
 
 		$vgIdentifier = $request->getAttribute('vgIdentifier');
 		$pokemonIdentifier = $data['pokemonIdentifier'] ?? '';
-		$level = (string) ($data['level'] ?? '100');
 		$natureIdentifier = (string) ($data['natureIdentifier'] ?? '') ?: 'hardy';
 		$ivs = $data['ivs'] ?? [];
-		$finalStats = $data['finalStats'] ?? [];
+		$atLevel = (array) ($data['atLevel'] ?? []);
 
 		$this->evCalculatorSubmitModel->setData(
 			$vgIdentifier,
 			$pokemonIdentifier,
-			$level,
 			$natureIdentifier,
 			$ivs,
-			$finalStats,
+			$atLevel,
 		);
 	}
 }

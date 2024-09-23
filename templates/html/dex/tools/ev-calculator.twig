@@ -25,93 +25,102 @@
 		<h1 class="dex-page__title">EV Calculator</h1>
 
 		<div class="dex-section__description">
-			Have a trained Pokémon you don't know the EV spread for?
-			Use this calculator to reverse engineer its EVs.
+			Have a trained Pokémon you don't know what EVs it has?
+			Use this calculator to reverse engineer its EV spread.
 		</div>
 
-		<div class="ev-calculator__container">
-			<div class="ev-calculator__column ev-calculator__column--gap">
-				<div>
-					<label>
-						<span>Pokémon:</span>
-						<input type="text" v-model.trim="pokemonName" list="pokemon-names"
-							@input="onChangePokemonName"
-						>
-						<datalist id="pokemon-names">
-							<option v-for="p in pokemons" :key="p.identifier" :value="p.name"></option>
-						</datalist>
-					</label>
-					<div v-if="selectedPokemon !== null">Selected Pokémon: {{ selectedPokemon.name }}</div>
-				</div>
+		<label class="iv-calculator__block">
+			<span class="iv-calculator__label">Pokémon:</span>
+			<input type="text" v-model.trim="pokemonName" list="pokemon-names"
+				@input="onChangePokemonName"
+			>
+			<datalist id="pokemon-names">
+				<option v-for="p in pokemons" :key="p.identifier" :value="p.name"></option>
+			</datalist>
+			<img class="iv-calculator__x" src="/images/porydex/x.png" @click="clearPokemonName">
+			<span v-if="selectedPokemon !== null">{{ selectedPokemon.name }}</span>
+			<span v-if="selectedPokemon === null" class="iv-calculator__no-selection">No Pokémon selected</span>
+		</label>
 
+		<label class="iv-calculator__block">
+			<span class="iv-calculator__label">Nature:</span>
+			<input type="text" v-model.trim="natureName" list="nature-names"
+				@input="onChangeNatureName"
+			>
+			<datalist id="nature-names">
+				<option v-for="n in natures" :key="n.identifier" :value="n.expandedName"></option>
+			</datalist>
+			<img class="iv-calculator__x" src="/images/porydex/x.png" @click="clearNatureName">
+			<span v-if="selectedNature !== null">{{ selectedNature.expandedName }}</span>
+			<span v-if="selectedNature === null" class="iv-calculator__no-selection">No Nature selected</span>
+		</label>
+
+
+		<div class="iv-calculator__container" v-for="(l, atLevelIndex) in atLevel">
+			<div class="iv-calculator__column iv-calculator__column--gap">
 				<label>
-					<span class="ev-calculator__label">Level:</span>
-					<input type="number" class="ev-calculator__input--level"
-						v-model.number="level"
+					<span class="iv-calculator__stat-label">Level:</span>
+					<input type="number" class="iv-calculator__input--level"
+						v-model.number="l.level"
 						min="1" max="100" step="1"
 					>
 				</label>
 
-				<div>
-					<label>
-						<span class="ev-calculator__label">Nature:</span>
-						<input type="text" v-model.trim="natureName" list="nature-names"
-							@input="onChangeNatureName"
-						>
-						<datalist id="nature-names">
-							<option v-for="n in natures" :key="n.identifier" :value="n.expandedName"></option>
-						</datalist>
-					</label>
-					<div v-if="selectedNature !== null">Selected Nature: {{ selectedNature.expandedName }}</div>
-				</div>
+				<button v-if="atLevel.length > 1" @click="removeLevel(atLevelIndex)">Remove Level</button>
+
+				<button v-if="atLevelIndex === atLevel.length - 1" @click="addLevel">Add Level</button>
 			</div>
 
-			<div class="ev-calculator__column">
-				<div class="ev-calculator__column-title">Stats:</div>
+			<div class="iv-calculator__column">
+				<div class="iv-calculator__column-title">Stats:</div>
 				<label v-for="s in stats" :key="s.identifier"
 					:class="{
-						'ev-calculator__stat-block': true,
+						'iv-calculator__stat-block': true,
 						['dex-table__stat--' + s.identifier]: true,
 					}"
 				>
-					<span class="ev-calculator__label">{{ s.name }}:</span>
-					<input type="number" class="ev-calculator__input--final"
-						v-model.number="finalStats[s.identifier]"
+					<span class="iv-calculator__stat-label">{{ s.name }}:</span>
+					<input type="number" class="iv-calculator__input--final"
+						v-model.number="l.finalStats[s.identifier]"
 						min="1" max="714" step="1"
 					>
 				</label>
 			</div>
 
-			<div class="ev-calculator__column">
-				<div class="ev-calculator__column-title">IVs:</div>
+			<div class="iv-calculator__column" v-if="atLevelIndex === 0">
+				<div class="iv-calculator__column-title">IVs:</div>
 				<label v-for="s in stats" :key="s.identifier"
 					:class="{
-						'ev-calculator__stat-block': true,
+						'iv-calculator__stat-block': true,
 						['dex-table__stat--' + s.identifier]: true,
 					}"
 				>
-					<span class="ev-calculator__label">{{ s.name }}:</span>
-					<input type="number" class="ev-calculator__input--iv"
+					<span class="iv-calculator__stat-label">{{ s.name }}:</span>
+					<input type="number" class="iv-calculator__input--ev"
 						v-model.number="ivs[s.identifier]"
-						min="0" max="31" step="1"
+						min="0" max="252" step="1"
 					>
 				</label>
 			</div>
+		</div>
 
-			<div class="ev-calculator__column">
+		<div class="iv-calculator__container">
+			<div class="iv-calculator__column">
 				<button :disabled="disableCalculate" @click="calculate">Calculate</button>
 			</div>
+		</div>
 
-			<div class="ev-calculator__column">
-				<div class="ev-calculator__column-title">EVs:</div>
+		<div class="iv-calculator__container">
+			<div class="iv-calculator__column">
+				<div class="iv-calculator__column-title">EVs:</div>
 				<label v-for="s in stats" :key="s.identifier"
 					:class="{
-						'ev-calculator__stat-block': true,
+						'iv-calculator__stat-block': true,
 						['dex-table__stat--' + s.identifier]: true,
 					}"
 				>
-					<span class="ev-calculator__label">{{ s.name }}:</span>
-					<input type="text" class="ev-calculator__input--ev" readonly
+					<span class="iv-calculator__stat-label">{{ s.name }}:</span>
+					<input type="text" class="iv-calculator__input--iv" readonly
 						v-model="evs[s.identifier]"
 					>
 				</label>
