@@ -59,7 +59,7 @@ final class EvCalculatorSubmitModel
 		$possibleEvs = [];
 		foreach ($stats as $stat) {
 			$statIdentifier = $stat->getIdentifier();
-			$possibleEvs[$statIdentifier] = range(0, 252, 4);
+			$possibleEvs[$statIdentifier] = range(0, 252);
 		}
 
 		// Then, one stat at a time, one level at a time, rule out as many of
@@ -100,6 +100,29 @@ final class EvCalculatorSubmitModel
 			}
 		}
 
+		// If any stat has a nonzero minimum, those minimums can be subtracted
+		// from the overall pool of 510 available EVs. If that remainder is less
+		// than 252, we might be able to rule out some upper bounds on EV ranges.
+		$minimumEvs = [];
+		foreach ($stats as $stat) {
+			$statIdentifier = $stat->getIdentifier();
+			if ($possibleEvs[$statIdentifier]) {
+				$minimumEvs[] = min($possibleEvs[$statIdentifier]);
+			}
+		}
+		$availableEvs = 510 - array_sum($minimumEvs);
+		foreach ($stats as $stat) {
+			$statIdentifier = $stat->getIdentifier();
+			if ($possibleEvs[$statIdentifier]) {
+				$minimumEv = min($possibleEvs[$statIdentifier]);
+				foreach ($possibleEvs[$statIdentifier] ?? [] as $possibleEvIndex => $possibleEv) {
+					if ($possibleEv > $minimumEv && $possibleEv > $availableEvs) {
+						unset($possibleEvs[$statIdentifier][$possibleEvIndex]);
+					}
+				}
+			}
+		}
+
 		// We're done. Compile the results.
 		foreach ($stats as $stat) {
 			$statIdentifier = $stat->getIdentifier();
@@ -126,14 +149,14 @@ final class EvCalculatorSubmitModel
 
 		for ($i = 0; $i < count($evs); $i++) {
 			$start = $evs[$i];
-			while ($i + 1 < count($evs) && $evs[$i] + 4 === $evs[$i + 1]) {
+			while ($i + 1 < count($evs) && $evs[$i] + 1 === $evs[$i + 1]) {
 				$i++;
 			}
-			$end = $evs[$i] < 252 // TODO: Use max EV per version group.
-				? $evs[$i] + 3
-				: $evs[$i];
+			$end = $evs[$i];
 
-			$chunks[] = "$start-$end";
+			$chunks[] = $start === $end
+				? "$start"
+				: "$start-$end";
 		}
 
 		return implode(', ', $chunks);

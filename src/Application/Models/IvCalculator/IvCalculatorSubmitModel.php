@@ -158,7 +158,9 @@ final class IvCalculatorSubmitModel
 				if ($statIdentifier === $highestStatIdentifier) {
 					continue;
 				}
-				$minimumIvs[$statIdentifier] = min($possibleIvs[$statIdentifier]);
+				if ($possibleIvs[$statIdentifier]) {
+					$minimumIvs[$statIdentifier] = min($possibleIvs[$statIdentifier]);
+				}
 			}
 			$maximumOfMinimumIvs = max($minimumIvs);
 
