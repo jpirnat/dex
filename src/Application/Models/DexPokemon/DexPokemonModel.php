@@ -47,6 +47,7 @@ final class DexPokemonModel
 		$this->pokemon = [
 			'identifier' => $pokemon->getIdentifier(),
 			'name' => $pokemonName->getName(),
+			'bst' => 0,
 		];
 
 		$this->baseStats = $this->dexStatRepository->getBaseStats(
@@ -54,6 +55,9 @@ final class DexPokemonModel
 			$pokemon->getId(),
 			$languageId,
 		);
+		foreach ($this->baseStats as $baseStat) {
+			$this->pokemon['bst'] += $baseStat['value'];
+		}
 
 		// Set generations for the generation control.
 		$this->versionGroupModel->setWithPokemon($pokemon->getId());
