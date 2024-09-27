@@ -2,6 +2,7 @@ month,name,format_id,reason
 2014-11-01,1v1,\N,
 2014-11-01,350cup,\N,
 2014-11-01,almostanyability,\N,
+2014-11-01,anythinggoes,\N,not official
 2014-11-01,battlespotdoubles,\N,battle spot
 2014-11-01,battlespotsingles,\N,battle spot
 2014-11-01,battlespotspecial7,\N,battle spot
@@ -35,6 +36,7 @@ month,name,format_id,reason
 2014-12-01,1v1,\N,
 2014-12-01,350cup,\N,
 2014-12-01,almostanyability,\N,
+2014-12-01,anythinggoes,\N,not official
 2014-12-01,balancedhackmons,\N,
 2014-12-01,battleofhoenn,\N,
 2014-12-01,battlespotdoubles,\N,battle spot
@@ -74,6 +76,7 @@ month,name,format_id,reason
 2014-12-01,tiershift,\N,
 2015-01-01,1v1,\N,
 2015-01-01,almostanyability,\N,
+2015-01-01,anythinggoes,\N,not official
 2015-01-01,balancedhackmons,\N,
 2015-01-01,battleofhoenn,\N,
 2015-01-01,battlespotsingles,\N,battle spot
@@ -113,6 +116,7 @@ month,name,format_id,reason
 2015-01-01,tiershift,\N,
 2015-02-01,1v1,\N,
 2015-02-01,almostanyability,\N,
+2015-02-01,anythinggoes,\N,not official
 2015-02-01,balancedhackmons,\N,
 2015-02-01,battlespotsingles,\N,battle spot
 2015-02-01,battlespotspecial8,\N,battle spot
@@ -155,6 +159,7 @@ month,name,format_id,reason
 2015-02-01,uususpecttest,\N,suspect test
 2015-03-01,1v1,\N,
 2015-03-01,almostanyability,\N,
+2015-03-01,anythinggoes,\N,not official
 2015-03-01,balancedhackmons,\N,
 2015-03-01,battlespotsingles,\N,battle spot
 2015-03-01,battlespotspecial8,\N,battle spot
@@ -198,6 +203,7 @@ month,name,format_id,reason
 2015-03-01,uususpecttest,\N,suspect test
 2015-04-01,1v1,\N,
 2015-04-01,almostanyability,\N,
+2015-04-01,anythinggoes,\N,not official
 2015-04-01,balancedhackmons,\N,
 2015-04-01,battlespotsingles,\N,battle spot
 2015-04-01,battlespottriples,\N,battle spot
@@ -235,6 +241,7 @@ month,name,format_id,reason
 2015-05-01,1v1,\N,
 2015-05-01,2v2doubles,\N,
 2015-05-01,almostanyability,\N,
+2015-05-01,anythinggoes,\N,not official
 2015-05-01,balancedhackmons,\N,
 2015-05-01,battlecup1v1,\N,
 2015-05-01,battlefactory,\N,
@@ -279,6 +286,7 @@ month,name,format_id,reason
 2015-06-01,1v1,\N,
 2015-06-01,2v2doubles,\N,
 2015-06-01,almostanyability,\N,
+2015-06-01,anythinggoes,\N,not official
 2015-06-01,averagemons,\N,
 2015-06-01,balancedhackmons,\N,
 2015-06-01,battlecup1v1,\N,
@@ -321,6 +329,7 @@ month,name,format_id,reason
 2015-06-01,uususpecttest,\N,suspect test
 2015-07-01,1v1,\N,
 2015-07-01,almostanyability,\N,
+2015-07-01,anythinggoes,\N,not official
 2015-07-01,averagemons,\N,
 2015-07-01,balancedhackmons,\N,
 2015-07-01,battlefactory,\N,
@@ -359,6 +368,7 @@ month,name,format_id,reason
 2015-07-01,uususpecttest,\N,suspect test
 2015-08-01,1v1,\N,
 2015-08-01,almostanyability,\N,
+2015-08-01,anythinggoes,\N,not official
 2015-08-01,balancedhackmons,\N,
 2015-08-01,battlefactory,\N,
 2015-08-01,battlespotsingles,\N,battle spot
@@ -397,6 +407,7 @@ month,name,format_id,reason
 2015-08-01,tiershift,\N,
 2015-09-01,1v1,\N,
 2015-09-01,almostanyability,\N,
+2015-09-01,anythinggoes,\N,not official
 2015-09-01,balancedhackmons,\N,
 2015-09-01,battlefactory,\N,
 2015-09-01,battlespotsingles,\N,battle spot
@@ -436,6 +447,7 @@ month,name,format_id,reason
 2015-09-01,tiershift,\N,
 2015-10-01,1v1,\N,
 2015-10-01,almostanyability,\N,
+2015-10-01,anythinggoes,\N,not official
 2015-10-01,balancedhackmons,\N,
 2015-10-01,battlefactory,\N,
 2015-10-01,battlespotsingles,\N,battle spot
@@ -475,6 +487,7 @@ month,name,format_id,reason
 2015-10-01,tiershift,\N,
 2015-11-01,1v1,\N,
 2015-11-01,almostanyability,\N,
+2015-11-01,anythinggoes,\N,not official
 2015-11-01,balancedhackmons,\N,
 2015-11-01,battlefactory,\N,
 2015-11-01,battlespotsingles,\N,battle spot
@@ -518,6 +531,7 @@ month,name,format_id,reason
 2015-12-01,1v1,\N,
 2015-12-01,350cup,\N,
 2015-12-01,almostanyability,\N,
+2015-12-01,anythinggoes,\N,not official
 2015-12-01,balancedhackmons,\N,
 2015-12-01,battlefactory,\N,
 2015-12-01,battlespotsingles,\N,battle spot
@@ -558,6 +572,7 @@ month,name,format_id,reason
 2016-01-01,1v1,\N,
 2016-01-01,350cup,\N,
 2016-01-01,almostanyability,\N,
+2016-01-01,anythinggoes,\N,not official
 2016-01-01,balancedhackmons,\N,
 2016-01-01,battlefactory,\N,
 2016-01-01,battlespotsingles,\N,battle spot
@@ -590,6 +605,7 @@ month,name,format_id,reason
 2016-01-01,tiershift,\N,
 2016-02-01,1v1,\N,
 2016-02-01,almostanyability,\N,
+2016-02-01,anythinggoes,\N,not official
 2016-02-01,balancedhackmons,\N,
 2016-02-01,battlefactory,\N,
 2016-02-01,battlespotsingles,\N,battle spot
@@ -625,6 +641,7 @@ month,name,format_id,reason
 2016-02-01,voltturnmayhem,\N,
 2016-03-01,1v1,\N,
 2016-03-01,almostanyability,\N,
+2016-03-01,anythinggoes,\N,not official
 2016-03-01,balancedhackmons,\N,
 2016-03-01,battlefactory,\N,
 2016-03-01,battlespotsingles,\N,battle spot
@@ -663,6 +680,7 @@ month,name,format_id,reason
 2016-04-01,1v1,\N,
 2016-04-01,abilityunity,\N,
 2016-04-01,almostanyability,\N,
+2016-04-01,anythinggoes,\N,not official
 2016-04-01,balancedhackmons,\N,
 2016-04-01,battlefactory,\N,
 2016-04-01,battlespotsingles,\N,battle spot
@@ -696,6 +714,7 @@ month,name,format_id,reason
 2016-05-01,1v1,\N,
 2016-05-01,abilityunity,\N,
 2016-05-01,almostanyability,\N,
+2016-05-01,anythinggoes,\N,not official
 2016-05-01,balancedhackmons,\N,
 2016-05-01,battlefactory,\N,
 2016-05-01,battlespotsingles,\N,battle spot
@@ -729,6 +748,7 @@ month,name,format_id,reason
 2016-05-01,uususpecttest,\N,suspect test
 2016-06-01,1v1,\N,
 2016-06-01,almostanyability,\N,
+2016-06-01,anythinggoes,\N,not official
 2016-06-01,balancedhackmons,\N,
 2016-06-01,battlefactory,\N,
 2016-06-01,battlespotsingles,\N,battle spot
@@ -767,6 +787,7 @@ month,name,format_id,reason
 2016-07-01,1v1,\N,
 2016-07-01,aaaubers,\N,
 2016-07-01,almostanyability,\N,
+2016-07-01,anythinggoes,\N,not official
 2016-07-01,balancedhackmons,\N,
 2016-07-01,battlefactory,\N,
 2016-07-01,battlespotsingles,\N,battle spot
@@ -803,6 +824,7 @@ month,name,format_id,reason
 2016-08-01,1v1,\N,
 2016-08-01,aaaubers,\N,
 2016-08-01,almostanyability,\N,
+2016-08-01,anythinggoes,\N,not official
 2016-08-01,balancedhackmons,\N,
 2016-08-01,battlefactory,\N,
 2016-08-01,battlespotsingles,\N,battle spot
@@ -835,6 +857,7 @@ month,name,format_id,reason
 2016-08-01,unovaclassic,\N,
 2016-09-01,1v1,\N,
 2016-09-01,almostanyability,\N,
+2016-09-01,anythinggoes,\N,not official
 2016-09-01,balancedhackmons,\N,
 2016-09-01,battlefactory,\N,
 2016-09-01,battlespotsingles,\N,battle spot
@@ -870,6 +893,7 @@ month,name,format_id,reason
 2016-09-01,uususpecttest,\N,suspect test
 2016-10-01,1v1,\N,
 2016-10-01,almostanyability,\N,
+2016-10-01,anythinggoes,\N,not official
 2016-10-01,balancedhackmons,\N,
 2016-10-01,battlefactory,\N,
 2016-10-01,battlespotsingles,\N,battle spot
@@ -904,6 +928,7 @@ month,name,format_id,reason
 2016-10-01,uususpecttest,\N,suspect test
 2016-11-01,1v1,\N,
 2016-11-01,almostanyability,\N,
+2016-11-01,anythinggoes,\N,not official
 2016-11-01,balancedhackmons,\N,
 2016-11-01,battlefactory,\N,
 2016-11-01,battlespotsingles,\N,battle spot
@@ -933,7 +958,8 @@ month,name,format_id,reason
 2016-11-01,gen7ou,\N,prebank
 2016-11-01,gen7oubeta,\N,beta
 2016-11-01,gen7ouprebank,\N,prebank
-2016-11-01,gen7pokebankag,36,alternate name
+2016-11-01,gen7pokebankag,\N,alternate name
+2016-11-01,gen7pokebankanythinggoes,\N,not official
 2016-11-01,gen7pokebankanythinggoesbeta,\N,beta
 2016-11-01,gen7pokebankdoublesag,\N,alternate name
 2016-11-01,gen7pokebankdoublesanythinggoesbeta,\N,beta
@@ -957,6 +983,7 @@ month,name,format_id,reason
 2016-11-01,tiershift,\N,
 2016-12-01,1v1,\N,
 2016-12-01,almostanyability,\N,
+2016-12-01,anythinggoes,\N,not official
 2016-12-01,balancedhackmons,\N,
 2016-12-01,battlefactory,\N,
 2016-12-01,battlespotsingles,\N,battle spot
@@ -986,6 +1013,7 @@ month,name,format_id,reason
 2016-12-01,gen7mixandmega,\N,
 2016-12-01,gen7mixandmegasuspecttest,\N,suspect test
 2016-12-01,gen7ou,\N,prebank
+2016-12-01,gen7pokebankanythinggoes,\N,not official
 2016-12-01,gen7pokebankoususpecttest,\N,suspect test
 2016-12-01,gen7pokebankuualpha,\N,alpha
 2016-12-01,gen7randombattle,\N,random
@@ -998,6 +1026,7 @@ month,name,format_id,reason
 2016-12-01,randombattle,\N,random
 2016-12-01,sketchmons,\N,
 2016-12-01,stabmons,\N,
+2017-01-01,anythinggoes,\N,not official
 2017-01-01,battlefactory,\N,
 2017-01-01,battlespotsingles,\N,battle spot
 2017-01-01,battlespottriples,\N,battle spot
@@ -1026,6 +1055,7 @@ month,name,format_id,reason
 2017-01-01,gen7hackmonscup,\N,
 2017-01-01,gen7mixandmega,\N,
 2017-01-01,gen7pokbilities,\N,
+2017-01-01,gen7pokebankanythinggoes,\N,not official
 2017-01-01,gen7pokebankoususpecttest,\N,suspect test
 2017-01-01,gen7prebankou,\N,prebank
 2017-01-01,gen7randombattle,\N,random
@@ -1034,8 +1064,9 @@ month,name,format_id,reason
 2017-01-01,gen7sketchmons,\N,
 2017-01-01,gen7sketchmonssuspecttest,\N,suspect test
 2017-01-01,gen7stabmons,\N,
-2017-01-01,gen7ubers,37,alternate name
+2017-01-01,gen7ubers,35,alternate name
 2017-01-01,gen7uubeta,\N,beta
+2017-02-01,anythinggoes,\N,not official
 2017-02-01,battlefactory,\N,
 2017-02-01,battlespotsingles,\N,battle spot
 2017-02-01,battlespottriples,\N,battle spot
@@ -1053,6 +1084,7 @@ month,name,format_id,reason
 2017-02-01,gen7almostanyability,\N,
 2017-02-01,gen7almostanyabilitysuspecttest,\N,suspect test
 2017-02-01,gen7alolafriendly,\N,
+2017-02-01,gen7anythinggoes,\N,not official
 2017-02-01,gen7balancedhackmons,\N,
 2017-02-01,gen7balancedhackmonssuspecttest,\N,suspect test
 2017-02-01,gen7battlespotdoubles,\N,battle spot
@@ -1070,10 +1102,11 @@ month,name,format_id,reason
 2017-02-01,gen7rualpha,\N,alpha
 2017-02-01,gen7sketchmons,\N,
 2017-02-01,gen7uubeta,\N,beta
+2017-03-01,anythinggoes,\N,not official
 2017-03-01,battlefactory,\N,
 2017-03-01,battlespotsingles,\N,battle spot
 2017-03-01,battlespottriples,\N,battle spot
-2017-03-01,doublesuu,32,too few battles: 72
+2017-03-01,doublesuu,31,too few battles: 72
 2017-03-01,gen4anythinggoes,\N,
 2017-03-01,gen4lc,13,too few battles: 37
 2017-03-01,gen4uu,12,too few battles: 48
@@ -1085,6 +1118,7 @@ month,name,format_id,reason
 2017-03-01,gen71v1,\N,
 2017-03-01,gen7almostanyability,\N,
 2017-03-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-03-01,gen7anythinggoes,\N,not official
 2017-03-01,gen7balancedhackmons,\N,
 2017-03-01,gen7balancedhackmonssuspecttest,\N,suspect test
 2017-03-01,gen7battlespotdoubles,\N,battle spot
@@ -1105,10 +1139,11 @@ month,name,format_id,reason
 2017-03-01,gen7rualpha,\N,alpha
 2017-03-01,gen7rubeta,\N,beta
 2017-03-01,gen7sketchmons,\N,
+2017-04-01,anythinggoes,\N,not official
 2017-04-01,battlefactory,\N,
 2017-04-01,battlespotsingles,\N,battle spot
 2017-04-01,battlespottriples,\N,battle spot
-2017-04-01,doublesuu,32,too few battles: 24
+2017-04-01,doublesuu,31,too few battles: 24
 2017-04-01,gen2ounosnorlax,\N,
 2017-04-01,gen4anythinggoes,\N,
 2017-04-01,gen4lc,13,too few battles: 15
@@ -1121,6 +1156,7 @@ month,name,format_id,reason
 2017-04-01,gen71v1,\N,
 2017-04-01,gen7almostanyability,\N,
 2017-04-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-04-01,gen7anythinggoes,\N,not official
 2017-04-01,gen7balancedhackmons,\N,
 2017-04-01,gen7battlespotdoubles,\N,battle spot
 2017-04-01,gen7battlespotsingles,\N,battle spot
@@ -1136,12 +1172,13 @@ month,name,format_id,reason
 2017-04-01,gen7oususpecttest,\N,suspect test
 2017-04-01,gen7rubeta,\N,beta
 2017-04-01,gen7sketchmons,\N,
-2017-04-01,lc,28,too few battles: 65
-2017-04-01,vgc2015,34,too few battles: 94
+2017-04-01,lc,27,too few battles: 65
+2017-04-01,vgc2015,33,too few battles: 94
+2017-05-01,anythinggoes,\N,not official
 2017-05-01,battlefactory,\N,
 2017-05-01,battlespotsingles,\N,battle spot
 2017-05-01,battlespottriples,\N,battle spot
-2017-05-01,doublesuu,32,too few battles: 16
+2017-05-01,doublesuu,31,too few battles: 16
 2017-05-01,gen2ounosnorlax,\N,
 2017-05-01,gen4lc,13,too few battles: 5
 2017-05-01,gen4oulatimence,\N,
@@ -1154,6 +1191,7 @@ month,name,format_id,reason
 2017-05-01,gen71v1,\N,
 2017-05-01,gen71v1suspecttest,\N,suspect test
 2017-05-01,gen7almostanyability,\N,
+2017-05-01,gen7anythinggoes,\N,not official
 2017-05-01,gen7balancedhackmons,\N,
 2017-05-01,gen7battlespotdoubles,\N,battle spot
 2017-05-01,gen7battlespotsingles,\N,battle spot
@@ -1172,12 +1210,13 @@ month,name,format_id,reason
 2017-05-01,gen7oususpecttest,\N,suspect test
 2017-05-01,gen7rubeta,\N,beta
 2017-05-01,gen7sketchmons,\N,
-2017-05-01,lc,28,too few battles: 36
-2017-05-01,vgc2015,34,too few battles: 45
+2017-05-01,lc,27,too few battles: 36
+2017-05-01,vgc2015,33,too few battles: 45
+2017-06-01,anythinggoes,\N,not official
 2017-06-01,battlefactory,\N,
 2017-06-01,battlespotsingles,\N,battle spot
 2017-06-01,battlespottriples,\N,battle spot
-2017-06-01,doublesuu,32,too few battles: 4
+2017-06-01,doublesuu,31,too few battles: 4
 2017-06-01,gen4lc,13,too few battles: 13
 2017-06-01,gen4uu,12,too few battles: 31
 2017-06-01,gen5doublesou,20,too few battles: 47
@@ -1189,6 +1228,7 @@ month,name,format_id,reason
 2017-06-01,gen5uu,16,too few battles: 7
 2017-06-01,gen71v1,\N,
 2017-06-01,gen7almostanyability,\N,
+2017-06-01,gen7anythinggoes,\N,not official
 2017-06-01,gen7balancedhackmons,\N,
 2017-06-01,gen7battlespotdoubles,\N,battle spot
 2017-06-01,gen7battlespotsingles,\N,battle spot
@@ -1206,10 +1246,10 @@ month,name,format_id,reason
 2017-06-01,gen7rubeta,\N,beta
 2017-06-01,gen7sketchmons,\N,
 2017-06-01,gen7tinytourney,\N,
-2017-06-01,lc,28,too few battles: 30
-2017-06-01,nu,26,too few battles: 79
-2017-06-01,ru,25,too few battles: 54
-2017-06-01,vgc2015,34,too few battles: 33
+2017-06-01,lc,27,too few battles: 30
+2017-06-01,nu,25,too few battles: 79
+2017-06-01,ru,24,too few battles: 54
+2017-06-01,vgc2015,33,too few battles: 33
 2017-07-01,gen1oumew,\N,
 2017-07-01,gen4lc,13,too few battles: 4
 2017-07-01,gen4uu,12,too few battles: 40
@@ -1218,18 +1258,20 @@ month,name,format_id,reason
 2017-07-01,gen5nu,18,too few battles: 6
 2017-07-01,gen5ru,17,too few battles: 5
 2017-07-01,gen5uu,16,too few battles: 6
+2017-07-01,gen6anythinggoes,\N,not official
 2017-07-01,gen6battlefactory,\N,
 2017-07-01,gen6battlespotdoubles,\N,battle spot
 2017-07-01,gen6battlespotsingles,\N,battle spot
 2017-07-01,gen6battlespottriples,\N,battle spot
-2017-07-01,gen6doublesuu,32,too few battles: 3
-2017-07-01,gen6lc,28,too few battles: 33
-2017-07-01,gen6nu,26,too few battles: 86
-2017-07-01,gen6ru,25,too few battles: 30
+2017-07-01,gen6doublesuu,31,too few battles: 3
+2017-07-01,gen6lc,27,too few battles: 33
+2017-07-01,gen6nu,25,too few battles: 86
+2017-07-01,gen6ru,24,too few battles: 30
 2017-07-01,gen71v1,\N,
 2017-07-01,gen71v1suspecttest,\N,suspect test
 2017-07-01,gen7almostanyability,\N,
 2017-07-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-07-01,gen7anythinggoes,\N,not official
 2017-07-01,gen7balancedhackmons,\N,
 2017-07-01,gen7balancedhackmonssuspecttest,\N,suspect test
 2017-07-01,gen7battlespotdoubles,\N,battle spot
@@ -1258,19 +1300,21 @@ month,name,format_id,reason
 2017-08-01,gen5nu,18,too few battles: 2
 2017-08-01,gen5ru,17,too few battles: 8
 2017-08-01,gen5uu,16,too few battles: 9
+2017-08-01,gen6anythinggoes,\N,not official
 2017-08-01,gen6battlefactory,\N,
 2017-08-01,gen6battlespotdoubles,\N,battle spot
 2017-08-01,gen6battlespotsingles,\N,battle spot
 2017-08-01,gen6battlespottriples,\N,battle spot
-2017-08-01,gen6lc,28,too few battles: 12
-2017-08-01,gen6nu,26,too few battles: 46
-2017-08-01,gen6pu,27,too few battles: 20
-2017-08-01,gen6ru,25,too few battles: 38
+2017-08-01,gen6lc,27,too few battles: 12
+2017-08-01,gen6nu,25,too few battles: 46
+2017-08-01,gen6pu,26,too few battles: 20
+2017-08-01,gen6ru,24,too few battles: 38
 2017-08-01,gen71v1,\N,
 2017-08-01,gen71v1suspecttest,\N,suspect test
 2017-08-01,gen72017noholdsbarred,\N,
 2017-08-01,gen72v2doubles,\N,
 2017-08-01,gen7almostanyability,\N,
+2017-08-01,gen7anythinggoes,\N,not official
 2017-08-01,gen7balancedhackmons,\N,
 2017-08-01,gen7battlespotdoubles,\N,battle spot
 2017-08-01,gen7battlespotsingles,\N,battle spot
@@ -1301,18 +1345,20 @@ month,name,format_id,reason
 2017-09-01,gen5nu,18,too few battles: 3
 2017-09-01,gen5ru,17,too few battles: 1
 2017-09-01,gen5uu,16,too few battles: 12
+2017-09-01,gen6anythinggoes,\N,not official
 2017-09-01,gen6battlefactory,\N,
 2017-09-01,gen6battlespotdoubles,\N,battle spot
 2017-09-01,gen6battlespotsingles,\N,battle spot
 2017-09-01,gen6battlespottriples,\N,battle spot
-2017-09-01,gen6lc,28,too few battles: 7
-2017-09-01,gen6nu,26,too few battles: 24
-2017-09-01,gen6pu,27,too few battles: 11
-2017-09-01,gen6ru,25,too few battles: 17
+2017-09-01,gen6lc,27,too few battles: 7
+2017-09-01,gen6nu,25,too few battles: 24
+2017-09-01,gen6pu,26,too few battles: 11
+2017-09-01,gen6ru,24,too few battles: 17
 2017-09-01,gen71v1,\N,
 2017-09-01,gen72v2doubles,\N,
 2017-09-01,gen7almostanyability,\N,
 2017-09-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-09-01,gen7anythinggoes,\N,not official
 2017-09-01,gen7balancedhackmons,\N,
 2017-09-01,gen7balancedhackmonssuspecttest,\N,suspect test
 2017-09-01,gen7battlespotdoubles,\N,battle spot
@@ -1343,18 +1389,20 @@ month,name,format_id,reason
 2017-10-01,gen5nu,18,too few battles: 6
 2017-10-01,gen5ru,17,too few battles: 2
 2017-10-01,gen5uu,16,too few battles: 12
+2017-10-01,gen6anythinggoes,\N,not official
 2017-10-01,gen6battlefactory,\N,
 2017-10-01,gen6battlespotdoubles,\N,battle spot
 2017-10-01,gen6battlespotsingles,\N,battle spot
 2017-10-01,gen6battlespottriples,\N,battle spot
-2017-10-01,gen6lc,28,too few battles: 8
-2017-10-01,gen6nu,26,too few battles: 16
-2017-10-01,gen6pu,27,too few battles: 5
-2017-10-01,gen6ru,25,too few battles: 7
+2017-10-01,gen6lc,27,too few battles: 8
+2017-10-01,gen6nu,25,too few battles: 16
+2017-10-01,gen6pu,26,too few battles: 5
+2017-10-01,gen6ru,24,too few battles: 7
 2017-10-01,gen71v1,\N,
 2017-10-01,gen71v1suspecttest,\N,suspect test
 2017-10-01,gen7almostanyability,\N,
 2017-10-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-10-01,gen7anythinggoes,\N,not official
 2017-10-01,gen7balancedhackmons,\N,
 2017-10-01,gen7battlespotdoubles,\N,battle spot
 2017-10-01,gen7battlespotsingles,\N,battle spot
@@ -1383,16 +1431,18 @@ month,name,format_id,reason
 2017-11-01,gen5pu,\N,not official
 2017-11-01,gen5ru,17,too few battles: 1
 2017-11-01,gen5uu,16,too few battles: 3
+2017-11-01,gen6anythinggoes,\N,not official
 2017-11-01,gen6battlefactory,\N,
 2017-11-01,gen6battlespotdoubles,\N,battle spot
 2017-11-01,gen6battlespotsingles,\N,battle spot
 2017-11-01,gen6battlespottriples,\N,battle spot
-2017-11-01,gen6lc,28,too few battles: 14
-2017-11-01,gen6nu,26,too few battles: 6
-2017-11-01,gen6pu,27,too few battles: 10
-2017-11-01,gen6ru,25,too few battles: 13
+2017-11-01,gen6lc,27,too few battles: 14
+2017-11-01,gen6nu,25,too few battles: 6
+2017-11-01,gen6pu,26,too few battles: 10
+2017-11-01,gen6ru,24,too few battles: 13
 2017-11-01,gen71v1,\N,
 2017-11-01,gen7almostanyability,\N,
+2017-11-01,gen7anythinggoes,\N,not official
 2017-11-01,gen7balancedhackmons,\N,
 2017-11-01,gen7battlespotdoubles,\N,battle spot
 2017-11-01,gen7battlespotsingles,\N,battle spot
@@ -1420,17 +1470,18 @@ month,name,format_id,reason
 2017-12-01,gen5doublesou,20,too few battles: 1
 2017-12-01,gen5pu,\N,not official
 2017-12-01,gen5ubers,14,too few battles: 2
-2017-12-01,gen6anythinggoes,21,too few battles: 79
+2017-12-01,gen6anythinggoes,\N,too few battles: 79
 2017-12-01,gen6battlefactory,\N,
 2017-12-01,gen6battlespottriples,\N,battle spot
-2017-12-01,gen6doublesou,31,too few battles: 11
+2017-12-01,gen6doublesou,30,too few battles: 11
 2017-12-01,gen6ounoteampreview,\N,
-2017-12-01,gen6ubers,22,too few battles: 48
-2017-12-01,gen6uu,24,too few battles: 6
+2017-12-01,gen6ubers,21,too few battles: 48
+2017-12-01,gen6uu,23,too few battles: 6
 2017-12-01,gen71v1,\N,
 2017-12-01,gen71v1suspecttest,\N,suspect test
 2017-12-01,gen7almostanyability,\N,
 2017-12-01,gen7almostanyabilitysuspecttest,\N,suspect test
+2017-12-01,gen7anythinggoes,\N,not official
 2017-12-01,gen7balancedhackmons,\N,
 2017-12-01,gen7battlespotdoubles,\N,battle spot
 2017-12-01,gen7battlespotsingles,\N,battle spot
@@ -1466,23 +1517,24 @@ month,name,format_id,reason
 2018-01-01,gen5customgame,\N,
 2018-01-01,gen5gbudoubles,\N,
 2018-01-01,gen5ru,17,too few battles: 49
-2018-01-01,gen6anythinggoes,21,too few battles: 0
+2018-01-01,gen6anythinggoes,\N,too few battles: 0
 2018-01-01,gen6battlefactory,\N,
 2018-01-01,gen6battlespotdoubles,\N,battle spot
 2018-01-01,gen6cap,\N,cap
 2018-01-01,gen6customgame,\N,
-2018-01-01,gen6monotype,29,too few battles: 1
+2018-01-01,gen6monotype,28,too few battles: 1
 2018-01-01,gen6ounoteampreview,\N,
-2018-01-01,gen6ru,25,too few battles: 0
+2018-01-01,gen6ru,24,too few battles: 0
 2018-01-01,gen6triplescustomgame,\N,
-2018-01-01,gen6ubers,22,too few battles: 1
-2018-01-01,gen6uu,24,too few battles: 0
+2018-01-01,gen6ubers,21,too few battles: 1
+2018-01-01,gen6uu,23,too few battles: 0
 2018-01-01,gen71v1,\N,
 2018-01-01,gen71v1suspecttest,\N,suspect test
 2018-01-01,gen72v2doubles,\N,
 2018-01-01,gen7almostanyability,\N,
 2018-01-01,gen7almostanyabilitysuspecttest,\N,suspect test
 2018-01-01,gen7alphabetcup,\N,alpha
+2018-01-01,gen7anythinggoes,\N,not official
 2018-01-01,gen7balancedhackmons,\N,
 2018-01-01,gen7battlespotdoubles,\N,battle spot
 2018-01-01,gen7battlespotsingles,\N,battle spot
@@ -1515,6 +1567,7 @@ month,name,format_id,reason
 2018-02-01,gen71v1suspecttest,\N,suspect test
 2018-02-01,gen7almostanyability,\N,
 2018-02-01,gen7alphabetcup,\N,alpha
+2018-02-01,gen7anythinggoes,\N,not official
 2018-02-01,gen7balancedhackmons,\N,
 2018-02-01,gen7balancedhackmonssuspecttest,\N,suspect test
 2018-02-01,gen7battlespotdoubles,\N,battle spot
@@ -1550,16 +1603,17 @@ month,name,format_id,reason
 2018-03-01,gen5lc,19,too few battles: 1
 2018-03-01,gen5ubers,14,too few battles: 2
 2018-03-01,gen5uu,16,too few battles: 2
-2018-03-01,gen6anythinggoes,21,too few battles: 0
+2018-03-01,gen6anythinggoes,\N,too few battles: 0
 2018-03-01,gen6battlefactory,\N,
 2018-03-01,gen6battlespotsingles,\N,battle spot
 2018-03-01,gen6customgame,\N,
 2018-03-01,gen6doublescustomgame,\N,
-2018-03-01,gen6ubers,22,too few battles: 5
-2018-03-01,gen6uu,24,too few battles: 2
+2018-03-01,gen6ubers,21,too few battles: 5
+2018-03-01,gen6uu,23,too few battles: 2
 2018-03-01,gen71v1,\N,
 2018-03-01,gen72v2doubles,\N,
 2018-03-01,gen7almostanyability,\N,
+2018-03-01,gen7anythinggoes,\N,not official
 2018-03-01,gen7balancedhackmons,\N,
 2018-03-01,gen7balancedhackmonssuspecttest,\N,suspect test
 2018-03-01,gen7battlefactory,\N,
@@ -1596,6 +1650,7 @@ month,name,format_id,reason
 2018-04-01,gen72v2doubles,\N,
 2018-04-01,gen7350cup,\N,
 2018-04-01,gen7almostanyability,\N,
+2018-04-01,gen7anythinggoes,\N,not official
 2018-04-01,gen7balancedhackmons,\N,
 2018-04-01,gen7battlefactory,\N,
 2018-04-01,gen7battlespotdoubles,\N,battle spot
@@ -1626,6 +1681,7 @@ month,name,format_id,reason
 2018-05-01,gen71v1,\N,
 2018-05-01,gen7350cup,\N,
 2018-05-01,gen7almostanyability,\N,
+2018-05-01,gen7anythinggoes,\N,not official
 2018-05-01,gen7balancedhackmons,\N,
 2018-05-01,gen7battlefactory,\N,
 2018-05-01,gen7battlespotdoubles,\N,battle spot
@@ -1650,10 +1706,11 @@ month,name,format_id,reason
 2018-05-01,gen7zu,\N,not official
 2018-06-01,gen2nu,\N,
 2018-06-01,gen4outeampreview,\N,
-2018-06-01,gen6nu,26,too few battles: 60
-2018-06-01,gen6uu,24,too few battles: 1
+2018-06-01,gen6nu,25,too few battles: 60
+2018-06-01,gen6uu,23,too few battles: 1
 2018-06-01,gen71v1,\N,
 2018-06-01,gen7almostanyability,\N,
+2018-06-01,gen7anythinggoes,\N,not official
 2018-06-01,gen7balancedhackmons,\N,
 2018-06-01,gen7battlefactory,\N,
 2018-06-01,gen7battlespotdoubles,\N,battle spot
@@ -1680,6 +1737,7 @@ month,name,format_id,reason
 2018-07-01,gen4outeampreview,\N,
 2018-07-01,gen71v1,\N,
 2018-07-01,gen7almostanyability,\N,
+2018-07-01,gen7anythinggoes,\N,not official
 2018-07-01,gen7balancedhackmons,\N,
 2018-07-01,gen7balancedhackmonssuspecttest,\N,suspect test
 2018-07-01,gen7battlefactory,\N,
@@ -1709,6 +1767,7 @@ month,name,format_id,reason
 2018-08-01,gen6mixandmega,\N,
 2018-08-01,gen71v1,\N,
 2018-08-01,gen7almostanyability,\N,
+2018-08-01,gen7anythinggoes,\N,not official
 2018-08-01,gen7balancedhackmons,\N,
 2018-08-01,gen7balancedhackmonssuspecttest,\N,suspect test
 2018-08-01,gen7battlefactory,\N,
@@ -1734,6 +1793,7 @@ month,name,format_id,reason
 2018-09-01,gen6mixandmega,\N,
 2018-09-01,gen71v1,\N,
 2018-09-01,gen7almostanyability,\N,
+2018-09-01,gen7anythinggoes,\N,not official
 2018-09-01,gen7balancedhackmons,\N,
 2018-09-01,gen7battlefactory,\N,
 2018-09-01,gen7battlespotdoubles,\N,battle spot
@@ -1758,6 +1818,7 @@ month,name,format_id,reason
 2018-10-01,gen71v1,\N,
 2018-10-01,gen72v2doubles,\N,
 2018-10-01,gen7almostanyability,\N,
+2018-10-01,gen7anythinggoes,\N,not official
 2018-10-01,gen7balancedhackmons,\N,
 2018-10-01,gen7battlefactory,\N,
 2018-10-01,gen7battlespotdoubles,\N,battle spot
@@ -1780,6 +1841,7 @@ month,name,format_id,reason
 2018-11-01,gen71v1,\N,
 2018-11-01,gen72v2doubles,\N,
 2018-11-01,gen7almostanyability,\N,
+2018-11-01,gen7anythinggoes,\N,not official
 2018-11-01,gen7averagemons,\N,
 2018-11-01,gen7balancedhackmons,\N,
 2018-11-01,gen7battlefactory,\N,
@@ -1805,9 +1867,10 @@ month,name,format_id,reason
 2018-12-01,gen4pu,\N,
 2018-12-01,gen5doublesou,20,too few battles: 1
 2018-12-01,gen6battlefactory,\N,
-2018-12-01,gen6ubers,22,too few battles: 16
+2018-12-01,gen6ubers,21,too few battles: 16
 2018-12-01,gen71v1,\N,
 2018-12-01,gen7almostanyability,\N,
+2018-12-01,gen7anythinggoes,\N,not official
 2018-12-01,gen7averagemons,\N,
 2018-12-01,gen7balancedhackmons,\N,
 2018-12-01,gen7battlefactory,\N,
@@ -1834,6 +1897,7 @@ month,name,format_id,reason
 2019-01-01,gen3adv200,\N,
 2019-01-01,gen71v1,\N,
 2019-01-01,gen7almostanyability,\N,
+2019-01-01,gen7anythinggoes,\N,not official
 2019-01-01,gen7balancedhackmons,\N,
 2019-01-01,gen7battlespotdoubles,\N,battle spot
 2019-01-01,gen7battlespotsingles,\N,battle spot
@@ -1857,6 +1921,7 @@ month,name,format_id,reason
 2019-02-01,gen2ouitemclause,\N,
 2019-02-01,gen71v1,\N,
 2019-02-01,gen7almostanyability,\N,
+2019-02-01,gen7anythinggoes,\N,not official
 2019-02-01,gen7balancedhackmons,\N,
 2019-02-01,gen7battlespotdoubles,\N,battle spot
 2019-02-01,gen7battlespotsingles,\N,battle spot
@@ -1881,6 +1946,7 @@ month,name,format_id,reason
 2019-03-01,gen4ubers,10,too few battles: 86
 2019-03-01,gen71v1,\N,
 2019-03-01,gen7almostanyability,\N,
+2019-03-01,gen7anythinggoes,\N,not official
 2019-03-01,gen7balancedhackmons,\N,
 2019-03-01,gen7battlespotdoubles,\N,battle spot
 2019-03-01,gen7battlespotsingles,\N,battle spot
@@ -1903,6 +1969,7 @@ month,name,format_id,reason
 2019-04-01,gen4uu,12,too few battles: 4
 2019-04-01,gen71v1,\N,
 2019-04-01,gen7almostanyability,\N,
+2019-04-01,gen7anythinggoes,\N,not official
 2019-04-01,gen7balancedhackmons,\N,
 2019-04-01,gen7battlespotdoubles,\N,battle spot
 2019-04-01,gen7battlespotsingles,\N,battle spot
@@ -1924,6 +1991,7 @@ month,name,format_id,reason
 2019-05-01,gen5balancedhackmons,\N,
 2019-05-01,gen71v1,\N,
 2019-05-01,gen7almostanyability,\N,
+2019-05-01,gen7anythinggoes,\N,not official
 2019-05-01,gen7balancedhackmons,\N,
 2019-05-01,gen7battlespotdoubles,\N,battle spot
 2019-05-01,gen7battlespotsingles,\N,battle spot
@@ -1943,9 +2011,10 @@ month,name,format_id,reason
 2019-05-01,gen7zu,\N,not official
 2019-06-01,gen51v1,\N,
 2019-06-01,gen6balancedhackmons,\N,
-2019-06-01,gen6uu,24,too few battles: 3
+2019-06-01,gen6uu,23,too few battles: 3
 2019-06-01,gen71v1,\N,
 2019-06-01,gen7almostanyability,\N,
+2019-06-01,gen7anythinggoes,\N,not official
 2019-06-01,gen7balancedhackmons,\N,
 2019-06-01,gen7battlespotdoubles,\N,battle spot
 2019-06-01,gen7battlespotsingles,\N,battle spot
@@ -1970,6 +2039,7 @@ month,name,format_id,reason
 2019-07-01,gen6balancedhackmons,\N,
 2019-07-01,gen71v1,\N,
 2019-07-01,gen7almostanyability,\N,
+2019-07-01,gen7anythinggoes,\N,not official
 2019-07-01,gen7balancedhackmons,\N,
 2019-07-01,gen7battlespotdoubles,\N,battle spot
 2019-07-01,gen7battlespotsingles,\N,battle spot
@@ -1993,6 +2063,7 @@ month,name,format_id,reason
 2019-08-01,gen4nu,\N,not official
 2019-08-01,gen71v1,\N,
 2019-08-01,gen7almostanyability,\N,
+2019-08-01,gen7anythinggoes,\N,not official
 2019-08-01,gen7balancedhackmons,\N,
 2019-08-01,gen7battlespotdoubles,\N,battle spot
 2019-08-01,gen7battlespotsingles,\N,battle spot
@@ -2017,6 +2088,7 @@ month,name,format_id,reason
 2019-09-01,gen4nu,\N,not official
 2019-09-01,gen71v1,\N,
 2019-09-01,gen7almostanyability,\N,
+2019-09-01,gen7anythinggoes,\N,not official
 2019-09-01,gen7balancedhackmons,\N,
 2019-09-01,gen7battlespotdoubles,\N,battle spot
 2019-09-01,gen7battlespotsingles,\N,battle spot
@@ -2041,6 +2113,7 @@ month,name,format_id,reason
 2019-10-01,gen71v1,\N,
 2019-10-01,gen7350cup,\N,
 2019-10-01,gen7almostanyability,\N,
+2019-10-01,gen7anythinggoes,\N,not official
 2019-10-01,gen7balancedhackmons,\N,
 2019-10-01,gen7battlespotdoubles,\N,
 2019-10-01,gen7battlespotsingles,\N,
@@ -2061,10 +2134,11 @@ month,name,format_id,reason
 2019-10-01,gen7zu,\N,not official
 2019-11-01,gen31v1,\N,
 2019-11-01,gen5ubers,14,too few battles: 17
-2019-11-01,gen6monotype,29,too few battles: 3
+2019-11-01,gen6monotype,28,too few battles: 3
 2019-11-01,gen71v1,\N,
 2019-11-01,gen7350cup,\N,
 2019-11-01,gen7almostanyability,\N,
+2019-11-01,gen7anythinggoes,\N,not official
 2019-11-01,gen7balancedhackmons,\N,
 2019-11-01,gen7battlespotdoubles,\N,battle spot
 2019-11-01,gen7battlespotsingles,\N,battle spot
@@ -2082,6 +2156,7 @@ month,name,format_id,reason
 2019-11-01,gen7zu,\N,not official
 2019-11-01,gen81v1,\N,
 2019-11-01,gen8almostanyability,\N,
+2019-11-01,gen8anythinggoes,\N,not official
 2019-11-01,gen8balancedhackmons,\N,
 2019-11-01,gen8balancedhackmonsbeta,\N,
 2019-11-01,gen8battlestadiumdoubles,\N,battle stadium
@@ -2090,7 +2165,7 @@ month,name,format_id,reason
 2019-11-01,gen8doublesoubeta,\N,beta
 2019-11-01,gen8galarbeginnings,\N,
 2019-11-01,gen8mixandmega,\N,
-2019-11-01,gen8natdexanythinggoes,63,duplicate
+2019-11-01,gen8natdexanythinggoes,60,duplicate
 2019-11-01,gen8nationaldexag,\N,national dex
 2019-11-01,gen8nationaldexbeta,\N,national dex
 2019-11-01,gen8nfe,\N,
@@ -2100,6 +2175,7 @@ month,name,format_id,reason
 2019-12-01,gen31v1,\N,
 2019-12-01,gen5ru,17,too few battles: 2
 2019-12-01,gen71v1,\N,
+2019-12-01,gen7anythinggoes,\N,not official
 2019-12-01,gen7balancedhackmons,\N,
 2019-12-01,gen7cap,\N,cap
 2019-12-01,gen7tiershift,\N,
@@ -2121,8 +2197,9 @@ month,name,format_id,reason
 2020-01-01,gen1uu,3,too few battles: 9
 2020-01-01,gen21v1,\N,
 2020-01-01,gen2nu,\N,not official
-2020-01-01,gen6nu,26,too few battles: 2
+2020-01-01,gen6nu,25,too few battles: 2
 2020-01-01,gen71v1,\N,
+2020-01-01,gen7anythinggoes,\N,not official
 2020-01-01,gen7balancedhackmons,\N,
 2020-01-01,gen7cap,\N,cap
 2020-01-01,gen7mixandmega,\N,
@@ -2148,14 +2225,15 @@ month,name,format_id,reason
 2020-02-01,gen2uu,6,too few battles: 1
 2020-02-01,gen41v1,\N,
 2020-02-01,gen71v1,\N,
+2020-02-01,gen7anythinggoes,\N,not official
 2020-02-01,gen7balancedhackmons,\N,
-2020-02-01,gen7lc,43,too few battles: 19
+2020-02-01,gen7lc,41,too few battles: 19
 2020-02-01,gen7mixandmega,\N,
-2020-02-01,gen7nu,41,too few battles: 35
+2020-02-01,gen7nu,39,too few battles: 35
 2020-02-01,gen7petmodcleanslatemicro,\N,
-2020-02-01,gen7pu,42,too few battles: 55
-2020-02-01,gen7ru,40,too few battles: 76
-2020-02-01,gen7vgc2019ultraseries,52,too few battles: 52
+2020-02-01,gen7pu,40,too few battles: 55
+2020-02-01,gen7ru,38,too few battles: 76
+2020-02-01,gen7vgc2019ultraseries,50,too few battles: 52
 2020-02-01,gen7zu,\N,not official
 2020-02-01,gen81v1,\N,
 2020-02-01,gen82v2doubles,\N,
@@ -2174,6 +2252,7 @@ month,name,format_id,reason
 2020-02-01,gen8trademarked,\N,
 2020-03-01,gen3uu,9,too few battles: 3
 2020-03-01,gen41v1,\N,
+2020-03-01,gen7anythinggoes,\N,not official
 2020-03-01,gen7petmodcleanslatemicro,\N,
 2020-03-01,gen81v1,\N,
 2020-03-01,gen8almostanyability,\N,
@@ -2196,6 +2275,7 @@ month,name,format_id,reason
 2020-04-01,gen3nu,\N,not official
 2020-04-01,gen3uubl,\N,
 2020-04-01,gen4uu,12,too few battles: 37
+2020-04-01,gen7anythinggoes,\N,not official
 2020-04-01,gen81v1,\N,
 2020-04-01,gen8almostanyability,\N,
 2020-04-01,gen8balancedhackmons,\N,
@@ -2215,6 +2295,7 @@ month,name,format_id,reason
 2020-05-01,gen3uubl,\N,
 2020-05-01,gen4anythinggoes,\N,not official
 2020-05-01,gen5uu,16,too few battles: 22
+2020-05-01,gen7anythinggoes,\N,not official
 2020-05-01,gen81v1,\N,
 2020-05-01,gen8almostanyability,\N,
 2020-05-01,gen8balancedhackmons,\N,
@@ -2236,7 +2317,8 @@ month,name,format_id,reason
 2020-06-01,gen3nu,\N,not official
 2020-06-01,gen4anythinggoes,\N,not official
 2020-06-01,gen5pu,\N,not official
-2020-06-01,gen6uu,24,too few battles: 51
+2020-06-01,gen6uu,23,too few battles: 51
+2020-06-01,gen7anythinggoes,\N,not official
 2020-06-01,gen81v1,\N,
 2020-06-01,gen82v2doubles,\N,
 2020-06-01,gen8almostanyability,\N,
@@ -2259,6 +2341,7 @@ month,name,format_id,reason
 2020-07-01,gen3nu,\N,not official
 2020-07-01,gen5pu,\N,not official
 2020-07-01,gen6purehackmons,\N,
+2020-07-01,gen7anythinggoes,\N,not official
 2020-07-01,gen81v1,\N,
 2020-07-01,gen82v2doubles,\N,
 2020-07-01,gen8almostanyability,\N,
@@ -2285,6 +2368,7 @@ month,name,format_id,reason
 2020-08-01,gen4uu,12,too few battles: 8
 2020-08-01,gen6purehackmons,\N,
 2020-08-01,gen71v1,\N,
+2020-08-01,gen7anythinggoes,\N,not official
 2020-08-01,gen7letsgoou,\N,
 2020-08-01,gen81v1,\N,
 2020-08-01,gen8almostanyability,\N,
@@ -2312,6 +2396,7 @@ month,name,format_id,reason
 2020-09-01,gen3ubers,7,too few battles: 21
 2020-09-01,gen52v2doubles,\N,
 2020-09-01,gen71v1,\N,
+2020-09-01,gen7anythinggoes,\N,not official
 2020-09-01,gen7letsgoou,\N,
 2020-09-01,gen81v1,\N,
 2020-09-01,gen8350cup,\N,
@@ -2338,10 +2423,12 @@ month,name,format_id,reason
 2020-10-01,gen1nu,\N,not official
 2020-10-01,gen2pu,\N,not official
 2020-10-01,gen4ubers,10,too few battles: 54
+2020-10-01,gen7anythinggoes,\N,not official
 2020-10-01,gen81v1,\N,
 2020-10-01,gen82v2doubles,\N,
 2020-10-01,gen8350cup,\N,
 2020-10-01,gen8almostanyability,\N,
+2020-10-01,gen8anythinggoes,\N,not official
 2020-10-01,gen8balancedhackmons,\N,
 2020-10-01,gen8battleoflegends,\N,
 2020-10-01,gen8battlestadiumdoubles,\N,battle stadium
@@ -2367,12 +2454,14 @@ month,name,format_id,reason
 2020-11-01,gen3doublesou,\N,not official
 2020-11-01,gen4nu,\N,not official
 2020-11-01,gen5ubers,14,too few battles: 20
-2020-11-01,gen6monotype,29,too few battles: 1
+2020-11-01,gen6monotype,28,too few battles: 1
 2020-11-01,gen71v1,\N,
-2020-11-01,gen7uu,39,too few battles: 35
+2020-11-01,gen7anythinggoes,\N,not official
+2020-11-01,gen7uu,37,too few battles: 35
 2020-11-01,gen81v1,\N,
 2020-11-01,gen82v2doubles,\N,
 2020-11-01,gen8almostanyability,\N,
+2020-11-01,gen8anythinggoes,\N,not official
 2020-11-01,gen8balancedhackmons,\N,
 2020-11-01,gen8battlestadiumsingles,\N,battle stadium
 2020-11-01,gen8camomons,\N,
@@ -2397,12 +2486,14 @@ month,name,format_id,reason
 2020-12-01,gen4monotype,\N,not official
 2020-12-01,gen4nu,\N,not official
 2020-12-01,gen5pu,\N,not official
-2020-12-01,gen6ubers,22,too few battles: 64
+2020-12-01,gen6ubers,21,too few battles: 64
 2020-12-01,gen71v1,\N,
+2020-12-01,gen7anythinggoes,\N,not official
 2020-12-01,gen81v1,\N,
 2020-12-01,gen82v2doubles,\N,
 2020-12-01,gen8almostanyability,\N,
 2020-12-01,gen8alphabetcup,\N,
+2020-12-01,gen8anythinggoes,\N,not official
 2020-12-01,gen8balancedhackmons,\N,
 2020-12-01,gen8battlestadiumsingles,\N,battle stadium
 2020-12-01,gen8camomons,\N,
@@ -2425,10 +2516,12 @@ month,name,format_id,reason
 2020-12-01,gen8viabilities,\N,
 2020-12-01,gen8zu,\N,not official
 2021-01-01,gen1uu,3,too few battles: 1
+2021-01-01,gen7anythinggoes,\N,not official
 2021-01-01,gen81v1,\N,
 2021-01-01,gen82v2doubles,\N,
 2021-01-01,gen8almostanyability,\N,
 2021-01-01,gen8alphabetcup,\N,
+2021-01-01,gen8anythinggoes,\N,not official
 2021-01-01,gen8balancedhackmons,\N,
 2021-01-01,gen8battlestadiumsingles,\N,battle stadium
 2021-01-01,gen8camomons,\N,
@@ -2455,10 +2548,12 @@ month,name,format_id,reason
 2021-02-01,gen5lc,19,too few battles: 0
 2021-02-01,gen6almostanyability,\N,
 2021-02-01,gen6purehackmons,\N,
+2021-02-01,gen7anythinggoes,\N,not official
 2021-02-01,gen7balancedhackmons,\N,
 2021-02-01,gen81v1,\N,
 2021-02-01,gen82v2doubles,\N,
 2021-02-01,gen8almostanyability,\N,
+2021-02-01,gen8anythinggoes,\N,not official
 2021-02-01,gen8balancedhackmons,\N,
 2021-02-01,gen8battlestadiumsingles,\N,
 2021-02-01,gen8camomons,\N,
@@ -2484,12 +2579,14 @@ month,name,format_id,reason
 2021-03-01,gen5pu,\N,not official
 2021-03-01,gen6almostanyability,\N,
 2021-03-01,gen6purehackmons,\N,
+2021-03-01,gen7anythinggoes,\N,not official
 2021-03-01,gen7balancedhackmons,\N,
 2021-03-01,gen7mixandmega,\N,
 2021-03-01,gen7stabmons,\N,
 2021-03-01,gen81v1,\N,
 2021-03-01,gen82v2doubles,\N,
 2021-03-01,gen8almostanyability,\N,
+2021-03-01,gen8anythinggoes,\N,not official
 2021-03-01,gen8balancedhackmons,\N,
 2021-03-01,gen8battlestadiumsingles,\N,
 2021-03-01,gen8camomons,\N,
@@ -2515,13 +2612,15 @@ month,name,format_id,reason
 2021-04-01,gen6almostanyability,\N,
 2021-04-01,gen6cap,\N,cap
 2021-04-01,gen6purehackmons,\N,
+2021-04-01,gen7anythinggoes,\N,not official
 2021-04-01,gen7balancedhackmons,\N,
 2021-04-01,gen7mixandmega,\N,
-2021-04-01,gen7pu,42,too few battles: 3
+2021-04-01,gen7pu,40,too few battles: 3
 2021-04-01,gen7stabmons,\N,
 2021-04-01,gen81v1,\N,
 2021-04-01,gen82v2doubles,\N,
 2021-04-01,gen8almostanyability,\N,
+2021-04-01,gen8anythinggoes,\N,not official
 2021-04-01,gen8anythinggoeswitheternamax,\N,
 2021-04-01,gen8balancedhackmons,\N,
 2021-04-01,gen8battlestadiumsingles,\N,
@@ -2565,9 +2664,10 @@ month,name,format_id,reason
 2021-05-01,gen6cap,\N,cap
 2021-05-01,gen6customgame,\N,
 2021-05-01,gen6purehackmons,\N,
-2021-05-01,gen6ubers,22,too few battles: 1
-2021-05-01,gen6vgc2016,35,too few battles: 1
+2021-05-01,gen6ubers,21,too few battles: 1
+2021-05-01,gen6vgc2016,34,too few battles: 1
 2021-05-01,gen71v1,\N,
+2021-05-01,gen7anythinggoes,\N,not official
 2021-05-01,gen7balancedhackmons,\N,
 2021-05-01,gen7customgame,\N,
 2021-05-01,gen7mixandmega,\N,
@@ -2575,6 +2675,7 @@ month,name,format_id,reason
 2021-05-01,gen81v1,\N,
 2021-05-01,gen82v2doubles,\N,
 2021-05-01,gen8almostanyability,\N,
+2021-05-01,gen8anythinggoes,\N,not official
 2021-05-01,gen8anythinggoesobtainable,\N,
 2021-05-01,gen8balancedhackmons,\N,
 2021-05-01,gen8battlestadiumsingles,\N,
@@ -2599,26 +2700,28 @@ month,name,format_id,reason
 2021-05-01,gen8sharedpower,\N,
 2021-05-01,gen8sketchmons,\N,
 2021-05-01,gen8stabmons,\N,
-2021-05-01,gen8vgc2021,66,format was renamed last month
+2021-05-01,gen8vgc2021,63,format was renamed last month
 2021-05-01,gen8vgc2021series9limitonerestrictedrestrictedlegendary,\N,
 2021-05-01,gen8zu,\N,not official
 2021-06-01,gen3nu,\N,not official
 2021-06-01,gen3ubers,7,too few battles: 2
 2021-06-01,gen4lc,13,too few battles: 1
 2021-06-01,gen4ubers,10,too few battles: 0
-2021-06-01,gen6anythinggoes,21,too few battles: 5
+2021-06-01,gen6anythinggoes,\N,too few battles: 5
 2021-06-01,gen6battlespotsingles,\N,
 2021-06-01,gen6purehackmons,\N,
-2021-06-01,gen6ru,25,too few battles: 1
-2021-06-01,gen6uu,24,too few battles: 9
+2021-06-01,gen6ru,24,too few battles: 1
+2021-06-01,gen6uu,23,too few battles: 9
+2021-06-01,gen7anythinggoes,\N,not official
 2021-06-01,gen7balancedhackmons,\N,
 2021-06-01,gen7mixandmega,\N,
-2021-06-01,gen7monotype,44,too few battles: 81
+2021-06-01,gen7monotype,42,too few battles: 81
 2021-06-01,gen7stabmons,\N,
-2021-06-01,gen7vgc2017,48,too few battles: 2
+2021-06-01,gen7vgc2017,46,too few battles: 2
 2021-06-01,gen81v1,\N,
 2021-06-01,gen82v2doubles,\N,
 2021-06-01,gen8almostanyability,\N,
+2021-06-01,gen8anythinggoes,\N,not official
 2021-06-01,gen8balancedhackmons,\N,
 2021-06-01,gen8battlestadiumsingles,\N,
 2021-06-01,gen8bonustype,\N,
@@ -2647,11 +2750,13 @@ month,name,format_id,reason
 2021-07-01,gen1ubers,1,too few battles: 29
 2021-07-01,gen3nu,\N,not official
 2021-07-01,gen6purehackmons,\N,
+2021-07-01,gen7anythinggoes,\N,not official
 2021-07-01,gen7balancedhackmons,\N,
 2021-07-01,gen7mixandmega,\N,
 2021-07-01,gen81v1,\N,
 2021-07-01,gen82v2doubles,\N,
 2021-07-01,gen8almostanyability,\N,
+2021-07-01,gen8anythinggoes,\N,not official
 2021-07-01,gen8balancedhackmons,\N,
 2021-07-01,gen8battlestadiumsingles,\N,
 2021-07-01,gen8bonustype,\N,
@@ -2674,13 +2779,14 @@ month,name,format_id,reason
 2021-07-01,gen8purehackmons,\N,
 2021-07-01,gen8samedoublebeat,\N,
 2021-07-01,gen8stabmons,\N,
-2021-07-01,gen8vgc2021series9,66,duplicate
+2021-07-01,gen8vgc2021series9,63,duplicate
 2021-07-01,gen8waterparadise,\N,
 2021-07-01,gen8zu,\N,not official
 2021-08-01,gen1stadiumou,\N,
 2021-08-01,gen2ubers,4,too few battles: 1
 2021-08-01,gen5ru,17,too few battles: 18
 2021-08-01,gen6purehackmons,\N,
+2021-08-01,gen7anythinggoes,\N,not official
 2021-08-01,gen7balancedhackmons,\N,
 2021-08-01,gen7letsgoou,\N,
 2021-08-01,gen7mixandmega,\N,
@@ -2688,6 +2794,7 @@ month,name,format_id,reason
 2021-08-01,gen82v2doubles,\N,
 2021-08-01,gen8almostanyability,\N,
 2021-08-01,gen8alphabetcup,\N,
+2021-08-01,gen8anythinggoes,\N,not official
 2021-08-01,gen8balancedhackmons,\N,
 2021-08-01,gen8battlestadiumsingles,\N,
 2021-08-01,gen8camomons,\N,
@@ -2708,13 +2815,14 @@ month,name,format_id,reason
 2021-08-01,gen8samedoublebeat,\N,
 2021-08-01,gen8stabmons,\N,
 2021-08-01,gen8stabmonsmixandmega,\N,
-2021-08-01,gen8vgc2021series9,66,duplicate
+2021-08-01,gen8vgc2021series9,63,duplicate
 2021-08-01,gen8zu,\N,not official
 2021-09-01,gen1tradebacksou,\N,
 2021-09-01,gen31v1,\N,
 2021-09-01,gen3ubers,7,too few battles: 52
 2021-09-01,gen4uu,12,too few battles: 43
 2021-09-01,gen6purehackmons,\N,
+2021-09-01,gen7anythinggoes,\N,not official
 2021-09-01,gen7balancedhackmons,\N,
 2021-09-01,gen7letsgoou,\N,
 2021-09-01,gen7mixandmega,\N,
@@ -2722,6 +2830,7 @@ month,name,format_id,reason
 2021-09-01,gen82v2doubles,\N,
 2021-09-01,gen8almostanyability,\N,
 2021-09-01,gen8alphabetcup,\N,
+2021-09-01,gen8anythinggoes,\N,not official
 2021-09-01,gen8balancedhackmons,\N,
 2021-09-01,gen8battlestadiumsingles,\N,
 2021-09-01,gen8cap,\N,cap
@@ -2745,12 +2854,14 @@ month,name,format_id,reason
 2021-10-01,gen2nc2000crystalmoves,\N,
 2021-10-01,gen31v1,\N,
 2021-10-01,gen6purehackmons,\N,
+2021-10-01,gen7anythinggoes,\N,not official
 2021-10-01,gen7balancedhackmons,\N,
 2021-10-01,gen7mixandmega,\N,
 2021-10-01,gen81v1,\N,
 2021-10-01,gen82v2doubles,\N,
 2021-10-01,gen8350cup,\N,
 2021-10-01,gen8almostanyability,\N,
+2021-10-01,gen8anythinggoes,\N,not official
 2021-10-01,gen8balancedhackmons,\N,
 2021-10-01,gen8battlestadiumsingles,\N,
 2021-10-01,gen8cap,\N,cap
@@ -2773,14 +2884,16 @@ month,name,format_id,reason
 2021-11-01,gen2nc2000crystalmoves,\N,
 2021-11-01,gen3doublesou,\N,not official
 2021-11-01,gen6purehackmons,\N,
+2021-11-01,gen7anythinggoes,\N,not official
 2021-11-01,gen7balancedhackmons,\N,
 2021-11-01,gen7mixandmega,\N,
-2021-11-01,gen7pu,42,too few battles: 45
+2021-11-01,gen7pu,40,too few battles: 45
 2021-11-01,gen81v1,\N,
 2021-11-01,gen82v2doubles,\N,
 2021-11-01,gen8350cup,\N,
 2021-11-01,gen8aaadoubles,\N,
 2021-11-01,gen8almostanyability,\N,
+2021-11-01,gen8anythinggoes,\N,not official
 2021-11-01,gen8balancedhackmons,\N,
 2021-11-01,gen8battlestadiumsingles,\N,
 2021-11-01,gen8bdspbattlefestivaldoubles,\N,
@@ -2807,12 +2920,14 @@ month,name,format_id,reason
 2021-12-01,gen4uu,12,too few battles: 59
 2021-12-01,gen61v1,\N,
 2021-12-01,gen6purehackmons,\N,
+2021-12-01,gen7anythinggoes,\N,not official
 2021-12-01,gen7balancedhackmons,\N,
 2021-12-01,gen7mixandmega,\N,
 2021-12-01,gen81v1,\N,
 2021-12-01,gen82v2doubles,\N,
 2021-12-01,gen8aaadoubles,\N,
 2021-12-01,gen8almostanyability,\N,
+2021-12-01,gen8anythinggoes,\N,not official
 2021-12-01,gen8balancedhackmons,\N,
 2021-12-01,gen8battlestadiumsingles,\N,
 2021-12-01,gen8bdspbalancedhackmons,\N,
@@ -2843,12 +2958,14 @@ month,name,format_id,reason
 2022-01-01,gen5zu,\N,not official
 2022-01-01,gen61v1,\N,
 2022-01-01,gen6purehackmons,\N,
+2022-01-01,gen7anythinggoes,\N,not official
 2022-01-01,gen7balancedhackmons,\N,
 2022-01-01,gen7mixandmega,\N,
 2022-01-01,gen81v1,\N,
 2022-01-01,gen82v2doubles,\N,
 2022-01-01,gen8almostanyability,\N,
 2022-01-01,gen8alternatium,\N,
+2022-01-01,gen8anythinggoes,\N,not official
 2022-01-01,gen8balancedhackmons,\N,
 2022-01-01,gen8battlestadiumsingles,\N,
 2022-01-01,gen8bdsp3v3singles,\N,
@@ -2882,12 +2999,14 @@ month,name,format_id,reason
 2022-02-01,gen5nu,18,too few battles: 18
 2022-02-01,gen5zu,\N,not official
 2022-02-01,gen6purehackmons,\N,
+2022-02-01,gen7anythinggoes,\N,not official
 2022-02-01,gen7balancedhackmons,\N,
 2022-02-01,gen7mixandmega,\N,
 2022-02-01,gen81v1,\N,
 2022-02-01,gen82v2doubles,\N,
 2022-02-01,gen8almostanyability,\N,
 2022-02-01,gen8alternatium,\N,
+2022-02-01,gen8anythinggoes,\N,not official
 2022-02-01,gen8balancedhackmons,\N,
 2022-02-01,gen8battlestadiumsingles,\N,
 2022-02-01,gen8bdsp3v3singles,\N,
@@ -2920,11 +3039,13 @@ month,name,format_id,reason
 2022-03-01,gen5pu,\N,not official
 2022-03-01,gen5zu,\N,not official
 2022-03-01,gen6purehackmons,\N,
+2022-03-01,gen7anythinggoes,\N,not official
 2022-03-01,gen7balancedhackmons,\N,
 2022-03-01,gen7mixandmega,\N,
 2022-03-01,gen81v1,\N,
 2022-03-01,gen82v2doubles,\N,
 2022-03-01,gen8almostanyability,\N,
+2022-03-01,gen8anythinggoes,\N,not official
 2022-03-01,gen8balancedhackmons,\N,
 2022-03-01,gen8battlestadiumsingles,\N,
 2022-03-01,gen8bdsp3v3singles,\N,
@@ -2956,12 +3077,14 @@ month,name,format_id,reason
 2022-04-01,gen5pu,\N,not official
 2022-04-01,gen5zu,\N,not official
 2022-04-01,gen6purehackmons,\N,
+2022-04-01,gen7anythinggoes,\N,not official
 2022-04-01,gen7balancedhackmons,\N,
-2022-04-01,gen7lc,43,too few battles: 10
+2022-04-01,gen7lc,41,too few battles: 10
 2022-04-01,gen7mixandmega,\N,
 2022-04-01,gen81v1,\N,
 2022-04-01,gen82v2doubles,\N,
 2022-04-01,gen8almostanyability,\N,
+2022-04-01,gen8anythinggoes,\N,not official
 2022-04-01,gen8balancedhackmons,\N,
 2022-04-01,gen8battlestadiumsingles,\N,
 2022-04-01,gen8bdspbattlefestivaldoubles,\N,
@@ -2994,13 +3117,15 @@ month,name,format_id,reason
 2022-05-01,gen4anythinggoes,\N,
 2022-05-01,gen5nu,18,too few battles: 9
 2022-05-01,gen5uu,16,too few battles: 14
-2022-05-01,gen6pu,27,too few battles: 10
+2022-05-01,gen6pu,26,too few battles: 10
 2022-05-01,gen6purehackmons,\N,
+2022-05-01,gen7anythinggoes,\N,not official
 2022-05-01,gen7balancedhackmons,\N,
 2022-05-01,gen7mixandmega,\N,
 2022-05-01,gen81v1,\N,
 2022-05-01,gen82v2doubles,\N,
 2022-05-01,gen8almostanyability,\N,
+2022-05-01,gen8anythinggoes,\N,not official
 2022-05-01,gen8balancedhackmons,\N,
 2022-05-01,gen8battlestadiumsingles,\N,
 2022-05-01,gen8bdspbattlefestivaldoubles,\N,
@@ -3030,14 +3155,16 @@ month,name,format_id,reason
 2022-05-01,gen8zu,\N,not official
 2022-06-01,gen4anythinggoes,\N,not official
 2022-06-01,gen6purehackmons,\N,
-2022-06-01,gen6uu,24,too few battles: 26
+2022-06-01,gen6uu,23,too few battles: 26
 2022-06-01,gen6zu,\N,not official
+2022-06-01,gen7anythinggoes,\N,not official
 2022-06-01,gen7balancedhackmons,\N,
 2022-06-01,gen7mixandmega,\N,
-2022-06-01,gen7ru,40,too few battles: 19
+2022-06-01,gen7ru,38,too few battles: 19
 2022-06-01,gen81v1,\N,
 2022-06-01,gen82v2doubles,\N,
 2022-06-01,gen8almostanyability,\N,
+2022-06-01,gen8anythinggoes,\N,not official
 2022-06-01,gen8balancedhackmons,\N,
 2022-06-01,gen8battlestadiumsingles,\N,
 2022-06-01,gen8bdspbattlefestivaldoubles,\N,
@@ -3071,12 +3198,14 @@ month,name,format_id,reason
 2022-07-01,gen31v1,\N,
 2022-07-01,gen6purehackmons,\N,
 2022-07-01,gen6zu,\N,not official
+2022-07-01,gen7anythinggoes,\N,not official
 2022-07-01,gen7balancedhackmons,\N,
 2022-07-01,gen7mixandmega,\N,
-2022-07-01,gen7uu,39,too few battles: 44
+2022-07-01,gen7uu,37,too few battles: 44
 2022-07-01,gen81v1,\N,
 2022-07-01,gen82v2doubles,\N,
 2022-07-01,gen8almostanyability,\N,
+2022-07-01,gen8anythinggoes,\N,not official
 2022-07-01,gen8balancedhackmons,\N,
 2022-07-01,gen8battlestadiumsingles,\N,
 2022-07-01,gen8bdspbattlefestivaldoubles,\N,
@@ -3112,12 +3241,14 @@ month,name,format_id,reason
 2022-08-01,gen2ubers,4,too few battles: 14
 2022-08-01,gen31v1,\N,
 2022-08-01,gen6purehackmons,\N,
+2022-08-01,gen7anythinggoes,\N,not official
 2022-08-01,gen7balancedhackmons,\N,
 2022-08-01,gen7letsgouu,\N,
 2022-08-01,gen7mixandmega,\N,
 2022-08-01,gen81v1,\N,
 2022-08-01,gen82v2doubles,\N,
 2022-08-01,gen8almostanyability,\N,
+2022-08-01,gen8anythinggoes,\N,not official
 2022-08-01,gen8balancedhackmons,\N,
 2022-08-01,gen8battlestadiumsingles,\N,
 2022-08-01,gen8bdspbattlefestivaldoubles,\N,
@@ -3151,12 +3282,14 @@ month,name,format_id,reason
 2022-09-01,gen4lc,\N,not official
 2022-09-01,gen5ru,\N,too few battles: 44
 2022-09-01,gen6purehackmons,\N,
+2022-09-01,gen7anythinggoes,\N,not official
 2022-09-01,gen7balancedhackmons,\N,
 2022-09-01,gen7letsgouu,\N,
 2022-09-01,gen7mixandmega,\N,
 2022-09-01,gen81v1,\N,
 2022-09-01,gen82v2doubles,\N,
 2022-09-01,gen8almostanyability,\N,
+2022-09-01,gen8anythinggoes,\N,not official
 2022-09-01,gen8balancedhackmons,\N,
 2022-09-01,gen8battlestadiumdoublesseries13,\N,
 2022-09-01,gen8battlestadiumsingles,\N,
@@ -3185,11 +3318,13 @@ month,name,format_id,reason
 2022-10-01,gen2uubl,\N,
 2022-10-01,gen4ubers,10,too few battles: 8
 2022-10-01,gen6purehackmons,\N,
+2022-10-01,gen7anythinggoes,\N,not official
 2022-10-01,gen7balancedhackmons,\N,
 2022-10-01,gen7mixandmega,\N,
 2022-10-01,gen81v1,\N,
 2022-10-01,gen82v2doubles,\N,
 2022-10-01,gen8almostanyability,\N,
+2022-10-01,gen8anythinggoes,\N,not official
 2022-10-01,gen8balancedhackmons,\N,
 2022-10-01,gen8battlestadiumdoublesseries13,\N,
 2022-10-01,gen8battlestadiumsingles,\N,
@@ -3217,12 +3352,14 @@ month,name,format_id,reason
 2022-11-01,gen2uubl,\N,too few battles: 1
 2022-11-01,gen3doublesou,\N,
 2022-11-01,gen6purehackmons,\N,
+2022-11-01,gen7anythinggoes,\N,not official
 2022-11-01,gen7balancedhackmons,\N,
 2022-11-01,gen7mixandmega,\N,
-2022-11-01,gen7pu,42,too few battles: 44
+2022-11-01,gen7pu,40,too few battles: 44
 2022-11-01,gen81v1,\N,
 2022-11-01,gen82v2doubles,\N,
 2022-11-01,gen8almostanyability,\N,
+2022-11-01,gen8anythinggoes,\N,not official
 2022-11-01,gen8balancedhackmons,\N,
 2022-11-01,gen8battlestadiumdoublesseries13,\N,
 2022-11-01,gen8battlestadiumsingles,\N,
@@ -3249,6 +3386,7 @@ month,name,format_id,reason
 2022-11-01,gen91v1,\N,
 2022-11-01,gen92v2doubles,\N,
 2022-11-01,gen9almostanyability,\N,
+2022-11-01,gen9anythinggoes,\N,not official
 2022-11-01,gen9balancedhackmons,\N,
 2022-11-01,gen9battlestadiumdoubles,\N,
 2022-11-01,gen9battlestadiumsingles,\N,
@@ -3262,9 +3400,10 @@ month,name,format_id,reason
 2022-11-01,gen9stabmons,\N,
 2022-12-01,gen3doublesou,\N,too few battles: 7
 2022-12-01,gen6purehackmons,\N,
-2022-12-01,gen6ubers,22,too few battles: 35
+2022-12-01,gen6ubers,21,too few battles: 35
 2022-12-01,gen7balancedhackmons,\N,
 2022-12-01,gen7mixandmega,\N,
+2022-12-01,gen8anythinggoes,\N,not official
 2022-12-01,gen8battlestadiumsingles,\N,
 2022-12-01,gen8bdspdoublesou,\N,too few battles: 18
 2022-12-01,gen8bdspou,\N,
@@ -3278,6 +3417,7 @@ month,name,format_id,reason
 2022-12-01,gen91v1,\N,
 2022-12-01,gen92v2doubles,\N,
 2022-12-01,gen9almostanyability,\N,
+2022-12-01,gen9anythinggoes,\N,not official
 2022-12-01,gen9balancedhackmons,\N,
 2022-12-01,gen9battlestadiumdoubles,\N,
 2022-12-01,gen9battlestadiumsingles,\N,
@@ -3299,6 +3439,7 @@ month,name,format_id,reason
 2023-01-01,gen4zu,\N,not official
 2023-01-01,gen6purehackmons,\N,
 2023-01-01,gen7mixandmega,\N,
+2023-01-01,gen8anythinggoes,\N,not official
 2023-01-01,gen8battlestadiumsingles,\N,too few battles: 8
 2023-01-01,gen8bdspou,\N,
 2023-01-01,gen8nationaldex,\N,national dex
@@ -3307,6 +3448,7 @@ month,name,format_id,reason
 2023-01-01,gen91v1,\N,
 2023-01-01,gen92v2doubles,\N,
 2023-01-01,gen9almostanyability,\N,
+2023-01-01,gen9anythinggoes,\N,not official
 2023-01-01,gen9balancedhackmons,\N,
 2023-01-01,gen9battlestadiumsinglesseries1,\N,
 2023-01-01,gen9cap,\N,cap
@@ -3327,16 +3469,18 @@ month,name,format_id,reason
 2023-02-01,gen2uu,6,too few battles: 2
 2023-02-01,gen4nu,\N,
 2023-02-01,gen4zu,\N,too few battles: 34
-2023-02-01,gen6lc,28,too few battles: 13
+2023-02-01,gen6lc,27,too few battles: 13
 2023-02-01,gen6purehackmons,\N,
 2023-02-01,gen7mixandmega,\N,
+2023-02-01,gen8anythinggoes,\N,not official
 2023-02-01,gen8bdspou,\N,
-2023-02-01,gen8lc,60,too few battles: 70
+2023-02-01,gen8lc,57,too few battles: 70
 2023-02-01,gen8nationaldex,\N,national dex
 2023-02-01,gen8zu,\N,too few battles: 29
 2023-02-01,gen91v1,\N,
 2023-02-01,gen92v2doubles,\N,
 2023-02-01,gen9almostanyability,\N,
+2023-02-01,gen9anythinggoes,\N,not official
 2023-02-01,gen9balancedhackmons,\N,
 2023-02-01,gen9battlestadiumsinglesseries1,\N,
 2023-02-01,gen9battlestadiumsinglesseries2,\N,
@@ -3365,17 +3509,19 @@ month,name,format_id,reason
 2023-03-01,gen5zu,\N,not official
 2023-03-01,gen6purehackmons,\N,
 2023-03-01,gen7mixandmega,\N,
+2023-03-01,gen8anythinggoes,\N,not official
 2023-03-01,gen8bdspou,\N,too few battles: 9
-2023-03-01,gen8lc,60,too few battles: 2
+2023-03-01,gen8lc,57,too few battles: 2
 2023-03-01,gen8nationaldex,\N,national dex
-2023-03-01,gen8nu,58,too few battles: 4
-2023-03-01,gen8pu,59,too few battles: 4
-2023-03-01,gen8ru,57,too few battles: 2
-2023-03-01,gen8uu,56,too few battles: 4
+2023-03-01,gen8nu,55,too few battles: 4
+2023-03-01,gen8pu,56,too few battles: 4
+2023-03-01,gen8ru,54,too few battles: 2
+2023-03-01,gen8uu,53,too few battles: 4
 2023-03-01,gen8zu,\N,not official
 2023-03-01,gen91v1,\N,
 2023-03-01,gen92v2doubles,\N,
 2023-03-01,gen9almostanyability,\N,
+2023-03-01,gen9anythinggoes,\N,not official
 2023-03-01,gen9balancedhackmons,\N,
 2023-03-01,gen9battlestadiumsinglesseries2,\N,
 2023-03-01,gen9brokencup,\N,
@@ -3405,6 +3551,7 @@ month,name,format_id,reason
 2023-04-01,gen91v1,\N,
 2023-04-01,gen92v2doubles,\N,
 2023-04-01,gen9almostanyability,\N,
+2023-04-01,gen9anythinggoes,\N,not official
 2023-04-01,gen9balancedhackmons,\N,
 2023-04-01,gen9battlestadiumsinglesregulationc,\N,
 2023-04-01,gen9battlestadiumsinglesseries2,\N,
@@ -3433,14 +3580,15 @@ month,name,format_id,reason
 2023-05-01,gen4doublesou,\N,
 2023-05-01,gen5vgc2013,\N,too few battles: 3
 2023-05-01,gen6purehackmons,\N,
-2023-05-01,gen6ubers,22,too few battles: 1
-2023-05-01,gen8anythinggoes,53,too few battles: 1
-2023-05-01,gen8ubers,54,too few battles: 1
-2023-05-01,gen8uu,56,too few battles: 4
-2023-05-01,gen8vgc2020,65,too few battles: 1
+2023-05-01,gen6ubers,21,too few battles: 1
+2023-05-01,gen8anythinggoes,\N,too few battles: 1
+2023-05-01,gen8ubers,51,too few battles: 1
+2023-05-01,gen8uu,53,too few battles: 4
+2023-05-01,gen8vgc2020,62,too few battles: 1
 2023-05-01,gen91v1,\N,
 2023-05-01,gen92v2doubles,\N,
 2023-05-01,gen9almostanyability,\N,
+2023-05-01,gen9anythinggoes,\N,not official
 2023-05-01,gen9balancedhackmons,\N,
 2023-05-01,gen9battlestadiumsinglesregulationc,\N,
 2023-05-01,gen9brokencup,\N,too few battles: 34
@@ -3466,14 +3614,15 @@ month,name,format_id,reason
 2023-05-01,gen9zu,\N,not official
 2023-06-01,gen4doublesou,\N,
 2023-06-01,gen6purehackmons,\N,
-2023-06-01,gen6uu,24,too few battles: 17
-2023-06-01,gen7monotype,44,too few battles: 17
-2023-06-01,gen7nu,41,too few battles: 10
+2023-06-01,gen6uu,23,too few battles: 17
+2023-06-01,gen7monotype,42,too few battles: 17
+2023-06-01,gen7nu,39,too few battles: 10
 2023-06-01,gen8bdspou,\N,
 2023-06-01,gen91v1,\N,
 2023-06-01,gen92v2doubles,\N,
 2023-06-01,gen9almostanyability,\N,
 2023-06-01,gen9alphabetcup,\N,
+2023-06-01,gen9anythinggoes,\N,not official
 2023-06-01,gen9balancedhackmons,\N,
 2023-06-01,gen9battlestadiumsinglesregulationc,\N,
 2023-06-01,gen9cap,\N,cap
@@ -3498,12 +3647,13 @@ month,name,format_id,reason
 2023-07-01,gen1ubers,1,too few battles: 8
 2023-07-01,gen4doublesou,\N,
 2023-07-01,gen6purehackmons,\N,
-2023-07-01,gen7uu,39,too few battles: 16
+2023-07-01,gen7uu,37,too few battles: 16
 2023-07-01,gen8bdspou,\N,too few battles: 6
 2023-07-01,gen91v1,\N,
 2023-07-01,gen92v2doubles,\N,
 2023-07-01,gen9almostanyability,\N,
 2023-07-01,gen9alphabetcup,\N,
+2023-07-01,gen9anythinggoes,\N,not official
 2023-07-01,gen9balancedhackmons,\N,
 2023-07-01,gen9battlestadiumsinglesregulationc,\N,
 2023-07-01,gen9battlestadiumsinglesregulationd,\N,
@@ -3533,11 +3683,12 @@ month,name,format_id,reason
 2023-08-01,gen6purehackmons,\N,
 2023-08-01,gen7letsgoou,\N,
 2023-08-01,gen8nationaldex,\N,national dex
-2023-08-01,gen8uu,56,too few battles: 1
+2023-08-01,gen8uu,53,too few battles: 1
 2023-08-01,gen91v1,\N,
 2023-08-01,gen92v2doubles,\N,
 2023-08-01,gen9350cup,\N,
 2023-08-01,gen9almostanyability,\N,
+2023-08-01,gen9anythinggoes,\N,not official
 2023-08-01,gen9balancedhackmons,\N,
 2023-08-01,gen9battlestadiumsinglesregulationd,\N,
 2023-08-01,gen9bonustype,\N,
@@ -3572,6 +3723,7 @@ month,name,format_id,reason
 2023-09-01,gen92v2doubles,\N,
 2023-09-01,gen9350cup,\N,too few battles: 4
 2023-09-01,gen9almostanyability,\N,
+2023-09-01,gen9anythinggoes,\N,not official
 2023-09-01,gen9balancedhackmons,\N,
 2023-09-01,gen9battlestadiumsinglesregulationd,\N,
 2023-09-01,gen9bonustype,\N,too few battles: 21
@@ -3602,6 +3754,7 @@ month,name,format_id,reason
 2023-10-01,gen91v1,\N,
 2023-10-01,gen92v2doubles,\N,
 2023-10-01,gen9almostanyability,\N,
+2023-10-01,gen9anythinggoes,\N,not official
 2023-10-01,gen9balancedhackmons,\N,
 2023-10-01,gen9battlestadiumsinglesregulationd,\N,
 2023-10-01,gen9battlestadiumsinglesregulatione,\N,
@@ -3634,6 +3787,7 @@ month,name,format_id,reason
 2023-11-01,gen91v1,\N,
 2023-11-01,gen92v2doubles,\N,
 2023-11-01,gen9almostanyability,\N,
+2023-11-01,gen9anythinggoes,\N,not official
 2023-11-01,gen9balancedhackmons,\N,
 2023-11-01,gen9battlestadiumsinglesregulatione,\N,
 2023-11-01,gen9cap,\N,cap
@@ -3661,11 +3815,12 @@ month,name,format_id,reason
 2023-12-01,gen3zu,\N,too few battles: 25
 2023-12-01,gen4doublesou,\N,
 2023-12-01,gen6purehackmons,\N,
-2023-12-01,gen6ubers,22,too few battles: 56
+2023-12-01,gen6ubers,21,too few battles: 56
 2023-12-01,gen8nationaldex,\N,national dex
 2023-12-01,gen91v1,\N,
 2023-12-01,gen92v2doubles,\N,
 2023-12-01,gen9almostanyability,\N,
+2023-12-01,gen9anythinggoes,\N,not official
 2023-12-01,gen9balancedhackmons,\N,
 2023-12-01,gen9battlestadiumsinglesregulatione,\N,
 2023-12-01,gen9blueberryprologue,\N,
@@ -3703,6 +3858,7 @@ month,name,format_id,reason
 2024-01-01,gen91v1,\N,
 2024-01-01,gen92v2doubles,\N,
 2024-01-01,gen9almostanyability,\N,
+2024-01-01,gen9anythinggoes,\N,not official
 2024-01-01,gen9balancedhackmons,\N,
 2024-01-01,gen9battlestadiumsinglesregulatione,\N,
 2024-01-01,gen9blueberryprologue,\N,
@@ -3741,6 +3897,7 @@ month,name,format_id,reason
 2024-02-01,gen91v1,\N,
 2024-02-01,gen92v2doubles,\N,
 2024-02-01,gen9almostanyability,\N,
+2024-02-01,gen9anythinggoes,\N,not official
 2024-02-01,gen9balancedhackmons,\N,
 2024-02-01,gen9bssregf,\N,
 2024-02-01,gen9cap,\N,cap
@@ -3776,6 +3933,7 @@ month,name,format_id,reason
 2024-03-01,gen91v1,\N,
 2024-03-01,gen92v2doubles,\N,
 2024-03-01,gen9almostanyability,\N,
+2024-03-01,gen9anythinggoes,\N,not official
 2024-03-01,gen9balancedhackmons,\N,
 2024-03-01,gen9balancedhackmonsuu,\N,
 2024-03-01,gen9bssregf,\N,
@@ -3811,6 +3969,7 @@ month,name,format_id,reason
 2024-04-01,gen91v1,\N,
 2024-04-01,gen92v2doubles,\N,
 2024-04-01,gen9almostanyability,\N,
+2024-04-01,gen9anythinggoes,\N,not official
 2024-04-01,gen9balancedhackmons,\N,
 2024-04-01,gen9balancedhackmonsuu,\N,too few battles: 0
 2024-04-01,gen9bssregf,\N,
@@ -3847,6 +4006,7 @@ month,name,format_id,reason
 2024-05-01,gen91v1,\N,
 2024-05-01,gen92v2doubles,\N,
 2024-05-01,gen9almostanyability,\N,
+2024-05-01,gen9anythinggoes,\N,not official
 2024-05-01,gen9balancedhackmons,\N,
 2024-05-01,gen9bssregg,\N,
 2024-05-01,gen9cap,\N,cap
@@ -3872,14 +4032,15 @@ month,name,format_id,reason
 2024-05-01,gen9zu,\N,not official
 2024-06-01,gen2moderngen2,\N,too few battles: 13
 2024-06-01,gen3uubl,\N,too few battles: 27
-2024-06-01,gen6uu,24,too few battles: 56
+2024-06-01,gen6uu,23,too few battles: 56
 2024-06-01,gen7purehackmons,\N,
-2024-06-01,gen7ru,40,too few battles: 12
+2024-06-01,gen7ru,38,too few battles: 12
 2024-06-01,gen8nationaldex,\N,national dex
 2024-06-01,gen91v1,\N,
 2024-06-01,gen92v2doubles,\N,
 2024-06-01,gen9350cup,\N,
 2024-06-01,gen9almostanyability,\N,
+2024-06-01,gen9anythinggoes,\N,not official
 2024-06-01,gen9balancedhackmons,\N,
 2024-06-01,gen9bssregg,\N,
 2024-06-01,gen9cap,\N,cap
@@ -3910,13 +4071,14 @@ month,name,format_id,reason
 2024-07-01,gen4lc,13,too few battles: 40
 2024-07-01,gen5bw1ou,\N,
 2024-07-01,gen7purehackmons,\N,
-2024-07-01,gen7uu,39,too few battles: 69
+2024-07-01,gen7uu,37,too few battles: 69
 2024-07-01,gen8nationaldex,\N,national dex
-2024-07-01,gen8nu,58,too few battles: 10
+2024-07-01,gen8nu,55,too few battles: 10
 2024-07-01,gen91v1,\N,
 2024-07-01,gen92v2doubles,\N,
 2024-07-01,gen9350cup,\N,too few battles: 34
 2024-07-01,gen9almostanyability,\N,
+2024-07-01,gen9anythinggoes,\N,not official
 2024-07-01,gen9balancedhackmons,\N,
 2024-07-01,gen9bssregg,\N,
 2024-07-01,gen9cap,\N,cap
@@ -3949,10 +4111,11 @@ month,name,format_id,reason
 2024-08-01,gen6megasrevisited,\N,
 2024-08-01,gen7purehackmons,\N,
 2024-08-01,gen8nationaldex,\N,
-2024-08-01,gen8uu,56,too few battles: 18
+2024-08-01,gen8uu,53,too few battles: 18
 2024-08-01,gen91v1,\N,
 2024-08-01,gen92v2doubles,\N,
 2024-08-01,gen9almostanyability,\N,
+2024-08-01,gen9anythinggoes,\N,not official
 2024-08-01,gen9balancedhackmons,\N,
 2024-08-01,gen9bssregg,\N,
 2024-08-01,gen9bssregh,\N,

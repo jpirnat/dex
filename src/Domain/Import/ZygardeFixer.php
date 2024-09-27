@@ -43,7 +43,6 @@ final readonly class ZygardeFixer
 
 		// All the formats that allow Power Construct Zygarde.
 		$formatIds = [
-			FormatId::GEN_7_AG,
 			FormatId::GEN_7_UBERS,
 			FormatId::GEN_7_DOUBLES_UBERS,
 			FormatId::VGC_2019_SUN,

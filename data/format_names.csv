@@ -19,70 +19,66 @@ language_id,format_id,name
 2,18,Gen 5 NU
 2,19,Gen 5 LC
 2,20,Gen 5 Doubles OU
-2,21,Gen 6 AG
-2,22,Gen 6 Ubers
-2,23,Gen 6 OU
-2,24,Gen 6 UU
-2,25,Gen 6 RU
-2,26,Gen 6 NU
-2,27,Gen 6 PU
-2,28,Gen 6 LC
-2,29,Gen 6 Monotype
-2,30,Gen 6 Doubles Ubers
-2,31,Gen 6 Doubles OU
-2,32,Gen 6 Doubles UU
-2,33,VGC 2014
-2,34,VGC 2015
-2,35,VGC 2016
-2,36,Gen 7 AG
-2,37,Gen 7 Ubers
-2,38,Gen 7 OU
-2,39,Gen 7 UU
-2,40,Gen 7 RU
-2,41,Gen 7 NU
-2,42,Gen 7 PU
-2,43,Gen 7 LC
-2,44,Gen 7 Monotype
-2,45,Gen 7 Doubles Ubers
-2,46,Gen 7 Doubles OU
-2,47,Gen 7 Doubles UU
-2,48,VGC 2017
-2,49,VGC 2018
-2,50,VGC 2019 Sun Series
-2,51,VGC 2019 Moon Series
-2,52,VGC 2019 Ultra Series
-2,53,Gen 8 AG
-2,54,Gen 8 Ubers
-2,55,Gen 8 OU
-2,56,Gen 8 UU
-2,57,Gen 8 RU
-2,58,Gen 8 NU
-2,59,Gen 8 PU
-2,60,Gen 8 LC
-2,61,Gen 8 Monotype
-2,62,Gen 8 Doubles Ubers
-2,63,Gen 8 Doubles OU
-2,64,Gen 8 Doubles UU
-2,65,VGC 2020
-2,66,VGC 2021
-2,67,VGC 2022
-2,68,Gen 9 AG
-2,69,Gen 9 Ubers
-2,70,Gen 9 OU
-2,71,Gen 9 UU
-2,72,Gen 9 RU
-2,73,Gen 9 NU
-2,74,Gen 9 PU
-2,75,Gen 9 LC
-2,76,Gen 9 Monotype
-2,77,Gen 9 Doubles Ubers
-2,78,Gen 9 Doubles OU
-2,79,Gen 9 Doubles UU
-2,80,VGC 2023 Regulation A
-2,81,VGC 2023 Regulation B
-2,82,VGC 2023 Regulation C
-2,83,VGC 2023 Regulation D
-2,84,VGC 2023 Regulation E
-2,85,VGC 2024 Regulation F
-2,86,VGC 2024 Regulation G
-2,87,VGC 2024 Regulation H
+2,21,Gen 6 Ubers
+2,22,Gen 6 OU
+2,23,Gen 6 UU
+2,24,Gen 6 RU
+2,25,Gen 6 NU
+2,26,Gen 6 PU
+2,27,Gen 6 LC
+2,28,Gen 6 Monotype
+2,29,Gen 6 Doubles Ubers
+2,30,Gen 6 Doubles OU
+2,31,Gen 6 Doubles UU
+2,32,VGC 2014
+2,33,VGC 2015
+2,34,VGC 2016
+2,35,Gen 7 Ubers
+2,36,Gen 7 OU
+2,37,Gen 7 UU
+2,38,Gen 7 RU
+2,39,Gen 7 NU
+2,40,Gen 7 PU
+2,41,Gen 7 LC
+2,42,Gen 7 Monotype
+2,43,Gen 7 Doubles Ubers
+2,44,Gen 7 Doubles OU
+2,45,Gen 7 Doubles UU
+2,46,VGC 2017
+2,47,VGC 2018
+2,48,VGC 2019 Sun Series
+2,49,VGC 2019 Moon Series
+2,50,VGC 2019 Ultra Series
+2,51,Gen 8 Ubers
+2,52,Gen 8 OU
+2,53,Gen 8 UU
+2,54,Gen 8 RU
+2,55,Gen 8 NU
+2,56,Gen 8 PU
+2,57,Gen 8 LC
+2,58,Gen 8 Monotype
+2,59,Gen 8 Doubles Ubers
+2,60,Gen 8 Doubles OU
+2,61,Gen 8 Doubles UU
+2,62,VGC 2020
+2,63,VGC 2021
+2,64,VGC 2022
+2,65,Gen 9 Ubers
+2,66,Gen 9 OU
+2,67,Gen 9 UU
+2,68,Gen 9 RU
+2,69,Gen 9 NU
+2,70,Gen 9 PU
+2,71,Gen 9 LC
+2,72,Gen 9 Monotype
+2,73,Gen 9 Doubles Ubers
+2,74,Gen 9 Doubles OU
+2,75,Gen 9 Doubles UU
+2,76,VGC 2023 Regulation A
+2,77,VGC 2023 Regulation B
+2,78,VGC 2023 Regulation C
+2,79,VGC 2023 Regulation D
+2,80,VGC 2023 Regulation E
+2,81,VGC 2024 Regulation F
+2,82,VGC 2024 Regulation G
+2,83,VGC 2024 Regulation H
