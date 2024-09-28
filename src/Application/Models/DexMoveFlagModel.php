@@ -47,6 +47,7 @@ final class DexMoveFlagModel
 			$languageId,
 		);
 		$this->flag = [
+			'identifier' => $dexFlag->getIdentifier(),
 			'name' => $dexFlag->getName(),
 			'description' => $dexFlag->getDescription(),
 		];
