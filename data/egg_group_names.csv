@@ -104,3 +104,48 @@ language_id,egg_group_id,name
 7,13,메타몽
 7,14,드래곤
 7,15,알미발견
+8,1,怪獣グループ
+8,2,水中①グループ
+8,3,虫グループ
+8,4,飛行グループ
+8,5,陸上グループ
+8,6,妖精グループ
+8,7,植物グループ
+8,8,人型グループ
+8,9,水中③グループ
+8,10,鉱物グループ
+8,11,不定形グループ
+8,12,水中②グループ
+8,13,メタモングループ
+8,14,ドラゴングループ
+8,15,タマゴ未発見グループ
+9,1,Monster
+9,2,Water 1
+9,3,Bug
+9,4,Flying
+9,5,Field
+9,6,Fairy
+9,7,Grass
+9,8,Human-Like
+9,9,Water 3
+9,10,Mineral
+9,11,Amorphous
+9,12,Water 2
+9,13,Ditto
+9,14,Dragon
+9,15,Undiscovered
+10,1,Monster
+10,2,Water 1
+10,3,Bug
+10,4,Flying
+10,5,Field
+10,6,Fairy
+10,7,Grass
+10,8,Human-Like
+10,9,Water 3
+10,10,Mineral
+10,11,Amorphous
+10,12,Water 2
+10,13,Ditto
+10,14,Dragon
+10,15,Undiscovered
