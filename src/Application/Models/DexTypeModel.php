@@ -87,16 +87,12 @@ final class DexTypeModel
 			$type->getId(),
 		);
 		foreach ($attackingMatchups as $matchup) {
-			$defendingTypeId = $matchup->getDefendingTypeId()->value();
-			$defendingType = $this->types[$defendingTypeId];
-			$identifier = $defendingType->getIdentifier();
-			$this->damageDealt[$identifier] = $matchup->getMultiplier();
+			$defendingTypeIdentifier = $matchup->getDefendingTypeIdentifier();
+			$this->damageDealt[$defendingTypeIdentifier] = $matchup->getMultiplier();
 		}
 		foreach ($defendingMatchups as $matchup) {
-			$attackingTypeId = $matchup->getAttackingTypeId()->value();
-			$attackingType = $this->types[$attackingTypeId];
-			$identifier = $attackingType->getIdentifier();
-			$this->damageTaken[$identifier] = $matchup->getMultiplier();
+			$attackingTypeIdentifier = $matchup->getAttackingTypeIdentifier();
+			$this->damageTaken[$attackingTypeIdentifier] = $matchup->getMultiplier();
 		}
 
 		$this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);

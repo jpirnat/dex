@@ -44,7 +44,6 @@ final class DexTypesModel
 		foreach ($dexTypes as $dexType) {
 			$type = $types[$dexType->getId()->value()];
 			$this->types[] = [
-				'id' => $dexType->getId()->value(),
 				'identifier' => $dexType->getIdentifier(),
 				'name' => $dexType->getName(),
 				'symbolIcon' => $type->getSymbolIcon(),
@@ -58,11 +57,11 @@ final class DexTypesModel
 		);
 		$this->multipliers = [];
 		foreach ($typeMatchups as $typeMatchup) {
-			$attackingTypeId = $typeMatchup->getAttackingTypeId()->value();
-			$defendingTypeId = $typeMatchup->getDefendingTypeId()->value();
+			$attackingTypeIdentifier = $typeMatchup->getAttackingTypeIdentifier();
+			$defendingTypeIdentifier = $typeMatchup->getDefendingTypeIdentifier();
 			$multiplier = $typeMatchup->getMultiplier();
 
-			$this->multipliers[$attackingTypeId][$defendingTypeId] = $multiplier;
+			$this->multipliers[$attackingTypeIdentifier][$defendingTypeIdentifier] = $multiplier;
 		}
 	}
 

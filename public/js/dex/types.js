@@ -12,23 +12,23 @@ const app = new Vue({
 		types: [],
 		multipliers: [],
 
-		toggleAttackingIds: [],
-		toggleDefendingIds: [],
-		hoverAttackingId: null,
-		hoverDefendingId: null,
+		toggleAttackingTypes: [],
+		toggleDefendingTypes: [],
+		hoverAttackingType: null,
+		hoverDefendingType: null,
 	},
 	computed: {
 		attackingTypes() {
-			if (this.toggleAttackingIds.length === 0) {
+			if (this.toggleAttackingTypes.length === 0) {
 				return this.types;
 			}
-			return this.types.filter(t => this.toggleAttackingIds.includes(t.id));
+			return this.types.filter(t => this.toggleAttackingTypes.includes(t.identifier));
 		},
 		defendingTypes() {
-			if (this.toggleDefendingIds.length === 0) {
+			if (this.toggleDefendingTypes.length === 0) {
 				return this.types;
 			}
-			return this.types.filter(t => this.toggleDefendingIds.includes(t.id));
+			return this.types.filter(t => this.toggleDefendingTypes.includes(t.identifier));
 		},
 	},
 	created() {
@@ -51,20 +51,20 @@ const app = new Vue({
 				this.multipliers = data.multipliers;
 
 				this.types.forEach(t => {
-					this.toggleAttackingIds.push(t.id);
-					this.toggleDefendingIds.push(t.id);
+					this.toggleAttackingTypes.push(t.identifier);
+					this.toggleDefendingTypes.push(t.identifier);
 				});
 			}
 		});
 	},
 	methods: {
 		onMatchupHover(attackingType, defendingType) {
-			this.hoverAttackingId = attackingType.id;
-			this.hoverDefendingId = defendingType.id;
+			this.hoverAttackingType = attackingType.identifier;
+			this.hoverDefendingType = defendingType.identifier;
 		},
 		onMatchupUnhover() {
-			this.hoverAttackingId = null;
-			this.hoverDefendingId = null;
+			this.hoverAttackingType = null;
+			this.hoverDefendingType = null;
 		},
 	},
 });

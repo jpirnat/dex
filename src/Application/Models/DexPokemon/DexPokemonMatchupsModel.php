@@ -67,12 +67,10 @@ final class DexPokemonMatchupsModel
 			);
 			foreach ($matchups as $matchup) {
 				// Factor this matchup into the Pokémon's overall matchups.
-				$attackingTypeId = $matchup->getAttackingTypeId()->value();
-				$attackingType = $allTypes[$attackingTypeId];
-				$identifier = $attackingType->getIdentifier();
+				$attackingTypeIdentifier = $matchup->getAttackingTypeIdentifier();
 				$multiplier = $matchup->getMultiplier();
 
-				$this->damageTaken[self::NO_ABILITY][$identifier] *= $multiplier;
+				$this->damageTaken[self::NO_ABILITY][$attackingTypeIdentifier] *= $multiplier;
 			}
 		}
 

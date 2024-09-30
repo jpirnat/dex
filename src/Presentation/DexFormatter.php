@@ -139,7 +139,6 @@ final readonly class DexFormatter
 	public function formatDexType(DexType $dexType) : array
 	{
 		return [
-			'id' => $dexType->getId()->value(),
 			'identifier' => $dexType->getIdentifier(),
 			'name' => $dexType->getName(),
 			'icon' => $dexType->getIcon(),

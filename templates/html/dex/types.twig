@@ -61,19 +61,19 @@
 					</th>
 					<td v-for="defendingType in defendingTypes" class="type-chart__matchup"
 						:class="{
-							'type-chart__matchup--highlight': hoverAttackingId === attackingType.id || hoverDefendingId === defendingType.id,
-							'type-chart__matchup--neutral': multipliers[attackingType.id][defendingType.id] === 1,
-							'type-chart__matchup--super-effective': multipliers[attackingType.id][defendingType.id] === 2,
-							'type-chart__matchup--not-very-effective': multipliers[attackingType.id][defendingType.id] === 0.5,
-							'type-chart__matchup--no-effect': multipliers[attackingType.id][defendingType.id] === 0,
+							'type-chart__matchup--highlight': hoverAttackingType === attackingType.identifier || hoverDefendingType === defendingType.identifier,
+							'type-chart__matchup--neutral': multipliers[attackingType.identifier][defendingType.identifier] === 1,
+							'type-chart__matchup--super-effective': multipliers[attackingType.identifier][defendingType.identifier] === 2,
+							'type-chart__matchup--not-very-effective': multipliers[attackingType.identifier][defendingType.identifier] === 0.5,
+							'type-chart__matchup--no-effect': multipliers[attackingType.identifier][defendingType.identifier] === 0,
 						}"
 						@mouseover="onMatchupHover(attackingType, defendingType)"
 						@mouseleave="onMatchupUnhover"
 					>
-						<template v-if="multipliers[attackingType.id][defendingType.id] === 1">1</template>
-						<template v-else-if="multipliers[attackingType.id][defendingType.id] === 2">×2</template>
-						<template v-else-if="multipliers[attackingType.id][defendingType.id] === .5">½</template>
-						<template v-else-if="multipliers[attackingType.id][defendingType.id] === 0">×0</template>
+						<template v-if="multipliers[attackingType.identifier][defendingType.identifier] === 1">1</template>
+						<template v-else-if="multipliers[attackingType.identifier][defendingType.identifier] === 2">×2</template>
+						<template v-else-if="multipliers[attackingType.identifier][defendingType.identifier] === .5">½</template>
+						<template v-else-if="multipliers[attackingType.identifier][defendingType.identifier] === 0">×0</template>
 					</td>
 				</tr>
 			</tbody>
@@ -84,14 +84,14 @@
 			<div class="type-toggler__types">
 				<label v-for="type in types" class="type-toggler__type">
 					<img class="dex-type-icon" :src="'/images/types/' + type.nameIcon" :alt="type.name">
-					<input type="checkbox" v-model="toggleAttackingIds" :value="type.id">
+					<input type="checkbox" v-model="toggleAttackingTypes" :value="type.identifier">
 				</label>
 			</div>
 			<div>
 				<button type="button" class="type-toggler__select-all"
-					@click="toggleAttackingIds = types.map(t => t.id)"
+					@click="toggleAttackingTypes = types.map(t => t.identifier)"
 				>Select All</button>
-				<button type="button" @click="toggleAttackingIds = []">Unselect All</button>
+				<button type="button" @click="toggleAttackingTypes = []">Unselect All</button>
 			</div>
 		</div>
 
@@ -100,14 +100,14 @@
 			<div class="type-toggler__types">
 				<label v-for="type in types" class="type-toggler__type">
 					<img class="dex-type-icon" :src="'/images/types/' + type.nameIcon" :alt="type.name">
-					<input type="checkbox" v-model="toggleDefendingIds" :value="type.id">
+					<input type="checkbox" v-model="toggleDefendingTypes" :value="type.identifier">
 				</label>
 			</div>
 			<div>
 				<button type="button" class="type-toggler__select-all"
-					@click="toggleDefendingIds = types.map(t => t.id)"
+					@click="toggleDefendingTypes = types.map(t => t.identifier)"
 				>Select All</button>
-				<button type="button" @click="toggleDefendingIds = []">Unselect All</button>
+				<button type="button" @click="toggleDefendingTypes = []">Unselect All</button>
 			</div>
 		</div>
 	</template>

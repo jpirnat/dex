@@ -24,10 +24,14 @@ final readonly class DatabaseTypeMatchupRepository implements TypeMatchupReposit
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`attacking_type_id`,
-				`defending_type_id`,
-				`multiplier`
-			FROM `type_matchups`
+				`a`.`identifier` AS `attacking_type_identifier`,
+				`d`.`identifier` AS `defending_type_identifier`,
+				`tm`.`multiplier`
+			FROM `type_matchups` AS `tm`
+			INNER JOIN `types` AS `a`
+				ON `tm`.`attacking_type_id` = `a`.`id`
+			INNER JOIN `types` AS `d`
+				ON `tm`.`defending_type_id` = `d`.`id`
 			WHERE `generation_id` = :generation_id'
 		);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
@@ -38,8 +42,8 @@ final readonly class DatabaseTypeMatchupRepository implements TypeMatchupReposit
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$typeMatchup = new TypeMatchup(
 				$generationId,
-				new TypeId($result['attacking_type_id']),
-				new TypeId($result['defending_type_id']),
+				$result['attacking_type_identifier'],
+				$result['defending_type_identifier'],
 				(float) $result['multiplier'],
 			);
 
@@ -58,9 +62,14 @@ final readonly class DatabaseTypeMatchupRepository implements TypeMatchupReposit
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`defending_type_id`,
+				`a`.`identifier` AS `attacking_type_identifier`,
+				`d`.`identifier` AS `defending_type_identifier`,
 				`multiplier`
-			FROM `type_matchups`
+			FROM `type_matchups` AS `tm`
+			INNER JOIN `types` AS `a`
+				ON `tm`.`attacking_type_id` = `a`.`id`
+			INNER JOIN `types` AS `d`
+				ON `tm`.`defending_type_id` = `d`.`id`
 			WHERE `generation_id` = :generation_id
 				AND `attacking_type_id` = :type_id'
 		);
@@ -73,8 +82,8 @@ final readonly class DatabaseTypeMatchupRepository implements TypeMatchupReposit
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$typeMatchup = new TypeMatchup(
 				$generationId,
-				$typeId,
-				new TypeId($result['defending_type_id']),
+				$result['attacking_type_identifier'],
+				$result['defending_type_identifier'],
 				(float) $result['multiplier'],
 			);
 
@@ -93,9 +102,14 @@ final readonly class DatabaseTypeMatchupRepository implements TypeMatchupReposit
 	{
 		$stmt = $this->db->prepare(
 			'SELECT
-				`attacking_type_id`,
-				`multiplier`
-			FROM `type_matchups`
+				`a`.`identifier` AS `attacking_type_identifier`,
+				`d`.`identifier` AS `defending_type_identifier`,
+				`tm`.`multiplier`
+			FROM `type_matchups` AS `tm`
+			INNER JOIN `types` AS `a`
+				ON `tm`.`attacking_type_id` = `a`.`id`
+			INNER JOIN `types` AS `d`
+				ON `tm`.`defending_type_id` = `d`.`id`
 			WHERE `generation_id` = :generation_id
 				AND `defending_type_id` = :type_id'
 		);
@@ -108,8 +122,8 @@ final readonly class DatabaseTypeMatchupRepository implements TypeMatchupReposit
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$typeMatchup = new TypeMatchup(
 				$generationId,
-				new TypeId($result['attacking_type_id']),
-				$typeId,
+				$result['attacking_type_identifier'],
+				$result['defending_type_identifier'],
 				(float) $result['multiplier'],
 			);
 

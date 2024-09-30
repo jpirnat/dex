@@ -9,38 +9,26 @@ final readonly class TypeMatchup
 {
 	public function __construct(
 		private GenerationId $generationId,
-		private TypeId $attackingTypeId,
-		private TypeId $defendingTypeId,
+		private string $attackingTypeIdentifier,
+		private string $defendingTypeIdentifier,
 		private float $multiplier,
 	) {}
 
-	/**
-	 * Get the type matchup's generation id.
-	 */
 	public function getGenerationId() : GenerationId
 	{
 		return $this->generationId;
 	}
 
-	/**
-	 * Get the type matchup's attacking type id.
-	 */
-	public function getAttackingTypeId() : TypeId
+	public function getAttackingTypeIdentifier() : string
 	{
-		return $this->attackingTypeId;
+		return $this->attackingTypeIdentifier;
 	}
 
-	/**
-	 * Get the type matchup's defending type id.
-	 */
-	public function getDefendingTypeId() : TypeId
+	public function getDefendingTypeIdentifier() : string
 	{
-		return $this->defendingTypeId;
+		return $this->defendingTypeIdentifier;
 	}
 
-	/**
-	 * Get the type matchup's multiplier.
-	 */
 	public function getMultiplier() : float
 	{
 		return $this->multiplier;

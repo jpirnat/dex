@@ -186,10 +186,8 @@ final class DexMoveModel
 			$vgMove->getTypeId(),
 		);
 		foreach ($attackingMatchups as $matchup) {
-			$defendingTypeId = $matchup->getDefendingTypeId()->value();
-			$defendingType = $this->types[$defendingTypeId];
-			$identifier = $defendingType->getIdentifier();
-			$this->damageDealt[$identifier] = $matchup->getMultiplier();
+			$defendingTypeIdentifier = $matchup->getDefendingTypeIdentifier();
+			$this->damageDealt[$defendingTypeIdentifier] = $matchup->getMultiplier();
 		}
 
 		if ($moveId->value() === MoveId::FLYING_PRESS) {
@@ -198,10 +196,8 @@ final class DexMoveModel
 				new TypeId(TypeId::FLYING),
 			);
 			foreach ($attackingMatchups as $matchup) {
-				$defendingTypeId = $matchup->getDefendingTypeId()->value();
-				$defendingType = $this->types[$defendingTypeId];
-				$identifier = $defendingType->getIdentifier();
-				$this->damageDealt[$identifier] *= $matchup->getMultiplier();
+				$defendingTypeIdentifier = $matchup->getDefendingTypeIdentifier();
+				$this->damageDealt[$defendingTypeIdentifier] *= $matchup->getMultiplier();
 			}
 		}
 
