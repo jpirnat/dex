@@ -26,11 +26,9 @@ final readonly class DexAbilityView
 		$ability = $this->dexAbilityModel->getAbility();
 		$flags = $this->dexAbilityModel->getFlags();
 		$stats = $this->dexAbilityModel->getStats();
-		$normalPokemon = $this->dexAbilityModel->getNormalPokemon();
-		$hiddenPokemon = $this->dexAbilityModel->getHiddenPokemon();
+		$pokemon = $this->dexAbilityModel->getPokemon();
 
-		$normalPokemon = $this->dexFormatter->formatDexPokemon($normalPokemon);
-		$hiddenPokemon = $this->dexFormatter->formatDexPokemon($hiddenPokemon);
+		$pokemon = $this->dexFormatter->formatDexPokemon($pokemon);
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();
@@ -58,7 +56,7 @@ final readonly class DexAbilityView
 
 				'ability' => $ability,
 				'flags' => $flags,
-				'pokemons' => array_merge($normalPokemon, $hiddenPokemon),
+				'pokemons' => $pokemon,
 				'stats' => $stats,
 			]
 		]);

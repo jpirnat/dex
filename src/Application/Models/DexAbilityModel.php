@@ -20,11 +20,8 @@ final class DexAbilityModel
 	private array $flags = [];
 	private array $stats = [];
 
-	/** @var DexPokemon[] $normalPokemon */
-	private array $normalPokemon = [];
-
-	/** @var DexPokemon[] $hiddenPokemon */
-	private array $hiddenPokemon = [];
+	/** @var DexPokemon[] $pokemon */
+	private array $pokemon = [];
 
 
 	public function __construct(
@@ -74,22 +71,11 @@ final class DexAbilityModel
 
 		$this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
 
-		// Get Pokémon with this ability.
-		$pokemons = $this->dexPokemonRepository->getWithAbility(
+		$this->pokemon = $this->dexPokemonRepository->getWithAbility(
 			$versionGroupId,
 			$ability->getId(),
 			$languageId,
 		);
-		$this->normalPokemon = [];
-		$this->hiddenPokemon = [];
-		foreach ($pokemons as $pokemon) {
-			$pokemonAbility = $pokemon->getAbilities()[$ability->getId()->value()];
-			if (!$pokemonAbility->isHiddenAbility()) {
-				$this->normalPokemon[] = $pokemon;
-			} else {
-				$this->hiddenPokemon[] = $pokemon;
-			}
-		}
 	}
 
 	private function setFlags(
@@ -154,22 +140,10 @@ final class DexAbilityModel
 	}
 
 	/**
-	 * Get the Pokémon that have this ability as a normal ability.
-	 *
 	 * @return DexPokemon[]
 	 */
-	public function getNormalPokemon() : array
+	public function getPokemon() : array
 	{
-		return $this->normalPokemon;
-	}
-
-	/**
-	 * Get the Pokémon that have this ability as a hidden ability.
-	 *
-	 * @return DexPokemon[]
-	 */
-	public function getHiddenPokemon() : array
-	{
-		return $this->hiddenPokemon;
+		return $this->pokemon;
 	}
 }
