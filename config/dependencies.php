@@ -537,5 +537,9 @@ $services->alias(
 	\Jp\Dex\Domain\Moves\VgMoveRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseVgMoveRepository::class
 );
+$services->alias(
+	\Jp\Dex\Domain\Pokemon\VgPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseVgPokemonRepository::class
+);
 
 };

@@ -87,6 +87,13 @@ return [
 	'type_matchups',
 	'pokemon_types',
 
+	// Egg groups
+	'egg_groups',
+	'egg_group_names',
+	'pokemon_egg_groups',
+
+	'vg_pokemon',
+
 	// Moves
 	'moves',
 	'move_names',
@@ -183,11 +190,6 @@ return [
 	// Colors
 	'colors',
 	'form_colors',
-
-	// Egg groups
-	'egg_groups',
-	'egg_group_names',
-	'pokemon_egg_groups',
 
 	// Habitats
 	'habitats',
