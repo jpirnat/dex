@@ -31,18 +31,21 @@ final readonly class BreedingChainsView
 			$records = [];
 			foreach ($chain as $record) {
 				$records[] = [
-					'icon' => $record->getFormIcon(),
-					'identifier' => $record->getPokemonIdentifier(),
-					'name' => $record->getPokemonName(),
+					'icon' => $record->getIcon(),
+					'identifier' => $record->getIdentifier(),
+					'name' => $record->getName(),
 					'versionGroup' => $this->dexFormatter->formatDexVersionGroup(
 						$record->getVersionGroup()
 					),
-					'eggGroupNames' => $record->getEggGroupNames(),
-					'baseEggCycles' => $record->getBaseEggCycles(),
+					'eggGroups' => $this->dexFormatter->formatDexEggGroups(
+						$record->getEggGroups(),
+					),
 					'genderRatio' => [
-						'icon' => $record->getGenderRatioIcon(),
-						'text' => $record->getGenderRatioText(),
+						'icon' => $record->getGenderRatio()->getIcon(),
+						'description' => $record->getGenderRatio()->getDescription(),
 					],
+					'eggCycles' => $record->getEggCycles(),
+					'stepsToHatch' => $record->getStepsToHatch(),
 					'moveMethod' => $record->getMoveMethod(),
 				];
 			}

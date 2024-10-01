@@ -5,6 +5,7 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Domain\Abilities\DexPokemonAbility;
 use Jp\Dex\Domain\Categories\DexCategory;
+use Jp\Dex\Domain\EggGroups\DexEggGroup;
 use Jp\Dex\Domain\Items\DexItem;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
@@ -172,6 +173,25 @@ final readonly class DexFormatter
 		}
 
 		return $abilities;
+	}
+
+	/**
+	 * Transform an array of dex egg group objects into a renderable data array.
+	 *
+	 * @param DexEggGroup[] $dexEggGroups
+	 */
+	public function formatDexEggGroups(array $dexEggGroups) : array
+	{
+		$eggGroups = [];
+
+		foreach ($dexEggGroups as $dexEggGroup) {
+			$eggGroups[] = [
+				'identifier' => $dexEggGroup->getIdentifier(),
+				'name' => $dexEggGroup->getName(),
+			];
+		}
+
+		return $eggGroups;
 	}
 
 	/**

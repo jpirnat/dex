@@ -3,121 +3,67 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\BreedingChains;
 
+use Jp\Dex\Domain\EggGroups\DexEggGroup;
+use Jp\Dex\Domain\Pokemon\GenderRatio;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
 
 final readonly class BreedingChainRecord
 {
-	private string $formIcon;
-	private string $pokemonIdentifier;
-	private string $pokemonName;
-	private DexVersionGroup $versionGroup;
-
-	/** @var string[] $eggGroupNames */
-	private array $eggGroupNames;
-
-	private int $baseEggCycles;
-	private string $genderRatioIcon;
-	private string $genderRatioText;
-	private string $moveMethod;
-
-
-	/**
-	 * Constructor.
-	 *
-	 * @param string[] $eggGroupNames
-	 */
 	public function __construct(
-		string $formIcon,
-		string $pokemonIdentifier,
-		string $pokemonName,
-		DexVersionGroup $versionGroup,
-		array $eggGroupNames,
-		int $baseEggCycles,
-		string $genderRatioIcon,
-		string $genderRatioText,
-		string $moveMethod,
-	) {
-		$this->formIcon = $formIcon;
-		$this->pokemonIdentifier = $pokemonIdentifier;
-		$this->pokemonName = $pokemonName;
-		$this->versionGroup = $versionGroup;
-		$this->eggGroupNames = $eggGroupNames;
-		$this->baseEggCycles = $baseEggCycles;
-		$this->genderRatioIcon = $genderRatioIcon;
-		$this->genderRatioText = $genderRatioText;
-		$this->moveMethod = $moveMethod;
-	}
+		private string $icon,
+		private string $identifier,
+		private string $name,
+		private DexVersionGroup $versionGroup,
+		/** @var DexEggGroup[] $eggGroups */ private array $eggGroups,
+		private GenderRatio $genderRatio,
+		private int $eggCycles,
+		private int $stepsToHatch,
+		private string $moveMethod,
+	) {}
 
-
-	/**
-	 * Get the form icon.
-	 */
-	public function getFormIcon() : string
+	public function getIcon() : string
 	{
-		return $this->formIcon;
+		return $this->icon;
 	}
 
-	/**
-	 * Get the Pokémon identifier.
-	 */
-	public function getPokemonIdentifier() : string
+	public function getIdentifier() : string
 	{
-		return $this->pokemonIdentifier;
+		return $this->identifier;
 	}
 
-	/**
-	 * Get the Pokémon name.
-	 */
-	public function getPokemonName() : string
+	public function getName() : string
 	{
-		return $this->pokemonName;
+		return $this->name;
 	}
 
-	/**
-	 * Get the version group.
-	 */
 	public function getVersionGroup() : DexVersionGroup
 	{
 		return $this->versionGroup;
 	}
 
 	/**
-	 * Get the egg group names.
-	 *
-	 * @return string[]
+	 * @return DexEggGroup[]
 	 */
-	public function getEggGroupNames() : array
+	public function getEggGroups() : array
 	{
-		return $this->eggGroupNames;
+		return $this->eggGroups;
 	}
 
-	/**
-	 * Get the base egg cycles.
-	 */
-	public function getBaseEggCycles() : int
+	public function getGenderRatio() : GenderRatio
 	{
-		return $this->baseEggCycles;
+		return $this->genderRatio;
 	}
 
-	/**
-	 * Get the gender ratio icon.
-	 */
-	public function getGenderRatioIcon() : string
+	public function getEggCycles() : int
 	{
-		return $this->genderRatioIcon;
+		return $this->eggCycles;
 	}
 
-	/**
-	 * Get the gender ratio text.
-	 */
-	public function getGenderRatioText() : string
+	public function getStepsToHatch() : int
 	{
-		return $this->genderRatioText;
+		return $this->stepsToHatch;
 	}
 
-	/**
-	 * Get the move method.
-	 */
 	public function getMoveMethod() : string
 	{
 		return $this->moveMethod;

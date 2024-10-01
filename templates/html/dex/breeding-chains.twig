@@ -18,7 +18,7 @@
 			<template v-for="chain in chains" :key="chain.id">
 				<tbody>
 					<tr class="breeding-chain__header" @click="toggleChain(chain)">
-						<th colspan="7">
+						<th colspan="8">
 							<div class="breeding-chain__summary-container">
 								<div class="breeding-chain__arrow">
 									<template v-if="chain.show">▼</template>
@@ -40,9 +40,10 @@
 						<th scope="col">Pokémon</th>
 						<th scope="col">Versions</th>
 						<th scope="col">Egg Groups</th>
-						<th scope="col">Egg Cycles</th>
 						<th scope="col">Gender Ratio</th>
-						<th scope="col">Move Method</th>
+						<th scope="col">Egg Cycles</th>
+						<th scope="col">Steps to Hatch</th>
+						<th scope="col">Learned Via</th>
 					</tr>
 					<tr v-for="pokemon in chain.pokemon" :key="pokemon.identifier">
 						<td class="dex-table--icon">
@@ -72,14 +73,15 @@
 						</td>
 
 						<td class="dex-table--icon">
-							<div v-for="eggGroupName in pokemon.eggGroupNames" :key="eggGroupName">
-								{{ eggGroupName }}
+							<div v-for="e in pokemon.eggGroups" :key="e.identifier">
+								<a :href="'/dex/' + pokemon.versionGroup.identifier + '/egg-groups/' + e.identifier">{{ e.name }}</a>
 							</div>
 						</td>
-						<td class="dex-table--icon">{{ pokemon.baseEggCycles }}</td>
-						<td class="dex-table--icon" v-tooltip="pokemon.genderRatio.text">
-							<img :src="'/images/gender-ratios/' + pokemon.genderRatio.icon" :alt="pokemon.genderRatio.text">
+						<td class="dex-table--icon" v-tooltip="pokemon.genderRatio.description">
+							<img :src="'/images/gender-ratios/' + pokemon.genderRatio.icon" :alt="pokemon.genderRatio.description">
 						</td>
+						<td class="dex-table--icon">{{ pokemon.eggCycles }}</td>
+						<td class="dex-table--icon">{{ pokemon.stepsToHatch }}</td>
 						<td>{{ pokemon.moveMethod }}</td>
 					</tr>
 				</tbody>

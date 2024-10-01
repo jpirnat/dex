@@ -5,18 +5,14 @@ namespace Jp\Dex\Application\Models\BreedingChains;
 
 use Jp\Dex\Application\Models\VersionGroupModel;
 use Jp\Dex\Domain\BreedingChains\BreedingChainFinder;
-use Jp\Dex\Domain\EggGroups\EggGroupNameRepositoryInterface;
-use Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface;
-use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
-use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\PokemonMoves\PokemonMove;
 use Jp\Dex\Domain\PokemonMoves\PokemonMoveFormatter;
-use Jp\Dex\Domain\Species\SpeciesRepositoryInterface;
 use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 
 final class BreedingChainsModel
@@ -33,13 +29,10 @@ final class BreedingChainsModel
 		private readonly PokemonRepositoryInterface $pokemonRepository,
 		private readonly MoveRepositoryInterface $moveRepository,
 		private readonly BreedingChainFinder $breedingChainFinder,
-		private readonly FormIconRepositoryInterface $formIconRepository,
 		private readonly DexVersionGroupRepositoryInterface $dexVersionGroupRepository,
 		private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
 		private readonly MoveNameRepositoryInterface $moveNameRepository,
-		private readonly PokemonEggGroupRepositoryInterface $pokemonEggGroupRepository,
-		private readonly EggGroupNameRepositoryInterface $eggGroupNameRepository,
-		private readonly SpeciesRepositoryInterface $speciesRepository,
+		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
 		private readonly PokemonMoveFormatter $pokemonMoveFormatter,
 	) {}
 
@@ -100,87 +93,28 @@ final class BreedingChainsModel
 	) : BreedingChainRecord {
 		$pokemonId = $pokemonMove->getPokemonId();
 
-		$formIcon = $this->formIconRepository->getByVgAndFormAndFemaleAndRightAndShiny(
-			$pokemonMove->getVersionGroupId(),
-			new FormId($pokemonId->value()),
-			false,
-			false,
-			false,
-		);
-
 		$versionGroup = $this->dexVersionGroupRepository->getById(
 			$pokemonMove->getVersionGroupId(),
 			$languageId,
 		);
 
-		$pokemon = $this->pokemonRepository->getById($pokemonId);
-
-		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+		$pokemon = $this->dexPokemonRepository->getById(
+			$versionGroup->getId(),
+			$pokemonId,
 			$languageId,
-			$pokemonId,
 		);
-
-
-		$eggGroupNames = [];
-		$pokemonEggGroups = $this->pokemonEggGroupRepository->getByPokemon(
-			$versionGroup->getGenerationId(),
-			$pokemonId,
-		);
-		foreach ($pokemonEggGroups as $pokemonEggGroup) {
-			$eggGroupName = $this->eggGroupNameRepository->getByLanguageAndEggGroup(
-				$languageId,
-				$pokemonEggGroup->getEggGroupId(),
-			);
-			$eggGroupNames[] = $eggGroupName->getName();
-		}
-
-		$species = $this->speciesRepository->getById($pokemon->getSpeciesId());
-
-		$genderRatio = $pokemon->getGenderRatio();
 
 		return new BreedingChainRecord(
-			$formIcon->getImage(),
+			$pokemon->getIcon(),
 			$pokemon->getIdentifier(),
-			$pokemonName->getName(),
+			$pokemon->getName(),
 			$versionGroup,
-			$eggGroupNames,
-			$species->getBaseEggCycles(),
-			"$genderRatio.png",
-			$this->genderRatioText($genderRatio),
+			$pokemon->getEggGroups(),
+			$pokemon->getGenderRatio(),
+			$pokemon->getEggCycles(),
+			$pokemon->getStepsToHatch(),
 			$this->pokemonMoveFormatter->format($pokemonMove, $languageId),
 		);
-	}
-
-	/**
-	 * Get the alt text for this gender ratio.
-	 */
-	public function genderRatioText(int $genderRatio) : string
-	{
-		if ($genderRatio === -1) {
-			return 'Genderless';
-		}
-		if ($genderRatio === 0) {
-			return '100% male';
-		}
-		if ($genderRatio === 1) {
-			return '87.5% male, 12.5% female';
-		}
-		if ($genderRatio === 2) {
-			return '75% male, 25% female';
-		}
-		if ($genderRatio === 4) {
-			return '50% male, 50% female';
-		}
-		if ($genderRatio === 6) {
-			return '25% male, 75% female';
-		}
-		if ($genderRatio === 7) {
-			return '12.5% male, 87.5% female';
-		}
-		if ($genderRatio === 8) {
-			return '100% female';
-		}
-		return '';
 	}
 
 

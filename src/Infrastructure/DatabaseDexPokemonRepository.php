@@ -11,6 +11,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\GenderRatio;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\VgPokemonNotFoundException;
 use Jp\Dex\Domain\Types\DexType;
@@ -273,7 +274,7 @@ INNER JOIN `version_groups` AS `vg`
 			$baseStats,
 			$bst,
 			$eggGroups,
-			$result['gender_ratio'],
+			new GenderRatio($result['gender_ratio']),
 			$result['egg_cycles'],
 			$result['egg_cycles'] * $result['steps_per_egg_cycle'],
 			$evYield,

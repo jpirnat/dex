@@ -25,7 +25,7 @@ final readonly class DexPokemon
 		/** @var int[] $baseStats */ private array $baseStats,
 		private int $bst,
 		/** @var DexEggGroup[] $eggGroups */ private array $eggGroups,
-		private int $genderRatio,
+		private GenderRatio $genderRatio,
 		private int $eggCycles,
 		private int $stepsToHatch,
 		/** @var int[] $evYield */ private array $evYield,
@@ -84,7 +84,7 @@ final readonly class DexPokemon
 		return $this->eggGroups;
 	}
 
-	public function getGenderRatio() : int
+	public function getGenderRatio() : GenderRatio
 	{
 		return $this->genderRatio;
 	}
