@@ -55,22 +55,19 @@ Vue.component('dex-move-method-pokemons', {
 			</tr>
 			<tr class="dex-table__sticky-header-2">
 				<template v-for="vg in versionGroups" :key="vg.identifier">
-					<th v-if="vg.versions.length > 1" scope="col" class="dex-table__pokemon-move-vg"
-						:style="{
-							'backgroundImage': 'linear-gradient(135deg, ' + vg.versions[0].backgroundColor + ' 50%, ' + vg.versions[1].backgroundColor + ' 50%)',
+					<th scope="col"
+						:class="{
+							'dex-table__pokemon-move-vg': true,
+							['dex-table__pokemon-move-vg--' + vg.identifier]: true,
 						}"
 						v-tooltip="vg.name"
 					>
-						<sup :style="{ 'color': vg.versions[0].textColor }">{{ vg.versions[0].abbreviation }}</sup><sub :style="{ 'color': vg.versions[1].textColor }">{{ vg.versions[1].abbreviation }}</sub>
-					</th>
-					<th v-else scope="col" class="dex-table__pokemon-move-vg"
-						:style="{
-							'backgroundColor': vg.versions[0].backgroundColor,
-							'color': vg.versions[0].textColor,
-						}"
-						v-tooltip="vg.name"
-					>
-						{{ vg.versions[0].abbreviation }}
+						<template v-if="vg.versions.length > 1">
+							<sup>{{ vg.versions[0].abbreviation }}</sup><sub>{{ vg.versions[1].abbreviation }}</sub>
+						</template>
+						<template v-else>
+							{{ vg.versions[0].abbreviation }}
+						</template>
 					</th>
 				</template>
 				<th class="dex-table__header--sortable dex-move__pokemon-icon"

@@ -4,6 +4,55 @@
 
 :root {
 	box-sizing: border-box;
+
+	--color-vg-red: #da3914;
+	--color-vg-green: #24a724;
+	--color-vg-blue: #2e50d8;
+	--color-vg-yellow: #ffd733;
+
+	--color-vg-gold: #daa520;
+	--color-vg-silver: #c0c0c0;
+	--color-vg-crystal: #4fd9ff;
+
+	--color-vg-ruby: #cd2236;
+	--color-vg-sapphire: #3d51a7;
+	--color-vg-firered: #f15c01;
+	--color-vg-leafgreen: #9fdc00;
+	--color-vg-emerald: #009652;
+	--color-vg-colosseum: #b6cae4;
+	--color-vg-xd: #604e82;
+
+	--color-vg-diamond: #90beed;
+	--color-vg-pearl: #dd7cb1;
+	--color-vg-platinum: #a0a08d;
+	--color-vg-heartgold: #e8b502;
+	--color-vg-soulsilver: #aab9cf;
+
+	--color-vg-black: #444444;
+	--color-vg-white: #e1e1e1;
+	--color-vg-black-2: #303e51;
+	--color-vg-white-2: #ebc5c3;
+
+	--color-vg-x: #025da6;
+	--color-vg-y: #ea1a3e;
+	--color-vg-omega-ruby: #ab2813;
+	--color-vg-alpha-sapphire: #26649c;
+
+	--color-vg-sun: #f1912b;
+	--color-vg-moon: #5599ca;
+	--color-vg-ultra-sun: #e95b2b;
+	--color-vg-ultra-moon: #226db5;
+	--color-vg-lets-go-pikachu: #f5da26;
+	--color-vg-lets-go-eevee: #d4924b;
+
+	--color-vg-sword: #00a1e9;
+	--color-vg-shield: #bf004f;
+	--color-vg-brilliant-diamond: #44bae5;
+	--color-vg-shining-pearl: #da7d99;
+	--color-vg-legends-arceus: #36597b;
+
+	--color-vg-scarlet: #f34134;
+	--color-vg-violet: #8334b7;
 }
 
 *, *::before, *::after {
@@ -520,7 +569,91 @@ a.button {
 .dex-table tbody .dex-table__pokemon-move-vg {
 	padding: 5px 10px;
 	font-weight: bold;
+	color: white;
 }
+.dex-table tbody .dex-table__pokemon-move-vg--rg {
+	background-image: linear-gradient(135deg, var(--color-vg-red) 50%, var(--color-vg-green) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--rb {
+	background-image: linear-gradient(135deg, var(--color-vg-red) 50%, var(--color-vg-blue) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--y {
+	background-color: var(--color-vg-yellow);
+	color: black;
+}
+.dex-table tbody .dex-table__pokemon-move-vg--gs {
+	background-image: linear-gradient(135deg, var(--color-vg-gold) 50%, var(--color-vg-silver) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--c {
+	background-color: var(--color-vg-crystal);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--rs {
+	background-image: linear-gradient(135deg, var(--color-vg-ruby) 50%, var(--color-vg-sapphire) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--frlg {
+	background-image: linear-gradient(135deg, var(--color-vg-firered) 50%, var(--color-vg-leafgreen) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--e {
+	background-color: var(--color-vg-emerald);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--colo {
+	background-color: var(--color-vg-colosseum);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--xd {
+	background-color: var(--color-vg-xd);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--dp {
+	background-image: linear-gradient(135deg, var(--color-vg-diamond) 50%, var(--color-vg-pearl) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--pt {
+	background-color: var(--color-vg-platinum);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--hgss {
+	background-image: linear-gradient(135deg, var(--color-vg-heartgold) 50%, var(--color-vg-soulsilver) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--bw {
+	background-image: linear-gradient(135deg, var(--color-vg-black) 50%, var(--color-vg-white) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--bw sub {
+	color: black;
+}
+.dex-table tbody .dex-table__pokemon-move-vg--b2w2 {
+	background-image: linear-gradient(135deg, var(--color-vg-black-2) 50%, var(--color-vg-white-2) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--b2w2 sub {
+	color: black;
+}
+.dex-table tbody .dex-table__pokemon-move-vg--xy {
+	background-image: linear-gradient(135deg, var(--color-vg-x) 50%, var(--color-vg-y) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--oras {
+	background-image: linear-gradient(135deg, var(--color-vg-omega-ruby) 50%, var(--color-vg-alpha-sapphire) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--sm {
+	background-image: linear-gradient(135deg, var(--color-vg-sun) 50%, var(--color-vg-moon) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--usum {
+	background-image: linear-gradient(135deg, var(--color-vg-ultra-sun) 50%, var(--color-vg-ultra-moon) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--lgpe {
+	background-image: linear-gradient(135deg, var(--color-vg-lets-go-pikachu) 50%, var(--color-vg-lets-go-eevee) 50%);
+}
+.dex-table__pokemon-move-vg--lgpe sup {
+	color: black;
+}
+.dex-table tbody .dex-table__pokemon-move-vg--ss {
+	background-image: linear-gradient(135deg, var(--color-vg-sword) 50%, var(--color-vg-shield) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--bdsp {
+	background-image: linear-gradient(135deg, var(--color-vg-brilliant-diamond) 50%, var(--color-vg-shining-pearl) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--la {
+	background-color: var(--color-vg-legends-arceus);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--sv {
+	background-image: linear-gradient(135deg, var(--color-vg-scarlet) 50%, var(--color-vg-violet) 50%);
+}
+
 .dex-table tbody .dex-table__pokemon-move-data {
 	padding: 5px 10px;
 }
@@ -776,6 +909,89 @@ a.button {
 	padding: 5px 10px;
 	text-align: center;
 	font-weight: bold;
+	color: white;
+}
+.breeding-chain__version-group--rg {
+	background-image: linear-gradient(135deg, var(--color-vg-red) 50%, var(--color-vg-green) 50%);
+}
+.breeding-chain__version-group--rb {
+	background-image: linear-gradient(135deg, var(--color-vg-red) 50%, var(--color-vg-blue) 50%);
+}
+.breeding-chain__version-group--y {
+	background-color: var(--color-vg-yellow);
+	color: black;
+}
+.breeding-chain__version-group--gs {
+	background-image: linear-gradient(135deg, var(--color-vg-gold) 50%, var(--color-vg-silver) 50%);
+}
+.breeding-chain__version-group--c {
+	background-color: var(--color-vg-crystal);
+}
+.breeding-chain__version-group--rs {
+	background-image: linear-gradient(135deg, var(--color-vg-ruby) 50%, var(--color-vg-sapphire) 50%);
+}
+.breeding-chain__version-group--frlg {
+	background-image: linear-gradient(135deg, var(--color-vg-firered) 50%, var(--color-vg-leafgreen) 50%);
+}
+.breeding-chain__version-group--e {
+	background-color: var(--color-vg-emerald);
+}
+.breeding-chain__version-group--colo {
+	background-color: var(--color-vg-colosseum);
+}
+.breeding-chain__version-group--xd {
+	background-color: var(--color-vg-xd);
+}
+.breeding-chain__version-group--dp {
+	background-image: linear-gradient(135deg, var(--color-vg-diamond) 50%, var(--color-vg-pearl) 50%);
+}
+.breeding-chain__version-group--pt {
+	background-color: var(--color-vg-platinum);
+}
+.breeding-chain__version-group--hgss {
+	background-image: linear-gradient(135deg, var(--color-vg-heartgold) 50%, var(--color-vg-soulsilver) 50%);
+}
+.breeding-chain__version-group--bw {
+	background-image: linear-gradient(135deg, var(--color-vg-black) 50%, var(--color-vg-white) 50%);
+}
+.breeding-chain__version-group--bw sub {
+	color: black;
+}
+.breeding-chain__version-group--b2w2 {
+	background-image: linear-gradient(135deg, var(--color-vg-black-2) 50%, var(--color-vg-white-2) 50%);
+}
+.breeding-chain__version-group--b2w2 sub {
+	color: black;
+}
+.breeding-chain__version-group--xy {
+	background-image: linear-gradient(135deg, var(--color-vg-x) 50%, var(--color-vg-y) 50%);
+}
+.breeding-chain__version-group--oras {
+	background-image: linear-gradient(135deg, var(--color-vg-omega-ruby) 50%, var(--color-vg-alpha-sapphire) 50%);
+}
+.breeding-chain__version-group--sm {
+	background-image: linear-gradient(135deg, var(--color-vg-sun) 50%, var(--color-vg-moon) 50%);
+}
+.breeding-chain__version-group--usum {
+	background-image: linear-gradient(135deg, var(--color-vg-ultra-sun) 50%, var(--color-vg-ultra-moon) 50%);
+}
+.breeding-chain__version-group--lgpe {
+	background-image: linear-gradient(135deg, var(--color-vg-lets-go-pikachu) 50%, var(--color-vg-lets-go-eevee) 50%);
+}
+.dex-table__pokemon-move-vg--lgpe sup {
+	color: black;
+}
+.breeding-chain__version-group--ss {
+	background-image: linear-gradient(135deg, var(--color-vg-sword) 50%, var(--color-vg-shield) 50%);
+}
+.breeding-chain__version-group--bdsp {
+	background-image: linear-gradient(135deg, var(--color-vg-brilliant-diamond) 50%, var(--color-vg-shining-pearl) 50%);
+}
+.breeding-chain__version-group--la {
+	background-color: var(--color-vg-legends-arceus);
+}
+.breeding-chain__version-group--sv {
+	background-image: linear-gradient(135deg, var(--color-vg-scarlet) 50%, var(--color-vg-violet) 50%);
 }
 
 

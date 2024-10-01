@@ -87,8 +87,6 @@ final readonly class DexFormatter
 	{
 		return [
 			'abbreviation' => $version->getAbbreviation(),
-			'backgroundColor' => $version->getBackgroundColor(),
-			'textColor' => $version->getTextColor(),
 		];
 	}
 

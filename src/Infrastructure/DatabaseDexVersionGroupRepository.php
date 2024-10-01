@@ -30,9 +30,7 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 		$stmt = $this->db->prepare(
 			'SELECT
 				`version_group_id`,
-				`abbreviation`,
-				`background_color`,
-				`text_color`
+				`abbreviation`
 			FROM `versions`'
 		);
 		$stmt->execute();
@@ -42,8 +40,6 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$version = new DexVersion(
 				$result['abbreviation'],
-				$result['background_color'],
-				$result['text_color'],
 			);
 
 			$versions[$result['version_group_id']][] = $version;
