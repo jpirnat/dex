@@ -12,7 +12,6 @@ use Jp\Dex\Domain\Moves\StatsPokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Moves\Targets\TargetId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\DexType;
-use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
@@ -47,7 +46,6 @@ final readonly class DatabaseStatsPokemonMoveRepository implements StatsPokemonM
 				`mrm`.`percent`,
 				`mrmp`.`percent` AS `prev_percent`,
 
-				`vgm`.`type_id`,
 				`t`.`identifier` AS `type_identifier`,
 				`tn`.`name` AS `type_name`,
 				`ti`.`icon` AS `type_icon`,
@@ -117,7 +115,6 @@ final readonly class DatabaseStatsPokemonMoveRepository implements StatsPokemonM
 				(float) $result['percent'],
 				(float) $result['percent'] - (float) $result['prev_percent'],
 				new DexType(
-					new TypeId($result['type_id']),
 					$result['type_identifier'],
 					$result['type_name'],
 					$result['type_icon'] ?? '',

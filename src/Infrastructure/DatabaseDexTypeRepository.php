@@ -55,7 +55,6 @@ final readonly class DatabaseDexTypeRepository implements DexTypeRepositoryInter
 		}
 
 		return new DexType(
-			$typeId,
 			$result['identifier'],
 			$result['name'],
 			$result['icon'] ?? '',
@@ -100,7 +99,6 @@ final readonly class DatabaseDexTypeRepository implements DexTypeRepositoryInter
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$dexType = new DexType(
-				new TypeId($result['id']),
 				$result['identifier'],
 				$result['name'],
 				$result['icon'] ?? '',
@@ -147,7 +145,6 @@ final readonly class DatabaseDexTypeRepository implements DexTypeRepositoryInter
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$dexType = new DexType(
-				new TypeId($result['id']),
 				$result['identifier'],
 				$result['name'],
 				$result['icon'] ?? '',
@@ -193,7 +190,6 @@ final readonly class DatabaseDexTypeRepository implements DexTypeRepositoryInter
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$dexType = new DexType(
-				new TypeId($result['id']),
 				$result['identifier'],
 				$result['name'],
 				$result['icon'] ?? '',

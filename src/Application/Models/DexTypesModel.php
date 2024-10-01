@@ -42,7 +42,7 @@ final class DexTypesModel
 		);
 		$types = $this->typeRepository->getMainByVersionGroup($versionGroupId);
 		foreach ($dexTypes as $dexType) {
-			$type = $types[$dexType->getId()->value()];
+			$type = $types[$dexType->getIdentifier()];
 			$this->types[] = [
 				'identifier' => $dexType->getIdentifier(),
 				'name' => $dexType->getName(),

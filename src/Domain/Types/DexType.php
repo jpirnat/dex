@@ -6,19 +6,10 @@ namespace Jp\Dex\Domain\Types;
 final readonly class DexType
 {
 	public function __construct(
-		private TypeId $id,
 		private string $identifier,
 		private string $name,
 		private string $icon,
 	) {}
-
-	/**
-	 * Get the type's id.
-	 */
-	public function getId() : TypeId
-	{
-		return $this->id;
-	}
 
 	/**
 	 * Get the type's identifier.

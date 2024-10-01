@@ -147,7 +147,7 @@ final readonly class DatabaseTypeRepository implements TypeRepositoryInterface
 	/**
 	 * Get the main types available in this version group.
 	 *
-	 * @return Type[] Indexed by id.
+	 * @return Type[] Indexed by identifier.
 	 */
 	public function getMainByVersionGroup(VersionGroupId $versionGroupId) : array
 	{
@@ -187,7 +187,7 @@ final readonly class DatabaseTypeRepository implements TypeRepositoryInterface
 				$result['color_code'],
 			);
 
-			$types[$result['id']] = $type;
+			$types[$result['identifier']] = $type;
 		}
 
 		return $types;

@@ -32,7 +32,7 @@ interface TypeRepositoryInterface
 	/**
 	 * Get the main types available in this version group.
 	 *
-	 * @return Type[] Indexed by id.
+	 * @return Type[] Indexed by identifier.
 	 */
 	public function getMainByVersionGroup(VersionGroupId $versionGroupId) : array;
 }

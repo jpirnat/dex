@@ -6,6 +6,7 @@ namespace Jp\Dex\Application\Models\DexPokemon;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Pokemon\VgPokemonRepositoryInterface;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
@@ -28,6 +29,7 @@ final class DexPokemonMatchupsModel
 
 	public function __construct(
 		private readonly DexTypeRepositoryInterface $dexTypeRepository,
+		private readonly VgPokemonRepositoryInterface $vgPokemonRepository,
 		private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
 	) {}
 
@@ -55,15 +57,14 @@ final class DexPokemonMatchupsModel
 		}
 
 		// Get the Pokémon's types, then get the matchups for those types.
-		$pokemonTypes = $this->dexTypeRepository->getByPokemon(
+		$vgPokemon = $this->vgPokemonRepository->getByVgAndPokemon(
 			$versionGroup->getId(),
 			$pokemonId,
-			$languageId,
 		);
-		foreach ($pokemonTypes as $type) {
+		foreach ($vgPokemon->getTypeIds() as $typeId) {
 			$matchups = $this->typeMatchupRepository->getByDefendingType(
 				$versionGroup->getGenerationId(),
-				$type->getId(),
+				$typeId,
 			);
 			foreach ($matchups as $matchup) {
 				// Factor this matchup into the Pokémon's overall matchups.
