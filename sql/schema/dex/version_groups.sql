@@ -5,6 +5,8 @@ create table if not exists `version_groups`
 
 `generation_id` tinyint unsigned not null,
 `abbreviation` varchar(4) not null,
+`has_breeding` bool not null,
+`steps_per_egg_cycle` smallint unsigned not null,
 `has_typed_hidden_power` bool not null,
 `has_ivs` bool not null,
 `has_evs` bool not null,
