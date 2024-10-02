@@ -7,7 +7,7 @@ Vue.component('dex-pokemons-table', {
 			default: [],
 		},
 		versionGroup: {
-			// Required fields: identifier, hasAbilities
+			// Required fields: identifier, hasAbilities, hasBreeding, hasEvYields, hasEvBasedStats
 			type: Object,
 			default: {},
 		},
@@ -22,6 +22,8 @@ Vue.component('dex-pokemons-table', {
 
 			currentPage: 1,
 			itemsPerPage: 10,
+
+			currentTab: 'baseStats',
 
 			sortColumn: '',
 			sortDirection: '',
@@ -53,11 +55,46 @@ Vue.component('dex-pokemons-table', {
 				:items-per-page="itemsPerPage"
 			></dex-pagination>
 
-			<div class="dex-pokemons__filters">
+			<div class="dex-pokemons__control">
 				<label class="dex-pokemons__filter">
 					Filter by Pokémon name: <input type="search" v-model="filterName">
 				</label>
+
+				<div class="dex-pokemons__control-space"></div>
+
+				<template v-if="versionGroup.hasBreeding || versionGroup.hasEvYields">
+					<button @click="showTab('baseStats')"
+						:class="{
+							'button': true,
+							'button--active': currentTab === 'baseStats'
+						}"
+					>
+						 Base Stats
+					</button>
+					<button v-if="versionGroup.hasBreeding" @click="showTab('breeding')"
+						:class="{
+							'button': true,
+							'button--active': currentTab === 'breeding'
+						}"
+					>
+						Breeding
+					</button>
+					<button v-if="versionGroup.hasEvYields" @click="showTab('evYields')"
+						:class="{
+							'button': true,
+							'button--active': currentTab === 'evYields'
+						}"
+					>
+						EV Yields
+					</button>
+				</template>
 			</div>
+
+			<p v-if="currentTab === 'evYields' && versionGroup.hasEvYields && !versionGroup.hasEvBasedStats">
+				Even though EVs don't contribute to a Pokémon's stats in this game, they can
+				still be gained by defeating other Pokémon, and the EVs will take effect if the
+				Pokémon is transferred to another game. Weird!
+			</p>
 
 			<table class="dex-table dex-table--full-width">
 				<thead>
@@ -78,27 +115,60 @@ Vue.component('dex-pokemons-table', {
 						>Pokémon</th>
 						<th scope="col">Types</th>
 						<th v-if="versionGroup.hasAbilities" scope="col">Abilities</th>
-						<th v-for="stat in stats" :key="stat.identifier" scope="col" class="dex-table--number dex-table__header--sortable"
-							@click="sortBy(stat.identifier, 'desc', p => p.baseStats[stat.identifier])"
-							:class="{
-								['dex-table__stat--' + stat.identifier]: true,
-								'dex-table__header--sorted-asc': sortColumn === stat.identifier && sortDirection === 'asc',
-								'dex-table__header--sorted-desc': sortColumn === stat.identifier && sortDirection === 'desc',
-							}"
-							v-tooltip="stat.name"
-						>
-							<abbr class="dex--tooltip">{{ stat.abbreviation }}</abbr>
-						</th>
-						<th scope="col" class="dex-table--number dex-table__header--sortable"
-							@click="sortBy('bst', 'desc', p => p.bst)"
-							:class="{
-								'dex-table__header--sorted-asc': sortColumn === 'bst' && sortDirection === 'asc',
-								'dex-table__header--sorted-desc': sortColumn === 'bst' && sortDirection === 'desc',
-							}"
-							v-tooltip="'Base Stat Total'"
-						>
-							<abbr class="dex--tooltip">BST</abbr>
-						</th>
+						<template v-if="currentTab === 'baseStats'">
+							<th v-for="stat in stats" :key="stat.identifier" scope="col" class="dex-table--number dex-table__header--sortable"
+								@click="sortBy('base-' + stat.identifier, 'desc', p => p.baseStats[stat.identifier])"
+								:class="{
+									['dex-table__stat--' + stat.identifier]: true,
+									'dex-table__header--sorted-asc': sortColumn === 'base-' + stat.identifier && sortDirection === 'asc',
+									'dex-table__header--sorted-desc': sortColumn === 'base-' + stat.identifier && sortDirection === 'desc',
+								}"
+								v-tooltip="stat.name"
+							>
+								<abbr class="dex--tooltip">{{ stat.abbreviation }}</abbr>
+							</th>
+							<th scope="col" class="dex-table--number dex-table__header--sortable"
+								@click="sortBy('bst', 'desc', p => p.bst)"
+								:class="{
+									'dex-table__header--sorted-asc': sortColumn === 'bst' && sortDirection === 'asc',
+									'dex-table__header--sorted-desc': sortColumn === 'bst' && sortDirection === 'desc',
+								}"
+								v-tooltip="'Base Stat Total'"
+							>
+								<abbr class="dex--tooltip">BST</abbr>
+							</th>
+						</template>
+						<template v-if="currentTab === 'breeding'">
+							<th scope="col">Egg Groups</th>
+							<th scope="col">Gender Ratio</th>
+							<th scope="col" class="dex-table--number dex-table__header--sortable"
+								@click="sortBy('eggCycles', 'asc', p => p.eggCycles)"
+								:class="{
+									'dex-table__header--sorted-asc': sortColumn === 'eggCycles' && sortDirection === 'asc',
+									'dex-table__header--sorted-desc': sortColumn === 'eggCycles' && sortDirection === 'desc',
+								}"
+							>Egg Cycles</th>
+							<th scope="col" class="dex-table--number dex-table__header--sortable"
+								@click="sortBy('stepsToHatch', 'asc', p => p.stepsToHatch)"
+								:class="{
+									'dex-table__header--sorted-asc': sortColumn === 'stepsToHatch' && sortDirection === 'asc',
+									'dex-table__header--sorted-desc': sortColumn === 'stepsToHatch' && sortDirection === 'desc',
+								}"
+							>Steps to Hatch</th>
+						</template>
+						<template v-if="currentTab === 'evYields'">
+							<th v-for="stat in stats" :key="stat.identifier" scope="col" class="dex-table--number dex-table__header--sortable"
+								@click="sortBy('ev-' + stat.identifier, 'desc', p => p.evYield[stat.identifier] ? p.evYield[stat.identifier] : 0)"
+								:class="{
+									['dex-table__stat--' + stat.identifier]: true,
+									'dex-table__header--sorted-asc': sortColumn === 'ev-' + stat.identifier && sortDirection === 'asc',
+									'dex-table__header--sorted-desc': sortColumn === 'ev-' + stat.identifier && sortDirection === 'desc',
+								}"
+								v-tooltip="stat.name"
+							>
+								<abbr class="dex--tooltip">{{ stat.abbreviation }}</abbr>
+							</th>
+						</template>
 					</tr>
 				</thead>
 				<tbody>
@@ -132,14 +202,41 @@ Vue.component('dex-pokemons-table', {
 								</a>
 							</div>
 						</td>
-						<td v-for="stat in stats" :key="stat.identifier" class="dex-table--number"
-							:class="{
-								['dex-table__stat--' + stat.identifier]: true,
-							}"
-						>
-							{{ pokemon.baseStats[stat.identifier] }}
-						</td>
-						<td class="dex-table--number">{{ pokemon.bst }}</td>
+						<template v-if="currentTab === 'baseStats'">
+							<td v-for="stat in stats" :key="stat.identifier" class="dex-table--number"
+								:class="{
+									['dex-table__stat--' + stat.identifier]: true,
+								}"
+							>
+								{{ pokemon.baseStats[stat.identifier] }}
+							</td>
+							<td class="dex-table--number">{{ pokemon.bst }}</td>
+						</template>
+						<template v-if="currentTab === 'breeding'">
+							<td>
+								<div class="dex-table__pokemon-egg-groups">
+									<a v-for="eggGroup in pokemon.eggGroups" :key="eggGroup.identifier"
+										:href="'/dex/' + versionGroup.identifier + '/egg-groups/' + eggGroup.identifier"
+									>
+										{{ eggGroup.name }}
+									</a>
+								</div>
+							</td>
+							<td class="dex-table--icon" v-tooltip="pokemon.genderRatio.description">
+								<img :src="'/images/gender-ratios/' + pokemon.genderRatio.icon" :alt="pokemon.genderRatio.description">
+							</td>
+							<td class="dex-table--number">{{ pokemon.eggCycles }}</td>
+							<td class="dex-table--number">{{ pokemon.stepsToHatch }}</td>
+						</template>
+						<template v-if="currentTab === 'evYields'">
+							<td v-for="stat in stats" :key="stat.identifier" class="dex-table--number"
+								:class="{
+									['dex-table__stat--' + stat.identifier]: pokemon.evYield[stat.identifier],
+								}"
+							>
+								{{ pokemon.evYield[stat.identifier] ? pokemon.evYield[stat.identifier] : 0 }}
+							</td>
+						</template>
 					</tr>
 				</tbody>
 			</table>
@@ -152,6 +249,10 @@ Vue.component('dex-pokemons-table', {
 		</div>
 	`,
 	methods: {
+		showTab(tab) {
+			this.currentTab = tab;
+		},
+
 		sortBy(column, defaultDirection, sortValueCallback) {
 			if (this.sortColumn !== column) {
 				// If we're not already sorted by this column, sort in its default direction.

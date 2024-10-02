@@ -56,6 +56,9 @@ final readonly class DexTypeView
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
 					'hasAbilities' => $versionGroup->hasAbilities(),
+					'hasBreeding' => $versionGroup->hasBreeding(),
+					'hasEvYields' => $versionGroup->hasEvYields(),
+					'hasEvBasedStats' => $versionGroup->hasEvBasedStats(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,

@@ -213,7 +213,8 @@ a.button {
 }
 
 .button:hover,
-.button:focus {
+.button:focus,
+.button--active {
 	background: black;
 	color: white;
 }
@@ -381,16 +382,14 @@ a.button {
 	text-align: center;
 }
 
-.dex-table__pokemon-abilities {
+.dex-table__pokemon-abilities,
+.dex-table__pokemon-egg-groups {
 	display: flex;
 	flex-direction: column;
+	gap: 5px;
 	font-size: .8rem;
 	white-space: nowrap;
 	text-align: center;
-}
-
-.dex-table__pokemon-ability:not(:last-child) {
-	margin-bottom: 5px;
 }
 
 .dex-table__pokemon-ability--hidden {
@@ -682,9 +681,18 @@ a.button {
 
 /* dex Pokémons */
 
+.dex-pokemons__control {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin: 5px 0;
+}
+
 .dex-pokemons__filter {
-	display: inline-block;
-	margin: 0 10px 10px 0;
+}
+
+.dex-pokemons__control-space {
+	flex: 1;
 }
 
 

@@ -80,8 +80,8 @@
 						<td class="dex-table--icon" v-tooltip="pokemon.genderRatio.description">
 							<img :src="'/images/gender-ratios/' + pokemon.genderRatio.icon" :alt="pokemon.genderRatio.description">
 						</td>
-						<td class="dex-table--icon">{{ pokemon.eggCycles }}</td>
-						<td class="dex-table--icon">{{ pokemon.stepsToHatch }}</td>
+						<td class="dex-table--number">{{ pokemon.eggCycles }}</td>
+						<td class="dex-table--number">{{ pokemon.stepsToHatch }}</td>
 						<td>{{ pokemon.moveMethod }}</td>
 					</tr>
 				</tbody>
