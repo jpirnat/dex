@@ -7,12 +7,9 @@ Vue.component('dex-pokemons-table', {
 			default: [],
 		},
 		versionGroup: {
+			// Required fields: identifier, hasAbilities
 			type: Object,
 			default: {},
-		},
-		showAbilities: {
-			type: Boolean,
-			default: true,
 		},
 		stats: {
 			type: Array,
@@ -80,7 +77,7 @@ Vue.component('dex-pokemons-table', {
 							}"
 						>Pokémon</th>
 						<th scope="col">Types</th>
-						<th v-if="showAbilities" scope="col">Abilities</th>
+						<th v-if="versionGroup.hasAbilities" scope="col">Abilities</th>
 						<th v-for="stat in stats" :key="stat.identifier" scope="col" class="dex-table--number dex-table__header--sortable"
 							@click="sortBy(stat.identifier, 'desc', p => p.baseStats[stat.identifier])"
 							:class="{
@@ -122,7 +119,7 @@ Vue.component('dex-pokemons-table', {
 								></dex-type-link>
 							</div>
 						</td>
-						<td v-if="showAbilities">
+						<td v-if="versionGroup.hasAbilities">
 							<div class="dex-table__pokemon-abilities">
 								<a v-for="ability in pokemon.abilities" :key="ability.identifier"
 									:href="'/dex/' + versionGroup.identifier + '/abilities/' + ability.identifier"

@@ -47,8 +47,8 @@ final readonly class DexAbilityView
 				'title' => 'Porydex - Abilities - ' . $ability['name'],
 
 				'versionGroup' => [
-					'id' => $versionGroup->getId()->value(),
 					'identifier' => $versionGroup->getIdentifier(),
+					'hasAbilities' => $versionGroup->hasAbilities(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,

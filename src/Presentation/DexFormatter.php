@@ -109,6 +109,14 @@ final readonly class DexFormatter
 				'abilities' => $this->formatDexPokemonAbilities($dexPokemon->getAbilities()),
 				'baseStats' => $dexPokemon->getBaseStats(),
 				'bst' => $dexPokemon->getBst(),
+				'eggGroups' => $this->formatDexEggGroups($dexPokemon->getEggGroups()),
+				'genderRatio' => [
+					'icon' => $dexPokemon->getGenderRatio()->getIcon(),
+					'description' => $dexPokemon->getGenderRatio()->getDescription(),
+				],
+				'eggCycles' => $dexPokemon->getEggCycles(),
+				'stepsToHatch' => $dexPokemon->getStepsToHatch(),
+				'evYield' => $dexPokemon->getEvYield(),
 				'sort' => $dexPokemon->getSort(),
 			];
 		}

@@ -54,8 +54,8 @@ final readonly class DexTypeView
 				'title' => 'Porydex - Types - ' . $type['name'],
 
 				'versionGroup' => [
-					'id' => $versionGroup->getId()->value(),
 					'identifier' => $versionGroup->getIdentifier(),
+					'hasAbilities' => $versionGroup->hasAbilities(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
@@ -68,7 +68,6 @@ final readonly class DexTypeView
 				'damageTaken' => $damageTaken,
 
 				'pokemons' => $pokemon,
-				'showAbilities' => $versionGroup->getId()->hasAbilities(),
 				'stats' => $stats,
 
 				'moves' => $moves,

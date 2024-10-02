@@ -39,13 +39,13 @@ final readonly class DexPokemonsView
 			'data' => [
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
+					'hasAbilities' => $versionGroup->hasAbilities(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'pokemons' => $this->dexFormatter->formatDexPokemon($pokemon),
-				'showAbilities' => $versionGroup->getId()->hasAbilities(),
 				'stats' => $stats,
 			]
 		]);
