@@ -172,7 +172,7 @@ final class IvCalculatorSubmitModel
 		}
 
 		// Use Hidden Power type to further narrow down the options.
-		if ($hpType && $versionGroup->hasTypedHiddenPower()) {
+		if ($hpType && $versionGroup->hasIvBasedHiddenPower()) {
 			// We don't need to test every combination of possible IVs; just
 			// every combination of evenness and oddness among possible IVs.
 

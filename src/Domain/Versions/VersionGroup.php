@@ -10,9 +10,12 @@ final readonly class VersionGroup
 		private string $identifier,
 		private GenerationId $generationId,
 		private string $abbreviation,
-		private bool $hasTypedHiddenPower,
-		private bool $hasIvs,
-		private bool $hasEvs,
+		private bool $hasBreeding,
+		private int $stepsPerEggCycle,
+		private bool $hasIvBasedStats,
+		private bool $hasIvBasedHiddenPower,
+		private bool $hasEvBasedStats,
+		private bool $hasEvYields,
 		private bool $hasAbilities,
 		private bool $hasNatures,
 		private bool $hasCharacteristics,
@@ -39,19 +42,34 @@ final readonly class VersionGroup
 		return $this->abbreviation;
 	}
 
-	public function hasTypedHiddenPower() : bool
+	public function hasBreeding() : bool
 	{
-		return $this->hasTypedHiddenPower;
+		return $this->hasBreeding;
 	}
 
-	public function hasIvs() : bool
+	public function getStepsPerEggCycle() : int
 	{
-		return $this->hasIvs;
+		return $this->stepsPerEggCycle;
 	}
 
-	public function hasEvs() : bool
+	public function hasIvBasedStats() : bool
 	{
-		return $this->hasEvs;
+		return $this->hasIvBasedStats;
+	}
+
+	public function hasIvBasedHiddenPower() : bool
+	{
+		return $this->hasIvBasedHiddenPower;
+	}
+
+	public function hasEvBasedStats() : bool
+	{
+		return $this->hasEvBasedStats;
+	}
+
+	public function hasEvYields() : bool
+	{
+		return $this->hasEvYields;
 	}
 
 	public function hasAbilities() : bool

@@ -36,7 +36,7 @@ final class IvCalculatorIndexModel
 
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->versionGroupModel->setWithIvs();
+		$this->versionGroupModel->setWithIvBasedStats();
 
 		$this->pokemons = $this->queries->getPokemons($versionGroupId, $languageId);
 
@@ -61,7 +61,7 @@ final class IvCalculatorIndexModel
 		);
 
 		$versionGroup = $this->versionGroupModel->getVersionGroup();
-		if ($versionGroup->hasTypedHiddenPower()) {
+		if ($versionGroup->hasIvBasedHiddenPower()) {
 			$this->types = $this->queries->getTypes(
 				$versionGroupId,
 				$languageId,

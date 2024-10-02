@@ -123,19 +123,19 @@ final class VersionGroupModel
 	}
 
 	/**
-	 * Set the navigable version groups to those that have IVs.
+	 * Set the navigable version groups to those that have IV-based stats.
 	 */
-	public function setWithIvs() : void
+	public function setWithIvBasedStats() : void
 	{
-		$this->versionGroups = $this->vgRepository->getWithIvs();
+		$this->versionGroups = $this->vgRepository->getWithIvBasedStats();
 	}
 
 	/**
-	 * Set the navigable version groups to those that have EVs.
+	 * Set the navigable version groups to those that have EV-based stats.
 	 */
-	public function setWithEvs() : void
+	public function setWithEvBasedStats() : void
 	{
-		$this->versionGroups = $this->vgRepository->getWithEvs();
+		$this->versionGroups = $this->vgRepository->getWithEvBasedStats();
 	}
 
 

@@ -29,7 +29,7 @@ final class EvCalculatorIndexModel
 	) : void {
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->versionGroupModel->setWithEvs();
+		$this->versionGroupModel->setWithEvBasedStats();
 
 		$this->pokemons = $this->queries->getPokemons($versionGroupId, $languageId);
 

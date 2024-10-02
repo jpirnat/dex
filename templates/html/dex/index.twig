@@ -31,10 +31,10 @@
 			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/natures'" v-if="versionGroup.hasNatures">Natures</a>
 		</div>
 
-		<div class="dex-section__title" v-if="versionGroup.hasEvs">Tools</div>
+		<div class="dex-section__title" v-if="versionGroup.hasIvBasedStats || versionGroup.hasEvBasedStats">Tools</div>
 		<div class="dex-index__links">
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/iv-calculator'" v-if="versionGroup.hasIvs">IV Calculator</a>
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/ev-calculator'" v-if="versionGroup.hasEvs">EV Calculator</a>
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/iv-calculator'" v-if="versionGroup.hasIvBasedStats">IV Calculator</a>
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/ev-calculator'" v-if="versionGroup.hasEvBasedStats">EV Calculator</a>
 		</div>
 	</template>
 </div>
