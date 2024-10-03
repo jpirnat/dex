@@ -350,10 +350,6 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseNatureRepository::class
 );
 $services->alias(
-	\Jp\Dex\Domain\EggGroups\PokemonEggGroupRepositoryInterface::class,
-	\Jp\Dex\Infrastructure\DatabasePokemonEggGroupRepository::class
-);
-$services->alias(
 	\Jp\Dex\Domain\PokemonMoves\PokemonMoveRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabasePokemonMoveRepository::class
 );
