@@ -7,11 +7,12 @@ use Jp\Dex\Domain\Calculators\HiddenPowerCalculator;
 use Jp\Dex\Domain\Calculators\StatCalculator;
 use Jp\Dex\Domain\Characteristics\CharacteristicNotFoundException;
 use Jp\Dex\Domain\Characteristics\CharacteristicRepositoryInterface;
+use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Natures\NatureNotFoundException;
 use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\BaseStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
@@ -29,7 +30,7 @@ final class IvCalculatorSubmitModel
 		private readonly CharacteristicRepositoryInterface $characteristicRepository,
 		private readonly TypeRepositoryInterface $typeRepository,
 		private readonly StatRepositoryInterface $statRepository,
-		private readonly BaseStatRepositoryInterface $baseStatRepository,
+		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
 		private readonly StatCalculator $statCalculator,
 		private readonly HiddenPowerCalculator $hiddenPowerCalculator,
 	) {}
@@ -65,10 +66,12 @@ final class IvCalculatorSubmitModel
 
 		$stats = $this->statRepository->getByVersionGroup($versionGroup->getId());
 
-		$baseStats = $this->baseStatRepository->getByPokemon(
+		$dexPokemon = $this->dexPokemonRepository->getById(
 			$versionGroup->getId(),
 			$pokemon->getId(),
+			new LanguageId(LanguageId::ENGLISH),
 		);
+		$baseStats = $dexPokemon->getBaseStats();
 
 		// Initialize the array of possible IVs.
 		$possibleIvs = [];

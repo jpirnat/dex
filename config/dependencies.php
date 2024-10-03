@@ -150,10 +150,6 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseAbilityRepository::class
 );
 $services->alias(
-	\Jp\Dex\Domain\Stats\BaseStatRepositoryInterface::class,
-	\Jp\Dex\Infrastructure\DatabaseBaseStatRepository::class
-);
-$services->alias(
 	\Jp\Dex\Domain\BreedingChains\BreedingChainQueriesInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseBreedingChainQueries::class
 );
