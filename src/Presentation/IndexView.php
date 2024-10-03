@@ -87,6 +87,36 @@ final readonly class IndexView
 	}
 
 	/**
+	 * Show the dex egg groups page.
+	 */
+	public function dexEggGroups() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/egg-group.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Egg Groups',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
+	 * Show the dex egg group page.
+	 */
+	public function dexEggGroup() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/egg-group.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Egg Groups',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the dex index page.
 	 */
 	public function dexIndex() : ResponseInterface

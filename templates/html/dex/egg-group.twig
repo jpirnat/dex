@@ -1,0 +1,52 @@
+{% extends "html/base.twig" %}
+
+{% block styles %}
+	<link href="/css/vtooltip.css" rel="stylesheet">
+	<link href="/css/dex-pagination.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+{% verbatim %}
+<div id="app" v-cloak>
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
+	<div class="version-group-control" v-if="versionGroups.length">
+		<ul>
+			<li v-for="vg in versionGroups">
+				<a :href="'/dex/' + vg.identifier + '/egg-groups/' + eggGroup.identifier"
+					:class="{
+						'current': vg.identifier === versionGroup.identifier
+					}"
+				>{{ vg.name }}</a>
+			</li>
+		</ul>
+	</div>
+
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
+
+	<template v-if="loaded">
+		<h1 class="dex-page__title">Egg Groups - {{ eggGroup.name }}</h1>
+
+		<dex-pokemons-table
+			:pokemons="pokemons"
+			:version-group="versionGroup"
+			:stats="stats"
+		></dex-pokemons-table>
+	</template>
+</div>
+{% endverbatim %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7"></script>
+	<script src="/js/dex-breadcrumbs.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/v-tooltip@2.1"></script>
+	<script src="/js/dex-pagination.js"></script>
+	<script src="/js/dex-type-link.js"></script>
+	<script src="/js/dex-pokemons-table.js"></script>
+
+	<script src="/js/dex/egg-group.js"></script>
+{% endblock %}

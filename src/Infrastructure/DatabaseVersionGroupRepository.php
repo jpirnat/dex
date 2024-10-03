@@ -729,6 +729,60 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	}
 
 	/**
+	 * Get version groups that have breeding.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithBreeding() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`id`,
+				`identifier`,
+				`generation_id`,
+				`abbreviation`,
+				`steps_per_egg_cycle`,
+				`has_iv_based_stats`,
+				`has_iv_based_hidden_power`,
+				`has_ev_based_stats`,
+				`has_ev_yields`,
+				`has_abilities`,
+				`has_natures`,
+				`has_characteristics`,
+				`sort`
+			FROM `version_groups`
+			WHERE `has_iv_based_stats` = 1
+			ORDER BY `sort`'
+		);
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroup = new VersionGroup(
+				new VersionGroupId($result['id']),
+				$result['identifier'],
+				new GenerationId($result['generation_id']),
+				$result['abbreviation'],
+				true,
+				$result['steps_per_egg_cycle'],
+				(bool) $result['has_iv_based_stats'],
+				(bool) $result['has_iv_based_hidden_power'],
+				(bool) $result['has_ev_based_stats'],
+				(bool) $result['has_ev_yields'],
+				(bool) $result['has_abilities'],
+				(bool) $result['has_natures'],
+				(bool) $result['has_characteristics'],
+				$result['sort'],
+			);
+
+			$versionGroups[$result['id']] = $versionGroup;
+		}
+
+		return $versionGroups;
+	}
+
+	/**
 	 * Get version groups that have IV-based stats.
 	 *
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.

@@ -9,6 +9,7 @@ use Jp\Dex\Presentation\IndexView;
 // Common route parameter definitions.
 $abilityIdentifier = '{abilityIdentifier:[-\w]+}';
 $abilityFlagIdentifier = '{abilityFlagIdentifier:[-\w]+}';
+$eggGroupIdentifier = '{eggGroupIdentifier:[-\w]+}';
 $itemIdentifier = '{itemIdentifier:[-\w]+}';
 $moveIdentifier = '{moveIdentifier:[-\w]+}';
 $moveFlagIdentifier = '{moveFlagIdentifier:[-\w]+}';
@@ -91,6 +92,38 @@ return [
 		'controllerClass' => \Jp\Dex\Application\Controllers\DexAbilityFlagController::class,
 		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\DexAbilityFlagView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
+	['GET', "/dex/$vgIdentifier/egg-groups", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'dexEggGroups',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$vgIdentifier/egg-groups", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexEggGroupsController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\DexEggGroupsView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
+	['GET', "/dex/$vgIdentifier/egg-groups/$eggGroupIdentifier", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'dexEggGroup',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$vgIdentifier/egg-groups/$eggGroupIdentifier", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexEggGroupController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\DexEggGroupView::class,
 		'viewMethod' => 'getData',
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],

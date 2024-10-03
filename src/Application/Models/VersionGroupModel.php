@@ -123,6 +123,14 @@ final class VersionGroupModel
 	}
 
 	/**
+	 * Set the navigable version groups to those that have breeding.
+	 */
+	public function setWithBreeding() : void
+	{
+		$this->versionGroups = $this->vgRepository->getWithBreeding();
+	}
+
+	/**
 	 * Set the navigable version groups to those that have IV-based stats.
 	 */
 	public function setWithIvBasedStats() : void

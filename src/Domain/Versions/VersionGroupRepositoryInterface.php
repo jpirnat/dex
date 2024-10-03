@@ -100,6 +100,13 @@ interface VersionGroupRepositoryInterface
 	public function getWithNatures() : array;
 
 	/**
+	 * Get version groups that have breeding.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithBreeding() : array;
+
+	/**
 	 * Get version groups that have IV-based stats.
 	 *
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.

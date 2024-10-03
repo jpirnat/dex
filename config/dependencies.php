@@ -170,6 +170,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseDexCategoryRepository::class
 );
 $services->alias(
+	\Jp\Dex\Domain\EggGroups\DexEggGroupRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseDexEggGroupRepository::class
+);
+$services->alias(
 	\Jp\Dex\Domain\Items\DexItemRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseDexItemRepository::class
 );
@@ -198,8 +202,8 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseDexVersionGroupRepository::class
 );
 $services->alias(
-	\Jp\Dex\Domain\EggGroups\EggGroupNameRepositoryInterface::class,
-	\Jp\Dex\Infrastructure\DatabaseEggGroupNameRepository::class
+	\Jp\Dex\Domain\EggGroups\EggGroupRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseEggGroupRepository::class
 );
 $services->alias(
 	\Jp\Dex\Application\Models\IvCalculator\IvCalculatorQueriesInterface::class,
