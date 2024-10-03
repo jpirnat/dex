@@ -182,10 +182,6 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseDexNatureRepository::class
 );
 $services->alias(
-	\Jp\Dex\Domain\Abilities\DexPokemonAbilityRepositoryInterface::class,
-	\Jp\Dex\Infrastructure\DatabaseDexPokemonAbilityRepository::class
-);
-$services->alias(
 	\Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseDexPokemonRepository::class
 );
