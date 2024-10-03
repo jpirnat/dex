@@ -92,7 +92,7 @@ final readonly class IndexView
 	public function dexEggGroups() : ResponseInterface
 	{
 		$content = $this->renderer->render(
-			'html/dex/egg-group.twig',
+			'html/dex/egg-groups.twig',
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Egg Groups',
 			]

@@ -16,6 +16,7 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 use PDO;
+use PDOStatement;
 
 final readonly class DatabaseVersionGroupRepository implements VersionGroupRepositoryInterface
 {
@@ -23,16 +24,11 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 		private PDO $db,
 	) {}
 
-	/**
-	 * Get a version group by its id.
-	 *
-	 * @throws VersionGroupNotFoundException if no version group exists with
-	 *     this id.
-	 */
-	public function getById(VersionGroupId $versionGroupId) : VersionGroup
+	private function getBaseQuery() : string
 	{
-		$stmt = $this->db->prepare(
-			'SELECT
+		return
+			"SELECT
+				`id`,
 				`identifier`,
 				`generation_id`,
 				`abbreviation`,
@@ -47,21 +43,29 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
-			WHERE `id` = :version_group_id
-			LIMIT 1'
-		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+			";
+	}
 
-		if (!$result) {
-			throw new VersionGroupNotFoundException(
-				'No version group exists with id ' . $versionGroupId->value() . '.'
-			);
+	/**
+	 * @return VersionGroup[] Indexed by id.
+	 */
+	private function executeAndFetch(PDOStatement $stmt) : array
+	{
+		$stmt->execute();
+
+		$versionGroups = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$versionGroups[$result['id']] = $this->fromRecord($result);
 		}
 
+		return $versionGroups;
+	}
+
+	private function fromRecord(array $result) : VersionGroup
+	{
 		return new VersionGroup(
-			$versionGroupId,
+			new VersionGroupId($result['id']),
 			$result['identifier'],
 			new GenerationId($result['generation_id']),
 			$result['abbreviation'],
@@ -79,6 +83,34 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	}
 
 	/**
+	 * Get a version group by its id.
+	 *
+	 * @throws VersionGroupNotFoundException if no version group exists with
+	 *     this id.
+	 */
+	public function getById(VersionGroupId $versionGroupId) : VersionGroup
+	{
+		$baseQuery = $this->getBaseQuery();
+		$stmt = $this->db->prepare(
+			"$baseQuery
+			WHERE `id` = :version_group_id
+			LIMIT 1"
+		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			$versionGroupId = $versionGroupId->value();
+			throw new VersionGroupNotFoundException(
+				"No version group exists with id $versionGroupId."
+			);
+		}
+
+		return $this->fromRecord($result);
+	}
+
+	/**
 	 * Get a version group by its identifier.
 	 *
 	 * @throws VersionGroupNotFoundException if no version group exists with
@@ -86,24 +118,11 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getByIdentifier(string $identifier) : VersionGroup
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `identifier` = :identifier
-			LIMIT 1'
+			LIMIT 1"
 		);
 		$stmt->bindValue(':identifier', $identifier);
 		$stmt->execute();
@@ -115,22 +134,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			);
 		}
 
-		return new VersionGroup(
-			new VersionGroupId($result['id']),
-			$identifier,
-			new GenerationId($result['generation_id']),
-			$result['abbreviation'],
-			(bool) $result['has_breeding'],
-			$result['steps_per_egg_cycle'],
-			(bool) $result['has_iv_based_stats'],
-			(bool) $result['has_iv_based_hidden_power'],
-			(bool) $result['has_ev_based_stats'],
-			(bool) $result['has_ev_yields'],
-			(bool) $result['has_abilities'],
-			(bool) $result['has_natures'],
-			(bool) $result['has_characteristics'],
-			$result['sort'],
-		);
+		return $this->fromRecord($result);
 	}
 
 	/**
@@ -140,53 +144,14 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getSinceGeneration(GenerationId $generationId) : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `generation_id` >= :generation_id
-			ORDER BY `sort`'
+			ORDER BY `sort`"
 		);
 		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				(bool) $result['has_breeding'],
-				$result['steps_per_egg_cycle'],
-				(bool) $result['has_iv_based_stats'],
-				(bool) $result['has_iv_based_hidden_power'],
-				(bool) $result['has_ev_based_stats'],
-				(bool) $result['has_ev_yields'],
-				(bool) $result['has_abilities'],
-				(bool) $result['has_natures'],
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 
 	/**
@@ -196,58 +161,19 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getWithPokemon(PokemonId $pokemonId) : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `id` IN (
 				SELECT
 					`version_group_id`
 				FROM `vg_pokemon`
 				WHERE `pokemon_id` = :pokemon_id
 			)
-			ORDER BY `sort`'
+			ORDER BY `sort`"
 		);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				(bool) $result['has_breeding'],
-				$result['steps_per_egg_cycle'],
-				(bool) $result['has_iv_based_stats'],
-				(bool) $result['has_iv_based_hidden_power'],
-				(bool) $result['has_ev_based_stats'],
-				(bool) $result['has_ev_yields'],
-				(bool) $result['has_abilities'],
-				(bool) $result['has_natures'],
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 
 	/**
@@ -257,23 +183,9 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getWithMove(MoveId $moveId) : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `id` IN (
 				SELECT
 					`version_group_id`
@@ -281,35 +193,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				WHERE `move_id` = :move_id
 					AND `can_use_move` = 1
 			)
-			ORDER BY `sort`'
+			ORDER BY `sort`"
 		);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				(bool) $result['has_breeding'],
-				$result['steps_per_egg_cycle'],
-				(bool) $result['has_iv_based_stats'],
-				(bool) $result['has_iv_based_hidden_power'],
-				(bool) $result['has_ev_based_stats'],
-				(bool) $result['has_ev_yields'],
-				(bool) $result['has_abilities'],
-				(bool) $result['has_natures'],
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 
 	/**
@@ -319,23 +206,9 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getWithMoveFlag(MoveFlagId $flagId) : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `id` IN (
 				SELECT
 					`version_group_id`
@@ -343,35 +216,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				WHERE `flag_id` = :flag_id
 					AND `is_functional` = 1
 			)
-			ORDER BY `sort`'
+			ORDER BY `sort`"
 		);
 		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				(bool) $result['has_breeding'],
-				$result['steps_per_egg_cycle'],
-				(bool) $result['has_iv_based_stats'],
-				(bool) $result['has_iv_based_hidden_power'],
-				(bool) $result['has_ev_based_stats'],
-				(bool) $result['has_ev_yields'],
-				(bool) $result['has_abilities'],
-				(bool) $result['has_natures'],
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 
 	/**
@@ -381,58 +229,19 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getWithType(TypeId $typeId) : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `id` IN (
 				SELECT
 					`version_group_id`
 				FROM `vg_types`
 				WHERE `type_id` = :type_id
 			)
-			ORDER BY `sort`'
+			ORDER BY `sort`"
 		);
 		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				(bool) $result['has_breeding'],
-				$result['steps_per_egg_cycle'],
-				(bool) $result['has_iv_based_stats'],
-				(bool) $result['has_iv_based_hidden_power'],
-				(bool) $result['has_ev_based_stats'],
-				(bool) $result['has_ev_yields'],
-				(bool) $result['has_abilities'],
-				(bool) $result['has_natures'],
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 
 	/**
@@ -442,23 +251,9 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getWithItem(ItemId $itemId) : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `id` IN (
 				SELECT
 					`version_group_id`
@@ -466,35 +261,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				WHERE `item_id` = :item_id
 					AND `is_available` = 1
 			)
-			ORDER BY `sort`'
+			ORDER BY `sort`"
 		);
 		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				(bool) $result['has_breeding'],
-				$result['steps_per_egg_cycle'],
-				(bool) $result['has_iv_based_stats'],
-				(bool) $result['has_iv_based_hidden_power'],
-				(bool) $result['has_ev_based_stats'],
-				(bool) $result['has_ev_yields'],
-				(bool) $result['has_abilities'],
-				(bool) $result['has_natures'],
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 
 	/**
@@ -504,51 +274,13 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getWithAbilities() : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `has_abilities` = 1
-			ORDER BY `sort`'
+			ORDER BY `sort`"
 		);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				(bool) $result['has_breeding'],
-				$result['steps_per_egg_cycle'],
-				(bool) $result['has_iv_based_stats'],
-				(bool) $result['has_iv_based_hidden_power'],
-				(bool) $result['has_ev_based_stats'],
-				(bool) $result['has_ev_yields'],
-				true,
-				(bool) $result['has_natures'],
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 
 	/**
@@ -558,58 +290,19 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getWithAbility(AbilityId $abilityId) : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `id` IN (
 				SELECT
 					`version_group_id`
 				FROM `pokemon_abilities`
 				WHERE `ability_id` = :ability_id
 			)
-			ORDER BY `sort`'
+			ORDER BY `sort`"
 		);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				(bool) $result['has_breeding'],
-				$result['steps_per_egg_cycle'],
-				(bool) $result['has_iv_based_stats'],
-				(bool) $result['has_iv_based_hidden_power'],
-				(bool) $result['has_ev_based_stats'],
-				(bool) $result['has_ev_yields'],
-				(bool) $result['has_abilities'],
-				(bool) $result['has_natures'],
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 
 	/**
@@ -619,23 +312,9 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getWithAbilityFlag(AbilityFlagId $flagId) : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `id` IN (
 				SELECT
 					`version_group_id`
@@ -643,35 +322,10 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				WHERE `flag_id` = :flag_id
 					AND `is_functional` = 1
 			)
-			ORDER BY `sort`'
+			ORDER BY `sort`"
 		);
 		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				(bool) $result['has_breeding'],
-				$result['steps_per_egg_cycle'],
-				(bool) $result['has_iv_based_stats'],
-				(bool) $result['has_iv_based_hidden_power'],
-				(bool) $result['has_ev_based_stats'],
-				(bool) $result['has_ev_yields'],
-				(bool) $result['has_abilities'],
-				(bool) $result['has_natures'],
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 
 	/**
@@ -681,51 +335,13 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getWithNatures() : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `has_natures` = 1
-			ORDER BY `sort`'
+			ORDER BY `sort`"
 		);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				(bool) $result['has_breeding'],
-				$result['steps_per_egg_cycle'],
-				(bool) $result['has_iv_based_stats'],
-				(bool) $result['has_iv_based_hidden_power'],
-				(bool) $result['has_ev_based_stats'],
-				(bool) $result['has_ev_yields'],
-				(bool) $result['has_abilities'],
-				true,
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 
 	/**
@@ -735,51 +351,13 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getWithBreeding() : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
-			WHERE `has_iv_based_stats` = 1
-			ORDER BY `sort`'
+			"$baseQuery
+			WHERE `has_breeding` = 1
+			ORDER BY `sort`"
 		);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				true,
-				$result['steps_per_egg_cycle'],
-				(bool) $result['has_iv_based_stats'],
-				(bool) $result['has_iv_based_hidden_power'],
-				(bool) $result['has_ev_based_stats'],
-				(bool) $result['has_ev_yields'],
-				(bool) $result['has_abilities'],
-				(bool) $result['has_natures'],
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 
 	/**
@@ -789,51 +367,13 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getWithIvBasedStats() : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_hidden_power`,
-				`has_ev_based_stats`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `has_iv_based_stats` = 1
-			ORDER BY `sort`'
+			ORDER BY `sort`"
 		);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				(bool) $result['has_breeding'],
-				$result['steps_per_egg_cycle'],
-				true,
-				(bool) $result['has_iv_based_hidden_power'],
-				(bool) $result['has_ev_based_stats'],
-				(bool) $result['has_ev_yields'],
-				(bool) $result['has_abilities'],
-				(bool) $result['has_natures'],
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 
 	/**
@@ -843,50 +383,12 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	 */
 	public function getWithEvBasedStats() : array
 	{
+		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
-			'SELECT
-				`id`,
-				`identifier`,
-				`generation_id`,
-				`abbreviation`,
-				`has_breeding`,
-				`steps_per_egg_cycle`,
-				`has_iv_based_stats`,
-				`has_iv_based_hidden_power`,
-				`has_ev_yields`,
-				`has_abilities`,
-				`has_natures`,
-				`has_characteristics`,
-				`sort`
-			FROM `version_groups`
+			"$baseQuery
 			WHERE `has_ev_based_stats` = 1
-			ORDER BY `sort`'
+			ORDER BY `sort`"
 		);
-		$stmt->execute();
-
-		$versionGroups = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$versionGroup = new VersionGroup(
-				new VersionGroupId($result['id']),
-				$result['identifier'],
-				new GenerationId($result['generation_id']),
-				$result['abbreviation'],
-				(bool) $result['has_breeding'],
-				$result['steps_per_egg_cycle'],
-				(bool) $result['has_iv_based_stats'],
-				(bool) $result['has_iv_based_hidden_power'],
-				true,
-				(bool) $result['has_ev_yields'],
-				(bool) $result['has_abilities'],
-				(bool) $result['has_natures'],
-				(bool) $result['has_characteristics'],
-				$result['sort'],
-			);
-
-			$versionGroups[$result['id']] = $versionGroup;
-		}
-
-		return $versionGroups;
+		return $this->executeAndFetch($stmt);
 	}
 }
