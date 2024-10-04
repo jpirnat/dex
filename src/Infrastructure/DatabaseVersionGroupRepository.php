@@ -345,6 +345,26 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	}
 
 	/**
+	 * Get version groups that have TMs.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithTms() : array
+	{
+		$baseQuery = $this->getBaseQuery();
+		$stmt = $this->db->prepare(
+			"$baseQuery
+			WHERE `id` IN (
+				SELECT
+					`version_group_id`
+				FROM `technical_machines`
+			)
+			ORDER BY `sort`"
+		);
+		return $this->executeAndFetch($stmt);
+	}
+
+	/**
 	 * Get version groups that have breeding.
 	 *
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.

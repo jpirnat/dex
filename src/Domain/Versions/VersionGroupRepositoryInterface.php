@@ -100,6 +100,13 @@ interface VersionGroupRepositoryInterface
 	public function getWithNatures() : array;
 
 	/**
+	 * Get version groups that have TMs.
+	 *
+	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
+	 */
+	public function getWithTms() : array;
+
+	/**
 	 * Get version groups that have breeding.
 	 *
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.

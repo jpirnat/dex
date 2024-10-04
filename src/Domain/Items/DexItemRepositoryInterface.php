@@ -26,4 +26,14 @@ interface DexItemRepositoryInterface
 		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : array;
+
+	/**
+	 * Get dex items for this version group's TMs.
+	 *
+	 * @return DexItem[] Indexed by id.
+	 */
+	public function getTmsByVg(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
+	) : array;
 }

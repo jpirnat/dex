@@ -24,7 +24,7 @@ interface DexMoveRepositoryInterface
 	 * Get all dex moves in this version group.
 	 * This method is used to get data for the dex moves page.
 	 *
-	 * @return DexMove[] Ordered by name.
+	 * @return DexMove[] Indexed by move id. Ordered by name.
 	 */
 	public function getByVersionGroup(
 		VersionGroupId $versionGroupId,
@@ -35,7 +35,7 @@ interface DexMoveRepositoryInterface
 	 * Get all dex moves with this move flag.
 	 * This method is used to get data for the dex move flag page.
 	 *
-	 * @return DexMove[] Ordered by name.
+	 * @return DexMove[] Indexed by move id. Ordered by name.
 	 */
 	public function getByVgAndFlag(
 		VersionGroupId $versionGroupId,
@@ -47,7 +47,7 @@ interface DexMoveRepositoryInterface
 	 * Get all dex moves learned by this Pokémon.
 	 * This method is used to get data for the dex Pokémon page.
 	 *
-	 * @return DexMove[]
+	 * @return DexMove[] Indexed by move id.
 	 */
 	public function getByPokemon(
 		VersionGroupId $versionGroupId,
@@ -59,7 +59,7 @@ interface DexMoveRepositoryInterface
 	 * Get all dex moves of this type.
 	 * This method is used to get data for the dex type page.
 	 *
-	 * @return DexMove[] Ordered by name.
+	 * @return DexMove[] Indexed by move id. Ordered by name.
 	 */
 	public function getByType(
 		VersionGroupId $versionGroupId,
@@ -67,4 +67,13 @@ interface DexMoveRepositoryInterface
 		LanguageId $languageId,
 	) : array;
 
+	/**
+	 * Get dex moves for this version group's TMs.
+	 *
+	 * @return DexMove[] Indexed by move id.
+	 */
+	public function getTmsByVg(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
+	) : array;
 }

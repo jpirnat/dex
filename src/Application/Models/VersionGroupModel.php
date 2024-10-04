@@ -123,6 +123,14 @@ final class VersionGroupModel
 	}
 
 	/**
+	 * Set the navigable version groups to those that have TMs.
+	 */
+	public function setWithTms() : void
+	{
+		$this->versionGroups = $this->vgRepository->getWithTms();
+	}
+
+	/**
 	 * Set the navigable version groups to those that have breeding.
 	 */
 	public function setWithBreeding() : void

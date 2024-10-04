@@ -60,6 +60,45 @@ final readonly class DatabaseTmRepository implements TmRepositoryInterface
 	}
 
 	/**
+	 * Get TMs in this version group.
+	 *
+	 * @return TechnicalMachine[] Ordered by machine type, then by number.
+	 */
+	public function getByVersionGroup(VersionGroupId $versionGroupId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`machine_type`,
+				`number`,
+				`item_id`,
+				`move_id`
+			FROM `technical_machines`
+			WHERE `version_group_id` = :version_group_id
+			ORDER BY
+				`machine_type`,
+				`number`'
+		);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->execute();
+
+		$tms = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$tm = new TechnicalMachine(
+				$versionGroupId,
+				new MachineType($result['machine_type']),
+				$result['number'],
+				new ItemId($result['item_id']),
+				new MoveId($result['move_id']),
+			);
+
+			$tms[] = $tm;
+		}
+
+		return $tms;
+	}
+
+	/**
 	 * Get TMs by their move.
 	 *
 	 * @return TechnicalMachine[] Indexed by version group id.

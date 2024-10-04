@@ -20,6 +20,13 @@ interface TmRepositoryInterface
 	) : TechnicalMachine;
 
 	/**
+	 * Get TMs in this version group.
+	 *
+	 * @return TechnicalMachine[] Ordered by machine type, then by number.
+	 */
+	public function getByVersionGroup(VersionGroupId $versionGroupId) : array;
+
+	/**
 	 * Get TMs by their move.
 	 *
 	 * @return TechnicalMachine[] Indexed by version group id.

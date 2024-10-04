@@ -256,6 +256,22 @@ return [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
+	['GET', "/dex/$vgIdentifier/tms", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'dexTms',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$vgIdentifier/tms", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\DexTmsController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\DexTmsView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
 	['GET', "/dex/$vgIdentifier/types", [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',

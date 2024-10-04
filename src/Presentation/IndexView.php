@@ -267,6 +267,21 @@ final readonly class IndexView
 	}
 
 	/**
+	 * Show the dex TMs page.
+	 */
+	public function dexTms() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/tms.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'TMs',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the dex types page.
 	 */
 	public function dexTypes() : ResponseInterface
