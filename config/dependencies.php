@@ -166,10 +166,6 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseDexAbilityRepository::class
 );
 $services->alias(
-	\Jp\Dex\Domain\Categories\DexCategoryRepositoryInterface::class,
-	\Jp\Dex\Infrastructure\DatabaseDexCategoryRepository::class
-);
-$services->alias(
 	\Jp\Dex\Domain\EggGroups\DexEggGroupRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseDexEggGroupRepository::class
 );
