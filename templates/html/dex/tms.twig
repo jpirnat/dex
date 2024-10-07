@@ -29,13 +29,13 @@
 		<h1 class="dex-page__title">TMs</h1>
 
 		<div class="dex-moves__filters">
-			<label class="dex-moves__filter">
+			<label class="dex-tms__filter">
 				Filter by item name: <input type="search" v-model="filterItemName">
 			</label>
-			<label class="dex-moves__filter">
+			<label class="dex-tms__filter">
 				Filter by move name: <input type="search" v-model="filterMoveName">
 			</label>
-			<label class="dex-moves__filter" v-if="versionGroup.hasMoveDescriptions">
+			<label class="dex-tms__filter" v-if="versionGroup.hasMoveDescriptions">
 				Filter by move description: <input type="search" v-model="filterMoveDescription">
 			</label>
 		</div>

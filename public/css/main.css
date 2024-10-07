@@ -762,6 +762,12 @@ a.button {
 }
 
 
+/* dex tms */
+
+.dex-tms__filter {
+	display: inline-block;
+	margin: 0 10px 10px 0;
+}
 
 /* dex types */
 

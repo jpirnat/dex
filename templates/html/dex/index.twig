@@ -29,6 +29,8 @@
 			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/items'">Items</a>
 			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/abilities'" v-if="versionGroup.hasAbilities">Abilities</a>
 			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/natures'" v-if="versionGroup.hasNatures">Natures</a>
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tms'" v-if="versionGroup.hasTms">TMs</a>
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/egg-groups'" v-if="versionGroup.hasBreeding">Egg Groups</a>
 		</div>
 
 		<div class="dex-section__title" v-if="versionGroup.hasIvBasedStats || versionGroup.hasEvBasedStats">Tools</div>

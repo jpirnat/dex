@@ -65,6 +65,11 @@ final class VersionGroupId extends EntityId
 		return $this->id <= self::YELLOW;
 	}
 
+	public function hasTms() : bool
+	{
+		return $this->id !== self::LEGENDS_ARCEUS;
+	}
+
 	public function hasTeraTypes() : bool
 	{
 		return $this->id === self::SCARLET_VIOLET;

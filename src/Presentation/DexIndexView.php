@@ -34,6 +34,8 @@ final readonly class DexIndexView
 					'identifier' => $versionGroup->getIdentifier(),
 					'hasAbilities' => $versionGroup->hasAbilities(),
 					'hasNatures' => $versionGroup->hasNatures(),
+					'hasTms' => $versionGroup->getId()->hasTms(),
+					'hasBreeding' => $versionGroup->hasBreeding(),
 					'hasIvBasedStats' => $versionGroup->hasIvBasedStats(),
 					'hasEvBasedStats' => $versionGroup->hasEvBasedStats(),
 				],
