@@ -6,7 +6,7 @@ create table if not exists `form_icons`
 `is_right` bool not null,
 `is_shiny` bool not null,
 
-`image` varchar(50) not null,
+`image` varchar(40) not null,
 
 primary key (
 	`version_group_id`,

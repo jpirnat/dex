@@ -6,7 +6,7 @@ create table if not exists `models`
 `is_female` bool not null,
 `attacking_index` tinyint unsigned not null,
 
-`image` varchar(50) not null,
+`image` varchar(51) not null,
 
 primary key (
 	`form_id`,

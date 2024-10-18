@@ -3,6 +3,9 @@ create table if not exists `vg_pokemon`
 `version_group_id` tinyint unsigned not null,
 `pokemon_id` smallint unsigned not null,
 
+`icon` varchar(40) not null,
+`sprite` varchar(42) not null,
+
 `type1_id` tinyint unsigned not null,
 `type2_id` tinyint unsigned null,
 
