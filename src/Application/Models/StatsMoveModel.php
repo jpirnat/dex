@@ -100,7 +100,6 @@ final class StatsMoveModel
 			$this->format->getId(),
 			$rating,
 			$move->getId(),
-			$this->format->getVersionGroupId(),
 			$languageId,
 		);
 	}

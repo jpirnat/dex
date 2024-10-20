@@ -102,7 +102,6 @@ final class StatsUsageModel
 			$prevMonth,
 			$this->format->getId(),
 			$rating,
-			$this->format->getVersionGroupId(),
 			$languageId,
 		);
 

@@ -9,7 +9,6 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Usage\StatsMovePokemon;
 use Jp\Dex\Domain\Usage\StatsMovePokemonRepositoryInterface;
-use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final readonly class DatabaseStatsMovePokemonRepository implements StatsMovePokemonRepositoryInterface
@@ -29,7 +28,6 @@ final readonly class DatabaseStatsMovePokemonRepository implements StatsMovePoke
 		FormatId $formatId,
 		int $rating,
 		MoveId $moveId,
-		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : array {
 		$prevMonth = $prevMonth !== null
@@ -38,26 +36,26 @@ final readonly class DatabaseStatsMovePokemonRepository implements StatsMovePoke
 
 		$stmt = $this->db->prepare(
 			'SELECT
-				`fi`.`image` AS `icon`,
+				`vp`.`icon`,
 				`p`.`identifier`,
 				`pn`.`name`,
 				`urp`.`usage_percent` AS `pokemon_percent`,
 				`mrm`.`percent` AS `move_percent`,
 				`urp`.`usage_percent` * `mrm`.`percent` / 100 AS `usage_percent`,
-				`urpp`.`usage_percent` * `mrmp`.`percent` / 100 AS `prev_percent`
+				`urpp`.`usage_percent` * `mrmp`.`percent` / 100 AS `prev_percent`,
+				`vp`.`base_spe`
 			FROM `usage_rated_pokemon` as `urp`
+			INNER JOIN `formats` AS `f`
+				ON `urp`.`format_id` = `f`.`id`
+			INNER JOIN `vg_pokemon` AS `vp`
+				ON `f`.`version_group_id` = `vp`.`version_group_id`
+				AND `urp`.`pokemon_id` = `vp`.`pokemon_id`
 			INNER JOIN `moveset_rated_moves` as `mrm`
 				ON `urp`.`id` = `mrm`.`usage_rated_pokemon_id`
 			INNER JOIN `pokemon` AS `p`
 				ON `urp`.`pokemon_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
-			LEFT JOIN `form_icons` AS `fi`
-				ON `urp`.`pokemon_id` = `fi`.`form_id`
-				AND `fi`.`version_group_id` = :version_group_id
-				AND `fi`.`is_female` = 0
-				AND `fi`.`is_right` = 0
-				AND `fi`.`is_shiny` = 0
 			LEFT JOIN `usage_rated_pokemon` as `urpp`
 				ON `urpp`.`month` = :prev_month
 				AND `urp`.`format_id` = `urpp`.`format_id`
@@ -78,7 +76,6 @@ final readonly class DatabaseStatsMovePokemonRepository implements StatsMovePoke
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -93,6 +90,7 @@ final readonly class DatabaseStatsMovePokemonRepository implements StatsMovePoke
 				(float) $result['move_percent'],
 				(float) $result['usage_percent'],
 				(float) $result['usage_percent'] - (float) $result['prev_percent'],
+				$result['base_spe'],
 			);
 
 			$pokemons[] = $pokemon;

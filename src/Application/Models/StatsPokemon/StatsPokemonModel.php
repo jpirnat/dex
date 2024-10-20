@@ -140,7 +140,6 @@ final class StatsPokemonModel
 			$this->format->getId(),
 			$rating,
 			$this->pokemon->getId(),
-			$this->format->getVersionGroupId(),
 			$languageId,
 		);
 		$this->prevRank = $this->statsUsagePokemonRepository->getByRank(
@@ -148,7 +147,6 @@ final class StatsPokemonModel
 			$this->format->getId(),
 			$rating,
 			$this->thisRank['rank'] - 1,
-			$this->format->getVersionGroupId(),
 			$languageId,
 		);
 		$this->nextRank = $this->statsUsagePokemonRepository->getByRank(
@@ -156,7 +154,6 @@ final class StatsPokemonModel
 			$this->format->getId(),
 			$rating,
 			$this->thisRank['rank'] + 1,
-			$this->format->getVersionGroupId(),
 			$languageId,
 		);
 
@@ -246,7 +243,6 @@ final class StatsPokemonModel
 			$this->format->getId(),
 			$rating,
 			$this->pokemon->getId(),
-			$this->format->getVersionGroupId(),
 			$languageId,
 		);
 
@@ -256,7 +252,6 @@ final class StatsPokemonModel
 			$this->format->getId(),
 			$rating,
 			$this->pokemon->getId(),
-			$this->format->getVersionGroupId(),
 			$languageId,
 		);
 

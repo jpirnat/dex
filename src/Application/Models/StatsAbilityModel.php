@@ -100,7 +100,6 @@ final class StatsAbilityModel
 			$this->format->getId(),
 			$rating,
 			$ability->getId(),
-			$this->format->getVersionGroupId(),
 			$languageId,
 		);
 	}

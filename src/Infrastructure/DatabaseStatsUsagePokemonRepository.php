@@ -7,10 +7,8 @@ use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Usage\StatsUsagePokemon;
 use Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface;
-use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePokemonRepositoryInterface
@@ -29,7 +27,6 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 		?DateTime $prevMonth,
 		FormatId $formatId,
 		int $rating,
-		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : array {
 		$prevMonth = $prevMonth !== null
@@ -39,7 +36,7 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 		$stmt = $this->db->prepare(
 			'SELECT
 				`urp`.`rank`,
-				`fi`.`image` AS `icon`,
+				`vp`.`icon`,
 				`p`.`identifier`,
 				`pn`.`name`,
 				`urp`.`usage_percent`,
@@ -48,18 +45,17 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 				`up`.`raw_percent`,
 				`up`.`real`,
 				`up`.`real_percent`,
-				`bs`.`value` AS `base_speed`
+				`vp`.`base_spe`
 			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `formats` AS `f`
+				ON `urp`.`format_id` = `f`.`id`
+			INNER JOIN `vg_pokemon` AS `vp`
+				ON `f`.`version_group_id` = `vp`.`version_group_id`
+				AND `urp`.`pokemon_id` = `vp`.`pokemon_id`
 			INNER JOIN `pokemon` AS `p`
 				ON `urp`.`pokemon_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
-			LEFT JOIN `form_icons` AS `fi`
-				ON `urp`.`pokemon_id` = `fi`.`form_id`
-				AND `fi`.`version_group_id` = :version_group_id1
-				AND `fi`.`is_female` = 0
-				AND `fi`.`is_right` = 0
-				AND `fi`.`is_shiny` = 0
 			LEFT JOIN `usage_rated_pokemon` AS `urpp`
 				ON `urpp`.`month` = :prev_month
 				AND `urp`.`format_id` = `urpp`.`format_id`
@@ -69,10 +65,6 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 				ON `urp`.`month` = `up`.`month`
 				AND `urp`.`format_id` = `up`.`format_id`
 				AND `urp`.`pokemon_id` = `up`.`pokemon_id`
-			INNER JOIN `base_stats` AS `bs`
-				ON `bs`.`version_group_id` = :version_group_id2
-				AND `urp`.`pokemon_id` = `bs`.`pokemon_id`
-				AND `bs`.`stat_id` = :speed_id
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
@@ -83,10 +75,7 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 		$stmt->bindValue(':prev_month', $prevMonth);
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':speed_id', StatId::SPEED, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$pokemons = [];
@@ -103,7 +92,7 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 				(float) $result['raw_percent'],
 				$result['real'],
 				(float) $result['real_percent'],
-				$result['base_speed'],
+				$result['base_spe'],
 			);
 
 			$pokemons[] = $pokemon;
@@ -120,27 +109,25 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : ?array {
 		$stmt = $this->db->prepare(
 			'SELECT
 				`urp`.`rank`,
-				`fi`.`image` AS `icon`,
+				`vp`.`icon`,
 				`p`.`identifier`,
 				`pn`.`name`,
 				`urp`.`usage_percent`
 			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `formats` AS `f`
+				ON `urp`.`format_id` = `f`.`id`
+			INNER JOIN `vg_pokemon` AS `vp`
+				ON `f`.`version_group_id` = `vp`.`version_group_id`
+				AND `urp`.`pokemon_id` = `vp`.`pokemon_id`
 			INNER JOIN `pokemon` AS `p`
 				ON `urp`.`pokemon_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
-			LEFT JOIN `form_icons` AS `fi`
-				ON `urp`.`pokemon_id` = `fi`.`form_id`
-				AND `fi`.`version_group_id` = :version_group_id
-				AND `fi`.`is_female` = 0
-				AND `fi`.`is_right` = 0
-				AND `fi`.`is_shiny` = 0
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
@@ -151,7 +138,6 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -177,27 +163,25 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 		FormatId $formatId,
 		int $rating,
 		int $rank,
-		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : ?array {
 		$stmt = $this->db->prepare(
 			'SELECT
 				`urp`.`rank`,
-				`fi`.`image` AS `icon`,
+				`vp`.`icon`,
 				`p`.`identifier`,
 				`pn`.`name`,
 				`urp`.`usage_percent`
 			FROM `usage_rated_pokemon` AS `urp`
+			INNER JOIN `formats` AS `f`
+				ON `urp`.`format_id` = `f`.`id`
+			INNER JOIN `vg_pokemon` AS `vp`
+				ON `f`.`version_group_id` = `vp`.`version_group_id`
+				AND `urp`.`pokemon_id` = `vp`.`pokemon_id`
 			INNER JOIN `pokemon` AS `p`
 				ON `urp`.`pokemon_id` = `p`.`id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `urp`.`pokemon_id` = `pn`.`pokemon_id`
-			LEFT JOIN `form_icons` AS `fi`
-				ON `urp`.`pokemon_id` = `fi`.`form_id`
-				AND `fi`.`version_group_id` = :version_group_id
-				AND `fi`.`is_female` = 0
-				AND `fi`.`is_right` = 0
-				AND `fi`.`is_shiny` = 0
 			WHERE `urp`.`month` = :month
 				AND `urp`.`format_id` = :format_id
 				AND `urp`.`rating` = :rating
@@ -208,7 +192,6 @@ final readonly class DatabaseStatsUsagePokemonRepository implements StatsUsagePo
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':rank', $rank, PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);

@@ -32,7 +32,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 		return
 "SELECT
 	`p`.`id`,
-	`fi`.`image` AS `icon`,
+	`vp`.`icon`,
 	`p`.`identifier`,
 	`pn`.`name`,
 
@@ -84,13 +84,6 @@ INNER JOIN `pokemon` AS `p`
 	ON `vp`.`pokemon_id` = `p`.`id`
 INNER JOIN `pokemon_names` AS `pn`
 	ON `vp`.`pokemon_id` = `pn`.`pokemon_id`
-
-LEFT JOIN `form_icons` AS `fi`
-	ON `vp`.`version_group_id` = `fi`.`version_group_id`
-	AND `vp`.`pokemon_id` = `fi`.`form_id`
-	AND `fi`.`is_female` = 0
-	AND `fi`.`is_right` = 0
-	AND `fi`.`is_shiny` = 0
 
 LEFT JOIN `types` AS `t1`
 	ON `vp`.`type1_id` = `t1`.`id`

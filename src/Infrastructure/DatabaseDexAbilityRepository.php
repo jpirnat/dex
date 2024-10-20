@@ -31,19 +31,16 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 			'SELECT
 				`pa`.`ability_id`,
 				`p`.`identifier`,
-				`fi`.`image` AS `icon`,
+				`vp`.`icon`,
 				`pn`.`name`
 			FROM `pokemon_abilities` AS `pa`
 			INNER JOIN `pokemon` AS `p`
 				ON `pa`.`pokemon_id` = `p`.`id`
+			INNER JOIN `vg_pokemon` AS `vp`
+				ON `pa`.`version_group_id` = `vp`.`version_group_id`
+				AND `pa`.`pokemon_id` = `vp`.`pokemon_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `pa`.`pokemon_id` = `pn`.`pokemon_id`
-			LEFT JOIN `form_icons` AS `fi`
-				ON `pa`.`version_group_id` = `fi`.`version_group_id`
-				AND `pa`.`pokemon_id` = `fi`.`form_id`
-				AND `fi`.`is_female` = 0
-				AND `fi`.`is_right` = 0
-				AND `fi`.`is_shiny` = 0
 			WHERE `pa`.`version_group_id` = :version_group_id
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `p`.`sort`'
@@ -110,19 +107,16 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 			'SELECT
 				`pa`.`ability_id`,
 				`p`.`identifier`,
-				`fi`.`image` AS `icon`,
+				`vp`.`icon`,
 				`pn`.`name`
 			FROM `pokemon_abilities` AS `pa`
 			INNER JOIN `pokemon` AS `p`
 				ON `pa`.`pokemon_id` = `p`.`id`
+			INNER JOIN `vg_pokemon` AS `vp`
+				ON `pa`.`version_group_id` = `vp`.`version_group_id`
+				AND `pa`.`pokemon_id` = `vp`.`pokemon_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `pa`.`pokemon_id` = `pn`.`pokemon_id`
-			LEFT JOIN `form_icons` AS `fi`
-				ON `pa`.`version_group_id` = `fi`.`version_group_id`
-				AND `pa`.`pokemon_id` = `fi`.`form_id`
-				AND `fi`.`is_female` = 0
-				AND `fi`.`is_right` = 0
-				AND `fi`.`is_shiny` = 0
 			WHERE `pa`.`version_group_id` = :version_group_id1
 				AND `pa`.`ability_id` IN (
 					SELECT

@@ -86,7 +86,6 @@ final class StatsLeadsModel
 			$prevMonth,
 			$this->format->getId(),
 			$rating,
-			$this->format->getVersionGroupId(),
 			$languageId,
 		);
 

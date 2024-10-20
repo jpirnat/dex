@@ -53,6 +53,7 @@ final readonly class StatsAbilityView
 				'usagePercentText' => $formatter->formatPercent($pokemon->getUsagePercent()),
 				'usageChange' => $pokemon->getUsageChange(),
 				'usageChangeText' => $formatter->formatChange($pokemon->getUsageChange()),
+				'baseSpeed' => $pokemon->getBaseSpeed(),
 			];
 		}
 

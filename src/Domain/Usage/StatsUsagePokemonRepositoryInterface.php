@@ -21,7 +21,6 @@ interface StatsUsagePokemonRepositoryInterface
 		?DateTime $prevMonth,
 		FormatId $formatId,
 		int $rating,
-		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : array;
 
@@ -33,7 +32,6 @@ interface StatsUsagePokemonRepositoryInterface
 		FormatId $formatId,
 		int $rating,
 		PokemonId $pokemonId,
-		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : ?array;
 
@@ -45,7 +43,6 @@ interface StatsUsagePokemonRepositoryInterface
 		FormatId $formatId,
 		int $rating,
 		int $rank,
-		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : ?array;
 }
