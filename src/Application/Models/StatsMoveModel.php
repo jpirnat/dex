@@ -11,6 +11,8 @@ use Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveName;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
+use Jp\Dex\Domain\Stats\StatId;
+use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Usage\StatsMovePokemon;
 use Jp\Dex\Domain\Usage\StatsMovePokemonRepositoryInterface;
@@ -28,6 +30,7 @@ final class StatsMoveModel
 
 	private MoveName $moveName;
 	private MoveDescription $moveDescription;
+	private string $speedName = '';
 
 	/** @var StatsMovePokemon[] $pokemon */
 	private array $pokemon = [];
@@ -40,6 +43,7 @@ final class StatsMoveModel
 		private readonly RatingQueriesInterface $ratingQueries,
 		private readonly MoveNameRepositoryInterface $moveNameRepository,
 		private readonly MoveDescriptionRepositoryInterface $moveDescriptionRepository,
+		private readonly StatNameRepositoryInterface $statNameRepository,
 		private readonly StatsMovePokemonRepositoryInterface $statsMovePokemonRepository,
 	) {}
 
@@ -92,6 +96,12 @@ final class StatsMoveModel
 			$languageId,
 			$move->getId(),
 		);
+
+		$speedName = $this->statNameRepository->getByLanguageAndStat(
+			$languageId,
+			new StatId(StatId::SPEED),
+		);
+		$this->speedName = $speedName->getName();
 
 		// Get the Pokémon usage data.
 		$this->pokemon = $this->statsMovePokemonRepository->getByMonth(
@@ -177,6 +187,11 @@ final class StatsMoveModel
 	public function getMoveDescription() : MoveDescription
 	{
 		return $this->moveDescription;
+	}
+
+	public function getSpeedName() : string
+	{
+		return $this->speedName;
 	}
 
 	/**

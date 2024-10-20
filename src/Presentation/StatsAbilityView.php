@@ -95,8 +95,7 @@ final readonly class StatsAbilityView
 					'name' => $abilityName,
 					'description' => $this->statsAbilityModel->getAbilityDescription()->getDescription(),
 				],
-
-				// The main data.
+				'speedName' => $this->statsAbilityModel->getSpeedName(),
 				'pokemons' => $pokemons,
 			]
 		]);

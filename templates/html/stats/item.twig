@@ -93,6 +93,12 @@
 							'dex-table__header--sorted-desc': sortColumn === 'usageChange' && sortDirection === 'desc',
 						}"
 					>Usage&nbsp;Δ</th>
+					<th scope="col" class="dex-table--number dex-table__header--sortable dex-table__stat--speed" @click="sortBy('baseSpeed', 'desc')"
+						:class="{
+							'dex-table__header--sorted-asc': sortColumn === 'baseSpeed' && sortDirection === 'asc',
+							'dex-table__header--sorted-desc': sortColumn === 'baseSpeed' && sortDirection === 'desc',
+						}"
+					>Base {{ speedName }}</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -120,6 +126,7 @@
 							<img class="chart-link__icon" src="/images/porydex/chart-icon.png" alt="Show Chart">
 						</div>
 					</td>
+					<td class="dex-table--number dex-table__stat--speed">{{ pokemon.baseSpeed }}</td>
 				</tr>
 			</tbody>
 		</table>

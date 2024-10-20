@@ -95,8 +95,7 @@ final readonly class StatsMoveView
 					'name' => $moveName,
 					'description' => $this->statsMoveModel->getMoveDescription()->getDescription(),
 				],
-
-				// The main data.
+				'speedName' => $this->statsMoveModel->getSpeedName(),
 				'pokemons' => $pokemons,
 			]
 		]);

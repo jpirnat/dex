@@ -11,6 +11,8 @@ use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Stats\StatId;
+use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Usage\StatsAbilityPokemon;
 use Jp\Dex\Domain\Usage\StatsAbilityPokemonRepositoryInterface;
@@ -28,6 +30,7 @@ final class StatsAbilityModel
 
 	private AbilityName $abilityName;
 	private AbilityDescription $abilityDescription;
+	private string $speedName = '';
 
 	/** @var StatsAbilityPokemon[] $pokemon */
 	private array $pokemon = [];
@@ -40,6 +43,7 @@ final class StatsAbilityModel
 		private readonly RatingQueriesInterface $ratingQueries,
 		private readonly AbilityNameRepositoryInterface $abilityNameRepository,
 		private readonly AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
+		private readonly StatNameRepositoryInterface $statNameRepository,
 		private readonly StatsAbilityPokemonRepositoryInterface $statsAbilityPokemonRepository,
 	) {}
 
@@ -92,6 +96,12 @@ final class StatsAbilityModel
 			$languageId,
 			$ability->getId(),
 		);
+
+		$speedName = $this->statNameRepository->getByLanguageAndStat(
+			$languageId,
+			new StatId(StatId::SPEED),
+		);
+		$this->speedName = $speedName->getName();
 
 		// Get the Pokémon usage data.
 		$this->pokemon = $this->statsAbilityPokemonRepository->getByMonth(
@@ -177,6 +187,11 @@ final class StatsAbilityModel
 	public function getAbilityDescription() : AbilityDescription
 	{
 		return $this->abilityDescription;
+	}
+
+	public function getSpeedName() : string
+	{
+		return $this->speedName;
 	}
 
 	/**
