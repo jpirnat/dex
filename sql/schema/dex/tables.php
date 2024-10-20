@@ -176,7 +176,6 @@ return [
 	'vg_stats',
 	'stat_names',
 	'base_stats',
-	'ev_yields',
 	'move_stat_changes',
 
 	// Characteristics
