@@ -73,12 +73,8 @@ final class SpreadModel
 			$baseStats->add(new StatValue(new StatId($stat['id']), $stat['value']));
 		}
 
-		// Assume the Pokémon has perfect IVs.
-		$ivSpread = new StatValueContainer();
-		$perfectIv = $this->statCalculator->getPerfectIv($generationId);
-		foreach ($statIds as $statId) {
-			$ivSpread->add(new StatValue($statId, $perfectIv));
-		}
+		$attack = new StatId(StatId::ATTACK);
+		$speed = new StatId(StatId::SPEED);
 
 		// Calculate the Pokémon's stats for each spread.
 		$this->spreads = [];
@@ -86,6 +82,21 @@ final class SpreadModel
 			$evSpread = $spread->getEvs();
 			$increasedStatId = $spread->getIncreasedStatId();
 			$decreasedStatId = $spread->getDecreasedStatId();
+
+			// Assume the Pokémon has perfect IVs.
+			$ivSpread = new StatValueContainer();
+			$perfectIv = $this->statCalculator->getPerfectIv($generationId);
+			foreach ($statIds as $statId) {
+				$ivSpread->add(new StatValue($statId, $perfectIv));
+			}
+			// If it's a minus Attack nature with 0 Attack EVs, assume 0 IV.
+			if ($decreasedStatId?->value() === StatId::ATTACK && !$evSpread->get($attack)->getValue()) {
+				$ivSpread->add(new StatValue($attack, 0));
+			}
+			// If it's a minus Speed nature with 0 Speed EVs, assume 0 IV.
+			if ($decreasedStatId?->value() === StatId::SPEED && !$evSpread->get($speed)->getValue()) {
+				$ivSpread->add(new StatValue($speed, 0));
+			}
 
 			// Get this spread's calculated stats.
 			if ($generationId->value() === 1 || $generationId->value() === 2) {

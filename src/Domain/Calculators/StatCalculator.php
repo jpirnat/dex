@@ -13,8 +13,6 @@ final readonly class StatCalculator
 {
 	private const PERFECT_IV_GEN_1 = 15;
 	private const PERFECT_IV_GEN_3 = 31;
-	private const MAX_EV_GEN_1 = 65535;
-	private const MAX_EV_GEN_3 = 252;
 
 	/**
 	 * Calculate a Pokémon's HP stat in generations 1 or 2.
@@ -250,19 +248,5 @@ final readonly class StatCalculator
 		}
 
 		return self::PERFECT_IV_GEN_3;
-	}
-
-	/**
-	 * Get the max EV value for this generation.
-	 */
-	public function getMaxEv(GenerationId $generationId) : int
-	{
-		$generation = $generationId->value();
-
-		if ($generation === 1 || $generation === 2) {
-			return self::MAX_EV_GEN_1;
-		}
-
-		return self::MAX_EV_GEN_3;
 	}
 }
