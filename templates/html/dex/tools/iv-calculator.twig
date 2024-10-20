@@ -159,7 +159,7 @@
 					<span class="iv-calculator__stat-label">{{ s.name }}:</span>
 					<input type="number" class="iv-calculator__input--ev"
 						v-model.number="l.evs[s.identifier]"
-						min="0" max="252" step="1"
+						min="0" :max="versionGroup.maxEvsPerStat" step="1"
 					>
 				</label>
 			</div>

@@ -44,6 +44,7 @@ final readonly class IvCalculatorIndexView
 			'data' => [
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
+					'maxEvsPerStat' => $versionGroup->getMaxEvsPerStat(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
