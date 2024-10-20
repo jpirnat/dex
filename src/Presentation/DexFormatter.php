@@ -232,7 +232,7 @@ final readonly class DexFormatter
 			'pp' => $dexMove->getPP(),
 			'power' => $dexMove->getPower(),
 			'accuracy' => $dexMove->getAccuracy(),
-			'description' => $dexMove->getDescription(),
+			'description' => str_replace("\n", ' ', $dexMove->getDescription()),
 		];
 	}
 
