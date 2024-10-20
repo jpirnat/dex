@@ -216,7 +216,6 @@ return [
 	'pokemon_shapes',
 
 	// Miscellaneous
-	'base_experience',
 	'base_friendships',
 	'catch_rates',
 	'transformation_groups',
