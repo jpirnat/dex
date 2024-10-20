@@ -62,7 +62,7 @@ final class EvCalculatorSubmitModel
 		$possibleEvs = [];
 		foreach ($stats as $stat) {
 			$statIdentifier = $stat->getIdentifier();
-			$possibleEvs[$statIdentifier] = range(0, 252);
+			$possibleEvs[$statIdentifier] = range(0, $versionGroup->getMaxEvsPerStat());
 		}
 
 		// Then, one stat at a time, one level at a time, rule out as many of
@@ -118,7 +118,7 @@ final class EvCalculatorSubmitModel
 			$statIdentifier = $stat->getIdentifier();
 			if ($possibleEvs[$statIdentifier]) {
 				$minimumEv = min($possibleEvs[$statIdentifier]);
-				foreach ($possibleEvs[$statIdentifier] ?? [] as $possibleEvIndex => $possibleEv) {
+				foreach ($possibleEvs[$statIdentifier] as $possibleEvIndex => $possibleEv) {
 					if ($possibleEv > $minimumEv && $possibleEv > $availableEvs) {
 						unset($possibleEvs[$statIdentifier][$possibleEvIndex]);
 					}
