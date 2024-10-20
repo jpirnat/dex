@@ -46,6 +46,7 @@ const app = new Vue({
 	},
 	created() {
 		const url = new URL(window.location);
+		const queryPokemonIdentifier = url.searchParams.get('pokemon');
 
 		fetch('/data' + url.pathname, {
 			credentials: 'same-origin'
@@ -70,6 +71,13 @@ const app = new Vue({
 					this.$set(this.ivs, s.identifier, 31);
 					this.$set(this.evs, s.identifier, '???');
 				});
+
+				if (queryPokemonIdentifier) {
+					const exactPokemon = this.pokemons.find(p => p.identifier === queryPokemonIdentifier);
+					if (exactPokemon) {
+						this.selectedPokemon = exactPokemon;
+					}
+				}
 			}
 		});
 	},
@@ -89,7 +97,7 @@ const app = new Vue({
 
 			const exactPokemon = this.filteredPokemons.find(p => p.name.toLowerCase() === this.pokemonName.toLowerCase());
 			if (exactPokemon) {
-				this.selectedPokemon = this.exactPokemon;
+				this.selectedPokemon = exactPokemon;
 				return;
 			}
 

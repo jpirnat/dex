@@ -24,6 +24,8 @@ final readonly class EvCalculatorIndexView
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$pokemons = $this->evCalculatorIndexModel->getPokemons();
+		$pokemons = $this->dexFormatter->formatIvCalculatorPokemons($pokemons);
+
 		$natures = $this->evCalculatorIndexModel->getNatures();
 		$stats = $this->evCalculatorIndexModel->getStats();
 

@@ -3,13 +3,14 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\EvCalculator;
 
+use Jp\Dex\Application\Models\IvCalculator\IvCalculatorPokemon;
 use Jp\Dex\Application\Models\IvCalculator\IvCalculatorQueriesInterface;
 use Jp\Dex\Application\Models\VersionGroupModel;
 use Jp\Dex\Domain\Languages\LanguageId;
 
 final class EvCalculatorIndexModel
 {
-	private array $pokemons = [];
+	/** @var IvCalculatorPokemon[] $pokemons */ private array $pokemons = [];
 	private array $natures = [];
 	private array $stats = [];
 
@@ -57,6 +58,9 @@ final class EvCalculatorIndexModel
 		return $this->versionGroupModel;
 	}
 
+	/**
+	 * @return IvCalculatorPokemon[]
+	 */
 	public function getPokemons() : array
 	{
 		return $this->pokemons;

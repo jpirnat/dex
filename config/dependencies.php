@@ -52,6 +52,7 @@ $services->load('Jp\\Dex\\Application\\', '../src/Application')
 		'../src/Application/Models/DexMove/DexMovePokemonMethod.php',
 		'../src/Application/Models/DexPokemon/DexPokemonMove.php',
 		'../src/Application/Models/DexPokemon/DexPokemonMoveMethod.php',
+		'../src/Application/Models/IvCalculator/IvCalculatorPokemon.php',
 		'../src/Application/Models/StatsAveragedLeads/LeadsData.php',
 		'../src/Application/Models/StatsAveragedPokemon/AbilityData.php',
 		'../src/Application/Models/StatsAveragedPokemon/ItemData.php',

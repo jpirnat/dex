@@ -8,7 +8,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class IvCalculatorIndexModel
 {
-	private array $pokemons = [];
+	/** @var IvCalculatorPokemon[] $pokemons */ private array $pokemons = [];
 	private array $natures = [];
 	private array $characteristics = [];
 	private array $types = [];
@@ -77,6 +77,9 @@ final class IvCalculatorIndexModel
 		return $this->versionGroupModel;
 	}
 
+	/**
+	 * @return IvCalculatorPokemon[]
+	 */
 	public function getPokemons() : array
 	{
 		return $this->pokemons;

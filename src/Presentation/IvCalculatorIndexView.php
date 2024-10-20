@@ -24,6 +24,8 @@ final readonly class IvCalculatorIndexView
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$pokemons = $this->ivCalculatorIndexModel->getPokemons();
+		$pokemons = $this->dexFormatter->formatIvCalculatorPokemons($pokemons);
+
 		$natures = $this->ivCalculatorIndexModel->getNatures();
 		$characteristics = $this->ivCalculatorIndexModel->getCharacteristics();
 		$types = $this->ivCalculatorIndexModel->getTypes();

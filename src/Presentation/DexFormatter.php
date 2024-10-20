@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
+use Jp\Dex\Application\Models\IvCalculator\IvCalculatorPokemon;
 use Jp\Dex\Domain\Abilities\DexPokemonAbility;
 use Jp\Dex\Domain\Categories\DexCategory;
 use Jp\Dex\Domain\EggGroups\DexEggGroup;
@@ -261,6 +262,37 @@ final readonly class DexFormatter
 			'identifier' => $dexItem->getIdentifier(),
 			'name' => $dexItem->getName(),
 			'description' => $dexItem->getDescription(),
+		];
+	}
+
+	/**
+	 * Transform an array of IV calculator Pokémon objects into a renderable data array.
+	 *
+	 * @param IvCalculatorPokemon[] $ivCalculatorPokemons
+	 */
+	public function formatIvCalculatorPokemons(array $ivCalculatorPokemons) : array
+	{
+		$pokemon = [];
+
+		foreach ($ivCalculatorPokemons as $ivCalculatorPokemon) {
+			$pokemon[] = $this->formatIvCalculatorPokemon($ivCalculatorPokemon);
+		}
+
+		return $pokemon;
+	}
+
+	/**
+	 * Transform an IV calculator Pokémon object into a renderable data array.
+	 */
+	private function formatIvCalculatorPokemon(IvCalculatorPokemon $ivCalculatorPokemon) : array
+	{
+		return [
+			'identifier' => $ivCalculatorPokemon->getIdentifier(),
+			'name' => $ivCalculatorPokemon->getName(),
+			'sprite' => $ivCalculatorPokemon->getSprite(),
+			'types' => $this->formatDexTypes($ivCalculatorPokemon->getTypes()),
+			'baseStats' => $ivCalculatorPokemon->getBaseStats(),
+			'bst' => $ivCalculatorPokemon->getBst(),
 		];
 	}
 }
