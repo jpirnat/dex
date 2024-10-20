@@ -16,6 +16,8 @@ const app = new Vue({
 		toggleDefendingTypes: [],
 		hoverAttackingType: null,
 		hoverDefendingType: null,
+
+		joinCharacter: '-',
 	},
 	computed: {
 		attackingTypes() {
@@ -50,14 +52,48 @@ const app = new Vue({
 				this.types = data.types;
 				this.multipliers = data.multipliers;
 
-				this.types.forEach(t => {
-					this.toggleAttackingTypes.push(t.identifier);
-					this.toggleDefendingTypes.push(t.identifier);
-				});
+				const attackingJoined = url.searchParams.get('attacking');
+				if (attackingJoined) {
+					attackingJoined.split(this.joinCharacter).forEach(typeIdentifier => {
+						this.toggleAttackingTypes.push(typeIdentifier);
+					});
+				} else {
+					this.types.forEach(t => {
+						this.toggleAttackingTypes.push(t.identifier);
+					});
+				}
+
+				const defendingJoined = url.searchParams.get('defending');
+				if (defendingJoined) {
+					defendingJoined.split(this.joinCharacter).forEach(typeIdentifier => {
+						this.toggleDefendingTypes.push(typeIdentifier);
+					});
+				} else {
+					this.types.forEach(t => {
+						this.toggleDefendingTypes.push(t.identifier);
+					});
+				}
 			}
 		});
 	},
 	methods: {
+		updateUrl() {
+			const url = new URL(window.location);
+			url.searchParams.delete('attacking');
+			url.searchParams.delete('defending');
+
+			if (this.attackingTypes.length < this.types.length) {
+				const attackingJoined = this.attackingTypes.map(t => t.identifier).join(this.joinCharacter);
+				url.searchParams.set('attacking', attackingJoined);
+			}
+			if (this.defendingTypes.length < this.types.length) {
+				const defendingJoined = this.defendingTypes.map(t => t.identifier).join(this.joinCharacter);
+				url.searchParams.set('defending', defendingJoined);
+			}
+
+			history.replaceState({}, document.title, url.toString());
+		},
+
 		onMatchupHover(attackingType, defendingType) {
 			this.hoverAttackingType = attackingType.identifier;
 			this.hoverDefendingType = defendingType.identifier;
@@ -65,6 +101,14 @@ const app = new Vue({
 		onMatchupUnhover() {
 			this.hoverAttackingType = null;
 			this.hoverDefendingType = null;
+		},
+	},
+	watch: {
+		attackingTypes() {
+			this.updateUrl();
+		},
+		defendingTypes() {
+			this.updateUrl();
 		},
 	},
 });
