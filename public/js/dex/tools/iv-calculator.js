@@ -108,7 +108,7 @@ const app = new Vue({
 
 			const exactPokemon = this.filteredPokemons.find(p => p.name.toLowerCase() === this.pokemonName.toLowerCase());
 			if (exactPokemon) {
-				this.selectedPokemon = this.filteredPokemons[0];
+				this.selectedPokemon = exactPokemon;
 				return;
 			}
 
