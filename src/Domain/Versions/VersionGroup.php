@@ -12,7 +12,8 @@ final readonly class VersionGroup
 		private string $abbreviation,
 		private bool $hasBreeding,
 		private int $stepsPerEggCycle,
-		private bool $hasIvBasedStats,
+		private string $statFormulaType,
+		private int $maxIv,
 		private bool $hasIvBasedHiddenPower,
 		private bool $hasEvBasedStats,
 		private bool $hasEvYields,
@@ -53,9 +54,14 @@ final readonly class VersionGroup
 		return $this->stepsPerEggCycle;
 	}
 
-	public function hasIvBasedStats() : bool
+	public function getStatFormulaType() : string
 	{
-		return $this->hasIvBasedStats;
+		return $this->statFormulaType;
+	}
+
+	public function getMaxIv() : int
+	{
+		return $this->maxIv;
 	}
 
 	public function hasIvBasedHiddenPower() : bool

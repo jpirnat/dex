@@ -34,7 +34,9 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`abbreviation`,
 				`has_breeding`,
 				`steps_per_egg_cycle`,
+				`stat_formula_type`,
 				`has_iv_based_stats`,
+				`max_iv`,
 				`has_iv_based_hidden_power`,
 				`has_ev_based_stats`,
 				`has_ev_yields`,
@@ -72,7 +74,8 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			$result['abbreviation'],
 			(bool) $result['has_breeding'],
 			$result['steps_per_egg_cycle'],
-			(bool) $result['has_iv_based_stats'],
+			$result['stat_formula_type'],
+			$result['max_iv'],
 			(bool) $result['has_iv_based_hidden_power'],
 			(bool) $result['has_ev_based_stats'],
 			(bool) $result['has_ev_yields'],
@@ -383,34 +386,19 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	}
 
 	/**
-	 * Get version groups that have IV-based stats.
+	 * Get version groups that use these stat formulas.
 	 *
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
 	 */
-	public function getWithIvBasedStats() : array
+	public function getWithStatFormulaType(string $statFormulaType) : array
 	{
 		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
 			"$baseQuery
-			WHERE `has_iv_based_stats` = 1
+			WHERE `stat_formula_type` = :stat_formula_type
 			ORDER BY `sort`"
 		);
-		return $this->executeAndFetch($stmt);
-	}
-
-	/**
-	 * Get version groups that have EV-based stats.
-	 *
-	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
-	 */
-	public function getWithEvBasedStats() : array
-	{
-		$baseQuery = $this->getBaseQuery();
-		$stmt = $this->db->prepare(
-			"$baseQuery
-			WHERE `has_ev_based_stats` = 1
-			ORDER BY `sort`"
-		);
+		$stmt->bindValue(':stat_formula_type', $statFormulaType);
 		return $this->executeAndFetch($stmt);
 	}
 }

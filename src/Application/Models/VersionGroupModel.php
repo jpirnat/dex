@@ -139,19 +139,11 @@ final class VersionGroupModel
 	}
 
 	/**
-	 * Set the navigable version groups to those that have IV-based stats.
+	 * Set the navigable version groups to those that use these stat formulas.
 	 */
-	public function setWithIvBasedStats() : void
+	public function setWithStatFormulaType(string $statFormulaType) : void
 	{
-		$this->versionGroups = $this->vgRepository->getWithIvBasedStats();
-	}
-
-	/**
-	 * Set the navigable version groups to those that have EV-based stats.
-	 */
-	public function setWithEvBasedStats() : void
-	{
-		$this->versionGroups = $this->vgRepository->getWithEvBasedStats();
+		$this->versionGroups = $this->vgRepository->getWithStatFormulaType($statFormulaType);
 	}
 
 

@@ -368,6 +368,30 @@ return [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
+	['GET', "/dex/$vgIdentifier/tools/stat-calculator", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'statCalculator',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$vgIdentifier/tools/stat-calculator", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatCalculatorIndexController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\StatCalculatorIndexView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
+	['POST', "/dex/$vgIdentifier/tools/stat-calculator", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\StatCalculatorSubmitController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\StatCalculatorSubmitView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
 	['GET', '/stats', [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',

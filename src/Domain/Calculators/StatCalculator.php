@@ -179,8 +179,15 @@ final readonly class StatCalculator
 	 */
 	public function letsGoOther(int $base, int $iv, int $av, int $level, float $natureModifier, float $friendshipModifier) : int
 	{
-		// $friendshipModifier = 1 + (int) (10 * $friendship / 255) / 100;
 		return (int) (((2 * $base + $iv) * $level / 100 + 5) * $natureModifier * $friendshipModifier) + $av;
+	}
+
+	/**
+	 * Calculate a Pokémon's Friendship modifier for Let's Go, Pikachu! or Let's Go, Eevee!
+	 */
+	public function letsGoFriendshipModifier(int $friendship) : float
+	{
+		return 1 + (int) (10 * $friendship / 255) / 100;
 	}
 
 	/**

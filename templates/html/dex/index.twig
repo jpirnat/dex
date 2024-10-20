@@ -33,10 +33,15 @@
 			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/egg-groups'" v-if="versionGroup.hasBreeding">Egg Groups</a>
 		</div>
 
-		<div class="dex-section__title" v-if="versionGroup.hasIvBasedStats || versionGroup.hasEvBasedStats">Tools</div>
+		<div class="dex-section__title">Tools</div>
 		<div class="dex-index__links">
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/iv-calculator'" v-if="versionGroup.hasIvBasedStats">IV Calculator</a>
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/ev-calculator'" v-if="versionGroup.hasEvBasedStats">EV Calculator</a>
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/iv-calculator'"
+				v-if="versionGroup.statFormulaType === 'gen3'"
+			>IV Calculator</a>
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/ev-calculator'"
+				v-if="versionGroup.statFormulaType === 'gen3'"
+			>EV Calculator</a>
+			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/stat-calculator'">Stat Calculator</a>
 		</div>
 	</template>
 </div>

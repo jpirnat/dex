@@ -114,16 +114,9 @@ interface VersionGroupRepositoryInterface
 	public function getWithBreeding() : array;
 
 	/**
-	 * Get version groups that have IV-based stats.
+	 * Get version groups that use these stat formulas.
 	 *
 	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
 	 */
-	public function getWithIvBasedStats() : array;
-
-	/**
-	 * Get version groups that have EV-based stats.
-	 *
-	 * @return VersionGroup[] Indexed by id. Ordered by sort value.
-	 */
-	public function getWithEvBasedStats() : array;
+	public function getWithStatFormulaType(string $statFormulaType) : array;
 }

@@ -342,6 +342,21 @@ final readonly class IndexView
 	}
 
 	/**
+	 * Show the stat calculator page.
+	 */
+	public function statCalculator() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/tools/stat-calculator.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Stat Calculator',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the stats index page.
 	 */
 	public function statsIndex() : ResponseInterface

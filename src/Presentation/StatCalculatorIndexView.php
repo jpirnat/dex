@@ -3,44 +3,56 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\DexIndexModel;
+use Jp\Dex\Application\Models\StatCalculator\StatCalculatorIndexModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
-final readonly class DexIndexView
+final readonly class StatCalculatorIndexView
 {
 	public function __construct(
-		private DexIndexModel $dexIndexModel,
+		private StatCalculatorIndexModel $statCalculatorIndexModel,
 		private DexFormatter $dexFormatter,
 	) {}
 
 	/**
-	 * Get data for the dex index page.
+	 * Get data for the stat calculator page.
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexIndexModel->getVersionGroupModel();
+		$versionGroupModel = $this->statCalculatorIndexModel->getVersionGroupModel();
 		$versionGroup = $versionGroupModel->getVersionGroup();
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
+		$pokemons = $this->statCalculatorIndexModel->getPokemons();
+		$pokemons = $this->dexFormatter->formatIvCalculatorPokemons($pokemons);
+
+		$natures = $this->statCalculatorIndexModel->getNatures();
+		$stats = $this->statCalculatorIndexModel->getStats();
+
 		// Navigational breadcrumbs.
+		$vgIdentifier = $versionGroup->getIdentifier();
 		$breadcrumbs = [[
+			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
+		], [
+			'text' => 'Stat Calculator',
 		]];
 
 		return new JsonResponse([
 			'data' => [
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
-					'hasAbilities' => $versionGroup->hasAbilities(),
 					'hasNatures' => $versionGroup->hasNatures(),
-					'hasTms' => $versionGroup->getId()->hasTms(),
-					'hasBreeding' => $versionGroup->hasBreeding(),
 					'statFormulaType' => $versionGroup->getStatFormulaType(),
+					'maxIv' => $versionGroup->getMaxIv(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
+
+				'pokemons' => $pokemons,
+				'natures' => $natures,
+				'stats' => $stats,
 			]
 		]);
 	}

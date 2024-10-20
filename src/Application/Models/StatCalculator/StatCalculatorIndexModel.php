@@ -1,14 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models\EvCalculator;
+namespace Jp\Dex\Application\Models\StatCalculator;
 
 use Jp\Dex\Application\Models\IvCalculator\IvCalculatorPokemon;
 use Jp\Dex\Application\Models\IvCalculator\IvCalculatorQueriesInterface;
 use Jp\Dex\Application\Models\VersionGroupModel;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Versions\GenerationId;
 
-final class EvCalculatorIndexModel
+final class StatCalculatorIndexModel
 {
 	/** @var IvCalculatorPokemon[] $pokemons */ private array $pokemons = [];
 	private array $natures = [];
@@ -22,7 +23,7 @@ final class EvCalculatorIndexModel
 
 
 	/**
-	 * Set data for the EV calculator page.
+	 * Set data for the stat calculator page.
 	 */
 	public function setData(
 		string $vgIdentifier,
@@ -30,7 +31,7 @@ final class EvCalculatorIndexModel
 	) : void {
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->versionGroupModel->setWithStatFormulaType('gen3');
+		$this->versionGroupModel->setSinceGeneration(new GenerationId(1));
 
 		$this->pokemons = $this->queries->getPokemons($versionGroupId, $languageId);
 
