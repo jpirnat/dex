@@ -3,12 +3,14 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexPokemon;
 
-use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Abilities\AbilityIdentifier;
+use Jp\Dex\Domain\Abilities\ExpandedDexPokemonAbility;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\VgPokemonRepositoryInterface;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeIdentifier;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroup;
@@ -36,6 +38,8 @@ final class DexPokemonMatchupsModel
 
 	/**
 	 * Set data for the dex Pokémon page's matchups.
+	 *
+	 * @param ExpandedDexPokemonAbility[] $abilities
 	 */
 	public function setData(
 		VersionGroup $versionGroup,
@@ -75,8 +79,10 @@ final class DexPokemonMatchupsModel
 			}
 		}
 
-		foreach ($abilities as $ability) {
-			$this->checkForMatchups($versionGroup->getGenerationId(), $ability);
+		if ($versionGroup->hasAbilities()) {
+			foreach ($abilities as $ability) {
+				$this->checkForMatchups($versionGroup->getGenerationId(), $ability);
+			}
 		}
 
 		$this->abilities[] = [
@@ -91,148 +97,145 @@ final class DexPokemonMatchupsModel
 	 * If this ability changes any of the Pokémon's matchups, add the ability
 	 * to the matchups array.
 	 */
-	private function checkForMatchups(GenerationId $generationId, array $ability) : void
+	private function checkForMatchups(GenerationId $generationId, ExpandedDexPokemonAbility $ability) : void
 	{
-		$abilityId = $ability['id'];
-		$identifier = $ability['identifier'];
+		$abilityIdentifier = $ability->getIdentifier();
 
-		// TODO: Get the type identifiers from somewhere.
-
-		if ($abilityId === AbilityId::VOLT_ABSORB) {
+		if ($abilityIdentifier === AbilityIdentifier::VOLT_ABSORB) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['electric'] *= 0;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::ELECTRIC] *= 0;
 			return;
 		}
 
-		if ($abilityId === AbilityId::WATER_ABSORB) {
+		if ($abilityIdentifier === AbilityIdentifier::WATER_ABSORB) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['water'] *= 0;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::WATER] *= 0;
 			return;
 		}
 
-		if ($abilityId === AbilityId::FLASH_FIRE) {
+		if ($abilityIdentifier === AbilityIdentifier::FLASH_FIRE) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['fire'] *= 0;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::FIRE] *= 0;
 			return;
 		}
 
-		if ($abilityId === AbilityId::WONDER_GUARD) {
+		if ($abilityIdentifier === AbilityIdentifier::WONDER_GUARD) {
 			$this->addToDamageTaken($ability);
-			foreach ($this->damageTaken[$identifier] as $type => $multiplier) {
+			foreach ($this->damageTaken[$abilityIdentifier] as $type => $multiplier) {
 				if ($multiplier <= 1) {
-					$this->damageTaken[$identifier][$type] *= 0;
+					$this->damageTaken[$abilityIdentifier][$type] *= 0;
 				}
 			}
 			return;
 		}
 
-		if ($abilityId === AbilityId::LEVITATE) {
+		if ($abilityIdentifier === AbilityIdentifier::LEVITATE) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['ground'] *= 0;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::GROUND] *= 0;
 			return;
 		}
 
-		if ($abilityId === AbilityId::LIGHTNING_ROD && $generationId->value() >= 5) {
+		if ($abilityIdentifier === AbilityIdentifier::LIGHTNING_ROD && $generationId->value() >= 5) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['electric'] *= 0;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::ELECTRIC] *= 0;
 			return;
 		}
 
-		if ($abilityId === AbilityId::THICK_FAT) {
+		if ($abilityIdentifier === AbilityIdentifier::THICK_FAT) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['fire'] *= .5;
-			$this->damageTaken[$identifier]['ice'] *= .5;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::FIRE] *= .5;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::ICE] *= .5;
 			return;
 		}
 
-		if ($abilityId === AbilityId::MOTOR_DRIVE) {
+		if ($abilityIdentifier === AbilityIdentifier::MOTOR_DRIVE) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['electric'] *= 0;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::ELECTRIC] *= 0;
 			return;
 		}
 
-		if ($abilityId === AbilityId::HEATPROOF) {
+		if ($abilityIdentifier === AbilityIdentifier::HEATPROOF) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['fire'] *= .5;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::FIRE] *= .5;
 			return;
 		}
 
-		if ($abilityId === AbilityId::DRY_SKIN) {
+		if ($abilityIdentifier === AbilityIdentifier::DRY_SKIN) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['fire'] *= 1.25;
-			$this->damageTaken[$identifier]['water'] *= 0;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::FIRE] *= 1.25;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::WATER] *= 0;
 			return;
 		}
 
-		if ($abilityId === AbilityId::FILTER) {
+		if ($abilityIdentifier === AbilityIdentifier::FILTER) {
 			$this->addToDamageTaken($ability);
-			foreach ($this->damageTaken[$identifier] as $type => $multiplier) {
+			foreach ($this->damageTaken[$abilityIdentifier] as $type => $multiplier) {
 				if ($multiplier > 1) {
-					$this->damageTaken[$identifier][$type] *= .75;
+					$this->damageTaken[$abilityIdentifier][$type] *= .75;
 				}
 			}
 			return;
 		}
 
-		if ($abilityId === AbilityId::STORM_DRAIN && $generationId->value() >= 5) {
+		if ($abilityIdentifier === AbilityIdentifier::STORM_DRAIN && $generationId->value() >= 5) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['water'] *= 0;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::WATER] *= 0;
 			return;
 		}
 
-		if ($abilityId === AbilityId::SOLID_ROCK) {
+		if ($abilityIdentifier === AbilityIdentifier::SOLID_ROCK) {
 			$this->addToDamageTaken($ability);
-			foreach ($this->damageTaken[$identifier] as $type => $multiplier) {
+			foreach ($this->damageTaken[$abilityIdentifier] as $type => $multiplier) {
 				if ($multiplier > 1) {
-					$this->damageTaken[$identifier][$type] *= .75;
+					$this->damageTaken[$abilityIdentifier][$type] *= .75;
 				}
 			}
 			return;
 		}
 
-		if ($abilityId === AbilityId::SAP_SIPPER) {
+		if ($abilityIdentifier === AbilityIdentifier::SAP_SIPPER) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['grass'] *= 0;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::GRASS] *= 0;
 			return;
 		}
 
-		if ($abilityId === AbilityId::WATER_BUBBLE) {
+		if ($abilityIdentifier === AbilityIdentifier::WATER_BUBBLE) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['fire'] *= .5;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::FIRE] *= .5;
 			return;
 		}
 
-		if ($abilityId === AbilityId::FLUFFY) {
+		if ($abilityIdentifier === AbilityIdentifier::FLUFFY) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['fire'] *= 2;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::FIRE] *= 2;
 			return;
 		}
 
-		if ($abilityId === AbilityId::PRISM_ARMOR) {
+		if ($abilityIdentifier === AbilityIdentifier::PRISM_ARMOR) {
 			$this->addToDamageTaken($ability);
-			foreach ($this->damageTaken[$identifier] as $type => $multiplier) {
+			foreach ($this->damageTaken[$abilityIdentifier] as $type => $multiplier) {
 				if ($multiplier > 1) {
-					$this->damageTaken[$identifier][$type] *= .75;
+					$this->damageTaken[$abilityIdentifier][$type] *= .75;
 				}
 			}
 			return;
 		}
 
-		if ($abilityId === AbilityId::PURIFYING_SALT) {
+		if ($abilityIdentifier === AbilityIdentifier::PURIFYING_SALT) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['ghost'] *= .5;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::GHOST] *= .5;
 			return;
 		}
 
-		if ($abilityId === AbilityId::WELL_BAKED_BODY) {
+		if ($abilityIdentifier === AbilityIdentifier::WELL_BAKED_BODY) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['fire'] *= 0;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::FIRE] *= 0;
 			return;
 		}
 
-		if ($abilityId === AbilityId::EARTH_EATER) {
+		if ($abilityIdentifier === AbilityIdentifier::EARTH_EATER) {
 			$this->addToDamageTaken($ability);
-			$this->damageTaken[$identifier]['ground'] *= 0;
+			$this->damageTaken[$abilityIdentifier][TypeIdentifier::GROUND] *= 0;
 		}
 	}
 
@@ -240,14 +243,14 @@ final class DexPokemonMatchupsModel
 	/**
 	 * Add this ability to the matchups array.
 	 */
-	private function addToDamageTaken(array $ability) : void
+	private function addToDamageTaken(ExpandedDexPokemonAbility $ability) : void
 	{
 		$this->abilities[] = [
-			'identifier' => $ability['identifier'],
-			'name' => $ability['name'],
+			'identifier' => $ability->getIdentifier(),
+			'name' => $ability->getName(),
 		];
 
-		$this->damageTaken[$ability['identifier']] = $this->damageTaken[self::NO_ABILITY];
+		$this->damageTaken[$ability->getIdentifier()] = $this->damageTaken[self::NO_ABILITY];
 	}
 
 

@@ -4,25 +4,26 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\DexPokemon;
 
 use Jp\Dex\Application\Models\VersionGroupModel;
-use Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\ExpandedDexPokemon;
+use Jp\Dex\Domain\Pokemon\ExpandedDexPokemonRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\VgPokemonNotFoundException;
 use Jp\Dex\Domain\Stats\DexStatRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 
 final class DexPokemonModel
 {
-	private array $pokemon = [];
-	private array $baseStats = [];
-	private array $abilities = [];
+	private ?ExpandedDexPokemon $pokemon = null;
+	private array $stats = [];
 
 
 	public function __construct(
 		private readonly VersionGroupModel $versionGroupModel,
 		private readonly PokemonRepositoryInterface $pokemonRepository,
-		private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
+		private readonly ExpandedDexPokemonRepositoryInterface $expandedDexPokemonRepository,
 		private readonly DexStatRepositoryInterface $dexStatRepository,
-		private readonly DexAbilityRepositoryInterface $dexAbilityRepository,
 		private readonly DexPokemonMatchupsModel $dexPokemonMatchupsModel,
 		private readonly DexPokemonEvolutionsModel $dexPokemonEvolutionsModel,
 		private readonly DexPokemonMovesModel $dexPokemonMovesModel,
@@ -37,46 +38,39 @@ final class DexPokemonModel
 		string $pokemonIdentifier,
 		LanguageId $languageId,
 	) : void {
-		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+		$this->pokemon = null;
+		$this->stats = [];
 
-		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
-		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-			$languageId,
-			$pokemon->getId(),
-		);
-		$this->pokemon = [
-			'identifier' => $pokemon->getIdentifier(),
-			'name' => $pokemonName->getName(),
-			'bst' => 0,
-		];
-
-		$this->baseStats = $this->dexStatRepository->getBaseStats(
-			$versionGroupId,
-			$pokemon->getId(),
-			$languageId,
-		);
-		foreach ($this->baseStats as $baseStat) {
-			$this->pokemon['bst'] += $baseStat['value'];
+		try {
+			$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+			$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
+		} catch (VersionGroupNotFoundException | PokemonNotFoundException) {
+			return;
 		}
 
-		// Set generations for the generation control.
 		$this->versionGroupModel->setWithPokemon($pokemon->getId());
 
-		// Set the Pokémon's abilities.
-		if ($versionGroupId->hasAbilities()) {
-			$this->abilities = $this->dexAbilityRepository->getByPokemon(
+		try {
+			$this->pokemon = $this->expandedDexPokemonRepository->getById(
 				$versionGroupId,
 				$pokemon->getId(),
 				$languageId,
 			);
+		} catch (VgPokemonNotFoundException) {
+			return;
 		}
+
+		$this->stats = $this->dexStatRepository->getByVersionGroup(
+			$versionGroupId,
+			$languageId,
+		);
 
 		// Set the Pokémon's matchups.
 		$this->dexPokemonMatchupsModel->setData(
 			$this->versionGroupModel->getVersionGroup(),
 			$pokemon->getId(),
 			$languageId,
-			$this->abilities,
+			$this->pokemon->getAbilities(),
 		);
 
 		// Set the Pokémon's evolutions.
@@ -99,19 +93,14 @@ final class DexPokemonModel
 		return $this->versionGroupModel;
 	}
 
-	public function getPokemon() : array
+	public function getPokemon() : ?ExpandedDexPokemon
 	{
 		return $this->pokemon;
 	}
 
-	public function getBaseStats() : array
+	public function getStats() : array
 	{
-		return $this->baseStats;
-	}
-
-	public function getAbilities() : array
-	{
-		return $this->abilities;
+		return $this->stats;
 	}
 
 	public function getDexPokemonMatchupsModel() : DexPokemonMatchupsModel

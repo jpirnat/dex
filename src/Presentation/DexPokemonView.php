@@ -30,8 +30,12 @@ final readonly class DexPokemonView
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
 		$pokemon = $this->dexPokemonModel->getPokemon();
-		$baseStats = $this->dexPokemonModel->getBaseStats();
-		$abilities = $this->dexPokemonModel->getAbilities();
+		$pokemon = $this->dexFormatter->formatExpandedDexPokemon($pokemon);
+		if (!$versionGroup->hasAbilities()) {
+			$pokemon['abilities'] = [];
+		}
+
+		$stats = $this->dexPokemonModel->getStats();
 
 		$dexPokemonMatchupsModel = $this->dexPokemonModel->getDexPokemonMatchupsModel();
 		$types = $dexPokemonMatchupsModel->getTypes();
@@ -143,14 +147,15 @@ final readonly class DexPokemonView
 					'id' => $versionGroup->getId()->value(),
 					'identifier' => $versionGroup->getIdentifier(),
 					'generationId' => $versionGroup->getGenerationId()->value(),
+					'hasEvYields' => $versionGroup->hasEvYields(),
+					'hasBreeding' => $versionGroup->hasBreeding(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'pokemon' => $pokemon,
-				'baseStats' => $baseStats,
-				'abilities' => $abilities,
+				'stats' => $stats,
 
 				'types' => $this->dexFormatter->formatDexTypes($types),
 				'damageTaken' => $damageTaken,

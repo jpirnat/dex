@@ -28,43 +28,76 @@
 	<template v-if="loaded">
 		<h1 class="dex-page__title">{{ pokemon.name }}</h1>
 
-		<h2 class="dex-section__title">Base Stats</h2>
-		<table class="dex-pokemon__base-stats">
-			<tr v-for="stat in baseStats" :key="stat.identifier">
-				<td class="dex-pokemon__base-stat-name">{{ stat.name }}</td>
-				<td class="dex-table--number">{{ stat.value }}</td>
-				<td>
-					<div
-						:class="{
-							'dex-pokemon__base-stat-bar': true,
-							['dex-stat--' + stat.identifier]: true,
-						}"
-						:style="{
-							'width': (stat.value / 255 * 300) + 'px',
-						}"
-					></div>
-				</td>
-			</tr>
-			<tr>
-				<td class="dex-pokemon__base-stat-name">Total</td>
-				<td class="dex-table--number">{{ pokemon.bst }}</td>
-			</tr>
-		</table>
+		<div class="dex-pokemon__sprite-and-base-stats">
+			<div class="dex-pokemon__sprite-and-types">
+				<img v-if="pokemon.sprite" :src="'/images/pokemon/sprites/' + pokemon.sprite"
+					class="dex-pokemon__sprite"
+				>
+				<div>
+					<dex-type-link v-for="t in pokemon.types" :key="t.identifier"
+						:vg-identifier="versionGroup.identifier"
+						:type="t"
+					></dex-type-link>
+				</div>
+			</div>
 
-		<template v-if="abilities.length > 0">
+			<table class="dex-pokemon__base-stats">
+				<thead>
+					<tr>
+						<td></td>
+						<th colspan="2">Base Stats</th>
+						<th v-if="versionGroup.hasEvYields" scope="col">EV Yield</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="s in stats" :key="s.identifier">
+						<th scope="row" class="dex-pokemon__base-stat-name">{{ s.name }}</th>
+						<td class="dex-table--number">{{ pokemon.baseStats[s.identifier] }}</td>
+						<td>
+							<div
+								:class="{
+									'dex-pokemon__base-stat-bar': true,
+									['dex-stat--' + s.identifier]: true,
+								}"
+								:style="{
+									'width': (pokemon.baseStats[s.identifier] / 255 * 300) + 'px',
+								}"
+							></div>
+						</td>
+						<td v-if="versionGroup.hasEvYields">
+							<span v-if="pokemon.evYield[s.identifier]">
+								{{ pokemon.evYield[s.identifier] }} EV<template v-if="pokemon.evYield[s.identifier] > 1">s</template>
+							</span>
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td class="dex-pokemon__base-stat-name">Total</td>
+						<td class="dex-table--number">{{ pokemon.bst }}</td>
+						<td></td>
+						<td v-if="versionGroup.hasEvYields">
+							{{ pokemon.evTotal }} EV<template v-if="pokemon.evTotal > 1">s</template> Total
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+
+		<template v-if="pokemon.abilities.length > 0">
 			<h2 class="dex-section__title">Abilities</h2>
 			<ul class="dex-pokemon__abilities">
-				<li v-for="ability in abilities" :key="ability.identifier" class="dex-pokemon__ability">
+				<li v-for="a in pokemon.abilities" :key="a.identifier" class="dex-pokemon__ability">
 					<div :class="{
-						'dex-pokemon__ability--hidden': ability.isHiddenAbility,
+						'dex-pokemon__ability--hidden': a.isHiddenAbility,
 					}">
-						<a :href="'/dex/' + versionGroup.identifier + '/abilities/' + ability.identifier"
+						<a :href="'/dex/' + versionGroup.identifier + '/abilities/' + a.identifier"
 							class="dex-link"
-						>{{ ability.name }}</a>
-						<template v-if="ability.isHiddenAbility"> (Hidden Ability)</template>
+						>{{ a.name }}</a>
+						<template v-if="a.isHiddenAbility"> (Hidden Ability)</template>
 					</div>
 
-					<div>{{ ability.description }}</div>
+					<div>{{ a.description }}</div>
 				</li>
 			</ul>
 		</template>
@@ -135,7 +168,19 @@
 				</table>
 			</div>
 		</template>
-		
+
+		<template v-if="versionGroup.hasBreeding">
+			<h2 class="dex-section__title">Breeding</h2>
+			<div v-if="pokemon.eggGroups.length">
+				Egg Group<template v-if="pokemon.eggGroups.length > 1">s</template>:
+				<template v-for="(e, eIndex) in pokemon.eggGroups" :key="e.identifier">
+					<a :href="'/dex/' + versionGroup.identifier + '/egg-groups/' + e.identifier" class="dex-link">{{ e.name }}</a><template v-if="eIndex < pokemon.eggGroups.length - 1">, </template>
+				</template>
+			</div>
+			<div>Gender Ratio: {{ pokemon.genderRatio.description }}</div>
+			<div>Egg Cycles: {{ pokemon.eggCycles }}</div>
+			<div>Steps to Hatch: {{ pokemon.stepsToHatch }}</div>
+		</template>
 
 		<h2 class="dex-section__title">Moves</h2>
 

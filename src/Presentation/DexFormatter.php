@@ -5,11 +5,13 @@ namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\IvCalculator\IvCalculatorPokemon;
 use Jp\Dex\Domain\Abilities\DexPokemonAbility;
+use Jp\Dex\Domain\Abilities\ExpandedDexPokemonAbility;
 use Jp\Dex\Domain\Categories\DexCategory;
 use Jp\Dex\Domain\EggGroups\DexEggGroup;
 use Jp\Dex\Domain\Items\DexItem;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
+use Jp\Dex\Domain\Pokemon\ExpandedDexPokemon;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Versions\DexVersion;
 use Jp\Dex\Domain\Versions\DexVersionGroup;
@@ -125,6 +127,29 @@ final readonly class DexFormatter
 		return $pokemon;
 	}
 
+	public function formatExpandedDexPokemon(ExpandedDexPokemon $pokemon) : array
+	{
+		return [
+			'identifier' => $pokemon->getIdentifier(),
+			'name' => $pokemon->getName(),
+			'sprite' => $pokemon->getSprite(),
+			'types' => $this->formatDexTypes($pokemon->getTypes()),
+			'abilities' => $this->formatExpandedDexPokemonAbilities($pokemon->getAbilities()),
+			'baseStats' => $pokemon->getBaseStats(),
+			'bst' => $pokemon->getBst(),
+			'eggGroups' => $this->formatDexEggGroups($pokemon->getEggGroups()),
+			'genderRatio' => [
+				'icon' => $pokemon->getGenderRatio()->getIcon(),
+				'description' => $pokemon->getGenderRatio()->getDescription(),
+			],
+			'eggCycles' => $pokemon->getEggCycles(),
+			'stepsToHatch' => $pokemon->getStepsToHatch(),
+			'baseExperience' => $pokemon->getBaseExperience(),
+			'evYield' => $pokemon->getEvYield(),
+			'evTotal' => $pokemon->getEvTotal(),
+		];
+	}
+
 	/**
 	 * Transform an array of dex type objects into a renderable data array.
 	 *
@@ -182,6 +207,27 @@ final readonly class DexFormatter
 		}
 
 		return $abilities;
+	}
+
+	/**
+	 * Transform an array of dex Pokémon ability objects into a renderable data array.
+	 *
+	 * @param ExpandedDexPokemonAbility[] $abilities
+	 */
+	public function formatExpandedDexPokemonAbilities(array $abilities) : array
+	{
+		$a = [];
+
+		foreach ($abilities as $ability) {
+			$a[] = [
+				'identifier' => $ability->getIdentifier(),
+				'name' => $ability->getName(),
+				'description' => $ability->getDescription(),
+				'isHiddenAbility' => $ability->isHiddenAbility(),
+			];
+		}
+
+		return $a;
 	}
 
 	/**

@@ -10,8 +10,7 @@ const app = new Vue({
 		breadcrumbs: [],
 		versionGroups: [],
 		pokemon: {},
-		baseStats: [],
-		abilities: [],
+		stats: [],
 		types: [],
 		abilitiesDamageTaken: {},
 		damageTakenAbilities: [],
@@ -64,8 +63,7 @@ const app = new Vue({
 				this.breadcrumbs = data.breadcrumbs;
 				this.versionGroups = data.versionGroups;
 				this.pokemon = data.pokemon;
-				this.baseStats = data.baseStats;
-				this.abilities = data.abilities;
+				this.stats = data.stats;
 				this.types = data.types;
 				this.abilitiesDamageTaken = data.damageTaken;
 				this.damageTakenAbilities = data.damageTakenAbilities;
@@ -78,7 +76,7 @@ const app = new Vue({
 
 				// If the Pokémon's only ability gives it unique type matchups,
 				// default to that ability in the matchups shown.
-				if (this.damageTakenAbilities.length === 2 && this.abilities.length === 1) {
+				if (this.damageTakenAbilities.length === 2 && this.pokemon.abilities.length === 1) {
 					this.damageTakenAbility = this.damageTakenAbilities[0].identifier;
 				}
 

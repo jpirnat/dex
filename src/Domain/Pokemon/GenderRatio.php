@@ -17,7 +17,7 @@ final readonly class GenderRatio
 	public function getDescription(): string
 	{
 		return match ($this->value) {
-			-1 => 'Genderless',
+			-1 => 'Gender Unknown',
 			0 => '100% male',
 			1 => '87.5% male, 12.5% female',
 			2 => '75% male, 25% female',

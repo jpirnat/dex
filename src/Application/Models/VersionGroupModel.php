@@ -13,6 +13,7 @@ use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\GenerationId;
 use Jp\Dex\Domain\Versions\VersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroupId;
+use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 /**
@@ -34,6 +35,8 @@ final class VersionGroupModel
 
 	/**
 	 * Set the version group by its identifier.
+	 *
+	 * @throws VersionGroupNotFoundException if no version group exists with this identifier.
 	 */
 	public function setByIdentifier(string $vgIdentifier) : VersionGroupId
 	{

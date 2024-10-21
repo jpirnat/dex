@@ -203,6 +203,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseEggGroupRepository::class
 );
 $services->alias(
+	\Jp\Dex\Domain\Pokemon\ExpandedDexPokemonRepositoryInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseExpandedDexPokemonRepository::class
+);
+$services->alias(
 	\Jp\Dex\Application\Models\IvCalculator\IvCalculatorQueriesInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseIvCalculatorQueries::class
 );

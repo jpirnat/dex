@@ -3,25 +3,19 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Abilities\AbilityId;
-use Jp\Dex\Domain\Abilities\DexPokemonAbility;
+use Jp\Dex\Domain\Abilities\ExpandedDexPokemonAbility;
 use Jp\Dex\Domain\EggGroups\DexEggGroup;
-use Jp\Dex\Domain\EggGroups\EggGroupId;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Moves\MoveId;
-use Jp\Dex\Domain\Pokemon\DexPokemon;
-use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\ExpandedDexPokemon;
+use Jp\Dex\Domain\Pokemon\ExpandedDexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\GenderRatio;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\VgPokemonNotFoundException;
 use Jp\Dex\Domain\Types\DexType;
-use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
-
 use PDO;
-use PDOStatement;
 
-final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositoryInterface
+final readonly class DatabaseExpandedDexPokemonRepository implements ExpandedDexPokemonRepositoryInterface
 {
 	public function __construct(
 		private PDO $db,
@@ -31,10 +25,9 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 	{
 		return
 "SELECT
-	`p`.`id`,
-	`vp`.`icon`,
 	`p`.`identifier`,
 	`pn`.`name`,
+	`vp`.`sprite`,
 
 	`t1`.`identifier` AS `type1_identifier`,
 	`t1n`.`name` AS `type1_name`,
@@ -45,13 +38,16 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 	`t2i`.`icon` AS `type2_icon`,
 
 	`a1`.`identifier` AS `ability1_identifier`,
-	`a1n`.`name` AS `ability1_name`,
+	COALESCE(`a1d`.`name`, `a1n`.`name`) AS `ability1_name`,
+	`a1d`.`description` AS `ability1_description`,
 
 	`a2`.`identifier` AS `ability2_identifier`,
-	`a2n`.`name` AS `ability2_name`,
+	COALESCE(`a2d`.`name`, `a2n`.`name`) AS `ability2_name`,
+	`a2d`.`description` AS `ability2_description`,
 
 	`a3`.`identifier` AS `ability3_identifier`,
-	`a3n`.`name` AS `ability3_name`,
+	COALESCE(`a3d`.`name`, `a3n`.`name`) AS `ability3_name`,
+	`a3d`.`description` AS `ability3_description`,
 
 	`vp`.`base_hp`,
 	`vp`.`base_atk`,
@@ -71,6 +67,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 	`s`.`egg_cycles`,
 	`vg`.`steps_per_egg_cycle`,
 
+	`vp`.`base_experience`,
 	`vp`.`ev_hp`,
 	`vp`.`ev_atk`,
 	`vp`.`ev_def`,
@@ -108,18 +105,30 @@ LEFT JOIN `abilities` AS `a1`
 LEFT JOIN `ability_names` AS `a1n`
 	ON `pn`.`language_id` = `a1n`.`language_id`
 	AND `vp`.`ability1_id` = `a1n`.`ability_id`
+LEFT JOIN `ability_descriptions` AS `a1d`
+	ON `vp`.`version_group_id` = `a1d`.`version_group_id`
+	AND `pn`.`language_id` = `a1d`.`language_id`
+	AND `vp`.`ability1_id` = `a1d`.`ability_id`
 
 LEFT JOIN `abilities` AS `a2`
 	ON `vp`.`ability2_id` = `a2`.`id`
 LEFT JOIN `ability_names` AS `a2n`
 	ON `pn`.`language_id` = `a2n`.`language_id`
 	AND `vp`.`ability2_id` = `a2n`.`ability_id`
+LEFT JOIN `ability_descriptions` AS `a2d`
+	ON `vp`.`version_group_id` = `a2d`.`version_group_id`
+	AND `pn`.`language_id` = `a2d`.`language_id`
+	AND `vp`.`ability2_id` = `a2d`.`ability_id`
 
 LEFT JOIN `abilities` AS `a3`
 	ON `vp`.`ability3_id` = `a3`.`id`
 LEFT JOIN `ability_names` AS `a3n`
 	ON `pn`.`language_id` = `a3n`.`language_id`
 	AND `vp`.`ability3_id` = `a3n`.`ability_id`
+LEFT JOIN `ability_descriptions` AS `a3d`
+	ON `vp`.`version_group_id` = `a3d`.`version_group_id`
+	AND `pn`.`language_id` = `a3d`.`language_id`
+	AND `vp`.`ability3_id` = `a3d`.`ability_id`
 
 LEFT JOIN `egg_groups` AS `e1`
 	ON `vp`.`egg_group1_id` = `e1`.`id`
@@ -140,23 +149,7 @@ INNER JOIN `version_groups` AS `vg`
 ";
 	}
 
-	/**
-	 * @return DexPokemon[] Indexed by id.
-	 */
-	private function executeAndFetch(PDOStatement $stmt) : array
-	{
-		$stmt->execute();
-
-		$pokemons = [];
-
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$pokemons[$result['id']] = $this->fromRecord($result);
-		}
-
-		return $pokemons;
-	}
-
-	private function fromRecord(array $result) : DexPokemon
+	private function fromRecord(array $result) : ExpandedDexPokemon
 	{
 		$types = [];
 		if ($result['type1_identifier']) {
@@ -176,23 +169,26 @@ INNER JOIN `version_groups` AS `vg`
 
 		$abilities = [];
 		if ($result['ability1_identifier']) {
-			$abilities[] = new DexPokemonAbility(
+			$abilities[] = new ExpandedDexPokemonAbility(
 				$result['ability1_identifier'],
 				$result['ability1_name'],
+				$result['ability1_description'] ?? '',
 				false,
 			);
 		}
 		if ($result['ability2_identifier']) {
-			$abilities[] = new DexPokemonAbility(
+			$abilities[] = new ExpandedDexPokemonAbility(
 				$result['ability2_identifier'],
 				$result['ability2_name'],
+				$result['ability2_description'] ?? '',
 				false,
 			);
 		}
 		if ($result['ability3_identifier']) {
-			$abilities[] = new DexPokemonAbility(
+			$abilities[] = new ExpandedDexPokemonAbility(
 				$result['ability3_identifier'],
 				$result['ability3_name'],
+				$result['ability3_description'] ?? '',
 				true,
 			);
 		}
@@ -239,29 +235,37 @@ INNER JOIN `version_groups` AS `vg`
 		}
 
 		$evYield = [];
+		$evTotal = 0;
+
 		if ($result['ev_hp']) {
 			$evYield['hp'] = $result['ev_hp'];
+			$evTotal += $result['ev_hp'];
 		}
 		if ($result['ev_atk']) {
 			$evYield['attack'] = $result['ev_atk'];
+			$evTotal += $result['ev_atk'];
 		}
 		if ($result['ev_def']) {
 			$evYield['defense'] = $result['ev_def'];
+			$evTotal += $result['ev_def'];
 		}
 		if ($result['ev_spa']) {
 			$evYield['special-attack'] = $result['ev_spa'];
+			$evTotal += $result['ev_spa'];
 		}
 		if ($result['ev_spd']) {
 			$evYield['special-defense'] = $result['ev_spd'];
+			$evTotal += $result['ev_spd'];
 		}
 		if ($result['ev_spe']) {
 			$evYield['speed'] = $result['ev_spe'];
+			$evTotal += $result['ev_spe'];
 		}
 
-		return new DexPokemon(
-			$result['icon'] ?? '',
+		return new ExpandedDexPokemon(
 			$result['identifier'],
 			$result['name'],
+			$result['sprite'] ?? '',
 			$types,
 			$abilities,
 			$baseStats,
@@ -270,13 +274,14 @@ INNER JOIN `version_groups` AS `vg`
 			new GenderRatio($result['gender_ratio']),
 			$result['egg_cycles'],
 			$result['egg_cycles'] * $result['steps_per_egg_cycle'],
+			$result['base_experience'],
 			$evYield,
-			$result['sort'],
+			$evTotal,
 		);
 	}
 
 	/**
-	 * Get a dex Pokémon by its id.
+	 * Get an expanded dex Pokémon by its id.
 	 *
 	 * @throws VgPokemonNotFoundException if no Pokémon exists with this id.
 	 */
@@ -284,7 +289,7 @@ INNER JOIN `version_groups` AS `vg`
 		VersionGroupId $versionGroupId,
 		PokemonId $pokemonId,
 		LanguageId $languageId,
-	) : DexPokemon {
+	) : ExpandedDexPokemon {
 		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
 "$baseQuery
@@ -309,149 +314,5 @@ LIMIT 1"
 		}
 
 		return $this->fromRecord($result);
-	}
-
-	/**
-	 * Get all dex Pokémon with this ability.
-	 * This method is used to get data for the dex/ability page.
-	 *
-	 * @return DexPokemon[] Indexed by id. Ordered by Pokémon sort value.
-	 */
-	public function getWithAbility(
-		VersionGroupId $versionGroupId,
-		AbilityId $abilityId,
-		LanguageId $languageId,
-	) : array {
-		$baseQuery = $this->getBaseQuery();
-		$stmt = $this->db->prepare(
-"$baseQuery
-WHERE `vp`.`version_group_id` = :version_group_id
-	AND :ability_id IN (
-		`vp`.`ability1_id`,
-		`vp`.`ability2_id`,
-		`vp`.`ability3_id`
-	)
-	AND `pn`.`language_id` = :language_id
-ORDER BY `p`.`sort`"
-		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		return $this->executeAndFetch($stmt);
-	}
-
-	/**
-	 * Get all dex Pokémon in this egg group.
-	 * This method is used to get data for the dex/egg-group page.
-	 *
-	 * @return DexPokemon[] Indexed by id. Ordered by Pokémon sort value.
-	 */
-	public function getInEggGroup(
-		VersionGroupId $versionGroupId,
-		EggGroupId $eggGroupId,
-		LanguageId $languageId,
-	) : array {
-		$baseQuery = $this->getBaseQuery();
-		$stmt = $this->db->prepare(
-"$baseQuery
-WHERE `vp`.`version_group_id` = :version_group_id
-	AND :egg_group_id IN (
-		`vp`.`egg_group1_id`,
-		`vp`.`egg_group2_id`
-	)
-	AND `pn`.`language_id` = :language_id
-ORDER BY `p`.`sort`"
-		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':egg_group_id', $eggGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		return $this->executeAndFetch($stmt);
-	}
-
-	/**
-	 * Get all dex Pokémon with this move.
-	 * This method is used to get data for the dex/move page.
-	 *
-	 * @return DexPokemon[] Indexed by id. Ordered by Pokémon sort value.
-	 */
-	public function getWithMove(
-		VersionGroupId $versionGroupId,
-		MoveId $moveId,
-		LanguageId $languageId,
-	) : array {
-		$baseQuery = $this->getBaseQuery();
-		$stmt = $this->db->prepare(
-"$baseQuery
-WHERE `vp`.`version_group_id` = :version_group_id1
-	AND `vp`.`pokemon_id` IN (
-		SELECT
-			`pokemon_id`
-		FROM `pokemon_moves`
-		WHERE `version_group_id` IN (
-			SELECT
-				`from_vg_id`
-			FROM `vg_move_transfers`
-			WHERE `into_vg_id` = :version_group_id2
-		)
-		AND `move_id` = :move_id
-	)
-	AND `pn`.`language_id` = :language_id
-ORDER BY `p`.`sort`"
-		);
-		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		return $this->executeAndFetch($stmt);
-	}
-
-	/**
-	 * Get all dex Pokémon with this type.
-	 * This method is used to get data for the dex/type page.
-	 *
-	 * @return DexPokemon[] Indexed by id. Ordered by Pokémon sort value.
-	 */
-	public function getByType(
-		VersionGroupId $versionGroupId,
-		TypeId $typeId,
-		LanguageId $languageId,
-	) : array {
-		$baseQuery = $this->getBaseQuery();
-		$stmt = $this->db->prepare(
-"$baseQuery
-WHERE `vp`.`version_group_id` = :version_group_id
-	AND :type_id IN (
-		`vp`.`type1_id`,
-		`vp`.`type2_id`
-	)
-	AND `pn`.`language_id` = :language_id
-ORDER BY `p`.`sort`"
-		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		return $this->executeAndFetch($stmt);
-	}
-
-	/**
-	 * Get all dex Pokémon in this version group.
-	 * This method is used to get data for the dex/pokemons page.
-	 *
-	 * @return DexPokemon[] Indexed by id. Ordered by Pokémon sort value.
-	 */
-	public function getByVersionGroup(
-		VersionGroupId $versionGroupId,
-		LanguageId $languageId,
-	) : array {
-		$baseQuery = $this->getBaseQuery();
-		$stmt = $this->db->prepare(
-"$baseQuery
-WHERE `vp`.`version_group_id` = :version_group_id
-	AND `pn`.`language_id` = :language_id
-ORDER BY `p`.`sort`"
-		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		return $this->executeAndFetch($stmt);
 	}
 }

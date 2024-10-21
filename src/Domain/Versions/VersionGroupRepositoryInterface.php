@@ -25,7 +25,7 @@ interface VersionGroupRepositoryInterface
 	 * Get a version group by its identifier.
 	 *
 	 * @throws VersionGroupNotFoundException if no version group exists with
-	 *     this id.
+	 *     this identifier.
 	 */
 	public function getByIdentifier(string $identifier) : VersionGroup;
 
