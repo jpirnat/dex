@@ -7,10 +7,11 @@ use DateTime;
 use Jp\Dex\Domain\Calculators\StatCalculator;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Spreads\StatsPokemonSpreadRepositoryInterface;
-use Jp\Dex\Domain\Stats\DexStatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
+use Jp\Dex\Domain\Stats\StatRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatValue;
 use Jp\Dex\Domain\Stats\StatValueContainer;
 
@@ -22,7 +23,8 @@ final class SpreadModel
 
 	public function __construct(
 		private readonly StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository,
-		private readonly DexStatRepositoryInterface $dexStatRepository,
+		private readonly StatRepositoryInterface $statRepository,
+		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
 		private readonly StatCalculator $statCalculator,
 	) {}
 
@@ -39,13 +41,9 @@ final class SpreadModel
 	) : void {
 		$generationId = $format->getGenerationId();
 
-		$this->stats = $this->dexStatRepository->getByVersionGroup(
+		$stats = $this->statRepository->getByVersionGroup(
 			$format->getVersionGroupId(),
-			$languageId,
 		);
-
-		// Get this generation's stats.
-		$statIds = StatId::getByGeneration($generationId);
 
 		// Get stat Pokémon spreads.
 		$spreads = $this->statsPokemonSpreadRepository->getByMonth(
@@ -57,20 +55,16 @@ final class SpreadModel
 		);
 
 		// Get the Pokémon's base stats.
-		$baseStatsArray = $this->dexStatRepository->getBaseStats(
+		$pokemon = $this->dexPokemonRepository->getById(
 			$format->getVersionGroupId(),
 			$pokemonId,
 			$languageId,
 		);
-		$idsToIdentifiers = [];
-		foreach ($baseStatsArray as $stat) {
-			$idsToIdentifiers[$stat['id']] = $stat['identifier'];
-		}
 
 		// Convert the base stats data structure for use in the stat calculator.
 		$baseStats = new StatValueContainer();
-		foreach ($baseStatsArray as $stat) {
-			$baseStats->add(new StatValue(new StatId($stat['id']), $stat['value']));
+		foreach ($stats as $stat) {
+			$baseStats->add(new StatValue($stat->getId(), $pokemon->getBaseStats()[$stat->getIdentifier()]));
 		}
 
 		$attack = new StatId(StatId::ATTACK);
@@ -86,8 +80,8 @@ final class SpreadModel
 			// Assume the Pokémon has perfect IVs.
 			$ivSpread = new StatValueContainer();
 			$perfectIv = $this->statCalculator->getPerfectIv($generationId);
-			foreach ($statIds as $statId) {
-				$ivSpread->add(new StatValue($statId, $perfectIv));
+			foreach ($stats as $stat) {
+				$ivSpread->add(new StatValue($stat->getId(), $perfectIv));
 			}
 			// If it's a minus Attack nature with 0 Attack EVs, assume 0 IV.
 			if ($decreasedStatId?->value() === StatId::ATTACK && !$evSpread->get($attack)->getValue()) {
@@ -105,15 +99,15 @@ final class SpreadModel
 				// to give the formula the square of the EV from Showdown.
 				$evSpread = new StatValueContainer();
 				$calcEvSpread = new StatValueContainer();
-				foreach ($statIds as $statId) {
+				foreach ($stats as $stat) {
 					// For Special, use what was imported as Special Attack.
-					$actingStatId = $statId->value() !== StatId::SPECIAL
-						? $statId
+					$actingStatId = $stat->getId()->value() !== StatId::SPECIAL
+						? $stat->getId()
 						: new StatId(StatId::SPECIAL_ATTACK);
 					$value = $spread->getEvs()->get($actingStatId)->getValue();
 
-					$evSpread->add(new StatValue($statId, $value));
-					$calcEvSpread->add(new StatValue($statId, $value ** 2));
+					$evSpread->add(new StatValue($stat->getId(), $value));
+					$calcEvSpread->add(new StatValue($stat->getId(), $value ** 2));
 				}
 
 				$statSpread = $this->statCalculator->all1(
@@ -141,15 +135,15 @@ final class SpreadModel
 			$decreasedStatId = $decreasedStatId !== null
 				? $decreasedStatId->value()
 				: null;
-			$increasedStat = $idsToIdentifiers[$increasedStatId] ?? null;
-			$decreasedStat = $idsToIdentifiers[$decreasedStatId] ?? null;
+			$increasedStat = $stats[$increasedStatId]?->getIdentifier() ?? null;
+			$decreasedStat = $stats[$decreasedStatId]?->getIdentifier() ?? null;
 
 			$evs = [];
-			$stats = [];
-			foreach ($statIds as $statId) {
-				$identifier = $idsToIdentifiers[$statId->value()];
-				$evs[$identifier] = $evSpread->get($statId)->getValue();
-				$stats[$identifier] = $statSpread->get($statId)->getValue();
+			$finalStats = [];
+			foreach ($stats as $stat) {
+				$identifier = $stat->getIdentifier();
+				$evs[$identifier] = $evSpread->get($stat->getId())->getValue();
+				$finalStats[$identifier] = $statSpread->get($stat->getId())->getValue();
 			}
 
 			$this->spreads[] = [
@@ -158,7 +152,7 @@ final class SpreadModel
 				'decreasedStat' => $decreasedStat,
 				'evs' => $evs,
 				'percent' => $spread->getPercent(),
-				'stats' => $stats,
+				'stats' => $finalStats,
 			];
 		}
 	}

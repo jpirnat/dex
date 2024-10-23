@@ -175,7 +175,6 @@ return [
 	'stats',
 	'vg_stats',
 	'stat_names',
-	'base_stats',
 	'move_stat_changes',
 
 	// Characteristics

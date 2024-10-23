@@ -65,7 +65,7 @@ final readonly class StatsPokemonView
 		// Get miscellaneous Pokémon data.
 		$pokemonModel = $this->statsPokemonModel->getPokemonModel();
 		$dexPokemon = $pokemonModel->getPokemon();
-		$baseStats = $pokemonModel->getBaseStats();
+		$stats = $pokemonModel->getStats();
 		$versionGroup = $this->statsPokemonModel->getVersionGroup();
 		$generation = $this->statsPokemonModel->getGeneration();
 
@@ -100,7 +100,6 @@ final readonly class StatsPokemonView
 
 		// Get spreads and sort by percent.
 		$spreadModel = $this->statsPokemonModel->getSpreadModel();
-		$stats = $spreadModel->getStats();
 		$spreads = $spreadModel->getSpreads();
 		foreach ($spreads as $i => $spread) {
 			$percent = $formatter->formatPercent($spread['percent']);
@@ -208,11 +207,13 @@ final readonly class StatsPokemonView
 				'pokemon' => [
 					'identifier' => $dexPokemon->getIdentifier(),
 					'name' => $dexPokemon->getName(),
-					'image' => $pokemonModel->getImage(),
+					'sprite' => $dexPokemon->getSprite(),
 					'types' => $this->dexFormatter->formatDexTypes($dexPokemon->getTypes()),
-					'baseStats' => $baseStats,
+					'baseStats' => $dexPokemon->getBaseStats(),
+					'bst' => $dexPokemon->getBst(),
 					'smogonDexIdentifier' => $pokemon->getSmogonDexIdentifier(),
 				],
+				'stats' => $stats,
 
 				'breadcrumbs' => $breadcrumbs,
 				'prevMonth' => $prevMonth,
@@ -239,7 +240,6 @@ final readonly class StatsPokemonView
 				'showTeraTypes' => $versionGroup->getId()->hasTeraTypes(),
 				'abilities' => $abilities,
 				'items' => $items,
-				'stats' => $stats,
 				'spreads' => $spreads,
 				'moves' => $moves,
 				'teraTypes' => $teraTypes,

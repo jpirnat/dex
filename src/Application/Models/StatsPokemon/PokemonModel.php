@@ -3,26 +3,22 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\StatsPokemon;
 
-use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Models\ModelNotFoundException;
-use Jp\Dex\Domain\Models\ModelRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\DexPokemon;
-use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\ExpandedDexPokemon;
+use Jp\Dex\Domain\Pokemon\ExpandedDexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
+use Jp\Dex\Domain\Pokemon\VgPokemonNotFoundException;
 use Jp\Dex\Domain\Stats\DexStatRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class PokemonModel
 {
-	private DexPokemon $pokemon;
-	private string $image = '';
-	private array $baseStats = [];
+	private ?ExpandedDexPokemon $pokemon;
+	private array $stats = [];
 
 
 	public function __construct(
-		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
-		private readonly ModelRepositoryInterface $modelRepository,
+		private readonly ExpandedDexPokemonRepositoryInterface $expandedDexPokemonRepository,
 		private readonly DexStatRepositoryInterface $dexStatRepository,
 	) {}
 
@@ -35,48 +31,32 @@ final class PokemonModel
 		PokemonId $pokemonId,
 		LanguageId $languageId,
 	) : void {
-		$this->image = '';
-		$this->baseStats = [];
+		$this->pokemon = null;
+		$this->stats = [];
 
-		$this->pokemon = $this->dexPokemonRepository->getById(
-			$versionGroupId,
-			$pokemonId,
-			$languageId,
-		);
-
-		// Get the Pokémon's model.
 		try {
-			$model = $this->modelRepository->getByFormAndShinyAndBackAndFemaleAndAttackingIndex(
-				new FormId($pokemonId->value()), // A Pokémon's default form has Pokémon id === form id.
-				false,
-				false,
-				false,
-				0,
+			$this->pokemon = $this->expandedDexPokemonRepository->getById(
+				$versionGroupId,
+				$pokemonId,
+				$languageId,
 			);
-			$image = $model->getImage();
-			$this->image = "models/$image";
-		} catch (ModelNotFoundException) {
+		} catch (VgPokemonNotFoundException) {
+			return;
 		}
 
-		$this->baseStats = $this->dexStatRepository->getBaseStats(
+		$this->stats = $this->dexStatRepository->getByVersionGroup(
 			$versionGroupId,
-			$pokemonId,
 			$languageId,
 		);
 	}
 
-	public function getPokemon() : DexPokemon
+	public function getPokemon() : ?ExpandedDexPokemon
 	{
 		return $this->pokemon;
 	}
 
-	public function getImage() : string
+	public function getStats() : array
 	{
-		return $this->image;
-	}
-
-	public function getBaseStats() : array
-	{
-		return $this->baseStats;
+		return $this->stats;
 	}
 }

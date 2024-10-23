@@ -56,38 +56,52 @@
 	</div>
 
 	<template v-if="loaded">
-		<div class="pokemon-data">
-			<div>
-				{{ pokemon.name }}
+		<div class="dex-pokemon__sprite-and-base-stats">
+			<div class="dex-pokemon__sprite-and-types">
+				<img v-if="pokemon.sprite" :src="'/images/pokemon/sprites/' + pokemon.sprite"
+					class="dex-pokemon__sprite"
+				>
+				<div>
+					<dex-type-link v-for="t in pokemon.types" :key="t.identifier"
+						:vg-identifier="versionGroup.identifier"
+						:type="t"
+					></dex-type-link>
+				</div>
 			</div>
-			<div v-if="pokemon.image">
-				<img :src="'/images/pokemon/' + pokemon.image" alt="">
-			</div>
-			<div class="pokemon-types">
-				<dex-type-link v-for="type in pokemon.types" :key="type.identifier"
-					:vg-identifier="versionGroup.identifier"
-					:type="type"
-				></dex-type-link>
-			</div>
-		</div>
 
-		<table class="dex-pokemon__base-stats">
-			<tr v-for="stat in pokemon.baseStats" :key="stat.identifier">
-				<td class="dex-pokemon__base-stat-name">{{ stat.name }}</td>
-				<td class="dex-table--number">{{ stat.value }}</td>
-				<td>
-					<div
-						:class="{
-							'dex-pokemon__base-stat-bar': true,
-							['dex-stat--' + stat.identifier]: true,
-						}"
-						:style="{
-							'width': (stat.value / 255 * 300) + 'px',
-						}"
-					></div>
-				</td>
-			</tr>
-		</table>
+			<table class="dex-pokemon__base-stats">
+				<thead>
+					<tr>
+						<td></td>
+						<th colspan="2">Base Stats</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="s in stats" :key="s.identifier">
+						<th scope="row" class="dex-pokemon__base-stat-name">{{ s.name }}</th>
+						<td class="dex-table--number">{{ pokemon.baseStats[s.identifier] }}</td>
+						<td>
+							<div
+								:class="{
+									'dex-pokemon__base-stat-bar': true,
+									['dex-stat--' + s.identifier]: true,
+								}"
+								:style="{
+									'width': (pokemon.baseStats[s.identifier] / 255 * 300) + 'px',
+								}"
+							></div>
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td class="dex-pokemon__base-stat-name">Total</td>
+						<td class="dex-table--number">{{ pokemon.bst }}</td>
+						<td></td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
 
 		<div v-if="format.smogonDexIdentifier && pokemon.smogonDexIdentifier">
 			<a :href="'https://www.smogon.com/dex/' + generation.smogonDexIdentifier + '/pokemon/' + pokemon.smogonDexIdentifier + '/' + format.smogonDexIdentifier + '/'"

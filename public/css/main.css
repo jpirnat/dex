@@ -1302,11 +1302,6 @@ a.button {
 }
 
 
-.pokemon-data {
-	display: inline-block;
-	text-align: center;
-}
-
 .dex-pokemon__sprite-and-base-stats {
 	margin: 10px 0;
 	display: flex;
