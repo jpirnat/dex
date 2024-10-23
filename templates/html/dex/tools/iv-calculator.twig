@@ -43,38 +43,50 @@
 			<span v-if="selectedPokemon === null" class="iv-calculator__no-selection">No Pokémon selected</span>
 		</label>
 
-		<div class="iv-calculator__pokemon-summary" v-if="selectedPokemon !== null">
-			<div class="iv-calculator__pokemon-sprite-and-types">
-				<img v-if="selectedPokemon.sprite" :src="'/images/pokemon/sprites/' + selectedPokemon.sprite" class="iv-calculator__pokemon-sprite">
+		<div class="dex-pokemon__sprite-and-base-stats" v-if="selectedPokemon !== null">
+			<div class="dex-pokemon__sprite-and-types">
+				<img v-if="selectedPokemon.sprite" :src="'/images/pokemon/sprites/' + selectedPokemon.sprite"
+					class="dex-pokemon__sprite"
+				>
 				<div>
-					<dex-type-link v-for="type in selectedPokemon.types" :key="type.identifier"
+					<dex-type-link v-for="t in selectedPokemon.types" :key="t.identifier"
 						:vg-identifier="versionGroup.identifier"
-						:type="type"
+						:type="t"
 					></dex-type-link>
 				</div>
 			</div>
 
 			<table class="dex-pokemon__base-stats">
-				<caption>Base Stats</caption>
-				<tr v-for="s in stats" :key="s.identifier">
-					<td class="dex-pokemon__base-stat-name">{{ s.name }}</td>
-					<td class="dex-table--number">{{ selectedPokemon.baseStats[s.identifier] }}</td>
-					<td>
-						<div
-							:class="{
-								'dex-pokemon__base-stat-bar': true,
-								['dex-stat--' + s.identifier]: true,
-							}"
-							:style="{
-								'width': (selectedPokemon.baseStats[s.identifier] / 255 * 300) + 'px',
-							}"
-						></div>
-					</td>
-				</tr>
-				<tr>
-					<td class="dex-pokemon__base-stat-name">Total</td>
-					<td class="dex-table--number">{{ selectedPokemon.bst }}</td>
-				</tr>
+				<thead>
+					<tr>
+						<td></td>
+						<th colspan="2">Base Stats</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="s in stats" :key="s.identifier">
+						<th scope="row" class="dex-pokemon__base-stat-name">{{ s.name }}</th>
+						<td class="dex-table--number">{{ selectedPokemon.baseStats[s.identifier] }}</td>
+						<td>
+							<div
+								:class="{
+									'dex-pokemon__base-stat-bar': true,
+									['dex-stat--' + s.identifier]: true,
+								}"
+								:style="{
+									'width': (selectedPokemon.baseStats[s.identifier] / 255 * 300) + 'px',
+								}"
+							></div>
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td class="dex-pokemon__base-stat-name">Total</td>
+						<td class="dex-table--number">{{ selectedPokemon.bst }}</td>
+						<td></td>
+					</tr>
+				</tfoot>
 			</table>
 		</div>
 

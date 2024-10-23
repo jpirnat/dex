@@ -1053,20 +1053,6 @@ a.button {
 	margin-right: 10px;
 }
 
-.iv-calculator__pokemon-summary {
-	margin: 10px 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 20px;
-}
-.iv-calculator__pokemon-sprite-and-types {
-	text-align: center;
-}
-.iv-calculator__pokemon-sprite {
-	max-width: 200px;
-}
-
 .iv-calculator__container {
 	margin: 20px 0;
 	display: flex;
