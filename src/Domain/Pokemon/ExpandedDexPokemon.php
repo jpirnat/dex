@@ -5,6 +5,7 @@ namespace Jp\Dex\Domain\Pokemon;
 
 use Jp\Dex\Domain\Abilities\ExpandedDexPokemonAbility;
 use Jp\Dex\Domain\EggGroups\DexEggGroup;
+use Jp\Dex\Domain\ExperienceGroups\DexExperienceGroup;
 use Jp\Dex\Domain\Types\DexType;
 
 final readonly class ExpandedDexPokemon
@@ -24,13 +25,14 @@ final readonly class ExpandedDexPokemon
 		/** @var ExpandedDexPokemonAbility[] $abilities */ private array $abilities,
 		/** @var int[] $baseStats */ private array $baseStats,
 		private int $bst,
+		private int $baseExperience,
+		/** @var int[] $evYield */ private array $evYield,
+		private int $evTotal,
+		private DexExperienceGroup $experienceGroup,
 		/** @var DexEggGroup[] $eggGroups */ private array $eggGroups,
 		private GenderRatio $genderRatio,
 		private int $eggCycles,
 		private int $stepsToHatch,
-		private int $baseExperience,
-		/** @var int[] $evYield */ private array $evYield,
-		private int $evTotal,
 	) {}
 
 	public function getIdentifier() : string
@@ -77,6 +79,29 @@ final readonly class ExpandedDexPokemon
 		return $this->bst;
 	}
 
+	public function getBaseExperience() : int
+	{
+		return $this->baseExperience;
+	}
+
+	/**
+	 * @return int[] Indexed by stat identifier.
+	 */
+	public function getEvYield() : array
+	{
+		return $this->evYield;
+	}
+
+	public function getEvTotal() : int
+	{
+		return $this->evTotal;
+	}
+
+	public function getExperienceGroup() : DexExperienceGroup
+	{
+		return $this->experienceGroup;
+	}
+
 	/**
 	 * @return DexEggGroup[]
 	 */
@@ -98,23 +123,5 @@ final readonly class ExpandedDexPokemon
 	public function getStepsToHatch() : int
 	{
 		return $this->stepsToHatch;
-	}
-
-	public function getBaseExperience() : int
-	{
-		return $this->baseExperience;
-	}
-
-	/**
-	 * @return int[] Indexed by stat identifier.
-	 */
-	public function getEvYield() : array
-	{
-		return $this->evYield;
-	}
-
-	public function getEvTotal() : int
-	{
-		return $this->evTotal;
 	}
 }

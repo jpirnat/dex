@@ -1,7 +1,7 @@
-id,identifier
-1,fast
-2,medium-fast
-3,medium-slow
-4,slow
-5,erratic
-6,fluctuating
+id,identifier,name,points
+1,fast,Fast,800000
+2,medium-fast,Medium Fast,1000000
+3,medium-slow,Medium Slow,1059860
+4,slow,Slow,1250000
+5,erratic,Erratic,600000
+6,fluctuating,Fluctuating,1640000

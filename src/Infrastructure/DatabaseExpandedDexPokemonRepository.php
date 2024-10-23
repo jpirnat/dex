@@ -5,6 +5,7 @@ namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Abilities\ExpandedDexPokemonAbility;
 use Jp\Dex\Domain\EggGroups\DexEggGroup;
+use Jp\Dex\Domain\ExperienceGroups\DexExperienceGroup;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\ExpandedDexPokemon;
 use Jp\Dex\Domain\Pokemon\ExpandedDexPokemonRepositoryInterface;
@@ -57,16 +58,6 @@ final readonly class DatabaseExpandedDexPokemonRepository implements ExpandedDex
 	`vp`.`base_spe`,
 	`vp`.`base_spc`,
 
-	`e1`.`identifier` AS `egg_group1_identifier`,
-	`e1n`.`name` AS `egg_group1_name`,
-
-	`e2`.`identifier` AS `egg_group2_identifier`,
-	`e2n`.`name` AS `egg_group2_name`,
-
-	`p`.`gender_ratio`,
-	`s`.`egg_cycles`,
-	`vg`.`steps_per_egg_cycle`,
-
 	`vp`.`base_experience`,
 	`vp`.`ev_hp`,
 	`vp`.`ev_atk`,
@@ -75,7 +66,19 @@ final readonly class DatabaseExpandedDexPokemonRepository implements ExpandedDex
 	`vp`.`ev_spd`,
 	`vp`.`ev_spe`,
 
-	`p`.`sort`
+	`x`.`identifier` AS `exp_group_identifier`,
+	`x`.`name` AS `exp_group_name`,
+	`x`.`points` AS `exp_group_points`,
+
+	`e1`.`identifier` AS `egg_group1_identifier`,
+	`e1n`.`name` AS `egg_group1_name`,
+
+	`e2`.`identifier` AS `egg_group2_identifier`,
+	`e2n`.`name` AS `egg_group2_name`,
+
+	`p`.`gender_ratio`,
+	`s`.`egg_cycles`,
+	`vg`.`steps_per_egg_cycle`
 FROM `vg_pokemon` AS `vp`
 INNER JOIN `pokemon` AS `p`
 	ON `vp`.`pokemon_id` = `p`.`id`
@@ -129,6 +132,9 @@ LEFT JOIN `ability_descriptions` AS `a3d`
 	ON `vp`.`version_group_id` = `a3d`.`version_group_id`
 	AND `pn`.`language_id` = `a3d`.`language_id`
 	AND `vp`.`ability3_id` = `a3d`.`ability_id`
+
+INNER JOIN `experience_groups` AS `x`
+	ON `p`.`experience_group_id` = `x`.`id`
 
 LEFT JOIN `egg_groups` AS `e1`
 	ON `vp`.`egg_group1_id` = `e1`.`id`
@@ -220,20 +226,6 @@ INNER JOIN `version_groups` AS `vg`
 		$baseStats['speed'] = $result['base_spe'];
 		$bst += $result['base_spe'];
 
-		$eggGroups = [];
-		if ($result['egg_group1_identifier']) {
-			$eggGroups[] = new DexEggGroup(
-				$result['egg_group1_identifier'],
-				$result['egg_group1_name'],
-			);
-		}
-		if ($result['egg_group2_identifier']) {
-			$eggGroups[] = new DexEggGroup(
-				$result['egg_group2_identifier'],
-				$result['egg_group2_name'],
-			);
-		}
-
 		$evYield = [];
 		$evTotal = 0;
 
@@ -262,6 +254,20 @@ INNER JOIN `version_groups` AS `vg`
 			$evTotal += $result['ev_spe'];
 		}
 
+		$eggGroups = [];
+		if ($result['egg_group1_identifier']) {
+			$eggGroups[] = new DexEggGroup(
+				$result['egg_group1_identifier'],
+				$result['egg_group1_name'],
+			);
+		}
+		if ($result['egg_group2_identifier']) {
+			$eggGroups[] = new DexEggGroup(
+				$result['egg_group2_identifier'],
+				$result['egg_group2_name'],
+			);
+		}
+
 		return new ExpandedDexPokemon(
 			$result['identifier'],
 			$result['name'],
@@ -270,13 +276,18 @@ INNER JOIN `version_groups` AS `vg`
 			$abilities,
 			$baseStats,
 			$bst,
+			$result['base_experience'],
+			$evYield,
+			$evTotal,
+			new DexExperienceGroup(
+				$result['exp_group_identifier'],
+				$result['exp_group_name'],
+				$result['exp_group_points'],
+			),
 			$eggGroups,
 			new GenderRatio($result['gender_ratio']),
 			$result['egg_cycles'],
 			$result['egg_cycles'] * $result['steps_per_egg_cycle'],
-			$result['base_experience'],
-			$evYield,
-			$evTotal,
 		);
 	}
 

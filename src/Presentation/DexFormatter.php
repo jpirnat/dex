@@ -137,6 +137,13 @@ final readonly class DexFormatter
 			'abilities' => $this->formatExpandedDexPokemonAbilities($pokemon->getAbilities()),
 			'baseStats' => $pokemon->getBaseStats(),
 			'bst' => $pokemon->getBst(),
+			'baseExperience' => $pokemon->getBaseExperience(),
+			'evYield' => $pokemon->getEvYield(),
+			'evTotal' => $pokemon->getEvTotal(),
+			'experienceGroup' => [
+				'name' => $pokemon->getExperienceGroup()->getName(),
+				'points' => $pokemon->getExperienceGroup()->getPoints(),
+			],
 			'eggGroups' => $this->formatDexEggGroups($pokemon->getEggGroups()),
 			'genderRatio' => [
 				'icon' => $pokemon->getGenderRatio()->getIcon(),
@@ -144,9 +151,6 @@ final readonly class DexFormatter
 			],
 			'eggCycles' => $pokemon->getEggCycles(),
 			'stepsToHatch' => $pokemon->getStepsToHatch(),
-			'baseExperience' => $pokemon->getBaseExperience(),
-			'evYield' => $pokemon->getEvYield(),
-			'evTotal' => $pokemon->getEvTotal(),
 		];
 	}
 
