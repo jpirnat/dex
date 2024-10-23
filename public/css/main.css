@@ -733,6 +733,27 @@ a.button {
 	padding: 3px;
 }
 
+.dex-pokemon__miscellaneous {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.dex-pokemon__miscellaneous-column {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.dex-pokemon__miscellaneous-header {
+	font-weight: bold;
+}
+
+.dex-pokemon__ev-yield {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
 .dex-evolutions-container {
 	display: flex;
 	align-items: center;

@@ -46,7 +46,6 @@
 					<tr>
 						<td></td>
 						<th colspan="2">Base Stats</th>
-						<th v-if="versionGroup.hasEvYields" scope="col">EV Yield</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -64,11 +63,6 @@
 								}"
 							></div>
 						</td>
-						<td v-if="versionGroup.hasEvYields">
-							<span v-if="pokemon.evYield[s.identifier]">
-								{{ pokemon.evYield[s.identifier] }} EV<template v-if="pokemon.evYield[s.identifier] > 1">s</template>
-							</span>
-						</td>
 					</tr>
 				</tbody>
 				<tfoot>
@@ -76,9 +70,6 @@
 						<td class="dex-pokemon__base-stat-name">Total</td>
 						<td class="dex-table--number">{{ pokemon.bst }}</td>
 						<td></td>
-						<td v-if="versionGroup.hasEvYields">
-							{{ pokemon.evTotal }} EV<template v-if="pokemon.evTotal > 1">s</template> Total
-						</td>
 					</tr>
 				</tfoot>
 			</table>
@@ -141,46 +132,68 @@
 			</div>
 		</div>
 
-		<template v-if="true">
-			<h2 class="dex-section__title">Evolutions</h2>
-			<div class="dex-evolutions-container">
-				<table class="dex-evolutions-table">
-					<tbody>
-						<tr v-for="row in evolutionTableRows">
-							<template v-for="cell in row.cells">
-								<td :rowspan="cell.rowspan > 1 ? cell.rowspan : null">
-									<div class="dex-evolutions-table-cell">
-										<span v-if="!cell.isFirstStage" class="dex-evolutions-table-arrow">⮕</span>
-										<a class="dex-link" :href="'/dex/' + versionGroup.identifier + '/pokemon/' + cell.identifier">
-											<img v-if="cell.icon" :src="'/images/pokemon/icons/' + cell.icon" class="dex-pokemon-icon">
-										</a>
-										<div>
-											<a class="dex-link" :href="'/dex/' + versionGroup.identifier + '/pokemon/' + cell.identifier">
-												{{ cell.name }}
-											</a>
-											<div v-for="method in cell.methods" v-html="method.html"></div>
-										</div>
-									</div>
-								</td>
-							</template>
-						</tr>
-					</tbody>
-				</table>
+		<h2 class="dex-section__title">Miscellaneous Data</h2>
+		<div class="dex-pokemon__miscellaneous">
+			<div class="dex-pokemon__miscellaneous-column">
+				<div class="dex-pokemon__miscellaneous-header">Battling</div>
+				<div v-if="pokemon.baseExperience">Base Exp: {{ pokemon.baseExperience }}</div>
+				<div v-if="versionGroup.hasEvYields" class="dex-pokemon__ev-yield">
+					<span>EV Yield:</span>
+					<div>
+						<template v-for="s in stats" :key="s.identifier">
+							<div v-if="pokemon.evYield[s.identifier]">{{ pokemon.evYield[s.identifier] }} {{ s.name }} EV<template v-if="pokemon.evYield[s.identifier] > 1">s</template></div>
+						</template>
+						<div v-if="Object.keys(pokemon.evYield).length > 1">{{ pokemon.evTotal }} EVs total</div>
+					</div>
+				</div>
 			</div>
-		</template>
 
-		<template v-if="versionGroup.hasBreeding">
-			<h2 class="dex-section__title">Breeding</h2>
-			<div v-if="pokemon.eggGroups.length">
-				Egg Group<template v-if="pokemon.eggGroups.length > 1">s</template>:
-				<template v-for="(e, eIndex) in pokemon.eggGroups" :key="e.identifier">
-					<a :href="'/dex/' + versionGroup.identifier + '/egg-groups/' + e.identifier" class="dex-link">{{ e.name }}</a><template v-if="eIndex < pokemon.eggGroups.length - 1">, </template>
-				</template>
+			<div class="dex-pokemon__miscellaneous-column">
+				<div class="dex-pokemon__miscellaneous-header">Training</div>
+				<div v-if="pokemon.catchRate">Catch Rate: {{ pokemon.catchRate }}</div>
+				<div v-if="pokemon.baseFriendship">Base Friendship: {{ pokemon.baseFriendship }}</div>
+				<div>{{ pokemon.experienceGroup.points }} Exp. Points to Lv. 100 ({{ pokemon.experienceGroup.name }})</div>
 			</div>
-			<div>Gender Ratio: {{ pokemon.genderRatio.description }}</div>
-			<div>Egg Cycles: {{ pokemon.eggCycles }}</div>
-			<div>Steps to Hatch: {{ pokemon.stepsToHatch }}</div>
-		</template>
+
+			<div class="dex-pokemon__miscellaneous-column">
+				<div class="dex-pokemon__miscellaneous-header">Breeding</div>
+				<div v-if="pokemon.eggGroups.length">
+					Egg Group<template v-if="pokemon.eggGroups.length > 1">s</template>:
+					<template v-for="(e, eIndex) in pokemon.eggGroups" :key="e.identifier">
+						<a :href="'/dex/' + versionGroup.identifier + '/egg-groups/' + e.identifier" class="dex-link">{{ e.name }}</a><template v-if="eIndex < pokemon.eggGroups.length - 1">, </template>
+					</template>
+				</div>
+				<div>Gender Ratio: {{ pokemon.genderRatio.description }}</div>
+				<div>Egg Cycles: {{ pokemon.eggCycles }}</div>
+				<div>Steps to Hatch: {{ pokemon.stepsToHatch }}</div>
+			</div>
+		</div>
+
+		<h2 class="dex-section__title">Evolutions</h2>
+		<div class="dex-evolutions-container">
+			<table class="dex-evolutions-table">
+				<tbody>
+					<tr v-for="row in evolutionTableRows">
+						<template v-for="cell in row.cells">
+							<td :rowspan="cell.rowspan > 1 ? cell.rowspan : null">
+								<div class="dex-evolutions-table-cell">
+									<span v-if="!cell.isFirstStage" class="dex-evolutions-table-arrow">⮕</span>
+									<a class="dex-link" :href="'/dex/' + versionGroup.identifier + '/pokemon/' + cell.identifier">
+										<img v-if="cell.icon" :src="'/images/pokemon/icons/' + cell.icon" class="dex-pokemon-icon">
+									</a>
+									<div>
+										<a class="dex-link" :href="'/dex/' + versionGroup.identifier + '/pokemon/' + cell.identifier">
+											{{ cell.name }}
+										</a>
+										<div v-for="method in cell.methods" v-html="method.html"></div>
+									</div>
+								</div>
+							</td>
+						</template>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
 		<h2 class="dex-section__title">Moves</h2>
 
