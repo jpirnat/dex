@@ -298,12 +298,13 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 		$baseQuery = $this->getBaseQuery();
 		$stmt = $this->db->prepare(
 			"$baseQuery
-			WHERE `id` IN (
-				SELECT
-					`version_group_id`
-				FROM `pokemon_abilities`
-				WHERE `ability_id` = :ability_id
-			)
+			WHERE `has_abilities` = 1
+				AND `id` IN (
+					SELECT
+						`version_group_id`
+					FROM `vg_pokemon`
+					WHERE :ability_id IN (`ability1_id`, `ability2_id`, `ability3_id`)
+				)
 			ORDER BY `sort`"
 		);
 		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);

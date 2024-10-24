@@ -140,6 +140,7 @@ final readonly class DexFormatter
 			'baseExperience' => $pokemon->getBaseExperience(),
 			'evYield' => $pokemon->getEvYield(),
 			'evTotal' => $pokemon->getEvTotal(),
+			'catchRate' => $pokemon->getCatchRate(),
 			'experienceGroup' => [
 				'name' => $pokemon->getExperienceGroup()->getName(),
 				'points' => $pokemon->getExperienceGroup()->getPoints(),

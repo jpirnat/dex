@@ -65,6 +65,7 @@ final readonly class DatabaseExpandedDexPokemonRepository implements ExpandedDex
 	`vp`.`ev_spa`,
 	`vp`.`ev_spd`,
 	`vp`.`ev_spe`,
+	`vp`.`catch_rate`,
 
 	`x`.`identifier` AS `exp_group_identifier`,
 	`x`.`name` AS `exp_group_name`,
@@ -279,6 +280,7 @@ INNER JOIN `version_groups` AS `vg`
 			$result['base_experience'],
 			$evYield,
 			$evTotal,
+			$result['catch_rate'],
 			new DexExperienceGroup(
 				$result['exp_group_identifier'],
 				$result['exp_group_name'],

@@ -28,6 +28,7 @@ final readonly class ExpandedDexPokemon
 		private int $baseExperience,
 		/** @var int[] $evYield */ private array $evYield,
 		private int $evTotal,
+		private int $catchRate,
 		private DexExperienceGroup $experienceGroup,
 		/** @var DexEggGroup[] $eggGroups */ private array $eggGroups,
 		private GenderRatio $genderRatio,
@@ -95,6 +96,11 @@ final readonly class ExpandedDexPokemon
 	public function getEvTotal() : int
 	{
 		return $this->evTotal;
+	}
+
+	public function getCatchRate() : int
+	{
+		return $this->catchRate;
 	}
 
 	public function getExperienceGroup() : DexExperienceGroup

@@ -32,6 +32,8 @@ create table if not exists `vg_pokemon`
 `ev_spd` tinyint unsigned not null,
 `ev_spe` tinyint unsigned not null,
 
+`catch_rate` tinyint unsigned not null,
+
 primary key (
 	`version_group_id`,
 	`pokemon_id`
