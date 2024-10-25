@@ -367,10 +367,6 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabasePokemonRepository::class
 );
 $services->alias(
-	\Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface::class,
-	\Jp\Dex\Infrastructure\DatabasePokemonTypeRepository::class
-);
-$services->alias(
 	\Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseRatingQueries::class
 );

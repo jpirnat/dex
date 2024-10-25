@@ -9,9 +9,9 @@ use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\VgPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatsChartQueriesInterface;
 use Jp\Dex\Domain\Stats\Trends\Lines\MovesetAbilityTrendLine;
-use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final readonly class MovesetAbilityTrendGenerator
@@ -20,7 +20,7 @@ final readonly class MovesetAbilityTrendGenerator
 		private StatsChartQueriesInterface $statsChartQueries,
 		private PokemonNameRepositoryInterface $pokemonNameRepository,
 		private AbilityNameRepositoryInterface $abilityNameRepository,
-		private PokemonTypeRepositoryInterface $pokemonTypeRepository,
+		private VgPokemonRepositoryInterface $vgPokemonRepository,
 		private TypeRepositoryInterface $typeRepository,
 		private TrendPointCalculator $trendPointCalculator,
 	) {}
@@ -46,11 +46,11 @@ final readonly class MovesetAbilityTrendGenerator
 		);
 
 		// Get the Pokémon's primary type.
-		$pokemonTypes = $this->pokemonTypeRepository->getByVgAndPokemon(
+		$vgPokemon = $this->vgPokemonRepository->getByVgAndPokemon(
 			$format->getVersionGroupId(),
 			$pokemonId,
 		);
-		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());
+		$pokemonType = $this->typeRepository->getById($vgPokemon->getType1Id());
 
 		// Get the usage data.
 		$usageDatas = $this->statsChartQueries->getMovesetAbility(

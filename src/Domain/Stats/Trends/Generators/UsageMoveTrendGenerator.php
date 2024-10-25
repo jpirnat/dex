@@ -10,9 +10,9 @@ use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\VgMoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\VgPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatsChartQueriesInterface;
 use Jp\Dex\Domain\Stats\Trends\Lines\UsageMoveTrendLine;
-use Jp\Dex\Domain\Types\PokemonTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final readonly class UsageMoveTrendGenerator
@@ -21,7 +21,7 @@ final readonly class UsageMoveTrendGenerator
 		private StatsChartQueriesInterface $statsChartQueries,
 		private PokemonNameRepositoryInterface $pokemonNameRepository,
 		private MoveNameRepositoryInterface $moveNameRepository,
-		private PokemonTypeRepositoryInterface $pokemonTypeRepository,
+		private VgPokemonRepositoryInterface $vgPokemonRepository,
 		private TypeRepositoryInterface $typeRepository,
 		private VgMoveRepositoryInterface $vgMoveRepository,
 		private TrendPointCalculator $trendPointCalculator,
@@ -48,11 +48,11 @@ final readonly class UsageMoveTrendGenerator
 		);
 
 		// Get the Pokémon's primary type.
-		$pokemonTypes = $this->pokemonTypeRepository->getByVgAndPokemon(
+		$vgPokemon = $this->vgPokemonRepository->getByVgAndPokemon(
 			$format->getVersionGroupId(),
 			$pokemonId,
 		);
-		$pokemonType = $this->typeRepository->getById($pokemonTypes[1]->getTypeId());
+		$pokemonType = $this->typeRepository->getById($vgPokemon->getType1Id());
 
 		// Get the move's type.
 		$vgMove = $this->vgMoveRepository->getByVgAndMove(

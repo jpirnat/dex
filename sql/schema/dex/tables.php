@@ -84,7 +84,6 @@ return [
 	'vg_types',
 	'type_icons',
 	'type_matchups',
-	'pokemon_types',
 
 	// Egg groups
 	'egg_groups',
