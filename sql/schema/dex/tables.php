@@ -215,7 +215,6 @@ return [
 	'pokemon_shapes',
 
 	// Miscellaneous
-	'base_friendships',
 	'transformation_groups',
 	'transformation_group_pokemon',
 
