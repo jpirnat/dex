@@ -48,7 +48,6 @@ return [
 		'ability_descriptions_09',
 	],
 	'vg_abilities',
-	'pokemon_abilities',
 
 	// Ability flags
 	'ability_flags',

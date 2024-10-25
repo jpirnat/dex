@@ -30,14 +30,35 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 			'SELECT
 				`pa`.`ability_id`,
 				`p`.`identifier`,
-				`vp`.`icon`,
+				`pa`.`icon`,
 				`pn`.`name`
-			FROM `pokemon_abilities` AS `pa`
+			FROM (
+				SELECT
+					`version_group_id`,
+					`pokemon_id`,
+					`ability1_id` AS `ability_id`,
+					`icon`
+				FROM `vg_pokemon`
+				WHERE `ability1_id` IS NOT NULL
+				UNION ALL
+				SELECT
+					`version_group_id`,
+					`pokemon_id`,
+					`ability2_id` AS `ability_id`,
+					`icon`
+				FROM `vg_pokemon`
+				WHERE `ability2_id` IS NOT NULL
+				UNION ALL
+				SELECT
+					`version_group_id`,
+					`pokemon_id`,
+					`ability3_id` AS `ability_id`,
+					`icon`
+				FROM `vg_pokemon`
+				WHERE `ability3_id` IS NOT NULL
+			) AS `pa`
 			INNER JOIN `pokemon` AS `p`
 				ON `pa`.`pokemon_id` = `p`.`id`
-			INNER JOIN `vg_pokemon` AS `vp`
-				ON `pa`.`version_group_id` = `vp`.`version_group_id`
-				AND `pa`.`pokemon_id` = `vp`.`pokemon_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `pa`.`pokemon_id` = `pn`.`pokemon_id`
 			WHERE `pa`.`version_group_id` = :version_group_id
@@ -62,17 +83,33 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 				ON `ad`.`version_group_id` = :version_group_id1
 				AND `an`.`language_id` = `ad`.`language_id`
 				AND `an`.`ability_id` = `ad`.`ability_id`
-			WHERE `a`.`id` IN (
-				SELECT
-					`ability_id`
-				FROM `pokemon_abilities`
-				WHERE `version_group_id` = :version_group_id2
+			WHERE (
+				`a`.`id` IN (
+					SELECT
+						`ability1_id`
+					FROM `vg_pokemon`
+					WHERE `version_group_id` = :version_group_id2
+				)
+				OR `a`.`id` IN (
+					SELECT
+						`ability2_id`
+					FROM `vg_pokemon`
+					WHERE `version_group_id` = :version_group_id3
+				)
+				OR `a`.`id` IN (
+					SELECT
+						`ability3_id`
+					FROM `vg_pokemon`
+					WHERE `version_group_id` = :version_group_id4
+				)
 			)
 			AND `an`.`language_id` = :language_id
 			ORDER BY `name`'
 		);
 		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id3', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id4', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -106,14 +143,35 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 			'SELECT
 				`pa`.`ability_id`,
 				`p`.`identifier`,
-				`vp`.`icon`,
+				`pa`.`icon`,
 				`pn`.`name`
-			FROM `pokemon_abilities` AS `pa`
+			FROM (
+				SELECT
+					`version_group_id`,
+					`pokemon_id`,
+					`ability1_id` AS `ability_id`,
+					`icon`
+				FROM `vg_pokemon`
+				WHERE `ability1_id` IS NOT NULL
+				UNION ALL
+				SELECT
+					`version_group_id`,
+					`pokemon_id`,
+					`ability2_id` AS `ability_id`,
+					`icon`
+				FROM `vg_pokemon`
+				WHERE `ability2_id` IS NOT NULL
+				UNION ALL
+				SELECT
+					`version_group_id`,
+					`pokemon_id`,
+					`ability3_id` AS `ability_id`,
+					`icon`
+				FROM `vg_pokemon`
+				WHERE `ability3_id` IS NOT NULL
+			) AS `pa`
 			INNER JOIN `pokemon` AS `p`
 				ON `pa`.`pokemon_id` = `p`.`id`
-			INNER JOIN `vg_pokemon` AS `vp`
-				ON `pa`.`version_group_id` = `vp`.`version_group_id`
-				AND `pa`.`pokemon_id` = `vp`.`pokemon_id`
 			INNER JOIN `pokemon_names` AS `pn`
 				ON `pa`.`pokemon_id` = `pn`.`pokemon_id`
 			WHERE `pa`.`version_group_id` = :version_group_id1
@@ -147,17 +205,31 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 				ON `ad`.`version_group_id` = :version_group_id1
 				AND `an`.`language_id` = `ad`.`language_id`
 				AND `an`.`ability_id` = `ad`.`ability_id`
-			WHERE `a`.`id` IN (
-				SELECT
-					`ability_id`
-				FROM `pokemon_abilities`
-				WHERE `version_group_id` = :version_group_id2
+			WHERE (
+				`a`.`id` IN (
+					SELECT
+						`ability1_id`
+					FROM `vg_pokemon`
+					WHERE `version_group_id` = :version_group_id2
+				)
+				OR `a`.`id` IN (
+					SELECT
+						`ability2_id`
+					FROM `vg_pokemon`
+					WHERE `version_group_id` = :version_group_id3
+				)
+				OR `a`.`id` IN (
+					SELECT
+						`ability3_id`
+					FROM `vg_pokemon`
+					WHERE `version_group_id` = :version_group_id4
+				)
 			)
 			AND `a`.`id` IN (
 				SELECT
 					`ability_id`
 				FROM `vg_abilities_flags`
-				WHERE `version_group_id` = :version_group_id3
+				WHERE `version_group_id` = :version_group_id5
 					AND `flag_id` = :flag_id
 			)
 			AND `an`.`language_id` = :language_id
@@ -166,6 +238,8 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':version_group_id3', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id4', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id5', $versionGroupId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
 		$stmt->execute();
