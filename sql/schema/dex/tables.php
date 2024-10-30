@@ -88,7 +88,6 @@ return [
 	// Egg groups
 	'egg_groups',
 	'egg_group_names',
-	'pokemon_egg_groups',
 
 	'vg_pokemon',
 

@@ -41,53 +41,38 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 	}
 
 	/**
-	 * Get the version group's generation.
-	 *
-	 * @param int $versionGroupId
-	 *
-	 * @return int Generation id
-	 */
-	public function getGenerationId(int $versionGroupId) : int
-	{
-		$stmt = $this->db->query(
-			"SELECT
-				`generation_id`
-			FROM `version_groups`
-			WHERE `id` = $versionGroupId
-			LIMIT 1"
-		);
-		return $stmt->fetchColumn();
-	}
-
-	/**
 	 * Get the Pokémon's egg groups.
 	 *
-	 * @param int $pokemonId
-	 * @param int $generationId
+	 * @param int $versionGroupId
+	 * * @param int $pokemonId
 	 *
 	 * @return int[]
 	 */
-	public function getEggGroupIds(int $pokemonId, int $generationId) : array
+	public function getEggGroupIds(int $versionGroupId, int $pokemonId) : array
 	{
+
 		$stmt = $this->db->query(
 			"SELECT
-				`egg_group_id`
-			FROM `pokemon_egg_groups`
-			WHERE `pokemon_id` = $pokemonId
-				AND `generation_id` = $generationId"
+				`egg_group1_id`,
+				`egg_group2_id`
+			FROM `vg_pokemon`
+			WHERE `version_group_id` = $versionGroupId
+				AND `pokemon_id` = $pokemonId
+			LIMIT 1"
 		);
-		return $stmt->fetchAll(PDO::FETCH_COLUMN);
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+		return array_filter($result, fn($e) => $e !== null);
 	}
 
 	/**
 	 * Get this Pokémon's evolution.
 	 *
-	 * @param int $pokemonId
 	 * @param int $versionGroupId
+	 * @param int $pokemonId
 	 *
 	 * @return int Pokémon id.
 	 */
-	public function getEvolution(int $pokemonId, int $versionGroupId) : int
+	public function getEvolution(int $versionGroupId, int $pokemonId) : int
 	{
 		$stmt = $this->db->query(
 			"SELECT
@@ -133,22 +118,20 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 				WHERE `vgf`.`version_group_id` = $versionGroupId
 			)
 			AND `pokemon_id` IN (
+				# It's in at least one of these egg groups.
 				SELECT
-					`peg`.`pokemon_id`
-				FROM `pokemon_egg_groups` AS `peg`
-				INNER JOIN `version_groups` AS `vg`
-					ON `peg`.`generation_id` = `vg`.`generation_id`
-				WHERE `peg`.`egg_group_id` IN ($eggGroups)
-					AND `vg`.`id` = $versionGroupId
+					`pokemon_id`
+				FROM `vg_pokemon` AS `vg`
+				WHERE `version_group_id` = $versionGroupId
+					AND (`egg_group1_id` IN ($eggGroups) OR `egg_group2_id` IN ($eggGroups))
 			)
 			AND `pokemon_id` NOT IN (
+				# It's not in any of these egg groups.
 				SELECT
-					`peg`.`pokemon_id`
-				FROM `pokemon_egg_groups` AS `peg`
-				INNER JOIN `version_groups` AS `vg`
-					ON `peg`.`generation_id` = `vg`.`generation_id`
-				WHERE `peg`.`egg_group_id` IN ($excludeEggGroups)
-					AND `vg`.`id` = $versionGroupId
+					`pokemon_id`
+				FROM `vg_pokemon` AS `vg`
+				WHERE `version_group_id` = $versionGroupId
+					AND (`egg_group1_id` IN ($excludeEggGroups) OR `egg_group2_id` IN ($excludeEggGroups))
 			)
 			AND `pokemon_id` NOT IN (
 				SELECT
@@ -191,31 +174,28 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
 				WHERE `vgf`.`version_group_id` = $versionGroupId
 			)
 			AND `pokemon_id` IN (
+				# It's in at least one of these egg groups.
 				SELECT
-					`peg`.`pokemon_id`
-				FROM `pokemon_egg_groups` AS `peg`
-				INNER JOIN `version_groups` AS `vg`
-					ON `peg`.`generation_id` = `vg`.`generation_id`
-				WHERE `peg`.`egg_group_id` IN ($eggGroups)
-					AND `vg`.`id` = $versionGroupId
+					`pokemon_id`
+				FROM `vg_pokemon` AS `vg`
+				WHERE `version_group_id` = $versionGroupId
+					AND (`egg_group1_id` IN ($eggGroups) OR `egg_group2_id` IN ($eggGroups))
 			)
 			AND `pokemon_id` IN (
+				# It's in at least one other egg group.
 				SELECT
-					`peg`.`pokemon_id`
-				FROM `pokemon_egg_groups` AS `peg`
-				INNER JOIN `version_groups` AS `vg`
-					ON `peg`.`generation_id` = `vg`.`generation_id`
-				WHERE `peg`.`egg_group_id` NOT IN ($eggGroups)
-					AND `vg`.`id` = $versionGroupId
+					`pokemon_id`
+				FROM `vg_pokemon` AS `vg`
+				WHERE `version_group_id` = $versionGroupId
+					AND (`egg_group1_id` NOT IN ($eggGroups) OR `egg_group2_id` NOT IN ($eggGroups))
 			)
 			AND `pokemon_id` NOT IN (
+				# It's not in any of these egg groups.
 				SELECT
-					`peg`.`pokemon_id`
-				FROM `pokemon_egg_groups` AS `peg`
-				INNER JOIN `version_groups` AS `vg`
-					ON `peg`.`generation_id` = `vg`.`generation_id`
-				WHERE `peg`.`egg_group_id` IN ($excludeEggGroups)
-					AND `vg`.`id` = $versionGroupId
+					`pokemon_id`
+				FROM `vg_pokemon` AS `vg`
+				WHERE `version_group_id` = $versionGroupId
+					AND (`egg_group1_id` IN ($excludeEggGroups) OR `egg_group2_id` IN ($excludeEggGroups))
 			)
 			AND `pokemon_id` NOT IN (
 				SELECT

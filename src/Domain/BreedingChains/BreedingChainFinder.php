@@ -74,23 +74,21 @@ final class BreedingChainFinder
 			0,
 		));
 
-		$generationId = $this->breedingChainQueries->getGenerationId($versionGroupId);
-
 		// Get the Pokémon's egg groups.
-		$eggGroupIds = $this->breedingChainQueries->getEggGroupIds($pokemonId, $generationId);
+		$eggGroupIds = $this->breedingChainQueries->getEggGroupIds($versionGroupId, $pokemonId);
 		// In future recursions from this node, these egg groups need to be
 		// added to $excludeEggGroupIds, so we don't get stuck in a cycle.
 
 		// If this is a baby Pokémon, use the egg groups of its evolution.
 		if ($eggGroupIds === [EggGroupId::UNDISCOVERED]) {
 			$evolvedPokemonId = $this->breedingChainQueries->getEvolution(
-				$pokemonId,
 				$versionGroupId,
+				$pokemonId,
 			);
 			if ($evolvedPokemonId) {
 				$eggGroupIds = $this->breedingChainQueries->getEggGroupIds(
+					$versionGroupId,
 					$evolvedPokemonId,
-					$generationId,
 				);
 			}
 		}

@@ -13,23 +13,14 @@ interface BreedingChainQueriesInterface
 	public function getFemaleOnlyPokemon() : array;
 
 	/**
-	 * Get the version group's generation.
-	 *
-	 * @param int $versionGroupId
-	 *
-	 * @return int Generation id
-	 */
-	public function getGenerationId(int $versionGroupId) : int;
-
-	/**
 	 * Get the Pokémon's egg groups.
 	 *
+	 * @param int $versionGroupId
 	 * @param int $pokemonId
-	 * @param int $generationId
 	 *
 	 * @return int[]
 	 */
-	public function getEggGroupIds(int $pokemonId, int $generationId) : array;
+	public function getEggGroupIds(int $versionGroupId, int $pokemonId) : array;
 
 	/**
 	 * Get this Pokémon's evolution.
@@ -39,7 +30,7 @@ interface BreedingChainQueriesInterface
 	 *
 	 * @return int Pokémon id.
 	 */
-	public function getEvolution(int $pokemonId, int $versionGroupId) : int;
+	public function getEvolution(int $versionGroupId, int $pokemonId) : int;
 
 	/**
 	 * Get Pokémon that share at least one egg group with the current Pokemon,
