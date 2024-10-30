@@ -7,7 +7,7 @@ use Jp\Dex\Domain\Categories\DexCategory;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
-use Jp\Dex\Domain\Moves\MoveFlagId;
+use Jp\Dex\Domain\Moves\Flags\MoveFlagId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\DexType;

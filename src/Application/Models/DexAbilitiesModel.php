@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
-use Jp\Dex\Domain\Abilities\AbilityFlagRepositoryInterface;
 use Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface;
+use Jp\Dex\Domain\Abilities\Flags\AbilityFlagRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 
 final class DexAbilitiesModel

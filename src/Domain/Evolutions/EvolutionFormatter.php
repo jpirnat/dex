@@ -172,7 +172,7 @@ final readonly class EvolutionFormatter
 			),
 			EvoMethodId::LEVEL_UP_AFFECTION_50_MOVE_TYPE => $this->levelUpAffection50MoveType($evolution, $type),
 			EvoMethodId::LEVEL_UP_MOVE_TYPE => new EvolutionTableMethod(
-				"Level up, with a $type-type Pokémon in the party",
+				"Level up, starting at level $level, with a $type-type Pokémon in the party",
 			),
 			EvoMethodId::LEVEL_UP_WEATHER => $this->levelUpWeather($evolution),
 			EvoMethodId::LEVEL_UP_MORNING => new EvolutionTableMethod(

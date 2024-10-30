@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Abilities;
+namespace Jp\Dex\Domain\Abilities\Flags;
 
+use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 

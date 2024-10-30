@@ -345,8 +345,8 @@ a.button {
 	padding: 5px;
 }
 
-.dex-table tbody th {
-	font-weight: inherit; /* so my <th scope="row"> elements won't be automatically bold */
+.dex-table tbody th[scope="row"] {
+	font-weight: inherit;
 }
 
 .dex-table a {
@@ -1321,54 +1321,54 @@ Stat colors from Bulbapedia (https://bulbapedia.bulbagarden.net/wiki/Help:Color_
 and then converted from hex to rgb (https://www.rgbtohex.net/hex-to-rgb/).
 */
 .dex-stat--hp {
-	/* #69dc12 */
-	background: rgb(105, 220, 18);
+	background: #69dc12 !important;
 }
 .dex-stat--attack {
-	/* #efcc18 */
-	background: rgb(239, 204, 24);
+	background: #efcc18 !important;
 }
 .dex-stat--defense {
-	/* #e86412 */
-	background: rgb(232, 100, 18);
+	background: #e86412 !important;
 }
 .dex-stat--speed {
-	/* #d51dad */
-	background: rgb(213, 29, 173);
+	background: #d51dad !important;
 }
 .dex-stat--special {
-	/* #2f97e8 */
-	background: rgb(47, 151, 232);
+	background: #2f97e8 !important;
 }
 .dex-stat--special-attack {
-	/* #14c3f1 */
-	background: rgb(20, 195, 241);
+	background: #14c3f1 !important;
 }
 .dex-stat--special-defense {
-	/* #4a6adf */
-	background: rgb(74, 106, 223);
+	background: #4a6adf !important;
 }
 
 .dex-table__stat--hp {
-	background: rgba(105, 220, 18, 0.4);
+	/* rgba(105, 220, 18, 0.4) */
+	background: #c3f1a0 !important;
 }
 .dex-table__stat--attack {
-	background: rgba(239, 204, 24, 0.4);
+	/* rgba(239, 204, 24, 0.4) */
+	background: #f9eba3 !important;
 }
 .dex-table__stat--defense {
-	background: rgba(232, 100, 18, 0.4);
+	/* rgba(232, 100, 18, 0.4) */
+	background: #f6c1a0 !important;
 }
 .dex-table__stat--speed {
-	background: rgba(213, 29, 173, 0.4);
+	/* rgba(213, 29, 173, 0.4) */
+	background: #eea5de !important;
 }
 .dex-table__stat--special {
-	background: rgba(47, 151, 232, 0.4);
+	/* rgba(47, 151, 232, 0.4) */
+	background: #acd5f6 !important;
 }
 .dex-table__stat--special-attack {
-	background: rgba(20, 195, 241, 0.4);
+	/* rgba(20, 195, 241, 0.4) */
+	background: #a1e7f9 !important;
 }
 .dex-table__stat--special-defense {
-	background: rgba(74, 106, 223, 0.4);
+	/* rgba(74, 106, 223, 0.4) */
+	background: #b7c3f2 !important;
 }
 
 

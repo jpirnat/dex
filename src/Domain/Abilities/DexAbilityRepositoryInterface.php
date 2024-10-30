@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Abilities;
 
+use Jp\Dex\Domain\Abilities\Flags\AbilityFlagId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 

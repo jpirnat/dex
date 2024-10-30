@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Moves;
 
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Moves\Flags\MoveFlagId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;

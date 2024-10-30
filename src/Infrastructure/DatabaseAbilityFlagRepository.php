@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Abilities\AbilityFlag;
-use Jp\Dex\Domain\Abilities\AbilityFlagNotFoundException;
-use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Abilities\DexAbilityFlag;
-use Jp\Dex\Domain\Abilities\AbilityFlagId;
-use Jp\Dex\Domain\Abilities\AbilityFlagRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Abilities\Flags\AbilityFlag;
+use Jp\Dex\Domain\Abilities\Flags\AbilityFlagId;
+use Jp\Dex\Domain\Abilities\Flags\AbilityFlagNotFoundException;
+use Jp\Dex\Domain\Abilities\Flags\AbilityFlagRepositoryInterface;
+use Jp\Dex\Domain\Abilities\Flags\DexAbilityFlag;
+use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 

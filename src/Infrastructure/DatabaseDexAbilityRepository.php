@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Abilities\AbilityFlagId;
 use Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface;
+use Jp\Dex\Domain\Abilities\Flags\AbilityFlagId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;

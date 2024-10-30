@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Domain\Moves;
+namespace Jp\Dex\Domain\Moves\Flags;
 
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface MoveFlagRepositoryInterface

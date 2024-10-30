@@ -4,11 +4,11 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Moves\DexMoveFlag;
-use Jp\Dex\Domain\Moves\MoveFlag;
-use Jp\Dex\Domain\Moves\MoveFlagId;
-use Jp\Dex\Domain\Moves\MoveFlagNotFoundException;
-use Jp\Dex\Domain\Moves\MoveFlagRepositoryInterface;
+use Jp\Dex\Domain\Moves\Flags\DexMoveFlag;
+use Jp\Dex\Domain\Moves\Flags\MoveFlag;
+use Jp\Dex\Domain\Moves\Flags\MoveFlagId;
+use Jp\Dex\Domain\Moves\Flags\MoveFlagNotFoundException;
+use Jp\Dex\Domain\Moves\Flags\MoveFlagRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;

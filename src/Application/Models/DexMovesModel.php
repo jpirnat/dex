@@ -6,7 +6,7 @@ namespace Jp\Dex\Application\Models;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
-use Jp\Dex\Domain\Moves\MoveFlagRepositoryInterface;
+use Jp\Dex\Domain\Moves\Flags\MoveFlagRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexMovesModel

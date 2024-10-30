@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Abilities\AbilityFlagId;
 use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\Abilities\Flags\AbilityFlagId;
 use Jp\Dex\Domain\Items\ItemId;
-use Jp\Dex\Domain\Moves\MoveFlagId;
+use Jp\Dex\Domain\Moves\Flags\MoveFlagId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Types\TypeId;

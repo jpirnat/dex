@@ -139,7 +139,7 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseAbilityDescriptionRepository::class
 );
 $services->alias(
-	\Jp\Dex\Domain\Abilities\AbilityFlagRepositoryInterface::class,
+	\Jp\Dex\Domain\Abilities\Flags\AbilityFlagRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseAbilityFlagRepository::class
 );
 $services->alias(
@@ -283,7 +283,7 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseMoveDescriptionRepository::class
 );
 $services->alias(
-	\Jp\Dex\Domain\Moves\MoveFlagRepositoryInterface::class,
+	\Jp\Dex\Domain\Moves\Flags\MoveFlagRepositoryInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseMoveFlagRepository::class
 );
 $services->alias(
