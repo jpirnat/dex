@@ -72,7 +72,7 @@ final readonly class BreedingChainsView
 			'url' => "/dex/$vgIdentifier/pokemon/$pokemonIdentifier#egg-moves",
 			'text' => 'Egg Moves',
 		], [
-			'text' => $move['name'] . ' Breeding Chains',
+			'text' => $move['name'],
 		]];
 
 		return new JsonResponse([
@@ -82,6 +82,12 @@ final readonly class BreedingChainsView
 
 				'breadcrumbs' => $breadcrumbs,
 
+				'pokemon' => [
+					'name' => $pokemon['name'],
+				],
+				'move' => [
+					'name' => $move['name'],
+				],
 				'chains' => $chains,
 			]
 		]);

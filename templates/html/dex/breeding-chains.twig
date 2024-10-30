@@ -14,6 +14,9 @@
 	</div>
 
 	<template v-if="loaded">
+		<h1 class="dex-page__title">Egg Move Breeding Chains</h1>
+		<h2 class="dex-page__subtitle">{{ pokemon.name }} - {{ move.name }}</h2>
+
 		<table class="dex-table dex-table--full-width breeding-chains-table">
 			<template v-for="chain in chains" :key="chain.id">
 				<tbody>
@@ -25,8 +28,8 @@
 									<template v-else>▶</template>
 								</div>
 								<div class="breeding-chain__summary" >
-									<template v-for="(pokemon, pokemonIndex) in chain.pokemon" :key="pokemon.identifier">
-										<img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + pokemon.icon" :alt="pokemon.name" v-tooltip="pokemon.name">
+									<template v-for="(p, pokemonIndex) in chain.pokemon" :key="p.identifier">
+										<img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + p.icon" :alt="p.name" v-tooltip="p.name">
 										<span v-if="pokemonIndex < chain.pokemon.length - 1"> → </span>
 									</template>
 								</div>
@@ -45,13 +48,13 @@
 						<th scope="col">Steps to Hatch</th>
 						<th scope="col">Learned Via</th>
 					</tr>
-					<tr v-for="pokemon in chain.pokemon" :key="pokemon.identifier">
+					<tr v-for="p in chain.pokemon" :key="p.identifier">
 						<td class="dex-table--icon">
-							<img v-if="pokemon.icon" class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
+							<img v-if="p.icon" class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + p.icon" alt="">
 						</td>
 						<th scope="row" class="dex-table__pokemon-name">
-							<a :href="'/dex/' + pokemon.versionGroup.identifier + '/pokemon/' + pokemon.identifier">
-								{{ pokemon.name }}
+							<a :href="'/dex/' + p.versionGroup.identifier + '/pokemon/' + p.identifier">
+								{{ p.name }}
 							</a>
 						</th>
 
@@ -59,30 +62,30 @@
 							<div
 								:class="{
 									'breeding-chain__version-group': true,
-									['breeding-chain__version-group--' + pokemon.versionGroup.identifier]: true,
+									['breeding-chain__version-group--' + p.versionGroup.identifier]: true,
 								}"
-								v-tooltip="pokemon.versionGroup.name"
+								v-tooltip="p.versionGroup.name"
 							>
-								<template v-if="pokemon.versionGroup.versions.length > 1">
-									<sup>{{ pokemon.versionGroup.versions[0].abbreviation }}</sup><sub>{{ pokemon.versionGroup.versions[1].abbreviation }}</sub>
+								<template v-if="p.versionGroup.versions.length > 1">
+									<sup>{{ p.versionGroup.versions[0].abbreviation }}</sup><sub>{{ p.versionGroup.versions[1].abbreviation }}</sub>
 								</template>
 								<template v-else>
-									{{ pokemon.versionGroup.versions[0].abbreviation }}
+									{{ p.versionGroup.versions[0].abbreviation }}
 								</template>
 							</div>
 						</td>
 
 						<td class="dex-table--icon">
-							<div v-for="e in pokemon.eggGroups" :key="e.identifier">
-								<a :href="'/dex/' + pokemon.versionGroup.identifier + '/egg-groups/' + e.identifier">{{ e.name }}</a>
+							<div v-for="e in p.eggGroups" :key="e.identifier">
+								<a :href="'/dex/' + p.versionGroup.identifier + '/egg-groups/' + e.identifier">{{ e.name }}</a>
 							</div>
 						</td>
-						<td class="dex-table--icon" v-tooltip="pokemon.genderRatio.description">
-							<img :src="'/images/gender-ratios/' + pokemon.genderRatio.icon" :alt="pokemon.genderRatio.description">
+						<td class="dex-table--icon" v-tooltip="p.genderRatio.description">
+							<img :src="'/images/gender-ratios/' + p.genderRatio.icon" :alt="p.genderRatio.description">
 						</td>
-						<td class="dex-table--number">{{ pokemon.eggCycles }}</td>
-						<td class="dex-table--number">{{ pokemon.stepsToHatch }}</td>
-						<td>{{ pokemon.moveMethod }}</td>
+						<td class="dex-table--number">{{ p.eggCycles }}</td>
+						<td class="dex-table--number">{{ p.stepsToHatch }}</td>
+						<td>{{ p.moveMethod }}</td>
 					</tr>
 				</tbody>
 			</template>

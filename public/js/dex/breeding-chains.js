@@ -7,6 +7,8 @@ const app = new Vue({
 		loaded: false,
 
 		breadcrumbs: [],
+		pokemon: {},
+		move: {},
 		chains: [],
 	},
 	created() {
@@ -23,6 +25,8 @@ const app = new Vue({
 			if (response.data) {
 				const data = response.data;
 				this.breadcrumbs = data.breadcrumbs;
+				this.pokemon = data.pokemon;
+				this.move = data.move;
 				this.chains = data.chains;
 
 				document.title = data.title;

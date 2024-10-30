@@ -298,6 +298,10 @@ a.button {
 	margin: 0 auto;
 }
 
+.dex-page__subtitle {
+	text-align: center;
+}
+
 .dex-section__title {
 	background: #eee;
 	border: 1px solid #ddd;
