@@ -10434,7 +10434,7 @@ version_group_id,pokemon_id,icon,sprite,type1_id,type2_id,ability1_id,ability2_i
 22,723,la/dartrix.png,home/dartrix.png,11,2,65,\N,203,78,75,75,70,70,52,0,4,\N,147,2,0,0,0,0,0,105,50
 22,899,la/wyrdeer.png,home/wyrdeer.png,0,13,22,119,157,103,105,72,105,75,65,0,5,\N,263,0,1,0,1,0,0,135,50
 22,900,la/kleavor.png,home/kleavor.png,6,5,68,125,80,70,135,95,45,70,85,0,3,\N,175,0,3,0,0,0,0,115,50
-22,901,la/ursaluna.png,home/ursaluna.png,4,\N,62,171,127,130,140,105,45,80,50,0,5,\N,275,0,3,0,0,0,0,75,50
+22,901,la/ursaluna.png,home/ursaluna.png,4,0,62,171,127,130,140,105,45,80,50,0,5,\N,275,0,3,0,0,0,0,75,50
 22,902,la/basculegion-male.png,home/basculegion-male.png,10,7,155,91,104,120,112,65,80,75,78,0,12,\N,265,3,0,0,0,0,0,135,50
 22,903,la/sneasler.png,home/sneasler.png,1,3,46,\N,143,80,130,60,40,80,120,0,5,\N,102,0,2,0,0,0,0,135,50
 22,904,la/overqwil.png,home/overqwil.png,16,3,38,33,22,85,115,95,65,65,85,0,12,\N,179,0,2,0,0,0,0,135,50
@@ -11099,7 +11099,7 @@ version_group_id,pokemon_id,icon,sprite,type1_id,type2_id,ability1_id,ability2_i
 23,898,sv/calyrex.png,home/calyrex.png,13,11,127,\N,\N,100,80,80,80,80,80,0,15,\N,250,3,0,0,0,0,0,3,100
 23,899,sv/wyrdeer.png,home/wyrdeer.png,0,13,22,119,157,103,105,72,105,75,65,0,5,\N,263,0,1,0,1,0,0,45,50
 23,900,sv/kleavor.png,home/kleavor.png,6,5,68,125,292,70,135,95,45,70,85,0,3,\N,175,0,3,0,0,0,0,15,50
-23,901,sv/ursaluna.png,home/ursaluna.png,4,\N,62,171,127,130,140,105,45,80,50,0,5,\N,275,0,3,0,0,0,0,20,50
+23,901,sv/ursaluna.png,home/ursaluna.png,4,0,62,171,127,130,140,105,45,80,50,0,5,\N,275,0,3,0,0,0,0,20,50
 23,902,sv/basculegion-male.png,home/basculegion-male.png,10,7,33,91,104,120,112,65,80,75,78,0,12,\N,265,3,0,0,0,0,0,45,50
 23,903,sv/sneasler.png,home/sneasler.png,1,3,46,84,143,80,130,60,40,80,120,0,5,\N,102,0,2,0,0,0,0,20,50
 23,904,sv/overqwil.png,home/overqwil.png,16,3,38,33,22,85,115,95,65,65,85,0,12,\N,179,0,2,0,0,0,0,45,50
@@ -11333,7 +11333,7 @@ version_group_id,pokemon_id,icon,sprite,type1_id,type2_id,ability1_id,ability2_i
 23,10220,sv/squawkabilly-white.png,home/squawkabilly-white.png,0,2,22,55,125,82,96,51,45,51,92,0,4,\N,146,0,1,0,0,0,0,190,50
 23,10221,sv/palafin-hero.png,home/palafin-hero.png,10,\N,278,\N,\N,100,160,97,106,87,100,0,5,12,160,2,0,0,0,0,0,45,50
 23,10222,sv/gimmighoul-roaming.png,home/gimmighoul-roaming.png,7,\N,50,\N,\N,45,30,25,75,45,80,0,15,\N,60,0,0,0,1,0,0,45,50
-23,10223,sv/ursaluna-bloodmoon.png,home/ursaluna-bloodmoon.png,4,\N,300,\N,\N,113,70,120,135,65,52,0,5,\N,275,0,0,0,3,0,0,5,50
+23,10223,sv/ursaluna-bloodmoon.png,home/ursaluna-bloodmoon.png,4,0,300,\N,\N,113,70,120,135,65,52,0,5,\N,275,0,0,0,3,0,0,5,50
 23,10224,sv/ogerpon-wellspring-mask.png,home/ogerpon-wellspring-mask.png,11,10,11,\N,\N,80,120,84,60,96,110,0,15,\N,275,0,3,0,0,0,0,5,50
 23,10225,sv/ogerpon-hearthflame-mask.png,home/ogerpon-hearthflame-mask.png,11,9,104,\N,\N,80,120,84,60,96,110,0,15,\N,275,0,3,0,0,0,0,5,50
 23,10226,sv/ogerpon-cornerstone-mask.png,home/ogerpon-cornerstone-mask.png,11,5,5,\N,\N,80,120,84,60,96,110,0,15,\N,275,0,3,0,0,0,0,5,50
