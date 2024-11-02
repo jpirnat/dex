@@ -16,6 +16,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\TextLinks\TextLinkRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class DexPokemonEvolutionsModel
@@ -28,6 +29,7 @@ final class DexPokemonEvolutionsModel
 		private readonly EvolutionFormatter $evolutionFormatter,
 		private readonly FormIconRepositoryInterface $formIconRepository,
 		private readonly FormRepositoryInterface $formRepository,
+		private readonly TextLinkRepositoryInterface $textLinkRepository,
 		private readonly PokemonRepositoryInterface $pokemonRepository,
 		private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
 	) {}
@@ -49,10 +51,12 @@ final class DexPokemonEvolutionsModel
 			// Get this base form's rows for the evolution table.
 			// Add the rows to the evolution table.
 
+			$methods = $this->getBaseMethods($versionGroupId, $baseFormId, $languageId);
+
 			$tree = $this->createEvolutionTree(
 				$versionGroupId,
 				$baseFormId,
-				[],
+				$methods,
 				$languageId,
 				true,
 			);
@@ -130,6 +134,34 @@ final class DexPokemonEvolutionsModel
 		}
 
 		return $outputIds;
+	}
+
+	/**
+	 * Get the evolution methods for the root of the evolution tree. (Blank,
+	 * except for babies who require incense.)
+	 *
+	 * @return EvolutionTableMethod[]
+	 */
+	private function getBaseMethods(
+		VersionGroupId $versionGroupId,
+		FormId $formId,
+		LanguageId $languageId,
+	) : array {
+		$textLinkItem = $this->textLinkRepository->getForIncense(
+			$versionGroupId,
+			$languageId,
+			$formId,
+		);
+		if (!$textLinkItem) {
+			return [];
+		}
+
+		$item = $textLinkItem->getLinkHtml();
+		return [
+			new EvolutionTableMethod(
+				"Either parent must hold $item",
+			),
+		];
 	}
 
 	/**

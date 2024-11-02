@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\TextLinks;
 
+use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
@@ -59,4 +60,14 @@ interface TextLinkRepositoryInterface
 		LanguageId $languageId,
 		TypeId $typeId,
 	) : TextLinkType;
+
+	/**
+	 * Get a text link for the incense item, if any, that one of this Pokémon's
+	 * parents must be holding.
+	 */
+	public function getForIncense(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
+		FormId $formId,
+	) : ?TextLinkItem;
 }

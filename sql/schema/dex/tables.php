@@ -222,6 +222,7 @@ return [
 	// Evolutions
 	'evolution_methods',
 	'evolutions',
+	'evolutions_incense',
 
 	// Pokémon Showdown identifiers
 	'formats',

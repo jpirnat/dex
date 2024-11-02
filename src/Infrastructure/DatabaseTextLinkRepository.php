@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
@@ -224,6 +225,57 @@ final readonly class DatabaseTextLinkRepository implements TextLinkRepositoryInt
 			$result['vg_identifier'],
 			$result['type_identifier'],
 			$result['type_name'],
+		);
+	}
+
+	/**
+	 * Get a text link for the incense item, if any, that one of this Pokémon's
+	 * parents must be holding.
+	 */
+	public function getForIncense(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
+		FormId $formId,
+	) : ?TextLinkItem {
+		$versionGroupId = $versionGroupId->value();
+		$languageId = $languageId->value();
+		$formId = $formId->value();
+
+		$stmt = $this->db->prepare(
+			'SELECT
+				`vg`.`identifier` AS `vg_identifier`,
+				`i`.`identifier` AS `item_identifier`,
+				COALESCE(`id`.`name`, `in`.`name`) AS `item_name`
+			FROM `evolutions_incense` AS `e`
+			INNER JOIN `version_groups` AS `vg`
+				ON `e`.`version_group_id` = `vg`.`id`
+			INNER JOIN `items` AS `i`
+				ON `e`.`item_id` = `i`.`id`
+			INNER JOIN `item_names` AS `in`
+				ON `i`.`id` = `in`.`item_id`
+			LEFT JOIN `item_descriptions` AS `id`
+				ON `id`.`version_group_id` = `vg`.`id`
+				AND `id`.`language_id` = `in`.`language_id`
+				AND `id`.`item_id` = `i`.`id`
+			WHERE `e`.`version_group_id` = :version_group_id
+				AND `e`.`form_id` = :form_id
+				AND `in`.`language_id` = :language_id
+			LIMIT 1'
+		);
+		$stmt->bindValue(':version_group_id', $versionGroupId, PDO::PARAM_INT);
+		$stmt->bindValue(':form_id', $formId, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId, PDO::PARAM_INT);
+		$stmt->execute();
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if (!$result) {
+			return null;
+		}
+
+		return new TextLinkItem(
+			$result['vg_identifier'],
+			$result['item_identifier'],
+			$result['item_name'],
 		);
 	}
 }
