@@ -586,9 +586,11 @@ a.button {
 }
 .dex-table tbody .dex-table__pokemon-move-vg--gs {
 	background-image: linear-gradient(135deg, var(--color-vg-gold) 50%, var(--color-vg-silver) 50%);
+	color: black;
 }
 .dex-table tbody .dex-table__pokemon-move-vg--c {
 	background-color: var(--color-vg-crystal);
+	color: black;
 }
 .dex-table tbody .dex-table__pokemon-move-vg--rs {
 	background-image: linear-gradient(135deg, var(--color-vg-ruby) 50%, var(--color-vg-sapphire) 50%);
@@ -601,6 +603,7 @@ a.button {
 }
 .dex-table tbody .dex-table__pokemon-move-vg--colo {
 	background-color: var(--color-vg-colosseum);
+	color: black;
 }
 .dex-table tbody .dex-table__pokemon-move-vg--xd {
 	background-color: var(--color-vg-xd);
@@ -640,8 +643,6 @@ a.button {
 }
 .dex-table tbody .dex-table__pokemon-move-vg--lgpe {
 	background-image: linear-gradient(135deg, var(--color-vg-lets-go-pikachu) 50%, var(--color-vg-lets-go-eevee) 50%);
-}
-.dex-table__pokemon-move-vg--lgpe sup {
 	color: black;
 }
 .dex-table tbody .dex-table__pokemon-move-vg--ss {
