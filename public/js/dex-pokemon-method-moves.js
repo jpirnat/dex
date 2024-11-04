@@ -21,7 +21,7 @@ Vue.component('dex-pokemon-method-moves', {
 		showMoveDescriptions: {
 			type: Boolean,
 			default: true,
-		}
+		},
 	},
 	data() {
 		return {

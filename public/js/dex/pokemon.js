@@ -17,34 +17,14 @@ const app = new Vue({
 		evolutionTableRows: [],
 		methods: [],
 		learnsetVgs: [],
-		showMoveDescriptionsOption: true,
 
 		hoverDamageTaken: null,
 		damageTakenAbility: 'none',
-		hasMultipleGens: false,
-		showOtherGens: false,
-		showMoveDescriptions: true,
 	},
 	computed: {
 		damageTaken() {
 			return this.abilitiesDamageTaken[this.damageTakenAbility];
 		},
-		visibleVersionGroups() {
-			if (this.showOtherGens) {
-				return this.learnsetVgs;
-			}
-
-			return this.learnsetVgs.filter(vg => vg.generationId === this.versionGroup.generationId);
-		},
-		visibleMethods() {
-			if (this.showOtherGens) {
-				return this.methods;
-			}
-
-			return this.methods.filter(m => {
-				return this.visibleVersionGroups.some(vg => m.moves.some(mo => vg.identifier in mo.vgData));
-			});
-		}
 	},
 	created() {
 		const url = new URL(window.location);
@@ -70,7 +50,6 @@ const app = new Vue({
 				this.evolutionTableRows = data.evolutionTableRows;
 				this.methods = data.methods;
 				this.learnsetVgs = data.learnsetVgs;
-				this.showMoveDescriptionsOption = data.showMoveDescriptions;
 
 				document.title = data.title;
 
@@ -79,19 +58,6 @@ const app = new Vue({
 				if (this.damageTakenAbilities.length === 2 && this.pokemon.abilities.length === 1) {
 					this.damageTakenAbility = this.damageTakenAbilities[0].identifier;
 				}
-
-				const showOtherGens = window.localStorage.getItem('dexPokemonShowOtherGens') ?? 'false';
-				this.showOtherGens = JSON.parse(showOtherGens);
-
-				const showMoveDescriptions = window.localStorage.getItem('dexPokemonShowMoveDescriptions') ?? 'true';
-				this.showMoveDescriptions = JSON.parse(showMoveDescriptions);
-
-				this.hasMultipleGens = false;
-				let gens = {};
-				this.learnsetVgs.forEach(vg => {
-					gens[vg.generationId] = 1;
-				});
-				this.hasMultipleGens = Object.keys(gens).length > 1;
 			}
 		});
 	},
@@ -101,14 +67,6 @@ const app = new Vue({
 		},
 		onDamageTakenUnhover() {
 			this.hoverDamageTaken = null;
-		},
-		toggleOtherGens() {
-			this.showOtherGens = !this.showOtherGens;
-			window.localStorage.setItem('dexMoveShowOtherGens', this.showOtherGens);
-		},
-		toggleMoveDescriptions() {
-			this.showMoveDescriptions = !this.showMoveDescriptions;
-			window.localStorage.setItem('dexPokemonShowMoveDescriptions', this.showMoveDescriptions);
 		},
 	},
 });

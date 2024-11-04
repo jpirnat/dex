@@ -783,6 +783,10 @@ a.button {
 }
 
 
+.dex-pokemon__show-move-descriptions {
+	text-align: right;
+}
+
 .dex-pokemon__move-name {
 	border-left: 1px solid black;
 }

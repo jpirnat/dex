@@ -149,6 +149,7 @@ final readonly class DexPokemonView
 					'generationId' => $versionGroup->getGenerationId()->value(),
 					'hasEvYields' => $versionGroup->hasEvYields(),
 					'hasBreeding' => $versionGroup->hasBreeding(),
+					'hasMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,

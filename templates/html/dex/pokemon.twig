@@ -155,7 +155,7 @@
 				<div>{{ pokemon.experienceGroup.points }} Exp. Points to Lv. 100 ({{ pokemon.experienceGroup.name }})</div>
 			</div>
 
-			<div class="dex-pokemon__miscellaneous-column">
+			<div class="dex-pokemon__miscellaneous-column" v-if="versionGroup.hasBreeding">
 				<div class="dex-pokemon__miscellaneous-header">Breeding</div>
 				<div v-if="pokemon.eggGroups.length">
 					Egg Group<template v-if="pokemon.eggGroups.length > 1">s</template>:
@@ -195,41 +195,12 @@
 			</table>
 		</div>
 
-		<h2 class="dex-section__title">Moves</h2>
-
-		<nav class="dex-move__methods-nav">
-			<div>{{ pokemon.name }} can learn moves in the following ways:</div>
-			<ul class="dex-move__method-links">
-				<li v-for="method in visibleMethods" :key="method.identifier">
-					<a :href="'#' + method.identifier + '-moves'" class="dex-link">{{ method.name }}</a>
-				</li>
-			</ul>
-		</nav>
-
-		<div v-if="hasMultipleGens">
-			<label>
-				<input type="checkbox" v-model="showOtherGens" @click="toggleOtherGens">
-				<template v-if="versionGroup.generationId > 1">Show older generation games</template>
-				<template v-else>Show other generation games</template>
-			</label>
-		</div>
-		<div v-if="showMoveDescriptionsOption">
-			<label>
-				<input type="checkbox" v-model="showMoveDescriptions" @click="toggleMoveDescriptions">
-				Show move descriptions
-			</label>
-		</div>
-
-		<table class="dex-table dex-table--full-width">
-			<tbody is="dex-pokemon-method-moves"
-				v-for="method in visibleMethods" :key="method.identifier"
-				:method="method"
-				:version-group="versionGroup"
-				:pokemon="pokemon"
-				:version-groups="visibleVersionGroups"
-				:show-move-descriptions="showMoveDescriptions"
-			></tbody>
-		</table>
+		<dex-pokemon-moves
+			:version-group="versionGroup"
+			:pokemon="pokemon"
+			:version-groups="learnsetVgs"
+			:methods="methods"
+		></dex-pokemon-moves>
 	</template>
 </div>
 {% endverbatim %}
@@ -242,6 +213,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/v-tooltip@2.1"></script>
 	<script src="/js/dex-type-link.js"></script>
 	<script src="/js/dex-pokemon-method-moves.js"></script>
+	<script src="/js/dex-pokemon-moves.js"></script>
 
 	<script src="/js/dex-breadcrumbs.js"></script>
 	<script src="/js/dex/pokemon.js"></script>
