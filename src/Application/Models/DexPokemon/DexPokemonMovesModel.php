@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexPokemon;
 
+use Jp\Dex\Domain\Categories\DexCategory;
+use Jp\Dex\Domain\Categories\DexCategoryRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
 use Jp\Dex\Domain\Items\TechnicalMachine;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
@@ -19,6 +21,9 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class DexPokemonMovesModel
 {
+	/** @var DexCategory[] $categories */
+	private array $categories = [];
+
 	/** @var DexVersionGroup[] $learnsetVgs */
 	private array $learnsetVgs = [];
 
@@ -27,6 +32,7 @@ final class DexPokemonMovesModel
 
 
 	public function __construct(
+		private readonly DexCategoryRepositoryInterface $dexCategoryRepository,
 		private readonly DexVersionGroupRepositoryInterface $dexVgRepository,
 		private readonly PokemonMoveRepositoryInterface $pokemonMoveRepository,
 		private readonly TmRepositoryInterface $tmRepository,
@@ -45,8 +51,13 @@ final class DexPokemonMovesModel
 		PokemonId $pokemonId,
 		LanguageId $languageId,
 	) : void {
+		$this->categories = [];
 		$this->learnsetVgs = [];
 		$this->methods = [];
+
+		$this->categories = $this->dexCategoryRepository->getByLanguage(
+			$languageId,
+		);
 
 		$this->learnsetVgs = $this->dexVgRepository->getByIntoVgWithPokemon(
 			$versionGroupId,
@@ -200,8 +211,14 @@ final class DexPokemonMovesModel
 
 
 	/**
-	 * Get the move version groups.
-	 *
+	 * @return DexCategory[]
+	 */
+	public function getCategories() : array
+	{
+		return $this->categories;
+	}
+
+	/**
 	 * @return DexVersionGroup[]
 	 */
 	public function getLearnsetVgs() : array
@@ -210,8 +227,6 @@ final class DexPokemonMovesModel
 	}
 
 	/**
-	 * Get the move methods.
-	 *
 	 * @return DexPokemonMoveMethod[]
 	 */
 	public function getMethods() : array

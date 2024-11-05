@@ -46,6 +46,7 @@ final readonly class DexPokemonView
 		$evolutionTableRows = $dexPokemonEvolutionsModel->getEvolutionTableRows();
 
 		$dexPokemonMovesModel = $this->dexPokemonModel->getDexPokemonMovesModel();
+		$categories = $dexPokemonMovesModel->getCategories();
 		$learnsetVgs = $dexPokemonMovesModel->getLearnsetVgs();
 		$methods = $dexPokemonMovesModel->getMethods();
 
@@ -164,6 +165,7 @@ final readonly class DexPokemonView
 
 				'evolutionTableRows' => $this->evolutionTableFormatter->formatRows($evolutionTableRows),
 
+				'categories' => $this->dexFormatter->formatDexCategories($categories),
 				'methods' => $this->formatDexPokemonMoveMethods($methods),
 				'learnsetVgs' => $this->dexFormatter->formatDexVersionGroups($learnsetVgs),
 				'showMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),

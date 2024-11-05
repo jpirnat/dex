@@ -187,6 +187,20 @@ final readonly class DexFormatter
 	/**
 	 * Transform a dex category object into a renderable data array.
 	 */
+	public function formatDexCategories(array $dexCategories) : array
+	{
+		$categories = [];
+
+		foreach ($dexCategories as $dexCategory) {
+			$categories[] = $this->formatDexCategory($dexCategory);
+		}
+
+		return $categories;
+	}
+
+	/**
+	 * Transform a dex category object into a renderable data array.
+	 */
 	public function formatDexCategory(DexCategory $dexCategory) : array
 	{
 		return [

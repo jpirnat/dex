@@ -598,6 +598,9 @@ a.button {
 .dex-table tbody .dex-table__pokemon-move-vg--frlg {
 	background-image: linear-gradient(135deg, var(--color-vg-firered) 50%, var(--color-vg-leafgreen) 50%);
 }
+.dex-table tbody .dex-table__pokemon-move-vg--frlg sub {
+	color: black;
+}
 .dex-table tbody .dex-table__pokemon-move-vg--e {
 	background-color: var(--color-vg-emerald);
 }
@@ -782,8 +785,32 @@ a.button {
 	font-size: 2rem;
 }
 
+.dex-pokemon-moves__filter-types,
+.dex-pokemon-moves__filter-categories {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 5px;
+}
+.dex-pokemon-moves__filter-type,
+.dex-pokemon-moves__filter-category {
+	cursor: pointer;
+}
+.dex-pokemon-moves__filter-type--inactive,
+.dex-pokemon-moves__filter-category--inactive {
+	opacity: 0.5;
+}
+.dex-pokemon-moves__filter-type-input,
+.dex-pokemon-moves__filter-category-input {
+	display: none;
+}
+.dex-pokemon-moves__filter-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
 
-.dex-pokemon__show-move-descriptions {
+.dex-pokemon-moves__show-descriptions {
 	text-align: right;
 }
 
@@ -857,8 +884,9 @@ a.button {
 	flex-direction: column;
 	align-items: center;
 }
-.type-toggler__select-all {
-	margin: 5px;
+.type-toggler__buttons {
+	display: flex;
+	gap: 10px;
 }
 
 
@@ -976,6 +1004,9 @@ a.button {
 }
 .breeding-chain__version-group--frlg {
 	background-image: linear-gradient(135deg, var(--color-vg-firered) 50%, var(--color-vg-leafgreen) 50%);
+}
+.breeding-chain__version-group--frlg sub {
+	color: black;
 }
 .breeding-chain__version-group--e {
 	background-color: var(--color-vg-emerald);

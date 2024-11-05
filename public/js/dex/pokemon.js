@@ -15,6 +15,7 @@ const app = new Vue({
 		abilitiesDamageTaken: {},
 		damageTakenAbilities: [],
 		evolutionTableRows: [],
+		categories: [],
 		methods: [],
 		learnsetVgs: [],
 
@@ -48,6 +49,7 @@ const app = new Vue({
 				this.abilitiesDamageTaken = data.damageTaken;
 				this.damageTakenAbilities = data.damageTakenAbilities;
 				this.evolutionTableRows = data.evolutionTableRows;
+				this.categories = data.categories;
 				this.methods = data.methods;
 				this.learnsetVgs = data.learnsetVgs;
 

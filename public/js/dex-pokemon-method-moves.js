@@ -18,6 +18,14 @@ Vue.component('dex-pokemon-method-moves', {
 			type: Array,
 			default: [],
 		},
+		types: {
+			type: Array,
+			default: [],
+		},
+		categories: {
+			type: Array,
+			default: [],
+		},
 		showMoveDescriptions: {
 			type: Boolean,
 			default: true,
@@ -34,7 +42,12 @@ Vue.component('dex-pokemon-method-moves', {
 			return 6 + this.versionGroups.length + (this.showMoveDescriptions ? 1 : 0);
 		},
 		visibleMoves() {
-			return this.method.moves.filter(m => this.versionGroups.some(vg => vg.identifier in m.vgData));
+			return this.method.moves.filter(m => {
+				return this.versionGroups.some(vg => vg.identifier in m.vgData)
+					&& this.types.includes(m.type.identifier)
+					&& this.categories.includes(m.category.identifier)
+				;
+			});
 		},
 	},
 	template: `
@@ -191,6 +204,7 @@ Vue.component('dex-pokemon-method-moves', {
 	`,
 	methods: {
 		sortBy(column, defaultDirection, sortValueCallback) {
+console.log(this.categories);
 			if (this.sortColumn !== column) {
 				// If we're not already sorted by this column, sort in its default direction.
 				this.sortColumn = column;

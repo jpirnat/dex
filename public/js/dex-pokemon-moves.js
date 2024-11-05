@@ -12,6 +12,16 @@ Vue.component('dex-pokemon-moves', {
 			type: Object,
 			default: {},
 		},
+		types: {
+			// Required fields: identifier, icon, name
+			type: Array,
+			default: [],
+		},
+		categories: {
+			// Required fields: identifier, icon, name
+			type: Array,
+			default: [],
+		},
 		versionGroups: {
 			// Required fields: identifier, generationId, TODO
 			type: Array,
@@ -33,6 +43,10 @@ Vue.component('dex-pokemon-moves', {
 
 		return {
 			showTransferMoves: showTransferMoves,
+			showTypeFilters: false,
+			filterTypes: [],
+			showCategoryFilters: false,
+			filterCategories: [],
 			showMoveDescriptions: showMoveDescriptions,
 		};
 	},
@@ -50,15 +64,38 @@ Vue.component('dex-pokemon-moves', {
 
 			return this.versionGroups.filter(vg => vg.generationId === this.versionGroup.generationId);
 		},
+		visibleTypes() {
+			if (!this.showTypeFilters || this.filterTypes.length === 0) {
+				return this.types.map(t => t.identifier);
+			}
+
+			return this.filterTypes;
+		},
+		visibleCategories() {
+			if (!this.showCategoryFilters || this.filterCategories.length === 0) {
+				return this.categories.map(c => c.identifier);
+			}
+
+			return this.filterCategories;
+		},
 		visibleMethods() {
-			if (this.showTransferMoves) {
+			if (this.showTransferMoves && !this.showTypeFilters && !this.showCategoryFilters) {
 				return this.methods;
 			}
 
 			return this.methods.filter(me => {
-				return this.visibleVersionGroups.some(vg => me.moves.some(mo => vg.identifier in mo.vgData));
+				return me.moves.some(mo => {
+					return this.visibleVersionGroups.some(vg => vg.identifier in mo.vgData)
+						&& this.visibleTypes.includes(mo.type.identifier)
+						&& this.visibleCategories.includes(mo.category.identifier)
+					;
+				});
 			});
 		},
+	},
+	created() {
+		this.types.forEach(t => this.filterTypes.push(t.identifier));
+		this.categories.forEach(c => this.filterCategories.push(c.identifier));
 	},
 	template: `
 		<div>
@@ -72,6 +109,58 @@ Vue.component('dex-pokemon-moves', {
 				</label>
 			</div>
 
+			<div>
+				<label @click="toggleTypeFilters">
+					<template v-if="!showTypeFilters">&#9654;</template>
+					<template v-if="showTypeFilters">&#9660;</template>
+					Filter by type
+				</label>
+			</div>
+			<div v-if="showTypeFilters">
+				<div class="dex-pokemon-moves__filter-types">
+					<label v-for="t in types" class="dex-pokemon-moves__filter-type">
+						<img class="dex-type-icon" :src="'/images/types/' + t.icon" :alt="t.name" v-tooltip="t.name"
+							:class="{
+								'dex-pokemon-moves__filter-type--inactive': !filterTypes.includes(t.identifier),
+							}"
+						>
+						<input type="checkbox" class="dex-pokemon-moves__filter-type-input"
+							v-model="filterTypes" :value="t.identifier"
+						>
+					</label>
+				</div>
+				<div class="dex-pokemon-moves__filter-buttons">
+					<button type="button" @click="selectAllTypes">Select All</button>
+					<button type="button" @click="unselectAllTypes">Unselect All</button>
+				</div>
+			</div>
+
+			<div>
+				<label @click="toggleCategoryFilters">
+					<template v-if="!showCategoryFilters">&#9654;</template>
+					<template v-if="showCategoryFilters">&#9660;</template>
+					Filter by category
+				</label>
+			</div>
+			<div v-if="showCategoryFilters">
+				<div class="dex-pokemon-moves__filter-categories">
+					<label v-for="c in categories" class="dex-pokemon-moves__filter-category">
+						<img :src="'/images/categories/' + c.icon" :alt="c.name" v-tooltip="c.name"
+							:class="{
+								'dex-pokemon-moves__filter-category--inactive': !filterCategories.includes(c.identifier),
+							}"
+						>
+						<input type="checkbox" class="dex-pokemon-moves__filter-category-input"
+							v-model="filterCategories" :value="c.identifier"
+						>
+					</label>
+				</div>
+				<div class="dex-pokemon-moves__filter-buttons">
+					<button type="button" @click="selectAllCategories">Select All</button>
+					<button type="button" @click="unselectAllCategories">Unselect All</button>
+				</div>
+			</div>
+
 			<nav class="dex-move__methods-nav">
 				<div>{{ pokemon.name }} can learn moves in the following ways:</div>
 				<ul class="dex-move__method-links">
@@ -81,7 +170,7 @@ Vue.component('dex-pokemon-moves', {
 				</ul>
 			</nav>
 
-			<div v-if="versionGroup.hasMoveDescriptions" class="dex-pokemon__show-move-descriptions">
+			<div v-if="versionGroup.hasMoveDescriptions" class="dex-pokemon-moves__show-descriptions">
 				<label>
 					<input type="checkbox" v-model="showMoveDescriptions" @click="toggleMoveDescriptions">
 					Show move descriptions
@@ -95,6 +184,8 @@ Vue.component('dex-pokemon-moves', {
 					:version-group="versionGroup"
 					:pokemon="pokemon"
 					:version-groups="visibleVersionGroups"
+					:types="visibleTypes"
+					:categories="visibleCategories"
 					:show-move-descriptions="showMoveDescriptions"
 				></tbody>
 			</table>
@@ -105,6 +196,27 @@ Vue.component('dex-pokemon-moves', {
 			this.showTransferMoves = !this.showTransferMoves;
 			window.localStorage.setItem('dexPokemonShowTransferMoves', this.showTransferMoves);
 		},
+
+		toggleTypeFilters() {
+			this.showTypeFilters = !this.showTypeFilters;
+		},
+		selectAllTypes() {
+			this.filterTypes = this.types.map(t => t.identifier);
+		},
+		unselectAllTypes() {
+			this.filterTypes = [];
+		},
+
+		toggleCategoryFilters() {
+			this.showCategoryFilters = !this.showCategoryFilters;
+		},
+		selectAllCategories() {
+			this.filterCategories = this.categories.map(c => c.identifier);
+		},
+		unselectAllCategories() {
+			this.filterCategories = [];
+		},
+
 		toggleMoveDescriptions() {
 			this.showMoveDescriptions = !this.showMoveDescriptions;
 			window.localStorage.setItem('dexPokemonShowMoveDescriptions', this.showMoveDescriptions);

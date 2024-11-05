@@ -87,8 +87,8 @@
 					<input type="checkbox" v-model="toggleAttackingTypes" :value="type.identifier">
 				</label>
 			</div>
-			<div>
-				<button type="button" class="type-toggler__select-all"
+			<div class="type-toggler__buttons">
+				<button type="button"
 					@click="toggleAttackingTypes = types.map(t => t.identifier)"
 				>Select All</button>
 				<button type="button" @click="toggleAttackingTypes = []">Unselect All</button>
@@ -103,8 +103,8 @@
 					<input type="checkbox" v-model="toggleDefendingTypes" :value="type.identifier">
 				</label>
 			</div>
-			<div>
-				<button type="button" class="type-toggler__select-all"
+			<div class="type-toggler__buttons">
+				<button type="button"
 					@click="toggleDefendingTypes = types.map(t => t.identifier)"
 				>Select All</button>
 				<button type="button" @click="toggleDefendingTypes = []">Unselect All</button>
