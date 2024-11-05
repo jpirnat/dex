@@ -36,6 +36,7 @@ final readonly class DatabaseDexMoveRepository implements DexMoveRepositoryInter
 	`tn`.`name` AS `type_name`,
 	`ti`.`icon` AS `type_icon`,
 
+	`c`.`identifier` AS `category_identifier`,
 	`c`.`icon` AS `category_icon`,
 	`cn`.`name` AS `category_name`,
 
@@ -97,6 +98,7 @@ INNER JOIN `category_names` AS `cn`
 				$result['type_icon'] ?? '',
 			),
 			new DexCategory(
+				$result['category_identifier'],
 				$result['category_icon'],
 				$result['category_name'],
 			),

@@ -6,21 +6,21 @@ namespace Jp\Dex\Domain\Categories;
 final readonly class DexCategory
 {
 	public function __construct(
+		private string $identifier,
 		private string $icon,
 		private string $name,
 	) {}
 
-	/**
-	 * Get the category's icon.
-	 */
+	public function getIdentifier() : string
+	{
+		return $this->identifier;
+	}
+
 	public function getIcon() : string
 	{
 		return $this->icon;
 	}
 
-	/**
-	 * Get the category's name.
-	 */
 	public function getName() : string
 	{
 		return $this->name;

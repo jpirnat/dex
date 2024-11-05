@@ -24,6 +24,7 @@ final readonly class DatabaseDexCategoryRepository implements DexCategoryReposit
 		$stmt = $this->db->prepare(
 			'SELECT
 				`c`.`id`,
+				`c`.`identifier`,
 				`c`.`icon`,
 				`n`.`name`
 			FROM `categories` AS `c`
@@ -38,6 +39,7 @@ final readonly class DatabaseDexCategoryRepository implements DexCategoryReposit
 
 		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$dexCategory = new DexCategory(
+				$result['identifier'],
 				$result['icon'],
 				$result['name'],
 			);

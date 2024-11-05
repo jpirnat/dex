@@ -190,6 +190,7 @@ final readonly class DexFormatter
 	public function formatDexCategory(DexCategory $dexCategory) : array
 	{
 		return [
+			'identifier' => $dexCategory->getIdentifier(),
 			'icon' => $dexCategory->getIcon(),
 			'name' => $dexCategory->getName(),
 		];

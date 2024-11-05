@@ -49,6 +49,7 @@ final readonly class DatabaseStatsPokemonMoveRepository implements StatsPokemonM
 				`t`.`identifier` AS `type_identifier`,
 				`tn`.`name` AS `type_name`,
 				`ti`.`icon` AS `type_icon`,
+				`c`.`identifier` AS `category_identifier`,
 				`c`.`icon` AS `category_icon`,
 				`cn`.`name` AS `category_name`,
 				`vgm`.`pp`,
@@ -120,6 +121,7 @@ final readonly class DatabaseStatsPokemonMoveRepository implements StatsPokemonM
 					$result['type_icon'] ?? '',
 				),
 				new DexCategory(
+					$result['category_identifier'],
 					$result['category_icon'],
 					$result['category_name'],
 				),
