@@ -102,6 +102,19 @@ const app = new Vue({
 			this.hoverAttackingType = null;
 			this.hoverDefendingType = null;
 		},
+
+		selectAllAttacking() {
+			this.toggleAttackingTypes = this.types.map(t => t.identifier);
+		},
+		unselectAllAttacking() {
+			this.toggleAttackingTypes = [];
+		},
+		selectAllDefending() {
+			this.toggleDefendingTypes = this.types.map(t => t.identifier);
+		},
+		unselectAllDefending() {
+			this.toggleDefendingTypes = [];
+		},
 	},
 	watch: {
 		attackingTypes() {

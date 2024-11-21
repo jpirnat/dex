@@ -204,7 +204,6 @@ Vue.component('dex-pokemon-method-moves', {
 	`,
 	methods: {
 		sortBy(column, defaultDirection, sortValueCallback) {
-console.log(this.categories);
 			if (this.sortColumn !== column) {
 				// If we're not already sorted by this column, sort in its default direction.
 				this.sortColumn = column;

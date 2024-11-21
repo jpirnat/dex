@@ -82,32 +82,40 @@
 		<div class="type-toggler">
 			<div class="type-toggler__header">Toggle Attacking Types</div>
 			<div class="type-toggler__types">
-				<label v-for="type in types" class="type-toggler__type">
-					<img class="dex-type-icon" :src="'/images/types/' + type.nameIcon" :alt="type.name">
-					<input type="checkbox" v-model="toggleAttackingTypes" :value="type.identifier">
+				<label v-for="t in types" class="type-toggler__type">
+					<img class="dex-type-icon" :src="'/images/types/' + t.nameIcon" :alt="t.name"
+						:class="{
+							'type-toggler__type--inactive': !toggleAttackingTypes.includes(t.identifier),
+						}"
+					>
+					<input type="checkbox" class="type-toggler__input"
+						v-model="toggleAttackingTypes" :value="t.identifier"
+					>
 				</label>
 			</div>
 			<div class="type-toggler__buttons">
-				<button type="button"
-					@click="toggleAttackingTypes = types.map(t => t.identifier)"
-				>Select All</button>
-				<button type="button" @click="toggleAttackingTypes = []">Unselect All</button>
+				<button type="button" @click="selectAllAttacking">Select All</button>
+				<button type="button" @click="unselectAllAttacking">Unselect All</button>
 			</div>
 		</div>
 
 		<div class="type-toggler">
 			<div class="type-toggler__header">Toggle Defending Types</div>
 			<div class="type-toggler__types">
-				<label v-for="type in types" class="type-toggler__type">
-					<img class="dex-type-icon" :src="'/images/types/' + type.nameIcon" :alt="type.name">
-					<input type="checkbox" v-model="toggleDefendingTypes" :value="type.identifier">
+				<label v-for="t in types" class="type-toggler__type">
+					<img class="dex-type-icon" :src="'/images/types/' + t.nameIcon" :alt="t.name"
+						:class="{
+							'type-toggler__type--inactive': !toggleDefendingTypes.includes(t.identifier),
+						}"
+					>
+					<input type="checkbox" class="type-toggler__input"
+						v-model="toggleDefendingTypes" :value="t.identifier"
+					>
 				</label>
 			</div>
 			<div class="type-toggler__buttons">
-				<button type="button"
-					@click="toggleDefendingTypes = types.map(t => t.identifier)"
-				>Select All</button>
-				<button type="button" @click="toggleDefendingTypes = []">Unselect All</button>
+				<button type="button" @click="selectAllDefending">Select All</button>
+				<button type="button" @click="unselectAllDefending">Unselect All</button>
 			</div>
 		</div>
 	</template>

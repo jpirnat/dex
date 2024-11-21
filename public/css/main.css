@@ -785,6 +785,7 @@ a.button {
 	font-size: 2rem;
 }
 
+.type-toggler__types,
 .dex-pokemon-moves__filter-types,
 .dex-pokemon-moves__filter-categories {
 	display: flex;
@@ -792,14 +793,17 @@ a.button {
 	justify-content: center;
 	gap: 5px;
 }
+.type-toggler__type,
 .dex-pokemon-moves__filter-type,
 .dex-pokemon-moves__filter-category {
 	cursor: pointer;
 }
+.type-toggler__type--inactive,
 .dex-pokemon-moves__filter-type--inactive,
 .dex-pokemon-moves__filter-category--inactive {
 	opacity: 0.5;
 }
+.type-toggler__input,
 .dex-pokemon-moves__filter-type-input,
 .dex-pokemon-moves__filter-category-input {
 	display: none;
@@ -872,17 +876,6 @@ a.button {
 .type-toggler__header {
 	padding: 5px;
 	font-weight: bold;
-}
-.type-toggler__types {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-.type-toggler__type {
-	margin: 3px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
 .type-toggler__buttons {
 	display: flex;
