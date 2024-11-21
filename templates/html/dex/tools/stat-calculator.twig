@@ -205,6 +205,12 @@
 						v-model="finalStats[s.identifier]"
 					>
 				</label>
+				<label v-if="cp" class="iv-calculator__stat-block dex-table__stat--cp">
+					<span class="iv-calculator__stat-label">CP:</span>
+					<input type="text" class="iv-calculator__input--iv" readonly
+						v-model="cp"
+					>
+				</label>
 			</div>
 		</div>
 	</template>

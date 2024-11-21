@@ -191,6 +191,20 @@ final readonly class StatCalculator
 	}
 
 	/**
+	 * Calculate a Pokémon's CP for Let's Go, Pikachu! or Let's Go, Eevee!
+	 *
+	 * @param int[] $finalStats
+	 * @param int[] $avs
+	 */
+	public function letsGoCp(int $level, array $finalStats, array $avs) : int
+	{
+		$sumStats = array_sum($finalStats);
+		$sumAvs = array_sum($avs);
+
+		return min((int) (($sumStats - $sumAvs) * $level * 6 / 100 + $sumAvs * ($level * 4 / 100 + 2)), 10000);
+	}
+
+	/**
 	 * Calculate a Pokémon's HP stat in Legends: Arceus.
 	 * https://bulbapedia.bulbagarden.net/wiki/Stat#Pok%C3%A9mon_Legends:_Arceus
 	 */

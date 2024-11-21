@@ -26,6 +26,7 @@ const app = new Vue({
 		avs: {},
 		effortLevels: {},
 		finalStats: {},
+		cp: 0,
 	},
 	computed: {
 		filteredPokemons() {
@@ -167,6 +168,7 @@ const app = new Vue({
 				const data = response.data;
 
 				this.finalStats = data.finalStats;
+				this.cp = data.cp;
 			}
 		},
 	},

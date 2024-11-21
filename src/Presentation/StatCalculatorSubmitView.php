@@ -19,10 +19,12 @@ final readonly class StatCalculatorSubmitView
 	public function getData() : ResponseInterface
 	{
 		$finalStats = $this->statCalculatorSubmitModel->getFinalStats();
+		$cp = $this->statCalculatorSubmitModel->getCp();
 
 		return new JsonResponse([
 			'data' => [
 				'finalStats' => $finalStats,
+				'cp' => $cp,
 			]
 		]);
 	}

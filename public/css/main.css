@@ -1403,7 +1403,9 @@ and then converted from hex to rgb (https://www.rgbtohex.net/hex-to-rgb/).
 	/* rgba(74, 106, 223, 0.4) */
 	background: #b7c3f2 !important;
 }
-
+.dex-table__stat--cp {
+	background: #aaa !important;
+}
 
 
 

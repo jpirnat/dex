@@ -19,6 +19,7 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 final class StatCalculatorSubmitModel
 {
 	private array $finalStats = [];
+	private int $cp = 0;
 
 
 	public function __construct(
@@ -43,6 +44,7 @@ final class StatCalculatorSubmitModel
 		array $effortLevels,
 	) : void {
 		$this->finalStats = [];
+		$this->cp = 0;
 
 		try {
 			$versionGroup = $this->vgRepository->getByIdentifier($vgIdentifier);
@@ -187,6 +189,7 @@ final class StatCalculatorSubmitModel
 			$this->finalStats[$statIdentifier] = $finalStat;
 		}
 
+		$this->cp = $this->calculator->letsGoCp($level, $this->finalStats, $avs);
 	}
 
 	private function legendsStats(
@@ -221,5 +224,10 @@ final class StatCalculatorSubmitModel
 	public function getFinalStats() : array
 	{
 		return $this->finalStats;
+	}
+
+	public function getCp() : int
+	{
+		return $this->cp;
 	}
 }
