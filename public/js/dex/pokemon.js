@@ -2,25 +2,27 @@
 
 const app = new Vue({
 	el: '#app',
-	data: {
-		loading: true,
-		loaded: false,
+	data() {
+		return {
+			loading: true,
+			loaded: false,
 
-		versionGroup: {},
-		breadcrumbs: [],
-		versionGroups: [],
-		pokemon: {},
-		stats: [],
-		types: [],
-		abilitiesDamageTaken: {},
-		damageTakenAbilities: [],
-		evolutionTableRows: [],
-		categories: [],
-		methods: [],
-		learnsetVgs: [],
+			versionGroup: {},
+			breadcrumbs: [],
+			versionGroups: [],
+			pokemon: {},
+			stats: [],
+			types: [],
+			abilitiesDamageTaken: {},
+			damageTakenAbilities: [],
+			evolutionTableRows: [],
+			categories: [],
+			methods: [],
+			learnsetVgs: [],
 
-		hoverDamageTaken: null,
-		damageTakenAbility: 'none',
+			hoverDamageTaken: null,
+			damageTakenAbility: 'none',
+		};
 	},
 	computed: {
 		damageTaken() {

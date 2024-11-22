@@ -15,7 +15,7 @@ Vue.component('dex-pagination', {
 			default: 20,
 		},
 	},
-	data: function() {
+	data() {
 		return {
 			inputPage: this.value,
 		};

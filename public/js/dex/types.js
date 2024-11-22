@@ -2,22 +2,24 @@
 
 const app = new Vue({
 	el: '#app',
-	data: {
-		loading: true,
-		loaded: false,
+	data() {
+		return {
+			loading: true,
+			loaded: false,
 
-		versionGroup: {},
-		breadcrumbs: [],
-		versionGroups: [],
-		types: [],
-		multipliers: [],
+			versionGroup: {},
+			breadcrumbs: [],
+			versionGroups: [],
+			types: [],
+			multipliers: [],
 
-		toggleAttackingTypes: [],
-		toggleDefendingTypes: [],
-		hoverAttackingType: null,
-		hoverDefendingType: null,
+			toggleAttackingTypes: [],
+			toggleDefendingTypes: [],
+			hoverAttackingType: null,
+			hoverDefendingType: null,
 
-		joinCharacter: '-',
+			joinCharacter: '-',
+		};
 	},
 	computed: {
 		attackingTypes() {

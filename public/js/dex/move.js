@@ -2,26 +2,28 @@
 
 const app = new Vue({
 	el: '#app',
-	data: {
-		loading: true,
-		loaded: false,
+	data() {
+		return {
+			loading: true,
+			loaded: false,
 
-		versionGroup: {},
-		breadcrumbs: [],
-		versionGroups: [],
-		move: {},
-		types: [],
-		damageDealt: {},
-		flags: [],
-		methods: [],
-		learnsetVgs: [],
-		showAbilities: true,
-		stats: [],
+			versionGroup: {},
+			breadcrumbs: [],
+			versionGroups: [],
+			move: {},
+			types: [],
+			damageDealt: {},
+			flags: [],
+			methods: [],
+			learnsetVgs: [],
+			showAbilities: true,
+			stats: [],
 
-		hoverDamageDealt: null,
+			hoverDamageDealt: null,
 
-		hasMultipleGens: false,
-		showOtherGens: false,
+			hasMultipleGens: false,
+			showOtherGens: false,
+		};
 	},
 	computed: {
 		showOtherDetails() {

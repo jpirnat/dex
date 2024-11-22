@@ -2,16 +2,18 @@
 
 const app = new Vue({
 	el: '#app',
-	data: {
-		loading: true,
-		loaded: false,
+	data() {
+		return {
+			loading: true,
+			loaded: false,
 
-		versionGroup: {},
-		breadcrumbs: [],
-		versionGroups: [],
-		eggGroup: {},
-		pokemons: [],
-		stats: [],
+			versionGroup: {},
+			breadcrumbs: [],
+			versionGroups: [],
+			eggGroup: {},
+			pokemons: [],
+			stats: [],
+		};
 	},
 	created() {
 		const url = new URL(window.location);

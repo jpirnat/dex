@@ -2,28 +2,30 @@
 
 const app = new Vue({
 	el: '#app',
-	data: {
-		loading: true,
-		loaded: false,
+	data() {
+		return {
+			loading: true,
+			loaded: false,
 
-		format: {},
-		rating: 0,
-		pokemon: {},
+			format: {},
+			rating: 0,
+			pokemon: {},
 
-		breadcrumbs: [],
-		startMonth: {},
-		endMonth: {},
-		ratings: [],
+			breadcrumbs: [],
+			startMonth: {},
+			endMonth: {},
+			ratings: [],
 
-		versionGroup: {},
-		generation: {},
-		stats: [],
+			versionGroup: {},
+			generation: {},
+			stats: [],
 
-		showAbilities: true,
-		showItems: true,
-		abilities: [],
-		items: [],
-		moves: [],
+			showAbilities: true,
+			showItems: true,
+			abilities: [],
+			items: [],
+			moves: [],
+		};
 	},
 	created() {
 		const url = new URL(window.location);

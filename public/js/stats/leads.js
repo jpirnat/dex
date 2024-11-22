@@ -2,32 +2,34 @@
 
 const app = new Vue({
 	el: '#app',
-	data: {
-		loading: true,
-		loaded: false,
+	data() {
+		return {
+			loading: true,
+			loaded: false,
 
-		format: {},
-		rating: 0,
+			format: {},
+			rating: 0,
 
-		breadcrumbs: [],
-		prevMonth: {},
-		thisMonth: {},
-		nextMonth: {},
-		ratings: [],
-		speedName: '',
-		pokemons: [],
-		months: [],
+			breadcrumbs: [],
+			prevMonth: {},
+			thisMonth: {},
+			nextMonth: {},
+			ratings: [],
+			speedName: '',
+			pokemons: [],
+			months: [],
 
-		filterName: '',
+			filterName: '',
 
-		currentPage: 1,
-		itemsPerPage: 20,
+			currentPage: 1,
+			itemsPerPage: 20,
 
-		sortColumn: '',
-		sortDirection: '',
+			sortColumn: '',
+			sortDirection: '',
 
-		start: '',
-		end: '',
+			start: '',
+			end: '',
+		};
 	},
 	computed: {
 		filteredPokemons() {

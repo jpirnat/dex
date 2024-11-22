@@ -2,13 +2,15 @@
 
 const app = new Vue({
 	el: '#app',
-	data: {
-		loading: true,
-		loaded: false,
+	data() {
+		return {
+			loading: true,
+			loaded: false,
 
-		breadcrumbs: [],
+			breadcrumbs: [],
 
-		years: [],
+			years: [],
+		};
 	},
 	created() {
 		const url = new URL(window.location);

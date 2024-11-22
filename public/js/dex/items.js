@@ -2,22 +2,24 @@
 
 const app = new Vue({
 	el: '#app',
-	data: {
-		loading: true,
-		loaded: false,
+	data() {
+		return {
+			loading: true,
+			loaded: false,
 
-		versionGroup: {},
-		breadcrumbs: [],
-		versionGroups: [],
-		items: [],
-		showItemIcons: true,
-		showItemDescriptions: true,
+			versionGroup: {},
+			breadcrumbs: [],
+			versionGroups: [],
+			items: [],
+			showItemIcons: true,
+			showItemDescriptions: true,
 
-		filterName: '',
-		filterDescription: '',
+			filterName: '',
+			filterDescription: '',
 
-		currentPage: 1,
-		itemsPerPage: 20,
+			currentPage: 1,
+			itemsPerPage: 20,
+		};
 	},
 	computed: {
 		filteredItems() {

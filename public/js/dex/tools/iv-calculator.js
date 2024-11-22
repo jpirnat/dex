@@ -2,29 +2,31 @@
 
 const app = new Vue({
 	el: '#app',
-	data: {
-		loading: true,
-		loaded: false,
+	data() {
+		return {
+			loading: true,
+			loaded: false,
 
-		versionGroup: {},
-		breadcrumbs: [],
-		versionGroups: [],
-		pokemons: [],
-		natures: [],
-		characteristics: [],
-		types: [],
-		stats: [],
+			versionGroup: {},
+			breadcrumbs: [],
+			versionGroups: [],
+			pokemons: [],
+			natures: [],
+			characteristics: [],
+			types: [],
+			stats: [],
 
-		pokemonName: '',
-		natureName: '',
-		characteristicName: '',
-		hpTypeName: '',
-		selectedPokemon: null,
-		selectedNature: null,
-		selectedCharacteristic: null,
-		selectedHpType: null,
-		atLevel: [],
-		ivs: {},
+			pokemonName: '',
+			natureName: '',
+			characteristicName: '',
+			hpTypeName: '',
+			selectedPokemon: null,
+			selectedNature: null,
+			selectedCharacteristic: null,
+			selectedHpType: null,
+			atLevel: [],
+			ivs: {},
+		};
 	},
 	computed: {
 		filteredPokemons() {

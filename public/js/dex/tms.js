@@ -2,21 +2,23 @@
 
 const app = new Vue({
 	el: '#app',
-	data: {
-		loading: true,
-		loaded: false,
+	data() {
+		return {
+			loading: true,
+			loaded: false,
 
-		versionGroup: {},
-		breadcrumbs: [],
-		versionGroups: [],
-		machines: [],
+			versionGroup: {},
+			breadcrumbs: [],
+			versionGroups: [],
+			machines: [],
 
-		filterItemName: '',
-		filterMoveName: '',
-		filterMoveDescription: '',
+			filterItemName: '',
+			filterMoveName: '',
+			filterMoveDescription: '',
 
-		sortColumn: '',
-		sortDirection: '',
+			sortColumn: '',
+			sortDirection: '',
+		};
 	},
 	computed: {
 		filteredMachines() {

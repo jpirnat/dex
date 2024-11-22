@@ -2,25 +2,27 @@
 
 const app = new Vue({
 	el: '#app',
-	data: {
-		loading: true,
-		loaded: false,
+	data() {
+		return {
+			loading: true,
+			loaded: false,
 
-		versionGroup: {},
-		breadcrumbs: [],
-		versionGroups: [],
-		type: {},
-		types: [],
-		damageDealt: {},
-		damageTaken: {},
-		pokemons: [],
-		showAbilities: true,
-		stats: [],
-		moves: [],
-		showMoveDescriptions: true,
+			versionGroup: {},
+			breadcrumbs: [],
+			versionGroups: [],
+			type: {},
+			types: [],
+			damageDealt: {},
+			damageTaken: {},
+			pokemons: [],
+			showAbilities: true,
+			stats: [],
+			moves: [],
+			showMoveDescriptions: true,
 
-		hoverDamageDealt: null,
-		hoverDamageTaken: null,
+			hoverDamageDealt: null,
+			hoverDamageTaken: null,
+		};
 	},
 	created() {
 		const url = new URL(window.location);

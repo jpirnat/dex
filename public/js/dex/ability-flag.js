@@ -2,21 +2,23 @@
 
 const app = new Vue({
 	el: '#app',
-	data: {
-		loading: true,
-		loaded: false,
+	data() {
+		return {
+			loading: true,
+			loaded: false,
 
-		versionGroup: {},
-		breadcrumbs: [],
-		versionGroups: [],
-		flag: {},
-		abilities: [],
+			versionGroup: {},
+			breadcrumbs: [],
+			versionGroups: [],
+			flag: {},
+			abilities: [],
 
-		filterName: '',
-		filterDescription: '',
+			filterName: '',
+			filterDescription: '',
 
-		currentPage: 1,
-		itemsPerPage: 10,
+			currentPage: 1,
+			itemsPerPage: 10,
+		};
 	},
 	computed: {
 		filteredAbilities() {
