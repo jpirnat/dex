@@ -1,6 +1,16 @@
-'use strict';
+import DexPagination from './dex-pagination.js';
 
-Vue.component('dex-abilities-table', {
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
+
+export default {
+	name: 'dex-abilities-table',
+	components: {
+		DexPagination,
+	},
+	directives: {
+		tooltip: vTooltip,
+	},
 	props: {
 		abilities: {
 			type: Array,
@@ -50,7 +60,7 @@ Vue.component('dex-abilities-table', {
 	template: `
 		<div>
 			<dex-pagination
-				v-model="currentPage"
+				v-model:current-page="currentPage"
 				:number-of-items="filteredAbilities.length"
 				:items-per-page="itemsPerPage"
 			></dex-pagination>
@@ -96,7 +106,7 @@ Vue.component('dex-abilities-table', {
 			</table>
 
 			<dex-pagination
-				v-model="currentPage"
+				v-model:current-page="currentPage"
 				:number-of-items="filteredAbilities.length"
 				:items-per-page="itemsPerPage"
 			></dex-pagination>
@@ -134,4 +144,4 @@ Vue.component('dex-abilities-table', {
 			this.currentPage = 1;
 		},
 	},
-});
+};
