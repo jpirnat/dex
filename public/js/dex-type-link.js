@@ -1,6 +1,11 @@
-'use strict';
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
 
-Vue.component('dex-type-link', {
+export default {
+	name: 'dex-type-link',
+	directives: {
+		tooltip: vTooltip,
+	},
 	props: {
 		vgIdentifier: {
 			type: String,
@@ -20,4 +25,4 @@ Vue.component('dex-type-link', {
 			<template v-else>{{ type.name }}</template>
 		</a>
 	`,
-});
+};

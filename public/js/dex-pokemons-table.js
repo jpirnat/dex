@@ -1,6 +1,18 @@
-'use strict';
+import DexPagination from './dex-pagination.js';
+import DexTypeLink from './dex-type-link.js';
 
-Vue.component('dex-pokemons-table', {
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
+
+export default {
+	name: 'dex-pokemons-table',
+	components: {
+		DexPagination,
+		DexTypeLink,
+	},
+	directives: {
+		tooltip: vTooltip,
+	},
 	props: {
 		pokemons: {
 			type: Array,
@@ -50,7 +62,7 @@ Vue.component('dex-pokemons-table', {
 	template: `
 		<div>
 			<dex-pagination
-				v-model="currentPage"
+				v-model:current-page="currentPage"
 				:number-of-items="filteredPokemons.length"
 				:items-per-page="itemsPerPage"
 			></dex-pagination>
@@ -242,7 +254,7 @@ Vue.component('dex-pokemons-table', {
 			</table>
 
 			<dex-pagination
-				v-model="currentPage"
+				v-model:current-page="currentPage"
 				:number-of-items="filteredPokemons.length"
 				:items-per-page="itemsPerPage"
 			></dex-pagination>
@@ -281,4 +293,4 @@ Vue.component('dex-pokemons-table', {
 			this.currentPage = 1;
 		},
 	},
-});
+};
