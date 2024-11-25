@@ -45,6 +45,7 @@ final readonly class DexMoveFlagView
 			'data' => [
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
+					'hasMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,

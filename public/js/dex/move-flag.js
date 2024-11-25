@@ -18,6 +18,9 @@ const app = createApp({
 			versionGroups: [],
 			flag: {},
 			moves: [],
+
+			filterName: '',
+			filterDescription: '',
 		};
 	},
 	created() {
@@ -39,7 +42,32 @@ const app = createApp({
 				this.flag = data.flag;
 				this.moves = data.moves;
 			}
+
+			const filterName = url.searchParams.get('name');
+			const filterDescription = url.searchParams.get('description');
+			if (filterName) {
+				this.filterName = filterName;
+			}
+			if (filterDescription && this.versionGroup.hasMoveDescriptions) {
+				this.filterDescription = filterDescription;
+			}
 		});
+	},
+	methods: {
+		dexMoveFlagUrl(versionGroup) {
+			let queryParams = [];
+			if (this.filterName) {
+				queryParams.push(`name=${this.filterName}`);
+			}
+			if (this.filterDescription) {
+				queryParams.push(`description=${this.filterDescription}`);
+			}
+			queryParams = queryParams.length > 0
+				? '?' + queryParams.join('&')
+				: '';
+
+			return '/dex/' + versionGroup.identifier + '/move-flags/' + this.flag.identifier + queryParams;
+		},
 	},
 });
 
