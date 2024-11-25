@@ -1,6 +1,16 @@
-'use strict';
+import DexTypeLink from './dex-type-link.js';
 
-Vue.component('dex-move-method-pokemons', {
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
+
+export default {
+	name: 'dex-move-method-pokemons',
+	components: {
+		DexTypeLink,
+	},
+	directives: {
+		tooltip: vTooltip,
+	},
 	props: {
 		method: {
 			type: Object,
@@ -259,4 +269,4 @@ Vue.component('dex-move-method-pokemons', {
 			return '';
 		},
 	},
-});
+};
