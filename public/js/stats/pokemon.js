@@ -1,7 +1,36 @@
-'use strict';
+const { createApp } = Vue;
 
-const app = new Vue({
-	el: '#app',
+import DexBreadcrumbs from '../dex-breadcrumbs.js';
+import DexTypeLink from '../dex-type-link.js';
+import StatsPokemonAbilities from '../stats-pokemon-abilities.js';
+import StatsPokemonItems from '../stats-pokemon-items.js';
+import StatsPokemonSpreads from '../stats-pokemon-spreads.js';
+import StatsPokemonMoves from '../stats-pokemon-moves.js';
+import StatsPokemonTeraTypes from '../stats-pokemon-tera-types.js';
+import StatsPokemonTeammates from '../stats-pokemon-teammates.js';
+import StatsPokemonCounters from '../stats-pokemon-counters.js';
+import DexChartDrawer from '../dex-chart-drawer.js';
+
+
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
+
+const app = createApp({
+	components: {
+		DexBreadcrumbs,
+		DexTypeLink,
+		StatsPokemonAbilities,
+		StatsPokemonItems,
+		StatsPokemonSpreads,
+		StatsPokemonMoves,
+		StatsPokemonTeraTypes,
+		StatsPokemonTeammates,
+		StatsPokemonCounters,
+		DexChartDrawer,
+	},
+	directives: {
+		tooltip: vTooltip,
+	},
 	data() {
 		return {
 			loading: true,
@@ -107,3 +136,5 @@ const app = new Vue({
 		},
 	},
 });
+
+app.mount('#app');

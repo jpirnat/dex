@@ -1,6 +1,10 @@
-'use strict';
+import DexTypeLink from './dex-type-link.js';
 
-Vue.component('stats-pokemon-tera-types', {
+export default {
+	name: 'stats-pokemon-tera-types',
+	components: {
+		DexTypeLink,
+	},
 	props: {
 		teraTypes: {
 			type: Array,
@@ -119,4 +123,4 @@ Vue.component('stats-pokemon-tera-types', {
 			});
 		},
 	},
-});
+};

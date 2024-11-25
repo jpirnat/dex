@@ -1,6 +1,16 @@
-'use strict';
+import DexTypeLink from './dex-type-link.js';
 
-Vue.component('stats-pokemon-moves', {
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
+
+export default {
+	name: 'stats-pokemon-moves',
+	components: {
+		DexTypeLink,
+	},
+	directives: {
+		tooltip: vTooltip,
+	},
 	props: {
 		moves: {
 			type: Array,
@@ -195,8 +205,8 @@ Vue.component('stats-pokemon-moves', {
 				format: this.format,
 				rating: this.rating,
 				pokemon: this.pokemon,
-				move: move.identifier
+				move: move.identifier,
 			});
 		},
 	},
-});
+};
