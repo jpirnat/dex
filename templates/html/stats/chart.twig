@@ -11,11 +11,12 @@
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.7"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3"></script>
-	<script src="https://cdn.jsdelivr.net/npm/moment@2.29"></script>
-	<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0"></script>
+	<!-- Charts via Chart.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-moment/1.0.1/chartjs-adapter-moment.min.js"></script>
 
-	<script src="/js/stats/chart.js"></script>
+	<script type="module" src="/js/stats/chart.js"></script>
 {% endblock %}
