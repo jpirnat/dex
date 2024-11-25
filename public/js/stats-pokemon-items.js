@@ -1,6 +1,5 @@
-'use strict';
-
-Vue.component('stats-pokemon-items', {
+export default {
+	name: 'stats-pokemon-items',
 	props: {
 		items: {
 			type: Array,
@@ -114,8 +113,8 @@ Vue.component('stats-pokemon-items', {
 				format: this.format,
 				rating: this.rating,
 				pokemon: this.pokemon,
-				item: item.identifier
+				item: item.identifier,
 			});
 		},
 	},
-});
+};

@@ -13,7 +13,7 @@
 	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
 			<li v-for="vg in versionGroups">
-				<a :href="'/dex/' + vg.identifier + '/pokemon'"
+				<a :href="dexPokemonsUrl(vg)"
 					:class="{
 						'current': vg.identifier === versionGroup.identifier
 					}"
@@ -33,6 +33,7 @@
 			:pokemons="pokemons"
 			:version-group="versionGroup"
 			:stats="stats"
+			v-model:filter-name="filterName"
 		></dex-pokemons-table>
 	</template>
 </div>
@@ -40,13 +41,12 @@
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.7"></script>
-	<script src="/js/dex-breadcrumbs.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/v-tooltip@2.1"></script>
-	<script src="/js/dex-pagination.js"></script>
-	<script src="/js/dex-type-link.js"></script>
-	<script src="/js/dex-pokemons-table.js"></script>
+	<!-- Tooltips via Floating Vue -->
+	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
+	<script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
 
-	<script src="/js/dex/pokemons.js"></script>
+	<script type="module" src="/js/dex/pokemons.js"></script>
 {% endblock %}

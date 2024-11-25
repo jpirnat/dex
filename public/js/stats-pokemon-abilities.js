@@ -1,6 +1,5 @@
-'use strict';
-
-Vue.component('stats-pokemon-abilities', {
+export default {
+	name: 'stats-pokemon-abilities',
 	props: {
 		abilities: {
 			type: Array,
@@ -110,8 +109,8 @@ Vue.component('stats-pokemon-abilities', {
 				format: this.format,
 				rating: this.rating,
 				pokemon: this.pokemon,
-				ability: ability.identifier
+				ability: ability.identifier,
 			});
 		},
 	},
-});
+};

@@ -1,6 +1,5 @@
-'use strict';
-
-Vue.component('dex-breadcrumbs', {
+export default {
+	name: 'dex-breadcrumbs',
 	props: {
 		breadcrumbs: {
 			type: Array,
@@ -19,4 +18,4 @@ Vue.component('dex-breadcrumbs', {
 			</template>
 		</nav>
 	`,
-});
+};

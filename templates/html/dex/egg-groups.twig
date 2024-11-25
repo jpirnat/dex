@@ -1,10 +1,5 @@
 {% extends "html/base.twig" %}
 
-{% block styles %}
-	<link href="/css/vtooltip.css" rel="stylesheet">
-	<link href="/css/dex-pagination.css" rel="stylesheet">
-{% endblock %}
-
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
@@ -40,10 +35,7 @@
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.7"></script>
-	<script src="/js/dex-breadcrumbs.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/v-tooltip@2.1"></script>
-
-	<script src="/js/dex/egg-groups.js"></script>
+	<script type="module" src="/js/dex/egg-groups.js"></script>
 {% endblock %}

@@ -1,6 +1,5 @@
-'use strict';
-
-Vue.component('averaged-pokemon-moves', {
+export default {
+	name: 'averaged-pokemon-moves',
 	props: {
 		moves: {
 			type: Array,
@@ -66,4 +65,4 @@ Vue.component('averaged-pokemon-moves', {
 			});
 		},
 	},
-});
+};

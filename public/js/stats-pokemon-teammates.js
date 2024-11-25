@@ -1,6 +1,11 @@
-'use strict';
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
 
-Vue.component('stats-pokemon-teammates', {
+export default {
+	name: 'stats-pokemon-teammates',
+	directives: {
+		tooltip: vTooltip,
+	},
 	props: {
 		teammates: {
 			type: Array,
@@ -93,4 +98,4 @@ Vue.component('stats-pokemon-teammates', {
 			});
 		},
 	},
-});
+};

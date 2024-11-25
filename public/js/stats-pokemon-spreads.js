@@ -1,6 +1,11 @@
-'use strict';
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
 
-Vue.component('stats-pokemon-spreads', {
+export default {
+	name: 'stats-pokemon-spreads',
+	directives: {
+		tooltip: vTooltip,
+	},
 	props: {
 		spreads: {
 			type: Array,
@@ -54,7 +59,6 @@ Vue.component('stats-pokemon-spreads', {
 							<span v-if="statIndex < stats.length - 1" class="dex-spread--slash">/</span>
 						</template>
 					</td>
-					</td>
 					<td class="dex-table--number">
 						{{ spread.percent }}
 					</td>
@@ -70,4 +74,4 @@ Vue.component('stats-pokemon-spreads', {
 			</tbody>
 		</table>
 	`,
-});
+};

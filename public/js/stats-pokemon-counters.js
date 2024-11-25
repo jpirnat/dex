@@ -1,6 +1,11 @@
-'use strict';
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
 
-Vue.component('stats-pokemon-counters', {
+export default {
+	name: 'stats-pokemon-counters',
+	directives: {
+		tooltip: vTooltip,
+	},
 	props: {
 		counters: {
 			type: Array,
@@ -131,4 +136,4 @@ Vue.component('stats-pokemon-counters', {
 			});
 		},
 	},
-});
+};

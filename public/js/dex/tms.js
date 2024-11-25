@@ -1,7 +1,19 @@
-'use strict';
+const { createApp } = Vue;
 
-const app = new Vue({
-	el: '#app',
+import DexBreadcrumbs from '../dex-breadcrumbs.js';
+import DexTypeLink from '../dex-type-link.js';
+
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
+
+const app = createApp({
+	components: {
+		DexBreadcrumbs,
+		DexTypeLink,
+	},
+	directives: {
+		tooltip: vTooltip,
+	},
 	data() {
 		return {
 			loading: true,
@@ -105,3 +117,5 @@ const app = new Vue({
 		},
 	},
 });
+
+app.mount('#app');

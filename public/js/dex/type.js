@@ -1,7 +1,17 @@
-'use strict';
+const { createApp } = Vue;
 
-const app = new Vue({
-	el: '#app',
+import DexBreadcrumbs from '../dex-breadcrumbs.js';
+import DexTypeLink from '../dex-type-link.js';
+import DexPokemonsTable from '../dex-pokemons-table.js';
+import DexMovesTable from '../dex-moves-table.js';
+
+const app = createApp({
+	components: {
+		DexBreadcrumbs,
+		DexTypeLink,
+		DexPokemonsTable,
+		DexMovesTable,
+	},
 	data() {
 		return {
 			loading: true,
@@ -69,3 +79,5 @@ const app = new Vue({
 		},
 	},
 });
+
+app.mount('#app');

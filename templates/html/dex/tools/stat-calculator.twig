@@ -219,11 +219,12 @@
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.7"></script>
-	<script src="/js/dex-breadcrumbs.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/v-tooltip@2.1"></script>
-	<script src="/js/dex-type-link.js"></script>
+	<!-- Tooltips via Floating Vue -->
+	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
+	<script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
 
-	<script src="/js/dex/tools/stat-calculator.js"></script>
+	<script type="module" src="/js/dex/tools/stat-calculator.js"></script>
 {% endblock %}

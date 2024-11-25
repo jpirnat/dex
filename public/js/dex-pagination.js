@@ -1,8 +1,12 @@
-'use strict';
+const { Dropdown } = FloatingVue;
 
-Vue.component('dex-pagination', {
+export default {
+	name: 'dex-pagination',
+	components: {
+		Dropdown,
+	},
 	props: {
-		value: {
+		currentPage: {
 			type: Number,
 			required: true,
 		},
@@ -15,9 +19,10 @@ Vue.component('dex-pagination', {
 			default: 20,
 		},
 	},
+	emits: ['update:currentPage'],
 	data() {
 		return {
-			inputPage: this.value,
+			inputPage: this.currentPage,
 		};
 	},
 	computed: {
@@ -25,12 +30,6 @@ Vue.component('dex-pagination', {
 			return Math.ceil(this.numberOfItems / this.itemsPerPage);
 		},
 		visiblePages() {
-			const currentPage = this.value;
-
-			// TODO: This is a terrible hack to get around my lack of knowledge on Vue.js's
-			// internal reactivity system.
-			this.inputPage = currentPage;
-
 			const visiblePages = [];
 
 			const first = 1;
@@ -46,9 +45,9 @@ Vue.component('dex-pagination', {
 				return visiblePages;
 			}
 
-			// If we're in the beginning section, show pages from first through (number of
-			// visible pages, minus 1 for the ellipsis box).
-			if (currentPage <= numberOfVisiblePages - 2) {
+			// If we're in the beginning section, show pages from first through
+			// [number of visible pages, minus 1 for the ellipsis box].
+			if (this.currentPage <= numberOfVisiblePages - 2) {
 				for (let page = first; page <= numberOfVisiblePages - 1; page++) {
 					visiblePages.push({ number: page });
 				}
@@ -56,8 +55,9 @@ Vue.component('dex-pagination', {
 				return visiblePages;
 			}
 
-			// If we're in the end section, show pages from (last minus
-			if (currentPage >= last - numberOfVisiblePages + 3) {
+			// If we're in the end section, show pages from [last minus number
+			// of visible pages] through last.
+			if (this.currentPage >= last - numberOfVisiblePages + 3) {
 				visiblePages.push({ gap: true });
 				for (let page = last - numberOfVisiblePages + 2; page <= last; page++) {
 					visiblePages.push({ number: page });
@@ -67,8 +67,8 @@ Vue.component('dex-pagination', {
 
 			// We're in the middle section. Show pages from (current page - 3) through
 			// (current page + 3).
-			const leftLimit = currentPage - 3; // TODO: Math.floor((numberOfVisiblePages - 2) / 2);
-			const rightLimit = currentPage + 3; // TODO: Math.floor((numberOfVisiblePages - 2) / 2);
+			const leftLimit = this.currentPage - 3;
+			const rightLimit = this.currentPage + 3;
 			visiblePages.push({ gap: true });
 			for (let page = leftLimit; page <= rightLimit; page++) {
 				visiblePages.push({ number: page });
@@ -82,15 +82,15 @@ Vue.component('dex-pagination', {
 			<ol class="dex-pagination__list">
 				<li class="dex-pagination__page dex-pagination__page--first"
 					:class="{
-						'dex-pagination__page--disabled': value === 1,
+						'dex-pagination__page--disabled': currentPage === 1,
 					}"
 					@click="setCurrentPage(1)"
 				>
 					&laquo;
 				</li>
-				<li class="dex-pagination__page" @click="setCurrentPage(value - 1)"
+				<li class="dex-pagination__page" @click="setCurrentPage(currentPage - 1)"
 					:class="{
-						'dex-pagination__page--disabled': value === 1,
+						'dex-pagination__page--disabled': currentPage === 1,
 					}"
 				>
 					&lsaquo;
@@ -98,19 +98,18 @@ Vue.component('dex-pagination', {
 				<template v-for="page in visiblePages">
 					<li v-if="page.number" class="dex-pagination__page" @click="setCurrentPage(page.number)"
 						:class="{
-							'dex-pagination__page--current': value === page.number,
+							'dex-pagination__page--current': currentPage === page.number,
 						}"
 					>
 						{{ page.number }}
 					</li>
-					<v-popover v-if="page.gap"
-						:popover-inner-class="['tooltip-inner', 'popover-inner', 'dex-pagination__popover-inner']"
-						:popover-arrow-class="['tooltip-arrow', 'popover-arrow', 'dex-pagination__popover-arrow']"
+					<dropdown v-if="page.gap"
+						:popper-class="['dex-pagination__popper']"
 					>
 						<li class="dex-pagination__page">...</li>
-						<template #popover>
-							<label>
-								Go to page:
+						<template #popper>
+							<label class="dex-pagination__label">
+								<span>Go to page:</span>
 								<input type="number" min="1" :max="numberOfPages" step="1"
 									class="dex-pagination__input"
 									v-model.number="inputPage"
@@ -118,18 +117,18 @@ Vue.component('dex-pagination', {
 								>
 							</label>
 						</template>
-					</v-popover>
+					</dropdown>
 				</template>
-				<li class="dex-pagination__page" @click="setCurrentPage(value + 1)"
+				<li class="dex-pagination__page" @click="setCurrentPage(currentPage + 1)"
 					:class="{
-						'dex-pagination__page--disabled': value === numberOfPages,
+						'dex-pagination__page--disabled': currentPage === numberOfPages,
 					}"
 				>
 					&rsaquo;
 				</li>
 				<li class="dex-pagination__page dex-pagination__page--last"
 					:class="{
-						'dex-pagination__page--disabled': value === numberOfPages,
+						'dex-pagination__page--disabled': currentPage === numberOfPages,
 					}"
 					@click="setCurrentPage(numberOfPages)"
 				>
@@ -142,10 +141,9 @@ Vue.component('dex-pagination', {
 		setCurrentPage(page) {
 			page = Math.min(Math.max(1, page), this.numberOfPages);
 
-			this.value = page;
-			this.inputPage = this.value;
+			this.inputPage = page;
 
-			this.$emit('input', this.value);
+			this.$emit('update:currentPage', page);
 		},
 	},
-});
+};

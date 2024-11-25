@@ -1,6 +1,5 @@
-'use strict';
-
-Vue.component('dex-chart-drawer', {
+export default {
+	name: 'dex-chart-drawer',
 	props: {
 		ratings: {
 			type: Array,
@@ -124,6 +123,7 @@ Vue.component('dex-chart-drawer', {
 		addLine(line) {
 			if (this.addingAnotherLine) {
 				this.lines.push(line);
+
 				return;
 			}
 
@@ -156,35 +156,38 @@ Vue.component('dex-chart-drawer', {
 		},
 	},
 	watch: {
-		lines() {
-			this.isVisible = true;
+		lines: {
+			deep: 1,
+			handler() {
+				this.isVisible = true;
 
-			this.loading = true;
-			fetch('/stats/chart', {
-				method: 'POST',
-				credentials: 'same-origin',
-				headers: new Headers({
-					'Content-Type': 'application/json'
-				}),
-				body: JSON.stringify({
-					lines: this.lines,
-				}),
-			})
-			.then(response => response.json())
-			.then(async response => {
-				this.loading = false;
+				this.loading = true;
+				fetch('/stats/chart', {
+					method: 'POST',
+					credentials: 'same-origin',
+					headers: new Headers({
+						'Content-Type': 'application/json'
+					}),
+					body: JSON.stringify({
+						lines: this.lines,
+					}),
+				})
+				.then(response => response.json())
+				.then(async response => {
+					this.loading = false;
 
-				if (response.data) {
-					const data = response.data;
+					if (response.data) {
+						const data = response.data;
 
-					this.chartTitle = data.chartTitle;
-					this.responseLines = data.lines;
-					this.locale = data.locale;
+						this.chartTitle = data.chartTitle;
+						this.responseLines = data.lines;
+						this.locale = data.locale;
 
-					await this.$nextTick();
-					this.renderChart();
-				}
-			});
+						await this.$nextTick();
+						this.renderChart();
+					}
+				});
+			},
 		},
 	},
-});
+};

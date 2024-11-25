@@ -1,6 +1,18 @@
-'use strict';
+import DexPagination from './dex-pagination.js';
+import DexTypeLink from './dex-type-link.js';
 
-Vue.component('dex-pokemons-table', {
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
+
+export default {
+	name: 'dex-pokemons-table',
+	components: {
+		DexPagination,
+		DexTypeLink,
+	},
+	directives: {
+		tooltip: vTooltip,
+	},
 	props: {
 		pokemons: {
 			type: Array,
@@ -15,11 +27,14 @@ Vue.component('dex-pokemons-table', {
 			type: Array,
 			default: []
 		},
+		filterName: {
+			type: String,
+			default: '',
+		},
 	},
+	emits: ['update:filterName'],
 	data() {
 		return {
-			filterName: '',
-
 			currentPage: 1,
 			itemsPerPage: 10,
 
@@ -50,14 +65,14 @@ Vue.component('dex-pokemons-table', {
 	template: `
 		<div>
 			<dex-pagination
-				v-model="currentPage"
+				v-model:current-page="currentPage"
 				:number-of-items="filteredPokemons.length"
 				:items-per-page="itemsPerPage"
 			></dex-pagination>
 
 			<div class="dex-pokemons__control">
 				<label class="dex-pokemons__filter">
-					Filter by Pokémon name: <input type="search" v-model="filterName">
+					Filter by Pokémon name: <input type="search" :value="filterName" @input="$emit('update:filterName', $event.target.value)">
 				</label>
 
 				<div class="dex-pokemons__control-space"></div>
@@ -242,7 +257,7 @@ Vue.component('dex-pokemons-table', {
 			</table>
 
 			<dex-pagination
-				v-model="currentPage"
+				v-model:current-page="currentPage"
 				:number-of-items="filteredPokemons.length"
 				:items-per-page="itemsPerPage"
 			></dex-pagination>
@@ -281,4 +296,4 @@ Vue.component('dex-pokemons-table', {
 			this.currentPage = 1;
 		},
 	},
-});
+};

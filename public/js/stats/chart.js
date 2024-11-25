@@ -1,7 +1,6 @@
-'use strict';
+const { createApp } = Vue;
 
-const app = new Vue({
-	el: '#app',
+const app = createApp({
 	data() {
 		return {
 			loading: true,
@@ -107,3 +106,5 @@ const app = new Vue({
 		},
 	},
 });
+
+app.mount('#app');

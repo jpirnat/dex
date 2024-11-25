@@ -56,15 +56,24 @@ https://github.com/bootstrap-vue/bootstrap-vue
 	border-color: #dee2e6;
 }
 
+.dex-pagination__label {
+	display: flex;
+	align-items: baseline;
+	gap: 5px;
+	padding: 10px;
+}
+
 .dex-pagination__input {
 	width: 50px;
 }
 
-.dex-pagination__popover-inner {
-	border: 1px solid #dee2e6;
+.dex-pagination__popper .v-popper__inner {
+	border-color: #ddd !important;
+	background-color: #eee !important;
 }
-
-.dex-pagination__popover-arrow {
-	border-color: #dee2e6 !important;
-	z-index: -1 !important;
+.dex-pagination__popper .v-popper__arrow-outer {
+	border-color: #ddd !important;
+}
+.dex-pagination__popper .v-popper__arrow-inner {
+	border-color: #eee !important;
 }
