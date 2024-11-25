@@ -131,7 +131,7 @@ export default {
 						'dex-table__header--sorted-desc': sortColumn === 'accuracy' && sortDirection === 'desc',
 					}"
 				>Accuracy</th>
-				<th v-if="showMoveDescriptions" scope="col" class="dex-table__move-description">
+				<th v-if="versionGroup.hasMoveDescriptions && showMoveDescriptions" scope="col" class="dex-table__move-description">
 					Description
 				</th>
 			</tr>
@@ -206,7 +206,7 @@ export default {
 				<td class="dex-table--number">{{ move.pp }}</td>
 				<td class="dex-table--number">{{ powerText(move) }}</td>
 				<td class="dex-table--number">{{ accuracyText(move) }}</td>
-				<td v-if="showMoveDescriptions" class="dex-table__move-description">
+				<td v-if="versionGroup.hasMoveDescriptions && showMoveDescriptions" class="dex-table__move-description">
 					{{ move.description }}
 				</td>
 			</tr>

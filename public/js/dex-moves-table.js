@@ -19,19 +19,22 @@ export default {
 			default: [],
 		},
 		versionGroup: {
+			// Required fields: identifier, hasMoveDescriptions
 			type: Object,
 			default: {},
 		},
-		showDescriptions: {
-			type: Boolean,
-			default: true,
+		filterName: {
+			type: String,
+			default: '',
+		},
+		filterDescription: {
+			type: String,
+			default: '',
 		},
 	},
+	emits: ['update:filterName', 'update:filterDescription'],
 	data() {
 		return {
-			filterName: '',
-			filterDescription: '',
-
 			currentPage: 1,
 			itemsPerPage: 20,
 
@@ -73,10 +76,10 @@ export default {
 
 			<div class="dex-moves__filters">
 				<label class="dex-moves__filter">
-					Filter by move name: <input type="search" v-model="filterName">
+					Filter by move name: <input type="search" :value="filterName" @input="$emit('update:filterName', $event.target.value)">
 				</label>
-				<label v-if="showDescriptions" class="dex-moves__filter">
-					Filter by description: <input type="search" v-model="filterDescription">
+				<label v-if="versionGroup.hasMoveDescriptions" class="dex-moves__filter">
+					Filter by description: <input type="search" :value="filterDescription" @input="$emit('update:filterDescription', $event.target.value)">
 				</label>
 			</div>
 
@@ -125,7 +128,7 @@ export default {
 								'dex-table__header--sorted-desc': sortColumn === 'accuracy' && sortDirection === 'desc',
 							}"
 						>Accuracy</th>
-						<th v-if="showDescriptions" scope="col" class="dex-table__move-description">Description</th>
+						<th v-if="versionGroup.hasMoveDescriptions" scope="col" class="dex-table__move-description">Description</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -147,7 +150,7 @@ export default {
 						<td class="dex-table--number">{{ move.pp }}</td>
 						<td class="dex-table--number">{{ powerText(move) }}</td>
 						<td class="dex-table--number">{{ accuracyText(move) }}</td>
-						<td v-if="showDescriptions" class="dex-table__move-description">{{ move.description }}</td>
+						<td v-if="versionGroup.hasMoveDescriptions" class="dex-table__move-description">{{ move.description }}</td>
 					</tr>
 				</tbody>
 			</table>

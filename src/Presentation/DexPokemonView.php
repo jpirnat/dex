@@ -168,7 +168,6 @@ final readonly class DexPokemonView
 				'categories' => $this->dexFormatter->formatDexCategories($categories),
 				'methods' => $this->formatDexPokemonMoveMethods($methods),
 				'learnsetVgs' => $this->dexFormatter->formatDexVersionGroups($learnsetVgs),
-				'showMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
 			]
 		]);
 	}

@@ -59,6 +59,7 @@ final readonly class DexTypeView
 					'hasBreeding' => $versionGroup->hasBreeding(),
 					'hasEvYields' => $versionGroup->hasEvYields(),
 					'hasEvBasedStats' => $versionGroup->hasEvBasedStats(),
+					'hasMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
@@ -74,7 +75,6 @@ final readonly class DexTypeView
 				'stats' => $stats,
 
 				'moves' => $moves,
-				'showMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
 			]
 		]);
 	}

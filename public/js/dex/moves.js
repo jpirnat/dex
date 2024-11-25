@@ -17,8 +17,10 @@ const app = createApp({
 			breadcrumbs: [],
 			versionGroups: [],
 			moves: [],
-			showMoveDescriptions: true,
 			flags: [],
+
+			filterName: '',
+			filterDescription: '',
 		};
 	},
 	created() {
@@ -38,10 +40,34 @@ const app = createApp({
 				this.breadcrumbs = data.breadcrumbs;
 				this.versionGroups = data.versionGroups;
 				this.moves = data.moves;
-				this.showMoveDescriptions = data.showMoveDescriptions;
 				this.flags = data.flags;
 			}
+
+			const filterName = url.searchParams.get('name');
+			const filterDescription = url.searchParams.get('description');
+			if (filterName) {
+				this.filterName = filterName;
+			}
+			if (filterDescription && this.versionGroup.hasMoveDescriptions) {
+				this.filterDescription = filterDescription;
+			}
 		});
+	},
+	methods: {
+		dexMovesUrl(versionGroup) {
+			let queryParams = [];
+			if (this.filterName) {
+				queryParams.push(`name=${this.filterName}`);
+			}
+			if (this.filterDescription) {
+				queryParams.push(`description=${this.filterDescription}`);
+			}
+			queryParams = queryParams.length > 0
+				? '?' + queryParams.join('&')
+				: '';
+
+			return '/dex/' + versionGroup.identifier + '/moves' + queryParams;
+		},
 	},
 });
 

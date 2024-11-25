@@ -39,13 +39,13 @@ final readonly class DexMovesView
 			'data' => [
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
+					'hasMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'moves' => $this->dexFormatter->formatDexMoves($moves),
-				'showMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
 				'flags' => $flags,
 			]
 		]);

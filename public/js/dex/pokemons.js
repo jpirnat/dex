@@ -26,11 +26,6 @@ const app = createApp({
 	created() {
 		const url = new URL(window.location);
 
-		const filterName = url.searchParams.get('name');
-		if (filterName) {
-			this.filterName = filterName;
-		}
-
 		fetch('/data' + url.pathname, {
 			credentials: 'same-origin'
 		})
@@ -47,6 +42,11 @@ const app = createApp({
 				this.pokemons = data.pokemons;
 				this.showAbilities = data.showAbilities;
 				this.stats = data.stats;
+			}
+
+			const filterName = url.searchParams.get('name');
+			if (filterName) {
+				this.filterName = filterName;
 			}
 		});
 	},

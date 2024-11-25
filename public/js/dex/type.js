@@ -28,7 +28,6 @@ const app = createApp({
 			showAbilities: true,
 			stats: [],
 			moves: [],
-			showMoveDescriptions: true,
 
 			hoverDamageDealt: null,
 			hoverDamageTaken: null,
@@ -58,7 +57,6 @@ const app = createApp({
 				this.showAbilities = data.showAbilities;
 				this.stats = data.stats;
 				this.moves = data.moves;
-				this.showMoveDescriptions = data.showMoveDescriptions;
 
 				document.title = data.title;
 			}

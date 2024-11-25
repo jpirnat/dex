@@ -13,7 +13,7 @@
 	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
 			<li v-for="vg in versionGroups">
-				<a :href="'/dex/' + vg.identifier + '/moves'"
+				<a :href="dexMovesUrl(vg)"
 					:class="{
 						'current': vg.identifier === versionGroup.identifier
 					}"
@@ -32,7 +32,8 @@
 		<dex-moves-table
 			:moves="moves"
 			:version-group="versionGroup"
-			:show-descriptions="showMoveDescriptions"
+			v-model:filter-name="filterName"
+			v-model:filter-description="filterDescription"
 		></dex-moves-table>
 
 		<template v-if="flags.length">
