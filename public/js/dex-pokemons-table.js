@@ -27,11 +27,14 @@ export default {
 			type: Array,
 			default: []
 		},
+		filterName: {
+			type: String,
+			default: '',
+		},
 	},
+	emits: ['update:filterName'],
 	data() {
 		return {
-			filterName: '',
-
 			currentPage: 1,
 			itemsPerPage: 10,
 
@@ -69,7 +72,7 @@ export default {
 
 			<div class="dex-pokemons__control">
 				<label class="dex-pokemons__filter">
-					Filter by Pokémon name: <input type="search" v-model="filterName">
+					Filter by Pokémon name: <input type="search" :value="filterName" @input="$emit('update:filterName', $event.target.value)">
 				</label>
 
 				<div class="dex-pokemons__control-space"></div>

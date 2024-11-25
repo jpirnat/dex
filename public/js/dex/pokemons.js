@@ -19,10 +19,17 @@ const app = createApp({
 			pokemons: [],
 			showAbilities: true,
 			stats: [],
+
+			filterName: '',
 		};
 	},
 	created() {
 		const url = new URL(window.location);
+
+		const filterName = url.searchParams.get('name');
+		if (filterName) {
+			this.filterName = filterName;
+		}
 
 		fetch('/data' + url.pathname, {
 			credentials: 'same-origin'
@@ -42,6 +49,14 @@ const app = createApp({
 				this.stats = data.stats;
 			}
 		});
+	},
+	methods: {
+		dexPokemonsUrl(versionGroup) {
+			const queryParams = this.filterName !== ''
+				? `?name=${this.filterName}`
+				: '';
+			return '/dex/' + versionGroup.identifier + '/pokemon' + queryParams;
+		},
 	},
 });
 
