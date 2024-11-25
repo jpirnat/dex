@@ -1,7 +1,13 @@
-'use strict';
+const { createApp } = Vue;
 
-const app = new Vue({
-	el: '#app',
+import DexBreadcrumbs from '../../dex-breadcrumbs.js';
+import DexTypeLink from '../../dex-type-link.js';
+
+const app = createApp({
+	components: {
+		DexBreadcrumbs,
+		DexTypeLink,
+	},
 	data() {
 		return {
 			loading: true,
@@ -70,8 +76,8 @@ const app = new Vue({
 				this.addLevel();
 
 				this.stats.forEach(s => {
-					this.$set(this.ivs, s.identifier, 31);
-					this.$set(this.evs, s.identifier, '???');
+					this.ivs[s.identifier] = 31;
+					this.evs[s.identifier] = '???';
 				});
 
 				if (queryPokemonIdentifier) {
@@ -187,3 +193,5 @@ const app = new Vue({
 		},
 	},
 });
+
+app.mount('#app');
