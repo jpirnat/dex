@@ -1,7 +1,19 @@
-'use strict';
+const { createApp } = Vue;
 
-const app = new Vue({
-	el: '#app',
+import DexBreadcrumbs from '../dex-breadcrumbs.js';
+import DexTypeLink from '../dex-type-link.js';
+import AveragedPokemonAbilities from '../averaged-pokemon-abilities.js';
+import AveragedPokemonItems from '../averaged-pokemon-items.js';
+import AveragedPokemonMoves from '../averaged-pokemon-moves.js';
+
+const app = createApp({
+	components: {
+		DexBreadcrumbs,
+		DexTypeLink,
+		AveragedPokemonAbilities,
+		AveragedPokemonItems,
+		AveragedPokemonMoves,
+	},
 	data() {
 		return {
 			loading: true,
@@ -65,3 +77,5 @@ const app = new Vue({
 		});
 	},
 });
+
+app.mount('#app');

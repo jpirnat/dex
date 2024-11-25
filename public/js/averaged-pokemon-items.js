@@ -1,6 +1,5 @@
-'use strict';
-
-Vue.component('averaged-pokemon-items', {
+export default {
+	name: 'averaged-pokemon-items',
 	props: {
 		items: {
 			type: Array,
@@ -66,4 +65,4 @@ Vue.component('averaged-pokemon-items', {
 			});
 		},
 	},
-});
+};

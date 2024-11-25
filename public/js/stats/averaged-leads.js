@@ -1,7 +1,13 @@
-'use strict';
+const { createApp } = Vue;
 
-const app = new Vue({
-	el: '#app',
+import DexBreadcrumbs from '../dex-breadcrumbs.js';
+import DexPagination from '../dex-pagination.js';
+
+const app = createApp({
+	components: {
+		DexBreadcrumbs,
+		DexPagination,
+	},
 	data() {
 		return {
 			loading: true,
@@ -95,3 +101,5 @@ const app = new Vue({
 		},
 	},
 });
+
+app.mount('#app');
