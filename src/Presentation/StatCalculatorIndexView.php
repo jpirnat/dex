@@ -45,6 +45,7 @@ final readonly class StatCalculatorIndexView
 					'hasNatures' => $versionGroup->hasNatures(),
 					'statFormulaType' => $versionGroup->getStatFormulaType(),
 					'maxIv' => $versionGroup->getMaxIv(),
+					'maxEvsPerStat' => $versionGroup->getMaxEvsPerStat(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
