@@ -1,6 +1,18 @@
-'use strict';
+import DexTypeLink from './dex-type-link.js';
+import DexPokemonMethodMoves from './dex-pokemon-method-moves.js';
 
-Vue.component('dex-pokemon-moves', {
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
+
+export default {
+	name: 'dex-pokemon-moves',
+	components: {
+		DexTypeLink,
+		DexPokemonMethodMoves,
+	},
+	directives: {
+		tooltip: vTooltip,
+	},
 	props: {
 		versionGroup: {
 			// Required fields: identifier, generationId, hasMoveDescriptions, TODO
@@ -178,7 +190,7 @@ Vue.component('dex-pokemon-moves', {
 			</div>
 
 			<table class="dex-table dex-table--full-width">
-				<tbody is="dex-pokemon-method-moves"
+				<tbody is="vue:dex-pokemon-method-moves"
 					v-for="method in visibleMethods" :key="method.identifier"
 					:method="method"
 					:version-group="versionGroup"
@@ -222,4 +234,4 @@ Vue.component('dex-pokemon-moves', {
 			window.localStorage.setItem('dexPokemonShowMoveDescriptions', this.showMoveDescriptions);
 		},
 	},
-});
+};
