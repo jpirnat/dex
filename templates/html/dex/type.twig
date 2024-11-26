@@ -13,7 +13,7 @@
 	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
 			<li v-for="vg in versionGroups">
-				<a :href="'/dex/' + vg.identifier + '/types/' + type.identifier"
+				<a :href="dexTypeUrl(vg)"
 					:class="{
 						'current': vg.identifier === versionGroup.identifier
 					}"
@@ -88,12 +88,15 @@
 			:pokemons="pokemons"
 			:version-group="versionGroup"
 			:stats="stats"
+			v-model:filter-name="filterPokemonName"
 		></dex-pokemons-table>
 
 		<h2 class="dex-section__title">Moves</h2>
 		<dex-moves-table
 			:moves="moves"
 			:version-group="versionGroup"
+			v-model:filter-name="filterMoveName"
+			v-model:filter-description="filterMoveDescription"
 		></dex-moves-table>
 	</template>
 </div>

@@ -57,10 +57,10 @@ const app = createApp({
 		dexMoveFlagUrl(versionGroup) {
 			let queryParams = [];
 			if (this.filterName) {
-				queryParams.push(`name=${this.filterName}`);
+				queryParams.push(`name=${encodeURIComponent(this.filterName)}`);
 			}
 			if (this.filterDescription) {
-				queryParams.push(`description=${this.filterDescription}`);
+				queryParams.push(`description=${encodeURIComponent(this.filterDescription)}`);
 			}
 			queryParams = queryParams.length > 0
 				? '?' + queryParams.join('&')

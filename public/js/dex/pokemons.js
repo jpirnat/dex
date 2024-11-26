@@ -53,7 +53,7 @@ const app = createApp({
 	methods: {
 		dexPokemonsUrl(versionGroup) {
 			const queryParams = this.filterName !== ''
-				? `?name=${this.filterName}`
+				? `?name=${encodeURIComponent(this.filterName)}`
 				: '';
 			return '/dex/' + versionGroup.identifier + '/pokemon' + queryParams;
 		},
