@@ -129,7 +129,7 @@ const app = createApp({
 			});
 		},
 		goToAveraged() {
-			window.location.assign(`/stats/${this.start}-to-${this.end}/${this.format.identifier}/${this.rating}/leads`);
+			window.location.assign(`/stats/${this.start}-to-${this.end}/${this.format.identifier}/${this.rating}/leads${this.queryParams}`);
 		},
 	},
 	watch: {

@@ -13,7 +13,7 @@
 	<div class="rating-control" v-if="ratings.length">
 		<ul>
 			<li v-for="r in ratings">
-				<a :href="'/stats/' + startMonth.value + '-to-' + endMonth.value + '/' + format.identifier + '/' + r + '/leads'"
+				<a :href="'/stats/' + startMonth.value + '-to-' + endMonth.value + '/' + format.identifier + '/' + r + '/leads' + queryParams"
 					:class="{
 						'current': r === rating
 					}"

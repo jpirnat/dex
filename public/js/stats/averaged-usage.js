@@ -33,6 +33,13 @@ const app = createApp({
 		};
 	},
 	computed: {
+		queryParams() {
+			if (this.filterName) {
+				return `?name=${encodeURIComponent(this.filterName)}`;
+			}
+
+			return '';
+		},
 		filteredPokemons() {
 			let filteredPokemons = this.pokemons;
 
@@ -73,6 +80,11 @@ const app = createApp({
 				this.pokemons = data.pokemons;
 
 				document.title = data.title;
+			}
+
+			const filterName = url.searchParams.get('name');
+			if (filterName) {
+				this.filterName = filterName;
 			}
 		});
 	},

@@ -13,7 +13,7 @@
 	<div class="rating-control" v-if="ratings.length">
 		<ul>
 			<li v-for="r in ratings">
-				<a :href="'/stats/' + startMonth.value + '-to-' + endMonth.value + '/' + format.identifier + '/' + r"
+				<a :href="'/stats/' + startMonth.value + '-to-' + endMonth.value + '/' + format.identifier + '/' + r + queryParams"
 					:class="{
 						'current': r === rating
 					}"
@@ -29,7 +29,7 @@
 	<template v-if="loaded">
 		<div class="buttons-control">
 			<a v-if="showLeadsLink" class="button"
-				:href="'/stats/' + startMonth.value + '-to-' + endMonth.value + '/' + format.identifier + '/' + rating + '/leads'"
+				:href="'/stats/' + startMonth.value + '-to-' + endMonth.value + '/' + format.identifier + '/' + rating + '/leads' + queryParams"
 			>
 				Leads
 			</a>
