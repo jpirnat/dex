@@ -23,6 +23,15 @@ const app = createApp({
 			filterName: '',
 		};
 	},
+	computed: {
+		queryParams() {
+			if (this.filterName) {
+				return `?name=${encodeURIComponent(this.filterName)}`;
+			}
+
+			return '';
+		},
+	},
 	created() {
 		const url = new URL(window.location);
 
@@ -49,14 +58,6 @@ const app = createApp({
 				this.filterName = filterName;
 			}
 		});
-	},
-	methods: {
-		dexPokemonsUrl(versionGroup) {
-			const queryParams = this.filterName !== ''
-				? `?name=${encodeURIComponent(this.filterName)}`
-				: '';
-			return '/dex/' + versionGroup.identifier + '/pokemon' + queryParams;
-		},
 	},
 });
 

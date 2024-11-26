@@ -45,7 +45,8 @@ const app = createApp({
 			return this.types.filter(t => this.toggleDefendingTypes.includes(t.identifier));
 		},
 		queryParams() {
-			let queryParams = [];
+			const queryParams = [];
+
 			if (this.attackingTypes.length < this.types.length) {
 				const attackingJoined = this.attackingTypes.map(t => t.identifier).join(this.joinCharacter);
 				queryParams.push(`attacking=${attackingJoined}`);
@@ -54,6 +55,7 @@ const app = createApp({
 				const defendingJoined = this.defendingTypes.map(t => t.identifier).join(this.joinCharacter);
 				queryParams.push(`defending=${defendingJoined}`);
 			}
+
 			return queryParams.length > 0
 				? '?' + queryParams.join('&')
 				: '';
@@ -103,11 +105,8 @@ const app = createApp({
 		});
 	},
 	methods: {
-		dexTypesUrl(versionGroup) {
-			return '/dex/' + versionGroup.identifier + '/types' + this.queryParams;
-		},
 		updateUrl() {
-			history.replaceState({}, document.title, this.dexTypesUrl(this.versionGroup));
+			history.replaceState({}, document.title, '/dex/' + this.versionGroup.identifier + '/types' + this.queryParams);
 		},
 
 		onMatchupHover(attackingType, defendingType) {

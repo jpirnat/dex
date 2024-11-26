@@ -23,6 +23,22 @@ const app = createApp({
 			filterDescription: '',
 		};
 	},
+	computed: {
+		queryParams() {
+			const queryParams = [];
+
+			if (this.filterName) {
+				queryParams.push(`name=${encodeURIComponent(this.filterName)}`);
+			}
+			if (this.filterDescription) {
+				queryParams.push(`description=${encodeURIComponent(this.filterDescription)}`);
+			}
+
+			return queryParams.length > 0
+				? '?' + queryParams.join('&')
+				: '';
+		},
+	},
 	created() {
 		const url = new URL(window.location);
 
@@ -52,22 +68,6 @@ const app = createApp({
 				this.filterDescription = filterDescription;
 			}
 		});
-	},
-	methods: {
-		dexAbilitiesUrl(versionGroup) {
-			let queryParams = [];
-			if (this.filterName) {
-				queryParams.push(`name=${encodeURIComponent(this.filterName)}`);
-			}
-			if (this.filterDescription) {
-				queryParams.push(`description=${encodeURIComponent(this.filterDescription)}`);
-			}
-			queryParams = queryParams.length > 0
-				? '?' + queryParams.join('&')
-				: '';
-
-			return '/dex/' + versionGroup.identifier + '/abilities' + queryParams;
-		},
 	},
 });
 

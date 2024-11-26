@@ -12,7 +12,7 @@
 	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
 			<li v-for="vg in versionGroups">
-				<a :href="evCalculatorUrl(vg)"
+				<a :href="'/dex/' + vg.identifier + '/tools/ev-calculator' + queryParams"
 					:class="{
 						'current': vg.identifier === versionGroup.identifier
 					}"

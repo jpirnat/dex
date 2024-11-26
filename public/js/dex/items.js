@@ -26,6 +26,20 @@ const app = createApp({
 		};
 	},
 	computed: {
+		queryParams() {
+			const queryParams = [];
+
+			if (this.filterName) {
+				queryParams.push(`name=${encodeURIComponent(this.filterName)}`);
+			}
+			if (this.filterDescription) {
+				queryParams.push(`description=${encodeURIComponent(this.filterDescription)}`);
+			}
+
+			return queryParams.length > 0
+				? '?' + queryParams.join('&')
+				: '';
+		},
 		filteredItems() {
 			let filteredItems = this.items;
 
@@ -77,22 +91,6 @@ const app = createApp({
 				this.filterDescription = filterDescription;
 			}
 		});
-	},
-	methods: {
-		dexItemsUrl(versionGroup) {
-			let queryParams = [];
-			if (this.filterName) {
-				queryParams.push(`name=${encodeURIComponent(this.filterName)}`);
-			}
-			if (this.filterDescription) {
-				queryParams.push(`description=${encodeURIComponent(this.filterDescription)}`);
-			}
-			queryParams = queryParams.length > 0
-				? '?' + queryParams.join('&')
-				: '';
-
-			return '/dex/' + versionGroup.identifier + '/items' + queryParams;
-		},
 	},
 	watch: {
 		filterName() {

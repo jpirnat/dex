@@ -13,7 +13,7 @@
 	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
 			<li v-for="vg in versionGroups">
-				<a :href="dexMovesUrl(vg)"
+				<a :href="'/dex/' + vg.identifier + '/moves' + queryParams"
 					:class="{
 						'current': vg.identifier === versionGroup.identifier
 					}"
@@ -51,7 +51,7 @@
 				<tbody>
 					<tr v-for="f in flags" :key="f.identifier">
 						<td>
-							<a :href="'/dex/' + versionGroup.identifier + '/move-flags/' + f.identifier" class="dex-link">
+							<a :href="'/dex/' + versionGroup.identifier + '/move-flags/' + f.identifier + queryParams" class="dex-link">
 								{{ f.name }}
 							</a>
 						</td>

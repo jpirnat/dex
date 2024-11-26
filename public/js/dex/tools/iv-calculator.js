@@ -35,6 +35,17 @@ const app = createApp({
 		};
 	},
 	computed: {
+		queryParams() {
+			const queryParams = [];
+
+			if (this.selectedPokemon !== null) {
+				queryParams.push(`pokemon=${this.selectedPokemon.identifier}`);
+			}
+
+			return queryParams.length > 0
+				? '?' + queryParams.join('&')
+				: '';
+		},
 		filteredPokemons() {
 			if (!this.pokemonName) {
 				return this.pokemons;
@@ -72,7 +83,6 @@ const app = createApp({
 	},
 	created() {
 		const url = new URL(window.location);
-		const queryPokemonIdentifier = url.searchParams.get('pokemon');
 
 		fetch('/data' + url.pathname, {
 			credentials: 'same-origin'
@@ -92,30 +102,25 @@ const app = createApp({
 				this.characteristics = data.characteristics;
 				this.types = data.types;
 				this.stats = data.stats;
+			}
 
-				this.addLevel();
+			this.addLevel();
 
-				this.stats.forEach(s => {
-					this.ivs[s.identifier] = '???';
-				});
+			this.stats.forEach(s => {
+				this.ivs[s.identifier] = '???';
+			});
 
-				if (queryPokemonIdentifier) {
-					const exactPokemon = this.pokemons.find(p => p.identifier === queryPokemonIdentifier);
-					if (exactPokemon) {
-						this.selectedPokemon = exactPokemon;
-					}
+			const queryPokemonIdentifier = url.searchParams.get('pokemon');
+			if (queryPokemonIdentifier) {
+				const exactPokemon = this.pokemons.find(p => p.identifier === queryPokemonIdentifier);
+				if (exactPokemon) {
+					this.selectedPokemon = exactPokemon;
+					this.pokemonName = exactPokemon.name;
 				}
 			}
 		});
 	},
 	methods: {
-		ivCalculatorUrl(versionGroup) {
-			const queryParams = this.selectedPokemon !== null
-				? `?pokemon=${this.selectedPokemon.identifier}`
-				: '';
-			return '/dex/' + versionGroup.identifier + '/tools/iv-calculator' + queryParams;
-		},
-
 		onChangePokemonName() {
 			if (this.pokemonName === '') {
 				this.selectedPokemon = null;

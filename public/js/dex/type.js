@@ -37,6 +37,25 @@ const app = createApp({
 			filterMoveDescription: '',
 		};
 	},
+	computed: {
+		queryParams() {
+			const queryParams = [];
+
+			if (this.filterPokemonName) {
+				queryParams.push(`pokemonName=${encodeURIComponent(this.filterPokemonName)}`);
+			}
+			if (this.filterMoveName) {
+				queryParams.push(`moveName=${encodeURIComponent(this.filterMoveName)}`);
+			}
+			if (this.filterMoveDescription) {
+				queryParams.push(`moveDescription=${encodeURIComponent(this.filterMoveDescription)}`);
+			}
+
+			return queryParams.length > 0
+				? '?' + queryParams.join('&')
+				: '';
+		},
+	},
 	created() {
 		const url = new URL(window.location);
 
@@ -80,23 +99,6 @@ const app = createApp({
 		});
 	},
 	methods: {
-		dexTypeUrl(versionGroup) {
-			let queryParams = [];
-			if (this.filterPokemonName) {
-				queryParams.push(`pokemonName=${this.filterPokemonName}`);
-			}
-			if (this.filterMoveName) {
-				queryParams.push(`moveName=${this.filterMoveName}`);
-			}
-			if (this.filterMoveDescription) {
-				queryParams.push(`moveDescription=${this.filterMoveDescription}`);
-			}
-			queryParams = queryParams.length > 0
-				? '?' + queryParams.join('&')
-				: '';
-
-			return '/dex/' + versionGroup.identifier + '/types/' + this.type.identifier + queryParams;
-		},
 		onDamageDealtHover(multiplier) {
 			this.hoverDamageDealt = multiplier;
 		},

@@ -54,7 +54,6 @@ const app = createApp({
 	},
 	created() {
 		const url = new URL(window.location);
-		const queryPokemonIdentifier = url.searchParams.get('pokemon');
 
 		fetch('/data' + url.pathname, {
 			credentials: 'same-origin'
@@ -72,31 +71,26 @@ const app = createApp({
 				this.pokemons = data.pokemons;
 				this.natures = data.natures;
 				this.stats = data.stats;
+			}
 
-				this.addLevel();
+			this.addLevel();
 
-				this.stats.forEach(s => {
-					this.ivs[s.identifier] = 31;
-					this.evs[s.identifier] = '???';
-				});
+			this.stats.forEach(s => {
+				this.ivs[s.identifier] = 31;
+				this.evs[s.identifier] = '???';
+			});
 
-				if (queryPokemonIdentifier) {
-					const exactPokemon = this.pokemons.find(p => p.identifier === queryPokemonIdentifier);
-					if (exactPokemon) {
-						this.selectedPokemon = exactPokemon;
-					}
+			const queryPokemonIdentifier = url.searchParams.get('pokemon');
+			if (queryPokemonIdentifier) {
+				const exactPokemon = this.pokemons.find(p => p.identifier === queryPokemonIdentifier);
+				if (exactPokemon) {
+					this.selectedPokemon = exactPokemon;
+					this.pokemonName = exactPokemon.name;
 				}
 			}
 		});
 	},
 	methods: {
-		evCalculatorUrl(versionGroup) {
-			const queryParams = this.selectedPokemon !== null
-				? `?pokemon=${this.selectedPokemon.identifier}`
-				: '';
-			return '/dex/' + versionGroup.identifier + '/tools/ev-calculator' + queryParams;
-		},
-
 		onChangePokemonName() {
 			if (this.pokemonName === '') {
 				this.selectedPokemon = null;

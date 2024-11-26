@@ -60,7 +60,6 @@ const app = createApp({
 	},
 	created() {
 		const url = new URL(window.location);
-		const queryPokemonIdentifier = url.searchParams.get('pokemon');
 
 		fetch('/data' + url.pathname, {
 			credentials: 'same-origin'
@@ -78,32 +77,27 @@ const app = createApp({
 				this.pokemons = data.pokemons;
 				this.natures = data.natures;
 				this.stats = data.stats;
+			}
 
-				this.stats.forEach(s => {
-					this.ivs[s.identifier] = this.versionGroup.maxIv;
-					this.evs[s.identifier] = 0;
-					this.avs[s.identifier] = 0;
-					this.effortLevels[s.identifier] = 0;
-					this.finalStats[s.identifier] = '???';
-				});
+			this.stats.forEach(s => {
+				this.ivs[s.identifier] = this.versionGroup.maxIv;
+				this.evs[s.identifier] = 0;
+				this.avs[s.identifier] = 0;
+				this.effortLevels[s.identifier] = 0;
+				this.finalStats[s.identifier] = '???';
+			});
 
-				if (queryPokemonIdentifier) {
-					const exactPokemon = this.pokemons.find(p => p.identifier === queryPokemonIdentifier);
-					if (exactPokemon) {
-						this.selectedPokemon = exactPokemon;
-					}
+			const queryPokemonIdentifier = url.searchParams.get('pokemon');
+			if (queryPokemonIdentifier) {
+				const exactPokemon = this.pokemons.find(p => p.identifier === queryPokemonIdentifier);
+				if (exactPokemon) {
+					this.selectedPokemon = exactPokemon;
+					this.pokemonName = exactPokemon.name;
 				}
 			}
 		});
 	},
 	methods: {
-		statCalculatorUrl(versionGroup) {
-			const queryParams = this.selectedPokemon !== null
-				? `?pokemon=${this.selectedPokemon.identifier}`
-				: '';
-			return '/dex/' + versionGroup.identifier + '/tools/stat-calculator' + queryParams;
-		},
-
 		onChangePokemonName() {
 			if (this.pokemonName === '') {
 				this.selectedPokemon = null;
