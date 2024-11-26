@@ -51,7 +51,7 @@
 				<tbody>
 					<tr v-for="f in flags" :key="f.identifier">
 						<td>
-							<a :href="'/dex/' + versionGroup.identifier + '/ability-flags/' + f.identifier" class="dex-link">
+							<a :href="'/dex/' + versionGroup.identifier + '/ability-flags/' + f.identifier + queryParams" class="dex-link">
 								{{ f.name }}
 							</a>
 						</td>
