@@ -38,14 +38,14 @@ final readonly class DexItemsView
 			'data' => [
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
+					'hasItemIcons' => $versionGroup->getId()->hasItemIcons(),
+					'hasItemDescriptions' => $versionGroup->getId()->hasItemDescriptions(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
 				'items' => $this->dexFormatter->formatDexItems($items),
-				'showItemIcons' => $versionGroup->getId()->hasItemIcons(),
-				'showItemDescriptions' => $versionGroup->getId()->hasItemDescriptions(),
 			]
 		]);
 	}

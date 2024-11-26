@@ -17,8 +17,6 @@ const app = createApp({
 			breadcrumbs: [],
 			versionGroups: [],
 			items: [],
-			showItemIcons: true,
-			showItemDescriptions: true,
 
 			filterName: '',
 			filterDescription: '',
@@ -68,10 +66,33 @@ const app = createApp({
 				this.breadcrumbs = data.breadcrumbs;
 				this.versionGroups = data.versionGroups;
 				this.items = data.items;
-				this.showItemIcons = data.showItemIcons;
-				this.showItemDescriptions = data.showItemDescriptions;
+			}
+
+			const filterName = url.searchParams.get('name');
+			const filterDescription = url.searchParams.get('description');
+			if (filterName) {
+				this.filterName = filterName;
+			}
+			if (filterDescription && this.versionGroup.hasItemDescriptions) {
+				this.filterDescription = filterDescription;
 			}
 		});
+	},
+	methods: {
+		dexItemsUrl(versionGroup) {
+			let queryParams = [];
+			if (this.filterName) {
+				queryParams.push(`name=${encodeURIComponent(this.filterName)}`);
+			}
+			if (this.filterDescription) {
+				queryParams.push(`description=${encodeURIComponent(this.filterDescription)}`);
+			}
+			queryParams = queryParams.length > 0
+				? '?' + queryParams.join('&')
+				: '';
+
+			return '/dex/' + versionGroup.identifier + '/items' + queryParams;
+		},
 	},
 	watch: {
 		filterName() {
