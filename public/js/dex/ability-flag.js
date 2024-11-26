@@ -69,14 +69,31 @@ const app = createApp({
 				this.flag = data.flag;
 				this.abilities = data.abilities;
 			}
+
+			const filterName = url.searchParams.get('name');
+			const filterDescription = url.searchParams.get('description');
+			if (filterName) {
+				this.filterName = filterName;
+			}
+			if (filterDescription) {
+				this.filterDescription = filterDescription;
+			}
 		});
 	},
-	watch: {
-		filterName() {
-			this.currentPage = 1;
-		},
-		filterDescription() {
-			this.currentPage = 1;
+	methods: {
+		dexAbilityFlagUrl(versionGroup) {
+			let queryParams = [];
+			if (this.filterName) {
+				queryParams.push(`name=${encodeURIComponent(this.filterName)}`);
+			}
+			if (this.filterDescription) {
+				queryParams.push(`description=${encodeURIComponent(this.filterDescription)}`);
+			}
+			queryParams = queryParams.length > 0
+				? '?' + queryParams.join('&')
+				: '';
+
+			return '/dex/' + versionGroup.identifier + '/ability-flags/' + this.flag.identifier + queryParams;
 		},
 	},
 });

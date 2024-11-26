@@ -13,7 +13,7 @@
 	<div class="version-group-control" v-if="versionGroups.length">
 		<ul>
 			<li v-for="vg in versionGroups">
-				<a :href="'/dex/' + vg.identifier + '/ability-flags/' + flag.identifier"
+				<a :href="dexAbilityFlagUrl(vg)"
 					:class="{
 						'current': vg.identifier === versionGroup.identifier
 					}"
@@ -34,6 +34,8 @@
 		<dex-abilities-table
 			:abilities="abilities"
 			:version-group="versionGroup"
+			v-model:filter-name="filterName"
+			v-model:filter-description="filterDescription"
 		></dex-abilities-table>
 	</template>
 </div>

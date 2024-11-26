@@ -18,6 +18,9 @@ const app = createApp({
 			versionGroups: [],
 			abilities: [],
 			flags: [],
+
+			filterName: '',
+			filterDescription: '',
 		};
 	},
 	created() {
@@ -39,7 +42,32 @@ const app = createApp({
 				this.abilities = data.abilities;
 				this.flags = data.flags;
 			}
+
+			const filterName = url.searchParams.get('name');
+			const filterDescription = url.searchParams.get('description');
+			if (filterName) {
+				this.filterName = filterName;
+			}
+			if (filterDescription) {
+				this.filterDescription = filterDescription;
+			}
 		});
+	},
+	methods: {
+		dexAbilitiesUrl(versionGroup) {
+			let queryParams = [];
+			if (this.filterName) {
+				queryParams.push(`name=${encodeURIComponent(this.filterName)}`);
+			}
+			if (this.filterDescription) {
+				queryParams.push(`description=${encodeURIComponent(this.filterDescription)}`);
+			}
+			queryParams = queryParams.length > 0
+				? '?' + queryParams.join('&')
+				: '';
+
+			return '/dex/' + versionGroup.identifier + '/abilities' + queryParams;
+		},
 	},
 });
 

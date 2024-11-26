@@ -20,12 +20,18 @@ export default {
 			type: Object,
 			default: {},
 		},
+		filterName: {
+			type: String,
+			default: '',
+		},
+		filterDescription: {
+			type: String,
+			default: '',
+		},
 	},
+	emits: ['update:filterName', 'update:filterDescription'],
 	data() {
 		return {
-			filterName: '',
-			filterDescription: '',
-
 			currentPage: 1,
 			itemsPerPage: 10,
 
@@ -67,10 +73,10 @@ export default {
 
 			<div class="dex-abilities__filters">
 				<label class="dex-abilities__filter">
-					Filter by ability name: <input type="search" v-model="filterName">
+					Filter by ability name: <input type="search" :value="filterName" @input="$emit('update:filterName', $event.target.value)">
 				</label>
 				<label class="dex-abilities__filter">
-					Filter by description: <input type="search" v-model="filterDescription">
+					Filter by description: <input type="search" :value="filterDescription" @input="$emit('update:filterDescription', $event.target.value)">
 				</label>
 			</div>
 
