@@ -43,6 +43,13 @@ const app = createApp({
 		};
 	},
 	computed: {
+		queryParams() {
+			if (this.filterName) {
+				return `?name=${encodeURIComponent(this.filterName)}`;
+			}
+
+			return '';
+		},
 		showSaveAsDefaultFormat() {
 			return this.format.identifier !== this.myFormat
 				|| this.rating !== this.myRating;
@@ -95,6 +102,11 @@ const app = createApp({
 				this.end = data.thisMonth.value;
 
 				document.title = data.title;
+			}
+
+			const filterName = url.searchParams.get('name');
+			if (filterName) {
+				this.filterName = filterName;
 			}
 		});
 	},

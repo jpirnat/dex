@@ -11,13 +11,13 @@
 	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
 	<div class="month-control" v-if="loaded">
-		<a v-if="prevMonth" class="button prev" :href="'/stats/' + prevMonth.value + '/' + format.identifier + '/' + rating">
+		<a v-if="prevMonth" class="button prev" :href="'/stats/' + prevMonth.value + '/' + format.identifier + '/' + rating + queryParams">
 			&#9668; {{ prevMonth.name }}
 		</a>
 
 		<div class="space"></div>
 
-		<a v-if="nextMonth" class="button next" :href="'/stats/' + nextMonth.value + '/' + format.identifier + '/' + rating">
+		<a v-if="nextMonth" class="button next" :href="'/stats/' + nextMonth.value + '/' + format.identifier + '/' + rating + queryParams">
 			{{ nextMonth.name }} &#9658;
 		</a>
 	</div>
@@ -25,7 +25,7 @@
 	<div class="rating-control" v-if="ratings.length">
 		<ul>
 			<li v-for="r in ratings">
-				<a :href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + r"
+				<a :href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + r + queryParams"
 					:class="{
 						'current': r === rating
 					}"
@@ -41,7 +41,7 @@
 	<template v-if="loaded">
 		<div class="buttons-control">
 			<a v-if="showLeadsLink" class="button"
-				:href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/leads'"
+				:href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/leads' + queryParams"
 			>
 				Leads
 			</a>
