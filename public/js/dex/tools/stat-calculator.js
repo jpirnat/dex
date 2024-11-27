@@ -37,6 +37,17 @@ const app = createApp({
 		};
 	},
 	computed: {
+		queryParams() {
+			const queryParams = [];
+
+			if (this.selectedPokemon !== null) {
+				queryParams.push(`pokemon=${this.selectedPokemon.identifier}`);
+			}
+
+			return queryParams.length > 0
+				? '?' + queryParams.join('&')
+				: '';
+		},
 		filteredPokemons() {
 			if (!this.pokemonName) {
 				return this.pokemons;
