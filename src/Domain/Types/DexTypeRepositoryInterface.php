@@ -27,4 +27,14 @@ interface DexTypeRepositoryInterface
 		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : array;
+
+	/**
+	 * Get the dex types available in this version group.
+	 *
+	 * @return DexType[] Indexed by type id.
+	 */
+	public function getByVersionGroup(
+		VersionGroupId $versionGroupId,
+		LanguageId $languageId,
+	) : array;
 }

@@ -320,6 +320,30 @@ return [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
+	['GET', "/dex/$vgIdentifier/tools/move-search", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'advancedMoveSearch',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$vgIdentifier/tools/move-search", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\AdvancedMoveSearchIndexController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\AdvancedMoveSearchIndexView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
+	['POST', "/dex/$vgIdentifier/tools/move-search", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\AdvancedMoveSearchSubmitController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\AdvancedMoveSearchSubmitView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
 	['GET', "/dex/$vgIdentifier/tools/iv-calculator", [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',

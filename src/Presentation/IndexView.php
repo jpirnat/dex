@@ -207,6 +207,21 @@ final readonly class IndexView
 	}
 
 	/**
+	 * Show the dex move flag page.
+	 */
+	public function advancedMoveSearch() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/advanced-move-search.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Moves - Advanced Search',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
 	 * Show the dex natures page.
 	 */
 	public function dexNatures() : ResponseInterface
