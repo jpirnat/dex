@@ -3862,7 +3862,7 @@ month,name,format_id,reason
 2024-01-01,gen9balancedhackmons,\N,
 2024-01-01,gen9battlestadiumsinglesregulatione,\N,
 2024-01-01,gen9blueberryprologue,\N,
-2024-01-01,gen9bssregf,\N,
+2024-01-01,gen9bssregf,\N,battle spot
 2024-01-01,gen9cap,\N,cap
 2024-01-01,gen9dragonkingcup,\N,
 2024-01-01,gen9fortemons,\N,
@@ -3899,7 +3899,7 @@ month,name,format_id,reason
 2024-02-01,gen9almostanyability,\N,
 2024-02-01,gen9anythinggoes,\N,not official
 2024-02-01,gen9balancedhackmons,\N,
-2024-02-01,gen9bssregf,\N,
+2024-02-01,gen9bssregf,\N,battle spot
 2024-02-01,gen9cap,\N,cap
 2024-02-01,gen9fortemons,\N,
 2024-02-01,gen9franticfusions,\N,
@@ -3936,7 +3936,7 @@ month,name,format_id,reason
 2024-03-01,gen9anythinggoes,\N,not official
 2024-03-01,gen9balancedhackmons,\N,
 2024-03-01,gen9balancedhackmonsuu,\N,
-2024-03-01,gen9bssregf,\N,
+2024-03-01,gen9bssregf,\N,battle spot
 2024-03-01,gen9cap,\N,cap
 2024-03-01,gen9doublesbrokencup,\N,
 2024-03-01,gen9foresighters,\N,
@@ -3972,8 +3972,8 @@ month,name,format_id,reason
 2024-04-01,gen9anythinggoes,\N,not official
 2024-04-01,gen9balancedhackmons,\N,
 2024-04-01,gen9balancedhackmonsuu,\N,too few battles: 0
-2024-04-01,gen9bssregf,\N,
-2024-04-01,gen9bssregg,\N,
+2024-04-01,gen9bssregf,\N,battle spot
+2024-04-01,gen9bssregg,\N,battle spot
 2024-04-01,gen9cap,\N,cap
 2024-04-01,gen9donotuse,\N,
 2024-04-01,gen9doublesbrokencup,\N,
@@ -4008,7 +4008,7 @@ month,name,format_id,reason
 2024-05-01,gen9almostanyability,\N,
 2024-05-01,gen9anythinggoes,\N,not official
 2024-05-01,gen9balancedhackmons,\N,
-2024-05-01,gen9bssregg,\N,
+2024-05-01,gen9bssregg,\N,battle spot
 2024-05-01,gen9cap,\N,cap
 2024-05-01,gen9crossevolution,\N,
 2024-05-01,gen9donotuse,\N,too few battles: 53
@@ -4042,7 +4042,7 @@ month,name,format_id,reason
 2024-06-01,gen9almostanyability,\N,
 2024-06-01,gen9anythinggoes,\N,not official
 2024-06-01,gen9balancedhackmons,\N,
-2024-06-01,gen9bssregg,\N,
+2024-06-01,gen9bssregg,\N,battle spot
 2024-06-01,gen9cap,\N,cap
 2024-06-01,gen9crossevolution,\N,
 2024-06-01,gen9donotuse,\N,too few battles: 14
@@ -4080,7 +4080,7 @@ month,name,format_id,reason
 2024-07-01,gen9almostanyability,\N,
 2024-07-01,gen9anythinggoes,\N,not official
 2024-07-01,gen9balancedhackmons,\N,
-2024-07-01,gen9bssregg,\N,
+2024-07-01,gen9bssregg,\N,battle spot
 2024-07-01,gen9cap,\N,cap
 2024-07-01,gen9categoryswap,\N,
 2024-07-01,gen9donotuse,\N,too few battles: 5
@@ -4117,8 +4117,8 @@ month,name,format_id,reason
 2024-08-01,gen9almostanyability,\N,
 2024-08-01,gen9anythinggoes,\N,not official
 2024-08-01,gen9balancedhackmons,\N,
-2024-08-01,gen9bssregg,\N,
-2024-08-01,gen9bssregh,\N,
+2024-08-01,gen9bssregg,\N,battle spot
+2024-08-01,gen9bssregh,\N,battle spot
 2024-08-01,gen9cap,\N,cap
 2024-08-01,gen9categoryswap,\N,too few battles: 7
 2024-08-01,gen9flipped,\N,
@@ -4159,8 +4159,8 @@ month,name,format_id,reason
 2024-09-01,gen9almostanyability,\N,
 2024-09-01,gen9anythinggoes,\N,not official
 2024-09-01,gen9balancedhackmons,\N,
-2024-09-01,gen9bssregg,\N,
-2024-09-01,gen9bssregh,\N,
+2024-09-01,gen9bssregg,\N,battle spot
+2024-09-01,gen9bssregh,\N,battle spot
 2024-09-01,gen9cap,\N,cap
 2024-09-01,gen9flipped,\N,too few battles: 11
 2024-09-01,gen9flipped,\N,
@@ -4204,7 +4204,7 @@ month,name,format_id,reason
 2024-10-01,gen9almostanyability,\N,
 2024-10-01,gen9anythinggoes,\N,not official
 2024-10-01,gen9balancedhackmons,\N,
-2024-10-01,gen9bssregh,\N,
+2024-10-01,gen9bssregh,\N,battle spot
 2024-10-01,gen9cap,\N,cap
 2024-10-01,gen9convergence,\N,
 2024-10-01,gen9godlygift,\N,
@@ -4231,3 +4231,40 @@ month,name,format_id,reason
 2024-10-01,gen9ubersuu,\N,not official
 2024-10-01,gen9vgc2024reghbo3,\N,
 2024-10-01,gen9zu,\N,not official
+2024-11-01,gen1rbycap,\N,too few battles: 9
+2024-11-01,gen3ubers,7,too few battles: 82
+2024-11-01,gen4zu,\N,too few battles: 6
+2024-11-01,gen5pu,\N,too few battles: 6
+2024-11-01,gen6megasrevisited,\N,
+2024-11-01,gen7purehackmons,\N,
+2024-11-01,gen8bdspou,\N,
+2024-11-01,gen8nationaldex,\N,national dex
+2024-11-01,gen91v1,\N,
+2024-11-01,gen92v2doubles,\N,
+2024-11-01,gen9almostanyability,\N,
+2024-11-01,gen9almostanyabilityuu,\N,
+2024-11-01,gen9anythinggoes,\N,not official
+2024-11-01,gen9balancedhackmons,\N,
+2024-11-01,gen9bssregh,\N,battle spot
+2024-11-01,gen9cap,\N,cap
+2024-11-01,gen9convergence,\N,
+2024-11-01,gen9godlygift,\N,
+2024-11-01,gen9inheritance,\N,
+2024-11-01,gen9inverse,\N,too few battles: 29
+2024-11-01,gen9metronomebattle,\N,
+2024-11-01,gen9mixandmega,\N,
+2024-11-01,gen9nationaldex,\N,national dex
+2024-11-01,gen9nationaldex35pokes,\N,too few battles: 16
+2024-11-01,gen9nationaldexdoubles,\N,national dex
+2024-11-01,gen9nationaldexmonotype,\N,national dex
+2024-11-01,gen9nationaldexstabmons,\N,national dex
+2024-11-01,gen9nationaldexubers,\N,national dex
+2024-11-01,gen9nationaldexuu,\N,national dex
+2024-11-01,gen9partnersincrime,\N,
+2024-11-01,gen9passiveaggressive,\N,
+2024-11-01,gen9sharedpower,\N,
+2024-11-01,gen9stabmons,\N,
+2024-11-01,gen9teamstarchallenge,\N,
+2024-11-01,gen9ubersuu,\N,not official
+2024-11-01,gen9vgc2024reghbo3,\N,
+2024-11-01,gen9zu,\N,not official
