@@ -18,6 +18,7 @@ final readonly class VersionGroup
 		private bool $hasEvBasedStats,
 		private bool $hasEvYields,
 		private int $maxEvsPerStat,
+		private bool $hasTransferMoves,
 		private bool $hasAbilities,
 		private bool $hasNatures,
 		private bool $hasCharacteristics,
@@ -82,6 +83,11 @@ final readonly class VersionGroup
 	public function getMaxEvsPerStat() : int
 	{
 		return $this->maxEvsPerStat;
+	}
+
+	public function hasTransferMoves() : bool
+	{
+		return $this->hasTransferMoves;
 	}
 
 	public function hasAbilities() : bool

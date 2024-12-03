@@ -14,6 +14,7 @@ create table if not exists `version_groups`
 `has_ev_based_stats` bool not null,
 `has_ev_yields` bool not null,
 `max_evs_per_stat` tinyint unsigned not null,
+`has_transfer_moves` bool not null,
 `has_abilities` bool not null,
 `has_natures` bool not null,
 `has_characteristics` bool not null,
