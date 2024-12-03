@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use Jp\Dex\Application\Models\AdvancedMoveSearchIndexModel;
+use Jp\Dex\Application\Models\AdvancedMoveSearch\AdvancedMoveSearchIndexModel;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 

@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Jp\Dex\Application\Models;
+namespace Jp\Dex\Application\Models\AdvancedMoveSearch;
 
+use Jp\Dex\Application\Models\VersionGroupModel;
 use Jp\Dex\Domain\Categories\DexCategory;
 use Jp\Dex\Domain\Categories\DexCategoryRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
