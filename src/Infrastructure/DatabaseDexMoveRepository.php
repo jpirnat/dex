@@ -22,7 +22,7 @@ final readonly class DatabaseDexMoveRepository implements DexMoveRepositoryInter
 		private PDO $db,
 	) {}
 
-	private function getBaseQuery() : string
+	public function getBaseQuery() : string
 	{
 		return
 "SELECT
@@ -74,7 +74,7 @@ INNER JOIN `category_names` AS `cn`
 	/**
 	 * @return DexMove[] Indexed by id.
 	 */
-	private function executeAndFetch(PDOStatement $stmt) : array
+	public function executeAndFetch(PDOStatement $stmt) : array
 	{
 		$stmt->execute();
 

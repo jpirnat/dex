@@ -151,6 +151,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseAbilityRepository::class
 );
 $services->alias(
+	\Jp\Dex\Application\Models\AdvancedMoveSearch\AdvancedMoveSearchQueriesInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseAdvancedMoveSearchQueries::class
+);
+$services->alias(
 	\Jp\Dex\Domain\BreedingChains\BreedingChainQueriesInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseBreedingChainQueries::class
 );
