@@ -1,0 +1,214 @@
+{% extends "html/base.twig" %}
+
+{% block styles %}
+	<link href="/css/vtooltip.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+{% verbatim %}
+<div id="app" v-cloak>
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
+	<div class="version-group-control" v-if="versionGroups.length">
+		<ul>
+			<li v-for="vg in versionGroups">
+				<a :href="'/dex/' + vg.identifier + '/tools/move-search'"
+					:class="{
+						'current': vg.identifier === versionGroup.identifier
+					}"
+				>{{ vg.name }}</a>
+			</li>
+		</ul>
+	</div>
+
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
+
+	<template v-if="loaded">
+		<h1 class="dex-page__title">Advanced Move Search</h1>
+
+		<div class="advanced-search__section advanced-search__section--first">
+			<div class="advanced-search__section-title" @click="toggleTypeFilters">
+				<template v-if="!showTypeFilters">&#9654;</template>
+				<template v-if="showTypeFilters">&#9660;</template>
+				Filter by type
+			</div>
+			<div class="advanced-search__section-content" v-if="showTypeFilters">
+				<div class="dex-pokemon-moves__filter-types">
+					<label v-for="t in types" class="dex-pokemon-moves__filter-type">
+						<img class="dex-type-icon" :src="'/images/types/' + t.icon" :alt="t.name" v-tooltip="t.name"
+							:class="{
+								'dex-pokemon-moves__filter-type--inactive': !filterTypes.includes(t.identifier),
+							}"
+						>
+						<input type="checkbox" class="dex-pokemon-moves__filter-type-input"
+							v-model="filterTypes" :value="t.identifier"
+						>
+					</label>
+				</div>
+				<div class="dex-pokemon-moves__filter-buttons">
+					<button type="button" @click="selectAllTypes">Select All</button>
+					<button type="button" @click="unselectAllTypes">Unselect All</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="advanced-search__section">
+			<div class="advanced-search__section-title" @click="toggleCategoryFilters">
+				<template v-if="!showCategoryFilters">&#9654;</template>
+				<template v-if="showCategoryFilters">&#9660;</template>
+				Filter by category
+			</div>
+			<div class="advanced-search__section-content" v-if="showCategoryFilters">
+				<div class="dex-pokemon-moves__filter-categories">
+					<label v-for="c in categories" class="dex-pokemon-moves__filter-category">
+						<img :src="'/images/categories/' + c.icon" :alt="c.name" v-tooltip="c.name"
+							:class="{
+								'dex-pokemon-moves__filter-category--inactive': !filterCategories.includes(c.identifier),
+							}"
+						>
+						<input type="checkbox" class="dex-pokemon-moves__filter-category-input"
+							v-model="filterCategories" :value="c.identifier"
+						>
+					</label>
+				</div>
+				<div class="dex-pokemon-moves__filter-buttons">
+					<button type="button" @click="selectAllCategories">Select All</button>
+					<button type="button" @click="unselectAllCategories">Unselect All</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="advanced-search__section" v-if="flags.length">
+			<div class="advanced-search__section-title" @click="toggleFlagFilters">
+				<template v-if="!showFlagFilters">&#9654;</template>
+				<template v-if="showFlagFilters">&#9660;</template>
+				Filter by move flag
+			</div>
+			<div class="advanced-search__section-content" v-if="showFlagFilters">
+				<div class="advanced-search__flags">
+					<label class="advanced-search__flag" v-for="f in flags" :key="f.identifier">
+						<select v-model="filterFlags[f.identifier]">
+							<option :value="null"></option>
+							<option :value="y">Yes</option>
+							<option :value="n">No</option>
+						</select>
+						<span v-tooltip="f.description">{{ f.name }}</span>
+					</label>
+				</div>
+				<div class="dex-pokemon-moves__filter-buttons">
+					<button type="button" @click="resetAllFlags">Reset All</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="advanced-search__section">
+			<div class="advanced-search__can-learn-content">
+				<label class="advanced-search__can-learn-line">
+					<span class="advanced-search__can-learn-text">Can be learned by this Pokémon:</span>
+					<input type="text" v-model.trim="pokemonName" list="pokemon-names"
+						@input="onChangePokemonName"
+					>
+					<datalist id="pokemon-names">
+						<option v-for="p in pokemons" :key="p.identifier" :value="p.name"></option>
+					</datalist>
+					<img class="advanced-search__x" src="/images/porydex/x.png" @click="clearPokemonName">
+					<span v-if="selectedPokemon !== null">{{ selectedPokemon.name }}</span>
+					<span v-if="selectedPokemon === null" class="advanced-search__no-selection">No Pokémon selected</span>
+				</label>
+				<label class="advanced-search__include-trade" v-if="versionGroup.hasTransferMoves && selectedPokemon !== null">
+					<input type="checkbox" name="includeTransferMoves" v-model="includeTransferMoves"
+						@change="onChangeIncludeTransferMoves"
+					> <span>Include trade/transfer moves</span>
+				</label>
+			</div>
+		</div>
+
+		<div class="advanced-search__search-button">
+			<button @click="search">Search</button>
+		</div>
+
+		<template v-if="searchHasBeenDone">
+			<h2 class="dex-section__title">Search Results</h2>
+			<div v-if="moves.length === 0">No Results</div>
+			<dex-moves-table v-if="moves.length > 0"
+				:moves="moves"
+				:version-group="versionGroup"
+			></dex-moves-table>
+		</template>
+	</template>
+</div>
+<style>
+.advanced-search__section--first {
+	border-top: 1px solid black;
+}
+.advanced-search__section {
+	border-bottom: 1px solid black;
+}
+.advanced-search__section-title {
+	padding: 10px 0;
+	font-weight: bold;
+	cursor: pointer;
+}
+.advanced-search__section-content {
+	padding-bottom: 10px;
+}
+
+.advanced-search__flags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.advanced-search__flag {
+	margin: 5px 0;
+	display: flex;
+	align-items: baseline;
+	gap: 5px;
+	width: 300px;
+}
+
+.advanced-search__can-learn-content {
+	padding: 10px 0;
+}
+.advanced-search__can-learn-line {
+	display: flex;
+	align-items: center;
+}
+.advanced-search__can-learn-text {
+	margin-right: 5px;
+	font-weight: bold;
+}
+.advanced-search__x {
+	width: 24px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.advanced-search__no-selection {
+	font-style: italic;
+}
+
+.advanced-search__include-trade {
+	cursor: pointer;
+}
+
+.advanced-search__search-button {
+	margin: 20px 0;
+	display: flex;
+	justify-content: center;
+}
+</style>
+
+{% endverbatim %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
+
+	<!-- Tooltips via Floating Vue -->
+	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
+	<script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
+
+	<script type="module" src="/js/dex/advanced-move-search.js"></script>
+{% endblock %}

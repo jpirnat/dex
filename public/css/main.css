@@ -1076,14 +1076,13 @@ a.button {
 	min-width: 110px;
 }
 
-.iv-calculator__no-selection {
-	font-style: italic;
-}
-
 .iv-calculator__x {
 	width: 24px;
 	cursor: pointer;
 	margin-right: 10px;
+}
+.iv-calculator__no-selection {
+	font-style: italic;
 }
 
 .iv-calculator__container {

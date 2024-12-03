@@ -23,10 +23,10 @@ final readonly class AdvancedMoveSearchIndexView
 		$versionGroup = $versionGroupModel->getVersionGroup();
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
-		$pokemons = $this->advancedMoveSearchIndexModel->getPokemons();
 		$types = $this->advancedMoveSearchIndexModel->getTypes();
 		$categories = $this->advancedMoveSearchIndexModel->getCategories();
 		$flags = $this->advancedMoveSearchIndexModel->getFlags();
+		$pokemons = $this->advancedMoveSearchIndexModel->getPokemons();
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();
@@ -44,16 +44,17 @@ final readonly class AdvancedMoveSearchIndexView
 			'data' => [
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
+					'hasTransferMoves' => $versionGroup->hasTransferMoves(),
 					'hasMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
-				'pokemons' => $pokemons,
 				'types' => $this->dexFormatter->formatDexTypes($types),
 				'categories' => $this->dexFormatter->formatDexCategories($categories),
 				'flags' => $flags,
+				'pokemons' => $pokemons,
 			]
 		]);
 	}

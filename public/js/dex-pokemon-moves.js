@@ -15,32 +15,32 @@ export default {
 	},
 	props: {
 		versionGroup: {
-			// Required fields: identifier, generationId, hasMoveDescriptions, TODO
+			// Required fields: identifier, generationId, hasMoveDescriptions.
 			type: Object,
 			default: {},
 		},
 		pokemon: {
-			// Required fields: name, TODO
+			// Required fields: identifier, name.
 			type: Object,
 			default: {},
 		},
 		types: {
-			// Required fields: identifier, icon, name
+			// Required fields: identifier, icon, name.
 			type: Array,
 			default: [],
 		},
 		categories: {
-			// Required fields: identifier, icon, name
+			// Required fields: identifier, icon, name.
 			type: Array,
 			default: [],
 		},
 		versionGroups: {
-			// Required fields: identifier, generationId, TODO
+			// Required fields: identifier, generationId, name, versions.
 			type: Array,
 			default: [],
 		},
 		methods: {
-			// Required fields: identifier, name, moves
+			// Required fields: identifier, name, moves.
 			type: Array,
 			default: [],
 		},

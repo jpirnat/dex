@@ -17,14 +17,17 @@ export default {
 			default: {},
 		},
 		versionGroup: {
+			// Required fields: identifier, hasMoveDescriptions.
 			type: Object,
 			default: {},
 		},
 		pokemon: {
+			// Required fields: identifier, name.
 			type: Object,
 			default: {},
 		},
 		versionGroups: {
+			// Required fields: identifier, name, versions.
 			type: Array,
 			default: [],
 		},

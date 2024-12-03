@@ -14,20 +14,20 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class AdvancedMoveSearchIndexModel
 {
-	private array $pokemons = [];
 	/** @var DexType[] $types */
 	private array $types = [];
 	/** @var DexCategory[] $categories */
 	private array $categories = [];
 	private array $flags = [];
+	private array $pokemons = [];
 
 
 	public function __construct(
 		private readonly VersionGroupModel $versionGroupModel,
-		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
 		private readonly DexTypeRepositoryInterface $dexTypeRepository,
 		private readonly DexCategoryRepositoryInterface $dexCategoryRepository,
 		private readonly MoveFlagRepositoryInterface $flagRepository,
+		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
 	) {}
 
 
@@ -46,20 +46,6 @@ final class AdvancedMoveSearchIndexModel
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$this->versionGroupModel->setSinceGeneration(new GenerationId(1));
-
-		$pokemons = $this->dexPokemonRepository->getByVersionGroup(
-			$versionGroupId,
-			$languageId,
-		);
-		foreach ($pokemons as $pokemon) {
-			$this->pokemons[] = [
-				'identifier' => $pokemon->getIdentifier(),
-				'name' => $pokemon->getName(),
-			];
-		}
-		usort($this->pokemons, function (array $a, array $b) : int {
-			return $a['name'] <=> $b['name'];
-		});
 
 		$this->types = $this->dexTypeRepository->getByVersionGroup(
 			$versionGroupId,
@@ -80,17 +66,26 @@ final class AdvancedMoveSearchIndexModel
 				'description' => strip_tags($flag->getDescription()),
 			];
 		}
+
+		$pokemons = $this->dexPokemonRepository->getByVersionGroup(
+			$versionGroupId,
+			$languageId,
+		);
+		foreach ($pokemons as $pokemon) {
+			$this->pokemons[] = [
+				'identifier' => $pokemon->getIdentifier(),
+				'name' => $pokemon->getName(),
+			];
+		}
+		usort($this->pokemons, function (array $a, array $b) : int {
+			return $a['name'] <=> $b['name'];
+		});
 	}
 
 
 	public function getVersionGroupModel() : VersionGroupModel
 	{
 		return $this->versionGroupModel;
-	}
-
-	public function getPokemons() : array
-	{
-		return $this->pokemons;
 	}
 
 	/**
@@ -112,5 +107,10 @@ final class AdvancedMoveSearchIndexModel
 	public function getFlags() : array
 	{
 		return $this->flags;
+	}
+
+	public function getPokemons() : array
+	{
+		return $this->pokemons;
 	}
 }
