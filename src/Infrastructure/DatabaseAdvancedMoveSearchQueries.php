@@ -21,6 +21,78 @@ final readonly class DatabaseAdvancedMoveSearchQueries implements AdvancedMoveSe
 	) {}
 
 	/**
+	 * Get all type ids, indexed by identifier.
+	 *
+	 * @return TypeId[] Indexed by identifier.
+	 */
+	public function getTypeIdentifiersToIds() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`identifier`,
+				`id`
+			FROM `types`'
+		);
+		$stmt->execute();
+
+		$typeIds = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$typeIds[$result['identifier']] = new TypeId($result['id']);
+		}
+
+		return $typeIds;
+	}
+
+	/**
+	 * Get all category ids, indexed by identifier.
+	 *
+	 * @return CategoryId[] Indexed by identifier.
+	 */
+	public function getCategoryIdentifiersToIds() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`identifier`,
+				`id`
+			FROM `categories`'
+		);
+		$stmt->execute();
+
+		$categoryIds = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$categoryIds[$result['identifier']] = new CategoryId($result['id']);
+		}
+
+		return $categoryIds;
+	}
+
+	/**
+	 * Get all move flag ids, indexed by identifier.
+	 *
+	 * @return TypeId[] Indexed by identifier.
+	 */
+	public function getFlagIdentifiersToIds() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`identifier`,
+				`id`
+			FROM `move_flags`'
+		);
+		$stmt->execute();
+
+		$flagIds = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$flagIds[$result['identifier']] = new MoveFlagId($result['id']);
+		}
+
+		return $flagIds;
+	}
+
+	/**
 	 * Get dex moves for this advanced search.
 	 *
 	 * @param TypeId[] $typeIds
@@ -128,7 +200,7 @@ final readonly class DatabaseAdvancedMoveSearchQueries implements AdvancedMoveSe
 		$baseQuery = $this->moveRepository->getBaseQuery();
 		$stmt = $this->db->prepare(
 "$baseQuery
-$whereClauses
+WHERE $whereClauses
 ORDER BY `name`"
 		);
 		return $this->moveRepository->executeAndFetch($stmt);

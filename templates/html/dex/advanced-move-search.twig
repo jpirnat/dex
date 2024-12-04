@@ -2,6 +2,7 @@
 
 {% block styles %}
 	<link href="/css/vtooltip.css" rel="stylesheet">
+	<link href="/css/dex-pagination.css" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
@@ -91,8 +92,8 @@
 					<label class="advanced-search__flag" v-for="f in flags" :key="f.identifier">
 						<select v-model="filterFlags[f.identifier]">
 							<option :value="null"></option>
-							<option :value="y">Yes</option>
-							<option :value="n">No</option>
+							<option :value="'yes'">Yes</option>
+							<option :value="'no'">No</option>
 						</select>
 						<span v-tooltip="f.description">{{ f.name }}</span>
 					</label>
@@ -135,6 +136,8 @@
 			<dex-moves-table v-if="moves.length > 0"
 				:moves="moves"
 				:version-group="versionGroup"
+				v-model:filter-name="filterName"
+				v-model:filter-description="filterDescription"
 			></dex-moves-table>
 		</template>
 	</template>

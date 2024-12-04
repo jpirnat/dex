@@ -14,6 +14,27 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 interface AdvancedMoveSearchQueriesInterface
 {
 	/**
+	 * Get all type ids, indexed by identifier.
+	 *
+	 * @return TypeId[] Indexed by identifier.
+	 */
+	public function getTypeIdentifiersToIds() : array;
+
+	/**
+	 * Get all category ids, indexed by identifier.
+	 *
+	 * @return CategoryId[] Indexed by identifier.
+	 */
+	public function getCategoryIdentifiersToIds() : array;
+
+	/**
+	 * Get all move flag ids, indexed by identifier.
+	 *
+	 * @return MoveFlagId[] Indexed by identifier.
+	 */
+	public function getFlagIdentifiersToIds() : array;
+
+	/**
 	 * Get dex moves for this advanced search.
 	 *
 	 * @param TypeId[] $typeIds

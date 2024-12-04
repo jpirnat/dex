@@ -39,6 +39,8 @@ const app = createApp({
 			searchHasBeenDone: false,
 
 			moves: [],
+			filterName: '',
+			filterDescription: '',
 		};
 	},
 	computed: {
@@ -48,6 +50,12 @@ const app = createApp({
 			}
 
 			return this.pokemons.filter(p => p.name.toLowerCase().includes(this.pokemonName.toLowerCase()));
+		},
+		yesFlagIdentifiers() {
+			return this.flags.filter(f => this.filterFlags[f.identifier] === 'yes').map(f => f.identifier);
+		},
+		noFlagIdentifiers() {
+			return this.flags.filter(f => this.filterFlags[f.identifier] === 'no').map(f => f.identifier);
 		},
 	},
 	created() {
@@ -144,6 +152,37 @@ const app = createApp({
 		},
 
 		async search() {
+			const url = new URL(window.location);
+
+			this.loading = true;
+			const response = await fetch(url.pathname, {
+				method: 'POST',
+				credentials: 'same-origin',
+				headers: new Headers({
+					'Content-Type': 'application/json',
+				}),
+				body: JSON.stringify({
+					typeIdentifiers: this.filterTypes,
+					categoryIdentifiers: this.filterCategories,
+					yesFlagIdentifiers: this.yesFlagIdentifiers,
+					noFlagsIdentifiers: this.noFlagIdentifiers,
+					pokemonIdentifier: this.selectedPokemon !== null
+						? this.selectedPokemon.identifier
+						: '',
+					includeTransferMoves: this.versionGroup.hasTransferMoves && this.includeTransferMoves,
+				}),
+			})
+			.then(response => response.json())
+			this.loading = false;
+			this.searchHasBeenDone = true;
+			this.filterName = '';
+			this.filterDescription = '';
+
+			if (response.data) {
+				const data = response.data;
+
+				this.moves = data.moves;
+			}
 		},
 	},
 });
