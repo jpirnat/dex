@@ -25,7 +25,7 @@ final readonly class AdvancedMoveSearchSubmitController
 		$typeIdentifiers = (array) ($data['typeIdentifiers'] ?? []);
 		$categoryIdentifiers = (array) ($data['categoryIdentifiers'] ?? []);
 		$yesFlagIdentifiers = (array) ($data['yesFlagIdentifiers'] ?? []);
-		$noFlagIdentifiers = (array) ($data['noFlagsIdentifier'] ?? []);
+		$noFlagIdentifiers = (array) ($data['noFlagIdentifiers'] ?? []);
 		$pokemonIdentifier = (string) ($data['pokemonIdentifier'] ?? '');
 		$includeTransferMoves = (string) ($data['includeTransferMoves'] ?? '');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));

@@ -37,6 +37,7 @@ const app = createApp({
 			selectedPokemon: null,
 			includeTransferMoves: false,
 			searchHasBeenDone: false,
+			joinCharacter: '.',
 
 			moves: [],
 			filterName: '',
@@ -56,6 +57,40 @@ const app = createApp({
 		},
 		noFlagIdentifiers() {
 			return this.flags.filter(f => this.filterFlags[f.identifier] === 'no').map(f => f.identifier);
+		},
+		queryParams() {
+			const queryParams = [];
+
+			
+
+			if (this.filterTypes.length > 0 && this.filterTypes.length < this.types.length) {
+				const typesJoined = this.filterTypes.join(this.joinCharacter);
+				queryParams.push(`types=${encodeURIComponent(typesJoined)}`);
+			}
+			if (this.filterCategories.length > 0 && this.filterCategories.length < this.categories.length) {
+				const categoriesJoined = this.filterCategories.join(this.joinCharacter);
+				queryParams.push(`categories=${encodeURIComponent(categoriesJoined)}`);
+			}
+			if (this.yesFlagIdentifiers.length > 0) {
+				const yesFlagsJoined = this.yesFlagIdentifiers.join(this.joinCharacter);
+				queryParams.push(`yesFlags=${encodeURIComponent(yesFlagsJoined)}`);
+			}
+			if (this.noFlagIdentifiers.length > 0) {
+				const noFlagsJoined = this.noFlagIdentifiers.join(this.joinCharacter);
+				queryParams.push(`noFlags=${encodeURIComponent(noFlagsJoined)}`);
+			}
+			if (this.selectedPokemon !== null) {
+				const pokemon = this.selectedPokemon.identifier;
+				queryParams.push(`pokemon=${encodeURIComponent(pokemon)}`);
+
+				if (this.versionGroup.hasTransferMoves && this.includeTransferMoves) {
+					queryParams.push(`includeTransferMoves=true`);
+				}
+			}
+
+			return queryParams.length > 0
+				? '?' + queryParams.join('&')
+				: '';
 		},
 	},
 	created() {
@@ -93,9 +128,62 @@ const app = createApp({
 
 			const includeTransferMoves = window.localStorage.getItem('dexPokemonShowTransferMoves') ?? 'false';
 			this.includeTransferMoves = JSON.parse(includeTransferMoves);
+
+			if (url.searchParams.size) {
+				this.readUrlAndSearch();
+			}
 		});
 	},
 	methods: {
+		readUrlAndSearch() {
+			const url = new URL(window.location);
+			const searchParams = url.searchParams;
+
+			const types = searchParams.get('types');
+			if (types) {
+				types.split(this.joinCharacter).forEach(t => {
+					this.filterTypes.push(t);
+				});
+			}
+
+			const categories = searchParams.get('categories');
+			if (categories) {
+				categories.split(this.joinCharacter).forEach(c => {
+					this.filterCategories.push(c);
+				});
+			}
+
+			const yesFlags = searchParams.get('yesFlags');
+			if (yesFlags) {
+				yesFlags.split(this.joinCharacter).forEach(f => {
+					this.filterFlags[f] = 'yes';
+				});
+			}
+
+			const noFlags = searchParams.get('noFlags');
+			if (noFlags) {
+				noFlags.split(this.joinCharacter).forEach(f => {
+					this.filterFlags[f] = 'no';
+				});
+			}
+
+			const pokemon = searchParams.get('pokemon');
+			if (pokemon) {
+				const exactPokemon = this.pokemons.find(p => p.identifier === pokemon);
+				if (exactPokemon) {
+					this.selectedPokemon = exactPokemon;
+					this.pokemonName = exactPokemon.name;
+				}
+			}
+
+			const includeTransferMoves = searchParams.get('includeTransferMoves');
+			if (includeTransferMoves) {
+				this.includeTransferMoves = true;
+			}
+
+			this.search();
+		},
+
 		toggleTypeFilters() {
 			this.showTypeFilters = !this.showTypeFilters;
 			window.localStorage.setItem('moveSearchShowTypeFilters', this.showTypeFilters);
@@ -151,6 +239,14 @@ const app = createApp({
 			window.localStorage.setItem('dexPokemonShowTransferMoves', this.includeTransferMoves);
 		},
 
+		updateUrlAndSearch() {
+			this.updateUrl();
+			this.search();
+		},
+		updateUrl() {
+			const url = new URL(window.location);
+			history.replaceState({}, document.title, url.pathname + this.queryParams);
+		},
 		async search() {
 			const url = new URL(window.location);
 
@@ -165,7 +261,7 @@ const app = createApp({
 					typeIdentifiers: this.filterTypes,
 					categoryIdentifiers: this.filterCategories,
 					yesFlagIdentifiers: this.yesFlagIdentifiers,
-					noFlagsIdentifiers: this.noFlagIdentifiers,
+					noFlagIdentifiers: this.noFlagIdentifiers,
 					pokemonIdentifier: this.selectedPokemon !== null
 						? this.selectedPokemon.identifier
 						: '',

@@ -28,7 +28,7 @@ const app = createApp({
 			hoverAttackingType: null,
 			hoverDefendingType: null,
 
-			joinCharacter: '-',
+			joinCharacter: '.',
 		};
 	},
 	computed: {
@@ -106,7 +106,8 @@ const app = createApp({
 	},
 	methods: {
 		updateUrl() {
-			history.replaceState({}, document.title, '/dex/' + this.versionGroup.identifier + '/types' + this.queryParams);
+			const url = new URL(window.location);
+			history.replaceState({}, document.title, url.pathname + this.queryParams);
 		},
 
 		onMatchupHover(attackingType, defendingType) {
