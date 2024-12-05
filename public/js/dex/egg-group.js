@@ -19,6 +19,8 @@ const app = createApp({
 			eggGroup: {},
 			pokemons: [],
 			stats: [],
+
+			filterName: '',
 		};
 	},
 	created() {

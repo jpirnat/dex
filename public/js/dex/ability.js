@@ -21,6 +21,8 @@ const app = createApp({
 			pokemons: [],
 			showAbilities: true,
 			stats: [],
+
+			filterName: '',
 		};
 	},
 	created() {
