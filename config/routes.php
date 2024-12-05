@@ -320,7 +320,7 @@ return [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
-	['GET', "/dex/$vgIdentifier/tools/move-search", [
+	['GET', "/dex/$vgIdentifier/advanced-move-search", [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',
 		'viewClass' => IndexView::class,
@@ -328,7 +328,7 @@ return [
 		'middlewareClasses' => MiddlewareGroups::HTML,
 	]],
 
-	['GET', "/data/dex/$vgIdentifier/tools/move-search", [
+	['GET', "/data/dex/$vgIdentifier/advanced-move-search", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\AdvancedMoveSearchIndexController::class,
 		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\AdvancedMoveSearchIndexView::class,
@@ -336,7 +336,7 @@ return [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
-	['POST', "/dex/$vgIdentifier/tools/move-search", [
+	['POST', "/dex/$vgIdentifier/advanced-move-search", [
 		'controllerClass' => \Jp\Dex\Application\Controllers\AdvancedMoveSearchSubmitController::class,
 		'controllerMethod' => 'setData',
 		'viewClass' => \Jp\Dex\Presentation\AdvancedMoveSearchSubmitView::class,

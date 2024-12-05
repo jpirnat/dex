@@ -29,6 +29,11 @@
 	<template v-if="loaded">
 		<h1 class="dex-page__title">Moves</h1>
 
+		<div class="buttons-control">
+			<div class="space"></div>
+			<a class="button" :href="'/dex/' + versionGroup.identifier + '/advanced-move-search'">Advanced Search</a>
+		</div>
+
 		<dex-moves-table
 			:moves="moves"
 			:version-group="versionGroup"
