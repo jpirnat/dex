@@ -23,25 +23,27 @@
 
 	<template v-if="loaded" class="dex-index__links">
 		<div class="dex-index__links">
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/pokemon'">Pokémon</a>
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/moves'">Moves</a>
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/types'">Types</a>
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/items'">Items</a>
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/abilities'" v-if="versionGroup.hasAbilities">Abilities</a>
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/natures'" v-if="versionGroup.hasNatures">Natures</a>
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tms'" v-if="versionGroup.hasTms">TMs</a>
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/egg-groups'" v-if="versionGroup.hasBreeding">Egg Groups</a>
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/pokemon'">Pokémon</a>
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/moves'">Moves</a>
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/types'">Types</a>
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/items'">Items</a>
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/abilities'" v-if="versionGroup.hasAbilities">Abilities</a>
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/natures'" v-if="versionGroup.hasNatures">Natures</a>
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/tms'" v-if="versionGroup.hasTms">TMs</a>
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/egg-groups'" v-if="versionGroup.hasBreeding">Egg Groups</a>
 		</div>
 
 		<div class="dex-section__title">Tools</div>
 		<div class="dex-index__links">
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/iv-calculator'"
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/advanced-pokemon-search'">Advanced Pokémon Search</a>
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/advanced-move-search'">Advanced Move Search</a>
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/tools/iv-calculator'"
 				v-if="versionGroup.statFormulaType === 'gen3'"
 			>IV Calculator</a>
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/ev-calculator'"
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/tools/ev-calculator'"
 				v-if="versionGroup.statFormulaType === 'gen3'"
 			>EV Calculator</a>
-			<a class="dex-index__link" :href="'/dex/' + versionGroup.identifier + '/tools/stat-calculator'">Stat Calculator</a>
+			<a class="dex-index__link dex-link" :href="'/dex/' + versionGroup.identifier + '/tools/stat-calculator'">Stat Calculator</a>
 		</div>
 	</template>
 </div>

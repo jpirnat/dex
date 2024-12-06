@@ -320,6 +320,30 @@ return [
 		'middlewareClasses' => MiddlewareGroups::JSON,
 	]],
 
+	['GET', "/dex/$vgIdentifier/advanced-pokemon-search", [
+		'controllerClass' => IndexController::class,
+		'controllerMethod' => 'index',
+		'viewClass' => IndexView::class,
+		'viewMethod' => 'advancedPokemonSearch',
+		'middlewareClasses' => MiddlewareGroups::HTML,
+	]],
+
+	['GET', "/data/dex/$vgIdentifier/advanced-pokemon-search", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\AdvancedPokemonSearchIndexController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\AdvancedPokemonSearchIndexView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
+	['POST', "/dex/$vgIdentifier/advanced-pokemon-search", [
+		'controllerClass' => \Jp\Dex\Application\Controllers\AdvancedPokemonSearchSubmitController::class,
+		'controllerMethod' => 'setData',
+		'viewClass' => \Jp\Dex\Presentation\AdvancedPokemonSearchSubmitView::class,
+		'viewMethod' => 'getData',
+		'middlewareClasses' => MiddlewareGroups::JSON,
+	]],
+
 	['GET', "/dex/$vgIdentifier/advanced-move-search", [
 		'controllerClass' => IndexController::class,
 		'controllerMethod' => 'index',

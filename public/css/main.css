@@ -284,6 +284,7 @@ a.button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 	text-decoration: none;
 }
 .dex-index__link:hover {
