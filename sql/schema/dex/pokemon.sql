@@ -7,7 +7,7 @@ create table if not exists `pokemon`
 `species_id` smallint unsigned not null,
 `is_default_pokemon` bool not null,
 `experience_group_id` tinyint unsigned not null,
-`gender_ratio` tinyint signed not null,
+`gender_ratio` tinyint unsigned not null,
 `smogon_dex_identifier` varchar(20) not null,
 `sort` smallint unsigned not null,
 

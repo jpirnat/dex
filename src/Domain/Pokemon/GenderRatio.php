@@ -17,15 +17,29 @@ final readonly class GenderRatio
 	public function getDescription(): string
 	{
 		return match ($this->value) {
-			-1 => 'Gender Unknown',
-			0 => '100% male',
-			1 => '87.5% male, 12.5% female',
-			2 => '75% male, 25% female',
-			4 => '50% male, 50% female',
-			6 => '25% male, 75% female',
-			7 => '12.5% male, 87.5% female',
-			8 => '100% female',
+			0   => '100% male',
+			31  => '87.5% male, 12.5% female',
+			63  => '75% male, 25% female',
+			127 => '50% male, 50% female',
+			191 => '25% male, 75% female',
+			225 => '12.5% male, 87.5% female',
+			254 => '100% female',
+			255 => 'Gender Unknown',
 			default => '',
 		};
+	}
+
+	public static function getAll() : array
+	{
+		return [
+			new self(0),
+			new self(31),
+			new self(63),
+			new self(127),
+			new self(191),
+			new self(225),
+			new self(254),
+			new self(255),
+		];
 	}
 }
