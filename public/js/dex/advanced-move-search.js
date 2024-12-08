@@ -61,8 +61,6 @@ const app = createApp({
 		queryParams() {
 			const queryParams = [];
 
-			
-
 			if (this.filterTypes.length > 0 && this.filterTypes.length < this.types.length) {
 				const typesJoined = this.filterTypes.join(this.joinCharacter);
 				queryParams.push(`types=${encodeURIComponent(typesJoined)}`);

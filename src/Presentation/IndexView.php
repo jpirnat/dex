@@ -207,21 +207,6 @@ final readonly class IndexView
 	}
 
 	/**
-	 * Show the dex move flag page.
-	 */
-	public function advancedMoveSearch() : ResponseInterface
-	{
-		$content = $this->renderer->render(
-			'html/dex/advanced-move-search.twig',
-			$this->baseView->getBaseVariables() + [
-				'title' => 'Moves - Advanced Search',
-			]
-		);
-
-		return new HtmlResponse($content);
-	}
-
-	/**
 	 * Show the dex natures page.
 	 */
 	public function dexNatures() : ResponseInterface
@@ -320,6 +305,36 @@ final readonly class IndexView
 			'html/dex/type.twig',
 			$this->baseView->getBaseVariables() + [
 				'title' => 'Types',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
+	 * Show the advanced Pokémon search page.
+	 */
+	public function advancedPokemonSearch() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/advanced-pokemon-search.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Pokémon - Advanced Search',
+			]
+		);
+
+		return new HtmlResponse($content);
+	}
+
+	/**
+	 * Show the advanced move search page.
+	 */
+	public function advancedMoveSearch() : ResponseInterface
+	{
+		$content = $this->renderer->render(
+			'html/dex/advanced-move-search.twig',
+			$this->baseView->getBaseVariables() + [
+				'title' => 'Moves - Advanced Search',
 			]
 		);
 

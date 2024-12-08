@@ -1,0 +1,170 @@
+{% extends "html/base.twig" %}
+
+{% block styles %}
+	<link href="/css/vtooltip.css" rel="stylesheet">
+	<link href="/css/dex-pagination.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+{% verbatim %}
+<div id="app" v-cloak>
+	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+
+	<div class="version-group-control" v-if="versionGroups.length">
+		<ul>
+			<li v-for="vg in versionGroups">
+				<a :href="'/dex/' + vg.identifier + '/advanced-pokemon-search'"
+					:class="{
+						'current': vg.identifier === versionGroup.identifier
+					}"
+				>{{ vg.name }}</a>
+			</li>
+		</ul>
+	</div>
+
+	<div v-if="!loaded" class="dex-loader-container">
+		<div class="dex-loader"></div>
+	</div>
+
+	<template v-if="loaded">
+		<h1 class="dex-page__title">Advanced Pokémon Search</h1>
+		<div class="advanced-search__section">
+			<div class="advanced-search__can-learn-content">
+				<label class="advanced-search__can-learn-line">
+					<span class="advanced-search__can-learn-text">Can have this Ability:</span>
+					<input type="text" v-model.trim="abilityName" list="ability-names"
+						@input="onChangeAbilityName"
+					>
+					<datalist id="ability-names">
+						<option v-for="a in abilities" :key="a.identifier" :value="a.name"></option>
+					</datalist>
+					<img class="advanced-search__x" src="/images/porydex/x.png" @click="clearAbilityName">
+					<a v-if="selectedAbility !== null" class="dex-link"
+						:href="'/dex/' + versionGroup.identifier + '/abilities/' + selectedAbility.identifier" target="_blank"
+					>{{ selectedAbility.name }}</a>
+					<span v-if="selectedAbility === null" class="advanced-search__no-selection">No Ability selected</span>
+				</label>
+			</div>
+		</div>
+
+		<div class="advanced-search__section">
+			<div style="font-weight: bold;">Can learn these moves:</div>
+			<div class="advanced-search__can-learn-content">
+				<label class="advanced-search__can-learn-line" v-for="i in maxMovesetLength">
+					<span class="advanced-search__can-learn-text">Move {{ i }}:</span>
+
+					<input type="text" v-model.trim="moveNames[i - 1]" list="move-names"
+						@input="onChangeMoveName(i - 1)"
+					>
+
+					<datalist id="move-names">
+						<option v-for="m in moves" :key="m.identifier" :value="m.name"></option>
+					</datalist>
+
+					<img class="advanced-search__x" src="/images/porydex/x.png" @click="clearMoveName(i - 1)">
+
+					<a v-if="selectedMoves[i - 1] !== null" class="dex-link"
+						:href="'/dex/' + versionGroup.identifier + '/moves/' + selectedMoves[i - 1].identifier" target="_blank"
+					>{{ selectedMoves[i - 1].name }}</a>
+
+					<span v-if="selectedMoves[i - 1] === null" class="advanced-search__no-selection">No Move selected</span>
+				</label>
+
+				<label class="advanced-search__include-trade" v-if="versionGroup.hasTransferMoves && selectedPokemon !== null">
+					<input type="checkbox" name="includeTransferMoves" v-model="includeTransferMoves"
+						@change="onChangeIncludeTransferMoves"
+					> <span>Include trade/transfer moves</span>
+				</label>
+			</div>
+		</div>
+
+		<div class="advanced-search__search-button">
+			<button v-if="!loading" @click="updateUrlAndSearch">Search</button>
+			<div v-if="loading" class="dex-loader"></div>
+		</div>
+
+		<template v-if="searchHasBeenDone">
+			<h2 class="dex-section__title">Search Results</h2>
+			<div v-if="pokemons.length === 0">No Results</div>
+			<dex-pokemons-table v-if="moves.length > 0"
+				:pokemons="pokemons"
+				:version-group="versionGroup"
+				:stats="stats"
+				v-model:filter-name="filterName"
+			></dex-pokemons-table>
+		</template>
+	</template>
+</div>
+<style>
+.advanced-search__section--first {
+	border-top: 1px solid black;
+}
+.advanced-search__section {
+	border-bottom: 1px solid black;
+}
+.advanced-search__section-title {
+	padding: 10px 0;
+	font-weight: bold;
+	cursor: pointer;
+}
+.advanced-search__section-content {
+	padding-bottom: 10px;
+}
+
+.advanced-search__flags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.advanced-search__flag {
+	margin: 5px 0;
+	display: flex;
+	align-items: baseline;
+	gap: 5px;
+	width: 300px;
+}
+
+.advanced-search__can-learn-content {
+	padding: 10px 0;
+}
+.advanced-search__can-learn-line {
+	display: flex;
+	align-items: center;
+}
+.advanced-search__can-learn-text {
+	margin-right: 5px;
+	font-weight: bold;
+}
+.advanced-search__x {
+	width: 24px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.advanced-search__no-selection {
+	font-style: italic;
+}
+
+.advanced-search__include-trade {
+	cursor: pointer;
+}
+
+.advanced-search__search-button {
+	margin: 20px 0;
+	display: flex;
+	justify-content: center;
+}
+</style>
+
+{% endverbatim %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
+
+	<!-- Tooltips via Floating Vue -->
+	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
+	<script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
+
+	<script type="module" src="/js/dex/advanced-pokemon-search.js"></script>
+{% endblock %}
