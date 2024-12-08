@@ -155,6 +155,10 @@ $services->alias(
 	\Jp\Dex\Infrastructure\DatabaseAdvancedMoveSearchQueries::class
 );
 $services->alias(
+	\Jp\Dex\Application\Models\AdvancedPokemonSearch\AdvancedPokemonSearchQueriesInterface::class,
+	\Jp\Dex\Infrastructure\DatabaseAdvancedPokemonSearchQueries::class
+);
+$services->alias(
 	\Jp\Dex\Domain\BreedingChains\BreedingChainQueriesInterface::class,
 	\Jp\Dex\Infrastructure\DatabaseBreedingChainQueries::class
 );

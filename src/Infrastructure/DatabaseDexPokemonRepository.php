@@ -27,7 +27,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 		private PDO $db,
 	) {}
 
-	private function getBaseQuery() : string
+	public function getBaseQuery() : string
 	{
 		return
 "SELECT
@@ -143,7 +143,7 @@ INNER JOIN `version_groups` AS `vg`
 	/**
 	 * @return DexPokemon[] Indexed by id.
 	 */
-	private function executeAndFetch(PDOStatement $stmt) : array
+	public function executeAndFetch(PDOStatement $stmt) : array
 	{
 		$stmt->execute();
 
