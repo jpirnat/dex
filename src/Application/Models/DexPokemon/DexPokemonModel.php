@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\DexPokemon;
 
 use Jp\Dex\Application\Models\VersionGroupModel;
+use Jp\Dex\Domain\EggGroups\DexEggGroup;
+use Jp\Dex\Domain\EggGroups\EggGroupIdentifier;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\ExpandedDexPokemon;
 use Jp\Dex\Domain\Pokemon\ExpandedDexPokemonRepositoryInterface;
@@ -17,6 +19,7 @@ final class DexPokemonModel
 {
 	private ?ExpandedDexPokemon $pokemon = null;
 	private array $stats = [];
+	private string $breedingPartnersSearchUrl = '';
 
 
 	public function __construct(
@@ -40,6 +43,7 @@ final class DexPokemonModel
 	) : void {
 		$this->pokemon = null;
 		$this->stats = [];
+		$this->breedingPartnersSearchUrl = '';
 
 		try {
 			$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
@@ -73,6 +77,8 @@ final class DexPokemonModel
 			$this->pokemon->getAbilities(),
 		);
 
+		$this->setBreedingPartnersSearchUrl($vgIdentifier);
+
 		// Set the Pokémon's evolutions.
 		$this->dexPokemonEvolutionsModel->setData(
 			$versionGroupId,
@@ -85,6 +91,33 @@ final class DexPokemonModel
 			$pokemon->getId(),
 			$languageId,
 		);
+	}
+
+	public function setBreedingPartnersSearchUrl(
+		string $vgIdentifier,
+	) : void {
+		$versionGroup = $this->versionGroupModel->getVersionGroup();
+		$eggGroups = $this->pokemon->getEggGroups();
+		$genderRatio = $this->pokemon->getGenderRatio();
+
+		if (!$versionGroup->hasBreeding()
+			|| $eggGroups === []
+			|| $eggGroups[0]->getIdentifier() === EggGroupIdentifier::UNDISCOVERED
+			|| $eggGroups[0]->getIdentifier() === EggGroupIdentifier::DITTO
+			|| $genderRatio->value() === 255
+		) {
+			return;
+		}
+
+		$eggGroups = array_map(
+			function (DexEggGroup $e) : string {
+				return $e->getIdentifier();
+			},
+			$this->pokemon->getEggGroups(),
+		);
+		$eggGroups = implode('.', $eggGroups);
+
+		$this->breedingPartnersSearchUrl = "/dex/$vgIdentifier/advanced-pokemon-search?eggGroups=$eggGroups&genderRatios=255&genderRatiosOperator=none";
 	}
 
 
@@ -101,6 +134,11 @@ final class DexPokemonModel
 	public function getStats() : array
 	{
 		return $this->stats;
+	}
+
+	public function getBreedingPartnersSearchUrl() : string
+	{
+		return $this->breedingPartnersSearchUrl;
 	}
 
 	public function getDexPokemonMatchupsModel() : DexPokemonMatchupsModel

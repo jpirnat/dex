@@ -36,6 +36,7 @@ final readonly class DexPokemonView
 		}
 
 		$stats = $this->dexPokemonModel->getStats();
+		$breedingPartnersSearchUrl = $this->dexPokemonModel->getBreedingPartnersSearchUrl();
 
 		$dexPokemonMatchupsModel = $this->dexPokemonModel->getDexPokemonMatchupsModel();
 		$types = $dexPokemonMatchupsModel->getTypes();
@@ -162,6 +163,8 @@ final readonly class DexPokemonView
 				'types' => $this->dexFormatter->formatDexTypes($types),
 				'damageTaken' => $damageTaken,
 				'damageTakenAbilities' => $damageTakenAbilities,
+
+				'breedingPartnersSearchUrl' => $breedingPartnersSearchUrl,
 
 				'evolutionTableRows' => $this->evolutionTableFormatter->formatRows($evolutionTableRows),
 

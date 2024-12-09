@@ -23,6 +23,7 @@ const app = createApp({
 			types: [],
 			abilitiesDamageTaken: {},
 			damageTakenAbilities: [],
+			breedingPartnersSearchUrl: '',
 			evolutionTableRows: [],
 			categories: [],
 			methods: [],
@@ -58,6 +59,7 @@ const app = createApp({
 				this.types = data.types;
 				this.abilitiesDamageTaken = data.damageTaken;
 				this.damageTakenAbilities = data.damageTakenAbilities;
+				this.breedingPartnersSearchUrl = data.breedingPartnersSearchUrl;
 				this.evolutionTableRows = data.evolutionTableRows;
 				this.categories = data.categories;
 				this.methods = data.methods;

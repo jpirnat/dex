@@ -163,6 +163,9 @@
 						<a :href="'/dex/' + versionGroup.identifier + '/egg-groups/' + e.identifier" class="dex-link">{{ e.name }}</a><template v-if="eIndex < pokemon.eggGroups.length - 1">, </template>
 					</template>
 				</div>
+				<div v-if="breedingPartnersSearchUrl">
+					(<a :href="breedingPartnersSearchUrl" class="dex-link">See compatible partners</a>)
+				</div>
 				<div>Gender Ratio: {{ pokemon.genderRatio.description }}</div>
 				<div>Egg Cycles: {{ pokemon.eggCycles }}</div>
 				<div>Steps to Hatch: {{ pokemon.stepsToHatch }}</div>
