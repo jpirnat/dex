@@ -23,6 +23,10 @@ final readonly class AdvancedPokemonSearchSubmitController
 
 		$vgIdentifier = $request->getAttribute('vgIdentifier');
 		$abilityIdentifier = (string) ($data['abilityIdentifier'] ?? '');
+		$eggGroupIdentifiers = (array) ($data['eggGroupIdentifiers'] ?? []);
+		$eggGroupsOperator = (string) ($data['eggGroupsOperator'] ?? '');
+		$genderRatios = (array) ($data['genderRatios'] ?? []);
+		$genderRatiosOperator = (string) ($data['genderRatiosOperator'] ?? '');
 		$moveIdentifiers = (array) ($data['moveIdentifiers'] ?? []);
 		$includeTransferMoves = (string) ($data['includeTransferMoves'] ?? '');
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
@@ -30,6 +34,10 @@ final readonly class AdvancedPokemonSearchSubmitController
 		$this->advancedPokemonSearchSubmitModel->setData(
 			$vgIdentifier,
 			$abilityIdentifier,
+			$eggGroupIdentifiers,
+			$eggGroupsOperator,
+			$genderRatios,
+			$genderRatiosOperator,
 			$moveIdentifiers,
 			$includeTransferMoves,
 			$languageId,

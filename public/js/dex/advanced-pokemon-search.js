@@ -314,7 +314,7 @@ const app = createApp({
 
 			// TODO: Maybe turn this into a computed function?
 			const eggGroupIdentifiers = [];
-			for (let i = 0; i < this.maxEggGroupLength; i++) {
+			for (let i = 0; i < this.maxEggGroupsLength; i++) {
 				if (this.selectedEggGroups[i] !== null) {
 					eggGroupIdentifiers.push(this.selectedEggGroups[i].identifier);
 				}

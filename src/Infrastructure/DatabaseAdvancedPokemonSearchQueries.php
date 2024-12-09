@@ -5,9 +5,11 @@ namespace Jp\Dex\Infrastructure;
 
 use Jp\Dex\Application\Models\AdvancedPokemonSearch\AdvancedPokemonSearchQueriesInterface;
 use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\EggGroups\EggGroupId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
+use Jp\Dex\Domain\Pokemon\GenderRatio;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
@@ -17,6 +19,30 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 		private DatabaseDexPokemonRepository $dexPokemonRepository,
 		private PDO $db,
 	) {}
+
+	/**
+	 * Get all egg group ids, indexed by identifier.
+	 *
+	 * @return EggGroupId[] Indexed by identifier.
+	 */
+	public function getEggGroupIdentifiersToIds() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`identifier`,
+				`id`
+			FROM `egg_groups`'
+		);
+		$stmt->execute();
+
+		$eggGroupIds = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$eggGroupIds[$result['identifier']] = new EggGroupId($result['id']);
+		}
+
+		return $eggGroupIds;
+	}
 
 	/**
 	 * Get all move ids, indexed by identifier.
@@ -45,6 +71,8 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 	/**
 	 * Get dex Pokémon for this advanced search.
 	 *
+	 * @param EggGroupId[] $eggGroupIds
+	 * @param GenderRatio[] $genderRatios
 	 * @param MoveId[] $moveIds
 	 *
 	 * @return DexPokemon[] Indexed by Pokémon id. Ordered by Pokémon sort value.
@@ -52,6 +80,10 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 	public function search(
 		VersionGroupId $versionGroupId,
 		?AbilityId $abilityId,
+		array $eggGroupIds,
+		string $eggGroupsOperator,
+		array $genderRatios,
+		string $genderRatiosOperator,
 		array $moveIds,
 		bool $includeTransferMoves,
 		LanguageId $languageId,
@@ -65,6 +97,38 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 		if ($abilityId) {
 			$abilityId = $abilityId->value();
 			$whereClauses[] = "$abilityId IN (`vp`.`ability1_id`, `vp`.`ability2_id`, `vp`.`ability3_id`)";
+		}
+
+		if ($eggGroupIds) {
+			$eggGroupClauses = [];
+			foreach ($eggGroupIds as $eggGroupId) {
+				$eggGroupId = $eggGroupId->value();
+				$eggGroupClauses[] = "$eggGroupId IN (`vp`.`egg_group1_id`, `egg_group2_id`)";
+			}
+
+			$andOr = match ($eggGroupsOperator) {
+				'and' => 'AND',
+				'or' => 'OR',
+				default => 'OR',
+			};
+			$eggGroupClauses = implode(" $andOr ", $eggGroupClauses);
+			$whereClauses[] = "($eggGroupClauses)";
+		}
+
+		if ($genderRatios) {
+			$genderRatios = array_map(
+				function (GenderRatio $genderRatio) : int {
+					return $genderRatio->value();
+				},
+				$genderRatios,
+			);
+			$genderRatios = implode(', ', $genderRatios);
+			$inOrNotIn = match ($genderRatiosOperator) {
+				'any' => 'IN',
+				'none' => 'NOT IN',
+				default => 'IN',
+			};
+			$whereClauses[] = "`p`.`gender_ratio` $inOrNotIn ($genderRatios)";
 		}
 
 		if ($moveIds) {
