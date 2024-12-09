@@ -5,14 +5,18 @@ namespace Jp\Dex\Application\Models\AdvancedPokemonSearch;
 
 use Jp\Dex\Application\Models\VersionGroupModel;
 use Jp\Dex\Domain\Abilities\DexAbilityRepositoryInterface;
+use Jp\Dex\Domain\EggGroups\DexEggGroupRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\GenderRatio;
 use Jp\Dex\Domain\Stats\DexStatRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 final class AdvancedPokemonSearchIndexModel
 {
 	private array $abilities = [];
+	private array $eggGroups = [];
+	private array $genderRatios = [];
 	private array $moves = [];
 	private array $stats = [];
 
@@ -20,6 +24,7 @@ final class AdvancedPokemonSearchIndexModel
 	public function __construct(
 		private readonly VersionGroupModel $versionGroupModel,
 		private readonly DexAbilityRepositoryInterface $dexAbilityRepository,
+		private readonly DexEggGroupRepositoryInterface $dexEggGroupRepository,
 		private readonly DexMoveRepositoryInterface $dexMoveRepository,
 		private readonly DexStatRepositoryInterface $dexStatRepository,
 	) {}
@@ -33,6 +38,8 @@ final class AdvancedPokemonSearchIndexModel
 		LanguageId $languageId,
 	) : void {
 		$this->abilities = [];
+		$this->eggGroups = [];
+		$this->genderRatios = [];
 		$this->moves = [];
 		$this->stats = [];
 
@@ -48,6 +55,22 @@ final class AdvancedPokemonSearchIndexModel
 			$this->abilities[] = [
 				'identifier' => $ability['identifier'],
 				'name' => $ability['name'],
+			];
+		}
+
+		$eggGroups = $this->dexEggGroupRepository->getAll($languageId);
+		foreach ($eggGroups as $eggGroup) {
+			$this->eggGroups[] = [
+				'identifier' => $eggGroup->getIdentifier(),
+				'name' => $eggGroup->getName(),
+			];
+		}
+
+		$genderRatios = GenderRatio::getAll();
+		foreach ($genderRatios as $genderRatio) {
+			$this->genderRatios[] = [
+				'value' => $genderRatio->value(),
+				'description' => $genderRatio->getDescription(),
 			];
 		}
 
@@ -74,6 +97,16 @@ final class AdvancedPokemonSearchIndexModel
 	public function getAbilities() : array
 	{
 		return $this->abilities;
+	}
+
+	public function getEggGroups() : array
+	{
+		return $this->eggGroups;
+	}
+
+	public function getGenderRatios() : array
+	{
+		return $this->genderRatios;
 	}
 
 	public function getMoves() : array

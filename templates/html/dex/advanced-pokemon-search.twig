@@ -48,6 +48,54 @@
 		</div>
 
 		<div class="advanced-search__section">
+			<div class="advanced-search__section-title" @click="toggleBreedingFilters">
+				<template v-if="!showCategoryFilters">&#9654;</template>
+				<template v-if="showCategoryFilters">&#9660;</template>
+				Breeding
+			</div>
+			<div class="advanced-search__section-content" v-if="showBreedingFilters">
+				<template v-for="i in maxEggGroupsLength">
+					<label class="advanced-search__can-learn-line">
+						<span class="advanced-search__can-learn-text">Egg Group {{ i }}:</span>
+
+						<input type="text" v-model.trim="eggGroupNames[i - 1]" list="egg-group-names"
+							@input="onChangeEggGroupName(i - 1)"
+						>
+
+						<datalist id="egg-group-names">
+							<option v-for="e in eggGroups" :key="e.identifier" :value="e.name"></option>
+						</datalist>
+
+						<img class="advanced-search__x" src="/images/porydex/x.png" @click="clearEggGroupName(i - 1)">
+
+						<a v-if="selectedEggGroups[i - 1] !== null" class="dex-link"
+							:href="'/dex/' + versionGroup.identifier + '/egg-groups/' + selectedEggGroups[i - 1].identifier" target="_blank"
+						>{{ selectedEggGroups[i - 1].name }}</a>
+
+						<span v-if="selectedEggGroups[i - 1] === null" class="advanced-search__no-selection">No Egg Group selected</span>
+					</label>
+					<label class="advanced-search__can-learn-line" v-if="i === 1">
+						<select v-model="eggGroupsOperator">
+							<option>and</option>
+							<option>or</option>
+						</select>
+					</label>
+				</template>
+
+				<label class="advanced-search__can-learn-line">
+					<span class="advanced-search__can-learn-text">Gender Ratio:</span>
+					<select style="display: block;" v-model="genderRatiosOperator">
+						<option value="any">Any of these</option>
+						<option value="none">None of these</option>
+					</select>
+				</label>
+				<label style="display: block;" v-for="g in genderRatios" :key="g.value">
+					<input type="checkbox" v-model="selectedGenderRatios" :value="g.value"> {{ g.description }}
+				</label>
+			</div>
+		</div>
+
+		<div class="advanced-search__section">
 			<div style="font-weight: bold;">Can learn these moves:</div>
 			<div class="advanced-search__can-learn-content">
 				<label class="advanced-search__can-learn-line" v-for="i in maxMovesetLength">

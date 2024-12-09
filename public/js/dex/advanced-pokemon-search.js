@@ -17,15 +17,28 @@ const app = createApp({
 			breadcrumbs: [],
 			versionGroups: [],
 			abilities: [],
+			eggGroups: [],
+			genderRatios: [],
 			moves: [],
 			stats: [],
 
 			abilityName: '',
 			selectedAbility: null,
+
+			showBreedingFilters: false,
+			maxEggGroupsLength: 2,
+			eggGroupNames: [],
+			selectedEggGroups: [],
+			eggGroupsOperator: 'or',
+
+			selectedGenderRatios: [],
+			genderRatiosOperator: 'any',
+
 			maxMovesetLength: 4,
 			moveNames: [],
 			selectedMoves: [],
 			includeTransferMoves: false,
+
 			searchHasBeenDone: false,
 			joinCharacter: '.',
 
@@ -40,6 +53,19 @@ const app = createApp({
 			}
 
 			return this.abilities.filter(a => a.name.toLowerCase().includes(this.abilityName.toLowerCase()));
+		},
+		filteredEggGroups() {
+			const filteredEggGroups = [];
+
+			for (let i = 0; i < this.maxEggGroupsLength; i++) {
+				if (this.eggGroupNames[i]) {
+					filteredEggGroups[i] = this.eggGroups.filter(e => e.name.toLowerCase().includes(this.eggGroupNames[i].toLowerCase()));
+				} else {
+					filteredEggGroups[i] = this.eggGroups;
+				}
+			}
+
+			return filteredEggGroups;
 		},
 		filteredMoves() {
 			const filteredMoves = [];
@@ -60,6 +86,21 @@ const app = createApp({
 			if (this.selectedAbility !== null) {
 				const ability = this.selectedAbility.identifier;
 				queryParams.push(`ability=${encodeURIComponent(ability)}`);
+			}
+
+			const selectedEggGroups = this.selectedEggGroups.filter(e => e !== null);
+			if (selectedEggGroups.length > 0) {
+				const eggGroupsJoined = selectedEggGroups.map(e => e.identifier).join(this.joinCharacter);
+				queryParams.push(`eggGroups=${encodeURIComponent(eggGroupsJoined)}`);
+				if (selectedEggGroups.length > 1) {
+					queryParams.push(`eggGroupsOperator=${encodeURIComponent(this.eggGroupsOperator)}`);
+				}
+			}
+
+			if (this.selectedGenderRatios.length > 0) {
+				const genderRatiosJoined = this.selectedGenderRatios.join(this.joinCharacter);
+				queryParams.push(`genderRatios=${encodeURIComponent(genderRatiosJoined)}`);
+				queryParams.push(`genderRatiosOperator=${encodeURIComponent(this.genderRatiosOperator)}`);
 			}
 
 			const selectedMoves = this.selectedMoves.filter(m => m !== null);
@@ -95,8 +136,15 @@ const app = createApp({
 				this.breadcrumbs = data.breadcrumbs;
 				this.versionGroups = data.versionGroups;
 				this.abilities = data.abilities;
+				this.eggGroups = data.eggGroups;
+				this.genderRatios = data.genderRatios;
 				this.moves = data.moves;
 				this.stats = data.stats;
+			}
+
+			for (let i = 0; i < this.maxEggGroupsLength; i++) {
+				this.eggGroupNames[i] = '';
+				this.selectedEggGroups[i] = null;
 			}
 
 			for (let i = 0; i < this.maxMovesetLength; i++) {
@@ -106,6 +154,9 @@ const app = createApp({
 
 			const includeTransferMoves = window.localStorage.getItem('dexPokemonShowTransferMoves') ?? 'false';
 			this.includeTransferMoves = JSON.parse(includeTransferMoves);
+
+			const showBreedingFilters = window.localStorage.getItem('pokemonSearchShowBreedingFilters') ?? 'false';
+			this.showBreedingFilters = JSON.parse(showBreedingFilters);
 
 			if (url.searchParams.size) {
 				this.readUrlAndSearch();
@@ -124,6 +175,32 @@ const app = createApp({
 					this.selectedAbility = exactAbility;
 					this.abilityName = exactAbility.name;
 				}
+			}
+
+			const eggGroups = searchParams.get('eggGroups');
+			if (eggGroups) {
+				let i = 0;
+				eggGroups.split(this.joinCharacter).forEach(eIdentifier => {
+					if (i >= this.maxEggGroupsLength) {
+						return;
+					}
+
+					const exactEggGroup = this.eggGroups.find(e => e.identifier === eIdentifier);
+					if (exactEggGroup) {
+						this.selectedEggGroups[i] = exactEggGroup;
+						this.eggGroupNames[i] = exactEggGroup.name;
+						i++;
+					}
+				});
+			}
+
+			const genderRatios = searchParams.get('genderRatios');
+			if (genderRatios) {
+				genderRatios.split(this.joinCharacter).forEach(g => {
+					this.selectedGenderRatios.push(g);
+				});
+				const genderRatiosOperator = searchParams.get('genderRatiosOperator');
+				this.genderRatiosOperator = genderRatiosOperator ? genderRatiosOperator : 'any';
 			}
 
 			const moves = searchParams.get('moves');
@@ -173,6 +250,32 @@ const app = createApp({
 			this.onChangeAbilityName();
 		},
 
+		toggleBreedingFilters() {
+			this.showBreedingFilters = !this.showBreedingFilters;
+			window.localStorage.setItem('pokemonSearchShowBreedingFilters', this.showBreedingFilters);
+		},
+		onChangeEggGroupName(i) {
+			if (this.eggGroupNames[i] === '') {
+				this.selectedEggGroups[i] = null;
+				return;
+			}
+
+			const exactEggGroup = this.filteredEggGroups[i].find(e => e.name.toLowerCase() === this.eggGroupNames[i].toLowerCase());
+			if (exactEggGroup) {
+				this.selectedEggGroups[i] = exactEggGroup;
+				return;
+			}
+
+			if (this.filteredEggGroups[i].length === 1) {
+				this.selectedEggGroups[i] = this.filteredEggGroups[i][0];
+				return;
+			}
+		},
+		clearEggGroupName(i) {
+			this.eggGroupNames[i] = '';
+			this.onChangeEggGroupName(i);
+		},
+
 		onChangeMoveName(i) {
 			if (this.moveNames[i] === '') {
 				this.selectedMoves[i] = null;
@@ -210,6 +313,14 @@ const app = createApp({
 			const url = new URL(window.location);
 
 			// TODO: Maybe turn this into a computed function?
+			const eggGroupIdentifiers = [];
+			for (let i = 0; i < this.maxEggGroupLength; i++) {
+				if (this.selectedEggGroups[i] !== null) {
+					eggGroupIdentifiers.push(this.selectedEggGroups[i].identifier);
+				}
+			}
+
+			// TODO: Maybe turn this into a computed function?
 			const moveIdentifiers = [];
 			for (let i = 0; i < this.maxMovesetLength; i++) {
 				if (this.selectedMoves[i] !== null) {
@@ -228,6 +339,10 @@ const app = createApp({
 					abilityIdentifier: this.selectedAbility !== null
 						? this.selectedAbility.identifier
 						: '',
+					eggGroupIdentifiers: eggGroupIdentifiers,
+					eggGroupsOperator: this.eggGroupsOperator,
+					genderRatios: this.selectedGenderRatios,
+					genderRatiosOperator: this.genderRatiosOperator,
 					moveIdentifiers: moveIdentifiers,
 					includeTransferMoves: this.versionGroup.hasTransferMoves && this.includeTransferMoves,
 				}),

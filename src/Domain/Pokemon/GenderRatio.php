@@ -9,6 +9,11 @@ final readonly class GenderRatio
 		private int $value,
 	) {}
 
+	public function value(): int
+	{
+		return $this->value;
+	}
+
 	public function getIcon(): string
 	{
 		return "$this->value.png";
