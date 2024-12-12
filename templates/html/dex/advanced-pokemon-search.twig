@@ -28,7 +28,30 @@
 
 	<template v-if="loaded">
 		<h1 class="dex-page__title">Advanced Pokémon Search</h1>
+
 		<div class="advanced-search__section advanced-search__section--first">
+			<div class="advanced-search__section-title" @click="toggleTypeFilters">
+				<template v-if="!showTypeFilters">&#9654;</template>
+				<template v-if="showTypeFilters">&#9660;</template>
+				Types
+			</div>
+			<div class="advanced-search__section-content" v-if="showTypeFilters">
+				<label class="advanced-search__types">
+					<span class="advanced-search__types-text">Types:</span>
+					<select v-model="typesOperator">
+						<option value="both" :disabled="selectedTypes.length > 2">Both of these</option>
+						<option value="any">Any of these</option>
+					</select>
+				</label>
+				<label class="advanced-search__type" v-for="t in types" :key="t.identifier">
+					<input type="checkbox" v-model="selectedTypes" :value="t.identifier"
+						@change="onChangeSelectedTypes"
+					> {{ t.name }}
+				</label>
+			</div>
+		</div>
+
+		<div class="advanced-search__section">
 			<div class="advanced-search__section-title" @click="toggleAbilityFilters">
 				<template v-if="!showAbilityFilters">&#9654;</template>
 				<template v-if="showAbilityFilters">&#9660;</template>
@@ -63,8 +86,8 @@
 					<label class="advanced-search__egg-groups">
 						<span class="advanced-search__egg-groups-text">Egg Groups:</span>
 						<select v-model="eggGroupsOperator">
-							<option value="and" :disabled="selectedEggGroups.length > 2">Both of these</option>
-							<option value="or">Any of these</option>
+							<option value="both" :disabled="selectedEggGroups.length > 2">Both of these</option>
+							<option value="any">Any of these</option>
 						</select>
 					</label>
 					<label class="advanced-search__egg-group" v-for="e in eggGroups" :key="e.identifier">

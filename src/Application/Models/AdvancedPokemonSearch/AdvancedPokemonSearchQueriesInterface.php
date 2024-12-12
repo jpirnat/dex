@@ -9,10 +9,18 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\GenderRatio;
+use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface AdvancedPokemonSearchQueriesInterface
 {
+	/**
+	 * Get all type group ids, indexed by identifier.
+	 *
+	 * @return TypeId[] Indexed by identifier.
+	 */
+	public function getTypeIdentifiersToIds() : array;
+
 	/**
 	 * Get all egg group ids, indexed by identifier.
 	 *
@@ -30,6 +38,7 @@ interface AdvancedPokemonSearchQueriesInterface
 	/**
 	 * Get dex Pokémon for this advanced search.
 	 *
+	 * @param TypeId[] $typeIds
 	 * @param EggGroupId[] $eggGroupIds
 	 * @param GenderRatio[] $genderRatios
 	 * @param MoveId[] $moveIds
@@ -38,6 +47,8 @@ interface AdvancedPokemonSearchQueriesInterface
 	 */
 	public function search(
 		VersionGroupId $versionGroupId,
+		array $typeIds,
+		string $typesOperator,
 		?AbilityId $abilityId,
 		array $eggGroupIds,
 		string $eggGroupsOperator,

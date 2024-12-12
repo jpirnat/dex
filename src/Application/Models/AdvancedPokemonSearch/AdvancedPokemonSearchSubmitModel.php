@@ -27,12 +27,15 @@ final class AdvancedPokemonSearchSubmitModel
 	/**
 	 * Set data for the advanced Pokémon search page.
 	 *
+	 * @param string[] $typeIdentifiers
 	 * @param string[] $eggGroupIdentifiers
 	 * @param string[] $genderRatios
 	 * @param string[] $moveIdentifiers
 	 */
 	public function setData(
 		string $vgIdentifier,
+		array $typeIdentifiers,
+		string $typesOperator,
 		string $abilityIdentifier,
 		array $eggGroupIdentifiers,
 		string $eggGroupsOperator,
@@ -48,8 +51,16 @@ final class AdvancedPokemonSearchSubmitModel
 			return;
 		}
 
+		$typeIdentifiersToIds = $this->queries->getTypeIdentifiersToIds();
 		$eggGroupIdentifiersToIds = $this->queries->getEggGroupIdentifiersToIds();
 		$moveIdentifiersToIds = $this->queries->getMoveIdentifiersToIds();
+
+		$typeIds = [];
+		foreach ($typeIdentifiers as $typeIdentifier) {
+			if (isset($typeIdentifiersToIds[$typeIdentifier])) {
+				$typeIds[] = $typeIdentifiersToIds[$typeIdentifier];
+			}
+		}
 
 		$abilityId = null;
 		if ($abilityIdentifier) {
@@ -84,6 +95,8 @@ final class AdvancedPokemonSearchSubmitModel
 
 		$this->pokemons = $this->queries->search(
 			$versionGroupId,
+			$typeIds,
+			$typesOperator,
 			$abilityId,
 			$eggGroupIds,
 			$eggGroupsOperator,

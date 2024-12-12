@@ -10,10 +10,12 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\GenderRatio;
 use Jp\Dex\Domain\Stats\DexStatRepositoryInterface;
+use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\GenerationId;
 
 final class AdvancedPokemonSearchIndexModel
 {
+	private array $types = [];
 	private array $abilities = [];
 	private array $eggGroups = [];
 	private array $genderRatios = [];
@@ -23,6 +25,7 @@ final class AdvancedPokemonSearchIndexModel
 
 	public function __construct(
 		private readonly VersionGroupModel $versionGroupModel,
+		private readonly DexTypeRepositoryInterface $dexTypeRepository,
 		private readonly DexAbilityRepositoryInterface $dexAbilityRepository,
 		private readonly DexEggGroupRepositoryInterface $dexEggGroupRepository,
 		private readonly DexMoveRepositoryInterface $dexMoveRepository,
@@ -37,6 +40,7 @@ final class AdvancedPokemonSearchIndexModel
 		string $vgIdentifier,
 		LanguageId $languageId,
 	) : void {
+		$this->types = [];
 		$this->abilities = [];
 		$this->eggGroups = [];
 		$this->genderRatios = [];
@@ -46,6 +50,17 @@ final class AdvancedPokemonSearchIndexModel
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$this->versionGroupModel->setSinceGeneration(new GenerationId(1));
+
+		$types = $this->dexTypeRepository->getMainByVersionGroup(
+			$versionGroupId,
+			$languageId,
+		);
+		foreach ($types as $type) {
+			$this->types[] = [
+				'identifier' => $type->getIdentifier(),
+				'name' => $type->getName(),
+			];
+		}
 
 		$abilities = $this->dexAbilityRepository->getByVersionGroup(
 			$versionGroupId,
@@ -92,6 +107,11 @@ final class AdvancedPokemonSearchIndexModel
 	public function getVersionGroupModel() : VersionGroupModel
 	{
 		return $this->versionGroupModel;
+	}
+
+	public function getTypes() : array
+	{
+		return $this->types;
 	}
 
 	public function getAbilities() : array

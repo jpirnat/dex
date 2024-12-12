@@ -23,6 +23,7 @@ final readonly class AdvancedPokemonSearchIndexView
 		$versionGroup = $versionGroupModel->getVersionGroup();
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
+		$types = $this->advancedPokemonSearchIndexModel->getTypes();
 		$abilities = $this->advancedPokemonSearchIndexModel->getAbilities();
 		$eggGroups = $this->advancedPokemonSearchIndexModel->getEggGroups();
 		$genderRatios = $this->advancedPokemonSearchIndexModel->getGenderRatios();
@@ -55,6 +56,7 @@ final readonly class AdvancedPokemonSearchIndexView
 				'breadcrumbs' => $breadcrumbs,
 				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
+				'types' => $types,
 				'abilities' => $abilities,
 				'eggGroups' => $eggGroups,
 				'genderRatios' => $genderRatios,

@@ -16,11 +16,16 @@ const app = createApp({
 			versionGroup: {},
 			breadcrumbs: [],
 			versionGroups: [],
+			types: [],
 			abilities: [],
 			eggGroups: [],
 			genderRatios: [],
 			moves: [],
 			stats: [],
+
+			showTypeFilters: false,
+			selectedTypes: [],
+			typesOperator: 'both',
 
 			showAbilityFilters: false,
 			abilityName: '',
@@ -28,7 +33,7 @@ const app = createApp({
 
 			showBreedingFilters: false,
 			selectedEggGroups: [],
-			eggGroupsOperator: 'or',
+			eggGroupsOperator: 'any',
 
 			selectedGenderRatios: [],
 			genderRatiosOperator: 'any',
@@ -69,6 +74,14 @@ const app = createApp({
 		},
 		queryParams() {
 			const queryParams = [];
+
+			if (this.selectedTypes.length > 0) {
+				const typesJoined = this.selectedTypes.join(this.joinCharacter);
+				queryParams.push(`types=${encodeURIComponent(typesJoined)}`);
+				if (this.selectedTypes.length > 1) {
+					queryParams.push(`typesOperator=${encodeURIComponent(this.typesOperator)}`);
+				}
+			}
 
 			if (this.selectedAbility !== null) {
 				const ability = this.selectedAbility.identifier;
@@ -121,6 +134,7 @@ const app = createApp({
 				this.versionGroup = data.versionGroup;
 				this.breadcrumbs = data.breadcrumbs;
 				this.versionGroups = data.versionGroups;
+				this.types = data.types;
 				this.abilities = data.abilities;
 				this.eggGroups = data.eggGroups;
 				this.genderRatios = data.genderRatios;
@@ -135,6 +149,9 @@ const app = createApp({
 
 			const includeTransferMoves = window.localStorage.getItem('dexPokemonShowTransferMoves') ?? 'false';
 			this.includeTransferMoves = JSON.parse(includeTransferMoves);
+
+			const showTypeFilters = window.localStorage.getItem('pokemonSearchShowTypeFilters') ?? 'false';
+			this.showTypeFilters = JSON.parse(showTypeFilters);
 
 			const showAbilityFilters = window.localStorage.getItem('pokemonSearchShowAbilityFilters') ?? 'false';
 			this.showAbilityFilters = JSON.parse(showAbilityFilters);
@@ -155,6 +172,15 @@ const app = createApp({
 			const url = new URL(window.location);
 			const searchParams = url.searchParams;
 
+			const types = searchParams.get('types');
+			if (types) {
+				types.split(this.joinCharacter).forEach(t => {
+					this.selectedTypes.push(t);
+				});
+				const typesOperator = searchParams.get('typesOperator');
+				this.typesOperator = typesOperator ? typesOperator : 'any';
+			}
+
 			const ability = searchParams.get('ability');
 			if (ability) {
 				const exactAbility = this.abilities.find(a => a.identifier === ability);
@@ -170,7 +196,7 @@ const app = createApp({
 					this.selectedEggGroups.push(e);
 				});
 				const eggGroupsOperator = searchParams.get('eggGroupsOperator');
-				this.eggGroupsOperator = eggGroupsOperator ? eggGroupsOperator : 'or';
+				this.eggGroupsOperator = eggGroupsOperator ? eggGroupsOperator : 'any';
 			}
 
 			const genderRatios = searchParams.get('genderRatios');
@@ -207,6 +233,16 @@ const app = createApp({
 			this.search();
 		},
 
+		toggleTypeFilters() {
+			this.showTypeFilters = !this.showTypeFilters;
+			window.localStorage.setItem('pokemonSearchShowTypeFilters', this.showTypeFilters);
+		},
+		onChangeSelectedTypes() {
+			if (this.selectedTypes.length > 2 && this.typesOperator === 'both') {
+				this.typesOperator = 'any';
+			}
+		},
+
 		toggleAbilityFilters() {
 			this.showAbilityFilters = !this.showAbilityFilters;
 			window.localStorage.setItem('pokemonSearchShowAbilityFilters', this.showAbilityFilters);
@@ -238,8 +274,8 @@ const app = createApp({
 			window.localStorage.setItem('pokemonSearchShowBreedingFilters', this.showBreedingFilters);
 		},
 		onChangeSelectedEggGroups() {
-			if (this.selectedEggGroups.length > 2 && this.eggGroupsOperator === 'and') {
-				this.eggGroupsOperator = 'or';
+			if (this.selectedEggGroups.length > 2 && this.eggGroupsOperator === 'both') {
+				this.eggGroupsOperator = 'any';
 			}
 		},
 
@@ -299,6 +335,8 @@ const app = createApp({
 					'Content-Type': 'application/json',
 				}),
 				body: JSON.stringify({
+					typeIdentifiers: this.selectedTypes,
+					typesOperator: this.typesOperator,
 					abilityIdentifier: this.selectedAbility !== null
 						? this.selectedAbility.identifier
 						: '',

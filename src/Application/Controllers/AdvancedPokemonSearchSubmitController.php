@@ -22,6 +22,8 @@ final readonly class AdvancedPokemonSearchSubmitController
 		$data = json_decode($body, true);
 
 		$vgIdentifier = $request->getAttribute('vgIdentifier');
+		$typeIdentifiers = (array) ($data['typeIdentifiers'] ?? []);
+		$typesOperator = (string) ($data['typesOperator'] ?? '');
 		$abilityIdentifier = (string) ($data['abilityIdentifier'] ?? '');
 		$eggGroupIdentifiers = (array) ($data['eggGroupIdentifiers'] ?? []);
 		$eggGroupsOperator = (string) ($data['eggGroupsOperator'] ?? '');
@@ -33,6 +35,8 @@ final readonly class AdvancedPokemonSearchSubmitController
 
 		$this->advancedPokemonSearchSubmitModel->setData(
 			$vgIdentifier,
+			$typeIdentifiers,
+			$typesOperator,
 			$abilityIdentifier,
 			$eggGroupIdentifiers,
 			$eggGroupsOperator,

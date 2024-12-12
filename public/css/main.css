@@ -1142,11 +1142,13 @@ a.button {
 	align-items: center;
 }
 
+.advanced-search__type,
 .advanced-search__egg-group,
 .advanced-search__gender-ratio {
 	display: block;
 }
 
+.advanced-search__types-text,
 .advanced-search__ability-text,
 .advanced-search__egg-groups-text,
 .advanced-search__gender-ratio-text,

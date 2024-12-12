@@ -10,6 +10,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\DexPokemon;
 use Jp\Dex\Domain\Pokemon\GenderRatio;
+use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
@@ -19,6 +20,30 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 		private DatabaseDexPokemonRepository $dexPokemonRepository,
 		private PDO $db,
 	) {}
+
+	/**
+	 * Get all type group ids, indexed by identifier.
+	 *
+	 * @return TypeId[] Indexed by identifier.
+	 */
+	public function getTypeIdentifiersToIds() : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`identifier`,
+				`id`
+			FROM `types`'
+		);
+		$stmt->execute();
+
+		$typeIds = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$typeIds[$result['identifier']] = new TypeId($result['id']);
+		}
+
+		return $typeIds;
+	}
 
 	/**
 	 * Get all egg group ids, indexed by identifier.
@@ -71,6 +96,7 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 	/**
 	 * Get dex Pokémon for this advanced search.
 	 *
+	 * @param TypeId[] $typeIds
 	 * @param EggGroupId[] $eggGroupIds
 	 * @param GenderRatio[] $genderRatios
 	 * @param MoveId[] $moveIds
@@ -79,6 +105,8 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 	 */
 	public function search(
 		VersionGroupId $versionGroupId,
+		array $typeIds,
+		string $typesOperator,
 		?AbilityId $abilityId,
 		array $eggGroupIds,
 		string $eggGroupsOperator,
@@ -94,6 +122,22 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 		$whereClauses = [];
 		$whereClauses[] = "`vp`.`version_group_id` = $versionGroupId";
 
+		if ($typeIds) {
+			$typeClauses = [];
+			foreach ($typeIds as $typeId) {
+				$typeId = $typeId->value();
+				$typeClauses[] = "$typeId IN (`vp`.`type1_id`, `type2_id`)";
+			}
+
+			$andOr = match ($typesOperator) {
+				'both' => 'AND',
+				'any' => 'OR',
+				default => 'OR',
+			};
+			$typeClauses = implode(" $andOr ", $typeClauses);
+			$whereClauses[] = "($typeClauses)";
+		}
+
 		if ($abilityId) {
 			$abilityId = $abilityId->value();
 			$whereClauses[] = "$abilityId IN (`vp`.`ability1_id`, `vp`.`ability2_id`, `vp`.`ability3_id`)";
@@ -107,8 +151,8 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 			}
 
 			$andOr = match ($eggGroupsOperator) {
-				'and' => 'AND',
-				'or' => 'OR',
+				'both' => 'AND',
+				'any' => 'OR',
 				default => 'OR',
 			};
 			$eggGroupClauses = implode(" $andOr ", $eggGroupClauses);
