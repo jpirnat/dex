@@ -28,10 +28,15 @@
 
 	<template v-if="loaded">
 		<h1 class="dex-page__title">Advanced Pokémon Search</h1>
-		<div class="advanced-search__section">
-			<div class="advanced-search__can-learn-content">
-				<label class="advanced-search__can-learn-line">
-					<span class="advanced-search__can-learn-text">Can have this Ability:</span>
+		<div class="advanced-search__section advanced-search__section--first">
+			<div class="advanced-search__section-title" @click="toggleAbilityFilters">
+				<template v-if="!showAbilityFilters">&#9654;</template>
+				<template v-if="showAbilityFilters">&#9660;</template>
+				Ability
+			</div>
+			<div class="advanced-search__section-content" v-if="showAbilityFilters">
+				<label class="advanced-search__ability">
+					<span class="advanced-search__ability-text">Can have this Ability:</span>
 					<input type="text" v-model.trim="abilityName" list="ability-names"
 						@input="onChangeAbilityName"
 					>
@@ -49,74 +54,70 @@
 
 		<div class="advanced-search__section">
 			<div class="advanced-search__section-title" @click="toggleBreedingFilters">
-				<template v-if="!showCategoryFilters">&#9654;</template>
-				<template v-if="showCategoryFilters">&#9660;</template>
+				<template v-if="!showBreedingFilters">&#9654;</template>
+				<template v-if="showBreedingFilters">&#9660;</template>
 				Breeding
 			</div>
-			<div class="advanced-search__section-content" v-if="showBreedingFilters">
-				<template v-for="i in maxEggGroupsLength">
-					<label class="advanced-search__can-learn-line">
-						<span class="advanced-search__can-learn-text">Egg Group {{ i }}:</span>
-
-						<input type="text" v-model.trim="eggGroupNames[i - 1]" list="egg-group-names"
-							@input="onChangeEggGroupName(i - 1)"
-						>
-
-						<datalist id="egg-group-names">
-							<option v-for="e in eggGroups" :key="e.identifier" :value="e.name"></option>
-						</datalist>
-
-						<img class="advanced-search__x" src="/images/porydex/x.png" @click="clearEggGroupName(i - 1)">
-
-						<a v-if="selectedEggGroups[i - 1] !== null" class="dex-link"
-							:href="'/dex/' + versionGroup.identifier + '/egg-groups/' + selectedEggGroups[i - 1].identifier" target="_blank"
-						>{{ selectedEggGroups[i - 1].name }}</a>
-
-						<span v-if="selectedEggGroups[i - 1] === null" class="advanced-search__no-selection">No Egg Group selected</span>
-					</label>
-					<label class="advanced-search__can-learn-line" v-if="i === 1">
+			<div class="advanced-search__breeding" v-if="showBreedingFilters">
+				<div>
+					<label class="advanced-search__egg-groups">
+						<span class="advanced-search__egg-groups-text">Egg Groups:</span>
 						<select v-model="eggGroupsOperator">
-							<option>and</option>
-							<option>or</option>
+							<option value="and" :disabled="selectedEggGroups.length > 2">Both of these</option>
+							<option value="or">Any of these</option>
 						</select>
 					</label>
-				</template>
+					<label class="advanced-search__egg-group" v-for="e in eggGroups" :key="e.identifier">
+						<input type="checkbox" v-model="selectedEggGroups" :value="e.identifier"
+							@change="onChangeSelectedEggGroups"
+						> {{ e.name }}
+					</label>
+				</div>
 
-				<label class="advanced-search__can-learn-line">
-					<span class="advanced-search__can-learn-text">Gender Ratio:</span>
-					<select style="display: block;" v-model="genderRatiosOperator">
-						<option value="any">Any of these</option>
-						<option value="none">None of these</option>
-					</select>
-				</label>
-				<label style="display: block;" v-for="g in genderRatios" :key="g.value">
-					<input type="checkbox" v-model="selectedGenderRatios" :value="g.value"> {{ g.description }}
-				</label>
+				<div>
+					<label class="advanced-search__gender-ratio">
+						<span class="advanced-search__gender-ratio-text">Gender Ratio:</span>
+						<select v-model="genderRatiosOperator">
+							<option value="any">Any of these</option>
+							<option value="none">None of these</option>
+						</select>
+					</label>
+					<label class="advanced-search__gender-ratio" v-for="g in genderRatios" :key="g.value">
+						<input type="checkbox" v-model="selectedGenderRatios" :value="g.value"> {{ g.description }}
+					</label>
+				</div>
 			</div>
 		</div>
 
 		<div class="advanced-search__section">
-			<div style="font-weight: bold;">Can learn these moves:</div>
-			<div class="advanced-search__can-learn-content">
-				<label class="advanced-search__can-learn-line" v-for="i in maxMovesetLength">
-					<span class="advanced-search__can-learn-text">Move {{ i }}:</span>
-
-					<input type="text" v-model.trim="moveNames[i - 1]" list="move-names"
-						@input="onChangeMoveName(i - 1)"
-					>
-
-					<datalist id="move-names">
-						<option v-for="m in moves" :key="m.identifier" :value="m.name"></option>
-					</datalist>
-
-					<img class="advanced-search__x" src="/images/porydex/x.png" @click="clearMoveName(i - 1)">
-
-					<a v-if="selectedMoves[i - 1] !== null" class="dex-link"
-						:href="'/dex/' + versionGroup.identifier + '/moves/' + selectedMoves[i - 1].identifier" target="_blank"
-					>{{ selectedMoves[i - 1].name }}</a>
-
-					<span v-if="selectedMoves[i - 1] === null" class="advanced-search__no-selection">No Move selected</span>
-				</label>
+			<div class="advanced-search__section-title" @click="toggleMoveFilters">
+				<template v-if="!showMoveFilters">&#9654;</template>
+				<template v-if="showMoveFilters">&#9660;</template>
+				Moves
+			</div>
+			<div class="advanced-search__section-content" v-if="showMoveFilters">
+				<div>Search for Pokémon that can learn all of these moves:</div>
+				<div class="advanced-search__moves">
+					<label class="advanced-search__move" v-for="i in maxMovesetLength">
+						<span class="advanced-search__move-text">Move {{ i }}:</span>
+	
+						<input type="text" v-model.trim="moveNames[i - 1]" list="move-names"
+							@input="onChangeMoveName(i - 1)"
+						>
+	
+						<datalist id="move-names">
+							<option v-for="m in moves" :key="m.identifier" :value="m.name"></option>
+						</datalist>
+	
+						<img class="advanced-search__x" src="/images/porydex/x.png" @click="clearMoveName(i - 1)">
+	
+						<a v-if="selectedMoves[i - 1] !== null" class="dex-link"
+							:href="'/dex/' + versionGroup.identifier + '/moves/' + selectedMoves[i - 1].identifier" target="_blank"
+						>{{ selectedMoves[i - 1].name }}</a>
+	
+						<span v-if="selectedMoves[i - 1] === null" class="advanced-search__no-selection">No Move selected</span>
+					</label>
+				</div>
 
 				<label class="advanced-search__include-trade" v-if="versionGroup.hasTransferMoves && selectedPokemon !== null">
 					<input type="checkbox" name="includeTransferMoves" v-model="includeTransferMoves"
@@ -134,7 +135,7 @@
 		<template v-if="searchHasBeenDone">
 			<h2 class="dex-section__title">Search Results</h2>
 			<div v-if="pokemons.length === 0">No Results</div>
-			<dex-pokemons-table v-if="moves.length > 0"
+			<dex-pokemons-table v-if="pokemons.length > 0"
 				:pokemons="pokemons"
 				:version-group="versionGroup"
 				:stats="stats"
@@ -143,65 +144,6 @@
 		</template>
 	</template>
 </div>
-<style>
-.advanced-search__section--first {
-	border-top: 1px solid black;
-}
-.advanced-search__section {
-	border-bottom: 1px solid black;
-}
-.advanced-search__section-title {
-	padding: 10px 0;
-	font-weight: bold;
-	cursor: pointer;
-}
-.advanced-search__section-content {
-	padding-bottom: 10px;
-}
-
-.advanced-search__flags {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-.advanced-search__flag {
-	margin: 5px 0;
-	display: flex;
-	align-items: baseline;
-	gap: 5px;
-	width: 300px;
-}
-
-.advanced-search__can-learn-content {
-	padding: 10px 0;
-}
-.advanced-search__can-learn-line {
-	display: flex;
-	align-items: center;
-}
-.advanced-search__can-learn-text {
-	margin-right: 5px;
-	font-weight: bold;
-}
-.advanced-search__x {
-	width: 24px;
-	cursor: pointer;
-	margin-right: 10px;
-}
-.advanced-search__no-selection {
-	font-style: italic;
-}
-
-.advanced-search__include-trade {
-	cursor: pointer;
-}
-
-.advanced-search__search-button {
-	margin: 20px 0;
-	display: flex;
-	justify-content: center;
-}
-</style>
 
 {% endverbatim %}
 {% endblock %}

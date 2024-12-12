@@ -1064,6 +1064,98 @@ a.button {
 }
 
 
+/* Advanced Search */
+
+.advanced-search__section--first {
+	border-top: 1px solid black;
+}
+.advanced-search__section {
+	border-bottom: 1px solid black;
+}
+.advanced-search__section-title {
+	padding: 10px 0;
+	font-weight: bold;
+	cursor: pointer;
+}
+.advanced-search__section-content {
+	padding-bottom: 10px;
+}
+
+.advanced-search__flags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.advanced-search__flag {
+	margin: 5px 0;
+	display: flex;
+	align-items: baseline;
+	gap: 5px;
+	width: 300px;
+}
+
+.advanced-search__can-learn-content {
+	padding: 10px 0;
+}
+.advanced-search__can-learn-line {
+	display: flex;
+	align-items: center;
+}
+.advanced-search__can-learn-text {
+	margin-right: 5px;
+	font-weight: bold;
+}
+
+.advanced-search__x {
+	width: 24px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.advanced-search__no-selection {
+	font-style: italic;
+}
+
+.advanced-search__include-trade {
+	cursor: pointer;
+}
+
+.advanced-search__search-button {
+	margin: 20px 0;
+	display: flex;
+	justify-content: center;
+}
+
+
+.advanced-search__breeding {
+	display: flex;
+	gap: 20px;
+	padding-bottom: 10px;
+}
+
+.advanced-search__moves {
+	margin: 10px 0;
+}
+
+.advanced-search__ability,
+.advanced-search__move {
+	display: flex;
+	align-items: center;
+}
+
+.advanced-search__egg-group,
+.advanced-search__gender-ratio {
+	display: block;
+}
+
+.advanced-search__ability-text,
+.advanced-search__egg-groups-text,
+.advanced-search__gender-ratio-text,
+.advanced-search__move-text {
+	margin-right: 5px;
+	font-weight: bold;
+}
+
+
 /* IV calculator */
 
 .iv-calculator__block {

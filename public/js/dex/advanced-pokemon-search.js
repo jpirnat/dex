@@ -22,18 +22,18 @@ const app = createApp({
 			moves: [],
 			stats: [],
 
+			showAbilityFilters: false,
 			abilityName: '',
 			selectedAbility: null,
 
 			showBreedingFilters: false,
-			maxEggGroupsLength: 2,
-			eggGroupNames: [],
 			selectedEggGroups: [],
 			eggGroupsOperator: 'or',
 
 			selectedGenderRatios: [],
 			genderRatiosOperator: 'any',
 
+			showMoveFilters: false,
 			maxMovesetLength: 4,
 			moveNames: [],
 			selectedMoves: [],
@@ -53,19 +53,6 @@ const app = createApp({
 			}
 
 			return this.abilities.filter(a => a.name.toLowerCase().includes(this.abilityName.toLowerCase()));
-		},
-		filteredEggGroups() {
-			const filteredEggGroups = [];
-
-			for (let i = 0; i < this.maxEggGroupsLength; i++) {
-				if (this.eggGroupNames[i]) {
-					filteredEggGroups[i] = this.eggGroups.filter(e => e.name.toLowerCase().includes(this.eggGroupNames[i].toLowerCase()));
-				} else {
-					filteredEggGroups[i] = this.eggGroups;
-				}
-			}
-
-			return filteredEggGroups;
 		},
 		filteredMoves() {
 			const filteredMoves = [];
@@ -88,11 +75,10 @@ const app = createApp({
 				queryParams.push(`ability=${encodeURIComponent(ability)}`);
 			}
 
-			const selectedEggGroups = this.selectedEggGroups.filter(e => e !== null);
-			if (selectedEggGroups.length > 0) {
-				const eggGroupsJoined = selectedEggGroups.map(e => e.identifier).join(this.joinCharacter);
+			if (this.selectedEggGroups.length > 0) {
+				const eggGroupsJoined = this.selectedEggGroups.join(this.joinCharacter);
 				queryParams.push(`eggGroups=${encodeURIComponent(eggGroupsJoined)}`);
-				if (selectedEggGroups.length > 1) {
+				if (this.selectedEggGroups.length > 1) {
 					queryParams.push(`eggGroupsOperator=${encodeURIComponent(this.eggGroupsOperator)}`);
 				}
 			}
@@ -142,11 +128,6 @@ const app = createApp({
 				this.stats = data.stats;
 			}
 
-			for (let i = 0; i < this.maxEggGroupsLength; i++) {
-				this.eggGroupNames[i] = '';
-				this.selectedEggGroups[i] = null;
-			}
-
 			for (let i = 0; i < this.maxMovesetLength; i++) {
 				this.moveNames[i] = '';
 				this.selectedMoves[i] = null;
@@ -155,8 +136,14 @@ const app = createApp({
 			const includeTransferMoves = window.localStorage.getItem('dexPokemonShowTransferMoves') ?? 'false';
 			this.includeTransferMoves = JSON.parse(includeTransferMoves);
 
+			const showAbilityFilters = window.localStorage.getItem('pokemonSearchShowAbilityFilters') ?? 'false';
+			this.showAbilityFilters = JSON.parse(showAbilityFilters);
+
 			const showBreedingFilters = window.localStorage.getItem('pokemonSearchShowBreedingFilters') ?? 'false';
 			this.showBreedingFilters = JSON.parse(showBreedingFilters);
+
+			const showMoveFilters = window.localStorage.getItem('pokemonSearchShowMoveFilters') ?? 'false';
+			this.showMoveFilters = JSON.parse(showMoveFilters);
 
 			if (url.searchParams.size) {
 				this.readUrlAndSearch();
@@ -179,19 +166,11 @@ const app = createApp({
 
 			const eggGroups = searchParams.get('eggGroups');
 			if (eggGroups) {
-				let i = 0;
-				eggGroups.split(this.joinCharacter).forEach(eIdentifier => {
-					if (i >= this.maxEggGroupsLength) {
-						return;
-					}
-
-					const exactEggGroup = this.eggGroups.find(e => e.identifier === eIdentifier);
-					if (exactEggGroup) {
-						this.selectedEggGroups[i] = exactEggGroup;
-						this.eggGroupNames[i] = exactEggGroup.name;
-						i++;
-					}
+				eggGroups.split(this.joinCharacter).forEach(e => {
+					this.selectedEggGroups.push(e);
 				});
+				const eggGroupsOperator = searchParams.get('eggGroupsOperator');
+				this.eggGroupsOperator = eggGroupsOperator ? eggGroupsOperator : 'or';
 			}
 
 			const genderRatios = searchParams.get('genderRatios');
@@ -228,6 +207,10 @@ const app = createApp({
 			this.search();
 		},
 
+		toggleAbilityFilters() {
+			this.showAbilityFilters = !this.showAbilityFilters;
+			window.localStorage.setItem('pokemonSearchShowAbilityFilters', this.showAbilityFilters);
+		},
 		onChangeAbilityName() {
 			if (this.abilityName === '') {
 				this.selectedAbility = null;
@@ -254,28 +237,16 @@ const app = createApp({
 			this.showBreedingFilters = !this.showBreedingFilters;
 			window.localStorage.setItem('pokemonSearchShowBreedingFilters', this.showBreedingFilters);
 		},
-		onChangeEggGroupName(i) {
-			if (this.eggGroupNames[i] === '') {
-				this.selectedEggGroups[i] = null;
-				return;
-			}
-
-			const exactEggGroup = this.filteredEggGroups[i].find(e => e.name.toLowerCase() === this.eggGroupNames[i].toLowerCase());
-			if (exactEggGroup) {
-				this.selectedEggGroups[i] = exactEggGroup;
-				return;
-			}
-
-			if (this.filteredEggGroups[i].length === 1) {
-				this.selectedEggGroups[i] = this.filteredEggGroups[i][0];
-				return;
+		onChangeSelectedEggGroups() {
+			if (this.selectedEggGroups.length > 2 && this.eggGroupsOperator === 'and') {
+				this.eggGroupsOperator = 'or';
 			}
 		},
-		clearEggGroupName(i) {
-			this.eggGroupNames[i] = '';
-			this.onChangeEggGroupName(i);
-		},
 
+		toggleMoveFilters() {
+			this.showMoveFilters = !this.showMoveFilters;
+			window.localStorage.setItem('pokemonSearchShowMoveFilters', this.showMoveFilters);
+		},
 		onChangeMoveName(i) {
 			if (this.moveNames[i] === '') {
 				this.selectedMoves[i] = null;
@@ -313,14 +284,6 @@ const app = createApp({
 			const url = new URL(window.location);
 
 			// TODO: Maybe turn this into a computed function?
-			const eggGroupIdentifiers = [];
-			for (let i = 0; i < this.maxEggGroupsLength; i++) {
-				if (this.selectedEggGroups[i] !== null) {
-					eggGroupIdentifiers.push(this.selectedEggGroups[i].identifier);
-				}
-			}
-
-			// TODO: Maybe turn this into a computed function?
 			const moveIdentifiers = [];
 			for (let i = 0; i < this.maxMovesetLength; i++) {
 				if (this.selectedMoves[i] !== null) {
@@ -339,7 +302,7 @@ const app = createApp({
 					abilityIdentifier: this.selectedAbility !== null
 						? this.selectedAbility.identifier
 						: '',
-					eggGroupIdentifiers: eggGroupIdentifiers,
+					eggGroupIdentifiers: this.selectedEggGroups,
 					eggGroupsOperator: this.eggGroupsOperator,
 					genderRatios: this.selectedGenderRatios,
 					genderRatiosOperator: this.genderRatiosOperator,
