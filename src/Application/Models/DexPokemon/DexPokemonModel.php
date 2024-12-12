@@ -9,6 +9,7 @@ use Jp\Dex\Domain\EggGroups\EggGroupIdentifier;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\ExpandedDexPokemon;
 use Jp\Dex\Domain\Pokemon\ExpandedDexPokemonRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\GenderRatio;
 use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\VgPokemonNotFoundException;
@@ -98,13 +99,13 @@ final class DexPokemonModel
 	) : void {
 		$versionGroup = $this->versionGroupModel->getVersionGroup();
 		$eggGroups = $this->pokemon->getEggGroups();
-		$genderRatio = $this->pokemon->getGenderRatio();
+		$genderRatio = $this->pokemon->getGenderRatio()->value();
 
 		if (!$versionGroup->hasBreeding()
 			|| $eggGroups === []
 			|| $eggGroups[0]->getIdentifier() === EggGroupIdentifier::UNDISCOVERED
 			|| $eggGroups[0]->getIdentifier() === EggGroupIdentifier::DITTO
-			|| $genderRatio->value() === 255
+			|| $genderRatio === GenderRatio::GENDER_UNKNOWN
 		) {
 			return;
 		}
@@ -117,7 +118,15 @@ final class DexPokemonModel
 		);
 		$eggGroups = implode('.', $eggGroups);
 
-		$this->breedingPartnersSearchUrl = "/dex/$vgIdentifier/advanced-pokemon-search?eggGroups=$eggGroups&genderRatios=255&genderRatiosOperator=none";
+		$genderRatios = GenderRatio::GENDER_UNKNOWN;
+		if ($genderRatio === GenderRatio::MALE_ONLY) {
+			$genderRatios .= ".$genderRatio";
+		}
+		if ($genderRatio === GenderRatio::FEMALE_ONLY) {
+			$genderRatios .= ".$genderRatio";
+		}
+
+		$this->breedingPartnersSearchUrl = "/dex/$vgIdentifier/advanced-pokemon-search?eggGroups=$eggGroups&genderRatios=$genderRatios&genderRatiosOperator=none";
 	}
 
 
