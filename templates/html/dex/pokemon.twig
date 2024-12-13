@@ -163,7 +163,7 @@
 						<a :href="'/dex/' + versionGroup.identifier + '/egg-groups/' + e.identifier" class="dex-link">{{ e.name }}</a><template v-if="eIndex < pokemon.eggGroups.length - 1">, </template>
 					</template>
 				</div>
-				<div v-if="breedingPartnersSearchUrl">
+				<div class="dex-pokemon__breeding-partners" v-if="breedingPartnersSearchUrl">
 					(<a :href="breedingPartnersSearchUrl" class="dex-link">See compatible partners</a>)
 				</div>
 				<div>Gender Ratio: {{ pokemon.genderRatio.description }}</div>
@@ -206,6 +206,13 @@
 			:version-groups="learnsetVgs"
 			:methods="methods"
 		></dex-pokemon-moves>
+
+		<h2 class="dex-section__title">Tools/Links</h2>
+		<div>
+			<a class="dex-link dex-pokemon__link" :href="'/dex/' + versionGroup.identifier + '/tools/iv-calculator?pokemon=' + pokemon.identifier">IV Calculator</a>
+			<a class="dex-link dex-pokemon__link" :href="'/dex/' + versionGroup.identifier + '/tools/ev-calculator?pokemon=' + pokemon.identifier">EV Calculator</a>
+			<a class="dex-link dex-pokemon__link" :href="'/dex/' + versionGroup.identifier + '/tools/stat-calculator?pokemon=' + pokemon.identifier">Stat Calculator</a>
+		</div>
 	</template>
 </div>
 {% endverbatim %}

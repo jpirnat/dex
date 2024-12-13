@@ -757,6 +757,10 @@ a.button {
 	font-weight: bold;
 }
 
+.dex-pokemon__breeding-partners {
+	margin-left: 20px;
+}
+
 .dex-pokemon__ev-yield {
 	display: flex;
 	align-items: center;
@@ -821,6 +825,10 @@ a.button {
 
 .dex-pokemon__move-name {
 	border-left: 1px solid black;
+}
+
+.dex-pokemon__link {
+	display: block;
 }
 
 
