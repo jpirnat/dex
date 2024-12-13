@@ -202,6 +202,9 @@ export default {
 		},
 	},
 	watch: {
+		moves() {
+			this.currentPage = 1;
+		},
 		filterName() {
 			this.currentPage = 1;
 		},

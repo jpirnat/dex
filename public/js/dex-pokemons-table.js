@@ -292,6 +292,9 @@ export default {
 		},
 	},
 	watch: {
+		pokemons() {
+			this.currentPage = 1;
+		},
 		filterName() {
 			this.currentPage = 1;
 		},
