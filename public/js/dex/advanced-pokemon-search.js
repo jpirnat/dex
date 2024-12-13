@@ -72,6 +72,17 @@ const app = createApp({
 
 			return filteredMoves;
 		},
+		selectedMoveIdentifiers() {
+			const moveIdentifiers = [];
+
+			for (let i = 0; i < this.maxMovesetLength; i++) {
+				if (this.selectedMoves[i] !== null) {
+					moveIdentifiers.push(this.selectedMoves[i].identifier);
+				}
+			}
+
+			return moveIdentifiers;
+		},
 		queryParams() {
 			const queryParams = [];
 
@@ -319,14 +330,6 @@ const app = createApp({
 		async search() {
 			const url = new URL(window.location);
 
-			// TODO: Maybe turn this into a computed function?
-			const moveIdentifiers = [];
-			for (let i = 0; i < this.maxMovesetLength; i++) {
-				if (this.selectedMoves[i] !== null) {
-					moveIdentifiers.push(this.selectedMoves[i].identifier);
-				}
-			}
-
 			this.loading = true;
 			const response = await fetch(url.pathname, {
 				method: 'POST',
@@ -344,7 +347,7 @@ const app = createApp({
 					eggGroupsOperator: this.eggGroupsOperator,
 					genderRatios: this.selectedGenderRatios,
 					genderRatiosOperator: this.genderRatiosOperator,
-					moveIdentifiers: moveIdentifiers,
+					moveIdentifiers: this.selectedMoveIdentifiers,
 					includeTransferMoves: this.versionGroup.hasTransferMoves && this.includeTransferMoves,
 				}),
 			})
