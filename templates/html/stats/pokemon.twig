@@ -33,29 +33,34 @@
 		</ul>
 	</div>
 
-	<div class="rank-control" v-if="loaded">
-		<a v-if="prevRank" class="rank-control__rank dex-link"
-			:href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + prevRank.identifier"
-			v-tooltip="prevRank.name"
-		>
-			&#9668; #{{ prevRank.rank }} <img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + prevRank.icon" :alt="prevRank.name">
-		</a>
-		<span v-else class="rank-control__rank"></span>
-
-		<a v-if="nextRank" class="rank-control__rank dex-link"
-			:href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + nextRank.identifier"
-			v-tooltip="nextRank.name"
-		>
-			<img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + nextRank.icon" :alt="nextRank.name"> #{{ nextRank.rank }} &#9658;
-		</a>
-		<span v-else class="rank-control__rank"></span>
-	</div>
-
 	<div v-if="!loaded" class="dex-loader-container">
 		<div class="dex-loader"></div>
 	</div>
 
 	<template v-if="loaded">
+		<div class="rank-control">
+			<a v-if="prevRank" class="rank-control__rank dex-link"
+				:href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + prevRank.identifier"
+				v-tooltip="prevRank.name"
+			>
+				&#9668; #{{ prevRank.rank }} <img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + prevRank.icon" :alt="prevRank.name">
+			</a>
+			<span v-else class="rank-control__rank"></span>
+
+			<a v-if="nextRank" class="rank-control__rank dex-link"
+				:href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + nextRank.identifier"
+				v-tooltip="nextRank.name"
+			>
+				<img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + nextRank.icon" :alt="nextRank.name"> #{{ nextRank.rank }} &#9658;
+			</a>
+			<span v-else class="rank-control__rank"></span>
+		</div>
+
+		<div class="buttons-control">
+			<div class="space"></div>
+			<a class="button" :href="'/dex/' + versionGroup.identifier + '/pokemon/' + pokemon.identifier">View in Dex</a>
+		</div>
+
 		<div class="dex-pokemon__sprite-and-base-stats">
 			<div class="dex-pokemon__sprite-and-types">
 				<img v-if="pokemon.sprite" :src="'/images/pokemon/sprites/' + pokemon.sprite"
