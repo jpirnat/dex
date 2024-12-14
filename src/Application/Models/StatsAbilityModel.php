@@ -16,6 +16,8 @@ use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Usage\StatsAbilityPokemon;
 use Jp\Dex\Domain\Usage\StatsAbilityPokemonRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroup;
+use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class StatsAbilityModel
 {
@@ -24,6 +26,7 @@ final class StatsAbilityModel
 	private int $rating;
 	private string $abilityIdentifier;
 	private LanguageId $languageId;
+	private VersionGroup $versionGroup;
 
 	/** @var int[] $ratings */
 	private array $ratings = [];
@@ -39,6 +42,7 @@ final class StatsAbilityModel
 	public function __construct(
 		private readonly DateModel $dateModel,
 		private readonly FormatRepositoryInterface $formatRepository,
+		private readonly VersionGroupRepositoryInterface $vgRepository,
 		private readonly AbilityRepositoryInterface $abilityRepository,
 		private readonly RatingQueriesInterface $ratingQueries,
 		private readonly AbilityNameRepositoryInterface $abilityNameRepository,
@@ -68,6 +72,10 @@ final class StatsAbilityModel
 		$this->format = $this->formatRepository->getByIdentifier(
 			$formatIdentifier,
 			$languageId,
+		);
+
+		$this->versionGroup = $this->vgRepository->getById(
+			$this->format->getVersionGroupId()
 		);
 
 		// Get the previous month and the next month.
@@ -161,6 +169,11 @@ final class StatsAbilityModel
 	public function getDateModel() : DateModel
 	{
 		return $this->dateModel;
+	}
+
+	public function getVersionGroup() : VersionGroup
+	{
+		return $this->versionGroup;
 	}
 
 	/**

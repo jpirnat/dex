@@ -24,6 +24,8 @@ final readonly class StatsAbilityView
 		$format = $this->statsAbilityModel->getFormat();
 		$rating = $this->statsAbilityModel->getRating();
 
+		$versionGroup = $this->statsAbilityModel->getVersionGroup();
+
 		$formatter = $this->formatterFactory->createFor(
 			$this->statsAbilityModel->getLanguageId()
 		);
@@ -90,6 +92,9 @@ final readonly class StatsAbilityView
 				'nextMonth' => $nextMonth,
 				'ratings' => $this->statsAbilityModel->getRatings(),
 
+				'versionGroup' => [
+					'identifier' => $versionGroup->getIdentifier(),
+				],
 				'ability' => [
 					'identifier' => $this->statsAbilityModel->getAbilityIdentifier(),
 					'name' => $abilityName,

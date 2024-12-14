@@ -82,7 +82,7 @@ final class StatsPokemonModel
 		private readonly PokemonRepositoryInterface $pokemonRepository,
 		private readonly RatingQueriesInterface $ratingQueries,
 		private readonly StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository,
-		private readonly VersionGroupRepositoryInterface $versionGroupRepository,
+		private readonly VersionGroupRepositoryInterface $vgRepository,
 		private readonly GenerationRepositoryInterface $generationRepository,
 		private readonly MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		private readonly MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
@@ -166,7 +166,7 @@ final class StatsPokemonModel
 		);
 
 		// Get the format's version group and generation.
-		$this->versionGroup = $this->versionGroupRepository->getById($this->format->getVersionGroupId());
+		$this->versionGroup = $this->vgRepository->getById($this->format->getVersionGroupId());
 		$this->generation = $this->generationRepository->getById($this->versionGroup->getGenerationId());
 
 		// Get the moveset Pokémon record.

@@ -24,6 +24,7 @@ const app = createApp({
 			nextMonth: {},
 			ratings: [],
 
+			versionGroup: {},
 			ability: {},
 			speedName: '',
 			pokemons: [],
@@ -75,6 +76,7 @@ const app = createApp({
 
 			if (response.data) {
 				const data = response.data;
+
 				this.format = data.format;
 				this.rating = data.rating;
 				this.breadcrumbs = data.breadcrumbs;
@@ -82,6 +84,7 @@ const app = createApp({
 				this.thisMonth = data.thisMonth;
 				this.nextMonth = data.nextMonth;
 				this.ratings = data.ratings;
+				this.versionGroup = data.versionGroup;
 				this.ability = data.ability;
 				this.speedName = data.speedName;
 				this.pokemons = data.pokemons;

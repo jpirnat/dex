@@ -24,6 +24,8 @@ final readonly class StatsMoveView
 		$format = $this->statsMoveModel->getFormat();
 		$rating = $this->statsMoveModel->getRating();
 
+		$versionGroup = $this->statsMoveModel->getVersionGroup();
+
 		$formatter = $this->formatterFactory->createFor(
 			$this->statsMoveModel->getLanguageId()
 		);
@@ -90,6 +92,9 @@ final readonly class StatsMoveView
 				'nextMonth' => $nextMonth,
 				'ratings' => $this->statsMoveModel->getRatings(),
 
+				'versionGroup' => [
+					'identifier' => $versionGroup->getIdentifier(),
+				],
 				'move' => [
 					'identifier' => $this->statsMoveModel->getMoveIdentifier(),
 					'name' => $moveName,

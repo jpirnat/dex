@@ -16,6 +16,8 @@ use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Usage\StatsMovePokemon;
 use Jp\Dex\Domain\Usage\StatsMovePokemonRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroup;
+use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class StatsMoveModel
 {
@@ -24,6 +26,7 @@ final class StatsMoveModel
 	private int $rating;
 	private string $moveIdentifier;
 	private LanguageId $languageId;
+	private VersionGroup $versionGroup;
 
 	/** @var int[] $ratings */
 	private array $ratings = [];
@@ -39,6 +42,7 @@ final class StatsMoveModel
 	public function __construct(
 		private readonly DateModel $dateModel,
 		private readonly FormatRepositoryInterface $formatRepository,
+		private readonly VersionGroupRepositoryInterface $vgRepository,
 		private readonly MoveRepositoryInterface $moveRepository,
 		private readonly RatingQueriesInterface $ratingQueries,
 		private readonly MoveNameRepositoryInterface $moveNameRepository,
@@ -68,6 +72,10 @@ final class StatsMoveModel
 		$this->format = $this->formatRepository->getByIdentifier(
 			$formatIdentifier,
 			$languageId,
+		);
+
+		$this->versionGroup = $this->vgRepository->getById(
+			$this->format->getVersionGroupId()
 		);
 
 		// Get the previous month and the next month.
@@ -161,6 +169,11 @@ final class StatsMoveModel
 	public function getDateModel() : DateModel
 	{
 		return $this->dateModel;
+	}
+
+	public function getVersionGroup() : VersionGroup
+	{
+		return $this->versionGroup;
 	}
 
 	/**

@@ -39,7 +39,14 @@
 	</div>
 
 	<template v-if="loaded">
-		<p>{{ ability.name }}: {{ ability.description }}</p>
+		<div class="buttons-control">
+			<div class="space"></div>
+			<a class="button" :href="'/dex/' + versionGroup.identifier + '/abilities/' + ability.identifier">View in Dex</a>
+		</div>
+
+		<h1 class="dex-page__title">{{ ability.name }}</h1>
+
+		<p class="dex-ability__description">{{ ability.description }}</p>
 
 		<dex-pagination
 			v-model:current-page="currentPage"

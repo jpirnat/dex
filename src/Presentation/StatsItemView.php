@@ -24,6 +24,8 @@ final readonly class StatsItemView
 		$format = $this->statsItemModel->getFormat();
 		$rating = $this->statsItemModel->getRating();
 
+		$versionGroup = $this->statsItemModel->getVersionGroup();
+
 		$formatter = $this->formatterFactory->createFor(
 			$this->statsItemModel->getLanguageId()
 		);
@@ -90,6 +92,9 @@ final readonly class StatsItemView
 				'nextMonth' => $nextMonth,
 				'ratings' => $this->statsItemModel->getRatings(),
 
+				'versionGroup' => [
+					'identifier' => $versionGroup->getIdentifier(),
+				],
 				'item' => [
 					'identifier' => $this->statsItemModel->getItemIdentifier(),
 					'name' => $itemName,
