@@ -63,7 +63,7 @@ export default {
 						<img v-if="item.icon" class="dex-item-icon--small" :src="'/images/items/' + item.icon">
 					</td>
 					<td>
-						<a :href="'/stats/' + month + '/' + format + '/' + rating + '/items/' + item.identifier">
+						<a class="dex-link" :href="'/stats/' + month + '/' + format + '/' + rating + '/items/' + item.identifier">
 							{{ item.name }}
 						</a>
 					</td>

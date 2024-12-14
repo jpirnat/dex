@@ -65,7 +65,7 @@ export default {
 						<img v-if="teammate.icon" class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + teammate.icon" alt="">
 					</td>
 					<td>
-						<a :href="'/stats/' + month + '/' + format + '/' + rating + '/pokemon/' + teammate.identifier">
+						<a class="dex-link" :href="'/stats/' + month + '/' + format + '/' + rating + '/pokemon/' + teammate.identifier">
 							{{ teammate.name }}
 						</a>
 					</td>

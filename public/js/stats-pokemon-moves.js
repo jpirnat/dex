@@ -127,7 +127,7 @@ export default {
 					'stats-pokemon-move--hits-multiple': fieldSize > 1 && move.hitsMultiplePokemon,
 				}">
 					<td>
-						<a :href="'/stats/' + month + '/' + format + '/' + rating + '/moves/' + move.identifier">
+						<a class="dex-link" :href="'/stats/' + month + '/' + format + '/' + rating + '/moves/' + move.identifier">
 							{{ move.name }}
 						</a>
 					</td>

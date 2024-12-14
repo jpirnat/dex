@@ -99,7 +99,7 @@ export default {
 						<img v-if="counter.icon" class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + counter.icon" alt="">
 					</td>
 					<td>
-						<a :href="'/stats/' + month + '/' + format + '/' + rating + '/pokemon/' + counter.identifier">
+						<a class="dex-link" :href="'/stats/' + month + '/' + format + '/' + rating + '/pokemon/' + counter.identifier">
 							{{ counter.name }}
 						</a>
 					</td>
