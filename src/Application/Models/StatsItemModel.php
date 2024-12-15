@@ -5,10 +5,7 @@ namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
-use Jp\Dex\Domain\Items\ItemDescription;
-use Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface;
-use Jp\Dex\Domain\Items\ItemName;
-use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
+use Jp\Dex\Domain\Items\DexItemRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Stats\StatId;
@@ -24,15 +21,13 @@ final class StatsItemModel
 	private string $month;
 	private Format $format;
 	private int $rating;
-	private string $itemIdentifier;
+	private array $item;
 	private LanguageId $languageId;
 	private VersionGroup $versionGroup;
 
 	/** @var int[] $ratings */
 	private array $ratings = [];
 
-	private ItemName $itemName;
-	private ItemDescription $itemDescription;
 	private string $speedName = '';
 
 	/** @var StatsItemPokemon[] $pokemon */
@@ -45,8 +40,7 @@ final class StatsItemModel
 		private readonly VersionGroupRepositoryInterface $vgRepository,
 		private readonly ItemRepositoryInterface $itemRepository,
 		private readonly RatingQueriesInterface $ratingQueries,
-		private readonly ItemNameRepositoryInterface $itemNameRepository,
-		private readonly ItemDescriptionRepositoryInterface $itemDescriptionRepository,
+		private readonly DexItemRepositoryInterface $dexItemRepository,
 		private readonly StatNameRepositoryInterface $statNameRepository,
 		private readonly StatsItemPokemonRepositoryInterface $statsItemPokemonRepository,
 	) {}
@@ -65,7 +59,7 @@ final class StatsItemModel
 	) : void {
 		$this->month = $month;
 		$this->rating = $rating;
-		$this->itemIdentifier = $itemIdentifier;
+		$this->item = [];
 		$this->languageId = $languageId;
 
 		// Get the format.
@@ -92,18 +86,17 @@ final class StatsItemModel
 			$this->format->getId(),
 		);
 
-		// Get the item name.
-		$this->itemName = $this->itemNameRepository->getByLanguageAndItem(
-			$languageId,
-			$item->getId(),
-		);
-
-		// Get the item description.
-		$this->itemDescription = $this->itemDescriptionRepository->getByItem(
+		$dexItem = $this->dexItemRepository->getById(
 			$this->format->getVersionGroupId(),
-			$languageId,
 			$item->getId(),
+			$languageId,
 		);
+		$this->item = [
+			'icon' => $dexItem->getIcon(),
+			'identifier' => $dexItem->getIdentifier(),
+			'name' => $dexItem->getName(),
+			'description' => $dexItem->getDescription(),
+		];
 
 		$speedName = $this->statNameRepository->getByLanguageAndStat(
 			$languageId,
@@ -123,49 +116,31 @@ final class StatsItemModel
 	}
 
 
-	/**
-	 * Get the month.
-	 */
 	public function getMonth() : string
 	{
 		return $this->month;
 	}
 
-	/**
-	 * Get the format.
-	 */
 	public function getFormat() : Format
 	{
 		return $this->format;
 	}
 
-	/**
-	 * Get the rating.
-	 */
 	public function getRating() : int
 	{
 		return $this->rating;
 	}
 
-	/**
-	 * Get the item identifier.
-	 */
-	public function getItemIdentifier() : string
+	public function getItem() : array
 	{
-		return $this->itemIdentifier;
+		return $this->item;
 	}
 
-	/**
-	 * Get the language id.
-	 */
 	public function getLanguageId() : LanguageId
 	{
 		return $this->languageId;
 	}
 
-	/**
-	 * Get the date model.
-	 */
 	public function getDateModel() : DateModel
 	{
 		return $this->dateModel;
@@ -177,29 +152,11 @@ final class StatsItemModel
 	}
 
 	/**
-	 * Get the ratings for this month.
-	 *
 	 * @return int[]
 	 */
 	public function getRatings() : array
 	{
 		return $this->ratings;
-	}
-
-	/**
-	 * Get the item name.
-	 */
-	public function getItemName() : ItemName
-	{
-		return $this->itemName;
-	}
-
-	/**
-	 * Get the item description.
-	 */
-	public function getItemDescription() : ItemDescription
-	{
-		return $this->itemDescription;
 	}
 
 	public function getSpeedName() : string
@@ -208,8 +165,6 @@ final class StatsItemModel
 	}
 
 	/**
-	 * Get the Pokémon.
-	 *
 	 * @return StatsItemPokemon[]
 	 */
 	public function getPokemon() : array

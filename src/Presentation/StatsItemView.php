@@ -23,6 +23,7 @@ final readonly class StatsItemView
 		$month = $this->statsItemModel->getMonth();
 		$format = $this->statsItemModel->getFormat();
 		$rating = $this->statsItemModel->getRating();
+		$item = $this->statsItemModel->getItem();
 
 		$versionGroup = $this->statsItemModel->getVersionGroup();
 
@@ -61,7 +62,6 @@ final readonly class StatsItemView
 
 		// Navigation breadcrumbs.
 		$formatIdentifier = $format->getIdentifier();
-		$itemName = $this->statsItemModel->getItemName()->getName();
 		$breadcrumbs = [[
 			'url' => '/stats',
 			'text' => 'Stats',
@@ -72,13 +72,13 @@ final readonly class StatsItemView
 			'url' => "/stats/$month/$formatIdentifier/$rating",
 			'text' => $format->getName(),
 		], [
-			'text' => $itemName,
+			'text' => $item['name'],
 		]];
 
 		return new JsonResponse([
 			'data' => [
 				'title' => 'Porydex - Stats - ' . $thisMonth['name'] . ' '
-					. $format->getName() . ' - ' . $itemName,
+					. $format->getName() . ' - ' . $item['name'],
 
 				'format' => [
 					'identifier' => $format->getIdentifier(),
@@ -95,11 +95,7 @@ final readonly class StatsItemView
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
 				],
-				'item' => [
-					'identifier' => $this->statsItemModel->getItemIdentifier(),
-					'name' => $itemName,
-					'description' => $this->statsItemModel->getItemDescription()->getDescription(),
-				],
+				'item' => $item,
 				'speedName' => $this->statsItemModel->getSpeedName(),
 				'pokemons' => $pokemons,
 			]

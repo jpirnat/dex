@@ -46,6 +46,10 @@
 
 		<h1 class="dex-page__title">{{ item.name }}</h1>
 
+		<div class="dex-item__icon" v-if="item.icon">
+			<img :src="'/images/items/' + item.icon">
+		</div>
+
 		<p class="dex-item__description">{{ item.description }}</p>
 
 		<dex-pagination
