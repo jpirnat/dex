@@ -103,7 +103,7 @@ export default {
 						</th>
 						<td class="dex-table__ability-description">{{ ability.description }}</td>
 						<td class="dex-table__ability-pokemon">
-							<a v-for="p in ability.pokemon" :href="'/dex/' + versionGroup.identifier + '/pokemon/' + p.identifier">
+							<a v-for="p in ability.pokemon" class="dex-pokemon-icon-link" :href="'/dex/' + versionGroup.identifier + '/pokemon/' + p.identifier">
 								<img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + p.icon" :alt="p.name" v-tooltip="p.name">
 							</a>
 						</td>

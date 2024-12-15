@@ -326,6 +326,14 @@ a.button {
 .dex-link:hover {
 	color: red;
 }
+.dex-pokemon-icon-link {
+	display: inline-block;
+}
+.dex-pokemon-icon-link:hover {
+	background: #dcf2fa; /* Porygon palette #8bd5ee at opacity 30% on white background. */
+	border: 1px solid #8bd5ee; /* Porygon palette #8bd5ee */
+	/* https://marcodiiga.github.io/rgba-to-rgb-conversion */
+}
 
 .dex-item-icon {
 	max-width: 64px;
