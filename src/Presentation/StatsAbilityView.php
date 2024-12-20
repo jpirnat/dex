@@ -20,18 +20,19 @@ final readonly class StatsAbilityView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$month = $this->statsAbilityModel->getMonth();
-		$format = $this->statsAbilityModel->getFormat();
-		$rating = $this->statsAbilityModel->getRating();
+		$month = $this->statsAbilityModel->month;
+		$format = $this->statsAbilityModel->format;
+		$rating = $this->statsAbilityModel->rating;
+		$ability = $this->statsAbilityModel->ability;
 
-		$versionGroup = $this->statsAbilityModel->getVersionGroup();
+		$versionGroup = $this->statsAbilityModel->versionGroup;
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->statsAbilityModel->getLanguageId()
+			$this->statsAbilityModel->languageId
 		);
 
 		// Get the previous month and the next month.
-		$dateModel = $this->statsAbilityModel->getDateModel();
+		$dateModel = $this->statsAbilityModel->dateModel;
 		$prevMonth = $dateModel->getPrevMonth();
 		$thisMonth = $dateModel->getThisMonth();
 		$nextMonth = $dateModel->getNextMonth();
@@ -40,7 +41,7 @@ final readonly class StatsAbilityView
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
 		// Get the Pokémon usage data.
-		$pokemonData = $this->statsAbilityModel->getPokemon();
+		$pokemonData = $this->statsAbilityModel->pokemon;
 		$pokemons = [];
 		foreach ($pokemonData as $pokemon) {
 			$pokemons[] = [
@@ -61,7 +62,6 @@ final readonly class StatsAbilityView
 
 		// Navigation breadcrumbs.
 		$formatIdentifier = $format->getIdentifier();
-		$abilityName = $this->statsAbilityModel->getAbilityName()->getName();
 		$breadcrumbs = [[
 			'url' => '/stats',
 			'text' => 'Stats',
@@ -72,13 +72,13 @@ final readonly class StatsAbilityView
 			'url' => "/stats/$month/$formatIdentifier/$rating",
 			'text' => $format->getName(),
 		], [
-			'text' => $abilityName,
+			'text' => $ability['name'],
 		]];
 
 		return new JsonResponse([
 			'data' => [
 				'title' => 'Porydex - Stats - ' . $thisMonth['name'] . ' '
-					. $format->getName() . ' - ' . $abilityName,
+					. $format->getName() . ' - ' . $ability['name'],
 
 				'format' => [
 					'identifier' => $format->getIdentifier(),
@@ -90,17 +90,17 @@ final readonly class StatsAbilityView
 				'prevMonth' => $prevMonth,
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
-				'ratings' => $this->statsAbilityModel->getRatings(),
+				'ratings' => $this->statsAbilityModel->ratings,
 
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
 				],
 				'ability' => [
-					'identifier' => $this->statsAbilityModel->getAbilityIdentifier(),
-					'name' => $abilityName,
-					'description' => $this->statsAbilityModel->getAbilityDescription()->getDescription(),
+					'identifier' => $ability['identifier'],
+					'name' => $ability['name'],
+					'description' => $ability['description'],
 				],
-				'speedName' => $this->statsAbilityModel->getSpeedName(),
+				'speedName' => $this->statsAbilityModel->speedName,
 				'pokemons' => $pokemons,
 			]
 		]);

@@ -3,9 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
-use Jp\Dex\Domain\Abilities\AbilityDescription;
 use Jp\Dex\Domain\Abilities\AbilityDescriptionRepositoryInterface;
-use Jp\Dex\Domain\Abilities\AbilityName;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\Format;
@@ -21,26 +19,24 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class StatsAbilityModel
 {
-	private string $month;
-	private Format $format;
-	private int $rating;
-	private string $abilityIdentifier;
-	private LanguageId $languageId;
-	private VersionGroup $versionGroup;
+	private(set) string $month;
+	private(set) Format $format;
+	private(set) int $rating;
+	private(set) array $ability;
+	private(set) LanguageId $languageId;
+	private(set) VersionGroup $versionGroup;
 
 	/** @var int[] $ratings */
-	private array $ratings = [];
+	private(set) array $ratings = [];
 
-	private AbilityName $abilityName;
-	private AbilityDescription $abilityDescription;
-	private string $speedName = '';
+	private(set) string $speedName = '';
 
 	/** @var StatsAbilityPokemon[] $pokemon */
-	private array $pokemon = [];
+	private(set) array $pokemon = [];
 
 
 	public function __construct(
-		private readonly DateModel $dateModel,
+		private(set) readonly DateModel $dateModel,
 		private readonly FormatRepositoryInterface $formatRepository,
 		private readonly VersionGroupRepositoryInterface $vgRepository,
 		private readonly AbilityRepositoryInterface $abilityRepository,
@@ -65,7 +61,6 @@ final class StatsAbilityModel
 	) : void {
 		$this->month = $month;
 		$this->rating = $rating;
-		$this->abilityIdentifier = $abilityIdentifier;
 		$this->languageId = $languageId;
 
 		// Get the format.
@@ -92,18 +87,21 @@ final class StatsAbilityModel
 			$this->format->getId(),
 		);
 
-		// Get the ability name.
-		$this->abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
+		$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
 			$languageId,
 			$ability->getId(),
 		);
-
-		// Get the ability description.
-		$this->abilityDescription = $this->abilityDescriptionRepository->getByAbility(
+		$abilityDescription = $this->abilityDescriptionRepository->getByAbility(
 			$this->format->getVersionGroupId(),
 			$languageId,
 			$ability->getId(),
 		);
+
+		$this->ability = [
+			'identifier' => $abilityIdentifier,
+			'name' => $abilityName->getName(),
+			'description' => $abilityDescription->getDescription(),
+		];
 
 		$speedName = $this->statNameRepository->getByLanguageAndStat(
 			$languageId,
@@ -120,100 +118,5 @@ final class StatsAbilityModel
 			$ability->getId(),
 			$languageId,
 		);
-	}
-
-
-	/**
-	 * Get the month.
-	 */
-	public function getMonth() : string
-	{
-		return $this->month;
-	}
-
-	/**
-	 * Get the format.
-	 */
-	public function getFormat() : Format
-	{
-		return $this->format;
-	}
-
-	/**
-	 * Get the rating.
-	 */
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	/**
-	 * Get the ability identifier.
-	 */
-	public function getAbilityIdentifier() : string
-	{
-		return $this->abilityIdentifier;
-	}
-
-	/**
-	 * Get the language id.
-	 */
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	/**
-	 * Get the date model.
-	 */
-	public function getDateModel() : DateModel
-	{
-		return $this->dateModel;
-	}
-
-	public function getVersionGroup() : VersionGroup
-	{
-		return $this->versionGroup;
-	}
-
-	/**
-	 * Get the ratings for this month.
-	 *
-	 * @return int[]
-	 */
-	public function getRatings() : array
-	{
-		return $this->ratings;
-	}
-
-	/**
-	 * Get the ability name.
-	 */
-	public function getAbilityName() : AbilityName
-	{
-		return $this->abilityName;
-	}
-
-	/**
-	 * Get the ability description.
-	 */
-	public function getAbilityDescription() : AbilityDescription
-	{
-		return $this->abilityDescription;
-	}
-
-	public function getSpeedName() : string
-	{
-		return $this->speedName;
-	}
-
-	/**
-	 * Get the Pokémon.
-	 *
-	 * @return StatsAbilityPokemon[]
-	 */
-	public function getPokemon() : array
-	{
-		return $this->pokemon;
 	}
 }
