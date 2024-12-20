@@ -18,24 +18,24 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class StatsItemModel
 {
-	private string $month;
-	private Format $format;
-	private int $rating;
-	private array $item;
-	private LanguageId $languageId;
-	private VersionGroup $versionGroup;
+	private(set) string $month;
+	private(set) Format $format;
+	private(set) int $rating;
+	private(set) array $item;
+	private(set) LanguageId $languageId;
+	private(set) VersionGroup $versionGroup;
 
 	/** @var int[] $ratings */
-	private array $ratings = [];
+	private(set) array $ratings = [];
 
-	private string $speedName = '';
+	private(set) string $speedName = '';
 
 	/** @var StatsItemPokemon[] $pokemon */
-	private array $pokemon = [];
+	private(set) array $pokemon = [];
 
 
 	public function __construct(
-		private readonly DateModel $dateModel,
+		private(set) readonly DateModel $dateModel,
 		private readonly FormatRepositoryInterface $formatRepository,
 		private readonly VersionGroupRepositoryInterface $vgRepository,
 		private readonly ItemRepositoryInterface $itemRepository,
@@ -113,62 +113,5 @@ final class StatsItemModel
 			$item->getId(),
 			$languageId,
 		);
-	}
-
-
-	public function getMonth() : string
-	{
-		return $this->month;
-	}
-
-	public function getFormat() : Format
-	{
-		return $this->format;
-	}
-
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	public function getItem() : array
-	{
-		return $this->item;
-	}
-
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	public function getDateModel() : DateModel
-	{
-		return $this->dateModel;
-	}
-
-	public function getVersionGroup() : VersionGroup
-	{
-		return $this->versionGroup;
-	}
-
-	/**
-	 * @return int[]
-	 */
-	public function getRatings() : array
-	{
-		return $this->ratings;
-	}
-
-	public function getSpeedName() : string
-	{
-		return $this->speedName;
-	}
-
-	/**
-	 * @return StatsItemPokemon[]
-	 */
-	public function getPokemon() : array
-	{
-		return $this->pokemon;
 	}
 }

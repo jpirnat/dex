@@ -20,19 +20,19 @@ final readonly class StatsItemView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$month = $this->statsItemModel->getMonth();
-		$format = $this->statsItemModel->getFormat();
-		$rating = $this->statsItemModel->getRating();
-		$item = $this->statsItemModel->getItem();
+		$month = $this->statsItemModel->month;
+		$format = $this->statsItemModel->format;
+		$rating = $this->statsItemModel->rating;
+		$item = $this->statsItemModel->item;
 
-		$versionGroup = $this->statsItemModel->getVersionGroup();
+		$versionGroup = $this->statsItemModel->versionGroup;
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->statsItemModel->getLanguageId()
+			$this->statsItemModel->languageId
 		);
 
 		// Get the previous month and the next month.
-		$dateModel = $this->statsItemModel->getDateModel();
+		$dateModel = $this->statsItemModel->dateModel;
 		$prevMonth = $dateModel->getPrevMonth();
 		$thisMonth = $dateModel->getThisMonth();
 		$nextMonth = $dateModel->getNextMonth();
@@ -41,7 +41,7 @@ final readonly class StatsItemView
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
 		// Get the Pokémon usage data.
-		$pokemonData = $this->statsItemModel->getPokemon();
+		$pokemonData = $this->statsItemModel->pokemon;
 		$pokemons = [];
 		foreach ($pokemonData as $pokemon) {
 			$pokemons[] = [
@@ -90,13 +90,13 @@ final readonly class StatsItemView
 				'prevMonth' => $prevMonth,
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
-				'ratings' => $this->statsItemModel->getRatings(),
+				'ratings' => $this->statsItemModel->ratings,
 
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
 				],
 				'item' => $item,
-				'speedName' => $this->statsItemModel->getSpeedName(),
+				'speedName' => $this->statsItemModel->speedName,
 				'pokemons' => $pokemons,
 			]
 		]);
