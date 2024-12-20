@@ -19,7 +19,7 @@ final readonly class AdvancedMoveSearchSubmitView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$moves = $this->advancedMoveSearchSubmitModel->getMoves();
+		$moves = $this->advancedMoveSearchSubmitModel->moves;
 		$moves = $this->dexFormatter->formatDexMoves($moves);
 
 		return new JsonResponse([

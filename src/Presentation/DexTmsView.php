@@ -19,12 +19,12 @@ final readonly class DexTmsView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexTmsModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexTmsModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
 		$machines = [];
-		$m = $this->dexTmsModel->getMachines();
+		$m = $this->dexTmsModel->machines;
 		foreach ($m as $machine) {
 			$machines[] = [
 				'item' => $this->dexFormatter->formatDexItem($machine['item']),

@@ -13,7 +13,7 @@ use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 final class AdvancedMoveSearchSubmitModel
 {
 	/** @var DexMove[] $moves */
-	private array $moves = [];
+	private(set) array $moves = [];
 
 
 	public function __construct(
@@ -100,13 +100,5 @@ final class AdvancedMoveSearchSubmitModel
 			$includeTransferMoves,
 			$languageId,
 		);
-	}
-
-	/**
-	 * @return DexMove[]
-	 */
-	public function getMoves() : array
-	{
-		return $this->moves;
 	}
 }

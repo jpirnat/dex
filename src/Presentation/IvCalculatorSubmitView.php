@@ -18,7 +18,7 @@ final readonly class IvCalculatorSubmitView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$ivs = $this->ivCalculatorSubmitModel->getIvs();
+		$ivs = $this->ivCalculatorSubmitModel->ivs;
 
 		return new JsonResponse([
 			'data' => [

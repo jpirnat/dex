@@ -14,7 +14,7 @@ use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 final class AdvancedPokemonSearchSubmitModel
 {
 	/** @var DexPokemon[] $pokemons */
-	private array $pokemons = [];
+	private(set) array $pokemons = [];
 
 
 	public function __construct(
@@ -106,13 +106,5 @@ final class AdvancedPokemonSearchSubmitModel
 			$includeTransferMoves,
 			$languageId,
 		);
-	}
-
-	/**
-	 * @return DexPokemon[]
-	 */
-	public function getPokemons() : array
-	{
-		return $this->pokemons;
 	}
 }

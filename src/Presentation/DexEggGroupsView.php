@@ -19,11 +19,11 @@ final readonly class DexEggGroupsView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexEggGroupsModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexEggGroupsModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$eggGroups = $this->dexEggGroupsModel->getEggGroups();
+		$eggGroups = $this->dexEggGroupsModel->eggGroups;
 		$eggGroups = $this->dexFormatter->formatDexEggGroups($eggGroups);
 
 		// Navigational breadcrumbs.

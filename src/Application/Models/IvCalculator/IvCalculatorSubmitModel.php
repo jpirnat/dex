@@ -20,7 +20,7 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class IvCalculatorSubmitModel
 {
-	private array $ivs = [];
+	private(set) array $ivs = [];
 
 
 	public function __construct(
@@ -305,11 +305,5 @@ final class IvCalculatorSubmitModel
 		}
 
 		return implode(', ', $chunks);
-	}
-
-
-	public function getIvs() : array
-	{
-		return $this->ivs;
 	}
 }

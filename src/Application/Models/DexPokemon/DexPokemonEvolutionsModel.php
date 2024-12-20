@@ -22,7 +22,7 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 final class DexPokemonEvolutionsModel
 {
 	/** @var EvolutionTableRow[] $evolutionTableRows */
-	private array $evolutionTableRows = [];
+	private(set) array $evolutionTableRows = [];
 
 	public function __construct(
 		private readonly EvolutionRepositoryInterface $evolutionRepository,
@@ -222,14 +222,5 @@ final class DexPokemonEvolutionsModel
 			$methods,
 			$evoIntoTrees,
 		);
-	}
-
-
-	/**
-	 * @return EvolutionTableRow[]
-	 */
-	public function getEvolutionTableRows() : array
-	{
-		return $this->evolutionTableRows;
 	}
 }

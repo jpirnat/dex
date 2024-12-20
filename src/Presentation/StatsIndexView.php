@@ -20,7 +20,7 @@ final readonly class StatsIndexView
 	public function getData() : ResponseInterface
 	{
 		// Get months. Sort by year ascending, month ascending.
-		$months = $this->statsIndexModel->getMonths();
+		$months = $this->statsIndexModel->months;
 		uasort($months, function (DateTime $a, DateTime $b) : int {
 			$comparison = $b->format('Y') <=> $a->format('Y');
 			if ($comparison) {

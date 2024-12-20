@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
 final class StatsIndexModel
 {
 	/** @var DateTime[] $months */
-	private array $months = [];
+	private(set) array $months = [];
 
 
 	public function __construct(
@@ -18,21 +18,10 @@ final class StatsIndexModel
 
 
 	/**
-	 * Set the months that have usage data.
+	 * Set data for the stats index page.
 	 */
-	public function setMonths() : void
+	public function setData() : void
 	{
 		$this->months = $this->usageQueries->getMonths();
-	}
-
-
-	/**
-	 * Get the months that have usage data.
-	 *
-	 * @return DateTime[]
-	 */
-	public function getMonths() : array
-	{
-		return $this->months;
 	}
 }

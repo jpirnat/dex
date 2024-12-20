@@ -6,16 +6,15 @@ namespace Jp\Dex\Application\Models;
 use Jp\Dex\Domain\Items\DexItemRepositoryInterface;
 use Jp\Dex\Domain\Items\TmRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Moves\DexMove;
 use Jp\Dex\Domain\Moves\DexMoveRepositoryInterface;
 
 final class DexTmsModel
 {
-	private array $machines = [];
+	private(set) array $machines = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly TmRepositoryInterface $tmRepository,
 		private readonly DexItemRepositoryInterface $dexItemRepository,
 		private readonly DexMoveRepositoryInterface $dexMoveRepository,
@@ -62,21 +61,5 @@ final class DexTmsModel
 				'move' => $move,
 			];
 		}
-	}
-
-
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * Get the moves.
-	 *
-	 * @return DexMove[]
-	 */
-	public function getMachines() : array
-	{
-		return $this->machines;
 	}
 }

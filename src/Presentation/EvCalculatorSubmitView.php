@@ -18,7 +18,7 @@ final readonly class EvCalculatorSubmitView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$evs = $this->evCalculatorSubmitModel->getEvs();
+		$evs = $this->evCalculatorSubmitModel->evs;
 
 		return new JsonResponse([
 			'data' => [

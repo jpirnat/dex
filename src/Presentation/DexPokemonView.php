@@ -44,7 +44,7 @@ final readonly class DexPokemonView
 		$damageTakenAbilities = $dexPokemonMatchupsModel->getAbilities();
 
 		$dexPokemonEvolutionsModel = $this->dexPokemonModel->getDexPokemonEvolutionsModel();
-		$evolutionTableRows = $dexPokemonEvolutionsModel->getEvolutionTableRows();
+		$evolutionTableRows = $dexPokemonEvolutionsModel->evolutionTableRows;
 
 		$dexPokemonMovesModel = $this->dexPokemonModel->getDexPokemonMovesModel();
 		$categories = $dexPokemonMovesModel->getCategories();

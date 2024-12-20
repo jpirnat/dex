@@ -11,11 +11,11 @@ use Jp\Dex\Domain\Versions\GenerationId;
 final class DexItemsModel
 {
 	/** @var DexItem[] $items */
-	private array $items = [];
+	private(set) array $items = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly DexItemRepositoryInterface $dexItemRepository,
 	) {}
 
@@ -35,24 +35,5 @@ final class DexItemsModel
 			$versionGroupId,
 			$languageId,
 		);
-	}
-
-
-	/**
-	 * Get the version group model.
-	 */
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * Get the items.
-	 *
-	 * @return DexItem[]
-	 */
-	public function getItems() : array
-	{
-		return $this->items;
 	}
 }

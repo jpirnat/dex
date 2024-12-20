@@ -19,11 +19,11 @@ final readonly class DexItemsView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexItemsModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexItemsModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$items = $this->dexItemsModel->getItems();
+		$items = $this->dexItemsModel->items;
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();

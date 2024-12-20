@@ -16,7 +16,7 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class EvCalculatorSubmitModel
 {
-	private array $evs = [];
+	private(set) array $evs = [];
 
 
 	public function __construct(
@@ -163,11 +163,5 @@ final class EvCalculatorSubmitModel
 		}
 
 		return implode(', ', $chunks);
-	}
-
-
-	public function getEvs() : array
-	{
-		return $this->evs;
 	}
 }

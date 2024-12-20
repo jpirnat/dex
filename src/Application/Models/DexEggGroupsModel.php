@@ -10,11 +10,11 @@ use Jp\Dex\Domain\Languages\LanguageId;
 final class DexEggGroupsModel
 {
 	/** @var DexEggGroup[] $eggGroups */
-	private array $eggGroups = [];
+	private(set) array $eggGroups = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly DexEggGroupRepositoryInterface $dexEggGroupRepository,
 	) {}
 
@@ -33,16 +33,5 @@ final class DexEggGroupsModel
 		$this->versionGroupModel->setWithBreeding();
 
 		$this->eggGroups = $this->dexEggGroupRepository->getAll($languageId);
-	}
-
-
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	public function getEggGroups() : array
-	{
-		return $this->eggGroups;
 	}
 }

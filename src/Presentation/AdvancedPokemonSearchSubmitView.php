@@ -19,7 +19,7 @@ final readonly class AdvancedPokemonSearchSubmitView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$pokemons = $this->advancedPokemonSearchSubmitModel->getPokemons();
+		$pokemons = $this->advancedPokemonSearchSubmitModel->pokemons;
 		$pokemons = $this->dexFormatter->formatDexPokemon($pokemons);
 
 		return new JsonResponse([

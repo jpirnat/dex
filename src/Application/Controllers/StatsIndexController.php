@@ -20,6 +20,6 @@ final readonly class StatsIndexController
 	{
 		$this->baseController->setBaseVariables($request);
 
-		$this->statsIndexModel->setMonths();
+		$this->statsIndexModel->setData();
 	}
 }
