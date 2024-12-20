@@ -11,10 +11,10 @@ use Exception;
  */
 final readonly class MoveType
 {
-	public const REGULAR = '';
-	public const Z_MOVE = 'z';
-	public const MAX_MOVE = 'max';
-	public const G_MAX_MOVE = 'g-max';
+	public const string REGULAR = '';
+	public const string Z_MOVE = 'z';
+	public const string MAX_MOVE = 'max';
+	public const string G_MAX_MOVE = 'g-max';
 
 	private string $value;
 

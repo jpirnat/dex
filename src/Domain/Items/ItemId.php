@@ -7,7 +7,7 @@ use Jp\Dex\Domain\EntityId;
 
 final class ItemId extends EntityId
 {
-	public const POKE_BALL = 4;
-	public const LIGHT_BALL = 208;
-	public const LEADERS_CREST = 2345;
+	public const int POKE_BALL = 4;
+	public const int LIGHT_BALL = 208;
+	public const int LEADERS_CREST = 2345;
 }

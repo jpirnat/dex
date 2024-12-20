@@ -26,7 +26,7 @@ final class DexPokemonMatchupsModel
 	private array $abilities = [];
 
 
-	private const NO_ABILITY = 'none';
+	private const string NO_ABILITY = 'none';
 
 
 	public function __construct(

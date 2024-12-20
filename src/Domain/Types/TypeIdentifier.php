@@ -6,25 +6,25 @@ namespace Jp\Dex\Domain\Types;
 final class TypeIdentifier
 {
 	// In ID order, so it'll always be clear when these were last updated.
-	// public const NORMAL = 'normal';
-	// public const FIGHTING = 'fighting';
-	// public const FLYING = 'flying';
-	// public const POISON = 'poison';
-	public const GROUND = 'ground';
-	// public const ROCK = 'rock';
-	// public const BUG = 'bug';
-	public const GHOST = 'ghost';
-	// public const STEEL = 'steel';
-	public const FIRE = 'fire';
-	public const WATER = 'water';
-	public const GRASS = 'grass';
-	public const ELECTRIC = 'electric';
-	// public const PSYCHIC = 'psychic';
-	public const ICE = 'ice';
-	// public const DRAGON = 'dragon';
-	// public const DARK = 'dark';
-	// public const FAIRY = 'fairy';
-	// public const STELLAR = 'stellar';
-	// public const UNKNOWN = 'unknown';
-	// public const SHADOW = 'shadow';
+	// public const string NORMAL = 'normal';
+	// public const string FIGHTING = 'fighting';
+	// public const string FLYING = 'flying';
+	// public const string POISON = 'poison';
+	public const string GROUND = 'ground';
+	// public const string ROCK = 'rock';
+	// public const string BUG = 'bug';
+	public const string GHOST = 'ghost';
+	// public const string STEEL = 'steel';
+	public const string FIRE = 'fire';
+	public const string WATER = 'water';
+	public const string GRASS = 'grass';
+	public const string ELECTRIC = 'electric';
+	// public const string PSYCHIC = 'psychic';
+	public const string ICE = 'ice';
+	// public const string DRAGON = 'dragon';
+	// public const string DARK = 'dark';
+	// public const string FAIRY = 'fairy';
+	// public const string STELLAR = 'stellar';
+	// public const string UNKNOWN = 'unknown';
+	// public const string SHADOW = 'shadow';
 }

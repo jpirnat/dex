@@ -8,13 +8,13 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class StatId extends EntityId
 {
-	public const HP = 1;
-	public const ATTACK = 2;
-	public const DEFENSE = 3;
-	public const SPEED = 4;
-	public const SPECIAL = 5;
-	public const SPECIAL_ATTACK = 8;
-	public const SPECIAL_DEFENSE = 9;
+	public const int HP = 1;
+	public const int ATTACK = 2;
+	public const int DEFENSE = 3;
+	public const int SPEED = 4;
+	public const int SPECIAL = 5;
+	public const int SPECIAL_ATTACK = 8;
+	public const int SPECIAL_DEFENSE = 9;
 
 	/**
 	 * Get the non battle-only stat ids for this generation.

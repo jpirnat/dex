@@ -7,9 +7,9 @@ use Exception;
 
 final readonly class MachineType
 {
-	public const TM = 'tm';
-	public const HM = 'hm';
-	public const TR = 'tr';
+	public const string TM = 'tm';
+	public const string HM = 'hm';
+	public const string TR = 'tr';
 
 	private string $value;
 

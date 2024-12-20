@@ -10,7 +10,7 @@ final readonly class MiddlewareGroups
 	 *
 	 * @var string[] $HTML
 	 */
-	public const HTML = [
+	public const array HTML = [
 		HtmlErrorMiddleware::class,
 		LanguageMiddleware::class,
 	];
@@ -20,7 +20,7 @@ final readonly class MiddlewareGroups
 	 *
 	 * @var string[] $JSON
 	 */
-	public const JSON = [
+	public const array JSON = [
 		JsonErrorMiddleware::class,
 		LanguageMiddleware::class,
 	];
@@ -30,7 +30,7 @@ final readonly class MiddlewareGroups
 	 *
 	 * @var string[] $CURRENT_STATS
 	 */
-	public const CURRENT_STATS = [
+	public const array CURRENT_STATS = [
 		JsonErrorMiddleware::class,
 		LanguageMiddleware::class,
 		CurrentStatsMiddleware::class,
@@ -42,7 +42,7 @@ final readonly class MiddlewareGroups
 	 *
 	 * @var string[] $ERROR
 	 */
-	public const ERROR = [
+	public const array ERROR = [
 		LanguageMiddleware::class,
 	];
 }

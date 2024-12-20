@@ -7,15 +7,15 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final readonly class AlcremieSpinType
 {
-	private const CLOCKWISE_LT_5_DAY = 1;
-	private const COUNTERCLOCKWISE_LT_5_DAY = 2;
-	private const CLOCKWISE_LT_5_NIGHT = 3;
-	private const COUNTERCLOCKWISE_GT_5_NIGHT = 4;
-	private const CLOCKWISE_GT_5_NIGHT = 5;
-	private const COUNTERCLOCKWISE_LT_5_NIGHT = 6;
-	private const COUNTERCLOCKWISE_GT_5_DAY = 7;
-	private const CLOCKWISE_GT_5_DAY = 8;
-	private const COUNTERCLOCKWISE_GT_10_EVENING = 9;
+	private const int CLOCKWISE_LT_5_DAY = 1;
+	private const int COUNTERCLOCKWISE_LT_5_DAY = 2;
+	private const int CLOCKWISE_LT_5_NIGHT = 3;
+	private const int COUNTERCLOCKWISE_GT_5_NIGHT = 4;
+	private const int CLOCKWISE_GT_5_NIGHT = 5;
+	private const int COUNTERCLOCKWISE_LT_5_NIGHT = 6;
+	private const int COUNTERCLOCKWISE_GT_5_DAY = 7;
+	private const int CLOCKWISE_GT_5_DAY = 8;
+	private const int COUNTERCLOCKWISE_GT_10_EVENING = 9;
 
 	public function __construct(
 		private int $value,

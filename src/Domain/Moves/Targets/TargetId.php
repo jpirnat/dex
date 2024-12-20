@@ -7,8 +7,8 @@ use Jp\Dex\Domain\EntityId;
 
 final class TargetId extends EntityId
 {
-	private const ALL_ADJACENT_POKEMON = 4;
-	private const ALL_ADJACENT_OPPONENTS = 5;
+	private const int ALL_ADJACENT_POKEMON = 4;
+	private const int ALL_ADJACENT_OPPONENTS = 5;
 
 	public function hitsMultiplePokemon() : bool
 	{

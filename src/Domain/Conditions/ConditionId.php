@@ -7,5 +7,5 @@ use Jp\Dex\Domain\EntityId;
 
 final class ConditionId extends EntityId
 {
-	public const BEAUTY = 2;
+	public const int BEAUTY = 2;
 }

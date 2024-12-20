@@ -5,9 +5,9 @@ namespace Jp\Dex\Domain\Pokemon;
 
 final readonly class GenderRatio
 {
-	public const MALE_ONLY = 0;
-	public const FEMALE_ONLY = 254;
-	public const GENDER_UNKNOWN = 255;
+	public const int MALE_ONLY = 0;
+	public const int FEMALE_ONLY = 254;
+	public const int GENDER_UNKNOWN = 255;
 
 	public function __construct(
 		private int $value,

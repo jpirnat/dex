@@ -11,8 +11,8 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final readonly class StatCalculator
 {
-	private const PERFECT_IV_GEN_1 = 15;
-	private const PERFECT_IV_GEN_3 = 31;
+	private const int PERFECT_IV_GEN_1 = 15;
+	private const int PERFECT_IV_GEN_3 = 31;
 
 	/**
 	 * Calculate a Pokémon's HP stat in generations 1 or 2.

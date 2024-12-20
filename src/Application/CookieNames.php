@@ -5,7 +5,7 @@ namespace Jp\Dex\Application;
 
 final readonly class CookieNames
 {
-	public const LANGUAGE = 'language';
-	public const FORMAT = 'format';
-	public const RATING = 'rating';
+	public const string LANGUAGE = 'language';
+	public const string FORMAT = 'format';
+	public const string RATING = 'rating';
 }

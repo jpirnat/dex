@@ -7,6 +7,6 @@ use Jp\Dex\Domain\EntityId;
 
 final class FormId extends EntityId
 {
-	public const KARRABLAST = 588;
-	public const SHELMET = 616;
+	public const int KARRABLAST = 588;
+	public const int SHELMET = 616;
 }
