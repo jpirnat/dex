@@ -19,12 +19,12 @@ final readonly class DexAbilitiesView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexAbilitiesModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexAbilitiesModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$abilities = $this->dexAbilitiesModel->getAbilities();
-		$flags = $this->dexAbilitiesModel->getFlags();
+		$abilities = $this->dexAbilitiesModel->abilities;
+		$flags = $this->dexAbilitiesModel->flags;
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();

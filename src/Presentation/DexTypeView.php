@@ -19,21 +19,21 @@ final readonly class DexTypeView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexTypeModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexTypeModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$type = $this->dexTypeModel->getType();
-		$types = $this->dexTypeModel->getTypes();
+		$type = $this->dexTypeModel->type;
+		$types = $this->dexTypeModel->types;
 
-		$damageDealt = $this->dexTypeModel->getDamageDealt();
-		$damageTaken = $this->dexTypeModel->getDamageTaken();
+		$damageDealt = $this->dexTypeModel->damageDealt;
+		$damageTaken = $this->dexTypeModel->damageTaken;
 
-		$stats = $this->dexTypeModel->getStats();
-		$pokemon = $this->dexTypeModel->getPokemon();
+		$stats = $this->dexTypeModel->stats;
+		$pokemon = $this->dexTypeModel->pokemon;
 		$pokemon = $this->dexFormatter->formatDexPokemon($pokemon);
 
-		$moves = $this->dexTypeModel->getMoves();
+		$moves = $this->dexTypeModel->moves;
 		$moves = $this->dexFormatter->formatDexMoves($moves);
 
 

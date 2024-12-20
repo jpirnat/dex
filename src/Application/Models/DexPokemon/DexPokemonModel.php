@@ -18,19 +18,19 @@ use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 
 final class DexPokemonModel
 {
-	private ?ExpandedDexPokemon $pokemon = null;
-	private array $stats = [];
-	private string $breedingPartnersSearchUrl = '';
+	private(set) ?ExpandedDexPokemon $pokemon = null;
+	private(set) array $stats = [];
+	private(set) string $breedingPartnersSearchUrl = '';
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly PokemonRepositoryInterface $pokemonRepository,
 		private readonly ExpandedDexPokemonRepositoryInterface $expandedDexPokemonRepository,
 		private readonly DexStatRepositoryInterface $dexStatRepository,
-		private readonly DexPokemonMatchupsModel $dexPokemonMatchupsModel,
-		private readonly DexPokemonEvolutionsModel $dexPokemonEvolutionsModel,
-		private readonly DexPokemonMovesModel $dexPokemonMovesModel,
+		private(set) readonly DexPokemonMatchupsModel $dexPokemonMatchupsModel,
+		private(set) readonly DexPokemonEvolutionsModel $dexPokemonEvolutionsModel,
+		private(set) readonly DexPokemonMovesModel $dexPokemonMovesModel,
 	) {}
 
 
@@ -127,41 +127,5 @@ final class DexPokemonModel
 		}
 
 		$this->breedingPartnersSearchUrl = "/dex/$vgIdentifier/advanced-pokemon-search?eggGroups=$eggGroups&genderRatios=$genderRatios&genderRatiosOperator=none";
-	}
-
-
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	public function getPokemon() : ?ExpandedDexPokemon
-	{
-		return $this->pokemon;
-	}
-
-	public function getStats() : array
-	{
-		return $this->stats;
-	}
-
-	public function getBreedingPartnersSearchUrl() : string
-	{
-		return $this->breedingPartnersSearchUrl;
-	}
-
-	public function getDexPokemonMatchupsModel() : DexPokemonMatchupsModel
-	{
-		return $this->dexPokemonMatchupsModel;
-	}
-
-	public function getDexPokemonEvolutionsModel() : DexPokemonEvolutionsModel
-	{
-		return $this->dexPokemonEvolutionsModel;
-	}
-
-	public function getDexPokemonMovesModel() : DexPokemonMovesModel
-	{
-		return $this->dexPokemonMovesModel;
 	}
 }

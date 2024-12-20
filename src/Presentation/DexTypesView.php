@@ -19,12 +19,12 @@ final readonly class DexTypesView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexTypesModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexTypesModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$types = $this->dexTypesModel->getTypes();
-		$multipliers = $this->dexTypesModel->getMultipliers();
+		$types = $this->dexTypesModel->types;
+		$multipliers = $this->dexTypesModel->multipliers;
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();

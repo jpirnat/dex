@@ -19,14 +19,14 @@ final readonly class DexAbilityView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexAbilityModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexAbilityModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$ability = $this->dexAbilityModel->getAbility();
-		$flags = $this->dexAbilityModel->getFlags();
-		$stats = $this->dexAbilityModel->getStats();
-		$pokemon = $this->dexAbilityModel->getPokemon();
+		$ability = $this->dexAbilityModel->ability;
+		$flags = $this->dexAbilityModel->flags;
+		$stats = $this->dexAbilityModel->stats;
+		$pokemon = $this->dexAbilityModel->pokemon;
 
 		$pokemon = $this->dexFormatter->formatDexPokemon($pokemon);
 

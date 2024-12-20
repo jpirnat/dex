@@ -20,12 +20,12 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 final class DexMovePokemonModel
 {
 	/** @var DexVersionGroup[] $learnsetVgs */
-	private array $learnsetVgs = [];
+	private(set) array $learnsetVgs = [];
 
-	private array $stats = [];
+	private(set) array $stats = [];
 
 	/** @var DexMovePokemonMethod[] $methods */
-	private array $methods = [];
+	private(set) array $methods = [];
 
 
 	public function __construct(
@@ -172,34 +172,5 @@ final class DexMovePokemonModel
 				$dexMovePokemon[$methodId],
 			);
 		}
-	}
-
-
-	/**
-	 * Get the move version groups.
-	 *
-	 * @return DexVersionGroup[]
-	 */
-	public function getLearnsetVgs() : array
-	{
-		return $this->learnsetVgs;
-	}
-
-	/**
-	 * Get the stats and their names.
-	 */
-	public function getStats() : array
-	{
-		return $this->stats;
-	}
-
-	/**
-	 * Get the move methods.
-	 *
-	 * @return DexMovePokemonMethod[]
-	 */
-	public function getMethods() : array
-	{
-		return $this->methods;
 	}
 }

@@ -19,12 +19,12 @@ final readonly class DexMovesView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexMovesModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexMovesModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$moves = $this->dexMovesModel->getMoves();
-		$flags = $this->dexMovesModel->getFlags();
+		$moves = $this->dexMovesModel->moves;
+		$flags = $this->dexMovesModel->flags;
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();

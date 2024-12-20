@@ -19,13 +19,13 @@ final readonly class DexEggGroupView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexEggGroupModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexEggGroupModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$eggGroup = $this->dexEggGroupModel->getEggGroup();
-		$stats = $this->dexEggGroupModel->getStats();
-		$pokemon = $this->dexEggGroupModel->getPokemon();
+		$eggGroup = $this->dexEggGroupModel->eggGroup;
+		$stats = $this->dexEggGroupModel->stats;
+		$pokemon = $this->dexEggGroupModel->pokemon;
 
 		$pokemon = $this->dexFormatter->formatDexPokemon($pokemon);
 

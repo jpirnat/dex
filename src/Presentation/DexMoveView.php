@@ -21,24 +21,24 @@ final readonly class DexMoveView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexMoveModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexMoveModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$move = $this->dexMoveModel->getMove();
+		$move = $this->dexMoveModel->move;
 		$move = $this->dexFormatter->formatDexMove($move);
-		$move += $this->dexMoveModel->getDetailedData();
+		$move += $this->dexMoveModel->detailedData;
 
-		$types = $this->dexMoveModel->getTypes();
-		$damageDealt = $this->dexMoveModel->getDamageDealt();
+		$types = $this->dexMoveModel->types;
+		$damageDealt = $this->dexMoveModel->damageDealt;
 
-		$statChanges = $this->dexMoveModel->getStatChanges();
-		$flags = $this->dexMoveModel->getFlags();
+		$statChanges = $this->dexMoveModel->statChanges;
+		$flags = $this->dexMoveModel->flags;
 
-		$dexMovePokemonModel = $this->dexMoveModel->getDexMovePokemonModel();
-		$learnsetVgs = $dexMovePokemonModel->getLearnsetVgs();
-		$stats = $dexMovePokemonModel->getStats();
-		$methods = $dexMovePokemonModel->getMethods();
+		$dexMovePokemonModel = $this->dexMoveModel->dexMovePokemonModel;
+		$learnsetVgs = $dexMovePokemonModel->learnsetVgs;
+		$stats = $dexMovePokemonModel->stats;
+		$methods = $dexMovePokemonModel->methods;
 
 		// Sort Pokémon within each move method.
 		$bySort = function (DexMovePokemon $a, DexMovePokemon $b) : int {

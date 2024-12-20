@@ -12,15 +12,15 @@ use Jp\Dex\Domain\Stats\DexStatRepositoryInterface;
 
 final class DexEggGroupModel
 {
-	private array $eggGroup = [];
-	private array $stats = [];
+	private(set) array $eggGroup = [];
+	private(set) array $stats = [];
 
 	/** @var DexPokemon[] $pokemon */
-	private array $pokemon = [];
+	private(set) array $pokemon = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly EggGroupRepositoryInterface $eggGroupRepository,
 		private readonly DexEggGroupRepositoryInterface $dexEggGroupRepository,
 		private readonly DexStatRepositoryInterface $dexStatRepository,
@@ -60,29 +60,5 @@ final class DexEggGroupModel
 			$eggGroup->getId(),
 			$languageId,
 		);
-	}
-
-
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	public function getEggGroup() : array
-	{
-		return $this->eggGroup;
-	}
-
-	public function getStats() : array
-	{
-		return $this->stats;
-	}
-
-	/**
-	 * @return DexPokemon[]
-	 */
-	public function getPokemon() : array
-	{
-		return $this->pokemon;
 	}
 }

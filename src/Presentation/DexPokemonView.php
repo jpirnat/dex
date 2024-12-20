@@ -25,31 +25,31 @@ final readonly class DexPokemonView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexPokemonModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexPokemonModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$pokemon = $this->dexPokemonModel->getPokemon();
+		$pokemon = $this->dexPokemonModel->pokemon;
 		$pokemon = $this->dexFormatter->formatExpandedDexPokemon($pokemon);
 		if (!$versionGroup->hasAbilities()) {
 			$pokemon['abilities'] = [];
 		}
 
-		$stats = $this->dexPokemonModel->getStats();
-		$breedingPartnersSearchUrl = $this->dexPokemonModel->getBreedingPartnersSearchUrl();
+		$stats = $this->dexPokemonModel->stats;
+		$breedingPartnersSearchUrl = $this->dexPokemonModel->breedingPartnersSearchUrl;
 
-		$dexPokemonMatchupsModel = $this->dexPokemonModel->getDexPokemonMatchupsModel();
-		$types = $dexPokemonMatchupsModel->getTypes();
-		$damageTaken = $dexPokemonMatchupsModel->getDamageTaken();
-		$damageTakenAbilities = $dexPokemonMatchupsModel->getAbilities();
+		$dexPokemonMatchupsModel = $this->dexPokemonModel->dexPokemonMatchupsModel;
+		$types = $dexPokemonMatchupsModel->types;
+		$damageTaken = $dexPokemonMatchupsModel->damageTaken;
+		$damageTakenAbilities = $dexPokemonMatchupsModel->abilities;
 
-		$dexPokemonEvolutionsModel = $this->dexPokemonModel->getDexPokemonEvolutionsModel();
+		$dexPokemonEvolutionsModel = $this->dexPokemonModel->dexPokemonEvolutionsModel;
 		$evolutionTableRows = $dexPokemonEvolutionsModel->evolutionTableRows;
 
-		$dexPokemonMovesModel = $this->dexPokemonModel->getDexPokemonMovesModel();
-		$categories = $dexPokemonMovesModel->getCategories();
-		$learnsetVgs = $dexPokemonMovesModel->getLearnsetVgs();
-		$methods = $dexPokemonMovesModel->getMethods();
+		$dexPokemonMovesModel = $this->dexPokemonModel->dexPokemonMovesModel;
+		$categories = $dexPokemonMovesModel->categories;
+		$learnsetVgs = $dexPokemonMovesModel->learnsetVgs;
+		$methods = $dexPokemonMovesModel->methods;
 
 		// Sort moves within each move method.
 		$byName = function (DexPokemonMove $a, DexPokemonMove $b) : int {

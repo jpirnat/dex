@@ -12,13 +12,13 @@ use Jp\Dex\Domain\Versions\GenerationId;
 final class DexMovesModel
 {
 	/** @var DexMove[] $moves */
-	private array $moves = [];
+	private(set) array $moves = [];
 
-	private array $flags = [];
+	private(set) array $flags = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly DexMoveRepositoryInterface $dexMoveRepository,
 		private readonly MoveFlagRepositoryInterface $flagRepository,
 	) {}
@@ -54,29 +54,5 @@ final class DexMovesModel
 				'description' => $flag->getDescription(),
 			];
 		}
-	}
-
-
-	/**
-	 * Get the version group model.
-	 */
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * Get the moves.
-	 *
-	 * @return DexMove[]
-	 */
-	public function getMoves() : array
-	{
-		return $this->moves;
-	}
-
-	public function getFlags() : array
-	{
-		return $this->flags;
 	}
 }

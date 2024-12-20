@@ -22,28 +22,28 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class DexMoveModel
 {
-	private DexMove $move;
-	private array $detailedData = [];
+	private(set) DexMove $move;
+	private(set) array $detailedData = [];
 
 	/** @var DexType[] $types */
-	private array $types = [];
+	private(set) array $types = [];
 
 	/** @var float[] $damageDealt */
-	private array $damageDealt = [];
+	private(set) array $damageDealt = [];
 
-	private array $statChanges = [];
-	private array $flags = [];
+	private(set) array $statChanges = [];
+	private(set) array $flags = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly MoveRepositoryInterface $moveRepository,
 		private readonly DexMoveRepositoryInterface $dexMoveRepository,
 		private readonly VgMoveRepositoryInterface $vgMoveRepository,
 		private readonly DexTypeRepositoryInterface $dexTypeRepository,
 		private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
 		private readonly MoveFlagRepositoryInterface $flagRepository,
-		private readonly DexMovePokemonModel $dexMovePokemonModel,
+		private(set) readonly DexMovePokemonModel $dexMovePokemonModel,
 	) {}
 
 
@@ -238,74 +238,5 @@ final class DexMoveModel
 				'has' => $has,
 			];
 		}
-	}
-
-
-	/**
-	 * Get the version group model.
-	 */
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * Get the move.
-	 */
-	public function getMove() : DexMove
-	{
-		return $this->move;
-	}
-
-	/**
-	 * Get the detailed data.
-	 */
-	public function getDetailedData() : array
-	{
-		return $this->detailedData;
-	}
-
-	/**
-	 * Get the types.
-	 *
-	 * @return DexType[]
-	 */
-	public function getTypes() : array
-	{
-		return $this->types;
-	}
-
-	/**
-	 * Get the damage dealt matchups.
-	 *
-	 * @return float[]
-	 */
-	public function getDamageDealt() : array
-	{
-		return $this->damageDealt;
-	}
-
-	/**
-	 * Get the stat changes.
-	 */
-	public function getStatChanges() : array
-	{
-		return $this->statChanges;
-	}
-
-	/**
-	 * Get the flags.
-	 */
-	public function getFlags() : array
-	{
-		return $this->flags;
-	}
-
-	/**
-	 * Get the dex move Pokémon model.
-	 */
-	public function getDexMovePokemonModel() : DexMovePokemonModel
-	{
-		return $this->dexMovePokemonModel;
 	}
 }

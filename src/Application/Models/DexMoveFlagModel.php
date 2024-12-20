@@ -10,14 +10,14 @@ use Jp\Dex\Domain\Moves\Flags\MoveFlagRepositoryInterface;
 
 final class DexMoveFlagModel
 {
-	private array $flag = [];
+	private(set) array $flag = [];
 
 	/** @var DexMove[] $moves */
-	private array $moves = [];
+	private(set) array $moves = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly MoveFlagRepositoryInterface $flagRepository,
 		private readonly DexMoveRepositoryInterface $dexMoveRepository,
 	) {}
@@ -57,24 +57,5 @@ final class DexMoveFlagModel
 			$flagId,
 			$languageId,
 		);
-	}
-
-
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	public function getFlag() : array
-	{
-		return $this->flag;
-	}
-
-	/**
-	 * @return DexMove[]
-	 */
-	public function getMoves() : array
-	{
-		return $this->moves;
 	}
 }

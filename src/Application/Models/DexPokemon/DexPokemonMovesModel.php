@@ -22,13 +22,13 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 final class DexPokemonMovesModel
 {
 	/** @var DexCategory[] $categories */
-	private array $categories = [];
+	private(set) array $categories = [];
 
 	/** @var DexVersionGroup[] $learnsetVgs */
-	private array $learnsetVgs = [];
+	private(set) array $learnsetVgs = [];
 
 	/** @var DexPokemonMoveMethod[] $methods */
-	private array $methods = [];
+	private(set) array $methods = [];
 
 
 	public function __construct(
@@ -207,30 +207,5 @@ final class DexPokemonMovesModel
 				$dexPokemonMoves[$methodId],
 			);
 		}
-	}
-
-
-	/**
-	 * @return DexCategory[]
-	 */
-	public function getCategories() : array
-	{
-		return $this->categories;
-	}
-
-	/**
-	 * @return DexVersionGroup[]
-	 */
-	public function getLearnsetVgs() : array
-	{
-		return $this->learnsetVgs;
-	}
-
-	/**
-	 * @return DexPokemonMoveMethod[]
-	 */
-	public function getMethods() : array
-	{
-		return $this->methods;
 	}
 }

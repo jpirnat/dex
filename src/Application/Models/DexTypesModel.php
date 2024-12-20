@@ -11,14 +11,14 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexTypesModel
 {
-	private array $types = [];
+	private(set) array $types = [];
 
 	/** @var int[][] $multipliers */
-	private array $multipliers = [];
+	private(set) array $multipliers = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly DexTypeRepositoryInterface $dexTypeRepository,
 		private readonly TypeRepositoryInterface $typeRepository,
 		private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
@@ -63,32 +63,5 @@ final class DexTypesModel
 
 			$this->multipliers[$attackingTypeIdentifier][$defendingTypeIdentifier] = $multiplier;
 		}
-	}
-
-
-	/**
-	 * Get the version group model.
-	 */
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * Get the types.
-	 */
-	public function getTypes() : array
-	{
-		return $this->types;
-	}
-
-	/**
-	 * Get the multipliers.
-	 *
-	 * @return float[][]
-	 */
-	public function getMultipliers() : array
-	{
-		return $this->multipliers;
 	}
 }

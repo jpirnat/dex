@@ -14,12 +14,12 @@ use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 
 final class DexItemModel
 {
-	private array $item = [];
-	private array $evolutions = [];
+	private(set) array $item = [];
+	private(set) array $evolutions = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly ItemRepositoryInterface $itemRepository,
 		private readonly DexItemRepositoryInterface $dexItemRepository,
 		private readonly EvolutionRepositoryInterface $evolutionRepository,
@@ -88,21 +88,5 @@ final class DexItemModel
 				'name' => $pokemonName->getName(),
 			];
 		}
-	}
-
-
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	public function getItem() : array
-	{
-		return $this->item;
-	}
-
-	public function getEvolutions() : array
-	{
-		return $this->evolutions;
 	}
 }

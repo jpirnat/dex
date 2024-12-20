@@ -16,16 +16,16 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class DexAbilityModel
 {
-	private array $ability = [];
-	private array $flags = [];
-	private array $stats = [];
+	private(set) array $ability = [];
+	private(set) array $flags = [];
+	private(set) array $stats = [];
 
 	/** @var DexPokemon[] $pokemon */
-	private array $pokemon = [];
+	private(set) array $pokemon = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly AbilityRepositoryInterface $abilityRepository,
 		private readonly AbilityNameRepositoryInterface $abilityNameRepository,
 		private readonly AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
@@ -104,46 +104,5 @@ final class DexAbilityModel
 				'has' => $has,
 			];
 		}
-	}
-
-
-	/**
-	 * Get the version group model.
-	 */
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * Get the ability.
-	 */
-	public function getAbility() : array
-	{
-		return $this->ability;
-	}
-
-	/**
-	 * Get the flags.
-	 */
-	public function getFlags() : array
-	{
-		return $this->flags;
-	}
-
-	/**
-	 * Get the stats and their names.
-	 */
-	public function getStats() : array
-	{
-		return $this->stats;
-	}
-
-	/**
-	 * @return DexPokemon[]
-	 */
-	public function getPokemon() : array
-	{
-		return $this->pokemon;
 	}
 }

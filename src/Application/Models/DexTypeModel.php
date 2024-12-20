@@ -16,28 +16,28 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class DexTypeModel
 {
-	private array $type = [];
+	private(set) array $type = [];
 
 	/** @var DexType[] $dexType */
-	private array $types = [];
+	private(set) array $types = [];
 
 	/** @var float[] $damageDealt */
-	private array $damageDealt = [];
+	private(set) array $damageDealt = [];
 
 	/** @var float[] $damageTaken */
-	private array $damageTaken = [];
+	private(set) array $damageTaken = [];
 
-	private array $stats = [];
+	private(set) array $stats = [];
 
 	/** @var DexPokemon[] $pokemon */
-	private array $pokemon = [];
+	private(set) array $pokemon = [];
 
 	/** @var DexMove[] $moves */
-	private array $moves = [];
+	private(set) array $moves = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly TypeRepositoryInterface $typeRepository,
 		private readonly DexTypeRepositoryInterface $dexTypeRepository,
 		private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
@@ -110,80 +110,5 @@ final class DexTypeModel
 			$type->getId(),
 			$languageId,
 		);
-	}
-
-
-	/**
-	 * Get the version group model.
-	 */
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * Get the type.
-	 */
-	public function getType() : array
-	{
-		return $this->type;
-	}
-
-	/**
-	 * Get the types.
-	 *
-	 * @return DexType[]
-	 */
-	public function getTypes() : array
-	{
-		return $this->types;
-	}
-
-	/**
-	 * Get the damage dealt matchups.
-	 *
-	 * @return float[]
-	 */
-	public function getDamageDealt() : array
-	{
-		return $this->damageDealt;
-	}
-
-	/**
-	 * Get the damage taken matchups.
-	 *
-	 * @return float[]
-	 */
-	public function getDamageTaken() : array
-	{
-		return $this->damageTaken;
-	}
-
-	/**
-	 * Get the stats and their names.
-	 */
-	public function getStats() : array
-	{
-		return $this->stats;
-	}
-
-	/**
-	 * Get the Pokémon.
-	 *
-	 * @return DexPokemon[]
-	 */
-	public function getPokemon() : array
-	{
-		return $this->pokemon;
-	}
-
-	/**
-	 * Get the moves.
-	 *
-	 * @return DexMove[]
-	 */
-	public function getMoves() : array
-	{
-		return $this->moves;
 	}
 }

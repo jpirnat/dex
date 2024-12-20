@@ -19,12 +19,12 @@ final readonly class DexMoveFlagView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexMoveFlagModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexMoveFlagModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$flag = $this->dexMoveFlagModel->getFlag();
-		$moves = $this->dexMoveFlagModel->getMoves();
+		$flag = $this->dexMoveFlagModel->flag;
+		$moves = $this->dexMoveFlagModel->moves;
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();

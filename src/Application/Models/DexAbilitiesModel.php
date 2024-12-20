@@ -9,12 +9,12 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class DexAbilitiesModel
 {
-	private array $abilities = [];
-	private array $flags = [];
+	private(set) array $abilities = [];
+	private(set) array $flags = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly DexAbilityRepositoryInterface $dexAbilityRepository,
 		private readonly AbilityFlagRepositoryInterface $flagRepository,
 	) {}
@@ -50,27 +50,5 @@ final class DexAbilitiesModel
 				'description' => $flag->getDescription(),
 			];
 		}
-	}
-
-
-	/**
-	 * Get the version group model.
-	 */
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * Get the abilities.
-	 */
-	public function getAbilities() : array
-	{
-		return $this->abilities;
-	}
-
-	public function getFlags() : array
-	{
-		return $this->flags;
 	}
 }

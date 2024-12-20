@@ -18,12 +18,12 @@ use Jp\Dex\Domain\Versions\VersionGroup;
 final class DexPokemonMatchupsModel
 {
 	/** @var DexType[] $types */
-	private array $types = [];
+	private(set) array $types = [];
 
 	/** @var float[][] $damageTaken */
-	private array $damageTaken = [];
+	private(set) array $damageTaken = [];
 
-	private array $abilities = [];
+	private(set) array $abilities = [];
 
 
 	private const string NO_ABILITY = 'none';
@@ -251,35 +251,5 @@ final class DexPokemonMatchupsModel
 		];
 
 		$this->damageTaken[$ability->getIdentifier()] = $this->damageTaken[self::NO_ABILITY];
-	}
-
-
-	/**
-	 * Get the types.
-	 *
-	 * @return DexType[]
-	 */
-	public function getTypes() : array
-	{
-		return $this->types;
-	}
-
-	/**
-	 * Get the damage dealt multipliers for each type, for each ability that has
-	 * unique matchups.
-	 *
-	 * @return float[][]
-	 */
-	public function getDamageTaken() : array
-	{
-		return $this->damageTaken;
-	}
-
-	/**
-	 * Get the abilities that have unique matchups.
-	 */
-	public function getAbilities() : array
-	{
-		return $this->abilities;
 	}
 }

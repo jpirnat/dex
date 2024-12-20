@@ -11,14 +11,14 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexPokemonsModel
 {
-	private array $stats = [];
+	private(set) array $stats = [];
 
 	/** @var DexPokemon[] $pokemon */
-	private array $pokemon = [];
+	private(set) array $pokemon = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
 		private readonly DexStatRepositoryInterface $dexStatRepository,
 	) {}
@@ -41,32 +41,5 @@ final class DexPokemonsModel
 			$versionGroupId,
 			$languageId,
 		);
-	}
-
-
-	/**
-	 * Get the version group model.
-	 */
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * Get the stats and their names.
-	 */
-	public function getStats() : array
-	{
-		return $this->stats;
-	}
-
-	/**
-	 * Get the Pokémon.
-	 *
-	 * @return DexPokemon[]
-	 */
-	public function getPokemon() : array
-	{
-		return $this->pokemon;
 	}
 }
