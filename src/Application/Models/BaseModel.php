@@ -7,22 +7,14 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class BaseModel
 {
-	private LanguageId $currentLanguageId;
+	private(set) LanguageId $currentLanguageId;
 
 	/**
-	 * Set the current language id.
+	 * Set data for the base model.
 	 */
-	public function setCurrentLanguageId(LanguageId $currentLanguageId) : void
+	public function setData(LanguageId $currentLanguageId) : void
 	{
 		$this->currentLanguageId = $currentLanguageId;
-	}
-
-	/**
-	 * Get the current language id.
-	 */
-	public function getCurrentLanguageId() : LanguageId
-	{
-		return $this->currentLanguageId;
 	}
 
 	/**

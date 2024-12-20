@@ -37,7 +37,7 @@ final class StatsMonthModel
 
 		// Get the previous month and the next month.
 		$this->dateModel->setMonth($month);
-		$thisMonth = $this->dateModel->getThisMonth();
+		$thisMonth = $this->dateModel->thisMonth;
 
 		// Get the formats/ratings for this month.
 		$formatRatings = $this->usageRatedQueries->getFormatRatings($thisMonth);

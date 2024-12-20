@@ -17,15 +17,15 @@ use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 
 final class BreedingChainsModel
 {
-	private array $pokemon = [];
-	private array $move = [];
+	private(set) array $pokemon = [];
+	private(set) array $move = [];
 
 	/** @var BreedingChainRecord[][] $chains */
-	private array $chains = [];
+	private(set) array $chains = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly PokemonRepositoryInterface $pokemonRepository,
 		private readonly MoveRepositoryInterface $moveRepository,
 		private readonly BreedingChainFinder $breedingChainFinder,
@@ -115,41 +115,6 @@ final class BreedingChainsModel
 			$pokemon->getStepsToHatch(),
 			$this->pokemonMoveFormatter->format($pokemonMove, $languageId),
 		);
-	}
-
-
-	/**
-	 * Get the version group model.
-	 */
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * Get the Pokémon.
-	 */
-	public function getPokemon() : array
-	{
-		return $this->pokemon;
-	}
-
-	/**
-	 * Get the move.
-	 */
-	public function getMove() : array
-	{
-		return $this->move;
-	}
-
-	/**
-	 * Get the chains.
-	 *
-	 * @return BreedingChainRecord[][]
-	 */
-	public function getChains() : array
-	{
-		return $this->chains;
 	}
 }
 

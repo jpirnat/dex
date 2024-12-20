@@ -9,9 +9,9 @@ use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 
 final class DateModel
 {
-	private DateTime $thisMonth;
-	private ?DateTime $prevMonth;
-	private ?DateTime $nextMonth;
+	private(set) DateTime $thisMonth;
+	private(set) ?DateTime $prevMonth;
+	private(set) ?DateTime $nextMonth;
 
 
 	public function __construct(
@@ -43,30 +43,5 @@ final class DateModel
 
 		$this->prevMonth = $this->monthQueries->getPrevByFormat($this->thisMonth, $formatId);
 		$this->nextMonth = $this->monthQueries->getNextByFormat($this->thisMonth, $formatId);
-	}
-
-
-	/**
-	 * Get the current month.
-	 */
-	public function getThisMonth() : DateTime
-	{
-		return $this->thisMonth;
-	}
-
-	/**
-	 * Get the previous month.
-	 */
-	public function getPrevMonth() : ?DateTime
-	{
-		return $this->prevMonth;
-	}
-
-	/**
-	 * Get the next month.
-	 */
-	public function getNextMonth() : ?DateTime
-	{
-		return $this->nextMonth;
 	}
 }

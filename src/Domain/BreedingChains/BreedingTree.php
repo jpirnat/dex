@@ -32,7 +32,7 @@ final class BreedingTree
 	 */
 	public function addParent(BreedingTree $parent) : void
 	{
-		$this->parents[$parent->getValue()->getPokemonId()->value()] = $parent;
+		$this->parents[$parent->value->getPokemonId()->value()] = $parent;
 	}
 
 	/**
@@ -41,24 +41,6 @@ final class BreedingTree
 	public function hasParent(int $pokemonId) : bool
 	{
 		return isset($this->parents[$pokemonId]);
-	}
-
-	/**
-	 * Get this node's Pokémon move.
-	 */
-	public function getValue() : PokemonMove
-	{
-		return $this->value;
-	}
-
-	/**
-	 * Get the potential parents of the Pokémon.
-	 *
-	 * @return BreedingTree[]
-	 */
-	public function getParents() : array
-	{
-		return $this->parents;
 	}
 
 	/**

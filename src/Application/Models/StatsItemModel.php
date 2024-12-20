@@ -74,8 +74,8 @@ final class StatsItemModel
 
 		// Get the previous month and the next month.
 		$this->dateModel->setMonthAndFormat($month, $this->format->getId());
-		$thisMonth = $this->dateModel->getThisMonth();
-		$prevMonth = $this->dateModel->getPrevMonth();
+		$thisMonth = $this->dateModel->thisMonth;
+		$prevMonth = $this->dateModel->prevMonth;
 
 		// Get the item.
 		$item = $this->itemRepository->getByIdentifier($itemIdentifier);

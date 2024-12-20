@@ -30,9 +30,9 @@ final readonly class StatsLeadsView
 
 		// Get the previous month and the next month.
 		$dateModel = $this->statsLeadsModel->getDateModel();
-		$prevMonth = $dateModel->getPrevMonth();
-		$thisMonth = $dateModel->getThisMonth();
-		$nextMonth = $dateModel->getNextMonth();
+		$prevMonth = $dateModel->prevMonth;
+		$thisMonth = $dateModel->thisMonth;
+		$nextMonth = $dateModel->nextMonth;
 		$prevMonth = $this->monthControlFormatter->format($prevMonth, $formatter);
 		$thisMonth = $this->monthControlFormatter->format($thisMonth, $formatter);
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);

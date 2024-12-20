@@ -20,6 +20,6 @@ final readonly class BaseController
 	{
 		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->baseModel->setCurrentLanguageId($languageId);
+		$this->baseModel->setData($languageId);
 	}
 }

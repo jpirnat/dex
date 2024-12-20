@@ -17,7 +17,7 @@ final readonly class BaseView
 	public function getBaseVariables() : array
 	{
 		return [
-			'currentLanguageId' => $this->baseModel->getCurrentLanguageId()->value(),
+			'currentLanguageId' => $this->baseModel->currentLanguageId->value(),
 			'languages' => $this->baseModel->getLanguages(),
 		];
 	}

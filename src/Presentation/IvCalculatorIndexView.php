@@ -19,17 +19,17 @@ final readonly class IvCalculatorIndexView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->ivCalculatorIndexModel->getVersionGroupModel();
+		$versionGroupModel = $this->ivCalculatorIndexModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$pokemons = $this->ivCalculatorIndexModel->getPokemons();
+		$pokemons = $this->ivCalculatorIndexModel->pokemons;
 		$pokemons = $this->dexFormatter->formatIvCalculatorPokemons($pokemons);
 
-		$natures = $this->ivCalculatorIndexModel->getNatures();
-		$characteristics = $this->ivCalculatorIndexModel->getCharacteristics();
-		$types = $this->ivCalculatorIndexModel->getTypes();
-		$stats = $this->ivCalculatorIndexModel->getStats();
+		$natures = $this->ivCalculatorIndexModel->natures;
+		$characteristics = $this->ivCalculatorIndexModel->characteristics;
+		$types = $this->ivCalculatorIndexModel->types;
+		$stats = $this->ivCalculatorIndexModel->stats;
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();

@@ -19,13 +19,13 @@ final readonly class BreedingChainsView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->breedingChainsModel->getVersionGroupModel();
+		$versionGroupModel = $this->breedingChainsModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 
-		$pokemon = $this->breedingChainsModel->getPokemon();
-		$move = $this->breedingChainsModel->getMove();
+		$pokemon = $this->breedingChainsModel->pokemon;
+		$move = $this->breedingChainsModel->move;
 
-		$chainsData = $this->breedingChainsModel->getChains();
+		$chainsData = $this->breedingChainsModel->chains;
 		$chains = [];
 		foreach ($chainsData as $chainId => $chain) {
 			$records = [];
