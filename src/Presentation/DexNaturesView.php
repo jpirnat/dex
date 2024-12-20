@@ -19,11 +19,11 @@ final readonly class DexNaturesView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->dexNaturesModel->getVersionGroupModel();
+		$versionGroupModel = $this->dexNaturesModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->getVersionGroup();
 		$versionGroups = $versionGroupModel->getVersionGroups();
 
-		$natures = $this->dexNaturesModel->getNatures();
+		$natures = $this->dexNaturesModel->natures;
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();

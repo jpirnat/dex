@@ -8,11 +8,11 @@ use Jp\Dex\Domain\Natures\DexNatureRepositoryInterface;
 
 final class DexNaturesModel
 {
-	private array $natures = [];
+	private(set) array $natures = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly DexNatureRepositoryInterface $dexNatureRepository,
 	) {}
 
@@ -24,28 +24,12 @@ final class DexNaturesModel
 		string $vgIdentifier,
 		LanguageId $languageId,
 	) : void {
+		$this->natures = [];
+
 		$this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$this->versionGroupModel->setWithNatures();
 
-
 		$this->natures = $this->dexNatureRepository->getByLanguage($languageId);
-	}
-
-
-	/**
-	 * Get the version group model.
-	 */
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * Get the natures.
-	 */
-	public function getNatures() : array
-	{
-		return $this->natures;
 	}
 }
