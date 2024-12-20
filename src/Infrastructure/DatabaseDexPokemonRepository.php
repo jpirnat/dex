@@ -17,7 +17,6 @@ use Jp\Dex\Domain\Pokemon\VgPokemonNotFoundException;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\TypeId;
 use Jp\Dex\Domain\Versions\VersionGroupId;
-
 use PDO;
 use PDOStatement;
 

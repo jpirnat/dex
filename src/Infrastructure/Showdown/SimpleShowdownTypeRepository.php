@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
-use Jp\Dex\Domain\Import\Showdown\TypeNotImportedException;
 use Jp\Dex\Domain\Import\Showdown\ShowdownTypeRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\TypeNotImportedException;
 use Jp\Dex\Domain\Types\TypeId;
 
 final class SimpleShowdownTypeRepository implements ShowdownTypeRepositoryInterface

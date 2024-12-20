@@ -244,6 +244,10 @@ final class IvCalculatorSubmitModel
 			}
 
 			if ($characteristic && $versionGroup->hasCharacteristics()) {
+				$highestStatId = $characteristic->getHighestStatId();
+				$highestStat = $stats[$highestStatId->value()];
+				$highestStatIdentifier = $highestStat->getIdentifier();
+
 				// The "maximum of minimums" characteristic check can be run again
 				// to rule out more possible IVs after the Hidden Power checks.
 				$minimumIvs = [];

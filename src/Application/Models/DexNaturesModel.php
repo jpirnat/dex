@@ -5,7 +5,6 @@ namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Natures\DexNatureRepositoryInterface;
-use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexNaturesModel
 {

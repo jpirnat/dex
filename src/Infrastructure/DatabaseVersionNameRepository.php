@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
+use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Versions\VersionId;
 use Jp\Dex\Domain\Versions\VersionName;
 use Jp\Dex\Domain\Versions\VersionNameNotFoundException;
 use Jp\Dex\Domain\Versions\VersionNameRepositoryInterface;
-use Jp\Dex\Domain\Languages\LanguageId;
 use PDO;
 
 final readonly class DatabaseVersionNameRepository implements VersionNameRepositoryInterface

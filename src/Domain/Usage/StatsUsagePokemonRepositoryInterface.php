@@ -7,7 +7,6 @@ use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface StatsUsagePokemonRepositoryInterface
 {
