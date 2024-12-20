@@ -20,7 +20,7 @@ final readonly class BreedingChainsView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->breedingChainsModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
+		$versionGroup = $versionGroupModel->versionGroup;
 
 		$pokemon = $this->breedingChainsModel->getPokemon();
 		$move = $this->breedingChainsModel->getMove();

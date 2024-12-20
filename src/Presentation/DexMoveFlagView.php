@@ -20,8 +20,8 @@ final readonly class DexMoveFlagView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexMoveFlagModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$flag = $this->dexMoveFlagModel->getFlag();
 		$moves = $this->dexMoveFlagModel->getMoves();

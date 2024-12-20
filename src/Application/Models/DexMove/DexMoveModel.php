@@ -182,7 +182,7 @@ final class DexMoveModel
 			$languageId,
 		);
 		$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
-			$this->versionGroupModel->getVersionGroup()->getGenerationId(),
+			$this->versionGroupModel->versionGroup->getGenerationId(),
 			$vgMove->getTypeId(),
 		);
 		foreach ($attackingMatchups as $matchup) {
@@ -192,7 +192,7 @@ final class DexMoveModel
 
 		if ($moveId->value() === MoveId::FLYING_PRESS) {
 			$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
-				$this->versionGroupModel->getVersionGroup()->getGenerationId(),
+				$this->versionGroupModel->versionGroup->getGenerationId(),
 				new TypeId(TypeId::FLYING),
 			);
 			foreach ($attackingMatchups as $matchup) {

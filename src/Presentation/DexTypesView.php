@@ -20,8 +20,8 @@ final readonly class DexTypesView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexTypesModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$types = $this->dexTypesModel->getTypes();
 		$multipliers = $this->dexTypesModel->getMultipliers();

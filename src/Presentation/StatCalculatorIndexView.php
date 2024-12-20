@@ -20,8 +20,8 @@ final readonly class StatCalculatorIndexView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->statCalculatorIndexModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$pokemons = $this->statCalculatorIndexModel->getPokemons();
 		$pokemons = $this->dexFormatter->formatIvCalculatorPokemons($pokemons);

@@ -20,8 +20,8 @@ final readonly class AdvancedPokemonSearchIndexView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->advancedPokemonSearchIndexModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$types = $this->advancedPokemonSearchIndexModel->getTypes();
 		$abilities = $this->advancedPokemonSearchIndexModel->getAbilities();

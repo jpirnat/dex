@@ -20,8 +20,8 @@ final readonly class DexIndexView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexIndexModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		// Navigational breadcrumbs.
 		$breadcrumbs = [[

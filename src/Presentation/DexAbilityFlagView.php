@@ -20,8 +20,8 @@ final readonly class DexAbilityFlagView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexAbilityFlagModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$flag = $this->dexAbilityFlagModel->getFlag();
 		$abilities = $this->dexAbilityFlagModel->getAbilities();

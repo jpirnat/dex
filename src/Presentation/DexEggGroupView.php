@@ -20,8 +20,8 @@ final readonly class DexEggGroupView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexEggGroupModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$eggGroup = $this->dexEggGroupModel->getEggGroup();
 		$stats = $this->dexEggGroupModel->getStats();

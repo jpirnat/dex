@@ -22,10 +22,10 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
  */
 final class VersionGroupModel
 {
-	private VersionGroup $versionGroup;
+	private(set) VersionGroup $versionGroup;
 
 	/** @var VersionGroup[] $versionGroups */
-	private array $versionGroups = [];
+	private(set) array $versionGroups = [];
 
 
 	public function __construct(
@@ -147,24 +147,5 @@ final class VersionGroupModel
 	public function setWithStatFormulaType(string $statFormulaType) : void
 	{
 		$this->versionGroups = $this->vgRepository->getWithStatFormulaType($statFormulaType);
-	}
-
-
-	/**
-	 * Get the version group.
-	 */
-	public function getVersionGroup() : VersionGroup
-	{
-		return $this->versionGroup;
-	}
-
-	/**
-	 * Get the version groups.
-	 *
-	 * @return VersionGroup[]
-	 */
-	public function getVersionGroups() : array
-	{
-		return $this->versionGroups;
 	}
 }

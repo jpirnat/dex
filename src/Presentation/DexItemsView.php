@@ -20,8 +20,8 @@ final readonly class DexItemsView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexItemsModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$items = $this->dexItemsModel->getItems();
 

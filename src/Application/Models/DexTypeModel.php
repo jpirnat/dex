@@ -79,11 +79,11 @@ final class DexTypeModel
 		$this->damageDealt = [];
 		$this->damageTaken = [];
 		$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
-			$this->versionGroupModel->getVersionGroup()->getGenerationId(),
+			$this->versionGroupModel->versionGroup->getGenerationId(),
 			$type->getId(),
 		);
 		$defendingMatchups = $this->typeMatchupRepository->getByDefendingType(
-			$this->versionGroupModel->getVersionGroup()->getGenerationId(),
+			$this->versionGroupModel->versionGroup->getGenerationId(),
 			$type->getId(),
 		);
 		foreach ($attackingMatchups as $matchup) {

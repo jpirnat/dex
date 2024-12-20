@@ -20,8 +20,8 @@ final readonly class DexTmsView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexTmsModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$machines = [];
 		$m = $this->dexTmsModel->getMachines();

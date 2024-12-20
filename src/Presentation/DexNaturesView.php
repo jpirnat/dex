@@ -20,8 +20,8 @@ final readonly class DexNaturesView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexNaturesModel->versionGroupModel;
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$natures = $this->dexNaturesModel->natures;
 

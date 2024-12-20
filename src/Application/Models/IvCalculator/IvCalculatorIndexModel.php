@@ -60,7 +60,7 @@ final class IvCalculatorIndexModel
 			$languageId,
 		);
 
-		$versionGroup = $this->versionGroupModel->getVersionGroup();
+		$versionGroup = $this->versionGroupModel->versionGroup;
 		if ($versionGroup->hasIvBasedHiddenPower()) {
 			$this->types = $this->queries->getTypes(
 				$versionGroupId,

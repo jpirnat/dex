@@ -72,7 +72,7 @@ final class DexPokemonModel
 
 		// Set the Pokémon's matchups.
 		$this->dexPokemonMatchupsModel->setData(
-			$this->versionGroupModel->getVersionGroup(),
+			$this->versionGroupModel->versionGroup,
 			$pokemon->getId(),
 			$languageId,
 			$this->pokemon->getAbilities(),
@@ -97,7 +97,7 @@ final class DexPokemonModel
 	public function setBreedingPartnersSearchUrl(
 		string $vgIdentifier,
 	) : void {
-		$versionGroup = $this->versionGroupModel->getVersionGroup();
+		$versionGroup = $this->versionGroupModel->versionGroup;
 		$eggGroups = $this->pokemon->getEggGroups();
 		$genderRatio = $this->pokemon->getGenderRatio()->value();
 

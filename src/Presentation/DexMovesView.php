@@ -20,8 +20,8 @@ final readonly class DexMovesView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexMovesModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$moves = $this->dexMovesModel->getMoves();
 		$flags = $this->dexMovesModel->getFlags();

@@ -26,8 +26,8 @@ final readonly class DexPokemonView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->dexPokemonModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$pokemon = $this->dexPokemonModel->getPokemon();
 		$pokemon = $this->dexFormatter->formatExpandedDexPokemon($pokemon);

@@ -20,8 +20,8 @@ final readonly class IvCalculatorIndexView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->ivCalculatorIndexModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$pokemons = $this->ivCalculatorIndexModel->getPokemons();
 		$pokemons = $this->dexFormatter->formatIvCalculatorPokemons($pokemons);

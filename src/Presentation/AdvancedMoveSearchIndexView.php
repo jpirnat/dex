@@ -20,8 +20,8 @@ final readonly class AdvancedMoveSearchIndexView
 	public function getData() : ResponseInterface
 	{
 		$versionGroupModel = $this->advancedMoveSearchIndexModel->getVersionGroupModel();
-		$versionGroup = $versionGroupModel->getVersionGroup();
-		$versionGroups = $versionGroupModel->getVersionGroups();
+		$versionGroup = $versionGroupModel->versionGroup;
+		$versionGroups = $versionGroupModel->versionGroups;
 
 		$types = $this->advancedMoveSearchIndexModel->getTypes();
 		$categories = $this->advancedMoveSearchIndexModel->getCategories();

@@ -53,7 +53,7 @@ final class DexTypesModel
 
 		// Get this generation's type chart.
 		$typeMatchups = $this->typeMatchupRepository->getByGeneration(
-			$this->versionGroupModel->getVersionGroup()->getGenerationId()
+			$this->versionGroupModel->versionGroup->getGenerationId()
 		);
 		$this->multipliers = [];
 		foreach ($typeMatchups as $typeMatchup) {
