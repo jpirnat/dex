@@ -20,18 +20,19 @@ final readonly class StatsMoveView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$month = $this->statsMoveModel->getMonth();
-		$format = $this->statsMoveModel->getFormat();
-		$rating = $this->statsMoveModel->getRating();
+		$month = $this->statsMoveModel->month;
+		$format = $this->statsMoveModel->format;
+		$rating = $this->statsMoveModel->rating;
+		$move = $this->statsMoveModel->move;
 
-		$versionGroup = $this->statsMoveModel->getVersionGroup();
+		$versionGroup = $this->statsMoveModel->versionGroup;
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->statsMoveModel->getLanguageId()
+			$this->statsMoveModel->languageId
 		);
 
 		// Get the previous month and the next month.
-		$dateModel = $this->statsMoveModel->getDateModel();
+		$dateModel = $this->statsMoveModel->dateModel;
 		$prevMonth = $dateModel->getPrevMonth();
 		$thisMonth = $dateModel->getThisMonth();
 		$nextMonth = $dateModel->getNextMonth();
@@ -40,7 +41,7 @@ final readonly class StatsMoveView
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
 		// Get the Pokémon usage data.
-		$pokemonData = $this->statsMoveModel->getPokemon();
+		$pokemonData = $this->statsMoveModel->pokemon;
 		$pokemons = [];
 		foreach ($pokemonData as $pokemon) {
 			$pokemons[] = [
@@ -61,7 +62,6 @@ final readonly class StatsMoveView
 
 		// Navigation breadcrumbs.
 		$formatIdentifier = $format->getIdentifier();
-		$moveName = $this->statsMoveModel->getMoveName()->getName();
 		$breadcrumbs = [[
 			'url' => '/stats',
 			'text' => 'Stats',
@@ -72,13 +72,13 @@ final readonly class StatsMoveView
 			'url' => "/stats/$month/$formatIdentifier/$rating",
 			'text' => $format->getName(),
 		], [
-			'text' => $moveName,
+			'text' => $move['name'],
 		]];
 
 		return new JsonResponse([
 			'data' => [
 				'title' => 'Porydex - Stats - ' . $thisMonth['name'] . ' '
-					. $format->getName() . ' - ' . $moveName,
+					. $format->getName() . ' - ' . $move['name'],
 
 				'format' => [
 					'identifier' => $format->getIdentifier(),
@@ -90,17 +90,17 @@ final readonly class StatsMoveView
 				'prevMonth' => $prevMonth,
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
-				'ratings' => $this->statsMoveModel->getRatings(),
+				'ratings' => $this->statsMoveModel->ratings,
 
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),
 				],
 				'move' => [
-					'identifier' => $this->statsMoveModel->getMoveIdentifier(),
-					'name' => $moveName,
-					'description' => $this->statsMoveModel->getMoveDescription()->getDescription(),
+					'identifier' => $move['identifier'],
+					'name' => $move['name'],
+					'description' => $move['description'],
 				],
-				'speedName' => $this->statsMoveModel->getSpeedName(),
+				'speedName' => $this->statsMoveModel->speedName,
 				'pokemons' => $pokemons,
 			]
 		]);

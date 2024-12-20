@@ -6,9 +6,7 @@ namespace Jp\Dex\Application\Models;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Moves\MoveDescription;
 use Jp\Dex\Domain\Moves\MoveDescriptionRepositoryInterface;
-use Jp\Dex\Domain\Moves\MoveName;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
@@ -21,26 +19,24 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class StatsMoveModel
 {
-	private string $month;
-	private Format $format;
-	private int $rating;
-	private string $moveIdentifier;
-	private LanguageId $languageId;
-	private VersionGroup $versionGroup;
+	private(set) string $month;
+	private(set) Format $format;
+	private(set) int $rating;
+	private(set) array $move;
+	private(set) LanguageId $languageId;
+	private(set) VersionGroup $versionGroup;
 
 	/** @var int[] $ratings */
-	private array $ratings = [];
+	private(set) array $ratings = [];
 
-	private MoveName $moveName;
-	private MoveDescription $moveDescription;
-	private string $speedName = '';
+	private(set) string $speedName = '';
 
 	/** @var StatsMovePokemon[] $pokemon */
-	private array $pokemon = [];
+	private(set) array $pokemon = [];
 
 
 	public function __construct(
-		private readonly DateModel $dateModel,
+		private(set) readonly DateModel $dateModel,
 		private readonly FormatRepositoryInterface $formatRepository,
 		private readonly VersionGroupRepositoryInterface $vgRepository,
 		private readonly MoveRepositoryInterface $moveRepository,
@@ -65,7 +61,6 @@ final class StatsMoveModel
 	) : void {
 		$this->month = $month;
 		$this->rating = $rating;
-		$this->moveIdentifier = $moveIdentifier;
 		$this->languageId = $languageId;
 
 		// Get the format.
@@ -92,18 +87,21 @@ final class StatsMoveModel
 			$this->format->getId(),
 		);
 
-		// Get the move name.
-		$this->moveName = $this->moveNameRepository->getByLanguageAndMove(
+		$moveName = $this->moveNameRepository->getByLanguageAndMove(
 			$languageId,
 			$move->getId(),
 		);
-
-		// Get the move description.
-		$this->moveDescription = $this->moveDescriptionRepository->getByMove(
+		$moveDescription = $this->moveDescriptionRepository->getByMove(
 			$this->format->getVersionGroupId(),
 			$languageId,
 			$move->getId(),
 		);
+
+		$this->move = [
+			'identifier' => $moveIdentifier,
+			'name' => $moveName->getName(),
+			'description' => $moveDescription->getDescription(),
+		];
 
 		$speedName = $this->statNameRepository->getByLanguageAndStat(
 			$languageId,
@@ -120,100 +118,5 @@ final class StatsMoveModel
 			$move->getId(),
 			$languageId,
 		);
-	}
-
-
-	/**
-	 * Get the month.
-	 */
-	public function getMonth() : string
-	{
-		return $this->month;
-	}
-
-	/**
-	 * Get the format.
-	 */
-	public function getFormat() : Format
-	{
-		return $this->format;
-	}
-
-	/**
-	 * Get the rating.
-	 */
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	/**
-	 * Get the move identifier.
-	 */
-	public function getMoveIdentifier() : string
-	{
-		return $this->moveIdentifier;
-	}
-
-	/**
-	 * Get the language id.
-	 */
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	/**
-	 * Get the date model.
-	 */
-	public function getDateModel() : DateModel
-	{
-		return $this->dateModel;
-	}
-
-	public function getVersionGroup() : VersionGroup
-	{
-		return $this->versionGroup;
-	}
-
-	/**
-	 * Get the ratings for this month.
-	 *
-	 * @return int[]
-	 */
-	public function getRatings() : array
-	{
-		return $this->ratings;
-	}
-
-	/**
-	 * Get the move name.
-	 */
-	public function getMoveName() : MoveName
-	{
-		return $this->moveName;
-	}
-
-	/**
-	 * Get the move description.
-	 */
-	public function getMoveDescription() : MoveDescription
-	{
-		return $this->moveDescription;
-	}
-
-	public function getSpeedName() : string
-	{
-		return $this->speedName;
-	}
-
-	/**
-	 * Get the Pokémon.
-	 *
-	 * @return StatsMovePokemon[]
-	 */
-	public function getPokemon() : array
-	{
-		return $this->pokemon;
 	}
 }
