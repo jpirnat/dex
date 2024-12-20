@@ -21,13 +21,13 @@ final readonly class AveragedUsageView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$start = $this->averagedUsageModel->getStart();
-		$end = $this->averagedUsageModel->getEnd();
-		$format = $this->averagedUsageModel->getFormat();
-		$rating = $this->averagedUsageModel->getRating();
+		$start = $this->averagedUsageModel->start;
+		$end = $this->averagedUsageModel->end;
+		$format = $this->averagedUsageModel->format;
+		$rating = $this->averagedUsageModel->rating;
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->averagedUsageModel->getLanguageId()
+			$this->averagedUsageModel->languageId
 		);
 
 		// Get the start and end months.
@@ -37,7 +37,7 @@ final readonly class AveragedUsageView
 		$endMonth   = $this->monthControlFormatter->format($endMonth,   $formatter);
 
 		// Get the Pokémon usage data.
-		$pokemonData = $this->averagedUsageModel->getPokemon();
+		$pokemonData = $this->averagedUsageModel->pokemon;
 		$pokemons = [];
 		foreach ($pokemonData as $pokemon) {
 			$pokemons[] = [
@@ -81,8 +81,8 @@ final readonly class AveragedUsageView
 				'breadcrumbs' => $breadcrumbs,
 				'startMonth' => $startMonth,
 				'endMonth' => $endMonth,
-				'ratings' => $this->averagedUsageModel->getRatings(),
-				'showLeadsLink' => $this->averagedUsageModel->doesLeadsDataExist(),
+				'ratings' => $this->averagedUsageModel->ratings,
+				'showLeadsLink' => $this->averagedUsageModel->showLeadsLink,
 				'pokemons' => $pokemons,
 			]
 		]);

@@ -15,16 +15,16 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class AdvancedPokemonSearchIndexModel
 {
-	private array $types = [];
-	private array $abilities = [];
-	private array $eggGroups = [];
-	private array $genderRatios = [];
-	private array $moves = [];
-	private array $stats = [];
+	private(set) array $types = [];
+	private(set) array $abilities = [];
+	private(set) array $eggGroups = [];
+	private(set) array $genderRatios = [];
+	private(set) array $moves = [];
+	private(set) array $stats = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly DexTypeRepositoryInterface $dexTypeRepository,
 		private readonly DexAbilityRepositoryInterface $dexAbilityRepository,
 		private readonly DexEggGroupRepositoryInterface $dexEggGroupRepository,
@@ -101,41 +101,5 @@ final class AdvancedPokemonSearchIndexModel
 		}
 
 		$this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
-	}
-
-
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	public function getTypes() : array
-	{
-		return $this->types;
-	}
-
-	public function getAbilities() : array
-	{
-		return $this->abilities;
-	}
-
-	public function getEggGroups() : array
-	{
-		return $this->eggGroups;
-	}
-
-	public function getGenderRatios() : array
-	{
-		return $this->genderRatios;
-	}
-
-	public function getMoves() : array
-	{
-		return $this->moves;
-	}
-
-	public function getStats() : array
-	{
-		return $this->stats;
 	}
 }

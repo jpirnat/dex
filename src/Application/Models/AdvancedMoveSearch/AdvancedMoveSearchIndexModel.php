@@ -16,15 +16,15 @@ use Jp\Dex\Domain\Versions\GenerationId;
 final class AdvancedMoveSearchIndexModel
 {
 	/** @var DexType[] $types */
-	private array $types = [];
+	private(set) array $types = [];
 	/** @var DexCategory[] $categories */
-	private array $categories = [];
-	private array $flags = [];
-	private array $pokemons = [];
+	private(set) array $categories = [];
+	private(set) array $flags = [];
+	private(set) array $pokemons = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly DexTypeRepositoryInterface $dexTypeRepository,
 		private readonly DexCategoryRepositoryInterface $dexCategoryRepository,
 		private readonly MoveFlagRepositoryInterface $flagRepository,
@@ -81,37 +81,5 @@ final class AdvancedMoveSearchIndexModel
 		usort($this->pokemons, function (array $a, array $b) : int {
 			return $a['name'] <=> $b['name'];
 		});
-	}
-
-
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * @return DexType[]
-	 */
-	public function getTypes() : array
-	{
-		return $this->types;
-	}
-
-	/**
-	 * @return DexCategory[]
-	 */
-	public function getCategories() : array
-	{
-		return $this->categories;
-	}
-
-	public function getFlags() : array
-	{
-		return $this->flags;
-	}
-
-	public function getPokemons() : array
-	{
-		return $this->pokemons;
 	}
 }

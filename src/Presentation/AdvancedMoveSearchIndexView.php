@@ -19,14 +19,14 @@ final readonly class AdvancedMoveSearchIndexView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->advancedMoveSearchIndexModel->getVersionGroupModel();
+		$versionGroupModel = $this->advancedMoveSearchIndexModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$types = $this->advancedMoveSearchIndexModel->getTypes();
-		$categories = $this->advancedMoveSearchIndexModel->getCategories();
-		$flags = $this->advancedMoveSearchIndexModel->getFlags();
-		$pokemons = $this->advancedMoveSearchIndexModel->getPokemons();
+		$types = $this->advancedMoveSearchIndexModel->types;
+		$categories = $this->advancedMoveSearchIndexModel->categories;
+		$flags = $this->advancedMoveSearchIndexModel->flags;
+		$pokemons = $this->advancedMoveSearchIndexModel->pokemons;
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();

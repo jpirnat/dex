@@ -18,17 +18,17 @@ use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 
 final class AveragedLeadsModel
 {
-	private string $start;
-	private string $end;
-	private Format $format;
-	private int $rating;
-	private LanguageId $languageId;
+	private(set) string $start;
+	private(set) string $end;
+	private(set) Format $format;
+	private(set) int $rating;
+	private(set) LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private array $ratings = [];
+	private(set) array $ratings = [];
 
 	/** @var AveragedLeadsPokemon[] $pokemon */
-	private array $pokemon = [];
+	private(set) array $pokemon = [];
 
 
 	public function __construct(
@@ -143,66 +143,5 @@ final class AveragedLeadsModel
 				$leadsAveragedPokemon->getRawPercent(),
 			);
 		}
-	}
-
-
-	/**
-	 * Get the start month.
-	 */
-	public function getStart() : string
-	{
-		return $this->start;
-	}
-
-	/**
-	 * Get the end month.
-	 */
-	public function getEnd() : string
-	{
-		return $this->end;
-	}
-
-	/**
-	 * Get the format.
-	 */
-	public function getFormat() : Format
-	{
-		return $this->format;
-	}
-
-	/**
-	 * Get the rating.
-	 */
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	/**
-	 * Get the language id.
-	 */
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	/**
-	 * Get the ratings for these months.
-	 *
-	 * @return int[]
-	 */
-	public function getRatings() : array
-	{
-		return $this->ratings;
-	}
-
-	/**
-	 * Get the Pokémon.
-	 *
-	 * @return AveragedLeadsPokemon[]
-	 */
-	public function getPokemon() : array
-	{
-		return $this->pokemon;
 	}
 }

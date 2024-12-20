@@ -22,14 +22,14 @@ final readonly class AveragedPokemonView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$start = $this->averagedPokemonModel->getStart();
-		$end = $this->averagedPokemonModel->getEnd();
-		$format = $this->averagedPokemonModel->getFormat();
-		$rating = $this->averagedPokemonModel->getRating();
-		$pokemon = $this->averagedPokemonModel->getPokemon();
+		$start = $this->averagedPokemonModel->start;
+		$end = $this->averagedPokemonModel->end;
+		$format = $this->averagedPokemonModel->format;
+		$rating = $this->averagedPokemonModel->rating;
+		$pokemon = $this->averagedPokemonModel->pokemon;
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->averagedPokemonModel->getLanguageId()
+			$this->averagedPokemonModel->languageId
 		);
 
 		// Get the start and end months.
@@ -39,14 +39,14 @@ final readonly class AveragedPokemonView
 		$endMonth   = $this->monthControlFormatter->format($endMonth,   $formatter);
 
 		// Get miscellaneous Pokémon data.
-		$pokemonModel = $this->averagedPokemonModel->getPokemonModel();
+		$pokemonModel = $this->averagedPokemonModel->pokemonModel;
 		$dexPokemon = $pokemonModel->getPokemon();
 		$stats = $pokemonModel->getStats();
-		$versionGroup = $this->averagedPokemonModel->getVersionGroup();
-		$generation = $this->averagedPokemonModel->getGeneration();
+		$versionGroup = $this->averagedPokemonModel->versionGroup;
+		$generation = $this->averagedPokemonModel->generation;
 
 		// Get abilities.
-		$abilitiesData = $this->averagedPokemonModel->getAbilities();
+		$abilitiesData = $this->averagedPokemonModel->abilities;
 		$abilities = [];
 		foreach ($abilitiesData as $ability) {
 			$abilities[] = [
@@ -58,7 +58,7 @@ final readonly class AveragedPokemonView
 		}
 
 		// Get items.
-		$itemsData = $this->averagedPokemonModel->getItems();
+		$itemsData = $this->averagedPokemonModel->items;
 		$items = [];
 		foreach ($itemsData as $item) {
 			$items[] = [
@@ -70,7 +70,7 @@ final readonly class AveragedPokemonView
 		}
 
 		// Get moves.
-		$movesData = $this->averagedPokemonModel->getMoves();
+		$movesData = $this->averagedPokemonModel->moves;
 		$moves = [];
 		foreach ($movesData as $move) {
 			$moves[] = [
@@ -126,7 +126,7 @@ final readonly class AveragedPokemonView
 				'breadcrumbs' => $breadcrumbs,
 				'startMonth' => $startMonth,
 				'endMonth' => $endMonth,
-				'ratings' => $this->averagedPokemonModel->getRatings(),
+				'ratings' => $this->averagedPokemonModel->ratings,
 
 				'versionGroup' => [
 					'identifier' => $versionGroup->getIdentifier(),

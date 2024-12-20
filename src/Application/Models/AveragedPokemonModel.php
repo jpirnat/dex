@@ -21,22 +21,22 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class AveragedPokemonModel
 {
-	private string $start;
-	private string $end;
-	private Format $format;
-	private int $rating;
-	private Pokemon $pokemon;
-	private LanguageId $languageId;
+	private(set) string $start;
+	private(set) string $end;
+	private(set) Format $format;
+	private(set) int $rating;
+	private(set) Pokemon $pokemon;
+	private(set) LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private array $ratings = [];
+	private(set) array $ratings = [];
 
-	private VersionGroup $versionGroup;
-	private Generation $generation;
+	private(set) VersionGroup $versionGroup;
+	private(set) Generation $generation;
 
-	private array $abilities = [];
-	private array $items = [];
-	private array $moves = [];
+	private(set) array $abilities = [];
+	private(set) array $items = [];
+	private(set) array $moves = [];
 
 
 	public function __construct(
@@ -45,7 +45,7 @@ final class AveragedPokemonModel
 		private readonly RatingQueriesInterface $ratingQueries,
 		private readonly VersionGroupRepositoryInterface $versionGroupRepository,
 		private readonly GenerationRepositoryInterface $generationRepository,
-		private readonly PokemonModel $pokemonModel,
+		private(set) readonly PokemonModel $pokemonModel,
 		private readonly AbilityModel $abilityModel,
 		private readonly ItemModel $itemModel,
 		private readonly MoveModel $moveModel,
@@ -128,102 +128,5 @@ final class AveragedPokemonModel
 			$this->pokemon->getId(),
 			$languageId,
 		);
-	}
-
-	/**
-	 * Get the start month.
-	 */
-	public function getStart() : string
-	{
-		return $this->start;
-	}
-
-	/**
-	 * Get the end month.
-	 */
-	public function getEnd() : string
-	{
-		return $this->end;
-	}
-
-	/**
-	 * Get the format.
-	 */
-	public function getFormat() : Format
-	{
-		return $this->format;
-	}
-
-	/**
-	 * Get the rating.
-	 */
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	/**
-	 * Get the Pokémon.
-	 */
-	public function getPokemon() : Pokemon
-	{
-		return $this->pokemon;
-	}
-
-	/**
-	 * Get the language id.
-	 */
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	/**
-	 * Get the ratings for these months.
-	 *
-	 * @return int[]
-	 */
-	public function getRatings() : array
-	{
-		return $this->ratings;
-	}
-
-	/**
-	 * Get the Pokémon model.
-	 */
-	public function getPokemonModel() : PokemonModel
-	{
-		return $this->pokemonModel;
-	}
-
-	/**
-	 * Get the version group.
-	 */
-	public function getVersionGroup() : VersionGroup
-	{
-		return $this->versionGroup;
-	}
-
-	/**
-	 * Get the generation.
-	 */
-	public function getGeneration() : Generation
-	{
-		return $this->generation;
-	}
-
-	public function getAbilities() : array
-	{
-		return $this->abilities;
-	}
-
-	public function getItems() : array
-	{
-		return $this->items;
-	}
-
-	public function getMoves() : array
-	{
-		return $this->moves;
 	}
 }

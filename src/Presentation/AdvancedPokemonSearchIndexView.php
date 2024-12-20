@@ -19,16 +19,16 @@ final readonly class AdvancedPokemonSearchIndexView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->advancedPokemonSearchIndexModel->getVersionGroupModel();
+		$versionGroupModel = $this->advancedPokemonSearchIndexModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$types = $this->advancedPokemonSearchIndexModel->getTypes();
-		$abilities = $this->advancedPokemonSearchIndexModel->getAbilities();
-		$eggGroups = $this->advancedPokemonSearchIndexModel->getEggGroups();
-		$genderRatios = $this->advancedPokemonSearchIndexModel->getGenderRatios();
-		$moves = $this->advancedPokemonSearchIndexModel->getMoves();
-		$stats = $this->advancedPokemonSearchIndexModel->getStats();
+		$types = $this->advancedPokemonSearchIndexModel->types;
+		$abilities = $this->advancedPokemonSearchIndexModel->abilities;
+		$eggGroups = $this->advancedPokemonSearchIndexModel->eggGroups;
+		$genderRatios = $this->advancedPokemonSearchIndexModel->genderRatios;
+		$moves = $this->advancedPokemonSearchIndexModel->moves;
+		$stats = $this->advancedPokemonSearchIndexModel->stats;
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();

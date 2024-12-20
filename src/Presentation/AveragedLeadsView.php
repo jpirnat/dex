@@ -21,13 +21,13 @@ final readonly class AveragedLeadsView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$start = $this->averagedLeadsModel->getStart();
-		$end = $this->averagedLeadsModel->getEnd();
-		$format = $this->averagedLeadsModel->getFormat();
-		$rating = $this->averagedLeadsModel->getRating();
+		$start = $this->averagedLeadsModel->start;
+		$end = $this->averagedLeadsModel->end;
+		$format = $this->averagedLeadsModel->format;
+		$rating = $this->averagedLeadsModel->rating;
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->averagedLeadsModel->getLanguageId()
+			$this->averagedLeadsModel->languageId
 		);
 
 		// Get the start and end months.
@@ -37,7 +37,7 @@ final readonly class AveragedLeadsView
 		$endMonth   = $this->monthControlFormatter->format($endMonth,   $formatter);
 
 		// Get the Pokémon usage data.
-		$pokemonData = $this->averagedLeadsModel->getPokemon();
+		$pokemonData = $this->averagedLeadsModel->pokemon;
 		$pokemons = [];
 		foreach ($pokemonData as $pokemon) {
 			$pokemons[] = [
@@ -81,7 +81,7 @@ final readonly class AveragedLeadsView
 				'breadcrumbs' => $breadcrumbs,
 				'startMonth' => $startMonth,
 				'endMonth' => $endMonth,
-				'ratings' => $this->averagedLeadsModel->getRatings(),
+				'ratings' => $this->averagedLeadsModel->ratings,
 				'pokemons' => $pokemons,
 			]
 		]);
