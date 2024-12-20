@@ -16,25 +16,25 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 
 final class StatsLeadsModel
 {
-	private string $month;
-	private Format $format;
-	private int $rating;
-	private LanguageId $languageId;
+	private(set) string $month;
+	private(set) Format $format;
+	private(set) int $rating;
+	private(set) LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private array $ratings = [];
+	private(set) array $ratings = [];
 
-	private string $speedName = '';
+	private(set) string $speedName = '';
 
 	/** @var StatsLeadsPokemon[] $pokemon */
-	private array $pokemon = [];
+	private(set) array $pokemon = [];
 
 	/** @var DateTime[] $months */
-	private array $months = [];
+	private(set) array $months = [];
 
 
 	public function __construct(
-		private readonly DateModel $dateModel,
+		private(set) readonly DateModel $dateModel,
 		private readonly FormatRepositoryInterface $formatRepository,
 		private readonly RatingQueriesInterface $ratingQueries,
 		private readonly StatNameRepositoryInterface $statNameRepository,
@@ -93,60 +93,5 @@ final class StatsLeadsModel
 			$this->format->getId(),
 			$rating,
 		);
-	}
-
-
-	public function getMonth() : string
-	{
-		return $this->month;
-	}
-
-	public function getFormat() : Format
-	{
-		return $this->format;
-	}
-
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	public function getDateModel() : DateModel
-	{
-		return $this->dateModel;
-	}
-
-	/**
-	 * @return int[]
-	 */
-	public function getRatings() : array
-	{
-		return $this->ratings;
-	}
-
-	public function getSpeedName() : string
-	{
-		return $this->speedName;
-	}
-
-	/**
-	 * @return StatsLeadsPokemon[]
-	 */
-	public function getPokemon() : array
-	{
-		return $this->pokemon;
-	}
-
-	/**
-	 * @return DateTime[]
-	 */
-	public function getMonths() : array
-	{
-		return $this->months;
 	}
 }

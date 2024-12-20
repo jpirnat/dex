@@ -17,28 +17,28 @@ use Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface;
 
 final class StatsUsageModel
 {
-	private string $month;
-	private Format $format;
-	private int $rating;
-	private string $myFormat;
-	private string $myRating;
-	private LanguageId $languageId;
+	private(set) string $month;
+	private(set) Format $format;
+	private(set) int $rating;
+	private(set) string $myFormat;
+	private(set) string $myRating;
+	private(set) LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private array $ratings = [];
+	private(set) array $ratings = [];
 
-	private bool $leadsDataExists = false;
-	private string $speedName = '';
+	private(set) bool $showLeadsLink = false;
+	private(set) string $speedName = '';
 
 	/** @var StatsUsagePokemon[] $pokemon */
-	private array $pokemon = [];
+	private(set) array $pokemon = [];
 
 	/** @var DateTime[] $months */
-	private array $months = [];
+	private(set) array $months = [];
 
 
 	public function __construct(
-		private readonly DateModel $dateModel,
+		private(set) readonly DateModel $dateModel,
 		private readonly FormatRepositoryInterface $formatRepository,
 		private readonly RatingQueriesInterface $ratingQueries,
 		private readonly LeadsRatedPokemonRepositoryInterface $leadsRatedPokemonRepository,
@@ -84,7 +84,7 @@ final class StatsUsageModel
 		);
 
 		// Does leads data exist for this month?
-		$this->leadsDataExists = $this->leadsRatedPokemonRepository->hasAny(
+		$this->showLeadsLink = $this->leadsRatedPokemonRepository->hasAny(
 			$thisMonth,
 			$this->format->getId(),
 			$rating,
@@ -109,75 +109,5 @@ final class StatsUsageModel
 			$this->format->getId(),
 			$rating,
 		);
-	}
-
-
-	public function getMonth() : string
-	{
-		return $this->month;
-	}
-
-	public function getFormat() : Format
-	{
-		return $this->format;
-	}
-
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	public function getMyFormat() : string
-	{
-		return $this->myFormat;
-	}
-
-	public function getMyRating() : string
-	{
-		return $this->myRating;
-	}
-
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	public function getDateModel() : DateModel
-	{
-		return $this->dateModel;
-	}
-
-	/**
-	 * @return int[]
-	 */
-	public function getRatings() : array
-	{
-		return $this->ratings;
-	}
-
-	public function doesLeadsDataExist() : bool
-	{
-		return $this->leadsDataExists;
-	}
-
-	public function getSpeedName() : string
-	{
-		return $this->speedName;
-	}
-
-	/**
-	 * @return StatsUsagePokemon[]
-	 */
-	public function getPokemon() : array
-	{
-		return $this->pokemon;
-	}
-
-	/**
-	 * @return DateTime[]
-	 */
-	public function getMonths() : array
-	{
-		return $this->months;
 	}
 }

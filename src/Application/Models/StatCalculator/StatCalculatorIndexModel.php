@@ -11,13 +11,13 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class StatCalculatorIndexModel
 {
-	/** @var IvCalculatorPokemon[] $pokemons */ private array $pokemons = [];
-	private array $natures = [];
-	private array $stats = [];
+	/** @var IvCalculatorPokemon[] $pokemons */ private(set) array $pokemons = [];
+	private(set) array $natures = [];
+	private(set) array $stats = [];
 
 
 	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
+		private(set) readonly VersionGroupModel $versionGroupModel,
 		private readonly IvCalculatorQueriesInterface $queries,
 	) {}
 
@@ -51,29 +51,5 @@ final class StatCalculatorIndexModel
 		}
 
 		$this->stats = $this->queries->getStats($versionGroupId, $languageId);
-	}
-
-
-	public function getVersionGroupModel() : VersionGroupModel
-	{
-		return $this->versionGroupModel;
-	}
-
-	/**
-	 * @return IvCalculatorPokemon[]
-	 */
-	public function getPokemons() : array
-	{
-		return $this->pokemons;
-	}
-
-	public function getNatures() : array
-	{
-		return $this->natures;
-	}
-
-	public function getStats() : array
-	{
-		return $this->stats;
 	}
 }

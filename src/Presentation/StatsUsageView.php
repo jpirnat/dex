@@ -20,16 +20,16 @@ final readonly class StatsUsageView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$month = $this->statsUsageModel->getMonth();
-		$format = $this->statsUsageModel->getFormat();
-		$rating = $this->statsUsageModel->getRating();
+		$month = $this->statsUsageModel->month;
+		$format = $this->statsUsageModel->format;
+		$rating = $this->statsUsageModel->rating;
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->statsUsageModel->getLanguageId()
+			$this->statsUsageModel->languageId
 		);
 
 		// Get the previous month and the next month.
-		$dateModel = $this->statsUsageModel->getDateModel();
+		$dateModel = $this->statsUsageModel->dateModel;
 		$prevMonth = $dateModel->prevMonth;
 		$thisMonth = $dateModel->thisMonth;
 		$nextMonth = $dateModel->nextMonth;
@@ -38,13 +38,13 @@ final readonly class StatsUsageView
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
 		$months = [];
-		$allMonths = $this->statsUsageModel->getMonths();
+		$allMonths = $this->statsUsageModel->months;
 		foreach ($allMonths as $m) {
 			$months[] = $this->monthControlFormatter->format($m, $formatter);
 		}
 
 		// Get the Pokémon usage data.
-		$pokemonData = $this->statsUsageModel->getPokemon();
+		$pokemonData = $this->statsUsageModel->pokemon;
 		$pokemons = [];
 		foreach ($pokemonData as $pokemon) {
 			$pokemons[] = [
@@ -92,11 +92,11 @@ final readonly class StatsUsageView
 				'prevMonth' => $prevMonth,
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
-				'ratings' => $this->statsUsageModel->getRatings(),
-				'showLeadsLink' => $this->statsUsageModel->doesLeadsDataExist(),
-				'myFormat' => $this->statsUsageModel->getMyFormat(),
-				'myRating' => $this->statsUsageModel->getMyRating(),
-				'speedName' => $this->statsUsageModel->getSpeedName(),
+				'ratings' => $this->statsUsageModel->ratings,
+				'showLeadsLink' => $this->statsUsageModel->showLeadsLink,
+				'myFormat' => $this->statsUsageModel->myFormat,
+				'myRating' => $this->statsUsageModel->myRating,
+				'speedName' => $this->statsUsageModel->speedName,
 				'pokemons' => $pokemons,
 				'months' => $months,
 			]

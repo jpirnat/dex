@@ -10,15 +10,15 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 
 final class StatsMonthModel
 {
-	private string $month;
-	private LanguageId $languageId;
+	private(set) string $month;
+	private(set) LanguageId $languageId;
 
 	/** @var array $generations[] */
-	private array $generations = [];
+	private(set) array $generations = [];
 
 
 	public function __construct(
-		private readonly DateModel $dateModel,
+		private(set) readonly DateModel $dateModel,
 		private readonly UsageRatedQueriesInterface $usageRatedQueries,
 		private readonly FormatRepositoryInterface $formatRepository,
 	) {}
@@ -32,7 +32,6 @@ final class StatsMonthModel
 		string $month,
 		LanguageId $languageId,
 	) : void {
-		$this->month = $month;
 		$this->languageId = $languageId;
 
 		// Get the previous month and the next month.
@@ -70,38 +69,5 @@ final class StatsMonthModel
 		usort($this->generations, function (array $a, array $b) : int {
 			return $b['generation'] <=> $a['generation'];
 		});
-	}
-
-
-	/**
-	 * Get the date model.
-	 */
-	public function getDateModel() : DateModel
-	{
-		return $this->dateModel;
-	}
-
-	/**
-	 * Get the month.
-	 */
-	public function getMonth() : string
-	{
-		return $this->month;
-	}
-
-	/**
-	 * Get the language id.
-	 */
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	/**
-	 * Get the generations.
-	 */
-	public function getGenerations() : array
-	{
-		return $this->generations;
 	}
 }

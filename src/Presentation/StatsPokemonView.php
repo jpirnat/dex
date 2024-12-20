@@ -21,17 +21,17 @@ final readonly class StatsPokemonView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$month = $this->statsPokemonModel->getMonth();
-		$format = $this->statsPokemonModel->getFormat();
-		$rating = $this->statsPokemonModel->getRating();
-		$pokemon = $this->statsPokemonModel->getPokemon();
+		$month = $this->statsPokemonModel->month;
+		$format = $this->statsPokemonModel->format;
+		$rating = $this->statsPokemonModel->rating;
+		$pokemon = $this->statsPokemonModel->pokemon;
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->statsPokemonModel->getLanguageId()
+			$this->statsPokemonModel->languageId
 		);
 
 		// Get the previous month and the next month.
-		$dateModel = $this->statsPokemonModel->getDateModel();
+		$dateModel = $this->statsPokemonModel->dateModel;
 		$prevMonth = $dateModel->prevMonth;
 		$thisMonth = $dateModel->thisMonth;
 		$nextMonth = $dateModel->nextMonth;
@@ -40,17 +40,17 @@ final readonly class StatsPokemonView
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
 		$months = [];
-		$allMonths = $this->statsPokemonModel->getMonths();
+		$allMonths = $this->statsPokemonModel->months;
 		foreach ($allMonths as $m) {
 			$months[] = $this->monthControlFormatter->format($m, $formatter);
 		}
 
-		$prevRank = $this->statsPokemonModel->getPrevRank();
-		$thisRank = $this->statsPokemonModel->getThisRank();
-		$nextRank = $this->statsPokemonModel->getNextRank();
+		$prevRank = $this->statsPokemonModel->prevRank;
+		$thisRank = $this->statsPokemonModel->thisRank;
+		$nextRank = $this->statsPokemonModel->nextRank;
 
-		$movesetPokemon = $this->statsPokemonModel->getMovesetPokemon();
-		$movesetRatedPokemon = $this->statsPokemonModel->getMovesetRatedPokemon();
+		$movesetPokemon = $this->statsPokemonModel->movesetPokemon;
+		$movesetRatedPokemon = $this->statsPokemonModel->movesetRatedPokemon;
 
 		$rawCount = $movesetPokemon !== null
 			? $movesetPokemon->getRawCount()
@@ -63,14 +63,14 @@ final readonly class StatsPokemonView
 			: null;
 
 		// Get miscellaneous Pokémon data.
-		$pokemonModel = $this->statsPokemonModel->getPokemonModel();
-		$dexPokemon = $pokemonModel->getPokemon();
-		$stats = $pokemonModel->getStats();
-		$versionGroup = $this->statsPokemonModel->getVersionGroup();
-		$generation = $this->statsPokemonModel->getGeneration();
+		$pokemonModel = $this->statsPokemonModel->pokemonModel;
+		$dexPokemon = $pokemonModel->pokemon;
+		$stats = $pokemonModel->stats;
+		$versionGroup = $this->statsPokemonModel->versionGroup;
+		$generation = $this->statsPokemonModel->generation;
 
 		// Get abilities.
-		$abilitiesData = $this->statsPokemonModel->getAbilities();
+		$abilitiesData = $this->statsPokemonModel->abilities;
 		$abilities = [];
 		foreach ($abilitiesData as $ability) {
 			$abilities[] = [
@@ -84,7 +84,7 @@ final readonly class StatsPokemonView
 		}
 
 		// Get items.
-		$itemsData = $this->statsPokemonModel->getItems();
+		$itemsData = $this->statsPokemonModel->items;
 		$items = [];
 		foreach ($itemsData as $item) {
 			$items[] = [
@@ -99,15 +99,15 @@ final readonly class StatsPokemonView
 		}
 
 		// Get spreads and sort by percent.
-		$spreadModel = $this->statsPokemonModel->getSpreadModel();
-		$spreads = $spreadModel->getSpreads();
+		$spreadModel = $this->statsPokemonModel->spreadModel;
+		$spreads = $spreadModel->spreads;
 		foreach ($spreads as $i => $spread) {
 			$percent = $formatter->formatPercent($spread['percent']);
 			$spreads[$i]['percent'] = $percent;
 		}
 
 		// Get moves.
-		$movesData = $this->statsPokemonModel->getMoves();
+		$movesData = $this->statsPokemonModel->moves;
 		$moves = [];
 		foreach ($movesData as $move) {
 			$moves[] = [
@@ -127,22 +127,8 @@ final readonly class StatsPokemonView
 			];
 		}
 
-		// Get teammates.
-		$teammatesData = $this->statsPokemonModel->getTeammates();
-		$teammates = [];
-		foreach ($teammatesData as $teammate) {
-			$teammates[] = [
-				'icon' => $teammate->getIcon(),
-				'showMovesetLink' => true, // TODO
-				'identifier' => $teammate->getIdentifier(),
-				'name' => $teammate->getName(),
-				'percent' => $teammate->getPercent(),
-				'percentText' => $formatter->formatPercent($teammate->getPercent()),
-			];
-		}
-
 		// Get Tera types.
-		$teraTypesData = $this->statsPokemonModel->getTeraTypes();
+		$teraTypesData = $this->statsPokemonModel->teraTypes;
 		$teraTypes = [];
 		foreach ($teraTypesData as $teraType) {
 			$teraTypes[] = [
@@ -156,8 +142,22 @@ final readonly class StatsPokemonView
 			];
 		}
 
+		// Get teammates.
+		$teammatesData = $this->statsPokemonModel->teammates;
+		$teammates = [];
+		foreach ($teammatesData as $teammate) {
+			$teammates[] = [
+				'icon' => $teammate->getIcon(),
+				'showMovesetLink' => true, // TODO
+				'identifier' => $teammate->getIdentifier(),
+				'name' => $teammate->getName(),
+				'percent' => $teammate->getPercent(),
+				'percentText' => $formatter->formatPercent($teammate->getPercent()),
+			];
+		}
+
 		// Get counters.
-		$countersData = $this->statsPokemonModel->getCounters();
+		$countersData = $this->statsPokemonModel->counters;
 		$counters = [];
 		foreach ($countersData as $counter) {
 			$counters[] = [
@@ -219,7 +219,7 @@ final readonly class StatsPokemonView
 				'prevMonth' => $prevMonth,
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
-				'ratings' => $this->statsPokemonModel->getRatings(),
+				'ratings' => $this->statsPokemonModel->ratings,
 				'prevRank' => $prevRank,
 				'thisRank' => $thisRank,
 				'nextRank' => $nextRank,

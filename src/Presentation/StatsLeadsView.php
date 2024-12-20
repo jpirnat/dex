@@ -20,16 +20,16 @@ final readonly class StatsLeadsView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$month = $this->statsLeadsModel->getMonth();
-		$format = $this->statsLeadsModel->getFormat();
-		$rating = $this->statsLeadsModel->getRating();
+		$month = $this->statsLeadsModel->month;
+		$format = $this->statsLeadsModel->format;
+		$rating = $this->statsLeadsModel->rating;
 
 		$formatter = $this->formatterFactory->createFor(
-			$this->statsLeadsModel->getLanguageId()
+			$this->statsLeadsModel->languageId
 		);
 
 		// Get the previous month and the next month.
-		$dateModel = $this->statsLeadsModel->getDateModel();
+		$dateModel = $this->statsLeadsModel->dateModel;
 		$prevMonth = $dateModel->prevMonth;
 		$thisMonth = $dateModel->thisMonth;
 		$nextMonth = $dateModel->nextMonth;
@@ -38,13 +38,13 @@ final readonly class StatsLeadsView
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
 		$months = [];
-		$allMonths = $this->statsLeadsModel->getMonths();
+		$allMonths = $this->statsLeadsModel->months;
 		foreach ($allMonths as $m) {
 			$months[] = $this->monthControlFormatter->format($m, $formatter);
 		}
 
 		// Get the Pokémon usage data.
-		$pokemonData = $this->statsLeadsModel->getPokemon();
+		$pokemonData = $this->statsLeadsModel->pokemon;
 		$pokemons = [];
 		foreach ($pokemonData as $pokemon) {
 			$pokemons[] = [
@@ -93,8 +93,8 @@ final readonly class StatsLeadsView
 				'prevMonth' => $prevMonth,
 				'thisMonth' => $thisMonth,
 				'nextMonth' => $nextMonth,
-				'ratings' => $this->statsLeadsModel->getRatings(),
-				'speedName' => $this->statsLeadsModel->getSpeedName(),
+				'ratings' => $this->statsLeadsModel->ratings,
+				'speedName' => $this->statsLeadsModel->speedName,
 				'pokemons' => $pokemons,
 				'months' => $months,
 			]

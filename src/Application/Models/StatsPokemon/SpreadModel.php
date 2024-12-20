@@ -17,8 +17,7 @@ use Jp\Dex\Domain\Stats\StatValueContainer;
 
 final class SpreadModel
 {
-	private array $stats = [];
-	private array $spreads = [];
+	private(set) array $spreads = [];
 
 
 	public function __construct(
@@ -155,16 +154,5 @@ final class SpreadModel
 				'stats' => $finalStats,
 			];
 		}
-	}
-
-
-	public function getStats() : array
-	{
-		return $this->stats;
-	}
-
-	public function getSpreads() : array
-	{
-		return $this->spreads;
 	}
 }

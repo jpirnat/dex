@@ -13,8 +13,8 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class PokemonModel
 {
-	private ?ExpandedDexPokemon $pokemon;
-	private array $stats = [];
+	private(set) ?ExpandedDexPokemon $pokemon;
+	private(set) array $stats = [];
 
 
 	public function __construct(
@@ -48,15 +48,5 @@ final class PokemonModel
 			$versionGroupId,
 			$languageId,
 		);
-	}
-
-	public function getPokemon() : ?ExpandedDexPokemon
-	{
-		return $this->pokemon;
-	}
-
-	public function getStats() : array
-	{
-		return $this->stats;
 	}
 }

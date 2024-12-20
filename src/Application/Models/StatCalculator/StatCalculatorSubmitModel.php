@@ -18,8 +18,8 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class StatCalculatorSubmitModel
 {
-	private array $finalStats = [];
-	private int $cp = 0;
+	private(set) array $finalStats = [];
+	private(set) int $cp = 0;
 
 
 	public function __construct(
@@ -218,16 +218,5 @@ final class StatCalculatorSubmitModel
 
 			$this->finalStats[$statIdentifier] = $finalStat;
 		}
-	}
-
-
-	public function getFinalStats() : array
-	{
-		return $this->finalStats;
-	}
-
-	public function getCp() : int
-	{
-		return $this->cp;
 	}
 }

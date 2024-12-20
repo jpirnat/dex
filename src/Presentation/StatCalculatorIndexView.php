@@ -19,15 +19,15 @@ final readonly class StatCalculatorIndexView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$versionGroupModel = $this->statCalculatorIndexModel->getVersionGroupModel();
+		$versionGroupModel = $this->statCalculatorIndexModel->versionGroupModel;
 		$versionGroup = $versionGroupModel->versionGroup;
 		$versionGroups = $versionGroupModel->versionGroups;
 
-		$pokemons = $this->statCalculatorIndexModel->getPokemons();
+		$pokemons = $this->statCalculatorIndexModel->pokemons;
 		$pokemons = $this->dexFormatter->formatIvCalculatorPokemons($pokemons);
 
-		$natures = $this->statCalculatorIndexModel->getNatures();
-		$stats = $this->statCalculatorIndexModel->getStats();
+		$natures = $this->statCalculatorIndexModel->natures;
+		$stats = $this->statCalculatorIndexModel->stats;
 
 		// Navigational breadcrumbs.
 		$vgIdentifier = $versionGroup->getIdentifier();

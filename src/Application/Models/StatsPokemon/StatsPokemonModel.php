@@ -36,48 +36,48 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class StatsPokemonModel
 {
-	private string $month;
-	private Format $format;
-	private int $rating;
-	private Pokemon $pokemon;
-	private LanguageId $languageId;
+	private(set) string $month;
+	private(set) Format $format;
+	private(set) int $rating;
+	private(set) Pokemon $pokemon;
+	private(set) LanguageId $languageId;
 
 	/** @var int[] $ratings */
-	private array $ratings = [];
+	private(set) array $ratings = [];
 
-	private ?array $prevRank = null;
-	private ?array $thisRank = null;
-	private ?array $nextRank = null;
+	private(set) ?array $prevRank = null;
+	private(set) ?array $thisRank = null;
+	private(set) ?array $nextRank = null;
 
-	private ?MovesetPokemon $movesetPokemon;
-	private ?MovesetRatedPokemon $movesetRatedPokemon;
-	private VersionGroup $versionGroup;
-	private Generation $generation;
+	private(set) ?MovesetPokemon $movesetPokemon;
+	private(set) ?MovesetRatedPokemon $movesetRatedPokemon;
+	private(set) VersionGroup $versionGroup;
+	private(set) Generation $generation;
 
 	/** @var StatsPokemonAbility[] $abilities */
-	private array $abilities = [];
+	private(set) array $abilities = [];
 
 	/** @var StatsPokemonItem[] $items */
-	private array $items = [];
+	private(set) array $items = [];
 
 	/** @var StatsPokemonMove[] $moves */
-	private array $moves = [];
+	private(set) array $moves = [];
 
 	/** @var StatsPokemonTeraType[] $teraTypes */
-	private array $teraTypes = [];
+	private(set) array $teraTypes = [];
 
 	/** @var StatsPokemonTeammate[] $teammates */
-	private array $teammates = [];
+	private(set) array $teammates = [];
 
 	/** @var StatsPokemonCounter[] $counters */
-	private array $counters = [];
+	private(set) array $counters = [];
 
 	/** @var DateTime[] $months */
-	private array $months = [];
+	private(set) array $months = [];
 
 
 	public function __construct(
-		private readonly DateModel $dateModel,
+		private(set) readonly DateModel $dateModel,
 		private readonly FormatRepositoryInterface $formatRepository,
 		private readonly PokemonRepositoryInterface $pokemonRepository,
 		private readonly RatingQueriesInterface $ratingQueries,
@@ -86,10 +86,10 @@ final class StatsPokemonModel
 		private readonly GenerationRepositoryInterface $generationRepository,
 		private readonly MovesetPokemonRepositoryInterface $movesetPokemonRepository,
 		private readonly MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
-		private readonly PokemonModel $pokemonModel,
+		private(set) readonly PokemonModel $pokemonModel,
 		private readonly StatsPokemonAbilityRepositoryInterface $statsPokemonAbilityRepository,
 		private readonly StatsPokemonItemRepositoryInterface $statsPokemonItemRepository,
-		private readonly SpreadModel $spreadModel,
+		private(set) readonly SpreadModel $spreadModel,
 		private readonly StatsPokemonMoveRepositoryInterface $statsPokemonMoveRepository,
 		private readonly StatsPokemonTeraTypeRepositoryInterface $statsPokemonTeraTypeRepository,
 		private readonly StatsPokemonTeammateRepositoryInterface $statsPokemonTeammateRepository,
@@ -259,206 +259,5 @@ final class StatsPokemonModel
 			$this->format->getId(),
 			$rating,
 		);
-	}
-
-
-	/**
-	 * Get the month.
-	 */
-	public function getMonth() : string
-	{
-		return $this->month;
-	}
-
-	/**
-	 * Get the format.
-	 */
-	public function getFormat() : Format
-	{
-		return $this->format;
-	}
-
-	/**
-	 * Get the rating.
-	 */
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	/**
-	 * Get the Pokémon.
-	 */
-	public function getPokemon() : Pokemon
-	{
-		return $this->pokemon;
-	}
-
-	/**
-	 * Get the language id.
-	 */
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	/**
-	 * Get the date model.
-	 */
-	public function getDateModel() : DateModel
-	{
-		return $this->dateModel;
-	}
-
-	/**
-	 * Get the ratings for this month.
-	 *
-	 * @return int[]
-	 */
-	public function getRatings() : array
-	{
-		return $this->ratings;
-	}
-
-	/**
-	 * Get the previous rank Pokémon.
-	 */
-	public function getPrevRank() : ?array
-	{
-		return $this->prevRank;
-	}
-
-	/**
-	 * Get this Pokémon's usage rank.
-	 */
-	public function getThisRank() : ?array
-	{
-		return $this->thisRank;
-	}
-
-	/**
-	 * Get the next rank Pokémon.
-	 */
-	public function getNextRank() : ?array
-	{
-		return $this->nextRank;
-	}
-
-	/**
-	 * Get the Pokémon model.
-	 */
-	public function getPokemonModel() : PokemonModel
-	{
-		return $this->pokemonModel;
-	}
-
-	/**
-	 * Get the version group.
-	 */
-	public function getVersionGroup() : VersionGroup
-	{
-		return $this->versionGroup;
-	}
-
-	/**
-	 * Get the generation.
-	 */
-	public function getGeneration() : Generation
-	{
-		return $this->generation;
-	}
-
-	/**
-	 * Get the moveset Pokémon record.
-	 */
-	public function getMovesetPokemon() : ?MovesetPokemon
-	{
-		return $this->movesetPokemon;
-	}
-
-	/**
-	 * Get the moveset rated Pokémon record.
-	 */
-	public function getMovesetRatedPokemon() : ?MovesetRatedPokemon
-	{
-		return $this->movesetRatedPokemon;
-	}
-
-	/**
-	 * Get the abilities.
-	 *
-	 * @return StatsPokemonAbility[]
-	 */
-	public function getAbilities() : array
-	{
-		return $this->abilities;
-	}
-
-	/**
-	 * Get the items.
-	 *
-	 * @return StatsPokemonItem[]
-	 */
-	public function getItems() : array
-	{
-		return $this->items;
-	}
-
-	/**
-	 * Get the spread model.
-	 */
-	public function getSpreadModel() : SpreadModel
-	{
-		return $this->spreadModel;
-	}
-
-	/**
-	 * Get the moves.
-	 *
-	 * @return StatsPokemonMove[]
-	 */
-	public function getMoves() : array
-	{
-		return $this->moves;
-	}
-
-	/**
-	 * Get the Tera types.
-	 *
-	 * @return StatsPokemonTeraType[]
-	 */
-	public function getTeraTypes() : array
-	{
-		return $this->teraTypes;
-	}
-
-	/**
-	 * Get the teammates.
-	 *
-	 * @return StatsPokemonTeammate[]
-	 */
-	public function getTeammates() : array
-	{
-		return $this->teammates;
-	}
-
-	/**
-	 * Get the counters.
-	 *
-	 * @return StatsPokemonCounter[]
-	 */
-	public function getCounters() : array
-	{
-		return $this->counters;
-	}
-
-	/**
-	 * Get the months.
-	 *
-	 * @return DateTime[]
-	 */
-	public function getMonths() : array
-	{
-		return $this->months;
 	}
 }

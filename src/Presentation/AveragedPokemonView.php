@@ -40,8 +40,8 @@ final readonly class AveragedPokemonView
 
 		// Get miscellaneous Pokémon data.
 		$pokemonModel = $this->averagedPokemonModel->pokemonModel;
-		$dexPokemon = $pokemonModel->getPokemon();
-		$stats = $pokemonModel->getStats();
+		$dexPokemon = $pokemonModel->pokemon;
+		$stats = $pokemonModel->stats;
 		$versionGroup = $this->averagedPokemonModel->versionGroup;
 		$generation = $this->averagedPokemonModel->generation;
 

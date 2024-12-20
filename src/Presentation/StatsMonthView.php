@@ -21,11 +21,11 @@ final readonly class StatsMonthView
 	public function getData() : ResponseInterface
 	{
 		$formatter = $this->formatterFactory->createFor(
-			$this->statsMonthModel->getLanguageId()
+			$this->statsMonthModel->languageId
 		);
 
 		// Get the previous month and the next month.
-		$dateModel = $this->statsMonthModel->getDateModel();
+		$dateModel = $this->statsMonthModel->dateModel;
 		$prevMonth = $dateModel->prevMonth;
 		$thisMonth = $dateModel->thisMonth;
 		$nextMonth = $dateModel->nextMonth;
@@ -33,7 +33,7 @@ final readonly class StatsMonthView
 		$thisMonth = $this->monthControlFormatter->format($thisMonth, $formatter);
 		$nextMonth = $this->monthControlFormatter->format($nextMonth, $formatter);
 
-		$generations = $this->statsMonthModel->getGenerations();
+		$generations = $this->statsMonthModel->generations;
 
 		// Navigation breadcrumbs.
 		$breadcrumbs = [[
