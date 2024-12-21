@@ -25,7 +25,7 @@ final readonly class DatabaseSpeciesRepository implements SpeciesRepositoryInter
 		$stmt = $this->db->prepare(
 			'SELECT
 				`identifier`,
-				`base_egg_cycles`
+				`egg_cycles`
 			FROM `species`
 			WHERE `id` = :species_id
 			LIMIT 1'
@@ -43,7 +43,7 @@ final readonly class DatabaseSpeciesRepository implements SpeciesRepositoryInter
 		return new Species(
 			$speciesId,
 			$result['identifier'],
-			$result['base_egg_cycles'],
+			$result['egg_cycles'],
 		);
 	}
 }

@@ -10,7 +10,6 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 
 final class StatsMonthModel
 {
-	private(set) string $month;
 	private(set) LanguageId $languageId;
 
 	/** @var array $generations[] */

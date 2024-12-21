@@ -68,9 +68,10 @@ final readonly class MovesetFileImporter
 		FormatId $formatId,
 		int $rating,
 	) : void {
+		$now = new DateTime()->format('Y-m-d H:i:s');
 		echo 'Importing moveset file: month ' . $month->format('Y-m')
 			. ', format id ' . $formatId->value()
-			. ", rating $rating. (" . (new DateTime())->format('Y-m-d H:i:s') . ")\n";
+			. ", rating $rating. ($now)\n";
 
 		// If the file is empty, there's nothing to import.
 		if ($stream->getSize() === 0) {

@@ -110,9 +110,7 @@ final class EvoMethodId extends EntityId
 
 	public function needsPokemon() : bool
 	{
-		return in_array($this->id, [
-			self::LEVEL_UP_WITH_TEAMMATE,
-		]);
+		return $this->id === self::LEVEL_UP_WITH_TEAMMATE;
 	}
 
 	public function needsType() : bool

@@ -109,7 +109,7 @@ final readonly class EvolutionFormatter
 			EvoMethodId::LEVEL_UP_FRIENDSHIP_NIGHT => new EvolutionTableMethod(
 				"Level up, during the night, with at least $friendship friendship",
 			),
-			EvoMethodId::LEVEL_UP => new EvolutionTableMethod(
+			EvoMethodId::LEVEL_UP, EvoMethodId::LEVEL_UP_NINJASK => new EvolutionTableMethod(
 				"Level up, starting at level $level",
 			),
 			EvoMethodId::TRADE => new EvolutionTableMethod(
@@ -128,9 +128,6 @@ final readonly class EvolutionFormatter
 			EvoMethodId::LEVEL_UP_EC_LT_FIVE,
 			EvoMethodId::LEVEL_UP_EC_GT_EQ_FIVE => new EvolutionTableMethod(
 				"Level up, starting at level $level, 50% chance",
-			),
-			EvoMethodId::LEVEL_UP_NINJASK => new EvolutionTableMethod(
-				"Level up, starting at level $level",
 			),
 			EvoMethodId::LEVEL_UP_SHEDINJA => $this->levelUpShedinja($evolution, $languageId),
 			EvoMethodId::LEVEL_UP_BEAUTY => $this->levelUpBeauty($evolution, $languageId),
@@ -155,7 +152,7 @@ final readonly class EvolutionFormatter
 			EvoMethodId::LEVEL_UP_MALE => new EvolutionTableMethod(
 				"Level up, males only, starting at level $level",
 			),
-			EvoMethodId::LEVEL_UP_FEMALE => new EvolutionTableMethod(
+			EvoMethodId::LEVEL_UP_FEMALE, EvoMethodId::LEVEL_UP_FORM_FEMALE_1 => new EvolutionTableMethod(
 				"Level up, females only, starting at level $level",
 			),
 			EvoMethodId::LEVEL_UP_ELECTRIC => new EvolutionTableMethod(
@@ -180,9 +177,6 @@ final readonly class EvolutionFormatter
 			),
 			EvoMethodId::LEVEL_UP_NIGHT => new EvolutionTableMethod(
 				"Level up, during the night, starting at level $level",
-			),
-			EvoMethodId::LEVEL_UP_FORM_FEMALE_1 => new EvolutionTableMethod(
-				"Level up, females only, starting at level $level",
 			),
 			EvoMethodId::LEVEL_UP_VERSION => new EvolutionTableMethod(
 				"Level up, starting at level $level, in $version only",

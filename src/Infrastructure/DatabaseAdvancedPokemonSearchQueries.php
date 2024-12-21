@@ -131,7 +131,6 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 
 			$andOr = match ($typesOperator) {
 				'both' => 'AND',
-				'any' => 'OR',
 				default => 'OR',
 			};
 			$typeClauses = implode(" $andOr ", $typeClauses);
@@ -152,7 +151,6 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 
 			$andOr = match ($eggGroupsOperator) {
 				'both' => 'AND',
-				'any' => 'OR',
 				default => 'OR',
 			};
 			$eggGroupClauses = implode(" $andOr ", $eggGroupClauses);
@@ -168,7 +166,6 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 			);
 			$genderRatios = implode(', ', $genderRatios);
 			$inOrNotIn = match ($genderRatiosOperator) {
-				'any' => 'IN',
 				'none' => 'NOT IN',
 				default => 'IN',
 			};
