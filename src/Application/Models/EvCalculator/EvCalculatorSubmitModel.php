@@ -70,7 +70,7 @@ final class EvCalculatorSubmitModel
 		foreach ($stats as $stat) {
 			$statIdentifier = $stat->getIdentifier();
 
-			$base = (int) $baseStats[$statIdentifier];
+			$base = $baseStats[$statIdentifier];
 			$iv = (int) ($ivs[$statIdentifier] ?? 0);
 
 			$natureModifier = $this->statCalculator->getNatureModifier(

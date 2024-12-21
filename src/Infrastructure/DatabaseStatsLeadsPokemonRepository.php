@@ -28,10 +28,6 @@ final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPo
 		int $rating,
 		LanguageId $languageId,
 	) : array {
-		$prevMonth = $prevMonth !== null
-			? $prevMonth->format('Y-m-01')
-			: null;
-
 		$stmt = $this->db->prepare(
 			'SELECT
 				`lrp`.`rank`,
@@ -73,7 +69,7 @@ final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPo
 			ORDER BY `lrp`.`rank`'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
-		$stmt->bindValue(':prev_month', $prevMonth);
+		$stmt->bindValue(':prev_month', $prevMonth?->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);

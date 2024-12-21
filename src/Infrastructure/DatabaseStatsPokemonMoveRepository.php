@@ -35,10 +35,6 @@ final readonly class DatabaseStatsPokemonMoveRepository implements StatsPokemonM
 		VersionGroupId $versionGroupId,
 		LanguageId $languageId,
 	) : array {
-		$prevMonth = $prevMonth !== null
-			? $prevMonth->format('Y-m-01')
-			: null;
-
 		$stmt = $this->db->prepare(
 			'SELECT
 				`m`.`identifier`,
@@ -99,7 +95,7 @@ final readonly class DatabaseStatsPokemonMoveRepository implements StatsPokemonM
 			ORDER BY `mrm`.`percent` DESC'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
-		$stmt->bindValue(':prev_month', $prevMonth);
+		$stmt->bindValue(':prev_month', $prevMonth?->format('Y-m-01'));
 		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);

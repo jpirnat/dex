@@ -220,7 +220,7 @@ final readonly class StatsChartView
 			return $trendLine->typeColorCode;
 		}
 
-		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof MovesetItemTrendline) {
+		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof MovesetItemTrendLine) {
 			// For moveset ability and moveset item lines, use these colors from
 			// the Chart.js documentation.
 			return [

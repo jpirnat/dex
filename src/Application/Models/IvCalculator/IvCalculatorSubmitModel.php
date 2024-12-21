@@ -14,6 +14,7 @@ use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatRepositoryInterface;
+use Jp\Dex\Domain\Types\TypeNotFoundException;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
@@ -60,6 +61,7 @@ final class IvCalculatorSubmitModel
 			| PokemonNotFoundException
 			| NatureNotFoundException
 			| CharacteristicNotFoundException
+			| TypeNotFoundException
 		) {
 			return;
 		}
@@ -85,7 +87,7 @@ final class IvCalculatorSubmitModel
 		foreach ($stats as $stat) {
 			$statIdentifier = $stat->getIdentifier();
 
-			$base = (int) $baseStats[$statIdentifier];
+			$base = $baseStats[$statIdentifier];
 
 			$natureModifier = $this->statCalculator->getNatureModifier(
 				$stat->getId(),

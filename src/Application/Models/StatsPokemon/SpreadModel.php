@@ -128,12 +128,8 @@ final class SpreadModel
 			}
 
 			// Convert stat arrays to stat objects.
-			$increasedStatId = $increasedStatId !== null
-				? $increasedStatId->value()
-				: null;
-			$decreasedStatId = $decreasedStatId !== null
-				? $decreasedStatId->value()
-				: null;
+			$increasedStatId = $increasedStatId?->value();
+			$decreasedStatId = $decreasedStatId?->value();
 			$increasedStat = $stats[$increasedStatId]?->getIdentifier() ?? null;
 			$decreasedStat = $stats[$decreasedStatId]?->getIdentifier() ?? null;
 
