@@ -45,7 +45,7 @@ final readonly class DexMoveView
 			return $a->getSort() <=> $b->getSort();
 		};
 		foreach ($methods as $method) {
-			uasort($method->getPokemon(), $bySort);
+			$method->sortPokemon($bySort);
 		}
 
 		// Navigational breadcrumbs.
@@ -99,10 +99,10 @@ final readonly class DexMoveView
 
 		foreach ($dexMovePokemonMethods as $method) {
 			$methods[] = [
-				'identifier' => $method->getIdentifier(),
-				'name' => $method->getName(),
-				'description' => $method->getDescription(),
-				'pokemons' => $this->formatDexMovePokemon($method->getPokemon()),
+				'identifier' => $method->identifier,
+				'name' => $method->name,
+				'description' => $method->description,
+				'pokemons' => $this->formatDexMovePokemon($method->pokemon),
 			];
 		}
 

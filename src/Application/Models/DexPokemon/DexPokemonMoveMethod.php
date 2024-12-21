@@ -3,18 +3,18 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\DexPokemon;
 
+use Closure;
+
 final class DexPokemonMoveMethod
 {
-	private string $identifier;
-	private string $name;
-	private string $description;
+	private(set) string $identifier;
+	private(set) string $name;
+	private(set) string $description;
 
 	/** @var DexPokemonMove[] $moves */
-	private array $moves;
+	private(set) array $moves;
 
 	/**
-	 * Constructor.
-	 *
 	 * @param DexPokemonMove[] $moves
 	 */
 	public function __construct(
@@ -29,37 +29,8 @@ final class DexPokemonMoveMethod
 		$this->moves = $moves;
 	}
 
-	/**
-	 * Get the method's identifier.
-	 */
-	public function getIdentifier() : string
+	public function sortMoves(Closure $sortBy) : void
 	{
-		return $this->identifier;
-	}
-
-	/**
-	 * Get the method's name.
-	 */
-	public function getName() : string
-	{
-		return $this->name;
-	}
-
-	/**
-	 * Get the method's description.
-	 */
-	public function getDescription() : string
-	{
-		return $this->description;
-	}
-
-	/**
-	 * Get the method's moves.
-	 *
-	 * @return DexPokemonMove[] Returned as a reference so it can be used with uasort.
-	 */
-	public function &getMoves() : array
-	{
-		return $this->moves;
+		uasort($this->moves, $sortBy);
 	}
 }

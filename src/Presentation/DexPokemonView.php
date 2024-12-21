@@ -120,11 +120,11 @@ final readonly class DexPokemonView
 			switch ($moveMethodId) {
 				// TODO: sorting algorithms for the other methods.
 				case MoveMethodId::MACHINE:
-					uasort($method->getMoves(), $byMachine);
+					$method->sortMoves($byMachine);
 					break;
 				case MoveMethodId::EGG:
 				case MoveMethodId::TUTOR:
-					uasort($method->getMoves(), $byName);
+					$method->sortMoves($byName);
 					break;
 			}
 		}
@@ -187,10 +187,10 @@ final readonly class DexPokemonView
 
 		foreach ($dexPokemonMoveMethods as $method) {
 			$methods[] = [
-				'identifier' => $method->getIdentifier(),
-				'name' => $method->getName(),
-				'description' => $method->getDescription(),
-				'moves' => $this->formatDexPokemonMoves($method->getMoves()),
+				'identifier' => $method->identifier,
+				'name' => $method->name,
+				'description' => $method->description,
+				'moves' => $this->formatDexPokemonMoves($method->moves),
 			];
 		}
 
