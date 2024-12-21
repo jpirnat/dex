@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Types\Type;
 
 final class MovesetItemTrendLine extends TrendLine
 {
-	private ItemName $itemName;
+	private(set) ItemName $itemName;
 
 	/**
 	 * Constructor.
@@ -55,13 +55,5 @@ final class MovesetItemTrendLine extends TrendLine
 	public function getLineLabel() : string
 	{
 		return 'Usage %';
-	}
-
-	/**
-	 * Get the moveset item trend line's item name.
-	 */
-	public function getItemName() : ItemName
-	{
-		return $this->itemName;
 	}
 }

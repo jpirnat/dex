@@ -8,8 +8,8 @@ use Jp\Dex\Domain\Types\Type;
 
 final class MovesetTeraTrendLine extends TrendLine
 {
-	private string $typeName;
-	private string $typeColorCode;
+	private(set) string $typeName;
+	private(set) string $typeColorCode;
 
 	/**
 	 * Constructor.
@@ -57,21 +57,5 @@ final class MovesetTeraTrendLine extends TrendLine
 	public function getLineLabel() : string
 	{
 		return 'Usage %';
-	}
-
-	/**
-	 * Get the moveset Tera trend line's type name.
-	 */
-	public function getTypeName() : string
-	{
-		return $this->typeName;
-	}
-
-	/**
-	 * Get the trend line's move type.
-	 */
-	public function getTypeColorCode() : string
-	{
-		return $this->typeColorCode;
 	}
 }

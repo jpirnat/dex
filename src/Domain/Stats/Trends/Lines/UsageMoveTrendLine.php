@@ -9,8 +9,7 @@ use Jp\Dex\Domain\Types\Type;
 
 final class UsageMoveTrendLine extends TrendLine
 {
-	private MoveName $moveName;
-	private Type $moveType;
+	private(set) MoveName $moveName;
 
 	/**
 	 * Constructor.
@@ -23,7 +22,6 @@ final class UsageMoveTrendLine extends TrendLine
 		PokemonName $pokemonName,
 		MoveName $moveName,
 		Type $pokemonType,
-		Type $moveType,
 		array $trendPoints,
 	) {
 		$this->formatName = $formatName;
@@ -31,7 +29,6 @@ final class UsageMoveTrendLine extends TrendLine
 		$this->pokemonName = $pokemonName;
 		$this->moveName = $moveName;
 		$this->pokemonType = $pokemonType;
-		$this->moveType = $moveType;
 
 		foreach ($trendPoints as $trendPoint) {
 			$this->addTrendPoint($trendPoint);
@@ -58,21 +55,5 @@ final class UsageMoveTrendLine extends TrendLine
 	public function getLineLabel() : string
 	{
 		return 'Usage %';
-	}
-
-	/**
-	 * Get the usage move trend line's move name.
-	 */
-	public function getMoveName() : MoveName
-	{
-		return $this->moveName;
-	}
-
-	/**
-	 * Get the trend line's move type.
-	 */
-	public function getMoveType() : Type
-	{
-		return $this->moveType;
 	}
 }

@@ -7,7 +7,6 @@ use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Moves\MoveNameRepositoryInterface;
-use Jp\Dex\Domain\Moves\VgMoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\VgPokemonRepositoryInterface;
@@ -23,7 +22,6 @@ final readonly class UsageMoveTrendGenerator
 		private MoveNameRepositoryInterface $moveNameRepository,
 		private VgPokemonRepositoryInterface $vgPokemonRepository,
 		private TypeRepositoryInterface $typeRepository,
-		private VgMoveRepositoryInterface $vgMoveRepository,
 		private TrendPointCalculator $trendPointCalculator,
 	) {}
 
@@ -54,13 +52,6 @@ final readonly class UsageMoveTrendGenerator
 		);
 		$pokemonType = $this->typeRepository->getById($vgPokemon->getType1Id());
 
-		// Get the move's type.
-		$vgMove = $this->vgMoveRepository->getByVgAndMove(
-			$format->getVersionGroupId(),
-			$moveId,
-		);
-		$moveType = $this->typeRepository->getById($vgMove->getTypeId());
-
 		// Get the usage data.
 		$usageDatas = $this->statsChartQueries->getUsageMove(
 			$format->getId(),
@@ -84,7 +75,6 @@ final readonly class UsageMoveTrendGenerator
 			$pokemonName,
 			$moveName,
 			$pokemonType,
-			$moveType,
 			$trendPoints,
 		);
 	}

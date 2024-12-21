@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Types\Type;
 
 final class UsageItemTrendLine extends TrendLine
 {
-	private ItemName $itemName;
+	private(set) ItemName $itemName;
 
 	/**
 	 * Constructor.
@@ -55,13 +55,5 @@ final class UsageItemTrendLine extends TrendLine
 	public function getLineLabel() : string
 	{
 		return 'Usage %';
-	}
-
-	/**
-	 * Get the usage item trend line's item name.
-	 */
-	public function getItemName() : ItemName
-	{
-		return $this->itemName;
 	}
 }

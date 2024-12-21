@@ -9,8 +9,8 @@ use Jp\Dex\Domain\Types\Type;
 
 final class MovesetMoveTrendLine extends TrendLine
 {
-	private MoveName $moveName;
-	private Type $moveType;
+	private(set) MoveName $moveName;
+	private(set) Type $moveType;
 
 	/**
 	 * Constructor.
@@ -58,22 +58,5 @@ final class MovesetMoveTrendLine extends TrendLine
 	public function getLineLabel() : string
 	{
 		return 'Usage %';
-	}
-
-	/**
-	 * Get the moveset move trend line's move name.
-	 */
-	public function getMoveName() : MoveName
-	{
-		return $this->moveName;
-	}
-
-
-	/**
-	 * Get the trend line's move type.
-	 */
-	public function getMoveType() : Type
-	{
-		return $this->moveType;
 	}
 }

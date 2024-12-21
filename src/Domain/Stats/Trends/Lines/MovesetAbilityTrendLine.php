@@ -9,7 +9,7 @@ use Jp\Dex\Domain\Types\Type;
 
 final class MovesetAbilityTrendLine extends TrendLine
 {
-	private AbilityName $abilityName;
+	private(set) AbilityName $abilityName;
 
 	/**
 	 * Constructor.
@@ -55,13 +55,5 @@ final class MovesetAbilityTrendLine extends TrendLine
 	public function getLineLabel() : string
 	{
 		return 'Usage %';
-	}
-
-	/**
-	 * Get the moveset ability trend line's ability name.
-	 */
-	public function getAbilityName() : AbilityName
-	{
-		return $this->abilityName;
 	}
 }

@@ -8,13 +8,13 @@ use Jp\Dex\Domain\Types\Type;
 
 abstract class TrendLine
 {
-	protected string $formatName;
-	protected int $rating;
-	protected PokemonName $pokemonName;
-	protected Type $pokemonType;
+	protected(set) string $formatName;
+	protected(set) int $rating;
+	protected(set) PokemonName $pokemonName;
+	protected(set) Type $pokemonType;
 
 	/** @var TrendPoint[] $trendPoints */
-	protected array $trendPoints = [];
+	protected(set) array $trendPoints = [];
 
 	/**
 	 * Add a trend point to the trend line.
@@ -34,46 +34,4 @@ abstract class TrendLine
 	 * line.
 	 */
 	abstract public function getLineLabel() : string;
-
-	/**
-	 * Get the trend line's format name.
-	 */
-	public function getFormatName() : string
-	{
-		return $this->formatName;
-	}
-
-	/**
-	 * Get the trend line's rating.
-	 */
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	/**
-	 * Get the trend line's Pokémon name.
-	 */
-	public function getPokemonName() : PokemonName
-	{
-		return $this->pokemonName;
-	}
-
-	/**
-	 * Get the trend line's Pokémon type.
-	 */
-	public function getPokemonType() : Type
-	{
-		return $this->pokemonType;
-	}
-
-	/**
-	 * Get the trend line's trend points.
-	 *
-	 * @return TrendPoint[]
-	 */
-	public function getTrendPoints() : array
-	{
-		return $this->trendPoints;
-	}
 }

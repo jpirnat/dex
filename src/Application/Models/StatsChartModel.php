@@ -26,15 +26,15 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 final class StatsChartModel
 {
 	/** @var TrendLine[] $trendLines */
-	private array $trendLines = [];
+	private(set) array $trendLines = [];
 
 	/** @var string[] $similarities */
-	private array $similarities = [];
+	private(set) array $similarities = [];
 
 	/** @var string[] $differences */
-	private array $differences = [];
+	private(set) array $differences = [];
 
-	private Language $language;
+	private(set) Language $language;
 
 
 	public function __construct(
@@ -253,6 +253,7 @@ final class StatsChartModel
 		$abilities = [];
 		$items = [];
 		$moves = [];
+		$teraTypes = [];
 		$this->similarities = [];
 		$this->differences = [];
 
@@ -269,6 +270,9 @@ final class StatsChartModel
 			}
 			if (isset($line['move'])) {
 				$moves[$line['move']] = $line['move'];
+			}
+			if (isset($line['tera'])) {
+				$teraTypes[$line['tera']] = $line['tera'];
 			}
 		}
 
@@ -300,47 +304,8 @@ final class StatsChartModel
 		if (count($pokemon) > 1) {
 			$this->differences[] = 'pokemon';
 		}
-		if (count($abilities) + count($items) + count($moves) > 1) {
+		if (count($abilities) + count($items) + count($moves) + count($teraTypes) > 1) {
 			$this->differences[] = 'moveset';
 		}
-	}
-
-
-	/**
-	 * Get the trend lines.
-	 *
-	 * @return TrendLine[]
-	 */
-	public function getTrendLines() : array
-	{
-		return $this->trendLines;
-	}
-
-	/**
-	 * Get the similarities between lines.
-	 *
-	 * @return string[]
-	 */
-	public function getSimilarities() : array
-	{
-		return $this->similarities;
-	}
-
-	/**
-	 * Get the differences between lines.
-	 *
-	 * @return string[]
-	 */
-	public function getDifferences() : array
-	{
-		return $this->differences;
-	}
-
-	/**
-	 * Get the language.
-	 */
-	public function getLanguage() : Language
-	{
-		return $this->language;
 	}
 }

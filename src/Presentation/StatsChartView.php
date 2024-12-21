@@ -27,13 +27,13 @@ final readonly class StatsChartView
 	 */
 	public function getData() : ResponseInterface
 	{
-		$trendLines = $this->statsChartModel->getTrendLines();
+		$trendLines = $this->statsChartModel->trendLines;
 
 		$lines = [];
 		$index = 0;
 		foreach ($trendLines as $trendLine) {
 			$data = [];
-			foreach ($trendLine->getTrendPoints() as $point) {
+			foreach ($trendLine->trendPoints as $point) {
 				$data[] = [
 					'x' => $point->getDate()->format('Y-m'),
 					'y' => $point->getValue(),
@@ -53,7 +53,7 @@ final readonly class StatsChartView
 			'data' => [
 				'chartTitle' => $this->getChartTitle(),
 				'lines' => $lines,
-				'locale' => $this->statsChartModel->getLanguage()->getLocale(),
+				'locale' => $this->statsChartModel->language->getLocale(),
 			]
 		]);
 	}
@@ -63,30 +63,30 @@ final readonly class StatsChartView
 	 */
 	private function getChartTitle() : string
 	{
-		$trendLines = $this->statsChartModel->getTrendLines();
+		$trendLines = $this->statsChartModel->trendLines;
 		if (count($trendLines) === 1) {
 			// Use the trend line's own chart title rather than generating one ourselves.
 			return $trendLines[0]->getChartTitle();
 		}
 
-		$similarities = $this->statsChartModel->getSimilarities();
+		$similarities = $this->statsChartModel->similarities;
 
-		$trendLine = $this->statsChartModel->getTrendLines()[0];
-		$formatName = $trendLine->getFormatName();
-		$rating = (string) $trendLine->getRating();
-		$pokemonName = $trendLine->getPokemonName()->getName();
+		$trendLine = $this->statsChartModel->trendLines[0];
+		$formatName = $trendLine->formatName;
+		$rating = $trendLine->rating;
+		$pokemonName = $trendLine->pokemonName->getName();
 		$movesetName = '';
 		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof UsageAbilityTrendLine) {
-			$movesetName = $trendLine->getAbilityName()->getName();
+			$movesetName = $trendLine->abilityName->getName();
 		}
 		if ($trendLine instanceof MovesetItemTrendLine || $trendLine instanceof UsageItemTrendLine) {
-			$movesetName = $trendLine->getItemName()->getName();
+			$movesetName = $trendLine->itemName->getName();
 		}
 		if ($trendLine instanceof MovesetMoveTrendLine || $trendLine instanceof UsageMoveTrendLine) {
-			$movesetName = $trendLine->getMoveName()->getName();
+			$movesetName = $trendLine->moveName->getName();
 		}
 		if ($trendLine instanceof MovesetTeraTrendLine) {
-			$movesetName = $trendLine->getTypeName();
+			$movesetName = $trendLine->typeName;
 		}
 
 		$titleParts = [];
@@ -128,29 +128,29 @@ final readonly class StatsChartView
 	 */
 	private function getLineLabel(TrendLine $trendLine) : string
 	{
-		$trendLines = $this->statsChartModel->getTrendLines();
+		$trendLines = $this->statsChartModel->trendLines;
 		if (count($trendLines) === 1) {
 			// Use the trend line's own label rather than generating one ourselves.
 			return $trendLine->getLineLabel();
 		}
 
-		$differences = $this->statsChartModel->getDifferences();
+		$differences = $this->statsChartModel->differences;
 
-		$formatName = $trendLine->getFormatName();
-		$rating = (string) $trendLine->getRating();
-		$pokemonName = $trendLine->getPokemonName()->getName();
+		$formatName = $trendLine->formatName;
+		$rating = $trendLine->rating;
+		$pokemonName = $trendLine->pokemonName->getName();
 		$movesetName = '';
 		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof UsageAbilityTrendLine) {
-			$movesetName = $trendLine->getAbilityName()->getName();
+			$movesetName = $trendLine->abilityName->getName();
 		}
 		if ($trendLine instanceof MovesetItemTrendLine || $trendLine instanceof UsageItemTrendLine) {
-			$movesetName = $trendLine->getItemName()->getName();
+			$movesetName = $trendLine->itemName->getName();
 		}
 		if ($trendLine instanceof MovesetMoveTrendLine || $trendLine instanceof UsageMoveTrendLine) {
-			$movesetName = $trendLine->getMoveName()->getName();
+			$movesetName = $trendLine->moveName->getName();
 		}
 		if ($trendLine instanceof MovesetTeraTrendLine) {
-			$movesetName = $trendLine->getTypeName();
+			$movesetName = "Tera $trendLine->typeName";
 		}
 
 		$labelParts = [];
@@ -192,11 +192,11 @@ final readonly class StatsChartView
 	 */
 	private function getLineColor(TrendLine $trendLine, int $index) : string
 	{
-		$differences = $this->statsChartModel->getDifferences();
+		$differences = $this->statsChartModel->differences;
 		if ($differences === ['rating']) {
 			// Special case: For charts where we're looking at the same thing
 			// across different rating levels, each rating has a specific color.
-			$rating = $trendLine->getRating();
+			$rating = $trendLine->rating;
 			if ($rating === 0) {
 				return 'rgba(0, 0, 0, 1)'; // black
 			}
@@ -213,11 +213,11 @@ final readonly class StatsChartView
 		}
 
 		if ($trendLine instanceof MovesetMoveTrendLine) {
-			return $trendLine->getMoveType()->getColorCode();
+			return $trendLine->moveType->getColorCode();
 		}
 
 		if ($trendLine instanceof MovesetTeraTrendLine) {
-			return $trendLine->getTypeColorCode();
+			return $trendLine->typeColorCode;
 		}
 
 		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof MovesetItemTrendline) {
@@ -235,6 +235,6 @@ final readonly class StatsChartView
 		}
 
 		// For all other cases, use the color of the Pokémon's primary type.
-		return $trendLine->getPokemonType()->getColorCode();
+		return $trendLine->pokemonType->getColorCode();
 	}
 }
