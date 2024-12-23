@@ -44,26 +44,25 @@ final class DexItemModel
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$item = $this->itemRepository->getByIdentifier($itemIdentifier);
-		$itemId = $item->getId();
 
-		$this->versionGroupModel->setWithItem($itemId);
+		$this->versionGroupModel->setWithItem($item->id);
 
 		$dexItem = $this->dexItemRepository->getById(
 			$versionGroupId,
-			$itemId,
+			$item->id,
 			$languageId,
 		);
 
 		$this->item = [
-			'icon' => $dexItem->getIcon(),
-			'identifier' => $dexItem->getIdentifier(),
-			'name' => $dexItem->getName(),
-			'description' => $dexItem->getDescription(),
+			'icon' => $dexItem->icon,
+			'identifier' => $dexItem->identifier,
+			'name' => $dexItem->name,
+			'description' => $dexItem->description,
 		];
 
 		$evolutions = $this->evolutionRepository->getByItem(
 			$versionGroupId,
-			$itemId,
+			$item->id,
 		);
 		foreach ($evolutions as $evolution) {
 			$formId = $evolution->evoFromId;

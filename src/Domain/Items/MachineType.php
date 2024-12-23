@@ -11,7 +11,7 @@ final readonly class MachineType
 	public const string HM = 'hm';
 	public const string TR = 'tr';
 
-	private string $value;
+	private(set) string $value;
 
 	/**
 	 * @throws Exception if $value is invalid.
@@ -23,13 +23,5 @@ final readonly class MachineType
 		}
 
 		$this->value = $value;
-	}
-
-	/**
-	 * Get the machine type's value.
-	 */
-	public function value() : string
-	{
-		return $this->value;
 	}
 }

@@ -82,13 +82,13 @@ final readonly class StatsPokemonView
 		$items = [];
 		foreach ($itemsData as $item) {
 			$items[] = [
-				'icon' => $item->getIcon(),
-				'identifier' => $item->getIdentifier(),
-				'name' => $item->getName(),
-				'percent' => $item->getPercent(),
-				'percentText' => $formatter->formatPercent($item->getPercent()),
-				'change' => $item->getChange(),
-				'changeText' => $formatter->formatChange($item->getChange()),
+				'icon' => $item->icon,
+				'identifier' => $item->identifier,
+				'name' => $item->name,
+				'percent' => $item->percent,
+				'percentText' => $formatter->formatPercent($item->percent),
+				'change' => $item->change,
+				'changeText' => $formatter->formatChange($item->change),
 			];
 		}
 

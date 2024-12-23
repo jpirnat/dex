@@ -104,10 +104,10 @@ final class DexMovePokemonModel
 				case MoveMethodId::MACHINE:
 					// The version group data is the TM's number.
 					$tm = $tms[$vgId];
-					$itemId = $tm->getItemId()->value();
+					$itemId = $tm->itemId->value();
 					$itemDescription = $itemDescriptions[$vgId][$itemId];
 
-					$methodsPokemons[$methodId][$pokemonId][$vgIdentifier] = $itemDescription->getName();
+					$methodsPokemons[$methodId][$pokemonId][$vgIdentifier] = $itemDescription->name;
 					break;
 				default:
 					// The version group data is just that the Pokémon learns

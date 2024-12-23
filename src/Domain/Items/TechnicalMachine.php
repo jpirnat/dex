@@ -9,50 +9,10 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 final readonly class TechnicalMachine
 {
 	public function __construct(
-		private VersionGroupId $versionGroupId,
-		private MachineType $machineType,
-		private int $number,
-		private ItemId $itemId,
-		private MoveId $moveId,
+		private(set) VersionGroupId $versionGroupId,
+		private(set) MachineType $machineType,
+		private(set) int $number,
+		private(set) ItemId $itemId,
+		private(set) MoveId $moveId,
 	) {}
-
-	/**
-	 * Get the TM's version group id.
-	 */
-	public function getVersionGroupId() : VersionGroupId
-	{
-		return $this->versionGroupId;
-	}
-
-	/**
-	 * Get the TM's machine type.
-	 */
-	public function getMachineType() : MachineType
-	{
-		return $this->machineType;
-	}
-
-	/**
-	 * Get the TM's number.
-	 */
-	public function getNumber() : int
-	{
-		return $this->number;
-	}
-
-	/**
-	 * Get the TM's item id.
-	 */
-	public function getItemId() : ItemId
-	{
-		return $this->itemId;
-	}
-
-	/**
-	 * Get the TM's move id.
-	 */
-	public function getMoveId() : MoveId
-	{
-		return $this->moveId;
-	}
 }

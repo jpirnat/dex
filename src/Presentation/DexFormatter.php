@@ -325,10 +325,10 @@ final readonly class DexFormatter
 	public function formatDexItem(DexItem $dexItem) : array
 	{
 		return [
-			'icon' => $dexItem->getIcon(),
-			'identifier' => $dexItem->getIdentifier(),
-			'name' => $dexItem->getName(),
-			'description' => $dexItem->getDescription(),
+			'icon' => $dexItem->icon,
+			'identifier' => $dexItem->identifier,
+			'name' => $dexItem->name,
+			'description' => $dexItem->description,
 		];
 	}
 

@@ -41,10 +41,10 @@ final readonly class PokemonMoveFormatter
 			$itemName = $this->itemDescriptionRepository->getByItem(
 				$pokemonMove->getVersionGroupId(),
 				$languageId,
-				$tm->getItemId(),
+				$tm->itemId,
 			);
 
-			return $itemName->getName();
+			return $itemName->name;
 		}
 
 		if ($method === MoveMethodId::EGG) {
@@ -71,7 +71,7 @@ final readonly class PokemonMoveFormatter
 				new ItemId(ItemId::LIGHT_BALL),
 			);
 
-			return $itemName->getName();
+			return $itemName->name;
 		}
 
 		if ($method === MoveMethodId::FORM_CHANGE) {

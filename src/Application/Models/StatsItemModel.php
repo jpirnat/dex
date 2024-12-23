@@ -88,14 +88,14 @@ final class StatsItemModel
 
 		$dexItem = $this->dexItemRepository->getById(
 			$this->format->versionGroupId,
-			$item->getId(),
+			$item->id,
 			$languageId,
 		);
 		$this->item = [
-			'icon' => $dexItem->getIcon(),
-			'identifier' => $dexItem->getIdentifier(),
-			'name' => $dexItem->getName(),
-			'description' => $dexItem->getDescription(),
+			'icon' => $dexItem->icon,
+			'identifier' => $dexItem->identifier,
+			'name' => $dexItem->name,
+			'description' => $dexItem->description,
 		];
 
 		$speedName = $this->statNameRepository->getByLanguageAndStat(
@@ -110,7 +110,7 @@ final class StatsItemModel
 			$prevMonth,
 			$this->format->id,
 			$rating,
-			$item->getId(),
+			$item->id,
 			$languageId,
 		);
 	}

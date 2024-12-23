@@ -115,13 +115,13 @@ final class DexPokemonMovesModel
 					// The version group data is the TM's number.
 					/** @var TechnicalMachine $tm */
 					$tm = $tms[$vgId][$moveId];
-					$itemId = $tm->getItemId()->value();
+					$itemId = $tm->itemId->value();
 					$itemDescription = $itemDescriptions[$vgId][$itemId];
 
 					$methodsMoves[$methodId][$moveId][$vgIdentifier] = [
-						'machineType' => $tm->getMachineType()->value(),
-						'number' => $tm->getNumber(),
-						'item' => $itemDescription->getName(),
+						'machineType' => $tm->machineType->value,
+						'number' => $tm->number,
+						'item' => $itemDescription->name,
 					];
 					break;
 				default:

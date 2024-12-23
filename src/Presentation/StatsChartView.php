@@ -80,7 +80,7 @@ final readonly class StatsChartView
 			$movesetName = $trendLine->abilityName->name;
 		}
 		if ($trendLine instanceof MovesetItemTrendLine || $trendLine instanceof UsageItemTrendLine) {
-			$movesetName = $trendLine->itemName->getName();
+			$movesetName = $trendLine->itemName->name;
 		}
 		if ($trendLine instanceof MovesetMoveTrendLine || $trendLine instanceof UsageMoveTrendLine) {
 			$movesetName = $trendLine->moveName->getName();
@@ -144,7 +144,7 @@ final readonly class StatsChartView
 			$movesetName = $trendLine->abilityName->name;
 		}
 		if ($trendLine instanceof MovesetItemTrendLine || $trendLine instanceof UsageItemTrendLine) {
-			$movesetName = $trendLine->itemName->getName();
+			$movesetName = $trendLine->itemName->name;
 		}
 		if ($trendLine instanceof MovesetMoveTrendLine || $trendLine instanceof UsageMoveTrendLine) {
 			$movesetName = $trendLine->moveName->getName();

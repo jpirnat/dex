@@ -55,8 +55,8 @@ final readonly class ItemModel
 			$item = $this->itemRepository->getById($itemId);
 
 			$items[] = [
-				'identifier' => $item->getIdentifier(),
-				'name' => $itemName->getName(),
+				'identifier' => $item->identifier,
+				'name' => $itemName->name,
 				'percent' => $movesetRatedAveragedItem->getPercent(),
 			];
 		}
