@@ -54,7 +54,7 @@ final readonly class LanguageMiddleware implements MiddlewareInterface
 			try {
 				$languageId = new LanguageId((int) $languageId);
 				$language = $this->languageRepository->getById($languageId);
-				$languageId = $language->getId()->value();
+				$languageId = $language->id->value();
 			} catch (LanguageNotFoundException) {
 				unset($languageId);
 				$setNewLanguage = false;

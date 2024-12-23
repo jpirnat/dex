@@ -48,19 +48,19 @@ final readonly class StatsLeadsView
 		$pokemons = [];
 		foreach ($pokemonData as $pokemon) {
 			$pokemons[] = [
-				'rank' => $pokemon->getRank(),
-				'icon' => $pokemon->getIcon(),
-				'identifier' => $pokemon->getIdentifier(),
-				'name' => $pokemon->getName(),
-				'usagePercent' => $pokemon->getUsagePercent(),
-				'usagePercentText' => $formatter->formatPercent($pokemon->getUsagePercent()),
-				'usageChange' => $pokemon->getUsageChange(),
-				'usageChangeText' => $formatter->formatChange($pokemon->getUsageChange()),
-				'raw' => $pokemon->getRaw(),
-				'rawText' => $formatter->formatNumber($pokemon->getRaw()),
-				'rawPercent' => $pokemon->getRawPercent(),
-				'rawPercentText' => $formatter->formatPercent($pokemon->getRawPercent()),
-				'baseSpeed' => $pokemon->getBaseSpeed(),
+				'rank' => $pokemon->rank,
+				'icon' => $pokemon->icon,
+				'identifier' => $pokemon->identifier,
+				'name' => $pokemon->name,
+				'usagePercent' => $pokemon->usagePercent,
+				'usagePercentText' => $formatter->formatPercent($pokemon->usagePercent),
+				'usageChange' => $pokemon->usageChange,
+				'usageChangeText' => $formatter->formatChange($pokemon->usageChange),
+				'raw' => $pokemon->raw,
+				'rawText' => $formatter->formatNumber($pokemon->raw),
+				'rawPercent' => $pokemon->rawPercent,
+				'rawPercentText' => $formatter->formatPercent($pokemon->rawPercent),
+				'baseSpeed' => $pokemon->baseSpeed,
 			];
 		}
 

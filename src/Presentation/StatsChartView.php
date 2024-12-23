@@ -53,7 +53,7 @@ final readonly class StatsChartView
 			'data' => [
 				'chartTitle' => $this->getChartTitle(),
 				'lines' => $lines,
-				'locale' => $this->statsChartModel->language->getLocale(),
+				'locale' => $this->statsChartModel->language->locale,
 			]
 		]);
 	}

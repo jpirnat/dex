@@ -27,28 +27,28 @@ final readonly class IntlFormatterFactory
 		$language = $this->languageRepository->getById($languageId);
 
 		$dateFormatter = new IntlDateFormatter(
-			$language->getLocale(),
+			$language->locale,
 			IntlDateFormatter::LONG,
 			IntlDateFormatter::NONE,
 			null,
 			null,
-			$language->getDateFormat(),
+			$language->dateFormat,
 		);
 
 		$numberFormatter = new NumberFormatter(
-			$language->getLocale(),
+			$language->locale,
 			NumberFormatter::DECIMAL,
 		);
 		$numberFormatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 5);
 
 		$percentFormatter = new NumberFormatter(
-			$language->getLocale(),
+			$language->locale,
 			NumberFormatter::PERCENT,
 		);
 		$percentFormatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 5);
 
 		$changeFormatter = new NumberFormatter(
-			$language->getLocale(),
+			$language->locale,
 			NumberFormatter::PERCENT,
 		);
 		$changeFormatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 5);
