@@ -38,22 +38,22 @@ final readonly class EvolutionFormatter
 		Evolution $evolution,
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
-		$evoMethodId = $evolution->getEvoMethodId();
+		$evoMethodId = $evolution->evoMethodId;
 
-		$level = $evolution->getLevel();
+		$level = $evolution->level;
 
 		$friendship = 0;
 		if ($evoMethodId->needsFriendship()) {
-			$versionGroup = $this->versionGroupRepository->getById($evolution->getVersionGroupId());
+			$versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
 			$friendship = $this->getFriendship($versionGroup->getGenerationId());
 		}
 
 		$item = '';
 		if ($evoMethodId->needsItem()) {
 			$textLinkItem = $this->textLinkRepository->getForItem(
-				$evolution->getVersionGroupId(),
+				$evolution->versionGroupId,
 				$languageId,
-				$evolution->getItemId(),
+				$evolution->itemId,
 			);
 			$item = $textLinkItem->getLinkHtml();
 		}
@@ -61,9 +61,9 @@ final readonly class EvolutionFormatter
 		$move = '';
 		if ($evoMethodId->needsMove()) {
 			$textLinkMove = $this->textLinkRepository->getForMove(
-				$evolution->getVersionGroupId(),
+				$evolution->versionGroupId,
 				$languageId,
-				$evolution->getMoveId(),
+				$evolution->moveId,
 			);
 			$move = $textLinkMove->getLinkHtml();
 		}
@@ -71,9 +71,9 @@ final readonly class EvolutionFormatter
 		$pokemon = '';
 		if ($evoMethodId->needsPokemon()) {
 			$textLinkPokemon = $this->textLinkRepository->getForPokemon(
-				$evolution->getVersionGroupId(),
+				$evolution->versionGroupId,
 				$languageId,
-				$evolution->getPokemonId(),
+				$evolution->pokemonId,
 			);
 			$pokemon = $textLinkPokemon->getLinkHtml();
 		}
@@ -81,9 +81,9 @@ final readonly class EvolutionFormatter
 		$type = '';
 		if ($evoMethodId->needsType()) {
 			$textLinkType = $this->textLinkRepository->getForType(
-				$evolution->getVersionGroupId(),
+				$evolution->versionGroupId,
 				$languageId,
-				$evolution->getTypeId(),
+				$evolution->typeId,
 			);
 			$type = $textLinkType->getLinkHtml();
 		}
@@ -92,12 +92,12 @@ final readonly class EvolutionFormatter
 		if ($evoMethodId->needsVersion()) {
 			$version = $this->versionNameRepository->getByLanguageAndVersion(
 				$languageId,
-				$evolution->getVersionId(),
+				$evolution->versionId,
 			);
 			$version = $version->getName();
 		}
 
-		$otherParameter = $evolution->getOtherParameter();
+		$otherParameter = $evolution->otherParameter;
 
 		return match ($evoMethodId->value()) {
 			EvoMethodId::LEVEL_UP_FRIENDSHIP => new EvolutionTableMethod(
@@ -255,13 +255,13 @@ final readonly class EvolutionFormatter
 		Evolution $evolution,
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
-		$inExchangeFor = match ($evolution->getEvoFromId()->value()) {
+		$inExchangeFor = match ($evolution->evoFromId->value()) {
 			FormId::KARRABLAST => FormId::SHELMET,
 			FormId::SHELMET => FormId::KARRABLAST,
 		};
 
 		$textLinkPokemon = $this->textLinkRepository->getForPokemon(
-			$evolution->getVersionGroupId(),
+			$evolution->versionGroupId,
 			$languageId,
 			new PokemonId($inExchangeFor),
 		);
@@ -279,13 +279,13 @@ final readonly class EvolutionFormatter
 		Evolution $evolution,
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
-		$level = $evolution->getLevel();
+		$level = $evolution->level;
 
 		$statNames = $this->statNameRepository->getByLanguage($languageId);
 		$attack = $statNames[StatId::ATTACK]->getName();
 		$defense = $statNames[StatId::DEFENSE]->getName();
 
-		$html = match ($evolution->getEvoMethodId()->value()) {
+		$html = match ($evolution->evoMethodId->value()) {
 			EvoMethodId::LEVEL_UP_ATK_GT_DEF => "Level up, starting at level $level, when $attack > $defense",
 			EvoMethodId::LEVEL_UP_ATK_EQ_DEF => "Level up, starting at level $level, when $attack = $defense",
 			EvoMethodId::LEVEL_UP_DEF_GT_ATK => "Level up, starting at level $level, when $attack < $defense",
@@ -304,17 +304,17 @@ final readonly class EvolutionFormatter
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
 		$nincada = $this->textLinkRepository->getForPokemon(
-			$evolution->getVersionGroupId(),
+			$evolution->versionGroupId,
 			$languageId,
-			new PokemonId($evolution->getEvoFromId()->value()),
+			new PokemonId($evolution->evoFromId->value()),
 		);
 		$ninjask = $this->textLinkRepository->getForPokemon(
-			$evolution->getVersionGroupId(),
+			$evolution->versionGroupId,
 			$languageId,
 			New PokemonId(PokemonId::NINJASK),
 		);
 		$pokeBall = $this->textLinkRepository->getForItem(
-			$evolution->getVersionGroupId(),
+			$evolution->versionGroupId,
 			$languageId,
 			new ItemId(ItemId::POKE_BALL),
 		);
@@ -335,13 +335,13 @@ final readonly class EvolutionFormatter
 		Evolution $evolution,
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
-		$number = $evolution->getOtherParameter();
+		$number = $evolution->otherParameter;
 
 		$beauty = $this->conditionNameRepository->getByLanguageAndCondition(
 			$languageId,
 			new ConditionId(ConditionId::BEAUTY),
 		);
-		$beauty = $beauty->getName();
+		$beauty = $beauty->name;
 
 		return new EvolutionTableMethod(
 			"Level up, with at least $number $beauty",
@@ -355,7 +355,7 @@ final readonly class EvolutionFormatter
 		Evolution $evolution,
 		string $type,
 	) : EvolutionTableMethod {
-		$versionGroup = $this->versionGroupRepository->getById($evolution->getVersionGroupId());
+		$versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
 
 		$friendship = $this->getFriendship($versionGroup->getGenerationId());
 		$friendshipOrAffection = match ($versionGroup->getGenerationId()->value()) {
@@ -374,8 +374,8 @@ final readonly class EvolutionFormatter
 	private function levelUpWeather(
 		Evolution $evolution,
 	) : EvolutionTableMethod {
-		$level = $evolution->getLevel();
-		$versionGroup = $this->versionGroupRepository->getById($evolution->getVersionGroupId());
+		$level = $evolution->level;
+		$versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
 
 		$weather = match ($versionGroup->getGenerationId()->value()) {
 			6 => "rain",
@@ -393,8 +393,8 @@ final readonly class EvolutionFormatter
 	private function levelUpDusk(
 		Evolution $evolution,
 	) : EvolutionTableMethod {
-		$level = $evolution->getLevel();
-		$time = self::getEveningText($evolution->getVersionGroupId());
+		$level = $evolution->level;
+		$time = self::getEveningText($evolution->versionGroupId);
 
 		return new EvolutionTableMethod(
 			"Level up, $time, starting at level $level",
@@ -408,7 +408,7 @@ final readonly class EvolutionFormatter
 		Evolution $evolution,
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
-		$number = $evolution->getOtherParameter();
+		$number = $evolution->otherParameter;
 
 		$statNames = $this->statNameRepository->getByLanguage($languageId);
 		$hp = $statNames[StatId::HP]->getName();
@@ -425,11 +425,11 @@ final readonly class EvolutionFormatter
 		Evolution $evolution,
 		string $item,
 	) : EvolutionTableMethod {
-		$spinType = new AlcremieSpinType($evolution->getOtherParameter());
+		$spinType = new AlcremieSpinType($evolution->otherParameter);
 
 		$direction = $spinType->getDirection();
 		$duration = $spinType->getDuration();
-		$timeOfDay = $spinType->getTimeOfDay($evolution->getVersionGroupId());
+		$timeOfDay = $spinType->getTimeOfDay($evolution->versionGroupId);
 
 		return new EvolutionTableMethod(
 			"After spinning $direction for $duration $timeOfDay, while holding $item",
@@ -443,11 +443,11 @@ final readonly class EvolutionFormatter
 		Evolution $evolution,
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
-		$level = $evolution->getLevel();
+		$level = $evolution->level;
 
 		$natures = $this->dexNatureRepository->getByToxelEvo(
 			$languageId,
-			$evolution->getEvoIntoId(),
+			$evolution->evoIntoId,
 		);
 		$natures[array_key_last($natures)] = 'or ' . $natures[array_key_last($natures)];
 		$natures = implode(', ', $natures);
@@ -464,15 +464,15 @@ final readonly class EvolutionFormatter
 		Evolution $evolution,
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
-		$number = $evolution->getOtherParameter();
+		$number = $evolution->otherParameter;
 
 		$bisharp = $this->textLinkRepository->getForPokemon(
-			$evolution->getVersionGroupId(),
+			$evolution->versionGroupId,
 			$languageId,
 			New PokemonId(PokemonId::BISHARP),
 		);
 		$leadersCrest = $this->textLinkRepository->getForItem(
-			$evolution->getVersionGroupId(),
+			$evolution->versionGroupId,
 			$languageId,
 			new ItemId(ItemId::LEADERS_CREST),
 		);
@@ -492,12 +492,12 @@ final readonly class EvolutionFormatter
 		Evolution $evolution,
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
-		$number = $evolution->getOtherParameter();
+		$number = $evolution->otherParameter;
 
 		$statNames = $this->statNameRepository->getByLanguage($languageId);
 		$hp = $statNames[StatId::HP]->getName();
 
-		$gender = match ($evolution->getEvoMethodId()->value()) {
+		$gender = match ($evolution->evoMethodId->value()) {
 			EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_MALE => 'males',
 			EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_FEMALE => 'females',
 		};
@@ -515,7 +515,7 @@ final readonly class EvolutionFormatter
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
 		$psyshieldBash = $this->textLinkRepository->getForMove(
-			$evolution->getVersionGroupId(),
+			$evolution->versionGroupId,
 			$languageId,
 			new MoveId(MoveId::PSYSHIELD_BASH),
 		);
@@ -534,7 +534,7 @@ final readonly class EvolutionFormatter
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
 		$barbBarrage = $this->textLinkRepository->getForMove(
-			$evolution->getVersionGroupId(),
+			$evolution->versionGroupId,
 			$languageId,
 			new MoveId(MoveId::BARB_BARRAGE),
 		);

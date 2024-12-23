@@ -41,23 +41,22 @@ final class DexEggGroupModel
 		$this->versionGroupModel->setWithBreeding();
 
 		$eggGroup = $this->eggGroupRepository->getByIdentifier($eggGroupIdentifier);
-		$eggGroupId = $eggGroup->getId();
 
 		$dexEggGroup = $this->dexEggGroupRepository->getById(
-			$eggGroupId,
+			$eggGroup->id,
 			$languageId,
 		);
 
 		$this->eggGroup = [
-			'identifier' => $dexEggGroup->getIdentifier(),
-			'name' => $dexEggGroup->getName(),
+			'identifier' => $dexEggGroup->identifier,
+			'name' => $dexEggGroup->name,
 		];
 
 		$this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
 
 		$this->pokemon = $this->dexPokemonRepository->getInEggGroup(
 			$versionGroupId,
-			$eggGroup->getId(),
+			$eggGroup->id,
 			$languageId,
 		);
 	}

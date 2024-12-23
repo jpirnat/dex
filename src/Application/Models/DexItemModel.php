@@ -66,7 +66,7 @@ final class DexItemModel
 			$itemId,
 		);
 		foreach ($evolutions as $evolution) {
-			$formId = $evolution->getEvoFromId();
+			$formId = $evolution->evoFromId;
 
 			$form = $this->formRepository->getById($formId);
 			$formIcon = $this->formIconRepository->getByVgAndFormAndFemaleAndRightAndShiny(

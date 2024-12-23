@@ -6,17 +6,7 @@ namespace Jp\Dex\Domain\EggGroups;
 final readonly class DexEggGroup
 {
 	public function __construct(
-		private string $identifier,
-		private string $name,
+		private(set) string $identifier,
+		private(set) string $name,
 	) {}
-
-	public function getIdentifier() : string
-	{
-		return $this->identifier;
-	}
-
-	public function getName() : string
-	{
-		return $this->name;
-	}
 }

@@ -103,8 +103,8 @@ final class DexPokemonModel
 
 		if (!$versionGroup->hasBreeding()
 			|| $eggGroups === []
-			|| $eggGroups[0]->getIdentifier() === EggGroupIdentifier::UNDISCOVERED
-			|| $eggGroups[0]->getIdentifier() === EggGroupIdentifier::DITTO
+			|| $eggGroups[0]->identifier === EggGroupIdentifier::UNDISCOVERED
+			|| $eggGroups[0]->identifier === EggGroupIdentifier::DITTO
 			|| $genderRatio === GenderRatio::GENDER_UNKNOWN
 		) {
 			return;
@@ -112,7 +112,7 @@ final class DexPokemonModel
 
 		$eggGroups = array_map(
 			function (DexEggGroup $e) : string {
-				return $e->getIdentifier();
+				return $e->identifier;
 			},
 			$this->pokemon->getEggGroups(),
 		);

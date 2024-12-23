@@ -143,8 +143,8 @@ final readonly class DexFormatter
 			'catchRate' => $pokemon->getCatchRate(),
 			'baseFriendship' => $pokemon->getBaseFriendship(),
 			'experienceGroup' => [
-				'name' => $pokemon->getExperienceGroup()->getName(),
-				'points' => $pokemon->getExperienceGroup()->getPoints(),
+				'name' => $pokemon->getExperienceGroup()->name,
+				'points' => $pokemon->getExperienceGroup()->points,
 			],
 			'eggGroups' => $this->formatDexEggGroups($pokemon->getEggGroups()),
 			'genderRatio' => [
@@ -204,9 +204,9 @@ final readonly class DexFormatter
 	public function formatDexCategory(DexCategory $dexCategory) : array
 	{
 		return [
-			'identifier' => $dexCategory->getIdentifier(),
-			'icon' => $dexCategory->getIcon(),
-			'name' => $dexCategory->getName(),
+			'identifier' => $dexCategory->identifier,
+			'icon' => $dexCategory->icon,
+			'name' => $dexCategory->name,
 		];
 	}
 
@@ -262,8 +262,8 @@ final readonly class DexFormatter
 
 		foreach ($dexEggGroups as $dexEggGroup) {
 			$eggGroups[] = [
-				'identifier' => $dexEggGroup->getIdentifier(),
-				'name' => $dexEggGroup->getName(),
+				'identifier' => $dexEggGroup->identifier,
+				'name' => $dexEggGroup->name,
 			];
 		}
 

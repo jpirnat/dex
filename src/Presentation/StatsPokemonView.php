@@ -155,20 +155,20 @@ final readonly class StatsPokemonView
 		$counters = [];
 		foreach ($countersData as $counter) {
 			$counters[] = [
-				'icon' => $counter->getIcon(),
+				'icon' => $counter->icon,
 				'showMovesetLink' => true, // TODO
-				'identifier' => $counter->getIdentifier(),
-				'name' => $counter->getName(),
-				'score' => $formatter->formatNumber($counter->getScore()),
-				'scoreText' => $formatter->formatNumber($counter->getScore()),
-				'percent' => $counter->getPercent(),
-				'percentText' => $formatter->formatPercent($counter->getPercent()),
-				'standardDeviation' => $counter->getStandardDeviation(),
-				'standardDeviationText' => $formatter->formatNumber($counter->getStandardDeviation()),
-				'percentKnockedOut' => $counter->getPercentKnockedOut(),
-				'percentKnockedOutText' => $formatter->formatPercent($counter->getPercentKnockedOut()),
-				'percentSwitchedOut' => $counter->getPercentSwitchedOut(),
-				'percentSwitchedOutText' => $formatter->formatPercent($counter->getPercentSwitchedOut()),
+				'identifier' => $counter->identifier,
+				'name' => $counter->name,
+				'score' => $counter->score,
+				'scoreText' => $formatter->formatNumber($counter->score),
+				'percent' => $counter->percent,
+				'percentText' => $formatter->formatPercent($counter->percent),
+				'standardDeviation' => $counter->standardDeviation,
+				'standardDeviationText' => $formatter->formatNumber($counter->standardDeviation),
+				'percentKnockedOut' => $counter->percentKnockedOut,
+				'percentKnockedOutText' => $formatter->formatPercent($counter->percentKnockedOut),
+				'percentSwitchedOut' => $counter->percentSwitchedOut,
+				'percentSwitchedOutText' => $formatter->formatPercent($counter->percentSwitchedOut),
 			];
 		}
 

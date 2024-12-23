@@ -8,23 +8,8 @@ use Jp\Dex\Domain\Languages\LanguageId;
 final readonly class ConditionName
 {
 	public function __construct(
-		private LanguageId $languageId,
-		private ConditionId $conditionId,
-		private string $name,
+		private(set) LanguageId $languageId,
+		private(set) ConditionId $conditionId,
+		private(set) string $name,
 	) {}
-
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	public function getConditionId() : ConditionId
-	{
-		return $this->conditionId;
-	}
-
-	public function getName() : string
-	{
-		return $this->name;
-	}
 }

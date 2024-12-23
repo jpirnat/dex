@@ -8,29 +8,9 @@ use Jp\Dex\Domain\Stats\StatId;
 final readonly class Characteristic
 {
 	public function __construct(
-		private CharacteristicId $id,
-		private string $identifier,
-		private StatId $highestStatId,
-		private int $ivModFive,
+		private(set) CharacteristicId $id,
+		private(set) string $identifier,
+		private(set) StatId $highestStatId,
+		private(set) int $ivModFive,
 	) {}
-
-	public function getId() : CharacteristicId
-	{
-		return $this->id;
-	}
-
-	public function getIdentifier() : string
-	{
-		return $this->identifier;
-	}
-
-	public function getHighestStatId() : StatId
-	{
-		return $this->highestStatId;
-	}
-
-	public function getIvModFive() : int
-	{
-		return $this->ivModFive;
-	}
 }

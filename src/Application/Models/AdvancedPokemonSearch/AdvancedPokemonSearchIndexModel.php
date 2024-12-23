@@ -76,8 +76,8 @@ final class AdvancedPokemonSearchIndexModel
 		$eggGroups = $this->dexEggGroupRepository->getAll($languageId);
 		foreach ($eggGroups as $eggGroup) {
 			$this->eggGroups[] = [
-				'identifier' => $eggGroup->getIdentifier(),
-				'name' => $eggGroup->getName(),
+				'identifier' => $eggGroup->identifier,
+				'name' => $eggGroup->name,
 			];
 		}
 

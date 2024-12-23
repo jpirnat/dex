@@ -84,7 +84,7 @@ final class DexPokemonEvolutionsModel
 
 		$allBaseFormIds = [];
 		foreach ($prevEvos as $prevEvo) {
-			$baseFormIds = $this->getBaseFormIds($versionGroupId, $prevEvo->getEvoFromId());
+			$baseFormIds = $this->getBaseFormIds($versionGroupId, $prevEvo->evoFromId);
 			$allBaseFormIds = array_merge($allBaseFormIds, $baseFormIds);
 		}
 
@@ -179,7 +179,7 @@ final class DexPokemonEvolutionsModel
 		$evoIntoIds = [];
 		$evoMethods = [];
 		foreach ($evolutions as $evolution) {
-			$evoIntoId = $evolution->getEvoIntoId();
+			$evoIntoId = $evolution->evoIntoId;
 			$evoIntoIds[$evoIntoId->value()] = $evoIntoId;
 			// We only need each evolution form once.
 

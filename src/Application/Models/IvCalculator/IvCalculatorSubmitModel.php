@@ -122,14 +122,12 @@ final class IvCalculatorSubmitModel
 
 		// Use characteristic to further narrow down the options.
 		if ($characteristic && $versionGroup->hasCharacteristics()) {
-			$highestStatId = $characteristic->getHighestStatId();
+			$highestStatId = $characteristic->highestStatId;
 			$highestStat = $stats[$highestStatId->value()];
 			$highestStatIdentifier = $highestStat->getIdentifier();
 
-			$ivModFive = $characteristic->getIvModFive();
-
 			foreach ($possibleIvs[$highestStatIdentifier] ?? [] as $possibleIvIndex => $possibleIv) {
-				if ($possibleIv % 5 !== $ivModFive) {
+				if ($possibleIv % 5 !== $characteristic->ivModFive) {
 					unset($possibleIvs[$highestStatIdentifier][$possibleIvIndex]);
 				}
 			}
@@ -246,7 +244,7 @@ final class IvCalculatorSubmitModel
 			}
 
 			if ($characteristic && $versionGroup->hasCharacteristics()) {
-				$highestStatId = $characteristic->getHighestStatId();
+				$highestStatId = $characteristic->highestStatId;
 				$highestStat = $stats[$highestStatId->value()];
 				$highestStatIdentifier = $highestStat->getIdentifier();
 
