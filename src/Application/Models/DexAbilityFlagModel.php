@@ -34,24 +34,23 @@ final class DexAbilityFlagModel
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$flag = $this->flagRepository->getByIdentifier($abilityFlagIdentifier);
-		$flagId = $flag->getId();
 
-		$this->versionGroupModel->setWithAbilityFlag($flagId);
+		$this->versionGroupModel->setWithAbilityFlag($flag->id);
 
 		$dexFlag = $this->flagRepository->getByIdPlural(
 			$versionGroupId,
-			$flagId,
+			$flag->id,
 			$languageId,
 		);
 		$this->flag = [
-			'identifier' => $dexFlag->getIdentifier(),
-			'name' => $dexFlag->getName(),
-			'description' => $dexFlag->getDescription(),
+			'identifier' => $dexFlag->identifier,
+			'name' => $dexFlag->name,
+			'description' => $dexFlag->description,
 		];
 
 		$this->abilities = $this->dexAbilityRepository->getByVgAndFlag(
 			$versionGroupId,
-			$flagId,
+			$flag->id,
 			$languageId,
 		);
 	}

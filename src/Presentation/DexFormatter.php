@@ -221,9 +221,9 @@ final readonly class DexFormatter
 
 		foreach ($dexPokemonAbilities as $dexPokemonAbility) {
 			$abilities[] = [
-				'identifier' => $dexPokemonAbility->getIdentifier(),
-				'name' => $dexPokemonAbility->getName(),
-				'isHiddenAbility' => $dexPokemonAbility->isHiddenAbility(),
+				'identifier' => $dexPokemonAbility->identifier,
+				'name' => $dexPokemonAbility->name,
+				'isHiddenAbility' => $dexPokemonAbility->isHiddenAbility,
 			];
 		}
 
@@ -241,10 +241,10 @@ final readonly class DexFormatter
 
 		foreach ($abilities as $ability) {
 			$a[] = [
-				'identifier' => $ability->getIdentifier(),
-				'name' => $ability->getName(),
-				'description' => $ability->getDescription(),
-				'isHiddenAbility' => $ability->isHiddenAbility(),
+				'identifier' => $ability->identifier,
+				'name' => $ability->name,
+				'description' => $ability->description,
+				'isHiddenAbility' => $ability->isHiddenAbility,
 			];
 		}
 

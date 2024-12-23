@@ -46,34 +46,33 @@ final class DexAbilityModel
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
-		$abilityId = $ability->getId();
 
-		$this->versionGroupModel->setWithAbility($abilityId);
+		$this->versionGroupModel->setWithAbility($ability->id);
 
 		$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
 			$languageId,
-			$abilityId,
+			$ability->id,
 		);
 
 		$abilityDescription = $this->abilityDescriptionRepository->getByAbility(
 			$versionGroupId,
 			$languageId,
-			$abilityId,
+			$ability->id,
 		);
 
 		$this->ability = [
-			'identifier' => $ability->getIdentifier(),
-			'name' => $abilityName->getName(),
-			'description' => $abilityDescription->getDescription(),
+			'identifier' => $ability->identifier,
+			'name' => $abilityName->name,
+			'description' => $abilityDescription->description,
 		];
 
-		$this->setFlags($versionGroupId, $abilityId, $languageId);
+		$this->setFlags($versionGroupId, $ability->id, $languageId);
 
 		$this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
 
 		$this->pokemon = $this->dexPokemonRepository->getWithAbility(
 			$versionGroupId,
-			$ability->getId(),
+			$ability->id,
 			$languageId,
 		);
 	}
@@ -98,9 +97,9 @@ final class DexAbilityModel
 			$has = isset($abilityFlagIds[$flagId]); // Does the ability have this flag?
 
 			$this->flags[] = [
-				'identifier' => $flag->getIdentifier(),
-				'name' => $flag->getName(),
-				'description' => $flag->getDescription(),
+				'identifier' => $flag->identifier,
+				'name' => $flag->name,
+				'description' => $flag->description,
 				'has' => $has,
 			];
 		}

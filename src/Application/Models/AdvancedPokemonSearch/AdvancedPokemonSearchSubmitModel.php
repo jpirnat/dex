@@ -66,7 +66,7 @@ final class AdvancedPokemonSearchSubmitModel
 		if ($abilityIdentifier) {
 			try {
 				$ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
-				$abilityId = $ability->getId();
+				$abilityId = $ability->id;
 			} catch (AbilityNotFoundException) {
 			}
 		}

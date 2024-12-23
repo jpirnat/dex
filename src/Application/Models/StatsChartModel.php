@@ -107,7 +107,7 @@ final class StatsChartModel
 					$format,
 					$rating,
 					$pokemon->getId(),
-					$ability->getId(),
+					$ability->id,
 					$languageId,
 				);
 			}
@@ -155,7 +155,7 @@ final class StatsChartModel
 					$format,
 					$rating,
 					$pokemon->getId(),
-					$ability->getId(),
+					$ability->id,
 					$languageId,
 				);
 			}

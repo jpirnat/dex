@@ -6,17 +6,7 @@ namespace Jp\Dex\Domain\Abilities\Flags;
 final readonly class AbilityFlag
 {
 	public function __construct(
-		private AbilityFlagId $id,
-		private string $identifier,
+		private(set) AbilityFlagId $id,
+		private(set) string $identifier,
 	) {}
-
-	public function getId() : AbilityFlagId
-	{
-		return $this->id;
-	}
-
-	public function getIdentifier() : string
-	{
-		return $this->identifier;
-	}
 }

@@ -68,12 +68,12 @@ final readonly class StatsPokemonView
 		$abilities = [];
 		foreach ($abilitiesData as $ability) {
 			$abilities[] = [
-				'identifier' => $ability->getIdentifier(),
-				'name' => $ability->getName(),
-				'percent' => $ability->getPercent(),
-				'percentText' => $formatter->formatPercent($ability->getPercent()),
-				'change' => $ability->getChange(),
-				'changeText' => $formatter->formatChange($ability->getChange()),
+				'identifier' => $ability->identifier,
+				'name' => $ability->name,
+				'percent' => $ability->percent,
+				'percentText' => $formatter->formatPercent($ability->percent),
+				'change' => $ability->change,
+				'changeText' => $formatter->formatChange($ability->change),
 			];
 		}
 

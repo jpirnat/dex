@@ -77,7 +77,7 @@ final readonly class StatsChartView
 		$pokemonName = $trendLine->pokemonName->getName();
 		$movesetName = '';
 		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof UsageAbilityTrendLine) {
-			$movesetName = $trendLine->abilityName->getName();
+			$movesetName = $trendLine->abilityName->name;
 		}
 		if ($trendLine instanceof MovesetItemTrendLine || $trendLine instanceof UsageItemTrendLine) {
 			$movesetName = $trendLine->itemName->getName();
@@ -141,7 +141,7 @@ final readonly class StatsChartView
 		$pokemonName = $trendLine->pokemonName->getName();
 		$movesetName = '';
 		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof UsageAbilityTrendLine) {
-			$movesetName = $trendLine->abilityName->getName();
+			$movesetName = $trendLine->abilityName->name;
 		}
 		if ($trendLine instanceof MovesetItemTrendLine || $trendLine instanceof UsageItemTrendLine) {
 			$movesetName = $trendLine->itemName->getName();

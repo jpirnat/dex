@@ -43,7 +43,7 @@ final class MovesetAbilityTrendLine extends TrendLine
 		$formatName = $this->formatName;
 		$rating = $this->rating;
 		$pokemonName = $this->pokemonName->getName();
-		$abilityName = $this->abilityName->getName();
+		$abilityName = $this->abilityName->name;
 
 		return "$formatName [$rating] $pokemonName - $abilityName Usage";
 	}

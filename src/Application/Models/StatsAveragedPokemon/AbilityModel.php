@@ -55,8 +55,8 @@ final readonly class AbilityModel
 			$ability = $this->abilityRepository->getById($abilityId);
 
 			$abilities[] = [
-				'identifier' => $ability->getIdentifier(),
-				'name' => $abilityName->getName(),
+				'identifier' => $ability->identifier,
+				'name' => $abilityName->name,
 				'percent' => $movesetRatedAveragedAbility->getPercent(),
 			];
 		}

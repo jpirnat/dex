@@ -99,7 +99,7 @@ final class DexPokemonMatchupsModel
 	 */
 	private function checkForMatchups(GenerationId $generationId, ExpandedDexPokemonAbility $ability) : void
 	{
-		$abilityIdentifier = $ability->getIdentifier();
+		$abilityIdentifier = $ability->identifier;
 
 		if ($abilityIdentifier === AbilityIdentifier::VOLT_ABSORB) {
 			$this->addToDamageTaken($ability);
@@ -246,10 +246,11 @@ final class DexPokemonMatchupsModel
 	private function addToDamageTaken(ExpandedDexPokemonAbility $ability) : void
 	{
 		$this->abilities[] = [
-			'identifier' => $ability->getIdentifier(),
-			'name' => $ability->getName(),
+			'identifier' => $ability->identifier,
+			'name' => $ability->name,
 		];
 
-		$this->damageTaken[$ability->getIdentifier()] = $this->damageTaken[self::NO_ABILITY];
+		$abilityIdentifier = $ability->identifier;
+		$this->damageTaken[$abilityIdentifier] = $this->damageTaken[self::NO_ABILITY];
 	}
 }

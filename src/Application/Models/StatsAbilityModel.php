@@ -89,18 +89,18 @@ final class StatsAbilityModel
 
 		$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
 			$languageId,
-			$ability->getId(),
+			$ability->id,
 		);
 		$abilityDescription = $this->abilityDescriptionRepository->getByAbility(
 			$this->format->getVersionGroupId(),
 			$languageId,
-			$ability->getId(),
+			$ability->id,
 		);
 
 		$this->ability = [
 			'identifier' => $abilityIdentifier,
-			'name' => $abilityName->getName(),
-			'description' => $abilityDescription->getDescription(),
+			'name' => $abilityName->name,
+			'description' => $abilityDescription->description,
 		];
 
 		$speedName = $this->statNameRepository->getByLanguageAndStat(
@@ -115,7 +115,7 @@ final class StatsAbilityModel
 			$prevMonth,
 			$this->format->getId(),
 			$rating,
-			$ability->getId(),
+			$ability->id,
 			$languageId,
 		);
 	}
