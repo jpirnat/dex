@@ -57,7 +57,7 @@ final readonly class PokemonMoveFormatter
 				new MoveId(MoveId::SKETCH),
 			);
 
-			return $moveName->getName();
+			return $moveName->name;
 		}
 
 		if ($method === MoveMethodId::TUTOR) {

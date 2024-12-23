@@ -37,24 +37,23 @@ final class DexMoveFlagModel
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$flag = $this->flagRepository->getByIdentifier($moveFlagIdentifier);
-		$flagId = $flag->getId();
 
-		$this->versionGroupModel->setWithMoveFlag($flagId);
+		$this->versionGroupModel->setWithMoveFlag($flag->id);
 
 		$dexFlag = $this->flagRepository->getByIdPlural(
 			$versionGroupId,
-			$flagId,
+			$flag->id,
 			$languageId,
 		);
 		$this->flag = [
-			'identifier' => $dexFlag->getIdentifier(),
-			'name' => $dexFlag->getName(),
-			'description' => $dexFlag->getDescription(),
+			'identifier' => $dexFlag->identifier,
+			'name' => $dexFlag->name,
+			'description' => $dexFlag->description,
 		];
 
 		$this->moves = $this->dexMoveRepository->getByVgAndFlag(
 			$versionGroupId,
-			$flagId,
+			$flag->id,
 			$languageId,
 		);
 	}

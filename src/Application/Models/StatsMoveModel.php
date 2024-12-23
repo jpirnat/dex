@@ -89,18 +89,18 @@ final class StatsMoveModel
 
 		$moveName = $this->moveNameRepository->getByLanguageAndMove(
 			$languageId,
-			$move->getId(),
+			$move->id,
 		);
 		$moveDescription = $this->moveDescriptionRepository->getByMove(
 			$this->format->versionGroupId,
 			$languageId,
-			$move->getId(),
+			$move->id,
 		);
 
 		$this->move = [
 			'identifier' => $moveIdentifier,
-			'name' => $moveName->getName(),
-			'description' => $moveDescription->getDescription(),
+			'name' => $moveName->name,
+			'description' => $moveDescription->description,
 		];
 
 		$speedName = $this->statNameRepository->getByLanguageAndStat(
@@ -115,7 +115,7 @@ final class StatsMoveModel
 			$prevMonth,
 			$this->format->id,
 			$rating,
-			$move->getId(),
+			$move->id,
 			$languageId,
 		);
 	}

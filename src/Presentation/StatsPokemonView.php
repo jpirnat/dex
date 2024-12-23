@@ -105,19 +105,19 @@ final readonly class StatsPokemonView
 		$moves = [];
 		foreach ($movesData as $move) {
 			$moves[] = [
-				'identifier' => $move->getIdentifier(),
-				'name' => $move->getName(),
-				'percent' => $move->getPercent(),
-				'percentText' => $formatter->formatPercent($move->getPercent()),
-				'change' => $move->getChange(),
-				'changeText' => $formatter->formatChange($move->getChange()),
-				'type' => $this->dexFormatter->formatDexType($move->getType()),
-				'category' => $this->dexFormatter->formatDexCategory($move->getCategory()),
-				'pp' => $move->getPP() * 1.6,
-				'power' => $move->getPower(),
-				'accuracy' => $move->getAccuracy(),
-				'priority' => $move->getPriority(),
-				'hitsMultiplePokemon' => $move->getTargetId()->hitsMultiplePokemon(),
+				'identifier' => $move->identifier,
+				'name' => $move->name,
+				'percent' => $move->percent,
+				'percentText' => $formatter->formatPercent($move->percent),
+				'change' => $move->change,
+				'changeText' => $formatter->formatChange($move->change),
+				'type' => $this->dexFormatter->formatDexType($move->type),
+				'category' => $this->dexFormatter->formatDexCategory($move->category),
+				'pp' => $move->pp * 1.6,
+				'power' => $move->power,
+				'accuracy' => $move->accuracy,
+				'priority' => $move->priority,
+				'hitsMultiplePokemon' => $move->targetId->hitsMultiplePokemon(),
 			];
 		}
 

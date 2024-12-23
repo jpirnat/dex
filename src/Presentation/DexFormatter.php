@@ -292,14 +292,14 @@ final readonly class DexFormatter
 	public function formatDexMove(DexMove $dexMove) : array
 	{
 		return [
-			'identifier' => $dexMove->getIdentifier(),
-			'name' => $dexMove->getName(),
-			'type' => $this->formatDexType($dexMove->getType()),
-			'category' => $this->formatDexCategory($dexMove->getCategory()),
-			'pp' => $dexMove->getPP(),
-			'power' => $dexMove->getPower(),
-			'accuracy' => $dexMove->getAccuracy(),
-			'description' => str_replace("\n", ' ', $dexMove->getDescription()),
+			'identifier' => $dexMove->identifier,
+			'name' => $dexMove->name,
+			'type' => $this->formatDexType($dexMove->type),
+			'category' => $this->formatDexCategory($dexMove->category),
+			'pp' => $dexMove->pp,
+			'power' => $dexMove->power,
+			'accuracy' => $dexMove->accuracy,
+			'description' => str_replace("\n", ' ', $dexMove->description),
 		];
 	}
 

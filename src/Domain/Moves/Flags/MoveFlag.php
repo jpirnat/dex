@@ -6,17 +6,7 @@ namespace Jp\Dex\Domain\Moves\Flags;
 final readonly class MoveFlag
 {
 	public function __construct(
-		private MoveFlagId $id,
-		private string $identifier,
+		private(set) MoveFlagId $id,
+		private(set) string $identifier,
 	) {}
-
-	public function getId() : MoveFlagId
-	{
-		return $this->id;
-	}
-
-	public function getIdentifier() : string
-	{
-		return $this->identifier;
-	}
 }

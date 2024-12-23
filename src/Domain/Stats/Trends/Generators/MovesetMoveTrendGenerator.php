@@ -59,7 +59,7 @@ final readonly class MovesetMoveTrendGenerator
 			$format->versionGroupId,
 			$moveId,
 		);
-		$moveType = $this->typeRepository->getById($vgMove->getTypeId());
+		$moveType = $this->typeRepository->getById($vgMove->typeId);
 
 		// Get the usage data.
 		$usageDatas = $this->statsChartQueries->getMovesetMove(

@@ -16,7 +16,7 @@ final readonly class MoveType
 	public const string MAX_MOVE = 'max';
 	public const string G_MAX_MOVE = 'g-max';
 
-	private string $value;
+	private(set) string $value;
 
 	/**
 	 * @throws Exception if $value is invalid.

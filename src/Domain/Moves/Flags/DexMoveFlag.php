@@ -6,32 +6,8 @@ namespace Jp\Dex\Domain\Moves\Flags;
 final readonly class DexMoveFlag
 {
 	public function __construct(
-		private string $identifier,
-		private string $name,
-		private string $description,
+		private(set) string $identifier,
+		private(set) string $name,
+		private(set) string $description,
 	) {}
-
-	/**
-	 * Get the flag's identifier.
-	 */
-	public function getIdentifier() : string
-	{
-		return $this->identifier;
-	}
-
-	/**
-	 * Get the flag's name.
-	 */
-	public function getName() : string
-	{
-		return $this->name;
-	}
-
-	/**
-	 * Get the flag's description.
-	 */
-	public function getDescription() : string
-	{
-		return $this->description;
-	}
 }

@@ -95,8 +95,8 @@ final class AdvancedPokemonSearchIndexModel
 		);
 		foreach ($moves as $move) {
 			$this->moves[] = [
-				'identifier' => $move->getIdentifier(),
-				'name' => $move->getName(),
+				'identifier' => $move->identifier,
+				'name' => $move->name,
 			];
 		}
 

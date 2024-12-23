@@ -58,35 +58,34 @@ final class DexMoveModel
 		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
 		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
-		$moveId = $move->getId();
 
 		// Set version groups for the version group control.
-		$this->versionGroupModel->setWithMove($moveId);
+		$this->versionGroupModel->setWithMove($move->id);
 
-		$this->move = $this->dexMoveRepository->getById($versionGroupId, $moveId, $languageId);
+		$this->move = $this->dexMoveRepository->getById($versionGroupId, $move->id, $languageId);
 
 		// Set the move's detailed data.
-		$this->setDetailedData($versionGroupId, $moveId, $languageId);
+		$this->setDetailedData($versionGroupId, $move->id, $languageId);
 
-		if ($move->getType()->value() === MoveType::Z_MOVE) {
-			$zMoveImage = $this->vgMoveRepository->getZMoveImage($moveId, $languageId);
+		if ($move->type->value === MoveType::Z_MOVE) {
+			$zMoveImage = $this->vgMoveRepository->getZMoveImage($move->id, $languageId);
 			$this->detailedData['zMoveImage'] = $zMoveImage;
 		}
 
 		// Set the type matchups.
-		$this->setMatchups($versionGroupId, $moveId, $languageId);
+		$this->setMatchups($versionGroupId, $move->id, $languageId);
 
 		$this->statChanges = $this->vgMoveRepository->getStatChanges(
 			$versionGroupId,
-			$moveId,
+			$move->id,
 			$languageId,
 		);
 
-		$this->setFlags($versionGroupId, $moveId, $languageId);
+		$this->setFlags($versionGroupId, $move->id, $languageId);
 
 		$this->dexMovePokemonModel->setData(
 			$versionGroupId,
-			$moveId,
+			$move->id,
 			$languageId,
 		);
 	}
@@ -102,58 +101,58 @@ final class DexMoveModel
 		$vgMove = $this->vgMoveRepository->getByVgAndMove($versionGroupId, $moveId);
 
 		$infliction = null;
-		if ($vgMove->getInflictionId()->value() !== InflictionId::NONE) {
+		if ($vgMove->inflictionId->value() !== InflictionId::NONE) {
 			$infliction = $this->vgMoveRepository->getInfliction(
-				$vgMove->getInflictionId(),
+				$vgMove->inflictionId,
 				$languageId,
 			);
-			$infliction['percent'] = $vgMove->getInflictionPercent();
+			$infliction['percent'] = $vgMove->inflictionPercent;
 		}
 
 		$target = $this->vgMoveRepository->getTarget(
-			$vgMove->getTargetId(),
+			$vgMove->targetId,
 			$languageId,
 		);
 
 		$zMove = null;
-		if ($vgMove->getZMoveId() !== null) {
+		if ($vgMove->zMoveId !== null) {
 			$zMove = $this->vgMoveRepository->getZMove(
-				$vgMove->getZMoveId(),
+				$vgMove->zMoveId,
 				$languageId,
 			);
-			$zMove['power'] = $vgMove->getZBasePower();
+			$zMove['power'] = $vgMove->zBasePower;
 		}
 
-		if ($vgMove->getZPowerEffectId() !== null) {
+		if ($vgMove->zPowerEffectId !== null) {
 			$zPowerEffect = $this->vgMoveRepository->getZPowerEffect(
-				$vgMove->getZPowerEffectId(),
+				$vgMove->zPowerEffectId,
 				$languageId,
 			);
 			$zMove['zPowerEffect'] = $zPowerEffect;
 		}
 
 		$maxMove = null;
-		if ($vgMove->getMaxMoveId() !== null) {
+		if ($vgMove->maxMoveId !== null) {
 			$maxMove = $this->vgMoveRepository->getMaxMove(
-				$vgMove->getMaxMoveId(),
+				$vgMove->maxMoveId,
 				$languageId,
 			);
-			$maxMove['power'] = $vgMove->getMaxPower();
+			$maxMove['power'] = $vgMove->maxPower;
 		}
 
 		$this->detailedData = [
-			'priority' => $vgMove->getPriority(),
-			'minHits' => $vgMove->getMinHits(),
-			'maxHits' => $vgMove->getMaxHits(),
+			'priority' => $vgMove->priority,
+			'minHits' => $vgMove->minHits,
+			'maxHits' => $vgMove->maxHits,
 			'infliction' => $infliction,
-			'minTurns' => $vgMove->getMinTurns(),
-			'maxTurns' => $vgMove->getMaxTurns(),
-			'critStage' => $vgMove->getCritStage(),
-			'flinchPercent' => $vgMove->getFlinchPercent(),
-			'effect' => $vgMove->getEffect(),
-			'effectPercent' => $vgMove->getEffectPercent(),
-			'recoilPercent' => $vgMove->getRecoilPercent(),
-			'healPercent' => $vgMove->getHealPercent(),
+			'minTurns' => $vgMove->minTurns,
+			'maxTurns' => $vgMove->maxTurns,
+			'critStage' => $vgMove->critStage,
+			'flinchPercent' => $vgMove->flinchPercent,
+			'effect' => $vgMove->effect,
+			'effectPercent' => $vgMove->effectPercent,
+			'recoilPercent' => $vgMove->recoilPercent,
+			'healPercent' => $vgMove->healPercent,
 			'target' => $target,
 			'zMove' => $zMove,
 			'maxMove' => $maxMove,
@@ -172,7 +171,7 @@ final class DexMoveModel
 		$this->damageDealt = [];
 
 		$vgMove = $this->vgMoveRepository->getByVgAndMove($versionGroupId, $moveId);
-		if ($vgMove->getCategoryId()->value() === CategoryId::STATUS) {
+		if ($vgMove->categoryId->value() === CategoryId::STATUS) {
 			// This move doesn't do damage. No matchups needed.
 			return;
 		}
@@ -183,7 +182,7 @@ final class DexMoveModel
 		);
 		$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
 			$this->versionGroupModel->versionGroup->getGenerationId(),
-			$vgMove->getTypeId(),
+			$vgMove->typeId,
 		);
 		foreach ($attackingMatchups as $matchup) {
 			$defendingTypeIdentifier = $matchup->getDefendingTypeIdentifier();
@@ -232,9 +231,9 @@ final class DexMoveModel
 			$has = isset($moveFlagIds[$flagId]); // Does the move have this flag?
 
 			$this->flags[] = [
-				'identifier' => $flag->getIdentifier(),
-				'name' => $flag->getName(),
-				'description' => $flag->getDescription(),
+				'identifier' => $flag->identifier,
+				'name' => $flag->name,
+				'description' => $flag->description,
 				'has' => $has,
 			];
 		}

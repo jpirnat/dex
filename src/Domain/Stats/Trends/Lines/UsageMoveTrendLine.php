@@ -43,7 +43,7 @@ final class UsageMoveTrendLine extends TrendLine
 		$formatName = $this->formatName;
 		$rating = $this->rating;
 		$pokemonName = $this->pokemonName->getName();
-		$moveName = $this->moveName->getName();
+		$moveName = $this->moveName->name;
 
 		return "$formatName [$rating] $pokemonName with $moveName Usage";
 	}

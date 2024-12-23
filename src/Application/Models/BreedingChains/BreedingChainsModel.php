@@ -60,15 +60,15 @@ final class BreedingChainsModel
 			'name' => $pokemonName->getName(),
 		];
 
-		$moveName = $this->moveNameRepository->getByLanguageAndMove($languageId, $move->getId());
+		$moveName = $this->moveNameRepository->getByLanguageAndMove($languageId, $move->id);
 		$this->move = [
-			'name' => $moveName->getName(),
+			'name' => $moveName->name,
 		];
 
 		$chains = $this->breedingChainFinder->findChains(
 			$versionGroupId,
 			$pokemon->getId(),
-			$move->getId(),
+			$move->id,
 		);
 
 		$this->chains = [];

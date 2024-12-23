@@ -8,32 +8,8 @@ use Jp\Dex\Domain\Languages\LanguageId;
 final readonly class MoveName
 {
 	public function __construct(
-		private LanguageId $languageId,
-		private MoveId $moveId,
-		private string $name,
+		private(set) LanguageId $languageId,
+		private(set) MoveId $moveId,
+		private(set) string $name,
 	) {}
-
-	/**
-	 * Get the move name's language id.
-	 */
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	/**
-	 * Get the move name's move id.
-	 */
-	public function getMoveId() : MoveId
-	{
-		return $this->moveId;
-	}
-
-	/**
-	 * Get the move name's name value.
-	 */
-	public function getName() : string
-	{
-		return $this->name;
-	}
 }

@@ -62,9 +62,9 @@ final class AdvancedMoveSearchIndexModel
 		);
 		foreach ($flags as $flag) {
 			$this->flags[] = [
-				'identifier' => $flag->getIdentifier(),
-				'name' => $flag->getName(),
-				'description' => strip_tags($flag->getDescription()),
+				'identifier' => $flag->identifier,
+				'name' => $flag->name,
+				'description' => strip_tags($flag->description),
 			];
 		}
 

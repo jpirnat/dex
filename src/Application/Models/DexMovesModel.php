@@ -49,9 +49,9 @@ final class DexMovesModel
 		);
 		foreach ($flags as $flag) {
 			$this->flags[] = [
-				'identifier' => $flag->getIdentifier(),
-				'name' => $flag->getName(),
-				'description' => $flag->getDescription(),
+				'identifier' => $flag->identifier,
+				'name' => $flag->name,
+				'description' => $flag->description,
 			];
 		}
 	}

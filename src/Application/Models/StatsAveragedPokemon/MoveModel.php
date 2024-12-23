@@ -55,8 +55,8 @@ final readonly class MoveModel
 			$move = $this->moveRepository->getById($moveId);
 
 			$moves[] = [
-				'identifier' => $move->getIdentifier(),
-				'name' => $moveName->getName(),
+				'identifier' => $move->identifier,
+				'name' => $moveName->name,
 				'percent' => $movesetRatedAveragedMove->getPercent(),
 			];
 		}

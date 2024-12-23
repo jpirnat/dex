@@ -153,14 +153,14 @@ final class DexPokemonMovesModel
 			foreach ($indexedMoves as $versionGroupData) {
 				$dexPokemonMoves[MoveMethodId::LEVEL_UP][] = new DexPokemonMove(
 					$versionGroupData,
-					$move->getIdentifier(),
-					$move->getName(),
-					$move->getType(),
-					$move->getCategory(),
-					$move->getPP(),
-					$move->getPower(),
-					$move->getAccuracy(),
-					$move->getDescription(),
+					$move->identifier,
+					$move->name,
+					$move->type,
+					$move->category,
+					$move->pp,
+					$move->power,
+					$move->accuracy,
+					$move->description,
 				);
 			}
 		}
@@ -176,14 +176,14 @@ final class DexPokemonMovesModel
 
 				$dexPokemonMoves[$methodId][] = new DexPokemonMove(
 					$versionGroupData,
-					$move->getIdentifier(),
-					$move->getName(),
-					$move->getType(),
-					$move->getCategory(),
-					$move->getPP(),
-					$move->getPower(),
-					$move->getAccuracy(),
-					$move->getDescription(),
+					$move->identifier,
+					$move->name,
+					$move->type,
+					$move->category,
+					$move->pp,
+					$move->power,
+					$move->accuracy,
+					$move->description,
 				);
 			}
 		}
