@@ -134,7 +134,7 @@ final class AveragedLeadsModel
 
 			$this->pokemon[] = new AveragedLeadsPokemon(
 				$leadsRatedAveragedPokemon->getRank(),
-				$formIcon->getImage(),
+				$formIcon->image,
 				$numberOfMonths,
 				$pokemon->getIdentifier(),
 				$pokemonName->getName(),

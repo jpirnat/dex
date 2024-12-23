@@ -44,7 +44,7 @@ final readonly class MovesetDirectoryParser
 			// Get the format and rating from the filename of the link.
 			$filename = pathinfo($link->getUri())['filename'];
 			$formatRating = $this->formatRatingExtractor->extractFormatRating($filename);
-			$showdownFormatName = $formatRating->showdownFormatName();
+			$showdownFormatName = $formatRating->showdownFormatName;
 
 			// If the format is unknown, add it to the list of unknown formats.
 			if (!$this->showdownFormatRepository->isKnown($month, $showdownFormatName)) {

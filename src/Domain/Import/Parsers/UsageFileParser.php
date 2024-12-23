@@ -36,7 +36,7 @@ final readonly class UsageFileParser
 
 		while ($this->usageFileExtractor->isUsage($line = Utils::readLine($stream))) {
 			$usage = $this->usageFileExtractor->extractUsage($line);
-			$showdownPokemonName = $usage->showdownPokemonName();
+			$showdownPokemonName = $usage->showdownPokemonName;
 
 			// If the Pokémon is unknown, add it to the list of unknown Pokémon.
 			if (!$this->showdownPokemonRepository->isKnown($showdownPokemonName)) {

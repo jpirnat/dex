@@ -5,8 +5,8 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final readonly class Counter2
 {
-	private float $percentKnockedOut;
-	private float $percentSwitchedOut;
+	private(set) float $percentKnockedOut;
+	private(set) float $percentSwitchedOut;
 
 	public function __construct(
 		float $percentKnockedOut,
@@ -29,21 +29,5 @@ final readonly class Counter2
 			$percentSwitchedOut = 100;
 		}
 		$this->percentSwitchedOut = $percentSwitchedOut;
-	}
-
-	/**
-	 * Get the percent knocked out.
-	 */
-	public function percentKnockedOut() : float
-	{
-		return $this->percentKnockedOut;
-	}
-
-	/**
-	 * Get the percent switched out.
-	 */
-	public function percentSwitchedOut() : float
-	{
-		return $this->percentSwitchedOut;
 	}
 }

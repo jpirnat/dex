@@ -235,12 +235,12 @@ final readonly class MovesetFileExtractor
 		$counter2 = $this->extractCounter2($line2);
 
 		return new Counter(
-			$counter1->showdownPokemonName(),
-			$counter1->number1(),
-			$counter1->number2(),
-			$counter1->number3(),
-			$counter2->percentKnockedOut(),
-			$counter2->percentSwitchedOut(),
+			$counter1->showdownPokemonName,
+			$counter1->number1,
+			$counter1->number2,
+			$counter1->number3,
+			$counter2->percentKnockedOut,
+			$counter2->percentSwitchedOut,
 		);
 	}
 
@@ -307,7 +307,7 @@ final readonly class MovesetFileExtractor
 	{
 		try {
 			$namePercent = $this->extractNamePercent($line);
-			if ($namePercent->showdownName() === 'Other') {
+			if ($namePercent->showdownName === 'Other') {
 				return true;
 			}
 		} catch (InvalidNamePercentLineException) {

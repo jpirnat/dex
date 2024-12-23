@@ -64,7 +64,7 @@ final readonly class MonthDirectoryParser
 			// Get the format and rating from the filename of the link.
 			$filename = pathinfo($link->getUri())['filename'];
 			$formatRating = $this->formatRatingExtractor->extractFormatRating($filename);
-			$showdownFormatName = $formatRating->showdownFormatName();
+			$showdownFormatName = $formatRating->showdownFormatName;
 
 			// If the format is unknown, add it to the list of unknown formats.
 			$formatUnknown = !$this->showdownFormatRepository->isKnown(
@@ -86,8 +86,8 @@ final readonly class MonthDirectoryParser
 			$tooFewBattles = 0 <= $totalBattles && $totalBattles <= 100;
 			if ($formatUnknown && $tooFewBattles) {
 				$yearMonth = $month->format('Y-m');
-				$format = $formatRating->showdownFormatName();
-				$rating = $formatRating->rating();
+				$format = $formatRating->showdownFormatName;
+				$rating = $formatRating->rating;
 				echo "$yearMonth\t$format\t$rating\ttoo few battles: $totalBattles\n";
 			}
 		}

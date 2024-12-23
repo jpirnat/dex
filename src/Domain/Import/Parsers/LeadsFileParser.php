@@ -32,7 +32,7 @@ final readonly class LeadsFileParser
 
 		while ($this->leadsFileExtractor->isLeadUsage($line = Utils::readLine($stream))) {
 			$leadUsage = $this->leadsFileExtractor->extractLeadUsage($line);
-			$showdownPokemonName = $leadUsage->showdownPokemonName();
+			$showdownPokemonName = $leadUsage->showdownPokemonName;
 
 			// If the Pokémon is unknown, add it to the list of unknown Pokémon.
 			if (!$this->showdownPokemonRepository->isKnown($showdownPokemonName)) {

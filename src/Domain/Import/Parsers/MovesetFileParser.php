@@ -69,7 +69,7 @@ final readonly class MovesetFileParser
 			}
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-				$showdownAbilityName = $namePercent->showdownName();
+				$showdownAbilityName = $namePercent->showdownName;
 
 				// If the ability is unknown, add it to the list of unknown abilities.
 				if (!$this->showdownAbilityRepository->isKnown($showdownAbilityName)) {
@@ -90,7 +90,7 @@ final readonly class MovesetFileParser
 			}
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-				$showdownItemName = $namePercent->showdownName();
+				$showdownItemName = $namePercent->showdownName;
 
 				// If the item is unknown, add it to the list of unknown items.
 				if (!$this->showdownItemRepository->isKnown($showdownItemName)) {
@@ -116,7 +116,7 @@ final readonly class MovesetFileParser
 				}
 
 				$spread = $this->movesetFileExtractor->extractSpread($line);
-				$showdownNatureName = $spread->showdownNatureName();
+				$showdownNatureName = $spread->showdownNatureName;
 
 				// If the nature is unknown, add it to the list of unknown natures.
 				if (!$this->showdownNatureRepository->isKnown($showdownNatureName)) {
@@ -137,7 +137,7 @@ final readonly class MovesetFileParser
 			}
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-				$showdownMoveName = $namePercent->showdownName();
+				$showdownMoveName = $namePercent->showdownName;
 
 				// If the move is unknown, add it to the list of unknown moves.
 				if (!$this->showdownMoveRepository->isKnown($showdownMoveName)) {
@@ -158,7 +158,7 @@ final readonly class MovesetFileParser
 				}
 				while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 					$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-					$showdownTypeName = $namePercent->showdownName();
+					$showdownTypeName = $namePercent->showdownName;
 
 					// If the type is unknown, add it to the list of unknown types.
 					if (!$this->showdownTypeRepository->isKnown($showdownTypeName)) {
@@ -180,7 +180,7 @@ final readonly class MovesetFileParser
 			// BLOCK 7 - Teammates.
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-				$showdownTeammateName = $namePercent->showdownName();
+				$showdownTeammateName = $namePercent->showdownName;
 
 				// If the Pokémon is unknown, add it to the list of unknown Pokémon.
 				if (!$this->showdownPokemonRepository->isKnown($showdownTeammateName)) {
@@ -202,7 +202,7 @@ final readonly class MovesetFileParser
 			while ($this->movesetFileExtractor->isCounter1($line1 = Utils::readLine($stream))) {
 				$line2 = Utils::readLine($stream);
 				$counter = $this->movesetFileExtractor->extractCounter($line1, $line2);
-				$showdownCounterName = $counter->showdownPokemonName();
+				$showdownCounterName = $counter->showdownPokemonName;
 
 				// If the Pokémon is unknown, add it to the list of unknown Pokémon.
 				if (!$this->showdownPokemonRepository->isKnown($showdownCounterName)) {

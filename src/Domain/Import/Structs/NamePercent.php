@@ -5,10 +5,10 @@ namespace Jp\Dex\Domain\Import\Structs;
 
 final readonly class NamePercent
 {
-	private float $percent;
+	private(set) float $percent;
 
 	public function __construct(
-		private string $showdownName,
+		private(set) string $showdownName,
 		float $percent,
 	) {
 		// Clamp percent between 0 and 100.
@@ -19,21 +19,5 @@ final readonly class NamePercent
 			$percent = 100;
 		}
 		$this->percent = $percent;
-	}
-
-	/**
-	 * Get the Pokémon Showdown entity name.
-	 */
-	public function showdownName() : string
-	{
-		return $this->showdownName;
-	}
-
-	/**
-	 * Get the percent.
-	 */
-	public function percent() : float
-	{
-		return $this->percent;
 	}
 }

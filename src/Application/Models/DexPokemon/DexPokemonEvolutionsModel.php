@@ -117,7 +117,7 @@ final class DexPokemonEvolutionsModel
 	private function getSiblingFormIds(VersionGroupId $versionGroupId, FormId $formId) : array
 	{
 		$form = $this->formRepository->getById($formId);
-		return $this->formRepository->getByVgAndPokemon($versionGroupId, $form->getPokemonId());
+		return $this->formRepository->getByVgAndPokemon($versionGroupId, $form->pokemonId);
 	}
 
 	/**
@@ -208,7 +208,7 @@ final class DexPokemonEvolutionsModel
 			false,
 		);
 		$form = $this->formRepository->getById($formId);
-		$pokemon = $this->pokemonRepository->getById($form->getPokemonId());
+		$pokemon = $this->pokemonRepository->getById($form->pokemonId);
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
 			$pokemon->getId(),
@@ -216,7 +216,7 @@ final class DexPokemonEvolutionsModel
 
 		return new EvolutionTree(
 			$isFirstStage,
-			$formIcon->getImage(),
+			$formIcon->image,
 			$pokemon->getIdentifier(),
 			$pokemonName->getName(),
 			$methods,

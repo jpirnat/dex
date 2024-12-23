@@ -88,7 +88,7 @@ final readonly class LeadsFileImporter
 
 		while ($this->leadsFileExtractor->isLeadUsage($line = Utils::readLine($stream))) {
 			$leadUsage = $this->leadsFileExtractor->extractLeadUsage($line);
-			$showdownPokemonName = $leadUsage->showdownPokemonName();
+			$showdownPokemonName = $leadUsage->showdownPokemonName;
 
 			// If this Pokémon is not meant to be imported, skip it.
 			if (!$this->showdownPokemonRepository->isImported($showdownPokemonName)) {
@@ -111,8 +111,8 @@ final readonly class LeadsFileImporter
 					$month,
 					$formatId,
 					$pokemonId,
-					$leadUsage->raw(),
-					$leadUsage->rawPercent(),
+					$leadUsage->raw,
+					$leadUsage->rawPercent,
 				);
 				$this->leadsPokemonRepository->save($leadsPokemon);
 			}
@@ -120,8 +120,8 @@ final readonly class LeadsFileImporter
 			if (!$leadsRatedPokemonExists) {
 				$leadsRatedPokemon = new LeadsRatedPokemon(
 					$usageRatedPokemonId,
-					$leadUsage->rank(),
-					$leadUsage->usagePercent(),
+					$leadUsage->rank,
+					$leadUsage->usagePercent,
 				);
 				$this->leadsRatedPokemonRepository->save($leadsRatedPokemon);
 			}

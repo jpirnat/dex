@@ -56,8 +56,8 @@ final readonly class MonthDirectoryImporter
 			// Get the format and rating from the filename of the link.
 			$filename = pathinfo($link->getUri())['filename'];
 			$formatRating = $this->formatRatingExtractor->extractFormatRating($filename);
-			$showdownFormatName = $formatRating->showdownFormatName();
-			$rating = $formatRating->rating();
+			$showdownFormatName = $formatRating->showdownFormatName;
+			$rating = $formatRating->rating;
 
 			// If this format is not meant to be imported, skip it.
 			if (!$this->showdownFormatRepository->isImported($month, $showdownFormatName)) {

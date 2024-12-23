@@ -107,7 +107,7 @@ final readonly class UsageFileImporter
 
 		while ($this->usageFileExtractor->isUsage($line = Utils::readLine($stream))) {
 			$usage = $this->usageFileExtractor->extractUsage($line);
-			$showdownPokemonName = $usage->showdownPokemonName();
+			$showdownPokemonName = $usage->showdownPokemonName;
 
 			// If this Pokémon is not meant to be imported, skip it.
 			if (!$this->showdownPokemonRepository->isImported($showdownPokemonName)) {
@@ -121,10 +121,10 @@ final readonly class UsageFileImporter
 					$month,
 					$formatId,
 					$pokemonId,
-					$usage->raw(),
-					$usage->rawPercent(),
-					$usage->real(),
-					$usage->realPercent(),
+					$usage->raw,
+					$usage->rawPercent,
+					$usage->real,
+					$usage->realPercent,
 				);
 				$this->usagePokemonRepository->save($usagePokemon);
 			}
@@ -135,8 +135,8 @@ final readonly class UsageFileImporter
 					$formatId,
 					$rating,
 					$pokemonId,
-					$usage->rank(),
-					$usage->usagePercent(),
+					$usage->rank,
+					$usage->usagePercent,
 				);
 				$this->usageRatedPokemonRepository->save($usageRatedPokemon);
 			}

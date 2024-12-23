@@ -146,7 +146,7 @@ final class AveragedUsageModel
 
 			$this->pokemon[] = new AveragedUsagePokemon(
 				$usageRatedAveragedPokemon->getRank(),
-				$formIcon->getImage(),
+				$formIcon->image,
 				$numberOfMonths,
 				$pokemon->getIdentifier(),
 				$pokemonName->getName(),

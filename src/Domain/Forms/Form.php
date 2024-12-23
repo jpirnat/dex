@@ -8,23 +8,8 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 final readonly class Form
 {
 	public function __construct(
-		private FormId $id,
-		private string $identifier,
-		private PokemonId $pokemonId,
+		private(set) FormId $id,
+		private(set) string $identifier,
+		private(set) PokemonId $pokemonId,
 	) {}
-
-	public function getId() : FormId
-	{
-		return $this->id;
-	}
-
-	public function getIdentifier() : string
-	{
-		return $this->identifier;
-	}
-
-	public function getPokemonId() : PokemonId
-	{
-		return $this->pokemonId;
-	}
 }

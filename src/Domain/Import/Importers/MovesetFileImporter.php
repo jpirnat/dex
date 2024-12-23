@@ -164,7 +164,7 @@ final readonly class MovesetFileImporter
 			}
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-				$showdownAbilityName = $namePercent->showdownName();
+				$showdownAbilityName = $namePercent->showdownName;
 
 				// If this ability is not meant to be imported, skip it.
 				if (!$this->showdownAbilityRepository->isImported($showdownAbilityName)) {
@@ -177,7 +177,7 @@ final readonly class MovesetFileImporter
 					$movesetRatedAbility = new MovesetRatedAbility(
 						$usageRatedPokemonId,
 						$abilityId,
-						$namePercent->percent(),
+						$namePercent->percent,
 					);
 
 					$this->movesetRatedAbilityRepository->save($movesetRatedAbility);
@@ -197,7 +197,7 @@ final readonly class MovesetFileImporter
 			}
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-				$showdownItemName = $namePercent->showdownName();
+				$showdownItemName = $namePercent->showdownName;
 
 				// If this item is not meant to be imported, skip it.
 				if (!$this->showdownItemRepository->isImported($showdownItemName)) {
@@ -210,7 +210,7 @@ final readonly class MovesetFileImporter
 					$movesetRatedItem = new MovesetRatedItem(
 						$usageRatedPokemonId,
 						$itemId,
-						$namePercent->percent(),
+						$namePercent->percent,
 					);
 
 					$this->movesetRatedItemRepository->save($movesetRatedItem);
@@ -235,25 +235,25 @@ final readonly class MovesetFileImporter
 				}
 
 				$spread = $this->movesetFileExtractor->extractSpread($line);
-				$showdownNatureName = $spread->showdownNatureName();
+				$showdownNatureName = $spread->showdownNatureName;
 
 				$natureId = $this->showdownNatureRepository->getNatureId($showdownNatureName);
 
 				if ($usageRatedPokemonId && !$movesetRatedPokemonExists) {
 					$evSpread = new StatValueContainer([
-						new StatValue(new StatId(StatId::HP), $spread->hp()),
-						new StatValue(new StatId(StatId::ATTACK), $spread->atk()),
-						new StatValue(new StatId(StatId::DEFENSE), $spread->def()),
-						new StatValue(new StatId(StatId::SPECIAL_ATTACK), $spread->spa()),
-						new StatValue(new StatId(StatId::SPECIAL_DEFENSE), $spread->spd()),
-						new StatValue(new StatId(StatId::SPEED), $spread->spe()),
+						new StatValue(new StatId(StatId::HP), $spread->hp),
+						new StatValue(new StatId(StatId::ATTACK), $spread->atk),
+						new StatValue(new StatId(StatId::DEFENSE), $spread->def),
+						new StatValue(new StatId(StatId::SPECIAL_ATTACK), $spread->spa),
+						new StatValue(new StatId(StatId::SPECIAL_DEFENSE), $spread->spd),
+						new StatValue(new StatId(StatId::SPEED), $spread->spe),
 					]);
 
 					$movesetRatedSpread = new MovesetRatedSpread(
 						$usageRatedPokemonId,
 						$natureId,
 						$evSpread,
-						$spread->percent(),
+						$spread->percent,
 					);
 
 					$this->movesetRatedSpreadRepository->save($movesetRatedSpread);
@@ -273,7 +273,7 @@ final readonly class MovesetFileImporter
 			}
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-				$showdownMoveName = $namePercent->showdownName();
+				$showdownMoveName = $namePercent->showdownName;
 
 				// If this move is not meant to be imported, skip it.
 				if (!$this->showdownMoveRepository->isImported($showdownMoveName)) {
@@ -286,7 +286,7 @@ final readonly class MovesetFileImporter
 					$movesetRatedMove = new MovesetRatedMove(
 						$usageRatedPokemonId,
 						$moveId,
-						$namePercent->percent(),
+						$namePercent->percent,
 					);
 
 					$this->movesetRatedMoveRepository->save($movesetRatedMove);
@@ -303,7 +303,7 @@ final readonly class MovesetFileImporter
 			if (str_contains($line, 'Tera Types')) {
 				while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 					$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-					$showdownTypeName = $namePercent->showdownName();
+					$showdownTypeName = $namePercent->showdownName;
 
 					// If this type is not meant to be imported, skip it.
 					if (!$this->showdownTypeRepository->isImported($showdownTypeName)) {
@@ -316,7 +316,7 @@ final readonly class MovesetFileImporter
 						$movesetRatedTeraType = new MovesetRatedTeraType(
 							$usageRatedPokemonId,
 							$typeId,
-							$namePercent->percent(),
+							$namePercent->percent,
 						);
 
 						$this->movesetRatedTeraTypeRepository->save($movesetRatedTeraType);
@@ -338,7 +338,7 @@ final readonly class MovesetFileImporter
 
 			while ($this->movesetFileExtractor->isNamePercent($line = Utils::readLine($stream))) {
 				$namePercent = $this->movesetFileExtractor->extractNamePercent($line);
-				$showdownTeammateName = $namePercent->showdownName();
+				$showdownTeammateName = $namePercent->showdownName;
 
 				// If this Pokémon is not meant to be imported, skip it.
 				if (!$this->showdownPokemonRepository->isImported($showdownTeammateName)) {
@@ -351,7 +351,7 @@ final readonly class MovesetFileImporter
 					$movesetRatedTeammate = new MovesetRatedTeammate(
 						$usageRatedPokemonId,
 						$teammateId,
-						$namePercent->percent(),
+						$namePercent->percent,
 					);
 
 					$this->movesetRatedTeammateRepository->save($movesetRatedTeammate);
@@ -372,7 +372,7 @@ final readonly class MovesetFileImporter
 			while ($this->movesetFileExtractor->isCounter1($line1 = Utils::readLine($stream))) {
 				$line2 = Utils::readLine($stream);
 				$counter = $this->movesetFileExtractor->extractCounter($line1, $line2);
-				$showdownCounterName = $counter->showdownPokemonName();
+				$showdownCounterName = $counter->showdownPokemonName;
 
 				// If this Pokémon is not meant to be imported, skip it.
 				if (!$this->showdownPokemonRepository->isImported($showdownCounterName)) {
@@ -385,11 +385,11 @@ final readonly class MovesetFileImporter
 					$movesetRatedCounter = new MovesetRatedCounter(
 						$usageRatedPokemonId,
 						$counterId,
-						$counter->number1(),
-						$counter->number2(),
-						$counter->number3(),
-						$counter->percentKnockedOut(),
-						$counter->percentSwitchedOut(),
+						$counter->number1,
+						$counter->number2,
+						$counter->number3,
+						$counter->percentKnockedOut,
+						$counter->percentSwitchedOut,
 					);
 
 					$this->movesetRatedCounterRepository->save($movesetRatedCounter);
