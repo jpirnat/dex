@@ -86,7 +86,7 @@ final class StatsChartModel
 				$this->trendLines[] = $this->usageTrendGenerator->generate(
 					$format,
 					$rating,
-					$pokemon->getId(),
+					$pokemon->id,
 					$languageId,
 				);
 			}
@@ -95,7 +95,7 @@ final class StatsChartModel
 				$this->trendLines[] = $this->leadUsageTrendGenerator->generate(
 					$format,
 					$rating,
-					$pokemon->getId(),
+					$pokemon->id,
 					$languageId,
 				);
 			}
@@ -106,7 +106,7 @@ final class StatsChartModel
 				$this->trendLines[] = $this->movesetAbilityTrendGenerator->generate(
 					$format,
 					$rating,
-					$pokemon->getId(),
+					$pokemon->id,
 					$ability->id,
 					$languageId,
 				);
@@ -118,7 +118,7 @@ final class StatsChartModel
 				$this->trendLines[] = $this->movesetItemTrendGenerator->generate(
 					$format,
 					$rating,
-					$pokemon->getId(),
+					$pokemon->id,
 					$item->id,
 					$languageId,
 				);
@@ -130,7 +130,7 @@ final class StatsChartModel
 				$this->trendLines[] = $this->movesetMoveTrendGenerator->generate(
 					$format,
 					$rating,
-					$pokemon->getId(),
+					$pokemon->id,
 					$move->id,
 					$languageId,
 				);
@@ -142,7 +142,7 @@ final class StatsChartModel
 				$this->trendLines[] = $this->movesetTeraTrendGenerator->generate(
 					$format,
 					$rating,
-					$pokemon->getId(),
+					$pokemon->id,
 					$type->getId(),
 					$languageId,
 				);
@@ -154,7 +154,7 @@ final class StatsChartModel
 				$this->trendLines[] = $this->usageAbilityTrendGenerator->generate(
 					$format,
 					$rating,
-					$pokemon->getId(),
+					$pokemon->id,
 					$ability->id,
 					$languageId,
 				);
@@ -166,7 +166,7 @@ final class StatsChartModel
 				$this->trendLines[] = $this->usageItemTrendGenerator->generate(
 					$format,
 					$rating,
-					$pokemon->getId(),
+					$pokemon->id,
 					$item->id,
 					$languageId,
 				);
@@ -178,7 +178,7 @@ final class StatsChartModel
 				$this->trendLines[] = $this->usageMoveTrendGenerator->generate(
 					$format,
 					$rating,
-					$pokemon->getId(),
+					$pokemon->id,
 					$move->id,
 					$languageId,
 				);

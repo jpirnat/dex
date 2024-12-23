@@ -64,10 +64,10 @@ final class StatCalculatorSubmitModel
 
 		$dexPokemon = $this->dexPokemonRepository->getById(
 			$versionGroup->getId(),
-			$pokemon->getId(),
+			$pokemon->id,
 			new LanguageId(LanguageId::ENGLISH),
 		);
-		$baseStats = $dexPokemon->getBaseStats();
+		$baseStats = $dexPokemon->baseStats;
 
 		match ($versionGroup->getStatFormulaType()) {
 			'gen1' => $this->gen1Stats(
@@ -144,8 +144,8 @@ final class StatCalculatorSubmitModel
 
 			$natureModifier = $this->calculator->getNatureModifier(
 				$stat->getId(),
-				$nature->getIncreasedStatId(),
-				$nature->getDecreasedStatId(),
+				$nature->increasedStatId,
+				$nature->decreasedStatId,
 			);
 
 			$finalStat = match ($stat->getId()->value()) {
@@ -177,8 +177,8 @@ final class StatCalculatorSubmitModel
 
 			$natureModifier = $this->calculator->getNatureModifier(
 				$stat->getId(),
-				$nature->getIncreasedStatId(),
-				$nature->getDecreasedStatId(),
+				$nature->increasedStatId,
+				$nature->decreasedStatId,
 			);
 
 			$finalStat = match ($stat->getId()->value()) {
@@ -207,8 +207,8 @@ final class StatCalculatorSubmitModel
 
 			$natureModifier = $this->calculator->getNatureModifier(
 				$stat->getId(),
-				$nature->getIncreasedStatId(),
-				$nature->getDecreasedStatId(),
+				$nature->increasedStatId,
+				$nature->decreasedStatId,
 			);
 
 			$finalStat = match ($stat->getId()->value()) {

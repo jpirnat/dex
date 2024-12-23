@@ -44,7 +44,7 @@ final class MovesetTeraTrendLine extends TrendLine
 	{
 		$formatName = $this->formatName;
 		$rating = $this->rating;
-		$pokemonName = $this->pokemonName->getName();
+		$pokemonName = $this->pokemonName->name;
 		$typeName = $this->typeName;
 
 		return "$formatName [$rating] $pokemonName - Tera $typeName Usage";

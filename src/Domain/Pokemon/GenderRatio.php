@@ -10,13 +10,8 @@ final readonly class GenderRatio
 	public const int GENDER_UNKNOWN = 255;
 
 	public function __construct(
-		private int $value,
+		private(set) int $value,
 	) {}
-
-	public function value(): int
-	{
-		return $this->value;
-	}
 
 	public function getIcon(): string
 	{

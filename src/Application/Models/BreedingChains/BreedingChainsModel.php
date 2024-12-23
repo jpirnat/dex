@@ -53,11 +53,11 @@ final class BreedingChainsModel
 
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
-			$pokemon->getId(),
+			$pokemon->id,
 		);
 		$this->pokemon = [
-			'identifier' => $pokemon->getIdentifier(),
-			'name' => $pokemonName->getName(),
+			'identifier' => $pokemon->identifier,
+			'name' => $pokemonName->name,
 		];
 
 		$moveName = $this->moveNameRepository->getByLanguageAndMove($languageId, $move->id);
@@ -67,7 +67,7 @@ final class BreedingChainsModel
 
 		$chains = $this->breedingChainFinder->findChains(
 			$versionGroupId,
-			$pokemon->getId(),
+			$pokemon->id,
 			$move->id,
 		);
 
@@ -105,14 +105,14 @@ final class BreedingChainsModel
 		);
 
 		return new BreedingChainRecord(
-			$pokemon->getIcon(),
-			$pokemon->getIdentifier(),
-			$pokemon->getName(),
+			$pokemon->icon,
+			$pokemon->identifier,
+			$pokemon->name,
 			$versionGroup,
-			$pokemon->getEggGroups(),
-			$pokemon->getGenderRatio(),
-			$pokemon->getEggCycles(),
-			$pokemon->getStepsToHatch(),
+			$pokemon->eggGroups,
+			$pokemon->genderRatio,
+			$pokemon->eggCycles,
+			$pokemon->stepsToHatch,
 			$this->pokemonMoveFormatter->format($pokemonMove, $languageId),
 		);
 	}

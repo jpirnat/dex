@@ -74,8 +74,8 @@ final class AdvancedMoveSearchIndexModel
 		);
 		foreach ($pokemons as $pokemon) {
 			$this->pokemons[] = [
-				'identifier' => $pokemon->getIdentifier(),
-				'name' => $pokemon->getName(),
+				'identifier' => $pokemon->identifier,
+				'name' => $pokemon->name,
 			];
 		}
 		usort($this->pokemons, function (array $a, array $b) : int {

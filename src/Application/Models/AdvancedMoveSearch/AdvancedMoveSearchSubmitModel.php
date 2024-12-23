@@ -83,7 +83,7 @@ final class AdvancedMoveSearchSubmitModel
 		if ($pokemonIdentifier) {
 			try {
 				$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
-				$pokemonId = $pokemon->getId();
+				$pokemonId = $pokemon->id;
 			} catch (PokemonNotFoundException) {
 			}
 		}

@@ -184,13 +184,13 @@ final readonly class StatsPokemonView
 			'url' => "/stats/$month/$formatIdentifier/$rating",
 			'text' => $format->name,
 		], [
-			'text' => $dexPokemon->getName(),
+			'text' => $dexPokemon->name,
 		]];
 
 		return new JsonResponse([
 			'data' => [
 				'title' => 'Porydex - Stats - ' . $thisMonth['name'] . ' '
-					. $format->name . ' - ' . $dexPokemon->getName(),
+					. $format->name . ' - ' . $dexPokemon->name,
 
 				'format' => [
 					'identifier' => $format->identifier,
@@ -199,13 +199,13 @@ final readonly class StatsPokemonView
 				],
 				'rating' => $rating,
 				'pokemon' => [
-					'identifier' => $dexPokemon->getIdentifier(),
-					'name' => $dexPokemon->getName(),
-					'sprite' => $dexPokemon->getSprite(),
-					'types' => $this->dexFormatter->formatDexTypes($dexPokemon->getTypes()),
-					'baseStats' => $dexPokemon->getBaseStats(),
-					'bst' => $dexPokemon->getBst(),
-					'smogonDexIdentifier' => $pokemon->getSmogonDexIdentifier(),
+					'identifier' => $dexPokemon->identifier,
+					'name' => $dexPokemon->name,
+					'sprite' => $dexPokemon->sprite,
+					'types' => $this->dexFormatter->formatDexTypes($dexPokemon->types),
+					'baseStats' => $dexPokemon->baseStats,
+					'bst' => $dexPokemon->bst,
+					'smogonDexIdentifier' => $pokemon->smogonDexIdentifier,
 				],
 				'stats' => $stats,
 

@@ -160,7 +160,7 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 		if ($genderRatios) {
 			$genderRatios = array_map(
 				function (GenderRatio $genderRatio) : int {
-					return $genderRatio->value();
+					return $genderRatio->value;
 				},
 				$genderRatios,
 			);

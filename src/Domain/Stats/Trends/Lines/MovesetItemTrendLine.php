@@ -42,8 +42,8 @@ final class MovesetItemTrendLine extends TrendLine
 	{
 		$formatName = $this->formatName;
 		$rating = $this->rating;
-		$pokemonName = $this->pokemonName->getName();
-		$itemName = $this->itemName->getName();
+		$pokemonName = $this->pokemonName->name;
+		$itemName = $this->itemName->name;
 
 		return "$formatName [$rating] $pokemonName - $itemName Usage";
 	}

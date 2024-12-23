@@ -18,122 +18,27 @@ final readonly class ExpandedDexPokemon
 	 * @param int[] $evYield
 	 */
 	public function __construct(
-		private string $identifier,
-		private string $name,
-		private string $sprite,
-		/** @var DexType[] $types */ private array $types,
-		/** @var ExpandedDexPokemonAbility[] $abilities */ private array $abilities,
-		/** @var int[] $baseStats */ private array $baseStats,
-		private int $bst,
-		private int $baseExperience,
-		/** @var int[] $evYield */ private array $evYield,
-		private int $evTotal,
-		private int $catchRate,
-		private int $baseFriendship,
-		private DexExperienceGroup $experienceGroup,
-		/** @var DexEggGroup[] $eggGroups */ private array $eggGroups,
-		private GenderRatio $genderRatio,
-		private int $eggCycles,
-		private int $stepsToHatch,
+		private(set) string $identifier,
+		private(set) string $name,
+		private(set) string $sprite,
+		/** @var DexType[] $types */
+		private(set) array $types,
+		/** @var ExpandedDexPokemonAbility[] $abilities */
+		private(set) array $abilities,
+		/** @var int[] $baseStats Indexed by stat identifier. */
+		private(set) array $baseStats,
+		private(set) int $bst,
+		private(set) int $baseExperience,
+		/** @var int[] $evYield Indexed by stat identifier. */
+		private(set) array $evYield,
+		private(set) int $evTotal,
+		private(set) int $catchRate,
+		private(set) int $baseFriendship,
+		private(set) DexExperienceGroup $experienceGroup,
+		/** @var DexEggGroup[] $eggGroups */
+		private(set) array $eggGroups,
+		private(set) GenderRatio $genderRatio,
+		private(set) int $eggCycles,
+		private(set) int $stepsToHatch,
 	) {}
-
-	public function getIdentifier() : string
-	{
-		return $this->identifier;
-	}
-
-	public function getName() : string
-	{
-		return $this->name;
-	}
-
-	public function getSprite() : string
-	{
-		return $this->sprite;
-	}
-
-	/**
-	 * @return DexType[]
-	 */
-	public function getTypes() : array
-	{
-		return $this->types;
-	}
-
-	/**
-	 * @return ExpandedDexPokemonAbility[]
-	 */
-	public function getAbilities() : array
-	{
-		return $this->abilities;
-	}
-
-	/**
-	 * @return int[] Indexed by stat identifier.
-	 */
-	public function getBaseStats() : array
-	{
-		return $this->baseStats;
-	}
-
-	public function getBst() : int
-	{
-		return $this->bst;
-	}
-
-	public function getBaseExperience() : int
-	{
-		return $this->baseExperience;
-	}
-
-	/**
-	 * @return int[] Indexed by stat identifier.
-	 */
-	public function getEvYield() : array
-	{
-		return $this->evYield;
-	}
-
-	public function getEvTotal() : int
-	{
-		return $this->evTotal;
-	}
-
-	public function getCatchRate() : int
-	{
-		return $this->catchRate;
-	}
-
-	public function getBaseFriendship() : int
-	{
-		return $this->baseFriendship;
-	}
-
-	public function getExperienceGroup() : DexExperienceGroup
-	{
-		return $this->experienceGroup;
-	}
-
-	/**
-	 * @return DexEggGroup[]
-	 */
-	public function getEggGroups() : array
-	{
-		return $this->eggGroups;
-	}
-
-	public function getGenderRatio() : GenderRatio
-	{
-		return $this->genderRatio;
-	}
-
-	public function getEggCycles() : int
-	{
-		return $this->eggCycles;
-	}
-
-	public function getStepsToHatch() : int
-	{
-		return $this->stepsToHatch;
-	}
 }

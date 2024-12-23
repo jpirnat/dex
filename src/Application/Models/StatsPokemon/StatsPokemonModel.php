@@ -139,7 +139,7 @@ final class StatsPokemonModel
 			$thisMonth,
 			$this->format->id,
 			$rating,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 			$languageId,
 		);
 		$this->prevRank = $this->statsUsagePokemonRepository->getByRank(
@@ -161,7 +161,7 @@ final class StatsPokemonModel
 		// Get Pokémon data.
 		$this->pokemonModel->setData(
 			$this->format->versionGroupId,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 			$languageId,
 		);
 
@@ -173,7 +173,7 @@ final class StatsPokemonModel
 		$this->movesetPokemon = $this->movesetPokemonRepository->getByMonthAndFormatAndPokemon(
 			$thisMonth,
 			$this->format->id,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 		);
 
 		// Get moveset rated Pokémon record.
@@ -181,7 +181,7 @@ final class StatsPokemonModel
 			$thisMonth,
 			$this->format->id,
 			$rating,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 		);
 
 		// Get ability data.
@@ -190,7 +190,7 @@ final class StatsPokemonModel
 			$prevMonth,
 			$this->format->id,
 			$rating,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 			$languageId,
 		);
 
@@ -200,7 +200,7 @@ final class StatsPokemonModel
 			$prevMonth,
 			$this->format->id,
 			$rating,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 			$this->format->versionGroupId,
 			$languageId,
 		);
@@ -210,7 +210,7 @@ final class StatsPokemonModel
 			$thisMonth,
 			$this->format,
 			$rating,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 			$languageId,
 		);
 
@@ -220,7 +220,7 @@ final class StatsPokemonModel
 			$prevMonth,
 			$this->format->id,
 			$rating,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 			$this->format->versionGroupId,
 			$languageId,
 		);
@@ -232,7 +232,7 @@ final class StatsPokemonModel
 				$prevMonth,
 				$this->format->id,
 				$rating,
-				$this->pokemon->getId(),
+				$this->pokemon->id,
 				$languageId,
 			);
 		}
@@ -242,7 +242,7 @@ final class StatsPokemonModel
 			$thisMonth,
 			$this->format->id,
 			$rating,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 			$languageId,
 		);
 
@@ -251,7 +251,7 @@ final class StatsPokemonModel
 			$thisMonth,
 			$this->format->id,
 			$rating,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 			$languageId,
 		);
 

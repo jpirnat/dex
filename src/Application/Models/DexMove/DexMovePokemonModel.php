@@ -138,14 +138,14 @@ final class DexMovePokemonModel
 
 				$dexMovePokemon[$methodId][] = new DexMovePokemon(
 					$versionGroupData,
-					$pokemon->getIcon(),
-					$pokemon->getIdentifier(),
-					$pokemon->getName(),
-					$pokemon->getTypes(),
-					$pokemon->getAbilities(),
-					$pokemon->getBaseStats(),
-					$pokemon->getBst(),
-					$pokemon->getSort(),
+					$pokemon->icon,
+					$pokemon->identifier,
+					$pokemon->name,
+					$pokemon->types,
+					$pokemon->abilities,
+					$pokemon->baseStats,
+					$pokemon->bst,
+					$pokemon->sort,
 				);
 			}
 		}

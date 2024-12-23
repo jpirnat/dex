@@ -9,41 +9,11 @@ use Jp\Dex\Domain\Stats\StatId;
 final readonly class Nature
 {
 	public function __construct(
-		private NatureId $id,
-		private string $identifier,
-		private ?StatId $increasedStatId,
-		private ?StatId $decreasedStatId,
-		private FormId $toxelEvoId,
-		private int $vcExpRemainder,
+		private(set) NatureId $id,
+		private(set) string $identifier,
+		private(set) ?StatId $increasedStatId,
+		private(set) ?StatId $decreasedStatId,
+		private(set) FormId $toxelEvoId,
+		private(set) int $vcExpRemainder,
 	) {}
-
-	public function getId() : NatureId
-	{
-		return $this->id;
-	}
-
-	public function getIdentifier() : string
-	{
-		return $this->identifier;
-	}
-
-	public function getIncreasedStatId() : ?StatId
-	{
-		return $this->increasedStatId;
-	}
-
-	public function getDecreasedStatId() : ?StatId
-	{
-		return $this->decreasedStatId;
-	}
-
-	public function getToxelEvoId() : FormId
-	{
-		return $this->toxelEvoId;
-	}
-
-	public function getVcExpRemainder() : int
-	{
-		return $this->vcExpRemainder;
-	}
 }

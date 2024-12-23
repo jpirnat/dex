@@ -42,7 +42,7 @@ final class UsageItemTrendLine extends TrendLine
 	{
 		$formatName = $this->formatName;
 		$rating = $this->rating;
-		$pokemonName = $this->pokemonName->getName();
+		$pokemonName = $this->pokemonName->name;
 		$itemName = $this->itemName->name;
 
 		return "$formatName [$rating] $pokemonName with $itemName Usage";

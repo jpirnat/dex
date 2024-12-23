@@ -42,7 +42,7 @@ final readonly class LeadUsageTrendGenerator
 			$format->versionGroupId,
 			$pokemonId,
 		);
-		$pokemonType = $this->typeRepository->getById($vgPokemon->getType1Id());
+		$pokemonType = $this->typeRepository->getById($vgPokemon->type1Id);
 
 		// Get the usage data.
 		$usageDatas = $this->statsChartQueries->getLeadUsage(

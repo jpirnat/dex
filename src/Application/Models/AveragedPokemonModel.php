@@ -91,7 +91,7 @@ final class AveragedPokemonModel
 		// Get Pokémon data.
 		$this->pokemonModel->setData(
 			$this->format->versionGroupId,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 			$languageId,
 		);
 
@@ -105,7 +105,7 @@ final class AveragedPokemonModel
 			$end,
 			$this->format->id,
 			$rating,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 			$languageId,
 		);
 
@@ -115,7 +115,7 @@ final class AveragedPokemonModel
 			$end,
 			$this->format->id,
 			$rating,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 			$languageId,
 		);
 
@@ -125,7 +125,7 @@ final class AveragedPokemonModel
 			$end,
 			$this->format->id,
 			$rating,
-			$this->pokemon->getId(),
+			$this->pokemon->id,
 			$languageId,
 		);
 	}

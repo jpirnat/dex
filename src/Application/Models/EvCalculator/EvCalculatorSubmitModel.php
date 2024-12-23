@@ -53,10 +53,10 @@ final class EvCalculatorSubmitModel
 
 		$dexPokemon = $this->dexPokemonRepository->getById(
 			$versionGroup->getId(),
-			$pokemon->getId(),
+			$pokemon->id,
 			new LanguageId(LanguageId::ENGLISH),
 		);
-		$baseStats = $dexPokemon->getBaseStats();
+		$baseStats = $dexPokemon->baseStats;
 
 		// Initialize the array of possible EVs.
 		$possibleEvs = [];
@@ -75,8 +75,8 @@ final class EvCalculatorSubmitModel
 
 			$natureModifier = $this->statCalculator->getNatureModifier(
 				$stat->getId(),
-				$nature->getIncreasedStatId(),
-				$nature->getDecreasedStatId(),
+				$nature->increasedStatId,
+				$nature->decreasedStatId,
 			);
 
 			foreach ($atLevel as $l) {

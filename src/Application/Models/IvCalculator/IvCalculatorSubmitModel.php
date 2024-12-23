@@ -70,10 +70,10 @@ final class IvCalculatorSubmitModel
 
 		$dexPokemon = $this->dexPokemonRepository->getById(
 			$versionGroup->getId(),
-			$pokemon->getId(),
+			$pokemon->id,
 			new LanguageId(LanguageId::ENGLISH),
 		);
-		$baseStats = $dexPokemon->getBaseStats();
+		$baseStats = $dexPokemon->baseStats;
 
 		// Initialize the array of possible IVs.
 		$possibleIvs = [];
@@ -91,8 +91,8 @@ final class IvCalculatorSubmitModel
 
 			$natureModifier = $this->statCalculator->getNatureModifier(
 				$stat->getId(),
-				$nature->getIncreasedStatId(),
-				$nature->getDecreasedStatId(),
+				$nature->increasedStatId,
+				$nature->decreasedStatId,
 			);
 
 			foreach ($atLevel as $l) {

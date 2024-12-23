@@ -63,7 +63,7 @@ final class SpreadModel
 		// Convert the base stats data structure for use in the stat calculator.
 		$baseStats = new StatValueContainer();
 		foreach ($stats as $stat) {
-			$baseStats->add(new StatValue($stat->getId(), $pokemon->getBaseStats()[$stat->getIdentifier()]));
+			$baseStats->add(new StatValue($stat->getId(), $pokemon->baseStats[$stat->getIdentifier()]));
 		}
 
 		$attack = new StatId(StatId::ATTACK);

@@ -105,22 +105,22 @@ final readonly class DexFormatter
 
 		foreach ($dexPokemons as $dexPokemon) {
 			$pokemon[] = [
-				'icon' => $dexPokemon->getIcon(),
-				'identifier' => $dexPokemon->getIdentifier(),
-				'name' => $dexPokemon->getName(),
-				'types' => $this->formatDexTypes($dexPokemon->getTypes()),
-				'abilities' => $this->formatDexPokemonAbilities($dexPokemon->getAbilities()),
-				'baseStats' => $dexPokemon->getBaseStats(),
-				'bst' => $dexPokemon->getBst(),
-				'eggGroups' => $this->formatDexEggGroups($dexPokemon->getEggGroups()),
+				'icon' => $dexPokemon->icon,
+				'identifier' => $dexPokemon->identifier,
+				'name' => $dexPokemon->name,
+				'types' => $this->formatDexTypes($dexPokemon->types),
+				'abilities' => $this->formatDexPokemonAbilities($dexPokemon->abilities),
+				'baseStats' => $dexPokemon->baseStats,
+				'bst' => $dexPokemon->bst,
+				'eggGroups' => $this->formatDexEggGroups($dexPokemon->eggGroups),
 				'genderRatio' => [
-					'icon' => $dexPokemon->getGenderRatio()->getIcon(),
-					'description' => $dexPokemon->getGenderRatio()->getDescription(),
+					'icon' => $dexPokemon->genderRatio->getIcon(),
+					'description' => $dexPokemon->genderRatio->getDescription(),
 				],
-				'eggCycles' => $dexPokemon->getEggCycles(),
-				'stepsToHatch' => $dexPokemon->getStepsToHatch(),
-				'evYield' => $dexPokemon->getEvYield(),
-				'sort' => $dexPokemon->getSort(),
+				'eggCycles' => $dexPokemon->eggCycles,
+				'stepsToHatch' => $dexPokemon->stepsToHatch,
+				'evYield' => $dexPokemon->evYield,
+				'sort' => $dexPokemon->sort,
 			];
 		}
 
@@ -130,29 +130,29 @@ final readonly class DexFormatter
 	public function formatExpandedDexPokemon(ExpandedDexPokemon $pokemon) : array
 	{
 		return [
-			'identifier' => $pokemon->getIdentifier(),
-			'name' => $pokemon->getName(),
-			'sprite' => $pokemon->getSprite(),
-			'types' => $this->formatDexTypes($pokemon->getTypes()),
-			'abilities' => $this->formatExpandedDexPokemonAbilities($pokemon->getAbilities()),
-			'baseStats' => $pokemon->getBaseStats(),
-			'bst' => $pokemon->getBst(),
-			'baseExperience' => $pokemon->getBaseExperience(),
-			'evYield' => $pokemon->getEvYield(),
-			'evTotal' => $pokemon->getEvTotal(),
-			'catchRate' => $pokemon->getCatchRate(),
-			'baseFriendship' => $pokemon->getBaseFriendship(),
+			'identifier' => $pokemon->identifier,
+			'name' => $pokemon->name,
+			'sprite' => $pokemon->sprite,
+			'types' => $this->formatDexTypes($pokemon->types),
+			'abilities' => $this->formatExpandedDexPokemonAbilities($pokemon->abilities),
+			'baseStats' => $pokemon->baseStats,
+			'bst' => $pokemon->bst,
+			'baseExperience' => $pokemon->baseExperience,
+			'evYield' => $pokemon->evYield,
+			'evTotal' => $pokemon->evTotal,
+			'catchRate' => $pokemon->catchRate,
+			'baseFriendship' => $pokemon->baseFriendship,
 			'experienceGroup' => [
-				'name' => $pokemon->getExperienceGroup()->name,
-				'points' => $pokemon->getExperienceGroup()->points,
+				'name' => $pokemon->experienceGroup->name,
+				'points' => $pokemon->experienceGroup->points,
 			],
-			'eggGroups' => $this->formatDexEggGroups($pokemon->getEggGroups()),
+			'eggGroups' => $this->formatDexEggGroups($pokemon->eggGroups),
 			'genderRatio' => [
-				'icon' => $pokemon->getGenderRatio()->getIcon(),
-				'description' => $pokemon->getGenderRatio()->getDescription(),
+				'icon' => $pokemon->genderRatio->getIcon(),
+				'description' => $pokemon->genderRatio->getDescription(),
 			],
-			'eggCycles' => $pokemon->getEggCycles(),
-			'stepsToHatch' => $pokemon->getStepsToHatch(),
+			'eggCycles' => $pokemon->eggCycles,
+			'stepsToHatch' => $pokemon->stepsToHatch,
 		];
 	}
 

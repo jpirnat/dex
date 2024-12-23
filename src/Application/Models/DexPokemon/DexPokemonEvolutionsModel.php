@@ -211,14 +211,14 @@ final class DexPokemonEvolutionsModel
 		$pokemon = $this->pokemonRepository->getById($form->pokemonId);
 		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 			$languageId,
-			$pokemon->getId(),
+			$pokemon->id,
 		);
 
 		return new EvolutionTree(
 			$isFirstStage,
 			$formIcon->image,
-			$pokemon->getIdentifier(),
-			$pokemonName->getName(),
+			$pokemon->identifier,
+			$pokemonName->name,
 			$methods,
 			$evoIntoTrees,
 		);

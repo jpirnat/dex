@@ -11,50 +11,30 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 final readonly class VgPokemon
 {
 	public function __construct(
-		private VersionGroupId $versionGroupId,
-		private PokemonId $pokemonId,
-		private TypeId $type1Id,
-		private ?TypeId $type2Id,
-		private ?AbilityId $ability1Id,
-		private ?AbilityId $ability2Id,
-		private ?AbilityId $ability3Id,
-		private int $baseHp,
-		private int $baseAtk,
-		private int $baseDef,
-		private int $baseSpa,
-		private int $baseSpd,
-		private int $baseSpe,
-		private int $baseSpc,
-		private ?EggGroupId $eggGroup1Id,
-		private ?EggGroupId $eggGroup2Id,
-		private int $baseExperience,
-		private int $evHp,
-		private int $evAtk,
-		private int $evDef,
-		private int $evSpa,
-		private int $evSpd,
-		private int $evSpe,
+		private(set) VersionGroupId $versionGroupId,
+		private(set) PokemonId $pokemonId,
+		private(set) TypeId $type1Id,
+		private(set) ?TypeId $type2Id,
+		private(set) ?AbilityId $ability1Id,
+		private(set) ?AbilityId $ability2Id,
+		private(set) ?AbilityId $ability3Id,
+		private(set) int $baseHp,
+		private(set) int $baseAtk,
+		private(set) int $baseDef,
+		private(set) int $baseSpa,
+		private(set) int $baseSpd,
+		private(set) int $baseSpe,
+		private(set) int $baseSpc,
+		private(set) ?EggGroupId $eggGroup1Id,
+		private(set) ?EggGroupId $eggGroup2Id,
+		private(set) int $baseExperience,
+		private(set) int $evHp,
+		private(set) int $evAtk,
+		private(set) int $evDef,
+		private(set) int $evSpa,
+		private(set) int $evSpd,
+		private(set) int $evSpe,
 	) {}
-
-	public function getVersionGroupId(): VersionGroupId
-	{
-		return $this->versionGroupId;
-	}
-
-	public function getPokemonId(): PokemonId
-	{
-		return $this->pokemonId;
-	}
-
-	public function getType1Id(): TypeId
-	{
-		return $this->type1Id;
-	}
-
-	public function getType2Id(): ?TypeId
-	{
-		return $this->type2Id;
-	}
 
 	/**
 	 * @return TypeId[]
@@ -68,100 +48,5 @@ final readonly class VgPokemon
 		}
 
 		return $typeIds;
-	}
-
-	public function getAbility1Id(): ?AbilityId
-	{
-		return $this->ability1Id;
-	}
-
-	public function getAbility2Id(): ?AbilityId
-	{
-		return $this->ability2Id;
-	}
-
-	public function getAbility3Id(): ?AbilityId
-	{
-		return $this->ability3Id;
-	}
-
-	public function getBaseHp(): int
-	{
-		return $this->baseHp;
-	}
-
-	public function getBaseAtk(): int
-	{
-		return $this->baseAtk;
-	}
-
-	public function getBaseDef(): int
-	{
-		return $this->baseDef;
-	}
-
-	public function getBaseSpa(): int
-	{
-		return $this->baseSpa;
-	}
-
-	public function getBaseSpd(): int
-	{
-		return $this->baseSpd;
-	}
-
-	public function getBaseSpe(): int
-	{
-		return $this->baseSpe;
-	}
-
-	public function getBaseSpc(): int
-	{
-		return $this->baseSpc;
-	}
-
-	public function getEggGroup1Id(): ?EggGroupId
-	{
-		return $this->eggGroup1Id;
-	}
-
-	public function getEggGroup2Id(): ?EggGroupId
-	{
-		return $this->eggGroup2Id;
-	}
-
-	public function getBaseExperience(): int
-	{
-		return $this->baseExperience;
-	}
-
-	public function getEvHp(): int
-	{
-		return $this->evHp;
-	}
-
-	public function getEvAtk(): int
-	{
-		return $this->evAtk;
-	}
-
-	public function getEvDef(): int
-	{
-		return $this->evDef;
-	}
-
-	public function getEvSpa(): int
-	{
-		return $this->evSpa;
-	}
-
-	public function getEvSpd(): int
-	{
-		return $this->evSpd;
-	}
-
-	public function getEvSpe(): int
-	{
-		return $this->evSpe;
 	}
 }

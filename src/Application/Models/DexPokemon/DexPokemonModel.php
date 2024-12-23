@@ -53,12 +53,12 @@ final class DexPokemonModel
 			return;
 		}
 
-		$this->versionGroupModel->setWithPokemon($pokemon->getId());
+		$this->versionGroupModel->setWithPokemon($pokemon->id);
 
 		try {
 			$this->pokemon = $this->expandedDexPokemonRepository->getById(
 				$versionGroupId,
-				$pokemon->getId(),
+				$pokemon->id,
 				$languageId,
 			);
 		} catch (VgPokemonNotFoundException) {
@@ -73,9 +73,9 @@ final class DexPokemonModel
 		// Set the Pokémon's matchups.
 		$this->dexPokemonMatchupsModel->setData(
 			$this->versionGroupModel->versionGroup,
-			$pokemon->getId(),
+			$pokemon->id,
 			$languageId,
-			$this->pokemon->getAbilities(),
+			$this->pokemon->abilities,
 		);
 
 		$this->setBreedingPartnersSearchUrl($vgIdentifier);
@@ -83,13 +83,13 @@ final class DexPokemonModel
 		// Set the Pokémon's evolutions.
 		$this->dexPokemonEvolutionsModel->setData(
 			$versionGroupId,
-			$pokemon->getId(),
+			$pokemon->id,
 			$languageId,
 		);
 
 		$this->dexPokemonMovesModel->setData(
 			$versionGroupId,
-			$pokemon->getId(),
+			$pokemon->id,
 			$languageId,
 		);
 	}
@@ -98,8 +98,8 @@ final class DexPokemonModel
 		string $vgIdentifier,
 	) : void {
 		$versionGroup = $this->versionGroupModel->versionGroup;
-		$eggGroups = $this->pokemon->getEggGroups();
-		$genderRatio = $this->pokemon->getGenderRatio()->value();
+		$eggGroups = $this->pokemon->eggGroups;
+		$genderRatio = $this->pokemon->genderRatio->value;
 
 		if (!$versionGroup->hasBreeding()
 			|| $eggGroups === []
@@ -114,7 +114,7 @@ final class DexPokemonModel
 			function (DexEggGroup $e) : string {
 				return $e->identifier;
 			},
-			$this->pokemon->getEggGroups(),
+			$this->pokemon->eggGroups,
 		);
 		$eggGroups = implode('.', $eggGroups);
 

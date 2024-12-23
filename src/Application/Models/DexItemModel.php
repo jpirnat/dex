@@ -78,13 +78,13 @@ final class DexItemModel
 			$pokemon = $this->pokemonRepository->getById($form->pokemonId);
 			$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
 				$languageId,
-				$pokemon->getId(),
+				$pokemon->id,
 			);
 
 			$this->evolutions[] = [
 				'icon' => $formIcon->image,
-				'identifier' => $pokemon->getIdentifier(),
-				'name' => $pokemonName->getName(),
+				'identifier' => $pokemon->identifier,
+				'name' => $pokemonName->name,
 			];
 		}
 	}
