@@ -47,30 +47,30 @@ final readonly class UsageAbilityTrendGenerator
 
 		// Get the Pokémon's primary type.
 		$vgPokemon = $this->vgPokemonRepository->getByVgAndPokemon(
-			$format->getVersionGroupId(),
+			$format->versionGroupId,
 			$pokemonId,
 		);
 		$pokemonType = $this->typeRepository->getById($vgPokemon->getType1Id());
 
 		// Get the usage data.
 		$usageDatas = $this->statsChartQueries->getUsageAbility(
-			$format->getId(),
+			$format->id,
 			$rating,
 			$pokemonId,
 			$abilityId,
 		);
-		$months = $this->statsChartQueries->getMonthsWithData($format->getId(), $rating);
+		$months = $this->statsChartQueries->getMonthsWithData($format->id, $rating);
 
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
-			$format->getId(),
+			$format->id,
 			$usageDatas,
 			$months,
 			0,
 		);
 
 		return new UsageAbilityTrendLine(
-			$format->getName(),
+			$format->name,
 			$rating,
 			$pokemonName,
 			$abilityName,

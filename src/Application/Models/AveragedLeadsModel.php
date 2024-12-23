@@ -72,21 +72,21 @@ final class AveragedLeadsModel
 		$this->ratings = $this->ratingQueries->getByMonthsAndFormat(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 		);
 
 		// Get leads Pokémon records for these months.
 		$leadsAveragedPokemons = $this->leadsAveragedPokemonRepository->getByMonthsAndFormat(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 		);
 
 		// Get leads rated Pokémon records for these months.
 		$leadsRatedAveragedPokemons = $this->leadsRatedAveragedPokemonRepository->getByMonthsAndFormatAndRating(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 		);
 
@@ -95,7 +95,7 @@ final class AveragedLeadsModel
 		$monthCounts = $this->monthsCounter->countMovesetMonthsAll(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 		);
 
@@ -107,7 +107,7 @@ final class AveragedLeadsModel
 
 		// Get form icons.
 		$formIcons = $this->formIconRepository->getByVgAndFemaleAndRightAndShiny(
-			$this->format->getVersionGroupId(),
+			$this->format->versionGroupId,
 			false,
 			false,
 			false,

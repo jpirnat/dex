@@ -38,16 +38,16 @@ final class SpreadModel
 		PokemonId $pokemonId,
 		LanguageId $languageId,
 	) : void {
-		$generationId = $format->getGenerationId();
+		$generationId = $format->generationId;
 
 		$stats = $this->statRepository->getByVersionGroup(
-			$format->getVersionGroupId(),
+			$format->versionGroupId,
 		);
 
 		// Get stat Pokémon spreads.
 		$spreads = $this->statsPokemonSpreadRepository->getByMonth(
 			$month,
-			$format->getId(),
+			$format->id,
 			$rating,
 			$pokemonId,
 			$languageId,
@@ -55,7 +55,7 @@ final class SpreadModel
 
 		// Get the Pokémon's base stats.
 		$pokemon = $this->dexPokemonRepository->getById(
-			$format->getVersionGroupId(),
+			$format->versionGroupId,
 			$pokemonId,
 			$languageId,
 		);
@@ -114,14 +114,14 @@ final class SpreadModel
 					$baseStats,
 					$ivSpread,
 					$calcEvSpread,
-					$format->getLevel(),
+					$format->level,
 				);
 			} else {
 				$statSpread = $this->statCalculator->all3(
 					$baseStats,
 					$ivSpread,
 					$evSpread,
-					$format->getLevel(),
+					$format->level,
 					$increasedStatId,
 					$decreasedStatId,
 				);

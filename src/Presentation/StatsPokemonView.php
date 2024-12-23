@@ -173,7 +173,7 @@ final readonly class StatsPokemonView
 		}
 
 		// Navigation breadcrumbs.
-		$formatIdentifier = $format->getIdentifier();
+		$formatIdentifier = $format->identifier;
 		$breadcrumbs = [[
 			'url' => '/stats',
 			'text' => 'Stats',
@@ -182,7 +182,7 @@ final readonly class StatsPokemonView
 			'text' => $thisMonth['name'],
 		], [
 			'url' => "/stats/$month/$formatIdentifier/$rating",
-			'text' => $format->getName(),
+			'text' => $format->name,
 		], [
 			'text' => $dexPokemon->getName(),
 		]];
@@ -190,12 +190,12 @@ final readonly class StatsPokemonView
 		return new JsonResponse([
 			'data' => [
 				'title' => 'Porydex - Stats - ' . $thisMonth['name'] . ' '
-					. $format->getName() . ' - ' . $dexPokemon->getName(),
+					. $format->name . ' - ' . $dexPokemon->getName(),
 
 				'format' => [
-					'identifier' => $format->getIdentifier(),
-					'smogonDexIdentifier' => $format->getSmogonDexIdentifier(),
-					'fieldSize' => $format->getFieldSize(),
+					'identifier' => $format->identifier,
+					'smogonDexIdentifier' => $format->smogonDexIdentifier,
+					'fieldSize' => $format->fieldSize,
 				],
 				'rating' => $rating,
 				'pokemon' => [

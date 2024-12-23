@@ -57,7 +57,7 @@ final readonly class CurrentStatsMiddleware implements MiddlewareInterface
 		}
 
 		// Get the latest month of data for the format.
-		$month = $this->usageQueries->getNewest($format->getId());
+		$month = $this->usageQueries->getNewest($format->id);
 		if ($month === null) {
 			// This format has no data ever, so it doesn't matter what month we use.
 			$month = new DateTime('-1 month');
@@ -65,7 +65,7 @@ final readonly class CurrentStatsMiddleware implements MiddlewareInterface
 
 		// Set the attributes.
 		$request = $request->withAttribute('month', $month->format('Y-m'));
-		$request = $request->withAttribute('formatIdentifier', $format->getIdentifier());
+		$request = $request->withAttribute('formatIdentifier', $format->identifier);
 		$request = $request->withAttribute('rating', $rating);
 
 		return $handler->handle($request);

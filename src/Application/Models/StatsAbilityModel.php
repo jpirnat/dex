@@ -70,11 +70,11 @@ final class StatsAbilityModel
 		);
 
 		$this->versionGroup = $this->vgRepository->getById(
-			$this->format->getVersionGroupId()
+			$this->format->versionGroupId
 		);
 
 		// Get the previous month and the next month.
-		$this->dateModel->setMonthAndFormat($month, $this->format->getId());
+		$this->dateModel->setMonthAndFormat($month, $this->format->id);
 		$thisMonth = $this->dateModel->thisMonth;
 		$prevMonth = $this->dateModel->prevMonth;
 
@@ -84,7 +84,7 @@ final class StatsAbilityModel
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format->id,
 		);
 
 		$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
@@ -92,7 +92,7 @@ final class StatsAbilityModel
 			$ability->id,
 		);
 		$abilityDescription = $this->abilityDescriptionRepository->getByAbility(
-			$this->format->getVersionGroupId(),
+			$this->format->versionGroupId,
 			$languageId,
 			$ability->id,
 		);
@@ -113,7 +113,7 @@ final class StatsAbilityModel
 		$this->pokemon = $this->statsAbilityPokemonRepository->getByMonth(
 			$thisMonth,
 			$prevMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$ability->id,
 			$languageId,

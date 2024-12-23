@@ -70,11 +70,11 @@ final class StatsMoveModel
 		);
 
 		$this->versionGroup = $this->vgRepository->getById(
-			$this->format->getVersionGroupId()
+			$this->format->versionGroupId
 		);
 
 		// Get the previous month and the next month.
-		$this->dateModel->setMonthAndFormat($month, $this->format->getId());
+		$this->dateModel->setMonthAndFormat($month, $this->format->id);
 		$thisMonth = $this->dateModel->thisMonth;
 		$prevMonth = $this->dateModel->prevMonth;
 
@@ -84,7 +84,7 @@ final class StatsMoveModel
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format->id,
 		);
 
 		$moveName = $this->moveNameRepository->getByLanguageAndMove(
@@ -92,7 +92,7 @@ final class StatsMoveModel
 			$move->getId(),
 		);
 		$moveDescription = $this->moveDescriptionRepository->getByMove(
-			$this->format->getVersionGroupId(),
+			$this->format->versionGroupId,
 			$languageId,
 			$move->getId(),
 		);
@@ -113,7 +113,7 @@ final class StatsMoveModel
 		$this->pokemon = $this->statsMovePokemonRepository->getByMonth(
 			$thisMonth,
 			$prevMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$move->getId(),
 			$languageId,

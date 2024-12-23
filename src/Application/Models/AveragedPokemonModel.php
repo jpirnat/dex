@@ -85,25 +85,25 @@ final class AveragedPokemonModel
 		$this->ratings = $this->ratingQueries->getByMonthsAndFormat(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 		);
 
 		// Get Pokémon data.
 		$this->pokemonModel->setData(
-			$this->format->getVersionGroupId(),
+			$this->format->versionGroupId,
 			$this->pokemon->getId(),
 			$languageId,
 		);
 
 		// Get the format's version group and generation.
-		$this->versionGroup = $this->versionGroupRepository->getById($this->format->getVersionGroupId());
+		$this->versionGroup = $this->versionGroupRepository->getById($this->format->versionGroupId);
 		$this->generation = $this->generationRepository->getById($this->versionGroup->getGenerationId());
 
 		// Get ability data.
 		$this->abilities = $this->abilityModel->setData(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$this->pokemon->getId(),
 			$languageId,
@@ -113,7 +113,7 @@ final class AveragedPokemonModel
 		$this->items = $this->itemModel->setData(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$this->pokemon->getId(),
 			$languageId,
@@ -123,7 +123,7 @@ final class AveragedPokemonModel
 		$this->moves = $this->moveModel->setData(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$this->pokemon->getId(),
 			$languageId,

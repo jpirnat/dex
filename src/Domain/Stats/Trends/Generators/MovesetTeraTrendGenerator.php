@@ -47,7 +47,7 @@ final readonly class MovesetTeraTrendGenerator
 
 		// Get the Pokémon's primary type.
 		$vgPokemon = $this->vgPokemonRepository->getByVgAndPokemon(
-			$format->getVersionGroupId(),
+			$format->versionGroupId,
 			$pokemonId,
 		);
 		$pokemonType = $this->typeRepository->getById($vgPokemon->getType1Id());
@@ -57,23 +57,23 @@ final readonly class MovesetTeraTrendGenerator
 
 		// Get the usage data.
 		$usageDatas = $this->statsChartQueries->getMovesetTera(
-			$format->getId(),
+			$format->id,
 			$rating,
 			$pokemonId,
 			$typeId,
 		);
-		$months = $this->statsChartQueries->getMonthsWithData($format->getId(), $rating);
+		$months = $this->statsChartQueries->getMonthsWithData($format->id, $rating);
 
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
-			$format->getId(),
+			$format->id,
 			$usageDatas,
 			$months,
 			0,
 		);
 
 		return new MovesetTeraTrendLine(
-			$format->getName(),
+			$format->name,
 			$rating,
 			$pokemonName,
 			$typeName->getName(),

@@ -10,7 +10,6 @@ final class VersionGroupId extends EntityId
 	public const int RED_GREEN = 1;
 	public const int BLUE = 2;
 	public const int RED_BLUE = 3;
-	private const int YELLOW = 4;
 	private const int GOLD_SILVER = 5;
 	private const int RUBY_SAPPHIRE = 7;
 	public const int ULTRA_SUN_ULTRA_MOON = 18;
@@ -53,16 +52,6 @@ final class VersionGroupId extends EntityId
 	public function hasMoveDescriptions() : bool
 	{
 		return $this->id >= self::GOLD_SILVER;
-	}
-
-	public function hasNatures() : bool
-	{
-		return $this->id >= self::RUBY_SAPPHIRE;
-	}
-
-	public function hasSpecialStat() : bool
-	{
-		return $this->id <= self::YELLOW;
 	}
 
 	public function hasTms() : bool

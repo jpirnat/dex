@@ -76,14 +76,14 @@ final class AveragedUsageModel
 		$this->ratings = $this->ratingQueries->getByMonthsAndFormat(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 		);
 
 		// Does leads rated data exist for these months?
 		$this->showLeadsLink = $this->leadsRatedAveragedPokemonRepository->hasAny(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 		);
 
@@ -91,14 +91,14 @@ final class AveragedUsageModel
 		$usageAveragedPokemons = $this->usageAveragedPokemonRepository->getByMonthsAndFormat(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 		);
 
 		// Get usage rated Pokémon records for these months.
 		$usageRatedAveragedPokemons = $this->usageRatedAveragedPokemonRepository->getByMonthsAndFormatAndRating(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 		);
 
@@ -107,7 +107,7 @@ final class AveragedUsageModel
 		$monthCounts = $this->monthsCounter->countMovesetMonthsAll(
 			$start,
 			$end,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 		);
 
@@ -119,7 +119,7 @@ final class AveragedUsageModel
 
 		// Get form icons.
 		$formIcons = $this->formIconRepository->getByVgAndFemaleAndRightAndShiny(
-			$this->format->getVersionGroupId(),
+			$this->format->versionGroupId,
 			false,
 			false,
 			false,

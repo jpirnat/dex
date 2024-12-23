@@ -49,37 +49,37 @@ final readonly class MovesetMoveTrendGenerator
 
 		// Get the Pokémon's primary type.
 		$vgPokemon = $this->vgPokemonRepository->getByVgAndPokemon(
-			$format->getVersionGroupId(),
+			$format->versionGroupId,
 			$pokemonId,
 		);
 		$pokemonType = $this->typeRepository->getById($vgPokemon->getType1Id());
 
 		// Get the move's type.
 		$vgMove = $this->vgMoveRepository->getByVgAndMove(
-			$format->getVersionGroupId(),
+			$format->versionGroupId,
 			$moveId,
 		);
 		$moveType = $this->typeRepository->getById($vgMove->getTypeId());
 
 		// Get the usage data.
 		$usageDatas = $this->statsChartQueries->getMovesetMove(
-			$format->getId(),
+			$format->id,
 			$rating,
 			$pokemonId,
 			$moveId,
 		);
-		$months = $this->statsChartQueries->getMonthsWithData($format->getId(), $rating);
+		$months = $this->statsChartQueries->getMonthsWithData($format->id, $rating);
 
 		// Get the trend points.
 		$trendPoints = $this->trendPointCalculator->getTrendPoints(
-			$format->getId(),
+			$format->id,
 			$usageDatas,
 			$months,
 			0,
 		);
 
 		return new MovesetMoveTrendLine(
-			$format->getName(),
+			$format->name,
 			$rating,
 			$pokemonName,
 			$moveName,

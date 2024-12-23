@@ -76,16 +76,16 @@ final readonly class StatsUsageView
 			'url' => "/stats/$month",
 			'text' => $thisMonth['name'],
 		], [
-			'text' => $format->getName(),
+			'text' => $format->name,
 		]];
 
 		return new JsonResponse([
 			'data' => [
 				'title' => 'Porydex - Stats - ' . $thisMonth['name'] . ' '
-					. $format->getName(),
+					. $format->name,
 				'format' => [
-					'identifier' => $format->getIdentifier(),
-					'name' => $format->getName(),
+					'identifier' => $format->identifier,
+					'name' => $format->name,
 				],
 				'rating' => $rating,
 				'breadcrumbs' => $breadcrumbs,

@@ -56,11 +56,11 @@ final class StatsMonthModel
 		foreach ($formatIds as $formatId) {
 			$format = $this->formatRepository->getById($formatId, $languageId);
 
-			$generation = $format->getGenerationId()->value();
+			$generation = $format->generationId->value();
 			$this->generations[$generation]['generation'] = $generation;
 			$this->generations[$generation]['formats'][] = [
-				'identifier' => $format->getIdentifier(),
-				'name' => $format->getName(),
+				'identifier' => $format->identifier,
+				'name' => $format->name,
 				'ratings' => $ratings[$formatId->value()] ?? [],
 			];
 		}

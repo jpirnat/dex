@@ -73,20 +73,20 @@ final class StatsUsageModel
 		);
 
 		// Get the previous month and the next month.
-		$this->dateModel->setMonthAndFormat($month, $this->format->getId());
+		$this->dateModel->setMonthAndFormat($month, $this->format->id);
 		$thisMonth = $this->dateModel->thisMonth;
 		$prevMonth = $this->dateModel->prevMonth;
 
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format->id,
 		);
 
 		// Does leads data exist for this month?
 		$this->showLeadsLink = $this->leadsRatedPokemonRepository->hasAny(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 		);
 
@@ -100,13 +100,13 @@ final class StatsUsageModel
 		$this->pokemon = $this->statsUsagePokemonRepository->getByMonth(
 			$thisMonth,
 			$prevMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$languageId,
 		);
 
 		$this->months = $this->usageRatedQueries->getMonthsWithData(
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 		);
 	}

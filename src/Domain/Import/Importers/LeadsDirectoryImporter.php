@@ -65,7 +65,7 @@ final readonly class LeadsDirectoryImporter
 				$formatId,
 				new LanguageId(LanguageId::ENGLISH), // The language doesn't matter.
 			);
-			if ($format->getFieldSize() > 1) {
+			if ($format->fieldSize > 1) {
 				continue;
 			}
 

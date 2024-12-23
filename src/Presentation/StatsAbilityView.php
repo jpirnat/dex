@@ -61,7 +61,7 @@ final readonly class StatsAbilityView
 		}
 
 		// Navigation breadcrumbs.
-		$formatIdentifier = $format->getIdentifier();
+		$formatIdentifier = $format->identifier;
 		$breadcrumbs = [[
 			'url' => '/stats',
 			'text' => 'Stats',
@@ -70,7 +70,7 @@ final readonly class StatsAbilityView
 			'text' => $thisMonth['name'],
 		], [
 			'url' => "/stats/$month/$formatIdentifier/$rating",
-			'text' => $format->getName(),
+			'text' => $format->name,
 		], [
 			'text' => $ability['name'],
 		]];
@@ -78,11 +78,11 @@ final readonly class StatsAbilityView
 		return new JsonResponse([
 			'data' => [
 				'title' => 'Porydex - Stats - ' . $thisMonth['name'] . ' '
-					. $format->getName() . ' - ' . $ability['name'],
+					. $format->name . ' - ' . $ability['name'],
 
 				'format' => [
-					'identifier' => $format->getIdentifier(),
-					'name' => $format->getName(),
+					'identifier' => $format->identifier,
+					'name' => $format->name,
 				],
 				'rating' => $rating,
 

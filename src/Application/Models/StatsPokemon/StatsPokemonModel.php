@@ -121,7 +121,7 @@ final class StatsPokemonModel
 		);
 
 		// Get the previous month and the next month.
-		$this->dateModel->setMonthAndFormat($month, $this->format->getId());
+		$this->dateModel->setMonthAndFormat($month, $this->format->id);
 		$thisMonth = $this->dateModel->thisMonth;
 		$prevMonth = $this->dateModel->prevMonth;
 
@@ -131,27 +131,27 @@ final class StatsPokemonModel
 		// Get the ratings for this month.
 		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format->id,
 		);
 
 		// Get the previous and next ranked Pokémon.
 		$this->thisRank = $this->statsUsagePokemonRepository->getByPokemon(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$this->pokemon->getId(),
 			$languageId,
 		);
 		$this->prevRank = $this->statsUsagePokemonRepository->getByRank(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$this->thisRank['rank'] - 1,
 			$languageId,
 		);
 		$this->nextRank = $this->statsUsagePokemonRepository->getByRank(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$this->thisRank['rank'] + 1,
 			$languageId,
@@ -160,26 +160,26 @@ final class StatsPokemonModel
 
 		// Get Pokémon data.
 		$this->pokemonModel->setData(
-			$this->format->getVersionGroupId(),
+			$this->format->versionGroupId,
 			$this->pokemon->getId(),
 			$languageId,
 		);
 
 		// Get the format's version group and generation.
-		$this->versionGroup = $this->vgRepository->getById($this->format->getVersionGroupId());
+		$this->versionGroup = $this->vgRepository->getById($this->format->versionGroupId);
 		$this->generation = $this->generationRepository->getById($this->versionGroup->getGenerationId());
 
 		// Get the moveset Pokémon record.
 		$this->movesetPokemon = $this->movesetPokemonRepository->getByMonthAndFormatAndPokemon(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$this->pokemon->getId(),
 		);
 
 		// Get moveset rated Pokémon record.
 		$this->movesetRatedPokemon = $this->movesetRatedPokemonRepository->getByMonthAndFormatAndRatingAndPokemon(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$this->pokemon->getId(),
 		);
@@ -188,7 +188,7 @@ final class StatsPokemonModel
 		$this->abilities = $this->statsPokemonAbilityRepository->getByMonth(
 			$thisMonth,
 			$prevMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$this->pokemon->getId(),
 			$languageId,
@@ -198,10 +198,10 @@ final class StatsPokemonModel
 		$this->items = $this->statsPokemonItemRepository->getByMonth(
 			$thisMonth,
 			$prevMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$this->pokemon->getId(),
-			$this->format->getVersionGroupId(),
+			$this->format->versionGroupId,
 			$languageId,
 		);
 
@@ -218,19 +218,19 @@ final class StatsPokemonModel
 		$this->moves = $this->statsPokemonMoveRepository->getByMonth(
 			$thisMonth,
 			$prevMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$this->pokemon->getId(),
-			$this->format->getVersionGroupId(),
+			$this->format->versionGroupId,
 			$languageId,
 		);
 
 		// Get Tera type data.
-		if ($this->format->getVersionGroupId()->hasTeraTypes()) {
+		if ($this->format->versionGroupId->hasTeraTypes()) {
 			$this->teraTypes = $this->statsPokemonTeraTypeRepository->getByMonth(
 				$thisMonth,
 				$prevMonth,
-				$this->format->getId(),
+				$this->format->id,
 				$rating,
 				$this->pokemon->getId(),
 				$languageId,
@@ -240,7 +240,7 @@ final class StatsPokemonModel
 		// Get teammate data.
 		$this->teammates = $this->statsPokemonTeammateRepository->getByMonth(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$this->pokemon->getId(),
 			$languageId,
@@ -249,14 +249,14 @@ final class StatsPokemonModel
 		// Get counter data.
 		$this->counters = $this->statsPokemonCounterRepository->getByMonth(
 			$thisMonth,
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 			$this->pokemon->getId(),
 			$languageId,
 		);
 
 		$this->months = $this->usageRatedQueries->getMonthsWithData(
-			$this->format->getId(),
+			$this->format->id,
 			$rating,
 		);
 	}

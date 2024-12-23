@@ -66,16 +66,16 @@ final readonly class AveragedUsageView
 		], [
 			'text' => 'Formats',
 		], [
-			'text' => $format->getName(),
+			'text' => $format->name,
 		]];
 
 		return new JsonResponse([
 			'data' => [
 				'title' => 'Porydex - Stats - ' . $startMonth['name'] . ' through '
-					. $endMonth['name'] . ' ' . $format->getName(),
+					. $endMonth['name'] . ' ' . $format->name,
 				'format' => [
-					'identifier' => $format->getIdentifier(),
-					'name' => $format->getName(),
+					'identifier' => $format->identifier,
+					'name' => $format->name,
 				],
 				'rating' => $rating,
 				'breadcrumbs' => $breadcrumbs,
