@@ -63,7 +63,10 @@ final class SpreadModel
 		// Convert the base stats data structure for use in the stat calculator.
 		$baseStats = new StatValueContainer();
 		foreach ($stats as $stat) {
-			$baseStats->add(new StatValue($stat->getId(), $pokemon->baseStats[$stat->getIdentifier()]));
+			$baseStats->add(new StatValue(
+				$stat->id,
+				$pokemon->baseStats[$stat->identifier]
+			));
 		}
 
 		$attack = new StatId(StatId::ATTACK);
@@ -80,14 +83,14 @@ final class SpreadModel
 			$ivSpread = new StatValueContainer();
 			$perfectIv = $this->statCalculator->getPerfectIv($generationId);
 			foreach ($stats as $stat) {
-				$ivSpread->add(new StatValue($stat->getId(), $perfectIv));
+				$ivSpread->add(new StatValue($stat->id, $perfectIv));
 			}
 			// If it's a minus Attack nature with 0 Attack EVs, assume 0 IV.
-			if ($decreasedStatId?->value() === StatId::ATTACK && !$evSpread->get($attack)->getValue()) {
+			if ($decreasedStatId?->value() === StatId::ATTACK && !$evSpread->get($attack)->value) {
 				$ivSpread->add(new StatValue($attack, 0));
 			}
 			// If it's a minus Speed nature with 0 Speed EVs, assume 0 IV.
-			if ($decreasedStatId?->value() === StatId::SPEED && !$evSpread->get($speed)->getValue()) {
+			if ($decreasedStatId?->value() === StatId::SPEED && !$evSpread->get($speed)->value) {
 				$ivSpread->add(new StatValue($speed, 0));
 			}
 
@@ -100,13 +103,13 @@ final class SpreadModel
 				$calcEvSpread = new StatValueContainer();
 				foreach ($stats as $stat) {
 					// For Special, use what was imported as Special Attack.
-					$actingStatId = $stat->getId()->value() !== StatId::SPECIAL
-						? $stat->getId()
+					$actingStatId = $stat->id->value() !== StatId::SPECIAL
+						? $stat->id
 						: new StatId(StatId::SPECIAL_ATTACK);
-					$value = $spread->evs->get($actingStatId)->getValue();
+					$value = $spread->evs->get($actingStatId)->value;
 
-					$evSpread->add(new StatValue($stat->getId(), $value));
-					$calcEvSpread->add(new StatValue($stat->getId(), $value ** 2));
+					$evSpread->add(new StatValue($stat->id, $value));
+					$calcEvSpread->add(new StatValue($stat->id, $value ** 2));
 				}
 
 				$statSpread = $this->statCalculator->all1(
@@ -130,15 +133,15 @@ final class SpreadModel
 			// Convert stat arrays to stat objects.
 			$increasedStatId = $increasedStatId?->value();
 			$decreasedStatId = $decreasedStatId?->value();
-			$increasedStat = $stats[$increasedStatId]?->getIdentifier() ?? null;
-			$decreasedStat = $stats[$decreasedStatId]?->getIdentifier() ?? null;
+			$increasedStat = $stats[$increasedStatId]?->identifier ?? null;
+			$decreasedStat = $stats[$decreasedStatId]?->identifier ?? null;
 
 			$evs = [];
 			$finalStats = [];
 			foreach ($stats as $stat) {
-				$identifier = $stat->getIdentifier();
-				$evs[$identifier] = $evSpread->get($stat->getId())->getValue();
-				$finalStats[$identifier] = $statSpread->get($stat->getId())->getValue();
+				$identifier = $stat->identifier;
+				$evs[$identifier] = $evSpread->get($stat->id)->value;
+				$finalStats[$identifier] = $statSpread->get($stat->id)->value;
 			}
 
 			$this->spreads[] = [

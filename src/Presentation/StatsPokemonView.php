@@ -52,9 +52,9 @@ final readonly class StatsPokemonView
 		$movesetPokemon = $this->statsPokemonModel->movesetPokemon;
 		$movesetRatedPokemon = $this->statsPokemonModel->movesetRatedPokemon;
 
-		$rawCount = $movesetPokemon?->getRawCount();
-		$averageWeight = $movesetRatedPokemon?->getAverageWeight();
-		$viabilityCeiling = $movesetPokemon?->getViabilityCeiling();
+		$rawCount = $movesetPokemon?->rawCount;
+		$averageWeight = $movesetRatedPokemon?->averageWeight;
+		$viabilityCeiling = $movesetPokemon?->viabilityCeiling;
 
 		// Get miscellaneous Pokémon data.
 		$pokemonModel = $this->statsPokemonModel->pokemonModel;

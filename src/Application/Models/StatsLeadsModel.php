@@ -78,7 +78,7 @@ final class StatsLeadsModel
 			$languageId,
 			new StatId(StatId::SPEED),
 		);
-		$this->speedName = $speedName->getName();
+		$this->speedName = $speedName->name;
 
 		// Get the Pokémon usage data.
 		$this->pokemon = $this->statsLeadsPokemonRepository->getByMonth(

@@ -20,38 +20,14 @@ final readonly class Usage
 	 * @throws InvalidCountException if $totalBattles is invalid.
 	 */
 	public function __construct(
-		private DateTime $month,
-		private FormatId $formatId,
-		private int $totalBattles,
+		private(set) DateTime $month,
+		private(set) FormatId $formatId,
+		private(set) int $totalBattles,
 	) {
 		$this->validateMonth($month);
 
 		if ($totalBattles < 0) {
 			throw new InvalidCountException("Invalid number of total battles: $totalBattles.");
 		}
-	}
-
-	/**
-	 * Get the month.
-	 */
-	public function getMonth() : DateTime
-	{
-		return $this->month;
-	}
-
-	/**
-	 * Get the format id.
-	 */
-	public function getFormatId() : FormatId
-	{
-		return $this->formatId;
-	}
-
-	/**
-	 * Get the total battles.
-	 */
-	public function getTotalBattles() : int
-	{
-		return $this->totalBattles;
 	}
 }

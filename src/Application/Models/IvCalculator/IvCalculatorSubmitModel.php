@@ -78,19 +78,19 @@ final class IvCalculatorSubmitModel
 		// Initialize the array of possible IVs.
 		$possibleIvs = [];
 		foreach ($stats as $stat) {
-			$statIdentifier = $stat->getIdentifier();
+			$statIdentifier = $stat->identifier;
 			$possibleIvs[$statIdentifier] = range(0, 31);
 		}
 
 		// Then, one stat at a time, one level at a time, rule out as many of
 		// those IVs as possible.
 		foreach ($stats as $stat) {
-			$statIdentifier = $stat->getIdentifier();
+			$statIdentifier = $stat->identifier;
 
 			$base = $baseStats[$statIdentifier];
 
 			$natureModifier = $this->statCalculator->getNatureModifier(
-				$stat->getId(),
+				$stat->id,
 				$nature->increasedStatId,
 				$nature->decreasedStatId,
 			);
@@ -106,7 +106,7 @@ final class IvCalculatorSubmitModel
 
 				foreach ($possibleIvs[$statIdentifier] ?? [] as $possibleIvIndex => $possibleIv) {
 					$calculated = $this->statCalculator->gen3Stat(
-						$stat->getId(),
+						$stat->id,
 						$base,
 						$possibleIv,
 						$ev,
@@ -124,7 +124,7 @@ final class IvCalculatorSubmitModel
 		if ($characteristic && $versionGroup->hasCharacteristics()) {
 			$highestStatId = $characteristic->highestStatId;
 			$highestStat = $stats[$highestStatId->value()];
-			$highestStatIdentifier = $highestStat->getIdentifier();
+			$highestStatIdentifier = $highestStat->identifier;
 
 			foreach ($possibleIvs[$highestStatIdentifier] ?? [] as $possibleIvIndex => $possibleIv) {
 				if ($possibleIv % 5 !== $characteristic->ivModFive) {
@@ -136,7 +136,7 @@ final class IvCalculatorSubmitModel
 				$highestPossibleIv = max($possibleIvs[$highestStatIdentifier]);
 
 				foreach ($stats as $stat) {
-					$statIdentifier = $stat->getIdentifier();
+					$statIdentifier = $stat->identifier;
 					if ($statIdentifier === $highestStatIdentifier) {
 						continue;
 					}
@@ -157,7 +157,7 @@ final class IvCalculatorSubmitModel
 			// Attack can only be 31.)
 			$minimumIvs = [];
 			foreach ($stats as $stat) {
-				$statIdentifier = $stat->getIdentifier();
+				$statIdentifier = $stat->identifier;
 				if ($statIdentifier === $highestStatIdentifier) {
 					continue;
 				}
@@ -191,7 +191,7 @@ final class IvCalculatorSubmitModel
 			$possibleBits = [];
 
 			foreach ($stats as $stat) {
-				$statIdentifier = $stat->getIdentifier();
+				$statIdentifier = $stat->identifier;
 
 				$statBits[$statIdentifier] = [];
 				foreach ($possibleIvs[$statIdentifier] as $possibleIv) {
@@ -232,7 +232,7 @@ final class IvCalculatorSubmitModel
 			}
 
 			foreach ($stats as $stat) {
-				$statIdentifier = $stat->getIdentifier();
+				$statIdentifier = $stat->identifier;
 
 				$possibleBits[$statIdentifier] = array_keys($possibleBits[$statIdentifier]);
 
@@ -246,13 +246,13 @@ final class IvCalculatorSubmitModel
 			if ($characteristic && $versionGroup->hasCharacteristics()) {
 				$highestStatId = $characteristic->highestStatId;
 				$highestStat = $stats[$highestStatId->value()];
-				$highestStatIdentifier = $highestStat->getIdentifier();
+				$highestStatIdentifier = $highestStat->identifier;
 
 				// The "maximum of minimums" characteristic check can be run again
 				// to rule out more possible IVs after the Hidden Power checks.
 				$minimumIvs = [];
 				foreach ($stats as $stat) {
-					$statIdentifier = $stat->getIdentifier();
+					$statIdentifier = $stat->identifier;
 					if ($statIdentifier === $highestStatIdentifier) {
 						continue;
 					}
@@ -270,7 +270,7 @@ final class IvCalculatorSubmitModel
 
 		// We're done. Compile the results.
 		foreach ($stats as $stat) {
-			$statIdentifier = $stat->getIdentifier();
+			$statIdentifier = $stat->identifier;
 
 			$this->ivs[$statIdentifier] = $this->formatPossibleIvs($possibleIvs[$statIdentifier]);
 		}

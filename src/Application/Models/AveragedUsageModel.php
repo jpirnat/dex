@@ -127,7 +127,7 @@ final class AveragedUsageModel
 
 		// Get each usage record's data.
 		foreach ($usageRatedAveragedPokemons as $usageRatedAveragedPokemon) {
-			$pokemonId = $usageRatedAveragedPokemon->getPokemonId();
+			$pokemonId = $usageRatedAveragedPokemon->pokemonId;
 
 			// Get this Pokémon's name.
 			$pokemonName = $pokemonNames[$pokemonId->value()];
@@ -145,16 +145,16 @@ final class AveragedUsageModel
 			$usageAveragedPokemon = $usageAveragedPokemons[$pokemonId->value()];
 
 			$this->pokemon[] = new AveragedUsagePokemon(
-				$usageRatedAveragedPokemon->getRank(),
+				$usageRatedAveragedPokemon->rank,
 				$formIcon->image,
 				$numberOfMonths,
 				$pokemon->identifier,
 				$pokemonName->name,
-				$usageRatedAveragedPokemon->getUsagePercent(),
-				$usageAveragedPokemon->getRaw(),
-				$usageAveragedPokemon->getRawPercent(),
-				$usageAveragedPokemon->getReal(),
-				$usageAveragedPokemon->getRealPercent(),
+				$usageRatedAveragedPokemon->usagePercent,
+				$usageAveragedPokemon->raw,
+				$usageAveragedPokemon->rawPercent,
+				$usageAveragedPokemon->real,
+				$usageAveragedPokemon->realPercent,
 			);
 		}
 	}

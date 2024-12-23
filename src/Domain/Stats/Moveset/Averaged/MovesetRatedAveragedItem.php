@@ -28,13 +28,13 @@ final readonly class MovesetRatedAveragedItem
 	 * @throws InvalidPercentException if $percent is invalid
 	 */
 	public function __construct(
-		private DateTime $start,
-		private DateTime $end,
-		private FormatId $formatId,
-		private int $rating,
-		private PokemonId $pokemonId,
-		private ItemId $itemId,
-		private float $percent,
+		private(set) DateTime $start,
+		private(set) DateTime $end,
+		private(set) FormatId $formatId,
+		private(set) int $rating,
+		private(set) PokemonId $pokemonId,
+		private(set) ItemId $itemId,
+		private(set) float $percent,
 	) {
 		$this->validateMonth($start);
 		$this->validateMonth($end);
@@ -46,61 +46,5 @@ final readonly class MovesetRatedAveragedItem
 		if ($percent < 0 || $percent > 100) {
 			throw new InvalidPercentException("Invalid percent: $percent.");
 		}
-	}
-
-	/**
-	 * Get the start month.
-	 */
-	public function getStart() : DateTime
-	{
-		return $this->start;
-	}
-
-	/**
-	 * Get the end month.
-	 */
-	public function getEnd() : DateTime
-	{
-		return $this->end;
-	}
-
-	/**
-	 * Get the format id.
-	 */
-	public function getFormatId() : FormatId
-	{
-		return $this->formatId;
-	}
-
-	/**
-	 * Get the rating.
-	 */
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	/**
-	 * Get the Pokémon id.
-	 */
-	public function getPokemonId() : PokemonId
-	{
-		return $this->pokemonId;
-	}
-
-	/**
-	 * Get the item id.
-	 */
-	public function getItemId() : ItemId
-	{
-		return $this->itemId;
-	}
-
-	/**
-	 * Get the percent.
-	 */
-	public function getPercent() : float
-	{
-		return $this->percent;
 	}
 }

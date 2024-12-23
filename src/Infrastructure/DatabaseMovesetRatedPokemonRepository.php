@@ -148,8 +148,8 @@ final readonly class DatabaseMovesetRatedPokemonRepository implements MovesetRat
 				:average_weight
 			)'
 		);
-		$stmt->bindValue(':urp_id', $movesetRatedPokemon->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':average_weight', $movesetRatedPokemon->getAverageWeight());
+		$stmt->bindValue(':urp_id', $movesetRatedPokemon->usageRatedPokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':average_weight', $movesetRatedPokemon->averageWeight);
 		$stmt->execute();
 	}
 

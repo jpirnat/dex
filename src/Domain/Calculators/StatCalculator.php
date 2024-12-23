@@ -49,9 +49,9 @@ final readonly class StatCalculator
 			if ($statId->value() === StatId::HP) {
 				// Calculate HP.
 				$value = $this->gen1Hp(
-					(int) $baseStats->get($statId)->getValue(),
-					(int) $ivSpread->get($statId)->getValue(),
-					(int) $evSpread->get($statId)->getValue(),
+					(int) $baseStats->get($statId)->value,
+					(int) $ivSpread->get($statId)->value,
+					(int) $evSpread->get($statId)->value,
 					$level,
 				);
 				$statSpread->add(new StatValue($statId, $value));
@@ -59,9 +59,9 @@ final readonly class StatCalculator
 			}
 
 			$value = $this->gen1Other(
-				(int) $baseStats->get($statId)->getValue(),
-				(int) $ivSpread->get($statId)->getValue(),
-				(int) $evSpread->get($statId)->getValue(),
+				(int) $baseStats->get($statId)->value,
+				(int) $ivSpread->get($statId)->value,
+				(int) $evSpread->get($statId)->value,
 				$level,
 			);
 			$statSpread->add(new StatValue($statId, $value));
@@ -122,9 +122,9 @@ final readonly class StatCalculator
 			if ($statId->value() === StatId::HP) {
 				// Calculate HP.
 				$value = $this->gen3Hp(
-					(int) $baseStats->get($statId)->getValue(),
-					(int) $ivSpread->get($statId)->getValue(),
-					(int) $evSpread->get($statId)->getValue(),
+					(int) $baseStats->get($statId)->value,
+					(int) $ivSpread->get($statId)->value,
+					(int) $evSpread->get($statId)->value,
 					$level,
 				);
 				$statSpread->add(new StatValue($statId, $value));
@@ -132,9 +132,9 @@ final readonly class StatCalculator
 			}
 
 			$value = $this->gen3Other(
-				(int) $baseStats->get($statId)->getValue(),
-				(int) $ivSpread->get($statId)->getValue(),
-				(int) $evSpread->get($statId)->getValue(),
+				(int) $baseStats->get($statId)->value,
+				(int) $ivSpread->get($statId)->value,
+				(int) $evSpread->get($statId)->value,
 				$level,
 				$this->getNatureModifier($statId, $increasedStatId, $decreasedStatId),
 			);

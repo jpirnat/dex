@@ -6,23 +6,7 @@ namespace Jp\Dex\Domain\Stats;
 final readonly class StatValue
 {
 	public function __construct(
-		private StatId $statId,
-		private float $value,
+		private(set) StatId $statId,
+		private(set) float $value,
 	) {}
-
-	/**
-	 * Get the stat id.
-	 */
-	public function getStatId() : StatId
-	{
-		return $this->statId;
-	}
-
-	/**
-	 * Get the value.
-	 */
-	public function getValue() : float
-	{
-		return $this->value;
-	}
 }

@@ -23,11 +23,11 @@ final readonly class MovesetPokemon
 	 * @throws InvalidViabilityCeilingException if $viabilityCeiling is invalid.
 	 */
 	public function __construct(
-		private DateTime $month,
-		private FormatId $formatId,
-		private PokemonId $pokemonId,
-		private int $rawCount,
-		private ?int $viabilityCeiling,
+		private(set) DateTime $month,
+		private(set) FormatId $formatId,
+		private(set) PokemonId $pokemonId,
+		private(set) int $rawCount,
+		private(set) ?int $viabilityCeiling,
 	) {
 		$this->validateMonth($month);
 
@@ -40,45 +40,5 @@ final readonly class MovesetPokemon
 				"Invalid viability ceiling: $viabilityCeiling."
 			);
 		}
-	}
-
-	/**
-	 * Get the month.
-	 */
-	public function getMonth() : DateTime
-	{
-		return $this->month;
-	}
-
-	/**
-	 * Get the format id.
-	 */
-	public function getFormatId() : FormatId
-	{
-		return $this->formatId;
-	}
-
-	/**
-	 * Get the Pokémon id.
-	 */
-	public function getPokemonId() : PokemonId
-	{
-		return $this->pokemonId;
-	}
-
-	/**
-	 * Get the raw count.
-	 */
-	public function getRawCount() : int
-	{
-		return $this->rawCount;
-	}
-
-	/**
-	 * Get the viability ceiling.
-	 */
-	public function getViabilityCeiling() : ?int
-	{
-		return $this->viabilityCeiling;
 	}
 }

@@ -6,7 +6,7 @@ namespace Jp\Dex\Domain\Stats;
 final class StatValueContainer
 {
 	/** @var StatValue[] $statValues */
-	private array $statValues = [];
+	private(set) array $statValues = [];
 
 	/**
 	 * Constructor.
@@ -25,7 +25,8 @@ final class StatValueContainer
 	 */
 	public function add(StatValue $statValue) : void
 	{
-		$this->statValues[$statValue->getStatId()->value()] = $statValue;
+		$statId = $statValue->statId->value();
+		$this->statValues[$statId] = $statValue;
 	}
 
 	/**
@@ -44,15 +45,5 @@ final class StatValueContainer
 		}
 
 		return $this->statValues[$statId->value()];
-	}
-
-	/**
-	 * Get all stat values from the container.
-	 *
-	 * @return StatValue[]
-	 */
-	public function getAll() : array
-	{
-		return $this->statValues;
 	}
 }

@@ -16,9 +16,9 @@ final readonly class LeadsRatedPokemon
 	 * @throws InvalidPercentException if $usagePercent is invalid
 	 */
 	public function __construct(
-		private UsageRatedPokemonId $usageRatedPokemonId,
-		private int $rank,
-		private float $usagePercent,
+		private(set) UsageRatedPokemonId $usageRatedPokemonId,
+		private(set) int $rank,
+		private(set) float $usagePercent,
 	) {
 		if ($rank < 1) {
 			throw new InvalidRankException("Invalid rank: $rank.");
@@ -27,29 +27,5 @@ final readonly class LeadsRatedPokemon
 		if ($usagePercent < 0 || $usagePercent > 100) {
 			throw new InvalidPercentException("Invalid usage percent: $usagePercent.");
 		}
-	}
-
-	/**
-	 * Get the usage rated Pokémon id.
-	 */
-	public function getUsageRatedPokemonId() : UsageRatedPokemonId
-	{
-		return $this->usageRatedPokemonId;
-	}
-
-	/**
-	 * Get the rank.
-	 */
-	public function getRank() : int
-	{
-		return $this->rank;
-	}
-
-	/**
-	 * Get the usage percent.
-	 */
-	public function getUsagePercent() : float
-	{
-		return $this->usagePercent;
 	}
 }

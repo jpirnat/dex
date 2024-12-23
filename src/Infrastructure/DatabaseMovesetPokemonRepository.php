@@ -55,11 +55,11 @@ final readonly class DatabaseMovesetPokemonRepository implements MovesetPokemonR
 				:viability_ceiling
 			)'
 		);
-		$stmt->bindValue(':month', $movesetPokemon->getMonth()->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $movesetPokemon->getFormatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $movesetPokemon->getPokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':raw_count', $movesetPokemon->getRawCount(), PDO::PARAM_INT);
-		$stmt->bindValue(':viability_ceiling', $movesetPokemon->getViabilityCeiling(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $movesetPokemon->month->format('Y-m-01'));
+		$stmt->bindValue(':format_id', $movesetPokemon->formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $movesetPokemon->pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':raw_count', $movesetPokemon->rawCount, PDO::PARAM_INT);
+		$stmt->bindValue(':viability_ceiling', $movesetPokemon->viabilityCeiling, PDO::PARAM_INT);
 		$stmt->execute();
 	}
 

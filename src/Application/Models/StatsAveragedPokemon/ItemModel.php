@@ -43,7 +43,7 @@ final readonly class ItemModel
 
 		// Get each item's data.
 		foreach ($movesetRatedAveragedItems as $movesetRatedAveragedItem) {
-			$itemId = $movesetRatedAveragedItem->getItemId();
+			$itemId = $movesetRatedAveragedItem->itemId;
 
 			// Get this item's name.
 			$itemName = $this->itemNameRepository->getByLanguageAndItem(
@@ -57,7 +57,7 @@ final readonly class ItemModel
 			$items[] = [
 				'identifier' => $item->identifier,
 				'name' => $itemName->name,
-				'percent' => $movesetRatedAveragedItem->getPercent(),
+				'percent' => $movesetRatedAveragedItem->percent,
 			];
 		}
 

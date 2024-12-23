@@ -25,12 +25,12 @@ final readonly class UsageRatedPokemon
 	 * @throws InvalidPercentException if $usagePercent is invalid
 	 */
 	public function __construct(
-		private DateTime $month,
-		private FormatId $formatId,
-		private int $rating,
-		private PokemonId $pokemonId,
-		private int $rank,
-		private float $usagePercent,
+		private(set) DateTime $month,
+		private(set) FormatId $formatId,
+		private(set) int $rating,
+		private(set) PokemonId $pokemonId,
+		private(set) int $rank,
+		private(set) float $usagePercent,
 	) {
 		$this->validateMonth($month);
 
@@ -45,53 +45,5 @@ final readonly class UsageRatedPokemon
 		if ($usagePercent < 0 || $usagePercent > 100) {
 			throw new InvalidPercentException("Invalid usage percent: $usagePercent.");
 		}
-	}
-
-	/**
-	 * Get the month.
-	 */
-	public function getMonth() : DateTime
-	{
-		return $this->month;
-	}
-
-	/**
-	 * Get the format id.
-	 */
-	public function getFormatId() : FormatId
-	{
-		return $this->formatId;
-	}
-
-	/**
-	 * Get the rating.
-	 */
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	/**
-	 * Get the Pokémon id.
-	 */
-	public function getPokemonId() : PokemonId
-	{
-		return $this->pokemonId;
-	}
-
-	/**
-	 * Get the rank.
-	 */
-	public function getRank() : int
-	{
-		return $this->rank;
-	}
-
-	/**
-	 * Get the usage percent.
-	 */
-	public function getUsagePercent() : float
-	{
-		return $this->usagePercent;
 	}
 }

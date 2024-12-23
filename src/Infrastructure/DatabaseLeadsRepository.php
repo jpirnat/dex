@@ -50,9 +50,9 @@ final readonly class DatabaseLeadsRepository implements LeadsRepositoryInterface
 				:total_leads
 			)'
 		);
-		$stmt->bindValue(':month', $leads->getMonth()->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $leads->getFormatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':total_leads', $leads->getTotalLeads(), PDO::PARAM_INT);
+		$stmt->bindValue(':month', $leads->month->format('Y-m-01'));
+		$stmt->bindValue(':format_id', $leads->formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':total_leads', $leads->totalLeads, PDO::PARAM_INT);
 		$stmt->execute();
 	}
 }

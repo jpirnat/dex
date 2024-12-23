@@ -23,11 +23,11 @@ final readonly class LeadsPokemon
 	 * @throws InvalidPercentException if $rawPercent is invalid.
 	 */
 	public function __construct(
-		private DateTime $month,
-		private FormatId $formatId,
-		private PokemonId $pokemonId,
-		private int $raw,
-		private float $rawPercent,
+		private(set) DateTime $month,
+		private(set) FormatId $formatId,
+		private(set) PokemonId $pokemonId,
+		private(set) int $raw,
+		private(set) float $rawPercent,
 	) {
 		$this->validateMonth($month);
 
@@ -38,45 +38,5 @@ final readonly class LeadsPokemon
 		if ($rawPercent < 0 || $rawPercent > 100) {
 			throw new InvalidPercentException("Invalid raw percent: $rawPercent.");
 		}
-	}
-
-	/**
-	 * Get the month.
-	 */
-	public function getMonth() : DateTime
-	{
-		return $this->month;
-	}
-
-	/**
-	 * Get the format id.
-	 */
-	public function getFormatId() : FormatId
-	{
-		return $this->formatId;
-	}
-
-	/**
-	 * Get the Pokémon id.
-	 */
-	public function getPokemonId() : PokemonId
-	{
-		return $this->pokemonId;
-	}
-
-	/**
-	 * Get the raw.
-	 */
-	public function getRaw() : int
-	{
-		return $this->raw;
-	}
-
-	/**
-	 * Get the raw percent.
-	 */
-	public function getRawPercent() : float
-	{
-		return $this->rawPercent;
 	}
 }

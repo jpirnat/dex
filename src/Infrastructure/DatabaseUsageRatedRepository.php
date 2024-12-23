@@ -54,10 +54,10 @@ final readonly class DatabaseUsageRatedRepository implements UsageRatedRepositor
 				:average_weight_per_team
 			)'
 		);
-		$stmt->bindValue(':month', $usageRated->getMonth()->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $usageRated->getFormatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $usageRated->getRating(), PDO::PARAM_INT);
-		$stmt->bindValue(':average_weight_per_team', $usageRated->getAverageWeightPerTeam());
+		$stmt->bindValue(':month', $usageRated->month->format('Y-m-01'));
+		$stmt->bindValue(':format_id', $usageRated->formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $usageRated->rating, PDO::PARAM_INT);
+		$stmt->bindValue(':average_weight_per_team', $usageRated->averageWeightPerTeam);
 		$stmt->execute();
 	}
 }

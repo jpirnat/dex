@@ -43,7 +43,7 @@ final readonly class MoveModel
 
 		// Get each move's data.
 		foreach ($movesetRatedAveragedMoves as $movesetRatedAveragedMove) {
-			$moveId = $movesetRatedAveragedMove->getMoveId();
+			$moveId = $movesetRatedAveragedMove->moveId;
 
 			// Get this move's name.
 			$moveName = $this->moveNameRepository->getByLanguageAndMove(
@@ -57,7 +57,7 @@ final readonly class MoveModel
 			$moves[] = [
 				'identifier' => $move->identifier,
 				'name' => $moveName->name,
-				'percent' => $movesetRatedAveragedMove->getPercent(),
+				'percent' => $movesetRatedAveragedMove->percent,
 			];
 		}
 

@@ -30,9 +30,9 @@ final readonly class DatabaseMovesetRatedTeraTypeRepository implements MovesetRa
 				:percent
 			)'
 		);
-		$stmt->bindValue(':urp_id', $movesetRatedTeraType->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':type_id', $movesetRatedTeraType->getTypeId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':percent', $movesetRatedTeraType->getPercent());
+		$stmt->bindValue(':urp_id', $movesetRatedTeraType->usageRatedPokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $movesetRatedTeraType->typeId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':percent', $movesetRatedTeraType->percent);
 		try {
 			$stmt->execute();
 		} catch (PDOException) {

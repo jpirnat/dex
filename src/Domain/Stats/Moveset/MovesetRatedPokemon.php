@@ -14,29 +14,13 @@ final readonly class MovesetRatedPokemon
 	 * @throws InvalidAverageWeightException if $averageWeight is invalid.
 	 */
 	public function __construct(
-		private UsageRatedPokemonId $usageRatedPokemonId,
-		private float $averageWeight,
+		private(set) UsageRatedPokemonId $usageRatedPokemonId,
+		private(set) float $averageWeight,
 	) {
 		if ($averageWeight < 0) {
 			throw new InvalidAverageWeightException(
 				"Invalid average weight: $averageWeight."
 			);
 		}
-	}
-
-	/**
-	 * Get the usage rated Pokémon id.
-	 */
-	public function getUsageRatedPokemonId() : UsageRatedPokemonId
-	{
-		return $this->usageRatedPokemonId;
-	}
-
-	/**
-	 * Get the average weight.
-	 */
-	public function getAverageWeight() : float
-	{
-		return $this->averageWeight;
 	}
 }

@@ -60,12 +60,12 @@ final readonly class DatabaseUsageRatedPokemonRepository implements UsageRatedPo
 				:usage_percent
 			)'
 		);
-		$stmt->bindValue(':month', $usageRatedPokemon->getMonth()->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $usageRatedPokemon->getFormatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $usageRatedPokemon->getRating(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $usageRatedPokemon->getPokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rank', $usageRatedPokemon->getRank(), PDO::PARAM_INT);
-		$stmt->bindValue(':usage_percent', $usageRatedPokemon->getUsagePercent());
+		$stmt->bindValue(':month', $usageRatedPokemon->month->format('Y-m-01'));
+		$stmt->bindValue(':format_id', $usageRatedPokemon->formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rating', $usageRatedPokemon->rating, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $usageRatedPokemon->pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rank', $usageRatedPokemon->rank, PDO::PARAM_INT);
+		$stmt->bindValue(':usage_percent', $usageRatedPokemon->usagePercent);
 		$stmt->execute();
 	}
 

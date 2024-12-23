@@ -61,20 +61,20 @@ final class EvCalculatorSubmitModel
 		// Initialize the array of possible EVs.
 		$possibleEvs = [];
 		foreach ($stats as $stat) {
-			$statIdentifier = $stat->getIdentifier();
+			$statIdentifier = $stat->identifier;
 			$possibleEvs[$statIdentifier] = range(0, $versionGroup->getMaxEvsPerStat());
 		}
 
 		// Then, one stat at a time, one level at a time, rule out as many of
 		// those EVs as possible.
 		foreach ($stats as $stat) {
-			$statIdentifier = $stat->getIdentifier();
+			$statIdentifier = $stat->identifier;
 
 			$base = $baseStats[$statIdentifier];
 			$iv = (int) ($ivs[$statIdentifier] ?? 0);
 
 			$natureModifier = $this->statCalculator->getNatureModifier(
-				$stat->getId(),
+				$stat->id,
 				$nature->increasedStatId,
 				$nature->decreasedStatId,
 			);
@@ -89,7 +89,7 @@ final class EvCalculatorSubmitModel
 
 				foreach ($possibleEvs[$statIdentifier] ?? [] as $possibleEvIndex => $possibleEv) {
 					$calculated = $this->statCalculator->gen3Stat(
-						$stat->getId(),
+						$stat->id,
 						$base,
 						$iv,
 						$possibleEv,
@@ -108,14 +108,14 @@ final class EvCalculatorSubmitModel
 		// than 252, we might be able to rule out some upper bounds on EV ranges.
 		$minimumEvs = [];
 		foreach ($stats as $stat) {
-			$statIdentifier = $stat->getIdentifier();
+			$statIdentifier = $stat->identifier;
 			if ($possibleEvs[$statIdentifier]) {
 				$minimumEvs[] = min($possibleEvs[$statIdentifier]);
 			}
 		}
 		$availableEvs = 510 - array_sum($minimumEvs);
 		foreach ($stats as $stat) {
-			$statIdentifier = $stat->getIdentifier();
+			$statIdentifier = $stat->identifier;
 			if ($possibleEvs[$statIdentifier]) {
 				$minimumEv = min($possibleEvs[$statIdentifier]);
 				foreach ($possibleEvs[$statIdentifier] as $possibleEvIndex => $possibleEv) {
@@ -128,7 +128,7 @@ final class EvCalculatorSubmitModel
 
 		// We're done. Compile the results.
 		foreach ($stats as $stat) {
-			$statIdentifier = $stat->getIdentifier();
+			$statIdentifier = $stat->identifier;
 
 			$this->evs[$statIdentifier] = $this->formatPossibleEvs($possibleEvs[$statIdentifier]);
 		}

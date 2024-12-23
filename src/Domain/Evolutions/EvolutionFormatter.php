@@ -282,8 +282,8 @@ final readonly class EvolutionFormatter
 		$level = $evolution->level;
 
 		$statNames = $this->statNameRepository->getByLanguage($languageId);
-		$attack = $statNames[StatId::ATTACK]->getName();
-		$defense = $statNames[StatId::DEFENSE]->getName();
+		$attack = $statNames[StatId::ATTACK]->name;
+		$defense = $statNames[StatId::DEFENSE]->name;
 
 		$html = match ($evolution->evoMethodId->value()) {
 			EvoMethodId::LEVEL_UP_ATK_GT_DEF => "Level up, starting at level $level, when $attack > $defense",
@@ -411,7 +411,7 @@ final readonly class EvolutionFormatter
 		$number = $evolution->otherParameter;
 
 		$statNames = $this->statNameRepository->getByLanguage($languageId);
-		$hp = $statNames[StatId::HP]->getName();
+		$hp = $statNames[StatId::HP]->name;
 
 		return new EvolutionTableMethod(
 			"Pass under the rock arch in Dusty Bowl after taking at least $number $hp in damage from attacks without fainting",
@@ -495,7 +495,7 @@ final readonly class EvolutionFormatter
 		$number = $evolution->otherParameter;
 
 		$statNames = $this->statNameRepository->getByLanguage($languageId);
-		$hp = $statNames[StatId::HP]->getName();
+		$hp = $statNames[StatId::HP]->name;
 
 		$gender = match ($evolution->evoMethodId->value()) {
 			EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_MALE => 'males',

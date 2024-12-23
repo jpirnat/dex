@@ -18,14 +18,14 @@ final readonly class MovesetRatedSpread
 	 * @throws InvalidPercentException if $percent is invalid
 	 */
 	public function __construct(
-		private UsageRatedPokemonId $usageRatedPokemonId,
-		private NatureId $natureId,
-		private StatValueContainer $evSpread,
-		private float $percent,
+		private(set) UsageRatedPokemonId $usageRatedPokemonId,
+		private(set) NatureId $natureId,
+		private(set) StatValueContainer $evSpread,
+		private(set) float $percent,
 	) {
-		foreach ($evSpread->getAll() as $statValue) {
-			if ($statValue->getValue() < 0 || $statValue->getValue() > 255) {
-				$statId = $statValue->getStatId()->value();
+		foreach ($evSpread->statValues as $statValue) {
+			if ($statValue->value < 0 || $statValue->value > 255) {
+				$statId = $statValue->statId->value();
 				throw new InvalidCountException(
 					"Invalid number of EVs for stat id $statId."
 				);
@@ -35,37 +35,5 @@ final readonly class MovesetRatedSpread
 		if ($percent < 0 || $percent > 100) {
 			throw new InvalidPercentException("Invalid percent: $percent.");
 		}
-	}
-
-	/**
-	 * Get the usage rated Pokémon id.
-	 */
-	public function getUsageRatedPokemonId() : UsageRatedPokemonId
-	{
-		return $this->usageRatedPokemonId;
-	}
-
-	/**
-	 * Get the nature id.
-	 */
-	public function getNatureId() : NatureId
-	{
-		return $this->natureId;
-	}
-
-	/**
-	 * Get the EV spread.
-	 */
-	public function getEvSpread() : StatValueContainer
-	{
-		return $this->evSpread;
-	}
-
-	/**
-	 * Get the percent.
-	 */
-	public function getPercent() : float
-	{
-		return $this->percent;
 	}
 }

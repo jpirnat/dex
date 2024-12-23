@@ -23,10 +23,10 @@ final readonly class UsageRated
 	 *     invalid.
 	 */
 	public function __construct(
-		private DateTime $month,
-		private FormatId $formatId,
-		private int $rating,
-		private float $averageWeightPerTeam,
+		private(set) DateTime $month,
+		private(set) FormatId $formatId,
+		private(set) int $rating,
+		private(set) float $averageWeightPerTeam,
 	) {
 		$this->validateMonth($month);
 
@@ -39,37 +39,5 @@ final readonly class UsageRated
 				"Invalid average weight per team: $averageWeightPerTeam."
 			);
 		}
-	}
-
-	/**
-	 * Get the month.
-	 */
-	public function getMonth() : DateTime
-	{
-		return $this->month;
-	}
-
-	/**
-	 * Get the format id.
-	 */
-	public function getFormatId() : FormatId
-	{
-		return $this->formatId;
-	}
-
-	/**
-	 * Get the rating.
-	 */
-	public function getRating() : int
-	{
-		return $this->rating;
-	}
-
-	/**
-	 * Get the average weight per team.
-	 */
-	public function getAverageWeightPerTeam() : float
-	{
-		return $this->averageWeightPerTeam;
 	}
 }

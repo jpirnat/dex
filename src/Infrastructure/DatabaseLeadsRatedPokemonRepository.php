@@ -54,9 +54,9 @@ final readonly class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPo
 				:usage_percent
 			)'
 		);
-		$stmt->bindValue(':urp_id', $leadsRatedPokemon->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':rank', $leadsRatedPokemon->getRank(), PDO::PARAM_INT);
-		$stmt->bindValue(':usage_percent', $leadsRatedPokemon->getUsagePercent());
+		$stmt->bindValue(':urp_id', $leadsRatedPokemon->usageRatedPokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':rank', $leadsRatedPokemon->rank, PDO::PARAM_INT);
+		$stmt->bindValue(':usage_percent', $leadsRatedPokemon->usagePercent);
 		$stmt->execute();
 	}
 }

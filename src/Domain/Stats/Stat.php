@@ -6,17 +6,7 @@ namespace Jp\Dex\Domain\Stats;
 final readonly class Stat
 {
 	public function __construct(
-		private StatId $id,
-		private string $identifier,
+		private(set) StatId $id,
+		private(set) string $identifier,
 	) {}
-
-	public function getId() : StatId
-	{
-		return $this->id;
-	}
-
-	public function getIdentifier() : string
-	{
-		return $this->identifier;
-	}
 }

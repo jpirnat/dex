@@ -43,7 +43,7 @@ final readonly class AbilityModel
 
 		// Get each ability's data.
 		foreach ($movesetRatedAveragedAbilities as $movesetRatedAveragedAbility) {
-			$abilityId = $movesetRatedAveragedAbility->getAbilityId();
+			$abilityId = $movesetRatedAveragedAbility->abilityId;
 
 			// Get this ability's name.
 			$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
@@ -57,7 +57,7 @@ final readonly class AbilityModel
 			$abilities[] = [
 				'identifier' => $ability->identifier,
 				'name' => $abilityName->name,
-				'percent' => $movesetRatedAveragedAbility->getPercent(),
+				'percent' => $movesetRatedAveragedAbility->percent,
 			];
 		}
 

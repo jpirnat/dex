@@ -28,14 +28,14 @@ final readonly class UsageAveragedPokemon
 	 *     $realPercent is invalid.
 	 */
 	public function __construct(
-		private DateTime $start,
-		private DateTime $end,
-		private FormatId $formatId,
-		private PokemonId $pokemonId,
-		private int $raw,
-		private float $rawPercent,
-		private int $real,
-		private float $realPercent,
+		private(set) DateTime $start,
+		private(set) DateTime $end,
+		private(set) FormatId $formatId,
+		private(set) PokemonId $pokemonId,
+		private(set) int $raw,
+		private(set) float $rawPercent,
+		private(set) int $real,
+		private(set) float $realPercent,
 	) {
 		$this->validateMonth($start);
 		$this->validateMonth($end);
@@ -55,69 +55,5 @@ final readonly class UsageAveragedPokemon
 		if ($realPercent < 0 || $realPercent > 100) {
 			throw new InvalidPercentException("Invalid real percent: $realPercent.");
 		}
-	}
-
-	/**
-	 * Get the start month.
-	 */
-	public function getStart() : DateTime
-	{
-		return $this->start;
-	}
-
-	/**
-	 * Get the end month.
-	 */
-	public function getEnd() : DateTime
-	{
-		return $this->end;
-	}
-
-	/**
-	 * Get the format id.
-	 */
-	public function getFormatId() : FormatId
-	{
-		return $this->formatId;
-	}
-
-	/**
-	 * Get the Pokémon id.
-	 */
-	public function getPokemonId() : PokemonId
-	{
-		return $this->pokemonId;
-	}
-
-	/**
-	 * Get the raw.
-	 */
-	public function getRaw() : int
-	{
-		return $this->raw;
-	}
-
-	/**
-	 * Get the raw percent.
-	 */
-	public function getRawPercent() : float
-	{
-		return $this->rawPercent;
-	}
-
-	/**
-	 * Get the real.
-	 */
-	public function getReal() : int
-	{
-		return $this->real;
-	}
-
-	/**
-	 * Get the real percent.
-	 */
-	public function getRealPercent() : float
-	{
-		return $this->realPercent;
 	}
 }

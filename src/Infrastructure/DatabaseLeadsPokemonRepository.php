@@ -54,11 +54,11 @@ final readonly class DatabaseLeadsPokemonRepository implements LeadsPokemonRepos
 				:raw_percent
 			)'
 		);
-		$stmt->bindValue(':month', $leadsPokemon->getMonth()->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $leadsPokemon->getFormatId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $leadsPokemon->getPokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':raw', $leadsPokemon->getRaw(), PDO::PARAM_INT);
-		$stmt->bindValue(':raw_percent', $leadsPokemon->getRawPercent());
+		$stmt->bindValue(':month', $leadsPokemon->month->format('Y-m-01'));
+		$stmt->bindValue(':format_id', $leadsPokemon->formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $leadsPokemon->pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':raw', $leadsPokemon->raw, PDO::PARAM_INT);
+		$stmt->bindValue(':raw_percent', $leadsPokemon->rawPercent);
 		$stmt->execute();
 	}
 }

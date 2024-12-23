@@ -37,13 +37,13 @@ final readonly class DatabaseMovesetRatedCounterRepository implements MovesetRat
 				:percent_switched_out
 			)'
 		);
-		$stmt->bindValue(':urp_id', $movesetRatedCounter->getUsageRatedPokemonId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':counter_id', $movesetRatedCounter->getCounterId()->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':number1', $movesetRatedCounter->getNumber1());
-		$stmt->bindValue(':number2', $movesetRatedCounter->getNumber2());
-		$stmt->bindValue(':number3', $movesetRatedCounter->getNumber3());
-		$stmt->bindValue(':percent_knocked_out', $movesetRatedCounter->getPercentKnockedOut());
-		$stmt->bindValue(':percent_switched_out', $movesetRatedCounter->getPercentSwitchedOut());
+		$stmt->bindValue(':urp_id', $movesetRatedCounter->usageRatedPokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':counter_id', $movesetRatedCounter->counterId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':number1', $movesetRatedCounter->number1);
+		$stmt->bindValue(':number2', $movesetRatedCounter->number2);
+		$stmt->bindValue(':number3', $movesetRatedCounter->number3);
+		$stmt->bindValue(':percent_knocked_out', $movesetRatedCounter->percentKnockedOut);
+		$stmt->bindValue(':percent_switched_out', $movesetRatedCounter->percentSwitchedOut);
 		$stmt->execute();
 	}
 }

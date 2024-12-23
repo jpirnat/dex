@@ -115,7 +115,7 @@ final class AveragedLeadsModel
 
 		// Get each leads record's data.
 		foreach ($leadsRatedAveragedPokemons as $leadsRatedAveragedPokemon) {
-			$pokemonId = $leadsRatedAveragedPokemon->getPokemonId();
+			$pokemonId = $leadsRatedAveragedPokemon->pokemonId;
 
 			// Get this Pokémon's name.
 			$pokemonName = $pokemonNames[$pokemonId->value()];
@@ -133,14 +133,14 @@ final class AveragedLeadsModel
 			$leadsAveragedPokemon = $leadsAveragedPokemons[$pokemonId->value()];
 
 			$this->pokemon[] = new AveragedLeadsPokemon(
-				$leadsRatedAveragedPokemon->getRank(),
+				$leadsRatedAveragedPokemon->rank,
 				$formIcon->image,
 				$numberOfMonths,
 				$pokemon->identifier,
 				$pokemonName->name,
-				$leadsRatedAveragedPokemon->getUsagePercent(),
-				$leadsAveragedPokemon->getRaw(),
-				$leadsAveragedPokemon->getRawPercent(),
+				$leadsRatedAveragedPokemon->usagePercent,
+				$leadsAveragedPokemon->raw,
+				$leadsAveragedPokemon->rawPercent,
 			);
 		}
 	}
