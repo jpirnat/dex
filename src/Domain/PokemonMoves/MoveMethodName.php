@@ -8,41 +8,9 @@ use Jp\Dex\Domain\Languages\LanguageId;
 final readonly class MoveMethodName
 {
 	public function __construct(
-		private LanguageId $languageId,
-		private MoveMethodId $moveMethodId,
-		private string $name,
-		private string $description,
+		private(set) LanguageId $languageId,
+		private(set) MoveMethodId $moveMethodId,
+		private(set) string $name,
+		private(set) string $description,
 	) {}
-
-	/**
-	 * Get the move method name's language id.
-	 */
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	/**
-	 * Get the move method name's move method id.
-	 */
-	public function getMoveMethodId() : MoveMethodId
-	{
-		return $this->moveMethodId;
-	}
-
-	/**
-	 * Get the move method name's name value.
-	 */
-	public function getName() : string
-	{
-		return $this->name;
-	}
-
-	/**
-	 * Get the move method name's description.
-	 */
-	public function getDescription() : string
-	{
-		return $this->description;
-	}
 }

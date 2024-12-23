@@ -83,9 +83,9 @@ final class DexPokemonMovesModel
 		$moveVgIndexes = [];
 		$methodsMoves = [];
 		foreach ($pokemonMoves as $pokemonMove) {
-			$vgId = $pokemonMove->getVersionGroupId()->value();
-			$moveId = $pokemonMove->getMoveId()->value();
-			$methodId = $pokemonMove->getMoveMethodId()->value();
+			$vgId = $pokemonMove->versionGroupId->value();
+			$moveId = $pokemonMove->moveId->value();
+			$methodId = $pokemonMove->moveMethodId->value();
 
 			if (!isset($this->learnsetVgs[$vgId])) {
 				// This should only happen if this Pokémon move is from a gen 1
@@ -108,7 +108,7 @@ final class DexPokemonMovesModel
 					}
 
 					$index = $moveVgIndexes[$moveId][$vgIdentifier];
-					$level = $pokemonMove->getLevel();
+					$level = $pokemonMove->level;
 					$levelUpMoves[$moveId][$index][$vgIdentifier] = $level;
 					break;
 				case MoveMethodId::MACHINE:
@@ -201,9 +201,9 @@ final class DexPokemonMovesModel
 			}
 
 			$this->methods[$methodId] = new DexPokemonMoveMethod(
-				$moveMethod->getIdentifier(),
-				$moveMethodNames[$methodId]->getName(),
-				$moveMethodNames[$methodId]->getDescription(),
+				$moveMethod->identifier,
+				$moveMethodNames[$methodId]->name,
+				$moveMethodNames[$methodId]->description,
 				$dexPokemonMoves[$methodId],
 			);
 		}

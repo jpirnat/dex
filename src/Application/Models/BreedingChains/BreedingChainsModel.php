@@ -76,7 +76,7 @@ final class BreedingChainsModel
 			$chainId = [];
 			$records = [];
 			foreach ($chain as $pokemonMove) {
-				$chainId[] = $pokemonMove->getPokemonId()->value();
+				$chainId[] = $pokemonMove->pokemonId->value();
 				$records[] = $this->getRecord($pokemonMove, $languageId);
 			}
 			$chainId = implode('-', $chainId);
@@ -91,16 +91,14 @@ final class BreedingChainsModel
 		PokemonMove $pokemonMove,
 		LanguageId $languageId,
 	) : BreedingChainRecord {
-		$pokemonId = $pokemonMove->getPokemonId();
-
 		$versionGroup = $this->dexVersionGroupRepository->getById(
-			$pokemonMove->getVersionGroupId(),
+			$pokemonMove->versionGroupId,
 			$languageId,
 		);
 
 		$pokemon = $this->dexPokemonRepository->getById(
 			$versionGroup->getId(),
-			$pokemonId,
+			$pokemonMove->pokemonId,
 			$languageId,
 		);
 

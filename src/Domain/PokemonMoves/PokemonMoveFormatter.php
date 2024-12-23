@@ -26,20 +26,20 @@ final readonly class PokemonMoveFormatter
 		PokemonMove $pokemonMove,
 		LanguageId $languageId,
 	) : string {
-		$method = $pokemonMove->getMoveMethodId()->value();
+		$method = $pokemonMove->moveMethodId->value();
 
 		if ($method === MoveMethodId::LEVEL_UP) {
-			return 'Level ' . $pokemonMove->getLevel();
+			return 'Level ' . $pokemonMove->level;
 		}
 
 		if ($method === MoveMethodId::MACHINE) {
 			$tm = $this->tmRepository->getByVersionGroupAndMove(
-				$pokemonMove->getVersionGroupId(),
-				$pokemonMove->getMoveId(),
+				$pokemonMove->versionGroupId,
+				$pokemonMove->moveId,
 			);
 
 			$itemName = $this->itemDescriptionRepository->getByItem(
-				$pokemonMove->getVersionGroupId(),
+				$pokemonMove->versionGroupId,
 				$languageId,
 				$tm->itemId,
 			);
@@ -66,7 +66,7 @@ final readonly class PokemonMoveFormatter
 
 		if ($method === MoveMethodId::LIGHT_BALL) {
 			$itemName = $this->itemDescriptionRepository->getByItem(
-				$pokemonMove->getVersionGroupId(),
+				$pokemonMove->versionGroupId,
 				$languageId,
 				new ItemId(ItemId::LIGHT_BALL),
 			);

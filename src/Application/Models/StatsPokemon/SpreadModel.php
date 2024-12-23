@@ -72,9 +72,9 @@ final class SpreadModel
 		// Calculate the Pokémon's stats for each spread.
 		$this->spreads = [];
 		foreach ($spreads as $spread) {
-			$evSpread = $spread->getEvs();
-			$increasedStatId = $spread->getIncreasedStatId();
-			$decreasedStatId = $spread->getDecreasedStatId();
+			$evSpread = $spread->evs;
+			$increasedStatId = $spread->increasedStatId;
+			$decreasedStatId = $spread->decreasedStatId;
 
 			// Assume the Pokémon has perfect IVs.
 			$ivSpread = new StatValueContainer();
@@ -103,7 +103,7 @@ final class SpreadModel
 					$actingStatId = $stat->getId()->value() !== StatId::SPECIAL
 						? $stat->getId()
 						: new StatId(StatId::SPECIAL_ATTACK);
-					$value = $spread->getEvs()->get($actingStatId)->getValue();
+					$value = $spread->evs->get($actingStatId)->getValue();
 
 					$evSpread->add(new StatValue($stat->getId(), $value));
 					$calcEvSpread->add(new StatValue($stat->getId(), $value ** 2));
@@ -142,11 +142,11 @@ final class SpreadModel
 			}
 
 			$this->spreads[] = [
-				'nature' => $spread->getNatureName(),
+				'nature' => $spread->natureName,
 				'increasedStat' => $increasedStat,
 				'decreasedStat' => $decreasedStat,
 				'evs' => $evs,
-				'percent' => $spread->getPercent(),
+				'percent' => $spread->percent,
 				'stats' => $finalStats,
 			];
 		}

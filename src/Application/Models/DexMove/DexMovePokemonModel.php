@@ -80,9 +80,9 @@ final class DexMovePokemonModel
 
 		$methodsPokemons = [];
 		foreach ($pokemonMoves as $pokemonMove) {
-			$pokemonId = $pokemonMove->getPokemonId()->value();
-			$vgId = $pokemonMove->getVersionGroupId()->value();
-			$methodId = $pokemonMove->getMoveMethodId()->value();
+			$pokemonId = $pokemonMove->pokemonId->value();
+			$vgId = $pokemonMove->versionGroupId->value();
+			$methodId = $pokemonMove->moveMethodId->value();
 
 			if (!isset($this->learnsetVgs[$vgId])) {
 				// This should only happen if this Pokémon move is from a gen 1
@@ -95,7 +95,7 @@ final class DexMovePokemonModel
 				case MoveMethodId::LEVEL_UP:
 					// The version group data is the lowest level at which the
 					// Pokémon learns the move.
-					$level = $pokemonMove->getLevel();
+					$level = $pokemonMove->level;
 					$oldLevel = $methodsPokemons[$methodId][$pokemonId][$vgIdentifier] ?? 101;
 					if ($level <  $oldLevel) {
 						$methodsPokemons[$methodId][$pokemonId][$vgIdentifier] = $level;
@@ -166,9 +166,9 @@ final class DexMovePokemonModel
 			}
 
 			$this->methods[$methodId] = new DexMovePokemonMethod(
-				$moveMethod->getIdentifier(),
-				$moveMethodNames[$methodId]->getName(),
-				$moveMethodNames[$methodId]->getDescription(),
+				$moveMethod->identifier,
+				$moveMethodNames[$methodId]->name,
+				$moveMethodNames[$methodId]->description,
 				$dexMovePokemon[$methodId],
 			);
 		}
