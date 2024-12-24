@@ -74,16 +74,16 @@ final readonly class StatsChartView
 		$trendLine = $this->statsChartModel->trendLines[0];
 		$formatName = $trendLine->formatName;
 		$rating = $trendLine->rating;
-		$pokemonName = $trendLine->pokemonName->name;
+		$pokemonName = $trendLine->pokemonName;
 		$movesetName = '';
 		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof UsageAbilityTrendLine) {
-			$movesetName = $trendLine->abilityName->name;
+			$movesetName = $trendLine->abilityName;
 		}
 		if ($trendLine instanceof MovesetItemTrendLine || $trendLine instanceof UsageItemTrendLine) {
-			$movesetName = $trendLine->itemName->name;
+			$movesetName = $trendLine->itemName;
 		}
 		if ($trendLine instanceof MovesetMoveTrendLine || $trendLine instanceof UsageMoveTrendLine) {
-			$movesetName = $trendLine->moveName->name;
+			$movesetName = $trendLine->moveName;
 		}
 		if ($trendLine instanceof MovesetTeraTrendLine) {
 			$movesetName = $trendLine->typeName;
@@ -138,16 +138,16 @@ final readonly class StatsChartView
 
 		$formatName = $trendLine->formatName;
 		$rating = $trendLine->rating;
-		$pokemonName = $trendLine->pokemonName->name;
+		$pokemonName = $trendLine->pokemonName;
 		$movesetName = '';
 		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof UsageAbilityTrendLine) {
-			$movesetName = $trendLine->abilityName->name;
+			$movesetName = $trendLine->abilityName;
 		}
 		if ($trendLine instanceof MovesetItemTrendLine || $trendLine instanceof UsageItemTrendLine) {
-			$movesetName = $trendLine->itemName->name;
+			$movesetName = $trendLine->itemName;
 		}
 		if ($trendLine instanceof MovesetMoveTrendLine || $trendLine instanceof UsageMoveTrendLine) {
-			$movesetName = $trendLine->moveName->name;
+			$movesetName = $trendLine->moveName;
 		}
 		if ($trendLine instanceof MovesetTeraTrendLine) {
 			$movesetName = "Tera $trendLine->typeName";
@@ -213,11 +213,11 @@ final readonly class StatsChartView
 		}
 
 		if ($trendLine instanceof MovesetMoveTrendLine) {
-			return $trendLine->moveType->colorCode;
+			return $trendLine->moveTypeColorCode;
 		}
 
 		if ($trendLine instanceof MovesetTeraTrendLine) {
-			return $trendLine->typeColorCode;
+			return $trendLine->teraTypeColorCode;
 		}
 
 		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof MovesetItemTrendLine) {
@@ -235,6 +235,6 @@ final readonly class StatsChartView
 		}
 
 		// For all other cases, use the color of the Pokémon's primary type.
-		return $trendLine->pokemonType->colorCode;
+		return $trendLine->pokemonTypeColorCode;
 	}
 }

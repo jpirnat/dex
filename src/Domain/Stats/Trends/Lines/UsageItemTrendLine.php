@@ -3,32 +3,26 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Trends\Lines;
 
-use Jp\Dex\Domain\Items\ItemName;
-use Jp\Dex\Domain\Pokemon\PokemonName;
-use Jp\Dex\Domain\Types\Type;
-
 final class UsageItemTrendLine extends TrendLine
 {
-	private(set) ItemName $itemName;
+	private(set) string $itemName;
 
 	/**
-	 * Constructor.
-	 *
 	 * @param TrendPoint[] $trendPoints
 	 */
 	public function __construct(
 		string $formatName,
 		int $rating,
-		PokemonName $pokemonName,
-		ItemName $itemName,
-		Type $pokemonType,
+		string $pokemonName,
+		string $itemName,
+		string $pokemonTypeColorCode,
 		array $trendPoints,
 	) {
 		$this->formatName = $formatName;
 		$this->rating = $rating;
 		$this->pokemonName = $pokemonName;
 		$this->itemName = $itemName;
-		$this->pokemonType = $pokemonType;
+		$this->pokemonTypeColorCode = $pokemonTypeColorCode;
 
 		foreach ($trendPoints as $trendPoint) {
 			$this->addTrendPoint($trendPoint);
@@ -42,8 +36,8 @@ final class UsageItemTrendLine extends TrendLine
 	{
 		$formatName = $this->formatName;
 		$rating = $this->rating;
-		$pokemonName = $this->pokemonName->name;
-		$itemName = $this->itemName->name;
+		$pokemonName = $this->pokemonName;
+		$itemName = $this->itemName;
 
 		return "$formatName [$rating] $pokemonName with $itemName Usage";
 	}

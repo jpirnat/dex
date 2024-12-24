@@ -72,9 +72,9 @@ final readonly class MovesetAbilityTrendGenerator
 		return new MovesetAbilityTrendLine(
 			$format->name,
 			$rating,
-			$pokemonName,
-			$abilityName,
-			$pokemonType,
+			$pokemonName->name,
+			$abilityName->name,
+			$pokemonType->colorCode,
 			$trendPoints,
 		);
 	}

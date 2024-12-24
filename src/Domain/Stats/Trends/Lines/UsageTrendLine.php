@@ -3,9 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Trends\Lines;
 
-use Jp\Dex\Domain\Pokemon\PokemonName;
-use Jp\Dex\Domain\Types\Type;
-
 final class UsageTrendLine extends TrendLine
 {
 	/**
@@ -16,14 +13,14 @@ final class UsageTrendLine extends TrendLine
 	public function __construct(
 		string $formatName,
 		int $rating,
-		PokemonName $pokemonName,
-		Type $pokemonType,
+		string $pokemonName,
+		string $pokemonTypeColorCode,
 		array $trendPoints,
 	) {
 		$this->formatName = $formatName;
 		$this->rating = $rating;
 		$this->pokemonName = $pokemonName;
-		$this->pokemonType = $pokemonType;
+		$this->pokemonTypeColorCode = $pokemonTypeColorCode;
 
 		foreach ($trendPoints as $trendPoint) {
 			$this->addTrendPoint($trendPoint);
@@ -37,7 +34,7 @@ final class UsageTrendLine extends TrendLine
 	{
 		$formatName = $this->formatName;
 		$rating = $this->rating;
-		$pokemonName = $this->pokemonName->name;
+		$pokemonName = $this->pokemonName;
 
 		return "$formatName [$rating] $pokemonName Usage";
 	}

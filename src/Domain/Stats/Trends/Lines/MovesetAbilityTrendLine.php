@@ -3,32 +3,26 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Trends\Lines;
 
-use Jp\Dex\Domain\Abilities\AbilityName;
-use Jp\Dex\Domain\Pokemon\PokemonName;
-use Jp\Dex\Domain\Types\Type;
-
 final class MovesetAbilityTrendLine extends TrendLine
 {
-	private(set) AbilityName $abilityName;
+	private(set) string $abilityName;
 
 	/**
-	 * Constructor.
-	 *
 	 * @param TrendPoint[] $trendPoints
 	 */
 	public function __construct(
 		string $formatName,
 		int $rating,
-		PokemonName $pokemonName,
-		AbilityName $abilityName,
-		Type $pokemonType,
+		string $pokemonName,
+		string $abilityName,
+		string $pokemonTypeColorCode,
 		array $trendPoints,
 	) {
 		$this->formatName = $formatName;
 		$this->rating = $rating;
 		$this->pokemonName = $pokemonName;
 		$this->abilityName = $abilityName;
-		$this->pokemonType = $pokemonType;
+		$this->pokemonTypeColorCode = $pokemonTypeColorCode;
 
 		foreach ($trendPoints as $trendPoint) {
 			$this->addTrendPoint($trendPoint);
@@ -42,8 +36,8 @@ final class MovesetAbilityTrendLine extends TrendLine
 	{
 		$formatName = $this->formatName;
 		$rating = $this->rating;
-		$pokemonName = $this->pokemonName->name;
-		$abilityName = $this->abilityName->name;
+		$pokemonName = $this->pokemonName;
+		$abilityName = $this->abilityName;
 
 		return "$formatName [$rating] $pokemonName - $abilityName Usage";
 	}

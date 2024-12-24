@@ -72,9 +72,9 @@ final readonly class UsageItemTrendGenerator
 		return new UsageItemTrendLine(
 			$format->name,
 			$rating,
-			$pokemonName,
-			$itemName,
-			$pokemonType,
+			$pokemonName->name,
+			$itemName->name,
+			$pokemonType->colorCode,
 			$trendPoints,
 		);
 	}

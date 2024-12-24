@@ -72,9 +72,9 @@ final readonly class UsageAbilityTrendGenerator
 		return new UsageAbilityTrendLine(
 			$format->name,
 			$rating,
-			$pokemonName,
-			$abilityName,
-			$pokemonType,
+			$pokemonName->name,
+			$abilityName->name,
+			$pokemonType->colorCode,
 			$trendPoints,
 		);
 	}

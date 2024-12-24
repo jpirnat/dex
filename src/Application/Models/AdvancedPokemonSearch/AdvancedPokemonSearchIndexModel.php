@@ -84,7 +84,7 @@ final class AdvancedPokemonSearchIndexModel
 		$genderRatios = GenderRatio::getAll();
 		foreach ($genderRatios as $genderRatio) {
 			$this->genderRatios[] = [
-				'value' => $genderRatio->value(),
+				'value' => $genderRatio->value,
 				'description' => $genderRatio->getDescription(),
 			];
 		}

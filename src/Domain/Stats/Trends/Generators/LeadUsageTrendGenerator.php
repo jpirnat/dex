@@ -63,8 +63,8 @@ final readonly class LeadUsageTrendGenerator
 		return new LeadUsageTrendLine(
 			$format->name,
 			$rating,
-			$pokemonName,
-			$pokemonType,
+			$pokemonName->name,
+			$pokemonType->colorCode,
 			$trendPoints,
 		);
 	}

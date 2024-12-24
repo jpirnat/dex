@@ -72,9 +72,9 @@ final readonly class UsageMoveTrendGenerator
 		return new UsageMoveTrendLine(
 			$format->name,
 			$rating,
-			$pokemonName,
-			$moveName,
-			$pokemonType,
+			$pokemonName->name,
+			$moveName->name,
+			$pokemonType->colorCode,
 			$trendPoints,
 		);
 	}

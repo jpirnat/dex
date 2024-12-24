@@ -3,15 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Trends\Lines;
 
-use Jp\Dex\Domain\Pokemon\PokemonName;
-use Jp\Dex\Domain\Types\Type;
-
 abstract class TrendLine
 {
 	protected(set) string $formatName;
 	protected(set) int $rating;
-	protected(set) PokemonName $pokemonName;
-	protected(set) Type $pokemonType;
+	protected(set) string $pokemonName;
+	protected(set) string $pokemonTypeColorCode;
 
 	/** @var TrendPoint[] $trendPoints */
 	protected(set) array $trendPoints = [];

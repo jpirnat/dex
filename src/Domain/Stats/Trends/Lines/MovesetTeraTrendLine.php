@@ -3,13 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Trends\Lines;
 
-use Jp\Dex\Domain\Pokemon\PokemonName;
-use Jp\Dex\Domain\Types\Type;
-
 final class MovesetTeraTrendLine extends TrendLine
 {
 	private(set) string $typeName;
-	private(set) string $typeColorCode;
+	private(set) string $teraTypeColorCode;
 
 	/**
 	 * Constructor.
@@ -19,18 +16,18 @@ final class MovesetTeraTrendLine extends TrendLine
 	public function __construct(
 		string $formatName,
 		int $rating,
-		PokemonName $pokemonName,
+		string $pokemonName,
 		string $typeName,
-		Type $pokemonType,
-		string $typeColorCode,
+		string $pokemonTypeColorCode,
+		string $teraTypeColorCode,
 		array $trendPoints,
 	) {
 		$this->formatName = $formatName;
 		$this->rating = $rating;
 		$this->pokemonName = $pokemonName;
 		$this->typeName = $typeName;
-		$this->pokemonType = $pokemonType;
-		$this->typeColorCode = $typeColorCode;
+		$this->pokemonTypeColorCode = $pokemonTypeColorCode;
+		$this->teraTypeColorCode = $teraTypeColorCode;
 
 		foreach ($trendPoints as $trendPoint) {
 			$this->addTrendPoint($trendPoint);
@@ -44,7 +41,7 @@ final class MovesetTeraTrendLine extends TrendLine
 	{
 		$formatName = $this->formatName;
 		$rating = $this->rating;
-		$pokemonName = $this->pokemonName->name;
+		$pokemonName = $this->pokemonName;
 		$typeName = $this->typeName;
 
 		return "$formatName [$rating] $pokemonName - Tera $typeName Usage";
