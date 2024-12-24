@@ -33,9 +33,9 @@ final readonly class DatabaseMoveDescriptionRepository implements MoveDescriptio
 				AND `move_id` = :move_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 

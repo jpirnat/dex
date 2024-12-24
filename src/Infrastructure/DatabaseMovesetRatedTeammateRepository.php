@@ -30,8 +30,8 @@ final readonly class DatabaseMovesetRatedTeammateRepository implements MovesetRa
 				:percent
 			)'
 		);
-		$stmt->bindValue(':urp_id', $movesetRatedTeammate->usageRatedPokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':teammate_id', $movesetRatedTeammate->teammateId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':urp_id', $movesetRatedTeammate->usageRatedPokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':teammate_id', $movesetRatedTeammate->teammateId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':percent', $movesetRatedTeammate->percent);
 		try {
 			$stmt->execute();

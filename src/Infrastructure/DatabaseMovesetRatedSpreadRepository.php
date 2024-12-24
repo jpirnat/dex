@@ -44,8 +44,8 @@ final readonly class DatabaseMovesetRatedSpreadRepository implements MovesetRate
 				:percent
 			)'
 		);
-		$stmt->bindValue(':urp_id', $movesetRatedSpread->usageRatedPokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':nature_id', $movesetRatedSpread->natureId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':urp_id', $movesetRatedSpread->usageRatedPokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':nature_id', $movesetRatedSpread->natureId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':hp', $evSpread->get(new StatId(StatId::HP))->value, PDO::PARAM_INT);
 		$stmt->bindValue(':atk', $evSpread->get(new StatId(StatId::ATTACK))->value, PDO::PARAM_INT);
 		$stmt->bindValue(':def', $evSpread->get(new StatId(StatId::DEFENSE))->value, PDO::PARAM_INT);

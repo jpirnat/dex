@@ -59,10 +59,10 @@ final readonly class DatabaseStatsPokemonSpreadRepository implements StatsPokemo
 			ORDER BY `s`.`percent` DESC'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$spreads = [];

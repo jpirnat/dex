@@ -69,16 +69,14 @@ WHERE `e`.`id` = :egg_group_id
 	AND `n`.`language_id` = :language_id
 LIMIT 1"
 		);
-		$stmt->bindValue(':egg_group_id', $eggGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':egg_group_id', $eggGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			$eggGroupId = $eggGroupId->value();
-			$languageId = $languageId->value();
 			throw new EggGroupNotFoundException(
-				"No dex egg group exists with egg group id $eggGroupId and language id $languageId."
+				"No dex egg group exists with egg group id $eggGroupId->value and language id $languageId->value."
 			);
 		}
 
@@ -98,7 +96,7 @@ LIMIT 1"
 WHERE `n`.`language_id` = :language_id
 ORDER BY `n`.`name`"
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $this->executeAndFetch($stmt);
 	}

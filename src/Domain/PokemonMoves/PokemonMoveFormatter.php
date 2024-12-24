@@ -26,7 +26,7 @@ final readonly class PokemonMoveFormatter
 		PokemonMove $pokemonMove,
 		LanguageId $languageId,
 	) : string {
-		$method = $pokemonMove->moveMethodId->value();
+		$method = $pokemonMove->moveMethodId->value;
 
 		if ($method === MoveMethodId::LEVEL_UP) {
 			return 'Level ' . $pokemonMove->level;

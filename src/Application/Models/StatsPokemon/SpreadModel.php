@@ -86,16 +86,16 @@ final class SpreadModel
 				$ivSpread->add(new StatValue($stat->id, $perfectIv));
 			}
 			// If it's a minus Attack nature with 0 Attack EVs, assume 0 IV.
-			if ($decreasedStatId?->value() === StatId::ATTACK && !$evSpread->get($attack)->value) {
+			if ($decreasedStatId?->value === StatId::ATTACK && !$evSpread->get($attack)->value) {
 				$ivSpread->add(new StatValue($attack, 0));
 			}
 			// If it's a minus Speed nature with 0 Speed EVs, assume 0 IV.
-			if ($decreasedStatId?->value() === StatId::SPEED && !$evSpread->get($speed)->value) {
+			if ($decreasedStatId?->value === StatId::SPEED && !$evSpread->get($speed)->value) {
 				$ivSpread->add(new StatValue($speed, 0));
 			}
 
 			// Get this spread's calculated stats.
-			if ($generationId->value() === 1 || $generationId->value() === 2) {
+			if ($generationId->value === 1 || $generationId->value === 2) {
 				// Pokémon Showdown simplifies the stat formula for gens 1 and 2.
 				// The real formula takes the square root of the EV. So, we need
 				// to give the formula the square of the EV from Showdown.
@@ -103,7 +103,7 @@ final class SpreadModel
 				$calcEvSpread = new StatValueContainer();
 				foreach ($stats as $stat) {
 					// For Special, use what was imported as Special Attack.
-					$actingStatId = $stat->id->value() !== StatId::SPECIAL
+					$actingStatId = $stat->id->value !== StatId::SPECIAL
 						? $stat->id
 						: new StatId(StatId::SPECIAL_ATTACK);
 					$value = $spread->evs->get($actingStatId)->value;
@@ -131,8 +131,8 @@ final class SpreadModel
 			}
 
 			// Convert stat arrays to stat objects.
-			$increasedStatId = $increasedStatId?->value();
-			$decreasedStatId = $decreasedStatId?->value();
+			$increasedStatId = $increasedStatId?->value;
+			$decreasedStatId = $decreasedStatId?->value;
 			$increasedStat = $stats[$increasedStatId]?->identifier ?? null;
 			$decreasedStat = $stats[$decreasedStatId]?->identifier ?? null;
 

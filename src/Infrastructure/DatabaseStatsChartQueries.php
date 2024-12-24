@@ -33,7 +33,7 @@ final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInter
 				AND `rating` = :rating
 			ORDER BY `month`'
 		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -66,9 +66,9 @@ final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInter
 				AND `pokemon_id` = :pokemon_id
 			ORDER BY `month`'
 		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$usageDatas = [];
@@ -102,9 +102,9 @@ final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInter
 				AND `urp`.`pokemon_id` = :pokemon_id
 			ORDER BY `urp`.`month`'
 		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$usageDatas = [];
@@ -140,10 +140,10 @@ final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInter
 				AND `mra`.`ability_id` = :ability_id
 			ORDER BY `urp`.`month`'
 		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':ability_id', $abilityId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$usageDatas = [];
@@ -179,10 +179,10 @@ final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInter
 				AND `mri`.`item_id` = :item_id
 			ORDER BY `urp`.`month`'
 		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':item_id', $itemId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$usageDatas = [];
@@ -218,10 +218,10 @@ final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInter
 				AND `mrm`.`move_id` = :move_id
 			ORDER BY `urp`.`month`'
 		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$usageDatas = [];
@@ -257,10 +257,10 @@ final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInter
 				AND `mrt`.`type_id` = :type_id
 			ORDER BY `urp`.`month`'
 		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$usageDatas = [];
@@ -296,10 +296,10 @@ final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInter
 				AND `m`.`ability_id` = :ability_id
 			ORDER BY `u`.`month`'
 		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':ability_id', $abilityId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$usageDatas = [];
@@ -335,10 +335,10 @@ final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInter
 				AND `m`.`item_id` = :item_id
 			ORDER BY `u`.`month`'
 		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':item_id', $itemId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$usageDatas = [];
@@ -374,10 +374,10 @@ final readonly class DatabaseStatsChartQueries implements StatsChartQueriesInter
 				AND `m`.`move_id` = :move_id
 			ORDER BY `u`.`month`'
 		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$usageDatas = [];

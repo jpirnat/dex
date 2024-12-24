@@ -76,7 +76,7 @@ final class BreedingChainsModel
 			$chainId = [];
 			$records = [];
 			foreach ($chain as $pokemonMove) {
-				$chainId[] = $pokemonMove->pokemonId->value();
+				$chainId[] = $pokemonMove->pokemonId->value;
 				$records[] = $this->getRecord($pokemonMove, $languageId);
 			}
 			$chainId = implode('-', $chainId);

@@ -32,7 +32,7 @@ final readonly class DatabaseDexCategoryRepository implements DexCategoryReposit
 				ON `c`.`id` = `n`.`category_id`
 			WHERE `n`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$dexCategories = [];

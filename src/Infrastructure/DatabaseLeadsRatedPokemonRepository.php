@@ -32,7 +32,7 @@ final readonly class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPo
 			LIMIT 1'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
 		return (bool) $stmt->fetchColumn();
@@ -54,7 +54,7 @@ final readonly class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPo
 				:usage_percent
 			)'
 		);
-		$stmt->bindValue(':urp_id', $leadsRatedPokemon->usageRatedPokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':urp_id', $leadsRatedPokemon->usageRatedPokemonId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rank', $leadsRatedPokemon->rank, PDO::PARAM_INT);
 		$stmt->bindValue(':usage_percent', $leadsRatedPokemon->usagePercent);
 		$stmt->execute();

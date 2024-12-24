@@ -35,10 +35,6 @@ final readonly class DatabaseTextLinkRepository implements TextLinkRepositoryInt
 		LanguageId $languageId,
 		ItemId $itemId,
 	) : TextLinkItem {
-		$versionGroupId = $versionGroupId->value();
-		$languageId = $languageId->value();
-		$itemId = $itemId->value();
-
 		$stmt = $this->db->prepare(
 			'SELECT
 				`vg`.`identifier` AS `vg_identifier`,
@@ -57,16 +53,16 @@ final readonly class DatabaseTextLinkRepository implements TextLinkRepositoryInt
 				AND `in`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId, PDO::PARAM_INT);
-		$stmt->bindValue(':item_id', $itemId, PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':item_id', $itemId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new TextLinkNotFoundException(
-				"No text link can be made with version group id $versionGroupId"
-				. ", language id $languageId, and item id $itemId."
+				"No text link can be made with version group id $versionGroupId->value"
+				. ", language id $languageId->value, and item id $itemId->value."
 			);
 		}
 
@@ -88,10 +84,6 @@ final readonly class DatabaseTextLinkRepository implements TextLinkRepositoryInt
 		LanguageId $languageId,
 		MoveId $moveId,
 	) : TextLinkMove {
-		$versionGroupId = $versionGroupId->value();
-		$languageId = $languageId->value();
-		$moveId = $moveId->value();
-
 		$stmt = $this->db->prepare(
 			'SELECT
 				`vg`.`identifier` AS `vg_identifier`,
@@ -110,16 +102,16 @@ final readonly class DatabaseTextLinkRepository implements TextLinkRepositoryInt
 				AND `mn`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId, PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId, PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new TextLinkNotFoundException(
-				"No text link can be made with version group id $versionGroupId"
-				. ", language id $languageId, and move id $moveId."
+				"No text link can be made with version group id $versionGroupId->value"
+				. ", language id $languageId->value, and move id $moveId->value."
 			);
 		}
 
@@ -141,10 +133,6 @@ final readonly class DatabaseTextLinkRepository implements TextLinkRepositoryInt
 		LanguageId $languageId,
 		PokemonId $pokemonId,
 	) : TextLinkPokemon {
-		$versionGroupId = $versionGroupId->value();
-		$languageId = $languageId->value();
-		$pokemonId = $pokemonId->value();
-
 		$stmt = $this->db->prepare(
 			'SELECT
 				`vg`.`identifier` AS `vg_identifier`,
@@ -159,16 +147,16 @@ final readonly class DatabaseTextLinkRepository implements TextLinkRepositoryInt
 				AND `pn`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId, PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new TextLinkNotFoundException(
-				"No text link can be made with version group id $versionGroupId"
-				. ", language id $languageId, and Pokémon id $pokemonId."
+				"No text link can be made with version group id $versionGroupId->value"
+				. ", language id $languageId->value, and Pokémon id $pokemonId->value."
 			);
 		}
 
@@ -190,10 +178,6 @@ final readonly class DatabaseTextLinkRepository implements TextLinkRepositoryInt
 		LanguageId $languageId,
 		TypeId $typeId,
 	) : TextLinkType {
-		$versionGroupId = $versionGroupId->value();
-		$languageId = $languageId->value();
-		$typeId = $typeId->value();
-
 		$stmt = $this->db->prepare(
 			'SELECT
 				`vg`.`identifier` AS `vg_identifier`,
@@ -208,16 +192,16 @@ final readonly class DatabaseTextLinkRepository implements TextLinkRepositoryInt
 				AND `tn`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId, PDO::PARAM_INT);
-		$stmt->bindValue(':type_id', $typeId, PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new TextLinkNotFoundException(
-				"No text link can be made with version group id $versionGroupId"
-				. ", language id $languageId, and type id $typeId."
+				"No text link can be made with version group id $versionGroupId->value"
+				. ", language id $languageId->value, and type id $typeId->value."
 			);
 		}
 
@@ -237,10 +221,6 @@ final readonly class DatabaseTextLinkRepository implements TextLinkRepositoryInt
 		LanguageId $languageId,
 		FormId $formId,
 	) : ?TextLinkItem {
-		$versionGroupId = $versionGroupId->value();
-		$languageId = $languageId->value();
-		$formId = $formId->value();
-
 		$stmt = $this->db->prepare(
 			'SELECT
 				`vg`.`identifier` AS `vg_identifier`,
@@ -262,9 +242,9 @@ final readonly class DatabaseTextLinkRepository implements TextLinkRepositoryInt
 				AND `in`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId, PDO::PARAM_INT);
-		$stmt->bindValue(':form_id', $formId, PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':form_id', $formId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 

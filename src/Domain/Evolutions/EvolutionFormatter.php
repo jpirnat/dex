@@ -99,7 +99,7 @@ final readonly class EvolutionFormatter
 
 		$otherParameter = $evolution->otherParameter;
 
-		return match ($evoMethodId->value()) {
+		return match ($evoMethodId->value) {
 			EvoMethodId::LEVEL_UP_FRIENDSHIP => new EvolutionTableMethod(
 				"Level up, with at least $friendship friendship",
 			),
@@ -255,7 +255,7 @@ final readonly class EvolutionFormatter
 		Evolution $evolution,
 		LanguageId $languageId,
 	) : EvolutionTableMethod {
-		$inExchangeFor = match ($evolution->evoFromId->value()) {
+		$inExchangeFor = match ($evolution->evoFromId->value) {
 			FormId::KARRABLAST => FormId::SHELMET,
 			FormId::SHELMET => FormId::KARRABLAST,
 		};
@@ -285,7 +285,7 @@ final readonly class EvolutionFormatter
 		$attack = $statNames[StatId::ATTACK]->name;
 		$defense = $statNames[StatId::DEFENSE]->name;
 
-		$html = match ($evolution->evoMethodId->value()) {
+		$html = match ($evolution->evoMethodId->value) {
 			EvoMethodId::LEVEL_UP_ATK_GT_DEF => "Level up, starting at level $level, when $attack > $defense",
 			EvoMethodId::LEVEL_UP_ATK_EQ_DEF => "Level up, starting at level $level, when $attack = $defense",
 			EvoMethodId::LEVEL_UP_DEF_GT_ATK => "Level up, starting at level $level, when $attack < $defense",
@@ -306,7 +306,7 @@ final readonly class EvolutionFormatter
 		$nincada = $this->textLinkRepository->getForPokemon(
 			$evolution->versionGroupId,
 			$languageId,
-			new PokemonId($evolution->evoFromId->value()),
+			new PokemonId($evolution->evoFromId->value),
 		);
 		$ninjask = $this->textLinkRepository->getForPokemon(
 			$evolution->versionGroupId,
@@ -358,7 +358,7 @@ final readonly class EvolutionFormatter
 		$versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
 
 		$friendship = $this->getFriendship($versionGroup->generationId);
-		$friendshipOrAffection = match ($versionGroup->generationId->value()) {
+		$friendshipOrAffection = match ($versionGroup->generationId->value) {
 			6, 7 => "at least 2 affection",
 			default => "at least $friendship friendship",
 		};
@@ -377,7 +377,7 @@ final readonly class EvolutionFormatter
 		$level = $evolution->level;
 		$versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
 
-		$weather = match ($versionGroup->generationId->value()) {
+		$weather = match ($versionGroup->generationId->value) {
 			6 => "rain",
 			default => "rain or fog",
 		};
@@ -497,7 +497,7 @@ final readonly class EvolutionFormatter
 		$statNames = $this->statNameRepository->getByLanguage($languageId);
 		$hp = $statNames[StatId::HP]->name;
 
-		$gender = match ($evolution->evoMethodId->value()) {
+		$gender = match ($evolution->evoMethodId->value) {
 			EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_MALE => 'males',
 			EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_FEMALE => 'females',
 		};
@@ -547,7 +547,7 @@ final readonly class EvolutionFormatter
 
 	private function getFriendship(GenerationId $generationId) : int
 	{
-		return match ($generationId->value()) {
+		return match ($generationId->value) {
 			2, 3, 4, 5, 6, 7, => 220,
 			default => 160,
 		};
@@ -555,7 +555,7 @@ final readonly class EvolutionFormatter
 
 	public static function getEveningText(VersionGroupId $versionGroupId) : string
 	{
-		return match ($versionGroupId->value()) {
+		return match ($versionGroupId->value) {
 			VersionGroupId::ULTRA_SUN_ULTRA_MOON => 'between 5:00 and 5:59 PM',
 			VersionGroupId::SWORD_SHIELD => 'between 7:00 and 7:59 PM',
 			VersionGroupId::SCARLET_VIOLET => 'during the evening',

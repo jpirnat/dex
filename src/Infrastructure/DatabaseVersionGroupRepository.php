@@ -103,14 +103,13 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			WHERE `id` = :version_group_id
 			LIMIT 1"
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			$versionGroupId = $versionGroupId->value();
 			throw new VersionGroupNotFoundException(
-				"No version group exists with id $versionGroupId."
+				"No version group exists with id $versionGroupId->value."
 			);
 		}
 
@@ -157,7 +156,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			WHERE `generation_id` >= :generation_id
 			ORDER BY `sort`"
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 
@@ -179,7 +178,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			)
 			ORDER BY `sort`"
 		);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 
@@ -202,7 +201,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			)
 			ORDER BY `sort`"
 		);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 
@@ -225,7 +224,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			)
 			ORDER BY `sort`"
 		);
-		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':flag_id', $flagId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 
@@ -247,7 +246,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			)
 			ORDER BY `sort`"
 		);
-		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 
@@ -270,7 +269,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			)
 			ORDER BY `sort`"
 		);
-		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':item_id', $itemId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 
@@ -309,7 +308,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				)
 			ORDER BY `sort`"
 		);
-		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':ability_id', $abilityId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 
@@ -332,7 +331,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 			)
 			ORDER BY `sort`"
 		);
-		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':flag_id', $flagId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 

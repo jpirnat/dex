@@ -29,13 +29,13 @@ final readonly class DatabaseItemRepository implements ItemRepositoryInterface
 			WHERE `id` = :item_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':item_id', $itemId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new ItemNotFoundException(
-				'No item exists with id ' . $itemId->value() . '.'
+				"No item exists with id $itemId->value."
 			);
 		}
 

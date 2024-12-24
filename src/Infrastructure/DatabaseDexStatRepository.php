@@ -35,8 +35,8 @@ final readonly class DatabaseDexStatRepository implements DexStatRepositoryInter
 				AND `sn`.`language_id` = :language_id
 			ORDER BY `s`.`sort`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}

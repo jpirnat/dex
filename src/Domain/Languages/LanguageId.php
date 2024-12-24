@@ -16,8 +16,8 @@ final class LanguageId extends EntityId
 	 */
 	public function isJapanese() : bool
 	{
-		return $this->id === self::JAPANESE
-			|| $this->id === self::JAPANESE_KANJI
+		return $this->value === self::JAPANESE
+			|| $this->value === self::JAPANESE_KANJI
 		;
 	}
 }

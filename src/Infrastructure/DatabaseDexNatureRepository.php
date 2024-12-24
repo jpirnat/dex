@@ -36,7 +36,7 @@ final readonly class DatabaseDexNatureRepository implements DexNatureRepositoryI
 				AND `nn`.`language_id` = `sn2`.`language_id`
 			WHERE `nn`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
@@ -60,8 +60,8 @@ final readonly class DatabaseDexNatureRepository implements DexNatureRepositoryI
 				AND `n`.`toxel_evo_id` = :toxel_evo_id
 			ORDER BY `name`'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':toxel_evo_id', $toxelEvoId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':toxel_evo_id', $toxelEvoId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_COLUMN);
 	}

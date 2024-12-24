@@ -34,16 +34,14 @@ final readonly class DatabaseMoveNameRepository implements MoveNameRepositoryInt
 				AND `move_id` = :move_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new MoveNameNotFoundException(
-				'No move name exists with language id '
-				. $languageId->value() . ' and move id '
-				. $moveId->value() . '.'
+				"No move name exists with language id $languageId->value and move id $moveId->value."
 			);
 		}
 

@@ -42,7 +42,7 @@ final class DexPokemonEvolutionsModel
 		PokemonId $pokemonId,
 		LanguageId $languageId,
 	) : void {
-		$formId = new FormId($pokemonId->value());
+		$formId = new FormId($pokemonId->value);
 		$baseFormIds = $this->getBaseFormIds($versionGroupId, $formId);
 		$baseFormIds = $this->withSiblingFormIds($versionGroupId, $baseFormIds);
 		$baseFormIds = $this->removeDuplicates($baseFormIds);
@@ -130,7 +130,8 @@ final class DexPokemonEvolutionsModel
 		$outputIds = [];
 
 		foreach ($formIds as $formId) {
-			$outputIds[$formId->value()] = $formId;
+			$fId = $formId->value;
+			$outputIds[$fId] = $formId;
 		}
 
 		return $outputIds;
@@ -179,12 +180,12 @@ final class DexPokemonEvolutionsModel
 		$evoIntoIds = [];
 		$evoMethods = [];
 		foreach ($evolutions as $evolution) {
-			$evoIntoId = $evolution->evoIntoId;
-			$evoIntoIds[$evoIntoId->value()] = $evoIntoId;
+			$evoIntoIdValue = $evolution->evoIntoId->value;
+			$evoIntoIds[$evoIntoIdValue] = $evolution->evoIntoId;
 			// We only need each evolution form once.
 
 			$evoMethod = $this->evolutionFormatter->format($evolution, $languageId);
-			$evoMethods[$evoIntoId->value()][] = $evoMethod;
+			$evoMethods[$evoIntoIdValue][] = $evoMethod;
 			// But if there are multiple ways to evolve into that form, we still
 			// want to know each of them.
 		}
@@ -194,7 +195,7 @@ final class DexPokemonEvolutionsModel
 			$evoIntoTrees[] = $this->createEvolutionTree(
 				$versionGroupId,
 				$evoIntoId,
-				$evoMethods[$evoIntoId->value()] ?? [],
+				$evoMethods[$evoIntoId->value] ?? [],
 				$languageId,
 				false,
 			);

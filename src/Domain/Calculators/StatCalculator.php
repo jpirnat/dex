@@ -46,7 +46,7 @@ final readonly class StatCalculator
 
 		$statIds = StatId::getByGeneration($generationId);
 		foreach ($statIds as $statId) {
-			if ($statId->value() === StatId::HP) {
+			if ($statId->value === StatId::HP) {
 				// Calculate HP.
 				$value = $this->gen1Hp(
 					(int) $baseStats->get($statId)->value,
@@ -75,7 +75,7 @@ final readonly class StatCalculator
 	 */
 	public function gen3Stat(StatId $statId, int $base, int $iv, int $ev, int $level, float $natureModifier) : int
 	{
-		return match ($statId->value()) {
+		return match ($statId->value) {
 			StatId::HP => $this->gen3Hp($base, $iv, $ev, $level),
 			default => $this->gen3Other($base, $iv, $ev, $level, $natureModifier),
 		};
@@ -119,7 +119,7 @@ final readonly class StatCalculator
 
 		$statIds = StatId::getByGeneration(new GenerationId(3));
 		foreach ($statIds as $statId) {
-			if ($statId->value() === StatId::HP) {
+			if ($statId->value === StatId::HP) {
 				// Calculate HP.
 				$value = $this->gen3Hp(
 					(int) $baseStats->get($statId)->value,
@@ -153,11 +153,11 @@ final readonly class StatCalculator
 			return 1;
 		}
 
-		if ($statId->value() === $increasedStatId->value()) {
+		if ($statId->value === $increasedStatId->value) {
 			return 1.1;
 		}
 
-		if ($statId->value() === $decreasedStatId->value()) {
+		if ($statId->value === $decreasedStatId->value) {
 			return 0.9;
 		}
 
@@ -262,7 +262,7 @@ final readonly class StatCalculator
 	 */
 	public function getPerfectIv(GenerationId $generationId) : int
 	{
-		$generation = $generationId->value();
+		$generation = $generationId->value;
 
 		if ($generation === 1 || $generation === 2) {
 			return self::PERFECT_IV_GEN_1;

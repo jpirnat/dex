@@ -75,7 +75,7 @@ final class EvoMethodId extends EntityId
 
 	public function needsFriendship() : bool
 	{
-		return in_array($this->id, [
+		return in_array($this->value, [
 			self::LEVEL_UP_FRIENDSHIP,
 			self::LEVEL_UP_FRIENDSHIP_MORNING,
 			self::LEVEL_UP_FRIENDSHIP_NIGHT,
@@ -84,7 +84,7 @@ final class EvoMethodId extends EntityId
 
 	public function needsItem() : bool
 	{
-		return in_array($this->id, [
+		return in_array($this->value, [
 			self::TRADE_HELD_ITEM,
 			self::USE_ITEM,
 			self::USE_ITEM_MALE,
@@ -101,7 +101,7 @@ final class EvoMethodId extends EntityId
 
 	public function needsMove() : bool
 	{
-		return in_array($this->id, [
+		return in_array($this->value, [
 			self::LEVEL_UP_KNOW_MOVE,
 			self::LEVEL_UP_KNOW_MOVE_EC_ELSE,
 			self::LEVEL_UP_KNOW_MOVE_EC_25,
@@ -110,12 +110,12 @@ final class EvoMethodId extends EntityId
 
 	public function needsPokemon() : bool
 	{
-		return $this->id === self::LEVEL_UP_WITH_TEAMMATE;
+		return $this->value === self::LEVEL_UP_WITH_TEAMMATE;
 	}
 
 	public function needsType() : bool
 	{
-		return in_array($this->id, [
+		return in_array($this->value, [
 			self::LEVEL_UP_AFFECTION_50_MOVE_TYPE,
 			self::LEVEL_UP_MOVE_TYPE,
 		]);
@@ -123,7 +123,7 @@ final class EvoMethodId extends EntityId
 
 	public function needsVersion() : bool
 	{
-		return in_array($this->id, [
+		return in_array($this->value, [
 			self::LEVEL_UP_VERSION,
 			self::LEVEL_UP_VERSION_DAY,
 			self::LEVEL_UP_VERSION_NIGHT,

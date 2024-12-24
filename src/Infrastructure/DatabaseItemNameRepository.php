@@ -34,16 +34,14 @@ final readonly class DatabaseItemNameRepository implements ItemNameRepositoryInt
 				AND `item_id` = :item_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':item_id', $itemId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new ItemNameNotFoundException(
-				'No item name exists with language id '
-				. $languageId->value() . ' and item id '
-				. $itemId->value() . '.'
+				"No item name exists with language id $languageId->value and item id $itemId->value."
 			);
 		}
 

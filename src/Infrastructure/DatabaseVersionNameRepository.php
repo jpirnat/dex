@@ -34,16 +34,14 @@ final readonly class DatabaseVersionNameRepository implements VersionNameReposit
 				AND `version_id` = :version_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_id', $versionId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_id', $versionId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new VersionNameNotFoundException(
-				'No version name exists with language id '
-				. $languageId->value() . ' and version id '
-				. $versionId->value() . '.'
+				"No version name exists with language id $languageId->value and version id $versionId->value."
 			);
 		}
 

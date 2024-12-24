@@ -35,15 +35,14 @@ final readonly class DatabaseStatNameRepository implements StatNameRepositoryInt
 				AND `stat_id` = :stat_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':stat_id', $statId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':stat_id', $statId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new StatNameNotFoundException(
-				'No stat name exists with language id ' . $languageId->value()
-				. ' and stat id ' . $statId->value() . '.'
+				"No stat name exists with language id $languageId->value and stat id $statId->value."
 			);
 		}
 
@@ -70,7 +69,7 @@ final readonly class DatabaseStatNameRepository implements StatNameRepositoryInt
 			FROM `stat_names`
 			WHERE `language_id` = :language_id'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$statNames = [];

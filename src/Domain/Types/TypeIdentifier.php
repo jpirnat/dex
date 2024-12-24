@@ -8,7 +8,7 @@ final class TypeIdentifier
 	// In ID order, so it'll always be clear when these were last updated.
 	// public const string NORMAL = 'normal';
 	// public const string FIGHTING = 'fighting';
-	// public const string FLYING = 'flying';
+	public const string FLYING = 'flying';
 	// public const string POISON = 'poison';
 	public const string GROUND = 'ground';
 	// public const string ROCK = 'rock';

@@ -31,9 +31,9 @@ final class BreedingChainFinder
 		PokemonId $pokemonId,
 		MoveId $moveId,
 	) : array {
-		$pokemonId = $pokemonId->value();
-		$moveId = $moveId->value();
-		$versionGroupId = $versionGroupId->value();
+		$pokemonId = $pokemonId->value;
+		$moveId = $moveId->value;
+		$versionGroupId = $versionGroupId->value;
 
 		// Set female-only Pokémon introduced prior to gen 6.
 		$this->femaleOnlyPokemonIds = $this->breedingChainQueries->getFemaleOnlyPokemon();

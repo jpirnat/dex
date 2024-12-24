@@ -29,7 +29,7 @@ final readonly class DatabaseUsageRepository implements UsageRepositoryInterface
 			LIMIT 1'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return (bool) $stmt->fetchColumn();
 	}
@@ -51,7 +51,7 @@ final readonly class DatabaseUsageRepository implements UsageRepositoryInterface
 			)'
 		);
 		$stmt->bindValue(':month', $usage->month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $usage->formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $usage->formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':total_battles', $usage->totalBattles, PDO::PARAM_INT);
 		$stmt->execute();
 	}

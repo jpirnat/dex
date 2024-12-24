@@ -77,7 +77,7 @@ final readonly class DatabaseMonthQueries implements MonthQueriesInterface
 			LIMIT 1'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$prevMonth = $stmt->fetchColumn();
 
@@ -103,7 +103,7 @@ final readonly class DatabaseMonthQueries implements MonthQueriesInterface
 			LIMIT 1'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$nextMonth = $stmt->fetchColumn();
 

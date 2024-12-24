@@ -35,8 +35,8 @@ final readonly class DatabaseVgMoveRepository implements VgMoveRepositoryInterfa
 			WHERE `move_id` = :move_id
 				AND `language_id` = :language_id'
 		);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchColumn();
 	}
@@ -83,16 +83,14 @@ final readonly class DatabaseVgMoveRepository implements VgMoveRepositoryInterfa
 				AND `move_id` = :move_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new VgMoveNotFoundException(
-				'No version group move exists with version group id '
-				. $versionGroupId->value() . ' and move id ' . $moveId->value()
-				. '.'
+				"No version group move exists with version group id $versionGroupId->value and move id $moveId->value."
 			);
 		}
 
@@ -162,8 +160,8 @@ final readonly class DatabaseVgMoveRepository implements VgMoveRepositoryInterfa
 				AND `in`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':infliction_id', $inflictionId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':infliction_id', $inflictionId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetch(PDO::FETCH_ASSOC);
 	}
@@ -187,8 +185,8 @@ final readonly class DatabaseVgMoveRepository implements VgMoveRepositoryInterfa
 				AND `tn`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':target_id', $targetId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':target_id', $targetId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetch(PDO::FETCH_ASSOC);
 	}
@@ -208,8 +206,8 @@ final readonly class DatabaseVgMoveRepository implements VgMoveRepositoryInterfa
 			WHERE `m`.`id` = :move_id
 				AND `mn`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetch(PDO::FETCH_ASSOC);
 	}
@@ -229,8 +227,8 @@ final readonly class DatabaseVgMoveRepository implements VgMoveRepositoryInterfa
 			WHERE `m`.`id` = :move_id
 				AND `mn`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetch(PDO::FETCH_ASSOC);
 	}
@@ -251,8 +249,8 @@ final readonly class DatabaseVgMoveRepository implements VgMoveRepositoryInterfa
 				AND `zn`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':z_power_effect_id', $zPowerEffectId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':z_power_effect_id', $zPowerEffectId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetch(PDO::FETCH_ASSOC);
 	}
@@ -277,9 +275,9 @@ final readonly class DatabaseVgMoveRepository implements VgMoveRepositoryInterfa
 				AND `msc`.`move_id` = :move_id
 				AND `sn`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}

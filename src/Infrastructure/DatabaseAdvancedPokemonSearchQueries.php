@@ -116,8 +116,8 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 		bool $includeTransferMoves,
 		LanguageId $languageId,
 	) : array {
-		$versionGroupId = $versionGroupId->value();
-		$languageId = $languageId->value();
+		$versionGroupId = $versionGroupId->value;
+		$languageId = $languageId->value;
 
 		$whereClauses = [];
 		$whereClauses[] = "`vp`.`version_group_id` = $versionGroupId";
@@ -125,7 +125,7 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 		if ($typeIds) {
 			$typeClauses = [];
 			foreach ($typeIds as $typeId) {
-				$typeId = $typeId->value();
+				$typeId = $typeId->value;
 				$typeClauses[] = "$typeId IN (`vp`.`type1_id`, `type2_id`)";
 			}
 
@@ -138,14 +138,14 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 		}
 
 		if ($abilityId) {
-			$abilityId = $abilityId->value();
+			$abilityId = $abilityId->value;
 			$whereClauses[] = "$abilityId IN (`vp`.`ability1_id`, `vp`.`ability2_id`, `vp`.`ability3_id`)";
 		}
 
 		if ($eggGroupIds) {
 			$eggGroupClauses = [];
 			foreach ($eggGroupIds as $eggGroupId) {
-				$eggGroupId = $eggGroupId->value();
+				$eggGroupId = $eggGroupId->value;
 				$eggGroupClauses[] = "$eggGroupId IN (`vp`.`egg_group1_id`, `egg_group2_id`)";
 			}
 
@@ -174,7 +174,7 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 
 		if ($moveIds) {
 			foreach ($moveIds as $moveId) {
-				$moveId = $moveId->value();
+				$moveId = $moveId->value;
 				if ($includeTransferMoves) {
 					$whereClauses[] = "`vp`.`pokemon_id` IN (
 		SELECT

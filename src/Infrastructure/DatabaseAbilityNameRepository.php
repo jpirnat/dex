@@ -34,16 +34,14 @@ final readonly class DatabaseAbilityNameRepository implements AbilityNameReposit
 				AND `ability_id` = :ability_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':ability_id', $abilityId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new AbilityNameNotFoundException(
-				'No ability name exists with language id '
-				. $languageId->value() . ' and ability id '
-				. $abilityId->value() . '.'
+				"No ability name exists with language id $languageId->value and ability id $abilityId->value."
 			);
 		}
 

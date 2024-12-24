@@ -64,7 +64,7 @@ final readonly class DatabaseUsageRatedQueries implements UsageRatedQueriesInter
 				AND `rating` = :rating
 			ORDER BY `month`'
 		);
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
 

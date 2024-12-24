@@ -25,7 +25,7 @@ final readonly class MovesetRatedSpread
 	) {
 		foreach ($evSpread->statValues as $statValue) {
 			if ($statValue->value < 0 || $statValue->value > 255) {
-				$statId = $statValue->statId->value();
+				$statId = $statValue->statId->value;
 				throw new InvalidCountException(
 					"Invalid number of EVs for stat id $statId."
 				);

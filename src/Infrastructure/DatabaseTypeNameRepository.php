@@ -34,16 +34,14 @@ final readonly class DatabaseTypeNameRepository implements TypeNameRepositoryInt
 				AND `type_id` = :type_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new TypeNameNotFoundException(
-				'No type name exists with language id '
-				. $languageId->value() . ' and type id '
-				. $typeId->value() . '.'
+				"No type name exists with language id $languageId->value and type id $typeId->value."
 			);
 		}
 

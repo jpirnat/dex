@@ -48,8 +48,8 @@ final readonly class DatabasePokemonMoveRepository implements PokemonMoveReposit
 				`level`,
 				`sort`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':sketch', MoveMethodId::SKETCH, PDO::PARAM_INT);
 		$stmt->execute();
 
@@ -99,8 +99,8 @@ final readonly class DatabasePokemonMoveRepository implements PokemonMoveReposit
 			AND `move_id` = :move_id
 			AND `move_method_id` <> :sketch'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':sketch', MoveMethodId::SKETCH, PDO::PARAM_INT);
 		$stmt->execute();
 

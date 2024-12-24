@@ -34,16 +34,14 @@ final readonly class DatabaseConditionNameRepository implements ConditionNameRep
 				AND `condition_id` = :condition_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':condition_id', $conditionId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':condition_id', $conditionId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new ConditionNameNotFoundException(
-				'No condition name exists with language id '
-				. $languageId->value() . ' and condition id '
-				. $conditionId->value() . '.'
+				"No condition name exists with language id $languageId->value and condition id $conditionId->value."
 			);
 		}
 

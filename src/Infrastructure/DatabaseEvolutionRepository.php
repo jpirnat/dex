@@ -44,8 +44,8 @@ final readonly class DatabaseEvolutionRepository implements EvolutionRepositoryI
 				AND `evo_from_id` = :evo_from_id
 			ORDER BY `evo_into_id`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':evo_from_id', $evoFromId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':evo_from_id', $evoFromId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$evolutions = [];
@@ -94,8 +94,8 @@ final readonly class DatabaseEvolutionRepository implements EvolutionRepositoryI
 				AND `evo_into_id` = :evo_into_id
 			ORDER BY `evo_from_id`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':evo_into_id', $evoIntoId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':evo_into_id', $evoIntoId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$evolutions = [];
@@ -143,8 +143,8 @@ final readonly class DatabaseEvolutionRepository implements EvolutionRepositoryI
 			WHERE `version_group_id` = :version_group_id
 				AND `item_id` = :item_id'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':item_id', $itemId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$evolutions = [];

@@ -43,7 +43,7 @@ final readonly class DexItemView
 				'title' => 'Porydex - Items - ' . $item['name'],
 
 				'versionGroup' => [
-					'id' => $versionGroup->id->value(),
+					'id' => $versionGroup->id->value,
 					'identifier' => $versionGroup->identifier,
 				],
 

@@ -64,8 +64,8 @@ final class DexMovePokemonModel
 		);
 
 		// Get data for the real Hidden Power instead of typed Hidden Powers.
-		if (MoveId::TYPED_HIDDEN_POWER_BEGIN <= $moveId->value()
-			&& $moveId->value() <= MoveId::TYPED_HIDDEN_POWER_END
+		if (MoveId::TYPED_HIDDEN_POWER_BEGIN <= $moveId->value
+			&& $moveId->value <= MoveId::TYPED_HIDDEN_POWER_END
 		) {
 			$moveId = new MoveId(MoveId::HIDDEN_POWER);
 		}
@@ -80,9 +80,9 @@ final class DexMovePokemonModel
 
 		$methodsPokemons = [];
 		foreach ($pokemonMoves as $pokemonMove) {
-			$pokemonId = $pokemonMove->pokemonId->value();
-			$vgId = $pokemonMove->versionGroupId->value();
-			$methodId = $pokemonMove->moveMethodId->value();
+			$pokemonId = $pokemonMove->pokemonId->value;
+			$vgId = $pokemonMove->versionGroupId->value;
+			$methodId = $pokemonMove->moveMethodId->value;
 
 			if (!isset($this->learnsetVgs[$vgId])) {
 				// This should only happen if this Pokémon move is from a gen 1
@@ -104,7 +104,7 @@ final class DexMovePokemonModel
 				case MoveMethodId::MACHINE:
 					// The version group data is the TM's number.
 					$tm = $tms[$vgId];
-					$itemId = $tm->itemId->value();
+					$itemId = $tm->itemId->value;
 					$itemDescription = $itemDescriptions[$vgId][$itemId];
 
 					$methodsPokemons[$methodId][$pokemonId][$vgIdentifier] = $itemDescription->name;

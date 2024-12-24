@@ -65,9 +65,9 @@ final readonly class DexMoveView
 				'title' => 'Porydex - Moves - ' . $move['name'],
 
 				'versionGroup' => [
-					'id' => $versionGroup->id->value(),
+					'id' => $versionGroup->id->value,
 					'identifier' => $versionGroup->identifier,
-					'generationId' => $versionGroup->generationId->value(),
+					'generationId' => $versionGroup->generationId->value,
 				],
 
 				'breadcrumbs' => $breadcrumbs,

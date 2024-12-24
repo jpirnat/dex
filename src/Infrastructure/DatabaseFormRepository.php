@@ -32,13 +32,13 @@ final readonly class DatabaseFormRepository implements FormRepositoryInterface
 			WHERE `id` = :form_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':form_id', $formId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':form_id', $formId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new FormNotFoundException(
-				'No form exists with id ' . $formId->value() . '.'
+				"No form exists with id $formId->value."
 			);
 		}
 
@@ -68,8 +68,8 @@ final readonly class DatabaseFormRepository implements FormRepositoryInterface
 			)
 			AND `pokemon_id` = :pokemon_id'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$formIds = [];

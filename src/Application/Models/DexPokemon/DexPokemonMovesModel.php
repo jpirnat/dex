@@ -83,9 +83,9 @@ final class DexPokemonMovesModel
 		$moveVgIndexes = [];
 		$methodsMoves = [];
 		foreach ($pokemonMoves as $pokemonMove) {
-			$vgId = $pokemonMove->versionGroupId->value();
-			$moveId = $pokemonMove->moveId->value();
-			$methodId = $pokemonMove->moveMethodId->value();
+			$vgId = $pokemonMove->versionGroupId->value;
+			$moveId = $pokemonMove->moveId->value;
+			$methodId = $pokemonMove->moveMethodId->value;
 
 			if (!isset($this->learnsetVgs[$vgId])) {
 				// This should only happen if this Pokémon move is from a gen 1
@@ -115,7 +115,7 @@ final class DexPokemonMovesModel
 					// The version group data is the TM's number.
 					/** @var TechnicalMachine $tm */
 					$tm = $tms[$vgId][$moveId];
-					$itemId = $tm->itemId->value();
+					$itemId = $tm->itemId->value;
 					$itemDescription = $itemDescriptions[$vgId][$itemId];
 
 					$methodsMoves[$methodId][$moveId][$vgIdentifier] = [

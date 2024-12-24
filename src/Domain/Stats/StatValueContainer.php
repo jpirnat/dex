@@ -25,7 +25,7 @@ final class StatValueContainer
 	 */
 	public function add(StatValue $statValue) : void
 	{
-		$statId = $statValue->statId->value();
+		$statId = $statValue->statId->value;
 		$this->statValues[$statId] = $statValue;
 	}
 
@@ -37,13 +37,12 @@ final class StatValueContainer
 	 */
 	public function get(StatId $statId) : StatValue
 	{
-		if (!isset($this->statValues[$statId->value()])) {
+		if (!isset($this->statValues[$statId->value])) {
 			throw new StatNotFoundException(
-				'Stat value container does not have stat value for stat id '
-				. $statId->value() . '.'
+				"Stat value container does not have stat value for stat id $statId->value."
 			);
 		}
 
-		return $this->statValues[$statId->value()];
+		return $this->statValues[$statId->value];
 	}
 }

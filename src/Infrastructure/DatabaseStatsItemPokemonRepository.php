@@ -69,10 +69,10 @@ final readonly class DatabaseStatsItemPokemonRepository implements StatsItemPoke
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
 		$stmt->bindValue(':prev_month', $prevMonth?->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':item_id', $itemId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$pokemons = [];

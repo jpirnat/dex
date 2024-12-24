@@ -29,7 +29,7 @@ final readonly class DatabaseUsagePokemonRepository implements UsagePokemonRepos
 			LIMIT 1'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return (bool) $stmt->fetchColumn();
 	}
@@ -59,8 +59,8 @@ final readonly class DatabaseUsagePokemonRepository implements UsagePokemonRepos
 			)'
 		);
 		$stmt->bindValue(':month', $usagePokemon->month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $usagePokemon->formatId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $usagePokemon->pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $usagePokemon->formatId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $usagePokemon->pokemonId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':raw', $usagePokemon->raw, PDO::PARAM_INT);
 		$stmt->bindValue(':raw_percent', $usagePokemon->rawPercent);
 		$stmt->bindValue(':real', $usagePokemon->real, PDO::PARAM_INT);

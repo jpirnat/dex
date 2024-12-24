@@ -32,7 +32,7 @@ final class BreedingTree
 	 */
 	public function addParent(BreedingTree $parent) : void
 	{
-		$pokemonId = $parent->value->pokemonId->value();
+		$pokemonId = $parent->value->pokemonId->value;
 		$this->parents[$pokemonId] = $parent;
 	}
 
@@ -50,7 +50,7 @@ final class BreedingTree
 	 */
 	public function isComplete() : bool
 	{
-		if ($this->value->moveMethodId->value() !== MoveMethodId::EGG) {
+		if ($this->value->moveMethodId->value !== MoveMethodId::EGG) {
 			return true;
 		}
 

@@ -118,19 +118,19 @@ final class AveragedLeadsModel
 			$pokemonId = $leadsRatedAveragedPokemon->pokemonId;
 
 			// Get this Pokémon's name.
-			$pokemonName = $pokemonNames[$pokemonId->value()];
+			$pokemonName = $pokemonNames[$pokemonId->value];
 
 			// Get this Pokémon's number of months of moveset data.
-			$numberOfMonths = $monthCounts[$pokemonId->value()] ?? 0;
+			$numberOfMonths = $monthCounts[$pokemonId->value] ?? 0;
 
 			// Get this Pokémon.
-			$pokemon = $pokemons[$pokemonId->value()];
+			$pokemon = $pokemons[$pokemonId->value];
 
 			// Get this Pokémon's form icon.
-			$formIcon = $formIcons[$pokemonId->value()]; // A Pokémon's default form has Pokémon id === form id.
+			$formIcon = $formIcons[$pokemonId->value]; // A Pokémon's default form has Pokémon id === form id.
 
 			// Get this Pokémon's non-rated usage record for these months.
-			$leadsAveragedPokemon = $leadsAveragedPokemons[$pokemonId->value()];
+			$leadsAveragedPokemon = $leadsAveragedPokemons[$pokemonId->value];
 
 			$this->pokemon[] = new AveragedLeadsPokemon(
 				$leadsRatedAveragedPokemon->rank,

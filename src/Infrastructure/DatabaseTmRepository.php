@@ -38,15 +38,14 @@ final readonly class DatabaseTmRepository implements TmRepositoryInterface
 				AND `move_id` = :move_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new TmNotFoundException(
-				'No TM exists with version group id ' . $versionGroupId->value()
-				. ' and move id ' . $moveId->value() . '.'
+				"No TM exists with version group id $versionGroupId->value and move id $moveId->value."
 			);
 		}
 
@@ -78,7 +77,7 @@ final readonly class DatabaseTmRepository implements TmRepositoryInterface
 				`machine_type`,
 				`number`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$tms = [];
@@ -114,7 +113,7 @@ final readonly class DatabaseTmRepository implements TmRepositoryInterface
 			FROM `technical_machines`
 			WHERE `move_id` = :move_id'
 		);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$tms = [];
@@ -158,7 +157,7 @@ final readonly class DatabaseTmRepository implements TmRepositoryInterface
 				WHERE `into_vg_id` = :version_group_id
 			)'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$tms = [];

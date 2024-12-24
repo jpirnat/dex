@@ -37,7 +37,7 @@ final readonly class DatabaseStatRepository implements StatRepositoryInterface
 			)
 			ORDER BY `sort`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$stats = [];

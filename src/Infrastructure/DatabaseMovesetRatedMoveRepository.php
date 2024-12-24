@@ -29,8 +29,8 @@ final readonly class DatabaseMovesetRatedMoveRepository implements MovesetRatedM
 				:percent
 			)'
 		);
-		$stmt->bindValue(':urp_id', $movesetRatedMove->usageRatedPokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $movesetRatedMove->moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':urp_id', $movesetRatedMove->usageRatedPokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $movesetRatedMove->moveId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':percent', $movesetRatedMove->percent);
 		$stmt->execute();
 	}

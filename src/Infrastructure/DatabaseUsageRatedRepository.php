@@ -30,7 +30,7 @@ final readonly class DatabaseUsageRatedRepository implements UsageRatedRepositor
 			LIMIT 1'
 		);
 		$stmt->bindValue(':month', $month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
 		return (bool) $stmt->fetchColumn();
@@ -55,7 +55,7 @@ final readonly class DatabaseUsageRatedRepository implements UsageRatedRepositor
 			)'
 		);
 		$stmt->bindValue(':month', $usageRated->month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $usageRated->formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $usageRated->formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $usageRated->rating, PDO::PARAM_INT);
 		$stmt->bindValue(':average_weight_per_team', $usageRated->averageWeightPerTeam);
 		$stmt->execute();

@@ -40,8 +40,8 @@ final readonly class DatabaseFormIconRepository implements FormIconRepositoryInt
 				AND `is_shiny` = :is_shiny
 			LIMIT 1'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':form_id', $formId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':form_id', $formId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':is_female', $isFemale, PDO::PARAM_INT);
 		$stmt->bindValue(':is_right', $isRight, PDO::PARAM_INT);
 		$stmt->bindValue(':is_shiny', $isShiny, PDO::PARAM_INT);
@@ -50,8 +50,8 @@ final readonly class DatabaseFormIconRepository implements FormIconRepositoryInt
 
 		if (!$result) {
 			throw new FormIconNotFoundException(
-				'No form icon exists with version group id ' . $versionGroupId->value()
-				. ', form id ' . $formId->value()
+				'No form icon exists with version group id ' . $versionGroupId->value
+				. ', form id ' . $formId->value
 				. ', gender ' . ($isFemale ? 'female' : 'male')
 				. ', and direction ' . ($isRight ? 'right' : 'left')
 				. ', and shininess ' . ($isShiny ? 'shiny' : 'not shiny') . '.'
@@ -89,7 +89,7 @@ final readonly class DatabaseFormIconRepository implements FormIconRepositoryInt
 				AND `is_right` = :is_right
 				AND `is_shiny` = :is_shiny'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':is_female', $isFemale, PDO::PARAM_INT);
 		$stmt->bindValue(':is_right', $isRight, PDO::PARAM_INT);
 		$stmt->bindValue(':is_shiny', $isShiny, PDO::PARAM_INT);

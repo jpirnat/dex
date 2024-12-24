@@ -30,13 +30,13 @@ final readonly class DatabaseGenerationRepository implements GenerationRepositor
 			WHERE `id` = :generation_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new GenerationNotFoundException(
-				'No generation exists with id ' . $generationId->value() . '.'
+				"No generation exists with id $generationId->value."
 			);
 		}
 

@@ -31,13 +31,13 @@ final readonly class DatabaseLanguageRepository implements LanguageRepositoryInt
 			WHERE `id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new LanguageNotFoundException(
-				'No language exists with id ' . $languageId->value() . '.'
+				"No language exists with id $languageId->value."
 			);
 		}
 

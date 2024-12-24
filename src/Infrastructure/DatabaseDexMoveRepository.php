@@ -126,9 +126,9 @@ INNER JOIN `category_names` AS `cn`
 				AND `mn`.`language_id` = :language_id
 			LIMIT 1"
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -153,8 +153,8 @@ INNER JOIN `category_names` AS `cn`
 				AND `mn`.`language_id` = :language_id
 			ORDER BY `name`"
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 
@@ -184,10 +184,10 @@ INNER JOIN `category_names` AS `cn`
 				AND `mn`.`language_id` = :language_id
 			ORDER BY `name`"
 		);
-		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':flag_id', $flagId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 
@@ -221,10 +221,10 @@ INNER JOIN `category_names` AS `cn`
 				AND `vm`.`can_use_move` = 1
 				AND `mn`.`language_id` = :language_id"
 		);
-		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 
@@ -248,9 +248,9 @@ INNER JOIN `category_names` AS `cn`
 				AND `mn`.`language_id` = :language_id
 			ORDER BY `name`"
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 
@@ -276,9 +276,9 @@ INNER JOIN `category_names` AS `cn`
 				AND `vm`.`can_use_move` = 1
 				AND `mn`.`language_id` = :language_id"
 		);
-		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 }

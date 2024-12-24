@@ -123,7 +123,7 @@ final class IvCalculatorSubmitModel
 		// Use characteristic to further narrow down the options.
 		if ($characteristic && $versionGroup->hasCharacteristics) {
 			$highestStatId = $characteristic->highestStatId;
-			$highestStat = $stats[$highestStatId->value()];
+			$highestStat = $stats[$highestStatId->value];
 			$highestStatIdentifier = $highestStat->identifier;
 
 			foreach ($possibleIvs[$highestStatIdentifier] ?? [] as $possibleIvIndex => $possibleIv) {
@@ -245,7 +245,7 @@ final class IvCalculatorSubmitModel
 
 			if ($characteristic && $versionGroup->hasCharacteristics) {
 				$highestStatId = $characteristic->highestStatId;
-				$highestStat = $stats[$highestStatId->value()];
+				$highestStat = $stats[$highestStatId->value];
 				$highestStatIdentifier = $highestStat->identifier;
 
 				// The "maximum of minimums" characteristic check can be run again

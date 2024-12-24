@@ -72,14 +72,14 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 			WHERE `vg`.`id` = :version_group_id
 				AND `vgn`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new VersionGroupNotFoundException(
-				'No version group exists with id ' . $versionGroupId->value() . '.'
+				"No version group exists with id $versionGroupId->value."
 			);
 		}
 
@@ -131,9 +131,9 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 			AND `vgn`.`language_id` = :language_id
 			ORDER BY `vg`.`sort`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$versionGroups = [];
@@ -199,9 +199,9 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
 			AND `vgn`.`language_id` = :language_id
 			ORDER BY `vg`.`sort`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$versionGroups = [];

@@ -146,9 +146,9 @@ final readonly class DexPokemonView
 				'title' => 'Porydex - Pokémon - ' . $pokemon['name'],
 
 				'versionGroup' => [
-					'id' => $versionGroup->id->value(),
+					'id' => $versionGroup->id->value,
 					'identifier' => $versionGroup->identifier,
-					'generationId' => $versionGroup->generationId->value(),
+					'generationId' => $versionGroup->generationId->value,
 					'hasEvYields' => $versionGroup->hasEvYields,
 					'hasBreeding' => $versionGroup->hasBreeding,
 					'hasMoveDescriptions' => $versionGroup->id->hasMoveDescriptions(),

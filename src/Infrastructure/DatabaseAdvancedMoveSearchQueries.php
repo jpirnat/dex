@@ -112,8 +112,8 @@ final readonly class DatabaseAdvancedMoveSearchQueries implements AdvancedMoveSe
 		bool $includeTransferMoves,
 		LanguageId $languageId,
 	) : array {
-		$versionGroupId = $versionGroupId->value();
-		$languageId = $languageId->value();
+		$versionGroupId = $versionGroupId->value;
+		$languageId = $languageId->value;
 
 		$whereClauses = [];
 		$whereClauses[] = "`vm`.`version_group_id` = $versionGroupId";
@@ -121,7 +121,7 @@ final readonly class DatabaseAdvancedMoveSearchQueries implements AdvancedMoveSe
 		if ($typeIds) {
 			$typeIds = array_map(
 				function (TypeId $typeId) : int {
-					return $typeId->value();
+					return $typeId->value;
 				},
 				$typeIds,
 			);
@@ -132,7 +132,7 @@ final readonly class DatabaseAdvancedMoveSearchQueries implements AdvancedMoveSe
 		if ($categoryIds) {
 			$categoryIds = array_map(
 				function (CategoryId $categoryId) : int {
-					return $categoryId->value();
+					return $categoryId->value;
 				},
 				$categoryIds,
 			);
@@ -142,7 +142,7 @@ final readonly class DatabaseAdvancedMoveSearchQueries implements AdvancedMoveSe
 
 		if ($yesFlagIds) {
 			foreach ($yesFlagIds as $yesFlagId) {
-				$yesFlagId = $yesFlagId->value();
+				$yesFlagId = $yesFlagId->value;
 				$whereClauses[] = "`vm`.`move_id` IN (
 		SELECT
 			`move_id`
@@ -155,7 +155,7 @@ final readonly class DatabaseAdvancedMoveSearchQueries implements AdvancedMoveSe
 
 		if ($noFlagIds) {
 			foreach ($noFlagIds as $noFlagId) {
-				$noFlagId = $noFlagId->value();
+				$noFlagId = $noFlagId->value;
 				$whereClauses[] = "`vm`.`move_id` NOT IN (
 		SELECT
 			`move_id`
@@ -167,7 +167,7 @@ final readonly class DatabaseAdvancedMoveSearchQueries implements AdvancedMoveSe
 		}
 
 		if ($pokemonId) {
-			$pokemonId = $pokemonId->value();
+			$pokemonId = $pokemonId->value;
 			if ($includeTransferMoves) {
 				$whereClauses[] = "`vm`.`move_id` IN (
 		SELECT

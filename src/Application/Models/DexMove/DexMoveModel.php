@@ -17,6 +17,7 @@ use Jp\Dex\Domain\Moves\VgMoveRepositoryInterface;
 use Jp\Dex\Domain\Types\DexType;
 use Jp\Dex\Domain\Types\DexTypeRepositoryInterface;
 use Jp\Dex\Domain\Types\TypeId;
+use Jp\Dex\Domain\Types\TypeIdentifier;
 use Jp\Dex\Domain\Types\TypeMatchupRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
@@ -101,7 +102,7 @@ final class DexMoveModel
 		$vgMove = $this->vgMoveRepository->getByVgAndMove($versionGroupId, $moveId);
 
 		$infliction = null;
-		if ($vgMove->inflictionId->value() !== InflictionId::NONE) {
+		if ($vgMove->inflictionId->value !== InflictionId::NONE) {
 			$infliction = $this->vgMoveRepository->getInfliction(
 				$vgMove->inflictionId,
 				$languageId,
@@ -171,7 +172,7 @@ final class DexMoveModel
 		$this->damageDealt = [];
 
 		$vgMove = $this->vgMoveRepository->getByVgAndMove($versionGroupId, $moveId);
-		if ($vgMove->categoryId->value() === CategoryId::STATUS) {
+		if ($vgMove->categoryId->value === CategoryId::STATUS) {
 			// This move doesn't do damage. No matchups needed.
 			return;
 		}
@@ -189,7 +190,7 @@ final class DexMoveModel
 			$this->damageDealt[$defendingTypeIdentifier] = $matchup->multiplier;
 		}
 
-		if ($moveId->value() === MoveId::FLYING_PRESS) {
+		if ($moveId->value === MoveId::FLYING_PRESS) {
 			$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
 				$this->versionGroupModel->versionGroup->generationId,
 				new TypeId(TypeId::FLYING),
@@ -200,14 +201,12 @@ final class DexMoveModel
 			}
 		}
 
-		if ($moveId->value() === MoveId::FREEZE_DRY) {
-			// TODO: get this type identifier from somewhere else.
-			$this->damageDealt['water'] = 2;
+		if ($moveId->value === MoveId::FREEZE_DRY) {
+			$this->damageDealt[TypeIdentifier::WATER] = 2;
 		}
 
-		if ($moveId->value() === MoveId::THOUSAND_ARROWS) {
-			// TODO: get this type identifier from somewhere else.
-			$this->damageDealt['flying'] = 1;
+		if ($moveId->value === MoveId::THOUSAND_ARROWS) {
+			$this->damageDealt[TypeIdentifier::FLYING] = 1;
 		}
 	}
 

@@ -44,14 +44,14 @@ final readonly class DatabaseFormatRepository implements FormatRepositoryInterfa
 				AND `fn`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':format_id', $formatId->value());
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new FormatNotFoundException(
-				'No format exists with id ' . $formatId->value()
+				"No format exists with id $formatId->value."
 			);
 		}
 
@@ -96,7 +96,7 @@ final readonly class DatabaseFormatRepository implements FormatRepositoryInterfa
 			LIMIT 1'
 		);
 		$stmt->bindValue(':identifier', $identifier);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 

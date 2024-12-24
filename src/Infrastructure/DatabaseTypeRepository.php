@@ -35,13 +35,13 @@ final readonly class DatabaseTypeRepository implements TypeRepositoryInterface
 			WHERE `id` = :type_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new TypeNotFoundException(
-				'No type exists with id ' . $typeId->value() . '.'
+				"No type exists with id $typeId->value."
 			);
 		}
 
@@ -168,7 +168,7 @@ final readonly class DatabaseTypeRepository implements TypeRepositoryInterface
 					WHERE `version_group_id` = :version_group_id
 				)'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$types = [];

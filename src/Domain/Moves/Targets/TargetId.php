@@ -12,8 +12,8 @@ final class TargetId extends EntityId
 
 	public function hitsMultiplePokemon() : bool
 	{
-		return $this->id === self::ALL_ADJACENT_POKEMON
-			|| $this->id === self::ALL_ADJACENT_OPPONENTS
+		return $this->value === self::ALL_ADJACENT_POKEMON
+			|| $this->value === self::ALL_ADJACENT_OPPONENTS
 		;
 	}
 }

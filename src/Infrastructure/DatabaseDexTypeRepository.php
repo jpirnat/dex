@@ -40,14 +40,14 @@ final readonly class DatabaseDexTypeRepository implements DexTypeRepositoryInter
 			WHERE `t`.`id` = :type_id
 				AND `tn`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new TypeNotFoundException(
-				'No type exists with id ' . $typeId->value() . '.'
+				"No type exists with id $typeId->value."
 			);
 		}
 
@@ -85,8 +85,8 @@ final readonly class DatabaseDexTypeRepository implements DexTypeRepositoryInter
 				AND `vgt`.`version_group_id` = :version_group_id
 				AND `tn`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$dexTypes = [];
@@ -130,8 +130,8 @@ final readonly class DatabaseDexTypeRepository implements DexTypeRepositoryInter
 			WHERE `vgt`.`version_group_id` = :version_group_id
 				AND `tn`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$dexTypes = [];

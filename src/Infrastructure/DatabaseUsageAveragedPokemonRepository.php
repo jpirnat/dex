@@ -47,7 +47,7 @@ final readonly class DatabaseUsageAveragedPokemonRepository implements UsageAver
 		$stmt->bindValue(':months2', $months, PDO::PARAM_INT);
 		$stmt->bindValue(':start', $start->format('Y-m-01'));
 		$stmt->bindValue(':end', $end->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$usageAveragedPokemons = [];

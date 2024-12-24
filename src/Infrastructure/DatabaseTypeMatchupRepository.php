@@ -34,7 +34,7 @@ final readonly class DatabaseTypeMatchupRepository implements TypeMatchupReposit
 				ON `tm`.`defending_type_id` = `d`.`id`
 			WHERE `generation_id` = :generation_id'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$typeMatchups = [];
@@ -73,8 +73,8 @@ final readonly class DatabaseTypeMatchupRepository implements TypeMatchupReposit
 			WHERE `generation_id` = :generation_id
 				AND `attacking_type_id` = :type_id'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$typeMatchups = [];
@@ -113,8 +113,8 @@ final readonly class DatabaseTypeMatchupRepository implements TypeMatchupReposit
 			WHERE `generation_id` = :generation_id
 				AND `defending_type_id` = :type_id'
 		);
-		$stmt->bindValue(':generation_id', $generationId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':type_id', $typeId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$typeMatchups = [];

@@ -40,7 +40,7 @@ final readonly class DatabaseModelRepository implements ModelRepositoryInterface
 				AND `attacking_index` = :attacking_index
 			LIMIT 1'
 		);
-		$stmt->bindValue(':form_id', $formId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':form_id', $formId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':is_shiny', $isShiny, PDO::PARAM_INT);
 		$stmt->bindValue(':is_back', $isBack, PDO::PARAM_INT);
 		$stmt->bindValue(':is_female', $isFemale, PDO::PARAM_INT);
@@ -50,7 +50,7 @@ final readonly class DatabaseModelRepository implements ModelRepositoryInterface
 
 		if (!$result) {
 			throw new ModelNotFoundException(
-				'No model exists with form id ' . $formId->value()
+				'No model exists with form id ' . $formId->value
 				. ', shininess ' . ($isShiny ? 'shiny' : 'normal')
 				. ', direction ' . ($isBack ? 'front' : 'back')
 				. ', gender ' . ($isFemale ? 'female' : 'male')

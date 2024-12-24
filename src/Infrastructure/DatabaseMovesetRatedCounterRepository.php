@@ -37,8 +37,8 @@ final readonly class DatabaseMovesetRatedCounterRepository implements MovesetRat
 				:percent_switched_out
 			)'
 		);
-		$stmt->bindValue(':urp_id', $movesetRatedCounter->usageRatedPokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':counter_id', $movesetRatedCounter->counterId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':urp_id', $movesetRatedCounter->usageRatedPokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':counter_id', $movesetRatedCounter->counterId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':number1', $movesetRatedCounter->number1);
 		$stmt->bindValue(':number2', $movesetRatedCounter->number2);
 		$stmt->bindValue(':number3', $movesetRatedCounter->number3);

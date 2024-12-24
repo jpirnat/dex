@@ -65,8 +65,8 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `p`.`sort`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$abilityPokemon = $stmt->fetchAll(PDO::FETCH_ASSOC | PDO::FETCH_GROUP);
 
@@ -106,11 +106,11 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 			AND `an`.`language_id` = :language_id
 			ORDER BY `name`'
 		);
-		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id3', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id4', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id3', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id4', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$abilities = [];
@@ -185,10 +185,10 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `p`.`sort`'
 		);
-		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':flag_id', $flagId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$abilityPokemon = $stmt->fetchAll(PDO::FETCH_ASSOC | PDO::FETCH_GROUP);
 
@@ -235,13 +235,13 @@ final readonly class DatabaseDexAbilityRepository implements DexAbilityRepositor
 			AND `an`.`language_id` = :language_id
 			ORDER BY `name`'
 		);
-		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id3', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id4', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id5', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id3', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id4', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id5', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':flag_id', $flagId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$abilities = [];

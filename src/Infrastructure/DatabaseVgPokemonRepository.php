@@ -57,17 +57,14 @@ final readonly class DatabaseVgPokemonRepository implements VgPokemonRepositoryI
 				AND `pokemon_id` = :pokemon_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			$versionGroupId = $versionGroupId->value();
-			$pokemonId = $pokemonId->value();
-
 			throw new VgPokemonNotFoundException(
-				"No version group Pokémon exists for version group id $versionGroupId and Pokémon id $pokemonId."
+				"No version group Pokémon exists for version group id $versionGroupId->value and Pokémon id $pokemonId->value."
 			);
 		}
 

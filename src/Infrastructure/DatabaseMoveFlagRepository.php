@@ -79,8 +79,8 @@ final readonly class DatabaseMoveFlagRepository implements MoveFlagRepositoryInt
 				AND `vgf`.`is_functional` = 1
 				AND `fd`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$flags = [];
@@ -125,9 +125,9 @@ final readonly class DatabaseMoveFlagRepository implements MoveFlagRepositoryInt
 				AND `fd`.`language_id` = :language_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':flag_id', $flagId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':flag_id', $flagId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -167,8 +167,8 @@ final readonly class DatabaseMoveFlagRepository implements MoveFlagRepositoryInt
 				AND `vgf`.`is_functional` = 1
 				AND `fd`.`language_id` = :language_id'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$flags = [];
@@ -202,8 +202,8 @@ final readonly class DatabaseMoveFlagRepository implements MoveFlagRepositoryInt
 			WHERE `version_group_id` = :version_group_id
 				AND `move_id` = :move_id'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$flagIds = [];

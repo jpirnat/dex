@@ -72,8 +72,8 @@ final readonly class DatabaseIvCalculatorQueries implements IvCalculatorQueriesI
 				AND `pn`.`language_id` = :language_id
 			ORDER BY `name`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$pokemons = [];
@@ -160,7 +160,7 @@ final readonly class DatabaseIvCalculatorQueries implements IvCalculatorQueriesI
 			WHERE `nn`.`language_id` = :language_id
 			ORDER BY `name`'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
@@ -183,8 +183,8 @@ final readonly class DatabaseIvCalculatorQueries implements IvCalculatorQueriesI
 				AND `cn`.`language_id` = :language_id
 			ORDER BY `name`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
@@ -210,8 +210,8 @@ final readonly class DatabaseIvCalculatorQueries implements IvCalculatorQueriesI
 				AND `t`.`hidden_power_index` IS NOT NULL
 			ORDER BY `name`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
@@ -237,8 +237,8 @@ final readonly class DatabaseIvCalculatorQueries implements IvCalculatorQueriesI
 				AND `sn`.`language_id` = :language_id
 			ORDER BY `s`.`sort`'
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}

@@ -33,7 +33,7 @@ final readonly class DatabaseMoveMethodNameRepository implements MoveMethodNameR
 			FROM `move_method_names`
 			WHERE `language_id` = :language_id'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$moveMethodNames = [];

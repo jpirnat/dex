@@ -6,14 +6,6 @@ namespace Jp\Dex\Domain;
 abstract class EntityId
 {
 	public function __construct(
-		protected int $id,
+		protected(set) int $value,
 	) {}
-
-	/**
-	 * Get the id's value.
-	 */
-	public function value() : int
-	{
-		return $this->id;
-	}
 }

@@ -45,8 +45,8 @@ final class DexTmsModel
 		);
 
 		foreach ($machines as $machine) {
-			$itemId = $machine->itemId->value();
-			$moveId = $machine->moveId->value();
+			$itemId = $machine->itemId->value;
+			$moveId = $machine->moveId->value;
 
 			if (!isset($items[$itemId])) {
 				// This is probably TM95 in BW, which is unavailable.

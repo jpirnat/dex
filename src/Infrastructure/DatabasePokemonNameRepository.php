@@ -35,16 +35,14 @@ final readonly class DatabasePokemonNameRepository implements PokemonNameReposit
 				AND `pokemon_id` = :pokemon_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new PokemonNameNotFoundException(
-				'No Pokémon name exists with language id '
-				. $languageId->value() . ' and Pokémon id '
-				. $pokemonId->value() . '.'
+				"No Pokémon name exists with language id $languageId->value and Pokémon id $pokemonId->value."
 			);
 		}
 
@@ -71,7 +69,7 @@ final readonly class DatabasePokemonNameRepository implements PokemonNameReposit
 			FROM `pokemon_names`
 			WHERE `language_id` = :language_id'
 		);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 
 		$pokemonNames = [];

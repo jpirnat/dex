@@ -30,13 +30,13 @@ final readonly class DatabaseSpeciesRepository implements SpeciesRepositoryInter
 			WHERE `id` = :species_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':species_id', $speciesId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':species_id', $speciesId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new SpeciesNotFoundException(
-				'No species exists with id ' . $speciesId->value() . '.'
+				'No species exists with id ' . $speciesId->value . '.'
 			);
 		}
 

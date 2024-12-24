@@ -23,7 +23,7 @@ final class StatId extends EntityId
 	 */
 	public static function getByGeneration(GenerationId $generationId) : array
 	{
-		$generation = $generationId->value();
+		$generation = $generationId->value;
 
 		if ($generation === 1) {
 			return [

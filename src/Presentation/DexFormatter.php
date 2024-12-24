@@ -62,7 +62,7 @@ final readonly class DexFormatter
 	{
 		return [
 			'identifier' => $versionGroup->identifier,
-			'generationId' => $versionGroup->generationId->value(),
+			'generationId' => $versionGroup->generationId->value,
 			'name' => $versionGroup->name,
 			'versions' => $this->formatDexVersions($versionGroup->versions),
 		];

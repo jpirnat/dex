@@ -41,7 +41,7 @@ final readonly class DatabaseLeadsRatedAveragedPokemonRepository implements Lead
 		);
 		$stmt->bindValue(':start', $start->format('Y-m-01'));
 		$stmt->bindValue(':end', $end->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
 		return (bool) $stmt->fetchColumn();
@@ -81,7 +81,7 @@ final readonly class DatabaseLeadsRatedAveragedPokemonRepository implements Lead
 		$stmt->bindValue(':months', $months, PDO::PARAM_INT);
 		$stmt->bindValue(':start', $start->format('Y-m-01'));
 		$stmt->bindValue(':end', $end->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
 		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 		$stmt->execute();
 

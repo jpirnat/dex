@@ -38,13 +38,13 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
 			WHERE `id` = :pokemon_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new PokemonNotFoundException(
-				'No Pokémon exists with id ' . $pokemonId->value() . '.'
+				"No Pokémon exists with id $pokemonId->value."
 			);
 		}
 

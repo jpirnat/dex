@@ -48,20 +48,21 @@ final class StatsMonthModel
 			$formatId = $formatRating['formatId'];
 			$rating = $formatRating['rating'];
 
-			$formatIds[$formatId->value()] = $formatId;
-			$ratings[$formatId->value()][] = $rating;
+			$fId = $formatId->value;
+			$formatIds[$fId] = $formatId;
+			$ratings[$fId][] = $rating;
 		}
 
 		// Get additional data for each format.
 		foreach ($formatIds as $formatId) {
 			$format = $this->formatRepository->getById($formatId, $languageId);
 
-			$generation = $format->generationId->value();
+			$generation = $format->generationId->value;
 			$this->generations[$generation]['generation'] = $generation;
 			$this->generations[$generation]['formats'][] = [
 				'identifier' => $format->identifier,
 				'name' => $format->name,
-				'ratings' => $ratings[$formatId->value()] ?? [],
+				'ratings' => $ratings[$formatId->value] ?? [],
 			];
 		}
 

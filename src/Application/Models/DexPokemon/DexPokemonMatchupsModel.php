@@ -135,7 +135,7 @@ final class DexPokemonMatchupsModel
 			return;
 		}
 
-		if ($abilityIdentifier === AbilityIdentifier::LIGHTNING_ROD && $generationId->value() >= 5) {
+		if ($abilityIdentifier === AbilityIdentifier::LIGHTNING_ROD && $generationId->value >= 5) {
 			$this->addToDamageTaken($ability);
 			$this->damageTaken[$abilityIdentifier][TypeIdentifier::ELECTRIC] *= 0;
 			return;
@@ -177,7 +177,7 @@ final class DexPokemonMatchupsModel
 			return;
 		}
 
-		if ($abilityIdentifier === AbilityIdentifier::STORM_DRAIN && $generationId->value() >= 5) {
+		if ($abilityIdentifier === AbilityIdentifier::STORM_DRAIN && $generationId->value >= 5) {
 			$this->addToDamageTaken($ability);
 			$this->damageTaken[$abilityIdentifier][TypeIdentifier::WATER] *= 0;
 			return;

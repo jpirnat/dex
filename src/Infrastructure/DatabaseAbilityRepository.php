@@ -29,13 +29,13 @@ final readonly class DatabaseAbilityRepository implements AbilityRepositoryInter
 			WHERE `id` = :ability_id
 			LIMIT 1'
 		);
-		$stmt->bindValue(':ability_id', $abilityId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':ability_id', $abilityId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
 			throw new AbilityNotFoundException(
-				'No ability exists with id ' . $abilityId->value() . '.'
+				"No ability exists with id $abilityId->value."
 			);
 		}
 

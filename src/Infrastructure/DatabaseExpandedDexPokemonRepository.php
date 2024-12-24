@@ -313,18 +313,15 @@ WHERE `vp`.`version_group_id` = :version_group_id
 	AND `pn`.`language_id` = :language_id
 LIMIT 1"
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		if (!$result) {
-			$versionGroupId = $versionGroupId->value();
-			$pokemonId = $pokemonId->value();
-			$languageId = $languageId->value();
 			throw new VgPokemonNotFoundException(
-				"No version group Pokémon exists with version group id $versionGroupId, Pokémon id $pokemonId, and language id $languageId."
+				"No version group Pokémon exists with version group id $versionGroupId->value, Pokémon id $pokemonId->value, and language id $languageId->value."
 			);
 		}
 

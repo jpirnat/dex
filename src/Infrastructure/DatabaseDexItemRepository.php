@@ -80,9 +80,9 @@ LEFT JOIN `item_descriptions` AS `id`
 				AND `in`.`language_id` = :language_id
 			LIMIT 1"
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':item_id', $itemId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':item_id', $itemId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -106,8 +106,8 @@ LEFT JOIN `item_descriptions` AS `id`
 				AND `in`.`language_id` = :language_id
 			ORDER BY `name`"
 		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 
@@ -133,9 +133,9 @@ LEFT JOIN `item_descriptions` AS `id`
 				AND `vi`.`is_available` = 1
 				AND `in`.`language_id` = :language_id"
 		);
-		$stmt->bindValue(':version_group_id1', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':version_group_id2', $versionGroupId->value(), PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value(), PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id1', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':version_group_id2', $versionGroupId->value, PDO::PARAM_INT);
+		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
 		return $this->executeAndFetch($stmt);
 	}
 }
