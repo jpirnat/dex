@@ -192,7 +192,7 @@ final readonly class DatabaseAdvancedMoveSearchQueries implements AdvancedMoveSe
 			}
 		}
 
-		$whereClauses[] = "`vm`.`can_use_move` = 1";
+		$whereClauses[] = '`vm`.`can_use_move` = 1';
 		$whereClauses[] = "`mn`.`language_id` = $languageId";
 
 		$whereClauses = implode("\n\tAND ", $whereClauses);

@@ -25,7 +25,7 @@ final readonly class DatabaseDexMoveRepository implements DexMoveRepositoryInter
 	public function getBaseQuery() : string
 	{
 		return
-"SELECT
+'SELECT
 	`m`.`id`,
 	`m`.`identifier`,
 	COALESCE(`md`.`name`, `mn`.`name`) AS `name`,
@@ -68,7 +68,7 @@ INNER JOIN `categories` AS `c`
 INNER JOIN `category_names` AS `cn`
 	ON `vm`.`category_id` = `cn`.`category_id`
 	AND `mn`.`language_id` = `cn`.`language_id`
-";
+';
 	}
 
 	/**

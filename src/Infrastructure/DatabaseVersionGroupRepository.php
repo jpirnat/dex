@@ -27,7 +27,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 	private function getBaseQuery() : string
 	{
 		return
-			"SELECT
+			'SELECT
 				`id`,
 				`identifier`,
 				`generation_id`,
@@ -47,7 +47,7 @@ final readonly class DatabaseVersionGroupRepository implements VersionGroupRepos
 				`has_characteristics`,
 				`sort`
 			FROM `version_groups`
-			";
+			';
 	}
 
 	/**

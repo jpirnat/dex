@@ -33,12 +33,4 @@ final readonly class MoveType
 
 		$this->value = $value;
 	}
-
-	/**
-	 * Get the move type's value.
-	 */
-	public function value() : string
-	{
-		return $this->value;
-	}
 }

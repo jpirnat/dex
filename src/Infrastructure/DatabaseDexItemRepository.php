@@ -20,7 +20,7 @@ final readonly class DatabaseDexItemRepository implements DexItemRepositoryInter
 	private function getBaseQuery() : string
 	{
 		return
-"SELECT
+'SELECT
 	`i`.`id`,
 	`vi`.`icon`,
 	`i`.`identifier`,
@@ -35,7 +35,7 @@ LEFT JOIN `item_descriptions` AS `id`
 	ON `vi`.`version_group_id` = `id`.`version_group_id`
 	AND `vi`.`item_id` = `id`.`item_id`
 	AND `in`.`language_id` = `id`.`language_id`
-";
+';
 	}
 
 	/**

@@ -25,7 +25,7 @@ final readonly class DatabaseExpandedDexPokemonRepository implements ExpandedDex
 	private function getBaseQuery() : string
 	{
 		return
-"SELECT
+'SELECT
 	`p`.`identifier`,
 	`pn`.`name`,
 	`vp`.`sprite`,
@@ -154,7 +154,7 @@ INNER JOIN `species` AS `s`
 	ON `p`.`species_id` = `s`.`id`
 INNER JOIN `version_groups` AS `vg`
 	ON `vp`.`version_group_id` = `vg`.`id`
-";
+';
 	}
 
 	private function fromRecord(array $result) : ExpandedDexPokemon

@@ -22,7 +22,7 @@ $count = 0;
 foreach ($evolutions as $evolution) {
 	try {
 		$text = $evolutionFormatter->format($evolution, $languageId);
-		echo $text;
+		echo $text->html;
 		echo "\n";
 	} catch (Exception $e) {
 		var_dump($evolution);

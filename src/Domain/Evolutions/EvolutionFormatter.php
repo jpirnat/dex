@@ -113,7 +113,7 @@ final readonly class EvolutionFormatter
 				"Level up, starting at level $level",
 			),
 			EvoMethodId::TRADE => new EvolutionTableMethod(
-				"Trade",
+				'Trade',
 			),
 			EvoMethodId::TRADE_HELD_ITEM => new EvolutionTableMethod(
 				"Trade, while holding $item",
@@ -156,13 +156,13 @@ final readonly class EvolutionFormatter
 				"Level up, females only, starting at level $level",
 			),
 			EvoMethodId::LEVEL_UP_ELECTRIC => new EvolutionTableMethod(
-				"Level up, around a special magnetic field",
+				'Level up, around a special magnetic field',
 			),
 			EvoMethodId::LEVEL_UP_FOREST => new EvolutionTableMethod(
-				"Level up near a Moss Rock",
+				'Level up near a Moss Rock',
 			),
 			EvoMethodId::LEVEL_UP_COLD => new EvolutionTableMethod(
-				"Level up near an Ice Rock",
+				'Level up near an Ice Rock',
 			),
 			EvoMethodId::LEVEL_UP_INVERTED => new EvolutionTableMethod(
 				"Level up, starting at $level, while the game system is held upside-down",
@@ -188,7 +188,7 @@ final readonly class EvolutionFormatter
 				"Level up, during the night, starting at level $level, in $version only",
 			),
 			EvoMethodId::LEVEL_UP_SUMMIT => new EvolutionTableMethod(
-				"Level up at Mount Lanakila",
+				'Level up at Mount Lanakila',
 			),
 			EvoMethodId::LEVEL_UP_DUSK => $this->levelUpDusk($evolution),
 			EvoMethodId::LEVEL_UP_WORMHOLE => new EvolutionTableMethod(
@@ -205,10 +205,10 @@ final readonly class EvolutionFormatter
 			EvoMethodId::LEVEL_UP_NATURE_AMPED,
 			EvoMethodId::LEVEL_UP_NATURE_LOW_KEY => $this->levelUpNatures($evolution, $languageId),
 			EvoMethodId::TOWER_OF_DARKNESS => new EvolutionTableMethod(
-				"Read the Scroll of Darkness in the Tower of Darkness",
+				'Read the Scroll of Darkness in the Tower of Darkness',
 			),
 			EvoMethodId::TOWER_OF_WATERS => new EvolutionTableMethod(
-				"Read the Scroll of Waters in the Tower of Waters",
+				'Read the Scroll of Waters in the Tower of Waters',
 			),
 			EvoMethodId::LEVEL_UP_WALK_STEPS_WITH => new EvolutionTableMethod(
 				"Level up, while outside of its Poké Ball after walking $otherParameter steps using the Let's Go! feature",
@@ -359,7 +359,7 @@ final readonly class EvolutionFormatter
 
 		$friendship = $this->getFriendship($versionGroup->generationId);
 		$friendshipOrAffection = match ($versionGroup->generationId->value) {
-			6, 7 => "at least 2 affection",
+			6, 7 => 'at least 2 affection',
 			default => "at least $friendship friendship",
 		};
 
@@ -378,8 +378,8 @@ final readonly class EvolutionFormatter
 		$versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
 
 		$weather = match ($versionGroup->generationId->value) {
-			6 => "rain",
-			default => "rain or fog",
+			6 => 'rain',
+			default => 'rain or fog',
 		};
 
 		return new EvolutionTableMethod(

@@ -20,13 +20,13 @@ final readonly class DatabaseDexEggGroupRepository implements DexEggGroupReposit
 	private function getBaseQuery() : string
 	{
 		return
-"SELECT
+'SELECT
 	`e`.`identifier`,
 	`n`.`name`
 FROM `egg_groups` AS `e`
 INNER JOIN `egg_group_names` AS `n`
 	ON `e`.`id` = `n`.`egg_group_id`
-";
+';
 	}
 
 	/**

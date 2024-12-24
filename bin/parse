@@ -41,6 +41,7 @@ $abilities = $parser->getUnknownAbilities();
 $items = $parser->getUnknownItems();
 $natures = $parser->getUnknownNatures();
 $moves = $parser->getUnknownMoves();
+$types = $parser->getUnknownTypes();
 
 
 $end = new DateTime();
@@ -88,5 +89,11 @@ echo "\n";
 echo "Moves:\n";
 foreach ($moves as $move) {
 	echo "$move\n";
+}
+echo "\n";
+
+echo "Types:\n";
+foreach ($types as $type) {
+	echo "$type\n";
 }
 echo "\n";

@@ -12,6 +12,7 @@ use Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownMoveRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
+use Jp\Dex\Domain\Import\Showdown\ShowdownTypeRepositoryInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
 final readonly class MonthDirectoryParser
@@ -28,6 +29,7 @@ final readonly class MonthDirectoryParser
 		private ShowdownItemRepositoryInterface $showdownItemRepository,
 		private ShowdownNatureRepositoryInterface $showdownNatureRepository,
 		private ShowdownMoveRepositoryInterface $showdownMoveRepository,
+		private ShowdownTypeRepositoryInterface $showdownTypeRepository,
 	) {}
 
 	/**
@@ -157,5 +159,15 @@ final readonly class MonthDirectoryParser
 	public function getUnknownMoves() : array
 	{
 		return $this->showdownMoveRepository->getUnknown();
+	}
+
+	/**
+	 * Return the list of unknown types.
+	 *
+	 * @return string[]
+	 */
+	public function getUnknownTypes() : array
+	{
+		return $this->showdownTypeRepository->getUnknown();
 	}
 }

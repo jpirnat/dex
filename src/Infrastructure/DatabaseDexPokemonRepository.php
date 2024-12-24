@@ -29,7 +29,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 	public function getBaseQuery() : string
 	{
 		return
-"SELECT
+'SELECT
 	`p`.`id`,
 	`vp`.`icon`,
 	`p`.`identifier`,
@@ -136,7 +136,7 @@ INNER JOIN `species` AS `s`
 	ON `p`.`species_id` = `s`.`id`
 INNER JOIN `version_groups` AS `vg`
 	ON `vp`.`version_group_id` = `vg`.`id`
-";
+';
 	}
 
 	/**
