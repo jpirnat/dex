@@ -167,7 +167,7 @@ final class StatsPokemonModel
 
 		// Get the format's version group and generation.
 		$this->versionGroup = $this->vgRepository->getById($this->format->versionGroupId);
-		$this->generation = $this->generationRepository->getById($this->versionGroup->getGenerationId());
+		$this->generation = $this->generationRepository->getById($this->versionGroup->generationId);
 
 		// Get the moveset Pokémon record.
 		$this->movesetPokemon = $this->movesetPokemonRepository->getByMonthAndFormatAndPokemon(

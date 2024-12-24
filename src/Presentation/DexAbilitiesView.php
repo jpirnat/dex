@@ -27,7 +27,7 @@ final readonly class DexAbilitiesView
 		$flags = $this->dexAbilitiesModel->flags;
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -38,7 +38,7 @@ final readonly class DexAbilitiesView
 		return new JsonResponse([
 			'data' => [
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
+					'identifier' => $versionGroup->identifier,
 				],
 
 				'breadcrumbs' => $breadcrumbs,

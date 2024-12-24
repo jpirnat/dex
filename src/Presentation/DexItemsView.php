@@ -26,7 +26,7 @@ final readonly class DexItemsView
 		$items = $this->dexItemsModel->items;
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -37,9 +37,9 @@ final readonly class DexItemsView
 		return new JsonResponse([
 			'data' => [
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
-					'hasItemIcons' => $versionGroup->getId()->hasItemIcons(),
-					'hasItemDescriptions' => $versionGroup->getId()->hasItemDescriptions(),
+					'identifier' => $versionGroup->identifier,
+					'hasItemIcons' => $versionGroup->id->hasItemIcons(),
+					'hasItemDescriptions' => $versionGroup->id->hasItemDescriptions(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,

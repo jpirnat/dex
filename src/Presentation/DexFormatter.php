@@ -21,7 +21,7 @@ final readonly class DexFormatter
 {
 	/**
 	 * Transform an array of generation objects into a renderable data array.
-	 * This will most commonly be used for the generation control.
+	 * This will most commonly be used for the version group control.
 	 *
 	 * @param VersionGroup[] $versionGroups
 	 */
@@ -31,8 +31,8 @@ final readonly class DexFormatter
 
 		foreach ($versionGroups as $versionGroup) {
 			$g[] = [
-				'identifier' => $versionGroup->getIdentifier(),
-				'name' => $versionGroup->getAbbreviation(),
+				'identifier' => $versionGroup->identifier,
+				'name' => $versionGroup->abbreviation,
 			];
 		}
 
@@ -61,10 +61,10 @@ final readonly class DexFormatter
 	public function formatDexVersionGroup(DexVersionGroup $versionGroup) : array
 	{
 		return [
-			'identifier' => $versionGroup->getIdentifier(),
-			'generationId' => $versionGroup->getGenerationId()->value(),
-			'name' => $versionGroup->getName(),
-			'versions' => $this->formatDexVersions($versionGroup->getVersions()),
+			'identifier' => $versionGroup->identifier,
+			'generationId' => $versionGroup->generationId->value(),
+			'name' => $versionGroup->name,
+			'versions' => $this->formatDexVersions($versionGroup->versions),
 		];
 	}
 
@@ -90,7 +90,7 @@ final readonly class DexFormatter
 	private function formatDexVersion(DexVersion $version) : array
 	{
 		return [
-			'abbreviation' => $version->getAbbreviation(),
+			'abbreviation' => $version->abbreviation,
 		];
 	}
 
@@ -178,9 +178,9 @@ final readonly class DexFormatter
 	public function formatDexType(DexType $dexType) : array
 	{
 		return [
-			'identifier' => $dexType->getIdentifier(),
-			'name' => $dexType->getName(),
-			'icon' => $dexType->getIcon(),
+			'identifier' => $dexType->identifier,
+			'name' => $dexType->name,
+			'icon' => $dexType->icon,
 		];
 	}
 

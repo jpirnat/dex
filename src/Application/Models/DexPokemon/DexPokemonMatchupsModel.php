@@ -52,36 +52,36 @@ final class DexPokemonMatchupsModel
 
 		// Get all types, and initialize their matchup multipliers to 1.
 		$allTypes = $this->dexTypeRepository->getMainByVersionGroup(
-			$versionGroup->getId(),
+			$versionGroup->id,
 			$languageId,
 		);
 		foreach ($allTypes as $type) {
-			$identifier = $type->getIdentifier();
+			$identifier = $type->identifier;
 			$this->damageTaken[self::NO_ABILITY][$identifier] = 1;
 		}
 
 		// Get the Pokémon's types, then get the matchups for those types.
 		$vgPokemon = $this->vgPokemonRepository->getByVgAndPokemon(
-			$versionGroup->getId(),
+			$versionGroup->id,
 			$pokemonId,
 		);
 		foreach ($vgPokemon->getTypeIds() as $typeId) {
 			$matchups = $this->typeMatchupRepository->getByDefendingType(
-				$versionGroup->getGenerationId(),
+				$versionGroup->generationId,
 				$typeId,
 			);
 			foreach ($matchups as $matchup) {
 				// Factor this matchup into the Pokémon's overall matchups.
-				$attackingTypeIdentifier = $matchup->getAttackingTypeIdentifier();
-				$multiplier = $matchup->getMultiplier();
+				$attackingTypeIdentifier = $matchup->attackingTypeIdentifier;
+				$multiplier = $matchup->multiplier;
 
 				$this->damageTaken[self::NO_ABILITY][$attackingTypeIdentifier] *= $multiplier;
 			}
 		}
 
-		if ($versionGroup->hasAbilities()) {
+		if ($versionGroup->hasAbilities) {
 			foreach ($abilities as $ability) {
-				$this->checkForMatchups($versionGroup->getGenerationId(), $ability);
+				$this->checkForMatchups($versionGroup->generationId, $ability);
 			}
 		}
 

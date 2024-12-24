@@ -6,11 +6,6 @@ namespace Jp\Dex\Domain\Versions;
 final readonly class DexVersion
 {
 	public function __construct(
-		private string $abbreviation,
+		private(set) string $abbreviation,
 	) {}
-
-	public function getAbbreviation() : string
-	{
-		return $this->abbreviation;
-	}
 }

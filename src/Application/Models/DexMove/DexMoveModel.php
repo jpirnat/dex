@@ -181,22 +181,22 @@ final class DexMoveModel
 			$languageId,
 		);
 		$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
-			$this->versionGroupModel->versionGroup->getGenerationId(),
+			$this->versionGroupModel->versionGroup->generationId,
 			$vgMove->typeId,
 		);
 		foreach ($attackingMatchups as $matchup) {
-			$defendingTypeIdentifier = $matchup->getDefendingTypeIdentifier();
-			$this->damageDealt[$defendingTypeIdentifier] = $matchup->getMultiplier();
+			$defendingTypeIdentifier = $matchup->defendingTypeIdentifier;
+			$this->damageDealt[$defendingTypeIdentifier] = $matchup->multiplier;
 		}
 
 		if ($moveId->value() === MoveId::FLYING_PRESS) {
 			$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
-				$this->versionGroupModel->versionGroup->getGenerationId(),
+				$this->versionGroupModel->versionGroup->generationId,
 				new TypeId(TypeId::FLYING),
 			);
 			foreach ($attackingMatchups as $matchup) {
-				$defendingTypeIdentifier = $matchup->getDefendingTypeIdentifier();
-				$this->damageDealt[$defendingTypeIdentifier] *= $matchup->getMultiplier();
+				$defendingTypeIdentifier = $matchup->defendingTypeIdentifier;
+				$this->damageDealt[$defendingTypeIdentifier] *= $matchup->multiplier;
 			}
 		}
 

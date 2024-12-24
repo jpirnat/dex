@@ -42,7 +42,7 @@ final class VersionGroupModel
 	{
 		$this->versionGroup = $this->vgRepository->getByIdentifier($vgIdentifier);
 
-		return $this->versionGroup->getId();
+		return $this->versionGroup->id;
 	}
 
 	/**

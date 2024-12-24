@@ -126,13 +126,13 @@ final readonly class StatsPokemonView
 		$teraTypes = [];
 		foreach ($teraTypesData as $teraType) {
 			$teraTypes[] = [
-				'icon' => $teraType->getIcon(),
-				'identifier' => $teraType->getIdentifier(),
-				'name' => $teraType->getName(),
-				'percent' => $teraType->getPercent(),
-				'percentText' => $formatter->formatPercent($teraType->getPercent()),
-				'change' => $teraType->getChange(),
-				'changeText' => $formatter->formatChange($teraType->getChange()),
+				'icon' => $teraType->icon,
+				'identifier' => $teraType->identifier,
+				'name' => $teraType->name,
+				'percent' => $teraType->percent,
+				'percentText' => $formatter->formatPercent($teraType->percent),
+				'change' => $teraType->change,
+				'changeText' => $formatter->formatChange($teraType->change),
 			];
 		}
 
@@ -141,12 +141,12 @@ final readonly class StatsPokemonView
 		$teammates = [];
 		foreach ($teammatesData as $teammate) {
 			$teammates[] = [
-				'icon' => $teammate->getIcon(),
+				'icon' => $teammate->icon,
 				'showMovesetLink' => true, // TODO
-				'identifier' => $teammate->getIdentifier(),
-				'name' => $teammate->getName(),
-				'percent' => $teammate->getPercent(),
-				'percentText' => $formatter->formatPercent($teammate->getPercent()),
+				'identifier' => $teammate->identifier,
+				'name' => $teammate->name,
+				'percent' => $teammate->percent,
+				'percentText' => $formatter->formatPercent($teammate->percent),
 			];
 		}
 
@@ -219,19 +219,19 @@ final readonly class StatsPokemonView
 				'nextRank' => $nextRank,
 
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
+					'identifier' => $versionGroup->identifier,
 				],
 				'generation' => [
-					'smogonDexIdentifier' => $generation->getSmogonDexIdentifier(),
+					'smogonDexIdentifier' => $generation->smogonDexIdentifier,
 				],
 				'rawCount' => $rawCount,
 				'averageWeight' => $averageWeight,
 				'viabilityCeiling' => $viabilityCeiling,
 
 				// The main data.
-				'showAbilities' => $versionGroup->getId()->hasAbilities(),
-				'showItems' => $versionGroup->getId()->hasHeldItems(),
-				'showTeraTypes' => $versionGroup->getId()->hasTeraTypes(),
+				'showAbilities' => $versionGroup->hasAbilities,
+				'showItems' => $versionGroup->id->hasHeldItems(),
+				'showTeraTypes' => $versionGroup->id->hasTeraTypes(),
 				'abilities' => $abilities,
 				'items' => $items,
 				'spreads' => $spreads,

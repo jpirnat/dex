@@ -38,7 +38,7 @@ final readonly class DexTypeView
 
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -54,12 +54,12 @@ final readonly class DexTypeView
 				'title' => 'Porydex - Types - ' . $type['name'],
 
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
-					'hasAbilities' => $versionGroup->hasAbilities(),
-					'hasBreeding' => $versionGroup->hasBreeding(),
-					'hasEvYields' => $versionGroup->hasEvYields(),
-					'hasEvBasedStats' => $versionGroup->hasEvBasedStats(),
-					'hasMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
+					'identifier' => $versionGroup->identifier,
+					'hasAbilities' => $versionGroup->hasAbilities,
+					'hasBreeding' => $versionGroup->hasBreeding,
+					'hasEvYields' => $versionGroup->hasEvYields,
+					'hasEvBasedStats' => $versionGroup->hasEvBasedStats,
+					'hasMoveDescriptions' => $versionGroup->id->hasMoveDescriptions(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,

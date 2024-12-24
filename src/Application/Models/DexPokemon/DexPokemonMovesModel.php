@@ -92,7 +92,7 @@ final class DexPokemonMovesModel
 				// version group of the wrong locality (Red/Green vs Red/Blue).
 				continue;
 			}
-			$vgIdentifier = $this->learnsetVgs[$vgId]->getIdentifier();
+			$vgIdentifier = $this->learnsetVgs[$vgId]->identifier;
 
 			switch ($methodId) {
 				case MoveMethodId::LEVEL_UP:

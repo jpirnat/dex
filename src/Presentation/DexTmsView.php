@@ -33,7 +33,7 @@ final readonly class DexTmsView
 		}
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -44,9 +44,9 @@ final readonly class DexTmsView
 		return new JsonResponse([
 			'data' => [
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
-					'hasItemIcons' => $versionGroup->getId()->hasItemIcons(),
-					'hasMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
+					'identifier' => $versionGroup->identifier,
+					'hasItemIcons' => $versionGroup->id->hasItemIcons(),
+					'hasMoveDescriptions' => $versionGroup->id->hasMoveDescriptions(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,

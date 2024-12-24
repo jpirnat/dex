@@ -31,7 +31,7 @@ final readonly class DexPokemonView
 
 		$pokemon = $this->dexPokemonModel->pokemon;
 		$pokemon = $this->dexFormatter->formatExpandedDexPokemon($pokemon);
-		if (!$versionGroup->hasAbilities()) {
+		if (!$versionGroup->hasAbilities) {
 			$pokemon['abilities'] = [];
 		}
 
@@ -57,7 +57,7 @@ final readonly class DexPokemonView
 		};
 
 		$vgIdentifiers = array_map(function (DexVersionGroup $vg) : string {
-			return $vg->getIdentifier();
+			return $vg->identifier;
 		}, $learnsetVgs);
 		$byMachine = function (DexPokemonMove $a, DexPokemonMove $b) use ($vgIdentifiers) : int {
 			$aVgData = $a->getVersionGroupData();
@@ -130,7 +130,7 @@ final readonly class DexPokemonView
 		}
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -146,12 +146,12 @@ final readonly class DexPokemonView
 				'title' => 'Porydex - Pokémon - ' . $pokemon['name'],
 
 				'versionGroup' => [
-					'id' => $versionGroup->getId()->value(),
-					'identifier' => $versionGroup->getIdentifier(),
-					'generationId' => $versionGroup->getGenerationId()->value(),
-					'hasEvYields' => $versionGroup->hasEvYields(),
-					'hasBreeding' => $versionGroup->hasBreeding(),
-					'hasMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
+					'id' => $versionGroup->id->value(),
+					'identifier' => $versionGroup->identifier,
+					'generationId' => $versionGroup->generationId->value(),
+					'hasEvYields' => $versionGroup->hasEvYields,
+					'hasBreeding' => $versionGroup->hasBreeding,
+					'hasMoveDescriptions' => $versionGroup->id->hasMoveDescriptions(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,

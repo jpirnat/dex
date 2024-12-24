@@ -31,12 +31,12 @@ final readonly class DexIndexView
 		return new JsonResponse([
 			'data' => [
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
-					'hasAbilities' => $versionGroup->hasAbilities(),
-					'hasNatures' => $versionGroup->hasNatures(),
-					'hasTms' => $versionGroup->getId()->hasTms(),
-					'hasBreeding' => $versionGroup->hasBreeding(),
-					'statFormulaType' => $versionGroup->getStatFormulaType(),
+					'identifier' => $versionGroup->identifier,
+					'hasAbilities' => $versionGroup->hasAbilities,
+					'hasNatures' => $versionGroup->hasNatures,
+					'hasTms' => $versionGroup->id->hasTms(),
+					'hasBreeding' => $versionGroup->hasBreeding,
+					'statFormulaType' => $versionGroup->statFormulaType,
 				],
 
 				'breadcrumbs' => $breadcrumbs,

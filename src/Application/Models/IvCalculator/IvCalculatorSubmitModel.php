@@ -66,10 +66,10 @@ final class IvCalculatorSubmitModel
 			return;
 		}
 
-		$stats = $this->statRepository->getByVersionGroup($versionGroup->getId());
+		$stats = $this->statRepository->getByVersionGroup($versionGroup->id);
 
 		$dexPokemon = $this->dexPokemonRepository->getById(
-			$versionGroup->getId(),
+			$versionGroup->id,
 			$pokemon->id,
 			new LanguageId(LanguageId::ENGLISH),
 		);
@@ -121,7 +121,7 @@ final class IvCalculatorSubmitModel
 		}
 
 		// Use characteristic to further narrow down the options.
-		if ($characteristic && $versionGroup->hasCharacteristics()) {
+		if ($characteristic && $versionGroup->hasCharacteristics) {
 			$highestStatId = $characteristic->highestStatId;
 			$highestStat = $stats[$highestStatId->value()];
 			$highestStatIdentifier = $highestStat->identifier;
@@ -175,7 +175,7 @@ final class IvCalculatorSubmitModel
 		}
 
 		// Use Hidden Power type to further narrow down the options.
-		if ($hpType && $versionGroup->hasIvBasedHiddenPower()) {
+		if ($hpType && $versionGroup->hasIvBasedHiddenPower) {
 			// We don't need to test every combination of possible IVs; just
 			// every combination of evenness and oddness among possible IVs.
 
@@ -216,7 +216,7 @@ final class IvCalculatorSubmitModel
 										$spaBit,
 										$spdBit,
 									);
-									if ($calculatedIndex === $hpType->getHiddenPowerIndex()) {
+									if ($calculatedIndex === $hpType->hiddenPowerIndex) {
 										$possibleBits['hp'][$hpBit] = 1;
 										$possibleBits['attack'][$atkBit] = 1;
 										$possibleBits['defense'][$defBit] = 1;
@@ -243,7 +243,7 @@ final class IvCalculatorSubmitModel
 				}
 			}
 
-			if ($characteristic && $versionGroup->hasCharacteristics()) {
+			if ($characteristic && $versionGroup->hasCharacteristics) {
 				$highestStatId = $characteristic->highestStatId;
 				$highestStat = $stats[$highestStatId->value()];
 				$highestStatIdentifier = $highestStat->identifier;

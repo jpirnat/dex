@@ -41,21 +41,21 @@ final readonly class AveragedUsageView
 		$pokemons = [];
 		foreach ($pokemonData as $pokemon) {
 			$pokemons[] = [
-				'rank' => $pokemon->getRank(),
-				'icon' => $pokemon->getIcon(),
-				'showMovesetLink' => $pokemon->getNumberOfMonths() > 0,
-				'identifier' => $pokemon->getIdentifier(),
-				'name' => $pokemon->getName(),
-				'usagePercent' => $pokemon->getUsagePercent(),
-				'usagePercentText' => $formatter->formatPercent($pokemon->getUsagePercent()),
-				'raw' => $pokemon->getRaw(),
-				'rawText' => $formatter->formatNumber($pokemon->getRaw()),
-				'rawPercent' => $pokemon->getRawPercent(),
-				'rawPercentText' => $formatter->formatPercent($pokemon->getRawPercent()),
-				'real' => $pokemon->getReal(),
-				'realText' => $formatter->formatNumber($pokemon->getReal()),
-				'realPercent' => $pokemon->getRealPercent(),
-				'realPercentText' => $formatter->formatPercent($pokemon->getRealPercent()),
+				'rank' => $pokemon->rank,
+				'icon' => $pokemon->icon,
+				'showMovesetLink' => $pokemon->numberOfMonths > 0,
+				'identifier' => $pokemon->identifier,
+				'name' => $pokemon->name,
+				'usagePercent' => $pokemon->usagePercent,
+				'usagePercentText' => $formatter->formatPercent($pokemon->usagePercent),
+				'raw' => $pokemon->raw,
+				'rawText' => $formatter->formatNumber($pokemon->raw),
+				'rawPercent' => $pokemon->rawPercent,
+				'rawPercentText' => $formatter->formatPercent($pokemon->rawPercent),
+				'real' => $pokemon->real,
+				'realText' => $formatter->formatNumber($pokemon->real),
+				'realPercent' => $pokemon->realPercent,
+				'realPercentText' => $formatter->formatPercent($pokemon->realPercent),
 			];
 		}
 

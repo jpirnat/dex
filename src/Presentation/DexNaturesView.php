@@ -26,7 +26,7 @@ final readonly class DexNaturesView
 		$natures = $this->dexNaturesModel->natures;
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -37,7 +37,7 @@ final readonly class DexNaturesView
 		return new JsonResponse([
 			'data' => [
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
+					'identifier' => $versionGroup->identifier,
 				],
 
 				'breadcrumbs' => $breadcrumbs,

@@ -8,23 +8,8 @@ use Jp\Dex\Domain\Languages\LanguageId;
 final readonly class TypeName
 {
 	public function __construct(
-		private LanguageId $languageId,
-		private TypeId $typeId,
-		private string $name,
+		private(set) LanguageId $languageId,
+		private(set) TypeId $typeId,
+		private(set) string $name,
 	) {}
-
-	public function getLanguageId() : LanguageId
-	{
-		return $this->languageId;
-	}
-
-	public function getTypeId() : TypeId
-	{
-		return $this->typeId;
-	}
-
-	public function getName() : string
-	{
-		return $this->name;
-	}
 }

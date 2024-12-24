@@ -8,29 +8,9 @@ use Jp\Dex\Domain\Versions\GenerationId;
 final readonly class TypeMatchup
 {
 	public function __construct(
-		private GenerationId $generationId,
-		private string $attackingTypeIdentifier,
-		private string $defendingTypeIdentifier,
-		private float $multiplier,
+		private(set) GenerationId $generationId,
+		private(set) string $attackingTypeIdentifier,
+		private(set) string $defendingTypeIdentifier,
+		private(set) float $multiplier,
 	) {}
-
-	public function getGenerationId() : GenerationId
-	{
-		return $this->generationId;
-	}
-
-	public function getAttackingTypeIdentifier() : string
-	{
-		return $this->attackingTypeIdentifier;
-	}
-
-	public function getDefendingTypeIdentifier() : string
-	{
-		return $this->defendingTypeIdentifier;
-	}
-
-	public function getMultiplier() : float
-	{
-		return $this->multiplier;
-	}
 }

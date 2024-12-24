@@ -30,7 +30,7 @@ final readonly class StatCalculatorIndexView
 		$stats = $this->statCalculatorIndexModel->stats;
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -41,11 +41,11 @@ final readonly class StatCalculatorIndexView
 		return new JsonResponse([
 			'data' => [
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
-					'hasNatures' => $versionGroup->hasNatures(),
-					'statFormulaType' => $versionGroup->getStatFormulaType(),
-					'maxIv' => $versionGroup->getMaxIv(),
-					'maxEvsPerStat' => $versionGroup->getMaxEvsPerStat(),
+					'identifier' => $versionGroup->identifier,
+					'hasNatures' => $versionGroup->hasNatures,
+					'statFormulaType' => $versionGroup->statFormulaType,
+					'maxIv' => $versionGroup->maxIv,
+					'maxEvsPerStat' => $versionGroup->maxEvsPerStat,
 				],
 
 				'breadcrumbs' => $breadcrumbs,

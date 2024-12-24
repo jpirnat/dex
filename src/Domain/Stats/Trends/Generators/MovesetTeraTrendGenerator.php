@@ -76,9 +76,9 @@ final readonly class MovesetTeraTrendGenerator
 			$format->name,
 			$rating,
 			$pokemonName,
-			$typeName->getName(),
+			$typeName->name,
 			$pokemonType,
-			$type->getColorCode(),
+			$type->colorCode,
 			$trendPoints,
 		);
 	}

@@ -31,7 +31,7 @@ final readonly class AdvancedPokemonSearchIndexView
 		$stats = $this->advancedPokemonSearchIndexModel->stats;
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -45,12 +45,12 @@ final readonly class AdvancedPokemonSearchIndexView
 		return new JsonResponse([
 			'data' => [
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
-					'hasTransferMoves' => $versionGroup->hasTransferMoves(),
-					'hasAbilities' => $versionGroup->hasAbilities(),
-					'hasBreeding' => $versionGroup->hasBreeding(),
-					'hasEvYields' => $versionGroup->hasEvYields(),
-					'hasEvBasedStats' => $versionGroup->hasEvBasedStats(),
+					'identifier' => $versionGroup->identifier,
+					'hasTransferMoves' => $versionGroup->hasTransferMoves,
+					'hasAbilities' => $versionGroup->hasAbilities,
+					'hasBreeding' => $versionGroup->hasBreeding,
+					'hasEvYields' => $versionGroup->hasEvYields,
+					'hasEvBasedStats' => $versionGroup->hasEvBasedStats,
 				],
 
 				'breadcrumbs' => $breadcrumbs,

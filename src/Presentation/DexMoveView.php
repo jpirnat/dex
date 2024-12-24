@@ -49,7 +49,7 @@ final readonly class DexMoveView
 		}
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -65,9 +65,9 @@ final readonly class DexMoveView
 				'title' => 'Porydex - Moves - ' . $move['name'],
 
 				'versionGroup' => [
-					'id' => $versionGroup->getId()->value(),
-					'identifier' => $versionGroup->getIdentifier(),
-					'generationId' => $versionGroup->getGenerationId()->value(),
+					'id' => $versionGroup->id->value(),
+					'identifier' => $versionGroup->identifier,
+					'generationId' => $versionGroup->generationId->value(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,
@@ -81,7 +81,7 @@ final readonly class DexMoveView
 
 				'methods' => $this->formatDexMovePokemonMethods($methods),
 				'learnsetVgs' => $this->dexFormatter->formatDexVersionGroups($learnsetVgs),
-				'showAbilities' => $versionGroup->getId()->hasAbilities(),
+				'showAbilities' => $versionGroup->hasAbilities,
 				'stats' => $stats,
 			]
 		]);

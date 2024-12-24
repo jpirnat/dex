@@ -30,7 +30,7 @@ final readonly class DexEggGroupView
 		$pokemon = $this->dexFormatter->formatDexPokemon($pokemon);
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -46,11 +46,11 @@ final readonly class DexEggGroupView
 				'title' => 'Porydex - Egg Groups - ' . $eggGroup['name'],
 
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
-					'hasAbilities' => $versionGroup->hasAbilities(),
-					'hasBreeding' => $versionGroup->hasBreeding(),
-					'hasEvYields' => $versionGroup->hasEvYields(),
-					'hasEvBasedStats' => $versionGroup->hasEvBasedStats(),
+					'identifier' => $versionGroup->identifier,
+					'hasAbilities' => $versionGroup->hasAbilities,
+					'hasBreeding' => $versionGroup->hasBreeding,
+					'hasEvYields' => $versionGroup->hasEvYields,
+					'hasEvBasedStats' => $versionGroup->hasEvBasedStats,
 				],
 
 				'breadcrumbs' => $breadcrumbs,

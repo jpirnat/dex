@@ -45,18 +45,18 @@ final readonly class StatsMoveView
 		$pokemons = [];
 		foreach ($pokemonData as $pokemon) {
 			$pokemons[] = [
-				'icon' => $pokemon->getIcon(),
-				'identifier' => $pokemon->getIdentifier(),
-				'name' => $pokemon->getName(),
-				'pokemonPercent' => $pokemon->getPokemonPercent(),
-				'pokemonPercentText' => $formatter->formatPercent($pokemon->getPokemonPercent()),
-				'movePercent' => $pokemon->getMovePercent(),
-				'movePercentText' => $formatter->formatPercent($pokemon->getMovePercent()),
-				'usagePercent' => $pokemon->getUsagePercent(),
-				'usagePercentText' => $formatter->formatPercent($pokemon->getUsagePercent()),
-				'usageChange' => $pokemon->getUsageChange(),
-				'usageChangeText' => $formatter->formatChange($pokemon->getUsageChange()),
-				'baseSpeed' => $pokemon->getBaseSpeed(),
+				'icon' => $pokemon->icon,
+				'identifier' => $pokemon->identifier,
+				'name' => $pokemon->name,
+				'pokemonPercent' => $pokemon->pokemonPercent,
+				'pokemonPercentText' => $formatter->formatPercent($pokemon->pokemonPercent),
+				'movePercent' => $pokemon->movePercent,
+				'movePercentText' => $formatter->formatPercent($pokemon->movePercent),
+				'usagePercent' => $pokemon->usagePercent,
+				'usagePercentText' => $formatter->formatPercent($pokemon->usagePercent),
+				'usageChange' => $pokemon->usageChange,
+				'usageChangeText' => $formatter->formatChange($pokemon->usageChange),
+				'baseSpeed' => $pokemon->baseSpeed,
 			];
 		}
 
@@ -93,7 +93,7 @@ final readonly class StatsMoveView
 				'ratings' => $this->statsMoveModel->ratings,
 
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
+					'identifier' => $versionGroup->identifier,
 				],
 				'move' => [
 					'identifier' => $move['identifier'],

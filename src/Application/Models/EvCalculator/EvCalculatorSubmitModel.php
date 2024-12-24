@@ -49,10 +49,10 @@ final class EvCalculatorSubmitModel
 			return;
 		}
 
-		$stats = $this->statRepository->getByVersionGroup($versionGroup->getId());
+		$stats = $this->statRepository->getByVersionGroup($versionGroup->id);
 
 		$dexPokemon = $this->dexPokemonRepository->getById(
-			$versionGroup->getId(),
+			$versionGroup->id,
 			$pokemon->id,
 			new LanguageId(LanguageId::ENGLISH),
 		);
@@ -62,7 +62,7 @@ final class EvCalculatorSubmitModel
 		$possibleEvs = [];
 		foreach ($stats as $stat) {
 			$statIdentifier = $stat->identifier;
-			$possibleEvs[$statIdentifier] = range(0, $versionGroup->getMaxEvsPerStat());
+			$possibleEvs[$statIdentifier] = range(0, $versionGroup->maxEvsPerStat);
 		}
 
 		// Then, one stat at a time, one level at a time, rule out as many of

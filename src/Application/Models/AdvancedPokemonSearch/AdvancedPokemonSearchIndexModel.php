@@ -57,8 +57,8 @@ final class AdvancedPokemonSearchIndexModel
 		);
 		foreach ($types as $type) {
 			$this->types[] = [
-				'identifier' => $type->getIdentifier(),
-				'name' => $type->getName(),
+				'identifier' => $type->identifier,
+				'name' => $type->name,
 			];
 		}
 

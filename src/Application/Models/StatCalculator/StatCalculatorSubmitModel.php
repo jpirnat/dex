@@ -60,16 +60,16 @@ final class StatCalculatorSubmitModel
 		$level = (int) $level;
 		$friendship = (int) $friendship;
 
-		$stats = $this->statRepository->getByVersionGroup($versionGroup->getId());
+		$stats = $this->statRepository->getByVersionGroup($versionGroup->id);
 
 		$dexPokemon = $this->dexPokemonRepository->getById(
-			$versionGroup->getId(),
+			$versionGroup->id,
 			$pokemon->id,
 			new LanguageId(LanguageId::ENGLISH),
 		);
 		$baseStats = $dexPokemon->baseStats;
 
-		match ($versionGroup->getStatFormulaType()) {
+		match ($versionGroup->statFormulaType) {
 			'gen1' => $this->gen1Stats(
 				$stats,
 				$baseStats,

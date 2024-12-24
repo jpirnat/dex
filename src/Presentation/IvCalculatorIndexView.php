@@ -32,7 +32,7 @@ final readonly class IvCalculatorIndexView
 		$stats = $this->ivCalculatorIndexModel->stats;
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -43,8 +43,8 @@ final readonly class IvCalculatorIndexView
 		return new JsonResponse([
 			'data' => [
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
-					'maxEvsPerStat' => $versionGroup->getMaxEvsPerStat(),
+					'identifier' => $versionGroup->identifier,
+					'maxEvsPerStat' => $versionGroup->maxEvsPerStat,
 				],
 
 				'breadcrumbs' => $breadcrumbs,

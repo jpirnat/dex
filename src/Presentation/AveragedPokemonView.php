@@ -130,15 +130,15 @@ final readonly class AveragedPokemonView
 				'ratings' => $this->averagedPokemonModel->ratings,
 
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
+					'identifier' => $versionGroup->identifier,
 				],
 				'generation' => [
-					'smogonDexIdentifier' => $generation->getSmogonDexIdentifier(),
+					'smogonDexIdentifier' => $generation->smogonDexIdentifier,
 				],
 
 				// The main data.
-				'showAbilities' => $versionGroup->getId()->hasAbilities(),
-				'showItems' => $versionGroup->getId()->hasHeldItems(),
+				'showAbilities' => $versionGroup->hasAbilities,
+				'showItems' => $versionGroup->id->hasHeldItems(),
 				'abilities' => $abilities,
 				'items' => $items,
 				'moves' => $moves,

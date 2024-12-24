@@ -59,16 +59,16 @@ final class DexTypeModel
 
 		$type = $this->typeRepository->getByIdentifier($typeIdentifier);
 
-		$this->versionGroupModel->setWithType($type->getId());
+		$this->versionGroupModel->setWithType($type->id);
 
 		$dexType = $this->dexTypeRepository->getById(
-			$type->getId(),
+			$type->id,
 			$languageId,
 		);
 
 		$this->type = [
-			'identifier' => $dexType->getIdentifier(),
-			'name' => $dexType->getName(),
+			'identifier' => $dexType->identifier,
+			'name' => $dexType->name,
 		];
 
 		// Get the type matchups.
@@ -79,20 +79,20 @@ final class DexTypeModel
 		$this->damageDealt = [];
 		$this->damageTaken = [];
 		$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
-			$this->versionGroupModel->versionGroup->getGenerationId(),
-			$type->getId(),
+			$this->versionGroupModel->versionGroup->generationId,
+			$type->id,
 		);
 		$defendingMatchups = $this->typeMatchupRepository->getByDefendingType(
-			$this->versionGroupModel->versionGroup->getGenerationId(),
-			$type->getId(),
+			$this->versionGroupModel->versionGroup->generationId,
+			$type->id,
 		);
 		foreach ($attackingMatchups as $matchup) {
-			$defendingTypeIdentifier = $matchup->getDefendingTypeIdentifier();
-			$this->damageDealt[$defendingTypeIdentifier] = $matchup->getMultiplier();
+			$defendingTypeIdentifier = $matchup->defendingTypeIdentifier;
+			$this->damageDealt[$defendingTypeIdentifier] = $matchup->multiplier;
 		}
 		foreach ($defendingMatchups as $matchup) {
-			$attackingTypeIdentifier = $matchup->getAttackingTypeIdentifier();
-			$this->damageTaken[$attackingTypeIdentifier] = $matchup->getMultiplier();
+			$attackingTypeIdentifier = $matchup->attackingTypeIdentifier;
+			$this->damageTaken[$attackingTypeIdentifier] = $matchup->multiplier;
 		}
 
 		$this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
@@ -100,14 +100,14 @@ final class DexTypeModel
 		// Get Pokémon with this type.
 		$this->pokemon = $this->dexPokemonRepository->getByType(
 			$versionGroupId,
-			$type->getId(),
+			$type->id,
 			$languageId,
 		);
 
 		// Get moves with this type.
 		$this->moves = $this->dexMoveRepository->getByType(
 			$versionGroupId,
-			$type->getId(),
+			$type->id,
 			$languageId,
 		);
 	}

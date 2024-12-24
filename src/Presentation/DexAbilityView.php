@@ -31,7 +31,7 @@ final readonly class DexAbilityView
 		$pokemon = $this->dexFormatter->formatDexPokemon($pokemon);
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -47,11 +47,11 @@ final readonly class DexAbilityView
 				'title' => 'Porydex - Abilities - ' . $ability['name'],
 
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
-					'hasAbilities' => $versionGroup->hasAbilities(),
-					'hasBreeding' => $versionGroup->hasBreeding(),
-					'hasEvYields' => $versionGroup->hasEvYields(),
-					'hasEvBasedStats' => $versionGroup->hasEvBasedStats(),
+					'identifier' => $versionGroup->identifier,
+					'hasAbilities' => $versionGroup->hasAbilities,
+					'hasBreeding' => $versionGroup->hasBreeding,
+					'hasEvYields' => $versionGroup->hasEvYields,
+					'hasEvBasedStats' => $versionGroup->hasEvBasedStats,
 				],
 
 				'breadcrumbs' => $breadcrumbs,

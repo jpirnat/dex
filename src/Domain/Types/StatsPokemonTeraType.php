@@ -6,35 +6,10 @@ namespace Jp\Dex\Domain\Types;
 final readonly class StatsPokemonTeraType
 {
 	public function __construct(
-		private string $icon,
-		private string $identifier,
-		private string $name,
-		private float $percent,
-		private float $change,
+		private(set) string $icon,
+		private(set) string $identifier,
+		private(set) string $name,
+		private(set) float $percent,
+		private(set) float $change,
 	) {}
-
-	public function getIcon() : string
-	{
-		return $this->icon;
-	}
-
-	public function getIdentifier() : string
-	{
-		return $this->identifier;
-	}
-
-	public function getName() : string
-	{
-		return $this->name;
-	}
-
-	public function getPercent() : float
-	{
-		return $this->percent;
-	}
-
-	public function getChange() : float
-	{
-		return $this->change;
-	}
 }

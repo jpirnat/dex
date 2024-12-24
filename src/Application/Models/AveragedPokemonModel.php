@@ -97,7 +97,7 @@ final class AveragedPokemonModel
 
 		// Get the format's version group and generation.
 		$this->versionGroup = $this->versionGroupRepository->getById($this->format->versionGroupId);
-		$this->generation = $this->generationRepository->getById($this->versionGroup->getGenerationId());
+		$this->generation = $this->generationRepository->getById($this->versionGroup->generationId);
 
 		// Get ability data.
 		$this->abilities = $this->abilityModel->setData(

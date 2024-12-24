@@ -97,7 +97,7 @@ final class BreedingChainsModel
 		);
 
 		$pokemon = $this->dexPokemonRepository->getById(
-			$versionGroup->getId(),
+			$versionGroup->id,
 			$pokemonMove->pokemonId,
 			$languageId,
 		);

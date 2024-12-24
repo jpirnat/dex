@@ -45,7 +45,7 @@ final readonly class EvolutionFormatter
 		$friendship = 0;
 		if ($evoMethodId->needsFriendship()) {
 			$versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
-			$friendship = $this->getFriendship($versionGroup->getGenerationId());
+			$friendship = $this->getFriendship($versionGroup->generationId);
 		}
 
 		$item = '';
@@ -94,7 +94,7 @@ final readonly class EvolutionFormatter
 				$languageId,
 				$evolution->versionId,
 			);
-			$version = $version->getName();
+			$version = $version->name;
 		}
 
 		$otherParameter = $evolution->otherParameter;
@@ -357,8 +357,8 @@ final readonly class EvolutionFormatter
 	) : EvolutionTableMethod {
 		$versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
 
-		$friendship = $this->getFriendship($versionGroup->getGenerationId());
-		$friendshipOrAffection = match ($versionGroup->getGenerationId()->value()) {
+		$friendship = $this->getFriendship($versionGroup->generationId);
+		$friendshipOrAffection = match ($versionGroup->generationId->value()) {
 			6, 7 => "at least 2 affection",
 			default => "at least $friendship friendship",
 		};
@@ -377,7 +377,7 @@ final readonly class EvolutionFormatter
 		$level = $evolution->level;
 		$versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
 
-		$weather = match ($versionGroup->getGenerationId()->value()) {
+		$weather = match ($versionGroup->generationId->value()) {
 			6 => "rain",
 			default => "rain or fog",
 		};

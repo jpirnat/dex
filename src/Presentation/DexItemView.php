@@ -27,7 +27,7 @@ final readonly class DexItemView
 		$evolutions = $this->dexItemModel->evolutions;
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -43,8 +43,8 @@ final readonly class DexItemView
 				'title' => 'Porydex - Items - ' . $item['name'],
 
 				'versionGroup' => [
-					'id' => $versionGroup->getId()->value(),
-					'identifier' => $versionGroup->getIdentifier(),
+					'id' => $versionGroup->id->value(),
+					'identifier' => $versionGroup->identifier,
 				],
 
 				'breadcrumbs' => $breadcrumbs,

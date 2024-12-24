@@ -57,7 +57,7 @@ final readonly class BreedingChainsView
 		}
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$pokemonIdentifier = $pokemon['identifier'];
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",

@@ -27,7 +27,7 @@ final readonly class DexEggGroupsView
 		$eggGroups = $this->dexFormatter->formatDexEggGroups($eggGroups);
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -38,7 +38,7 @@ final readonly class DexEggGroupsView
 		return new JsonResponse([
 			'data' => [
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
+					'identifier' => $versionGroup->identifier,
 				],
 
 				'breadcrumbs' => $breadcrumbs,

@@ -42,24 +42,24 @@ final class DexTypesModel
 		);
 		$types = $this->typeRepository->getMainByVersionGroup($versionGroupId);
 		foreach ($dexTypes as $dexType) {
-			$type = $types[$dexType->getIdentifier()];
+			$type = $types[$dexType->identifier];
 			$this->types[] = [
-				'identifier' => $dexType->getIdentifier(),
-				'name' => $dexType->getName(),
-				'symbolIcon' => $type->getSymbolIcon(),
-				'nameIcon' => $dexType->getIcon(),
+				'identifier' => $dexType->identifier,
+				'name' => $dexType->name,
+				'symbolIcon' => $type->symbolIcon,
+				'nameIcon' => $dexType->icon,
 			];
 		}
 
 		// Get this generation's type chart.
 		$typeMatchups = $this->typeMatchupRepository->getByGeneration(
-			$this->versionGroupModel->versionGroup->getGenerationId()
+			$this->versionGroupModel->versionGroup->generationId
 		);
 		$this->multipliers = [];
 		foreach ($typeMatchups as $typeMatchup) {
-			$attackingTypeIdentifier = $typeMatchup->getAttackingTypeIdentifier();
-			$defendingTypeIdentifier = $typeMatchup->getDefendingTypeIdentifier();
-			$multiplier = $typeMatchup->getMultiplier();
+			$attackingTypeIdentifier = $typeMatchup->attackingTypeIdentifier;
+			$defendingTypeIdentifier = $typeMatchup->defendingTypeIdentifier;
+			$multiplier = $typeMatchup->multiplier;
 
 			$this->multipliers[$attackingTypeIdentifier][$defendingTypeIdentifier] = $multiplier;
 		}

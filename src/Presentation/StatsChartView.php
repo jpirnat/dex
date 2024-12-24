@@ -213,7 +213,7 @@ final readonly class StatsChartView
 		}
 
 		if ($trendLine instanceof MovesetMoveTrendLine) {
-			return $trendLine->moveType->getColorCode();
+			return $trendLine->moveType->colorCode;
 		}
 
 		if ($trendLine instanceof MovesetTeraTrendLine) {
@@ -235,6 +235,6 @@ final readonly class StatsChartView
 		}
 
 		// For all other cases, use the color of the Pokémon's primary type.
-		return $trendLine->pokemonType->getColorCode();
+		return $trendLine->pokemonType->colorCode;
 	}
 }

@@ -27,7 +27,7 @@ final readonly class DexMoveFlagView
 		$moves = $this->dexMoveFlagModel->moves;
 
 		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->getIdentifier();
+		$vgIdentifier = $versionGroup->identifier;
 		$breadcrumbs = [[
 			'url' => "/dex/$vgIdentifier",
 			'text' => 'Dex',
@@ -44,8 +44,8 @@ final readonly class DexMoveFlagView
 		return new JsonResponse([
 			'data' => [
 				'versionGroup' => [
-					'identifier' => $versionGroup->getIdentifier(),
-					'hasMoveDescriptions' => $versionGroup->getId()->hasMoveDescriptions(),
+					'identifier' => $versionGroup->identifier,
+					'hasMoveDescriptions' => $versionGroup->id->hasMoveDescriptions(),
 				],
 
 				'breadcrumbs' => $breadcrumbs,

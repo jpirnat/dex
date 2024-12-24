@@ -101,7 +101,7 @@ final class DexPokemonModel
 		$eggGroups = $this->pokemon->eggGroups;
 		$genderRatio = $this->pokemon->genderRatio->value;
 
-		if (!$versionGroup->hasBreeding()
+		if (!$versionGroup->hasBreeding
 			|| $eggGroups === []
 			|| $eggGroups[0]->identifier === EggGroupIdentifier::UNDISCOVERED
 			|| $eggGroups[0]->identifier === EggGroupIdentifier::DITTO
