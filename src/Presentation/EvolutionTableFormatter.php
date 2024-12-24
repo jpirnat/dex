@@ -26,7 +26,7 @@ final readonly class EvolutionTableFormatter
 	public function formatRow(EvolutionTableRow $row) : array
 	{
 		return [
-			'cells' => $this->formatCells($row->getCells()),
+			'cells' => $this->formatCells($row->cells),
 		];
 	}
 
@@ -47,12 +47,12 @@ final readonly class EvolutionTableFormatter
 	private function formatCell(EvolutionTableCell $cell) : array
 	{
 		return [
-			'rowspan' => $cell->getRowspan(),
-			'isFirstStage' => $cell->isFirstStage(),
-			'icon' => $cell->getIcon(),
-			'identifier' => $cell->getIdentifier(),
-			'name' => $cell->getName(),
-			'methods' => $this->formatMethods($cell->getMethods()),
+			'rowspan' => $cell->rowspan,
+			'isFirstStage' => $cell->isFirstStage,
+			'icon' => $cell->icon,
+			'identifier' => $cell->identifier,
+			'name' => $cell->name,
+			'methods' => $this->formatMethods($cell->methods),
 		];
 	}
 
@@ -73,7 +73,7 @@ final readonly class EvolutionTableFormatter
 	private function formatMethod(EvolutionTableMethod $method) : array
 	{
 		return [
-			'html' => $method->getHtml(),
+			'html' => $method->html,
 		];
 	}
 }

@@ -35,8 +35,8 @@ final readonly class StatsChartView
 			$data = [];
 			foreach ($trendLine->trendPoints as $point) {
 				$data[] = [
-					'x' => $point->getDate()->format('Y-m'),
-					'y' => $point->getValue(),
+					'x' => $point->date->format('Y-m'),
+					'y' => $point->value,
 				];
 			}
 

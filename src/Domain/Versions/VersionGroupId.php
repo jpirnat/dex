@@ -20,14 +20,6 @@ final class VersionGroupId extends EntityId
 	private const int COLOSSEUM = 101;
 	private const int XD = 102;
 
-	public function hasAbilities() : bool
-	{
-		return $this->value >= self::RUBY_SAPPHIRE
-			&& $this->value !== self::LETS_GO_PIKACHU_EEVEE
-			&& $this->value !== self::LEGENDS_ARCEUS
-		;
-	}
-
 	public function hasHeldItems() : bool
 	{
 		return $this->value >= self::GOLD_SILVER

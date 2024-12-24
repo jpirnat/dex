@@ -6,11 +6,6 @@ namespace Jp\Dex\Domain\Evolutions;
 final readonly class EvolutionTableMethod
 {
 	public function __construct(
-		private string $html,
+		private(set) string $html,
 	) {}
-
-	public function getHtml() : string
-	{
-		return $this->html;
-	}
 }

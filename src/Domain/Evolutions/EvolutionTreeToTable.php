@@ -12,7 +12,7 @@ final class EvolutionTreeToTable
 	{
 		$this->convertNodeToCell($tree);
 
-		foreach ($tree->getEvolutions() ?? [] as $evolution) {
+		foreach ($tree->evolutions ?? [] as $evolution) {
 			$this->convert($evolution);
 		}
 
@@ -23,16 +23,16 @@ final class EvolutionTreeToTable
 	{
 		$cell = new EvolutionTableCell(
 			$tree->countBranches(),
-			$tree->isFirstStage(),
-			$tree->getIcon(),
-			$tree->getIdentifier(),
-			$tree->getName(),
-			$tree->getMethods(),
+			$tree->isFirstStage,
+			$tree->icon,
+			$tree->identifier,
+			$tree->name,
+			$tree->methods,
 		);
 
 		$this->cells[] = $cell;
 
-		if (!$tree->getEvolutions()) {
+		if (!$tree->evolutions) {
 			$this->rows[] = new EvolutionTableRow($this->cells);
 			$this->cells = [];
 		}
