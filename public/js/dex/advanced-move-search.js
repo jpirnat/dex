@@ -27,12 +27,15 @@ const app = createApp({
 			categories: [],
 			flags: [],
 
-			showTypeFilters: false,
+			showTypeFilters: true,
 			filterTypes: [],
-			showCategoryFilters: false,
+
+			showCategoryFilters: true,
 			filterCategories: [],
-			showFlagFilters: false,
+
+			showFlagFilters: true,
 			filterFlags: {},
+
 			pokemonName: '',
 			selectedPokemon: null,
 			includeTransferMoves: false,
@@ -115,13 +118,13 @@ const app = createApp({
 
 			this.flags.forEach(f => this.filterFlags[f.identifier] = null);
 
-			const showTypeFilters = window.localStorage.getItem('moveSearchShowTypeFilters') ?? 'false';
+			const showTypeFilters = window.localStorage.getItem('moveSearchShowTypeFilters') ?? 'true';
 			this.showTypeFilters = JSON.parse(showTypeFilters);
 
-			const showCategoryFilters = window.localStorage.getItem('moveSearchShowCategoryFilters') ?? 'false';
+			const showCategoryFilters = window.localStorage.getItem('moveSearchShowCategoryFilters') ?? 'true';
 			this.showCategoryFilters = JSON.parse(showCategoryFilters);
 
-			const showFlagFilters = window.localStorage.getItem('moveSearchShowFlagFilters') ?? 'false';
+			const showFlagFilters = window.localStorage.getItem('moveSearchShowFlagFilters') ?? 'true';
 			this.showFlagFilters = JSON.parse(showFlagFilters);
 
 			const includeTransferMoves = window.localStorage.getItem('dexPokemonShowTransferMoves') ?? 'false';

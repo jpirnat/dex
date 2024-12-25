@@ -23,22 +23,22 @@ const app = createApp({
 			moves: [],
 			stats: [],
 
-			showTypeFilters: false,
+			showTypeFilters: true,
 			selectedTypes: [],
 			typesOperator: 'both',
 
-			showAbilityFilters: false,
+			showAbilityFilters: true,
 			abilityName: '',
 			selectedAbility: null,
 
-			showBreedingFilters: false,
+			showBreedingFilters: true,
 			selectedEggGroups: [],
 			eggGroupsOperator: 'any',
 
 			selectedGenderRatios: [],
 			genderRatiosOperator: 'any',
 
-			showMoveFilters: false,
+			showMoveFilters: true,
 			maxMovesetLength: 4,
 			moveNames: [],
 			selectedMoves: [],
@@ -158,19 +158,19 @@ const app = createApp({
 				this.selectedMoves[i] = null;
 			}
 
-			const includeTransferMoves = window.localStorage.getItem('dexPokemonShowTransferMoves') ?? 'false';
+			const includeTransferMoves = window.localStorage.getItem('dexPokemonShowTransferMoves') ?? 'true';
 			this.includeTransferMoves = JSON.parse(includeTransferMoves);
 
-			const showTypeFilters = window.localStorage.getItem('pokemonSearchShowTypeFilters') ?? 'false';
+			const showTypeFilters = window.localStorage.getItem('pokemonSearchShowTypeFilters') ?? 'true';
 			this.showTypeFilters = JSON.parse(showTypeFilters);
 
-			const showAbilityFilters = window.localStorage.getItem('pokemonSearchShowAbilityFilters') ?? 'false';
+			const showAbilityFilters = window.localStorage.getItem('pokemonSearchShowAbilityFilters') ?? 'true';
 			this.showAbilityFilters = JSON.parse(showAbilityFilters);
 
-			const showBreedingFilters = window.localStorage.getItem('pokemonSearchShowBreedingFilters') ?? 'false';
+			const showBreedingFilters = window.localStorage.getItem('pokemonSearchShowBreedingFilters') ?? 'true';
 			this.showBreedingFilters = JSON.parse(showBreedingFilters);
 
-			const showMoveFilters = window.localStorage.getItem('pokemonSearchShowMoveFilters') ?? 'false';
+			const showMoveFilters = window.localStorage.getItem('pokemonSearchShowMoveFilters') ?? 'true';
 			this.showMoveFilters = JSON.parse(showMoveFilters);
 
 			if (url.searchParams.size) {
