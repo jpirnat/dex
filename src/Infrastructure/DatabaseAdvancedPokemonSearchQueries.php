@@ -126,11 +126,14 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 			$typeClauses = [];
 			foreach ($typeIds as $typeId) {
 				$typeId = $typeId->value;
-				$typeClauses[] = "$typeId IN (`vp`.`type1_id`, `type2_id`)";
+				$isNotTrue = $typesOperator === 'none'
+					? ' IS NOT TRUE'
+					: '';
+				$typeClauses[] = "$typeId IN (`vp`.`type1_id`, `type2_id`)$isNotTrue";
 			}
 
 			$andOr = match ($typesOperator) {
-				'both' => 'AND',
+				'both', 'none' => 'AND',
 				default => 'OR',
 			};
 			$typeClauses = implode(" $andOr ", $typeClauses);
