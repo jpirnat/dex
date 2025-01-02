@@ -149,11 +149,14 @@ final readonly class DatabaseAdvancedPokemonSearchQueries implements AdvancedPok
 			$eggGroupClauses = [];
 			foreach ($eggGroupIds as $eggGroupId) {
 				$eggGroupId = $eggGroupId->value;
-				$eggGroupClauses[] = "$eggGroupId IN (`vp`.`egg_group1_id`, `egg_group2_id`)";
+				$isNotTrue = $eggGroupsOperator === 'none'
+					? ' IS NOT TRUE'
+					: '';
+				$eggGroupClauses[] = "$eggGroupId IN (`vp`.`egg_group1_id`, `egg_group2_id`)$isNotTrue";
 			}
 
 			$andOr = match ($eggGroupsOperator) {
-				'both' => 'AND',
+				'both', 'none' => 'AND',
 				default => 'OR',
 			};
 			$eggGroupClauses = implode(" $andOr ", $eggGroupClauses);

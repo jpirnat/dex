@@ -110,6 +110,7 @@
 						<select v-model="eggGroupsOperator">
 							<option value="both" :disabled="selectedEggGroups.length > 2">Both of these</option>
 							<option value="any">Any of these</option>
+							<option value="none">None of these</option>
 						</select>
 					</label>
 					<label class="advanced-search__checkbox-line" v-for="e in eggGroups" :key="e.identifier">
