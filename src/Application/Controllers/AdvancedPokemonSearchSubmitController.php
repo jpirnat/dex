@@ -24,6 +24,8 @@ final readonly class AdvancedPokemonSearchSubmitController
 		$vgIdentifier = $request->getAttribute('vgIdentifier');
 		$typeIdentifiers = (array) ($data['typeIdentifiers'] ?? []);
 		$typesOperator = (string) ($data['typesOperator'] ?? '');
+		$matchups = (array) ($data['matchups'] ?? []);
+		$includeAbilityMatchups = (string) ($data['includeAbilityMatchups'] ?? '');
 		$abilityIdentifier = (string) ($data['abilityIdentifier'] ?? '');
 		$eggGroupIdentifiers = (array) ($data['eggGroupIdentifiers'] ?? []);
 		$eggGroupsOperator = (string) ($data['eggGroupsOperator'] ?? '');
@@ -37,6 +39,8 @@ final readonly class AdvancedPokemonSearchSubmitController
 			$vgIdentifier,
 			$typeIdentifiers,
 			$typesOperator,
+			$matchups,
+			$includeAbilityMatchups,
 			$abilityIdentifier,
 			$eggGroupIdentifiers,
 			$eggGroupsOperator,

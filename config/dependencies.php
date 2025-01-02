@@ -66,6 +66,7 @@ $services->load('Jp\\Dex\\Infrastructure\\', '../src/Infrastructure');
 $services->load('Jp\\Dex\\Presentation\\', '../src/Presentation');
 
 // Domain services
+$services->set(\Jp\Dex\Domain\Abilities\AbilityTypeMatchups::class);
 $services->set(\Jp\Dex\Domain\BreedingChains\BreedingChainFinder::class);
 $services->set(\Jp\Dex\Domain\Evolutions\EvolutionFormatter::class);
 $services->set(\Jp\Dex\Domain\PokemonMoves\PokemonMoveFormatter::class);

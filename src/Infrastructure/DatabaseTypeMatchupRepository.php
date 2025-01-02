@@ -54,6 +54,42 @@ final readonly class DatabaseTypeMatchupRepository implements TypeMatchupReposit
 	}
 
 	/**
+	 * Get multipliers grouped by defending type.
+	 *
+	 * @return float[][] Indexed by defending type identifier, then by attacking
+	 *     type identifier.
+	 */
+	public function getMultipliers(GenerationId $generationId) : array
+	{
+		$stmt = $this->db->prepare(
+			'SELECT
+				`a`.`identifier` AS `attacking`,
+				`d`.`identifier` AS `defending`,
+				`tm`.`multiplier`
+			FROM `type_matchups` AS `tm`
+			INNER JOIN `types` AS `a`
+				ON `tm`.`attacking_type_id` = `a`.`id`
+			INNER JOIN `types` AS `d`
+				ON `tm`.`defending_type_id` = `d`.`id`
+			WHERE `generation_id` = :generation_id'
+		);
+		$stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
+		$stmt->execute();
+
+		$multipliers = [];
+
+		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+			$attacking = $result['attacking'];
+			$defending = $result['defending'];
+			$multiplier = (float) $result['multiplier'];
+
+			$multipliers[$defending][$attacking] = $multiplier;
+		}
+
+		return $multipliers;
+	}
+
+	/**
 	 * Get type matchups by generation and attacking type.
 	 *
 	 * @return TypeMatchup[]

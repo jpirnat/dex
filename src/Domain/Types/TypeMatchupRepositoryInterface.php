@@ -15,6 +15,14 @@ interface TypeMatchupRepositoryInterface
 	public function getByGeneration(GenerationId $generationId) : array;
 
 	/**
+	 * Get multipliers grouped by defending type.
+	 *
+	 * @return float[][] Indexed by defending type identifier, then by attacking
+	 *     type identifier.
+	 */
+	public function getMultipliers(GenerationId $generationId) : array;
+
+	/**
 	 * Get type matchups by generation and attacking type.
 	 *
 	 * @return TypeMatchup[]

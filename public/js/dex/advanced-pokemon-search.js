@@ -3,10 +3,16 @@ const { createApp } = Vue;
 import DexBreadcrumbs from '../dex-breadcrumbs.js';
 import DexPokemonsTable from '../dex-pokemons-table.js';
 
+const { vTooltip } = FloatingVue;
+FloatingVue.options.themes.tooltip.delay.show = 0;
+
 const app = createApp({
 	components: {
 		DexBreadcrumbs,
 		DexPokemonsTable,
+	},
+	directives: {
+		tooltip: vTooltip,
 	},
 	data() {
 		return {
@@ -26,6 +32,8 @@ const app = createApp({
 			showTypeFilters: true,
 			selectedTypes: [],
 			typesOperator: 'both',
+			selectedResistances: [],
+			includeAbilityMatchups: false,
 
 			showAbilityFilters: true,
 			abilityName: '',
@@ -91,6 +99,15 @@ const app = createApp({
 				queryParams.push(`types=${encodeURIComponent(typesJoined)}`);
 				if (this.selectedTypes.length > 1) {
 					queryParams.push(`typesOperator=${encodeURIComponent(this.typesOperator)}`);
+				}
+			}
+
+			if (this.selectedResistances.length > 0) {
+				const resistancesJoined = this.selectedResistances.join(this.joinCharacter);
+				queryParams.push(`resistances=${encodeURIComponent(resistancesJoined)}`);
+
+				if (this.versionGroup.hasAbilities && this.includeAbilityMatchups) {
+					queryParams.push(`includeAbilityMatchups=true`);
 				}
 			}
 
@@ -190,6 +207,18 @@ const app = createApp({
 				});
 				const typesOperator = searchParams.get('typesOperator');
 				this.typesOperator = typesOperator ? typesOperator : 'any';
+			}
+
+			const resistances = searchParams.get('resistances');
+			if (resistances) {
+				resistances.split(this.joinCharacter).forEach(t => {
+					this.selectedResistances.push(t);
+				});
+			}
+
+			const includeAbilityMatchups = searchParams.get('includeAbilityMatchups');
+			if (includeAbilityMatchups) {
+				this.includeAbilityMatchups = true;
 			}
 
 			const ability = searchParams.get('ability');
@@ -330,6 +359,11 @@ const app = createApp({
 		async search() {
 			const url = new URL(window.location);
 
+			const matchups = {};
+			this.selectedResistances.forEach(t => {
+				matchups[t] = ['lt1'];
+			});
+
 			this.loading = true;
 			const response = await fetch(url.pathname, {
 				method: 'POST',
@@ -340,6 +374,8 @@ const app = createApp({
 				body: JSON.stringify({
 					typeIdentifiers: this.selectedTypes,
 					typesOperator: this.typesOperator,
+					matchups: matchups,
+					includeAbilityMatchups: this.versionGroup.hasAbilities && this.includeAbilityMatchups,
 					abilityIdentifier: this.selectedAbility !== null
 						? this.selectedAbility.identifier
 						: '',

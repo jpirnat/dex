@@ -1142,9 +1142,9 @@ a.button {
 }
 
 
-.advanced-search__breeding {
+.advanced-search__columns {
 	display: flex;
-	gap: 20px;
+	gap: 50px;
 	padding-bottom: 10px;
 }
 
@@ -1158,16 +1158,23 @@ a.button {
 	align-items: center;
 }
 
-.advanced-search__type,
-.advanced-search__egg-group,
-.advanced-search__gender-ratio {
-	display: block;
+.advanced-search__checkboxes-header {
+	min-height: 50px;
 }
 
-.advanced-search__types-text,
+.advanced-search__checkboxes-title {
+	display: flex;
+	gap: 5px;
+	align-items: baseline;
+}
+
+.advanced-search__checkbox-line {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+
 .advanced-search__ability-text,
-.advanced-search__egg-groups-text,
-.advanced-search__gender-ratio-text,
 .advanced-search__move-text {
 	margin-right: 5px;
 	font-weight: bold;

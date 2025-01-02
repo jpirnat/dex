@@ -35,19 +35,40 @@
 				<template v-if="showTypeFilters">&#9660;</template>
 				Types
 			</div>
-			<div class="advanced-search__section-content" v-if="showTypeFilters">
-				<label class="advanced-search__types">
-					<span class="advanced-search__types-text">Types:</span>
-					<select v-model="typesOperator">
-						<option value="both" :disabled="selectedTypes.length > 2">Both of these</option>
-						<option value="any">Any of these</option>
-					</select>
-				</label>
-				<label class="advanced-search__type" v-for="t in types" :key="t.identifier">
-					<input type="checkbox" v-model="selectedTypes" :value="t.identifier"
-						@change="onChangeSelectedTypes"
-					> {{ t.name }}
-				</label>
+			<div class="advanced-search__columns" v-if="showTypeFilters">
+				<div>
+					<div class="advanced-search__checkboxes-header">
+						<label class="advanced-search__checkboxes-title">
+							<strong>Types:</strong>
+							<select v-model="typesOperator">
+								<option value="both" :disabled="selectedTypes.length > 2">Both of these</option>
+								<option value="any">Any of these</option>
+							</select>
+						</label>
+					</div>
+					<label class="advanced-search__checkbox-line" v-for="t in types" :key="t.identifier">
+						<input type="checkbox" v-model="selectedTypes" :value="t.identifier"
+							@change="onChangeSelectedTypes"
+						>
+						<span>{{ t.name }}</span>
+					</label>
+				</div>
+
+				<div>
+					<div class="advanced-search__checkboxes-header">
+						<label class="advanced-search__checkboxes-title">
+							<strong>Resistances/Immunities:</strong>
+						</label>
+						<label class="advanced-search__checkbox-line" v-tooltip="'Include Pokémon whose Abilities affect type matchups (e.g. Levitate, Water Absorb, etc.)'" v-if="versionGroup.hasAbilities">
+							<input type="checkbox" v-model="includeAbilityMatchups">
+							<span class="dex--tooltip">Include Abilities</span>
+						</label>
+					</div>
+					<label class="advanced-search__checkbox-line" v-for="t in types" :key="t.identifier">
+						<input type="checkbox" v-model="selectedResistances" :value="t.identifier">
+						<span>{{ t.name }}</span>
+					</label>
+				</div>
 			</div>
 		</div>
 
@@ -81,32 +102,34 @@
 				<template v-if="showBreedingFilters">&#9660;</template>
 				Breeding
 			</div>
-			<div class="advanced-search__breeding" v-if="showBreedingFilters">
+			<div class="advanced-search__columns" v-if="showBreedingFilters">
 				<div>
-					<label class="advanced-search__egg-groups">
-						<span class="advanced-search__egg-groups-text">Egg Groups:</span>
+					<label class="advanced-search__checkboxes-title">
+						<strong>Egg Groups:</strong>
 						<select v-model="eggGroupsOperator">
 							<option value="both" :disabled="selectedEggGroups.length > 2">Both of these</option>
 							<option value="any">Any of these</option>
 						</select>
 					</label>
-					<label class="advanced-search__egg-group" v-for="e in eggGroups" :key="e.identifier">
+					<label class="advanced-search__checkbox-line" v-for="e in eggGroups" :key="e.identifier">
 						<input type="checkbox" v-model="selectedEggGroups" :value="e.identifier"
 							@change="onChangeSelectedEggGroups"
-						> {{ e.name }}
+						>
+						<span>{{ e.name }}</span>
 					</label>
 				</div>
 
 				<div>
-					<label class="advanced-search__gender-ratio">
-						<span class="advanced-search__gender-ratio-text">Gender Ratio:</span>
+					<label class="advanced-search__checkboxes-title">
+						<strong>Gender Ratio:</strong>
 						<select v-model="genderRatiosOperator">
 							<option value="any">Any of these</option>
 							<option value="none">None of these</option>
 						</select>
 					</label>
-					<label class="advanced-search__gender-ratio" v-for="g in genderRatios" :key="g.value">
-						<input type="checkbox" v-model="selectedGenderRatios" :value="g.value"> {{ g.description }}
+					<label class="advanced-search__checkbox-line" v-for="g in genderRatios" :key="g.value">
+						<input type="checkbox" v-model="selectedGenderRatios" :value="g.value">
+						<span>{{ g.description }}</span>
 					</label>
 				</div>
 			</div>
