@@ -28,11 +28,11 @@
         "symfony/config": "^7.2",
         "symfony/dependency-injection": "^7.2",
         "symfony/dom-crawler": "^7.2",
-        "twig/twig": "^3.17"
+        "twig/twig": "^3.19"
     },
     "require-dev": {
         "deployer/deployer": "^7.5",
-        "filp/whoops": "^2.16",
+        "filp/whoops": "^2.17",
         "vlucas/phpdotenv": "^5.6"
     }
 }

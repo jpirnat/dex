@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "19293628fe664d244365ec74741a6e2a",
+    "content-hash": "995100264ffbdbff21a5eab697eb54cc",
     "packages": [
         {
             "name": "dflydev/fig-cookies",
@@ -1142,16 +1142,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v7.2.0",
+            "version": "v7.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "bcd3c4adf0144dee5011bb35454728c38adec055"
+                "reference": "7716594aaae91d9141be080240172a92ecca4d44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/bcd3c4adf0144dee5011bb35454728c38adec055",
-                "reference": "bcd3c4adf0144dee5011bb35454728c38adec055",
+                "url": "https://api.github.com/repos/symfony/config/zipball/7716594aaae91d9141be080240172a92ecca4d44",
+                "reference": "7716594aaae91d9141be080240172a92ecca4d44",
                 "shasum": ""
             },
             "require": {
@@ -1197,7 +1197,7 @@
             "description": "Helps you find, load, combine, autofill and validate configuration values of any kind",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/config/tree/v7.2.0"
+                "source": "https://github.com/symfony/config/tree/v7.2.3"
             },
             "funding": [
                 {
@@ -1213,20 +1213,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-04T11:36:24+00:00"
+            "time": "2025-01-22T12:07:01+00:00"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v7.2.0",
+            "version": "v7.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "a475747af1a1c98272a5471abc35f3da81197c5d"
+                "reference": "1d321c4bc3fe926fd4c38999a4c9af4f5d61ddfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/a475747af1a1c98272a5471abc35f3da81197c5d",
-                "reference": "a475747af1a1c98272a5471abc35f3da81197c5d",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/1d321c4bc3fe926fd4c38999a4c9af4f5d61ddfc",
+                "reference": "1d321c4bc3fe926fd4c38999a4c9af4f5d61ddfc",
                 "shasum": ""
             },
             "require": {
@@ -1277,7 +1277,7 @@
             "description": "Allows you to standardize and centralize the way objects are constructed in your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/dependency-injection/tree/v7.2.0"
+                "source": "https://github.com/symfony/dependency-injection/tree/v7.2.3"
             },
             "funding": [
                 {
@@ -1293,7 +1293,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-25T15:45:00+00:00"
+            "time": "2025-01-17T10:56:55+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -1364,16 +1364,16 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v7.2.0",
+            "version": "v7.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "b176e1f1f550ef44c94eb971bf92488de08f7c6b"
+                "reference": "700a880e5089280c7cf3ca1ccf9d9de6630f5d25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/b176e1f1f550ef44c94eb971bf92488de08f7c6b",
-                "reference": "b176e1f1f550ef44c94eb971bf92488de08f7c6b",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/700a880e5089280c7cf3ca1ccf9d9de6630f5d25",
+                "reference": "700a880e5089280c7cf3ca1ccf9d9de6630f5d25",
                 "shasum": ""
             },
             "require": {
@@ -1411,7 +1411,7 @@
             "description": "Eases DOM navigation for HTML and XML documents",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/dom-crawler/tree/v7.2.0"
+                "source": "https://github.com/symfony/dom-crawler/tree/v7.2.3"
             },
             "funding": [
                 {
@@ -1427,7 +1427,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-13T16:15:23+00:00"
+            "time": "2025-01-27T11:08:17+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -1754,12 +1754,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -2027,16 +2027,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.16.0",
+            "version": "2.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "befcdc0e5dce67252aa6322d82424be928214fa2"
+                "reference": "075bc0c26631110584175de6523ab3f1652eb28e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/befcdc0e5dce67252aa6322d82424be928214fa2",
-                "reference": "befcdc0e5dce67252aa6322d82424be928214fa2",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/075bc0c26631110584175de6523ab3f1652eb28e",
+                "reference": "075bc0c26631110584175de6523ab3f1652eb28e",
                 "shasum": ""
             },
             "require": {
@@ -2086,7 +2086,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.16.0"
+                "source": "https://github.com/filp/whoops/tree/2.17.0"
             },
             "funding": [
                 {
@@ -2094,7 +2094,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-09-25T12:00:00+00:00"
+            "time": "2025-01-25T12:00:00+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -2450,7 +2450,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
@@ -2458,6 +2458,6 @@
         "ext-pdo_mysql": "*",
         "ext-pdo": "*"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
