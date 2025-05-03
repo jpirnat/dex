@@ -14,8 +14,8 @@ $containerConfigCache = new ConfigCache($file, $isDebug);
 
 if (!$containerConfigCache->isFresh()) {
     $containerBuilder = new ContainerBuilder();
-	$loader = new PhpFileLoader($containerBuilder, new FileLocator(__DIR__));
-	$loader->load('dependencies.php');
+    $loader = new PhpFileLoader($containerBuilder, new FileLocator(__DIR__));
+    $loader->load('dependencies.php');
     $containerBuilder->compile();
 
     $dumper = new PhpDumper($containerBuilder);

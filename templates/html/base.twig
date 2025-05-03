@@ -1,75 +1,75 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>
-			{% if title %}
-				Porydex - {{ title|e }}
-			{% else %}
-				Porydex
-			{% endif %}
-		</title>
+        <title>
+            {% if title %}
+                Porydex - {{ title|e }}
+            {% else %}
+                Porydex
+            {% endif %}
+        </title>
 
-		<link href="/css/normalize.css" rel="stylesheet">
-		<link href="/css/main.css" rel="stylesheet">
-		{% block styles %}
-		{% endblock %}
-	</head>
-	<body>
-		<header>
-			{% block nav %}
-				<nav class="menu">
-					<a href="/dex/sv/pokemon">Pokémon</a>
-					<a href="/dex/sv/moves">Moves</a>
-					<a href="/dex/sv/types">Types</a>
-					<a href="/dex/sv/items">Items</a>
-					<a href="/dex/sv/abilities">Abilities</a>
-					<a href="/dex/sv/natures">Natures</a>
-					<a href="/stats">Stats</a>
-					<a href="/stats/current">Current Stats</a>
-					<div class="menu__space"></div>
-					<a href="/about">About</a>
-				</nav>
-				{% if breadcrumbs %}
-					<nav class="breadcrumbs" aria-label="Breadcrumb">
-						<a class="breadcrumbs__item" href="/">Home</a>
-						{% for breadcrumb in breadcrumbs %}
-							<span class="breadcrumbs__separator">»</span>
-							{% if breadcrumb.url %}
-								<a class="breadcrumbs__item" href="{{ breadcrumb.url|e }}">{{ breadcrumb.text|e }}</a>
-							{% else %}
-								<span class="breadcrumbs__item" {% if loop.last %}aria-current="page"{% endif %}>{{ breadcrumb.text|e }}</span>
-							{% endif %}
-						{% endfor %}
-					</nav>
-				{% endif %}
-			{% endblock %}
-		</header>
-		<main>
-			{% block body %}
-			{% endblock %}
-		</main>
-		<footer>
-			<form class="change-language">
-				<select name="language">
-					{% for language in languages %}
-						<option
-							value="{{ language.id|e }}"
-							{% if language.id == currentLanguageId %}
-								selected
-							{% endif %}
-						>
-							{{ language.name }}
-						</option>
-					{% endfor %}
-				</select>
+        <link href="/css/normalize.css" rel="stylesheet">
+        <link href="/css/main.css" rel="stylesheet">
+        {% block styles %}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            {% block nav %}
+                <nav class="menu">
+                    <a href="/dex/sv/pokemon">Pokémon</a>
+                    <a href="/dex/sv/moves">Moves</a>
+                    <a href="/dex/sv/types">Types</a>
+                    <a href="/dex/sv/items">Items</a>
+                    <a href="/dex/sv/abilities">Abilities</a>
+                    <a href="/dex/sv/natures">Natures</a>
+                    <a href="/stats">Stats</a>
+                    <a href="/stats/current">Current Stats</a>
+                    <div class="menu__space"></div>
+                    <a href="/about">About</a>
+                </nav>
+                {% if breadcrumbs %}
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a class="breadcrumbs__item" href="/">Home</a>
+                        {% for breadcrumb in breadcrumbs %}
+                            <span class="breadcrumbs__separator">»</span>
+                            {% if breadcrumb.url %}
+                                <a class="breadcrumbs__item" href="{{ breadcrumb.url|e }}">{{ breadcrumb.text|e }}</a>
+                            {% else %}
+                                <span class="breadcrumbs__item" {% if loop.last %}aria-current="page"{% endif %}>{{ breadcrumb.text|e }}</span>
+                            {% endif %}
+                        {% endfor %}
+                    </nav>
+                {% endif %}
+            {% endblock %}
+        </header>
+        <main>
+            {% block body %}
+            {% endblock %}
+        </main>
+        <footer>
+            <form class="change-language">
+                <select name="language">
+                    {% for language in languages %}
+                        <option
+                            value="{{ language.id|e }}"
+                            {% if language.id == currentLanguageId %}
+                                selected
+                            {% endif %}
+                        >
+                            {{ language.name }}
+                        </option>
+                    {% endfor %}
+                </select>
 
-				<input type="submit" value="Change Language">
-			</form>
-		</footer>
-		{% block scripts %}
-		{% endblock %}
-	</body>
+                <input type="submit" value="Change Language">
+            </form>
+        </footer>
+        {% block scripts %}
+        {% endblock %}
+    </body>
 </html>
