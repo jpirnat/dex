@@ -3721,12 +3721,12 @@ language_id,pokemon_id,name,category
 3,10181,Zamazenta (Bouclier Suprême),Pokémon Valeureux
 3,10182,Éthernatos (Infinimax),Pokémon Giga
 3,10183,Ramoloss (Forme de Galar),Pokémon Crétin
-3,10184,Flagadoss (ガラルのすがた),Pokémon Symbiose
+3,10184,Flagadoss (Forme de Galar),Pokémon Symbiose
 3,10185,Shifours (Style Mille Poings),Pokémon Kung-fu
-3,10186,Artikodin (ガラルのすがた),Pokémon Implacable
-3,10187,Électhor (ガラルのすがた),Pokémon Fort-Pied
-3,10188,Sulfura (ガラルのすがた),Pokémon Maléfique
-3,10189,Roigada (ガラルのすがた),Pokémon Ensorceleur
+3,10186,Artikodin (Forme de Galar),Pokémon Implacable
+3,10187,Électhor (Forme de Galar),Pokémon Fort-Pied
+3,10188,Sulfura (Forme de Galar),Pokémon Maléfique
+3,10189,Roigada (Forme de Galar),Pokémon Ensorceleur
 3,10190,Sylveroy (Cavalier du Froid),Pokémon Empereur
 3,10191,Sylveroy (Cavalier d’Effroi),Pokémon Empereur
 3,10192,Caninos (Forme de Hisui),Pokémon Espion
@@ -4978,12 +4978,12 @@ language_id,pokemon_id,name,category
 4,10181,Zamazenta (König des Schildes),Krieger-Pokémon
 4,10182,Endynalos (Unendynamax),Giganten-Pokémon
 4,10183,Flegmon (Galar-Form),Schnarcher-Pokémon
-4,10184,Lahmus (ガラルのすがた),Symbiose-Pokémon
+4,10184,Lahmus (Galar-Form),Symbiose-Pokémon
 4,10185,Wulaosu (Fließender Stil),Kung-Fu-Pokémon
-4,10186,Arktos (ガラルのすがた),Gefühlskälte-Pokémon
-4,10187,Zapdos (ガラルのすがた),Läufer-Pokémon
-4,10188,Lavados (ガラルのすがた),Bosheits-Pokémon
-4,10189,Laschoking (ガラルのすがた),Hexenmeister-Pokémon
+4,10186,Arktos (Galar-Form),Gefühlskälte-Pokémon
+4,10187,Zapdos (Galar-Form),Läufer-Pokémon
+4,10188,Lavados (Galar-Form),Bosheits-Pokémon
+4,10189,Laschoking (Galar-Form),Hexenmeister-Pokémon
 4,10190,Coronospa (Schimmelreiter),Kaiser-Pokémon
 4,10191,Coronospa (Rappenreiter),Kaiser-Pokémon
 4,10192,Fukano (Hisui-Form),Späher-Pokémon
@@ -6235,12 +6235,12 @@ language_id,pokemon_id,name,category
 5,10181,Zamazenta (Re degli Scudi),Pokémon Guerriero
 5,10182,Eternatus (Dynamax Infinito),Pokémon Gigante
 5,10183,Slowpoke (Forma di Galar),Pokémon Ronfone
-5,10184,Slowbro (ガラルのすがた),Pokémon Paguro
+5,10184,Slowbro (Forma di Galar),Pokémon Paguro
 5,10185,Urshifu (Stile Pluricolpo),Pokémon Kung Fu
-5,10186,Articuno (ガラルのすがた),Pokémon Sanguefreddo
-5,10187,Zapdos (ガラルのすがた),Pokémon Zampeforti
-5,10188,Moltres (ガラルのすがた),Pokémon Malvagità
-5,10189,Slowking (ガラルのすがた),Pokémon Stregone
+5,10186,Articuno (Forma di Galar),Pokémon Sanguefreddo
+5,10187,Zapdos (Forma di Galar),Pokémon Zampeforti
+5,10188,Moltres (Forma di Galar),Pokémon Malvagità
+5,10189,Slowking (Forma di Galar),Pokémon Stregone
 5,10190,Calyrex (Cavaliere Glaciale),Pokémon Imperatore
 5,10191,Calyrex (Cavaliere Spettrale),Pokémon Imperatore
 5,10192,Growlithe (Forma di Hisui),Pokémon Esplorante
@@ -7492,12 +7492,12 @@ language_id,pokemon_id,name,category
 6,10181,Zamazenta (Escudo Supremo),Pokémon Guerrero
 6,10182,Eternatus (Dinamax Infinito),Pokémon Gigantesco
 6,10183,Slowpoke (Forma de Galar),Pokémon Atontado
-6,10184,Slowbro (ガラルのすがた),Pokémon Ermitaño
+6,10184,Slowbro (Forma de Galar),Pokémon Ermitaño
 6,10185,Urshifu (Estilo Fluido),Pokémon Kung-Fu
-6,10186,Articuno (ガラルのすがた),Pokémon Calculador
-6,10187,Zapdos (ガラルのすがた),Pokémon Patas Recias
-6,10188,Moltres (ガラルのすがた),Pokémon Malignidad
-6,10189,Slowking (ガラルのすがた),Pokémon Chamán
+6,10186,Articuno (Forma de Galar),Pokémon Calculador
+6,10187,Zapdos (Forma de Galar),Pokémon Patas Recias
+6,10188,Moltres (Forma de Galar),Pokémon Malignidad
+6,10189,Slowking (Forma de Galar),Pokémon Chamán
 6,10190,Calyrex (Jinete Glacial),Pokémon Emperador
 6,10191,Calyrex (Jinete Espectral),Pokémon Emperador
 6,10192,Growlithe (Forma de Hisui),Pokémon Explorador
@@ -8749,12 +8749,12 @@ language_id,pokemon_id,name,category
 7,10181,자마젠타 (방패왕),강자포켓몬
 7,10182,무한다이노 (무한다이맥스),거대포켓몬
 7,10183,야돈 (가라르의 모습),얼간이포켓몬
-7,10184,야도란 (ガラルのすがた),기생포켓몬
+7,10184,야도란 (가라르의 모습),기생포켓몬
 7,10185,우라오스 (연격의 태세),권법포켓몬
-7,10186,프리져 (ガラルのすがた),냉혹포켓몬
-7,10187,썬더 (ガラルのすがた),건각포켓몬
-7,10188,파이어 (ガラルのすがた),사악포켓몬
-7,10189,야도킹 (ガラルのすがた),술사포켓몬
+7,10186,프리져 (가라르의 모습),냉혹포켓몬
+7,10187,썬더 (가라르의 모습),건각포켓몬
+7,10188,파이어 (가라르의 모습),사악포켓몬
+7,10189,야도킹 (가라르의 모습),술사포켓몬
 7,10190,버드렉스 (백마 탄 모습),엠페러포켓몬
 7,10191,버드렉스 (흑마 탄 모습),엠페러포켓몬
 7,10192,가디 (히스이의 모습),망보기포켓몬
@@ -11263,12 +11263,12 @@ language_id,pokemon_id,name,category
 9,10181,藏玛然特 (盾之王),强者宝可梦
 9,10182,无极汰那 (无极巨化),超极巨宝可梦
 9,10183,呆呆兽 (伽勒尔的样子),憨憨宝可梦
-9,10184,呆壳兽 (ガラルのすがた),寄居蟹宝可梦
+9,10184,呆壳兽 (伽勒尔的样子),寄居蟹宝可梦
 9,10185,武道熊师 (连击流),拳法宝可梦
-9,10186,急冻鸟 (ガラルのすがた),冷酷宝可梦
-9,10187,闪电鸟 (ガラルのすがた),健脚宝可梦
-9,10188,火焰鸟 (ガラルのすがた),邪恶宝可梦
-9,10189,呆呆王 (ガラルのすがた),诅咒师宝可梦
+9,10186,急冻鸟 (伽勒尔的样子),冷酷宝可梦
+9,10187,闪电鸟 (伽勒尔的样子),健脚宝可梦
+9,10188,火焰鸟 (伽勒尔的样子),邪恶宝可梦
+9,10189,呆呆王 (伽勒尔的样子),诅咒师宝可梦
 9,10190,蕾冠王 (骑白马的样子),帝皇宝可梦
 9,10191,蕾冠王 (骑黑马的样子),帝皇宝可梦
 9,10192,卡蒂狗 (洗翠的样子),放哨宝可梦
@@ -12520,12 +12520,12 @@ language_id,pokemon_id,name,category
 10,10181,藏瑪然特 (盾之王),強者寶可夢
 10,10182,無極汰那 (無極巨化),超極巨寶可夢
 10,10183,呆呆獸 (伽勒爾的樣子),憨憨寶可夢
-10,10184,呆殼獸 (ガラルのすがた),寄居蟹寶可夢
+10,10184,呆殼獸 (伽勒爾的樣子),寄居蟹寶可夢
 10,10185,武道熊師 (連擊流),拳法寶可夢
-10,10186,急凍鳥 (ガラルのすがた),冷酷寶可夢
-10,10187,閃電鳥 (ガラルのすがた),健腳寶可夢
-10,10188,火焰鳥 (ガラルのすがた),邪惡寶可夢
-10,10189,呆呆王 (ガラルのすがた),詛咒師寶可夢
+10,10186,急凍鳥 (伽勒爾的樣子),冷酷寶可夢
+10,10187,閃電鳥 (伽勒爾的樣子),健腳寶可夢
+10,10188,火焰鳥 (伽勒爾的樣子),邪惡寶可夢
+10,10189,呆呆王 (伽勒爾的樣子),詛咒師寶可夢
 10,10190,蕾冠王 (騎白馬的樣子),帝皇寶可夢
 10,10191,蕾冠王 (騎黑馬的樣子),帝皇寶可夢
 10,10192,卡蒂狗 (洗翠的樣子),放哨寶可夢
