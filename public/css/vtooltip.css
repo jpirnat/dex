@@ -3,8 +3,8 @@
 
 /* And here are my overrides: */
 .v-popper--theme-tooltip .v-popper__inner {
-	background: black;
+    background: black;
 }
 .v-popper--theme-tooltip .v-popper__arrow-outer {
-	border-color: black;
+    border-color: black;
 }

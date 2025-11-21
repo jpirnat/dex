@@ -1,70 +1,70 @@
 {% extends "html/base.twig" %}
 
 {% block styles %}
-	<link href="/css/vtooltip.css" rel="stylesheet">
-	<link href="/css/dex-pagination.css" rel="stylesheet">
+    <link href="/css/vtooltip.css" rel="stylesheet">
+    <link href="/css/dex-pagination.css" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
-	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+    <dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="version-group-control" v-if="versionGroups.length">
-		<ul>
-			<li v-for="vg in versionGroups">
-				<a :href="'/dex/' + vg.identifier + '/abilities/' + ability.identifier"
-					:class="{
-						'current': vg.identifier === versionGroup.identifier
-					}"
-				>{{ vg.name }}</a>
-			</li>
-		</ul>
-	</div>
+    <div class="version-group-control" v-if="versionGroups.length">
+        <ul>
+            <li v-for="vg in versionGroups">
+                <a :href="'/dex/' + vg.identifier + '/abilities/' + ability.identifier"
+                    :class="{
+                        'current': vg.identifier === versionGroup.identifier
+                    }"
+                >{{ vg.name }}</a>
+            </li>
+        </ul>
+    </div>
 
-	<div v-if="!loaded" class="dex-loader-container">
-		<div class="dex-loader"></div>
-	</div>
+    <div v-if="!loaded" class="dex-loader-container">
+        <div class="dex-loader"></div>
+    </div>
 
-	<template v-if="loaded">
-		<h1 class="dex-page__title">{{ ability.name }}</h1>
+    <template v-if="loaded">
+        <h1 class="dex-page__title">{{ ability.name }}</h1>
 
-		<p class="dex-ability__description">{{ ability.description }}</p>
+        <p class="dex-ability__description">{{ ability.description }}</p>
 
-		<template v-if="flags.length > 0">
-			<h2 class="dex-section__title">Technical Data</h2>
-			<ul class="dex-ability__flags">
-				<li v-for="flag in flags" :key="flag.identifier"
-					:class="{
-						'dex-ability__flag': true,
-						'dex-ability__flag--disabled': !flag.has,
-					}"
-				>
-					{{ flag.name }}
-					<div v-if="flag.has" class="dex-ability__flag-description" v-html="flag.description"></div>
-				</li>
-			</ul>
-		</template>
+        <template v-if="flags.length > 0">
+            <h2 class="dex-section__title">Technical Data</h2>
+            <ul class="dex-ability__flags">
+                <li v-for="flag in flags" :key="flag.identifier"
+                    :class="{
+                        'dex-ability__flag': true,
+                        'dex-ability__flag--disabled': !flag.has,
+                    }"
+                >
+                    {{ flag.name }}
+                    <div v-if="flag.has" class="dex-ability__flag-description" v-html="flag.description"></div>
+                </li>
+            </ul>
+        </template>
 
-		<h2 class="dex-section__title">Pokémon</h2>
-		<dex-pokemons-table
-			:pokemons="pokemons"
-			:version-group="versionGroup"
-			:stats="stats"
-			v-model:filter-name="filterName"
-		></dex-pokemons-table>
-	</template>
+        <h2 class="dex-section__title">Pokémon</h2>
+        <dex-pokemons-table
+            :pokemons="pokemons"
+            :version-group="versionGroup"
+            :stats="stats"
+            v-model:filter-name="filterName"
+        ></dex-pokemons-table>
+    </template>
 </div>
 {% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<!-- Tooltips via Floating Vue -->
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
-	<script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
+    <!-- Tooltips via Floating Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
 
-	<script type="module" src="/js/dex/ability.js"></script>
+    <script type="module" src="/js/dex/ability.js"></script>
 {% endblock %}

@@ -3,55 +3,55 @@
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
-	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+    <dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="month-control" v-if="loaded">
-		<a v-if="prevMonth" class="button prev" :href="'/stats/' + prevMonth.value">
-			&#9668; {{ prevMonth.name }}
-		</a>
+    <div class="month-control" v-if="loaded">
+        <a v-if="prevMonth" class="button prev" :href="'/stats/' + prevMonth.value">
+            &#9668; {{ prevMonth.name }}
+        </a>
 
-		<div class="space"></div>
+        <div class="space"></div>
 
-		<a v-if="nextMonth" class="button next" :href="'/stats/' + nextMonth.value">
-			{{ nextMonth.name }} &#9658;
-		</a>
-	</div>
+        <a v-if="nextMonth" class="button next" :href="'/stats/' + nextMonth.value">
+            {{ nextMonth.name }} &#9658;
+        </a>
+    </div>
 
-	<div v-if="!loaded" class="dex-loader-container">
-		<div class="dex-loader"></div>
-	</div>
+    <div v-if="!loaded" class="dex-loader-container">
+        <div class="dex-loader"></div>
+    </div>
 
-	<section v-for="generation in generations" :key="generation.generation">
-		<h2 class="dex-section__title">Gen {{ generation.generation }}</h2>
+    <section v-for="generation in generations" :key="generation.generation">
+        <h2 class="dex-section__title">Gen {{ generation.generation }}</h2>
 
-		<table class="dex-table">
-			<thead>
-				<tr>
-					<th>Format</th>
-					<th>Rating 1</th>
-					<th>Rating 2</th>
-					<th>Rating 3</th>
-					<th>Rating 4</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr v-for="format in generation.formats" :key="format.identifier">
-					<td>{{ format.name }}</td>
-					<td v-for="rating in format.ratings" :key="rating">
-						<a :href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating">
-							{{ rating }}
-						</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</section>
+        <table class="dex-table">
+            <thead>
+                <tr>
+                    <th>Format</th>
+                    <th>Rating 1</th>
+                    <th>Rating 2</th>
+                    <th>Rating 3</th>
+                    <th>Rating 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="format in generation.formats" :key="format.identifier">
+                    <td>{{ format.name }}</td>
+                    <td v-for="rating in format.ratings" :key="rating">
+                        <a :href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating">
+                            {{ rating }}
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 </div>
 {% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<script type="module" src="/js/stats/month.js"></script>
+    <script type="module" src="/js/stats/month.js"></script>
 {% endblock %}

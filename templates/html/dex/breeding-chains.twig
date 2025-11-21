@@ -1,107 +1,107 @@
 {% extends "html/base.twig" %}
 
 {% block styles %}
-	<link href="/css/vtooltip.css" rel="stylesheet">
+    <link href="/css/vtooltip.css" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
-	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+    <dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div v-if="!loaded" class="dex-loader-container">
-		<div class="dex-loader"></div>
-	</div>
+    <div v-if="!loaded" class="dex-loader-container">
+        <div class="dex-loader"></div>
+    </div>
 
-	<template v-if="loaded">
-		<h1 class="dex-page__title">Egg Move Breeding Chains</h1>
-		<h2 class="dex-page__subtitle">{{ pokemon.name }} - {{ move.name }}</h2>
+    <template v-if="loaded">
+        <h1 class="dex-page__title">Egg Move Breeding Chains</h1>
+        <h2 class="dex-page__subtitle">{{ pokemon.name }} - {{ move.name }}</h2>
 
-		<table class="dex-table dex-table--full-width breeding-chains-table">
-			<template v-for="chain in chains" :key="chain.id">
-				<tbody>
-					<tr class="breeding-chain__header" @click="toggleChain(chain)">
-						<th colspan="8">
-							<div class="breeding-chain__summary-container">
-								<div class="breeding-chain__arrow">
-									<template v-if="chain.show">▼</template>
-									<template v-else>▶</template>
-								</div>
-								<div class="breeding-chain__summary" >
-									<template v-for="(p, pokemonIndex) in chain.pokemon" :key="p.identifier">
-										<img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + p.icon" :alt="p.name" v-tooltip="p.name">
-										<span v-if="pokemonIndex < chain.pokemon.length - 1"> → </span>
-									</template>
-								</div>
-							</div>
-						</th>
-					</tr>
-				</tbody>
-				<tbody v-if="chain.show">
-					<tr class="breeding-chain__headers">
-						<th></th>
-						<th scope="col">Pokémon</th>
-						<th scope="col">Versions</th>
-						<th scope="col">Egg Groups</th>
-						<th scope="col">Gender Ratio</th>
-						<th scope="col">Egg Cycles</th>
-						<th scope="col">Steps to Hatch</th>
-						<th scope="col">Learned Via</th>
-					</tr>
-					<tr v-for="p in chain.pokemon" :key="p.identifier">
-						<td class="dex-table--icon">
-							<img v-if="p.icon" class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + p.icon" alt="">
-						</td>
-						<th scope="row" class="dex-table__pokemon-name">
-							<a :href="'/dex/' + p.versionGroup.identifier + '/pokemon/' + p.identifier">
-								{{ p.name }}
-							</a>
-						</th>
+        <table class="dex-table dex-table--full-width breeding-chains-table">
+            <template v-for="chain in chains" :key="chain.id">
+                <tbody>
+                    <tr class="breeding-chain__header" @click="toggleChain(chain)">
+                        <th colspan="8">
+                            <div class="breeding-chain__summary-container">
+                                <div class="breeding-chain__arrow">
+                                    <template v-if="chain.show">▼</template>
+                                    <template v-else>▶</template>
+                                </div>
+                                <div class="breeding-chain__summary" >
+                                    <template v-for="(p, pokemonIndex) in chain.pokemon" :key="p.identifier">
+                                        <img class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + p.icon" :alt="p.name" v-tooltip="p.name">
+                                        <span v-if="pokemonIndex < chain.pokemon.length - 1"> → </span>
+                                    </template>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </tbody>
+                <tbody v-if="chain.show">
+                    <tr class="breeding-chain__headers">
+                        <th></th>
+                        <th scope="col">Pokémon</th>
+                        <th scope="col">Versions</th>
+                        <th scope="col">Egg Groups</th>
+                        <th scope="col">Gender Ratio</th>
+                        <th scope="col">Egg Cycles</th>
+                        <th scope="col">Steps to Hatch</th>
+                        <th scope="col">Learned Via</th>
+                    </tr>
+                    <tr v-for="p in chain.pokemon" :key="p.identifier">
+                        <td class="dex-table--icon">
+                            <img v-if="p.icon" class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + p.icon" alt="">
+                        </td>
+                        <th scope="row" class="dex-table__pokemon-name">
+                            <a :href="'/dex/' + p.versionGroup.identifier + '/pokemon/' + p.identifier">
+                                {{ p.name }}
+                            </a>
+                        </th>
 
-						<td>
-							<div
-								:class="{
-									'breeding-chain__version-group': true,
-									['breeding-chain__version-group--' + p.versionGroup.identifier]: true,
-								}"
-								v-tooltip="p.versionGroup.name"
-							>
-								<template v-if="p.versionGroup.versions.length > 1">
-									<sup>{{ p.versionGroup.versions[0].abbreviation }}</sup><sub>{{ p.versionGroup.versions[1].abbreviation }}</sub>
-								</template>
-								<template v-else>
-									{{ p.versionGroup.versions[0].abbreviation }}
-								</template>
-							</div>
-						</td>
+                        <td>
+                            <div
+                                :class="{
+                                    'breeding-chain__version-group': true,
+                                    ['breeding-chain__version-group--' + p.versionGroup.identifier]: true,
+                                }"
+                                v-tooltip="p.versionGroup.name"
+                            >
+                                <template v-if="p.versionGroup.versions.length > 1">
+                                    <sup>{{ p.versionGroup.versions[0].abbreviation }}</sup><sub>{{ p.versionGroup.versions[1].abbreviation }}</sub>
+                                </template>
+                                <template v-else>
+                                    {{ p.versionGroup.versions[0].abbreviation }}
+                                </template>
+                            </div>
+                        </td>
 
-						<td class="dex-table--icon">
-							<div v-for="e in p.eggGroups" :key="e.identifier">
-								<a :href="'/dex/' + p.versionGroup.identifier + '/egg-groups/' + e.identifier">{{ e.name }}</a>
-							</div>
-						</td>
-						<td class="dex-table--icon" v-tooltip="p.genderRatio.description">
-							<img :src="'/images/gender-ratios/' + p.genderRatio.icon" :alt="p.genderRatio.description">
-						</td>
-						<td class="dex-table--number">{{ p.eggCycles }}</td>
-						<td class="dex-table--number">{{ p.stepsToHatch }}</td>
-						<td>{{ p.moveMethod }}</td>
-					</tr>
-				</tbody>
-			</template>
-		</table>
-	</template>
+                        <td class="dex-table--icon">
+                            <div v-for="e in p.eggGroups" :key="e.identifier">
+                                <a :href="'/dex/' + p.versionGroup.identifier + '/egg-groups/' + e.identifier">{{ e.name }}</a>
+                            </div>
+                        </td>
+                        <td class="dex-table--icon" v-tooltip="p.genderRatio.description">
+                            <img :src="'/images/gender-ratios/' + p.genderRatio.icon" :alt="p.genderRatio.description">
+                        </td>
+                        <td class="dex-table--number">{{ p.eggCycles }}</td>
+                        <td class="dex-table--number">{{ p.stepsToHatch }}</td>
+                        <td>{{ p.moveMethod }}</td>
+                    </tr>
+                </tbody>
+            </template>
+        </table>
+    </template>
 </div>
 {% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<!-- Tooltips via Floating Vue -->
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
-	<script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
+    <!-- Tooltips via Floating Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
 
-	<script type="module" src="/js/dex/breeding-chains.js"></script>
+    <script type="module" src="/js/dex/breeding-chains.js"></script>
 {% endblock %}

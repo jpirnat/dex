@@ -1,135 +1,135 @@
 {% extends "html/base.twig" %}
 
 {% block styles %}
-	<link href="/css/vtooltip.css" rel="stylesheet">
+    <link href="/css/vtooltip.css" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
-	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+    <dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="version-group-control" v-if="versionGroups.length">
-		<ul>
-			<li v-for="vg in versionGroups">
-				<a :href="'/dex/' + vg.identifier + '/types' + queryParams"
-					:class="{
-						'current': vg.identifier === versionGroup.identifier
-					}"
-				>{{ vg.name }}</a>
-			</li>
-		</ul>
-	</div>
+    <div class="version-group-control" v-if="versionGroups.length">
+        <ul>
+            <li v-for="vg in versionGroups">
+                <a :href="'/dex/' + vg.identifier + '/types' + queryParams"
+                    :class="{
+                        'current': vg.identifier === versionGroup.identifier
+                    }"
+                >{{ vg.name }}</a>
+            </li>
+        </ul>
+    </div>
 
-	<div v-if="!loaded" class="dex-loader-container">
-		<div class="dex-loader"></div>
-	</div>
+    <div v-if="!loaded" class="dex-loader-container">
+        <div class="dex-loader"></div>
+    </div>
 
-	<template v-if="loaded">
-		<h1 class="dex-page__title">Types</h1>
+    <template v-if="loaded">
+        <h1 class="dex-page__title">Types</h1>
 
-		<table class="type-chart">
-			<thead>
-				<tr>
-					<td colspan="2"></td>
-					<th :colspan="types.length + 2" class="type-chart__axis-label">
-						Defending Type
-					</th>
-				</tr>
-				<tr>
-					<td colspan="2"></td>
-					<th v-for="defendingType in defendingTypes" scope="col">
-						<a :href="'/dex/' + versionGroup.identifier + '/types/' + defendingType.identifier">
-							<img class="type-chart__icon" :src="'/images/types/symbols/' + defendingType.symbolIcon"
-								:alt="defendingType.name" v-tooltip="defendingType.name"
-							>
-						</a>
-					</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr v-for="(attackingType, attackingIndex) in attackingTypes">
-					<th v-if="attackingIndex === 0" :rowspan="types.length" class="type-chart__axis-label">
-						<span class="type-chart__axis-label--attacking">Attacking Type</span>
-					</th>
-					<th scope="row">
-						<a :href="'/dex/' + versionGroup.identifier + '/types/' + attackingType.identifier">
-							<img class="type-chart__icon" :src="'/images/types/symbols/' + attackingType.symbolIcon"
-								:alt="attackingType.name" v-tooltip="attackingType.name"
-							>
-						</a>
-					</th>
-					<td v-for="defendingType in defendingTypes" class="type-chart__matchup"
-						:class="{
-							'type-chart__matchup--highlight': hoverAttackingType === attackingType.identifier || hoverDefendingType === defendingType.identifier,
-							'type-chart__matchup--neutral': multipliers[attackingType.identifier][defendingType.identifier] === 1,
-							'type-chart__matchup--super-effective': multipliers[attackingType.identifier][defendingType.identifier] === 2,
-							'type-chart__matchup--not-very-effective': multipliers[attackingType.identifier][defendingType.identifier] === 0.5,
-							'type-chart__matchup--no-effect': multipliers[attackingType.identifier][defendingType.identifier] === 0,
-						}"
-						@mouseover="onMatchupHover(attackingType, defendingType)"
-						@mouseleave="onMatchupUnhover"
-					>
-						<template v-if="multipliers[attackingType.identifier][defendingType.identifier] === 1">1</template>
-						<template v-else-if="multipliers[attackingType.identifier][defendingType.identifier] === 2">×2</template>
-						<template v-else-if="multipliers[attackingType.identifier][defendingType.identifier] === .5">½</template>
-						<template v-else-if="multipliers[attackingType.identifier][defendingType.identifier] === 0">×0</template>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+        <table class="type-chart">
+            <thead>
+                <tr>
+                    <td colspan="2"></td>
+                    <th :colspan="types.length + 2" class="type-chart__axis-label">
+                        Defending Type
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <th v-for="defendingType in defendingTypes" scope="col">
+                        <a :href="'/dex/' + versionGroup.identifier + '/types/' + defendingType.identifier">
+                            <img class="type-chart__icon" :src="'/images/types/symbols/' + defendingType.symbolIcon"
+                                :alt="defendingType.name" v-tooltip="defendingType.name"
+                            >
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(attackingType, attackingIndex) in attackingTypes">
+                    <th v-if="attackingIndex === 0" :rowspan="types.length" class="type-chart__axis-label">
+                        <span class="type-chart__axis-label--attacking">Attacking Type</span>
+                    </th>
+                    <th scope="row">
+                        <a :href="'/dex/' + versionGroup.identifier + '/types/' + attackingType.identifier">
+                            <img class="type-chart__icon" :src="'/images/types/symbols/' + attackingType.symbolIcon"
+                                :alt="attackingType.name" v-tooltip="attackingType.name"
+                            >
+                        </a>
+                    </th>
+                    <td v-for="defendingType in defendingTypes" class="type-chart__matchup"
+                        :class="{
+                            'type-chart__matchup--highlight': hoverAttackingType === attackingType.identifier || hoverDefendingType === defendingType.identifier,
+                            'type-chart__matchup--neutral': multipliers[attackingType.identifier][defendingType.identifier] === 1,
+                            'type-chart__matchup--super-effective': multipliers[attackingType.identifier][defendingType.identifier] === 2,
+                            'type-chart__matchup--not-very-effective': multipliers[attackingType.identifier][defendingType.identifier] === 0.5,
+                            'type-chart__matchup--no-effect': multipliers[attackingType.identifier][defendingType.identifier] === 0,
+                        }"
+                        @mouseover="onMatchupHover(attackingType, defendingType)"
+                        @mouseleave="onMatchupUnhover"
+                    >
+                        <template v-if="multipliers[attackingType.identifier][defendingType.identifier] === 1">1</template>
+                        <template v-else-if="multipliers[attackingType.identifier][defendingType.identifier] === 2">×2</template>
+                        <template v-else-if="multipliers[attackingType.identifier][defendingType.identifier] === .5">½</template>
+                        <template v-else-if="multipliers[attackingType.identifier][defendingType.identifier] === 0">×0</template>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-		<div class="type-toggler">
-			<div class="type-toggler__header">Toggle Attacking Types</div>
-			<div class="type-toggler__types">
-				<label v-for="t in types" class="type-toggler__type">
-					<img class="dex-type-icon" :src="'/images/types/' + t.nameIcon" :alt="t.name"
-						:class="{
-							'type-toggler__type--inactive': !toggleAttackingTypes.includes(t.identifier),
-						}"
-					>
-					<input type="checkbox" class="type-toggler__input"
-						v-model="toggleAttackingTypes" :value="t.identifier"
-					>
-				</label>
-			</div>
-			<div class="type-toggler__buttons">
-				<button type="button" @click="selectAllAttacking">Select All</button>
-				<button type="button" @click="unselectAllAttacking">Unselect All</button>
-			</div>
-		</div>
+        <div class="type-toggler">
+            <div class="type-toggler__header">Toggle Attacking Types</div>
+            <div class="type-toggler__types">
+                <label v-for="t in types" class="type-toggler__type">
+                    <img class="dex-type-icon" :src="'/images/types/' + t.nameIcon" :alt="t.name"
+                        :class="{
+                            'type-toggler__type--inactive': !toggleAttackingTypes.includes(t.identifier),
+                        }"
+                    >
+                    <input type="checkbox" class="type-toggler__input"
+                        v-model="toggleAttackingTypes" :value="t.identifier"
+                    >
+                </label>
+            </div>
+            <div class="type-toggler__buttons">
+                <button type="button" @click="selectAllAttacking">Select All</button>
+                <button type="button" @click="unselectAllAttacking">Unselect All</button>
+            </div>
+        </div>
 
-		<div class="type-toggler">
-			<div class="type-toggler__header">Toggle Defending Types</div>
-			<div class="type-toggler__types">
-				<label v-for="t in types" class="type-toggler__type">
-					<img class="dex-type-icon" :src="'/images/types/' + t.nameIcon" :alt="t.name"
-						:class="{
-							'type-toggler__type--inactive': !toggleDefendingTypes.includes(t.identifier),
-						}"
-					>
-					<input type="checkbox" class="type-toggler__input"
-						v-model="toggleDefendingTypes" :value="t.identifier"
-					>
-				</label>
-			</div>
-			<div class="type-toggler__buttons">
-				<button type="button" @click="selectAllDefending">Select All</button>
-				<button type="button" @click="unselectAllDefending">Unselect All</button>
-			</div>
-		</div>
-	</template>
+        <div class="type-toggler">
+            <div class="type-toggler__header">Toggle Defending Types</div>
+            <div class="type-toggler__types">
+                <label v-for="t in types" class="type-toggler__type">
+                    <img class="dex-type-icon" :src="'/images/types/' + t.nameIcon" :alt="t.name"
+                        :class="{
+                            'type-toggler__type--inactive': !toggleDefendingTypes.includes(t.identifier),
+                        }"
+                    >
+                    <input type="checkbox" class="type-toggler__input"
+                        v-model="toggleDefendingTypes" :value="t.identifier"
+                    >
+                </label>
+            </div>
+            <div class="type-toggler__buttons">
+                <button type="button" @click="selectAllDefending">Select All</button>
+                <button type="button" @click="unselectAllDefending">Unselect All</button>
+            </div>
+        </div>
+    </template>
 </div>
 {% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<!-- Tooltips via Floating Vue -->
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
-	<script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
+    <!-- Tooltips via Floating Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
 
-	<script type="module" src="/js/dex/types.js"></script>
+    <script type="module" src="/js/dex/types.js"></script>
 {% endblock %}

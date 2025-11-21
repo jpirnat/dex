@@ -1,115 +1,115 @@
 {% extends "html/base.twig" %}
 
 {% block styles %}
-	<link href="/css/vtooltip.css" rel="stylesheet">
-	<link href="/css/dex-pagination.css" rel="stylesheet">
+    <link href="/css/vtooltip.css" rel="stylesheet">
+    <link href="/css/dex-pagination.css" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
-	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+    <dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="version-group-control" v-if="versionGroups.length">
-		<ul>
-			<li v-for="vg in versionGroups">
-				<a :href="'/dex/' + vg.identifier + '/types/' + type.identifier + queryParams"
-					:class="{
-						'current': vg.identifier === versionGroup.identifier
-					}"
-				>{{ vg.name }}</a>
-			</li>
-		</ul>
-	</div>
+    <div class="version-group-control" v-if="versionGroups.length">
+        <ul>
+            <li v-for="vg in versionGroups">
+                <a :href="'/dex/' + vg.identifier + '/types/' + type.identifier + queryParams"
+                    :class="{
+                        'current': vg.identifier === versionGroup.identifier
+                    }"
+                >{{ vg.name }}</a>
+            </li>
+        </ul>
+    </div>
 
-	<div v-if="!loaded" class="dex-loader-container">
-		<div class="dex-loader"></div>
-	</div>
+    <div v-if="!loaded" class="dex-loader-container">
+        <div class="dex-loader"></div>
+    </div>
 
-	<template v-if="loaded">
-		<h1 class="dex-page__title">{{ type.name }}</h1>
+    <template v-if="loaded">
+        <h1 class="dex-page__title">{{ type.name }}</h1>
 
-		<h2 class="dex-section__title">Matchups</h2>
-		<div>
-			<h3 class="dex-type__matchups-title">Damage Dealt:</h3>
-			<ul class="dex-type__matchups">
-				<li v-for="t in types" :key="t.identifier"
-					class="dex-type__matchup" :class="{
-						'dex-type__matchup--fade': hoverDamageDealt !== null && hoverDamageDealt !== damageDealt[t.identifier],
-					}"
-					@mouseover="onDamageDealtHover(damageDealt[t.identifier])"
-					@mouseleave="onDamageDealtUnhover"
-				>
-					<dex-type-link
-						:vg-identifier="versionGroup.identifier"
-						:type="t"
-					></dex-type-link>
-					<span :class="{
-						'dex-type__matchup--neutral': damageDealt[t.identifier] === 1,
-						'dex-type__matchup--favorable': damageDealt[t.identifier] > 1,
-						'dex-type__matchup--unfavorable': 0 < damageDealt[t.identifier] && damageDealt[t.identifier] < 1,
-						'dex-type__matchup--no-effect': damageDealt[t.identifier] === 0,
-					}">
-						<template v-if="damageDealt[t.identifier] === 1">1</template>
-						<template v-else-if="damageDealt[t.identifier] === .5">½</template>
-						<template v-else>×{{ damageDealt[t.identifier] }}</template>
-					</span>
-				</li>
-			</ul>
-			<h3 class="dex-type__matchups-title">Damage Taken:</h3>
-			<ul class="dex-type__matchups">
-				<li v-for="t in types" :key="t.identifier"
-					class="dex-type__matchup" :class="{
-						'dex-type__matchup--fade': hoverDamageTaken !== null && hoverDamageTaken !== damageTaken[t.identifier],
-					}"
-					@mouseover="onDamageTakenHover(damageTaken[t.identifier])"
-					@mouseleave="onDamageTakenUnhover"
-				>
-					<dex-type-link
-						:vg-identifier="versionGroup.identifier"
-						:type="t"
-					></dex-type-link>
-					<span :class="{
-						'dex-type__matchup--neutral': damageTaken[t.identifier] === 1,
-						'dex-type__matchup--unfavorable': damageTaken[t.identifier] > 1,
-						'dex-type__matchup--favorable': 0 < damageTaken[t.identifier] && damageTaken[t.identifier] < 1,
-						'dex-type__matchup--no-effect': damageTaken[t.identifier] === 0,
-					}">
-						<template v-if="damageTaken[t.identifier] === 1">1</template>
-						<template v-else-if="damageTaken[t.identifier] === .5">½</template>
-						<template v-else>×{{ damageTaken[t.identifier] }}</template>
-					</span>
-				</li>
-			</ul>
-		</div>
+        <h2 class="dex-section__title">Matchups</h2>
+        <div>
+            <h3 class="dex-type__matchups-title">Damage Dealt:</h3>
+            <ul class="dex-type__matchups">
+                <li v-for="t in types" :key="t.identifier"
+                    class="dex-type__matchup" :class="{
+                        'dex-type__matchup--fade': hoverDamageDealt !== null && hoverDamageDealt !== damageDealt[t.identifier],
+                    }"
+                    @mouseover="onDamageDealtHover(damageDealt[t.identifier])"
+                    @mouseleave="onDamageDealtUnhover"
+                >
+                    <dex-type-link
+                        :vg-identifier="versionGroup.identifier"
+                        :type="t"
+                    ></dex-type-link>
+                    <span :class="{
+                        'dex-type__matchup--neutral': damageDealt[t.identifier] === 1,
+                        'dex-type__matchup--favorable': damageDealt[t.identifier] > 1,
+                        'dex-type__matchup--unfavorable': 0 < damageDealt[t.identifier] && damageDealt[t.identifier] < 1,
+                        'dex-type__matchup--no-effect': damageDealt[t.identifier] === 0,
+                    }">
+                        <template v-if="damageDealt[t.identifier] === 1">1</template>
+                        <template v-else-if="damageDealt[t.identifier] === .5">½</template>
+                        <template v-else>×{{ damageDealt[t.identifier] }}</template>
+                    </span>
+                </li>
+            </ul>
+            <h3 class="dex-type__matchups-title">Damage Taken:</h3>
+            <ul class="dex-type__matchups">
+                <li v-for="t in types" :key="t.identifier"
+                    class="dex-type__matchup" :class="{
+                        'dex-type__matchup--fade': hoverDamageTaken !== null && hoverDamageTaken !== damageTaken[t.identifier],
+                    }"
+                    @mouseover="onDamageTakenHover(damageTaken[t.identifier])"
+                    @mouseleave="onDamageTakenUnhover"
+                >
+                    <dex-type-link
+                        :vg-identifier="versionGroup.identifier"
+                        :type="t"
+                    ></dex-type-link>
+                    <span :class="{
+                        'dex-type__matchup--neutral': damageTaken[t.identifier] === 1,
+                        'dex-type__matchup--unfavorable': damageTaken[t.identifier] > 1,
+                        'dex-type__matchup--favorable': 0 < damageTaken[t.identifier] && damageTaken[t.identifier] < 1,
+                        'dex-type__matchup--no-effect': damageTaken[t.identifier] === 0,
+                    }">
+                        <template v-if="damageTaken[t.identifier] === 1">1</template>
+                        <template v-else-if="damageTaken[t.identifier] === .5">½</template>
+                        <template v-else>×{{ damageTaken[t.identifier] }}</template>
+                    </span>
+                </li>
+            </ul>
+        </div>
 
-		<h2 class="dex-section__title">Pokémon</h2>
-		<dex-pokemons-table
-			:pokemons="pokemons"
-			:version-group="versionGroup"
-			:stats="stats"
-			v-model:filter-name="filterPokemonName"
-		></dex-pokemons-table>
+        <h2 class="dex-section__title">Pokémon</h2>
+        <dex-pokemons-table
+            :pokemons="pokemons"
+            :version-group="versionGroup"
+            :stats="stats"
+            v-model:filter-name="filterPokemonName"
+        ></dex-pokemons-table>
 
-		<h2 class="dex-section__title">Moves</h2>
-		<dex-moves-table
-			:moves="moves"
-			:version-group="versionGroup"
-			v-model:filter-name="filterMoveName"
-			v-model:filter-description="filterMoveDescription"
-		></dex-moves-table>
-	</template>
+        <h2 class="dex-section__title">Moves</h2>
+        <dex-moves-table
+            :moves="moves"
+            :version-group="versionGroup"
+            v-model:filter-name="filterMoveName"
+            v-model:filter-description="filterMoveDescription"
+        ></dex-moves-table>
+    </template>
 </div>
 {% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<!-- Tooltips via Floating Vue -->
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
-	<script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
+    <!-- Tooltips via Floating Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
 
-	<script type="module" src="/js/dex/type.js"></script>
+    <script type="module" src="/js/dex/type.js"></script>
 {% endblock %}

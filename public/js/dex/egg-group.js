@@ -4,49 +4,49 @@ import DexBreadcrumbs from '../dex-breadcrumbs.js';
 import DexPokemonsTable from '../dex-pokemons-table.js';
 
 const app = createApp({
-	components: {
-		DexBreadcrumbs,
-		DexPokemonsTable,
-	},
-	data() {
-		return {
-			loading: true,
-			loaded: false,
+    components: {
+        DexBreadcrumbs,
+        DexPokemonsTable,
+    },
+    data() {
+        return {
+            loading: true,
+            loaded: false,
 
-			versionGroup: {},
-			breadcrumbs: [],
-			versionGroups: [],
-			eggGroup: {},
-			pokemons: [],
-			stats: [],
+            versionGroup: {},
+            breadcrumbs: [],
+            versionGroups: [],
+            eggGroup: {},
+            pokemons: [],
+            stats: [],
 
-			filterName: '',
-		};
-	},
-	created() {
-		const url = new URL(window.location);
+            filterName: '',
+        };
+    },
+    created() {
+        const url = new URL(window.location);
 
-		fetch('/data' + url.pathname, {
-			credentials: 'same-origin'
-		})
-		.then(response => response.json())
-		.then(response => {
-			this.loading = false;
-			this.loaded = true;
+        fetch('/data' + url.pathname, {
+            credentials: 'same-origin'
+        })
+        .then(response => response.json())
+        .then(response => {
+            this.loading = false;
+            this.loaded = true;
 
-			if (response.data) {
-				const data = response.data;
-				this.versionGroup = data.versionGroup;
-				this.breadcrumbs = data.breadcrumbs;
-				this.versionGroups = data.versionGroups;
-				this.eggGroup = data.eggGroup;
-				this.pokemons = data.pokemons;
-				this.stats = data.stats;
+            if (response.data) {
+                const data = response.data;
+                this.versionGroup = data.versionGroup;
+                this.breadcrumbs = data.breadcrumbs;
+                this.versionGroups = data.versionGroups;
+                this.eggGroup = data.eggGroup;
+                this.pokemons = data.pokemons;
+                this.stats = data.stats;
 
-				document.title = data.title;
-			}
-		});
-	},
+                document.title = data.title;
+            }
+        });
+    },
 });
 
 app.mount('#app');

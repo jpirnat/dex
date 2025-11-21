@@ -4,76 +4,76 @@ https://github.com/twbs/bootstrap
 https://github.com/bootstrap-vue/bootstrap-vue
 */
 .dex-pagination {
-	margin: 10px 0;
+    margin: 10px 0;
 }
 
 .dex-pagination__list {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .dex-pagination__page {
-	display: block;
-	padding: .5rem .75rem;
-	margin-left: -1px; /* This is so the borders will overlap. */
-	line-height: 1.25;
-	color: #007bff;
-	background: white;
-	border: 1px solid #dee2e6;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px; /* This is so the borders will overlap. */
+    line-height: 1.25;
+    color: #007bff;
+    background: white;
+    border: 1px solid #dee2e6;
 }
 
 .dex-pagination__page:not(.dex-pagination__page--disabled):hover {
-	z-index: 2; /* This is to put it above the styles of the current page. */
-	color: #0056b3;
-	background: #e9ecef;
-	cursor: pointer;
+    z-index: 2; /* This is to put it above the styles of the current page. */
+    color: #0056b3;
+    background: #e9ecef;
+    cursor: pointer;
 }
 
 .dex-pagination__page--first {
-	border-top-left-radius: .25rem;
-	border-bottom-left-radius: .25rem;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
 }
 
 .dex-pagination__page--last {
-	border-top-right-radius: .25rem;
-	border-bottom-right-radius: .25rem;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
 }
 
 #app .dex-pagination__page--current {
-	/* This needed higher specificity than the not disabled rules. */
-	z-index: 1;
-	color: white;
-	background: #007bff;
-	border-color: #007bff;
+    /* This needed higher specificity than the not disabled rules. */
+    z-index: 1;
+    color: white;
+    background: #007bff;
+    border-color: #007bff;
 }
 
 .dex-pagination__page--disabled {
-	color: #6c757d;
-	border-color: #dee2e6;
+    color: #6c757d;
+    border-color: #dee2e6;
 }
 
 .dex-pagination__label {
-	display: flex;
-	align-items: baseline;
-	gap: 5px;
-	padding: 10px;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    padding: 10px;
 }
 
 .dex-pagination__input {
-	width: 50px;
+    width: 50px;
 }
 
 .dex-pagination__popper .v-popper__inner {
-	border-color: #ddd !important;
-	background-color: #eee !important;
+    border-color: #ddd !important;
+    background-color: #eee !important;
 }
 .dex-pagination__popper .v-popper__arrow-outer {
-	border-color: #ddd !important;
+    border-color: #ddd !important;
 }
 .dex-pagination__popper .v-popper__arrow-inner {
-	border-color: #eee !important;
+    border-color: #eee !important;
 }

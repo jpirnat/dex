@@ -1,208 +1,208 @@
 {% extends "html/base.twig" %}
 
 {% block styles %}
-	<link href="/css/vtooltip.css" rel="stylesheet">
-	<link href="/css/dex-pagination.css" rel="stylesheet">
+    <link href="/css/vtooltip.css" rel="stylesheet">
+    <link href="/css/dex-pagination.css" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
-	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+    <dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="version-group-control" v-if="versionGroups.length">
-		<ul>
-			<li v-for="vg in versionGroups">
-				<a :href="'/dex/' + vg.identifier + '/advanced-pokemon-search'"
-					:class="{
-						'current': vg.identifier === versionGroup.identifier
-					}"
-				>{{ vg.name }}</a>
-			</li>
-		</ul>
-	</div>
+    <div class="version-group-control" v-if="versionGroups.length">
+        <ul>
+            <li v-for="vg in versionGroups">
+                <a :href="'/dex/' + vg.identifier + '/advanced-pokemon-search'"
+                    :class="{
+                        'current': vg.identifier === versionGroup.identifier
+                    }"
+                >{{ vg.name }}</a>
+            </li>
+        </ul>
+    </div>
 
-	<div v-if="!loaded" class="dex-loader-container">
-		<div class="dex-loader"></div>
-	</div>
+    <div v-if="!loaded" class="dex-loader-container">
+        <div class="dex-loader"></div>
+    </div>
 
-	<template v-if="loaded">
-		<h1 class="dex-page__title">Advanced Pokémon Search</h1>
+    <template v-if="loaded">
+        <h1 class="dex-page__title">Advanced Pokémon Search</h1>
 
-		<div class="advanced-search__section advanced-search__section--first">
-			<div class="advanced-search__section-title" @click="toggleTypeFilters">
-				<template v-if="!showTypeFilters">&#9654;</template>
-				<template v-if="showTypeFilters">&#9660;</template>
-				Types
-			</div>
-			<div class="advanced-search__columns" v-if="showTypeFilters">
-				<div>
-					<div class="advanced-search__checkboxes-header">
-						<label class="advanced-search__checkboxes-title">
-							<strong>Types:</strong>
-							<select v-model="typesOperator">
-								<option value="both" :disabled="selectedTypes.length > 2">Both of these</option>
-								<option value="any">Any of these</option>
-								<option value="none">None of these</option>
-							</select>
-						</label>
-					</div>
-					<label class="advanced-search__checkbox-line" v-for="t in types" :key="t.identifier">
-						<input type="checkbox" v-model="selectedTypes" :value="t.identifier"
-							@change="onChangeSelectedTypes"
-						>
-						<span>{{ t.name }}</span>
-					</label>
-				</div>
+        <div class="advanced-search__section advanced-search__section--first">
+            <div class="advanced-search__section-title" @click="toggleTypeFilters">
+                <template v-if="!showTypeFilters">&#9654;</template>
+                <template v-if="showTypeFilters">&#9660;</template>
+                Types
+            </div>
+            <div class="advanced-search__columns" v-if="showTypeFilters">
+                <div>
+                    <div class="advanced-search__checkboxes-header">
+                        <label class="advanced-search__checkboxes-title">
+                            <strong>Types:</strong>
+                            <select v-model="typesOperator">
+                                <option value="both" :disabled="selectedTypes.length > 2">Both of these</option>
+                                <option value="any">Any of these</option>
+                                <option value="none">None of these</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label class="advanced-search__checkbox-line" v-for="t in types" :key="t.identifier">
+                        <input type="checkbox" v-model="selectedTypes" :value="t.identifier"
+                            @change="onChangeSelectedTypes"
+                        >
+                        <span>{{ t.name }}</span>
+                    </label>
+                </div>
 
-				<div>
-					<div class="advanced-search__checkboxes-header">
-						<label class="advanced-search__checkboxes-title">
-							<strong>Resistances/Immunities:</strong>
-						</label>
-						<label class="advanced-search__checkbox-line" v-tooltip="'Include Pokémon whose Abilities affect type matchups (e.g. Levitate, Water Absorb, etc.)'" v-if="versionGroup.hasAbilities">
-							<input type="checkbox" v-model="includeAbilityMatchups">
-							<span class="dex--tooltip">Include Abilities</span>
-						</label>
-					</div>
-					<label class="advanced-search__checkbox-line" v-for="t in types" :key="t.identifier">
-						<input type="checkbox" v-model="selectedResistances" :value="t.identifier">
-						<span>{{ t.name }}</span>
-					</label>
-				</div>
-			</div>
-		</div>
+                <div>
+                    <div class="advanced-search__checkboxes-header">
+                        <label class="advanced-search__checkboxes-title">
+                            <strong>Resistances/Immunities:</strong>
+                        </label>
+                        <label class="advanced-search__checkbox-line" v-tooltip="'Include Pokémon whose Abilities affect type matchups (e.g. Levitate, Water Absorb, etc.)'" v-if="versionGroup.hasAbilities">
+                            <input type="checkbox" v-model="includeAbilityMatchups">
+                            <span class="dex--tooltip">Include Abilities</span>
+                        </label>
+                    </div>
+                    <label class="advanced-search__checkbox-line" v-for="t in types" :key="t.identifier">
+                        <input type="checkbox" v-model="selectedResistances" :value="t.identifier">
+                        <span>{{ t.name }}</span>
+                    </label>
+                </div>
+            </div>
+        </div>
 
-		<div class="advanced-search__section">
-			<div class="advanced-search__section-title" @click="toggleAbilityFilters">
-				<template v-if="!showAbilityFilters">&#9654;</template>
-				<template v-if="showAbilityFilters">&#9660;</template>
-				Ability
-			</div>
-			<div class="advanced-search__section-content" v-if="showAbilityFilters">
-				<label class="advanced-search__ability">
-					<span class="advanced-search__ability-text">Can have this Ability:</span>
-					<input type="text" v-model.trim="abilityName" list="ability-names"
-						@input="onChangeAbilityName"
-					>
-					<datalist id="ability-names">
-						<option v-for="a in abilities" :key="a.identifier" :value="a.name"></option>
-					</datalist>
-					<img class="advanced-search__x" src="/images/porydex/x.png" @click="clearAbilityName">
-					<a v-if="selectedAbility !== null" class="dex-link"
-						:href="'/dex/' + versionGroup.identifier + '/abilities/' + selectedAbility.identifier" target="_blank"
-					>{{ selectedAbility.name }}</a>
-					<span v-if="selectedAbility === null" class="advanced-search__no-selection">No Ability selected</span>
-				</label>
-			</div>
-		</div>
+        <div class="advanced-search__section">
+            <div class="advanced-search__section-title" @click="toggleAbilityFilters">
+                <template v-if="!showAbilityFilters">&#9654;</template>
+                <template v-if="showAbilityFilters">&#9660;</template>
+                Ability
+            </div>
+            <div class="advanced-search__section-content" v-if="showAbilityFilters">
+                <label class="advanced-search__ability">
+                    <span class="advanced-search__ability-text">Can have this Ability:</span>
+                    <input type="text" v-model.trim="abilityName" list="ability-names"
+                        @input="onChangeAbilityName"
+                    >
+                    <datalist id="ability-names">
+                        <option v-for="a in abilities" :key="a.identifier" :value="a.name"></option>
+                    </datalist>
+                    <img class="advanced-search__x" src="/images/porydex/x.png" @click="clearAbilityName">
+                    <a v-if="selectedAbility !== null" class="dex-link"
+                        :href="'/dex/' + versionGroup.identifier + '/abilities/' + selectedAbility.identifier" target="_blank"
+                    >{{ selectedAbility.name }}</a>
+                    <span v-if="selectedAbility === null" class="advanced-search__no-selection">No Ability selected</span>
+                </label>
+            </div>
+        </div>
 
-		<div class="advanced-search__section">
-			<div class="advanced-search__section-title" @click="toggleBreedingFilters">
-				<template v-if="!showBreedingFilters">&#9654;</template>
-				<template v-if="showBreedingFilters">&#9660;</template>
-				Breeding
-			</div>
-			<div class="advanced-search__columns" v-if="showBreedingFilters">
-				<div>
-					<label class="advanced-search__checkboxes-title">
-						<strong>Egg Groups:</strong>
-						<select v-model="eggGroupsOperator">
-							<option value="both" :disabled="selectedEggGroups.length > 2">Both of these</option>
-							<option value="any">Any of these</option>
-							<option value="none">None of these</option>
-						</select>
-					</label>
-					<label class="advanced-search__checkbox-line" v-for="e in eggGroups" :key="e.identifier">
-						<input type="checkbox" v-model="selectedEggGroups" :value="e.identifier"
-							@change="onChangeSelectedEggGroups"
-						>
-						<span>{{ e.name }}</span>
-					</label>
-				</div>
+        <div class="advanced-search__section">
+            <div class="advanced-search__section-title" @click="toggleBreedingFilters">
+                <template v-if="!showBreedingFilters">&#9654;</template>
+                <template v-if="showBreedingFilters">&#9660;</template>
+                Breeding
+            </div>
+            <div class="advanced-search__columns" v-if="showBreedingFilters">
+                <div>
+                    <label class="advanced-search__checkboxes-title">
+                        <strong>Egg Groups:</strong>
+                        <select v-model="eggGroupsOperator">
+                            <option value="both" :disabled="selectedEggGroups.length > 2">Both of these</option>
+                            <option value="any">Any of these</option>
+                            <option value="none">None of these</option>
+                        </select>
+                    </label>
+                    <label class="advanced-search__checkbox-line" v-for="e in eggGroups" :key="e.identifier">
+                        <input type="checkbox" v-model="selectedEggGroups" :value="e.identifier"
+                            @change="onChangeSelectedEggGroups"
+                        >
+                        <span>{{ e.name }}</span>
+                    </label>
+                </div>
 
-				<div>
-					<label class="advanced-search__checkboxes-title">
-						<strong>Gender Ratio:</strong>
-						<select v-model="genderRatiosOperator">
-							<option value="any">Any of these</option>
-							<option value="none">None of these</option>
-						</select>
-					</label>
-					<label class="advanced-search__checkbox-line" v-for="g in genderRatios" :key="g.value">
-						<input type="checkbox" v-model="selectedGenderRatios" :value="g.value">
-						<span>{{ g.description }}</span>
-					</label>
-				</div>
-			</div>
-		</div>
+                <div>
+                    <label class="advanced-search__checkboxes-title">
+                        <strong>Gender Ratio:</strong>
+                        <select v-model="genderRatiosOperator">
+                            <option value="any">Any of these</option>
+                            <option value="none">None of these</option>
+                        </select>
+                    </label>
+                    <label class="advanced-search__checkbox-line" v-for="g in genderRatios" :key="g.value">
+                        <input type="checkbox" v-model="selectedGenderRatios" :value="g.value">
+                        <span>{{ g.description }}</span>
+                    </label>
+                </div>
+            </div>
+        </div>
 
-		<div class="advanced-search__section">
-			<div class="advanced-search__section-title" @click="toggleMoveFilters">
-				<template v-if="!showMoveFilters">&#9654;</template>
-				<template v-if="showMoveFilters">&#9660;</template>
-				Moves
-			</div>
-			<div class="advanced-search__section-content" v-if="showMoveFilters">
-				<div>Search for Pokémon that can learn all of these moves:</div>
-				<div class="advanced-search__moves">
-					<label class="advanced-search__move" v-for="i in maxMovesetLength">
-						<span class="advanced-search__move-text">Move {{ i }}:</span>
-	
-						<input type="text" v-model.trim="moveNames[i - 1]" list="move-names"
-							@input="onChangeMoveName(i - 1)"
-						>
-	
-						<datalist id="move-names">
-							<option v-for="m in moves" :key="m.identifier" :value="m.name"></option>
-						</datalist>
-	
-						<img class="advanced-search__x" src="/images/porydex/x.png" @click="clearMoveName(i - 1)">
-	
-						<a v-if="selectedMoves[i - 1] !== null" class="dex-link"
-							:href="'/dex/' + versionGroup.identifier + '/moves/' + selectedMoves[i - 1].identifier" target="_blank"
-						>{{ selectedMoves[i - 1].name }}</a>
-	
-						<span v-if="selectedMoves[i - 1] === null" class="advanced-search__no-selection">No Move selected</span>
-					</label>
-				</div>
+        <div class="advanced-search__section">
+            <div class="advanced-search__section-title" @click="toggleMoveFilters">
+                <template v-if="!showMoveFilters">&#9654;</template>
+                <template v-if="showMoveFilters">&#9660;</template>
+                Moves
+            </div>
+            <div class="advanced-search__section-content" v-if="showMoveFilters">
+                <div>Search for Pokémon that can learn all of these moves:</div>
+                <div class="advanced-search__moves">
+                    <label class="advanced-search__move" v-for="i in maxMovesetLength">
+                        <span class="advanced-search__move-text">Move {{ i }}:</span>
+    
+                        <input type="text" v-model.trim="moveNames[i - 1]" list="move-names"
+                            @input="onChangeMoveName(i - 1)"
+                        >
+    
+                        <datalist id="move-names">
+                            <option v-for="m in moves" :key="m.identifier" :value="m.name"></option>
+                        </datalist>
+    
+                        <img class="advanced-search__x" src="/images/porydex/x.png" @click="clearMoveName(i - 1)">
+    
+                        <a v-if="selectedMoves[i - 1] !== null" class="dex-link"
+                            :href="'/dex/' + versionGroup.identifier + '/moves/' + selectedMoves[i - 1].identifier" target="_blank"
+                        >{{ selectedMoves[i - 1].name }}</a>
+    
+                        <span v-if="selectedMoves[i - 1] === null" class="advanced-search__no-selection">No Move selected</span>
+                    </label>
+                </div>
 
-				<label class="advanced-search__include-trade" v-if="versionGroup.hasTransferMoves && selectedPokemon !== null">
-					<input type="checkbox" name="includeTransferMoves" v-model="includeTransferMoves"
-						@change="onChangeIncludeTransferMoves"
-					> <span>Include trade/transfer moves</span>
-				</label>
-			</div>
-		</div>
+                <label class="advanced-search__include-trade" v-if="versionGroup.hasTransferMoves && selectedPokemon !== null">
+                    <input type="checkbox" name="includeTransferMoves" v-model="includeTransferMoves"
+                        @change="onChangeIncludeTransferMoves"
+                    > <span>Include trade/transfer moves</span>
+                </label>
+            </div>
+        </div>
 
-		<div class="advanced-search__search-button">
-			<button v-if="!loading" @click="updateUrlAndSearch">Search</button>
-			<div v-if="loading" class="dex-loader"></div>
-		</div>
+        <div class="advanced-search__search-button">
+            <button v-if="!loading" @click="updateUrlAndSearch">Search</button>
+            <div v-if="loading" class="dex-loader"></div>
+        </div>
 
-		<template v-if="searchHasBeenDone">
-			<h2 class="dex-section__title">Search Results</h2>
-			<div v-if="pokemons.length === 0">No Results</div>
-			<dex-pokemons-table v-if="pokemons.length > 0"
-				:pokemons="pokemons"
-				:version-group="versionGroup"
-				:stats="stats"
-				v-model:filter-name="filterName"
-			></dex-pokemons-table>
-		</template>
-	</template>
+        <template v-if="searchHasBeenDone">
+            <h2 class="dex-section__title">Search Results</h2>
+            <div v-if="pokemons.length === 0">No Results</div>
+            <dex-pokemons-table v-if="pokemons.length > 0"
+                :pokemons="pokemons"
+                :version-group="versionGroup"
+                :stats="stats"
+                v-model:filter-name="filterName"
+            ></dex-pokemons-table>
+        </template>
+    </template>
 </div>
 
 {% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<!-- Tooltips via Floating Vue -->
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
-	<script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
+    <!-- Tooltips via Floating Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
 
-	<script type="module" src="/js/dex/advanced-pokemon-search.js"></script>
+    <script type="module" src="/js/dex/advanced-pokemon-search.js"></script>
 {% endblock %}

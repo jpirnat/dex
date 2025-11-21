@@ -3,63 +3,63 @@
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
-	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+    <dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="version-group-control" v-if="versionGroups.length">
-		<ul>
-			<li v-for="vg in versionGroups">
-				<a :href="'/dex/' + vg.identifier + '/natures'"
-					:class="{
-						'current': vg.identifier === versionGroup.identifier
-					}"
-				>{{ vg.name }}</a>
-			</li>
-		</ul>
-	</div>
+    <div class="version-group-control" v-if="versionGroups.length">
+        <ul>
+            <li v-for="vg in versionGroups">
+                <a :href="'/dex/' + vg.identifier + '/natures'"
+                    :class="{
+                        'current': vg.identifier === versionGroup.identifier
+                    }"
+                >{{ vg.name }}</a>
+            </li>
+        </ul>
+    </div>
 
-	<div v-if="!loaded" class="dex-loader-container">
-		<div class="dex-loader"></div>
-	</div>
+    <div v-if="!loaded" class="dex-loader-container">
+        <div class="dex-loader"></div>
+    </div>
 
-	<template v-if="loaded">
-		<h1 class="dex-page__title">Natures</h1>
+    <template v-if="loaded">
+        <h1 class="dex-page__title">Natures</h1>
 
-		<table class="dex-table">
-			<thead>
-				<tr>
-					<th scope="col">Name</th>
-					<th scope="col">Raises</th>
-					<th scope="col">Lowers</th>
-					<th scope="col">VC Exp Remainder</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr v-for="nature in natures">
-					<th scope="row" class="dex-nature__name">{{ nature.name }}</th>
+        <table class="dex-table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Raises</th>
+                    <th scope="col">Lowers</th>
+                    <th scope="col">VC Exp Remainder</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="nature in natures">
+                    <th scope="row" class="dex-nature__name">{{ nature.name }}</th>
 
-					<td v-if="nature.increasedStat" class="dex-nature--increased">+ {{ nature.increasedStat }}</td>
-					<td v-else class="dex-nature--neutral">-</td>
+                    <td v-if="nature.increasedStat" class="dex-nature--increased">+ {{ nature.increasedStat }}</td>
+                    <td v-else class="dex-nature--neutral">-</td>
 
-					<td v-if="nature.decreasedStat" class="dex-nature--decreased">- {{ nature.decreasedStat }}</td>
-					<td v-else class="dex-nature--neutral">-</td>
+                    <td v-if="nature.decreasedStat" class="dex-nature--decreased">- {{ nature.decreasedStat }}</td>
+                    <td v-else class="dex-nature--neutral">-</td>
 
-					<td class="dex-table--number">{{ nature.vcExpRemainder }}</td>
-				</tr>
-			</tbody>
-		</table>
+                    <td class="dex-table--number">{{ nature.vcExpRemainder }}</td>
+                </tr>
+            </tbody>
+        </table>
 
-		<p>
-			When transferring a Pokémon from one of the Nintendo 3DS Virtual Console games
-			into Pokémon Bank, its nature is determined by the remainder of the Pokémon's
-			Experience Points when divided by 25.
-		</p>
-	</template>
+        <p>
+            When transferring a Pokémon from one of the Nintendo 3DS Virtual Console games
+            into Pokémon Bank, its nature is determined by the remainder of the Pokémon's
+            Experience Points when divided by 25.
+        </p>
+    </template>
 </div>
 {% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<script type="module" src="/js/dex/natures.js"></script>
+    <script type="module" src="/js/dex/natures.js"></script>
 {% endblock %}

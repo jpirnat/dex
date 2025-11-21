@@ -1,194 +1,194 @@
 {% extends "html/base.twig" %}
 
 {% block styles %}
-	<link href="/css/vtooltip.css" rel="stylesheet">
+    <link href="/css/vtooltip.css" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
-	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+    <dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="version-group-control" v-if="versionGroups.length">
-		<ul>
-			<li v-for="vg in versionGroups">
-				<a :href="'/dex/' + vg.identifier + '/tools/ev-calculator' + queryParams"
-					:class="{
-						'current': vg.identifier === versionGroup.identifier
-					}"
-				>{{ vg.name }}</a>
-			</li>
-		</ul>
-	</div>
+    <div class="version-group-control" v-if="versionGroups.length">
+        <ul>
+            <li v-for="vg in versionGroups">
+                <a :href="'/dex/' + vg.identifier + '/tools/ev-calculator' + queryParams"
+                    :class="{
+                        'current': vg.identifier === versionGroup.identifier
+                    }"
+                >{{ vg.name }}</a>
+            </li>
+        </ul>
+    </div>
 
-	<div v-if="!loaded" class="dex-loader-container">
-		<div class="dex-loader"></div>
-	</div>
+    <div v-if="!loaded" class="dex-loader-container">
+        <div class="dex-loader"></div>
+    </div>
 
-	<template v-if="loaded">
-		<h1 class="dex-page__title">EV Calculator</h1>
+    <template v-if="loaded">
+        <h1 class="dex-page__title">EV Calculator</h1>
 
-		<div class="dex-section__description">
-			Have a trained Pokémon you don't know what EVs it has?
-			Use this calculator to reverse engineer its EV spread.
-		</div>
+        <div class="dex-section__description">
+            Have a trained Pokémon you don't know what EVs it has?
+            Use this calculator to reverse engineer its EV spread.
+        </div>
 
-		<label class="iv-calculator__block">
-			<span class="iv-calculator__label">Pokémon:</span>
-			<input type="text" v-model.trim="pokemonName" list="pokemon-names"
-				@input="onChangePokemonName"
-			>
-			<datalist id="pokemon-names">
-				<option v-for="p in pokemons" :key="p.identifier" :value="p.name"></option>
-			</datalist>
-			<img class="iv-calculator__x" src="/images/porydex/x.png" @click="clearPokemonName">
-			<span v-if="selectedPokemon !== null">{{ selectedPokemon.name }}</span>
-			<span v-if="selectedPokemon === null" class="iv-calculator__no-selection">No Pokémon selected</span>
-		</label>
+        <label class="iv-calculator__block">
+            <span class="iv-calculator__label">Pokémon:</span>
+            <input type="text" v-model.trim="pokemonName" list="pokemon-names"
+                @input="onChangePokemonName"
+            >
+            <datalist id="pokemon-names">
+                <option v-for="p in pokemons" :key="p.identifier" :value="p.name"></option>
+            </datalist>
+            <img class="iv-calculator__x" src="/images/porydex/x.png" @click="clearPokemonName">
+            <span v-if="selectedPokemon !== null">{{ selectedPokemon.name }}</span>
+            <span v-if="selectedPokemon === null" class="iv-calculator__no-selection">No Pokémon selected</span>
+        </label>
 
-		<div class="dex-pokemon__sprite-and-base-stats" v-if="selectedPokemon !== null">
-			<div class="dex-pokemon__sprite-and-types">
-				<img v-if="selectedPokemon.sprite" :src="'/images/pokemon/sprites/' + selectedPokemon.sprite"
-					class="dex-pokemon__sprite"
-				>
-				<div>
-					<dex-type-link v-for="t in selectedPokemon.types" :key="t.identifier"
-						:vg-identifier="versionGroup.identifier"
-						:type="t"
-					></dex-type-link>
-				</div>
-			</div>
+        <div class="dex-pokemon__sprite-and-base-stats" v-if="selectedPokemon !== null">
+            <div class="dex-pokemon__sprite-and-types">
+                <img v-if="selectedPokemon.sprite" :src="'/images/pokemon/sprites/' + selectedPokemon.sprite"
+                    class="dex-pokemon__sprite"
+                >
+                <div>
+                    <dex-type-link v-for="t in selectedPokemon.types" :key="t.identifier"
+                        :vg-identifier="versionGroup.identifier"
+                        :type="t"
+                    ></dex-type-link>
+                </div>
+            </div>
 
-			<table class="dex-pokemon__base-stats">
-				<thead>
-					<tr>
-						<td></td>
-						<th colspan="2">Base Stats</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr v-for="s in stats" :key="s.identifier">
-						<th scope="row" class="dex-pokemon__base-stat-name">{{ s.name }}</th>
-						<td class="dex-table--number">{{ selectedPokemon.baseStats[s.identifier] }}</td>
-						<td>
-							<div
-								:class="{
-									'dex-pokemon__base-stat-bar': true,
-									['dex-stat--' + s.identifier]: true,
-								}"
-								:style="{
-									'width': (selectedPokemon.baseStats[s.identifier] / 255 * 300) + 'px',
-								}"
-							></div>
-						</td>
-					</tr>
-				</tbody>
-				<tfoot>
-					<tr>
-						<td class="dex-pokemon__base-stat-name">Total</td>
-						<td class="dex-table--number">{{ selectedPokemon.bst }}</td>
-						<td></td>
-					</tr>
-				</tfoot>
-			</table>
-		</div>
+            <table class="dex-pokemon__base-stats">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <th colspan="2">Base Stats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="s in stats" :key="s.identifier">
+                        <th scope="row" class="dex-pokemon__base-stat-name">{{ s.name }}</th>
+                        <td class="dex-table--number">{{ selectedPokemon.baseStats[s.identifier] }}</td>
+                        <td>
+                            <div
+                                :class="{
+                                    'dex-pokemon__base-stat-bar': true,
+                                    ['dex-stat--' + s.identifier]: true,
+                                }"
+                                :style="{
+                                    'width': (selectedPokemon.baseStats[s.identifier] / 255 * 300) + 'px',
+                                }"
+                            ></div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="dex-pokemon__base-stat-name">Total</td>
+                        <td class="dex-table--number">{{ selectedPokemon.bst }}</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
 
-		<label class="iv-calculator__block">
-			<span class="iv-calculator__label">Nature:</span>
-			<input type="text" v-model.trim="natureName" list="nature-names"
-				@input="onChangeNatureName"
-			>
-			<datalist id="nature-names">
-				<option v-for="n in natures" :key="n.identifier" :value="n.expandedName"></option>
-			</datalist>
-			<img class="iv-calculator__x" src="/images/porydex/x.png" @click="clearNatureName">
-			<span v-if="selectedNature !== null">{{ selectedNature.expandedName }}</span>
-			<span v-if="selectedNature === null" class="iv-calculator__no-selection">No Nature selected</span>
-		</label>
+        <label class="iv-calculator__block">
+            <span class="iv-calculator__label">Nature:</span>
+            <input type="text" v-model.trim="natureName" list="nature-names"
+                @input="onChangeNatureName"
+            >
+            <datalist id="nature-names">
+                <option v-for="n in natures" :key="n.identifier" :value="n.expandedName"></option>
+            </datalist>
+            <img class="iv-calculator__x" src="/images/porydex/x.png" @click="clearNatureName">
+            <span v-if="selectedNature !== null">{{ selectedNature.expandedName }}</span>
+            <span v-if="selectedNature === null" class="iv-calculator__no-selection">No Nature selected</span>
+        </label>
 
 
-		<div class="iv-calculator__container" v-for="(l, atLevelIndex) in atLevel">
-			<div class="iv-calculator__column iv-calculator__column--gap">
-				<label>
-					<span class="iv-calculator__stat-label">Level:</span>
-					<input type="number" class="iv-calculator__input--level"
-						v-model.number="l.level"
-						min="1" max="100" step="1"
-					>
-				</label>
+        <div class="iv-calculator__container" v-for="(l, atLevelIndex) in atLevel">
+            <div class="iv-calculator__column iv-calculator__column--gap">
+                <label>
+                    <span class="iv-calculator__stat-label">Level:</span>
+                    <input type="number" class="iv-calculator__input--level"
+                        v-model.number="l.level"
+                        min="1" max="100" step="1"
+                    >
+                </label>
 
-				<button v-if="atLevel.length > 1" @click="removeLevel(atLevelIndex)">Remove Level</button>
+                <button v-if="atLevel.length > 1" @click="removeLevel(atLevelIndex)">Remove Level</button>
 
-				<button v-if="atLevelIndex === atLevel.length - 1" @click="addLevel">Add Level</button>
-			</div>
+                <button v-if="atLevelIndex === atLevel.length - 1" @click="addLevel">Add Level</button>
+            </div>
 
-			<div class="iv-calculator__column">
-				<div class="iv-calculator__column-title">Stats:</div>
-				<label v-for="s in stats" :key="s.identifier"
-					:class="{
-						'iv-calculator__stat-block': true,
-						['dex-table__stat--' + s.identifier]: true,
-					}"
-				>
-					<span class="iv-calculator__stat-label">{{ s.name }}:</span>
-					<input type="number" class="iv-calculator__input--final"
-						v-model.number="l.finalStats[s.identifier]"
-						min="1" max="714" step="1"
-					>
-				</label>
-			</div>
+            <div class="iv-calculator__column">
+                <div class="iv-calculator__column-title">Stats:</div>
+                <label v-for="s in stats" :key="s.identifier"
+                    :class="{
+                        'iv-calculator__stat-block': true,
+                        ['dex-table__stat--' + s.identifier]: true,
+                    }"
+                >
+                    <span class="iv-calculator__stat-label">{{ s.name }}:</span>
+                    <input type="number" class="iv-calculator__input--final"
+                        v-model.number="l.finalStats[s.identifier]"
+                        min="1" max="714" step="1"
+                    >
+                </label>
+            </div>
 
-			<div class="iv-calculator__column" v-if="atLevelIndex === 0">
-				<div class="iv-calculator__column-title">IVs:</div>
-				<label v-for="s in stats" :key="s.identifier"
-					:class="{
-						'iv-calculator__stat-block': true,
-						['dex-table__stat--' + s.identifier]: true,
-					}"
-				>
-					<span class="iv-calculator__stat-label">{{ s.name }}:</span>
-					<input type="number" class="iv-calculator__input--ev"
-						v-model.number="ivs[s.identifier]"
-						min="0" max="31" step="1"
-					>
-				</label>
-			</div>
-		</div>
+            <div class="iv-calculator__column" v-if="atLevelIndex === 0">
+                <div class="iv-calculator__column-title">IVs:</div>
+                <label v-for="s in stats" :key="s.identifier"
+                    :class="{
+                        'iv-calculator__stat-block': true,
+                        ['dex-table__stat--' + s.identifier]: true,
+                    }"
+                >
+                    <span class="iv-calculator__stat-label">{{ s.name }}:</span>
+                    <input type="number" class="iv-calculator__input--ev"
+                        v-model.number="ivs[s.identifier]"
+                        min="0" max="31" step="1"
+                    >
+                </label>
+            </div>
+        </div>
 
-		<div class="iv-calculator__container">
-			<div class="iv-calculator__column">
-				<button :disabled="disableCalculate" @click="calculate">Calculate</button>
-			</div>
-		</div>
+        <div class="iv-calculator__container">
+            <div class="iv-calculator__column">
+                <button :disabled="disableCalculate" @click="calculate">Calculate</button>
+            </div>
+        </div>
 
-		<div class="iv-calculator__container">
-			<div class="iv-calculator__column">
-				<div class="iv-calculator__column-title">EVs:</div>
-				<label v-for="s in stats" :key="s.identifier"
-					:class="{
-						'iv-calculator__stat-block': true,
-						['dex-table__stat--' + s.identifier]: true,
-					}"
-				>
-					<span class="iv-calculator__stat-label">{{ s.name }}:</span>
-					<input type="text" class="iv-calculator__input--iv" readonly
-						v-model="evs[s.identifier]"
-					>
-				</label>
-			</div>
-		</div>
-	</template>
+        <div class="iv-calculator__container">
+            <div class="iv-calculator__column">
+                <div class="iv-calculator__column-title">EVs:</div>
+                <label v-for="s in stats" :key="s.identifier"
+                    :class="{
+                        'iv-calculator__stat-block': true,
+                        ['dex-table__stat--' + s.identifier]: true,
+                    }"
+                >
+                    <span class="iv-calculator__stat-label">{{ s.name }}:</span>
+                    <input type="text" class="iv-calculator__input--iv" readonly
+                        v-model="evs[s.identifier]"
+                    >
+                </label>
+            </div>
+        </div>
+    </template>
 </div>
 {% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<!-- Tooltips via Floating Vue -->
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
-	<script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
+    <!-- Tooltips via Floating Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
 
-	<script type="module" src="/js/dex/tools/ev-calculator.js"></script>
+    <script type="module" src="/js/dex/tools/ev-calculator.js"></script>
 {% endblock %}

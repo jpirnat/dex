@@ -1,57 +1,57 @@
 {% extends "html/base.twig" %}
 
 {% block styles %}
-	<link href="/css/vtooltip.css" rel="stylesheet">
-	<link href="/css/dex-pagination.css" rel="stylesheet">
+    <link href="/css/vtooltip.css" rel="stylesheet">
+    <link href="/css/dex-pagination.css" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
-	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+    <dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div class="version-group-control" v-if="versionGroups.length">
-		<ul>
-			<li v-for="vg in versionGroups">
-				<a :href="'/dex/' + vg.identifier + '/pokemon' + queryParams"
-					:class="{
-						'current': vg.identifier === versionGroup.identifier
-					}"
-				>{{ vg.name }}</a>
-			</li>
-		</ul>
-	</div>
+    <div class="version-group-control" v-if="versionGroups.length">
+        <ul>
+            <li v-for="vg in versionGroups">
+                <a :href="'/dex/' + vg.identifier + '/pokemon' + queryParams"
+                    :class="{
+                        'current': vg.identifier === versionGroup.identifier
+                    }"
+                >{{ vg.name }}</a>
+            </li>
+        </ul>
+    </div>
 
-	<div v-if="!loaded" class="dex-loader-container">
-		<div class="dex-loader"></div>
-	</div>
+    <div v-if="!loaded" class="dex-loader-container">
+        <div class="dex-loader"></div>
+    </div>
 
-	<template v-if="loaded">
-		<h1 class="dex-page__title">Pokémon</h1>
+    <template v-if="loaded">
+        <h1 class="dex-page__title">Pokémon</h1>
 
-		<div class="buttons-control">
-			<div class="space"></div>
-			<a class="button" :href="'/dex/' + versionGroup.identifier + '/advanced-pokemon-search'">Advanced Search</a>
-		</div>
+        <div class="buttons-control">
+            <div class="space"></div>
+            <a class="button" :href="'/dex/' + versionGroup.identifier + '/advanced-pokemon-search'">Advanced Search</a>
+        </div>
 
-		<dex-pokemons-table
-			:pokemons="pokemons"
-			:version-group="versionGroup"
-			:stats="stats"
-			v-model:filter-name="filterName"
-		></dex-pokemons-table>
-	</template>
+        <dex-pokemons-table
+            :pokemons="pokemons"
+            :version-group="versionGroup"
+            :stats="stats"
+            v-model:filter-name="filterName"
+        ></dex-pokemons-table>
+    </template>
 </div>
 {% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<!-- Tooltips via Floating Vue -->
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
-	<script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
+    <!-- Tooltips via Floating Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
 
-	<script type="module" src="/js/dex/pokemons.js"></script>
+    <script type="module" src="/js/dex/pokemons.js"></script>
 {% endblock %}

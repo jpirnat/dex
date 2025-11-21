@@ -3,27 +3,27 @@
 {% block body %}
 {% verbatim %}
 <div id="app" v-cloak>
-	<dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
+    <dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
-	<div v-if="!loaded" class="dex-loader-container">
-		<div class="dex-loader"></div>
-	</div>
+    <div v-if="!loaded" class="dex-loader-container">
+        <div class="dex-loader"></div>
+    </div>
 
-	<section v-for="year in years" :key="year.year">
-		<h2 class="dex-section__title">{{ year.year }}</h2>
+    <section v-for="year in years" :key="year.year">
+        <h2 class="dex-section__title">{{ year.year }}</h2>
 
-		<div class="stats-months">
-			<div v-for="month in year.months" :key="month.value" class="stat-month">
-				<a :href="'/stats/' + month.value">{{ month.name }}</a>
-			</div>
-		</div>
-	</section>
+        <div class="stats-months">
+            <div v-for="month in year.months" :key="month.value" class="stat-month">
+                <a :href="'/stats/' + month.value">{{ month.name }}</a>
+            </div>
+        </div>
+    </section>
 </div>
 {% endverbatim %}
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
 
-	<script type="module" src="/js/stats/index.js"></script>
+    <script type="module" src="/js/stats/index.js"></script>
 {% endblock %}
