@@ -68,45 +68,46 @@ const app = createApp({
             });
         }
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
-                this.versionGroup = data.versionGroup;
-                this.breadcrumbs = data.breadcrumbs;
-                this.versionGroups = data.versionGroups;
-                this.move = data.move;
-                this.types = data.types;
-                this.damageDealt = data.damageDealt;
-                this.statChanges = data.statChanges;
-                this.flags = data.flags;
-                this.methods = data.methods;
-                this.learnsetVgs = data.learnsetVgs;
-                this.showAbilities = data.showAbilities;
-                this.stats = data.stats;
+        this.loading = false;
+        this.loaded = true;
 
-                document.title = data.title;
+        if (!response.data) {
+            return;
+        }
 
-                const showOtherGens = window.localStorage.getItem('dexMoveShowOtherGens') ?? 'false';
-                this.showOtherGens = JSON.parse(showOtherGens);
+        const data = response.data;
+        this.versionGroup = data.versionGroup;
+        this.breadcrumbs = data.breadcrumbs;
+        this.versionGroups = data.versionGroups;
+        this.move = data.move;
+        this.types = data.types;
+        this.damageDealt = data.damageDealt;
+        this.statChanges = data.statChanges;
+        this.flags = data.flags;
+        this.methods = data.methods;
+        this.learnsetVgs = data.learnsetVgs;
+        this.showAbilities = data.showAbilities;
+        this.stats = data.stats;
 
-                this.hasMultipleGens = false;
-                let gens = {};
-                this.learnsetVgs.forEach(vg => {
-                    gens[vg.generationId] = 1;
-                });
-                this.hasMultipleGens = Object.keys(gens).length > 1;
-            }
+        document.title = data.title;
+
+        const showOtherGens = window.localStorage.getItem('dexMoveShowOtherGens') ?? 'false';
+        this.showOtherGens = JSON.parse(showOtherGens);
+
+        this.hasMultipleGens = false;
+        let gens = {};
+        this.learnsetVgs.forEach(vg => {
+            gens[vg.generationId] = 1;
         });
+        this.hasMultipleGens = Object.keys(gens).length > 1;
     },
     methods: {
         powerText(move) {

@@ -73,59 +73,60 @@ const app = createApp({
             end: '',
         };
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
+        this.loading = false;
+        this.loaded = true;
 
-                this.format = data.format;
-                this.rating = data.rating;
-                this.pokemon = data.pokemon;
+        if (!response.data) {
+            return;
+        }
 
-                this.breadcrumbs = data.breadcrumbs;
-                this.prevMonth = data.prevMonth;
-                this.thisMonth = data.thisMonth;
-                this.nextMonth = data.nextMonth;
-                this.ratings = data.ratings;
-                this.prevRank = data.prevRank;
-                this.thisRank = data.thisRank;
-                this.nextRank = data.nextRank;
+        const data = response.data;
 
-                this.versionGroup = data.versionGroup;
-                this.generation = data.generation;
-                this.stats = data.stats;
-                this.rawCount = data.rawCount;
-                this.averageWeight = data.averageWeight;
-                this.viabilityCeiling = data.viabilityCeiling;
+        this.format = data.format;
+        this.rating = data.rating;
+        this.pokemon = data.pokemon;
 
-                this.showAbilities = data.showAbilities;
-                this.showItems = data.showItems;
-                this.showTeraTypes = data.showTeraTypes;
-                this.abilities = data.abilities;
-                this.items = data.items;
-                this.spreads = data.spreads;
-                this.moves = data.moves;
-                this.teraTypes = data.teraTypes;
-                this.teammates = data.teammates;
-                this.counters = data.counters;
+        this.breadcrumbs = data.breadcrumbs;
+        this.prevMonth = data.prevMonth;
+        this.thisMonth = data.thisMonth;
+        this.nextMonth = data.nextMonth;
+        this.ratings = data.ratings;
+        this.prevRank = data.prevRank;
+        this.thisRank = data.thisRank;
+        this.nextRank = data.nextRank;
 
-                this.months = data.months;
+        this.versionGroup = data.versionGroup;
+        this.generation = data.generation;
+        this.stats = data.stats;
+        this.rawCount = data.rawCount;
+        this.averageWeight = data.averageWeight;
+        this.viabilityCeiling = data.viabilityCeiling;
 
-                this.start = data.thisMonth.value;
-                this.end = data.thisMonth.value;
+        this.showAbilities = data.showAbilities;
+        this.showItems = data.showItems;
+        this.showTeraTypes = data.showTeraTypes;
+        this.abilities = data.abilities;
+        this.items = data.items;
+        this.spreads = data.spreads;
+        this.moves = data.moves;
+        this.teraTypes = data.teraTypes;
+        this.teammates = data.teammates;
+        this.counters = data.counters;
 
-                document.title = data.title;
-            }
-        });
+        this.months = data.months;
+
+        this.start = data.thisMonth.value;
+        this.end = data.thisMonth.value;
+
+        document.title = data.title;
     },
     methods: {
         addChartLine(line) {

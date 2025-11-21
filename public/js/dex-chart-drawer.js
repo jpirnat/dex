@@ -158,35 +158,36 @@ export default {
     watch: {
         lines: {
             deep: 1,
-            handler() {
+            async handler() {
                 this.isVisible = true;
 
                 this.loading = true;
-                fetch('/stats/chart', {
+                const response = await fetch('/stats/chart', {
                     method: 'POST',
                     credentials: 'same-origin',
                     headers: new Headers({
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
                     }),
                     body: JSON.stringify({
                         lines: this.lines,
                     }),
                 })
-                .then(response => response.json())
-                .then(async response => {
-                    this.loading = false;
+                .then(response => response.json());
 
-                    if (response.data) {
-                        const data = response.data;
+                this.loading = false;
 
-                        this.chartTitle = data.chartTitle;
-                        this.responseLines = data.lines;
-                        this.locale = data.locale;
+                if (!response.data) {
+                    return;
+                }
 
-                        await this.$nextTick();
-                        this.renderChart();
-                    }
-                });
+                const data = response.data;
+
+                this.chartTitle = data.chartTitle;
+                this.responseLines = data.lines;
+                this.locale = data.locale;
+
+                await this.$nextTick();
+                this.renderChart();
             },
         },
     },

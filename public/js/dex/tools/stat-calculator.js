@@ -69,44 +69,45 @@ const app = createApp({
             return false;
         },
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
-                this.versionGroup = data.versionGroup;
-                this.breadcrumbs = data.breadcrumbs;
-                this.versionGroups = data.versionGroups;
-                this.pokemons = data.pokemons;
-                this.natures = data.natures;
-                this.stats = data.stats;
-            }
+        this.loading = false;
+        this.loaded = true;
 
-            this.stats.forEach(s => {
-                this.ivs[s.identifier] = this.versionGroup.maxIv;
-                this.evs[s.identifier] = 0;
-                this.avs[s.identifier] = 0;
-                this.effortLevels[s.identifier] = 0;
-                this.finalStats[s.identifier] = '???';
-            });
+        if (!response.data) {
+            return;
+        }
 
-            const queryPokemonIdentifier = url.searchParams.get('pokemon');
-            if (queryPokemonIdentifier) {
-                const exactPokemon = this.pokemons.find(p => p.identifier === queryPokemonIdentifier);
-                if (exactPokemon) {
-                    this.selectedPokemon = exactPokemon;
-                    this.pokemonName = exactPokemon.name;
-                }
-            }
+        const data = response.data;
+        this.versionGroup = data.versionGroup;
+        this.breadcrumbs = data.breadcrumbs;
+        this.versionGroups = data.versionGroups;
+        this.pokemons = data.pokemons;
+        this.natures = data.natures;
+        this.stats = data.stats;
+
+        this.stats.forEach(s => {
+            this.ivs[s.identifier] = this.versionGroup.maxIv;
+            this.evs[s.identifier] = 0;
+            this.avs[s.identifier] = 0;
+            this.effortLevels[s.identifier] = 0;
+            this.finalStats[s.identifier] = '???';
         });
+
+        const queryPokemonIdentifier = url.searchParams.get('pokemon');
+        if (queryPokemonIdentifier) {
+            const exactPokemon = this.pokemons.find(p => p.identifier === queryPokemonIdentifier);
+            if (exactPokemon) {
+                this.selectedPokemon = exactPokemon;
+                this.pokemonName = exactPokemon.name;
+            }
+        }
     },
     methods: {
         onChangePokemonName() {
@@ -175,14 +176,16 @@ const app = createApp({
                     effortLevels: this.effortLevels,
                 }),
             })
-            .then(response => response.json())
+            .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
-
-                this.finalStats = data.finalStats;
-                this.cp = data.cp;
+            if (!response.data) {
+                return;
             }
+
+            const data = response.data;
+
+            this.finalStats = data.finalStats;
+            this.cp = data.cp;
         },
     },
 });

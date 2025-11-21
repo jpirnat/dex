@@ -16,26 +16,27 @@ const app = createApp({
             years: [],
         };
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
+        this.loading = false;
+        this.loaded = true;
 
-                this.breadcrumbs = data.breadcrumbs;
-                this.years = data.years;
+        if (!response.data) {
+            return;
+        }
 
-                document.title = data.title;
-            }
-        });
+        const data = response.data;
+
+        this.breadcrumbs = data.breadcrumbs;
+        this.years = data.years;
+
+        document.title = data.title;
     },
 });
 

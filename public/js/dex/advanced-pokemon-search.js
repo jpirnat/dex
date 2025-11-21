@@ -145,55 +145,56 @@ const app = createApp({
                 : '';
         },
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
+        this.loading = false;
+        this.loaded = true;
 
-                this.versionGroup = data.versionGroup;
-                this.breadcrumbs = data.breadcrumbs;
-                this.versionGroups = data.versionGroups;
-                this.types = data.types;
-                this.abilities = data.abilities;
-                this.eggGroups = data.eggGroups;
-                this.genderRatios = data.genderRatios;
-                this.moves = data.moves;
-                this.stats = data.stats;
-            }
+        if (!response.data) {
+            return;
+        }
 
-            for (let i = 0; i < this.maxMovesetLength; i++) {
-                this.moveNames[i] = '';
-                this.selectedMoves[i] = null;
-            }
+        const data = response.data;
 
-            const includeTransferMoves = window.localStorage.getItem('dexPokemonShowTransferMoves') ?? 'true';
-            this.includeTransferMoves = JSON.parse(includeTransferMoves);
+        this.versionGroup = data.versionGroup;
+        this.breadcrumbs = data.breadcrumbs;
+        this.versionGroups = data.versionGroups;
+        this.types = data.types;
+        this.abilities = data.abilities;
+        this.eggGroups = data.eggGroups;
+        this.genderRatios = data.genderRatios;
+        this.moves = data.moves;
+        this.stats = data.stats;
 
-            const showTypeFilters = window.localStorage.getItem('pokemonSearchShowTypeFilters') ?? 'true';
-            this.showTypeFilters = JSON.parse(showTypeFilters);
+        for (let i = 0; i < this.maxMovesetLength; i++) {
+            this.moveNames[i] = '';
+            this.selectedMoves[i] = null;
+        }
 
-            const showAbilityFilters = window.localStorage.getItem('pokemonSearchShowAbilityFilters') ?? 'true';
-            this.showAbilityFilters = JSON.parse(showAbilityFilters);
+        const includeTransferMoves = window.localStorage.getItem('dexPokemonShowTransferMoves') ?? 'true';
+        this.includeTransferMoves = JSON.parse(includeTransferMoves);
 
-            const showBreedingFilters = window.localStorage.getItem('pokemonSearchShowBreedingFilters') ?? 'true';
-            this.showBreedingFilters = JSON.parse(showBreedingFilters);
+        const showTypeFilters = window.localStorage.getItem('pokemonSearchShowTypeFilters') ?? 'true';
+        this.showTypeFilters = JSON.parse(showTypeFilters);
 
-            const showMoveFilters = window.localStorage.getItem('pokemonSearchShowMoveFilters') ?? 'true';
-            this.showMoveFilters = JSON.parse(showMoveFilters);
+        const showAbilityFilters = window.localStorage.getItem('pokemonSearchShowAbilityFilters') ?? 'true';
+        this.showAbilityFilters = JSON.parse(showAbilityFilters);
 
-            if (url.searchParams.size) {
-                this.readUrlAndSearch();
-            }
-        });
+        const showBreedingFilters = window.localStorage.getItem('pokemonSearchShowBreedingFilters') ?? 'true';
+        this.showBreedingFilters = JSON.parse(showBreedingFilters);
+
+        const showMoveFilters = window.localStorage.getItem('pokemonSearchShowMoveFilters') ?? 'true';
+        this.showMoveFilters = JSON.parse(showMoveFilters);
+
+        if (url.searchParams.size) {
+            this.readUrlAndSearch();
+        }
     },
     methods: {
         readUrlAndSearch() {
@@ -387,7 +388,8 @@ const app = createApp({
                     includeTransferMoves: this.versionGroup.hasTransferMoves && this.includeTransferMoves,
                 }),
             })
-            .then(response => response.json())
+            .then(response => response.json());
+
             this.loading = false;
             this.searchHasBeenDone = true;
             this.filterName = '';

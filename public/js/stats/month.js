@@ -19,29 +19,30 @@ const app = createApp({
             generations: [],
         };
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
+        this.loading = false;
+        this.loaded = true;
 
-                this.breadcrumbs = data.breadcrumbs;
-                this.prevMonth = data.prevMonth;
-                this.thisMonth = data.thisMonth;
-                this.nextMonth = data.nextMonth;
-                this.generations = data.generations;
+        if (!response.data) {
+            return;
+        }
 
-                document.title = data.title;
-            }
-        });
+        const data = response.data;
+
+        this.breadcrumbs = data.breadcrumbs;
+        this.prevMonth = data.prevMonth;
+        this.thisMonth = data.thisMonth;
+        this.nextMonth = data.nextMonth;
+        this.generations = data.generations;
+
+        document.title = data.title;
     },
 });
 

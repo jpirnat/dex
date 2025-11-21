@@ -25,31 +25,32 @@ const app = createApp({
             filterName: '',
         };
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
-                this.versionGroup = data.versionGroup;
-                this.breadcrumbs = data.breadcrumbs;
-                this.versionGroups = data.versionGroups;
-                this.ability = data.ability;
-                this.flags = data.flags;
-                this.pokemons = data.pokemons;
-                this.showAbilities = data.showAbilities;
-                this.stats = data.stats;
+        this.loading = false;
+        this.loaded = true;
 
-                document.title = data.title;
-            }
-        });
+        if (!response.data) {
+            return;
+        }
+
+        const data = response.data;
+        this.versionGroup = data.versionGroup;
+        this.breadcrumbs = data.breadcrumbs;
+        this.versionGroups = data.versionGroups;
+        this.ability = data.ability;
+        this.flags = data.flags;
+        this.pokemons = data.pokemons;
+        this.showAbilities = data.showAbilities;
+        this.stats = data.stats;
+
+        document.title = data.title;
     },
 });
 

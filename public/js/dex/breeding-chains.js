@@ -23,27 +23,28 @@ const app = createApp({
             chains: [],
         };
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
-                this.breadcrumbs = data.breadcrumbs;
-                this.pokemon = data.pokemon;
-                this.move = data.move;
-                this.chains = data.chains;
+        this.loading = false;
+        this.loaded = true;
 
-                document.title = data.title;
-            }
-        });
+        if (!response.data) {
+            return;
+        }
+
+        const data = response.data;
+        this.breadcrumbs = data.breadcrumbs;
+        this.pokemon = data.pokemon;
+        this.move = data.move;
+        this.chains = data.chains;
+
+        document.title = data.title;
     },
     methods: {
         toggleChain(chain) {

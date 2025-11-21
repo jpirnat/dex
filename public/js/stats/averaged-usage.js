@@ -57,36 +57,37 @@ const app = createApp({
             return this.filteredPokemons.slice(start, end);
         },
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
-                this.format = data.format;
-                this.rating = data.rating;
-                this.breadcrumbs = data.breadcrumbs;
-                this.startMonth = data.startMonth;
-                this.endMonth = data.endMonth;
-                this.ratings = data.ratings;
-                this.showLeadsLink = data.showLeadsLink;
-                this.pokemons = data.pokemons;
+        this.loading = false;
+        this.loaded = true;
 
-                document.title = data.title;
-            }
+        if (!response.data) {
+            return;
+        }
 
-            const filterName = url.searchParams.get('name');
-            if (filterName) {
-                this.filterName = filterName;
-            }
-        });
+        const data = response.data;
+        this.format = data.format;
+        this.rating = data.rating;
+        this.breadcrumbs = data.breadcrumbs;
+        this.startMonth = data.startMonth;
+        this.endMonth = data.endMonth;
+        this.ratings = data.ratings;
+        this.showLeadsLink = data.showLeadsLink;
+        this.pokemons = data.pokemons;
+
+        document.title = data.title;
+
+        const filterName = url.searchParams.get('name');
+        if (filterName) {
+            this.filterName = filterName;
+        }
     },
     methods: {
         sortBy(column, defaultDirection) {

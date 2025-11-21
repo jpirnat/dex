@@ -38,42 +38,43 @@ const app = createApp({
             return this.abilitiesDamageTaken[this.damageTakenAbility];
         },
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
-                this.versionGroup = data.versionGroup;
-                this.breadcrumbs = data.breadcrumbs;
-                this.versionGroups = data.versionGroups;
-                this.pokemon = data.pokemon;
-                this.stats = data.stats;
-                this.types = data.types;
-                this.abilitiesDamageTaken = data.damageTaken;
-                this.damageTakenAbilities = data.damageTakenAbilities;
-                this.breedingPartnersSearchUrl = data.breedingPartnersSearchUrl;
-                this.evolutionTableRows = data.evolutionTableRows;
-                this.categories = data.categories;
-                this.methods = data.methods;
-                this.learnsetVgs = data.learnsetVgs;
+        this.loading = false;
+        this.loaded = true;
 
-                document.title = data.title;
+        if (!response.data) {
+            return;
+        }
 
-                // If the Pokémon's only ability gives it unique type matchups,
-                // default to that ability in the matchups shown.
-                if (this.damageTakenAbilities.length === 2 && this.pokemon.abilities.length === 1) {
-                    this.damageTakenAbility = this.damageTakenAbilities[0].identifier;
-                }
-            }
-        });
+        const data = response.data;
+        this.versionGroup = data.versionGroup;
+        this.breadcrumbs = data.breadcrumbs;
+        this.versionGroups = data.versionGroups;
+        this.pokemon = data.pokemon;
+        this.stats = data.stats;
+        this.types = data.types;
+        this.abilitiesDamageTaken = data.damageTaken;
+        this.damageTakenAbilities = data.damageTakenAbilities;
+        this.breedingPartnersSearchUrl = data.breedingPartnersSearchUrl;
+        this.evolutionTableRows = data.evolutionTableRows;
+        this.categories = data.categories;
+        this.methods = data.methods;
+        this.learnsetVgs = data.learnsetVgs;
+
+        document.title = data.title;
+
+        // If the Pokémon's only ability gives it unique type matchups,
+        // default to that ability in the matchups shown.
+        if (this.damageTakenAbilities.length === 2 && this.pokemon.abilities.length === 1) {
+            this.damageTakenAbility = this.damageTakenAbilities[0].identifier;
+        }
     },
     methods: {
         onDamageTakenHover(multiplier) {

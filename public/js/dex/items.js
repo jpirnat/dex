@@ -63,34 +63,35 @@ const app = createApp({
             return this.filteredItems.slice(start, end);
         },
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
-                this.versionGroup = data.versionGroup;
-                this.breadcrumbs = data.breadcrumbs;
-                this.versionGroups = data.versionGroups;
-                this.items = data.items;
-            }
+        this.loading = false;
+        this.loaded = true;
 
-            const filterName = url.searchParams.get('name');
-            const filterDescription = url.searchParams.get('description');
-            if (filterName) {
-                this.filterName = filterName;
-            }
-            if (filterDescription && this.versionGroup.hasItemDescriptions) {
-                this.filterDescription = filterDescription;
-            }
-        });
+        if (!response.data) {
+            return;
+        }
+
+        const data = response.data;
+        this.versionGroup = data.versionGroup;
+        this.breadcrumbs = data.breadcrumbs;
+        this.versionGroups = data.versionGroups;
+        this.items = data.items;
+
+        const filterName = url.searchParams.get('name');
+        const filterDescription = url.searchParams.get('description');
+        if (filterName) {
+            this.filterName = filterName;
+        }
+        if (filterDescription && this.versionGroup.hasItemDescriptions) {
+            this.filterDescription = filterDescription;
+        }
     },
     watch: {
         filterName() {

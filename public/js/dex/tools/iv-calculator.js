@@ -81,44 +81,45 @@ const app = createApp({
             return false;
         },
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
-                this.versionGroup = data.versionGroup;
-                this.breadcrumbs = data.breadcrumbs;
-                this.versionGroups = data.versionGroups;
-                this.pokemons = data.pokemons;
-                this.natures = data.natures;
-                this.characteristics = data.characteristics;
-                this.types = data.types;
-                this.stats = data.stats;
-            }
+        this.loading = false;
+        this.loaded = true;
 
-            this.addLevel();
+        if (!response.data) {
+            return;
+        }
 
-            this.stats.forEach(s => {
-                this.ivs[s.identifier] = '???';
-            });
+        const data = response.data;
+        this.versionGroup = data.versionGroup;
+        this.breadcrumbs = data.breadcrumbs;
+        this.versionGroups = data.versionGroups;
+        this.pokemons = data.pokemons;
+        this.natures = data.natures;
+        this.characteristics = data.characteristics;
+        this.types = data.types;
+        this.stats = data.stats;
 
-            const queryPokemonIdentifier = url.searchParams.get('pokemon');
-            if (queryPokemonIdentifier) {
-                const exactPokemon = this.pokemons.find(p => p.identifier === queryPokemonIdentifier);
-                if (exactPokemon) {
-                    this.selectedPokemon = exactPokemon;
-                    this.pokemonName = exactPokemon.name;
-                }
-            }
+        this.addLevel();
+
+        this.stats.forEach(s => {
+            this.ivs[s.identifier] = '???';
         });
+
+        const queryPokemonIdentifier = url.searchParams.get('pokemon');
+        if (queryPokemonIdentifier) {
+            const exactPokemon = this.pokemons.find(p => p.identifier === queryPokemonIdentifier);
+            if (exactPokemon) {
+                this.selectedPokemon = exactPokemon;
+                this.pokemonName = exactPokemon.name;
+            }
+        }
     },
     methods: {
         onChangePokemonName() {
@@ -251,13 +252,15 @@ const app = createApp({
                     atLevel: this.atLevel,
                 }),
             })
-            .then(response => response.json())
+            .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
-
-                this.ivs = data.ivs;
+            if (!response.data) {
+                return;
             }
+
+            const data = response.data;
+
+            this.ivs = data.ivs;
         },
     },
 });

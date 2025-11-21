@@ -63,40 +63,41 @@ const app = createApp({
             return this.filteredPokemons.slice(start, end);
         },
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
+        this.loading = false;
+        this.loaded = true;
 
-                this.format = data.format;
-                this.rating = data.rating;
-                this.breadcrumbs = data.breadcrumbs;
-                this.prevMonth = data.prevMonth;
-                this.thisMonth = data.thisMonth;
-                this.nextMonth = data.nextMonth;
-                this.ratings = data.ratings;
-                this.versionGroup = data.versionGroup;
-                this.ability = data.ability;
-                this.speedName = data.speedName;
-                this.pokemons = data.pokemons;
+        if (!response.data) {
+            return;
+        }
 
-                document.title = data.title;
-            }
+        const data = response.data;
 
-            const filterName = url.searchParams.get('name');
-            if (filterName) {
-                this.filterName = filterName;
-            }
-        });
+        this.format = data.format;
+        this.rating = data.rating;
+        this.breadcrumbs = data.breadcrumbs;
+        this.prevMonth = data.prevMonth;
+        this.thisMonth = data.thisMonth;
+        this.nextMonth = data.nextMonth;
+        this.ratings = data.ratings;
+        this.versionGroup = data.versionGroup;
+        this.ability = data.ability;
+        this.speedName = data.speedName;
+        this.pokemons = data.pokemons;
+
+        document.title = data.title;
+
+        const filterName = url.searchParams.get('name');
+        if (filterName) {
+            this.filterName = filterName;
+        }
     },
     methods: {
         sortBy(column, defaultDirection) {

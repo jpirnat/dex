@@ -61,12 +61,12 @@ const app = createApp({
             };
         },
     },
-    mounted() {
+    async mounted() {
         const url = new URL(window.location);
         const encoded = url.searchParams.get('lines');
         const lines = JSON.parse(decodeURIComponent(encoded));
 
-        fetch('/stats/chart', {
+        const response = await fetch('/stats/chart', {
             method: 'POST',
             credentials: 'same-origin',
             headers: new Headers({
@@ -76,24 +76,25 @@ const app = createApp({
                 lines: lines,
             }),
         })
-        .then(response => response.json())
-        .then(async response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
+        this.loading = false;
+        this.loaded = true;
 
-                this.chartTitle = data.chartTitle;
-                this.responseLines = data.lines;
-                this.locale = data.locale;
+        if (!response.data) {
+            return;
+        }
 
-                document.title = `Porydex - Stats - ${this.chartTitle}`;
+        const data = response.data;
 
-                await this.$nextTick();
-                this.renderChart();
-            }
-        });
+        this.chartTitle = data.chartTitle;
+        this.responseLines = data.lines;
+        this.locale = data.locale;
+
+        document.title = `Porydex - Stats - ${this.chartTitle}`;
+
+        await this.$nextTick();
+        this.renderChart();
     },
     methods: {
         renderChart() {

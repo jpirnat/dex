@@ -94,46 +94,47 @@ const app = createApp({
                 : '';
         },
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
-                this.versionGroup = data.versionGroup;
-                this.breadcrumbs = data.breadcrumbs;
-                this.versionGroups = data.versionGroups;
-                this.pokemons = data.pokemons;
-                this.types = data.types;
-                this.categories = data.categories;
-                this.flags = data.flags;
-            }
+        this.loading = false;
+        this.loaded = true;
 
-            this.flags.forEach(f => this.filterFlags[f.identifier] = null);
+        if (!response.data) {
+            return;
+        }
 
-            const showTypeFilters = window.localStorage.getItem('moveSearchShowTypeFilters') ?? 'true';
-            this.showTypeFilters = JSON.parse(showTypeFilters);
+        const data = response.data;
+        this.versionGroup = data.versionGroup;
+        this.breadcrumbs = data.breadcrumbs;
+        this.versionGroups = data.versionGroups;
+        this.pokemons = data.pokemons;
+        this.types = data.types;
+        this.categories = data.categories;
+        this.flags = data.flags;
 
-            const showCategoryFilters = window.localStorage.getItem('moveSearchShowCategoryFilters') ?? 'true';
-            this.showCategoryFilters = JSON.parse(showCategoryFilters);
+        this.flags.forEach(f => this.filterFlags[f.identifier] = null);
 
-            const showFlagFilters = window.localStorage.getItem('moveSearchShowFlagFilters') ?? 'true';
-            this.showFlagFilters = JSON.parse(showFlagFilters);
+        const showTypeFilters = window.localStorage.getItem('moveSearchShowTypeFilters') ?? 'true';
+        this.showTypeFilters = JSON.parse(showTypeFilters);
 
-            const includeTransferMoves = window.localStorage.getItem('dexPokemonShowTransferMoves') ?? 'false';
-            this.includeTransferMoves = JSON.parse(includeTransferMoves);
+        const showCategoryFilters = window.localStorage.getItem('moveSearchShowCategoryFilters') ?? 'true';
+        this.showCategoryFilters = JSON.parse(showCategoryFilters);
 
-            if (url.searchParams.size) {
-                this.readUrlAndSearch();
-            }
-        });
+        const showFlagFilters = window.localStorage.getItem('moveSearchShowFlagFilters') ?? 'true';
+        this.showFlagFilters = JSON.parse(showFlagFilters);
+
+        const includeTransferMoves = window.localStorage.getItem('dexPokemonShowTransferMoves') ?? 'false';
+        this.includeTransferMoves = JSON.parse(includeTransferMoves);
+
+        if (url.searchParams.size) {
+            this.readUrlAndSearch();
+        }
     },
     methods: {
         readUrlAndSearch() {
@@ -269,7 +270,8 @@ const app = createApp({
                     includeTransferMoves: this.versionGroup.hasTransferMoves && this.includeTransferMoves,
                 }),
             })
-            .then(response => response.json())
+            .then(response => response.json());
+
             this.loading = false;
             this.searchHasBeenDone = true;
             this.filterName = '';

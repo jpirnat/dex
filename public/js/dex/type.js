@@ -56,47 +56,48 @@ const app = createApp({
                 : '';
         },
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
-                this.versionGroup = data.versionGroup;
-                this.breadcrumbs = data.breadcrumbs;
-                this.versionGroups = data.versionGroups;
-                this.type = data.type;
-                this.types = data.types;
-                this.damageDealt = data.damageDealt;
-                this.damageTaken = data.damageTaken;
-                this.pokemons = data.pokemons;
-                this.showAbilities = data.showAbilities;
-                this.stats = data.stats;
-                this.moves = data.moves;
+        this.loading = false;
+        this.loaded = true;
 
-                document.title = data.title;
-            }
+        if (!response.data) {
+            return;
+        }
 
-            const filterPokemonName = url.searchParams.get('pokemonName');
-            const filterMoveName = url.searchParams.get('moveName');
-            const filterMoveDescription = url.searchParams.get('moveDescription');
-            if (filterPokemonName) {
-                this.filterPokemonName = filterPokemonName;
-            }
-            if (filterMoveName) {
-                this.filterMoveName = filterMoveName;
-            }
-            if (filterMoveDescription && this.versionGroup.hasMoveDescriptions) {
-                this.filterMoveDescription = filterMoveDescription;
-            }
-        });
+        const data = response.data;
+        this.versionGroup = data.versionGroup;
+        this.breadcrumbs = data.breadcrumbs;
+        this.versionGroups = data.versionGroups;
+        this.type = data.type;
+        this.types = data.types;
+        this.damageDealt = data.damageDealt;
+        this.damageTaken = data.damageTaken;
+        this.pokemons = data.pokemons;
+        this.showAbilities = data.showAbilities;
+        this.stats = data.stats;
+        this.moves = data.moves;
+
+        document.title = data.title;
+
+        const filterPokemonName = url.searchParams.get('pokemonName');
+        const filterMoveName = url.searchParams.get('moveName');
+        const filterMoveDescription = url.searchParams.get('moveDescription');
+        if (filterPokemonName) {
+            this.filterPokemonName = filterPokemonName;
+        }
+        if (filterMoveName) {
+            this.filterMoveName = filterMoveName;
+        }
+        if (filterMoveDescription && this.versionGroup.hasMoveDescriptions) {
+            this.filterMoveDescription = filterMoveDescription;
+        }
     },
     methods: {
         onDamageDealtHover(multiplier) {

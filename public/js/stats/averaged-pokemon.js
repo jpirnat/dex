@@ -39,42 +39,43 @@ const app = createApp({
             moves: [],
         };
     },
-    created() {
+    async created() {
         const url = new URL(window.location);
 
-        fetch('/data' + url.pathname, {
-            credentials: 'same-origin'
+        const response = await fetch('/data' + url.pathname, {
+            credentials: 'same-origin',
         })
-        .then(response => response.json())
-        .then(response => {
-            this.loading = false;
-            this.loaded = true;
+        .then(response => response.json());
 
-            if (response.data) {
-                const data = response.data;
+        this.loading = false;
+        this.loaded = true;
 
-                this.format = data.format;
-                this.rating = data.rating;
-                this.pokemon = data.pokemon;
+        if (!response.data) {
+            return;
+        }
 
-                this.breadcrumbs = data.breadcrumbs;
-                this.startMonth = data.startMonth;
-                this.endMonth = data.endMonth;
-                this.ratings = data.ratings;
+        const data = response.data;
 
-                this.versionGroup = data.versionGroup;
-                this.generation = data.generation;
-                this.stats = data.stats;
+        this.format = data.format;
+        this.rating = data.rating;
+        this.pokemon = data.pokemon;
 
-                this.showAbilities = data.showAbilities;
-                this.showItems = data.showItems;
-                this.abilities = data.abilities;
-                this.items = data.items;
-                this.moves = data.moves;
+        this.breadcrumbs = data.breadcrumbs;
+        this.startMonth = data.startMonth;
+        this.endMonth = data.endMonth;
+        this.ratings = data.ratings;
 
-                document.title = data.title;
-            }
-        });
+        this.versionGroup = data.versionGroup;
+        this.generation = data.generation;
+        this.stats = data.stats;
+
+        this.showAbilities = data.showAbilities;
+        this.showItems = data.showItems;
+        this.abilities = data.abilities;
+        this.items = data.items;
+        this.moves = data.moves;
+
+        document.title = data.title;
     },
 });
 
