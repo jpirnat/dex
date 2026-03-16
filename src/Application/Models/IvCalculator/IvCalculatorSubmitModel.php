@@ -68,11 +68,15 @@ final class IvCalculatorSubmitModel
 
 		$stats = $this->statRepository->getByVersionGroup($versionGroup->id);
 
-		$dexPokemon = $this->dexPokemonRepository->getById(
-			$versionGroup->id,
-			$pokemon->id,
-			new LanguageId(LanguageId::ENGLISH),
-		);
+        try {
+            $dexPokemon = $this->dexPokemonRepository->getById(
+                $versionGroup->id,
+                $pokemon->id,
+                new LanguageId(LanguageId::ENGLISH),
+            );
+        } catch (PokemonNotFoundException) {
+            return;
+        }
 		$baseStats = $dexPokemon->baseStats;
 
 		// Initialize the array of possible IVs.

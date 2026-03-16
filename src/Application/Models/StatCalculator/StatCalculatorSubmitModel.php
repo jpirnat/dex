@@ -11,6 +11,7 @@ use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Stats\Stat;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
@@ -62,11 +63,15 @@ final class StatCalculatorSubmitModel
 
 		$stats = $this->statRepository->getByVersionGroup($versionGroup->id);
 
-		$dexPokemon = $this->dexPokemonRepository->getById(
-			$versionGroup->id,
-			$pokemon->id,
-			new LanguageId(LanguageId::ENGLISH),
-		);
+        try {
+            $dexPokemon = $this->dexPokemonRepository->getById(
+                $versionGroup->id,
+                $pokemon->id,
+                new LanguageId(LanguageId::ENGLISH),
+            );
+        } catch (PokemonNotFoundException) {
+            return;
+        }
 		$baseStats = $dexPokemon->baseStats;
 
 		match ($versionGroup->statFormulaType) {
@@ -104,6 +109,9 @@ final class StatCalculatorSubmitModel
 		};
 	}
 
+    /**
+     * @param Stat[] $stats
+     */
 	private function gen1Stats(
 		array $stats,
 		array $baseStats,
@@ -112,13 +120,13 @@ final class StatCalculatorSubmitModel
 		array $evs,
 	) : void {
 		foreach ($stats as $stat) {
-			$statIdentifier = $stat->getIdentifier();
+			$statIdentifier = $stat->identifier;
 
 			$base = (int) ($baseStats[$statIdentifier] ?? 0);
 			$dv = (int) ($ivs[$statIdentifier] ?? 0);
 			$statexp = (int) ($evs[$statIdentifier] ?? 0);
 
-			$finalStat = match ($stat->getId()->value()) {
+			$finalStat = match ($stat->id->value) {
 				StatId::HP => $this->calculator->gen1Hp($base, $dv, $statexp, $level),
 				default => $this->calculator->gen1Other($base, $dv, $statexp, $level),
 			};
@@ -127,6 +135,9 @@ final class StatCalculatorSubmitModel
 		}
 	}
 
+    /**
+     * @param Stat[] $stats
+     */
 	private function gen3Stats(
 		array $stats,
 		array $baseStats,
@@ -136,19 +147,19 @@ final class StatCalculatorSubmitModel
 		array $evs,
 	) : void {
 		foreach ($stats as $stat) {
-			$statIdentifier = $stat->getIdentifier();
+			$statIdentifier = $stat->identifier;
 
 			$base = (int) ($baseStats[$statIdentifier] ?? 0);
 			$iv = (int) ($ivs[$statIdentifier] ?? 0);
 			$ev = (int) ($evs[$statIdentifier] ?? 0);
 
 			$natureModifier = $this->calculator->getNatureModifier(
-				$stat->getId(),
+				$stat->id,
 				$nature->increasedStatId,
 				$nature->decreasedStatId,
 			);
 
-			$finalStat = match ($stat->getId()->value()) {
+			$finalStat = match ($stat->id->value) {
 				StatId::HP => $this->calculator->gen3Hp($base, $iv, $ev, $level),
 				default => $this->calculator->gen3Other($base, $iv, $ev, $level, $natureModifier),
 			};
@@ -157,6 +168,9 @@ final class StatCalculatorSubmitModel
 		}
 	}
 
+    /**
+     * @param Stat[] $stats
+     */
 	private function letsGoStats(
 		array $stats,
 		array $baseStats,
@@ -169,19 +183,19 @@ final class StatCalculatorSubmitModel
 		$friendshipModifier = $this->calculator->letsGoFriendshipModifier($friendship);
 
 		foreach ($stats as $stat) {
-			$statIdentifier = $stat->getIdentifier();
+			$statIdentifier = $stat->identifier;
 
 			$base = (int) ($baseStats[$statIdentifier] ?? 0);
 			$iv = (int) ($ivs[$statIdentifier] ?? 0);
 			$av = (int) ($avs[$statIdentifier] ?? 0);
 
 			$natureModifier = $this->calculator->getNatureModifier(
-				$stat->getId(),
+				$stat->id,
 				$nature->increasedStatId,
 				$nature->decreasedStatId,
 			);
 
-			$finalStat = match ($stat->getId()->value()) {
+			$finalStat = match ($stat->id->value) {
 				StatId::HP => $this->calculator->letsGoHp($base, $iv, $av, $level),
 				default => $this->calculator->letsGoOther($base, $iv, $av, $level, $natureModifier, $friendshipModifier),
 			};
@@ -200,7 +214,7 @@ final class StatCalculatorSubmitModel
 		array $effortLevels,
 	) : void {
 		foreach ($stats as $stat) {
-			$statIdentifier = $stat->getIdentifier();
+			$statIdentifier = $stat->identifier;
 
 			$base = (int) ($baseStats[$statIdentifier] ?? 0);
 			$effortLevel = (int) ($effortLevels[$statIdentifier] ?? 0);
