@@ -41,6 +41,7 @@ export default {
                         type: 'time',
                         time: {
                             unit: 'month',
+                            tooltipFormat: 'MMMM yyyy', // from moment adapter
                         },
                     },
                     y: {
@@ -58,13 +59,6 @@ export default {
                     tooltip: {
                         mode: 'nearest',
                         intersect: false,
-                        callbacks: {
-                            title(tooltipItems) {
-                                // Convert each data point's tooltip title from "YYYY-MM" to "Month Year"
-                                const d = new Date(tooltipItems[0].raw.x + '-01');
-                                return d.toLocaleString('en-US', { month: 'long', year: 'numeric' });
-                            },
-                        },
                     },
                 },
             };
