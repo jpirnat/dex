@@ -9,3 +9,4 @@ id,identifier,locale,date_format
 8,japanese-kanji,ja,yyyy年MM月
 9,chinese-simplified,zh_Hans,yyyy年MM月
 10,chinese-traditional,zh_Hant,yyyy年MM月
+11,spanish-latin-american,es_419,MMMM yyyy
