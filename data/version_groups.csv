@@ -22,5 +22,7 @@ id,identifier,generation,abbreviation,has_breeding,steps_per_egg_cycle,stat_form
 21,bdsp,8,BDSP,1,255,gen3,1,31,1,1,1,252,0,1,1,1,23,2
 22,la,8,LA,0,0,legends,0,31,0,0,1,252,0,0,1,0,24,3
 23,sv,9,SV,1,128,gen3,1,31,0,1,1,252,0,1,1,1,25,1
+24,z-a,9,Z-A,0,0,gen3,1,31,0,1,1,252,0,0,1,1,26,2
+25,ch,9,Ch,0,0,champions,0,31,0,0,0,32,0,1,1,0,27,3
 101,colo,3,Colo,0,0,gen3,1,31,1,1,1,255,1,1,1,1,10,5
 102,xd,3,XD,0,0,gen3,1,31,1,1,1,255,1,1,1,1,11,4

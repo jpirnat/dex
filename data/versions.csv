@@ -39,5 +39,7 @@ id,identifier,version_group_id,abbreviation,background_color,text_color
 38,legends-arceus,22,LA,#36597b,white
 39,scarlet,23,S,#f34134,white
 40,violet,23,V,#8334b7,white
+41,legends-z-a,24,Z-A,#31ca56,black
+42,champions,25,Ch,#8477fb,white
 101,colosseum,101,Co,#b6cae4,white
 102,xd,102,XD,#604e82,white
