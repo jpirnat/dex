@@ -39,6 +39,8 @@ language_id,version_id,name
 1,38,LEGENDS アルセウス
 1,39,スカーレット
 1,40,バイオレット
+1,41,LEGENDS Z-A
+1,42,チャンピオンズ
 1,101,コロシアム
 1,102,ＸＤ 闇の旋風ダーク・ルギア
 2,1,Red (J)
@@ -81,6 +83,8 @@ language_id,version_id,name
 2,38,Legends: Arceus
 2,39,Scarlet
 2,40,Violet
+2,41,Legends: Z-A
+2,42,Champions
 2,101,Colosseum
 2,102,XD: Gale of Darkness
 3,1,Rouge (J)
@@ -123,6 +127,8 @@ language_id,version_id,name
 3,38,Légendes Pokémon : Arceus
 3,39,Écarlate
 3,40,Violet
+3,41,Légendes Pokémon : Z-A
+3,42,Champions
 3,101,Colosseum
 3,102,XD : Le Souffle des Ténèbres
 4,1,Rote (J)
@@ -165,6 +171,8 @@ language_id,version_id,name
 4,38,Pokémon-Legenden: Arceus
 4,39,Karmesin
 4,40,Purpur
+4,41,Pokémon-Legenden: Z-A
+4,42,Champions
 4,101,Colosseum
 4,102,XD: Der Dunkle Sturm
 5,1,Rossa (J)
@@ -207,6 +215,8 @@ language_id,version_id,name
 5,38,Leggende Pokémon: Arceus
 5,39,Scarlatto
 5,40,Violetto
+5,41,Leggende Pokémon: Z-A
+5,42,Champions
 5,101,Colosseum
 5,102,XD: Tempesta Oscura
 6,1,Roja (J)
@@ -249,6 +259,8 @@ language_id,version_id,name
 6,38,Leyendas Pokémon: Arceus
 6,39,Escarlata
 6,40,Púrpura
+6,41,Leyendas Pokémon: Z-A
+6,42,Champions
 6,101,Colosseum
 6,102,XD: Tempestad oscura
 7,1,레드 (J)
@@ -291,6 +303,8 @@ language_id,version_id,name
 7,38,Pokémon LEGENDS 아르세우스
 7,39,스칼렛
 7,40,바이올렛
+7,41,Pokémon LEGENDS Z-A
+7,42,챔피언스
 7,101,콜로세움
 7,102,XD: Gale of Darkness
 8,1,赤
@@ -333,6 +347,8 @@ language_id,version_id,name
 8,38,LEGENDS アルセウス
 8,39,スカーレット
 8,40,バイオレット
+8,41,LEGENDS Z-A
+8,42,チャンピオンズ
 8,101,コロシアム
 8,102,ＸＤ 闇の旋風ダーク・ルギア
 9,1,Red (J)
@@ -375,6 +391,8 @@ language_id,version_id,name
 9,38,宝可梦传说 阿尔宙斯
 9,39,朱
 9,40,紫
+9,41,宝可梦传说 Z-A
+9,42,Champions
 9,101,Colosseum
 9,102,XD: Gale of Darkness
 10,1,Red (J)
@@ -417,5 +435,51 @@ language_id,version_id,name
 10,38,寶可夢傳說 阿爾宙斯
 10,39,朱
 10,40,紫
+10,41,寶可夢傳說 Z-A
+10,42,Champions
 10,101,Colosseum
 10,102,XD: Gale of Darkness
+11,1,Roja (J)
+11,2,Verde (J)
+11,3,Azul (J)
+11,4,Roja
+11,5,Azul
+11,6,Amarilla
+11,7,Oro
+11,8,Plata
+11,9,Cristal
+11,10,Rubí
+11,11,Zafiro
+11,12,Rojo Fuego
+11,13,Verde Hoja
+11,14,Esmeralda
+11,15,Diamante
+11,16,Perla
+11,17,Platino
+11,18,Oro HeartGold
+11,19,Plata SoulSilver
+11,20,Negra
+11,21,Blanca
+11,22,Negra 2
+11,23,Blanca 2
+11,24,X
+11,25,Y
+11,26,Rubí Omega
+11,27,Zafiro Alfa
+11,28,Sol
+11,29,Luna
+11,30,Ultrasol
+11,31,Ultraluna
+11,32,"Let's Go, Pikachu!"
+11,33,"Let's Go, Eevee!"
+11,34,Espada
+11,35,Escudo
+11,36,Diamante Brillante
+11,37,Perla Reluciente
+11,38,Leyendas Pokémon: Arceus
+11,39,Escarlata
+11,40,Púrpura
+11,41,Leyendas Pokémon: Z-A
+11,42,Champions
+11,101,Colosseum
+11,102,XD: Tempestad oscura

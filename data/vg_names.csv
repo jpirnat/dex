@@ -22,6 +22,8 @@ language_id,version_group_id,name
 1,21,ブリリアントダイヤモンド・シャイニングパール
 1,22,LEGENDS アルセウス
 1,23,スカーレット・バイオレット
+1,24,LEGENDS Z-A
+1,25,チャンピオンズ
 1,101,コロシアム
 1,102,ＸＤ 闇の旋風ダーク・ルギア
 2,1,Red/Green (J)
@@ -47,6 +49,8 @@ language_id,version_group_id,name
 2,21,Brilliand Diamond/Shining Pearl
 2,22,Legends: Arceus
 2,23,Scarlet/Violet
+2,24,Legends: Z-A
+2,25,Champions
 2,101,Colosseum
 2,102,XD: Gale of Darkness
 3,1,Rouge/Vert (J)
@@ -72,6 +76,8 @@ language_id,version_group_id,name
 3,21,Diamant Étincelant/Perle Scintillante
 3,22,Légendes Pokémon : Arceus
 3,23,Écarlate/Violet
+3,24,Légendes Pokémon : Z-A
+3,25,Champions
 3,101,Colosseum
 3,102,XD : Le Souffle des Ténèbres
 4,1,Rote/Grüne (J)
@@ -97,6 +103,8 @@ language_id,version_group_id,name
 4,21,Strahlender Diamant/Leuchtende Perle
 4,22,Pokémon-Legenden: Arceus
 4,23,Karmesin/Purpur
+4,24,Pokémon-Legenden: Z-A
+4,25,Champions
 4,101,Colosseum
 4,102,XD: Der Dunkle Sturm
 5,1,Rossa/Verde (J)
@@ -122,6 +130,8 @@ language_id,version_group_id,name
 5,21,Diamante Lucente/Perla Splendente
 5,22,Leggende Pokémon: Arceus
 5,23,Scarlatto/Violetto
+5,24,Leggende Pokémon: Z-A
+5,25,Champions
 5,101,Colosseum
 5,102,XD: Tempesta Oscura
 6,1,Roja/Verde (J)
@@ -147,6 +157,8 @@ language_id,version_group_id,name
 6,21,Diamante Brillante/Perla Reluciente
 6,22,Leyendas Pokémon: Arceus
 6,23,Escarlata/Púrpura
+6,24,Leyendas Pokémon: Z-A
+6,25,Champions
 6,101,Colosseum
 6,102,XD: Tempestad oscura
 7,1,레드・그린 (J)
@@ -172,6 +184,8 @@ language_id,version_group_id,name
 7,21,브릴리언트 다이아몬드・샤이닝 펄
 7,22,Pokémon LEGENDS 아르세우스
 7,23,스칼렛・바이올렛
+7,24,Pokémon LEGENDS Z-A
+7,25,챔피언스
 7,101,콜로세움
 7,102,XD: Gale of Darkness
 8,1,赤・緑
@@ -197,6 +211,8 @@ language_id,version_group_id,name
 8,21,ブリリアントダイヤモンド・シャイニングパール
 8,22,LEGENDS アルセウス
 8,23,スカーレット・バイオレット
+8,24,LEGENDS Z-A
+8,25,チャンピオンズ
 8,101,コロシアム
 8,102,ＸＤ 闇の旋風ダーク・ルギア
 9,1,Red/Green (J)
@@ -222,6 +238,8 @@ language_id,version_group_id,name
 9,21,晶灿钻石／明亮珍珠
 9,22,宝可梦传说 阿尔宙斯
 9,23,朱／紫
+9,24,宝可梦传说 Z-A
+9,25,Champions
 9,101,Colosseum
 9,102,XD: Gale of Darkness
 10,1,Red/Green (J)
@@ -247,5 +265,34 @@ language_id,version_group_id,name
 10,21,晶燦鑽石／明亮珍珠
 10,22,寶可夢傳說 阿爾宙斯
 10,23,朱／紫
+10,24,寶可夢傳說 Z-A
+10,25,Champions
 10,101,Colosseum
 10,102,XD: Gale of Darkness
+11,1,Roja/Verde (J)
+11,2,Azul (J)
+11,3,Roja/Azul
+11,4,Amarilla
+11,5,Oro/Plata
+11,6,Cristal
+11,7,Rubí/Zafiro
+11,8,Rojo Fuego/Verde Hoja
+11,9,Esmeralda
+11,10,Diamante/Perla
+11,11,Platino
+11,12,Oro HeartGold/Plata SoulSilver
+11,13,Negra/Blanca
+11,14,Negra 2/Blanca 2
+11,15,X/Y
+11,16,Rubí Omega/Zafiro Alfa
+11,17,Sol/Luna
+11,18,Ultrasol/Ultraluna
+11,19,"Let's Go, Pikachu!/Let's Go, Eevee!"
+11,20,Espada/Escudo
+11,21,Diamante Brillante/Perla Reluciente
+11,22,Leyendas Pokémon: Arceus
+11,23,Escarlata/Púrpura
+11,24,Leyendas Pokémon: Z-A
+11,25,Champions
+11,101,Colosseum
+11,102,XD: Tempestad oscura
