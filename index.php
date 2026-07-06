@@ -13,15 +13,6 @@ mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 
 
-// Security headers.
-// TODO: Content-Security-Policy
-header('Strict-Transport-Security: max-age=31536000; includeSubDomains');
-header('X-Frame-Options: SAMEORIGIN');
-header('X-XSS-Protection: 1; mode=block');
-header('X-Content-Type-Options: nosniff');
-// TODO: Move security headers to a middleware.
-
-
 // Create the request.
 $request = \Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 	$_SERVER,
