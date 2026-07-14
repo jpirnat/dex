@@ -72,6 +72,7 @@ return [
 		'item_descriptions_08_bdsp',
 		'item_descriptions_08_la',
 		'item_descriptions_09_sv',
+		'item_descriptions_09_za',
 	],
 	'item_names',
 	'vg_items',
