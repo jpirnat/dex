@@ -309,6 +309,12 @@ language_id,ability_id,name
 1,308,テラスシェル
 1,309,ゼロフォーミング
 1,310,どくくぐつ
+1,311,かんつうドリル
+1,312,ドラゴンスキン
+1,313,うなぎのぼり
+1,315,メガソーラー
+1,316,ほのおのたてがみ
+1,318,とびだすハバネロ
 2,1,Stench
 2,2,Drizzle
 2,3,Speed Boost
@@ -619,6 +625,12 @@ language_id,ability_id,name
 2,308,Tera Shell
 2,309,Teraform Zero
 2,310,Poison Puppeteer
+2,311,Piercing Drill
+2,312,Dragonize
+2,313,Eelevate
+2,315,Mega Sol
+2,316,Fire Mane
+2,318,Spicy Spray
 3,1,Puanteur
 3,2,Crachin
 3,3,Turbo
@@ -929,6 +941,12 @@ language_id,ability_id,name
 3,308,Téra-Carapace
 3,309,Téraformation 0
 3,310,Emprise Toxique
+3,311,Transperceuse
+3,312,Peau Draconique
+3,313,Lévitaboost
+3,315,Méga-Soleil
+3,316,Crinière de Feu
+3,318,Habanéruption
 4,1,Duftnote
 4,2,Niesel
 4,3,Temposchub
@@ -1239,6 +1257,12 @@ language_id,ability_id,name
 4,308,Tera-Panzer
 4,309,Teraforming Null
 4,310,Giftpuppenspiel
+4,311,Stichbohrer
+4,312,Drachenschicht
+4,313,Emporwindung
+4,315,Mega-Solarladung
+4,316,Flammenmähne
+4,318,Chilispritzer
 5,1,Tanfo
 5,2,Piovischio
 5,3,Acceleratore
@@ -1549,6 +1573,12 @@ language_id,ability_id,name
 5,308,Teraguscio
 5,309,Zeroformazione
 5,310,Malia Tossica
+5,311,Punta Perforante
+5,312,Pelledrago
+5,313,Rapidascesa
+5,315,Megasolar
+5,316,Pirocriniera
+5,318,Spargipiccante
 6,1,Hedor
 6,2,Llovizna
 6,3,Impulso
@@ -1859,6 +1889,12 @@ language_id,ability_id,name
 6,308,Teracaparazón
 6,309,Teraformación 0
 6,310,Títere Tóxico
+6,311,Turbotaladro
+6,312,Piel Dragontina
+6,313,Impulso Anguila
+6,315,Megasolar
+6,316,Crin de Fuego
+6,318,Salpicante
 7,1,악취
 7,2,잔비
 7,3,가속
@@ -2169,6 +2205,12 @@ language_id,ability_id,name
 7,308,테라셸
 7,309,제로포밍
 7,310,독조종
+7,311,관통드릴
+7,312,드래곤스킨
+7,313,천정부지
+7,315,메가솔라
+7,316,불꽃의갈기
+7,318,하바네로분출
 8,1,あくしゅう
 8,2,あめふらし
 8,3,かそく
@@ -2479,6 +2521,12 @@ language_id,ability_id,name
 8,308,テラスシェル
 8,309,ゼロフォーミング
 8,310,どくくぐつ
+8,311,かんつうドリル
+8,312,ドラゴンスキン
+8,313,うなぎのぼり
+8,315,メガソーラー
+8,316,ほのおのたてがみ
+8,318,とびだすハバネロ
 9,1,恶臭
 9,2,降雨
 9,3,加速
@@ -2789,6 +2837,12 @@ language_id,ability_id,name
 9,308,太晶甲壳
 9,309,归零化境
 9,310,毒傀儡
+9,311,贯穿钻
+9,312,龙皮肤
+9,313,鳗鳗高升
+9,315,超级日光
+9,316,火焰鬃毛
+9,318,辣椒喷发
 10,1,惡臭
 10,2,降雨
 10,3,加速
@@ -3099,3 +3153,325 @@ language_id,ability_id,name
 10,308,太晶甲殼
 10,309,歸零化境
 10,310,毒傀儡
+10,311,貫穿鑽
+10,312,龍皮膚
+10,313,鰻鰻高升
+10,315,超級日光
+10,316,火焰鬃毛
+10,318,辣椒噴發
+11,1,Hedor
+11,2,Llovizna
+11,3,Impulso
+11,4,Armadura Batalla
+11,5,Robustez
+11,6,Humedad
+11,7,Flexibilidad
+11,8,Velo de Arena
+11,9,Elec. Estática
+11,10,Absorbevoltios
+11,11,Absorbeagua
+11,12,Despistado
+11,13,Aclimatación
+11,14,Ojo Compuesto
+11,15,Insomnio
+11,16,Cambio de Color
+11,17,Inmunidad
+11,18,Absorbefuego
+11,19,Polvo Escudo
+11,20,Ritmo Propio
+11,21,Ventosas
+11,22,Intimidación
+11,23,Sombra Trampa
+11,24,Piel Tosca
+11,25,Superguardia
+11,26,Levitación
+11,27,Efecto Espora
+11,28,Sincronía
+11,29,Cuerpo Puro
+11,30,Curación Natural
+11,31,Pararrayos
+11,32,Dicha
+11,33,Nado Rápido
+11,34,Clorofila
+11,35,Iluminación
+11,36,Calco
+11,37,Potencia
+11,38,Punto Tóxico
+11,39,Fuerza Mental
+11,40,Escudo de Magma
+11,41,Velo de Agua
+11,42,Imán
+11,43,Insonorización
+11,44,Curación Pluvial
+11,45,Chorro de Arena
+11,46,Presión
+11,47,Sebo
+11,48,Madrugador
+11,49,Cuerpo de Fuego
+11,50,Fuga
+11,51,Perspicacia
+11,52,Corte Fuerte
+11,53,Recolección
+11,54,Pereza
+11,55,Entusiasmo
+11,56,Gran Encanto
+11,57,Más
+11,58,Menos
+11,59,Predicción
+11,60,Viscosidad
+11,61,Mudar
+11,62,Agallas
+11,63,Escama Especial
+11,64,Toxisecreción
+11,65,Espesura
+11,66,Mar de Llamas
+11,67,Torrente
+11,68,Enjambre
+11,69,Cabeza Roca
+11,70,Sequía
+11,71,Trampa de Arena
+11,72,Espíritu Vital
+11,73,Humo Blanco
+11,74,Energía Pura
+11,75,Caparazón
+11,76,Esclusa de Aire
+11,77,Tambaleo
+11,78,Electromotor
+11,79,Rivalidad
+11,80,Impasible
+11,81,Manto Níveo
+11,82,Gula
+11,83,Irascible
+11,84,Liviano
+11,85,Ignífugo
+11,86,Simple
+11,87,Piel Seca
+11,88,Descarga
+11,89,Puño Férreo
+11,90,Antídoto
+11,91,Adaptable
+11,92,Encadenado
+11,93,Hidratación
+11,94,Poder Solar
+11,95,Pies Rápidos
+11,96,Normalidad
+11,97,Puntería
+11,98,Muro Mágico
+11,99,Indefenso
+11,100,Rezagado
+11,101,Experto
+11,102,Defensa Hoja
+11,103,Torpeza
+11,104,Rompemoldes
+11,105,Supersuerte
+11,106,Secuela
+11,107,Anticipación
+11,108,Alerta
+11,109,Ignorancia
+11,110,Cromolente
+11,111,Filtro
+11,112,Inicio Lento
+11,113,Intrépido
+11,114,Colector
+11,115,Cuerpo de Hielo
+11,116,Roca Sólida
+11,117,Nevada
+11,118,Cosechamiel
+11,119,Inspección
+11,120,Audaz
+11,121,Multitipo
+11,122,Don Floral
+11,123,Mal Sueño
+11,124,Hurto
+11,125,Potencia Bruta
+11,126,Respondón
+11,127,Nerviosismo
+11,128,Competitivo
+11,129,Flaquear
+11,130,Cuerpo Maldito
+11,131,Alma Sanadora
+11,132,Compiescolta
+11,133,Armadura Frágil
+11,134,Metal Pesado
+11,135,Metal Liviano
+11,136,Multiescamas
+11,137,Ímpetu Tóxico
+11,138,Ímpetu Ardiente
+11,139,Cosecha
+11,140,Telepatía
+11,141,Temperamental
+11,142,Funda
+11,143,Contacto Tóxico
+11,144,Regeneración
+11,145,Sacapecho
+11,146,Ímpetu Arena
+11,147,Piel Milagrosa
+11,148,Cálculo Final
+11,149,Ilusión
+11,150,Impostor
+11,151,Allanamiento
+11,152,Momia
+11,153,Autoestima
+11,154,Justiciero
+11,155,Cobardía
+11,156,Espejo Mágico
+11,157,Herbívoro
+11,158,Timador
+11,159,Poder Arenoso
+11,160,Punta Acero
+11,161,Modo Zen
+11,162,Tinovictoria
+11,163,Turbollama
+11,164,Terravoltaje
+11,165,Velo Aromático
+11,166,Velo Florido
+11,167,Mejillas
+11,168,Mutatipo
+11,169,Pelaje Recio
+11,170,Prestidigitador
+11,171,Antibalas
+11,172,Tenacidad
+11,173,Mandíbula Fuerte
+11,174,Piel Helada
+11,175,Velo Dulce
+11,176,Cambio Táctico
+11,177,Alas Vendaval
+11,178,Megalanzador
+11,179,Manto Frondoso
+11,180,Simbiosis
+11,181,Garra Dura
+11,182,Piel Feérica
+11,183,Baba
+11,184,Piel Celeste
+11,185,Amor Filial
+11,186,Aura Oscura
+11,187,Aura Feérica
+11,188,Rompeaura
+11,189,Mar del Albor
+11,190,Tierra del Ocaso
+11,191,Ráfaga Delta
+11,192,Firmeza
+11,193,Huida
+11,194,Retirada
+11,195,Hidrorrefuerzo
+11,196,Ensañamiento
+11,197,Escudo Limitado
+11,198,Vigilante
+11,199,Acuaburbuja
+11,200,Acero Templado
+11,201,Ira
+11,202,Quitanieves
+11,203,Remoto
+11,204,Voz Fluida
+11,205,Socorro
+11,206,Piel Eléctrica
+11,207,Cola Surf
+11,208,Banco
+11,209,Disfraz
+11,210,Fuerte Afecto
+11,211,Agrupamiento
+11,212,Corrosión
+11,213,Letargo Perenne
+11,214,Regia Presencia
+11,215,Revés
+11,216,Pareja de Baile
+11,217,Batería
+11,218,Mullido
+11,219,Cuerpo Vívido
+11,220,Coránima
+11,221,Rizos Rebeldes
+11,222,Receptor
+11,223,Reacción Química
+11,224,Ultraimpulso
+11,225,Sistema Alfa
+11,226,Electrogénesis
+11,227,Psicogénesis
+11,228,Nebulogénesis
+11,229,Herbogénesis
+11,230,Guardia Metálica
+11,231,Guardia Espectro
+11,232,Armadura Prisma
+11,233,Fuerza Cerebral
+11,234,Espada Indómita
+11,235,Escudo Recio
+11,236,Líbero
+11,237,Buscabola
+11,238,Pelusa
+11,239,Hélice Caudal
+11,240,Coraza Reflejo
+11,241,Tragamisil
+11,242,Acérrimo
+11,243,Combustible
+11,244,Punk Rock
+11,245,Expulsarena
+11,246,Escama de Hielo
+11,247,Maduración
+11,248,Cara de Hielo
+11,249,Fuente Energía
+11,250,Mimetismo
+11,251,Antibarrera
+11,252,Alma Acerada
+11,253,Cuerpo Mortal
+11,254,Alma Errante
+11,255,Obstinación
+11,256,Gas Reactivo
+11,257,Velo Pastel
+11,258,Mutapetito
+11,259,Mano Rápida
+11,260,Puño Invisible
+11,261,Medicina Extraña
+11,262,Transistor
+11,263,Mandíbula Dragón
+11,264,Relincho Blanco
+11,265,Relincho Negro
+11,266,Unidad Ecuestre
+11,267,Unidad Ecuestre
+11,268,Aroma Incesante
+11,269,Disemillar
+11,270,Termoconversión
+11,271,Coraza Ira
+11,272,Sal Purificadora
+11,273,Pan Comido
+11,274,Surcavientos
+11,275,Perro Guardián
+11,276,Transportarrocas
+11,277,Energía Eólica
+11,278,Cambio Heroico
+11,279,Comandante
+11,280,Dinamo
+11,281,Paleosíntesis
+11,282,Carga Cuark
+11,283,Cuerpo Áureo
+11,284,Caldero Debacle
+11,285,Espada Debacle
+11,286,Tablilla Debacle
+11,287,Cuenta Debacle
+11,288,Latido Oricalco
+11,289,Motor Hadrónico
+11,290,Oportunista
+11,291,Rumia
+11,292,Cortante
+11,293,General Supremo
+11,294,Unísono
+11,295,Capa Tóxica
+11,296,Cola Armadura
+11,297,Geofagia
+11,298,Poder Fúngico
+11,299,Hospitalidad
+11,300,Ojo Mental
+11,301,Evocarrecuerdos
+11,302,Evocarrecuerdos
+11,303,Evocarrecuerdos
+11,304,Evocarrecuerdos
+11,305,Cadena Tóxica
+11,306,Néctar Dulce
+11,307,Teracambio
+11,308,Teracaparazón
+11,309,Teraformación 0
+11,310,Títere Tóxico
+11,311,Turbotaladro
+11,312,Piel Dracónica
+11,313,Impulso Anguila
+11,315,Megasolar
+11,316,Melena de Fuego
+11,318,Salpicante
