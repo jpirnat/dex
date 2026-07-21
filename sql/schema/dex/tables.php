@@ -104,6 +104,7 @@ return [
 		'move_descriptions_07',
 		'move_descriptions_08',
 		'move_descriptions_09_sv',
+		'move_descriptions_09_za',
 	],
 	'z_move_names',
 	'z_move_images',

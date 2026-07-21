@@ -918,6 +918,7 @@ language_id,move_id,name
 1,917,サイコノイズ
 1,918,はやてがえし
 1,919,じゃどくのくさり
+1,920,{無|む}に{帰|き}す{光|ひかり}
 1,10001,めざめるパワー (かくとう)
 1,10002,めざめるパワー (ひこう)
 1,10003,めざめるパワー (どく)
@@ -1905,6 +1906,7 @@ language_id,move_id,name
 2,917,Psychic Noise
 2,918,Upper Hand
 2,919,Malignant Chain
+2,920,Nihil Light
 2,10001,Hidden Power (Fighting)
 2,10002,Hidden Power (Flying)
 2,10003,Hidden Power (Poison)
@@ -2892,6 +2894,7 @@ language_id,move_id,name
 3,917,Dissonance Psy
 3,918,Prio-Parade
 3,919,Chaîne Malsaine
+3,920,Lux Nihilum
 3,10001,Puissance Cachée (Combat)
 3,10002,Puissance Cachée (Vol)
 3,10003,Puissance Cachée (Poison)
@@ -3879,6 +3882,7 @@ language_id,move_id,name
 4,917,Psycholärm
 4,918,Schnellkonter
 4,919,Giftkettung
+4,920,Tilgungslicht
 4,10001,Kraftreserve (Kampf)
 4,10002,Kraftreserve (Flug)
 4,10003,Kraftreserve (Gift)
@@ -4866,6 +4870,7 @@ language_id,move_id,name
 5,917,Psicorumore
 5,918,Colpo di Mano
 5,919,Intossicatena
+5,920,Tabula Laser
 5,10001,Introforza (Lotta)
 5,10002,Introforza (Volante)
 5,10003,Introforza (Veleno)
@@ -4972,7 +4977,7 @@ language_id,move_id,name
 6,36,Derribo
 6,37,Saña
 6,38,Doble Filo
-6,39,Látigo
+6,39,Agitacola
 6,40,Picotazo Veneno
 6,41,Doble Ataque
 6,42,Pin Misil
@@ -5109,7 +5114,7 @@ language_id,move_id,name
 6,173,Ronquido
 6,174,Maldición
 6,175,Azote
-6,176,Conversión2
+6,176,Conversión 2
 6,177,Aerochorro
 6,178,Esporagodón
 6,179,Inversión
@@ -5140,7 +5145,7 @@ language_id,move_id,name
 6,204,Encanto
 6,205,Rodar
 6,206,Falso Tortazo
-6,207,Contoneo
+6,207,Fanfarronear
 6,208,Batido
 6,209,Chispa
 6,210,Corte Furia
@@ -5168,7 +5173,7 @@ language_id,move_id,name
 6,232,Garra Metal
 6,233,Llave Vital
 6,234,Sol Matinal
-6,235,Síntesis
+6,235,Fotosíntesis
 6,236,Luz Lunar
 6,237,Poder Oculto
 6,238,Tajo Cruzado
@@ -5196,7 +5201,7 @@ language_id,move_id,name
 6,260,Camelo
 6,261,Fuego Fatuo
 6,262,Legado
-6,263,Imagen
+6,263,Fachada
 6,264,Puño Certero
 6,265,Estímulo
 6,266,Señuelo
@@ -5363,7 +5368,7 @@ language_id,move_id,name
 6,427,Psicocorte
 6,428,Cabezazo Zen
 6,429,Disparo Espejo
-6,430,Foco Resplandor
+6,430,Cañón Resplandor
 6,431,Treparrocas
 6,432,Despejar
 6,433,Espacio Raro
@@ -5853,6 +5858,7 @@ language_id,move_id,name
 6,917,Psicorruido
 6,918,Palma Rauda
 6,919,Cadena Virulenta
+6,920,Luz Devastadora
 6,10001,Poder Oculto (Lucha)
 6,10002,Poder Oculto (Volador)
 6,10003,Poder Oculto (Veneno)
@@ -6840,6 +6846,7 @@ language_id,move_id,name
 7,917,사이코노이즈
 7,918,기선제압
 7,919,악독사슬
+7,920,니힐레이저
 7,10001,잠재파워 (격투)
 7,10002,잠재파워 (비행)
 7,10003,잠재파워 (독)
@@ -7827,6 +7834,7 @@ language_id,move_id,name
 8,917,サイコノイズ
 8,918,はやてがえし
 8,919,じゃどくのくさり
+8,920,{無|む}に{帰|き}す{光|ひかり}
 8,10001,めざめるパワー (かくとう)
 8,10002,めざめるパワー (ひこう)
 8,10003,めざめるパワー (どく)
@@ -8814,6 +8822,7 @@ language_id,move_id,name
 9,917,精神噪音
 9,918,快手还击
 9,919,邪毒锁链
+9,920,归无之光
 9,10001,觉醒力量 (格斗)
 9,10002,觉醒力量 (飞行)
 9,10003,觉醒力量 (毒)
@@ -9801,22 +9810,23 @@ language_id,move_id,name
 10,917,精神噪音
 10,918,快手還擊
 10,919,邪毒鎖鏈
-10,10001,覺醒力量 (格斗)
-10,10002,覺醒力量 (飞行)
+10,920,歸無之光
+10,10001,覺醒力量 (格鬥)
+10,10002,覺醒力量 (飛行)
 10,10003,覺醒力量 (毒)
 10,10004,覺醒力量 (地面)
 10,10005,覺醒力量 (岩石)
-10,10006,覺醒力量 (虫)
-10,10007,覺醒力量 (幽灵)
-10,10008,覺醒力量 (钢)
+10,10006,覺醒力量 (蟲)
+10,10007,覺醒力量 (幽靈)
+10,10008,覺醒力量 (鋼)
 10,10009,覺醒力量 (火)
 10,10010,覺醒力量 (水)
 10,10011,覺醒力量 (草)
-10,10012,覺醒力量 (电)
+10,10012,覺醒力量 (電)
 10,10013,覺醒力量 (超能力)
 10,10014,覺醒力量 (冰)
-10,10015,覺醒力量 (龙)
-10,10016,覺醒力量 (恶)
+10,10015,覺醒力量 (龍)
+10,10016,覺醒力量 (惡)
 10,10017,Shadow Rush
 10,10018,Shadow Blitz
 10,10019,Shadow Break
@@ -9869,3 +9879,991 @@ language_id,move_id,name
 10,10066,超極巨奪命一擊
 10,10067,超極巨流水連擊
 10,10068,太晶爆發 (星晶)
+11,1,Destructor
+11,2,Golpe Karate
+11,3,Doble Bofetón
+11,4,Puño Cometa
+11,5,Megapuño
+11,6,Día de Pago
+11,7,Puño Fuego
+11,8,Puño Hielo
+11,9,Puño Trueno
+11,10,Arañazo
+11,11,Fuerza de Garra
+11,12,Guillotina
+11,13,Viento Cortante
+11,14,Danza de Espadas
+11,15,Corte
+11,16,Ráfaga de Aire
+11,17,Ataque de Ala
+11,18,Torbellino
+11,19,Vuelo
+11,20,Atadura
+11,21,Golpazo
+11,22,Látigo Cepa
+11,23,Pisotón
+11,24,Doble Patada
+11,25,Megapatada
+11,26,Patada Salto
+11,27,Patada Giro
+11,28,Ataque Arena
+11,29,Golpe Cabeza
+11,30,Ataque Cuerno
+11,31,Ataque Furia
+11,32,Cuerno Taladro
+11,33,Tacleada
+11,34,Golpe de Cuerpo
+11,35,Constricción
+11,36,Derribo
+11,37,Golpiza
+11,38,Doble Filo
+11,39,Látigo de Cola
+11,40,Piquete Venenoso
+11,41,Doble Aguijón
+11,42,Misil Aguja
+11,43,Malicioso
+11,44,Mordida
+11,45,Gruñido
+11,46,Rugido
+11,47,Canto
+11,48,Supersónico
+11,49,Explosión Sónica
+11,50,Anulación
+11,51,Ácido
+11,52,Brasas
+11,53,Lanzallamas
+11,54,Neblina
+11,55,Chorro de Agua
+11,56,Hidrobomba
+11,57,Surf
+11,58,Rayo de Hielo
+11,59,Ventisca
+11,60,Psicorrayo
+11,61,Rayo Burbuja
+11,62,Rayo Aurora
+11,63,Hiperrayo
+11,64,Picotazo
+11,65,Pico Taladro
+11,66,Sumisión
+11,67,Patada Baja
+11,68,Contraataque
+11,69,Sísmico
+11,70,Fuerza
+11,71,Absorción
+11,72,Megadrenado
+11,73,Drenadoras
+11,74,Crecimiento
+11,75,Hojas Navaja
+11,76,Rayo Solar
+11,77,Polvo Venenoso
+11,78,Paralizador
+11,79,Somnífero
+11,80,Danza de Pétalos
+11,81,Disparo de Seda
+11,82,Furia Dragón
+11,83,Giro Fuego
+11,84,Impactrueno
+11,85,Atactrueno
+11,86,Onda Trueno
+11,87,Trueno
+11,88,Lanzarrocas
+11,89,Terremoto
+11,90,Fisura
+11,91,Excavar
+11,92,Tóxico
+11,93,Confusión
+11,94,Fuerza Psíquica
+11,95,Hipnosis
+11,96,Meditación
+11,97,Agilidad
+11,98,Ataque Rápido
+11,99,Furia
+11,100,Teletransporte
+11,101,Tinieblas
+11,102,Mímica
+11,103,Chillido
+11,104,Doble Equipo
+11,105,Recuperación
+11,106,Fortaleza
+11,107,Reducción
+11,108,Pantalla de Humo
+11,109,Rayo de Confusión
+11,110,Refugio
+11,111,Hacerse Bolita
+11,112,Barrera
+11,113,Pantalla de Luz
+11,114,Niebla
+11,115,Reflejo
+11,116,Centrar Energía
+11,117,Venganza
+11,118,Metrónomo
+11,119,Espejo
+11,120,Autodestrucción
+11,121,Bomba Huevo
+11,122,Lengüetazo
+11,123,Humo
+11,124,Residuos
+11,125,Maza de Hueso
+11,126,Llamarada
+11,127,Cascada
+11,128,Tenaza
+11,129,Meteoros
+11,130,Cabezazo
+11,131,Cañón de Púas
+11,132,Restricción
+11,133,Amnesia
+11,134,Kinético
+11,135,Ovocuración
+11,136,Pat. Salto Alto
+11,137,Fulmirada
+11,138,Comesueños
+11,139,Gas Venenoso
+11,140,Bombardeo
+11,141,Chupavidas
+11,142,Beso Amoroso
+11,143,Ataque Celestial
+11,144,Transformación
+11,145,Burbuja
+11,146,Puño Mareador
+11,147,Esporas
+11,148,Destello
+11,149,Psicoonda
+11,150,Salpicadura
+11,151,Armadura Ácida
+11,152,Martillazo
+11,153,Explosión
+11,154,Garras Furiosas
+11,155,Huesomerang
+11,156,Descanso
+11,157,Avalancha
+11,158,Hipercolmillo
+11,159,Afilar
+11,160,Conversión
+11,161,Triataque
+11,162,Supercolmillo
+11,163,Cuchillada
+11,164,Sustituto
+11,165,Forcejeo
+11,166,Boceto
+11,167,Triple Patada
+11,168,Ladrón
+11,169,Telaraña
+11,170,Telépata
+11,171,Pesadilla
+11,172,Rueda Ígnea
+11,173,Ronquido
+11,174,Maldición
+11,175,Azote
+11,176,Conversión 2
+11,177,Aerochorro
+11,178,Esporagodón
+11,179,Inversión
+11,180,Rencor
+11,181,Polvo de Nieve
+11,182,Protección
+11,183,Superpuño
+11,184,Cara Aterradora
+11,185,Ataque Finta
+11,186,Beso Dulce
+11,187,Tambor
+11,188,Bomba Lodo
+11,189,Bofetón Lodo
+11,190,Octazuca
+11,191,Púas
+11,192,Electrocañón
+11,193,Visión
+11,194,Lazo del Destino
+11,195,Canto Mortal
+11,196,Viento Helado
+11,197,Detección
+11,198,Hueso Veloz
+11,199,Fijar Blanco
+11,200,Enfado
+11,201,Tormenta Arena
+11,202,Gigadrenado
+11,203,Aguante
+11,204,Encanto
+11,205,Rodada
+11,206,Falsa Bofetada
+11,207,Fanfarronear
+11,208,Licuado
+11,209,Chispa
+11,210,Corte Furia
+11,211,Ala de Acero
+11,212,Mal de Ojo
+11,213,Atracción
+11,214,Sonámbulo
+11,215,Cascabel Sanador
+11,216,Retribución
+11,217,Obsequio
+11,218,Frustración
+11,219,Velo Sagrado
+11,220,Dividedolor
+11,221,Fuego Sagrado
+11,222,Magnitud
+11,223,Puño Dinámico
+11,224,Megacuerno
+11,225,Aliento Dragón
+11,226,Relevo
+11,227,Otra Vez
+11,228,Persecución
+11,229,Giro Rápido
+11,230,Dulce Aroma
+11,231,Cola de Hierro
+11,232,Garra de Metal
+11,233,Llave Vital
+11,234,Sol Matutino
+11,235,Fotosíntesis
+11,236,Luz Lunar
+11,237,Poder Oculto
+11,238,Golpe Cruzado
+11,239,Tornado
+11,240,Danza de Lluvia
+11,241,Día Soleado
+11,242,Triturar
+11,243,Escudo Espejo
+11,244,Autosugestión
+11,245,Veloc. Extrema
+11,246,Poder Antiguo
+11,247,Bola Sombra
+11,248,Premonición
+11,249,Golpe Roca
+11,250,Remolino
+11,251,Paliza
+11,252,Sorpresa
+11,253,Alboroto
+11,254,Reserva
+11,255,Escupida
+11,256,Tragar
+11,257,Onda Ígnea
+11,258,Granizo
+11,259,Tormento
+11,260,Halago
+11,261,Fuego Fatuo
+11,262,Recuerdo
+11,263,Fachada
+11,264,Puño Centrado
+11,265,Estímulo
+11,266,Señuelo
+11,267,Adaptación
+11,268,Carga
+11,269,Provocación
+11,270,Refuerzos
+11,271,Truco
+11,272,Imitación
+11,273,Deseo
+11,274,Ayuda
+11,275,Arraigo
+11,276,Fuerza Bruta
+11,277,Capa Mágica
+11,278,Reciclaje
+11,279,Desquite
+11,280,Karatazo
+11,281,Bostezo
+11,282,Desarme
+11,283,Esfuerzo
+11,284,Estallido
+11,285,Intercambio
+11,286,Sellar
+11,287,Alivio
+11,288,Rabia
+11,289,Robo
+11,290,Poder Secreto
+11,291,Buceo
+11,292,Empujón
+11,293,Camuflaje
+11,294,Luminicola
+11,295,Resplandor
+11,296,Bola Neblina
+11,297,Danza de Plumas
+11,298,Danza del Caos
+11,299,Patada Ígnea
+11,300,Chapoteo de Lodo
+11,301,Bola Hielo
+11,302,Brazo Aguja
+11,303,Relajar
+11,304,Hipervoz
+11,305,Colmillo Veneno
+11,306,Garra Brutal
+11,307,Anillo de Fuego
+11,308,Hidrocañón
+11,309,Puño Meteoro
+11,310,Impresión
+11,311,Meteorobola
+11,312,Aromaterapia
+11,313,Llanto Falso
+11,314,Aire Cortante
+11,315,Supercalor
+11,316,Rastreo
+11,317,Tumba de Rocas
+11,318,Viento Plateado
+11,319,Sonido Metálico
+11,320,Silbato de Hoja
+11,321,Cosquillas
+11,322,Masa Cósmica
+11,323,Columna de Agua
+11,324,Rayo Señal
+11,325,Puño Sombra
+11,326,Extrasensorial
+11,327,Corte Elevado
+11,328,Tumba de Arena
+11,329,Frío Extremo
+11,330,Agua Lodosa
+11,331,Bala Semilla
+11,332,As Aéreo
+11,333,Lanza de Hielo
+11,334,Defensa Hierro
+11,335,Bloqueo
+11,336,Aullido
+11,337,Garra Dragón
+11,338,Planta Feroz
+11,339,Corpulencia
+11,340,Rebote
+11,341,Disparo de Lodo
+11,342,Cola Venenosa
+11,343,Antojo
+11,344,Tacleada de Voltios
+11,345,Hojas Mágicas
+11,346,Chapoteo de Agua
+11,347,Paz Mental
+11,348,Hoja Aguda
+11,349,Danza de Dragón
+11,350,Pedrada
+11,351,Onda de Choque
+11,352,Pulso de Agua
+11,353,Deseo Final
+11,354,Psicoimpulso
+11,355,Respiro
+11,356,Gravedad
+11,357,Gran Ojo
+11,358,Despabilador
+11,359,Brazo Martillo
+11,360,Giro Bola
+11,361,Deseo Sanador
+11,362,Agua Salada
+11,363,Don Natural
+11,364,Amago
+11,365,Picoteo
+11,366,Viento Afín
+11,367,Acupresión
+11,368,Expl. Metálica
+11,369,Ida y Vuelta
+11,370,Cuerpo a Cuerpo
+11,371,Revancha
+11,372,Garantía
+11,373,Embargo
+11,374,Lanzamiento
+11,375,Psicocambio
+11,376,As Oculto
+11,377,Anticuración
+11,378,Apretón
+11,379,Truco Fuerza
+11,380,Ácido Gástrico
+11,381,Cántico Suerte
+11,382,Yo Primero
+11,383,Copión
+11,384,Cambiafuerza
+11,385,Cambiadefensa
+11,386,Castigo
+11,387,Último Recurso
+11,388,Abatidoras
+11,389,Golpe Bajo
+11,390,Púas Tóxicas
+11,391,Cambiaalmas
+11,392,Acuaanillo
+11,393,Superimán
+11,394,Erupción
+11,395,Fuerza de Palma
+11,396,Aura Esfera
+11,397,Pulimento
+11,398,Golpe Venenoso
+11,399,Pulso Oscuro
+11,400,Corte Umbrío
+11,401,Cola de Agua
+11,402,Bomba Semilla
+11,403,Corte Aéreo
+11,404,Tijera X
+11,405,Zumbido
+11,406,Pulso Dragón
+11,407,Carga Dragón
+11,408,Joya de Luz
+11,409,Puño Drenador
+11,410,Onda de Vacío
+11,411,Ataque Centrado
+11,412,Bola de Energía
+11,413,Ave Brava
+11,414,Poder Terrestre
+11,415,Trueque
+11,416,Gigaimpacto
+11,417,Maquinación
+11,418,Puño Bala
+11,419,Alud
+11,420,Esquirla Helada
+11,421,Garra de Sombra
+11,422,Colmillo Trueno
+11,423,Colmillo Hielo
+11,424,Colmillo Fuego
+11,425,Sombra Vil
+11,426,Bomba Fango
+11,427,Psicocorte
+11,428,Cabezazo Zen
+11,429,Disparo Espejo
+11,430,Cañón Resplandor
+11,431,Treparrocas
+11,432,Desempañar
+11,433,Espacio Raro
+11,434,Meteoro Dragón
+11,435,Chispazo
+11,436,Bomba de Lava
+11,437,Tormenta Hojas
+11,438,Latigazo
+11,439,Romperrocas
+11,440,Veneno X
+11,441,Lanzamugre
+11,442,Cabeza de Hierro
+11,443,Magnetobomba
+11,444,Roca Afilada
+11,445,Seducción
+11,446,Trampa de Rocas
+11,447,Nudo de Pasto
+11,448,Parloteo
+11,449,Juicio Final
+11,450,Picadura
+11,451,Rayo Carga
+11,452,Mazazo
+11,453,Acuajet
+11,454,Al Ataque
+11,455,A Defender
+11,456,Auxilio
+11,457,Topetazo
+11,458,Doble Golpe
+11,459,Rugido Temporal
+11,460,Corte Espacial
+11,461,Danza de la Luna
+11,462,Garra Aplastante
+11,463,Lluvia Ígnea
+11,464,Abismo Negro
+11,465,Fulgor Semilla
+11,466,Viento Ominoso
+11,467,Golpe Umbrío
+11,468,Afilagarras
+11,469,Guardia Amplia
+11,470,Guardia Dividida
+11,471,Fuerza Dividida
+11,472,Zona Extraña
+11,473,Choque Psíquico
+11,474,Carga Tóxica
+11,475,Aligerar
+11,476,Polvo Ira
+11,477,Telequinesis
+11,478,Zona Mágica
+11,479,Antiaéreo
+11,480,Llave Tempestad
+11,481,Golpe de Fuego
+11,482,Ola de Lodo
+11,483,Danza del Aleteo
+11,484,Golpe Pesado
+11,485,Sincrorruido
+11,486,Electrobola
+11,487,Empapar
+11,488,Carga de Fuego
+11,489,Enrosque
+11,490,Barredora
+11,491,Bomba Ácida
+11,492,Juego Sucio
+11,493,Onda Simple
+11,494,Danza Amiga
+11,495,Ceda el Paso
+11,496,Canon
+11,497,Eco Voz
+11,498,Guardia Baja
+11,499,Humo Claro
+11,500,Poder Acumulado
+11,501,Defensa Rápida
+11,502,Cambio de Lado
+11,503,Escaldar
+11,504,Rompecoraza
+11,505,Pulso Sanador
+11,506,Infortunio
+11,507,Caída Libre
+11,508,Cambio de Marcha
+11,509,Llave Giro
+11,510,Incinerar
+11,511,Último Lugar
+11,512,Acrobacia
+11,513,Clonatipo
+11,514,Represalia
+11,515,Sacrificio
+11,516,Ofrenda
+11,517,Infierno
+11,518,Voto Agua
+11,519,Voto Fuego
+11,520,Voto Planta
+11,521,Cambiavoltaje
+11,522,Lucha Insecto
+11,523,Terratemblor
+11,524,Vaho Helado
+11,525,Cola de Dragón
+11,526,Avivar
+11,527,Electrotela
+11,528,Carga Salvaje
+11,529,Taladradora
+11,530,Golpe Dual
+11,531,Sello de Corazón
+11,532,Drenacuerno
+11,533,Espada Sagrada
+11,534,Coraza Afilada
+11,535,Golpe de Calor
+11,536,Ciclón de Hojas
+11,537,Aplanadora
+11,538,Guardialgodón
+11,539,Pulso Nocturno
+11,540,Onda Mental
+11,541,Golpe de Cola
+11,542,Huracán
+11,543,Carga de Cabeza
+11,544,Rueda Doble
+11,545,Bomba Ígnea
+11,546,Tecno Shock
+11,547,Canto Arcaico
+11,548,Espada Secreta
+11,549,Mundo Gélido
+11,550,Ataque Fulgor
+11,551,Llama Azul
+11,552,Danza de Llamas
+11,553,Rayo Gélido
+11,554,Llama Gélida
+11,555,Alarido
+11,556,Carámbano
+11,557,V de Fuego
+11,558,Llama Fusión
+11,559,Rayo Fusión
+11,560,Plancha Voladora
+11,561,Escudo Tatami
+11,562,Eructo
+11,563,Fertilizante
+11,564,Red Pegajosa
+11,565,Aguijón Letal
+11,566,Golpe Fantasma
+11,567,Halloween
+11,568,Rugido de Guerra
+11,569,Cortina Plasma
+11,570,Carga Parabólica
+11,571,Condena Silvana
+11,572,Tormenta Pétalos
+11,573,Liofilización
+11,574,Voz Encantadora
+11,575,Última Palabra
+11,576,Reversión
+11,577,Beso Drenador
+11,578,Truco Defensa
+11,579,Defensa Floral
+11,580,Campo de Césped
+11,581,Campo de Niebla
+11,582,Electrificación
+11,583,Juego Rudo
+11,584,Viento Feérico
+11,585,Fuerza Lunar
+11,586,Estruendo
+11,587,Cerrojo Feérico
+11,588,Escudo Real
+11,589,Camaradería
+11,590,Confidencia
+11,591,Torm. Diamantes
+11,592,Chorro de Vapor
+11,593,Paso Dimensional
+11,594,Shuriken de Agua
+11,595,Fuego Místico
+11,596,Barrera Espinosa
+11,597,Niebla Aromática
+11,598,Onda Anómala
+11,599,Trampa Venenosa
+11,600,Pólvora
+11,601,Geocontrol
+11,602,Aura Magnética
+11,603,Paga Extra
+11,604,Campo Eléctrico
+11,605,Brillo Mágico
+11,606,Celebración
+11,607,Manos Juntas
+11,608,Ojitos Tiernos
+11,609,Frote
+11,610,Clemencia
+11,611,Infestación
+11,612,Puño Incremento
+11,613,Ala del Olvido
+11,614,Mil Flechas
+11,615,Mil Temblores
+11,616,Fuerza Telúrica
+11,617,Luz Aniquiladora
+11,618,Pulso Primigenio
+11,619,Filo del Abismo
+11,620,Ascen. Dracónico
+11,621,Cerco Dimensión
+11,622,Carrera Arrolladora
+11,623,Carrera Arrolladora
+11,624,Ráfaga Demoledora
+11,625,Ráfaga Demoledora
+11,626,Picada Supersónica
+11,627,Picada Supersónica
+11,628,Diluvio Corrosivo
+11,629,Diluvio Corrosivo
+11,630,Barrena Telúrica
+11,631,Barrena Telúrica
+11,632,Aplastamiento Gigalítico
+11,633,Aplastamiento Gigalítico
+11,634,Guadaña Sedosa
+11,635,Guadaña Sedosa
+11,636,Presa Espectral
+11,637,Presa Espectral
+11,638,Hélice Trepanadora
+11,639,Hélice Trepanadora
+11,640,Hecatombe Pírica
+11,641,Hecatombe Pírica
+11,642,Hidrovórtice Abisal
+11,643,Hidrovórtice Abisal
+11,644,Megatón Floral
+11,645,Megatón Floral
+11,646,Gigavoltio Destructor
+11,647,Gigavoltio Destructor
+11,648,Disruptor Psíquico
+11,649,Disruptor Psíquico
+11,650,Crioaliento Despiadado
+11,651,Crioaliento Despiadado
+11,652,Dracoaliento Devastador
+11,653,Dracoaliento Devastador
+11,654,Agujero Negro Aniquilador
+11,655,Agujero Negro Aniquilador
+11,656,Tacleada Sideral
+11,657,Tacleada Sideral
+11,658,Pikavoltio Letal
+11,659,Recogearena
+11,660,Escaramuza
+11,661,Búnker
+11,662,Puntada Sombría
+11,663,Lariat Oscuro
+11,664,Aria Burbuja
+11,665,Martillo Hielo
+11,666,Flores Sanadoras
+11,667,Fuerza Equina
+11,668,Absorbefuerza
+11,669,Cuchillada Solar
+11,670,Follaje
+11,671,Foco
+11,672,Hilo Venenoso
+11,673,Agudizar
+11,674,Engranajes
+11,675,Golpe al Cuello
+11,676,Bola de Polen
+11,677,Anclaje
+11,678,Campo Psíquico
+11,679,Plancha
+11,680,Látigo Ígneo
+11,681,Arrogancia
+11,682,Llama Final
+11,683,Cambiavelocidad
+11,684,Cuerno Certero
+11,685,Purificación
+11,686,Danza Revelación
+11,687,Núcleo Castigo
+11,688,Patada Tropical
+11,689,Mandato
+11,690,Pico Cañón
+11,691,Fragor Escamas
+11,692,Martillo Dragón
+11,693,Giro Vil
+11,694,Velo Aurora
+11,695,Aluvión de Flechas Sombrías
+11,696,Hiperplancha Oscura
+11,697,Sinfonía de la Diva Marina
+11,698,Cólera del Guardián
+11,699,Constelación Robaalmas
+11,700,Surfeo Galvánico
+11,701,Arrojo Intempestivo
+11,702,Novena Potencia
+11,703,Supernova Original
+11,704,Trampa Coraza
+11,705,Cañón Floral
+11,706,Psicocolmillo
+11,707,Pataleta
+11,708,Hueso Sombrío
+11,709,Roca Veloz
+11,710,Hidroariete
+11,711,Láser Prisma
+11,712,Robasombra
+11,713,Meteoimpacto
+11,714,Rayo Umbrío
+11,715,Ojos Llorosos
+11,716,Electropunzada
+11,717,Ira Natural
+11,718,Multiataque
+11,719,Gigarrayo Fulminante
+11,720,Cabeza Sorpresa
+11,721,Puños Plasma
+11,722,Géiser Fotónico
+11,723,Fotodestrucción Apocalíptica
+11,724,Embestida Solar
+11,725,Deflagración Lunar
+11,726,Paliza Amistosa
+11,727,Tempestad Rocosa
+11,728,Estruendo Implacable
+11,729,Pikaturbo
+11,730,Salpikasurf
+11,731,Pikaída
+11,732,Pikatormenta
+11,733,Vapodrenaje
+11,734,Joltioparálisis
+11,735,Flarembestida
+11,736,Espeaura
+11,737,Umbreozona
+11,738,Leafitobombas
+11,739,Glaceoprisma
+11,740,Sylveotornado
+11,741,Eevimpacto
+11,742,Ferropuño Doble
+11,743,Maxibarrera
+11,744,Cañón Dinamax
+11,745,Disparo Certero
+11,746,Presa Maxilar
+11,747,Atiborramiento
+11,748,Bastión Final
+11,749,Alquitranazo
+11,750,Polvo Magia
+11,751,Dracoflechas
+11,752,Hora del Té
+11,753,Octopresa
+11,754,Electropico
+11,755,Branquibocado
+11,756,Cambio de Cancha
+11,757,Maxignición
+11,758,Maxinsecto
+11,759,Maxitormenta
+11,760,Maxiataque
+11,761,Maxipuño
+11,762,Maxiespectro
+11,763,Maxihelada
+11,764,Maxiácido
+11,765,Maxichorro
+11,766,Maxiciclón
+11,767,Maxiestela
+11,768,Maxidraco
+11,769,Maxionda
+11,770,Maxirroca
+11,771,Maxitemblor
+11,772,Maxisombra
+11,773,Maxiflora
+11,774,Maximetal
+11,775,Estruendo Escama
+11,776,Plancha Corporal
+11,777,Decoración
+11,778,Batería Asalto
+11,779,Trampa Presión
+11,780,Balón Ígneo
+11,781,Corte Supremo
+11,782,Golpe Supremo
+11,783,Rueda Aural
+11,784,Vasto Impacto
+11,785,Ramazo Punzante
+11,786,Amplificador
+11,787,Ácido Málico
+11,788,Fuerza G
+11,789,Choque Anímico
+11,790,Cautivapor
+11,791,Gota Vital
+11,792,Obstrucción
+11,793,Irreverencia
+11,794,Asalto Estelar
+11,795,Rayo Infinito
+11,796,Metaláser
+11,797,Vasta Fuerza
+11,798,Ferroaplanadora
+11,799,Disparo Escamas
+11,800,Rayo Meteórico
+11,801,Moluscañón
+11,802,Bruma Explosiva
+11,803,Fitoimpulso
+11,804,Alto Voltaje
+11,805,Pulso de Campo
+11,806,Golpe Rastrero
+11,807,Envidia Ardiente
+11,808,Desahogo
+11,809,Poltergeist
+11,810,Gas Corrosivo
+11,811,Motivación
+11,812,Viraje
+11,813,Triple Axel
+11,814,Aletazo Doble
+11,815,Arenas Ardientes
+11,816,Selva Sanadora
+11,817,Golpe Oscuro
+11,818,Golpe Torrencial
+11,819,Electrojaula
+11,820,Dracoenergía
+11,821,Mirada Glacial
+11,822,Furia Candente
+11,823,Patada Relámpago
+11,824,Lanza Glacial
+11,825,Orbes Espectro
+11,826,Conjuro Funesto
+11,827,Garra Nociva
+11,828,Asalto Barrera
+11,829,Cambiapoder
+11,830,Hachazo Pétreo
+11,831,Ciclón Primavera
+11,832,Poder Místico
+11,833,Erupción de Ira
+11,834,Acuatacleada
+11,835,Clorofiláser
+11,836,Viento Carámbano
+11,837,Danza Triunfal
+11,838,Asalto Frontal
+11,839,Mil Púas Tóxicas
+11,840,Ala Aural
+11,841,Rencor Reprimido
+11,842,Retracción
+11,843,Triple Flecha
+11,844,Marcha Espectral
+11,845,Corte Metralla
+11,846,Vendaval Gélido
+11,847,Electormenta
+11,848,Tifón de Arena
+11,849,Plegaria Lunar
+11,850,Bálsamo Osado
+11,851,Teraexplosión
+11,852,Telatrampa
+11,853,Patada Hacha
+11,854,Homenaje Póstumo
+11,855,Fotocolisión
+11,856,Emplatar
+11,857,Puño Jet
+11,858,Extracto Picante
+11,859,Quemarrueda
+11,860,Proliferación
+11,861,Pirueta Helada
+11,862,Asalto Espadón
+11,863,Plegaria Vital
+11,864,Salación
+11,865,Triple Inmersión
+11,866,Giro Mortífero
+11,867,Plagio
+11,868,Fileteo
+11,869,Genufendiente
+11,870,Truco Floral
+11,871,Canto Ígneo
+11,872,Danza Acuática
+11,873,Furia Taurina
+11,874,Fiebre Dorada
+11,875,Psicohojas
+11,876,Hidrovapor
+11,877,Calamidad
+11,878,Nitrochoque
+11,879,Electroderrape
+11,880,Autotomía
+11,881,Respuesta Fría
+11,882,Limpieza General
+11,883,Paisaje Nevado
+11,884,Brinco
+11,885,Abrecaminos
+11,886,Agua Fría
+11,887,Hipertaladro
+11,888,Láser Doble
+11,889,Puño Furia
+11,890,Cañón Armadura
+11,891,Espada Lamento
+11,892,Electropalmas
+11,893,Martillo Colosal
+11,894,Resarcimiento
+11,895,Corte Acuático
+11,896,Pirochoque
+11,897,Ominochoque
+11,898,Ponzochoque
+11,899,Pugnachoque
+11,900,Feerichoque
+11,901,Luna Roja
+11,902,Cañón Batidor
+11,903,Bomba Caramelo
+11,904,Garrote Liana
+11,905,Electrorrayo
+11,906,Teraclúster
+11,907,Láser Caprichoso
+11,908,Llama Protectora
+11,909,Relámpago Súbito
+11,910,Corte Potente
+11,911,Corte Taquión
+11,912,Prensa Metálica
+11,913,Bramido Dragón
+11,914,Canto Encantador
+11,915,Furia Ardiente
+11,916,Golpe Voltaico
+11,917,Psicorruido
+11,918,Palma Rauda
+11,919,Cadena Virulenta
+11,920,Luz Devastadora
+11,10001,Poder Oculto (Pelea)
+11,10002,Poder Oculto (Volador)
+11,10003,Poder Oculto (Veneno)
+11,10004,Poder Oculto (Tierra)
+11,10005,Poder Oculto (Roca)
+11,10006,Poder Oculto (Insecto)
+11,10007,Poder Oculto (Fantasma)
+11,10008,Poder Oculto (Acero)
+11,10009,Poder Oculto (Fuego)
+11,10010,Poder Oculto (Agua)
+11,10011,Poder Oculto (Planta)
+11,10012,Poder Oculto (Eléctrico)
+11,10013,Poder Oculto (Psíquico)
+11,10014,Poder Oculto (Hielo)
+11,10015,Poder Oculto (Dragón)
+11,10016,Poder Oculto (Siniestro)
+11,10017,Carga Oscuro
+11,10018,Vigor Oscuro
+11,10019,Brío Oscuro
+11,10020,Fin Oscuro
+11,10021,Onda Oscura
+11,10022,Rabia Oscuro
+11,10023,Tifón Oscuro
+11,10024,Fuego Oscuro
+11,10025,Rayo Oscuro
+11,10026,Hielo Oscuro
+11,10027,Soplo Oscuro
+11,10028,Cielo Oscuro
+11,10029,Traba Oscuro
+11,10030,Bruma Oscuro
+11,10031,Miedo Oscuro
+11,10032,Ocaso Oscuro
+11,10033,Muda Oscura
+11,10034,Mitad Oscuro
+11,10035,Gigallamarada
+11,10036,Gigaestupor
+11,10037,Gigatronada
+11,10038,Gigamonedas
+11,10039,Gigapuñición
+11,10040,Gigaaparición
+11,10041,Gigamelodía
+11,10042,Gigaternura
+11,10043,Gigarreciclaje
+11,10044,Gigapestilencia
+11,10045,Gigatrampa Rocas
+11,10046,Gigahuracán
+11,10047,Gigadescarga
+11,10048,Gigacolofón
+11,10049,Gigadesgaste
+11,10050,Gigabóveda
+11,10051,Gigarroca Ígnea
+11,10052,Gigapolvareda
+11,10053,Gigasopor
+11,10054,Gigacorrosión
+11,10055,Giganéctar
+11,10056,Gigacastigo
+11,10057,Gigatrampa Acero
+11,10058,Gigafundido
+11,10059,Gigaespuma
+11,10060,Gigacienfuegos
+11,10061,Gigalianas
+11,10062,Gigacañonazo
+11,10063,Gigarredoble
+11,10064,Gigaesfera Ígnea
+11,10065,Gigadisparo
+11,10066,Gigagolpe Brusco
+11,10067,Gigagolpe Fluido
+11,10068,Teraexplosión (Astral)
