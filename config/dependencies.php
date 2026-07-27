@@ -38,7 +38,7 @@ $services->set('$dbsetup')
 		[
 			PDO::ATTR_EMULATE_PREPARES => false,
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-			PDO::MYSQL_ATTR_LOCAL_INFILE => true,
+			Pdo\Mysql::ATTR_LOCAL_INFILE => true,
 		],
 	])
 ;
