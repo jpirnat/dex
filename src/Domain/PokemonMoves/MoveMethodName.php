@@ -7,10 +7,10 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final readonly class MoveMethodName
 {
-	public function __construct(
-		private(set) LanguageId $languageId,
-		private(set) MoveMethodId $moveMethodId,
-		private(set) string $name,
-		private(set) string $description,
-	) {}
+    public function __construct(
+        private(set) LanguageId $languageId,
+        private(set) MoveMethodId $moveMethodId,
+        private(set) string $name,
+        private(set) string $description,
+    ) {}
 }

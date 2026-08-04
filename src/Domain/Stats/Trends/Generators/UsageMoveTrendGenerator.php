@@ -16,66 +16,66 @@ use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final readonly class UsageMoveTrendGenerator
 {
-	public function __construct(
-		private StatsChartQueriesInterface $statsChartQueries,
-		private PokemonNameRepositoryInterface $pokemonNameRepository,
-		private MoveNameRepositoryInterface $moveNameRepository,
-		private VgPokemonRepositoryInterface $vgPokemonRepository,
-		private TypeRepositoryInterface $typeRepository,
-		private TrendPointCalculator $trendPointCalculator,
-	) {}
+    public function __construct(
+        private StatsChartQueriesInterface $statsChartQueries,
+        private PokemonNameRepositoryInterface $pokemonNameRepository,
+        private MoveNameRepositoryInterface $moveNameRepository,
+        private VgPokemonRepositoryInterface $vgPokemonRepository,
+        private TypeRepositoryInterface $typeRepository,
+        private TrendPointCalculator $trendPointCalculator,
+    ) {}
 
-	/**
-	 * Get the data for a usage move trend line.
-	 */
-	public function generate(
-		Format $format,
-		int $rating,
-		PokemonId $pokemonId,
-		MoveId $moveId,
-		LanguageId $languageId,
-	) : UsageMoveTrendLine {
-		// Get the name data.
-		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-			$languageId,
-			$pokemonId,
-		);
-		$moveName = $this->moveNameRepository->getByLanguageAndMove(
-			$languageId,
-			$moveId,
-		);
+    /**
+     * Get the data for a usage move trend line.
+     */
+    public function generate(
+        Format $format,
+        int $rating,
+        PokemonId $pokemonId,
+        MoveId $moveId,
+        LanguageId $languageId,
+    ): UsageMoveTrendLine {
+        // Get the name data.
+        $pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+            $languageId,
+            $pokemonId,
+        );
+        $moveName = $this->moveNameRepository->getByLanguageAndMove(
+            $languageId,
+            $moveId,
+        );
 
-		// Get the Pokémon's primary type.
-		$vgPokemon = $this->vgPokemonRepository->getByVgAndPokemon(
-			$format->versionGroupId,
-			$pokemonId,
-		);
-		$pokemonType = $this->typeRepository->getById($vgPokemon->type1Id);
+        // Get the Pokémon's primary type.
+        $vgPokemon = $this->vgPokemonRepository->getByVgAndPokemon(
+            $format->versionGroupId,
+            $pokemonId,
+        );
+        $pokemonType = $this->typeRepository->getById($vgPokemon->type1Id);
 
-		// Get the usage data.
-		$usageDatas = $this->statsChartQueries->getUsageMove(
-			$format->id,
-			$rating,
-			$pokemonId,
-			$moveId,
-		);
-		$months = $this->statsChartQueries->getMonthsWithData($format->id, $rating);
+        // Get the usage data.
+        $usageDatas = $this->statsChartQueries->getUsageMove(
+            $format->id,
+            $rating,
+            $pokemonId,
+            $moveId,
+        );
+        $months = $this->statsChartQueries->getMonthsWithData($format->id, $rating);
 
-		// Get the trend points.
-		$trendPoints = $this->trendPointCalculator->getTrendPoints(
-			$format->id,
-			$usageDatas,
-			$months,
-			0,
-		);
+        // Get the trend points.
+        $trendPoints = $this->trendPointCalculator->getTrendPoints(
+            $format->id,
+            $usageDatas,
+            $months,
+            0,
+        );
 
-		return new UsageMoveTrendLine(
-			$format->name,
-			$rating,
-			$pokemonName->name,
-			$moveName->name,
-			$pokemonType->colorCode,
-			$trendPoints,
-		);
-	}
+        return new UsageMoveTrendLine(
+            $format->name,
+            $rating,
+            $pokemonName->name,
+            $moveName->name,
+            $pokemonType->colorCode,
+            $trendPoints,
+        );
+    }
 }

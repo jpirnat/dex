@@ -10,52 +10,52 @@ use Psr\Http\Message\ResponseInterface;
 
 final readonly class StatsIndexView
 {
-	public function __construct(
-		private StatsIndexModel $statsIndexModel,
-	) {}
+    public function __construct(
+        private StatsIndexModel $statsIndexModel,
+    ) {}
 
-	/**
-	 * Get data for the stats index page.
-	 */
-	public function getData() : ResponseInterface
-	{
-		// Get months. Sort by year ascending, month ascending.
-		$months = $this->statsIndexModel->months;
-		uasort($months, function (DateTime $a, DateTime $b) : int {
-			$comparison = $b->format('Y') <=> $a->format('Y');
-			if ($comparison) {
-				return $comparison;
-			}
+    /**
+     * Get data for the stats index page.
+     */
+    public function getData(): ResponseInterface
+    {
+        // Get months. Sort by year ascending, month ascending.
+        $months = $this->statsIndexModel->months;
+        uasort($months, function (DateTime $a, DateTime $b): int {
+            $comparison = $b->format('Y') <=> $a->format('Y');
+            if ($comparison) {
+                return $comparison;
+            }
 
-			return $a->format('n') <=> $b->format('n');
-		});
+            return $a->format('n') <=> $b->format('n');
+        });
 
-		// Restructure the data for the template.
-		$years = [];
-		foreach ($months as $month) {
-			$year = (int) $month->format('Y');
+        // Restructure the data for the template.
+        $years = [];
+        foreach ($months as $month) {
+            $year = (int) $month->format('Y');
 
-			$years[$year]['year'] = $year;
-			$years[$year]['months'][] = [
-				'value' => $month->format('Y-m'),
-				'name' => $month->format('M'),
-			];
-		}
-		$years = array_values($years);
+            $years[$year]['year'] = $year;
+            $years[$year]['months'][] = [
+                'value' => $month->format('Y-m'),
+                'name' => $month->format('M'),
+            ];
+        }
+        $years = array_values($years);
 
-		// Navigational breadcrumbs.
-		$breadcrumbs = [[
-			'text' => 'Stats',
-		]];
+        // Navigational breadcrumbs.
+        $breadcrumbs = [[
+            'text' => 'Stats',
+        ]];
 
-		return new JsonResponse([
-			'data' => [
-				'title' => 'Porydex - Stats',
+        return new JsonResponse([
+            'data' => [
+                'title' => 'Porydex - Stats',
 
-				'breadcrumbs' => $breadcrumbs,
+                'breadcrumbs' => $breadcrumbs,
 
-				'years' => $years,
-			]
-		]);
-	}
+                'years' => $years,
+            ]
+        ]);
+    }
 }

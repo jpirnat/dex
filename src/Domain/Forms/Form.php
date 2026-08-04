@@ -7,9 +7,9 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 
 final readonly class Form
 {
-	public function __construct(
-		private(set) FormId $id,
-		private(set) string $identifier,
-		private(set) PokemonId $pokemonId,
-	) {}
+    public function __construct(
+        private(set) FormId $id,
+        private(set) string $identifier,
+        private(set) PokemonId $pokemonId,
+    ) {}
 }

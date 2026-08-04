@@ -9,21 +9,21 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final readonly class DexTypesController
 {
-	public function __construct(
-		private BaseController $baseController,
-		private DexTypesModel $dexTypesModel,
-	) {}
+    public function __construct(
+        private BaseController $baseController,
+        private DexTypesModel $dexTypesModel,
+    ) {}
 
-	/**
-	 * Set data for the dex types page.
-	 */
-	public function setData(ServerRequestInterface $request) : void
-	{
-		$this->baseController->setBaseVariables($request);
+    /**
+     * Set data for the dex types page.
+     */
+    public function setData(ServerRequestInterface $request): void
+    {
+        $this->baseController->setBaseVariables($request);
 
-		$vgIdentifier = $request->getAttribute('vgIdentifier');
-		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
+        $vgIdentifier = $request->getAttribute('vgIdentifier');
+        $languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexTypesModel->setData($vgIdentifier, $languageId);
-	}
+        $this->dexTypesModel->setData($vgIdentifier, $languageId);
+    }
 }

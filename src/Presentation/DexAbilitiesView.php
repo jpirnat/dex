@@ -9,44 +9,44 @@ use Psr\Http\Message\ResponseInterface;
 
 final readonly class DexAbilitiesView
 {
-	public function __construct(
-		private DexAbilitiesModel $dexAbilitiesModel,
-		private DexFormatter $dexFormatter,
-	) {}
+    public function __construct(
+        private DexAbilitiesModel $dexAbilitiesModel,
+        private DexFormatter $dexFormatter,
+    ) {}
 
-	/**
-	 * Get data for the dex abilities page.
-	 */
-	public function getData() : ResponseInterface
-	{
-		$versionGroupModel = $this->dexAbilitiesModel->versionGroupModel;
-		$versionGroup = $versionGroupModel->versionGroup;
-		$versionGroups = $versionGroupModel->versionGroups;
+    /**
+     * Get data for the dex abilities page.
+     */
+    public function getData(): ResponseInterface
+    {
+        $versionGroupModel = $this->dexAbilitiesModel->versionGroupModel;
+        $versionGroup = $versionGroupModel->versionGroup;
+        $versionGroups = $versionGroupModel->versionGroups;
 
-		$abilities = $this->dexAbilitiesModel->abilities;
-		$flags = $this->dexAbilitiesModel->flags;
+        $abilities = $this->dexAbilitiesModel->abilities;
+        $flags = $this->dexAbilitiesModel->flags;
 
-		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->identifier;
-		$breadcrumbs = [[
-			'url' => "/dex/$vgIdentifier",
-			'text' => 'Dex',
-		], [
-			'text' => 'Abilities',
-		]];
+        // Navigational breadcrumbs.
+        $vgIdentifier = $versionGroup->identifier;
+        $breadcrumbs = [[
+            'url' => "/dex/$vgIdentifier",
+            'text' => 'Dex',
+        ], [
+            'text' => 'Abilities',
+        ]];
 
-		return new JsonResponse([
-			'data' => [
-				'versionGroup' => [
-					'identifier' => $versionGroup->identifier,
-				],
+        return new JsonResponse([
+            'data' => [
+                'versionGroup' => [
+                    'identifier' => $versionGroup->identifier,
+                ],
 
-				'breadcrumbs' => $breadcrumbs,
-				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
+                'breadcrumbs' => $breadcrumbs,
+                'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
-				'abilities' => $abilities,
-				'flags' => $flags,
-			]
-		]);
-	}
+                'abilities' => $abilities,
+                'flags' => $flags,
+            ]
+        ]);
+    }
 }

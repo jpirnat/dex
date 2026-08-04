@@ -5,10 +5,10 @@ namespace Jp\Dex\Domain\Teammates;
 
 final readonly class StatsPokemonTeammate
 {
-	public function __construct(
-		private(set) string $icon,
-		private(set) string $identifier,
-		private(set) string $name,
-		private(set) float $percent,
-	) {}
+    public function __construct(
+        private(set) string $icon,
+        private(set) string $identifier,
+        private(set) string $name,
+        private(set) float $percent,
+    ) {}
 }

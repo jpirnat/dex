@@ -8,20 +8,20 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final readonly class DexIndexController
 {
-	public function __construct(
-		private BaseController $baseController,
-		private DexIndexModel $dexIndexModel,
-	) {}
+    public function __construct(
+        private BaseController $baseController,
+        private DexIndexModel $dexIndexModel,
+    ) {}
 
-	/**
-	 * Set data for the dex index page.
-	 */
-	public function setData(ServerRequestInterface $request) : void
-	{
-		$this->baseController->setBaseVariables($request);
+    /**
+     * Set data for the dex index page.
+     */
+    public function setData(ServerRequestInterface $request): void
+    {
+        $this->baseController->setBaseVariables($request);
 
-		$vgIdentifier = $request->getAttribute('vgIdentifier');
+        $vgIdentifier = $request->getAttribute('vgIdentifier');
 
-		$this->dexIndexModel->setData($vgIdentifier);
-	}
+        $this->dexIndexModel->setData($vgIdentifier);
+    }
 }

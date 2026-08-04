@@ -9,30 +9,30 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final readonly class StatsPokemonController
 {
-	public function __construct(
-		private BaseController $baseController,
-		private StatsPokemonModel $statsPokemonModel,
-	) {}
+    public function __construct(
+        private BaseController $baseController,
+        private StatsPokemonModel $statsPokemonModel,
+    ) {}
 
-	/**
-	 * Set data for the stats Pokémon page.
-	 */
-	public function setData(ServerRequestInterface $request) : void
-	{
-		$this->baseController->setBaseVariables($request);
+    /**
+     * Set data for the stats Pokémon page.
+     */
+    public function setData(ServerRequestInterface $request): void
+    {
+        $this->baseController->setBaseVariables($request);
 
-		$month = $request->getAttribute('month');
-		$formatIdentifier = $request->getAttribute('formatIdentifier');
-		$rating = (int) $request->getAttribute('rating');
-		$pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
-		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
+        $month = $request->getAttribute('month');
+        $formatIdentifier = $request->getAttribute('formatIdentifier');
+        $rating = (int) $request->getAttribute('rating');
+        $pokemonIdentifier = $request->getAttribute('pokemonIdentifier');
+        $languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->statsPokemonModel->setData(
-			$month,
-			$formatIdentifier,
-			$rating,
-			$pokemonIdentifier,
-			$languageId,
-		);
-	}
+        $this->statsPokemonModel->setData(
+            $month,
+            $formatIdentifier,
+            $rating,
+            $pokemonIdentifier,
+            $languageId,
+        );
+    }
 }

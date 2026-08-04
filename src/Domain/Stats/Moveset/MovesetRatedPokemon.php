@@ -8,19 +8,19 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 
 final readonly class MovesetRatedPokemon
 {
-	/**
-	 * Constructor.
-	 *
-	 * @throws InvalidAverageWeightException if $averageWeight is invalid.
-	 */
-	public function __construct(
-		private(set) UsageRatedPokemonId $usageRatedPokemonId,
-		private(set) float $averageWeight,
-	) {
-		if ($averageWeight < 0) {
-			throw new InvalidAverageWeightException(
-				"Invalid average weight: $averageWeight."
-			);
-		}
-	}
+    /**
+     * Constructor.
+     *
+     * @throws InvalidAverageWeightException if $averageWeight is invalid.
+     */
+    public function __construct(
+        private(set) UsageRatedPokemonId $usageRatedPokemonId,
+        private(set) float $averageWeight,
+    ) {
+        if ($averageWeight < 0) {
+            throw new InvalidAverageWeightException(
+                "Invalid average weight: $averageWeight."
+            );
+        }
+    }
 }

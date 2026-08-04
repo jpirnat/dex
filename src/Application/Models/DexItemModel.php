@@ -14,78 +14,78 @@ use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 
 final class DexItemModel
 {
-	private(set) array $item = [];
-	private(set) array $evolutions = [];
+    private(set) array $item = [];
+    private(set) array $evolutions = [];
 
 
-	public function __construct(
-		private(set) readonly VersionGroupModel $versionGroupModel,
-		private readonly ItemRepositoryInterface $itemRepository,
-		private readonly DexItemRepositoryInterface $dexItemRepository,
-		private readonly EvolutionRepositoryInterface $evolutionRepository,
-		private readonly FormRepositoryInterface $formRepository,
-		private readonly FormIconRepositoryInterface $formIconRepository,
-		private readonly PokemonRepositoryInterface $pokemonRepository,
-		private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
-	) {}
+    public function __construct(
+        private(set) readonly VersionGroupModel $versionGroupModel,
+        private readonly ItemRepositoryInterface $itemRepository,
+        private readonly DexItemRepositoryInterface $dexItemRepository,
+        private readonly EvolutionRepositoryInterface $evolutionRepository,
+        private readonly FormRepositoryInterface $formRepository,
+        private readonly FormIconRepositoryInterface $formIconRepository,
+        private readonly PokemonRepositoryInterface $pokemonRepository,
+        private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
+    ) {}
 
 
-	/**
-	 * Set data for the dex items page.
-	 */
-	public function setData(
-		string $vgIdentifier,
-		string $itemIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$this->item = [];
-		$this->evolutions = [];
+    /**
+     * Set data for the dex items page.
+     */
+    public function setData(
+        string $vgIdentifier,
+        string $itemIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $this->item = [];
+        $this->evolutions = [];
 
-		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+        $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$item = $this->itemRepository->getByIdentifier($itemIdentifier);
+        $item = $this->itemRepository->getByIdentifier($itemIdentifier);
 
-		$this->versionGroupModel->setWithItem($item->id);
+        $this->versionGroupModel->setWithItem($item->id);
 
-		$dexItem = $this->dexItemRepository->getById(
-			$versionGroupId,
-			$item->id,
-			$languageId,
-		);
+        $dexItem = $this->dexItemRepository->getById(
+            $versionGroupId,
+            $item->id,
+            $languageId,
+        );
 
-		$this->item = [
-			'icon' => $dexItem->icon,
-			'identifier' => $dexItem->identifier,
-			'name' => $dexItem->name,
-			'description' => $dexItem->description,
-		];
+        $this->item = [
+            'icon' => $dexItem->icon,
+            'identifier' => $dexItem->identifier,
+            'name' => $dexItem->name,
+            'description' => $dexItem->description,
+        ];
 
-		$evolutions = $this->evolutionRepository->getByItem(
-			$versionGroupId,
-			$item->id,
-		);
-		foreach ($evolutions as $evolution) {
-			$formId = $evolution->evoFromId;
+        $evolutions = $this->evolutionRepository->getByItem(
+            $versionGroupId,
+            $item->id,
+        );
+        foreach ($evolutions as $evolution) {
+            $formId = $evolution->evoFromId;
 
-			$form = $this->formRepository->getById($formId);
-			$formIcon = $this->formIconRepository->getByVgAndFormAndFemaleAndRightAndShiny(
-				$versionGroupId,
-				$formId,
-				false,
-				false,
-				false,
-			);
-			$pokemon = $this->pokemonRepository->getById($form->pokemonId);
-			$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-				$languageId,
-				$pokemon->id,
-			);
+            $form = $this->formRepository->getById($formId);
+            $formIcon = $this->formIconRepository->getByVgAndFormAndFemaleAndRightAndShiny(
+                $versionGroupId,
+                $formId,
+                false,
+                false,
+                false,
+            );
+            $pokemon = $this->pokemonRepository->getById($form->pokemonId);
+            $pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+                $languageId,
+                $pokemon->id,
+            );
 
-			$this->evolutions[] = [
-				'icon' => $formIcon->image,
-				'identifier' => $pokemon->identifier,
-				'name' => $pokemonName->name,
-			];
-		}
-	}
+            $this->evolutions[] = [
+                'icon' => $formIcon->image,
+                'identifier' => $pokemon->identifier,
+                'name' => $pokemonName->name,
+            ];
+        }
+    }
 }

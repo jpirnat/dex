@@ -16,13 +16,13 @@ $parametersAvailable = isset($options['year']) && isset($options['month']);
 $date = new DateTime();
 
 if ($parametersAvailable) {
-	$date->setDate((int) $options['year'], (int) $options['month'], 1);
+    $date->setDate((int) $options['year'], (int) $options['month'], 1);
 } else {
-	$thisYear = (int) $date->format('Y');
-	$thisMonth = (int) $date->format('m');
+    $thisYear = (int) $date->format('Y');
+    $thisMonth = (int) $date->format('m');
 
-	$date->setDate($thisYear, $thisMonth, 1);
-	$date->modify('-1 month');
+    $date->setDate($thisYear, $thisMonth, 1);
+    $date->modify('-1 month');
 }
 
 $yearMonth = $date->format('Y-m');
@@ -56,44 +56,44 @@ echo "\n";
 
 echo "Formats:\n";
 foreach ($formats as $yearMonth => $monthFormats) {
-	foreach ($monthFormats as $format) {
-		echo "$yearMonth: $format\n";
-	}
+    foreach ($monthFormats as $format) {
+        echo "$yearMonth: $format\n";
+    }
 }
 echo "\n";
 
 echo "Pokémon:\n";
 foreach ($pokemons as $pokemon) {
-	echo "$pokemon\n";
+    echo "$pokemon\n";
 }
 echo "\n";
 
 echo "Abilities:\n";
 foreach ($abilities as $ability) {
-	echo "$ability\n";
+    echo "$ability\n";
 }
 echo "\n";
 
 echo "Items:\n";
 foreach ($items as $item) {
-	echo "$item\n";
+    echo "$item\n";
 }
 echo "\n";
 
 echo "Natures:\n";
 foreach ($natures as $nature) {
-	echo "$nature\n";
+    echo "$nature\n";
 }
 echo "\n";
 
 echo "Moves:\n";
 foreach ($moves as $move) {
-	echo "$move\n";
+    echo "$move\n";
 }
 echo "\n";
 
 echo "Types:\n";
 foreach ($types as $type) {
-	echo "$type\n";
+    echo "$type\n";
 }
 echo "\n";

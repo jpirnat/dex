@@ -17,13 +17,13 @@ $parametersAvailable = isset($options['year']) && isset($options['month']);
 $date = new DateTime();
 
 if ($parametersAvailable) {
-	$date->setDate((int) $options['year'], (int) $options['month'], 1);
+    $date->setDate((int) $options['year'], (int) $options['month'], 1);
 } else {
-	$thisYear = (int) $date->format('Y');
-	$thisMonth = (int) $date->format('m');
+    $thisYear = (int) $date->format('Y');
+    $thisMonth = (int) $date->format('m');
 
-	$date->setDate($thisYear, $thisMonth, 1);
-	$date->modify('-1 month');
+    $date->setDate($thisYear, $thisMonth, 1);
+    $date->modify('-1 month');
 }
 
 $yearMonth = $date->format('Y-m');

@@ -8,13 +8,13 @@ use Jp\Dex\Domain\Formats\FormatId;
 
 interface LeadsRatedPokemonRepositoryInterface
 {
-	/**
-	 * Do any leads rated Pokémon records exist for this month, format, and rating?
-	 */
-	public function hasAny(DateTime $month, FormatId $formatId, int $rating) : bool;
+    /**
+     * Do any leads rated Pokémon records exist for this month, format, and rating?
+     */
+    public function hasAny(DateTime $month, FormatId $formatId, int $rating): bool;
 
-	/**
-	 * Save a leads rated Pokémon record.
-	 */
-	public function save(LeadsRatedPokemon $leadsRatedPokemon) : void;
+    /**
+     * Save a leads rated Pokémon record.
+     */
+    public function save(LeadsRatedPokemon $leadsRatedPokemon): void;
 }

@@ -9,21 +9,21 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final readonly class DexEggGroupsController
 {
-	public function __construct(
-		private BaseController $baseController,
-		private DexEggGroupsModel $dexEggGroupsModel,
-	) {}
+    public function __construct(
+        private BaseController $baseController,
+        private DexEggGroupsModel $dexEggGroupsModel,
+    ) {}
 
-	/**
-	 * Set data for the dex egg group page.
-	 */
-	public function setData(ServerRequestInterface $request) : void
-	{
-		$this->baseController->setBaseVariables($request);
+    /**
+     * Set data for the dex egg group page.
+     */
+    public function setData(ServerRequestInterface $request): void
+    {
+        $this->baseController->setBaseVariables($request);
 
-		$vgIdentifier = $request->getAttribute('vgIdentifier');
-		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
+        $vgIdentifier = $request->getAttribute('vgIdentifier');
+        $languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexEggGroupsModel->setData($vgIdentifier, $languageId);
-	}
+        $this->dexEggGroupsModel->setData($vgIdentifier, $languageId);
+    }
 }

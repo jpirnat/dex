@@ -9,12 +9,12 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final readonly class PokemonMove
 {
-	public function __construct(
-		private(set) PokemonId $pokemonId,
-		private(set) VersionGroupId $versionGroupId,
-		private(set) MoveId $moveId,
-		private(set) MoveMethodId $moveMethodId,
-		private(set) int $level,
-		private(set) int $sort,
-	) {}
+    public function __construct(
+        private(set) PokemonId $pokemonId,
+        private(set) VersionGroupId $versionGroupId,
+        private(set) MoveId $moveId,
+        private(set) MoveMethodId $moveMethodId,
+        private(set) int $level,
+        private(set) int $sort,
+    ) {}
 }

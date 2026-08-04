@@ -17,43 +17,43 @@ use Jp\Dex\Domain\Stats\ValidateMonthTrait;
  */
 final readonly class UsageAveragedPokemon
 {
-	use ValidateMonthTrait;
+    use ValidateMonthTrait;
 
-	/**
-	 * Constructor.
-	 *
-	 * @throws InvalidMonthException if $start or $end is invalid.
-	 * @throws InvalidCountException if $raw is invalid or if $real is invalid.
-	 * @throws InvalidPercentException if $rawPercent is invalid or if
-	 *     $realPercent is invalid.
-	 */
-	public function __construct(
-		private(set) DateTime $start,
-		private(set) DateTime $end,
-		private(set) FormatId $formatId,
-		private(set) PokemonId $pokemonId,
-		private(set) int $raw,
-		private(set) float $rawPercent,
-		private(set) int $real,
-		private(set) float $realPercent,
-	) {
-		$this->validateMonth($start);
-		$this->validateMonth($end);
+    /**
+     * Constructor.
+     *
+     * @throws InvalidMonthException if $start or $end is invalid.
+     * @throws InvalidCountException if $raw is invalid or if $real is invalid.
+     * @throws InvalidPercentException if $rawPercent is invalid or if
+     *     $realPercent is invalid.
+     */
+    public function __construct(
+        private(set) DateTime $start,
+        private(set) DateTime $end,
+        private(set) FormatId $formatId,
+        private(set) PokemonId $pokemonId,
+        private(set) int $raw,
+        private(set) float $rawPercent,
+        private(set) int $real,
+        private(set) float $realPercent,
+    ) {
+        $this->validateMonth($start);
+        $this->validateMonth($end);
 
-		if ($raw < 0) {
-			throw new InvalidCountException("Invalid raw: $raw.");
-		}
+        if ($raw < 0) {
+            throw new InvalidCountException("Invalid raw: $raw.");
+        }
 
-		if ($rawPercent < 0 || $rawPercent > 100) {
-			throw new InvalidPercentException("Invalid raw percent: $rawPercent.");
-		}
+        if ($rawPercent < 0 || $rawPercent > 100) {
+            throw new InvalidPercentException("Invalid raw percent: $rawPercent.");
+        }
 
-		if ($real < 0) {
-			throw new InvalidCountException("Invalid real: $real.");
-		}
+        if ($real < 0) {
+            throw new InvalidCountException("Invalid real: $real.");
+        }
 
-		if ($realPercent < 0 || $realPercent > 100) {
-			throw new InvalidPercentException("Invalid real percent: $realPercent.");
-		}
-	}
+        if ($realPercent < 0 || $realPercent > 100) {
+            throw new InvalidPercentException("Invalid real percent: $realPercent.");
+        }
+    }
 }

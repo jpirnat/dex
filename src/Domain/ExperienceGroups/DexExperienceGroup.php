@@ -5,9 +5,9 @@ namespace Jp\Dex\Domain\ExperienceGroups;
 
 final readonly class DexExperienceGroup
 {
-	public function __construct(
-		private(set) string $identifier,
-		private(set) string $name,
-		private(set) int $points,
-	) {}
+    public function __construct(
+        private(set) string $identifier,
+        private(set) string $name,
+        private(set) int $points,
+    ) {}
 }

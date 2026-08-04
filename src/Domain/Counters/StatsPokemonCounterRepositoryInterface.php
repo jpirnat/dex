@@ -10,16 +10,16 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface StatsPokemonCounterRepositoryInterface
 {
-	/**
-	 * Get stats Pokémon counters by month, format, rating, and Pokémon.
-	 *
-	 * @return StatsPokemonCounter[] Ordered by score descending.
-	 */
-	public function getByMonth(
-		DateTime $month,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-		LanguageId $languageId,
-	) : array;
+    /**
+     * Get stats Pokémon counters by month, format, rating, and Pokémon.
+     *
+     * @return StatsPokemonCounter[] Ordered by score descending.
+     */
+    public function getByMonth(
+        DateTime $month,
+        FormatId $formatId,
+        int $rating,
+        PokemonId $pokemonId,
+        LanguageId $languageId,
+    ): array;
 }

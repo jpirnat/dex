@@ -10,80 +10,80 @@ use PDO;
 
 final readonly class DatabaseUsageQueries implements UsageQueriesInterface
 {
-	public function __construct(
-		private PDO $db,
-	) {}
+    public function __construct(
+        private PDO $db,
+    ) {}
 
-	/**
-	 * Get the months that have usage records.
-	 *
-	 * @return DateTime[]
-	 */
-	public function getMonths() : array
-	{
-		$stmt = $this->db->prepare(
-			'SELECT DISTINCT
-				`month`
-			FROM `usage`'
-		);
-		$stmt->execute();
+    /**
+     * Get the months that have usage records.
+     *
+     * @return DateTime[]
+     */
+    public function getMonths(): array
+    {
+        $stmt = $this->db->prepare(
+            'SELECT DISTINCT
+                `month`
+            FROM `usage`'
+        );
+        $stmt->execute();
 
-		$months = [];
+        $months = [];
 
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$month = new DateTime($result['month']);
+        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $month = new DateTime($result['month']);
 
-			$months[] = $month;
-		}
+            $months[] = $month;
+        }
 
-		return $months;
-	}
+        return $months;
+    }
 
-	/**
-	 * Get the month of the oldest instance of data in this format.
-	 */
-	public function getOldest(FormatId $formatId) : ?DateTime
-	{
-		$stmt = $this->db->prepare(
-			'SELECT
-				`month`
-			FROM `usage`
-			WHERE `format_id` = :format_id
-			ORDER BY `month`
-			LIMIT 1'
-		);
-		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
-		$stmt->execute();
-		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+    /**
+     * Get the month of the oldest instance of data in this format.
+     */
+    public function getOldest(FormatId $formatId): ?DateTime
+    {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `month`
+            FROM `usage`
+            WHERE `format_id` = :format_id
+            ORDER BY `month`
+            LIMIT 1'
+        );
+        $stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-		if (!$result) {
-			return null;
-		}
+        if (!$result) {
+            return null;
+        }
 
-		return new DateTime($result['month']);
-	}
+        return new DateTime($result['month']);
+    }
 
-	/**
-	 * Get the month of the newest instance of data in this format.
-	 */
-	public function getNewest(FormatId $formatId) : ?DateTime
-	{
-		$stmt = $this->db->prepare(
-			'SELECT
-				`month`
-			FROM `usage`
-			WHERE `format_id` = :format_id
-			ORDER BY `month` DESC
-			LIMIT 1'
-		);
-		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
-		$stmt->execute();
-		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+    /**
+     * Get the month of the newest instance of data in this format.
+     */
+    public function getNewest(FormatId $formatId): ?DateTime
+    {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `month`
+            FROM `usage`
+            WHERE `format_id` = :format_id
+            ORDER BY `month` DESC
+            LIMIT 1'
+        );
+        $stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-		if (!$result) {
-			return null;
-		}
+        if (!$result) {
+            return null;
+        }
 
-		return new DateTime($result['month']);
-	}
+        return new DateTime($result['month']);
+    }
 }

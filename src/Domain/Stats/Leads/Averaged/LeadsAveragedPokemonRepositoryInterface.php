@@ -8,15 +8,15 @@ use Jp\Dex\Domain\Formats\FormatId;
 
 interface LeadsAveragedPokemonRepositoryInterface
 {
-	/**
-	 * Get leads averaged Pokémon records by their start month, end month, and
-	 * format.
-	 *
-	 * @return LeadsAveragedPokemon[] Indexed by Pokémon id.
-	 */
-	public function getByMonthsAndFormat(
-		DateTime $start,
-		DateTime $end,
-		FormatId $formatId,
-	) : array;
+    /**
+     * Get leads averaged Pokémon records by their start month, end month, and
+     * format.
+     *
+     * @return LeadsAveragedPokemon[] Indexed by Pokémon id.
+     */
+    public function getByMonthsAndFormat(
+        DateTime $start,
+        DateTime $end,
+        FormatId $formatId,
+    ): array;
 }

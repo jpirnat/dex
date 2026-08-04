@@ -23,218 +23,218 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class DexMoveModel
 {
-	private(set) DexMove $move;
-	private(set) array $detailedData = [];
+    private(set) DexMove $move;
+    private(set) array $detailedData = [];
 
-	/** @var DexType[] $types */
-	private(set) array $types = [];
+    /** @var DexType[] $types */
+    private(set) array $types = [];
 
-	/** @var float[] $damageDealt */
-	private(set) array $damageDealt = [];
+    /** @var float[] $damageDealt */
+    private(set) array $damageDealt = [];
 
-	private(set) array $statChanges = [];
-	private(set) array $flags = [];
-
-
-	public function __construct(
-		private(set) readonly VersionGroupModel $versionGroupModel,
-		private readonly MoveRepositoryInterface $moveRepository,
-		private readonly DexMoveRepositoryInterface $dexMoveRepository,
-		private readonly VgMoveRepositoryInterface $vgMoveRepository,
-		private readonly DexTypeRepositoryInterface $dexTypeRepository,
-		private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
-		private readonly MoveFlagRepositoryInterface $flagRepository,
-		private(set) readonly DexMovePokemonModel $dexMovePokemonModel,
-	) {}
+    private(set) array $statChanges = [];
+    private(set) array $flags = [];
 
 
-	/**
-	 * Set data for the dex move page.
-	 */
-	public function setData(
-		string $vgIdentifier,
-		string $moveIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+    public function __construct(
+        private(set) readonly VersionGroupModel $versionGroupModel,
+        private readonly MoveRepositoryInterface $moveRepository,
+        private readonly DexMoveRepositoryInterface $dexMoveRepository,
+        private readonly VgMoveRepositoryInterface $vgMoveRepository,
+        private readonly DexTypeRepositoryInterface $dexTypeRepository,
+        private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
+        private readonly MoveFlagRepositoryInterface $flagRepository,
+        private(set) readonly DexMovePokemonModel $dexMovePokemonModel,
+    ) {}
 
-		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
 
-		// Set version groups for the version group control.
-		$this->versionGroupModel->setWithMove($move->id);
+    /**
+     * Set data for the dex move page.
+     */
+    public function setData(
+        string $vgIdentifier,
+        string $moveIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->move = $this->dexMoveRepository->getById($versionGroupId, $move->id, $languageId);
+        $move = $this->moveRepository->getByIdentifier($moveIdentifier);
 
-		// Set the move's detailed data.
-		$this->setDetailedData($versionGroupId, $move->id, $languageId);
+        // Set version groups for the version group control.
+        $this->versionGroupModel->setWithMove($move->id);
 
-		if ($move->type->value === MoveType::Z_MOVE) {
-			$zMoveImage = $this->vgMoveRepository->getZMoveImage($move->id, $languageId);
-			$this->detailedData['zMoveImage'] = $zMoveImage;
-		}
+        $this->move = $this->dexMoveRepository->getById($versionGroupId, $move->id, $languageId);
 
-		// Set the type matchups.
-		$this->setMatchups($versionGroupId, $move->id, $languageId);
+        // Set the move's detailed data.
+        $this->setDetailedData($versionGroupId, $move->id, $languageId);
 
-		$this->statChanges = $this->vgMoveRepository->getStatChanges(
-			$versionGroupId,
-			$move->id,
-			$languageId,
-		);
+        if ($move->type->value === MoveType::Z_MOVE) {
+            $zMoveImage = $this->vgMoveRepository->getZMoveImage($move->id, $languageId);
+            $this->detailedData['zMoveImage'] = $zMoveImage;
+        }
 
-		$this->setFlags($versionGroupId, $move->id, $languageId);
+        // Set the type matchups.
+        $this->setMatchups($versionGroupId, $move->id, $languageId);
 
-		$this->dexMovePokemonModel->setData(
-			$versionGroupId,
-			$move->id,
-			$languageId,
-		);
-	}
+        $this->statChanges = $this->vgMoveRepository->getStatChanges(
+            $versionGroupId,
+            $move->id,
+            $languageId,
+        );
 
-	/**
-	 * Set the move's detailed data.
-	 */
-	public function setDetailedData(
-		VersionGroupId $versionGroupId,
-		MoveId $moveId,
-		LanguageId $languageId,
-	) : void {
-		$vgMove = $this->vgMoveRepository->getByVgAndMove($versionGroupId, $moveId);
+        $this->setFlags($versionGroupId, $move->id, $languageId);
 
-		$infliction = null;
-		if ($vgMove->inflictionId->value !== InflictionId::NONE) {
-			$infliction = $this->vgMoveRepository->getInfliction(
-				$vgMove->inflictionId,
-				$languageId,
-			);
-			$infliction['percent'] = $vgMove->inflictionPercent;
-		}
+        $this->dexMovePokemonModel->setData(
+            $versionGroupId,
+            $move->id,
+            $languageId,
+        );
+    }
 
-		$target = $this->vgMoveRepository->getTarget(
-			$vgMove->targetId,
-			$languageId,
-		);
+    /**
+     * Set the move's detailed data.
+     */
+    public function setDetailedData(
+        VersionGroupId $versionGroupId,
+        MoveId $moveId,
+        LanguageId $languageId,
+    ): void {
+        $vgMove = $this->vgMoveRepository->getByVgAndMove($versionGroupId, $moveId);
 
-		$zMove = null;
-		if ($vgMove->zMoveId !== null) {
-			$zMove = $this->vgMoveRepository->getZMove(
-				$vgMove->zMoveId,
-				$languageId,
-			);
-			$zMove['power'] = $vgMove->zBasePower;
-		}
+        $infliction = null;
+        if ($vgMove->inflictionId->value !== InflictionId::NONE) {
+            $infliction = $this->vgMoveRepository->getInfliction(
+                $vgMove->inflictionId,
+                $languageId,
+            );
+            $infliction['percent'] = $vgMove->inflictionPercent;
+        }
 
-		if ($vgMove->zPowerEffectId !== null) {
-			$zPowerEffect = $this->vgMoveRepository->getZPowerEffect(
-				$vgMove->zPowerEffectId,
-				$languageId,
-			);
-			$zMove['zPowerEffect'] = $zPowerEffect;
-		}
+        $target = $this->vgMoveRepository->getTarget(
+            $vgMove->targetId,
+            $languageId,
+        );
 
-		$maxMove = null;
-		if ($vgMove->maxMoveId !== null) {
-			$maxMove = $this->vgMoveRepository->getMaxMove(
-				$vgMove->maxMoveId,
-				$languageId,
-			);
-			$maxMove['power'] = $vgMove->maxPower;
-		}
+        $zMove = null;
+        if ($vgMove->zMoveId !== null) {
+            $zMove = $this->vgMoveRepository->getZMove(
+                $vgMove->zMoveId,
+                $languageId,
+            );
+            $zMove['power'] = $vgMove->zBasePower;
+        }
 
-		$this->detailedData = [
-			'priority' => $vgMove->priority,
-			'minHits' => $vgMove->minHits,
-			'maxHits' => $vgMove->maxHits,
-			'infliction' => $infliction,
-			'minTurns' => $vgMove->minTurns,
-			'maxTurns' => $vgMove->maxTurns,
-			'critStage' => $vgMove->critStage,
-			'flinchPercent' => $vgMove->flinchPercent,
-			'effect' => $vgMove->effect,
-			'effectPercent' => $vgMove->effectPercent,
-			'recoilPercent' => $vgMove->recoilPercent,
-			'healPercent' => $vgMove->healPercent,
-			'target' => $target,
-			'zMove' => $zMove,
-			'maxMove' => $maxMove,
-		];
-	}
+        if ($vgMove->zPowerEffectId !== null) {
+            $zPowerEffect = $this->vgMoveRepository->getZPowerEffect(
+                $vgMove->zPowerEffectId,
+                $languageId,
+            );
+            $zMove['zPowerEffect'] = $zPowerEffect;
+        }
 
-	/**
-	 * Set the move's type matchups.
-	 */
-	private function setMatchups(
-		VersionGroupId $versionGroupId,
-		MoveId $moveId,
-		LanguageId $languageId,
-	) : void {
-		$this->types = [];
-		$this->damageDealt = [];
+        $maxMove = null;
+        if ($vgMove->maxMoveId !== null) {
+            $maxMove = $this->vgMoveRepository->getMaxMove(
+                $vgMove->maxMoveId,
+                $languageId,
+            );
+            $maxMove['power'] = $vgMove->maxPower;
+        }
 
-		$vgMove = $this->vgMoveRepository->getByVgAndMove($versionGroupId, $moveId);
-		if ($vgMove->categoryId->value === CategoryId::STATUS) {
-			// This move doesn't do damage. No matchups needed.
-			return;
-		}
+        $this->detailedData = [
+            'priority' => $vgMove->priority,
+            'minHits' => $vgMove->minHits,
+            'maxHits' => $vgMove->maxHits,
+            'infliction' => $infliction,
+            'minTurns' => $vgMove->minTurns,
+            'maxTurns' => $vgMove->maxTurns,
+            'critStage' => $vgMove->critStage,
+            'flinchPercent' => $vgMove->flinchPercent,
+            'effect' => $vgMove->effect,
+            'effectPercent' => $vgMove->effectPercent,
+            'recoilPercent' => $vgMove->recoilPercent,
+            'healPercent' => $vgMove->healPercent,
+            'target' => $target,
+            'zMove' => $zMove,
+            'maxMove' => $maxMove,
+        ];
+    }
 
-		$this->types = $this->dexTypeRepository->getMainByVersionGroup(
-			$versionGroupId,
-			$languageId,
-		);
-		$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
-			$this->versionGroupModel->versionGroup->generationId,
-			$vgMove->typeId,
-		);
-		foreach ($attackingMatchups as $matchup) {
-			$defendingTypeIdentifier = $matchup->defendingTypeIdentifier;
-			$this->damageDealt[$defendingTypeIdentifier] = $matchup->multiplier;
-		}
+    /**
+     * Set the move's type matchups.
+     */
+    private function setMatchups(
+        VersionGroupId $versionGroupId,
+        MoveId $moveId,
+        LanguageId $languageId,
+    ): void {
+        $this->types = [];
+        $this->damageDealt = [];
 
-		if ($moveId->value === MoveId::FLYING_PRESS) {
-			$attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
-				$this->versionGroupModel->versionGroup->generationId,
-				new TypeId(TypeId::FLYING),
-			);
-			foreach ($attackingMatchups as $matchup) {
-				$defendingTypeIdentifier = $matchup->defendingTypeIdentifier;
-				$this->damageDealt[$defendingTypeIdentifier] *= $matchup->multiplier;
-			}
-		}
+        $vgMove = $this->vgMoveRepository->getByVgAndMove($versionGroupId, $moveId);
+        if ($vgMove->categoryId->value === CategoryId::STATUS) {
+            // This move doesn't do damage. No matchups needed.
+            return;
+        }
 
-		if ($moveId->value === MoveId::FREEZE_DRY) {
-			$this->damageDealt[TypeIdentifier::WATER] = 2;
-		}
+        $this->types = $this->dexTypeRepository->getMainByVersionGroup(
+            $versionGroupId,
+            $languageId,
+        );
+        $attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
+            $this->versionGroupModel->versionGroup->generationId,
+            $vgMove->typeId,
+        );
+        foreach ($attackingMatchups as $matchup) {
+            $defendingTypeIdentifier = $matchup->defendingTypeIdentifier;
+            $this->damageDealt[$defendingTypeIdentifier] = $matchup->multiplier;
+        }
 
-		if ($moveId->value === MoveId::THOUSAND_ARROWS) {
-			$this->damageDealt[TypeIdentifier::FLYING] = 1;
-		}
-	}
+        if ($moveId->value === MoveId::FLYING_PRESS) {
+            $attackingMatchups = $this->typeMatchupRepository->getByAttackingType(
+                $this->versionGroupModel->versionGroup->generationId,
+                new TypeId(TypeId::FLYING),
+            );
+            foreach ($attackingMatchups as $matchup) {
+                $defendingTypeIdentifier = $matchup->defendingTypeIdentifier;
+                $this->damageDealt[$defendingTypeIdentifier] *= $matchup->multiplier;
+            }
+        }
 
-	private function setFlags(
-		VersionGroupId $versionGroupId,
-		MoveId $moveId,
-		LanguageId $languageId,
-	) : void {
-		$this->flags = [];
+        if ($moveId->value === MoveId::FREEZE_DRY) {
+            $this->damageDealt[TypeIdentifier::WATER] = 2;
+        }
 
-		$allFlags = $this->flagRepository->getByVersionGroupSingular(
-			$versionGroupId,
-			$languageId,
-		);
-		$moveFlagIds = $this->flagRepository->getByMove(
-			$versionGroupId,
-			$moveId,
-		);
+        if ($moveId->value === MoveId::THOUSAND_ARROWS) {
+            $this->damageDealt[TypeIdentifier::FLYING] = 1;
+        }
+    }
 
-		foreach ($allFlags as $flagId => $flag) {
-			$has = isset($moveFlagIds[$flagId]); // Does the move have this flag?
+    private function setFlags(
+        VersionGroupId $versionGroupId,
+        MoveId $moveId,
+        LanguageId $languageId,
+    ): void {
+        $this->flags = [];
 
-			$this->flags[] = [
-				'identifier' => $flag->identifier,
-				'name' => $flag->name,
-				'description' => $flag->description,
-				'has' => $has,
-			];
-		}
-	}
+        $allFlags = $this->flagRepository->getByVersionGroupSingular(
+            $versionGroupId,
+            $languageId,
+        );
+        $moveFlagIds = $this->flagRepository->getByMove(
+            $versionGroupId,
+            $moveId,
+        );
+
+        foreach ($allFlags as $flagId => $flag) {
+            $has = isset($moveFlagIds[$flagId]); // Does the move have this flag?
+
+            $this->flags[] = [
+                'identifier' => $flag->identifier,
+                'name' => $flag->name,
+                'description' => $flag->description,
+                'has' => $has,
+            ];
+        }
+    }
 }

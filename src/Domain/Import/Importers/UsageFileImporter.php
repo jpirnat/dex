@@ -20,126 +20,126 @@ use Psr\Http\Message\StreamInterface;
 
 final readonly class UsageFileImporter
 {
-	public function __construct(
-		private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
-		private UsageRepositoryInterface $usageRepository,
-		private UsageRatedRepositoryInterface $usageRatedRepository,
-		private UsagePokemonRepositoryInterface $usagePokemonRepository,
-		private UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
-		private UsageFileExtractor $usageFileExtractor,
-	) {}
+    public function __construct(
+        private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
+        private UsageRepositoryInterface $usageRepository,
+        private UsageRatedRepositoryInterface $usageRatedRepository,
+        private UsagePokemonRepositoryInterface $usagePokemonRepository,
+        private UsageRatedPokemonRepositoryInterface $usageRatedPokemonRepository,
+        private UsageFileExtractor $usageFileExtractor,
+    ) {}
 
-	/**
-	 * Import usage data from the given file.
-	 */
-	public function import(
-		StreamInterface $stream,
-		DateTime $month,
-		FormatId $formatId,
-		int $rating,
-	) : void {
-		$now = new DateTime()->format('Y-m-d H:i:s');
-		echo 'Importing usage file: month ' . $month->format('Y-m')
-			. ', format id ' . $formatId->value
-			. ", rating $rating. ($now)\n";
+    /**
+     * Import usage data from the given file.
+     */
+    public function import(
+        StreamInterface $stream,
+        DateTime $month,
+        FormatId $formatId,
+        int $rating,
+    ): void {
+        $now = new DateTime()->format('Y-m-d H:i:s');
+        echo 'Importing usage file: month ' . $month->format('Y-m')
+            . ', format id ' . $formatId->value
+            . ", rating $rating. ($now)\n";
 
-		// If the file is empty, there's nothing to import.
-		if ($stream->getSize() === 0) {
-			return;
-		}
+        // If the file is empty, there's nothing to import.
+        if ($stream->getSize() === 0) {
+            return;
+        }
 
-		$usageExists = $this->usageRepository->has(
-			$month,
-			$formatId,
-		);
-		$usageRatedExists = $this->usageRatedRepository->has(
-			$month,
-			$formatId,
-			$rating,
-		);
-		$usagePokemonExists = $this->usagePokemonRepository->hasAny(
-			$month,
-			$formatId,
-		);
-		$usageRatedPokemonExists = $this->usageRatedPokemonRepository->hasAny(
-			$month,
-			$formatId,
-			$rating,
-		);
+        $usageExists = $this->usageRepository->has(
+            $month,
+            $formatId,
+        );
+        $usageRatedExists = $this->usageRatedRepository->has(
+            $month,
+            $formatId,
+            $rating,
+        );
+        $usagePokemonExists = $this->usagePokemonRepository->hasAny(
+            $month,
+            $formatId,
+        );
+        $usageRatedPokemonExists = $this->usageRatedPokemonRepository->hasAny(
+            $month,
+            $formatId,
+            $rating,
+        );
 
-		// If all data in this file has already been imported, there's no need
-		// to import it again. We can quit early.
-		if ($usageExists
-			&& $usageRatedExists
-			&& $usagePokemonExists
-			&& $usageRatedPokemonExists
-		) {
-			return;
-		}
+        // If all data in this file has already been imported, there's no need
+        // to import it again. We can quit early.
+        if ($usageExists
+            && $usageRatedExists
+            && $usagePokemonExists
+            && $usageRatedPokemonExists
+        ) {
+            return;
+        }
 
-		$line = Utils::readLine($stream);
-		$totalBattles = $this->usageFileExtractor->extractTotalBattles($line);
-		if (!$usageExists) {
-			$usage = new Usage(
-				$month,
-				$formatId,
-				$totalBattles,
-			);
-			$this->usageRepository->save($usage);
-		}
+        $line = Utils::readLine($stream);
+        $totalBattles = $this->usageFileExtractor->extractTotalBattles($line);
+        if (!$usageExists) {
+            $usage = new Usage(
+                $month,
+                $formatId,
+                $totalBattles,
+            );
+            $this->usageRepository->save($usage);
+        }
 
-		$line = Utils::readLine($stream);
-		$averageWeightPerTeam = $this->usageFileExtractor->extractAverageWeightPerTeam($line);
-		if (!$usageRatedExists) {
-			$usageRated = new UsageRated(
-				$month,
-				$formatId,
-				$rating,
-				$averageWeightPerTeam,
-			);
-			$this->usageRatedRepository->save($usageRated);
-		}
+        $line = Utils::readLine($stream);
+        $averageWeightPerTeam = $this->usageFileExtractor->extractAverageWeightPerTeam($line);
+        if (!$usageRatedExists) {
+            $usageRated = new UsageRated(
+                $month,
+                $formatId,
+                $rating,
+                $averageWeightPerTeam,
+            );
+            $this->usageRatedRepository->save($usageRated);
+        }
 
-		// Ignore the next three lines.
-		Utils::readLine($stream);
-		Utils::readLine($stream);
-		Utils::readLine($stream);
+        // Ignore the next three lines.
+        Utils::readLine($stream);
+        Utils::readLine($stream);
+        Utils::readLine($stream);
 
-		while ($this->usageFileExtractor->isUsage($line = Utils::readLine($stream))) {
-			$usage = $this->usageFileExtractor->extractUsage($line);
-			$showdownPokemonName = $usage->showdownPokemonName;
+        while ($this->usageFileExtractor->isUsage($line = Utils::readLine($stream))) {
+            $usage = $this->usageFileExtractor->extractUsage($line);
+            $showdownPokemonName = $usage->showdownPokemonName;
 
-			// If this Pokémon is not meant to be imported, skip it.
-			if (!$this->showdownPokemonRepository->isImported($showdownPokemonName)) {
-				continue;
-			}
+            // If this Pokémon is not meant to be imported, skip it.
+            if (!$this->showdownPokemonRepository->isImported($showdownPokemonName)) {
+                continue;
+            }
 
-			$pokemonId = $this->showdownPokemonRepository->getPokemonId($showdownPokemonName);
+            $pokemonId = $this->showdownPokemonRepository->getPokemonId($showdownPokemonName);
 
-			if (!$usagePokemonExists) {
-				$usagePokemon = new UsagePokemon(
-					$month,
-					$formatId,
-					$pokemonId,
-					$usage->raw,
-					$usage->rawPercent,
-					$usage->real,
-					$usage->realPercent,
-				);
-				$this->usagePokemonRepository->save($usagePokemon);
-			}
+            if (!$usagePokemonExists) {
+                $usagePokemon = new UsagePokemon(
+                    $month,
+                    $formatId,
+                    $pokemonId,
+                    $usage->raw,
+                    $usage->rawPercent,
+                    $usage->real,
+                    $usage->realPercent,
+                );
+                $this->usagePokemonRepository->save($usagePokemon);
+            }
 
-			if (!$usageRatedPokemonExists) {
-				$usageRatedPokemon = new UsageRatedPokemon(
-					$month,
-					$formatId,
-					$rating,
-					$pokemonId,
-					$usage->rank,
-					$usage->usagePercent,
-				);
-				$this->usageRatedPokemonRepository->save($usageRatedPokemon);
-			}
-		}
-	}
+            if (!$usageRatedPokemonExists) {
+                $usageRatedPokemon = new UsageRatedPokemon(
+                    $month,
+                    $formatId,
+                    $rating,
+                    $pokemonId,
+                    $usage->rank,
+                    $usage->usagePercent,
+                );
+                $this->usageRatedPokemonRepository->save($usageRatedPokemon);
+            }
+        }
+    }
 }

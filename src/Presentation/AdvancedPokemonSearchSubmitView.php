@@ -9,23 +9,23 @@ use Psr\Http\Message\ResponseInterface;
 
 final readonly class AdvancedPokemonSearchSubmitView
 {
-	public function __construct(
-		private AdvancedPokemonSearchSubmitModel $advancedPokemonSearchSubmitModel,
-		private DexFormatter $dexFormatter
-	) {}
+    public function __construct(
+        private AdvancedPokemonSearchSubmitModel $advancedPokemonSearchSubmitModel,
+        private DexFormatter $dexFormatter
+    ) {}
 
-	/**
-	 * Get data for the advanced Pokémon search page.
-	 */
-	public function getData() : ResponseInterface
-	{
-		$pokemons = $this->advancedPokemonSearchSubmitModel->pokemons;
-		$pokemons = $this->dexFormatter->formatDexPokemon($pokemons);
+    /**
+     * Get data for the advanced Pokémon search page.
+     */
+    public function getData(): ResponseInterface
+    {
+        $pokemons = $this->advancedPokemonSearchSubmitModel->pokemons;
+        $pokemons = $this->dexFormatter->formatDexPokemon($pokemons);
 
-		return new JsonResponse([
-			'data' => [
-				'pokemons' => $pokemons,
-			]
-		]);
-	}
+        return new JsonResponse([
+            'data' => [
+                'pokemons' => $pokemons,
+            ]
+        ]);
+    }
 }

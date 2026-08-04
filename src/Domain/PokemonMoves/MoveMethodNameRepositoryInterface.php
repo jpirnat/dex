@@ -7,10 +7,10 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 interface MoveMethodNameRepositoryInterface
 {
-	/**
-	 * Get move method names by language.
-	 *
-	 * @return MoveMethodName[] Indexed by move method id.
-	 */
-	public function getByLanguage(LanguageId $languageId) : array;
+    /**
+     * Get move method names by language.
+     *
+     * @return MoveMethodName[] Indexed by move method id.
+     */
+    public function getByLanguage(LanguageId $languageId): array;
 }

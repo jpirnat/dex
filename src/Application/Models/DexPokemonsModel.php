@@ -11,35 +11,35 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexPokemonsModel
 {
-	private(set) array $stats = [];
+    private(set) array $stats = [];
 
-	/** @var DexPokemon[] $pokemon */
-	private(set) array $pokemon = [];
-
-
-	public function __construct(
-		private(set) readonly VersionGroupModel $versionGroupModel,
-		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
-		private readonly DexStatRepositoryInterface $dexStatRepository,
-	) {}
+    /** @var DexPokemon[] $pokemon */
+    private(set) array $pokemon = [];
 
 
-	/**
-	 * Set data for the dex Pokémons page.
-	 */
-	public function setData(
-		string $vgIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+    public function __construct(
+        private(set) readonly VersionGroupModel $versionGroupModel,
+        private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
+        private readonly DexStatRepositoryInterface $dexStatRepository,
+    ) {}
 
-		$this->versionGroupModel->setSinceGeneration(new GenerationId(1));
 
-		$this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
+    /**
+     * Set data for the dex Pokémons page.
+     */
+    public function setData(
+        string $vgIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->pokemon = $this->dexPokemonRepository->getByVersionGroup(
-			$versionGroupId,
-			$languageId,
-		);
-	}
+        $this->versionGroupModel->setSinceGeneration(new GenerationId(1));
+
+        $this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
+
+        $this->pokemon = $this->dexPokemonRepository->getByVersionGroup(
+            $versionGroupId,
+            $languageId,
+        );
+    }
 }

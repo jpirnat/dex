@@ -16,82 +16,82 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 
 final class StatsLeadsModel
 {
-	private(set) string $month;
-	private(set) Format $format;
-	private(set) int $rating;
-	private(set) LanguageId $languageId;
+    private(set) string $month;
+    private(set) Format $format;
+    private(set) int $rating;
+    private(set) LanguageId $languageId;
 
-	/** @var int[] $ratings */
-	private(set) array $ratings = [];
+    /** @var int[] $ratings */
+    private(set) array $ratings = [];
 
-	private(set) string $speedName = '';
+    private(set) string $speedName = '';
 
-	/** @var StatsLeadsPokemon[] $pokemon */
-	private(set) array $pokemon = [];
+    /** @var StatsLeadsPokemon[] $pokemon */
+    private(set) array $pokemon = [];
 
-	/** @var DateTime[] $months */
-	private(set) array $months = [];
-
-
-	public function __construct(
-		private(set) readonly DateModel $dateModel,
-		private readonly FormatRepositoryInterface $formatRepository,
-		private readonly RatingQueriesInterface $ratingQueries,
-		private readonly StatNameRepositoryInterface $statNameRepository,
-		private readonly StatsLeadsPokemonRepositoryInterface $statsLeadsPokemonRepository,
-		private readonly UsageRatedQueriesInterface $usageRatedQueries,
-	) {}
+    /** @var DateTime[] $months */
+    private(set) array $months = [];
 
 
-	/**
-	 * Get leads data to recreate a stats leads file, such as
-	 * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
-	 */
-	public function setData(
-		string $month,
-		string $formatIdentifier,
-		int $rating,
-		LanguageId $languageId,
-	) : void {
-		$this->month = $month;
-		$this->rating = $rating;
-		$this->languageId = $languageId;
+    public function __construct(
+        private(set) readonly DateModel $dateModel,
+        private readonly FormatRepositoryInterface $formatRepository,
+        private readonly RatingQueriesInterface $ratingQueries,
+        private readonly StatNameRepositoryInterface $statNameRepository,
+        private readonly StatsLeadsPokemonRepositoryInterface $statsLeadsPokemonRepository,
+        private readonly UsageRatedQueriesInterface $usageRatedQueries,
+    ) {}
 
-		// Get the format.
-		$this->format = $this->formatRepository->getByIdentifier(
-			$formatIdentifier,
-			$languageId,
-		);
 
-		// Get the previous month and the next month.
-		$this->dateModel->setMonthAndFormat($month, $this->format->id);
-		$thisMonth = $this->dateModel->thisMonth;
-		$prevMonth = $this->dateModel->prevMonth;
+    /**
+     * Get leads data to recreate a stats leads file, such as
+     * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
+     */
+    public function setData(
+        string $month,
+        string $formatIdentifier,
+        int $rating,
+        LanguageId $languageId,
+    ): void {
+        $this->month = $month;
+        $this->rating = $rating;
+        $this->languageId = $languageId;
 
-		// Get the ratings for this month.
-		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
-			$thisMonth,
-			$this->format->id,
-		);
+        // Get the format.
+        $this->format = $this->formatRepository->getByIdentifier(
+            $formatIdentifier,
+            $languageId,
+        );
 
-		$speedName = $this->statNameRepository->getByLanguageAndStat(
-			$languageId,
-			new StatId(StatId::SPEED),
-		);
-		$this->speedName = $speedName->name;
+        // Get the previous month and the next month.
+        $this->dateModel->setMonthAndFormat($month, $this->format->id);
+        $thisMonth = $this->dateModel->thisMonth;
+        $prevMonth = $this->dateModel->prevMonth;
 
-		// Get the Pokémon usage data.
-		$this->pokemon = $this->statsLeadsPokemonRepository->getByMonth(
-			$thisMonth,
-			$prevMonth,
-			$this->format->id,
-			$rating,
-			$languageId,
-		);
+        // Get the ratings for this month.
+        $this->ratings = $this->ratingQueries->getByMonthAndFormat(
+            $thisMonth,
+            $this->format->id,
+        );
 
-		$this->months = $this->usageRatedQueries->getMonthsWithData(
-			$this->format->id,
-			$rating,
-		);
-	}
+        $speedName = $this->statNameRepository->getByLanguageAndStat(
+            $languageId,
+            new StatId(StatId::SPEED),
+        );
+        $this->speedName = $speedName->name;
+
+        // Get the Pokémon usage data.
+        $this->pokemon = $this->statsLeadsPokemonRepository->getByMonth(
+            $thisMonth,
+            $prevMonth,
+            $this->format->id,
+            $rating,
+            $languageId,
+        );
+
+        $this->months = $this->usageRatedQueries->getMonthsWithData(
+            $this->format->id,
+            $rating,
+        );
+    }
 }

@@ -8,14 +8,14 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface ExpandedDexPokemonRepositoryInterface
 {
-	/**
-	 * Get an expanded dex Pokémon by its id.
-	 *
-	 * @throws VgPokemonNotFoundException if no Pokémon exists with this id.
-	 */
-	public function getById(
-		VersionGroupId $versionGroupId,
-		PokemonId $pokemonId,
-		LanguageId $languageId,
-	) : ExpandedDexPokemon;
+    /**
+     * Get an expanded dex Pokémon by its id.
+     *
+     * @throws VgPokemonNotFoundException if no Pokémon exists with this id.
+     */
+    public function getById(
+        VersionGroupId $versionGroupId,
+        PokemonId $pokemonId,
+        LanguageId $languageId,
+    ): ExpandedDexPokemon;
 }

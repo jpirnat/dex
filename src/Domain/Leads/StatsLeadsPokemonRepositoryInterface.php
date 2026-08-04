@@ -9,16 +9,16 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 interface StatsLeadsPokemonRepositoryInterface
 {
-	/**
-	 * Get stats leads Pokémon by month, format, and rating.
-	 *
-	 * @return StatsLeadsPokemon[] Ordered by rank ascending.
-	 */
-	public function getByMonth(
-		DateTime $month,
-		?DateTime $prevMonth,
-		FormatId $formatId,
-		int $rating,
-		LanguageId $languageId,
-	) : array;
+    /**
+     * Get stats leads Pokémon by month, format, and rating.
+     *
+     * @return StatsLeadsPokemon[] Ordered by rank ascending.
+     */
+    public function getByMonth(
+        DateTime $month,
+        ?DateTime $prevMonth,
+        FormatId $formatId,
+        int $rating,
+        LanguageId $languageId,
+    ): array;
 }

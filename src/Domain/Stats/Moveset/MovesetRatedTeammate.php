@@ -9,18 +9,18 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 
 final readonly class MovesetRatedTeammate
 {
-	/**
-	 * Constructor.
-	 *
-	 * @throws InvalidPercentException if $percent is invalid
-	 */
-	public function __construct(
-		private(set) UsageRatedPokemonId $usageRatedPokemonId,
-		private(set) PokemonId $teammateId,
-		private(set) float $percent,
-	) {
-		if ($percent < 0 || $percent > 100) {
-			throw new InvalidPercentException("Invalid percent: $percent.");
-		}
-	}
+    /**
+     * Constructor.
+     *
+     * @throws InvalidPercentException if $percent is invalid
+     */
+    public function __construct(
+        private(set) UsageRatedPokemonId $usageRatedPokemonId,
+        private(set) PokemonId $teammateId,
+        private(set) float $percent,
+    ) {
+        if ($percent < 0 || $percent > 100) {
+            throw new InvalidPercentException("Invalid percent: $percent.");
+        }
+    }
 }

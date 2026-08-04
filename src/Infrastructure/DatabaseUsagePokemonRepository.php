@@ -11,60 +11,60 @@ use PDO;
 
 final readonly class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface
 {
-	public function __construct(
-		private PDO $db,
-	) {}
+    public function __construct(
+        private PDO $db,
+    ) {}
 
-	/**
-	 * Do any usage Pokémon records exist for this month and format?
-	 */
-	public function hasAny(DateTime $month, FormatId $formatId) : bool
-	{
-		$stmt = $this->db->prepare(
-			'SELECT
-				1
-			FROM `usage_pokemon`
-			WHERE `month` = :month
-				AND `format_id` = :format_id
-			LIMIT 1'
-		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
-		$stmt->execute();
-		return (bool) $stmt->fetchColumn();
-	}
+    /**
+     * Do any usage Pokémon records exist for this month and format?
+     */
+    public function hasAny(DateTime $month, FormatId $formatId): bool
+    {
+        $stmt = $this->db->prepare(
+            'SELECT
+                1
+            FROM `usage_pokemon`
+            WHERE `month` = :month
+                AND `format_id` = :format_id
+            LIMIT 1'
+        );
+        $stmt->bindValue(':month', $month->format('Y-m-01'));
+        $stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
+        $stmt->execute();
+        return (bool) $stmt->fetchColumn();
+    }
 
-	/**
-	 * Save a usage Pokémon record.
-	 */
-	public function save(UsagePokemon $usagePokemon) : void
-	{
-		$stmt = $this->db->prepare(
-			'INSERT INTO `usage_pokemon` (
-				`month`,
-				`format_id`,
-				`pokemon_id`,
-				`raw`,
-				`raw_percent`,
-				`real`,
-				`real_percent`
-			) VALUES (
-				:month,
-				:format_id,
-				:pokemon_id,
-				:raw,
-				:raw_percent,
-				:real,
-				:real_percent
-			)'
-		);
-		$stmt->bindValue(':month', $usagePokemon->month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $usagePokemon->formatId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $usagePokemon->pokemonId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':raw', $usagePokemon->raw, PDO::PARAM_INT);
-		$stmt->bindValue(':raw_percent', $usagePokemon->rawPercent);
-		$stmt->bindValue(':real', $usagePokemon->real, PDO::PARAM_INT);
-		$stmt->bindValue(':real_percent', $usagePokemon->realPercent);
-		$stmt->execute();
-	}
+    /**
+     * Save a usage Pokémon record.
+     */
+    public function save(UsagePokemon $usagePokemon): void
+    {
+        $stmt = $this->db->prepare(
+            'INSERT INTO `usage_pokemon` (
+                `month`,
+                `format_id`,
+                `pokemon_id`,
+                `raw`,
+                `raw_percent`,
+                `real`,
+                `real_percent`
+            ) VALUES (
+                :month,
+                :format_id,
+                :pokemon_id,
+                :raw,
+                :raw_percent,
+                :real,
+                :real_percent
+            )'
+        );
+        $stmt->bindValue(':month', $usagePokemon->month->format('Y-m-01'));
+        $stmt->bindValue(':format_id', $usagePokemon->formatId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':pokemon_id', $usagePokemon->pokemonId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':raw', $usagePokemon->raw, PDO::PARAM_INT);
+        $stmt->bindValue(':raw_percent', $usagePokemon->rawPercent);
+        $stmt->bindValue(':real', $usagePokemon->real, PDO::PARAM_INT);
+        $stmt->bindValue(':real_percent', $usagePokemon->realPercent);
+        $stmt->execute();
+    }
 }

@@ -8,16 +8,16 @@ use Jp\Dex\Domain\Formats\FormatId;
 
 interface UsageRatedAveragedPokemonRepositoryInterface
 {
-	/**
-	 * Get usage rated averaged Pokémon records by their start month, end month,
-	 * format, and rating.
-	 *
-	 * @return UsageRatedAveragedPokemon[] Indexed by Pokémon id.
-	 */
-	public function getByMonthsAndFormatAndRating(
-		DateTime $start,
-		DateTime $end,
-		FormatId $formatId,
-		int $rating,
-	) : array;
+    /**
+     * Get usage rated averaged Pokémon records by their start month, end month,
+     * format, and rating.
+     *
+     * @return UsageRatedAveragedPokemon[] Indexed by Pokémon id.
+     */
+    public function getByMonthsAndFormatAndRating(
+        DateTime $start,
+        DateTime $end,
+        FormatId $formatId,
+        int $rating,
+    ): array;
 }

@@ -10,17 +10,17 @@ use Jp\Dex\Domain\Moves\MoveId;
 
 interface StatsMovePokemonRepositoryInterface
 {
-	/**
-	 * Get stats move Pokémon by month, format, rating, and move.
-	 *
-	 * @return StatsMovePokemon[] Ordered by usage percent descending.
-	 */
-	public function getByMonth(
-		DateTime $month,
-		?DateTime $prevMonth,
-		FormatId $formatId,
-		int $rating,
-		MoveId $moveId,
-		LanguageId $languageId,
-	) : array;
+    /**
+     * Get stats move Pokémon by month, format, rating, and move.
+     *
+     * @return StatsMovePokemon[] Ordered by usage percent descending.
+     */
+    public function getByMonth(
+        DateTime $month,
+        ?DateTime $prevMonth,
+        FormatId $formatId,
+        int $rating,
+        MoveId $moveId,
+        LanguageId $languageId,
+    ): array;
 }

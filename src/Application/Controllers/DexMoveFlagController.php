@@ -9,22 +9,22 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final readonly class DexMoveFlagController
 {
-	public function __construct(
-		private BaseController $baseController,
-		private DexMoveFlagModel $dexMoveFlagModel,
-	) {}
+    public function __construct(
+        private BaseController $baseController,
+        private DexMoveFlagModel $dexMoveFlagModel,
+    ) {}
 
-	/**
-	 * Set data for the dex move flag page.
-	 */
-	public function setData(ServerRequestInterface $request) : void
-	{
-		$this->baseController->setBaseVariables($request);
+    /**
+     * Set data for the dex move flag page.
+     */
+    public function setData(ServerRequestInterface $request): void
+    {
+        $this->baseController->setBaseVariables($request);
 
-		$vgIdentifier = $request->getAttribute('vgIdentifier');
-		$flagIdentifier = $request->getAttribute('moveFlagIdentifier');
-		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
+        $vgIdentifier = $request->getAttribute('vgIdentifier');
+        $flagIdentifier = $request->getAttribute('moveFlagIdentifier');
+        $languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexMoveFlagModel->setData($vgIdentifier, $flagIdentifier, $languageId);
-	}
+        $this->dexMoveFlagModel->setData($vgIdentifier, $flagIdentifier, $languageId);
+    }
 }

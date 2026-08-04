@@ -20,16 +20,16 @@ $languageId = new LanguageId(LanguageId::ENGLISH);
 $evolutions = $evolutionRepository->getAll();
 $count = 0;
 foreach ($evolutions as $evolution) {
-	try {
-		$text = $evolutionFormatter->format($evolution, $languageId);
-		echo $text->html;
-		echo "\n";
-	} catch (Exception $e) {
-		var_dump($evolution);
-		throw $e;
-	}
+    try {
+        $text = $evolutionFormatter->format($evolution, $languageId);
+        echo $text->html;
+        echo "\n";
+    } catch (Exception $e) {
+        var_dump($evolution);
+        throw $e;
+    }
 
-	$count++;
+    $count++;
 }
 
 echo "Total tested: $count\n";

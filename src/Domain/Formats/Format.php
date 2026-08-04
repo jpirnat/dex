@@ -8,14 +8,14 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final readonly class Format
 {
-	public function __construct(
-		private(set) FormatId $id,
-		private(set) string $identifier,
-		private(set) string $name,
-		private(set) GenerationId $generationId,
-		private(set) VersionGroupId $versionGroupId,
-		private(set) int $level,
-		private(set) int $fieldSize,
-		private(set) string $smogonDexIdentifier,
-	) {}
+    public function __construct(
+        private(set) FormatId $id,
+        private(set) string $identifier,
+        private(set) string $name,
+        private(set) GenerationId $generationId,
+        private(set) VersionGroupId $versionGroupId,
+        private(set) int $level,
+        private(set) int $fieldSize,
+        private(set) string $smogonDexIdentifier,
+    ) {}
 }

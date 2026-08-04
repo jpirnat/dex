@@ -11,41 +11,41 @@ use PDO;
 
 final readonly class DatabaseLanguageRepository implements LanguageRepositoryInterface
 {
-	public function __construct(
-		private PDO $db,
-	) {}
+    public function __construct(
+        private PDO $db,
+    ) {}
 
-	/**
-	 * Get a language by its id.
-	 *
-	 * @throws LanguageNotFoundException if no language exists with this id.
-	 */
-	public function getById(LanguageId $languageId) : Language
-	{
-		$stmt = $this->db->prepare(
-			'SELECT
-				`identifier`,
-				`locale`,
-				`date_format`
-			FROM `languages`
-			WHERE `id` = :language_id
-			LIMIT 1'
-		);
-		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
-		$stmt->execute();
-		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+    /**
+     * Get a language by its id.
+     *
+     * @throws LanguageNotFoundException if no language exists with this id.
+     */
+    public function getById(LanguageId $languageId): Language
+    {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `identifier`,
+                `locale`,
+                `date_format`
+            FROM `languages`
+            WHERE `id` = :language_id
+            LIMIT 1'
+        );
+        $stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-		if (!$result) {
-			throw new LanguageNotFoundException(
-				"No language exists with id $languageId->value."
-			);
-		}
+        if (!$result) {
+            throw new LanguageNotFoundException(
+                "No language exists with id $languageId->value."
+            );
+        }
 
-		return new Language(
-			$languageId,
-			$result['identifier'],
-			$result['locale'],
-			$result['date_format'],
-		);
-	}
+        return new Language(
+            $languageId,
+            $result['identifier'],
+            $result['locale'],
+            $result['date_format'],
+        );
+    }
 }

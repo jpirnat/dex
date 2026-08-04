@@ -18,114 +18,114 @@ use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 
 final class DexPokemonModel
 {
-	private(set) ?ExpandedDexPokemon $pokemon = null;
-	private(set) array $stats = [];
-	private(set) string $breedingPartnersSearchUrl = '';
+    private(set) ?ExpandedDexPokemon $pokemon = null;
+    private(set) array $stats = [];
+    private(set) string $breedingPartnersSearchUrl = '';
 
 
-	public function __construct(
-		private(set) readonly VersionGroupModel $versionGroupModel,
-		private readonly PokemonRepositoryInterface $pokemonRepository,
-		private readonly ExpandedDexPokemonRepositoryInterface $expandedDexPokemonRepository,
-		private readonly DexStatRepositoryInterface $dexStatRepository,
-		private(set) readonly DexPokemonMatchupsModel $dexPokemonMatchupsModel,
-		private(set) readonly DexPokemonEvolutionsModel $dexPokemonEvolutionsModel,
-		private(set) readonly DexPokemonMovesModel $dexPokemonMovesModel,
-	) {}
+    public function __construct(
+        private(set) readonly VersionGroupModel $versionGroupModel,
+        private readonly PokemonRepositoryInterface $pokemonRepository,
+        private readonly ExpandedDexPokemonRepositoryInterface $expandedDexPokemonRepository,
+        private readonly DexStatRepositoryInterface $dexStatRepository,
+        private(set) readonly DexPokemonMatchupsModel $dexPokemonMatchupsModel,
+        private(set) readonly DexPokemonEvolutionsModel $dexPokemonEvolutionsModel,
+        private(set) readonly DexPokemonMovesModel $dexPokemonMovesModel,
+    ) {}
 
 
-	/**
-	 * Set data for the dex Pokémon page.
-	 */
-	public function setData(
-		string $vgIdentifier,
-		string $pokemonIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$this->pokemon = null;
-		$this->stats = [];
-		$this->breedingPartnersSearchUrl = '';
+    /**
+     * Set data for the dex Pokémon page.
+     */
+    public function setData(
+        string $vgIdentifier,
+        string $pokemonIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $this->pokemon = null;
+        $this->stats = [];
+        $this->breedingPartnersSearchUrl = '';
 
-		try {
-			$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
-			$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
-		} catch (VersionGroupNotFoundException | PokemonNotFoundException) {
-			return;
-		}
+        try {
+            $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+            $pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
+        } catch (VersionGroupNotFoundException | PokemonNotFoundException) {
+            return;
+        }
 
-		$this->versionGroupModel->setWithPokemon($pokemon->id);
+        $this->versionGroupModel->setWithPokemon($pokemon->id);
 
-		try {
-			$this->pokemon = $this->expandedDexPokemonRepository->getById(
-				$versionGroupId,
-				$pokemon->id,
-				$languageId,
-			);
-		} catch (VgPokemonNotFoundException) {
-			return;
-		}
+        try {
+            $this->pokemon = $this->expandedDexPokemonRepository->getById(
+                $versionGroupId,
+                $pokemon->id,
+                $languageId,
+            );
+        } catch (VgPokemonNotFoundException) {
+            return;
+        }
 
-		$this->stats = $this->dexStatRepository->getByVersionGroup(
-			$versionGroupId,
-			$languageId,
-		);
+        $this->stats = $this->dexStatRepository->getByVersionGroup(
+            $versionGroupId,
+            $languageId,
+        );
 
-		// Set the Pokémon's matchups.
-		$this->dexPokemonMatchupsModel->setData(
-			$this->versionGroupModel->versionGroup,
-			$pokemon->id,
-			$languageId,
-			$this->pokemon->abilities,
-		);
+        // Set the Pokémon's matchups.
+        $this->dexPokemonMatchupsModel->setData(
+            $this->versionGroupModel->versionGroup,
+            $pokemon->id,
+            $languageId,
+            $this->pokemon->abilities,
+        );
 
-		$this->setBreedingPartnersSearchUrl($vgIdentifier);
+        $this->setBreedingPartnersSearchUrl($vgIdentifier);
 
-		// Set the Pokémon's evolutions.
-		$this->dexPokemonEvolutionsModel->setData(
-			$versionGroupId,
-			$pokemon->id,
-			$languageId,
-		);
+        // Set the Pokémon's evolutions.
+        $this->dexPokemonEvolutionsModel->setData(
+            $versionGroupId,
+            $pokemon->id,
+            $languageId,
+        );
 
-		$this->dexPokemonMovesModel->setData(
-			$versionGroupId,
-			$pokemon->id,
-			$languageId,
-		);
-	}
+        $this->dexPokemonMovesModel->setData(
+            $versionGroupId,
+            $pokemon->id,
+            $languageId,
+        );
+    }
 
-	public function setBreedingPartnersSearchUrl(
-		string $vgIdentifier,
-	) : void {
-		$versionGroup = $this->versionGroupModel->versionGroup;
-		$eggGroups = $this->pokemon->eggGroups;
-		$genderRatio = $this->pokemon->genderRatio->value;
+    public function setBreedingPartnersSearchUrl(
+        string $vgIdentifier,
+    ): void {
+        $versionGroup = $this->versionGroupModel->versionGroup;
+        $eggGroups = $this->pokemon->eggGroups;
+        $genderRatio = $this->pokemon->genderRatio->value;
 
-		if (!$versionGroup->hasBreeding
-			|| $eggGroups === []
-			|| $eggGroups[0]->identifier === EggGroupIdentifier::UNDISCOVERED
-			|| $eggGroups[0]->identifier === EggGroupIdentifier::DITTO
-			|| $genderRatio === GenderRatio::GENDER_UNKNOWN
-		) {
-			return;
-		}
+        if (!$versionGroup->hasBreeding
+            || $eggGroups === []
+            || $eggGroups[0]->identifier === EggGroupIdentifier::UNDISCOVERED
+            || $eggGroups[0]->identifier === EggGroupIdentifier::DITTO
+            || $genderRatio === GenderRatio::GENDER_UNKNOWN
+        ) {
+            return;
+        }
 
-		$eggGroups = array_map(
-			function (DexEggGroup $e) : string {
-				return $e->identifier;
-			},
-			$this->pokemon->eggGroups,
-		);
-		$eggGroups = implode('.', $eggGroups);
+        $eggGroups = array_map(
+            function (DexEggGroup $e): string {
+                return $e->identifier;
+            },
+            $this->pokemon->eggGroups,
+        );
+        $eggGroups = implode('.', $eggGroups);
 
-		$genderRatios = GenderRatio::GENDER_UNKNOWN;
-		if ($genderRatio === GenderRatio::MALE_ONLY) {
-			$genderRatios .= ".$genderRatio";
-		}
-		if ($genderRatio === GenderRatio::FEMALE_ONLY) {
-			$genderRatios .= ".$genderRatio";
-		}
+        $genderRatios = GenderRatio::GENDER_UNKNOWN;
+        if ($genderRatio === GenderRatio::MALE_ONLY) {
+            $genderRatios .= ".$genderRatio";
+        }
+        if ($genderRatio === GenderRatio::FEMALE_ONLY) {
+            $genderRatios .= ".$genderRatio";
+        }
 
-		$this->breedingPartnersSearchUrl = "/dex/$vgIdentifier/advanced-pokemon-search?eggGroups=$eggGroups&genderRatios=$genderRatios&genderRatiosOperator=none";
-	}
+        $this->breedingPartnersSearchUrl = "/dex/$vgIdentifier/advanced-pokemon-search?eggGroups=$eggGroups&genderRatios=$genderRatios&genderRatiosOperator=none";
+    }
 }

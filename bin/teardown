@@ -14,8 +14,8 @@ $tables = require __DIR__ . '/../sql/schema/stats/tables.php';
 $tables = array_reverse($tables);
 
 foreach ($tables as $table) {
-	$database->exec("DROP TABLE IF EXISTS `$table`");
-	echo "Removed $table\n";
+    $database->exec("DROP TABLE IF EXISTS `$table`");
+    echo "Removed $table\n";
 }
 
 // Drop the dex schema, one table at a time.
@@ -23,12 +23,12 @@ $tables = require __DIR__ . '/../sql/schema/dex/tables.php';
 $tables = array_reverse($tables);
 
 foreach ($tables as $key => $table) {
-	if (is_string($key)) {
-		$table = $key;
-	}
+    if (is_string($key)) {
+        $table = $key;
+    }
 
-	$database->exec("DROP TABLE IF EXISTS `$table`");
-	echo "Removed $table\n";
+    $database->exec("DROP TABLE IF EXISTS `$table`");
+    echo "Removed $table\n";
 }
 
 echo "Done!\n";

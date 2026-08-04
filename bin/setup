@@ -7,16 +7,16 @@ require __DIR__ . '/../config/environment.php';
 $container = require __DIR__ . '/../config/container.php';
 $tables = require __DIR__ . '/../sql/schema/dex/tables.php';
 
-function importFile(PDO $database, string $table, string $file) : void
+function importFile(PDO $database, string $table, string $file): void
 {
-	$database->exec(
-		"LOAD DATA LOCAL INFILE '$file'
-		INTO TABLE `$table`
-		FIELDS
-			TERMINATED BY ','
-			OPTIONALLY ENCLOSED BY '\"'
-		IGNORE 1 LINES"
-	);
+    $database->exec(
+        "LOAD DATA LOCAL INFILE '$file'
+        INTO TABLE `$table`
+        FIELDS
+            TERMINATED BY ','
+            OPTIONALLY ENCLOSED BY '\"'
+        IGNORE 1 LINES"
+    );
 }
 
 /** @var PDO $database */
@@ -24,39 +24,39 @@ $database = $container->get('$dbsetup');
 
 // Load the dex schema and data, one table at a time.
 foreach ($tables as $key => $table) {
-	$files = null;
-	if (is_string($key)) {
-		// This table's data is split across multiple files.
-		$files = $table;
-		$table = $key;
-	}
+    $files = null;
+    if (is_string($key)) {
+        // This table's data is split across multiple files.
+        $files = $table;
+        $table = $key;
+    }
 
-	// Create the table from its schema definition.
-	$database->exec(file_get_contents(__DIR__ . "/../sql/schema/dex/$table.sql"));
+    // Create the table from its schema definition.
+    $database->exec(file_get_contents(__DIR__ . "/../sql/schema/dex/$table.sql"));
 
-	if (isset($files)) {
-		// This table's data is split across multiple files.
-		$files = $tables[$table];
-		foreach ($files as $file) {
-			$file = __DIR__ . "/../data/$file.csv";
-			importFile($database, $table, $file);
-			echo "Loaded file $file\n";
-		}
-	} else {
-		// This table's data is contained within a single file.
-		$file = __DIR__ . "/../data/$table.csv";
-		importFile($database, $table, $file);
-	}
+    if (isset($files)) {
+        // This table's data is split across multiple files.
+        $files = $tables[$table];
+        foreach ($files as $file) {
+            $file = __DIR__ . "/../data/$file.csv";
+            importFile($database, $table, $file);
+            echo "Loaded file $file\n";
+        }
+    } else {
+        // This table's data is contained within a single file.
+        $file = __DIR__ . "/../data/$table.csv";
+        importFile($database, $table, $file);
+    }
 
-	echo "Loaded $table\n";
+    echo "Loaded $table\n";
 }
 
 // Load the stats schema, one table at a time.
 $tables = require __DIR__ . '/../sql/schema/stats/tables.php';
 
 foreach ($tables as $table) {
-	// Create the table from its schema definition.
-	$database->exec(file_get_contents(__DIR__ . "/../sql/schema/stats/$table.sql"));
+    // Create the table from its schema definition.
+    $database->exec(file_get_contents(__DIR__ . "/../sql/schema/stats/$table.sql"));
 }
 
 echo "Done!\n";

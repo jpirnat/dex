@@ -20,242 +20,242 @@ use PDO;
 
 final readonly class DatabaseTextLinkRepository implements TextLinkRepositoryInterface
 {
-	public function __construct(
-		private PDO $db,
-	) {}
+    public function __construct(
+        private PDO $db,
+    ) {}
 
-	/**
-	 * Get a text link for this item.
-	 *
-	 * @throws TextLinkNotFoundException if no text link can be made with these
-	 *     parameters.
-	 */
-	public function getForItem(
-		VersionGroupId $versionGroupId,
-		LanguageId $languageId,
-		ItemId $itemId,
-	) : TextLinkItem {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`vg`.`identifier` AS `vg_identifier`,
-				`i`.`identifier` AS `item_identifier`,
-				COALESCE(`id`.`name`, `in`.`name`) AS `item_name`
-			FROM `version_groups` AS `vg`
-			INNER JOIN `items` AS `i`
-			INNER JOIN `item_names` AS `in`
-				ON `i`.`id` = `in`.`item_id`
-			LEFT JOIN `item_descriptions` AS `id`
-				ON `id`.`version_group_id` = `vg`.`id`
-				AND `id`.`language_id` = `in`.`language_id`
-				AND `id`.`item_id` = `i`.`id`
-			WHERE `vg`.`id` = :version_group_id
-				AND `i`.`id` = :item_id
-				AND `in`.`language_id` = :language_id
-			LIMIT 1'
-		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':item_id', $itemId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
-		$stmt->execute();
-		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+    /**
+     * Get a text link for this item.
+     *
+     * @throws TextLinkNotFoundException if no text link can be made with these
+     *     parameters.
+     */
+    public function getForItem(
+        VersionGroupId $versionGroupId,
+        LanguageId $languageId,
+        ItemId $itemId,
+    ): TextLinkItem {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `vg`.`identifier` AS `vg_identifier`,
+                `i`.`identifier` AS `item_identifier`,
+                COALESCE(`id`.`name`, `in`.`name`) AS `item_name`
+            FROM `version_groups` AS `vg`
+            INNER JOIN `items` AS `i`
+            INNER JOIN `item_names` AS `in`
+                ON `i`.`id` = `in`.`item_id`
+            LEFT JOIN `item_descriptions` AS `id`
+                ON `id`.`version_group_id` = `vg`.`id`
+                AND `id`.`language_id` = `in`.`language_id`
+                AND `id`.`item_id` = `i`.`id`
+            WHERE `vg`.`id` = :version_group_id
+                AND `i`.`id` = :item_id
+                AND `in`.`language_id` = :language_id
+            LIMIT 1'
+        );
+        $stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':item_id', $itemId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-		if (!$result) {
-			throw new TextLinkNotFoundException(
-				"No text link can be made with version group id $versionGroupId->value"
-				. ", language id $languageId->value, and item id $itemId->value."
-			);
-		}
+        if (!$result) {
+            throw new TextLinkNotFoundException(
+                "No text link can be made with version group id $versionGroupId->value"
+                . ", language id $languageId->value, and item id $itemId->value."
+            );
+        }
 
-		return new TextLinkItem(
-			$result['vg_identifier'],
-			$result['item_identifier'],
-			$result['item_name'],
-		);
-	}
+        return new TextLinkItem(
+            $result['vg_identifier'],
+            $result['item_identifier'],
+            $result['item_name'],
+        );
+    }
 
-	/**
-	 * Get a text link for this move.
-	 *
-	 * @throws TextLinkNotFoundException if no text link can be made with these
-	 *     parameters.
-	 */
-	public function getForMove(
-		VersionGroupId $versionGroupId,
-		LanguageId $languageId,
-		MoveId $moveId,
-	) : TextLinkMove {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`vg`.`identifier` AS `vg_identifier`,
-				`m`.`identifier` AS `move_identifier`,
-				COALESCE(`md`.`name`, `mn`.`name`) AS `move_name`
-			FROM `version_groups` AS `vg`
-			INNER JOIN `moves` AS `m`
-			INNER JOIN `move_names` AS `mn`
-				ON `m`.`id` = `mn`.`move_id`
-			LEFT JOIN `move_descriptions` AS `md`
-				ON `md`.`version_group_id` = `vg`.`id`
-				AND `md`.`language_id` = `mn`.`language_id`
-				AND `md`.`move_id` = `m`.`id`
-			WHERE `vg`.`id` = :version_group_id
-				AND `m`.`id` = :move_id
-				AND `mn`.`language_id` = :language_id
-			LIMIT 1'
-		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
-		$stmt->execute();
-		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+    /**
+     * Get a text link for this move.
+     *
+     * @throws TextLinkNotFoundException if no text link can be made with these
+     *     parameters.
+     */
+    public function getForMove(
+        VersionGroupId $versionGroupId,
+        LanguageId $languageId,
+        MoveId $moveId,
+    ): TextLinkMove {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `vg`.`identifier` AS `vg_identifier`,
+                `m`.`identifier` AS `move_identifier`,
+                COALESCE(`md`.`name`, `mn`.`name`) AS `move_name`
+            FROM `version_groups` AS `vg`
+            INNER JOIN `moves` AS `m`
+            INNER JOIN `move_names` AS `mn`
+                ON `m`.`id` = `mn`.`move_id`
+            LEFT JOIN `move_descriptions` AS `md`
+                ON `md`.`version_group_id` = `vg`.`id`
+                AND `md`.`language_id` = `mn`.`language_id`
+                AND `md`.`move_id` = `m`.`id`
+            WHERE `vg`.`id` = :version_group_id
+                AND `m`.`id` = :move_id
+                AND `mn`.`language_id` = :language_id
+            LIMIT 1'
+        );
+        $stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':move_id', $moveId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-		if (!$result) {
-			throw new TextLinkNotFoundException(
-				"No text link can be made with version group id $versionGroupId->value"
-				. ", language id $languageId->value, and move id $moveId->value."
-			);
-		}
+        if (!$result) {
+            throw new TextLinkNotFoundException(
+                "No text link can be made with version group id $versionGroupId->value"
+                . ", language id $languageId->value, and move id $moveId->value."
+            );
+        }
 
-		return new TextLinkMove(
-			$result['vg_identifier'],
-			$result['move_identifier'],
-			$result['move_name'],
-		);
-	}
+        return new TextLinkMove(
+            $result['vg_identifier'],
+            $result['move_identifier'],
+            $result['move_name'],
+        );
+    }
 
-	/**
-	 * Get a text link for this Pokémon.
-	 *
-	 * @throws TextLinkNotFoundException if no text link can be made with these
-	 *     parameters.
-	 */
-	public function getForPokemon(
-		VersionGroupId $versionGroupId,
-		LanguageId $languageId,
-		PokemonId $pokemonId,
-	) : TextLinkPokemon {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`vg`.`identifier` AS `vg_identifier`,
-				`p`.`identifier` AS `pokemon_identifier`,
-				`pn`.`name` AS `pokemon_name`
-			FROM `version_groups` AS `vg`
-			INNER JOIN `pokemon` AS `p`
-			INNER JOIN `pokemon_names` AS `pn`
-				ON `p`.`id` = `pn`.`pokemon_id`
-			WHERE `vg`.`id` = :version_group_id
-				AND `p`.`id` = :pokemon_id
-				AND `pn`.`language_id` = :language_id
-			LIMIT 1'
-		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
-		$stmt->execute();
-		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+    /**
+     * Get a text link for this Pokémon.
+     *
+     * @throws TextLinkNotFoundException if no text link can be made with these
+     *     parameters.
+     */
+    public function getForPokemon(
+        VersionGroupId $versionGroupId,
+        LanguageId $languageId,
+        PokemonId $pokemonId,
+    ): TextLinkPokemon {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `vg`.`identifier` AS `vg_identifier`,
+                `p`.`identifier` AS `pokemon_identifier`,
+                `pn`.`name` AS `pokemon_name`
+            FROM `version_groups` AS `vg`
+            INNER JOIN `pokemon` AS `p`
+            INNER JOIN `pokemon_names` AS `pn`
+                ON `p`.`id` = `pn`.`pokemon_id`
+            WHERE `vg`.`id` = :version_group_id
+                AND `p`.`id` = :pokemon_id
+                AND `pn`.`language_id` = :language_id
+            LIMIT 1'
+        );
+        $stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-		if (!$result) {
-			throw new TextLinkNotFoundException(
-				"No text link can be made with version group id $versionGroupId->value"
-				. ", language id $languageId->value, and Pokémon id $pokemonId->value."
-			);
-		}
+        if (!$result) {
+            throw new TextLinkNotFoundException(
+                "No text link can be made with version group id $versionGroupId->value"
+                . ", language id $languageId->value, and Pokémon id $pokemonId->value."
+            );
+        }
 
-		return new TextLinkPokemon(
-			$result['vg_identifier'],
-			$result['pokemon_identifier'],
-			$result['pokemon_name'],
-		);
-	}
+        return new TextLinkPokemon(
+            $result['vg_identifier'],
+            $result['pokemon_identifier'],
+            $result['pokemon_name'],
+        );
+    }
 
-	/**
-	 * Get a text link for this type.
-	 *
-	 * @throws TextLinkNotFoundException if no text link can be made with these
-	 *     parameters.
-	 */
-	public function getForType(
-		VersionGroupId $versionGroupId,
-		LanguageId $languageId,
-		TypeId $typeId,
-	) : TextLinkType {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`vg`.`identifier` AS `vg_identifier`,
-				`t`.`identifier` AS `type_identifier`,
-				`tn`.`name` AS `type_name`
-			FROM `version_groups` AS `vg`
-			INNER JOIN `types` AS `t`
-			INNER JOIN `type_names` AS `tn`
-				ON `t`.`id` = `tn`.`type_id`
-			WHERE `vg`.`id` = :version_group_id
-				AND `t`.`id` = :type_id
-				AND `tn`.`language_id` = :language_id
-			LIMIT 1'
-		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
-		$stmt->execute();
-		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+    /**
+     * Get a text link for this type.
+     *
+     * @throws TextLinkNotFoundException if no text link can be made with these
+     *     parameters.
+     */
+    public function getForType(
+        VersionGroupId $versionGroupId,
+        LanguageId $languageId,
+        TypeId $typeId,
+    ): TextLinkType {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `vg`.`identifier` AS `vg_identifier`,
+                `t`.`identifier` AS `type_identifier`,
+                `tn`.`name` AS `type_name`
+            FROM `version_groups` AS `vg`
+            INNER JOIN `types` AS `t`
+            INNER JOIN `type_names` AS `tn`
+                ON `t`.`id` = `tn`.`type_id`
+            WHERE `vg`.`id` = :version_group_id
+                AND `t`.`id` = :type_id
+                AND `tn`.`language_id` = :language_id
+            LIMIT 1'
+        );
+        $stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-		if (!$result) {
-			throw new TextLinkNotFoundException(
-				"No text link can be made with version group id $versionGroupId->value"
-				. ", language id $languageId->value, and type id $typeId->value."
-			);
-		}
+        if (!$result) {
+            throw new TextLinkNotFoundException(
+                "No text link can be made with version group id $versionGroupId->value"
+                . ", language id $languageId->value, and type id $typeId->value."
+            );
+        }
 
-		return new TextLinkType(
-			$result['vg_identifier'],
-			$result['type_identifier'],
-			$result['type_name'],
-		);
-	}
+        return new TextLinkType(
+            $result['vg_identifier'],
+            $result['type_identifier'],
+            $result['type_name'],
+        );
+    }
 
-	/**
-	 * Get a text link for the incense item, if any, that one of this Pokémon's
-	 * parents must be holding.
-	 */
-	public function getForIncense(
-		VersionGroupId $versionGroupId,
-		LanguageId $languageId,
-		FormId $formId,
-	) : ?TextLinkItem {
-		$stmt = $this->db->prepare(
-			'SELECT
-				`vg`.`identifier` AS `vg_identifier`,
-				`i`.`identifier` AS `item_identifier`,
-				COALESCE(`id`.`name`, `in`.`name`) AS `item_name`
-			FROM `evolutions_incense` AS `e`
-			INNER JOIN `version_groups` AS `vg`
-				ON `e`.`version_group_id` = `vg`.`id`
-			INNER JOIN `items` AS `i`
-				ON `e`.`item_id` = `i`.`id`
-			INNER JOIN `item_names` AS `in`
-				ON `i`.`id` = `in`.`item_id`
-			LEFT JOIN `item_descriptions` AS `id`
-				ON `id`.`version_group_id` = `vg`.`id`
-				AND `id`.`language_id` = `in`.`language_id`
-				AND `id`.`item_id` = `i`.`id`
-			WHERE `e`.`version_group_id` = :version_group_id
-				AND `e`.`form_id` = :form_id
-				AND `in`.`language_id` = :language_id
-			LIMIT 1'
-		);
-		$stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':form_id', $formId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
-		$stmt->execute();
-		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+    /**
+     * Get a text link for the incense item, if any, that one of this Pokémon's
+     * parents must be holding.
+     */
+    public function getForIncense(
+        VersionGroupId $versionGroupId,
+        LanguageId $languageId,
+        FormId $formId,
+    ): ?TextLinkItem {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `vg`.`identifier` AS `vg_identifier`,
+                `i`.`identifier` AS `item_identifier`,
+                COALESCE(`id`.`name`, `in`.`name`) AS `item_name`
+            FROM `evolutions_incense` AS `e`
+            INNER JOIN `version_groups` AS `vg`
+                ON `e`.`version_group_id` = `vg`.`id`
+            INNER JOIN `items` AS `i`
+                ON `e`.`item_id` = `i`.`id`
+            INNER JOIN `item_names` AS `in`
+                ON `i`.`id` = `in`.`item_id`
+            LEFT JOIN `item_descriptions` AS `id`
+                ON `id`.`version_group_id` = `vg`.`id`
+                AND `id`.`language_id` = `in`.`language_id`
+                AND `id`.`item_id` = `i`.`id`
+            WHERE `e`.`version_group_id` = :version_group_id
+                AND `e`.`form_id` = :form_id
+                AND `in`.`language_id` = :language_id
+            LIMIT 1'
+        );
+        $stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':form_id', $formId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-		if (!$result) {
-			return null;
-		}
+        if (!$result) {
+            return null;
+        }
 
-		return new TextLinkItem(
-			$result['vg_identifier'],
-			$result['item_identifier'],
-			$result['item_name'],
-		);
-	}
+        return new TextLinkItem(
+            $result['vg_identifier'],
+            $result['item_identifier'],
+            $result['item_name'],
+        );
+    }
 }

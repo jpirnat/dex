@@ -9,21 +9,21 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final readonly class AdvancedPokemonSearchIndexController
 {
-	public function __construct(
-		private BaseController $baseController,
-		private AdvancedPokemonSearchIndexModel $advancedPokemonSearchIndexModel,
-	) {}
+    public function __construct(
+        private BaseController $baseController,
+        private AdvancedPokemonSearchIndexModel $advancedPokemonSearchIndexModel,
+    ) {}
 
-	/**
-	 * Set data for the advanced Pokémon search page.
-	 */
-	public function setData(ServerRequestInterface $request) : void
-	{
-		$this->baseController->setBaseVariables($request);
+    /**
+     * Set data for the advanced Pokémon search page.
+     */
+    public function setData(ServerRequestInterface $request): void
+    {
+        $this->baseController->setBaseVariables($request);
 
-		$vgIdentifier = $request->getAttribute('vgIdentifier');
-		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
+        $vgIdentifier = $request->getAttribute('vgIdentifier');
+        $languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->advancedPokemonSearchIndexModel->setData($vgIdentifier, $languageId);
-	}
+        $this->advancedPokemonSearchIndexModel->setData($vgIdentifier, $languageId);
+    }
 }

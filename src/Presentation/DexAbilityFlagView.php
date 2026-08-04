@@ -9,50 +9,50 @@ use Psr\Http\Message\ResponseInterface;
 
 final readonly class DexAbilityFlagView
 {
-	public function __construct(
-		private DexAbilityFlagModel $dexAbilityFlagModel,
-		private DexFormatter $dexFormatter,
-	) {}
+    public function __construct(
+        private DexAbilityFlagModel $dexAbilityFlagModel,
+        private DexFormatter $dexFormatter,
+    ) {}
 
-	/**
-	 * Get data for the dex ability flag page.
-	 */
-	public function getData() : ResponseInterface
-	{
-		$versionGroupModel = $this->dexAbilityFlagModel->versionGroupModel;
-		$versionGroup = $versionGroupModel->versionGroup;
-		$versionGroups = $versionGroupModel->versionGroups;
+    /**
+     * Get data for the dex ability flag page.
+     */
+    public function getData(): ResponseInterface
+    {
+        $versionGroupModel = $this->dexAbilityFlagModel->versionGroupModel;
+        $versionGroup = $versionGroupModel->versionGroup;
+        $versionGroups = $versionGroupModel->versionGroups;
 
-		$flag = $this->dexAbilityFlagModel->flag;
-		$abilities = $this->dexAbilityFlagModel->abilities;
+        $flag = $this->dexAbilityFlagModel->flag;
+        $abilities = $this->dexAbilityFlagModel->abilities;
 
-		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->identifier;
-		$breadcrumbs = [[
-			'url' => "/dex/$vgIdentifier",
-			'text' => 'Dex',
-		], [
-			'url' => "/dex/$vgIdentifier/abilities",
-			'text' => 'Abilities',
-		], [
-			'url' => "/dex/$vgIdentifier/abilities#flags",
-			'text' => 'Flags',
-		], [
-			'text' => $flag['name'],
-		]];
+        // Navigational breadcrumbs.
+        $vgIdentifier = $versionGroup->identifier;
+        $breadcrumbs = [[
+            'url' => "/dex/$vgIdentifier",
+            'text' => 'Dex',
+        ], [
+            'url' => "/dex/$vgIdentifier/abilities",
+            'text' => 'Abilities',
+        ], [
+            'url' => "/dex/$vgIdentifier/abilities#flags",
+            'text' => 'Flags',
+        ], [
+            'text' => $flag['name'],
+        ]];
 
-		return new JsonResponse([
-			'data' => [
-				'versionGroup' => [
-					'identifier' => $versionGroup->identifier,
-				],
+        return new JsonResponse([
+            'data' => [
+                'versionGroup' => [
+                    'identifier' => $versionGroup->identifier,
+                ],
 
-				'breadcrumbs' => $breadcrumbs,
-				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
+                'breadcrumbs' => $breadcrumbs,
+                'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
-				'flag' => $flag,
-				'abilities' => $abilities,
-			]
-		]);
-	}
+                'flag' => $flag,
+                'abilities' => $abilities,
+            ]
+        ]);
+    }
 }

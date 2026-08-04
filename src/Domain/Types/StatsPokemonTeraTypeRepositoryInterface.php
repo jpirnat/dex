@@ -10,17 +10,17 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface StatsPokemonTeraTypeRepositoryInterface
 {
-	/**
-	 * Get stats Pokémon Tera types by month, format, rating, and Pokémon.
-	 *
-	 * @return StatsPokemonTeraType[] Ordered by percent descending.
-	 */
-	public function getByMonth(
-		DateTime $month,
-		?DateTime $prevMonth,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-		LanguageId $languageId,
-	) : array;
+    /**
+     * Get stats Pokémon Tera types by month, format, rating, and Pokémon.
+     *
+     * @return StatsPokemonTeraType[] Ordered by percent descending.
+     */
+    public function getByMonth(
+        DateTime $month,
+        ?DateTime $prevMonth,
+        FormatId $formatId,
+        int $rating,
+        PokemonId $pokemonId,
+        LanguageId $languageId,
+    ): array;
 }

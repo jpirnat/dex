@@ -17,141 +17,141 @@ use Jp\Dex\Domain\Stats\StatValueContainer;
 
 final class SpreadModel
 {
-	private(set) array $spreads = [];
+    private(set) array $spreads = [];
 
 
-	public function __construct(
-		private readonly StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository,
-		private readonly StatRepositoryInterface $statRepository,
-		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
-		private readonly StatCalculator $statCalculator,
-	) {}
+    public function __construct(
+        private readonly StatsPokemonSpreadRepositoryInterface $statsPokemonSpreadRepository,
+        private readonly StatRepositoryInterface $statRepository,
+        private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
+        private readonly StatCalculator $statCalculator,
+    ) {}
 
 
-	/**
-	 * Get stat and spread data for the stats Pokémon page.
-	 */
-	public function setData(
-		DateTime $month,
-		Format $format,
-		int $rating,
-		PokemonId $pokemonId,
-		LanguageId $languageId,
-	) : void {
-		$generationId = $format->generationId;
+    /**
+     * Get stat and spread data for the stats Pokémon page.
+     */
+    public function setData(
+        DateTime $month,
+        Format $format,
+        int $rating,
+        PokemonId $pokemonId,
+        LanguageId $languageId,
+    ): void {
+        $generationId = $format->generationId;
 
-		$stats = $this->statRepository->getByVersionGroup(
-			$format->versionGroupId,
-		);
+        $stats = $this->statRepository->getByVersionGroup(
+            $format->versionGroupId,
+        );
 
-		// Get stat Pokémon spreads.
-		$spreads = $this->statsPokemonSpreadRepository->getByMonth(
-			$month,
-			$format->id,
-			$rating,
-			$pokemonId,
-			$languageId,
-		);
+        // Get stat Pokémon spreads.
+        $spreads = $this->statsPokemonSpreadRepository->getByMonth(
+            $month,
+            $format->id,
+            $rating,
+            $pokemonId,
+            $languageId,
+        );
 
-		// Get the Pokémon's base stats.
-		$pokemon = $this->dexPokemonRepository->getById(
-			$format->versionGroupId,
-			$pokemonId,
-			$languageId,
-		);
+        // Get the Pokémon's base stats.
+        $pokemon = $this->dexPokemonRepository->getById(
+            $format->versionGroupId,
+            $pokemonId,
+            $languageId,
+        );
 
-		// Convert the base stats data structure for use in the stat calculator.
-		$baseStats = new StatValueContainer();
-		foreach ($stats as $stat) {
-			$baseStats->add(new StatValue(
-				$stat->id,
-				$pokemon->baseStats[$stat->identifier]
-			));
-		}
+        // Convert the base stats data structure for use in the stat calculator.
+        $baseStats = new StatValueContainer();
+        foreach ($stats as $stat) {
+            $baseStats->add(new StatValue(
+                $stat->id,
+                $pokemon->baseStats[$stat->identifier]
+            ));
+        }
 
-		$attack = new StatId(StatId::ATTACK);
-		$speed = new StatId(StatId::SPEED);
+        $attack = new StatId(StatId::ATTACK);
+        $speed = new StatId(StatId::SPEED);
 
-		// Calculate the Pokémon's stats for each spread.
-		$this->spreads = [];
-		foreach ($spreads as $spread) {
-			$evSpread = $spread->evs;
-			$increasedStatId = $spread->increasedStatId;
-			$decreasedStatId = $spread->decreasedStatId;
+        // Calculate the Pokémon's stats for each spread.
+        $this->spreads = [];
+        foreach ($spreads as $spread) {
+            $evSpread = $spread->evs;
+            $increasedStatId = $spread->increasedStatId;
+            $decreasedStatId = $spread->decreasedStatId;
 
-			// Assume the Pokémon has perfect IVs.
-			$ivSpread = new StatValueContainer();
-			$perfectIv = $this->statCalculator->getPerfectIv($generationId);
-			foreach ($stats as $stat) {
-				$ivSpread->add(new StatValue($stat->id, $perfectIv));
-			}
-			// If it's a minus Attack nature with 0 Attack EVs, assume 0 IV.
-			if ($decreasedStatId?->value === StatId::ATTACK && !$evSpread->get($attack)->value) {
-				$ivSpread->add(new StatValue($attack, 0));
-			}
-			// If it's a minus Speed nature with 0 Speed EVs, assume 0 IV.
-			if ($decreasedStatId?->value === StatId::SPEED && !$evSpread->get($speed)->value) {
-				$ivSpread->add(new StatValue($speed, 0));
-			}
+            // Assume the Pokémon has perfect IVs.
+            $ivSpread = new StatValueContainer();
+            $perfectIv = $this->statCalculator->getPerfectIv($generationId);
+            foreach ($stats as $stat) {
+                $ivSpread->add(new StatValue($stat->id, $perfectIv));
+            }
+            // If it's a minus Attack nature with 0 Attack EVs, assume 0 IV.
+            if ($decreasedStatId?->value === StatId::ATTACK && !$evSpread->get($attack)->value) {
+                $ivSpread->add(new StatValue($attack, 0));
+            }
+            // If it's a minus Speed nature with 0 Speed EVs, assume 0 IV.
+            if ($decreasedStatId?->value === StatId::SPEED && !$evSpread->get($speed)->value) {
+                $ivSpread->add(new StatValue($speed, 0));
+            }
 
-			// Get this spread's calculated stats.
-			if ($generationId->value === 1 || $generationId->value === 2) {
-				// Pokémon Showdown simplifies the stat formula for gens 1 and 2.
-				// The real formula takes the square root of the EV. So, we need
-				// to give the formula the square of the EV from Showdown.
-				$evSpread = new StatValueContainer();
-				$calcEvSpread = new StatValueContainer();
-				foreach ($stats as $stat) {
-					// For Special, use what was imported as Special Attack.
-					$actingStatId = $stat->id->value !== StatId::SPECIAL
-						? $stat->id
-						: new StatId(StatId::SPECIAL_ATTACK);
-					$value = $spread->evs->get($actingStatId)->value;
+            // Get this spread's calculated stats.
+            if ($generationId->value === 1 || $generationId->value === 2) {
+                // Pokémon Showdown simplifies the stat formula for gens 1 and 2.
+                // The real formula takes the square root of the EV. So, we need
+                // to give the formula the square of the EV from Showdown.
+                $evSpread = new StatValueContainer();
+                $calcEvSpread = new StatValueContainer();
+                foreach ($stats as $stat) {
+                    // For Special, use what was imported as Special Attack.
+                    $actingStatId = $stat->id->value !== StatId::SPECIAL
+                        ? $stat->id
+                        : new StatId(StatId::SPECIAL_ATTACK);
+                    $value = $spread->evs->get($actingStatId)->value;
 
-					$evSpread->add(new StatValue($stat->id, $value));
-					$calcEvSpread->add(new StatValue($stat->id, $value ** 2));
-				}
+                    $evSpread->add(new StatValue($stat->id, $value));
+                    $calcEvSpread->add(new StatValue($stat->id, $value ** 2));
+                }
 
-				$statSpread = $this->statCalculator->all1(
-					$generationId,
-					$baseStats,
-					$ivSpread,
-					$calcEvSpread,
-					$format->level,
-				);
-			} else {
-				$statSpread = $this->statCalculator->all3(
-					$baseStats,
-					$ivSpread,
-					$evSpread,
-					$format->level,
-					$increasedStatId,
-					$decreasedStatId,
-				);
-			}
+                $statSpread = $this->statCalculator->all1(
+                    $generationId,
+                    $baseStats,
+                    $ivSpread,
+                    $calcEvSpread,
+                    $format->level,
+                );
+            } else {
+                $statSpread = $this->statCalculator->all3(
+                    $baseStats,
+                    $ivSpread,
+                    $evSpread,
+                    $format->level,
+                    $increasedStatId,
+                    $decreasedStatId,
+                );
+            }
 
-			// Convert stat arrays to stat objects.
-			$increasedStatId = $increasedStatId?->value;
-			$decreasedStatId = $decreasedStatId?->value;
-			$increasedStat = $stats[$increasedStatId]?->identifier ?? null;
-			$decreasedStat = $stats[$decreasedStatId]?->identifier ?? null;
+            // Convert stat arrays to stat objects.
+            $increasedStatId = $increasedStatId?->value;
+            $decreasedStatId = $decreasedStatId?->value;
+            $increasedStat = $stats[$increasedStatId]?->identifier ?? null;
+            $decreasedStat = $stats[$decreasedStatId]?->identifier ?? null;
 
-			$evs = [];
-			$finalStats = [];
-			foreach ($stats as $stat) {
-				$identifier = $stat->identifier;
-				$evs[$identifier] = $evSpread->get($stat->id)->value;
-				$finalStats[$identifier] = $statSpread->get($stat->id)->value;
-			}
+            $evs = [];
+            $finalStats = [];
+            foreach ($stats as $stat) {
+                $identifier = $stat->identifier;
+                $evs[$identifier] = $evSpread->get($stat->id)->value;
+                $finalStats[$identifier] = $statSpread->get($stat->id)->value;
+            }
 
-			$this->spreads[] = [
-				'nature' => $spread->natureName,
-				'increasedStat' => $increasedStat,
-				'decreasedStat' => $decreasedStat,
-				'evs' => $evs,
-				'percent' => $spread->percent,
-				'stats' => $finalStats,
-			];
-		}
-	}
+            $this->spreads[] = [
+                'nature' => $spread->natureName,
+                'increasedStat' => $increasedStat,
+                'decreasedStat' => $decreasedStat,
+                'evs' => $evs,
+                'percent' => $spread->percent,
+                'stats' => $finalStats,
+            ];
+        }
+    }
 }

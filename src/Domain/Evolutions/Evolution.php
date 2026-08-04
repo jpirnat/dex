@@ -13,17 +13,17 @@ use Jp\Dex\Domain\Versions\VersionId;
 
 final readonly class Evolution
 {
-	public function __construct(
-		private(set) VersionGroupId $versionGroupId,
-		private(set) FormId $evoFromId,
-		private(set) EvoMethodId $evoMethodId,
-		private(set) FormId $evoIntoId,
-		private(set) int $level,
-		private(set) ?ItemId $itemId,
-		private(set) ?MoveId $moveId,
-		private(set) ?PokemonId $pokemonId,
-		private(set) ?TypeId $typeId,
-		private(set) ?VersionId $versionId,
-		private(set) int $otherParameter,
-	) {}
+    public function __construct(
+        private(set) VersionGroupId $versionGroupId,
+        private(set) FormId $evoFromId,
+        private(set) EvoMethodId $evoMethodId,
+        private(set) FormId $evoIntoId,
+        private(set) int $level,
+        private(set) ?ItemId $itemId,
+        private(set) ?MoveId $moveId,
+        private(set) ?PokemonId $pokemonId,
+        private(set) ?TypeId $typeId,
+        private(set) ?VersionId $versionId,
+        private(set) int $otherParameter,
+    ) {}
 }

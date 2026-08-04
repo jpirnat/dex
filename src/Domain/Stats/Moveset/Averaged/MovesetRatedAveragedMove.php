@@ -18,33 +18,33 @@ use Jp\Dex\Domain\Stats\ValidateMonthTrait;
  */
 final readonly class MovesetRatedAveragedMove
 {
-	use ValidateMonthTrait;
+    use ValidateMonthTrait;
 
-	/**
-	 * Constructor.
-	 *
-	 * @throws InvalidMonthException if $start or $end is invalid.
-	 * @throws InvalidRatingException if $rating is invalid.
-	 * @throws InvalidPercentException if $percent is invalid
-	 */
-	public function __construct(
-		private(set) DateTime $start,
-		private(set) DateTime $end,
-		private(set) FormatId $formatId,
-		private(set) int $rating,
-		private(set) PokemonId $pokemonId,
-		private(set) MoveId $moveId,
-		private(set) float $percent,
-	) {
-		$this->validateMonth($start);
-		$this->validateMonth($end);
+    /**
+     * Constructor.
+     *
+     * @throws InvalidMonthException if $start or $end is invalid.
+     * @throws InvalidRatingException if $rating is invalid.
+     * @throws InvalidPercentException if $percent is invalid
+     */
+    public function __construct(
+        private(set) DateTime $start,
+        private(set) DateTime $end,
+        private(set) FormatId $formatId,
+        private(set) int $rating,
+        private(set) PokemonId $pokemonId,
+        private(set) MoveId $moveId,
+        private(set) float $percent,
+    ) {
+        $this->validateMonth($start);
+        $this->validateMonth($end);
 
-		if ($rating < 0) {
-			throw new InvalidRatingException("Invalid rating: $rating.");
-		}
+        if ($rating < 0) {
+            throw new InvalidRatingException("Invalid rating: $rating.");
+        }
 
-		if ($percent < 0 || $percent > 100) {
-			throw new InvalidPercentException("Invalid percent: $percent.");
-		}
-	}
+        if ($percent < 0 || $percent > 100) {
+            throw new InvalidPercentException("Invalid percent: $percent.");
+        }
+    }
 }

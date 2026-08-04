@@ -13,54 +13,54 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInter
 
 final readonly class ItemModel
 {
-	public function __construct(
-		private MovesetRatedAveragedItemRepositoryInterface $movesetRatedAveragedItemRepository,
-		private ItemNameRepositoryInterface $itemNameRepository,
-		private ItemRepositoryInterface $itemRepository,
-	) {}
+    public function __construct(
+        private MovesetRatedAveragedItemRepositoryInterface $movesetRatedAveragedItemRepository,
+        private ItemNameRepositoryInterface $itemNameRepository,
+        private ItemRepositoryInterface $itemRepository,
+    ) {}
 
-	/**
-	 * Set individual Pokémon item data averaged over multiple months.
-	 */
-	public function setData(
-		DateTime $start,
-		DateTime $end,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-		LanguageId $languageId,
-	) : array {
-		// Get moveset rated averaged item records for these months.
-		$movesetRatedAveragedItems = $this->movesetRatedAveragedItemRepository->getByMonthsAndFormatAndRatingAndPokemon(
-			$start,
-			$end,
-			$formatId,
-			$rating,
-			$pokemonId,
-		);
+    /**
+     * Set individual Pokémon item data averaged over multiple months.
+     */
+    public function setData(
+        DateTime $start,
+        DateTime $end,
+        FormatId $formatId,
+        int $rating,
+        PokemonId $pokemonId,
+        LanguageId $languageId,
+    ): array {
+        // Get moveset rated averaged item records for these months.
+        $movesetRatedAveragedItems = $this->movesetRatedAveragedItemRepository->getByMonthsAndFormatAndRatingAndPokemon(
+            $start,
+            $end,
+            $formatId,
+            $rating,
+            $pokemonId,
+        );
 
-		$items = [];
+        $items = [];
 
-		// Get each item's data.
-		foreach ($movesetRatedAveragedItems as $movesetRatedAveragedItem) {
-			$itemId = $movesetRatedAveragedItem->itemId;
+        // Get each item's data.
+        foreach ($movesetRatedAveragedItems as $movesetRatedAveragedItem) {
+            $itemId = $movesetRatedAveragedItem->itemId;
 
-			// Get this item's name.
-			$itemName = $this->itemNameRepository->getByLanguageAndItem(
-				$languageId,
-				$itemId,
-			);
+            // Get this item's name.
+            $itemName = $this->itemNameRepository->getByLanguageAndItem(
+                $languageId,
+                $itemId,
+            );
 
-			// Get this item.
-			$item = $this->itemRepository->getById($itemId);
+            // Get this item.
+            $item = $this->itemRepository->getById($itemId);
 
-			$items[] = [
-				'identifier' => $item->identifier,
-				'name' => $itemName->name,
-				'percent' => $movesetRatedAveragedItem->percent,
-			];
-		}
+            $items[] = [
+                'identifier' => $item->identifier,
+                'name' => $itemName->name,
+                'percent' => $movesetRatedAveragedItem->percent,
+            ];
+        }
 
-		return $items;
-	}
+        return $items;
+    }
 }

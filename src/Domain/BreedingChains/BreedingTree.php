@@ -15,79 +15,79 @@ use Jp\Dex\Domain\PokemonMoves\PokemonMove;
  */
 final class BreedingTree
 {
-	private PokemonMove $value;
+    private PokemonMove $value;
 
-	/** @var BreedingTree[] $parents */
-	private array $parents = [];
-
-
-	public function __construct(PokemonMove $value)
-	{
-		$this->value = $value;
-	}
+    /** @var BreedingTree[] $parents */
+    private array $parents = [];
 
 
-	/**
-	 * Add a potential parent to the Pokémon.
-	 */
-	public function addParent(BreedingTree $parent) : void
-	{
-		$pokemonId = $parent->value->pokemonId->value;
-		$this->parents[$pokemonId] = $parent;
-	}
+    public function __construct(PokemonMove $value)
+    {
+        $this->value = $value;
+    }
 
-	/**
-	 * Is this Pokémon already a potential parent?
-	 */
-	public function hasParent(int $pokemonId) : bool
-	{
-		return isset($this->parents[$pokemonId]);
-	}
 
-	/**
-	 * Is this breeding chain complete? (Does it include an ancestor who learns
-	 * the move by non-egg?)
-	 */
-	public function isComplete() : bool
-	{
-		if ($this->value->moveMethodId->value !== MoveMethodId::EGG) {
-			return true;
-		}
+    /**
+     * Add a potential parent to the Pokémon.
+     */
+    public function addParent(BreedingTree $parent): void
+    {
+        $pokemonId = $parent->value->pokemonId->value;
+        $this->parents[$pokemonId] = $parent;
+    }
 
-		foreach ($this->parents as $parent) {
-			if ($parent->isComplete()) {
-				return true;
-			}
-		}
+    /**
+     * Is this Pokémon already a potential parent?
+     */
+    public function hasParent(int $pokemonId): bool
+    {
+        return isset($this->parents[$pokemonId]);
+    }
 
-		return false;
-	}
+    /**
+     * Is this breeding chain complete? (Does it include an ancestor who learns
+     * the move by non-egg?)
+     */
+    public function isComplete(): bool
+    {
+        if ($this->value->moveMethodId->value !== MoveMethodId::EGG) {
+            return true;
+        }
 
-	/**
-	 * Get all potential breeding chains in this tree, in the form of an array
-	 * of arrays of node values. For example, a tree with Ivysaur and Venusaur
-	 * as the potential parents of Bulbasaur, and Chikorita as the only parent
-	 * of Ivysaur, would return:
-	 * [[Chikorita, Ivysaur, Bulbasaur], [Venusaur, Bulbasaur]]
-	 *
-	 * @return PokemonMove[][]
-	 */
-	public function getChains() : array
-	{
-		if ($this->parents === []) {
-			return [[$this->value]];
-		}
+        foreach ($this->parents as $parent) {
+            if ($parent->isComplete()) {
+                return true;
+            }
+        }
 
-		$chains = [];
+        return false;
+    }
 
-		foreach ($this->parents as $parent) {
-			foreach ($parent->getChains() as $parentChain) {
-				$parentChain[] = $this->value;
+    /**
+     * Get all potential breeding chains in this tree, in the form of an array
+     * of arrays of node values. For example, a tree with Ivysaur and Venusaur
+     * as the potential parents of Bulbasaur, and Chikorita as the only parent
+     * of Ivysaur, would return:
+     * [[Chikorita, Ivysaur, Bulbasaur], [Venusaur, Bulbasaur]]
+     *
+     * @return PokemonMove[][]
+     */
+    public function getChains(): array
+    {
+        if ($this->parents === []) {
+            return [[$this->value]];
+        }
 
-				$chains[] = $parentChain;
-			}
-		}
+        $chains = [];
 
-		return $chains;
-	}
+        foreach ($this->parents as $parent) {
+            foreach ($parent->getChains() as $parentChain) {
+                $parentChain[] = $this->value;
+
+                $chains[] = $parentChain;
+            }
+        }
+
+        return $chains;
+    }
 }

@@ -21,544 +21,544 @@ use Jp\Dex\Domain\Versions\VersionNameRepositoryInterface;
 
 final readonly class EvolutionFormatter
 {
-	public function __construct(
-		private VersionGroupRepositoryInterface $versionGroupRepository,
-		private TextLinkRepositoryInterface $textLinkRepository,
-		private StatNameRepositoryInterface $statNameRepository,
-		private VersionNameRepositoryInterface $versionNameRepository,
-		private ConditionNameRepositoryInterface $conditionNameRepository,
-		private DexNatureRepositoryInterface $dexNatureRepository,
-	) {}
+    public function __construct(
+        private VersionGroupRepositoryInterface $versionGroupRepository,
+        private TextLinkRepositoryInterface $textLinkRepository,
+        private StatNameRepositoryInterface $statNameRepository,
+        private VersionNameRepositoryInterface $versionNameRepository,
+        private ConditionNameRepositoryInterface $conditionNameRepository,
+        private DexNatureRepositoryInterface $dexNatureRepository,
+    ) {}
 
-	/**
-	 * Format in words the method through which this evolution is triggered.
-	 * Examples: "Level 15", "Trade", "Use Fire Stone".
-	 */
-	public function format(
-		Evolution $evolution,
-		LanguageId $languageId,
-	) : EvolutionTableMethod {
-		$evoMethodId = $evolution->evoMethodId;
+    /**
+     * Format in words the method through which this evolution is triggered.
+     * Examples: "Level 15", "Trade", "Use Fire Stone".
+     */
+    public function format(
+        Evolution $evolution,
+        LanguageId $languageId,
+    ): EvolutionTableMethod {
+        $evoMethodId = $evolution->evoMethodId;
 
-		$level = $evolution->level;
+        $level = $evolution->level;
 
-		$friendship = 0;
-		if ($evoMethodId->needsFriendship()) {
-			$versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
-			$friendship = $this->getFriendship($versionGroup->generationId);
-		}
+        $friendship = 0;
+        if ($evoMethodId->needsFriendship()) {
+            $versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
+            $friendship = $this->getFriendship($versionGroup->generationId);
+        }
 
-		$item = '';
-		if ($evoMethodId->needsItem()) {
-			$textLinkItem = $this->textLinkRepository->getForItem(
-				$evolution->versionGroupId,
-				$languageId,
-				$evolution->itemId,
-			);
-			$item = $textLinkItem->getLinkHtml();
-		}
+        $item = '';
+        if ($evoMethodId->needsItem()) {
+            $textLinkItem = $this->textLinkRepository->getForItem(
+                $evolution->versionGroupId,
+                $languageId,
+                $evolution->itemId,
+            );
+            $item = $textLinkItem->getLinkHtml();
+        }
 
-		$move = '';
-		if ($evoMethodId->needsMove()) {
-			$textLinkMove = $this->textLinkRepository->getForMove(
-				$evolution->versionGroupId,
-				$languageId,
-				$evolution->moveId,
-			);
-			$move = $textLinkMove->getLinkHtml();
-		}
+        $move = '';
+        if ($evoMethodId->needsMove()) {
+            $textLinkMove = $this->textLinkRepository->getForMove(
+                $evolution->versionGroupId,
+                $languageId,
+                $evolution->moveId,
+            );
+            $move = $textLinkMove->getLinkHtml();
+        }
 
-		$pokemon = '';
-		if ($evoMethodId->needsPokemon()) {
-			$textLinkPokemon = $this->textLinkRepository->getForPokemon(
-				$evolution->versionGroupId,
-				$languageId,
-				$evolution->pokemonId,
-			);
-			$pokemon = $textLinkPokemon->getLinkHtml();
-		}
+        $pokemon = '';
+        if ($evoMethodId->needsPokemon()) {
+            $textLinkPokemon = $this->textLinkRepository->getForPokemon(
+                $evolution->versionGroupId,
+                $languageId,
+                $evolution->pokemonId,
+            );
+            $pokemon = $textLinkPokemon->getLinkHtml();
+        }
 
-		$type = '';
-		if ($evoMethodId->needsType()) {
-			$textLinkType = $this->textLinkRepository->getForType(
-				$evolution->versionGroupId,
-				$languageId,
-				$evolution->typeId,
-			);
-			$type = $textLinkType->getLinkHtml();
-		}
+        $type = '';
+        if ($evoMethodId->needsType()) {
+            $textLinkType = $this->textLinkRepository->getForType(
+                $evolution->versionGroupId,
+                $languageId,
+                $evolution->typeId,
+            );
+            $type = $textLinkType->getLinkHtml();
+        }
 
-		$version = '';
-		if ($evoMethodId->needsVersion()) {
-			$version = $this->versionNameRepository->getByLanguageAndVersion(
-				$languageId,
-				$evolution->versionId,
-			);
-			$version = $version->name;
-		}
+        $version = '';
+        if ($evoMethodId->needsVersion()) {
+            $version = $this->versionNameRepository->getByLanguageAndVersion(
+                $languageId,
+                $evolution->versionId,
+            );
+            $version = $version->name;
+        }
 
-		$otherParameter = $evolution->otherParameter;
+        $otherParameter = $evolution->otherParameter;
 
-		return match ($evoMethodId->value) {
-			EvoMethodId::LEVEL_UP_FRIENDSHIP => new EvolutionTableMethod(
-				"Level up, with at least $friendship friendship",
-			),
-			EvoMethodId::LEVEL_UP_FRIENDSHIP_MORNING => new EvolutionTableMethod(
-				"Level up, during the day, with at least $friendship friendship",
-			),
-			EvoMethodId::LEVEL_UP_FRIENDSHIP_NIGHT => new EvolutionTableMethod(
-				"Level up, during the night, with at least $friendship friendship",
-			),
-			EvoMethodId::LEVEL_UP, EvoMethodId::LEVEL_UP_NINJASK => new EvolutionTableMethod(
-				"Level up, starting at level $level",
-			),
-			EvoMethodId::TRADE => new EvolutionTableMethod(
-				'Trade',
-			),
-			EvoMethodId::TRADE_HELD_ITEM => new EvolutionTableMethod(
-				"Trade, while holding $item",
-			),
-			EvoMethodId::TRADE_SHELMET_KARRABLAST => $this->tradeShelmetKarrablast($evolution, $languageId),
-			EvoMethodId::USE_ITEM => new EvolutionTableMethod(
-				"Use $item",
-			),
-			EvoMethodId::LEVEL_UP_ATK_GT_DEF,
-			EvoMethodId::LEVEL_UP_ATK_EQ_DEF,
-			EvoMethodId::LEVEL_UP_DEF_GT_ATK => $this->tyrogue($evolution, $languageId),
-			EvoMethodId::LEVEL_UP_EC_LT_FIVE,
-			EvoMethodId::LEVEL_UP_EC_GT_EQ_FIVE => new EvolutionTableMethod(
-				"Level up, starting at level $level, 50% chance",
-			),
-			EvoMethodId::LEVEL_UP_SHEDINJA => $this->levelUpShedinja($evolution, $languageId),
-			EvoMethodId::LEVEL_UP_BEAUTY => $this->levelUpBeauty($evolution, $languageId),
-			EvoMethodId::USE_ITEM_MALE => new EvolutionTableMethod(
-				"Use $item, males only",
-			),
-			EvoMethodId::USE_ITEM_FEMALE => new EvolutionTableMethod(
-				"Use $item, female only",
-			),
-			EvoMethodId::LEVEL_UP_HELD_ITEM_DAY => new EvolutionTableMethod(
-				"Level up, during the day, while holding $item",
-			),
-			EvoMethodId::LEVEL_UP_HELD_ITEM_NIGHT => new EvolutionTableMethod(
-				"Level up, during the night, while holding $item",
-			),
-			EvoMethodId::LEVEL_UP_KNOW_MOVE => new EvolutionTableMethod(
-				"Level up, knowing $move",
-			),
-			EvoMethodId::LEVEL_UP_WITH_TEAMMATE => new EvolutionTableMethod(
-				"Level up, with $pokemon in the party",
-			),
-			EvoMethodId::LEVEL_UP_MALE => new EvolutionTableMethod(
-				"Level up, males only, starting at level $level",
-			),
-			EvoMethodId::LEVEL_UP_FEMALE, EvoMethodId::LEVEL_UP_FORM_FEMALE_1 => new EvolutionTableMethod(
-				"Level up, females only, starting at level $level",
-			),
-			EvoMethodId::LEVEL_UP_ELECTRIC => new EvolutionTableMethod(
-				'Level up, around a special magnetic field',
-			),
-			EvoMethodId::LEVEL_UP_FOREST => new EvolutionTableMethod(
-				'Level up near a Moss Rock',
-			),
-			EvoMethodId::LEVEL_UP_COLD => new EvolutionTableMethod(
-				'Level up near an Ice Rock',
-			),
-			EvoMethodId::LEVEL_UP_INVERTED => new EvolutionTableMethod(
-				"Level up, starting at $level, while the game system is held upside-down",
-			),
-			EvoMethodId::LEVEL_UP_AFFECTION_50_MOVE_TYPE => $this->levelUpAffection50MoveType($evolution, $type),
-			EvoMethodId::LEVEL_UP_MOVE_TYPE => new EvolutionTableMethod(
-				"Level up, starting at level $level, with a $type-type Pokémon in the party",
-			),
-			EvoMethodId::LEVEL_UP_WEATHER => $this->levelUpWeather($evolution),
-			EvoMethodId::LEVEL_UP_MORNING => new EvolutionTableMethod(
-				"Level up, during the day, starting at level $level",
-			),
-			EvoMethodId::LEVEL_UP_NIGHT => new EvolutionTableMethod(
-				"Level up, during the night, starting at level $level",
-			),
-			EvoMethodId::LEVEL_UP_VERSION => new EvolutionTableMethod(
-				"Level up, starting at level $level, in $version only",
-			),
-			EvoMethodId::LEVEL_UP_VERSION_DAY => new EvolutionTableMethod(
-				"Level up, during the day, starting at level $level, in $version only",
-			),
-			EvoMethodId::LEVEL_UP_VERSION_NIGHT =>new EvolutionTableMethod(
-				"Level up, during the night, starting at level $level, in $version only",
-			),
-			EvoMethodId::LEVEL_UP_SUMMIT => new EvolutionTableMethod(
-				'Level up at Mount Lanakila',
-			),
-			EvoMethodId::LEVEL_UP_DUSK => $this->levelUpDusk($evolution),
-			EvoMethodId::LEVEL_UP_WORMHOLE => new EvolutionTableMethod(
-				"Level up, starting at level $level, while in an Ultra Wormhole",
-			),
-			EvoMethodId::USE_ITEM_WORMHOLE => new EvolutionTableMethod(
-				"Use $item, while in an Ultra Wormhole",
-			),
-			EvoMethodId::CRITICAL_HITS_IN_BATTLE =>new EvolutionTableMethod(
-				"Land $otherParameter critical hits in one battle",
-			),
-			EvoMethodId::HP_LOST_IN_BATTLE => $this->hpLostInBattle($evolution, $languageId),
-			EvoMethodId::SPIN => $this->spin($evolution, $item),
-			EvoMethodId::LEVEL_UP_NATURE_AMPED,
-			EvoMethodId::LEVEL_UP_NATURE_LOW_KEY => $this->levelUpNatures($evolution, $languageId),
-			EvoMethodId::TOWER_OF_DARKNESS => new EvolutionTableMethod(
-				'Read the Scroll of Darkness in the Tower of Darkness',
-			),
-			EvoMethodId::TOWER_OF_WATERS => new EvolutionTableMethod(
-				'Read the Scroll of Waters in the Tower of Waters',
-			),
-			EvoMethodId::LEVEL_UP_WALK_STEPS_WITH => new EvolutionTableMethod(
-				"Level up, while outside of its Poké Ball after walking $otherParameter steps using the Let's Go! feature",
-			),
-			EvoMethodId::LEVEL_UP_UNION_CIRCLE => new EvolutionTableMethod(
-				"Level up, starting at level $level, while in a Union Circle group",
-			),
-			EvoMethodId::LEVEL_UP_IN_BATTLE_EC_25 => new EvolutionTableMethod(
-				"Level up, starting at level $level, 1% chance",
-			),
-			EvoMethodId::LEVEL_UP_IN_BATTLE_EC_ELSE => new EvolutionTableMethod(
-				"Level up, starting at level $level, 99% chance",
-			),
-			EvoMethodId::LEVEL_UP_COLLECT_999 => new EvolutionTableMethod(
-				"Level up, with $otherParameter Gimmighoul Coins in your bag",
-			),
-			EvoMethodId::LEVEL_UP_DEFEAT_EQUALS => $this->levelUpDefeatEquals($evolution, $languageId),
-			EvoMethodId::LEVEL_UP_USE_MOVE_SPECIAL => new EvolutionTableMethod(
-				"Level up, after using $move $otherParameter times",
-			),
-			EvoMethodId::LEVEL_UP_KNOW_MOVE_EC_ELSE => new EvolutionTableMethod(
-				"Level up, knowing $move, 99% chance",
-			),
-			EvoMethodId::LEVEL_UP_KNOW_MOVE_EC_25 => new EvolutionTableMethod(
-				"Level up, knowing $move, 1% chance",
-			),
-			EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_MALE,
-			EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_FEMALE => $this->levelUpRecoilDamage($evolution, $languageId),
-			EvoMethodId::USE_ITEM_FULL_MOON => new EvolutionTableMethod(
-				"Use $item during a full moon",
-			),
-			EvoMethodId::USE_MOVE_AGILE_STYLE => $this->useMoveAgileStyle($evolution, $languageId),
-			EvoMethodId::USE_MOVE_STRONG_STYLE => $this->useMoveStrongStyle($evolution, $languageId),
-			EvoMethodId::USE_ITEM_DAY => new EvolutionTableMethod(
-				"Use $item during the day",
-			),
-			EvoMethodId::USE_ITEM_NIGHT => new EvolutionTableMethod(
-				"Use $item during the night",
-			),
-		};
-	}
+        return match ($evoMethodId->value) {
+            EvoMethodId::LEVEL_UP_FRIENDSHIP => new EvolutionTableMethod(
+                "Level up, with at least $friendship friendship",
+            ),
+            EvoMethodId::LEVEL_UP_FRIENDSHIP_MORNING => new EvolutionTableMethod(
+                "Level up, during the day, with at least $friendship friendship",
+            ),
+            EvoMethodId::LEVEL_UP_FRIENDSHIP_NIGHT => new EvolutionTableMethod(
+                "Level up, during the night, with at least $friendship friendship",
+            ),
+            EvoMethodId::LEVEL_UP, EvoMethodId::LEVEL_UP_NINJASK => new EvolutionTableMethod(
+                "Level up, starting at level $level",
+            ),
+            EvoMethodId::TRADE => new EvolutionTableMethod(
+                'Trade',
+            ),
+            EvoMethodId::TRADE_HELD_ITEM => new EvolutionTableMethod(
+                "Trade, while holding $item",
+            ),
+            EvoMethodId::TRADE_SHELMET_KARRABLAST => $this->tradeShelmetKarrablast($evolution, $languageId),
+            EvoMethodId::USE_ITEM => new EvolutionTableMethod(
+                "Use $item",
+            ),
+            EvoMethodId::LEVEL_UP_ATK_GT_DEF,
+            EvoMethodId::LEVEL_UP_ATK_EQ_DEF,
+            EvoMethodId::LEVEL_UP_DEF_GT_ATK => $this->tyrogue($evolution, $languageId),
+            EvoMethodId::LEVEL_UP_EC_LT_FIVE,
+            EvoMethodId::LEVEL_UP_EC_GT_EQ_FIVE => new EvolutionTableMethod(
+                "Level up, starting at level $level, 50% chance",
+            ),
+            EvoMethodId::LEVEL_UP_SHEDINJA => $this->levelUpShedinja($evolution, $languageId),
+            EvoMethodId::LEVEL_UP_BEAUTY => $this->levelUpBeauty($evolution, $languageId),
+            EvoMethodId::USE_ITEM_MALE => new EvolutionTableMethod(
+                "Use $item, males only",
+            ),
+            EvoMethodId::USE_ITEM_FEMALE => new EvolutionTableMethod(
+                "Use $item, female only",
+            ),
+            EvoMethodId::LEVEL_UP_HELD_ITEM_DAY => new EvolutionTableMethod(
+                "Level up, during the day, while holding $item",
+            ),
+            EvoMethodId::LEVEL_UP_HELD_ITEM_NIGHT => new EvolutionTableMethod(
+                "Level up, during the night, while holding $item",
+            ),
+            EvoMethodId::LEVEL_UP_KNOW_MOVE => new EvolutionTableMethod(
+                "Level up, knowing $move",
+            ),
+            EvoMethodId::LEVEL_UP_WITH_TEAMMATE => new EvolutionTableMethod(
+                "Level up, with $pokemon in the party",
+            ),
+            EvoMethodId::LEVEL_UP_MALE => new EvolutionTableMethod(
+                "Level up, males only, starting at level $level",
+            ),
+            EvoMethodId::LEVEL_UP_FEMALE, EvoMethodId::LEVEL_UP_FORM_FEMALE_1 => new EvolutionTableMethod(
+                "Level up, females only, starting at level $level",
+            ),
+            EvoMethodId::LEVEL_UP_ELECTRIC => new EvolutionTableMethod(
+                'Level up, around a special magnetic field',
+            ),
+            EvoMethodId::LEVEL_UP_FOREST => new EvolutionTableMethod(
+                'Level up near a Moss Rock',
+            ),
+            EvoMethodId::LEVEL_UP_COLD => new EvolutionTableMethod(
+                'Level up near an Ice Rock',
+            ),
+            EvoMethodId::LEVEL_UP_INVERTED => new EvolutionTableMethod(
+                "Level up, starting at $level, while the game system is held upside-down",
+            ),
+            EvoMethodId::LEVEL_UP_AFFECTION_50_MOVE_TYPE => $this->levelUpAffection50MoveType($evolution, $type),
+            EvoMethodId::LEVEL_UP_MOVE_TYPE => new EvolutionTableMethod(
+                "Level up, starting at level $level, with a $type-type Pokémon in the party",
+            ),
+            EvoMethodId::LEVEL_UP_WEATHER => $this->levelUpWeather($evolution),
+            EvoMethodId::LEVEL_UP_MORNING => new EvolutionTableMethod(
+                "Level up, during the day, starting at level $level",
+            ),
+            EvoMethodId::LEVEL_UP_NIGHT => new EvolutionTableMethod(
+                "Level up, during the night, starting at level $level",
+            ),
+            EvoMethodId::LEVEL_UP_VERSION => new EvolutionTableMethod(
+                "Level up, starting at level $level, in $version only",
+            ),
+            EvoMethodId::LEVEL_UP_VERSION_DAY => new EvolutionTableMethod(
+                "Level up, during the day, starting at level $level, in $version only",
+            ),
+            EvoMethodId::LEVEL_UP_VERSION_NIGHT =>new EvolutionTableMethod(
+                "Level up, during the night, starting at level $level, in $version only",
+            ),
+            EvoMethodId::LEVEL_UP_SUMMIT => new EvolutionTableMethod(
+                'Level up at Mount Lanakila',
+            ),
+            EvoMethodId::LEVEL_UP_DUSK => $this->levelUpDusk($evolution),
+            EvoMethodId::LEVEL_UP_WORMHOLE => new EvolutionTableMethod(
+                "Level up, starting at level $level, while in an Ultra Wormhole",
+            ),
+            EvoMethodId::USE_ITEM_WORMHOLE => new EvolutionTableMethod(
+                "Use $item, while in an Ultra Wormhole",
+            ),
+            EvoMethodId::CRITICAL_HITS_IN_BATTLE =>new EvolutionTableMethod(
+                "Land $otherParameter critical hits in one battle",
+            ),
+            EvoMethodId::HP_LOST_IN_BATTLE => $this->hpLostInBattle($evolution, $languageId),
+            EvoMethodId::SPIN => $this->spin($evolution, $item),
+            EvoMethodId::LEVEL_UP_NATURE_AMPED,
+            EvoMethodId::LEVEL_UP_NATURE_LOW_KEY => $this->levelUpNatures($evolution, $languageId),
+            EvoMethodId::TOWER_OF_DARKNESS => new EvolutionTableMethod(
+                'Read the Scroll of Darkness in the Tower of Darkness',
+            ),
+            EvoMethodId::TOWER_OF_WATERS => new EvolutionTableMethod(
+                'Read the Scroll of Waters in the Tower of Waters',
+            ),
+            EvoMethodId::LEVEL_UP_WALK_STEPS_WITH => new EvolutionTableMethod(
+                "Level up, while outside of its Poké Ball after walking $otherParameter steps using the Let's Go! feature",
+            ),
+            EvoMethodId::LEVEL_UP_UNION_CIRCLE => new EvolutionTableMethod(
+                "Level up, starting at level $level, while in a Union Circle group",
+            ),
+            EvoMethodId::LEVEL_UP_IN_BATTLE_EC_25 => new EvolutionTableMethod(
+                "Level up, starting at level $level, 1% chance",
+            ),
+            EvoMethodId::LEVEL_UP_IN_BATTLE_EC_ELSE => new EvolutionTableMethod(
+                "Level up, starting at level $level, 99% chance",
+            ),
+            EvoMethodId::LEVEL_UP_COLLECT_999 => new EvolutionTableMethod(
+                "Level up, with $otherParameter Gimmighoul Coins in your bag",
+            ),
+            EvoMethodId::LEVEL_UP_DEFEAT_EQUALS => $this->levelUpDefeatEquals($evolution, $languageId),
+            EvoMethodId::LEVEL_UP_USE_MOVE_SPECIAL => new EvolutionTableMethod(
+                "Level up, after using $move $otherParameter times",
+            ),
+            EvoMethodId::LEVEL_UP_KNOW_MOVE_EC_ELSE => new EvolutionTableMethod(
+                "Level up, knowing $move, 99% chance",
+            ),
+            EvoMethodId::LEVEL_UP_KNOW_MOVE_EC_25 => new EvolutionTableMethod(
+                "Level up, knowing $move, 1% chance",
+            ),
+            EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_MALE,
+            EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_FEMALE => $this->levelUpRecoilDamage($evolution, $languageId),
+            EvoMethodId::USE_ITEM_FULL_MOON => new EvolutionTableMethod(
+                "Use $item during a full moon",
+            ),
+            EvoMethodId::USE_MOVE_AGILE_STYLE => $this->useMoveAgileStyle($evolution, $languageId),
+            EvoMethodId::USE_MOVE_STRONG_STYLE => $this->useMoveStrongStyle($evolution, $languageId),
+            EvoMethodId::USE_ITEM_DAY => new EvolutionTableMethod(
+                "Use $item during the day",
+            ),
+            EvoMethodId::USE_ITEM_NIGHT => new EvolutionTableMethod(
+                "Use $item during the night",
+            ),
+        };
+    }
 
-	private function tradeShelmetKarrablast(
-		Evolution $evolution,
-		LanguageId $languageId,
-	) : EvolutionTableMethod {
-		$inExchangeFor = match ($evolution->evoFromId->value) {
-			FormId::KARRABLAST => FormId::SHELMET,
-			FormId::SHELMET => FormId::KARRABLAST,
-		};
+    private function tradeShelmetKarrablast(
+        Evolution $evolution,
+        LanguageId $languageId,
+    ): EvolutionTableMethod {
+        $inExchangeFor = match ($evolution->evoFromId->value) {
+            FormId::KARRABLAST => FormId::SHELMET,
+            FormId::SHELMET => FormId::KARRABLAST,
+        };
 
-		$textLinkPokemon = $this->textLinkRepository->getForPokemon(
-			$evolution->versionGroupId,
-			$languageId,
-			new PokemonId($inExchangeFor),
-		);
-		$pokemon = $textLinkPokemon->getLinkHtml();
+        $textLinkPokemon = $this->textLinkRepository->getForPokemon(
+            $evolution->versionGroupId,
+            $languageId,
+            new PokemonId($inExchangeFor),
+        );
+        $pokemon = $textLinkPokemon->getLinkHtml();
 
-		return new EvolutionTableMethod(
-			"Trade, in exchange for $pokemon",
-		);
-	}
+        return new EvolutionTableMethod(
+            "Trade, in exchange for $pokemon",
+        );
+    }
 
-	/**
-	 * For Tyrogue into Hitmonlee, Hitmonchan, or Hitmontop.
-	 */
-	private function tyrogue(
-		Evolution $evolution,
-		LanguageId $languageId,
-	) : EvolutionTableMethod {
-		$level = $evolution->level;
+    /**
+     * For Tyrogue into Hitmonlee, Hitmonchan, or Hitmontop.
+     */
+    private function tyrogue(
+        Evolution $evolution,
+        LanguageId $languageId,
+    ): EvolutionTableMethod {
+        $level = $evolution->level;
 
-		$statNames = $this->statNameRepository->getByLanguage($languageId);
-		$attack = $statNames[StatId::ATTACK]->name;
-		$defense = $statNames[StatId::DEFENSE]->name;
+        $statNames = $this->statNameRepository->getByLanguage($languageId);
+        $attack = $statNames[StatId::ATTACK]->name;
+        $defense = $statNames[StatId::DEFENSE]->name;
 
-		$html = match ($evolution->evoMethodId->value) {
-			EvoMethodId::LEVEL_UP_ATK_GT_DEF => "Level up, starting at level $level, when $attack > $defense",
-			EvoMethodId::LEVEL_UP_ATK_EQ_DEF => "Level up, starting at level $level, when $attack = $defense",
-			EvoMethodId::LEVEL_UP_DEF_GT_ATK => "Level up, starting at level $level, when $attack < $defense",
-		};
+        $html = match ($evolution->evoMethodId->value) {
+            EvoMethodId::LEVEL_UP_ATK_GT_DEF => "Level up, starting at level $level, when $attack > $defense",
+            EvoMethodId::LEVEL_UP_ATK_EQ_DEF => "Level up, starting at level $level, when $attack = $defense",
+            EvoMethodId::LEVEL_UP_DEF_GT_ATK => "Level up, starting at level $level, when $attack < $defense",
+        };
 
-		return new EvolutionTableMethod(
-			$html,
-		);
-	}
+        return new EvolutionTableMethod(
+            $html,
+        );
+    }
 
-	/**
-	 * For Nincada into Ninjask.
-	 */
-	private function levelUpShedinja(
-		Evolution $evolution,
-		LanguageId $languageId,
-	) : EvolutionTableMethod {
-		$nincada = $this->textLinkRepository->getForPokemon(
-			$evolution->versionGroupId,
-			$languageId,
-			new PokemonId($evolution->evoFromId->value),
-		);
-		$ninjask = $this->textLinkRepository->getForPokemon(
-			$evolution->versionGroupId,
-			$languageId,
-			New PokemonId(PokemonId::NINJASK),
-		);
-		$pokeBall = $this->textLinkRepository->getForItem(
-			$evolution->versionGroupId,
-			$languageId,
-			new ItemId(ItemId::POKE_BALL),
-		);
+    /**
+     * For Nincada into Ninjask.
+     */
+    private function levelUpShedinja(
+        Evolution $evolution,
+        LanguageId $languageId,
+    ): EvolutionTableMethod {
+        $nincada = $this->textLinkRepository->getForPokemon(
+            $evolution->versionGroupId,
+            $languageId,
+            new PokemonId($evolution->evoFromId->value),
+        );
+        $ninjask = $this->textLinkRepository->getForPokemon(
+            $evolution->versionGroupId,
+            $languageId,
+            New PokemonId(PokemonId::NINJASK),
+        );
+        $pokeBall = $this->textLinkRepository->getForItem(
+            $evolution->versionGroupId,
+            $languageId,
+            new ItemId(ItemId::POKE_BALL),
+        );
 
-		$nincada = $nincada->getLinkHtml();
-		$ninjask = $ninjask->getLinkHtml();
-		$pokeBall = $pokeBall->getLinkHtml();
+        $nincada = $nincada->getLinkHtml();
+        $ninjask = $ninjask->getLinkHtml();
+        $pokeBall = $pokeBall->getLinkHtml();
 
-		return new EvolutionTableMethod(
-			"Evolve $nincada into $ninjask, with an empty party slot and a $pokeBall in your bag",
-		);
-	}
+        return new EvolutionTableMethod(
+            "Evolve $nincada into $ninjask, with an empty party slot and a $pokeBall in your bag",
+        );
+    }
 
-	/**
-	 * Mainly for Feebas into Milotic.
-	 */
-	private function levelUpBeauty(
-		Evolution $evolution,
-		LanguageId $languageId,
-	) : EvolutionTableMethod {
-		$number = $evolution->otherParameter;
+    /**
+     * Mainly for Feebas into Milotic.
+     */
+    private function levelUpBeauty(
+        Evolution $evolution,
+        LanguageId $languageId,
+    ): EvolutionTableMethod {
+        $number = $evolution->otherParameter;
 
-		$beauty = $this->conditionNameRepository->getByLanguageAndCondition(
-			$languageId,
-			new ConditionId(ConditionId::BEAUTY),
-		);
-		$beauty = $beauty->name;
+        $beauty = $this->conditionNameRepository->getByLanguageAndCondition(
+            $languageId,
+            new ConditionId(ConditionId::BEAUTY),
+        );
+        $beauty = $beauty->name;
 
-		return new EvolutionTableMethod(
-			"Level up, with at least $number $beauty",
-		);
-	}
+        return new EvolutionTableMethod(
+            "Level up, with at least $number $beauty",
+        );
+    }
 
-	/**
-	 * For Eevee into Sylveon.
-	 */
-	private function levelUpAffection50MoveType(
-		Evolution $evolution,
-		string $type,
-	) : EvolutionTableMethod {
-		$versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
+    /**
+     * For Eevee into Sylveon.
+     */
+    private function levelUpAffection50MoveType(
+        Evolution $evolution,
+        string $type,
+    ): EvolutionTableMethod {
+        $versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
 
-		$friendship = $this->getFriendship($versionGroup->generationId);
-		$friendshipOrAffection = match ($versionGroup->generationId->value) {
-			6, 7 => 'at least 2 affection',
-			default => "at least $friendship friendship",
-		};
+        $friendship = $this->getFriendship($versionGroup->generationId);
+        $friendshipOrAffection = match ($versionGroup->generationId->value) {
+            6, 7 => 'at least 2 affection',
+            default => "at least $friendship friendship",
+        };
 
-		return new EvolutionTableMethod(
-			"Level up, with $friendshipOrAffection, while knowing a $type-type move",
-		);
-	}
+        return new EvolutionTableMethod(
+            "Level up, with $friendshipOrAffection, while knowing a $type-type move",
+        );
+    }
 
-	/**
-	 * For Sliggoo into Goodra.
-	 */
-	private function levelUpWeather(
-		Evolution $evolution,
-	) : EvolutionTableMethod {
-		$level = $evolution->level;
-		$versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
+    /**
+     * For Sliggoo into Goodra.
+     */
+    private function levelUpWeather(
+        Evolution $evolution,
+    ): EvolutionTableMethod {
+        $level = $evolution->level;
+        $versionGroup = $this->versionGroupRepository->getById($evolution->versionGroupId);
 
-		$weather = match ($versionGroup->generationId->value) {
-			6 => 'rain',
-			default => 'rain or fog',
-		};
+        $weather = match ($versionGroup->generationId->value) {
+            6 => 'rain',
+            default => 'rain or fog',
+        };
 
-		return new EvolutionTableMethod(
-			"Level up, starting at level $level, during $weather in the overworld",
-		);
-	}
+        return new EvolutionTableMethod(
+            "Level up, starting at level $level, during $weather in the overworld",
+        );
+    }
 
-	/**
-	 * For Rockruff (Own Tempo) into Lycanroc (Dusk Form).
-	 */
-	private function levelUpDusk(
-		Evolution $evolution,
-	) : EvolutionTableMethod {
-		$level = $evolution->level;
-		$time = self::getEveningText($evolution->versionGroupId);
+    /**
+     * For Rockruff (Own Tempo) into Lycanroc (Dusk Form).
+     */
+    private function levelUpDusk(
+        Evolution $evolution,
+    ): EvolutionTableMethod {
+        $level = $evolution->level;
+        $time = self::getEveningText($evolution->versionGroupId);
 
-		return new EvolutionTableMethod(
-			"Level up, $time, starting at level $level",
-		);
-	}
+        return new EvolutionTableMethod(
+            "Level up, $time, starting at level $level",
+        );
+    }
 
-	/**
-	 * For Galarian Yamask into Runerigus.
-	 */
-	private function hpLostInBattle(
-		Evolution $evolution,
-		LanguageId $languageId,
-	) : EvolutionTableMethod {
-		$number = $evolution->otherParameter;
+    /**
+     * For Galarian Yamask into Runerigus.
+     */
+    private function hpLostInBattle(
+        Evolution $evolution,
+        LanguageId $languageId,
+    ): EvolutionTableMethod {
+        $number = $evolution->otherParameter;
 
-		$statNames = $this->statNameRepository->getByLanguage($languageId);
-		$hp = $statNames[StatId::HP]->name;
+        $statNames = $this->statNameRepository->getByLanguage($languageId);
+        $hp = $statNames[StatId::HP]->name;
 
-		return new EvolutionTableMethod(
-			"Pass under the rock arch in Dusty Bowl after taking at least $number $hp in damage from attacks without fainting",
-		);
-	}
+        return new EvolutionTableMethod(
+            "Pass under the rock arch in Dusty Bowl after taking at least $number $hp in damage from attacks without fainting",
+        );
+    }
 
-	/**
-	 * For Milcery into Alcremie.
-	 */
-	private function spin(
-		Evolution $evolution,
-		string $item,
-	) : EvolutionTableMethod {
-		$spinType = new AlcremieSpinType($evolution->otherParameter);
+    /**
+     * For Milcery into Alcremie.
+     */
+    private function spin(
+        Evolution $evolution,
+        string $item,
+    ): EvolutionTableMethod {
+        $spinType = new AlcremieSpinType($evolution->otherParameter);
 
-		$direction = $spinType->getDirection();
-		$duration = $spinType->getDuration();
-		$timeOfDay = $spinType->getTimeOfDay($evolution->versionGroupId);
+        $direction = $spinType->getDirection();
+        $duration = $spinType->getDuration();
+        $timeOfDay = $spinType->getTimeOfDay($evolution->versionGroupId);
 
-		return new EvolutionTableMethod(
-			"After spinning $direction for $duration $timeOfDay, while holding $item",
-		);
-	}
+        return new EvolutionTableMethod(
+            "After spinning $direction for $duration $timeOfDay, while holding $item",
+        );
+    }
 
-	/**
-	 * For Toxel into Toxtricity.
-	 */
-	private function levelUpNatures(
-		Evolution $evolution,
-		LanguageId $languageId,
-	) : EvolutionTableMethod {
-		$level = $evolution->level;
+    /**
+     * For Toxel into Toxtricity.
+     */
+    private function levelUpNatures(
+        Evolution $evolution,
+        LanguageId $languageId,
+    ): EvolutionTableMethod {
+        $level = $evolution->level;
 
-		$natures = $this->dexNatureRepository->getByToxelEvo(
-			$languageId,
-			$evolution->evoIntoId,
-		);
-		$natures[array_key_last($natures)] = 'or ' . $natures[array_key_last($natures)];
-		$natures = implode(', ', $natures);
+        $natures = $this->dexNatureRepository->getByToxelEvo(
+            $languageId,
+            $evolution->evoIntoId,
+        );
+        $natures[array_key_last($natures)] = 'or ' . $natures[array_key_last($natures)];
+        $natures = implode(', ', $natures);
 
-		return new EvolutionTableMethod(
-			"Level up, starting at level $level, if its Nature is $natures",
-		);
-	}
+        return new EvolutionTableMethod(
+            "Level up, starting at level $level, if its Nature is $natures",
+        );
+    }
 
-	/**
-	 * For Bisharp into Kingambit.
-	 */
-	private function levelUpDefeatEquals(
-		Evolution $evolution,
-		LanguageId $languageId,
-	) : EvolutionTableMethod {
-		$number = $evolution->otherParameter;
+    /**
+     * For Bisharp into Kingambit.
+     */
+    private function levelUpDefeatEquals(
+        Evolution $evolution,
+        LanguageId $languageId,
+    ): EvolutionTableMethod {
+        $number = $evolution->otherParameter;
 
-		$bisharp = $this->textLinkRepository->getForPokemon(
-			$evolution->versionGroupId,
-			$languageId,
-			New PokemonId(PokemonId::BISHARP),
-		);
-		$leadersCrest = $this->textLinkRepository->getForItem(
-			$evolution->versionGroupId,
-			$languageId,
-			new ItemId(ItemId::LEADERS_CREST),
-		);
+        $bisharp = $this->textLinkRepository->getForPokemon(
+            $evolution->versionGroupId,
+            $languageId,
+            New PokemonId(PokemonId::BISHARP),
+        );
+        $leadersCrest = $this->textLinkRepository->getForItem(
+            $evolution->versionGroupId,
+            $languageId,
+            new ItemId(ItemId::LEADERS_CREST),
+        );
 
-		$bisharp = $bisharp->getLinkHtml();
-		$leadersCrest = $leadersCrest->getLinkHtml();
+        $bisharp = $bisharp->getLinkHtml();
+        $leadersCrest = $leadersCrest->getLinkHtml();
 
-		return new EvolutionTableMethod(
-			"Level up, after defeating $number $bisharp that hold a $leadersCrest",
-		);
-	}
+        return new EvolutionTableMethod(
+            "Level up, after defeating $number $bisharp that hold a $leadersCrest",
+        );
+    }
 
-	/**
-	 * For Basculin (White-Striped Form) into Basculegion.
-	 */
-	private function levelUpRecoilDamage(
-		Evolution $evolution,
-		LanguageId $languageId,
-	) : EvolutionTableMethod {
-		$number = $evolution->otherParameter;
+    /**
+     * For Basculin (White-Striped Form) into Basculegion.
+     */
+    private function levelUpRecoilDamage(
+        Evolution $evolution,
+        LanguageId $languageId,
+    ): EvolutionTableMethod {
+        $number = $evolution->otherParameter;
 
-		$statNames = $this->statNameRepository->getByLanguage($languageId);
-		$hp = $statNames[StatId::HP]->name;
+        $statNames = $this->statNameRepository->getByLanguage($languageId);
+        $hp = $statNames[StatId::HP]->name;
 
-		$gender = match ($evolution->evoMethodId->value) {
-			EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_MALE => 'males',
-			EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_FEMALE => 'females',
-		};
+        $gender = match ($evolution->evoMethodId->value) {
+            EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_MALE => 'males',
+            EvoMethodId::LEVEL_UP_RECOIL_DAMAGE_FEMALE => 'females',
+        };
 
-		return new EvolutionTableMethod(
-			"Level up, after losing at least $number $hp from recoil damage, $gender only",
-		);
-	}
+        return new EvolutionTableMethod(
+            "Level up, after losing at least $number $hp from recoil damage, $gender only",
+        );
+    }
 
-	/**
-	 * For Stantler into Wyrdeer.
-	 */
-	private function useMoveAgileStyle(
-		Evolution $evolution,
-		LanguageId $languageId,
-	) : EvolutionTableMethod {
-		$psyshieldBash = $this->textLinkRepository->getForMove(
-			$evolution->versionGroupId,
-			$languageId,
-			new MoveId(MoveId::PSYSHIELD_BASH),
-		);
-		$psyshieldBash = $psyshieldBash->getLinkHtml();
+    /**
+     * For Stantler into Wyrdeer.
+     */
+    private function useMoveAgileStyle(
+        Evolution $evolution,
+        LanguageId $languageId,
+    ): EvolutionTableMethod {
+        $psyshieldBash = $this->textLinkRepository->getForMove(
+            $evolution->versionGroupId,
+            $languageId,
+            new MoveId(MoveId::PSYSHIELD_BASH),
+        );
+        $psyshieldBash = $psyshieldBash->getLinkHtml();
 
-		return new EvolutionTableMethod(
-			"Use $psyshieldBash in the agile style 20 times",
-		);
-	}
+        return new EvolutionTableMethod(
+            "Use $psyshieldBash in the agile style 20 times",
+        );
+    }
 
-	/**
-	 * For Hisuian Qwilfish into Overqwil.
-	 */
-	private function useMoveStrongStyle(
-		Evolution $evolution,
-		LanguageId $languageId,
-	) : EvolutionTableMethod {
-		$barbBarrage = $this->textLinkRepository->getForMove(
-			$evolution->versionGroupId,
-			$languageId,
-			new MoveId(MoveId::BARB_BARRAGE),
-		);
-		$barbBarrage = $barbBarrage->getLinkHtml();
+    /**
+     * For Hisuian Qwilfish into Overqwil.
+     */
+    private function useMoveStrongStyle(
+        Evolution $evolution,
+        LanguageId $languageId,
+    ): EvolutionTableMethod {
+        $barbBarrage = $this->textLinkRepository->getForMove(
+            $evolution->versionGroupId,
+            $languageId,
+            new MoveId(MoveId::BARB_BARRAGE),
+        );
+        $barbBarrage = $barbBarrage->getLinkHtml();
 
-		return new EvolutionTableMethod(
-			"Use $barbBarrage in the strong style 20 times",
-		);
-	}
+        return new EvolutionTableMethod(
+            "Use $barbBarrage in the strong style 20 times",
+        );
+    }
 
-	private function getFriendship(GenerationId $generationId) : int
-	{
-		return match ($generationId->value) {
-			2, 3, 4, 5, 6, 7, => 220,
-			default => 160,
-		};
-	}
+    private function getFriendship(GenerationId $generationId): int
+    {
+        return match ($generationId->value) {
+            2, 3, 4, 5, 6, 7, => 220,
+            default => 160,
+        };
+    }
 
-	public static function getEveningText(VersionGroupId $versionGroupId) : string
-	{
-		return match ($versionGroupId->value) {
-			VersionGroupId::ULTRA_SUN_ULTRA_MOON => 'between 5:00 and 5:59 PM',
-			VersionGroupId::SWORD_SHIELD => 'between 7:00 and 7:59 PM',
-			VersionGroupId::SCARLET_VIOLET => 'during the evening',
-		};
-	}
+    public static function getEveningText(VersionGroupId $versionGroupId): string
+    {
+        return match ($versionGroupId->value) {
+            VersionGroupId::ULTRA_SUN_ULTRA_MOON => 'between 5:00 and 5:59 PM',
+            VersionGroupId::SWORD_SHIELD => 'between 7:00 and 7:59 PM',
+            VersionGroupId::SCARLET_VIOLET => 'during the evening',
+        };
+    }
 }

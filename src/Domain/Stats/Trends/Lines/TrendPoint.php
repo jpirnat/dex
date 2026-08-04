@@ -7,8 +7,8 @@ use DateTime;
 
 final readonly class TrendPoint
 {
-	public function __construct(
-		private(set) DateTime $date,
-		private(set) float $value,
-	) {}
+    public function __construct(
+        private(set) DateTime $date,
+        private(set) float $value,
+    ) {}
 }

@@ -8,11 +8,11 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final readonly class TechnicalMachine
 {
-	public function __construct(
-		private(set) VersionGroupId $versionGroupId,
-		private(set) MachineType $machineType,
-		private(set) int $number,
-		private(set) ItemId $itemId,
-		private(set) MoveId $moveId,
-	) {}
+    public function __construct(
+        private(set) VersionGroupId $versionGroupId,
+        private(set) MachineType $machineType,
+        private(set) int $number,
+        private(set) ItemId $itemId,
+        private(set) MoveId $moveId,
+    ) {}
 }

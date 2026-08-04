@@ -9,59 +9,59 @@ use Psr\Http\Message\ResponseInterface;
 
 final readonly class DexAbilityView
 {
-	public function __construct(
-		private DexAbilityModel $dexAbilityModel,
-		private DexFormatter $dexFormatter,
-	) {}
+    public function __construct(
+        private DexAbilityModel $dexAbilityModel,
+        private DexFormatter $dexFormatter,
+    ) {}
 
-	/**
-	 * Get data for the dex ability page.
-	 */
-	public function getData() : ResponseInterface
-	{
-		$versionGroupModel = $this->dexAbilityModel->versionGroupModel;
-		$versionGroup = $versionGroupModel->versionGroup;
-		$versionGroups = $versionGroupModel->versionGroups;
+    /**
+     * Get data for the dex ability page.
+     */
+    public function getData(): ResponseInterface
+    {
+        $versionGroupModel = $this->dexAbilityModel->versionGroupModel;
+        $versionGroup = $versionGroupModel->versionGroup;
+        $versionGroups = $versionGroupModel->versionGroups;
 
-		$ability = $this->dexAbilityModel->ability;
-		$flags = $this->dexAbilityModel->flags;
-		$stats = $this->dexAbilityModel->stats;
-		$pokemon = $this->dexAbilityModel->pokemon;
+        $ability = $this->dexAbilityModel->ability;
+        $flags = $this->dexAbilityModel->flags;
+        $stats = $this->dexAbilityModel->stats;
+        $pokemon = $this->dexAbilityModel->pokemon;
 
-		$pokemon = $this->dexFormatter->formatDexPokemon($pokemon);
+        $pokemon = $this->dexFormatter->formatDexPokemon($pokemon);
 
-		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->identifier;
-		$breadcrumbs = [[
-			'url' => "/dex/$vgIdentifier",
-			'text' => 'Dex',
-		], [
-			'url' => "/dex/$vgIdentifier/abilities",
-			'text' => 'Abilities',
-		], [
-			'text' => $ability['name'],
-		]];
+        // Navigational breadcrumbs.
+        $vgIdentifier = $versionGroup->identifier;
+        $breadcrumbs = [[
+            'url' => "/dex/$vgIdentifier",
+            'text' => 'Dex',
+        ], [
+            'url' => "/dex/$vgIdentifier/abilities",
+            'text' => 'Abilities',
+        ], [
+            'text' => $ability['name'],
+        ]];
 
-		return new JsonResponse([
-			'data' => [
-				'title' => 'Porydex - Abilities - ' . $ability['name'],
+        return new JsonResponse([
+            'data' => [
+                'title' => 'Porydex - Abilities - ' . $ability['name'],
 
-				'versionGroup' => [
-					'identifier' => $versionGroup->identifier,
-					'hasAbilities' => $versionGroup->hasAbilities,
-					'hasBreeding' => $versionGroup->hasBreeding,
-					'hasEvYields' => $versionGroup->hasEvYields,
-					'hasEvBasedStats' => $versionGroup->hasEvBasedStats,
-				],
+                'versionGroup' => [
+                    'identifier' => $versionGroup->identifier,
+                    'hasAbilities' => $versionGroup->hasAbilities,
+                    'hasBreeding' => $versionGroup->hasBreeding,
+                    'hasEvYields' => $versionGroup->hasEvYields,
+                    'hasEvBasedStats' => $versionGroup->hasEvBasedStats,
+                ],
 
-				'breadcrumbs' => $breadcrumbs,
-				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
+                'breadcrumbs' => $breadcrumbs,
+                'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
-				'ability' => $ability,
-				'flags' => $flags,
-				'pokemons' => $pokemon,
-				'stats' => $stats,
-			]
-		]);
-	}
+                'ability' => $ability,
+                'flags' => $flags,
+                'pokemons' => $pokemon,
+                'stats' => $stats,
+            ]
+        ]);
+    }
 }

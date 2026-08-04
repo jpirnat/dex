@@ -13,54 +13,54 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryIn
 
 final readonly class AbilityModel
 {
-	public function __construct(
-		private MovesetRatedAveragedAbilityRepositoryInterface $movesetRatedAveragedAbilityRepository,
-		private AbilityNameRepositoryInterface $abilityNameRepository,
-		private AbilityRepositoryInterface $abilityRepository,
-	) {}
+    public function __construct(
+        private MovesetRatedAveragedAbilityRepositoryInterface $movesetRatedAveragedAbilityRepository,
+        private AbilityNameRepositoryInterface $abilityNameRepository,
+        private AbilityRepositoryInterface $abilityRepository,
+    ) {}
 
-	/**
-	 * Set individual Pokémon ability data averaged over multiple months.
-	 */
-	public function setData(
-		DateTime $start,
-		DateTime $end,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-		LanguageId $languageId,
-	) : array {
-		// Get moveset rated averaged ability records for these months.
-		$movesetRatedAveragedAbilities = $this->movesetRatedAveragedAbilityRepository->getByMonthsAndFormatAndRatingAndPokemon(
-			$start,
-			$end,
-			$formatId,
-			$rating,
-			$pokemonId,
-		);
+    /**
+     * Set individual Pokémon ability data averaged over multiple months.
+     */
+    public function setData(
+        DateTime $start,
+        DateTime $end,
+        FormatId $formatId,
+        int $rating,
+        PokemonId $pokemonId,
+        LanguageId $languageId,
+    ): array {
+        // Get moveset rated averaged ability records for these months.
+        $movesetRatedAveragedAbilities = $this->movesetRatedAveragedAbilityRepository->getByMonthsAndFormatAndRatingAndPokemon(
+            $start,
+            $end,
+            $formatId,
+            $rating,
+            $pokemonId,
+        );
 
-		$abilities = [];
+        $abilities = [];
 
-		// Get each ability's data.
-		foreach ($movesetRatedAveragedAbilities as $movesetRatedAveragedAbility) {
-			$abilityId = $movesetRatedAveragedAbility->abilityId;
+        // Get each ability's data.
+        foreach ($movesetRatedAveragedAbilities as $movesetRatedAveragedAbility) {
+            $abilityId = $movesetRatedAveragedAbility->abilityId;
 
-			// Get this ability's name.
-			$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
-				$languageId,
-				$abilityId,
-			);
+            // Get this ability's name.
+            $abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
+                $languageId,
+                $abilityId,
+            );
 
-			// Get this ability.
-			$ability = $this->abilityRepository->getById($abilityId);
+            // Get this ability.
+            $ability = $this->abilityRepository->getById($abilityId);
 
-			$abilities[] = [
-				'identifier' => $ability->identifier,
-				'name' => $abilityName->name,
-				'percent' => $movesetRatedAveragedAbility->percent,
-			];
-		}
+            $abilities[] = [
+                'identifier' => $ability->identifier,
+                'name' => $abilityName->name,
+                'percent' => $movesetRatedAveragedAbility->percent,
+            ];
+        }
 
-		return $abilities;
-	}
+        return $abilities;
+    }
 }

@@ -5,8 +5,8 @@ namespace Jp\Dex\Domain\Abilities;
 
 final readonly class Ability
 {
-	public function __construct(
-		private(set) AbilityId $id,
-		private(set) string $identifier,
-	) {}
+    public function __construct(
+        private(set) AbilityId $id,
+        private(set) string $identifier,
+    ) {}
 }

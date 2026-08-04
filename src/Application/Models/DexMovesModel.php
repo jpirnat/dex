@@ -11,48 +11,48 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexMovesModel
 {
-	/** @var DexMove[] $moves */
-	private(set) array $moves = [];
+    /** @var DexMove[] $moves */
+    private(set) array $moves = [];
 
-	private(set) array $flags = [];
-
-
-	public function __construct(
-		private(set) readonly VersionGroupModel $versionGroupModel,
-		private readonly DexMoveRepositoryInterface $dexMoveRepository,
-		private readonly MoveFlagRepositoryInterface $flagRepository,
-	) {}
+    private(set) array $flags = [];
 
 
-	/**
-	 * Set data for the dex moves page.
-	 */
-	public function setData(
-		string $vgIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$this->moves = [];
-		$this->flags = [];
+    public function __construct(
+        private(set) readonly VersionGroupModel $versionGroupModel,
+        private readonly DexMoveRepositoryInterface $dexMoveRepository,
+        private readonly MoveFlagRepositoryInterface $flagRepository,
+    ) {}
 
-		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->versionGroupModel->setSinceGeneration(new GenerationId(1));
+    /**
+     * Set data for the dex moves page.
+     */
+    public function setData(
+        string $vgIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $this->moves = [];
+        $this->flags = [];
 
-		$this->moves = $this->dexMoveRepository->getByVersionGroup(
-			$versionGroupId,
-			$languageId,
-		);
+        $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$flags = $this->flagRepository->getByVersionGroupPlural(
-			$versionGroupId,
-			$languageId,
-		);
-		foreach ($flags as $flag) {
-			$this->flags[] = [
-				'identifier' => $flag->identifier,
-				'name' => $flag->name,
-				'description' => $flag->description,
-			];
-		}
-	}
+        $this->versionGroupModel->setSinceGeneration(new GenerationId(1));
+
+        $this->moves = $this->dexMoveRepository->getByVersionGroup(
+            $versionGroupId,
+            $languageId,
+        );
+
+        $flags = $this->flagRepository->getByVersionGroupPlural(
+            $versionGroupId,
+            $languageId,
+        );
+        foreach ($flags as $flag) {
+            $this->flags[] = [
+                'identifier' => $flag->identifier,
+                'name' => $flag->name,
+                'description' => $flag->description,
+            ];
+        }
+    }
 }

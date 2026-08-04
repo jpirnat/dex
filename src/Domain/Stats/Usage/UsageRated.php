@@ -12,32 +12,32 @@ use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
 final readonly class UsageRated
 {
-	use ValidateMonthTrait;
+    use ValidateMonthTrait;
 
-	/**
-	 * Constructor.
-	 *
-	 * @throws InvalidMonthException if $month is invalid.
-	 * @throws InvalidRatingException if $rating is invalid.
-	 * @throws InvalidAverageWeightPerTeamException if $averageWeightPerTeam is
-	 *     invalid.
-	 */
-	public function __construct(
-		private(set) DateTime $month,
-		private(set) FormatId $formatId,
-		private(set) int $rating,
-		private(set) float $averageWeightPerTeam,
-	) {
-		$this->validateMonth($month);
+    /**
+     * Constructor.
+     *
+     * @throws InvalidMonthException if $month is invalid.
+     * @throws InvalidRatingException if $rating is invalid.
+     * @throws InvalidAverageWeightPerTeamException if $averageWeightPerTeam is
+     *     invalid.
+     */
+    public function __construct(
+        private(set) DateTime $month,
+        private(set) FormatId $formatId,
+        private(set) int $rating,
+        private(set) float $averageWeightPerTeam,
+    ) {
+        $this->validateMonth($month);
 
-		if ($rating < 0) {
-			throw new InvalidRatingException("Invalid rating: $rating.");
-		}
+        if ($rating < 0) {
+            throw new InvalidRatingException("Invalid rating: $rating.");
+        }
 
-		if ($averageWeightPerTeam < 0) {
-			throw new InvalidAverageWeightPerTeamException(
-				"Invalid average weight per team: $averageWeightPerTeam."
-			);
-		}
-	}
+        if ($averageWeightPerTeam < 0) {
+            throw new InvalidAverageWeightPerTeamException(
+                "Invalid average weight per team: $averageWeightPerTeam."
+            );
+        }
+    }
 }

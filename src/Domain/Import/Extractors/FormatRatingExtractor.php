@@ -10,27 +10,27 @@ use Spatie\Regex\Regex;
 
 final readonly class FormatRatingExtractor
 {
-	/**
-	 * Extract a Pokémon Showdown format name and rating from a Pokémon Showdown
-	 * stats filename.
-	 *
-	 * @throws InvalidFilenameException if $filename is invalid.
-	 */
-	public function extractFormatRating(string $filename) : FormatRating
-	{
-		$pattern = '/([A-Za-z0-9]+)-(\d+)/';
+    /**
+     * Extract a Pokémon Showdown format name and rating from a Pokémon Showdown
+     * stats filename.
+     *
+     * @throws InvalidFilenameException if $filename is invalid.
+     */
+    public function extractFormatRating(string $filename): FormatRating
+    {
+        $pattern = '/([A-Za-z0-9]+)-(\d+)/';
 
-		try {
-			$matchResult = Regex::match($pattern, $filename);
+        try {
+            $matchResult = Regex::match($pattern, $filename);
 
-			return new FormatRating(
-				$matchResult->group(1),
-				(int) $matchResult->group(2),
-			);
-		} catch (RegexFailed) {
-			throw new InvalidFilenameException(
-				"Filename is invalid for format-rating: $filename"
-			);
-		}
-	}
+            return new FormatRating(
+                $matchResult->group(1),
+                (int) $matchResult->group(2),
+            );
+        } catch (RegexFailed) {
+            throw new InvalidFilenameException(
+                "Filename is invalid for format-rating: $filename"
+            );
+        }
+    }
 }

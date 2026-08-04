@@ -11,161 +11,161 @@ use PDO;
 
 final readonly class DatabaseTypeMatchupRepository implements TypeMatchupRepositoryInterface
 {
-	public function __construct(
-		private PDO $db,
-	) {}
+    public function __construct(
+        private PDO $db,
+    ) {}
 
-	/**
-	 * Get type matchups by generation.
-	 *
-	 * @return TypeMatchup[]
-	 */
-	public function getByGeneration(GenerationId $generationId) : array
-	{
-		$stmt = $this->db->prepare(
-			'SELECT
-				`a`.`identifier` AS `attacking_type_identifier`,
-				`d`.`identifier` AS `defending_type_identifier`,
-				`tm`.`multiplier`
-			FROM `type_matchups` AS `tm`
-			INNER JOIN `types` AS `a`
-				ON `tm`.`attacking_type_id` = `a`.`id`
-			INNER JOIN `types` AS `d`
-				ON `tm`.`defending_type_id` = `d`.`id`
-			WHERE `generation_id` = :generation_id'
-		);
-		$stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
-		$stmt->execute();
+    /**
+     * Get type matchups by generation.
+     *
+     * @return TypeMatchup[]
+     */
+    public function getByGeneration(GenerationId $generationId): array
+    {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `a`.`identifier` AS `attacking_type_identifier`,
+                `d`.`identifier` AS `defending_type_identifier`,
+                `tm`.`multiplier`
+            FROM `type_matchups` AS `tm`
+            INNER JOIN `types` AS `a`
+                ON `tm`.`attacking_type_id` = `a`.`id`
+            INNER JOIN `types` AS `d`
+                ON `tm`.`defending_type_id` = `d`.`id`
+            WHERE `generation_id` = :generation_id'
+        );
+        $stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
+        $stmt->execute();
 
-		$typeMatchups = [];
+        $typeMatchups = [];
 
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$typeMatchup = new TypeMatchup(
-				$generationId,
-				$result['attacking_type_identifier'],
-				$result['defending_type_identifier'],
-				(float) $result['multiplier'],
-			);
+        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $typeMatchup = new TypeMatchup(
+                $generationId,
+                $result['attacking_type_identifier'],
+                $result['defending_type_identifier'],
+                (float) $result['multiplier'],
+            );
 
-			$typeMatchups[] = $typeMatchup;
-		}
+            $typeMatchups[] = $typeMatchup;
+        }
 
-		return $typeMatchups;
-	}
+        return $typeMatchups;
+    }
 
-	/**
-	 * Get multipliers grouped by defending type.
-	 *
-	 * @return float[][] Indexed by defending type identifier, then by attacking
-	 *     type identifier.
-	 */
-	public function getMultipliers(GenerationId $generationId) : array
-	{
-		$stmt = $this->db->prepare(
-			'SELECT
-				`a`.`identifier` AS `attacking`,
-				`d`.`identifier` AS `defending`,
-				`tm`.`multiplier`
-			FROM `type_matchups` AS `tm`
-			INNER JOIN `types` AS `a`
-				ON `tm`.`attacking_type_id` = `a`.`id`
-			INNER JOIN `types` AS `d`
-				ON `tm`.`defending_type_id` = `d`.`id`
-			WHERE `generation_id` = :generation_id'
-		);
-		$stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
-		$stmt->execute();
+    /**
+     * Get multipliers grouped by defending type.
+     *
+     * @return float[][] Indexed by defending type identifier, then by attacking
+     *     type identifier.
+     */
+    public function getMultipliers(GenerationId $generationId): array
+    {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `a`.`identifier` AS `attacking`,
+                `d`.`identifier` AS `defending`,
+                `tm`.`multiplier`
+            FROM `type_matchups` AS `tm`
+            INNER JOIN `types` AS `a`
+                ON `tm`.`attacking_type_id` = `a`.`id`
+            INNER JOIN `types` AS `d`
+                ON `tm`.`defending_type_id` = `d`.`id`
+            WHERE `generation_id` = :generation_id'
+        );
+        $stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
+        $stmt->execute();
 
-		$multipliers = [];
+        $multipliers = [];
 
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$attacking = $result['attacking'];
-			$defending = $result['defending'];
-			$multiplier = (float) $result['multiplier'];
+        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $attacking = $result['attacking'];
+            $defending = $result['defending'];
+            $multiplier = (float) $result['multiplier'];
 
-			$multipliers[$defending][$attacking] = $multiplier;
-		}
+            $multipliers[$defending][$attacking] = $multiplier;
+        }
 
-		return $multipliers;
-	}
+        return $multipliers;
+    }
 
-	/**
-	 * Get type matchups by generation and attacking type.
-	 *
-	 * @return TypeMatchup[]
-	 */
-	public function getByAttackingType(GenerationId $generationId, TypeId $typeId) : array
-	{
-		$stmt = $this->db->prepare(
-			'SELECT
-				`a`.`identifier` AS `attacking_type_identifier`,
-				`d`.`identifier` AS `defending_type_identifier`,
-				`multiplier`
-			FROM `type_matchups` AS `tm`
-			INNER JOIN `types` AS `a`
-				ON `tm`.`attacking_type_id` = `a`.`id`
-			INNER JOIN `types` AS `d`
-				ON `tm`.`defending_type_id` = `d`.`id`
-			WHERE `generation_id` = :generation_id
-				AND `attacking_type_id` = :type_id'
-		);
-		$stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
-		$stmt->execute();
+    /**
+     * Get type matchups by generation and attacking type.
+     *
+     * @return TypeMatchup[]
+     */
+    public function getByAttackingType(GenerationId $generationId, TypeId $typeId): array
+    {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `a`.`identifier` AS `attacking_type_identifier`,
+                `d`.`identifier` AS `defending_type_identifier`,
+                `multiplier`
+            FROM `type_matchups` AS `tm`
+            INNER JOIN `types` AS `a`
+                ON `tm`.`attacking_type_id` = `a`.`id`
+            INNER JOIN `types` AS `d`
+                ON `tm`.`defending_type_id` = `d`.`id`
+            WHERE `generation_id` = :generation_id
+                AND `attacking_type_id` = :type_id'
+        );
+        $stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
+        $stmt->execute();
 
-		$typeMatchups = [];
+        $typeMatchups = [];
 
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$typeMatchup = new TypeMatchup(
-				$generationId,
-				$result['attacking_type_identifier'],
-				$result['defending_type_identifier'],
-				(float) $result['multiplier'],
-			);
+        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $typeMatchup = new TypeMatchup(
+                $generationId,
+                $result['attacking_type_identifier'],
+                $result['defending_type_identifier'],
+                (float) $result['multiplier'],
+            );
 
-			$typeMatchups[] = $typeMatchup;
-		}
+            $typeMatchups[] = $typeMatchup;
+        }
 
-		return $typeMatchups;
-	}
+        return $typeMatchups;
+    }
 
-	/**
-	 * Get type matchups by generation and defending type.
-	 *
-	 * @return TypeMatchup[]
-	 */
-	public function getByDefendingType(GenerationId $generationId, TypeId $typeId) : array
-	{
-		$stmt = $this->db->prepare(
-			'SELECT
-				`a`.`identifier` AS `attacking_type_identifier`,
-				`d`.`identifier` AS `defending_type_identifier`,
-				`tm`.`multiplier`
-			FROM `type_matchups` AS `tm`
-			INNER JOIN `types` AS `a`
-				ON `tm`.`attacking_type_id` = `a`.`id`
-			INNER JOIN `types` AS `d`
-				ON `tm`.`defending_type_id` = `d`.`id`
-			WHERE `generation_id` = :generation_id
-				AND `defending_type_id` = :type_id'
-		);
-		$stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
-		$stmt->execute();
+    /**
+     * Get type matchups by generation and defending type.
+     *
+     * @return TypeMatchup[]
+     */
+    public function getByDefendingType(GenerationId $generationId, TypeId $typeId): array
+    {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `a`.`identifier` AS `attacking_type_identifier`,
+                `d`.`identifier` AS `defending_type_identifier`,
+                `tm`.`multiplier`
+            FROM `type_matchups` AS `tm`
+            INNER JOIN `types` AS `a`
+                ON `tm`.`attacking_type_id` = `a`.`id`
+            INNER JOIN `types` AS `d`
+                ON `tm`.`defending_type_id` = `d`.`id`
+            WHERE `generation_id` = :generation_id
+                AND `defending_type_id` = :type_id'
+        );
+        $stmt->bindValue(':generation_id', $generationId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':type_id', $typeId->value, PDO::PARAM_INT);
+        $stmt->execute();
 
-		$typeMatchups = [];
+        $typeMatchups = [];
 
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$typeMatchup = new TypeMatchup(
-				$generationId,
-				$result['attacking_type_identifier'],
-				$result['defending_type_identifier'],
-				(float) $result['multiplier'],
-			);
+        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $typeMatchup = new TypeMatchup(
+                $generationId,
+                $result['attacking_type_identifier'],
+                $result['defending_type_identifier'],
+                (float) $result['multiplier'],
+            );
 
-			$typeMatchups[] = $typeMatchup;
-		}
+            $typeMatchups[] = $typeMatchup;
+        }
 
-		return $typeMatchups;
-	}
+        return $typeMatchups;
+    }
 }
