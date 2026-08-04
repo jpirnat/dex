@@ -10,39 +10,39 @@ use PDO;
 
 final readonly class DatabaseLanguageNameRepository implements LanguageNameRepositoryInterface
 {
-	public function __construct(
-		private PDO $db,
-	) {}
+    public function __construct(
+        private PDO $db,
+    ) {}
 
-	/**
-	 * Get language names in their own languages.
-	 *
-	 * @return LanguageName[] Indexed by language id.
-	 */
-	public function getInOwnLanguages() : array
-	{
-		$stmt = $this->db->prepare(
-			'SELECT
-				`in_language_id`,
-				`named_language_id`,
-				`name`
-			FROM `language_names`
-			WHERE `in_language_id` = `named_language_id`'
-		);
-		$stmt->execute();
+    /**
+     * Get language names in their own languages.
+     *
+     * @return LanguageName[] Indexed by language id.
+     */
+    public function getInOwnLanguages(): array
+    {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `in_language_id`,
+                `named_language_id`,
+                `name`
+            FROM `language_names`
+            WHERE `in_language_id` = `named_language_id`'
+        );
+        $stmt->execute();
 
-		$languageNames = [];
+        $languageNames = [];
 
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$languageName = new LanguageName(
-				new LanguageId($result['in_language_id']),
-				new LanguageId($result['named_language_id']),
-				$result['name'],
-			);
+        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $languageName = new LanguageName(
+                new LanguageId($result['in_language_id']),
+                new LanguageId($result['named_language_id']),
+                $result['name'],
+            );
 
-			$languageNames[$result['named_language_id']] = $languageName;
-		}
+            $languageNames[$result['named_language_id']] = $languageName;
+        }
 
-		return $languageNames;
-	}
+        return $languageNames;
+    }
 }

@@ -13,54 +13,54 @@ use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInter
 
 final readonly class MoveModel
 {
-	public function __construct(
-		private MovesetRatedAveragedMoveRepositoryInterface $movesetRatedAveragedMoveRepository,
-		private MoveNameRepositoryInterface $moveNameRepository,
-		private MoveRepositoryInterface $moveRepository,
-	) {}
+    public function __construct(
+        private MovesetRatedAveragedMoveRepositoryInterface $movesetRatedAveragedMoveRepository,
+        private MoveNameRepositoryInterface $moveNameRepository,
+        private MoveRepositoryInterface $moveRepository,
+    ) {}
 
-	/**
-	 * Set individual Pokémon move data averaged over multiple months.
-	 */
-	public function setData(
-		DateTime $start,
-		DateTime $end,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-		LanguageId $languageId,
-	) : array {
-		// Get moveset rated averaged move records for these months.
-		$movesetRatedAveragedMoves = $this->movesetRatedAveragedMoveRepository->getByMonthsAndFormatAndRatingAndPokemon(
-			$start,
-			$end,
-			$formatId,
-			$rating,
-			$pokemonId,
-		);
+    /**
+     * Set individual Pokémon move data averaged over multiple months.
+     */
+    public function setData(
+        DateTime $start,
+        DateTime $end,
+        FormatId $formatId,
+        int $rating,
+        PokemonId $pokemonId,
+        LanguageId $languageId,
+    ): array {
+        // Get moveset rated averaged move records for these months.
+        $movesetRatedAveragedMoves = $this->movesetRatedAveragedMoveRepository->getByMonthsAndFormatAndRatingAndPokemon(
+            $start,
+            $end,
+            $formatId,
+            $rating,
+            $pokemonId,
+        );
 
-		$moves = [];
+        $moves = [];
 
-		// Get each move's data.
-		foreach ($movesetRatedAveragedMoves as $movesetRatedAveragedMove) {
-			$moveId = $movesetRatedAveragedMove->moveId;
+        // Get each move's data.
+        foreach ($movesetRatedAveragedMoves as $movesetRatedAveragedMove) {
+            $moveId = $movesetRatedAveragedMove->moveId;
 
-			// Get this move's name.
-			$moveName = $this->moveNameRepository->getByLanguageAndMove(
-				$languageId,
-				$moveId,
-			);
+            // Get this move's name.
+            $moveName = $this->moveNameRepository->getByLanguageAndMove(
+                $languageId,
+                $moveId,
+            );
 
-			// Get this move.
-			$move = $this->moveRepository->getById($moveId);
+            // Get this move.
+            $move = $this->moveRepository->getById($moveId);
 
-			$moves[] = [
-				'identifier' => $move->identifier,
-				'name' => $moveName->name,
-				'percent' => $movesetRatedAveragedMove->percent,
-			];
-		}
+            $moves[] = [
+                'identifier' => $move->identifier,
+                'name' => $moveName->name,
+                'percent' => $movesetRatedAveragedMove->percent,
+            ];
+        }
 
-		return $moves;
-	}
+        return $moves;
+    }
 }

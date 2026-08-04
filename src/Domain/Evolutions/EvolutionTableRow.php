@@ -5,8 +5,8 @@ namespace Jp\Dex\Domain\Evolutions;
 
 final readonly class EvolutionTableRow
 {
-	public function __construct(
-		/** @var EvolutionTableCell[] $cells */
-		private(set) array $cells,
-	) {}
+    public function __construct(
+        /** @var EvolutionTableCell[] $cells */
+        private(set) array $cells,
+    ) {}
 }

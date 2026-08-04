@@ -9,21 +9,21 @@ use Psr\Http\Message\ResponseInterface;
 
 final readonly class EvCalculatorSubmitView
 {
-	public function __construct(
-		private EvCalculatorSubmitModel $evCalculatorSubmitModel,
-	) {}
+    public function __construct(
+        private EvCalculatorSubmitModel $evCalculatorSubmitModel,
+    ) {}
 
-	/**
-	 * Get data for the EV calculator page.
-	 */
-	public function getData() : ResponseInterface
-	{
-		$evs = $this->evCalculatorSubmitModel->evs;
+    /**
+     * Get data for the EV calculator page.
+     */
+    public function getData(): ResponseInterface
+    {
+        $evs = $this->evCalculatorSubmitModel->evs;
 
-		return new JsonResponse([
-			'data' => [
-				'evs' => $evs,
-			]
-		]);
-	}
+        return new JsonResponse([
+            'data' => [
+                'evs' => $evs,
+            ]
+        ]);
+    }
 }

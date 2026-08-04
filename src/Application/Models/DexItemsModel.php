@@ -10,30 +10,30 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final class DexItemsModel
 {
-	/** @var DexItem[] $items */
-	private(set) array $items = [];
+    /** @var DexItem[] $items */
+    private(set) array $items = [];
 
 
-	public function __construct(
-		private(set) readonly VersionGroupModel $versionGroupModel,
-		private readonly DexItemRepositoryInterface $dexItemRepository,
-	) {}
+    public function __construct(
+        private(set) readonly VersionGroupModel $versionGroupModel,
+        private readonly DexItemRepositoryInterface $dexItemRepository,
+    ) {}
 
 
-	/**
-	 * Set data for the dex items page.
-	 */
-	public function setData(
-		string $vgIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+    /**
+     * Set data for the dex items page.
+     */
+    public function setData(
+        string $vgIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->versionGroupModel->setSinceGeneration(new GenerationId(1));
+        $this->versionGroupModel->setSinceGeneration(new GenerationId(1));
 
-		$this->items = $this->dexItemRepository->getByVersionGroup(
-			$versionGroupId,
-			$languageId,
-		);
-	}
+        $this->items = $this->dexItemRepository->getByVersionGroup(
+            $versionGroupId,
+            $languageId,
+        );
+    }
 }

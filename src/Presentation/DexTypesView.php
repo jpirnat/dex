@@ -9,44 +9,44 @@ use Psr\Http\Message\ResponseInterface;
 
 final readonly class DexTypesView
 {
-	public function __construct(
-		private DexTypesModel $dexTypesModel,
-		private DexFormatter $dexFormatter,
-	) {}
+    public function __construct(
+        private DexTypesModel $dexTypesModel,
+        private DexFormatter $dexFormatter,
+    ) {}
 
-	/**
-	 * Get data for the dex types page.
-	 */
-	public function getData() : ResponseInterface
-	{
-		$versionGroupModel = $this->dexTypesModel->versionGroupModel;
-		$versionGroup = $versionGroupModel->versionGroup;
-		$versionGroups = $versionGroupModel->versionGroups;
+    /**
+     * Get data for the dex types page.
+     */
+    public function getData(): ResponseInterface
+    {
+        $versionGroupModel = $this->dexTypesModel->versionGroupModel;
+        $versionGroup = $versionGroupModel->versionGroup;
+        $versionGroups = $versionGroupModel->versionGroups;
 
-		$types = $this->dexTypesModel->types;
-		$multipliers = $this->dexTypesModel->multipliers;
+        $types = $this->dexTypesModel->types;
+        $multipliers = $this->dexTypesModel->multipliers;
 
-		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->identifier;
-		$breadcrumbs = [[
-			'url' => "/dex/$vgIdentifier",
-			'text' => 'Dex',
-		], [
-			'text' => 'Types',
-		]];
+        // Navigational breadcrumbs.
+        $vgIdentifier = $versionGroup->identifier;
+        $breadcrumbs = [[
+            'url' => "/dex/$vgIdentifier",
+            'text' => 'Dex',
+        ], [
+            'text' => 'Types',
+        ]];
 
-		return new JsonResponse([
-			'data' => [
-				'versionGroup' => [
-					'identifier' => $versionGroup->identifier,
-				],
+        return new JsonResponse([
+            'data' => [
+                'versionGroup' => [
+                    'identifier' => $versionGroup->identifier,
+                ],
 
-				'breadcrumbs' => $breadcrumbs,
-				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
+                'breadcrumbs' => $breadcrumbs,
+                'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
-				'types' => $types,
-				'multipliers' => $multipliers,
-			]
-		]);
-	}
+                'types' => $types,
+                'multipliers' => $multipliers,
+            ]
+        ]);
+    }
 }

@@ -7,10 +7,10 @@ use Jp\Dex\Domain\Versions\GenerationId;
 
 final readonly class TypeMatchup
 {
-	public function __construct(
-		private(set) GenerationId $generationId,
-		private(set) string $attackingTypeIdentifier,
-		private(set) string $defendingTypeIdentifier,
-		private(set) float $multiplier,
-	) {}
+    public function __construct(
+        private(set) GenerationId $generationId,
+        private(set) string $attackingTypeIdentifier,
+        private(set) string $defendingTypeIdentifier,
+        private(set) float $multiplier,
+    ) {}
 }

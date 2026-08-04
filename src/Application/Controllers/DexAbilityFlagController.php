@@ -9,22 +9,22 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final readonly class DexAbilityFlagController
 {
-	public function __construct(
-		private BaseController $baseController,
-		private DexAbilityFlagModel $dexAbilityFlagModel,
-	) {}
+    public function __construct(
+        private BaseController $baseController,
+        private DexAbilityFlagModel $dexAbilityFlagModel,
+    ) {}
 
-	/**
-	 * Set data for the dex ability flag page.
-	 */
-	public function setData(ServerRequestInterface $request) : void
-	{
-		$this->baseController->setBaseVariables($request);
+    /**
+     * Set data for the dex ability flag page.
+     */
+    public function setData(ServerRequestInterface $request): void
+    {
+        $this->baseController->setBaseVariables($request);
 
-		$vgIdentifier = $request->getAttribute('vgIdentifier');
-		$flagIdentifier = $request->getAttribute('abilityFlagIdentifier');
-		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
+        $vgIdentifier = $request->getAttribute('vgIdentifier');
+        $flagIdentifier = $request->getAttribute('abilityFlagIdentifier');
+        $languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->dexAbilityFlagModel->setData($vgIdentifier, $flagIdentifier, $languageId);
-	}
+        $this->dexAbilityFlagModel->setData($vgIdentifier, $flagIdentifier, $languageId);
+    }
 }

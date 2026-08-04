@@ -14,36 +14,36 @@ use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
 final readonly class UsageRatedPokemon
 {
-	use ValidateMonthTrait;
+    use ValidateMonthTrait;
 
-	/**
-	 * Constructor.
-	 *
-	 * @throws InvalidMonthException if $month is invalid.
-	 * @throws InvalidRatingException if $rating is invalid.
-	 * @throws InvalidRankException if $rank is invalid.
-	 * @throws InvalidPercentException if $usagePercent is invalid
-	 */
-	public function __construct(
-		private(set) DateTime $month,
-		private(set) FormatId $formatId,
-		private(set) int $rating,
-		private(set) PokemonId $pokemonId,
-		private(set) int $rank,
-		private(set) float $usagePercent,
-	) {
-		$this->validateMonth($month);
+    /**
+     * Constructor.
+     *
+     * @throws InvalidMonthException if $month is invalid.
+     * @throws InvalidRatingException if $rating is invalid.
+     * @throws InvalidRankException if $rank is invalid.
+     * @throws InvalidPercentException if $usagePercent is invalid
+     */
+    public function __construct(
+        private(set) DateTime $month,
+        private(set) FormatId $formatId,
+        private(set) int $rating,
+        private(set) PokemonId $pokemonId,
+        private(set) int $rank,
+        private(set) float $usagePercent,
+    ) {
+        $this->validateMonth($month);
 
-		if ($rating < 0) {
-			throw new InvalidRatingException("Invalid rating: $rating.");
-		}
+        if ($rating < 0) {
+            throw new InvalidRatingException("Invalid rating: $rating.");
+        }
 
-		if ($rank < 1) {
-			throw new InvalidRankException("Invalid rank: $rank.");
-		}
+        if ($rank < 1) {
+            throw new InvalidRankException("Invalid rank: $rank.");
+        }
 
-		if ($usagePercent < 0 || $usagePercent > 100) {
-			throw new InvalidPercentException("Invalid usage percent: $usagePercent.");
-		}
-	}
+        if ($usagePercent < 0 || $usagePercent > 100) {
+            throw new InvalidPercentException("Invalid usage percent: $usagePercent.");
+        }
+    }
 }

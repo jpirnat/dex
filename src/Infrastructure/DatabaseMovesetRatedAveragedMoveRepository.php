@@ -14,69 +14,69 @@ use PDO;
 
 final readonly class DatabaseMovesetRatedAveragedMoveRepository implements MovesetRatedAveragedMoveRepositoryInterface
 {
-	public function __construct(
-		private PDO $db,
-		private MonthsCounter $monthsCounter,
-	) {}
+    public function __construct(
+        private PDO $db,
+        private MonthsCounter $monthsCounter,
+    ) {}
 
-	/**
-	 * Get moveset rated averaged move records by their start month, end month,
-	 * format, rating, and Pokémon.
-	 *
-	 * @return MovesetRatedAveragedMove[] Indexed by move id.
-	 */
-	public function getByMonthsAndFormatAndRatingAndPokemon(
-		DateTime $start,
-		DateTime $end,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-	) : array {
-		$months = $this->monthsCounter->countMovesetMonths(
-			$start,
-			$end,
-			$formatId,
-			$rating,
-			$pokemonId,
-		);
+    /**
+     * Get moveset rated averaged move records by their start month, end month,
+     * format, rating, and Pokémon.
+     *
+     * @return MovesetRatedAveragedMove[] Indexed by move id.
+     */
+    public function getByMonthsAndFormatAndRatingAndPokemon(
+        DateTime $start,
+        DateTime $end,
+        FormatId $formatId,
+        int $rating,
+        PokemonId $pokemonId,
+    ): array {
+        $months = $this->monthsCounter->countMovesetMonths(
+            $start,
+            $end,
+            $formatId,
+            $rating,
+            $pokemonId,
+        );
 
-		$stmt = $this->db->prepare(
-			'SELECT
-				`mrm`.`move_id`,
-				SUM(`mrm`.`percent`) / :months AS `percent`
-			FROM `usage_rated_pokemon` AS `urp`
-			INNER JOIN `moveset_rated_moves` AS `mrm`
-				ON `urp`.`id` = `mrm`.`usage_rated_pokemon_id`
-			WHERE `urp`.`month` BETWEEN :start AND :end
-				AND `urp`.`format_id` = :format_id
-				AND `urp`.`rating` = :rating
-				AND `urp`.`pokemon_id` = :pokemon_id
-			GROUP BY `mrm`.`move_id`'
-		);
-		$stmt->bindValue(':months', $months, PDO::PARAM_INT);
-		$stmt->bindValue(':start', $start->format('Y-m-01'));
-		$stmt->bindValue(':end', $end->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
-		$stmt->execute();
+        $stmt = $this->db->prepare(
+            'SELECT
+                `mrm`.`move_id`,
+                SUM(`mrm`.`percent`) / :months AS `percent`
+            FROM `usage_rated_pokemon` AS `urp`
+            INNER JOIN `moveset_rated_moves` AS `mrm`
+                ON `urp`.`id` = `mrm`.`usage_rated_pokemon_id`
+            WHERE `urp`.`month` BETWEEN :start AND :end
+                AND `urp`.`format_id` = :format_id
+                AND `urp`.`rating` = :rating
+                AND `urp`.`pokemon_id` = :pokemon_id
+            GROUP BY `mrm`.`move_id`'
+        );
+        $stmt->bindValue(':months', $months, PDO::PARAM_INT);
+        $stmt->bindValue(':start', $start->format('Y-m-01'));
+        $stmt->bindValue(':end', $end->format('Y-m-01'));
+        $stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+        $stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+        $stmt->execute();
 
-		$movesetRatedAveragedMoves = [];
+        $movesetRatedAveragedMoves = [];
 
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedAveragedMove = new MovesetRatedAveragedMove(
-				$start,
-				$end,
-				$formatId,
-				$rating,
-				$pokemonId,
-				new MoveId($result['move_id']),
-				(float) $result['percent'],
-			);
+        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $movesetRatedAveragedMove = new MovesetRatedAveragedMove(
+                $start,
+                $end,
+                $formatId,
+                $rating,
+                $pokemonId,
+                new MoveId($result['move_id']),
+                (float) $result['percent'],
+            );
 
-			$movesetRatedAveragedMoves[$result['move_id']] = $movesetRatedAveragedMove;
-		}
+            $movesetRatedAveragedMoves[$result['move_id']] = $movesetRatedAveragedMove;
+        }
 
-		return $movesetRatedAveragedMoves;
-	}
+        return $movesetRatedAveragedMoves;
+    }
 }

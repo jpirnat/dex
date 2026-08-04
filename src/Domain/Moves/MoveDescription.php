@@ -8,10 +8,10 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final readonly class MoveDescription
 {
-	public function __construct(
-		private(set) VersionGroupId $versionGroupId,
-		private(set) LanguageId $languageId,
-		private(set) MoveId $moveId,
-		private(set) string $description,
-	) {}
+    public function __construct(
+        private(set) VersionGroupId $versionGroupId,
+        private(set) LanguageId $languageId,
+        private(set) MoveId $moveId,
+        private(set) string $description,
+    ) {}
 }

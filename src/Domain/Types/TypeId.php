@@ -7,5 +7,5 @@ use Jp\Dex\Domain\EntityId;
 
 final class TypeId extends EntityId
 {
-	public const int FLYING = 2;
+    public const int FLYING = 2;
 }

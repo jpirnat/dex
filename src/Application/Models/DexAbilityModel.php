@@ -16,92 +16,92 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 final class DexAbilityModel
 {
-	private(set) array $ability = [];
-	private(set) array $flags = [];
-	private(set) array $stats = [];
+    private(set) array $ability = [];
+    private(set) array $flags = [];
+    private(set) array $stats = [];
 
-	/** @var DexPokemon[] $pokemon */
-	private(set) array $pokemon = [];
-
-
-	public function __construct(
-		private(set) readonly VersionGroupModel $versionGroupModel,
-		private readonly AbilityRepositoryInterface $abilityRepository,
-		private readonly AbilityNameRepositoryInterface $abilityNameRepository,
-		private readonly AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
-		private readonly AbilityFlagRepositoryInterface $flagRepository,
-		private readonly DexStatRepositoryInterface $dexStatRepository,
-		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
-	) {}
+    /** @var DexPokemon[] $pokemon */
+    private(set) array $pokemon = [];
 
 
-	/**
-	 * Set data for the dex ability page.
-	 */
-	public function setData(
-		string $vgIdentifier,
-		string $abilityIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+    public function __construct(
+        private(set) readonly VersionGroupModel $versionGroupModel,
+        private readonly AbilityRepositoryInterface $abilityRepository,
+        private readonly AbilityNameRepositoryInterface $abilityNameRepository,
+        private readonly AbilityDescriptionRepositoryInterface $abilityDescriptionRepository,
+        private readonly AbilityFlagRepositoryInterface $flagRepository,
+        private readonly DexStatRepositoryInterface $dexStatRepository,
+        private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
+    ) {}
 
-		$ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
 
-		$this->versionGroupModel->setWithAbility($ability->id);
+    /**
+     * Set data for the dex ability page.
+     */
+    public function setData(
+        string $vgIdentifier,
+        string $abilityIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
-			$languageId,
-			$ability->id,
-		);
+        $ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
 
-		$abilityDescription = $this->abilityDescriptionRepository->getByAbility(
-			$versionGroupId,
-			$languageId,
-			$ability->id,
-		);
+        $this->versionGroupModel->setWithAbility($ability->id);
 
-		$this->ability = [
-			'identifier' => $ability->identifier,
-			'name' => $abilityName->name,
-			'description' => $abilityDescription->description,
-		];
+        $abilityName = $this->abilityNameRepository->getByLanguageAndAbility(
+            $languageId,
+            $ability->id,
+        );
 
-		$this->setFlags($versionGroupId, $ability->id, $languageId);
+        $abilityDescription = $this->abilityDescriptionRepository->getByAbility(
+            $versionGroupId,
+            $languageId,
+            $ability->id,
+        );
 
-		$this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
+        $this->ability = [
+            'identifier' => $ability->identifier,
+            'name' => $abilityName->name,
+            'description' => $abilityDescription->description,
+        ];
 
-		$this->pokemon = $this->dexPokemonRepository->getWithAbility(
-			$versionGroupId,
-			$ability->id,
-			$languageId,
-		);
-	}
+        $this->setFlags($versionGroupId, $ability->id, $languageId);
 
-	private function setFlags(
-		VersionGroupId $versionGroupId,
-		AbilityId $abilityId,
-		LanguageId $languageId,
-	) : void {
-		$this->flags = [];
+        $this->stats = $this->dexStatRepository->getByVersionGroup($versionGroupId, $languageId);
 
-		$allFlags = $this->flagRepository->getByVersionGroupSingular(
-			$versionGroupId,
-			$languageId,
-		);
-		$abilityFlagIds = $this->flagRepository->getByAbility(
-			$versionGroupId,
-			$abilityId,
-		);
+        $this->pokemon = $this->dexPokemonRepository->getWithAbility(
+            $versionGroupId,
+            $ability->id,
+            $languageId,
+        );
+    }
 
-		foreach ($allFlags as $flagId => $flag) {
-			$has = isset($abilityFlagIds[$flagId]); // Does the ability have this flag?
+    private function setFlags(
+        VersionGroupId $versionGroupId,
+        AbilityId $abilityId,
+        LanguageId $languageId,
+    ): void {
+        $this->flags = [];
 
-			$this->flags[] = [
-				'identifier' => $flag->identifier,
-				'name' => $flag->name,
-				'description' => $flag->description,
-				'has' => $has,
-			];
-		}
-	}
+        $allFlags = $this->flagRepository->getByVersionGroupSingular(
+            $versionGroupId,
+            $languageId,
+        );
+        $abilityFlagIds = $this->flagRepository->getByAbility(
+            $versionGroupId,
+            $abilityId,
+        );
+
+        foreach ($allFlags as $flagId => $flag) {
+            $has = isset($abilityFlagIds[$flagId]); // Does the ability have this flag?
+
+            $this->flags[] = [
+                'identifier' => $flag->identifier,
+                'name' => $flag->name,
+                'description' => $flag->description,
+                'has' => $has,
+            ];
+        }
+    }
 }

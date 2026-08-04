@@ -9,21 +9,21 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final readonly class IvCalculatorIndexController
 {
-	public function __construct(
-		private BaseController $baseController,
-		private IvCalculatorIndexModel $ivCalculatorIndexModel,
-	) {}
+    public function __construct(
+        private BaseController $baseController,
+        private IvCalculatorIndexModel $ivCalculatorIndexModel,
+    ) {}
 
-	/**
-	 * Set data for the IV calculator page.
-	 */
-	public function setData(ServerRequestInterface $request) : void
-	{
-		$this->baseController->setBaseVariables($request);
+    /**
+     * Set data for the IV calculator page.
+     */
+    public function setData(ServerRequestInterface $request): void
+    {
+        $this->baseController->setBaseVariables($request);
 
-		$vgIdentifier = $request->getAttribute('vgIdentifier');
-		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
+        $vgIdentifier = $request->getAttribute('vgIdentifier');
+        $languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->ivCalculatorIndexModel->setData($vgIdentifier, $languageId);
-	}
+        $this->ivCalculatorIndexModel->setData($vgIdentifier, $languageId);
+    }
 }

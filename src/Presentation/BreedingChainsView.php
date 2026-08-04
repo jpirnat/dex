@@ -9,87 +9,87 @@ use Psr\Http\Message\ResponseInterface;
 
 final readonly class BreedingChainsView
 {
-	public function __construct(
-		private BreedingChainsModel $breedingChainsModel,
-		private DexFormatter $dexFormatter,
-	) {}
+    public function __construct(
+        private BreedingChainsModel $breedingChainsModel,
+        private DexFormatter $dexFormatter,
+    ) {}
 
-	/**
-	 * Get data for the breeding chains page.
-	 */
-	public function getData() : ResponseInterface
-	{
-		$versionGroupModel = $this->breedingChainsModel->versionGroupModel;
-		$versionGroup = $versionGroupModel->versionGroup;
+    /**
+     * Get data for the breeding chains page.
+     */
+    public function getData(): ResponseInterface
+    {
+        $versionGroupModel = $this->breedingChainsModel->versionGroupModel;
+        $versionGroup = $versionGroupModel->versionGroup;
 
-		$pokemon = $this->breedingChainsModel->pokemon;
-		$move = $this->breedingChainsModel->move;
+        $pokemon = $this->breedingChainsModel->pokemon;
+        $move = $this->breedingChainsModel->move;
 
-		$chainsData = $this->breedingChainsModel->chains;
-		$chains = [];
-		foreach ($chainsData as $chainId => $chain) {
-			$records = [];
-			foreach ($chain as $record) {
-				$records[] = [
-					'icon' => $record->getIcon(),
-					'identifier' => $record->getIdentifier(),
-					'name' => $record->getName(),
-					'versionGroup' => $this->dexFormatter->formatDexVersionGroup(
-						$record->getVersionGroup()
-					),
-					'eggGroups' => $this->dexFormatter->formatDexEggGroups(
-						$record->getEggGroups(),
-					),
-					'genderRatio' => [
-						'icon' => $record->getGenderRatio()->getIcon(),
-						'description' => $record->getGenderRatio()->getDescription(),
-					],
-					'eggCycles' => $record->getEggCycles(),
-					'stepsToHatch' => $record->getStepsToHatch(),
-					'moveMethod' => $record->getMoveMethod(),
-				];
-			}
-			$chains[] = [
-				'id' => $chainId,
-				'pokemon' => $records,
-				'show' => false,
-			];
-		}
+        $chainsData = $this->breedingChainsModel->chains;
+        $chains = [];
+        foreach ($chainsData as $chainId => $chain) {
+            $records = [];
+            foreach ($chain as $record) {
+                $records[] = [
+                    'icon' => $record->getIcon(),
+                    'identifier' => $record->getIdentifier(),
+                    'name' => $record->getName(),
+                    'versionGroup' => $this->dexFormatter->formatDexVersionGroup(
+                        $record->getVersionGroup()
+                    ),
+                    'eggGroups' => $this->dexFormatter->formatDexEggGroups(
+                        $record->getEggGroups(),
+                    ),
+                    'genderRatio' => [
+                        'icon' => $record->getGenderRatio()->getIcon(),
+                        'description' => $record->getGenderRatio()->getDescription(),
+                    ],
+                    'eggCycles' => $record->getEggCycles(),
+                    'stepsToHatch' => $record->getStepsToHatch(),
+                    'moveMethod' => $record->getMoveMethod(),
+                ];
+            }
+            $chains[] = [
+                'id' => $chainId,
+                'pokemon' => $records,
+                'show' => false,
+            ];
+        }
 
-		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->identifier;
-		$pokemonIdentifier = $pokemon['identifier'];
-		$breadcrumbs = [[
-			'url' => "/dex/$vgIdentifier",
-			'text' => 'Dex',
-		], [
-			'url' => "/dex/$vgIdentifier/pokemon",
-			'text' => 'Pokémon',
-		], [
-			'url' => "/dex/$vgIdentifier/pokemon/$pokemonIdentifier",
-			'text' => $pokemon['name'],
-		], [
-			'url' => "/dex/$vgIdentifier/pokemon/$pokemonIdentifier#egg-moves",
-			'text' => 'Egg Moves',
-		], [
-			'text' => $move['name'],
-		]];
+        // Navigational breadcrumbs.
+        $vgIdentifier = $versionGroup->identifier;
+        $pokemonIdentifier = $pokemon['identifier'];
+        $breadcrumbs = [[
+            'url' => "/dex/$vgIdentifier",
+            'text' => 'Dex',
+        ], [
+            'url' => "/dex/$vgIdentifier/pokemon",
+            'text' => 'Pokémon',
+        ], [
+            'url' => "/dex/$vgIdentifier/pokemon/$pokemonIdentifier",
+            'text' => $pokemon['name'],
+        ], [
+            'url' => "/dex/$vgIdentifier/pokemon/$pokemonIdentifier#egg-moves",
+            'text' => 'Egg Moves',
+        ], [
+            'text' => $move['name'],
+        ]];
 
-		return new JsonResponse([
-			'data' => [
-				'title' => 'Pokémon - ' . $pokemon['name'] . ' - '. $move['name']
-					. ' Breeding Chains',
+        return new JsonResponse([
+            'data' => [
+                'title' => 'Pokémon - ' . $pokemon['name'] . ' - '. $move['name']
+                    . ' Breeding Chains',
 
-				'breadcrumbs' => $breadcrumbs,
+                'breadcrumbs' => $breadcrumbs,
 
-				'pokemon' => [
-					'name' => $pokemon['name'],
-				],
-				'move' => [
-					'name' => $move['name'],
-				],
-				'chains' => $chains,
-			]
-		]);
-	}
+                'pokemon' => [
+                    'name' => $pokemon['name'],
+                ],
+                'move' => [
+                    'name' => $move['name'],
+                ],
+                'chains' => $chains,
+            ]
+        ]);
+    }
 }

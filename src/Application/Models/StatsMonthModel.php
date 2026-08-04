@@ -10,64 +10,64 @@ use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 
 final class StatsMonthModel
 {
-	private(set) LanguageId $languageId;
+    private(set) LanguageId $languageId;
 
-	/** @var array $generations[] */
-	private(set) array $generations = [];
-
-
-	public function __construct(
-		private(set) readonly DateModel $dateModel,
-		private readonly UsageRatedQueriesInterface $usageRatedQueries,
-		private readonly FormatRepositoryInterface $formatRepository,
-	) {}
+    /** @var array $generations[] */
+    private(set) array $generations = [];
 
 
-	/**
-	 * Get the formats list to recreate a stats month directory, such as
-	 * http://www.smogon.com/stats/2014-11.
-	 */
-	public function setData(
-		string $month,
-		LanguageId $languageId,
-	) : void {
-		$this->languageId = $languageId;
+    public function __construct(
+        private(set) readonly DateModel $dateModel,
+        private readonly UsageRatedQueriesInterface $usageRatedQueries,
+        private readonly FormatRepositoryInterface $formatRepository,
+    ) {}
 
-		// Get the previous month and the next month.
-		$this->dateModel->setMonth($month);
-		$thisMonth = $this->dateModel->thisMonth;
 
-		// Get the formats/ratings for this month.
-		$formatRatings = $this->usageRatedQueries->getFormatRatings($thisMonth);
+    /**
+     * Get the formats list to recreate a stats month directory, such as
+     * http://www.smogon.com/stats/2014-11.
+     */
+    public function setData(
+        string $month,
+        LanguageId $languageId,
+    ): void {
+        $this->languageId = $languageId;
 
-		// Re-organize the format/rating data.
-		$formatIds = [];
-		$ratings = [];
-		foreach ($formatRatings as $formatRating) {
-			/** @var FormatId $formatId */
-			$formatId = $formatRating['formatId'];
-			$rating = $formatRating['rating'];
+        // Get the previous month and the next month.
+        $this->dateModel->setMonth($month);
+        $thisMonth = $this->dateModel->thisMonth;
 
-			$fId = $formatId->value;
-			$formatIds[$fId] = $formatId;
-			$ratings[$fId][] = $rating;
-		}
+        // Get the formats/ratings for this month.
+        $formatRatings = $this->usageRatedQueries->getFormatRatings($thisMonth);
 
-		// Get additional data for each format.
-		foreach ($formatIds as $formatId) {
-			$format = $this->formatRepository->getById($formatId, $languageId);
+        // Re-organize the format/rating data.
+        $formatIds = [];
+        $ratings = [];
+        foreach ($formatRatings as $formatRating) {
+            /** @var FormatId $formatId */
+            $formatId = $formatRating['formatId'];
+            $rating = $formatRating['rating'];
 
-			$generation = $format->generationId->value;
-			$this->generations[$generation]['generation'] = $generation;
-			$this->generations[$generation]['formats'][] = [
-				'identifier' => $format->identifier,
-				'name' => $format->name,
-				'ratings' => $ratings[$formatId->value] ?? [],
-			];
-		}
+            $fId = $formatId->value;
+            $formatIds[$fId] = $formatId;
+            $ratings[$fId][] = $rating;
+        }
 
-		usort($this->generations, function (array $a, array $b) : int {
-			return $b['generation'] <=> $a['generation'];
-		});
-	}
+        // Get additional data for each format.
+        foreach ($formatIds as $formatId) {
+            $format = $this->formatRepository->getById($formatId, $languageId);
+
+            $generation = $format->generationId->value;
+            $this->generations[$generation]['generation'] = $generation;
+            $this->generations[$generation]['formats'][] = [
+                'identifier' => $format->identifier,
+                'name' => $format->name,
+                'ratings' => $ratings[$formatId->value] ?? [],
+            ];
+        }
+
+        usort($this->generations, function (array $a, array $b): int {
+            return $b['generation'] <=> $a['generation'];
+        });
+    }
 }

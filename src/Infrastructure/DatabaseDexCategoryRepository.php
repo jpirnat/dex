@@ -10,43 +10,43 @@ use PDO;
 
 final readonly class DatabaseDexCategoryRepository implements DexCategoryRepositoryInterface
 {
-	public function __construct(
-		private PDO $db,
-	) {}
+    public function __construct(
+        private PDO $db,
+    ) {}
 
-	/**
-	 * Get dex categories by their language.
-	 *
-	 * @return DexCategory[] Indexed by id.
-	 */
-	public function getByLanguage(LanguageId $languageId) : array
-	{
-		$stmt = $this->db->prepare(
-			'SELECT
-				`c`.`id`,
-				`c`.`identifier`,
-				`c`.`icon`,
-				`n`.`name`
-			FROM `categories` AS `c`
-			INNER JOIN `category_names` AS `n`
-				ON `c`.`id` = `n`.`category_id`
-			WHERE `n`.`language_id` = :language_id'
-		);
-		$stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
-		$stmt->execute();
+    /**
+     * Get dex categories by their language.
+     *
+     * @return DexCategory[] Indexed by id.
+     */
+    public function getByLanguage(LanguageId $languageId): array
+    {
+        $stmt = $this->db->prepare(
+            'SELECT
+                `c`.`id`,
+                `c`.`identifier`,
+                `c`.`icon`,
+                `n`.`name`
+            FROM `categories` AS `c`
+            INNER JOIN `category_names` AS `n`
+                ON `c`.`id` = `n`.`category_id`
+            WHERE `n`.`language_id` = :language_id'
+        );
+        $stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
+        $stmt->execute();
 
-		$dexCategories = [];
+        $dexCategories = [];
 
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$dexCategory = new DexCategory(
-				$result['identifier'],
-				$result['icon'],
-				$result['name'],
-			);
+        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $dexCategory = new DexCategory(
+                $result['identifier'],
+                $result['icon'],
+                $result['name'],
+            );
 
-			$dexCategories[$result['id']] = $dexCategory;
-		}
+            $dexCategories[$result['id']] = $dexCategory;
+        }
 
-		return $dexCategories;
-	}
+        return $dexCategories;
+    }
 }

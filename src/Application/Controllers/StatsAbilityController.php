@@ -9,30 +9,30 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final readonly class StatsAbilityController
 {
-	public function __construct(
-		private BaseController $baseController,
-		private StatsAbilityModel $statsAbilityModel,
-	) {}
+    public function __construct(
+        private BaseController $baseController,
+        private StatsAbilityModel $statsAbilityModel,
+    ) {}
 
-	/**
-	 * Set data for the stats ability page.
-	 */
-	public function setData(ServerRequestInterface $request) : void
-	{
-		$this->baseController->setBaseVariables($request);
+    /**
+     * Set data for the stats ability page.
+     */
+    public function setData(ServerRequestInterface $request): void
+    {
+        $this->baseController->setBaseVariables($request);
 
-		$month = $request->getAttribute('month');
-		$formatIdentifier = $request->getAttribute('formatIdentifier');
-		$rating = (int) $request->getAttribute('rating');
-		$abilityIdentifier = $request->getAttribute('abilityIdentifier');
-		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
+        $month = $request->getAttribute('month');
+        $formatIdentifier = $request->getAttribute('formatIdentifier');
+        $rating = (int) $request->getAttribute('rating');
+        $abilityIdentifier = $request->getAttribute('abilityIdentifier');
+        $languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$this->statsAbilityModel->setData(
-			$month,
-			$formatIdentifier,
-			$rating,
-			$abilityIdentifier,
-			$languageId,
-		);
-	}
+        $this->statsAbilityModel->setData(
+            $month,
+            $formatIdentifier,
+            $rating,
+            $abilityIdentifier,
+            $languageId,
+        );
+    }
 }

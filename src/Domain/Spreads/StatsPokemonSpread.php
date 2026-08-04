@@ -8,11 +8,11 @@ use Jp\Dex\Domain\Stats\StatValueContainer;
 
 final readonly class StatsPokemonSpread
 {
-	public function __construct(
-		private(set) string $natureName,
-		private(set) ?StatId $increasedStatId,
-		private(set) ?StatId $decreasedStatId,
-		private(set) StatValueContainer $evs,
-		private(set) float $percent,
-	) {}
+    public function __construct(
+        private(set) string $natureName,
+        private(set) ?StatId $increasedStatId,
+        private(set) ?StatId $decreasedStatId,
+        private(set) StatValueContainer $evs,
+        private(set) float $percent,
+    ) {}
 }

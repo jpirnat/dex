@@ -7,18 +7,18 @@ use Jp\Dex\Application\Models\BaseModel;
 
 final readonly class BaseView
 {
-	public function __construct(
-		private BaseModel $baseModel,
-	) {}
+    public function __construct(
+        private BaseModel $baseModel,
+    ) {}
 
-	/**
-	 * Get the variables needed for the base template.
-	 */
-	public function getBaseVariables() : array
-	{
-		return [
-			'currentLanguageId' => $this->baseModel->currentLanguageId->value,
-			'languages' => $this->baseModel->getLanguages(),
-		];
-	}
+    /**
+     * Get the variables needed for the base template.
+     */
+    public function getBaseVariables(): array
+    {
+        return [
+            'currentLanguageId' => $this->baseModel->currentLanguageId->value,
+            'languages' => $this->baseModel->getLanguages(),
+        ];
+    }
 }

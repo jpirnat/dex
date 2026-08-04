@@ -5,7 +5,7 @@ namespace Jp\Dex\Domain\Evolutions;
 
 final readonly class EvolutionTableMethod
 {
-	public function __construct(
-		private(set) string $html,
-	) {}
+    public function __construct(
+        private(set) string $html,
+    ) {}
 }

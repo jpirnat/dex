@@ -10,51 +10,51 @@ use Jp\Dex\Domain\Moves\Flags\MoveFlagRepositoryInterface;
 
 final class DexMoveFlagModel
 {
-	private(set) array $flag = [];
+    private(set) array $flag = [];
 
-	/** @var DexMove[] $moves */
-	private(set) array $moves = [];
-
-
-	public function __construct(
-		private(set) readonly VersionGroupModel $versionGroupModel,
-		private readonly MoveFlagRepositoryInterface $flagRepository,
-		private readonly DexMoveRepositoryInterface $dexMoveRepository,
-	) {}
+    /** @var DexMove[] $moves */
+    private(set) array $moves = [];
 
 
-	/**
-	 * Set data for the dex move flag page.
-	 */
-	public function setData(
-		string $vgIdentifier,
-		string $moveFlagIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$this->flag = [];
-		$this->moves = [];
+    public function __construct(
+        private(set) readonly VersionGroupModel $versionGroupModel,
+        private readonly MoveFlagRepositoryInterface $flagRepository,
+        private readonly DexMoveRepositoryInterface $dexMoveRepository,
+    ) {}
 
-		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$flag = $this->flagRepository->getByIdentifier($moveFlagIdentifier);
+    /**
+     * Set data for the dex move flag page.
+     */
+    public function setData(
+        string $vgIdentifier,
+        string $moveFlagIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $this->flag = [];
+        $this->moves = [];
 
-		$this->versionGroupModel->setWithMoveFlag($flag->id);
+        $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$dexFlag = $this->flagRepository->getByIdPlural(
-			$versionGroupId,
-			$flag->id,
-			$languageId,
-		);
-		$this->flag = [
-			'identifier' => $dexFlag->identifier,
-			'name' => $dexFlag->name,
-			'description' => $dexFlag->description,
-		];
+        $flag = $this->flagRepository->getByIdentifier($moveFlagIdentifier);
 
-		$this->moves = $this->dexMoveRepository->getByVgAndFlag(
-			$versionGroupId,
-			$flag->id,
-			$languageId,
-		);
-	}
+        $this->versionGroupModel->setWithMoveFlag($flag->id);
+
+        $dexFlag = $this->flagRepository->getByIdPlural(
+            $versionGroupId,
+            $flag->id,
+            $languageId,
+        );
+        $this->flag = [
+            'identifier' => $dexFlag->identifier,
+            'name' => $dexFlag->name,
+            'description' => $dexFlag->description,
+        ];
+
+        $this->moves = $this->dexMoveRepository->getByVgAndFlag(
+            $versionGroupId,
+            $flag->id,
+            $languageId,
+        );
+    }
 }

@@ -13,61 +13,61 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface TextLinkRepositoryInterface
 {
-	/**
-	 * Get a text link for this item.
-	 *
-	 * @throws TextLinkNotFoundException if no text link can be made with these
-	 *     parameters.
-	 */
-	public function getForItem(
-		VersionGroupId $versionGroupId,
-		LanguageId $languageId,
-		ItemId $itemId,
-	) : TextLinkItem;
+    /**
+     * Get a text link for this item.
+     *
+     * @throws TextLinkNotFoundException if no text link can be made with these
+     *     parameters.
+     */
+    public function getForItem(
+        VersionGroupId $versionGroupId,
+        LanguageId $languageId,
+        ItemId $itemId,
+    ): TextLinkItem;
 
-	/**
-	 * Get a text link for this move.
-	 *
-	 * @throws TextLinkNotFoundException if no text link can be made with these
-	 *     parameters.
-	 */
-	public function getForMove(
-		VersionGroupId $versionGroupId,
-		LanguageId $languageId,
-		MoveId $moveId,
-	) : TextLinkMove;
+    /**
+     * Get a text link for this move.
+     *
+     * @throws TextLinkNotFoundException if no text link can be made with these
+     *     parameters.
+     */
+    public function getForMove(
+        VersionGroupId $versionGroupId,
+        LanguageId $languageId,
+        MoveId $moveId,
+    ): TextLinkMove;
 
-	/**
-	 * Get a text link for this Pokémon.
-	 *
-	 * @throws TextLinkNotFoundException if no text link can be made with these
-	 *     parameters.
-	 */
-	public function getForPokemon(
-		VersionGroupId $versionGroupId,
-		LanguageId $languageId,
-		PokemonId $pokemonId,
-	) : TextLinkPokemon;
+    /**
+     * Get a text link for this Pokémon.
+     *
+     * @throws TextLinkNotFoundException if no text link can be made with these
+     *     parameters.
+     */
+    public function getForPokemon(
+        VersionGroupId $versionGroupId,
+        LanguageId $languageId,
+        PokemonId $pokemonId,
+    ): TextLinkPokemon;
 
-	/**
-	 * Get a text link for this type.
-	 *
-	 * @throws TextLinkNotFoundException if no text link can be made with these
-	 *     parameters.
-	 */
-	public function getForType(
-		VersionGroupId $versionGroupId,
-		LanguageId $languageId,
-		TypeId $typeId,
-	) : TextLinkType;
+    /**
+     * Get a text link for this type.
+     *
+     * @throws TextLinkNotFoundException if no text link can be made with these
+     *     parameters.
+     */
+    public function getForType(
+        VersionGroupId $versionGroupId,
+        LanguageId $languageId,
+        TypeId $typeId,
+    ): TextLinkType;
 
-	/**
-	 * Get a text link for the incense item, if any, that one of this Pokémon's
-	 * parents must be holding.
-	 */
-	public function getForIncense(
-		VersionGroupId $versionGroupId,
-		LanguageId $languageId,
-		FormId $formId,
-	) : ?TextLinkItem;
+    /**
+     * Get a text link for the incense item, if any, that one of this Pokémon's
+     * parents must be holding.
+     */
+    public function getForIncense(
+        VersionGroupId $versionGroupId,
+        LanguageId $languageId,
+        FormId $formId,
+    ): ?TextLinkItem;
 }

@@ -7,10 +7,10 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface StatRepositoryInterface
 {
-	/**
-	 * Get the stats in this version group.
-	 *
-	 * @return Stat[] Indexed by id. Ordered by sort value.
-	 */
-	public function getByVersionGroup(VersionGroupId $versionGroupId) : array;
+    /**
+     * Get the stats in this version group.
+     *
+     * @return Stat[] Indexed by id. Ordered by sort value.
+     */
+    public function getByVersionGroup(VersionGroupId $versionGroupId): array;
 }

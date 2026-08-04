@@ -10,33 +10,33 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final readonly class StatsUsageController
 {
-	public function __construct(
-		private BaseController $baseController,
-		private StatsUsageModel $statsUsageModel,
-	) {}
+    public function __construct(
+        private BaseController $baseController,
+        private StatsUsageModel $statsUsageModel,
+    ) {}
 
-	/**
-	 * Set data for the stats usage page.
-	 */
-	public function setData(ServerRequestInterface $request) : void
-	{
-		$this->baseController->setBaseVariables($request);
+    /**
+     * Set data for the stats usage page.
+     */
+    public function setData(ServerRequestInterface $request): void
+    {
+        $this->baseController->setBaseVariables($request);
 
-		$month = $request->getAttribute('month');
-		$formatIdentifier = $request->getAttribute('formatIdentifier');
-		$rating = (int) $request->getAttribute('rating');
-		$languageId = new LanguageId((int) $request->getAttribute('languageId'));
+        $month = $request->getAttribute('month');
+        $formatIdentifier = $request->getAttribute('formatIdentifier');
+        $rating = (int) $request->getAttribute('rating');
+        $languageId = new LanguageId((int) $request->getAttribute('languageId'));
 
-		$myFormat = $request->getCookieParams()[CookieNames::FORMAT] ?? '';
-		$myRating = $request->getCookieParams()[CookieNames::RATING] ?? '';
+        $myFormat = $request->getCookieParams()[CookieNames::FORMAT] ?? '';
+        $myRating = $request->getCookieParams()[CookieNames::RATING] ?? '';
 
-		$this->statsUsageModel->setData(
-			$month,
-			$formatIdentifier,
-			$rating,
-			$myFormat,
-			$myRating,
-			$languageId,
-		);
-	}
+        $this->statsUsageModel->setData(
+            $month,
+            $formatIdentifier,
+            $rating,
+            $myFormat,
+            $myRating,
+            $languageId,
+        );
+    }
 }

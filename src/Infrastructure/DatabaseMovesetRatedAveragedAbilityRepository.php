@@ -14,69 +14,69 @@ use PDO;
 
 final readonly class DatabaseMovesetRatedAveragedAbilityRepository implements MovesetRatedAveragedAbilityRepositoryInterface
 {
-	public function __construct(
-		private PDO $db,
-		private MonthsCounter $monthsCounter,
-	) {}
+    public function __construct(
+        private PDO $db,
+        private MonthsCounter $monthsCounter,
+    ) {}
 
-	/**
-	 * Get moveset rated averaged ability records by their start month, end month,
-	 * format, rating, and Pokémon.
-	 *
-	 * @return MovesetRatedAveragedAbility[] Indexed by ability id.
-	 */
-	public function getByMonthsAndFormatAndRatingAndPokemon(
-		DateTime $start,
-		DateTime $end,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-	) : array {
-		$months = $this->monthsCounter->countMovesetMonths(
-			$start,
-			$end,
-			$formatId,
-			$rating,
-			$pokemonId,
-		);
+    /**
+     * Get moveset rated averaged ability records by their start month, end month,
+     * format, rating, and Pokémon.
+     *
+     * @return MovesetRatedAveragedAbility[] Indexed by ability id.
+     */
+    public function getByMonthsAndFormatAndRatingAndPokemon(
+        DateTime $start,
+        DateTime $end,
+        FormatId $formatId,
+        int $rating,
+        PokemonId $pokemonId,
+    ): array {
+        $months = $this->monthsCounter->countMovesetMonths(
+            $start,
+            $end,
+            $formatId,
+            $rating,
+            $pokemonId,
+        );
 
-		$stmt = $this->db->prepare(
-			'SELECT
-				`mra`.`ability_id`,
-				SUM(`mra`.`percent`) / :months AS `percent`
-			FROM `usage_rated_pokemon` AS `urp`
-			INNER JOIN `moveset_rated_abilities` AS `mra`
-				ON `urp`.`id` = `mra`.`usage_rated_pokemon_id`
-			WHERE `urp`.`month` BETWEEN :start AND :end
-				AND `urp`.`format_id` = :format_id
-				AND `urp`.`rating` = :rating
-				AND `urp`.`pokemon_id` = :pokemon_id
-			GROUP BY `mra`.`ability_id`'
-		);
-		$stmt->bindValue(':months', $months, PDO::PARAM_INT);
-		$stmt->bindValue(':start', $start->format('Y-m-01'));
-		$stmt->bindValue(':end', $end->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
-		$stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
-		$stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
-		$stmt->execute();
+        $stmt = $this->db->prepare(
+            'SELECT
+                `mra`.`ability_id`,
+                SUM(`mra`.`percent`) / :months AS `percent`
+            FROM `usage_rated_pokemon` AS `urp`
+            INNER JOIN `moveset_rated_abilities` AS `mra`
+                ON `urp`.`id` = `mra`.`usage_rated_pokemon_id`
+            WHERE `urp`.`month` BETWEEN :start AND :end
+                AND `urp`.`format_id` = :format_id
+                AND `urp`.`rating` = :rating
+                AND `urp`.`pokemon_id` = :pokemon_id
+            GROUP BY `mra`.`ability_id`'
+        );
+        $stmt->bindValue(':months', $months, PDO::PARAM_INT);
+        $stmt->bindValue(':start', $start->format('Y-m-01'));
+        $stmt->bindValue(':end', $end->format('Y-m-01'));
+        $stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
+        $stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
+        $stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
+        $stmt->execute();
 
-		$movesetRatedAveragedAbilities = [];
+        $movesetRatedAveragedAbilities = [];
 
-		while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$movesetRatedAveragedAbility = new MovesetRatedAveragedAbility(
-				$start,
-				$end,
-				$formatId,
-				$rating,
-				$pokemonId,
-				new AbilityId($result['ability_id']),
-				(float) $result['percent'],
-			);
+        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $movesetRatedAveragedAbility = new MovesetRatedAveragedAbility(
+                $start,
+                $end,
+                $formatId,
+                $rating,
+                $pokemonId,
+                new AbilityId($result['ability_id']),
+                (float) $result['percent'],
+            );
 
-			$movesetRatedAveragedAbilities[$result['ability_id']] = $movesetRatedAveragedAbility;
-		}
+            $movesetRatedAveragedAbilities[$result['ability_id']] = $movesetRatedAveragedAbility;
+        }
 
-		return $movesetRatedAveragedAbilities;
-	}
+        return $movesetRatedAveragedAbilities;
+    }
 }

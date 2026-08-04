@@ -8,28 +8,28 @@ use Jp\Dex\Domain\Natures\DexNatureRepositoryInterface;
 
 final class DexNaturesModel
 {
-	private(set) array $natures = [];
+    private(set) array $natures = [];
 
 
-	public function __construct(
-		private(set) readonly VersionGroupModel $versionGroupModel,
-		private readonly DexNatureRepositoryInterface $dexNatureRepository,
-	) {}
+    public function __construct(
+        private(set) readonly VersionGroupModel $versionGroupModel,
+        private readonly DexNatureRepositoryInterface $dexNatureRepository,
+    ) {}
 
 
-	/**
-	 * Set data for the dex natures page.
-	 */
-	public function setData(
-		string $vgIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$this->natures = [];
+    /**
+     * Set data for the dex natures page.
+     */
+    public function setData(
+        string $vgIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $this->natures = [];
 
-		$this->versionGroupModel->setByIdentifier($vgIdentifier);
+        $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->versionGroupModel->setWithNatures();
+        $this->versionGroupModel->setWithNatures();
 
-		$this->natures = $this->dexNatureRepository->getByLanguage($languageId);
-	}
+        $this->natures = $this->dexNatureRepository->getByLanguage($languageId);
+    }
 }

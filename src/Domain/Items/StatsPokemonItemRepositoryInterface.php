@@ -11,18 +11,18 @@ use Jp\Dex\Domain\Versions\VersionGroupId;
 
 interface StatsPokemonItemRepositoryInterface
 {
-	/**
-	 * Get stats Pokémon items by month, format, rating, and Pokémon.
-	 *
-	 * @return StatsPokemonItem[] Ordered by percent descending.
-	 */
-	public function getByMonth(
-		DateTime $month,
-		?DateTime $prevMonth,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-		VersionGroupId $versionGroupId,
-		LanguageId $languageId,
-	) : array;
+    /**
+     * Get stats Pokémon items by month, format, rating, and Pokémon.
+     *
+     * @return StatsPokemonItem[] Ordered by percent descending.
+     */
+    public function getByMonth(
+        DateTime $month,
+        ?DateTime $prevMonth,
+        FormatId $formatId,
+        int $rating,
+        PokemonId $pokemonId,
+        VersionGroupId $versionGroupId,
+        LanguageId $languageId,
+    ): array;
 }

@@ -9,49 +9,49 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class DexAbilityFlagModel
 {
-	private(set) array $flag = [];
-	private(set) array $abilities = [];
+    private(set) array $flag = [];
+    private(set) array $abilities = [];
 
 
-	public function __construct(
-		private(set) readonly VersionGroupModel $versionGroupModel,
-		private readonly AbilityFlagRepositoryInterface $flagRepository,
-		private readonly DexAbilityRepositoryInterface $dexAbilityRepository,
-	) {}
+    public function __construct(
+        private(set) readonly VersionGroupModel $versionGroupModel,
+        private readonly AbilityFlagRepositoryInterface $flagRepository,
+        private readonly DexAbilityRepositoryInterface $dexAbilityRepository,
+    ) {}
 
 
-	/**
-	 * Set data for the dex ability flag page.
-	 */
-	public function setData(
-		string $vgIdentifier,
-		string $abilityFlagIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$this->flag = [];
-		$this->abilities = [];
+    /**
+     * Set data for the dex ability flag page.
+     */
+    public function setData(
+        string $vgIdentifier,
+        string $abilityFlagIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $this->flag = [];
+        $this->abilities = [];
 
-		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+        $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$flag = $this->flagRepository->getByIdentifier($abilityFlagIdentifier);
+        $flag = $this->flagRepository->getByIdentifier($abilityFlagIdentifier);
 
-		$this->versionGroupModel->setWithAbilityFlag($flag->id);
+        $this->versionGroupModel->setWithAbilityFlag($flag->id);
 
-		$dexFlag = $this->flagRepository->getByIdPlural(
-			$versionGroupId,
-			$flag->id,
-			$languageId,
-		);
-		$this->flag = [
-			'identifier' => $dexFlag->identifier,
-			'name' => $dexFlag->name,
-			'description' => $dexFlag->description,
-		];
+        $dexFlag = $this->flagRepository->getByIdPlural(
+            $versionGroupId,
+            $flag->id,
+            $languageId,
+        );
+        $this->flag = [
+            'identifier' => $dexFlag->identifier,
+            'name' => $dexFlag->name,
+            'description' => $dexFlag->description,
+        ];
 
-		$this->abilities = $this->dexAbilityRepository->getByVgAndFlag(
-			$versionGroupId,
-			$flag->id,
-			$languageId,
-		);
-	}
+        $this->abilities = $this->dexAbilityRepository->getByVgAndFlag(
+            $versionGroupId,
+            $flag->id,
+            $languageId,
+        );
+    }
 }

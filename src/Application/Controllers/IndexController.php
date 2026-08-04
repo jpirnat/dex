@@ -7,15 +7,15 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final readonly class IndexController
 {
-	public function __construct(
-		private BaseController $baseController,
-	) {}
+    public function __construct(
+        private BaseController $baseController,
+    ) {}
 
-	/**
-	 * Show the home page.
-	 */
-	public function index(ServerRequestInterface $request) : void
-	{
-		$this->baseController->setBaseVariables($request);
-	}
+    /**
+     * Show the home page.
+     */
+    public function index(ServerRequestInterface $request): void
+    {
+        $this->baseController->setBaseVariables($request);
+    }
 }

@@ -9,17 +9,17 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface MovesetRatedAveragedMoveRepositoryInterface
 {
-	/**
-	 * Get moveset rated averaged move records by their start month, end month,
-	 * format, rating, and Pokémon.
-	 *
-	 * @return MovesetRatedAveragedMove[] Indexed by move id.
-	 */
-	public function getByMonthsAndFormatAndRatingAndPokemon(
-		DateTime $start,
-		DateTime $end,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-	) : array;
+    /**
+     * Get moveset rated averaged move records by their start month, end month,
+     * format, rating, and Pokémon.
+     *
+     * @return MovesetRatedAveragedMove[] Indexed by move id.
+     */
+    public function getByMonthsAndFormatAndRatingAndPokemon(
+        DateTime $start,
+        DateTime $end,
+        FormatId $formatId,
+        int $rating,
+        PokemonId $pokemonId,
+    ): array;
 }

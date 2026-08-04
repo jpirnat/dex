@@ -10,17 +10,17 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface StatsPokemonAbilityRepositoryInterface
 {
-	/**
-	 * Get stats Pokémon abilities by month, format, rating, and Pokémon.
-	 *
-	 * @return StatsPokemonAbility[] Ordered by percent descending.
-	 */
-	public function getByMonth(
-		DateTime $month,
-		?DateTime $prevMonth,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-		LanguageId $languageId,
-	) : array;
+    /**
+     * Get stats Pokémon abilities by month, format, rating, and Pokémon.
+     *
+     * @return StatsPokemonAbility[] Ordered by percent descending.
+     */
+    public function getByMonth(
+        DateTime $month,
+        ?DateTime $prevMonth,
+        FormatId $formatId,
+        int $rating,
+        PokemonId $pokemonId,
+        LanguageId $languageId,
+    ): array;
 }

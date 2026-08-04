@@ -11,26 +11,26 @@ use Exception;
  */
 final readonly class MoveType
 {
-	public const string REGULAR = '';
-	public const string Z_MOVE = 'z';
-	public const string MAX_MOVE = 'max';
-	public const string G_MAX_MOVE = 'g-max';
+    public const string REGULAR = '';
+    public const string Z_MOVE = 'z';
+    public const string MAX_MOVE = 'max';
+    public const string G_MAX_MOVE = 'g-max';
 
-	private(set) string $value;
+    private(set) string $value;
 
-	/**
-	 * @throws Exception if $value is invalid.
-	 */
-	public function __construct(string $value)
-	{
-		if ($value !== self::REGULAR
-			&& $value !== self::Z_MOVE
-			&& $value !== self::MAX_MOVE
-			&& $value !== self::G_MAX_MOVE
-		) {
-			throw new Exception("Invalid move type given: $value.");
-		}
+    /**
+     * @throws Exception if $value is invalid.
+     */
+    public function __construct(string $value)
+    {
+        if ($value !== self::REGULAR
+            && $value !== self::Z_MOVE
+            && $value !== self::MAX_MOVE
+            && $value !== self::G_MAX_MOVE
+        ) {
+            throw new Exception("Invalid move type given: $value.");
+        }
 
-		$this->value = $value;
-	}
+        $this->value = $value;
+    }
 }

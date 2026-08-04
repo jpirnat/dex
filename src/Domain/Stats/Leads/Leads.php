@@ -11,23 +11,23 @@ use Jp\Dex\Domain\Stats\ValidateMonthTrait;
 
 final readonly class Leads
 {
-	use ValidateMonthTrait;
+    use ValidateMonthTrait;
 
-	/**
-	 * Constructor.
-	 *
-	 * @throws InvalidMonthException if $month is invalid.
-	 * @throws InvalidCountException if $totalLeads is invalid.
-	 */
-	public function __construct(
-		private(set) DateTime $month,
-		private(set) FormatId $formatId,
-		private(set) int $totalLeads,
-	) {
-		$this->validateMonth($month);
+    /**
+     * Constructor.
+     *
+     * @throws InvalidMonthException if $month is invalid.
+     * @throws InvalidCountException if $totalLeads is invalid.
+     */
+    public function __construct(
+        private(set) DateTime $month,
+        private(set) FormatId $formatId,
+        private(set) int $totalLeads,
+    ) {
+        $this->validateMonth($month);
 
-		if ($totalLeads < 0) {
-			throw new InvalidCountException("Invalid number of total leads: $totalLeads.");
-		}
-	}
+        if ($totalLeads < 0) {
+            throw new InvalidCountException("Invalid number of total leads: $totalLeads.");
+        }
+    }
 }

@@ -10,48 +10,48 @@ use PDO;
 
 final readonly class DatabaseRatingQueries implements RatingQueriesInterface
 {
-	public function __construct(
-		private PDO $db,
-	) {}
+    public function __construct(
+        private PDO $db,
+    ) {}
 
-	/**
-	 * Get the ratings for which usage data is available for this month and format.
-	 *
-	 * @return int[]
-	 */
-	public function getByMonthAndFormat(DateTime $month, FormatId $formatId) : array
-	{
-		$stmt = $this->db->prepare(
-			'SELECT DISTINCT
-				`rating`
-			FROM `usage_rated`
-			WHERE `month` = :month
-				AND `format_id` = :format_id'
-		);
-		$stmt->bindValue(':month', $month->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
-		$stmt->execute();
-		return $stmt->fetchAll(PDO::FETCH_COLUMN);
-	}
+    /**
+     * Get the ratings for which usage data is available for this month and format.
+     *
+     * @return int[]
+     */
+    public function getByMonthAndFormat(DateTime $month, FormatId $formatId): array
+    {
+        $stmt = $this->db->prepare(
+            'SELECT DISTINCT
+                `rating`
+            FROM `usage_rated`
+            WHERE `month` = :month
+                AND `format_id` = :format_id'
+        );
+        $stmt->bindValue(':month', $month->format('Y-m-01'));
+        $stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }
 
-	/**
-	 * Get the ratings for which usage data is available between these months, for this format.
-	 *
-	 * @return int[]
-	 */
-	public function getByMonthsAndFormat(DateTime $start, DateTime $end, FormatId $formatId) : array
-	{
-		$stmt = $this->db->prepare(
-			'SELECT DISTINCT
-				`rating`
-			FROM `usage_rated`
-			WHERE `month` BETWEEN :start AND :end
-				AND `format_id` = :format_id'
-		);
-		$stmt->bindValue(':start', $start->format('Y-m-01'));
-		$stmt->bindValue(':end', $end->format('Y-m-01'));
-		$stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
-		$stmt->execute();
-		return $stmt->fetchAll(PDO::FETCH_COLUMN);
-	}
+    /**
+     * Get the ratings for which usage data is available between these months, for this format.
+     *
+     * @return int[]
+     */
+    public function getByMonthsAndFormat(DateTime $start, DateTime $end, FormatId $formatId): array
+    {
+        $stmt = $this->db->prepare(
+            'SELECT DISTINCT
+                `rating`
+            FROM `usage_rated`
+            WHERE `month` BETWEEN :start AND :end
+                AND `format_id` = :format_id'
+        );
+        $stmt->bindValue(':start', $start->format('Y-m-01'));
+        $stmt->bindValue(':end', $end->format('Y-m-01'));
+        $stmt->bindValue(':format_id', $formatId->value, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }
 }

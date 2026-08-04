@@ -19,104 +19,104 @@ use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
 final class StatsMoveModel
 {
-	private(set) string $month;
-	private(set) Format $format;
-	private(set) int $rating;
-	private(set) array $move;
-	private(set) LanguageId $languageId;
-	private(set) VersionGroup $versionGroup;
+    private(set) string $month;
+    private(set) Format $format;
+    private(set) int $rating;
+    private(set) array $move;
+    private(set) LanguageId $languageId;
+    private(set) VersionGroup $versionGroup;
 
-	/** @var int[] $ratings */
-	private(set) array $ratings = [];
+    /** @var int[] $ratings */
+    private(set) array $ratings = [];
 
-	private(set) string $speedName = '';
+    private(set) string $speedName = '';
 
-	/** @var StatsMovePokemon[] $pokemon */
-	private(set) array $pokemon = [];
-
-
-	public function __construct(
-		private(set) readonly DateModel $dateModel,
-		private readonly FormatRepositoryInterface $formatRepository,
-		private readonly VersionGroupRepositoryInterface $vgRepository,
-		private readonly MoveRepositoryInterface $moveRepository,
-		private readonly RatingQueriesInterface $ratingQueries,
-		private readonly MoveNameRepositoryInterface $moveNameRepository,
-		private readonly MoveDescriptionRepositoryInterface $moveDescriptionRepository,
-		private readonly StatNameRepositoryInterface $statNameRepository,
-		private readonly StatsMovePokemonRepositoryInterface $statsMovePokemonRepository,
-	) {}
+    /** @var StatsMovePokemon[] $pokemon */
+    private(set) array $pokemon = [];
 
 
-	/**
-	 * Get usage data to recreate a stats usage file, such as
-	 * http://www.smogon.com/stats/2014-11/ou-1695.txt.
-	 */
-	public function setData(
-		string $month,
-		string $formatIdentifier,
-		int $rating,
-		string $moveIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$this->month = $month;
-		$this->rating = $rating;
-		$this->languageId = $languageId;
+    public function __construct(
+        private(set) readonly DateModel $dateModel,
+        private readonly FormatRepositoryInterface $formatRepository,
+        private readonly VersionGroupRepositoryInterface $vgRepository,
+        private readonly MoveRepositoryInterface $moveRepository,
+        private readonly RatingQueriesInterface $ratingQueries,
+        private readonly MoveNameRepositoryInterface $moveNameRepository,
+        private readonly MoveDescriptionRepositoryInterface $moveDescriptionRepository,
+        private readonly StatNameRepositoryInterface $statNameRepository,
+        private readonly StatsMovePokemonRepositoryInterface $statsMovePokemonRepository,
+    ) {}
 
-		// Get the format.
-		$this->format = $this->formatRepository->getByIdentifier(
-			$formatIdentifier,
-			$languageId,
-		);
 
-		$this->versionGroup = $this->vgRepository->getById(
-			$this->format->versionGroupId
-		);
+    /**
+     * Get usage data to recreate a stats usage file, such as
+     * http://www.smogon.com/stats/2014-11/ou-1695.txt.
+     */
+    public function setData(
+        string $month,
+        string $formatIdentifier,
+        int $rating,
+        string $moveIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $this->month = $month;
+        $this->rating = $rating;
+        $this->languageId = $languageId;
 
-		// Get the previous month and the next month.
-		$this->dateModel->setMonthAndFormat($month, $this->format->id);
-		$thisMonth = $this->dateModel->thisMonth;
-		$prevMonth = $this->dateModel->prevMonth;
+        // Get the format.
+        $this->format = $this->formatRepository->getByIdentifier(
+            $formatIdentifier,
+            $languageId,
+        );
 
-		// Get the move.
-		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
+        $this->versionGroup = $this->vgRepository->getById(
+            $this->format->versionGroupId
+        );
 
-		// Get the ratings for this month.
-		$this->ratings = $this->ratingQueries->getByMonthAndFormat(
-			$thisMonth,
-			$this->format->id,
-		);
+        // Get the previous month and the next month.
+        $this->dateModel->setMonthAndFormat($month, $this->format->id);
+        $thisMonth = $this->dateModel->thisMonth;
+        $prevMonth = $this->dateModel->prevMonth;
 
-		$moveName = $this->moveNameRepository->getByLanguageAndMove(
-			$languageId,
-			$move->id,
-		);
-		$moveDescription = $this->moveDescriptionRepository->getByMove(
-			$this->format->versionGroupId,
-			$languageId,
-			$move->id,
-		);
+        // Get the move.
+        $move = $this->moveRepository->getByIdentifier($moveIdentifier);
 
-		$this->move = [
-			'identifier' => $moveIdentifier,
-			'name' => $moveName->name,
-			'description' => $moveDescription->description,
-		];
+        // Get the ratings for this month.
+        $this->ratings = $this->ratingQueries->getByMonthAndFormat(
+            $thisMonth,
+            $this->format->id,
+        );
 
-		$speedName = $this->statNameRepository->getByLanguageAndStat(
-			$languageId,
-			new StatId(StatId::SPEED),
-		);
-		$this->speedName = $speedName->name;
+        $moveName = $this->moveNameRepository->getByLanguageAndMove(
+            $languageId,
+            $move->id,
+        );
+        $moveDescription = $this->moveDescriptionRepository->getByMove(
+            $this->format->versionGroupId,
+            $languageId,
+            $move->id,
+        );
 
-		// Get the Pokémon usage data.
-		$this->pokemon = $this->statsMovePokemonRepository->getByMonth(
-			$thisMonth,
-			$prevMonth,
-			$this->format->id,
-			$rating,
-			$move->id,
-			$languageId,
-		);
-	}
+        $this->move = [
+            'identifier' => $moveIdentifier,
+            'name' => $moveName->name,
+            'description' => $moveDescription->description,
+        ];
+
+        $speedName = $this->statNameRepository->getByLanguageAndStat(
+            $languageId,
+            new StatId(StatId::SPEED),
+        );
+        $this->speedName = $speedName->name;
+
+        // Get the Pokémon usage data.
+        $this->pokemon = $this->statsMovePokemonRepository->getByMonth(
+            $thisMonth,
+            $prevMonth,
+            $this->format->id,
+            $rating,
+            $move->id,
+            $languageId,
+        );
+    }
 }

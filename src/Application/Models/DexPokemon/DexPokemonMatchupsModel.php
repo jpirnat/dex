@@ -15,99 +15,99 @@ use Jp\Dex\Domain\Versions\VersionGroup;
 
 final class DexPokemonMatchupsModel
 {
-	/** @var DexType[] $types */
-	private(set) array $types = [];
+    /** @var DexType[] $types */
+    private(set) array $types = [];
 
-	/** @var float[][] $damageTaken */
-	private(set) array $damageTaken = [];
+    /** @var float[][] $damageTaken */
+    private(set) array $damageTaken = [];
 
-	private(set) array $abilities = [];
-
-
-	private const string NO_ABILITY = 'none';
+    private(set) array $abilities = [];
 
 
-	public function __construct(
-		private readonly DexTypeRepositoryInterface $dexTypeRepository,
-		private readonly VgPokemonRepositoryInterface $vgPokemonRepository,
-		private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
-		private readonly AbilityTypeMatchups $abilityTypeMatchups,
-	) {}
+    private const string NO_ABILITY = 'none';
 
 
-	/**
-	 * Set data for the dex Pokémon page's matchups.
-	 *
-	 * @param ExpandedDexPokemonAbility[] $abilities
-	 */
-	public function setData(
-		VersionGroup $versionGroup,
-		PokemonId $pokemonId,
-		LanguageId $languageId,
-		array $abilities,
-	) : void {
-		$this->damageTaken = [];
-		$this->abilities = [];
+    public function __construct(
+        private readonly DexTypeRepositoryInterface $dexTypeRepository,
+        private readonly VgPokemonRepositoryInterface $vgPokemonRepository,
+        private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
+        private readonly AbilityTypeMatchups $abilityTypeMatchups,
+    ) {}
 
-		// Get all types, and initialize their matchup multipliers to 1.
-		$allTypes = $this->dexTypeRepository->getMainByVersionGroup(
-			$versionGroup->id,
-			$languageId,
-		);
-		foreach ($allTypes as $type) {
-			$identifier = $type->identifier;
-			$this->damageTaken[self::NO_ABILITY][$identifier] = 1;
-		}
 
-		// Get the Pokémon's types, then get the matchups for those types.
-		$vgPokemon = $this->vgPokemonRepository->getByVgAndPokemon(
-			$versionGroup->id,
-			$pokemonId,
-		);
-		foreach ($vgPokemon->getTypeIds() as $typeId) {
-			$matchups = $this->typeMatchupRepository->getByDefendingType(
-				$versionGroup->generationId,
-				$typeId,
-			);
-			foreach ($matchups as $matchup) {
-				// Factor this matchup into the Pokémon's overall matchups.
-				$attackingTypeIdentifier = $matchup->attackingTypeIdentifier;
-				$multiplier = $matchup->multiplier;
+    /**
+     * Set data for the dex Pokémon page's matchups.
+     *
+     * @param ExpandedDexPokemonAbility[] $abilities
+     */
+    public function setData(
+        VersionGroup $versionGroup,
+        PokemonId $pokemonId,
+        LanguageId $languageId,
+        array $abilities,
+    ): void {
+        $this->damageTaken = [];
+        $this->abilities = [];
 
-				$this->damageTaken[self::NO_ABILITY][$attackingTypeIdentifier] *= $multiplier;
-			}
-		}
+        // Get all types, and initialize their matchup multipliers to 1.
+        $allTypes = $this->dexTypeRepository->getMainByVersionGroup(
+            $versionGroup->id,
+            $languageId,
+        );
+        foreach ($allTypes as $type) {
+            $identifier = $type->identifier;
+            $this->damageTaken[self::NO_ABILITY][$identifier] = 1;
+        }
 
-		if ($versionGroup->hasAbilities) {
-			foreach ($abilities as $ability) {
-				$hasMatchups = $this->abilityTypeMatchups->hasMatchups(
-					$versionGroup->generationId,
-					$ability->identifier,
-				);
+        // Get the Pokémon's types, then get the matchups for those types.
+        $vgPokemon = $this->vgPokemonRepository->getByVgAndPokemon(
+            $versionGroup->id,
+            $pokemonId,
+        );
+        foreach ($vgPokemon->getTypeIds() as $typeId) {
+            $matchups = $this->typeMatchupRepository->getByDefendingType(
+                $versionGroup->generationId,
+                $typeId,
+            );
+            foreach ($matchups as $matchup) {
+                // Factor this matchup into the Pokémon's overall matchups.
+                $attackingTypeIdentifier = $matchup->attackingTypeIdentifier;
+                $multiplier = $matchup->multiplier;
 
-				if ($hasMatchups) {
-					$this->abilities[] = [
-						'identifier' => $ability->identifier,
-						'name' => $ability->name,
-					];
+                $this->damageTaken[self::NO_ABILITY][$attackingTypeIdentifier] *= $multiplier;
+            }
+        }
 
-					$abilityMultipliers = $this->abilityTypeMatchups->getMatchups(
-						$versionGroup->generationId,
-						$ability->identifier,
-						$this->damageTaken[self::NO_ABILITY],
-					);
+        if ($versionGroup->hasAbilities) {
+            foreach ($abilities as $ability) {
+                $hasMatchups = $this->abilityTypeMatchups->hasMatchups(
+                    $versionGroup->generationId,
+                    $ability->identifier,
+                );
 
-					$abilityIdentifier = $ability->identifier;
-					$this->damageTaken[$abilityIdentifier] = $abilityMultipliers;
-				}
-			}
-		}
+                if ($hasMatchups) {
+                    $this->abilities[] = [
+                        'identifier' => $ability->identifier,
+                        'name' => $ability->name,
+                    ];
 
-		$this->abilities[] = [
-			'identifier' => self::NO_ABILITY,
-			'name' => 'Other Ability',
-		];
+                    $abilityMultipliers = $this->abilityTypeMatchups->getMatchups(
+                        $versionGroup->generationId,
+                        $ability->identifier,
+                        $this->damageTaken[self::NO_ABILITY],
+                    );
 
-		$this->types = $allTypes;
-	}
+                    $abilityIdentifier = $ability->identifier;
+                    $this->damageTaken[$abilityIdentifier] = $abilityMultipliers;
+                }
+            }
+        }
+
+        $this->abilities[] = [
+            'identifier' => self::NO_ABILITY,
+            'name' => 'Other Ability',
+        ];
+
+        $this->types = $allTypes;
+    }
 }

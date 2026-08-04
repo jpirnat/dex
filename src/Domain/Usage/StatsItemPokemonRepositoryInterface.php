@@ -10,17 +10,17 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 interface StatsItemPokemonRepositoryInterface
 {
-	/**
-	 * Get stats item Pokémon by month, format, rating, and item.
-	 *
-	 * @return StatsItemPokemon[] Ordered by usage percent descending.
-	 */
-	public function getByMonth(
-		DateTime $month,
-		?DateTime $prevMonth,
-		FormatId $formatId,
-		int $rating,
-		ItemId $itemId,
-		LanguageId $languageId,
-	) : array;
+    /**
+     * Get stats item Pokémon by month, format, rating, and item.
+     *
+     * @return StatsItemPokemon[] Ordered by usage percent descending.
+     */
+    public function getByMonth(
+        DateTime $month,
+        ?DateTime $prevMonth,
+        FormatId $formatId,
+        int $rating,
+        ItemId $itemId,
+        LanguageId $languageId,
+    ): array;
 }

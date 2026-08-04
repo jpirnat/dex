@@ -5,8 +5,8 @@ namespace Jp\Dex\Presentation;
 
 interface RendererInterface
 {
-	/**
-	 * Render the template with this data.
-	 */
-	public function render(string $template, array $data = []) : string;
+    /**
+     * Render the template with this data.
+     */
+    public function render(string $template, array $data = []): string;
 }

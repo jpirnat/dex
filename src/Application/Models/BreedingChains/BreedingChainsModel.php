@@ -17,102 +17,102 @@ use Jp\Dex\Domain\Versions\DexVersionGroupRepositoryInterface;
 
 final class BreedingChainsModel
 {
-	private(set) array $pokemon = [];
-	private(set) array $move = [];
+    private(set) array $pokemon = [];
+    private(set) array $move = [];
 
-	/** @var BreedingChainRecord[][] $chains */
-	private(set) array $chains = [];
-
-
-	public function __construct(
-		private(set) readonly VersionGroupModel $versionGroupModel,
-		private readonly PokemonRepositoryInterface $pokemonRepository,
-		private readonly MoveRepositoryInterface $moveRepository,
-		private readonly BreedingChainFinder $breedingChainFinder,
-		private readonly DexVersionGroupRepositoryInterface $dexVersionGroupRepository,
-		private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
-		private readonly MoveNameRepositoryInterface $moveNameRepository,
-		private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
-		private readonly PokemonMoveFormatter $pokemonMoveFormatter,
-	) {}
+    /** @var BreedingChainRecord[][] $chains */
+    private(set) array $chains = [];
 
 
-	/**
-	 * Set breeding chain data for this Pokémon, move, and version group combination.
-	 */
-	public function setData(
-		string $vgIdentifier,
-		string $pokemonIdentifier,
-		string $moveIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+    public function __construct(
+        private(set) readonly VersionGroupModel $versionGroupModel,
+        private readonly PokemonRepositoryInterface $pokemonRepository,
+        private readonly MoveRepositoryInterface $moveRepository,
+        private readonly BreedingChainFinder $breedingChainFinder,
+        private readonly DexVersionGroupRepositoryInterface $dexVersionGroupRepository,
+        private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
+        private readonly MoveNameRepositoryInterface $moveNameRepository,
+        private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
+        private readonly PokemonMoveFormatter $pokemonMoveFormatter,
+    ) {}
 
-		$pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
-		$move = $this->moveRepository->getByIdentifier($moveIdentifier);
 
-		$pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-			$languageId,
-			$pokemon->id,
-		);
-		$this->pokemon = [
-			'identifier' => $pokemon->identifier,
-			'name' => $pokemonName->name,
-		];
+    /**
+     * Set breeding chain data for this Pokémon, move, and version group combination.
+     */
+    public function setData(
+        string $vgIdentifier,
+        string $pokemonIdentifier,
+        string $moveIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$moveName = $this->moveNameRepository->getByLanguageAndMove($languageId, $move->id);
-		$this->move = [
-			'name' => $moveName->name,
-		];
+        $pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
+        $move = $this->moveRepository->getByIdentifier($moveIdentifier);
 
-		$chains = $this->breedingChainFinder->findChains(
-			$versionGroupId,
-			$pokemon->id,
-			$move->id,
-		);
+        $pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+            $languageId,
+            $pokemon->id,
+        );
+        $this->pokemon = [
+            'identifier' => $pokemon->identifier,
+            'name' => $pokemonName->name,
+        ];
 
-		$this->chains = [];
-		foreach ($chains as $chain) {
-			$chainId = [];
-			$records = [];
-			foreach ($chain as $pokemonMove) {
-				$chainId[] = $pokemonMove->pokemonId->value;
-				$records[] = $this->getRecord($pokemonMove, $languageId);
-			}
-			$chainId = implode('-', $chainId);
-			$this->chains[$chainId] = $records;
-		}
-	}
+        $moveName = $this->moveNameRepository->getByLanguageAndMove($languageId, $move->id);
+        $this->move = [
+            'name' => $moveName->name,
+        ];
 
-	/**
-	 * Create the breeding chain record for this Pokémon move.
-	 */
-	private function getRecord(
-		PokemonMove $pokemonMove,
-		LanguageId $languageId,
-	) : BreedingChainRecord {
-		$versionGroup = $this->dexVersionGroupRepository->getById(
-			$pokemonMove->versionGroupId,
-			$languageId,
-		);
+        $chains = $this->breedingChainFinder->findChains(
+            $versionGroupId,
+            $pokemon->id,
+            $move->id,
+        );
 
-		$pokemon = $this->dexPokemonRepository->getById(
-			$versionGroup->id,
-			$pokemonMove->pokemonId,
-			$languageId,
-		);
+        $this->chains = [];
+        foreach ($chains as $chain) {
+            $chainId = [];
+            $records = [];
+            foreach ($chain as $pokemonMove) {
+                $chainId[] = $pokemonMove->pokemonId->value;
+                $records[] = $this->getRecord($pokemonMove, $languageId);
+            }
+            $chainId = implode('-', $chainId);
+            $this->chains[$chainId] = $records;
+        }
+    }
 
-		return new BreedingChainRecord(
-			$pokemon->icon,
-			$pokemon->identifier,
-			$pokemon->name,
-			$versionGroup,
-			$pokemon->eggGroups,
-			$pokemon->genderRatio,
-			$pokemon->eggCycles,
-			$pokemon->stepsToHatch,
-			$this->pokemonMoveFormatter->format($pokemonMove, $languageId),
-		);
-	}
+    /**
+     * Create the breeding chain record for this Pokémon move.
+     */
+    private function getRecord(
+        PokemonMove $pokemonMove,
+        LanguageId $languageId,
+    ): BreedingChainRecord {
+        $versionGroup = $this->dexVersionGroupRepository->getById(
+            $pokemonMove->versionGroupId,
+            $languageId,
+        );
+
+        $pokemon = $this->dexPokemonRepository->getById(
+            $versionGroup->id,
+            $pokemonMove->pokemonId,
+            $languageId,
+        );
+
+        return new BreedingChainRecord(
+            $pokemon->icon,
+            $pokemon->identifier,
+            $pokemon->name,
+            $versionGroup,
+            $pokemon->eggGroups,
+            $pokemon->genderRatio,
+            $pokemon->eggCycles,
+            $pokemon->stepsToHatch,
+            $this->pokemonMoveFormatter->format($pokemonMove, $languageId),
+        );
+    }
 }
 

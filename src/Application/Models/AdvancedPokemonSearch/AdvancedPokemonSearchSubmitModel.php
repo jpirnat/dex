@@ -17,221 +17,221 @@ use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 
 final class AdvancedPokemonSearchSubmitModel
 {
-	/** @var DexPokemon[] $pokemons */
-	private(set) array $pokemons = [];
+    /** @var DexPokemon[] $pokemons */
+    private(set) array $pokemons = [];
 
 
-	public function __construct(
-		private readonly VersionGroupModel $versionGroupModel,
-		private readonly AbilityRepositoryInterface $abilityRepository,
-		private readonly AdvancedPokemonSearchQueriesInterface $queries,
-		private readonly TypeRepositoryInterface $typeRepository,
-		private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
-		private readonly AbilityTypeMatchups $abilityTypeMatchups,
-	) {}
+    public function __construct(
+        private readonly VersionGroupModel $versionGroupModel,
+        private readonly AbilityRepositoryInterface $abilityRepository,
+        private readonly AdvancedPokemonSearchQueriesInterface $queries,
+        private readonly TypeRepositoryInterface $typeRepository,
+        private readonly TypeMatchupRepositoryInterface $typeMatchupRepository,
+        private readonly AbilityTypeMatchups $abilityTypeMatchups,
+    ) {}
 
 
-	/**
-	 * Set data for the advanced Pokémon search page.
-	 *
-	 * @param string[] $typeIdentifiers
-	 * @param string[][] $matchups
-	 * @param string[] $eggGroupIdentifiers
-	 * @param string[] $genderRatios
-	 * @param string[] $moveIdentifiers
-	 */
-	public function setData(
-		string $vgIdentifier,
-		array $typeIdentifiers,
-		string $typesOperator,
-		array $matchups,
-		string $includeAbilityMatchups,
-		string $abilityIdentifier,
-		array $eggGroupIdentifiers,
-		string $eggGroupsOperator,
-		array $genderRatios,
-		string $genderRatiosOperator,
-		array $moveIdentifiers,
-		string $includeTransferMoves,
-		LanguageId $languageId,
-	) : void {
-		try {
-			$versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
-		} catch (VersionGroupNotFoundException) {
-			return;
-		}
+    /**
+     * Set data for the advanced Pokémon search page.
+     *
+     * @param string[] $typeIdentifiers
+     * @param string[][] $matchups
+     * @param string[] $eggGroupIdentifiers
+     * @param string[] $genderRatios
+     * @param string[] $moveIdentifiers
+     */
+    public function setData(
+        string $vgIdentifier,
+        array $typeIdentifiers,
+        string $typesOperator,
+        array $matchups,
+        string $includeAbilityMatchups,
+        string $abilityIdentifier,
+        array $eggGroupIdentifiers,
+        string $eggGroupsOperator,
+        array $genderRatios,
+        string $genderRatiosOperator,
+        array $moveIdentifiers,
+        string $includeTransferMoves,
+        LanguageId $languageId,
+    ): void {
+        try {
+            $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+        } catch (VersionGroupNotFoundException) {
+            return;
+        }
 
-		$includeAbilityMatchups = (bool) $includeAbilityMatchups;
-		$includeTransferMoves = (bool) $includeTransferMoves;
+        $includeAbilityMatchups = (bool) $includeAbilityMatchups;
+        $includeTransferMoves = (bool) $includeTransferMoves;
 
-		$typeIdentifiersToIds = $this->queries->getTypeIdentifiersToIds();
-		$eggGroupIdentifiersToIds = $this->queries->getEggGroupIdentifiersToIds();
-		$moveIdentifiersToIds = $this->queries->getMoveIdentifiersToIds();
+        $typeIdentifiersToIds = $this->queries->getTypeIdentifiersToIds();
+        $eggGroupIdentifiersToIds = $this->queries->getEggGroupIdentifiersToIds();
+        $moveIdentifiersToIds = $this->queries->getMoveIdentifiersToIds();
 
-		$typeIds = [];
-		foreach ($typeIdentifiers as $typeIdentifier) {
-			if (isset($typeIdentifiersToIds[$typeIdentifier])) {
-				$typeIds[] = $typeIdentifiersToIds[$typeIdentifier];
-			}
-		}
+        $typeIds = [];
+        foreach ($typeIdentifiers as $typeIdentifier) {
+            if (isset($typeIdentifiersToIds[$typeIdentifier])) {
+                $typeIds[] = $typeIdentifiersToIds[$typeIdentifier];
+            }
+        }
 
-		$realMatchups = [];
-		foreach ($matchups as $typeIdentifier => $comparisons) {
-			if (isset($typeIdentifiersToIds[$typeIdentifier])) {
-				foreach ($comparisons as $comparison) {
-					$comparison = Comparison::tryFrom($comparison);
-					if ($comparison) {
-						$realMatchups[$typeIdentifier][] = $comparison;
-					}
-				}
-			}
-		}
-		$matchups = $realMatchups;
+        $realMatchups = [];
+        foreach ($matchups as $typeIdentifier => $comparisons) {
+            if (isset($typeIdentifiersToIds[$typeIdentifier])) {
+                foreach ($comparisons as $comparison) {
+                    $comparison = Comparison::tryFrom($comparison);
+                    if ($comparison) {
+                        $realMatchups[$typeIdentifier][] = $comparison;
+                    }
+                }
+            }
+        }
+        $matchups = $realMatchups;
 
-		$abilityId = null;
-		if ($abilityIdentifier) {
-			try {
-				$ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
-				$abilityId = $ability->id;
-			} catch (AbilityNotFoundException) {
-			}
-		}
+        $abilityId = null;
+        if ($abilityIdentifier) {
+            try {
+                $ability = $this->abilityRepository->getByIdentifier($abilityIdentifier);
+                $abilityId = $ability->id;
+            } catch (AbilityNotFoundException) {
+            }
+        }
 
-		$eggGroupIds = [];
-		foreach ($eggGroupIdentifiers as $eggGroupIdentifier) {
-			if (isset($eggGroupIdentifiersToIds[$eggGroupIdentifier])) {
-				$eggGroupIds[] = $eggGroupIdentifiersToIds[$eggGroupIdentifier];
-			}
-		}
+        $eggGroupIds = [];
+        foreach ($eggGroupIdentifiers as $eggGroupIdentifier) {
+            if (isset($eggGroupIdentifiersToIds[$eggGroupIdentifier])) {
+                $eggGroupIds[] = $eggGroupIdentifiersToIds[$eggGroupIdentifier];
+            }
+        }
 
-		$originalGenderRatios = $genderRatios;
-		$genderRatios = [];
-		foreach ($originalGenderRatios as $genderRatio) {
-			$genderRatios[] = new GenderRatio((int) $genderRatio);
-		}
+        $originalGenderRatios = $genderRatios;
+        $genderRatios = [];
+        foreach ($originalGenderRatios as $genderRatio) {
+            $genderRatios[] = new GenderRatio((int) $genderRatio);
+        }
 
-		$moveIds = [];
-		foreach ($moveIdentifiers as $moveIdentifier) {
-			if (isset($moveIdentifiersToIds[$moveIdentifier])) {
-				$moveIds[] = $moveIdentifiersToIds[$moveIdentifier];
-			}
-		}
+        $moveIds = [];
+        foreach ($moveIdentifiers as $moveIdentifier) {
+            if (isset($moveIdentifiersToIds[$moveIdentifier])) {
+                $moveIds[] = $moveIdentifiersToIds[$moveIdentifier];
+            }
+        }
 
-		$pokemons = $this->queries->search(
-			$versionGroupId,
-			$typeIds,
-			$typesOperator,
-			$abilityId,
-			$eggGroupIds,
-			$eggGroupsOperator,
-			$genderRatios,
-			$genderRatiosOperator,
-			$moveIds,
-			$includeTransferMoves,
-			$languageId,
-		);
+        $pokemons = $this->queries->search(
+            $versionGroupId,
+            $typeIds,
+            $typesOperator,
+            $abilityId,
+            $eggGroupIds,
+            $eggGroupsOperator,
+            $genderRatios,
+            $genderRatiosOperator,
+            $moveIds,
+            $includeTransferMoves,
+            $languageId,
+        );
 
-		// The big database query can't handle all possible search criteria.
-		// Process any further search criteria here.
+        // The big database query can't handle all possible search criteria.
+        // Process any further search criteria here.
 
-		if ($matchups) {
-			$pokemons = $this->filterByMatchups(
-				$this->versionGroupModel->versionGroup,
-				$pokemons,
-				$matchups,
-				$includeAbilityMatchups,
-			);
-		}
+        if ($matchups) {
+            $pokemons = $this->filterByMatchups(
+                $this->versionGroupModel->versionGroup,
+                $pokemons,
+                $matchups,
+                $includeAbilityMatchups,
+            );
+        }
 
-		$this->pokemons = $pokemons;
-	}
+        $this->pokemons = $pokemons;
+    }
 
-	/**
-	 * @param DexPokemon[] $pokemons
-	 * @param Comparison[][] $matchups Indexed first by type identifier.
-	 *
-	 * @return DexPokemon[]
-	 */
-	private function filterByMatchups(
-		VersionGroup $versionGroup,
-		array $pokemons,
-		array $matchups,
-		bool $includeAbilityMatchups,
-	) : array {
-		// First, calculate all matchups for all Pokémon.
+    /**
+     * @param DexPokemon[] $pokemons
+     * @param Comparison[][] $matchups Indexed first by type identifier.
+     *
+     * @return DexPokemon[]
+     */
+    private function filterByMatchups(
+        VersionGroup $versionGroup,
+        array $pokemons,
+        array $matchups,
+        bool $includeAbilityMatchups,
+    ): array {
+        // First, calculate all matchups for all Pokémon.
 
-		/**
-		 * @var float[][][] $pokemonAbilityTypeMultipliers
-		 *     Indexed by Pokémon id, then by ability identifier, then by
-		 *     attacking type identifier.
-		 */
-		$pokemonAbilityTypeMultipliers = [];
-		$types = $this->typeRepository->getMainByVersionGroup($versionGroup->id);
-		$multipliers = $this->typeMatchupRepository->getMultipliers($versionGroup->generationId);
+        /**
+         * @var float[][][] $pokemonAbilityTypeMultipliers
+         *     Indexed by Pokémon id, then by ability identifier, then by
+         *     attacking type identifier.
+         */
+        $pokemonAbilityTypeMultipliers = [];
+        $types = $this->typeRepository->getMainByVersionGroup($versionGroup->id);
+        $multipliers = $this->typeMatchupRepository->getMultipliers($versionGroup->generationId);
 
-		foreach ($pokemons as $pokemonId => $pokemon) {
-			// Initialize matchups for each type.
-			foreach ($types as $type) {
-				$typeIdentifier = $type->identifier;
-				$pokemonAbilityTypeMultipliers[$pokemonId]['none'][$typeIdentifier] = 1;
-			}
+        foreach ($pokemons as $pokemonId => $pokemon) {
+            // Initialize matchups for each type.
+            foreach ($types as $type) {
+                $typeIdentifier = $type->identifier;
+                $pokemonAbilityTypeMultipliers[$pokemonId]['none'][$typeIdentifier] = 1;
+            }
 
-			// Calculate this Pokémon's type matchups.
-			foreach ($pokemon->types as $defendingType) {
-				$defendingTypeIdentifier = $defendingType->identifier;
-				foreach ($multipliers[$defendingTypeIdentifier] as $attackingTypeIdentifier => $multiplier) {
-					$pokemonAbilityTypeMultipliers[$pokemonId]['none'][$attackingTypeIdentifier] *= $multiplier;
-				}
-			}
+            // Calculate this Pokémon's type matchups.
+            foreach ($pokemon->types as $defendingType) {
+                $defendingTypeIdentifier = $defendingType->identifier;
+                foreach ($multipliers[$defendingTypeIdentifier] as $attackingTypeIdentifier => $multiplier) {
+                    $pokemonAbilityTypeMultipliers[$pokemonId]['none'][$attackingTypeIdentifier] *= $multiplier;
+                }
+            }
 
-			if ($includeAbilityMatchups) {
-				// Apply this Pokémon's abilities to its type matchups.
-				foreach ($pokemon->abilities as $ability) {
-					$hasMatchups = $this->abilityTypeMatchups->hasMatchups(
-						$versionGroup->generationId,
-						$ability->identifier,
-					);
+            if ($includeAbilityMatchups) {
+                // Apply this Pokémon's abilities to its type matchups.
+                foreach ($pokemon->abilities as $ability) {
+                    $hasMatchups = $this->abilityTypeMatchups->hasMatchups(
+                        $versionGroup->generationId,
+                        $ability->identifier,
+                    );
 
-					if ($hasMatchups) {
-						$abilityIdentifier = $ability->identifier;
+                    if ($hasMatchups) {
+                        $abilityIdentifier = $ability->identifier;
 
-						$abilityMultipliers = $this->abilityTypeMatchups->getMatchups(
-							$versionGroup->generationId,
-							$ability->identifier,
-							$pokemonAbilityTypeMultipliers[$pokemonId]['none'],
-						);
+                        $abilityMultipliers = $this->abilityTypeMatchups->getMatchups(
+                            $versionGroup->generationId,
+                            $ability->identifier,
+                            $pokemonAbilityTypeMultipliers[$pokemonId]['none'],
+                        );
 
-						$pokemonAbilityTypeMultipliers[$pokemonId][$abilityIdentifier] = $abilityMultipliers;
-					}
-				}
-			}
-		}
+                        $pokemonAbilityTypeMultipliers[$pokemonId][$abilityIdentifier] = $abilityMultipliers;
+                    }
+                }
+            }
+        }
 
-		// A Pokemon will be included in the final results if any of its
-		// abilities match all conditions.
-		$final = [];
+        // A Pokemon will be included in the final results if any of its
+        // abilities match all conditions.
+        $final = [];
 
-		foreach ($pokemonAbilityTypeMultipliers as $pokemonId => $abilityTypeMultipliers) {
-			foreach ($abilityTypeMultipliers as $typeMultipliers) {
-				foreach ($matchups as $typeIdentifier => $comparisons) {
-					foreach ($comparisons as $comparison) {
-						$multiplier = $typeMultipliers[$typeIdentifier];
-						if (!$comparison->evaluate($multiplier)) {
-							// This ability doesn't work for this Pokémon.
-							// Skip to this Pokémon's next ability.
-							continue 3;
-						}
-					}
-					// All conditions for this type are true.
-				}
-				// All conditions for this ability are true. Regardless of how
-				// this Pokémon's other abilities might turn out, add this
-				// Pokémon to the list.
-				$final[] = $pokemons[$pokemonId];
-				continue 2;
-			}
-		}
+        foreach ($pokemonAbilityTypeMultipliers as $pokemonId => $abilityTypeMultipliers) {
+            foreach ($abilityTypeMultipliers as $typeMultipliers) {
+                foreach ($matchups as $typeIdentifier => $comparisons) {
+                    foreach ($comparisons as $comparison) {
+                        $multiplier = $typeMultipliers[$typeIdentifier];
+                        if (!$comparison->evaluate($multiplier)) {
+                            // This ability doesn't work for this Pokémon.
+                            // Skip to this Pokémon's next ability.
+                            continue 3;
+                        }
+                    }
+                    // All conditions for this type are true.
+                }
+                // All conditions for this ability are true. Regardless of how
+                // this Pokémon's other abilities might turn out, add this
+                // Pokémon to the list.
+                $final[] = $pokemons[$pokemonId];
+                continue 2;
+            }
+        }
 
-		return $final;
-	}
+        return $final;
+    }
 }

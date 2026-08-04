@@ -8,20 +8,20 @@ use Jp\Dex\Domain\Formats\FormatId;
 
 interface UsageQueriesInterface
 {
-	/**
-	 * Get the months that have usage records.
-	 *
-	 * @return DateTime[]
-	 */
-	public function getMonths() : array;
+    /**
+     * Get the months that have usage records.
+     *
+     * @return DateTime[]
+     */
+    public function getMonths(): array;
 
-	/**
-	 * Get the month of the oldest instance of data in this format.
-	 */
-	public function getOldest(FormatId $formatId) : ?DateTime;
+    /**
+     * Get the month of the oldest instance of data in this format.
+     */
+    public function getOldest(FormatId $formatId): ?DateTime;
 
-	/**
-	 * Get the month of the newest instance of data in this format.
-	 */
-	public function getNewest(FormatId $formatId) : ?DateTime;
+    /**
+     * Get the month of the newest instance of data in this format.
+     */
+    public function getNewest(FormatId $formatId): ?DateTime;
 }

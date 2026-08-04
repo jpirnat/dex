@@ -9,21 +9,21 @@ use Psr\Http\Message\ResponseInterface;
 
 final readonly class IvCalculatorSubmitView
 {
-	public function __construct(
-		private IvCalculatorSubmitModel $ivCalculatorSubmitModel,
-	) {}
+    public function __construct(
+        private IvCalculatorSubmitModel $ivCalculatorSubmitModel,
+    ) {}
 
-	/**
-	 * Get data for the IV calculator page.
-	 */
-	public function getData() : ResponseInterface
-	{
-		$ivs = $this->ivCalculatorSubmitModel->ivs;
+    /**
+     * Get data for the IV calculator page.
+     */
+    public function getData(): ResponseInterface
+    {
+        $ivs = $this->ivCalculatorSubmitModel->ivs;
 
-		return new JsonResponse([
-			'data' => [
-				'ivs' => $ivs,
-			]
-		]);
-	}
+        return new JsonResponse([
+            'data' => [
+                'ivs' => $ivs,
+            ]
+        ]);
+    }
 }

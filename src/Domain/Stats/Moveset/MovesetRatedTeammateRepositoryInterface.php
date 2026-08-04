@@ -5,8 +5,8 @@ namespace Jp\Dex\Domain\Stats\Moveset;
 
 interface MovesetRatedTeammateRepositoryInterface
 {
-	/**
-	 * Save a moveset rated teammate record.
-	 */
-	public function save(MovesetRatedTeammate $movesetRatedTeammate) : void;
+    /**
+     * Save a moveset rated teammate record.
+     */
+    public function save(MovesetRatedTeammate $movesetRatedTeammate): void;
 }

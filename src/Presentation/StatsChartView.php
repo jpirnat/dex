@@ -18,223 +18,223 @@ use Psr\Http\Message\ResponseInterface;
 
 final readonly class StatsChartView
 {
-	public function __construct(
-		private StatsChartModel $statsChartModel,
-	) {}
+    public function __construct(
+        private StatsChartModel $statsChartModel,
+    ) {}
 
-	/**
-	 * Get data for the stats chart page.
-	 */
-	public function getData() : ResponseInterface
-	{
-		$trendLines = $this->statsChartModel->trendLines;
+    /**
+     * Get data for the stats chart page.
+     */
+    public function getData(): ResponseInterface
+    {
+        $trendLines = $this->statsChartModel->trendLines;
 
-		$lines = [];
-		$index = 0;
-		foreach ($trendLines as $trendLine) {
-			$data = [];
-			foreach ($trendLine->trendPoints as $point) {
-				$data[] = [
-					'x' => $point->date->format('Y-m'),
-					'y' => $point->value,
-				];
-			}
+        $lines = [];
+        $index = 0;
+        foreach ($trendLines as $trendLine) {
+            $data = [];
+            foreach ($trendLine->trendPoints as $point) {
+                $data[] = [
+                    'x' => $point->date->format('Y-m'),
+                    'y' => $point->value,
+                ];
+            }
 
-			$lines[] = [
-				'label' => $this->getLineLabel($trendLine),
-				'data' => $data,
-				'color' => $this->getLineColor($trendLine, $index),
-			];
+            $lines[] = [
+                'label' => $this->getLineLabel($trendLine),
+                'data' => $data,
+                'color' => $this->getLineColor($trendLine, $index),
+            ];
 
-			$index++;
-		}
+            $index++;
+        }
 
-		return new JsonResponse([
-			'data' => [
-				'chartTitle' => $this->getChartTitle(),
-				'lines' => $lines,
-				'locale' => $this->statsChartModel->language->locale,
-			]
-		]);
-	}
+        return new JsonResponse([
+            'data' => [
+                'chartTitle' => $this->getChartTitle(),
+                'lines' => $lines,
+                'locale' => $this->statsChartModel->language->locale,
+            ]
+        ]);
+    }
 
-	/**
-	 * Get a title for the chart.
-	 */
-	private function getChartTitle() : string
-	{
-		$trendLines = $this->statsChartModel->trendLines;
-		if (count($trendLines) === 1) {
-			// Use the trend line's own chart title rather than generating one ourselves.
-			return $trendLines[0]->getChartTitle();
-		}
+    /**
+     * Get a title for the chart.
+     */
+    private function getChartTitle(): string
+    {
+        $trendLines = $this->statsChartModel->trendLines;
+        if (count($trendLines) === 1) {
+            // Use the trend line's own chart title rather than generating one ourselves.
+            return $trendLines[0]->getChartTitle();
+        }
 
-		$similarities = $this->statsChartModel->similarities;
+        $similarities = $this->statsChartModel->similarities;
 
-		$trendLine = $this->statsChartModel->trendLines[0];
-		$formatName = $trendLine->formatName;
-		$rating = $trendLine->rating;
-		$pokemonName = $trendLine->pokemonName;
-		$movesetName = '';
-		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof UsageAbilityTrendLine) {
-			$movesetName = $trendLine->abilityName;
-		}
-		if ($trendLine instanceof MovesetItemTrendLine || $trendLine instanceof UsageItemTrendLine) {
-			$movesetName = $trendLine->itemName;
-		}
-		if ($trendLine instanceof MovesetMoveTrendLine || $trendLine instanceof UsageMoveTrendLine) {
-			$movesetName = $trendLine->moveName;
-		}
-		if ($trendLine instanceof MovesetTeraTrendLine) {
-			$movesetName = $trendLine->typeName;
-		}
+        $trendLine = $this->statsChartModel->trendLines[0];
+        $formatName = $trendLine->formatName;
+        $rating = $trendLine->rating;
+        $pokemonName = $trendLine->pokemonName;
+        $movesetName = '';
+        if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof UsageAbilityTrendLine) {
+            $movesetName = $trendLine->abilityName;
+        }
+        if ($trendLine instanceof MovesetItemTrendLine || $trendLine instanceof UsageItemTrendLine) {
+            $movesetName = $trendLine->itemName;
+        }
+        if ($trendLine instanceof MovesetMoveTrendLine || $trendLine instanceof UsageMoveTrendLine) {
+            $movesetName = $trendLine->moveName;
+        }
+        if ($trendLine instanceof MovesetTeraTrendLine) {
+            $movesetName = $trendLine->typeName;
+        }
 
-		$titleParts = [];
+        $titleParts = [];
 
-		if (in_array('format', $similarities)) {
-			$titleParts[] = $formatName;
-		}
+        if (in_array('format', $similarities)) {
+            $titleParts[] = $formatName;
+        }
 
-		if (in_array('rating', $similarities)) {
-			$titleParts[] = "Rating $rating";
-		}
+        if (in_array('rating', $similarities)) {
+            $titleParts[] = "Rating $rating";
+        }
 
-		if (($trendLine instanceof UsageAbilityTrendLine
-			|| $trendLine instanceof UsageItemTrendLine
-			|| $trendLine instanceof UsageMoveTrendLine)
-			&& (in_array('pokemon', $similarities)
-			|| in_array('moveset', $similarities))
-		) {
-			$titleParts[] = "$pokemonName with $movesetName";
-		} elseif (in_array('pokemon', $similarities)) {
-			$titleParts[] = $pokemonName;
-		} elseif (in_array('moveset', $similarities) && in_array('type', $similarities)) {
-			$titleParts[] = $movesetName;
-		}
+        if (($trendLine instanceof UsageAbilityTrendLine
+            || $trendLine instanceof UsageItemTrendLine
+            || $trendLine instanceof UsageMoveTrendLine)
+            && (in_array('pokemon', $similarities)
+            || in_array('moveset', $similarities))
+        ) {
+            $titleParts[] = "$pokemonName with $movesetName";
+        } elseif (in_array('pokemon', $similarities)) {
+            $titleParts[] = $pokemonName;
+        } elseif (in_array('moveset', $similarities) && in_array('type', $similarities)) {
+            $titleParts[] = $movesetName;
+        }
 
-		if ($trendLine instanceof LeadUsageTrendLine && in_array('type', $similarities)) {
-			$titleParts[] = 'Lead Usage';
-		}
+        if ($trendLine instanceof LeadUsageTrendLine && in_array('type', $similarities)) {
+            $titleParts[] = 'Lead Usage';
+        }
 
-		if ($titleParts === []) {
-			$titleParts[] = 'Usage';
-		}
+        if ($titleParts === []) {
+            $titleParts[] = 'Usage';
+        }
 
-		return implode(' - ', $titleParts);
-	}
+        return implode(' - ', $titleParts);
+    }
 
-	/**
-	 * Get a label for the line.
-	 */
-	private function getLineLabel(TrendLine $trendLine) : string
-	{
-		$trendLines = $this->statsChartModel->trendLines;
-		if (count($trendLines) === 1) {
-			// Use the trend line's own label rather than generating one ourselves.
-			return $trendLine->getLineLabel();
-		}
+    /**
+     * Get a label for the line.
+     */
+    private function getLineLabel(TrendLine $trendLine): string
+    {
+        $trendLines = $this->statsChartModel->trendLines;
+        if (count($trendLines) === 1) {
+            // Use the trend line's own label rather than generating one ourselves.
+            return $trendLine->getLineLabel();
+        }
 
-		$differences = $this->statsChartModel->differences;
+        $differences = $this->statsChartModel->differences;
 
-		$formatName = $trendLine->formatName;
-		$rating = $trendLine->rating;
-		$pokemonName = $trendLine->pokemonName;
-		$movesetName = '';
-		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof UsageAbilityTrendLine) {
-			$movesetName = $trendLine->abilityName;
-		}
-		if ($trendLine instanceof MovesetItemTrendLine || $trendLine instanceof UsageItemTrendLine) {
-			$movesetName = $trendLine->itemName;
-		}
-		if ($trendLine instanceof MovesetMoveTrendLine || $trendLine instanceof UsageMoveTrendLine) {
-			$movesetName = $trendLine->moveName;
-		}
-		if ($trendLine instanceof MovesetTeraTrendLine) {
-			$movesetName = "Tera $trendLine->typeName";
-		}
+        $formatName = $trendLine->formatName;
+        $rating = $trendLine->rating;
+        $pokemonName = $trendLine->pokemonName;
+        $movesetName = '';
+        if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof UsageAbilityTrendLine) {
+            $movesetName = $trendLine->abilityName;
+        }
+        if ($trendLine instanceof MovesetItemTrendLine || $trendLine instanceof UsageItemTrendLine) {
+            $movesetName = $trendLine->itemName;
+        }
+        if ($trendLine instanceof MovesetMoveTrendLine || $trendLine instanceof UsageMoveTrendLine) {
+            $movesetName = $trendLine->moveName;
+        }
+        if ($trendLine instanceof MovesetTeraTrendLine) {
+            $movesetName = "Tera $trendLine->typeName";
+        }
 
-		$labelParts = [];
+        $labelParts = [];
 
-		if (in_array('format', $differences)) {
-			$labelParts[] = $formatName;
-		}
+        if (in_array('format', $differences)) {
+            $labelParts[] = $formatName;
+        }
 
-		if (in_array('rating', $differences)) {
-			$labelParts[] = "Rating $rating";
-		}
+        if (in_array('rating', $differences)) {
+            $labelParts[] = "Rating $rating";
+        }
 
-		if (($trendLine instanceof UsageAbilityTrendLine
-			|| $trendLine instanceof UsageItemTrendLine
-			|| $trendLine instanceof UsageMoveTrendLine)
-			&& (in_array('pokemon', $differences)
-			|| in_array('moveset', $differences))
-		) {
-			$labelParts[] = "$pokemonName with $movesetName";
-		} elseif (in_array('pokemon', $differences)) {
-			$labelParts[] = $pokemonName;
-		} elseif (in_array('moveset', $differences)) {
-			$labelParts[] = $movesetName;
-		}
+        if (($trendLine instanceof UsageAbilityTrendLine
+            || $trendLine instanceof UsageItemTrendLine
+            || $trendLine instanceof UsageMoveTrendLine)
+            && (in_array('pokemon', $differences)
+            || in_array('moveset', $differences))
+        ) {
+            $labelParts[] = "$pokemonName with $movesetName";
+        } elseif (in_array('pokemon', $differences)) {
+            $labelParts[] = $pokemonName;
+        } elseif (in_array('moveset', $differences)) {
+            $labelParts[] = $movesetName;
+        }
 
-		if ($trendLine instanceof LeadUsageTrendLine) {
-			$labelParts[] = 'Lead Usage';
-		}
+        if ($trendLine instanceof LeadUsageTrendLine) {
+            $labelParts[] = 'Lead Usage';
+        }
 
-		if ($labelParts === []) {
-			$labelParts[] = 'Usage';
-		}
+        if ($labelParts === []) {
+            $labelParts[] = 'Usage';
+        }
 
-		return implode(' - ', $labelParts);
-	}
+        return implode(' - ', $labelParts);
+    }
 
-	/**
-	 * Get a color for the line.
-	 */
-	private function getLineColor(TrendLine $trendLine, int $index) : string
-	{
-		$differences = $this->statsChartModel->differences;
-		if ($differences === ['rating']) {
-			// Special case: For charts where we're looking at the same thing
-			// across different rating levels, each rating has a specific color.
-			$rating = $trendLine->rating;
-			if ($rating === 0) {
-				return 'rgba(0, 0, 0, 1)'; // black
-			}
-			if ($rating === 1500) {
-				return 'rgba(255, 99, 132, 1)'; // red
-			}
-			if ($rating === 1630 || $rating === 1695) {
-				return 'rgba(54, 162, 235, 1)'; // blue
-			}
-			if ($rating === 1760 || $rating === 1825) {
-				return 'rgba(153, 102, 255, 1)'; // purple
-			}
-			return 'rgba(201, 203, 207, 1)'; // This shouldn't ever happen.
-		}
+    /**
+     * Get a color for the line.
+     */
+    private function getLineColor(TrendLine $trendLine, int $index): string
+    {
+        $differences = $this->statsChartModel->differences;
+        if ($differences === ['rating']) {
+            // Special case: For charts where we're looking at the same thing
+            // across different rating levels, each rating has a specific color.
+            $rating = $trendLine->rating;
+            if ($rating === 0) {
+                return 'rgba(0, 0, 0, 1)'; // black
+            }
+            if ($rating === 1500) {
+                return 'rgba(255, 99, 132, 1)'; // red
+            }
+            if ($rating === 1630 || $rating === 1695) {
+                return 'rgba(54, 162, 235, 1)'; // blue
+            }
+            if ($rating === 1760 || $rating === 1825) {
+                return 'rgba(153, 102, 255, 1)'; // purple
+            }
+            return 'rgba(201, 203, 207, 1)'; // This shouldn't ever happen.
+        }
 
-		if ($trendLine instanceof MovesetMoveTrendLine) {
-			return $trendLine->moveTypeColorCode;
-		}
+        if ($trendLine instanceof MovesetMoveTrendLine) {
+            return $trendLine->moveTypeColorCode;
+        }
 
-		if ($trendLine instanceof MovesetTeraTrendLine) {
-			return $trendLine->teraTypeColorCode;
-		}
+        if ($trendLine instanceof MovesetTeraTrendLine) {
+            return $trendLine->teraTypeColorCode;
+        }
 
-		if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof MovesetItemTrendLine) {
-			// For moveset ability and moveset item lines, use these colors from
-			// the Chart.js documentation.
-			return [
-				'rgba(255, 99, 132, 1)', // red
-				'rgba(255, 159, 64, 1)', // orange
-				'rgba(255, 206, 86, 1)', // yellow
-				'rgba(75, 192, 192, 1)', // green
-				'rgba(54, 162, 235, 1)', // blue
-				'rgba(153, 102, 255, 1)', // purple
-				'rgba(201, 203, 207, 1)', // gray
-			][$index % 7];
-		}
+        if ($trendLine instanceof MovesetAbilityTrendLine || $trendLine instanceof MovesetItemTrendLine) {
+            // For moveset ability and moveset item lines, use these colors from
+            // the Chart.js documentation.
+            return [
+                'rgba(255, 99, 132, 1)', // red
+                'rgba(255, 159, 64, 1)', // orange
+                'rgba(255, 206, 86, 1)', // yellow
+                'rgba(75, 192, 192, 1)', // green
+                'rgba(54, 162, 235, 1)', // blue
+                'rgba(153, 102, 255, 1)', // purple
+                'rgba(201, 203, 207, 1)', // gray
+            ][$index % 7];
+        }
 
-		// For all other cases, use the color of the Pokémon's primary type.
-		return $trendLine->pokemonTypeColorCode;
-	}
+        // For all other cases, use the color of the Pokémon's primary type.
+        return $trendLine->pokemonTypeColorCode;
+    }
 }

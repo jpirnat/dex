@@ -9,29 +9,29 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 final class DexEggGroupsModel
 {
-	/** @var DexEggGroup[] $eggGroups */
-	private(set) array $eggGroups = [];
+    /** @var DexEggGroup[] $eggGroups */
+    private(set) array $eggGroups = [];
 
 
-	public function __construct(
-		private(set) readonly VersionGroupModel $versionGroupModel,
-		private readonly DexEggGroupRepositoryInterface $dexEggGroupRepository,
-	) {}
+    public function __construct(
+        private(set) readonly VersionGroupModel $versionGroupModel,
+        private readonly DexEggGroupRepositoryInterface $dexEggGroupRepository,
+    ) {}
 
 
-	/**
-	 * Set data for the dex egg groups page.
-	 */
-	public function setData(
-		string $vgIdentifier,
-		LanguageId $languageId,
-	) : void {
-		$this->eggGroups = [];
+    /**
+     * Set data for the dex egg groups page.
+     */
+    public function setData(
+        string $vgIdentifier,
+        LanguageId $languageId,
+    ): void {
+        $this->eggGroups = [];
 
-		$this->versionGroupModel->setByIdentifier($vgIdentifier);
+        $this->versionGroupModel->setByIdentifier($vgIdentifier);
 
-		$this->versionGroupModel->setWithBreeding();
+        $this->versionGroupModel->setWithBreeding();
 
-		$this->eggGroups = $this->dexEggGroupRepository->getAll($languageId);
-	}
+        $this->eggGroups = $this->dexEggGroupRepository->getAll($languageId);
+    }
 }

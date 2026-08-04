@@ -5,8 +5,8 @@ namespace Jp\Dex\Domain\Stats\Moveset;
 
 interface MovesetRatedCounterRepositoryInterface
 {
-	/**
-	 * Save a moveset rated counter record.
-	 */
-	public function save(MovesetRatedCounter $movesetRatedCounter) : void;
+    /**
+     * Save a moveset rated counter record.
+     */
+    public function save(MovesetRatedCounter $movesetRatedCounter): void;
 }

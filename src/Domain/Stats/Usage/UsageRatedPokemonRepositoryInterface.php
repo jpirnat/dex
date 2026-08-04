@@ -9,23 +9,23 @@ use Jp\Dex\Domain\Pokemon\PokemonId;
 
 interface UsageRatedPokemonRepositoryInterface
 {
-	/**
-	 * Do any usage rated Pokémon records exist for this month, format, and rating?
-	 */
-	public function hasAny(DateTime $month, FormatId $formatId, int $rating) : bool;
+    /**
+     * Do any usage rated Pokémon records exist for this month, format, and rating?
+     */
+    public function hasAny(DateTime $month, FormatId $formatId, int $rating): bool;
 
-	/**
-	 * Save a usage rated Pokémon record.
-	 */
-	public function save(UsageRatedPokemon $usageRatedPokemon) : void;
+    /**
+     * Save a usage rated Pokémon record.
+     */
+    public function save(UsageRatedPokemon $usageRatedPokemon): void;
 
-	/**
-	 * Get the usage rated Pokémon id for this month, format, rating, and Pokémon.
-	 */
-	public function getId(
-		DateTime $month,
-		FormatId $formatId,
-		int $rating,
-		PokemonId $pokemonId,
-	) : ?UsageRatedPokemonId;
+    /**
+     * Get the usage rated Pokémon id for this month, format, rating, and Pokémon.
+     */
+    public function getId(
+        DateTime $month,
+        FormatId $formatId,
+        int $rating,
+        PokemonId $pokemonId,
+    ): ?UsageRatedPokemonId;
 }

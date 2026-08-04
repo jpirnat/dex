@@ -5,36 +5,36 @@ namespace Jp\Dex\Domain\Evolutions;
 
 final class EvolutionTreeToTable
 {
-	private array $rows = [];
-	private array $cells = [];
+    private array $rows = [];
+    private array $cells = [];
 
-	public function convert(EvolutionTree $tree) : array
-	{
-		$this->convertNodeToCell($tree);
+    public function convert(EvolutionTree $tree): array
+    {
+        $this->convertNodeToCell($tree);
 
-		foreach ($tree->evolutions ?? [] as $evolution) {
-			$this->convert($evolution);
-		}
+        foreach ($tree->evolutions ?? [] as $evolution) {
+            $this->convert($evolution);
+        }
 
-		return $this->rows;
-	}
+        return $this->rows;
+    }
 
-	private function convertNodeToCell(EvolutionTree $tree) : void
-	{
-		$cell = new EvolutionTableCell(
-			$tree->countBranches(),
-			$tree->isFirstStage,
-			$tree->icon,
-			$tree->identifier,
-			$tree->name,
-			$tree->methods,
-		);
+    private function convertNodeToCell(EvolutionTree $tree): void
+    {
+        $cell = new EvolutionTableCell(
+            $tree->countBranches(),
+            $tree->isFirstStage,
+            $tree->icon,
+            $tree->identifier,
+            $tree->name,
+            $tree->methods,
+        );
 
-		$this->cells[] = $cell;
+        $this->cells[] = $cell;
 
-		if (!$tree->evolutions) {
-			$this->rows[] = new EvolutionTableRow($this->cells);
-			$this->cells = [];
-		}
-	}
+        if (!$tree->evolutions) {
+            $this->rows[] = new EvolutionTableRow($this->cells);
+            $this->cells = [];
+        }
+    }
 }

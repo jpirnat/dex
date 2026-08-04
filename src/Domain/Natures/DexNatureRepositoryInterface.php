@@ -8,18 +8,18 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 interface DexNatureRepositoryInterface
 {
-	/**
-	 * Get the dex natures by language.
-	 */
-	public function getByLanguage(LanguageId $languageId) : array;
+    /**
+     * Get the dex natures by language.
+     */
+    public function getByLanguage(LanguageId $languageId): array;
 
-	/**
-	 * Get the names of the natures for which Toxel will evolve into this form.
-	 *
-	 * @return string[]
-	 */
-	public function getByToxelEvo(
-		LanguageId $languageId,
-		FormId $toxelEvoId,
-	) : array;
+    /**
+     * Get the names of the natures for which Toxel will evolve into this form.
+     *
+     * @return string[]
+     */
+    public function getByToxelEvo(
+        LanguageId $languageId,
+        FormId $toxelEvoId,
+    ): array;
 }

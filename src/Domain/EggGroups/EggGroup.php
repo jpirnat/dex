@@ -5,8 +5,8 @@ namespace Jp\Dex\Domain\EggGroups;
 
 final readonly class EggGroup
 {
-	public function __construct(
-		private(set) EggGroupId $id,
-		private(set) string $identifier,
-	) {}
+    public function __construct(
+        private(set) EggGroupId $id,
+        private(set) string $identifier,
+    ) {}
 }

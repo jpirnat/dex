@@ -9,42 +9,42 @@ use Psr\Http\Message\ResponseInterface;
 
 final readonly class DexNaturesView
 {
-	public function __construct(
-		private DexNaturesModel $dexNaturesModel,
-		private DexFormatter $dexFormatter,
-	) {}
+    public function __construct(
+        private DexNaturesModel $dexNaturesModel,
+        private DexFormatter $dexFormatter,
+    ) {}
 
-	/**
-	 * Get data for the dex natures page.
-	 */
-	public function getData() : ResponseInterface
-	{
-		$versionGroupModel = $this->dexNaturesModel->versionGroupModel;
-		$versionGroup = $versionGroupModel->versionGroup;
-		$versionGroups = $versionGroupModel->versionGroups;
+    /**
+     * Get data for the dex natures page.
+     */
+    public function getData(): ResponseInterface
+    {
+        $versionGroupModel = $this->dexNaturesModel->versionGroupModel;
+        $versionGroup = $versionGroupModel->versionGroup;
+        $versionGroups = $versionGroupModel->versionGroups;
 
-		$natures = $this->dexNaturesModel->natures;
+        $natures = $this->dexNaturesModel->natures;
 
-		// Navigational breadcrumbs.
-		$vgIdentifier = $versionGroup->identifier;
-		$breadcrumbs = [[
-			'url' => "/dex/$vgIdentifier",
-			'text' => 'Dex',
-		], [
-			'text' => 'Natures',
-		]];
+        // Navigational breadcrumbs.
+        $vgIdentifier = $versionGroup->identifier;
+        $breadcrumbs = [[
+            'url' => "/dex/$vgIdentifier",
+            'text' => 'Dex',
+        ], [
+            'text' => 'Natures',
+        ]];
 
-		return new JsonResponse([
-			'data' => [
-				'versionGroup' => [
-					'identifier' => $versionGroup->identifier,
-				],
+        return new JsonResponse([
+            'data' => [
+                'versionGroup' => [
+                    'identifier' => $versionGroup->identifier,
+                ],
 
-				'breadcrumbs' => $breadcrumbs,
-				'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
+                'breadcrumbs' => $breadcrumbs,
+                'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
-				'natures' => $natures,
-			]
-		]);
-	}
+                'natures' => $natures,
+            ]
+        ]);
+    }
 }

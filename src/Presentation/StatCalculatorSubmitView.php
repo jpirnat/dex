@@ -9,23 +9,23 @@ use Psr\Http\Message\ResponseInterface;
 
 final readonly class StatCalculatorSubmitView
 {
-	public function __construct(
-		private StatCalculatorSubmitModel $statCalculatorSubmitModel,
-	) {}
+    public function __construct(
+        private StatCalculatorSubmitModel $statCalculatorSubmitModel,
+    ) {}
 
-	/**
-	 * Get data for the stat calculator page.
-	 */
-	public function getData() : ResponseInterface
-	{
-		$finalStats = $this->statCalculatorSubmitModel->finalStats;
-		$cp = $this->statCalculatorSubmitModel->cp;
+    /**
+     * Get data for the stat calculator page.
+     */
+    public function getData(): ResponseInterface
+    {
+        $finalStats = $this->statCalculatorSubmitModel->finalStats;
+        $cp = $this->statCalculatorSubmitModel->cp;
 
-		return new JsonResponse([
-			'data' => [
-				'finalStats' => $finalStats,
-				'cp' => $cp,
-			]
-		]);
-	}
+        return new JsonResponse([
+            'data' => [
+                'finalStats' => $finalStats,
+                'cp' => $cp,
+            ]
+        ]);
+    }
 }

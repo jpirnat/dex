@@ -7,10 +7,10 @@ use Jp\Dex\Domain\Languages\LanguageId;
 
 interface DexCategoryRepositoryInterface
 {
-	/**
-	 * Get dex categories by their language.
-	 *
-	 * @return DexCategory[] Indexed by id.
-	 */
-	public function getByLanguage(LanguageId $languageId) : array;
+    /**
+     * Get dex categories by their language.
+     *
+     * @return DexCategory[] Indexed by id.
+     */
+    public function getByLanguage(LanguageId $languageId): array;
 }
