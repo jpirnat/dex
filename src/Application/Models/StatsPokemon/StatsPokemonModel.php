@@ -10,6 +10,7 @@ use Jp\Dex\Domain\Abilities\StatsPokemonAbilityRepositoryInterface;
 use Jp\Dex\Domain\Counters\StatsPokemonCounter;
 use Jp\Dex\Domain\Counters\StatsPokemonCounterRepositoryInterface;
 use Jp\Dex\Domain\Formats\Format;
+use Jp\Dex\Domain\Formats\FormatNotFoundException;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Items\StatsPokemonItem;
 use Jp\Dex\Domain\Items\StatsPokemonItemRepositoryInterface;
@@ -17,6 +18,7 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\StatsPokemonMove;
 use Jp\Dex\Domain\Moves\StatsPokemonMoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\Pokemon;
+use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
@@ -29,8 +31,6 @@ use Jp\Dex\Domain\Teammates\StatsPokemonTeammateRepositoryInterface;
 use Jp\Dex\Domain\Types\StatsPokemonTeraType;
 use Jp\Dex\Domain\Types\StatsPokemonTeraTypeRepositoryInterface;
 use Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface;
-use Jp\Dex\Domain\Versions\Generation;
-use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
@@ -52,7 +52,6 @@ final class StatsPokemonModel
     private(set) ?MovesetPokemon $movesetPokemon;
     private(set) ?MovesetRatedPokemon $movesetRatedPokemon;
     private(set) VersionGroup $versionGroup;
-    private(set) Generation $generation;
 
     /** @var StatsPokemonAbility[] $abilities */
     private(set) array $abilities = [];
@@ -83,7 +82,6 @@ final class StatsPokemonModel
         private readonly RatingQueriesInterface $ratingQueries,
         private readonly StatsUsagePokemonRepositoryInterface $statsUsagePokemonRepository,
         private readonly VersionGroupRepositoryInterface $vgRepository,
-        private readonly GenerationRepositoryInterface $generationRepository,
         private readonly MovesetPokemonRepositoryInterface $movesetPokemonRepository,
         private readonly MovesetRatedPokemonRepositoryInterface $movesetRatedPokemonRepository,
         private(set) readonly PokemonModel $pokemonModel,
@@ -115,10 +113,14 @@ final class StatsPokemonModel
         $this->languageId = $languageId;
 
         // Get the format.
-        $this->format = $this->formatRepository->getByIdentifier(
-            $formatIdentifier,
-            $languageId,
-        );
+        try {
+            $this->format = $this->formatRepository->getByIdentifier(
+                $formatIdentifier,
+                $languageId,
+            );
+        } catch (FormatNotFoundException) {
+            return;
+        }
 
         // Get the previous month and the next month.
         $this->dateModel->setMonthAndFormat($month, $this->format->id);
@@ -126,7 +128,11 @@ final class StatsPokemonModel
         $prevMonth = $this->dateModel->prevMonth;
 
         // Get the Pokémon.
-        $this->pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
+        try {
+            $this->pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
+        } catch (PokemonNotFoundException) {
+            return;
+        }
 
         // Get the ratings for this month.
         $this->ratings = $this->ratingQueries->getByMonthAndFormat(
@@ -165,9 +171,8 @@ final class StatsPokemonModel
             $languageId,
         );
 
-        // Get the format's version group and generation.
+        // Get the format's version group.
         $this->versionGroup = $this->vgRepository->getById($this->format->versionGroupId);
-        $this->generation = $this->generationRepository->getById($this->versionGroup->generationId);
 
         // Get the moveset Pokémon record.
         $this->movesetPokemon = $this->movesetPokemonRepository->getByMonthAndFormatAndPokemon(

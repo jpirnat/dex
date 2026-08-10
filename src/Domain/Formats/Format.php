@@ -16,6 +16,7 @@ final readonly class Format
         private(set) VersionGroupId $versionGroupId,
         private(set) int $level,
         private(set) int $fieldSize,
-        private(set) string $smogonDexIdentifier,
+        private(set) string $smogonGenerationIdentifier,
+        private(set) string $smogonFormatIdentifier,
     ) {}
 }

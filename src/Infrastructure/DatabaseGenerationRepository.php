@@ -24,8 +24,7 @@ final readonly class DatabaseGenerationRepository implements GenerationRepositor
     {
         $stmt = $this->db->prepare(
             'SELECT
-                `identifier`,
-                `smogon_dex_identifier`
+                `identifier`
             FROM `generations`
             WHERE `id` = :generation_id
             LIMIT 1'
@@ -43,7 +42,6 @@ final readonly class DatabaseGenerationRepository implements GenerationRepositor
         return new Generation(
             $generationId,
             $result['identifier'],
-            $result['smogon_dex_identifier'],
         );
     }
 }

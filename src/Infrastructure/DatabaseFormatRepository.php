@@ -36,7 +36,8 @@ final readonly class DatabaseFormatRepository implements FormatRepositoryInterfa
                 `f`.`version_group_id`,
                 `f`.`level`,
                 `f`.`field_size`,
-                `f`.`smogon_dex_identifier`
+                `f`.`smogon_generation_identifier`,
+                `f`.`smogon_format_identifier`
             FROM `formats` AS `f`
             INNER JOIN `format_names` AS `fn`
                 ON `f`.`id` = `fn`.`format_id`
@@ -63,7 +64,8 @@ final readonly class DatabaseFormatRepository implements FormatRepositoryInterfa
             new VersionGroupId($result['version_group_id']),
             $result['level'],
             $result['field_size'],
-            $result['smogon_dex_identifier'],
+            $result['smogon_generation_identifier'],
+            $result['smogon_format_identifier'],
         );
     }
 
@@ -87,7 +89,8 @@ final readonly class DatabaseFormatRepository implements FormatRepositoryInterfa
                 `f`.`version_group_id`,
                 `f`.`level`,
                 `f`.`field_size`,
-                `f`.`smogon_dex_identifier`
+                `f`.`smogon_generation_identifier`,
+                `f`.`smogon_format_identifier`
             FROM `formats` AS `f`
             INNER JOIN `format_names` AS `fn`
                 ON `f`.`id` = `fn`.`format_id`
@@ -114,7 +117,8 @@ final readonly class DatabaseFormatRepository implements FormatRepositoryInterfa
             new VersionGroupId($result['version_group_id']),
             $result['level'],
             $result['field_size'],
-            $result['smogon_dex_identifier'],
+            $result['smogon_generation_identifier'],
+            $result['smogon_format_identifier'],
         );
     }
 }

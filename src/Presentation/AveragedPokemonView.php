@@ -43,7 +43,6 @@ final readonly class AveragedPokemonView
         $dexPokemon = $pokemonModel->pokemon;
         $stats = $pokemonModel->stats;
         $versionGroup = $this->averagedPokemonModel->versionGroup;
-        $generation = $this->averagedPokemonModel->generation;
 
         // Get abilities.
         $abilitiesData = $this->averagedPokemonModel->abilities;
@@ -109,7 +108,8 @@ final readonly class AveragedPokemonView
                     . $endMonth['name'] . ' ' . $format->name . ' - ' . $dexPokemon->name,
                 'format' => [
                     'identifier' => $format->identifier,
-                    'smogonDexIdentifier' => $format->smogonDexIdentifier,
+                    'smogonGenerationIdentifier' => $format->smogonGenerationIdentifier,
+                    'smogonFormatIdentifier' => $format->smogonFormatIdentifier,
                     'fieldSize' => $format->fieldSize,
                 ],
                 'rating' => $rating,
@@ -131,9 +131,6 @@ final readonly class AveragedPokemonView
 
                 'versionGroup' => [
                     'identifier' => $versionGroup->identifier,
-                ],
-                'generation' => [
-                    'smogonDexIdentifier' => $generation->smogonDexIdentifier,
                 ],
 
                 // The main data.

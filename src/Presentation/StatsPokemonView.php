@@ -61,7 +61,6 @@ final readonly class StatsPokemonView
         $dexPokemon = $pokemonModel->pokemon;
         $stats = $pokemonModel->stats;
         $versionGroup = $this->statsPokemonModel->versionGroup;
-        $generation = $this->statsPokemonModel->generation;
 
         // Get abilities.
         $abilitiesData = $this->statsPokemonModel->abilities;
@@ -194,7 +193,8 @@ final readonly class StatsPokemonView
 
                 'format' => [
                     'identifier' => $format->identifier,
-                    'smogonDexIdentifier' => $format->smogonDexIdentifier,
+                    'smogonGenerationIdentifier' => $format->smogonGenerationIdentifier,
+                    'smogonFormatIdentifier' => $format->smogonFormatIdentifier,
                     'fieldSize' => $format->fieldSize,
                 ],
                 'rating' => $rating,
@@ -220,9 +220,6 @@ final readonly class StatsPokemonView
 
                 'versionGroup' => [
                     'identifier' => $versionGroup->identifier,
-                ],
-                'generation' => [
-                    'smogonDexIdentifier' => $generation->smogonDexIdentifier,
                 ],
                 'rawCount' => $rawCount,
                 'averageWeight' => $averageWeight,

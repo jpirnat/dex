@@ -9,13 +9,13 @@ use Jp\Dex\Application\Models\StatsAveragedPokemon\ItemModel;
 use Jp\Dex\Application\Models\StatsAveragedPokemon\MoveModel;
 use Jp\Dex\Application\Models\StatsPokemon\PokemonModel;
 use Jp\Dex\Domain\Formats\Format;
+use Jp\Dex\Domain\Formats\FormatNotFoundException;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\Pokemon;
+use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
-use Jp\Dex\Domain\Versions\Generation;
-use Jp\Dex\Domain\Versions\GenerationRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 
@@ -32,7 +32,6 @@ final class AveragedPokemonModel
     private(set) array $ratings = [];
 
     private(set) VersionGroup $versionGroup;
-    private(set) Generation $generation;
 
     private(set) array $abilities = [];
     private(set) array $items = [];
@@ -44,7 +43,6 @@ final class AveragedPokemonModel
         private readonly PokemonRepositoryInterface $pokemonRepository,
         private readonly RatingQueriesInterface $ratingQueries,
         private readonly VersionGroupRepositoryInterface $versionGroupRepository,
-        private readonly GenerationRepositoryInterface $generationRepository,
         private(set) readonly PokemonModel $pokemonModel,
         private readonly AbilityModel $abilityModel,
         private readonly ItemModel $itemModel,
@@ -73,13 +71,21 @@ final class AveragedPokemonModel
         $end = new DateTime("$end-01");
 
         // Get the format.
-        $this->format = $this->formatRepository->getByIdentifier(
-            $formatIdentifier,
-            $languageId,
-        );
+        try {
+            $this->format = $this->formatRepository->getByIdentifier(
+                $formatIdentifier,
+                $languageId,
+            );
+        } catch (FormatNotFoundException) {
+            return;
+        }
 
         // Get the Pokémon.
-        $this->pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
+        try {
+            $this->pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
+        } catch (PokemonNotFoundException) {
+            return;
+        }
 
         // Get the ratings for these months.
         $this->ratings = $this->ratingQueries->getByMonthsAndFormat(
@@ -97,7 +103,6 @@ final class AveragedPokemonModel
 
         // Get the format's version group and generation.
         $this->versionGroup = $this->versionGroupRepository->getById($this->format->versionGroupId);
-        $this->generation = $this->generationRepository->getById($this->versionGroup->generationId);
 
         // Get ability data.
         $this->abilities = $this->abilityModel->setData(

@@ -8,6 +8,5 @@ final readonly class Generation
     public function __construct(
         private(set) GenerationId $id,
         private(set) string $identifier,
-        private(set) string $smogonDexIdentifier,
     ) {}
 }
