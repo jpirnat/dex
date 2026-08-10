@@ -14,17 +14,17 @@ add('writable_dirs', ['config/cache', 'templates/cache']);
 // Hosts
 
 host('147.182.213.212')
-	->set('remote_user', 'jpirnat')
-	->set('labels', ['stage' => 'production'])
-	->set('deploy_path', '/var/www/dex')
-	->set('branch', 'main')
+    ->set('remote_user', 'jpirnat')
+    ->set('labels', ['stage' => 'production'])
+    ->set('deploy_path', '/var/www/dex')
+    ->set('branch', 'main')
 ;
 /*
 Add the following to your computer's ~/.ssh/config file:
 Host 147.182.213.212
-	HostName 147.182.213.212
-	User jpirnat
-	IdentityFile ~/.ssh/PRIVATE_KEY_NAME
+    HostName 147.182.213.212
+    User jpirnat
+    IdentityFile ~/.ssh/PRIVATE_KEY_NAME
 
 And on the server, add the public key in ~/.ssh/authorized_keys
 */
@@ -33,10 +33,10 @@ And on the server, add the public key in ~/.ssh/authorized_keys
 
 desc('Deploy your project');
 task('deploy', [
-	'deploy:prepare',
-	'deploy:vendors',
-	'deploy:clear_paths',
-	'deploy:publish',
+    'deploy:prepare',
+    'deploy:vendors',
+    'deploy:clear_paths',
+    'deploy:publish',
 ]);
 
 task('reload:php-fpm', function () {
