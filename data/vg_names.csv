@@ -6,26 +6,26 @@ language_id,version_group_id,name
 1,5,金・銀
 1,6,クリスタル
 1,7,ルビー・サファイア
-1,8,ファイアレッド・リーフグリーン
-1,9,エメラルド
-1,10,ダイヤモンド・パール
-1,11,プラチナ
-1,12,ハートゴールド・ソウルシルバー
-1,13,ブラック・ホワイト
-1,14,ブラック2・ホワイト2
-1,15,X・Y
-1,16,オメガルビー・アルファサファイア
-1,17,サン・ムーン
-1,18,ウルトラサン・ウルトラムーン
-1,19,Let's Go! ピカチュウ・Let's Go! イーブイ
-1,20,ソード・シールド
-1,21,ブリリアントダイヤモンド・シャイニングパール
-1,22,LEGENDS アルセウス
-1,23,スカーレット・バイオレット
-1,24,LEGENDS Z-A
-1,25,チャンピオンズ
-1,101,コロシアム
-1,102,ＸＤ 闇の旋風ダーク・ルギア
+1,8,コロシアム
+1,9,ファイアレッド・リーフグリーン
+1,10,エメラルド
+1,11,ＸＤ 闇の旋風ダーク・ルギア
+1,12,ダイヤモンド・パール
+1,13,プラチナ
+1,14,ハートゴールド・ソウルシルバー
+1,15,ブラック・ホワイト
+1,16,ブラック2・ホワイト2
+1,17,X・Y
+1,18,オメガルビー・アルファサファイア
+1,19,サン・ムーン
+1,20,ウルトラサン・ウルトラムーン
+1,21,Let's Go! ピカチュウ・Let's Go! イーブイ
+1,22,ソード・シールド
+1,23,ブリリアントダイヤモンド・シャイニングパール
+1,24,LEGENDS アルセウス
+1,25,スカーレット・バイオレット
+1,26,LEGENDS Z-A
+1,27,チャンピオンズ
 2,1,Red/Green (J)
 2,2,Blue (J)
 2,3,Red/Blue
@@ -33,26 +33,26 @@ language_id,version_group_id,name
 2,5,Gold/Silver
 2,6,Crystal
 2,7,Ruby/Sapphire
-2,8,FireRed/LeafGreen
-2,9,Emerald
-2,10,Diamond/Pearl
-2,11,Platinum
-2,12,HeartGold/SoulSilver
-2,13,Black/White
-2,14,Black 2/White 2
-2,15,X/Y
-2,16,Omega Ruby/Alpha Sapphire
-2,17,Sun/Moon
-2,18,Ultra Sun/Ultra Moon
-2,19,"Let's Go, Pikachu!/Let's Go, Eevee!"
-2,20,Sword/Shield
-2,21,Brilliand Diamond/Shining Pearl
-2,22,Legends: Arceus
-2,23,Scarlet/Violet
-2,24,Legends: Z-A
-2,25,Champions
-2,101,Colosseum
-2,102,XD: Gale of Darkness
+2,8,Colosseum
+2,9,FireRed/LeafGreen
+2,10,Emerald
+2,11,XD: Gale of Darkness
+2,12,Diamond/Pearl
+2,13,Platinum
+2,14,HeartGold/SoulSilver
+2,15,Black/White
+2,16,Black 2/White 2
+2,17,X/Y
+2,18,Omega Ruby/Alpha Sapphire
+2,19,Sun/Moon
+2,20,Ultra Sun/Ultra Moon
+2,21,"Let's Go, Pikachu!/Let's Go, Eevee!"
+2,22,Sword/Shield
+2,23,Brilliand Diamond/Shining Pearl
+2,24,Legends: Arceus
+2,25,Scarlet/Violet
+2,26,Legends: Z-A
+2,27,Champions
 3,1,Rouge/Vert (J)
 3,2,Bleue (J)
 3,3,Rouge/Bleue
@@ -60,26 +60,26 @@ language_id,version_group_id,name
 3,5,Or/Argent
 3,6,Cristal
 3,7,Rubis/Saphir
-3,8,Rouge Feu/Vert Feuille
-3,9,Émeraude
-3,10,Diamant/Perle
-3,11,Platine
-3,12,Or HeartGold/Argent SoulSilver
-3,13,Noire/Blanche
-3,14,Noire 2/Blanche 2
-3,15,X/Y
-3,16,Rubis Oméga/Saphir Alpha
-3,17,Soleil/Lune
-3,18,Ultra-Soleil/Ultra-Lune
-3,19,"Let's Go, Pikachu/Let's Go, Évoli"
-3,20,Épée/Bouclier
-3,21,Diamant Étincelant/Perle Scintillante
-3,22,Légendes Pokémon : Arceus
-3,23,Écarlate/Violet
-3,24,Légendes Pokémon : Z-A
-3,25,Champions
-3,101,Colosseum
-3,102,XD : Le Souffle des Ténèbres
+3,8,Colosseum
+3,9,Rouge Feu/Vert Feuille
+3,10,Émeraude
+3,11,XD : Le Souffle des Ténèbres
+3,12,Diamant/Perle
+3,13,Platine
+3,14,Or HeartGold/Argent SoulSilver
+3,15,Noire/Blanche
+3,16,Noire 2/Blanche 2
+3,17,X/Y
+3,18,Rubis Oméga/Saphir Alpha
+3,19,Soleil/Lune
+3,20,Ultra-Soleil/Ultra-Lune
+3,21,"Let's Go, Pikachu/Let's Go, Évoli"
+3,22,Épée/Bouclier
+3,23,Diamant Étincelant/Perle Scintillante
+3,24,Légendes Pokémon : Arceus
+3,25,Écarlate/Violet
+3,26,Légendes Pokémon : Z-A
+3,27,Champions
 4,1,Rote/Grüne (J)
 4,2,Blaue (J)
 4,3,Rote/Blaue
@@ -87,26 +87,26 @@ language_id,version_group_id,name
 4,5,Goldene/Silberne
 4,6,Kristall
 4,7,Rubin/Saphir
-4,8,Feuerrote/Blattgrüne
-4,9,Smaragd
-4,10,Diamant/Perl
-4,11,Platin
-4,12,HeartGold/SoulSilver
-4,13,Schwarze/Weiße
-4,14,Schwarze 2/Weiße 2
-4,15,X/Y
-4,16,Omega Rubin/Alpha Saphir
-4,17,Sonne/Mond
-4,18,Ultrasonne/Ultramond
-4,19,"Let's Go, Pikachu!/Let's Go, Evoli!"
-4,20,Schwert/Schild
-4,21,Strahlender Diamant/Leuchtende Perle
-4,22,Pokémon-Legenden: Arceus
-4,23,Karmesin/Purpur
-4,24,Pokémon-Legenden: Z-A
-4,25,Champions
-4,101,Colosseum
-4,102,XD: Der Dunkle Sturm
+4,8,Colosseum
+4,9,Feuerrote/Blattgrüne
+4,10,Smaragd
+4,11,XD: Der Dunkle Sturm
+4,12,Diamant/Perl
+4,13,Platin
+4,14,HeartGold/SoulSilver
+4,15,Schwarze/Weiße
+4,16,Schwarze 2/Weiße 2
+4,17,X/Y
+4,18,Omega Rubin/Alpha Saphir
+4,19,Sonne/Mond
+4,20,Ultrasonne/Ultramond
+4,21,"Let's Go, Pikachu!/Let's Go, Evoli!"
+4,22,Schwert/Schild
+4,23,Strahlender Diamant/Leuchtende Perle
+4,24,Pokémon-Legenden: Arceus
+4,25,Karmesin/Purpur
+4,26,Pokémon-Legenden: Z-A
+4,27,Champions
 5,1,Rossa/Verde (J)
 5,2,Blu (J)
 5,3,Rossa/Blu
@@ -114,26 +114,26 @@ language_id,version_group_id,name
 5,5,Oro/Argento
 5,6,Cristallo
 5,7,Rubino/Zaffiro
-5,8,Rosso Fuoco/Verde Foglia
-5,9,Smeraldo
-5,10,Diamante/Perla
-5,11,Platino
-5,12,Oro HeartGold/Argento SoulSilver
-5,13,Nera/Bianca
-5,14,Nera 2/Bianca 2
-5,15,X/Y
-5,16,Rubino Omega/Zaffiro Alpha
-5,17,Sole/Luna
-5,18,Ultrasole/Ultraluna
-5,19,"Let's Go, Pikachu!/Let's Go, Eevee!"
-5,20,Spada/Scudo
-5,21,Diamante Lucente/Perla Splendente
-5,22,Leggende Pokémon: Arceus
-5,23,Scarlatto/Violetto
-5,24,Leggende Pokémon: Z-A
-5,25,Champions
-5,101,Colosseum
-5,102,XD: Tempesta Oscura
+5,8,Colosseum
+5,9,Rosso Fuoco/Verde Foglia
+5,10,Smeraldo
+5,11,XD: Tempesta Oscura
+5,12,Diamante/Perla
+5,13,Platino
+5,14,Oro HeartGold/Argento SoulSilver
+5,15,Nera/Bianca
+5,16,Nera 2/Bianca 2
+5,17,X/Y
+5,18,Rubino Omega/Zaffiro Alpha
+5,19,Sole/Luna
+5,20,Ultrasole/Ultraluna
+5,21,"Let's Go, Pikachu!/Let's Go, Eevee!"
+5,22,Spada/Scudo
+5,23,Diamante Lucente/Perla Splendente
+5,24,Leggende Pokémon: Arceus
+5,25,Scarlatto/Violetto
+5,26,Leggende Pokémon: Z-A
+5,27,Champions
 6,1,Roja/Verde (J)
 6,2,Azul (J)
 6,3,Roja/Azul
@@ -141,26 +141,26 @@ language_id,version_group_id,name
 6,5,Oro/Plata
 6,6,Cristal
 6,7,Rubí/Zafiro
-6,8,Rojo Fuego/Verde Hoja
-6,9,Esmeralda
-6,10,Diamante/Perla
-6,11,Platino
-6,12,Oro HeartGold/Plata SoulSilver
-6,13,Negra/Blanca
-6,14,Negra 2/Blanca 2
-6,15,X/Y
-6,16,Rubí Omega/Zafiro Alfa
-6,17,Sol/Luna
-6,18,Ultrasol/Ultraluna
-6,19,"Let's Go, Pikachu!/Let's Go, Eevee!"
-6,20,Espada/Escudo
-6,21,Diamante Brillante/Perla Reluciente
-6,22,Leyendas Pokémon: Arceus
-6,23,Escarlata/Púrpura
-6,24,Leyendas Pokémon: Z-A
-6,25,Champions
-6,101,Colosseum
-6,102,XD: Tempestad oscura
+6,8,Colosseum
+6,9,Rojo Fuego/Verde Hoja
+6,10,Esmeralda
+6,11,XD: Tempestad oscura
+6,12,Diamante/Perla
+6,13,Platino
+6,14,Oro HeartGold/Plata SoulSilver
+6,15,Negra/Blanca
+6,16,Negra 2/Blanca 2
+6,17,X/Y
+6,18,Rubí Omega/Zafiro Alfa
+6,19,Sol/Luna
+6,20,Ultrasol/Ultraluna
+6,21,"Let's Go, Pikachu!/Let's Go, Eevee!"
+6,22,Espada/Escudo
+6,23,Diamante Brillante/Perla Reluciente
+6,24,Leyendas Pokémon: Arceus
+6,25,Escarlata/Púrpura
+6,26,Leyendas Pokémon: Z-A
+6,27,Champions
 7,1,레드・그린 (J)
 7,2,블루 (J)
 7,3,레드・블루
@@ -168,26 +168,26 @@ language_id,version_group_id,name
 7,5,금・은
 7,6,크리스탈
 7,7,루비・사파이어
-7,8,파이어레드・리프그린
-7,9,에메랄드
-7,10,디아루가・펄기아
-7,11,기라티나
-7,12,하트골드・소울실버
-7,13,블랙・화이트
-7,14,블랙2・화이트2
-7,15,X・Y
-7,16,오메가루비・알파사파이어
-7,17,썬・문
-7,18,울트라썬・울트라문
-7,19,레츠고! 피카츄・레츠고! 이브이
-7,20,소드・실드
-7,21,브릴리언트 다이아몬드・샤이닝 펄
-7,22,Pokémon LEGENDS 아르세우스
-7,23,스칼렛・바이올렛
-7,24,Pokémon LEGENDS Z-A
-7,25,챔피언스
-7,101,콜로세움
-7,102,XD: Gale of Darkness
+7,8,콜로세움
+7,9,파이어레드・리프그린
+7,10,에메랄드
+7,11,XD: Gale of Darkness
+7,12,디아루가・펄기아
+7,13,기라티나
+7,14,하트골드・소울실버
+7,15,블랙・화이트
+7,16,블랙2・화이트2
+7,17,X・Y
+7,18,오메가루비・알파사파이어
+7,19,썬・문
+7,20,울트라썬・울트라문
+7,21,레츠고! 피카츄・레츠고! 이브이
+7,22,소드・실드
+7,23,브릴리언트 다이아몬드・샤이닝 펄
+7,24,Pokémon LEGENDS 아르세우스
+7,25,스칼렛・바이올렛
+7,26,Pokémon LEGENDS Z-A
+7,27,챔피언스
 8,1,赤・緑
 8,2,青
 8,3,赤・青 (国際)
@@ -195,26 +195,26 @@ language_id,version_group_id,name
 8,5,金・銀
 8,6,クリスタル
 8,7,ルビー・サファイア
-8,8,ファイアレッド・リーフグリーン
-8,9,エメラルド
-8,10,ダイヤモンド・パール
-8,11,プラチナ
-8,12,ハートゴールド・ソウルシルバー
-8,13,ブラック・ホワイト
-8,14,ブラック2・ホワイト2
-8,15,X・Y
-8,16,オメガルビー・アルファサファイア
-8,17,サン・ムーン
-8,18,ウルトラサン・ウルトラムーン
-8,19,Let's Go! ピカチュウ・Let's Go! イーブイ
-8,20,ソード・シールド
-8,21,ブリリアントダイヤモンド・シャイニングパール
-8,22,LEGENDS アルセウス
-8,23,スカーレット・バイオレット
-8,24,LEGENDS Z-A
-8,25,チャンピオンズ
-8,101,コロシアム
-8,102,ＸＤ 闇の旋風ダーク・ルギア
+8,8,コロシアム
+8,9,ファイアレッド・リーフグリーン
+8,10,エメラルド
+8,11,ＸＤ 闇の旋風ダーク・ルギア
+8,12,ダイヤモンド・パール
+8,13,プラチナ
+8,14,ハートゴールド・ソウルシルバー
+8,15,ブラック・ホワイト
+8,16,ブラック2・ホワイト2
+8,17,X・Y
+8,18,オメガルビー・アルファサファイア
+8,19,サン・ムーン
+8,20,ウルトラサン・ウルトラムーン
+8,21,Let's Go! ピカチュウ・Let's Go! イーブイ
+8,22,ソード・シールド
+8,23,ブリリアントダイヤモンド・シャイニングパール
+8,24,LEGENDS アルセウス
+8,25,スカーレット・バイオレット
+8,26,LEGENDS Z-A
+8,27,チャンピオンズ
 9,1,Red/Green (J)
 9,2,Blue (J)
 9,3,Red/Blue
@@ -222,26 +222,26 @@ language_id,version_group_id,name
 9,5,Gold/Silver
 9,6,Crystal
 9,7,红宝石／蓝宝石
-9,8,FireRed/LeafGreen
-9,9,綠寶石
-9,10,钻石／珍珠
-9,11,白金
-9,12,HeartGold/SoulSilver
-9,13,黑／白
-9,14,黑２／白２
-9,15,Ｘ／Ｙ
-9,16,欧米伽红宝石／阿尔法蓝宝石
-9,17,太阳／月亮
-9,18,究极之日／究极之月
-9,19,Let's Go！皮卡丘／Let's Go！伊布
-9,20,剑／盾
-9,21,晶灿钻石／明亮珍珠
-9,22,宝可梦传说 阿尔宙斯
-9,23,朱／紫
-9,24,宝可梦传说 Z-A
-9,25,Champions
-9,101,Colosseum
-9,102,XD: Gale of Darkness
+9,8,Colosseum
+9,9,FireRed/LeafGreen
+9,10,綠寶石
+9,11,XD: Gale of Darkness
+9,12,钻石／珍珠
+9,13,白金
+9,14,HeartGold/SoulSilver
+9,15,黑／白
+9,16,黑２／白２
+9,17,Ｘ／Ｙ
+9,18,欧米伽红宝石／阿尔法蓝宝石
+9,19,太阳／月亮
+9,20,究极之日／究极之月
+9,21,Let's Go！皮卡丘／Let's Go！伊布
+9,22,剑／盾
+9,23,晶灿钻石／明亮珍珠
+9,24,宝可梦传说 阿尔宙斯
+9,25,朱／紫
+9,26,宝可梦传说 Z-A
+9,27,Champions
 10,1,Red/Green (J)
 10,2,Blue (J)
 10,3,Red/Blue
@@ -249,26 +249,26 @@ language_id,version_group_id,name
 10,5,Gold/Silver
 10,6,Crystal
 10,7,紅寶石／藍寶石
-10,8,FireRed/LeafGreen
-10,9,綠寶石
-10,10,鑽石／珍珠
-10,11,白金
-10,12,HeartGold/SoulSilver
-10,13,黑／白
-10,14,黑２／白２
-10,15,Ｘ／Ｙ
-10,16,歐米加紅寶石／阿爾法藍寶石
-10,17,太陽／月亮
-10,18,究極之日／究極之月
-10,19,Let's Go！皮卡丘／Let's Go！伊布
-10,20,劍／盾
-10,21,晶燦鑽石／明亮珍珠
-10,22,寶可夢傳說 阿爾宙斯
-10,23,朱／紫
-10,24,寶可夢傳說 Z-A
-10,25,Champions
-10,101,Colosseum
-10,102,XD: Gale of Darkness
+10,8,Colosseum
+10,9,FireRed/LeafGreen
+10,10,綠寶石
+10,11,XD: Gale of Darkness
+10,12,鑽石／珍珠
+10,13,白金
+10,14,HeartGold/SoulSilver
+10,15,黑／白
+10,16,黑２／白２
+10,17,Ｘ／Ｙ
+10,18,歐米加紅寶石／阿爾法藍寶石
+10,19,太陽／月亮
+10,20,究極之日／究極之月
+10,21,Let's Go！皮卡丘／Let's Go！伊布
+10,22,劍／盾
+10,23,晶燦鑽石／明亮珍珠
+10,24,寶可夢傳說 阿爾宙斯
+10,25,朱／紫
+10,26,寶可夢傳說 Z-A
+10,27,Champions
 11,1,Roja/Verde (J)
 11,2,Azul (J)
 11,3,Roja/Azul
@@ -276,23 +276,23 @@ language_id,version_group_id,name
 11,5,Oro/Plata
 11,6,Cristal
 11,7,Rubí/Zafiro
-11,8,Rojo Fuego/Verde Hoja
-11,9,Esmeralda
-11,10,Diamante/Perla
-11,11,Platino
-11,12,Oro HeartGold/Plata SoulSilver
-11,13,Negra/Blanca
-11,14,Negra 2/Blanca 2
-11,15,X/Y
-11,16,Rubí Omega/Zafiro Alfa
-11,17,Sol/Luna
-11,18,Ultrasol/Ultraluna
-11,19,"Let's Go, Pikachu!/Let's Go, Eevee!"
-11,20,Espada/Escudo
-11,21,Diamante Brillante/Perla Reluciente
-11,22,Leyendas Pokémon: Arceus
-11,23,Escarlata/Púrpura
-11,24,Leyendas Pokémon: Z-A
-11,25,Champions
-11,101,Colosseum
-11,102,XD: Tempestad oscura
+11,8,Colosseum
+11,9,Rojo Fuego/Verde Hoja
+11,10,Esmeralda
+11,11,XD: Tempestad oscura
+11,12,Diamante/Perla
+11,13,Platino
+11,14,Oro HeartGold/Plata SoulSilver
+11,15,Negra/Blanca
+11,16,Negra 2/Blanca 2
+11,17,X/Y
+11,18,Rubí Omega/Zafiro Alfa
+11,19,Sol/Luna
+11,20,Ultrasol/Ultraluna
+11,21,"Let's Go, Pikachu!/Let's Go, Eevee!"
+11,22,Espada/Escudo
+11,23,Diamante Brillante/Perla Reluciente
+11,24,Leyendas Pokémon: Arceus
+11,25,Escarlata/Púrpura
+11,26,Leyendas Pokémon: Z-A
+11,27,Champions

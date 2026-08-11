@@ -1,424 +1,4 @@
 version_group_id,language_id,characteristic_id,name
-10,1,1,たべるのが　だいすき。
-10,1,2,ひるねを　よくする。
-10,1,3,いねむりが　おおい。
-10,1,4,ものを　よく　ちらかす。
-10,1,5,のんびりするのが　すき。
-10,1,6,ちからが　じまん。
-10,1,7,あばれることが　すき。
-10,1,8,ちょっと　おこりっぽい。
-10,1,9,ケンカを　するのが　すき。
-10,1,10,ちのけが　おおい。
-10,1,11,からだが　じょうぶ。
-10,1,12,うたれ　づよい。
-10,1,13,ねばり　づよい。
-10,1,14,しんぼう　づよい。
-10,1,15,がまん　づよい。
-10,1,16,かけっこが　すき。
-10,1,17,ものおとに　びんかん。
-10,1,18,おっちょこちょい。
-10,1,19,すこし　おちょうしもの。
-10,1,20,にげるのが　はやい。
-10,1,21,こうきしんが　つよい。
-10,1,22,イタズラが　すき。
-10,1,23,ぬけめが　ない。
-10,1,24,かんがえごとが　おおい。
-10,1,25,とても　きちょうめん。
-10,1,26,きが　つよい。
-10,1,27,ちょっぴり　みえっぱり。
-10,1,28,まけんきが　つよい。
-10,1,29,まけずぎらい。
-10,1,30,ちょっぴり　ごうじょう。
-10,2,1,Loves to eat.
-10,2,2,Often dozes off.
-10,2,3,Often scatters things.
-10,2,4,Scatters things often.
-10,2,5,Likes to relax.
-10,2,6,Proud of its power.
-10,2,7,Likes to thrash about.
-10,2,8,A little quick tempered.
-10,2,9,Likes to fight.
-10,2,10,Quick tempered.
-10,2,11,Sturdy body.
-10,2,12,Capable of taking hits.
-10,2,13,Highly persistent.
-10,2,14,Good endurance.
-10,2,15,Good perseverance.
-10,2,16,Likes to run.
-10,2,17,Alert to sounds.
-10,2,18,Impetuous and silly.
-10,2,19,Somewhat of a clown.
-10,2,20,Quick to flee.
-10,2,21,Highly curious.
-10,2,22,Mischievous.
-10,2,23,Thoroughly cunning.
-10,2,24,Often lost in thought.
-10,2,25,Very finicky.
-10,2,26,Strong willed.
-10,2,27,Somewhat vain.
-10,2,28,Strongly defiant.
-10,2,29,Hates to lose.
-10,2,30,Somewhat stubborn.
-10,3,1,Adore manger.
-10,3,2,S’assoupit souvent.
-10,3,3,Dort beaucoup.
-10,3,4,Eparpille des choses.
-10,3,5,Aime se détendre.
-10,3,6,Est fier de sa puissance.
-10,3,7,Aime se démener.
-10,3,8,Un peu coléreux.
-10,3,9,Aime combattre.
-10,3,10,S’emporte facilement.
-10,3,11,Corps robuste.
-10,3,12,Sait encaisser les coups.
-10,3,13,Très obstiné.
-10,3,14,Bonne endurance.
-10,3,15,Persévérant.
-10,3,16,Aime courir.
-10,3,17,Attentif aux sons.
-10,3,18,Bête et impulsif.
-10,3,19,Aime faire le pitre.
-10,3,20,Fuit rapidement.
-10,3,21,Extrêmement curieux.
-10,3,22,Coquin.
-10,3,23,Très astucieux.
-10,3,24,Souvent dans la lune.
-10,3,25,Très particulier.
-10,3,26,Très volontaire.
-10,3,27,Un peu vaniteux.
-10,3,28,Esprit rebelle.
-10,3,29,A horreur de perdre.
-10,3,30,Assez entêté.
-10,4,1,"Liebt es, zu essen."
-10,4,2,Nickt oft ein.
-10,4,3,Schläft gerne.
-10,4,4,Macht oft Unordnung.
-10,4,5,"Mag es, zu entspannen."
-10,4,6,Stolz auf seine Stärke.
-10,4,7,Prügelt sich gerne.
-10,4,8,Besitzt Temperament.
-10,4,9,Liebt Kämpfe.
-10,4,10,Impulsiv.
-10,4,11,Hat robusten Körper.
-10,4,12,Kann Treffer gut ab.
-10,4,13,Äußerst ausdauernd.
-10,4,14,Hat eine gute Ausdauer.
-10,4,15,Ist beharrlich.
-10,4,16,"Liebt es, zu rennen."
-10,4,17,Achtet auf Geräusche.
-10,4,18,Ungestüm und einfältig.
-10,4,19,Ist fast wie ein Clown.
-10,4,20,Flüchtet schnell.
-10,4,21,Sehr neugierig.
-10,4,22,Hinterhältig.
-10,4,23,Äußerst gerissen.
-10,4,24,Ist oft in Gedanken.
-10,4,25,Sehr pedantisch.
-10,4,26,Besitzt starken Willen.
-10,4,27,Irgendwie eitel.
-10,4,28,Sehr aufsässig.
-10,4,29,Hasst Niederlagen.
-10,4,30,Dickköpfig.
-10,5,1,Adora mangiare.
-10,5,2,Si addormenta spesso.
-10,5,3,Dorme a lungo.
-10,5,4,Lascia cose in giro.
-10,5,5,Adora rilassarsi.
-10,5,6,La forza è il suo vanto.
-10,5,7,Adora dimenarsi.
-10,5,8,Si arrabbia facilmente.
-10,5,9,Adora combattere.
-10,5,10,Facilmente irritabile.
-10,5,11,Ha un corpo robusto.
-10,5,12,Forte in attacco.
-10,5,13,Molto ostinato.
-10,5,14,Molto paziente.
-10,5,15,Molto tenace.
-10,5,16,Adora correre.
-10,5,17,Fa attenzione ai suoni.
-10,5,18,Irruente e semplice.
-10,5,19,Una specie di buffone.
-10,5,20,Sa fuggire velocemente.
-10,5,21,Grande ficcanaso.
-10,5,22,Alquanto vivace.
-10,5,23,Estremamente sagace.
-10,5,24,Si perde nel suo mondo.
-10,5,25,Molto esigente.
-10,5,26,Sa il fatto suo.
-10,5,27,Abbastanza superficiale.
-10,5,28,Molto insolente.
-10,5,29,Non sopporta perdere.
-10,5,30,Un po’ testardo.
-10,6,1,Le encanta comer.
-10,6,2,A menudo se duerme.
-10,6,3,Duerme mucho.
-10,6,4,Suele desordenar cosas.
-10,6,5,Le gusta relajarse.
-10,6,6,Orgulloso de su fuerza.
-10,6,7,Le gusta revolverse.
-10,6,8,A veces se enfada.
-10,6,9,Le gusta luchar.
-10,6,10,Tiene mal genio.
-10,6,11,Cuerpo resistente.
-10,6,12,Buen fajador.
-10,6,13,Muy persistente.
-10,6,14,Muy resistente.
-10,6,15,Muy perseverante.
-10,6,16,Le gusta correr.
-10,6,17,Oído siempre alerta.
-10,6,18,Impetuoso y bobo.
-10,6,19,Es un poco payaso.
-10,6,20,Huye rápido.
-10,6,21,Extremadamente curioso.
-10,6,22,Travieso.
-10,6,23,Muy astuto.
-10,6,24,A menudo está en Babia.
-10,6,25,Muy melindroso.
-10,6,26,Voluntarioso.
-10,6,27,Algo orgulloso.
-10,6,28,Muy insolente.
-10,6,29,Odia perder.
-10,6,30,Un poco cabezota.
-10,7,1,먹는 것을 제일 좋아함.
-10,7,2,낮잠을 잘 잠.
-10,7,3,말뚝잠이 많음.
-10,7,4,물건을 잘 어지름.
-10,7,5,유유자적함을 좋아함.
-10,7,6,힘자랑이 특기임.
-10,7,7,난동부리기를 좋아함.
-10,7,8,약간 화를 잘 내는 성미임.
-10,7,9,싸움을 좋아함.
-10,7,10,혈기가 왕성함.
-10,7,11,몸이 튼튼함.
-10,7,12,맷집이 강함.
-10,7,13,끈질김.
-10,7,14,인내심이 강함.
-10,7,15,잘 참음.
-10,7,16,달리기를 좋아함.
-10,7,17,주위 소리에 민감함.
-10,7,18,촐랑대는 성격임.
-10,7,19,약간 우쭐쟁이임.
-10,7,20,도망에는 선수임.
-10,7,21,호기심이 강함.
-10,7,22,장난을 좋아함.
-10,7,23,빈틈이 없음.
-10,7,24,걱정거리가 많음.
-10,7,25,매우 꼼꼼함.
-10,7,26,기가 센 성격임.
-10,7,27,조금 겉치레를 좋아함.
-10,7,28,오기가 센 성격임.
-10,7,29,지기 싫어함.
-10,7,30,조금 고집통이임.
-11,1,1,たべるのが　だいすき。
-11,1,2,ひるねを　よくする。
-11,1,3,いねむりが　おおい。
-11,1,4,ものを　よく　ちらかす。
-11,1,5,のんびりするのが　すき。
-11,1,6,ちからが　じまん。
-11,1,7,あばれることが　すき。
-11,1,8,ちょっと　おこりっぽい。
-11,1,9,ケンカを　するのが　すき。
-11,1,10,ちのけが　おおい。
-11,1,11,からだが　じょうぶ。
-11,1,12,うたれ　づよい。
-11,1,13,ねばり　づよい。
-11,1,14,しんぼう　づよい。
-11,1,15,がまん　づよい。
-11,1,16,かけっこが　すき。
-11,1,17,ものおとに　びんかん。
-11,1,18,おっちょこちょい。
-11,1,19,すこし　おちょうしもの。
-11,1,20,にげるのが　はやい。
-11,1,21,こうきしんが　つよい。
-11,1,22,イタズラが　すき。
-11,1,23,ぬけめが　ない。
-11,1,24,かんがえごとが　おおい。
-11,1,25,とても　きちょうめん。
-11,1,26,きが　つよい。
-11,1,27,ちょっぴり　みえっぱり。
-11,1,28,まけんきが　つよい。
-11,1,29,まけずぎらい。
-11,1,30,ちょっぴり　ごうじょう。
-11,2,1,Loves to eat.
-11,2,2,Often dozes off.
-11,2,3,Often scatters things.
-11,2,4,Scatters things often.
-11,2,5,Likes to relax.
-11,2,6,Proud of its power.
-11,2,7,Likes to thrash about.
-11,2,8,A little quick tempered.
-11,2,9,Likes to fight.
-11,2,10,Quick tempered.
-11,2,11,Sturdy body.
-11,2,12,Capable of taking hits.
-11,2,13,Highly persistent.
-11,2,14,Good endurance.
-11,2,15,Good perseverance.
-11,2,16,Likes to run.
-11,2,17,Alert to sounds.
-11,2,18,Impetuous and silly.
-11,2,19,Somewhat of a clown.
-11,2,20,Quick to flee.
-11,2,21,Highly curious.
-11,2,22,Mischievous.
-11,2,23,Thoroughly cunning.
-11,2,24,Often lost in thought.
-11,2,25,Very finicky.
-11,2,26,Strong willed.
-11,2,27,Somewhat vain.
-11,2,28,Strongly defiant.
-11,2,29,Hates to lose.
-11,2,30,Somewhat stubborn.
-11,3,1,Adore manger.
-11,3,2,S’assoupit souvent.
-11,3,3,Dort beaucoup.
-11,3,4,Eparpille des choses.
-11,3,5,Aime se détendre.
-11,3,6,Est fier de sa puissance.
-11,3,7,Aime se démener.
-11,3,8,Un peu coléreux.
-11,3,9,Aime combattre.
-11,3,10,S’emporte facilement.
-11,3,11,Corps robuste.
-11,3,12,Sait encaisser les coups.
-11,3,13,Très obstiné.
-11,3,14,Bonne endurance.
-11,3,15,Persévérant.
-11,3,16,Aime courir.
-11,3,17,Attentif aux sons.
-11,3,18,Bête et impulsif.
-11,3,19,Aime faire le pitre.
-11,3,20,Fuit rapidement.
-11,3,21,Extrêmement curieux.
-11,3,22,Coquin.
-11,3,23,Très astucieux.
-11,3,24,Souvent dans la lune.
-11,3,25,Très particulier.
-11,3,26,Très volontaire.
-11,3,27,Un peu vaniteux.
-11,3,28,Esprit rebelle.
-11,3,29,A horreur de perdre.
-11,3,30,Assez entêté.
-11,4,1,"Liebt es, zu essen."
-11,4,2,Nickt oft ein.
-11,4,3,Schläft gerne.
-11,4,4,Macht oft Unordnung.
-11,4,5,"Mag es, zu entspannen."
-11,4,6,Stolz auf seine Stärke.
-11,4,7,Prügelt sich gerne.
-11,4,8,Besitzt Temperament.
-11,4,9,Liebt Kämpfe.
-11,4,10,Impulsiv.
-11,4,11,Hat robusten Körper.
-11,4,12,Kann Treffer gut ab.
-11,4,13,Äußerst ausdauernd.
-11,4,14,Hat eine gute Ausdauer.
-11,4,15,Ist beharrlich.
-11,4,16,"Liebt es, zu rennen."
-11,4,17,Achtet auf Geräusche.
-11,4,18,Ungestüm und einfältig.
-11,4,19,Ist fast wie ein Clown.
-11,4,20,Flüchtet schnell.
-11,4,21,Sehr neugierig.
-11,4,22,Hinterhältig.
-11,4,23,Äußerst gerissen.
-11,4,24,Ist oft in Gedanken.
-11,4,25,Sehr pedantisch.
-11,4,26,Besitzt starken Willen.
-11,4,27,Irgendwie eitel.
-11,4,28,Sehr aufsässig.
-11,4,29,Hasst Niederlagen.
-11,4,30,Dickköpfig.
-11,5,1,Adora mangiare.
-11,5,2,Si addormenta spesso.
-11,5,3,Dorme a lungo.
-11,5,4,Lascia cose in giro.
-11,5,5,Adora rilassarsi.
-11,5,6,La forza è il suo vanto.
-11,5,7,Adora dimenarsi.
-11,5,8,Si arrabbia facilmente.
-11,5,9,Adora combattere.
-11,5,10,Facilmente irritabile.
-11,5,11,Ha un corpo robusto.
-11,5,12,Forte in attacco.
-11,5,13,Molto ostinato.
-11,5,14,Molto paziente.
-11,5,15,Molto tenace.
-11,5,16,Adora correre.
-11,5,17,Fa attenzione ai suoni.
-11,5,18,Irruente e semplice.
-11,5,19,Una specie di buffone.
-11,5,20,Sa fuggire velocemente.
-11,5,21,Grande ficcanaso.
-11,5,22,Alquanto vivace.
-11,5,23,Estremamente sagace.
-11,5,24,Si perde nel suo mondo.
-11,5,25,Molto esigente.
-11,5,26,Sa il fatto suo.
-11,5,27,Abbastanza superficiale.
-11,5,28,Molto insolente.
-11,5,29,Non sopporta perdere.
-11,5,30,Un po’ testardo.
-11,6,1,Le encanta comer.
-11,6,2,A menudo se duerme.
-11,6,3,Duerme mucho.
-11,6,4,Suele desordenar cosas.
-11,6,5,Le gusta relajarse.
-11,6,6,Orgulloso de su fuerza.
-11,6,7,Le gusta revolverse.
-11,6,8,A veces se enfada.
-11,6,9,Le gusta luchar.
-11,6,10,Tiene mal genio.
-11,6,11,Cuerpo resistente.
-11,6,12,Buen fajador.
-11,6,13,Muy persistente.
-11,6,14,Muy resistente.
-11,6,15,Muy perseverante.
-11,6,16,Le gusta correr.
-11,6,17,Oído siempre alerta.
-11,6,18,Impetuoso y bobo.
-11,6,19,Es un poco payaso.
-11,6,20,Huye rápido.
-11,6,21,Extremadamente curioso.
-11,6,22,Travieso.
-11,6,23,Muy astuto.
-11,6,24,A menudo está en Babia.
-11,6,25,Muy melindroso.
-11,6,26,Voluntarioso.
-11,6,27,Algo orgulloso.
-11,6,28,Muy insolente.
-11,6,29,Odia perder.
-11,6,30,Un poco cabezota.
-11,7,1,먹는 것을 제일 좋아함.
-11,7,2,낮잠을 잘 잠.
-11,7,3,말뚝잠이 많음.
-11,7,4,물건을 잘 어지름.
-11,7,5,유유자적함을 좋아함.
-11,7,6,힘자랑이 특기임.
-11,7,7,난동부리기를 좋아함.
-11,7,8,약간 화를 잘 내는 성미임.
-11,7,9,싸움을 좋아함.
-11,7,10,혈기가 왕성함.
-11,7,11,몸이 튼튼함.
-11,7,12,맷집이 강함.
-11,7,13,끈질김.
-11,7,14,인내심이 강함.
-11,7,15,잘 참음.
-11,7,16,달리기를 좋아함.
-11,7,17,주위 소리에 민감함.
-11,7,18,촐랑대는 성격임.
-11,7,19,약간 우쭐쟁이임.
-11,7,20,도망에는 선수임.
-11,7,21,호기심이 강함.
-11,7,22,장난을 좋아함.
-11,7,23,빈틈이 없음.
-11,7,24,걱정거리가 많음.
-11,7,25,매우 꼼꼼함.
-11,7,26,기가 센 성격임.
-11,7,27,조금 겉치레를 좋아함.
-11,7,28,오기가 센 성격임.
-11,7,29,지기 싫어함.
-11,7,30,조금 고집통이임.
 12,1,1,たべるのが　だいすき。
 12,1,2,ひるねを　よくする。
 12,1,3,いねむりが　おおい。
@@ -690,15 +270,15 @@ version_group_id,language_id,characteristic_id,name
 13,2,29,Hates to lose.
 13,2,30,Somewhat stubborn.
 13,3,1,Adore manger.
-13,3,2,S'assoupit souvent.
+13,3,2,S’assoupit souvent.
 13,3,3,Dort beaucoup.
-13,3,4,Éparpille des choses.
+13,3,4,Eparpille des choses.
 13,3,5,Aime se détendre.
 13,3,6,Est fier de sa puissance.
 13,3,7,Aime se démener.
 13,3,8,Un peu coléreux.
 13,3,9,Aime combattre.
-13,3,10,S'emporte facilement.
+13,3,10,S’emporte facilement.
 13,3,11,Corps robuste.
 13,3,12,Sait encaisser les coups.
 13,3,13,Très obstiné.
@@ -719,22 +299,22 @@ version_group_id,language_id,characteristic_id,name
 13,3,28,Esprit rebelle.
 13,3,29,A horreur de perdre.
 13,3,30,Assez entêté.
-13,4,1,Liebt es zu essen.
+13,4,1,"Liebt es, zu essen."
 13,4,2,Nickt oft ein.
-13,4,3,Schläft gern.
+13,4,3,Schläft gerne.
 13,4,4,Macht oft Unordnung.
-13,4,5,"Mag es, sich zu entspannen."
+13,4,5,"Mag es, zu entspannen."
 13,4,6,Stolz auf seine Stärke.
-13,4,7,Prügelt sich gern.
+13,4,7,Prügelt sich gerne.
 13,4,8,Besitzt Temperament.
 13,4,9,Liebt Kämpfe.
 13,4,10,Impulsiv.
 13,4,11,Hat robusten Körper.
-13,4,12,Kann Treffer gut verkraften.
+13,4,12,Kann Treffer gut ab.
 13,4,13,Äußerst ausdauernd.
 13,4,14,Hat eine gute Ausdauer.
 13,4,15,Ist beharrlich.
-13,4,16,Liebt es zu rennen.
+13,4,16,"Liebt es, zu rennen."
 13,4,17,Achtet auf Geräusche.
 13,4,18,Ungestüm und einfältig.
 13,4,19,Ist fast wie ein Clown.
@@ -778,7 +358,7 @@ version_group_id,language_id,characteristic_id,name
 13,5,27,Abbastanza superficiale.
 13,5,28,Molto insolente.
 13,5,29,Non sopporta perdere.
-13,5,30,Un po' testardo.
+13,5,30,Un po’ testardo.
 13,6,1,Le encanta comer.
 13,6,2,A menudo se duerme.
 13,6,3,Duerme mucho.
@@ -839,36 +419,6 @@ version_group_id,language_id,characteristic_id,name
 13,7,28,오기가 센 성격임.
 13,7,29,지기 싫어함.
 13,7,30,조금 고집통이임.
-13,8,1,食べるのが　大好き。
-13,8,2,昼寝を　よくする。
-13,8,3,居眠りが　多い。
-13,8,4,ものを　よく　散らかす。
-13,8,5,のんびりするのが　好き。
-13,8,6,力が　自慢。
-13,8,7,暴れることが　好き。
-13,8,8,ちょっと　怒りっぽい。
-13,8,9,ケンカを　するのが　好き。
-13,8,10,血の気が　多い。
-13,8,11,体が　丈夫。
-13,8,12,打たれ強い。
-13,8,13,粘り強い。
-13,8,14,辛抱強い。
-13,8,15,我慢強い。
-13,8,16,駆けっこが　好き。
-13,8,17,物音に　敏感。
-13,8,18,おっちょこちょい。
-13,8,19,すこし　お調子者。
-13,8,20,逃げるのが　早い。
-13,8,21,好奇心が　強い。
-13,8,22,イタズラが　好き。
-13,8,23,抜け目が　ない。
-13,8,24,考え事が　多い。
-13,8,25,とても　きちょうめん。
-13,8,26,気が　強い。
-13,8,27,ちょっぴり　見栄っ張り。
-13,8,28,負けん気が　強い。
-13,8,29,負けず嫌い。
-13,8,30,ちょっぴり　強情。
 14,1,1,たべるのが　だいすき。
 14,1,2,ひるねを　よくする。
 14,1,3,いねむりが　おおい。
@@ -930,15 +480,15 @@ version_group_id,language_id,characteristic_id,name
 14,2,29,Hates to lose.
 14,2,30,Somewhat stubborn.
 14,3,1,Adore manger.
-14,3,2,S'assoupit souvent.
+14,3,2,S’assoupit souvent.
 14,3,3,Dort beaucoup.
-14,3,4,Éparpille des choses.
+14,3,4,Eparpille des choses.
 14,3,5,Aime se détendre.
 14,3,6,Est fier de sa puissance.
 14,3,7,Aime se démener.
 14,3,8,Un peu coléreux.
 14,3,9,Aime combattre.
-14,3,10,S'emporte facilement.
+14,3,10,S’emporte facilement.
 14,3,11,Corps robuste.
 14,3,12,Sait encaisser les coups.
 14,3,13,Très obstiné.
@@ -959,22 +509,22 @@ version_group_id,language_id,characteristic_id,name
 14,3,28,Esprit rebelle.
 14,3,29,A horreur de perdre.
 14,3,30,Assez entêté.
-14,4,1,Liebt es zu essen.
+14,4,1,"Liebt es, zu essen."
 14,4,2,Nickt oft ein.
-14,4,3,Schläft gern.
+14,4,3,Schläft gerne.
 14,4,4,Macht oft Unordnung.
-14,4,5,"Mag es, sich zu entspannen."
+14,4,5,"Mag es, zu entspannen."
 14,4,6,Stolz auf seine Stärke.
-14,4,7,Prügelt sich gern.
+14,4,7,Prügelt sich gerne.
 14,4,8,Besitzt Temperament.
 14,4,9,Liebt Kämpfe.
 14,4,10,Impulsiv.
 14,4,11,Hat robusten Körper.
-14,4,12,Kann Treffer gut verkraften.
+14,4,12,Kann Treffer gut ab.
 14,4,13,Äußerst ausdauernd.
 14,4,14,Hat eine gute Ausdauer.
 14,4,15,Ist beharrlich.
-14,4,16,Liebt es zu rennen.
+14,4,16,"Liebt es, zu rennen."
 14,4,17,Achtet auf Geräusche.
 14,4,18,Ungestüm und einfältig.
 14,4,19,Ist fast wie ein Clown.
@@ -1018,7 +568,7 @@ version_group_id,language_id,characteristic_id,name
 14,5,27,Abbastanza superficiale.
 14,5,28,Molto insolente.
 14,5,29,Non sopporta perdere.
-14,5,30,Un po' testardo.
+14,5,30,Un po’ testardo.
 14,6,1,Le encanta comer.
 14,6,2,A menudo se duerme.
 14,6,3,Duerme mucho.
@@ -1079,36 +629,6 @@ version_group_id,language_id,characteristic_id,name
 14,7,28,오기가 센 성격임.
 14,7,29,지기 싫어함.
 14,7,30,조금 고집통이임.
-14,8,1,食べるのが　大好き。
-14,8,2,昼寝を　よくする。
-14,8,3,居眠りが　多い。
-14,8,4,ものを　よく　散らかす。
-14,8,5,のんびりするのが　好き。
-14,8,6,力が　自慢。
-14,8,7,暴れることが　好き。
-14,8,8,ちょっと　怒りっぽい。
-14,8,9,ケンカを　するのが　好き。
-14,8,10,血の気が　多い。
-14,8,11,体が　丈夫。
-14,8,12,打たれ強い。
-14,8,13,粘り強い。
-14,8,14,辛抱強い。
-14,8,15,我慢強い。
-14,8,16,駆けっこが　好き。
-14,8,17,物音に　敏感。
-14,8,18,おっちょこちょい。
-14,8,19,すこし　お調子者。
-14,8,20,逃げるのが　早い。
-14,8,21,好奇心が　強い。
-14,8,22,イタズラが　好き。
-14,8,23,抜け目が　ない。
-14,8,24,考え事が　多い。
-14,8,25,とても　きちょうめん。
-14,8,26,気が　強い。
-14,8,27,ちょっぴり　見栄っ張り。
-14,8,28,負けん気が　強い。
-14,8,29,負けず嫌い。
-14,8,30,ちょっぴり　強情。
 15,1,1,たべるのが　だいすき。
 15,1,2,ひるねを　よくする。
 15,1,3,いねむりが　おおい。
@@ -1139,38 +659,38 @@ version_group_id,language_id,characteristic_id,name
 15,1,28,まけんきが　つよい。
 15,1,29,まけずぎらい。
 15,1,30,ちょっぴり　ごうじょう。
-15,2,1,Loves to eat
-15,2,2,Takes plenty of siestas
-15,2,3,Nods off a lot
-15,2,4,Scatters things often
-15,2,5,Likes to relax
-15,2,6,Proud of its power
-15,2,7,Likes to thrash about
-15,2,8,A little quick tempered
-15,2,9,Likes to fight
-15,2,10,Quick tempered
-15,2,11,Sturdy body
-15,2,12,Capable of taking hits
-15,2,13,Highly persistent
-15,2,14,Good endurance
-15,2,15,Good perseverance
-15,2,16,Likes to run
-15,2,17,Alert to sounds
-15,2,18,Impetuous and silly
-15,2,19,Somewhat of a clown
-15,2,20,Quick to flee
-15,2,21,Highly curious
-15,2,22,Mischievous
-15,2,23,Thoroughly cunning
-15,2,24,Often lost in thought
-15,2,25,Very finicky
-15,2,26,Strong willed
-15,2,27,Somewhat vain
-15,2,28,Strongly defiant
-15,2,29,Hates to lose
-15,2,30,Somewhat stubborn
+15,2,1,Loves to eat.
+15,2,2,Often dozes off.
+15,2,3,Often scatters things.
+15,2,4,Scatters things often.
+15,2,5,Likes to relax.
+15,2,6,Proud of its power.
+15,2,7,Likes to thrash about.
+15,2,8,A little quick tempered.
+15,2,9,Likes to fight.
+15,2,10,Quick tempered.
+15,2,11,Sturdy body.
+15,2,12,Capable of taking hits.
+15,2,13,Highly persistent.
+15,2,14,Good endurance.
+15,2,15,Good perseverance.
+15,2,16,Likes to run.
+15,2,17,Alert to sounds.
+15,2,18,Impetuous and silly.
+15,2,19,Somewhat of a clown.
+15,2,20,Quick to flee.
+15,2,21,Highly curious.
+15,2,22,Mischievous.
+15,2,23,Thoroughly cunning.
+15,2,24,Often lost in thought.
+15,2,25,Very finicky.
+15,2,26,Strong willed.
+15,2,27,Somewhat vain.
+15,2,28,Strongly defiant.
+15,2,29,Hates to lose.
+15,2,30,Somewhat stubborn.
 15,3,1,Adore manger.
-15,3,2,S’assoupit souvent.
+15,3,2,S'assoupit souvent.
 15,3,3,Dort beaucoup.
 15,3,4,Éparpille des choses.
 15,3,5,Aime se détendre.
@@ -1178,7 +698,7 @@ version_group_id,language_id,characteristic_id,name
 15,3,7,Aime se démener.
 15,3,8,Un peu coléreux.
 15,3,9,Aime combattre.
-15,3,10,S’emporte facilement.
+15,3,10,S'emporte facilement.
 15,3,11,Corps robuste.
 15,3,12,Sait encaisser les coups.
 15,3,13,Très obstiné.
@@ -1209,7 +729,7 @@ version_group_id,language_id,characteristic_id,name
 15,4,8,Besitzt Temperament.
 15,4,9,Liebt Kämpfe.
 15,4,10,Impulsiv.
-15,4,11,Hat einen robusten Körper.
+15,4,11,Hat robusten Körper.
 15,4,12,Kann Treffer gut verkraften.
 15,4,13,Äußerst ausdauernd.
 15,4,14,Hat eine gute Ausdauer.
@@ -1217,15 +737,15 @@ version_group_id,language_id,characteristic_id,name
 15,4,16,Liebt es zu rennen.
 15,4,17,Achtet auf Geräusche.
 15,4,18,Ungestüm und einfältig.
-15,4,19,Ein bisschen albern.
+15,4,19,Ist fast wie ein Clown.
 15,4,20,Flüchtet schnell.
 15,4,21,Sehr neugierig.
 15,4,22,Hinterhältig.
 15,4,23,Äußerst gerissen.
 15,4,24,Ist oft in Gedanken.
 15,4,25,Sehr pedantisch.
-15,4,26,Besitzt einen starken Willen.
-15,4,27,Etwas eitel.
+15,4,26,Besitzt starken Willen.
+15,4,27,Irgendwie eitel.
 15,4,28,Sehr aufsässig.
 15,4,29,Hasst Niederlagen.
 15,4,30,Dickköpfig.
@@ -1238,57 +758,57 @@ version_group_id,language_id,characteristic_id,name
 15,5,7,Adora dimenarsi.
 15,5,8,Si arrabbia facilmente.
 15,5,9,Adora combattere.
-15,5,10,È facilmente irritabile.
+15,5,10,Facilmente irritabile.
 15,5,11,Ha un corpo robusto.
-15,5,12,È forte in attacco.
-15,5,13,È molto ostinato.
-15,5,14,È molto paziente.
-15,5,15,È molto tenace.
+15,5,12,Forte in attacco.
+15,5,13,Molto ostinato.
+15,5,14,Molto paziente.
+15,5,15,Molto tenace.
 15,5,16,Adora correre.
 15,5,17,Fa attenzione ai suoni.
-15,5,18,È irruente e semplice.
-15,5,19,È una specie di buffone.
+15,5,18,Irruente e semplice.
+15,5,19,Una specie di buffone.
 15,5,20,Sa fuggire velocemente.
-15,5,21,È un grande ficcanaso.
-15,5,22,È alquanto vivace.
-15,5,23,È estremamente sagace.
+15,5,21,Grande ficcanaso.
+15,5,22,Alquanto vivace.
+15,5,23,Estremamente sagace.
 15,5,24,Si perde nel suo mondo.
-15,5,25,È molto esigente.
+15,5,25,Molto esigente.
 15,5,26,Sa il fatto suo.
-15,5,27,È abbastanza superficiale.
-15,5,28,È molto insolente.
+15,5,27,Abbastanza superficiale.
+15,5,28,Molto insolente.
 15,5,29,Non sopporta perdere.
-15,5,30,È un po’ testardo.
+15,5,30,Un po' testardo.
 15,6,1,Le encanta comer.
 15,6,2,A menudo se duerme.
 15,6,3,Duerme mucho.
 15,6,4,Suele desordenar cosas.
 15,6,5,Le gusta relajarse.
-15,6,6,Está orgulloso de su fuerza.
+15,6,6,Orgulloso de su fuerza.
 15,6,7,Le gusta revolverse.
 15,6,8,A veces se enfada.
 15,6,9,Le gusta luchar.
 15,6,10,Tiene mal genio.
-15,6,11,Se caracteriza por su cuerpo resistente.
-15,6,12,Es un buen fajador.
-15,6,13,Es muy persistente.
-15,6,14,Se caracteriza por ser muy resistente.
-15,6,15,Es muy perseverante.
+15,6,11,Cuerpo resistente.
+15,6,12,Buen fajador.
+15,6,13,Muy persistente.
+15,6,14,Muy resistente.
+15,6,15,Muy perseverante.
 15,6,16,Le gusta correr.
-15,6,17,Siempre tiene el oído alerta.
-15,6,18,Resulta algo impetuoso y bobo.
+15,6,17,Oído siempre alerta.
+15,6,18,Impetuoso y bobo.
 15,6,19,Es un poco payaso.
 15,6,20,Huye rápido.
-15,6,21,Es extremadamente curioso.
-15,6,22,Le gusta hacer travesuras.
-15,6,23,Es muy astuto.
+15,6,21,Extremadamente curioso.
+15,6,22,Travieso.
+15,6,23,Muy astuto.
 15,6,24,A menudo está en Babia.
-15,6,25,Es muy melindroso.
-15,6,26,Se distingue por ser muy voluntarioso.
-15,6,27,Es algo orgulloso.
-15,6,28,Es muy insolente.
+15,6,25,Muy melindroso.
+15,6,26,Voluntarioso.
+15,6,27,Algo orgulloso.
+15,6,28,Muy insolente.
 15,6,29,Odia perder.
-15,6,30,Es un poco cabezota.
+15,6,30,Un poco cabezota.
 15,7,1,먹는 것을 제일 좋아함.
 15,7,2,낮잠을 잘 잠.
 15,7,3,말뚝잠이 많음.
@@ -1338,14 +858,14 @@ version_group_id,language_id,characteristic_id,name
 15,8,17,物音に　敏感。
 15,8,18,おっちょこちょい。
 15,8,19,すこし　お調子者。
-15,8,20,逃げるのが　はやい。
+15,8,20,逃げるのが　早い。
 15,8,21,好奇心が　強い。
 15,8,22,イタズラが　好き。
 15,8,23,抜け目が　ない。
 15,8,24,考え事が　多い。
 15,8,25,とても　きちょうめん。
 15,8,26,気が　強い。
-15,8,27,ちょっぴり　みえっぱり。
+15,8,27,ちょっぴり　見栄っ張り。
 15,8,28,負けん気が　強い。
 15,8,29,負けず嫌い。
 15,8,30,ちょっぴり　強情。
@@ -1379,38 +899,38 @@ version_group_id,language_id,characteristic_id,name
 16,1,28,まけんきが　つよい。
 16,1,29,まけずぎらい。
 16,1,30,ちょっぴり　ごうじょう。
-16,2,1,Loves to eat
-16,2,2,Takes plenty of siestas
-16,2,3,Nods off a lot
-16,2,4,Scatters things often
-16,2,5,Likes to relax
-16,2,6,Proud of its power
-16,2,7,Likes to thrash about
-16,2,8,A little quick tempered
-16,2,9,Likes to fight
-16,2,10,Quick tempered
-16,2,11,Sturdy body
-16,2,12,Capable of taking hits
-16,2,13,Highly persistent
-16,2,14,Good endurance
-16,2,15,Good perseverance
-16,2,16,Likes to run
-16,2,17,Alert to sounds
-16,2,18,Impetuous and silly
-16,2,19,Somewhat of a clown
-16,2,20,Quick to flee
-16,2,21,Highly curious
-16,2,22,Mischievous
-16,2,23,Thoroughly cunning
-16,2,24,Often lost in thought
-16,2,25,Very finicky
-16,2,26,Strong willed
-16,2,27,Somewhat vain
-16,2,28,Strongly defiant
-16,2,29,Hates to lose
-16,2,30,Somewhat stubborn
+16,2,1,Loves to eat.
+16,2,2,Often dozes off.
+16,2,3,Often scatters things.
+16,2,4,Scatters things often.
+16,2,5,Likes to relax.
+16,2,6,Proud of its power.
+16,2,7,Likes to thrash about.
+16,2,8,A little quick tempered.
+16,2,9,Likes to fight.
+16,2,10,Quick tempered.
+16,2,11,Sturdy body.
+16,2,12,Capable of taking hits.
+16,2,13,Highly persistent.
+16,2,14,Good endurance.
+16,2,15,Good perseverance.
+16,2,16,Likes to run.
+16,2,17,Alert to sounds.
+16,2,18,Impetuous and silly.
+16,2,19,Somewhat of a clown.
+16,2,20,Quick to flee.
+16,2,21,Highly curious.
+16,2,22,Mischievous.
+16,2,23,Thoroughly cunning.
+16,2,24,Often lost in thought.
+16,2,25,Very finicky.
+16,2,26,Strong willed.
+16,2,27,Somewhat vain.
+16,2,28,Strongly defiant.
+16,2,29,Hates to lose.
+16,2,30,Somewhat stubborn.
 16,3,1,Adore manger.
-16,3,2,S’assoupit souvent.
+16,3,2,S'assoupit souvent.
 16,3,3,Dort beaucoup.
 16,3,4,Éparpille des choses.
 16,3,5,Aime se détendre.
@@ -1418,7 +938,7 @@ version_group_id,language_id,characteristic_id,name
 16,3,7,Aime se démener.
 16,3,8,Un peu coléreux.
 16,3,9,Aime combattre.
-16,3,10,S’emporte facilement.
+16,3,10,S'emporte facilement.
 16,3,11,Corps robuste.
 16,3,12,Sait encaisser les coups.
 16,3,13,Très obstiné.
@@ -1449,7 +969,7 @@ version_group_id,language_id,characteristic_id,name
 16,4,8,Besitzt Temperament.
 16,4,9,Liebt Kämpfe.
 16,4,10,Impulsiv.
-16,4,11,Hat einen robusten Körper.
+16,4,11,Hat robusten Körper.
 16,4,12,Kann Treffer gut verkraften.
 16,4,13,Äußerst ausdauernd.
 16,4,14,Hat eine gute Ausdauer.
@@ -1457,15 +977,15 @@ version_group_id,language_id,characteristic_id,name
 16,4,16,Liebt es zu rennen.
 16,4,17,Achtet auf Geräusche.
 16,4,18,Ungestüm und einfältig.
-16,4,19,Ein bisschen albern.
+16,4,19,Ist fast wie ein Clown.
 16,4,20,Flüchtet schnell.
 16,4,21,Sehr neugierig.
 16,4,22,Hinterhältig.
 16,4,23,Äußerst gerissen.
 16,4,24,Ist oft in Gedanken.
 16,4,25,Sehr pedantisch.
-16,4,26,Besitzt einen starken Willen.
-16,4,27,Etwas eitel.
+16,4,26,Besitzt starken Willen.
+16,4,27,Irgendwie eitel.
 16,4,28,Sehr aufsässig.
 16,4,29,Hasst Niederlagen.
 16,4,30,Dickköpfig.
@@ -1478,57 +998,57 @@ version_group_id,language_id,characteristic_id,name
 16,5,7,Adora dimenarsi.
 16,5,8,Si arrabbia facilmente.
 16,5,9,Adora combattere.
-16,5,10,È facilmente irritabile.
+16,5,10,Facilmente irritabile.
 16,5,11,Ha un corpo robusto.
-16,5,12,È forte in attacco.
-16,5,13,È molto ostinato.
-16,5,14,È molto paziente.
-16,5,15,È molto tenace.
+16,5,12,Forte in attacco.
+16,5,13,Molto ostinato.
+16,5,14,Molto paziente.
+16,5,15,Molto tenace.
 16,5,16,Adora correre.
 16,5,17,Fa attenzione ai suoni.
-16,5,18,È irruente e semplice.
-16,5,19,È una specie di buffone.
+16,5,18,Irruente e semplice.
+16,5,19,Una specie di buffone.
 16,5,20,Sa fuggire velocemente.
-16,5,21,È un grande ficcanaso.
-16,5,22,È alquanto vivace.
-16,5,23,È estremamente sagace.
+16,5,21,Grande ficcanaso.
+16,5,22,Alquanto vivace.
+16,5,23,Estremamente sagace.
 16,5,24,Si perde nel suo mondo.
-16,5,25,È molto esigente.
+16,5,25,Molto esigente.
 16,5,26,Sa il fatto suo.
-16,5,27,È abbastanza superficiale.
-16,5,28,È molto insolente.
+16,5,27,Abbastanza superficiale.
+16,5,28,Molto insolente.
 16,5,29,Non sopporta perdere.
-16,5,30,È un po’ testardo.
+16,5,30,Un po' testardo.
 16,6,1,Le encanta comer.
 16,6,2,A menudo se duerme.
 16,6,3,Duerme mucho.
 16,6,4,Suele desordenar cosas.
 16,6,5,Le gusta relajarse.
-16,6,6,Está orgulloso de su fuerza.
+16,6,6,Orgulloso de su fuerza.
 16,6,7,Le gusta revolverse.
 16,6,8,A veces se enfada.
 16,6,9,Le gusta luchar.
 16,6,10,Tiene mal genio.
-16,6,11,Se caracteriza por su cuerpo resistente.
-16,6,12,Es un buen fajador.
-16,6,13,Es muy persistente.
-16,6,14,Se caracteriza por ser muy resistente.
-16,6,15,Es muy perseverante.
+16,6,11,Cuerpo resistente.
+16,6,12,Buen fajador.
+16,6,13,Muy persistente.
+16,6,14,Muy resistente.
+16,6,15,Muy perseverante.
 16,6,16,Le gusta correr.
-16,6,17,Siempre tiene el oído alerta.
-16,6,18,Resulta algo impetuoso y bobo.
+16,6,17,Oído siempre alerta.
+16,6,18,Impetuoso y bobo.
 16,6,19,Es un poco payaso.
 16,6,20,Huye rápido.
-16,6,21,Es extremadamente curioso.
-16,6,22,Le gusta hacer travesuras.
-16,6,23,Es muy astuto.
+16,6,21,Extremadamente curioso.
+16,6,22,Travieso.
+16,6,23,Muy astuto.
 16,6,24,A menudo está en Babia.
-16,6,25,Es muy melindroso.
-16,6,26,Se distingue por ser muy voluntarioso.
-16,6,27,Es algo orgulloso.
-16,6,28,Es muy insolente.
+16,6,25,Muy melindroso.
+16,6,26,Voluntarioso.
+16,6,27,Algo orgulloso.
+16,6,28,Muy insolente.
 16,6,29,Odia perder.
-16,6,30,Es un poco cabezota.
+16,6,30,Un poco cabezota.
 16,7,1,먹는 것을 제일 좋아함.
 16,7,2,낮잠을 잘 잠.
 16,7,3,말뚝잠이 많음.
@@ -1578,14 +1098,14 @@ version_group_id,language_id,characteristic_id,name
 16,8,17,物音に　敏感。
 16,8,18,おっちょこちょい。
 16,8,19,すこし　お調子者。
-16,8,20,逃げるのが　はやい。
+16,8,20,逃げるのが　早い。
 16,8,21,好奇心が　強い。
 16,8,22,イタズラが　好き。
 16,8,23,抜け目が　ない。
 16,8,24,考え事が　多い。
 16,8,25,とても　きちょうめん。
 16,8,26,気が　強い。
-16,8,27,ちょっぴり　みえっぱり。
+16,8,27,ちょっぴり　見栄っ張り。
 16,8,28,負けん気が　強い。
 16,8,29,負けず嫌い。
 16,8,30,ちょっぴり　強情。
@@ -1684,31 +1204,31 @@ version_group_id,language_id,characteristic_id,name
 17,4,3,Schläft gern.
 17,4,4,Macht oft Unordnung.
 17,4,5,"Mag es, sich zu entspannen."
-17,4,6,Ist stolz auf seine Stärke.
+17,4,6,Stolz auf seine Stärke.
 17,4,7,Prügelt sich gern.
 17,4,8,Besitzt Temperament.
 17,4,9,Liebt Kämpfe.
-17,4,10,Ist impulsiv.
+17,4,10,Impulsiv.
 17,4,11,Hat einen robusten Körper.
 17,4,12,Kann Treffer gut verkraften.
-17,4,13,Ist äußerst ausdauernd.
+17,4,13,Äußerst ausdauernd.
 17,4,14,Hat eine gute Ausdauer.
 17,4,15,Ist beharrlich.
 17,4,16,Liebt es zu rennen.
 17,4,17,Achtet auf Geräusche.
-17,4,18,Ist ungestüm und einfältig.
-17,4,19,Ist ein bisschen albern.
+17,4,18,Ungestüm und einfältig.
+17,4,19,Ein bisschen albern.
 17,4,20,Flüchtet schnell.
-17,4,21,Ist sehr neugierig.
-17,4,22,Ist hinterhältig.
-17,4,23,Ist äußerst gerissen.
+17,4,21,Sehr neugierig.
+17,4,22,Hinterhältig.
+17,4,23,Äußerst gerissen.
 17,4,24,Ist oft in Gedanken.
-17,4,25,Ist sehr pedantisch.
+17,4,25,Sehr pedantisch.
 17,4,26,Besitzt einen starken Willen.
-17,4,27,Ist etwas eitel.
-17,4,28,Ist sehr aufsässig.
+17,4,27,Etwas eitel.
+17,4,28,Sehr aufsässig.
 17,4,29,Hasst Niederlagen.
-17,4,30,Ist dickköpfig.
+17,4,30,Dickköpfig.
 17,5,1,Adora mangiare.
 17,5,2,Si addormenta spesso.
 17,5,3,Dorme a lungo.
@@ -1717,10 +1237,10 @@ version_group_id,language_id,characteristic_id,name
 17,5,6,La forza è il suo vanto.
 17,5,7,Adora dimenarsi.
 17,5,8,Si arrabbia facilmente.
-17,5,9,Adora lottare.
+17,5,9,Adora combattere.
 17,5,10,È facilmente irritabile.
 17,5,11,Ha un corpo robusto.
-17,5,12,Incassa bene i colpi.
+17,5,12,È forte in attacco.
 17,5,13,È molto ostinato.
 17,5,14,È molto paziente.
 17,5,15,È molto tenace.
@@ -1829,66 +1349,6 @@ version_group_id,language_id,characteristic_id,name
 17,8,28,負けん気が　強い。
 17,8,29,負けず嫌い。
 17,8,30,ちょっぴり　強情。
-17,9,1,非常喜欢吃东西。
-17,9,2,经常睡午觉。
-17,9,3,常常打瞌睡。
-17,9,4,经常乱扔东西。
-17,9,5,喜欢悠然自在。
-17,9,6,以力气大为傲。
-17,9,7,喜欢胡闹。
-17,9,8,有点容易生气。
-17,9,9,喜欢打架。
-17,9,10,血气方刚。
-17,9,11,身体强壮。
-17,9,12,抗打能力强。
-17,9,13,顽强不屈。
-17,9,14,能吃苦耐劳。
-17,9,15,善于忍耐。
-17,9,16,喜欢比谁跑得快。
-17,9,17,对声音敏感。
-17,9,18,冒冒失失。
-17,9,19,有点容易得意忘形。
-17,9,20,逃得快。
-17,9,21,好奇心强。
-17,9,22,喜欢恶作剧。
-17,9,23,做事万无一失。
-17,9,24,经常思考。
-17,9,25,一丝不苟。
-17,9,26,性格强势。
-17,9,27,有一点点爱慕虚荣。
-17,9,28,争强好胜。
-17,9,29,不服输。
-17,9,30,有一点点固执。
-17,10,1,非常喜歡吃東西。
-17,10,2,經常睡午覺。
-17,10,3,常常打瞌睡。
-17,10,4,經常亂扔東西。
-17,10,5,喜歡悠然自在。
-17,10,6,以力氣大為傲。
-17,10,7,喜歡胡鬧。
-17,10,8,有點容易生氣。
-17,10,9,喜歡打架。
-17,10,10,血氣方剛。
-17,10,11,身體強壯。
-17,10,12,抗打能力強。
-17,10,13,頑強不屈。
-17,10,14,能吃苦耐勞。
-17,10,15,善於忍耐。
-17,10,16,喜歡比誰跑得快。
-17,10,17,對聲音敏感。
-17,10,18,冒冒失失。
-17,10,19,有點容易得意忘形。
-17,10,20,逃得快。
-17,10,21,好奇心強。
-17,10,22,喜歡惡作劇。
-17,10,23,做事萬無一失。
-17,10,24,經常思考。
-17,10,25,一絲不苟。
-17,10,26,性格強勢。
-17,10,27,有一點點愛慕虛榮。
-17,10,28,爭強好勝。
-17,10,29,不服輸。
-17,10,30,有一點點固執。
 18,1,1,たべるのが　だいすき。
 18,1,2,ひるねを　よくする。
 18,1,3,いねむりが　おおい。
@@ -1984,31 +1444,31 @@ version_group_id,language_id,characteristic_id,name
 18,4,3,Schläft gern.
 18,4,4,Macht oft Unordnung.
 18,4,5,"Mag es, sich zu entspannen."
-18,4,6,Ist stolz auf seine Stärke.
+18,4,6,Stolz auf seine Stärke.
 18,4,7,Prügelt sich gern.
 18,4,8,Besitzt Temperament.
 18,4,9,Liebt Kämpfe.
-18,4,10,Ist impulsiv.
+18,4,10,Impulsiv.
 18,4,11,Hat einen robusten Körper.
 18,4,12,Kann Treffer gut verkraften.
-18,4,13,Ist äußerst ausdauernd.
+18,4,13,Äußerst ausdauernd.
 18,4,14,Hat eine gute Ausdauer.
 18,4,15,Ist beharrlich.
 18,4,16,Liebt es zu rennen.
 18,4,17,Achtet auf Geräusche.
-18,4,18,Ist ungestüm und einfältig.
-18,4,19,Ist ein bisschen albern.
+18,4,18,Ungestüm und einfältig.
+18,4,19,Ein bisschen albern.
 18,4,20,Flüchtet schnell.
-18,4,21,Ist sehr neugierig.
-18,4,22,Ist hinterhältig.
-18,4,23,Ist äußerst gerissen.
+18,4,21,Sehr neugierig.
+18,4,22,Hinterhältig.
+18,4,23,Äußerst gerissen.
 18,4,24,Ist oft in Gedanken.
-18,4,25,Ist sehr pedantisch.
+18,4,25,Sehr pedantisch.
 18,4,26,Besitzt einen starken Willen.
-18,4,27,Ist etwas eitel.
-18,4,28,Ist sehr aufsässig.
+18,4,27,Etwas eitel.
+18,4,28,Sehr aufsässig.
 18,4,29,Hasst Niederlagen.
-18,4,30,Ist dickköpfig.
+18,4,30,Dickköpfig.
 18,5,1,Adora mangiare.
 18,5,2,Si addormenta spesso.
 18,5,3,Dorme a lungo.
@@ -2017,10 +1477,10 @@ version_group_id,language_id,characteristic_id,name
 18,5,6,La forza è il suo vanto.
 18,5,7,Adora dimenarsi.
 18,5,8,Si arrabbia facilmente.
-18,5,9,Adora lottare.
+18,5,9,Adora combattere.
 18,5,10,È facilmente irritabile.
 18,5,11,Ha un corpo robusto.
-18,5,12,Incassa bene i colpi.
+18,5,12,È forte in attacco.
 18,5,13,È molto ostinato.
 18,5,14,È molto paziente.
 18,5,15,È molto tenace.
@@ -2129,66 +1589,6 @@ version_group_id,language_id,characteristic_id,name
 18,8,28,負けん気が　強い。
 18,8,29,負けず嫌い。
 18,8,30,ちょっぴり　強情。
-18,9,1,非常喜欢吃东西。
-18,9,2,经常睡午觉。
-18,9,3,常常打瞌睡。
-18,9,4,经常乱扔东西。
-18,9,5,喜欢悠然自在。
-18,9,6,以力气大为傲。
-18,9,7,喜欢胡闹。
-18,9,8,有点容易生气。
-18,9,9,喜欢打架。
-18,9,10,血气方刚。
-18,9,11,身体强壮。
-18,9,12,抗打能力强。
-18,9,13,顽强不屈。
-18,9,14,能吃苦耐劳。
-18,9,15,善于忍耐。
-18,9,16,喜欢比谁跑得快。
-18,9,17,对声音敏感。
-18,9,18,冒冒失失。
-18,9,19,有点容易得意忘形。
-18,9,20,逃得快。
-18,9,21,好奇心强。
-18,9,22,喜欢恶作剧。
-18,9,23,做事万无一失。
-18,9,24,经常思考。
-18,9,25,一丝不苟。
-18,9,26,性格强势。
-18,9,27,有一点点爱慕虚荣。
-18,9,28,争强好胜。
-18,9,29,不服输。
-18,9,30,有一点点固执。
-18,10,1,非常喜歡吃東西。
-18,10,2,經常睡午覺。
-18,10,3,常常打瞌睡。
-18,10,4,經常亂扔東西。
-18,10,5,喜歡悠然自在。
-18,10,6,以力氣大為傲。
-18,10,7,喜歡胡鬧。
-18,10,8,有點容易生氣。
-18,10,9,喜歡打架。
-18,10,10,血氣方剛。
-18,10,11,身體強壯。
-18,10,12,抗打能力強。
-18,10,13,頑強不屈。
-18,10,14,能吃苦耐勞。
-18,10,15,善於忍耐。
-18,10,16,喜歡比誰跑得快。
-18,10,17,對聲音敏感。
-18,10,18,冒冒失失。
-18,10,19,有點容易得意忘形。
-18,10,20,逃得快。
-18,10,21,好奇心強。
-18,10,22,喜歡惡作劇。
-18,10,23,做事萬無一失。
-18,10,24,經常思考。
-18,10,25,一絲不苟。
-18,10,26,性格強勢。
-18,10,27,有一點點愛慕虛榮。
-18,10,28,爭強好勝。
-18,10,29,不服輸。
-18,10,30,有一點點固執。
 19,1,1,たべるのが　だいすき。
 19,1,2,ひるねを　よくする。
 19,1,3,いねむりが　おおい。
@@ -2249,36 +1649,36 @@ version_group_id,language_id,characteristic_id,name
 19,2,28,Strongly defiant
 19,2,29,Hates to lose
 19,2,30,Somewhat stubborn
-19,3,1,Adore manger
-19,3,2,S’assoupit souvent
-19,3,3,Dort beaucoup
-19,3,4,Éparpille des choses
-19,3,5,Aime se détendre
-19,3,6,Est fier de sa puissance
-19,3,7,Aime se démener
-19,3,8,Un peu coléreux
-19,3,9,Aime combattre
-19,3,10,S’emporte facilement
-19,3,11,Corps robuste
-19,3,12,Sait encaisser les coups
-19,3,13,Très obstiné
-19,3,14,Bonne endurance
-19,3,15,Persévérant
-19,3,16,Aime la vitesse
-19,3,17,Attentif aux sons
-19,3,18,Bête et impulsif
-19,3,19,Aime faire le pitre
-19,3,20,Fuit rapidement
-19,3,21,Extrêmement curieux
-19,3,22,Coquin
-19,3,23,Très astucieux
-19,3,24,Souvent dans la lune
-19,3,25,Très particulier
-19,3,26,Très volontaire
-19,3,27,Un peu vaniteux
-19,3,28,Esprit rebelle
-19,3,29,A horreur de perdre
-19,3,30,Assez entêté
+19,3,1,Adore manger.
+19,3,2,S’assoupit souvent.
+19,3,3,Dort beaucoup.
+19,3,4,Éparpille des choses.
+19,3,5,Aime se détendre.
+19,3,6,Est fier de sa puissance.
+19,3,7,Aime se démener.
+19,3,8,Un peu coléreux.
+19,3,9,Aime combattre.
+19,3,10,S’emporte facilement.
+19,3,11,Corps robuste.
+19,3,12,Sait encaisser les coups.
+19,3,13,Très obstiné.
+19,3,14,Bonne endurance.
+19,3,15,Persévérant.
+19,3,16,Aime courir.
+19,3,17,Attentif aux sons.
+19,3,18,Bête et impulsif.
+19,3,19,Aime faire le pitre.
+19,3,20,Fuit rapidement.
+19,3,21,Extrêmement curieux.
+19,3,22,Coquin.
+19,3,23,Très astucieux.
+19,3,24,Souvent dans la lune.
+19,3,25,Très particulier.
+19,3,26,Très volontaire.
+19,3,27,Un peu vaniteux.
+19,3,28,Esprit rebelle.
+19,3,29,A horreur de perdre.
+19,3,30,Assez entêté.
 19,4,1,Liebt es zu essen.
 19,4,2,Nickt oft ein.
 19,4,3,Schläft gern.
@@ -2291,10 +1691,10 @@ version_group_id,language_id,characteristic_id,name
 19,4,10,Ist impulsiv.
 19,4,11,Hat einen robusten Körper.
 19,4,12,Kann Treffer gut verkraften.
-19,4,13,Ist äußerst zäh.
+19,4,13,Ist äußerst ausdauernd.
 19,4,14,Hat eine gute Ausdauer.
 19,4,15,Ist beharrlich.
-19,4,16,Ist gerne schnell unterwegs.
+19,4,16,Liebt es zu rennen.
 19,4,17,Achtet auf Geräusche.
 19,4,18,Ist ungestüm und einfältig.
 19,4,19,Ist ein bisschen albern.
@@ -2324,7 +1724,7 @@ version_group_id,language_id,characteristic_id,name
 19,5,13,È molto ostinato.
 19,5,14,È molto paziente.
 19,5,15,È molto tenace.
-19,5,16,Adora andare veloce.
+19,5,16,Adora correre.
 19,5,17,Fa attenzione ai suoni.
 19,5,18,È irruente e semplice.
 19,5,19,È una specie di buffone.
@@ -2354,7 +1754,7 @@ version_group_id,language_id,characteristic_id,name
 19,6,13,Es muy persistente.
 19,6,14,Se caracteriza por ser muy resistente.
 19,6,15,Es muy perseverante.
-19,6,16,Le gusta ir muy rápido.
+19,6,16,Le gusta correr.
 19,6,17,Siempre tiene el oído alerta.
 19,6,18,Resulta algo impetuoso y bobo.
 19,6,19,Es un poco payaso.
@@ -2519,66 +1919,66 @@ version_group_id,language_id,characteristic_id,name
 20,1,28,まけんきが　つよい。
 20,1,29,まけずぎらい。
 20,1,30,ちょっぴり　ごうじょう。
-20,2,1,It loves to eat!
-20,2,2,It takes plenty of siestas!
-20,2,3,It nods off a lot!
-20,2,4,It scatters things often!
-20,2,5,It likes to relax!
-20,2,6,It’s proud of its power!
-20,2,7,It likes to thrash about!
-20,2,8,It’s a little quick tempered!
-20,2,9,It likes to fight!
-20,2,10,It’s quick tempered!
-20,2,11,It has a sturdy body!
-20,2,12,It’s capable of taking hits!
-20,2,13,It’s highly persistent!
-20,2,14,It has good endurance!
-20,2,15,It has good perseverance!
-20,2,16,It likes to run!
-20,2,17,It’s alert to sounds!
-20,2,18,It’s impetuous and silly!
-20,2,19,It’s somewhat of a clown!
-20,2,20,It’s quick to flee!
-20,2,21,It’s highly curious!
-20,2,22,It’s mischievous!
-20,2,23,It’s thoroughly cunning!
-20,2,24,It’s often lost in thought!
-20,2,25,It’s very finicky!
-20,2,26,It’s strong willed!
-20,2,27,It’s somewhat vain!
-20,2,28,It’s strongly defiant!
-20,2,29,It hates to lose!
-20,2,30,It’s somewhat stubborn!
-20,3,1,Il adore manger.
-20,3,2,Il s’assoupit souvent.
-20,3,3,Il dort beaucoup.
-20,3,4,Il éparpille souvent les choses.
-20,3,5,Il aime se détendre.
-20,3,6,Il est fier de sa puissance.
-20,3,7,Il aime se démener.
-20,3,8,Il est un peu coléreux.
-20,3,9,Il aime combattre.
-20,3,10,Il s’emporte facilement.
-20,3,11,Il a un corps robuste.
-20,3,12,Il sait encaisser les coups.
-20,3,13,Il est très obstiné.
-20,3,14,Il a une bonne endurance.
-20,3,15,Il est persévérant.
-20,3,16,Il aime la vitesse.
-20,3,17,Il est attentif aux sons.
-20,3,18,Il est bête et impulsif.
-20,3,19,Il aime faire le pitre.
-20,3,20,Il fuit rapidement.
-20,3,21,Il est extrêmement curieux.
-20,3,22,Il est coquin.
-20,3,23,Il est très astucieux.
-20,3,24,Il est souvent dans la lune.
-20,3,25,Il est très particulier.
-20,3,26,Il est très volontaire.
-20,3,27,Il est un peu vaniteux.
-20,3,28,Il a l’esprit rebelle.
-20,3,29,Il a horreur de perdre.
-20,3,30,Il est assez entêté.
+20,2,1,Loves to eat
+20,2,2,Takes plenty of siestas
+20,2,3,Nods off a lot
+20,2,4,Scatters things often
+20,2,5,Likes to relax
+20,2,6,Proud of its power
+20,2,7,Likes to thrash about
+20,2,8,A little quick tempered
+20,2,9,Likes to fight
+20,2,10,Quick tempered
+20,2,11,Sturdy body
+20,2,12,Capable of taking hits
+20,2,13,Highly persistent
+20,2,14,Good endurance
+20,2,15,Good perseverance
+20,2,16,Likes to run
+20,2,17,Alert to sounds
+20,2,18,Impetuous and silly
+20,2,19,Somewhat of a clown
+20,2,20,Quick to flee
+20,2,21,Highly curious
+20,2,22,Mischievous
+20,2,23,Thoroughly cunning
+20,2,24,Often lost in thought
+20,2,25,Very finicky
+20,2,26,Strong willed
+20,2,27,Somewhat vain
+20,2,28,Strongly defiant
+20,2,29,Hates to lose
+20,2,30,Somewhat stubborn
+20,3,1,Adore manger.
+20,3,2,S’assoupit souvent.
+20,3,3,Dort beaucoup.
+20,3,4,Éparpille des choses.
+20,3,5,Aime se détendre.
+20,3,6,Est fier de sa puissance.
+20,3,7,Aime se démener.
+20,3,8,Un peu coléreux.
+20,3,9,Aime combattre.
+20,3,10,S’emporte facilement.
+20,3,11,Corps robuste.
+20,3,12,Sait encaisser les coups.
+20,3,13,Très obstiné.
+20,3,14,Bonne endurance.
+20,3,15,Persévérant.
+20,3,16,Aime courir.
+20,3,17,Attentif aux sons.
+20,3,18,Bête et impulsif.
+20,3,19,Aime faire le pitre.
+20,3,20,Fuit rapidement.
+20,3,21,Extrêmement curieux.
+20,3,22,Coquin.
+20,3,23,Très astucieux.
+20,3,24,Souvent dans la lune.
+20,3,25,Très particulier.
+20,3,26,Très volontaire.
+20,3,27,Un peu vaniteux.
+20,3,28,Esprit rebelle.
+20,3,29,A horreur de perdre.
+20,3,30,Assez entêté.
 20,4,1,Liebt es zu essen.
 20,4,2,Nickt oft ein.
 20,4,3,Schläft gern.
@@ -2591,10 +1991,10 @@ version_group_id,language_id,characteristic_id,name
 20,4,10,Ist impulsiv.
 20,4,11,Hat einen robusten Körper.
 20,4,12,Kann Treffer gut verkraften.
-20,4,13,Ist äußerst zäh.
+20,4,13,Ist äußerst ausdauernd.
 20,4,14,Hat eine gute Ausdauer.
 20,4,15,Ist beharrlich.
-20,4,16,Ist gerne schnell unterwegs.
+20,4,16,Liebt es zu rennen.
 20,4,17,Achtet auf Geräusche.
 20,4,18,Ist ungestüm und einfältig.
 20,4,19,Ist ein bisschen albern.
@@ -2624,7 +2024,7 @@ version_group_id,language_id,characteristic_id,name
 20,5,13,È molto ostinato.
 20,5,14,È molto paziente.
 20,5,15,È molto tenace.
-20,5,16,Adora andare veloce.
+20,5,16,Adora correre.
 20,5,17,Fa attenzione ai suoni.
 20,5,18,È irruente e semplice.
 20,5,19,È una specie di buffone.
@@ -2644,28 +2044,28 @@ version_group_id,language_id,characteristic_id,name
 20,6,3,Duerme mucho.
 20,6,4,Suele desordenar cosas.
 20,6,5,Le gusta relajarse.
-20,6,6,Se enorgullece de su fuerza.
+20,6,6,Está orgulloso de su fuerza.
 20,6,7,Le gusta revolverse.
 20,6,8,A veces se enfada.
 20,6,9,Le gusta luchar.
 20,6,10,Tiene mal genio.
 20,6,11,Se caracteriza por su cuerpo resistente.
-20,6,12,Encaja bien los ataques.
+20,6,12,Es un buen fajador.
 20,6,13,Es muy persistente.
 20,6,14,Se caracteriza por ser muy resistente.
 20,6,15,Es muy perseverante.
-20,6,16,Le gusta ir muy rápido.
+20,6,16,Le gusta correr.
 20,6,17,Siempre tiene el oído alerta.
-20,6,18,Es de carácter simple e impetuoso.
-20,6,19,Le encanta hacer payasadas.
+20,6,18,Resulta algo impetuoso y bobo.
+20,6,19,Es un poco payaso.
 20,6,20,Huye rápido.
-20,6,21,Siente mucha curiosidad por todo.
+20,6,21,Es extremadamente curioso.
 20,6,22,Le gusta hacer travesuras.
-20,6,23,Es muy sagaz.
+20,6,23,Es muy astuto.
 20,6,24,A menudo está en Babia.
-20,6,25,Es muy tiquismiquis.
-20,6,26,Se distingue por su gran fuerza de voluntad.
-20,6,27,Es un poco petulante.
+20,6,25,Es muy melindroso.
+20,6,26,Se distingue por ser muy voluntarioso.
+20,6,27,Es algo orgulloso.
 20,6,28,Es muy insolente.
 20,6,29,Odia perder.
 20,6,30,Es un poco cabezota.
@@ -2819,66 +2219,66 @@ version_group_id,language_id,characteristic_id,name
 21,1,28,まけんきが　つよい。
 21,1,29,まけずぎらい。
 21,1,30,ちょっぴり　ごうじょう。
-21,2,1,It loves to eat!
-21,2,2,It takes plenty of siestas!
-21,2,3,It nods off a lot!
-21,2,4,It scatters things often!
-21,2,5,It likes to relax!
-21,2,6,It’s proud of its power!
-21,2,7,It likes to thrash about!
-21,2,8,It’s a little quick tempered!
-21,2,9,It likes to fight!
-21,2,10,It’s quick tempered!
-21,2,11,It has a sturdy body!
-21,2,12,It’s capable of taking hits!
-21,2,13,It’s highly persistent!
-21,2,14,It has good endurance!
-21,2,15,It has good perseverance!
-21,2,16,It likes to run!
-21,2,17,It’s alert to sounds!
-21,2,18,It’s impetuous and silly!
-21,2,19,It’s somewhat of a clown!
-21,2,20,It’s quick to flee!
-21,2,21,It’s highly curious!
-21,2,22,It’s mischievous!
-21,2,23,It’s thoroughly cunning!
-21,2,24,It’s often lost in thought!
-21,2,25,It’s very finicky!
-21,2,26,It’s strong willed!
-21,2,27,It’s somewhat vain!
-21,2,28,It’s strongly defiant!
-21,2,29,It hates to lose!
-21,2,30,It’s somewhat stubborn!
-21,3,1,Il adore manger.
-21,3,2,Il s’assoupit souvent.
-21,3,3,Il dort beaucoup.
-21,3,4,Il éparpille souvent les choses.
-21,3,5,Il aime se détendre.
-21,3,6,Il est fier de sa puissance.
-21,3,7,Il aime se démener.
-21,3,8,Il est un peu coléreux.
-21,3,9,Il aime combattre.
-21,3,10,Il s’emporte facilement.
-21,3,11,Il a un corps robuste.
-21,3,12,Il sait encaisser les coups.
-21,3,13,Il est très obstiné.
-21,3,14,Il a une bonne endurance.
-21,3,15,Il est persévérant.
-21,3,16,Il aime la vitesse.
-21,3,17,Il est attentif aux sons.
-21,3,18,Il est bête et impulsif.
-21,3,19,Il aime faire le pitre.
-21,3,20,Il fuit rapidement.
-21,3,21,Il est extrêmement curieux.
-21,3,22,Il est coquin.
-21,3,23,Il est très astucieux.
-21,3,24,Il est souvent dans la lune.
-21,3,25,Il est très particulier.
-21,3,26,Il est très volontaire.
-21,3,27,Il est un peu vaniteux.
-21,3,28,Il a l’esprit rebelle.
-21,3,29,Il a horreur de perdre.
-21,3,30,Il est assez entêté.
+21,2,1,Loves to eat
+21,2,2,Takes plenty of siestas
+21,2,3,Nods off a lot
+21,2,4,Scatters things often
+21,2,5,Likes to relax
+21,2,6,Proud of its power
+21,2,7,Likes to thrash about
+21,2,8,A little quick tempered
+21,2,9,Likes to fight
+21,2,10,Quick tempered
+21,2,11,Sturdy body
+21,2,12,Capable of taking hits
+21,2,13,Highly persistent
+21,2,14,Good endurance
+21,2,15,Good perseverance
+21,2,16,Likes to run
+21,2,17,Alert to sounds
+21,2,18,Impetuous and silly
+21,2,19,Somewhat of a clown
+21,2,20,Quick to flee
+21,2,21,Highly curious
+21,2,22,Mischievous
+21,2,23,Thoroughly cunning
+21,2,24,Often lost in thought
+21,2,25,Very finicky
+21,2,26,Strong willed
+21,2,27,Somewhat vain
+21,2,28,Strongly defiant
+21,2,29,Hates to lose
+21,2,30,Somewhat stubborn
+21,3,1,Adore manger
+21,3,2,S’assoupit souvent
+21,3,3,Dort beaucoup
+21,3,4,Éparpille des choses
+21,3,5,Aime se détendre
+21,3,6,Est fier de sa puissance
+21,3,7,Aime se démener
+21,3,8,Un peu coléreux
+21,3,9,Aime combattre
+21,3,10,S’emporte facilement
+21,3,11,Corps robuste
+21,3,12,Sait encaisser les coups
+21,3,13,Très obstiné
+21,3,14,Bonne endurance
+21,3,15,Persévérant
+21,3,16,Aime la vitesse
+21,3,17,Attentif aux sons
+21,3,18,Bête et impulsif
+21,3,19,Aime faire le pitre
+21,3,20,Fuit rapidement
+21,3,21,Extrêmement curieux
+21,3,22,Coquin
+21,3,23,Très astucieux
+21,3,24,Souvent dans la lune
+21,3,25,Très particulier
+21,3,26,Très volontaire
+21,3,27,Un peu vaniteux
+21,3,28,Esprit rebelle
+21,3,29,A horreur de perdre
+21,3,30,Assez entêté
 21,4,1,Liebt es zu essen.
 21,4,2,Nickt oft ein.
 21,4,3,Schläft gern.
@@ -2944,28 +2344,28 @@ version_group_id,language_id,characteristic_id,name
 21,6,3,Duerme mucho.
 21,6,4,Suele desordenar cosas.
 21,6,5,Le gusta relajarse.
-21,6,6,Se enorgullece de su fuerza.
+21,6,6,Está orgulloso de su fuerza.
 21,6,7,Le gusta revolverse.
 21,6,8,A veces se enfada.
 21,6,9,Le gusta luchar.
 21,6,10,Tiene mal genio.
 21,6,11,Se caracteriza por su cuerpo resistente.
-21,6,12,Encaja bien los ataques.
+21,6,12,Es un buen fajador.
 21,6,13,Es muy persistente.
 21,6,14,Se caracteriza por ser muy resistente.
 21,6,15,Es muy perseverante.
 21,6,16,Le gusta ir muy rápido.
 21,6,17,Siempre tiene el oído alerta.
-21,6,18,Es de carácter simple e impetuoso.
-21,6,19,Le encanta hacer payasadas.
+21,6,18,Resulta algo impetuoso y bobo.
+21,6,19,Es un poco payaso.
 21,6,20,Huye rápido.
-21,6,21,Siente mucha curiosidad por todo.
+21,6,21,Es extremadamente curioso.
 21,6,22,Le gusta hacer travesuras.
-21,6,23,Es muy sagaz.
+21,6,23,Es muy astuto.
 21,6,24,A menudo está en Babia.
-21,6,25,Es muy tiquismiquis.
-21,6,26,Se distingue por su gran fuerza de voluntad.
-21,6,27,Es un poco petulante.
+21,6,25,Es muy melindroso.
+21,6,26,Se distingue por ser muy voluntarioso.
+21,6,27,Es algo orgulloso.
 21,6,28,Es muy insolente.
 21,6,29,Odia perder.
 21,6,30,Es un poco cabezota.
@@ -3389,36 +2789,36 @@ version_group_id,language_id,characteristic_id,name
 22,10,28,爭強好勝。
 22,10,29,不服輸。
 22,10,30,有一點點固執。
-23,1,1,食べるのが　大好き。
-23,1,2,昼寝を　よくする。
-23,1,3,居眠りが　多い。
-23,1,4,ものを　よく　散らかす。
-23,1,5,のんびりするのが　好き。
-23,1,6,力が　自慢。
-23,1,7,暴れることが　好き。
-23,1,8,ちょっと　怒りっぽい。
-23,1,9,ケンカを　するのが　好き。
-23,1,10,血の気が　多い。
-23,1,11,体が　丈夫。
-23,1,12,打たれ強い。
-23,1,13,粘り強い。
-23,1,14,辛抱強い。
-23,1,15,我慢強い。
-23,1,16,駆けっこが　好き。
-23,1,17,物音に　敏感。
+23,1,1,たべるのが　だいすき。
+23,1,2,ひるねを　よくする。
+23,1,3,いねむりが　おおい。
+23,1,4,ものを　よく　ちらかす。
+23,1,5,のんびりするのが　すき。
+23,1,6,ちからが　じまん。
+23,1,7,あばれることが　すき。
+23,1,8,ちょっと　おこりっぽい。
+23,1,9,ケンカを　するのが　すき。
+23,1,10,ちのけが　おおい。
+23,1,11,からだが　じょうぶ。
+23,1,12,うたれ　づよい。
+23,1,13,ねばり　づよい。
+23,1,14,しんぼう　づよい。
+23,1,15,がまん　づよい。
+23,1,16,かけっこが　すき。
+23,1,17,ものおとに　びんかん。
 23,1,18,おっちょこちょい。
-23,1,19,すこし　お調子者。
-23,1,20,逃げるのが　はやい。
-23,1,21,好奇心が　強い。
-23,1,22,イタズラが　好き。
-23,1,23,抜け目が　ない。
-23,1,24,考え事が　多い。
+23,1,19,すこし　おちょうしもの。
+23,1,20,にげるのが　はやい。
+23,1,21,こうきしんが　つよい。
+23,1,22,イタズラが　すき。
+23,1,23,ぬけめが　ない。
+23,1,24,かんがえごとが　おおい。
 23,1,25,とても　きちょうめん。
-23,1,26,気が　強い。
+23,1,26,きが　つよい。
 23,1,27,ちょっぴり　みえっぱり。
-23,1,28,負けん気が　強い。
-23,1,29,負けず嫌い。
-23,1,30,ちょっぴり　強情。
+23,1,28,まけんきが　つよい。
+23,1,29,まけずぎらい。
+23,1,30,ちょっぴり　ごうじょう。
 23,2,1,It loves to eat!
 23,2,2,It takes plenty of siestas!
 23,2,3,It nods off a lot!
@@ -3449,36 +2849,36 @@ version_group_id,language_id,characteristic_id,name
 23,2,28,It’s strongly defiant!
 23,2,29,It hates to lose!
 23,2,30,It’s somewhat stubborn!
-23,3,1,It loves to eat!
-23,3,2,It takes plenty of siestas!
-23,3,3,It nods off a lot!
-23,3,4,It scatters things often!
-23,3,5,It likes to relax!
-23,3,6,It’s proud of its power!
-23,3,7,It likes to thrash about!
-23,3,8,It’s a little quick tempered!
-23,3,9,It likes to fight!
-23,3,10,It’s quick tempered!
-23,3,11,It has a sturdy body!
-23,3,12,It’s capable of taking hits!
-23,3,13,It’s highly persistent!
-23,3,14,It has good endurance!
-23,3,15,It has good perseverance!
-23,3,16,It likes to run!
-23,3,17,It’s alert to sounds!
-23,3,18,It’s impetuous and silly!
-23,3,19,It’s somewhat of a clown!
-23,3,20,It’s quick to flee!
-23,3,21,It’s highly curious!
-23,3,22,It’s mischievous!
-23,3,23,It’s thoroughly cunning!
-23,3,24,It’s often lost in thought!
-23,3,25,It’s very finicky!
-23,3,26,It’s strong willed!
-23,3,27,It’s somewhat vain!
-23,3,28,It’s strongly defiant!
-23,3,29,It hates to lose!
-23,3,30,It’s somewhat stubborn!
+23,3,1,Il adore manger.
+23,3,2,Il s’assoupit souvent.
+23,3,3,Il dort beaucoup.
+23,3,4,Il éparpille souvent les choses.
+23,3,5,Il aime se détendre.
+23,3,6,Il est fier de sa puissance.
+23,3,7,Il aime se démener.
+23,3,8,Il est un peu coléreux.
+23,3,9,Il aime combattre.
+23,3,10,Il s’emporte facilement.
+23,3,11,Il a un corps robuste.
+23,3,12,Il sait encaisser les coups.
+23,3,13,Il est très obstiné.
+23,3,14,Il a une bonne endurance.
+23,3,15,Il est persévérant.
+23,3,16,Il aime la vitesse.
+23,3,17,Il est attentif aux sons.
+23,3,18,Il est bête et impulsif.
+23,3,19,Il aime faire le pitre.
+23,3,20,Il fuit rapidement.
+23,3,21,Il est extrêmement curieux.
+23,3,22,Il est coquin.
+23,3,23,Il est très astucieux.
+23,3,24,Il est souvent dans la lune.
+23,3,25,Il est très particulier.
+23,3,26,Il est très volontaire.
+23,3,27,Il est un peu vaniteux.
+23,3,28,Il a l’esprit rebelle.
+23,3,29,Il a horreur de perdre.
+23,3,30,Il est assez entêté.
 23,4,1,Liebt es zu essen.
 23,4,2,Nickt oft ein.
 23,4,3,Schläft gern.
@@ -3689,3 +3089,603 @@ version_group_id,language_id,characteristic_id,name
 23,10,28,爭強好勝。
 23,10,29,不服輸。
 23,10,30,有一點點固執。
+24,1,1,たべるのが　だいすき。
+24,1,2,ひるねを　よくする。
+24,1,3,いねむりが　おおい。
+24,1,4,ものを　よく　ちらかす。
+24,1,5,のんびりするのが　すき。
+24,1,6,ちからが　じまん。
+24,1,7,あばれることが　すき。
+24,1,8,ちょっと　おこりっぽい。
+24,1,9,ケンカを　するのが　すき。
+24,1,10,ちのけが　おおい。
+24,1,11,からだが　じょうぶ。
+24,1,12,うたれ　づよい。
+24,1,13,ねばり　づよい。
+24,1,14,しんぼう　づよい。
+24,1,15,がまん　づよい。
+24,1,16,かけっこが　すき。
+24,1,17,ものおとに　びんかん。
+24,1,18,おっちょこちょい。
+24,1,19,すこし　おちょうしもの。
+24,1,20,にげるのが　はやい。
+24,1,21,こうきしんが　つよい。
+24,1,22,イタズラが　すき。
+24,1,23,ぬけめが　ない。
+24,1,24,かんがえごとが　おおい。
+24,1,25,とても　きちょうめん。
+24,1,26,きが　つよい。
+24,1,27,ちょっぴり　みえっぱり。
+24,1,28,まけんきが　つよい。
+24,1,29,まけずぎらい。
+24,1,30,ちょっぴり　ごうじょう。
+24,2,1,It loves to eat!
+24,2,2,It takes plenty of siestas!
+24,2,3,It nods off a lot!
+24,2,4,It scatters things often!
+24,2,5,It likes to relax!
+24,2,6,It’s proud of its power!
+24,2,7,It likes to thrash about!
+24,2,8,It’s a little quick tempered!
+24,2,9,It likes to fight!
+24,2,10,It’s quick tempered!
+24,2,11,It has a sturdy body!
+24,2,12,It’s capable of taking hits!
+24,2,13,It’s highly persistent!
+24,2,14,It has good endurance!
+24,2,15,It has good perseverance!
+24,2,16,It likes to run!
+24,2,17,It’s alert to sounds!
+24,2,18,It’s impetuous and silly!
+24,2,19,It’s somewhat of a clown!
+24,2,20,It’s quick to flee!
+24,2,21,It’s highly curious!
+24,2,22,It’s mischievous!
+24,2,23,It’s thoroughly cunning!
+24,2,24,It’s often lost in thought!
+24,2,25,It’s very finicky!
+24,2,26,It’s strong willed!
+24,2,27,It’s somewhat vain!
+24,2,28,It’s strongly defiant!
+24,2,29,It hates to lose!
+24,2,30,It’s somewhat stubborn!
+24,3,1,Il adore manger.
+24,3,2,Il s’assoupit souvent.
+24,3,3,Il dort beaucoup.
+24,3,4,Il éparpille souvent les choses.
+24,3,5,Il aime se détendre.
+24,3,6,Il est fier de sa puissance.
+24,3,7,Il aime se démener.
+24,3,8,Il est un peu coléreux.
+24,3,9,Il aime combattre.
+24,3,10,Il s’emporte facilement.
+24,3,11,Il a un corps robuste.
+24,3,12,Il sait encaisser les coups.
+24,3,13,Il est très obstiné.
+24,3,14,Il a une bonne endurance.
+24,3,15,Il est persévérant.
+24,3,16,Il aime la vitesse.
+24,3,17,Il est attentif aux sons.
+24,3,18,Il est bête et impulsif.
+24,3,19,Il aime faire le pitre.
+24,3,20,Il fuit rapidement.
+24,3,21,Il est extrêmement curieux.
+24,3,22,Il est coquin.
+24,3,23,Il est très astucieux.
+24,3,24,Il est souvent dans la lune.
+24,3,25,Il est très particulier.
+24,3,26,Il est très volontaire.
+24,3,27,Il est un peu vaniteux.
+24,3,28,Il a l’esprit rebelle.
+24,3,29,Il a horreur de perdre.
+24,3,30,Il est assez entêté.
+24,4,1,Liebt es zu essen.
+24,4,2,Nickt oft ein.
+24,4,3,Schläft gern.
+24,4,4,Macht oft Unordnung.
+24,4,5,"Mag es, sich zu entspannen."
+24,4,6,Ist stolz auf seine Stärke.
+24,4,7,Prügelt sich gern.
+24,4,8,Besitzt Temperament.
+24,4,9,Liebt Kämpfe.
+24,4,10,Ist impulsiv.
+24,4,11,Hat einen robusten Körper.
+24,4,12,Kann Treffer gut verkraften.
+24,4,13,Ist äußerst zäh.
+24,4,14,Hat eine gute Ausdauer.
+24,4,15,Ist beharrlich.
+24,4,16,Ist gerne schnell unterwegs.
+24,4,17,Achtet auf Geräusche.
+24,4,18,Ist ungestüm und einfältig.
+24,4,19,Ist ein bisschen albern.
+24,4,20,Flüchtet schnell.
+24,4,21,Ist sehr neugierig.
+24,4,22,Ist hinterhältig.
+24,4,23,Ist äußerst gerissen.
+24,4,24,Ist oft in Gedanken.
+24,4,25,Ist sehr pedantisch.
+24,4,26,Besitzt einen starken Willen.
+24,4,27,Ist etwas eitel.
+24,4,28,Ist sehr aufsässig.
+24,4,29,Hasst Niederlagen.
+24,4,30,Ist dickköpfig.
+24,5,1,Adora mangiare.
+24,5,2,Si addormenta spesso.
+24,5,3,Dorme a lungo.
+24,5,4,Lascia cose in giro.
+24,5,5,Adora rilassarsi.
+24,5,6,La forza è il suo vanto.
+24,5,7,Adora dimenarsi.
+24,5,8,Si arrabbia facilmente.
+24,5,9,Adora lottare.
+24,5,10,È facilmente irritabile.
+24,5,11,Ha un corpo robusto.
+24,5,12,Incassa bene i colpi.
+24,5,13,È molto ostinato.
+24,5,14,È molto paziente.
+24,5,15,È molto tenace.
+24,5,16,Adora andare veloce.
+24,5,17,Fa attenzione ai suoni.
+24,5,18,È irruente e semplice.
+24,5,19,È una specie di buffone.
+24,5,20,Sa fuggire velocemente.
+24,5,21,È un grande ficcanaso.
+24,5,22,È alquanto vivace.
+24,5,23,È estremamente sagace.
+24,5,24,Si perde nel suo mondo.
+24,5,25,È molto esigente.
+24,5,26,Sa il fatto suo.
+24,5,27,È abbastanza superficiale.
+24,5,28,È molto insolente.
+24,5,29,Non sopporta perdere.
+24,5,30,È un po’ testardo.
+24,6,1,Le encanta comer.
+24,6,2,A menudo se duerme.
+24,6,3,Duerme mucho.
+24,6,4,Suele desordenar cosas.
+24,6,5,Le gusta relajarse.
+24,6,6,Se enorgullece de su fuerza.
+24,6,7,Le gusta revolverse.
+24,6,8,A veces se enfada.
+24,6,9,Le gusta luchar.
+24,6,10,Tiene mal genio.
+24,6,11,Se caracteriza por su cuerpo resistente.
+24,6,12,Encaja bien los ataques.
+24,6,13,Es muy persistente.
+24,6,14,Se caracteriza por ser muy resistente.
+24,6,15,Es muy perseverante.
+24,6,16,Le gusta ir muy rápido.
+24,6,17,Siempre tiene el oído alerta.
+24,6,18,Es de carácter simple e impetuoso.
+24,6,19,Le encanta hacer payasadas.
+24,6,20,Huye rápido.
+24,6,21,Siente mucha curiosidad por todo.
+24,6,22,Le gusta hacer travesuras.
+24,6,23,Es muy sagaz.
+24,6,24,A menudo está en Babia.
+24,6,25,Es muy tiquismiquis.
+24,6,26,Se distingue por su gran fuerza de voluntad.
+24,6,27,Es un poco petulante.
+24,6,28,Es muy insolente.
+24,6,29,Odia perder.
+24,6,30,Es un poco cabezota.
+24,7,1,먹는 것을 제일 좋아함.
+24,7,2,낮잠을 잘 잠.
+24,7,3,말뚝잠이 많음.
+24,7,4,물건을 잘 어지름.
+24,7,5,유유자적함을 좋아함.
+24,7,6,힘자랑이 특기임.
+24,7,7,난동부리기를 좋아함.
+24,7,8,약간 화를 잘 내는 성미임.
+24,7,9,싸움을 좋아함.
+24,7,10,혈기가 왕성함.
+24,7,11,몸이 튼튼함.
+24,7,12,맷집이 강함.
+24,7,13,끈질김.
+24,7,14,인내심이 강함.
+24,7,15,잘 참음.
+24,7,16,달리기를 좋아함.
+24,7,17,주위 소리에 민감함.
+24,7,18,촐랑대는 성격임.
+24,7,19,약간 우쭐쟁이임.
+24,7,20,도망에는 선수임.
+24,7,21,호기심이 강함.
+24,7,22,장난을 좋아함.
+24,7,23,빈틈이 없음.
+24,7,24,걱정거리가 많음.
+24,7,25,매우 꼼꼼함.
+24,7,26,기가 센 성격임.
+24,7,27,조금 겉치레를 좋아함.
+24,7,28,오기가 센 성격임.
+24,7,29,지기 싫어함.
+24,7,30,조금 고집통이임.
+24,8,1,食べるのが　大好き。
+24,8,2,昼寝を　よくする。
+24,8,3,居眠りが　多い。
+24,8,4,ものを　よく　散らかす。
+24,8,5,のんびりするのが　好き。
+24,8,6,力が　自慢。
+24,8,7,暴れることが　好き。
+24,8,8,ちょっと　怒りっぽい。
+24,8,9,ケンカを　するのが　好き。
+24,8,10,血の気が　多い。
+24,8,11,体が　丈夫。
+24,8,12,打たれ強い。
+24,8,13,粘り強い。
+24,8,14,辛抱強い。
+24,8,15,我慢強い。
+24,8,16,駆けっこが　好き。
+24,8,17,物音に　敏感。
+24,8,18,おっちょこちょい。
+24,8,19,すこし　お調子者。
+24,8,20,逃げるのが　はやい。
+24,8,21,好奇心が　強い。
+24,8,22,イタズラが　好き。
+24,8,23,抜け目が　ない。
+24,8,24,考え事が　多い。
+24,8,25,とても　きちょうめん。
+24,8,26,気が　強い。
+24,8,27,ちょっぴり　みえっぱり。
+24,8,28,負けん気が　強い。
+24,8,29,負けず嫌い。
+24,8,30,ちょっぴり　強情。
+24,9,1,非常喜欢吃东西。
+24,9,2,经常睡午觉。
+24,9,3,常常打瞌睡。
+24,9,4,经常乱扔东西。
+24,9,5,喜欢悠然自在。
+24,9,6,以力气大为傲。
+24,9,7,喜欢胡闹。
+24,9,8,有点容易生气。
+24,9,9,喜欢打架。
+24,9,10,血气方刚。
+24,9,11,身体强壮。
+24,9,12,抗打能力强。
+24,9,13,顽强不屈。
+24,9,14,能吃苦耐劳。
+24,9,15,善于忍耐。
+24,9,16,喜欢比谁跑得快。
+24,9,17,对声音敏感。
+24,9,18,冒冒失失。
+24,9,19,有点容易得意忘形。
+24,9,20,逃得快。
+24,9,21,好奇心强。
+24,9,22,喜欢恶作剧。
+24,9,23,做事万无一失。
+24,9,24,经常思考。
+24,9,25,一丝不苟。
+24,9,26,性格强势。
+24,9,27,有一点点爱慕虚荣。
+24,9,28,争强好胜。
+24,9,29,不服输。
+24,9,30,有一点点固执。
+24,10,1,非常喜歡吃東西。
+24,10,2,經常睡午覺。
+24,10,3,常常打瞌睡。
+24,10,4,經常亂扔東西。
+24,10,5,喜歡悠然自在。
+24,10,6,以力氣大為傲。
+24,10,7,喜歡胡鬧。
+24,10,8,有點容易生氣。
+24,10,9,喜歡打架。
+24,10,10,血氣方剛。
+24,10,11,身體強壯。
+24,10,12,抗打能力強。
+24,10,13,頑強不屈。
+24,10,14,能吃苦耐勞。
+24,10,15,善於忍耐。
+24,10,16,喜歡比誰跑得快。
+24,10,17,對聲音敏感。
+24,10,18,冒冒失失。
+24,10,19,有點容易得意忘形。
+24,10,20,逃得快。
+24,10,21,好奇心強。
+24,10,22,喜歡惡作劇。
+24,10,23,做事萬無一失。
+24,10,24,經常思考。
+24,10,25,一絲不苟。
+24,10,26,性格強勢。
+24,10,27,有一點點愛慕虛榮。
+24,10,28,爭強好勝。
+24,10,29,不服輸。
+24,10,30,有一點點固執。
+25,1,1,食べるのが　大好き。
+25,1,2,昼寝を　よくする。
+25,1,3,居眠りが　多い。
+25,1,4,ものを　よく　散らかす。
+25,1,5,のんびりするのが　好き。
+25,1,6,力が　自慢。
+25,1,7,暴れることが　好き。
+25,1,8,ちょっと　怒りっぽい。
+25,1,9,ケンカを　するのが　好き。
+25,1,10,血の気が　多い。
+25,1,11,体が　丈夫。
+25,1,12,打たれ強い。
+25,1,13,粘り強い。
+25,1,14,辛抱強い。
+25,1,15,我慢強い。
+25,1,16,駆けっこが　好き。
+25,1,17,物音に　敏感。
+25,1,18,おっちょこちょい。
+25,1,19,すこし　お調子者。
+25,1,20,逃げるのが　はやい。
+25,1,21,好奇心が　強い。
+25,1,22,イタズラが　好き。
+25,1,23,抜け目が　ない。
+25,1,24,考え事が　多い。
+25,1,25,とても　きちょうめん。
+25,1,26,気が　強い。
+25,1,27,ちょっぴり　みえっぱり。
+25,1,28,負けん気が　強い。
+25,1,29,負けず嫌い。
+25,1,30,ちょっぴり　強情。
+25,2,1,It loves to eat!
+25,2,2,It takes plenty of siestas!
+25,2,3,It nods off a lot!
+25,2,4,It scatters things often!
+25,2,5,It likes to relax!
+25,2,6,It’s proud of its power!
+25,2,7,It likes to thrash about!
+25,2,8,It’s a little quick tempered!
+25,2,9,It likes to fight!
+25,2,10,It’s quick tempered!
+25,2,11,It has a sturdy body!
+25,2,12,It’s capable of taking hits!
+25,2,13,It’s highly persistent!
+25,2,14,It has good endurance!
+25,2,15,It has good perseverance!
+25,2,16,It likes to run!
+25,2,17,It’s alert to sounds!
+25,2,18,It’s impetuous and silly!
+25,2,19,It’s somewhat of a clown!
+25,2,20,It’s quick to flee!
+25,2,21,It’s highly curious!
+25,2,22,It’s mischievous!
+25,2,23,It’s thoroughly cunning!
+25,2,24,It’s often lost in thought!
+25,2,25,It’s very finicky!
+25,2,26,It’s strong willed!
+25,2,27,It’s somewhat vain!
+25,2,28,It’s strongly defiant!
+25,2,29,It hates to lose!
+25,2,30,It’s somewhat stubborn!
+25,3,1,It loves to eat!
+25,3,2,It takes plenty of siestas!
+25,3,3,It nods off a lot!
+25,3,4,It scatters things often!
+25,3,5,It likes to relax!
+25,3,6,It’s proud of its power!
+25,3,7,It likes to thrash about!
+25,3,8,It’s a little quick tempered!
+25,3,9,It likes to fight!
+25,3,10,It’s quick tempered!
+25,3,11,It has a sturdy body!
+25,3,12,It’s capable of taking hits!
+25,3,13,It’s highly persistent!
+25,3,14,It has good endurance!
+25,3,15,It has good perseverance!
+25,3,16,It likes to run!
+25,3,17,It’s alert to sounds!
+25,3,18,It’s impetuous and silly!
+25,3,19,It’s somewhat of a clown!
+25,3,20,It’s quick to flee!
+25,3,21,It’s highly curious!
+25,3,22,It’s mischievous!
+25,3,23,It’s thoroughly cunning!
+25,3,24,It’s often lost in thought!
+25,3,25,It’s very finicky!
+25,3,26,It’s strong willed!
+25,3,27,It’s somewhat vain!
+25,3,28,It’s strongly defiant!
+25,3,29,It hates to lose!
+25,3,30,It’s somewhat stubborn!
+25,4,1,Liebt es zu essen.
+25,4,2,Nickt oft ein.
+25,4,3,Schläft gern.
+25,4,4,Macht oft Unordnung.
+25,4,5,"Mag es, sich zu entspannen."
+25,4,6,Ist stolz auf seine Stärke.
+25,4,7,Prügelt sich gern.
+25,4,8,Besitzt Temperament.
+25,4,9,Liebt Kämpfe.
+25,4,10,Ist impulsiv.
+25,4,11,Hat einen robusten Körper.
+25,4,12,Kann Treffer gut verkraften.
+25,4,13,Ist äußerst zäh.
+25,4,14,Hat eine gute Ausdauer.
+25,4,15,Ist beharrlich.
+25,4,16,Ist gerne schnell unterwegs.
+25,4,17,Achtet auf Geräusche.
+25,4,18,Ist ungestüm und einfältig.
+25,4,19,Ist ein bisschen albern.
+25,4,20,Flüchtet schnell.
+25,4,21,Ist sehr neugierig.
+25,4,22,Ist hinterhältig.
+25,4,23,Ist äußerst gerissen.
+25,4,24,Ist oft in Gedanken.
+25,4,25,Ist sehr pedantisch.
+25,4,26,Besitzt einen starken Willen.
+25,4,27,Ist etwas eitel.
+25,4,28,Ist sehr aufsässig.
+25,4,29,Hasst Niederlagen.
+25,4,30,Ist dickköpfig.
+25,5,1,Adora mangiare.
+25,5,2,Si addormenta spesso.
+25,5,3,Dorme a lungo.
+25,5,4,Lascia cose in giro.
+25,5,5,Adora rilassarsi.
+25,5,6,La forza è il suo vanto.
+25,5,7,Adora dimenarsi.
+25,5,8,Si arrabbia facilmente.
+25,5,9,Adora lottare.
+25,5,10,È facilmente irritabile.
+25,5,11,Ha un corpo robusto.
+25,5,12,Incassa bene i colpi.
+25,5,13,È molto ostinato.
+25,5,14,È molto paziente.
+25,5,15,È molto tenace.
+25,5,16,Adora andare veloce.
+25,5,17,Fa attenzione ai suoni.
+25,5,18,È irruente e semplice.
+25,5,19,È una specie di buffone.
+25,5,20,Sa fuggire velocemente.
+25,5,21,È un grande ficcanaso.
+25,5,22,È alquanto vivace.
+25,5,23,È estremamente sagace.
+25,5,24,Si perde nel suo mondo.
+25,5,25,È molto esigente.
+25,5,26,Sa il fatto suo.
+25,5,27,È abbastanza superficiale.
+25,5,28,È molto insolente.
+25,5,29,Non sopporta perdere.
+25,5,30,È un po’ testardo.
+25,6,1,Le encanta comer.
+25,6,2,A menudo se duerme.
+25,6,3,Duerme mucho.
+25,6,4,Suele desordenar cosas.
+25,6,5,Le gusta relajarse.
+25,6,6,Se enorgullece de su fuerza.
+25,6,7,Le gusta revolverse.
+25,6,8,A veces se enfada.
+25,6,9,Le gusta luchar.
+25,6,10,Tiene mal genio.
+25,6,11,Se caracteriza por su cuerpo resistente.
+25,6,12,Encaja bien los ataques.
+25,6,13,Es muy persistente.
+25,6,14,Se caracteriza por ser muy resistente.
+25,6,15,Es muy perseverante.
+25,6,16,Le gusta ir muy rápido.
+25,6,17,Siempre tiene el oído alerta.
+25,6,18,Es de carácter simple e impetuoso.
+25,6,19,Le encanta hacer payasadas.
+25,6,20,Huye rápido.
+25,6,21,Siente mucha curiosidad por todo.
+25,6,22,Le gusta hacer travesuras.
+25,6,23,Es muy sagaz.
+25,6,24,A menudo está en Babia.
+25,6,25,Es muy tiquismiquis.
+25,6,26,Se distingue por su gran fuerza de voluntad.
+25,6,27,Es un poco petulante.
+25,6,28,Es muy insolente.
+25,6,29,Odia perder.
+25,6,30,Es un poco cabezota.
+25,7,1,먹는 것을 제일 좋아함.
+25,7,2,낮잠을 잘 잠.
+25,7,3,말뚝잠이 많음.
+25,7,4,물건을 잘 어지름.
+25,7,5,유유자적함을 좋아함.
+25,7,6,힘자랑이 특기임.
+25,7,7,난동부리기를 좋아함.
+25,7,8,약간 화를 잘 내는 성미임.
+25,7,9,싸움을 좋아함.
+25,7,10,혈기가 왕성함.
+25,7,11,몸이 튼튼함.
+25,7,12,맷집이 강함.
+25,7,13,끈질김.
+25,7,14,인내심이 강함.
+25,7,15,잘 참음.
+25,7,16,달리기를 좋아함.
+25,7,17,주위 소리에 민감함.
+25,7,18,촐랑대는 성격임.
+25,7,19,약간 우쭐쟁이임.
+25,7,20,도망에는 선수임.
+25,7,21,호기심이 강함.
+25,7,22,장난을 좋아함.
+25,7,23,빈틈이 없음.
+25,7,24,걱정거리가 많음.
+25,7,25,매우 꼼꼼함.
+25,7,26,기가 센 성격임.
+25,7,27,조금 겉치레를 좋아함.
+25,7,28,오기가 센 성격임.
+25,7,29,지기 싫어함.
+25,7,30,조금 고집통이임.
+25,8,1,食べるのが　大好き。
+25,8,2,昼寝を　よくする。
+25,8,3,居眠りが　多い。
+25,8,4,ものを　よく　散らかす。
+25,8,5,のんびりするのが　好き。
+25,8,6,力が　自慢。
+25,8,7,暴れることが　好き。
+25,8,8,ちょっと　怒りっぽい。
+25,8,9,ケンカを　するのが　好き。
+25,8,10,血の気が　多い。
+25,8,11,体が　丈夫。
+25,8,12,打たれ強い。
+25,8,13,粘り強い。
+25,8,14,辛抱強い。
+25,8,15,我慢強い。
+25,8,16,駆けっこが　好き。
+25,8,17,物音に　敏感。
+25,8,18,おっちょこちょい。
+25,8,19,すこし　お調子者。
+25,8,20,逃げるのが　はやい。
+25,8,21,好奇心が　強い。
+25,8,22,イタズラが　好き。
+25,8,23,抜け目が　ない。
+25,8,24,考え事が　多い。
+25,8,25,とても　きちょうめん。
+25,8,26,気が　強い。
+25,8,27,ちょっぴり　みえっぱり。
+25,8,28,負けん気が　強い。
+25,8,29,負けず嫌い。
+25,8,30,ちょっぴり　強情。
+25,9,1,非常喜欢吃东西。
+25,9,2,经常睡午觉。
+25,9,3,常常打瞌睡。
+25,9,4,经常乱扔东西。
+25,9,5,喜欢悠然自在。
+25,9,6,以力气大为傲。
+25,9,7,喜欢胡闹。
+25,9,8,有点容易生气。
+25,9,9,喜欢打架。
+25,9,10,血气方刚。
+25,9,11,身体强壮。
+25,9,12,抗打能力强。
+25,9,13,顽强不屈。
+25,9,14,能吃苦耐劳。
+25,9,15,善于忍耐。
+25,9,16,喜欢比谁跑得快。
+25,9,17,对声音敏感。
+25,9,18,冒冒失失。
+25,9,19,有点容易得意忘形。
+25,9,20,逃得快。
+25,9,21,好奇心强。
+25,9,22,喜欢恶作剧。
+25,9,23,做事万无一失。
+25,9,24,经常思考。
+25,9,25,一丝不苟。
+25,9,26,性格强势。
+25,9,27,有一点点爱慕虚荣。
+25,9,28,争强好胜。
+25,9,29,不服输。
+25,9,30,有一点点固执。
+25,10,1,非常喜歡吃東西。
+25,10,2,經常睡午覺。
+25,10,3,常常打瞌睡。
+25,10,4,經常亂扔東西。
+25,10,5,喜歡悠然自在。
+25,10,6,以力氣大為傲。
+25,10,7,喜歡胡鬧。
+25,10,8,有點容易生氣。
+25,10,9,喜歡打架。
+25,10,10,血氣方剛。
+25,10,11,身體強壯。
+25,10,12,抗打能力強。
+25,10,13,頑強不屈。
+25,10,14,能吃苦耐勞。
+25,10,15,善於忍耐。
+25,10,16,喜歡比誰跑得快。
+25,10,17,對聲音敏感。
+25,10,18,冒冒失失。
+25,10,19,有點容易得意忘形。
+25,10,20,逃得快。
+25,10,21,好奇心強。
+25,10,22,喜歡惡作劇。
+25,10,23,做事萬無一失。
+25,10,24,經常思考。
+25,10,25,一絲不苟。
+25,10,26,性格強勢。
+25,10,27,有一點點愛慕虛榮。
+25,10,28,爭強好勝。
+25,10,29,不服輸。
+25,10,30,有一點點固執。

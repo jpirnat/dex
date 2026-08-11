@@ -455,462 +455,6 @@ version_group_id,language_id,ability_id,name,description
 7,6,74,ENERGÍA PURA,Aumenta el ATAQUE.
 7,6,75,CAPARAZÓN,Bloquea golpes críticos.
 7,6,76,BUCLE AIRE,Anula los efectos del clima.
-8,1,1,あくしゅう,ポケモンが よりつき にくくなる
-8,1,2,あめふらし,せんとうに でると あめを ふらす
-8,1,3,かそく,ちょっとずつ すばやく なっていく
-8,1,4,カブトアーマー,わざを きゅうしょに うけない
-8,1,5,がんじょう,いちげきひっさつが きかない
-8,1,6,しめりけ,だれも じばくが できなくなる
-8,1,7,じゅうなん,まひ じょうたいに ならない
-8,1,8,すながくれ,すなあらしで かいひりつが あがる
-8,1,9,せいでんき,さわった あいてを まひさせる
-8,1,10,ちくでん,でんきを うけると かいふくする
-8,1,11,ちょすい,みずを うけると かいふくする
-8,1,12,どんかん,メロメロ じょうたいに ならない
-8,1,13,ノーてんき,てんきの えいきょうが なくなる
-8,1,14,ふくがん,わざの めいちゅうりつが あがる
-8,1,15,ふみん,ねむり じょうたいに ならない
-8,1,16,へんしょく,うけた わざの タイプに へんかする
-8,1,17,めんえき,どく じょうたいに ならない
-8,1,18,もらいび,ほのおを うけると つよくなる
-8,1,19,りんぷん,わざの ついかこうかを うけない
-8,1,20,マイペース,こんらん じょうたいに ならない
-8,1,21,きゅうばん,きゅうばんで じめんに はりつく
-8,1,22,いかく,あいての こうげきを さげる
-8,1,23,かげふみ,あいてを にげられなくする
-8,1,24,さめはだ,さわった あいてを キズつける
-8,1,25,ふしぎなまもり,こうか ばつぐん しか あたらない
-8,1,26,ふゆう,じめんタイプの わざを うけない
-8,1,27,ほうし,さわった あいてに ほうしがつく
-8,1,28,シンクロ,どく まひ やけどを あいてにうつす
-8,1,29,クリアボディ,あいてに のうりょくを さげられない
-8,1,30,しぜんかいふく,ひっこむと いじょうが なおる
-8,1,31,ひらいしん,でんきタイプの わざが じぶんにくる
-8,1,32,てんのめぐみ,わざの ついかこうかが でやすい
-8,1,33,すいすい,あめのとき すばやさが はやくなる
-8,1,34,ようりょくそ,はれのとき すばやさが はやくなる
-8,1,35,はっこう,ポケモンに そうぐう しやすくなる
-8,1,36,トレース,あいてと おなじ とくせいになる
-8,1,37,ちからもち,こうげきりょくが たかい
-8,1,38,どくのトゲ,さわったあいてに どくをあたえる
-8,1,39,せいしんりょく,ひるまない
-8,1,40,マグマのよろい,こおり じょうたいに ならない
-8,1,41,みずのベール,やけど じょうたいに ならない
-8,1,42,じりょく,はがねタイプが にげられなくなる
-8,1,43,ぼうおん,おとの わざを うけない
-8,1,44,あめうけざら,あめのとき すこしずつ かいふく
-8,1,45,すなおこし,せんとうで すなあらしを おこす
-8,1,46,プレッシャー,あいての PPが へりやすくなる
-8,1,47,あついしぼう,ほのお こおりに つよい
-8,1,48,はやおき,おきるのが はやくなる
-8,1,49,ほのおのからだ,さわった あいてを やけど させる
-8,1,50,にげあし,せんとうから にげやすい
-8,1,51,するどいめ,あいてに めいちゅうを さげられない
-8,1,52,かいりきバサミ,あいてに こうげきを さげられない
-8,1,53,ものひろい,どうぐを ひろってくる ことがある
-8,1,54,なまけ,こうげきが れんぞくで だせない
-8,1,55,はりきり,こうげきは たかいが はずれやすい
-8,1,56,メロメロボディ,さわった あいてを メロメロにする
-8,1,57,プラス,マイナスが いると つよくなる
-8,1,58,マイナス,プラスが いると つよくなる
-8,1,59,てんきや,てんきで ポワルンが へんかする
-8,1,60,ねんちゃく,どうぐを とられない
-8,1,61,だっぴ,だっぴして からだを なおす
-8,1,62,こんじょう,いじょうのとき こうげきが あがる
-8,1,63,ふしぎなうろこ,いじょうのとき ぼうぎょが あがる
-8,1,64,ヘドロえき,すいとると たいりょくが へる
-8,1,65,しんりょく,ピンチに くさの いりょくが あがる
-8,1,66,もうか,ピンチに ほのおが つよくなる
-8,1,67,げきりゅう,ピンチに みずの いりょくが あがる
-8,1,68,むしのしらせ,ピンチに むしの いりょくが あがる
-8,1,69,いしあたま,ぶつかっても はんどうを うけない
-8,1,70,ひでり,せんとうで ひざしを つよくする
-8,1,71,ありじごく,あいてを にげられなくする
-8,1,72,やるき,ねむらない
-8,1,73,しろいけむり,あいてに のうりょくを さげられない
-8,1,74,ヨガパワー,こうげきりょくが たかい
-8,1,75,シェルアーマー,わざを きゅうしょに うけない
-8,1,76,エアロック,てんきの えいきょうが なくなる
-8,2,1,STENCH,Helps repel wild POKéMON.
-8,2,2,DRIZZLE,Summons rain in battle.
-8,2,3,SPEED BOOST,Gradually boosts SPEED.
-8,2,4,BATTLE ARMOR,Blocks critical hits.
-8,2,5,STURDY,Negates 1-hit KO attacks.
-8,2,6,DAMP,Prevents self-destruction.
-8,2,7,LIMBER,Prevents paralysis.
-8,2,8,SAND VEIL,Ups evasion in a sandstorm.
-8,2,9,STATIC,Paralyzes on contact.
-8,2,10,VOLT ABSORB,Turns electricity into HP.
-8,2,11,WATER ABSORB,Changes water into HP.
-8,2,12,OBLIVIOUS,Prevents attraction.
-8,2,13,CLOUD NINE,Negates weather effects.
-8,2,14,COMPOUNDEYES,Raises accuracy.
-8,2,15,INSOMNIA,Prevents sleep.
-8,2,16,COLOR CHANGE,Changes type to foe’s move.
-8,2,17,IMMUNITY,Prevents poisoning.
-8,2,18,FLASH FIRE,Powers up if hit by fire.
-8,2,19,SHIELD DUST,Prevents added effects.
-8,2,20,OWN TEMPO,Prevents confusion.
-8,2,21,SUCTION CUPS,Firmly anchors the body.
-8,2,22,INTIMIDATE,Lowers the foe’s ATTACK.
-8,2,23,SHADOW TAG,Prevents the foe’s escape.
-8,2,24,ROUGH SKIN,Hurts to touch.
-8,2,25,WONDER GUARD,“Super effective” hits.
-8,2,26,LEVITATE,Not hit by GROUND attacks.
-8,2,27,EFFECT SPORE,Leaves spores on contact.
-8,2,28,SYNCHRONIZE,Passes on status problems.
-8,2,29,CLEAR BODY,Prevents ability reduction.
-8,2,30,NATURAL CURE,Heals upon switching out.
-8,2,31,LIGHTNINGROD,Draws electrical moves.
-8,2,32,SERENE GRACE,Promotes added effects.
-8,2,33,SWIFT SWIM,Raises SPEED in rain.
-8,2,34,CHLOROPHYLL,Raises SPEED in sunshine.
-8,2,35,ILLUMINATE,Encounter rate increases.
-8,2,36,TRACE,Copies special ability.
-8,2,37,HUGE POWER,Raises ATTACK.
-8,2,38,POISON POINT,Poisons foe on contact.
-8,2,39,INNER FOCUS,Prevents flinching.
-8,2,40,MAGMA ARMOR,Prevents freezing.
-8,2,41,WATER VEIL,Prevents burns.
-8,2,42,MAGNET PULL,Traps STEEL-type POKéMON.
-8,2,43,SOUNDPROOF,Avoids sound-based moves.
-8,2,44,RAIN DISH,Slight HP recovery in rain.
-8,2,45,SAND STREAM,Summons a sandstorm.
-8,2,46,PRESSURE,Raises foe’s PP usage.
-8,2,47,THICK FAT,Heat-and-cold protection.
-8,2,48,EARLY BIRD,Awakens quickly from sleep.
-8,2,49,FLAME BODY,Burns the foe on contact.
-8,2,50,RUN AWAY,Makes escaping easier.
-8,2,51,KEEN EYE,Prevents loss of accuracy.
-8,2,52,HYPER CUTTER,Prevents ATTACK reduction.
-8,2,53,PICKUP,May pick up items.
-8,2,54,TRUANT,Moves only every two turns.
-8,2,55,HUSTLE,Trades accuracy for power.
-8,2,56,CUTE CHARM,Infatuates on contact.
-8,2,57,PLUS,Powers up with MINUS.
-8,2,58,MINUS,Powers up with PLUS.
-8,2,59,FORECAST,Changes with the weather.
-8,2,60,STICKY HOLD,Prevents item theft.
-8,2,61,SHED SKIN,Heals the body by shedding.
-8,2,62,GUTS,Ups ATTACK if suffering.
-8,2,63,MARVEL SCALE,Ups DEFENSE if suffering.
-8,2,64,LIQUID OOZE,Draining causes injury.
-8,2,65,OVERGROW,Ups GRASS moves in a pinch.
-8,2,66,BLAZE,Ups FIRE moves in a pinch.
-8,2,67,TORRENT,Ups WATER moves in a pinch.
-8,2,68,SWARM,Ups BUG moves in a pinch.
-8,2,69,ROCK HEAD,Prevents recoil damage.
-8,2,70,DROUGHT,Summons sunlight in battle.
-8,2,71,ARENA TRAP,Prevents fleeing.
-8,2,72,VITAL SPIRIT,Prevents sleep.
-8,2,73,WHITE SMOKE,Prevents ability reduction.
-8,2,74,PURE POWER,Raises ATTACK.
-8,2,75,SHELL ARMOR,Blocks critical hits.
-8,2,76,AIR LOCK,Negates weather effects.
-8,3,1,PUANTEUR,Repousse POKéMON sauvage.
-8,3,2,CRACHIN,Invoque la pluie en combat.
-8,3,3,TURBO,Améliore la VITESSE.
-8,3,4,ARMURBASTON,Bloque les coups critiques.
-8,3,5,FERMETE,Ignore les K.O. en un coup.
-8,3,6,MOITEUR,Empêche auto-destruction.
-8,3,7,ECHAUFFEMENT,Empêche la paralysie.
-8,3,8,VOILE SABLE,Evasion si tempête sable.
-8,3,9,STATIK,Paralyse au toucher.
-8,3,10,ABSORB VOLT,Change l’électricité en PV.
-8,3,11,ABSORB EAU,Change l’eau en PV.
-8,3,12,BENET,Empêche l’attirance.
-8,3,13,CIEL GRIS,Ignore les effets du climat.
-8,3,14,OEIL COMPOSE,Augmente la précision.
-8,3,15,INSOMNIA,Empêche de s’endormir.
-8,3,16,DEGUISEMENT,S’adapte au type ennemi.
-8,3,17,VACCIN,Empêche l’empoisonnement.
-8,3,18,TORCHE,Puissance monte si brûlé.
-8,3,19,ECRAN POUDRE,Empêche le cumul d’effets.
-8,3,20,TEMPO PERSO,Empêche la confusion.
-8,3,21,VENTOUSE,Fixe solidement le corps.
-8,3,22,INTIMIDATION,Baisse l’ATTAQUE ennemie.
-8,3,23,MARQUE OMBRE,Empêche la fuite ennemie.
-8,3,24,PEAU DURE,Blesse quand touché.
-8,3,25,GARDE MYSTIK,Reçoit seul. «sup. eff.».
-8,3,26,LEVITATION,Ignore les attaques SOL.
-8,3,27,POSE SPORE,Laisse spores si touché.
-8,3,28,SYNCHRO,Transfère statuts.
-8,3,29,CORPS SAIN,Empêche réduction de cap.
-8,3,30,MEDIC NATURE,Soigne POKéMON changeant.
-8,3,31,PARATONNERRE,Attire attaques élec.
-8,3,32,SERENITE,Favorise le cumul d’effets.
-8,3,33,GLISSADE,Monte VITESSE s’il pleut.
-8,3,34,CHLOROPHYLE,Augmente VITESSE au soleil.
-8,3,35,LUMIATIRANCE,Augmente les rencontres.
-8,3,36,CALQUE,Imite la capacité spéciale.
-8,3,37,COLOFORCE,Augmente l’ATTAQUE.
-8,3,38,POINT POISON,Empoisonne quand touché.
-8,3,39,ATTENTION,Empêche la peur.
-8,3,40,ARMUMAGMA,Empêche le gel.
-8,3,41,IGNIFU-VOILE,Empêche les brûlures.
-8,3,42,MAGNEPIEGE,Piège les POKéMON ACIER.
-8,3,43,ANTI-BRUIT,Evite les attaques sonores.
-8,3,44,CUVETTE,Gagne quelques PV si pluie.
-8,3,45,SABLE VOLANT,Lance une tempête de sable.
-8,3,46,PRESSION,Ennemi dépense plus de PP.
-8,3,47,ISOGRAISSE,Contre chaleur et froid.
-8,3,48,MATINAL,Se réveille rapidement.
-8,3,49,CORPS ARDENT,Brûle l’ennemi quand touché.
-8,3,50,FUITE,Améliore chances de fuite.
-8,3,51,REGARD VIF,Empêche perte de précision.
-8,3,52,HYPER CUTTER,Empêche réduction ATTAQUE.
-8,3,53,RAMASSAGE,Peut ramasser des objets.
-8,3,54,ABSENTEISME,Frappe tous les 2 tours.
-8,3,55,AGITATION,Substitue préc. par puiss.
-8,3,56,JOLI SOURIRE,Séduit quand touché.
-8,3,57,PLUS,Puissance + avec MINUS.
-8,3,58,MINUS,Puissance + avec PLUS.
-8,3,59,METEO,Change selon le climat.
-8,3,60,GLUE,Empêche le vol d’objets.
-8,3,61,MUE,Mue pour se soigner.
-8,3,62,CRAN,Augmente ATT. quand blessé.
-8,3,63,ECAILLE SPE.,Augmente DEF. quand blessé.
-8,3,64,SUINTEMENT,Blesse quand drainé.
-8,3,65,ENGRAIS,Augmente attaques PLANTE.
-8,3,66,BRASIER,Augmente attaques FEU.
-8,3,67,TORRENT,Augmente attaques EAU.
-8,3,68,ESSAIM,Augmente attaques INSECT.
-8,3,69,TETE DE ROC,Empêche dégâts du recul.
-8,3,70,SECHERESSE,Invoque le soleil.
-8,3,71,PIEGE,Empêche la fuite.
-8,3,72,ESPRIT VITAL,Empêche le sommeil.
-8,3,73,ECRAN FUMEE,Empêche réduction des cap.
-8,3,74,FORCE PURE,Augmente l’ATTAQUE.
-8,3,75,COQUE ARMURE,Bloque les coups critiques.
-8,3,76,AIR LOCK,Ignore les effets du climat.
-8,4,1,DUFTNOTE,Wehrt wilde POKéMON ab.
-8,4,2,NIESEL,Ruft im Kampf Regen herbei.
-8,4,3,TEMPOSCHUB,Erhöht INIT. nach und nach.
-8,4,4,KAMPFPANZER,Wehrt Volltreffer ab.
-8,4,5,ROBUSTHEIT,Keine 1-Treffer-K.O.-Att.
-8,4,6,FEUCHTIGKEIT,Gegen Selbstzerstörung.
-8,4,7,FLEXIBILITÄT,Verhindert Paralyse.
-8,4,8,SANDSCHLEIER,Erh. Fluchtw. i. Sandsturm.
-8,4,9,STATIK,Paralysiert bei Berührung.
-8,4,10,VOLTABSORBER,Wandelt Elektriz. in KP um.
-8,4,11,H2O-ABSORBER,Wandelt Wasser in KP um.
-8,4,12,DÖSIGKEIT,Verhindert Anziehung.
-8,4,13,WOLKE SIEBEN,Keine Wetter-Effekte.
-8,4,14,FACETTENAUGE,Steigert Genauigkeit.
-8,4,15,INSOMNIA,Verhindert Einschlafen.
-8,4,16,FARBWECHSEL,Ändert Att.-Typ d. Gegners.
-8,4,17,IMMUNITÄT,Verhindert Vergiftungen.
-8,4,18,FEUERFÄNGER,"Steigt, wenn v. Feuer getr."
-8,4,19,PUDERABWEHR,Gegen Zusatz-Effekte.
-8,4,20,TEMPOMACHER,Verhindert Verwirrung.
-8,4,21,SAUGNAPF,Verankert den Körper.
-8,4,22,BEDROHER,Senkt ANGR. des Gegners.
-8,4,23,WEGSPERRE,Hindert Gegner an Flucht.
-8,4,24,RAUHAUT,Verletzt bei Berührung.
-8,4,25,WUNDERWACHE,Nur sehr eff. Treff. schad.
-8,4,26,SCHWEBE,Kein Treffer b. BODEN-Att.
-8,4,27,SPORENWIRT,Gibt bei Kontakt Sporen ab.
-8,4,28,SYNCHRO,Gibt Stat.-Probleme weiter.
-8,4,29,NEUTRALTORSO,Verhindert Fähigk.-Reduk.
-8,4,30,INNERE KRAFT,Heilt bei Austausch.
-8,4,31,BLITZFÄNGER,Zieht Elektro-Attacken an.
-8,4,32,EDELMUT,Verstärkt Zusatz-Effekte.
-8,4,33,WASSERTEMPO,Steigert INIT. bei Regen.
-8,4,34,CHLOROPHYLL,INIT. + bei Sonnenschein.
-8,4,35,ERLEUCHTUNG,Mehr PKMN-Begegnungen.
-8,4,36,FÄHRTE,Kopiert Spezial-Attacke.
-8,4,37,KRAFTKOLOSS,Steigert ANGR.
-8,4,38,GIFTDORN,Vergiftet bei Berührung.
-8,4,39,KONZENTRATOR,Verhindert Zurückschreck.
-8,4,40,MAGMAPANZER,Verhindert Einfrieren.
-8,4,41,AQUAHÜLLE,Verhindert Verbrennungen.
-8,4,42,MAGNETFALLE,Fängt STAHL-POKéMON.
-8,4,43,LÄRMSCHUTZ,Immun gg. Lärm-Attacken.
-8,4,44,REGENGENUSS,KP-Anstieg bei Regen.
-8,4,45,SANDSTURM,Erzeugt einen Sandsturm.
-8,4,46,ERZWINGER,Steigert AP des Gegners.
-8,4,47,SPECKSCHICHT,Schutz vor Hitze und Kälte.
-8,4,48,FRÜHWECKER,Schnelles Aufwachen.
-8,4,49,FLAMMKÖRPER,Verbrennt bei Berührung.
-8,4,50,ANGSTHASE,Erleichtert das Entkommen.
-8,4,51,ADLERAUGE,Verhindert Verl. d. Genauig.
-8,4,52,SCHERENMACHT,Verhindert ANGR.-Reduz.
-8,4,53,MITNAHME,Kann Objekte aufnehmen.
-8,4,54,SCHNARCHNASE,Greift in jedem 2. Zug an.
-8,4,55,ÜBEREIFER,Tauscht Genauigk. u. Kraft.
-8,4,56,CHARMEBOLZEN,Wirkt bei Kontakt betörend.
-8,4,57,PLUS,Bildet ein Team mit MINUN.
-8,4,58,MINUS,Bildet ein Team mit PLUSLE.
-8,4,59,PROGNOSE,Ist vom Wetter abhängig.
-8,4,60,WERTEHALTER,Verhindert ITEM-Diebstahl.
-8,4,61,EXPIDERMIS,Heilt durch Häutung.
-8,4,62,ADRENALIN,Steigert ANGR. bei Leiden.
-8,4,63,NOTSCHUTZ,Steigert VERT. bei Leiden.
-8,4,64,KLOAKENSOSSE,Saug-Attacken schädigen.
-8,4,65,NOTDÜNGER,Erhöht PFL.-Att. i. d. Not.
-8,4,66,GROSSBRAND,Erhöht FEUER-Att. in Not.
-8,4,67,STURZBACH,Erhöht WASSER-Att. in Not.
-8,4,68,HEXAPLAGA,Erhöht KÄFER-Att. in Not.
-8,4,69,STEINHAUPT,Verh. Rückstoß-Schaden.
-8,4,70,DÜRRE,Erzeugt Sonne im Kampf.
-8,4,71,AUSWEGSLOS,Verhindert Flucht.
-8,4,72,MUNTERKEIT,Verhindert Einschlafen.
-8,4,73,PULVERRAUCH,Verhindert Fähigk.-Reduz.
-8,4,74,MENTALKRAFT,Steigert ANGR.
-8,4,75,PANZERHAUT,Wehrt Volltreffer ab.
-8,4,76,KLIMASCHUTZ,Kehrt Wetter-Effekte um.
-8,5,1,TANFO,Allontana POKéMON selvat.
-8,5,2,PIOVISCHIO,Nella lotta attira pioggia.
-8,5,3,ACCELERATORE,Graduale aumento VELOCITÀ.
-8,5,4,LOTTASCUDO,Evita i brutti colpi.
-8,5,5,VIGORE,Evita i KO in una mossa.
-8,5,6,UMIDITÀ,Evita autodistruzione.
-8,5,7,SCIOLTEZZA,Evita la paralisi.
-8,5,8,SABBIAVELO,Sale evasione nella sabbia.
-8,5,9,STATICO,Paralizza al contatto.
-8,5,10,ASSORBIVOLT,Muta l’elettricità in PS.
-8,5,11,ASSORBACQUA,Muta l’acqua in PS.
-8,5,12,INDIFFERENZA,Evita l’attrazione.
-8,5,13,ANTIMETEO,Neutralizza effetti meteo.
-8,5,14,INSETTOCCHI,Aumenta la precisione.
-8,5,15,INSONNIA,Evita il sonno.
-8,5,16,CAMBIACOLORE,Cambia tipo in mossa nemico
-8,5,17,IMMUNITÀ,Evita l’avvelenamento.
-8,5,18,FUOCARDORE,Il fuoco rende più forti.
-8,5,19,POLVOSCUDO,Blocca effetti aggiuntivi.
-8,5,20,MENTE LOCALE,Evita la confusione.
-8,5,21,VENTOSE,Fissa il corpo a terra.
-8,5,22,PREPOTENZA,Riduce ATTACCO nemico.
-8,5,23,PEDINOMBRA,Impedisce la fuga al nemico.
-8,5,24,CARTAVETRO,Danneggia al contatto.
-8,5,25,MAGIDIFESA,Colpito solo da „supereff.“.
-8,5,26,LEVITAZIONE,Evita attacchi tipo TERRA.
-8,5,27,SPARGISPORA,Lascia spore al contatto.
-8,5,28,SINCRONISMO,Trasmette problemi stato.
-8,5,29,CORPOCHIARO,Evita riduzione stat.
-8,5,30,ALTERNACURA,Cura chi viene sostituito.
-8,5,31,PARAFULMINE,Attira mosse ELETTRO.
-8,5,32,LEGGIADRO,Più effetti aggiuntivi.
-8,5,33,NUOTOVELOX,Più VELOCITÀ nella pioggia.
-8,5,34,CLOROFILLA,Più VELOCITÀ sotto il sole.
-8,5,35,RISPLENDI,S’incontrano più POKéMON.
-8,5,36,TRACCIA,Copia abilità speciale.
-8,5,37,MACROFORZA,Migliora l’ATTACCO.
-8,5,38,VELENOPUNTO,Avvelena al contatto.
-8,5,39,FUOCODENTRO,Evita il tentennamento.
-8,5,40,MAGMASCUDO,Evita il congelamento.
-8,5,41,IDROVELO,Evita le scottature.
-8,5,42,MAGNETISMO,Irretisce POKéMON ACCIAIO.
-8,5,43,ANTISUONO,Evita mosse sonore.
-8,5,44,COPRIPIOGGIA,Lieve recupero PS se piove.
-8,5,45,SABBIAFIUME,Causa tempesta di sabbia.
-8,5,46,PRESSIONE,Il nemico usa più PP.
-8,5,47,GRASSOSPESSO,Protegge da caldo e freddo.
-8,5,48,SVEGLIALAMPO,Rapido risveglio dal sonno.
-8,5,49,CORPODIFUOCO,Scotta al contatto.
-8,5,50,FUGAFACILE,Rende più facile la fuga.
-8,5,51,SGUARDOFERMO,Evita cali di precisione.
-8,5,52,IPERTAGLIO,Evita riduzione ATTACCO.
-8,5,53,RACCOLTA,Può raccogliere strumenti.
-8,5,54,PIGRONE,Si muove solo ogni 2 turni.
-8,5,55,TUTTAFRETTA,"Più forza, meno precisione."
-8,5,56,INCANTEVOLE,Fa infatuare al contatto.
-8,5,57,PIÙ,Si potenzia con MENO.
-8,5,58,MENO,Si potenzia con PIÙ.
-8,5,59,PREVISIONI,Muta col tempo che fa.
-8,5,60,ANTIFURTO,Evita il furto di strumenti.
-8,5,61,MUTA,Una muta che guarisce.
-8,5,62,DENTISTRETTI,Sale ATTACCO in difficoltà.
-8,5,63,PELLEDURA,Sale DIFESA in difficoltà.
-8,5,64,MELMA,Il drenaggio arreca danno.
-8,5,65,ERBAIUTO,Mosse ERBA + forti in diff.
-8,5,66,AIUTOFUOCO,Mosse FUOCO + forti in diff.
-8,5,67,ACQUAIUTO,Mos. ACQUA + forti in diff.
-8,5,68,AIUTINSETTO,Mos. COLEOT. + forti in diff.
-8,5,69,TESTADURA,Evita contraccolpi.
-8,5,70,SICCITÀ,Attira il sole nella lotta.
-8,5,71,TRAPPOARENA,Evita la fuga.
-8,5,72,SPIRITOVIVO,Evita il sonno.
-8,5,73,FUMOCHIARO,Evita riduzione delle stat.
-8,5,74,FORZAPURA,Aumenta l’ATTACCO.
-8,5,75,GUSCIOSCUDO,Blocca i brutti colpi.
-8,5,76,RIPARO,Neutralizza effetti meteo.
-8,6,1,HEDOR,Aleja a POKéMON salvajes.
-8,6,2,LLOVIZNA,Hace que llueva en combate.
-8,6,3,IMPULSO,Va subiendo la VELOCIDAD.
-8,6,4,ARMAD. BAT.,Bloquea golpes críticos.
-8,6,5,ROBUSTEZ,Anula golpes fulminantes.
-8,6,6,HUMEDAD,Evita la autodestrucción.
-8,6,7,FLEXIBILIDAD,Evita la parálisis.
-8,6,8,VELO ARENA,Más EVASIÓN en torm. arena.
-8,6,9,ELEC. ESTÁT.,Paraliza al mín. contacto.
-8,6,10,ABSOR. ELEC.,Cambia electricidad en PS.
-8,6,11,ABSOR. AGUA,Convierte el agua en PS.
-8,6,12,DESPISTE,Evita la atracción.
-8,6,13,ACLIMATACIÓN,Anula los efectos del clima.
-8,6,14,OJOCOMPUESTO,Aumenta la PRECISIÓN.
-8,6,15,INSOMNIO,Evita el quedarse dormido.
-8,6,16,CAMBIO COLOR,Toma el tipo del mov. rival.
-8,6,17,INMUNIDAD,Evita el envenenamiento.
-8,6,18,ABSOR. FUEGO,Se carga si recibe fuego.
-8,6,19,POLVO ESCUDO,Evita efectos secundarios.
-8,6,20,RITMO PROPIO,Evita la confusión.
-8,6,21,VENTOSAS,Fija el cuerpo con firmeza.
-8,6,22,INTIMIDACIÓN,Baja el ATAQUE del rival.
-8,6,23,SOMBRATRAMPA,Evita que el enemigo huya.
-8,6,24,PIEL TOSCA,Hiere al tacto.
-8,6,25,SUPERGUARDA.,Cuesta mucho hacerle daño.
-8,6,26,LEVITACIÓN,No sufre at. tipo TIERRA.
-8,6,27,EFEC. ESPORA,Deja esporas al contacto.
-8,6,28,SINCRONÍA,Transmite problem. estado.
-8,6,29,CUERPO PURO,Evita que baje la habilidad.
-8,6,30,CURA NATURAL,Se cura al salir.
-8,6,31,PARARRAYOS,Frena ataques eléctricos.
-8,6,32,DICHA,Añade efectos secundarios.
-8,6,33,NADO RÁPIDO,"Con lluvia, sube VELOCIDAD."
-8,6,34,CLOROFILA,"Con sol, sube la VELOCIDAD."
-8,6,35,ILUMINACIÓN,Facilita el encuentro.
-8,6,36,RASTRO,Copia habilidad especial.
-8,6,37,POTENCIA,Aumenta el ATAQUE.
-8,6,38,PUNTO TÓXICO,Envenena al mín. contacto.
-8,6,39,FOCO INTERNO,Evita el retroceso.
-8,6,40,ESCUDO MAGMA,Evita el congelamiento.
-8,6,41,VELO AGUA,Evita las quemaduras.
-8,6,42,IMÁN,Atrapa POKéMON de ACERO.
-8,6,43,INSONORIZAR,Evita ataques de sonido.
-8,6,44,CURA LLUVIA,Sube PS cuando llueve.
-8,6,45,CHORRO ARENA,Crea una tormenta de arena.
-8,6,46,PRESIÓN,Baja los PP del enemigo.
-8,6,47,SEBO,Protege del frío y calor.
-8,6,48,MADRUGAR,Despierta rápido al PKMN.
-8,6,49,CUERPO LLAMA,Quema al mínimo contacto.
-8,6,50,FUGA,Facilita la huida.
-8,6,51,VISTA LINCE,Evita que baje PRECISIÓN.
-8,6,52,CORTE FUERTE,Evita que baje el ATAQUE.
-8,6,53,RECOGIDA,Puede tomar objetos.
-8,6,54,AUSENTE,Interviene cada 2 rondas.
-8,6,55,ENTUSIASMO,Cambia PRECIS. por energía.
-8,6,56,GRAN ENCANTO,Emboba al mínimo contacto.
-8,6,57,MÁS,Mejora con habilidad MENOS.
-8,6,58,MENOS,Mejora con habilidad MÁS.
-8,6,59,PREDICCIÓN,Cambia con el clima.
-8,6,60,VISCOSIDAD,Evita el robo de objetos.
-8,6,61,MUDAR,Se cura mudando la piel.
-8,6,62,AGALLAS,Sube el ATAQUE si sufre.
-8,6,63,ESCAMA ESP.,Sube la DEFENSA si sufre.
-8,6,64,LODO LÍQUIDO,"Al verterlo, hiere."
-8,6,65,ESPESURA,Sube ataques tipo PLANTA.
-8,6,66,MAR LLAMAS,Sube ataques tipo FUEGO.
-8,6,67,TORRENTE,Sube ataques tipo AGUA.
-8,6,68,ENJAMBRE,Sube ataques tipo BICHO.
-8,6,69,CABEZA ROCA,Evita volver a ser golpeado.
-8,6,70,SEQUÍA,Toma luz solar en batalla.
-8,6,71,TRAMPA ARENA,Evita la huida.
-8,6,72,ESPÍR. VITAL,Evita quedarse dormido.
-8,6,73,HUMO BLANCO,Evita que baje la habilidad.
-8,6,74,ENERGÍA PURA,Aumenta el ATAQUE.
-8,6,75,CAPARAZÓN,Bloquea golpes críticos.
-8,6,76,BUCLE AIRE,Anula los efectos del clima.
 9,1,1,あくしゅう,ポケモンが よりつき にくくなる
 9,1,2,あめふらし,せんとうに でると あめを ふらす
 9,1,3,かそく,ちょっとずつ すばやく なっていく
@@ -1230,7 +774,7 @@ version_group_id,language_id,ability_id,name,description
 9,5,13,ANTIMETEO,Neutralizza effetti meteo.
 9,5,14,INSETTOCCHI,Aumenta la precisione.
 9,5,15,INSONNIA,Evita il sonno.
-9,5,16,CAMBIACOLORE,Cambia tipo in mossa nemico.
+9,5,16,CAMBIACOLORE,Cambia tipo in mossa nemico
 9,5,17,IMMUNITÀ,Evita l’avvelenamento.
 9,5,18,FUOCARDORE,Il fuoco rende più forti.
 9,5,19,POLVOSCUDO,Blocca effetti aggiuntivi.
@@ -1367,3 +911,459 @@ version_group_id,language_id,ability_id,name,description
 9,6,74,ENERGÍA PURA,Aumenta el ATAQUE.
 9,6,75,CAPARAZÓN,Bloquea golpes críticos.
 9,6,76,BUCLE AIRE,Anula los efectos del clima.
+10,1,1,あくしゅう,ポケモンが よりつき にくくなる
+10,1,2,あめふらし,せんとうに でると あめを ふらす
+10,1,3,かそく,ちょっとずつ すばやく なっていく
+10,1,4,カブトアーマー,わざを きゅうしょに うけない
+10,1,5,がんじょう,いちげきひっさつが きかない
+10,1,6,しめりけ,だれも じばくが できなくなる
+10,1,7,じゅうなん,まひ じょうたいに ならない
+10,1,8,すながくれ,すなあらしで かいひりつが あがる
+10,1,9,せいでんき,さわった あいてを まひさせる
+10,1,10,ちくでん,でんきを うけると かいふくする
+10,1,11,ちょすい,みずを うけると かいふくする
+10,1,12,どんかん,メロメロ じょうたいに ならない
+10,1,13,ノーてんき,てんきの えいきょうが なくなる
+10,1,14,ふくがん,わざの めいちゅうりつが あがる
+10,1,15,ふみん,ねむり じょうたいに ならない
+10,1,16,へんしょく,うけた わざの タイプに へんかする
+10,1,17,めんえき,どく じょうたいに ならない
+10,1,18,もらいび,ほのおを うけると つよくなる
+10,1,19,りんぷん,わざの ついかこうかを うけない
+10,1,20,マイペース,こんらん じょうたいに ならない
+10,1,21,きゅうばん,きゅうばんで じめんに はりつく
+10,1,22,いかく,あいての こうげきを さげる
+10,1,23,かげふみ,あいてを にげられなくする
+10,1,24,さめはだ,さわった あいてを キズつける
+10,1,25,ふしぎなまもり,こうか ばつぐん しか あたらない
+10,1,26,ふゆう,じめんタイプの わざを うけない
+10,1,27,ほうし,さわった あいてに ほうしがつく
+10,1,28,シンクロ,どく まひ やけどを あいてにうつす
+10,1,29,クリアボディ,あいてに のうりょくを さげられない
+10,1,30,しぜんかいふく,ひっこむと いじょうが なおる
+10,1,31,ひらいしん,でんきタイプの わざが じぶんにくる
+10,1,32,てんのめぐみ,わざの ついかこうかが でやすい
+10,1,33,すいすい,あめのとき すばやさが はやくなる
+10,1,34,ようりょくそ,はれのとき すばやさが はやくなる
+10,1,35,はっこう,ポケモンに そうぐう しやすくなる
+10,1,36,トレース,あいてと おなじ とくせいになる
+10,1,37,ちからもち,こうげきりょくが たかい
+10,1,38,どくのトゲ,さわったあいてに どくをあたえる
+10,1,39,せいしんりょく,ひるまない
+10,1,40,マグマのよろい,こおり じょうたいに ならない
+10,1,41,みずのベール,やけど じょうたいに ならない
+10,1,42,じりょく,はがねタイプが にげられなくなる
+10,1,43,ぼうおん,おとの わざを うけない
+10,1,44,あめうけざら,あめのとき すこしずつ かいふく
+10,1,45,すなおこし,せんとうで すなあらしを おこす
+10,1,46,プレッシャー,あいての PPが へりやすくなる
+10,1,47,あついしぼう,ほのお こおりに つよい
+10,1,48,はやおき,おきるのが はやくなる
+10,1,49,ほのおのからだ,さわった あいてを やけど させる
+10,1,50,にげあし,せんとうから にげやすい
+10,1,51,するどいめ,あいてに めいちゅうを さげられない
+10,1,52,かいりきバサミ,あいてに こうげきを さげられない
+10,1,53,ものひろい,どうぐを ひろってくる ことがある
+10,1,54,なまけ,こうげきが れんぞくで だせない
+10,1,55,はりきり,こうげきは たかいが はずれやすい
+10,1,56,メロメロボディ,さわった あいてを メロメロにする
+10,1,57,プラス,マイナスが いると つよくなる
+10,1,58,マイナス,プラスが いると つよくなる
+10,1,59,てんきや,てんきで ポワルンが へんかする
+10,1,60,ねんちゃく,どうぐを とられない
+10,1,61,だっぴ,だっぴして からだを なおす
+10,1,62,こんじょう,いじょうのとき こうげきが あがる
+10,1,63,ふしぎなうろこ,いじょうのとき ぼうぎょが あがる
+10,1,64,ヘドロえき,すいとると たいりょくが へる
+10,1,65,しんりょく,ピンチに くさの いりょくが あがる
+10,1,66,もうか,ピンチに ほのおが つよくなる
+10,1,67,げきりゅう,ピンチに みずの いりょくが あがる
+10,1,68,むしのしらせ,ピンチに むしの いりょくが あがる
+10,1,69,いしあたま,ぶつかっても はんどうを うけない
+10,1,70,ひでり,せんとうで ひざしを つよくする
+10,1,71,ありじごく,あいてを にげられなくする
+10,1,72,やるき,ねむらない
+10,1,73,しろいけむり,あいてに のうりょくを さげられない
+10,1,74,ヨガパワー,こうげきりょくが たかい
+10,1,75,シェルアーマー,わざを きゅうしょに うけない
+10,1,76,エアロック,てんきの えいきょうが なくなる
+10,2,1,STENCH,Helps repel wild POKéMON.
+10,2,2,DRIZZLE,Summons rain in battle.
+10,2,3,SPEED BOOST,Gradually boosts SPEED.
+10,2,4,BATTLE ARMOR,Blocks critical hits.
+10,2,5,STURDY,Negates 1-hit KO attacks.
+10,2,6,DAMP,Prevents self-destruction.
+10,2,7,LIMBER,Prevents paralysis.
+10,2,8,SAND VEIL,Ups evasion in a sandstorm.
+10,2,9,STATIC,Paralyzes on contact.
+10,2,10,VOLT ABSORB,Turns electricity into HP.
+10,2,11,WATER ABSORB,Changes water into HP.
+10,2,12,OBLIVIOUS,Prevents attraction.
+10,2,13,CLOUD NINE,Negates weather effects.
+10,2,14,COMPOUNDEYES,Raises accuracy.
+10,2,15,INSOMNIA,Prevents sleep.
+10,2,16,COLOR CHANGE,Changes type to foe’s move.
+10,2,17,IMMUNITY,Prevents poisoning.
+10,2,18,FLASH FIRE,Powers up if hit by fire.
+10,2,19,SHIELD DUST,Prevents added effects.
+10,2,20,OWN TEMPO,Prevents confusion.
+10,2,21,SUCTION CUPS,Firmly anchors the body.
+10,2,22,INTIMIDATE,Lowers the foe’s ATTACK.
+10,2,23,SHADOW TAG,Prevents the foe’s escape.
+10,2,24,ROUGH SKIN,Hurts to touch.
+10,2,25,WONDER GUARD,“Super effective” hits.
+10,2,26,LEVITATE,Not hit by GROUND attacks.
+10,2,27,EFFECT SPORE,Leaves spores on contact.
+10,2,28,SYNCHRONIZE,Passes on status problems.
+10,2,29,CLEAR BODY,Prevents ability reduction.
+10,2,30,NATURAL CURE,Heals upon switching out.
+10,2,31,LIGHTNINGROD,Draws electrical moves.
+10,2,32,SERENE GRACE,Promotes added effects.
+10,2,33,SWIFT SWIM,Raises SPEED in rain.
+10,2,34,CHLOROPHYLL,Raises SPEED in sunshine.
+10,2,35,ILLUMINATE,Encounter rate increases.
+10,2,36,TRACE,Copies special ability.
+10,2,37,HUGE POWER,Raises ATTACK.
+10,2,38,POISON POINT,Poisons foe on contact.
+10,2,39,INNER FOCUS,Prevents flinching.
+10,2,40,MAGMA ARMOR,Prevents freezing.
+10,2,41,WATER VEIL,Prevents burns.
+10,2,42,MAGNET PULL,Traps STEEL-type POKéMON.
+10,2,43,SOUNDPROOF,Avoids sound-based moves.
+10,2,44,RAIN DISH,Slight HP recovery in rain.
+10,2,45,SAND STREAM,Summons a sandstorm.
+10,2,46,PRESSURE,Raises foe’s PP usage.
+10,2,47,THICK FAT,Heat-and-cold protection.
+10,2,48,EARLY BIRD,Awakens quickly from sleep.
+10,2,49,FLAME BODY,Burns the foe on contact.
+10,2,50,RUN AWAY,Makes escaping easier.
+10,2,51,KEEN EYE,Prevents loss of accuracy.
+10,2,52,HYPER CUTTER,Prevents ATTACK reduction.
+10,2,53,PICKUP,May pick up items.
+10,2,54,TRUANT,Moves only every two turns.
+10,2,55,HUSTLE,Trades accuracy for power.
+10,2,56,CUTE CHARM,Infatuates on contact.
+10,2,57,PLUS,Powers up with MINUS.
+10,2,58,MINUS,Powers up with PLUS.
+10,2,59,FORECAST,Changes with the weather.
+10,2,60,STICKY HOLD,Prevents item theft.
+10,2,61,SHED SKIN,Heals the body by shedding.
+10,2,62,GUTS,Ups ATTACK if suffering.
+10,2,63,MARVEL SCALE,Ups DEFENSE if suffering.
+10,2,64,LIQUID OOZE,Draining causes injury.
+10,2,65,OVERGROW,Ups GRASS moves in a pinch.
+10,2,66,BLAZE,Ups FIRE moves in a pinch.
+10,2,67,TORRENT,Ups WATER moves in a pinch.
+10,2,68,SWARM,Ups BUG moves in a pinch.
+10,2,69,ROCK HEAD,Prevents recoil damage.
+10,2,70,DROUGHT,Summons sunlight in battle.
+10,2,71,ARENA TRAP,Prevents fleeing.
+10,2,72,VITAL SPIRIT,Prevents sleep.
+10,2,73,WHITE SMOKE,Prevents ability reduction.
+10,2,74,PURE POWER,Raises ATTACK.
+10,2,75,SHELL ARMOR,Blocks critical hits.
+10,2,76,AIR LOCK,Negates weather effects.
+10,3,1,PUANTEUR,Repousse POKéMON sauvage.
+10,3,2,CRACHIN,Invoque la pluie en combat.
+10,3,3,TURBO,Améliore la VITESSE.
+10,3,4,ARMURBASTON,Bloque les coups critiques.
+10,3,5,FERMETE,Ignore les K.O. en un coup.
+10,3,6,MOITEUR,Empêche auto-destruction.
+10,3,7,ECHAUFFEMENT,Empêche la paralysie.
+10,3,8,VOILE SABLE,Evasion si tempête sable.
+10,3,9,STATIK,Paralyse au toucher.
+10,3,10,ABSORB VOLT,Change l’électricité en PV.
+10,3,11,ABSORB EAU,Change l’eau en PV.
+10,3,12,BENET,Empêche l’attirance.
+10,3,13,CIEL GRIS,Ignore les effets du climat.
+10,3,14,OEIL COMPOSE,Augmente la précision.
+10,3,15,INSOMNIA,Empêche de s’endormir.
+10,3,16,DEGUISEMENT,S’adapte au type ennemi.
+10,3,17,VACCIN,Empêche l’empoisonnement.
+10,3,18,TORCHE,Puissance monte si brûlé.
+10,3,19,ECRAN POUDRE,Empêche le cumul d’effets.
+10,3,20,TEMPO PERSO,Empêche la confusion.
+10,3,21,VENTOUSE,Fixe solidement le corps.
+10,3,22,INTIMIDATION,Baisse l’ATTAQUE ennemie.
+10,3,23,MARQUE OMBRE,Empêche la fuite ennemie.
+10,3,24,PEAU DURE,Blesse quand touché.
+10,3,25,GARDE MYSTIK,Reçoit seul. «sup. eff.».
+10,3,26,LEVITATION,Ignore les attaques SOL.
+10,3,27,POSE SPORE,Laisse spores si touché.
+10,3,28,SYNCHRO,Transfère statuts.
+10,3,29,CORPS SAIN,Empêche réduction de cap.
+10,3,30,MEDIC NATURE,Soigne POKéMON changeant.
+10,3,31,PARATONNERRE,Attire attaques élec.
+10,3,32,SERENITE,Favorise le cumul d’effets.
+10,3,33,GLISSADE,Monte VITESSE s’il pleut.
+10,3,34,CHLOROPHYLE,Augmente VITESSE au soleil.
+10,3,35,LUMIATIRANCE,Augmente les rencontres.
+10,3,36,CALQUE,Imite la capacité spéciale.
+10,3,37,COLOFORCE,Augmente l’ATTAQUE.
+10,3,38,POINT POISON,Empoisonne quand touché.
+10,3,39,ATTENTION,Empêche la peur.
+10,3,40,ARMUMAGMA,Empêche le gel.
+10,3,41,IGNIFU-VOILE,Empêche les brûlures.
+10,3,42,MAGNEPIEGE,Piège les POKéMON ACIER.
+10,3,43,ANTI-BRUIT,Evite les attaques sonores.
+10,3,44,CUVETTE,Gagne quelques PV si pluie.
+10,3,45,SABLE VOLANT,Lance une tempête de sable.
+10,3,46,PRESSION,Ennemi dépense plus de PP.
+10,3,47,ISOGRAISSE,Contre chaleur et froid.
+10,3,48,MATINAL,Se réveille rapidement.
+10,3,49,CORPS ARDENT,Brûle l’ennemi quand touché.
+10,3,50,FUITE,Améliore chances de fuite.
+10,3,51,REGARD VIF,Empêche perte de précision.
+10,3,52,HYPER CUTTER,Empêche réduction ATTAQUE.
+10,3,53,RAMASSAGE,Peut ramasser des objets.
+10,3,54,ABSENTEISME,Frappe tous les 2 tours.
+10,3,55,AGITATION,Substitue préc. par puiss.
+10,3,56,JOLI SOURIRE,Séduit quand touché.
+10,3,57,PLUS,Puissance + avec MINUS.
+10,3,58,MINUS,Puissance + avec PLUS.
+10,3,59,METEO,Change selon le climat.
+10,3,60,GLUE,Empêche le vol d’objets.
+10,3,61,MUE,Mue pour se soigner.
+10,3,62,CRAN,Augmente ATT. quand blessé.
+10,3,63,ECAILLE SPE.,Augmente DEF. quand blessé.
+10,3,64,SUINTEMENT,Blesse quand drainé.
+10,3,65,ENGRAIS,Augmente attaques PLANTE.
+10,3,66,BRASIER,Augmente attaques FEU.
+10,3,67,TORRENT,Augmente attaques EAU.
+10,3,68,ESSAIM,Augmente attaques INSECT.
+10,3,69,TETE DE ROC,Empêche dégâts du recul.
+10,3,70,SECHERESSE,Invoque le soleil.
+10,3,71,PIEGE,Empêche la fuite.
+10,3,72,ESPRIT VITAL,Empêche le sommeil.
+10,3,73,ECRAN FUMEE,Empêche réduction des cap.
+10,3,74,FORCE PURE,Augmente l’ATTAQUE.
+10,3,75,COQUE ARMURE,Bloque les coups critiques.
+10,3,76,AIR LOCK,Ignore les effets du climat.
+10,4,1,DUFTNOTE,Wehrt wilde POKéMON ab.
+10,4,2,NIESEL,Ruft im Kampf Regen herbei.
+10,4,3,TEMPOSCHUB,Erhöht INIT. nach und nach.
+10,4,4,KAMPFPANZER,Wehrt Volltreffer ab.
+10,4,5,ROBUSTHEIT,Keine 1-Treffer-K.O.-Att.
+10,4,6,FEUCHTIGKEIT,Gegen Selbstzerstörung.
+10,4,7,FLEXIBILITÄT,Verhindert Paralyse.
+10,4,8,SANDSCHLEIER,Erh. Fluchtw. i. Sandsturm.
+10,4,9,STATIK,Paralysiert bei Berührung.
+10,4,10,VOLTABSORBER,Wandelt Elektriz. in KP um.
+10,4,11,H2O-ABSORBER,Wandelt Wasser in KP um.
+10,4,12,DÖSIGKEIT,Verhindert Anziehung.
+10,4,13,WOLKE SIEBEN,Keine Wetter-Effekte.
+10,4,14,FACETTENAUGE,Steigert Genauigkeit.
+10,4,15,INSOMNIA,Verhindert Einschlafen.
+10,4,16,FARBWECHSEL,Ändert Att.-Typ d. Gegners.
+10,4,17,IMMUNITÄT,Verhindert Vergiftungen.
+10,4,18,FEUERFÄNGER,"Steigt, wenn v. Feuer getr."
+10,4,19,PUDERABWEHR,Gegen Zusatz-Effekte.
+10,4,20,TEMPOMACHER,Verhindert Verwirrung.
+10,4,21,SAUGNAPF,Verankert den Körper.
+10,4,22,BEDROHER,Senkt ANGR. des Gegners.
+10,4,23,WEGSPERRE,Hindert Gegner an Flucht.
+10,4,24,RAUHAUT,Verletzt bei Berührung.
+10,4,25,WUNDERWACHE,Nur sehr eff. Treff. schad.
+10,4,26,SCHWEBE,Kein Treffer b. BODEN-Att.
+10,4,27,SPORENWIRT,Gibt bei Kontakt Sporen ab.
+10,4,28,SYNCHRO,Gibt Stat.-Probleme weiter.
+10,4,29,NEUTRALTORSO,Verhindert Fähigk.-Reduk.
+10,4,30,INNERE KRAFT,Heilt bei Austausch.
+10,4,31,BLITZFÄNGER,Zieht Elektro-Attacken an.
+10,4,32,EDELMUT,Verstärkt Zusatz-Effekte.
+10,4,33,WASSERTEMPO,Steigert INIT. bei Regen.
+10,4,34,CHLOROPHYLL,INIT. + bei Sonnenschein.
+10,4,35,ERLEUCHTUNG,Mehr PKMN-Begegnungen.
+10,4,36,FÄHRTE,Kopiert Spezial-Attacke.
+10,4,37,KRAFTKOLOSS,Steigert ANGR.
+10,4,38,GIFTDORN,Vergiftet bei Berührung.
+10,4,39,KONZENTRATOR,Verhindert Zurückschreck.
+10,4,40,MAGMAPANZER,Verhindert Einfrieren.
+10,4,41,AQUAHÜLLE,Verhindert Verbrennungen.
+10,4,42,MAGNETFALLE,Fängt STAHL-POKéMON.
+10,4,43,LÄRMSCHUTZ,Immun gg. Lärm-Attacken.
+10,4,44,REGENGENUSS,KP-Anstieg bei Regen.
+10,4,45,SANDSTURM,Erzeugt einen Sandsturm.
+10,4,46,ERZWINGER,Steigert AP des Gegners.
+10,4,47,SPECKSCHICHT,Schutz vor Hitze und Kälte.
+10,4,48,FRÜHWECKER,Schnelles Aufwachen.
+10,4,49,FLAMMKÖRPER,Verbrennt bei Berührung.
+10,4,50,ANGSTHASE,Erleichtert das Entkommen.
+10,4,51,ADLERAUGE,Verhindert Verl. d. Genauig.
+10,4,52,SCHERENMACHT,Verhindert ANGR.-Reduz.
+10,4,53,MITNAHME,Kann Objekte aufnehmen.
+10,4,54,SCHNARCHNASE,Greift in jedem 2. Zug an.
+10,4,55,ÜBEREIFER,Tauscht Genauigk. u. Kraft.
+10,4,56,CHARMEBOLZEN,Wirkt bei Kontakt betörend.
+10,4,57,PLUS,Bildet ein Team mit MINUN.
+10,4,58,MINUS,Bildet ein Team mit PLUSLE.
+10,4,59,PROGNOSE,Ist vom Wetter abhängig.
+10,4,60,WERTEHALTER,Verhindert ITEM-Diebstahl.
+10,4,61,EXPIDERMIS,Heilt durch Häutung.
+10,4,62,ADRENALIN,Steigert ANGR. bei Leiden.
+10,4,63,NOTSCHUTZ,Steigert VERT. bei Leiden.
+10,4,64,KLOAKENSOSSE,Saug-Attacken schädigen.
+10,4,65,NOTDÜNGER,Erhöht PFL.-Att. i. d. Not.
+10,4,66,GROSSBRAND,Erhöht FEUER-Att. in Not.
+10,4,67,STURZBACH,Erhöht WASSER-Att. in Not.
+10,4,68,HEXAPLAGA,Erhöht KÄFER-Att. in Not.
+10,4,69,STEINHAUPT,Verh. Rückstoß-Schaden.
+10,4,70,DÜRRE,Erzeugt Sonne im Kampf.
+10,4,71,AUSWEGSLOS,Verhindert Flucht.
+10,4,72,MUNTERKEIT,Verhindert Einschlafen.
+10,4,73,PULVERRAUCH,Verhindert Fähigk.-Reduz.
+10,4,74,MENTALKRAFT,Steigert ANGR.
+10,4,75,PANZERHAUT,Wehrt Volltreffer ab.
+10,4,76,KLIMASCHUTZ,Kehrt Wetter-Effekte um.
+10,5,1,TANFO,Allontana POKéMON selvat.
+10,5,2,PIOVISCHIO,Nella lotta attira pioggia.
+10,5,3,ACCELERATORE,Graduale aumento VELOCITÀ.
+10,5,4,LOTTASCUDO,Evita i brutti colpi.
+10,5,5,VIGORE,Evita i KO in una mossa.
+10,5,6,UMIDITÀ,Evita autodistruzione.
+10,5,7,SCIOLTEZZA,Evita la paralisi.
+10,5,8,SABBIAVELO,Sale evasione nella sabbia.
+10,5,9,STATICO,Paralizza al contatto.
+10,5,10,ASSORBIVOLT,Muta l’elettricità in PS.
+10,5,11,ASSORBACQUA,Muta l’acqua in PS.
+10,5,12,INDIFFERENZA,Evita l’attrazione.
+10,5,13,ANTIMETEO,Neutralizza effetti meteo.
+10,5,14,INSETTOCCHI,Aumenta la precisione.
+10,5,15,INSONNIA,Evita il sonno.
+10,5,16,CAMBIACOLORE,Cambia tipo in mossa nemico.
+10,5,17,IMMUNITÀ,Evita l’avvelenamento.
+10,5,18,FUOCARDORE,Il fuoco rende più forti.
+10,5,19,POLVOSCUDO,Blocca effetti aggiuntivi.
+10,5,20,MENTE LOCALE,Evita la confusione.
+10,5,21,VENTOSE,Fissa il corpo a terra.
+10,5,22,PREPOTENZA,Riduce ATTACCO nemico.
+10,5,23,PEDINOMBRA,Impedisce la fuga al nemico.
+10,5,24,CARTAVETRO,Danneggia al contatto.
+10,5,25,MAGIDIFESA,Colpito solo da „supereff.“.
+10,5,26,LEVITAZIONE,Evita attacchi tipo TERRA.
+10,5,27,SPARGISPORA,Lascia spore al contatto.
+10,5,28,SINCRONISMO,Trasmette problemi stato.
+10,5,29,CORPOCHIARO,Evita riduzione stat.
+10,5,30,ALTERNACURA,Cura chi viene sostituito.
+10,5,31,PARAFULMINE,Attira mosse ELETTRO.
+10,5,32,LEGGIADRO,Più effetti aggiuntivi.
+10,5,33,NUOTOVELOX,Più VELOCITÀ nella pioggia.
+10,5,34,CLOROFILLA,Più VELOCITÀ sotto il sole.
+10,5,35,RISPLENDI,S’incontrano più POKéMON.
+10,5,36,TRACCIA,Copia abilità speciale.
+10,5,37,MACROFORZA,Migliora l’ATTACCO.
+10,5,38,VELENOPUNTO,Avvelena al contatto.
+10,5,39,FUOCODENTRO,Evita il tentennamento.
+10,5,40,MAGMASCUDO,Evita il congelamento.
+10,5,41,IDROVELO,Evita le scottature.
+10,5,42,MAGNETISMO,Irretisce POKéMON ACCIAIO.
+10,5,43,ANTISUONO,Evita mosse sonore.
+10,5,44,COPRIPIOGGIA,Lieve recupero PS se piove.
+10,5,45,SABBIAFIUME,Causa tempesta di sabbia.
+10,5,46,PRESSIONE,Il nemico usa più PP.
+10,5,47,GRASSOSPESSO,Protegge da caldo e freddo.
+10,5,48,SVEGLIALAMPO,Rapido risveglio dal sonno.
+10,5,49,CORPODIFUOCO,Scotta al contatto.
+10,5,50,FUGAFACILE,Rende più facile la fuga.
+10,5,51,SGUARDOFERMO,Evita cali di precisione.
+10,5,52,IPERTAGLIO,Evita riduzione ATTACCO.
+10,5,53,RACCOLTA,Può raccogliere strumenti.
+10,5,54,PIGRONE,Si muove solo ogni 2 turni.
+10,5,55,TUTTAFRETTA,"Più forza, meno precisione."
+10,5,56,INCANTEVOLE,Fa infatuare al contatto.
+10,5,57,PIÙ,Si potenzia con MENO.
+10,5,58,MENO,Si potenzia con PIÙ.
+10,5,59,PREVISIONI,Muta col tempo che fa.
+10,5,60,ANTIFURTO,Evita il furto di strumenti.
+10,5,61,MUTA,Una muta che guarisce.
+10,5,62,DENTISTRETTI,Sale ATTACCO in difficoltà.
+10,5,63,PELLEDURA,Sale DIFESA in difficoltà.
+10,5,64,MELMA,Il drenaggio arreca danno.
+10,5,65,ERBAIUTO,Mosse ERBA + forti in diff.
+10,5,66,AIUTOFUOCO,Mosse FUOCO + forti in diff.
+10,5,67,ACQUAIUTO,Mos. ACQUA + forti in diff.
+10,5,68,AIUTINSETTO,Mos. COLEOT. + forti in diff.
+10,5,69,TESTADURA,Evita contraccolpi.
+10,5,70,SICCITÀ,Attira il sole nella lotta.
+10,5,71,TRAPPOARENA,Evita la fuga.
+10,5,72,SPIRITOVIVO,Evita il sonno.
+10,5,73,FUMOCHIARO,Evita riduzione delle stat.
+10,5,74,FORZAPURA,Aumenta l’ATTACCO.
+10,5,75,GUSCIOSCUDO,Blocca i brutti colpi.
+10,5,76,RIPARO,Neutralizza effetti meteo.
+10,6,1,HEDOR,Aleja a POKéMON salvajes.
+10,6,2,LLOVIZNA,Hace que llueva en combate.
+10,6,3,IMPULSO,Va subiendo la VELOCIDAD.
+10,6,4,ARMAD. BAT.,Bloquea golpes críticos.
+10,6,5,ROBUSTEZ,Anula golpes fulminantes.
+10,6,6,HUMEDAD,Evita la autodestrucción.
+10,6,7,FLEXIBILIDAD,Evita la parálisis.
+10,6,8,VELO ARENA,Más EVASIÓN en torm. arena.
+10,6,9,ELEC. ESTÁT.,Paraliza al mín. contacto.
+10,6,10,ABSOR. ELEC.,Cambia electricidad en PS.
+10,6,11,ABSOR. AGUA,Convierte el agua en PS.
+10,6,12,DESPISTE,Evita la atracción.
+10,6,13,ACLIMATACIÓN,Anula los efectos del clima.
+10,6,14,OJOCOMPUESTO,Aumenta la PRECISIÓN.
+10,6,15,INSOMNIO,Evita el quedarse dormido.
+10,6,16,CAMBIO COLOR,Toma el tipo del mov. rival.
+10,6,17,INMUNIDAD,Evita el envenenamiento.
+10,6,18,ABSOR. FUEGO,Se carga si recibe fuego.
+10,6,19,POLVO ESCUDO,Evita efectos secundarios.
+10,6,20,RITMO PROPIO,Evita la confusión.
+10,6,21,VENTOSAS,Fija el cuerpo con firmeza.
+10,6,22,INTIMIDACIÓN,Baja el ATAQUE del rival.
+10,6,23,SOMBRATRAMPA,Evita que el enemigo huya.
+10,6,24,PIEL TOSCA,Hiere al tacto.
+10,6,25,SUPERGUARDA.,Cuesta mucho hacerle daño.
+10,6,26,LEVITACIÓN,No sufre at. tipo TIERRA.
+10,6,27,EFEC. ESPORA,Deja esporas al contacto.
+10,6,28,SINCRONÍA,Transmite problem. estado.
+10,6,29,CUERPO PURO,Evita que baje la habilidad.
+10,6,30,CURA NATURAL,Se cura al salir.
+10,6,31,PARARRAYOS,Frena ataques eléctricos.
+10,6,32,DICHA,Añade efectos secundarios.
+10,6,33,NADO RÁPIDO,"Con lluvia, sube VELOCIDAD."
+10,6,34,CLOROFILA,"Con sol, sube la VELOCIDAD."
+10,6,35,ILUMINACIÓN,Facilita el encuentro.
+10,6,36,RASTRO,Copia habilidad especial.
+10,6,37,POTENCIA,Aumenta el ATAQUE.
+10,6,38,PUNTO TÓXICO,Envenena al mín. contacto.
+10,6,39,FOCO INTERNO,Evita el retroceso.
+10,6,40,ESCUDO MAGMA,Evita el congelamiento.
+10,6,41,VELO AGUA,Evita las quemaduras.
+10,6,42,IMÁN,Atrapa POKéMON de ACERO.
+10,6,43,INSONORIZAR,Evita ataques de sonido.
+10,6,44,CURA LLUVIA,Sube PS cuando llueve.
+10,6,45,CHORRO ARENA,Crea una tormenta de arena.
+10,6,46,PRESIÓN,Baja los PP del enemigo.
+10,6,47,SEBO,Protege del frío y calor.
+10,6,48,MADRUGAR,Despierta rápido al PKMN.
+10,6,49,CUERPO LLAMA,Quema al mínimo contacto.
+10,6,50,FUGA,Facilita la huida.
+10,6,51,VISTA LINCE,Evita que baje PRECISIÓN.
+10,6,52,CORTE FUERTE,Evita que baje el ATAQUE.
+10,6,53,RECOGIDA,Puede tomar objetos.
+10,6,54,AUSENTE,Interviene cada 2 rondas.
+10,6,55,ENTUSIASMO,Cambia PRECIS. por energía.
+10,6,56,GRAN ENCANTO,Emboba al mínimo contacto.
+10,6,57,MÁS,Mejora con habilidad MENOS.
+10,6,58,MENOS,Mejora con habilidad MÁS.
+10,6,59,PREDICCIÓN,Cambia con el clima.
+10,6,60,VISCOSIDAD,Evita el robo de objetos.
+10,6,61,MUDAR,Se cura mudando la piel.
+10,6,62,AGALLAS,Sube el ATAQUE si sufre.
+10,6,63,ESCAMA ESP.,Sube la DEFENSA si sufre.
+10,6,64,LODO LÍQUIDO,"Al verterlo, hiere."
+10,6,65,ESPESURA,Sube ataques tipo PLANTA.
+10,6,66,MAR LLAMAS,Sube ataques tipo FUEGO.
+10,6,67,TORRENTE,Sube ataques tipo AGUA.
+10,6,68,ENJAMBRE,Sube ataques tipo BICHO.
+10,6,69,CABEZA ROCA,Evita volver a ser golpeado.
+10,6,70,SEQUÍA,Toma luz solar en batalla.
+10,6,71,TRAMPA ARENA,Evita la huida.
+10,6,72,ESPÍR. VITAL,Evita quedarse dormido.
+10,6,73,HUMO BLANCO,Evita que baje la habilidad.
+10,6,74,ENERGÍA PURA,Aumenta el ATAQUE.
+10,6,75,CAPARAZÓN,Bloquea golpes críticos.
+10,6,76,BUCLE AIRE,Anula los efectos del clima.

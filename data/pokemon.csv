@@ -1100,10 +1100,10 @@ id,identifier,pokemon_identifier,species_id,is_default_pokemon,experience_group_
 10074,aegislash-blade,blade,681,0,2,127,aegislash,890
 10075,pumpkaboo-small,small,710,0,2,127,pumpkaboo-small,925
 10076,pumpkaboo-large,large,710,0,2,127,pumpkaboo-large,926
-10077,pumpkaboo-super,super,710,0,2,127,pumpkaboo-super,927
+10077,pumpkaboo-jumbo,jumbo,710,0,2,127,pumpkaboo-super,927
 10078,gourgeist-small,small,711,0,2,127,gourgeist-small,929
 10079,gourgeist-large,large,711,0,2,127,gourgeist-large,930
-10080,gourgeist-super,super,711,0,2,127,gourgeist-super,931
+10080,gourgeist-jumbo,jumbo,711,0,2,127,gourgeist-super,931
 10081,beedrill-mega,mega,15,0,2,127,beedrill,20
 10082,pidgeot-mega,mega,18,0,3,127,pidgeot,24
 10083,pikachu-cosplay-rock-star,cosplay-rock-star,25,0,2,254,pikachu,36
