@@ -203,11 +203,6 @@ return [
 		'pokedex_entries_9_sv',
 	],
 
-	// Shapes
-	'shapes',
-	'shape_icons',
-	'pokemon_shapes',
-
 	// Miscellaneous
 	'transformation_groups',
 	'transformation_group_pokemon',
