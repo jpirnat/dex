@@ -183,10 +183,6 @@ return [
 	'natures',
 	'nature_names',
 
-	// Habitats
-	'habitats',
-	'species_habitats',
-
 	// Pokédexes
 	'regions',
 	'region_names',
