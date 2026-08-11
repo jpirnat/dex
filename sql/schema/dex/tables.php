@@ -183,10 +183,6 @@ return [
 	'natures',
 	'nature_names',
 
-	// Colors
-	'colors',
-	'form_colors',
-
 	// Habitats
 	'habitats',
 	'species_habitats',
