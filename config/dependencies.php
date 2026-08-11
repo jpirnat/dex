@@ -18,7 +18,7 @@ $services = $configurator->services()
 $services->set(PDO::class)
     ->class(PDO::class)
     ->args([
-        "mysql:host=%env(DB_HOST)%;port=%env(DB_PORT)%;dbname=%env(DB_NAME)%;charset=utf8mb4",
+        'mysql:host=%env(DB_HOST)%;port=%env(DB_PORT)%;dbname=%env(DB_NAME)%;charset=utf8mb4',
         '%env(DB_USER)%',
         '%env(DB_PASS)%',
         [
@@ -32,7 +32,7 @@ $services->set(PDO::class)
 $services->set('$dbsetup')
     ->class(PDO::class)
     ->args([
-        "mysql:host=%env(DB_HOST)%;port=%env(DB_PORT)%;dbname=%env(DB_NAME)%;charset=utf8mb4",
+        'mysql:host=%env(DB_HOST)%;port=%env(DB_PORT)%;dbname=%env(DB_NAME)%;charset=utf8mb4',
         '%env(DB_SETUP_USER)%',
         '%env(DB_SETUP_PASS)%',
         [
@@ -282,10 +282,6 @@ $services->alias(
 $services->alias(
     \Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseLeadsRepository::class
-);
-$services->alias(
-    \Jp\Dex\Domain\Models\ModelRepositoryInterface::class,
-    \Jp\Dex\Infrastructure\DatabaseModelRepository::class
 );
 $services->alias(
     \Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface::class,
