@@ -199,10 +199,6 @@ return [
 		'pokedex_entries_9_sv',
 	],
 
-	// Miscellaneous
-	'transformation_groups',
-	'transformation_group_pokemon',
-
 	// conditions
 	'conditions',
 	'condition_names',
