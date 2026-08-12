@@ -1,6 +1,6 @@
 create table if not exists `pokemon`
 (
-`id` smallint unsigned not null,
+`id` mediumint unsigned not null,
 `identifier` varchar(30) not null,
 `pokemon_identifier` varchar(21) not null,
 

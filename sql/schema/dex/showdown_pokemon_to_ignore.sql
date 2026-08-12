@@ -2,7 +2,7 @@ create table if not exists `showdown_pokemon_to_ignore`
 (
 `name` varchar(50) not null,
 
-`pokemon_id` smallint unsigned null, # nullable
+`pokemon_id` mediumint unsigned null, # nullable
 
 primary key (`name`),
 foreign key (`pokemon_id`) references `pokemon` (`id`)

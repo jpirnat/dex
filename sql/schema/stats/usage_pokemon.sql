@@ -2,7 +2,7 @@ create table if not exists `usage_pokemon`
 (
 `month` date not null,
 `format_id` tinyint unsigned not null,
-`pokemon_id` smallint unsigned not null,
+`pokemon_id` mediumint unsigned not null,
 
 `raw` mediumint unsigned not null,
 `raw_percent` decimal(6, 3) not null,

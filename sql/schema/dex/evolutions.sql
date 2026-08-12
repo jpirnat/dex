@@ -8,7 +8,7 @@ create table if not exists `evolutions`
 `level` tinyint unsigned not null,
 `item_id` smallint unsigned null, # nullable
 `move_id` smallint unsigned null, # nullable
-`pokemon_id` smallint unsigned null, # nullable
+`pokemon_id` mediumint unsigned null, # nullable
 `type_id` tinyint unsigned null, # nullable
 `version_id` tinyint unsigned null, # nullable
 `other_parameter` smallint unsigned not null,

@@ -1,7 +1,7 @@
 create table if not exists `vg_pokemon`
 (
 `version_group_id` tinyint unsigned not null,
-`pokemon_id` smallint unsigned not null,
+`pokemon_id` mediumint unsigned not null,
 
 `icon` varchar(40) not null,
 `sprite` varchar(42) not null,

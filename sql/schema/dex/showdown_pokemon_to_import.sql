@@ -2,7 +2,7 @@ create table if not exists `showdown_pokemon_to_import`
 (
 `name` varchar(50) not null,
 
-`pokemon_id` smallint unsigned not null,
+`pokemon_id` mediumint unsigned not null,
 
 primary key (`name`),
 foreign key (`pokemon_id`) references `pokemon` (`id`)

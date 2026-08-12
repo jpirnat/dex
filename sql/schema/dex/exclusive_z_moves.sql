@@ -1,6 +1,6 @@
 create table if not exists `exclusive_z_moves`
 (
-`pokemon_id` smallint unsigned not null,
+`pokemon_id` mediumint unsigned not null,
 `z_crystal_id` smallint unsigned not null,
 
 `move_id` smallint unsigned not null,

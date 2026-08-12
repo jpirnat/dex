@@ -1,7 +1,7 @@
 create table if not exists `pokemon_names`
 (
 `language_id` tinyint unsigned not null,
-`pokemon_id` smallint unsigned not null,
+`pokemon_id` mediumint unsigned not null,
 
 `name` varchar(50) not null,
 `category` varchar(30) not null,
