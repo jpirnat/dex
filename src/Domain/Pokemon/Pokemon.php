@@ -10,7 +10,6 @@ final readonly class Pokemon
     public function __construct(
         private(set) PokemonId $id,
         private(set) string $identifier,
-        private(set) ?string $pokemonIdentifier,
         private(set) SpeciesId $speciesId,
         private(set) bool $isDefaultPokemon,
         private(set) ExperienceGroupId $experienceGroupId,

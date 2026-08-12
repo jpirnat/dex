@@ -27,7 +27,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
         $stmt = $this->db->prepare(
             'SELECT
                 `identifier`,
-                `pokemon_identifier`,
                 `species_id`,
                 `is_default_pokemon`,
                 `experience_group_id`,
@@ -51,7 +50,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
         return new Pokemon(
             $pokemonId,
             $result['identifier'],
-            $result['pokemon_identifier'],
             new SpeciesId($result['species_id']),
             (bool) $result['is_default_pokemon'],
             new ExperienceGroupId($result['experience_group_id']),
@@ -71,7 +69,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
         $stmt = $this->db->prepare(
             'SELECT
                 `id`,
-                `pokemon_identifier`,
                 `species_id`,
                 `is_default_pokemon`,
                 `experience_group_id`,
@@ -95,7 +92,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
         return new Pokemon(
             new PokemonId($result['id']),
             $identifier,
-            $result['pokemon_identifier'],
             new SpeciesId($result['species_id']),
             (bool) $result['is_default_pokemon'],
             new ExperienceGroupId($result['experience_group_id']),
@@ -116,7 +112,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
             'SELECT
                 `id`,
                 `identifier`,
-                `pokemon_identifier`,
                 `species_id`,
                 `is_default_pokemon`,
                 `experience_group_id`,
@@ -134,7 +129,6 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
             $pokemon = new Pokemon(
                 new PokemonId($result['id']),
                 $result['identifier'],
-                $result['pokemon_identifier'],
                 new SpeciesId($result['species_id']),
                 (bool) $result['is_default_pokemon'],
                 new ExperienceGroupId($result['experience_group_id']),

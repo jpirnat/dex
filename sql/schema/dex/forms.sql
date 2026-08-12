@@ -2,7 +2,6 @@ create table if not exists `forms`
 (
 `id` smallint unsigned not null,
 `identifier` varchar(50) not null,
-`form_identifier` varchar(50) not null,
 
 `pokemon_id` mediumint unsigned not null,
 `is_default_form` bool not null,
