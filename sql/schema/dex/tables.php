@@ -183,22 +183,6 @@ return [
 	'natures',
 	'nature_names',
 
-	// Pokédexes
-	'regions',
-	'region_names',
-	'pokedexes',
-	'pokedex_numbers',
-	'pokedex_entries' => [
-		'pokedex_entries_4',
-		'pokedex_entries_5',
-		'pokedex_entries_6',
-		'pokedex_entries_7',
-		'pokedex_entries_8_ss',
-		'pokedex_entries_8_bdsp',
-		'pokedex_entries_8_la',
-		'pokedex_entries_9_sv',
-	],
-
 	// conditions
 	'conditions',
 	'condition_names',
