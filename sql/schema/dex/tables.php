@@ -152,7 +152,6 @@ return [
 		'pokemon_moves_08_la',
 		'pokemon_moves_09_sv',
 	],
-	'exclusive_z_moves',
 
 	// Move flags
 	'move_flags',
