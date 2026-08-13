@@ -1,7 +1,7 @@
 create table if not exists `moveset_rated_counters`
 (
 `usage_rated_pokemon_id` int unsigned not null,
-`counter_id` smallint unsigned not null,
+`counter_id` mediumint unsigned not null,
 
 `number1` decimal(6, 3) not null,
 `number2` decimal(5, 2) not null,
