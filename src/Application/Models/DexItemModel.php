@@ -4,11 +4,11 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Evolutions\EvolutionRepositoryInterface;
-use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Forms\FormRepositoryInterface;
 use Jp\Dex\Domain\Items\DexItemRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 
@@ -24,7 +24,7 @@ final class DexItemModel
         private readonly DexItemRepositoryInterface $dexItemRepository,
         private readonly EvolutionRepositoryInterface $evolutionRepository,
         private readonly FormRepositoryInterface $formRepository,
-        private readonly FormIconRepositoryInterface $formIconRepository,
+        private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
         private readonly PokemonRepositoryInterface $pokemonRepository,
         private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
     ) {}
@@ -68,13 +68,12 @@ final class DexItemModel
             $formId = $evolution->evoFromId;
 
             $form = $this->formRepository->getById($formId);
-            $formIcon = $this->formIconRepository->getByVgAndFormAndFemaleAndRightAndShiny(
+            $dexPokemon = $this->dexPokemonRepository->getById(
                 $versionGroupId,
-                $formId,
-                false,
-                false,
-                false,
+                $form->pokemonId,
+                $languageId,
             );
+
             $pokemon = $this->pokemonRepository->getById($form->pokemonId);
             $pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
                 $languageId,
@@ -82,7 +81,7 @@ final class DexItemModel
             );
 
             $this->evolutions[] = [
-                'icon' => $formIcon->image,
+                'icon' => $dexPokemon->icon,
                 'identifier' => $pokemon->identifier,
                 'name' => $pokemonName->name,
             ];

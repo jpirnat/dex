@@ -9,13 +9,11 @@ use Jp\Dex\Domain\Evolutions\EvolutionTableMethod;
 use Jp\Dex\Domain\Evolutions\EvolutionTableRow;
 use Jp\Dex\Domain\Evolutions\EvolutionTree;
 use Jp\Dex\Domain\Evolutions\EvolutionTreeToTable;
-use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Forms\FormRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\TextLinks\TextLinkRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
 
@@ -27,11 +25,9 @@ final class DexPokemonEvolutionsModel
     public function __construct(
         private readonly EvolutionRepositoryInterface $evolutionRepository,
         private readonly EvolutionFormatter $evolutionFormatter,
-        private readonly FormIconRepositoryInterface $formIconRepository,
         private readonly FormRepositoryInterface $formRepository,
         private readonly TextLinkRepositoryInterface $textLinkRepository,
-        private readonly PokemonRepositoryInterface $pokemonRepository,
-        private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
+        private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
     ) {}
 
     /**
@@ -201,25 +197,18 @@ final class DexPokemonEvolutionsModel
             );
         }
 
-        $formIcon = $this->formIconRepository->getByVgAndFormAndFemaleAndRightAndShiny(
-            $versionGroupId,
-            $formId,
-            false,
-            false,
-            false,
-        );
         $form = $this->formRepository->getById($formId);
-        $pokemon = $this->pokemonRepository->getById($form->pokemonId);
-        $pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
+        $dexPokemon = $this->dexPokemonRepository->getById(
+            $versionGroupId,
+            $form->pokemonId,
             $languageId,
-            $pokemon->id,
         );
 
         return new EvolutionTree(
             $isFirstStage,
-            $formIcon->image,
-            $pokemon->identifier,
-            $pokemonName->name,
+            $dexPokemon->icon,
+            $dexPokemon->identifier,
+            $dexPokemon->name,
             $methods,
             $evoIntoTrees,
         );

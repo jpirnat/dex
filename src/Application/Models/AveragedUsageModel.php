@@ -6,10 +6,8 @@ namespace Jp\Dex\Application\Models;
 use DateTime;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
-use Jp\Dex\Domain\FormIcons\FormIconRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface;
@@ -40,10 +38,8 @@ final class AveragedUsageModel
         private readonly UsageAveragedPokemonRepositoryInterface $usageAveragedPokemonRepository,
         private readonly UsageRatedAveragedPokemonRepositoryInterface $usageRatedAveragedPokemonRepository,
         private readonly LeadsRatedAveragedPokemonRepositoryInterface $leadsRatedAveragedPokemonRepository,
+        private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
         private readonly MonthsCounter $monthsCounter,
-        private readonly PokemonRepositoryInterface $pokemonRepository,
-        private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
-        private readonly FormIconRepositoryInterface $formIconRepository,
     ) {}
 
 
@@ -111,45 +107,28 @@ final class AveragedUsageModel
             $rating,
         );
 
-        // Get Pokémon.
-        $pokemons = $this->pokemonRepository->getAll();
-
-        // Get Pokémon names.
-        $pokemonNames = $this->pokemonNameRepository->getByLanguage($languageId);
-
-        // Get form icons.
-        $formIcons = $this->formIconRepository->getByVgAndFemaleAndRightAndShiny(
-            $this->format->versionGroupId,
-            false,
-            false,
-            false,
-        );
-
         // Get each usage record's data.
         foreach ($usageRatedAveragedPokemons as $usageRatedAveragedPokemon) {
-            $pokemonId = $usageRatedAveragedPokemon->pokemonId;
+            $dexPokemon = $this->dexPokemonRepository->getById(
+                $this->format->versionGroupId,
+                $usageRatedAveragedPokemon->pokemonId,
+                $languageId,
+            );
 
-            // Get this Pokémon's name.
-            $pokemonName = $pokemonNames[$pokemonId->value];
+            $pokemonId = $usageRatedAveragedPokemon->pokemonId;
 
             // Get this Pokémon's number of months of moveset data.
             $numberOfMonths = $monthCounts[$pokemonId->value] ?? 0;
-
-            // Get this Pokémon.
-            $pokemon = $pokemons[$pokemonId->value];
-
-            // Get this Pokémon's form icon.
-            $formIcon = $formIcons[$pokemonId->value]; // A Pokémon's default form has Pokémon id === form id.
 
             // Get this Pokémon's non-rated usage record for these months.
             $usageAveragedPokemon = $usageAveragedPokemons[$pokemonId->value];
 
             $this->pokemon[] = new AveragedUsagePokemon(
                 $usageRatedAveragedPokemon->rank,
-                $formIcon->image,
+                $dexPokemon->icon,
                 $numberOfMonths,
-                $pokemon->identifier,
-                $pokemonName->name,
+                $dexPokemon->identifier,
+                $dexPokemon->name,
                 $usageRatedAveragedPokemon->usagePercent,
                 $usageAveragedPokemon->raw,
                 $usageAveragedPokemon->rawPercent,
