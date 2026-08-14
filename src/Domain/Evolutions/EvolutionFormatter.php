@@ -201,7 +201,7 @@ final readonly class EvolutionFormatter
                 "Land $otherParameter critical hits in one battle",
             ),
             EvoMethodId::HP_LOST_IN_BATTLE => $this->hpLostInBattle($evolution, $languageId),
-            EvoMethodId::SPIN => $this->spin($evolution, $item),
+            EvoMethodId::SPIN => $this->spin($evolution),
             EvoMethodId::LEVEL_UP_NATURE_AMPED,
             EvoMethodId::LEVEL_UP_NATURE_LOW_KEY => $this->levelUpNatures($evolution, $languageId),
             EvoMethodId::TOWER_OF_DARKNESS => new EvolutionTableMethod(
@@ -423,7 +423,6 @@ final readonly class EvolutionFormatter
      */
     private function spin(
         Evolution $evolution,
-        string $item,
     ): EvolutionTableMethod {
         $spinType = new AlcremieSpinType($evolution->otherParameter);
 
@@ -432,7 +431,7 @@ final readonly class EvolutionFormatter
         $timeOfDay = $spinType->getTimeOfDay($evolution->versionGroupId);
 
         return new EvolutionTableMethod(
-            "After spinning $direction for $duration $timeOfDay, while holding $item",
+            "After spinning $direction for $duration $timeOfDay, while holding a sweet",
         );
     }
 
