@@ -12,13 +12,13 @@ final class VersionGroupId extends EntityId
     public const int RED_BLUE = 3;
     private const int GOLD_SILVER = 5;
     private const int RUBY_SAPPHIRE = 7;
-    public const int ULTRA_SUN_ULTRA_MOON = 18;
-    private const int LETS_GO_PIKACHU_EEVEE = 19;
-    public const int SWORD_SHIELD = 20;
-    private const int LEGENDS_ARCEUS = 22;
-    public const int SCARLET_VIOLET = 23;
-    private const int COLOSSEUM = 101;
-    private const int XD = 102;
+    private const int COLOSSEUM = 8;
+    private const int XD = 11;
+    public const int ULTRA_SUN_ULTRA_MOON = 20;
+    private const int LETS_GO_PIKACHU_EEVEE = 21;
+    public const int SWORD_SHIELD = 22;
+    private const int LEGENDS_ARCEUS = 24;
+    public const int SCARLET_VIOLET = 25;
 
     public function hasHeldItems(): bool
     {

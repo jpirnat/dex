@@ -92,7 +92,6 @@ final class EvoMethodId extends EntityId
             self::LEVEL_UP_HELD_ITEM_DAY,
             self::LEVEL_UP_HELD_ITEM_NIGHT,
             self::USE_ITEM_WORMHOLE,
-            self::SPIN, // This evolution method doesn't use an item parameter in the games. It does here, for simplicity.
             self::USE_ITEM_FULL_MOON,
             self::USE_ITEM_DAY,
             self::USE_ITEM_NIGHT,
