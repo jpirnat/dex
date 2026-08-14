@@ -11,7 +11,6 @@ final readonly class Pokemon
         private(set) PokemonId $id,
         private(set) string $identifier,
         private(set) SpeciesId $speciesId,
-        private(set) bool $isDefaultPokemon,
         private(set) ExperienceGroupId $experienceGroupId,
         private(set) int $genderRatio,
         private(set) string $smogonDexIdentifier,
