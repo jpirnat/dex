@@ -4,7 +4,6 @@ create table if not exists `pokemon_names`
 `pokemon_id` mediumint unsigned not null,
 
 `name` varchar(50) not null,
-`category` varchar(30) not null,
 
 primary key (
 	`language_id`,
