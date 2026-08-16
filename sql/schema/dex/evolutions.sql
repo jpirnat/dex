@@ -1,9 +1,9 @@
 create table if not exists `evolutions`
 (
 `version_group_id` tinyint unsigned not null,
-`evo_from_id` smallint unsigned not null,
+`evo_from_id` mediumint unsigned not null,
 `evo_method_id` tinyint unsigned not null,
-`evo_into_id` smallint unsigned not null,
+`evo_into_id` mediumint unsigned not null,
 
 `level` tinyint unsigned not null,
 `item_id` smallint unsigned null, # nullable
@@ -23,13 +23,13 @@ primary key (
 foreign key (`version_group_id`) references `version_groups` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`evo_from_id`) references `forms` (`id`)
+foreign key (`evo_from_id`) references `pokemon` (`id`)
 	on delete restrict
 	on update cascade,
 foreign key (`evo_method_id`) references `evolution_methods` (`id`)
 	on delete restrict
 	on update cascade,
-foreign key (`evo_into_id`) references `forms` (`id`)
+foreign key (`evo_into_id`) references `pokemon` (`id`)
 	on delete restrict
 	on update cascade,
 

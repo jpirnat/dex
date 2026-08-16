@@ -7,6 +7,9 @@ create table if not exists `pokemon`
 `experience_group_id` tinyint unsigned not null,
 `gender_ratio` tinyint unsigned not null,
 `smogon_dex_identifier` varchar(20) not null,
+`is_battle_only` bool not null,
+`height_m` decimal(3, 1) not null,
+`weight_kg` decimal(4, 1) not null,
 `sort` smallint unsigned not null,
 
 primary key (`id`),

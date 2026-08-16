@@ -29,9 +29,6 @@ return [
 	'experience_groups',
 	'pokemon',
 	'pokemon_names',
-	'forms',
-	'form_icons',
-	'vg_forms',
 
 	// Abilities
 	'abilities',
