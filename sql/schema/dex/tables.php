@@ -30,7 +30,6 @@ return [
 	'pokemon',
 	'pokemon_names',
 	'forms',
-	'form_names',
 	'form_icons',
 	'vg_forms',
 
