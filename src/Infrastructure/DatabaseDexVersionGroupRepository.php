@@ -122,11 +122,9 @@ final readonly class DatabaseDexVersionGroupRepository implements DexVersionGrou
             )
             AND `vg`.`id` IN (
                 SELECT
-                    `vgf`.`version_group_id`
-                FROM `vg_forms` AS `vgf`
-                INNER JOIN `forms` AS `f`
-                    ON `vgf`.`form_id` = `f`.`id`
-                WHERE `f`.`pokemon_id` = :pokemon_id
+                    `version_group_id`
+                FROM `vg_pokemon`
+                WHERE `pokemon_id` = :pokemon_id
             )
             AND `vgn`.`language_id` = :language_id
             ORDER BY `vg`.`sort`'

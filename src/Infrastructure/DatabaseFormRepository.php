@@ -48,38 +48,4 @@ final readonly class DatabaseFormRepository implements FormRepositoryInterface
             new PokemonId($result['pokemon_id']),
         );
     }
-
-    /**
-     * Get form ids of this Pokémon, available in this version group.
-     * *
-     * * @return FormId[] Indexed by id.
-     */
-    public function getByVgAndPokemon(VersionGroupId $versionGroupId, PokemonId $pokemonId): array
-    {
-        $stmt = $this->db->prepare(
-            'SELECT
-                `id`
-            FROM `forms`
-            WHERE `id` IN (
-                SELECT
-                    `form_id`
-                FROM `vg_forms`
-                WHERE `version_group_id` = :version_group_id
-            )
-            AND `pokemon_id` = :pokemon_id'
-        );
-        $stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
-        $stmt->bindValue(':pokemon_id', $pokemonId->value, PDO::PARAM_INT);
-        $stmt->execute();
-
-        $formIds = [];
-
-        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $formId = new FormId($result['id']);
-
-            $formIds[$result['id']] = $formId;
-        }
-
-        return $formIds;
-    }
 }

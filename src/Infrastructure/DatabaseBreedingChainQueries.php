@@ -27,8 +27,8 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
             WHERE `gender_ratio` = 8
             AND `id` IN (
                 SELECT
-                    `form_id`
-                FROM `vg_forms`
+                    `pokemon_id`
+                FROM `vg_pokemon`
                 WHERE `version_group_id` IN (
                     SELECT
                         `id`
@@ -109,15 +109,6 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
             WHERE `is_battle_only` = 0
             AND `pokemon_id` <> $pokemonId
             AND `pokemon_id` IN (
-                # Make sure the Pokémon is in the same game as the egg move.
-                SELECT
-                    `f`.`pokemon_id`
-                FROM `vg_forms` AS `vgf`
-                INNER JOIN `forms` AS `f`
-                    ON `vgf`.`form_id` = `f`.`id`
-                WHERE `vgf`.`version_group_id` = $versionGroupId
-            )
-            AND `pokemon_id` IN (
                 # It's in at least one of these egg groups.
                 SELECT
                     `pokemon_id`
@@ -161,18 +152,9 @@ final readonly class DatabaseBreedingChainQueries implements BreedingChainQuerie
     ): array {
         $stmt = $this->db->query(
             "SELECT DISTINCT
-                `pokemon_id`
-            FROM `forms`
+                `id`
+            FROM `pokemon`
             WHERE `is_battle_only` = 0
-            AND `pokemon_id` IN (
-                # Make sure the Pokémon is in the same game as the egg move.
-                SELECT
-                    `f`.`pokemon_id`
-                FROM `vg_forms` AS `vgf`
-                INNER JOIN `forms` AS `f`
-                    ON `vgf`.`form_id` = `f`.`id`
-                WHERE `vgf`.`version_group_id` = $versionGroupId
-            )
             AND `pokemon_id` IN (
                 # It's in at least one of these egg groups.
                 SELECT

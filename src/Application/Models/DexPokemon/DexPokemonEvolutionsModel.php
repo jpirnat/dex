@@ -9,8 +9,6 @@ use Jp\Dex\Domain\Evolutions\EvolutionTableMethod;
 use Jp\Dex\Domain\Evolutions\EvolutionTableRow;
 use Jp\Dex\Domain\Evolutions\EvolutionTree;
 use Jp\Dex\Domain\Evolutions\EvolutionTreeToTable;
-use Jp\Dex\Domain\Forms\FormId;
-use Jp\Dex\Domain\Forms\FormRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -25,7 +23,6 @@ final class DexPokemonEvolutionsModel
     public function __construct(
         private readonly EvolutionRepositoryInterface $evolutionRepository,
         private readonly EvolutionFormatter $evolutionFormatter,
-        private readonly FormRepositoryInterface $formRepository,
         private readonly TextLinkRepositoryInterface $textLinkRepository,
         private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
     ) {}
@@ -38,20 +35,18 @@ final class DexPokemonEvolutionsModel
         PokemonId $pokemonId,
         LanguageId $languageId,
     ): void {
-        $formId = new FormId($pokemonId->value);
-        $baseFormIds = $this->getBaseFormIds($versionGroupId, $formId);
-        $baseFormIds = $this->withSiblingFormIds($versionGroupId, $baseFormIds);
-        $baseFormIds = $this->removeDuplicates($baseFormIds);
+        $basePokemonIds = $this->getBasePokemonIds($versionGroupId, $pokemonId);
+        $basePokemonIds = $this->removeDuplicates($basePokemonIds);
 
-        foreach ($baseFormIds as $baseFormId) {
+        foreach ($basePokemonIds as $basePokemonId) {
             // Get this base form's rows for the evolution table.
             // Add the rows to the evolution table.
 
-            $methods = $this->getBaseMethods($versionGroupId, $baseFormId, $languageId);
+            $methods = $this->getBaseMethods($versionGroupId, $basePokemonId, $languageId);
 
             $tree = $this->createEvolutionTree(
                 $versionGroupId,
-                $baseFormId,
+                $basePokemonId,
                 $methods,
                 $languageId,
                 true,
@@ -66,21 +61,22 @@ final class DexPokemonEvolutionsModel
     }
 
     /**
-     * Go backward through this form's evolutionary tree to get all the forms
+     * Go backward through this form's evolutionary tree to get all the Pokémon
      * it could have evolved from.
+     * (The branching aspect only really matters for Gimmighoul.)
      *
-     * @return FormId[]
+     * @return PokemonId[]
      */
-    private function getBaseFormIds(VersionGroupId $versionGroupId, FormId $formId): array
+    private function getBasePokemonIds(VersionGroupId $versionGroupId, PokemonId $pokemonId): array
     {
-        $prevEvos = $this->evolutionRepository->getByEvoInto($versionGroupId, $formId);
+        $prevEvos = $this->evolutionRepository->getByEvoInto($versionGroupId, $pokemonId);
         if (!$prevEvos) {
-            return [$formId];
+            return [$pokemonId];
         }
 
         $allBaseFormIds = [];
         foreach ($prevEvos as $prevEvo) {
-            $baseFormIds = $this->getBaseFormIds($versionGroupId, $prevEvo->evoFromId);
+            $baseFormIds = $this->getBasePokemonIds($versionGroupId, $prevEvo->evoFromId);
             $allBaseFormIds = array_merge($allBaseFormIds, $baseFormIds);
         }
 
@@ -88,46 +84,17 @@ final class DexPokemonEvolutionsModel
     }
 
     /**
-     * For each of these "base" form ids (the first stage in an evolution line,
-     * such as Plant Burmy), add any "sibling" form ids it has (forms of the
-     * same Pokémon, such as Sandy Burmy and Trash Burmy).
+     * @param PokemonId[] $pokemonIds
      *
-     * @param FormId[] $baseFormIds
-     *
-     * @return FormId[]
+     * @return PokemonId[]
      */
-    private function withSiblingFormIds(VersionGroupId $versionGroupId, array $baseFormIds): array
-    {
-        $allSiblingFormIds = [];
-        foreach ($baseFormIds as $baseFormId) {
-            $siblingFormIds = $this->getSiblingFormIds($versionGroupId, $baseFormId);
-            $allSiblingFormIds = array_merge($allSiblingFormIds, $siblingFormIds);
-        }
-
-        return $allSiblingFormIds;
-    }
-
-    /**
-     * Get this form's sibling form ids.
-     */
-    private function getSiblingFormIds(VersionGroupId $versionGroupId, FormId $formId): array
-    {
-        $form = $this->formRepository->getById($formId);
-        return $this->formRepository->getByVgAndPokemon($versionGroupId, $form->pokemonId);
-    }
-
-    /**
-     * @param FormId[] $formIds
-     *
-     * @return FormId[]
-     */
-    private function removeDuplicates(array $formIds): array
+    private function removeDuplicates(array $pokemonIds): array
     {
         $outputIds = [];
 
-        foreach ($formIds as $formId) {
-            $fId = $formId->value;
-            $outputIds[$fId] = $formId;
+        foreach ($pokemonIds as $pokemonId) {
+            $pId = $pokemonId->value;
+            $outputIds[$pId] = $pokemonId;
         }
 
         return $outputIds;
@@ -141,13 +108,13 @@ final class DexPokemonEvolutionsModel
      */
     private function getBaseMethods(
         VersionGroupId $versionGroupId,
-        FormId $formId,
+        PokemonId $pokemonId,
         LanguageId $languageId,
     ): array {
         $textLinkItem = $this->textLinkRepository->getForIncense(
             $versionGroupId,
             $languageId,
-            $formId,
+            $pokemonId,
         );
         if (!$textLinkItem) {
             return [];
@@ -166,12 +133,12 @@ final class DexPokemonEvolutionsModel
      */
     private function createEvolutionTree(
         VersionGroupId $versionGroupId,
-        FormId $formId,
+        PokemonId $pokemonId,
         /** @var EvolutionTableMethod[] $methods */ array $methods,
         LanguageId $languageId,
         bool $isFirstStage,
     ): EvolutionTree {
-        $evolutions = $this->evolutionRepository->getByEvoFrom($versionGroupId, $formId);
+        $evolutions = $this->evolutionRepository->getByEvoFrom($versionGroupId, $pokemonId);
 
         $evoIntoIds = [];
         $evoMethods = [];
@@ -197,10 +164,9 @@ final class DexPokemonEvolutionsModel
             );
         }
 
-        $form = $this->formRepository->getById($formId);
         $dexPokemon = $this->dexPokemonRepository->getById(
             $versionGroupId,
-            $form->pokemonId,
+            $pokemonId,
             $languageId,
         );
 

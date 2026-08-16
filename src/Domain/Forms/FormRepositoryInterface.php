@@ -14,11 +14,4 @@ interface FormRepositoryInterface
      * @throws FormNotFoundException if no form exists with this id.
      */
     public function getById(FormId $formId): Form;
-
-    /**
-     * Get form ids of this Pokémon, available in this version group.
-     *
-     * @return FormId[] Indexed by id.
-     */
-    public function getByVgAndPokemon(VersionGroupId $versionGroupId, PokemonId $pokemonId): array;
 }

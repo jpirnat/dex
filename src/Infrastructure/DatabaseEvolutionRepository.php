@@ -6,7 +6,6 @@ namespace Jp\Dex\Infrastructure;
 use Jp\Dex\Domain\Evolutions\Evolution;
 use Jp\Dex\Domain\Evolutions\EvolutionRepositoryInterface;
 use Jp\Dex\Domain\Evolutions\EvoMethodId;
-use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -26,7 +25,7 @@ final readonly class DatabaseEvolutionRepository implements EvolutionRepositoryI
      *
      * @return Evolution[] Ordered by evo into id.
      */
-    public function getByEvoFrom(VersionGroupId $versionGroupId, FormId $evoFromId): array
+    public function getByEvoFrom(VersionGroupId $versionGroupId, PokemonId $evoFromId): array
     {
         $stmt = $this->db->prepare(
             'SELECT
@@ -55,7 +54,7 @@ final readonly class DatabaseEvolutionRepository implements EvolutionRepositoryI
                 $versionGroupId,
                 $evoFromId,
                 new EvoMethodId($result['evo_method_id']),
-                new FormId($result['evo_into_id']),
+                new PokemonId($result['evo_into_id']),
                 $result['level'],
                 $result['item_id'] !== null ? new ItemId($result['item_id']) : null,
                 $result['move_id'] !== null ? new MoveId($result['move_id']) : null,
@@ -76,7 +75,7 @@ final readonly class DatabaseEvolutionRepository implements EvolutionRepositoryI
      *
      * @return Evolution[] Ordered by evo from id.
      */
-    public function getByEvoInto(VersionGroupId $versionGroupId, FormId $evoIntoId): array
+    public function getByEvoInto(VersionGroupId $versionGroupId, PokemonId $evoIntoId): array
     {
         $stmt = $this->db->prepare(
             'SELECT
@@ -103,7 +102,7 @@ final readonly class DatabaseEvolutionRepository implements EvolutionRepositoryI
         while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $evolution = new Evolution(
                 $versionGroupId,
-                new FormId($result['evo_from_id']),
+                new PokemonId($result['evo_from_id']),
                 new EvoMethodId($result['evo_method_id']),
                 $evoIntoId,
                 $result['level'],
@@ -152,9 +151,9 @@ final readonly class DatabaseEvolutionRepository implements EvolutionRepositoryI
         while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $evolution = new Evolution(
                 $versionGroupId,
-                new FormId($result['evo_from_id']),
+                new PokemonId($result['evo_from_id']),
                 new EvoMethodId($result['evo_method_id']),
-                new FormId($result['evo_into_id']),
+                new PokemonId($result['evo_into_id']),
                 $result['level'],
                 $itemId,
                 $result['move_id'] !== null ? new MoveId($result['move_id']) : null,
@@ -199,9 +198,9 @@ final readonly class DatabaseEvolutionRepository implements EvolutionRepositoryI
         while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $evolution = new Evolution(
                 new VersionGroupId($result['version_group_id']),
-                new FormId($result['evo_from_id']),
+                new PokemonId($result['evo_from_id']),
                 new EvoMethodId($result['evo_method_id']),
-                new FormId($result['evo_into_id']),
+                new PokemonId($result['evo_into_id']),
                 $result['level'],
                 $result['item_id'] !== null ? new ItemId($result['item_id']) : null,
                 $result['move_id'] !== null ? new MoveId($result['move_id']) : null,

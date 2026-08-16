@@ -68,6 +68,6 @@ interface TextLinkRepositoryInterface
     public function getForIncense(
         VersionGroupId $versionGroupId,
         LanguageId $languageId,
-        FormId $formId,
+        PokemonId $pokemonId,
     ): ?TextLinkItem;
 }

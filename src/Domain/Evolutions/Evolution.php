@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Evolutions;
 
-use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Moves\MoveId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -15,9 +14,9 @@ final readonly class Evolution
 {
     public function __construct(
         private(set) VersionGroupId $versionGroupId,
-        private(set) FormId $evoFromId,
+        private(set) PokemonId $evoFromId,
         private(set) EvoMethodId $evoMethodId,
-        private(set) FormId $evoIntoId,
+        private(set) PokemonId $evoIntoId,
         private(set) int $level,
         private(set) ?ItemId $itemId,
         private(set) ?MoveId $moveId,
