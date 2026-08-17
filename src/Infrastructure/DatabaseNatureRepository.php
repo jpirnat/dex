@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Natures\Nature;
 use Jp\Dex\Domain\Natures\NatureId;
 use Jp\Dex\Domain\Natures\NatureNotFoundException;
 use Jp\Dex\Domain\Natures\NatureRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\StatId;
 use PDO;
 
@@ -54,7 +54,7 @@ final readonly class DatabaseNatureRepository implements NatureRepositoryInterfa
             $result['decreased_stat_id'] !== null
                 ? new StatId($result['decreased_stat_id'])
                 : null,
-            new FormId($result['toxel_evo_id']),
+            new PokemonId($result['toxel_evo_id']),
             $result['vc_exp_remainder'],
         );
     }

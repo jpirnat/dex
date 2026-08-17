@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Natures\DexNatureRepositoryInterface;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use PDO;
 
 final readonly class DatabaseDexNatureRepository implements DexNatureRepositoryInterface
@@ -48,7 +48,7 @@ final readonly class DatabaseDexNatureRepository implements DexNatureRepositoryI
      */
     public function getByToxelEvo(
         LanguageId $languageId,
-        FormId $toxelEvoId,
+        PokemonId $toxelEvoId,
     ): array {
         $stmt = $this->db->prepare(
             'SELECT

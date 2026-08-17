@@ -5,7 +5,6 @@ namespace Jp\Dex\Domain\Evolutions;
 
 use Jp\Dex\Domain\Conditions\ConditionId;
 use Jp\Dex\Domain\Conditions\ConditionNameRepositoryInterface;
-use Jp\Dex\Domain\Forms\FormId;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Moves\MoveId;
@@ -256,8 +255,8 @@ final readonly class EvolutionFormatter
         LanguageId $languageId,
     ): EvolutionTableMethod {
         $inExchangeFor = match ($evolution->evoFromId->value) {
-            FormId::KARRABLAST => FormId::SHELMET,
-            FormId::SHELMET => FormId::KARRABLAST,
+            PokemonId::KARRABLAST => PokemonId::SHELMET,
+            PokemonId::SHELMET => PokemonId::KARRABLAST,
         };
 
         $textLinkPokemon = $this->textLinkRepository->getForPokemon(

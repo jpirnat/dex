@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Natures;
 
-use Jp\Dex\Domain\Forms\FormId;
+use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\StatId;
 
 final readonly class Nature
@@ -13,7 +13,7 @@ final readonly class Nature
         private(set) string $identifier,
         private(set) ?StatId $increasedStatId,
         private(set) ?StatId $decreasedStatId,
-        private(set) FormId $toxelEvoId,
+        private(set) PokemonId $toxelEvoId,
         private(set) int $vcExpRemainder,
     ) {}
 }

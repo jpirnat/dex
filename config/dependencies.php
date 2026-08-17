@@ -232,10 +232,6 @@ $services->alias(
     \Jp\Dex\Infrastructure\DatabaseFormatRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Forms\FormRepositoryInterface::class,
-    \Jp\Dex\Infrastructure\DatabaseFormRepository::class
-);
-$services->alias(
     \Jp\Dex\Domain\Versions\GenerationRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseGenerationRepository::class
 );

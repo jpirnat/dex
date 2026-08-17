@@ -4,13 +4,12 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Evolutions\EvolutionRepositoryInterface;
-use Jp\Dex\Domain\Forms\FormRepositoryInterface;
 use Jp\Dex\Domain\Items\DexItemRepositoryInterface;
+use Jp\Dex\Domain\Items\ItemNotFoundException;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\PokemonNameRepositoryInterface;
-use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 
 final class DexItemModel
 {
@@ -23,10 +22,7 @@ final class DexItemModel
         private readonly ItemRepositoryInterface $itemRepository,
         private readonly DexItemRepositoryInterface $dexItemRepository,
         private readonly EvolutionRepositoryInterface $evolutionRepository,
-        private readonly FormRepositoryInterface $formRepository,
         private readonly DexPokemonRepositoryInterface $dexPokemonRepository,
-        private readonly PokemonRepositoryInterface $pokemonRepository,
-        private readonly PokemonNameRepositoryInterface $pokemonNameRepository,
     ) {}
 
 
@@ -41,9 +37,17 @@ final class DexItemModel
         $this->item = [];
         $this->evolutions = [];
 
-        $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+        try {
+            $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
+        } catch (VersionGroupNotFoundException) {
+            return;
+        }
 
-        $item = $this->itemRepository->getByIdentifier($itemIdentifier);
+        try {
+            $item = $this->itemRepository->getByIdentifier($itemIdentifier);
+        } catch (ItemNotFoundException) {
+            return;
+        }
 
         $this->versionGroupModel->setWithItem($item->id);
 
@@ -65,25 +69,16 @@ final class DexItemModel
             $item->id,
         );
         foreach ($evolutions as $evolution) {
-            $formId = $evolution->evoFromId;
-
-            $form = $this->formRepository->getById($formId);
             $dexPokemon = $this->dexPokemonRepository->getById(
                 $versionGroupId,
-                $form->pokemonId,
+                $evolution->evoFromId,
                 $languageId,
-            );
-
-            $pokemon = $this->pokemonRepository->getById($form->pokemonId);
-            $pokemonName = $this->pokemonNameRepository->getByLanguageAndPokemon(
-                $languageId,
-                $pokemon->id,
             );
 
             $this->evolutions[] = [
                 'icon' => $dexPokemon->icon,
-                'identifier' => $pokemon->identifier,
-                'name' => $pokemonName->name,
+                'identifier' => $dexPokemon->identifier,
+                'name' => $dexPokemon->name,
             ];
         }
     }
