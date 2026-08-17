@@ -243,7 +243,7 @@ export default {
                 return `${pokemon.name} learns ${move.name} in ${vg.name} at Level ${move.vgData[vg.identifier]}.`;
             }
             if (method.identifier === 'machine') {
-                return `${pokemon.name} learns ${move.name} in ${vg.name} at via ${move.vgData[vg.identifier].item}.`;
+                return `${pokemon.name} learns ${move.name} in ${vg.name} via ${move.vgData[vg.identifier].item}.`;
             }
             if (method.identifier === 'egg') {
                 return `${pokemon.name} learns ${move.name} in ${vg.name} as an Egg Move. Click for breeding chains.`;
