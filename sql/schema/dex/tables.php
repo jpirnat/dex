@@ -41,6 +41,7 @@ return [
 		'ability_descriptions_07',
 		'ability_descriptions_08',
 		'ability_descriptions_09',
+		'ability_descriptions_champions',
 	],
 	'vg_abilities',
 
@@ -68,6 +69,7 @@ return [
 		'item_descriptions_08_la',
 		'item_descriptions_09_sv',
 		'item_descriptions_09_za',
+		'item_descriptions_champions',
 	],
 	'item_names',
 	'vg_items',
@@ -100,6 +102,7 @@ return [
 		'move_descriptions_08',
 		'move_descriptions_09_sv',
 		'move_descriptions_09_za',
+		'move_descriptions_champions',
 	],
 	'z_move_names',
 	'z_move_images',

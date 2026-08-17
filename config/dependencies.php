@@ -9,7 +9,9 @@ return function(ContainerConfigurator $configurator) {
 $services = $configurator->services()
     ->defaults()
         ->autowire()
-        ->public();
+        ->public()
+        ->bind('string $projectRoot', __DIR__ . '/..')
+;
 
 
 // Databases
@@ -43,6 +45,8 @@ $services->set('$dbsetup')
     ])
 ;
 
+// Other vendor classes.
+$services->set(\GuzzleHttp\Client::class);
 
 // Import almost everything.
 $services->load('Jp\\Dex\\Application\\', '../src/Application')
@@ -69,6 +73,10 @@ $services->load('Jp\\Dex\\Presentation\\', '../src/Presentation');
 $services->set(\Jp\Dex\Domain\Abilities\AbilityTypeMatchups::class);
 $services->set(\Jp\Dex\Domain\BreedingChains\BreedingChainFinder::class);
 $services->set(\Jp\Dex\Domain\Evolutions\EvolutionFormatter::class);
+$services->set(\Jp\Dex\Domain\Import\Champions\AbilityDescriptionImporter::class);
+$services->set(\Jp\Dex\Domain\Import\Champions\ItemDescriptionImporter::class);
+$services->set(\Jp\Dex\Domain\Import\Champions\MoveDescriptionImporter::class);
+$services->set(\Jp\Dex\Domain\Import\Champions\PokemonImporter::class);
 $services->set(\Jp\Dex\Domain\PokemonMoves\PokemonMoveFormatter::class);
 $services->set(\Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter::class);
 $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageTrendGenerator::class);

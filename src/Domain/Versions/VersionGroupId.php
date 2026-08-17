@@ -19,6 +19,7 @@ final class VersionGroupId extends EntityId
     public const int SWORD_SHIELD = 22;
     private const int LEGENDS_ARCEUS = 24;
     public const int SCARLET_VIOLET = 25;
+    public const int CHAMPIONS = 27;
 
     public function hasHeldItems(): bool
     {

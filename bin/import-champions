@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+use Jp\Dex\Domain\Import\Champions\AbilityDescriptionImporter;
+use Jp\Dex\Domain\Import\Champions\ItemDescriptionImporter;
+use Jp\Dex\Domain\Import\Champions\MoveDescriptionImporter;
+
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config/environment.php';
+$container = require __DIR__ . '/../config/container.php';
+
+/** @var AbilityDescriptionImporter $abilityDescriptionImporter */
+$abilityDescriptionImporter = $container->get(AbilityDescriptionImporter::class);
+
+/** @var ItemDescriptionImporter $itemDescriptionImporter */
+$itemDescriptionImporter = $container->get(ItemDescriptionImporter::class);
+
+/** @var MoveDescriptionImporter $moveDescriptionImporter */
+$moveDescriptionImporter = $container->get(MoveDescriptionImporter::class);
+
+$abilityDescriptionImporter->import();
+$itemDescriptionImporter->import();
+$moveDescriptionImporter->import();

@@ -1,0 +1,184 @@
+<?php
+declare(strict_types=1);
+
+namespace Jp\Dex\Domain\Import\Champions;
+
+use Exception;
+use Jp\Dex\Domain\Languages\Language;
+use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroupId;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
+use League\Csv\Bom;
+use League\Csv\Writer;
+use Spatie\Regex\Exceptions\RegexFailed;
+use Spatie\Regex\Regex;
+
+final class ItemDescriptionImporter
+{
+    /** @var string[][] $names Indexed by language id, then item id. */
+    private array $names = [];
+
+    /** @var string[][] $descriptions Indexed by language id, then item id. */
+    private array $descriptions = [];
+
+    public function __construct(
+        private readonly LanguageRepositoryInterface $languageRepository,
+        private readonly Client $client,
+        private readonly string $projectRoot,
+    ) {}
+
+    public function import(): void
+    {
+        $this->names = [];
+        $this->descriptions = [];
+
+        $champions = new VersionGroupId(VersionGroupId::CHAMPIONS);
+        $languages = $this->languageRepository->getInVersionGroup($champions);
+
+        foreach ($languages as $language) {
+            $url = $this->getNamesUrl($language);
+            $this->processNamesUrl($language, $url);
+
+            $url = $this->getDescriptionsUrl($language);
+            $this->processDescriptionsUrl($language, $url);
+        }
+
+        $this->exportCsv();
+    }
+
+    private function getNamesUrl(Language $language): string
+    {
+        $subdirectory = $language->champoutSubdirectory;
+
+        return "https://raw.githubusercontent.com/projectpokemon/champout/refs/heads/main/rom-txt/$subdirectory/itemname.json";
+    }
+
+    private function getDescriptionsUrl(Language $language): string
+    {
+        $subdirectory = $language->champoutSubdirectory;
+
+        return "https://raw.githubusercontent.com/projectpokemon/champout/refs/heads/main/rom-txt/$subdirectory/iteminfo_syn.json";
+    }
+
+    private function processNamesUrl(Language $language, string $url): void
+    {
+        try {
+            $response = $this->client->request('GET', $url);
+        } catch (GuzzleException $e) {
+            echo $e->getMessage();
+            exit;
+        }
+
+        $html = $response->getBody()->getContents();
+
+        $json = json_decode($html, true);
+
+        foreach ($json['mSDataSet'] ?? [] as $item) {
+            $labelName = (string) ($item['LabelName'] ?? '');
+            $itemId = $this->getItemIdFromNameLabelName($labelName);
+
+            $name = (string) ($item['OriginalText'] ?? '');
+            $name = str_replace("\n", '\\n', $name);
+
+            $this->names[$language->id->value][$itemId] = $name;
+        }
+    }
+
+    private function processDescriptionsUrl(Language $language, string $url): void
+    {
+        try {
+            $response = $this->client->request('GET', $url);
+        } catch (GuzzleException $e) {
+            echo $e->getMessage();
+            exit;
+        }
+
+        $html = $response->getBody()->getContents();
+
+        $json = json_decode($html, true);
+
+        foreach ($json['mSDataSet'] ?? [] as $item) {
+            $labelName = (string) ($item['LabelName'] ?? '');
+            $itemId = $this->getItemIdFromDescriptionLabelName($labelName);
+
+            $description = (string) ($item['OriginalText'] ?? '');
+            $description = str_replace("\n", '\\n', $description);
+
+            $this->descriptions[$language->id->value][$itemId] = $description;
+        }
+    }
+
+    private function getItemIdFromNameLabelName(string $labelName): int
+    {
+        $pattern = '/ITEMNAME_(\d+)/';
+
+        try {
+            $matchResult = Regex::match($pattern, $labelName);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            exit;
+        }
+
+        try {
+            $itemId = $matchResult->group(1);
+        } catch (RegexFailed $e) {
+            echo $e->getMessage();
+            exit;
+        }
+
+        return (int) $itemId;
+    }
+
+    private function getItemIdFromDescriptionLabelName(string $labelName): int
+    {
+        $pattern = '/ITEMINFO_SYN_(\d+)/';
+
+        try {
+            $matchResult = Regex::match($pattern, $labelName);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            exit;
+        }
+
+        try {
+            $itemId = $matchResult->group(1);
+        } catch (RegexFailed $e) {
+            echo $e->getMessage();
+            exit;
+        }
+
+        return (int) $itemId;
+    }
+
+    private function exportCsv(): void
+    {
+        $csv = Writer::fromString();
+        $csv->setOutputBOM(Bom::Utf8);
+        $csv->insertOne([
+            'version_group_id',
+            'language_id',
+            'item_id',
+            'name',
+            'description',
+        ]);
+        foreach ($this->names as $languageId => $names) {
+            foreach ($names as $itemId => $name) {
+                $description = $this->descriptions[$languageId][$itemId] ?? '';
+
+                $csv->insertOne([
+                    VersionGroupId::CHAMPIONS,
+                    $languageId,
+                    $itemId,
+                    $name,
+                    $description,
+                ]);
+            }
+        }
+
+        file_put_contents(
+            "$this->projectRoot/ignore/tables/item_descriptions_champions.csv",
+            $csv->toString(),
+        );
+    }
+}
