@@ -1,12 +1,12 @@
-id,identifier,locale,date_format
-1,japanese,ja,yyyy年MM月
-2,english,en,MMMM yyyy
-3,french,fr,MMMM yyyy
-4,german,de,MMMM yyyy
-5,italian,it,MMMM yyyy
-6,spanish,es,MMMM yyyy
-7,korean,ko,yyyy년 MM월
-8,japanese-kanji,ja,yyyy年MM月
-9,chinese-simplified,zh_Hans,yyyy年MM月
-10,chinese-traditional,zh_Hant,yyyy年MM月
-11,spanish-latin-american,es_419,MMMM yyyy
+id,identifier,locale,date_format,champout_subdirectory
+1,japanese,ja,yyyy年MM月,jpn
+2,english,en,MMMM yyyy,usa
+3,french,fr,MMMM yyyy,fra
+4,german,de,MMMM yyyy,deu
+5,italian,it,MMMM yyyy,ita
+6,spanish,es,MMMM yyyy,esp
+7,korean,ko,yyyy년 MM월,kor
+8,japanese-kanji,ja,yyyy年MM月,
+9,chinese-simplified,zh_Hans,yyyy年MM月,sch
+10,chinese-traditional,zh_Hant,yyyy年MM月,tch
+11,spanish-latin-american,es_419,MMMM yyyy,latam

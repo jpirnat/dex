@@ -7,6 +7,7 @@ use Jp\Dex\Domain\Languages\Language;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Languages\LanguageNotFoundException;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use PDO;
 
 final readonly class DatabaseLanguageRepository implements LanguageRepositoryInterface
@@ -26,7 +27,8 @@ final readonly class DatabaseLanguageRepository implements LanguageRepositoryInt
             'SELECT
                 `identifier`,
                 `locale`,
-                `date_format`
+                `date_format`,
+                `champout_subdirectory`
             FROM `languages`
             WHERE `id` = :language_id
             LIMIT 1'
@@ -46,6 +48,49 @@ final readonly class DatabaseLanguageRepository implements LanguageRepositoryInt
             $result['identifier'],
             $result['locale'],
             $result['date_format'],
+            $result['champout_subdirectory'],
         );
+    }
+
+    /**
+     * Get languages in this version group.
+     *
+     * @return Language[] Indexed by id.
+     */
+    public function getInVersionGroup(VersionGroupId $versionGroupId): array
+    {
+        $stmt = $this->db->prepare(
+            'SELECT
+	            `id`,
+                `identifier`,
+                `locale`,
+                `date_format`,
+                `champout_subdirectory`
+            FROM `languages`
+            WHERE `id` IN (
+                SELECT
+                    `language_id`
+                FROM `vg_languages`
+                WHERE `version_group_id` = :version_group_id
+            )'
+        );
+        $stmt->bindValue(':version_group_id', $versionGroupId->value, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $languages = [];
+
+        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $language = new Language(
+                new LanguageId($result['id']),
+                $result['identifier'],
+                $result['locale'],
+                $result['date_format'],
+                $result['champout_subdirectory'],
+            );
+
+            $languages[$result['id']] = $language;
+        }
+
+        return $languages;
     }
 }

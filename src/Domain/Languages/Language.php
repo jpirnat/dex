@@ -10,5 +10,6 @@ final readonly class Language
         private(set) string $identifier,
         private(set) string $locale,
         private(set) string $dateFormat,
+        private(set) string $champoutSubdirectory,
     ) {}
 }

@@ -5,6 +5,7 @@ create table if not exists `languages`
 `identifier` varchar(20) not null,
 `locale` varchar(7) not null,
 `date_format` varchar(9) not null,
+`champout_subdirectory` varchar(5) NOT NULL,
 
 primary key (`id`),
 unique key (`identifier`)
