@@ -25,7 +25,7 @@ select
     `vgf`.`version_group_id`,
     `vgf`.`form_id` as `pokemon_id`,
     ifnull(`fi`.`image`, concat("za/", `f`.`identifier`, ".png")) as `icon`,
-    ifnull(`vgp`.`sprite`, concat("za/", `f`.`identifier`, ".png")) as `sprite`,
+    ifnull(`vgp`.`sprite`, concat("home/", `f`.`identifier`, ".png")) as `sprite`,
     ifnull(`vgp`.`type1_id`, "\\N") as `type1_id`,
     ifnull(`vgp`.`type2_id`, "\\N") as `type2_id`,
     ifnull(`vgp`.`ability1_id`, "\\N") as `ability1_id`,

@@ -199,7 +199,7 @@ language_id,pokemon_id,name
 1,198,ヤミカラス
 1,199,ヤドキング
 1,200,ムウマ
-1,201,アンノーン
+1,201,アンノーン (A)
 1,202,ソーナンス
 1,203,キリンリキ
 1,204,クヌギダマ
@@ -410,7 +410,7 @@ language_id,pokemon_id,name
 1,409,ラムパルド
 1,410,タテトプス
 1,411,トリデプス
-1,412,ミノムッチ
+1,412,ミノムッチ (くさきのミノ)
 1,413,ミノマダム (くさきのミノ)
 1,414,ガーメイル
 1,415,ミツハニー
@@ -419,9 +419,9 @@ language_id,pokemon_id,name
 1,418,ブイゼル
 1,419,フローゼル
 1,420,チェリンボ
-1,421,チェリム
-1,422,カラナクシ
-1,423,トリトドン
+1,421,チェリム (ネガフォルム)
+1,422,カラナクシ (にしのうみ)
+1,423,トリトドン (にしのうみ)
 1,424,エテボース
 1,425,フワンテ
 1,426,フワライド
@@ -583,8 +583,8 @@ language_id,pokemon_id,name
 1,582,バニプッチ
 1,583,バニリッチ
 1,584,バイバニラ
-1,585,シキジカ
-1,586,メブキジカ
+1,585,シキジカ (はるのすがた)
+1,586,メブキジカ (はるのすがた)
 1,587,エモンガ
 1,588,カブルモ
 1,589,シュバルゴ
@@ -645,7 +645,7 @@ language_id,pokemon_id,name
 1,644,ゼクロム
 1,645,ランドロス (けしんフォルム)
 1,646,キュレム
-1,647,ケルディオ
+1,647,ケルディオ (いつものすがた)
 1,648,メロエッタ (ボイスフォルム)
 1,649,ゲノセクト
 1,650,ハリマロン
@@ -662,19 +662,19 @@ language_id,pokemon_id,name
 1,661,ヤヤコマ
 1,662,ヒノヤコマ
 1,663,ファイアロー
-1,664,コフキムシ
-1,665,コフーライ
-1,666,ビビヨン
+1,664,コフキムシ (ひょうせつのもよう)
+1,665,コフーライ (ひょうせつのもよう)
+1,666,ビビヨン (ひょうせつのもよう)
 1,667,シシコ
 1,668,カエンジシ
-1,669,フラベベ
-1,670,フラエッテ
-1,671,フラージェス
+1,669,フラベベ (あかいはな)
+1,670,フラエッテ (あかいはな)
+1,671,フラージェス (あかいはな)
 1,672,メェークル
 1,673,ゴーゴート
 1,674,ヤンチャム
 1,675,ゴロンダ
-1,676,トリミアン
+1,676,トリミアン (やせいのすがた)
 1,677,ニャスパー
 1,678,ニャオニクス (オスのすがた)
 1,679,ヒトツキ
@@ -772,11 +772,11 @@ language_id,pokemon_id,name
 1,771,ナマコブシ
 1,772,タイプ：ヌル
 1,773,シルヴァディ (ノーマル)
-1,774,メテノ (りゅうせいのすがた)
+1,774,メテノ (りゅうせいのすがた - あかいろのコア)
 1,775,ネッコアラ
 1,776,バクガメス
 1,777,トゲデマル
-1,778,ミミッキュ
+1,778,ミミッキュ (ばけたすがた)
 1,779,ハギギシリ
 1,780,ジジーロン
 1,781,ダダリン
@@ -852,8 +852,8 @@ language_id,pokemon_id,name
 1,851,マルヤクデ
 1,852,タタッコ
 1,853,オトスパス
-1,854,ヤバチャ
-1,855,ポットデス
+1,854,ヤバチャ (がんさくフォルム)
+1,855,ポットデス (がんさくフォルム)
 1,856,ミブリム
 1,857,テブリム
 1,858,ブリムオン
@@ -867,7 +867,7 @@ language_id,pokemon_id,name
 1,866,バリコオル
 1,867,デスバーン
 1,868,マホミル
-1,869,マホイップ
+1,869,マホイップ (ミルキィバニラ)
 1,870,タイレーツ
 1,871,バチンウニ
 1,872,ユキハミ
@@ -875,7 +875,7 @@ language_id,pokemon_id,name
 1,874,イシヘンジン
 1,875,コオリッポ (アイスフェイス)
 1,876,イエッサン (オスのすがた)
-1,877,モルペコ
+1,877,モルペコ (まんぷくもよう)
 1,878,ゾウドウ
 1,879,ダイオウドウ
 1,880,パッチラゴン
@@ -923,7 +923,7 @@ language_id,pokemon_id,name
 1,922,パモット
 1,923,パーモット
 1,924,ワッカネズミ
-1,925,イッカネズミ
+1,925,イッカネズミ (３びきかぞく)
 1,926,パピモッチ
 1,927,バウッツェル
 1,928,ミニーブ
@@ -976,11 +976,11 @@ language_id,pokemon_id,name
 1,975,ハルクジラ
 1,976,ミガルーサ
 1,977,ヘイラッシャ
-1,978,シャリタツ
+1,978,シャリタツ (そったすがた)
 1,979,コノヨザル
 1,980,ドオー
 1,981,リキキリン
-1,982,ノココッチ
+1,982,ノココッチ (ふたふしフォルム)
 1,983,ドドゲザン
 1,984,イダイナキバ
 1,985,サケブシッポ
@@ -1010,8 +1010,8 @@ language_id,pokemon_id,name
 1,1009,ウネルミナモ
 1,1010,テツノイサハ
 1,1011,カミッチュ
-1,1012,チャデス
-1,1013,ヤバソチャ
+1,1012,チャデス (マガイモノのすがた)
+1,1013,ヤバソチャ (ボンサクのすがた)
 1,1014,イイネイヌ
 1,1015,マシマシラ
 1,1016,キチキギス
@@ -1133,7 +1133,7 @@ language_id,pokemon_id,name
 1,10107,ときはなたれしフーパ
 1,10108,コラッタ (アローラのすがた)
 1,10109,ラッタ (アローラのすがた)
-1,10110,ピカチュウ (キャップ)
+1,10110,ピカチュウ (オリジナルキャップ)
 1,10111,ライチュウ (アローラのすがた)
 1,10112,サンド (アローラのすがた)
 1,10113,サンドパン (アローラのすがた)
@@ -1178,7 +1178,7 @@ language_id,pokemon_id,name
 1,10152,シルヴァディ (ドラゴン)
 1,10153,シルヴァディ (あく)
 1,10154,シルヴァディ (フェアリー)
-1,10155,メテノ (のコアフォルム)
+1,10155,メテノ (あかいろのコア)
 1,10156,イワンコ (マイペース)
 1,10157,ルガルガン (たそがれのすがた)
 1,10158,ネクロズマ (たそがれのたてがみ)
@@ -1300,8 +1300,219 @@ language_id,pokemon_id,name
 1,10274,メガゼラオラ
 1,10275,メガスコヴィラン
 1,10276,メガキラフロル
-1,10277,メガシャリタツ
+1,10277,メガシャリタツ (そったすがた)
 1,10278,メガセグレイブ
+1,20001,アンノーン (B)
+1,20002,アンノーン (C)
+1,20003,アンノーン (D)
+1,20004,アンノーン (E)
+1,20005,アンノーン (F)
+1,20006,アンノーン (G)
+1,20007,アンノーン (H)
+1,20008,アンノーン (I)
+1,20009,アンノーン (J)
+1,20010,アンノーン (K)
+1,20011,アンノーン (L)
+1,20012,アンノーン (M)
+1,20013,アンノーン (N)
+1,20014,アンノーン (O)
+1,20015,アンノーン (P)
+1,20016,アンノーン (Q)
+1,20017,アンノーン (R)
+1,20018,アンノーン (S)
+1,20019,アンノーン (T)
+1,20020,アンノーン (U)
+1,20021,アンノーン (V)
+1,20022,アンノーン (W)
+1,20023,アンノーン (X)
+1,20024,アンノーン (Y)
+1,20025,アンノーン (Z)
+1,20026,アンノーン (!)
+1,20027,アンノーン (?)
+1,20028,ミノムッチ (すなちのミノ)
+1,20029,ミノムッチ (ゴミのミノ)
+1,20030,チェリム (ポジフォルム)
+1,20031,カラナクシ (ひがしのうみ)
+1,20032,トリトドン (ひがしのうみ)
+1,20033,シキジカ (なつのすがた)
+1,20034,シキジカ (あきのすがた)
+1,20035,シキジカ (ふゆのすがた)
+1,20036,メブキジカ (なつのすがた)
+1,20037,メブキジカ (あきのすがた)
+1,20038,メブキジカ (ふゆのすがた)
+1,20039,ゲノセクト (アクアカセット)
+1,20040,ゲノセクト (イナズマカセット)
+1,20041,ゲノセクト (ブレイズカセット)
+1,20042,ゲノセクト (フリーズカセット)
+1,20043,ケルディオ (かくごのすがた)
+1,20044,コフキムシ (ゆきぐにのもよう)
+1,20045,コフキムシ (せつげんのもよう)
+1,20046,コフキムシ (たいりくのもよう)
+1,20047,コフキムシ (ていえんのもよう)
+1,20048,コフキムシ (みやびなもよう)
+1,20049,コフキムシ (はなぞののもよう)
+1,20050,コフキムシ (モダンなもよう)
+1,20051,コフキムシ (マリンのもよう)
+1,20052,コフキムシ (ぐんとうのもよう)
+1,20053,コフキムシ (こうやのもよう)
+1,20054,コフキムシ (さじんのもよう)
+1,20055,コフキムシ (たいがのもよう)
+1,20056,コフキムシ (スコールのもよう)
+1,20057,コフキムシ (サバンナのもよう)
+1,20058,コフキムシ (たいようのもよう)
+1,20059,コフキムシ (オーシャンのもよう)
+1,20060,コフキムシ (ジャングルのもよう)
+1,20061,コフキムシ (ファンシーなもよう)
+1,20062,コフキムシ (ボールのもよう)
+1,20063,コフーライ (ゆきぐにのもよう)
+1,20064,コフーライ (せつげんのもよう)
+1,20065,コフーライ (たいりくのもよう)
+1,20066,コフーライ (ていえんのもよう)
+1,20067,コフーライ (みやびなもよう)
+1,20068,コフーライ (はなぞののもよう)
+1,20069,コフーライ (モダンなもよう)
+1,20070,コフーライ (マリンのもよう)
+1,20071,コフーライ (ぐんとうのもよう)
+1,20072,コフーライ (こうやのもよう)
+1,20073,コフーライ (さじんのもよう)
+1,20074,コフーライ (たいがのもよう)
+1,20075,コフーライ (スコールのもよう)
+1,20076,コフーライ (サバンナのもよう)
+1,20077,コフーライ (たいようのもよう)
+1,20078,コフーライ (オーシャンのもよう)
+1,20079,コフーライ (ジャングルのもよう)
+1,20080,コフーライ (ファンシーなもよう)
+1,20081,コフーライ (ボールのもよう)
+1,20082,ビビヨン (ゆきぐにのもよう)
+1,20083,ビビヨン (せつげんのもよう)
+1,20084,ビビヨン (たいりくのもよう)
+1,20085,ビビヨン (ていえんのもよう)
+1,20086,ビビヨン (みやびなもよう)
+1,20087,ビビヨン (はなぞののもよう)
+1,20088,ビビヨン (モダンなもよう)
+1,20089,ビビヨン (マリンのもよう)
+1,20090,ビビヨン (ぐんとうのもよう)
+1,20091,ビビヨン (こうやのもよう)
+1,20092,ビビヨン (さじんのもよう)
+1,20093,ビビヨン (たいがのもよう)
+1,20094,ビビヨン (スコールのもよう)
+1,20095,ビビヨン (サバンナのもよう)
+1,20096,ビビヨン (たいようのもよう)
+1,20097,ビビヨン (オーシャンのもよう)
+1,20098,ビビヨン (ジャングルのもよう)
+1,20099,ビビヨン (ファンシーなもよう)
+1,20100,ビビヨン (ボールのもよう)
+1,20101,フラベベ (きいろのはな)
+1,20102,フラベベ (オレンジいろのはな)
+1,20103,フラベベ (あおいはな)
+1,20104,フラベベ (しろいはな)
+1,20105,フラエッテ (きいろのはな)
+1,20106,フラエッテ (オレンジいろのはな)
+1,20107,フラエッテ (あおいはな)
+1,20108,フラエッテ (しろいはな)
+1,20109,フラージェス (きいろのはな)
+1,20110,フラージェス (オレンジいろのはな)
+1,20111,フラージェス (あおいはな)
+1,20112,フラージェス (しろいはな)
+1,20113,トリミアン (ハートカット)
+1,20114,トリミアン (スターカット)
+1,20115,トリミアン (ダイヤカット)
+1,20116,トリミアン (レディカット)
+1,20117,トリミアン (マダムカット)
+1,20118,トリミアン (ジェントルカット)
+1,20119,トリミアン (クイーンカット)
+1,20120,トリミアン (カブキカット)
+1,20121,トリミアン (キングダムカット)
+1,20123,ラッタ (アローラのすがた) (Totem-like)
+1,20124,ピカチュウ (ホウエンキャップ)
+1,20125,ピカチュウ (シンオウキャップ)
+1,20126,ピカチュウ (イッシュキャップ)
+1,20127,ピカチュウ (カロスキャップ)
+1,20128,ピカチュウ (アローラキャップ)
+1,20129,デカグース (Totem-like)
+1,20130,クワガノン (Totem-like)
+1,20131,ラランテス (Totem-like)
+1,20132,エンニュート (Totem-like)
+1,20133,メテノ (りゅうせいのすがた - だいだいいろのコア)
+1,20134,メテノ (りゅうせいのすがた - きいろのコア)
+1,20135,メテノ (りゅうせいのすがた - みどりいろのコア)
+1,20136,メテノ (りゅうせいのすがた - みずいろのコア)
+1,20137,メテノ (りゅうせいのすがた - あおいろのコア)
+1,20138,メテノ (りゅうせいのすがた - むらさきいろのコア)
+1,20139,メテノ (だいだいいろのコア)
+1,20140,メテノ (きいろのコア)
+1,20141,メテノ (みどりいろのコア)
+1,20142,メテノ (みずいろのコア)
+1,20143,メテノ (あおいろのコア)
+1,20144,メテノ (むらさきいろのコア)
+1,20145,ミミッキュ (ばれたすがた)
+1,20146,ミミッキュ (ばけたすがた) (Totem-like)
+1,20147,ミミッキュ (ばれたすがた) (Totem-like)
+1,20148,ジャラランガ (Totem-like)
+1,20149,マギアナ (５００ねんまえのいろ)
+1,20150,ピカチュウ (キミにきめたキャップ)
+1,20151,ガラガラ (アローラのすがた) (Totem-like)
+1,20152,アブリボン (Totem-like)
+1,20153,オニシズクモ (Totem-like)
+1,20154,トゲデマル (Totem-like)
+1,20155,リザードン (キョダイマックス)
+1,20156,バタフリー (キョダイマックス)
+1,20157,ピカチュウ (キョダイマックス)
+1,20158,ニャース (キョダイマックス)
+1,20159,カイリキー (キョダイマックス)
+1,20160,ゲンガー (キョダイマックス)
+1,20161,キングラー (キョダイマックス)
+1,20162,ラプラス (キョダイマックス)
+1,20163,イーブイ (キョダイマックス)
+1,20164,カビゴン (キョダイマックス)
+1,20165,ダストダス (キョダイマックス)
+1,20166,メルメタル (キョダイマックス)
+1,20167,アーマーガア (キョダイマックス)
+1,20168,イオルブ (キョダイマックス)
+1,20169,カジリガメ (キョダイマックス)
+1,20170,セキタンザン (キョダイマックス)
+1,20171,アップリュー (キョダイマックス)
+1,20172,タルップル (キョダイマックス)
+1,20173,サダイジャ (キョダイマックス)
+1,20174,ウッウ (うのみのすがた)
+1,20175,ウッウ (まるのみのすがた)
+1,20176,ストリンダー (ハイなすがた) (キョダイマックス)
+1,20177,マルヤクデ (キョダイマックス)
+1,20178,ヤバチャ (しんさくフォルム)
+1,20179,ポットデス (しんさくフォルム)
+1,20180,ブリムオン (キョダイマックス)
+1,20181,オーロンゲ (キョダイマックス)
+1,20188,マホイップ (ミルキィルビー)
+1,20195,マホイップ (ミルキィまっちゃ)
+1,20202,マホイップ (ミルキィミント)
+1,20209,マホイップ (ミルキィレモン)
+1,20216,マホイップ (ミルキィソルト)
+1,20223,マホイップ (ルビーミックス)
+1,20230,マホイップ (キャラメルミックス)
+1,20237,マホイップ (トリプルミックス)
+1,20244,マホイップ (キョダイマックス)
+1,20245,モルペコ (はらぺこもよう)
+1,20246,ダイオウドウ (キョダイマックス)
+1,20247,ジュラルドン (キョダイマックス)
+1,20248,ストリンダー (ローなすがた) (キョダイマックス)
+1,20249,フシギバナ (キョダイマックス)
+1,20250,カメックス (キョダイマックス)
+1,20251,ゴリランダー (キョダイマックス)
+1,20252,エースバーン (キョダイマックス)
+1,20253,インテレオン (キョダイマックス)
+1,20254,ウーラオス (いちげきのかた) (キョダイマックス)
+1,20255,ザルード (とうちゃん)
+1,20256,ピカチュウ (ワールドキャップ)
+1,20257,ウーラオス (れんげきのかた) (キョダイマックス)
+1,20263,イッカネズミ (４ひきかぞく)
+1,20264,シャリタツ (たれたすがた)
+1,20265,シャリタツ (のびたすがた)
+1,20266,ノココッチ (みつふしフォルム)
+1,20275,チャデス (タカイモノのすがた)
+1,20276,ヤバソチャ (ケッサクのすがた)
+1,20277,メガマギアナ (５００ねんまえのいろ)
+1,20278,メガシャリタツ (たれたすがた)
+1,20279,メガシャリタツ (のびたすがた)
 2,1,Bulbasaur
 2,2,Ivysaur
 2,3,Venusaur
@@ -1502,7 +1713,7 @@ language_id,pokemon_id,name
 2,198,Murkrow
 2,199,Slowking
 2,200,Misdreavus
-2,201,Unown
+2,201,Unown (A)
 2,202,Wobbuffet
 2,203,Girafarig
 2,204,Pineco
@@ -1713,7 +1924,7 @@ language_id,pokemon_id,name
 2,409,Rampardos
 2,410,Shieldon
 2,411,Bastiodon
-2,412,Burmy
+2,412,Burmy (Plant Cloak)
 2,413,Wormadam (Plant Cloak)
 2,414,Mothim
 2,415,Combee
@@ -1722,9 +1933,9 @@ language_id,pokemon_id,name
 2,418,Buizel
 2,419,Floatzel
 2,420,Cherubi
-2,421,Cherrim
-2,422,Shellos
-2,423,Gastrodon
+2,421,Cherrim (Overcast Form)
+2,422,Shellos (West Sea)
+2,423,Gastrodon (West Sea)
 2,424,Ambipom
 2,425,Drifloon
 2,426,Drifblim
@@ -1886,8 +2097,8 @@ language_id,pokemon_id,name
 2,582,Vanillite
 2,583,Vanillish
 2,584,Vanilluxe
-2,585,Deerling
-2,586,Sawsbuck
+2,585,Deerling (Spring Form)
+2,586,Sawsbuck (Spring Form)
 2,587,Emolga
 2,588,Karrablast
 2,589,Escavalier
@@ -1948,7 +2159,7 @@ language_id,pokemon_id,name
 2,644,Zekrom
 2,645,Landorus (Incarnate Forme)
 2,646,Kyurem
-2,647,Keldeo
+2,647,Keldeo (Ordinary Form)
 2,648,Meloetta (Aria Forme)
 2,649,Genesect
 2,650,Chespin
@@ -1965,19 +2176,19 @@ language_id,pokemon_id,name
 2,661,Fletchling
 2,662,Fletchinder
 2,663,Talonflame
-2,664,Scatterbug
-2,665,Spewpa
-2,666,Vivillon
+2,664,Scatterbug (Icy Snow Pattern)
+2,665,Spewpa (Icy Snow Pattern)
+2,666,Vivillon (Icy Snow Pattern)
 2,667,Litleo
 2,668,Pyroar
-2,669,Flabébé
-2,670,Floette
-2,671,Florges
+2,669,Flabébé (Red Flower)
+2,670,Floette (Red Flower)
+2,671,Florges (Red Flower)
 2,672,Skiddo
 2,673,Gogoat
 2,674,Pancham
 2,675,Pangoro
-2,676,Furfrou
+2,676,Furfrou (Natural Form)
 2,677,Espurr
 2,678,Meowstic (Male)
 2,679,Honedge
@@ -2011,8 +2222,8 @@ language_id,pokemon_id,name
 2,707,Klefki
 2,708,Phantump
 2,709,Trevenant
-2,710,Pumpkaboo (Average Size)
-2,711,Gourgeist (Average Size)
+2,710,Pumpkaboo (Medium Variety)
+2,711,Gourgeist (Medium Variety)
 2,712,Bergmite
 2,713,Avalugg
 2,714,Noibat
@@ -2075,11 +2286,11 @@ language_id,pokemon_id,name
 2,771,Pyukumuku
 2,772,Type: Null
 2,773,Silvally (Normal)
-2,774,Minior (Meteor Form)
+2,774,Minior (Meteor Form - Red Core)
 2,775,Komala
 2,776,Turtonator
 2,777,Togedemaru
-2,778,Mimikyu
+2,778,Mimikyu (Disguised Form)
 2,779,Bruxish
 2,780,Drampa
 2,781,Dhelmise
@@ -2155,8 +2366,8 @@ language_id,pokemon_id,name
 2,851,Centiskorch
 2,852,Clobbopus
 2,853,Grapploct
-2,854,Sinistea
-2,855,Polteageist
+2,854,Sinistea (Phony Form)
+2,855,Polteageist (Phony Form)
 2,856,Hatenna
 2,857,Hattrem
 2,858,Hatterene
@@ -2170,7 +2381,7 @@ language_id,pokemon_id,name
 2,866,Mr. Rime
 2,867,Runerigus
 2,868,Milcery
-2,869,Alcremie
+2,869,Alcremie (Vanilla Cream)
 2,870,Falinks
 2,871,Pincurchin
 2,872,Snom
@@ -2178,7 +2389,7 @@ language_id,pokemon_id,name
 2,874,Stonjourner
 2,875,Eiscue (Ice Face)
 2,876,Indeedee (Male)
-2,877,Morpeko
+2,877,Morpeko (Full Belly Mode)
 2,878,Cufant
 2,879,Copperajah
 2,880,Dracozolt
@@ -2226,7 +2437,7 @@ language_id,pokemon_id,name
 2,922,Pawmo
 2,923,Pawmot
 2,924,Tandemaus
-2,925,Maushold
+2,925,Maushold (Family of Three)
 2,926,Fidough
 2,927,Dachsbun
 2,928,Smoliv
@@ -2279,11 +2490,11 @@ language_id,pokemon_id,name
 2,975,Cetitan
 2,976,Veluza
 2,977,Dondozo
-2,978,Tatsugiri
+2,978,Tatsugiri (Curly Form)
 2,979,Annihilape
 2,980,Clodsire
 2,981,Farigiraf
-2,982,Dudunsparce
+2,982,Dudunsparce (Two-Segment Form)
 2,983,Kingambit
 2,984,Great Tusk
 2,985,Scream Tail
@@ -2313,8 +2524,8 @@ language_id,pokemon_id,name
 2,1009,Walking Wake
 2,1010,Iron Leaves
 2,1011,Dipplin
-2,1012,Poltchageist
-2,1013,Sinistcha
+2,1012,Poltchageist (Counterfeit Form)
+2,1013,Sinistcha (Unremarkable Form)
 2,1014,Okidogi
 2,1015,Munkidori
 2,1016,Fezandipiti
@@ -2401,12 +2612,12 @@ language_id,pokemon_id,name
 2,10072,Floette (Eternal Flower)
 2,10073,Meowstic (Female)
 2,10074,Aegislash (Blade Forme)
-2,10075,Pumpkaboo (Small Size)
-2,10076,Pumpkaboo (Large Size)
-2,10077,Pumpkaboo (Super Size)
-2,10078,Gourgeist (Small Size)
-2,10079,Gourgeist (Large Size)
-2,10080,Gourgeist (Super Size)
+2,10075,Pumpkaboo (Small Variety)
+2,10076,Pumpkaboo (Large Variety)
+2,10077,Pumpkaboo (Jumbo Variety)
+2,10078,Gourgeist (Small Variety)
+2,10079,Gourgeist (Large Variety)
+2,10080,Gourgeist (Jumbo Variety)
 2,10081,Mega Beedrill
 2,10082,Mega Pidgeot
 2,10083,Pikachu Rock Star
@@ -2436,7 +2647,7 @@ language_id,pokemon_id,name
 2,10107,Hoopa Unbound
 2,10108,Alolan Rattata
 2,10109,Alolan Raticate
-2,10110,Pikachu (Cap)
+2,10110,Pikachu (Original Cap)
 2,10111,Alolan Raichu
 2,10112,Alolan Sandshrew
 2,10113,Alolan Sandslash
@@ -2481,7 +2692,7 @@ language_id,pokemon_id,name
 2,10152,Silvally (Dragon)
 2,10153,Silvally (Dark)
 2,10154,Silvally (Fairy)
-2,10155,Minior (Core Form)
+2,10155,Minior (Red Core)
 2,10156,Rockruff (Own Tempo)
 2,10157,Lycanroc (Dusk Form)
 2,10158,Necrozma (Dusk Mane)
@@ -2603,8 +2814,219 @@ language_id,pokemon_id,name
 2,10274,Mega Zeraora
 2,10275,Mega Scovillain
 2,10276,Mega Glimmora
-2,10277,Mega Tatsugiri
+2,10277,Mega Tatsugiri (Curly Form)
 2,10278,Mega Baxcalibur
+2,20001,Unown (B)
+2,20002,Unown (C)
+2,20003,Unown (D)
+2,20004,Unown (E)
+2,20005,Unown (F)
+2,20006,Unown (G)
+2,20007,Unown (H)
+2,20008,Unown (I)
+2,20009,Unown (J)
+2,20010,Unown (K)
+2,20011,Unown (L)
+2,20012,Unown (M)
+2,20013,Unown (N)
+2,20014,Unown (O)
+2,20015,Unown (P)
+2,20016,Unown (Q)
+2,20017,Unown (R)
+2,20018,Unown (S)
+2,20019,Unown (T)
+2,20020,Unown (U)
+2,20021,Unown (V)
+2,20022,Unown (W)
+2,20023,Unown (X)
+2,20024,Unown (Y)
+2,20025,Unown (Z)
+2,20026,Unown (!)
+2,20027,Unown (?)
+2,20028,Burmy (Sandy Cloak)
+2,20029,Burmy (Trash Cloak)
+2,20030,Cherrim (Sunshine Form)
+2,20031,Shellos (East Sea)
+2,20032,Gastrodon (East Sea)
+2,20033,Deerling (Summer Form)
+2,20034,Deerling (Autumn Form)
+2,20035,Deerling (Winter Form)
+2,20036,Sawsbuck (Summer Form)
+2,20037,Sawsbuck (Autumn Form)
+2,20038,Sawsbuck (Winter Form)
+2,20039,Genesect (Douse Drive)
+2,20040,Genesect (Shock Drive)
+2,20041,Genesect (Burn Drive)
+2,20042,Genesect (Chill Drive)
+2,20043,Keldeo (Resolute Form)
+2,20044,Scatterbug (Polar Pattern)
+2,20045,Scatterbug (Tundra Pattern)
+2,20046,Scatterbug (Continental Pattern)
+2,20047,Scatterbug (Garden Pattern)
+2,20048,Scatterbug (Elegant Pattern)
+2,20049,Scatterbug (Meadow Pattern)
+2,20050,Scatterbug (Modern Pattern)
+2,20051,Scatterbug (Marine Pattern)
+2,20052,Scatterbug (Archipelago Pattern)
+2,20053,Scatterbug (High Plains Pattern)
+2,20054,Scatterbug (Sandstorm Pattern)
+2,20055,Scatterbug (River Pattern)
+2,20056,Scatterbug (Monsoon Pattern)
+2,20057,Scatterbug (Savanna Pattern)
+2,20058,Scatterbug (Sun Pattern)
+2,20059,Scatterbug (Ocean Pattern)
+2,20060,Scatterbug (Jungle Pattern)
+2,20061,Scatterbug (Fancy Pattern)
+2,20062,Scatterbug (Poké Ball Pattern)
+2,20063,Spewpa (Polar Pattern)
+2,20064,Spewpa (Tundra Pattern)
+2,20065,Spewpa (Continental Pattern)
+2,20066,Spewpa (Garden Pattern)
+2,20067,Spewpa (Elegant Pattern)
+2,20068,Spewpa (Meadow Pattern)
+2,20069,Spewpa (Modern Pattern)
+2,20070,Spewpa (Marine Pattern)
+2,20071,Spewpa (Archipelago Pattern)
+2,20072,Spewpa (High Plains Pattern)
+2,20073,Spewpa (Sandstorm Pattern)
+2,20074,Spewpa (River Pattern)
+2,20075,Spewpa (Monsoon Pattern)
+2,20076,Spewpa (Savanna Pattern)
+2,20077,Spewpa (Sun Pattern)
+2,20078,Spewpa (Ocean Pattern)
+2,20079,Spewpa (Jungle Pattern)
+2,20080,Spewpa (Fancy Pattern)
+2,20081,Spewpa (Poké Ball Pattern)
+2,20082,Vivillon (Polar Pattern)
+2,20083,Vivillon (Tundra Pattern)
+2,20084,Vivillon (Continental Pattern)
+2,20085,Vivillon (Garden Pattern)
+2,20086,Vivillon (Elegant Pattern)
+2,20087,Vivillon (Meadow Pattern)
+2,20088,Vivillon (Modern Pattern)
+2,20089,Vivillon (Marine Pattern)
+2,20090,Vivillon (Archipelago Pattern)
+2,20091,Vivillon (High Plains Pattern)
+2,20092,Vivillon (Sandstorm Pattern)
+2,20093,Vivillon (River Pattern)
+2,20094,Vivillon (Monsoon Pattern)
+2,20095,Vivillon (Savanna Pattern)
+2,20096,Vivillon (Sun Pattern)
+2,20097,Vivillon (Ocean Pattern)
+2,20098,Vivillon (Jungle Pattern)
+2,20099,Vivillon (Fancy Pattern)
+2,20100,Vivillon (Poké Ball Pattern)
+2,20101,Flabébé (Yellow Flower)
+2,20102,Flabébé (Orange Flower)
+2,20103,Flabébé (Blue Flower)
+2,20104,Flabébé (White Flower)
+2,20105,Floette (Yellow Flower)
+2,20106,Floette (Orange Flower)
+2,20107,Floette (Blue Flower)
+2,20108,Floette (White Flower)
+2,20109,Florges (Yellow Flower)
+2,20110,Florges (Orange Flower)
+2,20111,Florges (Blue Flower)
+2,20112,Florges (White Flower)
+2,20113,Furfrou (Heart Trim)
+2,20114,Furfrou (Star Trim)
+2,20115,Furfrou (Diamond Trim)
+2,20116,Furfrou (Debutante Trim)
+2,20117,Furfrou (Matron Trim)
+2,20118,Furfrou (Dandy Trim)
+2,20119,Furfrou (La Reine Trim)
+2,20120,Furfrou (Kabuki Trim)
+2,20121,Furfrou (Pharaoh Trim)
+2,20123,Alolan Raticate (Totem-like)
+2,20124,Pikachu (Hoenn Cap)
+2,20125,Pikachu (Sinnoh Cap)
+2,20126,Pikachu (Unova Cap)
+2,20127,Pikachu (Kalos Cap)
+2,20128,Pikachu (Alola Cap)
+2,20129,Gumshoos (Totem-like)
+2,20130,Vikavolt (Totem-like)
+2,20131,Lurantis (Totem-like)
+2,20132,Salazzle (Totem-like)
+2,20133,Minior (Meteor Form - Orange Core)
+2,20134,Minior (Meteor Form - Yellow Core)
+2,20135,Minior (Meteor Form - Green Core)
+2,20136,Minior (Meteor Form - Blue Core)
+2,20137,Minior (Meteor Form - Indigo Core)
+2,20138,Minior (Meteor Form - Violet Core)
+2,20139,Minior (Orange Core)
+2,20140,Minior (Yellow Core)
+2,20141,Minior (Green Core)
+2,20142,Minior (Blue Core)
+2,20143,Minior (Indigo Core)
+2,20144,Minior (Violet Core)
+2,20145,Mimikyu (Busted Form)
+2,20146,Mimikyu (Disguised Form) (Totem-like)
+2,20147,Mimikyu (Busted Form) (Totem-like)
+2,20148,Kommo-o (Totem-like)
+2,20149,Magearna (Original Color)
+2,20150,Pikachu (Partner Cap)
+2,20151,Alolan Marowak (Totem-like)
+2,20152,Ribombee (Totem-like)
+2,20153,Araquanid (Totem-like)
+2,20154,Togedemaru (Totem-like)
+2,20155,Charizard (Gigantamax)
+2,20156,Butterfree (Gigantamax)
+2,20157,Pikachu (Gigantamax)
+2,20158,Meowth (Gigantamax)
+2,20159,Machamp (Gigantamax)
+2,20160,Gengar (Gigantamax)
+2,20161,Kingler (Gigantamax)
+2,20162,Lapras (Gigantamax)
+2,20163,Eevee (Gigantamax)
+2,20164,Snorlax (Gigantamax)
+2,20165,Garbodor (Gigantamax)
+2,20166,Melmetal (Gigantamax)
+2,20167,Corviknight (Gigantamax)
+2,20168,Orbeetle (Gigantamax)
+2,20169,Drednaw (Gigantamax)
+2,20170,Coalossal (Gigantamax)
+2,20171,Flapple (Gigantamax)
+2,20172,Appletun (Gigantamax)
+2,20173,Sandaconda (Gigantamax)
+2,20174,Cramorant (Gulping Form)
+2,20175,Cramorant (Gorging Form)
+2,20176,Toxtricity (Amped Form) (Gigantamax)
+2,20177,Centiskorch (Gigantamax)
+2,20178,Sinistea (Antique Form)
+2,20179,Polteageist (Antique Form)
+2,20180,Hatterene (Gigantamax)
+2,20181,Grimmsnarl (Gigantamax)
+2,20188,Alcremie (Ruby Cream)
+2,20195,Alcremie (Matcha Cream)
+2,20202,Alcremie (Mint Cream)
+2,20209,Alcremie (Lemon Cream)
+2,20216,Alcremie (Salted Cream)
+2,20223,Alcremie (Ruby Swirl)
+2,20230,Alcremie (Caramel Swirl)
+2,20237,Alcremie (Rainbow Swirl)
+2,20244,Alcremie (Gigantamax)
+2,20245,Morpeko (Hangry Mode)
+2,20246,Copperajah (Gigantamax)
+2,20247,Duraludon (Gigantamax)
+2,20248,Toxtricity (Low Key Form) (Gigantamax)
+2,20249,Venusaur (Gigantamax)
+2,20250,Blastoise (Gigantamax)
+2,20251,Rillaboom (Gigantamax)
+2,20252,Cinderace (Gigantamax)
+2,20253,Inteleon (Gigantamax)
+2,20254,Urshifu (Single Strike Style) (Gigantamax)
+2,20255,Zarude (Dada)
+2,20256,Pikachu (World Cap)
+2,20257,Urshifu (Rapid Strike Style) (Gigantamax)
+2,20263,Maushold (Family of Four)
+2,20264,Tatsugiri (Droopy Form)
+2,20265,Tatsugiri (Stretchy Form)
+2,20266,Dudunsparce (Three-Segment Form)
+2,20275,Poltchageist (Artisan Form)
+2,20276,Sinistcha (Masterpiece Form)
+2,20277,Mega Magearna (Original Color)
+2,20278,Mega Tatsugiri (Droopy Form)
+2,20279,Mega Tatsugiri (Stretchy Form)
 3,1,Bulbizarre
 3,2,Herbizarre
 3,3,Florizarre
@@ -2805,7 +3227,7 @@ language_id,pokemon_id,name
 3,198,Cornèbre
 3,199,Roigada
 3,200,Feuforêve
-3,201,Zarbi
+3,201,Zarbi (A)
 3,202,Qulbutoké
 3,203,Girafarig
 3,204,Pomdepik
@@ -3016,7 +3438,7 @@ language_id,pokemon_id,name
 3,409,Charkos
 3,410,Dinoclier
 3,411,Bastiodon
-3,412,Cheniti
+3,412,Cheniti (Cape Plante)
 3,413,Cheniselle (Cape Plante)
 3,414,Papilord
 3,415,Apitrini
@@ -3025,9 +3447,9 @@ language_id,pokemon_id,name
 3,418,Mustébouée
 3,419,Mustéflott
 3,420,Ceribou
-3,421,Ceriflor
-3,422,Sancoki
-3,423,Tritosor
+3,421,Ceriflor (Temps Couvert)
+3,422,Sancoki (Mer Occident)
+3,423,Tritosor (Mer Occident)
 3,424,Capidextre
 3,425,Baudrive
 3,426,Grodrive
@@ -3189,8 +3611,8 @@ language_id,pokemon_id,name
 3,582,Sorbébé
 3,583,Sorboul
 3,584,Sorbouboul
-3,585,Vivaldaim
-3,586,Haydaim
+3,585,Vivaldaim (Forme Printemps)
+3,586,Haydaim (Forme Printemps)
 3,587,Emolga
 3,588,Carabing
 3,589,Lançargot
@@ -3251,7 +3673,7 @@ language_id,pokemon_id,name
 3,644,Zekrom
 3,645,Démétéros (Forme Avatar)
 3,646,Kyurem
-3,647,Keldeo
+3,647,Keldeo (Aspect Normal)
 3,648,Meloetta (Forme Chant)
 3,649,Genesect
 3,650,Marisson
@@ -3268,19 +3690,19 @@ language_id,pokemon_id,name
 3,661,Passerouge
 3,662,Braisillon
 3,663,Flambusard
-3,664,Lépidonille
-3,665,Pérégrain
-3,666,Prismillon
+3,664,Lépidonille (Motif Blizzard)
+3,665,Pérégrain (Motif Blizzard)
+3,666,Prismillon (Motif Blizzard)
 3,667,Hélionceau
 3,668,Némélios
-3,669,Flabébé
-3,670,Floette
-3,671,Florges
+3,669,Flabébé (Fleur Rouge)
+3,670,Floette (Fleur Rouge)
+3,671,Florges (Fleur Rouge)
 3,672,Cabriolaine
 3,673,Chevroum
 3,674,Pandespiègle
 3,675,Pandarbare
-3,676,Couafarel
+3,676,Couafarel (Forme Sauvage)
 3,677,Psystigri
 3,678,Mistigrix (Mâle)
 3,679,Monorpale
@@ -3378,11 +3800,11 @@ language_id,pokemon_id,name
 3,771,Concombaffe
 3,772,Type:0
 3,773,Silvallié (Normal)
-3,774,Météno (Forme Météore)
+3,774,Météno (Forme Météore - Noyau Rouge)
 3,775,Dodoala
 3,776,Boumata
 3,777,Togedemaru
-3,778,Mimiqui
+3,778,Mimiqui (Forme Déguisée)
 3,779,Denticrisse
 3,780,Draïeul
 3,781,Sinistrail
@@ -3458,8 +3880,8 @@ language_id,pokemon_id,name
 3,851,Scolocendre
 3,852,Poulpaf
 3,853,Krakos
-3,854,Théffroi
-3,855,Polthégeist
+3,854,Théffroi (Forme Contrefaçon)
+3,855,Polthégeist (Forme Contrefaçon)
 3,856,Bibichut
 3,857,Chapotus
 3,858,Sorcilence
@@ -3473,7 +3895,7 @@ language_id,pokemon_id,name
 3,866,M. Glaquette
 3,867,Tutétékri
 3,868,Crèmy
-3,869,Charmilly
+3,869,Charmilly (Lait Vanille)
 3,870,Hexadron
 3,871,Wattapik
 3,872,Frissonille
@@ -3481,7 +3903,7 @@ language_id,pokemon_id,name
 3,874,Dolman
 3,875,Bekaglaçon (Tête de Gel)
 3,876,Wimessir (Mâle)
-3,877,Morpeko
+3,877,Morpeko (Mode Rassasié)
 3,878,Charibari
 3,879,Pachyradjah
 3,880,Galvagon
@@ -3529,7 +3951,7 @@ language_id,pokemon_id,name
 3,922,Pohmotte
 3,923,Pohmarmotte
 3,924,Compagnol
-3,925,Famignol
+3,925,Famignol (Famille de Trois)
 3,926,Pâtachiot
 3,927,Briochien
 3,928,Olivini
@@ -3582,11 +4004,11 @@ language_id,pokemon_id,name
 3,975,Balbalèze
 3,976,Délestin
 3,977,Oyacata
-3,978,Nigirigon
+3,978,Nigirigon (Forme Courbée)
 3,979,Courrousinge
 3,980,Terraiste
 3,981,Farigiraf
-3,982,Deusolourdo
+3,982,Deusolourdo (Forme Double)
 3,983,Scalpereur
 3,984,Fort-Ivoire
 3,985,Hurle-Queue
@@ -3616,8 +4038,8 @@ language_id,pokemon_id,name
 3,1009,Serpente-Eau
 3,1010,Vert-de-Fer
 3,1011,Pomdramour
-3,1012,Poltchageist
-3,1013,Théffroyable
+3,1012,Poltchageist (Forme Imitation)
+3,1013,Théffroyable (Forme Médiocre)
 3,1014,Félicanis
 3,1015,Fortusimia
 3,1016,Favianos
@@ -3739,7 +4161,7 @@ language_id,pokemon_id,name
 3,10107,Hoopa Déchaîné
 3,10108,Rattata (Forme d’Alola)
 3,10109,Rattatac (Forme d’Alola)
-3,10110,Pikachu (Casquette)
+3,10110,Pikachu (Casquette Originale)
 3,10111,Raichu (Forme d’Alola)
 3,10112,Sabelette (Forme d’Alola)
 3,10113,Sablaireau (Forme d’Alola)
@@ -3784,7 +4206,7 @@ language_id,pokemon_id,name
 3,10152,Silvallié (Dragon)
 3,10153,Silvallié (Ténèbres)
 3,10154,Silvallié (Fée)
-3,10155,Météno (Forme Noyau)
+3,10155,Météno (Noyau Rouge)
 3,10156,Rocabot (Tempo Perso)
 3,10157,Lougaroc (Forme Crépusculaire)
 3,10158,Necrozma (Crinière du Couchant)
@@ -3906,8 +4328,219 @@ language_id,pokemon_id,name
 3,10274,Méga-Zeraora
 3,10275,Méga-Scovilain
 3,10276,Méga-Floréclat
-3,10277,Méga-Nigirigon
+3,10277,Méga-Nigirigon (Forme Courbée)
 3,10278,Méga-Glaivodo
+3,20001,Zarbi (B)
+3,20002,Zarbi (C)
+3,20003,Zarbi (D)
+3,20004,Zarbi (E)
+3,20005,Zarbi (F)
+3,20006,Zarbi (G)
+3,20007,Zarbi (H)
+3,20008,Zarbi (I)
+3,20009,Zarbi (J)
+3,20010,Zarbi (K)
+3,20011,Zarbi (L)
+3,20012,Zarbi (M)
+3,20013,Zarbi (N)
+3,20014,Zarbi (O)
+3,20015,Zarbi (P)
+3,20016,Zarbi (Q)
+3,20017,Zarbi (R)
+3,20018,Zarbi (S)
+3,20019,Zarbi (T)
+3,20020,Zarbi (U)
+3,20021,Zarbi (V)
+3,20022,Zarbi (W)
+3,20023,Zarbi (X)
+3,20024,Zarbi (Y)
+3,20025,Zarbi (Z)
+3,20026,Zarbi (!)
+3,20027,Zarbi (?)
+3,20028,Cheniti (Cape Sable)
+3,20029,Cheniti (Cape Déchet)
+3,20030,Ceriflor (Temps Ensoleillé)
+3,20031,Sancoki (Mer Orient)
+3,20032,Tritosor (Mer Orient)
+3,20033,Vivaldaim (Forme Été)
+3,20034,Vivaldaim (Forme Automne)
+3,20035,Vivaldaim (Forme Hiver)
+3,20036,Haydaim (Forme Été)
+3,20037,Haydaim (Forme Automne)
+3,20038,Haydaim (Forme Hiver)
+3,20039,Genesect (Module Aqua)
+3,20040,Genesect (Module Choc)
+3,20041,Genesect (Module Pyro)
+3,20042,Genesect (Module Cryo)
+3,20043,Keldeo (Aspect Décidé)
+3,20044,Lépidonille (Motif Banquise)
+3,20045,Lépidonille (Motif Glace)
+3,20046,Lépidonille (Motif Continent)
+3,20047,Lépidonille (Motif Verdure)
+3,20048,Lépidonille (Motif Monarchie)
+3,20049,Lépidonille (Motif Floraison)
+3,20050,Lépidonille (Motif Métropole)
+3,20051,Lépidonille (Motif Rivage)
+3,20052,Lépidonille (Motif Archipel)
+3,20053,Lépidonille (Motif Sécheresse)
+3,20054,Lépidonille (Motif Sable)
+3,20055,Lépidonille (Motif Delta)
+3,20056,Lépidonille (Motif Cyclone)
+3,20057,Lépidonille (Motif Mangrove)
+3,20058,Lépidonille (Motif Zénith)
+3,20059,Lépidonille (Motif Soleil Levant)
+3,20060,Lépidonille (Motif Jungle)
+3,20061,Lépidonille (Motif Fantaisie)
+3,20062,Lépidonille (Motif Poké Ball)
+3,20063,Pérégrain (Motif Banquise)
+3,20064,Pérégrain (Motif Glace)
+3,20065,Pérégrain (Motif Continent)
+3,20066,Pérégrain (Motif Verdure)
+3,20067,Pérégrain (Motif Monarchie)
+3,20068,Pérégrain (Motif Floraison)
+3,20069,Pérégrain (Motif Métropole)
+3,20070,Pérégrain (Motif Rivage)
+3,20071,Pérégrain (Motif Archipel)
+3,20072,Pérégrain (Motif Sécheresse)
+3,20073,Pérégrain (Motif Sable)
+3,20074,Pérégrain (Motif Delta)
+3,20075,Pérégrain (Motif Cyclone)
+3,20076,Pérégrain (Motif Mangrove)
+3,20077,Pérégrain (Motif Zénith)
+3,20078,Pérégrain (Motif Soleil Levant)
+3,20079,Pérégrain (Motif Jungle)
+3,20080,Pérégrain (Motif Fantaisie)
+3,20081,Pérégrain (Motif Poké Ball)
+3,20082,Prismillon (Motif Banquise)
+3,20083,Prismillon (Motif Glace)
+3,20084,Prismillon (Motif Continent)
+3,20085,Prismillon (Motif Verdure)
+3,20086,Prismillon (Motif Monarchie)
+3,20087,Prismillon (Motif Floraison)
+3,20088,Prismillon (Motif Métropole)
+3,20089,Prismillon (Motif Rivage)
+3,20090,Prismillon (Motif Archipel)
+3,20091,Prismillon (Motif Sécheresse)
+3,20092,Prismillon (Motif Sable)
+3,20093,Prismillon (Motif Delta)
+3,20094,Prismillon (Motif Cyclone)
+3,20095,Prismillon (Motif Mangrove)
+3,20096,Prismillon (Motif Zénith)
+3,20097,Prismillon (Motif Soleil Levant)
+3,20098,Prismillon (Motif Jungle)
+3,20099,Prismillon (Motif Fantaisie)
+3,20100,Prismillon (Motif Poké Ball)
+3,20101,Flabébé (Fleur Jaune)
+3,20102,Flabébé (Fleur Orange)
+3,20103,Flabébé (Fleur Bleue)
+3,20104,Flabébé (Fleur Blanche)
+3,20105,Floette (Fleur Jaune)
+3,20106,Floette (Fleur Orange)
+3,20107,Floette (Fleur Bleue)
+3,20108,Floette (Fleur Blanche)
+3,20109,Florges (Fleur Jaune)
+3,20110,Florges (Fleur Orange)
+3,20111,Florges (Fleur Bleue)
+3,20112,Florges (Fleur Blanche)
+3,20113,Couafarel (Coupe Cœur)
+3,20114,Couafarel (Coupe Étoile)
+3,20115,Couafarel (Coupe Diamant)
+3,20116,Couafarel (Coupe Demoiselle)
+3,20117,Couafarel (Coupe Madame)
+3,20118,Couafarel (Coupe Monsieur)
+3,20119,Couafarel (Coupe Reine)
+3,20120,Couafarel (Coupe Kabuki)
+3,20121,Couafarel (Coupe Pharaon)
+3,20123,Rattatac (Forme d’Alola) (Totem-like)
+3,20124,Pikachu (Casquette de Hoenn)
+3,20125,Pikachu (Casquette de Sinnoh)
+3,20126,Pikachu (Casquette d’Unys)
+3,20127,Pikachu (Casquette de Kalos)
+3,20128,Pikachu (Casquette d’Alola)
+3,20129,Argouste (Totem-like)
+3,20130,Lucanon (Totem-like)
+3,20131,Floramantis (Totem-like)
+3,20132,Malamandre (Totem-like)
+3,20133,Météno (Forme Météore - Noyau Orange)
+3,20134,Météno (Forme Météore - Noyau Jaune)
+3,20135,Météno (Forme Météore - Noyau Vert)
+3,20136,Météno (Forme Météore - Noyau Bleu)
+3,20137,Météno (Forme Météore - Noyau Indigo)
+3,20138,Météno (Forme Météore - Noyau Violet)
+3,20139,Météno (Noyau Orange)
+3,20140,Météno (Noyau Jaune)
+3,20141,Météno (Noyau Vert)
+3,20142,Météno (Noyau Bleu)
+3,20143,Météno (Noyau Indigo)
+3,20144,Météno (Noyau Violet)
+3,20145,Mimiqui (Forme Démasquée)
+3,20146,Mimiqui (Forme Déguisée) (Totem-like)
+3,20147,Mimiqui (Forme Démasquée) (Totem-like)
+3,20148,Ékaïser (Totem-like)
+3,20149,Magearna (Couleur du Passé)
+3,20150,Pikachu (Casquette Partenaire)
+3,20151,Ossatueur (Forme d’Alola) (Totem-like)
+3,20152,Rubombelle (Totem-like)
+3,20153,Tarenbulle (Totem-like)
+3,20154,Togedemaru (Totem-like)
+3,20155,Dracaufeu (Gigamax)
+3,20156,Papilusion (Gigamax)
+3,20157,Pikachu (Gigamax)
+3,20158,Miaouss (Gigamax)
+3,20159,Mackogneur (Gigamax)
+3,20160,Ectoplasma (Gigamax)
+3,20161,Krabboss (Gigamax)
+3,20162,Lokhlass (Gigamax)
+3,20163,Évoli (Gigamax)
+3,20164,Ronflex (Gigamax)
+3,20165,Miasmax (Gigamax)
+3,20166,Melmetal (Gigamax)
+3,20167,Corvaillus (Gigamax)
+3,20168,Astronelle (Gigamax)
+3,20169,Torgamord (Gigamax)
+3,20170,Monthracite (Gigamax)
+3,20171,Pomdrapi (Gigamax)
+3,20172,Dratatin (Gigamax)
+3,20173,Dunaconda (Gigamax)
+3,20174,Nigosier (Forme Gobe-Tout)
+3,20175,Nigosier (Forme Gobe-Chu)
+3,20176,Salarsen (Forme Aigüe) (Gigamax)
+3,20177,Scolocendre (Gigamax)
+3,20178,Théffroi (Forme Authentique)
+3,20179,Polthégeist (Forme Authentique)
+3,20180,Sorcilence (Gigamax)
+3,20181,Angoliath (Gigamax)
+3,20188,Charmilly (Lait Ruby)
+3,20195,Charmilly (Lait Matcha)
+3,20202,Charmilly (Lait Menthe)
+3,20209,Charmilly (Lait Citron)
+3,20216,Charmilly (Lait Salé)
+3,20223,Charmilly (Mélange Ruby)
+3,20230,Charmilly (Mélange Caramel)
+3,20237,Charmilly (Mélange Tricolore)
+3,20244,Charmilly (Gigamax)
+3,20245,Morpeko (Mode Affamé)
+3,20246,Pachyradjah (Gigamax)
+3,20247,Duralugon (Gigamax)
+3,20248,Salarsen (Forme Grave) (Gigamax)
+3,20249,Florizarre (Gigamax)
+3,20250,Tortank (Gigamax)
+3,20251,Gorythmic (Gigamax)
+3,20252,Pyrobut (Gigamax)
+3,20253,Lézargus (Gigamax)
+3,20254,Shifours (Style Poing Final) (Gigamax)
+3,20255,Zarude (Papa)
+3,20256,Pikachu (Casquette Monde)
+3,20257,Shifours (Style Mille Poings) (Gigamax)
+3,20263,Famignol (Famille de Quatre)
+3,20264,Nigirigon (Forme Affalée)
+3,20265,Nigirigon (Forme Raide)
+3,20266,Deusolourdo (Forme Triple)
+3,20275,Poltchageist (Forme Onéreuse)
+3,20276,Théffroyable (Forme Exceptionnelle)
+3,20277,Méga-Magearna (Couleur du Passé)
+3,20278,Méga-Nigirigon (Forme Affalée)
+3,20279,Méga-Nigirigon (Forme Raide)
 4,1,Bisasam
 4,2,Bisaknosp
 4,3,Bisaflor
@@ -4108,7 +4741,7 @@ language_id,pokemon_id,name
 4,198,Kramurx
 4,199,Laschoking
 4,200,Traunfugil
-4,201,Icognito
+4,201,Icognito (A)
 4,202,Woingenau
 4,203,Girafarig
 4,204,Tannza
@@ -4319,7 +4952,7 @@ language_id,pokemon_id,name
 4,409,Rameidon
 4,410,Schilterus
 4,411,Bollterus
-4,412,Burmy
+4,412,Burmy (Pflanzenumhang)
 4,413,Burmadame (Pflanzenumhang)
 4,414,Moterpel
 4,415,Wadribie
@@ -4328,9 +4961,9 @@ language_id,pokemon_id,name
 4,418,Bamelin
 4,419,Bojelin
 4,420,Kikugi
-4,421,Kinoso
-4,422,Schalellos
-4,423,Gastrodon
+4,421,Kinoso (Wolkenform)
+4,422,Schalellos (Westliches Meer)
+4,423,Gastrodon (Westliches Meer)
 4,424,Ambidiffel
 4,425,Driftlon
 4,426,Drifzepeli
@@ -4492,8 +5125,8 @@ language_id,pokemon_id,name
 4,582,Gelatini
 4,583,Gelatroppo
 4,584,Gelatwino
-4,585,Sesokitz
-4,586,Kronjuwild
+4,585,Sesokitz (Frühlingsform)
+4,586,Kronjuwild (Frühlingsform)
 4,587,Emolga
 4,588,Laukaps
 4,589,Cavalanzas
@@ -4554,7 +5187,7 @@ language_id,pokemon_id,name
 4,644,Zekrom
 4,645,Demeteros (Inkarnationsform)
 4,646,Kyurem
-4,647,Keldeo
+4,647,Keldeo (Standardform)
 4,648,Meloetta (Gesangsform)
 4,649,Genesect
 4,650,Igamaro
@@ -4571,19 +5204,19 @@ language_id,pokemon_id,name
 4,661,Dartiri
 4,662,Dartignis
 4,663,Fiaro
-4,664,Purmel
-4,665,Puponcho
-4,666,Vivillon
+4,664,Purmel (Frostmuster)
+4,665,Puponcho (Frostmuster)
+4,666,Vivillon (Frostmuster)
 4,667,Leufeo
 4,668,Pyroleo
-4,669,Flabébé
-4,670,Floette
-4,671,Florges
+4,669,Flabébé (Rotblütler)
+4,670,Floette (Rotblütler)
+4,671,Florges (Rotblütler)
 4,672,Mähikel
 4,673,Chevrumm
 4,674,Pam-Pam
 4,675,Pandagro
-4,676,Coiffwaff
+4,676,Coiffwaff (Zottelform)
 4,677,Psiau
 4,678,Psiaugon (Männlich)
 4,679,Gramokles
@@ -4681,11 +5314,11 @@ language_id,pokemon_id,name
 4,771,Gufa
 4,772,Typ:Null
 4,773,Amigento (Normal)
-4,774,Meteno (Meteorform)
+4,774,Meteno (Meteorform - Roter Kern)
 4,775,Koalelu
 4,776,Tortunator
 4,777,Togedemaru
-4,778,Mimigma
+4,778,Mimigma (Verkleidete Form)
 4,779,Knirfish
 4,780,Sen-Long
 4,781,Moruda
@@ -4761,8 +5394,8 @@ language_id,pokemon_id,name
 4,851,Infernopod
 4,852,Klopptopus
 4,853,Kaocto
-4,854,Fatalitee
-4,855,Mortipot
+4,854,Fatalitee (Fälschungsform)
+4,855,Mortipot (Fälschungsform)
 4,856,Brimova
 4,857,Brimano
 4,858,Silembrim
@@ -4776,7 +5409,7 @@ language_id,pokemon_id,name
 4,866,Pantifrost
 4,867,Oghnatoll
 4,868,Hokumil
-4,869,Pokusan
+4,869,Pokusan (Vanille-Creme)
 4,870,Legios
 4,871,Britzigel
 4,872,Snomnom
@@ -4784,7 +5417,7 @@ language_id,pokemon_id,name
 4,874,Humanolith
 4,875,Kubuin (Tiefkühlkopf)
 4,876,Servol (Männlich)
-4,877,Morpeko
+4,877,Morpeko (Pappsattmuster)
 4,878,Kupfanti
 4,879,Patinaraja
 4,880,Lectragon
@@ -4832,7 +5465,7 @@ language_id,pokemon_id,name
 4,922,Pamamo
 4,923,Pamomamo
 4,924,Zwieps
-4,925,Famieps
+4,925,Famieps (Dreierfamilie)
 4,926,Hefel
 4,927,Backel
 4,928,Olini
@@ -4885,11 +5518,11 @@ language_id,pokemon_id,name
 4,975,Kolowal
 4,976,Agiluza
 4,977,Heerashai
-4,978,Nigiragi
+4,978,Nigiragi (Gebogene Form)
 4,979,Epitaff
 4,980,Suelord
 4,981,Farigiraf
-4,982,Dummimisel
+4,982,Dummimisel (Zweisegmentform)
 4,983,Gladimperio
 4,984,Riesenzahn
 4,985,Brüllschweif
@@ -4919,8 +5552,8 @@ language_id,pokemon_id,name
 4,1009,Windewoge
 4,1010,Eisenblatt
 4,1011,Sirapfel
-4,1012,Mortcha
-4,1013,Fatalitcha
+4,1012,Mortcha (Imitationsform)
+4,1013,Fatalitcha (Simple Form)
 4,1014,Boninu
 4,1015,Benesaru
 4,1016,Beatori
@@ -5042,7 +5675,7 @@ language_id,pokemon_id,name
 4,10107,Entfesseltes Hoopa
 4,10108,Rattfratz (Alola-Form)
 4,10109,Rattikarl (Alola-Form)
-4,10110,Pikachu (Kappe)
+4,10110,Pikachu (Original-Kappe)
 4,10111,Raichu (Alola-Form)
 4,10112,Sandan (Alola-Form)
 4,10113,Sandamer (Alola-Form)
@@ -5087,7 +5720,7 @@ language_id,pokemon_id,name
 4,10152,Amigento (Drache)
 4,10153,Amigento (Unlicht)
 4,10154,Amigento (Fee)
-4,10155,Meteno (Kernform)
+4,10155,Meteno (Roter Kern)
 4,10156,Wuffels (Tempomacher)
 4,10157,Wolwerock (Zwielichtform)
 4,10158,Necrozma (Abendmähne)
@@ -5209,8 +5842,219 @@ language_id,pokemon_id,name
 4,10274,Mega-Zeraora
 4,10275,Mega-Halupenjo
 4,10276,Mega-Lumiflora
-4,10277,Mega-Nigiragi
+4,10277,Mega-Nigiragi (Gebogene Form)
 4,10278,Mega-Espinodon
+4,20001,Icognito (B)
+4,20002,Icognito (C)
+4,20003,Icognito (D)
+4,20004,Icognito (E)
+4,20005,Icognito (F)
+4,20006,Icognito (G)
+4,20007,Icognito (H)
+4,20008,Icognito (I)
+4,20009,Icognito (J)
+4,20010,Icognito (K)
+4,20011,Icognito (L)
+4,20012,Icognito (M)
+4,20013,Icognito (N)
+4,20014,Icognito (O)
+4,20015,Icognito (P)
+4,20016,Icognito (Q)
+4,20017,Icognito (R)
+4,20018,Icognito (S)
+4,20019,Icognito (T)
+4,20020,Icognito (U)
+4,20021,Icognito (V)
+4,20022,Icognito (W)
+4,20023,Icognito (X)
+4,20024,Icognito (Y)
+4,20025,Icognito (Z)
+4,20026,Icognito (!)
+4,20027,Icognito (?)
+4,20028,Burmy (Sandumhang)
+4,20029,Burmy (Lumpenumhang)
+4,20030,Kinoso (Sonnenform)
+4,20031,Schalellos (Östliches Meer)
+4,20032,Gastrodon (Östliches Meer)
+4,20033,Sesokitz (Sommerform)
+4,20034,Sesokitz (Herbstform)
+4,20035,Sesokitz (Winterform)
+4,20036,Kronjuwild (Sommerform)
+4,20037,Kronjuwild (Herbstform)
+4,20038,Kronjuwild (Winterform)
+4,20039,Genesect (Aquamodul)
+4,20040,Genesect (Blitzmodul)
+4,20041,Genesect (Flammenmodul)
+4,20042,Genesect (Gefriermodul)
+4,20043,Keldeo (Resolutform)
+4,20044,Purmel (Schneefeldmuster)
+4,20045,Purmel (Flockenmuster)
+4,20046,Purmel (Kontinentalmuster)
+4,20047,Purmel (Ziergartenmuster)
+4,20048,Purmel (Prunkmuster)
+4,20049,Purmel (Blumenmeermuster)
+4,20050,Purmel (Innovationsmuster)
+4,20051,Purmel (Aquamarinmuster)
+4,20052,Purmel (Archipelmuster)
+4,20053,Purmel (Dürremuster)
+4,20054,Purmel (Sandmuster)
+4,20055,Purmel (Flussdeltamuster)
+4,20056,Purmel (Monsunmuster)
+4,20057,Purmel (Savannenmuster)
+4,20058,Purmel (Sonnenmuster)
+4,20059,Purmel (Ozeanmuster)
+4,20060,Purmel (Dschungelmuster)
+4,20061,Purmel (Fantasiemuster)
+4,20062,Purmel (Pokéball-Muster)
+4,20063,Puponcho (Schneefeldmuster)
+4,20064,Puponcho (Flockenmuster)
+4,20065,Puponcho (Kontinentalmuster)
+4,20066,Puponcho (Ziergartenmuster)
+4,20067,Puponcho (Prunkmuster)
+4,20068,Puponcho (Blumenmeermuster)
+4,20069,Puponcho (Innovationsmuster)
+4,20070,Puponcho (Aquamarinmuster)
+4,20071,Puponcho (Archipelmuster)
+4,20072,Puponcho (Dürremuster)
+4,20073,Puponcho (Sandmuster)
+4,20074,Puponcho (Flussdeltamuster)
+4,20075,Puponcho (Monsunmuster)
+4,20076,Puponcho (Savannenmuster)
+4,20077,Puponcho (Sonnenmuster)
+4,20078,Puponcho (Ozeanmuster)
+4,20079,Puponcho (Dschungelmuster)
+4,20080,Puponcho (Fantasiemuster)
+4,20081,Puponcho (Pokéball-Muster)
+4,20082,Vivillon (Schneefeldmuster)
+4,20083,Vivillon (Flockenmuster)
+4,20084,Vivillon (Kontinentalmuster)
+4,20085,Vivillon (Ziergartenmuster)
+4,20086,Vivillon (Prunkmuster)
+4,20087,Vivillon (Blumenmeermuster)
+4,20088,Vivillon (Innovationsmuster)
+4,20089,Vivillon (Aquamarinmuster)
+4,20090,Vivillon (Archipelmuster)
+4,20091,Vivillon (Dürremuster)
+4,20092,Vivillon (Sandmuster)
+4,20093,Vivillon (Flussdeltamuster)
+4,20094,Vivillon (Monsunmuster)
+4,20095,Vivillon (Savannenmuster)
+4,20096,Vivillon (Sonnenmuster)
+4,20097,Vivillon (Ozeanmuster)
+4,20098,Vivillon (Dschungelmuster)
+4,20099,Vivillon (Fantasiemuster)
+4,20100,Vivillon (Pokéball-Muster)
+4,20101,Flabébé (Gelbblütler)
+4,20102,Flabébé (Orangeblütler)
+4,20103,Flabébé (Blaublütler)
+4,20104,Flabébé (Weißblütler)
+4,20105,Floette (Gelbblütler)
+4,20106,Floette (Orangeblütler)
+4,20107,Floette (Blaublütler)
+4,20108,Floette (Weißblütler)
+4,20109,Florges (Gelbblütler)
+4,20110,Florges (Orangeblütler)
+4,20111,Florges (Blaublütler)
+4,20112,Florges (Weißblütler)
+4,20113,Coiffwaff (Herzchenschnitt)
+4,20114,Coiffwaff (Sternchenschnitt)
+4,20115,Coiffwaff (Diamantenschnitt)
+4,20116,Coiffwaff (Fräuleinschnitt)
+4,20117,Coiffwaff (Damenschnitt)
+4,20118,Coiffwaff (Kavaliersschnitt)
+4,20119,Coiffwaff (Königinnenschnitt)
+4,20120,Coiffwaff (Kabuki-Schnitt)
+4,20121,Coiffwaff (Herrscherschnitt)
+4,20123,Rattikarl (Alola-Form) (Totem-like)
+4,20124,Pikachu (Hoenn-Kappe)
+4,20125,Pikachu (Sinnoh-Kappe)
+4,20126,Pikachu (Einall-Kappe)
+4,20127,Pikachu (Kalos-Kappe)
+4,20128,Pikachu (Alola-Kappe)
+4,20129,Manguspektor (Totem-like)
+4,20130,Donarion (Totem-like)
+4,20131,Mantidea (Totem-like)
+4,20132,Amfira (Totem-like)
+4,20133,Meteno (Meteorform - Oranger Kern)
+4,20134,Meteno (Meteorform - Gelber Kern)
+4,20135,Meteno (Meteorform - Grüner Kern)
+4,20136,Meteno (Meteorform - Hellblauer Kern)
+4,20137,Meteno (Meteorform - Blauer Kern)
+4,20138,Meteno (Meteorform - Violetter Kern)
+4,20139,Meteno (Oranger Kern)
+4,20140,Meteno (Gelber Kern)
+4,20141,Meteno (Grüner Kern)
+4,20142,Meteno (Hellblauer Kern)
+4,20143,Meteno (Blauer Kern)
+4,20144,Meteno (Violetter Kern)
+4,20145,Mimigma (Entlarvte Form)
+4,20146,Mimigma (Verkleidete Form) (Totem-like)
+4,20147,Mimigma (Entlarvte Form) (Totem-like)
+4,20148,Grandiras (Totem-like)
+4,20149,Magearna (Originalfarbe)
+4,20150,Pikachu (Partner-Kappe)
+4,20151,Knogga (Alola-Form) (Totem-like)
+4,20152,Bandelby (Totem-like)
+4,20153,Aranestro (Totem-like)
+4,20154,Togedemaru (Totem-like)
+4,20155,Glurak (Gigadynamax)
+4,20156,Smettbo (Gigadynamax)
+4,20157,Pikachu (Gigadynamax)
+4,20158,Mauzi (Gigadynamax)
+4,20159,Machomei (Gigadynamax)
+4,20160,Gengar (Gigadynamax)
+4,20161,Kingler (Gigadynamax)
+4,20162,Lapras (Gigadynamax)
+4,20163,Evoli (Gigadynamax)
+4,20164,Relaxo (Gigadynamax)
+4,20165,Deponitox (Gigadynamax)
+4,20166,Melmetal (Gigadynamax)
+4,20167,Krarmor (Gigadynamax)
+4,20168,Maritellit (Gigadynamax)
+4,20169,Kamalm (Gigadynamax)
+4,20170,Montecarbo (Gigadynamax)
+4,20171,Drapfel (Gigadynamax)
+4,20172,Schlapfel (Gigadynamax)
+4,20173,Sanaconda (Gigadynamax)
+4,20174,Urgl (Schlingform)
+4,20175,Urgl (Stopfform)
+4,20176,Riffex (Hoch-Form) (Gigadynamax)
+4,20177,Infernopod (Gigadynamax)
+4,20178,Fatalitee (Originalform)
+4,20179,Mortipot (Originalform)
+4,20180,Silembrim (Gigadynamax)
+4,20181,Olangaar (Gigadynamax)
+4,20188,Pokusan (Ruby-Creme)
+4,20195,Pokusan (Matcha-Creme)
+4,20202,Pokusan (Minz-Creme)
+4,20209,Pokusan (Zitronen-Creme)
+4,20216,Pokusan (Salz-Creme)
+4,20223,Pokusan (Ruby-Mix)
+4,20230,Pokusan (Karamell-Mix)
+4,20237,Pokusan (Trio-Mix)
+4,20244,Pokusan (Gigadynamax)
+4,20245,Morpeko (Kohldampfmuster)
+4,20246,Patinaraja (Gigadynamax)
+4,20247,Duraludon (Gigadynamax)
+4,20248,Riffex (Tief-Form) (Gigadynamax)
+4,20249,Bisaflor (Gigadynamax)
+4,20250,Turtok (Gigadynamax)
+4,20251,Gortrom (Gigadynamax)
+4,20252,Liberlo (Gigadynamax)
+4,20253,Intelleon (Gigadynamax)
+4,20254,Wulaosu (Fokussierter Stil) (Gigadynamax)
+4,20255,Zarude (Papa)
+4,20256,Pikachu (Weltreise-Kappe)
+4,20257,Wulaosu (Fließender Stil) (Gigadynamax)
+4,20263,Famieps (Viererfamilie)
+4,20264,Nigiragi (Hängende Form)
+4,20265,Nigiragi (Gestreckte Form)
+4,20266,Dummimisel (Dreisegmentform)
+4,20275,Mortcha (Kostbarkeitsform)
+4,20276,Fatalitcha (Edle Form)
+4,20277,Mega-Magearna (Originalfarbe)
+4,20278,Mega-Nigiragi (Hängende Form)
+4,20279,Mega-Nigiragi (Gestreckte Form)
 5,1,Bulbasaur
 5,2,Ivysaur
 5,3,Venusaur
@@ -5411,7 +6255,7 @@ language_id,pokemon_id,name
 5,198,Murkrow
 5,199,Slowking
 5,200,Misdreavus
-5,201,Unown
+5,201,Unown (A)
 5,202,Wobbuffet
 5,203,Girafarig
 5,204,Pineco
@@ -5622,7 +6466,7 @@ language_id,pokemon_id,name
 5,409,Rampardos
 5,410,Shieldon
 5,411,Bastiodon
-5,412,Burmy
+5,412,Burmy (Manto Pianta)
 5,413,Wormadam (Manto Pianta)
 5,414,Mothim
 5,415,Combee
@@ -5631,9 +6475,9 @@ language_id,pokemon_id,name
 5,418,Buizel
 5,419,Floatzel
 5,420,Cherubi
-5,421,Cherrim
-5,422,Shellos
-5,423,Gastrodon
+5,421,Cherrim (Forma Nuvola)
+5,422,Shellos (Mare Ovest)
+5,423,Gastrodon (Mare Ovest)
 5,424,Ambipom
 5,425,Drifloon
 5,426,Drifblim
@@ -5795,8 +6639,8 @@ language_id,pokemon_id,name
 5,582,Vanillite
 5,583,Vanillish
 5,584,Vanilluxe
-5,585,Deerling
-5,586,Sawsbuck
+5,585,Deerling (Forma Primavera)
+5,586,Sawsbuck (Forma Primavera)
 5,587,Emolga
 5,588,Karrablast
 5,589,Escavalier
@@ -5857,7 +6701,7 @@ language_id,pokemon_id,name
 5,644,Zekrom
 5,645,Landorus (Forma Incarnazione)
 5,646,Kyurem
-5,647,Keldeo
+5,647,Keldeo (Forma Normale)
 5,648,Meloetta (Forma Canto)
 5,649,Genesect
 5,650,Chespin
@@ -5874,19 +6718,19 @@ language_id,pokemon_id,name
 5,661,Fletchling
 5,662,Fletchinder
 5,663,Talonflame
-5,664,Scatterbug
-5,665,Spewpa
-5,666,Vivillon
+5,664,Scatterbug (Motivo Nevi Perenni)
+5,665,Spewpa (Motivo Nevi Perenni)
+5,666,Vivillon (Motivo Nevi Perenni)
 5,667,Litleo
 5,668,Pyroar
-5,669,Flabébé
-5,670,Floette
-5,671,Florges
+5,669,Flabébé (Fiore Rosso)
+5,670,Floette (Fiore Rosso)
+5,671,Florges (Fiore Rosso)
 5,672,Skiddo
 5,673,Gogoat
 5,674,Pancham
 5,675,Pangoro
-5,676,Furfrou
+5,676,Furfrou (Forma Selvatica)
 5,677,Espurr
 5,678,Meowstic (Maschio)
 5,679,Honedge
@@ -5984,11 +6828,11 @@ language_id,pokemon_id,name
 5,771,Pyukumuku
 5,772,Tipo Zero
 5,773,Silvally (Normale)
-5,774,Minior (Forma Meteora)
+5,774,Minior (Forma Meteora - Nucleo Rosso)
 5,775,Komala
 5,776,Turtonator
 5,777,Togedemaru
-5,778,Mimikyu
+5,778,Mimikyu (Forma Mascherata)
 5,779,Bruxish
 5,780,Drampa
 5,781,Dhelmise
@@ -6064,8 +6908,8 @@ language_id,pokemon_id,name
 5,851,Centiskorch
 5,852,Clobbopus
 5,853,Grapploct
-5,854,Sinistea
-5,855,Polteageist
+5,854,Sinistea (Forma Contraffatta)
+5,855,Polteageist (Forma Contraffatta)
 5,856,Hatenna
 5,857,Hattrem
 5,858,Hatterene
@@ -6079,7 +6923,7 @@ language_id,pokemon_id,name
 5,866,Mr. Rime
 5,867,Runerigus
 5,868,Milcery
-5,869,Alcremie
+5,869,Alcremie (Lattevaniglia)
 5,870,Falinks
 5,871,Pincurchin
 5,872,Snom
@@ -6087,7 +6931,7 @@ language_id,pokemon_id,name
 5,874,Stonjourner
 5,875,Eiscue (Gelofaccia)
 5,876,Indeedee (Maschio)
-5,877,Morpeko
+5,877,Morpeko (Motivo Panciapiena)
 5,878,Cufant
 5,879,Copperajah
 5,880,Dracozolt
@@ -6135,7 +6979,7 @@ language_id,pokemon_id,name
 5,922,Pawmo
 5,923,Pawmot
 5,924,Tandemaus
-5,925,Maushold
+5,925,Maushold (Trifamiglia)
 5,926,Fidough
 5,927,Dachsbun
 5,928,Smoliv
@@ -6188,11 +7032,11 @@ language_id,pokemon_id,name
 5,975,Cetitan
 5,976,Veluza
 5,977,Dondozo
-5,978,Tatsugiri
+5,978,Tatsugiri (Forma Arcuata)
 5,979,Annihilape
 5,980,Clodsire
 5,981,Farigiraf
-5,982,Dudunsparce
+5,982,Dudunsparce (Forma Bimetamero)
 5,983,Kingambit
 5,984,Grandizanne
 5,985,Codaurlante
@@ -6222,8 +7066,8 @@ language_id,pokemon_id,name
 5,1009,Acquecrespe
 5,1010,Fogliaferrea
 5,1011,Dipplin
-5,1012,Poltchageist
-5,1013,Sinistcha
+5,1012,Poltchageist (Forma Taroccata)
+5,1013,Sinistcha (Forma Dozzinale)
 5,1014,Okidogi
 5,1015,Munkidori
 5,1016,Fezandipiti
@@ -6345,7 +7189,7 @@ language_id,pokemon_id,name
 5,10107,Hoopa Libero
 5,10108,Rattata (Forma di Alola)
 5,10109,Raticate (Forma di Alola)
-5,10110,Pikachu (Berreto)
+5,10110,Pikachu (Berretto Originale)
 5,10111,Raichu (Forma di Alola)
 5,10112,Sandshrew (Forma di Alola)
 5,10113,Sandslash (Forma di Alola)
@@ -6390,7 +7234,7 @@ language_id,pokemon_id,name
 5,10152,Silvally (Drago)
 5,10153,Silvally (Buio)
 5,10154,Silvally (Folletto)
-5,10155,Minior (Forma Nucleo)
+5,10155,Minior (Nucleo Rosso)
 5,10156,Rockruff (Mente Locale)
 5,10157,Lycanroc (Forma Crepuscolo)
 5,10158,Necrozma (Criniera del Vespro)
@@ -6512,8 +7356,219 @@ language_id,pokemon_id,name
 5,10274,MegaZeraora
 5,10275,MegaScovillain
 5,10276,MegaGlimmora
-5,10277,MegaTatsugiri
+5,10277,MegaTatsugiri (Forma Arcuata)
 5,10278,MegaBaxcalibur
+5,20001,Unown (B)
+5,20002,Unown (C)
+5,20003,Unown (D)
+5,20004,Unown (E)
+5,20005,Unown (F)
+5,20006,Unown (G)
+5,20007,Unown (H)
+5,20008,Unown (I)
+5,20009,Unown (J)
+5,20010,Unown (K)
+5,20011,Unown (L)
+5,20012,Unown (M)
+5,20013,Unown (N)
+5,20014,Unown (O)
+5,20015,Unown (P)
+5,20016,Unown (Q)
+5,20017,Unown (R)
+5,20018,Unown (S)
+5,20019,Unown (T)
+5,20020,Unown (U)
+5,20021,Unown (V)
+5,20022,Unown (W)
+5,20023,Unown (X)
+5,20024,Unown (Y)
+5,20025,Unown (Z)
+5,20026,Unown (!)
+5,20027,Unown (?)
+5,20028,Burmy (Manto Sabbia)
+5,20029,Burmy (Manto Scarti)
+5,20030,Cherrim (Forma Splendore)
+5,20031,Shellos (Mare Est)
+5,20032,Gastrodon (Mare Est)
+5,20033,Deerling (Forma Estate)
+5,20034,Deerling (Forma Autunno)
+5,20035,Deerling (Forma Inverno)
+5,20036,Sawsbuck (Forma Estate)
+5,20037,Sawsbuck (Forma Autunno)
+5,20038,Sawsbuck (Forma Inverno)
+5,20039,Genesect (Idromodulo)
+5,20040,Genesect (Voltmodulo)
+5,20041,Genesect (Piromodulo)
+5,20042,Genesect (Gelomodulo)
+5,20043,Keldeo (Forma Risoluta)
+5,20044,Scatterbug (Motivo Nordico)
+5,20045,Scatterbug (Motivo Manto di Neve)
+5,20046,Scatterbug (Motivo Continentale)
+5,20047,Scatterbug (Motivo Prato)
+5,20048,Scatterbug (Motivo Eleganza)
+5,20049,Scatterbug (Motivo Giardinfiore)
+5,20050,Scatterbug (Motivo Trendy)
+5,20051,Scatterbug (Motivo Marino)
+5,20052,Scatterbug (Motivo Arcipelago)
+5,20053,Scatterbug (Motivo Deserto)
+5,20054,Scatterbug (Motivo Sabbia)
+5,20055,Scatterbug (Motivo Fluviale)
+5,20056,Scatterbug (Motivo Pluviale)
+5,20057,Scatterbug (Motivo Savana)
+5,20058,Scatterbug (Motivo Solare)
+5,20059,Scatterbug (Motivo Oceanico)
+5,20060,Scatterbug (Motivo Giungla)
+5,20061,Scatterbug (Motivo Sbarazzino)
+5,20062,Scatterbug (Motivo Poké Ball)
+5,20063,Spewpa (Motivo Nordico)
+5,20064,Spewpa (Motivo Manto di Neve)
+5,20065,Spewpa (Motivo Continentale)
+5,20066,Spewpa (Motivo Prato)
+5,20067,Spewpa (Motivo Eleganza)
+5,20068,Spewpa (Motivo Giardinfiore)
+5,20069,Spewpa (Motivo Trendy)
+5,20070,Spewpa (Motivo Marino)
+5,20071,Spewpa (Motivo Arcipelago)
+5,20072,Spewpa (Motivo Deserto)
+5,20073,Spewpa (Motivo Sabbia)
+5,20074,Spewpa (Motivo Fluviale)
+5,20075,Spewpa (Motivo Pluviale)
+5,20076,Spewpa (Motivo Savana)
+5,20077,Spewpa (Motivo Solare)
+5,20078,Spewpa (Motivo Oceanico)
+5,20079,Spewpa (Motivo Giungla)
+5,20080,Spewpa (Motivo Sbarazzino)
+5,20081,Spewpa (Motivo Poké Ball)
+5,20082,Vivillon (Motivo Nordico)
+5,20083,Vivillon (Motivo Manto di Neve)
+5,20084,Vivillon (Motivo Continentale)
+5,20085,Vivillon (Motivo Prato)
+5,20086,Vivillon (Motivo Eleganza)
+5,20087,Vivillon (Motivo Giardinfiore)
+5,20088,Vivillon (Motivo Trendy)
+5,20089,Vivillon (Motivo Marino)
+5,20090,Vivillon (Motivo Arcipelago)
+5,20091,Vivillon (Motivo Deserto)
+5,20092,Vivillon (Motivo Sabbia)
+5,20093,Vivillon (Motivo Fluviale)
+5,20094,Vivillon (Motivo Pluviale)
+5,20095,Vivillon (Motivo Savana)
+5,20096,Vivillon (Motivo Solare)
+5,20097,Vivillon (Motivo Oceanico)
+5,20098,Vivillon (Motivo Giungla)
+5,20099,Vivillon (Motivo Sbarazzino)
+5,20100,Vivillon (Motivo Poké Ball)
+5,20101,Flabébé (Fiore Giallo)
+5,20102,Flabébé (Fiore Arancione)
+5,20103,Flabébé (Fiore Blu)
+5,20104,Flabébé (Fiore Bianco)
+5,20105,Floette (Fiore Giallo)
+5,20106,Floette (Fiore Arancione)
+5,20107,Floette (Fiore Blu)
+5,20108,Floette (Fiore Bianco)
+5,20109,Florges (Fiore Giallo)
+5,20110,Florges (Fiore Arancione)
+5,20111,Florges (Fiore Blu)
+5,20112,Florges (Fiore Bianco)
+5,20113,Furfrou (Taglio Cuore)
+5,20114,Furfrou (Taglio Stella)
+5,20115,Furfrou (Taglio Diamante)
+5,20116,Furfrou (Taglio Signorina)
+5,20117,Furfrou (Taglio Gentildonna)
+5,20118,Furfrou (Taglio Gentiluomo)
+5,20119,Furfrou (Taglio Regina)
+5,20120,Furfrou (Taglio Kabuki)
+5,20121,Furfrou (Taglio Faraone)
+5,20123,Raticate (Forma di Alola) (Totem-like)
+5,20124,Pikachu (Berretto Hoenn)
+5,20125,Pikachu (Berretto Sinnoh)
+5,20126,Pikachu (Berretto Unima)
+5,20127,Pikachu (Berretto Kalos)
+5,20128,Pikachu (Berretto Alola)
+5,20129,Gumshoos (Totem-like)
+5,20130,Vikavolt (Totem-like)
+5,20131,Lurantis (Totem-like)
+5,20132,Salazzle (Totem-like)
+5,20133,Minior (Forma Meteora - Nucleo Arancione)
+5,20134,Minior (Forma Meteora - Nucleo Giallo)
+5,20135,Minior (Forma Meteora - Nucleo Verde)
+5,20136,Minior (Forma Meteora - Nucleo Azzurro)
+5,20137,Minior (Forma Meteora - Nucleo Indaco)
+5,20138,Minior (Forma Meteora - Nucleo Violetto)
+5,20139,Minior (Nucleo Arancione)
+5,20140,Minior (Nucleo Giallo)
+5,20141,Minior (Nucleo Verde)
+5,20142,Minior (Nucleo Azzurro)
+5,20143,Minior (Nucleo Indaco)
+5,20144,Minior (Nucleo Violetto)
+5,20145,Mimikyu (Forma Smascherata)
+5,20146,Mimikyu (Forma Mascherata) (Totem-like)
+5,20147,Mimikyu (Forma Smascherata) (Totem-like)
+5,20148,Kommo-o (Totem-like)
+5,20149,Magearna (Colore Antico)
+5,20150,Pikachu (Berretto Compagni)
+5,20151,Marowak (Forma di Alola) (Totem-like)
+5,20152,Ribombee (Totem-like)
+5,20153,Araquanid (Totem-like)
+5,20154,Togedemaru (Totem-like)
+5,20155,Charizard (Gigamax)
+5,20156,Butterfree (Gigamax)
+5,20157,Pikachu (Gigamax)
+5,20158,Meowth (Gigamax)
+5,20159,Machamp (Gigamax)
+5,20160,Gengar (Gigamax)
+5,20161,Kingler (Gigamax)
+5,20162,Lapras (Gigamax)
+5,20163,Eevee (Gigamax)
+5,20164,Snorlax (Gigamax)
+5,20165,Garbodor (Gigamax)
+5,20166,Melmetal (Gigamax)
+5,20167,Corviknight (Gigamax)
+5,20168,Orbeetle (Gigamax)
+5,20169,Drednaw (Gigamax)
+5,20170,Coalossal (Gigamax)
+5,20171,Flapple (Gigamax)
+5,20172,Appletun (Gigamax)
+5,20173,Sandaconda (Gigamax)
+5,20174,Cramorant (Forma Inghiottitutto)
+5,20175,Cramorant (Forma Inghiottintero)
+5,20176,Toxtricity (Forma Melodia) (Gigamax)
+5,20177,Centiskorch (Gigamax)
+5,20178,Sinistea (Forma Autentica)
+5,20179,Polteageist (Forma Autentica)
+5,20180,Hatterene (Gigamax)
+5,20181,Grimmsnarl (Gigamax)
+5,20188,Alcremie (Latterosa)
+5,20195,Alcremie (Lattematcha)
+5,20202,Alcremie (Lattementa)
+5,20209,Alcremie (Lattelimone)
+5,20216,Alcremie (Lattesale)
+5,20223,Alcremie (Rosamix)
+5,20230,Alcremie (Caramelmix)
+5,20237,Alcremie (Triplomix)
+5,20244,Alcremie (Gigamax)
+5,20245,Morpeko (Motivo Panciavuota)
+5,20246,Copperajah (Gigamax)
+5,20247,Duraludon (Gigamax)
+5,20248,Toxtricity (Forma Basso) (Gigamax)
+5,20249,Venusaur (Gigamax)
+5,20250,Blastoise (Gigamax)
+5,20251,Rillaboom (Gigamax)
+5,20252,Cinderace (Gigamax)
+5,20253,Inteleon (Gigamax)
+5,20254,Urshifu (Stile Singolcolpo) (Gigamax)
+5,20255,Zarude (Papà)
+5,20256,Pikachu (Berretto Giramondo)
+5,20257,Urshifu (Stile Pluricolpo) (Gigamax)
+5,20263,Maushold (Quadrifamiglia)
+5,20264,Tatsugiri (Forma Adagiata)
+5,20265,Tatsugiri (Forma Tesa)
+5,20266,Dudunsparce (Forma Trimetamero)
+5,20275,Poltchageist (Forma Pregiata)
+5,20276,Sinistcha (Forma Eccezionale)
+5,20277,MegaMagearna (Colore Antico)
+5,20278,MegaTatsugiri (Forma Adagiata)
+5,20279,MegaTatsugiri (Forma Tesa)
 6,1,Bulbasaur
 6,2,Ivysaur
 6,3,Venusaur
@@ -6714,7 +7769,7 @@ language_id,pokemon_id,name
 6,198,Murkrow
 6,199,Slowking
 6,200,Misdreavus
-6,201,Unown
+6,201,Unown (A)
 6,202,Wobbuffet
 6,203,Girafarig
 6,204,Pineco
@@ -6925,7 +7980,7 @@ language_id,pokemon_id,name
 6,409,Rampardos
 6,410,Shieldon
 6,411,Bastiodon
-6,412,Burmy
+6,412,Burmy (Tronco Planta)
 6,413,Wormadam (Tronco Planta)
 6,414,Mothim
 6,415,Combee
@@ -6934,9 +7989,9 @@ language_id,pokemon_id,name
 6,418,Buizel
 6,419,Floatzel
 6,420,Cherubi
-6,421,Cherrim
-6,422,Shellos
-6,423,Gastrodon
+6,421,Cherrim (Forma Encapotado)
+6,422,Shellos (Mar Oeste)
+6,423,Gastrodon (Mar Oeste)
 6,424,Ambipom
 6,425,Drifloon
 6,426,Drifblim
@@ -7098,8 +8153,8 @@ language_id,pokemon_id,name
 6,582,Vanillite
 6,583,Vanillish
 6,584,Vanilluxe
-6,585,Deerling
-6,586,Sawsbuck
+6,585,Deerling (Forma Primavera)
+6,586,Sawsbuck (Forma Primavera)
 6,587,Emolga
 6,588,Karrablast
 6,589,Escavalier
@@ -7160,7 +8215,7 @@ language_id,pokemon_id,name
 6,644,Zekrom
 6,645,Landorus (Forma Avatar)
 6,646,Kyurem
-6,647,Keldeo
+6,647,Keldeo (Forma Habitual)
 6,648,Meloetta (Forma Lírica)
 6,649,Genesect
 6,650,Chespin
@@ -7177,19 +8232,19 @@ language_id,pokemon_id,name
 6,661,Fletchling
 6,662,Fletchinder
 6,663,Talonflame
-6,664,Scatterbug
-6,665,Spewpa
-6,666,Vivillon
+6,664,Scatterbug (Motivo Polar)
+6,665,Spewpa (Motivo Polar)
+6,666,Vivillon (Motivo Polar)
 6,667,Litleo
 6,668,Pyroar
-6,669,Flabébé
-6,670,Floette
-6,671,Florges
+6,669,Flabébé (Flor Roja)
+6,670,Floette (Flor Roja)
+6,671,Florges (Flor Roja)
 6,672,Skiddo
 6,673,Gogoat
 6,674,Pancham
 6,675,Pangoro
-6,676,Furfrou
+6,676,Furfrou (Forma Salvaje)
 6,677,Espurr
 6,678,Meowstic (Macho)
 6,679,Honedge
@@ -7287,11 +8342,11 @@ language_id,pokemon_id,name
 6,771,Pyukumuku
 6,772,Código Cero
 6,773,Silvally (Normal)
-6,774,Minior (Forma Meteorito)
+6,774,Minior (Forma Meteorito - Núcleo Rojo)
 6,775,Komala
 6,776,Turtonator
 6,777,Togedemaru
-6,778,Mimikyu
+6,778,Mimikyu (Forma Encubierta)
 6,779,Bruxish
 6,780,Drampa
 6,781,Dhelmise
@@ -7367,8 +8422,8 @@ language_id,pokemon_id,name
 6,851,Centiskorch
 6,852,Clobbopus
 6,853,Grapploct
-6,854,Sinistea
-6,855,Polteageist
+6,854,Sinistea (Forma Falsificada)
+6,855,Polteageist (Forma Falsificada)
 6,856,Hatenna
 6,857,Hattrem
 6,858,Hatterene
@@ -7382,7 +8437,7 @@ language_id,pokemon_id,name
 6,866,Mr. Rime
 6,867,Runerigus
 6,868,Milcery
-6,869,Alcremie
+6,869,Alcremie (Crema de Vainilla)
 6,870,Falinks
 6,871,Pincurchin
 6,872,Snom
@@ -7390,7 +8445,7 @@ language_id,pokemon_id,name
 6,874,Stonjourner
 6,875,Eiscue (Cara de Hielo)
 6,876,Indeedee (Macho)
-6,877,Morpeko
+6,877,Morpeko (Forma Saciada)
 6,878,Cufant
 6,879,Copperajah
 6,880,Dracozolt
@@ -7438,7 +8493,7 @@ language_id,pokemon_id,name
 6,922,Pawmo
 6,923,Pawmot
 6,924,Tandemaus
-6,925,Maushold
+6,925,Maushold (Familia de Tres)
 6,926,Fidough
 6,927,Dachsbun
 6,928,Smoliv
@@ -7491,11 +8546,11 @@ language_id,pokemon_id,name
 6,975,Cetitan
 6,976,Veluza
 6,977,Dondozo
-6,978,Tatsugiri
+6,978,Tatsugiri (Forma Curvada)
 6,979,Annihilape
 6,980,Clodsire
 6,981,Farigiraf
-6,982,Dudunsparce
+6,982,Dudunsparce (Forma Binodular)
 6,983,Kingambit
 6,984,Colmilargo
 6,985,Colagrito
@@ -7525,8 +8580,8 @@ language_id,pokemon_id,name
 6,1009,Ondulagua
 6,1010,Ferroverdor
 6,1011,Dipplin
-6,1012,Poltchageist
-6,1013,Sinistcha
+6,1012,Poltchageist (Forma Fraudulenta)
+6,1013,Sinistcha (Forma Mediocre)
 6,1014,Okidogi
 6,1015,Munkidori
 6,1016,Fezandipiti
@@ -7648,7 +8703,7 @@ language_id,pokemon_id,name
 6,10107,Hoopa Desatado
 6,10108,Rattata (Forma de Alola)
 6,10109,Raticate (Forma de Alola)
-6,10110,Pikachu (Gorra)
+6,10110,Pikachu (Gorra Original)
 6,10111,Raichu (Forma de Alola)
 6,10112,Sandshrew (Forma de Alola)
 6,10113,Sandslash (Forma de Alola)
@@ -7693,7 +8748,7 @@ language_id,pokemon_id,name
 6,10152,Silvally (Dragón)
 6,10153,Silvally (Siniestro)
 6,10154,Silvally (Hada)
-6,10155,Minior (Forma Núcleo)
+6,10155,Minior (Núcleo Rojo)
 6,10156,Rockruff (Ritmo Propio)
 6,10157,Lycanroc (Forma Crepuscular)
 6,10158,Necrozma (Melena Crepuscular)
@@ -7815,8 +8870,219 @@ language_id,pokemon_id,name
 6,10274,Mega-Zeraora
 6,10275,Mega-Scovillain
 6,10276,Mega-Glimmora
-6,10277,Mega-Tatsugiri
+6,10277,Mega-Tatsugiri (Forma Curvada)
 6,10278,Mega-Baxcalibur
+6,20001,Unown (B)
+6,20002,Unown (C)
+6,20003,Unown (D)
+6,20004,Unown (E)
+6,20005,Unown (F)
+6,20006,Unown (G)
+6,20007,Unown (H)
+6,20008,Unown (I)
+6,20009,Unown (J)
+6,20010,Unown (K)
+6,20011,Unown (L)
+6,20012,Unown (M)
+6,20013,Unown (N)
+6,20014,Unown (O)
+6,20015,Unown (P)
+6,20016,Unown (Q)
+6,20017,Unown (R)
+6,20018,Unown (S)
+6,20019,Unown (T)
+6,20020,Unown (U)
+6,20021,Unown (V)
+6,20022,Unown (W)
+6,20023,Unown (X)
+6,20024,Unown (Y)
+6,20025,Unown (Z)
+6,20026,Unown (!)
+6,20027,Unown (?)
+6,20028,Burmy (Tronco Arena)
+6,20029,Burmy (Tronco Basura)
+6,20030,Cherrim (Forma Soleado)
+6,20031,Shellos (Mar Este)
+6,20032,Gastrodon (Mar Este)
+6,20033,Deerling (Forma Verano)
+6,20034,Deerling (Forma Otoño)
+6,20035,Deerling (Forma Invierno)
+6,20036,Sawsbuck (Forma Verano)
+6,20037,Sawsbuck (Forma Otoño)
+6,20038,Sawsbuck (Forma Invierno)
+6,20039,Genesect (HidroROM)
+6,20040,Genesect (FulgoROM)
+6,20041,Genesect (PiroROM)
+6,20042,Genesect (CrioROM)
+6,20043,Keldeo (Forma Brío)
+6,20044,Scatterbug (Motivo Taiga)
+6,20045,Scatterbug (Motivo Tundra)
+6,20046,Scatterbug (Motivo Continental)
+6,20047,Scatterbug (Motivo Vergel)
+6,20048,Scatterbug (Motivo Oriental)
+6,20049,Scatterbug (Motivo Floral)
+6,20050,Scatterbug (Motivo Moderno)
+6,20051,Scatterbug (Motivo Marino)
+6,20052,Scatterbug (Motivo Isleño)
+6,20053,Scatterbug (Motivo Estepa)
+6,20054,Scatterbug (Motivo Desierto)
+6,20055,Scatterbug (Motivo Oasis)
+6,20056,Scatterbug (Motivo Monzón)
+6,20057,Scatterbug (Motivo Pantano)
+6,20058,Scatterbug (Motivo Solar)
+6,20059,Scatterbug (Motivo Océano)
+6,20060,Scatterbug (Motivo Jungla)
+6,20061,Scatterbug (Motivo Fantasía)
+6,20062,Scatterbug (Motivo Poké Ball)
+6,20063,Spewpa (Motivo Taiga)
+6,20064,Spewpa (Motivo Tundra)
+6,20065,Spewpa (Motivo Continental)
+6,20066,Spewpa (Motivo Vergel)
+6,20067,Spewpa (Motivo Oriental)
+6,20068,Spewpa (Motivo Floral)
+6,20069,Spewpa (Motivo Moderno)
+6,20070,Spewpa (Motivo Marino)
+6,20071,Spewpa (Motivo Isleño)
+6,20072,Spewpa (Motivo Estepa)
+6,20073,Spewpa (Motivo Desierto)
+6,20074,Spewpa (Motivo Oasis)
+6,20075,Spewpa (Motivo Monzón)
+6,20076,Spewpa (Motivo Pantano)
+6,20077,Spewpa (Motivo Solar)
+6,20078,Spewpa (Motivo Océano)
+6,20079,Spewpa (Motivo Jungla)
+6,20080,Spewpa (Motivo Fantasía)
+6,20081,Spewpa (Motivo Poké Ball)
+6,20082,Vivillon (Motivo Taiga)
+6,20083,Vivillon (Motivo Tundra)
+6,20084,Vivillon (Motivo Continental)
+6,20085,Vivillon (Motivo Vergel)
+6,20086,Vivillon (Motivo Oriental)
+6,20087,Vivillon (Motivo Floral)
+6,20088,Vivillon (Motivo Moderno)
+6,20089,Vivillon (Motivo Marino)
+6,20090,Vivillon (Motivo Isleño)
+6,20091,Vivillon (Motivo Estepa)
+6,20092,Vivillon (Motivo Desierto)
+6,20093,Vivillon (Motivo Oasis)
+6,20094,Vivillon (Motivo Monzón)
+6,20095,Vivillon (Motivo Pantano)
+6,20096,Vivillon (Motivo Solar)
+6,20097,Vivillon (Motivo Océano)
+6,20098,Vivillon (Motivo Jungla)
+6,20099,Vivillon (Motivo Fantasía)
+6,20100,Vivillon (Motivo Poké Ball)
+6,20101,Flabébé (Flor Amarilla)
+6,20102,Flabébé (Flor Naranja)
+6,20103,Flabébé (Flor Azul)
+6,20104,Flabébé (Flor Blanca)
+6,20105,Floette (Flor Amarilla)
+6,20106,Floette (Flor Naranja)
+6,20107,Floette (Flor Azul)
+6,20108,Floette (Flor Blanca)
+6,20109,Florges (Flor Amarilla)
+6,20110,Florges (Flor Naranja)
+6,20111,Florges (Flor Azul)
+6,20112,Florges (Flor Blanca)
+6,20113,Furfrou (Corte Corazón)
+6,20114,Furfrou (Corte Estrella)
+6,20115,Furfrou (Corte Rombo)
+6,20116,Furfrou (Corte Señorita)
+6,20117,Furfrou (Corte Dama)
+6,20118,Furfrou (Corte Caballero)
+6,20119,Furfrou (Corte Aristocrático)
+6,20120,Furfrou (Corte Kabuki)
+6,20121,Furfrou (Corte Faraónico)
+6,20123,Raticate (Forma de Alola) (Totem-like)
+6,20124,Pikachu (Gorra Hoenn)
+6,20125,Pikachu (Gorra Sinnoh)
+6,20126,Pikachu (Gorra Teselia)
+6,20127,Pikachu (Gorra Kalos)
+6,20128,Pikachu (Gorra Alola)
+6,20129,Gumshoos (Totem-like)
+6,20130,Vikavolt (Totem-like)
+6,20131,Lurantis (Totem-like)
+6,20132,Salazzle (Totem-like)
+6,20133,Minior (Forma Meteorito - Núcleo Naranja)
+6,20134,Minior (Forma Meteorito - Núcleo Amarillo)
+6,20135,Minior (Forma Meteorito - Núcleo Verde)
+6,20136,Minior (Forma Meteorito - Núcleo Azul)
+6,20137,Minior (Forma Meteorito - Núcleo Añil)
+6,20138,Minior (Forma Meteorito - Núcleo Violeta)
+6,20139,Minior (Núcleo Naranja)
+6,20140,Minior (Núcleo Amarillo)
+6,20141,Minior (Núcleo Verde)
+6,20142,Minior (Núcleo Azul)
+6,20143,Minior (Núcleo Añil)
+6,20144,Minior (Núcleo Violeta)
+6,20145,Mimikyu (Forma Descubierta)
+6,20146,Mimikyu (Forma Encubierta) (Totem-like)
+6,20147,Mimikyu (Forma Descubierta) (Totem-like)
+6,20148,Kommo-o (Totem-like)
+6,20149,Magearna (Color Vetusto)
+6,20150,Pikachu (Gorra Compañero)
+6,20151,Marowak (Forma de Alola) (Totem-like)
+6,20152,Ribombee (Totem-like)
+6,20153,Araquanid (Totem-like)
+6,20154,Togedemaru (Totem-like)
+6,20155,Charizard (Gigamax)
+6,20156,Butterfree (Gigamax)
+6,20157,Pikachu (Gigamax)
+6,20158,Meowth (Gigamax)
+6,20159,Machamp (Gigamax)
+6,20160,Gengar (Gigamax)
+6,20161,Kingler (Gigamax)
+6,20162,Lapras (Gigamax)
+6,20163,Eevee (Gigamax)
+6,20164,Snorlax (Gigamax)
+6,20165,Garbodor (Gigamax)
+6,20166,Melmetal (Gigamax)
+6,20167,Corviknight (Gigamax)
+6,20168,Orbeetle (Gigamax)
+6,20169,Drednaw (Gigamax)
+6,20170,Coalossal (Gigamax)
+6,20171,Flapple (Gigamax)
+6,20172,Appletun (Gigamax)
+6,20173,Sandaconda (Gigamax)
+6,20174,Cramorant (Forma Tragatodo)
+6,20175,Cramorant (Forma Engulletodo)
+6,20176,Toxtricity (Forma Aguda) (Gigamax)
+6,20177,Centiskorch (Gigamax)
+6,20178,Sinistea (Forma Genuina)
+6,20179,Polteageist (Forma Genuina)
+6,20180,Hatterene (Gigamax)
+6,20181,Grimmsnarl (Gigamax)
+6,20188,Alcremie (Crema Rosa)
+6,20195,Alcremie (Crema de Té)
+6,20202,Alcremie (Crema de Menta)
+6,20209,Alcremie (Crema de Limón)
+6,20216,Alcremie (Crema Salada)
+6,20223,Alcremie (Mezcla Rosa)
+6,20230,Alcremie (Mezcla Caramelo)
+6,20237,Alcremie (Tres Sabores)
+6,20244,Alcremie (Gigamax)
+6,20245,Morpeko (Forma Voraz)
+6,20246,Copperajah (Gigamax)
+6,20247,Duraludon (Gigamax)
+6,20248,Toxtricity (Forma Grave) (Gigamax)
+6,20249,Venusaur (Gigamax)
+6,20250,Blastoise (Gigamax)
+6,20251,Rillaboom (Gigamax)
+6,20252,Cinderace (Gigamax)
+6,20253,Inteleon (Gigamax)
+6,20254,Urshifu (Estilo Brusco) (Gigamax)
+6,20255,Zarude (Papá)
+6,20256,Pikachu (Gorra Trotamundos)
+6,20257,Urshifu (Estilo Fluido) (Gigamax)
+6,20263,Maushold (Familia de Cuatro)
+6,20264,Tatsugiri (Forma Lánguida)
+6,20265,Tatsugiri (Forma Recta)
+6,20266,Dudunsparce (Forma Trinodular)
+6,20275,Poltchageist (Forma Opulenta)
+6,20276,Sinistcha (Forma Exquisita)
+6,20277,Mega-Magearna (Color Vetusto)
+6,20278,Mega-Tatsugiri (Forma Lánguida)
+6,20279,Mega-Tatsugiri (Forma Recta)
 7,1,이상해씨
 7,2,이상해풀
 7,3,이상해꽃
@@ -8017,7 +9283,7 @@ language_id,pokemon_id,name
 7,198,니로우
 7,199,야도킹
 7,200,무우마
-7,201,안농
+7,201,안농 (A)
 7,202,마자용
 7,203,키링키
 7,204,피콘
@@ -8228,7 +9494,7 @@ language_id,pokemon_id,name
 7,409,램펄드
 7,410,방패톱스
 7,411,바리톱스
-7,412,도롱충이
+7,412,도롱충이 (초목도롱)
 7,413,도롱마담 (초목도롱)
 7,414,나메일
 7,415,세꿀버리
@@ -8237,9 +9503,9 @@ language_id,pokemon_id,name
 7,418,브이젤
 7,419,플로젤
 7,420,체리버
-7,421,체리꼬
-7,422,깝질무
-7,423,트리토돈
+7,421,체리꼬 (네거폼)
+7,422,깝질무 (서쪽바다)
+7,423,트리토돈 (서쪽바다)
 7,424,겟핸보숭
 7,425,흔들풍손
 7,426,둥실라이드
@@ -8401,8 +9667,8 @@ language_id,pokemon_id,name
 7,582,바닐프티
 7,583,바닐리치
 7,584,배바닐라
-7,585,사철록
-7,586,바라철록
+7,585,사철록 (봄의 모습)
+7,586,바라철록 (봄의 모습)
 7,587,에몽가
 7,588,딱정곤
 7,589,슈바르고
@@ -8463,7 +9729,7 @@ language_id,pokemon_id,name
 7,644,제크로무
 7,645,랜드로스 (화신폼)
 7,646,큐레무
-7,647,케르디오
+7,647,케르디오 (평상시 모습)
 7,648,메로엣타 (보이스폼)
 7,649,게노세크트
 7,650,도치마론
@@ -8480,19 +9746,19 @@ language_id,pokemon_id,name
 7,661,화살꼬빈
 7,662,불화살빈
 7,663,파이어로
-7,664,분이벌레
-7,665,분떠도리
-7,666,비비용
+7,664,분이벌레 (빙설의 모양)
+7,665,분떠도리 (빙설의 모양)
+7,666,비비용 (빙설의 모양)
 7,667,레오꼬
 7,668,화염레오
-7,669,플라베베
-7,670,플라엣테
-7,671,플라제스
+7,669,플라베베 (빨간 꽃)
+7,670,플라엣테 (빨간 꽃)
+7,671,플라제스 (빨간 꽃)
 7,672,메이클
 7,673,고고트
 7,674,판짱
 7,675,부란다
-7,676,트리미앙
+7,676,트리미앙 (야생의 모습)
 7,677,냐스퍼
 7,678,냐오닉스 (수컷의 모습)
 7,679,단칼빙
@@ -8590,11 +9856,11 @@ language_id,pokemon_id,name
 7,771,해무기
 7,772,타입:널
 7,773,실버디 (노말)
-7,774,메테노 (유성의 모습)
+7,774,메테노 (유성의 모습 - 빨간색 코어)
 7,775,자말라
 7,776,폭거북스
 7,777,토게데마루
-7,778,따라큐
+7,778,따라큐 (둔갑한 모습)
 7,779,치갈기
 7,780,할비롱
 7,781,타타륜
@@ -8670,8 +9936,8 @@ language_id,pokemon_id,name
 7,851,다태우지네
 7,852,때때무노
 7,853,케오퍼스
-7,854,데인차
-7,855,포트데스
+7,854,데인차 (위작폼)
+7,855,포트데스 (위작폼)
 7,856,몸지브림
 7,857,손지브림
 7,858,브리무음
@@ -8685,7 +9951,7 @@ language_id,pokemon_id,name
 7,866,마임꽁꽁
 7,867,데스판
 7,868,마빌크
-7,869,마휘핑
+7,869,마휘핑 (밀키바닐라)
 7,870,대여르
 7,871,찌르성게
 7,872,누니머기
@@ -8693,7 +9959,7 @@ language_id,pokemon_id,name
 7,874,돌헨진
 7,875,빙큐보 (아이스페이스)
 7,876,에써르 (수컷의 모습)
-7,877,모르페코
+7,877,모르페코 (배부른 모양)
 7,878,끼리동
 7,879,대왕끼리동
 7,880,파치래곤
@@ -8741,7 +10007,7 @@ language_id,pokemon_id,name
 7,922,빠모트
 7,923,빠르모트
 7,924,두리쥐
-7,925,파밀리쥐
+7,925,파밀리쥐 (세 식구)
 7,926,쫀도기
 7,927,바우첼
 7,928,미니브
@@ -8794,11 +10060,11 @@ language_id,pokemon_id,name
 7,975,우락고래
 7,976,가비루사
 7,977,어써러셔
-7,978,싸리용
+7,978,싸리용 (젖힌 모습)
 7,979,저승갓숭
 7,980,토오
 7,981,키키링
-7,982,노고고치
+7,982,노고고치 (두 마디폼)
 7,983,대도각참
 7,984,위대한엄니
 7,985,우렁찬꼬리
@@ -8828,8 +10094,8 @@ language_id,pokemon_id,name
 7,1009,굽이치는물결
 7,1010,무쇠잎새
 7,1011,과미르
-7,1012,차데스
-7,1013,그우린차
+7,1012,차데스 (가짜배기의 모습)
+7,1013,그우린차 (범작의 모습)
 7,1014,조타구
 7,1015,이야후
 7,1016,기로치
@@ -8951,7 +10217,7 @@ language_id,pokemon_id,name
 7,10107,굴레를 벗어난 후파
 7,10108,꼬렛 (알로라의 모습)
 7,10109,레트라 (알로라의 모습)
-7,10110,피카츄 (캡)
+7,10110,피카츄 (오리지널캡)
 7,10111,라이츄 (알로라의 모습)
 7,10112,모래두지 (알로라의 모습)
 7,10113,고지 (알로라의 모습)
@@ -8996,7 +10262,7 @@ language_id,pokemon_id,name
 7,10152,실버디 (드래곤)
 7,10153,실버디 (악)
 7,10154,실버디 (페어리)
-7,10155,메테노 (유성의 코어)
+7,10155,메테노 (빨간색 코어)
 7,10156,암멍이 (마이페이스)
 7,10157,루가루암 (황혼의 모습)
 7,10158,네크로즈마 (황혼의 갈기)
@@ -9118,8 +10384,219 @@ language_id,pokemon_id,name
 7,10274,메가제라오라
 7,10275,메가스코빌런
 7,10276,메가킬라플로르
-7,10277,메가싸리용
+7,10277,메가싸리용 (젖힌 모습)
 7,10278,메가드닐레이브
+7,20001,안농 (B)
+7,20002,안농 (C)
+7,20003,안농 (D)
+7,20004,안농 (E)
+7,20005,안농 (F)
+7,20006,안농 (G)
+7,20007,안농 (H)
+7,20008,안농 (I)
+7,20009,안농 (J)
+7,20010,안농 (K)
+7,20011,안농 (L)
+7,20012,안농 (M)
+7,20013,안농 (N)
+7,20014,안농 (O)
+7,20015,안농 (P)
+7,20016,안농 (Q)
+7,20017,안농 (R)
+7,20018,안농 (S)
+7,20019,안농 (T)
+7,20020,안농 (U)
+7,20021,안농 (V)
+7,20022,안농 (W)
+7,20023,안농 (X)
+7,20024,안농 (Y)
+7,20025,안농 (Z)
+7,20026,안농 (!)
+7,20027,안농 (?)
+7,20028,도롱충이 (모래땅도롱)
+7,20029,도롱충이 (슈레도롱)
+7,20030,체리꼬 (포지폼)
+7,20031,깝질무 (동쪽바다)
+7,20032,트리토돈 (동쪽바다)
+7,20033,사철록 (여름의 모습)
+7,20034,사철록 (가을의 모습)
+7,20035,사철록 (겨울의 모습)
+7,20036,바라철록 (여름의 모습)
+7,20037,바라철록 (가을의 모습)
+7,20038,바라철록 (겨울의 모습)
+7,20039,게노세크트 (아쿠아카세트)
+7,20040,게노세크트 (번개카세트)
+7,20041,게노세크트 (블레이즈카세트)
+7,20042,게노세크트 (프리즈카세트)
+7,20043,케르디오 (각오의 모습)
+7,20044,분이벌레 (설국의 모양)
+7,20045,분이벌레 (설원의 모양)
+7,20046,분이벌레 (대륙의 모양)
+7,20047,분이벌레 (정원의 모양)
+7,20048,분이벌레 (우아한 모양)
+7,20049,분이벌레 (화원의 모양)
+7,20050,분이벌레 (모던한 모양)
+7,20051,분이벌레 (마린의 모양)
+7,20052,분이벌레 (군도의 모양)
+7,20053,분이벌레 (황야의 모양)
+7,20054,분이벌레 (사진의 모양)
+7,20055,분이벌레 (대하의 모양)
+7,20056,분이벌레 (스콜의 모양)
+7,20057,분이벌레 (사바나의 모양)
+7,20058,분이벌레 (태양의 모양)
+7,20059,분이벌레 (오션의 모양)
+7,20060,분이벌레 (정글의 모양)
+7,20061,분이벌레 (팬시한 모양)
+7,20062,분이벌레 (볼의 모양)
+7,20063,분떠도리 (설국의 모양)
+7,20064,분떠도리 (설원의 모양)
+7,20065,분떠도리 (대륙의 모양)
+7,20066,분떠도리 (정원의 모양)
+7,20067,분떠도리 (우아한 모양)
+7,20068,분떠도리 (화원의 모양)
+7,20069,분떠도리 (모던한 모양)
+7,20070,분떠도리 (마린의 모양)
+7,20071,분떠도리 (군도의 모양)
+7,20072,분떠도리 (황야의 모양)
+7,20073,분떠도리 (사진의 모양)
+7,20074,분떠도리 (대하의 모양)
+7,20075,분떠도리 (스콜의 모양)
+7,20076,분떠도리 (사바나의 모양)
+7,20077,분떠도리 (태양의 모양)
+7,20078,분떠도리 (오션의 모양)
+7,20079,분떠도리 (정글의 모양)
+7,20080,분떠도리 (팬시한 모양)
+7,20081,분떠도리 (볼의 모양)
+7,20082,비비용 (설국의 모양)
+7,20083,비비용 (설원의 모양)
+7,20084,비비용 (대륙의 모양)
+7,20085,비비용 (정원의 모양)
+7,20086,비비용 (우아한 모양)
+7,20087,비비용 (화원의 모양)
+7,20088,비비용 (모던한 모양)
+7,20089,비비용 (마린의 모양)
+7,20090,비비용 (군도의 모양)
+7,20091,비비용 (황야의 모양)
+7,20092,비비용 (사진의 모양)
+7,20093,비비용 (대하의 모양)
+7,20094,비비용 (스콜의 모양)
+7,20095,비비용 (사바나의 모양)
+7,20096,비비용 (태양의 모양)
+7,20097,비비용 (오션의 모양)
+7,20098,비비용 (정글의 모양)
+7,20099,비비용 (팬시한 모양)
+7,20100,비비용 (볼의 모양)
+7,20101,플라베베 (노란 꽃)
+7,20102,플라베베 (오렌지색 꽃)
+7,20103,플라베베 (파란 꽃)
+7,20104,플라베베 (하얀 꽃)
+7,20105,플라엣테 (노란 꽃)
+7,20106,플라엣테 (오렌지색 꽃)
+7,20107,플라엣테 (파란 꽃)
+7,20108,플라엣테 (하얀 꽃)
+7,20109,플라제스 (노란 꽃)
+7,20110,플라제스 (오렌지색 꽃)
+7,20111,플라제스 (파란 꽃)
+7,20112,플라제스 (하얀 꽃)
+7,20113,트리미앙 (하트컷)
+7,20114,트리미앙 (스타컷)
+7,20115,트리미앙 (다이아컷)
+7,20116,트리미앙 (레이디컷)
+7,20117,트리미앙 (마담컷)
+7,20118,트리미앙 (젠틀컷)
+7,20119,트리미앙 (퀸컷)
+7,20120,트리미앙 (가부키컷)
+7,20121,트리미앙 (킹덤컷)
+7,20123,레트라 (알로라의 모습) (Totem-like)
+7,20124,피카츄 (호연캡)
+7,20125,피카츄 (신오캡)
+7,20126,피카츄 (하나캡)
+7,20127,피카츄 (칼로스캡)
+7,20128,피카츄 (알로라캡)
+7,20129,형사구스 (Totem-like)
+7,20130,투구뿌논 (Totem-like)
+7,20131,라란티스 (Totem-like)
+7,20132,염뉴트 (Totem-like)
+7,20133,메테노 (유성의 모습 - 주황색 코어)
+7,20134,메테노 (유성의 모습 - 노란색 코어)
+7,20135,메테노 (유성의 모습 - 초록색 코어)
+7,20136,메테노 (유성의 모습 - 옥색 코어)
+7,20137,메테노 (유성의 모습 - 파란색 코어)
+7,20138,메테노 (유성의 모습 - 보라색 코어)
+7,20139,메테노 (주황색 코어)
+7,20140,메테노 (노란색 코어)
+7,20141,메테노 (초록색 코어)
+7,20142,메테노 (옥색 코어)
+7,20143,메테노 (파란색 코어)
+7,20144,메테노 (보라색 코어)
+7,20145,따라큐 (들킨 모습)
+7,20146,따라큐 (둔갑한 모습) (Totem-like)
+7,20147,따라큐 (들킨 모습) (Totem-like)
+7,20148,짜랑고우거 (Totem-like)
+7,20149,마기아나 (500년 전의 색)
+7,20150,피카츄 (너로정했다캡)
+7,20151,텅구리 (알로라의 모습) (Totem-like)
+7,20152,에리본 (Totem-like)
+7,20153,깨비물거미 (Totem-like)
+7,20154,토게데마루 (Totem-like)
+7,20155,리자몽 (거다이맥스)
+7,20156,버터플 (거다이맥스)
+7,20157,피카츄 (거다이맥스)
+7,20158,나옹 (거다이맥스)
+7,20159,괴력몬 (거다이맥스)
+7,20160,팬텀 (거다이맥스)
+7,20161,킹크랩 (거다이맥스)
+7,20162,라프라스 (거다이맥스)
+7,20163,이브이 (거다이맥스)
+7,20164,잠만보 (거다이맥스)
+7,20165,더스트나 (거다이맥스)
+7,20166,멜메탈 (거다이맥스)
+7,20167,아머까오 (거다이맥스)
+7,20168,이올브 (거다이맥스)
+7,20169,갈가부기 (거다이맥스)
+7,20170,석탄산 (거다이맥스)
+7,20171,애프룡 (거다이맥스)
+7,20172,단지래플 (거다이맥스)
+7,20173,사다이사 (거다이맥스)
+7,20174,윽우지 (그대로 삼킨 모습)
+7,20175,윽우지 (통째로 삼킨 모습)
+7,20176,스트린더 (하이한 모습) (거다이맥스)
+7,20177,다태우지네 (거다이맥스)
+7,20178,데인차 (진작폼)
+7,20179,포트데스 (진작폼)
+7,20180,브리무음 (거다이맥스)
+7,20181,오롱털 (거다이맥스)
+7,20188,마휘핑 (밀키루비)
+7,20195,마휘핑 (밀키말차)
+7,20202,마휘핑 (밀키민트)
+7,20209,마휘핑 (밀키레몬)
+7,20216,마휘핑 (밀키솔트)
+7,20223,마휘핑 (루비믹스)
+7,20230,마휘핑 (캐러멜믹스)
+7,20237,마휘핑 (트리플믹스)
+7,20244,마휘핑 (거다이맥스)
+7,20245,모르페코 (배고픈 모양)
+7,20246,대왕끼리동 (거다이맥스)
+7,20247,두랄루돈 (거다이맥스)
+7,20248,스트린더 (로우한 모습) (거다이맥스)
+7,20249,이상해꽃 (거다이맥스)
+7,20250,거북왕 (거다이맥스)
+7,20251,고릴타 (거다이맥스)
+7,20252,에이스번 (거다이맥스)
+7,20253,인텔리레온 (거다이맥스)
+7,20254,우라오스 (일격의 태세) (거다이맥스)
+7,20255,자루도 (아빠)
+7,20256,피카츄 (월드캡)
+7,20257,우라오스 (연격의 태세) (거다이맥스)
+7,20263,파밀리쥐 (네 식구)
+7,20264,싸리용 (늘어진 모습)
+7,20265,싸리용 (뻗은 모습)
+7,20266,노고고치 (세 마디폼)
+7,20275,차데스 (알짜배기의 모습)
+7,20276,그우린차 (걸작의 모습)
+7,20277,메가마기아나 (500년 전의 색)
+7,20278,메가싸리용 (늘어진 모습)
+7,20279,메가싸리용 (뻗은 모습)
 8,1,フシギダネ
 8,2,フシギソウ
 8,3,フシギバナ
@@ -9320,7 +10797,7 @@ language_id,pokemon_id,name
 8,198,ヤミカラス
 8,199,ヤドキング
 8,200,ムウマ
-8,201,アンノーン
+8,201,アンノーン (A)
 8,202,ソーナンス
 8,203,キリンリキ
 8,204,クヌギダマ
@@ -9531,7 +11008,7 @@ language_id,pokemon_id,name
 8,409,ラムパルド
 8,410,タテトプス
 8,411,トリデプス
-8,412,ミノムッチ
+8,412,ミノムッチ (くさきのミノ)
 8,413,ミノマダム (くさきのミノ)
 8,414,ガーメイル
 8,415,ミツハニー
@@ -9540,9 +11017,9 @@ language_id,pokemon_id,name
 8,418,ブイゼル
 8,419,フローゼル
 8,420,チェリンボ
-8,421,チェリム
-8,422,カラナクシ
-8,423,トリトドン
+8,421,チェリム (ネガフォルム)
+8,422,カラナクシ (にしのうみ)
+8,423,トリトドン (にしのうみ)
 8,424,エテボース
 8,425,フワンテ
 8,426,フワライド
@@ -9704,8 +11181,8 @@ language_id,pokemon_id,name
 8,582,バニプッチ
 8,583,バニリッチ
 8,584,バイバニラ
-8,585,シキジカ
-8,586,メブキジカ
+8,585,シキジカ (はるのすがた)
+8,586,メブキジカ (はるのすがた)
 8,587,エモンガ
 8,588,カブルモ
 8,589,シュバルゴ
@@ -9766,7 +11243,7 @@ language_id,pokemon_id,name
 8,644,ゼクロム
 8,645,ランドロス (けしんフォルム)
 8,646,キュレム
-8,647,ケルディオ
+8,647,ケルディオ (いつものすがた)
 8,648,メロエッタ (ボイスフォルム)
 8,649,ゲノセクト
 8,650,ハリマロン
@@ -9783,19 +11260,19 @@ language_id,pokemon_id,name
 8,661,ヤヤコマ
 8,662,ヒノヤコマ
 8,663,ファイアロー
-8,664,コフキムシ
-8,665,コフーライ
-8,666,ビビヨン
+8,664,コフキムシ (ひょうせつのもよう)
+8,665,コフーライ (ひょうせつのもよう)
+8,666,ビビヨン (ひょうせつのもよう)
 8,667,シシコ
 8,668,カエンジシ
-8,669,フラベベ
-8,670,フラエッテ
-8,671,フラージェス
+8,669,フラベベ (あかいはな)
+8,670,フラエッテ (あかいはな)
+8,671,フラージェス (あかいはな)
 8,672,メェークル
 8,673,ゴーゴート
 8,674,ヤンチャム
 8,675,ゴロンダ
-8,676,トリミアン
+8,676,トリミアン (やせいのすがた)
 8,677,ニャスパー
 8,678,ニャオニクス (オスのすがた)
 8,679,ヒトツキ
@@ -9893,11 +11370,11 @@ language_id,pokemon_id,name
 8,771,ナマコブシ
 8,772,タイプ：ヌル
 8,773,シルヴァディ (ノーマル)
-8,774,メテノ (りゅうせいのすがた)
+8,774,メテノ (りゅうせいのすがた - あかいろのコア)
 8,775,ネッコアラ
 8,776,バクガメス
 8,777,トゲデマル
-8,778,ミミッキュ
+8,778,ミミッキュ (ばけたすがた)
 8,779,ハギギシリ
 8,780,ジジーロン
 8,781,ダダリン
@@ -9973,8 +11450,8 @@ language_id,pokemon_id,name
 8,851,マルヤクデ
 8,852,タタッコ
 8,853,オトスパス
-8,854,ヤバチャ
-8,855,ポットデス
+8,854,ヤバチャ (がんさくフォルム)
+8,855,ポットデス (がんさくフォルム)
 8,856,ミブリム
 8,857,テブリム
 8,858,ブリムオン
@@ -9988,7 +11465,7 @@ language_id,pokemon_id,name
 8,866,バリコオル
 8,867,デスバーン
 8,868,マホミル
-8,869,マホイップ
+8,869,マホイップ (ミルキィバニラ)
 8,870,タイレーツ
 8,871,バチンウニ
 8,872,ユキハミ
@@ -9996,7 +11473,7 @@ language_id,pokemon_id,name
 8,874,イシヘンジン
 8,875,コオリッポ (アイスフェイス)
 8,876,イエッサン (オスのすがた)
-8,877,モルペコ
+8,877,モルペコ (まんぷくもよう)
 8,878,ゾウドウ
 8,879,ダイオウドウ
 8,880,パッチラゴン
@@ -10044,7 +11521,7 @@ language_id,pokemon_id,name
 8,922,パモット
 8,923,パーモット
 8,924,ワッカネズミ
-8,925,イッカネズミ
+8,925,イッカネズミ (３びきかぞく)
 8,926,パピモッチ
 8,927,バウッツェル
 8,928,ミニーブ
@@ -10097,11 +11574,11 @@ language_id,pokemon_id,name
 8,975,ハルクジラ
 8,976,ミガルーサ
 8,977,ヘイラッシャ
-8,978,シャリタツ
+8,978,シャリタツ (そったすがた)
 8,979,コノヨザル
 8,980,ドオー
 8,981,リキキリン
-8,982,ノココッチ
+8,982,ノココッチ (ふたふしフォルム)
 8,983,ドドゲザン
 8,984,イダイナキバ
 8,985,サケブシッポ
@@ -10131,8 +11608,8 @@ language_id,pokemon_id,name
 8,1009,ウネルミナモ
 8,1010,テツノイサハ
 8,1011,カミッチュ
-8,1012,チャデス
-8,1013,ヤバソチャ
+8,1012,チャデス (マガイモノのすがた)
+8,1013,ヤバソチャ (ボンサクのすがた)
 8,1014,イイネイヌ
 8,1015,マシマシラ
 8,1016,キチキギス
@@ -10254,7 +11731,7 @@ language_id,pokemon_id,name
 8,10107,ときはなたれしフーパ
 8,10108,コラッタ (アローラのすがた)
 8,10109,ラッタ (アローラのすがた)
-8,10110,ピカチュウ (キャップ)
+8,10110,ピカチュウ (オリジナルキャップ)
 8,10111,ライチュウ (アローラのすがた)
 8,10112,サンド (アローラのすがた)
 8,10113,サンドパン (アローラのすがた)
@@ -10299,7 +11776,7 @@ language_id,pokemon_id,name
 8,10152,シルヴァディ (ドラゴン)
 8,10153,シルヴァディ (あく)
 8,10154,シルヴァディ (フェアリー)
-8,10155,メテノ (のコアフォルム)
+8,10155,メテノ (あかいろのコア)
 8,10156,イワンコ (マイペース)
 8,10157,ルガルガン (たそがれのすがた)
 8,10158,ネクロズマ (たそがれのたてがみ)
@@ -10421,8 +11898,219 @@ language_id,pokemon_id,name
 8,10274,メガゼラオラ
 8,10275,メガスコヴィラン
 8,10276,メガキラフロル
-8,10277,メガシャリタツ
+8,10277,メガシャリタツ (そったすがた)
 8,10278,メガセグレイブ
+8,20001,アンノーン (B)
+8,20002,アンノーン (C)
+8,20003,アンノーン (D)
+8,20004,アンノーン (E)
+8,20005,アンノーン (F)
+8,20006,アンノーン (G)
+8,20007,アンノーン (H)
+8,20008,アンノーン (I)
+8,20009,アンノーン (J)
+8,20010,アンノーン (K)
+8,20011,アンノーン (L)
+8,20012,アンノーン (M)
+8,20013,アンノーン (N)
+8,20014,アンノーン (O)
+8,20015,アンノーン (P)
+8,20016,アンノーン (Q)
+8,20017,アンノーン (R)
+8,20018,アンノーン (S)
+8,20019,アンノーン (T)
+8,20020,アンノーン (U)
+8,20021,アンノーン (V)
+8,20022,アンノーン (W)
+8,20023,アンノーン (X)
+8,20024,アンノーン (Y)
+8,20025,アンノーン (Z)
+8,20026,アンノーン (!)
+8,20027,アンノーン (?)
+8,20028,ミノムッチ (すなちのミノ)
+8,20029,ミノムッチ (ゴミのミノ)
+8,20030,チェリム (ポジフォルム)
+8,20031,カラナクシ (ひがしのうみ)
+8,20032,トリトドン (ひがしのうみ)
+8,20033,シキジカ (なつのすがた)
+8,20034,シキジカ (あきのすがた)
+8,20035,シキジカ (ふゆのすがた)
+8,20036,メブキジカ (なつのすがた)
+8,20037,メブキジカ (あきのすがた)
+8,20038,メブキジカ (ふゆのすがた)
+8,20039,ゲノセクト (アクアカセット)
+8,20040,ゲノセクト (イナズマカセット)
+8,20041,ゲノセクト (ブレイズカセット)
+8,20042,ゲノセクト (フリーズカセット)
+8,20043,ケルディオ (かくごのすがた)
+8,20044,コフキムシ (ゆきぐにのもよう)
+8,20045,コフキムシ (せつげんのもよう)
+8,20046,コフキムシ (たいりくのもよう)
+8,20047,コフキムシ (ていえんのもよう)
+8,20048,コフキムシ (みやびなもよう)
+8,20049,コフキムシ (はなぞののもよう)
+8,20050,コフキムシ (モダンなもよう)
+8,20051,コフキムシ (マリンのもよう)
+8,20052,コフキムシ (ぐんとうのもよう)
+8,20053,コフキムシ (こうやのもよう)
+8,20054,コフキムシ (さじんのもよう)
+8,20055,コフキムシ (たいがのもよう)
+8,20056,コフキムシ (スコールのもよう)
+8,20057,コフキムシ (サバンナのもよう)
+8,20058,コフキムシ (たいようのもよう)
+8,20059,コフキムシ (オーシャンのもよう)
+8,20060,コフキムシ (ジャングルのもよう)
+8,20061,コフキムシ (ファンシーなもよう)
+8,20062,コフキムシ (ボールのもよう)
+8,20063,コフーライ (ゆきぐにのもよう)
+8,20064,コフーライ (せつげんのもよう)
+8,20065,コフーライ (たいりくのもよう)
+8,20066,コフーライ (ていえんのもよう)
+8,20067,コフーライ (みやびなもよう)
+8,20068,コフーライ (はなぞののもよう)
+8,20069,コフーライ (モダンなもよう)
+8,20070,コフーライ (マリンのもよう)
+8,20071,コフーライ (ぐんとうのもよう)
+8,20072,コフーライ (こうやのもよう)
+8,20073,コフーライ (さじんのもよう)
+8,20074,コフーライ (たいがのもよう)
+8,20075,コフーライ (スコールのもよう)
+8,20076,コフーライ (サバンナのもよう)
+8,20077,コフーライ (たいようのもよう)
+8,20078,コフーライ (オーシャンのもよう)
+8,20079,コフーライ (ジャングルのもよう)
+8,20080,コフーライ (ファンシーなもよう)
+8,20081,コフーライ (ボールのもよう)
+8,20082,ビビヨン (ゆきぐにのもよう)
+8,20083,ビビヨン (せつげんのもよう)
+8,20084,ビビヨン (たいりくのもよう)
+8,20085,ビビヨン (ていえんのもよう)
+8,20086,ビビヨン (みやびなもよう)
+8,20087,ビビヨン (はなぞののもよう)
+8,20088,ビビヨン (モダンなもよう)
+8,20089,ビビヨン (マリンのもよう)
+8,20090,ビビヨン (ぐんとうのもよう)
+8,20091,ビビヨン (こうやのもよう)
+8,20092,ビビヨン (さじんのもよう)
+8,20093,ビビヨン (たいがのもよう)
+8,20094,ビビヨン (スコールのもよう)
+8,20095,ビビヨン (サバンナのもよう)
+8,20096,ビビヨン (たいようのもよう)
+8,20097,ビビヨン (オーシャンのもよう)
+8,20098,ビビヨン (ジャングルのもよう)
+8,20099,ビビヨン (ファンシーなもよう)
+8,20100,ビビヨン (ボールのもよう)
+8,20101,フラベベ (きいろのはな)
+8,20102,フラベベ (オレンジいろのはな)
+8,20103,フラベベ (あおいはな)
+8,20104,フラベベ (しろいはな)
+8,20105,フラエッテ (きいろのはな)
+8,20106,フラエッテ (オレンジいろのはな)
+8,20107,フラエッテ (あおいはな)
+8,20108,フラエッテ (しろいはな)
+8,20109,フラージェス (きいろのはな)
+8,20110,フラージェス (オレンジいろのはな)
+8,20111,フラージェス (あおいはな)
+8,20112,フラージェス (しろいはな)
+8,20113,トリミアン (ハートカット)
+8,20114,トリミアン (スターカット)
+8,20115,トリミアン (ダイヤカット)
+8,20116,トリミアン (レディカット)
+8,20117,トリミアン (マダムカット)
+8,20118,トリミアン (ジェントルカット)
+8,20119,トリミアン (クイーンカット)
+8,20120,トリミアン (カブキカット)
+8,20121,トリミアン (キングダムカット)
+8,20123,ラッタ (アローラのすがた) (Totem-like)
+8,20124,ピカチュウ (ホウエンキャップ)
+8,20125,ピカチュウ (シンオウキャップ)
+8,20126,ピカチュウ (イッシュキャップ)
+8,20127,ピカチュウ (カロスキャップ)
+8,20128,ピカチュウ (アローラキャップ)
+8,20129,デカグース (Totem-like)
+8,20130,クワガノン (Totem-like)
+8,20131,ラランテス (Totem-like)
+8,20132,エンニュート (Totem-like)
+8,20133,メテノ (りゅうせいのすがた - だいだいいろのコア)
+8,20134,メテノ (りゅうせいのすがた - きいろのコア)
+8,20135,メテノ (りゅうせいのすがた - みどりいろのコア)
+8,20136,メテノ (りゅうせいのすがた - みずいろのコア)
+8,20137,メテノ (りゅうせいのすがた - あおいろのコア)
+8,20138,メテノ (りゅうせいのすがた - むらさきいろのコア)
+8,20139,メテノ (だいだいいろのコア)
+8,20140,メテノ (きいろのコア)
+8,20141,メテノ (みどりいろのコア)
+8,20142,メテノ (みずいろのコア)
+8,20143,メテノ (あおいろのコア)
+8,20144,メテノ (むらさきいろのコア)
+8,20145,ミミッキュ (ばれたすがた)
+8,20146,ミミッキュ (ばけたすがた) (Totem-like)
+8,20147,ミミッキュ (ばれたすがた) (Totem-like)
+8,20148,ジャラランガ (Totem-like)
+8,20149,マギアナ (５００ねんまえのいろ)
+8,20150,ピカチュウ (キミにきめたキャップ)
+8,20151,ガラガラ (アローラのすがた) (Totem-like)
+8,20152,アブリボン (Totem-like)
+8,20153,オニシズクモ (Totem-like)
+8,20154,トゲデマル (Totem-like)
+8,20155,リザードン (キョダイマックス)
+8,20156,バタフリー (キョダイマックス)
+8,20157,ピカチュウ (キョダイマックス)
+8,20158,ニャース (キョダイマックス)
+8,20159,カイリキー (キョダイマックス)
+8,20160,ゲンガー (キョダイマックス)
+8,20161,キングラー (キョダイマックス)
+8,20162,ラプラス (キョダイマックス)
+8,20163,イーブイ (キョダイマックス)
+8,20164,カビゴン (キョダイマックス)
+8,20165,ダストダス (キョダイマックス)
+8,20166,メルメタル (キョダイマックス)
+8,20167,アーマーガア (キョダイマックス)
+8,20168,イオルブ (キョダイマックス)
+8,20169,カジリガメ (キョダイマックス)
+8,20170,セキタンザン (キョダイマックス)
+8,20171,アップリュー (キョダイマックス)
+8,20172,タルップル (キョダイマックス)
+8,20173,サダイジャ (キョダイマックス)
+8,20174,ウッウ (うのみのすがた)
+8,20175,ウッウ (まるのみのすがた)
+8,20176,ストリンダー (ハイなすがた) (キョダイマックス)
+8,20177,マルヤクデ (キョダイマックス)
+8,20178,ヤバチャ (しんさくフォルム)
+8,20179,ポットデス (しんさくフォルム)
+8,20180,ブリムオン (キョダイマックス)
+8,20181,オーロンゲ (キョダイマックス)
+8,20188,マホイップ (ミルキィルビー)
+8,20195,マホイップ (ミルキィまっちゃ)
+8,20202,マホイップ (ミルキィミント)
+8,20209,マホイップ (ミルキィレモン)
+8,20216,マホイップ (ミルキィソルト)
+8,20223,マホイップ (ルビーミックス)
+8,20230,マホイップ (キャラメルミックス)
+8,20237,マホイップ (トリプルミックス)
+8,20244,マホイップ (キョダイマックス)
+8,20245,モルペコ (はらぺこもよう)
+8,20246,ダイオウドウ (キョダイマックス)
+8,20247,ジュラルドン (キョダイマックス)
+8,20248,ストリンダー (ローなすがた) (キョダイマックス)
+8,20249,フシギバナ (キョダイマックス)
+8,20250,カメックス (キョダイマックス)
+8,20251,ゴリランダー (キョダイマックス)
+8,20252,エースバーン (キョダイマックス)
+8,20253,インテレオン (キョダイマックス)
+8,20254,ウーラオス (いちげきのかた) (キョダイマックス)
+8,20255,ザルード (とうちゃん)
+8,20256,ピカチュウ (ワールドキャップ)
+8,20257,ウーラオス (れんげきのかた) (キョダイマックス)
+8,20263,イッカネズミ (４ひきかぞく)
+8,20264,シャリタツ (たれたすがた)
+8,20265,シャリタツ (のびたすがた)
+8,20266,ノココッチ (みつふしフォルム)
+8,20275,チャデス (タカイモノのすがた)
+8,20276,ヤバソチャ (ケッサクのすがた)
+8,20277,メガマギアナ (５００ねんまえのいろ)
+8,20278,メガシャリタツ (たれたすがた)
+8,20279,メガシャリタツ (のびたすがた)
 9,1,妙蛙种子
 9,2,妙蛙草
 9,3,妙蛙花
@@ -10623,7 +12311,7 @@ language_id,pokemon_id,name
 9,198,黑暗鸦
 9,199,呆呆王
 9,200,梦妖
-9,201,未知图腾
+9,201,未知图腾 (A)
 9,202,果然翁
 9,203,麒麟奇
 9,204,榛果球
@@ -10834,7 +12522,7 @@ language_id,pokemon_id,name
 9,409,战槌龙
 9,410,盾甲龙
 9,411,护城龙
-9,412,结草儿
+9,412,结草儿 (草木蓑衣)
 9,413,结草贵妇 (草木蓑衣)
 9,414,绅士蛾
 9,415,三蜜蜂
@@ -10843,9 +12531,9 @@ language_id,pokemon_id,name
 9,418,泳圈鼬
 9,419,浮潜鼬
 9,420,樱花宝
-9,421,樱花儿
-9,422,无壳海兔
-9,423,海兔兽
+9,421,樱花儿 (阴天形态)
+9,422,无壳海兔 (西海)
+9,423,海兔兽 (西海)
 9,424,双尾怪手
 9,425,飘飘球
 9,426,随风球
@@ -11007,8 +12695,8 @@ language_id,pokemon_id,name
 9,582,迷你冰
 9,583,多多冰
 9,584,双倍多多冰
-9,585,四季鹿
-9,586,萌芽鹿
+9,585,四季鹿 (春天的样子)
+9,586,萌芽鹿 (春天的样子)
 9,587,电飞鼠
 9,588,盖盖虫
 9,589,骑士蜗牛
@@ -11069,7 +12757,7 @@ language_id,pokemon_id,name
 9,644,捷克罗姆
 9,645,土地云 (化身形态)
 9,646,酋雷姆
-9,647,凯路迪欧
+9,647,凯路迪欧 (平常的样子)
 9,648,美洛耶塔 (歌声形态)
 9,649,盖诺赛克特
 9,650,哈力栗
@@ -11086,19 +12774,19 @@ language_id,pokemon_id,name
 9,661,小箭雀
 9,662,火箭雀
 9,663,烈箭鹰
-9,664,粉蝶虫
-9,665,粉蝶蛹
-9,666,彩粉蝶
+9,664,粉蝶虫 (冰雪花纹)
+9,665,粉蝶蛹 (冰雪花纹)
+9,666,彩粉蝶 (冰雪花纹)
 9,667,小狮狮
 9,668,火炎狮
-9,669,花蓓蓓
-9,670,花叶蒂
-9,671,花洁夫人
+9,669,花蓓蓓 (红花)
+9,670,花叶蒂 (红花)
+9,671,花洁夫人 (红花)
 9,672,坐骑小羊
 9,673,坐骑山羊
 9,674,顽皮熊猫
 9,675,流氓熊猫
-9,676,多丽米亚
+9,676,多丽米亚 (野生的样子)
 9,677,妙喵
 9,678,超能妙喵 (雄性的样子)
 9,679,独剑鞘
@@ -11196,11 +12884,11 @@ language_id,pokemon_id,name
 9,771,拳海参
 9,772,属性：空
 9,773,银伴战兽 (一般)
-9,774,小陨星 (流星的样子)
+9,774,小陨星 (流星的样子 - 红色核心)
 9,775,树枕尾熊
 9,776,爆焰龟兽
 9,777,托戈德玛尔
-9,778,谜拟Ｑ
+9,778,谜拟Ｑ (化形的样子)
 9,779,磨牙彩皮鱼
 9,780,老翁龙
 9,781,破破舵轮
@@ -11276,8 +12964,8 @@ language_id,pokemon_id,name
 9,851,焚焰蚣
 9,852,拳拳蛸
 9,853,八爪武师
-9,854,来悲茶
-9,855,怖思壶
+9,854,来悲茶 (赝品形态)
+9,855,怖思壶 (赝品形态)
 9,856,迷布莉姆
 9,857,提布莉姆
 9,858,布莉姆温
@@ -11291,7 +12979,7 @@ language_id,pokemon_id,name
 9,866,踏冰人偶
 9,867,死神板
 9,868,小仙奶
-9,869,霜奶仙
+9,869,霜奶仙 (奶香香草)
 9,870,列阵兵
 9,871,啪嚓海胆
 9,872,雪吞虫
@@ -11299,7 +12987,7 @@ language_id,pokemon_id,name
 9,874,巨石丁
 9,875,冰砌鹅 (结冻头)
 9,876,爱管侍 (雄性的样子)
-9,877,莫鲁贝可
+9,877,莫鲁贝可 (满腹花纹)
 9,878,铜象
 9,879,大王铜象
 9,880,雷鸟龙
@@ -11347,7 +13035,7 @@ language_id,pokemon_id,name
 9,922,布土拨
 9,923,巴布土拨
 9,924,一对鼠
-9,925,一家鼠
+9,925,一家鼠 (三只家庭)
 9,926,狗仔包
 9,927,麻花犬
 9,928,迷你芙
@@ -11400,11 +13088,11 @@ language_id,pokemon_id,name
 9,975,浩大鲸
 9,976,轻身鳕
 9,977,吃吼霸
-9,978,米立龙
+9,978,米立龙 (上弓姿势)
 9,979,弃世猴
 9,980,土王
 9,981,奇麒麟
-9,982,土龙节节
+9,982,土龙节节 (二节形态)
 9,983,仆刀将军
 9,984,雄伟牙
 9,985,吼叫尾
@@ -11434,8 +13122,8 @@ language_id,pokemon_id,name
 9,1009,波荡水
 9,1010,铁斑叶
 9,1011,裹蜜虫
-9,1012,斯魔茶
-9,1013,来悲粗茶
+9,1012,斯魔茶 (冒牌货的样子)
+9,1013,来悲粗茶 (凡作的样子)
 9,1014,够赞狗
 9,1015,愿增猿
 9,1016,吉雉鸡
@@ -11557,7 +13245,7 @@ language_id,pokemon_id,name
 9,10107,解放胡帕
 9,10108,小拉达 (阿罗拉的样子)
 9,10109,拉达 (阿罗拉的样子)
-9,10110,皮卡丘 (帽子)
+9,10110,皮卡丘 (初始帽子)
 9,10111,雷丘 (阿罗拉的样子)
 9,10112,穿山鼠 (阿罗拉的样子)
 9,10113,穿山王 (阿罗拉的样子)
@@ -11602,7 +13290,7 @@ language_id,pokemon_id,name
 9,10152,银伴战兽 (龙)
 9,10153,银伴战兽 (恶)
 9,10154,银伴战兽 (妖精)
-9,10155,小陨星 (核心的样子)
+9,10155,小陨星 (红色核心)
 9,10156,岩狗狗 (我行我素)
 9,10157,鬃岩狼人 (黄昏的样子)
 9,10158,奈克洛兹玛 (黄昏之鬃)
@@ -11724,8 +13412,219 @@ language_id,pokemon_id,name
 9,10274,超级捷拉奥拉
 9,10275,超级狠辣椒
 9,10276,超级晶光花
-9,10277,超级米立龙
+9,10277,超级米立龙 (上弓姿势)
 9,10278,超级戟脊龙
+9,20001,未知图腾 (B)
+9,20002,未知图腾 (C)
+9,20003,未知图腾 (D)
+9,20004,未知图腾 (E)
+9,20005,未知图腾 (F)
+9,20006,未知图腾 (G)
+9,20007,未知图腾 (H)
+9,20008,未知图腾 (I)
+9,20009,未知图腾 (J)
+9,20010,未知图腾 (K)
+9,20011,未知图腾 (L)
+9,20012,未知图腾 (M)
+9,20013,未知图腾 (N)
+9,20014,未知图腾 (O)
+9,20015,未知图腾 (P)
+9,20016,未知图腾 (Q)
+9,20017,未知图腾 (R)
+9,20018,未知图腾 (S)
+9,20019,未知图腾 (T)
+9,20020,未知图腾 (U)
+9,20021,未知图腾 (V)
+9,20022,未知图腾 (W)
+9,20023,未知图腾 (X)
+9,20024,未知图腾 (Y)
+9,20025,未知图腾 (Z)
+9,20026,未知图腾 (!)
+9,20027,未知图腾 (?)
+9,20028,结草儿 (砂土蓑衣)
+9,20029,结草儿 (垃圾蓑衣)
+9,20030,樱花儿 (晴天形态)
+9,20031,无壳海兔 (东海)
+9,20032,海兔兽 (东海)
+9,20033,四季鹿 (夏天的样子)
+9,20034,四季鹿 (秋天的样子)
+9,20035,四季鹿 (冬天的样子)
+9,20036,萌芽鹿 (夏天的样子)
+9,20037,萌芽鹿 (秋天的样子)
+9,20038,萌芽鹿 (冬天的样子)
+9,20039,盖诺赛克特 (水流卡带)
+9,20040,盖诺赛克特 (闪电卡带)
+9,20041,盖诺赛克特 (火焰卡带)
+9,20042,盖诺赛克特 (冰冻卡带)
+9,20043,凯路迪欧 (觉悟的样子)
+9,20044,粉蝶虫 (雪国花纹)
+9,20045,粉蝶虫 (雪原花纹)
+9,20046,粉蝶虫 (大陆花纹)
+9,20047,粉蝶虫 (庭园花纹)
+9,20048,粉蝶虫 (高雅花纹)
+9,20049,粉蝶虫 (花园花纹)
+9,20050,粉蝶虫 (摩登花纹)
+9,20051,粉蝶虫 (大海花纹)
+9,20052,粉蝶虫 (群岛花纹)
+9,20053,粉蝶虫 (荒野花纹)
+9,20054,粉蝶虫 (沙尘花纹)
+9,20055,粉蝶虫 (大河花纹)
+9,20056,粉蝶虫 (骤雨花纹)
+9,20057,粉蝶虫 (热带草原花纹)
+9,20058,粉蝶虫 (太阳花纹)
+9,20059,粉蝶虫 (大洋花纹)
+9,20060,粉蝶虫 (热带雨林花纹)
+9,20061,粉蝶虫 (幻彩花纹)
+9,20062,粉蝶虫 (球球花纹)
+9,20063,粉蝶蛹 (雪国花纹)
+9,20064,粉蝶蛹 (雪原花纹)
+9,20065,粉蝶蛹 (大陆花纹)
+9,20066,粉蝶蛹 (庭园花纹)
+9,20067,粉蝶蛹 (高雅花纹)
+9,20068,粉蝶蛹 (花园花纹)
+9,20069,粉蝶蛹 (摩登花纹)
+9,20070,粉蝶蛹 (大海花纹)
+9,20071,粉蝶蛹 (群岛花纹)
+9,20072,粉蝶蛹 (荒野花纹)
+9,20073,粉蝶蛹 (沙尘花纹)
+9,20074,粉蝶蛹 (大河花纹)
+9,20075,粉蝶蛹 (骤雨花纹)
+9,20076,粉蝶蛹 (热带草原花纹)
+9,20077,粉蝶蛹 (太阳花纹)
+9,20078,粉蝶蛹 (大洋花纹)
+9,20079,粉蝶蛹 (热带雨林花纹)
+9,20080,粉蝶蛹 (幻彩花纹)
+9,20081,粉蝶蛹 (球球花纹)
+9,20082,彩粉蝶 (雪国花纹)
+9,20083,彩粉蝶 (雪原花纹)
+9,20084,彩粉蝶 (大陆花纹)
+9,20085,彩粉蝶 (庭园花纹)
+9,20086,彩粉蝶 (高雅花纹)
+9,20087,彩粉蝶 (花园花纹)
+9,20088,彩粉蝶 (摩登花纹)
+9,20089,彩粉蝶 (大海花纹)
+9,20090,彩粉蝶 (群岛花纹)
+9,20091,彩粉蝶 (荒野花纹)
+9,20092,彩粉蝶 (沙尘花纹)
+9,20093,彩粉蝶 (大河花纹)
+9,20094,彩粉蝶 (骤雨花纹)
+9,20095,彩粉蝶 (热带草原花纹)
+9,20096,彩粉蝶 (太阳花纹)
+9,20097,彩粉蝶 (大洋花纹)
+9,20098,彩粉蝶 (热带雨林花纹)
+9,20099,彩粉蝶 (幻彩花纹)
+9,20100,彩粉蝶 (球球花纹)
+9,20101,花蓓蓓 (黄花)
+9,20102,花蓓蓓 (橙花)
+9,20103,花蓓蓓 (蓝花)
+9,20104,花蓓蓓 (白花)
+9,20105,花叶蒂 (黄花)
+9,20106,花叶蒂 (橙花)
+9,20107,花叶蒂 (蓝花)
+9,20108,花叶蒂 (白花)
+9,20109,花洁夫人 (黄花)
+9,20110,花洁夫人 (橙花)
+9,20111,花洁夫人 (蓝花)
+9,20112,花洁夫人 (白花)
+9,20113,多丽米亚 (心形造型)
+9,20114,多丽米亚 (星形造型)
+9,20115,多丽米亚 (菱形造型)
+9,20116,多丽米亚 (淑女造型)
+9,20117,多丽米亚 (贵妇造型)
+9,20118,多丽米亚 (绅士造型)
+9,20119,多丽米亚 (女王造型)
+9,20120,多丽米亚 (歌舞伎造型)
+9,20121,多丽米亚 (国王造型)
+9,20123,拉达 (阿罗拉的样子) (Totem-like)
+9,20124,皮卡丘 (丰缘帽子)
+9,20125,皮卡丘 (神奥帽子)
+9,20126,皮卡丘 (合众帽子)
+9,20127,皮卡丘 (卡洛斯帽子)
+9,20128,皮卡丘 (阿罗拉帽子)
+9,20129,猫鼬探长 (Totem-like)
+9,20130,锹农炮虫 (Totem-like)
+9,20131,兰螳花 (Totem-like)
+9,20132,焰后蜥 (Totem-like)
+9,20133,小陨星 (流星的样子 - 橙色核心)
+9,20134,小陨星 (流星的样子 - 黄色核心)
+9,20135,小陨星 (流星的样子 - 绿色核心)
+9,20136,小陨星 (流星的样子 - 浅蓝色核心)
+9,20137,小陨星 (流星的样子 - 蓝色核心)
+9,20138,小陨星 (流星的样子 - 紫色核心)
+9,20139,小陨星 (橙色核心)
+9,20140,小陨星 (黄色核心)
+9,20141,小陨星 (绿色核心)
+9,20142,小陨星 (浅蓝色核心)
+9,20143,小陨星 (蓝色核心)
+9,20144,小陨星 (紫色核心)
+9,20145,谜拟Ｑ (现形的样子)
+9,20146,谜拟Ｑ (化形的样子) (Totem-like)
+9,20147,谜拟Ｑ (现形的样子) (Totem-like)
+9,20148,杖尾鳞甲龙 (Totem-like)
+9,20149,玛机雅娜 (５００年前的颜色)
+9,20150,皮卡丘 (就决定是你了之帽子)
+9,20151,嘎啦嘎啦 (阿罗拉的样子) (Totem-like)
+9,20152,蝶结萌虻 (Totem-like)
+9,20153,滴蛛霸 (Totem-like)
+9,20154,托戈德玛尔 (Totem-like)
+9,20155,喷火龙 (超极巨化)
+9,20156,巴大蝶 (超极巨化)
+9,20157,皮卡丘 (超极巨化)
+9,20158,喵喵 (超极巨化)
+9,20159,怪力 (超极巨化)
+9,20160,耿鬼 (超极巨化)
+9,20161,巨钳蟹 (超极巨化)
+9,20162,拉普拉斯 (超极巨化)
+9,20163,伊布 (超极巨化)
+9,20164,卡比兽 (超极巨化)
+9,20165,灰尘山 (超极巨化)
+9,20166,美录梅塔 (超极巨化)
+9,20167,钢铠鸦 (超极巨化)
+9,20168,以欧路普 (超极巨化)
+9,20169,暴噬龟 (超极巨化)
+9,20170,巨炭山 (超极巨化)
+9,20171,苹裹龙 (超极巨化)
+9,20172,丰蜜龙 (超极巨化)
+9,20173,沙螺蟒 (超极巨化)
+9,20174,古月鸟 (一口吞的样子)
+9,20175,古月鸟 (大口吞的样子)
+9,20176,颤弦蝾螈 (高调的样子) (超极巨化)
+9,20177,焚焰蚣 (超极巨化)
+9,20178,来悲茶 (真品形态)
+9,20179,怖思壶 (真品形态)
+9,20180,布莉姆温 (超极巨化)
+9,20181,长毛巨魔 (超极巨化)
+9,20188,霜奶仙 (奶香红钻)
+9,20195,霜奶仙 (奶香抹茶)
+9,20202,霜奶仙 (奶香薄荷)
+9,20209,霜奶仙 (奶香柠檬)
+9,20216,霜奶仙 (奶香雪盐)
+9,20223,霜奶仙 (红钻综合)
+9,20230,霜奶仙 (焦糖综合)
+9,20237,霜奶仙 (三色综合)
+9,20244,霜奶仙 (超极巨化)
+9,20245,莫鲁贝可 (空腹花纹)
+9,20246,大王铜象 (超极巨化)
+9,20247,铝钢龙 (超极巨化)
+9,20248,颤弦蝾螈 (低调的样子) (超极巨化)
+9,20249,妙蛙花 (超极巨化)
+9,20250,水箭龟 (超极巨化)
+9,20251,轰擂金刚猩 (超极巨化)
+9,20252,闪焰王牌 (超极巨化)
+9,20253,千面避役 (超极巨化)
+9,20254,武道熊师 (一击流) (超极巨化)
+9,20255,萨戮德 (阿爸)
+9,20256,皮卡丘 (世界帽子)
+9,20257,武道熊师 (连击流) (超极巨化)
+9,20263,一家鼠 (四只家庭)
+9,20264,米立龙 (下垂姿势)
+9,20265,米立龙 (平挺姿势)
+9,20266,土龙节节 (三节形态)
+9,20275,斯魔茶 (高档货的样子)
+9,20276,来悲粗茶 (杰作的样子)
+9,20277,超级玛机雅娜 (５００年前的颜色)
+9,20278,超级米立龙 (下垂姿势)
+9,20279,超级米立龙 (平挺姿势)
 10,1,妙蛙種子
 10,2,妙蛙草
 10,3,妙蛙花
@@ -11926,7 +13825,7 @@ language_id,pokemon_id,name
 10,198,黑暗鴉
 10,199,呆呆王
 10,200,夢妖
-10,201,未知圖騰
+10,201,未知圖騰 (A)
 10,202,果然翁
 10,203,麒麟奇
 10,204,榛果球
@@ -12137,7 +14036,7 @@ language_id,pokemon_id,name
 10,409,戰槌龍
 10,410,盾甲龍
 10,411,護城龍
-10,412,結草兒
+10,412,結草兒 (草木蓑衣)
 10,413,結草貴婦 (草木蓑衣)
 10,414,紳士蛾
 10,415,三蜜蜂
@@ -12146,9 +14045,9 @@ language_id,pokemon_id,name
 10,418,泳圈鼬
 10,419,浮潛鼬
 10,420,櫻花寶
-10,421,櫻花兒
-10,422,無殼海兔
-10,423,海兔獸
+10,421,櫻花兒 (陰天形態)
+10,422,無殼海兔 (西海)
+10,423,海兔獸 (西海)
 10,424,雙尾怪手
 10,425,飄飄球
 10,426,隨風球
@@ -12310,8 +14209,8 @@ language_id,pokemon_id,name
 10,582,迷你冰
 10,583,多多冰
 10,584,雙倍多多冰
-10,585,四季鹿
-10,586,萌芽鹿
+10,585,四季鹿 (春天的樣子)
+10,586,萌芽鹿 (春天的樣子)
 10,587,電飛鼠
 10,588,蓋蓋蟲
 10,589,騎士蝸牛
@@ -12372,7 +14271,7 @@ language_id,pokemon_id,name
 10,644,捷克羅姆
 10,645,土地雲 (化身形態)
 10,646,酋雷姆
-10,647,凱路迪歐
+10,647,凱路迪歐 (平常的樣子)
 10,648,美洛耶塔 (歌聲形態)
 10,649,蓋諾賽克特
 10,650,哈力栗
@@ -12389,19 +14288,19 @@ language_id,pokemon_id,name
 10,661,小箭雀
 10,662,火箭雀
 10,663,烈箭鷹
-10,664,粉蝶蟲
-10,665,粉蝶蛹
-10,666,彩粉蝶
+10,664,粉蝶蟲 (冰雪花紋)
+10,665,粉蝶蛹 (冰雪花紋)
+10,666,彩粉蝶 (冰雪花紋)
 10,667,小獅獅
 10,668,火炎獅
-10,669,花蓓蓓
-10,670,花葉蒂
-10,671,花潔夫人
+10,669,花蓓蓓 (紅花)
+10,670,花葉蒂 (紅花)
+10,671,花潔夫人 (紅花)
 10,672,坐騎小羊
 10,673,坐騎山羊
 10,674,頑皮熊貓
 10,675,流氓熊貓
-10,676,多麗米亞
+10,676,多麗米亞 (野生的樣子)
 10,677,妙喵
 10,678,超能妙喵 (雄性的樣子)
 10,679,獨劍鞘
@@ -12499,11 +14398,11 @@ language_id,pokemon_id,name
 10,771,拳海參
 10,772,屬性：空
 10,773,銀伴戰獸 (一般)
-10,774,小隕星 (流星的樣子)
+10,774,小隕星 (流星的樣子 - 紅色核心)
 10,775,樹枕尾熊
 10,776,爆焰龜獸
 10,777,托戈德瑪爾
-10,778,謎擬Ｑ
+10,778,謎擬Ｑ (化形的樣子)
 10,779,磨牙彩皮魚
 10,780,老翁龍
 10,781,破破舵輪
@@ -12579,8 +14478,8 @@ language_id,pokemon_id,name
 10,851,焚焰蚣
 10,852,拳拳蛸
 10,853,八爪武師
-10,854,來悲茶
-10,855,怖思壺
+10,854,來悲茶 (贗品形態)
+10,855,怖思壺 (贗品形態)
 10,856,迷布莉姆
 10,857,提布莉姆
 10,858,布莉姆溫
@@ -12594,7 +14493,7 @@ language_id,pokemon_id,name
 10,866,踏冰人偶
 10,867,死神板
 10,868,小仙奶
-10,869,霜奶仙
+10,869,霜奶仙 (奶香香草)
 10,870,列陣兵
 10,871,啪嚓海膽
 10,872,雪吞蟲
@@ -12602,7 +14501,7 @@ language_id,pokemon_id,name
 10,874,巨石丁
 10,875,冰砌鵝 (結凍頭)
 10,876,愛管侍 (雄性的樣子)
-10,877,莫魯貝可
+10,877,莫魯貝可 (滿腹花紋)
 10,878,銅象
 10,879,大王銅象
 10,880,雷鳥龍
@@ -12650,7 +14549,7 @@ language_id,pokemon_id,name
 10,922,布土撥
 10,923,巴布土撥
 10,924,一對鼠
-10,925,一家鼠
+10,925,一家鼠 (三隻家庭)
 10,926,狗仔包
 10,927,麻花犬
 10,928,迷你芙
@@ -12703,11 +14602,11 @@ language_id,pokemon_id,name
 10,975,浩大鯨
 10,976,輕身鱈
 10,977,吃吼霸
-10,978,米立龍
+10,978,米立龍 (上弓姿勢)
 10,979,棄世猴
 10,980,土王
 10,981,奇麒麟
-10,982,土龍節節
+10,982,土龍節節 (二節形態)
 10,983,仆斬將軍
 10,984,雄偉牙
 10,985,吼叫尾
@@ -12737,8 +14636,8 @@ language_id,pokemon_id,name
 10,1009,波盪水
 10,1010,鐵斑葉
 10,1011,裹蜜蟲
-10,1012,斯魔茶
-10,1013,來悲粗茶
+10,1012,斯魔茶 (冒牌貨的樣子)
+10,1013,來悲粗茶 (凡作的樣子)
 10,1014,夠讚狗
 10,1015,願增猿
 10,1016,吉雉雞
@@ -12860,7 +14759,7 @@ language_id,pokemon_id,name
 10,10107,解放胡帕
 10,10108,小拉達 (阿羅拉的樣子)
 10,10109,拉達 (阿羅拉的樣子)
-10,10110,皮卡丘 (帽子)
+10,10110,皮卡丘 (初始帽子)
 10,10111,雷丘 (阿羅拉的樣子)
 10,10112,穿山鼠 (阿羅拉的樣子)
 10,10113,穿山王 (阿羅拉的樣子)
@@ -12905,7 +14804,7 @@ language_id,pokemon_id,name
 10,10152,銀伴戰獸 (龍)
 10,10153,銀伴戰獸 (惡)
 10,10154,銀伴戰獸 (妖精)
-10,10155,小隕星 (核心的樣子)
+10,10155,小隕星 (紅色核心)
 10,10156,岩狗狗 (我行我素)
 10,10157,鬃岩狼人 (黃昏的樣子)
 10,10158,奈克洛茲瑪 (黃昏之鬃)
@@ -13027,8 +14926,219 @@ language_id,pokemon_id,name
 10,10274,超級捷拉奧拉
 10,10275,超級狠辣椒
 10,10276,超級晶光花
-10,10277,超級米立龍
+10,10277,超級米立龍 (上弓姿勢)
 10,10278,超級戟脊龍
+10,20001,未知圖騰 (B)
+10,20002,未知圖騰 (C)
+10,20003,未知圖騰 (D)
+10,20004,未知圖騰 (E)
+10,20005,未知圖騰 (F)
+10,20006,未知圖騰 (G)
+10,20007,未知圖騰 (H)
+10,20008,未知圖騰 (I)
+10,20009,未知圖騰 (J)
+10,20010,未知圖騰 (K)
+10,20011,未知圖騰 (L)
+10,20012,未知圖騰 (M)
+10,20013,未知圖騰 (N)
+10,20014,未知圖騰 (O)
+10,20015,未知圖騰 (P)
+10,20016,未知圖騰 (Q)
+10,20017,未知圖騰 (R)
+10,20018,未知圖騰 (S)
+10,20019,未知圖騰 (T)
+10,20020,未知圖騰 (U)
+10,20021,未知圖騰 (V)
+10,20022,未知圖騰 (W)
+10,20023,未知圖騰 (X)
+10,20024,未知圖騰 (Y)
+10,20025,未知圖騰 (Z)
+10,20026,未知圖騰 (!)
+10,20027,未知圖騰 (?)
+10,20028,結草兒 (砂土蓑衣)
+10,20029,結草兒 (垃圾蓑衣)
+10,20030,櫻花兒 (晴天形態)
+10,20031,無殼海兔 (東海)
+10,20032,海兔獸 (東海)
+10,20033,四季鹿 (夏天的樣子)
+10,20034,四季鹿 (秋天的樣子)
+10,20035,四季鹿 (冬天的樣子)
+10,20036,萌芽鹿 (夏天的樣子)
+10,20037,萌芽鹿 (秋天的樣子)
+10,20038,萌芽鹿 (冬天的樣子)
+10,20039,蓋諾賽克特 (水流卡帶)
+10,20040,蓋諾賽克特 (閃電卡帶)
+10,20041,蓋諾賽克特 (火焰卡帶)
+10,20042,蓋諾賽克特 (冰凍卡帶)
+10,20043,凱路迪歐 (覺悟的樣子)
+10,20044,粉蝶蟲 (雪國花紋)
+10,20045,粉蝶蟲 (雪原花紋)
+10,20046,粉蝶蟲 (大陸花紋)
+10,20047,粉蝶蟲 (庭園花紋)
+10,20048,粉蝶蟲 (高雅花紋)
+10,20049,粉蝶蟲 (花園花紋)
+10,20050,粉蝶蟲 (摩登花紋)
+10,20051,粉蝶蟲 (大海花紋)
+10,20052,粉蝶蟲 (群島花紋)
+10,20053,粉蝶蟲 (荒野花紋)
+10,20054,粉蝶蟲 (沙塵花紋)
+10,20055,粉蝶蟲 (大河花紋)
+10,20056,粉蝶蟲 (驟雨花紋)
+10,20057,粉蝶蟲 (熱帶草原花紋)
+10,20058,粉蝶蟲 (太陽花紋)
+10,20059,粉蝶蟲 (大洋花紋)
+10,20060,粉蝶蟲 (熱帶雨林花紋)
+10,20061,粉蝶蟲 (幻彩花紋)
+10,20062,粉蝶蟲 (球球花紋)
+10,20063,粉蝶蛹 (雪國花紋)
+10,20064,粉蝶蛹 (雪原花紋)
+10,20065,粉蝶蛹 (大陸花紋)
+10,20066,粉蝶蛹 (庭園花紋)
+10,20067,粉蝶蛹 (高雅花紋)
+10,20068,粉蝶蛹 (花園花紋)
+10,20069,粉蝶蛹 (摩登花紋)
+10,20070,粉蝶蛹 (大海花紋)
+10,20071,粉蝶蛹 (群島花紋)
+10,20072,粉蝶蛹 (荒野花紋)
+10,20073,粉蝶蛹 (沙塵花紋)
+10,20074,粉蝶蛹 (大河花紋)
+10,20075,粉蝶蛹 (驟雨花紋)
+10,20076,粉蝶蛹 (熱帶草原花紋)
+10,20077,粉蝶蛹 (太陽花紋)
+10,20078,粉蝶蛹 (大洋花紋)
+10,20079,粉蝶蛹 (熱帶雨林花紋)
+10,20080,粉蝶蛹 (幻彩花紋)
+10,20081,粉蝶蛹 (球球花紋)
+10,20082,彩粉蝶 (雪國花紋)
+10,20083,彩粉蝶 (雪原花紋)
+10,20084,彩粉蝶 (大陸花紋)
+10,20085,彩粉蝶 (庭園花紋)
+10,20086,彩粉蝶 (高雅花紋)
+10,20087,彩粉蝶 (花園花紋)
+10,20088,彩粉蝶 (摩登花紋)
+10,20089,彩粉蝶 (大海花紋)
+10,20090,彩粉蝶 (群島花紋)
+10,20091,彩粉蝶 (荒野花紋)
+10,20092,彩粉蝶 (沙塵花紋)
+10,20093,彩粉蝶 (大河花紋)
+10,20094,彩粉蝶 (驟雨花紋)
+10,20095,彩粉蝶 (熱帶草原花紋)
+10,20096,彩粉蝶 (太陽花紋)
+10,20097,彩粉蝶 (大洋花紋)
+10,20098,彩粉蝶 (熱帶雨林花紋)
+10,20099,彩粉蝶 (幻彩花紋)
+10,20100,彩粉蝶 (球球花紋)
+10,20101,花蓓蓓 (黃花)
+10,20102,花蓓蓓 (橙花)
+10,20103,花蓓蓓 (藍花)
+10,20104,花蓓蓓 (白花)
+10,20105,花葉蒂 (黃花)
+10,20106,花葉蒂 (橙花)
+10,20107,花葉蒂 (藍花)
+10,20108,花葉蒂 (白花)
+10,20109,花潔夫人 (黃花)
+10,20110,花潔夫人 (橙花)
+10,20111,花潔夫人 (藍花)
+10,20112,花潔夫人 (白花)
+10,20113,多麗米亞 (心形造型)
+10,20114,多麗米亞 (星形造型)
+10,20115,多麗米亞 (菱形造型)
+10,20116,多麗米亞 (淑女造型)
+10,20117,多麗米亞 (貴婦造型)
+10,20118,多麗米亞 (紳士造型)
+10,20119,多麗米亞 (女王造型)
+10,20120,多麗米亞 (歌舞伎造型)
+10,20121,多麗米亞 (國王造型)
+10,20123,拉達 (阿羅拉的樣子) (Totem-like)
+10,20124,皮卡丘 (豐緣帽子)
+10,20125,皮卡丘 (神奧帽子)
+10,20126,皮卡丘 (合眾帽子)
+10,20127,皮卡丘 (卡洛斯帽子)
+10,20128,皮卡丘 (阿羅拉帽子)
+10,20129,貓鼬探長 (Totem-like)
+10,20130,鍬農炮蟲 (Totem-like)
+10,20131,蘭螳花 (Totem-like)
+10,20132,焰后蜥 (Totem-like)
+10,20133,小隕星 (流星的樣子 - 橙色核心)
+10,20134,小隕星 (流星的樣子 - 黃色核心)
+10,20135,小隕星 (流星的樣子 - 綠色核心)
+10,20136,小隕星 (流星的樣子 - 淺藍色核心)
+10,20137,小隕星 (流星的樣子 - 藍色核心)
+10,20138,小隕星 (流星的樣子 - 紫色核心)
+10,20139,小隕星 (橙色核心)
+10,20140,小隕星 (黃色核心)
+10,20141,小隕星 (綠色核心)
+10,20142,小隕星 (淺藍色核心)
+10,20143,小隕星 (藍色核心)
+10,20144,小隕星 (紫色核心)
+10,20145,謎擬Ｑ (現形的樣子)
+10,20146,謎擬Ｑ (化形的樣子) (Totem-like)
+10,20147,謎擬Ｑ (現形的樣子) (Totem-like)
+10,20148,杖尾鱗甲龍 (Totem-like)
+10,20149,瑪機雅娜 (５００年前的顏色)
+10,20150,皮卡丘 (就決定是你了之帽子)
+10,20151,嘎啦嘎啦 (阿羅拉的樣子) (Totem-like)
+10,20152,蝶結萌虻 (Totem-like)
+10,20153,滴蛛霸 (Totem-like)
+10,20154,托戈德瑪爾 (Totem-like)
+10,20155,噴火龍 (超極巨化)
+10,20156,巴大蝶 (超極巨化)
+10,20157,皮卡丘 (超極巨化)
+10,20158,喵喵 (超極巨化)
+10,20159,怪力 (超極巨化)
+10,20160,耿鬼 (超極巨化)
+10,20161,巨鉗蟹 (超極巨化)
+10,20162,拉普拉斯 (超極巨化)
+10,20163,伊布 (超極巨化)
+10,20164,卡比獸 (超極巨化)
+10,20165,灰塵山 (超極巨化)
+10,20166,美錄梅塔 (超極巨化)
+10,20167,鋼鎧鴉 (超極巨化)
+10,20168,以歐路普 (超極巨化)
+10,20169,暴噬龜 (超極巨化)
+10,20170,巨炭山 (超極巨化)
+10,20171,蘋裹龍 (超極巨化)
+10,20172,豐蜜龍 (超極巨化)
+10,20173,沙螺蟒 (超極巨化)
+10,20174,古月鳥 (一口吞的樣子)
+10,20175,古月鳥 (大口吞的樣子)
+10,20176,顫弦蠑螈 (高調的樣子) (超極巨化)
+10,20177,焚焰蚣 (超極巨化)
+10,20178,來悲茶 (真品形態)
+10,20179,怖思壺 (真品形態)
+10,20180,布莉姆溫 (超極巨化)
+10,20181,長毛巨魔 (超極巨化)
+10,20188,霜奶仙 (奶香紅鑽)
+10,20195,霜奶仙 (奶香抹茶)
+10,20202,霜奶仙 (奶香薄荷)
+10,20209,霜奶仙 (奶香檸檬)
+10,20216,霜奶仙 (奶香雪鹽)
+10,20223,霜奶仙 (紅鑽綜合)
+10,20230,霜奶仙 (焦糖綜合)
+10,20237,霜奶仙 (三色綜合)
+10,20244,霜奶仙 (超極巨化)
+10,20245,莫魯貝可 (空腹花紋)
+10,20246,大王銅象 (超極巨化)
+10,20247,鋁鋼龍 (超極巨化)
+10,20248,顫弦蠑螈 (低調的樣子) (超極巨化)
+10,20249,妙蛙花 (超極巨化)
+10,20250,水箭龜 (超極巨化)
+10,20251,轟擂金剛猩 (超極巨化)
+10,20252,閃焰王牌 (超極巨化)
+10,20253,千面避役 (超極巨化)
+10,20254,武道熊師 (一擊流) (超極巨化)
+10,20255,薩戮德 (阿爸)
+10,20256,皮卡丘 (世界帽子)
+10,20257,武道熊師 (連擊流) (超極巨化)
+10,20263,一家鼠 (四隻家庭)
+10,20264,米立龍 (下垂姿勢)
+10,20265,米立龍 (平挺姿勢)
+10,20266,土龍節節 (三節形態)
+10,20275,斯魔茶 (高檔貨的樣子)
+10,20276,來悲粗茶 (傑作的樣子)
+10,20277,超級瑪機雅娜 (５００年前的顏色)
+10,20278,超級米立龍 (下垂姿勢)
+10,20279,超級米立龍 (平挺姿勢)
 11,1,Bulbasaur
 11,2,Ivysaur
 11,3,Venusaur
@@ -13229,7 +15339,7 @@ language_id,pokemon_id,name
 11,198,Murkrow
 11,199,Slowking
 11,200,Misdreavus
-11,201,Unown
+11,201,Unown (A)
 11,202,Wobbuffet
 11,203,Girafarig
 11,204,Pineco
@@ -13440,7 +15550,7 @@ language_id,pokemon_id,name
 11,409,Rampardos
 11,410,Shieldon
 11,411,Bastiodon
-11,412,Burmy
+11,412,Burmy (Tronco Planta)
 11,413,Wormadam (Tronco Planta)
 11,414,Mothim
 11,415,Combee
@@ -13449,9 +15559,9 @@ language_id,pokemon_id,name
 11,418,Buizel
 11,419,Floatzel
 11,420,Cherubi
-11,421,Cherrim
-11,422,Shellos
-11,423,Gastrodon
+11,421,Cherrim (Forma Encapotado)
+11,422,Shellos (Mar Oeste)
+11,423,Gastrodon (Mar Oeste)
 11,424,Ambipom
 11,425,Drifloon
 11,426,Drifblim
@@ -13613,8 +15723,8 @@ language_id,pokemon_id,name
 11,582,Vanillite
 11,583,Vanillish
 11,584,Vanilluxe
-11,585,Deerling
-11,586,Sawsbuck
+11,585,Deerling (Forma Primavera)
+11,586,Sawsbuck (Forma Primavera)
 11,587,Emolga
 11,588,Karrablast
 11,589,Escavalier
@@ -13675,7 +15785,7 @@ language_id,pokemon_id,name
 11,644,Zekrom
 11,645,Landorus (Forma Avatar)
 11,646,Kyurem
-11,647,Keldeo
+11,647,Keldeo (Forma Habitual)
 11,648,Meloetta (Forma Lírica)
 11,649,Genesect
 11,650,Chespin
@@ -13692,19 +15802,19 @@ language_id,pokemon_id,name
 11,661,Fletchling
 11,662,Fletchinder
 11,663,Talonflame
-11,664,Scatterbug
-11,665,Spewpa
-11,666,Vivillon
+11,664,Scatterbug (Motivo Polar)
+11,665,Spewpa (Motivo Polar)
+11,666,Vivillon (Motivo Polar)
 11,667,Litleo
 11,668,Pyroar
-11,669,Flabébé
-11,670,Floette
-11,671,Florges
+11,669,Flabébé (Flor Roja)
+11,670,Floette (Flor Roja)
+11,671,Florges (Flor Roja)
 11,672,Skiddo
 11,673,Gogoat
 11,674,Pancham
 11,675,Pangoro
-11,676,Furfrou
+11,676,Furfrou (Forma Salvaje)
 11,677,Espurr
 11,678,Meowstic (Macho)
 11,679,Honedge
@@ -13802,11 +15912,11 @@ language_id,pokemon_id,name
 11,771,Pyukumuku
 11,772,Código Cero
 11,773,Silvally (Normal)
-11,774,Minior (Forma Meteorito)
+11,774,Minior (Forma Meteorito - Núcleo Rojo)
 11,775,Komala
 11,776,Turtonator
 11,777,Togedemaru
-11,778,Mimikyu
+11,778,Mimikyu (Forma Encubierta)
 11,779,Bruxish
 11,780,Drampa
 11,781,Dhelmise
@@ -13882,8 +15992,8 @@ language_id,pokemon_id,name
 11,851,Centiskorch
 11,852,Clobbopus
 11,853,Grapploct
-11,854,Sinistea
-11,855,Polteageist
+11,854,Sinistea (Forma Falsificada)
+11,855,Polteageist (Forma Falsificada)
 11,856,Hatenna
 11,857,Hattrem
 11,858,Hatterene
@@ -13897,7 +16007,7 @@ language_id,pokemon_id,name
 11,866,Mr. Rime
 11,867,Runerigus
 11,868,Milcery
-11,869,Alcremie
+11,869,Alcremie (Crema de Vainilla)
 11,870,Falinks
 11,871,Pincurchin
 11,872,Snom
@@ -13905,7 +16015,7 @@ language_id,pokemon_id,name
 11,874,Stonjourner
 11,875,Eiscue (Cara de Hielo)
 11,876,Indeedee (Macho)
-11,877,Morpeko
+11,877,Morpeko (Forma Saciada)
 11,878,Cufant
 11,879,Copperajah
 11,880,Dracozolt
@@ -13953,7 +16063,7 @@ language_id,pokemon_id,name
 11,922,Pawmo
 11,923,Pawmot
 11,924,Tandemaus
-11,925,Maushold
+11,925,Maushold (Familia de Tres)
 11,926,Fidough
 11,927,Dachsbun
 11,928,Smoliv
@@ -14006,11 +16116,11 @@ language_id,pokemon_id,name
 11,975,Cetitan
 11,976,Veluza
 11,977,Dondozo
-11,978,Tatsugiri
+11,978,Tatsugiri (Forma Curvada)
 11,979,Annihilape
 11,980,Clodsire
 11,981,Farigiraf
-11,982,Dudunsparce
+11,982,Dudunsparce (Forma Binodular)
 11,983,Kingambit
 11,984,Colmilargo
 11,985,Colagrito
@@ -14040,8 +16150,8 @@ language_id,pokemon_id,name
 11,1009,Ondulagua
 11,1010,Ferroverdor
 11,1011,Dipplin
-11,1012,Poltchageist
-11,1013,Sinistcha
+11,1012,Poltchageist (Forma Fraudulenta)
+11,1013,Sinistcha (Forma Mediocre)
 11,1014,Okidogi
 11,1015,Munkidori
 11,1016,Fezandipiti
@@ -14163,7 +16273,7 @@ language_id,pokemon_id,name
 11,10107,Hoopa Desatado
 11,10108,Rattata (Forma de Alola)
 11,10109,Raticate (Forma de Alola)
-11,10110,Pikachu (Gorra)
+11,10110,Pikachu (Gorra Original)
 11,10111,Raichu (Forma de Alola)
 11,10112,Sandshrew (Forma de Alola)
 11,10113,Sandslash (Forma de Alola)
@@ -14208,7 +16318,7 @@ language_id,pokemon_id,name
 11,10152,Silvally (Dragón)
 11,10153,Silvally (Siniestro)
 11,10154,Silvally (Hada)
-11,10155,Minior (Forma Núcleo)
+11,10155,Minior (Núcleo Rojo)
 11,10156,Rockruff (Ritmo Propio)
 11,10157,Lycanroc (Forma Crepuscular)
 11,10158,Necrozma (Melena Crepuscular)
@@ -14330,5 +16440,216 @@ language_id,pokemon_id,name
 11,10274,Mega-Zeraora
 11,10275,Mega-Scovillain
 11,10276,Mega-Glimmora
-11,10277,Mega-Tatsugiri
+11,10277,Mega-Tatsugiri (Forma Curvada)
 11,10278,Mega-Baxcalibur
+11,20001,Unown (B)
+11,20002,Unown (C)
+11,20003,Unown (D)
+11,20004,Unown (E)
+11,20005,Unown (F)
+11,20006,Unown (G)
+11,20007,Unown (H)
+11,20008,Unown (I)
+11,20009,Unown (J)
+11,20010,Unown (K)
+11,20011,Unown (L)
+11,20012,Unown (M)
+11,20013,Unown (N)
+11,20014,Unown (O)
+11,20015,Unown (P)
+11,20016,Unown (Q)
+11,20017,Unown (R)
+11,20018,Unown (S)
+11,20019,Unown (T)
+11,20020,Unown (U)
+11,20021,Unown (V)
+11,20022,Unown (W)
+11,20023,Unown (X)
+11,20024,Unown (Y)
+11,20025,Unown (Z)
+11,20026,Unown (!)
+11,20027,Unown (?)
+11,20028,Burmy (Tronco Arena)
+11,20029,Burmy (Tronco Basura)
+11,20030,Cherrim (Forma Soleado)
+11,20031,Shellos (Mar Este)
+11,20032,Gastrodon (Mar Este)
+11,20033,Deerling (Forma Verano)
+11,20034,Deerling (Forma Otoño)
+11,20035,Deerling (Forma Invierno)
+11,20036,Sawsbuck (Forma Verano)
+11,20037,Sawsbuck (Forma Otoño)
+11,20038,Sawsbuck (Forma Invierno)
+11,20039,Genesect (HidroROM)
+11,20040,Genesect (FulgoROM)
+11,20041,Genesect (PiroROM)
+11,20042,Genesect (CrioROM)
+11,20043,Keldeo (Forma Brío)
+11,20044,Scatterbug (Motivo Taiga)
+11,20045,Scatterbug (Motivo Tundra)
+11,20046,Scatterbug (Motivo Continental)
+11,20047,Scatterbug (Motivo Vergel)
+11,20048,Scatterbug (Motivo Oriental)
+11,20049,Scatterbug (Motivo Floral)
+11,20050,Scatterbug (Motivo Moderno)
+11,20051,Scatterbug (Motivo Marino)
+11,20052,Scatterbug (Motivo Isleño)
+11,20053,Scatterbug (Motivo Estepa)
+11,20054,Scatterbug (Motivo Desierto)
+11,20055,Scatterbug (Motivo Oasis)
+11,20056,Scatterbug (Motivo Monzón)
+11,20057,Scatterbug (Motivo Pantano)
+11,20058,Scatterbug (Motivo Solar)
+11,20059,Scatterbug (Motivo Océano)
+11,20060,Scatterbug (Motivo Jungla)
+11,20061,Scatterbug (Motivo Fantasía)
+11,20062,Scatterbug (Motivo Pokébola)
+11,20063,Spewpa (Motivo Taiga)
+11,20064,Spewpa (Motivo Tundra)
+11,20065,Spewpa (Motivo Continental)
+11,20066,Spewpa (Motivo Vergel)
+11,20067,Spewpa (Motivo Oriental)
+11,20068,Spewpa (Motivo Floral)
+11,20069,Spewpa (Motivo Moderno)
+11,20070,Spewpa (Motivo Marino)
+11,20071,Spewpa (Motivo Isleño)
+11,20072,Spewpa (Motivo Estepa)
+11,20073,Spewpa (Motivo Desierto)
+11,20074,Spewpa (Motivo Oasis)
+11,20075,Spewpa (Motivo Monzón)
+11,20076,Spewpa (Motivo Pantano)
+11,20077,Spewpa (Motivo Solar)
+11,20078,Spewpa (Motivo Océano)
+11,20079,Spewpa (Motivo Jungla)
+11,20080,Spewpa (Motivo Fantasía)
+11,20081,Spewpa (Motivo Pokébola)
+11,20082,Vivillon (Motivo Taiga)
+11,20083,Vivillon (Motivo Tundra)
+11,20084,Vivillon (Motivo Continental)
+11,20085,Vivillon (Motivo Vergel)
+11,20086,Vivillon (Motivo Oriental)
+11,20087,Vivillon (Motivo Floral)
+11,20088,Vivillon (Motivo Moderno)
+11,20089,Vivillon (Motivo Marino)
+11,20090,Vivillon (Motivo Isleño)
+11,20091,Vivillon (Motivo Estepa)
+11,20092,Vivillon (Motivo Desierto)
+11,20093,Vivillon (Motivo Oasis)
+11,20094,Vivillon (Motivo Monzón)
+11,20095,Vivillon (Motivo Pantano)
+11,20096,Vivillon (Motivo Solar)
+11,20097,Vivillon (Motivo Océano)
+11,20098,Vivillon (Motivo Jungla)
+11,20099,Vivillon (Motivo Fantasía)
+11,20100,Vivillon (Motivo Pokébola)
+11,20101,Flabébé (Flor Amarilla)
+11,20102,Flabébé (Flor Naranja)
+11,20103,Flabébé (Flor Azul)
+11,20104,Flabébé (Flor Blanca)
+11,20105,Floette (Flor Amarilla)
+11,20106,Floette (Flor Naranja)
+11,20107,Floette (Flor Azul)
+11,20108,Floette (Flor Blanca)
+11,20109,Florges (Flor Amarilla)
+11,20110,Florges (Flor Naranja)
+11,20111,Florges (Flor Azul)
+11,20112,Florges (Flor Blanca)
+11,20113,Furfrou (Corte Corazón)
+11,20114,Furfrou (Corte Estrella)
+11,20115,Furfrou (Corte Rombo)
+11,20116,Furfrou (Corte Señorita)
+11,20117,Furfrou (Corte Dama)
+11,20118,Furfrou (Corte Caballero)
+11,20119,Furfrou (Corte Aristocrático)
+11,20120,Furfrou (Corte Kabuki)
+11,20121,Furfrou (Corte Faraónico)
+11,20123,Raticate (Forma de Alola) (Totem-like)
+11,20124,Pikachu (Gorra Hoenn)
+11,20125,Pikachu (Gorra Sinnoh)
+11,20126,Pikachu (Gorra Unova)
+11,20127,Pikachu (Gorra Kalos)
+11,20128,Pikachu (Gorra Alola)
+11,20129,Gumshoos (Totem-like)
+11,20130,Vikavolt (Totem-like)
+11,20131,Lurantis (Totem-like)
+11,20132,Salazzle (Totem-like)
+11,20133,Minior (Forma Meteorito - Núcleo Naranja)
+11,20134,Minior (Forma Meteorito - Núcleo Amarillo)
+11,20135,Minior (Forma Meteorito - Núcleo Verde)
+11,20136,Minior (Forma Meteorito - Núcleo Azul)
+11,20137,Minior (Forma Meteorito - Núcleo Añil)
+11,20138,Minior (Forma Meteorito - Núcleo Violeta)
+11,20139,Minior (Núcleo Naranja)
+11,20140,Minior (Núcleo Amarillo)
+11,20141,Minior (Núcleo Verde)
+11,20142,Minior (Núcleo Azul)
+11,20143,Minior (Núcleo Añil)
+11,20144,Minior (Núcleo Violeta)
+11,20145,Mimikyu (Forma Descubierta)
+11,20146,Mimikyu (Forma Encubierta) (Totem-like)
+11,20147,Mimikyu (Forma Descubierta) (Totem-like)
+11,20148,Kommo-o (Totem-like)
+11,20149,Magearna (Color Vetusto)
+11,20150,Pikachu (Gorra Compañero)
+11,20151,Marowak (Forma de Alola) (Totem-like)
+11,20152,Ribombee (Totem-like)
+11,20153,Araquanid (Totem-like)
+11,20154,Togedemaru (Totem-like)
+11,20155,Charizard (Gigamax)
+11,20156,Butterfree (Gigamax)
+11,20157,Pikachu (Gigamax)
+11,20158,Meowth (Gigamax)
+11,20159,Machamp (Gigamax)
+11,20160,Gengar (Gigamax)
+11,20161,Kingler (Gigamax)
+11,20162,Lapras (Gigamax)
+11,20163,Eevee (Gigamax)
+11,20164,Snorlax (Gigamax)
+11,20165,Garbodor (Gigamax)
+11,20166,Melmetal (Gigamax)
+11,20167,Corviknight (Gigamax)
+11,20168,Orbeetle (Gigamax)
+11,20169,Drednaw (Gigamax)
+11,20170,Coalossal (Gigamax)
+11,20171,Flapple (Gigamax)
+11,20172,Appletun (Gigamax)
+11,20173,Sandaconda (Gigamax)
+11,20174,Cramorant (Forma Tragatodo)
+11,20175,Cramorant (Forma Engulletodo)
+11,20176,Toxtricity (Forma Aguda) (Gigamax)
+11,20177,Centiskorch (Gigamax)
+11,20178,Sinistea (Forma Genuina)
+11,20179,Polteageist (Forma Genuina)
+11,20180,Hatterene (Gigamax)
+11,20181,Grimmsnarl (Gigamax)
+11,20188,Alcremie (Crema Rosa)
+11,20195,Alcremie (Crema de Té)
+11,20202,Alcremie (Crema de Menta)
+11,20209,Alcremie (Crema de Limón)
+11,20216,Alcremie (Crema Salada)
+11,20223,Alcremie (Mezcla Rosa)
+11,20230,Alcremie (Mezcla Caramelo)
+11,20237,Alcremie (Tres Sabores)
+11,20244,Alcremie (Gigamax)
+11,20245,Morpeko (Forma Voraz)
+11,20246,Copperajah (Gigamax)
+11,20247,Duraludon (Gigamax)
+11,20248,Toxtricity (Forma Grave) (Gigamax)
+11,20249,Venusaur (Gigamax)
+11,20250,Blastoise (Gigamax)
+11,20251,Rillaboom (Gigamax)
+11,20252,Cinderace (Gigamax)
+11,20253,Inteleon (Gigamax)
+11,20254,Urshifu (Estilo Brusco) (Gigamax)
+11,20255,Zarude (Papá)
+11,20256,Pikachu (Gorra Trotamundos)
+11,20257,Urshifu (Estilo Fluido) (Gigamax)
+11,20263,Maushold (Familia de Cuatro)
+11,20264,Tatsugiri (Forma Lánguida)
+11,20265,Tatsugiri (Forma Recta)
+11,20266,Dudunsparce (Forma Trinodular)
+11,20275,Poltchageist (Forma Opulenta)
+11,20276,Sinistcha (Forma Exquisita)
+11,20277,Mega-Magearna (Color Vetusto)
+11,20278,Mega-Tatsugiri (Forma Lánguida)
+11,20279,Mega-Tatsugiri (Forma Recta)
