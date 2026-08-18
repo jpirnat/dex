@@ -9,6 +9,7 @@ use Jp\Dex\Domain\Import\Champions\ItemImporter;
 use Jp\Dex\Domain\Import\Champions\MoveDescriptionImporter;
 use Jp\Dex\Domain\Import\Champions\MoveImporter;
 use Jp\Dex\Domain\Import\Champions\PokemonImporter;
+use Jp\Dex\Domain\Import\Champions\PokemonMoveImporter;
 
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config/environment.php';
@@ -35,13 +36,14 @@ $moveDescriptionImporter = $container->get(MoveDescriptionImporter::class);
 /** @var PokemonImporter $pokemonImporter */
 $pokemonImporter = $container->get(PokemonImporter::class);
 
+/** @var PokemonMoveImporter $pokemonMoveImporter */
+$pokemonMoveImporter = $container->get(PokemonMoveImporter::class);
+
 $abilityImporter->import();
 $abilityDescriptionImporter->import();
-
 $itemImporter->import();
 $itemDescriptionImporter->import();
-
 $moveImporter->import();
 $moveDescriptionImporter->import();
-
 $pokemonImporter->import();
+$pokemonMoveImporter->import();
