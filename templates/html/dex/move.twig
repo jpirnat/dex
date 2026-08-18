@@ -59,7 +59,7 @@
                 <dd>{{ accuracyText(move) }}</dd>
 
                 <dt>PP:</dt>
-                <dd>{{ move.pp }} (max {{ move.pp * 1.6 }})</dd>
+                <dd>{{ move.pp }}<template v-if="versionGroup.identifier !== 'champions'"> (max {{ move.pp * 1.6 }})</template></dd>
 
                 <dt>Priority:</dt>
                 <dd>{{ move.priority }}</dd>
