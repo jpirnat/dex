@@ -53,6 +53,9 @@
 
     --color-vg-scarlet: #f34134;
     --color-vg-violet: #8334b7;
+    --color-vg-za: #31ca56;
+
+    --color-vg-champions: #8477fb;
 }
 
 *, *::before, *::after {
@@ -669,6 +672,13 @@ a.button {
 }
 .dex-table tbody .dex-table__pokemon-move-vg--sv {
     background-image: linear-gradient(135deg, var(--color-vg-scarlet) 50%, var(--color-vg-violet) 50%);
+}
+.dex-table tbody .dex-table__pokemon-move-vg--za {
+    background-color: var(--color-vg-za);
+    color: black;
+}
+.dex-table tbody .dex-table__pokemon-move-vg--champions {
+    background-color: var(--color-vg-champions);
 }
 
 .dex-table tbody .dex-table__pokemon-move-data {

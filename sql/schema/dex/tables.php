@@ -159,6 +159,7 @@ return [
 		'pokemon_moves_08_la',
 		'pokemon_moves_09_sv',
 		'pokemon_moves_09_za',
+		'pokemon_moves_champions',
 	],
 
 	// Move flags

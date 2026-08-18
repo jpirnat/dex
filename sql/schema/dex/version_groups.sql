@@ -4,7 +4,7 @@ create table if not exists `version_groups`
 `identifier` varchar(9) not null,
 
 `generation_id` tinyint unsigned not null,
-`abbreviation` varchar(4) not null,
+`abbreviation` varchar(9) not null,
 `has_breeding` bool not null,
 `steps_per_egg_cycle` smallint unsigned not null,
 `stat_formula_type` varchar(7) not null,

@@ -4,7 +4,7 @@ create table if not exists `versions`
 `identifier` varchar(17) not null,
 
 `version_group_id` tinyint unsigned not null,
-`abbreviation` varchar(3) not null,
+`abbreviation` varchar(9) not null,
 `background_color` varchar(7) not null,
 `text_color` varchar(5) not null,
 

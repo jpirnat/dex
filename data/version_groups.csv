@@ -25,4 +25,4 @@ id,identifier,generation,abbreviation,has_breeding,steps_per_egg_cycle,stat_form
 24,la,8,LA,0,0,legends,0,31,0,0,1,252,0,0,1,0,24,3
 25,sv,9,SV,1,128,gen3,1,31,0,1,1,252,0,1,1,1,25,1
 26,za,9,Z-A,0,0,gen3,1,31,0,1,1,252,0,0,1,1,26,2
-27,champions,9,Ch,0,0,champions,0,31,0,0,0,32,0,1,1,0,27,3
+27,champions,9,Champions,0,0,champions,0,31,0,0,0,32,0,1,1,0,27,3
