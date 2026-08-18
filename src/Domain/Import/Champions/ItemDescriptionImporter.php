@@ -177,7 +177,7 @@ final class ItemDescriptionImporter
         }
 
         file_put_contents(
-            "$this->projectRoot/ignore/tables/item_descriptions_champions.csv",
+            "$this->projectRoot/ignore/champions-imports/item_descriptions_champions.csv",
             $csv->toString(),
         );
     }

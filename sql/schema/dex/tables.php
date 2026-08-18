@@ -43,7 +43,10 @@ return [
 		'ability_descriptions_09',
 		'ability_descriptions_champions',
 	],
-	'vg_abilities',
+	'vg_abilities' => [
+    	'vg_abilities',
+    	'vg_abilities_champions',
+	],
 
 	// Ability flags
 	'ability_flags',
@@ -87,7 +90,10 @@ return [
 	'egg_groups',
 	'egg_group_names',
 
-	'vg_pokemon',
+	'vg_pokemon' => [
+    	'vg_pokemon',
+    	'vg_pokemon_champions',
+	],
 
 	// Moves
 	'moves',
@@ -130,6 +136,7 @@ return [
 		'vg_moves_08_la',
 		'vg_moves_09_sv',
 		'vg_moves_09_za',
+		'vg_moves_champions',
 	],
 	'vg_moves_legends' => [
 		'vg_moves_legends_08_la',

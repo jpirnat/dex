@@ -177,7 +177,7 @@ final class AbilityDescriptionImporter
         }
 
         file_put_contents(
-            "$this->projectRoot/ignore/tables/ability_descriptions_champions.csv",
+            "$this->projectRoot/ignore/champions-imports/ability_descriptions_champions.csv",
             $csv->toString(),
         );
     }

@@ -177,7 +177,7 @@ final class MoveDescriptionImporter
         }
 
         file_put_contents(
-            "$this->projectRoot/ignore/tables/move_descriptions_champions.csv",
+            "$this->projectRoot/ignore/champions-imports/move_descriptions_champions.csv",
             $csv->toString(),
         );
     }

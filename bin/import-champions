@@ -3,22 +3,45 @@
 declare(strict_types=1);
 
 use Jp\Dex\Domain\Import\Champions\AbilityDescriptionImporter;
+use Jp\Dex\Domain\Import\Champions\AbilityImporter;
 use Jp\Dex\Domain\Import\Champions\ItemDescriptionImporter;
+use Jp\Dex\Domain\Import\Champions\ItemImporter;
 use Jp\Dex\Domain\Import\Champions\MoveDescriptionImporter;
+use Jp\Dex\Domain\Import\Champions\MoveImporter;
+use Jp\Dex\Domain\Import\Champions\PokemonImporter;
 
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config/environment.php';
 $container = require __DIR__ . '/../config/container.php';
 
+/** @var AbilityImporter $abilityImporter */
+$abilityImporter = $container->get(AbilityImporter::class);
+
 /** @var AbilityDescriptionImporter $abilityDescriptionImporter */
 $abilityDescriptionImporter = $container->get(AbilityDescriptionImporter::class);
+
+/** @var ItemImporter $itemImporter */
+$itemImporter = $container->get(ItemImporter::class);
 
 /** @var ItemDescriptionImporter $itemDescriptionImporter */
 $itemDescriptionImporter = $container->get(ItemDescriptionImporter::class);
 
+/** @var MoveImporter $moveImporter */
+$moveImporter = $container->get(MoveImporter::class);
+
 /** @var MoveDescriptionImporter $moveDescriptionImporter */
 $moveDescriptionImporter = $container->get(MoveDescriptionImporter::class);
 
+/** @var PokemonImporter $pokemonImporter */
+$pokemonImporter = $container->get(PokemonImporter::class);
+
+$abilityImporter->import();
 $abilityDescriptionImporter->import();
+
+$itemImporter->import();
 $itemDescriptionImporter->import();
+
+$moveImporter->import();
 $moveDescriptionImporter->import();
+
+$pokemonImporter->import();
