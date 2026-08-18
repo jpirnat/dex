@@ -1,0 +1,2021 @@
+version_group_id,language_id,ability_id,name,description
+27,1,1,あくしゅう,技でダメージを与えた時\n１０％の確率で相手をひるませる。
+27,1,2,あめふらし,登場した時から　５ターンの間\nあめ状態にする。
+27,1,3,かそく,ターン終わりに　素早さが１段階上がる。
+27,1,4,カブトアーマー,相手の攻撃が急所に当たらない。
+27,1,5,がんじょう,ＨＰ満タンの時\n一撃で　ひんしになる技のダメージを受けると\nＨＰを１残して耐える。\n一撃必殺技も効かない。
+27,1,6,しめりけ,全員　爆発の技が使用できず\n爆発する特性も発動しない。
+27,1,7,じゅうなん,まひ状態にならない。
+27,1,8,すながくれ,すなあらし状態の時\n回避率が１．２５倍になる。
+27,1,9,せいでんき,接触技を受けると　３０％の確率で\n相手をまひ状態にする。
+27,1,10,ちくでん,でんきタイプの技が効かず\n最大ＨＰの１／４回復する。
+27,1,11,ちょすい,みずタイプの技が効かず\n最大ＨＰの１／４回復する。
+27,1,12,どんかん,メロメロ　ちょうはつ状態にならず\nいかくも効かない。
+27,1,13,ノーてんき,あらゆる天気の影響をなくす。
+27,1,14,ふくがん,技の命中率が１．３倍になる。
+27,1,15,ふみん,ねむり　ねむけ状態にならない。
+27,1,17,めんえき,どく　もうどく状態にならない。
+27,1,18,もらいび,ほのおタイプの技が効かず\n自分はもらいび状態になる。
+27,1,19,りんぷん,攻撃の追加効果が効かない。
+27,1,20,マイペース,こんらん状態にならず　いかくも効かない。
+27,1,21,きゅうばん,相手の入れ替えさせる技や道具が効かない。
+27,1,22,いかく,登場した時　相手の攻撃を１段階下げる。
+27,1,23,かげふみ,相手は交代することができなくなる。
+27,1,24,さめはだ,接触技を受けると\n相手の最大ＨＰの\n１／８のダメージを与える。
+27,1,26,ふゆう,地面にいないことになり\nじめんタイプの技　まきびし　どくびし\nねばねばネット状態が効かない。
+27,1,27,ほうし,接触技を受けると　３０％の確率で\n相手を　どく　まひ　ねむり状態の\nいずれかにする。
+27,1,28,シンクロ,相手の技や特性によって\nどく　もうどく　まひ　やけど状態になると\n相手も同じ状態にする。
+27,1,29,クリアボディ,相手の技や特性で能力を下げられない。
+27,1,30,しぜんかいふく,手持ちに戻ると状態異常が治る。
+27,1,31,ひらいしん,でんきタイプの技を自分によせつける。\nその技は効かずに特攻が１段階上がる。
+27,1,33,すいすい,あめ状態の時\n素早さが２倍になる。
+27,1,34,ようりょくそ,にほんばれ状態の時\n素早さが２倍になる。
+27,1,35,はっこう,相手の回避率の変化を無視し\n命中率も下げられない。
+27,1,36,トレース,登場した時　相手の特性と同じ特性になる。
+27,1,37,ちからもち,物理技の威力が２倍になる。
+27,1,38,どくのトゲ,接触技を受けると\n３０％の確率で相手をどく状態にする。
+27,1,39,せいしんりょく,相手の攻撃にひるまず　いかくも効かない。
+27,1,40,マグマのよろい,こおり状態にならない。
+27,1,43,ぼうおん,音の技が効かない。
+27,1,44,あめうけざら,あめ状態の時　ターン終わりに\n最大ＨＰの１／１６回復する。
+27,1,45,すなおこし,登場した時から　５ターンの間\nすなあらし状態にする。
+27,1,46,プレッシャー,自分に対し　相手の使う技のＰＰを１多く減らす。
+27,1,47,あついしぼう,ほのおタイプ　こおりタイプの技で\n受けるダメージが半減する。
+27,1,48,はやおき,ねむり状態になっても　２倍の早さで目覚める。
+27,1,49,ほのおのからだ,接触技を受けると　３０％の確率で\n相手をやけど状態にする。
+27,1,51,するどいめ,相手の回避率の変化を無視し\n命中率も下げられない。
+27,1,52,かいりきバサミ,相手の技や特性で攻撃を下げられない。
+27,1,53,ものひろい,自分が道具を持っていない時\n自分以外のポケモンが消費した道具を\nターン終わりに拾ってくる。
+27,1,55,はりきり,物理技を使用する時\n自分の攻撃が１．５倍になるが\n命中率が０．８倍になる。
+27,1,56,メロメロボディ,異性から接触技を受けると\n３０％の確率で相手をメロメロ状態にする。
+27,1,57,プラス,プラスかマイナスの特性を持つ味方が\n場にいると　自分の特攻が１．５倍になる。
+27,1,58,マイナス,プラスかマイナスの特性を持つ味方が\n場にいると　自分の特攻が１．５倍になる。
+27,1,59,てんきや,天気の影響を受けて　みずタイプ\nほのおタイプ　こおりタイプのどれかに変わる。
+27,1,60,ねんちゃく,持っている道具を相手に奪われず失わない。
+27,1,61,だっぴ,ターン終わりに３０％の確率で状態異常が治る。
+27,1,62,こんじょう,状態異常の時　攻撃が１．５倍になる。\nやけど状態による物理技のダメージが\n半減される効果は無視する。
+27,1,63,ふしぎなうろこ,状態異常の時　防御が１．５倍になる。
+27,1,65,しんりょく,ＨＰが最大ＨＰの１／３以下になると\nくさタイプの技の威力が１．５倍になる。
+27,1,66,もうか,ＨＰが最大ＨＰの１／３以下になると\nほのおタイプの技の威力が１．５倍になる。
+27,1,67,げきりゅう,ＨＰが最大ＨＰの１／３以下になると\nみずタイプの技の威力が１．５倍になる。
+27,1,68,むしのしらせ,ＨＰが最大ＨＰの１／３以下になると\nむしタイプの技の威力が１．５倍になる。
+27,1,69,いしあたま,自分もダメージを受ける技を出しても\nＨＰが減らない。
+27,1,70,ひでり,登場した時から　５ターンの間\nにほんばれ状態にする。
+27,1,72,やるき,ねむり　ねむけ状態にならない。
+27,1,73,しろいけむり,相手の技や特性で能力を下げられない。
+27,1,74,ヨガパワー,物理技の威力が２倍になる。
+27,1,75,シェルアーマー,相手の攻撃が急所に当たらない。
+27,1,77,ちどりあし,こんらん状態の時　回避率が２倍になる。
+27,1,78,でんきエンジン,でんきタイプの技が効かず\n素早さが１段階上がる。
+27,1,79,とうそうしん,相手と性別が同じ時　技の威力が１．２５倍に\n違うと０．７５倍になる。\n性別が不明の場合は通常の威力になる。
+27,1,80,ふくつのこころ,ひるむと素早さが１段階上がる。
+27,1,81,ゆきがくれ,ゆき状態の時\n回避率が１．２５倍になる。
+27,1,82,くいしんぼう,ＨＰが１／４以下の時に食べるきのみを\nＨＰが１／２以下の時に食べてしまう。
+27,1,83,いかりのつぼ,相手の攻撃が急所に当たると\n自分の攻撃が６段階目まで上がる。
+27,1,84,かるわざ,持っていた道具がなくなると\n素早さが２倍になる。
+27,1,85,たいねつ,ほのおタイプの技で受けるダメージが\n半減する。やけど状態で受けるダメージも\n半減する。
+27,1,86,たんじゅん,能力変化が通常の２倍になる。
+27,1,87,かんそうはだ,みずタイプの技が効かず　最大ＨＰの１／４回復する\nほのおタイプの技の\n受けるダメージが１．２５倍になる\nあめ状態の時\nターン終わりに最大ＨＰの１／８回復するが\nにほんばれ状態の時\nターン終わりに最大ＨＰの１／８減る。
+27,1,89,てつのこぶし,パンチの技の威力が１．２倍になる。
+27,1,90,ポイズンヒール,どく　もうどく状態になると\nターン終わりにＨＰが減らずに\n最大ＨＰの１／８回復する。
+27,1,91,てきおうりょく,自分と同じタイプの技の威力が\n１．５倍ではなく２倍になる。
+27,1,92,スキルリンク,連続技を使うと　最高回数まで出せる。
+27,1,93,うるおいボディ,あめ状態の時　ターン終わりに　状態異常が治る。
+27,1,94,サンパワー,にほんばれ状態だと\n特攻が１．５倍になるが\nターン終わりに最大ＨＰの１／８減る。
+27,1,95,はやあし,状態異常になると素早さが１．５倍になる。\nまひ状態の素早さが遅くなる効果も無視する。
+27,1,97,スナイパー,急所に当てた時の威力が\n１．５倍ではなく２．２５倍になる。
+27,1,98,マジックガード,攻撃以外ではダメージが効かない。
+27,1,99,ノーガード,お互いの技の命中率が１００％になる。
+27,1,100,あとだし,同じ優先度の技の中で\n最後に行動する。
+27,1,101,テクニシャン,威力が６０以下の技の威力が１．５倍になる。
+27,1,102,リーフガード,にほんばれ状態の時\n状態異常にならない。
+27,1,103,ぶきよう,このポケモンが持っている道具は\n効果を発揮しない。
+27,1,104,かたやぶり,相手の特性に関係なく技を出すことができる。\n例外となる特性もある。
+27,1,105,きょううん,きゅうしょアップ＋１　になる。
+27,1,106,ゆうばく,接触技を受けてひんしになると\n相手の最大ＨＰの１／４のダメージを与える。
+27,1,107,きけんよち,登場した時　相手が自分への効果バツグンや\n一撃必殺の技を持っていると\nそのことを察知できる。
+27,1,108,よちむ,登場した時　相手の技の中から\n威力の高い技を　１つ読み取る。
+27,1,109,てんねん,相手の能力の変化を無視して攻撃できる。\n相手の能力の変化を無視して攻撃を受ける。\n素早さは無視できない。
+27,1,111,フィルター,効果バツグンの技で\n受けるダメージを３／４にする。
+27,1,113,きもったま,ノーマルタイプ　かくとうタイプの技を\nゴーストタイプに当てることができる。\nいかくも効かない。
+27,1,115,アイスボディ,ゆき状態の時　ターン終わりに\n最大ＨＰの１／１６回復する。
+27,1,116,ハードロック,効果バツグンの技で\n受けるダメージを３／４にする。
+27,1,117,ゆきふらし,登場した時から　５ターンの間\nゆき状態にする。
+27,1,119,おみとおし,登場した時　相手が持っている道具を\n知ることができる。
+27,1,120,すてみ,自分もダメージを受ける\n技の威力が１．２倍になる。
+27,1,124,わるいてぐせ,自分が道具を持っていない時\n接触技を受けると\n相手の道具を盗んでしまう。
+27,1,125,ちからずく,攻撃の追加効果はなくなるが\n１．３倍の威力で技を出すことができる。
+27,1,126,あまのじゃく,能力の変化が逆転し\n上がる時には下がり　下がる時には上がる。
+27,1,127,きんちょうかん,相手のきのみを\n食べられなくさせる。
+27,1,128,まけんき,相手に能力を下げられると\n攻撃が２段階上がる。
+27,1,130,のろわれボディ,技のダメージを受けると　３０％の確率で\n４ターンの間　相手をわざふうじ状態にする。
+27,1,131,いやしのこころ,ターン終わりに　状態異常の味方を\n５０％の確率で治す。
+27,1,132,フレンドガード,味方が受けるダメージを３／４にする。
+27,1,133,くだけるよろい,物理技のダメージを受けると\n防御が１段階下がり\n素早さが２段階上がる。
+27,1,134,ヘヴィメタル,自分の重さが２倍になる。
+27,1,135,ライトメタル,自分の重さが１／２になる。
+27,1,136,マルチスケイル,ＨＰが満タンの時に\n受けるダメージが半減する。
+27,1,139,しゅうかく,使ったきのみを　ターン終わりに\n５０％の確率で作りだす。にほんばれ\n状態の時　必ず作りだす。
+27,1,140,テレパシー,味方からの攻撃を回避する。
+27,1,141,ムラっけ,ターン終わりに　能力のどれかが２段階上がり\n別のどれかが１段階下がる。
+27,1,142,ぼうじん,すなあらし状態で受けるダメージが効かない。\n粉の　技　特性も効かない。
+27,1,143,どくしゅ,相手に接触技を当てると\n３０％の確率でどく状態にする。
+27,1,144,さいせいりょく,手持ちに戻ると　最大ＨＰの１／３回復する。
+27,1,145,はとむね,相手の技や特性で防御を下げられない。
+27,1,146,すなかき,すなあらし状態の時\n素早さが２倍になる。
+27,1,148,アナライズ,ターンの最後に技を出すと\n技の威力が１．３倍になる。
+27,1,149,イリュージョン,手持ちの１番後ろのポケモンの姿で現れる。\n技のダメージを受けると元に戻る。
+27,1,150,かわりもの,目の前のポケモンに変身する。\nＨＰ以外のステータスも同じになる。
+27,1,151,すりぬけ,相手の　ひかりのかべ　リフレクター\nオーロラベール　しんぴのまもり　みがわりを\n無視して技を使うことができる。
+27,1,152,ミイラ,接触技を受けると\n相手の特性を　ミイラ　にする。
+27,1,153,じしんかじょう,攻撃で相手を倒すと　攻撃が１段階上がる。
+27,1,154,せいぎのこころ,あくタイプの技のダメージを受けると\n攻撃が１段階上がる。
+27,1,156,マジックミラー,相手の変化技を受けずに\n相手に跳ね返す。
+27,1,157,そうしょく,くさタイプの技が効かず\n攻撃が１段階上がる。
+27,1,158,いたずらごころ,変化技の優先度が１段階上がる。
+27,1,159,すなのちから,すなあらし状態の時\nいわ　じめん　はがねタイプの\n技の威力が１．３倍になる。
+27,1,165,アロマベール,自分と味方は　メロメロ　ちょうはつ\n連続不可　わざふうじ　かいふくふうじ\nアンコール状態にならない。
+27,1,166,フラワーベール,味方のくさタイプのポケモンは\n能力が下がらず　状態異常にもならない。
+27,1,167,ほおぶくろ,きのみを食べると　その効果に加えて\n最大ＨＰの１／３回復する。
+27,1,168,へんげんじざい,登場するたび　１回だけ\n自分が出す技と同じタイプに変化する。
+27,1,169,ファーコート,物理技で受けるダメージが半減する。
+27,1,170,マジシャン,自分が道具を持っていない時\n技でダメージを与えた相手の道具を奪う。
+27,1,171,ぼうだん,弾の技が効かない。
+27,1,172,かちき,相手に能力を下げられると\n特攻が２段階上がる。
+27,1,173,がんじょうあご,噛む技の威力が１．５倍になる。
+27,1,174,フリーズスキン,ノーマルタイプの技がこおりタイプになり\n威力が１．２倍になる。
+27,1,175,スイートベール,自分と味方は\nねむり　ねむけ状態にならない。
+27,1,176,バトルスイッチ,攻撃を出すと　ブレードフォルムに\n技のキングシールドを出すと\nシールドフォルムに変化する。
+27,1,177,はやてのつばさ,ＨＰが満タンの時　ひこうタイプの技の\n優先度が１段階上がる。
+27,1,178,メガランチャー,波動の技の威力が１．５倍になる。
+27,1,180,きょうせい,味方が道具を消費すると\n自分の持っている道具を味方に渡す。
+27,1,181,かたいツメ,接触技の威力が１．３倍になる。
+27,1,182,フェアリースキン,ノーマルタイプの技がフェアリータイプになり\n威力が１．２倍になる。
+27,1,183,ぬめぬめ,接触技を受けると\n相手の素早さを１段階下げる。
+27,1,184,スカイスキン,ノーマルタイプの技がひこうタイプになり\n威力が１．２倍になる。
+27,1,185,おやこあい,親と子で２回攻撃できる。\n子の攻撃の威力は親の０．２５倍である。
+27,1,187,フェアリーオーラ,全員のフェアリータイプの技の\n威力が１．３３倍になる。
+27,1,192,じきゅうりょく,技のダメージを受けると\n防御が１段階上がる。
+27,1,196,ひとでなし,どく　もうどく状態の相手を攻撃すると\n必ず急所に当たる。
+27,1,199,すいほう,ほのおタイプの技で受けるダメージが\n半減する。みずタイプの技の威力が\n２倍になる。やけど状態にならない。
+27,1,201,ぎゃくじょう,相手の攻撃でＨＰが１／２以下になると\n特攻が１段階上がる。
+27,1,202,ゆきかき,ゆき状態の時\n素早さが２倍になる。
+27,1,203,えんかく,使う技が接触技ではなくなる。
+27,1,204,うるおいボイス,音の技がみずタイプになる。
+27,1,207,サーフテール,エレキフィールド状態の時に\n素早さが２倍になる。
+27,1,209,ばけのかわ,ばけたすがた　の時に技のダメージを受けると\nダメージの代わりに最大ＨＰの１／８を消費し\nばれたすがた　へと変わる。
+27,1,212,ふしょく,はがねタイプ　どくタイプも\nどく　もうどく状態にすることができる。
+27,1,214,じょおうのいげん,自分と味方に対し　相手は先制技を使えない。
+27,1,215,とびだすなかみ,ひんしになる技のダメージを受けると\n相手から受けたそのダメージを返す。
+27,1,218,もふもふ,接触技で受けるダメージが半減する。\nほのおタイプの技で受けるダメージは\n２倍になる。
+27,1,221,カーリーヘアー,接触技を受けると\n相手の素早さを１段階下げる。
+27,1,222,レシーバー,倒された味方の特性と同じ特性になる。
+27,1,226,エレキメイカー,登場した時から\n５ターンの間　全体の場を\nエレキフィールド状態にする。
+27,1,240,ミラーアーマー,自分が受ける能力を下げる効果を受けずに\n相手に跳ね返す。
+27,1,242,すじがねいり,技を引き受ける特性や技の影響を無視する。
+27,1,245,すなはき,技のダメージを受けた時から　５ターンの間\nすなあらし状態にする。
+27,1,247,じゅくせい,食べるきのみの効果が２倍になる。
+27,1,250,ぎたい,フィールドによってタイプが変わる。
+27,1,251,バリアフリー,登場した時に　ひかりのかべ　リフレクター\nオーロラベール状態を解除する。
+27,1,254,さまようたましい,接触技を受けると\n相手と特性を入れ替える。
+27,1,258,はらぺこスイッチ,ターン終わりに　まんぷくもよう\nはらぺこもようと　交互に姿を変える。
+27,1,259,クイックドロウ,３０％の確率で\n同じ優先度の技の中で最初に行動する。
+27,1,260,ふかしのこぶし,接触技を使う時\n相手の守りの効果を無視して\n本来の１／４のダメージを与える。\n相手の守りの効果以外は発動される。
+27,1,261,きみょうなくすり,登場した時に　味方の能力変化を元に戻す。
+27,1,272,きよめのしお,状態異常にならない。\nゴーストタイプの技で\n受けるダメージが半減する。
+27,1,278,マイティチェンジ,手持ちに戻ると　マイティフォルムに変化する。
+27,1,280,でんきにかえる,技のダメージを受けると\nでんき威力アップ状態になる。
+27,1,283,おうごんのからだ,相手からの変化技が効かない。
+27,1,290,びんじょう,相手の能力が上がった時\n自分も同じように能力が上がる。
+27,1,291,はんすう,きのみを食べた次のターン終わりに\nまた同じきのみを１度だけ食べる。
+27,1,292,きれあじ,切る技の威力が１．５倍になる。
+27,1,293,そうだいしょう,登場した時　その戦闘で倒された手持ちの\nポケモン１匹につき　技の威力が１０％上がる。\n最大で５０％まで上がる。
+27,1,295,どくげしょう,物理技のダメージを受けると\n相手の場を　どくびし状態にする。
+27,1,296,テイルアーマー,自分と味方に対し　相手は先制技を使えない。
+27,1,297,どしょく,じめんタイプの技が効かず\n最大ＨＰの１／４回復する。
+27,1,299,おもてなし,登場した時　味方のＨＰを\nその味方の最大ＨＰの１／４回復する。
+27,1,306,かんろなミツ,登場した時　相手の回避率を１段階下げる。\n１回の戦闘で１度しか発動しない。
+27,1,311,かんつうドリル,接触技を使う時\n相手の守りの効果を無視して\n本来の１／４のダメージを与える。\n相手の守りの効果以外は発動される。
+27,1,312,ドラゴンスキン,ノーマルタイプの技がドラゴンタイプになり\n威力が１．２倍になる。
+27,1,313,うなぎのぼり,地面にいないことになり\nじめんタイプの技　まきびし　どくびし\nねばねばネット状態が効かない。\n攻撃で相手を倒すと\n自分の最も高い能力が１段階上がる。
+27,1,315,メガソーラー,天気が　にほんばれ状態でなくても\nにほんばれ状態として\n技を使うことができる。
+27,1,316,ほのおのたてがみ,ほのおタイプの技の威力が１．５倍になる。
+27,1,318,とびだすハバネロ,技のダメージを受けると\n相手をやけど状態にする。
+27,2,1,Stench,"When the Pokémon deals damage with its moves, there is a\n10% chance that targets will flinch."
+27,2,2,Drizzle,Summons rain for 5 turns when the Pokémon enters a battle.
+27,2,3,Speed Boost,Boosts the Pokémon’s Speed stat by 1 stage at the end of\nevery turn.
+27,2,4,Battle Armor,Attacks landed on the Pokémon will never be critical hits.
+27,2,5,Sturdy,"If the Pokémon has full HP and takes damage from a move that\nwould knock it out in one hit, it will endure the hit with 1 HP.\nThe Pokémon is also immune to one-hit KO moves."
+27,2,6,Damp,All Pokémon become unable to use explosive moves.\nExplosive Abilities also fail to trigger.
+27,2,7,Limber,The Pokémon cannot be paralyzed.
+27,2,8,Sand Veil,Boosts the Pokémon’s evasiveness by 25% in a sandstorm.
+27,2,9,Static,"When the Pokémon is hit by a contact move, the attacker has a\n30% chance of being paralyzed."
+27,2,10,Volt Absorb,"Electric-type moves do not work on the Pokémon. Instead, they\nrestore 1/4 of its max HP."
+27,2,11,Water Absorb,"Water-type moves do not work on the Pokémon. Instead, they\nrestore 1/4 of its max HP."
+27,2,12,Oblivious,The Pokémon cannot gain the Infatuated or Taunted statuses\nand is unaffected by Intimidate.
+27,2,13,Cloud Nine,Eliminates the effects of weather.
+27,2,14,Compound Eyes,Boosts the accuracy of the Pokémon’s moves by 30%.
+27,2,15,Insomnia,The Pokémon cannot become drowsy or be put to sleep.
+27,2,17,Immunity,The Pokémon cannot be poisoned or badly poisoned.
+27,2,18,Flash Fire,"Fire-type moves do not work on the Pokémon. Instead, they\ngive the Pokémon the Flash Fire status."
+27,2,19,Shield Dust,The Pokémon is immune to additional effects from attacks.
+27,2,20,Own Tempo,The Pokémon cannot become confused and is unaffected by\nIntimidate.
+27,2,21,Suction Cups,The Pokémon is unaffected by the moves and held items of\nother Pokémon that would force it to switch out of battle.
+27,2,22,Intimidate,"When the Pokémon enters a battle, it lowers the Attack stats of\nopponents by 1 stage."
+27,2,23,Shadow Tag,Opponents cannot be switched out of battle.
+27,2,24,Rough Skin,"When the Pokémon is hit by a contact move, the attacker takes\ndamage equal to 1/8 of its max HP."
+27,2,26,Levitate,"The Pokémon floats off the ground, making it immune to\nGround-type moves, as well as the Spikes, Toxic Spikes,\nand Sticky Web statuses."
+27,2,27,Effect Spore,"When the Pokémon is hit by a contact move, the attacker has a\n30% chance of being poisoned, paralyzed, or put to sleep."
+27,2,28,Synchronize,"If the Pokémon is burned, paralyzed, poisoned, or badly\npoisoned by another Pokémon’s move or Ability, that Pokémon\nwill also be inflicted with the same status condition."
+27,2,29,Clear Body,The Pokémon’s stats cannot be lowered by other Pokémon’s\nmoves or Abilities.
+27,2,30,Natural Cure,The Pokémon’s status conditions are cured when it switches out\nof battle.
+27,2,31,Lightning Rod,"The Pokémon draws in all Electric-type moves. These moves do\nnot work on the Pokémon. Instead, they boost its Sp. Atk stat by\n1 stage."
+27,2,33,Swift Swim,Doubles the Pokémon’s Speed stat in rain.
+27,2,34,Chlorophyll,Doubles the Pokémon’s Speed stat in harsh sunlight.
+27,2,35,Illuminate,The Pokémon ignores changes to targets’ evasiveness and its\naccuracy cannot be lowered.
+27,2,36,Trace,"When the Pokémon enters a battle, it changes its Ability to\nmatch that of an opponent."
+27,2,37,Huge Power,Doubles the power of the Pokémon’s physical moves.
+27,2,38,Poison Point,"When the Pokémon is hit by a contact move, the attacker has a\n30% chance of being poisoned."
+27,2,39,Inner Focus,The Pokémon never flinches when attacked and is unaffected\nby Intimidate.
+27,2,40,Magma Armor,The Pokémon cannot be frozen.
+27,2,43,Soundproof,The Pokémon is immune to sound-based moves.
+27,2,44,Rain Dish,The Pokémon has 1/16 of its max HP restored at the end of\nevery turn in rain.
+27,2,45,Sand Stream,Summons a sandstorm for 5 turns when the Pokémon enters\na battle.
+27,2,46,Pressure,Causes opponents to expend 1 more PP when using moves\nagainst the Pokémon.
+27,2,47,Thick Fat,Halves the damage the Pokémon takes from Fire- and Ice-type\nmoves.
+27,2,48,Early Bird,The Pokémon awakens from sleep twice as fast as other\nPokémon.
+27,2,49,Flame Body,"When the Pokémon is hit by a contact move, the attacker has a\n30% chance of being burned."
+27,2,51,Keen Eye,The Pokémon ignores changes to targets’ evasiveness and its\naccuracy cannot be lowered.
+27,2,52,Hyper Cutter,The Pokémon’s Attack stat cannot be lowered by other\nPokémon’s moves or Abilities.
+27,2,53,Pickup,"If the Pokémon is not already holding an item, at the end of\nthe turn it will pick up an item that was consumed by another\nPokémon."
+27,2,55,Hustle,"When the Pokémon uses physical moves, its Attack stat is\nboosted by 50%, but its accuracy is lowered by 20%."
+27,2,56,Cute Charm,"When the Pokémon is hit by a contact move, the attacker has\na 30% chance of gaining the Infatuated status if the attacker\nand the Pokémon are of opposite genders."
+27,2,57,Plus,Boosts the Pokémon’s Sp. Atk stat by 50% if an ally with the\nPlus or Minus Ability is also in battle.
+27,2,58,Minus,Boosts the Pokémon’s Sp. Atk stat by 50% if an ally with the\nPlus or Minus Ability is also in battle.
+27,2,59,Forecast,"The Pokémon transforms with the weather to change its type to\nWater, Fire, or Ice."
+27,2,60,Sticky Hold,The Pokémon’s held item cannot be stolen or removed by other\nPokémon.
+27,2,61,Shed Skin,The Pokémon has a 30% chance of curing its own status\nconditions at the end of every turn.
+27,2,62,Guts,"When the Pokémon has a status condition, its Attack stat is\nboosted by 50%. Being burned does not halve the damage\ndealt by the Pokémon’s physical moves."
+27,2,63,Marvel Scale,"When the Pokémon has a status condition, its Defense stat is\nboosted by 50%."
+27,2,65,Overgrow,Boosts the power of the Pokémon’s Grass-type moves by 50%\nwhen its HP drops to 1/3 or less of its max.
+27,2,66,Blaze,Boosts the power of the Pokémon’s Fire-type moves by 50%\nwhen its HP drops to 1/3 or less of its max.
+27,2,67,Torrent,Boosts the power of the Pokémon’s Water-type moves by 50%\nwhen its HP drops to 1/3 or less of its max.
+27,2,68,Swarm,Boosts the power of the Pokémon’s Bug-type moves by 50%\nwhen its HP drops to 1/3 or less of its max.
+27,2,69,Rock Head,The Pokémon will not lose HP due to recoil damage from\nits moves.
+27,2,70,Drought,Summons harsh sunlight for 5 turns when the Pokémon enters\na battle.
+27,2,72,Vital Spirit,The Pokémon cannot become drowsy or be put to sleep.
+27,2,73,White Smoke,The Pokémon’s stats cannot be lowered by other Pokémon’s\nmoves or Abilities.
+27,2,74,Pure Power,Doubles the power of the Pokémon’s physical moves.
+27,2,75,Shell Armor,Attacks landed on the Pokémon will never be critical hits.
+27,2,77,Tangled Feet,Doubles the Pokémon’s evasiveness if it is confused.
+27,2,78,Motor Drive,"Electric-type moves do not work on the Pokémon. Instead, they\nboost its Speed stat by 1 stage."
+27,2,79,Rivalry,"Boosts the power of the Pokémon’s moves by 25% against\ntargets of the same gender, and lowers it by 25% against targets\nof the opposite gender. The power remains the same as usual if\neither Pokémon’s gender is unknown."
+27,2,80,Steadfast,"When the Pokémon flinches, its Speed stat is boosted by\n1 stage."
+27,2,81,Snow Cloak,Boosts the Pokémon’s evasiveness by 25% in snow.
+27,2,82,Gluttony,"If the Pokémon is holding a Berry to be eaten when its HP drops\nto 1/4 or less of its max, it will instead eat the Berry when its HP\ndrops to 1/2 or less of its max."
+27,2,83,Anger Point,Boosts the Pokémon’s Attack stat to its sixth stage when the\nPokémon takes a critical hit.
+27,2,84,Unburden,Doubles the Pokémon’s Speed stat when its held item is\nconsumed or lost.
+27,2,85,Heatproof,Halves the damage the Pokémon takes from Fire-type moves\nand from being burned.
+27,2,86,Simple,Doubles the Pokémon’s stat changes.
+27,2,87,Dry Skin,"Water-type moves do not work on the Pokémon. Instead, they\nrestore 1/4 of its max HP. However, the Pokémon takes 25%\nmore damage from Fire-type moves. The Pokémon has 1/8 of\nits max HP restored at the end of every turn in rain, but it loses\n1/8 of its max HP at the end of every turn in harsh sunlight."
+27,2,89,Iron Fist,Boosts the power of the Pokémon’s punching moves by 20%.
+27,2,90,Poison Heal,"If poisoned or badly poisoned, the Pokémon has 1/8 of its max\nHP restored at the end of every turn instead of losing HP."
+27,2,91,Adaptability,Boosts the power of moves of the same type as the Pokémon by\n100% instead of 50%.
+27,2,92,Skill Link,The Pokémon’s multistrike moves always hit the maximum\nnumber of times.
+27,2,93,Hydration,Cures the Pokémon’s status conditions at the end of every\nturn in rain.
+27,2,94,Solar Power,"In harsh sunlight, the Pokémon’s Sp. Atk stat is boosted by 50%,\nbut it loses 1/8 of its max HP at the end of every turn."
+27,2,95,Quick Feet,"When the Pokémon has a status condition, its Speed stat is\nboosted by 50%. Being paralyzed does not lower the\nPokémon’s Speed stat."
+27,2,97,Sniper,Boosts the power of the Pokémon’s critical hits by 125%\ninstead of 50%.
+27,2,98,Magic Guard,The Pokémon takes damage only from attacks.
+27,2,99,No Guard,The accuracy of moves used both by and against the Pokémon\nbecomes 100%.
+27,2,100,Stall,The Pokémon’s moves go last among moves of the same priority.
+27,2,101,Technician,Boosts the power of the Pokémon’s moves by 50% if their\npower is 60 or less.
+27,2,102,Leaf Guard,The Pokémon is immune to status conditions in harsh sunlight.
+27,2,103,Klutz,Items do not work when held by the Pokémon.
+27,2,104,Mold Breaker,The Pokémon’s moves are unaffected by the Ability of the\ntarget (with certain exceptions).
+27,2,105,Super Luck,The Pokémon has a 1-stage Critical-Hit Ratio Boost.
+27,2,106,Aftermath,Attackers that knock out the Pokémon with a contact move take\ndamage equal to 1/4 of their max HP.
+27,2,107,Anticipation,"When the Pokémon enters a battle, it senses whether the\nopponents know any one-hit KO moves or moves that are super\neffective against it."
+27,2,108,Forewarn,"When the Pokémon enters a battle, it identifies the move with\nthe highest power among all the moves the opponents know."
+27,2,109,Unaware,"The Pokémon ignores the target’s stat changes when attacking,\nand ignores the attacker’s stat changes when being attacked.\nIt cannot ignore changes to the Speed stat, however."
+27,2,111,Filter,Reduces the damage the Pokémon takes from supereffective\nmoves by 25%.
+27,2,113,Scrappy,The Pokémon can hit Ghost types with Normal- and\nFighting-type moves. It is also unaffected by Intimidate.
+27,2,115,Ice Body,The Pokémon has 1/16 of its max HP restored at the end of\nevery turn in snow.
+27,2,116,Solid Rock,Reduces the damage the Pokémon takes from supereffective\nmoves by 25%.
+27,2,117,Snow Warning,Summons snow for 5 turns when the Pokémon enters a battle.
+27,2,119,Frisk,"When the Pokémon enters a battle, it identifies opponents’\nheld items."
+27,2,120,Reckless,Boosts the power of the Pokémon’s moves by 20% if they have\nrecoil or crash damage.
+27,2,124,Pickpocket,"When the Pokémon is hit by a contact move, it will steal the\nheld item of the attacker if it is not already holding an item."
+27,2,125,Sheer Force,"The Pokémon’s moves lose their additional effects, but the\npower of those moves will be boosted by 30%."
+27,2,126,Contrary,Reverses any stat changes affecting the Pokémon so that\nattempts to boost its stats instead lower them—and attempts\nto lower its stats will boost them.
+27,2,127,Unnerve,Makes opponents unable to eat Berries.
+27,2,128,Defiant,"When the Pokémon has any of its stats lowered by an opponent,\nits Attack stat is boosted by 2 stages."
+27,2,130,Cursed Body,"When the Pokémon takes damage from a move, the attacker has\na 30% chance of gaining the Move Disabled status for 4 turns."
+27,2,131,Healer,The Pokémon has a 50% chance of curing the status conditions\nof its allies at the end of every turn.
+27,2,132,Friend Guard,Reduces the damage allies take by 25%.
+27,2,133,Weak Armor,"When the Pokémon takes damage from a physical move, its\nDefense stat is lowered by 1 stage, but its Speed stat is boosted\nby 2 stages."
+27,2,134,Heavy Metal,Doubles the Pokémon’s weight.
+27,2,135,Light Metal,Halves the Pokémon’s weight.
+27,2,136,Multiscale,Halves the damage the Pokémon takes while its HP is full.
+27,2,139,Harvest,"If the Pokémon has used a Berry, it has a 50% chance of creating\nanother one at the end of every turn. In harsh sunlight, the\nPokémon will definitely create a Berry."
+27,2,140,Telepathy,The Pokémon dodges attacks from its allies.
+27,2,141,Moody,"At the end of every turn, one of the Pokémon’s stats will be\nboosted by 2 stages, but another will be lowered by 1 stage."
+27,2,142,Overcoat,The Pokémon takes no damage from sandstorms and is immune\nto moves and Abilities involving powder.
+27,2,143,Poison Touch,"When the Pokémon hits a target with a contact move, the target\nhas a 30% chance of being poisoned."
+27,2,144,Regenerator,The Pokémon has 1/3 of its max HP restored when it switches\nout of battle.
+27,2,145,Big Pecks,The Pokémon’s Defense stat cannot be lowered by other\nPokémon’s moves or Abilities.
+27,2,146,Sand Rush,Doubles the Pokémon’s Speed stat in a sandstorm.
+27,2,148,Analytic,Boosts the power of the Pokémon’s moves by 30% when the\nPokémon is the last to move that turn.
+27,2,149,Illusion,The Pokémon enters battle disguised as the last Pokémon in its\nparty. It reverts to its usual appearance when it takes damage\nfrom a move.
+27,2,150,Imposter,The Pokémon transforms into the Pokémon in front of it. It also\ncopies all of that Pokémon’s stats apart from its HP.
+27,2,151,Infiltrator,"When using its moves, the Pokémon ignores the effects of\ntargets’ Light Screen, Reflect, Aurora Veil, Safeguard, and\nsubstitutes."
+27,2,152,Mummy,"When the Pokémon is hit by a contact move, the attacker has its\nAbility changed to Mummy."
+27,2,153,Moxie,"When the Pokémon knocks out a target with an attack, its\nAttack stat is boosted by 1 stage."
+27,2,154,Justified,"When the Pokémon takes damage from a Dark-type move, its\nAttack stat is boosted by 1 stage."
+27,2,156,Magic Bounce,"Instead of being affected by other Pokémon’s status moves,\nthe Pokémon bounces them back at the user."
+27,2,157,Sap Sipper,"Grass-type moves do not work on the Pokémon. Instead, they\nboost its Attack stat by 1 stage."
+27,2,158,Prankster,Increases the priority of the Pokémon’s status moves by 1 stage.
+27,2,159,Sand Force,"Boosts the power of the Pokémon’s Rock-, Ground-, and\nSteel-type moves by 30% in a sandstorm."
+27,2,165,Aroma Veil,"The Pokémon and its allies cannot gain the Infatuated, Taunted,\nUnable to Repeat, Move Disabled, Healing Prevented, or\nEncore statuses."
+27,2,166,Flower Veil,Grass-type allies are immune to status conditions and cannot\nhave their stats lowered.
+27,2,167,Cheek Pouch,"The Pokémon has 1/3 of its max HP restored when it eats a\nBerry, in addition to the Berry’s usual effect."
+27,2,168,Protean,Changes the Pokémon’s type to the type of the move it’s\nabout to use. This works only once per time the Pokémon\nenters battle.
+27,2,169,Fur Coat,Halves the damage the Pokémon takes from physical moves.
+27,2,170,Magician,"If the Pokémon is not already holding an item, it will steal the\nheld item from targets it deals damage to with its moves."
+27,2,171,Bulletproof,The Pokémon is immune to ball and bomb moves.
+27,2,172,Competitive,"When the Pokémon has any of its stats lowered by an opponent,\nits Sp. Atk stat is boosted by 2 stages."
+27,2,173,Strong Jaw,Boosts the power of the Pokémon’s biting moves by 50%.
+27,2,174,Refrigerate,The Pokémon’s Normal-type moves become Ice-type moves\nand their power is boosted by 20%.
+27,2,175,Sweet Veil,The Pokémon and its allies cannot become drowsy or be\nput to sleep.
+27,2,176,Stance Change,The Pokémon changes into its Blade Forme when it attacks\nand changes into its Shield Forme when it uses the move\nKing’s Shield.
+27,2,177,Gale Wings,Increases the priority of the Pokémon’s Flying-type moves by\n1 stage while its HP is full.
+27,2,178,Mega Launcher,Boosts the power of the Pokémon’s pulse moves by 50%.
+27,2,180,Symbiosis,"When an ally consumes an item, the Pokémon gives its own held\nitem to that ally."
+27,2,181,Tough Claws,Boosts the power of the Pokémon’s contact moves by 30%.
+27,2,182,Pixilate,The Pokémon’s Normal-type moves become Fairy-type moves\nand their power is boosted by 20%.
+27,2,183,Gooey,"When the Pokémon is hit by a contact move, the attacker’s\nSpeed stat is lowered by 1 stage."
+27,2,184,Aerilate,The Pokémon’s Normal-type moves become Flying-type moves\nand their power is boosted by 20%.
+27,2,185,Parental Bond,The parent and child attack one after the other. The power of\nthe child’s attacks is 1/4 of those of the parent.
+27,2,187,Fairy Aura,Boosts the power of the Fairy-type moves of all Pokémon on the\nfield by 33%.
+27,2,192,Stamina,"When the Pokémon takes damage from a move, its Defense stat\nis boosted by 1 stage."
+27,2,196,Merciless,The Pokémon’s attacks become critical hits if the target is\npoisoned or badly poisoned.
+27,2,199,Water Bubble,Halves the damage the Pokémon takes from Fire-type moves\nand doubles the power of its Water-type moves. The Pokémon\ncannot be burned.
+27,2,201,Berserk,Boosts the Pokémon’s Sp. Atk stat by 1 stage when an attack\ncauses its HP to drop to 1/2 or less of its max.
+27,2,202,Slush Rush,Doubles the Pokémon’s Speed stat in snow.
+27,2,203,Long Reach,None of the moves used by the Pokémon are considered\ncontact moves.
+27,2,204,Liquid Voice,The Pokémon’s sound-based moves become Water-type moves.
+27,2,207,Surge Surfer,Doubles the Pokémon’s Speed stat on Electric Terrain.
+27,2,209,Disguise,"When the Pokémon is in its Disguised Form and would take\ndamage from a move, it loses 1/8 of its max HP instead of\ntaking the damage, then changes into its Busted Form."
+27,2,212,Corrosion,The Pokémon can poison or badly poison targets even if they’re\nSteel or Poison types.
+27,2,214,Queenly Majesty,Opponents are unable to use priority moves against the\nPokémon or its allies.
+27,2,215,Innards Out,"When the Pokémon takes damage from a move that knocks it\nout, it deals the same amount of damage to the attacker."
+27,2,218,Fluffy,"Halves the damage the Pokémon takes from contact moves, but\ndoubles the damage taken from Fire-type moves."
+27,2,221,Tangling Hair,"When the Pokémon is hit by a contact move, the attacker’s\nSpeed stat is lowered by 1 stage."
+27,2,222,Receiver,The Pokémon changes its Ability to match that of a\ndefeated ally.
+27,2,226,Electric Surge,Turns the entire field into Electric Terrain for 5 turns when the\nPokémon enters a battle.
+27,2,240,Mirror Armor,"Instead of being affected by stat-lowering effects, the Pokémon\nbounces them back at whichever Pokémon caused them."
+27,2,242,Stalwart,The Pokémon ignores the effects of Abilities and moves that\ndraw in moves.
+27,2,245,Sand Spit,Summons a sandstorm for 5 turns when the Pokémon takes\ndamage from moves.
+27,2,247,Ripen,Doubles the effects of Berries eaten by the Pokémon.
+27,2,250,Mimicry,The Pokémon’s type changes depending on the terrain.
+27,2,251,Screen Cleaner,"When the Pokémon enters a battle, it removes the Light Screen,\nReflect, and Aurora Veil statuses."
+27,2,254,Wandering Spirit,"When the Pokémon is hit by a contact move, it swaps Abilities\nwith the attacker."
+27,2,258,Hunger Switch,"The Pokémon changes its form, alternating between its Full Belly\nMode and Hangry Mode at the end of every turn."
+27,2,259,Quick Draw,The Pokémon’s moves have a 30% chance of going first among\nmoves of the same priority.
+27,2,260,Unseen Fist,"When the Pokémon uses contact moves, it can hit even targets\nthat are protecting themselves, dealing 1/4 of the damage that\nthe move would otherwise deal. Everything aside from the\ntarget’s protective effects is still triggered."
+27,2,261,Curious Medicine,"When the Pokémon enters a battle, it removes all stat changes\nfrom its allies."
+27,2,272,Purifying Salt,Halves the damage the Pokémon takes from Ghost-type moves.\nThe Pokémon is immune to status conditions.
+27,2,278,Zero to Hero,The Pokémon changes into its Hero Form when it switches out\nof battle.
+27,2,280,Electromorphosis,"When the Pokémon takes damage from a move, it gains the\nElectric Boost status."
+27,2,283,Good as Gold,The Pokémon is immune to status moves used by other Pokémon.
+27,2,290,Opportunist,"When an opponent’s stats are boosted, the Pokémon boosts its\nown stats in the exact same way."
+27,2,291,Cud Chew,"If the Pokémon eats a Berry, it will eat that same Berry once\nmore at the end of the next turn."
+27,2,292,Sharpness,Boosts the power of the Pokémon’s slicing moves by 50%.
+27,2,293,Supreme Overlord,"When the Pokémon enters a battle, the power of its moves is\nboosted by 10% for each Pokémon in its party that has been\ndefeated in the battle already. The maximum boost is 50%."
+27,2,295,Toxic Debris,"When the Pokémon takes damage from a physical move, it\ngives the opponent’s side the Toxic Spikes status."
+27,2,296,Armor Tail,Opponents are unable to use priority moves against the\nPokémon or its allies.
+27,2,297,Earth Eater,"Ground-type moves do not work on the Pokémon. Instead, they\nrestore 1/4 of its max HP."
+27,2,299,Hospitality,"When the Pokémon enters a battle, it restores 1/4 of its ally’s\nmax HP."
+27,2,306,Supersweet Syrup,"When the Pokémon enters a battle, opponents’ evasiveness is\nlowered by 1 stage. This Ability is triggered only once per battle."
+27,2,311,Piercing Drill,"When the Pokémon uses contact moves, it can hit even targets\nthat are protecting themselves, dealing 1/4 of the damage that\nthe move would otherwise deal. Everything aside from the\ntarget’s protective effects is still triggered."
+27,2,312,Dragonize,The Pokémon’s Normal-type moves become Dragon-type moves\nand their power is boosted by 20%.
+27,2,313,Eelevate,"The Pokémon floats off the ground, making it immune to\nGround-type moves, as well as the Spikes, Toxic Spikes,\nand Sticky Web statuses. When the Pokémon knocks out a\ntarget with an attack, its highest stat is boosted by 1 stage."
+27,2,315,Mega Sol,"Even when the sunlight has not turned harsh, the Pokémon can\nuse its moves as if the weather were harsh sunlight."
+27,2,316,Fire Mane,Boosts the power of the Pokémon’s Fire-type moves by 50%.
+27,2,318,Spicy Spray,"When the Pokémon takes damage from a move, it burns\nthe attacker."
+27,3,1,Puanteur,"Quand le Pokémon inflige des dégâts à l’aide d’une capacité,\nil a 10 % de chances d’apeurer la cible."
+27,3,2,Crachin,"Quand le Pokémon arrive sur le terrain,\nil invoque la pluie pendant 5 tours."
+27,3,3,Turbo,La Vitesse du Pokémon augmente de 1 cran\nà la fin de chaque tour.
+27,3,4,Armurbaston,Le Pokémon est immunisé contre les coups critiques.
+27,3,5,Fermeté,"Si les PV du Pokémon sont au maximum et qu’il subit des dégâts\nd’une capacité qui devrait le mettre K.O. en un coup,\nil résiste avec 1 PV.\nLes capacités qui mettent toujours K.O. en un coup sont\ninefficaces sur le Pokémon."
+27,3,6,Moiteur,Le Pokémon empêche l’utilisation des capacités explosives\net l’activation des talents explosifs.
+27,3,7,Échauffement,Le Pokémon est immunisé contre la paralysie.
+27,3,8,Voile Sable,"Lors des tempêtes de sable, l’Esquive du Pokémon\nest multipliée par 1,25."
+27,3,9,Statik,"Quand le Pokémon subit une capacité à contact,\nil a 30 % de chances de paralyser l’adversaire."
+27,3,10,Absorbe-Volt,Les capacités de type Électrik sont inefficaces sur le Pokémon\net lui rendent 1/4 de ses PV max.
+27,3,11,Absorbe-Eau,Les capacités de type Eau sont inefficaces sur le Pokémon\net lui rendent 1/4 de ses PV max.
+27,3,12,Benêt,"Le Pokémon est immunisé contre l’état « Attraction »,\nla provocation ou l’intimidation."
+27,3,13,Ciel Gris,Le Pokémon annule tous les effets liés à la météo.
+27,3,14,Œil Composé,"La Précision des capacités du Pokémon est multipliée par 1,3."
+27,3,15,Insomnia,Le Pokémon est immunisé contre le sommeil et\nla somnolence.
+27,3,17,Vaccin,Le Pokémon est immunisé contre le poison et le poison grave.
+27,3,18,Torche,Les capacités de type Feu sont inefficaces sur ce Pokémon\net le font entrer dans l’état « Torche ».
+27,3,19,Écran Poudre,Le Pokémon est immunisé contre les effets additionnels\ndes attaques.
+27,3,20,Tempo Perso,Le Pokémon est immunisé contre la confusion et l’intimidation.
+27,3,21,Ventouse,Le Pokémon est immunisé contre les capacités ou les objets\ndes adversaires qui forcent à changer de Pokémon.
+27,3,22,Intimidation,"Quand le Pokémon arrive sur le terrain, il baisse l’Attaque\ndes adversaires de 1 cran."
+27,3,23,Marque Ombre,Le Pokémon empêche les adversaires de quitter le terrain.
+27,3,24,Peau Dure,"Quand le Pokémon subit une capacité à contact, il inflige à\nl’adversaire des dégâts équivalents à 1/8 des PV max\nde celui-ci."
+27,3,26,Lévitation,"Le Pokémon flotte au-dessus du sol, ce qui l’immunise contre\nles capacités de type Sol, ainsi que les effets de Picots,\nPics Toxik et Toile Gluante."
+27,3,27,Pose Spore,"Quand le Pokémon subit une capacité à contact,\nil a 30 % de chances d’empoisonner, paralyser\nou endormir l’adversaire."
+27,3,28,Synchro,"Si le Pokémon est empoisonné, gravement empoisonné,\nparalysé ou brûlé par une capacité ou un talent d’un autre\nPokémon, ce dernier subit la même altération de statut."
+27,3,29,Corps Sain,Les stats du Pokémon ne peuvent pas baisser à cause\ndes capacités ou du talent des adversaires.
+27,3,30,Médic Nature,"Quand le Pokémon revient dans son équipe,\nil soigne ses altérations de statut."
+27,3,31,Paratonnerre,Le Pokémon attire les capacités de type Électrik.\nElles sont inefficaces sur lui et augmentent\nson Attaque Spéciale de 1 cran.
+27,3,33,Glissade,"Quand il pleut, la Vitesse du Pokémon est multipliée par 2."
+27,3,34,Chlorophylle,"Quand le soleil brille, la Vitesse du Pokémon est\nmultipliée par 2."
+27,3,35,Luminescence,"Le Pokémon ignore les changements d’Esquive des adversaires,\net sa Précision ne peut pas baisser."
+27,3,36,Calque,"Quand le Pokémon arrive sur le terrain, il adopte\nle même talent que l’adversaire."
+27,3,37,Coloforce,La puissance des capacités physiques du Pokémon est multipliée\npar 2.
+27,3,38,Point Poison,"Quand le Pokémon subit une capacité à contact,\nil a 30 % de chances d’empoisonner l’adversaire."
+27,3,39,Attention,"Le Pokémon ne peut pas être apeuré par les attaques\ndes adversaires, et il est immunisé contre l’intimidation."
+27,3,40,Armumagma,Le Pokémon est immunisé contre le gel.
+27,3,43,Anti-Bruit,Le Pokémon est immunisé contre les capacités de son.
+27,3,44,Cuvette,"Quand il pleut, le Pokémon récupère 1/16 de ses PV max\nà la fin de chaque tour."
+27,3,45,Sable Volant,"Quand le Pokémon arrive sur le terrain, il invoque\nune tempête de sable pendant 5 tours."
+27,3,46,Pression,Les adversaires doivent dépenser 1 PP supplémentaire\npour viser ce Pokémon avec leurs capacités.
+27,3,47,Isograisse,Les dégâts des capacités de types Feu et Glace subis par\nle Pokémon sont réduits de moitié.
+27,3,48,Matinal,Le Pokémon se réveille deux fois plus vite\nde l’endormissement.
+27,3,49,Corps Ardent,"Quand le Pokémon subit une capacité à contact,\nil a 30 % de chances de brûler l’adversaire."
+27,3,51,Regard Vif,"Le Pokémon ignore les changements d’Esquive des adversaires,\net sa Précision ne peut pas baisser."
+27,3,52,Hyper Cutter,L’Attaque du Pokémon ne peut pas baisser à cause\ndes capacités ou du talent des adversaires.
+27,3,53,Ramassage,"Quand le Pokémon ne tient pas d’objet, à la fin du tour,\nil ramasse celui qu’un autre Pokémon a consommé."
+27,3,55,Agitation,"Quand le Pokémon utilise une capacité physique,\nson Attaque est multipliée par 1,5,\ntandis que sa Précision est multipliée par 0,8."
+27,3,56,Joli Sourire,"Quand le Pokémon subit une capacité à contact d’un adversaire\ndu sexe opposé, il a 30 % de chances de lui infliger\nl’état « Attraction »."
+27,3,57,Plus,"L’Attaque Spéciale du Pokémon est multipliée par 1,5\nsi un allié présent sur le terrain a le talent Plus ou\nle talent Moins."
+27,3,58,Moins,"L’Attaque Spéciale du Pokémon est multipliée par 1,5\nsi un allié présent sur le terrain a le talent Plus ou\nle talent Moins."
+27,3,59,Météo,"Le Pokémon prend le type Eau, Feu ou Glace\nen fonction de la météo."
+27,3,60,Glu,Le Pokémon ne peut pas perdre l’objet qu’il tient.\nLes adversaires ne peuvent pas le dérober.
+27,3,61,Mue,Le Pokémon a 30 % de chances de soigner ses altérations\nde statut à la fin de chaque tour.
+27,3,62,Cran,"Quand le Pokémon souffre d’une altération de statut,\nson Attaque est multipliée par 1,5.\nDe plus, lorsque le Pokémon est brûlé, les dégâts qu’il inflige\navec ses capacités physiques ne sont pas réduits de moitié."
+27,3,63,Écaille Spéciale,"Quand le Pokémon souffre d’une altération de statut,\nsa Défense est multipliée par 1,5."
+27,3,65,Engrais,"Quand les PV du Pokémon sont inférieurs ou égaux à 1/3\nde ses PV max, la puissance de ses capacités de type Plante\nest multipliée par 1,5."
+27,3,66,Brasier,"Quand les PV du Pokémon sont inférieurs ou égaux à 1/3\nde ses PV max, la puissance de ses capacités de type Feu\nest multipliée par 1,5."
+27,3,67,Torrent,"Quand les PV du Pokémon sont inférieurs ou égaux à 1/3\nde ses PV max, la puissance de ses capacités de type Eau\nest multipliée par 1,5."
+27,3,68,Essaim,"Quand les PV du Pokémon sont inférieurs ou égaux à 1/3\nde ses PV max, la puissance de ses capacités de type Insecte\nest multipliée par 1,5."
+27,3,69,Tête de Roc,Le Pokémon peut utiliser des capacités qui devraient\nnormalement aussi lui infliger des dégâts sans perdre de PV.
+27,3,70,Sécheresse,"Quand le Pokémon arrive sur le terrain,\nil invoque le soleil pendant 5 tours."
+27,3,72,Esprit Vital,Le Pokémon est immunisé contre le sommeil et la somnolence.
+27,3,73,Écran Fumée,Les stats du Pokémon ne peuvent pas baisser à cause\ndes capacités ou du talent des adversaires.
+27,3,74,Force Pure,La puissance des capacités physiques du Pokémon est multipliée\npar 2.
+27,3,75,Coque Armure,Le Pokémon est immunisé contre les coups critiques.
+27,3,77,Pieds Confus,"Quand le Pokémon est confus, son Esquive est multipliée par 2."
+27,3,78,Motorisé,Les capacités de type Électrik sont inefficaces sur le Pokémon\net augmentent sa Vitesse de 1 cran.
+27,3,79,Rivalité,"La puissance des capacités du Pokémon est multipliée\npar 1,25 si l’adversaire est du même sexe,\net par 0,75 s’il est du sexe opposé.\nSi l’un ou l’autre Pokémon est de sexe inconnu,\nles capacités conservent leur puissance d’origine."
+27,3,80,Impassible,"Quand le Pokémon est apeuré, sa Vitesse augmente de 1 cran."
+27,3,81,Rideau Neige,"Quand il neige, l’Esquive du Pokémon est multipliée par 1,25."
+27,3,82,Gloutonnerie,"Le Pokémon n’attend pas qu’il lui reste 1/4 de ses PV\nou moins pour manger la Baie qu’il tient, il la mange\nquand ses PV sont réduits de moitié ou moins."
+27,3,83,Colérique,"Quand le Pokémon subit un coup critique, son Attaque\naugmente et atteint le 6 cran."
+27,3,84,Délestage,La Vitesse du Pokémon est multipliée par 2 si l’objet\nqu’il tient disparaît.
+27,3,85,Ignifugé,Les dégâts des capacités de type Feu et de brûlure subis par\nle Pokémon sont réduits de moitié.
+27,3,86,Simple,Les changements de stats du Pokémon sont multipliés par 2.
+27,3,87,Peau Sèche,"Les capacités de type Eau sont inefficaces sur le Pokémon\net lui rendent 1/4 de ses PV max, mais les dégâts qu’il subit\nprovenant de capacités de type Feu sont multipliés par 1,25.\nQuand il pleut, le Pokémon récupère 1/8 de ses PV max\nà la fin de chaque tour, mais quand le soleil brille,\nil perd 1/8 de ses PV max à la fin de chaque tour."
+27,3,89,Poing de Fer,"La puissance des capacités de coups de poing du Pokémon\nest multipliée par 1,2."
+27,3,90,Soin Poison,"Quand le Pokémon est empoisonné ou gravement empoisonné,\nil récupère 1/8 de ses PV max à la fin de chaque tour au lieu\nd’en perdre."
+27,3,91,Adaptabilité,"La puissance des capacités du même type que\nle Pokémon est multipliée par 2 au lieu de 1,5."
+27,3,92,Multi-Coups,Les capacités du Pokémon pouvant frapper plusieurs fois\nfrappent toujours le maximum de fois possible.
+27,3,93,Hydratation,"Quand il pleut, le Pokémon soigne ses altérations de statut\nà la fin de chaque tour."
+27,3,94,Force Soleil,"Quand le soleil brille, l’Attaque Spéciale du Pokémon\nest multipliée par 1,5, mais il perd 1/8 de ses PV max\nà la fin de chaque tour."
+27,3,95,Pied Véloce,"Quand le Pokémon souffre d’une altération de statut,\nsa Vitesse est multipliée par 1,5.\nDe plus, sa Vitesse ne baisse pas lorsqu’il est paralysé."
+27,3,97,Sniper,"Le multiplicateur de puissance appliqué lorsque ce Pokémon\ninflige un coup critique est de 2,25 au lieu de 1,5."
+27,3,98,Garde Magik,Seules les attaques peuvent infliger des dégâts au Pokémon.
+27,3,99,Annule Garde,La Précision des capacités du Pokémon et des capacités\nqui ciblent le Pokémon passe à 100 %.
+27,3,100,Frein,"Quand des capacités ont le même niveau de priorité,\nle Pokémon agit en dernier."
+27,3,101,Technicien,"Quand la puissance des capacités du Pokémon est inférieure\nou égale à 60, elle est multipliée par 1,5."
+27,3,102,Feuille Garde,"Quand le soleil brille, le Pokémon est immunisé contre\nles altérations de statut."
+27,3,103,Maladresse,L’objet que tient le Pokémon n’a pas d’effet.
+27,3,104,Brise Moule,Le Pokémon peut utiliser ses capacités en ignorant le talent\ndes adversaires. Certains talents ne peuvent pas être ignorés.
+27,3,105,Chanceux,Le taux de critiques du Pokémon augmente de 1 cran.
+27,3,106,Boom Final,"Quand le Pokémon est mis K.O. par une capacité à contact,\nil inflige à l’adversaire des dégâts équivalents à 1/4 des PV max\nde celui-ci."
+27,3,107,Anticipation,"Quand il arrive sur le terrain, le Pokémon devine\nsi les adversaires connaissent des capacités super efficaces\nsur lui, ou des capacités qui mettent toujours K.O. en un coup."
+27,3,108,Prédiction,"Quand il arrive sur le terrain, le Pokémon détecte la capacité\nla plus puissante des adversaires."
+27,3,109,Inconscient,"Quand le Pokémon attaque ou est attaqué, il ignore\nles changements de stats des adversaires, sauf\nles changements de Vitesse."
+27,3,111,Filtre,Le Pokémon ne subit que 3/4 des dégâts des capacités\nsuper efficaces.
+27,3,113,Querelleur,Le Pokémon peut toucher les Pokémon de type Spectre avec\ndes capacités de type Normal ou Combat. Il est aussi\nimmunisé contre l’intimidation.
+27,3,115,Corps Gel,"Quand il neige, le Pokémon récupère 1/16 de ses PV max\nà la fin de chaque tour."
+27,3,116,Solide Roc,Le Pokémon ne subit que 3/4 des dégâts des capacités\nsuper efficaces.
+27,3,117,Alerte Neige,"Quand le Pokémon arrive sur le terrain,\nil invoque la neige pendant 5 tours."
+27,3,119,Fouille,"Quand le Pokémon arrive sur le terrain, il peut identifier l’objet\nque tient l’adversaire."
+27,3,120,Téméraire,"La puissance des capacités infligeant aussi des dégâts\nau Pokémon est multipliée par 1,2."
+27,3,124,Pickpocket,"Quand le Pokémon ne tient pas d’objet et qu’il subit\nune capacité à contact, il vole celui de l’adversaire."
+27,3,125,Sans Limite,"Les attaques du Pokémon perdent leurs effets additionnels,\nmais la puissance de ses capacités est multipliée par 1,3."
+27,3,126,Contestation,"Les changements de stats du Pokémon sont inversés :\nles augmentations de stats se transforment en baisses,\net les baisses de stats se transforment en augmentations."
+27,3,127,Tension,Le Pokémon empêche les adversaires de manger des Baies.
+27,3,128,Acharné,"Quand un adversaire baisse au moins une des stats du Pokémon,\nl’Attaque de ce dernier augmente de 2 crans."
+27,3,130,Corps Maudit,"Quand le Pokémon subit des dégâts d’une capacité,\nil a 30 % de chances d’infliger l’état « Capacité bloquée »\nà l’adversaire pendant 4 tours."
+27,3,131,Cœur Soin,Le Pokémon a 50 % de chances de soigner les altérations\nde statut d’un allié à la fin de chaque tour.
+27,3,132,Garde-Ami,Les alliés du Pokémon ne subissent que 3/4 des dégâts\nqui leur sont infligés.
+27,3,133,Armurouillée,"Quand le Pokémon subit des dégâts d’une capacité physique,\nsa Défense baisse de 1 cran, mais sa Vitesse augmente\nde 2 crans."
+27,3,134,Heavy Metal,Le poids du Pokémon est multiplié par 2.
+27,3,135,Light Metal,Le poids du Pokémon est divisé par 2.
+27,3,136,Multiécaille,"Quand les PV du Pokémon sont au maximum,\nles dégâts qu’il subit sont réduits de moitié."
+27,3,139,Récolte,"Si le Pokémon utilise une Baie, il a 50 % de chances\nd’en récolter une identique à la fin de chaque tour.\nQuand le soleil brille, il récolte une Baie à coup sûr."
+27,3,140,Télépathe,Le Pokémon évite les attaques de ses alliés.
+27,3,141,Lunatique,"À la fin de chaque tour, une stat du Pokémon augmente\nde 2 crans et une autre stat baisse de 1 cran."
+27,3,142,Envelocape,"Le Pokémon est immunisé contre les dégâts des tempêtes\nde sable, et contre les capacités et les talents qui libèrent\nde la poudre."
+27,3,143,Toxitouche,"Quand le Pokémon inflige une capacité à contact à l’adversaire,\nil a 30 % de chances de l’empoisonner."
+27,3,144,Régé-Force,"Quand le Pokémon revient dans son équipe,\nil récupère 1/3 de ses PV max."
+27,3,145,Cœur de Coq,La Défense du Pokémon ne peut pas baisser à cause\ndes capacités ou du talent des adversaires.
+27,3,146,Baigne Sable,"Pendant les tempêtes de sable, la Vitesse du Pokémon\nest multipliée par 2."
+27,3,148,Analyste,"Quand le Pokémon agit en dernier, la puissance de ses capacités\nest multipliée par 1,3."
+27,3,149,Illusion,Le Pokémon apparaît sous les traits du dernier membre\nde l’équipe. L’effet se dissipe s’il subit les dégâts\nd’une capacité.
+27,3,150,Imposteur,"Le Pokémon prend l’apparence du Pokémon en face de lui.\nToutes les caractéristiques de ce dernier, à l’exception\nde ses PV, sont également dupliquées."
+27,3,151,Infiltration,"Le Pokémon peut utiliser ses capacités en ignorant les effets\ndes capacités suivantes des adversaires : Mur Lumière,\nProtection, Voile Aurore, Rune Protect et Clonage."
+27,3,152,Momie,"Quand le Pokémon subit une capacité à contact,\nle talent de l’adversaire est remplacé par Momie."
+27,3,153,Impudence,"Quand le Pokémon met un adversaire K.O. avec\nune attaque, son Attaque augmente de 1 cran."
+27,3,154,Cœur Noble,"Quand le Pokémon subit des dégâts d’une capacité\nde type Ténèbres, son Attaque augmente de 1 cran."
+27,3,156,Miroir Magik,Le Pokémon est immunisé contre les capacités de statut\net les renvoie vers l’adversaire.
+27,3,157,Herbivore,Les capacités de type Plante sont inefficaces sur le Pokémon\net augmentent son Attaque de 1 cran.
+27,3,158,Farceur,Le niveau de priorité des capacités de statut du Pokémon\naugmente de 1 cran.
+27,3,159,Force Sable,"La puissance des capacités de types Roche, Sol et Acier\ndu Pokémon est multipliée par 1,3 pendant les tempêtes\nde sable."
+27,3,165,Aroma-Voile,"Le Pokémon et ses alliés sont immunisés contre la provocation,\nl’impossibilité de répétition des capacités, le blocage\nde capacités, le blocage de soins, ainsi que les états\n « Attraction » et « Encore »."
+27,3,166,Flora-Voile,Le Pokémon empêche ses alliés de type Plante de subir\ndes baisses de stats et des altérations de statut.
+27,3,167,Bajoues,"Quand le Pokémon mange une Baie, il bénéficie de\nses effets et en plus, il récupère 1/3 de ses PV max."
+27,3,168,Protéen,Le Pokémon prend le type de la capacité qu’il utilise.\nCe talent ne s’active qu’une fois par arrivée du Pokémon\nsur le terrain.
+27,3,169,Toison Épaisse,Les dégâts des capacités physiques subis par le Pokémon\nsont réduits de moitié.
+27,3,170,Magicien,"Quand le Pokémon ne tient pas d’objet, il vole celui de\nl’adversaire auquel il inflige des dégâts à l’aide d’une capacité."
+27,3,171,Pare-Balles,Le Pokémon est immunisé contre les capacités lançant\ndes projectiles.
+27,3,172,Battant,"Quand un adversaire baisse au moins une des stats du Pokémon,\nl’Attaque Spéciale de ce dernier augmente de 2 crans."
+27,3,173,Prognathe,"La puissance des capacités de morsure du Pokémon\nest multipliée par 1,5."
+27,3,174,Peau Gelée,"Les capacités de type Normal du Pokémon prennent\nle type Glace et leur puissance est multipliée par 1,2."
+27,3,175,Gluco-Voile,Le Pokémon et ses alliés sont immunisés contre\nle sommeil et la somnolence.
+27,3,176,Déclic Tactique,"Le Pokémon prend sa Forme Assaut lorsqu’il utilise\nune attaque, et sa Forme Parade lorsqu’il utilise\nla capacité Bouclier Royal."
+27,3,177,Ailes Bourrasque,"Quand les PV du Pokémon sont au maximum, le niveau de\npriorité de ses capacités de type Vol augmente de 1 cran."
+27,3,178,Méga Blaster,"La puissance des capacités du Pokémon qui projettent une aura\nest multipliée par 1,5."
+27,3,180,Symbiose,"Quand un allié consomme son objet, le Pokémon lui\ndonne celui qu’il tient."
+27,3,181,Griffe Dure,"La puissance des capacités à contact du Pokémon est multipliée\npar 1,3."
+27,3,182,Peau Féérique,"Les capacités de type Normal du Pokémon prennent le type Fée\net leur puissance est multipliée par 1,2."
+27,3,183,Poisseux,"Quand le Pokémon subit une capacité à contact,\nla Vitesse de l’adversaire baisse de 1 cran."
+27,3,184,Peau Céleste,"Les capacités de type Normal du Pokémon prennent le type Vol\net leur puissance est multipliée par 1,2."
+27,3,185,Amour Filial,La mère et son petit peuvent attaquer 2 fois d’affilée.\nLa puissance des attaques du petit est égale à 1/4\nde celle des attaques de la mère.
+27,3,187,Aura Féérique,"La puissance des capacités de type Fée de tous les Pokémon\nest multipliée par 1,33."
+27,3,192,Endurance,"Quand le Pokémon subit des dégâts d’une capacité,\nsa Défense augmente de 1 cran."
+27,3,196,Cruauté,"Quand le Pokémon attaque un adversaire empoisonné\nou gravement empoisonné, il inflige systématiquement\nun coup critique."
+27,3,199,Aquabulle,Le Pokémon est immunisé contre la brûlure. Les dégâts\ndes capacités de type Feu qu’il subit sont réduits de moitié.\nLa puissance de ses capacités de type Eau est multipliée par 2.
+27,3,201,Folle Furie,L’Attaque Spéciale du Pokémon augmente de 1 cran\nquand ses PV tombent à la moitié ou moins à cause\nd’une attaque de l’adversaire.
+27,3,202,Chasse-Neige,"Quand il neige, la Vitesse du Pokémon est multipliée par 2."
+27,3,203,Longue Portée,Les capacités que le Pokémon utilise ne sont pas considérées\ncomme des capacités à contact.
+27,3,204,Hydrata-Son,Les capacités de son utilisées par le Pokémon prennent\nle type Eau.
+27,3,207,Surf Caudal,"Quand un champ électrifié est actif, la Vitesse du Pokémon\nest multipliée par 2."
+27,3,209,Fantômasque,"Si le Pokémon devait subir des dégâts d’une capacité sous\nsa Forme Déguisée, il perd 1/8 de ses PV max à la place,\npuis prend sa Forme Démasquée."
+27,3,212,Corrosion,Le Pokémon est capable d’empoisonner ou de gravement\nempoisonner les Pokémon de type Acier ou Poison.
+27,3,214,Prestance Royale,Les adversaires ne peuvent pas utiliser de capacités\nprioritaires sur le Pokémon et ses alliés.
+27,3,215,Expuls’Organes,"Quand le Pokémon subit des dégâts d’une capacité qui\nle met K.O., il renvoie la même quantité de dégâts\nà l’adversaire qui les lui a infligés."
+27,3,218,Boule de Poils,"Les dégâts des capacités à contact subis par le Pokémon\nsont réduits de moitié, mais les dégâts des capacités\nde type Feu subis par le Pokémon sont multipliés par 2."
+27,3,221,Mèche Rebelle,"Quand le Pokémon subit une capacité à contact,\nla Vitesse de l’adversaire baisse de 1 cran."
+27,3,222,Receveur,Le Pokémon obtient le talent d’un allié mis K.O.
+27,3,226,Créa-Élec,"Quand le Pokémon arrive sur le terrain, il crée un champ\nélectrifié sur tout le terrain pendant 5 tours."
+27,3,240,Armure Miroir,"Au lieu d’être affecté par les baisses de stats, le Pokémon\nles renvoie au Pokémon qui a tenté de les lui infliger."
+27,3,242,Nerfs d’Acier,Le Pokémon ignore les effets des capacités ou des talents\nqui attirent les capacités.
+27,3,245,Expul’Sable,"Quand le Pokémon subit des dégâts d’une capacité,\nil invoque une tempête de sable pendant 5 tours."
+27,3,247,Mûrissement,Les effets des Baies mangées par le Pokémon sont multipliés\npar 2.
+27,3,250,Mimétisme,Le Pokémon prend le type du champ actif.
+27,3,251,Brise-Barrière,"Quand le Pokémon arrive sur le terrain, il annule les effets\nde Mur Lumière, Protection et Voile Aurore."
+27,3,254,Âme Vagabonde,"Quand le Pokémon subit une capacité à contact,\nil échange son talent contre celui de l’adversaire."
+27,3,258,Déclic Fringale,"À la fin de chaque tour, le Pokémon alterne entre\nson Mode Rassasié et son Mode Affamé."
+27,3,259,Tir Vif,"Le Pokémon a 30 % de chances d’agir en premier,\nmême si les autres capacités lancées ont le même\nniveau de priorité que la sienne."
+27,3,260,Poing Invisible,"Quand le Pokémon utilise une capacité à contact, il ignore\nles effets de protection des adversaires et inflige 1/4\ndes dégâts que la capacité aurait normalement infligés.\nLes autres effets des adversaires se déclenchent toujours."
+27,3,261,Breuvage Suspect,"Quand le Pokémon arrive sur le terrain, il annule\nles changements de stats de ses alliés."
+27,3,272,Sel Purificateur,Le Pokémon est immunisé contre les altérations de statut.\nLes dégâts des capacités de type Spectre qu’il subit sont\nréduits de moitié.
+27,3,278,Supermutation,"Quand le Pokémon revient dans son équipe,\nil prend sa Forme Super."
+27,3,280,Grecharge,"Quand le Pokémon subit des dégâts d’une capacité,\nil obtient un boost Électrik."
+27,3,283,Corps en Or,Le Pokémon est immunisé contre les capacités de statut\ndes autres Pokémon.
+27,3,290,Opportuniste,"Quand les stats de l’adversaire augmentent, les stats du\nPokémon augmentent de la même manière."
+27,3,291,Ruminant,"Quand le Pokémon mange une Baie, à la fin du tour\nsuivant, il mange la même Baie une fois de plus."
+27,3,292,Incisif,"La puissance des capacités du Pokémon qui infligent\ndes entailles est multipliée par 1,5."
+27,3,293,Général Suprême,"Quand le Pokémon arrive sur le terrain, la puissance de\nses capacités augmente de 10 % pour chaque Pokémon\nde son équipe mis K.O. pendant le combat.\nElle peut augmenter de 50 % au maximum."
+27,3,295,Dépôt Toxique,"Quand le Pokémon subit les dégâts d’une capacité physique,\nil répand des pics toxiques sur le côté adverse."
+27,3,296,Armure Caudale,Les adversaires ne peuvent pas utiliser de capacités\nprioritaires sur le Pokémon et ses alliés.
+27,3,297,Absorbe-Terre,Les capacités de type Sol sont inefficaces sur le Pokémon\net lui rendent 1/4 de ses PV max.
+27,3,299,Aux Petits Soins,"Quand le Pokémon arrive sur le terrain,\nil restaure 1/4 des PV max de son allié."
+27,3,306,Nectar Mielleux,"Quand le Pokémon arrive sur le terrain, il baisse l’Esquive\ndes adversaires de 1 cran. Ce talent ne s’active qu’une\nseule fois par combat."
+27,3,311,Transperceuse,"Quand le Pokémon utilise une capacité à contact, il ignore\nles effets de protection des adversaires et inflige 1/4\ndes dégâts que la capacité aurait normalement infligés.\nLes autres effets des adversaires se déclenchent toujours."
+27,3,312,Peau Draconique,"Les capacités de type Normal du Pokémon prennent\nle type Dragon et leur puissance est multipliée par 1,2."
+27,3,313,Lévitaboost,"Le Pokémon flotte au-dessus du sol, ce qui l’immunise contre\nles capacités de type Sol, ainsi que les effets de Picots,\nPics Toxik et Toile Gluante.\nQuand il met un adversaire K.O. avec une attaque,\nsa stat la plus élevée augmente de 1 cran."
+27,3,315,Méga-Soleil,"Le Pokémon peut utiliser ses capacités comme si\nle soleil brillait, même si ce n’est pas le cas."
+27,3,316,Crinière de Feu,"La puissance des capacités de type Feu du Pokémon\nest multipliée par 1,5."
+27,3,318,Habanéruption,"Quand le Pokémon subit des dégâts d’une capacité,\nil brûle l’adversaire."
+27,4,1,Duftnote,"Verursacht das Pokémon mit einer Attacke Schaden,\nschreckt das Ziel mit 10%iger Wahrscheinlichkeit zurück."
+27,4,2,Niesel,"Das Pokémon erzeugt bei Kampfantritt Regen, der 5 Runden\nlang anhält."
+27,4,3,Temposchub,Die Initiative des Pokémon wird am Ende jeder Runde um\n1 Stufe erhöht.
+27,4,4,Kampfpanzer,Das Pokémon kann keine Volltreffer erleiden.
+27,4,5,Robustheit,"Erleidet das Pokémon bei vollen KP Schaden durch eine Attacke,\ndie es mit einem Treffer kampfunfähig machen würde, übersteht\nes diese mit 1 KP.\nAußerdem haben K.O.-Attacken keine Wirkung auf es."
+27,4,6,Feuchtigkeit,"Das Pokémon verhindert den Einsatz von Explosionsattacken.\nAuch Fähigkeiten, die Explosionen auslösen, werden nicht\naktiviert."
+27,4,7,Flexibilität,Das Pokémon kann nicht paralysiert werden.
+27,4,8,Sandschleier,Bei einem Sandsturm wird der Ausweichwert des Pokémon\num 25 % erhöht.
+27,4,9,Statik,"Wird das Pokémon von einer Kontaktattacke getroffen,\nwird der Angreifer mit 30%iger Wahrscheinlichkeit paralysiert."
+27,4,10,Voltabsorber,Elektro-Attacken haben keine Wirkung auf das Pokémon.\nStattdessen füllen sie seine KP um 1/4 des Maximalwerts auf.
+27,4,11,H2O-Absorber,Wasser-Attacken haben keine Wirkung auf das Pokémon.\nStattdessen füllen sie seine KP um 1/4 des Maximalwerts auf.
+27,4,12,Dösigkeit,Das Pokémon kann nicht in die Zustände Anziehung oder\nVerhöhner versetzt werden. Auch Bedroher wirkt bei ihm nicht.
+27,4,13,Wolke Sieben,Das Pokémon hebt jegliche Wettereffekte auf.
+27,4,14,Facettenauge,Die Genauigkeit der Attacken des Pokémon wird um 30 %\nerhöht.
+27,4,15,Insomnia,Das Pokémon kann nicht in Schlaf versetzt oder schläfrig\ngemacht werden.
+27,4,17,Immunität,Das Pokémon kann nicht vergiftet oder schwer vergiftet werden.
+27,4,18,Feuerfänger,Feuer-Attacken haben keine Wirkung auf das Pokémon.\nStattdessen versetzen sie es in den Zustand Feuerfänger.
+27,4,19,Puderabwehr,Zusatzeffekte von Angriffen haben keine Wirkung auf\ndas Pokémon.
+27,4,20,Gleichmut,Das Pokémon kann nicht verwirrt werden.\nAuch Bedroher wirkt bei ihm nicht.
+27,4,21,Saugnapf,"Attacken und Items anderer Pokémon, durch die das Pokémon\nausgewechselt werden würde, haben keine Wirkung auf es."
+27,4,22,Bedroher,Das Pokémon senkt bei Kampfantritt den Angriff von Gegnern\num 1 Stufe.
+27,4,23,Wegsperre,Das Pokémon hindert Gegner am Auswechseln.
+27,4,24,Rauhaut,"Wird das Pokémon von einer Kontaktattacke getroffen,\nfügt es dem Angreifer Schaden in Höhe von 1/8 von\ndessen maximalen KP zu."
+27,4,26,Schwebe,"Das Pokémon gilt als nicht auf dem Boden befindlich und\nBoden-Attacken sowie die Zustände Stachler, Giftspitzen\nund Klebenetz haben keine Wirkung auf es."
+27,4,27,Sporenwirt,"Wird das Pokémon von einer Kontaktattacke getroffen,\nwird der Angreifer mit 30%iger Wahrscheinlichkeit\nvergiftet, paralysiert oder in Schlaf versetzt."
+27,4,28,Synchro,"Wird das Pokémon durch eine Attacke oder Fähigkeit vergiftet,\nschwer vergiftet, paralysiert oder erleidet Verbrennungen,\nereilt das jeweilige Statusproblem auch den Verursacher."
+27,4,29,Neutraltorso,Die Statuswerte des Pokémon können nicht durch Attacken oder\nFähigkeiten anderer Pokémon gesenkt werden.
+27,4,30,Innere Kraft,"Wird das Pokémon ausgewechselt, werden seine\nStatusprobleme geheilt."
+27,4,31,Blitzfänger,"Das Pokémon zieht Elektro-Attacken an, die aber keine\nWirkung auf es haben. Stattdessen erhöhen sie seinen\nSpezial-Angriff um 1 Stufe."
+27,4,33,Wassertempo,Bei Regen wird die Initiative des Pokémon verdoppelt.
+27,4,34,Chlorophyll,Bei Sonnenschein wird die Initiative des Pokémon verdoppelt.
+27,4,35,Erleuchtung,Die Genauigkeit des Pokémon kann nicht gesenkt werden.\nAußerdem ignoriert es beim Einsatz von Attacken\nAusweichwert-Veränderungen von Zielen.
+27,4,36,Erfassen,Das Pokémon kopiert bei Kampfantritt die Fähigkeit eines\nGegners.
+27,4,37,Kraftkoloss,Die Stärke von physischen Attacken des Pokémon\nwird verdoppelt.
+27,4,38,Giftdorn,"Wird das Pokémon von einer Kontaktattacke getroffen,\nwird der Angreifer mit 30%iger Wahrscheinlichkeit vergiftet."
+27,4,39,Konzentrator,Das Pokémon schreckt durch Angriffe anderer Pokémon nicht\nzurück. Auch Bedroher wirkt bei ihm nicht.
+27,4,40,Magmapanzer,Das Pokémon kann nicht eingefroren werden.
+27,4,43,Lärmschutz,Geräuschattacken haben keine Wirkung auf das Pokémon.
+27,4,44,Regengenuss,Bei Regen regeneriert das Pokémon am Ende jeder Runde\n1/16 seiner maximalen KP.
+27,4,45,Sandsturm,"Das Pokémon erzeugt bei Kampfantritt einen Sandsturm,\nder 5 Runden lang anhält."
+27,4,46,Erzwinger,"Gegner verbrauchen beim Einsatz von Attacken,\ndie sich gegen das Pokémon richten, 1 AP mehr."
+27,4,47,Speckschicht,"Der Schaden, den das Pokémon durch Feuer- und Eis-Attacken\nerleidet, wird halbiert."
+27,4,48,Frühwecker,"Wenn es in Schlaf versetzt wurde, wacht das Pokémon doppelt\nso schnell wieder auf wie andere Pokémon."
+27,4,49,Flammkörper,"Wird das Pokémon von einer Kontaktattacke getroffen,\nerleidet der Angreifer mit 30%iger Wahrscheinlichkeit\nVerbrennungen."
+27,4,51,Adlerauge,Die Genauigkeit des Pokémon kann nicht gesenkt werden.\nAußerdem ignoriert es beim Einsatz von Attacken\nAusweichwert-Veränderungen von Zielen.
+27,4,52,Scherenmacht,Der Angriff des Pokémon kann nicht durch Attacken oder\nFähigkeiten anderer Pokémon gesenkt werden.
+27,4,53,Mitnahme,"Trägt das Pokémon kein Item, nimmt es am Ende der Runde\nein von einem anderen Pokémon benutztes Item auf."
+27,4,55,Übereifer,"Setzt das Pokémon eine physische Attacke ein, wird sein\nAngriff um 50 % erhöht, aber seine Genauigkeit um 20 %\ngesenkt."
+27,4,56,Charmebolzen,"Wird das Pokémon von einer Kontaktattacke eines Pokémon\nvom anderen Geschlecht getroffen, wird der Angreifer mit\n30%iger Wahrscheinlichkeit in den Zustand Anziehung versetzt."
+27,4,57,Plus,"Der Spezial-Angriff des Pokémon wird um 50 % erhöht,\nwenn sich ein Mitstreiter mit der Fähigkeit Plus oder der\nFähigkeit Minus auf dem Kampffeld befindet."
+27,4,58,Minus,"Der Spezial-Angriff des Pokémon wird um 50 % erhöht,\nwenn sich ein Mitstreiter mit der Fähigkeit Plus oder der\nFähigkeit Minus auf dem Kampffeld befindet."
+27,4,59,Prognose,"Das Pokémon nimmt je nach Wetter entweder den Typ Wasser,\nFeuer oder Eis an."
+27,4,60,Klebekörper,Das getragene Item des Pokémon kann nicht gestohlen werden\noder verloren gehen.
+27,4,61,Expidermis,Das Pokémon befreit sich am Ende jeder Runde mit 30%iger\nWahrscheinlichkeit von Statusproblemen.
+27,4,62,Adrenalin,"Der Angriff des Pokémon wird um 50 % erhöht, wenn es von\neinem Statusproblem betroffen ist. Außerdem wird der den\nSchaden von physischen Attacken halbierende Effekt von\nVerbrennungen ignoriert."
+27,4,63,Notschutz,"Die Verteidigung des Pokémon wird um 50 % erhöht,\nwenn es von einem Statusproblem betroffen ist."
+27,4,65,Notdünger,"Fallen die KP des Pokémon auf 1/3 des Maximalwerts\noder weniger, wird die Stärke seiner Pflanzen-Attacken\num 50 % erhöht."
+27,4,66,Großbrand,"Fallen die KP des Pokémon auf 1/3 des Maximalwerts\noder weniger, wird die Stärke seiner Feuer-Attacken\num 50 % erhöht."
+27,4,67,Sturzbach,"Fallen die KP des Pokémon auf 1/3 des Maximalwerts\noder weniger, wird die Stärke seiner Wasser-Attacken\num 50 % erhöht."
+27,4,68,Hexaplaga,"Fallen die KP des Pokémon auf 1/3 des Maximalwerts\noder weniger, wird die Stärke seiner Käfer-Attacken\num 50 % erhöht."
+27,4,69,Steinhaupt,"Das Pokémon verliert keine KP, wenn es Attacken einsetzt,\ndurch die es selbst Schaden erleiden würde."
+27,4,70,Dürre,"Das Pokémon erzeugt bei Kampfantritt Sonnenschein,\nder 5 Runden lang anhält."
+27,4,72,Munterkeit,Das Pokémon kann nicht in Schlaf versetzt oder schläfrig\ngemacht werden.
+27,4,73,Pulverrauch,Die Statuswerte des Pokémon können nicht durch Attacken oder\nFähigkeiten anderer Pokémon gesenkt werden.
+27,4,74,Mentalkraft,Die Stärke von physischen Attacken des Pokémon\nwird verdoppelt.
+27,4,75,Panzerhaut,Das Pokémon kann keine Volltreffer erleiden.
+27,4,77,Taumelschritt,"Ist das Pokémon verwirrt, wird sein Ausweichwert verdoppelt."
+27,4,78,Starthilfe,Elektro-Attacken haben keine Wirkung auf das Pokémon.\nStattdessen erhöhen sie seine Initiative um 1 Stufe.
+27,4,79,Rivalität,"Greift das Pokémon ein Ziel desselben Geschlechts an,\nwird die Stärke seiner Attacken um 25 % erhöht.\nBei einem Ziel des anderen Geschlechts wird sie um 25 %\ngesenkt. Ist das Geschlecht des Pokémon oder des Ziels\nunbekannt, verändert sich die Stärke nicht."
+27,4,80,Felsenfest,"Schreckt das Pokémon zurück, wird seine Initiative um 1 Stufe\nerhöht."
+27,4,81,Schneemantel,Bei Schnee wird der Ausweichwert des Pokémon um 25 %\nerhöht.
+27,4,82,Völlerei,"Beeren, die das Pokémon normalerweise erst dann isst,\nwenn seine KP auf 1/4 des Maximalwerts oder weniger\nfallen, isst es bereits dann, wenn sie auf die Hälfte oder\nweniger fallen."
+27,4,83,Kurzschluss,"Erleidet das Pokémon einen Volltreffer, wird sein Angriff auf\ndie 6. Stufe erhöht."
+27,4,84,Entlastung,"Wird das von ihm getragene Item verwendet oder geht\nverloren, wird die Initiative des Pokémon verdoppelt."
+27,4,85,Hitzeschutz,"Der Schaden, den das Pokémon durch Feuer-Attacken und\nVerbrennungen erleidet, wird halbiert."
+27,4,86,Wankelmut,Statuswertänderungen des Pokémon werden verdoppelt.
+27,4,87,Trockenheit,"Wasser-Attacken haben keine Wirkung auf das Pokémon.\nStattdessen füllen sie seine KP um 1/4 des Maximalwerts auf.\nDer Schaden, den es durch Feuer-Attacken erleidet,\nwird jedoch um 25 % erhöht.\nBei Regen regeneriert das Pokémon am Ende jeder Runde\n1/8 seiner maximalen KP. Bei Sonnenschein hingegen verliert\nes am Ende jeder Runde 1/8 seiner maximalen KP."
+27,4,89,Eisenfaust,Die Stärke von Hiebattacken des Pokémon wird um 20 %\nerhöht.
+27,4,90,Giftheilung,"Ist das Pokémon vergiftet oder schwer vergiftet, erleidet es\nkeinen Schaden, sondern regeneriert am Ende jeder Runde\n1/8 seiner maximalen KP."
+27,4,91,Anpassung,"Die Stärke von Attacken des Pokémon, die seinem Typ\nentsprechen, wird nicht um 50 % erhöht, sondern um 100 %."
+27,4,92,Wertelink,Das Pokémon landet mit Serienattacken die maximale Anzahl\nan Treffern.
+27,4,93,Hydration,Bei Regen werden am Ende jeder Runde Statusprobleme\ndes Pokémon geheilt.
+27,4,94,Solarkraft,"Bei Sonnenschein wird der Spezial-Angriff des Pokémon\num 50 % erhöht, aber dafür verliert es am Ende jeder Runde\n1/8 seiner maximalen KP."
+27,4,95,Rasanz,"Die Initiative des Pokémon wird um 50 % erhöht, wenn es von\neinem Statusproblem betroffen ist. Außerdem wird der Initiative\nreduzierende Effekt von Paralyse ignoriert."
+27,4,97,Superschütze,"Landet das Pokémon einen Volltreffer, wird die Stärke\nnicht um 50 % erhöht, sondern um 125 %."
+27,4,98,Magieschild,Das Pokémon erleidet nur durch Angriffe Schaden.
+27,4,99,Schildlos,"Die Genauigkeit aller Attacken, die von dem Pokémon\neingesetzt werden oder das Pokémon als Ziel haben,\nbeträgt 100 %."
+27,4,100,Zeitspiel,Bei Attacken mit gleicher Priorität handelt das Pokémon\nals Letztes.
+27,4,101,Techniker,"Die Stärke von Attacken des Pokémon, die über eine Stärke\nvon 60 oder weniger verfügen, wird um 50 % erhöht."
+27,4,102,Floraschild,Bei Sonnenschein kann das Pokémon keine Statusprobleme\nerleiden.
+27,4,103,Tollpatsch,Getragene Items des Pokémon haben keine Wirkung.
+27,4,104,Überbrückung,Das Pokémon kann Attacken ungeachtet der Fähigkeit von\nZielen einsetzen.\nManche Fähigkeiten sind davon jedoch nicht betroffen.
+27,4,105,Glückspilz,Die Volltrefferquote des Pokémon wird um 1 Stufe erhöht.
+27,4,106,Finalschlag,"Wird das Pokémon durch eine Kontaktattacke besiegt,\nerleidet der Angreifer Schaden in Höhe von 1/4 der eigenen\nmaximalen KP."
+27,4,107,Vorahnung,"Das Pokémon ahnt bei Kampfantritt, ob ein Gegner über\nK.O.-Attacken oder Attacken verfügt, die sehr effektiv\ngegen es sind."
+27,4,108,Vorwarnung,Das Pokémon erkennt bei Kampfantritt eine der gegnerischen\nAttacken mit der höchsten Stärke.
+27,4,109,Unkenntnis,"Das Pokémon ignoriert beim Angriff sämtliche\nStatuswertänderungen von Zielen sowie sämtliche\nStatuswertänderungen von Angreifern, wenn es selbst\nZiel einer Attacke ist.\nÄnderungen an der Initiative können jedoch nicht\nignoriert werden."
+27,4,111,Filter,"Der Schaden, den das Pokémon durch sehr effektive Attacken\nerleidet, wird um 25 % gesenkt."
+27,4,113,Rauflust,Normal- und Kampf-Attacken des Pokémon treffen auch\nPokémon vom Typ Geist. Außerdem wirkt Bedroher bei\nihm nicht.
+27,4,115,Eishaut,Bei Schnee regeneriert das Pokémon am Ende jeder Runde\n1/16 seiner maximalen KP.
+27,4,116,Felskern,"Der Schaden, den das Pokémon durch sehr effektive Attacken\nerleidet, wird um 25 % gesenkt."
+27,4,117,Schneeschauer,"Das Pokémon erzeugt bei Kampfantritt Schnee, der 5 Runden\nlang anhält."
+27,4,119,Schnüffler,Bei Kampfantritt erkennt das Pokémon die getragenen Items\nvon Gegnern.
+27,4,120,Achtlos,"Die Stärke von Attacken des Pokémon, durch die es selbst\nSchaden erleidet, wird um 20 % erhöht."
+27,4,124,Langfinger,"Trägt das Pokémon kein Item und wird von einer Kontaktattacke\ngetroffen, stiehlt es das Item des Angreifers."
+27,4,125,Rohe Gewalt,"Die Angriffe des Pokémon verlieren ihre Zusatzeffekte,\naber die Stärke dieser Attacken wird um 30 % erhöht."
+27,4,126,Umkehrung,"Statuswertänderungen des Pokémon werden umgekehrt:\nStatuswerte, die eigentlich erhöht werden sollten, sinken und\nStatuswerte, die eigentlich sinken sollten, werden erhöht."
+27,4,127,Anspannung,"Das Pokémon hindert Gegner daran, Beeren zu essen."
+27,4,128,Siegeswille,"Der Angriff des Pokémon wird um 2 Stufen erhöht, wenn einer\nseiner Statuswerte durch einen Gegner gesenkt wird."
+27,4,130,Tastfluch,"Erleidet das Pokémon Schaden durch eine Attacke,\nwird der Angreifer mit 30%iger Wahrscheinlichkeit\n4 Runden lang in den Zustand Attackenblockade versetzt."
+27,4,131,Heilherz,Das Pokémon befreit am Ende jeder Runde mit 50%iger\nWahrscheinlichkeit Mitstreiter von Statusproblemen.
+27,4,132,Freundeshut,"Der Schaden, den Mitstreiter des Pokémon erleiden, wird um\n25 % gesenkt."
+27,4,133,Bruchrüstung,"Erleidet das Pokémon Schaden durch eine physische Attacke,\nwird seine Verteidigung um 1 Stufe gesenkt, aber seine Initiative\ndafür um 2 Stufen erhöht."
+27,4,134,Schwermetall,Das Gewicht des Pokémon wird verdoppelt.
+27,4,135,Leichtmetall,Das Gewicht des Pokémon wird halbiert.
+27,4,136,Multischuppe,Bei vollen KP wird der erlittene Schaden des Pokémon halbiert.
+27,4,139,Reiche Ernte,"Hat das Pokémon eine Beere gegessen, kann es diese am Ende\njeder Runde mit 50%iger Wahrscheinlichkeit erneut erzeugen.\nBei Sonnenschein gelingt dies garantiert."
+27,4,140,Telepathie,Das Pokémon weicht Angriffen von Mitstreitern aus.
+27,4,141,Gefühlswippe,Am Ende jeder Runde wird ein Statuswert des Pokémon um\n2 Stufen erhöht und ein anderer um 1 Stufe gesenkt.
+27,4,142,Partikelschutz,Das Pokémon erleidet keinen Schaden durch Sandstürme.\nAußerdem haben Pulverattacken und -fähigkeiten keine\nWirkung auf es.
+27,4,143,Giftgriff,"Trifft das Pokémon ein Ziel mit einer Kontaktattacke,\nwird das Ziel mit 30%iger Wahrscheinlichkeit vergiftet."
+27,4,144,Belebekraft,"Wird das Pokémon ausgewechselt, regeneriert es 1/3 seiner\nmaximalen KP."
+27,4,145,Brustbieter,Die Verteidigung des Pokémon kann nicht durch Attacken oder\nFähigkeiten anderer Pokémon gesenkt werden.
+27,4,146,Sandscharrer,Bei einem Sandsturm wird die Initiative des Pokémon\nverdoppelt.
+27,4,148,Analyse,"Setzt das Pokémon in einer Runde als Letztes eine Attacke ein,\nwird deren Stärke um 30 % erhöht."
+27,4,149,Trugbild,"Das Pokémon nimmt die Gestalt des Pokémon an der letzten\nStelle im Team an.\nWenn es Schaden durch eine Attacke erleidet,\nverwandelt es sich zurück."
+27,4,150,Doppelgänger,"Das Pokémon verwandelt sich in eine Kopie seines Gegenübers.\nDabei übernimmt es auch dessen Statuswerte, mit Ausnahme\nder KP."
+27,4,151,Schwebedurch,"Das Pokémon ignoriert beim Einsatz von Attacken die Effekte\nvon Lichtschild, Reflektor, Auroraschleier, Bodyguard und\nDelegator von Zielen."
+27,4,152,Mumie,"Wird das Pokémon von einer Kontaktattacke getroffen,\nwird die Fähigkeit des Angreifers durch die Fähigkeit Mumie\nersetzt."
+27,4,153,Hochmut,"Der Angriff des Pokémon wird um 1 Stufe erhöht, wenn es ein\nanderes Pokémon mit einem Angriff besiegt."
+27,4,154,Redlichkeit,"Erleidet das Pokémon Schaden durch eine Unlicht-Attacke,\nwird sein Angriff um 1 Stufe erhöht."
+27,4,156,Magiespiegel,"Das Pokémon wirft Status-Attacken auf Angreifer zurück,\nohne selbst davon getroffen zu werden."
+27,4,157,Vegetarier,Pflanzen-Attacken haben keine Wirkung auf das Pokémon.\nStattdessen erhöhen sie seinen Angriff um 1 Stufe.
+27,4,158,Strolch,Die Priorität von Status-Attacken des Pokémon wird\num 1 Stufe erhöht.
+27,4,159,Sandgewalt,"Bei einem Sandsturm wird die Stärke von Gesteins-, Boden-\nund Stahl-Attacken des Pokémon um 30 % erhöht."
+27,4,165,Dufthülle,"Das Pokémon und seine Mitstreiter sind vor den Zuständen\nAnziehung, Verhöhner, Folgensperre, Attackenblockade,\nHeilblockade und Zugabe geschützt."
+27,4,166,Blütenhülle,"Mitstreiter des Pokémon, die dem Typ Pflanze angehören,\nsind vor Statuswertsenkungen sowie vor Statusproblemen\ngeschützt."
+27,4,167,Backentaschen,"Isst das Pokémon eine Beere, regeneriert es zusätzlich\nzum Effekt der Beere noch 1/3 seiner maximalen KP."
+27,4,168,Wandlungskunst,Einmal pro Kampfantritt nimmt das Pokémon beim Einsatz einer\nAttacke deren Typ an.
+27,4,169,Fellkleid,"Der Schaden, den das Pokémon durch physische Attacken\nerleidet, wird halbiert."
+27,4,170,Zauberer,"Trägt das Pokémon kein Item und fügt einem anderen Pokémon\nSchaden mit einer Attacke zu, stiehlt es dem Ziel dabei\nsein Item."
+27,4,171,Kugelsicher,Kugelgeschossattacken haben keine Wirkung auf das Pokémon.
+27,4,172,Unbeugsamkeit,"Der Spezial-Angriff des Pokémon wird um 2 Stufen erhöht,\nwenn einer seiner Statuswerte durch einen Gegner gesenkt wird."
+27,4,173,Titankiefer,Die Stärke von Bissattacken des Pokémon wird\num 50 % erhöht.
+27,4,174,Frostschicht,Normal-Attacken des Pokémon nehmen den Typ Eis an und ihre\nStärke wird um 20 % erhöht.
+27,4,175,Zuckerhülle,Das Pokémon und seine Mitstreiter können nicht in Schlaf\nversetzt oder schläfrig gemacht werden.
+27,4,176,Taktikwechsel,"Führt das Pokémon einen Angriff aus, nimmt es die Klingenform\nan. Setzt es danach die Attacke Königsschild ein, nimmt es die\nSchildform an."
+27,4,177,Orkanschwingen,Bei vollen KP wird die Priorität von Flug-Attacken des\nPokémon um 1 Stufe erhöht.
+27,4,178,Megawumme,Die Stärke von Impulswellenattacken des Pokémon wird\num 50 % erhöht.
+27,4,180,Symbiose,"Das Pokémon gibt Mitstreitern, die ihr Item aufgebraucht haben,\nsein eigenes Item."
+27,4,181,Krallenwucht,Die Stärke von Kontaktattacken des Pokémon wird\num 30 % erhöht.
+27,4,182,Feenschicht,Normal-Attacken des Pokémon nehmen den Typ Fee an und ihre\nStärke wird um 20 % erhöht.
+27,4,183,Viskosität,"Wird das Pokémon von einer Kontaktattacke getroffen,\nwird die Initiative des Angreifers um 1 Stufe gesenkt."
+27,4,184,Zenithaut,Normal-Attacken des Pokémon nehmen den Typ Flug an und\nihre Stärke wird um 20 % erhöht.
+27,4,185,Familienbande,Das Pokémon und sein Junges greifen beide jeweils ein Mal an.\nDie Stärke des Angriffs des Jungen beträgt dabei 25 % der des\nElternteils.
+27,4,187,Feenaura,Die Stärke von Feen-Attacken aller Pokémon wird\num 33 % erhöht.
+27,4,192,Zähigkeit,"Erleidet das Pokémon Schaden durch eine Attacke,\nwird seine Verteidigung um 1 Stufe erhöht."
+27,4,196,Quälerei,Bei Angriffen auf vergiftete oder schwer vergiftete Ziele hat das\nPokémon Volltreffergarantie.
+27,4,199,Wasserblase,"Der Schaden, den das Pokémon durch Feuer-Attacken erleidet,\nwird halbiert. Außerdem wird die Stärke seiner Wasser-Attacken\nverdoppelt und es kann keine Verbrennungen erleiden."
+27,4,201,Wutausbruch,"Fallen die KP des Pokémon durch einen Angriff auf die Hälfte\ndes Maximalwerts oder weniger, wird sein Spezial-Angriff\num 1 Stufe erhöht."
+27,4,202,Schneescharrer,Bei Schnee wird die Initiative des Pokémon verdoppelt.
+27,4,203,Langstrecke,Die Attacken des Pokémon zählen nie als Kontaktattacken.
+27,4,204,Plätscherstimme,Geräuschattacken des Pokémon nehmen den Typ Wasser an.
+27,4,207,Surf-Schweif,"Die Initiative des Pokémon wird verdoppelt,\nwenn ein Elektrofeld aktiv ist."
+27,4,209,Kostümspuk,"Befindet sich das Pokémon in der Verkleideten Form und würde\neigentlich durch eine Attacke Schaden erleiden, verbraucht es\nstattdessen 1/8 seiner maximalen KP und wechselt in die\nEntlarvte Form."
+27,4,212,Korrosion,Das Pokémon kann selbst Pokémon vom Typ Gift oder Stahl\nvergiften oder schwer vergiften.
+27,4,214,Majestät,Gegner können keine Prioritätsattacken gegen das Pokémon\nund seine Mitstreiter einsetzen.
+27,4,215,Magenkrempler,"Erleidet das Pokémon Schaden durch eine Attacke und wird\ndadurch kampfunfähig, wird dem Angreifer Schaden in\nderselben Höhe zugefügt."
+27,4,218,Flauschigkeit,"Der Schaden, den das Pokémon durch Kontaktattacken erleidet,\nwird halbiert. Dafür erleidet es doppelten Schaden durch\nFeuer-Attacken."
+27,4,221,Lockenkopf,"Wird das Pokémon von einer Kontaktattacke getroffen,\nwird die Initiative des Angreifers um 1 Stufe gesenkt."
+27,4,222,Receiver,"Das Pokémon erhält die Fähigkeit eines Mitstreiters,\nwenn dieser besiegt wird."
+27,4,226,Elektro-Erzeuger,"Das Pokémon erzeugt bei Kampfantritt auf dem gesamten\nKampffeld ein Elektrofeld, das 5 Runden lang anhält."
+27,4,240,Spiegelrüstung,"Das Pokémon wirft Effekte, die seine Statuswerte senken\nwürden, auf den Verursacher zurück."
+27,4,242,Stahlrückgrat,"Das Pokémon ignoriert die Effekte von Fähigkeiten und\nAttacken, die Attacken umleiten."
+27,4,245,Sandspeier,"Erleidet das Pokémon Schaden durch eine Attacke,\nerzeugt es einen Sandsturm, der 5 Runden lang anhält."
+27,4,247,Heranreifen,"Der Effekt von Beeren, die das Pokémon isst, wird verdoppelt."
+27,4,250,Mimese,Der Typ des Pokémon ändert sich in Abhängigkeit vom\naktiven Feld.
+27,4,251,Hemmungslos,"Das Pokémon hebt bei Kampfantritt die Zustände Lichtschild,\nReflektor und Auroraschleier auf."
+27,4,254,Rastlose Seele,"Wird das Pokémon von einer Kontaktattacke getroffen,\ntauscht es Fähigkeiten mit dem Angreifer."
+27,4,258,Heißhunger,Das Pokémon ändert am Ende jeder Runde seine Form\nund wechselt somit zwischen dem Pappsatt- und dem\nKohldampfmuster.
+27,4,259,Schnellschuss,Das Pokémon handelt bei Attacken mit gleicher Priorität\nmit 30%iger Wahrscheinlichkeit zuerst.
+27,4,260,Verborgene Faust,"Setzt das Pokémon eine Kontaktattacke ein, trifft sie auch\nZiele, die sich selbst schützen, und fügt ihnen 1/4 des\neigentlichen Schadens zu.\nAlle anderen Effekte werden trotzdem ausgelöst."
+27,4,261,Kuriose Arznei,Das Pokémon hebt bei Kampfantritt alle Statuswertänderungen\nvon Mitstreitern auf.
+27,4,272,Läutersalz,"Das Pokémon kann keine Statusprobleme erleiden und der\nSchaden, den es durch Geister-Attacken erleidet, wird halbiert."
+27,4,278,Superwechsel,"Wird das Pokémon ausgewechselt, nimmt es die Heldenform an."
+27,4,280,Dynamo,"Erleidet das Pokémon Schaden durch eine Attacke,\nwird es in den Zustand Elektro-Boost versetzt."
+27,4,283,Goldkörper,Status-Attacken anderer Pokémon haben keine Wirkung auf\ndas Pokémon.
+27,4,290,Profiteur,"Wird ein Statuswert eines Gegners erhöht, steigt der gleiche\nStatuswert des Pokémon in gleichem Maße."
+27,4,291,Wiederkäuer,"Isst das Pokémon eine Beere, wird es sie einmalig\nam Ende der nächsten Runde erneut essen."
+27,4,292,Scharfkantig,Die Stärke von Schnittattacken des Pokémon wird\num 50 % erhöht.
+27,4,293,Feldherr,"Bei Kampfantritt wird die Stärke der Attacken des Pokémon\nfür jedes bisher besiegte Team-Mitglied um 10 % erhöht,\nbis zu einem Maximalwert von 50 %."
+27,4,295,Giftbelag,"Erleidet das Pokémon Schaden durch eine physische Attacke,\nerzeugt es den Zustand Giftspitzen auf der Gegnerseite."
+27,4,296,Schweifrüstung,Gegner können keine Prioritätsattacken gegen das Pokémon\nund seine Mitstreiter einsetzen.
+27,4,297,Bodenschmaus,Boden-Attacken haben keine Wirkung auf das Pokémon.\nStattdessen füllen sie seine KP um 1/4 des Maximalwerts auf.
+27,4,299,Gastlichkeit,Bei Kampfantritt füllt das Pokémon die KP seines Mitstreiters\num 1/4 des Maximalwerts auf.
+27,4,306,Süßer Nektar,Das Pokémon senkt bei Kampfantritt den Ausweichwert von\nGegnern um 1 Stufe. Dieser Effekt wird pro Kampf nur\nein Mal ausgelöst.
+27,4,311,Stichbohrer,"Setzt das Pokémon eine Kontaktattacke ein, trifft sie auch\nZiele, die sich selbst schützen, und fügt ihnen 1/4 des\neigentlichen Schadens zu.\nAlle anderen Effekte werden trotzdem ausgelöst."
+27,4,312,Drachenschicht,Normal-Attacken des Pokémon nehmen den Typ Drache an und\nihre Stärke wird um 20 % erhöht.
+27,4,313,Emporwindung,"Das Pokémon gilt als nicht auf dem Boden befindlich und\nBoden-Attacken sowie die Zustände Stachler, Giftspitzen\nund Klebenetz haben keine Wirkung auf es.\nDer höchste Statuswert des Pokémon wird um 1 Stufe erhöht,\nwenn es ein anderes Pokémon mit einem Angriff besiegt."
+27,4,315,Mega-Solarladung,"Das Pokémon kann Attacken wie bei Sonnenschein einsetzen,\nauch wenn nicht das Wetter Sonnenschein herrscht."
+27,4,316,Flammenmähne,Die Stärke von Feuer-Attacken des Pokémon wird\num 50 % erhöht.
+27,4,318,Chilispritzer,"Erleidet das Pokémon durch eine Attacke Schaden,\nerleidet der Angreifer Verbrennungen."
+27,5,1,Tanfo,Conferisce al Pokémon il 10% di probabilità di far tentennare\nil bersaglio quando gli infligge danni con una mossa.
+27,5,2,Piovischio,Causa lo stato Pioggia per 5 turni quando il Pokémon\nentra in campo.
+27,5,3,Acceleratore,Aumenta di 1 grado la Velocità del Pokémon alla fine\ndi ogni turno.
+27,5,4,Lottascudo,Protegge dai brutti colpi.
+27,5,5,Vigore,"Quando il Pokémon ha tutti i PS, gli permette di resistere a\nuna mossa che lo manderebbe KO in un solo colpo e rimanere\ninvece con 1 PS. Inoltre, rende il Pokémon immune alle mosse\nche causano KO immediato."
+27,5,6,Umidità,Impedisce a tutti i Pokémon l’uso di mosse e abilità\ndella classe Esplosivo.
+27,5,7,Scioltezza,Rende il Pokémon immune allo stato Paralisi.
+27,5,8,Sabbiavelo,Aumenta l’elusione del 25% se lo stato Tempesta di sabbia\nè attivo.
+27,5,9,Statico,Conferisce al Pokémon il 30% di probabilità di causare lo stato\nParalisi a chi gli infligge una mossa da contatto.
+27,5,10,Assorbivolt,Rende il Pokémon immune alle mosse di tipo Elettro e\ngli permette di recuperare 1/4 dei suoi PS massimi se\nne subisce una.
+27,5,11,Assorbacqua,Rende il Pokémon immune alle mosse di tipo Acqua e\ngli permette di recuperare 1/4 dei suoi PS massimi se\nne subisce una.
+27,5,12,Indifferenza,"Rende il Pokémon immune agli stati Infatuazione, Provocazione,\ne all’effetto di Prepotenza."
+27,5,13,Antimeteo,Neutralizza gli effetti di tutte le condizioni atmosferiche.
+27,5,14,Insettocchi,Aumenta del 30% la precisione delle mosse.
+27,5,15,Insonnia,Rende il Pokémon immune agli stati Sonno e Sonnolenza.
+27,5,17,Immunità,Rende il Pokémon immune agli stati Avvelenamento\ne Iperavvelenamento.
+27,5,18,Fuocardore,Rende il Pokémon immune alle mosse di tipo Fuoco e fa sì che\nentri nello stato Fuocardore se ne subisce una.
+27,5,19,Polvoscudo,Rende il Pokémon immune agli effetti aggiuntivi degli attacchi.
+27,5,20,Mente Locale,Rende il Pokémon immune allo stato Confusione e all’effetto\ndi Prepotenza.
+27,5,21,Ventose,Rende il Pokémon immune a strumenti e mosse dell’avversario\nche causano la sostituzione.
+27,5,22,Prepotenza,Diminuisce l’Attacco degli avversari di 1 grado quando\nil Pokémon entra in campo.
+27,5,23,Pedinombra,Impedisce la sostituzione agli avversari.
+27,5,24,Cartavetro,Permette al Pokémon di causare a chi gli infligge una mossa\nda contatto danni pari a 1/8 dei PS massimi di quest’ultimo.
+27,5,26,Levitazione,"Fa sì che il Pokémon non sia più a contatto con il terreno,\nrendendolo così immune alle mosse di tipo Terra e agli stati\nPunte, Punte velenose e Rete vischiosa."
+27,5,27,Spargispora,"Conferisce al Pokémon il 30% di probabilità di causare lo stato\nAvvelenamento, Paralisi o Sonno a chi gli infligge una mossa\nda contatto."
+27,5,28,Sincronismo,"Fa sì che il Pokémon che subisce lo stato Avvelenamento,\nIperavvelenamento, Paralisi o Scottatura per effetto di\nuna mossa o di un’abilità di un avversario, infligga a\nquell’avversario lo stesso stato."
+27,5,29,Corpochiaro,Impedisce la diminuzione delle statistiche causata da abilità\no mosse di altri Pokémon.
+27,5,30,Alternacura,Cura il Pokémon dai problemi di stato quando questo\nlascia il campo.
+27,5,31,Parafulmine,"Attira verso il Pokémon le mosse di tipo Elettro e le neutralizza,\naumentando invece l’Attacco Speciale di 1 grado."
+27,5,33,Nuotovelox,Raddoppia la Velocità se lo stato Pioggia è attivo.
+27,5,34,Clorofilla,Raddoppia la Velocità se lo stato Sole intenso è attivo.
+27,5,35,Risplendi,Impedisce la diminuzione della precisione del Pokémon\ne fa sì che le sue mosse ignorino le modifiche all’elusione\ndell’avversario.
+27,5,36,Traccia,Permette al Pokémon di copiare l’abilità di un avversario\nquando entra in campo.
+27,5,37,Macroforza,Raddoppia la potenza delle mosse fisiche.
+27,5,38,Velenopunte,Conferisce al Pokémon il 30% di probabilità di causare lo stato\nAvvelenamento a chi gli infligge una mossa da contatto.
+27,5,39,Forza Interiore,Rende il Pokémon immune al tentennamento causato da\nun attacco altrui e all’effetto di Prepotenza.
+27,5,40,Magmascudo,Rende il Pokémon immune allo stato Congelamento.
+27,5,43,Antisuono,Rende il Pokémon immune alle mosse della classe Suono.
+27,5,44,Copripioggia,Restituisce 1/16 dei PS massimi alla fine di ogni turno in cui\nlo stato Pioggia è attivo.
+27,5,45,Sabbiafiume,Causa lo stato Tempesta di sabbia per 5 turni quando\nil Pokémon entra in campo.
+27,5,46,Pressione,Fa sì che le mosse degli avversari che hanno come bersaglio\nquesto Pokémon consumino 1 PP in più.
+27,5,47,Grassospesso,Dimezza i danni subiti dalle mosse di tipo Fuoco e Ghiaccio.
+27,5,48,Sveglialampo,Rende due volte più veloce il risveglio quando il Pokémon è\naffetto dallo stato Sonno.
+27,5,49,Corpodifuoco,Conferisce al Pokémon il 30% di probabilità di causare lo stato\nScottatura a chi gli infligge una mossa da contatto.
+27,5,51,Sguardofermo,Impedisce la diminuzione della precisione del Pokémon\ne fa sì che le sue mosse ignorino le modifiche all’elusione\ndell’avversario.
+27,5,52,Ipertaglio,Impedisce la diminuzione dell’Attacco causata da abilità\no mosse di altri Pokémon.
+27,5,53,Raccolta,"Permette, alla fine del turno, di raccogliere lo strumento usato\nda altri se il Pokémon non ha con sé uno strumento."
+27,5,55,Tuttafretta,"Aumenta del 50% l’Attacco del Pokémon quando utilizza\nuna mossa fisica, ma ne diminuisce la precisione del 20%."
+27,5,56,Incantevole,"Conferisce al Pokémon il 30% di probabilità di causare lo stato\nInfatuazione a chi gli infligge una mossa da contatto, se è\ndel sesso opposto."
+27,5,57,Più,Aumenta del 50% l’Attacco Speciale del Pokémon se ci sono\nin campo alleati con l’abilità Più o l’abilità Meno.
+27,5,58,Meno,Aumenta del 50% l’Attacco Speciale del Pokémon se ci sono\nin campo alleati con l’abilità Più o l’abilità Meno.
+27,5,59,Previsioni,"Cambia il tipo del Pokémon in Acqua, Fuoco o Ghiaccio\nin base alle condizioni atmosferiche."
+27,5,60,Antifurto,Fa sì che lo strumento che il Pokémon ha con sé non possa\nessere rubato né rimosso.
+27,5,61,Muta,Conferisce al Pokémon il 30% di probabilità di guarire\ndai problemi di stato alla fine di ogni turno.
+27,5,62,Dentistretti,"Aumenta del 50% l’Attacco del Pokémon se è affetto da un\nproblema di stato, ignorando anche il dimezzamento dei danni\ndelle mosse fisiche dovuto allo stato Scottatura."
+27,5,63,Pelledura,Aumenta del 50% la Difesa del Pokémon se è affetto\nda un problema di stato.
+27,5,65,Erbaiuto,Potenzia le mosse di tipo Erba del 50% quando i PS\ndel Pokémon scendono a 1/3 o meno.
+27,5,66,Aiutofuoco,Potenzia le mosse di tipo Fuoco del 50% quando i PS\ndel Pokémon scendono a 1/3 o meno.
+27,5,67,Acquaiuto,Potenzia le mosse di tipo Acqua del 50% quando i PS\ndel Pokémon scendono a 1/3 o meno.
+27,5,68,Aiutinsetto,Potenzia le mosse di tipo Coleottero del 50% quando i PS\ndel Pokémon scendono a 1/3 o meno.
+27,5,69,Testadura,Previene la perdita di PS quando il Pokémon usa delle mosse\nche infliggono danni a chi le usa.
+27,5,70,Siccità,Causa lo stato Sole intenso per 5 turni quando il Pokémon\nentra in campo.
+27,5,72,Spiritovivo,Rende il Pokémon immune agli stati Sonno e Sonnolenza.
+27,5,73,Fumochiaro,Impedisce la diminuzione delle statistiche causata da abilità\no mosse di altri Pokémon.
+27,5,74,Forzapura,Raddoppia la potenza delle mosse fisiche.
+27,5,75,Guscioscudo,Protegge dai brutti colpi.
+27,5,77,Intricopiedi,Raddoppia l’elusione del Pokémon se è affetto dallo stato\nConfusione.
+27,5,78,Elettrorapid,Rende il Pokémon immune alle mosse di tipo Elettro e\naumenta di 1 grado la sua Velocità se ne subisce una.
+27,5,79,Antagonismo,"Aumenta del 25% la potenza delle mosse dirette a bersagli\ndello stesso sesso del Pokémon e diminuisce del 25% quella\ndelle mosse dirette a bersagli di sesso opposto.\nNel caso di Pokémon di sesso sconosciuto, le mosse hanno\npotenza normale."
+27,5,80,Cuordeciso,Aumenta di 1 grado la Velocità quando il Pokémon tentenna.
+27,5,81,Mantelneve,Aumenta l’elusione del 25% se lo stato Neve è attivo.
+27,5,82,Voracità,"Permette al Pokémon di mangiare la sua bacca quando i suoi\nPS scendono a metà o meno, senza attendere che siano 1/4\no meno."
+27,5,83,Grancollera,Aumenta l’Attacco fino al 6º grado se il Pokémon subisce\nun brutto colpo.
+27,5,84,Agiltecnica,Raddoppia la Velocità del Pokémon se usa o perde\nuno strumento.
+27,5,85,Antifuoco,Dimezza i danni subiti dalle mosse di tipo Fuoco e\ndallo stato Scottatura.
+27,5,86,Disinvoltura,Raddoppia le modifiche alle statistiche.
+27,5,87,Pellearsa,"Rende il Pokémon immune alle mosse di tipo Acqua e gli\npermette di recuperare 1/4 dei suoi PS massimi se ne subisce\nuna. Tuttavia, fa sì che le mosse di tipo Fuoco gli infliggano\nil 25% dei danni in più.\nPermette anche di recuperare 1/8 dei PS massimi alla fine\ndi ogni turno se lo stato Pioggia è attivo, ma ne fa perdere\n1/8 se lo stato attivo è Sole intenso."
+27,5,89,Ferropugno,Aumenta del 20% la potenza delle mosse della classe Pugno.
+27,5,90,Velencura,"Permette al Pokémon di recuperare, piuttosto che perdere,\n1/8 dei PS massimi alla fine di ogni turno in cui è affetto\ndallo stato Avvelenamento o Iperavvelenamento."
+27,5,91,Adattabilità,Raddoppia la potenza delle mosse dello stesso tipo\ndel Pokémon anziché aumentarla del 50%.
+27,5,92,Abillegame,Fa sì che le mosse multicolpo mandino sempre a segno\nil massimo dei colpi possibili.
+27,5,93,Idratazione,Cura il Pokémon dai problemi di stato alla fine di ogni turno\nin cui lo stato Pioggia è attivo.
+27,5,94,Solarpotere,"Aumenta del 50% l’Attacco Speciale del Pokémon se lo stato\nSole intenso è attivo, ma gli fa perdere 1/8 dei suoi PS massimi\nalla fine di ogni turno."
+27,5,95,Piedisvelti,"Aumenta del 50% la Velocità del Pokémon se è affetto\nda un problema di stato, ignorando anche la diminuzione\ndella Velocità dovuta allo stato Paralisi."
+27,5,97,Cecchino,"Aumenta del 125% la potenza dei brutti colpi, invece\ndel normale 50%."
+27,5,98,Magicscudo,Permette al Pokémon di subire danni solo dagli attacchi.
+27,5,99,Nullodifesa,Fa sì che la precisione di tutte le mosse sferrate sia dal Pokémon\nche dagli avversari diventi pari al 100%.
+27,5,100,Rallentatore,Permette di usare le mosse dopo le altre con la stessa priorità.
+27,5,101,Tecnico,Potenzia del 50% le mosse con potenza pari o inferiore a 60.
+27,5,102,Fogliamanto,Rende il Pokémon immune ai problemi di stato se lo stato\nattivo è Sole intenso.
+27,5,103,Impaccio,Annulla gli effetti degli strumenti che il Pokémon ha con sé.
+27,5,104,Rompiforma,"Fa sì che le mosse del Pokémon ignorino l’abilità altrui,\ncon l’eccezione di alcune abilità."
+27,5,105,Supersorte,Causa lo stato Brutto colpo+1.
+27,5,106,Scoppio,"Permette al Pokémon, quando va KO per effetto di una mossa\nda contatto, di causare a chi gliel’ha inferta danni pari a 1/4\ndei PS massimi di quest’ultimo."
+27,5,107,Presagio,Rivela se gli avversari hanno mosse superefficaci o che causano\nKO immediato quando il Pokémon entra in campo.
+27,5,108,Premonizione,Rivela una mossa con potenza alta tra quelle degli avversari\nquando il Pokémon entra in campo.
+27,5,109,Imprudenza,"Permette al Pokémon di attaccare e subire attacchi ignorando\nle modifiche alle statistiche dell’altro Pokémon, tranne quelle\nalla Velocità."
+27,5,111,Filtro,Riduce del 25% i danni subiti dalle mosse superefficaci.
+27,5,113,Nervisaldi,"Permette di colpire Pokémon di tipo Spettro con mosse\ndi tipo Normale e Lotta. Inoltre, rende il Pokémon immune\nall’effetto di Prepotenza."
+27,5,115,Corpogelo,Restituisce 1/16 dei PS massimi alla fine di ogni turno in cui\nlo stato Neve è attivo.
+27,5,116,Solidroccia,Riduce del 25% i danni subiti dalle mosse superefficaci.
+27,5,117,Scendineve,Causa lo stato Neve per 5 turni quando il Pokémon entra\nin campo.
+27,5,119,Indagine,Rivela lo strumento che un avversario ha con sé quando\nil Pokémon entra in campo.
+27,5,120,Temerarietà,Potenzia del 20% le mosse che infliggono danni a chi le usa.
+27,5,124,Arraffalesto,"Permette al Pokémon di rubare uno strumento, se non ne ha\ngià uno, a chi lo colpisce con un mossa da contatto."
+27,5,125,Forzabruta,"Potenzia le mosse del 30%, ma annulla gli effetti aggiuntivi\ndegli attacchi."
+27,5,126,Inversione,"Inverte l’effetto delle modifiche alle statistiche, che quindi\naumentano quando dovrebbero diminuire e viceversa."
+27,5,127,Agitazione,Impedisce agli avversari di mangiare le bacche.
+27,5,128,Agonismo,Aumenta di 2 gradi l’Attacco del Pokémon quando\nle sue statistiche vengono ridotte da un avversario.
+27,5,130,Corpofunesto,Conferisce al Pokémon il 30% di probabilità di causare lo stato\nMossa bloccata per 4 turni a chi lo attacca.
+27,5,131,Curacuore,Conferisce agli alleati il 50% di probabilità di guarire\ndai problemi di stato alla fine di ogni turno.
+27,5,132,Amicoscudo,Riduce del 25% i danni inflitti agli alleati.
+27,5,133,Sottilguscio,Riduce di 1 grado la Difesa del Pokémon e aumenta di 2 gradi\nla sua Velocità se subisce danni da una mossa fisica.
+27,5,134,Metalpesante,Raddoppia il peso del Pokémon.
+27,5,135,Metalleggero,Dimezza il peso del Pokémon.
+27,5,136,Multisquame,Dimezza i danni subiti dal Pokémon quando ha tutti i PS.
+27,5,139,Coglibacche,Conferisce al Pokémon il 50% di probabilità di rigenerare\nla bacca utilizzata alla fine di ogni turno. La percentuale sale\nal 100% se lo stato Sole intenso è attivo.
+27,5,140,Telepatia,Permette al Pokémon di evitare gli attacchi degli alleati.
+27,5,141,Altalena,"Alla fine di ogni turno, aumenta di 2 gradi una statistica\ne riduce di 1 grado un’altra."
+27,5,142,Copricapo,"Rende il Pokémon immune ai danni causati dallo stato\nTempesta di sabbia, e da mosse e abilità della classe Polvere."
+27,5,143,Velentocco,Conferisce al Pokémon il 30% di probabilità di causare lo stato\nAvvelenamento al bersaglio quando lo colpisce con una mossa\nda contatto.
+27,5,144,Rigenergia,Permette al Pokémon di recuperare 1/3 dei suoi PS massimi\nquando lascia il campo.
+27,5,145,Pettinfuori,Impedisce la diminuzione della Difesa causata da abilità\no mosse di altri Pokémon.
+27,5,146,Remasabbia,Raddoppia la Velocità se lo stato Tempesta di sabbia è attivo.
+27,5,148,Ponderazione,Aumenta la potenza della mossa del 30% se il Pokémon agisce\nper ultimo.
+27,5,149,Illusione,"Fa sì che il Pokémon assuma le sembianze dell’ultimo Pokémon\ndella propria squadra quando entra in campo. Se subisce danni\nda una mossa, torna al suo aspetto normale."
+27,5,150,Sosia,"Trasforma il Pokémon in chi ha davanti, copiandone anche\ntutte le statistiche eccetto i PS."
+27,5,151,Intrapasso,"Fa sì che le mosse del Pokémon ignorino gli effetti degli stati\nSchermo di luce, Riflesso, Velo dell’aurora, Salvaguardia\ne Sostituto."
+27,5,152,Mummia,Trasforma in Mummia l’abilità di chi colpisce il Pokémon\ncon una mossa da contatto.
+27,5,153,Arroganza,Aumenta di 1 grado l’Attacco quando il Pokémon causa un KO\ncon un attacco.
+27,5,154,Giustizia,Aumenta di 1 grado l’Attacco del Pokémon quando subisce\ndanni da una mossa di tipo Buio.
+27,5,156,Magispecchio,"Permette al Pokémon di rimandare al mittente le mosse di stato,\nsenza subirne gli effetti."
+27,5,157,Mangiaerba,Rende il Pokémon immune alle mosse di tipo Erba e\naumenta di 1 grado il suo Attacco se ne subisce una.
+27,5,158,Burla,Aumenta di 1 grado la priorità delle mosse di stato\ndel Pokémon.
+27,5,159,Silicoforza,"Potenzia del 30% le mosse di tipo Roccia, Terra e Acciaio\nse lo stato Tempesta di sabbia è attivo."
+27,5,165,Aromavelo,"Rende il Pokémon e i suoi alleati immuni agli stati Infatuazione,\nProvocazione, Ripetizione bloccata, Mossa bloccata, Cura\ndisabilitata e Ripetizione."
+27,5,166,Fiorvelo,Rende gli alleati di tipo Erba immuni alla diminuzione\ndelle statistiche e ai problemi di stato.
+27,5,167,Guancegonfie,"Fa sì che oltre a ricevere l’effetto della bacca mangiata,\nil Pokémon recuperi anche 1/3 dei suoi PS massimi."
+27,5,168,Mutatipo,Cambia il tipo del Pokémon in quello della prima mossa che\nusa ogni volta che entra in campo.
+27,5,169,Foltopelo,Dimezza i danni subiti dalle mosse fisiche.
+27,5,170,Prestigiatore,"Permette al Pokémon, se non ha con sé uno strumento,\ndi rubarlo al bersaglio quando gli infligge danni con una mossa."
+27,5,171,Antiproiettile,Rende il Pokémon immune alle mosse della classe Proiettile.
+27,5,172,Tenacia,Aumenta di 2 gradi l’Attacco Speciale quando le statistiche\ndiminuiscono a causa di un avversario.
+27,5,173,Ferromascella,Potenzia del 50% le mosse della classe Denti.
+27,5,174,Pellegelo,Cambia le mosse di tipo Normale in tipo Ghiaccio e aumenta\nla loro potenza del 20%.
+27,5,175,Dolcevelo,Rende il Pokémon e i suoi alleati immuni agli stati Sonno\ne Sonnolenza.
+27,5,176,Accendilotta,Permette al Pokémon di assumere la Forma Spada se usa\nun attacco e la Forma Scudo se usa Scudo Reale.
+27,5,177,Aliraffica,Aumenta di 1 grado la priorità delle mosse di tipo Volante\ndel Pokémon quando ha tutti i PS.
+27,5,178,Megalancio,Potenzia del 50% le mosse della classe Pulsar.
+27,5,180,Simbiosi,Permette al Pokémon di passare lo strumento a un alleato\nquando questo consuma il proprio.
+27,5,181,Unghiedure,Potenzia del 30% le mosse da contatto.
+27,5,182,Pellefolletto,Cambia le mosse di tipo Normale in tipo Folletto e aumenta\nla loro potenza del 20%.
+27,5,183,Viscosità,Riduce di 1 grado la Velocità di chi colpisce il Pokémon\ncon una mossa da contatto.
+27,5,184,Pellecielo,Rende le mosse di tipo Normale di tipo Volante\ne aumenta la loro potenza del 20%.
+27,5,185,Amorefiliale,Permette al Pokémon e al suo piccolo di attaccare due volte.\nIl piccolo attacca con una potenza pari al 25% di quella\ndel Pokémon.
+27,5,187,Aurafolletto,Aumenta del 33% la potenza delle mosse di tipo Folletto\ndi tutti i Pokémon.
+27,5,192,Sopportazione,Aumenta di 1 grado la Difesa del Pokémon quando subisce\ndanni da una mossa.
+27,5,196,Spietatezza,Fa sì che gli attacchi sferrati su un bersaglio affetto dallo stato\nAvvelenamento o Iperavvelenamento risultino sempre\nin brutti colpi.
+27,5,199,Bolladacqua,"Raddoppia la potenza delle mosse di tipo Acqua del Pokémon\ne dimezza i danni che subisce da quelle di tipo Fuoco. Inoltre,\nlo rende immune allo stato Scottatura."
+27,5,201,Furore,Aumenta di 1 grado l’Attacco Speciale del Pokémon se i suoi PS\nscendono a metà o meno a causa di un attacco.
+27,5,202,Spalaneve,Raddoppia la Velocità se lo stato Neve è attivo.
+27,5,203,Distacco,Fa sì che le mosse usate dal Pokémon non siano considerate\ncome mosse da contatto.
+27,5,204,Idrovoce,Rende tutte le mosse di classe Suono del Pokémon\ndi tipo Acqua.
+27,5,207,Codasurf,Raddoppia la Velocità se lo stato Campo elettrico è attivo.
+27,5,209,Fantasmanto,"Fa sì che il Pokémon, anziché subire danni normali quando viene\nattaccato in Forma Mascherata, perda 1/8 dei suoi PS massimi\ne assuma la Forma Smascherata."
+27,5,212,Corrosione,Permette al Pokémon di causare gli stati Avvelenamento e\nIperavvelenamento anche a bersagli di tipo Acciaio o Veleno.
+27,5,214,Regalità,Impedisce agli avversari di usare mosse che hanno priorità alta\ncontro il Pokémon o i suoi alleati.
+27,5,215,Espellinterno,"Se il Pokémon subisce danni da una mossa che lo manda KO,\ninfligge a chi lo ha colpito gli stessi danni subiti."
+27,5,218,Morbidone,"Dimezza i danni subiti dalle mosse da contatto, ma raddoppia\nquelli subiti dalle mosse di tipo Fuoco."
+27,5,221,Boccolidoro,Riduce di 1 grado la Velocità di chi colpisce il Pokémon\ncon una mossa da contatto.
+27,5,222,Ricezione,Cambia l’abilità del Pokémon in quella di un alleato andato KO.
+27,5,226,Elettrogenesi,"Quando il Pokémon entra in campo, causa lo stato Campo\nElettrico sull’intero campo di lotta per 5 turni."
+27,5,240,Blindospecchio,"Permette al Pokémon di rimandare al mittente le diminuzioni\nalle statistiche, senza subirne gli effetti."
+27,5,242,Volontà di Ferro,Permette di ignorare gli effetti di mosse e abilità avversarie\nche attirano le mosse.
+27,5,245,Sputasabbia,Causa lo stato Tempesta di sabbia per 5 turni quando\nil Pokémon subisce un attacco.
+27,5,247,Maturazione,Raddoppia gli effetti delle bacche mangiate.
+27,5,250,Mimetismo,Cambia il tipo del Pokémon a seconda dello stato\nCampo attivo.
+27,5,251,Annullabarriere,"Rimuove gli stati Schermo di luce, Riflesso e Velo dell’aurora\nquando il Pokémon entra in campo."
+27,5,254,Anima Errante,Scambia l’abilità del Pokémon con l’abilità di chi lo colpisce\ncon una mossa da contatto.
+27,5,258,Pancialterna,"Cambia la forma del Pokémon alla fine di ogni turno,\nalternando tra Motivo Panciapiena e Motivo Panciavuota."
+27,5,259,Colpolesto,Conferisce al Pokémon il 30% di probabilità di sferrare le mosse\nprima di altre con la stessa priorità.
+27,5,260,Pugni Invisibili,Ignora gli effetti protettivi del bersaglio quando il Pokémon\nutilizza una mossa da contatto e infligge 1/4 dei danni originari.\nPermette comunque di attivare eventuali altri effetti applicabili\nal bersaglio.
+27,5,261,Stranofarmaco,Annulla le modifiche alle statistiche degli alleati del Pokémon\nquando entra in campo.
+27,5,272,Sale Purificante,Rende il Pokémon immune ai problemi di stato e dimezza\ni danni subiti dalle mosse di tipo Spettro.
+27,5,278,Supercambio,Permette al Pokémon di assumere la Forma Possente quando\nlascia il campo.
+27,5,280,Convertivolt,Fa entrare il Pokémon nello stato Carica elettrica quando\nsubisce danni da una mossa.
+27,5,283,Corpo Aureo,Rende il Pokémon immune alle mosse di stato sferrate da altri.
+27,5,290,Scrocco,"Permette al Pokémon, quando un avversario aumenta\nuna statistica, di aumentare anche la propria."
+27,5,291,Ruminante,"Permette al Pokémon, alla fine del turno successivo a quello\nin cui ha usato una bacca, di usarla una seconda volta."
+27,5,292,Affilama,Potenzia del 50% le mosse della classe Tagliente.
+27,5,293,Generale Supremo,"Aumenta la potenza delle mosse del Pokémon del 10% per\nciascun alleato andato KO durante la lotta, fino a un massimo\ndi 50%. L’effetto si attiva quando il Pokémon entra in campo."
+27,5,295,Mantossina,Causa lo stato Punte velenose nel campo avversario quando\nil Pokémon subisce danni da una mossa fisica.
+27,5,296,Codarmatura,Impedisce agli avversari di usare mosse che hanno priorità alta\ncontro il Pokémon o i suoi alleati.
+27,5,297,Mangiaterra,Rende il Pokémon immune alle mosse di tipo Terra e\ngli permette di recuperare 1/4 dei suoi PS massimi se\nne subisce una.
+27,5,299,Ospitalità,Restituisce 1/4 dei PS massimi a un alleato del Pokémon\nquando quest’ultimo entra in campo.
+27,5,306,Sciroppo Sublime,Riduce di 1 grado l’elusione degli avversari quando il Pokémon\nentra in campo. L’effetto si attiva una volta per lotta.
+27,5,311,Punta Perforante,Ignora gli effetti protettivi del bersaglio quando il Pokémon\nutilizza una mossa da contatto e infligge 1/4 dei danni originari.\nPermette comunque di attivare eventuali altri effetti applicabili\nal bersaglio.
+27,5,312,Pelledrago,Cambia le mosse di tipo Normale in tipo Drago e aumenta\nla loro potenza del 20%.
+27,5,313,Rapidascesa,"Fa sì che il Pokémon non sia più a contatto con il terreno,\nrendendolo così immune alle mosse di tipo Terra e agli stati\nPunte, Punte velenose e Rete vischiosa. Aumenta di 1 grado\nla sua statistica più alta quando causa un KO con un attacco."
+27,5,315,Megasolar,Permette di usare le mosse come se lo stato Sole intenso\nfosse attivo.
+27,5,316,Pirocriniera,Aumenta del 50% la potenza delle mosse di tipo Fuoco.
+27,5,318,Spargipiccante,Causa lo stato Scottatura a chi sferra una mossa che infligge\ndanni contro il Pokémon.
+27,6,1,Hedor,Hace que el Pokémon tenga una probabilidad del 10 % de\namedrentar al objetivo al infligirle daño con un movimiento.
+27,6,2,Llovizna,Hace que llueva durante cinco turnos cuando el Pokémon\nentra en combate.
+27,6,3,Impulso,Aumenta un nivel la Velocidad del Pokémon al final de cada\nturno.
+27,6,4,Armadura Batalla,Evita que el Pokémon reciba golpes críticos.
+27,6,5,Robustez,"Si el Pokémon tiene los PS al máximo, aguanta con 1 PS\nun movimiento que lo debilitaría de un golpe. Además, no\nle afectan los movimientos fulminantes."
+27,6,6,Humedad,Evita que se puedan utilizar movimientos explosivos y\nque se activen las habilidades explosivas. Afecta a todos\nlos Pokémon.
+27,6,7,Flexibilidad,Evita que el Pokémon pueda ser paralizado.
+27,6,8,Velo Arena,Aumenta un 25 % la Evasión del Pokémon durante las tormentas\nde arena.
+27,6,9,Electricidad Estática,Tiene una probabilidad del 30 % de paralizar al atacante\nsi el Pokémon es alcanzado por un movimiento de contacto.
+27,6,10,Absorbe Electricidad,Hace al Pokémon inmune a los movimientos de tipo Eléctrico\ny restaura 1/4 de sus PS máximos si recibe uno.
+27,6,11,Absorbe Agua,Hace al Pokémon inmune a los movimientos de tipo Agua\ny restaura 1/4 de sus PS máximos si recibe uno.
+27,6,12,Despiste,Evita que el Pokémon adquiera los estados Enamorado y\nMofa y que se sienta intimidado.
+27,6,13,Aclimatación,Anula todos los efectos del tiempo atmosférico.
+27,6,14,Ojo Compuesto,Aumenta un 30 % la precisión de los movimientos del Pokémon.
+27,6,15,Insomnio,Evita que el Pokémon pueda quedarse dormido o somnoliento.
+27,6,17,Inmunidad,Evita que el Pokémon pueda ser envenenado o gravemente\nenvenenado.
+27,6,18,Absorbe Fuego,Hace al Pokémon inmune a los movimientos de tipo Fuego\ny le provoca el estado Absorbe Fuego si recibe uno.
+27,6,19,Polvo Escudo,Hace al Pokémon inmune a los efectos secundarios de\nlos ataques.
+27,6,20,Ritmo Propio,Evita que el Pokémon pueda ser confundido o se sienta\nintimidado.
+27,6,21,Ventosas,Hace al Pokémon inmune a los movimientos y objetos de otros\nPokémon que fuerzan el cambio.
+27,6,22,Intimidación,Reduce un nivel el Ataque del rival cuando el Pokémon entra\nen combate.
+27,6,23,Sombra Trampa,Impide que el rival sea cambiado por otro Pokémon.
+27,6,24,Piel Tosca,Hace que el atacante pierda 1/8 de sus PS máximos\nsi el Pokémon es alcanzado por un movimiento de contacto.
+27,6,26,Levitación,"Hace que el Pokémon flote y deje de estar en contacto con\nel suelo, lo que impide que le afecten los movimientos de tipo\nTierra y los estados Púas, Púas tóxicas y Red Viscosa."
+27,6,27,Efecto Espora,"Tiene una probabilidad del 30 % de envenenar, paralizar\no dormir al atacante si el Pokémon es alcanzado por un\nmovimiento de contacto."
+27,6,28,Sincronía,"Si el Pokémon resulta quemado, envenenado, gravemente\nenvenenado o paralizado por un movimiento o la habilidad\nde otro Pokémon, le provoca el mismo problema de estado."
+27,6,29,Cuerpo Puro,Evita que los movimientos o la habilidad de otros Pokémon\nreduzcan las características del Pokémon.
+27,6,30,Cura Natural,Elimina los problemas de estado del Pokémon cuando se retira\ndel combate.
+27,6,31,Pararrayos,"Atrae hacia el Pokémon los movimientos de tipo Eléctrico\ny lo hace inmune a ellos. Además, aumenta un nivel su Ataque\nEspecial si recibe uno."
+27,6,33,Nado Rápido,Duplica la Velocidad del Pokémon cuando llueve.
+27,6,34,Clorofila,Duplica la Velocidad del Pokémon cuando hace sol.
+27,6,35,Iluminación,Evita que la Precisión del Pokémon pueda verse reducida\ne ignora los cambios en la Evasión del objetivo.
+27,6,36,Calco,Sustituye la habilidad del Pokémon por la de un rival cuando\nentra en combate.
+27,6,37,Potencia,Duplica la potencia de los ataques físicos del Pokémon.
+27,6,38,Punto Tóxico,Tiene una probabilidad del 30 % de envenenar al atacante\nsi el Pokémon es alcanzado por un movimiento de contacto.
+27,6,39,Fuerza Mental,Evita que el Pokémon se amedrente ante los ataques de otros\nPokémon y que se sienta intimidado.
+27,6,40,Escudo Magma,Evita que el Pokémon pueda ser congelado.
+27,6,43,Insonorizar,Hace al Pokémon inmune a los movimientos que usan sonido.
+27,6,44,Cura Lluvia,Restaura 1/16 de los PS máximos del Pokémon al final de cada\nturno cuando llueve.
+27,6,45,Chorro Arena,Provoca una tormenta de arena que dura cinco turnos cuando\nel Pokémon entra en combate.
+27,6,46,Presión,Hace que los movimientos que el rival use contra el Pokémon\nconsuman 1 PP más.
+27,6,47,Sebo,Reduce a la mitad el daño que el Pokémon recibe de\nmovimientos de tipo Fuego o Hielo.
+27,6,48,Madrugar,"Si el Pokémon se duerme, tardará la mitad de tiempo en\ndespertarse."
+27,6,49,Cuerpo Llama,Tiene una probabilidad del 30 % de quemar al atacante\nsi el Pokémon es alcanzado por un movimiento de contacto.
+27,6,51,Vista Lince,Evita que la Precisión del Pokémon pueda verse reducida\ne ignora los cambios en la Evasión del objetivo.
+27,6,52,Corte Fuerte,Evita que los movimientos o la habilidad de otros Pokémon\nreduzcan el Ataque del Pokémon.
+27,6,53,Recogida,"Si el Pokémon no lleva un objeto, recoge al final del turno\nel que otro Pokémon haya consumido."
+27,6,55,Entusiasmo,"Cuando el Pokémon usa un ataque físico, aumenta un 50 %\nsu Ataque, pero reduce un 20 % su Precisión."
+27,6,56,Gran Encanto,Tiene una probabilidad del 30 % de enamorar al atacante\nsi el Pokémon es alcanzado por un movimiento de contacto.\nSolo tiene efecto si el atacante es del sexo opuesto al del\nPokémon.
+27,6,57,Más,Aumenta un 50 % el Ataque Especial del Pokémon si un aliado\npresente en combate tiene la habilidad Más o la habilidad\nMenos.
+27,6,58,Menos,Aumenta un 50 % el Ataque Especial del Pokémon si un aliado\npresente en combate tiene la habilidad Más o la habilidad\nMenos.
+27,6,59,Predicción,"Cambia el tipo del Pokémon al tipo Agua, Fuego o Hielo\nen función del tiempo atmosférico."
+27,6,60,Viscosidad,Impide que el objeto que lleva el Pokémon pueda ser robado\no se pierda.
+27,6,61,Mudar,Tiene una probabilidad del 30 % de eliminar los problemas\nde estado del Pokémon al final de cada turno.
+27,6,62,Agallas,Aumenta un 50 % el Ataque del Pokémon si sufre un problema\nde estado. Ignora la reducción a la mitad del daño que infligen\nlos ataques físicos provocada por las quemaduras.
+27,6,63,Escama Especial,Aumenta un 50 % la Defensa del Pokémon si sufre un problema\nde estado.
+27,6,65,Espesura,Aumenta un 50 % la potencia de los movimientos de tipo Planta\ndel Pokémon cuando sus PS máximos se ven reducidos a 1/3 o\nmenos.
+27,6,66,Mar Llamas,Aumenta un 50 % la potencia de los movimientos de tipo Fuego\ndel Pokémon cuando sus PS máximos se ven reducidos a 1/3 o\nmenos.
+27,6,67,Torrente,Aumenta un 50 % la potencia de los movimientos de tipo Agua\ndel Pokémon cuando sus PS máximos se ven reducidos a 1/3 o\nmenos.
+27,6,68,Enjambre,Aumenta un 50 % la potencia de los movimientos de tipo Bicho\ndel Pokémon cuando sus PS máximos se ven reducidos a 1/3 o\nmenos.
+27,6,69,Cabeza Roca,Evita que el Pokémon pierda PS al usar movimientos que\ntambién hieren al usuario.
+27,6,70,Sequía,Hace que salga el sol durante cinco turnos cuando el Pokémon\nentra en combate.
+27,6,72,Espíritu Vital,Evita que el Pokémon pueda quedarse dormido o somnoliento.
+27,6,73,Humo Blanco,Evita que los movimientos o la habilidad de otros Pokémon\nreduzcan las características del Pokémon.
+27,6,74,Energía Pura,Duplica la potencia de los ataques físicos del Pokémon.
+27,6,75,Caparazón,Evita que el Pokémon reciba golpes críticos.
+27,6,77,Tumbos,Duplica la Evasión del Pokémon si está confuso.
+27,6,78,Electromotor,Hace al Pokémon inmune a los movimientos de tipo Eléctrico\ny aumenta un nivel su Velocidad si recibe uno.
+27,6,79,Rivalidad,Aumenta un 25 % la potencia de los movimientos del Pokémon\nsi el objetivo es del mismo sexo o la reduce un 25 % si es del\nsexo opuesto. Se mantiene igual si se desconoce el sexo del\nPokémon o del objetivo.
+27,6,80,Impasible,Aumenta un nivel la Velocidad del Pokémon cuando se\namedrenta.
+27,6,81,Manto Níveo,Aumenta un 25 % la Evasión del Pokémon cuando nieva.
+27,6,82,Gula,Permite que el Pokémon consuma la baya que lleva cuando\nsus PS máximos se ven reducidos a la mitad o menos en vez\nde esperar a que le queden 1/4 o menos.
+27,6,83,Irascible,Aumenta hasta el sexto nivel el Ataque del Pokémon si recibe\nun golpe crítico.
+27,6,84,Liviano,Duplica la Velocidad del Pokémon si consume o pierde\nel objeto que lleva.
+27,6,85,Ignífugo,Reduce a la mitad el daño que el Pokémon recibe de\nmovimientos de tipo Fuego y por quemaduras.
+27,6,86,Simple,Duplica los cambios en las características.
+27,6,87,Piel Seca,"Hace al Pokémon inmune a los movimientos de tipo Agua\ny restaura 1/4 de sus PS máximos si recibe uno, pero aumenta\nun 25 % el daño que recibe de movimientos de tipo Fuego.\nRestaura 1/8 de sus PS máximos al final de cada turno cuando\nllueve, pero resta 1/8 de sus PS máximos al final de cada turno\ncuando hace sol."
+27,6,89,Puño Férreo,Aumenta un 20 % la potencia de los movimientos con los puños\ndel Pokémon.
+27,6,90,Antídoto,Restaura 1/8 de los PS máximos del Pokémon al final de cada\nturno en vez de restárselos si resulta envenenado o gravemente\nenvenenado.
+27,6,91,Adaptable,Aumenta un 100 % la potencia de los movimientos cuyo tipo\ncoincida con el del Pokémon en vez de un 50 %.
+27,6,92,Encadenado,Permite ejecutar siempre los movimientos de ataque múltiple\ncon el número máximo de golpes.
+27,6,93,Hidratación,Elimina todos los problemas de estado del Pokémon al final de\ncada turno cuando llueve.
+27,6,94,Poder Solar,"Aumenta un 50 % el Ataque Especial del Pokémon cuando hace\nsol, pero le hace perder 1/8 de sus PS máximos al final de cada\nturno."
+27,6,95,Pies Rápidos,Aumenta un 50 % la Velocidad del Pokémon si sufre un\nproblema de estado. Ignora la reducción de la Velocidad\nprovocada por la parálisis.
+27,6,97,Francotirador,Aumenta un 125 % la potencia de los golpes críticos del\nPokémon en vez de un 50 %.
+27,6,98,Muro Mágico,El Pokémon solo recibe daño de ataques.
+27,6,99,Indefenso,Los movimientos del Pokémon y los de su atacante tienen una\nprecisión del 100 %.
+27,6,100,Rezagado,Hace que el Pokémon actúe el último cuando su movimiento\ntiene la misma prioridad que otros.
+27,6,101,Experto,Aumenta un 50 % la potencia de los movimientos del Pokémon\nsi esta es de 60 o inferior.
+27,6,102,Defensa Hoja,Hace al Pokémon inmune a los problemas de estado cuando\nhace sol.
+27,6,103,Zoquete,Anula los efectos del objeto que lleva el Pokémon.
+27,6,104,Rompemoldes,"Los movimientos del Pokémon no se ven afectados por\nla habilidad del objetivo, salvo algunas excepciones."
+27,6,105,Afortunado,Aumenta un nivel la probabilidad de asestar golpes críticos\ndel Pokémon.
+27,6,106,Detonación,Hace que el atacante pierda 1/4 de sus PS máximos si debilita\nal Pokémon con un movimiento de contacto.
+27,6,107,Anticipación,Permite prever los movimientos del rival que sean fulminantes o\nsupereficaces contra el Pokémon cuando este entra en combate.
+27,6,108,Alerta,Permite identificar el movimiento más potente del rival cuando\nel Pokémon entra en combate.
+27,6,109,Ignorante,"Ignora los cambios en las características del objetivo,\na excepción de la Velocidad, cuando el Pokémon ataca\no recibe daño."
+27,6,111,Filtro,Reduce un 25 % el daño que el Pokémon recibe de movimientos\nsupereficaces.
+27,6,113,Intrépido,"Permite alcanzar a Pokémon de tipo Fantasma con movimientos\nde tipo Normal o Lucha. Además, evita que el Pokémon se\nsienta intimidado."
+27,6,115,Gélido,Restaura 1/16 de los PS máximos del Pokémon al final de cada\nturno cuando nieva.
+27,6,116,Roca Sólida,Reduce un 25 % el daño que el Pokémon recibe de movimientos\nsupereficaces.
+27,6,117,Nevada,Hace que nieve durante cinco turnos cuando el Pokémon entra\nen combate.
+27,6,119,Cacheo,Permite identificar el objeto que lleva el rival cuando el\nPokémon entra en combate.
+27,6,120,Audaz,Aumenta un 20 % la potencia de los movimientos del Pokémon\nque también hieren al usuario.
+27,6,124,Hurto,"Si el Pokémon no lleva un objeto, roba el del Pokémon que\nlo ataque con un movimiento de contacto."
+27,6,125,Potencia Bruta,"Aumenta un 30 % la potencia de los movimientos del Pokémon,\npero anula sus efectos secundarios."
+27,6,126,Respondón,Invierte los cambios en las características que sufra el Pokémon:\nse reducen en vez de aumentar y aumentan en vez de reducirse.
+27,6,127,Nerviosismo,Impide que el rival consuma bayas.
+27,6,128,Competitivo,Aumenta dos niveles el Ataque del Pokémon cuando el rival\nle reduce cualquiera de sus características.
+27,6,130,Cuerpo Maldito,Tiene una probabilidad del 30 % de provocar el estado\nMovimiento anulado en el atacante durante cuatro turnos\nsi el Pokémon recibe daño de un movimiento.
+27,6,131,Alma Cura,Tiene una probabilidad del 50 % de eliminar los problemas\nde estado de un aliado al final de cada turno.
+27,6,132,Compiescolta,Reduce un 25 % el daño que reciben los aliados.
+27,6,133,Armadura Frágil,Reduce un nivel la Defensa del Pokémon y aumenta dos niveles\nsu Velocidad cuando recibe daño de un ataque físico.
+27,6,134,Metal Pesado,Duplica el peso del Pokémon.
+27,6,135,Metal Liviano,Reduce a la mitad el peso del Pokémon.
+27,6,136,Multiescamas,Reduce a la mitad el daño que recibe el Pokémon cuando sus\nPS están al máximo.
+27,6,139,Cosecha,"Tras consumir una baya, el Pokémon tiene una probabilidad\ndel 50 % de recolectar otra igual al final de cada turno.\nLa probabilidad es del 100 % cuando hace sol."
+27,6,140,Telepatía,Permite evadir los ataques de los aliados.
+27,6,141,Veleta,Aumenta dos niveles una de las características del Pokémon y\nreduce un nivel otra de ellas al final de cada turno.
+27,6,142,Funda,Hace al Pokémon inmune al daño causado por las tormentas de\narena y a las habilidades y los movimientos que usan polvos.
+27,6,143,Toque Tóxico,Tiene una probabilidad del 30 % de envenenar al objetivo al\nque el Pokémon ataque con un movimiento de contacto.
+27,6,144,Regeneración,Restaura 1/3 de los PS máximos del Pokémon cuando se retira\ndel combate.
+27,6,145,Sacapecho,Evita que los movimientos o la habilidad de otros Pokémon\nreduzcan la Defensa del Pokémon.
+27,6,146,Ímpetu Arena,Duplica la Velocidad del Pokémon durante las tormentas de\narena.
+27,6,148,Cálculo Final,Aumenta un 30 % la potencia del movimiento del Pokémon\nsi es el último en atacar en ese turno.
+27,6,149,Ilusión,"El Pokémon adopta el aspecto del último Pokémon del equipo\nantes de entrar en combate. Si recibe daño de un movimiento,\nla ilusión termina."
+27,6,150,Impostor,Transforma al Pokémon en el mismo que tiene enfrente.\nCopia todos los valores de las características de ese Pokémon\na excepción de los PS.
+27,6,151,Allanamiento,"Cuando el Pokémon usa un movimiento, ignora los efectos\nde Pantalla de Luz, Reflejo, Velo Aurora, Velo Sagrado y el\nsustituto del objetivo."
+27,6,152,Momia,Sustituye la habilidad del atacante por Momia si el Pokémon\nes alcanzado por un movimiento de contacto.
+27,6,153,Autoestima,Aumenta un nivel el Ataque del Pokémon cuando debilita a\nun objetivo con un ataque.
+27,6,154,Justiciero,Aumenta un nivel el Ataque del Pokémon si recibe daño de\nun movimiento de tipo Siniestro.
+27,6,156,Espejo Mágico,Devuelve los movimientos de estado al atacante sin que\nel Pokémon se vea afectado por ellos.
+27,6,157,Herbívoro,Hace al Pokémon inmune a los movimientos de tipo Planta\ny aumenta un nivel su Ataque si recibe uno.
+27,6,158,Bromista,Aumenta un nivel la prioridad de los movimientos de estado\ndel Pokémon.
+27,6,159,Poder Arena,"Aumenta un 30 % la potencia de los movimientos de tipo Roca,\nTierra y Acero del Pokémon durante las tormentas de arena."
+27,6,165,Velo Aroma,"Protege al Pokémon y a sus aliados de los estados Enamorado,\nMofa, Repetición anulada, Movimiento anulado, Cura anulada\ny Otra Vez."
+27,6,166,Velo Flor,Evita que los Pokémon de tipo Planta aliados sufran problemas\nde estado o que les reduzcan sus características.
+27,6,167,Carrillo,"Restaura 1/3 de los PS máximos del Pokémon cuando consume\nuna baya, además de beneficiarse de su efecto habitual."
+27,6,168,Mutatipo,Cambia el tipo del Pokémon al del primer movimiento que va\na usar tras entrar en combate.
+27,6,169,Pelaje Recio,Reduce a la mitad el daño que el Pokémon recibe de ataques\nfísicos.
+27,6,170,Prestidigitador,"Si el Pokémon no lleva un objeto, roba el del objetivo al que\ninflige daño con un movimiento."
+27,6,171,Antibalas,Hace al Pokémon inmune a los movimientos que usan\nproyectiles.
+27,6,172,Tenacidad,Aumenta dos niveles el Ataque Especial del Pokémon cuando\nel rival le reduce cualquiera de sus características.
+27,6,173,Mandíbula Fuerte,Aumenta un 50 % la potencia de los movimientos de\nmordedura del Pokémon.
+27,6,174,Piel Helada,Convierte los movimientos de tipo Normal del Pokémon en\nmovimientos de tipo Hielo y aumenta un 20 % su potencia.
+27,6,175,Velo Dulce,Evita que el Pokémon y sus aliados puedan quedarse dormidos\no somnolientos.
+27,6,176,Cambio Táctico,El Pokémon adopta su Forma Filo al atacar o bien su Forma\nEscudo si usa el movimiento Escudo Real.
+27,6,177,Alas Vendaval,Aumenta un nivel la prioridad de los movimientos de tipo\nVolador del Pokémon cuando sus PS están al máximo.
+27,6,178,Megadisparador,Aumenta un 50 % la potencia de los movimientos del Pokémon\nque usan pulsos.
+27,6,180,Simbiosis,Pasa el objeto del Pokémon a un aliado cuando este consuma\nel suyo.
+27,6,181,Garra Dura,Aumenta un 30 % la potencia de los movimientos de contacto\ndel Pokémon.
+27,6,182,Piel Feérica,Convierte los movimientos de tipo Normal del Pokémon en\nmovimientos de tipo Hada y aumenta un 20 % su potencia.
+27,6,183,Baba,Reduce un nivel la Velocidad del atacante si el Pokémon\nes alcanzado por un movimiento de contacto.
+27,6,184,Piel Celeste,Convierte los movimientos de tipo Normal del Pokémon en\nmovimientos de tipo Volador y aumenta un 20 % su potencia.
+27,6,185,Amor Filial,Hace que el Pokémon una fuerzas con su cría en un ataque\ndoble. La potencia del ataque de la cría equivale al 25 % de\nla de su madre.
+27,6,187,Aura Feérica,Aumenta un 33 % la potencia de los movimientos de tipo Hada\nde todos los Pokémon.
+27,6,192,Firmeza,Aumenta un nivel la Defensa del Pokémon si recibe daño de\nun movimiento.
+27,6,196,Ensañamiento,Hace que el Pokémon siempre aseste un golpe crítico al atacar\nsi el objetivo está envenenado o gravemente envenenado.
+27,6,199,Pompa,"Reduce a la mitad el daño que el Pokémon recibe de\nmovimientos de tipo Fuego y duplica la potencia de sus\nmovimientos de tipo Agua. Además, evita que pueda ser\nquemado."
+27,6,201,Cólera,Aumenta un nivel el Ataque Especial del Pokémon cuando\nsus PS máximos se ven reducidos a la mitad o menos debido\na algún ataque.
+27,6,202,Quitanieves,Duplica la Velocidad del Pokémon cuando nieva.
+27,6,203,Remoto,Permite usar cualquier movimiento sin que el Pokémon entre en\ncontacto con el objetivo.
+27,6,204,Voz Fluida,Convierte los movimientos que usan sonido del Pokémon\nen movimientos de tipo Agua.
+27,6,207,Cola Surf,Duplica la Velocidad del Pokémon cuando hay un campo\neléctrico activo en el terreno de combate.
+27,6,209,Disfraz,"Si el Pokémon recibe un ataque cuando está en su Forma\nEncubierta, pierde 1/8 de sus PS máximos en vez de recibir\ndaño y cambia a su Forma Descubierta."
+27,6,212,Corrosión,Permite envenenar o envenenar gravemente incluso a Pokémon\nde tipo Acero o Veneno.
+27,6,214,Regia Presencia,Impide que el rival use movimientos de prioridad alta contra\nel Pokémon y sus aliados.
+27,6,215,Revés,"Si el Pokémon recibe daño de un movimiento y se debilita,\nle devuelve al atacante la misma cantidad de daño."
+27,6,218,Peluche,"Reduce a la mitad el daño recibido por los movimientos\nde contacto, pero duplica el que le infligen los de tipo\nFuego."
+27,6,221,Rizos Rebeldes,Reduce un nivel la Velocidad del atacante si el Pokémon\nes alcanzado por un movimiento de contacto.
+27,6,222,Receptor,Hace que el Pokémon adquiera la habilidad de un aliado\ndebilitado.
+27,6,226,Electrogénesis,Crea un campo eléctrico en el terreno de combate durante\ncinco turnos cuando el Pokémon entra en combate.
+27,6,240,Coraza Reflejo,Devuelve los efectos de reducción de características dirigidos\nal Pokémon sin que se vea afectado por ellos.
+27,6,242,Acérrimo,Ignora los efectos de las habilidades o los movimientos que\npermiten a un Pokémon centrar la atención sobre sí.
+27,6,245,Expulsarena,Provoca una tormenta de arena que dura cinco turnos cuando\nel Pokémon recibe daño de un movimiento.
+27,6,247,Maduración,Duplica los efectos de las bayas que consume el Pokémon.
+27,6,250,Mimetismo,Cambia el tipo del Pokémon según el campo que haya en\nel terreno de combate.
+27,6,251,Antibarrera,"Elimina los estados Pantalla de Luz, Reflejo y Velo Aurora\ncuando el Pokémon entra en combate."
+27,6,254,Alma Errante,Intercambia las habilidades del Pokémon y el objetivo\nsi el Pokémon recibe un movimiento de contacto.
+27,6,258,Mutapetito,El Pokémon alterna entre su Forma Saciada y Forma Voraz\nal final de cada turno.
+27,6,259,Mano Rápida,Hace que el Pokémon tenga una probabilidad del 30 % de\nactuar primero cuando su movimiento tiene la misma prioridad\nque otros.
+27,6,260,Puño Invisible,"Cuando el Pokémon ataca con un movimiento de contacto,\nes capaz de alcanzar incluso a objetivos que se hayan\nprotegido y les inflige 1/4 del daño original. El resto de\nlos efectos no se ven afectados por esta habilidad y se\nactivarán de forma habitual."
+27,6,261,Medicina Extraña,Elimina los cambios en las características de los aliados cuando\nel Pokémon entra en combate.
+27,6,272,Sal Purificadora,Hace al Pokémon inmune a los problemas de estado y reduce a\nla mitad el daño que recibe de movimientos de tipo Fantasma.
+27,6,278,Cambio Heroico,El Pokémon adopta su Forma Heroica cuando se retira del\ncombate.
+27,6,280,Dinamo,El Pokémon adquiere el estado Cargado de electricidad\nsi recibe daño de un movimiento.
+27,6,283,Cuerpo Áureo,Hace al Pokémon inmune a los movimientos de estado.
+27,6,290,Oportunista,"Si el rival aumenta sus características, el Pokémon aumenta\nlas suyas de igual modo."
+27,6,291,Rumia,"Si el Pokémon consume una baya, vuelve a consumirla una vez\nmás al final del siguiente turno."
+27,6,292,Cortante,Aumenta un 50 % la potencia de los movimientos cortantes\ndel Pokémon.
+27,6,293,General Supremo,"Cuando el Pokémon entra en combate, aumenta un 10 %\nla potencia de sus movimientos por cada miembro del equipo\nque se haya debilitado, hasta un máximo del 50 %."
+27,6,295,Capa Tóxica,Provoca el estado Púas tóxicas en el lado rival cuando\nel Pokémon recibe daño de un ataque físico.
+27,6,296,Cola Armadura,Impide que el rival use movimientos de prioridad alta contra\nel Pokémon y sus aliados.
+27,6,297,Geofagia,Hace al Pokémon inmune a los movimientos de tipo Tierra\ny restaura 1/4 de sus PS máximos si recibe uno.
+27,6,299,Hospitalidad,Restaura 1/4 de los PS máximos de un aliado cuando el\nPokémon entra en combate.
+27,6,306,Néctar Dulce,Reduce un nivel la Evasión del rival cuando el Pokémon entra\nen combate. Solo tiene efecto una vez por combate.
+27,6,311,Turbotaladro,"Cuando el Pokémon ataca con un movimiento de contacto,\nes capaz de alcanzar incluso a objetivos que se hayan\nprotegido y les inflige 1/4 del daño original. El resto de\nlos efectos no se ven afectados por esta habilidad y se\nactivarán de forma habitual."
+27,6,312,Piel Dragontina,Convierte los movimientos de tipo Normal del Pokémon en\nmovimientos de tipo Dragón y aumenta un 20 % su potencia.
+27,6,313,Impulso Anguila,"Hace que el Pokémon flote y deje de estar en contacto con\nel suelo, lo que impide que le afecten los movimientos de tipo\nTierra y los estados Púas, Púas tóxicas y Red Viscosa.\nAumenta un nivel la característica más alta del Pokémon\ncuando debilita a un objetivo con un ataque."
+27,6,315,Megasolar,"El Pokémon puede usar movimientos con los mismos resultados\nque si hiciese sol, aunque realmente ese no sea el tiempo\natmosférico actual."
+27,6,316,Crin de Fuego,Aumenta un 50 % la potencia de los movimientos de tipo Fuego\ndel Pokémon.
+27,6,318,Salpicante,"Si el Pokémon recibe daño de un movimiento, quema al\natacante."
+27,7,1,악취,기술로 데미지를 주었을 때\n10% 확률로 상대를 풀죽게 한다.
+27,7,2,잔비,등장 시 5턴 동안\n비 상태로 만든다.
+27,7,3,가속,턴 종료 시 스피드가 1단계 올라간다.
+27,7,4,전투무장,상대의 공격이 급소에 맞지 않는다.
+27,7,5,옹골참,HP가 꽉 찼을 때\n일격에 기절할 듯한 기술로 데미지를 입으면\nHP를 1 남기고 버틴다.\n일격필살 기술의 효과도 받지 않는다.
+27,7,6,습기,전원은 폭발 기술을 사용할 수 없고\n폭발하는 특성도 발동하지 않는다.
+27,7,7,유연,마비 상태가 되지 않는다.
+27,7,8,모래숨기,모래바람 상태일 때\n회피율이 1.25배가 된다.
+27,7,9,정전기,접촉 기술을 받으면\n30% 확률로 상대를 마비 상태로 만든다.
+27,7,10,축전,전기타입 기술의 효과를 받지 않으며\n최대 HP의 1/4만큼 회복한다.
+27,7,11,저수,물타입 기술의 효과를 받지 않으며\n최대 HP의 1/4만큼 회복한다.
+27,7,12,둔감,"헤롱헤롱, 도발 상태가 되지 않으며\n위협의 효과도 받지 않는다."
+27,7,13,날씨부정,모든 날씨의 영향을 없앤다.
+27,7,14,복안,기술의 명중률이 1.3배가 된다.
+27,7,15,불면,"잠듦, 졸음 상태가 되지 않는다."
+27,7,17,면역,"독, 맹독 상태가 되지 않는다."
+27,7,18,타오르는불꽃,불꽃타입 기술의 효과를 받지 않으며\n자신은 타오르는불꽃 상태가 된다.
+27,7,19,인분,공격의 추가 효과를 받지 않는다.
+27,7,20,마이페이스,혼란 상태가 되지 않으며\n위협의 효과도 받지 않는다.
+27,7,21,흡반,상대의 교체시키는 기술이나 도구의 효과를 받지 않는다.
+27,7,22,위협,등장 시 상대의 공격을 1단계 떨어뜨린다.
+27,7,23,그림자밟기,상대는 교체할 수 없게 된다.
+27,7,24,까칠한피부,접촉 기술을 받으면\n상대 최대 HP의 1/8만큼 데미지를 준다.
+27,7,26,부유,"땅 위에 있지 않게 되어\n땅타입 기술, 압정뿌리기, 독압정,\n끈적끈적네트 상태의 효과를 받지 않는다."
+27,7,27,포자,"접촉 기술을 받으면\n30% 확률로 상대를 독, 마비, 잠듦 중\n하나의 상태로 만든다."
+27,7,28,싱크로,"상대의 기술이나 특성에 의해\n독, 맹독, 마비, 화상 상태가 되면\n상대도 같은 상태로 만든다."
+27,7,29,클리어바디,상대의 기술이나 특성에 의해\n능력이 떨어지지 않는다.
+27,7,30,자연회복,지닌 포켓몬으로 돌아오면\n상태 이상이 회복된다.
+27,7,31,피뢰침,전기타입 기술을 자신에게 끌어모은다.\n그 기술의 효과를 받지 않고\n특수공격이 1단계 올라간다.
+27,7,33,쓱쓱,비 상태일 때 스피드가 2배가 된다.
+27,7,34,엽록소,쾌청 상태일 때 스피드가 2배가 된다.
+27,7,35,발광,상대의 회피율 변화를 무시하고\n명중률도 떨어지지 않는다.
+27,7,36,트레이스,등장 시 상대의 특성과 같은 특성이 된다.
+27,7,37,천하장사,물리 기술의 위력이 2배가 된다.
+27,7,38,독가시,접촉 기술을 받으면\n30% 확률로 상대를 독 상태로 만든다.
+27,7,39,정신력,상대의 공격에 풀죽지 않으며\n위협의 효과도 받지 않는다.
+27,7,40,마그마의무장,얼음 상태가 되지 않는다.
+27,7,43,방음,소리 기술의 효과를 받지 않는다.
+27,7,44,젖은접시,비 상태일 때 턴 종료 시\n최대 HP의 1/16만큼 회복한다.
+27,7,45,모래날림,등장 시 5턴 동안\n모래바람 상태로 만든다.
+27,7,46,프레셔,자신에게 상대가 사용하는 기술의 PP를\n추가로 1 줄인다.
+27,7,47,두꺼운지방,불꽃타입과 얼음타입 기술로\n입는 데미지가 반감된다.
+27,7,48,일찍기상,잠듦 상태가 되어도 2배 빠르게 깨어난다.
+27,7,49,불꽃몸,접촉 기술을 받으면\n30% 확률로 상대를 화상 상태로 만든다.
+27,7,51,날카로운눈,상대의 회피율 변화를 무시하고\n명중률도 떨어지지 않는다.
+27,7,52,괴력집게,상대의 기술이나 특성에 의해\n공격이 떨어지지 않는다.
+27,7,53,픽업,자신이 도구를 지니고 있지 않을 때\n자신을 제외한 포켓몬이 소비한 도구를\n턴 종료 시에 주워 온다.
+27,7,55,의욕,물리 기술을 사용할 때\n자신의 공격이 1.5배가 되지만\n명중률은 0.8배가 된다.
+27,7,56,헤롱헤롱바디,이성으로부터 접촉 기술을 받으면\n30% 확률로 상대를 헤롱헤롱 상태로 만든다.
+27,7,57,플러스,플러스나 마이너스 특성을 가진 같은 편이\n필드에 있으면 자신의 특수공격이 1.5배가 된다.
+27,7,58,마이너스,플러스나 마이너스 특성을 가진 같은 편이\n필드에 있으면 자신의 특수공격이 1.5배가 된다.
+27,7,59,기분파,"날씨의 영향을 받아\n물타입, 불꽃타입, 얼음타입 중 하나로 변화한다."
+27,7,60,점착,지니고 있는 도구를 상대에게 빼앗기거나\n잃어버리지 않는다.
+27,7,61,탈피,턴 종료 시 30% 확률로 상태 이상이 회복된다.
+27,7,62,근성,상태 이상일 때 공격이 1.5배가 된다.\n화상 상태에 의한 물리 기술의 데미지가\n반감되는 효과는 무시한다.
+27,7,63,이상한비늘,상태 이상일 때 방어가 1.5배가 된다.
+27,7,65,심록,HP가 최대 HP의 1/3 이하가 되면\n풀타입 기술의 위력이 1.5배가 된다.
+27,7,66,맹화,HP가 최대 HP의 1/3 이하가 되면\n불꽃타입 기술의 위력이 1.5배가 된다.
+27,7,67,급류,HP가 최대 HP의 1/3 이하가 되면\n물타입 기술의 위력이 1.5배가 된다.
+27,7,68,벌레의알림,HP가 최대 HP의 1/3 이하가 되면\n벌레타입 기술의 위력이 1.5배가 된다.
+27,7,69,돌머리,자신까지 데미지를 입는 기술을 사용해도\nHP가 줄지 않는다.
+27,7,70,가뭄,등장 시 5턴 동안\n쾌청 상태로 만든다.
+27,7,72,의기양양,"잠듦, 졸음 상태가 되지 않는다."
+27,7,73,하얀연기,상대의 기술이나 특성에 의해\n능력이 떨어지지 않는다.
+27,7,74,순수한힘,물리 기술의 위력이 2배가 된다.
+27,7,75,조가비갑옷,상대의 공격이 급소에 맞지 않는다.
+27,7,77,갈지자걸음,혼란 상태일 때 회피율이 2배가 된다.
+27,7,78,전기엔진,전기타입 기술의 효과를 받지 않으며\n스피드가 1단계 올라간다.
+27,7,79,투쟁심,기술의 위력이 성별이 같을 때는 1.25배\n다를 때는 0.75배가 된다.\n성별이 불명인 경우 평소의 위력이 된다.
+27,7,80,불굴의마음,풀이 죽으면 스피드가 1단계 올라간다.
+27,7,81,눈숨기,눈 상태일 때 회피율이 1.25배가 된다.
+27,7,82,먹보,HP가 1/4일 때 먹는 나무열매를\nHP가 1/2일 때 먹어 버린다.
+27,7,83,분노의경혈,상대의 공격이 급소에 맞으면\n자신의 공격이 6단계까지 올라간다.
+27,7,84,곡예,지니고 있는 도구가 없어지면\n스피드가 2배가 된다.
+27,7,85,내열,불꽃타입 기술로 입는 데미지가 반감된다.\n화상 상태의 데미지도 반감된다.
+27,7,86,단순,능력 변화가 평소의 2배가 된다.
+27,7,87,건조피부,물타입 기술의 효과를 받지 않으며\n최대 HP의 1/4만큼 HP를 회복하지만\n불꽃타입 기술로 입는 데미지가 1.25배가 된다.\n비 상태일 때 턴 종료 시\n최대 HP의 1/8만큼 HP를 회복하지만\n쾌청 상태일 때 턴 종료 시\n최대 HP의 1/8만큼 HP가 줄어든다.
+27,7,89,철주먹,펀치 기술의 위력이 1.2배가 된다.
+27,7,90,포이즌힐,"독, 맹독 상태가 되면\n턴 종료 시 HP가 줄어드는 대신\n최대 HP의 1/8만큼 회복한다."
+27,7,91,적응력,자신과 타입이 같은 기술의 위력이\n1.5배가 아닌 2배가 된다.
+27,7,92,스킬링크,연속 기술을 사용하면 최고 횟수로 사용한다.
+27,7,93,촉촉바디,비 상태일 때 턴 종료 시 상태 이상이 회복된다.
+27,7,94,선파워,쾌청 상태일 때 특수공격이 1.5배가 되지만\n턴 종료 시 최대 HP의 1/8만큼 HP가 줄어든다.
+27,7,95,속보,상태 이상일 때 스피드가 1.5배가 된다.\n마비 상태의 스피드가 느려지는 효과도 무시한다.
+27,7,97,스나이퍼,급소에 맞혔을 때의 위력이\n1.5배가 아닌 2.25배가 된다.
+27,7,98,매직가드,공격 기술 외에는 데미지를 입지 않는다.
+27,7,99,노가드,서로가 사용하는 기술의 명중률이 100%가 된다.
+27,7,100,시간벌기,같은 우선도를 가진 기술 중\n가장 마지막에 기술을 사용하게 된다.
+27,7,101,테크니션,위력이 60 이하인 기술의 위력이 1.5배가 된다.
+27,7,102,리프가드,쾌청 상태일 때 상태 이상이 되지 않는다.
+27,7,103,서투름,이 포켓몬이 지니고 있는 도구는\n효과가 발생하지 않는다.
+27,7,104,틀깨기,상대의 특성에 상관없이 기술을 사용할 수 있다.\n예외 되는 특성도 있다.
+27,7,105,대운,급소업+1이 된다.
+27,7,106,유폭,접촉 기술을 받아 기절하면\n상대 최대 HP의 1/4만큼 데미지를 준다.
+27,7,107,위험예지,등장 시 상대가 자신에게 효과가 굉장한 기술이나\n일격필살 기술을 가지고 있는지를 감지한다.
+27,7,108,예지몽,등장 시 상대의 기술 중에서\n가장 위력이 높은 기술을 1개 간파한다.
+27,7,109,천진,상대의 능력 변화를 무시하고 공격할 수 있다.\n상대의 능력 변화를 무시하고 공격을 받는다.\n스피드는 무시할 수 없다.
+27,7,111,필터,효과가 굉장한 기술로\n입는 데미지가 3/4이 된다.
+27,7,113,배짱,노말타입과 격투타입 기술을\n고스트타입에게 맞힐 수 있다.\n위협의 효과도 받지 않는다.
+27,7,115,아이스바디,눈 상태일 때 턴 종료 시\n최대 HP의 1/16만큼 회복한다.
+27,7,116,하드록,효과가 굉장한 기술로\n입는 데미지가 3/4이 된다.
+27,7,117,눈퍼뜨리기,등장 시 5턴 동안\n눈 상태로 만든다.
+27,7,119,통찰,등장 시 상대가 지니고 있는 도구를 통찰할 수 있다.
+27,7,120,이판사판,자신까지 데미지를 입는 기술의 위력이\n1.2배가 된다.
+27,7,124,나쁜손버릇,자신이 도구를 지니고 있지 않을 때\n접촉 기술을 받으면\n상대의 도구를 훔친다.
+27,7,125,우격다짐,공격의 추가 효과가 없어지지만\n1.3배의 위력으로 기술을 사용할 수 있다.
+27,7,126,심술꾸러기,능력 변화가 역전해서\n올라갈 때는 떨어지고 떨어질 때는 올라간다.
+27,7,127,긴장감,상대가 나무열매를 먹지 못하게 한다.
+27,7,128,오기,상대에 의해 능력이 떨어지면\n공격이 2단계 올라간다.
+27,7,130,저주받은바디,기술로 데미지를 입으면 30% 확률로\n4턴 동안 상대를 기술봉인 상태로 만든다.
+27,7,131,치유의마음,턴 종료 시 같은 편의 상태 이상을\n50% 확률로 회복시킨다.
+27,7,132,프렌드가드,같은 편이 입는 데미지가 3/4이 된다.
+27,7,133,깨어진갑옷,물리 기술로 데미지를 입으면\n방어가 1단계 떨어지고\n스피드가 2단계 올라간다.
+27,7,134,헤비메탈,자신의 무게가 2배가 된다.
+27,7,135,라이트메탈,자신의 무게가 1/2이 된다.
+27,7,136,멀티스케일,HP가 꽉 찼을 때\n입는 데미지가 반감된다.
+27,7,139,수확,사용한 나무열매를 턴 종료 시\n50% 확률로 만들어 낸다.\n쾌청 상태일 때는 반드시 만들어 낸다.
+27,7,140,텔레파시,같은 편의 공격을 회피한다.
+27,7,141,변덕쟁이,턴 종료 시 능력 중 하나가 2단계 올라가고\n나머지 중 하나가 1단계 떨어진다.
+27,7,142,방진,모래바람 상태의 데미지를 입지 않는다.\n가루 기술이나 특성의 효과도 받지 않는다.
+27,7,143,독수,상대에게 접촉 기술을 맞히면\n30% 확률로 독 상태로 만든다.
+27,7,144,재생력,지닌 포켓몬으로 돌아오면\n최대 HP의 1/3만큼 회복한다.
+27,7,145,부풀린가슴,상대의 기술이나 특성에 의해\n방어가 떨어지지 않는다.
+27,7,146,모래헤치기,모래바람 상태일 때 스피드가 2배가 된다.
+27,7,148,애널라이즈,턴의 가장 마지막에 기술을 사용하면\n기술의 위력이 1.3배가 된다.
+27,7,149,일루전,지닌 포켓몬 중 가장 마지막에 있는\n포켓몬의 모습으로 등장한다.\n기술로 데미지를 입으면 원래대로 돌아온다.
+27,7,150,괴짜,눈앞의 포켓몬으로 변신한다.\nHP 이외의 스테이터스도 똑같아진다.
+27,7,151,틈새포착,"상대의 빛의장막, 리플렉터,\n오로라베일, 신비의부적, 대타출동을\n무시하고 기술을 사용할 수 있다."
+27,7,152,미라,접촉 기술을 받으면\n상대의 특성을 미라로 만든다.
+27,7,153,자기과신,공격으로 상대를 쓰러뜨리면\n공격이 1단계 올라간다.
+27,7,154,정의의마음,악타입 기술로 데미지를 입으면\n공격이 1단계 올라간다.
+27,7,156,매직미러,상대의 변화 기술에 효과를 받지 않고\n상대에게 되받아친다.
+27,7,157,초식,풀타입 기술의 효과를 받지 않으며\n공격이 1단계 올라간다.
+27,7,158,짓궂은마음,변화 기술의 우선도가 1단계 올라간다.
+27,7,159,모래의힘,"모래바람 상태일 때\n바위, 땅, 강철타입 기술의 위력이 1.3배가 된다."
+27,7,165,아로마베일,"자신과 같은 편은 헤롱헤롱, 도발,\n연속 불가, 기술봉인, 회복봉인,\n앙코르 상태가 되지 않는다."
+27,7,166,플라워베일,같은 편 풀타입 포켓몬은\n능력이 떨어지지 않으며 상태 이상도 되지 않는다.
+27,7,167,볼주머니,나무열매를 먹으면 그 효과와 더불어\n최대 HP의 1/3만큼 회복한다.
+27,7,168,변환자재,등장할 때마다 단 한 번\n자신이 사용하는 기술과 같은 타입으로 변화한다.
+27,7,169,퍼코트,물리 기술로 입는 데미지가 반감된다.
+27,7,170,매지션,자신이 도구를 지니고 있지 않을 때\n기술로 데미지를 준 상대의 도구를 빼앗는다.
+27,7,171,방탄,구슬/폭탄 기술의 효과를 받지 않는다.
+27,7,172,승기,상대에 의해 능력이 떨어지면\n특수공격이 2단계 올라간다.
+27,7,173,옹골찬턱,무는 기술의 위력이 1.5배가 된다.
+27,7,174,프리즈스킨,노말타입 기술이 얼음타입이 되며\n위력이 1.2배가 된다.
+27,7,175,스위트베일,"자신과 같은 편은 잠듦, 졸음 상태가 되지 않는다."
+27,7,176,배틀스위치,공격을 사용하면 블레이드폼으로\n기술 킹실드를 사용하면 실드폼으로 변화한다.
+27,7,177,질풍날개,HP가 꽉 찼을 때\n비행타입 기술의 우선도가 1단계 올라간다.
+27,7,178,메가런처,파동 기술의 위력이 1.5배가 된다.
+27,7,180,공생,같은 편이 도구를 소비하면\n자신이 지니고 있는 도구를 같은 편에게 건넨다.
+27,7,181,단단한발톱,접촉 기술의 위력이 1.3배가 된다.
+27,7,182,페어리스킨,노말타입 기술이 페어리타입이 되며\n위력이 1.2배가 된다.
+27,7,183,미끈미끈,접촉 기술을 받으면\n상대의 스피드를 1단계 떨어뜨린다.
+27,7,184,스카이스킨,노말타입 기술이 비행타입이 되며\n위력이 1.2배가 된다.
+27,7,185,부자유친,부모와 자식이 각각 1번씩 공격한다.\n자식은 부모의 0.25배 위력으로 공격한다.
+27,7,187,페어리오라,전원의 페어리타입 기술의\n위력이 1.33배가 된다.
+27,7,192,지구력,기술로 데미지를 입으면\n방어가 1단계 올라간다.
+27,7,196,무도한행동,"독, 맹독 상태인 상대를 공격하면\n반드시 급소에 맞는다."
+27,7,199,수포,불꽃타입 기술로 입는 데미지가 반감된다.\n물타입 기술의 위력이 2배가 된다.\n화상 상태가 되지 않는다.
+27,7,201,발끈,상대의 공격에 HP가 1/2 이하가 되면\n특수공격이 1단계 올라간다.
+27,7,202,눈치우기,눈 상태일 때 스피드가 2배가 된다.
+27,7,203,원격,사용하는 기술이 접촉 기술이 아니게 된다.
+27,7,204,촉촉보이스,소리 기술이 물타입이 된다.
+27,7,207,서핑테일,일렉트릭필드 상태일 때 스피드가 2배가 된다.
+27,7,209,탈,둔갑한 모습일 때 기술로 데미지를 입으면\n데미지를 입는 대신 최대 HP의 1/8을 소비하여\n들킨 모습으로 변화한다.
+27,7,212,부식,"강철타입, 독타입 포켓몬도\n독, 맹독 상태로 만들 수 있다."
+27,7,214,여왕의위엄,자신과 같은 편에게\n상대는 선제 기술을 사용할 수 없다.
+27,7,215,내용물분출,기절할 듯한 기술로 데미지를 입으면\n상대에게 받은 그 데미지를 돌려준다.
+27,7,218,복슬복슬,접촉 기술로 입는 데미지가 반감된다.\n불꽃타입 기술로 입는 데미지는 2배가 된다.
+27,7,221,컬리헤어,접촉 기술을 받으면\n상대의 스피드를 1단계 떨어뜨린다.
+27,7,222,리시버,쓰러진 같은 편의 특성과 같은 특성이 된다.
+27,7,226,일렉트릭메이커,등장 시 5턴 동안 전체 필드를\n일렉트릭필드 상태로 만든다.
+27,7,240,미러아머,자신이 받는 능력을 떨어뜨리는 효과를 받지 않으며\n상대에게 되받아친다.
+27,7,242,굳건한신념,기술을 끌어모으는\n특성이나 기술의 영향을 무시한다.
+27,7,245,모래뿜기,기술로 데미지를 입으면 5턴 동안\n모래바람 상태로 만든다.
+27,7,247,숙성,먹는 나무열매의 효과가 2배가 된다.
+27,7,250,의태,필드에 따라 타입이 바뀐다.
+27,7,251,배리어프리,"등장 시 빛의장막, 리플렉터,\n오로라베일 상태를 해제한다."
+27,7,254,떠도는영혼,접촉 기술을 받으면\n상대와 특성을 바꾼다.
+27,7,258,꼬르륵스위치,턴 종료 시 배부른 모양과 배고픈 모양을\n번갈아 가며 모습을 바꾼다.
+27,7,259,퀵드로,30% 확률로\n우선도가 같은 기술 중에서 가장 먼저 행동한다.
+27,7,260,보이지않는주먹,접촉 기술을 사용할 때\n상대의 방어 효과를 무시하고\n본래 데미지의 1/4만큼 데미지를 준다.\n상대의 방어 효과 이외에는 발동된다.
+27,7,261,기묘한약,등장 시 같은 편의 능력 변화를 원래대로 되돌린다.
+27,7,272,정화의소금,상태 이상이 되지 않는다.\n고스트타입 기술로 입는 데미지가 반감된다.
+27,7,278,마이티체인지,지닌 포켓몬으로 돌아오면\n마이티폼으로 변화한다.
+27,7,280,전기로바꾸기,기술로 데미지를 입으면\n전기위력업 상태가 된다.
+27,7,283,황금몸,상대가 사용한 변화 기술의 효과를 받지 않는다.
+27,7,290,편승,상대의 능력이 올라가면\n자신도 똑같이 능력이 올라간다.
+27,7,291,되새김질,"나무열매를 먹으면, 다음 턴 종료 시\n같은 나무열매를 한 번 더 먹는다."
+27,7,292,예리함,베는 기술의 위력이 1.5배가 된다.
+27,7,293,총대장,등장 시 배틀 중 쓰러진 지닌 포켓몬 1마리당\n기술의 위력이 10%씩 올라간다.\n최대 50%까지 올라간다.
+27,7,295,독치장,물리 기술로 데미지를 입으면\n상대 필드를 독압정 상태로 만든다.
+27,7,296,테일아머,자신과 같은 편에게\n상대는 선제 기술을 사용할 수 없다.
+27,7,297,흙먹기,땅타입 기술의 효과를 받지 않으며\n최대 HP의 1/4만큼 회복한다.
+27,7,299,대접,등장 시 같은 편의 HP를\n그 포켓몬 최대 HP의 1/4만큼 회복한다.
+27,7,306,감미로운꿀,등장 시 상대의 회피율을 1단계 떨어뜨린다.\n배틀 중 한 번만 발동한다.
+27,7,311,관통드릴,접촉 기술을 사용할 때\n상대의 방어 효과를 무시하고\n본래 데미지의 1/4만큼 데미지를 준다.\n상대의 방어 효과 이외에는 발동된다.
+27,7,312,드래곤스킨,노말타입 기술이 드래곤타입이 되며\n위력이 1.2배가 된다.
+27,7,313,천정부지,"땅 위에 있지 않게 되어\n땅타입 기술, 압정뿌리기, 독압정,\n끈적끈적네트 상태의 효과를 받지 않는다.\n공격으로 상대를 쓰러뜨리면\n자신의 가장 높은 능력이 1단계 올라간다."
+27,7,315,메가솔라,날씨가 쾌청 상태가 아니라도\n쾌청 상태인 것처럼\n기술을 사용할 수 있다.
+27,7,316,불꽃의갈기,불꽃타입 기술의 위력이 1.5배가 된다.
+27,7,318,하바네로분출,기술로 데미지를 입으면\n상대를 화상 상태로 만든다.
+27,9,1,恶臭,用招式给予伤害时，\n有10%的机率会让对手畏缩。
+27,9,2,降雨,自出场时起，在5回合内\n会变为下雨状态。
+27,9,3,加速,回合结束时，速度会提高1阶。
+27,9,4,战斗盔甲,不会被对手的攻击击中要害。
+27,9,5,结实,HP全满时，\n若受到会一击导致昏厥的招式的伤害，\n则会剩下1HP并撑过去。\n一击必杀的招式也将无效。
+27,9,6,湿气,所有宝可梦都无法使用爆炸类招式，\n会引发爆炸的特性也不会发动。
+27,9,7,柔软,不会陷入麻痹状态。
+27,9,8,沙隐,沙暴状态时，\n闪避率会变为1.25倍。
+27,9,9,静电,受到接触类招式影响时，\n有30%的机率会让对手陷入麻痹状态。
+27,9,10,蓄电,电属性的招式将无效，\n且会回复最大HP的1/4。
+27,9,11,储水,水属性的招式将无效，\n且会回复最大HP的1/4。
+27,9,12,迟钝,不会陷入着迷、挑衅状态。\n威吓也将无效。
+27,9,13,无关天气,会消除所有天气的影响。
+27,9,14,复眼,招式的命中率会变为1.3倍。
+27,9,15,不眠,不会陷入睡眠、瞌睡状态。
+27,9,17,免疫,不会陷入中毒、剧毒状态。
+27,9,18,引火,火属性的招式攻击将无效，\n且自己会变为引火状态。
+27,9,19,鳞粉,攻击的追加效果将无效。
+27,9,20,我行我素,不会陷入混乱状态，\n威吓也将无效。
+27,9,21,吸盘,对手的迫使自己进行替换的招式和道具将无效。
+27,9,22,威吓,出场时，会让对手的攻击降低1阶。
+27,9,23,踩影,对手无法进行替换。
+27,9,24,粗糙皮肤,受到接触类招式影响时，\n会给予对手其最大HP的1/8的伤害。
+27,9,26,飘浮,会变为不在地面上，\n地面属性的招式、撒菱、毒菱、\n黏黏网状态将无效。
+27,9,27,孢子,受到接触类招式影响时，\n有30%的机率会让对手陷入\n中毒、麻痹、睡眠之中的一种状态。
+27,9,28,同步,因对手的招式或特性\n而陷入中毒、剧毒、麻痹、灼伤状态时，\n会让对手也陷入相同状态。
+27,9,29,恒净之躯,不会因对手的招式或特性\n而被降低能力。
+27,9,30,自然回复,回到同行队伍后，异常状态会痊愈。
+27,9,31,避雷针,将电属性的招式吸引到自己身上。\n该招式将无效，且特攻会提高1阶。
+27,9,33,悠游自如,下雨状态时，速度会变为2倍。
+27,9,34,叶绿素,大晴天状态时，速度会变为2倍。
+27,9,35,发光,会无视对手的闪避率变化，\n且命中率也不会被降低。
+27,9,36,复制,出场时，会变为和对手相同的特性。
+27,9,37,大力士,物理招式的威力会变为2倍。
+27,9,38,毒刺,受到接触类招式影响时，\n有30%的机率会让对手陷入中毒状态。
+27,9,39,精神力,不会因对手的攻击而畏缩，\n威吓也将无效。
+27,9,40,熔岩铠甲,不会陷入冰冻状态。
+27,9,43,隔音,声音类招式将无效。
+27,9,44,雨盘,下雨状态时，会在回合结束时\n回复最大HP的1/16。
+27,9,45,扬沙,自出场时起，在5回合内\n会变为沙暴状态。
+27,9,46,压迫感,让对手对自己使用的招式的PP额外减少1。
+27,9,47,厚脂肪,因火属性、冰属性招式\n而受到的伤害会减半。
+27,9,48,早起,即使陷入睡眠状态，\n也会以2倍的速度提早醒来。
+27,9,49,火焰之躯,受到接触类招式影响时，\n有30%的机率会让对手陷入灼伤状态。
+27,9,51,锐利目光,会无视对手的闪避率变化，\n且命中率也不会被降低。
+27,9,52,怪力钳,不会被对手的招式或特性降低攻击。
+27,9,53,捡拾,自己没有携带道具时，\n会在回合结束时捡来\n自己以外的宝可梦消耗的道具。
+27,9,55,活力,使用物理招式时，\n自己的攻击会变为1.5倍，\n但命中率会变为0.8倍。
+27,9,56,迷人之躯,受到异性的接触类招式影响时，\n有30%的机率会让对手陷入着迷状态。
+27,9,57,正电,拥有正电或负电特性的同伴在场上时，\n自己的特攻会变为1.5倍。
+27,9,58,负电,拥有正电或负电特性的同伴在场上时，\n自己的特攻会变为1.5倍。
+27,9,59,阴晴不定,受到天气的影响，会变为\n水属性、火属性、冰属性之中的一种。
+27,9,60,黏着,不会被对手夺走或失去携带的道具。
+27,9,61,蜕皮,回合结束时，\n异常状态有30%的机率会痊愈。
+27,9,62,毅力,陷入异常状态时，攻击会变为1.5倍，\n且会无视灼伤状态造成的\n物理招式的伤害减半的效果。
+27,9,63,神奇鳞片,陷入异常状态时，防御会变为1.5倍。
+27,9,65,茂盛,因HP变为最大HP的1/3以下时，\n草属性招式的威力会变为1.5倍。
+27,9,66,猛火,HP变为最大HP的1/3以下时，\n火属性招式的威力会变为1.5倍。
+27,9,67,激流,HP变为最大HP的1/3以下时，\n水属性招式的威力会变为1.5倍。
+27,9,68,虫之预感,HP变为最大HP的1/3以下时，\n虫属性招式的威力会变为1.5倍。
+27,9,69,坚硬脑袋,即使使出会让自己也受到伤害的招式，\nHP也不会减少。
+27,9,70,日照,自出场时起，在5回合内\n会变为大晴天状态。
+27,9,72,干劲,不会陷入睡眠、瞌睡状态。
+27,9,73,白色烟雾,不会因对手的招式或特性\n而被降低能力。
+27,9,74,瑜伽之力,物理招式的威力会变为2倍。
+27,9,75,硬壳盔甲,不会被对手的攻击击中要害。
+27,9,77,蹒跚,混乱状态时，闪避率会变为2倍。
+27,9,78,电气引擎,电属性的招式将无效，\n且速度会提高1阶。
+27,9,79,斗争心,与对手性别相同时，招式的威力会变为1.25倍。\n若与对手性别不同，则会变为0.75倍。\n若对手性别不明，则会变为通常的威力。
+27,9,80,不屈之心,畏缩时，速度会提高1阶。
+27,9,81,雪隐,下雪状态时，\n闪避率会变为1.25倍。
+27,9,82,贪吃鬼,会在HP变为1/2以下时，就吃掉原本\n在HP变为1/4以下时才会吃的树果。
+27,9,83,愤怒穴位,被对手的攻击击中要害时，\n自己的攻击会提高至第6阶。
+27,9,84,轻装,失去携带的道具时，\n速度会变为2倍。
+27,9,85,耐热,因火属性招式而受到的伤害会减半。\n因灼伤状态而受到的伤害也会减半。
+27,9,86,单纯,能力变化会变为通常的2倍。
+27,9,87,干燥皮肤,水属性的招式将无效，且会回复最大HP的1/4，\n受到的火属性招式的伤害会变为1.25倍。\n下雨状态时，会在回合结束时回复最大HP的1/8，\n但大晴天状态时，会在回合结束时减少最大HP的1/8。
+27,9,89,铁拳,拳类招式的威力会变为1.2倍。
+27,9,90,毒疗,陷入中毒、剧毒状态时，\n在回合结束时HP不会减少，\n而是会回复最大HP的1/8。
+27,9,91,适应力,与自己同属性的招式威力\n不会是1.5倍，而是会变为2倍。
+27,9,92,连续攻击,使用连续招式时，能使出最多次数。
+27,9,93,湿润之躯,下雨状态时，在回合结束时\n异常状态会痊愈。
+27,9,94,太阳之力,大晴天状态时，特攻会变为1.5倍，\n但在回合结束时会减少最大HP的1/8。
+27,9,95,飞毛腿,陷入异常状态时，速度会变为1.5倍，\n且会无视陷入麻痹状态时速度变慢的效果。
+27,9,97,狙击手,击中要害时的威力不会是1.5倍，\n而是会变为2.25倍。
+27,9,98,魔法防守,攻击以外的伤害将无效。
+27,9,99,无防守,双方招式的命中率都会变为100%。
+27,9,100,慢出,会在相同优先度的招式中\n最后一个行动。
+27,9,101,技术高手,威力为60以下的\n招式的威力会变为1.5倍。
+27,9,102,叶子防守,大晴天状态时，不会陷入异常状态。
+27,9,103,笨拙,这只宝可梦携带的道具\n不会发挥效果。
+27,9,104,破格,能不受对手的特性影响使出招式。\n也存在例外的特性。
+27,9,105,超幸运,会变为易中要害+1。
+27,9,106,诱爆,受到接触类招式的影响而陷入昏厥时，\n会给予对手其最大HP的1/4的伤害。
+27,9,107,危险预知,出场时，若对手拥有对自己效果绝佳\n或一击必杀的招式，则可以察觉。
+27,9,108,预知梦,出场时，会从对手的招式中\n读取1种威力高的招式。
+27,9,109,纯朴,能无视对手的能力变化进行攻击。\n会无视对手的能力变化受到攻击。\n无法无视速度的变化。
+27,9,111,过滤,因效果绝佳的招式\n而受到的伤害会变为3/4。
+27,9,113,胆量,一般属性、格斗属性的招式\n能击中幽灵属性的宝可梦。\n威吓也将无效。
+27,9,115,冰冻之躯,下雪状态时，会在回合结束时\n回复最大HP的1/16。
+27,9,116,坚硬岩石,因效果绝佳的招式\n而受到的伤害会变为3/4。
+27,9,117,降雪,自出场时起，在5回合内\n会变为下雪状态。
+27,9,119,察觉,出场时，能得知对手携带的道具。
+27,9,120,舍身,会让自己也受到伤害的\n招式的威力会变为1.2倍。
+27,9,124,顺手牵羊,在自己没有携带道具时，\n若受到接触类招式影响，\n则会盗取对手的道具。
+27,9,125,强行,攻击的追加效果会消失，\n但能以1.3倍的威力使出招式。
+27,9,126,唱反调,能力的变化会逆转，\n原本提高时会降低，\n原本降低时会提高。
+27,9,127,紧张感,会让对手的树果无法被吃掉。
+27,9,128,不服输,被对手降低能力时，\n攻击会提高2阶。
+27,9,130,咒术之躯,受到招式的伤害时，有30%的机率\n会让对手在4回合内变为招式封锁状态。
+27,9,131,治愈之心,回合结束时，有50%的机率\n会治愈异常状态的同伴。
+27,9,132,友情防守,会让同伴受到的伤害变为3/4。
+27,9,133,碎裂铠甲,受到物理招式的伤害时，\n防御会降低1阶，\n速度会提高2阶。
+27,9,134,重金属,自己的重量会变为2倍。
+27,9,135,轻金属,自己的重量会变为1/2。
+27,9,136,多重鳞片,HP全满时，\n受到的伤害会减半。
+27,9,139,收获,回合结束时，有50%的机率\n会制作出已使用的树果。\n大晴天状态时，必定会制作出树果。
+27,9,140,心灵感应,会闪避来自同伴的攻击。
+27,9,141,心情不定,回合结束时，某种能力会提高2阶，\n而另外某种能力会降低1阶。
+27,9,142,防尘,因沙暴状态而受到的伤害将无效。\n粉末类招式、特性也将无效。
+27,9,143,毒手,用接触类招式击中对手时，\n有30%的机率会让其陷入中毒状态。
+27,9,144,再生力,回到同行队伍后，会回复最大HP的1/3。
+27,9,145,健壮胸肌,不会被对手的招式或特性降低防御。
+27,9,146,拨沙,沙暴状态时，速度会变为2倍。
+27,9,148,分析,在回合的最后使出招式时，\n招式的威力会变为1.3倍。
+27,9,149,幻觉,会以同行队伍中最后一只宝可梦的样子出场。\n受到招式的伤害时会复原。
+27,9,150,变身者,会变身为当前面对的宝可梦。\nHP以外的能力也会变为相同。
+27,9,151,穿透,能无视对手的光墙、反射壁、\n极光幕、神秘守护、替身使用招式。
+27,9,152,木乃伊,受到接触类招式影响时，\n会让对手的特性变为木乃伊。
+27,9,153,自信过度,用攻击打倒对手时，\n攻击会提高1阶。
+27,9,154,正义之心,受到恶属性招式的伤害时，\n攻击会提高1阶。
+27,9,156,魔法镜,不会受到对手的变化招式影响，\n且会将其反弹给对手。
+27,9,157,食草,草属性的招式将无效，\n且攻击会提高1阶。
+27,9,158,恶作剧之心,变化招式的优先度会提高1阶。
+27,9,159,沙之力,沙暴状态时，\n岩石、地面、钢属性\n招式的威力会变为1.3倍。
+27,9,165,芳香幕,自己和同伴不会陷入着迷、挑衅、\n无法连续、招式封锁、回复封锁、\n再来一次状态。
+27,9,166,花幕,我方的草属性宝可梦能力不会降低，\n也不会陷入异常状态。
+27,9,167,颊囊,吃掉树果后，在其效果的基础上\n还会回复最大HP的1/3。
+27,9,168,变幻自如,每次出场时，\n会变为和自己使出的招式\n相同的属性仅1次。
+27,9,169,毛皮大衣,因物理招式而受到的伤害会减半。
+27,9,170,魔术师,在自己没有携带道具时，\n会夺走用招式给予伤害的对手的道具。
+27,9,171,防弹,球弹类招式将无效。
+27,9,172,好胜,被对手降低能力时，\n特攻会提高2阶。
+27,9,173,强壮之颚,啃咬类招式的威力会变为1.5倍。
+27,9,174,冰冻皮肤,一般属性的招式会变为冰属性，\n且威力会变为1.2倍。
+27,9,175,甜幕,自己和同伴\n不会陷入睡眠、瞌睡状态。
+27,9,176,战斗切换,使出攻击时，会变为刀剑形态，\n使出招式“王者盾牌”时，\n会变为盾牌形态。
+27,9,177,疾风之翼,HP全满时，飞行属性招式的\n优先度会提高1阶。
+27,9,178,超级发射器,波动／波导类招式的威力会变为1.5倍。
+27,9,180,共生,同伴消耗道具时，\n会把自己携带的道具交给同伴。
+27,9,181,硬爪,接触类招式的威力会变为1.3倍。
+27,9,182,妖精皮肤,一般属性的招式会变为妖精属性，\n且威力会变为1.2倍。
+27,9,183,黏滑,受到接触类招式影响时，\n会让对手的速度降低1阶。
+27,9,184,飞行皮肤,一般属性的招式会变为飞行属性，\n且威力会变为1.2倍。
+27,9,185,亲子爱,母亲和孩子合计能攻击2次。\n孩子的攻击威力为母亲的0.25倍。
+27,9,187,妖精气场,所有宝可梦的妖精属性招式的\n威力会变为1.33倍。
+27,9,192,持久力,受到招式的伤害时，\n防御会提高1阶。
+27,9,196,不仁不义,攻击陷入中毒、剧毒状态的对手时，\n必定会击中要害。
+27,9,199,水泡,因火属性招式而受到的伤害会减半。\n水属性招式的威力会变为2倍。\n不会陷入灼伤状态。
+27,9,201,怒火冲天,HP因对手的攻击而变为1/2以下时，\n特攻会提高1阶。
+27,9,202,拨雪,下雪状态时，速度会变为2倍。
+27,9,203,远隔,使用的招式将不再是接触类招式。
+27,9,204,湿润之声,声音类招式会变为水属性。
+27,9,207,冲浪之尾,电气场地状态时，速度会变为2倍。
+27,9,209,画皮,若在化形的样子时受到招式的伤害，\n则会消耗最大HP的1/8来代替受到的伤害，\n并变为现形的样子。
+27,9,212,腐蚀,能让钢属性、毒属性\n也陷入中毒、剧毒状态。
+27,9,214,女王的威严,对手无法对自己和同伴使出先制招式。
+27,9,215,飞出的内在物,受到会导致昏厥的招式的伤害时，\n会将受到的来自对手的伤害反还给对手。
+27,9,218,毛茸茸,因接触类招式而受到的伤害会减半。\n因火属性招式而受到的伤害会变为2倍。
+27,9,221,卷发,受到接触类招式影响时，\n会让对手的速度降低1阶。
+27,9,222,接球手,会变为和被打倒的同伴相同的特性。
+27,9,226,电气制造者,自出场时起，在5回合内\n会让整个场地变为电气场地状态。
+27,9,240,镜甲,自己不会受到降低能力的效果影响，\n且会将其反弹给对手。
+27,9,242,坚毅,会无视具有吸引招式效果的\n特性或招式的影响。
+27,9,245,吐沙,自受到招式的伤害时起，在5回合内\n会变为沙暴状态。
+27,9,247,熟成,吃掉的树果效果会变为2倍。
+27,9,250,拟态,属性会根据场地而改变。
+27,9,251,除障,出场时，会解除光墙、反射壁、\n极光幕状态。
+27,9,254,游魂,受到接触类招式影响时，\n会和对手互换特性。
+27,9,258,饱了又饿,回合结束时，会在满腹花纹和\n空腹花纹之间交替改变样子。
+27,9,259,速击,有30%的机率会在相同优先度的\n招式中第一个行动。
+27,9,260,无形拳,使用接触类招式时，\n会无视对手的防守效果，\n给予原本的1/4的伤害。\n对手的防守效果以外的效果会发动。
+27,9,261,怪药,出场时，会让同伴的能力变化复原。
+27,9,272,洁净之盐,不会陷入异常状态。\n因幽灵属性招式\n而受到的伤害会减半。
+27,9,278,全能变身,回到同行队伍后，会变为全能形态。
+27,9,280,电力转换,受到招式的伤害时，\n会变为电属性威力提升状态。
+27,9,283,黄金之躯,来自对手的变化招式将无效。
+27,9,290,跟风,对手的能力提高时，\n自己也会同样地提高能力。
+27,9,291,反刍,在吃掉树果后的下一回合结束时，\n会再吃掉仅1次相同的树果。
+27,9,292,锋锐,切斩类招式的威力会变为1.5倍。
+27,9,293,大将,出场时，在该场战斗中每有1只同行队伍中的\n宝可梦被打倒，招式的威力就会提高10%。\n最多会提高至50%。
+27,9,295,毒满地,受到物理招式的伤害时，\n会让对手的场地变为毒菱状态。
+27,9,296,尾甲,对手无法对自己和同伴使出先制招式。
+27,9,297,食土,地面属性的招式将无效，\n且会回复最大HP的1/4。
+27,9,299,款待,出场时，会让同伴的HP\n回复该同伴最大HP的1/4。
+27,9,306,甘露之蜜,出场时，会让对手的闪避率降低1阶。\n在1场战斗中只会发动1次。
+27,9,311,贯穿钻,使用接触类招式时，\n会无视对手的防守效果，\n给予原本的1/4的伤害。\n对手的防守效果以外的效果会发动。
+27,9,312,龙皮肤,一般属性的招式会变为龙属性，\n威力会变为1.2倍。
+27,9,313,鳗鳗高升,会变为不在地面上，\n地面属性的招式、撒菱、毒菱、\n黏黏网状态将无效。\n用攻击打倒对手时，\n自己最高的那项能力会提高1阶。
+27,9,315,超级日光,即使天气不是大晴天状态，\n也能以大晴天状态使用招式。
+27,9,316,火焰鬃毛,火属性招式的威力会变为1.5倍。
+27,9,318,辣椒喷发,受到招式的伤害时，\n会让对手陷入灼伤状态。
+27,10,1,惡臭,用招式給予傷害時，\n有10%的機率會讓對手畏縮。
+27,10,2,降雨,自出場起的5回合內，\n會變為下雨狀態。
+27,10,3,加速,在回合結束時，速度會提高1階。
+27,10,4,戰鬥盔甲,對手的攻擊不會擊中要害。
+27,10,5,結實,HP全滿時，\n若受到一擊就會瀕死的招式傷害，\n會剩下1HP撐過去。\n一擊必殺的招式也無效。
+27,10,6,濕氣,所有寶可夢都無法使用爆炸類招式，\n會爆炸的特性也不會發動。
+27,10,7,柔軟,不會變為麻痺狀態。
+27,10,8,沙隱,沙暴狀態時，\n閃避率會變為1.25倍。
+27,10,9,靜電,受到接觸類招式時，\n有30%的機率會讓對手變為麻痺狀態。
+27,10,10,蓄電,電屬性招式無效，\n反而會回復最大HP的1/4。
+27,10,11,儲水,水屬性招式無效，\n反而會回復最大HP的1/4。
+27,10,12,遲鈍,不會變為著迷、挑釁狀態，\n威嚇也無效。
+27,10,13,無關天氣,會使所有天氣的影響都消失。
+27,10,14,複眼,招式的命中率會變為1.3倍。
+27,10,15,不眠,不會變為睡眠、瞌睡狀態。
+27,10,17,免疫,不會變為中毒、劇毒狀態。
+27,10,18,引火,火屬性招式無效，\n反而自己會變為引火狀態。
+27,10,19,鱗粉,攻擊的追加效果無效。
+27,10,20,我行我素,不會變為混亂狀態，\n威嚇也無效。
+27,10,21,吸盤,對手迫使我方替換的招式或道具無效。
+27,10,22,威嚇,出場時，會讓對手的攻擊降低1階。
+27,10,23,踩影,對手會無法替換。
+27,10,24,粗糙皮膚,受到接觸類招式時，\n會給予對手最大HP的1/8的傷害。
+27,10,26,飄浮,會變為不在地面上，\n地面屬性招式、撒菱、毒菱、\n黏黏網狀態無效。
+27,10,27,孢子,受到接觸類招式時，\n有30%的機率會讓對手變為\n中毒、麻痺、睡眠之中的一種狀態。
+27,10,28,同步,因對手的招式或特性\n變為中毒、劇毒、麻痺、灼傷狀態時，\n會讓對手也變為相同狀態。
+27,10,29,恆淨之軀,不會因對手的招式或特性\n而被降低能力。
+27,10,30,自然回復,退回同行隊伍後\n異常狀態會痊癒。
+27,10,31,避雷針,將電屬性招式吸引到自己身上。\n該招式無效，反而會讓特攻提高1階。
+27,10,33,悠游自如,下雨狀態時，\n速度會變為2倍。
+27,10,34,葉綠素,大晴天狀態時，\n速度會變為2倍。
+27,10,35,發光,可無視對手閃避率的變化，\n且命中率不會被降低。
+27,10,36,複製,出場時，會變為和對手相同的特性。
+27,10,37,大力士,物理招式威力會變為2倍。
+27,10,38,毒刺,受到接觸類招式時，\n有30%的機率會讓對手變為中毒狀態。
+27,10,39,精神力,不會因對手的攻擊而畏縮，\n威嚇也無效。
+27,10,40,熔岩鎧甲,不會變為冰凍狀態。
+27,10,43,隔音,聲音類招式無效。
+27,10,44,雨盤,下雨狀態時，會在回合結束時\n回復最大HP的1/16。
+27,10,45,揚沙,自出場起的5回合內，\n會變為沙暴狀態。
+27,10,46,壓迫感,會讓對手對自己使用的\n招式的PP額外減少1。
+27,10,47,厚脂肪,因火屬性、冰屬性招式\n而受到的傷害會減半。
+27,10,48,早起,即使變為睡眠狀態，\n也會以2倍的速度提早醒來。
+27,10,49,火焰之軀,受到接觸類招式時，\n有30%的機率會讓對手變為灼傷狀態。
+27,10,51,銳利目光,可無視對手閃避率的變化，\n且命中率不會被降低。
+27,10,52,怪力鉗,不會因對手的招式或特性\n而被降低攻擊。
+27,10,53,撿拾,自己沒有攜帶道具時，\n會在回合結束時撿來\n自己以外的寶可夢消耗的道具。
+27,10,55,活力,使用物理招式時，\n自己的攻擊會變為1.5倍，\n但命中率會變為0.8倍。
+27,10,56,迷人之軀,受到異性的接觸類招式時，\n有30%的機率會讓對手變為著迷狀態。
+27,10,57,正電,有正電或負電特性的同伴在場上時，\n自己的特攻會變為1.5倍。
+27,10,58,負電,有正電或負電特性的同伴在場上時，\n自己的特攻會變為1.5倍。
+27,10,59,陰晴不定,在天氣的影響下，會變為\n水屬性、火屬性、冰屬性之中的一種。
+27,10,60,黏著,不會被對手奪走或失去攜帶的道具。
+27,10,61,蛻皮,在回合結束時，\n異常狀態有30%的機率會痊癒。
+27,10,62,毅力,變為異常狀態時，攻擊會變為1.5倍。\n可無視灼傷狀態時物理招式傷害\n會減半的影響。
+27,10,63,神奇鱗片,變為異常狀態時，\n防禦會變為1.5倍。
+27,10,65,茂盛,HP降到最大HP的1/3以下時，\n草屬性招式威力會變為1.5倍。
+27,10,66,猛火,HP降到最大HP的1/3以下時，\n火屬性招式威力會變為1.5倍。
+27,10,67,激流,HP降到最大HP的1/3以下時，\n水屬性招式威力會變為1.5倍。
+27,10,68,蟲之預感,HP降到最大HP的1/3以下時，\n蟲屬性招式威力會變為1.5倍。
+27,10,69,堅硬腦袋,即使使出會讓自己也受到傷害的招式，\nHP也不會減少。
+27,10,70,日照,自出場起的5回合內，\n會變為大晴天狀態。
+27,10,72,幹勁,不會變為睡眠、瞌睡狀態。
+27,10,73,白色煙霧,不會因對手的招式或特性\n而被降低能力。
+27,10,74,瑜伽之力,物理招式威力會變為2倍。
+27,10,75,硬殼盔甲,對手的攻擊不會擊中要害。
+27,10,77,蹣跚,混亂狀態時，\n閃避率會變為2倍。
+27,10,78,電氣引擎,電屬性招式無效，\n反而會讓速度提高1階。
+27,10,79,鬥爭心,和對手性別相同時，招式威力會變為1.25倍，\n和對手性別不同時，則會變為0.75倍。\n對手性別不明時，會是正常的威力。
+27,10,80,不屈之心,畏縮時速度會提高1階。
+27,10,81,雪隱,下雪狀態時，\n閃避率會變為1.25倍。
+27,10,82,貪吃鬼,會在HP為1/2以下時，就吃掉原本\n在HP為1/4以下時才會吃的樹果。
+27,10,83,憤怒穴位,被對手的攻擊擊中要害時，\n自己的攻擊會提高至第6階。
+27,10,84,輕裝,失去攜帶的道具時，\n速度會變為2倍。
+27,10,85,耐熱,因火屬性招式而受到的傷害會減半。\n因灼傷狀態而受到的傷害也會減半。
+27,10,86,單純,能力變化會變為正常的2倍。
+27,10,87,乾燥皮膚,水屬性招式無效，反而會回復最大HP的1/4。\n因火屬性招式而受到的傷害會變為1.25倍。\n下雨狀態時，會在回合結束時回復最大HP的1/8，\n但大晴天狀態時，會在回合結束時減少最大HP的1/8。
+27,10,89,鐵拳,拳擊類招式威力會變為1.2倍。
+27,10,90,毒療,變為中毒、劇毒狀態時，\n在回合結束時HP不會減少，\n反而會回復最大HP的1/8。
+27,10,91,適應力,和自己同屬性的招式威力\n不會是1.5倍，而是會變為2倍。
+27,10,92,連續攻擊,使用連續招式時，\n能使出最多次數。
+27,10,93,濕潤之軀,下雨狀態時，異常狀態會在\n回合結束時痊癒。
+27,10,94,太陽之力,大晴天狀態時，特攻會變為1.5倍，\n但在回合結束時會減少最大HP的1/8。
+27,10,95,飛毛腿,變為異常狀態時，速度會變為1.5倍。\n也可無視麻痺狀態時速度會降低的影響。
+27,10,97,狙擊手,擊中要害時，威力不會是1.5倍，\n而是會變為2.25倍。
+27,10,98,魔法防守,攻擊以外的傷害無效。
+27,10,99,無防守,雙方招式的命中率都會變為100%。
+27,10,100,慢出,會在相同優先度的招式中\n最後一個行動。
+27,10,101,技術高手,威力在60以下的招式\n威力會變為1.5倍。
+27,10,102,葉子防守,大晴天狀態時，\n不會變為異常狀態。
+27,10,103,笨拙,這隻寶可夢攜帶的道具\n不會發揮效果。
+27,10,104,破格,可不受對手特性影響使出招式。\n部分特性例外。
+27,10,105,超幸運,易中要害+1。
+27,10,106,引爆,受到接觸類招式而瀕死時，\n會給予對手最大HP的1/4的傷害。
+27,10,107,危險預知,出場時，若對手擁有對自己\n效果絕佳或一擊必殺的招式，\n則能夠察覺。
+27,10,108,預知夢,出場時，會從對手的招式中\n讀取1種威力高的招式。
+27,10,109,純樸,可無視對手能力的變化，進行攻擊。\n可無視對手能力的變化，承受攻擊。\n無法無視速度的變化。
+27,10,111,過濾,因效果絕佳的招式而受到的\n傷害會變為3/4。
+27,10,113,膽量,能讓一般屬性、格鬥屬性招式\n擊中幽靈屬性的寶可夢。\n威嚇也無效。
+27,10,115,冰凍之軀,下雪狀態時，會在回合結束時\n回復最大HP的1/16。
+27,10,116,堅硬岩石,因效果絕佳的招式而受到的\n傷害會變為3/4。
+27,10,117,降雪,自出場起的5回合內，\n會變為下雪狀態。
+27,10,119,察覺,出場時，\n可得知對手攜帶的道具。
+27,10,120,捨身,會讓自己也受傷害的招式\n威力變為1.2倍。
+27,10,124,順手牽羊,自己沒有攜帶道具時，\n若受到接觸類招式，\n則會盜取對手的道具。
+27,10,125,強行,攻擊會失去追加效果，\n但可用1.3倍的威力使出招式。
+27,10,126,唱反調,能力的變化會逆轉，\n原本提高時會降低，\n原本降低時會提高。
+27,10,127,緊張感,會讓對手無法吃掉樹果。
+27,10,128,不服輸,被對手降低能力時，\n攻擊會提高2階。
+27,10,130,詛咒之軀,受到招式傷害時，有30%的機率\n會讓對手在4回合內變為招式封鎖狀態。
+27,10,131,治癒之心,在回合結束時，有50%的機率\n會治癒同伴的異常狀態。
+27,10,132,友情防守,會讓同伴受到的傷害變為3/4。
+27,10,133,碎裂鎧甲,受到物理招式傷害時，\n防禦會降低1階，\n速度會提高2階。
+27,10,134,重金屬,自己的重量會變為2倍。
+27,10,135,輕金屬,自己的重量會變為1/2。
+27,10,136,多重鱗片,HP全滿時，\n受到的傷害會減半。
+27,10,139,收穫,在回合結束時，\n有50%的機率會採收使用過的樹果。\n大晴天狀態時，則必定會採收。
+27,10,140,心靈感應,可閃避來自同伴的攻擊。
+27,10,141,心情不定,在回合結束時，某種能力會提高2階，\n另外的某種能力會降低1階。
+27,10,142,防塵,因沙暴狀態而受到的傷害無效。\n粉末類招式、特性也無效。
+27,10,143,毒手,使用接觸類招式擊中對手時，\n有30%的機率會使其變為中毒狀態。
+27,10,144,再生力,退回同行隊伍後，\n會回復最大HP的1/3。
+27,10,145,健壯胸肌,不會因對手的招式或特性\n而被降低防禦。
+27,10,146,撥沙,沙暴狀態時，\n速度會變為2倍。
+27,10,148,分析,如果在回合的最後使出招式，\n招式威力會變為1.3倍。
+27,10,149,幻覺,會以同行隊伍中最後一隻寶可夢的樣子出場。\n受到招式傷害時，會回到原來的模樣。
+27,10,150,變身者,變身為當前面對的寶可夢。\nHP以外的能力也會變為一樣。
+27,10,151,穿透,可無視對手的光牆、反射壁、\n極光幕、神秘守護、替身使用招式。
+27,10,152,木乃伊,受到接觸類招式時，\n會讓對手的特性變為木乃伊。
+27,10,153,自信過度,用攻擊打倒對手時，\n攻擊會提高1階。
+27,10,154,正義之心,受到惡屬性招式傷害時，\n攻擊會提高1階。
+27,10,156,魔法鏡,不會受到對手的變化招式影響，\n反而會將其反彈給對手。
+27,10,157,食草,草屬性招式無效，\n反而會讓攻擊提高1階。
+27,10,158,惡作劇之心,變化招式的優先度提高1階。
+27,10,159,沙之力,沙暴狀態時，\n岩石、地面、鋼屬性的\n招式威力會變為1.3倍。
+27,10,165,芳香幕,自己和同伴不會變為\n著迷、挑釁、不可連續、\n招式封鎖、回復封鎖、再來一次狀態。
+27,10,166,花幕,我方的草屬性寶可夢能力不會降低，\n也不會變為異常狀態。
+27,10,167,頰囊,吃掉樹果後，除了其效果外，\n還會回復最大HP的1/3。
+27,10,168,變幻自如,每次出場時，\n變為和自己使出的招式\n相同的屬性1次。
+27,10,169,毛皮大衣,因物理招式而受到的傷害會減半。
+27,10,170,魔術師,自己沒有攜帶道具時，\n會奪取用招式給予自己傷害的\n對手的道具。
+27,10,171,防彈,球彈類招式無效。
+27,10,172,好勝,被對手降低能力時，\n特攻會提高2階。
+27,10,173,強壯之顎,啃咬類招式威力會變為1.5倍。
+27,10,174,冰凍皮膚,一般屬性招式會變為冰屬性，\n威力會變為1.2倍。
+27,10,175,甜幕,自己和同伴不會變為\n睡眠、瞌睡狀態。
+27,10,176,戰鬥切換,若使出攻擊，會變為刀劍形態，\n若使出招式「王者盾牌」，\n則會變為盾牌形態。
+27,10,177,疾風之翼,HP全滿時，飛行屬性招式的\n優先度會提高1階。
+27,10,178,超級發射器,波動和波導類招式威力會變為1.5倍。
+27,10,180,共生,同伴消耗道具時，\n會把自己攜帶的道具交給同伴。
+27,10,181,硬爪,接觸類招式威力會變為1.3倍。
+27,10,182,妖精皮膚,一般屬性招式會變為妖精屬性，\n威力會變為1.2倍。
+27,10,183,黏滑,受到接觸類招式時，\n會讓對手的速度降低1階。
+27,10,184,飛行皮膚,一般屬性招式會變為飛行屬性，\n威力會變為1.2倍。
+27,10,185,親子愛,母親和孩子合計可攻擊2次。\n孩子的攻擊威力是母親的0.25倍。
+27,10,187,妖精氣場,全體的妖精屬性招式\n威力會變為1.33倍。
+27,10,192,持久力,受到招式傷害時，\n防禦會提高1階。
+27,10,196,不仁不義,攻擊中毒、劇毒狀態的對手時，\n必定會擊中要害。
+27,10,199,水泡,因火屬性招式而受到的傷害會減半。\n水屬性招式威力會變為2倍。\n不會變為灼傷狀態。
+27,10,201,怒火沖天,HP因對手的攻擊而降到1/2以下時，\n特攻會提高1階。
+27,10,202,撥雪,下雪狀態時，\n速度會變為2倍。
+27,10,203,遠隔,使用的招式會變為非接觸類招式。
+27,10,204,濕潤之聲,聲音類招式會變為水屬性。
+27,10,207,衝浪之尾,電氣場地狀態時，\n速度會變為2倍。
+27,10,209,畫皮,若在化形的樣子時受到招式傷害，\n會消耗最大HP的1/8代替受到的傷害，\n並變為現形的樣子。
+27,10,212,腐蝕,能讓鋼屬性、毒屬性\n也變為中毒、劇毒狀態。
+27,10,214,女王的威嚴,對手無法對自己和同伴\n使用先制招式。
+27,10,215,飛出的內在物,受到會瀕死的招式傷害時，\n會將從對手受到的傷害還給對手。
+27,10,218,毛茸茸,因接觸類招式而受到的傷害會減半。\n因火屬性招式而受到的傷害會變為2倍。
+27,10,221,捲髮,受到接觸類招式時，\n會讓對手的速度降低1階。
+27,10,222,接球手,會變為和被打倒的同伴相同的特性。
+27,10,226,電氣製造者,自出場起的5回合內，\n會讓整個場上變為電氣場地狀態。
+27,10,240,鏡甲,不會受到降低自己能力的效果影響，\n反而會將其反彈給對手。
+27,10,242,堅毅,會無視具有吸引招式效果的\n特性或招式的影響。
+27,10,245,吐沙,自受到招式傷害起的5回合內，\n會變為沙暴狀態。
+27,10,247,熟成,吃掉的樹果效果會變為2倍。
+27,10,250,擬態,屬性會依場地而改變。
+27,10,251,除障,出場時，會解除光牆、\n反射壁、極光幕狀態。
+27,10,254,遊魂,受到接觸類招式時，\n會和對手互換特性。
+27,10,258,飽了又餓,在回合結束時，\n會在滿腹花紋和空腹花紋之間\n交替改變樣子。
+27,10,259,速擊,有30%的機率會在相同優先度的\n招式中第一個行動。
+27,10,260,無形拳,使用接觸類招式時，\n會無視對手的防守效果，\n給予原本的1/4的傷害。\n對手的防守以外的效果會發動。
+27,10,261,怪藥,出場時，會讓同伴的能力變化復原。
+27,10,272,潔淨之鹽,不會變為異常狀態。\n因幽靈屬性招式\n而受到的傷害會減半。
+27,10,278,全能變身,退回同行隊伍後，\n會變為全能形態。
+27,10,280,電力轉換,受到招式傷害時，\n會變為電屬性威力提高狀態。
+27,10,283,黃金之軀,來自對手的變化招式無效。
+27,10,290,跟風,對手的能力提高時，\n自己的能力也一樣會提高。
+27,10,291,反芻,吃掉樹果的下一回合結束時，\n會再次吃掉相同的樹果1次。
+27,10,292,鋒銳,切斬類招式威力會變為1.5倍。
+27,10,293,大將,出場時，該場戰鬥中每有1隻同行隊伍中的\n寶可夢被打倒，招式威力就會提高10%。\n最多會提高至50%。
+27,10,295,毒滿地,受到物理招式傷害時，\n會讓對手場上變為毒菱狀態。
+27,10,296,尾甲,對手無法對自己和同伴\n使用先制招式。
+27,10,297,食土,地面屬性招式無效，\n反而會回復最大HP的1/4。
+27,10,299,款待,出場時，會讓同伴的HP\n回復該同伴最大HP的1/4。
+27,10,306,甘露之蜜,出場時，會讓對手的閃避率降低1階。\n在1場戰鬥中只會發動1次。
+27,10,311,貫穿鑽,使用接觸類招式時，\n會無視對手的防守效果，\n給予原本的1/4的傷害。\n對手的防守以外的效果會發動。
+27,10,312,龍皮膚,一般屬性招式會變為龍屬性，\n威力會變為1.2倍。
+27,10,313,鰻鰻高升,會變為不在地面上，\n地面屬性招式、撒菱、\n毒菱、黏黏網狀態無效。\n用攻擊打倒對手時，\n自己最高的那項能力會提高1階。
+27,10,315,超級日光,就算天氣不是大晴天狀態，\n也能比照大晴天狀態使用招式。
+27,10,316,火焰鬃毛,火屬性招式威力會變為1.5倍。
+27,10,318,辣椒噴發,受到招式傷害時，\n會讓對手變為灼傷狀態。
+27,11,1,Hedor,Hace que el Pokémon tenga una probabilidad del 10 % de\natemorizar al objetivo al causarle daño con un movimiento.
+27,11,2,Llovizna,Hace que llueva durante cinco turnos cuando el Pokémon\nentra en combate.
+27,11,3,Impulso,Aumenta un nivel la Velocidad del Pokémon al final de \ncada turno.
+27,11,4,Armadura Batalla,Evita que el Pokémon reciba golpes críticos.
+27,11,5,Robustez,"Si el Pokémon tiene los PS al máximo, aguanta con 1 PS\nun movimiento que lo debilitaría de un golpe. Además, no\nle afectan los movimientos fulminantes."
+27,11,6,Humedad,Evita que se puedan utilizar movimientos explosivos y\nque se activen las habilidades explosivas. Afecta a todos\nlos Pokémon.
+27,11,7,Flexibilidad,Evita que el Pokémon pueda ser paralizado.
+27,11,8,Velo de Arena,Aumenta un 25 % la Evasión del Pokémon durante las tormentas\nde arena.
+27,11,9,Electricidad Estática,Tiene una probabilidad del 30 % de paralizar al atacante\nsi el Pokémon es alcanzado por un movimiento de contacto.
+27,11,10,Absorbevoltios,Hace al Pokémon inmune a los movimientos de tipo Eléctrico\ny restaura 25 % de sus PS máximos si recibe uno.
+27,11,11,Absorbeagua,Hace al Pokémon inmune a los movimientos de tipo Agua\ny restaura 25 % de sus PS máximos si recibe uno.
+27,11,12,Despistado,Evita que el Pokémon adquiera los estados Enamorado y\nProvocación y que se sienta intimidado.
+27,11,13,Aclimatación,Anula todos los efectos del tiempo atmosférico.
+27,11,14,Ojo Compuesto,Aumenta un 30 % la precisión de los movimientos del Pokémon.
+27,11,15,Insomnio,Evita que el Pokémon pueda quedarse dormido o somnoliento.
+27,11,17,Inmunidad,Evita que el Pokémon pueda ser envenenado o gravemente\nenvenenado.
+27,11,18,Absorbefuego,Hace al Pokémon inmune a los movimientos de tipo Fuego\ny le provoca el estado Absorbefuego si recibe uno.
+27,11,19,Polvo Escudo,Hace al Pokémon inmune a los efectos secundarios de\nlos ataques.
+27,11,20,Ritmo Propio,Evita que el Pokémon pueda ser confundido o se \nsienta intimidado.
+27,11,21,Ventosas,Hace al Pokémon inmune a los movimientos y objetos de otros\nPokémon que lo obligan a ser cambiado por otro.
+27,11,22,Intimidación,Reduce un nivel el Ataque del rival cuando el Pokémon entra\nen combate.
+27,11,23,Sombra Trampa,Impide que el rival sea cambiado por otro Pokémon.
+27,11,24,Piel Tosca,Hace que el atacante pierda 12.5 % de sus PS máximos\nsi el Pokémon es alcanzado por un movimiento de contacto.
+27,11,26,Levitación,"Hace que el Pokémon flote y deje de estar en contacto con\nel suelo, lo que impide que le afecten los movimientos de tipo\nTierra y los estados Púas, Púas tóxicas y Red Pegajosa."
+27,11,27,Efecto Espora,"Tiene una probabilidad del 30 % de envenenar, paralizar\no dormir al atacante si el Pokémon es alcanzado por un\nmovimiento de contacto."
+27,11,28,Sincronía,"Si el Pokémon es quemado, envenenado, gravemente\nenvenenado o paralizado por un movimiento o la habilidad\nde otro Pokémon, le provoca el mismo problema de estado."
+27,11,29,Cuerpo Puro,Evita que los movimientos o la habilidad de otros Pokémon\nreduzcan las características del Pokémon.
+27,11,30,Curación Natural,Elimina los problemas de estado del Pokémon cuando se retira\ndel combate.
+27,11,31,Pararrayos,"Atrae hacia el Pokémon los movimientos de tipo Eléctrico\ny lo hace inmune a ellos. Además, aumenta un nivel su Ataque\nEspecial si recibe uno."
+27,11,33,Nado Rápido,Duplica la Velocidad del Pokémon cuando llueve.
+27,11,34,Clorofila,Duplica la Velocidad del Pokémon cuando hace sol.
+27,11,35,Iluminación,Evita que la Precisión del Pokémon pueda ser reducida\ne ignora los cambios en la Evasión del objetivo.
+27,11,36,Calco,Sustituye la habilidad del Pokémon por la de un rival cuando\nentra en combate.
+27,11,37,Potencia,Duplica la potencia de los ataques físicos del Pokémon.
+27,11,38,Punto Tóxico,Tiene una probabilidad del 30 % de envenenar al atacante\nsi el Pokémon es alcanzado por un movimiento de contacto.
+27,11,39,Fuerza Mental,Evita que el Pokémon se atemorice ante los ataques de otros\nPokémon y que se sienta intimidado.
+27,11,40,Escudo de Magma,Evita que el Pokémon pueda ser congelado.
+27,11,43,Insonorización,Hace al Pokémon inmune a los movimientos que usan sonido.
+27,11,44,Curación Pluvial,Restaura un 6.25 % de los PS máximos del Pokémon al final\nde cada turno cuando llueve.
+27,11,45,Chorro de Arena,Provoca una tormenta de arena que dura cinco turnos cuando\nel Pokémon entra en combate.
+27,11,46,Presión,Hace que los movimientos que el rival use contra el Pokémon\nconsuman 1 PP más.
+27,11,47,Sebo,Reduce un 50 % el daño que recibe de movimientos de tipo\nFuego o Hielo.
+27,11,48,Madrugador,"Si el Pokémon se duerme, tardará un 50 % menos de tiempo\nen despertarse."
+27,11,49,Cuerpo de Fuego,Tiene una probabilidad del 30 % de quemar al atacante\nsi el Pokémon es alcanzado por un movimiento de contacto.
+27,11,51,Perspicacia,Evita que la Precisión del Pokémon pueda ser reducida\ne ignora los cambios en la Evasión del objetivo.
+27,11,52,Corte Fuerte,Evita que los movimientos o la habilidad de otros Pokémon\nreduzcan el Ataque del Pokémon.
+27,11,53,Recolección,"Si el Pokémon no lleva un objeto, al final del turno recoge\nel que otro Pokémon haya consumido."
+27,11,55,Entusiasmo,"Cuando el Pokémon usa un ataque físico, aumenta un 50 %\nsu Ataque, pero reduce un 20 % su Precisión."
+27,11,56,Gran Encanto,Tiene una probabilidad del 30 % de enamorar al atacante\nsi el Pokémon es alcanzado por un movimiento de contacto.\nSolo tiene efecto si el atacante es del sexo opuesto al\ndel Pokémon.
+27,11,57,Más,Aumenta un 50 % el Ataque Especial del Pokémon si un \naliado presente en combate tiene la habilidad Más o la \nhabilidad Menos.
+27,11,58,Menos,Aumenta un 50 % el Ataque Especial del Pokémon si un\naliado presente en combate tiene la habilidad Más o la \nhabilidad Menos.
+27,11,59,Predicción,"Cambia el tipo del Pokémon al tipo Agua, Fuego o Hielo\ndependiendo del tiempo atmosférico."
+27,11,60,Viscosidad,Impide que el objeto que lleva el Pokémon pueda ser robado\no se pierda.
+27,11,61,Mudar,Tiene una probabilidad del 30 % de eliminar los problemas\nde estado del Pokémon al final de cada turno.
+27,11,62,Agallas,Aumenta un 50 % el Ataque del Pokémon si sufre un problema\nde estado. Ignora la reducción del 50 % del daño que causan\nlos ataques físicos provocada por las quemaduras.
+27,11,63,Escama Especial,Aumenta un 50 % la Defensa del Pokémon si sufre un problema\nde estado.
+27,11,65,Espesura,Aumenta un 50 % la potencia de los movimientos de tipo\nPlanta del Pokémon cuando sus PS máximos son reducidos\na 33.3 % o menos.
+27,11,66,Mar de Llamas,Aumenta un 50 % la potencia de los movimientos de tipo \nFuego del Pokémon cuando sus PS máximos son reducidos \na 33.3 % o menos.
+27,11,67,Torrente,Aumenta un 50 % la potencia de los movimientos de tipo Agua\ndel Pokémon cuando sus PS máximos son reducidos a 33.3 %\no menos.
+27,11,68,Enjambre,Aumenta un 50 % la potencia de los movimientos de tipo\nInsecto del Pokémon cuando sus PS máximos son reducidos\na 33.3 % o menos.
+27,11,69,Cabeza Roca,Evita que el Pokémon pierda PS al usar movimientos que\ntambién hieren al usuario.
+27,11,70,Sequía,Hace que salga el sol durante cinco turnos cuando el Pokémon\nentra en combate.
+27,11,72,Espíritu Vital,Evita que el Pokémon pueda quedarse dormido o somnoliento.
+27,11,73,Humo Blanco,Evita que los movimientos o la habilidad de otros Pokémon\nreduzcan las características del Pokémon.
+27,11,74,Energía Pura,Duplica la potencia de los ataques físicos del Pokémon.
+27,11,75,Caparazón,Evita que el Pokémon reciba golpes críticos.
+27,11,77,Tambaleo,Duplica la Evasión del Pokémon si está confundido.
+27,11,78,Electromotor,Hace al Pokémon inmune a los movimientos de tipo Eléctrico\ny aumenta un nivel su Velocidad si recibe uno.
+27,11,79,Rivalidad,Aumenta un 25 % la potencia de los movimientos del Pokémon\nsi el objetivo es del mismo sexo o la reduce un 25 % si es del\nsexo opuesto. Se mantiene igual si se desconoce el sexo del\nPokémon o del objetivo.
+27,11,80,Impasible,Aumenta un nivel la Velocidad del Pokémon cuando \nse atemoriza.
+27,11,81,Manto Níveo,Aumenta un 25 % la Evasión del Pokémon cuando nieva.
+27,11,82,Gula,Permite que el Pokémon consuma la baya que lleva cuando\nsus PS máximos son reducidos en un 50 % o menos en vez\nde esperar a que le queden un 25 % o menos.
+27,11,83,Irascible,Aumenta hasta el sexto nivel el Ataque del Pokémon si recibe\nun golpe crítico.
+27,11,84,Liviano,Duplica la Velocidad del Pokémon si consume o pierde\nel objeto que lleva.
+27,11,85,Ignífugo,Reduce un 50 % el daño que el Pokémon recibe de\nmovimientos de tipo Fuego y por quemaduras.
+27,11,86,Simple,Duplica los cambios en las características.
+27,11,87,Piel Seca,"Hace al Pokémon inmune a los movimientos de tipo Agua\ny restaura un 25 % de sus PS máximos si recibe uno, pero\naumenta un 25 % el daño que recibe de movimientos de tipo\nFuego. Restaura un 12.5 % de sus PS máximos al final de\ncada turno cuando llueve, pero resta un 12.5 % de sus PS\nmáximos al final de cada turno cuando hace sol."
+27,11,89,Puño Férreo,Aumenta un 20 % la potencia de los movimientos con los puños\ndel Pokémon.
+27,11,90,Antídoto,Restaura 12.5 % de los PS máximos del Pokémon al final\nde cada turno en vez de restárselos si es envenenado\no gravemente envenenado.
+27,11,91,Adaptable,"Aumenta un 100 %, en vez de un 50 %, la potencia de\nlos movimientos cuyo tipo coincida con el del Pokémon."
+27,11,92,Encadenado,Permite ejecutar siempre los movimientos de ataque múltiple\ncon el número máximo de golpes.
+27,11,93,Hidratación,Elimina todos los problemas de estado del Pokémon al final de\ncada turno cuando llueve.
+27,11,94,Poder Solar,"Aumenta un 50 % el Ataque Especial del Pokémon cuando hace\nsol, pero le hace perder 12.5 % de sus PS máximos al final\nde cada turno."
+27,11,95,Pies Rápidos,Aumenta un 50 % la Velocidad del Pokémon si sufre un\nproblema de estado. Ignora la reducción de la Velocidad\nprovocada por la parálisis.
+27,11,97,Puntería,Aumenta un 125 % la potencia de los golpes críticos del\nPokémon en vez de un 50 %.
+27,11,98,Muro Mágico,El Pokémon solo recibe daño de ataques.
+27,11,99,Indefenso,Los movimientos del Pokémon y los de su atacante tienen una\nprecisión del 100 %.
+27,11,100,Rezagado,Hace que el Pokémon actúe en último lugar cuando su\nmovimiento tiene la misma prioridad que otros.
+27,11,101,Experto,Aumenta un 50 % la potencia de los movimientos del Pokémon\nsi esta es de 60 o inferior.
+27,11,102,Defensa Hoja,Hace inmune al Pokémon a los problemas de estado cuando\nhace sol.
+27,11,103,Torpeza,Anula los efectos del objeto que lleva el Pokémon.
+27,11,104,Rompemoldes,"Los movimientos del Pokémon no se ven afectados por\nla habilidad del objetivo, salvo algunas excepciones."
+27,11,105,Supersuerte,Aumenta un nivel la probabilidad de lanzar golpes críticos\ndel Pokémon.
+27,11,106,Secuela,Hace que el atacante pierda un 25 % de sus PS máximos\nsi debilita al Pokémon con un movimiento de contacto.
+27,11,107,Anticipación,Permite prever los movimientos del rival que sean fulminantes o\nsupereficaces contra el Pokémon cuando este entra en combate.
+27,11,108,Alerta,Permite identificar el movimiento más potente del rival cuando\nel Pokémon entra en combate.
+27,11,109,Ignorancia,"Ignora los cambios en las características del objetivo,\na excepción de la Velocidad, cuando el Pokémon ataca\no recibe daño."
+27,11,111,Filtro,Reduce un 25 % el daño que el Pokémon recibe de movimientos\nsupereficaces.
+27,11,113,Intrépido,"Permite alcanzar a Pokémon de tipo Fantasma con movimientos\nde tipo Normal o Pelea. Además, evita que el Pokémon se\nsienta intimidado."
+27,11,115,Cuerpo de Hielo,Recupera un 6.25 % de sus PS máximos al final de cada\nturno cuando nieva.
+27,11,116,Roca Sólida,Reduce un 25 % el daño que el Pokémon recibe de movimientos\nsupereficaces.
+27,11,117,Nevada,Hace que nieve durante cinco turnos cuando el Pokémon entra\nen combate.
+27,11,119,Inspección,Permite identificar el objeto que lleva el rival cuando el\nPokémon entra en combate.
+27,11,120,Audaz,Aumenta un 20 % la potencia de los movimientos del Pokémon\nque también hieren al usuario.
+27,11,124,Hurto,"Si el Pokémon no lleva un objeto, roba el del Pokémon que\nlo ataque con un movimiento de contacto."
+27,11,125,Potencia Bruta,"Aumenta un 30 % la potencia de los movimientos del Pokémon,\npero anula sus efectos secundarios."
+27,11,126,Respondón,Invierte los cambios en las características que sufra el Pokémon:\nse reducen en vez de aumentar y aumentan en vez de reducirse.
+27,11,127,Nerviosismo,Impide que el rival consuma bayas.
+27,11,128,Competitivo,Aumenta dos niveles el Ataque del Pokémon cuando el rival\nle reduce cualquiera de sus características.
+27,11,130,Cuerpo Maldito,Tiene una probabilidad del 30 % de provocar el estado\nMovimiento anulado en el atacante durante cuatro turnos\nsi el Pokémon recibe daño de un movimiento.
+27,11,131,Alma Sanadora,Tiene una probabilidad del 50 % de eliminar los problemas\nde estado de un aliado al final de cada turno.
+27,11,132,Compiescolta,Reduce un 25 % el daño que reciben los aliados.
+27,11,133,Armadura Frágil,Reduce un nivel la Defensa del Pokémon y aumenta dos niveles\nsu Velocidad cuando recibe daño de un ataque físico.
+27,11,134,Metal Pesado,Duplica el peso del Pokémon.
+27,11,135,Metal Liviano,Reduce un 50 % el peso del Pokémon.
+27,11,136,Multiescamas,Reduce un 50 % el daño que recibe el Pokémon cuando sus\nPS están al máximo.
+27,11,139,Cosecha,"Luego de consumir una baya, el Pokémon tiene una\nprobabilidad del 50 % de recolectar otra al final de cada\nturno. La probabilidad es del 100 % cuando hace sol."
+27,11,140,Telepatía,Permite evadir los ataques de los aliados.
+27,11,141,Temperamental,Aumenta dos niveles una de las características del Pokémon y\nreduce un nivel de otra al final de cada turno.
+27,11,142,Funda,Hace al Pokémon inmune al daño causado por las tormentas de\narena y a las habilidades y los movimientos que usan polvos.
+27,11,143,Contacto Tóxico,Tiene una probabilidad del 30 % de envenenar al objetivo al\nque el Pokémon ataque con un movimiento de contacto.
+27,11,144,Regeneración,Recupera 33.3 % de sus PS máximos cuando se retira\ndel combate.
+27,11,145,Sacapecho,Evita que los movimientos o la habilidad de otros Pokémon\nreduzcan la Defensa del Pokémon.
+27,11,146,Ímpetu Arena,Duplica la Velocidad del Pokémon durante las tormentas \nde arena.
+27,11,148,Cálculo Final,Aumenta un 30 % la potencia del movimiento del Pokémon\nsi es el último en atacar en ese turno.
+27,11,149,Ilusión,"El Pokémon adopta el aspecto del último Pokémon del equipo\nantes de entrar en combate. Si recibe daño de un movimiento,\nla ilusión termina."
+27,11,150,Impostor,Transforma al Pokémon en el que tiene enfrente. Copia todos\nlos valores de las características de ese Pokémon a\nexcepción de los PS.
+27,11,151,Allanamiento,"Cuando el Pokémon usa un movimiento, ignora los efectos\nde Pantalla de Luz, Reflejo, Velo Aurora, Velo Sagrado y el\nsustituto del objetivo."
+27,11,152,Momia,Sustituye la habilidad del atacante por Momia si el Pokémon\nes alcanzado por un movimiento de contacto.
+27,11,153,Autoestima,Aumenta un nivel el Ataque del Pokémon cuando debilita a\nun objetivo con un ataque.
+27,11,154,Justiciero,Aumenta un nivel el Ataque del Pokémon si recibe daño de\nun movimiento de tipo Siniestro.
+27,11,156,Espejo Mágico,Devuelve los movimientos de estado al atacante sin que\nel Pokémon sea afectado por ellos.
+27,11,157,Herbívoro,Hace al Pokémon inmune a los movimientos de tipo Planta\ny aumenta un nivel su Ataque si recibe uno.
+27,11,158,Timador,Aumenta un nivel la prioridad de los movimientos de estado\ndel Pokémon.
+27,11,159,Poder Arenoso,"Aumenta un 30 % la potencia de los movimientos de tipo Roca,\nTierra y Acero del Pokémon durante las tormentas de arena."
+27,11,165,Velo Aromático,"Protege al Pokémon y a sus aliados de los estados Enamorado,\nProvocación, Repetición anulada, Movimiento anulado,\nCuración anulada y Otra Vez."
+27,11,166,Velo Florido,Evita que los Pokémon de tipo Planta aliados sufran problemas\nde estado o que les reduzcan sus características.
+27,11,167,Mejillas,"Restaura un 33.3 % de los PS máximos del Pokémon cuando\nconsume una baya, además de beneficiarse de su \nefecto habitual."
+27,11,168,Mutatipo,Cambia el tipo del Pokémon al del primer movimiento que va\na usar luego de entrar en combate.
+27,11,169,Pelaje Recio,Reduce un 50 % el daño que el Pokémon recibe de\nataques físicos.
+27,11,170,Prestidigitador,"Si el Pokémon no lleva un objeto, roba el del objetivo al que\nle causa daño con un movimiento."
+27,11,171,Antibalas,Hace al Pokémon inmune a los movimientos que usan\nproyectiles.
+27,11,172,Tenacidad,Aumenta dos niveles el Ataque Especial del Pokémon cuando\nel rival le reduce cualquiera de sus características.
+27,11,173,Mandíbula Fuerte,Aumenta un 50 % la potencia de los movimientos de\nmordedura del Pokémon.
+27,11,174,Piel Helada,Convierte los movimientos de tipo Normal del Pokémon en\nmovimientos de tipo Hielo y aumenta un 20 % su potencia.
+27,11,175,Velo Dulce,Ni el Pokémon ni sus aliados pueden quedarse dormidos \no somnolientos.
+27,11,176,Cambio Táctico,"Adopta la Forma Espada al atacar, o la Forma Escudo si\nusa el movimiento Escudo Real."
+27,11,177,Alas Vendaval,Aumenta un nivel la prioridad de los movimientos de tipo\nVolador del Pokémon cuando sus PS están al máximo.
+27,11,178,Megalanzador,Aumenta un 50 % la potencia de los movimientos del Pokémon\nque usan pulsos.
+27,11,180,Simbiosis,Pasa el objeto del Pokémon a un aliado cuando este último\nconsume su propio objeto.
+27,11,181,Garra Dura,Aumenta un 30 % la potencia de los movimientos de contacto\ndel Pokémon.
+27,11,182,Piel Feérica,Convierte los movimientos de tipo Normal del Pokémon en\nmovimientos de tipo Hada y aumenta un 20 % su potencia.
+27,11,183,Baba,Reduce un nivel la Velocidad del atacante si el Pokémon\nes alcanzado por un movimiento de contacto.
+27,11,184,Piel Celeste,Convierte los movimientos de tipo Normal del Pokémon en\nmovimientos de tipo Volador y aumenta un 20 % su potencia.
+27,11,185,Amor Filial,Hace que el Pokémon una fuerzas con su cría en un ataque\ndoble. La potencia del ataque de la cría equivale al 25 % de\nla de su madre.
+27,11,187,Aura Feérica,Aumenta un 33 % la potencia de los movimientos de tipo Hada\nde todos los Pokémon.
+27,11,192,Firmeza,Aumenta un nivel la Defensa del Pokémon si recibe daño de\nun movimiento.
+27,11,196,Ensañamiento,Hace que el Pokémon siempre lance un golpe crítico al atacar\nsi el objetivo está envenenado o gravemente envenenado.
+27,11,199,Acuaburbuja,"Reduce un 50 % el daño que el Pokémon recibe de\nmovimientos de tipo Fuego y duplica la potencia de sus\nmovimientos de tipo Agua. Además, evita que pueda \nser quemado."
+27,11,201,Ira,Aumenta un nivel el Ataque Especial del Pokémon cuando\nsus PS máximos son reducidos un 50 % o menos debido\na algún ataque.
+27,11,202,Quitanieves,Duplica la Velocidad del Pokémon cuando nieva.
+27,11,203,Remoto,Permite usar cualquier movimiento sin que el Pokémon entre en\ncontacto con el objetivo.
+27,11,204,Voz Fluida,Convierte los movimientos del Pokémon que usan sonido\nen movimientos de tipo Agua.
+27,11,207,Cola Surf,Duplica la Velocidad del Pokémon cuando hay un campo\neléctrico activo en el terreno de combate.
+27,11,209,Disfraz,"Si el Pokémon recibe un ataque cuando está en su Forma\nEncubierta, pierde 12.5 % de sus PS máximos en vez de recibir\ndaño y cambia a su Forma Descubierta."
+27,11,212,Corrosión,Permite envenenar o envenenar gravemente incluso a Pokémon\nde tipo Acero o Veneno.
+27,11,214,Regia Presencia,Impide que el rival use movimientos de prioridad alta contra\nel Pokémon y sus aliados.
+27,11,215,Revés,"Si el Pokémon recibe daño de un movimiento y se debilita,\nle devuelve al atacante la misma cantidad de daño."
+27,11,218,Mullido,"Reduce un 50 % el daño recibido por los movimientos\nde contacto, pero duplica el que le causan los\nde tipo Fuego."
+27,11,221,Rizos Rebeldes,Reduce un nivel la Velocidad del atacante si el Pokémon\nes alcanzado por un movimiento de contacto.
+27,11,222,Receptor,Hace que el Pokémon adquiera la habilidad de un\naliado debilitado.
+27,11,226,Electrogénesis,Crea un campo eléctrico en el terreno de combate durante\ncinco turnos cuando el Pokémon entra en combate.
+27,11,240,Coraza Reflejo,Devuelve los efectos de reducción de características dirigidos\nal Pokémon sin que sea afectado por ellos.
+27,11,242,Acérrimo,Ignora los efectos de las habilidades o los movimientos que\nle permiten a un Pokémon centrar la atención sobre sí mismo.
+27,11,245,Expulsarena,"Cuando el Pokémon recibe daño de un movimiento, provoca \nuna tormenta de arena que dura cinco turnos."
+27,11,247,Maduración,Duplica los efectos de las bayas que consume el Pokémon.
+27,11,250,Mimetismo,Cambia el tipo del Pokémon según el campo que haya en\nel terreno de combate.
+27,11,251,Antibarrera,"Elimina los estados Pantalla de Luz, Reflejo y Velo Aurora\ncuando el Pokémon entra en combate."
+27,11,254,Alma Errante,Intercambia las habilidades del Pokémon y el objetivo\nsi el Pokémon recibe un movimiento de contacto.
+27,11,258,Mutapetito,El Pokémon alterna entre su Forma Saciada y su Forma Voraz\nal final de cada turno.
+27,11,259,Mano Rápida,Hace que el Pokémon tenga una probabilidad del 30 % de\nactuar primero cuando su movimiento tiene la misma prioridad\nque otros.
+27,11,260,Puño Invisible,"Cuando el Pokémon ataca con un movimiento de contacto,\nes capaz de alcanzar incluso a objetivos que están protegidos\ny les causa un 25 % del daño original. El resto de efectos no son\nafectados por esta habilidad y se activarán de forma habitual."
+27,11,261,Medicina Extraña,Elimina los cambios en las características de los aliados cuando\nel Pokémon entra en combate.
+27,11,272,Sal Purificadora,Hace al Pokémon inmune a los problemas de estado y reduce\nun 50 % el daño que recibe de movimientos de tipo Fantasma.
+27,11,278,Cambio Heroico,El Pokémon adopta su Forma Heroica cuando se retira \ndel combate.
+27,11,280,Dínamo,El Pokémon adquiere el estado Cargado de electricidad\nsi recibe daño de un movimiento.
+27,11,283,Cuerpo Áureo,Hace al Pokémon inmune a los movimientos de estado.
+27,11,290,Oportunista,"Si el rival aumenta sus características, el Pokémon aumenta\nlas suyas de igual manera."
+27,11,291,Rumia,"Si el Pokémon consume una baya, vuelve a consumirla una vez\nmás al final del siguiente turno."
+27,11,292,Cortante,Aumenta un 50 % la potencia de los movimientos cortantes\ndel Pokémon.
+27,11,293,General Supremo,"Cuando el Pokémon entra en combate, aumenta un 10 %\nla potencia de sus movimientos por cada miembro del equipo\nque se haya debilitado, hasta un máximo del 50 %."
+27,11,295,Capa Tóxica,Provoca el estado Púas tóxicas en el lado rival cuando\nel Pokémon recibe daño de un ataque físico.
+27,11,296,Cola Armadura,Impide que el rival use movimientos de prioridad alta contra\nel Pokémon y sus aliados.
+27,11,297,Geofagia,Hace al Pokémon inmune a los movimientos de tipo Tierra\ny restaura 25 % de sus PS máximos si recibe uno.
+27,11,299,Hospitalidad,Restaura 25 % de los PS máximos de su aliado cuando el\nPokémon entra en combate.
+27,11,306,Néctar Dulce,Reduce un nivel la Evasión del rival cuando el Pokémon entra\nen combate. Solo tiene efecto una vez por combate.
+27,11,311,Turbotaladro,"Cuando el Pokémon ataca con un movimiento de contacto,\nes capaz de alcanzar incluso a objetivos que están protegidos\ny les causa un 25 % del daño original. El resto de efectos no son\nafectados por esta habilidad y se activarán de forma habitual."
+27,11,312,Piel Dracónica,Convierte los movimientos de tipo Normal del Pokémon en\nmovimientos de tipo Dragón y aumenta un 20 % su potencia.
+27,11,313,Impulso Anguila,"Hace que el Pokémon flote y deje de estar en contacto con\nel suelo, lo que impide que le afecten los movimientos de tipo\nTierra y los estados Púas, Púas tóxicas y Red Pegajosa.\nAumenta un nivel la característica más alta del Pokémon\ncuando debilita a un objetivo con un ataque."
+27,11,315,Megasolar,"El Pokémon puede usar movimientos con los mismos resultados\nque cuando hace sol, aunque realmente ese no sea el tiempo\natmosférico actual."
+27,11,316,Melena de Fuego,Aumenta un 50 % la potencia de los movimientos de tipo Fuego\ndel Pokémon.
+27,11,318,Salpicante,"Si el Pokémon recibe daño de un movimiento, quema al\natacante."
