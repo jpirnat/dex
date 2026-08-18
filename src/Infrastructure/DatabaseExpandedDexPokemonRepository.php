@@ -49,6 +49,7 @@ final readonly class DatabaseExpandedDexPokemonRepository implements ExpandedDex
     `a3`.`identifier` AS `ability3_identifier`,
     COALESCE(`a3d`.`name`, `a3n`.`name`) AS `ability3_name`,
     `a3d`.`description` AS `ability3_description`,
+    `vp`.`version_group_id`,
 
     `vp`.`base_hp`,
     `vp`.`base_atk`,
@@ -197,7 +198,7 @@ INNER JOIN `version_groups` AS `vg`
                 $result['ability3_identifier'],
                 $result['ability3_name'],
                 $result['ability3_description'] ?? '',
-                true,
+                $result['version_group_id'] !== VersionGroupId::CHAMPIONS,
             );
         }
 

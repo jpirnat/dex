@@ -51,6 +51,7 @@ final readonly class DatabaseDexPokemonRepository implements DexPokemonRepositor
 
     `a3`.`identifier` AS `ability3_identifier`,
     `a3n`.`name` AS `ability3_name`,
+    `vp`.`version_group_id`,
 
     `vp`.`base_hp`,
     `vp`.`base_atk`,
@@ -192,7 +193,7 @@ INNER JOIN `version_groups` AS `vg`
             $abilities[] = new DexPokemonAbility(
                 $result['ability3_identifier'],
                 $result['ability3_name'],
-                true,
+                $result['version_group_id'] !== VersionGroupId::CHAMPIONS,
             );
         }
 
