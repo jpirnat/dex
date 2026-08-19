@@ -75,7 +75,10 @@ return [
 		'item_descriptions_champions',
 	],
 	'item_names',
-	'vg_items',
+	'vg_items' => [
+    	'vg_items',
+    	'vg_items_champions',
+	],
 
 	// Types
 	'categories',
