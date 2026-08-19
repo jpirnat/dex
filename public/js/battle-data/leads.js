@@ -130,7 +130,7 @@ const app = createApp({
             });
         },
         goToAveraged() {
-            window.location.assign(`/stats/${this.start}-to-${this.end}/${this.format.identifier}/${this.rating}/leads${this.queryParams}`);
+            window.location.assign(`/battle-data/${this.start}-to-${this.end}/${this.format.identifier}/${this.rating}/leads${this.queryParams}`);
         },
     },
     watch: {

@@ -130,7 +130,7 @@ const app = createApp({
             Swal.fire({
                 icon: 'success',
                 html: `${formatName} [${rating}] has been saved as your default format. `
-                    + '<a href="/stats/current" target="_blank">Current Stats</a> will '
+                    + '<a href="/battle-data/current" target="_blank">Current Battle Data</a> will '
                     + `now always lead to the latest data for ${formatName} [${rating}].`
             });
 
@@ -165,7 +165,7 @@ const app = createApp({
             });
         },
         goToAveraged() {
-            window.location.assign(`/stats/${this.start}-to-${this.end}/${this.format.identifier}/${this.rating}${this.queryParams}`);
+            window.location.assign(`/battle-data/${this.start}-to-${this.end}/${this.format.identifier}/${this.rating}${this.queryParams}`);
         },
     },
     watch: {

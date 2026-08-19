@@ -133,7 +133,7 @@ const app = createApp({
             this.$refs.chart.addLine(line);
         },
         goToAveraged() {
-            window.location.assign(`/stats/${this.start}-to-${this.end}/${this.format.identifier}/${this.rating}/pokemon/${this.pokemon.identifier}`);
+            window.location.assign(`/battle-data/${this.start}-to-${this.end}/${this.format.identifier}/${this.rating}/pokemon/${this.pokemon.identifier}`);
         },
     },
 });

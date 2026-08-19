@@ -11,13 +11,13 @@
     <dex-breadcrumbs :breadcrumbs="breadcrumbs"></dex-breadcrumbs>
 
     <div class="month-control" v-if="loaded">
-        <a v-if="prevMonth" class="button prev" :href="'/stats/' + prevMonth.value + '/' + format.identifier + '/' + rating + '/abilities/' + ability.identifier + queryParams">
+        <a v-if="prevMonth" class="button prev" :href="'/battle-data/' + prevMonth.value + '/' + format.identifier + '/' + rating + '/moves/' + move.identifier + queryParams">
             &#9668; {{ prevMonth.name }}
         </a>
 
         <div class="space"></div>
 
-        <a v-if="nextMonth" class="button next" :href="'/stats/' + nextMonth.value + '/' + format.identifier + '/' + rating + '/abilities/' + ability.identifier + queryParams">
+        <a v-if="nextMonth" class="button next" :href="'/battle-data/' + nextMonth.value + '/' + format.identifier + '/' + rating + '/moves/' + move.identifier + queryParams">
             {{ nextMonth.name }} &#9658;
         </a>
     </div>
@@ -25,7 +25,7 @@
     <div class="rating-control" v-if="ratings.length">
         <ul>
             <li v-for="r in ratings">
-                <a :href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + r + '/abilities/' + ability.identifier + queryParams"
+                <a :href="'/battle-data/' + thisMonth.value + '/' + format.identifier + '/' + r + '/moves/' + move.identifier + queryParams"
                     :class="{
                         'current': r === rating
                     }"
@@ -41,12 +41,12 @@
     <template v-if="loaded">
         <div class="buttons-control">
             <div class="space"></div>
-            <a class="button" :href="'/dex/' + versionGroup.identifier + '/abilities/' + ability.identifier">View in Dex</a>
+            <a class="button" :href="'/dex/' + versionGroup.identifier + '/moves/' + move.identifier">View in Dex</a>
         </div>
 
-        <h1 class="dex-page__title">{{ ability.name }}</h1>
+        <h1 class="dex-page__title">{{ move.name }}</h1>
 
-        <p class="dex-ability__description">{{ ability.description }}</p>
+        <p class="dex-move__description">{{ move.description }}</p>
 
         <dex-pagination
             v-model:current-page="currentPage"
@@ -76,14 +76,14 @@
                             'dex-table__header--sorted-desc': sortColumn === 'pokemonPercent' && sortDirection === 'desc',
                         }"
                     >Pokémon&nbsp;%</th>
-                    <th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('abilityPercent', 'desc')"
+                    <th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('movePercent', 'desc')"
                         :class="{
-                            'dex-table__header--sorted-asc': sortColumn === 'abilityPercent' && sortDirection === 'asc',
-                            'dex-table__header--sorted-desc': sortColumn === 'abilityPercent' && sortDirection === 'desc',
+                            'dex-table__header--sorted-asc': sortColumn === 'movePercent' && sortDirection === 'asc',
+                            'dex-table__header--sorted-desc': sortColumn === 'movePercent' && sortDirection === 'desc',
                         }"
                     >
                         <span class="dex-table__math-symbol">×</span>
-                        Ability&nbsp;%
+                        Move&nbsp;%
                     </th>
                     <th scope="col" class="dex-table--number dex-table__header--sortable" @click="sortBy('usagePercent', 'desc')"
                         :class="{
@@ -114,12 +114,12 @@
                         <img v-if="pokemon.icon" class="dex-pokemon-icon" :src="'/images/pokemon/icons/' + pokemon.icon" alt="">
                     </td>
                     <th scope="row" class="dex-table__pokemon-name">
-                        <a :href="'/stats/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + pokemon.identifier">
+                        <a :href="'/battle-data/' + thisMonth.value + '/' + format.identifier + '/' + rating + '/pokemon/' + pokemon.identifier">
                             {{ pokemon.name }}
                         </a>
                     </th>
                     <td class="dex-table--number">{{ pokemon.pokemonPercentText }}</td>
-                    <td class="dex-table--number">{{ pokemon.abilityPercentText }}</td>
+                    <td class="dex-table--number">{{ pokemon.movePercentText }}</td>
                     <td class="dex-table--number">{{ pokemon.usagePercentText }}</td>
                     <td class="dex-table--number chart-link"
                         :class="{
@@ -166,5 +166,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-moment/1.0.1/chartjs-adapter-moment.min.js"></script>
 
-    <script type="module" src="/js/stats/ability.js"></script>
+    <script type="module" src="/js/battle-data/move.js"></script>
 {% endblock %}

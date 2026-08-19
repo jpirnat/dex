@@ -60,7 +60,7 @@ const app = createApp({
         const encoded = url.searchParams.get('lines');
         const lines = JSON.parse(decodeURIComponent(encoded));
 
-        const response = await fetch('/stats/chart', {
+        const response = await fetch('/battle-data/chart', {
             method: 'POST',
             credentials: 'same-origin',
             headers: new Headers({
@@ -85,7 +85,7 @@ const app = createApp({
         this.responseLines = data.lines;
         this.locale = data.locale;
 
-        document.title = `Porydex - Stats - ${this.chartTitle}`;
+        document.title = `Porydex - Battle Data - ${this.chartTitle}`;
 
         await this.$nextTick();
         this.renderChart();

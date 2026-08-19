@@ -389,10 +389,10 @@ final readonly class IndexView
     /**
      * Show the stats index page.
      */
-    public function statsIndex(): ResponseInterface
+    public function battleDataIndex(): ResponseInterface
     {
         $content = $this->renderer->render(
-            'html/stats/index.twig',
+            'html/battle-data/index.twig',
             $this->baseView->getBaseVariables() + [
                 'title' => 'Stats',
             ]
@@ -404,10 +404,10 @@ final readonly class IndexView
     /**
      * Show the stats month page.
      */
-    public function statsMonth(): ResponseInterface
+    public function battleDataMonth(): ResponseInterface
     {
         $content = $this->renderer->render(
-            'html/stats/month.twig',
+            'html/battle-data/month.twig',
             $this->baseView->getBaseVariables() + [
                 'title' => 'Stats',
             ]
@@ -419,10 +419,10 @@ final readonly class IndexView
     /**
      * Show the stats usage page.
      */
-    public function statsUsage(): ResponseInterface
+    public function battleDataUsage(): ResponseInterface
     {
         $content = $this->renderer->render(
-            'html/stats/usage.twig',
+            'html/battle-data/usage.twig',
             $this->baseView->getBaseVariables() + [
                 'title' => 'Stats',
             ]
@@ -434,10 +434,10 @@ final readonly class IndexView
     /**
      * Show the stats leads page.
      */
-    public function statsLeads(): ResponseInterface
+    public function battleDataLeads(): ResponseInterface
     {
         $content = $this->renderer->render(
-            'html/stats/leads.twig',
+            'html/battle-data/leads.twig',
             $this->baseView->getBaseVariables() + [
                 'title' => 'Stats',
             ]
@@ -449,10 +449,10 @@ final readonly class IndexView
     /**
      * Show the stats Pokémon page.
      */
-    public function statsPokemon(): ResponseInterface
+    public function battleDataPokemon(): ResponseInterface
     {
         $content = $this->renderer->render(
-            'html/stats/pokemon.twig',
+            'html/battle-data/pokemon.twig',
             $this->baseView->getBaseVariables() + [
                 'title' => 'Stats',
             ]
@@ -464,10 +464,10 @@ final readonly class IndexView
     /**
      * Show the stats averaged usage page.
      */
-    public function averagedUsage(): ResponseInterface
+    public function battleDataAveragedUsage(): ResponseInterface
     {
         $content = $this->renderer->render(
-            'html/stats/averaged-usage.twig',
+            'html/battle-data/averaged-usage.twig',
             $this->baseView->getBaseVariables() + [
                 'title' => 'Stats',
             ]
@@ -479,10 +479,10 @@ final readonly class IndexView
     /**
      * Show the stats averaged leads page.
      */
-    public function averagedLeads(): ResponseInterface
+    public function battleDataAveragedLeads(): ResponseInterface
     {
         $content = $this->renderer->render(
-            'html/stats/averaged-leads.twig',
+            'html/battle-data/averaged-leads.twig',
             $this->baseView->getBaseVariables() + [
                 'title' => 'Stats',
             ]
@@ -494,10 +494,10 @@ final readonly class IndexView
     /**
      * Show the stats averaged Pokémon page.
      */
-    public function averagedPokemon(): ResponseInterface
+    public function battleDataAveragedPokemon(): ResponseInterface
     {
         $content = $this->renderer->render(
-            'html/stats/averaged-pokemon.twig',
+            'html/battle-data/averaged-pokemon.twig',
             $this->baseView->getBaseVariables() + [
                 'title' => 'Stats',
             ]
@@ -509,10 +509,10 @@ final readonly class IndexView
     /**
      * Show the stats ability page.
      */
-    public function statsAbility(): ResponseInterface
+    public function battleDataAbility(): ResponseInterface
     {
         $content = $this->renderer->render(
-            'html/stats/ability.twig',
+            'html/battle-data/ability.twig',
             $this->baseView->getBaseVariables() + [
                 'title' => 'Stats',
             ]
@@ -524,10 +524,10 @@ final readonly class IndexView
     /**
      * Show the stats item page.
      */
-    public function statsItem(): ResponseInterface
+    public function battleDataItem(): ResponseInterface
     {
         $content = $this->renderer->render(
-            'html/stats/item.twig',
+            'html/battle-data/item.twig',
             $this->baseView->getBaseVariables() + [
                 'title' => 'Stats',
             ]
@@ -539,10 +539,10 @@ final readonly class IndexView
     /**
      * Show the stats move page.
      */
-    public function statsMove(): ResponseInterface
+    public function battleDataMove(): ResponseInterface
     {
         $content = $this->renderer->render(
-            'html/stats/move.twig',
+            'html/battle-data/move.twig',
             $this->baseView->getBaseVariables() + [
                 'title' => 'Stats',
             ]
@@ -554,10 +554,10 @@ final readonly class IndexView
     /**
      * Show the stats chart page.
      */
-    public function statsChart(): ResponseInterface
+    public function battleDataChart(): ResponseInterface
     {
         $content = $this->renderer->render(
-            'html/stats/chart.twig',
+            'html/battle-data/chart.twig',
             $this->baseView->getBaseVariables() + [
                 'title' => 'Stats - Chart',
             ]

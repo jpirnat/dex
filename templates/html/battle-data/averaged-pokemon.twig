@@ -12,7 +12,7 @@
     <div class="rating-control" v-if="ratings.length">
         <ul>
             <li v-for="r in ratings">
-                <a :href="'/stats/' + startMonth.value + '-to-' + endMonth.value + '/' + format.identifier + '/' + r + '/pokemon/' + pokemon.identifier"
+                <a :href="'/battle-data/' + startMonth.value + '-to-' + endMonth.value + '/' + format.identifier + '/' + r + '/pokemon/' + pokemon.identifier"
                     :class="{
                         'current': r === rating
                     }"
@@ -113,5 +113,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/floating-vue@5.2.2/dist/floating-vue.umd.min.js"></script>
 
-    <script type="module" src="/js/stats/averaged-pokemon.js"></script>
+    <script type="module" src="/js/battle-data/averaged-pokemon.js"></script>
 {% endblock %}

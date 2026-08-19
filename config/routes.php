@@ -440,15 +440,15 @@ return [
         'middlewareClasses' => MiddlewareGroups::JSON,
     ]],
 
-    ['GET', '/stats', [
+    ['GET', '/battle-data', [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'statsIndex',
+        'viewMethod' => 'battleDataIndex',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['GET', '/data/stats', [
+    ['GET', '/data/battle-data', [
         'controllerClass' => \Jp\Dex\Application\Controllers\StatsIndexController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\StatsIndexView::class,
@@ -456,15 +456,15 @@ return [
         'middlewareClasses' => MiddlewareGroups::JSON,
     ]],
 
-    ['GET', "/stats/$month", [
+    ['GET', "/battle-data/$month", [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'statsMonth',
+        'viewMethod' => 'battleDataMonth',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['GET', "/data/stats/$month", [
+    ['GET', "/data/battle-data/$month", [
         'controllerClass' => \Jp\Dex\Application\Controllers\StatsMonthController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\StatsMonthView::class,
@@ -472,15 +472,15 @@ return [
         'middlewareClasses' => MiddlewareGroups::JSON,
     ]],
 
-    ['GET', "/stats/$month/$formatIdentifier/$rating", [
+    ['GET', "/battle-data/$month/$formatIdentifier/$rating", [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'statsUsage',
+        'viewMethod' => 'battleDataUsage',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['GET', "/data/stats/$month/$formatIdentifier/$rating", [
+    ['GET', "/data/battle-data/$month/$formatIdentifier/$rating", [
         'controllerClass' => \Jp\Dex\Application\Controllers\StatsUsageController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\StatsUsageView::class,
@@ -488,15 +488,15 @@ return [
         'middlewareClasses' => MiddlewareGroups::JSON,
     ]],
 
-    ['GET', '/stats/current', [
+    ['GET', '/battle-data/current', [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'statsUsage',
+        'viewMethod' => 'battleDataUsage',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['GET', '/data/stats/current', [
+    ['GET', '/data/battle-data/current', [
         'controllerClass' => \Jp\Dex\Application\Controllers\StatsUsageController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\StatsUsageView::class,
@@ -504,15 +504,15 @@ return [
         'middlewareClasses' => MiddlewareGroups::CURRENT_STATS,
     ]],
 
-    ['GET', "/stats/$month/$formatIdentifier/$rating/leads", [
+    ['GET', "/battle-data/$month/$formatIdentifier/$rating/leads", [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'statsLeads',
+        'viewMethod' => 'battleDataLeads',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['GET', "/data/stats/$month/$formatIdentifier/$rating/leads", [
+    ['GET', "/data/battle-data/$month/$formatIdentifier/$rating/leads", [
         'controllerClass' => \Jp\Dex\Application\Controllers\StatsLeadsController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\StatsLeadsView::class,
@@ -520,15 +520,15 @@ return [
         'middlewareClasses' => MiddlewareGroups::JSON,
     ]],
 
-    ['GET', "/stats/$month/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
+    ['GET', "/battle-data/$month/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'statsPokemon',
+        'viewMethod' => 'battleDataPokemon',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['GET', "/data/stats/$month/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
+    ['GET', "/data/battle-data/$month/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
         'controllerClass' => \Jp\Dex\Application\Controllers\StatsPokemonController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\StatsPokemonView::class,
@@ -536,15 +536,15 @@ return [
         'middlewareClasses' => MiddlewareGroups::JSON,
     ]],
 
-    ['GET', "/stats/$month/$formatIdentifier/$rating/abilities/$abilityIdentifier", [
+    ['GET', "/battle-data/$month/$formatIdentifier/$rating/abilities/$abilityIdentifier", [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'statsAbility',
+        'viewMethod' => 'battleDataAbility',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['GET', "/data/stats/$month/$formatIdentifier/$rating/abilities/$abilityIdentifier", [
+    ['GET', "/data/battle-data/$month/$formatIdentifier/$rating/abilities/$abilityIdentifier", [
         'controllerClass' => \Jp\Dex\Application\Controllers\StatsAbilityController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\StatsAbilityView::class,
@@ -552,15 +552,15 @@ return [
         'middlewareClasses' => MiddlewareGroups::JSON,
     ]],
 
-    ['GET', "/stats/$month/$formatIdentifier/$rating/items/$itemIdentifier", [
+    ['GET', "/battle-data/$month/$formatIdentifier/$rating/items/$itemIdentifier", [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'statsItem',
+        'viewMethod' => 'battleDataItem',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['GET', "/data/stats/$month/$formatIdentifier/$rating/items/$itemIdentifier", [
+    ['GET', "/data/battle-data/$month/$formatIdentifier/$rating/items/$itemIdentifier", [
         'controllerClass' => \Jp\Dex\Application\Controllers\StatsItemController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\StatsItemView::class,
@@ -568,15 +568,15 @@ return [
         'middlewareClasses' => MiddlewareGroups::JSON,
     ]],
 
-    ['GET', "/stats/$month/$formatIdentifier/$rating/moves/$moveIdentifier", [
+    ['GET', "/battle-data/$month/$formatIdentifier/$rating/moves/$moveIdentifier", [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'statsMove',
+        'viewMethod' => 'battleDataMove',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['GET', "/data/stats/$month/$formatIdentifier/$rating/moves/$moveIdentifier", [
+    ['GET', "/data/battle-data/$month/$formatIdentifier/$rating/moves/$moveIdentifier", [
         'controllerClass' => \Jp\Dex\Application\Controllers\StatsMoveController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\StatsMoveView::class,
@@ -585,15 +585,15 @@ return [
     ]],
 
     // Averaged
-    ['GET', "/stats/$start-to-$end/$formatIdentifier/$rating", [
+    ['GET', "/battle-data/$start-to-$end/$formatIdentifier/$rating", [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'averagedUsage',
+        'viewMethod' => 'battleDataAveragedUsage',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['GET', "/data/stats/$start-to-$end/$formatIdentifier/$rating", [
+    ['GET', "/data/battle-data/$start-to-$end/$formatIdentifier/$rating", [
         'controllerClass' => \Jp\Dex\Application\Controllers\AveragedUsageController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\AveragedUsageView::class,
@@ -601,15 +601,15 @@ return [
         'middlewareClasses' => MiddlewareGroups::JSON,
     ]],
 
-    ['GET', "/stats/$start-to-$end/$formatIdentifier/$rating/leads", [
+    ['GET', "/battle-data/$start-to-$end/$formatIdentifier/$rating/leads", [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'averagedLeads',
+        'viewMethod' => 'battleDataAveragedLeads',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['GET', "/data/stats/$start-to-$end/$formatIdentifier/$rating/leads", [
+    ['GET', "/data/battle-data/$start-to-$end/$formatIdentifier/$rating/leads", [
         'controllerClass' => \Jp\Dex\Application\Controllers\AveragedLeadsController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\AveragedLeadsView::class,
@@ -617,15 +617,15 @@ return [
         'middlewareClasses' => MiddlewareGroups::JSON,
     ]],
 
-    ['GET', "/stats/$start-to-$end/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
+    ['GET', "/battle-data/$start-to-$end/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'averagedPokemon',
+        'viewMethod' => 'battleDataAveragedPokemon',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['GET', "/data/stats/$start-to-$end/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
+    ['GET', "/data/battle-data/$start-to-$end/$formatIdentifier/$rating/pokemon/$pokemonIdentifier", [
         'controllerClass' => \Jp\Dex\Application\Controllers\AveragedPokemonController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\AveragedPokemonView::class,
@@ -634,15 +634,15 @@ return [
     ]],
 
     // Charts
-    ['GET', '/stats/chart', [
+    ['GET', '/battle-data/chart', [
         'controllerClass' => IndexController::class,
         'controllerMethod' => 'index',
         'viewClass' => IndexView::class,
-        'viewMethod' => 'statsChart',
+        'viewMethod' => 'battleDataChart',
         'middlewareClasses' => MiddlewareGroups::HTML,
     ]],
 
-    ['POST', '/stats/chart', [
+    ['POST', '/battle-data/chart', [
         'controllerClass' => \Jp\Dex\Application\Controllers\StatsChartController::class,
         'controllerMethod' => 'setData',
         'viewClass' => \Jp\Dex\Presentation\StatsChartView::class,
