@@ -400,7 +400,7 @@ $services->alias(
 );
 $services->alias(
     \Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownNatureRepositoryInterface::class,
-    \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownNatureRepository::class
+    \Jp\Dex\Infrastructure\Showdown\SimpleShowdownNatureRepository::class
 );
 $services->alias(
     \Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownPokemonRepositoryInterface::class,

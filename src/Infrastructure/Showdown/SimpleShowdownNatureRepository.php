@@ -6,12 +6,11 @@ namespace Jp\Dex\Infrastructure\Showdown;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\NatureNotImportedException;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureId;
-use PDO;
 
-final class DatabaseShowdownNatureRepository implements ShowdownNatureRepositoryInterface
+final class SimpleShowdownNatureRepository implements ShowdownNatureRepositoryInterface
 {
     /** @var NatureId[] $naturesToImport */
-    private array $naturesToImport = [];
+    private array $naturesToImport;
 
     /** @var array<string, int> $naturesToIgnore */
     private array $naturesToIgnore;
@@ -20,27 +19,39 @@ final class DatabaseShowdownNatureRepository implements ShowdownNatureRepository
     private array $unknownNatures = [];
 
 
-    public function __construct(PDO $db)
+    public function __construct()
     {
-        $stmt = $db->prepare(
-            'SELECT
-                `name`,
-                `nature_id`
-            FROM `showdown_natures_to_import`'
-        );
-        $stmt->execute();
-        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $this->naturesToImport[$result['name']] = new NatureId($result['nature_id']);
-        }
+        $this->naturesToImport = [
+            'Hardy' => new NatureId(1),
+            'Lonely' => new NatureId(2),
+            'Brave' => new NatureId(3),
+            'Adamant' => new NatureId(4),
+            'Naughty' => new NatureId(5),
+            'Bold' => new NatureId(6),
+            'Docile' => new NatureId(7),
+            'Relaxed' => new NatureId(8),
+            'Impish' => new NatureId(9),
+            'Lax' => new NatureId(10),
+            'Timid' => new NatureId(11),
+            'Hasty' => new NatureId(12),
+            'Serious' => new NatureId(13),
+            'Jolly' => new NatureId(14),
+            'Naive' => new NatureId(15),
+            'Modest' => new NatureId(16),
+            'Mild' => new NatureId(17),
+            'Quiet' => new NatureId(18),
+            'Bashful' => new NatureId(19),
+            'Rash' => new NatureId(20),
+            'Calm' => new NatureId(21),
+            'Gentle' => new NatureId(22),
+            'Sassy' => new NatureId(23),
+            'Careful' => new NatureId(24),
+            'Quirky' => new NatureId(25),
+        ];
 
-        $stmt = $db->prepare(
-            'SELECT
-                `name`,
-                1
-            FROM `showdown_natures_to_ignore`'
-        );
-        $stmt->execute();
-        $this->naturesToIgnore = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+        $this->naturesToIgnore = [
+            'Other' => 1,
+        ];
     }
 
     /**

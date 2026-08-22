@@ -214,8 +214,6 @@ return [
 	'showdown_abilities_to_ignore',
 	'showdown_items_to_import',
 	'showdown_items_to_ignore',
-	'showdown_natures_to_import',
-	'showdown_natures_to_ignore',
 	'showdown_moves_to_import',
 	'showdown_moves_to_ignore',
 ];
