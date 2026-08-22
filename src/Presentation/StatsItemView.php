@@ -64,7 +64,7 @@ final readonly class StatsItemView
         $formatIdentifier = $format->identifier;
         $breadcrumbs = [[
             'url' => '/battle-data',
-            'text' => 'Stats',
+            'text' => 'Battle Data',
         ], [
             'url' => "/battle-data/$month",
             'text' => $thisMonth['name'],
@@ -77,7 +77,7 @@ final readonly class StatsItemView
 
         return new JsonResponse([
             'data' => [
-                'title' => 'Porydex - Stats - ' . $thisMonth['name'] . ' '
+                'title' => 'Porydex - Battle Data - ' . $thisMonth['name'] . ' '
                     . $format->name . ' - ' . $item['name'],
 
                 'format' => [

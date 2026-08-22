@@ -394,7 +394,7 @@ final readonly class IndexView
         $content = $this->renderer->render(
             'html/battle-data/index.twig',
             $this->baseView->getBaseVariables() + [
-                'title' => 'Stats',
+                'title' => 'Battle Data',
             ]
         );
 
@@ -409,7 +409,7 @@ final readonly class IndexView
         $content = $this->renderer->render(
             'html/battle-data/month.twig',
             $this->baseView->getBaseVariables() + [
-                'title' => 'Stats',
+                'title' => 'Battle Data',
             ]
         );
 
@@ -424,7 +424,7 @@ final readonly class IndexView
         $content = $this->renderer->render(
             'html/battle-data/usage.twig',
             $this->baseView->getBaseVariables() + [
-                'title' => 'Stats',
+                'title' => 'Battle Data',
             ]
         );
 
@@ -439,7 +439,7 @@ final readonly class IndexView
         $content = $this->renderer->render(
             'html/battle-data/leads.twig',
             $this->baseView->getBaseVariables() + [
-                'title' => 'Stats',
+                'title' => 'Battle Data',
             ]
         );
 
@@ -454,7 +454,7 @@ final readonly class IndexView
         $content = $this->renderer->render(
             'html/battle-data/pokemon.twig',
             $this->baseView->getBaseVariables() + [
-                'title' => 'Stats',
+                'title' => 'Battle Data',
             ]
         );
 
@@ -469,7 +469,7 @@ final readonly class IndexView
         $content = $this->renderer->render(
             'html/battle-data/averaged-usage.twig',
             $this->baseView->getBaseVariables() + [
-                'title' => 'Stats',
+                'title' => 'Battle Data',
             ]
         );
 
@@ -484,7 +484,7 @@ final readonly class IndexView
         $content = $this->renderer->render(
             'html/battle-data/averaged-leads.twig',
             $this->baseView->getBaseVariables() + [
-                'title' => 'Stats',
+                'title' => 'Battle Data',
             ]
         );
 
@@ -499,7 +499,7 @@ final readonly class IndexView
         $content = $this->renderer->render(
             'html/battle-data/averaged-pokemon.twig',
             $this->baseView->getBaseVariables() + [
-                'title' => 'Stats',
+                'title' => 'Battle Data',
             ]
         );
 
@@ -514,7 +514,7 @@ final readonly class IndexView
         $content = $this->renderer->render(
             'html/battle-data/ability.twig',
             $this->baseView->getBaseVariables() + [
-                'title' => 'Stats',
+                'title' => 'Battle Data',
             ]
         );
 
@@ -529,7 +529,7 @@ final readonly class IndexView
         $content = $this->renderer->render(
             'html/battle-data/item.twig',
             $this->baseView->getBaseVariables() + [
-                'title' => 'Stats',
+                'title' => 'Battle Data',
             ]
         );
 
@@ -544,7 +544,7 @@ final readonly class IndexView
         $content = $this->renderer->render(
             'html/battle-data/move.twig',
             $this->baseView->getBaseVariables() + [
-                'title' => 'Stats',
+                'title' => 'Battle Data',
             ]
         );
 
@@ -559,7 +559,7 @@ final readonly class IndexView
         $content = $this->renderer->render(
             'html/battle-data/chart.twig',
             $this->baseView->getBaseVariables() + [
-                'title' => 'Stats - Chart',
+                'title' => 'Battle Data - Chart',
             ]
         );
 

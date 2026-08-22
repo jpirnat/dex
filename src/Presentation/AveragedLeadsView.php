@@ -59,7 +59,7 @@ final readonly class AveragedLeadsView
         $formatIdentifier = $format->identifier;
         $breadcrumbs = [[
             'url' => '/battle-data',
-            'text' => 'Stats',
+            'text' => 'Battle Data',
         ], [
             'text' => 'Formats',
         ], [
@@ -71,7 +71,7 @@ final readonly class AveragedLeadsView
 
         return new JsonResponse([
             'data' => [
-                'title' => 'Porydex - Stats - ' . $startMonth['name'] . ' through '
+                'title' => 'Porydex - Battle Data - ' . $startMonth['name'] . ' through '
                     . $endMonth['name'] . ' ' . $format->name . ' - Leads',
                 'format' => [
                     'identifier' => $format->identifier,

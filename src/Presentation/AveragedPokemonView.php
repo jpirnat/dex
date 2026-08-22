@@ -92,7 +92,7 @@ final readonly class AveragedPokemonView
         $formatIdentifier = $format->identifier;
         $breadcrumbs = [[
             'url' => '/battle-data',
-            'text' => 'Stats',
+            'text' => 'Battle Data',
         ], [
             'text' => 'Formats',
         ], [
@@ -104,7 +104,7 @@ final readonly class AveragedPokemonView
 
         return new JsonResponse([
             'data' => [
-                'title' => 'Porydex - Stats - ' . $startMonth['name'] . ' through '
+                'title' => 'Porydex - Battle Data - ' . $startMonth['name'] . ' through '
                     . $endMonth['name'] . ' ' . $format->name . ' - ' . $dexPokemon->name,
                 'format' => [
                     'identifier' => $format->identifier,

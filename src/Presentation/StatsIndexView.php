@@ -45,12 +45,12 @@ final readonly class StatsIndexView
 
         // Navigational breadcrumbs.
         $breadcrumbs = [[
-            'text' => 'Stats',
+            'text' => 'Battle Data',
         ]];
 
         return new JsonResponse([
             'data' => [
-                'title' => 'Porydex - Stats',
+                'title' => 'Porydex - Battle Data',
 
                 'breadcrumbs' => $breadcrumbs,
 

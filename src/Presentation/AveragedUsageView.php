@@ -62,7 +62,7 @@ final readonly class AveragedUsageView
         // Navigation breadcrumbs.
         $breadcrumbs = [[
             'url' => '/battle-data',
-            'text' => 'Stats',
+            'text' => 'Battle Data',
         ], [
             'text' => 'Formats',
         ], [
@@ -71,7 +71,7 @@ final readonly class AveragedUsageView
 
         return new JsonResponse([
             'data' => [
-                'title' => 'Porydex - Stats - ' . $startMonth['name'] . ' through '
+                'title' => 'Porydex - Battle Data - ' . $startMonth['name'] . ' through '
                     . $endMonth['name'] . ' ' . $format->name,
                 'format' => [
                     'identifier' => $format->identifier,

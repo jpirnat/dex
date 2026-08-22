@@ -175,7 +175,7 @@ final readonly class StatsPokemonView
         $formatIdentifier = $format->identifier;
         $breadcrumbs = [[
             'url' => '/battle-data',
-            'text' => 'Stats',
+            'text' => 'Battle Data',
         ], [
             'url' => "/battle-data/$month",
             'text' => $thisMonth['name'],
@@ -188,7 +188,7 @@ final readonly class StatsPokemonView
 
         return new JsonResponse([
             'data' => [
-                'title' => 'Porydex - Stats - ' . $thisMonth['name'] . ' '
+                'title' => 'Porydex - Battle Data - ' . $thisMonth['name'] . ' '
                     . $format->name . ' - ' . $dexPokemon->name,
 
                 'format' => [

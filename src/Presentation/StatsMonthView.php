@@ -38,14 +38,14 @@ final readonly class StatsMonthView
         // Navigation breadcrumbs.
         $breadcrumbs = [[
             'url' => '/battle-data',
-            'text' => 'Stats',
+            'text' => 'Battle Data',
         ],[
             'text' => $thisMonth['name'],
         ]];
 
         return new JsonResponse([
             'data' => [
-                'title' => 'Porydex - Stats - ' . $thisMonth['name'],
+                'title' => 'Porydex - Battle Data - ' . $thisMonth['name'],
 
                 'breadcrumbs' => $breadcrumbs,
                 'prevMonth' => $prevMonth,
