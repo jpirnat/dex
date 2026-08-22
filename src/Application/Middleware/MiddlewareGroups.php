@@ -26,7 +26,7 @@ final readonly class MiddlewareGroups
     ];
 
     /**
-     * Used by /stats/current to add route attributes for month, formatId, and rating.
+     * Used by /battle-data/current to add route attributes for month, formatId, and rating.
      *
      * @var string[] $CURRENT_STATS
      */

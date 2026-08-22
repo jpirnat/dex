@@ -61,7 +61,7 @@ final readonly class AveragedUsageView
 
         // Navigation breadcrumbs.
         $breadcrumbs = [[
-            'url' => '/stats',
+            'url' => '/battle-data',
             'text' => 'Stats',
         ], [
             'text' => 'Formats',

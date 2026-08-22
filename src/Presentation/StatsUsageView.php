@@ -70,10 +70,10 @@ final readonly class StatsUsageView
 
         // Navigation breadcrumbs.
         $breadcrumbs = [[
-            'url' => '/stats',
+            'url' => '/battle-data',
             'text' => 'Stats',
         ], [
-            'url' => "/stats/$month",
+            'url' => "/battle-data/$month",
             'text' => $thisMonth['name'],
         ], [
             'text' => $format->name,

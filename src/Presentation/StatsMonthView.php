@@ -37,7 +37,7 @@ final readonly class StatsMonthView
 
         // Navigation breadcrumbs.
         $breadcrumbs = [[
-            'url' => '/stats',
+            'url' => '/battle-data',
             'text' => 'Stats',
         ],[
             'text' => $thisMonth['name'],

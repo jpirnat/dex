@@ -174,13 +174,13 @@ final readonly class StatsPokemonView
         // Navigation breadcrumbs.
         $formatIdentifier = $format->identifier;
         $breadcrumbs = [[
-            'url' => '/stats',
+            'url' => '/battle-data',
             'text' => 'Stats',
         ], [
-            'url' => "/stats/$month",
+            'url' => "/battle-data/$month",
             'text' => $thisMonth['name'],
         ], [
-            'url' => "/stats/$month/$formatIdentifier/$rating",
+            'url' => "/battle-data/$month/$formatIdentifier/$rating",
             'text' => $format->name,
         ], [
             'text' => $dexPokemon->name,

@@ -58,12 +58,12 @@ final readonly class AveragedLeadsView
         // Navigation breadcrumbs.
         $formatIdentifier = $format->identifier;
         $breadcrumbs = [[
-            'url' => '/stats',
+            'url' => '/battle-data',
             'text' => 'Stats',
         ], [
             'text' => 'Formats',
         ], [
-            'url' => "/stats/$start-to-$end/$formatIdentifier/$rating",
+            'url' => "/battle-data/$start-to-$end/$formatIdentifier/$rating",
             'text' => $format->name,
         ], [
             'text' => 'Leads',
