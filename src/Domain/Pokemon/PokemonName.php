@@ -11,6 +11,5 @@ final readonly class PokemonName
         private(set) LanguageId $languageId,
         private(set) PokemonId $pokemonId,
         private(set) string $name,
-        private(set) string $category,
     ) {}
 }

@@ -65,7 +65,7 @@ export default {
         },
         chartUrl() {
             const encoded = encodeURIComponent(JSON.stringify(this.lines))
-            return `/stats/chart?lines=${encoded}`;
+            return `/battle-data/chart?lines=${encoded}`;
         },
     },
     template: `
@@ -156,7 +156,7 @@ export default {
                 this.isVisible = true;
 
                 this.loading = true;
-                const response = await fetch('/stats/chart', {
+                const response = await fetch('/battle-data/chart', {
                     method: 'POST',
                     credentials: 'same-origin',
                     headers: new Headers({

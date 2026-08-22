@@ -28,8 +28,7 @@ final readonly class DatabasePokemonNameRepository implements PokemonNameReposit
     ): PokemonName {
         $stmt = $this->db->prepare(
             'SELECT
-                `name`,
-                `category`
+                `name`
             FROM `pokemon_names`
             WHERE `language_id` = :language_id
                 AND `pokemon_id` = :pokemon_id
@@ -50,7 +49,6 @@ final readonly class DatabasePokemonNameRepository implements PokemonNameReposit
             $languageId,
             $pokemonId,
             $result['name'],
-            $result['category'],
         );
     }
 
@@ -64,8 +62,7 @@ final readonly class DatabasePokemonNameRepository implements PokemonNameReposit
         $stmt = $this->db->prepare(
             'SELECT
                 `pokemon_id`,
-                `name`,
-                `category`
+                `name`
             FROM `pokemon_names`
             WHERE `language_id` = :language_id'
         );
@@ -79,7 +76,6 @@ final readonly class DatabasePokemonNameRepository implements PokemonNameReposit
                 $languageId,
                 new PokemonId($result['pokemon_id']),
                 $result['name'],
-                $result['category'],
             );
 
             $pokemonNames[$result['pokemon_id']] = $pokemonName;
