@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure\Showdown;
 
 use Jp\Dex\Domain\Abilities\AbilityId;
-use Jp\Dex\Domain\Import\Showdown\AbilityNotImportedException;
-use Jp\Dex\Domain\Import\Showdown\ShowdownAbilityRepositoryInterface;
+use Jp\Dex\Domain\Import\SmogonStats\Repositories\AbilityNotImportedException;
+use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownAbilityRepositoryInterface;
 use PDO;
 
 final class DatabaseShowdownAbilityRepository implements ShowdownAbilityRepositoryInterface

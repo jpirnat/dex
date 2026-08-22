@@ -2,7 +2,7 @@
 <?php
 declare(strict_types=1);
 
-use Jp\Dex\Domain\Import\Parsers\MonthDirectoryParser;
+use Jp\Dex\Domain\Import\SmogonStats\Parsers\MonthDirectoryParser;
 
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config/environment.php';

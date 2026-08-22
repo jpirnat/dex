@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
-use Jp\Dex\Domain\Import\Showdown\NatureNotImportedException;
-use Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface;
+use Jp\Dex\Domain\Import\SmogonStats\Repositories\NatureNotImportedException;
+use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Natures\NatureId;
 use PDO;
 

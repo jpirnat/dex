@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
-use Jp\Dex\Domain\Import\Showdown\PokemonNotImportedException;
-use Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface;
+use Jp\Dex\Domain\Import\SmogonStats\Repositories\PokemonNotImportedException;
+use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use PDO;
 

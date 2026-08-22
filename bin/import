@@ -2,8 +2,8 @@
 <?php
 declare(strict_types=1);
 
-use Jp\Dex\Domain\Import\Importers\MonthDirectoryImporter;
-use Jp\Dex\Domain\Import\ZygardeFixer;
+use Jp\Dex\Domain\Import\SmogonStats\Importers\MonthDirectoryImporter;
+use Jp\Dex\Domain\Import\SmogonStats\ZygardeFixer;
 
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config/environment.php';

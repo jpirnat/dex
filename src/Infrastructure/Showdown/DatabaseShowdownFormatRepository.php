@@ -5,8 +5,8 @@ namespace Jp\Dex\Infrastructure\Showdown;
 
 use DateTime;
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Import\Showdown\FormatNotImportedException;
-use Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface;
+use Jp\Dex\Domain\Import\SmogonStats\Repositories\FormatNotImportedException;
+use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownFormatRepositoryInterface;
 use PDO;
 
 final class DatabaseShowdownFormatRepository implements ShowdownFormatRepositoryInterface

@@ -97,9 +97,9 @@ $services->set(\Jp\Dex\Domain\Stats\Trends\Generators\TrendPointCalculator::clas
 
 $services->load('Jp\\Dex\\Domain\\Import\\', '../src/Domain/Import')
     ->exclude([
-        '../src/Domain/Import/Extractors/Exceptions/*',
-        '../src/Domain/Import/Showdown/*',
-        '../src/Domain/Import/Structs/*',
+        '../src/Domain/Import/SmogonStats/Extractors/Exceptions/*',
+        '../src/Domain/Import/SmogonStats/Showdown/*',
+        '../src/Domain/Import/SmogonStats/Structs/*',
     ])
 ;
 
@@ -383,31 +383,31 @@ $services->alias(
     \Jp\Dex\Infrastructure\DatabaseRatingQueries::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Import\Showdown\ShowdownAbilityRepositoryInterface::class,
+    \Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownAbilityRepositoryInterface::class,
     \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownAbilityRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Import\Showdown\ShowdownFormatRepositoryInterface::class,
+    \Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownFormatRepositoryInterface::class,
     \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownFormatRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface::class,
+    \Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownItemRepositoryInterface::class,
     \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownItemRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Import\Showdown\ShowdownMoveRepositoryInterface::class,
+    \Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownMoveRepositoryInterface::class,
     \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownMoveRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Import\Showdown\ShowdownNatureRepositoryInterface::class,
+    \Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownNatureRepositoryInterface::class,
     \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownNatureRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Import\Showdown\ShowdownPokemonRepositoryInterface::class,
+    \Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownPokemonRepositoryInterface::class,
     \Jp\Dex\Infrastructure\Showdown\DatabaseShowdownPokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Import\Showdown\ShowdownTypeRepositoryInterface::class,
+    \Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownTypeRepositoryInterface::class,
     \Jp\Dex\Infrastructure\Showdown\SimpleShowdownTypeRepository::class
 );
 $services->alias(

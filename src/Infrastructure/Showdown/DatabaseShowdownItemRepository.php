@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
-use Jp\Dex\Domain\Import\Showdown\ItemNotImportedException;
-use Jp\Dex\Domain\Import\Showdown\ShowdownItemRepositoryInterface;
+use Jp\Dex\Domain\Import\SmogonStats\Repositories\ItemNotImportedException;
+use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownItemRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemId;
 use PDO;
 
