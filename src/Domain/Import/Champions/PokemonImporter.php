@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Champions;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
 use League\Csv\Bom;
 use League\Csv\Writer;
 

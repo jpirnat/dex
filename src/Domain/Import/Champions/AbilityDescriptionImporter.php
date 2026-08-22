@@ -4,11 +4,11 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Import\Champions;
 
 use Exception;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 use Jp\Dex\Domain\Languages\Language;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use Jp\Dex\Domain\Versions\VersionGroupId;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
 use League\Csv\Bom;
 use League\Csv\Writer;
 use Spatie\Regex\Exceptions\RegexFailed;

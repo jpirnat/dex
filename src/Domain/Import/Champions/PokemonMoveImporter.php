@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\Champions;
 
-use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
-use Jp\Dex\Domain\Versions\VersionGroupId;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
+use Jp\Dex\Domain\PokemonMoves\MoveMethodId;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use League\Csv\Bom;
 use League\Csv\Writer;
 
