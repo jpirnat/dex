@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Domain\Import\SmogonStats\Importers;
 
 use DateTime;
+use DateTimeImmutable;
 use GuzzleHttp\Psr7\Utils;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Import\SmogonStats\Extractors\MovesetFileExtractor;
@@ -64,11 +65,11 @@ final readonly class MovesetFileImporter
      */
     public function import(
         StreamInterface $stream,
-        DateTime $month,
+        DateTimeImmutable $month,
         FormatId $formatId,
         int $rating,
     ): void {
-        $now = new DateTime()->format('Y-m-d H:i:s');
+        $now = new DateTimeImmutable()->format('Y-m-d H:i:s');
         echo 'Importing moveset file: month ' . $month->format('Y-m')
             . ', format id ' . $formatId->value
             . ", rating $rating. ($now)\n";

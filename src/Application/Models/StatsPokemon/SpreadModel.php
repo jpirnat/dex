@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\StatsPokemon;
 
-use DateTime;
+use DateTimeImmutable;
 use Jp\Dex\Domain\Calculators\StatCalculator;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -32,7 +32,7 @@ final class SpreadModel
      * Get stat and spread data for the stats Pokémon page.
      */
     public function setData(
-        DateTime $month,
+        DateTimeImmutable $month,
         Format $format,
         int $rating,
         PokemonId $pokemonId,

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Moveset;
 
-use DateTime;
+use DateTimeImmutable;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidCountException;
@@ -23,7 +23,7 @@ final readonly class MovesetPokemon
      * @throws InvalidViabilityCeilingException if $viabilityCeiling is invalid.
      */
     public function __construct(
-        private(set) DateTime $month,
+        private(set) DateTimeImmutable $month,
         private(set) FormatId $formatId,
         private(set) PokemonId $pokemonId,
         private(set) int $rawCount,

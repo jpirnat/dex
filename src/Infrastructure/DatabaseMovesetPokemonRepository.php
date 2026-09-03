@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeImmutable;
 use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -93,7 +93,7 @@ final readonly class DatabaseMovesetPokemonRepository implements MovesetPokemonR
         }
 
         return new MovesetPokemon(
-            DateTime::createFromInterface($month),
+            DateTimeImmutable::createFromInterface($month),
             $formatId,
             $pokemonId,
             $result['raw_count'],

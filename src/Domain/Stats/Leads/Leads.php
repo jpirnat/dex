@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Leads;
 
-use DateTime;
+use DateTimeImmutable;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidCountException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
@@ -20,7 +20,7 @@ final readonly class Leads
      * @throws InvalidCountException if $totalLeads is invalid.
      */
     public function __construct(
-        private(set) DateTime $month,
+        private(set) DateTimeImmutable $month,
         private(set) FormatId $formatId,
         private(set) int $totalLeads,
     ) {

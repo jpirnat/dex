@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Presentation;
 
-use DateTime;
+use DateTimeInterface;
 use IntlDateFormatter;
 use NumberFormatter;
 
@@ -19,7 +19,7 @@ final readonly class IntlFormatter
     /**
      * Format a month.
      */
-    public function formatMonth(DateTime $month): string
+    public function formatMonth(DateTimeInterface $month): string
     {
         return mb_convert_case($this->dateFormatter->format($month), MB_CASE_TITLE);
     }

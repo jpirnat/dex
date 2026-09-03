@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Usage;
 
-use DateTime;
+use DateTimeImmutable;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidAverageWeightPerTeamException;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
@@ -23,7 +23,7 @@ final readonly class UsageRated
      *     invalid.
      */
     public function __construct(
-        private(set) DateTime $month,
+        private(set) DateTimeImmutable $month,
         private(set) FormatId $formatId,
         private(set) int $rating,
         private(set) float $averageWeightPerTeam,

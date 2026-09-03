@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\StatsPokemon;
 
 use DateTime;
+use DateTimeImmutable;
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Abilities\StatsPokemonAbility;
 use Jp\Dex\Domain\Abilities\StatsPokemonAbilityRepositoryInterface;
@@ -212,7 +213,7 @@ final class StatsPokemonModel
 
         // Get spread data.
         $this->spreadModel->setData(
-            $thisMonth,
+            DateTimeImmutable::createFromMutable($thisMonth),
             $this->format,
             $rating,
             $this->pokemon->id,
