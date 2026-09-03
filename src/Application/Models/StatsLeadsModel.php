@@ -45,7 +45,7 @@ final class StatsLeadsModel
 
     /**
      * Get leads data to recreate a stats leads file, such as
-     * http://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
+     * https://www.smogon.com/stats/leads/2014-11/ou-1695.txt.
      */
     public function setData(
         string $month,

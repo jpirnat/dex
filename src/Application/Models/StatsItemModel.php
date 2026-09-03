@@ -48,7 +48,7 @@ final class StatsItemModel
 
     /**
      * Get usage data to recreate a stats usage file, such as
-     * http://www.smogon.com/stats/2014-11/ou-1695.txt.
+     * https://www.smogon.com/stats/2014-11/ou-1695.txt.
      */
     public function setData(
         string $month,

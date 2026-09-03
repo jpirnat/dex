@@ -37,7 +37,7 @@ final readonly class DatabaseMovesetRatedTeammateRepository implements MovesetRa
             $stmt->execute();
         } catch (PDOException) {
             // This record already exists.
-            // Bug fix for http://www.smogon.com/stats/2014-11/moveset/anythinggoes-0.txt
+            // Bug fix for https://www.smogon.com/stats/2014-11/moveset/anythinggoes-0.txt
             // in which Inkay has teammate Abra twice.
         }
     }

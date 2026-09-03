@@ -25,7 +25,7 @@ final class StatsMonthModel
 
     /**
      * Get the formats list to recreate a stats month directory, such as
-     * http://www.smogon.com/stats/2014-11.
+     * https://www.smogon.com/stats/2014-11.
      */
     public function setData(
         string $month,
