@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\SmogonStats;
 
-use DateTime;
+use DateTimeImmutable;
 use PDO;
 
 /**
@@ -28,11 +28,11 @@ final readonly class TeammatesFixer
     /**
      * Fix Teammates in the usage stats.
      */
-    public function fixTeammates(DateTime $month): void
+    public function fixTeammates(DateTimeImmutable $month): void
     {
         echo 'Fixing teammates: month ' . $month->format('Y-m') . ".\n";
 
-        if ($month >= new DateTime('2021-04-01')) {
+        if ($month >= new DateTimeImmutable('2021-04-01')) {
             return;
         }
 

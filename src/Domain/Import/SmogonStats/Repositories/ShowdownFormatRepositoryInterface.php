@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\SmogonStats\Repositories;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 
 interface ShowdownFormatRepositoryInterface
@@ -11,22 +11,22 @@ interface ShowdownFormatRepositoryInterface
     /**
      * Is the Pokémon Showdown format name known and imported?
      */
-    public function isImported(DateTime $month, string $showdownFormatName): bool;
+    public function isImported(DateTimeInterface $month, string $showdownFormatName): bool;
 
     /**
      * Is the Pokémon Showdown format name known and ignored?
      */
-    public function isIgnored(DateTime $month, string $showdownFormatName): bool;
+    public function isIgnored(DateTimeInterface $month, string $showdownFormatName): bool;
 
     /**
      * Is the Pokémon Showdown format name known?
      */
-    public function isKnown(DateTime $month, string $showdownFormatName): bool;
+    public function isKnown(DateTimeInterface $month, string $showdownFormatName): bool;
 
     /**
      * Add a Pokémon Showdown format name to the list of unknown formats.
      */
-    public function addUnknown(DateTime $month, string $showdownFormatName): void;
+    public function addUnknown(DateTimeInterface $month, string $showdownFormatName): void;
 
     /**
      * Get the format id of a Pokémon Showdown format name.
@@ -34,7 +34,7 @@ interface ShowdownFormatRepositoryInterface
      * @throws FormatNotImportedException if $showdownFormatName is not an
      *     imported format name.
      */
-    public function getFormatId(DateTime $month, string $showdownFormatName): FormatId;
+    public function getFormatId(DateTimeInterface $month, string $showdownFormatName): FormatId;
 
     /**
      * Get the names of the unknown formats the repository has tracked.

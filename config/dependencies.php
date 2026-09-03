@@ -46,6 +46,15 @@ $services->set('$dbsetup')
 ;
 
 // Other vendor classes.
+$services->set(\League\Flysystem\Local\LocalFilesystemAdapter::class)
+    ->arg('$location', __DIR__ . '/..')
+;
+$services->alias(
+    \League\Flysystem\FilesystemAdapter::class,
+    \League\Flysystem\Local\LocalFilesystemAdapter::class,
+);
+$services->set(\League\Flysystem\Filesystem::class);
+
 $services->set(\GuzzleHttp\Client::class);
 
 // Import almost everything.

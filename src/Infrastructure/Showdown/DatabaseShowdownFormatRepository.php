@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure\Showdown;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\FormatNotImportedException;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownFormatRepositoryInterface;
@@ -67,7 +67,7 @@ final class DatabaseShowdownFormatRepository implements ShowdownFormatRepository
     /**
      * Is the Pokémon Showdown format name known and imported?
      */
-    public function isImported(DateTime $month, string $showdownFormatName): bool
+    public function isImported(DateTimeInterface $month, string $showdownFormatName): bool
     {
         return isset($this->formatsToImport[$month->format('Y-m-d')][$showdownFormatName]);
     }
@@ -75,7 +75,7 @@ final class DatabaseShowdownFormatRepository implements ShowdownFormatRepository
     /**
      * Is the Pokémon Showdown format name known and ignored?
      */
-    public function isIgnored(DateTime $month, string $showdownFormatName): bool
+    public function isIgnored(DateTimeInterface $month, string $showdownFormatName): bool
     {
         return isset($this->formatsToIgnore[$month->format('Y-m-d')][$showdownFormatName]);
     }
@@ -83,7 +83,7 @@ final class DatabaseShowdownFormatRepository implements ShowdownFormatRepository
     /**
      * Is the Pokémon Showdown format name known?
      */
-    public function isKnown(DateTime $month, string $showdownFormatName): bool
+    public function isKnown(DateTimeInterface $month, string $showdownFormatName): bool
     {
         return $this->isImported($month, $showdownFormatName)
             || $this->isIgnored($month, $showdownFormatName)
@@ -93,7 +93,7 @@ final class DatabaseShowdownFormatRepository implements ShowdownFormatRepository
     /**
      * Add a Pokémon Showdown format name to the list of unknown formats.
      */
-    public function addUnknown(DateTime $month, string $showdownFormatName): void
+    public function addUnknown(DateTimeInterface $month, string $showdownFormatName): void
     {
         $this->unknownFormats[$month->format('Y-m-d')][$showdownFormatName] = $showdownFormatName;
     }
@@ -104,7 +104,7 @@ final class DatabaseShowdownFormatRepository implements ShowdownFormatRepository
      * @throws FormatNotImportedException if $showdownFormatName is not an
      *     imported format name.
      */
-    public function getFormatId(DateTime $month, string $showdownFormatName): FormatId
+    public function getFormatId(DateTimeInterface $month, string $showdownFormatName): FormatId
     {
         // If the format is imported, return the format id.
         if ($this->isImported($month, $showdownFormatName)) {

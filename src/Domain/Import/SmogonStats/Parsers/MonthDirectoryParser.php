@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\SmogonStats\Parsers;
 
-use GuzzleHttp\Client;
+use DateTimeImmutable;
+use GuzzleHttp\Psr7\Utils;
 use Jp\Dex\Domain\Import\SmogonStats\Extractors\FormatRatingExtractor;
-use Jp\Dex\Domain\Import\SmogonStats\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownAbilityRepositoryInterface;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownFormatRepositoryInterface;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownItemRepositoryInterface;
@@ -13,15 +13,17 @@ use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownMoveRepositoryInterfac
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownNatureRepositoryInterface;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownPokemonRepositoryInterface;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownTypeRepositoryInterface;
-use Symfony\Component\DomCrawler\Crawler;
+use League\Flysystem\Filesystem;
+use League\Flysystem\FilesystemException;
+use League\Flysystem\StorageAttributes;
 
 final readonly class MonthDirectoryParser
 {
     public function __construct(
+        private Filesystem $filesystem,
         private UsageFileParser $usageFileParser,
         private LeadsDirectoryParser $leadsDirectoryParser,
         private MovesetDirectoryParser $movesetDirectoryParser,
-        private MonthExtractor $monthExtractor,
         private FormatRatingExtractor $formatRatingExtractor,
         private ShowdownFormatRepositoryInterface $showdownFormatRepository,
         private ShowdownPokemonRepositoryInterface $showdownPokemonRepository,
@@ -35,28 +37,24 @@ final readonly class MonthDirectoryParser
     /**
      * Parse this month directory for unknown Showdown format names.
      */
-    public function parse(string $url): void
+    public function parse(DateTimeImmutable $month): void
     {
-        // Create the HTTP client.
-        $client = new Client([
-            'base_uri' => $url,
-        ]);
+        $yearMonth = $month->format('Y-m');
+        try {
+            $files = $this->filesystem->listContents("ignore/stats-mirror/$yearMonth")
+                ->sortByPath();
+        } catch (FilesystemException) {
+            echo "Error: Cannot read $yearMonth stats directory.\n";
+            return;
+        }
 
-        // Get the HTML of the month directory page.
-        $html = $client->request('GET', $url)->getBody()->getContents();
+        /** @var StorageAttributes $file */
+        foreach ($files as $file) {
+            if (!$file->isFile()) {
+                continue;
+            }
 
-        // Create the DOM crawler.
-        $crawler = new Crawler($html, $url);
-
-        // Get all the links on the month directory page.
-        $links = $crawler->filterXPath('//a[contains(@href, ".txt")][not(contains(@href, ".txt.gz"))]')->links();
-
-        // Get the month from the month directory url.
-        $month = $this->monthExtractor->extractMonth($url);
-
-        // Parse each usage file link.
-        foreach ($links as $link) {
-            if (str_contains($link->getUri(), '/stats/2016-10/cap-')) {
+            if (str_contains($file->path(), '/2016-10/cap-')) {
                 // October 2016 CAP doesn't have valid usage files. The moveset
                 // files seem to have been accidentally uploaded in their place.
                 // https://www.smogon.com/stats/2016-10/cap-0.txt
@@ -64,7 +62,7 @@ final readonly class MonthDirectoryParser
             }
 
             // Get the format and rating from the filename of the link.
-            $filename = pathinfo($link->getUri())['filename'];
+            $filename = pathinfo($file->path())['filename'];
             $formatRating = $this->formatRatingExtractor->extractFormatRating($filename);
             $showdownFormatName = $formatRating->showdownFormatName;
 
@@ -78,7 +76,13 @@ final readonly class MonthDirectoryParser
             }
 
             // Create a stream to read the usage file.
-            $stream = $client->request('GET', $link->getUri())->getBody();
+            try {
+                $resource = $this->filesystem->readStream($file->path());
+            } catch (FilesystemException) {
+                echo 'Error: Cannot read ' . $file->path() . "\n";
+                return;
+            }
+            $stream = Utils::streamFor($resource);
 
             // Parse the usage file.
             $totalBattles = $this->usageFileParser->parse($stream);
@@ -87,7 +91,6 @@ final readonly class MonthDirectoryParser
             // don't have enough battles this month.
             $tooFewBattles = 0 <= $totalBattles && $totalBattles <= 100;
             if ($formatUnknown && $tooFewBattles) {
-                $yearMonth = $month->format('Y-m');
                 $format = $formatRating->showdownFormatName;
                 $rating = $formatRating->rating;
                 echo "$yearMonth\t$format\t$rating\ttoo few battles: $totalBattles\n";
@@ -95,10 +98,10 @@ final readonly class MonthDirectoryParser
         }
 
         // Parse each leads file.
-        $this->leadsDirectoryParser->parse($url . 'leads/');
+        $this->leadsDirectoryParser->parse($month);
 
         // Parse each moveset file.
-        $this->movesetDirectoryParser->parse($url . 'moveset/');
+        $this->movesetDirectoryParser->parse($month);
     }
 
     /**

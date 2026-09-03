@@ -3,17 +3,19 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\SmogonStats\Parsers;
 
-use GuzzleHttp\Client;
+use DateTimeImmutable;
+use GuzzleHttp\Psr7\Utils;
 use Jp\Dex\Domain\Import\SmogonStats\Extractors\FormatRatingExtractor;
-use Jp\Dex\Domain\Import\SmogonStats\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownFormatRepositoryInterface;
-use Symfony\Component\DomCrawler\Crawler;
+use League\Flysystem\Filesystem;
+use League\Flysystem\FilesystemException;
+use League\Flysystem\StorageAttributes;
 
 final readonly class MovesetDirectoryParser
 {
     public function __construct(
+        private Filesystem $filesystem,
         private MovesetFileParser $movesetFileParser,
-        private MonthExtractor $monthExtractor,
         private FormatRatingExtractor $formatRatingExtractor,
         private ShowdownFormatRepositoryInterface $showdownFormatRepository,
     ) {}
@@ -21,28 +23,25 @@ final readonly class MovesetDirectoryParser
     /**
      * Parse all moveset files in this directory of moveset files.
      */
-    public function parse(string $url): void
+    public function parse(DateTimeImmutable $month): void
     {
-        // Create the HTTP client.
-        $client = new Client([
-            'base_uri' => $url,
-        ]);
+        $yearMonth = $month->format('Y-m');
+        try {
+            $files = $this->filesystem->listContents("ignore/stats-mirror/$yearMonth/moveset")
+                ->sortByPath();
+        } catch (FilesystemException) {
+            echo "Error: Cannot read $yearMonth moveset directory.\n";
+            return;
+        }
 
-        // Get the HTML of the moveset directory page.
-        $html = $client->request('GET', $url)->getBody()->getContents();
+        /** @var StorageAttributes $file */
+        foreach ($files as $file) {
+            if (!$file->isFile()) {
+                continue;
+            }
 
-        // Create the DOM crawler.
-        $crawler = new Crawler($html, $url);
-
-        // Get all the links on the moveset directory page.
-        $links = $crawler->filterXPath('//a[contains(@href, ".txt")][not(contains(@href, ".txt.gz"))]')->links();
-
-        // Get the month from the moveset directory url.
-        $month = $this->monthExtractor->extractMonth($url);
-
-        foreach ($links as $link) {
             // Get the format and rating from the filename of the link.
-            $filename = pathinfo($link->getUri())['filename'];
+            $filename = pathinfo($file->path())['filename'];
             $formatRating = $this->formatRatingExtractor->extractFormatRating($filename);
             $showdownFormatName = $formatRating->showdownFormatName;
 
@@ -52,7 +51,13 @@ final readonly class MovesetDirectoryParser
             }
 
             // Create a stream to read the moveset file.
-            $stream = $client->request('GET', $link->getUri())->getBody();
+            try {
+                $resource = $this->filesystem->readStream($file->path());
+            } catch (FilesystemException) {
+                echo 'Error: Cannot read ' . $file->path() . "\n";
+                return;
+            }
+            $stream = Utils::streamFor($resource);
 
             // Parse the moveset file.
             $this->movesetFileParser->parse($stream);

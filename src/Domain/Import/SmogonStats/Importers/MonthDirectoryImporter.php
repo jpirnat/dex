@@ -3,20 +3,23 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\SmogonStats\Importers;
 
-use GuzzleHttp\Client;
+use DateTime;
+use DateTimeImmutable;
+use GuzzleHttp\Psr7\Utils;
 use Jp\Dex\Domain\Import\SmogonStats\Extractors\FormatRatingExtractor;
-use Jp\Dex\Domain\Import\SmogonStats\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownFormatRepositoryInterface;
 use Jp\Dex\Domain\Import\SmogonStats\TeammatesFixer;
-use Symfony\Component\DomCrawler\Crawler;
+use League\Flysystem\Filesystem;
+use League\Flysystem\FilesystemException;
+use League\Flysystem\StorageAttributes;
 
 final readonly class MonthDirectoryImporter
 {
     public function __construct(
+        private Filesystem $filesystem,
         private UsageFileImporter $usageFileImporter,
         private LeadsDirectoryImporter $leadsDirectoryImporter,
         private MovesetDirectoryImporter $movesetDirectoryImporter,
-        private MonthExtractor $monthExtractor,
         private FormatRatingExtractor $formatRatingExtractor,
         private ShowdownFormatRepositoryInterface $showdownFormatRepository,
         private TeammatesFixer $teammatesFixer,
@@ -25,28 +28,24 @@ final readonly class MonthDirectoryImporter
     /**
      * Import all stat files in this month directory.
      */
-    public function import(string $url): void
+    public function import(DateTimeImmutable $month): void
     {
-        // Create the HTTP client.
-        $client = new Client([
-            'base_uri' => $url,
-        ]);
+        $yearMonth = $month->format('Y-m');
+        try {
+            $files = $this->filesystem->listContents("ignore/stats-mirror/$yearMonth")
+                ->sortByPath();
+        } catch (FilesystemException) {
+            echo "Error: Cannot read $yearMonth stats directory.\n";
+            return;
+        }
 
-        // Get the HTML of the month directory page.
-        $html = $client->request('GET', $url)->getBody()->getContents();
+        /** @var StorageAttributes $file */
+        foreach ($files as $file) {
+            if (!$file->isFile()) {
+                continue;
+            }
 
-        // Create the DOM crawler.
-        $crawler = new Crawler($html, $url);
-
-        // Get all the links on the month directory page.
-        $links = $crawler->filterXPath('//a[contains(@href, ".txt")][not(contains(@href, ".txt.gz"))]')->links();
-
-        // Get the month from the month directory url.
-        $month = $this->monthExtractor->extractMonth($url);
-
-        // Import each usage file.
-        foreach ($links as $link) {
-            if (str_contains($link->getUri(), '/stats/2016-10/cap-')) {
+            if (str_contains($file->path(), '/2016-10/cap-')) {
                 // October 2016 CAP doesn't have valid usage files. The moveset
                 // files seem to have been accidentally uploaded in their place.
                 // https://www.smogon.com/stats/2016-10/cap-0.txt
@@ -54,7 +53,7 @@ final readonly class MonthDirectoryImporter
             }
 
             // Get the format and rating from the filename of the link.
-            $filename = pathinfo($link->getUri())['filename'];
+            $filename = pathinfo($file->path())['filename'];
             $formatRating = $this->formatRatingExtractor->extractFormatRating($filename);
             $showdownFormatName = $formatRating->showdownFormatName;
             $rating = $formatRating->rating;
@@ -68,22 +67,28 @@ final readonly class MonthDirectoryImporter
             $formatId = $this->showdownFormatRepository->getFormatId($month, $showdownFormatName);
 
             // Create a stream to read the usage file.
-            $stream = $client->request('GET', $link->getUri())->getBody();
+            try {
+                $resource = $this->filesystem->readStream($file->path());
+            } catch (FilesystemException) {
+                echo 'Error: Cannot read ' . $file->path() . "\n";
+                return;
+            }
+            $stream = Utils::streamFor($resource);
 
             // Import the usage file.
             $this->usageFileImporter->import(
                 $stream,
-                $month,
+                DateTime::createFromImmutable($month),
                 $formatId,
                 $rating,
             );
         }
 
         // Import each leads file.
-        $this->leadsDirectoryImporter->import($url . 'leads/');
+        $this->leadsDirectoryImporter->import($month);
 
         // Import each moveset file.
-        $this->movesetDirectoryImporter->import($url . 'moveset/');
+        $this->movesetDirectoryImporter->import($month);
 
         // Fix teammate percentages.
         $this->teammatesFixer->fixTeammates($month);

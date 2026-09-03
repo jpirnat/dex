@@ -1,39 +1,43 @@
-#!/usr/bin/env php
 <?php
 declare(strict_types=1);
 
+use Jp\Dex\Domain\Import\SmogonStats\Downloaders\MonthDirectoryDownloader;
 use Jp\Dex\Domain\Import\SmogonStats\Parsers\MonthDirectoryParser;
 
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config/environment.php';
 $container = require __DIR__ . '/../config/container.php';
 
-
-// Get year and month from command line arguments; fall back on previous month.
-$options = getopt('', ['year:', 'month:']);
-$parametersAvailable = isset($options['year']) && isset($options['month']);
-
-$date = new DateTime();
-
-if ($parametersAvailable) {
-    $date->setDate((int) $options['year'], (int) $options['month'], 1);
-} else {
-    $thisYear = (int) $date->format('Y');
-    $thisMonth = (int) $date->format('m');
-
-    $date->setDate($thisYear, $thisMonth, 1);
-    $date->modify('-1 month');
-}
-
-$yearMonth = $date->format('Y-m');
-
-
-// Run the parser.
-$start = new DateTime();
+/** @var MonthDirectoryDownloader $downloader */
+$downloader = $container->get(MonthDirectoryDownloader::class);
 
 /** @var MonthDirectoryParser $parser */
 $parser = $container->get(MonthDirectoryParser::class);
-$parser->parse("http://www.smogon.com/stats/$yearMonth/");
+
+
+// Get year and month from command line arguments.
+$options = getopt('', ['year:', 'month:']);
+$year = (int) ($options['year'] ?? '');
+$month = (int) ($options['month'] ?? '');
+if (!$year) {
+    echo "Missing year parameter.\n";
+    return;
+}
+if (!$month) {
+    echo "Missing month parameter.\n";
+    return;
+}
+
+$now = new DateTimeImmutable();
+$parseMonth = $now->setDate($year, $month, 1);
+
+$downloader->download($parseMonth);
+
+$start = new DateTimeImmutable();
+
+$parser->parse($parseMonth);
+
+$end = new DateTimeImmutable();
 
 $formats = $parser->getUnknownFormats();
 $pokemons = $parser->getUnknownPokemon();
@@ -43,8 +47,6 @@ $natures = $parser->getUnknownNatures();
 $moves = $parser->getUnknownMoves();
 $types = $parser->getUnknownTypes();
 
-
-$end = new DateTime();
 
 // Display the output.
 $startText = $start->format('Y-m-d H:i:s');

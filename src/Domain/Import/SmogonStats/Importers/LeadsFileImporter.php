@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\SmogonStats\Importers;
 
-use DateTime;
+use DateTimeImmutable;
 use GuzzleHttp\Psr7\Utils;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Import\SmogonStats\Extractors\LeadsFileExtractor;
@@ -33,7 +33,7 @@ final readonly class LeadsFileImporter
      */
     public function import(
         StreamInterface $stream,
-        DateTime $month,
+        DateTimeImmutable $month,
         FormatId $formatId,
         int $rating,
     ): void {

@@ -3,19 +3,22 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\SmogonStats\Importers;
 
-use GuzzleHttp\Client;
+use DateTime;
+use DateTimeImmutable;
+use GuzzleHttp\Psr7\Utils;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Import\SmogonStats\Extractors\FormatRatingExtractor;
-use Jp\Dex\Domain\Import\SmogonStats\Extractors\MonthExtractor;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownFormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Symfony\Component\DomCrawler\Crawler;
+use League\Flysystem\Filesystem;
+use League\Flysystem\FilesystemException;
+use League\Flysystem\StorageAttributes;
 
 final readonly class LeadsDirectoryImporter
 {
     public function __construct(
+        private Filesystem $filesystem,
         private LeadsFileImporter $leadsFileImporter,
-        private MonthExtractor $monthExtractor,
         private FormatRatingExtractor $formatRatingExtractor,
         private ShowdownFormatRepositoryInterface $showdownFormatRepository,
         private FormatRepositoryInterface $formatRepository,
@@ -24,28 +27,25 @@ final readonly class LeadsDirectoryImporter
     /**
      * Import all leads files in this directory of leads files.
      */
-    public function import(string $url): void
+    public function import(DateTimeImmutable $month): void
     {
-        // Create the HTTP client.
-        $client = new Client([
-            'base_uri' => $url,
-        ]);
+        $yearMonth = $month->format('Y-m');
+        try {
+            $files = $this->filesystem->listContents("ignore/stats-mirror/$yearMonth/leads")
+                ->sortByPath();
+        } catch (FilesystemException) {
+            echo "Error: Cannot read $yearMonth leads directory.\n";
+            return;
+        }
 
-        // Get the HTML of the leads directory page.
-        $html = $client->request('GET', $url)->getBody()->getContents();
+        /** @var StorageAttributes $file */
+        foreach ($files as $file) {
+            if (!$file->isFile()) {
+                continue;
+            }
 
-        // Create the DOM crawler.
-        $crawler = new Crawler($html, $url);
-
-        // Get all the links on the leads directory page.
-        $links = $crawler->filterXPath('//a[contains(@href, ".txt")][not(contains(@href, ".txt.gz"))]')->links();
-
-        // Get the month from the leads directory url.
-        $month = $this->monthExtractor->extractMonth($url);
-
-        foreach ($links as $link) {
             // Get the format and rating from the filename of the link.
-            $filename = pathinfo($link->getUri())['filename'];
+            $filename = pathinfo($file->path())['filename'];
             $formatRating = $this->formatRatingExtractor->extractFormatRating($filename);
             $showdownFormatName = $formatRating->showdownFormatName;
             $rating = $formatRating->rating;
@@ -70,12 +70,18 @@ final readonly class LeadsDirectoryImporter
             }
 
             // Create a stream to read the leads file.
-            $stream = $client->request('GET', $link->getUri())->getBody();
+            try {
+                $resource = $this->filesystem->readStream($file->path());
+            } catch (FilesystemException) {
+                echo 'Error: Cannot read ' . $file->path() . "\n";
+                return;
+            }
+            $stream = Utils::streamFor($resource);
 
             // Import the leads file.
             $this->leadsFileImporter->import(
                 $stream,
-                $month,
+                DateTime::createFromImmutable($month),
                 $formatId,
                 $rating,
             );
