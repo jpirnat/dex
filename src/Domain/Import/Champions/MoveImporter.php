@@ -97,7 +97,12 @@ final class MoveImporter
         $moveId = (int) ($move[self::COLUMN_MOVE_ID] ?? '');
         $canUseMove = (int) ($move[self::COLUMN_CAN_USE] ?? '');
         $typeId = (int) ($move[self::COLUMN_TYPE_ID] ?? '');
-        $categoryId = (int) ($move[self::COLUMN_CATEGORY_ID] ?? '');
+        $championsCategoryId = (int) ($move[self::COLUMN_CATEGORY_ID] ?? '');
+        $porydexCategoryId = match ($championsCategoryId) {
+            0 => 1, // Physical
+            1 => 2, // Special
+            2 => 0, // Status
+        };
         $power = (int) ($move[self::COLUMN_POWER] ?? '');
         $accuracy = (int) ($move[self::COLUMN_ACCURACY] ?? '');
         $pp = (int) ($move[self::COLUMN_PP] ?? '');
@@ -110,7 +115,7 @@ final class MoveImporter
             $canUseMove,
             $typeId,
             '\N', // quality id
-            $categoryId,
+            $porydexCategoryId,
             $power,
             $accuracy,
             $pp,
