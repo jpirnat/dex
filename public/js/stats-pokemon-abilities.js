@@ -59,7 +59,7 @@ export default {
             <tbody>
                 <tr v-for="ability in abilities" :key="ability.identifier">
                     <td>
-                        <a class="dex-link" :href="'/stats/' + month + '/' + format + '/' + rating + '/abilities/' + ability.identifier">
+                        <a class="dex-link" :href="'/battle-data/' + month + '/' + format + '/' + rating + '/abilities/' + ability.identifier">
                             {{ ability.name }}
                         </a>
                     </td>
