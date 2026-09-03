@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats;
 
-use DateTime;
+use DateTimeImmutable;
+use DateTimeInterface;
 use Jp\Dex\Domain\Stats\Exceptions\InvalidMonthException;
 
 trait ValidateMonthTrait
@@ -13,7 +14,7 @@ trait ValidateMonthTrait
      *
      * @throws InvalidMonthException if $month is invalid.
      */
-    public function validateMonth(DateTime $month): void
+    public function validateMonth(DateTimeInterface $month): void
     {
         // Usage data from before November 2014 does not currently exist.
         if ($month->format('Y-m') < '2014-11') {
@@ -22,7 +23,7 @@ trait ValidateMonthTrait
         }
 
         // Usage data from the future does not currently exist.
-        $today = new DateTime('today');
+        $today = new DateTimeImmutable('today');
         if ($month > $today) {
             $m = $month->format('Y-m-d');
             throw new InvalidMonthException("This month has not happened yet: $m.");

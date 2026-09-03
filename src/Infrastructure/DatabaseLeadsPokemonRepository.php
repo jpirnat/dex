@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemon;
 use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
@@ -18,7 +18,7 @@ final readonly class DatabaseLeadsPokemonRepository implements LeadsPokemonRepos
     /**
      * Do any leads Pokémon records exist for this month and format?
      */
-    public function hasAny(DateTime $month, FormatId $formatId): bool
+    public function hasAny(DateTimeInterface $month, FormatId $formatId): bool
     {
         $stmt = $this->db->prepare(
             'SELECT

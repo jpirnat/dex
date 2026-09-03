@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Moveset;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
@@ -12,7 +12,7 @@ interface MovesetPokemonRepositoryInterface
     /**
      * Do any moveset Pokémon records exist for this month and format?
      */
-    public function hasAny(DateTime $month, FormatId $formatId): bool;
+    public function hasAny(DateTimeInterface $month, FormatId $formatId): bool;
 
     /**
      * Save a moveset Pokémon record.
@@ -23,7 +23,7 @@ interface MovesetPokemonRepositoryInterface
      * Get a moveset Pokémon record by month, format, and Pokémon.
      */
     public function getByMonthAndFormatAndPokemon(
-        DateTime $month,
+        DateTimeInterface $month,
         FormatId $formatId,
         PokemonId $pokemonId,
     ): ?MovesetPokemon;

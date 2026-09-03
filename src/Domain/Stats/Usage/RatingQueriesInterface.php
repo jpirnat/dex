@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Usage;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 
 interface RatingQueriesInterface
@@ -13,12 +13,16 @@ interface RatingQueriesInterface
      *
      * @return int[]
      */
-    public function getByMonthAndFormat(DateTime $month, FormatId $formatId): array;
+    public function getByMonthAndFormat(DateTimeInterface $month, FormatId $formatId): array;
 
     /**
      * Get the ratings for which usage data is available between these months, for this format.
      *
      * @return int[]
      */
-    public function getByMonthsAndFormat(DateTime $start, DateTime $end, FormatId $formatId): array;
+    public function getByMonthsAndFormat(
+        DateTimeInterface $start,
+        DateTimeInterface $end,
+        FormatId $formatId,
+    ): array;
 }

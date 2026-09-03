@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
@@ -22,7 +22,7 @@ final readonly class DatabaseMovesetRatedPokemonRepository implements MovesetRat
      * and Pokémon?
      */
     public function has(
-        DateTime $month,
+        DateTimeInterface $month,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,
@@ -51,7 +51,7 @@ final readonly class DatabaseMovesetRatedPokemonRepository implements MovesetRat
      * Do any moveset rated Pokémon records exist for this month, format, and
      * rating?
      */
-    public function hasAny(DateTime $month, FormatId $formatId, int $rating): bool
+    public function hasAny(DateTimeInterface $month, FormatId $formatId, int $rating): bool
     {
         $stmt = $this->db->prepare(
             'SELECT
@@ -76,8 +76,8 @@ final readonly class DatabaseMovesetRatedPokemonRepository implements MovesetRat
      * format, rating, and Pokémon.
      */
     public function count(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,
@@ -109,8 +109,8 @@ final readonly class DatabaseMovesetRatedPokemonRepository implements MovesetRat
      * @return int[] Indexed by Pokémon id.
      */
     public function countAll(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
     ): array {
@@ -157,7 +157,7 @@ final readonly class DatabaseMovesetRatedPokemonRepository implements MovesetRat
      * Get a moveset rated Pokémon record by month, format, rating, and Pokémon.
      */
     public function getByMonthAndFormatAndRatingAndPokemon(
-        DateTime $month,
+        DateTimeInterface $month,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,

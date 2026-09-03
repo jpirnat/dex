@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Moveset;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
@@ -14,7 +14,7 @@ interface MovesetRatedPokemonRepositoryInterface
      * and Pokémon?
      */
     public function has(
-        DateTime $month,
+        DateTimeInterface $month,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,
@@ -24,15 +24,15 @@ interface MovesetRatedPokemonRepositoryInterface
      * Do any moveset rated Pokémon records exist for this month, format, and
      * rating?
      */
-    public function hasAny(DateTime $month, FormatId $formatId, int $rating): bool;
+    public function hasAny(DateTimeInterface $month, FormatId $formatId, int $rating): bool;
 
     /**
      * Count the moveset rated Pokémon records for this start month, end month,
      * format, rating, and Pokémon.
      */
     public function count(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,
@@ -45,8 +45,8 @@ interface MovesetRatedPokemonRepositoryInterface
      * @return int[] Indexed by Pokémon id.
      */
     public function countAll(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
     ): array;
@@ -60,7 +60,7 @@ interface MovesetRatedPokemonRepositoryInterface
      * Get a moveset rated Pokémon record by month, format, rating, and Pokémon.
      */
     public function getByMonthAndFormatAndRatingAndPokemon(
-        DateTime $month,
+        DateTimeInterface $month,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,

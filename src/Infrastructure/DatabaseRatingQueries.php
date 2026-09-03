@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use PDO;
@@ -19,7 +19,7 @@ final readonly class DatabaseRatingQueries implements RatingQueriesInterface
      *
      * @return int[]
      */
-    public function getByMonthAndFormat(DateTime $month, FormatId $formatId): array
+    public function getByMonthAndFormat(DateTimeInterface $month, FormatId $formatId): array
     {
         $stmt = $this->db->prepare(
             'SELECT DISTINCT
@@ -39,8 +39,11 @@ final readonly class DatabaseRatingQueries implements RatingQueriesInterface
      *
      * @return int[]
      */
-    public function getByMonthsAndFormat(DateTime $start, DateTime $end, FormatId $formatId): array
-    {
+    public function getByMonthsAndFormat(
+        DateTimeInterface $start,
+        DateTimeInterface $end,
+        FormatId $formatId,
+    ): array {
         $stmt = $this->db->prepare(
             'SELECT DISTINCT
                 `rating`

@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 use PDO;
@@ -25,7 +26,7 @@ final readonly class DatabaseUsageRatedQueries implements UsageRatedQueriesInter
      *     ...
      * ]
      */
-    public function getFormatRatings(DateTime $month): array
+    public function getFormatRatings(DateTimeInterface $month): array
     {
         $stmt = $this->db->prepare(
             'SELECT

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\UsageRated;
 use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
@@ -18,7 +18,7 @@ final readonly class DatabaseUsageRatedRepository implements UsageRatedRepositor
     /**
      * Does a usage rated record exist for this month, format, and rating?
      */
-    public function has(DateTime $month, FormatId $formatId, int $rating): bool
+    public function has(DateTimeInterface $month, FormatId $formatId, int $rating): bool
     {
         $stmt = $this->db->prepare(
             'SELECT

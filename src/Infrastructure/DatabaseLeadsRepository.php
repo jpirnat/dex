@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Leads\Leads;
 use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
@@ -18,7 +18,7 @@ final readonly class DatabaseLeadsRepository implements LeadsRepositoryInterface
     /**
      * Does a leads record exist for this month and format?
      */
-    public function has(DateTime $month, FormatId $formatId): bool
+    public function has(DateTimeInterface $month, FormatId $formatId): bool
     {
         $stmt = $this->db->prepare(
             'SELECT

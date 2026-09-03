@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
@@ -19,7 +20,7 @@ final readonly class DatabaseMovesetPokemonRepository implements MovesetPokemonR
     /**
      * Do any moveset Pokémon records exist for this month and format?
      */
-    public function hasAny(DateTime $month, FormatId $formatId): bool
+    public function hasAny(DateTimeInterface $month, FormatId $formatId): bool
     {
         $stmt = $this->db->prepare(
             'SELECT
@@ -67,7 +68,7 @@ final readonly class DatabaseMovesetPokemonRepository implements MovesetPokemonR
      * Get a moveset Pokémon record by month, format, and Pokémon.
      */
     public function getByMonthAndFormatAndPokemon(
-        DateTime $month,
+        DateTimeInterface $month,
         FormatId $formatId,
         PokemonId $pokemonId,
     ): ?MovesetPokemon {
@@ -92,7 +93,7 @@ final readonly class DatabaseMovesetPokemonRepository implements MovesetPokemonR
         }
 
         return new MovesetPokemon(
-            $month,
+            DateTime::createFromInterface($month),
             $formatId,
             $pokemonId,
             $result['raw_count'],

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Stats\Usage;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 
 interface UsagePokemonRepositoryInterface
@@ -11,7 +11,7 @@ interface UsagePokemonRepositoryInterface
     /**
      * Do any usage Pokémon records exist for this month and format?
      */
-    public function hasAny(DateTime $month, FormatId $formatId): bool;
+    public function hasAny(DateTimeInterface $month, FormatId $formatId): bool;
 
     /**
      * Save a usage Pokémon record.

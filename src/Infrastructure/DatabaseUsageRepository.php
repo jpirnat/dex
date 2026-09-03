@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Stats\Usage\Usage;
 use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
@@ -18,7 +18,7 @@ final readonly class DatabaseUsageRepository implements UsageRepositoryInterface
     /**
      * Does a usage record exist for this month and format?
      */
-    public function has(DateTime $month, FormatId $formatId): bool
+    public function has(DateTimeInterface $month, FormatId $formatId): bool
     {
         $stmt = $this->db->prepare(
             'SELECT
