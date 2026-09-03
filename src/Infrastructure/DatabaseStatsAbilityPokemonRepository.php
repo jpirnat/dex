@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -23,8 +23,8 @@ final readonly class DatabaseStatsAbilityPokemonRepository implements StatsAbili
      * @return StatsAbilityPokemon[] Ordered by usage percent descending.
      */
     public function getByMonth(
-        DateTime $month,
-        ?DateTime $prevMonth,
+        DateTimeInterface $month,
+        ?DateTimeInterface $prevMonth,
         FormatId $formatId,
         int $rating,
         AbilityId $abilityId,

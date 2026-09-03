@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Usage;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -16,8 +16,8 @@ interface StatsUsagePokemonRepositoryInterface
      * @return StatsUsagePokemon[] Ordered by rank ascending.
      */
     public function getByMonth(
-        DateTime $month,
-        ?DateTime $prevMonth,
+        DateTimeInterface $month,
+        ?DateTimeInterface $prevMonth,
         FormatId $formatId,
         int $rating,
         LanguageId $languageId,
@@ -27,7 +27,7 @@ interface StatsUsagePokemonRepositoryInterface
      * Get a stats usage Pokémon by month, format, rating, and Pokémon id.
      */
     public function getByPokemon(
-        DateTime $month,
+        DateTimeInterface $month,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,
@@ -38,7 +38,7 @@ interface StatsUsagePokemonRepositoryInterface
      * Get a stats usage Pokémon by month, format, rating, and rank.
      */
     public function getByRank(
-        DateTime $month,
+        DateTimeInterface $month,
         FormatId $formatId,
         int $rating,
         int $rank,

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Leads\StatsLeadsPokemon;
@@ -22,8 +22,8 @@ final readonly class DatabaseStatsLeadsPokemonRepository implements StatsLeadsPo
      * @return StatsLeadsPokemon[] Ordered by rank ascending.
      */
     public function getByMonth(
-        DateTime $month,
-        ?DateTime $prevMonth,
+        DateTimeInterface $month,
+        ?DateTimeInterface $prevMonth,
         FormatId $formatId,
         int $rating,
         LanguageId $languageId,

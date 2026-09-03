@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Items\StatsPokemonItem;
 use Jp\Dex\Domain\Items\StatsPokemonItemRepositoryInterface;
@@ -24,8 +24,8 @@ final readonly class DatabaseStatsPokemonItemRepository implements StatsPokemonI
      * @return StatsPokemonItem[] Ordered by percent descending.
      */
     public function getByMonth(
-        DateTime $month,
-        ?DateTime $prevMonth,
+        DateTimeInterface $month,
+        ?DateTimeInterface $prevMonth,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,

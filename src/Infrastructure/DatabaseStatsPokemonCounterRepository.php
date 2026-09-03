@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Counters\StatsPokemonCounter;
 use Jp\Dex\Domain\Counters\StatsPokemonCounterRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
@@ -23,7 +23,7 @@ final readonly class DatabaseStatsPokemonCounterRepository implements StatsPokem
      * @return StatsPokemonCounter[] Ordered by score descending.
      */
     public function getByMonth(
-        DateTime $month,
+        DateTimeInterface $month,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,
