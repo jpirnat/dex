@@ -43,6 +43,7 @@ final class StatCalculatorSubmitModel
         array $evs,
         array $avs,
         array $effortLevels,
+        array $statPoints,
     ): void {
         $this->finalStats = [];
         $this->cp = 0;
@@ -106,6 +107,12 @@ final class StatCalculatorSubmitModel
                 $nature,
                 $effortLevels,
             ),
+            'champions' => $this->championsStats(
+                $stats,
+                $baseStats,
+                $nature,
+                $statPoints,
+            )
         };
     }
 
@@ -206,6 +213,9 @@ final class StatCalculatorSubmitModel
         $this->cp = $this->calculator->letsGoCp($level, $this->finalStats, $avs);
     }
 
+    /**
+     * @param Stat[] $stats
+     */
     private function legendsStats(
         array $stats,
         array $baseStats,
@@ -220,14 +230,44 @@ final class StatCalculatorSubmitModel
             $effortLevel = (int) ($effortLevels[$statIdentifier] ?? 0);
 
             $natureModifier = $this->calculator->getNatureModifier(
-                $stat->getId(),
+                $stat->id,
                 $nature->increasedStatId,
                 $nature->decreasedStatId,
             );
 
-            $finalStat = match ($stat->getId()->value()) {
+            $finalStat = match ($stat->id->value) {
                 StatId::HP => $this->calculator->legendsHp($base, $level, $effortLevel),
                 default => $this->calculator->legendsOther($base, $level, $effortLevel, $natureModifier),
+            };
+
+            $this->finalStats[$statIdentifier] = $finalStat;
+        }
+    }
+
+    /**
+     * @param Stat[] $stats
+     */
+    private function championsStats(
+        array $stats,
+        array $baseStats,
+        Nature $nature,
+        array $statPoints,
+    ): void {
+        foreach ($stats as $stat) {
+            $statIdentifier = $stat->identifier;
+
+            $base = (int) ($baseStats[$statIdentifier] ?? 0);
+            $points = (int) ($statPoints[$statIdentifier] ?? 0);
+
+            $natureModifier = $this->calculator->getNatureModifier(
+                $stat->id,
+                $nature->increasedStatId,
+                $nature->decreasedStatId,
+            );
+
+            $finalStat = match ($stat->id->value) {
+                StatId::HP => $this->calculator->championsHp($base, $points),
+                default => $this->calculator->championsOther($base, $points, $natureModifier),
             };
 
             $this->finalStats[$statIdentifier] = $finalStat;

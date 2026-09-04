@@ -32,6 +32,7 @@ const app = createApp({
             evs: {},
             avs: {},
             effortLevels: {},
+            statPoints: {},
             finalStats: {},
             cp: 0,
         };
@@ -97,6 +98,7 @@ const app = createApp({
             this.evs[s.identifier] = 0;
             this.avs[s.identifier] = 0;
             this.effortLevels[s.identifier] = 0;
+            this.statPoints[s.identifier] = 0;
             this.finalStats[s.identifier] = '???';
         });
 
@@ -174,6 +176,7 @@ const app = createApp({
                     evs: this.evs,
                     avs: this.avs,
                     effortLevels: this.effortLevels,
+                    statPoints: this.statPoints,
                 }),
             })
             .then(response => response.json());

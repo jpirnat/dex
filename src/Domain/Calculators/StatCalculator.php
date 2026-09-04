@@ -258,6 +258,29 @@ final readonly class StatCalculator
     }
 
     /**
+     * Calculate a Pokémon's HP stat in Champions.
+     * https://bulbapedia.bulbagarden.net/wiki/Stat#Pok%C3%A9mon_Champions
+     */
+    public function championsHp(int $base, int $statPoints): int
+    {
+        // Shedinja hack.
+        if ($base === 1) {
+            return 1;
+        }
+
+        return $base + $statPoints + 75;
+    }
+
+    /**
+     * Calculate a Pokémon's non-HP stat in Champions.
+     * https://bulbapedia.bulbagarden.net/wiki/Stat#Pok%C3%A9mon_Champions
+     */
+    public function championsOther(int $base, int $statPoints, float $natureModifier): int
+    {
+        return (int) (($base + $statPoints + 20) * $natureModifier);
+    }
+
+    /**
      * Get the perfect IV value for this generation.
      */
     public function getPerfectIv(GenerationId $generationId): int

@@ -103,7 +103,7 @@
 
         <div class="iv-calculator__container">
             <div class="iv-calculator__column iv-calculator__column--gap">
-                <label>
+                <label v-if="versionGroup.statFormulaType !== 'champions'">
                     <span class="iv-calculator__stat-label">Level:</span>
                     <input type="number" class="iv-calculator__input--level"
                         v-model.number="level"
@@ -180,6 +180,22 @@
                     <input type="number" class="iv-calculator__input--ev"
                         v-model.number="effortLevels[s.identifier]"
                         min="0" max="10" step="1"
+                    >
+                </label>
+            </div>
+
+            <div class="iv-calculator__column" v-if="versionGroup.statFormulaType === 'champions'">
+                <div class="iv-calculator__column-title">Stat Points:</div>
+                <label v-for="s in stats" :key="s.identifier"
+                    :class="{
+                        'iv-calculator__stat-block': true,
+                        ['dex-table__stat--' + s.identifier]: true,
+                    }"
+                >
+                    <span class="iv-calculator__stat-label">{{ s.name }}:</span>
+                    <input type="number" class="iv-calculator__input--ev"
+                        v-model.number="statPoints[s.identifier]"
+                        min="0" max="32" step="1"
                     >
                 </label>
             </div>

@@ -29,6 +29,7 @@ final readonly class StatCalculatorSubmitController
         $evs = (array) ($data['evs'] ?? []);
         $avs = (array) ($data['avs'] ?? []);
         $effortLevels = (array) ($data['effortLevels'] ?? []);
+        $statPoints = (array) ($data['statPoints'] ?? []);
 
         $this->statCalculatorSubmitModel->setData(
             $vgIdentifier,
@@ -40,6 +41,7 @@ final readonly class StatCalculatorSubmitController
             $evs,
             $avs,
             $effortLevels,
+            $statPoints,
         );
     }
 }
