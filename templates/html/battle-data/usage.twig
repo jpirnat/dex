@@ -61,7 +61,7 @@
 
         <div class="stats-usage__filter">
             <label>
-                Filter by Pokémon name: <input type="search" v-model="filterName">
+                Filter by Pokémon name: <input type="search" name="filterName" v-model="filterName">
             </label>
         </div>
 
@@ -169,13 +169,13 @@
             View the averaged battle data
             <label>
                 from
-                <select v-model="start" @change="goToAveraged">
+                <select name="start" v-model="start" @change="goToAveraged">
                     <option v-for="m in months" :key="m.value" :value="m.value">{{ m.name }}</option>
                 </select>
             </label>
             <label>
                 to
-                <select v-model="end" @change="goToAveraged">
+                <select name="end" v-model="end" @change="goToAveraged">
                     <option v-for="m in months" :key="m.value" :value="m.value">{{ m.name }}</option>
                 </select>
             </label>

@@ -76,10 +76,10 @@ export default {
 
             <div class="dex-moves__filters">
                 <label class="dex-moves__filter">
-                    Filter by move name: <input type="search" :value="filterName" @input="$emit('update:filterName', $event.target.value)">
+                    Filter by move name: <input type="search" name="filterName" :value="filterName" @input="$emit('update:filterName', $event.target.value)">
                 </label>
                 <label v-if="versionGroup.hasMoveDescriptions" class="dex-moves__filter">
-                    Filter by description: <input type="search" :value="filterDescription" @input="$emit('update:filterDescription', $event.target.value)">
+                    Filter by description: <input type="search" name="filterDescription" :value="filterDescription" @input="$emit('update:filterDescription', $event.target.value)">
                 </label>
             </div>
 

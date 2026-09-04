@@ -37,10 +37,10 @@
 
         <div class="dex-items__filters">
             <label class="dex-items__filter">
-                Filter by item name: <input type="search" v-model="filterName">
+                Filter by item name: <input type="search" name="filterName" v-model="filterName">
             </label>
             <label class="dex-items__filter" v-if="versionGroup.hasItemDescriptions">
-                Filter by description: <input type="search" v-model="filterDescription">
+                Filter by description: <input type="search" name="filterDescription" v-model="filterDescription">
             </label>
         </div>
 

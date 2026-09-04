@@ -73,10 +73,10 @@ export default {
 
             <div class="dex-abilities__filters">
                 <label class="dex-abilities__filter">
-                    Filter by ability name: <input type="search" :value="filterName" @input="$emit('update:filterName', $event.target.value)">
+                    Filter by ability name: <input type="search" name="filterName" :value="filterName" @input="$emit('update:filterName', $event.target.value)">
                 </label>
                 <label class="dex-abilities__filter">
-                    Filter by description: <input type="search" :value="filterDescription" @input="$emit('update:filterDescription', $event.target.value)">
+                    Filter by description: <input type="search" name="filterDescription" :value="filterDescription" @input="$emit('update:filterDescription', $event.target.value)">
                 </label>
             </div>
 

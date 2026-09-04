@@ -72,7 +72,7 @@ export default {
 
             <div class="dex-pokemons__control">
                 <label class="dex-pokemons__filter">
-                    Filter by Pokémon name: <input type="search" :value="filterName" @input="$emit('update:filterName', $event.target.value)">
+                    Filter by Pokémon name: <input type="search" name="filterName" :value="filterName" @input="$emit('update:filterName', $event.target.value)">
                 </label>
 
                 <div class="dex-pokemons__control-space"></div>

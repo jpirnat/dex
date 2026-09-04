@@ -112,6 +112,7 @@ export default {
                                 <span>Go to page:</span>
                                 <input type="number" min="1" :max="numberOfPages" step="1"
                                     class="dex-pagination__input"
+                                    name="inputPage"
                                     v-model.number="inputPage"
                                     @change="setCurrentPage(inputPage)"
                                 >
