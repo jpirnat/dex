@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use DateTimeInterface;
+use Jp\Dex\Domain\BattleData\Leads\LeadsRatedPokemon;
+use Jp\Dex\Domain\BattleData\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemon;
-use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use PDO;
 
 final readonly class DatabaseLeadsRatedPokemonRepository implements LeadsRatedPokemonRepositoryInterface

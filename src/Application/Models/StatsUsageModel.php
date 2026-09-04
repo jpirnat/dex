@@ -4,14 +4,14 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use DateTime;
+use Jp\Dex\Domain\BattleData\Leads\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Usage\RatingQueriesInterface;
+use Jp\Dex\Domain\BattleData\Usage\UsageRatedQueriesInterface;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 use Jp\Dex\Domain\Usage\StatsUsagePokemon;
 use Jp\Dex\Domain\Usage\StatsUsagePokemonRepositoryInterface;
 

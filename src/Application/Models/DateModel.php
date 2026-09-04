@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use DateTime;
+use Jp\Dex\Domain\BattleData\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 
 final class DateModel
 {

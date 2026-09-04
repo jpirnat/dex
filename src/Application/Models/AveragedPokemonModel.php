@@ -8,6 +8,7 @@ use Jp\Dex\Application\Models\StatsAveragedPokemon\AbilityModel;
 use Jp\Dex\Application\Models\StatsAveragedPokemon\ItemModel;
 use Jp\Dex\Application\Models\StatsAveragedPokemon\MoveModel;
 use Jp\Dex\Application\Models\StatsPokemon\PokemonModel;
+use Jp\Dex\Domain\BattleData\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatNotFoundException;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
@@ -15,7 +16,6 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\Pokemon;
 use Jp\Dex\Domain\Pokemon\PokemonNotFoundException;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Versions\VersionGroup;
 use Jp\Dex\Domain\Versions\VersionGroupRepositoryInterface;
 

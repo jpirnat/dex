@@ -5,8 +5,8 @@ namespace Jp\Dex\Infrastructure;
 
 use DateTime;
 use DateTimeInterface;
+use Jp\Dex\Domain\BattleData\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface;
 use PDO;
 
 final readonly class DatabaseMonthQueries implements MonthQueriesInterface

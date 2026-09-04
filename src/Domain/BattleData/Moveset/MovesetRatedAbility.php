@@ -1,0 +1,26 @@
+<?php
+declare(strict_types=1);
+
+namespace Jp\Dex\Domain\BattleData\Moveset;
+
+use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\BattleData\Exceptions\InvalidPercentException;
+use Jp\Dex\Domain\BattleData\Usage\UsageRatedPokemonId;
+
+final readonly class MovesetRatedAbility
+{
+    /**
+     * Constructor.
+     *
+     * @throws InvalidPercentException if $percent is invalid
+     */
+    public function __construct(
+        private(set) UsageRatedPokemonId $usageRatedPokemonId,
+        private(set) AbilityId $abilityId,
+        private(set) float $percent,
+    ) {
+        if ($percent < 0 || $percent > 100) {
+            throw new InvalidPercentException("Invalid percent: $percent.");
+        }
+    }
+}

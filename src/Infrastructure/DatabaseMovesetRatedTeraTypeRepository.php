@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeraType;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeraTypeRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Moveset\MovesetRatedTeraType;
+use Jp\Dex\Domain\BattleData\Moveset\MovesetRatedTeraTypeRepositoryInterface;
 use PDO;
 use PDOException;
 

@@ -5,16 +5,16 @@ namespace Jp\Dex\Domain\Import\SmogonStats\Importers;
 
 use DateTimeImmutable;
 use GuzzleHttp\Psr7\Utils;
+use Jp\Dex\Domain\BattleData\Leads\Leads;
+use Jp\Dex\Domain\BattleData\Leads\LeadsPokemon;
+use Jp\Dex\Domain\BattleData\Leads\LeadsPokemonRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Leads\LeadsRatedPokemon;
+use Jp\Dex\Domain\BattleData\Leads\LeadsRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Leads\LeadsRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Usage\UsageRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Import\SmogonStats\Extractors\LeadsFileExtractor;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Leads\Leads;
-use Jp\Dex\Domain\Stats\Leads\LeadsPokemon;
-use Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemon;
-use Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
 final readonly class LeadsFileImporter

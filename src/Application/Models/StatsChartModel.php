@@ -4,6 +4,16 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Trends\Generators\LeadUsageTrendGenerator;
+use Jp\Dex\Domain\BattleData\Trends\Generators\MovesetAbilityTrendGenerator;
+use Jp\Dex\Domain\BattleData\Trends\Generators\MovesetItemTrendGenerator;
+use Jp\Dex\Domain\BattleData\Trends\Generators\MovesetMoveTrendGenerator;
+use Jp\Dex\Domain\BattleData\Trends\Generators\MovesetTeraTrendGenerator;
+use Jp\Dex\Domain\BattleData\Trends\Generators\UsageAbilityTrendGenerator;
+use Jp\Dex\Domain\BattleData\Trends\Generators\UsageItemTrendGenerator;
+use Jp\Dex\Domain\BattleData\Trends\Generators\UsageMoveTrendGenerator;
+use Jp\Dex\Domain\BattleData\Trends\Generators\UsageTrendGenerator;
+use Jp\Dex\Domain\BattleData\Trends\Lines\TrendLine;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\Language;
@@ -11,16 +21,6 @@ use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use Jp\Dex\Domain\Moves\MoveRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\PokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Trends\Generators\LeadUsageTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\Generators\MovesetAbilityTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\Generators\MovesetItemTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\Generators\MovesetMoveTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\Generators\MovesetTeraTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\Generators\UsageAbilityTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\Generators\UsageItemTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\Generators\UsageMoveTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\Generators\UsageTrendGenerator;
-use Jp\Dex\Domain\Stats\Trends\Lines\TrendLine;
 use Jp\Dex\Domain\Types\TypeRepositoryInterface;
 
 final class StatsChartModel

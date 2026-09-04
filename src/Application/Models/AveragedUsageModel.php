@@ -4,15 +4,15 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use DateTime;
+use Jp\Dex\Domain\BattleData\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Usage\Averaged\MonthsCounter;
+use Jp\Dex\Domain\BattleData\Usage\Averaged\UsageAveragedPokemonRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\DexPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
-use Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Usage\AveragedUsagePokemon;
 
 final class AveragedUsageModel

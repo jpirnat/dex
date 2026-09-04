@@ -5,10 +5,10 @@ namespace Jp\Dex\Application\Middleware;
 
 use DateTime;
 use Jp\Dex\Application\CookieNames;
+use Jp\Dex\Domain\BattleData\Usage\UsageQueriesInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
-use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;

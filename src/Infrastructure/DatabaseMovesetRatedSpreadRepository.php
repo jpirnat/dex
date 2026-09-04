@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpread;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Moveset\MovesetRatedSpread;
+use Jp\Dex\Domain\BattleData\Moveset\MovesetRatedSpreadRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use PDO;
 

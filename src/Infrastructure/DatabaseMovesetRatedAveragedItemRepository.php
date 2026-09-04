@@ -4,12 +4,12 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use DateTime;
+use Jp\Dex\Domain\BattleData\Moveset\Averaged\MovesetRatedAveragedItem;
+use Jp\Dex\Domain\BattleData\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Usage\Averaged\MonthsCounter;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Items\ItemId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItem;
-use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use PDO;
 
 final readonly class DatabaseMovesetRatedAveragedItemRepository implements MovesetRatedAveragedItemRepositoryInterface

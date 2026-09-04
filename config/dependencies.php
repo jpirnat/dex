@@ -90,19 +90,19 @@ $services->set(\Jp\Dex\Domain\Import\Champions\MoveDescriptionImporter::class);
 $services->set(\Jp\Dex\Domain\Import\Champions\MoveImporter::class);
 $services->set(\Jp\Dex\Domain\Import\Champions\PokemonImporter::class);
 $services->set(\Jp\Dex\Domain\PokemonMoves\PokemonMoveFormatter::class);
-$services->set(\Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter::class);
-$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageTrendGenerator::class);
-$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\LeadUsageTrendGenerator::class);
-$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\MovesetAbilityTrendGenerator::class);
-$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\MovesetItemTrendGenerator::class);
-$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\MovesetMoveTrendGenerator::class);
-$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\MovesetTeraTrendGenerator::class);
-$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageAbilityTrendGenerator::class);
-$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageItemTrendGenerator::class);
-$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\UsageMoveTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\BattleData\Usage\Averaged\MonthsCounter::class);
+$services->set(\Jp\Dex\Domain\BattleData\Trends\Generators\UsageTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\BattleData\Trends\Generators\LeadUsageTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\BattleData\Trends\Generators\MovesetAbilityTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\BattleData\Trends\Generators\MovesetItemTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\BattleData\Trends\Generators\MovesetMoveTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\BattleData\Trends\Generators\MovesetTeraTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\BattleData\Trends\Generators\UsageAbilityTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\BattleData\Trends\Generators\UsageItemTrendGenerator::class);
+$services->set(\Jp\Dex\Domain\BattleData\Trends\Generators\UsageMoveTrendGenerator::class);
 $services->set(\Jp\Dex\Domain\Calculators\HiddenPowerCalculator::class);
 $services->set(\Jp\Dex\Domain\Calculators\StatCalculator::class);
-$services->set(\Jp\Dex\Domain\Stats\Trends\Generators\TrendPointCalculator::class);
+$services->set(\Jp\Dex\Domain\BattleData\Trends\Generators\TrendPointCalculator::class);
 
 $services->load('Jp\\Dex\\Domain\\Import\\', '../src/Domain/Import')
     ->exclude([
@@ -276,27 +276,27 @@ $services->alias(
     \Jp\Dex\Infrastructure\DatabaseLanguageRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseLeadsAveragedPokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Leads\LeadsPokemonRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Leads\LeadsPokemonRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseLeadsPokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseLeadsRatedAveragedPokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Leads\LeadsRatedPokemonRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Leads\LeadsRatedPokemonRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseLeadsRatedPokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Leads\LeadsRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseLeadsRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Usage\MonthQueriesInterface::class,
+    \Jp\Dex\Domain\BattleData\Usage\MonthQueriesInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMonthQueries::class
 );
 $services->alias(
@@ -324,51 +324,51 @@ $services->alias(
     \Jp\Dex\Infrastructure\DatabaseMoveRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Moveset\MovesetPokemonRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMovesetPokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Moveset\MovesetRatedAbilityRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Moveset\MovesetRatedAbilityRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMovesetRatedAbilityRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedAbilityRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedItemRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMovesetRatedAveragedMoveRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Moveset\MovesetRatedCounterRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Moveset\MovesetRatedCounterRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMovesetRatedCounterRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Moveset\MovesetRatedItemRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMovesetRatedItemRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Moveset\MovesetRatedMoveRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMovesetRatedMoveRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Moveset\MovesetRatedPokemonRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMovesetRatedPokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Moveset\MovesetRatedSpreadRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Moveset\MovesetRatedSpreadRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMovesetRatedSpreadRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeammateRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Moveset\MovesetRatedTeammateRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMovesetRatedTeammateRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Moveset\MovesetRatedTeraTypeRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Moveset\MovesetRatedTeraTypeRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseMovesetRatedTeraTypeRepository::class
 );
 $services->alias(
@@ -388,7 +388,7 @@ $services->alias(
     \Jp\Dex\Infrastructure\DatabasePokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface::class,
+    \Jp\Dex\Domain\BattleData\Usage\RatingQueriesInterface::class,
     \Jp\Dex\Infrastructure\DatabaseRatingQueries::class
 );
 $services->alias(
@@ -436,8 +436,8 @@ $services->alias(
     \Jp\Dex\Infrastructure\DatabaseStatsAbilityPokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\StatsChartQueriesInterface::class,
-    \Jp\Dex\Infrastructure\DatabaseStatsChartQueries::class
+    \Jp\Dex\Domain\BattleData\ChartQueriesInterface::class,
+    \Jp\Dex\Infrastructure\DatabaseBattleDataChartQueries::class
 );
 $services->alias(
     \Jp\Dex\Domain\Usage\StatsItemPokemonRepositoryInterface::class,
@@ -504,35 +504,35 @@ $services->alias(
     \Jp\Dex\Infrastructure\DatabaseTypeRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Usage\Averaged\UsageAveragedPokemonRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Usage\Averaged\UsageAveragedPokemonRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseUsageAveragedPokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Usage\UsagePokemonRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseUsagePokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface::class,
+    \Jp\Dex\Domain\BattleData\Usage\UsageQueriesInterface::class,
     \Jp\Dex\Infrastructure\DatabaseUsageQueries::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseUsageRatedAveragedPokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Usage\UsageRatedPokemonRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseUsageRatedPokemonRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface::class,
+    \Jp\Dex\Domain\BattleData\Usage\UsageRatedQueriesInterface::class,
     \Jp\Dex\Infrastructure\DatabaseUsageRatedQueries::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Usage\UsageRatedRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseUsageRatedRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface::class,
+    \Jp\Dex\Domain\BattleData\Usage\UsageRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseUsageRepository::class
 );
 $services->alias(

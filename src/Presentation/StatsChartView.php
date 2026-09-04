@@ -4,15 +4,15 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\StatsChartModel;
-use Jp\Dex\Domain\Stats\Trends\Lines\LeadUsageTrendLine;
-use Jp\Dex\Domain\Stats\Trends\Lines\MovesetAbilityTrendLine;
-use Jp\Dex\Domain\Stats\Trends\Lines\MovesetItemTrendLine;
-use Jp\Dex\Domain\Stats\Trends\Lines\MovesetMoveTrendLine;
-use Jp\Dex\Domain\Stats\Trends\Lines\MovesetTeraTrendLine;
-use Jp\Dex\Domain\Stats\Trends\Lines\TrendLine;
-use Jp\Dex\Domain\Stats\Trends\Lines\UsageAbilityTrendLine;
-use Jp\Dex\Domain\Stats\Trends\Lines\UsageItemTrendLine;
-use Jp\Dex\Domain\Stats\Trends\Lines\UsageMoveTrendLine;
+use Jp\Dex\Domain\BattleData\Trends\Lines\LeadUsageTrendLine;
+use Jp\Dex\Domain\BattleData\Trends\Lines\MovesetAbilityTrendLine;
+use Jp\Dex\Domain\BattleData\Trends\Lines\MovesetItemTrendLine;
+use Jp\Dex\Domain\BattleData\Trends\Lines\MovesetMoveTrendLine;
+use Jp\Dex\Domain\BattleData\Trends\Lines\MovesetTeraTrendLine;
+use Jp\Dex\Domain\BattleData\Trends\Lines\TrendLine;
+use Jp\Dex\Domain\BattleData\Trends\Lines\UsageAbilityTrendLine;
+use Jp\Dex\Domain\BattleData\Trends\Lines\UsageItemTrendLine;
+use Jp\Dex\Domain\BattleData\Trends\Lines\UsageMoveTrendLine;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 

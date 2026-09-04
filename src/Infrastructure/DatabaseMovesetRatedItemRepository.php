@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItem;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedItemRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Moveset\MovesetRatedItem;
+use Jp\Dex\Domain\BattleData\Moveset\MovesetRatedItemRepositoryInterface;
 use PDO;
 use PDOException;
 

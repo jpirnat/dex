@@ -4,12 +4,12 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
 use DateTime;
+use Jp\Dex\Domain\BattleData\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Items\ItemNameRepositoryInterface;
 use Jp\Dex\Domain\Items\ItemRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedItemRepositoryInterface;
 
 final readonly class ItemModel
 {

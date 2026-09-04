@@ -6,10 +6,10 @@ namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 use DateTime;
 use Jp\Dex\Domain\Abilities\AbilityNameRepositoryInterface;
 use Jp\Dex\Domain\Abilities\AbilityRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryInterface;
 
 final readonly class AbilityModel
 {

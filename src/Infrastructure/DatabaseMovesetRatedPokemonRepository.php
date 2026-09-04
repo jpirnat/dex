@@ -4,11 +4,11 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use DateTimeInterface;
+use Jp\Dex\Domain\BattleData\Moveset\MovesetRatedPokemon;
+use Jp\Dex\Domain\BattleData\Moveset\MovesetRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Usage\UsageRatedPokemonId;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemon;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonId;
 use PDO;
 
 final readonly class DatabaseMovesetRatedPokemonRepository implements MovesetRatedPokemonRepositoryInterface

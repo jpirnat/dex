@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use DateTimeInterface;
+use Jp\Dex\Domain\BattleData\Leads\Leads;
+use Jp\Dex\Domain\BattleData\Leads\LeadsRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Stats\Leads\Leads;
-use Jp\Dex\Domain\Stats\Leads\LeadsRepositoryInterface;
 use PDO;
 
 final readonly class DatabaseLeadsRepository implements LeadsRepositoryInterface

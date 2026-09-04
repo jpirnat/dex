@@ -5,17 +5,17 @@ namespace Jp\Dex\Domain\Import\SmogonStats\Importers;
 
 use DateTimeImmutable;
 use GuzzleHttp\Psr7\Utils;
+use Jp\Dex\Domain\BattleData\Usage\Usage;
+use Jp\Dex\Domain\BattleData\Usage\UsagePokemon;
+use Jp\Dex\Domain\BattleData\Usage\UsagePokemonRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Usage\UsageRated;
+use Jp\Dex\Domain\BattleData\Usage\UsageRatedPokemon;
+use Jp\Dex\Domain\BattleData\Usage\UsageRatedPokemonRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Usage\UsageRatedRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Usage\UsageRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Import\SmogonStats\Extractors\UsageFileExtractor;
 use Jp\Dex\Domain\Import\SmogonStats\Repositories\ShowdownPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\Usage;
-use Jp\Dex\Domain\Stats\Usage\UsagePokemon;
-use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRated;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemon;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRepositoryInterface;
 use Psr\Http\Message\StreamInterface;
 
 final readonly class UsageFileImporter

@@ -1,0 +1,33 @@
+<?php
+declare(strict_types=1);
+
+namespace Jp\Dex\Domain\BattleData\Usage;
+
+use DateTimeImmutable;
+use Jp\Dex\Domain\BattleData\Exceptions\InvalidCountException;
+use Jp\Dex\Domain\BattleData\Exceptions\InvalidMonthException;
+use Jp\Dex\Domain\BattleData\ValidateMonthTrait;
+use Jp\Dex\Domain\Formats\FormatId;
+
+final readonly class Usage
+{
+    use ValidateMonthTrait;
+
+    /**
+     * Constructor.
+     *
+     * @throws InvalidMonthException if $month is invalid.
+     * @throws InvalidCountException if $totalBattles is invalid.
+     */
+    public function __construct(
+        private(set) DateTimeImmutable $month,
+        private(set) FormatId $formatId,
+        private(set) int $totalBattles,
+    ) {
+        $this->validateMonth($month);
+
+        if ($totalBattles < 0) {
+            throw new InvalidCountException("Invalid number of total battles: $totalBattles.");
+        }
+    }
+}

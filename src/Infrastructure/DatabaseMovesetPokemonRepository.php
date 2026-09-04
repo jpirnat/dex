@@ -5,10 +5,10 @@ namespace Jp\Dex\Infrastructure;
 
 use DateTimeImmutable;
 use DateTimeInterface;
+use Jp\Dex\Domain\BattleData\Moveset\MovesetPokemon;
+use Jp\Dex\Domain\BattleData\Moveset\MovesetPokemonRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\Moveset\MovesetPokemon;
-use Jp\Dex\Domain\Stats\Moveset\MovesetPokemonRepositoryInterface;
 use PDO;
 
 final readonly class DatabaseMovesetPokemonRepository implements MovesetPokemonRepositoryInterface

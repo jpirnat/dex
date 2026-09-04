@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use DateTimeInterface;
+use Jp\Dex\Domain\BattleData\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
 use PDO;
 
 final readonly class DatabaseRatingQueries implements RatingQueriesInterface

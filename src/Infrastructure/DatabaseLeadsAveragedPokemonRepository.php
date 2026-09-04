@@ -4,11 +4,11 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use DateTime;
+use Jp\Dex\Domain\BattleData\Leads\Averaged\LeadsAveragedPokemon;
+use Jp\Dex\Domain\BattleData\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Usage\Averaged\MonthsCounter;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsAveragedPokemon;
-use Jp\Dex\Domain\Stats\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use PDO;
 
 final readonly class DatabaseLeadsAveragedPokemonRepository implements LeadsAveragedPokemonRepositoryInterface

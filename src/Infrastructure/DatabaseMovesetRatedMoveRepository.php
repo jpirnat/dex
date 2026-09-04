@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMove;
-use Jp\Dex\Domain\Stats\Moveset\MovesetRatedMoveRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Moveset\MovesetRatedMove;
+use Jp\Dex\Domain\BattleData\Moveset\MovesetRatedMoveRepositoryInterface;
 use PDO;
 
 final readonly class DatabaseMovesetRatedMoveRepository implements MovesetRatedMoveRepositoryInterface

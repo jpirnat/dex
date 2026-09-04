@@ -5,11 +5,11 @@ namespace Jp\Dex\Infrastructure;
 
 use DateTime;
 use Jp\Dex\Domain\Abilities\AbilityId;
+use Jp\Dex\Domain\BattleData\Moveset\Averaged\MovesetRatedAveragedAbility;
+use Jp\Dex\Domain\BattleData\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryInterface;
+use Jp\Dex\Domain\BattleData\Usage\Averaged\MonthsCounter;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
-use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbility;
-use Jp\Dex\Domain\Stats\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\Averaged\MonthsCounter;
 use PDO;
 
 final readonly class DatabaseMovesetRatedAveragedAbilityRepository implements MovesetRatedAveragedAbilityRepositoryInterface

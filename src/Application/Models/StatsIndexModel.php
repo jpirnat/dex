@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use DateTime;
-use Jp\Dex\Domain\Stats\Usage\UsageQueriesInterface;
+use Jp\Dex\Domain\BattleData\Usage\UsageQueriesInterface;
 
 final class StatsIndexModel
 {

@@ -1,0 +1,32 @@
+<?php
+declare(strict_types=1);
+
+namespace Jp\Dex\Domain\BattleData;
+
+use DateTimeImmutable;
+use DateTimeInterface;
+use Jp\Dex\Domain\BattleData\Exceptions\InvalidMonthException;
+
+trait ValidateMonthTrait
+{
+    /**
+     * Validate the month for a usage data entity.
+     *
+     * @throws InvalidMonthException if $month is invalid.
+     */
+    public function validateMonth(DateTimeInterface $month): void
+    {
+        // Usage data from before November 2014 does not currently exist.
+        if ($month->format('Y-m') < '2014-11') {
+            $m = $month->format('Y-m-d');
+            throw new InvalidMonthException("This month is too old: $m.");
+        }
+
+        // Usage data from the future does not currently exist.
+        $today = new DateTimeImmutable('today');
+        if ($month > $today) {
+            $m = $month->format('Y-m-d');
+            throw new InvalidMonthException("This month has not happened yet: $m.");
+        }
+    }
+}

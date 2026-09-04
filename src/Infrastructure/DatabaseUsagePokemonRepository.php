@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace Jp\Dex\Infrastructure;
 
 use DateTimeInterface;
+use Jp\Dex\Domain\BattleData\Usage\UsagePokemon;
+use Jp\Dex\Domain\BattleData\Usage\UsagePokemonRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
-use Jp\Dex\Domain\Stats\Usage\UsagePokemon;
-use Jp\Dex\Domain\Stats\Usage\UsagePokemonRepositoryInterface;
 use PDO;
 
 final readonly class DatabaseUsagePokemonRepository implements UsagePokemonRepositoryInterface

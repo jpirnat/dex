@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace Jp\Dex\Application\Models;
 
 use DateTime;
+use Jp\Dex\Domain\BattleData\Usage\RatingQueriesInterface;
+use Jp\Dex\Domain\BattleData\Usage\UsageRatedQueriesInterface;
 use Jp\Dex\Domain\Formats\Format;
 use Jp\Dex\Domain\Formats\FormatRepositoryInterface;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -11,8 +13,6 @@ use Jp\Dex\Domain\Leads\StatsLeadsPokemon;
 use Jp\Dex\Domain\Leads\StatsLeadsPokemonRepositoryInterface;
 use Jp\Dex\Domain\Stats\StatId;
 use Jp\Dex\Domain\Stats\StatNameRepositoryInterface;
-use Jp\Dex\Domain\Stats\Usage\RatingQueriesInterface;
-use Jp\Dex\Domain\Stats\Usage\UsageRatedQueriesInterface;
 
 final class StatsLeadsModel
 {
