@@ -40,7 +40,7 @@
 
     <template v-if="loaded">
         <dex-pagination
-            v-model="currentPage"
+            v-model:current-page="currentPage"
             :number-of-items="filteredPokemons.length"
             :items-per-page="itemsPerPage"
         ></dex-pagination>
@@ -131,7 +131,7 @@
         </table>
 
         <dex-pagination
-            v-model="currentPage"
+            v-model:current-page="currentPage"
             :number-of-items="filteredPokemons.length"
             :items-per-page="itemsPerPage"
         ></dex-pagination>
