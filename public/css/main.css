@@ -148,8 +148,8 @@ a.breadcrumbs__item:hover {
 
 .change-language {
     display: flex;
-    align-items: center;
     justify-content: center;
+    gap: 0.5rem;
 }
 
 /* Loading spinner from https://vineethtrv.github.io/loader */

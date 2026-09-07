@@ -28,10 +28,11 @@ final class BaseModel
             ['id' => 4, 'name' => 'Deutsch'],
             ['id' => 2, 'name' => 'English'],
             ['id' => 6, 'name' => 'Español'],
+            ['id' => 11, 'name' => 'Español (Latinoamérica)'],
             ['id' => 3, 'name' => 'Français'],
             ['id' => 5, 'name' => 'Italiano'],
             ['id' => 1, 'name' => 'にほんご'],
-            ['id' => 8, 'name' => '漢字'],
+            // ['id' => 8, 'name' => '漢字'], // japanese-kanji isn't in Champions.
             ['id' => 9, 'name' => '简体中文'],
             ['id' => 10, 'name' => '繁體中文'],
             ['id' => 7, 'name' => '한국어'],
