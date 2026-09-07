@@ -96,44 +96,4 @@ final readonly class DatabasePokemonRepository implements PokemonRepositoryInter
             $result['sort'],
         );
     }
-
-    /**
-     * Get all Pokémon.
-     *
-     * @return Pokemon[] Indexed by id. Ordered by sort.
-     */
-    public function getAll(): array
-    {
-        $stmt = $this->db->prepare(
-            'SELECT
-                `id`,
-                `identifier`,
-                `species_id`,
-                `experience_group_id`,
-                `gender_ratio`,
-                `smogon_dex_identifier`,
-                `sort`
-            FROM `pokemon`
-            ORDER BY `sort`'
-        );
-        $stmt->execute();
-
-        $pokemons = [];
-
-        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $pokemon = new Pokemon(
-                new PokemonId($result['id']),
-                $result['identifier'],
-                new SpeciesId($result['species_id']),
-                new ExperienceGroupId($result['experience_group_id']),
-                $result['gender_ratio'],
-                $result['smogon_dex_identifier'],
-                $result['sort'],
-            );
-
-            $pokemons[$result['id']] = $pokemon;
-        }
-
-        return $pokemons;
-    }
 }

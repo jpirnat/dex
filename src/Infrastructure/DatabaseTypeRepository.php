@@ -102,49 +102,6 @@ final readonly class DatabaseTypeRepository implements TypeRepositoryInterface
     }
 
     /**
-     * Get a type by its hidden power index.
-     *
-     * @throws TypeNotFoundException if no type exists with this hidden power
-     *     index.
-     */
-    public function getByHiddenPowerIndex(int $hiddenPowerIndex): Type
-    {
-        $stmt = $this->db->prepare(
-            'SELECT
-                `id`,
-                `identifier`,
-                `category_id`,
-                `symbol_icon`,
-                `color_code`
-            FROM `types`
-            WHERE `hidden_power_index` = :hidden_power_index
-            LIMIT 1'
-        );
-        $stmt->bindValue(':hidden_power_index', $hiddenPowerIndex, PDO::PARAM_INT);
-        $stmt->execute();
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if (!$result) {
-            throw new TypeNotFoundException(
-                "No type exists with hidden power index $hiddenPowerIndex."
-            );
-        }
-
-        $categoryId = $result['category_id'] !== null
-            ? new CategoryId($result['category_id'])
-            : null;
-
-        return new Type(
-            new TypeId($result['id']),
-            $result['identifier'],
-            $categoryId,
-            $result['symbol_icon'],
-            $hiddenPowerIndex,
-            $result['color_code'],
-        );
-    }
-
-    /**
      * Get the main types available in this version group.
      *
      * @return Type[] Indexed by identifier.

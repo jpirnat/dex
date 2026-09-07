@@ -22,14 +22,6 @@ interface TypeRepositoryInterface
     public function getByIdentifier(string $identifier): Type;
 
     /**
-     * Get a type by its hidden power index.
-     *
-     * @throws TypeNotFoundException if no type exists with this hidden power
-     *     index.
-     */
-    public function getByHiddenPowerIndex(int $hiddenPowerIndex): Type;
-
-    /**
      * Get the main types available in this version group.
      *
      * @return Type[] Indexed by identifier.

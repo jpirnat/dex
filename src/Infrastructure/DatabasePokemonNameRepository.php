@@ -51,36 +51,4 @@ final readonly class DatabasePokemonNameRepository implements PokemonNameReposit
             $result['name'],
         );
     }
-
-    /**
-     * Get Pokémon names by language.
-     *
-     * @return PokemonName[] Indexed by Pokémon id.
-     */
-    public function getByLanguage(LanguageId $languageId): array
-    {
-        $stmt = $this->db->prepare(
-            'SELECT
-                `pokemon_id`,
-                `name`
-            FROM `pokemon_names`
-            WHERE `language_id` = :language_id'
-        );
-        $stmt->bindValue(':language_id', $languageId->value, PDO::PARAM_INT);
-        $stmt->execute();
-
-        $pokemonNames = [];
-
-        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $pokemonName = new PokemonName(
-                $languageId,
-                new PokemonId($result['pokemon_id']),
-                $result['name'],
-            );
-
-            $pokemonNames[$result['pokemon_id']] = $pokemonName;
-        }
-
-        return $pokemonNames;
-    }
 }

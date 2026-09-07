@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\Import\SmogonStats\Importers;
 
-use DateTime;
 use DateTimeImmutable;
 use GuzzleHttp\Psr7\Utils;
 use Jp\Dex\Domain\Import\SmogonStats\Extractors\FormatRatingExtractor;

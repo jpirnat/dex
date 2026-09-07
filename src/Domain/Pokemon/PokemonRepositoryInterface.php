@@ -18,11 +18,4 @@ interface PokemonRepositoryInterface
      * @throws PokemonNotFoundException if no Pokémon exists with this identifier.
      */
     public function getByIdentifier(string $identifier): Pokemon;
-
-    /**
-     * Get all Pokémon.
-     *
-     * @return Pokemon[] Indexed by id. Ordered by sort.
-     */
-    public function getAll(): array;
 }
