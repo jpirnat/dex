@@ -420,10 +420,6 @@ $services->alias(
     \Jp\Dex\Infrastructure\Showdown\SimpleShowdownTypeRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Species\SpeciesRepositoryInterface::class,
-    \Jp\Dex\Infrastructure\DatabaseSpeciesRepository::class
-);
-$services->alias(
     \Jp\Dex\Domain\Stats\StatNameRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseStatNameRepository::class
 );
