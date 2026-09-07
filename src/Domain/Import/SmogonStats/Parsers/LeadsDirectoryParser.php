@@ -41,7 +41,10 @@ final readonly class LeadsDirectoryParser
             }
 
             // Get the format and rating from the filename of the link.
-            $filename = pathinfo($file->path())['filename'];
+            $filename = mb_substr($file->path(), mb_strlen("ignore/stats-mirror/$yearMonth/"));
+            if ($filename === '.DS_Store') {
+                continue;
+            }
             $formatRating = $this->formatRatingExtractor->extractFormatRating($filename);
             $showdownFormatName = $formatRating->showdownFormatName;
 

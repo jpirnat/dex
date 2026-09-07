@@ -53,7 +53,10 @@ final readonly class MonthDirectoryImporter
             }
 
             // Get the format and rating from the filename of the link.
-            $filename = pathinfo($file->path())['filename'];
+            $filename = mb_substr($file->path(), mb_strlen("ignore/stats-mirror/$yearMonth/"));
+            if ($filename === '.DS_Store') {
+                continue;
+            }
             $formatRating = $this->formatRatingExtractor->extractFormatRating($filename);
             $showdownFormatName = $formatRating->showdownFormatName;
             $rating = $formatRating->rating;
@@ -78,7 +81,7 @@ final readonly class MonthDirectoryImporter
             // Import the usage file.
             $this->usageFileImporter->import(
                 $stream,
-                DateTime::createFromImmutable($month),
+                $month,
                 $formatId,
                 $rating,
             );
