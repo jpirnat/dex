@@ -99,27 +99,52 @@ table {
 
 
 /* Nav menu */
-
-.menu {
-    background: #eee;
-    border: 1px solid #ddd;
+/* Dropdown menu css adapted from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
+.nav-menu {
     display: flex;
+    background-color: #f8bbd0; /* Material Design 2 - Pink 100 */
+    /* https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors */
 }
-
-.menu__space {
+.nav-menu__link {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    background-color: #f8bbd0; /* Material Design 2 - Pink 100 */
+}
+.nav-menu__link:hover {
+    background-color: black;
+    color: white;
+}
+.nav-menu__dropdown {
+    display: none;
+    position: absolute;
+}
+.nav-menu__item:hover .nav-menu__dropdown {
+    display: block;
+}
+.nav-menu__space {
     flex: 1;
 }
 
-.menu a {
+/* Nav breadcrumbs */
+.breadcrumbs {
+    background-color: #b2ebf2;  /* Material Design 2 - Cyan 100 */
+    display: flex;
+}
+.breadcrumbs__item {
     padding: 10px;
     color: black;
     text-decoration: none;
 }
-
-.menu a:hover {
+.breadcrumbs__separator {
+    padding: 10px 5px;
+}
+a.breadcrumbs__item:hover {
     background: black;
     color: white;
 }
+
 
 .change-language {
     display: flex;
@@ -163,31 +188,6 @@ table {
         transform: rotate(360deg);
     }
 }
-
-
-/* Nav breadcrumbs */
-
-.breadcrumbs {
-    background: #eee;
-    border: 1px solid #ddd;
-    display: flex;
-}
-
-.breadcrumbs__item {
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-}
-
-.breadcrumbs__separator {
-    padding: 10px 5px;
-}
-
-a.breadcrumbs__item:hover {
-    background: black;
-    color: white;
-}
-
 
 
 

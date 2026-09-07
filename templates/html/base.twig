@@ -20,18 +20,43 @@
     <body>
         <header>
             {% block nav %}
-                <nav class="menu">
-                    <a href="/dex/champions/pokemon">Pokémon</a>
-                    <a href="/dex/champions/moves">Moves</a>
-                    <a href="/dex/champions/types">Types</a>
-                    <a href="/dex/champions/items">Items</a>
-                    <a href="/dex/champions/abilities">Abilities</a>
-                    <a href="/dex/champions/natures">Natures</a>
-                    <a href="/battle-data">Battle Data</a>
-                    {# <a href="/battle-data/current">Current Battle Data</a> #}
-                    <div class="menu__space"></div>
-                    <a href="/about">About</a>
+                <nav class="nav-menu">
+                    <div class="nav-menu__item">
+                        <a class="nav-menu__link" href="/dex/champions/pokemon">Pokémon</a>
+                        <div class="nav-menu__dropdown">
+                            <a class="nav-menu__link" href="/dex/champions/advanced-pokemon-search">Advanced Search</a>
+                        </div>
+                    </div>
+                    <div class="nav-menu__item">
+                        <a class="nav-menu__link" href="/dex/champions/moves">Moves</a>
+                        <div class="nav-menu__dropdown">
+                            <a class="nav-menu__link" href="/dex/champions/advanced-move-search">Advanced Search</a>
+                        </div>
+                    </div>
+                    <div class="nav-menu__item">
+                        <a class="nav-menu__link" href="/dex/champions/types">Types</a>
+                    </div>
+                    <div class="nav-menu__item">
+                        <a class="nav-menu__link" href="/dex/champions/items">Items</a>
+                    </div>
+                    <div class="nav-menu__item">
+                        <a class="nav-menu__link" href="/dex/champions/abilities">Abilities</a>
+                    </div>
+                    <div class="nav-menu__item">
+                        <a class="nav-menu__link" href="/dex/champions/natures">Natures</a>
+                    </div>
+                    <div class="nav-menu__item">
+                        <a class="nav-menu__link" href="/battle-data">Battle Data</a>
+                        <div class="nav-menu__dropdown">
+                            <a class="nav-menu__link" href="/battle-data/current">Current Battle Data</a>
+                        </div>
+                    </div>
+                    <div class="nav-menu__space"></div>
+                    <div class="nav-menu__item">
+                        <a class="nav-menu__link" href="/about">About</a>
+                    </div>
                 </nav>
+
                 {% if breadcrumbs %}
                     <nav class="breadcrumbs" aria-label="Breadcrumb">
                         <a class="breadcrumbs__item" href="/">Home</a>
