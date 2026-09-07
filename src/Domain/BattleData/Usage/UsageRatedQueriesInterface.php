@@ -24,7 +24,7 @@ interface UsageRatedQueriesInterface
     /**
      * Get the months that have data recorded for this format and rating.
      *
-     * @return DateTime[]
+     * @return DateTimeInterface[]
      */
     public function getMonthsWithData(FormatId $formatId, int $rating): array;
 }

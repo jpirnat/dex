@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\StatsPokemon;
 
-use DateTime;
 use DateTimeImmutable;
+use DateTimeInterface;
 use Jp\Dex\Application\Models\DateModel;
 use Jp\Dex\Domain\Abilities\StatsPokemonAbility;
 use Jp\Dex\Domain\Abilities\StatsPokemonAbilityRepositoryInterface;
@@ -72,7 +72,7 @@ final class StatsPokemonModel
     /** @var StatsPokemonCounter[] $counters */
     private(set) array $counters = [];
 
-    /** @var DateTime[] $months */
+    /** @var DateTimeInterface[] $months */
     private(set) array $months = [];
 
 

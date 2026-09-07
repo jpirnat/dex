@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeImmutable;
 use DateTimeInterface;
 use Jp\Dex\Domain\BattleData\Usage\UsageRatedQueriesInterface;
 use Jp\Dex\Domain\Formats\FormatId;
@@ -53,7 +53,7 @@ final readonly class DatabaseUsageRatedQueries implements UsageRatedQueriesInter
     /**
      * Get the months that have data recorded for this format and rating.
      *
-     * @return DateTime[]
+     * @return DateTimeInterface[]
      */
     public function getMonthsWithData(FormatId $formatId, int $rating): array
     {
@@ -72,7 +72,7 @@ final readonly class DatabaseUsageRatedQueries implements UsageRatedQueriesInter
         $months = [];
 
         while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $months[] = new DateTime($result['month']);
+            $months[] = new DateTimeImmutable($result['month']);
         }
 
         return $months;

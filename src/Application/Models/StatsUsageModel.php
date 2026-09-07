@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\BattleData\Leads\LeadsRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\BattleData\Usage\RatingQueriesInterface;
 use Jp\Dex\Domain\BattleData\Usage\UsageRatedQueriesInterface;
@@ -33,7 +33,7 @@ final class StatsUsageModel
     /** @var StatsUsagePokemon[] $pokemon */
     private(set) array $pokemon = [];
 
-    /** @var DateTime[] $months */
+    /** @var DateTimeInterface[] $months */
     private(set) array $months = [];
 
 
