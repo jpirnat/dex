@@ -252,10 +252,6 @@ $services->alias(
     \Jp\Dex\Infrastructure\DatabaseFormatRepository::class
 );
 $services->alias(
-    \Jp\Dex\Domain\Versions\GenerationRepositoryInterface::class,
-    \Jp\Dex\Infrastructure\DatabaseGenerationRepository::class
-);
-$services->alias(
     \Jp\Dex\Domain\Items\ItemDescriptionRepositoryInterface::class,
     \Jp\Dex\Infrastructure\DatabaseItemDescriptionRepository::class
 );
