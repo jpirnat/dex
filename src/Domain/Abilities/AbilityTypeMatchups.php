@@ -48,7 +48,7 @@ final readonly class AbilityTypeMatchups
     }
 
     /**
-     * @var float[] $multipliers Indexed by attacking type id. These are the
+     * @param float[] $multipliers Indexed by attacking type id. These are the
      *     multipliers before the ability is applied.
      *
      * @return float[]

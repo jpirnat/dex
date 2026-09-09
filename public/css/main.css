@@ -5,6 +5,12 @@
 :root {
     box-sizing: border-box;
 
+    /* https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors */
+    --color-porydex-pink-light: #f8bbd0; /* Material Design 2 - Pink 100 */
+    --color-porydex-pink-dark: #880e4f; /* Material Design 2 - Pink 900 */
+    --color-porydex-blue-light: #b2ebf2; /* Material Design 2 - Cyan 100 */
+    --color-porydex-blue-dark: #006064; /* Material Design 2 - Cyan 900 */
+
     --color-vg-red: #da3914;
     --color-vg-green: #24a724;
     --color-vg-blue: #2e50d8;
@@ -102,15 +108,17 @@ table {
 /* Dropdown menu css adapted from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
 .nav-menu {
     display: flex;
-    background-color: #f8bbd0; /* Material Design 2 - Pink 100 */
-    /* https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors */
+    border-right: 1px solid var(--color-porydex-pink-dark);
+    border-bottom: 1px solid var(--color-porydex-pink-dark);
+    border-left: 1px solid var(--color-porydex-pink-dark);
+    background-color: var(--color-porydex-pink-light);
 }
 .nav-menu__link {
     display: block;
     padding: 10px;
-    color: black;
     text-decoration: none;
-    background-color: #f8bbd0; /* Material Design 2 - Pink 100 */
+    background-color: var(--color-porydex-pink-light);
+    color: var(--color-porydex-pink-dark);
 }
 .nav-menu__link:hover {
     background-color: black;
@@ -119,6 +127,9 @@ table {
 .nav-menu__dropdown {
     display: none;
     position: absolute;
+    border-right: 1px solid var(--color-porydex-pink-dark);
+    border-bottom: 1px solid var(--color-porydex-pink-dark);
+    border-left: 1px solid var(--color-porydex-pink-dark);
 }
 .nav-menu__item:hover .nav-menu__dropdown {
     display: block;
@@ -129,12 +140,16 @@ table {
 
 /* Nav breadcrumbs */
 .breadcrumbs {
-    background-color: #b2ebf2;  /* Material Design 2 - Cyan 100 */
     display: flex;
+    border-right: 1px solid var(--color-porydex-blue-dark);
+    border-bottom: 1px solid var(--color-porydex-blue-dark);
+    border-left: 1px solid var(--color-porydex-blue-dark);
+    background-color: var(--color-porydex-blue-light);
+    color: var(--color-porydex-blue-dark);
 }
 .breadcrumbs__item {
     padding: 10px;
-    color: black;
+    color: var(--color-porydex-blue-dark);
     text-decoration: none;
 }
 .breadcrumbs__separator {
