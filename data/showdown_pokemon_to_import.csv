@@ -49,6 +49,8 @@ Pikachu-Cosplay,25056
 Pikachu-Starter,25057
 Raichu,26000
 Raichu-Alola,26001
+Raichu-Mega-X,26002
+Raichu-Mega-Y,26003
 Sandshrew,27000
 Sandshrew-Alola,27001
 Sandslash,28000
@@ -177,6 +179,7 @@ Goldeen,118000
 Seaking,119000
 Staryu,120000
 Starmie,121000
+Starmie-Mega,121001
 Mr. Mime,122000
 Mr. Mime-Galar,122001
 Scyther,123000
@@ -219,6 +222,7 @@ Moltres-Galar,146001
 Dratini,147000
 Dragonair,148000
 Dragonite,149000
+Dragonite-Mega,149001
 Mewtwo,150000
 Mewtwo-Mega-X,150001
 Mewtwo-Mega-Y,150002
@@ -234,6 +238,7 @@ Typhlosion-Hisui,157001
 Totodile,158000
 Croconaw,159000
 Feraligatr,160000
+Feraligatr-Mega,160001
 Sentret,161000
 Furret,162000
 Hoothoot,163000
@@ -310,6 +315,7 @@ Octillery,224000
 Delibird,225000
 Mantine,226000
 Skarmory,227000
+Skarmory-Mega,227001
 Houndour,228000
 Houndoom,229000
 Houndoom-Mega,229001
@@ -458,8 +464,10 @@ Duskull,355000
 Dusclops,356000
 Tropius,357000
 Chimecho,358000
+Chimecho-Mega,358000
 Absol,359000
 Absol-Mega,359001
+Absol-Mega-Z,359002
 Wynaut,360000
 Snorunt,361000
 Glalie,362000
@@ -510,6 +518,7 @@ Empoleon,395000
 Starly,396000
 Staravia,397000
 Staraptor,398000
+Staraptor-Mega,398001
 Bidoof,399000
 Bibarel,400000
 Kricketot,401000
@@ -561,10 +570,12 @@ Gible,443000
 Gabite,444000
 Garchomp,445000
 Garchomp-Mega,445001
+Garchomp-Mega-Z,445002
 Munchlax,446000
 Riolu,447000
 Lucario,448000
 Lucario-Mega,448001
+Lucario-Mega-Z,448002
 Hippopotas,449000
 Hippowdon,450000
 Skorupi,451000
@@ -612,6 +623,7 @@ Dialga-Origin,483001
 Palkia,484000
 Palkia-Origin,484001
 Heatran,485000
+Heatran-Mega,485001
 Regigigas,486000
 Giratina,487000
 Giratina-Origin,487001
@@ -619,6 +631,7 @@ Cresselia,488000
 Phione,489000
 Manaphy,490000
 Darkrai,491000
+Darkrai-Mega,491001
 Shaymin,492000
 Shaymin-Sky,492001
 Arceus,493000
@@ -646,6 +659,7 @@ Serperior,497000
 Tepig,498000
 Pignite,499000
 Emboar,500000
+Emboar-Mega,500001
 Oshawott,501000
 Dewott,502000
 Samurott,503000
@@ -677,6 +691,7 @@ Woobat,527000
 Swoobat,528000
 Drilbur,529000
 Excadrill,530000
+Excadrill-Mega,530001
 Audino,531000
 Audino-Mega,531001
 Timburr,532000
@@ -783,6 +798,7 @@ Mienshao,620000
 Druddigon,621000
 Golett,622000
 Golurk,623000
+Golurk-Mega,623001
 Pawniard,624000
 Bisharp,625000
 Bouffalant,626000
@@ -818,13 +834,16 @@ Genesect,649000
 Chespin,650000
 Quilladin,651000
 Chesnaught,652000
+Chesnaught-Mega,652001
 Fennekin,653000
 Braixen,654000
 Delphox,655000
+Delphox-Mega,655001
 Froakie,656000
 Frogadier,657000
 Greninja,658000
 Greninja-Ash,658002
+Greninja-Mega,658003
 Bunnelby,659000
 Diggersby,660000
 Fletchling,661000
@@ -840,6 +859,7 @@ Flabebe,669000
 Floette,670000
 Floette-Eternal,670005
 Floette-Eternal-Flower,670005
+Floette-Mega,670006
 Florges,671000
 Skiddo,672000
 Gogoat,673000
@@ -849,6 +869,8 @@ Furfrou,676000
 Espurr,677000
 Meowstic,678000
 Meowstic-F,678001
+Meowstic-M-Mega,678002
+Meowstic-F-Mega,678003
 Honedge,679000
 Doublade,680000
 Aegislash,681000
@@ -904,6 +926,7 @@ Yveltal,717000
 Zygarde,718000
 Zygarde-10%,718001
 Zygarde-Complete,718004
+Zygarde-Mega,718005
 Diancie,719000
 Diancie-Mega,719001
 Hoopa,720000
@@ -931,6 +954,7 @@ Vikavolt,738000
 Vikavolt-Totem,738051
 Crabrawler,739000
 Crabominable,740000
+Crabominable-Mega,740001
 Oricorio,741000
 Oricorio-Pom-Pom,741001
 Oricorio-Pa'u,741002
@@ -969,6 +993,7 @@ Oranguru,765000
 Passimian,766000
 Wimpod,767000
 Golisopod,768000
+Golisopod-Mega,768001
 Sandygast,769000
 Palossand,770000
 Pyukumuku,771000
@@ -1026,12 +1051,14 @@ Necrozma-Dusk-Mane,800001
 Necrozma-Dawn-Wings,800002
 Necrozma-Ultra,800003
 Magearna,801000
+Magearna-Mega,801002
 Marshadow,802000
 Poipole,803000
 Naganadel,804000
 Stakataka,805000
 Blacephalon,806000
 Zeraora,807000
+Zeraora-Mega,807001
 Meltan,808000
 Melmetal,809000
 Grookey,810000
@@ -1191,6 +1218,7 @@ Toedscruel,949000
 Klawf,950000
 Capsakid,951000
 Scovillain,952000
+Scovillain-Mega,952001
 Rellor,953000
 Rabsca,954000
 Flittle,955000
@@ -1209,6 +1237,7 @@ Cyclizar,967000
 Orthworm,968000
 Glimmet,969000
 Glimmora,970000
+Glimmora-Mega,970001
 Greavard,971000
 Houndstone,972000
 Flamigo,973000
@@ -1217,6 +1246,7 @@ Cetitan,975000
 Veluza,976000
 Dondozo,977000
 Tatsugiri,978000
+Tatsugiri-Curly-Mega,978003
 Annihilape,979000
 Clodsire,980000
 Farigiraf,981000
@@ -1237,6 +1267,7 @@ Iron Thorns,995000
 Frigibax,996000
 Arctibax,997000
 Baxcalibur,998000
+Baxcalibur-Mega,998001
 Gimmighoul,999000
 Gimmighoul-Roaming,999001
 Gholdengo,1000000
