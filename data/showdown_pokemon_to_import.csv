@@ -61,6 +61,7 @@ Nidorino,33000
 Nidoking,34000
 Clefairy,35000
 Clefable,36000
+Clefable-Mega,36001
 Vulpix,37000
 Vulpix-Alola,37001
 Ninetales,38000
@@ -106,6 +107,7 @@ Machamp,68000
 Bellsprout,69000
 Weepinbell,70000
 Victreebel,71000
+Victreebel-Mega,71001
 Tentacool,72000
 Tentacruel,73000
 Geodude,74000
@@ -224,6 +226,7 @@ Mew,151000
 Chikorita,152000
 Bayleef,153000
 Meganium,154000
+Meganium-Mega,154001
 Cyndaquil,155000
 Quilava,156000
 Typhlosion,157000
@@ -594,6 +597,7 @@ Gallade-Mega,475001
 Probopass,476000
 Dusknoir,477000
 Froslass,478000
+Froslass-Mega,478001
 Rotom,479000
 Rotom-Heat,479001
 Rotom-Wash,479002
@@ -689,6 +693,7 @@ Leavanny,542000
 Venipede,543000
 Whirlipede,544000
 Scolipede,545000
+Scolipede-Mega,545001
 Cottonee,546000
 Whimsicott,547000
 Petilil,548000
@@ -708,6 +713,7 @@ Dwebble,557000
 Crustle,558000
 Scraggy,559000
 Scrafty,560000
+Scrafty-Mega,560001
 Sigilyph,561000
 Yamask,562000
 Yamask-Galar,562001
@@ -755,11 +761,13 @@ Klinklang,601000
 Tynamo,602000
 Eelektrik,603000
 Eelektross,604000
+Eelektross-Mega,604001
 Elgyem,605000
 Beheeyem,606000
 Litwick,607000
 Lampent,608000
 Chandelure,609000
+Chandelure-Mega,609001
 Axew,610000
 Fraxure,611000
 Haxorus,612000
@@ -827,6 +835,7 @@ Spewpa,665000
 Vivillon,666000
 Litleo,667000
 Pyroar,668000
+Pyroar-Mega,668001
 Flabebe,669000
 Floette,670000
 Floette-Eternal,670005
@@ -849,10 +858,13 @@ Swirlix,684000
 Slurpuff,685000
 Inkay,686000
 Malamar,687000
+Malamar-Mega,687001
 Binacle,688000
 Barbaracle,689000
+Barbaracle-Mega,689001
 Skrelp,690000
 Dragalge,691000
+Dragalge-Mega,691001
 Clauncher,692000
 Clawitzer,693000
 Helioptile,694000
@@ -863,6 +875,7 @@ Amaura,698000
 Aurorus,699000
 Sylveon,700000
 Hawlucha,701000
+Hawlucha-Mega,701001
 Dedenne,702000
 Carbink,703000
 Goomy,704000
@@ -987,6 +1000,7 @@ Mimikyu,778000
 Mimikyu-Totem,778051
 Bruxish,779000
 Drampa,780000
+Drampa-Mega,780001
 Dhelmise,781000
 Jangmo-o,782000
 Hakamo-o,783000
@@ -1081,6 +1095,7 @@ Runerigus,867000
 Milcery,868000
 Alcremie,869000
 Falinks,870000
+Falinks-Mega,870001
 Pincurchin,871000
 Snom,872000
 Frosmoth,873000
