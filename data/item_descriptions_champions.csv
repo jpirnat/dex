@@ -53,6 +53,7 @@ version_group_id,language_id,item_id,name,description
 27,1,250,りゅうのキバ,ドラゴンタイプの技の威力が\n１．２倍になる。
 27,1,251,シルクのスカーフ,ノーマルタイプの技の威力が\n１．２倍になる。
 27,1,253,かいがらのすず,技でダメージを与えた時\nそのダメージの１／８\n自分のＨＰを回復する。
+27,1,259,ながねぎ,カモネギ　ネギガナイトが\nきゅうしょアップ＋２　になる。
 27,1,265,こうかくレンズ,技の命中率が\n１．１倍になる。
 27,1,266,ちからのハチマキ,物理技の威力が\n１．１倍になる。
 27,1,267,ものしりメガネ,特殊技の威力が\n１．１倍になる。
@@ -70,6 +71,12 @@ version_group_id,language_id,item_id,name,description
 27,1,287,こだわりスカーフ,素早さが１．５倍になるが\n１度技を出すと　交代するまで\nその技しか出せなくなる。
 27,1,295,きれいなぬけがら,交代を邪魔する効果を無視して\n手持ちの他のポケモンと\n交代することができる。
 27,1,296,おおきなねっこ,ＨＰを吸い取る技で回復する量が\n１．３倍になる。ねをはる\nちからをすいとる等も１．３倍になる。
+27,1,540,ゴツゴツメット,接触技を受けると\n相手の最大ＨＰの\n１／６のダメージを与える。
+27,1,541,ふうせん,地面にいないことになり\nじめんタイプの技　まきびし　どくびし\nねばねばネット状態が効かない。\n技のダメージを受けると\nその対戦中は　無くなる。
+27,1,542,レッドカード,技でダメージを与えてきた相手を交代させる。\n１度使うと　その対戦中は　無くなる。
+27,1,544,しめつけバンド,バインド状態で与えるダメージが\n相手の最大ＨＰの１／８ではなく\n１／６になる。
+27,1,547,だっしゅつボタン,技でダメージを受けた時　手持ちに戻る。\n１度使うと　その対戦中は　無くなる。
+27,1,564,ノーマルジュエル,ノーマルタイプの技の威力が１．３倍になる。\n１度使うと　その対戦中は　無くなる。
 27,1,656,ゲンガナイト,ゲンガーが\nメガシンカすることができる持ち物。
 27,1,657,サーナイトナイト,サーナイトが\nメガシンカすることができる持ち物。
 27,1,658,デンリュウナイト,デンリュウが\nメガシンカすることができる持ち物。
@@ -111,7 +118,13 @@ version_group_id,language_id,item_id,name,description
 27,1,763,オニゴーリナイト,オニゴーリが\nメガシンカすることができる持ち物。
 27,1,767,バクーダナイト,バクーダが\nメガシンカすることができる持ち物。
 27,1,768,ミミロップナイト,ミミロップが\nメガシンカすることができる持ち物。
+27,1,769,ボーマンダナイト,ボーマンダが\nメガシンカすることができる持ち物。
 27,1,770,スピアナイト,スピアーが\nメガシンカすることができる持ち物。
+27,1,879,グランドコート,技や特性でフィールドを張った時\n継続時間が３ターン長くなる。\n（合計８ターン）
+27,1,881,エレキシード,エレキフィールド状態の時に\n防御が１段階上がる。\n１度使うと　その対戦中は　無くなる。
+27,1,882,サイコシード,サイコフィールド状態の時に\n特防が１段階上がる。\n１度使うと　その対戦中は　無くなる。
+27,1,883,ミストシード,ミストフィールド状態の時に\n特防が１段階上がる。\n１度使うと　その対戦中は　無くなる。
+27,1,884,グラスシード,グラスフィールド状態の時に\n防御が１段階上がる。\n１度使うと　その対戦中は　無くなる。
 27,1,2401,ようせいのハネ,フェアリータイプの技の威力が\n１．２倍になる。
 27,1,2559,ピクシナイト,ピクシーが\nメガシンカすることができる持ち物。
 27,1,2560,ウツボットナイト,ウツボットが\nメガシンカすることができる持ち物。
@@ -141,11 +154,16 @@ version_group_id,language_id,item_id,name,description
 27,1,2635,ライチュウナイトＸ,ライチュウが\nメガシンカすることができる持ち物。\nアローラのすがたには効果がない。\n（メガライチュウＸ）
 27,1,2636,ライチュウナイトＹ,ライチュウが\nメガシンカすることができる持ち物。\nアローラのすがたには効果がない。\n（メガライチュウＹ）
 27,1,2637,チリーンナイト,チリーンが\nメガシンカすることができる持ち物。
+27,1,2638,アブソルナイトＺ,アブソルが\nメガシンカすることができる持ち物。\n（メガアブソルＺ）
 27,1,2639,ムクホークナイト,ムクホークが\nメガシンカすることができる持ち物。
+27,1,2640,ガブリアスナイトＺ,ガブリアスが\nメガシンカすることができる持ち物。\n（メガガブリアスＺ）
+27,1,2641,ルカリオナイトＺ,ルカリオが\nメガシンカすることができる持ち物。\n（メガルカリオＺ）
 27,1,2642,ゴルーグナイト,ゴルーグが\nメガシンカすることができる持ち物。
 27,1,2643,ニャオニクスナイト,ニャオニクスが\nメガシンカすることができる持ち物。
 27,1,2644,ケケンカニナイト,ケケンカニが\nメガシンカすることができる持ち物。
+27,1,2645,グソクムシャナイト,グソクムシャが\nメガシンカすることができる持ち物。
 27,1,2647,スコヴィラナイト,スコヴィランが\nメガシンカすることができる持ち物。
+27,1,2648,セグレイブナイト,セグレイブが\nメガシンカすることができる持ち物。
 27,1,2650,キラフロルナイト,キラフロルが\nメガシンカすることができる持ち物。
 27,2,149,Cheri Berry,Cures being paralyzed. Disappears for the duration of\nthe battle after a single use.
 27,2,150,Chesto Berry,Cures being asleep. Disappears for the duration of the\nbattle after a single use.
@@ -201,6 +219,7 @@ version_group_id,language_id,item_id,name,description
 27,2,250,Dragon Fang,Boosts the power of the holder’s Dragon-type moves\nby 20%.
 27,2,251,Silk Scarf,Boosts the power of the holder’s Normal-type moves\nby 20%.
 27,2,253,Shell Bell,"When the holder deals damage with its moves, its HP is\nrestored by 1/8 of the damage dealt."
+27,2,259,Leek,"When held by a Farfetch’d or Sirfetch’d, gives the holder\na 2-stage Critical-Hit Ratio Boost."
 27,2,265,Wide Lens,Boosts the accuracy of the holder’s moves by 10%.
 27,2,266,Muscle Band,Boosts the power of the holder’s physical moves by 10%.
 27,2,267,Wise Glasses,Boosts the power of the holder’s special moves by 10%.
@@ -218,6 +237,12 @@ version_group_id,language_id,item_id,name,description
 27,2,287,Choice Scarf,"Boosts the holder’s Speed stat by 50%. However, once\nthe holder uses a move, it becomes unable to use any\nother move but that one until it switches out of battle."
 27,2,295,Shed Shell,Enables the holder to ignore any effects that would\nusually prevent it from switching out of battle and being\nreplaced by another party Pokémon.
 27,2,296,Big Root,Boosts the amount of HP restored through HP-absorbing\nmoves by 30%. HP restored by moves such as Ingrain\nand Strength Sap will also be boosted by 30%.
+27,2,540,Rocky Helmet,"When the holder is hit by a contact move, the attacker\ntakes damage equal to 1/6 of its max HP."
+27,2,541,Air Balloon,"Causes the holder to float off the ground, making it\nimmune to Ground-type moves, as well as the Spikes,\nToxic Spikes, and Sticky Web statuses. Disappears for\nthe duration of the battle if the holder takes damage\nfrom a move."
+27,2,542,Red Card,"When the holder takes damage from a move, the\nattacker is forced to switch out of battle. Disappears\nfor the duration of the battle after a single use."
+27,2,544,Binding Band,Increases the damage dealt to targets that have the\nBound status. Targets will take damage equal to 1/6 of\ntheir max HP instead of 1/8 of their max HP.
+27,2,547,Eject Button,Switches the holder out of battle when the holder takes\ndamage from a move. Disappears for the duration of the\nbattle after a single use.
+27,2,564,Normal Gem,Boosts the power of the holder’s Normal-type moves by\n30%. Disappears for the duration of the battle after a\nsingle use.
 27,2,656,Gengarite,A held item that allows Gengar to Mega Evolve.
 27,2,657,Gardevoirite,A held item that allows Gardevoir to Mega Evolve.
 27,2,658,Ampharosite,A held item that allows Ampharos to Mega Evolve.
@@ -259,7 +284,13 @@ version_group_id,language_id,item_id,name,description
 27,2,763,Glalitite,A held item that allows Glalie to Mega Evolve.
 27,2,767,Cameruptite,A held item that allows Camerupt to Mega Evolve.
 27,2,768,Lopunnite,A held item that allows Lopunny to Mega Evolve.
+27,2,769,Salamencite,A held item that allows Salamence to Mega Evolve.
 27,2,770,Beedrillite,A held item that allows Beedrill to Mega Evolve.
+27,2,879,Terrain Extender,"When the holder creates terrain with its moves or\nAbility, the duration is extended by 3 turns.\n(Total duration: 8 turns)"
+27,2,881,Electric Seed,Boosts the holder’s Defense stat by 1 stage on Electric\nTerrain. Disappears for the duration of the battle after a\nsingle use.
+27,2,882,Psychic Seed,Boosts the holder’s Sp. Def stat by 1 stage on Psychic\nTerrain. Disappears for the duration of the battle after a\nsingle use.
+27,2,883,Misty Seed,Boosts the holder’s Sp. Def stat by 1 stage on Misty\nTerrain. Disappears for the duration of the battle after a\nsingle use.
+27,2,884,Grassy Seed,Boosts the holder’s Defense stat by 1 stage on Grassy\nTerrain. Disappears for the duration of the battle after a\nsingle use.
 27,2,2401,Fairy Feather,Boosts the power of the holder’s Fairy-type moves\nby 20%.
 27,2,2559,Clefablite,A held item that allows Clefable to Mega Evolve.
 27,2,2560,Victreebelite,A held item that allows Victreebel to Mega Evolve.
@@ -289,11 +320,16 @@ version_group_id,language_id,item_id,name,description
 27,2,2635,Raichunite X,A held item that allows Raichu to Mega Evolve into\nMega Raichu X. It has no effect on Alolan Raichu.
 27,2,2636,Raichunite Y,A held item that allows Raichu to Mega Evolve into\nMega Raichu Y. It has no effect on Alolan Raichu.
 27,2,2637,Chimechite,A held item that allows Chimecho to Mega Evolve.
+27,2,2638,Absolite Z,A held item that allows Absol to Mega Evolve into\nMega Absol Z.
 27,2,2639,Staraptite,A held item that allows Staraptor to Mega Evolve.
+27,2,2640,Garchompite Z,A held item that allows Garchomp to Mega Evolve into\nMega Garchomp Z.
+27,2,2641,Lucarionite Z,A held item that allows Lucario to Mega Evolve into\nMega Lucario Z.
 27,2,2642,Golurkite,A held item that allows Golurk to Mega Evolve.
 27,2,2643,Meowsticite,A held item that allows Meowstic to Mega Evolve.
 27,2,2644,Crabominite,A held item that allows Crabominable to Mega Evolve.
+27,2,2645,Golisopite,A held item that allows Golisopod to Mega Evolve.
 27,2,2647,Scovillainite,A held item that allows Scovillain to Mega Evolve.
+27,2,2648,Baxcalibrite,A held item that allows Baxcalibur to Mega Evolve.
 27,2,2650,Glimmoranite,A held item that allows Glimmora to Mega Evolve.
 27,3,149,Baie Ceriz,Soigne la paralysie.\nDisparaît pour le reste du combat après une utilisation.
 27,3,150,Baie Maron,Soigne le sommeil.\nDisparaît pour le reste du combat après une utilisation.
@@ -349,6 +385,7 @@ version_group_id,language_id,item_id,name,description
 27,3,250,Croc Dragon,"Multiplie par 1,2 la puissance des capacités de type\nDragon du Pokémon."
 27,3,251,Mouchoir Soie,"Multiplie par 1,2 la puissance des capacités de type\nNormal du Pokémon."
 27,3,253,Grelot Coque,"Lorsque le Pokémon inflige des dégâts à l’aide\nd’une capacité, il récupère des PV équivalents\nà 1/8 de ces dégâts."
+27,3,259,Poireau,Augmente de 2 crans le taux de critiques\nde Canarticho et de Palarticho.
 27,3,265,Loupe,"Multiplie par 1,1 la Précision des capacités du Pokémon."
 27,3,266,Bandeau Muscle,"Multiplie par 1,1 la puissance des capacités physiques\ndu Pokémon."
 27,3,267,Lunettes Sages,"Multiplie par 1,1 la puissance des capacités spéciales\ndu Pokémon."
@@ -366,6 +403,12 @@ version_group_id,language_id,item_id,name,description
 27,3,287,Mouchoir Choix,"Multiplie par 1,5 la Vitesse du Pokémon, mais après\navoir utilisé une capacité, il ne peut plus utiliser que\ncelle-ci jusqu’à ce qu’il quitte le terrain."
 27,3,295,Carapace Mue,"Permet au Pokémon d’être remplacé par un autre\nPokémon de son équipe, même si des effets l’en\nempêchent."
 27,3,296,Grosse Racine,"Multiplie par 1,3 la quantité de PV que le Pokémon\nrécupère lorsqu’il utilise une capacité absorbant des PV.\nCet effet s’applique aussi aux capacités telles que\nRacines ou Vole-Force."
+27,3,540,Casque Brut,Inflige à l’adversaire des dégâts équivalents à 1/6\nde ses PV max quand le Pokémon subit une capacité\nà contact.
+27,3,541,Ballon,"Permet au Pokémon de flotter au-dessus du sol, ce qui\nl’immunise contre les capacités de type Sol, ainsi que\ncontre les effets de Picots, Pics Toxik et Toile Gluante.\nDisparaît pour le reste du combat si le Pokémon subit\ndes dégâts d’une capacité."
+27,3,542,Carton Rouge,Force l’adversaire à quitter le terrain quand il inflige\ndes dégâts au Pokémon à l’aide d’une capacité.\nDisparaît pour le reste du combat après une utilisation.
+27,3,544,Bande Étreinte,"Augmente les dégâts infligés aux adversaires piégés,\nqui passent de 1/8 à 1/6 de leurs PV max."
+27,3,547,Bouton Fuite,"Quand le Pokémon subit des dégâts d’une capacité,\nil revient dans son équipe.\nDisparaît pour le reste du combat après une utilisation."
+27,3,564,Joyau Normal,"Multiplie par 1,3 la puissance d’une capacité de type\nNormal du Pokémon.\nDisparaît pour le reste du combat après une utilisation."
 27,3,656,Ectoplasmite,Objet à tenir permettant à Ectoplasma de méga-évoluer.
 27,3,657,Gardevoirite,Objet à tenir permettant à Gardevoir de méga-évoluer.
 27,3,658,Pharampite,Objet à tenir permettant à Pharamp de méga-évoluer.
@@ -407,7 +450,13 @@ version_group_id,language_id,item_id,name,description
 27,3,763,Oniglalite,Objet à tenir permettant à Oniglali de méga-évoluer.
 27,3,767,Caméruptite,Objet à tenir permettant à Camérupt de méga-évoluer.
 27,3,768,Lockpinite,Objet à tenir permettant à Lockpin de méga-évoluer.
+27,3,769,Drattakite,Objet à tenir permettant à Drattak de méga-évoluer.
 27,3,770,Dardargnite,Objet à tenir permettant à Dardargnan de méga-évoluer.
+27,3,879,Champ’Duit,Prolonge de 3 tours la durée des champs créés\npar une capacité ou un talent du Pokémon\n(durée totale : 8 tours).
+27,3,881,Graine Électrik,Augmente la Défense du Pokémon de 1 cran\nlorsqu’un champ électrifié est actif.\nDisparaît pour le reste du combat après une utilisation.
+27,3,882,Graine Psychique,Augmente la Défense Spéciale du Pokémon\nde 1 cran lorsqu’un champ psychique est actif.\nDisparaît pour le reste du combat après une utilisation.
+27,3,883,Graine Brume,Augmente la Défense Spéciale du Pokémon\nde 1 cran lorsqu’un champ brumeux est actif.\nDisparaît pour le reste du combat après une utilisation.
+27,3,884,Graine Herbe,Augmente la Défense du Pokémon de 1 cran\nlorsqu’un champ herbu est actif.\nDisparaît pour le reste du combat après une utilisation.
 27,3,2401,Plume Enchantée,"Multiplie par 1,2 la puissance des capacités de type Fée\ndu Pokémon."
 27,3,2559,Mélodelfite,Objet à tenir permettant à Mélodelfe de méga-évoluer.
 27,3,2560,Empiflorite,Objet à tenir permettant à Empiflor de méga-évoluer.
@@ -437,11 +486,16 @@ version_group_id,language_id,item_id,name,description
 27,3,2635,Raichuïte X,Objet à tenir permettant à Raichu de\nméga-évoluer en Méga-Raichu X.\nCet objet n’a pas d’effet sur Raichu d’Alola.
 27,3,2636,Raichuïte Y,Objet à tenir permettant à Raichu de\nméga-évoluer en Méga-Raichu Y.\nCet objet n’a pas d’effet sur Raichu d’Alola.
 27,3,2637,Éokite,Objet à tenir permettant à Éoko de méga-évoluer.
+27,3,2638,Absolite Z,Objet à tenir permettant à Absol de méga-évoluer\nen Méga-Absol Z.
 27,3,2639,Étouraptorite,Objet à tenir permettant à Étouraptor de méga-évoluer.
+27,3,2640,Carchacrokite Z,Objet à tenir permettant à Carchacrok de méga-évoluer\nen Méga-Carchacrok Z.
+27,3,2641,Lucarite Z,Objet à tenir permettant à Lucario de méga-évoluer\nen Méga-Lucario Z.
 27,3,2642,Golemastokite,Objet à tenir permettant à Golemastoc de méga-évoluer.
 27,3,2643,Mistigrixite,Objet à tenir permettant à Mistigrix de méga-évoluer.
 27,3,2644,Crabominablite,Objet à tenir permettant à Crabominable\nde méga-évoluer.
+27,3,2645,Sarmuraïte,Objet à tenir permettant à Sarmuraï de méga-évoluer.
 27,3,2647,Scovilainite,Objet à tenir permettant à Scovilain de méga-évoluer.
+27,3,2648,Glaivodite,Objet à tenir permettant à Glaivodo de méga-évoluer.
 27,3,2650,Floréclatite,Objet à tenir permettant à Floréclat de méga-évoluer.
 27,4,149,Amrenabeere,Heilt Paralyse.\nVerschwindet nach Einsatz für die restliche Dauer\ndes Kampfs.
 27,4,150,Maronbeere,Heilt Schlaf.\nVerschwindet nach Einsatz für die restliche Dauer\ndes Kampfs.
@@ -497,6 +551,7 @@ version_group_id,language_id,item_id,name,description
 27,4,250,Drachenzahn,Erhöht die Stärke von Drachen-Attacken des Trägers\num 20 %.
 27,4,251,Seidenschal,Erhöht die Stärke von Normal-Attacken des Trägers\num 20 %.
 27,4,253,Muschelglocke,"Füllt die KP des Trägers um 1/8 des Schadens auf,\nden seine Attacken verursachen."
+27,4,259,Lauchstange,Erhöht die Volltrefferquote von Porenta und Lauchzelot\num 2 Stufen.
 27,4,265,Großlinse,Erhöht die Genauigkeit von Attacken des Trägers\num 10 %.
 27,4,266,Muskelband,Erhöht die Stärke von physischen Attacken des Trägers\num 10 %.
 27,4,267,Schlaubrille,Erhöht die Stärke von Spezial-Attacken des Trägers\num 10 %.
@@ -514,6 +569,12 @@ version_group_id,language_id,item_id,name,description
 27,4,287,Wahlschal,"Erhöht die Initiative des Trägers um 50 %, aber nach dem\nersten Einsatz einer Attacke ist nur noch diese einsetzbar,\nbis der Träger ausgewechselt wird."
 27,4,295,Wechselhülle,"Der Träger ignoriert sämtliche Effekte, die verhindern\nwürden, dass er gegen ein anderes Pokémon seines\nTeams ausgewechselt wird."
 27,4,296,Großwurzel,"Der Träger regeneriert mit KP-stehlenden Attacken 30 %\nmehr KP als sonst.\nWirkt auch bei Verwurzler, Kraftabsorber etc."
+27,4,540,Beulenhelm,"Fügt dem Angreifer Schaden in Höhe von 1/6 seiner\nmaximalen KP zu, wenn der Träger von einer\nKontaktattacke getroffen wird."
+27,4,541,Luftballon,"Der Träger gilt als nicht auf dem Boden befindlich und\nBoden-Attacken sowie die Zustände Stachler, Giftspitzen\nund Klebenetz haben keine Wirkung auf ihn.\nVerschwindet für die restliche Dauer des Kampfs,\nwenn der Träger Schaden durch eine Attacke erleidet."
+27,4,542,Rote Karte,"Zwingt den Angreifer zum Auswechseln, wenn der Träger\ndurch eine Attacke Schaden erleidet.\nVerschwindet nach Einsatz für die restliche Dauer\ndes Kampfs."
+27,4,544,Klammerband,"Erhöht den Schaden, den der Träger durch den Zustand\nUmschlingung verursacht, von 1/8 auf 1/6 der maximalen\nKP des Ziels."
+27,4,547,Fluchtknopf,"Wechselt den Träger aus, wenn er Schaden durch eine\nAttacke erleidet.\nVerschwindet nach Einsatz für die restliche Dauer\ndes Kampfs."
+27,4,564,Normaljuwel,Erhöht die Stärke einer Normal-Attacke um 30 %.\nVerschwindet nach Einsatz für die restliche Dauer\ndes Kampfs.
 27,4,656,Gengarnit,"Ein getragenes Item, das es Gengar ermöglicht,\neine Mega-Entwicklung durchzuführen."
 27,4,657,Guardevoirnit,"Ein getragenes Item, das es Guardevoir ermöglicht,\neine Mega-Entwicklung durchzuführen."
 27,4,658,Ampharosnit,"Ein getragenes Item, das es Ampharos ermöglicht,\neine Mega-Entwicklung durchzuführen."
@@ -555,7 +616,13 @@ version_group_id,language_id,item_id,name,description
 27,4,763,Firnontornit,"Ein getragenes Item, das es Firnontor ermöglicht,\neine Mega-Entwicklung durchzuführen."
 27,4,767,Cameruptnit,"Ein getragenes Item, das es Camerupt ermöglicht,\neine Mega-Entwicklung durchzuführen."
 27,4,768,Schlapornit,"Ein getragenes Item, das es Schlapor ermöglicht,\neine Mega-Entwicklung durchzuführen."
+27,4,769,Brutalandanit,"Ein getragenes Item, das es Brutalanda ermöglicht,\neine Mega-Entwicklung durchzuführen."
 27,4,770,Bibornit,"Ein getragenes Item, das es Bibor ermöglicht,\neine Mega-Entwicklung durchzuführen."
+27,4,879,Feldbeschichtung,"Verlängert die Dauer von Feldern, die der Träger mit\nAttacken oder Fähigkeiten erzeugt, um 3 Runden,\nsodass sie insgesamt 8 Runden anhalten."
+27,4,881,Elektro-Samen,"Erhöht die Verteidigung des Trägers um 1 Stufe,\nwenn ein Elektrofeld aktiv ist.\nVerschwindet nach Einsatz für die restliche Dauer\ndes Kampfs."
+27,4,882,Psycho-Samen,"Erhöht die Spezial-Verteidigung des Trägers um 1 Stufe,\nwenn ein Psychofeld aktiv ist.\nVerschwindet nach Einsatz für die restliche Dauer\ndes Kampfs."
+27,4,883,Nebel-Samen,"Erhöht die Spezial-Verteidigung des Trägers um 1 Stufe,\nwenn ein Nebelfeld aktiv ist.\nVerschwindet nach Einsatz für die restliche Dauer\ndes Kampfs."
+27,4,884,Gras-Samen,"Erhöht die Verteidigung des Trägers um 1 Stufe,\nwenn ein Grasfeld aktiv ist.\nVerschwindet nach Einsatz für die restliche Dauer\ndes Kampfs."
 27,4,2401,Feendaune,Erhöht die Stärke von Feen-Attacken des Trägers\num 20 %.
 27,4,2559,Pixinit,"Ein getragenes Item, das es Pixi ermöglicht,\neine Mega-Entwicklung durchzuführen."
 27,4,2560,Sarzenianit,"Ein getragenes Item, das es Sarzenia ermöglicht,\neine Mega-Entwicklung durchzuführen."
@@ -585,11 +652,16 @@ version_group_id,language_id,item_id,name,description
 27,4,2635,Raichunit X,"Ein getragenes Item, das es Raichu ermöglicht,\neine Mega-Entwicklung zu Mega-Raichu X durchzuführen.\nEs hat keine Wirkung auf ein Raichu in der Alola-Form."
 27,4,2636,Raichunit Y,"Ein getragenes Item, das es Raichu ermöglicht,\neine Mega-Entwicklung zu Mega-Raichu Y durchzuführen.\nEs hat keine Wirkung auf ein Raichu in der Alola-Form."
 27,4,2637,Palimpalimonit,"Ein getragenes Item, das es Palimpalim ermöglicht,\neine Mega-Entwicklung durchzuführen."
+27,4,2638,Absolnit Z,"Ein getragenes Item, das es Absol ermöglicht,\neine Mega-Entwicklung zu Mega-Absol Z durchzuführen."
 27,4,2639,Staraptornit,"Ein getragenes Item, das es Staraptor ermöglicht,\neine Mega-Entwicklung durchzuführen."
+27,4,2640,Knakracknit Z,"Ein getragenes Item, das es Knakrack ermöglicht,\neine Mega-Entwicklung zu Mega-Knakrack Z\ndurchzuführen."
+27,4,2641,Lucarionit Z,"Ein getragenes Item, das es Lucario ermöglicht,\neine Mega-Entwicklung zu Mega-Lucario Z\ndurchzuführen."
 27,4,2642,Golgantesnit,"Ein getragenes Item, das es Golgantes ermöglicht,\neine Mega-Entwicklung durchzuführen."
 27,4,2643,Psiaugonit,"Ein getragenes Item, das es Psiaugon ermöglicht,\neine Mega-Entwicklung durchzuführen."
 27,4,2644,Krawellonit,"Ein getragenes Item, das es Krawell ermöglicht,\neine Mega-Entwicklung durchzuführen."
+27,4,2645,Tectassnit,"Ein getragenes Item, das es Tectass ermöglicht,\neine Mega-Entwicklung durchzuführen."
 27,4,2647,Halupenjonit,"Ein getragenes Item, das es Halupenjo ermöglicht,\neine Mega-Entwicklung durchzuführen."
+27,4,2648,Espinodonit,"Ein getragenes Item, das es Espinodon ermöglicht,\neine Mega-Entwicklung durchzuführen."
 27,4,2650,Lumifloranit,"Ein getragenes Item, das es Lumiflora ermöglicht,\neine Mega-Entwicklung durchzuführen."
 27,5,149,Baccaliegia,Cura lo stato Paralisi. L’effetto si attiva una volta\nper lotta.
 27,5,150,Baccastagna,Cura lo stato Sonno. L’effetto si attiva una volta\nper lotta.
@@ -645,6 +717,7 @@ version_group_id,language_id,item_id,name,description
 27,5,250,Dente di drago,Aumenta del 20% la potenza delle mosse di tipo Drago.
 27,5,251,Sciarpa seta,Aumenta del 20% la potenza delle mosse di tipo\nNormale.
 27,5,253,Conchinella,Restituisce al Pokémon una quantità di PS pari a 1/8\ndei danni inflitti ogni volta che infligge danni con\nuna mossa.
+27,5,259,Porro,Causa lo stato Brutto colpo+2. Ha effetto solo\nsu Farfetch’d e Sirfetch’d.
 27,5,265,Grandelente,Aumenta del 10% la precisione delle mosse.
 27,5,266,Muscolbanda,Aumenta del 10% la potenza delle mosse fisiche.
 27,5,267,Saviocchiali,Aumenta del 10% la potenza delle mosse speciali.
@@ -652,7 +725,7 @@ version_group_id,language_id,item_id,name,description
 27,5,269,Creta luce,"Aumenta di 3 turni la durata degli stati Schermo di luce,\nRiflesso e Velo dell’aurora provocati da questo\nPokémon, portandola a un totale di 8 turni."
 27,5,270,Assorbisfera,"Aumenta del 30% la potenza delle mosse, ma fa perdere\n1/10 dei PS massimi ogni volta che un attacco va\na segno."
 27,5,275,Focalnastro,"Quando il Pokémon ha tutti i PS, gli permette di resistere\na una mossa che lo manderebbe KO in un solo colpo,\ne rimanere invece con 1 PS. L’effetto si attiva una volta\nper lotta."
-27,5,276,Zoomlente,"Aumenta del 20% la precisione delle mosse\ndel Pokémon, se attacca dopo l’avversario."
+27,5,276,Zoomlente,"Aumenta del 20% la precisione delle mosse\ndel Pokémon, se attacca dopo il bersaglio."
 27,5,277,Plessimetro,"Aumenta la potenza delle mosse usate più volte di fila:\ndel 20% al secondo utilizzo, del 40% al terzo e così via,\nfino a raddoppiare. L’effetto svanisce al cambio\ndi mossa."
 27,5,278,Ferropalla,"Dimezza la Velocità del Pokémon e lo costringe\nal contatto con il terreno, rendendolo così vulnerabile\na mosse di tipo Terra e agli stati Punte, Punte velenose\ne Rete vischiosa."
 27,5,282,Rocciafredda,"Aumenta di 3 turni la durata dello stato Neve provocato\nda mosse o abilità di questo Pokémon, portandola\na un totale di 8 turni."
@@ -662,6 +735,12 @@ version_group_id,language_id,item_id,name,description
 27,5,287,Stolascelta,"Aumenta la Velocità del 50%, ma, una volta usata\nuna mossa, non permette di utilizzarne altre finché\nil Pokémon non viene sostituito."
 27,5,295,Disfoguscio,Permette al Pokémon di ignorare gli effetti che ne\nimpediscono la sostituzione.
 27,5,296,Granradice,"Aumenta del 30% la quantità di PS recuperati\ndalle mosse che assorbono PS, come Radicamento\no Assorbiforza."
+27,5,540,Bitorzolelmo,Permette al Pokémon di causare a chi lo colpisce con\nuna mossa da contatto danni pari a 1/6 dei PS massimi\ndi quest’ultimo.
+27,5,541,Palloncino,"Fa sì che il Pokémon non sia più a contatto con\nil terreno, rendendolo così immune alle mosse di tipo\nTerra e agli stati Punte, Punte velenose e Rete vischiosa.\nSe il Pokémon subisce danni da una mossa, l’effetto\nsvanisce per la durata della lotta."
+27,5,542,Cartelrosso,Permette al Pokémon di costringere chi gli infligge\ndanni con una mossa a essere sostituito.\nL’effetto si attiva una volta per lotta.
+27,5,544,Legafascia,Aumenta i danni inflitti dallo stato Imprigionamento\nda 1/8 a 1/6 dei PS massimi del bersaglio.
+27,5,547,Pulsantefuga,Fa sì che il Pokémon lasci subito il campo quando\nsubisce danni da una mossa. L’effetto si attiva una volta\nper lotta.
+27,5,564,Bijounormale,Aumenta del 30% la potenza di una mossa di tipo\nNormale. L’effetto si attiva una volta per lotta.
 27,5,656,Gengarite,Permette a Gengar di megaevolversi quando l’ha con sé.
 27,5,657,Gardevoirite,Permette a Gardevoir di megaevolversi quando l’ha\ncon sé.
 27,5,658,Ampharosite,Permette ad Ampharos di megaevolversi quando l’ha\ncon sé.
@@ -703,7 +782,13 @@ version_group_id,language_id,item_id,name,description
 27,5,763,Glalite,Permette a Glalie di megaevolversi quando l’ha con sé.
 27,5,767,Cameruptite,Permette a Camerupt di megaevolversi quando l’ha\ncon sé.
 27,5,768,Lopunnite,Permette a Lopunny di megaevolversi quando l’ha\ncon sé.
+27,5,769,Salamencite,Permette a Salamence di megaevolversi quando l’ha\ncon sé.
 27,5,770,Beedrillite,Permette a Beedrill di megaevolversi quando l’ha con sé.
+27,5,879,Fissacampo,"Aumenta di 3 turni la durata delle modifiche al campo\nprovocate da mosse o abilità di questo Pokémon,\nportandola a un totale di 8 turni."
+27,5,881,Elettroseme,"Se lo stato Campo elettrico è attivo, aumenta la Difesa\ndi 1 grado. L’effetto si attiva una volta per lotta."
+27,5,882,Psicoseme,"Se lo stato Campo psichico è attivo, aumenta\nla Difesa Speciale di 1 grado. L’effetto si attiva\nuna volta per lotta."
+27,5,883,Nebbiaseme,"Se lo stato Campo nebbioso è attivo, aumenta\nla Difesa Speciale di 1 grado. L’effetto si attiva\nuna volta per lotta."
+27,5,884,Erbaseme,"Se lo stato Campo erboso è attivo, aumenta la Difesa\ndi 1 grado. L’effetto si attiva una volta per lotta."
 27,5,2401,Piuma fatata,Aumenta del 20% la potenza delle mosse di tipo\nFolletto.
 27,5,2559,Clefablite,Permette a Clefable di megaevolversi quando l’ha\ncon sé.
 27,5,2560,Victreebelite,Permette a Victreebel di megaevolversi quando l’ha\ncon sé.
@@ -733,11 +818,16 @@ version_group_id,language_id,item_id,name,description
 27,5,2635,Raichuite X,Permette a Raichu di megaevolversi in MegaRaichu X\nquando l’ha con sé. Non ha effetto sulla Forma di Alola.
 27,5,2636,Raichuite Y,Permette a Raichu di megaevolversi in MegaRaichu Y\nquando l’ha con sé. Non ha effetto sulla Forma di Alola.
 27,5,2637,Chimechite,Permette a Chimecho di megaevolversi quando l’ha\ncon sé.
+27,5,2638,Absolite Z,Permette ad Absol di megaevolversi in MegaAbsol Z\nquando l’ha con sé.
 27,5,2639,Staraptorite,Permette a Staraptor di megaevolversi quando l’ha\ncon sé.
+27,5,2640,Garchompite Z,Permette a Garchomp di megaevolversi\nin MegaGarchomp Z quando l’ha con sé.
+27,5,2641,Lucarite Z,Permette a Lucario di megaevolversi in MegaLucario Z\nquando l’ha con sé.
 27,5,2642,Golurkite,Permette a Golurk di megaevolversi quando l’ha con sé.
 27,5,2643,Meowsticite,Permette a Meowstic di megaevolversi quando l’ha\ncon sé.
 27,5,2644,Crabominablite,Permette a Crabominable di megaevolversi quando l’ha\ncon sé.
+27,5,2645,Golisopodite,Permette a Golisopod di megaevolversi quando l’ha\ncon sé.
 27,5,2647,Scovillainite,Permette a Scovillain di megaevolversi quando l’ha\ncon sé.
+27,5,2648,Baxcaliburite,Permette a Baxcalibur di megaevolversi quando l’ha\ncon sé.
 27,5,2650,Glimmorite,Permette a Glimmora di megaevolversi quando l’ha\ncon sé.
 27,6,149,Baya Zreza,Elimina la parálisis del portador. Puede usarse una vez\npor combate.
 27,6,150,Baya Atania,Elimina el sueño del portador. Puede usarse una vez por\ncombate.
@@ -793,6 +883,7 @@ version_group_id,language_id,item_id,name,description
 27,6,250,Colmillo de Dragón,Aumenta un 20 % la potencia de los movimientos de tipo\nDragón del portador.
 27,6,251,Pañuelo de Seda,Aumenta un 20 % la potencia de los movimientos de tipo\nNormal del portador.
 27,6,253,Cascabel Concha,Hace que el portador recupere una cantidad de\nPS equivalente a 1/8 del daño que inflija con un\nmovimiento.
+27,6,259,Puerro,"Si lo lleva Farfetch’d o Sirfetch’d, le aumenta dos niveles\nla probabilidad de asestar golpes críticos."
 27,6,265,Lupa,Aumenta un 10 % la precisión de los movimientos\ndel portador.
 27,6,266,Cinta Fuerte,Aumenta un 10 % la potencia de los ataques físicos\ndel portador.
 27,6,267,Gafas Especiales,Aumentan un 10 % la potencia de los ataques especiales\ndel portador.
@@ -800,7 +891,7 @@ version_group_id,language_id,item_id,name,description
 27,6,269,Refleluz,"Prolonga tres turnos la duración de Pantalla de Luz,\nReflejo o Velo Aurora del portador, haciendo que duren\nocho turnos en total."
 27,6,270,Vidasfera,"Aumenta un 30 % la potencia de los movimientos del\nportador, pero hace que pierda 1/10 de sus PS máximos\ncada vez que un ataque alcanza a su objetivo."
 27,6,275,Banda Aguante,"Si el portador tiene los PS al máximo, aguanta con\n1 PS un movimiento que lo debilitaría de un golpe.\nPuede usarse una vez por combate."
-27,6,276,Telescopio,Aumenta un 20 % la precisión de los movimientos\ndel portador si actúa después que el rival.
+27,6,276,Telescopio,Aumenta un 20 % la precisión de los movimientos\ndel portador si actúa después que el objetivo.
 27,6,277,Metrónomo,"Potencia un movimiento que el portador use de forma\nconsecutiva. Aumenta un 20 % adicional la potencia\noriginal del movimiento cada vez que se usa, hasta un\nmáximo de un 100 %. El efecto se pierde si se usa otro\nmovimiento."
 27,6,278,Bola Férrea,"Reduce a la mitad la Velocidad del portador. Si no está\nen contacto con el suelo, pasará a estarlo y le afectarán\nlos movimientos de tipo Tierra y los estados Púas, Púas\ntóxicas y Red Viscosa."
 27,6,282,Roca Helada,"Prolonga tres turnos la duración de las nevadas\nprovocadas por los movimientos o la habilidad del\nportador, haciendo que duren ocho turnos en total."
@@ -810,6 +901,12 @@ version_group_id,language_id,item_id,name,description
 27,6,287,Pañuelo Elección,"Aumenta un 50 % la Velocidad del portador, pero,\nuna vez que haya utilizado un movimiento, solo podrá\nusar el mismo hasta que sea cambiado por otro\nPokémon."
 27,6,295,Muda Concha,Permite que el portador pueda cambiarse por otro\nPokémon aunque haya efectos que lo impidan.
 27,6,296,Raíz Grande,"Hace que el portador recupere un 30 % más de\nPS al usar movimientos que drenan PS, tales como\nAbsorbefuerza o Arraigo."
+27,6,540,Casco Dentado,Hace que el atacante pierda 1/6 de sus PS máximos\nsi el portador es alcanzado por un movimiento de\ncontacto.
+27,6,541,Globo Helio,"Hace que el portador flote y deje de estar en\ncontacto con el suelo, lo que impide que le afecten\nlos movimientos de tipo Tierra y los estados Púas,\nPúas tóxicas y Red Viscosa. Si el portador recibe daño\nde un movimiento, el objeto se pierde durante ese\ncombate."
+27,6,542,Tarjeta Roja,Obliga al Pokémon que inflija daño al portador con un\nmovimiento a cambiarse por otro. Puede usarse una vez\npor combate.
+27,6,544,Banda Atadura,"Aumenta el daño que el portador inflige al objetivo con\nel estado Apresado, que pasa de 1/8 a 1/6 de sus PS máximos."
+27,6,547,Botón Escape,"Si el portador recibe daño de un movimiento, se retirará\ndel combate. Puede usarse una vez por combate."
+27,6,564,Gema Normal,Aumenta un 30 % la potencia de un movimiento de tipo\nNormal del portador. Puede usarse una vez por combate.
 27,6,656,Gengarita,"Si la lleva Gengar, le permite megaevolucionar."
 27,6,657,Gardevoirita,"Si la lleva Gardevoir, le permite megaevolucionar."
 27,6,658,Ampharosita,"Si la lleva Ampharos, le permite megaevolucionar."
@@ -851,7 +948,13 @@ version_group_id,language_id,item_id,name,description
 27,6,763,Glalita,"Si la lleva Glalie, le permite megaevolucionar."
 27,6,767,Cameruptita,"Si la lleva Camerupt, le permite megaevolucionar."
 27,6,768,Lopunnita,"Si la lleva Lopunny, le permite megaevolucionar."
+27,6,769,Salamencita,"Si la lleva Salamence, le permite megaevolucionar."
 27,6,770,Beedrillita,"Si la lleva Beedrill, le permite megaevolucionar."
+27,6,879,Cubresuelos,"Prolonga tres turnos la duración de los campos creados\nen el terreno de combate con los movimientos o la\nhabilidad del portador, haciendo que duren ocho turnos\nen total."
+27,6,881,Semilla Electro,Aumenta un nivel la Defensa del portador cuando hay\nun campo eléctrico activo en el terreno de combate.\nPuede usarse una vez por combate.
+27,6,882,Semilla Psique,Aumenta un nivel la Defensa Especial del portador\ncuando hay un campo psíquico activo en el terreno\nde combate. Puede usarse una vez por combate.
+27,6,883,Semilla Bruma,Aumenta un nivel la Defensa Especial del portador\ncuando hay un campo de niebla activo en el terreno\nde combate. Puede usarse una vez por combate.
+27,6,884,Semilla Hierba,Aumenta un nivel la Defensa del portador cuando hay\nun campo de hierba activo en el terreno de combate.\nPuede usarse una vez por combate.
 27,6,2401,Pluma Feérica,Aumenta un 20 % la potencia de los movimientos de tipo\nHada del portador.
 27,6,2559,Clefablita,"Si la lleva Clefable, le permite megaevolucionar."
 27,6,2560,Victreebelita,"Si la lleva Victreebel, le permite megaevolucionar."
@@ -881,11 +984,16 @@ version_group_id,language_id,item_id,name,description
 27,6,2635,Raichunita X,"Si la lleva Raichu, le permite megaevolucionar\na Mega-Raichu X. No tiene efecto en el Raichu de Alola."
 27,6,2636,Raichunita Y,"Si la lleva Raichu, le permite megaevolucionar\na Mega-Raichu Y. No tiene efecto en el Raichu de Alola."
 27,6,2637,Chimechita,"Si la lleva Chimecho, le permite megaevolucionar."
+27,6,2638,Absolita Z,"Si la lleva Absol, le permite megaevolucionar\na Mega-Absol Z."
 27,6,2639,Staraptorita,"Si la lleva Staraptor, le permite megaevolucionar."
+27,6,2640,Garchompita Z,"Si la lleva Garchomp, le permite megaevolucionar a\nMega-Garchomp Z."
+27,6,2641,Lucarita Z,"Si la lleva Lucario, le permite megaevolucionar a\nMega-Lucario Z."
 27,6,2642,Golurkita,"Si la lleva Golurk, le permite megaevolucionar."
 27,6,2643,Meowsticita,"Si la lleva Meowstic, le permite megaevolucionar."
 27,6,2644,Crabominablita,"Si la lleva Crabominable, le permite megaevolucionar."
+27,6,2645,Golisopodita,"Si la lleva Golisopod, le permite megaevolucionar."
 27,6,2647,Scovillainita,"Si la lleva Scovillain, le permite megaevolucionar."
+27,6,2648,Baxcaliburita,"Si la lleva Baxcalibur, le permite megaevolucionar."
 27,6,2650,Glimmoranita,"Si la lleva Glimmora, le permite megaevolucionar."
 27,7,149,버치열매,마비 상태를 회복한다.\n한 번 사용하면 그 대전 중에는 사라진다.
 27,7,150,유루열매,잠듦 상태를 회복한다.\n한 번 사용하면 그 대전 중에는 사라진다.
@@ -941,6 +1049,7 @@ version_group_id,language_id,item_id,name,description
 27,7,250,용의이빨,드래곤타입 기술의 위력이 1.2배가 된다.
 27,7,251,실크스카프,노말타입 기술의 위력이 1.2배가 된다.
 27,7,253,조개껍질방울,기술로 데미지를 주었을 때\n그 데미지의 1/8만큼\n자신의 HP를 회복한다.
+27,7,259,대파,"파오리, 창파나이트가\n급소업+2가 된다."
 27,7,265,광각렌즈,기술의 명중률이 1.1배가 된다.
 27,7,266,힘의머리띠,물리 기술의 위력이 1.1배가 된다.
 27,7,267,박식안경,특수 기술의 위력이 1.1배가 된다.
@@ -958,6 +1067,12 @@ version_group_id,language_id,item_id,name,description
 27,7,287,구애스카프,스피드가 1.5배가 되지만\n한번 기술을 사용하면 교체하기 전까지\n그 기술만 사용할 수 있게 된다.
 27,7,295,아름다운허물,교체를 방해하는 효과를 무시하고\n다른 지닌 포켓몬과 교체할 수 있게 된다.
 27,7,296,큰뿌리,"HP를 흡수하는 기술의 회복량이 1.3배가 된다.\n뿌리박기, 힘흡수 등도 1.3배가 된다."
+27,7,540,울퉁불퉁멧,접촉 기술을 받으면\n상대 최대 HP의 1/6만큼 데미지를 준다.
+27,7,541,풍선,"땅 위에 있지 않게 되어\n땅타입 기술, 압정뿌리기, 독압정,\n끈적끈적네트 상태의 효과를 받지 않는다.\n기술로 데미지를 입으면\n그 대전 중에는 사라진다."
+27,7,542,레드카드,자신에게 기술로 데미지를 준 상대를 교체시킨다.\n한 번 사용하면 그 대전 중에는 사라진다.
+27,7,544,조임밴드,바인드 상태로 주는 데미지가\n상대 최대 HP의 1/8이 아니라 1/6이 된다.
+27,7,547,탈출버튼,기술로 데미지를 입으면\n지닌 포켓몬으로 돌아간다.\n한 번 사용하면 그 대전 중에는 사라진다.
+27,7,564,노말주얼,노말타입 기술의 위력이 1.3배가 된다.\n한 번 사용하면 그 대전 중에는 사라진다.
 27,7,656,팬텀나이트,팬텀이 메가진화할 수 있게 되는 도구.
 27,7,657,가디안나이트,가디안이 메가진화할 수 있게 되는 도구.
 27,7,658,전룡나이트,전룡이 메가진화할 수 있게 되는 도구.
@@ -999,7 +1114,13 @@ version_group_id,language_id,item_id,name,description
 27,7,763,얼음귀신나이트,얼음귀신이 메가진화할 수 있게 되는 도구.
 27,7,767,폭타나이트,폭타가 메가진화할 수 있게 되는 도구.
 27,7,768,이어롭나이트,이어롭이 메가진화할 수 있게 되는 도구.
+27,7,769,보만다나이트,보만다가 메가진화할 수 있게 되는 도구.
 27,7,770,독침붕나이트,독침붕이 메가진화할 수 있게 되는 도구.
+27,7,879,그라운드코트,기술이나 특성으로 필드를 전개했을 때\n지속 시간이 3턴 증가한다. (총 8턴)
+27,7,881,일렉트릭시드,일렉트릭필드 상태일 때\n방어가 1단계 올라간다.\n한 번 사용하면 그 대전 중에는 사라진다.
+27,7,882,사이코시드,사이코필드 상태일 때\n특수방어가 1단계 올라간다.\n한 번 사용하면 그 대전 중에는 사라진다.
+27,7,883,미스트시드,미스트필드 상태일 때\n특수방어가 1단계 올라간다.\n한 번 사용하면 그 대전 중에는 사라진다.
+27,7,884,그래스시드,그래스필드 상태일 때\n방어가 1단계 올라간다.\n한 번 사용하면 그 대전 중에는 사라진다.
 27,7,2401,요정의깃털,페어리타입 기술의 위력이 1.2배가 된다.
 27,7,2559,픽시나이트,픽시가 메가진화할 수 있게 되는 도구.
 27,7,2560,우츠보트나이트,우츠보트가 메가진화할 수 있게 되는 도구.
@@ -1029,11 +1150,16 @@ version_group_id,language_id,item_id,name,description
 27,7,2635,라이츄나이트X,라이츄가 메가진화할 수 있게 되는 도구.\n알로라의 모습에게는 효과가 없다.\n(메가라이츄X)
 27,7,2636,라이츄나이트Y,라이츄가 메가진화할 수 있게 되는 도구.\n알로라의 모습에게는 효과가 없다.\n(메가라이츄Y)
 27,7,2637,치렁나이트,치렁이 메가진화할 수 있게 되는 도구.
+27,7,2638,앱솔나이트Z,앱솔이 메가진화할 수 있게 되는 도구.\n(메가앱솔Z)
 27,7,2639,찌르호크나이트,찌르호크가 메가진화할 수 있게 되는 도구.
+27,7,2640,한카리아스나이트Z,한카리아스가 메가진화할 수 있게 되는 도구.\n(메가한카리아스Z)
+27,7,2641,루카리오나이트Z,루카리오가 메가진화할 수 있게 되는 도구.\n(메가루카리오Z)
 27,7,2642,골루그나이트,골루그가 메가진화할 수 있게 되는 도구.
 27,7,2643,냐오닉스나이트,냐오닉스가 메가진화할 수 있게 되는 도구.
 27,7,2644,모단단게나이트,모단단게가 메가진화할 수 있게 되는 도구.
+27,7,2645,갑주무사나이트,갑주무사가 메가진화할 수 있게 되는 도구.
 27,7,2647,스코빌런나이트,스코빌런이 메가진화할 수 있게 되는 도구.
+27,7,2648,드닐레이브나이트,드닐레이브가 메가진화할 수 있게 되는 도구.
 27,7,2650,킬라플로르나이트,킬라플로르가 메가진화할 수 있게 되는 도구.
 27,9,149,樱子果,可以治愈麻痹状态。\n使用1次后就会在该次对战中消失。
 27,9,150,零余果,可以治愈睡眠状态。\n使用1次后就会在该次对战中消失。
@@ -1089,6 +1215,7 @@ version_group_id,language_id,item_id,name,description
 27,9,250,龙之牙,龙属性招式的威力会变为1.2倍。
 27,9,251,丝绸围巾,一般属性招式的威力会变为1.2倍。
 27,9,253,贝壳之铃,用招式给予伤害时，\n会让自己的HP回复\n该伤害的1/8。
+27,9,259,大葱,大葱鸭、葱游兵会变为易中要害+2。
 27,9,265,广角镜,招式的命中率会变为1.1倍。
 27,9,266,力量头带,物理招式的威力会变为1.1倍。
 27,9,267,博识眼镜,特殊招式的威力会变为1.1倍。
@@ -1106,6 +1233,12 @@ version_group_id,language_id,item_id,name,description
 27,9,287,讲究围巾,速度会变为1.5倍，\n但一旦使出招式，直到替换为止\n就会变得只能使出该招式。
 27,9,295,美丽空壳,能无视妨碍替换的效果，\n和同行队伍中的其他宝可梦进行替换。
 27,9,296,大根茎,吸取HP的招式的回复量\n会变为1.3倍。扎根、吸取力量等的\n回复量也会变为1.3倍。
+27,9,540,凸凸头盔,受到接触类招式影响时，\n会给予对手其最大HP的1/6的伤害。
+27,9,541,气球,会变为不在地面上，\n地面属性的招式、撒菱、毒菱、\n黏黏网状态将无效。\n受到招式的伤害后，\n就会在该次对战中消失。
+27,9,542,红牌,会让用招式对自己造成伤害的对手进行替换。\n使用1次后就会在该次对战中消失。
+27,9,544,紧绑束带,束缚状态给予的伤害\n不会是对手最大HP的1/8，\n而是会变为对手最大HP的1/6。
+27,9,547,逃脱按键,因招式而受到伤害时，会回到同行队伍。\n使用1次后就会在该次对战中消失。
+27,9,564,一般宝石,一般属性招式的威力会变为1.3倍。\n使用1次后就会在该次对战中消失。
 27,9,656,耿鬼进化石,能让耿鬼进行超级进化的持有物。
 27,9,657,沙奈朵进化石,能让沙奈朵进行超级进化的持有物。
 27,9,658,电龙进化石,能让电龙进行超级进化的持有物。
@@ -1147,7 +1280,13 @@ version_group_id,language_id,item_id,name,description
 27,9,763,冰鬼护进化石,能让冰鬼护进行超级进化的持有物。
 27,9,767,喷火驼进化石,能让喷火驼进行超级进化的持有物。
 27,9,768,长耳兔进化石,能让长耳兔进行超级进化的持有物。
+27,9,769,暴飞龙进化石,能让暴飞龙进行超级进化的持有物。
 27,9,770,大针蜂进化石,能让大针蜂进行超级进化的持有物。
+27,9,879,大地膜,因招式或特性展开场地时，\n持续时间会延长3回合。\n（合计8回合）
+27,9,881,电气种子,电气场地状态时，\n防御会提高1阶。\n使用1次后就会在该次对战中消失。
+27,9,882,精神种子,精神场地状态时，\n特防会提高1阶。\n使用1次后就会在该次对战中消失。
+27,9,883,薄雾种子,薄雾场地状态时，\n特防会提高1阶。\n使用1次后就会在该次对战中消失。
+27,9,884,青草种子,青草场地状态时，\n防御会提高1阶。\n使用1次后就会在该次对战中消失。
 27,9,2401,妖精之羽,妖精属性招式的威力会变为1.2倍。
 27,9,2559,皮可西进化石,能让皮可西进行超级进化的持有物。
 27,9,2560,大食花进化石,能让大食花进行超级进化的持有物。
@@ -1177,11 +1316,16 @@ version_group_id,language_id,item_id,name,description
 27,9,2635,雷丘进化石Ｘ,能让雷丘进行超级进化的持有物。\n对阿罗拉的样子没有效果。\n（超级雷丘Ｘ）
 27,9,2636,雷丘进化石Ｙ,能让雷丘进行超级进化的持有物。\n对阿罗拉的样子没有效果。\n（超级雷丘Ｙ）
 27,9,2637,风铃铃进化石,能让风铃铃进行超级进化的持有物。
+27,9,2638,阿勃梭鲁进化石Ｚ,能让阿勃梭鲁进行超级进化的持有物。\n（超级阿勃梭鲁Ｚ）
 27,9,2639,姆克鹰进化石,能让姆克鹰进行超级进化的持有物。
+27,9,2640,烈咬陆鲨进化石Ｚ,能让烈咬陆鲨进行超级进化的持有物。\n（超级烈咬陆鲨Ｚ）
+27,9,2641,路卡利欧进化石Ｚ,能让路卡利欧进行超级进化的持有物。\n（超级路卡利欧Ｚ）
 27,9,2642,泥偶巨人进化石,能让泥偶巨人进行超级进化的持有物。
 27,9,2643,超能妙喵进化石,能让超能妙喵进行超级进化的持有物。
 27,9,2644,好胜毛蟹进化石,能让好胜毛蟹进行超级进化的持有物。
+27,9,2645,具甲武者进化石,能让具甲武者进行超级进化的持有物。
 27,9,2647,狠辣椒进化石,能让狠辣椒进行超级进化的持有物。
+27,9,2648,戟脊龙进化石,能让戟脊龙进行超级进化的持有物。
 27,9,2650,晶光花进化石,能让晶光花进行超级进化的持有物。
 27,10,149,櫻子果,可治癒麻痺狀態。\n使用1次後就會在該對戰中消失。
 27,10,150,零餘果,可治癒睡眠狀態。\n使用1次後就會在該對戰中消失。
@@ -1237,6 +1381,7 @@ version_group_id,language_id,item_id,name,description
 27,10,250,龍之牙,龍屬性招式威力會變為1.2倍。
 27,10,251,絲綢圍巾,一般屬性招式威力會變為1.2倍。
 27,10,253,貝殼之鈴,用招式給予傷害時，\n會回復自己該傷害的\n1/8的HP。
+27,10,259,大蔥,大蔥鴨、蔥遊兵的\n易中要害+2。
 27,10,265,廣角鏡,招式的命中率會變為1.1倍。
 27,10,266,力量頭帶,物理招式威力會變為1.1倍。
 27,10,267,博識眼鏡,特殊招式威力會變為1.1倍。
@@ -1254,6 +1399,12 @@ version_group_id,language_id,item_id,name,description
 27,10,287,講究圍巾,速度會變為1.5倍，\n但一旦使出招式後，\n直到替換前都只能使出該招式。
 27,10,295,美麗空殼,可無視妨礙替換的效果，\n和同行隊伍中的其他寶可夢替換。
 27,10,296,大根莖,吸取HP的招式帶來的回復量\n會變為1.3倍。扎根、吸取力量等的\n回復量也會變為1.3倍。
+27,10,540,凸凸頭盔,受到接觸類招式時，\n會給予對手最大HP的1/6的傷害。
+27,10,541,氣球,會變為不在地面上，\n地面屬性招式、撒菱、\n毒菱、黏黏網狀態無效。\n受到招式傷害後就會在該對戰中消失。
+27,10,542,紅牌,會讓用招式對自己造成傷害的對手替換。\n使用1次後就會在該對戰中消失。
+27,10,544,緊綁束帶,束縛狀態給予的傷害\n不會是對手最大HP的1/8，\n而是會變為對手最大HP的1/6。
+27,10,547,逃脫按鍵,因招式而受到傷害時，會退回同行隊伍。\n使用1次後就會在該對戰中消失。
+27,10,564,一般寶石,一般屬性招式威力會變為1.3倍。\n使用1次後就會在該對戰中消失。
 27,10,656,耿鬼進化石,能讓耿鬼超級進化的持有物。
 27,10,657,沙奈朵進化石,能讓沙奈朵超級進化的持有物。
 27,10,658,電龍進化石,能讓電龍超級進化的持有物。
@@ -1295,7 +1446,13 @@ version_group_id,language_id,item_id,name,description
 27,10,763,冰鬼護進化石,能讓冰鬼護超級進化的持有物。
 27,10,767,噴火駝進化石,能讓噴火駝超級進化的持有物。
 27,10,768,長耳兔進化石,能讓長耳兔超級進化的持有物。
+27,10,769,暴飛龍進化石,能讓暴飛龍超級進化的持有物。
 27,10,770,大針蜂進化石,能讓大針蜂超級進化的持有物。
+27,10,879,大地膜,因招式或特性展開場地時，\n效果持續時間會延長3回合。\n（一共8回合）
+27,10,881,電氣種子,電氣場地狀態時，\n防御會提高1階。\n使用1次後就會在該對戰中消失。
+27,10,882,精神種子,精神場地狀態時，\n特防會提高1階。\n使用1次後就會在該對戰中消失。
+27,10,883,薄霧種子,薄霧場地狀態時，\n特防會提高1階。\n使用1次後就會在該對戰中消失。
+27,10,884,青草種子,青草場地狀態時，\n防御會提高1階。\n使用1次後就會在該對戰中消失。
 27,10,2401,妖精之羽,妖精屬性招式威力會變為1.2倍。
 27,10,2559,皮可西進化石,能讓皮可西超級進化的持有物。
 27,10,2560,大食花進化石,能讓大食花超級進化的持有物。
@@ -1325,11 +1482,16 @@ version_group_id,language_id,item_id,name,description
 27,10,2635,雷丘進化石Ｘ,能讓雷丘超級進化的持有物。\n對阿羅拉的樣子沒有效果。\n（超級雷丘Ｘ）
 27,10,2636,雷丘進化石Ｙ,能讓雷丘超級進化的持有物。\n對阿羅拉的樣子沒有效果。\n（超級雷丘Ｙ）
 27,10,2637,風鈴鈴進化石,能讓風鈴鈴超級進化的持有物。
+27,10,2638,阿勃梭魯進化石Ｚ,能讓阿勃梭魯超級進化的持有物。\n（超級阿勃梭魯Ｚ）
 27,10,2639,姆克鷹進化石,能讓姆克鷹超級進化的持有物。
+27,10,2640,烈咬陸鯊進化石Ｚ,能讓烈咬陸鯊超級進化的持有物。\n（超級烈咬陸鯊Ｚ）
+27,10,2641,路卡利歐進化石Ｚ,能讓路卡利歐超級進化的持有物。\n（超級路卡利歐Ｚ）
 27,10,2642,泥偶巨人進化石,能讓泥偶巨人超級進化的持有物。
 27,10,2643,超能妙喵進化石,能讓超能妙喵超級進化的持有物。
 27,10,2644,好勝毛蟹進化石,能讓好勝毛蟹超級進化的持有物。
+27,10,2645,具甲武者進化石,能讓具甲武者超級進化的持有物。
 27,10,2647,狠辣椒進化石,能讓狠辣椒超級進化的持有物。
+27,10,2648,戟脊龍進化石,能讓戟脊龍超級進化的持有物。
 27,10,2650,晶光花進化石,能讓晶光花超級進化的持有物。
 27,11,149,Baya Zreza,Elimina la parálisis del portador. Se puede usar una vez\npor combate.
 27,11,150,Baya Atania,Elimina el sueño del portador. Se puede usar una vez por\ncombate.
@@ -1385,6 +1547,7 @@ version_group_id,language_id,item_id,name,description
 27,11,250,Colmillo Dragón,Aumenta un 20 % la potencia de los movimientos de tipo\nDragón del portador.
 27,11,251,Pañuelo de Seda,Aumenta un 20 % la potencia de los movimientos de tipo\nNormal del portador.
 27,11,253,Cascabel Nácar,Hace que el portador recupere una cantidad de\nPS equivalente a un 12.5 % del daño que cause\ncon un movimiento.
+27,11,259,Puerro,"Si lo lleva Farfetch’d o Sirfetch’d, le aumenta dos niveles\nla probabilidad de lanzar golpes críticos."
 27,11,265,Lupa,Aumenta un 10 % la precisión de los movimientos\ndel portador.
 27,11,266,Cinta Fuerte,Aumenta un 10 % la potencia de los ataques físicos\ndel portador.
 27,11,267,Lentes Especiales,Aumentan un 10 % la potencia de los ataques especiales\ndel portador.
@@ -1392,7 +1555,7 @@ version_group_id,language_id,item_id,name,description
 27,11,269,Refleluz,"Prolonga tres turnos la duración de Pantalla de Luz,\nReflejo o Velo Aurora del portador, haciendo que duren\nocho turnos en total."
 27,11,270,Vidaesfera,"Aumenta un 30 % la potencia de los movimientos del\nportador, pero hace que pierda un 10 % de sus PS\nmáximos cada vez que un ataque alcanza a su objetivo."
 27,11,275,Banda Aguante,"Si el portador tiene los PS al máximo, aguanta con\n1 PS un movimiento que lo debilitaría de un golpe.\nSe puede usar una vez por combate."
-27,11,276,Telescopio,Aumenta un 20 % la precisión de los movimientos\ndel portador si actúa después del rival.
+27,11,276,Telescopio,Aumenta un 20 % la precisión de los movimientos\ndel portador si actúa después del objetivo.
 27,11,277,Metrónomo,"Potencia un movimiento que el portador use de forma\nconsecutiva. Aumenta un 20 % adicional la potencia\noriginal del movimiento cada vez que se usa, hasta un\nmáximo de un 100 %. El efecto se pierde si se usa otro\nmovimiento."
 27,11,278,Bola Férrea,"Reduce un 50 % la Velocidad del portador. Si no está\nen contacto con el suelo, pasará a estarlo y le afectarán\nlos movimientos de tipo Tierra y los estados Púas, Púas\nTóxicas y Red Pegajosa."
 27,11,282,Roca Helada,"Prolonga tres turnos la duración de las nevadas\nprovocadas por los movimientos o la habilidad del\nportador, haciendo que duren ocho turnos en total."
@@ -1402,6 +1565,12 @@ version_group_id,language_id,item_id,name,description
 27,11,287,Pañuelo Elección,"Aumenta un 50 % la Velocidad del portador, pero,\nuna vez que haya utilizado un movimiento, solo\npodrá usar el mismo hasta que sea cambiado por\notro Pokémon."
 27,11,295,Muda de Piel,Permite que el Pokémon portador pueda ser cambiado\npor otro aunque haya efectos que lo impidan.
 27,11,296,Raíz Grande,"Hace que el portador recupere un 30 % más de\nPS al usar movimientos que drenan PS, tales como\nAbsorbefuerza o Arraigo."
+27,11,540,Casco Dentado,Hace que el atacante pierda un 16.7 % de sus PS\nmáximos si el portador es alcanzado por un\nmovimiento de contacto.
+27,11,541,Globo con Helio,"Hace que el portador flote y deje de estar en\ncontacto con el suelo, lo que impide que le afecten\nlos movimientos de tipo Tierra y los estados Púas,\nPúas tóxicas y Red Pegajosa. Si el portador recibe\ndaño de un movimiento, el objeto se pierde durante\nese combate."
+27,11,542,Tarjeta Roja,El Pokémon que cause daño al portador con un\nmovimiento será cambiado por otro. Se puede usar\nuna vez por combate.
+27,11,544,Banda Atadura,"Aumenta el daño que el portador le causa al objetivo con\nel estado Apresado, que pasa de un 12.5 % a un 16.7 %\nde sus PS máximos."
+27,11,547,Botón de Escape,"Si el portador recibe daño de un movimiento, se retirará\ndel combate. Se puede usar una vez por combate."
+27,11,564,Gema Normal,Aumenta un 30 % la potencia de un movimiento\nde tipo Normal del portador. Se puede usar una vez\npor combate.
 27,11,656,Gengarita,"Si la lleva Gengar, le permite megaevolucionar."
 27,11,657,Gardevoirita,"Si la lleva Gardevoir, le permite megaevolucionar."
 27,11,658,Ampharosita,"Si la lleva Ampharos, le permite megaevolucionar."
@@ -1443,7 +1612,13 @@ version_group_id,language_id,item_id,name,description
 27,11,763,Glalita,"Si la lleva Glalie, le permite megaevolucionar."
 27,11,767,Cameruptita,"Si la lleva Camerupt, le permite megaevolucionar."
 27,11,768,Lopunnita,"Si la lleva Lopunny, le permite megaevolucionar."
+27,11,769,Salamencita,"Si la lleva Salamence, le permite megaevolucionar."
 27,11,770,Beedrillita,"Si la lleva Beedrill, le permite megaevolucionar."
+27,11,879,Cubresuelos,"Prolonga tres turnos la duración de los campos creados\nen el terreno de combate con los movimientos o la\nhabilidad del portador, haciendo que duren ocho turnos\nen total."
+27,11,881,Semilla Electro,Aumenta un nivel la Defensa del portador cuando hay\nun campo eléctrico activo en el terreno de combate.\nSe puede usar una vez por combate.
+27,11,882,Semilla Psique,Aumenta un nivel la Defensa Especial del portador\ncuando hay un campo psíquico activo en el terreno\nde combate. Se puede usar una vez por combate.
+27,11,883,Semilla Bruma,Aumenta un nivel la Defensa Especial del portador\ncuando hay un campo de niebla activo en el terreno\nde combate. Se puede usar una vez por combate.
+27,11,884,Semilla Césped,Aumenta un nivel la Defensa del portador cuando hay\nun campo de césped activo en el terreno de combate.\nSe puede usar una vez por combate.
 27,11,2401,Pluma Feérica,Aumenta un 20 % la potencia de los movimientos de tipo\nHada del portador.
 27,11,2559,Clefablita,"Si la lleva Clefable, le permite megaevolucionar."
 27,11,2560,Victreebelita,"Si la lleva Victreebel, le permite megaevolucionar."
@@ -1473,9 +1648,14 @@ version_group_id,language_id,item_id,name,description
 27,11,2635,Raichunita X,"Si la lleva Raichu, le permite megaevolucionar a\nMega-Raichu X. No tiene efecto en el Raichu de Alola."
 27,11,2636,Raichunita Y,"Si la lleva Raichu, le permite megaevolucionar a\nMega-Raichu Y. No tiene efecto en el Raichu de Alola."
 27,11,2637,Chimechita,"Si la lleva Chimecho, le permite megaevolucionar."
+27,11,2638,Absolita Z,"Si la lleva Absol, le permite megaevolucionar a\nMega-Absol Z."
 27,11,2639,Staraptorita,"Si la lleva Staraptor, le permite megaevolucionar."
+27,11,2640,Garchompita Z,"Si la lleva Garchomp, le permite megaevolucionar a\nMega-Garchomp Z."
+27,11,2641,Lucarita Z,"Si la lleva Lucario, le permite megaevolucionar a\nMega-Lucario Z."
 27,11,2642,Golurkita,"Si la lleva Golurk, le permite megaevolucionar."
 27,11,2643,Meowsticita,"Si la lleva Meowstic, le permite megaevolucionar."
 27,11,2644,Crabominablita,"Si la lleva Crabominable, le permite megaevolucionar."
+27,11,2645,Golisopodita,"Si la lleva Golisopod, le permite megaevolucionar."
 27,11,2647,Scovillainita,"Si la lleva Scovillain, le permite megaevolucionar."
+27,11,2648,Baxcaliburita,"Si la lleva Baxcalibur, le permite megaevolucionar."
 27,11,2650,Glimmoranita,"Si la lleva Glimmora, le permite megaevolucionar."

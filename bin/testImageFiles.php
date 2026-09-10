@@ -15,7 +15,7 @@ $stmt = $db->prepare(
     'SELECT
         `icon`,
         `sprite`
-    FROM `dex_champions`.`vg_pokemon`'
+    FROM `vg_pokemon`'
 );
 $stmt->execute();
 while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -35,7 +35,7 @@ while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 $stmt = $db->prepare(
     'SELECT
         `icon`
-    FROM `dex_champions`.`vg_items`'
+    FROM `vg_items`'
 );
 $stmt->execute();
 while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -51,6 +51,7 @@ echo "Total missing files: $count\n";
 /*
 Also put these urls somewhere safe
 https://archives.bulbagarden.net/wiki/Category:Champions_menu_sprites
+https://archives.bulbagarden.net/wiki/Category:Champions_Shiny_menu_sprites
 https://archives.bulbagarden.net/w/index.php?title=Category:HOME_artwork
 https://bulbapedia.bulbagarden.net/wiki/List_of_items_by_index_number_in_Pok%C3%A9mon_Champions
 https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)
