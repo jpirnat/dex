@@ -4867,7 +4867,7 @@ month,name,format_id,reason
 2026-04-01,gen9bssregi,\N,battle spot
 2026-04-01,gen9cap,\N,cap
 2026-04-01,gen9championsbssregma,\N,battle spot
-2026-04-01,gen9championsou,\N,
+2026-04-01,gen9championsou,\N,not official
 2026-04-01,gen9championsvgc2026regmabo3,\N,
 2026-04-01,gen9champoinsou,\N,misspelled
 2026-04-01,gen9chatbats,\N,
@@ -4892,3 +4892,43 @@ month,name,format_id,reason
 2026-04-01,gen9vgc2026regfbo3,\N,
 2026-04-01,gen9vgc2026regibo3,\N,
 2026-04-01,gen9zu,\N,not official
+2026-05-01,gen3frlgou,\N,too few battles: 48
+2026-05-01,gen4vgc2009,\N,too few battles: 2
+2026-05-01,gen5ubers,14,too few battles: 99
+2026-05-01,gen6purehackmons,\N,
+2026-05-01,gen81v1,\N,
+2026-05-01,gen8nationaldex,\N,national dex
+2026-05-01,gen91v1,\N,
+2026-05-01,gen92v2doubles,\N,
+2026-05-01,gen9almostanyability,\N,
+2026-05-01,gen9alphabetcup,\N,too few battles: 27
+2026-05-01,gen9anythinggoes,\N,anything goes
+2026-05-01,gen9balancedhackmons,\N,
+2026-05-01,gen9bssregi,\N,battle spot
+2026-05-01,gen9camomons,\N,
+2026-05-01,gen9cap,\N,cap
+2026-05-01,gen9championsbssregma,\N,battle spot
+2026-05-01,gen9championsou,\N,not official
+2026-05-01,gen9championsvgc2026regmabo3,\N,
+2026-05-01,gen9crossevolution,\N,too few battles: 41
+2026-05-01,gen9godlygift,\N,
+2026-05-01,gen9inheritance,\N,
+2026-05-01,gen9legendszaou,\N,not official
+2026-05-01,gen9metronomebattle,\N,
+2026-05-01,gen9mixandmega,\N,
+2026-05-01,gen9monocolor,\N,too few battles: 8
+2026-05-01,gen9nationaldex,\N,national dex
+2026-05-01,gen9nationaldex35pokes,\N,"national dex, too few battles: 5"
+2026-05-01,gen9nationaldexdoubles,\N,national dex
+2026-05-01,gen9nationaldexdoublesubers,\N,national dex
+2026-05-01,gen9nationaldexmonotype,\N,national dex
+2026-05-01,gen9nationaldexubers,\N,national dex
+2026-05-01,gen9nationaldexuu,\N,national dex
+2026-05-01,gen9nfe,\N,
+2026-05-01,gen9pokebilitiesaaa,\N,
+2026-05-01,gen9sharedpower,\N,
+2026-05-01,gen9staaabmons,\N,
+2026-05-01,gen9stabmons,\N,
+2026-05-01,gen9ultramixandmega,\N,
+2026-05-01,gen9vgc2026regibo3,\N,
+2026-05-01,gen9zu,\N,not official
