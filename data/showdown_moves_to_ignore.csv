@@ -1,10 +1,22 @@
+name,move_id
 000 Volt Thunderbolt,\N
+Ability Shield,\N
 Abomasnow,\N
+Absorb Bulb,\N
+Adaptability,\N
+Adrenaline Orb,\N
+Aerilate,\N
+Aguav Berry,\N
+Air Balloon,\N
 Alcremie,\N
 Alomomola,\N
 Ambipom,\N
 Amoonguss,\N
 Ampharos,\N
+Analytic,\N
+Anger Point,\N
+Anger Shell,\N
+Apicot Berry,\N
 Appletun,\N
 Applin,\N
 Arbok,\N
@@ -13,9 +25,12 @@ Arcanine,\N
 Arcanine-Hisui,\N
 Archaludon,\N
 Arctibax,\N
+Arena Trap,\N
 Armarouge,\N
+Armor Tail,\N
 Articuno,\N
 Articuno-Galar,\N
+Assault Vest,\N
 Avalugg,\N
 Avalugg-Hisui,\N
 Azelf,\N
@@ -26,79 +41,152 @@ Basculegion,\N
 Basculegion-F,\N
 Basculin,\N
 Basculin-Blue-Striped,\N
+Battle Armor,\N
+Battle Bond,\N
+Beads of Ruin,\N
 Bellibolt,\N
+Big Root,\N
+Binding Band,\N
 Bisharp,\N
+Black Belt,\N
+Black Glasses,\N
+Black Sludge,\N
+Blaze,\N
 Blaziken,\N
 Blissey,\N
+Blunder Policy,\N
 Bombirdier,\N
+Booster Energy,\N
 Brambleghast,\N
 Braviary,\N
 Braviary-Hisui,\N
 Breloom,\N
 Brute Bonnet,\N
 Bruxish,\N
+Bulletproof,\N
 Carkol,\N
 Ceruledge,\N
 Cetitan,\N
 Charcadet,\N
+Charcoal,\N
 Charizard,\N
 Charmander,\N
 Charmeleon,\N
+Cheek Pouch,\N
+Chesto Berry,\N
 Chimecho,\N
+Chlorophyll,\N
+Choice Band,\N
+Choice Scarf,\N
+Choice Specs,\N
+Chople Berry,\N
 Cinccino,\N
 Cinderace,\N
 Clawitzer,\N
+Clear Amulet,\N
+Clear Body,\N
 Clefable,\N
 Clodsire,\N
 Cloyster,\N
 Coalossal,\N
+Colbur Berry,\N
+Comatose,\N
 Comfey,\N
+Competitive,\N
+Compound Eyes,\N
+Contrary,\N
 Copperajah,\N
+Cornerstone Mask,\N
+Corrosion,\N
 Corviknight,\N
 Cosmoem,\N
 Cosmog,\N
+Covert Cloak,\N
 Cranidos,\N
 Crawdaunt,\N
 Cryogonal,\N
+Cud Chew,\N
 Cufant,\N
+Custap Berry,\N
 Cyclizar,\N
 Dachsbun,\N
+Damp Rock,\N
+Dauntless Shield,\N
+Dazzling,\N
 Dedenne,\N
+Defiant,\N
 Delphox,\N
 Deoxys-Defense,\N
+Desolate Land,\N
 Diancie,\N
 Ditto,\N
 Dondozo,\N
 Donphan,\N
+Download,\N
+Draco Plate,\N
 Dragalge,\N
+Dragon Fang,\N
+Dragon's Maw,\N
+Dread Plate,\N
 Drednaw,\N
 Drifblim,\N
 Drilbur,\N
+Drizzle,\N
+Drought,\N
+Dry Skin,\N
 Dudunsparce,\N
 Dudunsparce-Three-Segment,\N
 Duosion,\N
+Early Bird,\N
+Earth Eater,\N
+Earth Plate,\N
 Eelektross,\N
+Effect Spore,\N
+Eject Button,\N
+Eject Pack,\N
 Ekans,\N
 Electivire,\N
+Electric Seed,\N
+Electric Surge,\N
 Electrode,\N
 Emboar,\N
+Enigma Berry,\N
 Entei,\N
 Espeon,\N
+Eviolite,\N
 Exeggutor,\N
 Exeggutor-Alola,\N
+Expert Belt,\N
+Fairy Feather,\N
 Farigiraf,\N
 Feraligatr,\N
 Fezandipiti,\N
+Figy Berry,\N
+Filter,\N
+Fist Plate,\N
+Flame Body,\N
+Flame Orb,\N
+Flame Plate,\N
 Flamigo,\N
 Flapple,\N
+Flare Boost,\N
 Flareon,\N
+Flash Fire,\N
 Floatzel,\N
 Florges,\N
+Fluffy,\N
 Flygon,\N
+Focus Band,\N
+Focus Sash,\N
 Fraxure,\N
+Frisk,\N
 Frosmoth,\N
+Fur Coat,\N
+Gale Wings,\N
 Gallade,\N
+Galvanize,\N
 Galvantula,\N
+Ganlon Berry,\N
 Gardevoir,\N
 Garganacl,\N
 Gastrodon,\N
@@ -107,67 +195,127 @@ Girafarig,\N
 Glimmet,\N
 Glimmora,\N
 Gliscor,\N
+Gluttony,\N
 Gogoat,\N
 Golem,\N
 Golem-Alola,\N
 Golurk,\N
+Good as Gold,\N
 Goodra,\N
 Goodra-Hisui,\N
+Gooey,\N
+Gorilla Tactics,\N
 Gouging Fire,\N
 Grafaiai,\N
 Granbull,\N
+Grassy Seed,\N
+Grassy Surge,\N
 Graveler,\N
 Greedent,\N
 Greninja-Bond,\N
+Grepa Berry,\N
 Grimmsnarl,\N
+Grip Claw,\N
 Growlithe,\N
 Grumpig,\N
+Guard Dog,\N
 Gumshoos,\N
 Gurdurr,\N
+Guts,\N
 Gyarados,\N
+Haban Berry,\N
+Hadron Engine,\N
+Hard Stone,\N
 Hariyama,\N
+Harvest,\N
 Haunter,\N
+Heat Rock,\N
+Heatproof,\N
 Heatran,\N
+Heavy Metal,\N
+Heavy-Duty Boots,\N
 Heracross,\N
 Hippowdon,\N
 Hitmontop,\N
 Honchkrow,\N
 Houndoom,\N
 Houndstone,\N
+Huge Power,\N
+Hustle,\N
 Hydrapple,\N
+Hydration,\N
 Hydreigon,\N
+Hyper Cutter,\N
+Iapapa Berry,\N
+Ice Body,\N
+Ice Scales,\N
+Icicle Plate,\N
+Icy Rock,\N
+Illusion,\N
+Imposter,\N
 Indeedee,\N
+Infiltrator,\N
 Inkay,\N
+Innards Out,\N
+Inner Focus,\N
+Insect Plate,\N
 Inteleon,\N
+Intimidate,\N
+Intrepid Sword,\N
+Iron Ball,\N
+Iron Barbs,\N
 Iron Boulder,\N
 Iron Crown,\N
+Iron Fist,\N
 Iron Jugulis,\N
+Iron Plate,\N
 Iron Treads,\N
 Iron Valiant,\N
+Jaboca Berry,\N
 Jirachi,\N
 Jolteon,\N
+Kee Berry,\N
 Keldeo,\N
 Kilowattrel,\N
 Kingdra,\N
 Klawf,\N
 Kleavor,\N
 Klefki,\N
+Klutz,\N
 Komala,\N
 Kommo-o,\N
 Krookodile,\N
 Kyurem,\N
+Lagging Tail,\N
 Lampent,\N
 Landorus,\N
+Lansat Berry,\N
 Lanturn,\N
 Lapras,\N
 Larvitar,\N
 Latias,\N
 Latios,\N
+Leaf Guard,\N
 Leafeon,\N
+Leftovers,\N
+Leppa Berry,\N
+Levitate,\N
+Libero,\N
+Liechi Berry,\N
+Life Orb,\N
+Light Ball,\N
+Light Clay,\N
+Lightning Rod,\N
 Lilligant-Hisui,\N
+Limber,\N
+Lingering Aroma,\N
+Liquid Ooze,\N
+Loaded Dice,\N
 Lokix,\N
 Lucario,\N
 Ludicolo,\N
+Lum Berry,\N
+Luminous Moss,\N
 Lurantis,\N
 Luxray,\N
 Lycanroc,\N
@@ -175,34 +323,63 @@ Lycanroc-Dusk,\N
 Lycanroc-Midnight,\N
 Mabosstiff,\N
 Magcargo,\N
+Magic Bounce,\N
+Magic Guard,\N
 Magmortar,\N
+Magnet,\N
+Magnet Pull,\N
 Magneton,\N
 Magnezone,\N
+Mago Berry,\N
 Makuhita,\N
 Malamar,\N
 Mamoswine,\N
 Manaphy,\N
+Maranga Berry,\N
 Masquerain,\N
+Meadow Plate,\N
 Meloetta,\N
+Mental Herb,\N
 Meowscarada,\N
 Mesprit,\N
+Metal Coat,\N
+Micle Berry,\N
 Mienshao,\N
 Milotic,\N
 Mimikyu,\N
+Mind Plate,\N
 Minior,\N
+Miracle Seed,\N
+Mirror Armor,\N
+Mirror Herb,\N
 Mismagius,\N
+Misty Surge,\N
+Mold Breaker,\N
 Moltres,\N
 Moltres-Galar,\N
+Moody,\N
 Morpeko,\N
+Motor Drive,\N
+Moxie,\N
 Mudsdale,\N
 Muk-Alola,\N
+Multiscale,\N
 Munkidori,\N
+Muscle Band,\N
+Mystic Water,\N
 name,move_id
+Natural Cure,\N
+Neutralizing Gas,\N
+Never-Melt Ice,\N
 Ninetales,\N
+No Guard,\N
 Noivern,\N
+Normal Gem,\N
 Nosepass,\N
 Nothing,\N
 Numel,\N
+Oblivious,\N
+Occa Berry,\N
 Ogerpon,\N
 Ogerpon-Cornerstone,\N
 Ogerpon-Hearthflame,\N
@@ -211,35 +388,70 @@ Ogerpon-Wellspring,\N
 Oinkologne,\N
 Oinkologne-F,\N
 Okidogi,\N
+Oran Berry,\N
+Orichalcum Pulse,\N
 Oricorio,\N
 Oricorio-Pa'u,\N
 Oricorio-Sensu,\N
 Orthworm,\N
 Other,\N
+Overcoat,\N
 Overqwil,\N
 Paleo Wave,\N
 Palossand,\N
+Parental Bond,\N
 Pawmot,\N
 Pawniard,\N
 Pecharunt,\N
 Pelipper,\N
 Perrserker,\N
 Persian-Alola,\N
+Petaya Berry,\N
+Pickpocket,\N
 Pikachu,\N
 Piloswine,\N
 Pincurchin,\N
+Pixie Plate,\N
+Pixilate,\N
+Poison Barb,\N
+Poison Heal,\N
+Poison Touch,\N
 Polar Flare,\N
 Politoed,\N
 Poliwrath,\N
 Porygon,\N
 Porygon2,\N
+Power Anklet,\N
+Power Herb,\N
+Prankster,\N
+Pressure,\N
 Primarina,\N
+Primordial Sea,\N
 Probopass,\N
+Protean,\N
+Protective Pads,\N
+Protosynthesis,\N
+Psychic Seed,\N
+Psychic Surge,\N
+Punching Glove,\N
+Punk Rock,\N
+Pure Power,\N
+Purifying Salt,\N
 Pyroar,\N
 Quaquaval,\N
+Quark Drive,\N
+Queenly Majesty,\N
+Quick Claw,\N
+Quick Draw,\N
+Quick Feet,\N
 Qwilfish,\N
 Rabsca,\N
 Raichu-Alola,\N
+Rain Dish,\N
+Razor Claw,\N
+Reckless,\N
+Red Card,\N
+Regenerator,\N
 Regice,\N
 Regidrago,\N
 Regirock,\N
@@ -247,88 +459,191 @@ Reuniclus,\N
 Revavroom,\N
 Rhydon,\N
 Rillaboom,\N
+Ripen,\N
+Rivalry,\N
+Rock Head,\N
+Rocky Helmet,\N
+Rocky Payload,\N
+Room Service,\N
 Rotom,\N
 Rotom-Fan,\N
 Rotom-Frost,\N
 Rotom-Heat,\N
 Rotom-Mow,\N
 Rotom-Wash,\N
+Rough Skin,\N
+Rowap Berry,\N
 Sableye,\N
+Safety Goggles,\N
+Salac Berry,\N
 Salazzle,\N
+Sand Force,\N
+Sand Rush,\N
+Sand Stream,\N
 Sandaconda,\N
 Sandy Shocks,\N
+Sap Sipper,\N
 Sawsbuck,\N
+Scope Lens,\N
 Scovillain,\N
 Scrafty,\N
+Scrappy,\N
+Seed Sower,\N
 Seviper,\N
+Shadow Shield,\N
 Shadow Strike,\N
+Shadow Tag,\N
+Sharp Beak,\N
+Sharpness,\N
 Shaymin,\N
+Shed Shell,\N
 Shedinja,\N
+Sheer Force,\N
 Shelgon,\N
+Shell Armor,\N
+Shell Bell,\N
+Shield Dust,\N
 Shroodle,\N
+Silk Scarf,\N
+Silver Powder,\N
+Simple,\N
 Sinistcha,\N
 Sinistea,\N
+Sitrus Berry,\N
 Skeledirge,\N
+Skill Link,\N
 Skrelp,\N
+Sky Plate,\N
 Slakoth,\N
 Slowbro,\N
 Slowbro-Galar,\N
 Slowking,\N
 Slowking-Galar,\N
+Slush Rush,\N
+Smooth Rock,\N
 Sneasler,\N
+Sniper,\N
+Snow Warning,\N
 Snubbull,\N
+Soft Sand,\N
+Solar Power,\N
+Soul Dew,\N
+Soundproof,\N
+Speed Boost,\N
+Spell Tag,\N
+Splash Plate,\N
+Spooky Plate,\N
+Stakeout,\N
+Stamina,\N
 Staraptor,\N
+Starf Berry,\N
+Steadfast,\N
+Steely Spirit,\N
+Stench,\N
+Sticky Barb,\N
+Sticky Hold,\N
+Stone Plate,\N
 Stonjourner,\N
+Storm Drain,\N
+Strong Jaw,\N
+Sturdy,\N
 Sudowoodo,\N
 Sunflora,\N
+Super Luck,\N
+Supreme Overlord,\N
+Swarm,\N
+Swift Swim,\N
+Sword of Ruin,\N
 Sylveon,\N
+Tablets of Ruin,\N
 Talonflame,\N
+Tanga Berry,\N
+Tangling Hair,\N
 Tatsugiri,\N
 Tauros-Paldea-Blaze,\N
+Technician,\N
 Terapagos,\N
 Terapagos-Stellar,\N
 Terapagos-Terastal,\N
+Teravolt,\N
+Terrain Extender,\N
 Terrakion,\N
+Thick Fat,\N
+Throat Spray,\N
 Thundurus,\N
 Timburr,\N
 Ting-Lu,\N
 Tinkaton,\N
 Tinkatuff,\N
+Tinted Lens,\N
 Toedscruel,\N
 Torkoal,\N
 Tornadus,\N
 Tornadus-Therian,\N
+Torrent,\N
 Toucannon,\N
+Tough Claws,\N
 Toxapex,\N
+Toxic Chain,\N
+Toxic Debris,\N
+Toxic Orb,\N
+Toxic Plate,\N
 Toxicroak,\N
 Toxtricity,\N
 Toxtricity-Low-Key,\N
+Trace,\N
 Trevenant,\N
+Triage,\N
 Tsareena,\N
+Turboblaze,\N
+Twisted Spoon,\N
 Typhlosion,\N
 Typhlosion-Hisui,\N
+Unaware,\N
+Unburden,\N
+Unseen Fist,\N
 Ursaring,\N
+Utility Umbrella,\N
 Vaporeon,\N
 Veluza,\N
 Venonat,\N
 Venusaur,\N
+Vessel of Ruin,\N
 Vileplume,\N
 Virizion,\N
 Volcanion,\N
+Volt Absorb,\N
 Walking Wake,\N
+Water Absorb,\N
+Water Bubble,\N
+Water Veil,\N
+Weak Armor,\N
+Weakness Policy,\N
 Weavile,\N
 Weezing,\N
 Weezing-Galar,\N
+Well-Baked Body,\N
+Wellspring Mask,\N
 Whimsicott,\N
+White Herb,\N
+Wide Lens,\N
+Wiki Berry,\N
+Wind Rider,\N
+Wise Glasses,\N
 Wo-Chien,\N
+Wonder Guard,\N
+Wonder Skin,\N
 Wugtrio,\N
 Wyrdeer,\N
+Yache Berry,\N
 Zamazenta,\N
 Zangoose,\N
+Zap Plate,\N
 Zapdos,\N
 Zapdos-Galar,\N
 Zarude-Dada,\N
 Zebstrika,\N
+Zoom Lens,\N
 Zoroark,\N
 Zoroark-Hisui,\N
 Zweilous,\N

@@ -1,9 +1,14 @@
 name,ability_id
+Ability Shield,\N
 Absolite,\N
 Absorb Bulb,\N
+Accelerock,\N
 Acid Armor,\N
+Acid Spray,\N
+Acrobatics,\N
 Acupressure,\N
 Adrenaline Orb,\N
+Aerial Ace,\N
 After You,\N
 Aggronite,\N
 Agility,\N
@@ -14,11 +19,17 @@ Aloraichium Z,\N
 Altarianite,\N
 Amnesia,\N
 Ampharosite,\N
+Apicot Berry,\N
+Apple Acid,\N
+Aqua Jet,\N
 Aqua Ring,\N
+Aqua Step,\N
 Aromatherapy,\N
 Assault Vest,\N
 Attract,\N
 Audinite,\N
+Aura Sphere,\N
+Aura Wheel,\N
 Aurora Veil,\N
 Autotomize,\N
 Baby-Doll Eyes,\N
@@ -29,12 +40,22 @@ Berry Juice,\N
 Berserk Gene,\N
 Big Root,\N
 Binding Band,\N
+Bite,\N
+Black Belt,\N
 Black Glasses,\N
 Black Sludge,\N
 Blastoisinite,\N
+Blaze Kick,\N
+Blizzard,\N
+Blunder Policy,\N
+Body Press,\N
+Body Slam,\N
+Boomburst,\N
 BrightPowder,\N
+Bug Buzz,\N
 Buginium Z,\N
 Bulk Up,\N
+Bullet Punch,\N
 Burning Bulwark,\N
 Calm Mind,\N
 Cameruptite,\N
@@ -46,11 +67,15 @@ Charizardite X,\N
 Charizardite Y,\N
 Charm,\N
 Chesto Berry,\N
+Chilling Water,\N
 Choice Band,\N
 Choice Scarf,\N
 Choice Specs,\N
 Chople Berry,\N
 Clangorous Soul,\N
+Clear Amulet,\N
+Clear Smog,\N
+Close Combat,\N
 Coaching,\N
 Coba Berry,\N
 Coil,\N
@@ -59,14 +84,20 @@ Confide,\N
 Confuse Ray,\N
 Conversion,\N
 Conversion 2,\N
+Copycat,\N
 Corrosive Gas,\N
 Cosmic Power,\N
 Cotton Guard,\N
 Cotton Spore,\N
 Court Change,\N
+Covert Cloak,\N
+Crunch,\N
 Curse,\N
+Custap Berry,\N
 Damp Rock,\N
+Dark Pulse,\N
 Darkinium Z,\N
+Dazzling Gleam,\N
 Decidium Z,\N
 Decorate,\N
 Deep Sea Scale,\N
@@ -74,18 +105,32 @@ Deep Sea Tooth,\N
 Defend Order,\N
 Defense Curl,\N
 Defog,\N
+Destiny Bond,\N
 Diancite,\N
 Disable,\N
 Doodle,\N
+Draco Meteor,\N
 Draco Plate,\N
 Dragon Cheer,\N
+Dragon Claw,\N
 Dragon Dance,\N
+Dragon Darts,\N
+Dragon Energy,\N
 Dragon Fang,\N
+Dragon Hammer,\N
+Dragon Pulse,\N
+Dragon Tail,\N
 Dragonium Z,\N
+Drain Punch,\N
+Draining Kiss,\N
 Dread Plate,\N
+Earth Plate,\N
+Earth Power,\N
+Earthquake,\N
 Eerie Impulse,\N
 Eevium Z,\N
 Eject Button,\N
+Eject Pack,\N
 Electric Seed,\N
 Electric Terrain,\N
 Electrify,\N
@@ -93,33 +138,62 @@ Electrium Z,\N
 Embargo,\N
 Encore,\N
 Endure,\N
+Enigma Berry,\N
 Entrainment,\N
+Eruption,\N
 Eviolite,\N
+Expanding Force,\N
 Expert Belt,\N
+Explosion,\N
+Facade,\N
 Fairium Z,\N
+Fairy Feather,\N
 Fairy Lock,\N
+Fake Out,\N
 Fake Tears,\N
 Feather Dance,\N
+Feint,\N
+Fell Stinger,\N
 Fightinium Z,\N
 Figy Berry,\N
 Fillet Away,\N
+Final Gambit,\N
+Fire Fang,\N
+Fire Punch,\N
 Firium Z,\N
+First Impression,\N
 Fist Plate,\N
+Flame Charge,\N
+Flame Orb,\N
+Flame Plate,\N
+Flamethrower,\N
+Flare Blitz,\N
 Flash,\N
+Flash Cannon,\N
 Flatter,\N
+Fling,\N
+Flip Turn,\N
 Flyinium Z,\N
 Focus Band,\N
+Focus Blast,\N
 Focus Energy,\N
 Focus Sash,\N
 Foresight,\N
 Forest's Curse,\N
+Foul Play,\N
+Freeze-Dry,\N
+Frost Breath,\N
 Galladite,\N
 Gardevoirite,\N
 Gastro Acid,\N
 Ghostium Z,\N
+Giga Drain,\N
 Glare,\N
 Grassium Z,\N
+Grassy Glide,\N
+Grassy Seed,\N
 Grassy Terrain,\N
+Grav Apple,\N
 Gravity,\N
 Grip Claw,\N
 Groundium Z,\N
@@ -133,29 +207,43 @@ Hail,\N
 Hard Stone,\N
 Harden,\N
 Haze,\N
+Head Smash,\N
 Heal Bell,\N
 Heal Block,\N
 Heal Pulse,\N
 Healing Wish,\N
 Heart Swap,\N
 Heat Rock,\N
+Heavy-Duty Boots,\N
 Helping Hand,\N
 Heracronite,\N
+Hex,\N
+High Jump Kick,\N
 Hold Hands,\N
 Hone Claws,\N
 Houndoominite,\N
 Howl,\N
+Hurricane,\N
+Hydro Pump,\N
+Hyper Voice,\N
 Iapapa Berry,\N
+Ice Beam,\N
 Ice Memory,\N
+Ice Punch,\N
+Ice Shard,\N
 Icicle Plate,\N
 Icium Z,\N
 Icy Rock,\N
+Icy Wind,\N
 Imprison,\N
+Infestation,\N
 Ingrain,\N
 Insect Plate,\N
 Ion Deluge,\N
 Iron Ball,\N
 Iron Defense,\N
+Iron Head,\N
+Iron Plate,\N
 Jungle Healing,\N
 Kangaskhanite,\N
 Kebia Berry,\N
@@ -163,28 +251,36 @@ Kee Berry,\N
 Kinesis,\N
 King's Rock,\N
 King's Shield,\N
+Knock Off,\N
 Kommonium Z,\N
 Lagging Tail,\N
+Lansat Berry,\N
 Laser Focus,\N
 Latiasite,\N
 Lax Incense,\N
+Leaf Storm,\N
 Leech Seed,\N
 Leer,\N
 Leftovers,\N
+Leppa Berry,\N
 Liechi Berry,\N
 Life Dew,\N
 Life Orb,\N
 Light Ball,\N
 Light Clay,\N
 Light Screen,\N
+Loaded Dice,\N
 Lock-On,\N
 Lopunnite,\N
+Low Kick,\N
 Lum Berry,\N
 Lunar Blessing,\N
 Lunar Dance,\N
+Mach Punch,\N
 Magic Coat,\N
 Magic Powder,\N
 Magic Room,\N
+Magical Leaf,\N
 Magnet,\N
 Magnet Rise,\N
 Magnetic Flux,\N
@@ -192,15 +288,21 @@ Mago Berry,\N
 Manectite,\N
 Maranga Berry,\N
 Mat Block,\N
+Matcha Gotcha,\N
 Mawilite,\N
 Me First,\N
 Meadow Plate,\N
+Mean Look,\N
 Medichamite,\N
 Meditate,\N
+Megahorn,\N
 Memento,\N
 Mental Herb,\N
+Metal Burst,\N
 Metal Coat,\N
 Metal Sound,\N
+Meteor Beam,\N
+Meteor Mash,\N
 Metronome,\N
 Mewnium Z,\N
 Milk Drink,\N
@@ -209,9 +311,13 @@ Mind Plate,\N
 Mind Reader,\N
 Miracle Eye,\N
 Miracle Seed,\N
+Mirror Herb,\N
 Mirror Move,\N
 Mist,\N
+Misty Explosion,\N
+Misty Seed,\N
 Misty Terrain,\N
+Moonblast,\N
 Moonlight,\N
 Morning Sun,\N
 Mountaineer,\N
@@ -220,6 +326,7 @@ Muscle Band,\N
 Mystic Water,\N
 Nasty Plot,\N
 Never-Melt Ice,\N
+Night Shade,\N
 No Ability,\N
 No Retreat,\N
 Noble Roar,\N
@@ -228,40 +335,57 @@ Normalium Z,\N
 Nothing,\N
 Occa Berry,\N
 Odor Sleuth,\N
+Oran Berry,\N
 Other,\N
+Overheat,\N
 Pain Split,\N
 Parting Shot,\N
 Passho Berry,\N
+Payback,\N
 Perish Song,\N
 Persistent,\N
 Petaya Berry,\N
+Photon Geyser,\N
 Pidgeotite,\N
 Pikanium Z,\N
 Pikashunium Z,\N
 Pinsirite,\N
 Pixie Plate,\N
 Play Nice,\N
+Play Rough,\N
 Poison Barb,\N
 Poison Gas,\N
+Poison Jab,\N
 Poison Powder,\N
 Poisonium Z,\N
 Powder,\N
+Power Anklet,\N
+Power Gem,\N
 Power Herb,\N
 Power Split,\N
 Power Swap,\N
 Power Trick,\N
+Power Weight,\N
 Primarium Z,\N
+Protect,\N
 Protective Pads,\N
 Psych Up,\N
+Psychic Noise,\N
 Psychic Seed,\N
 Psychic Terrain,\N
 Psychium Z,\N
+Psycho Cut,\N
 Psycho Shift,\N
+Psyshock,\N
+Punching Glove,\N
 Quash,\N
+Quick Attack,\N
 Quick Claw,\N
 Quick Powder,\N
 Quiver Dance,\N
+Raging Bull,\N
 Rain Dance,\N
+Rapid Spin,\N
 Razor Claw,\N
 Razor Fang,\N
 Rebound,\N
@@ -271,25 +395,39 @@ Red Card,\N
 Reflect,\N
 Reflect Type,\N
 Refresh,\N
+Relic Song,\N
 Rest,\N
+Revelation Dance,\N
+Reversal,\N
+Revival Blessing,\N
+Ring Target,\N
+Roar,\N
+Rock Blast,\N
 Rock Polish,\N
 Rockium Z,\N
 Rocky Helmet,\N
 Role Play,\N
+Room Service,\N
 Roost,\N
 Roseli Berry,\N
 Rototiller,\N
+Ruination,\N
 Sablenite,\N
 Safeguard,\N
 Safety Goggles,\N
 Salac Berry,\N
+Salt Cure,\N
 Sand Attack,\N
 Sandstorm,\N
+Scald,\N
 Scary Face,\N
 Sceptilite,\N
 Scope Lens,\N
 Screech,\N
 Sea Incense,\N
+Shadow Ball,\N
+Shadow Claw,\N
+Shadow Sneak,\N
 Sharp Beak,\N
 Shed Shell,\N
 Shell Bell,\N
@@ -299,6 +437,7 @@ Shift Gear,\N
 Shore Up,\N
 Shuca Berry,\N
 Silk Scarf,\N
+Silver Powder,\N
 Simple Beam,\N
 Sitrus Berry,\N
 Skill Swap,\N
@@ -306,6 +445,8 @@ Sky Plate,\N
 Slack Off,\N
 Sleep Talk,\N
 Slowbronite,\N
+Sludge Bomb,\N
+Sludge Wave,\N
 Smokescreen,\N
 Smooth Rock,\N
 Snatch,\N
@@ -314,32 +455,43 @@ Snowscape,\N
 Soak,\N
 Soft Sand,\N
 Soft-Boiled,\N
+Solar Beam,\N
+Solar Blade,\N
 Soul Dew,\N
 Speed Swap,\N
 Spell Tag,\N
 Spicy Extract,\N
 Spikes,\N
+Spiky Shield,\N
+Spirit Break,\N
 Spite,\N
 Splash,\N
 Splash Plate,\N
 Spooky Plate,\N
 Starf Berry,\N
 Stealth Rock,\N
+Steel Beam,\N
 Steelium Z,\N
 Steelixite,\N
 Stick,\N
 Sticky Barb,\N
 Sticky Web,\N
 Stockpile,\N
+Stone Axe,\N
+Stone Edge,\N
 Stone Plate,\N
+Stored Power,\N
+Strange Steam,\N
 Strength Sap,\N
 String Shot,\N
 Struggle,\N
 Stuff Cheeks,\N
 Stun Spore,\N
 Substitute,\N
+Sucker Punch,\N
 Sunny Day,\N
 Supersonic,\N
+Surf,\N
 Swagger,\N
 Sweet Kiss,\N
 Sweet Scent,\N
@@ -357,8 +509,12 @@ Teatime,\N
 Teeter Dance,\N
 Telekinesis,\N
 Teleport,\N
+Tera Blast,\N
 Terrain Extender,\N
 Thick Club,\N
+Throat Chop,\N
+Throat Spray,\N
+Thunder Punch,\N
 Thunder Wave,\N
 Tickle,\N
 Tidy Up,\N
@@ -369,18 +525,30 @@ Toxic Orb,\N
 Toxic Plate,\N
 Toxic Spikes,\N
 Toxic Thread,\N
+Trailblaze,\N
 Transform,\N
 Trick,\N
 Trick Room,\N
 Trick-or-Treat,\N
+Triple Axel,\N
 Twisted Spoon,\N
+U-turn,\N
+Vacuum Wave,\N
 Venom Drench,\N
 Venusaurite,\N
 Victory Dance,\N
+Volt Switch,\N
+Volt Tackle,\N
 Wacan Berry,\N
+Water Pulse,\N
 Water Sport,\N
+Water Spout,\N
+Waterfall,\N
 Waterium Z,\N
+Wave Crash,\N
 Weakness Policy,\N
+Weather Ball,\N
+Whirlwind,\N
 White Herb,\N
 Wide Lens,\N
 Wiki Berry,\N

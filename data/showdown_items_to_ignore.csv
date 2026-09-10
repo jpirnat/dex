@@ -1,6 +1,7 @@
 name,item_id
 Absorb,\N
 Accelerock,\N
+Acid Armor,\N
 Acid Spray,\N
 Acrobatics,\N
 Adaptability,\N
@@ -12,15 +13,19 @@ Air Cutter,\N
 Air Lock,\N
 Air Slash,\N
 Alluring Voice,\N
+Amnesia,\N
 Analytic,\N
 Anchor Shot,\N
 Ancient Power,\N
 Anger Point,\N
+Anger Shell,\N
 Apple Acid,\N
 Aqua Cutter,\N
 Aqua Jet,\N
 Aqua Ring,\N
 Aqua Step,\N
+Armor Cannon,\N
+Armor Tail,\N
 Aroma Veil,\N
 Aromatherapy,\N
 As One (Glastrier),\N
@@ -32,16 +37,19 @@ Attract,\N
 Aura Break,\N
 Aura Sphere,\N
 Aura Wheel,\N
+Aurora Veil,\N
 Autotomize,\N
 Avalanche,\N
 Axe Kick,\N
 Baby-Doll Eyes,\N
 Bad Dreams,\N
+Baneful Bunker,\N
 Barb Barrage,\N
 Barrier,\N
 Baton Pass,\N
 Battery,\N
 Battle Armor,\N
+Battle Bond,\N
 Beak Blast,\N
 Beast Boost,\N
 Belch,\N
@@ -69,6 +77,7 @@ Bug Buzz,\N
 Bulk Up,\N
 Bulldoze,\N
 Bullet Punch,\N
+Bullet Seed,\N
 Bulletproof,\N
 Burn Up,\N
 Burning Jealousy,\N
@@ -76,21 +85,26 @@ Calm Mind,\N
 Ceaseless Edge,\N
 Charge Beam,\N
 Charm,\N
+Cheek Pouch,\N
 Chilling Neigh,\N
 Chilling Water,\N
+Chilly Reception,\N
 Chip Away,\N
 Chlorophyll,\N
 Circle Throw,\N
 Clamp,\N
+Clangorous Soul,\N
 Clear Body,\N
 Clear Smog,\N
 Close Combat,\N
 Cloud Nine,\N
+Coil,\N
 Color Change,\N
 Competitive,\N
 Compound Eyes,\N
 Confide,\N
 Confuse Ray,\N
+Contrary,\N
 Conversion 2,\N
 Copycat,\N
 Core Enforcer,\N
@@ -98,6 +112,7 @@ Corrosion,\N
 Cosmic Power,\N
 Cotton Down,\N
 Cotton Guard,\N
+Court Change,\N
 Covet,\N
 Crabhammer,\N
 Cross Chop,\N
@@ -118,6 +133,7 @@ Dark Void,\N
 Darkest Lariat,\N
 Dauntless Shield,\N
 Dazzling,\N
+Dazzling Gleam,\N
 Defeatist,\N
 Defend Order,\N
 Defiant,\N
@@ -131,6 +147,7 @@ Disarming Voice,\N
 Discharge,\N
 Disguise,\N
 Dizzy Punch,\N
+Doom Desire,\N
 Double Hit,\N
 Double Kick,\N
 Double Shock,\N
@@ -139,7 +156,9 @@ Double-Edge,\N
 Download,\N
 Draco Meteor,\N
 Dragon Breath,\N
+Dragon Claw,\N
 Dragon Dance,\N
+Dragon Darts,\N
 Dragon Energy,\N
 Dragon Pulse,\N
 Dragon Rage,\N
@@ -148,24 +167,33 @@ Dragon's Maw,\N
 Drain Punch,\N
 Draining Kiss,\N
 Dream Eater,\N
+Drill Peck,\N
 Drill Run,\N
 Drizzle,\N
 Drought,\N
 Drum Beating,\N
 Dry Skin,\N
 Dual Chop,\N
+Dual Wingbeat,\N
 Early Bird,\N
+Earth Eater,\N
 Earth Power,\N
 Earthquake,\N
 Echoed Voice,\N
 Eerie Spell,\N
 Effect Spore,\N
 Electric Surge,\N
+Electric Terrain,\N
 Electrify,\N
 Electro Ball,\N
+Electromorphosis,\N
 Electroweb,\N
 Emergency Exit,\N
+Encore,\N
+Endeavor,\N
 Endure,\N
+Energy Ball,\N
+Entrainment,\N
 Eruption,\N
 Esper Wing,\N
 Expanding Force,\N
@@ -174,9 +202,11 @@ Extrasensory,\N
 Extreme Speed,\N
 Facade,\N
 Fairy Aura,\N
+Fake Out,\N
 Fake Tears,\N
 False Surrender,\N
 False Swipe,\N
+Feather Dance,\N
 Feint,\N
 Feint Attack,\N
 Fell Stinger,\N
@@ -204,6 +234,7 @@ Flip Turn,\N
 Flower Gift,\N
 Flower Trick,\N
 Flower Veil,\N
+Fluffy,\N
 Flying Press,\N
 Focus Blast,\N
 Focus Energy,\N
@@ -214,6 +245,7 @@ Freeze-Dry,\N
 Frisk,\N
 Frost Breath,\N
 Frustration,\N
+Fur Coat,\N
 Fury Cutter,\N
 Future Sight,\N
 Gale Wings,\N
@@ -221,26 +253,37 @@ Galvanize,\N
 Gear Grind,\N
 Giga Drain,\N
 Giga Impact,\N
+Gigaton Hammer,\N
 Glaciate,\N
 Glare,\N
+Gluttony,\N
+Good as Gold,\N
 Gooey,\N
 Gorilla Tactics,\N
 Grass Knot,\N
 Grass Pelt,\N
 Grass Pledge,\N
+Grassy Glide,\N
 Grassy Surge,\N
 Grassy Terrain,\N
 Grav Apple,\N
+Gravity,\N
 Grim Neigh,\N
+Growth,\N
 Grudge,\N
+Guard Dog,\N
 Guillotine,\N
 Gunk Shot,\N
 Guts,\N
 Gyro Ball,\N
 Hammer Arm,\N
+Harvest,\N
+Haze,\N
 Head Charge,\N
 Head Smash,\N
 Headbutt,\N
+Headlong Rush,\N
+Healer,\N
 Healing Wish,\N
 Heart Stamp,\N
 Heat Crash,\N
@@ -254,13 +297,17 @@ Hidden Power,\N
 Hidden Power Flying,\N
 High Jump Kick,\N
 Hone Claws,\N
+Honey Gather,\N
 Horn Drill,\N
 Horn Leech,\N
 Howl,\N
+Huge Power,\N
 Hurricane,\N
 Hustle,\N
 Hydration,\N
+Hydro Pump,\N
 Hydro Steam,\N
+Hyper Beam,\N
 Hyper Cutter,\N
 Hyper Drill,\N
 Hyper Voice,\N
@@ -271,17 +318,23 @@ Ice Beam,\N
 Ice Body,\N
 Ice Face,\N
 Ice Fang,\N
+Ice Hammer,\N
 Ice Punch,\N
 Ice Shard,\N
 Ice Spinner,\N
 Icicle Crash,\N
+Icicle Spear,\N
 Icy Wind,\N
+Illusion,\N
 Immunity,\N
+Imposter,\N
+Imprison,\N
 Incinerate,\N
 Infernal Parade,\N
 Infestation,\N
 Infiltrator,\N
 Inner Focus,\N
+Insomnia,\N
 Intimidate,\N
 Iron Barbs,\N
 Iron Defense,\N
@@ -291,18 +344,23 @@ Iron Tail,\N
 Ivy Cudgel,\N
 Jaw Lock,\N
 Jump Kick,\N
+Jungle Healing,\N
+Klutz,\N
 Knock Off,\N
 Kowtow Cleave,\N
 Laser Focus,\N
 Lash Out,\N
 Lava Plume,\N
 Leaf Blade,\N
+Leaf Guard,\N
 Leaf Storm,\N
 Leech Life,\N
 Leech Seed,\N
 Levitate,\N
+Libero,\N
 Lick,\N
 Light Metal,\N
+Light Screen,\N
 Lightning Rod,\N
 Limber,\N
 Liquid Ooze,\N
@@ -320,6 +378,7 @@ Mach Punch,\N
 Magic Bounce,\N
 Magic Coat,\N
 Magic Guard,\N
+Magic Room,\N
 Magical Leaf,\N
 Magician,\N
 Magma Storm,\N
@@ -327,18 +386,24 @@ Magnet Bomb,\N
 Magnet Pull,\N
 Magnet Rise,\N
 Magnitude,\N
+Make It Rain,\N
 Malignant Chain,\N
 Marvel Scale,\N
 Matcha Gotcha,\N
+Mean Look,\N
 Mega Drain,\N
 Mega Launcher,\N
+Memento,\N
 Merciless,\N
 Metal Claw,\N
+Meteor Beam,\N
 Meteor Mash,\N
 Mighty Cleave,\N
 Mimicry,\N
+Mind's Eye,\N
 Minimize,\N
 Mirror Armor,\N
+Mirror Coat,\N
 Mist Ball,\N
 Misty Explosion,\N
 Misty Surge,\N
@@ -346,6 +411,7 @@ Misty Terrain,\N
 Mold Breaker,\N
 Moody,\N
 Moonblast,\N
+Moonlight,\N
 Morning Sun,\N
 Mortal Spin,\N
 Motor Drive,\N
@@ -354,15 +420,18 @@ Moxie,\N
 Mud Shot,\N
 Multiscale,\N
 Mummy,\N
+Mycelium Might,\N
 Mystical Fire,\N
 Mystical Power,\N
 Nasty Plot,\N
 Natural Cure,\N
 Nature Power,\N
 Neuroforce,\N
+Neutralizing Gas,\N
 Night Shade,\N
 Night Slash,\N
 No Guard,\N
+No Retreat,\N
 Normalize,\N
 Nuzzle,\N
 Oblivious,\N
@@ -372,10 +441,12 @@ Other,\N
 Outrage,\N
 Overcoat,\N
 Overdrive,\N
+Overgrow,\N
 Overheat,\N
 Own Tempo,\N
 Pain Split,\N
 Parabolic Charge,\N
+Parental Bond,\N
 Parting Shot,\N
 Pay Day,\N
 Payback,\N
@@ -384,6 +455,7 @@ Perish Song,\N
 Petal Blizzard,\N
 Petal Dance,\N
 Photon Geyser,\N
+Pickpocket,\N
 Pixilate,\N
 Plasma Fists,\N
 Play Rough,\N
@@ -393,20 +465,26 @@ Poison Fang,\N
 Poison Heal,\N
 Poison Jab,\N
 Poison Point,\N
+Poison Puppeteer,\N
 Poison Sting,\N
 Poison Tail,\N
 Poison Touch,\N
 Pollen Puff,\N
+Poltergeist,\N
 Pounce,\N
 Power Construct,\N
+Power Gem,\N
 Power of Alchemy,\N
 Power Spot,\N
+Power Whip,\N
 Prankster,\N
 Present,\N
 Pressure,\N
 Primordial Sea,\N
 Prism Armor,\N
+Protean,\N
 Protect,\N
+Protosynthesis,\N
 Psybeam,\N
 Psyblade,\N
 Psych Up,\N
@@ -415,11 +493,16 @@ Psychic Fangs,\N
 Psychic Noise,\N
 Psychic Surge,\N
 Psychic Terrain,\N
+Psycho Boost,\N
 Psycho Cut,\N
 Psyshield Bash,\N
 Psyshock,\N
 Punishment,\N
 Punk Rock,\N
+Pure Power,\N
+Purifying Salt,\N
+Pyro Ball,\N
+Quark Drive,\N
 Queenly Majesty,\N
 Quick Attack,\N
 Quick Draw,\N
@@ -437,18 +520,22 @@ Razor Leaf,\N
 Razor Shell,\N
 Reckless,\N
 Recover,\N
+Recycle,\N
 Reflect,\N
 Refresh,\N
 Refrigerate,\N
 Regenerator,\N
+Rest,\N
 Retaliate,\N
 Return,\N
 Revelation Dance,\N
 Revenge,\N
 Reversal,\N
+Revival Blessing,\N
 Ripen,\N
 Rising Voltage,\N
 Roar,\N
+Rock Blast,\N
 Rock Climb,\N
 Rock Head,\N
 Rock Polish,\N
@@ -461,6 +548,7 @@ Rollout,\N
 Roost,\N
 Rough Skin,\N
 Round,\N
+Ruination,\N
 Sacred Fire,\N
 Sacred Sword,\N
 Salt Cure,\N
@@ -474,11 +562,15 @@ Sandsear Storm,\N
 Sandstorm,\N
 Sap Sipper,\N
 Scald,\N
+Scale Shot,\N
+Scary Face,\N
 Scorching Sands,\N
 Scrappy,\N
 Secret Power,\N
 Secret Sword,\N
+Seed Bomb,\N
 Seed Flare,\N
+Seed Sower,\N
 Seismic Toss,\N
 Self-Destruct,\N
 Serene Grace,\N
@@ -487,6 +579,8 @@ Shadow Claw,\N
 Shadow Punch,\N
 Shadow Shield,\N
 Shadow Sneak,\N
+Shadow Tag,\N
+Sharpness,\N
 Shed Skin,\N
 Sheer Force,\N
 Shell Armor,\N
@@ -499,6 +593,7 @@ Shock Wave,\N
 Signal Beam,\N
 Silver Wind,\N
 Skill Link,\N
+Skill Swap,\N
 Skitter Smack,\N
 Sky Uppercut,\N
 Slack Off,\N
@@ -519,24 +614,29 @@ Sniper,\N
 Snore,\N
 Snow Cloak,\N
 Snow Warning,\N
+Snowscape,\N
 Soak,\N
 Soft-Boiled,\N
+Solar Beam,\N
 Solar Power,\N
 Solid Rock,\N
 Soul-Heart,\N
 Soundproof,\N
 Spark,\N
 Spectral Thief,\N
+Speed Boost,\N
 Spikes,\N
 Spin Out,\N
 Spirit Break,\N
 Spirit Shackle,\N
 Spit Up,\N
 Spite,\N
+Splash,\N
 Spore,\N
 Stall,\N
 Stamina,\N
 Static,\N
+Stealth Rock,\N
 Steam Engine,\N
 Steam Eruption,\N
 Steamroller,\N
@@ -545,37 +645,49 @@ Steel Wing,\N
 Steelworker,\N
 Steely Spirit,\N
 Stench,\N
+Sticky Hold,\N
+Sticky Web,\N
 Stockpile,\N
 Stomp,\N
 Stomping Tantrum,\N
 Stone Axe,\N
 Stone Edge,\N
+Stored Power,\N
 Storm Drain,\N
 Storm Throw,\N
 Strange Steam,\N
 Strength Sap,\N
 Strong Jaw,\N
 Struggle Bug,\N
+Stuff Cheeks,\N
+Stun Spore,\N
 Sturdy,\N
 Submission,\N
 Substitute,\N
 Sucker Punch,\N
 Suction Cups,\N
 Sunny Day,\N
+Super Fang,\N
 Super Luck,\N
 Supercell Slam,\N
 Superpower,\N
+Supreme Overlord,\N
 Surf,\N
 Surge Surfer,\N
+Swagger,\N
 Swarm,\N
+Sweet Veil,\N
 Swift,\N
 Swift Swim,\N
+Switcheroo,\N
 Swords Dance,\N
 Synchronize,\N
+Synthesis,\N
 Syrup Bomb,\N
 Tail Glow,\N
 Tailwind,\N
 Take Down,\N
+Take Heart,\N
 Tangled Feet,\N
 Taunt,\N
 Technician,\N
@@ -594,13 +706,18 @@ Thunder Fang,\N
 Thunder Punch,\N
 Thunder Wave,\N
 Thunderbolt,\N
+Thunderclap,\N
 Thunderous Kick,\N
+Tidy Up,\N
 Tinted Lens,\N
 Torch Song,\N
 Torment,\N
+Torrent,\N
 Tough Claws,\N
 Toxic,\N
 Toxic Boost,\N
+Toxic Chain,\N
+Toxic Debris,\N
 Toxic Spikes,\N
 Toxic Thread,\N
 Trace,\N
@@ -609,7 +726,9 @@ Transform,\N
 Transistor,\N
 Tri Attack,\N
 Triage,\N
+Trick,\N
 Trick Room,\N
+Triple Axel,\N
 Triple Kick,\N
 Trop Kick,\N
 Truant,\N
@@ -620,12 +739,15 @@ Twister,\N
 U-turn,\N
 Unaware,\N
 Unburden,\N
+Unnerve,\N
 Unseen Fist,\N
 Uproar,\N
 Vacuum Wave,\N
 Vanillite,\N
 Venom Drench,\N
 Venoshock,\N
+Vessel of Ruin,\N
+Victory Dance,\N
 Victory Star,\N
 Vile Vial,\N
 Vital Throw,\N
@@ -634,6 +756,7 @@ Volt Switch,\N
 Wake-Up Slap,\N
 Wandering Spirit,\N
 Water Absorb,\N
+Water Bubble,\N
 Water Compaction,\N
 Water Pledge,\N
 Water Pulse,\N
@@ -650,9 +773,15 @@ Wild Charge,\N
 Wildbolt Storm,\N
 Will-O-Wisp,\N
 Wimp Out,\N
+Wind Power,\N
+Wind Rider,\N
 Wish,\N
+Wonder Guard,\N
+Wonder Room,\N
 Wonder Skin,\N
 Work Up,\N
+Worry Seed,\N
 Wrap,\N
 Wring Out,\N
 Zen Headbutt,\N
+Zing Zap,\N
