@@ -35,11 +35,16 @@ final readonly class MovesetFileParser
             return;
         }
 
+        $justSkippedCounters = false;
+
         while (!$stream->eof()) {
             // BLOCK 1 - The Pokémon's name.
 
-            Utils::readLine($stream); // Separator.
-            $line = Utils::readLine($stream);
+            if (!$justSkippedCounters) {
+                Utils::readLine($stream); // Separator.
+            }
+            $justSkippedCounters = false;
+            $line = Utils::readLine($stream); // Pokémon name.
             if ($stream->eof()) {
                 return;
             }
@@ -193,9 +198,16 @@ final readonly class MovesetFileParser
                 }
             }
 
-            // BLOCK 8 - Counters.
-
-            Utils::readLine($stream); // "Counters"
+            // BLOCK 8 (if it exists) - Counters.
+            $line = Utils::readLine($stream); // "Counters"
+            if (!str_contains($line, 'Checks and Counters')) {
+                // If this line wasn't the "Checks and Counters" header, it's
+                // the first separator of the next Pokémon block.
+                // Which also means the next line is the Pokémon name, so the
+                // next loop shouldn't start by reading anything.
+                $justSkippedCounters = true;
+                continue;
+            }
             if ($stream->eof()) {
                 return;
             }
