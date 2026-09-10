@@ -84,3 +84,6 @@ id,identifier,generation_id,version_group_id,level,field_size,team_size,in_battl
 83,vgc-regulation-h,9,25,50,2,6,4,sv,vgc24-regulation-h
 84,vgc-regulation-i,9,25,50,2,6,4,sv,vgc25-regulation-i
 85,vgc-regulation-j,9,25,50,2,6,4,sv,vgc25-regulation-j
+86,vgc-regulation-m-a,9,27,50,2,6,4,champions,vgc26-regulation-m-a
+87,vgc-regulation-m-b,9,27,50,2,6,4,champions,vgc26-regulation-m-b
+88,vgc-regulation-m-c,9,27,50,2,6,4,champions,vgc26-regulation-m-c

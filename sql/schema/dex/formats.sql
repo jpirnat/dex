@@ -9,7 +9,7 @@ create table if not exists `formats`
 `field_size` tinyint unsigned not null,
 `team_size` tinyint unsigned not null,
 `in_battle_team_size` tinyint unsigned not null,
-`smogon_generation_identifier` varchar(2) not null,
+`smogon_generation_identifier` varchar(9) not null,
 `smogon_format_identifier` varchar(20) not null,
 
 primary key (`id`),
