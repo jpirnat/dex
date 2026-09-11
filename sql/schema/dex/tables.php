@@ -178,6 +178,7 @@ return [
 		'vg_moves_flags_07',
 		'vg_moves_flags_08',
 		'vg_moves_flags_09',
+		'vg_moves_flags_champions',
 	],
 
 	// Stats

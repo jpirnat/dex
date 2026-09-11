@@ -6,6 +6,7 @@ use Jp\Dex\Domain\Import\Champions\AbilityImporter;
 use Jp\Dex\Domain\Import\Champions\ItemDescriptionImporter;
 use Jp\Dex\Domain\Import\Champions\ItemImporter;
 use Jp\Dex\Domain\Import\Champions\MoveDescriptionImporter;
+use Jp\Dex\Domain\Import\Champions\MoveFlagImporter;
 use Jp\Dex\Domain\Import\Champions\MoveImporter;
 use Jp\Dex\Domain\Import\Champions\PokemonImporter;
 use Jp\Dex\Domain\Import\Champions\PokemonMoveImporter;
@@ -29,6 +30,9 @@ $itemDescriptionImporter = $container->get(ItemDescriptionImporter::class);
 /** @var MoveImporter $moveImporter */
 $moveImporter = $container->get(MoveImporter::class);
 
+/** @var MoveFlagImporter $moveFlagImporter */
+$moveFlagImporter = $container->get(MoveFlagImporter::class);
+
 /** @var MoveDescriptionImporter $moveDescriptionImporter */
 $moveDescriptionImporter = $container->get(MoveDescriptionImporter::class);
 
@@ -43,6 +47,7 @@ $abilityDescriptionImporter->import();
 $itemImporter->import();
 $itemDescriptionImporter->import();
 $moveImporter->import();
+$moveFlagImporter->import();
 $moveDescriptionImporter->import();
 $pokemonImporter->import();
 $pokemonMoveImporter->import();
