@@ -315,6 +315,7 @@ language_id,ability_id,name
 1,315,メガソーラー
 1,316,ほのおのたてがみ
 1,318,とびだすハバネロ
+1,319,はどうのぼうご
 2,1,Stench
 2,2,Drizzle
 2,3,Speed Boost
@@ -631,6 +632,7 @@ language_id,ability_id,name
 2,315,Mega Sol
 2,316,Fire Mane
 2,318,Spicy Spray
+2,319,Aura Guard
 3,1,Puanteur
 3,2,Crachin
 3,3,Turbo
@@ -947,6 +949,7 @@ language_id,ability_id,name
 3,315,Méga-Soleil
 3,316,Crinière de Feu
 3,318,Habanéruption
+3,319,Aura Protectrice
 4,1,Duftnote
 4,2,Niesel
 4,3,Temposchub
@@ -1263,6 +1266,7 @@ language_id,ability_id,name
 4,315,Mega-Solarladung
 4,316,Flammenmähne
 4,318,Chilispritzer
+4,319,Aura-Abwehr
 5,1,Tanfo
 5,2,Piovischio
 5,3,Acceleratore
@@ -1579,6 +1583,7 @@ language_id,ability_id,name
 5,315,Megasolar
 5,316,Pirocriniera
 5,318,Spargipiccante
+5,319,Ondascudo
 6,1,Hedor
 6,2,Llovizna
 6,3,Impulso
@@ -1895,6 +1900,7 @@ language_id,ability_id,name
 6,315,Megasolar
 6,316,Crin de Fuego
 6,318,Salpicante
+6,319,Aura Protectora
 7,1,악취
 7,2,잔비
 7,3,가속
@@ -2211,6 +2217,7 @@ language_id,ability_id,name
 7,315,메가솔라
 7,316,불꽃의갈기
 7,318,하바네로분출
+7,319,파동의방호
 8,1,あくしゅう
 8,2,あめふらし
 8,3,かそく
@@ -2527,6 +2534,7 @@ language_id,ability_id,name
 8,315,メガソーラー
 8,316,ほのおのたてがみ
 8,318,とびだすハバネロ
+8,319,はどうのぼうご
 9,1,恶臭
 9,2,降雨
 9,3,加速
@@ -2843,6 +2851,7 @@ language_id,ability_id,name
 9,315,超级日光
 9,316,火焰鬃毛
 9,318,辣椒喷发
+9,319,波导防护
 10,1,惡臭
 10,2,降雨
 10,3,加速
@@ -3159,6 +3168,7 @@ language_id,ability_id,name
 10,315,超級日光
 10,316,火焰鬃毛
 10,318,辣椒噴發
+10,319,波導防護
 11,1,Hedor
 11,2,Llovizna
 11,3,Impulso
@@ -3475,3 +3485,4 @@ language_id,ability_id,name
 11,315,Megasolar
 11,316,Melena de Fuego
 11,318,Salpicante
+11,319,Aura Protectora
