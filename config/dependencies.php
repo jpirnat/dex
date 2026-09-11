@@ -10,6 +10,7 @@ $services = $configurator->services()
     ->defaults()
         ->autowire()
         ->public()
+        ->bind('string $errorEmailAddress', '%env(ERROR_EMAIL_ADDRESS)%')
         ->bind('string $projectRoot', __DIR__ . '/..')
 ;
 
@@ -42,6 +43,17 @@ $services->set('$dbsetup')
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             Pdo\Mysql::ATTR_LOCAL_INFILE => true,
         ],
+    ])
+;
+
+// Email
+$services->set(\Symfony\Component\Mailer\MailerInterface::class)
+    ->factory([\Jp\Dex\Infrastructure\MailerStaticFactory::class, 'createMailer'])
+    ->args([
+        '%env(EMAIL_HOST)%',
+        '%env(EMAIL_PORT)%',
+        '%env(EMAIL_USER)%',
+        '%env(EMAIL_PASS)%',
     ])
 ;
 
