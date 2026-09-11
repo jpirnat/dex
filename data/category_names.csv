@@ -29,3 +29,6 @@ language_id,category_id,name
 10,0,變化招式
 10,1,物理招式
 10,2,特殊招式
+11,0,Estado
+11,1,Físico
+11,2,Especial

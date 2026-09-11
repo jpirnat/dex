@@ -86,3 +86,12 @@ language_id,stat_id,name,abbreviation
 10,7,閃避,閃避
 10,8,特攻,特攻
 10,9,特防,特防
+11,1,PS,HP
+11,2,Ataque,Atk
+11,3,Defensa,Def
+11,4,Velocidad,Spe
+11,5,Especial,Spc
+11,6,Precisión,Acc
+11,7,Evasión,Eva
+11,8,At. Esp.,SpA
+11,9,Def. Esp.,SpD
