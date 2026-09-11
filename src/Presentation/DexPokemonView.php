@@ -158,6 +158,7 @@ final readonly class DexPokemonView
                 'versionGroups' => $this->dexFormatter->formatVersionGroups($versionGroups),
 
                 'pokemon' => $pokemon,
+                'locale' => $this->dexPokemonModel->locale,
                 'stats' => $stats,
 
                 'types' => $this->dexFormatter->formatDexTypes($types),

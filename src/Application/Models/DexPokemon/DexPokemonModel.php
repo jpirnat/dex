@@ -7,6 +7,8 @@ use Jp\Dex\Application\Models\VersionGroupModel;
 use Jp\Dex\Domain\EggGroups\DexEggGroup;
 use Jp\Dex\Domain\EggGroups\EggGroupIdentifier;
 use Jp\Dex\Domain\Languages\LanguageId;
+use Jp\Dex\Domain\Languages\LanguageNotFoundException;
+use Jp\Dex\Domain\Languages\LanguageRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\ExpandedDexPokemon;
 use Jp\Dex\Domain\Pokemon\ExpandedDexPokemonRepositoryInterface;
 use Jp\Dex\Domain\Pokemon\GenderRatio;
@@ -19,6 +21,7 @@ use Jp\Dex\Domain\Versions\VersionGroupNotFoundException;
 final class DexPokemonModel
 {
     private(set) ?ExpandedDexPokemon $pokemon = null;
+    private(set) string $locale = '';
     private(set) array $stats = [];
     private(set) string $breedingPartnersSearchUrl = '';
 
@@ -26,6 +29,7 @@ final class DexPokemonModel
     public function __construct(
         private(set) readonly VersionGroupModel $versionGroupModel,
         private readonly PokemonRepositoryInterface $pokemonRepository,
+        private readonly LanguageRepositoryInterface $languageRepository,
         private readonly ExpandedDexPokemonRepositoryInterface $expandedDexPokemonRepository,
         private readonly DexStatRepositoryInterface $dexStatRepository,
         private(set) readonly DexPokemonMatchupsModel $dexPokemonMatchupsModel,
@@ -49,7 +53,8 @@ final class DexPokemonModel
         try {
             $versionGroupId = $this->versionGroupModel->setByIdentifier($vgIdentifier);
             $pokemon = $this->pokemonRepository->getByIdentifier($pokemonIdentifier);
-        } catch (VersionGroupNotFoundException | PokemonNotFoundException) {
+            $language = $this->languageRepository->getById($languageId);
+        } catch (VersionGroupNotFoundException | PokemonNotFoundException | LanguageNotFoundException) {
             return;
         }
 
@@ -64,6 +69,8 @@ final class DexPokemonModel
         } catch (VgPokemonNotFoundException) {
             return;
         }
+
+        $this->locale = $language->locale;
 
         $this->stats = $this->dexStatRepository->getByVersionGroup(
             $versionGroupId,

@@ -19,6 +19,7 @@ const app = createApp({
             breadcrumbs: [],
             versionGroups: [],
             pokemon: {},
+            locale: '',
             stats: [],
             types: [],
             abilitiesDamageTaken: {},
@@ -58,6 +59,7 @@ const app = createApp({
         this.breadcrumbs = data.breadcrumbs;
         this.versionGroups = data.versionGroups;
         this.pokemon = data.pokemon;
+        this.locale = data.locale;
         this.stats = data.stats;
         this.types = data.types;
         this.abilitiesDamageTaken = data.damageTaken;
@@ -83,6 +85,9 @@ const app = createApp({
         onDamageTakenUnhover() {
             this.hoverDamageTaken = null;
         },
+        formatNumber(number) {
+            return new Intl.NumberFormat(this.locale.replace('_', '-')).format(number);
+        }
     },
 });
 

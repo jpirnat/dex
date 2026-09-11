@@ -152,7 +152,7 @@
                 <div class="dex-pokemon__miscellaneous-header">Training</div>
                 <div v-if="pokemon.catchRate">Catch Rate: {{ pokemon.catchRate }}</div>
                 <div v-if="pokemon.baseFriendship">Base Friendship: {{ pokemon.baseFriendship }}</div>
-                <div>{{ pokemon.experienceGroup.points }} Exp. Points to Lv. 100 ({{ pokemon.experienceGroup.name }})</div>
+                <div>{{ formatNumber(pokemon.experienceGroup.points) }} Exp. Points to Lv. 100 ({{ pokemon.experienceGroup.name }})</div>
             </div>
 
             <div class="dex-pokemon__miscellaneous-column" v-if="versionGroup.hasBreeding">
