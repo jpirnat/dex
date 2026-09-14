@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Jp\Dex\Presentation;
 
 use Jp\Dex\Application\Models\StatsPokemon\StatsPokemonModel;
+use Jp\Dex\Domain\Versions\VersionGroupId;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
 
@@ -112,7 +113,7 @@ final readonly class StatsPokemonView
                 'changeText' => $formatter->formatChange($move->change),
                 'type' => $this->dexFormatter->formatDexType($move->type),
                 'category' => $this->dexFormatter->formatDexCategory($move->category),
-                'pp' => $move->pp * 1.6,
+                'pp' => $move->pp * ($versionGroup->id->value !== VersionGroupId::CHAMPIONS ? 1.6 : 1),
                 'power' => $move->power,
                 'accuracy' => $move->accuracy,
                 'priority' => $move->priority,
