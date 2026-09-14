@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeImmutable;
+use DateTimeInterface;
 use Jp\Dex\Domain\BattleData\Leads\Averaged\LeadsRatedAveragedPokemon;
 use Jp\Dex\Domain\BattleData\Leads\Averaged\LeadsRatedAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\BattleData\Usage\Averaged\MonthsCounter;
@@ -23,8 +24,8 @@ final readonly class DatabaseLeadsRatedAveragedPokemonRepository implements Lead
      * end month, format, and rating?
      */
     public function hasAny(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
     ): bool {
@@ -54,8 +55,8 @@ final readonly class DatabaseLeadsRatedAveragedPokemonRepository implements Lead
      * @return LeadsRatedAveragedPokemon[] Indexed by Pokémon id.
      */
     public function getByMonthsAndFormatAndRating(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
     ): array {
@@ -90,8 +91,8 @@ final readonly class DatabaseLeadsRatedAveragedPokemonRepository implements Lead
 
         while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $leadsRatedAveragedPokemon = new LeadsRatedAveragedPokemon(
-                $start,
-                $end,
+                DateTimeImmutable::createFromInterface($start),
+                DateTimeImmutable::createFromInterface($end),
                 $formatId,
                 $rating,
                 new PokemonId($result['pokemon_id']),

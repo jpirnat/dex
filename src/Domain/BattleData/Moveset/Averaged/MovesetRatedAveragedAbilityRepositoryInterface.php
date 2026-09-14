@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\BattleData\Moveset\Averaged;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
 
@@ -16,8 +16,8 @@ interface MovesetRatedAveragedAbilityRepositoryInterface
      * @return MovesetRatedAveragedAbility[] Indexed by ability id.
      */
     public function getByMonthsAndFormatAndRatingAndPokemon(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,

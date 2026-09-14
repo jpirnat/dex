@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeImmutable;
+use DateTimeInterface;
 use Jp\Dex\Domain\BattleData\Usage\Averaged\MonthsCounter;
 use Jp\Dex\Domain\BattleData\Usage\Averaged\UsageRatedAveragedPokemon;
 use Jp\Dex\Domain\BattleData\Usage\Averaged\UsageRatedAveragedPokemonRepositoryInterface;
@@ -25,8 +26,8 @@ final readonly class DatabaseUsageRatedAveragedPokemonRepository implements Usag
      * @return UsageRatedAveragedPokemon[] Indexed by Pokémon id.
      */
     public function getByMonthsAndFormatAndRating(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
     ): array {
@@ -59,8 +60,8 @@ final readonly class DatabaseUsageRatedAveragedPokemonRepository implements Usag
 
         while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $usageRatedAveragedPokemon = new UsageRatedAveragedPokemon(
-                $start,
-                $end,
+                DateTimeImmutable::createFromInterface($start),
+                DateTimeImmutable::createFromInterface($end),
                 $formatId,
                 $rating,
                 new PokemonId($result['pokemon_id']),

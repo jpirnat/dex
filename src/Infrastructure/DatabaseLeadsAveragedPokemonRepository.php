@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeImmutable;
+use DateTimeInterface;
 use Jp\Dex\Domain\BattleData\Leads\Averaged\LeadsAveragedPokemon;
 use Jp\Dex\Domain\BattleData\Leads\Averaged\LeadsAveragedPokemonRepositoryInterface;
 use Jp\Dex\Domain\BattleData\Usage\Averaged\MonthsCounter;
@@ -25,8 +26,8 @@ final readonly class DatabaseLeadsAveragedPokemonRepository implements LeadsAver
      * @return LeadsAveragedPokemon[] Indexed by Pokémon id.
      */
     public function getByMonthsAndFormat(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
     ): array {
         $months = $this->monthsCounter->countAllMonths($start, $end);
@@ -51,8 +52,8 @@ final readonly class DatabaseLeadsAveragedPokemonRepository implements LeadsAver
 
         while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $leadsAveragedPokemon = new LeadsAveragedPokemon(
-                $start,
-                $end,
+                DateTimeImmutable::createFromInterface($start),
+                DateTimeImmutable::createFromInterface($end),
                 $formatId,
                 new PokemonId($result['pokemon_id']),
                 (int) $result['raw'],

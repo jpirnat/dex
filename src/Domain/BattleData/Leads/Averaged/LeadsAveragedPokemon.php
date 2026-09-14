@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\BattleData\Leads\Averaged;
 
-use DateTime;
+use DateTimeImmutable;
 use Jp\Dex\Domain\BattleData\Exceptions\InvalidCountException;
 use Jp\Dex\Domain\BattleData\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\BattleData\Exceptions\InvalidPercentException;
@@ -25,8 +25,8 @@ final readonly class LeadsAveragedPokemon
      * @throws InvalidPercentException if $rawPercent is invalid.
      */
     public function __construct(
-        private(set) DateTime $start,
-        private(set) DateTime $end,
+        private(set) DateTimeImmutable $start,
+        private(set) DateTimeImmutable $end,
         private(set) FormatId $formatId,
         private(set) PokemonId $pokemonId,
         private(set) int $raw,

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
-use DateTime;
+use DateTimeImmutable;
 use Jp\Dex\Application\Models\StatsAveragedPokemon\AbilityModel;
 use Jp\Dex\Application\Models\StatsAveragedPokemon\ItemModel;
 use Jp\Dex\Application\Models\StatsAveragedPokemon\MoveModel;
@@ -67,8 +67,8 @@ final class AveragedPokemonModel
         $this->languageId = $languageId;
 
         // Get the start month and end month.
-        $start = new DateTime("$start-01");
-        $end = new DateTime("$end-01");
+        $start = new DateTimeImmutable("$start-01");
+        $end = new DateTimeImmutable("$end-01");
 
         // Get the format.
         try {

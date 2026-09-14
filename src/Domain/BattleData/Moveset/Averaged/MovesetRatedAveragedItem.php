@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\BattleData\Moveset\Averaged;
 
-use DateTime;
+use DateTimeImmutable;
 use Jp\Dex\Domain\BattleData\Exceptions\InvalidMonthException;
 use Jp\Dex\Domain\BattleData\Exceptions\InvalidPercentException;
 use Jp\Dex\Domain\BattleData\Exceptions\InvalidRatingException;
@@ -28,8 +28,8 @@ final readonly class MovesetRatedAveragedItem
      * @throws InvalidPercentException if $percent is invalid
      */
     public function __construct(
-        private(set) DateTime $start,
-        private(set) DateTime $end,
+        private(set) DateTimeImmutable $start,
+        private(set) DateTimeImmutable $end,
         private(set) FormatId $formatId,
         private(set) int $rating,
         private(set) PokemonId $pokemonId,

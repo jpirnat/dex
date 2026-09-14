@@ -3,15 +3,16 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models;
 
-use DateTime;
+use DateTimeImmutable;
+use DateTimeInterface;
 use Jp\Dex\Domain\BattleData\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 
 final class DateModel
 {
-    private(set) DateTime $thisMonth;
-    private(set) ?DateTime $prevMonth;
-    private(set) ?DateTime $nextMonth;
+    private(set) DateTimeInterface $thisMonth;
+    private(set) ?DateTimeInterface $prevMonth;
+    private(set) ?DateTimeInterface $nextMonth;
 
 
     public function __construct(
@@ -26,7 +27,7 @@ final class DateModel
      */
     public function setMonth(string $month): void
     {
-        $this->thisMonth = new DateTime("$month-01");
+        $this->thisMonth = new DateTimeImmutable("$month-01");
 
         $this->prevMonth = $this->monthQueries->getPrev($this->thisMonth);
         $this->nextMonth = $this->monthQueries->getNext($this->thisMonth);
@@ -39,7 +40,7 @@ final class DateModel
      */
     public function setMonthAndFormat(string $month, FormatId $formatId): void
     {
-        $this->thisMonth = new DateTime("$month-01");
+        $this->thisMonth = new DateTimeImmutable("$month-01");
 
         $this->prevMonth = $this->monthQueries->getPrevByFormat($this->thisMonth, $formatId);
         $this->nextMonth = $this->monthQueries->getNextByFormat($this->thisMonth, $formatId);

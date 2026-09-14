@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\BattleData\Leads\Averaged;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 
 interface LeadsRatedAveragedPokemonRepositoryInterface
@@ -13,8 +13,8 @@ interface LeadsRatedAveragedPokemonRepositoryInterface
      * end month, format, and rating?
      */
     public function hasAny(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
     ): bool;
@@ -26,8 +26,8 @@ interface LeadsRatedAveragedPokemonRepositoryInterface
      * @return LeadsRatedAveragedPokemon[] Indexed by Pokémon id.
      */
     public function getByMonthsAndFormatAndRating(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
     ): array;

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\BattleData\Usage\Averaged;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\BattleData\Moveset\MovesetRatedPokemonRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Pokemon\PokemonId;
@@ -17,7 +17,7 @@ final readonly class MonthsCounter
     /**
      * Count the number of months from start to end.
      */
-    public function countAllMonths(DateTime $start, DateTime $end): int
+    public function countAllMonths(DateTimeInterface $start, DateTimeInterface $end): int
     {
         $startYear = (int) $start->format('Y');
         $startMonth = (int) $start->format('m');
@@ -30,8 +30,8 @@ final readonly class MonthsCounter
      * Count the months of moveset data for this Pokémon.
      */
     public function countMovesetMonths(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,
@@ -51,8 +51,8 @@ final readonly class MonthsCounter
      * @return int[] Indexed by Pokémon id.
      */
     public function countMovesetMonthsAll(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
     ): array {

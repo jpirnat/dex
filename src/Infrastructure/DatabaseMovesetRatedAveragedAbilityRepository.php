@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeImmutable;
+use DateTimeInterface;
 use Jp\Dex\Domain\Abilities\AbilityId;
 use Jp\Dex\Domain\BattleData\Moveset\Averaged\MovesetRatedAveragedAbility;
 use Jp\Dex\Domain\BattleData\Moveset\Averaged\MovesetRatedAveragedAbilityRepositoryInterface;
@@ -26,8 +27,8 @@ final readonly class DatabaseMovesetRatedAveragedAbilityRepository implements Mo
      * @return MovesetRatedAveragedAbility[] Indexed by ability id.
      */
     public function getByMonthsAndFormatAndRatingAndPokemon(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,
@@ -65,8 +66,8 @@ final readonly class DatabaseMovesetRatedAveragedAbilityRepository implements Mo
 
         while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $movesetRatedAveragedAbility = new MovesetRatedAveragedAbility(
-                $start,
-                $end,
+                DateTimeImmutable::createFromInterface($start),
+                DateTimeImmutable::createFromInterface($end),
                 $formatId,
                 $rating,
                 $pokemonId,

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Application\Models\StatsAveragedPokemon;
 
-use DateTime;
+use DateTimeImmutable;
 use Jp\Dex\Domain\BattleData\Moveset\Averaged\MovesetRatedAveragedMoveRepositoryInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 use Jp\Dex\Domain\Languages\LanguageId;
@@ -23,8 +23,8 @@ final readonly class MoveModel
      * Set individual Pokémon move data averaged over multiple months.
      */
     public function setData(
-        DateTime $start,
-        DateTime $end,
+        DateTimeImmutable $start,
+        DateTimeImmutable $end,
         FormatId $formatId,
         int $rating,
         PokemonId $pokemonId,

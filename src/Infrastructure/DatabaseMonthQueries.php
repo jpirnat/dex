@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Infrastructure;
 
-use DateTime;
+use DateTimeImmutable;
 use DateTimeInterface;
 use Jp\Dex\Domain\BattleData\Usage\MonthQueriesInterface;
 use Jp\Dex\Domain\Formats\FormatId;
@@ -18,7 +18,7 @@ final readonly class DatabaseMonthQueries implements MonthQueriesInterface
     /**
      * Get the previous month with usage data for any format.
      */
-    public function getPrev(DateTimeInterface $month): ?DateTime
+    public function getPrev(DateTimeInterface $month): ?DateTimeInterface
     {
         $stmt = $this->db->prepare(
             'SELECT
@@ -36,13 +36,13 @@ final readonly class DatabaseMonthQueries implements MonthQueriesInterface
             return null;
         }
 
-        return new DateTime($prevMonth);
+        return new DateTimeImmutable($prevMonth);
     }
 
     /**
      * Get the next month with usage data for any format.
      */
-    public function getNext(DateTimeInterface $month): ?DateTime
+    public function getNext(DateTimeInterface $month): ?DateTimeInterface
     {
         $stmt = $this->db->prepare(
             'SELECT
@@ -60,13 +60,13 @@ final readonly class DatabaseMonthQueries implements MonthQueriesInterface
             return null;
         }
 
-        return new DateTime($nextMonth);
+        return new DateTimeImmutable($nextMonth);
     }
 
     /**
      * Get the previous month with usage data for this format.
      */
-    public function getPrevByFormat(DateTimeInterface $month, FormatId $formatId): ?DateTime
+    public function getPrevByFormat(DateTimeInterface $month, FormatId $formatId): ?DateTimeInterface
     {
         $stmt = $this->db->prepare(
             'SELECT
@@ -86,13 +86,13 @@ final readonly class DatabaseMonthQueries implements MonthQueriesInterface
             return null;
         }
 
-        return new DateTime($prevMonth);
+        return new DateTimeImmutable($prevMonth);
     }
 
     /**
      * Get the next month with usage data for this format.
      */
-    public function getNextByFormat(DateTimeInterface $month, FormatId $formatId): ?DateTime
+    public function getNextByFormat(DateTimeInterface $month, FormatId $formatId): ?DateTimeInterface
     {
         $stmt = $this->db->prepare(
             'SELECT
@@ -112,6 +112,6 @@ final readonly class DatabaseMonthQueries implements MonthQueriesInterface
             return null;
         }
 
-        return new DateTime($nextMonth);
+        return new DateTimeImmutable($nextMonth);
     }
 }

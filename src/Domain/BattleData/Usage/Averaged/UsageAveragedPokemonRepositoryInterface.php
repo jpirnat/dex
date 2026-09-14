@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jp\Dex\Domain\BattleData\Usage\Averaged;
 
-use DateTime;
+use DateTimeInterface;
 use Jp\Dex\Domain\Formats\FormatId;
 
 interface UsageAveragedPokemonRepositoryInterface
@@ -15,8 +15,8 @@ interface UsageAveragedPokemonRepositoryInterface
      * @return UsageAveragedPokemon[] Indexed by Pokémon id.
      */
     public function getByMonthsAndFormat(
-        DateTime $start,
-        DateTime $end,
+        DateTimeInterface $start,
+        DateTimeInterface $end,
         FormatId $formatId,
     ): array;
 }

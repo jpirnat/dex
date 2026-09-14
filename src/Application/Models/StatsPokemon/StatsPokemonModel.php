@@ -213,7 +213,7 @@ final class StatsPokemonModel
 
         // Get spread data.
         $this->spreadModel->setData(
-            DateTimeImmutable::createFromMutable($thisMonth),
+            DateTimeImmutable::createFromInterface($thisMonth),
             $this->format,
             $rating,
             $this->pokemon->id,
